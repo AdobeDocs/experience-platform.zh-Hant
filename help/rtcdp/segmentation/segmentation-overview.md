@@ -1,0 +1,28 @@
+---
+title: 區段服務概觀
+seo-title: Adobe即時客戶資料平台中的細分服務
+description: 描述分段服務的概述。
+seo-description: 概述，說明Adobe即時客戶資料平台上的細分服務和細分。
+translation-type: tm+mt
+source-git-commit: bcb4279d04e39905fa64b817fdadd8a875e27697
+
+---
+
+
+# 即時客戶資料平台中的細分服務
+
+即時客戶資料平台（即時CDP）可讓您從多個來源取得資料，為客戶提供協調一致的體驗。 使用Adobe Experience Platform的區段服務，即可提供相關的個人化行銷宣傳。
+
+即時CDP建立在Adobe Experience Platform之上，並運用許多Experience Platform服務和功能。 使用「分段服務」，您可以將客戶劃分為具有類似特徵的較小群組，以提供量身打造的行銷。
+
+## 區段
+
+區段是定義描述檔商店中描述檔子集所共用的特定屬性或行為，以區分適銷人員群組和客戶群的程式。 例如，在名為「您忘記購買運動鞋嗎？」的電子郵件促銷活動中，您可能希望擁有在過去30天內搜尋跑鞋但未完成購買的所有使用者的觀眾。 使用不同的細分，您可以專注於不同的受眾，提供更自訂的行銷體驗。
+
+## 區段產生器
+
+平台可讓您輕鬆建立和存取區段，並使用不同的建置區塊進一步描述區段。 如需如何使用「區段產生器」的詳細資訊，請閱讀「區段產生 [器」指南](./segment-builder-guide.md)。
+
+## 下一步
+
+閱讀此概觀後，您現在應該瞭解即時CDP如何利用細分服務來增強行銷宣傳的自訂和個人化。 如需細分服務的詳細資訊，請閱讀Adobe I/O [上的細分檔案](https://www.adobe.io/apis/experienceplatform/home/profile-identity-segmentation/profile-identity-segmentation-services.html#!api-specification/markdown/narrative/technical_overview/segmentation/segmentation-overview.md)。
