@@ -1,0 +1,34 @@
+---
+title: 即時客戶個人檔案總覽
+seo-title: 即時客戶資料平台中的即時客戶個人檔案
+description: 概述即時客戶資料平台如何讓您使用即時客戶個人檔案，為客戶提供協調一致的相關體驗。
+seo-description: 即時客戶資料平台、個人檔案、資料、體驗、通道
+translation-type: tm+mt
+source-git-commit: 5cba5a1e8139dd85f23250d42a1cd8d2318eb916
+
+---
+
+
+# 即時客戶個人檔案總覽
+
+即時客戶個人檔案可讓您結合來自多個通道的資料，包括線上、離線、CRM和第三方資料，以全面瞭解每個客戶。 個人檔案可讓您將分散的客戶資料整合到統一的檢視中，為每次客戶互動提供可操作的時間戳記帳戶。
+
+## 即時客戶資料平台的個人檔案
+
+即時客戶資料平台可讓您為客戶推動協調一致的體驗，不論客戶在何處或何時與您的品牌互動。 提供這些個人化體驗，讓客戶感到相關且及時，這絕非易事，但可透過使用Adobe Experience Platform的即時客戶個人檔案來達成。 即時CDP建立在Experience Platform之上，並運用許多Experience Platform服務和功能，包括建立個人檔案。 這些匯整的個別客戶視圖匯集了來自您許多行銷通道的資料，以及貴組織目前用來儲存客戶資料的不同系統。
+
+## 身分與身分名稱空間
+
+當客戶資料匯集在一起時，它會透過使用身分識別功能併入單一個人檔案中，而且當每位客戶的相關資訊越來越多時，能夠將這些身分識別整合在一起。 若要進一步瞭解身分識別和身分識別名稱空間，請參閱 [身分識別概觀](/help/rtcdp/profile/identities-overview.md)。
+
+## 合併原則
+
+將客戶資料整合在一起時，平台會使用合併原則來決定資料的優先順序，以及將哪些資料結合以建立統一檢視。 有關合併策略的詳細資訊，請參 [閱合併策略概述](/help/rtcdp/profile/merge-policies.md)。
+
+## 設定檔檢視器
+
+平台可讓您輕鬆檢視客戶個人檔案，並使用各種屬性搜尋特定個人檔案。 如需如何在平台中檢視描述檔的詳細資訊，請參閱描述檔檢 [視器概觀](/help/rtcdp/profile/profile-viewer.md)。
+
+## 下一步
+
+在閱讀本概述後，您現在應該瞭解即時CDP如何利用即時客戶概要資訊大規模推動跨通道個人化。 透過將不同來源的身分識別結合在一起，您可以看到每個個別客戶的完整圖景，讓您的行銷宣傳更上一層樓。 如需詳細資訊，包括在使用者介面和透過API使用即時客戶個人檔案資料的最佳實務和教學課程，請參閱Adobe I/O的即時客戶個人檔案檔案 [](https://www.adobe.io/apis/experienceplatform/home/profile-identity-segmentation/profile-identity-segmentation-services.html#!api-specification/markdown/narrative/technical_overview/unified_profile_architectural_overview/unified_profile_architectural_overview.md)。
