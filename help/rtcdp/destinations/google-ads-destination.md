@@ -4,7 +4,7 @@ seo-title: Google廣告目的地
 description: Google Ads（先前稱為Google AdWords）是線上廣告服務，可讓企業透過文字搜尋、圖形顯示、YouTube視訊和應用程式內行動顯示，按點擊付費廣告。
 seo-description: Google Ads（先前稱為Google AdWords）是線上廣告服務，可讓企業透過文字搜尋、圖形顯示、YouTube視訊和應用程式內行動顯示，按點擊付費廣告。
 translation-type: tm+mt
-source-git-commit: d42e4d60d273b08824e177f9aca0f208578ff099
+source-git-commit: 3e510c891c84fb3dc1632bd1182ef1e010ea898f
 
 ---
 
@@ -49,10 +49,10 @@ Google已暫停與協力廠商的任何新Google Ads整合。 您必須已與Goo
 ## 建立目標
 
 1. 在「連 **[!UICONTROL 線>目的地]**」中，選取「Google廣告」，然後選取「 **[!UICONTROL 建立目的地」]**。
-   ![Connect Google Ads目的地](/help/rtcdp/destinations/assets/google-ads-destination.png)
+   ![Connect Google Ads目的地](/help/rtcdp/destinations/assets/google-2-destination.png)
 
 2. 在「建立目標」嚮導中，填寫目標的基本資訊。
-   ![基本資訊Google廣告](/help/rtcdp/destinations/assets/google-ads-basic-information.png)
+   ![基本資訊Google廣告](/help/rtcdp/destinations/assets/google-2-basic-information.png)
 * **名稱**:填寫此目標的首選名稱。
 * **說明**:可選。 例如，您可以提及您使用此目的地的促銷活動。
 * **帳戶類型**:AdWords是唯一可用的選項。
