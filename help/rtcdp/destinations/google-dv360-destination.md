@@ -43,7 +43,7 @@ Display &amp; Video 360（舊稱DoubleClick競標管理器）是一種工具，�
 
 ## 建立目標
 
-1. 在「連 **[!UICONTROL 線>目的地]**」中，選取「Google顯示與視訊360」，然後選取「 **[!UICONTROL 建立目的地」]**。
+1. 在中 **[!UICONTROL Connections > Destinations]**，選取「Google Display &amp; Video 360」，然後選取 **[!UICONTROL Create destination]**。
    ![Connect Google Display &amp; Video 360目標](/help/rtcdp/destinations/assets/google-dv360-destination.png)
 
 2. 在「建立目標」嚮導中，填寫目標的基本資訊。
