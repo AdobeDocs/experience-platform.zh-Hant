@@ -25,4 +25,4 @@ source-git-commit: cd7c10fa789cf749296144b36e805da2ed76be8b
 
 > [!VIDEO](https://youtu.be/ypS_CKym5NQ)
 
-選擇「編輯> [!UICONTROL 處理規則] 」以執行某些動作。 使用 [!DNL Microsoft Visual Code].
+選擇「編輯> [!UICONTROL Processing Rules] 執行某些動作」。 使用 [!DNL Microsoft Visual Code].
