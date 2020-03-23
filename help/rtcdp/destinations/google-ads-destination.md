@@ -48,7 +48,7 @@ Google已暫停與協力廠商的任何新Google Ads整合。 您必須已與Goo
 
 ## 建立目標
 
-1. 在「連 **[!UICONTROL 線>目的地]**」中，選取「Google廣告」，然後選取「 **[!UICONTROL 建立目的地」]**。
+1. 在中 **[!UICONTROL Connections > Destinations]**，選取「Google廣告」，然後選取 **[!UICONTROL Create destination]**。
    ![Connect Google Ads目的地](/help/rtcdp/destinations/assets/google-2-destination.png)
 
 2. 在「建立目標」嚮導中，填寫目標的基本資訊。
