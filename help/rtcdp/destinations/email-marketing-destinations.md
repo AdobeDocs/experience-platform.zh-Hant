@@ -21,11 +21,11 @@ source-git-commit: 463212a8fabb9dd5962b4d3f523a6f2d88bb1d9d
 
 ## 步驟1 —— 連接目標 {#connect-destination}
 
-1. 在「 **[!UICONTROL 連線>目的地]**」中，選取您要連線的電子郵件行銷目的地，然後選取「連 **[!UICONTROL 線目的地」]**。
+1. 在 **[!UICONTROL Connections > Destinations]**&#x200B;中，選擇您要連線的電子郵件行銷目標，然後選擇 **[!UICONTROL Connect destination]**。
 
    ![連接到目標](/help/rtcdp/destinations/assets/connect-destination.png)
 
-2. 在[連接]嚮導中，選擇存 **[!UICONTROL 儲位置的]** [連接]類型。 您可以在 **Amazon S3**、 **SFTP with Password**、 **SFTP with SSH Key之間進行選擇**。 根據您的連線類型，填入下列資訊，然後選取「連 **[!UICONTROL 線」]**。
+2. 在[連接]嚮導中，選擇 **[!UICONTROL Connection type]** 儲存位置。 您可以在 **Amazon S3**、 **SFTP with Password**、 **SFTP with SSH Key之間進行選擇**。 根據您的連線類型，填入下列資訊，然後選取 **[!UICONTROL Connect]**。
 
 對 **於S3連線**，您必須提供存取金鑰ID和機密存取金鑰。
 
