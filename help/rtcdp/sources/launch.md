@@ -31,7 +31,7 @@ source-git-commit: b8eda33a88b81dff5f3b45a131a5585a062519c2
 
 首先，安裝Adobe Experience Platform Web SDK擴充功能。
 
-1. In Launch, open the **[!UICONTROL Extensions]** tab.
+1. 在 Launch 中開啟 **[!UICONTROL Extensions]** 標籤。
 
    ![影像](assets/launch-overview.png)
 
@@ -48,13 +48,13 @@ source-git-commit: b8eda33a88b81dff5f3b45a131a5585a062519c2
    * **配置ID:** 指定您從Adobe代表取得的設定ID。
    * **邊緣網域：** 指定您從Adobe代表取得的邊緣網域。
 
-1. 按一 **[!UICONTROL 下「儲存]** 」，然後繼續下一個步驟。
+1. 按一 **[!UICONTROL Save]** 下並繼續下一步。
 
 ## 建立規則以告知啟動要傳送哪些資料
 
 接著，建立規則讓Launch知道您要傳送哪些資料至Adobe Experience Platform，以及您要在何時傳送。
 
-1. 在「規 **[!UICONTROL 則]** 」標籤下，設定在啟動程式庫載入時，會在網站的每個新頁面上觸發的事件。
+1. 在標籤 **[!UICONTROL Rules]** 下，設定在啟動程式庫載入時，會在網站的每個新頁面上觸發的事件。
 
    ![影像](assets/launch-make-a-rule.png)
 
@@ -66,7 +66,7 @@ source-git-commit: b8eda33a88b81dff5f3b45a131a5585a062519c2
 
    您傳送的資料物件必須是有效的XDM，該XDM會針對連接至您的設定ID的資料集所使用的架構傳遞驗證。
 
-1. 按一下&#x200B;**[!UICONTROL 保留變更]**.
+1. 按一下「**[!UICONTROL Keep Changes]**」。
 
 如需詳細資訊，請參 [閱](https://docs.adobe.com/content/help/en/launch/using/reference/manage-resources/rules.html) Launch檔案中的規則。
 
@@ -80,4 +80,4 @@ source-git-commit: b8eda33a88b81dff5f3b45a131a5585a062519c2
 
 ![影像](assets/launch-promote-library.png)
 
-如需詳細資訊，請參 [閱Launch檔案中](https://docs.adobe.com/content/help/en/launch/using/reference/publish/libraries.html) 「資料庫」。
+如需詳細資訊，請參 [閱Launch檔案中的](https://docs.adobe.com/content/help/en/launch/using/reference/publish/libraries.html) 「資料庫」。
