@@ -19,7 +19,7 @@ source-git-commit: 132bc9787a86045adba559c769b02927a6045b17
 
 ## 目錄 {#catalog}
 
-「目 **[!UICONTROL 錄]** 」標籤會顯示Adobe提供的所有目的地清單，您可將資料傳送至這些目的地。 在目錄中選擇目標以開啟右邊欄。 在這裡，您可以設定到目標(**Connect目標**)的連接，或查看文檔(**View documentation**)，以瞭解有關每個目標的詳細資訊。
+此標 **[!UICONTROL Catalog]** 簽會顯示Adobe提供的所有目的地清單，您可將資料傳送至這些目的地。 在目錄中選擇目標以開啟右邊欄。 在這裡，您可以設定到目標(**Connect目標**)的連接，或查看文檔(**View documentation**)，以瞭解有關每個目標的詳細資訊。
 
 ![目標目錄選項](/help/rtcdp/destinations/assets/destination-ui-catalog-options.png)
 
@@ -27,7 +27,7 @@ source-git-commit: 132bc9787a86045adba559c769b02927a6045b17
 
 ## 瀏覽 {#browse}
 
-「瀏 **[!UICONTROL 覽]** 」頁籤顯示已建立連接的目標。 啟用切換功能的目標會將目標設定為作用中，反之亦然。 您也可以選取「區段>瀏覽」，並選取要檢查的區段， **以檢視您有資料流動的目的地** 。 有關「瀏覽」頁籤中為每個目標提供的所有資訊，請參見下表：
+該選 **[!UICONTROL Browse]** 項卡顯示您已建立連接的目標。 啟用切換功能的目標會將目標設定為作用中，反之亦然。 您也可以選取「區段>瀏覽」，並選取要檢查的區段， **以檢視您有資料流動的目的地** 。 有關「瀏覽」頁籤中為每個目標提供的所有資訊，請參見下表：
 
 ![瀏覽標籤](/help/rtcdp/destinations/assets/browse-tab.png)
 
@@ -45,11 +45,11 @@ source-git-commit: 132bc9787a86045adba559c769b02927a6045b17
 
 ![按一下目標行](/help/rtcdp/destinations/assets/click-destination-row.png)
 
-選取目標名稱，以查看啟動至此目標之區段的相關資訊。 按一 **[!UICONTROL 下「編輯啟動]** 」，修改或新增至傳送至此目的地的區段。
+選取目標名稱，以查看啟動至此目標之區段的相關資訊。 按一 **[!UICONTROL Edit activation]** 下可修改或新增至傳送至此目的地的區段。
 
 ## 帳戶 {#accounts}
 
-在「帳 **[!UICONTROL 戶]** 」標籤中，您可以進一步瞭解您與各種目的地建立的連線。 請參閱下表，以取得有關每個目標的所有資訊：
+在該選 **[!UICONTROL Accounts]** 項卡中，您可以進一步瞭解您與各種目標建立的連接。 請參閱下表，以取得有關每個目標的所有資訊：
 
 ![「帳戶」頁籤](/help/rtcdp/destinations/assets/accounts-tab.png)
 
@@ -62,10 +62,10 @@ source-git-commit: 132bc9787a86045adba559c769b02927a6045b17
 
 ## 資料流 {#data-flows}
 
-「資 **[!UICONTROL 料流]** 」標籤會顯示您在即時客戶資料平台中設定之啟動流程的圖形表示。
+此標 **[!UICONTROL Data flows]** 簽會顯示您在即時客戶資料平台中設定之啟動流程的圖形表示。
 
 ![Data-flows1](/help/rtcdp/destinations/assets/data-flows1.png)
 
-選擇頁面上顯示的任意目標，然後按「 **[!UICONTROL View flows]** 」（查看流）以查看您為每個目標設定的所有資料流的資訊。
+選擇頁面上顯示的任何目標，然 **[!UICONTROL View flows]** 後按鍵查看您為每個目標設定的所有資料流的資訊。
 
 ![Data-flows2](/help/rtcdp/destinations/assets/data-flows2.png)
