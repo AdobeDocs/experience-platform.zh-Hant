@@ -19,11 +19,11 @@ Adobe Campaign是一套解決方案，可協助您跨所有線上及線下通道
 
 ## 連接目標 {#connect-destination}
 
-1. 在「連 **[!UICONTROL 線>目的地]**」中，選取「Adobe Campaign」，然後選取「 **[!UICONTROL 連線目的地」]**。
+1. 在中 **[!UICONTROL Connections > Destinations]**，選取「Adobe Campaign」，然後選取 **[!UICONTROL Connect destination]**。
 
    ![連線至Adobe Campaign](/help/rtcdp/destinations/assets/connect-adobe-campaign.png)
 
-1. 在連接目標嚮導中，選擇存 **[!UICONTROL 儲位置的連接類型]** 。 對於Adobe Campaign，您可以在 **Amazon S3**、 **SFTP with Password** 和 **SSH Key之間選擇**。 根據您的連線類型，填入下列資訊，然後選取「連 **[!UICONTROL 線」]**。
+1. 在連接目標嚮導中，選擇 **[!UICONTROL Connection type]** 儲存位置。 對於Adobe Campaign，您可以在 **Amazon S3**、 **SFTP with Password** 和 **SSH Key之間選擇**。 根據您的連線類型，填入下列資訊，然後選取 **[!UICONTROL Connect]**。
 
    ![設定促銷活動精靈](/help/rtcdp/destinations/assets/adobe-campaign-wizard.png)
 
@@ -45,7 +45,7 @@ Adobe Campaign是一套解決方案，可協助您跨所有線上及線下通道
 
 ## 目標屬性 {#destination-attributes}
 
-在啟 [用區段](/help/rtcdp/destinations/activate-destinations.md) 至Adobe Campaign目的地時，我們建議您從聯合架構中選取唯一 [識別碼](https://www.adobe.io/apis/experienceplatform/home/profile-identity-segmentation/profile-identity-segmentation-services.html#!api-specification/markdown/narrative/technical_overview/unified_profile_architectural_overview/unified_profile_architectural_overview.md)。 選擇唯一標識符和要導出到目標的任何其他XDM欄位。 如需詳細資訊，請參 [閱「電子郵件行銷目標」中，選取要在匯出檔案中當做目標屬性使用的架構欄位](/help/rtcdp/destinations/email-marketing-destinations.md#destination-attributes) 。
+在啟 [用區段](/help/rtcdp/destinations/activate-destinations.md) 至Adobe Campaign目的地時，我們建議您從聯合架構中選取唯一 [識別碼](https://www.adobe.io/apis/experienceplatform/home/profile-identity-segmentation/profile-identity-segmentation-services.html#!api-specification/markdown/narrative/technical_overview/unified_profile_architectural_overview/unified_profile_architectural_overview.md)。 選擇唯一標識符以及要導出到目標的任何其它XDM欄位。 如需詳細資訊，請參 [閱「電子郵件行銷目標」中，選取要在匯出檔案中當做目標屬性使用的架構欄位](/help/rtcdp/destinations/email-marketing-destinations.md#destination-attributes) 。
 
 
 ## 設定資料匯入至Adobe Campaign {#import-data-into-campaign}
