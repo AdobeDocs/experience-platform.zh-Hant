@@ -19,11 +19,11 @@ source-git-commit: 3b9584cca8943c52bb3d8e4512d327d3dbeb9e04
 
 ## 連接目標 {#connect-destination}
 
-1. 在「 **[!UICONTROL 連線>目的地]**」中，選取「Salesforce Marketing Cloud」，然後選取「 **[!UICONTROL 連線目的地」]**。
+1. 在中 **[!UICONTROL Connections > Destinations]**，選取「Salesforce Marketing Cloud」，然後選取 **[!UICONTROL Connect destination]**。
 
    ![連線至Salesforce](/help/rtcdp/destinations/assets/connect-salesforce.png)
 
-1. 在連接目標嚮導中，選擇存 **[!UICONTROL 儲位置的連接類型]** 。 對於Salesforce Marketing Cloud，您可以在 **SFTP與Password** , **SFTP與SSH金鑰之間選擇**。 根據您的連線類型，填寫下列資訊，然後選取「連 **[!UICONTROL 線」]**。
+1. 在連接目標嚮導中，選擇 **[!UICONTROL Connection type]** 儲存位置。 對於Salesforce Marketing Cloud，您可以在 **SFTP與Password** , **SFTP與SSH金鑰之間選擇**。 根據您的連線類型，填寫下列資訊，然後選取 **[!UICONTROL Connect]**。
 
    ![設定Salesforce精靈](/help/rtcdp/destinations/assets/salesforce-step1.png)
 
@@ -43,7 +43,7 @@ source-git-commit: 3b9584cca8943c52bb3d8e4512d327d3dbeb9e04
 
 ## 目標屬性 {#destination-attributes}
 
-在啟 [動區段](/help/rtcdp/destinations/activate-destinations.md) 至Salesforce Marketing Cloud目標時，我們建議您從聯合架構中選取唯 [一識別碼](https://www.adobe.io/apis/experienceplatform/home/profile-identity-segmentation/profile-identity-segmentation-services.html#!api-specification/markdown/narrative/technical_overview/unified_profile_architectural_overview/unified_profile_architectural_overview.md)。 選擇唯一標識符以及要導出到目標的任何其它XDM欄位。 如需詳細資訊，請參 [閱「電子郵件行銷目標」中，選取要在匯出檔案中當做目標屬性使用的架構欄位](/help/rtcdp/destinations/email-marketing-destinations.md#destination-attributes) 。
+在啟 [動區段](/help/rtcdp/destinations/activate-destinations.md) 至Salesforce Marketing Cloud目標時，我們建議您從聯合架構中選取唯 [一識別碼](https://www.adobe.io/apis/experienceplatform/home/profile-identity-segmentation/profile-identity-segmentation-services.html#!api-specification/markdown/narrative/technical_overview/unified_profile_architectural_overview/unified_profile_architectural_overview.md)。 選擇唯一標識符和要導出到目標的任何其他XDM欄位。 如需詳細資訊，請參 [閱「電子郵件行銷目標」中，選取要在匯出檔案中當做目標屬性使用的架構欄位](/help/rtcdp/destinations/email-marketing-destinations.md#destination-attributes) 。
 
 ## 設定資料匯入至Salesforce Marketing Cloud {#import-data-into-salesforce}
 
