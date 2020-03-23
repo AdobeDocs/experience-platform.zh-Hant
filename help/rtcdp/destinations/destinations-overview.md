@@ -15,11 +15,11 @@ source-git-commit: b4b02913467c43d004574a1aa5cb2f793964ad1e
 
 ## 目標和來源
 
-即時CDP的核心功能之一是接收第一方資料並根據業務需要激活它。 使用 **[!UICONTROL Sources]** 將資料收錄到即時CDP和 **[!UICONTROL Destinations]** ，以便從即時CDP中導出資料。
+即時CDP的核心功能之一是接收第一方資料並根據業務需要激活它。 使 **[!UICONTROL Sources]** 用將資料嵌入即時CDP並 **[!UICONTROL Destinations]** 從即時CDP中導出資料。
 
 ## 目標步驟
 
-* 使用 **[!UICONTROL 目的地]** 啟動 [](/help/rtcdp/destinations/activate-destinations.md) ，並傳送個人檔案或區段至行銷自動化平台、數位廣告平台等。
+* 使用 **[!UICONTROL Destinations]** 來啟 [動個人檔案](/help/rtcdp/destinations/activate-destinations.md) ，並傳送個人檔案或細分至行銷自動化平台、數位廣告平台等。
 * 從即時 [CDP中所有可用目標的自助](/help/rtcdp/destinations/destinations-catalog.md) -服務目錄中進行選擇。
 * 定期排程匯出至您偏好目的地的資料。
 
@@ -53,6 +53,6 @@ source-git-commit: b4b02913467c43d004574a1aa5cb2f793964ad1e
 
 ## 目標與存取控制
 
-即時 **[!UICONTROL CDP中的「目標]** 」功能可與Adobe Experience Platform存取控制權限搭配使用。 視使用者的權限層級而定，您可以檢視、管理和啟用目標。 如需個別權限的詳細資訊，請參 [閱Adobe Experience Platform中的存取控制](https://www.adobe.io/apis/experienceplatform/home/permissions-and-sandboxes/permissions-and-sandboxes.html#!api-specification/markdown/narrative/technical_overview/access-control/access-control-overview.md) ，並向下捲動至頁面底部。
+即時 **[!UICONTROL Destinations]** CDP中的功能可與Adobe Experience Platform存取控制權限搭配使用。 視使用者的權限層級而定，您可以檢視、管理和啟用目標。 如需個別權限的詳細資訊，請參 [閱Adobe Experience Platform中的存取控制](https://www.adobe.io/apis/experienceplatform/home/permissions-and-sandboxes/permissions-and-sandboxes.html#!api-specification/markdown/narrative/technical_overview/access-control/access-control-overview.md) ，並向下捲動至頁面底部。
 
 如需存取控制的詳細資訊，請參閱存取控 [制使用指南](https://www.adobe.io/apis/experienceplatform/home/permissions-and-sandboxes/permissions-and-sandboxes.html#!api-specification/markdown/narrative/technical_overview/access-control/access-control-user-guide.md)。
