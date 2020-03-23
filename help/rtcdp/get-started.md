@@ -154,7 +154,7 @@ Luma團隊在單一位置擁有所有的行為和客戶資料。
 
    <!--    ![image](assets/luma-source-import.png) -->
 
-   例如，選擇「聯 **[!UICONTROL 系人」]**。 預覽的連絡人資料會自動載入，因此您可以確保一切如預期般呈現。
+   例如，選擇 **[!UICONTROL Contacts]**。 預覽的連絡人資料會自動載入，因此您可以確保一切如預期般呈現。
 
    Adobe Experience Platform透過自動將標準欄位對應至Experience Data Model(XDM)描述檔架構，在此程式中耗費了大量的人工工作。
 
@@ -231,7 +231,7 @@ Loyalty member
 
 當您新增「贈送購物車放棄者」區段時，您可以大致瞭解有多少人加入此區段。 您可以採取行動，讓它跨通道個人化。
 
-按一 **[!UICONTROL 下傳送至目的地]**。
+按一下「**[!UICONTROL Send to destinations]**」。
 
 在Adobe Real-time CDP中，Luma可以順暢地依受眾細分行動，以利個人化。\
 在此，我們看到Luma將此目的地傳送至Adobe和非Adobe解決方案的所有可用目的地：
@@ -255,7 +255,7 @@ Loyalty member
 >[!NOTE]
 >（可選）如果您在日期欄位中按一下，系統會自動排程90天外。
 
-按一 **[!UICONTROL 下「儲存]** 」以前往下一頁。
+按一 **[!UICONTROL Save]** 下以前往下一頁。
 
 當此觀眾中的客戶進行購買時，他們對此觀眾的會籍會即時抑制。 由於狀態已改變，他們不再符合資格。
 
