@@ -40,13 +40,13 @@ Some information is shown in different ways on both the leaderboard and metric c
 
 ### 資料集
 
-Datasets **[!UICONTROL 計數器]** (Datasets)顯示系統中的資料集數和Platform中的資料量。 建立資料集時，會更新此計數器。
+計數 **[!UICONTROL Datasets]** 器顯示系統中的資料集數和平台中的資料量。 建立資料集時，會更新此計數器。
 
 如需資料集的詳細資訊，請參 [閱將資料內嵌至Adobe Experience Platform](https://www.adobe.io/apis/experienceplatform/home/tutorials/alltutorials.html#!api-specification/markdown/narrative/tutorials/data_ingestion_tutorial/data_ingestion_tutorial.md)。
 
 ### 設定檔
 
-「 **[!UICONTROL Profiles]** 」計數顯示「即時客戶設定檔」中具有設定檔的總人數。 它不包含描述檔片段。 這是您可定址的觀眾總數。
+計 **[!UICONTROL Profiles]** 數顯示「即時客戶設定檔」中具有設定檔的總人數。 它不包含描述檔片段。 這是您可定址的觀眾總數。
 
 此計數使用預設 [合併策略](profile/merge-policies.md) ，如統一配置檔案中合併策略配置中所設定。
 
@@ -56,13 +56,13 @@ Datasets **[!UICONTROL 計數器]** (Datasets)顯示系統中的資料集數和P
 
 ### 區段
 
-**[!UICONTROL 區段]** 顯示為組織建立的區段總數。 建立新區段時，會更新此數字。
+**[!UICONTROL Segments]** 顯示為組織建立的區段總數。 建立新區段時，會更新此數字。
 
 如需區段的詳細資訊，請參閱區 [段服務概觀](https://www.adobe.io/apis/experienceplatform/home/profile-identity-segmentation/profile-identity-segmentation-services.html#!api-specification/markdown/narrative/technical_overview/segmentation/segmentation-overview.md)。
 
 ### 目的地
 
-**[!UICONTROL 目標]** 顯示為組織建立的目標總數。 當建立新目標時，此數字會更新。
+**[!UICONTROL Destinations]** 顯示為組織建立的目標總數。 當建立新目標時，此數字會更新。
 
 如需目標的詳細資訊，請參閱目 [標概觀](destinations/destinations-overview.md)。
 
@@ -102,32 +102,32 @@ The number of failed profile records is updated hourly. -->
 
 ### 最近的資料集
 
-「最 **[!UICONTROL 近的資料集]** 」卡顯示了組織內建立的五個最近的資料集。 建立新資料集時，會更新此清單。
+該卡 **[!UICONTROL Recent datasets]** 顯示在組織內建立的五個最近資料集。 建立新資料集時，會更新此清單。
 
-按一下資料集可檢視該項目的詳細資訊，或 **[!UICONTROL 按一下]** 「檢視全部」可檢視資料集清單。 在此處，您可以按一下特定源以獲取詳細資訊。
+按一下資料集可檢視該項目的詳細資訊，或 **[!UICONTROL View all]** 查看資料集清單。 在此處，您可以按一下特定源以獲取詳細資訊。
 
 如需資料集的詳細資訊，請參 [閱將資料內嵌至Adobe Experience Platform](https://www.adobe.io/apis/experienceplatform/home/tutorials/alltutorials.html#!api-specification/markdown/narrative/tutorials/data_ingestion_tutorial/data_ingestion_tutorial.md)。
 
 ### 最近來源
 
-「最 **[!UICONTROL 近來源]** 」量度卡顯示在組織內建立的5個最近來源。 當建立新來源時，此清單會更新。
+量 **[!UICONTROL Recent sources]** 度卡顯示組織內建立的5個最近來源。 當建立新來源時，此清單會更新。
 
-按一下來源可檢視該項目的詳細資訊，或按一 **[!UICONTROL 下「全部]** 」可檢視來源清單。 在此處，您可以按一下特定源以獲取詳細資訊。
+按一下來源可檢視該項目的詳細資訊，或 **[!UICONTROL View all]** 查看來源清單。 在此處，您可以按一下特定源以獲取詳細資訊。
 
 如需來源的詳細資訊，請參閱 [來源概觀](sources/sources-overview.md)。
 
 ### 最近區段
 
-「最 **[!UICONTROL 近區段]** 」量度卡會顯示組織內建立的五個最近區段。 建立新區段時，此清單會更新。
+量 **[!UICONTROL Recent segments]** 度卡顯示在組織內建立的5個最近區段。 建立新區段時，此清單會更新。
 
-按一下區段可檢視該項目的詳細資訊，或 **[!UICONTROL 全部檢視]** ，以檢視更多區段的資訊。
+按一下區段可檢視該項目的詳細資訊，或 **[!UICONTROL View all]** 查看更多區段的資訊。
 
 如需區段的詳細資訊，請參閱區 [段服務概觀](https://www.adobe.io/apis/experienceplatform/home/profile-identity-segmentation/profile-identity-segmentation-services.html#!api-specification/markdown/narrative/technical_overview/segmentation/segmentation-overview.md)。
 
 ### 最近的目的地
 
-「最 **[!UICONTROL 近目標]** 」量度卡顯示組織內建立的五個最近目標。 當建立新目標時，會更新此清單。
+量 **[!UICONTROL Recent destinations]** 度卡顯示組織內建立的五個最近目的地。 當建立新目標時，會更新此清單。
 
-按一下目標可檢視該項目的詳細資訊，或按一 **[!UICONTROL 下「全部]** 」可檢視更多目標的資訊。
+按一下目標可檢視該項目的詳細資訊，或 **[!UICONTROL View all]** 查看更多目標的相關資訊。
 
 如需目標的詳細資訊，請參閱目 [標概觀](destinations/destinations-overview.md)。
