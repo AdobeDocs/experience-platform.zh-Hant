@@ -4,7 +4,7 @@ seo-title: 雲端儲存目標工作流程
 description: 連線至雲端儲存空間的指示
 seo-description: 連線至雲端儲存空間的指示
 translation-type: tm+mt
-source-git-commit: c4f1c0a6ef4d16e5fe763826016d56506fdca5dc
+source-git-commit: 60b10aa823af55d6f38651308dc93eeb57a7fee6
 
 ---
 
@@ -32,9 +32,7 @@ source-git-commit: c4f1c0a6ef4d16e5fe763826016d56506fdca5dc
 
    ![連線至Amazon S3雲端儲存空間目標——驗證步驟](/help/rtcdp/destinations/assets/cloud-destinations-setup-step.png)
 
-
-
-   <br>對於SFTP目標，請插入 **[!UICONTROL Folder path]**
+   對於SFTP目標，請插入 **[!UICONTROL Folder path]** 要傳送檔案的位置。
 
    ![連線至SFTP雲端儲存空間目標——驗證步驟](/help/rtcdp/destinations/assets/sftp-destinations-setup-step.png)
 
