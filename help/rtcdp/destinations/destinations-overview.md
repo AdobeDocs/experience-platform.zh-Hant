@@ -4,12 +4,14 @@ seo-title: 目標概觀
 description: 目標是與目標平台預先建立的整合，可讓即時客戶資料平台順暢地啟動資料。 您可以使用Adobe即時客戶資料平台中的「目標」來啟用您已知和未知的跨通道行銷宣傳、電子郵件宣傳、目標廣告及許多其他使用案例資料。
 seo-description: 目標是與目標平台預先建立的整合，可讓即時客戶資料平台順暢地啟動資料。 您可以使用Adobe即時客戶資料平台中的「目標」來啟用您已知和未知的跨通道行銷宣傳、電子郵件宣傳、目標廣告及許多其他使用案例資料。
 translation-type: tm+mt
-source-git-commit: b4b02913467c43d004574a1aa5cb2f793964ad1e
+source-git-commit: e66f4df13afb3c9f9ddb440ccb5e479caeef2142
 
 ---
 
 
 # 目標概觀
+
+![目標概述橫幅](/help/rtcdp/destinations/assets/destinations-overview-banner.png)
 
 **目標** 是與目標平台預先建立的整合，可讓即時客戶資料平台順暢地啟動資料。 您可以使用「 **目標** 」來啟用您已知和未知的跨通道行銷宣傳、電子郵件宣傳、目標廣告和許多其他使用案例資料。
 
