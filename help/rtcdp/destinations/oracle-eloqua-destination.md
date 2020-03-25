@@ -4,7 +4,7 @@ seo-title: Oracle Exolca目標
 description: Oracle Exvola是Oracle為行銷自動化提供的軟體即服務(SaaS)平台，旨在幫助B2B行銷人員和組織管理營銷活動和銷售線索生成。
 seo-description: Oracle Exvola是Oracle為行銷自動化提供的軟體即服務(SaaS)平台，旨在幫助B2B行銷人員和組織管理營銷活動和銷售線索生成。
 translation-type: tm+mt
-source-git-commit: 3b9584cca8943c52bb3d8e4512d327d3dbeb9e04
+source-git-commit: fe56fe71c36e06f2eeed45436cb36b5a371d0484
 
 ---
 
@@ -23,23 +23,21 @@ source-git-commit: 3b9584cca8943c52bb3d8e4512d327d3dbeb9e04
 
    ![連線Exola](/help/rtcdp/destinations/assets/connect-oracle-eloqua.png)
 
-1. 在連接目標嚮導中，選擇 **[!UICONTROL Connection type]** 儲存位置。 對於Oracle Exolca，您可以在 **SFTP with Password和** SSH Key之間選擇 ****。 根據您的連線類型，填寫下列資訊，然後選取 **[!UICONTROL Connect]**。
-
-   ![設定Exola精靈](/help/rtcdp/destinations/assets/eloqua-wizard.png)
+2. 在「驗 **證** 」步驟中，如果您先前已設定雲端儲存空間目的地的連線，請選取並 **[!UICONTROL Existing Account]** 選取您現有的連線。 或者，您可以選 **[!UICONTROL New Account]** 擇設定新連接。 填寫您的帳戶驗證憑證並選取 **[!UICONTROL Connect to destination]**。 對於Oracle Exolca，您可以在 **SFTP with Password和** SSH Key之間選擇 ****。 根據您的連線類型，填寫下列資訊，然後選取 **[!UICONTROL Connect to destination]**。
 
    對於 **具有密碼連接的SFTP** ，必須提供域、埠、用戶名和密碼。
 對於 **具有SSH密鑰連接的SFTP** ，必須提供域、埠、用戶名和SSH密鑰。
 
-   ![填寫雄辯資訊](/help/rtcdp/destinations/assets/eloqua-step2.png)
+   ![設定Exola精靈](/help/rtcdp/destinations/assets/eloqua-authentication.png)
 
-1. 在基 **本資訊中**，填入您目的地的相關資訊，如下所示：
+3. 在「設 **定** 」步驟中，填入您目的地的相關資訊，如下所示：
    * **名稱**:為目的地選擇相關名稱。
    * **說明**:輸入目標的說明。
    * **資料夾路徑**:在儲存位置中提供路徑，即時CDP會將導出資料儲存為CSV或Tab分隔檔案。
    * **檔案格式**: **CSV****或TAB_DELIMITED**。 選擇要導出到儲存位置的檔案格式。
    ![雄辯基本資訊](/help/rtcdp/destinations/assets/eloqua-basic-information.png)
 
-1. 填寫 **基本** 「資訊」欄位後，按一 **下建立**。 您的目標現在已連線，您可 [以啟動區段](/help/rtcdp/destinations/activate-destinations.md) 至目標。
+4. 填寫 **上述欄位後** ，按一下「建立目標」。 您的目標現在已建立，您可 [以啟用區段](/help/rtcdp/destinations/activate-destinations.md) 至目標。
 
 ## 目標屬性
 
