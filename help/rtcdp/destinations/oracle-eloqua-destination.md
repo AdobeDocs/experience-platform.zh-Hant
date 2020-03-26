@@ -4,7 +4,7 @@ seo-title: Oracle Exolca目標
 description: Oracle Exvola是Oracle為行銷自動化提供的軟體即服務(SaaS)平台，旨在幫助B2B行銷人員和組織管理營銷活動和銷售線索生成。
 seo-description: Oracle Exvola是Oracle為行銷自動化提供的軟體即服務(SaaS)平台，旨在幫助B2B行銷人員和組織管理營銷活動和銷售線索生成。
 translation-type: tm+mt
-source-git-commit: fe56fe71c36e06f2eeed45436cb36b5a371d0484
+source-git-commit: c3fe5753fb23f99076f9c85b4e07af2d25a121a9
 
 ---
 
@@ -41,7 +41,7 @@ source-git-commit: fe56fe71c36e06f2eeed45436cb36b5a371d0484
 
 ## 目標屬性
 
-在 [激活段](/help/rtcdp/destinations/activate-destinations.md) 到Oracle Exolca目標時 [，我們建議您從聯合方案中選擇唯一](https://www.adobe.io/apis/experienceplatform/home/profile-identity-segmentation/profile-identity-segmentation-services.html#!api-specification/markdown/narrative/technical_overview/unified_profile_architectural_overview/unified_profile_architectural_overview.md)標識符。 選擇唯一標識符和要導出到目標的任何其他XDM欄位。 如需詳細資訊，請參 [閱「電子郵件行銷目標」中，選取要在匯出檔案中當做目標屬性使用的架構欄位](/help/rtcdp/destinations/email-marketing-destinations.md#destination-attributes) 。
+在 [激活段](/help/rtcdp/destinations/activate-destinations.md) 到Oracle Exolca目標時 [，我們建議您從聯合方案中選擇唯一](https://www.adobe.io/apis/experienceplatform/home/profile-identity-segmentation/profile-identity-segmentation-services.html#!api-specification/markdown/narrative/technical_overview/unified_profile_architectural_overview/unified_profile_architectural_overview.md)標識符。 選擇唯一標識符以及要導出到目標的任何其它XDM欄位。 如需詳細資訊，請參 [閱「電子郵件行銷目標」中，選取要在匯出檔案中當做目標屬性使用的架構欄位](/help/rtcdp/destinations/email-marketing-destinations.md#destination-attributes) 。
 
 ## 設定資料導入到Oracle Exolca {#import-data-into-eloqua}
 
