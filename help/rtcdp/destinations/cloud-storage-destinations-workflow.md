@@ -4,7 +4,7 @@ seo-title: 雲端儲存目標工作流程
 description: 連線至雲端儲存空間的指示
 seo-description: 連線至雲端儲存空間的指示
 translation-type: tm+mt
-source-git-commit: c3fe5753fb23f99076f9c85b4e07af2d25a121a9
+source-git-commit: 336aa90cf1e059a92a36dd0ef3222ef6a6f5123b
 
 ---
 
@@ -19,7 +19,7 @@ source-git-commit: c3fe5753fb23f99076f9c85b4e07af2d25a121a9
 
    ![連線至雲端儲存空間目標](/help/rtcdp/destinations/assets/connect-cloud-destination.png)
 
-2. 在「驗 **證** 」步驟中，如果您先前已設定雲端儲存空間目的地的連線，請選取並 **[!UICONTROL Existing Account]** 選取您現有的連線。 或者，您可以選 **[!UICONTROL New Account]** 擇設定到雲儲存目標的新連接。 填寫您的帳戶驗證憑證並選取 **[!UICONTROL Connect to destination]**。 如需 [驗證步驟中憑證輸入的詳細資訊](/help/rtcdp/destinations/amazon-s3-destination.md) ，請參閱Amazon S3目的地和 [SFTP](/help/rtcdp/destinations/sftp-destination.md) 目的地 **** 。
+2. 在此步 **[!UICONTROL Authentication]** 驟中，如果您先前已設定雲端儲存空間目的地的連線，請選取並 **[!UICONTROL Existing Account]** 選取您現有的連線。 或者，您可以選 **[!UICONTROL New Account]** 擇設定到雲儲存目標的新連接。 填寫您的帳戶驗證憑證並選取 **[!UICONTROL Connect to destination]**。 如需 [驗證步驟中憑證輸入的詳細資訊](/help/rtcdp/destinations/amazon-s3-destination.md) ，請參閱Amazon S3目的地和 [SFTP](/help/rtcdp/destinations/sftp-destination.md) 目的地 **** 。
 
    >[!NOTE]
    >
