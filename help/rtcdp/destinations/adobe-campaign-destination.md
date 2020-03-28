@@ -4,7 +4,7 @@ seo-title: Adobe Campaign
 description: Adobe Campaign是一套解決方案，可協助您跨所有線上及線下通道個人化並傳遞宣傳活動。
 seo-description: Adobe Campaign是一套解決方案，可協助您跨所有線上及線下通道個人化並傳遞宣傳活動。
 translation-type: tm+mt
-source-git-commit: 3b9584cca8943c52bb3d8e4512d327d3dbeb9e04
+source-git-commit: 336aa90cf1e059a92a36dd0ef3222ef6a6f5123b
 
 ---
 
@@ -23,29 +23,29 @@ Adobe Campaign是一套解決方案，可協助您跨所有線上及線下通道
 
    ![連線至Adobe Campaign](/help/rtcdp/destinations/assets/connect-adobe-campaign.png)
 
-1. 在連接目標嚮導中，選擇 **[!UICONTROL Connection type]** 儲存位置。 對於Adobe Campaign，您可以在 **Amazon S3**、 **SFTP with Password** 和 **SSH Key之間選擇**。 根據您的連線類型，填入下列資訊，然後選取 **[!UICONTROL Connect]**。
+1. 在連接目標工作流中，選擇 **[!UICONTROL Connection type]** 儲存位置。 對於Adobe Campaign，您可以選擇 **[!UICONTROL Amazon S3]**&#x200B;和 **[!UICONTROL SFTP with Password]** 和 **[!UICONTROL SFTP with SSH Key]**。 根據您的連線類型，填入下列資訊，然後選取 **[!UICONTROL Connect]**。
 
    ![設定促銷活動精靈](/help/rtcdp/destinations/assets/adobe-campaign-wizard.png)
 
-   對於 **S3連線** ，您必須提供存取金鑰ID和機密存取金鑰。
-對於 **具有密碼連接的SFTP** ，必須提供域、埠、用戶名和密碼。
-對於 **具有SSH密鑰連接的SFTP** ，必須提供域、埠、用戶名和SSH密鑰。
+   對於 **[!UICONTROL Amazon S3]** 連接，您必須提供訪問密鑰ID和密鑰。
+對於 **[!UICONTROL SFTP with Password]** 連接，必須提供域、埠、用戶名和密碼。
+對於 **[!UICONTROL SFTP with SSH Key]** 連接，必須提供域、埠、用戶名和SSH密鑰。
 
    ![填寫促銷活動資訊](/help/rtcdp/destinations/assets/adobe-campaign-step2.png)
 
-1. 在基 **本資訊**，填寫您目的地的相關資訊，如下所示：
-   * **名稱**:為目的地選擇相關名稱。
-   * **說明**:輸入目標的說明。
-   * **貯體名稱**:適 *用於S3連線*。 輸入S3儲存段的位置，即時CDP將將導出資料儲存為CSV或Tab分隔檔案。
-   * **資料夾路徑**:在儲存位置中提供路徑，即時CDP會將導出資料儲存為CSV或Tab分隔檔案。
-   * **檔案格式**: **CSV****或TAB_DELIMITED**。 選擇要導出到儲存位置的檔案格式。
+1. 在中 **[!UICONTROL Basic Information]**，填寫您目的地的相關資訊，如下所示：
+   * **[!UICONTROL Name]**:為目的地選擇相關名稱。
+   * **[!UICONTROL Description]**:輸入目標的說明。
+   * **[!UICONTROL Bucket Name]**:適 *用於S3連線*。 輸入S3儲存段的位置，即時CDP將將導出資料儲存為CSV或Tab分隔檔案。
+   * **[!UICONTROL Folder Path]**:在儲存位置中提供路徑，即時CDP會將導出資料儲存為CSV或Tab分隔檔案。
+   * **[!UICONTROL File Format]**: **CSV****或TAB_DELIMITED**。 選擇要導出到儲存位置的檔案格式。
    ![促銷活動基本資訊](/help/rtcdp/destinations/assets/adobe-campaign-basic-information.png)
 
-1. 填寫 **基本** 「資訊」欄位後，按一 **下建立**。 您的目標現在已連線，您可 [以啟動區段](/help/rtcdp/destinations/activate-destinations.md) 至目標。
+1. 填寫 **[!UICONTROL Create]** 上述欄位後按一下。 您的目標現在已連線，您可 [以啟動區段](/help/rtcdp/destinations/activate-destinations.md) 至目標。
 
 ## 目標屬性 {#destination-attributes}
 
-在啟 [用區段](/help/rtcdp/destinations/activate-destinations.md) 至Adobe Campaign目的地時，我們建議您從聯合架構中選取唯一 [識別碼](https://www.adobe.io/apis/experienceplatform/home/profile-identity-segmentation/profile-identity-segmentation-services.html#!api-specification/markdown/narrative/technical_overview/unified_profile_architectural_overview/unified_profile_architectural_overview.md)。 選擇唯一標識符以及要導出到目標的任何其它XDM欄位。 如需詳細資訊，請參 [閱「電子郵件行銷目標」中，選取要在匯出檔案中當做目標屬性使用的架構欄位](/help/rtcdp/destinations/email-marketing-destinations.md#destination-attributes) 。
+在啟 [用區段](/help/rtcdp/destinations/activate-destinations.md) 至Adobe Campaign目的地時，我們建議您從聯合架構中選取唯一 [識別碼](https://www.adobe.io/apis/experienceplatform/home/profile-identity-segmentation/profile-identity-segmentation-services.html#!api-specification/markdown/narrative/technical_overview/unified_profile_architectural_overview/unified_profile_architectural_overview.md)。 選擇唯一標識符和要導出到目標的任何其他XDM欄位。 如需詳細資訊，請參 [閱「電子郵件行銷目標」中，選取要在匯出檔案中當做目標屬性使用的架構欄位](/help/rtcdp/destinations/email-marketing-destinations.md#destination-attributes) 。
 
 
 ## 設定資料匯入至Adobe Campaign {#import-data-into-campaign}
