@@ -4,7 +4,7 @@ seo-title: 目標概觀
 description: 目標是與目標平台預先建立的整合，可讓即時客戶資料平台順暢地啟動資料。 您可以使用Adobe即時客戶資料平台中的「目標」來啟用您已知和未知的跨通道行銷宣傳、電子郵件宣傳、目標廣告及許多其他使用案例資料。
 seo-description: 目標是與目標平台預先建立的整合，可讓即時客戶資料平台順暢地啟動資料。 您可以使用Adobe即時客戶資料平台中的「目標」來啟用您已知和未知的跨通道行銷宣傳、電子郵件宣傳、目標廣告及許多其他使用案例資料。
 translation-type: tm+mt
-source-git-commit: e66f4df13afb3c9f9ddb440ccb5e479caeef2142
+source-git-commit: 336aa90cf1e059a92a36dd0ef3222ef6a6f5123b
 
 ---
 
@@ -13,16 +13,16 @@ source-git-commit: e66f4df13afb3c9f9ddb440ccb5e479caeef2142
 
 ![目標概述橫幅](/help/rtcdp/destinations/assets/destinations-overview-banner.png)
 
-**目標** 是與目標平台預先建立的整合，可讓即時客戶資料平台順暢地啟動資料。 您可以使用「 **目標** 」來啟用您已知和未知的跨通道行銷宣傳、電子郵件宣傳、目標廣告和許多其他使用案例資料。
+**目標** 是與目標平台預先建立的整合，可讓即時客戶資料平台順暢地啟動資料。 您可以使用目的地來啟用跨通道行銷宣傳、電子郵件宣傳、目標廣告和許多其他使用案例的已知和未知資料。
 
 ## 目標和來源
 
-即時CDP的核心功能之一是接收第一方資料並根據業務需要激活它。 使 **[!UICONTROL Sources]** 用將資料嵌入即時CDP並 **[!UICONTROL Destinations]** 從即時CDP中導出資料。
+即時CDP的核心功能之一是接收第一方資料並根據業務需要激活它。 使用源將資料嵌入即時CDP中，並使用目標從即時CDP中導出資料。
 
 ## 目標步驟
 
-* 使用 **[!UICONTROL Destinations]** 來啟 [動個人檔案](/help/rtcdp/destinations/activate-destinations.md) ，並傳送個人檔案或細分至行銷自動化平台、數位廣告平台等。
 * 從即時 [CDP中所有可用目標的自助](/help/rtcdp/destinations/destinations-catalog.md) -服務目錄中進行選擇。
+* 使用 **[!UICONTROL Destinations]** 來啟 [動個人檔案](/help/rtcdp/destinations/activate-destinations.md) ，並傳送個人檔案或細分至行銷自動化平台、數位廣告平台等。
 * 定期排程匯出至您偏好目的地的資料。
 
 ## 控制項
@@ -55,6 +55,6 @@ source-git-commit: e66f4df13afb3c9f9ddb440ccb5e479caeef2142
 
 ## 目標與存取控制
 
-即時 **[!UICONTROL Destinations]** CDP中的功能可與Adobe Experience Platform存取控制權限搭配使用。 視使用者的權限層級而定，您可以檢視、管理和啟用目標。 如需個別權限的詳細資訊，請參 [閱Adobe Experience Platform中的存取控制](https://www.adobe.io/apis/experienceplatform/home/permissions-and-sandboxes/permissions-and-sandboxes.html#!api-specification/markdown/narrative/technical_overview/access-control/access-control-overview.md) ，並向下捲動至頁面底部。
+即時CDP的目標功能可與Adobe Experience Platform存取控制權限搭配使用。 視使用者的權限層級而定，您可以檢視、管理和啟用目標。 如需個別權限的詳細資訊，請參 [閱Adobe Experience Platform中的存取控制](https://www.adobe.io/apis/experienceplatform/home/permissions-and-sandboxes/permissions-and-sandboxes.html#!api-specification/markdown/narrative/technical_overview/access-control/access-control-overview.md) ，並向下捲動至頁面底部。
 
 如需存取控制的詳細資訊，請參閱存取控 [制使用指南](https://www.adobe.io/apis/experienceplatform/home/permissions-and-sandboxes/permissions-and-sandboxes.html#!api-specification/markdown/narrative/technical_overview/access-control/access-control-user-guide.md)。
