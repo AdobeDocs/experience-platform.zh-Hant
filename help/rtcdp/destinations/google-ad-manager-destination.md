@@ -4,7 +4,7 @@ seo-title: Google廣告管理員目標
 description: 'Google Ad Manager之前稱為DoubleClick for Publishers或DoubleClick AdX，是來自谷歌的廣告服務平台，可讓出版業者透過視訊和行動應用程式管理其網站上的廣告展示。 '
 seo-description: 'Google Ad Manager之前稱為DoubleClick for Publishers或DoubleClick AdX，是來自谷歌的廣告服務平台，可讓出版業者透過視訊和行動應用程式管理其網站上的廣告展示。 '
 translation-type: tm+mt
-source-git-commit: 3e510c891c84fb3dc1632bd1182ef1e010ea898f
+source-git-commit: 336aa90cf1e059a92a36dd0ef3222ef6a6f5123b
 
 ---
 
@@ -48,14 +48,14 @@ Google Ad Manager之前稱為DoubleClick for Publishers或DoubleClick AdX，是�
 1. 在中 **[!UICONTROL Connections > Destinations]**，選取「Google廣告管理員」，然後選取 **[!UICONTROL Create destination]**。
    ![Connect Google Ad Manager目標](/help/rtcdp/destinations/assets/google-1-destination.png)
 
-2. 在「建立目標」嚮導中，填寫目標的基本資訊。
+2. 在「建立目標」工作流程中，填入目 [!UICONTROL Basic Information] 標的目標。
    ![基本資訊Google廣告管理員](/help/rtcdp/destinations/assets/google-1-basic-information.png)
-* **名稱**:填寫此目標的首選名稱。
-* **說明**:可選。 例如，您可以提及您使用此目的地的促銷活動。
-* **帳戶類型**:根據您使用Google的帳戶，選取一個選項：
+* **[!UICONTROL Name]**:填寫此目標的首選名稱。
+* **[!UICONTROL Description]**: 可選. 例如，您可以提及您使用此目的地的促銷活動。
+* **[!UICONTROL Account Type]**:根據您使用Google的帳戶，選取一個選項：
    * DoubleClick `DFP by Google` for Publishers的使用
    * 用 `AdX buyer` 於Google AdX
-* **帳戶ID**:使用Google填寫您的帳戶ID。 這可以是您的網路ID或對象連結ID。 通常，這是8位數的ID。
+* **[!UICONTROL Account ID]**:使用Google填寫您的帳戶ID。 這可以是您的網路ID或對象連結ID。 通常，這是8位數的ID。
 
 >[!NOTE]
 >
