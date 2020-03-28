@@ -4,7 +4,7 @@ seo-title: Google Display & Video 360 Destination
 description: Display & Video 360（先前稱為DoubleClick競標管理器）是一種工具，用於在顯示、視訊和行動庫存來源中執行重新鎖定目標及受眾目標數位促銷活動。
 seo-description: 'Display & Video 360（先前稱為DoubleClick競標管理器）是一種工具，用於在顯示、視訊和行動庫存來源中執行重新鎖定目標及受眾目標數位促銷活動。 '
 translation-type: tm+mt
-source-git-commit: 810028edc662a7f52484e37cf0fbdfafe5db650f
+source-git-commit: 336aa90cf1e059a92a36dd0ef3222ef6a6f5123b
 
 ---
 
@@ -46,14 +46,14 @@ Display &amp; Video 360（舊稱DoubleClick競標管理器）是一種工具，�
 1. 在中 **[!UICONTROL Connections > Destinations]**，選取「Google Display &amp; Video 360」，然後選取 **[!UICONTROL Create destination]**。
    ![Connect Google Display &amp; Video 360目標](/help/rtcdp/destinations/assets/google-dv360-destination.png)
 
-2. 在「建立目標」嚮導中，填寫目標的基本資訊。
+2. 在「建立目標」工作流程中，填入目 [!UICONTROL Basic Information] 標的目標。
    ![基本資訊Google Display &amp; Video 360](/help/rtcdp/destinations/assets/google-dv360-basic-information.png)
-* **名稱**:填寫此目標的首選名稱。
-* **說明**:可選。 例如，您可以提及您使用此目的地的促銷活動。
-* **帳戶類型**:根據您使用Google的帳戶，選取一個選項：
+* **[!UICONTROL Name]**:填寫此目標的首選名稱。
+* **[!UICONTROL Description]**: 可選. 例如，您可以提及您使用此目的地的促銷活動。
+* **[!UICONTROL Account Type]**:根據您使用Google的帳戶，選取一個選項：
    * 使用 `Invite Advertiser` 可讓觀眾僅分享至您「顯示與視訊360」帳戶中的特定品牌。
    * 使用 `Invite Partner` 可讓觀眾分享至您「顯示與視訊360」帳戶中的所有品牌。
-* **帳戶ID**:使用Google填 **[!DNL Invite partner]** 寫您 **[!DNL Invite advertiser]** 或帳戶ID。 通常為6或7位數的ID。
+* **[!UICONTROL Account ID]**:使用Google填 **[!DNL Invite partner]** 寫您 **[!DNL Invite advertiser]** 或帳戶ID。 通常為6或7位數的ID。
 
 >[!NOTE]
 >
