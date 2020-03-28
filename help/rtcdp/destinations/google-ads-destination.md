@@ -4,7 +4,7 @@ seo-title: Google廣告目的地
 description: Google Ads（先前稱為Google AdWords）是線上廣告服務，可讓企業透過文字搜尋、圖形顯示、YouTube視訊和應用程式內行動顯示，按點擊付費廣告。
 seo-description: Google Ads（先前稱為Google AdWords）是線上廣告服務，可讓企業透過文字搜尋、圖形顯示、YouTube視訊和應用程式內行動顯示，按點擊付費廣告。
 translation-type: tm+mt
-source-git-commit: 3e510c891c84fb3dc1632bd1182ef1e010ea898f
+source-git-commit: 336aa90cf1e059a92a36dd0ef3222ef6a6f5123b
 
 ---
 
@@ -51,12 +51,12 @@ Google已暫停與協力廠商的任何新Google Ads整合。 您必須已與Goo
 1. 在中 **[!UICONTROL Connections > Destinations]**，選取「Google廣告」，然後選取 **[!UICONTROL Create destination]**。
    ![Connect Google Ads目的地](/help/rtcdp/destinations/assets/google-2-destination.png)
 
-2. 在「建立目標」嚮導中，填寫目標的基本資訊。
+2. 在「建立目標」工作流程中，填入目 [!UICONTROL Basic Information] 標的目標。
    ![基本資訊Google廣告](/help/rtcdp/destinations/assets/google-2-basic-information.png)
-* **名稱**:填寫此目標的首選名稱。
-* **說明**:可選。 例如，您可以提及您使用此目的地的促銷活動。
-* **帳戶類型**:AdWords是唯一可用的選項。
-* **帳戶ID**:使用Google廣告填寫您的帳戶ID。 ID格式通常為123-456-7890。
+* **[!UICONTROL Name]**:填寫此目標的首選名稱。
+* **[!UICONTROL Description]**: 可選. 例如，您可以提及您使用此目的地的促銷活動。
+* **[!UICONTROL Account Type]**:AdWords是唯一可用的選項。
+* **[!UICONTROL Account ID]**:使用Google廣告填寫您的帳戶ID。 ID格式通常為123-456-7890。
 
 ## 啟用區段至Google廣告
 
