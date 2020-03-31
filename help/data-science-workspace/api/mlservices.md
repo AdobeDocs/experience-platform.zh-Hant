@@ -1,0 +1,352 @@
+---
+keywords: Experience Platform;developer guide;endpoint;Data Science Workspace;popular topics
+solution: Experience Platform
+title: 服務
+topic: Developer guide
+translation-type: tm+mt
+source-git-commit: 54640caea0c3a55bc7975a0a8faae5eb31233e2e
+
+---
+
+
+# MLServices
+
+MLService是已發佈的訓練模型，可讓您的組織存取和重複使用先前開發的模型。 MLServices的主要功能是能夠依計畫自動化培訓與計分。 排程的訓練執行可協助維持模型的效率和正確性，而排程的計分執行則可確保產生一致的新見解。
+
+自動培訓和計分計畫定義有開始時間戳記、結束時間戳記和表示為 <a href="https://en.wikipedia.org/wiki/Cron" target="_blank">cron表達式的頻率</a>。 可在建立MLService時定 [義排程](#create-an-mlservice) ，或透過更新現 [有的MLService套用排程](#update-an-mlservice)。
+
+## 建立MLService
+
+您可以執行POST請求和裝載來建立MLService，此裝載提供服務名稱和有效的MLInstance ID。 建立MLService時所使用的MLInstance不需要有現有的訓練實驗，但您可以提供對應的實驗ID和訓練執行ID，選擇使用現有的訓練模型來建立MLService。
+
+**API格式**
+
+```http
+POST /mlServices
+```
+
+**請求**
+
+```shell
+curl -X POST \
+    https://platform.adobe.io/data/sensei/mlServices \
+    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+    -H 'x-api-key: {API_KEY}' \
+    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-sandbox-name: {SANDBOX_NAME}' \
+    -H 'content-type: application/vnd.adobe.platform.sensei+json; profile=mlService.v1.json' \
+    -d '{
+        "name": "A name for this MLService",
+        "description": "A description for this MLService",
+        "mlInstanceId": "{MLINSTANCE_ID}",
+        "trainingDataSetId": "{DATASET_ID}",
+        "trainingExperimentId": "{TRAINING_ID}",
+        "trainingExperimentRunId": "{RUN_ID}",
+        "trainingSchedule": {
+            "startTime": "2019-01-01T00:00",
+            "endTime": "2019-12-31T00:00",
+            "cron": "20 * * * *"
+        },
+        "scoringSchedule": {
+            "startTime": "2019-01-01T00:00",
+            "endTime": "2019-12-31T00:00",
+            "cron": "20 * * * *"
+        }
+    }'
+```
+
+| 屬性 | 說明 |
+| --- | --- |
+| `name` | MLService的所需名稱。 與此MLService對應的服務將繼承此值，該值將作為服務的名稱顯示在服務庫UI中。 |
+| `description` | MLService的選用說明。 與此MLService對應的服務將繼承此值，該值將作為服務的說明顯示在服務庫UI中。 |
+| `mlInstanceId` | 有效的MLInstance ID。 |
+| `trainingDataSetId` | 訓練資料集ID（若提供）將覆寫MLInstance的預設資料集ID。 如果用來建立MLService的MLInstance未定義訓練資料集，您必須提供適當的訓練資料集ID。 |
+| `trainingExperimentId` | 您可選擇提供的實驗ID。 如果未提供此值，則建立MLService也會使用MLInstance的預設配置建立新實驗。 |
+| `trainingExperimentRunId` | 您可選擇提供的訓練執行ID。 如果未提供此值，則建立MLService也會使用MLInstance的預設培訓參數建立並執行培訓運行。 |
+| `trainingSchedule` | 自動化訓練執行的排程。 如果已定義此屬性，MLService會自動依排程執行訓練。 |
+| `trainingSchedule.startTime` | 將開始執行計畫培訓的時間戳記。 |
+| `trainingSchedule.endTime` | 排程培訓執行的時間戳記將會結束。 |
+| `trainingSchedule.cron` | 定義自動培訓執行頻率的cron運算式。 |
+| `scoringSchedule` | 自動計分執行的排程。 如果已定義此屬性，MLService會自動在排程基礎上執行計分執行。 |
+| `scoringSchedule.startTime` | 將開始執行排程計分的時間戳記。 |
+| `scoringSchedule.endTime` | 排程計分執行的時間戳記將結束。 |
+| `scoringSchedule.cron` | 定義自動計分執行頻率的cron運算式。 |
+
+**回應**
+
+成功的回應會傳回包含新建立之MLService之詳細資料的負載，包括其唯一識別碼(`id`)、訓練的實驗ID(`trainingExperimentId`)、計分的實驗ID(`scoringExperimentId`)，以及輸入訓練資料集ID(`trainingDataSetId`)。
+
+```json
+{
+    "id": "{MLSERVICE_ID}",
+    "name": "A name for this MLService",
+    "description": "A description for this MLService",
+    "mlInstanceId": "{MLINSTANCE_ID}",
+    "trainingExperimentId": "{TRAINING_ID}",
+    "trainingDataSetId": "{DATASET_ID}",
+    "scoringExperimentId": "{SCORING_ID}",
+    "created": "2019-01-01T00:00:00.000Z",
+    "createdBy": {
+        "userId": "Jane_Doe@AdobeID"
+    },
+    "trainingSchedule": {
+        "startTime": "2019-01-01T00:00",
+        "endTime": "2019-12-31T00:00",
+        "cron": "20 * * * *"
+    },
+    "scoringSchedule": {
+        "startTime": "2019-01-01T00:00",
+        "endTime": "2019-12-31T00:00",
+        "cron": "20 * * * *"
+    },
+    "updated": "2019-01-01T00:00:00.000Z"
+}
+```
+
+## 擷取MLServices清單
+
+您可以執行單一GET請求來擷取MLServices清單。 若要協助篩選結果，您可以在請求路徑中指定查詢參數。 有關可用查詢的清單，請參閱有關資產檢索查 [詢參數的附錄部分](appendix.md#query)。
+
+**API格式**
+
+```http
+GET /mlServices
+GET /mlServices?{QUERY_PARAMETER}={VALUE}
+GET /mlServices?{QUERY_PARAMETER_1}={VALUE_1}&{QUERY_PARAMETER_2}={VALUE_2}
+```
+
+| 參數 | 說明 |
+| --- | --- |
+| `{QUERY_PARAMETER}` | 用於篩選 [結果的可用查](appendix.md#query) 詢參數之一。 |
+| `{VALUE}` | 前面查詢參數的值。 |
+
+**請求**
+
+下列請求包含查詢，並擷取共用相同MLInstance ID(`{MLINSTANCE_ID}`)的MLServices清單。
+
+```shell
+curl -X GET \
+    'https://platform.adobe.io/data/sensei/mlServices?property=mlInstanceId=={MLINSTANCE_ID}' \
+    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+    -H 'x-api-key: {API_KEY}' \
+    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-sandbox-name: {SANDBOX_NAME}'
+```
+
+**回應**
+
+成功的回應會傳回MLServices的清單及其詳細資訊，包括其MLService ID(`{MLSERVICE_ID}`)、訓練的實驗ID(`{TRAINING_ID}`)、計分的實驗ID(`{SCORING_ID}`)，以及輸入訓練資料集ID(`{DATASET_ID}`)。
+
+```json
+{
+    "children": [
+        {
+            "id": "{MLSERVICE_ID}",
+            "name": "A service created in UI",
+            "mlInstanceId": "{MLINSTANCE_ID}",
+            "trainingExperimentId": "{TRAINING_ID}",
+            "trainingDataSetId": "{DATASET_ID}",
+            "scoringExperimentId": "{SCORING_ID}",
+            "created": "2019-01-01T00:00:00.000Z",
+            "createdBy": {
+                "displayName": "Jane Doe",
+                "userId": "Jane_Doe@AdobeID"
+            },
+            "updated": "2019-01-01T00:00:00.000Z"
+        }
+    ],
+    "_page": {
+        "property": "mlInstanceId=={MLINSTANCE_ID},deleted==false",
+        "count": 1
+    }
+}
+```
+
+## 擷取特定MLService
+
+您可以執行GET請求，在請求路徑中包含所需的MLService ID來擷取特定實驗的詳細資訊。
+
+**API格式**
+
+```http
+GET /mlServices/{MLSERVICE_ID}
+```
+
+* `{MLSERVICE_ID}`:有效的MLService ID。
+
+**請求**
+
+```shell
+curl -X GET \
+    https://platform.adobe.io/data/sensei/mlServices/{MLSERVICE_ID} \
+    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+    -H 'x-api-key: {API_KEY}' \
+    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-sandbox-name: {SANDBOX_NAME}'
+```
+
+**回應**
+
+成功的回應會傳回包含所請求MLService詳細資料的裝載。
+
+```json
+{
+    "id": "{MLSERVICE_ID}",
+    "name": "A name for this MLService",
+    "description": "A description for this MLService",
+    "mlInstanceId": "{MLINSTANCE_ID}",
+    "trainingExperimentId": "{TRAINING_ID}",
+    "trainingDataSetId": "{DATASET_ID}",
+    "scoringExperimentId": "{SCORING_ID}",
+    "created": "2019-01-01T00:00:00.000Z",
+    "createdBy": {
+        "userId": "Jane_Doe@AdobeID"
+    },
+    "updated": "2019-01-01T00:00:00.000Z"
+}
+```
+
+## 更新MLService
+
+您可以透過PUT請求覆寫現有MLService的屬性，以更新現有MLService，該PUT請求會在請求路徑中包含目標MLService的ID，並提供包含已更新屬性的JSON裝載。
+
+>[!TIP] 為確保此PUT請求成功，建議您先執行GET請求，以依ID [擷取MLService](#retrieve-a-specific-mlservice)。 然後，修改並更新傳回的JSON物件，並套用已修改的JSON物件作為PUT要求的裝載。
+
+**API格式**
+
+```http
+PUT /mlServices/{MLSERVICE_ID}
+```
+
+* `{MLSERVICE_ID}`:有效的MLService ID。
+
+**請求**
+
+```shell
+curl -X PUT \
+    https://platform.adobe.io/data/sensei/mlServices/{MLSERVICE_ID} \
+    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+    -H 'x-api-key: {API_KEY}' \
+    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-sandbox-name: {SANDBOX_NAME}' \
+    -H 'content-type: application/vnd.adobe.platform.sensei+json; profile=mlService.v1.json' \
+    -d '{
+        "name": "A name for this MLService",
+        "description": "A description for this MLService",
+        "mlInstanceId": "{MLINSTANCE_ID}",
+        "trainingExperimentId": "{TRAINING_ID}",
+        "trainingDataSetId": "{DATASET_ID}",
+        "scoringExperimentId": "{SCORING_ID}",
+        "trainingSchedule": {
+            "startTime": "2019-01-01T00:00",
+            "endTime": "2019-12-31T00:00",
+            "cron": "20 * * * *"
+        },
+        "scoringSchedule": {
+            "startTime": "2019-01-01T00:00",
+            "endTime": "2019-12-31T00:00",
+            "cron": "20 * * * *"
+        }
+    }'
+```
+
+**回應**
+
+成功的回應會傳回包含MLService更新詳細資料的裝載。
+
+```json
+{
+    "id": "{MLSERVICE_ID}",
+    "name": "A name for this MLService",
+    "description": "A description for this MLService",
+    "mlInstanceId": "{MLINSTANCE_ID}",
+    "trainingExperimentId": "{TRAINING_ID}",
+    "trainingDataSetId": "{DATASET_ID}",
+    "scoringExperimentId": "{SCORING_ID}",
+    "created": "2019-01-01T00:00:00.000Z",
+    "createdBy": {
+        "userId": "Jane_Doe@AdobeID"
+    },
+    "trainingSchedule": {
+        "startTime": "2019-01-01T00:00",
+        "endTime": "2019-12-31T00:00",
+        "cron": "20 * * * *"
+    },
+    "scoringSchedule": {
+        "startTime": "2019-01-01T00:00",
+        "endTime": "2019-12-31T00:00",
+        "cron": "20 * * * *"
+    },
+    "updated": "2019-01-02T00:00:00.000Z"
+}
+```
+
+## 刪除MLService
+
+您可以執行DELETE請求，將目標MLService的ID包含在請求路徑中，以刪除單一MLService。
+
+**API格式**
+
+```http
+DELETE /mlServices/{MLSERVICE_ID}
+```
+
+| 參數 | 說明 |
+| --- | --- |
+| `{MLSERVICE_ID}` | 有效的MLService ID。 |
+
+**請求**
+
+```shell
+curl -X DELETE \
+    https://platform.adobe.io/data/sensei/mlServices/{MLSERVICE_ID} \
+    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+    -H 'x-api-key: {API_KEY}' \
+    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-sandbox-name: {SANDBOX_NAME}'
+```
+
+**回應**
+
+```json
+{
+    "title": "Success",
+    "status": 200,
+    "detail": "MLService deletion was successful"
+}
+```
+
+## 依MLInstance ID刪除MLServices
+
+您可以執行DELETE請求，將MLInstance ID指定為查詢參數，以刪除屬於特定MLInstance的所有MLServices。
+
+**API格式**
+
+```http
+DELETE /mlServices?mlInstanceId={MLINSTANCE_ID}
+```
+
+| 參數 | 說明 |
+| --- | --- |
+| `{MLSERVICE_ID}` | 有效的MLService ID。 |
+
+**請求**
+
+```shell
+curl -X DELETE \
+    https://platform.adobe.io/data/sensei/mlServices?mlInstanceId={MLINSTANCE_ID} \
+    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+    -H 'x-api-key: {API_KEY}' \
+    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-sandbox-name: {SANDBOX_NAME}'
+```
+
+**回應**
+
+```json
+{
+    "title": "Success",
+    "status": 200,
+    "detail": "MLServices deletion was successful"
+}
+```
