@@ -4,7 +4,7 @@ seo-title: 即時客戶資料平台中的資料治理
 description: '「資料管理」可讓您管理客戶資料，並確保符合適用於資料使用的法規、限制和政策。 '
 seo-description: '「資料管理」可讓您管理客戶資料，並確保符合適用於資料使用的法規、限制和政策。 '
 translation-type: tm+mt
-source-git-commit: f5fbb1434b7154dcdbef12de7882ecd3d2f18d52
+source-git-commit: 5699022d1f18773c81a0a36d4593393764cb771a
 
 ---
 
@@ -17,11 +17,11 @@ Adobe Experience Platform資料管理可讓您管理客戶資料，並確保符�
 
 即時CDP建立在Adobe Experience Platform之上，因此Experience Platform檔案中涵蓋了大部分的資料治理功能。 本文檔旨在補充Experience Platform的 [Data Governance概述](https://www.adobe.io/apis/experienceplatform/home/dule/duleservices.html#!api-specification/markdown/narrative/technical_overview/data_governance/dule_overview.md) ，並概述即時CDP中提供的Governance功能。 涵蓋下列主題：
 
-* [將使用標籤套用至您的資料](#apply-usage-labels-to-your-data)
-* [管理資料使用原則](#manage-data-usage-policies)
-* [強制符合資料使用規範](#enforce-data-usage-compliance)
+* [將使用標籤套用至您的資料](#labels)
+* [管理資料使用原則](#policies)
+* [強制符合資料使用規範](#enforcement)
 
-## 將使用標籤套用至您的資料
+## 將使用標籤套用至您的資料 {#labels}
 
 資料控管可讓您在資料集或資料集欄位層級，將使用標籤套用至資料。 資料使用標籤可讓您根據套用至該資料的使用原則來分類資料。
 
@@ -34,7 +34,7 @@ Adobe Experience Platform資料管理可讓您管理客戶資料，並確保符�
 您可以在「編輯目標」工作流程的「 _設定_ 」階段中 _定義行銷使用案例_ 。 如需詳細資訊，請參閱目標檔案。
 
 
-## 管理資料使用原則
+## 管理資料使用原則 {#policies}
 
 為了讓資料使用標籤有效支援資料遵循，必須定義並啟用資料使用原則。 資料使用原則是描述您允許或限制在即時CDP中對資料執行的行銷動作類型的規則。 如需詳細資訊，請參閱Experience Platform [Data Governance總覽中的「資料使](https://www.adobe.io/apis/experienceplatform/home/dule/duleservices.html#!api-specification/markdown/narrative/technical_overview/data_governance/dule_overview.md) 用政策」一節。
 
@@ -56,7 +56,7 @@ Adobe Experience Platform針對常見客 **戶體驗使用案** 例提供數種�
 * 套用至區段內要啟用之欄位和資料集的資料使用標籤。
 * 目的地的行銷目的。
 
-### 策略違規消息
+### 策略違規消息 {#enforcement}
 
 如果發生原則違規，而無法嘗試啟動區段(或對已啟動的區段 [進行編輯](#policy-enforcement-for-activated-segments))，則會防止動作，並出現一個快顯視窗，指出已違反一或多個原則。 在快顯的左欄中選取原則違規，以顯示該違規的詳細資料。
 
@@ -81,6 +81,6 @@ Adobe Experience Platform針對常見客 **戶體驗使用案** 例提供數種�
 
 如果上述任何動作都觸發違規，則無法儲存該動作，並顯示原則違規訊息，以確保您啟用的區段在被修改時繼續符合資料使用原則。
 
-## 下一步
+## 後續步驟
 
 現在，您已經介紹了Real-time CDP的主要資料治理功能，以及Experience Platform如何讓這些功能發揮作用，請繼續閱讀Adobe Experience Platform上的 [資料治理檔案](https://www.adobe.io/apis/experienceplatform/home/dule/duleservices.html)。 本檔案提供基本資料治理概念的概觀，以及管理資料使用標籤和原則的逐步工作流程。
