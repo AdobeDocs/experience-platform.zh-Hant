@@ -1,0 +1,62 @@
+---
+keywords: Experience Platform;home;popular topics
+solution: Experience Platform
+title: 重設沙盒
+topic: developer guide
+translation-type: tm+mt
+source-git-commit: 974e93b1c24493734848151b9be00758f6a84578
+
+---
+
+
+# 重設沙盒
+
+開發沙盒具有「工廠重設」功能，可從沙盒中刪除所有非預設資源。 您可以重設沙盒，方法是進行PUT請求，其中在請求路徑中 `name` 包含沙盒。
+
+**API格式**
+
+```http
+PUT /sandboxes/{SANDBOX_NAME}
+```
+
+| 參數 | 說明 |
+| --- | --- |
+| `{SANDBOX_NAME}` | 您 `name` 要重設沙盒的屬性。 |
+
+**請求**
+
+下列請求會重設名為&quot;dev-2&quot;的沙盒。
+
+```shell
+curl -X PUT \
+  https://platform.adobe.io/data/foundation/sandbox-management/sandboxes/dev-2 \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+    "action": "reset"
+  }'
+```
+
+| 屬性 | 說明 |
+| --- | --- |
+| `action` | 此參數必須在請求裝載中提供值為&quot;reset&quot;，才能重設沙盒。 |
+
+**回應**
+
+成功的回應會傳回更新沙盒的詳細資料，顯示其 `state` 是「重設」。
+
+```json
+{
+    "id": "d8184350-dbf5-11e9-875f-6bf1873fec16",
+    "name": "dev-2",
+    "title": "Development 2",
+    "state": "resetting",
+    "type": "development",
+    "region": "VA7"
+}
+```
+
+>[!NOTE] 重設沙盒後，系統大約需要15分鐘才能布建。 布建後，沙盒的 `state` 變為「活動」或「失敗」。
