@@ -4,14 +4,14 @@ solution: Experience Platform
 title: 使用API匯出資料
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 6d24637dc6cc282f98288b6416e4a3b7cebe42ea
+source-git-commit: 7f61cee8fb5160d0f393f8392b4ce2462d602981
 
 ---
 
 
 # 使用API匯出描述檔資料
 
-即時客戶個人檔案可讓您將來自多個來源的資料（包括屬性資料和行為資料）整合在一起，以建立個別客戶的單一檢視。 然後，可將描述檔中的可用資料匯出至資料集，以進一步處理。 本教學課程提供使用即時客戶設定檔API來建立和管理匯出工作 [的逐步指示](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml)。
+即時客戶個人檔案可讓您將來自多個來源的資料（包括屬性資料和行為資料）整合在一起，以建立個別客戶的單一檢視。 然後，可將描述檔中的可用資料匯出至資料集，以進一步處理。 本教學課程提供使用區段API來建立和管理匯出工作的逐 [步指示](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/segmentation.yaml)。
 
 除了建立匯出工作，您也可以使用描述檔存取API並透過預測來存取描述檔資料。 如需這些其 [他存取模式的詳細資訊，請參閱「描述檔存](../../profile/api/entities.md) 取API」教學課程 [，或](../../profile/api/edge-projections.md) 是設定邊緣目的地和預測的教學課程。
 
