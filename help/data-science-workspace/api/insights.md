@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 見解
 topic: Developer guide
 translation-type: tm+mt
-source-git-commit: 71e257c85790a96b5017dea314b757ec4ee07bed
+source-git-commit: 01cfbc86516a05df36714b8c91666983f7a1b0e8
 
 ---
 
@@ -15,7 +15,7 @@ source-git-commit: 71e257c85790a96b5017dea314b757ec4ee07bed
 
 ## 擷取前瞻分析清單
 
-您可以對前瞻分析端點執行單一GET請求，以擷取前瞻分析清單。  若要協助篩選結果，您可以在請求路徑中指定查詢參數。 有關可用查詢的清單，請參閱有關資產檢索查 [詢參數的附錄部分](appendix.md#query)。
+您可以對前瞻分析端點執行單一GET請求，以擷取前瞻分析清單。  若要協助篩選結果，您可以在請求路徑中指定查詢參數。 有關可用查詢的清單，請參閱有關資產檢索查 [詢參數的附錄部分](./appendix.md#query)。
 
 **API格式**
 
@@ -105,7 +105,7 @@ curl -X GET \
 
 ## 擷取特定分析
 
-若要尋找特定洞察力，請提出GET請求，並在請求路徑 `{INSIGHT_ID}` 中提供有效。 若要協助篩選結果，您可以在請求路徑中指定查詢參數。 有關可用查詢的清單，請參閱有關資產檢索查 [詢參數的附錄部分](appendix.md#query)。
+若要尋找特定洞察力，請提出GET請求，並在請求路徑 `{INSIGHT_ID}` 中提供有效。 若要協助篩選結果，您可以在請求路徑中指定查詢參數。 有關可用查詢的清單，請參閱有關資產檢索查 [詢參數的附錄部分](./appendix.md#query)。
 
 **API格式**
 
