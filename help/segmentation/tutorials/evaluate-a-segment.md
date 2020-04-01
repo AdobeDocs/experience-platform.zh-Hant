@@ -4,14 +4,14 @@ solution: Experience Platform
 title: 評估區段
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 1e4155374b5d164fe5d955db65fe07880e246e3b
+source-git-commit: 7f61cee8fb5160d0f393f8392b4ce2462d602981
 
 ---
 
 
 # 評估並存取區段結果
 
-本檔案提供使用即時客戶設定檔API評估區段及存取區段結 [果的教學課程](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml)。
+本檔案提供使用區段API評估區段及存取區段結果的 [教學課程](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/segmentation.yaml)。
 
 ## 快速入門
 
