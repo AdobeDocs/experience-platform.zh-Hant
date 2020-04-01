@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Adobe Experience Platform常見問答集與疑難排解指南
 topic: getting started
 translation-type: tm+mt
-source-git-commit: 260eddee41d337f25b90ab365a76ab2ffd3dedef
+source-git-commit: 7f61cee8fb5160d0f393f8392b4ce2462d602981
 
 ---
 
@@ -191,7 +191,7 @@ GET /batches?createdAfter=1559775880000&orderBy=desc:created
 }
 ```
 
-當提供的API金鑰標題(`x-api-key`)的值無效時，會顯示此錯誤訊息。 請確定您已正確輸入密鑰，然後再次嘗試。 如果您不知道您的API金鑰，可在 [Adobe I/O Console中找到它](https://console.adobe.io):在「整 **合** 」索引標籤中，導覽至特定整合的「概述」區段，以在「用戶端認證」下尋找API **金鑰******。
+當提供的API金鑰標題(`x-api-key`)的值無效時，會顯示此錯誤訊息。 請確定您已正確輸入密鑰，然後再次嘗試。 如果您不知道您的API金鑰，可在 [Adobe I/O Console中找到它](https://console.adobe.io):在「整 **合** 」標籤中，導覽至特定整合的「概述」區段，以在「用戶端認證」下尋找API **金鑰******。
 
 
 ### 遺失標題
@@ -247,3 +247,4 @@ GET /batches?createdAfter=1559775880000&orderBy=desc:created
 | 查詢服務 | [查詢服務API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/qs-api.yaml) | [查詢服務疑難排解指南](../query-service/troubleshooting-guide.md) |
 | 即時客戶個人檔案 | [即時客戶個人檔案API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml) |  |
 | 沙盒 | [沙盒API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sandbox-api.yaml) | [沙盒疑難排解指南](../sandboxes/troubleshooting-guide.md) |
+| 區段 | [區段API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/segmentation.yaml) |
