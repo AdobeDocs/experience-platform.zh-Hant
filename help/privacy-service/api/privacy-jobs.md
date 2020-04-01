@@ -1,0 +1,428 @@
+---
+keywords: Experience Platform;home;popular topics
+solution: Experience Platform
+title: 工作
+topic: developer guide
+translation-type: tm+mt
+source-git-commit: 5699022d1f18773c81a0a36d4593393764cb771a
+
+---
+
+
+# 隱私權工作
+
+以下各節將介紹您可以使用隱私權服務API中的根端`/`點()進行的呼叫。 每個呼叫都包含一般API格式、顯示必要標題的範例要求，以及範例回應。
+
+## 建立隱私權工作
+
+在建立新工作請求之前，您必須先收集您要存取、刪除或選擇退出銷售之資料主體的相關識別資訊。 在您取得所需資料後，必須在POST要求的裝載中提供至根端點。
+
+>[!NOTE] 相容的Adobe Experience Cloud應用程式使用不同的值來識別資料主體。 如需您應用程 [式所需識別碼的詳細資訊](../experience-cloud-apps.md) ，請參閱隱私權服務和Experience Cloud應用程式指南。
+
+隱私服務API支援兩種個人資料的工作要求：
+
+* [存取和／或刪除](#access-delete):存取（讀取）或刪除個人資料。
+* [選擇退出銷售](#opt-out):將個人資料標示為不銷售。
+
+>[!IMPORTANT] 雖然存取和刪除請求可合併為單一API呼叫，但必須個別提出退出請求。
+
+### 建立訪問／刪除作業 {#access-delete}
+
+本節說明如何使用API進行存取／刪除工作請求。
+
+**API格式**
+
+```http
+POST /
+```
+
+**請求**
+
+下列請求會建立新的工作請求，由裝載中提供的屬性設定，如下所述。
+
+```shell
+curl -X POST \
+  https://platform.adobe.io/data/core/privacy/jobs \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'Content-Type: application/json' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -d '{
+    "companyContexts": [
+      {
+        "namespace": "imsOrgID",
+        "value": "{IMS_ORG}"
+      }
+    ],
+    "users": [
+      {
+        "key": "DavidSmith",
+        "action": ["access"],
+        "userIDs": [
+          {
+            "namespace": "email",
+            "value": "dsmith@acme.com",
+            "type": "standard"
+          },
+          {
+            "namespace": "ECID",
+            "type": "standard",
+            "value":  "443636576799758681021090721276",
+            "isDeletedClientSide": false
+          }
+        ]
+      },
+      {
+        "key": "user12345",
+        "action": ["access","delete"],
+        "userIDs": [
+          {
+            "namespace": "email",
+            "value": "ajones@acme.com",
+            "type": "standard"
+          },
+          {
+            "namespace": "loyaltyAccount",
+            "value": "12AD45FE30R29",
+            "type": "integrationCode"
+          }
+        ]
+      }
+    ],
+    "include": ["Analytics", "AudienceManager"],
+    "expandIds": false,
+    "priority": "normal",
+    "analyticsDeleteMethod": "anonymize",
+    "regulation": "ccpa"
+}'
+```
+
+| 屬性 | 說明 |
+| --- | --- |
+| `companyContexts` **(必填)** | 包含貴組織驗證資訊的陣列。 每個列出的識別碼都包含下列屬性： <ul><li>`namespace`:識別碼的名稱空間。</li><li>`value`:識別碼的值。</li></ul>必須 **有一個識別碼** 用作識別 `imsOrgId` 碼，其中包含 `namespace``value` IMS組織的唯一ID。 <br/><br/>其他識別碼可以是產品特定的公司限定詞(例如 `Campaign`)，可識別與您組織所屬的Adobe應用程式整合。 潛在值包括帳戶名稱、用戶端代碼、租用戶ID或其他應用程式識別碼。 |
+| `users` **(必填)** | 包含至少一個用戶集合的陣列，您希望訪問或刪除其資訊。 在單一請求中最多可提供1000個使用者ID。 每個用戶對象都包含以下資訊： <ul><li>`key`:用來限定回應資料中個別工作ID的識別碼。 為此值選擇唯一、可輕鬆識別的字串是最佳實務，以便日後輕鬆參考或查閱。</li><li>`action`:列出要對資料執行的所需操作的陣列。 根據您要執行的操作，此陣列必須包括、 `access`或 `delete`兩者。</li><li>`userIDs`:特定使用者的身分集合。 單一使用者可擁有的身分數目限制為9。 每個身分都由 `namespace`、 `value`和namespace限定詞(`type`)組成。 如需這些 [必要屬性](appendix.md) ，請參閱附錄。</li></ul> |
+| `include` **(必填)** | 要納入您處理中的Adobe產品陣列。 如果此值遺失或空白，則會拒絕請求。 僅包含貴組織已整合的產品。 如需詳細資訊，請 [參閱附錄中](appendix.md) 「接受的產品值」一節。 |
+| `expandIDs` | 可選屬性，若設為 `true`，代表處理應用程式中ID的最佳化（目前僅Analytics支援）。 If omitted, this value defaults to `false`. |
+| `priority` | Adobe Analytics使用的可選屬性，可設定處理請求的優先順序。 接受的值是 `normal` 和 `low`。 如果 `priority` 省略，則預設行為為 `normal`。 |
+| `analyticsDeleteMethod` | 可選屬性，指定Adobe Analytics如何處理個人資料。 此屬性接受兩個可能的值： <ul><li>`anonymize`:指定使用者ID集合所參考的所有資料都會設為匿名。 如果 `analyticsDeleteMethod` 省略，則此為預設行為。</li><li>`purge`:所有資料都會完全移除。</li></ul> |
+| `regulation` **(必填)** | 請求的規則（必須是「gdpr」或「ccpa」）。 |
+
+**回應**
+
+成功的回應會傳回新建立之工作的詳細資料。
+
+```json
+{
+    "jobs": [
+        {
+            "jobId": "6fc09b53-c24f-4a6c-9ca2-c6076b0842b6",
+            "customer": {
+                "user": {
+                    "key": "DavidSmith",
+                    "action": [
+                        "access"
+                    ]
+                }
+            }
+        },
+        {
+            "jobId": "6fc09b53-c24f-4a6c-9ca2-c6076be029f3",
+            "customer": {
+                "user": {
+                    "key": "user12345",
+                    "action": [
+                        "access"
+                    ]
+                }
+            }
+        },
+        {
+            "jobId": "6fc09b53-c24f-4a6c-9ca2-c6076bd023j1",
+            "customer": {
+                "user": {
+                    "key": "user12345",
+                    "action": [
+                        "delete"
+                    ]
+                }
+            }
+        }
+    ],
+    "requestStatus": 1,
+    "totalRecords": 3
+}
+```
+
+| 屬性 | 說明 |
+| --- | --- |
+| `jobId` | 作業的唯讀唯一系統產生的ID。 此值用於查找特定作業的下一步。 |
+
+成功提交作業請求後，您可以繼續下一步， [檢查作業狀態](#check-the-status-of-a-job)。
+
+### 建立退出銷售的工作 {#opt-out}
+
+本節將示範如何使用API提出選擇退出銷售的工作要求。
+
+**API格式**
+
+```http
+POST /
+```
+
+**請求**
+
+下列請求會建立新的工作請求，由裝載中提供的屬性設定，如下所述。
+
+```shell
+curl -X POST \
+  https://platform.adobe.io/data/privacy/gdpr/ \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'Content-Type: application/json' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -d '{
+    "companyContexts": [
+      {
+        "namespace": "imsOrgID",
+        "value": "{IMS_ORG}"
+      }
+    ],
+    "users": [
+      {
+        "key": "DavidSmith",
+        "action": ["opt-out-of-sale"],
+        "userIDs": [
+          {
+            "namespace": "email",
+            "value": "dsmith@acme.com",
+            "type": "standard"
+          },
+          {
+            "namespace": "ECID",
+            "type": "standard",
+            "value":  "443636576799758681021090721276",
+            "isDeletedClientSide": false
+          }
+        ]
+      },
+      {
+        "key": "user12345",
+        "action": ["opt-out-of-sale"],
+        "userIDs": [
+          {
+            "namespace": "email",
+            "value": "ajones@acme.com",
+            "type": "standard"
+          },
+          {
+            "namespace": "loyaltyAccount",
+            "value": "12AD45FE30R29",
+            "type": "integrationCode"
+          }
+        ]
+      }
+    ],
+    "include": ["Analytics", "AudienceManager"],
+    "expandIds": false,
+    "priority": "normal",
+    "analyticsDeleteMethod": "anonymize",
+    "regulation": "ccpa"
+}'
+```
+
+| 屬性 | 說明 |
+| --- | --- |
+| `companyContexts` **(必填)** | 包含貴組織驗證資訊的陣列。 每個列出的識別碼都包含下列屬性： <ul><li>`namespace`:識別碼的名稱空間。</li><li>`value`:識別碼的值。</li></ul>必須 **有一個識別碼** 用作識別 `imsOrgId` 碼，其中包含 `namespace``value` IMS組織的唯一ID。 <br/><br/>其他識別碼可以是產品特定的公司限定詞(例如 `Campaign`)，可識別與您組織所屬的Adobe應用程式整合。 潛在值包括帳戶名稱、用戶端代碼、租用戶ID或其他應用程式識別碼。 |
+| `users` **(必填)** | 包含至少一個用戶集合的陣列，您希望訪問或刪除其資訊。 在單一請求中最多可提供1000個使用者ID。 每個用戶對象都包含以下資訊： <ul><li>`key`:用來限定回應資料中個別工作ID的識別碼。 為此值選擇唯一、可輕鬆識別的字串是最佳實務，以便日後輕鬆參考或查閱。</li><li>`action`:列出要對資料執行的所需操作的陣列。 對於退出銷售請求，陣列只能包含值 `opt-out-of-sale`。</li><li>`userIDs`:特定使用者的身分集合。 單一使用者可擁有的身分數目限制為9。 每個身分都由 `namespace`、 `value`和namespace限定詞(`type`)組成。 如需這些 [必要屬性](appendix.md) ，請參閱附錄。</li></ul> |
+| `include` **(必填)** | 要納入您處理中的Adobe產品陣列。 如果此值遺失或空白，則會拒絕請求。 僅包含貴組織已整合的產品。 如需詳細資訊，請 [參閱附錄中](appendix.md) 「接受的產品值」一節。 |
+| `expandIDs` | 可選屬性，若設為 `true`，代表處理應用程式中ID的最佳化（目前僅Analytics支援）。 If omitted, this value defaults to `false`. |
+| `priority` | Adobe Analytics使用的可選屬性，可設定處理請求的優先順序。 接受的值是 `normal` 和 `low`。 如果 `priority` 省略，則預設行為為 `normal`。 |
+| `analyticsDeleteMethod` | 可選屬性，指定Adobe Analytics如何處理個人資料。 此屬性接受兩個可能的值： <ul><li>`anonymize`:指定使用者ID集合所參考的所有資料都會設為匿名。 如果 `analyticsDeleteMethod` 省略，則此為預設行為。</li><li>`purge`:所有資料都會完全移除。</li></ul> |
+| `regulation` **(必填)** | 請求的規則（必須是「gdpr」或「ccpa」）。 |
+
+**回應**
+
+成功的回應會傳回新建立之工作的詳細資料。
+
+```json
+{
+    "jobs": [
+        {
+            "jobId": "6fc09b53-c24f-4a6c-9ca2-c6076bd9vjs0",
+            "customer": {
+                "user": {
+                    "key": "DavidSmith",
+                    "action": [
+                        "opt-out-of-sale"
+                    ]
+                }
+            }
+        },
+        {
+            "jobId": "6fc09b53-c24f-4a6c-9ca2-c6076bes0ewj2",
+            "customer": {
+                "user": {
+                    "key": "user12345",
+                    "action": [
+                        "opt-out-of-sale"
+                    ]
+                }
+            }
+        }
+    ],
+    "requestStatus": 1,
+    "totalRecords": 2
+}
+```
+
+| 屬性 | 說明 |
+| --- | --- |
+| `jobId` | 作業的唯讀唯一系統產生的ID。 此值用於查找下一步中的特定作業。 |
+
+成功提交作業請求後，您可以繼續下一步檢查作業狀態。
+
+## 檢查作業的狀態
+
+使用上一步 `jobId` 中傳回的值之一，您可以擷取有關該工作的資訊，例如其目前的處理狀態。
+
+>[!IMPORTANT] 先前建立的作業的資料僅在作業完成日期的30天內可供檢索。
+
+**API格式**
+
+```http
+GET /{JOB_ID}
+```
+
+| 參數 | 說明 |
+| --- | --- |
+| `{JOB_ID}` | 您要尋找的工作ID，在回應上一 `jobId` 步時傳回 [下方](#create-a-job-request)。 |
+
+**請求**
+
+下列請求會擷取請求路徑中提供之 `jobId` 工作的詳細資料。
+
+```shell
+curl -X GET \
+  https://platform.adobe.io/data/core/privacy/jobs/6fc09b53-c24f-4a6c-9ca2-c6076b0842b6 \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}'
+```
+
+**回應**
+
+成功的回應會傳回指定工作的詳細資料。
+
+```json
+{
+    "jobId": "527ef92d-6cd9-45cc-9bf1-477cfa1e2ca2",
+    "requestId": "15700479082313109RX-899",
+    "userKey": "David Smith",
+    "action": "access",
+    "status": "error",
+    "submittedBy": "02b38adf-6573-401e-b4cc-6b08dbc0e61c@techacct.adobe.com",
+    "createdDate": "10/02/2019 08:25 PM GMT",
+    "lastModifiedDate": "10/02/2019 08:25 PM GMT",
+    "userIds": [
+        {
+            "namespace": "email",
+            "value": "dsmith@acme.com",
+            "type": "standard",
+            "namespaceId": 6,
+            "isDeletedClientSide": false
+        },
+        {
+            "namespace": "ECID",
+            "value": "1123A4D5690B32A",
+            "type": "standard",
+            "namespaceId": 4,
+            "isDeletedClientSide": false
+        }
+    ],
+    "productResponses": [
+        {
+            "product": "Analytics",
+            "retryCount": 0,
+            "processedDate": "10/02/2019 08:25 PM GMT",
+            "productStatusResponse": {
+                "status": "submitted",
+                "message": "processing"
+            }
+        },
+        {
+            "product": "AudienceManager",
+            "retryCount": 0,
+            "processedDate": "10/02/2019 08:25 PM GMT",
+            "productStatusResponse": {
+                "status": "submitted",
+                "message": "processing"
+            }
+        }
+    ],
+    "downloadURL": "http://...",
+    "regulation": "ccpa"
+}
+```
+
+| 屬性 | 說明 |
+| --- | --- |
+| `productStatusResponse` | 作業的當前狀態。 下表提供了每個可能狀態的詳細資訊。 |
+| `downloadURL` | 如果作業的狀態為 `complete`，此屬性會提供URL，以ZIP檔案形式下載作業結果。 此檔案可在工作完成後60天內下載。 |
+
+### 工作狀態回應
+
+下表列出了不同的可能作業狀態及其對應含義：
+
+| 狀態代碼 | 狀態訊息 | 意義 |
+| ----------- | -------------- | -------- |
+| 1 | 完成 | 工作已完成，而且（如果需要）檔案會從每個應用程式上傳。 |
+| 2 | 正在處理 | 應用程式已確認作業，並且正在處理。 |
+| 3 | 已提交 | 工作會提交至每個適用的應用程式。 |
+| 4 | 錯誤 | 處理作業時發生故障——檢索單個作業詳細資訊可以獲得更具體的資訊。 |
+
+>[!NOTE] 如果提交的作業具有仍在處理的從屬子作業，則該作業可能仍處於處理狀態。
+
+## 列出所有作業
+
+您可以向根()端點發出GET請求，以查看組織內所有可用作業請求的`/`清單。
+
+**API格式**
+
+此請求格式在根( `regulation``/`)端點上使用查詢參數，因此它以問號(`?`)開頭，如下所示。 回應會編頁，讓您使用其他查詢參數(`page` 和 `size`)來篩選回應。 您可以使用&amp;符號(`&`)來分隔多個參數。
+
+```http
+GET ?regulation={REGULATION}
+GET ?regulation={REGULATION}&page={PAGE}
+GET ?regulation={REGULATION}&size={SIZE}
+GET ?regulation={REGULATION}&page={PAGE}&size={SIZE}
+```
+
+| 參數 | 說明 |
+| --- | --- |
+| `{REGULATION}` | 要查詢的規則類型。 接受的值是 `gdpr` 和 `ccpa`。 |
+| `{PAGE}` | 要顯示的資料頁，使用基於0的編號。 預設值為 `0`. |
+| `{SIZE}` | 每個頁面上要顯示的結果數。 預設值 `1` 為，最大值為 `100`。 超過最大值會導致API傳回400碼錯誤。 |
+
+**請求**
+
+下列請求會從頁面大小為50的第三頁開始，擷取IMS組織內所有工作的編頁清單。
+
+```shell
+curl -X GET \
+  https://platform.adobe.io/data/core/privacy/jobs?regulation=gdpr&page=2&size=50 \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}'
+```
+
+**回應**
+
+成功的回應會傳回工作清單，每個工作都包含詳細資訊，例如 `jobId`。 在此範例中，回應將包含50個工作的清單，從結果的第三頁開始。
+
+### 存取後續頁面
+
+若要在編頁回應中擷取下一組結果，您必須對相同端點進行另一個API呼叫，同時將查詢參數 `page` 增加1。
+
+## 後續步驟
+
+您現在知道如何使用隱私權服務API來建立和監控隱私權工作。 如需如何使用使用者介面執行相同工作的詳細資訊，請參 [閱隱私權服務UI概觀](../ui/overview.md)。
