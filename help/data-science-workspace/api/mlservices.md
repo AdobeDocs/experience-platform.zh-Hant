@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 服務
 topic: Developer guide
 translation-type: tm+mt
-source-git-commit: 54640caea0c3a55bc7975a0a8faae5eb31233e2e
+source-git-commit: dabeee04dd6ec2bbdd37a6987efcb54b285df7ca
 
 ---
 
@@ -105,7 +105,7 @@ curl -X POST \
 
 ## 擷取MLServices清單
 
-您可以執行單一GET請求來擷取MLServices清單。 若要協助篩選結果，您可以在請求路徑中指定查詢參數。 有關可用查詢的清單，請參閱有關資產檢索查 [詢參數的附錄部分](appendix.md#query)。
+您可以執行單一GET請求來擷取MLServices清單。 若要協助篩選結果，您可以在請求路徑中指定查詢參數。 有關可用查詢的清單，請參閱有關資產檢索查 [詢參數的附錄部分](./appendix.md#query)。
 
 **API格式**
 
@@ -117,7 +117,7 @@ GET /mlServices?{QUERY_PARAMETER_1}={VALUE_1}&{QUERY_PARAMETER_2}={VALUE_2}
 
 | 參數 | 說明 |
 | --- | --- |
-| `{QUERY_PARAMETER}` | 用於篩選 [結果的可用查](appendix.md#query) 詢參數之一。 |
+| `{QUERY_PARAMETER}` | 用於篩選 [結果的可用查](./appendix.md#query) 詢參數之一。 |
 | `{VALUE}` | 前面查詢參數的值。 |
 
 **請求**
@@ -208,7 +208,7 @@ curl -X GET \
 
 ## 更新MLService
 
-您可以透過PUT請求覆寫現有MLService的屬性，以更新現有MLService，該PUT請求會在請求路徑中包含目標MLService的ID，並提供包含已更新屬性的JSON裝載。
+您可以透過PUT請求覆寫現有MLService的屬性，以更新現有MLService，該PUT請求在請求路徑中包含目標MLService的ID，並提供包含已更新屬性的JSON裝載。
 
 >[!TIP] 為確保此PUT請求成功，建議您先執行GET請求，以依ID [擷取MLService](#retrieve-a-specific-mlservice)。 然後，修改並更新傳回的JSON物件，並套用已修改的JSON物件作為PUT要求的裝載。
 
