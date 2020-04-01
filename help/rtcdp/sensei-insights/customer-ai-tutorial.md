@@ -5,7 +5,7 @@ description: 本教學課程提供使用客戶AI(alpha)的指示
 seo-description: 本教學課程提供使用客戶AI(alpha)的指示
 index: false
 translation-type: tm+mt
-source-git-commit: 1118983ce8f5704ef3a347c8c316a9cc5cc62815
+source-git-commit: e0d11adb7f0ece9344efb118b4199ecb1fc37bb3
 
 ---
 
@@ -88,7 +88,7 @@ Experience Platform為客戶提供簡單易用的Adobe Sensei服務，可針對�
 
 如果成功建立例項，則會立即觸發預測執行，並根據您定義的排程執行後續的預測執行。
 
->   **注意：** 根據輸入資料的大小，預測執行最多需要24小時才能完成。
+>[!NOTE] 根據輸入資料的大小，預測執行最多需要24小時才能完成。
 
 依照本節內容，您已設定客戶AI的例項，並執行預測執行。 在跑完成後，得分見解將自動將Profiles與預測分數加水。 請等候24小時，再繼續本教學課程的下一節。
 
@@ -110,6 +110,6 @@ Experience Platform為客戶提供簡單易用的Adobe Sensei服務，可針對�
 
 ![](./images/properties.png)
 
-## 下一步
+## 後續步驟
 
 透過本教學課程，您已成功設定客戶AI的例項、產生傾向分數，並使用「區段產生器」建立由傾向分數強制執行的區段。 您的客戶區段現在可由啟動的目的地使用，以鎖定您的受眾。 如需詳細 [資訊，請參閱](../destinations/destinations-overview.md) 「目標概觀」。
