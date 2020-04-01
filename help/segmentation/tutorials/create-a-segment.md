@@ -4,14 +4,14 @@ solution: Experience Platform
 title: 建立區段
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 902ba5efbb5f18a2de826fffd023195d804309cc
+source-git-commit: 7f61cee8fb5160d0f393f8392b4ce2462d602981
 
 ---
 
 
 # 建立區段
 
-本檔案提供使用即時客戶設定檔API來開發、測試、預覽和儲存區段定 [義的教學課程](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml)。
+本檔案提供教學課程，說明如何使用區段API來開發、測試、預覽和儲存區 [段定義](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/segmentation.yaml)。
 
 如需如何使用使用者介面建立區段的詳細資訊，請參閱「區段產 [生器指南」](../ui/overview.md)。
 
