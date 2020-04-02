@@ -4,7 +4,7 @@ seo-title: 在即時客戶資料平台上檢視即時客戶個人檔案資料
 description: 在即時客戶資料平台上檢視即時客戶個人檔案資料
 seo-description: 在即時客戶資料平台上檢視即時客戶個人檔案資料
 translation-type: tm+mt
-source-git-commit: f23a025336875adec1f4182fee451741833a1b63
+source-git-commit: 50e6b39c1eb0bda4f3b30991515fb1c13fa9ff87
 
 ---
 
@@ -15,4 +15,4 @@ source-git-commit: f23a025336875adec1f4182fee451741833a1b63
 
 在使用者介面中，您可以檢視這些唯讀設定檔，並檢視個別客戶的重要資訊，例如偏好設定、過去事件和互動，以及個人所屬的區段。
 
-由於即時客戶資料平台建立在Adobe Experience Platform之上，因此即時CDP可運用Experience Platform中的描述檔檢視功能。 如需在平台使用者介面中檢視客戶個人檔案的詳細指南，請參閱Adobe I/O的 [「即時客戶個人檔案」使用指南](https://www.adobe.io/apis/experienceplatform/home/profile-identity-segmentation/profile-identity-segmentation-services.html#!api-specification/markdown/narrative/technical_overview/unified_profile_architectural_overview/profile-user-guide.md)。
+由於即時客戶資料平台建立在Adobe Experience Platform之上，因此即時CDP可運用Experience Platform中的描述檔檢視功能。 如需在平台使用者介面中檢視客戶個人檔案的詳細指南，請參 [閱即時客戶個人檔案使用指南](../../profile/ui/user-guide.md)。
