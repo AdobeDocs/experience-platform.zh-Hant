@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Adobe Experience Platform細分服務
 topic: overview
 translation-type: tm+mt
-source-git-commit: 5699022d1f18773c81a0a36d4593393764cb771a
+source-git-commit: a6a1ecd9ce49c0a55e14b0d5479ca7315e332904
 
 ---
 
@@ -47,7 +47,7 @@ Adobe Experience Platform Segmentation Service提供使用者介面和REST風格
 
 串流區段是持續不斷的資料選擇程式，可因應使用者活動而更新區段。 建立並儲存區段後，區段定義會套用至即時客戶描述檔的傳入資料。 區段新增和移除作業會定期處理，確保目標受眾保持相關性。
 
-若要進一步瞭解串流區段，請閱讀串流 [區段檔案](./ui/streaming-segmentation.md)。
+若要進一步瞭解串流區段，請閱讀串流 [區段檔案](./api/streaming-segmentation.md)。
 
 ### 批次分段
 
