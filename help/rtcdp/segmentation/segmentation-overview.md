@@ -4,7 +4,7 @@ seo-title: Adobe即時客戶資料平台中的細分服務
 description: 描述分段服務的概述。
 seo-description: 概述，說明Adobe即時客戶資料平台上的細分服務和細分。
 translation-type: tm+mt
-source-git-commit: bcb4279d04e39905fa64b817fdadd8a875e27697
+source-git-commit: 50e6b39c1eb0bda4f3b30991515fb1c13fa9ff87
 
 ---
 
@@ -23,6 +23,6 @@ source-git-commit: bcb4279d04e39905fa64b817fdadd8a875e27697
 
 平台可讓您輕鬆建立和存取區段，並使用不同的建置區塊進一步描述區段。 如需如何使用「區段產生器」的詳細資訊，請閱讀「區段產生 [器」指南](./segment-builder-guide.md)。
 
-## 下一步
+## 後續步驟
 
-閱讀此概觀後，您現在應該瞭解即時CDP如何利用細分服務來增強行銷宣傳的自訂和個人化。 如需細分服務的詳細資訊，請閱讀Adobe I/O [上的細分檔案](https://www.adobe.io/apis/experienceplatform/home/profile-identity-segmentation/profile-identity-segmentation-services.html#!api-specification/markdown/narrative/technical_overview/segmentation/segmentation-overview.md)。
+閱讀此概觀後，您現在應該瞭解即時CDP如何利用細分服務來增強行銷宣傳的自訂和個人化。 如需細分服務的詳細資訊，請閱讀細分 [檔案](../../segmentation/home.md)。
