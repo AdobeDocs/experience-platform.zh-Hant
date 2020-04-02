@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 區段產生器UI指南
 topic: ui guide
 translation-type: tm+mt
-source-git-commit: 902ba5efbb5f18a2de826fffd023195d804309cc
+source-git-commit: 91792f81a50d5752e46236d61b6ad645e3fda86c
 
 ---
 
@@ -173,6 +173,14 @@ Experience Platform可讓您從多個來源匯整資料，並加以匯整，以�
 ![](../images/segment-builder/enable-streaming-segmentation.png)
 
 在啟用串流區段後，必須建立基準（這是初始執行，之後區段將永遠是最新的）。 系統會自動處理基線，不過，只有在已啟用排程分段時，才可能進行此動作。 如需啟用排程分段的詳細資訊，請參 [閱本使用指南的上一節](#enable-scheduled-segmentation)。
+
+## DULE策略違規
+
+>[!NOTE] DULE策略違規僅在建立已分配給目標的段時適用。
+
+建立完區段後，資料管理會分析區段，以確保區段內沒有違反原則的情況。 有關DULE和違反策略的詳細資訊，請參閱數 [據使用標籤概述](../../data-governance/labels/overview.md)。
+
+![](../images/segment-builder/segment-dule-policy-violations.png)
 
 ## 後續步驟
 
