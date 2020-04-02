@@ -3,7 +3,7 @@ product: experience-platform
 audience: user
 user-guide-title: Adobe Experience Platform Segmentation Service Help
 translation-type: tm+mt
-source-git-commit: 7f61cee8fb5160d0f393f8392b4ce2462d602981
+source-git-commit: 4db66d34afa814715cbcf6fdf409e01b3fe2c0b8
 
 ---
 
@@ -12,6 +12,8 @@ source-git-commit: 7f61cee8fb5160d0f393f8392b4ce2462d602981
 
 - [概述](home.md)
 - 區段API {#api}
+   - [快速入門](api/getting-started.md)
+   - [區段工作](api/segment-jobs.md)
    - [串流區段](api/streaming-segmentation.md)
 - 區段UI {#ui}
    - [概述](ui/overview.md)
