@@ -4,7 +4,7 @@ seo-title: 即時客戶資料平台首頁和資料板
 description: Adobe Experience Platform的儀表板、首頁和首次使用者體驗
 seo-description: Adobe Experience Platform的儀表板、首頁和首次使用者體驗
 translation-type: tm+mt
-source-git-commit: 6c8d0757d7e7568b1976823d9c52221374e67cbb
+source-git-commit: 69692f100389abb3fdb251b9b9258421254a2494
 
 ---
 
@@ -42,7 +42,7 @@ Some information is shown in different ways on both the leaderboard and metric c
 
 計數 **[!UICONTROL Datasets]** 器顯示系統中的資料集數和平台中的資料量。 建立資料集時，會更新此計數器。
 
-如需資料集的詳細資訊，請參 [閱將資料內嵌至Adobe Experience Platform](https://www.adobe.io/apis/experienceplatform/home/tutorials/alltutorials.html#!api-specification/markdown/narrative/tutorials/data_ingestion_tutorial/data_ingestion_tutorial.md)。
+如需資料集的詳細資訊，請參閱資料 [集總覽](../catalog/datasets/overview.md)。
 
 ### 設定檔
 
@@ -58,7 +58,7 @@ Some information is shown in different ways on both the leaderboard and metric c
 
 **[!UICONTROL Segments]** 顯示為組織建立的區段總數。 建立新區段時，會更新此數字。
 
-如需區段的詳細資訊，請參閱區 [段服務概觀](https://www.adobe.io/apis/experienceplatform/home/profile-identity-segmentation/profile-identity-segmentation-services.html#!api-specification/markdown/narrative/technical_overview/segmentation/segmentation-overview.md)。
+如需區段的詳細資訊，請參閱區 [段服務概觀](segmentation/segmentation-overview.md)。
 
 ### 目的地
 
@@ -106,7 +106,7 @@ The number of failed profile records is updated hourly. -->
 
 按一下資料集可檢視該項目的詳細資訊，或 **[!UICONTROL View all]** 查看資料集清單。 在此處，您可以按一下特定源以獲取詳細資訊。
 
-如需資料集的詳細資訊，請參 [閱將資料內嵌至Adobe Experience Platform](https://www.adobe.io/apis/experienceplatform/home/tutorials/alltutorials.html#!api-specification/markdown/narrative/tutorials/data_ingestion_tutorial/data_ingestion_tutorial.md)。
+如需資料集的詳細資訊，請參閱資料 [集總覽](../catalog/datasets/overview.md)。
 
 ### 最近來源
 
@@ -122,7 +122,7 @@ The number of failed profile records is updated hourly. -->
 
 按一下區段可檢視該項目的詳細資訊，或 **[!UICONTROL View all]** 查看更多區段的資訊。
 
-如需區段的詳細資訊，請參閱區 [段服務概觀](https://www.adobe.io/apis/experienceplatform/home/profile-identity-segmentation/profile-identity-segmentation-services.html#!api-specification/markdown/narrative/technical_overview/segmentation/segmentation-overview.md)。
+如需區段的詳細資訊，請參閱區 [段服務概觀](segmentation/segmentation-overview.md)。
 
 ### 最近的目的地
 
