@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 評估區段
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 7f61cee8fb5160d0f393f8392b4ce2462d602981
+source-git-commit: a6a1ecd9ce49c0a55e14b0d5479ca7315e332904
 
 ---
 
@@ -951,7 +951,7 @@ curl -X GET \
 
 匯出成功後，您的資料就可在Experience Platform的資料湖中使用。 然後，您就可以使 [用「資料存取API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-access-api.yaml) 」，使用與匯出相 `batchId` 關的資料來存取資料。 視區段大小而定，資料可能以區塊為單位，而批次可能由數個檔案組成。
 
-如需如何使用資料存取API存取和下載批次檔案的逐步指示，請依照資料存取教 [學課程](../../data-access/api.md)。
+如需如何使用資料存取API存取和下載批次檔案的逐步指示，請依照資料存取教 [學課程](../../data-access/tutorials/dataset-data.md)。
 
 您也可以使用Adobe Experience Platform Query Service存取成功匯出的區段資料。 使用UI或REST風格的API，查詢服務可讓您在資料湖中寫入、驗證及執行資料查詢。
 
