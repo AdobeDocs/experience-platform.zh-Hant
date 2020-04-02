@@ -4,7 +4,7 @@ seo-title: Adobe即時客戶資料平台上的資料品質
 description: 即時客戶資料平台上的資料質量文檔
 seo-description: 描述資料品質如何透過Adobe即時客戶資料平台上的批次和資料擷取來運作的檔案
 translation-type: tm+mt
-source-git-commit: d7a2f7707b36c73f33ad52122d4debedc0877c7a
+source-git-commit: 50e6b39c1eb0bda4f3b30991515fb1c13fa9ff87
 
 ---
 
@@ -15,4 +15,4 @@ source-git-commit: d7a2f7707b36c73f33ad52122d4debedc0877c7a
 
 即時CDP建立在Adobe Experience Platform之上，並運用許多Experience Platform服務和功能。 因此，您可以確信資料會在收錄時受到檢查和驗證。
 
-如需資料品質的詳細資訊，請閱讀 [Adobe I/O的資料品質檔案](https://www.adobe.io/apis/experienceplatform/home/data-ingestion/data-ingestion-services.html#!api-specification/markdown/narrative/technical_overview/data_ingestion_quality/data_ingestion_quality.md)。
+如需資料品質的詳細資訊，請閱讀 [Adobe I/O的資料品質檔案](../../ingestion/quality/overview.md)。
