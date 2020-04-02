@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 資料科學工作區概觀
 topic: overview
 translation-type: tm+mt
-source-git-commit: 3190f2f01ae13d25cc3a3a540b83cc1fc0819f0a
+source-git-commit: 9f3fc3ec3ce560534b057185e3fef2cc2bc1234d
 
 ---
 
@@ -213,5 +213,5 @@ Data Science Workspace可協助精簡和簡化資料科學工作流程，從資�
 
 以下視訊旨在支援您對資料科學工作區的瞭解。
 
->[!VIDEO](https://images-tv.adobe.com/mpcv3/2fbf62c1-44ed-4162-8eed-f47ab8599701_1578435939.1920x1080at3000_h264.mp4)
+>[!VIDEO](https://video.tv.adobe.com/v/30567?quality=12&amp;enable10seconds=on&amp;speedcontrol=on)
 
