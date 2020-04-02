@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 使用API建立資料集
 topic: datasets
 translation-type: tm+mt
-source-git-commit: 6d24637dc6cc282f98288b6416e4a3b7cebe42ea
+source-git-commit: a6a1ecd9ce49c0a55e14b0d5479ca7315e332904
 
 ---
 
@@ -454,7 +454,7 @@ curl -X GET \
 
 您也可以使用資料存取API傳回名稱、大小（以位元組為單位），以及下載檔案或資料夾的連結。
 
-有關使用資料存取API的詳細步驟，請參閱資料存取開 [發人員指南](../../data-access/api.md)。
+有關使用資料存取API的詳細步驟，請參閱資料存取開 [發人員指南](../../data-access/home.md)。
 
 ## 更新資料集結構
 
