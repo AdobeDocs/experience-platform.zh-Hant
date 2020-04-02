@@ -4,7 +4,7 @@ seo-title: 即時CDP管理概述
 description: 描述
 seo-description: seo說明
 translation-type: tm+mt
-source-git-commit: 33e187053790b98d2f1c36306b38c738833c4659
+source-git-commit: 50e6b39c1eb0bda4f3b30991515fb1c13fa9ff87
 
 ---
 
@@ -21,10 +21,10 @@ Experience Platform可讓管理員管理使用者的角色存取控制，並管�
 
 存取控制是透過 [Adobe Admin Console管理](http://adminconsole.adobe.com)。 此功能運用Admin Console中的產品設定檔，讓您將使用者連結至權限和沙盒。 使用此功能，管理員可以授予或限制對已定義用戶集的特定即時CDP功能的訪問權。
 
-若要進一步瞭解存取控制，請參閱 [Experience Platform檔案中的存取控制](https://www.adobe.io/apis/experienceplatform/home/permissions-and-sandboxes/permissions-and-sandboxes.html#!api-specification/markdown/narrative/technical_overview/access-control/access-control-overview.md) 概觀。
+若要進一步瞭解存取控制，請參閱 [Experience Platform檔案中的存取控制](../../access-control/home.md) 概觀。
 
 >[!IMPORTANT]
->有關授予對即時CDP功能的訪問權限（包括啟用UI中的可見性）的詳細指南，請遵循 [access control user guide](https://www.adobe.io/apis/experienceplatform/home/permissions-and-sandboxes/permissions-and-sandboxes.html#!api-specification/markdown/narrative/technical_overview/access-control/access-control-user-guide.md)，尤其是那些用於管理產品配置檔案的詳細資訊和附加服務的步驟。
+>有關授予對即時CDP功能的訪問權限（包括啟用UI中的可見性）的詳細指南，請遵循 [access control user guide](../../access-control/ui/overview.md)，尤其是那些用於管理產品配置檔案的詳細資訊和附加服務的步驟。
 
 ## 沙盒
 
@@ -32,4 +32,4 @@ Adobe Experience Platform（以及Real-time CDP by extension）旨在讓全球�
 
 為滿足此需求，Adobe Experience Platform提供「沙盒」，讓您將單一Platform實例分割為獨立的虛擬環境，以用於開發和發展數位體驗應用程式。
 
-如需沙盒的詳細資訊，請參閱「 [Experience Platform檔案」中的](https://www.adobe.io/apis/experienceplatform/home/permissions-and-sandboxes/permissions-and-sandboxes.html#!api-specification/markdown/narrative/technical_overview/sandboxes/sandboxes-overview.md) 「沙盒概述」。
+如需沙盒的詳細資訊，請參閱「 [Experience Platform檔案」中的](../../sandboxes/home.md) 「沙盒概述」。
