@@ -1,10 +1,10 @@
 ---
 title: 資料治理概觀
 seo-title: 即時客戶資料平台中的資料治理
-description: '「資料管理」可讓您管理客戶資料，並確保符合適用於資料使用的法規、限制和政策。 '
-seo-description: '「資料管理」可讓您管理客戶資料，並確保符合適用於資料使用的法規、限制和政策。 '
+description: '「資料治理」可讓您管理客戶資料，並確保符合適用於資料使用的法規、限制和政策。 '
+seo-description: '「資料治理」可讓您管理客戶資料，並確保符合適用於資料使用的法規、限制和政策。 '
 translation-type: tm+mt
-source-git-commit: 5699022d1f18773c81a0a36d4593393764cb771a
+source-git-commit: e21cf6794e6c9ee522482cd9ccb95d66b06d330a
 
 ---
 
@@ -15,7 +15,7 @@ source-git-commit: 5699022d1f18773c81a0a36d4593393764cb771a
 
 Adobe Experience Platform資料管理可讓您管理客戶資料，並確保符合資料使用適用的法規、限制和政策。 它在即時CDP中扮演了關鍵角色，允許您定義使用策略、根據這些策略對資料進行分類，以及在執行某些行銷操作時檢查是否違反策略。
 
-即時CDP建立在Adobe Experience Platform之上，因此Experience Platform檔案中涵蓋了大部分的資料治理功能。 本文檔旨在補充Experience Platform的 [Data Governance概述](https://www.adobe.io/apis/experienceplatform/home/dule/duleservices.html#!api-specification/markdown/narrative/technical_overview/data_governance/dule_overview.md) ，並概述即時CDP中提供的Governance功能。 涵蓋下列主題：
+即時CDP建立在Adobe Experience Platform之上，因此Experience Platform檔案中涵蓋了大部分的資料治理功能。 本文檔旨在補充Experience Platform的 [Data Governance概述](../../data-governance/home.md) ，並概述即時CDP中提供的Governance功能。 涵蓋下列主題：
 
 * [將使用標籤套用至您的資料](#labels)
 * [管理資料使用原則](#policies)
@@ -25,7 +25,7 @@ Adobe Experience Platform資料管理可讓您管理客戶資料，並確保符�
 
 資料控管可讓您在資料集或資料集欄位層級，將使用標籤套用至資料。 資料使用標籤可讓您根據套用至該資料的使用原則來分類資料。
 
-如需使用資料使用標籤的詳細資訊，請參 [閱Adobe Experience Platform的資料使用標籤](https://www.adobe.io/apis/experienceplatform/home/dule/duleservices.html#!api-specification/markdown/narrative/tutorials/dule/dule_working_with_labels.md) 使用指南。
+如需使用資料使用標籤的詳細資訊，請參 [閱Adobe Experience Platform的資料使用標籤](../../data-governance/labels/overview.md) 使用指南。
 
 ## 設定目標限制
 
@@ -36,9 +36,9 @@ Adobe Experience Platform資料管理可讓您管理客戶資料，並確保符�
 
 ## 管理資料使用原則 {#policies}
 
-為了讓資料使用標籤有效支援資料遵循，必須定義並啟用資料使用原則。 資料使用原則是描述您允許或限制在即時CDP中對資料執行的行銷動作類型的規則。 如需詳細資訊，請參閱Experience Platform [Data Governance總覽中的「資料使](https://www.adobe.io/apis/experienceplatform/home/dule/duleservices.html#!api-specification/markdown/narrative/technical_overview/data_governance/dule_overview.md) 用政策」一節。
+為了讓資料使用標籤有效支援資料遵循，必須定義並啟用資料使用原則。 資料使用原則是描述您允許或限制在即時CDP中對資料執行的行銷動作類型的規則。 如需詳細資訊，請參閱Experience Platform [Data Governance總覽中的「資料使](../../data-governance/home.md) 用政策」一節。
 
-Adobe Experience Platform針對常見客 **戶體驗使用案** 例提供數種核心政策。 如 [Policy Service Developer Guide中「List all policies」（列出所有原則）一節所示，可透過向](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml)DULE Policy Service API [(](https://www.adobe.io/apis/experienceplatform/home/dule/duleservices.html#!api-specification/markdown/narrative/technical_overview/data_governance/dule_policy_service_developer_guide.md)DULE Policy Service API)提出請求來檢視這些原則。 您也可以建立自己的自 **訂原則** ，以建立自訂使用限制的模型，如開發人員指南的「建立原則」一節所示。
+Adobe Experience Platform針對常見客 **戶體驗使用案** 例提供數種核心政策。 如 [Policy Service Developer Guide中「List all policies」（列出所有原則）一節所示，可透過向](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml)DULE Policy Service API [(](../../data-governance/policies/overview.md)DULE Policy Service API)提出請求來檢視這些原則。 您也可以建立自己的自 **訂原則** ，以建立自訂使用限制的模型，如開發人員指南的「建立原則」一節所示。
 
 ## （測試版）強制符合資料使用規範 {#enforce-data-usage-compliance}
 
@@ -70,7 +70,7 @@ Adobe Experience Platform針對常見客 **戶體驗使用案** 例提供數種�
 
 一旦觸發違規， **Save** （儲存）按鈕就會停用以啟動，直到適當的元件更新為符合資料使用政策為止。
 
-### 啟用區段的原則強制
+### 啟用區段的原則強制 {#policy-enforcement-for-activated-segments}
 
 在區段啟動後，原則實施仍適用於區段，限制對區段或其目的地的任何變更，以致發生原則違規。 由於將區段啟用至目的地時涉及的元件眾多，下列任何動作都可能觸發違規：
 
@@ -83,4 +83,4 @@ Adobe Experience Platform針對常見客 **戶體驗使用案** 例提供數種�
 
 ## 後續步驟
 
-現在，您已經介紹了Real-time CDP的主要資料治理功能，以及Experience Platform如何讓這些功能發揮作用，請繼續閱讀Adobe Experience Platform上的 [資料治理檔案](https://www.adobe.io/apis/experienceplatform/home/dule/duleservices.html)。 本檔案提供基本資料治理概念的概觀，以及管理資料使用標籤和原則的逐步工作流程。
+現在，您已經介紹了Real-time CDP的主要資料治理功能，以及Experience Platform如何讓這些功能發揮作用，請繼續閱讀Adobe Experience Platform上的 [資料治理檔案](../../data-governance/home.md)。 本檔案提供基本資料治理概念的概觀，以及管理資料使用標籤和原則的逐步工作流程。
