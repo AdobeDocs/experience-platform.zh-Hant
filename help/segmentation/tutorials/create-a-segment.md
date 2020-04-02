@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 建立區段
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 7f61cee8fb5160d0f393f8392b4ce2462d602981
+source-git-commit: a6a1ecd9ce49c0a55e14b0d5479ca7315e332904
 
 ---
 
@@ -53,7 +53,7 @@ Experience Platform中的所有資源都隔離至特定的虛擬沙盒。 所有
 
 您可以透過對即時客戶描述檔API中的端點提出POST `/segment/definitions` 要求來建立新的區段定義。 下列範例概述如何設定定義請求的格式，包括成功定義區段所需的資訊。
 
-區段定義可用兩種方式來評估——批次分段和串流分段。 批次分段會根據預設排程或手動觸發評估時評估區段，而串流分段則會在資料擷取到平台時立即評估區段。 本教學課程將使用批 **次分段**。 如需串流區段的詳細資訊，請閱讀串 [流區段的概觀](../ui/streaming-segmentation.md)。
+區段定義可用兩種方式來評估——批次分段和串流分段。 批次分段會根據預設排程或手動觸發評估時評估區段，而串流分段則會在資料擷取到平台時立即評估區段。 本教學課程將使用批 **次分段**。 如需串流區段的詳細資訊，請閱讀串 [流區段的概觀](../api/streaming-segmentation.md)。
 
 **API格式**
 
