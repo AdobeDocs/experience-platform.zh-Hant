@@ -4,7 +4,7 @@ seo-title: 「目標詳細資料」頁
 description: '個別目的地的詳細資訊頁面提供目的地詳細資訊的概述，例如目的地名稱、ID、對應至目的地的區段，以及編輯啟動和啟用和停用資料流的控制項。 '
 seo-description: '個別目的地的詳細資訊頁面提供目的地詳細資訊的概述，例如目的地名稱、ID、對應至目的地的區段，以及編輯啟動和啟用和停用資料流的控制項。 '
 translation-type: tm+mt
-source-git-commit: b784b67092ea8d30ad00cda9a40779b3890862fd
+source-git-commit: e21cf6794e6c9ee522482cd9ccb95d66b06d330a
 
 ---
 
@@ -51,7 +51,7 @@ source-git-commit: b784b67092ea8d30ad00cda9a40779b3890862fd
 | 類別 | 指示目標類型。 如需詳 [細資訊，請參閱目](/help/rtcdp/destinations/destinations-catalog.md) 標目錄。 |
 | 連線類型 | 指出您的觀眾是以何種形式傳送至目的地。 可以是 **Cookie****或描述檔**。 |
 | 頻率 | 指出觀眾被傳送至目的地的頻率。 可以是 **串流** 或 **批次**。 |
-| 參閱 | 代表目標所接受的身分名稱空間。 例如，「身分識別」欄位可以是GAID、IDFA、電子郵件。 如需所有接受的身分名稱空間，請參閱「身分名稱空間概 [觀」中的標準名稱空間](https://www.adobe.io/apis/experienceplatform/home/profile-identity-segmentation/profile-identity-segmentation-services.html#!api-specification/markdown/narrative/technical_overview/identity_namespace_overview/identity_namespace_overview.md)。 |
+| 身份 | 代表目標所接受的身分名稱空間。 例如，「身分識別」欄位可以是GAID、IDFA、電子郵件。 如需所有接受的身分名稱空間，請參閱「身分名稱空間概 [觀」中的標準名稱空間](../../identity-service/namespaces.md)。 |
 | 建立者 | 表示建立此目標流的用戶。 |
 | 已建立 | 表示建立此目標流的UTC日期和時間。 |
 
