@@ -4,7 +4,7 @@ seo-title: Adobe Experience Platform中的資料集概觀
 description: Adobe Experience Platform中的資料集概觀
 seo-description: Adobe Experience Platform中的資料集概觀
 translation-type: tm+mt
-source-git-commit: 3083f6fb25a331eb6dd1d9a63b65aa206481dcb3
+source-git-commit: e21cf6794e6c9ee522482cd9ccb95d66b06d330a
 
 ---
 
@@ -15,4 +15,4 @@ Experience Platform中的資料集工作區可讓您檢視和管理IMS組織建�
 
 按一下左側導覽中 **[!UICONTROL Datasets]** 的，以檢視資料集工作區。 資料集工作區包含資料集的清單，包括顯示名稱、建立（日期和時間）、源、方案和上次批處理狀態的列，以及資料集上次更新的日期和時間。
 
-如需使用資料集工作區的詳細資訊，請參 [閱將資料內嵌至Adobe Experience Platform](https://www.adobe.io/apis/experienceplatform/home/tutorials/alltutorials.html#!api-specification/markdown/narrative/tutorials/data_ingestion_tutorial/data_ingestion_tutorial.md)。
+有關使用資料集工作區的資訊，請參 [閱資料集概述](../../catalog/datasets/overview.md)。
