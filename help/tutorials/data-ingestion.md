@@ -4,14 +4,18 @@ solution: Experience Platform
 title: 資料擷取教學課程
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: eef56cfc20eb8e4ac131bee20c5c3afbf82971d2
+source-git-commit: 2020f4b88f81f2d4fe3cfbd91cd18119ae580f4f
 
 ---
 
 
 # 將資料內嵌至Experience Platform
 
-Adobe Experience Platform將來自多個來源的資料匯集在一起，以協助行銷人員更好地瞭解客戶的行為。 Adobe Experience Platform資料擷取代表平台從這些來源擷取資料的多種方法，以及該資料如何保存在資料湖中，以供下游平台服務使用。 資料擷取包括批次擷取、串流擷取，以及使用來源連接器擷取。 若要進一步瞭解，請閱讀「資 [料擷取」概觀](../ingestion/home.md) ，以及 [「來源」概觀](../source-connectors/home.md)。
+Adobe Experience Platform將來自多個來源的資料匯集在一起，以協助行銷人員更好地瞭解客戶的行為。 Adobe Experience Platform資料擷取代表平台從這些來源擷取資料的多種方法，以及該資料如何保存在資料湖中，以供下游平台服務使用。 資料擷取包括批次擷取、串流擷取，以及使用來源連接器擷取。 若要進一步瞭解，請閱讀「資 [料擷取」概觀](../ingestion/home.md) ，或直接前往 [Sources檔案](../source-connectors/home.md)。
+
+## 在UI和API中建立來源連接器
+
+來源連接器可讓您從多個來源擷取資料，然後在這些來源使用平台服務加以標籤、結構化和增強。 若要開始使用UI建立連接器，請造訪在UI [總覽中建立來源連接器](https://www.adobe.io/apis/experienceplatform/home/tutorials/sources-ui-tutorials.html#!api-specification/markdown/narrative/tutorials/sources_tutorial/ui/sources-ui-tutorial.md)。 若要使用API建立來源連接器，請造 [訪使用Flow Service API概觀建立來源連接器](https://www.adobe.io/apis/experienceplatform/home/tutorials/sources-api-tutorials.html#!api-specification/markdown/narrative/tutorials/sources_tutorial/api/sources-api-tutorial.md)。
 
 ## 收錄批次資料
 
@@ -37,7 +41,5 @@ Adobe Experience Platform可讓您輕鬆將資料匯入Platform做為批次檔�
 
 將資料串流至Adobe Experience Platform時，進行大量HTTP呼叫的成本可能很高。 例如，建立1KB負載的200個HTTP請求，而不是建立1KB負載的200個HTTP請求，建立200個每個1KB訊息的1HTTP請求，而且單一負載為200KB，效率更高。 正確使用時，在單一要求內將多個訊息分組是最佳化傳送至Experience Platform之資料的絕佳方式。 若要瞭解如何使用串流擷取功能，在單一HTTP要求內傳送多則訊息至Experience Platform，請遵循傳送多 [則訊息教學課程](../ingestion/tutorials/streaming-multiple-messages.md)。
 
-## 在UI和API中建立來源連接器
 
-來源連接器可讓您從多個來源擷取資料，然後在這些來源使用平台服務加以標籤、結構化和增強。 若要開始使用UI建立連接器，請造訪在UI [總覽中建立來源連接器](https://www.adobe.io/apis/experienceplatform/home/tutorials/sources-ui-tutorials.html#!api-specification/markdown/narrative/tutorials/sources_tutorial/ui/sources-ui-tutorial.md)。 若要使用API建立來源連接器，請造 [訪使用Flow Service API概觀建立來源連接器](https://www.adobe.io/apis/experienceplatform/home/tutorials/sources-api-tutorials.html#!api-specification/markdown/narrative/tutorials/sources_tutorial/api/sources-api-tutorial.md)。
 
