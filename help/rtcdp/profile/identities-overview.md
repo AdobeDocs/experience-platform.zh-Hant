@@ -4,7 +4,7 @@ seo-title: Adobe Experience Platform Identity Service
 description: 描述
 seo-description: seo說明
 translation-type: tm+mt
-source-git-commit: 5cba5a1e8139dd85f23250d42a1cd8d2318eb916
+source-git-commit: 50e6b39c1eb0bda4f3b30991515fb1c13fa9ff87
 
 ---
 
@@ -17,7 +17,7 @@ Adobe Experience Platform Identity Service可跨裝置和系統將身分連結�
 
 ## 身分名稱空間
 
-身分名稱空間是Identity Service的元件，可做為指標，為客戶身分提供額外內容。 常用ID命名空間的範例是「電子郵件」，在多個網站上使用相同的電子郵件地址可讓您將多個不同的身分識別接合在一起，每個身分識別碼都具有唯一的客戶ID，實際上屬於同一客戶。 Experience Platform可讓您使用ID名稱空間在使用者介面中搜尋個別描述檔。 如需檢視描述檔的詳細資訊，請參閱描述檔檢 [視器概觀](/help/rtcdp/profile/profile-viewer.md)。 若要進一步瞭解身分名稱空間，請參 [閱Adobe I/O的身分名稱空間概觀](https://www.adobe.io/apis/experienceplatform/home/profile-identity-segmentation/profile-identity-segmentation-services.html#!api-specification/markdown/narrative/technical_overview/identity_namespace_overview/identity_namespace_overview.md)。
+身分名稱空間是Identity Service的元件，可做為指標，為客戶身分提供額外內容。 常用ID命名空間的範例是「電子郵件」，在多個網站上使用相同的電子郵件地址可讓您將多個不同的身分識別接合在一起，每個身分識別碼都具有唯一的客戶ID，實際上屬於同一客戶。 Experience Platform可讓您使用ID名稱空間在使用者介面中搜尋個別描述檔。 如需檢視描述檔的詳細資訊，請參閱描述檔檢 [視器概觀](/help/rtcdp/profile/profile-viewer.md)。 若要進一步瞭解身分名稱空間，請參閱 [身分名稱空間概觀](../../identity-service/namespaces.md)。
 
 ## 身分圖
 
@@ -25,6 +25,6 @@ Adobe Experience Platform Identity Service可跨裝置和系統將身分連結�
 
 Identity Service管理僅由您的組織可見的識別圖，並根據您的資料（稱為專用圖）建立。 當收錄的資料記錄包含多個身分時，Identity Service會增強您的私人圖表，並在找到的身分之間新增關係。
 
-## 下一步
+## 後續步驟
 
-身分及其間的關係由Identity Service定義和維護，並由即時客戶個人檔案運用，以建立每個個別客戶及其互動的完整圖景。 若要進一步瞭解，請造訪 [Adobe I/O上的Identity Service檔案](https://www.adobe.io/apis/experienceplatform/home/profile-identity-segmentation/profile-identity-segmentation-services.html#!api-specification/markdown/narrative/technical_overview/identity_services_architectural_overview/identity_services_architectural_overview.md)。
+身分及其間的關係由Identity Service定義和維護，並由即時客戶個人檔案運用，以建立每個個別客戶及其互動的完整圖景。 若要進一步瞭解，請造訪 [Identity Service檔案](../../identity-service/home.md)。
