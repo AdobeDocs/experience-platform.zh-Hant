@@ -4,7 +4,7 @@ seo-title: Adobe Campaign
 description: Adobe Campaign是一套解決方案，可協助您跨所有線上及線下通道個人化並傳遞宣傳活動。
 seo-description: Adobe Campaign是一套解決方案，可協助您跨所有線上及線下通道個人化並傳遞宣傳活動。
 translation-type: tm+mt
-source-git-commit: 336aa90cf1e059a92a36dd0ef3222ef6a6f5123b
+source-git-commit: 50e6b39c1eb0bda4f3b30991515fb1c13fa9ff87
 
 ---
 
@@ -45,7 +45,7 @@ Adobe Campaign是一套解決方案，可協助您跨所有線上及線下通道
 
 ## 目標屬性 {#destination-attributes}
 
-在啟 [用區段](/help/rtcdp/destinations/activate-destinations.md) 至Adobe Campaign目的地時，我們建議您從聯合架構中選取唯一 [識別碼](https://www.adobe.io/apis/experienceplatform/home/profile-identity-segmentation/profile-identity-segmentation-services.html#!api-specification/markdown/narrative/technical_overview/unified_profile_architectural_overview/unified_profile_architectural_overview.md)。 選擇唯一標識符和要導出到目標的任何其他XDM欄位。 如需詳細資訊，請參 [閱「電子郵件行銷目標」中，選取要在匯出檔案中當做目標屬性使用的架構欄位](/help/rtcdp/destinations/email-marketing-destinations.md#destination-attributes) 。
+在啟 [用區段](/help/rtcdp/destinations/activate-destinations.md) 至Adobe Campaign目的地時，我們建議您從聯合架構中選取唯一 [識別碼](../../profile/home.md#profile-fragments-and-union-schemas)。 選擇唯一標識符和要導出到目標的任何其他XDM欄位。 如需詳細資訊，請參 [閱「電子郵件行銷目標」中，選取要在匯出檔案中當做目標屬性使用的架構欄位](/help/rtcdp/destinations/email-marketing-destinations.md#destination-attributes) 。
 
 
 ## 設定資料匯入至Adobe Campaign {#import-data-into-campaign}
