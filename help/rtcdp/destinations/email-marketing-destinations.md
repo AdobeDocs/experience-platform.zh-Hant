@@ -4,7 +4,7 @@ seo-title: 電子郵件行銷目標
 description: 電子郵件服務供應商(ESP)可讓您管理電子郵件行銷活動，例如傳送促銷電子郵件促銷活動。
 seo-description: 電子郵件服務供應商(ESP)可讓您管理電子郵件行銷活動，例如傳送促銷電子郵件促銷活動。
 translation-type: tm+mt
-source-git-commit: 463212a8fabb9dd5962b4d3f523a6f2d88bb1d9d
+source-git-commit: 50e6b39c1eb0bda4f3b30991515fb1c13fa9ff87
 
 ---
 
@@ -39,13 +39,13 @@ source-git-commit: 463212a8fabb9dd5962b4d3f523a6f2d88bb1d9d
 
 ![目標屬性](/help/rtcdp/destinations/assets/destination-attributes.png)
 
-### 參閱 {#identity}
+### 身份 {#identity}
 
-建議您從聯合架構中選擇唯一 [識別碼](https://www.adobe.io/apis/experienceplatform/home/profile-identity-segmentation/profile-identity-segmentation-services.html#!api-specification/markdown/narrative/technical_overview/unified_profile_architectural_overview/unified_profile_architectural_overview.md)。 這是您使用者身分識別的欄位。 最常見的欄位是電子郵件地址，但也可以是忠誠度方案ID或電話號碼。 請參見下表，以瞭解統一架構中最常見的唯一標識符及其XDM欄位。
+建議您從聯合架構中選擇唯一 [標識符](../../profile/home.md#profile-fragments-and-union-schemas)。 這是您使用者身分識別的欄位。 最常見的欄位是電子郵件地址，但也可以是忠誠度方案ID或電話號碼。 請參見下表，以瞭解統一架構中最常見的唯一標識符及其XDM欄位。
 
 | 唯一識別碼 | 統一模式中的XDM欄位 |
 ---------|----------
-| Email Address | `personalEmail.address` |
+| 電子郵件地址 | `personalEmail.address` |
 | 電話 | `mobilePhone.number` |
 | 忠誠度方案ID | `Customer-defined XDM field` |
 
@@ -55,8 +55,8 @@ source-git-commit: 463212a8fabb9dd5962b4d3f523a6f2d88bb1d9d
 
 | 架構 | XDM欄位 |
 ---------|----------
-| 名字 | `person.name.firstName` |
-| 姓氏 | `person.name.lastName` |
+| 「名字」 | `person.name.firstName` |
+| 「姓氏」 | `person.name.lastName` |
 | 電話 | `mobilePhone.number` |
 | 地址城市 | `homeAddress.city` |
 | 地址狀態 | `homeAddress.stateProvince` |
