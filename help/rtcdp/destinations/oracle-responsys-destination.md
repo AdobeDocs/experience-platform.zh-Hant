@@ -41,7 +41,7 @@ source-git-commit: 50e6b39c1eb0bda4f3b30991515fb1c13fa9ff87
 
 ## 目標屬性 {#destination-attributes}
 
-在將 [段激活到](/help/rtcdp/destinations/activate-destinations.md) Oracle Responsys目標時，建議您從聯合方案中選擇一個唯 [一標識符](../../profile/home.md#profile-fragments-and-union-schemas)。 選擇唯一標識符和要導出到目標的任何其他XDM欄位。 如需詳細資訊，請參 [閱「電子郵件行銷目標」中，選取要在匯出檔案中當做目標屬性使用的架構欄位](/help/rtcdp/destinations/email-marketing-destinations.md#destination-attributes) 。
+在將 [段激活到](/help/rtcdp/destinations/activate-destinations.md) Oracle Responsys目標時，建議您從聯合方案中選擇一個唯 [一標識符](../../profile/home.md#profile-fragments-and-union-schemas)。 選擇唯一標識符以及要導出到目標的任何其它XDM欄位。 如需詳細資訊，請參 [閱「電子郵件行銷目標」中，選取要在匯出檔案中當做目標屬性使用的架構欄位](/help/rtcdp/destinations/email-marketing-destinations.md#destination-attributes) 。
 
 ## 設定資料導入到Oracle Responsys {#import-data-into-responsys}
 
