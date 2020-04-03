@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 隱私權服務使用指南
 topic: UI guide
 translation-type: tm+mt
-source-git-commit: 4b7cbfcbcbaa602d92f3dfe814b1269f770e3fe7
+source-git-commit: 8a488944d530a4850f8946ed30af769ecb6e954f
 
 ---
 
@@ -74,16 +74,18 @@ source-git-commit: 4b7cbfcbcbaa602d92f3dfe814b1269f770e3fe7
 
 ## 建立新的隱私權工作要求
 
+>[!NOTE] 為了建立隱私權工作要求，您必須為要存取或刪除其資料的特定客戶提供識別資訊。 請先閱讀有關身分資 [料的檔案，以取得隱私權要求](../identity-data.md) ，然後再繼續本節內容。
+
 Privacy Service UI提供兩種建立新工作要求的方法：
 
-* 使用請求產生器
-* 上傳JSON檔案
+* [使用請求產生器](#request-builder)
+* [上傳JSON檔案](#json)
 
 以下各節提供使用這些方法的步驟。
 
-### 使用請求產生器
+### 使用請求產生器 {#request-builder}
 
-使用「請求產生器」，您可以在使用者介面中手動建立新的隱私權工作請求。 「請求產生器」最適合用於較簡單和較小的請求集，因為「請求產生器」會限制每個使用者的請求只有ID類型。 若是更複雜的請求，請改 [為上傳JSON檔案](#upload-a-json-file) 。
+使用「請求產生器」，您可以在使用者介面中手動建立新的隱私權工作請求。 「請求產生器」最適合用於較簡單和較小的請求集，因為「請求產生器」會限制每個使用者的請求只有ID類型。 若是更複雜的請求，請改 [為上傳JSON檔案](#json) 。
 
 若要開始使用「請求產生器」，請按一 **** 下畫面右側「狀態報表」介面工具集下方的「建立請求」。
 
@@ -91,19 +93,31 @@ Privacy Service UI提供兩種建立新工作要求的方法：
 
 隨即 *開啟「建立請求* 」對話方塊，顯示針對目前選取的規則類型提交隱私權工作請求的可用選項。
 
-![](../images/user-guide/request-builder.png)
+<img src="../images/user-guide/request-builder.png" width="500" /><br/>
 
-選擇請 **求的作業類型** （「刪除」或「存取」），並從清單中選取一或多個可 **用產品** 。 在「 **客戶ID**」下方，從下拉式選單（電子郵件、ECID或AAID）中選取ID類型。 在右邊的文字方塊中輸入ID值，對每個ID按 **\&lt;enter>** ，將其新增至清單。
+選擇請 **求的作業類型** （「刪除」或「存取」），並從清單中選取一或多個可 **用產品** 。
 
-![](../images/user-guide/request-builder-fillout.png)
+<img src="../images/user-guide/type-and-products.png" width="500" /><br/>
 
-此清單中的ID將會收到隱私權服務寄送的任何電子郵件通知副本，這些通知會在工作完成、錯誤結束或逾時時傳送。 完成後，按一下「 **建立**」。
+在「 *命名空間類型*」下，為要傳送至隱私權服務的客戶ID選取適當的命名空間類型。
 
-![](../images/user-guide/request-builder-create.png)
+<img src="../images/user-guide/namespace-type.png" width="500" /><br/>
+
+使用標準 _命名空間類型_ ，從下拉式選單（電子郵件、ECID或AAID）中選取命名空間，然後在文字方塊中的右側鍵入ID值，針對每個ID按 **\&lt;enter>** ，將它新增至清單。
+
+<img src="../images/user-guide/standard-namespace.png" width="500" /><br/>
+
+使用自訂命 _名空間類型_ 時，您必須先手動輸入命名空間，才能提供下面的ID值。
+
+<img src="../images/user-guide/custom-namespace.png" width="500" /><br/>
+
+完成後，按一下「 **建立**」。
+
+<img src="../images/user-guide/request-builder-create.png" width="500" /><br/>
 
 對話方塊消失，新工作（或工作）會列在「工作請求」介面工具集中，以及其目前的處理狀態。
 
-### 上傳JSON檔案
+### 上傳JSON檔案 {#json}
 
 當建立更複雜的請求時（例如對每個正在處理的資料主體使用多個ID類型的請求），您可以上傳JSON檔案來建立請求。
 
@@ -113,12 +127,12 @@ Privacy Service UI提供兩種建立新工作要求的方法：
 
 此時 *會出現「上傳JSON* 」對話方塊，提供您將JSON檔案拖放至其中的視窗。
 
-![](../images/user-guide/upload-json.png)
+<img src="../images/user-guide/upload-json.png" width="500" /><br/>
 
 如果您沒有要上傳的JSON檔案，請按一下「下載 **Adobe-GDPR-Request.json** 」以下載範本，您可以根據從資料主體收集到的值來填入範本。
 
 
-![](../images/user-guide/privacy-template.png)
+<img src="../images/user-guide/privacy-template.png" width="500" /><br/>
 
 
 在您的電腦上找到JSON檔案，並將它拖曳至對話方塊視窗。 如果上載成功，則檔案名將出現在對話框中。 您可以視需要將更多JSON檔案拖放至對話方塊中，以繼續新增。
