@@ -318,7 +318,7 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/definitions/4afe34ae
 
 ## 刪除特定區段定義
 
-您可以向端點提出DELETE請求，並在請求路徑中提供區段定義的值， `/segment/definitions` 請求刪除指定 `id` 的區段定義。
+您可以向端點提出DELETE請求並在請求路徑中提供段定義值，以 `/segment/definitions` 請求刪除指定 `id` 的段定義。
 
 **API格式**
 
