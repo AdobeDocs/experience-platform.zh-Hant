@@ -4,7 +4,7 @@ seo-title: 即時客戶資料平台中的即時客戶個人檔案
 description: 概述即時客戶資料平台如何讓您使用即時客戶個人檔案，為客戶提供協調一致的相關體驗。
 seo-description: 即時客戶資料平台、個人檔案、資料、體驗、通道
 translation-type: tm+mt
-source-git-commit: 5cba5a1e8139dd85f23250d42a1cd8d2318eb916
+source-git-commit: 50e6b39c1eb0bda4f3b30991515fb1c13fa9ff87
 
 ---
 
@@ -29,6 +29,6 @@ source-git-commit: 5cba5a1e8139dd85f23250d42a1cd8d2318eb916
 
 平台可讓您輕鬆檢視客戶個人檔案，並使用各種屬性搜尋特定個人檔案。 如需如何在平台中檢視描述檔的詳細資訊，請參閱描述檔檢 [視器概觀](/help/rtcdp/profile/profile-viewer.md)。
 
-## 下一步
+## 後續步驟
 
-在閱讀本概述後，您現在應該瞭解即時CDP如何利用即時客戶概要資訊大規模推動跨通道個人化。 透過將不同來源的身分識別結合在一起，您可以看到每個個別客戶的完整圖景，讓您的行銷宣傳更上一層樓。 如需詳細資訊，包括在使用者介面和透過API使用即時客戶個人檔案資料的最佳實務和教學課程，請參閱Adobe I/O的即時客戶個人檔案檔案 [](https://www.adobe.io/apis/experienceplatform/home/profile-identity-segmentation/profile-identity-segmentation-services.html#!api-specification/markdown/narrative/technical_overview/unified_profile_architectural_overview/unified_profile_architectural_overview.md)。
+在閱讀本概述後，您現在應該瞭解即時CDP如何利用即時客戶概要資訊大規模推動跨通道個人化。 透過將不同來源的身分識別結合在一起，您可以看到每個個別客戶的完整圖景，讓您的行銷宣傳更上一層樓。 如需詳細資訊，包括在使用者介面和透過API使用即時客戶個人檔案資料的最佳實務和教學課程，請參閱即時客戶個人檔案 [檔案](../../profile/home.md)。
