@@ -1,8 +1,8 @@
 ---
 title: 資料治理概觀
 seo-title: 即時客戶資料平台中的資料治理
-description: '「資料治理」可讓您管理客戶資料，並確保符合適用於資料使用的法規、限制和政策。 '
-seo-description: '「資料治理」可讓您管理客戶資料，並確保符合適用於資料使用的法規、限制和政策。 '
+description: '「資料管理」可讓您管理客戶資料，並確保符合適用於資料使用的法規、限制和政策。 '
+seo-description: '「資料管理」可讓您管理客戶資料，並確保符合適用於資料使用的法規、限制和政策。 '
 translation-type: tm+mt
 source-git-commit: e21cf6794e6c9ee522482cd9ccb95d66b06d330a
 
