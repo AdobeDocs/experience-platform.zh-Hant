@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 隱私權服務發行說明
 topic: release notes
 translation-type: tm+mt
-source-git-commit: d7aa1b4e3e697a504964d6eb485f536065c6718a
+source-git-commit: 682436b29df4696e98ef96fe5a65ab32221098ba
 
 ---
 
@@ -13,12 +13,22 @@ source-git-commit: d7aa1b4e3e697a504964d6eb485f536065c6718a
 
 本檔案包含Adobe Experience Platform Privacy Service新功能的相關資訊，以及增強功能和重大錯誤修正。
 
+## 2020 年 4 月 8 日
+
+### 新功能
+
+| 功能 | 說明 |
+| --- | --- |
+| PDPA支援 | 現在，您可以根據泰國的個人資料保護法(PDPA)來建立和追蹤隱私權要求。 在API中提出隱私權要求時， `regulation` 陣列接受&quot;pdpa_tha&quot;值。 |
+| UI中的名稱空間類型 | 您現在可以在「隱私服務」UI的「請求產生器」中指定不同的命名空間類型。 如需詳細 [資訊，請參閱](ui/user-guide.md) 「使用指南」。 |
+| 淘汰舊端點 | 舊API端點(`data/privacy/gdpr`)已過時。 |
+
 ## 2020 年 1 月 14 日
 
 ### 新功能
 
 | 功能 | 說明 |
---- | ---
+| --- | --- |
 | 隱私權服務品牌重新塑造 | 此前稱為「GDPR服務」的服務已重新命名為「隱私服務」，因為除了GDPR外，該服務還不斷發展，以支援其他法規。 |
 | 新的API端點 | 隱私權服務API的基本路徑已從更新 `/data/privacy/gdpr` 為 `/data/core/privacy/jobs` |
 | 新的必要 `regulation` 屬性 | 在Privacy Service API中建立新工作時，必須在 `regulation` 請求裝載中提供屬性，以指出要追蹤工作的規則。 接受的值是 `gdpr` 和 `ccpa`。 如需詳細資訊，請 [參閱隱私權服務](api/privacy-jobs.md) 「開發人員指南」中有關隱私權工作的檔案。 |
@@ -35,7 +45,7 @@ source-git-commit: d7aa1b4e3e697a504964d6eb485f536065c6718a
 ### 新功能
 
 | 功能 | 說明 |
---- | ---
+| --- | --- |
 | 請求量度控制面板 | 隱私權服務UI中的新量度控制面板可讓您洞察已提交、已錯誤及已完成的GDPR要求。 |
 | 請求產生器 | 為了同時為技術和非技術使用者提交GDPR要求的組織提供服務，UI中已新增「建立要求」功能。 對於想要繼續使用JSON檔案的組織，「隱私權服務」UI中仍提供JSON檔案提交功能。 |
 | GDPR工作事件通知 | 有關GDPR工作狀態的事件通知是許多工作流程的重要元素。 雖然之前會使用個別電子郵件通知來傳送通知，但GDPR事件通知是運用Adobe I/O事件的訊息，這些事件會傳送至已設定的網頁掛接，以協助工作要求自動化。 隱私權服務UI使用者可訂閱Adobe I/O GDPR事件，以在產品或GDPR工作完成時收到更新。 |
