@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 工作
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 8102610e2733a75f22cf62d70c0408e3832d0803
+source-git-commit: cde7acc2fd112b9a5d0b86b40b3bc712c6505064
 
 ---
 
@@ -238,7 +238,7 @@ curl -X POST \
 | `expandIDs` | 可選屬性，若設為 `true`，代表處理應用程式中ID的最佳化（目前僅Analytics支援）。 If omitted, this value defaults to `false`. |
 | `priority` | Adobe Analytics使用的可選屬性，可設定處理請求的優先順序。 接受的值是 `normal` 和 `low`。 如果 `priority` 省略，則預設行為為 `normal`。 |
 | `analyticsDeleteMethod` | 可選屬性，指定Adobe Analytics如何處理個人資料。 此屬性接受兩個可能的值： <ul><li>`anonymize`:指定使用者ID集合所參考的所有資料都會設為匿名。 如果 `analyticsDeleteMethod` 省略，則此為預設行為。</li><li>`purge`:所有資料都會完全移除。</li></ul> |
-| `regulation` **(必填)** | 請求的規則（必須是「gdpr」或「ccpa」）。 |
+| `regulation` **(必填)** | 要求的規定。 必須是下列三個值之一： <ul><li>gdpr</li><li>ccpa</li><li>pdpa_tha</li></ul> |
 
 **回應**
 
@@ -425,4 +425,4 @@ curl -X GET \
 
 ## 後續步驟
 
-您現在知道如何使用隱私權服務API來建立和監控隱私權工作。 如需如何使用使用者介面執行相同工作的詳細資訊，請參 [閱隱私權服務UI概觀](../ui/overview.md)。
+您現在知道如何使用隱私權服務API來建立和監控隱私權工作。 如需如何使用使用者介面執行相同工作的詳細資訊，請參 [閱隱私服務UI概觀](../ui/overview.md)。
