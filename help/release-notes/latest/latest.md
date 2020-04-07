@@ -1,91 +1,73 @@
 ---
 title: Adobe Experience Platform 發行說明
-description: Experience Platform發行說明2020年3月11日
+description: Experience Platform發行說明2020年4月8日
 doc-type: release notes
-last-update: March 10, 2020
+last-update: April 7, 2020
 author: ens71067
 translation-type: tm+mt
-source-git-commit: 38acbb4a0130763fe0c565215eda7c0713e1ff6e
+source-git-commit: 7335a258a53d2685933b401dc4cd00bb60aa6c07
 
 ---
 
 
 # Adobe Experience Platform 發行說明
 
-## 發行日期：2020 年 3 月 11 日
+## 發行日期: 2020 年 4 月 8 日
 
 ## 資料控管
 
-Experience Platform可讓公司將來自多個企業系統的資料整合在一起，讓行銷人員能夠識別、瞭解並吸引客戶。 Experience Platform包含端對端資料治理基礎架構，包括資料使用標籤與強制(DULE)，以確保在平台內及系統間共用資料時能正確使用。
-
 Adobe Experience Platform資料治理是一系列策略和技術，用於管理客戶資料並確保符合適用於資料使用的法規、限制和政策。 它在Experience Platform的不同層次發揮關鍵作用，包括編目、資料傳承、資料使用標籤、資料存取政策，以及行銷動作的資料存取控制。
 
-### 新功能
+開始使用資料治理需要對適用於客戶資料的法規、合約義務和公司政策有深入的瞭解。 在此基礎上，通過應用適當的資料使用標籤對資料進行分類，並通過定義資料使用策略來控制其使用。
 
->[!NOTE]
->下列部分新功能目前已在測試版中，並非所有使用者都能使用。 測試版功能可能會有所變更。
-
-| 功能 | 說明 |
-| ------- | ----------- |
-| 針對即時客戶資料平台自動實施資料使用政策 | 資料使用原則現在會在啟動資料至目的地的工作流程中執行。 在進行影響現有啟動的變更（例如對資料集標籤、合併原則、區段定義等）時，也會嵌入並強制執行資料控管。 |
-| 用於實施的資料世系 | 當Real-time CDP中違反資料使用原則時，UI會顯示一則通知，其中包含資料世系資訊，以協助使用者瞭解違反原則的原因，以及他們可以採取哪些措施來解決違規問題。 |
-
-
-### 已知問題
-
-* 無
-
-如需資料治理的詳細資訊，請參閱資 [料治理概觀](../../data-governance/home.md)。
-
-## 資料擷取
-
-Adobe Experience Platform提供一組豐富的功能，可吸收任何類型的資料和延遲。 Adobe Experience Platform Data Ingestion提供多種替代方式來擷取資料，包括批次API、串流API、原生Adobe連接器、資料整合合作夥伴或Adobe Experience Platform UI。
+DULE架構透過Experience Platform使用者介面和DULE Policy Service API簡化資料分類和建立資料使用原則的程式。
 
 ### 新功能
 
 | 功能 | 說明 |
-|------- | -----------|
-| 部分批次擷取 | 部分批次擷取是指能夠擷取包含錯誤的資料，最高可達到特定臨界值。 透過這項功能，使用者可以成功將所有正確的資料內嵌至Adobe Experience Platform，同時將所有不正確的資料分別批次處理。 詳細資訊會新增至不成功的批次，以說明為何未通過驗證。 如需部分批次擷取的詳細資訊，請參閱部分批次擷取 [檔案](../../ingestion/batch-ingestion/partial.md)。 |
+| -----------| ---------- |
+| 在UI中管理資料使用原則 | 資料使用原則現在可以在Experience Platform UI的「 _原則_ 」工作區中管理。 如需詳細 [資訊，請參閱原則使用指南](../../data-governance/policies/user-guide.md) 。 |
 
-### 已知問題
+**已知問題**
 
-* 無
+* 無.
 
-若要進一步瞭解將資料擷取至平台，請造訪資 [料擷取檔案](../../ingestion/home.md)。
+如需詳細資訊，請參閱資 [料管理概觀](../../data-governance/home.md)。
 
+## 智慧型服務
 
-## 目的地
+智慧型服務可讓行銷分析師和從業人員在客戶體驗使用案例中運用人工智慧和機器學習的強大功能。 這可讓行銷分析人員使用商業層級的組態來設定特定公司需求的預測，而不需要資料科學的專業知識。 此外，行銷從業人員可在Adobe Experience Cloud、Adobe Experience Platform和第三方應用程式中啟動預測。
 
-在 [Adobe即時客戶資料平台中](../../rtcdp/overview.md)，目標是與目標平台預先建立的整合，以順暢的方式將資料啟動給這些合作夥伴。
-
-### 新目標
-
-您可以在新目的地啟用Adobe Experience Platform資料。 如需詳細資訊，請參閱以下：
-
-| 目的地 | 說明 |
-|--- | ---|
-| 雲端儲存空間目標 | Adobe即時CDP現在可將區段作為資料檔案傳送至您的Amazon S3或SFTP雲端儲存位置。 這可讓您透過CSV或Tab分隔檔案，將觀眾及其描述檔屬性傳送至內部系統。 |
-| 廣告目的地 | Google目標卡現在分為三個目標卡，適用於Adobe即時CDP目前支援的三種Google平台：Google Ads、Google Ad Manager、Google Display &amp; Video 360。 |
-
-若要進一步瞭解，請造訪目 [標總覽](../../rtcdp/destinations/destinations-overview.md)
-
-## Identity 服務
-
-要提供相關的數位體驗，必須全面瞭解客戶。 當客戶資料分散在不同的系統上時，這會更加困難，導致每個客戶看起來都有多個「身分」。
-
-Adobe Experience Platform Identity Service可跨裝置和系統橋接身分，協助您更全面地瞭解客戶及其行為，讓您即時提供具影響力的個人化數位體驗。
-
-### 新功能
+**主要功能**
 
 | 功能 | 說明 |
-| ------- | ----------- |
-| 增強的私用圖表 | 專用圖形功能已增強，可減少圖形產生延遲，從每週批次處理流程縮短為每日重新整理的圖形，讓Identity Service客戶存取更新的識別圖形和連結。 |
+|---|---|
+| 客戶人工智慧 | 客戶人工智慧為行銷人員提供能力，讓他們在個別層級產生客戶預測並加上說明。 借助影響因素，客戶人工智慧可以告訴您客戶可能做什麼以及為什麼。 此外，行銷人員可從客戶人工智慧預測和見解中獲益，透過提供最適當的優惠和訊息來個人化客戶體驗。 |
+| 歸因AI | 歸因人工智慧是一種多通道的算法歸因服務，可計算客戶互動對特定結果的影響和增量影響。 借助Attribution AI，行銷人員可以透過瞭解客戶歷程各個階段的每個個別客戶互動的影響，衡量並最佳化行銷和廣告支出。 |
 
-### 已知問題
+**已知問題**
+
+* 目前沒有已知問題。
+
+如需智慧型服務的詳細資訊，請參閱智慧型服務 [概觀](../../intelligent-services/home.md)。
+
+## 隱私權服務
+
+新的法律和組織法規讓使用者有權應要求從資料存放區存取或刪除其個人資料。 Adobe Experience Platform Privacy Service提供REST風格的API和使用者介面，可協助您管理客戶的這些資料要求。 透過隱私權服務，您可以提交從Adobe Experience Cloud應用程式存取和刪除私人或個人客戶資料的要求，以利自動符合法律和組織的隱私權法規。
+
+**新功能**
+
+| 功能 | 說明 |
+| --- | --- |
+| PDPA支援 | 現在，您可以根據泰國的個人資料保護法(PDPA)來建立和追蹤隱私權要求。 在API中提出隱私權要求時， `regulation` 陣列接受&quot;pdpa_tha&quot;值。 |
+| UI中的名稱空間類型 | 您現在可以在「隱私服務」UI的「請求產生器」中指定不同的命名空間類型。 如需詳細 [資訊，請參閱](../../privacy-service/ui/user-guide.md) 「使用指南」。 |
+| 淘汰舊端點 | 舊API端點(`data/privacy/gdpr`)已過時。 |
+
+已知問題
 
 * 無
 
-如需Identity Service的詳細資訊，請參閱 [Identity Service總覽](../../identity-service/home.md)。
+如需隱私權服務的詳細資訊，請先閱讀隱私權服務 [概觀](../../privacy-service/home.md)。
 
 ## 來源
 
@@ -97,15 +79,12 @@ Experience Platform提供REST風格的API和互動式UI，讓您輕鬆為各種�
 
 | 功能 | 說明 |
 | ------- | ----------- |
-| Adobe Audience Manager連接器不建議使用的信號 | Audience Manger的訊號層級資料將不再傳送。 請注意，「特徵」和「區段」的區段會籍仍將包含在內。 由於此更改，將不再生成入站資料集。 |
-| 重新命名的資料集 | 由Audience Manger連接器產生的資料集會有更新的名稱和說明。 |
-| 在Audience Manager中啟用描述檔切換 | 設定檔切換可以啟用或停用，以將資料集提升為即時客戶設定檔。 預設會啟用切換。 |
-| 雲端儲存系統的UI支援 | UI中Azure Data Lake Storage Gen2的新來源連接器。 |
-| CRM系統的UI支援 | UI中HubSpot、Salesforce Service Cloud和ServiceNow的新來源連接器。 |
-| 資料庫系統的UI支援 | UI中用於AWS Redshift、Google BigQuery、MariaDB、Microsoft SQL Server和MySQL的新源連接器。 |
+| 資料庫的API和UI支援 | Apache Spark（在HDInsights上）、Azure Synapse Analytics、Azure表格儲存、Hive（在HDInsights上）和Phoenix的新來源連接器。 |
+| 支援付款型應用程式的API和UI | PayPal的新來源連接器。 |
+| API和UI支援以通訊協定為基礎的應用程式 | 通用OData的新來源連接器。 |
 
 ### 已知問題
 
 * 無
 
-若要進一步瞭解來源，請參閱 [來源概觀](../../source-connectors/home.md)。
+如需來源的詳細資訊，請參閱來 [源概觀](../../source-connectors/home.md)。
