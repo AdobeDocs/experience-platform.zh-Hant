@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 建立資料使用原則
 topic: policies
 translation-type: tm+mt
-source-git-commit: 04b2e07ba39df9f530c9c93c4bf1af9e2cf30169
+source-git-commit: da4fe8be360d5530d96078e4ef024bccf7f080f5
 
 ---
 
@@ -409,6 +409,8 @@ curl -X PATCH \
 
 ## 後續步驟
 
-遵循本教學課程，您已成功建立行銷動作的DULE原則。 您現在可以繼續學習如何實施 [DULE策略的教學課程](../enforcement/api-enforcement.md) ，瞭解如何檢查是否違反策略並在體驗應用程式中處理這些策略。
+遵循本教學課程，您已成功建立行銷動作的資料使用原則。 您現在可以繼續學習如何強制使 [用資料原則的教學課程](../enforcement/api-enforcement.md) ，以瞭解如何檢查是否有違反原則的情況，並在您的體驗應用程式中加以處理。
 
-如需Policy Service API中不同可用作業的詳細資訊，請參閱 [Policy Service開發人員指南](../api/getting-started.md)。 如需如何針對即時客戶個人檔案資料實施DULE政策的詳細資訊，請參閱針對受眾區段實 [施資料使用合規性的教學課程](../../segmentation/tutorials/governance.md)。
+如需Policy Service API中不同可用作業的詳細資訊，請參閱 [Policy Service開發人員指南](../api/getting-started.md)。 如需如何為即時客戶個人檔案資料實施原則的詳細資訊，請參閱關於為受眾區 [段實施資料使用合規性的教學課程](../../segmentation/tutorials/governance.md)。
+
+若要瞭解如何在Experience Platform使用者介面中管理使用原則，請參閱原 [則使用指南](user-guide.md)。
