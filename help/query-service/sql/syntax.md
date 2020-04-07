@@ -4,7 +4,7 @@ solution: Experience Platform
 title: SQL語法
 topic: syntax
 translation-type: tm+mt
-source-git-commit: 45da024d45b5eebdfc393ee14890e24aed6021ce
+source-git-commit: f5bc9beb59e83b0411d98d901d5055122a124d07
 
 ---
 
@@ -32,7 +32,7 @@ SELECT [ ALL | DISTINCT [( expression [, ...] ) ] ]
     [ OFFSET start ]
 ```
 
-其中 `from_item` 可以是：
+其中 `from_item` 可以是下列其中之一：
 
 ```
 table_name [ * ] [ [ AS ] alias [ ( column_alias [, ...] ) ] ]
@@ -317,7 +317,7 @@ where option can be one of:
 - `FORMAT`:指定輸出格式，可以是TEXT、XML、JSON或YAML。 非文本輸出包含與文本輸出格式相同的資訊，但程式比較容易解析。 此參數預設為 `TEXT`。
 - `statement`:任何 `SELECT`、、 `INSERT`、 `UPDATE`或者說明， `DELETE`您想看的 `VALUES``EXECUTE``DECLARE``CREATE TABLE AS``CREATE MATERIALIZED VIEW AS` 、、或者說明的執行計畫。
 
-> [!IMPORTANT] 請記住，該語句實際上是在使用該選項 `ANALYZE` 時執行的。 儘管 `EXPLAIN` 放棄返回的任何輸 `SELECT` 出，但語句的其他副作用照常發生。
+>[!IMPORTANT] 請記住，該語句實際上是在使用該選項 `ANALYZE` 時執行的。 儘管 `EXPLAIN` 放棄返回的任何輸 `SELECT` 出，但語句的其他副作用照常發生。
 
 #### 範例
 
