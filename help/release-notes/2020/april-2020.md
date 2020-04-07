@@ -5,7 +5,7 @@ doc-type: release notes
 last-update: March 4, 2020
 author: ens71067
 translation-type: tm+mt
-source-git-commit: c3166bea873572fe6ee2e63dfd13bc64d81e252b
+source-git-commit: b3ee2839412c9949d67c2ae976e3df32fea7731e
 
 ---
 
@@ -31,6 +31,26 @@ source-git-commit: c3166bea873572fe6ee2e63dfd13bc64d81e252b
 * 無
 
 如需隱私權服務的詳細資訊，請先閱讀隱私權服務 [概觀](../../privacy-service/home.md)。
+
+## 來源
+
+Adobe Experience Platform可以從外部來源擷取資料，同時允許您使用平台服務來建構、標示和增強該資料。 您可以從多種來源收集資料，例如Adobe應用程式、雲端儲存空間、協力廠商軟體和您的CRM系統。
+
+Experience Platform提供REST風格的API和互動式UI，讓您輕鬆為各種資料提供者設定來源連線。 這些源連接允許您驗證並連接到外部儲存系統和CRM服務、設定接收運行的時間，以及管理資料接收吞吐量。
+
+### 新功能
+
+| 功能 | 說明 |
+| ------- | ----------- |
+| 資料庫的API和UI支援 | Apache Spark（在HDInsights上）、Azure Synapse Analytics、Azure表格儲存、Hive（在HDInsights上）和Phoenix的新來源連接器。 |
+| 支援付款型應用程式的API和UI | PayPal的新來源連接器。 |
+| API和UI支援以通訊協定為基礎的應用程式 | 通用OData的新來源連接器。 |
+
+### 已知問題
+
+* 無
+
+如需來源的詳細資訊，請參閱來 [源概觀](../../source-connectors/home.md)。
 
 <!-- ## Access control
 
