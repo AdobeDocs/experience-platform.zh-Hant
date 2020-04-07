@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Adobe Experience Platform資料治理
 topic: overview
 translation-type: tm+mt
-source-git-commit: 4a60956ade2d742ac83e138a2921a6a4893e06ef
+source-git-commit: 42efd7295dd8002869694a146ea166ad21bd14bb
 
 ---
 
@@ -74,15 +74,11 @@ DULE框架包含預先定義的資料使用標籤，可用來以四種方式來�
 
 行銷動作的範例可能是想要將資料集匯出至第三方服務。 如果有原則指出無法匯出特定類型的資料，例如個人識別資訊(PII)，且「I」標籤（身分資料）已套用至資料集，您會收到來自原則服務的回覆，告知您已違反資料使用原則。
 
-### 如何建立和使用資料使用政策
+一旦套用資料使用標籤後，資料管理員就可以使用DULE Policy Service API或Experience Platform使用者介面來建立原則。
 
-在套用資料使用標籤後，資料管理員就可使用DULE Policy Service API來建立原則。
+有關執行DULE Policy Service API提供的關鍵操作的詳細資訊，請參 [閱Policy Service開發人員指南](api/getting-started.md)。 有關使用DULE策略的逐步說明，請參閱使用API創 [建和評估DULE策略的教程](policies/create.md)。
 
-身為資料管理員，您可以使用原則服務API來管理和評估與針對包含DULE標籤的資料所執行之行銷動作相關的原則。 使用API，您可以建立和更新原則、判斷原則的狀態，以及使用行銷動作來評估特定動作是否違反資料使用原則。
-
-在「原則服務API」中，所有原則和行銷動作皆稱為 `core` 或資 `custom` 源。 `core` 資源由Adobe定義和維護，而資 `custom` 源則由個別客戶建立和維護。 因此， `custom` 資源是唯一的，並且僅對建立資源的組織可見。
-
-有關執行DULE Policy Service API提供的關鍵操作的詳細資訊，請參 [閱Policy Service開發人員指南](api/getting-started.md)。 有關使用DULE策略的逐步說明，請參見有關建立和評估DULE策 [略的教程](policies/create.md)。
+如需如何在Experience Platform UI中管理原則的詳細資訊，請參閱原 [則使用指南](policies/user-guide.md)。
 
 ## 未來版本
 
