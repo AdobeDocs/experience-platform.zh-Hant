@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 資料使用標籤使用指南
 topic: labels
 translation-type: tm+mt
-source-git-commit: 4a60956ade2d742ac83e138a2921a6a4893e06ef
+source-git-commit: a19a9a31743002eb5fd3a5ecb6668b4c760faa9a
 
 ---
 
@@ -98,6 +98,8 @@ source-git-commit: 4a60956ade2d742ac83e138a2921a6a4893e06ef
 ## 後續步驟
 
 現在您已在資料集和欄位層級新增資料使用標籤，您可以開始將資料收錄到Experience Platform。 若要進一步瞭解，請先閱讀資料 [擷取檔案](../../ingestion/home.md)。
+
+您現在也可以根據已套用的標籤來定義資料使用原則。 如需詳細資訊，請參閱資 [料使用政策概觀](../policies/overview.md)。
 
 ## 其他資源
 
