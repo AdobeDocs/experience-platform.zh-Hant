@@ -4,7 +4,7 @@ solution: Experience Platform
 title: SDK開發人員指南
 topic: Overview
 translation-type: tm+mt
-source-git-commit: 13b6c08b1038d48cdff7147dfcd7b65ea2f95599
+source-git-commit: 897e897c80421c8eddd779222ddfa20298e72298
 
 ---
 
@@ -245,7 +245,7 @@ DataSaver類封裝了與儲存輸出資料相關的任何內容，包括來自�
     <tbody>
         <tr>
             <td>
-                <p><code class=" language-undefined">save(configProperties, sparkSession)</code></p>
+                <p><code class=" language-undefined">save(configProperties, dataFrame)</code></p>
                 <p>以DataFrame格式接收輸出資料，並將其儲存在Platform資料集中</p>
             </td>
             <td>
