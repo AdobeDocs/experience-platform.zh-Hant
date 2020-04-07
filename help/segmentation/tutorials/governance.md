@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 對受眾細分強制執行資料使用規範
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 7f61cee8fb5160d0f393f8392b4ce2462d602981
+source-git-commit: f5bc9beb59e83b0411d98d901d5055122a124d07
 
 ---
 
@@ -42,7 +42,7 @@ Experience Platform中的所有資源都隔離至特定的虛擬沙盒。 所有
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
-> [!NOTE] 如需平台中沙盒的詳細資訊，請參閱沙盒 [概觀檔案](../../sandboxes/home.md)。
+>[!NOTE] 如需平台中沙盒的詳細資訊，請參閱沙盒 [概觀檔案](../../sandboxes/home.md)。
 
 所有包含裝載(POST、PUT、PATCH)的請求都需要額外的標題：
 
@@ -253,7 +253,7 @@ curl -X GET \
 
 ## 篩選資料欄位
 
-> [!NOTE] 此步驟為可選步驟。 如果您不想根據您在上一步驟尋找資料使用標籤時的發現來調整區段中包含的資料 [，則可跳至評估資料是否違反原則](#lookup-data-usage-labels-for-the-source-datasets)的最後步驟 [](#evaluate-data-for-policy-violations)。
+>[!NOTE] 此步驟為可選步驟。 如果您不想根據您在上一步驟尋找資料使用標籤時的發現來調整區段中包含的資料 [，則可跳至評估資料是否違反原則](#lookup-data-usage-labels-for-the-source-datasets)的最後步驟 [](#evaluate-data-for-policy-violations)。
 
 如果您想要調整觀眾區隔中包含的資料，可以使用下列兩種方法之一：
 
