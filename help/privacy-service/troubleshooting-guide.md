@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 隱私權服務常見問答集
 topic: troubleshooting
 translation-type: tm+mt
-source-git-commit: 7e2e36e13cffdb625b7960ff060f8158773c0fe3
+source-git-commit: 64cb2de507921fcb4aaade67132024a3fc0d3dee
 
 ---
 
@@ -14,6 +14,52 @@ source-git-commit: 7e2e36e13cffdb625b7960ff060f8158773c0fe3
 本檔案提供有關Adobe Experience Platform Privacy Service常見問題的解答。
 
 隱私權服務提供REST風格的API和使用者介面，可協助公司管理客戶資料隱私權要求。 透過隱私權服務，您可以提交存取和刪除私人或個人客戶資料的要求，以利自動符合組織和法律的隱私權規定。
+
+## 在API中提出隱私權要求時，使用者ID和使用者ID之間有何不同？ {#user-ids}
+
+為了在API中建立新的隱私權工作，請求的JSON裝載必須包含一個陣列，列出隱私權要求所套用之每位使用者的特定資訊。 `users` 陣列中的每個項 `users` 目都是一個對象，它表示由其值標識的特定用 `key` 戶。
+
+反過來，每個用戶對象(或 `key`)都包含其自己的 `userIDs` 陣列。 此陣列會列出該特定 **使用者的特定ID值**。
+
+Consider the following example `users` array:
+
+```json
+"users": [
+  {
+    "key": "DavidSmith",
+    "action": ["access"],
+    "userIDs": [
+      {
+        "namespace": "email",
+        "value": "dsmith@acme.com",
+        "type": "standard"
+      }
+    ]
+  },
+  {
+    "key": "user12345",
+    "action": ["access", "delete"],
+    "userIDs": [
+      {
+        "namespace": "email",
+        "value": "ajones@acme.com",
+        "type": "standard"
+      },
+      {
+        "namespace": "ECID",
+        "type": "standard",
+        "value":  "443636576799758681021090721276",
+        "isDeletedClientSide": false
+      }
+    ]
+  }
+]
+```
+
+陣列包含兩個物件，代表個別使用者 `key` 的值（&quot;DavidSmith&quot;和&quot;user12345&quot;）。 「DavidSmith」只有一個列出的ID（其電子郵件地址），而「user12345」有兩個（其電子郵件地址和ECID）。
+
+如需提供使用者身分資訊的詳細資訊，請參閱隱私權要求 [身分資料指南](identity-data.md)。
+
 
 ## 我是否可以使用隱私權服務來清除意外傳送至平台的資料？
 
