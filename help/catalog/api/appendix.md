@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 目錄服務開發人員指南附錄
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 4b2524fcfda578d0debb89623bec6edb537db852
+source-git-commit: 409d98818888f2758258441ea2d993ced48caf9a
 
 ---
 
@@ -131,7 +131,6 @@ curl -X POST \
       "method": "post",
       "body": {
         "status": "enabled",
-        "aspect": "production",
         "dataSetId": "<<firstObjectId.id>>"
       }
     }
@@ -188,6 +187,6 @@ curl -X POST \
 
 ## 資料壓縮
 
-Compaction是Experience Platform服務，可將小檔案的資料合併為大檔案，而不會變更任何資料。 出於效能原因，有時將一組小檔案合併為較大的檔案，以便在查詢時提供更快速的資料存取。
+Compaction是Experience Platform服務，可將小檔案的資料合併為大檔案，而不會變更任何資料。 基於效能的考慮，將一組小型檔案合併為較大的檔案有時很有幫助，以便在查詢資料時能更快速地存取資料。
 
 當收錄批次中的檔案已壓縮時，會更新其關聯的目錄物件，以利監控。
