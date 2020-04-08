@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 工作
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: cde7acc2fd112b9a5d0b86b40b3bc712c6505064
+source-git-commit: 64cb2de507921fcb4aaade67132024a3fc0d3dee
 
 ---
 
@@ -100,7 +100,7 @@ curl -X POST \
 | 屬性 | 說明 |
 | --- | --- |
 | `companyContexts` **(必填)** | 包含貴組織驗證資訊的陣列。 每個列出的識別碼都包含下列屬性： <ul><li>`namespace`:識別碼的名稱空間。</li><li>`value`:識別碼的值。</li></ul>必須 **有一個識別碼** 用作識別 `imsOrgId` 碼，其中包含 `namespace``value` IMS組織的唯一ID。 <br/><br/>其他識別碼可以是產品特定的公司限定詞(例如 `Campaign`)，可識別與您組織所屬的Adobe應用程式整合。 潛在值包括帳戶名稱、用戶端代碼、租用戶ID或其他應用程式識別碼。 |
-| `users` **(必填)** | 包含至少一個用戶集合的陣列，您希望訪問或刪除其資訊。 在單一請求中最多可提供1000個使用者ID。 每個用戶對象都包含以下資訊： <ul><li>`key`:用來限定回應資料中個別工作ID的識別碼。 為此值選擇唯一、可輕鬆識別的字串是最佳實務，以便日後輕鬆參考或查閱。</li><li>`action`:列出要對資料執行的所需操作的陣列。 根據您要執行的操作，此陣列必須包括、 `access`或 `delete`兩者。</li><li>`userIDs`:特定使用者的身分集合。 單一使用者可擁有的身分數目限制為9。 每個身分都由 `namespace`、 `value`和namespace限定詞(`type`)組成。 如需這些 [必要屬性](appendix.md) ，請參閱附錄。</li></ul> |
+| `users` **(必填)** | 包含至少一個用戶集合的陣列，您希望訪問或刪除其資訊。 在單一請求中最多可提供1000個使用者ID。 每個用戶對象都包含以下資訊： <ul><li>`key`:用於用戶的標識符，用於限定響應資料中的單獨作業ID。 為此值選擇唯一、可輕鬆識別的字串是最佳實務，以便日後輕鬆參考或查閱。</li><li>`action`:列出對用戶資料採取所需操作的陣列。 根據您要執行的操作，此陣列必須包括、 `access`或 `delete`兩者。</li><li>`userIDs`:使用者身分的集合。 單一使用者可擁有的身分數目限制為9。 每個身分都由 `namespace`、 `value`和namespace限定詞(`type`)組成。 如需這些 [必要屬性](appendix.md) ，請參閱附錄。</li></ul> 有關和的更詳細說 `users` 明 `userIDs`，請參 [閱疑難解答指南](../troubleshooting-guide.md#user-ids)。 |
 | `include` **(必填)** | 要納入您處理中的Adobe產品陣列。 如果此值遺失或空白，則會拒絕請求。 僅包含貴組織已整合的產品。 如需詳細資訊，請 [參閱附錄中](appendix.md) 「接受的產品值」一節。 |
 | `expandIDs` | 可選屬性，若設為 `true`，代表處理應用程式中ID的最佳化（目前僅Analytics支援）。 If omitted, this value defaults to `false`. |
 | `priority` | Adobe Analytics使用的可選屬性，可設定處理請求的優先順序。 接受的值是 `normal` 和 `low`。 如果 `priority` 省略，則預設行為為 `normal`。 |
@@ -233,7 +233,7 @@ curl -X POST \
 | 屬性 | 說明 |
 | --- | --- |
 | `companyContexts` **(必填)** | 包含貴組織驗證資訊的陣列。 每個列出的識別碼都包含下列屬性： <ul><li>`namespace`:識別碼的名稱空間。</li><li>`value`:識別碼的值。</li></ul>必須 **有一個識別碼** 用作識別 `imsOrgId` 碼，其中包含 `namespace``value` IMS組織的唯一ID。 <br/><br/>其他識別碼可以是產品特定的公司限定詞(例如 `Campaign`)，可識別與您組織所屬的Adobe應用程式整合。 潛在值包括帳戶名稱、用戶端代碼、租用戶ID或其他應用程式識別碼。 |
-| `users` **(必填)** | 包含至少一個用戶集合的陣列，您希望訪問或刪除其資訊。 在單一請求中最多可提供1000個使用者ID。 每個用戶對象都包含以下資訊： <ul><li>`key`:用來限定回應資料中個別工作ID的識別碼。 為此值選擇唯一、可輕鬆識別的字串是最佳實務，以便日後輕鬆參考或查閱。</li><li>`action`:列出要對資料執行的所需操作的陣列。 對於退出銷售請求，陣列只能包含值 `opt-out-of-sale`。</li><li>`userIDs`:特定使用者的身分集合。 單一使用者可擁有的身分數目限制為9。 每個身分都由 `namespace`、 `value`和namespace限定詞(`type`)組成。 如需這些 [必要屬性](appendix.md) ，請參閱附錄。</li></ul> |
+| `users` **(必填)** | 包含至少一個用戶集合的陣列，您希望訪問或刪除其資訊。 在單一請求中最多可提供1000個使用者ID。 每個用戶對象都包含以下資訊： <ul><li>`key`:用於用戶的標識符，用於限定響應資料中的單獨作業ID。 為此值選擇唯一、可輕鬆識別的字串是最佳實務，以便日後輕鬆參考或查閱。</li><li>`action`:列出要對資料執行的所需操作的陣列。 對於退出銷售請求，陣列只能包含值 `opt-out-of-sale`。</li><li>`userIDs`:使用者身分的集合。 單一使用者可擁有的身分數目限制為9。 每個身分都由 `namespace`、 `value`和namespace限定詞(`type`)組成。 如需這些 [必要屬性](appendix.md) ，請參閱附錄。</li></ul> 有關和的更詳細說 `users` 明 `userIDs`，請參 [閱疑難解答指南](../troubleshooting-guide.md#user-ids)。 |
 | `include` **(必填)** | 要納入您處理中的Adobe產品陣列。 如果此值遺失或空白，則會拒絕請求。 僅包含貴組織已整合的產品。 如需詳細資訊，請 [參閱附錄中](appendix.md) 「接受的產品值」一節。 |
 | `expandIDs` | 可選屬性，若設為 `true`，代表處理應用程式中ID的最佳化（目前僅Analytics支援）。 If omitted, this value defaults to `false`. |
 | `priority` | Adobe Analytics使用的可選屬性，可設定處理請求的優先順序。 接受的值是 `normal` 和 `low`。 如果 `priority` 省略，則預設行為為 `normal`。 |
