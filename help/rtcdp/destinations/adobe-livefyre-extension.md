@@ -4,7 +4,7 @@ seo-title: Adobe Livefyre擴充功能
 description: Adobe Livefyre擴充功能是Adobe即時客戶資料平台中的社交目的地。 如需擴充功能的詳細資訊，請參閱Adobe Exchange的擴充功能頁面。
 seo-description: null
 translation-type: tm+mt
-source-git-commit: bfcbc56f05fa1c3b5fafd57b1166e50130b6007d
+source-git-commit: 4b021ce8fd81708fac5de7508cd19d99295634d9
 
 ---
 
@@ -18,6 +18,8 @@ Adobe Livefyre可讓您探索、組織並發佈使用者產生的內容，以建
 Adobe Livefyre是Adobe即時客戶資料平台的社交擴充功能。 如需擴充功能的詳細資訊，請參閱 [Adobe Exchange的擴充功能頁面](https://exchange.adobe.com/experiencecloud.details.100464.html)。
 
 此目標是Experience Platform Launch擴充功能。 如需Launch擴充功能如何在Adobe Real-time CDP中運作的詳細資訊，請參閱 [Experience Platform Launch擴充功能總覽](/help/rtcdp/destinations/experience-platform-launch-extensions.md)。
+
+![Adobe Livefyre擴充功能](/help/rtcdp/destinations/assets/adobe-livefyre-extension.png)
 
 
 ## 先決條件 {#prerequisites}
