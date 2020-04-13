@@ -4,7 +4,7 @@ seo-title: 廣告目標
 description: 將您的即時客戶資料平台連接至協力廠商廣告平台（例如DSP、廣告網路、SSP），並與這些平台共用假受眾。
 seo-description: 將您的即時客戶資料平台連接至協力廠商廣告平台（例如DSP、廣告網路、SSP），並與這些平台共用假受眾。
 translation-type: tm+mt
-source-git-commit: 2eddd5bb7b62dcc414ad906647b05ce10c766ac6
+source-git-commit: 4b021ce8fd81708fac5de7508cd19d99295634d9
 
 ---
 
@@ -19,7 +19,7 @@ source-git-commit: 2eddd5bb7b62dcc414ad906647b05ce10c766ac6
 
 * [Adobe Advertising Cloud（Experience Platform Launch擴充功能）](/help/rtcdp/destinations/adobe-advertising-cloud-extension.md)
 * [Awin廣告轉換標籤（Experience Platform Launch擴充功能）](/help/rtcdp/destinations/awin-conversiontag-extension.md)
-* [Awin廣告Mastertag（Experience Platform Launch擴充功能）](/help/rtcdp/destinations/awin-mastertag-extension.md)
+* [Awin Advertising Mastertag（Experience Platform Launch擴充功能）](/help/rtcdp/destinations/awin-mastertag-extension.md)
 * [Beemray(Experience Platform Launch Extension)](beemray-extension.md)
 * [Bing Ads通用事件追蹤（Experience Platform Launch擴充功能）](/help/rtcdp/destinations/bing-ads-extension.md)
 * [分支（Experience Platform Launch擴充功能）](/help/rtcdp/destinations/branch-extension.md)
