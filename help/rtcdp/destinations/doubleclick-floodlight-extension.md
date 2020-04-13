@@ -4,7 +4,7 @@ seo-title: DoubleClick Floodlight(Beta)擴充功能
 description: DoubleClick Floodlight(Beta)擴充功能是Adobe即時客戶資料平台的廣告目的地。 如需擴充功能的詳細資訊，請參閱Adobe Exchange的擴充功能頁面。
 seo-description: DoubleClick Floodlight(Beta)擴充功能是Adobe即時客戶資料平台的廣告目的地。 如需擴充功能的詳細資訊，請參閱Adobe Exchange的擴充功能頁面。
 translation-type: tm+mt
-source-git-commit: bfcbc56f05fa1c3b5fafd57b1166e50130b6007d
+source-git-commit: ff91395844c239415123a33d65fa0deb2221ae25
 
 ---
 
@@ -18,6 +18,8 @@ source-git-commit: bfcbc56f05fa1c3b5fafd57b1166e50130b6007d
 DoubleClick Floodlight(Beta)是Adobe即時客戶資料平台中的廣告擴充功能。 如需擴充功能的詳細資訊，請參閱 [DoubleClick Floodlight的Google支援檔案](https://support.google.com/dcm/answer/2823388?hl=en)。
 
 此目標是Experience Platform Launch擴充功能。 如需Launch擴充功能如何在Adobe Real-time CDP中運作的詳細資訊，請參閱 [Experience Platform Launch擴充功能總覽](/help/rtcdp/destinations/experience-platform-launch-extensions.md)。
+
+![Doubleclick Floodlight擴充功能](assets/doubleclick-floodlight-extension.png)
 
 ## 先決條件 {#prerequisites}
 
