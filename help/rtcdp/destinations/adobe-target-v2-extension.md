@@ -4,12 +4,12 @@ seo-title: Adobe Target v2 擴充功能
 description: Adobe Target v2擴充功能是Adobe即時客戶資料平台中的個人化目的地。 如需擴充功能的詳細資訊，請參閱Adobe Exchange的擴充功能頁面。
 seo-description: null
 translation-type: tm+mt
-source-git-commit: bfcbc56f05fa1c3b5fafd57b1166e50130b6007d
+source-git-commit: 51963edad2f903a4a91e1b7c5114bf81323346bc
 
 ---
 
 
-# Adobe Target v2擴充功能(#adobe-target-v2-extension)
+# Adobe Target v2 擴充功能 版{#adobe-target-v2-extension}
 
 ## 概述 {#overview}
 
