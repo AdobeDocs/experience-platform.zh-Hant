@@ -4,7 +4,7 @@ seo-title: KickFire擴充功能
 description: KickFire擴充功能是Adobe即時客戶資料平台中的個人化目的地。 如需擴充功能的詳細資訊，請參閱Adobe Exchange的擴充功能頁面。
 seo-description: KickFire擴充功能是Adobe即時客戶資料平台中的個人化目的地。 如需擴充功能的詳細資訊，請參閱Adobe Exchange的擴充功能頁面。
 translation-type: tm+mt
-source-git-commit: bfcbc56f05fa1c3b5fafd57b1166e50130b6007d
+source-git-commit: ff91395844c239415123a33d65fa0deb2221ae25
 
 ---
 
@@ -15,9 +15,11 @@ source-git-commit: bfcbc56f05fa1c3b5fafd57b1166e50130b6007d
 
 KickFire的IP位址智慧和B2B原始資料可讓您將IP位址轉譯給公司、識別匿名網站訪客，以及將帳戶資料整合在您的技術堆疊中——全都以公司的IP位址為基礎。
 
-KickFire是Adobe即時客戶資料平台的個人化擴充功能。 如需擴充功能的詳細資訊，請參閱 [Kickfire網站](https://www.kickfire.com/)。
+KickFire是Adobe即時客戶資料平台中的個人化擴充功能。 如需擴充功能的詳細資訊，請參閱 [Kickfire網站](https://www.kickfire.com/)。
 
 此目標是Experience Platform Launch擴充功能。 如需Launch擴充功能如何在Adobe Real-time CDP中運作的詳細資訊，請參閱 [Experience Platform Launch擴充功能總覽](/help/rtcdp/destinations/experience-platform-launch-extensions.md)。
+
+![Kickfire擴充功能](/help/rtcdp/destinations/assets/kickfire-extension.png)
 
 ## 先決條件 {#prerequisites}
 
