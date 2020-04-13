@@ -4,7 +4,7 @@ seo-title: 將描述檔和區段啟用至目標
 description: 將區段對應至目標，以啟用您在Adobe即時客戶資料平台中擁有的資料。 若要完成此作業，請遵循下列步驟。
 seo-description: 將區段對應至目標，以啟用您在Adobe即時客戶資料平台中擁有的資料。 若要完成此作業，請遵循下列步驟。
 translation-type: tm+mt
-source-git-commit: 336aa90cf1e059a92a36dd0ef3222ef6a6f5123b
+source-git-commit: 2eddd5bb7b62dcc414ad906647b05ce10c766ac6
 
 ---
 
@@ -28,7 +28,14 @@ source-git-commit: 336aa90cf1e059a92a36dd0ef3222ef6a6f5123b
 5. *有條件*. 此步驟僅適用於對應至電子郵件行銷目的地的區段。 <br> 在頁面 **[!UICONTROL Destination Attributes]** 上，選 **[!UICONTROL Add new field]** 擇並選擇要發送到目標的屬性。
 我們建議其中一個屬性作為聯合 [架構的唯一](/help/rtcdp/destinations/email-marketing-destinations.md#identity) 標識符。 如需必要屬性的詳細資訊，請參閱「電子郵件行銷目標」 [文章中的「身分](/help/rtcdp/destinations/email-marketing-destinations.md#identity) 」。
    ![目標屬性](/help/rtcdp/destinations/assets/destination-attributes.png)
-6. 在頁面 **[!UICONTROL Schedule]** 上，您可以看到傳送資料至目的地的開始日期，以及傳送資料至目的地的頻率。
+6. 在頁面 **[!UICONTROL Segment schedule]** 上，您可以看到傳送資料至目的地的開始日期，以及傳送資料至目的地的頻率。
+
+   >[!IMPORTANT]
+   >
+   >對於社交目的地，您必須在此步驟中選取對象的來源。 您只能在選取下圖中的其中一個選項後，才可繼續下一步。
+
+   ![選擇資料來源](/help/rtcdp/destinations/assets/choose-data-origin.png)
+
 7. 在頁面 **[!UICONTROL Review]** 上，您可以看到您所選取項目的摘要。 選 **[!UICONTROL Cancel]** 擇以劃分流程、 **[!UICONTROL Back]** 修改設定，或確 **[!UICONTROL Finish]** 認您的選擇並開始傳送資料至目的地。
 
 ![確認選擇](/help/rtcdp/destinations/assets/confirm-selection.png)
@@ -60,6 +67,10 @@ Salesforce_id3544_20191122124530.csv
 ### 廣告目的地
 
 檢查您要啟動資料的各個廣告目的地。 如果啟動成功，您的廣告平台會填入受眾。
+
+### 社交網路目的地
+
+對於Facebook，成功的啟動表示Facebook自訂對象會以程式設計方式在 [Facebook廣告管理員中建立](https://www.facebook.com/adsmanager/manage/)。 當使用者符合已啟用區段的資格或被取消資格時，會新增及移除觀眾中的區段成員資格。
 
 ## 停用啟動 {#disable-activation}
 
