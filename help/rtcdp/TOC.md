@@ -3,7 +3,7 @@ product: adobe experience platform
 audience: user
 user-guide-title: 即時客戶資料平台說明
 translation-type: tm+mt
-source-git-commit: bfcbc56f05fa1c3b5fafd57b1166e50130b6007d
+source-git-commit: 4b021ce8fd81708fac5de7508cd19d99295634d9
 
 ---
 
@@ -30,11 +30,11 @@ source-git-commit: bfcbc56f05fa1c3b5fafd57b1166e50130b6007d
       * Adobe目的地{#adobe-destinations}
          * [Adobe目標概觀](destinations/adobe-destinations.md)
          * [Adobe Campaign](destinations/adobe-campaign-destination.md)
-      * 廣告目的地{#advertiser-destinations}
+      * 廣告目的地{#advertising-destinations}
          * [廣告目標概觀](destinations/advertising-destinations.md)
          * [Adobe Advertising Cloud（Experience Platform Launch擴充功能）](/help/rtcdp/destinations/adobe-advertising-cloud-extension.md)
          * [Awin廣告轉換標籤（Experience Platform Launch擴充功能）](/help/rtcdp/destinations/awin-conversiontag-extension.md)
-         * [Awin廣告Mastertag（Experience Platform Launch擴充功能）](/help/rtcdp/destinations/awin-mastertag-extension.md)
+         * [Awin Advertising Mastertag（Experience Platform Launch擴充功能）](/help/rtcdp/destinations/awin-mastertag-extension.md)
          * [Beemray(Experience Platform Launch Extension)](/help/rtcdp/destinations/beemray-extension.md)
          * [分支（Experience Platform Launch擴充功能）](/help/rtcdp/destinations/branch-extension.md)
          * [DoubleClick Floodlight（Experience Platform Launch擴充功能）](/help/rtcdp/destinations/doubleclick-floodlight-extension.md)
