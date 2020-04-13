@@ -4,7 +4,7 @@ seo-title: Google Ads擴充功能
 description: Google Ads擴充功能是Adobe即時客戶資料平台中的廣告目的地。 如需擴充功能的詳細資訊，請參閱Adobe Exchange的擴充功能頁面。
 seo-description: Google Ads擴充功能是Adobe即時客戶資料平台中的廣告目的地。 如需擴充功能的詳細資訊，請參閱Adobe Exchange的擴充功能頁面。
 translation-type: tm+mt
-source-git-commit: bfcbc56f05fa1c3b5fafd57b1166e50130b6007d
+source-git-commit: ff91395844c239415123a33d65fa0deb2221ae25
 
 ---
 
@@ -18,6 +18,8 @@ source-git-commit: bfcbc56f05fa1c3b5fafd57b1166e50130b6007d
 Google Ads是Adobe即時客戶資料平台中的廣告延伸。 如需擴充功能的詳細資訊，請參閱 [Adobe Exchange的擴充功能頁面](https://www.adobeexchange.com/experiencecloud.details.101383.google-ads.html)。
 
 此目標是Experience Platform Launch擴充功能。 如需Launch擴充功能如何在Adobe Real-time CDP中運作的詳細資訊，請參閱 [Experience Platform Launch擴充功能總覽](/help/rtcdp/destinations/experience-platform-launch-extensions.md)。
+
+![Google Ads擴充功能](/help/rtcdp/destinations/assets/google-ads-extension.png)
 
 ## 先決條件 {#prerequisites}
 
