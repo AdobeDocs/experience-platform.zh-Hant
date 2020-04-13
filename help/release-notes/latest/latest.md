@@ -6,7 +6,7 @@ last-update: April 13, 2020
 author: ens71067
 keywords: release notes;
 translation-type: tm+mt
-source-git-commit: c2495b463d713f85ba621a7bf687c5959ec13adb
+source-git-commit: f90da5067121f7e00fd26a4dd5462cf567a7b09d
 
 ---
 
@@ -34,6 +34,22 @@ DULE架構透過Experience Platform使用者介面和DULE Policy Service API簡�
 * 無.
 
 如需詳細資訊，請參閱資 [料管理概觀](../../data-governance/home.md)。
+
+
+## 目的地
+
+在 [Adobe即時客戶資料平台中](../../rtcdp/overview.md)，目標是與目標平台預先建立的整合，以順暢的方式將資料啟動給這些合作夥伴。
+
+### 新目標
+
+Adobe Real-time CDP現在支援將資料啟動至超過50種Experience Cloud Launch擴充功能，以便進行分析、個人化和其他使用案例。 如需詳細資訊，請參閱以下：
+
+| 文件 | 說明 |
+|--- | ---|
+| [目標類型和類別](/help/rtcdp/destinations/destination-types.md) | 本文將說明Adobe即時CDP介面中連線與擴充功能的差異，並建議何時使用這些目標。 |
+| [Experience Platform Launch擴充功能](/help/rtcdp/destinations/experience-platform-launch-extensions.md) | 本頁說明Launch擴充功能，列出使用這些擴充功能的使用案例，以及Adobe Real-time CDP中每個Launch擴充功能的檔案連結。 |
+
+如需詳細資訊，請參閱「目 [標」概觀](/help/rtcdp/destinations/destinations-overview.md)。
 
 ## 智慧型服務
 
