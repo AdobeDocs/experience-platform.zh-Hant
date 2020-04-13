@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Adobe Experience Platform可觀性見解
 topic: overview
 translation-type: tm+mt
-source-git-commit: 947955403a270914437d9172bca458f9c49ccd8f
+source-git-commit: d349ffab7c0de72d38b5195585c14a4a8f80e37c
 
 ---
 
@@ -13,7 +13,7 @@ source-git-commit: 947955403a270914437d9172bca458f9c49ccd8f
 
 可觀測性洞察是REST風格的API，可讓您在Adobe Experience Platform中公開關鍵的可觀測性度量。 這些量度可提供平台使用統計資料、平台服務狀況檢查、歷史趨勢以及各種平台功能效能指標的深入資訊。
 
-本檔案示範對Encomberity Insights API的範例呼叫，並提供與服務相容的公開度量清單。 如需完整的可觀測端點清單，請參閱可觀 [測洞察API參考](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/observability-insights.yaml)。
+本檔案示範對Encomberity Insights API的範例呼叫。 如需完整的可觀測端點清單，請參閱可觀 [測洞察API參考](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/observability-insights.yaml)。
 
 ## 快速入門
 
@@ -23,11 +23,9 @@ source-git-commit: 947955403a270914437d9172bca458f9c49ccd8f
 * x-api-key: `{API_KEY}`
 * x-gw-ims-org-id: `{IMS_ORG}`
 
-Experience Platform中的所有資源都隔離至特定的虛擬沙盒。 所有對平台API的請求都需要一個標題，該標題會指定要在中執行的操作的沙盒名稱：
+Experience Platform中的所有資源都隔離至特定的虛擬沙盒。 所有對平台API的請求都需要一個標題，該標題會指定要進行操作的沙盒名稱。 如需平台中沙盒的詳細資訊，請參閱沙盒 [概觀檔案](../sandboxes/home.md)。
 
 * x-sandbox-name: `{SANDBOX_NAME}`
-
->[!NOTE] 如需平台中沙盒的詳細資訊，請參閱沙盒 [概觀檔案](../sandboxes/home.md)。
 
 ## 擷取可觀測度量
 
@@ -48,7 +46,7 @@ GET /metrics?metric={METRIC}&metric={METRIC_2}&id={ID}&dateRange={DATE_RANGE}
 | 參數 | 說明 |
 | --- | --- |
 | `{METRIC}` | 您要公開的量度。 在單一呼叫中合併多個量度時，您必須使用&amp;符號(`&`)來分隔個別量度。 例如, `metric={METRIC_1}&metric={METRIC_2}`. |
-| `{ID}` | 您要公開其量度的特定平台資源的識別碼。 此ID可能是選用、必要或不適用，視使用的量度而定。 如需每個度量的可用度量清單以及支援的ID（必要和可選），請參閱下方可用度量的參 [考檔案](metrics.md) 。 |
+| `{ID}` | 您要公開其量度的特定平台資源的識別碼。 此ID可能是選用、必要或不適用，視使用的量度而定。 如需每個度量的可用度量清單以及支援的ID（必要和可選），請參閱可用度量的參考 [檔案](metrics.md)。 |
 | `{DATE_RANGE}` | 您要公開的量度日期範圍，使用ISO 8601格式(例如 `2018-10-01T07:00:00.000Z/2018-10-09T07:00:00.000Z`)。 |
 
 **請求**
