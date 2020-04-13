@@ -4,8 +4,9 @@ description: Experience Platform發行說明2020年3月11日
 doc-type: release notes
 last-update: March 10, 2020
 author: ens71067
+keywords: release notes;
 translation-type: tm+mt
-source-git-commit: 7335a258a53d2685933b401dc4cd00bb60aa6c07
+source-git-commit: c2495b463d713f85ba621a7bf687c5959ec13adb
 
 ---
 
@@ -22,8 +23,7 @@ Adobe Experience Platform資料治理是一系列策略和技術，用於管理�
 
 ### 新功能
 
->[!NOTE]
->下列部分新功能目前已在測試版中，並非所有使用者都能使用。 測試版功能可能會有所變更。
+>[!NOTE] 下列部分新功能目前已在測試版中，並非所有使用者都能使用。 測試版功能可能會有所變更。
 
 | 功能 | 說明 |
 | ------- | ----------- |
