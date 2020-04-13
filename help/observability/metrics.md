@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 可用量度
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 6a988c990d3d4df706a44cdbc82f77bef20c2ea1
+source-git-commit: ff299a69a81f00cad3e90a83f7411e4b15d4f850
 
 ---
 
@@ -18,7 +18,7 @@ source-git-commit: 6a988c990d3d4df706a44cdbc82f77bef20c2ea1
 下表概述Adobe Experience Platform資料擷取的量度。 粗體量 **度是串流** 擷取量度。
 
 | 前瞻分析度量 | 說明 | ID查詢參數 |
-| ---- | ---- | ---- | ---- |
+| ---- | ---- | ---- |
 | timeseries.ingestion.dataset.new.count | 建立的資料集總數。 | 不適用 |
 | timeseries.ingestion.dataset.size | 針對一個資料集或所有資料集所擷取的所有資料累積大小。 | 資料集ID（選用） |
 | timeseries.ingestion.dataset.dailysize | 針對一個資料集或所有資料集，依每日使用量而擷取的資料大小。 | 資料集ID（選用） |
@@ -46,7 +46,7 @@ source-git-commit: 6a988c990d3d4df706a44cdbc82f77bef20c2ea1
 下表概述Adobe Experience Platform Identity Service的度量。
 
 | 前瞻分析度量 | 說明 | ID查詢參數 |
-| ---- | ---- | ---- | ---- |
+| ---- | ---- | ---- |
 | timeseries.identity.dataset.recordsuccess.count | Identity Service針對一個資料集或所有資料集寫入其資料來源的記錄數。 | 資料集ID（選用） |
 | timeseries.identity.dataset.recordfailed.count | Identity Service、一個資料集或所有資料集失敗的記錄數。 | 資料集ID（選用） |
 | timeseries.identity.dataset.namespacecode.recordsuccess.count | 成功接收命名空間的身份記錄數。 | 命名空間ID(**必要**) |
@@ -62,7 +62,7 @@ source-git-commit: 6a988c990d3d4df706a44cdbc82f77bef20c2ea1
 下表概述Adobe Experience Platform隱私權服務的度量。
 
 | 前瞻分析度量 | 說明 | ID查詢參數 |
-| ---- | ---- | ---- | ---- |
+| ---- | ---- | ---- |
 | timeseries.gdpr.jobs.totaljobs.count | 從GDPR建立的工作總數。 | ENV(必&#x200B;**要**) |
 | timeseries.gdpr.jobs.completedjobs.count | 來自GDPR的已完成工作總數。 | ENV(必&#x200B;**要**) |
 | timeseries.gdpr.jobs.errorjobs.count | 來自GDPR的錯誤工作總數。 | ENV(必&#x200B;**要**) |
@@ -72,7 +72,7 @@ source-git-commit: 6a988c990d3d4df706a44cdbc82f77bef20c2ea1
 下表概述Adobe Experience Platform Query Service的量度。
 
 | 前瞻分析度量 | 說明 | ID查詢參數 |
-| ---- | ---- | ---- | ---- |
+| ---- | ---- | ---- |
 | timeseries.queryservice.query.scheduleonce.count | 非週期性排程查詢的總數。 | 不適用 |
 | timeseries.queryservice.query.scheduledrecurring.count | 循環排程查詢的總數。 | 不適用 |
 | timeseries.queryservice.query.batchquery.count | 執行的批次查詢總數。 | 不適用 |
@@ -85,7 +85,7 @@ source-git-commit: 6a988c990d3d4df706a44cdbc82f77bef20c2ea1
 下表概述即時客戶個人檔案的量度。
 
 | 前瞻分析度量 | 說明 | ID查詢參數 |
-| ---- | ---- | ---- | ---- |
+| ---- | ---- | ---- |
 | timeseries.profiles.dataset.recordread.count | 依「設定檔」、一個資料集或所有資料集從資料湖讀取的記錄數。 | 資料集ID（選用） |
 | timeseries.profiles.dataset.recordsuccess.count | 按配置檔案、一個資料集或所有資料集寫入其資料源的記錄數。 | 資料集ID（選用） |
 | timeseries.profiles.dataset.recordfailed.count | 「配置檔案」、一個資料集或所有資料集失敗的記錄數。 | 資料集ID（選用） |
