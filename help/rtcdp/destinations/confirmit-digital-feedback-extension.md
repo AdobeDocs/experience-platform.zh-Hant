@@ -4,7 +4,7 @@ seo-title: 確認數位回饋擴充功能
 description: 確認數位意見延伸功能是Adobe即時客戶資料平台中的客戶目標之聲。 如需擴充功能的詳細資訊，請參閱Adobe Exchange的擴充功能頁面。
 seo-description: null
 translation-type: tm+mt
-source-git-commit: bfcbc56f05fa1c3b5fafd57b1166e50130b6007d
+source-git-commit: ff91395844c239415123a33d65fa0deb2221ae25
 
 ---
 
@@ -25,6 +25,9 @@ source-git-commit: bfcbc56f05fa1c3b5fafd57b1166e50130b6007d
 「確認數位意見回應」是Adobe即時客戶資料平台中的客戶延伸之聲。 如需擴充功能的詳細資訊，請參閱 [Adobe Exchange的擴充功能頁面](https://exchange.adobe.com/experiencecloud.details.103247.confirmit-digital-feedback-for-adobe-launch.html)。
 
 此目標是Experience Platform Launch擴充功能。 如需Launch擴充功能如何在Adobe Real-time CDP中運作的詳細資訊，請參閱 [Experience Platform Launch擴充功能總覽](/help/rtcdp/destinations/experience-platform-launch-extensions.md)。
+
+
+![確認數位回饋擴充功能](assets/confirmit-digital-feedback-extension.png)
 
 ## 先決條件 {#prerequisites}
 
