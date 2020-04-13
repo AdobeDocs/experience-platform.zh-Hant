@@ -3,7 +3,7 @@ product: adobe experience platform
 audience: user
 user-guide-title: 即時客戶資料平台說明
 translation-type: tm+mt
-source-git-commit: 4b021ce8fd81708fac5de7508cd19d99295634d9
+source-git-commit: ff91395844c239415123a33d65fa0deb2221ae25
 
 ---
 
@@ -99,12 +99,12 @@ source-git-commit: 4b021ce8fd81708fac5de7508cd19d99295634d9
          * [Gainsight（Experience Platform Launch擴充功能）](/help/rtcdp/destinations/gainsight-extension.md)
          * [Kickfire（Experience Platform Launch擴充功能）](/help/rtcdp/destinations/kickfire-extension.md)
          * [Marketo Web Personalization(Experience Platform Launch extension)](destinations/marketo-web-personalization-extension.md)
-      * 社交網路目的地{#social-network-destinations}
+      * 社交網路目的地{#social-destinations}
          * [社交網路目的地總覽](/help/rtcdp/destinations/social-network-destinations.md)
          * [社交網路目的地驗證流程](/help/rtcdp/destinations/social-network-destinations-workflow.md)
          * [Adobe Livefyre（Experience Platform Launch擴充功能）](/help/rtcdp/destinations/adobe-livefyre-extension.md)
          * [Facebook目的地](/help/rtcdp/destinations/facebook-destination.md)
-      * 調查目標 {#surveys}
+      * 調查目標 {#survey-destinations}
          * [調查目標概觀](/help/rtcdp/destinations/survey-destinations.md)
          * [Foresee（Experience Platform Launch擴充功能）](/help/rtcdp/destinations/foresee-extension.md)
          * [InMoment（Experience Platform Launch擴充功能）](/help/rtcdp/destinations/inmoment-extension.md)
