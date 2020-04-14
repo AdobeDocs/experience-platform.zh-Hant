@@ -4,7 +4,7 @@ seo-title: Experience Platform Launch Extensions
 description: ' Launch 是新一代 Adobe 標籤管理功能。Launch 可讓客戶透過簡單的方式部署及管理所有必要的分析、行銷及廣告標籤功能，以便支援相關客戶體驗。'
 seo-description: ' Launch 是新一代 Adobe 標籤管理功能。Launch 可讓客戶透過簡單的方式部署及管理所有必要的分析、行銷及廣告標籤功能，以便支援相關客戶體驗。'
 translation-type: tm+mt
-source-git-commit: 2a082dc46b50eba1a38eb9d6946e17f851b2fd3f
+source-git-commit: 98c3356db178507e0a8d94b47030e9490e721e46
 
 ---
 
@@ -17,13 +17,13 @@ Experience Platform Launch 是新一代 Adobe 標籤管理功能。Launch 可讓
 * Experience Platform Launch [documentation](https://docs.adobe.com/content/help/zh-Hant/launch/using/overview.html)
 * Experience Platform Launch快 [速入門影片](https://docs.adobe.com/content/help/en/launch/using/intro/get-started/videos.html)。 從Experience Platform Launch [和](https://www.youtube.com/embed/rwqqkG1SERU)[Publishing流程簡介開始](https://helpx.adobe.com/tw/analytics/how-to/adobe-launch-publishing-process.html)，接著再談到下一個概念。
 
-## 如何在Adobe即時CDP介面中尋找Launch擴充功能
+## 如何在Adobe即時CDP介面中尋找Launch擴充功能 {#how-to-find-extensions-in-interface}
 
 若要在Adobe即時CDP介面中尋找Launch擴充功能，請瀏覽至篩 **[!UICONTROL Destinations > Catalog]** 選器並 **[!UICONTROL Extensions]** 選取 **[!UICONTROL Types]** 選項。
 
 ![介面中的擴充功能篩選](/help/rtcdp/destinations/assets/extensions-filter.png)
 
-## Launch擴充功能的運作方式
+## Launch擴充功能的運作方式 {#how-extensions-work}
 
 啟動擴充功能會將原始事件資料轉送至數種目的地。 將擴充功能設想為 **「事件轉發** 」類型的目標。 這是與目標平台整合的更簡單類型，目標平台只會轉送原始事件資料。 例如Gainsight個人化 [擴充功能](/help/rtcdp/destinations/gainsight-extension.md) , [或客戶擴充功能的確認聲音](/help/rtcdp/destinations/confirmit-digital-feedback-extension.md)。
 
@@ -31,7 +31,7 @@ Experience Platform Launch 是新一代 Adobe 標籤管理功能。Launch 可讓
 
 ![Experience Platform Launch擴充功能與其他目的地的比較](/help/rtcdp/destinations/assets/launch-and-other-destinations.png)
 
-## 使用Launch擴充功能的優點
+## 使用Launch擴充功能的優點 {#extensions-benefits}
 
 Experience Platform Launch是現有Experience Cloud客戶免費的。 Launch透過易於使用的擴充功能簡化網站上的標籤部署，您可以安裝、設定、更新和刪除這些擴充功能。 Launch在您的網站上佔用的空間很小，可讓您快速保持頁面載入。
 
@@ -41,7 +41,7 @@ Experience Platform Launch是現有Experience Cloud客戶免費的。 Launch透�
 
 您可以建立 *規則* ，以決定何時將事件資料轉送至擴充功能。 此強大功能可讓您僅在特定情況下轉送事件資料，而不需在每次互動時傳送事件資料。 如需詳細資訊，請閱讀 [Launch檔案中的規則](https://docs.adobe.com/help/zh-Hant/launch/using/reference/manage-resources/rules.html)。
 
-## Launch擴充功能的範例使用案例
+## Launch擴充功能的範例使用案例 {#extensions-use-cases}
 
 啟動擴充功能可讓您滿足各種客戶使用案例。 使用Launch擴充功能的一些範例使用案例包括：
 
@@ -50,7 +50,7 @@ Experience Platform Launch是現有Experience Cloud客戶免費的。 Launch透�
 * 您可以根據您在Launch中設定的規則，根據使用者與頁面的互動方式，在適當的時間開啟用戶端聊天方塊應用程式。
 
 
-## 擴充功能類別
+## 擴充功能類別 {#extension-categories}
 
 Launch extensions可歸入Adobe即時CDP的下列類別：
 
