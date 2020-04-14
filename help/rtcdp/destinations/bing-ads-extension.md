@@ -4,7 +4,7 @@ seo-title: Bing Ads通用事件追蹤(UET)擴充功能
 description: Bing Ads通用事件追蹤(UET)擴充功能是Adobe即時客戶資料平台中的廣告目的地。 如需擴充功能的詳細資訊，請參閱Adobe Exchange的擴充功能頁面。
 seo-description: null
 translation-type: tm+mt
-source-git-commit: 2a94444b35cac0c002d729798d96fd54aaafbacd
+source-git-commit: 98c3356db178507e0a8d94b47030e9490e721e46
 
 ---
 
@@ -19,7 +19,7 @@ Bing Ads Universal Event Tracking(UET)是Adobe即時客戶資料平台中的廣�
 
 此目標是Experience Platform Launch擴充功能。 如需Launch擴充功能如何在Adobe Real-time CDP中運作的詳細資訊，請參閱 [Experience Platform Launch擴充功能總覽](/help/rtcdp/destinations/experience-platform-launch-extensions.md)。
 
-![Bing Ads擴充功能](assets/bing-ads-extension.png)
+![Bing Ads擴充功能](assets/bing-extension.png)
 
 
 ## 先決條件 {#prerequisites}
