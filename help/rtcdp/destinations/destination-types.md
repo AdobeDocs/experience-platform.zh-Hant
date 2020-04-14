@@ -4,7 +4,7 @@ seo-title: 目標類型和類別
 description: '在Adobe即時客戶資料平台中，描述檔／區段匯出目的地會擷取事件資料，並與其他資料來源結合，套用區段，以及將區段和合格的描述檔匯出至目的地。 啟動擴充功能會將原始事件資料轉送至數種目的地。 '
 seo-description: 在Adobe即時客戶資料平台中，描述檔／區段匯出目的地會擷取事件資料，並與其他資料來源結合，套用區段，以及將區段和合格的描述檔匯出至目的地。 啟動擴充功能會將原始事件資料轉送至數種目的地。
 translation-type: tm+mt
-source-git-commit: bfcbc56f05fa1c3b5fafd57b1166e50130b6007d
+source-git-commit: bc3f57d636c363c94555b2a779f5bb98a9eca13f
 
 ---
 
@@ -23,7 +23,7 @@ source-git-commit: bfcbc56f05fa1c3b5fafd57b1166e50130b6007d
 
 ### 連線
 
-**Adobe即時客戶資** 料平台中的描述檔匯出和區段匯出目的地會擷取事件資料，並將其與其他資料來源結合以建立即時客戶描述檔 ****[](https://docs.adobe.com/content/help/en/experience-platform/profile/home.html)，套用區段，並將區段和合格描述檔匯出至目的地。
+**Adobe即時客戶資** 料平台中的描述檔匯出和區段匯出目的地會擷取事件資料，並將其與其他資料來源結合以建立即時客戶描述檔 ****[](/help/profile/home.md)，套用區段，並將區段和合格描述檔匯出至目的地。
 
 <br> 
 
@@ -68,7 +68,7 @@ Adobe Real-time CDP運用Experience Platform Launch的強大功能與彈性，�
 
 ## 目標類別
 
-目標目錄中的目標和擴展 [名](https://platform.adobe.com/destination/catalog) ，依據目標類別(**Advertising**、 **Cloud Storage**、Survey Platforms、Email Marketing ********&#x200B;等調查平台)分組，具體取決於您所實現的行銷使用案例。 如需每個類別以及每個類別所包含的目的地的詳細資訊，請參閱「目標」目 [錄檔案](/help/rtcdp/destinations/destinations-catalog.md)。
+目標目錄中的連接和擴展 [](https://platform.adobe.com/destination/catalog) ，依據目標類別(**Advertising**、 **Cloud Storage**********、調查平台、電子郵件營銷等)分組，具體取決於它們幫助您實現的行銷使用案例。 如需每個類別以及每個類別所包含的目的地的詳細資訊，請參閱「目標」目 [錄檔案](/help/rtcdp/destinations/destinations-catalog.md)。
 
-![目標類別](/help/rtcdp/destinations/assets/destination-categories.png)
+![目標類別](/help/rtcdp/destinations/assets/destination-categories-menu.png)
 
