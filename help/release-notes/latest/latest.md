@@ -6,7 +6,7 @@ last-update: April 13, 2020
 author: ens71067
 keywords: release notes;
 translation-type: tm+mt
-source-git-commit: f90da5067121f7e00fd26a4dd5462cf567a7b09d
+source-git-commit: dc1c9b7dd9ff4c8b20de96e4ee123d90be4580cc
 
 ---
 
@@ -14,6 +14,28 @@ source-git-commit: f90da5067121f7e00fd26a4dd5462cf567a7b09d
 # Adobe Experience Platform 發行說明
 
 ## 發行日期: 2020 年 4 月 8 日
+
+## 體驗資料模型(XDM)系統
+
+標準化和互操作性是Experience Platform的主要概念。 Adobe推動的Experience Data Model(XDM)旨在標準化客戶體驗資料並定義客戶體驗管理的架構。
+
+XDM是公開記載的規格，旨在改善數位體驗的強大功能。 它提供任何應用程式的通用結構和定義，以便與Adobe Experience Platform上的服務通訊。 遵循XDM標準，所有客戶體驗資料都可整合在以更快速、更整合的方式提供見解的通用表現形式中。 您可以從客戶行動中獲得寶貴見解，透過細分定義客戶受眾，並將客戶屬性用於個人化目的。
+
+### 新功能
+
+| 功能 | 說明 |
+| --- | --- |
+| 自動替代顯示資訊 | 方案註冊表會自動應用描述符中配置的自定義標題和說明 `alternateDisplayInfo` 值。 |
+| 標量欄位限制 | 方案註冊表不允許在單個方案中有超過6000個標量欄位。 |
+| 效能大修 | 架構註冊表已進行全面改造，以更好地執行並滿足Experience Platform的需求。 |
+
+**錯誤修正**
+
+* 將XDM更新為XED，以支援標準XDM中巢狀URI欄位的更簡潔XED格式。
+
+**已知問題**
+
+* 已知
 
 ## 資料控管
 
