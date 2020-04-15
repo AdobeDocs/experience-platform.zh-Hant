@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 對受眾細分強制執行資料使用規範
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: f5bc9beb59e83b0411d98d901d5055122a124d07
+source-git-commit: 97ba7aeb8a67735bd65af372fbcba5e71aee6aae
 
 ---
 
@@ -22,7 +22,9 @@ source-git-commit: f5bc9beb59e83b0411d98d901d5055122a124d07
 - [區段](../home.md):即時客戶個人檔案如何將個人檔案存放區中包含的大量個人群組分割為具有類似特性且回應類似行銷策略的較小群組。
 - [資料治理](../../data-governance/home.md):Data Governance使用下列元件為資料使用標籤和強制實施(DULE)提供了基礎架構：
    - [資料使用標籤](../../data-governance/labels/user-guide.md):標籤用來說明資料集和欄位，以處理其個別資料的敏感度等級為準。
-   - [資料使用原則](../../data-governance/api/getting-started.md):指示允許針對依特定資料使用標籤分類之資料執行哪些行銷動作的設定。
+   - [資料使用原則](../../data-governance/policies/overview.md):指示允許針對依特定資料使用標籤分類之資料執行哪些行銷動作的設定。
+   - [政策實施](../../data-governance/enforcement/overview.md):允許您強制實施資料使用策略並防止構成違反策略的資料操作。
+- [沙盒](../../sandboxes/home.md):Experience Platform提供虛擬沙盒，可將單一Platform實例分割為不同的虛擬環境，以協助開發和發展數位體驗應用程式。
 
 以下章節提供您必須知道的其他資訊，才能成功呼叫平台API。
 
@@ -48,11 +50,11 @@ Experience Platform中的所有資源都隔離至特定的虛擬沙盒。 所有
 
 - 內容類型：application/json
 
-## 查閱區段定義的合併原則
+## 尋找區段定義的合併原則 {#merge-policy}
 
 此工作流程從存取已知觀眾區隔開始。 在即時客戶描述檔中啟用的區段在其區段定義中包含合併原則ID。 此合併策略包含有關哪些資料集要包含在段中的資訊，這些資料集又包含任何適用的資料使用標籤。
 
-使用 [分段API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/segmentation.yaml)，您可以依其ID來查閱區段定義，以尋找其相關的合併原則。
+使用 [分段API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/segmentation.yaml)，您可以依其ID來尋找區段定義，以尋找其相關的合併原則。
 
 **API格式**
 
@@ -62,7 +64,7 @@ GET /segment/definitions/{SEGMENT_DEFINITION_ID}
 
 | 屬性 | 說明 |
 | -------- | ----------- |
-| `{SEGMENT_DEFINITION_ID}` | 您要查閱的區段定義ID。 |
+| `{SEGMENT_DEFINITION_ID}` | 您要尋找的區段定義ID。 |
 
 **請求**
 
@@ -75,7 +77,7 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-**Reponse**
+**回應**
 
 成功的回應會傳回區段定義的詳細資料。
 
@@ -117,9 +119,9 @@ curl -X GET \
 | -------- | ----------- |
 | `mergePolicyId` | 用於區段定義的合併原則ID。 這將用於下一步。 |
 
-## 從合併策略中查找源資料集
+## 從合併策略中查找源資料集 {#datasets}
 
-合併策略包含有關其源資料集的資訊，這些資訊又包含DULE標籤。 您可以在GET請求中提供合併原則ID給描述檔API，以查閱合併原則的詳細資訊。
+合併策略包含有關其源資料集的資訊，而源資料集又包含資料使用標籤。 您可以在GET請求中提供合併原則ID給描述檔API，以查閱合併原則的詳細資訊。
 
 **API格式**
 
@@ -129,7 +131,7 @@ GET /config/mergePolicies/{MERGE_POLICY_ID}
 
 | 屬性 | 說明 |
 | -------- | ----------- |
-| `{MERGE_POLICY_ID}` | 在上一步驟中取得的合併原則 [ID](#lookup-a-merge-policy-for-a-segment-definition)。 |
+| `{MERGE_POLICY_ID}` | 在上一步驟中取得的合併原則 [ID](#merge-policy)。 |
 
 **請求**
 
@@ -142,7 +144,7 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-**Reponse**
+**回應**
 
 成功的回應會傳回合併原則的詳細資訊。
 
@@ -174,92 +176,195 @@ curl -X GET \
 | `attributeMerge.type` | 合併策略的資料優先順序配置類型。 如果值為，則 `dataSetPrecedence`與此合併策略關聯的資料集列在下面 `attributeMerge > data > order`。 如果值為，則 `timestampOrdered`合併策略將使用與中引用的模式 `schema.name` 關聯的所有資料集。 |
 | `attributeMerge.data.order` | 如果 `attributeMerge.type` 為， `dataSetPrecedence`則此屬性將是包含此合併策略所使用資料集的ID的陣列。 這些ID會用於下一步驟。 |
 
-## 查閱來源資料集的資料使用標籤
+## 評估資料集中的策略違規情況
 
-收集合併策略的源資料集的ID後，可以使用這些ID查找為資料集本身配置的資料使用標籤及其中包含的任何特定資料欄位。
+>[!NOTE]  此步驟假設您至少有一個作用中的資料使用原則，可防止對包含特定標籤的資料執行特定行銷動作。 如果您沒有任何適用於評估資料集的使用策略，請遵循策略創 [建教程](../../data-governance/policies/create.md) ，以建立一個策略，然後繼續此步驟。
 
-下列對 [](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml) Catalog Service API的呼叫會在請求路徑中提供其ID，以擷取與單一資料集相關的資料使用標籤：
+在您取得合併原則來源資料集的ID後，就可以使用 [DULE Policy Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) ，針對特定行銷動作評估這些資料集，以檢查資料使用原則違規情況。
+
+若要評估資料集，您必須在POST請求路徑中提供行銷動作的名稱，同時在請求內文中提供資料集ID，如下例所示。
 
 **API格式**
 
 ```http
-GET /dataSets/{DATASET_ID}/dule
+POST /marketingActions/core/{MARKETING_ACTION_NAME}/constraints
+POST /marketingActions/custom/{MARKETING_ACTION_NAME}/constraints
 ```
 
-| 屬性 | 說明 |
-| -------- | ----------- |
-| `{DATASET_ID}` | 您要查閱其資料使用標籤的資料集ID。 |
+| 參數 | 說明 |
+| --- | --- |
+| `{MARKETING_ACTION_NAME}` | 與您評估資料集依據的資料使用策略相關聯的行銷動作名稱。 根據政策是由Adobe或您的組織定義，您必須分 `/marketingActions/core` 別使 `/marketingActions/custom`用或。 |
 
 **請求**
 
+下列請求會針對上 `exportToThirdParty` 一步驟中取得的資料集測試行 [銷動作](#datasets)。 請求裝載是包含每個資料集ID的陣列。
+
 ```shell
-curl -X GET \
-  https://platform.adobe.io/data/foundation/catalog/dataSets/5b95b155419ec801e6eee780/dule \
+curl -X POST \
+  https://platform.adobe.io/data/foundation/dulepolicy/marketingActions/custom/exportToThirdParty/constraints
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME}'
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+  -d '[
+    {
+      "entityType": "dataSet",
+      "entityId": "5b95b155419ec801e6eee780"
+    },
+    {
+      "entityType": "dataSet",
+      "entityId": "5b7c86968f7b6501e21ba9df"
+    }
+  ]'
 ```
 
-**Reponse**
+| 屬性 | 說明 |
+| --- | --- |
+| `entityType` | 裝載陣列中的每個項目都必須指示要定義的實體類型。 在此使用案例中，值一律為&quot;dataSet&quot;。 |
+| `entityID` | 裝載陣列中的每個項目都必須提供資料集的唯一ID。 |
 
-成功的響應返回與整個資料集相關聯的資料使用標籤清單，以及與源模式相關聯的任何特定資料欄位。
+**回應**
+
+成功的回應會傳回行銷動作的URI、從提供的資料集收集的資料使用標籤，以及因測試這些標籤的動作而違反的任何資料使用原則清單。 在此範例中，陣列中顯示「將資料匯出至第三方」原則， `violatedPolicies` 指出行銷動作觸發原則違規。
 
 ```json
 {
-    "connection": {},
-    "dataset": {
-        "identity": [],
-        "contract": [
-            "C3"
-        ],
-        "sensitive": [],
-        "contracts": [
-            "C3"
-        ],
-        "identifiability": [],
-        "specialTypes": []
+  "timestamp": 1556324277895,
+  "clientId": "{CLIENT_ID}",
+  "userId": "{USER_ID}",
+  "imsOrg": "{IMS_ORG}",
+  "marketingActionRef": "https://platform.adobe.io:443/data/foundation/dulepolicy/marketingActions/custom/exportToThirdParty",
+  "duleLabels": [
+    "C1",
+    "C2",
+    "C4",
+    "C5"
+  ],
+  "discoveredLabels": [
+    {
+      "entityType": "dataSet",
+      "entityId": "5b95b155419ec801e6eee780",
+      "dataSetLabels": {
+        "connection": {
+          "labels": []
+        },
+        "dataSet": {
+          "labels": [
+            "C5"
+          ]
+        },
+        "fields": [
+          {
+            "labels": [
+              "C2",
+            ],
+            "path": "/properties/_customer"
+          },
+          {
+            "labels": [
+              "C5"
+            ],
+            "path": "/properties/geoUnit"
+          },
+          {
+            "labels": [
+              "C1"
+            ],
+            "path": "/properties/identityMap"
+          }
+        ]
+      }
     },
-    "fields": [],
-    "schemaFields": [
-        {
-            "path": "/properties/personalEmail/properties/address",
-            "identity": [
-                "I1"
+    {
+      "entityType": "dataSet",
+      "entityId": "5b7c86968f7b6501e21ba9df",
+      "dataSetLabels": {
+        "connection": {
+          "labels": []
+        },
+        "dataSet": {
+          "labels": [
+            "C5"
+          ]
+        },
+        "fields": [
+          {
+            "labels": [
+              "C5"
             ],
-            "contract": [
-                "C2",
-                "C9"
+            "path": "/properties/createdByBatchID"
+          },
+          {
+            "labels": [
+              "C5"
             ],
-            "sensitive": [],
-            "contracts": [
-                "C2",
-                "C9"
-            ],
-            "identifiability": [
-                "I1"
-            ],
-            "specialTypes": []
+            "path": "/properties/faxPhone"
+          }
+        ]
+      }
+    }
+  ],
+  "violatedPolicies": [
+    {
+      "name": "Export Data to Third Party",
+      "status": "ENABLED",
+      "marketingActionRefs": [
+        "https://platform-stage.adobe.io:443/data/foundation/dulepolicy/marketingActions/custom/exportToThirdParty"
+      ],
+      "description": "Conditions under which data cannot be exported to a third party",
+      "deny": {
+        "operator": "OR",
+        "operands": [
+          {
+            "label": "C1"
+          },
+          {
+            "operator": "AND",
+            "operands": [
+              {
+                "label": "C3"
+              },
+              {
+                "label": "C7"
+              }
+            ]
+          }
+        ]
+      },
+      "imsOrg": "{IMS_ORG}",
+      "created": 1565651746693,
+      "createdClient": "{CREATED_CLIENT}",
+      "createdUser": "{CREATED_USER",
+      "updated": 1565723012139,
+      "updatedClient": "{UPDATED_CLIENT}",
+      "updatedUser": "{UPDATED_USER}",
+      "_links": {
+        "self": {
+          "href": "https://platform-stage.adobe.io/data/foundation/dulepolicy/policies/custom/5d51f322e553c814e67af1a3"
         }
-    ]
+      },
+      "id": "5d51f322e553c814e67af1a3"
+    }
+  ]
 }
 ```
 
 | 屬性 | 說明 |
-| -------- | ----------- |
-| `dataset` | 包含整體套用至資料集之資料使用標籤的物件。 |
-| `schemaFields` | 表示特定方案欄位的對象陣列，這些欄位具有應用於它們的資料使用標籤。 |
-| `schemaFields.path` | 模式欄位的路徑，其資料使用標籤列在同一對象中。 |
+| --- | --- |
+| `duleLabels` | 從提供的資料集中提取的資料使用標籤清單。 |
+| `discoveredLabels` | 請求裝載中提供的資料集清單，顯示每個資料集層級和欄位層級標籤。 |
+| `violatedPolicies` | 一個陣列，列出了通過對提供的進行市場營銷操作（在中指定）測試而違反的任何資料 `marketingActionRef`使用策略 `duleLabels`。 |
+
+使用API回應中傳回的資料，您可以在體驗應用程式中設定通訊協定，以便在發生違反原則的情況時適當強制執行。
 
 ## 篩選資料欄位
 
->[!NOTE] 此步驟為可選步驟。 如果您不想根據您在上一步驟尋找資料使用標籤時的發現來調整區段中包含的資料 [，則可跳至評估資料是否違反原則](#lookup-data-usage-labels-for-the-source-datasets)的最後步驟 [](#evaluate-data-for-policy-violations)。
-
-如果您想要調整觀眾區隔中包含的資料，可以使用下列兩種方法之一：
+如果您的受眾細分未通過評估，您可以透過下列其中一種方法調整該細分中的資料。
 
 ### 更新區段定義的合併原則
 
-更新區段定義的合併原則將會調整執行區段工作時將包含的資料集和欄位。 有關詳細資訊，請 [參閱合併策略教程中有關更新現有合併策略的章節](../../profile/api/merge-policies.md) 。
+更新區段定義的合併原則將會調整執行區段工作時將包含的資料集和欄位。 如需詳細資訊，請 [參閱API合併原則教學課程中](../../profile/api/merge-policies.md#update) ，有關更新現有合併原則的章節。
 
 ### 匯出區段時限制特定資料欄位
 
@@ -267,11 +372,7 @@ curl -X GET \
 
 請考慮具有名為&quot;A&quot;、&quot;B&quot;和&quot;C&quot;的資料欄位的區段。 如果您只想匯出欄位&quot;C&quot;，則參 `fields` 數將僅包含欄位&quot;C&quot;。 執行此動作後，匯出區段時會排除欄位&quot;A&quot;和&quot;B&quot;。
 
-如需詳細資訊，請 [參閱區段教學課程](./evaluate-a-segment.md#export-a-segment) 中有關匯出區段的章節。
-
-## 評估違反策略的資料
-
-現在您已收集與受眾區段關聯的資料使用標籤，您可以針對行銷動作測試這些標籤，以評估是否有任何資料使用政策違規。 有關如何使用 [DULE Policy Service API執行策略評估的詳細步驟](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml)，請參閱策略評估 [文檔](../../data-governance/enforcement/overview.md)。
+如需詳細資訊，請 [參閱區段教學課程](./evaluate-a-segment.md#export) 中有關匯出區段的章節。
 
 ## 後續步驟
 
