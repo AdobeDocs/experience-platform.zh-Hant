@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 評估區段
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 8d77fc6c5b2824624ba308269f743a432a5288d2
+source-git-commit: 21935bb36d8c2a0ef17e586c0909cf316ef026cf
 
 ---
 
@@ -452,7 +452,7 @@ curl -X GET \
 
 如果您知道要存取的特定描述檔，則可使用即時客戶描述檔API進行存取。 使用「描述檔API」教學課程的「存取即時客戶描述檔」資料中，提供存取個 [別描述檔的完整步驟](../../profile/api/entities.md) 。
 
-## 匯出區段
+## 匯出區段 {#export}
 
 分段工作成功完成(屬性的值為 `status` 「成功」)後，您可將對象匯出至資料集，供您存取及操作。
 
