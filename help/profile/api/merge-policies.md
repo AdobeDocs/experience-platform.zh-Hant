@@ -4,7 +4,7 @@ solution: Adobe Experience Platform
 title: 即時客戶個人檔案API開發人員指南
 topic: guide
 translation-type: tm+mt
-source-git-commit: 5aad9fa71051a58fe1c4678553f47077d81d23fc
+source-git-commit: 21935bb36d8c2a0ef17e586c0909cf316ef026cf
 
 ---
 
@@ -418,7 +418,7 @@ curl -X POST \
 
 有關 [](#components-of-merge-policies) 組成合併策略的各個元素的詳細資訊，請參閱本文檔開頭的合併策略元件部分。
 
-## 更新合併策略
+## 更新合併策略 {#update}
 
 通過編輯單個屬性(PATCH)或用新屬性(PUT)覆寫整個合併策略，可以修改現有的合併策略。 各示例如下所示。
 
