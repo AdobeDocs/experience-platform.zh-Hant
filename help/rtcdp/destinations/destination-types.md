@@ -4,7 +4,7 @@ seo-title: 目標類型和類別
 description: '在Adobe即時客戶資料平台中，描述檔／區段匯出目的地會擷取事件資料，並與其他資料來源結合，套用區段，以及將區段和合格的描述檔匯出至目的地。 啟動擴充功能會將原始事件資料轉送至數種目的地。 '
 seo-description: 在Adobe即時客戶資料平台中，描述檔／區段匯出目的地會擷取事件資料，並與其他資料來源結合，套用區段，以及將區段和合格的描述檔匯出至目的地。 啟動擴充功能會將原始事件資料轉送至數種目的地。
 translation-type: tm+mt
-source-git-commit: bc3f57d636c363c94555b2a779f5bb98a9eca13f
+source-git-commit: 617cf1934402b9001647d7704fb24d6256069ff3
 
 ---
 
@@ -47,10 +47,11 @@ source-git-commit: bc3f57d636c363c94555b2a779f5bb98a9eca13f
 
 Adobe Real-time CDP運用Experience Platform Launch的強大功能與彈性，將Launch擴充功能加入Adobe Real-time CDP介面中。
 
+>[!TIP]
+>
+>如需Experience Platform Launch擴充功能的詳細資訊，包括使用案例以及如何在介面中尋找這些擴充功能，請參閱 [Launch擴充功能概觀](/help/rtcdp/destinations/experience-platform-launch-extensions.md)。
+
 啟動擴充功能會將原始事件資料轉送至數種目的地。 將擴充功能設想為 **「事件轉發** 」類型的目標。 這是與目標平台整合的更簡單類型，目標平台只會轉送原始事件資料。 例如Gainsight個人化 [擴充功能](/help/rtcdp/destinations/gainsight-extension.md) , [或客戶擴充功能的確認聲音](/help/rtcdp/destinations/confirmit-digital-feedback-extension.md)。
-
-如需Experience Platform Launch擴充功能的詳細資訊，請參閱 [Launch擴充功能概觀](/help/rtcdp/destinations/experience-platform-launch-extensions.md)。
-
 
 ![Experience Platform Launch擴充功能與其他目的地的比較](/help/rtcdp/destinations/assets/launch-and-other-destinations.png)
 
