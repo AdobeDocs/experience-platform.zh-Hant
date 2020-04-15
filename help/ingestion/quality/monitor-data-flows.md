@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 監控資料擷取
 topic: overview
 translation-type: tm+mt
-source-git-commit: 8577d9b93098d5d6ec778d549bf5fc1e29c32d86
+source-git-commit: 9cbc22a34613aeb58a2c5090b10978ae4428dbdb
 
 ---
 
@@ -21,13 +21,19 @@ source-git-commit: 8577d9b93098d5d6ec778d549bf5fc1e29c32d86
 
 ![](../images/quality/monitor-data-flows/click-streaming-end-to-end.png)
 
-此時 *會顯示「串流端對端監控* 」頁面。 此工作區提供一個圖表，顯示要流化的消息速率，以及傳入資料的詳細清單。
+此時 *會顯示「串流端對端監控* 」頁面。 此工作區提供一個圖表，可顯示平台所接收的串流事件的速率，一個圖表，可顯示即時客戶個人檔案成功處理的串流事件的速率 [](../../profile/home.md)，以及詳細的傳入資料清單。
 
 ![](../images/quality/monitor-data-flows/list-streams.png)
 
-依預設，圖表顯示過去七天的擷取率。 按一下反白顯示的按鈕，即可調整此日期範圍，以顯示不同的時段。
+依預設，頂端圖表顯示過去七天的擷取率。 按一下反白顯示的按鈕，即可調整此日期範圍，以顯示不同的時段。
 
-![](../images/quality/monitor-data-flows/list-streams-focus-on-graph.png)
+![](../images/quality/monitor-data-flows/list-streams-focus-on-top-graph.png)
+
+下圖顯示描述檔在過去七天內成功處理串流事件的比率。 按一下反白顯示的按鈕，即可調整此日期範圍，以顯示不同的時段。
+
+> [!NOTE] 為了讓資料顯示在此圖表上，必須為描述檔明 **確啟** 用資料。 要瞭解如何啟用配置檔案的流資料，請閱讀數 [據集使用手冊](../../catalog/datasets/user-guide.md#enable-a-dataset-for-real-time-customer-profile)。
+
+![](../images/quality/monitor-data-flows/list-streams-focus-on-bottom-graph.png)
 
 圖表下方是所有串流擷取記錄的清單，這些記錄與上方顯示的日期範圍相對應。 每個列出的批次會顯示其ID、資料集名稱、上次更新時的記錄數，以及錯誤數（如果有）。 您可以按一下任何記錄，以取得該記錄的詳細資訊。
 
