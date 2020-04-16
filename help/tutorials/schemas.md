@@ -4,7 +4,7 @@ solution: Experience Platform
 title: XDM模式和描述符
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: ee08f43400fa72abce95ed52aff879f954f4b4d6
+source-git-commit: 2f0f155beacbc6a4ba2892ae211a9c0305e969ac
 
 ---
 
@@ -15,7 +15,7 @@ source-git-commit: ee08f43400fa72abce95ed52aff879f954f4b4d6
 
 ## 使用方案註冊表建立方案
 
-架構註冊表提供使用者介面和REST風格的API，您可從中檢視和管理Adobe Experience Platform架構庫中的所有資源。 架構庫包含由Adobe、Experience Platform合作夥伴和您所使用之應用程式的廠商提供給您的資源，以及您定義並儲存至架構註冊表的資源。 要瞭解如何為組織建立方案，請遵循使用方案註冊表API [建立方案的教程](../xdm/tutorials/create-schema-api.md) ，或 [使用方案編輯器用戶介面建立方案的教程](../xdm/tutorials/create-schema-ui.md)。
+架構註冊表提供使用者介面和REST風格的API，您可從中檢視和管理Adobe Experience Platform架構庫中的所有資源。 方案庫包含由Adobe、Experience Platform合作夥伴和您所使用之應用程式的廠商提供給您的資源，以及您定義並儲存至方案註冊表的資源。 要瞭解如何為組織建立方案，請遵循使用方案註冊表API [建立方案的教程](../xdm/tutorials/create-schema-api.md) ，或 [使用方案編輯器用戶介面建立方案的教程](../xdm/tutorials/create-schema-ui.md)。
 
 ## 定義兩個方案之間的關係
 
@@ -23,7 +23,7 @@ Adobe Experience Platform的重要部分，在於能夠跨不同通道瞭解客�
 
 ## 建立臨機結構
 
-在特定情況下，可能需要建立Experience Data Model(XDM)架構，其中欄位的名稱僅限單一資料集使用。 這稱為「臨機」架構。 臨機結構描述用於Experience Platform的各 [種資料擷取工作流程](../ingestion/home.md) ，包括擷取CSV檔案並建立特定 [類型的來源連線](../source-connectors/home.md)。 建立臨機架構是使用「架構註冊表API」來完成的，其目的是與其他需要在工作流程中建立臨機架構的「體驗平台」教學課程搭配使用。 若要開始建立臨機結構，請參閱使用API [建立臨機結構的教學課程](../xdm/tutorials/ad-hoc.md)。
+在特定情況下，可能需要建立Experience Data Model(XDM)架構，其中欄位的名稱僅限單一資料集使用。 這稱為「臨機」架構。 臨機結構描述用於Experience Platform的各 [種資料擷取工作流程](../ingestion/home.md) ，包括擷取CSV檔案並建立特定 [類型的來源連線](../sources/home.md)。 建立臨機架構是使用「架構註冊表API」來完成的，其目的是與其他需要在工作流程中建立臨機架構的「體驗平台」教學課程搭配使用。 若要開始建立臨機結構，請參閱使用API [建立臨機結構的教學課程](../xdm/tutorials/ad-hoc.md)。
 
 ## 後續步驟
 
