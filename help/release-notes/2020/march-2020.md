@@ -6,7 +6,7 @@ last-update: March 10, 2020
 author: ens71067
 keywords: release notes;
 translation-type: tm+mt
-source-git-commit: c2495b463d713f85ba621a7bf687c5959ec13adb
+source-git-commit: 33ce1e83514d7aa3cdc5fcee66f444d2fd203097
 
 ---
 
@@ -108,4 +108,4 @@ Experience Platform提供REST風格的API和互動式UI，讓您輕鬆為各種�
 
 * 無
 
-若要進一步瞭解來源，請參閱 [來源概觀](../../source-connectors/home.md)。
+若要進一步瞭解來源，請參閱 [來源概觀](../../sources/home.md)。
