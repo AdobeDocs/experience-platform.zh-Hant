@@ -4,7 +4,7 @@ seo-title: 調查目標
 description: 調查平台會偵測調查事件、透過資料元素即時擷取客戶意見，並與Adobe即時CDP共用資料。
 seo-description: 調查平台會偵測調查事件、透過資料元素即時擷取客戶意見，並與Adobe即時CDP共用資料。
 translation-type: tm+mt
-source-git-commit: e3b7dd4788042deaeba68bfdbe08e8448b46c270
+source-git-commit: e4da80338dbfbad70dfb3cf7df9fe589e949e788
 
 ---
 
