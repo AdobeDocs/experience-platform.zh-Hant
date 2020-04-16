@@ -5,7 +5,7 @@ doc-type: release notes
 last-update: November 18, 2019
 author: crhoades, ens28527
 translation-type: tm+mt
-source-git-commit: 9bfb2ca8726421363c8446ecf581ed58d427eabf
+source-git-commit: 2f0f155beacbc6a4ba2892ae211a9c0305e969ac
 
 ---
 
@@ -98,7 +98,7 @@ Experience Platform提供REST風格的API和互動式UI，讓您輕鬆為各種�
 
 * 雲端儲存的來源連接器不支援擷取壓縮檔案。
 
-如需來源的詳細資訊，請參閱 [來源概觀](../../source-connectors/home.md)。
+如需來源的詳細資訊，請參閱 [來源概觀](../../sources/home.md)。
 
 ## 資料科學工作區
 
