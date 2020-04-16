@@ -5,14 +5,14 @@ doc-type: release notes
 last-update: April 7, 2020
 author: ens71067
 translation-type: tm+mt
-source-git-commit: 61b2df88bfe8cadd975eaa0b98872710aa3832d3
+source-git-commit: 33ce1e83514d7aa3cdc5fcee66f444d2fd203097
 
 ---
 
 
 # Adobe Experience Platform 發行說明
 
-## 發行日期: 2020 年 4 月 8 日
+## 發行日期：2020 年 4 月 8 日
 
 ## 資料控管
 
@@ -103,4 +103,4 @@ Experience Platform提供REST風格的API和互動式UI，讓您輕鬆為各種�
 
 * 無
 
-如需來源的詳細資訊，請參閱來 [源概觀](../../source-connectors/home.md)。
+如需來源的詳細資訊，請參閱來 [源概觀](../../sources/home.md)。
