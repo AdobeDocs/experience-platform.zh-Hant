@@ -4,7 +4,7 @@ seo-title: 資料管理平台(DMP)目標
 description: 資料管理平台(DMP)可讓廣告商、發行商和代理商建立獨特的受眾個人檔案、識別最有價值的細分，並跨任何數位通道使用。 這可讓您建立真正360度的消費者個人檔案檢視，建立並啟動有意義的受眾。
 seo-description: 資料管理平台(DMP)可讓廣告商、發行商和代理商建立獨特的受眾個人檔案、識別最有價值的細分，並跨任何數位通道使用。 這可讓您建立真正360度的消費者個人檔案檢視，建立並啟動有意義的受眾。
 translation-type: tm+mt
-source-git-commit: e3b7dd4788042deaeba68bfdbe08e8448b46c270
+source-git-commit: e4da80338dbfbad70dfb3cf7df9fe589e949e788
 
 ---
 
