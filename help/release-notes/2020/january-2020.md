@@ -5,7 +5,7 @@ doc-type: release notes
 last-update: January 15, 2020
 author: crhoades, ens28527
 translation-type: tm+mt
-source-git-commit: 38acbb4a0130763fe0c565215eda7c0713e1ff6e
+source-git-commit: 2f0f155beacbc6a4ba2892ae211a9c0305e969ac
 
 ---
 
@@ -78,7 +78,7 @@ Experience Platform提供REST風格的API和互動式UI，讓您輕鬆為各種�
 
 * 無
 
-如需來源的詳細資訊，請參閱來 [源概觀](../../source-connectors/home.md)
+如需來源的詳細資訊，請參閱來 [源概觀](../../sources/home.md)
 
 ## 目的地
 
