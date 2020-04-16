@@ -1,9 +1,9 @@
 ---
 product: experience-platform
 audience: user
-user-guide-title: Adobe Experience Platform Help
+user-guide-title: Adobe Experience Platform說明
 translation-type: tm+mt
-source-git-commit: 2020f4b88f81f2d4fe3cfbd91cd18119ae580f4f
+source-git-commit: e4da80338dbfbad70dfb3cf7df9fe589e949e788
 
 ---
 
@@ -12,7 +12,7 @@ source-git-commit: 2020f4b88f81f2d4fe3cfbd91cd18119ae580f4f
 
 * [體驗平台概觀](home.md)
 * [快速入門](get-started.md)
-* Experience Platform檔案 {#documentation}
+* Experience Platform documentation {#documentation}
    * [檔案總覽](documentation/overview.md)
    * [存取控制](https://docs.adobe.com/content/help/en/experience-platform/access-control/home.html)
    * [Auditor](https://docs.adobe.com/content/help/en/auditor/using/overview.html)
@@ -21,14 +21,14 @@ source-git-commit: 2020f4b88f81f2d4fe3cfbd91cd18119ae580f4f
    * [資料控管](https://docs.adobe.com/content/help/en/experience-platform/data-governance/home.html)
    * [資料擷取](https://docs.adobe.com/content/help/en/experience-platform/ingestion/home.html)
    * [資料科學工作區](https://docs.adobe.com/content/help/en/experience-platform/data-science-workspace/home.html)
-   * [Debugger](https://docs.adobe.com/content/help/en/debugger/using/experience-cloud-debugger.html)
+   * [Debugger](https://docs.adobe.com/content/help/zh-Hant/debugger/using/experience-cloud-debugger.html)
    * [決策服務](https://docs.adobe.com/content/help/en/experience-platform/decisioning/home.html)
    * [目的地](https://docs.adobe.com/content/help/en/experience-platform/rtcdp/destinations/destinations-overview.html)
    * [ETL（擷取、轉換、載入）](https://docs.adobe.com/content/help/en/experience-platform/etl/home.html)
-   * [Experience Platform Web SDK（測試版）](https://docs.adobe.com/content/help/en/experience-platform/edge/home.html)
+   * [Experience Platform Web SDK（測試版）](https://docs.adobe.com/content/help/zh-Hant/experience-platform/edge/home.html)
    * [Identity 服務](https://docs.adobe.com/content/help/en/experience-platform/identity/home.html)
    * [智慧型服務](https://docs.adobe.com/content/help/en/experience-platform/intelligent-services/home.html)
-   * [Launch](https://docs.adobe.com/content/help/en/launch/using/overview.html)
+   * [Launch](https://docs.adobe.com/content/help/zh-Hant/launch/using/overview.html)
    * [可觀性見解](https://docs.adobe.com/content/help/en/experience-platform/observability/home.html)
    * [隱私權服務](https://docs.adobe.com/content/help/en/experience-platform/privacy/home.html)
    * [個人檔案（即時客戶個人檔案）](https://docs.adobe.com/content/help/en/experience-platform/profile/home.html)
@@ -36,10 +36,10 @@ source-git-commit: 2020f4b88f81f2d4fe3cfbd91cd18119ae580f4f
    * [即時客戶資料平台](https://docs.adobe.com/content/help/en/experience-platform/rtcdp/overview.html)
    * [沙盒](https://docs.adobe.com/content/help/en/experience-platform/sandbox/home.html)
    * [區段](https://docs.adobe.com/content/help/en/experience-platform/segmentation/home.html)
-   * [來源（連接器）](https://docs.adobe.com/content/help/en/experience-platform/source-connectors/home.html)
+   * [來源（連接器）](https://docs.adobe.com/content/help/en/experience-platform/sources/home.html)
    * [XDM（體驗資料模型）](https://docs.adobe.com/content/help/en/experience-platform/xdm/home.html)
-* [體驗平台教學課程](https://docs.adobe.com/content/help/en/experience-platform/tutorials/home.html)
-* [發行說明](https://docs.adobe.com/content/help/en/experience-platform/release-notes/latest.html)
+* [體驗平台教學課程](https://docs.adobe.com/content/help/zh-Hant/experience-platform/tutorials/home.html)
+* [發行說明](https://docs.adobe.com/content/help/zh-Hant/experience-platform/release-notes/latest.html)
 * [字彙表](glossary.md)
 * [疑難排解指南](troubleshooting.md)
 * [API基礎知識](api-fundamentals.md)
