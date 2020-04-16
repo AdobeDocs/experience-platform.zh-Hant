@@ -6,14 +6,14 @@ last-update: April 13, 2020
 author: ens71067
 keywords: release notes;
 translation-type: tm+mt
-source-git-commit: dc1c9b7dd9ff4c8b20de96e4ee123d90be4580cc
+source-git-commit: e4da80338dbfbad70dfb3cf7df9fe589e949e788
 
 ---
 
 
 # Adobe Experience Platform 發行說明
 
-## 發行日期: 2020 年 4 月 8 日
+## 發行日期：2020 年 4 月 8 日
 
 ## 體驗資料模型(XDM)系統
 
@@ -27,7 +27,7 @@ XDM是公開記載的規格，旨在改善數位體驗的強大功能。 它提�
 | --- | --- |
 | 自動替代顯示資訊 | 方案註冊表會自動應用描述符中配置的自定義標題和說明 `alternateDisplayInfo` 值。 |
 | 標量欄位限制 | 方案註冊表不允許在單個方案中有超過6000個標量欄位。 |
-| 效能大修 | 架構註冊表已進行全面改造，以更好地執行並滿足Experience Platform的需求。 |
+| 效能大修 | 架構註冊表已全面革新，以更好地執行並滿足Experience Platform的需求。 |
 
 **錯誤修正**
 
@@ -126,4 +126,4 @@ Experience Platform提供REST風格的API和互動式UI，讓您輕鬆為各種�
 
 * 無
 
-如需來源的詳細資訊，請參閱來 [源概觀](../../source-connectors/home.md)。
+若要進一步瞭解來源，請參閱 [來源概觀](../../sources/home.md)。
