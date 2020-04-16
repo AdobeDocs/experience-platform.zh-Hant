@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Adobe Experience Platform來源連接器概觀
 topic: overview
 translation-type: tm+mt
-source-git-commit: 92ba230d71e419e33567833ad562e6ffef996d0a
+source-git-commit: e81f138f933d4bb2c36260480e360dfacd412da0
 
 ---
 
@@ -26,9 +26,10 @@ Experience Platform中的來源可分為下列類別：
 Experience Platform可讓您從其他Adobe應用程式擷取資料，包括Adobe Analytics、Adobe Audience Manager和Experience Platform Launch。 如需詳細資訊，請參閱下列相關檔案：
 
 - [Adobe Audience Manager連接器概觀](connectors/adobe-applications/audience-manager.md)
-- [在UI中建立Adobe Audience Manager來源連接器](https://www.adobe.io/apis/experienceplatform/home/tutorials/sources-ui-tutorials.html#!api-specification/markdown/narrative/tutorials/sources_tutorial/ui/adobe-applications/aam-ui-tutorial.md)
+- [在UI中建立Adobe Audience Manager來源連接器](./tutorials/ui/create/adobe-applications/audience-manager.md)
 - [Adobe Analytics資料連接器概觀](connectors/adobe-applications/analytics.md)
-- [在UI中建立Adobe Analytics來源連接器](https://www.adobe.io/apis/experienceplatform/home/tutorials/sources-ui-tutorials.html#!api-specification/markdown/narrative/tutorials/sources_tutorial/ui/adobe-applications/adobe-analytics-ui-tutorial.md)
+- [在UI中建立Adobe Analytics來源連接器](./tutorials/ui/create/adobe-applications/analytics.md)
+- [在UI中建立客戶屬性來源連接器](./tutorials/ui/create/adobe-applications/customer-attributes.md)
 
 ### 廣告
 
