@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Adobe Experience Platform資料擷取概觀
 topic: overview
 translation-type: tm+mt
-source-git-commit: 4817162fe2b7cbf4ae4c1ed325db2af31da5b5d3
+source-git-commit: 2f0f155beacbc6a4ba2892ae211a9c0305e969ac
 
 ---
 
@@ -35,7 +35,7 @@ Experience Platform可讓您設定與各種資料提供者的來源連線。 這
 
 來源連線可設定為從其他Adobe應用程式（例如Adobe Analytics和Adobe Audience Manager）、協力廠商雲端儲存來源（例如Azure Blob、Amazon S3、FTP伺服器和SFTP伺服器）以及協力廠商CRM系統（例如Microsoft Dynamics和Salesforce）收集資料。
 
-如需詳細 [資訊，請參閱](../source-connectors/home.md) 「來源概觀」。
+如需詳細 [資訊，請參閱](../sources/home.md) 「來源概觀」。
 
 ## 後續步驟
 
