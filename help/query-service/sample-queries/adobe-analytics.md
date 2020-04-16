@@ -4,14 +4,14 @@ solution: Experience Platform
 title: 範例查詢
 topic: queries
 translation-type: tm+mt
-source-git-commit: 45da024d45b5eebdfc393ee14890e24aed6021ce
+source-git-commit: 2f0f155beacbc6a4ba2892ae211a9c0305e969ac
 
 ---
 
 
 # Adobe Analytics資料的範例查詢
 
-從選取的Adobe Analytics報表套裝中取得的資料會轉換成XDM ExperienceEvents，並以資料集的形式匯入Adobe Experience Platform。 本檔案概述Adobe Experience Platform Query Service運用此資料的多種使用案例，其中所包含的範例查詢應與您的Adobe Analytics資料集搭配使用。 如需對 [應至XDM ExperienceEvents的詳細資訊](../../source-connectors/ui/adobe-applications/analytics-mapping.md) ，請參閱Analytics欄位對應檔案。
+從選取的Adobe Analytics報表套裝中取得的資料會轉換成XDM ExperienceEvents，並以資料集的形式匯入Adobe Experience Platform。 本檔案概述Adobe Experience Platform Query Service運用此資料的多種使用案例，其中所包含的範例查詢應與您的Adobe Analytics資料集搭配使用。 如需對 [應至XDM ExperienceEvents的詳細資訊](../../sources/connectors/adobe-applications/analytics-mapping.md) ，請參閱Analytics欄位對應檔案。
 
 ## 快速入門
 
