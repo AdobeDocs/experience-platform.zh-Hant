@@ -1,0 +1,200 @@
+---
+keywords: Experience Platform;home;popular topics
+solution: Experience Platform
+title: 使用Flow Service API建立Microsoft Dynamics連接器
+topic: overview
+translation-type: tm+mt
+source-git-commit: 6c86cec91774f3444dc90042cd7ad5c71429aabd
+
+---
+
+
+# 使用Flow Service API建立Microsoft Dynamics連接器
+
+Flow Service用於收集和集中Adobe Experience Platform內不同來源的客戶資料。 該服務提供用戶介面和REST風格的API，所有支援的源都可從中連接。
+
+本教學課程使用Flow Service API來引導您完成將平台連接至Microsoft Dynamics（以下稱為「Dynamics」）帳戶以收集CRM資料的步驟。
+
+如果您偏好在Experience Platform中使用使用者介面， [](../../../ui/create/crm/dynamics-salesforce.md) Dynamics或Salesforce來源連接器UI教學課程會提供執行類似動作的逐步指示。
+
+## 快速入門
+
+本指南需要有效瞭解Adobe Experience Platform的下列元件：
+
+* [來源](../../../../home.md):Experience Platform可讓您從各種來源擷取資料，同時讓您能夠使用平台服務來建構、標示和增強傳入資料。
+* [沙盒](../../../../../sandboxes/home.md):Experience Platform提供虛擬沙盒，可將單一Platform實例分割為不同的虛擬環境，以協助開發和發展數位體驗應用程式。
+
+以下各節提供您需要瞭解的其他資訊，以便使用Flow Service API將Platform成功連線至Dynamics帳戶。
+
+### 收集必要的認證
+
+為了讓流服務連接到Dynamics，您必須為以下連接屬性提供值：
+
+| 憑證 | 說明 |
+| ---------- | ----------- |
+| `serviceUri` | 您的Dynamics例項的服務URL。 |
+| `username` | 您的Dynamics使用者帳戶的使用者名稱。 |
+| `password` | 您的Dynamics帳戶的密碼。 |
+
+如需快速入門的詳細資訊，請造訪 [此Dynamics檔案](https://docs.microsoft.com/en-us/powerapps/developer/common-data-service/authenticate-oauth)。
+
+### 讀取範例API呼叫
+
+本教學課程提供範例API呼叫，以示範如何設定請求的格式。 這些包括路徑、必要標題和正確格式化的請求負載。 也提供API回應中傳回的範例JSON。 如需範例API呼叫檔案中所用慣例的詳細資訊，請參閱「Experience Platform疑難排解指 [南」中有關如何讀取範例API呼叫的章節](../../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) 。
+
+### 收集必要標題的值
+
+若要呼叫平台API，您必須先完成驗證教 [學課程](../../../../../tutorials/authentication.md)。 完成驗證教學課程後，所有Experience Platform API呼叫中每個必要標題的值都會顯示在下方：
+
+* 授權：生產者 `{ACCESS_TOKEN}`
+* x-api-key: `{API_KEY}`
+* x-gw-ims-org-id: `{IMS_ORG}`
+
+Experience Platform中的所有資源（包括屬於流服務的資源）都會隔離至特定的虛擬沙盒。 所有對平台API的請求都需要一個標題，該標題會指定要在中執行的操作的沙盒名稱：
+
+* x-sandbox-name: `{SANDBOX_NAME}`
+
+所有包含裝載(POST、PUT、PATCH)的請求都需要額外的媒體類型標題：
+
+* 內容類型： `application/json`
+
+## 查找連接規格
+
+在將Platform連接至Dynamics帳戶之前，您必須驗證Dynamics的連接規格是否存在。 如果連接規範不存在，則無法建立連接。
+
+每個可用源都有其唯一的連接規範集，用於描述連接器屬性（如驗證要求）。 您可以執行GET請求並使用查詢參數來查找Dynamics的連接規範。
+
+**API格式**
+
+傳送不含查詢參數的GET請求時，會傳回所有可用來源的連線規格。 您可以包含查詢， `property=name=="dynamics-online"` 以獲取Dynamics的具體資訊。
+
+```http
+GET /connectionSpecs
+GET /connectionSpecs?property=name=="dynamics-online"
+```
+
+**請求**
+
+以下請求將檢索Dynamics的連接規範。
+
+```shell
+curl -X GET \
+    'https://platform.adobe.io/data/foundation/flowservice/connectionSpecs?property=name=="dynamics-online"' \
+    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+    -H 'x-api-key: {API_KEY}' \
+    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-sandbox-name: {SANDBOX_NAME}'
+```
+
+**回應**
+
+成功的回應會傳回Dynamics的連線規格，包括其唯一識別碼(`id`)。 在下個步驟中需要此ID才能建立基本連線。
+
+```json
+{
+    "items": [
+        {
+            "id": "38ad80fe-8b06-4938-94f4-d4ee80266b07",
+            "name": "dynamics-online",
+            "providerId": "0ed90a81-07f4-4586-8190-b40eccef1c5a",
+            "version": "1.0",
+            "authSpec": [
+                {
+                    "name": "Basic Authentication for Dynamics-Online",
+                    "settings": {
+                        "authenticationType": "Office365",
+                        "deploymentType": "Online"
+                    },
+                    "spec": {
+                        "$schema": "http://json-schema.org/draft-07/schema#",
+                        "type": "object",
+                        "description": "defines auth params required for connecting to dynamics-online",
+                        "properties": {
+                            "serviceUri": {
+                                "type": "string",
+                                "description": "The service URL of your Dynamics instance"
+                            },
+                            "username": {
+                                "type": "string",
+                                "description": "User name for the user account"
+                            },
+                            "password": {
+                                "type": "string",
+                                "description": "Password for the user account",
+                                "format": "password"
+                            }
+                        },
+                        "required": [
+                            "username",
+                            "password",
+                            "serviceUri"
+                        ]
+                    }
+                }
+            ]
+        }
+    ]
+}
+```
+
+## 建立基本連接
+
+基本連接指定源，並包含該源的憑據。 每個Dynamics帳戶只需要一個基本連線，因為它可用來建立多個來源連接器以匯入不同的資料。
+
+執行以下POST請求以建立基本連接。
+
+**API格式**
+
+```http
+POST /connections
+```
+
+**請求**
+
+```shell
+curl -X POST \
+    'http://platform.adobe.io/data/foundation/flowservice/connections' \
+    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+    -H 'x-api-key: {API_KEY}' \
+    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-sandbox-name: {SANDBOX_NAME}' \
+    -H 'Content-Type: application/json' \
+    -d '{
+        "name": "Dynamics Base Connection",
+        "description": "Base connection for Dynamics account",
+        "auth": {
+            "specName": "Basic Authentication for Dynamics-Online",
+            "params": {
+                "serviceUri": "{SERVICE_URI}",
+                "username": "{USERNAME}",
+                "password": "{PASSWORD}"
+            }
+        },
+        "connectionSpec": {
+            "id": "38ad80fe-8b06-4938-94f4-d4ee80266b07",
+            "version": "1.0"
+        }
+    }'
+```
+
+| 屬性 | 說明 |
+| -------- | ----------- |
+| `auth.params.serviceUri` | 與您的Dynamics實例關聯的服務URI。 |
+| `auth.params.username` | 與您的Dynamics帳戶關聯的使用者名稱。 |
+| `auth.params.password` | 與您的Dynamics帳戶關聯的密碼。 |
+| `connectionSpec.id` | 在上一步 `id` 中檢索的Dynamics帳戶的連接規範。 |
+
+**回應**
+
+成功的響應包含基本連接的唯一標識符(`id`)。 在下一個教學課程中探索資料時，需要此ID。
+
+```json
+{
+    "id": "4cb0c374-d3bb-4557-b139-5712880adc55",
+    "etag": "\"9e0052a2-0000-0200-0000-5e35tb330000\""
+}
+```
+
+## 後續步驟
+
+在本教學課程中，您已使用API為Dynamics帳戶建立基本連線，並且已取得唯一ID作為回應內文的一部分。 在下一個教學課程中，您可以使用此基本連線ID，同時學習如 [何使用Flow Service API來探索CRM系統](../../explore/crm.md)。
