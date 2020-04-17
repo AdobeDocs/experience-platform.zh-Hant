@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Audience Manager連接器
 topic: overview
 translation-type: tm+mt
-source-git-commit: 9f0200af0310eafbcc1851b089cfc254cb34af8f
+source-git-commit: a1161630c8edae107b784f32ee20af225f9f8c46
 
 ---
 
@@ -19,7 +19,7 @@ Adobe Audience Manager資料連接器可將在Adobe Audience Manager中收集的
 
 Audience Manager連接器會將這些資料類別對應至Experience Data Model(XDM)架構，並將它們傳送至平台。 即時資料和已登入的資料會以XDM ExperienceEvent資料傳送，而描述檔資料則會以XDM個別描述檔傳送。
 
-如需有關使用平台UI建立與Adobe Audience Manager連線的指示，請參閱 [Audience Manager連接器教學課程](https://www.adobe.io/apis/experienceplatform/home/tutorials/sources-ui-tutorials.html#!api-specification/markdown/narrative/tutorials/sources_tutorial/ui/adobe-applications/aam-ui-tutorial.md)。
+如需有關使用平台UI建立與Adobe Audience Manager連線的指示，請參閱 [Audience Manager連接器教學課程](../../tutorials/ui/create/adobe-applications/audience-manager.md)。
 
 ## 什麼是體驗資料模型(XDM)?
 
