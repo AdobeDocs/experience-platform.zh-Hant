@@ -4,14 +4,14 @@ solution: Experience Platform
 title: 準備資料以用於智慧型服務
 topic: Intelligent Services
 translation-type: tm+mt
-source-git-commit: 1d827d1637da05d3d2afc338f48911bb23039949
+source-git-commit: 03135f564bd72fb60e41b02557cb9ca9ec11e6e8
 
 ---
 
 
 # 準備資料以用於智慧型服務
 
-為了讓智慧型服務能夠從行銷事件資料中發掘見解，資料必須以標準結構進行語義豐富和維護。 智慧型服務運用Experience Data Model(XDM)架構來達成此目標。 具體而言，Intelligent Services中使用的所有資料集都必須符合 **Consumer Experience Events(CEE)** XDM架構。
+為了讓智慧型服務能夠從行銷事件資料中發掘見解，資料必須以標準結構進行語義豐富和維護。 智慧型服務運用Experience Data Model(XDM)架構來達成此目標。 具體而言，Intelligent Services中使用的所有資料集都必須符合 **Consumer ExperienceEvent(CEE)** XDM架構。
 
 本檔案提供將行銷事件資料從多個管道對應至此架構的一般指引，概述有關架構中重要欄位的資訊，以協助您判斷如何有效地將資料對應至其架構。
 
@@ -52,7 +52,7 @@ source-git-commit: 1d827d1637da05d3d2afc338f48911bb23039949
 
 ## 對應和收錄資料
 
-一旦確定時間系列資料是否可以映射到CEE架構，您就可以開始將資料引入智慧服務的過程。 請連絡Adobe諮詢服務，協助您將資料對應至架構，並將其內嵌至服務。
+一旦您確定行銷事件資料是否可映射至CEE架構後，就可以開始將資料帶入智慧型服務。 請連絡Adobe諮詢服務，協助您將資料對應至架構，並將其內嵌至服務。
 
 如果您有Adobe Experience Platform訂閱，而且想要自行對應及收錄資料，請遵循下節所述的步驟。
 
