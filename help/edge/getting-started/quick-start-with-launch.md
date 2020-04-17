@@ -4,7 +4,7 @@ seo-title: Launch讓您快速入門Adobe Experience Platform Web SDK
 description: 使用Experience Platform Web SDK擴充功能收集資料的快速入門手冊
 seo-description: 使用Experience Platform Web SDK擴充功能收集資料的快速入門手冊
 translation-type: tm+mt
-source-git-commit: 0cc6e233646134be073d20e2acd1702d345ff35f
+source-git-commit: a1161630c8edae107b784f32ee20af225f9f8c46
 
 ---
 
@@ -13,11 +13,11 @@ source-git-commit: 0cc6e233646134be073d20e2acd1702d345ff35f
 
 >[!IMPORTANT]
 >
->Adobe Experience Platform Web SDK目前為測試版，並非所有使用者都能使用。 說明檔案和功能可能會有所變更。
+>Adobe Experience Platform Web SDK目前為測試版，並非所有使用者都能使用。 文件和功能可能會有所變更。
 
 目前Adobe Experience Platform Web SDK僅支援使用XDM將資料傳送至Adobe Experience Platform。 您必須符合下列必要條件。
 
-- 啟用 [第一方網域(CNAME)](https://docs.adobe.com/content/help/en/core-services/interface/ec-cookies/cookies-first-party.html) 。 如果您已有Analytics的CNAME，則應使用該CNAME。
+- 啟用 [第一方網域(CNAME)](https://docs.adobe.com/content/help/zh-Hant/core-services/interface/ec-cookies/cookies-first-party.html) 。 如果您已有Analytics的CNAME，則應使用該CNAME。
 - 有權使用Adobe Experience Platform
 - 正在使用最新版的訪客ID服務
 
@@ -25,7 +25,7 @@ source-git-commit: 0cc6e233646134be073d20e2acd1702d345ff35f
 
 若要能夠傳送資料至Adobe Experience Platform，您必須建立XDM架構和使用該架構的資料集。
 
-- [使用下列混音](https://www.adobe.io/apis/experienceplatform/home/tutorials/alltutorials.html#!api-specification/markdown/narrative/tutorials/schema_editor_tutorial/schema_editor_tutorial.md) ，建立結構：
+- [使用下列混音](../../xdm/tutorials/create-schema-ui.md) ，建立結構：
    - ExperienceEvent實作詳細資訊
    - ExperienceEvent環境詳細資訊
    - ExperienceEvent Web詳細資訊
@@ -36,7 +36,7 @@ source-git-commit: 0cc6e233646134be073d20e2acd1702d345ff35f
 
 您必須有設定ID才能使用SDK。 設定ID可確保您的資料路由至正確位置。 您可以從顧問或透過Client Care取得設定ID。 他們需要下列資訊：
 
-- **組織ID:** 您可以使用此處的指示找到 [此](https://docs.adobe.com/content/help/en/core-services/interface/manage-users-and-products/organizations.html)
+- **組織ID:** 您可以使用此處的指示找到 [此](https://docs.adobe.com/content/help/zh-Hant/core-services/interface/manage-users-and-products/organizations.html)
 - **資料集ID:** 當您按一下資料集時，資料集UI中即可使用此功能
 - **架構ID:** 這可在架構建立畫面的URL中使用
 - **好記名稱：** 此為好記名稱，將用於此組態的未來UI
