@@ -1,9 +1,9 @@
 ---
-source-git-commit: d6149bdf74ef8cec10264c414bd21bfdf3491bef
+source-git-commit: 792d6962154a8cdca74b3c4e72d6f7a7663cbd6f
 translation-type: tm+mt
 
 ---
-# 貢獻文章
+# 提供內容
 
 歡迎說明文件編撰團隊以外的社群成員和 Adobe 員工貢獻相關內容。
 
@@ -11,7 +11,7 @@ translation-type: tm+mt
 
 此專案採行 [Adobe 開放原始碼行為準則](code-of-conduct.md)或 [.NET Foundation 行為準則](https://dotnetfoundation.org/code-of-conduct)。如需詳細資訊，請參閱[貢獻](contributing.md)文章。
 
-## 關於您對 Adobe 內容的貢獻
+## Adobe內容的貢獻方式
 
 請參閱 [Adobe Docs 貢獻者指南](https://docs.adobe.com/help/en/contributor/contributor-guide/introduction.html)。
 
@@ -33,26 +33,32 @@ translation-type: tm+mt
 If you submit a pull request with significant changes to documentation and code examples, you'll see a message in the pull request asking you to submit an online contribution license agreement (CLA). You must complete the online form before we can review your pull request.
 -->
 
-### 由 Adobe 員工提出重大變更
+### Adobe Employees的重大變更或新文章
 
-若您是 [!UICONTROL Adobe Experience Cloud] 解決方案產品團隊的技術撰寫人員、專案經理或開發人員，且您的工作正是貢獻或撰寫技術文章，請使用 `https://git.corp.adobe.com/AdobeDocs` 的私人存放庫。請參閱內 [部協作指南](https://docs.adobe.com/content/help/en/collaborative-doc-instructions/collaboration-guide/home.html)。
+若您是 Adobe Experience Cloud 解決方案產品團隊的技術撰寫人員、專案經理或開發人員，且您的工作正是貢獻或撰寫技術文章，請使用 `https://git.corp.adobe.com/AdobeDocs` 的私人存放庫。See the [Internal Collaboration Guide](https://docs.adobe.com/content/help/en/collaborative-doc-instructions/collaboration-guide/home.html) for more information.
 
 <!--Employees from other parts of the Adobe world should use the public repo for minor updates.-->
 
+## 聯絡Experience Platform檔案團隊
+
+如上所述，Adobe社群成員可提交指派給適當撰寫者的問題。 如果您是Adobe員工，可以提交問題或直接聯絡Experience Platform檔案團隊。 若要尋找特定平台區域的主要撰寫人員，請參閱 [Adobe Experience Platform檔案Wiki](https://wiki.corp.adobe.com/display/DMSArchitecture/Adobe+Experience+Platform+Documentation)。
+
 ## 工具和設定
+
+### GitHub UI
 
 社群貢獻者可使用 GitHub UI 進行基本編輯或建立存放庫複本，提交重要貢獻。
 
 如需詳細資訊，請參閱 [Adobe Docs 貢獻者指南](https://docs.adobe.com/help/en/contributor/contributor-guide/introduction.html)。
 
-## 如何使用 Markdown 設定主題格式
+### Markdown
 
 此存放庫中的所有文章皆使用 GitHub 精選的 Markdown 語言撰寫而成。若不熟悉 Markdown，請參閱：
 
 * [Markdown 基本介紹](https://help.github.com/articles/getting-started-with-writing-and-formatting-on-github/)
 * [列印版 Markdown 速查表](https://guides.github.com/pdfs/markdown-cheatsheet-online.pdf)
 
-## 標籤
+### 標籤
 
 在公開存放庫中，系統會為提取請求指派自動化標籤，協助我們管理提取請求工作流程，同時協助您瞭解提取請求的最新狀況：
 
