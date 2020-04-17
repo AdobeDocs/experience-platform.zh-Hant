@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 資料集使用指南
 topic: datasets
 translation-type: tm+mt
-source-git-commit: 5aad9fa71051a58fe1c4678553f47077d81d23fc
+source-git-commit: 7d3f64db787aebe46179c0e08ad01878b0ad2877
 
 ---
 
@@ -30,7 +30,7 @@ source-git-commit: 5aad9fa71051a58fe1c4678553f47077d81d23fc
 
 ![](../images/datasets/user-guide/browse_datasets.png)
 
-按一下資料集的名稱以存取其「資 *料集」活動畫面* ，並查看您選取之資料集的詳細資訊。 該活動頁籤包括圖形，該圖形可視化正在消耗的消息速率以及成功和失敗批的清單。
+按一下資料集的名稱以存取其「資 *料集」活動畫面* ，並查看您選取之資料集的詳細資訊。 活動頁籤包括圖形，該圖形可視化正在消耗的消息速率以及成功和失敗批的清單。
 
 ![](../images/datasets/user-guide/dataset_activity_1.png)
 ![](../images/datasets/user-guide/dataset_activity_2.png)
@@ -50,7 +50,7 @@ source-git-commit: 5aad9fa71051a58fe1c4678553f47077d81d23fc
 * [查詢服務概述](../../query-service/home.md)
 * [JupyterLab使用指南](../../data-science-workspace/jupyterlab/overview.md)
 
-## 建立資料集
+## 建立資料集 {#create}
 
 若要建立新資料集，請先按一下「資料集」控 **制面板中的** 「建立 *資料集* 」。
 
