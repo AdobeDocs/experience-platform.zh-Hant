@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 配方和筆記本移轉指南
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 105317c0b9a7cf74d55e3436a49e1dc6eeb31b32
+source-git-commit: bb6fe494933606d428d7bdf20ee38b7ac51c23ea
 
 ---
 
@@ -427,11 +427,11 @@ PySpark 3(Spark 2.4)是在載入中 `sc = spark.sparkContext` 定義的。
 
 ![載入1](./images/migration/pyspark-migration/2.4-load.png)
 
-**在PySpark 2.3中載入體驗可以平台資料——已過時**
+**在PySpark 2.3中載入Experience Cloud平台資料——已過時**
 
 ![載入2](./images/migration/pyspark-migration/2.3-load-alt.png)
 
-**在PySpark 2.4中載入體驗可以平台化資料**
+**在PySpark 2.4中載入Experience Cloud平台資料**
 
 有了PySpark 3(Spark 2.4)，您 `org_id` 就不 `dataset_id` 需要再定義Spark 2。 此外， `df = spark.read.format` 已取代為自訂功能，讓閱 [`%dataset`](#magic) 讀和寫入資料集更輕鬆。
 
