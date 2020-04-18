@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 使用Jupyter筆記型電腦建立配方
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 9f3fc3ec3ce560534b057185e3fef2cc2bc1234d
+source-git-commit: 10f157e0c9f8ab6e487b7dc83416b9e3b2f324c4
 
 ---
 
@@ -38,9 +38,10 @@ source-git-commit: 9f3fc3ec3ce560534b057185e3fef2cc2bc1234d
 
 Recipe Builder筆記型電腦可讓您在筆記型電腦內執行訓練和計分。 這可讓您在針對訓練和計分資料執行 `train()` 實驗 `score()` 時，靈活地變更其和方法。 一旦您對訓練和計分的輸出感到滿意，就可以使用筆記型電腦建立要用於Data Science Workspace的配方功能，並內建在Recipe Builder筆記型電腦中。
 
->[!NOTE] Recipe Builder筆記型電腦支援使用所有檔案格式，但目前「建立方式」功能僅支援Python。
+>[!NOTE]
+>Recipe Builder筆記型電腦支援使用所有檔案格式，但目前「建立方式」功能僅支援Python。
 
-![](../images/jupyterlab/create-recipe/notebook_launcher.png)
+![](../images/jupyterlab/create-recipe/recipe-builder.png)
 
 當您從啟動器按一下Recipe Builder筆記型電腦時，筆記型電腦就會在標籤中開啟。 筆記本中使用的模板是Python Retail Sales Forecasting Recipe，也可以在此公共儲存庫 [中找到](https://github.com/adobe/experience-platform-dsw-reference/tree/master/recipes/python/retail/)
 
@@ -50,7 +51,6 @@ Recipe Builder筆記型電腦可讓您在筆記型電腦內執行訓練和計分
 
 ## 編輯配方檔案
 
-<!-- Databricks update to recipe needed -->
 若要編輯配方檔案，請導覽至Jupyter中與檔案路徑對應的儲存格。 例如，如果您想要變更，請 `evaluator.py`尋找 `%%writefile demo-recipe/evaluator.py`。
 
 開始對儲存格進行必要的變更，完成後，只要執行儲存格即可。 命 `%%writefile filename.py` 令將單元格的內容寫入 `filename.py`。 您必須手動為每個具有更改的檔案運行單元格。
@@ -69,9 +69,6 @@ Recipe Builder筆記型電腦可讓您在筆記型電腦內執行訓練和計分
 - [求值器檔案](#evaluator-file)
 - [資料保護程式檔案](#data-saver-file)
 
-
-
-
 ### 需求檔案
 
 需求檔案可用來宣告您想要在配方中使用的其他程式庫。 如果存在相依性，可以指定版本號。 若要尋找其他資料庫，請造訪https://anaconda.org。 已在使用的主要程式庫清單包括：
@@ -84,9 +81,8 @@ numpy
 data_access_sdk_python
 ```
 
->[!NOTE] 您新增的程式庫或特定版本可能與上述程式庫不相容。
-
-
+>[!NOTE]
+>您新增的程式庫或特定版本可能與上述程式庫不相容。
 
 ### 配置檔案
 
@@ -101,7 +97,7 @@ data_access_sdk_python
 
 若要尋找資料集和結構ID，請前往左側導覽列（資料夾圖示下）筆記型電腦中的資料標籤。
 
-![](../images/jupyterlab/create-recipe/data_tab.png)
+![](../images/jupyterlab/create-recipe/datasets.png)
 
 在 [Adobe Experience Platform的「架構」和「資料集](https://platform.adobe.com/) 」標籤下 **[，可找到相](https://platform.adobe.com/schema)**同的資訊**[](https://platform.adobe.com/dataset/overview)** 。
 
@@ -111,8 +107,6 @@ data_access_sdk_python
 - `ML_FRAMEWORK_IMS_TOKEN`
 - `ML_FRAMEWORK_IMS_ML_TOKEN`
 - `ML_FRAMEWORK_IMS_TENANT_ID`
-
-
 
 ## 訓練資料載入器
 
@@ -129,7 +123,8 @@ data_access_sdk_python
 - [平台SDK](#platform-sdk)
 - [外部來源](#external-sources)
 
->[!NOTE] 在Recipe Builder筆記型電腦中，資料會透過資料載入器 `platform_sdk` 載入。
+>[!NOTE]
+>在Recipe Builder筆記型電腦中，資料會透過資料載入器 `platform_sdk` 載入。
 
 ### 平台SDK
 
@@ -155,11 +150,10 @@ df = pd.read_json(data)
 
 現在，您的資料已位於dataframe物件中，可在下一節中加以分 [析和處理](#data-preparation-and-feature-engineering)。
 
-
-
 ### 從資料存取SDK（已過時）
 
->[!CAUTION]  不 `data_access_sdk_python` 再建議使用，請參 [閱將資料存取程式碼轉換為平台SDK](../authoring/platform-sdk.md) ，以取得使用資料載入器 `platform_sdk` 的指南。
+>[!CAUTION]
+> `data_access_sdk_python` 不再建議使用，請參閱「將 [資料存取程式碼轉換為平台SDK](../authoring/platform-sdk.md) 」，以取得有關使用資料載入器 `platform_sdk` 的指南。
 
 使用者可使用資料存取SDK載入資料。 您可加入下列行，將程式庫匯入頁面頂端：
 
@@ -176,7 +170,8 @@ df = prodreader.load(data_set_id=configProperties['trainingDataSetId'],
                      ims_org=configProperties['ML_FRAMEWORK_IMS_TENANT_ID'])
 ```
 
->[!NOTE] 如「設定檔 [案」區段中所述](#configuration-files)，當您從Experience Platform存取資料時，會為您設定下列設定參數：
+>[!NOTE]
+>如「設定檔 [案」區段中所述](#configuration-files)，當您從Experience Platform存取資料時，會為您設定下列設定參數：
 > - `ML_FRAMEWORK_IMS_USER_CLIENT_ID`
 > - `ML_FRAMEWORK_IMS_TOKEN`
 > - `ML_FRAMEWORK_IMS_ML_TOKEN`
@@ -297,17 +292,16 @@ df.dropna(0, inplace=True)
 
 計分 `load()` 資料載入器中的函式應以計分資料集作為輸出。
 
-
-
 ### 管線檔案
 
-該檔 `pipeline.py` 案包含訓練和計分的邏輯。 我們將在接下來的兩節中逐一介紹這兩個部分。
+該檔 `pipeline.py` 案包含訓練和計分的邏輯。
 
 ### 訓練
 
 訓練的目的是使用訓練資料集中的功能和標籤來建立模型。
 
->[!NOTE]  功 _能_ ，是指機器學習模型用來預測標籤的輸入變 _數_。
+>[!NOTE]\
+>_功能_ ，是指機器學習模型用來預測標籤的輸入變 _數_。
 
 功能 `train()` 應包括訓練模型和返回訓練模型。 scikit-learn使用指南檔案中提供 [了一些不同型號的示例](https://scikit-learn.org/stable/user_guide.html)。
 
@@ -346,8 +340,6 @@ def train(configProperties, data):
 ```
 
 請注意，視您的應用程式而定，函式中會有引數 `GradientBoostingRegressor()` 。 `xTrainingDataset` 應包含您用於訓練的功能，但應 `yTrainingDataset` 包含您的標籤。
-
-
 
 ### 計分
 
@@ -456,18 +448,21 @@ def save(configProperties, prediction):
     print(prediction)
 ```
 
-
 ## 訓練與計分
 
 當您變更筆記型電腦並想要訓練配方時，可以按一下列上方的相關按鈕，在儲存格中建立訓練執行。 按一下該按鈕後，培訓指令碼中的命令和輸出日誌將顯示在筆記本中(單元格 `evaluator.py` 下)。 Conda首先安裝所有相依項，然後開始培訓。
 
-請注意，您必須至少執行一次培訓，才能執行計分。 按一下「執 **行計分** 」按鈕，將對培訓期間產生的已訓練模型進行分數。 計分指令碼將出現在下方 `datasaver.py`。
+請注意，您必須至少執行一次培訓，才能執行計分。 按一下「執 **行計分** 」按鈕，將對培訓期間產生的已訓練模型評分。 計分指令碼將出現在下方 `datasaver.py`。
 
 為了進行除錯，如果您想查看隱藏的輸出，請將 `debug` 其新增至輸出儲存格的結尾，然後重新執行。
 
 ## 建立方式
 
-編輯完配方並滿意培訓／計分輸出後，可以按「建立配方」從筆記本建立配 **方**。 按下按鈕後，系統會提示您輸入配方名稱。 此名稱將代表在「平台」上建立的實際方式。
+編輯完配方並滿意培訓／計分輸出後，您可以按右上方導覽中的「建立配方 **** 」，從筆記本建立配方。
+
+![](../images/jupyterlab/create-recipe/create-recipe.png)
+
+按下按鈕後，系統會提示您輸入配方名稱。 此名稱代表在Platform上建立的實際方式。
 
 ![](../images/jupyterlab/create-recipe/enter_recipe_name.png)
 
