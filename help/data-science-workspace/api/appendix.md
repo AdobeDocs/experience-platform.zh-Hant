@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 附錄
 topic: Developer guide
 translation-type: tm+mt
-source-git-commit: 0081cbd414e983d767b4a6f3aceed85d72a34816
+source-git-commit: 2940f69d193ff8a4ec6ad4a58813b5426201ef45
 
 ---
 
@@ -67,7 +67,7 @@ Python引擎能夠在CPU或GPU之間選擇，以用於訓練或計分，並在 [
 
 ## PySpark和Spark資源配置 {#resource-config}
 
-PySpark和Spark Engine能夠修改計算資源，以用於培訓和計分，下表介紹了這些資源：
+Spark Engine能夠修改計算資源，以用於訓練和計分。 下表對這些資源進行了說明：
 
 | 資源 | 說明 | 類型 |
 | -------- | ----------- | ---- |
