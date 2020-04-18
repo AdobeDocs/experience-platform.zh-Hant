@@ -4,7 +4,7 @@ solution: Experience Platform
 title: JupyterLab使用指南
 topic: Overview
 translation-type: tm+mt
-source-git-commit: 700c927680d9b9ba4dabc2d2e068e4da3c801cce
+source-git-commit: d42a5de7094d305249b05454ce4aba79776a46e1
 
 ---
 
@@ -40,7 +40,7 @@ Experience Platform的JupyterLab整合隨附架構變更、設計考量、自訂
 * **查詢服務：** 使用SQL訪問和探索資料集，在處理大量資料時提供較低的資料存取開銷。
 * **Sensei ML框架：** 模型開發具備訓練和評分資料的能力，而且只要按一下，就能建立配方。
 
->[!NOTE] JupyterLab上的某些平台服務整合僅限於特定內核。 有關詳細資訊，請參 [閱](#kernels) 「內核」部分。
+>[!NOTE] JupyterLab上的某些平台服務整合僅限於特定內核。 有關詳細資訊，請參 [閱](#kernels) 「內核」一節。
 
 ## 主要功能與常用作業
 
@@ -56,7 +56,7 @@ Experience Platform的JupyterLab整合隨附架構變更、設計考量、自訂
 
 ### 存取JupyterLab
 
-在 <a href="https://platform.adobe.com" target="_blank">Adobe Experience Platform</a>，按一下左側導覽欄中的 **Models** ，然後按一下頂端導覽中的 **Notebooks** ，以存取JupyterLab。 請給JupyterLab留出一些時間以完全初始化。
+在 [Adobe Experience Platform](https://platform.adobe.com)，從左側導覽欄選 **取「筆記型電腦** 」。 請給JupyterLab留出一些時間以完全初始化。
 
 ![](../images/jupyterlab/user-guide/access_jupyterlab.png)
 
@@ -85,7 +85,7 @@ JupyterLab介麵包含功能表列、可折疊的左側邊欄，以及包含檔�
 * **資料總管：** 瀏覽、存取和探索資料集和結構
 * **運行內核和終端：** 具有終止能力的活動內核和終端會話清單
 * **命令：** 有用命令的清單
-* **儲存格偵測器：** 一種單元格編輯器，它提供對工具和元資料的訪問，這些工具和元資料對於設定用於演示的筆記本有用
+* **儲存格偵測器：** 一種單元格編輯器，它提供對工具和元資料的訪問，這些工具和元資料對於設定用於呈現目的的筆記型電腦非常有用
 * **頁籤：** 開啟的標籤清單
 
 按一下標籤以顯示其功能，或按一下展開的標籤以收合左側邊欄，如下所示：
@@ -116,11 +116,9 @@ JupyterLab的主要工作區域可讓您將檔案和其他活動排列成標籤�
 
 ### 內核 {#kernels}
 
-<!-- will need to edit this sparkmagic %% for data bricks not supported -->
-
 筆記型電腦內核是用於處理筆記型電腦單元的語言專用計算引擎。 除了Python外，JupyterLab還提供R、PySpark和Spark的其他語言支援。 開啟筆記本文檔時，將啟動關聯內核。 當執行筆記本單元時，內核執行計算並產生可能消耗大量CPU和記憶體資源的結果。 請注意，在內核關閉之前，不會釋放已分配的記憶體。
 
->[!NOTE] Spark和Spark功能由 <a href="https://github.com/jupyter-incubator/sparkmagic" target="_blank">Sparkmagic支援</a>。
+>[!IMPORTANT] JupyterLab Launcher從Spark 2.3更新至Spark 2.4。Spark 2.4筆記型電腦不再支援Spark和PySpark內核。
 
 某些特性和功能限於下表所述的特定內核：
 
@@ -128,8 +126,9 @@ JupyterLab的主要工作區域可讓您將檔案和其他活動排列成標籤�
 | :----: | :--------------------------: | :-------------------- |
 | **Python** | 是 | <ul><li>Sensei ML框架</li><li>目錄服務</li><li>查詢服務</li></ul> |
 | **R** | 是 | <ul><li>Sensei ML框架</li><li>目錄服務</li></ul> |
-| **PySpark** | 無 | <ul><li>Sensei ML框架</li><li>目錄服務</li></ul> |
-| **Spark** | 無 | <ul><li>Sensei ML框架</li><li>目錄服務</li></ul> |
+| **PySpark —— 已過時** | 無 | <ul><li>Sensei ML框架</li><li>目錄服務</li></ul> |
+| **Spark —— 已過時** | 無 | <ul><li>Sensei ML框架</li><li>目錄服務</li></ul> |
+| **斯卡拉** | 無 | <ul><li>Sensei ML框架</li><li>目錄服務</li></ul> |
 
 ### 內核會話
 
@@ -143,9 +142,23 @@ JupyterLab上的每個活動筆記本或活動都使用內核會話。 從左側
 
 ### PySpark/Spark執行資源 {#execution-resource}
 
-<!-- need to update with databricks -->
+>[!IMPORTANT]
+>隨著Spark 2.3轉換至Spark 2.4,Spark和PySpark內核都已過時。
+>
+>全新PySpark 3(Spark 2.4)筆記型電腦使用Python3內核。 請參閱將 [Pyspark 3(Spark 2.3)轉換為PySpark 3(Spark 2.4)的指南](../recipe-notebook-migration.md) ，以取得更新現有筆記型電腦的深入教學課程。
+>
+>新的Spark筆記型電腦應使用Scala內核。 如需更新現有筆記型電腦的深入教學課程，請參閱 [Spark 2.3轉換為Scala(Spark 2.4)](../recipe-notebook-migration.md) 的指南。
 
 PySpark和Spark內核可讓您在PySpark或Spark筆記型電腦中使用configure命令(`%%configure`)配置Spark叢集資源，並提供組態清單。 理想情況下，這些組態是在Spark應用程式初始化之前定義的。 在Spark應用程式啟動時修改組態，需要在命令(`%%configure -f`)之後加上強制標幟，以重新啟動應用程式，以便套用變更，如下所示：
+
+>[!CAUTION]
+>有了PySpark 3(Spark 2.4)和Scala(Spark 2.4)筆記型電腦， `%%` Sparkmagic不再受支援。 無法再使用下列操作：
+* `%%help`
+* `%%info`
+* `%%cleanup`
+* `%%delete`
+* `%%configure`
+* `%%local`
 
 ```python
 %%configure -f 
@@ -160,8 +173,6 @@ PySpark和Spark內核可讓您在PySpark或Spark筆記型電腦中使用configur
     }
 }
 ```
-
->[!TIP] 使用help命令(`%%help`)查看所有可用命令。
 
 下表列出了所有可配置屬性：
 
@@ -183,8 +194,6 @@ PySpark和Spark內核可讓您在PySpark或Spark筆記型電腦中使用configur
 | 會議 | Spark設定屬性 | key=val的映射 |
 
 ### 啟動程式
-
-<!-- Databricks update -->
 
 [//]: # (Talk about the different Notebooks, introduce that certain starter notebooks are limited to particular kernels)
 
@@ -242,7 +251,7 @@ PySpark和Spark內核可讓您在PySpark或Spark筆記型電腦中使用configur
         <td >no</td>
     </tr>
     <tr>
-        <th  ><strong>PySpark</strong></th>
+        <th  ><strong>PySpark 3（Spark 2.3 —— 已過時）</strong></th>
         <td >是</td>
         <td >是</td>
         <td >no</td>
@@ -254,7 +263,31 @@ PySpark和Spark內核可讓您在PySpark或Spark筆記型電腦中使用configur
         <td >no</td>
     </tr>
     <tr>
-        <th ><strong>Spark</strong></th>
+        <th ><strong>Spark（Spark 2.3 —— 已過時）</strong></th>
+        <td >是</td>
+        <td >是</td>
+        <td >no</td>
+        <td >no</td>
+        <td >no</td>
+        <td >no</td>
+        <td >no</td>
+        <td >no</td>
+        <td >是</td>
+    </tr>
+      <tr>
+        <th  ><strong>PySpark 3(Spark 2.4)</strong></th>
+        <td >no</td>
+        <td >是</td>
+        <td >no</td>
+        <td >no</td>
+        <td >no</td>
+        <td >no</td>
+        <td >是</td>
+        <td >是</td>
+        <td >no</td>
+    </tr>
+    <tr>
+        <th ><strong>斯卡拉</strong></th>
         <td >是</td>
         <td >是</td>
         <td >no</td>
@@ -341,12 +374,21 @@ df <- dataset_reader$limit(100L)$offset(10L)$read()
 
 * `{DATASET_ID}`:要訪問的資料集的唯一標識
 
-### 從PySpark/Spark中的資料集讀取
+### 從PySpark/Spark/Scala的資料集讀取
 
-在開啟作用中的PySpark或Spark筆記型電腦時，從左側邊欄展開「資料總管 **」標籤，然後按兩下「資料集****** 」以檢視可用資料集清單。 按一下右鍵要訪問的資料集清單，然後按一下「 **Explore Data in Notebook**（在筆記本中瀏覽資料）」。 產生下列程式碼儲存格：
+>[!IMPORTANT]
+>隨著Spark 2.3轉換至Spark 2.4,Spark和PySpark內核都已過時。
+>
+>全新PySpark 3(Spark 2.4)筆記型電腦使用Python3內核。 如果您想要轉換現有的 [Spark 2.3程式碼，請參閱有關將](../recipe-notebook-migration.md) Pyspark 3(Spark 2.3)轉換為PySpark 3(Spark 2.4)的指南。 新筆記型電腦應遵循下 [面的PySpark 3(Spark 2.4)](#pyspark2.4) 範例。
+>
+>新的Spark筆記型電腦應使用Scala內核。 如果您想要轉換 [現有的Spark 2.3程式碼，請參閱將Spark 2.3轉換為Scala(Spark 2.4)](../recipe-notebook-migration.md) 的指南。 新筆記型電腦應遵循以 [下Scala(Spark 2.4)示例](#spark2.4) 。
+
+在開啟作用中的PySpark或Spark筆記型電腦時，從左側邊欄展開「資料總管 **」標籤，然後按兩下「資料集****** 」以檢視可用資料集清單。 按一下右鍵要訪問的資料集清單，然後按一下「 **Explore Data in Notebook(在筆記本中瀏覽資料**)」。 產生下列程式碼儲存格：
+
+#### PySpark（Spark 2.3 —— 已過時）
 
 ```python
-# PySpark
+# PySpark 3 (Spark 2.3 - deprecated)
 
 pd0 = spark.read.format("com.adobe.platform.dataset").\
     option('orgId', "YOUR_IMS_ORG_ID@AdobeOrg").\
@@ -355,8 +397,22 @@ pd0.describe()
 pd0.show(10, False)
 ```
 
+#### PySpark(Spark 2.4) {#pyspark2.4}
+
+隨著Spark 2.4的推出，自訂功能 [`%dataset`](#magic) 也隨之提供。
+
+```python
+# PySpark 3 (Spark 2.4)
+
+%dataset read --datasetId {DATASET_ID} --dataFrame pd0
+pd0.describe()
+pd0.show(10, False)
+```
+
+#### Spark（Spark 2.3 —— 已過時）
+
 ```scala
-// Spark
+// Spark (Spark 2.3 - deprecated)
 
 import com.adobe.platform.dataset.DataSetOptions
 val dataFrame = spark.read.
@@ -366,6 +422,54 @@ val dataFrame = spark.read.
 dataFrame.printSchema()
 dataFrame.show()
 ```
+
+#### Scala(Spark 2.4) {#spark2.4}
+
+```scala
+// Scala (Spark 2.4)
+
+// initialize the session
+import org.apache.spark.sql.{Dataset, SparkSession}
+val spark = SparkSession.builder().master("local").getOrCreate()
+
+val dataFrame = spark.read.format("com.adobe.platform.query")
+    .option("user-token", sys.env("PYDASDK_IMS_USER_TOKEN"))
+    .option("ims-org", sys.env("IMS_ORG_ID"))
+    .option("api-key", sys.env("PYDASDK_IMS_CLIENT_ID"))
+    .option("service-token", sys.env("PYDASDK_IMS_SERVICE_TOKEN"))
+    .option("mode", "batch")
+    .option("dataset-id", "{DATASET_ID}")
+    .load()
+dataFrame.printSchema()
+dataFrame.show()
+```
+
+>[!TIP]
+>在Scala中，可以使 `sys.env()` 用在中聲明和返回值 `option`。
+
+### 在PySpark 3(Spark 2.4)筆記型電腦中使用%dataset魔術 {#magic}
+
+隨著Spark 2.4的推出， `%dataset` 自訂的魔術功能已推出，可用於全新的PySpark 3(Spark 2.4)筆記型電腦（Python 3內核）。
+
+**使用狀況**
+
+`%dataset {action} --datasetId {id} --dataFrame {df}`
+
+**說明**
+
+自訂資料科學工作區魔術指令，可從Python筆記型電腦（Python 3內核）讀取或寫入資料集。
+
+* **{action}**:要在資料集上執行的動作類型。 有兩個動作是「讀取」或「寫入」。
+* **—datasetId {id}**:用於提供要讀取或寫入的資料集的ID。 這是必要的引數。
+* **—dataFrame {df}**:熊貓資料框。 這是必要的引數。
+   * 當動作為&quot;read&quot;時，{df}是資料集讀取作業結果可用的變數。
+   * 當動作為&quot;write&quot;時，此資料幀{df}將寫入資料集。
+* **—mode（可選）**:允許的參數為「批次」和「互動」。 依預設，模式會設為「互動」。 建議在讀取大量資料時使用「批次」模式。
+
+**範例**
+
+* **閱讀範例**: `%dataset read --datasetId 5e68141134492718af974841 --dataFrame pd0`
+* **寫示例**: `%dataset write --datasetId 5e68141134492718af974842 --dataFrame pd0`
 
 ### Python中使用查詢服務的查詢資料
 
@@ -453,12 +557,21 @@ df <- dataset_reader$
 
 ### 在PySpark/Spark中篩選ExperienceEvent資料
 
+>[!IMPORTANT]
+>隨著Spark 2.3轉換至Spark 2.4,Spark和PySpark內核都已過時。
+>
+>全新PySpark 3(Spark 2.4)筆記型電腦使用Python3內核。 如需有關轉換現有程式碼的詳細資訊，請參閱 [Pyspark 3(Spark 2.3)至PySpark 3(Spark 2.4)的指南](../recipe-notebook-migration.md) 。 如果您要建立新的PySpark筆記型電腦，請使用 [PySpark 3(spark 2.4)範例來篩選ExperienceEvent資料](#pyspark3-spark2.4) 。
+>
+>新的Spark筆記型電腦應使用Scala內核。 如需轉換現 [有程式碼的詳細資訊，請參閱將Spark 2.3轉換為Scala(Spark 2.4)](../recipe-notebook-migration.md) 指南。 如果您要建立新的Spark筆記型電腦，請使用 [Scala(spark 2.4)](#scala-spark) ，以篩選ExperienceEvent資料。
+
 在PySpark或Spark筆記型電腦中存取和篩選ExperienceEvent資料集時，您必須提供資料集識別(`{DATASET_ID}`)、組織的IMS識別，以及定義特定時間範圍的篩選規則。 篩選時間範圍是使用函式來定義的， `spark.sql()`其中函式參數是SQL查詢字串。
 
 以下儲存格會將ExperienceEvent資料集篩選為2019年1月1日至2019年12月31日止期間僅存在的資料。
 
+#### PySpark 3（Spark 2.3 —— 已過時）
+
 ```python
-# PySpark
+# PySpark 3 (Spark 2.3 - deprecated)
 
 pd = spark.read.format("com.adobe.platform.dataset").\
     option("orgId", "YOUR_IMS_ORG_ID@AdobeOrg").\
@@ -473,8 +586,30 @@ timepd = spark.sql("""
 """)
 ```
 
+#### PySpark 3(Spark 2.4) {#pyspark3-spark2.4}
+
+```python
+# PySpark 3 (Spark 2.4)
+
+from pyspark.sql import SparkSession
+spark = SparkSession.builder.getOrCreate()
+
+%dataset read --datasetId {DATASET_ID} --dataFrame df
+
+df.createOrReplaceTempView("event")
+timepd = spark.sql("""
+    SELECT *
+    FROM event
+    WHERE timestamp > CAST('2019-01-01 00:00:00.0' AS TIMESTAMP)
+    AND timestamp < CAST('2019-12-31 23:59:59.9' AS TIMESTAMP)
+""")
+timepd.show()
+```
+
+#### Spark（Spark 2.3 —— 已過時）
+
 ```scala
-// Spark
+// Spark (Spark 2.3 - deprecated)
 
 import com.adobe.platform.dataset.DataSetOptions
 val dataFrame = spark.read.
@@ -491,6 +626,53 @@ val timedf = spark.sql("""
 """)
 ```
 
+#### Scala(Spark 2.4) {#scala-spark}
+
+```scala
+// Spark (Spark 2.4)
+
+// Turn off extra logging
+import org.apache.log4j.{Level, Logger}
+Logger.getLogger("org").setLevel(Level.OFF)
+Logger.getLogger("com").setLevel(Level.OFF)
+
+import org.apache.spark.sql.{Dataset, SparkSession}
+val spark = org.apache.spark.sql.SparkSession.builder().appName("Notebook")
+  .master("local")
+  .getOrCreate()
+
+// Stage Exploratory
+val dataSetId: String = "{DATASET_ID}"
+val orgId: String = sys.env("IMS_ORG_ID")
+val clientId: String = sys.env("PYDASDK_IMS_CLIENT_ID")
+val userToken: String = sys.env("PYDASDK_IMS_USER_TOKEN")
+val serviceToken: String = sys.env("PYDASDK_IMS_SERVICE_TOKEN")
+val mode: String = "batch"
+
+var df = spark.read.format("com.adobe.platform.query")
+  .option("user-token", userToken)
+  .option("ims-org", orgId)
+  .option("api-key", clientId)
+  .option("mode", mode)
+  .option("dataset-id", dataSetId)
+  .option("service-token", serviceToken)
+  .load()
+df.createOrReplaceTempView("event")
+val timedf = spark.sql("""
+    SELECT * 
+    FROM event 
+    WHERE timestamp > CAST('2019-01-01 00:00:00.0' AS TIMESTAMP)
+    AND timestamp < CAST('2019-12-31 23:59:59.9' AS TIMESTAMP)
+""")
+timedf.show()
+```
+
+>[!TIP]
+>在Scala中，可以使 `sys.env()` 用在中聲明和返回值 `option`。 如此，若您知道變數只會在單次使用，就不需要定義變數。 以下示例從 `val userToken` 上述示例中取得，並聲明它為 `option` 替代項：
+> 
+```scala
+> .option("user-token", sys.env("PYDASDK_IMS_USER_TOKEN"))
+> ```
 
 ## 支援的程式庫 {#supported-libraries}
 
