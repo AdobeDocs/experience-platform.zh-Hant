@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 配方和筆記本移轉指南
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: bb6fe494933606d428d7bdf20ee38b7ac51c23ea
+source-git-commit: 61cf05b989bfbae4e26978fa915347f350d7364c
 
 ---
 
@@ -292,6 +292,10 @@ JupyterLab筆記型電腦的最新變更要求您將現有的PySpark和Spark 2.3
 - [PySpark 2.3到2.4遷移指南](#pyspark-notebook-migration)
 - [Spark 2.3到Spark 2.4(Scala)移轉指南](#spark-notebook-migration)
 
+以下視頻旨在進一步幫助瞭解JupyterLab筆記型電腦所需的更改：
+
+>[!VIDEO](https://video.tv.adobe.com/v/33444?quality=12&learn=on)
+
 ## PySpark 2.3到2.4筆記型電腦移轉指南 {#pyspark-notebook-migration}
 
 隨著PySpark 2.4推出至JupyterLab筆記型電腦，配備PySpark 2.4的新款Python筆記型電腦現在使用Python 3內核，而非PySpark 3內核。 這表示PySpark 2.4不支援在PySpark 2.3上執行的現有程式碼。
@@ -515,7 +519,7 @@ sample_df = df.sample(fration)
 <table>
   <th>筆記本</th>
   <th>PySpark 3（Spark 2.3 —— 已過時）</th>
-  <th>PySpark 3(Spark 2.4)</th>
+  <th>PySpark 3 (Spark 2.4)</th>
   <tr>
   <th>內核</th>
   <td align="center">PySpark 3</td>
@@ -525,16 +529,23 @@ sample_df = df.sample(fration)
   <th>程式碼</th>
   <td>
   <pre class="JSON language-JSON hljs">
-userToken = spark.sparkContext.getConf()。get("spark.sparkContext.appMasterEnv.USER_TOKEN")serviceToken = spark.sparkContext.getConf()。get("spark.harn.appMasterEnv.SERVICE_TOKEN")服務ApiKeySparkKey = spark.getConf()。get("spark.harn.appMasterEnv.SERVICE_API_KEY")
+userToken = spark.sparkContext.getConf().get("spark.yarn.appMasterEnv.USER_TOKEN")
+serviceToken = spark.sparkContext.getConf().get("spark.yarn.appMasterEnv.SERVICE_TOKEN")
+serviceApiKey = spark.sparkContext.getConf().get("spark.yarn.appMasterEnv.SERVICE_API_KEY")
 
 dataset_options = sc。_jvm.com.adobe.platform.dataset.DataSetOptions
 
-pd0.write.format(&quot;com.adobe.platform.dataset&quot;)。option(dataset_options.orgId(), &quot;310C6D375BA5248F0A494212@AdobeOrg&quot;)。option(dataset_options.userToken(), userToken)。option(dataset_options.serviceToken(), serviceToken)。option(datesetion.serviceApiKey(), serviceApiAseAAptionAlyS.s.s.s.s.se.s.s.s.s.s.se.s.s.s.s.s.s.se.s.s.saveKey)。s.save)。s.s.s.s.s.s.s.s.s.s.save(&quot;5e68141134492718af974844&quot;)
+pd0.write.format(&quot;com.adobe.platform.dataset&quot;)
+.option(dataset_options.orgId(), &quot;310C6D375BA5248F0A494212@AdobeOrg&quot;)
+.option(dataset_options.userToken(), userToken)
+.option(dataset_options.serviceToken(), serviceToken)
+.option(dataset_options.serviceApiKey(), serviceApiKey)
+.save(&quot;5e68141134492718af974844&quot;)
 </pre>
 </td>
   <td>
   <pre class="JSON language-JSON hljs">
-%dataset write —datasetId 5e68141134492718af974844 —dataFrame pd0
+%dataset write --datasetId 5e68141134492718af974844 --dataFrame pd0
 
 pd0.describe()pd0.show(10, False)
 </pre>
