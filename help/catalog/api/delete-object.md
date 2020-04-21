@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 刪除對象
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 85b497d87fcfb54f390302036ce24c98c6dba6ff
+source-git-commit: 6c17351b04fedefd4b57b9530f1d957da8183a68
 
 ---
 
@@ -21,9 +21,11 @@ source-git-commit: 85b497d87fcfb54f390302036ce24c98c6dba6ff
 DELETE /{OBJECT_TYPE}/{OBJECT_ID}
 ```
 
+>[!IMPORTANT] 端 `DELETE /batches/{ID}` 點已過時。 若要刪除批次，您應使用「批次擷取 [API」](../../ingestion/batch-ingestion/api-overview.md#delete-a-batch)。
+
 | 參數 | 說明 |
 | --- | --- |
-| `{OBJECT_TYPE}` | 要刪除的目錄對象類型。 有效對象包括： <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_TYPE}` | 要刪除的目錄對象類型。 有效對象包括： <ul><li>`accounts`</li><li>`connections`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
 | `{OBJECT_ID}` | 您要更新的特定物件的識別碼。 |
 
 **請求**
