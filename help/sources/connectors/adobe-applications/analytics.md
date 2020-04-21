@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Analytics資料連接器
 topic: overview
 translation-type: tm+mt
-source-git-commit: a1161630c8edae107b784f32ee20af225f9f8c46
+source-git-commit: 75c446aed75100bd2b5b4a3d365c090cb01dcc69
 
 ---
 
@@ -39,7 +39,7 @@ XDM是公開記載的規格，可為應用程式提供通用結構和定義，�
 
 當建立來源連線以使用平台使用者介面將Analytics資料帶入Experience Platform時，資料欄位會在數分鐘內自動對應並收錄至即時客戶個人檔案。 如需使用平台UI建立Adobe Analytics來源連線的指示，請參閱 [Analytics資料連接器教學課程](../../tutorials/ui/create/adobe-applications/analytics.md)。
 
-如需Analytics與Experience Platform之間發生之欄位對應的詳細資訊，請造訪 [Adobe Analytics欄位對應指南](./analytics-mapping.md) 。
+如需Analytics與Experience Platform之間發生之欄位對應的詳細資訊，請造訪 [Adobe Analytics欄位對應指南](./mapping/analytics.md) 。
 
 ## 平台上的Analytics資料預期延遲為何？
 
