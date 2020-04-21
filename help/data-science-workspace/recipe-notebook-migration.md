@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 配方和筆記本移轉指南
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 61cf05b989bfbae4e26978fa915347f350d7364c
+source-git-commit: 5191eb9ba48cc6dd4e2d42bd2a50539be7ea163e
 
 ---
 
@@ -66,11 +66,9 @@ source-git-commit: 61cf05b989bfbae4e26978fa915347f350d7364c
   </td>
   <td>
 <pre class="JSON language-JSON hljs">
-import com.adobe.platform.query.QSOption
-
-var df = sparkSession.read.format(&quot;com.adobe.platform.query&quot;)。option(QSOption.userToken&quot;, {userToken})。option(QSOption.serviceToken, {serviceToken})。option(QSOption.imsOrg, {orgId})。option(QSOPTION.APIOPTION.APIOPTION.API.API.API.APIKey, {APIKey})。OPTION(QSOption.mode, &quot;interactive&quot;)。option(QSOption.datasetId, {dataSetId})。load()
-</pre>
-</td>
+匯入com.adobe.platform.query.QSOptionvar df = sparkSession.read.format("com.adobe.platform.query")。option(QSOption.userToken", {userToken})。option(QSOption.serviceToken, {serviceToken})。option(QSO.im.org,Id})。option(QSOption.apiKey, {apiKey})。option(QSOption.mode, "interactive")。option(QSOption.datasetId, {dataSetId})。load()
+  </pre>
+  </td>
   </tr>
 </table>
 
@@ -94,11 +92,9 @@ var df = sparkSession.read.format(&quot;com.adobe.platform.query&quot;)。option
   </td>
   <td>
 <pre class="JSON language-JSON hljs">
-import com.adobe.platform.query.QSOption
-
-df.write.format(&quot;com.adobe.platform.query&quot;)。option(QSOption.userToken&quot;, {userToken})。option(QSOption.serviceToken, {serviceToken})。option(QSOption.imsOrg, {orgId})。option(QSOption.apiKey, apiKey})。option(QSOption.datasetId, {dataSetId})。save()
+匯入com.adobe.platform.query.QSOptiondf.write.format("com.adobe.platform.query")。option(QSOption.userToken", {userToken})。option(QSOption.serviceToken, {serviceToken})。option(QSOption.imsOrg, {org})option(QSOption.apiKey, {apiKey})。option(QSOption.datasetId, {dataSetId})。save()
 </pre>
-</td>
+  </td>
   </tr>
 </table>
 
@@ -186,18 +182,14 @@ Spark配方不再使用二進位工件，而是需要建立Docker影像。 如�
   <tr>
   <td>
   <pre class="JSON language-JSON hljs">
-dataset_options = get_dataset_options(spark.sparkContext)
-
-pd = spark.read.format(&quot;com.adobe.platform.dataset&quot;)。option(dataset_options.serviceToken(), service_token)。option(dataset_options.user_token)。option(dataset_options.orgId(), org_id)。option(dataset_options.serviceApiKey(), api_dateset)。led()。l.laset(at.d(aset.d)。d(aset(at)。id)。
+dataset_options = get_dataset_options(spark.sparkContext)pd = spark.read.format("com.adobe.platform.dataset")。option(dataset_options.serviceToken(), service_token)。option(dataset_options.user_token(), user_token)。opin(dation(), orgId)。option)。option)。og_option)。option)。og_option.og_on.option.option)。og_option.option.og_option.og_option.opid)。option(aption.option.on.option.orgApiKey(), api_key)。load(dataset_id)
 </pre>
-</td>
+  </td>
   <td>
 <pre class="JSON language-JSON hljs">
-qs_option = spark_context。_jvm.com.adobe.platform.query.QSOption
-
-pd = sparkSession.read.format(&quot;com.adobe.platform.query&quot;)。option(qs_option.userToken, {userToken})。option(qs_option.serviceToken, {serviceToken})。option(qs_option.imsOrg, {orgId})。option(qs_option.apiKey, {apiKey})。optionqs_option.mode, &quot;interactive&quot;)。option(qs_option.datasetId, {dataSetId})。load()
-</pre>
-</td>
+qs_option = spark_context。_jvm.com.adobe.platform.query.QSOptionpd = sparkSession.read.format("com.adobe.platform.query")。option(qs_option.userToken, {userToken})。option(qs_option.serviceToken, {serviceToken})。option(qs_option.imsOrg, {org})。option（qs_qs選項）。apiKey, {apiKey})。option(qs_option.mode, "interactive")。option(qs_option.datasetId, {dataSetId})。load()
+  </pre>
+  </td>
   </tr>
 </table>
 
@@ -221,11 +213,9 @@ df.write.format("com.adobe.platform.dataset")。option(DataSetOptions.orgId, org
   </td>
   <td>
 <pre class="JSON language-JSON hljs">
-qs_option = spark_context。_jvm.com.adobe.platform.query.QSOption
-
-comed_df.write.format(&quot;com.adobe.platform.query&quot;)。option(qs_option.userToken, {userToken})。option(qs_option.serviceToken, {serviceToken})。option(qs_option.imsOrg, {orgId})。option(qs_option.apiKey})。option.datasetId, {dataSetId})。save()
+qs_option = spark_context。_jvm.com.adobe.platform.query.QSOptiongred_df.write.format("com.adobe.platform.query")。option(qs_option.userToken, {userToken})。option(qs_option.serviceToken, {serviceToken})。option(qs_option.imsOrg, {org})。option（qs_option_api.api.api金鑰， {apiKey}）。option(qs_option.datasetId, {dataSetId})。save()
 </pre>
-</td>
+  </td>
   </tr>
 </table>
 
@@ -401,11 +391,9 @@ PySpark 3(Spark 2.4)筆記型電腦使用Python 3內核，而非PySpark 3（Spar
   <th>程式碼</th>
   <td>
   <pre class="JSON language-JSON hljs">
-dataset_options = sc。_jvm.com.adobe.platform.dataset.DataSetOptions
-
-pd0 = spark.read.format(&quot;com.adobe.platform.dataset&quot;)。option(dataset_options.orgId(), &quot;310C6D375BA5248F0A494212@AdobeOrg&quot;)。load(&quot;5e68141344492718af974844&quot;)
+dataset_options = sc。_jvm.com.adobe.platform.datasetOptionspd0 = spark.read.format("com.adobe.platform.dataset")。option(dataset_options.orgId(), "310C6D375BA5248F0A494212@AdobeOrg")。load（"5e68141344492718af974844英吋）
 </pre>
-</td>
+  </td>
   <td>
   <pre class="JSON language-JSON hljs">
 %dataset read —datasetId 5e68141134492718af974844 —dataFrame pd0
@@ -519,7 +507,7 @@ sample_df = df.sample(fration)
 <table>
   <th>筆記本</th>
   <th>PySpark 3（Spark 2.3 —— 已過時）</th>
-  <th>PySpark 3 (Spark 2.4)</th>
+  <th>PySpark 3(Spark 2.4)</th>
   <tr>
   <th>內核</th>
   <td align="center">PySpark 3</td>
@@ -529,27 +517,14 @@ sample_df = df.sample(fration)
   <th>程式碼</th>
   <td>
   <pre class="JSON language-JSON hljs">
-userToken = spark.sparkContext.getConf().get("spark.yarn.appMasterEnv.USER_TOKEN")
-serviceToken = spark.sparkContext.getConf().get("spark.yarn.appMasterEnv.SERVICE_TOKEN")
-serviceApiKey = spark.sparkContext.getConf().get("spark.yarn.appMasterEnv.SERVICE_API_KEY")
-
-dataset_options = sc。_jvm.com.adobe.platform.dataset.DataSetOptions
-
-pd0.write.format(&quot;com.adobe.platform.dataset&quot;)
-.option(dataset_options.orgId(), &quot;310C6D375BA5248F0A494212@AdobeOrg&quot;)
-.option(dataset_options.userToken(), userToken)
-.option(dataset_options.serviceToken(), serviceToken)
-.option(dataset_options.serviceApiKey(), serviceApiKey)
-.save(&quot;5e68141134492718af974844&quot;)
-</pre>
-</td>
+userToken = spark.sparkContext.getConf()。get("spark.sparkContext.appMasterEnv.USER_TOKEN")serviceToken = spark.sparkContext.getConf()。get("spark.harn.appMasterEnv.SERVICE_TOKEN")服務ApiKeySparkKey = spark.getConf()。get("spark.harn.appMasterEnv.SERVICE_API_KEY")dataset_options = sc._jvm.com.adobe.platform.datasetOptionspd0.write.format("com.adobe.platform.dataset")。option(dataset_options.orgId(), "310C6D375BA5248F0A494212@AdobeOrg")。option(dataset_options.userToken(), userToken)。option(dataset_options.serviceToken(), serviceSecopen)。option.option.option.serviceServiceS.option.open.option.option.opeption.option.option.option.open.opic.opise.optionapiKey(), serviceApiKey)。save("5e68141134492718af974844")
+  </pre>
+  </td>
   <td>
   <pre class="JSON language-JSON hljs">
-%dataset write --datasetId 5e68141134492718af974844 --dataFrame pd0
-
-pd0.describe()pd0.show(10, False)
+%dataset write —datasetId 5e68141134492718af974844 -dataFrame pd0pd0.describe()pd0.show(10, False)
 </pre>
-</td>
+  </td>
   </tr>
 </table>
 
@@ -721,20 +696,14 @@ Scala內核不再支援sparkmagic `%%sql` 。 必須轉換現有的Sparkmagic程
   <th>代碼</th>
   <td>
   <pre class="JSON language-JSON hljs">
-
-import com.adobe.platform.dataset.DataSetOptions
-
-var df1 = spark.read.format(&quot;com.adobe.platform.dataset&quot;)。option(DataSetOptions.orgId, &quot;310C6D375BA5248F0A494212@AdobeOrg&quot;)。option(DataSetOptions.batchId, &quot;dbe154d3-197a-4e6c-80f8-9b7025eea2b9&quot;)。load(&quot;5e6814113492718af974844&quot;)
+import com.adobe.platform.dataset.DataSetOptionsvar df1 = spark.read.format("com.adobe.platform.dataset")。option(DataSetOptions.orgId, "310C6D375BA5248F0A494212@AdobeOrg")。option(DataSetOptions.batchId, "dbe154d3-197a-4e6c-e6c80f8-9b7025eea2b9")。load("5e68141134492718af974844")
 </pre>
-</td>
+  </td>
   <td>
   <pre class="JSON language-JSON hljs">
-
-導入org.apache.spark.sql。{Dataset, SparkSession}val spark = SparkSession.builder()。master(&quot;local&quot;)。getOrCreate()
-
-val df1 = spark.read.format(&quot;com.adobe.platform.query&quot;)。option(&quot;user-token&quot;, sys.env(&quot;PYDASDK_IMS_USER_TOKEN&quot;))。option(&quot;ims-org&quot;, sys.env(&quot;IMS_ORG_ID&quot;)))。option(&quot;api-key&quot;, sys.pys.env(&quot;dasdk_IMS_CLIENT_ID&quot;)。option(&quot;service-token&quot;, sys.env(&quot;PYDASDK_IMS_SERVICE_TOKEN&quot;))。option(&quot;mode&quot;, &quot;interactive&quot;)。option(&quot;dataset-id&quot;, &quot;5e6814111344492718af974844&quot;)。load()
+導入org.apache.spark.sql。{dataset, SparkSession}spark = SparkSession.builder()。master("local")。getOrCreate()val df1 = spark.read.format("com.adobe.platform.query")。option("user-token", sys.env("PYDASDK_IMS_USER_TOKEN")))。open)。open.open.oper.open.open.oper.open.oper.open.oper.open.open.open.org", sys.env("IMS_ORG_ID"))。option("api-key", sys.env("PYDASDK_IMS_CLIENT_ID"))。option("service-token", sys.env("PYDASDK_IMS_SERVICE_TOKEN"))))。option(")。option(","interactive")。option("dataset-id", "5e6814113492718af974844")。load()
 </pre>
-</td>
+  </td>
   </tr>
 </table>
 
@@ -783,22 +752,14 @@ Scala(Spark 2.4)筆記型電腦使用Scala內核，當設定時，此內核需�
   <th>代碼</th>
   <td>
   <pre class="JSON language-JSON hljs">
-
-import com.adobe.platform.dataset.DataSetOptions
-
-var userToken = spark.sparkContext.getConf.getOption(&quot;spark.spark.sparkContext.getConf.getOption.spark.appMasterEnv.USER_TOKEN&quot;)。getvar serviceApi金鑰= spark.sparkContext.getConf.getOption(&quot;spark.hayr.appMasterEnv.SERVICE_API_KEY&quot;)。get
-
-df1.write.format(&quot;com.adobe.platform.dataset&quot;)。option(DataSetOptions.orgId, &quot;310C6D375BA5248F0A494212@AdobeOrg&quot;)。option(DataSetOptions.userToken, userToken)。option(DataSetOptions.serviceToken, serviceToken)。option(DataSetOptions.serviceApiApiApionkey, serviceApiKey)。save(&quot;5e68141134492718af974844&quot;)
-</pre>
-</td>
+import com.adobe.platform.dataset.DataSetOptionsvar userToken = spark.sparkContext.getConf.getOption("spark.harn.appMasterEnv.USER_TOKEN")。getvar serviceToken = spark.sparkContext.getConf.getOption("spark.harar.appMasterEnv.SERVICE_TOKEN")。getvar serviceApiKey = spark.sparkContext.getConf.getOption("spark.harn.appMasterEnv.SERVICE_API_KEY")。getdf1.write.format("com.adobe.platform.dataset")。options.orgId,"310C6D375BA5248F0A494212@AdobeOrg")。option(DataSetOptions.userToken, userToken)。option(DataSetOptions.serviceToken, serviceToken)。option(DataSetOptions.serviceApiKey, serviceApiKey)。save("5e6814134492718af974844")
+  </pre>
+  </td>
   <td>
   <pre class="JSON language-JSON hljs">
-
-導入org.apache.spark.sql。{Dataset, SparkSession}val spark = SparkSession.builder()。master(&quot;local&quot;)。getOrCreate()
-
-df1.write.format(&quot;com.adobe.platform.query&quot;)。option(&quot;user-token&quot;, sys.env(&quot;PYDASDK_IMS_USER_TOKEN&quot;))。option(&quot;service-token&quot;, sys.env(&quot;PYDASDK_IMS_SERVICE_TOKEN&quot;)))。option(&quot;)。option(&quot;ims-org&quot;, sys.env&quot;IMS_ORG_ID&quot;)。option(&quot;api-key&quot;, sys.env(&quot;PYDASDK_IMS_CLIENT_ID&quot;)。option(&quot;mode&quot;, &quot;interactive&quot;)。option(&quot;dataset-id&quot;, &quot;5e6814492718af974844&quot;)。save()
+導入org.apache.spark.sql。{Dataset, SparkSession}val spark = SparkSession.builder()。master("local")。getOrCreate()df1.write.format("com.adobe.platform.query")。option("user-token", sys.env("PYDASDK_IMS_USER_TOKEN"))))))。opoption",sys.env("PYDASDK_IMS_SERVICE_TOKEN"))。option("ims-org", sys.env("IMS_ORG_ID"))。option("api-key", sys.env("PYDASDK_IMS_CLIENT_ID"))))。option")。option(")。option", "模式", ", " interactive)。option("dataset-id", "5e6814113492718af974844")。save()
 </pre>
-</td>
+  </td>
   </tr>
 </table>
 
