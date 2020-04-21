@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Adobe Experience Platform批次擷取開發人員指南
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 79466c78fd78c0f99f198b11a9117c946736f47a
+source-git-commit: 6c17351b04fedefd4b57b9530f1d957da8183a68
 
 ---
 
@@ -54,7 +54,7 @@ Experience Platform中的所有資源都隔離至特定的虛擬沙盒。 所有
 
 在擷取資料時，請務必瞭解Experience Data Model(XDM)架構的運作方式。 有關XDM欄位類型如何映射到不同格式的詳細資訊，請閱讀 [Schema Registry Developer Guide](../../xdm/api/getting-started.md)。
 
-在擷取資料時有一些彈性——如果某個類型不符合目標架構中的內容，資料將會轉換為表示的目標類型。  如果無法，則批次將失敗，並帶有 `TypeCompatibilityException`。
+在擷取資料時有一些彈性——如果某個類型不符合目標架構中的內容，資料將會轉換為表示的目標類型。 如果無法，則批次將失敗，並帶有 `TypeCompatibilityException`。
 
 例如，JSON或CSV都沒有日期或日期時間類型。 因此，這些值是使用 [ISO 8061格式字串](https://www.iso.org/iso-8601-date-and-time-format.html) (&quot;2018-07-10T15:05:59.000-08:00&quot;)或以毫秒(153126395&quot;)格式化的Unix時間來表示9000)，並在擷取時轉換為目標XDM類型。
 
@@ -382,7 +382,7 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches \
 ```
 
 | 參數 | 說明 |
-| --------- | -----------  |
+| --------- | ----------- |
 | `{DATASET_ID}` | 參考資料集的ID。 |
 
 **回應**
@@ -790,7 +790,7 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}
 200 OK
 ```
 
-## 刪除批
+## 刪除批 {#delete-a-batch}
 
 對要刪除的批的ID執行以下具有查詢參數的 `action=REVERT` POST請求，可以刪除批。 批標籤為「非活動」，使其符合垃圾回收的條件。 批將非同步收集，此時將標籤為「已刪除」。
 
