@@ -3,7 +3,7 @@ product: experience-platform
 audience: user
 user-guide-title: Adobe Experience Platform資料治理說明
 translation-type: tm+mt
-source-git-commit: 608f3f61764e6b578107f4ea7991bca12621330a
+source-git-commit: 30ea8b4eeeb5f11bfca65f2931902aae63e8f08e
 
 ---
 
@@ -13,7 +13,8 @@ source-git-commit: 608f3f61764e6b578107f4ea7991bca12621330a
 * [資料治理概觀](home.md)
 * 資料使用標籤 {#labels}
    * [資料使用標籤概觀](labels/overview.md)
-   * [資料使用標籤使用指南](labels/user-guide.md)
+   * [在UI中管理資料使用標籤](labels/user-guide.md)
+   * [在API中管理資料使用標籤](labels/api.md)
    * [支援的資料使用標籤](labels/reference.md)
 * 資料使用原則 {#policies}
    * [資料使用政策概觀](policies/overview.md)
