@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Audience Manager連接器
 topic: overview
 translation-type: tm+mt
-source-git-commit: a1161630c8edae107b784f32ee20af225f9f8c46
+source-git-commit: 75c446aed75100bd2b5b4a3d365c090cb01dcc69
 
 ---
 
@@ -43,7 +43,7 @@ XDM是公開記載的規格，可提供標準化的架構，讓平台組織客�
 
 ## 如何將欄位從Adobe Audience Manager對應至XDM?
 
-如需詳細資訊，請參 [閱Audience Manager對應欄位的檔案][audience-manager-mapping-fields] 。
+如需詳細資訊，請參 [閱Audience Manager對應欄位的檔案](./mapping/audience-manager.md) 。
 
 ## 平台上的資料管理
 
