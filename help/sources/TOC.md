@@ -3,7 +3,7 @@ product: experience-platform
 audience: user
 user-guide-title: Adobe Experience Platform來源連接器說明
 translation-type: tm+mt
-source-git-commit: 5b036baba864b2b0f0c98d017d40f4d3c60ab80e
+source-git-commit: fcab7fbb955e85006eeebe5fb45b2a62188adaa7
 
 ---
 
@@ -17,7 +17,7 @@ source-git-commit: 5b036baba864b2b0f0c98d017d40f4d3c60ab80e
       - [Audience Manager連接器](connectors/adobe-applications/audience-manager.md)
       - [客戶屬性連接器](connectors/adobe-applications/customer-attributes.md)
    - 廣告 {#advertising}
-      - [Google AdWords連接器](connectors/advertising/ads.md)
+      - [Google Ads連接器](connectors/advertising/ads.md)
    - 雲端儲存空間 {#cloud-storage}
       - [Azure Data Lake Storage Gen2連接器](connectors/cloud-storage/adls-gen2.md)
       - [Azure Blob和Amazon S3連接器](connectors/cloud-storage/blob-s3.md)
@@ -58,7 +58,6 @@ source-git-commit: 5b036baba864b2b0f0c98d017d40f4d3c60ab80e
          - [Google雲端儲存空間連接器](tutorials/api/create/cloud-storage/google.md)
          - [SFTP連接器](tutorials/api/create/cloud-storage/sftp.md)
       - CRM {#crm}
-         - [Google AdWords連接器](tutorials/api/create/crm/adwords.md)
          - [HubSpot連接器](tutorials/api/create/crm/hubspot.md)
          - [Microsoft Dynamics連接器](tutorials/api/create/crm/ms-dynamics.md)
          - [Salesforce連接器](tutorials/api/create/crm/salesforce.md)
