@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 資料使用標籤概觀
 topic: labels
 translation-type: tm+mt
-source-git-commit: 4d817a439cbc277c3df03e08554d5003b9f68a76
+source-git-commit: 4411018aa1d531b53bbe2431df71829fa07fee75
 
 ---
 
@@ -25,4 +25,4 @@ source-git-commit: 4d817a439cbc277c3df03e08554d5003b9f68a76
 
 ## 後續步驟
 
-現在您已經引進資料使用標籤，您可以繼續閱讀使 [用指南](user-guide.md) ，以瞭解如何在Experience Platform UI中管理標籤。
+現在您已經引進資料使用標籤，您可以繼續閱讀使 [用指南](user-guide.md) ，以瞭解如何在Experience Platform UI中管理標籤。 如需如何使用API管理標籤的步驟，請參閱目錄服務開發人員指 [南中的適當章節](../../catalog/api/labels.md)。
