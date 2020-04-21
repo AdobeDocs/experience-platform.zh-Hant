@@ -3,7 +3,7 @@ product: experience-platform
 audience: user
 user-guide-title: Adobe Experience Platform來源連接器說明
 translation-type: tm+mt
-source-git-commit: fcab7fbb955e85006eeebe5fb45b2a62188adaa7
+source-git-commit: 85af933c14b3768790100a649de05a5e6bdb8560
 
 ---
 
@@ -105,8 +105,8 @@ source-git-commit: fcab7fbb955e85006eeebe5fb45b2a62188adaa7
 - UI教學課程 {#ui-tutorials}
    - 建立源連接器 {#create}
       - Adobe應用程式 {#adobe-applications}
-         - [Adobe Audience Manager連接器](tutorials/ui/create/adobe-applications/analytics.md)
-         - [Adobe Analytics連接器](tutorials/ui/create/adobe-applications/audience-manager.md)
+         - [Adobe Analytics連接器](tutorials/ui/create/adobe-applications/analytics.md)
+         - [Adobe Audience Manager連接器](tutorials/ui/create/adobe-applications/audience-manager.md)
          - [客戶屬性連接器](tutorials/ui/create/adobe-applications/customer-attributes.md)
       - 廣告 {#create}
          - [Google Ads連接器](tutorials/ui/create/advertising/ads.md)
