@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 配方和筆記本移轉指南
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 5191eb9ba48cc6dd4e2d42bd2a50539be7ea163e
+source-git-commit: 057001b0b4488f578bdd07387a66c647a91798c8
 
 ---
 
@@ -53,24 +53,32 @@ source-git-commit: 5191eb9ba48cc6dd4e2d42bd2a50539be7ea163e
 
 本節概述讀取資料集時所需的變更，並使用Adobe [提供的helper.scala](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/scala/src/main/scala/com/adobe/platform/ml/helper/Helper.scala) 範例。
 
-有了Spark配方的更新，您需要新增和變更數個值。 首先， `DataSetOptions` 不再使用。 Replace `DataSetOptions` with `QSOption`. 此外，還需 `option` 要新的參數。 兩者 `QSOption.mode` 都 `QSOption.datasetId` 是必要的。 最後， `orgId` 需 `serviceApiKey` 要將更改為 `imsOrg` 和 `apiKey`。 請參閱下表以取得讀取資料集的比較：
+**舊式的資料集閱讀方式**
 
-<table>
-  <th>舊式的資料集閱讀方式</th>
-  <th>讀取資料集的新方式</th>
-  <tr>
-  <td>
-  <pre class="JSON language-JSON hljs">
-  var df = sparkSession.read.format("com.adobe.platform.dataset")。option(DataSetOptions.orgId, orgId)。option(DataSetOptions.serviceToken, serviceToken)。option(DataSetOptions.userToken, userToken)。option(DataSSSSetion)(DaSSSSSSemoption)。option)(S.option)serviceApiKey, apiKey)。load(dataSetId)
-</pre>
-  </td>
-  <td>
-<pre class="JSON language-JSON hljs">
-匯入com.adobe.platform.query.QSOptionvar df = sparkSession.read.format("com.adobe.platform.query")。option(QSOption.userToken", {userToken})。option(QSOption.serviceToken, {serviceToken})。option(QSO.im.org,Id})。option(QSOption.apiKey, {apiKey})。option(QSOption.mode, "interactive")。option(QSOption.datasetId, {dataSetId})。load()
-  </pre>
-  </td>
-  </tr>
-</table>
+```scala
+ var df = sparkSession.read.format("com.adobe.platform.dataset")
+    .option(DataSetOptions.orgId, orgId)
+    .option(DataSetOptions.serviceToken, serviceToken)
+    .option(DataSetOptions.userToken, userToken)
+    .option(DataSetOptions.serviceApiKey, apiKey)
+    .load(dataSetId)
+```
+
+**讀取資料集的新方式**
+
+有了Spark配方的更新，您需要新增和變更數個值。 首先， `DataSetOptions` 不再使用。 Replace `DataSetOptions` with `QSOption`. 此外，還需 `option` 要新的參數。 兩者 `QSOption.mode` 都 `QSOption.datasetId` 是必要的。 最後， `orgId` 需 `serviceApiKey` 要將更改為 `imsOrg` 和 `apiKey`。 請檢視下列範例，以取得讀取資料集的比較：
+
+```scala
+import com.adobe.platform.query.QSOption
+var df = sparkSession.read.format("com.adobe.platform.query")
+  .option(QSOption.userToken", {userToken})
+  .option(QSOption.serviceToken, {serviceToken})
+  .option(QSOption.imsOrg, {orgId})
+  .option(QSOption.apiKey, {apiKey})
+  .option(QSOption.mode, "interactive")
+  .option(QSOption.datasetId, {dataSetId})
+  .load()
+```
 
 >[!TIP]
 > 如果查詢運行時間超過10分鐘，則交互模式超時。 如果您要接收超過幾GB的資料，建議您切換至「批次」模式。 批次模式啟動需要較長時間，但可處理較大的資料集。
@@ -79,24 +87,31 @@ source-git-commit: 5191eb9ba48cc6dd4e2d42bd2a50539be7ea163e
 
 本節概述使用Adobe提供的 [](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/scala/src/main/scala/com/adobe/platform/ml/ScoringDataSaver.scala) ScoringDataSaver.scala範例來編寫資料集所需的變更。
 
-有了Spark配方的更新，您需要新增和變更數個值。 首先， `DataSetOptions` 不再使用。 Replace `DataSetOptions` with `QSOption`. 此外，還需 `option` 要新的參數。 `QSOption.datasetId` 中，並取代載入中的 `{dataSetId}` 需 `.save()`求。 最後， `orgId` 需 `serviceApiKey` 要將更改為 `imsOrg` 和 `apiKey`。 請參閱下表以取得有關寫入資料集的比較：
+**以舊方式編寫資料集**
 
-<table>
-  <th>以舊方式編寫資料集</th>
-  <th>編寫資料集的新方式</th>
-  <tr>
-  <td>
-  <pre class="JSON language-JSON hljs">
-  df.write.format("com.adobe.platform.dataset")。option(DataSetOptions.orgId, orgId)。option(DataSetOptions.serviceToken, serviceToken)。option(DataSetOptions.userToken, userToken)。option（DataSetOptions.serviceApiApion金鑰， apiKey）。save(scoringResultsDataSetId)
-</pre>
-  </td>
-  <td>
-<pre class="JSON language-JSON hljs">
-匯入com.adobe.platform.query.QSOptiondf.write.format("com.adobe.platform.query")。option(QSOption.userToken", {userToken})。option(QSOption.serviceToken, {serviceToken})。option(QSOption.imsOrg, {org})option(QSOption.apiKey, {apiKey})。option(QSOption.datasetId, {dataSetId})。save()
-</pre>
-  </td>
-  </tr>
-</table>
+```scala
+df.write.format("com.adobe.platform.dataset")
+    .option(DataSetOptions.orgId, orgId)
+    .option(DataSetOptions.serviceToken, serviceToken)
+    .option(DataSetOptions.userToken, userToken)
+    .option(DataSetOptions.serviceApiKey, apiKey)
+    .save(scoringResultsDataSetId)
+```
+
+**編寫資料集的新方式**
+
+有了Spark配方的更新，您需要新增和變更數個值。 首先， `DataSetOptions` 不再使用。 Replace `DataSetOptions` with `QSOption`. 此外，還需 `option` 要新的參數。 `QSOption.datasetId` 中，並取代載入中的 `{dataSetId}` 需 `.save()`求。 最後， `orgId` 需 `serviceApiKey` 要將更改為 `imsOrg` 和 `apiKey`。 請參閱下列範例，以取得編寫資料集的比較：
+
+```scala
+import com.adobe.platform.query.QSOption
+df.write.format("com.adobe.platform.query")
+  .option(QSOption.userToken", {userToken})
+  .option(QSOption.serviceToken, {serviceToken})
+  .option(QSOption.imsOrg, {orgId})
+  .option(QSOption.apiKey, {apiKey})
+  .option(QSOption.datasetId, {dataSetId})
+  .save()
+```
 
 ### 封裝以Docker為基礎的來源檔案(Spark) {#package-docker-spark}
 
@@ -174,24 +189,33 @@ Spark配方不再使用二進位工件，而是需要建立Docker影像。 如�
 
 本節說明使用Adobe提供的 [](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/pyspark/pysparkretailapp/helper.py) helper.py範例讀取資料集所需的變更。
 
-有了Spark配方的更新，您需要新增和變更數個值。 首先， `DataSetOptions` 不再使用。 Replace `DataSetOptions` with `qs_option`. 此外，還需 `option` 要新的參數。 兩者 `qs_option.mode` 都 `qs_option.datasetId` 是必要的。 最後， `orgId` 需 `serviceApiKey` 要將更改為 `imsOrg` 和 `apiKey`。 請參閱下表以取得讀取資料集的比較：
+**舊式的資料集閱讀方式**
 
-<table>
-  <th>舊式的資料集閱讀方式</th>
-  <th>讀取資料集的新方式</th>
-  <tr>
-  <td>
-  <pre class="JSON language-JSON hljs">
-dataset_options = get_dataset_options(spark.sparkContext)pd = spark.read.format("com.adobe.platform.dataset")。option(dataset_options.serviceToken(), service_token)。option(dataset_options.user_token(), user_token)。opin(dation(), orgId)。option)。option)。og_option)。option)。og_option.og_on.option.option)。og_option.option.og_option.og_option.opid)。option(aption.option.on.option.orgApiKey(), api_key)。load(dataset_id)
-</pre>
-  </td>
-  <td>
-<pre class="JSON language-JSON hljs">
-qs_option = spark_context。_jvm.com.adobe.platform.query.QSOptionpd = sparkSession.read.format("com.adobe.platform.query")。option(qs_option.userToken, {userToken})。option(qs_option.serviceToken, {serviceToken})。option(qs_option.imsOrg, {org})。option（qs_qs選項）。apiKey, {apiKey})。option(qs_option.mode, "interactive")。option(qs_option.datasetId, {dataSetId})。load()
-  </pre>
-  </td>
-  </tr>
-</table>
+```python
+dataset_options = get_dataset_options(spark.sparkContext)
+pd = spark.read.format("com.adobe.platform.dataset") 
+  .option(dataset_options.serviceToken(), service_token) 
+  .option(dataset_options.userToken(), user_token) 
+  .option(dataset_options.orgId(), org_id) 
+  .option(dataset_options.serviceApiKey(), api_key)
+  .load(dataset_id)
+```
+
+**讀取資料集的新方式**
+
+有了Spark配方的更新，您需要新增和變更數個值。 首先， `DataSetOptions` 不再使用。 Replace `DataSetOptions` with `qs_option`. 此外，還需 `option` 要新的參數。 兩者 `qs_option.mode` 都 `qs_option.datasetId` 是必要的。 最後， `orgId` 需 `serviceApiKey` 要將更改為 `imsOrg` 和 `apiKey`。 請檢視下列範例，以取得讀取資料集的比較：
+
+```python
+qs_option = spark_context._jvm.com.adobe.platform.query.QSOption
+pd = sparkSession.read.format("com.adobe.platform.query") 
+  .option(qs_option.userToken, {userToken}) 
+  .option(qs_option.serviceToken, {serviceToken}) 
+  .option(qs_option.imsOrg, {orgId}) 
+  .option(qs_option.apiKey, {apiKey}) 
+  .option(qs_option.mode, "interactive") 
+  .option(qs_option.datasetId, {dataSetId}) 
+  .load()
+```
 
 >[!TIP]
 > 如果查詢運行時間超過10分鐘，則交互模式超時。 如果您要接收超過幾GB的資料，建議您切換至「批次」模式。 批次模式啟動需要較長時間，但可處理較大的資料集。
@@ -200,24 +224,31 @@ qs_option = spark_context。_jvm.com.adobe.platform.query.QSOptionpd = sparkSess
 
 本節概述使用Adobe提供的 [](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/pyspark/pysparkretailapp/data_saver.py) data_saver.py範例來編寫資料集所需的變更。
 
-有了PySpark配方的更新，您需要新增和變更數個值。 首先， `DataSetOptions` 不再使用。 Replace `DataSetOptions` with `qs_option`. 此外，還需 `option` 要新的參數。  `qs_option.datasetId` 中的值，並取代載入中 `{dataSetId}` 的需 `.save()` 求。 最後， `orgId` 需 `serviceApiKey` 要將更改為 `imsOrg` 和 `apiKey`。 請參閱下表以取得讀取資料集的比較：
+**以舊方式編寫資料集**
 
-<table>
-  <th>以舊方式編寫資料集</th>
-  <th>編寫資料集的新方式</th>
-  <tr>
-  <td>
-  <pre class="JSON language-JSON hljs">
-df.write.format("com.adobe.platform.dataset")。option(DataSetOptions.orgId, orgId)。option(DataSetOptions.serviceToken, serviceToken)。option(DataSetOptions.userToken, userToken)。option（DataSetOptions.serviceApiApion金鑰， apiKey）。save(scoringResultsDataSetId)
-</pre>
-  </td>
-  <td>
-<pre class="JSON language-JSON hljs">
-qs_option = spark_context。_jvm.com.adobe.platform.query.QSOptiongred_df.write.format("com.adobe.platform.query")。option(qs_option.userToken, {userToken})。option(qs_option.serviceToken, {serviceToken})。option(qs_option.imsOrg, {org})。option（qs_option_api.api.api金鑰， {apiKey}）。option(qs_option.datasetId, {dataSetId})。save()
-</pre>
-  </td>
-  </tr>
-</table>
+```python
+df.write.format("com.adobe.platform.dataset")
+  .option(DataSetOptions.orgId, orgId)
+  .option(DataSetOptions.serviceToken, serviceToken)
+  .option(DataSetOptions.userToken, userToken)
+  .option(DataSetOptions.serviceApiKey, apiKey)
+  .save(scoringResultsDataSetId)
+```
+
+**編寫資料集的新方式**
+
+有了PySpark配方的更新，您需要新增和變更數個值。 首先， `DataSetOptions` 不再使用。 Replace `DataSetOptions` with `qs_option`. 此外，還需 `option` 要新的參數。  `qs_option.datasetId` 中的值，並取代載入中 `{dataSetId}` 的需 `.save()` 求。 最後， `orgId` 需 `serviceApiKey` 要將更改為 `imsOrg` 和 `apiKey`。 請檢視下列範例，以取得讀取資料集的比較：
+
+```python
+qs_option = spark_context._jvm.com.adobe.platform.query.QSOption
+scored_df.write.format("com.adobe.platform.query") 
+  .option(qs_option.userToken, {userToken}) 
+  .option(qs_option.serviceToken, {serviceToken}) 
+  .option(qs_option.imsOrg, {orgId}) 
+  .option(qs_option.apiKey, {apiKey}) 
+  .option(qs_option.datasetId, {dataSetId}) 
+  .save()
+```
 
 ### 封裝以Docker為基礎的來源檔案(PySpark) {#pyspark-package-docker}
 
@@ -376,31 +407,22 @@ PySpark 3(Spark 2.4)筆記型電腦使用Python 3內核，而非PySpark 3（Spar
 
 ## 在LocalContext中載入到資料幀
 
-隨著Spark 2.4的推出，自訂功能 [`%dataset`](#magic) 也隨之提供。 下表重點說明在PySpark(Spark 2.3)和PySpark(Spark 2.4)筆記型電腦中載入資料框架的主要差異：
+隨著Spark 2.4的推出，自訂功能 [`%dataset`](#magic) 也隨之提供。 以下範例重點說明在PySpark(Spark 2.3)和PySpark(Spark 2.4)筆記型電腦中載入資料框架的主要差異：
 
-<table>
-  <th>筆記本</th>
-  <th>PySpark 3（Spark 2.3 —— 已過時）</th>
-  <th>PySpark 3(Spark 2.4)</th>
-  <tr>
-  <th>內核</th>
-  <td align="center">PySpark 3</td>
-  <td align="center">Python 3</td>
-  </tr>
-  <tr>
-  <th>程式碼</th>
-  <td>
-  <pre class="JSON language-JSON hljs">
-dataset_options = sc。_jvm.com.adobe.platform.datasetOptionspd0 = spark.read.format("com.adobe.platform.dataset")。option(dataset_options.orgId(), "310C6D375BA5248F0A494212@AdobeOrg")。load（"5e68141344492718af974844英吋）
-</pre>
-  </td>
-  <td>
-  <pre class="JSON language-JSON hljs">
-%dataset read —datasetId 5e68141134492718af974844 —dataFrame pd0
-</pre>
-  </td>
-  </tr>
-</table>
+**使用PySpark 3（Spark 2.3 —— 已過時）- PySpark 3內核**
+
+```python
+dataset_options = sc._jvm.com.adobe.platform.dataset.DataSetOptions
+pd0 = spark.read.format("com.adobe.platform.dataset")
+  .option(dataset_options.orgId(), "310C6D375BA5248F0A494212@AdobeOrg")
+  .load("5e68141134492718af974844")
+```
+
+**使用PySpark 3(Spark 2.4)- Python 3內核**
+
+```python
+%dataset read --datasetId 5e68141134492718af974844 --dataFrame pd0
+```
 
 | 元素 | 說明 |
 | ------- | ----------- |
@@ -504,29 +526,30 @@ sample_df = df.sample(fration)
 
 隨著Spark 2.4的推出，自訂功能 [`%dataset`](#magic) 也隨之提供，讓撰寫資料集變得更簡潔。 若要寫入資料集，請使用下列Spark 2.4範例：
 
-<table>
-  <th>筆記本</th>
-  <th>PySpark 3（Spark 2.3 —— 已過時）</th>
-  <th>PySpark 3(Spark 2.4)</th>
-  <tr>
-  <th>內核</th>
-  <td align="center">PySpark 3</td>
-  <td align="center">Python 3</td>
-  </tr>
-  <tr>
-  <th>程式碼</th>
-  <td>
-  <pre class="JSON language-JSON hljs">
-userToken = spark.sparkContext.getConf()。get("spark.sparkContext.appMasterEnv.USER_TOKEN")serviceToken = spark.sparkContext.getConf()。get("spark.harn.appMasterEnv.SERVICE_TOKEN")服務ApiKeySparkKey = spark.getConf()。get("spark.harn.appMasterEnv.SERVICE_API_KEY")dataset_options = sc._jvm.com.adobe.platform.datasetOptionspd0.write.format("com.adobe.platform.dataset")。option(dataset_options.orgId(), "310C6D375BA5248F0A494212@AdobeOrg")。option(dataset_options.userToken(), userToken)。option(dataset_options.serviceToken(), serviceSecopen)。option.option.option.serviceServiceS.option.open.option.option.opeption.option.option.option.open.opic.opise.optionapiKey(), serviceApiKey)。save("5e68141134492718af974844")
-  </pre>
-  </td>
-  <td>
-  <pre class="JSON language-JSON hljs">
-%dataset write —datasetId 5e68141134492718af974844 -dataFrame pd0pd0.describe()pd0.show(10, False)
-</pre>
-  </td>
-  </tr>
-</table>
+**使用PySpark 3（Spark 2.3 —— 已過時）- PySpark 3內核**
+
+```python
+userToken = spark.sparkContext.getConf().get("spark.yarn.appMasterEnv.USER_TOKEN")
+serviceToken = spark.sparkContext.getConf().get("spark.yarn.appMasterEnv.SERVICE_TOKEN")
+serviceApiKey = spark.sparkContext.getConf().get("spark.yarn.appMasterEnv.SERVICE_API_KEY")
+
+dataset_options = sc._jvm.com.adobe.platform.dataset.DataSetOptions
+
+pd0.write.format("com.adobe.platform.dataset")
+  .option(dataset_options.orgId(), "310C6D375BA5248F0A494212@AdobeOrg")
+  .option(dataset_options.userToken(), userToken)
+  .option(dataset_options.serviceToken(), serviceToken)
+  .option(dataset_options.serviceApiKey(), serviceApiKey)
+  .save("5e68141134492718af974844")
+```
+
+**使用PySpark 3(Spark 2.4)- Python 3內核**
+
+```python
+%dataset write --datasetId 5e68141134492718af974844 --dataFrame pd0
+pd0.describe()
+pd0.show(10, False)
+```
 
 | 元素 | 描述 |
 | ------- | ----------- |
@@ -683,29 +706,30 @@ Scala內核不再支援sparkmagic `%%sql` 。 必須轉換現有的Sparkmagic程
 
 在Spark 2.3中，您需要為用來讀取資 `option` 料或使用程式碼儲存格中原始值的值定義變數。 在Scala中，您可以 `sys.env("PYDASDK_IMS_USER_TOKEN")` 用來宣告和傳回值，如此就不需要定義變數，例如 `var userToken`。 在下方的Scala(Spark 2.4)範例中， `sys.env` 用來定義並傳回讀取資料集所需的所有值。
 
-<table>
-  <th>筆記本</th>
-  <th>Spark（Spark 2.3 —— 已過時）</th>
-  <th>Scala(Spark 2.4)</th>
-  <tr>
-  <th>內核</th>
-  <td align="center">Spark</td>
-  <td align="center">斯卡拉</td>
-  </tr>
-  <tr>
-  <th>代碼</th>
-  <td>
-  <pre class="JSON language-JSON hljs">
-import com.adobe.platform.dataset.DataSetOptionsvar df1 = spark.read.format("com.adobe.platform.dataset")。option(DataSetOptions.orgId, "310C6D375BA5248F0A494212@AdobeOrg")。option(DataSetOptions.batchId, "dbe154d3-197a-4e6c-e6c80f8-9b7025eea2b9")。load("5e68141134492718af974844")
-</pre>
-  </td>
-  <td>
-  <pre class="JSON language-JSON hljs">
-導入org.apache.spark.sql。{dataset, SparkSession}spark = SparkSession.builder()。master("local")。getOrCreate()val df1 = spark.read.format("com.adobe.platform.query")。option("user-token", sys.env("PYDASDK_IMS_USER_TOKEN")))。open)。open.open.oper.open.open.oper.open.oper.open.oper.open.open.open.org", sys.env("IMS_ORG_ID"))。option("api-key", sys.env("PYDASDK_IMS_CLIENT_ID"))。option("service-token", sys.env("PYDASDK_IMS_SERVICE_TOKEN"))))。option(")。option(","interactive")。option("dataset-id", "5e6814113492718af974844")。load()
-</pre>
-  </td>
-  </tr>
-</table>
+**使用Spark（Spark 2.3 —— 已過時）- Spark Kernel**
+
+```scala
+import com.adobe.platform.dataset.DataSetOptions
+var df1 = spark.read.format("com.adobe.platform.dataset")
+  .option(DataSetOptions.orgId, "310C6D375BA5248F0A494212@AdobeOrg")
+  .option(DataSetOptions.batchId, "dbe154d3-197a-4e6c-80f8-9b7025eea2b9")
+  .load("5e68141134492718af974844")
+```
+
+**使用Scala(Spark 2.4)- Scala內核**
+
+```scala
+import org.apache.spark.sql.{Dataset, SparkSession}
+val spark = SparkSession.builder().master("local").getOrCreate()
+val df1 = spark.read.format("com.adobe.platform.query")
+  .option("user-token", sys.env("PYDASDK_IMS_USER_TOKEN"))
+  .option("ims-org", sys.env("IMS_ORG_ID"))
+  .option("api-key", sys.env("PYDASDK_IMS_CLIENT_ID"))
+  .option("service-token", sys.env("PYDASDK_IMS_SERVICE_TOKEN"))
+  .option("mode", "interactive")
+  .option("dataset-id", "5e68141134492718af974844")
+  .load()
+```
 
 | 元素 | 描述 |
 | ------- | ----------- |
@@ -737,31 +761,41 @@ Scala(Spark 2.4)筆記型電腦使用Scala內核，當設定時，此內核需�
 
 ## 寫入資料集
 
-與讀取 [資料集類似](#notebook-read-dataset-spark)，寫入資料集需要下 `option` 表中概述的額外值。 在Scala中，您可以 `sys.env("PYDASDK_IMS_USER_TOKEN")` 用來宣告和傳回值，如此就不需要定義變數，例如 `var userToken`。 在下面的Scala範例中， `sys.env` 用於定義並傳回寫入資料集所需的所有必要值。
+與讀取 [資料集類似](#notebook-read-dataset-spark)，寫入資料集需要下 `option` 列範例中概述的額外值。 在Scala中，您可以 `sys.env("PYDASDK_IMS_USER_TOKEN")` 用來宣告和傳回值，如此就不需要定義變數，例如 `var userToken`。 在下面的Scala範例中， `sys.env` 用於定義並傳回寫入資料集所需的所有必要值。
 
-<table>
-  <th>筆記本</th>
-  <th>Spark（Spark 2.3 —— 已過時）</th>
-  <th>Scala(Spark 2.4)</th>
-  <tr>
-  <th>內核</th>
-  <td align="center">Spark</td>
-  <td align="center">斯卡拉</td>
-  </tr>
-  <tr>
-  <th>代碼</th>
-  <td>
-  <pre class="JSON language-JSON hljs">
-import com.adobe.platform.dataset.DataSetOptionsvar userToken = spark.sparkContext.getConf.getOption("spark.harn.appMasterEnv.USER_TOKEN")。getvar serviceToken = spark.sparkContext.getConf.getOption("spark.harar.appMasterEnv.SERVICE_TOKEN")。getvar serviceApiKey = spark.sparkContext.getConf.getOption("spark.harn.appMasterEnv.SERVICE_API_KEY")。getdf1.write.format("com.adobe.platform.dataset")。options.orgId,"310C6D375BA5248F0A494212@AdobeOrg")。option(DataSetOptions.userToken, userToken)。option(DataSetOptions.serviceToken, serviceToken)。option(DataSetOptions.serviceApiKey, serviceApiKey)。save("5e6814134492718af974844")
-  </pre>
-  </td>
-  <td>
-  <pre class="JSON language-JSON hljs">
-導入org.apache.spark.sql。{Dataset, SparkSession}val spark = SparkSession.builder()。master("local")。getOrCreate()df1.write.format("com.adobe.platform.query")。option("user-token", sys.env("PYDASDK_IMS_USER_TOKEN"))))))。opoption",sys.env("PYDASDK_IMS_SERVICE_TOKEN"))。option("ims-org", sys.env("IMS_ORG_ID"))。option("api-key", sys.env("PYDASDK_IMS_CLIENT_ID"))))。option")。option(")。option", "模式", ", " interactive)。option("dataset-id", "5e6814113492718af974844")。save()
-</pre>
-  </td>
-  </tr>
-</table>
+**使用Spark（Spark 2.3 —— 已過時）- Spark Kernel**
+
+```scala
+import com.adobe.platform.dataset.DataSetOptions
+
+var userToken = spark.sparkContext.getConf.getOption("spark.yarn.appMasterEnv.USER_TOKEN").get
+var serviceToken = spark.sparkContext.getConf.getOption("spark.yarn.appMasterEnv.SERVICE_TOKEN").get
+var serviceApiKey = spark.sparkContext.getConf.getOption("spark.yarn.appMasterEnv.SERVICE_API_KEY").get
+
+df1.write.format("com.adobe.platform.dataset")
+  .option(DataSetOptions.orgId, "310C6D375BA5248F0A494212@AdobeOrg")
+  .option(DataSetOptions.userToken, userToken)
+  .option(DataSetOptions.serviceToken, serviceToken)
+  .option(DataSetOptions.serviceApiKey, serviceApiKey)
+  .save("5e68141134492718af974844")
+```
+
+**使用Scala(Spark 2.4)- Scala內核**
+
+```scala
+import org.apache.spark.sql.{Dataset, SparkSession}
+
+val spark = SparkSession.builder().master("local").getOrCreate()
+
+df1.write.format("com.adobe.platform.query")
+  .option("user-token", sys.env("PYDASDK_IMS_USER_TOKEN"))
+  .option("service-token", sys.env("PYDASDK_IMS_SERVICE_TOKEN"))
+  .option("ims-org", sys.env("IMS_ORG_ID"))
+  .option("api-key", sys.env("PYDASDK_IMS_CLIENT_ID"))
+  .option("mode", "interactive")
+  .option("dataset-id", "5e68141134492718af974844")
+  .save()
+```
 
 | 元素 | 描述 |
 | ------- | ----------- |
