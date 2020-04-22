@@ -1,9 +1,9 @@
 ---
 product: experience-platform
 audience: user
-user-guide-title: Adobe Experience Platform Data Access
+user-guide-title: Adobe Experience Platform資料存取
 translation-type: tm+mt
-source-git-commit: 6705cb699b0785e317a6e437fc8a01ca77266f84
+source-git-commit: c60f374fddb7c2d0ae35c5a5e085ddc0e2f7b78f
 
 ---
 
@@ -13,3 +13,4 @@ source-git-commit: 6705cb699b0785e317a6e437fc8a01ca77266f84
 - [概述](home.md)
 - 教學課程 {#tutorials}
    - [存取資料集資料](tutorials/dataset-data.md)
+- [平台版本注意事項](https://www.adobe.com/go/platform-release-notes-en)
