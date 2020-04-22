@@ -3,7 +3,7 @@ product: experience-platform
 audience: user
 user-guide-title: Adobe Experience Platform Data Science Workspace說明
 translation-type: tm+mt
-source-git-commit: 8825ed17f4e1c8b325fab9256dfbc666f3ea8462
+source-git-commit: 721e12606227a0c61d3d25c4f50df2046e47dd8e
 
 ---
 
@@ -53,3 +53,5 @@ source-git-commit: 8825ed17f4e1c8b325fab9256dfbc666f3ea8462
 * [配方和筆記本移轉指南](recipe-notebook-migration.md)
 * [疑難排解指南](troubleshooting-guide.md)
 * [API 參考資料](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml)
+* [平台版本注意事項](../release-notes/latest/latest.md)
+* [平台版本注意事項](http://www.adobe.com/go/platform-release-notes-en)
