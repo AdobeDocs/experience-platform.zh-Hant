@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Data Science Workspace疑難排解指南
 topic: Troubleshooting
 translation-type: tm+mt
-source-git-commit: 1f756e7bc71c9ff227757aee64af29e0772c24af
+source-git-commit: ef7c37438990d3bc42024e7fb106d781a5ebbd12
 
 ---
 
@@ -15,9 +15,9 @@ source-git-commit: 1f756e7bc71c9ff227757aee64af29e0772c24af
 
 ## Google Chrome中未載入JupyterLab環境
 
-透過Google Chrome瀏覽器的最新80.x版更新，所有第三方Cookie都預設會遭到封鎖。 此新政策可防止JupyterLab在Adobe Experience Platform中載入。
+>[!IMPORTANT] 此問題已解決，但仍可能存在於Google Chrome 80.x瀏覽器中。 請確定您的Chrome瀏覽器是最新的。
 
->[!NOTE] 這是暫時的問題。 第三方Cookie的依賴性已設定為在未來版本中移除。
+在Google Chrome瀏覽器80.x版中，所有協力廠商Cookie都預設為封鎖。 此政策可防止JupyterLab在Adobe Experience Platform中載入。
 
 要解決此問題，請使用以下步驟：
 
@@ -45,7 +45,19 @@ source-git-commit: 1f756e7bc71c9ff227757aee64af29e0772c24af
 
 ## 我為何無法在Safari中存取JupyterLab?
 
-Safari預設會停用協力廠商Cookie。 由於您的Jupyter虛擬機器實例位於與其父框架不同的域上，因此Adobe Experience Platform目前要求啟用第三方Cookie。 請啟用協力廠商Cookie或切換至其他瀏覽器，例如Google Chrome。
+Safari預設會在Safari &lt; 12中停用協力廠商Cookie。 由於您的Jupyter虛擬機器實例位於與其父框架不同的域上，因此Adobe Experience Platform目前需要啟用第三方Cookie。 請啟用協力廠商Cookie或切換至其他瀏覽器，例如Google Chrome。
+
+對於Safari 12，您需要將使用者代理切換為「Chrome」或「Firefox」。 若要切換您的使用者代理，請先開啟 *Safari* 功能表，然後選 **取偏好設定**。 出現首選項窗口。
+
+![Safari偏好設定](./images/faq/preferences.png)
+
+在Safari偏好設定視窗中，選取「進 **階」**。 然後，勾選選選 *單列中的「顯示開發」選單* 。 完成此步驟後，可關閉首選項窗口。
+
+![Safari進階功能](./images/faq/advanced.png)
+
+接著，從頂端導覽列選取「開 **發** 」功能表。 從「開發」下 *拉式清單* ，將滑鼠指標暫留在「使 *用者代理」上*。 您可以選取 **要使用** 的 **Chrome** 或Firefox「使用者代理」字串。
+
+![開發功能表](./images/faq/user-agent.png)
 
 ## 為什麼在JupyterLab中嘗試上傳或刪除檔案時，會看到「403 Forbidden」訊息？
 
