@@ -4,7 +4,7 @@ solution: Experience Platform
 title: '使用API管理資料使用標籤 '
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: cac6ab568f030cf86ee68a1df9e45a3ac9d421cb
+source-git-commit: d685f1851badf54ce1d1ac3cbacd69d62894c33f
 
 ---
 
@@ -143,8 +143,6 @@ curl -X POST \
 
 您可以透過提出DELETE請求來刪除套用至資料集的標籤。
 
->[!NOTE] 只有在準備刪除父資料集時，才應使用此操作。
-
 **API格式**
 
 ```http
@@ -168,7 +166,7 @@ curl -X DELETE \
 
 **回應**
 
-成功的響應HTTP狀態200（確定）表示標籤已刪除。 您可 [以在個別呼叫中](#lookup) ，尋找資料集的現有標籤以確認此點。
+成功回應HTTP狀態200（確定），表示標籤已刪除。 您可 [以在個別呼叫中](#lookup) ，尋找資料集的現有標籤以確認此點。
 
 ## 後續步驟
 
