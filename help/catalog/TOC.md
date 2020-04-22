@@ -3,7 +3,7 @@ product: experience-platform
 audience: user
 user-guide-title: 目錄和資料集幫助
 translation-type: tm+mt
-source-git-commit: 30ea8b4eeeb5f11bfca65f2931902aae63e8f08e
+source-git-commit: e135bc33e6c3daa411e85cb37e407322fd0bca5b
 
 ---
 
@@ -31,3 +31,4 @@ source-git-commit: 30ea8b4eeeb5f11bfca65f2931902aae63e8f08e
 * [資料湖中的隱私權要求處理](privacy.md)
 * [Experience Platform中的資料保護](data-protection.md)
 * [API 參考資料](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml)
+* [平台版本注意事項](https://www.adobe.com/go/platform-release-notes-en)
