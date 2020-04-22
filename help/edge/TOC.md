@@ -1,9 +1,9 @@
 ---
 product: experience-platform
 audience: user
-user-guide-title: Adobe Experience Platform Edge Network Help
+user-guide-title: Adobe Experience Platform Edge網路說明
 translation-type: tm+mt
-source-git-commit: 0cc6e233646134be073d20e2acd1702d345ff35f
+source-git-commit: c60f374fddb7c2d0ae35c5a5e085ddc0e2f7b78f
 
 ---
 
@@ -34,3 +34,4 @@ source-git-commit: 0cc6e233646134be073d20e2acd1702d345ff35f
 * 參考 {#ref}
    * [自動收集的資訊](reference/automatic-information.md)
    * [檢索庫資訊](reference/retrieving-library-information.md)
+* [平台版本注意事項](https://www.adobe.com/go/platform-release-notes-en)
