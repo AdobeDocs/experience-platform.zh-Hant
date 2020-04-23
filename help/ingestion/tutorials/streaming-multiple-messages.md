@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 在單一HTTP要求中串流多個訊息
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 79466c78fd78c0f99f198b11a9117c946736f47a
+source-git-commit: cd251c0816a7e653596b6c3faaceb0cebad367ea
 
 ---
 
@@ -26,7 +26,7 @@ source-git-commit: 79466c78fd78c0f99f198b11a9117c946736f47a
 
 - 授權：生產者 `{ACCESS_TOKEN}`
 
-所有POST要求都需要額外的標題：
+所有POST請求都需要額外的標題：
 
 - 內容類型：application/json
 
@@ -47,7 +47,7 @@ source-git-commit: 79466c78fd78c0f99f198b11a9117c946736f47a
 **API格式**
 
 ```http
-POST /collection/{CONNECTION_ID}
+POST /collection/batch/{CONNECTION_ID}
 ```
 
 | 屬性 | 說明 |
@@ -57,7 +57,7 @@ POST /collection/{CONNECTION_ID}
 **請求**
 
 ```shell
-curl -X POST https://dcs.adobedc.net/collection/{CONNECTION_ID} \
+curl -X POST https://dcs.adobedc.net/collection/batch/{CONNECTION_ID} \
   -H 'Content-Type: application/json' \
   -d '{
   "messages": [
@@ -229,7 +229,7 @@ curl -X POST https://dcs.adobedc.net/collection/{CONNECTION_ID} \
 **API格式**
 
 ```http
-POST /collection/{CONNECTION_ID}
+POST /collection/batch/{CONNECTION_ID}
 ```
 
 | 屬性 | 說明 |
@@ -239,7 +239,7 @@ POST /collection/{CONNECTION_ID}
 **請求**
 
 ```shell
-curl -X POST https://dcs.adobedc.net/collection/{CONNECTION_ID} \
+curl -X POST https://dcs.adobedc.net/collection/batch/{CONNECTION_ID} \
   -H 'Content-Type: application/json' \
   -d '{
   "messages": [
