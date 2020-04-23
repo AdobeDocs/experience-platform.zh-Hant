@@ -5,7 +5,7 @@ doc-type: release notes
 last-update: February 14, 2019
 author: ens71067
 translation-type: tm+mt
-source-git-commit: 2f0f155beacbc6a4ba2892ae211a9c0305e969ac
+source-git-commit: 5199a344a66381ef9d7eea1ea8314e5de7152e3b
 
 ---
 
@@ -14,13 +14,17 @@ source-git-commit: 2f0f155beacbc6a4ba2892ae211a9c0305e969ac
 
 ## 發行日期：2020 年 2 月 12 日
 
-## 來源
+Adobe Experience Platform現有功能的更新：
+
+* [來源](#sources)
+
+## 來源 {#sources}
 
 Adobe Experience Platform可以從外部來源擷取資料，同時允許您使用平台服務來建構、標示和增強該資料。 您可以從多種來源收集資料，例如Adobe應用程式、雲端儲存空間、協力廠商軟體和您的CRM系統。
 
 Experience Platform提供REST風格的API和互動式UI，讓您輕鬆為各種資料提供者設定來源連線。 這些源連接允許您驗證並連接到外部儲存系統和CRM服務、設定接收運行的時間，以及管理資料接收吞吐量。
 
-### 新功能
+**新功能**
 
 | 功能 | 說明 |
 | ------- | ----------- |
@@ -30,7 +34,7 @@ Experience Platform提供REST風格的API和互動式UI，讓您輕鬆為各種�
 | 雲端儲存系統的API支援 | Azure Data Lake Service Gen 2 API和Google雲端儲存API的新來源連接器。 |
 | 雲端儲存系統的UI支援 | UI中Google雲端儲存空間的新來源連接器。 |
 
-### 已知問題
+**已知問題**
 
 * 無
 
