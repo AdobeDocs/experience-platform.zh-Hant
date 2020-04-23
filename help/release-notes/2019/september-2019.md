@@ -5,7 +5,7 @@ doc-type: release notes
 last-update: September 13, 2019
 author: ens28527
 translation-type: tm+mt
-source-git-commit: 28a8fc496c85b334e89d0f0a130d3cc5c8956399
+source-git-commit: 26568ebbbe48b5a82e4f6b5cf035c354c11e8ed1
 
 ---
 
@@ -14,7 +14,13 @@ source-git-commit: 28a8fc496c85b334e89d0f0a130d3cc5c8956399
 
 ## 發行日期: 2019 年 9 月 10 日
 
-## 資料擷取
+Adobe Experience Platform現有功能的更新：
+
+* [資料擷取](#ingestion)
+* [資料科學工作區](#dsw)
+* [查詢服務](#query)
+
+## 資料擷取 {#ingestion}
 
 Adobe Experience Platform提供一組豐富的功能，可吸收任何類型的資料和延遲。 Adobe Experience Platform Data Ingestion提供多種替代方式來擷取資料，包括批次API、串流API、原生Adobe連接器、資料整合合作夥伴或Adobe Experience Platform UI。
 
@@ -26,7 +32,7 @@ Adobe Experience Platform提供一組豐富的功能，可吸收任何類型的�
 
 如需詳細資訊，請造訪「資料 [擷取」檔案](../../ingestion/home.md)。
 
-## 資料科學工作區
+## 資料科學工作區 {#dsw}
 
 Adobe Experience Platform Data Science Workspace是Experience Platform內的完整管理服務，可讓資料科學家建立並執行機器學習模型，從Adobe解決方案和協力廠商系統的資料和內容順暢地產生見解。 Data Science Workspace與平台緊密整合，為端對端資料科學生命週期提供了動力，包括探索和準備XDM資料，然後開發並實施模型，以利用機器學習見解自動豐富即時客戶個人檔案。
 
@@ -46,7 +52,7 @@ Adobe Experience Platform Data Science Workspace是Experience Platform內的完�
 
 如需詳細資訊，請造訪資 [料科學工作區概觀](../../data-science-workspace/home.md)。
 
-## 查詢服務
+## 查詢服務 {#query}
 
 查詢服務提供使用標準SQL來查詢Adobe Experience Platform中資料的能力，以支援各種分析和資料管理使用案例。 它是一種無伺服器工具，可讓您從Data Lake加入資料集，並將查詢結果擷取為新資料集，以用於報告、Data Science Workspace或擷取至即時客戶個人檔案。
 
