@@ -5,7 +5,7 @@ doc-type: release notes
 last-update: November 18, 2019
 author: crhoades, ens28527
 translation-type: tm+mt
-source-git-commit: 2f0f155beacbc6a4ba2892ae211a9c0305e969ac
+source-git-commit: 817f994fc0622b1c46e98f8d773a4d91c1064824
 
 ---
 
@@ -14,18 +14,18 @@ source-git-commit: 2f0f155beacbc6a4ba2892ae211a9c0305e969ac
 
 ## 發行日期: 2019 年 11 月 18 日
 
-新版本：
-* [即時客戶資料平台](#real-time-customer-data-platform)
+Adobe Experience Platform的新功能：
+* [即時客戶資料平台](#rtcdp)
 * [目的地](#destinations)
 * [來源](#sources)
 
 更新現有功能：
-* [資料科學工作區](#data-science-workspace)
-* [體驗資料模型(XDM)系統](#experience-data-model-xdm-system)
-* [即時客戶個人檔案](#real-time-customer-profile)
-* [區段服務](#segmentation-service)
+* [資料科學工作區](#dsw)
+* [體驗資料模型(XDM)系統](#xdm)
+* [即時客戶個人檔案](#profile)
+* [區段服務](#segmentation)
 
-## 即時客戶資料平台
+## Real-time Customer Data Platform {#rtcdp}
 
 Adobe即時客戶資料平台（Real-time Customer Data Platform，即時CDP）以Adobe Experience Platform為基礎，可協助公司將已知和未知的資料匯整在一起，在整個客戶歷程中運用智慧決策來啟動客戶個人檔案。 即時CDP結合了多個企業資料源，以即時建立統一的配置檔案，可用於跨所有通道和設備提供一對一的個性化客戶體驗。
 
@@ -42,7 +42,7 @@ Adobe可連接到龐大的合作夥伴生態系統，更不用說與Adobe Experi
 
 如需詳細資訊，請參 [閱Adobe即時客戶資料平台檔案](../../rtcdp/overview.md)。
 
-### 主要功能
+**主要功能**
 
 | 功能 | 說明 |
 |---|---|
@@ -50,7 +50,7 @@ Adobe可連接到龐大的合作夥伴生態系統，更不用說與Adobe Experi
 | 首頁度量控制面板 | Adobe即時客戶資料平台（即時CDP）首頁包含量度控制面板，可顯示描述檔和區段的相關資訊。 首頁也包含學習教材的連結。 請參閱下方「 [即時客戶資料平台」度量一節](#real-time-customer-data-platform-metrics) 。 |
 | 來源 | 您可以從多種來源收集資料，例如Adobe解決方案、雲端儲存空間、協力廠商軟體和您的CRM。 請參閱下 [面的](#sources) 「來源」一節，瞭解更多資訊。 |
 
-### 即時客戶資料平台量度
+**即時客戶資料平台量度**
 
 當您登入即時CDP時，會顯示Adobe即時客戶資料平台（即時CDP）首頁，其中包含量度控制面板。
 
@@ -60,11 +60,11 @@ Adobe可連接到龐大的合作夥伴生態系統，更不用說與Adobe Experi
 
 如需詳細資訊，請參 [閱即時客戶資料平台量度總覽](../../rtcdp/home-page-dashboards.md)
 
-## 目的地
+## 目的地 {#destinations}
 
 目標是預先建立的與Adobe即時客戶資料平台所支援之目標平台的整合，以順暢的方式將資料啟動給這些合作夥伴。 如需詳細資訊，請閱讀「目 [標概觀](../../rtcdp/destinations/destinations-overview.md) 」文章。
 
-### 可用目的地
+**可用目的地**
 
 在11月的版本中，Adobe的即時客戶資料平台支援下列目標：
 
@@ -73,20 +73,20 @@ Adobe可連接到龐大的合作夥伴生態系統，更不用說與Adobe Experi
 
 請參 [閱目標目錄](../../rtcdp/destinations/destinations-catalog.md) ，以取得每個目標的相關資訊。
 
-### 已知限制
+**已知限制**
 
 * 在初始發行中，不提供允許自訂啟 [動流程](../../rtcdp/destinations/activate-destinations.md#activate-data) （計畫步驟）的控制項。
 * 目前無法編輯或刪除目標配置。 若要解決此限制，您可以啟用或停用目標詳細資料頁面右上角的 [目標](../../rtcdp/destinations/destination-details-page.md)。
 * 當連線至您的目標或儲存帳戶時，目前沒有驗證帳戶詳細資訊、路徑或憑證。 請確定您輸入了正確的認證，並仔細檢查拼字錯誤或錯字。
 * 初始發行後，未進行任何憑證續約。 一旦帳戶過期或需要重新整理，您必須建立新的目的地連線並重新對應先前映射的區段。
 
-## 來源
+## 來源 {#sources}
 
 Adobe Experience Platform可以從外部來源擷取資料，同時允許您使用平台服務來建構、標示和增強該資料。 您可以從多種來源收集資料，例如Adobe解決方案、雲端儲存空間、協力廠商軟體和您的CRM系統。
 
 Experience Platform提供REST風格的API和互動式UI，讓您輕鬆為各種資料提供者設定來源連線。 這些源連接允許您對儲存系統和CRM服務進行身份驗證，設定接收運行的時間，並管理資料接收吞吐量。
 
-### 主要功能
+**主要功能**
 
 | 功能 | 說明 |
 | ---------- | ------------ |
@@ -94,17 +94,17 @@ Experience Platform提供REST風格的API和互動式UI，讓您輕鬆為各種�
 | 改良的CRM連接器工作流程 | 建立和管理Microsoft Dynamics和Salesforce連接器的全新直覺式UI工作流程。 |
 | 雲端儲存空間的連接器支援 | 連接器現在可以存取雲端儲存空間。 新來源包括Amazon S3、Azure Blob和FTP/SFTP伺服器。 |
 
-### 已知問題
+**已知問題**
 
 * 雲端儲存的來源連接器不支援擷取壓縮檔案。
 
 如需來源的詳細資訊，請參閱 [來源概觀](../../sources/home.md)。
 
-## 資料科學工作區
+## 資料科學工作區 {#dsw}
 
 Adobe Experience Platform Data Science Workspace可讓資料科學家建立並執行機器學習模型，從Adobe應用程式和協力廠商系統的資料和內容順暢地產生見解。 Data Science Workspace與平台緊密整合，為端對端資料科學生命週期提供了動力，包括探索和準備XDM資料，然後開發並實施模型，以利用機器學習見解自動豐富即時客戶個人檔案。
 
-### 新功能
+**新功能**
 
 | 功能 | 說明 |
 | -----------| ---------- |
@@ -113,13 +113,13 @@ Adobe Experience Platform Data Science Workspace可讓資料科學家建立並�
 
 如需詳細資訊，請參閱資 [料科學工作區概觀](../../data-science-workspace/home.md)。
 
-## 體驗資料模型(XDM)系統
+## 體驗資料模型(XDM)系統 {#xdm}
 
 標準化和互操作性是Experience Platform的主要概念。 Adobe推動的Experience Data Model(XDM)旨在標準化客戶體驗資料並定義客戶體驗管理的架構。
 
 XDM是公開記載的規格，旨在改善數位體驗的強大功能。 它提供任何應用程式的通用結構和定義，以便與Adobe Experience Platform上的服務通訊。 遵循XDM標準，所有客戶體驗資料都可整合在以更快速、更整合的方式提供見解的通用表現形式中。 您可以從客戶行動中獲得寶貴見解，透過細分定義客戶受眾，並將客戶屬性用於個人化目的。
 
-### 新功能
+**新功能**
 
 | 功能 | 說明 |
 | ---------- | ------------ |
@@ -130,13 +130,13 @@ XDM是公開記載的規格，旨在改善數位體驗的強大功能。 它提�
 | 格式限制 `xdm:alternateDisplayInfo` | 的「標題」和「說明」欄位必 `xdm:alternateDisplayInfo` 須同時為字串才能通過驗證。 |
 | 名稱變更：XDM個人資料 | 「XDM Profile」類的「title」已更新為「XDM Individual Profile」。 班級的 `$id` 正式程式沒有改變。 |
 
-### 已知問題
+**已知問題**
 
 * 無.
 
 要瞭解有關使用架構註冊表API和架構編輯器用戶介面使用XDM的更多資訊，請閱讀 [XDM系統文檔](../../xdm/home.md)。
 
-## 即時客戶個人檔案
+## 即時客戶個人檔案 {#profile}
 
 Adobe Experience Platform可讓您為客戶推動協調、一致且相關的體驗，不論客戶在何處或何時與您的品牌互動。 透過即時客戶個人檔案，您可以全面瞭解每個客戶，並結合來自多個通道的資料，包括線上、離線、CRM和第三方資料。 個人檔案可讓您將分散的客戶資料整合到統一的檢視中，為每次客戶互動提供可操作的時間戳記帳戶。
 
@@ -148,17 +148,17 @@ Adobe Experience Platform可讓您為客戶推動協調、一致且相關的體�
 | 根據投影配置合併策略 | 應用程式現在可以針對每個投影設定合併原則，以產生由特定合併原則所控制之資料的檢視。 |
 | 計算屬性 | 計算屬性會根據其他值、計算和運算式自動計算欄位的值。 計算屬性在描述檔層級上運作，以根據傳入事件、傳入事件和描述檔資料，或傳入事件、描述檔資料和歷史事件，來匯總「購買總計」、「期限值」或「漏斗狀態」等值。 |
 
-### 錯誤修正
+**錯誤修正**
 
 * 合併原則建立工作流程中可用ID接合策略的簡化清單。
 
-### 已知問題
+**已知問題**
 
 * 無.
 
 如需即時客戶個人檔案的詳細資訊，包括使用個人檔案資料的教學課程和最佳實務，請閱 [讀即時客戶個人檔案概觀](../../profile/home.md)。
 
-## 區段服務
+## 區段服務 {#segmentation}
 
 Adobe Experience Platform Segmentation Service提供使用者介面和REST風格的API，可讓您建立細分並從即時客戶個人檔案資料產生受眾。 這些區段是在Platform上集中設定和維護的，讓任何Adobe應用程式都能輕鬆存取。
 
@@ -173,7 +173,7 @@ Adobe Experience Platform Segmentation Service提供使用者介面和REST風格
 | RBAC支援 | 區段產生器現在支援基本的角色存取控制與權限。 |
 | 增強支援平台與Adobe解決方案之間的外部觀眾分享 | 使用者現在可以在觀眾數量龐大或先驗未知的情況下，引入外部（非Experience Platform）觀眾中繼資料。 此版本包含對已布建解決方案連接器之客戶的Audience Manager中繼資料存取。 此觀眾中繼資料可用於「區段產生器」中，以建立新的「體驗平台」區段。 <br/><br/> 此外，在Experience Platform中建立的細分現在可用於整合的Adobe解決方案，包括Audience Manager、Target和Ad Cloud。 |
 
-### 錯誤修正
+**錯誤修正**
 
 * 修正在巢狀關係出現時，「多實體分段」會傳回零個描述檔的問題。
 * 修正排除邏輯傳回誤導結果的問題。
@@ -181,7 +181,7 @@ Adobe Experience Platform Segmentation Service提供使用者介面和REST風格
 * 修正同一XDM資料夾出現多份副本的間歇性問題。
 * 現在產生訊息，以通知使用者選取的合併原則無法使用區段估計。
 
-### 已知問題
+**已知問題**
 
 * 無.
 
