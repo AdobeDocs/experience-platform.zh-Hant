@@ -4,7 +4,7 @@ solution: Experience Platform
 title: MLInstances
 topic: Developer guide
 translation-type: tm+mt
-source-git-commit: 01cfbc86516a05df36714b8c91666983f7a1b0e8
+source-git-commit: 19823c7cf0459e045366f0baae2bd8a98416154c
 
 ---
 
@@ -13,7 +13,7 @@ source-git-commit: 01cfbc86516a05df36714b8c91666983f7a1b0e8
 
 MLInstance是現有引擎與一組適當配置的配對，這些配置定義了任何培訓參數、計分參數或硬體資源配置。 [](./engines.md)
 
-## 建立MLInstance
+## 建立MLInstance {#create-an-mlinstance}
 
 您可以透過執行POST請求來建立MLInstance，同時提供由有效的引擎ID(`{ENGINE_ID}`)和一組適當的預設組態組成的請求裝載。
 
@@ -270,7 +270,7 @@ curl -X GET \
 
 您可以透過PUT請求覆寫現有MLInstance的屬性，以更新其屬性，該PUT請求在請求路徑中包含目標MLInstance的ID，並提供包含更新屬性的JSON裝載。
 
->[!TIP] 為確保此PUT請求成功，建議您先執行GET請求，以 [依ID擷取MLInstance](#retrieve-specific)。 然後，修改並更新傳回的JSON物件，並套用已修改的JSON物件作為PUT要求的裝載。
+>[!TIP] 為確保此PUT請求成功，建議您先執行GET請求，以 [依ID擷取MLInstance](#retrieve-specific)。 然後，修改並更新傳回的JSON物件，並套用已修改的JSON物件的完整內容作為PUT要求的裝載。
 
 下列範例API呼叫會在初步擁有這些屬性的同時，更新MLInstance的訓練和計分參數：
 
