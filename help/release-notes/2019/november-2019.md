@@ -5,14 +5,14 @@ doc-type: release notes
 last-update: November 18, 2019
 author: crhoades, ens28527
 translation-type: tm+mt
-source-git-commit: 817f994fc0622b1c46e98f8d773a4d91c1064824
+source-git-commit: e5fa12b92f7006f2c5c428b25f81dade57733498
 
 ---
 
 
 # Adobe Experience Platform 發行說明
 
-## 發行日期: 2019 年 11 月 18 日
+**發行日期：2019 年 11 月 18 日**
 
 Adobe Experience Platform的新功能：
 * [即時客戶資料平台](#rtcdp)
