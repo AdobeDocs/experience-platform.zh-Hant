@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 引擎
 topic: Developer guide
 translation-type: tm+mt
-source-git-commit: 2940f69d193ff8a4ec6ad4a58813b5426201ef45
+source-git-commit: 19823c7cf0459e045366f0baae2bd8a98416154c
 
 ---
 
@@ -489,7 +489,7 @@ curl -X POST \
 }
 ```
 
-## 使用二進位工件建立功能管線引擎——已過時
+## 使用二進位工件建立功能管線引擎——已過時 {#create-a-feature-pipeline-engine-using-binary-artifacts}
 
 >[!IMPORTANT]
 >不再支援二進位對象，並將設定為在以後刪除。
