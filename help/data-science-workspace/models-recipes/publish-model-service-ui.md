@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 以服務形式發佈模型(UI)
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: af491361c5c3518e9bcc0af41a5aa79022229a2d
+source-git-commit: 19823c7cf0459e045366f0baae2bd8a98416154c
 
 ---
 
@@ -26,32 +26,32 @@ Adobe Experience Platform Data Science Workspace可讓您將經過訓練和評�
 
 如果您偏好使用Sensei機器學習API來發佈模型，請參閱 [API教學課程](./publish-model-service-api.md)。
 
-## 發佈模型
+## 發佈模型 {#publish-a-model}
 
-1. 在Adobe Experience Platform中，按一下左側導 **覽欄中的** 「模型」連結，以列出所有現有的模型。 查找並按一下要作為服務發佈的模型的名稱。
+1. 在Adobe Experience Platform中，按一下左 **[!UICONTROL Models]** 側導覽欄中的連結，以列出所有現有的模型。 查找並按一下要作為服務發佈的模型的名稱。
    ![](../images/models-recipes/publish-model/1_browse_model.png)
-1. 按一 **下** 「模型概述」頁面右上角的「發佈」，以啟動服務建立程式。
+2. 單 **[!UICONTROL Publish]** 擊「模型概述」頁右上角的附近以啟動服務建立過程。
    ![](../images/models-recipes/publish-model/2_view_training_runs.png)
-1. 輸入所需的服務名稱，並選擇性地提供服務說明，完成後按一 **下** 「下一步」。
+3. 輸入所需的服務名稱，並選擇性地提供服務說明，在完成時按 **[!UICONTROL Next]** 一下。
    ![](../images/models-recipes/publish-model/3_configure_service.png)
-1. 列出所有成功的「模型」訓練執行。 新服務將繼承所選培訓運行中的培訓和評分配置。
+4. 列出所有成功的「模型」訓練執行。 新服務將繼承所選培訓運行中的培訓和評分配置。
    ![](../images/models-recipes/publish-model/4_select_training_run.png)
-1. 按一 **下「完成** 」以建立服務，並重新導向至「服務收藏館 **** 」以顯示所有可用的服務，包括新建立的服務。
+5. 按一 **[!UICONTROL Finish]** 下以建立服務並重新導向至以 **[!UICONTROL Service Gallery]** 顯示所有可用服務，包括新建立的服務。
    ![](../images/models-recipes/publish-model/service_gallery.png)
 
-## 使用服務進行分數
+## 使用服務進行分數 {#access-a-service}
 
-1. 在Adobe Experience Platform中，按一下左側導 **覽欄中的** 「服務」標籤，以存取「服 *務收藏館」*。 尋找您想要使用的服務，然後按一下「分 **數」**。
+1. 在Adobe Experience Platform中，按一 **[!UICONTROL Services]** 下左側導覽欄中的標籤以存取「服 *務收藏館」*。 尋找您要使用的服務，然後按一下 **[!UICONTROL Score]**。
    ![](../images/models-recipes/publish-model/click_to_score.png)
-1. 為計分執行選取適當的輸入資料集，然後按一下「下 **一步**」。
+2. 為計分執行選取適當的輸入資料集，然後按一下 **[!UICONTROL Next]**。
    ![](../images/models-recipes/publish-model/6_scoring_input.png)
-1. 為計分結果選擇適當的輸出資料集，然後按一下「下 **一步**」。
+3. 為計分結果選擇適當的輸出資料集，然後按一下 **[!UICONTROL Next]**。
    ![](../images/models-recipes/publish-model/7_scoring_output.png)
-1. 建立服務時，它會繼承預設計分配置。 您可以檢閱這些設定，並視需要按兩下值以調整這些設定。 對配置滿意後，按一下「完 **成** 」開始計分運行。
+4. 建立服務時，它會繼承預設計分配置。 您可以檢閱這些設定，並視需要按兩下值以調整這些設定。 對配置滿意後，按一下以 **[!UICONTROL Finish]** 開始計分運行。
    ![](../images/models-recipes/publish-model/8_scoring_configure.png)
-1. 在「服務」的「 *概述* 」頁面上，會顯示新計分工作及其進度的詳細資料。 作業完成後，「最 **近** 」計分作業將會更新。
+5. 在「服務」的「 *概述* 」頁面上，會顯示新計分工作及其進度的詳細資料。 作業完成後，計 **[!UICONTROL Most Recent]** 分作業將更新。
    ![](../images/models-recipes/publish-model/score_pending.png)
 
-## 後續步驟
+## 下一步 {#next-steps}
 
 在本教學課程中，您已成功地將模型發佈為可存取的服務，並透過服務收藏館使用新的服務計 *分資料*。 繼續下一個教學課程，瞭解如何安 [排在服務上執行自動化訓練和計分](./schedule-models-ui.md)。
