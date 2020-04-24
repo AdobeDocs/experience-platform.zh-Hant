@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 在客戶人工智慧中下載分數
 topic: Downloading scores
 translation-type: tm+mt
-source-git-commit: 5699022d1f18773c81a0a36d4593393764cb771a
+source-git-commit: 387cbdebccb9ae54a2907d1afe220e9711927ca6
 
 ---
 
@@ -34,7 +34,7 @@ source-git-commit: 5699022d1f18773c81a0a36d4593393764cb771a
 
 ![資料集ID](./images/download-scores/access-scores.png)
 
-## 擷取您的批次ID
+## 擷取您的批次ID {#retrieve-your-batch-id}
 
 使用上一步的資料集ID，您必須呼叫目錄API以擷取批次ID。 此API呼叫會使用其他查詢參數，以傳回單一批次，而非屬於貴組織的批次清單。 有關可用查詢參數類型的詳細資訊，請造訪使用查詢參數篩 [選目錄資料的指南](../../catalog/api/filter-data.md)。
 
@@ -98,7 +98,7 @@ curl -X GET 'https://platform.adobe.io/data/foundation/catalog/batches?dataSet=5
 }
 ```
 
-## 使用您的批次ID擷取下一個API呼叫
+## 使用您的批次ID擷取下一個API呼叫 {#retrieve-the-next-api-call-with-your-batch-id}
 
 在您取得批次ID後，就可以提出新的GET要求 `/batches`。 請求會傳回用作下一個API請求的連結。
 
@@ -152,7 +152,7 @@ curl -X GET 'https://platform.adobe.io/data/foundation/export/batches/035e2520-5
 }
 ```
 
-## 擷取您的檔案
+## 擷取您的檔案 {#retrieving-your-files}
 
 使用 `href` 上一步驟中的值做為API呼叫，提出新的GET請求以擷取您的檔案目錄。
 
