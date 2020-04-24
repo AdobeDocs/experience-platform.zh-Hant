@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 建立和發佈機器學習模型逐步說明
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: df85ea955b7a308e6be1e2149fcdfb4224facc53
+source-git-commit: 19823c7cf0459e045366f0baae2bd8a98416154c
 
 ---
 
@@ -47,7 +47,7 @@ Adobe Experience Platform Data Science Workspace提供使用預先建立的產�
    * 批：資料集由批處理組成。 批是一組在一段時間內收集並作為單個單位一起處理的資料。
    * JupyterLab:JupyterLab [](https://blog.jupyter.org/jupyterlab-is-ready-for-users-5a6f039b8906) 是Project Jupyter的開放原始碼網路介面，並與Experience Platform緊密整合。
 
-## 準備資料
+## 準備資料 {#prepare-your-data}
 
 若要建立機器學習模型，向客戶提供個人化產品建議，您必須分析您網站上先前客戶購買的產品。 本節探討如何透過Adobe Analytics將此資料匯入Platform，以及如何將該資料轉換成機器學習模型要使用的功能資料集。
 
@@ -68,7 +68,7 @@ Adobe Experience Platform Data Science Workspace提供使用預先建立的產�
 | Recommendations輸入資料集 | Recommendations輸入結構 | Analytics資料會使用功能管道轉換為訓練資料集。 此資料用於訓練Product Recommendations機器學習模型。 `itemid` 並對 `userid` 應該客戶購買的產品。 |
 | Recommendations輸出資料集 | Recommendations輸出結構 | 儲存計分結果的資料集，會包含每個客戶的建議產品清單。 |
 
-## 製作您的模型
+## 製作您的模型 {#author-your-model}
 
 Data Science Workspace生命週期的第二個元件包括編寫配方和模型。 「產品建議方式」旨在利用過去的購買資料和機器學習，大規模產生產品建議。
 
@@ -85,7 +85,7 @@ Data Science Workspace生命週期的第二個元件包括編寫配方和模型�
 
 您現在已檢視「產品建議方式」所需的輸入和輸出結構。 您現在可以繼續下一節，瞭解如何建立、訓練和評估產品建議模型。
 
-## 培訓並評估您的模型
+## 培訓並評估您的模型 {#train-and-evaluate-your-model}
 
 現在您的資料已備妥，配方已可供使用，您可以建立、訓練和評估機器學習模型。
 
@@ -130,7 +130,7 @@ Data Science Workspace生命週期的第二個元件包括編寫配方和模型�
 3. 您可以在右側導軌上查看用於每個培訓執行的資料集、結構和組態參數。
 4. 返回「模型」頁面，並透過觀察其評估度量來識別執行成效最佳的培訓。
 
-## 實施您的模型
+## 實施您的模型 {#operationalize-your-model}
 
 Data Science工作流程的最後一步是將您的模型實際運作，以便從資料儲存區獲得分數和使用見解。
 
