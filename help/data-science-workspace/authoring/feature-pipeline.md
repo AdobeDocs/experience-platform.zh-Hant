@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 建立特徵管線
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: b9b0578a43182650b3cfbd71f46bcb817b3b0cda
+source-git-commit: 19823c7cf0459e045366f0baae2bd8a98416154c
 
 ---
 
@@ -14,17 +14,6 @@ source-git-commit: b9b0578a43182650b3cfbd71f46bcb817b3b0cda
 Adobe Experience Platform可讓您透過Sensei機器學習架構執行階段（以下稱為「執行階段」），建立並建立自訂功能管道，以大規模執行功能工程。
 
 本檔案說明在「功能管道」中找到的各種類別，並提供使用PySpark和Spark中的「模型編寫SDK [](./sdk.md) 」建立自訂「功能管道」的逐步教學課程。
-
-本教學課程涵蓋下列步驟：
-- [實作您的功能管道類](#implement-your-feature-pipeline-classes)
-   - [在配置檔案中定義變數](#define-variables-in-the-configuration-json-file)
-   - [使用DataLoader準備輸入資料](#prepare-the-input-data-with-dataloader)
-   - [使用DatasetTransformer轉換資料集](#transform-a-dataset-with-datasettransformer)
-   - [使用FeaturePipelineFactory來工程資料功能](#engineer-data-features-with-featurepipelinefactory)
-   - [使用DataSaver儲存您的功能資料集](#store-your-feature-dataset-with-datasaver)
-   - [在應用程式檔案中指定您實作的類別名稱](#specify-your-implemented-class-names-in-the-application-file)
-- [建立二進位工件](#build-the-binary-artifact)
-- [使用API建立功能管線引擎](#create-a-feature-pipeline-engine-using-the-api)
 
 ## 特徵管線類
 
@@ -44,11 +33,11 @@ Adobe Experience Platform可讓您透過Sensei機器學習架構執行階段（�
 ![](../images/authoring/feature-pipeline/FeaturePipeline_Runtime_flow.png)
 
 
-## 實作您的功能管道類
+## 實作您的功能管道類 {#implement-your-feature-pipeline-classes}
 
 以下幾節提供了有關實施「特徵管線」所需類的詳細資訊和示例。
 
-### 在設定JSON檔案中定義變數
+### 在設定JSON檔案中定義變數 {#define-variables-in-the-configuration-json-file}
 
 設定JSON檔案包含索引鍵值配對，供您指定稍後在執行階段中定義的任何變數。 這些索引鍵值配對可定義屬性，例如輸入資料集位置、輸出資料集ID、租用戶ID、欄標題等。
 
@@ -96,7 +85,7 @@ val input_dataset_id: String = configProperties.get("datasetId")
 ```
 
 
-### 使用DataLoader準備輸入資料
+### 使用DataLoader準備輸入資料 {#prepare-the-input-data-with-dataloader}
 
 DataLoader負責擷取和篩選輸入資料。 您對DataLoader的實作必須擴充抽象類別 `DataLoader` 並覆寫抽象方法 `load`。
 
@@ -200,7 +189,7 @@ class MyDataLoader extends DataLoader {
 
 
 
-### 使用DatasetTransformer轉換資料集
+### 使用DatasetTransformer轉換資料集 {#transform-a-dataset-with-datasettransformer}
 
 DatasetTransformer提供用於轉換輸入DataFrame的邏輯，並返回新的衍生DataFrame。 此類可以實施為與FeaturePipelineFactory協作、作為唯一的特徵工程元件，或者選擇不實施此類。
 
@@ -255,7 +244,7 @@ class MyDatasetTransformer extends DatasetTransformer {
 
 
 
-### 使用FeaturePipelineFactory來工程資料功能
+### 使用FeaturePipelineFactory來工程資料功能 {#engineer-data-features-with-featurepipelinefactory}
 
 FeaturePipelineFactory可讓您透過Spark Pipeline，定義並連結一系列的Spark Prandfors，來建置您的功能工程邏輯。 此類可以實現，以便與DatasetTransformer協作、作為唯一的特徵工程元件，或者選擇不實現此類。
 
@@ -334,7 +323,7 @@ class MyFeaturePipelineFactory(uid:String) extends FeaturePipelineFactory(uid) {
 
 
 
-### 使用DataSaver儲存您的功能資料集
+### 使用DataSaver儲存您的功能資料集 {#store-your-feature-dataset-with-datasaver}
 
 DataSaver負責將生成的功能資料集儲存到儲存位置。 您對DataSaver的實施必須擴展抽象類 `DataSaver` 並覆蓋抽象方法 `save`。
 
@@ -467,7 +456,7 @@ class MyDataSaver extends DataSaver {
 }
 ```
 
-### 在應用程式檔案中指定您實作的類別名稱
+### 在應用程式檔案中指定您實作的類別名稱 {#specify-your-implemented-class-names-in-the-application-file}
 
 現在已定義並實施了「特徵管線」類，您必須在應用程式檔案中指定類的名稱。
 
@@ -515,7 +504,7 @@ feature.dataSaver=MyDataSaver
 
 
 
-## 建立二進位工件
+## 建立二進位工件 {#build-the-binary-artifact}
 
 現在，您的功能管線類已實作，您可以將它建立並編譯為二進位物件，然後再用來透過API呼叫建立功能管線。
 
@@ -543,11 +532,11 @@ mvn clean install
 
 成功構建「特徵管線」將在目 `.jar` 錄中生成 `/dist` 對象，該對象用於建立特徵管線。
 
-## 使用API建立功能管線引擎
+## 使用API建立功能管線引擎 {#create-a-feature-pipeline-engine-using-the-api}
 
 現在您已製作了「功能管道」並建立二進位工件，您可 [以使用Sensei Machine Learning API建立「功能管道引擎」](../api/engines.md#create-a-feature-pipeline-engine-using-binary-artifacts)。 成功建立「特徵管線引擎」(Feature Pipeline Engine)將提供作為響應主體一部分的引擎ID，請務必保存此值，然後再繼續下一步。
 
-## 後續步驟
+## 下一步 {#next-steps}
 
 [//]: # (Next steps section should refer to tutorials on how to score data using the Feature Pipeline Engine. Update this document once those tutorials are available)
 
