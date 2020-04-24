@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 匯入封裝的方式(UI)
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: a7db31793d33d4571a867f5632243c59b5cb7975
+source-git-commit: 19823c7cf0459e045366f0baae2bd8a98416154c
 
 ---
 
@@ -121,21 +121,21 @@ source-git-commit: a7db31793d33d4571a867f5632243c59b5cb7975
 
 ### 匯入以Docker為基礎的方式- Python {#python}
 
-首先，導覽並選 **取** 「平台UI」左上角的「工作流程」。 接著，選取「匯 *入方式* 」，然後按一 **下「啟動」**。
+首先，導覽並選 **[!UICONTROL Workflows]** 取位於平台UI左上角的項目。 接著，選取「匯 *入方式* 」並按一下 **[!UICONTROL Launch]**。
 
 ![](../images/models-recipes/import-package-ui/launch-import.png)
 
-此時會 *顯示* 「匯入方式 ** 」工作流程的「設定」頁面。 輸入處方的名稱和說明，然後在右 **上角** 選擇「下一步」。
+此時會 *顯示* 「匯入方式 ** 」工作流程的「設定」頁面。 輸入處方的名稱和說明，然後 **[!UICONTROL Next]** 在右上角選擇。
 
 ![配置工作流](../images/models-recipes/import-package-ui/configure-workflow.png)
 
 >[!NOTE]
 > 在「將 [來源檔案封裝為配方」教學課程中](./package-source-files-recipe.md) ，使用Python來源檔案建立零售銷售配方時，會提供Docker URL。
 
-在「選擇來源 *」頁面上，將與使用Python來源檔案建立的封裝方式對應的Docker URL貼入「來源* URL **** 」欄位。 接著，透過拖放方式匯入提供的設定檔案，或使用檔案系統瀏 **覽器**。 可在中找到提供的配置檔案 `experience-platform-dsw-reference/recipes/python/retail/retail.config.json`。 在「 **Runtime** 」下拉式清單中選取「 *Python* 」，並在「 **Type** ** Drop」中選取「Classification」。 一切填妥後，按一下右 **上角的** 「下一步」，繼續 *管理結構*。
+在「選擇源」頁 *面上* ，將與使用Python源檔案構建的打包方式對應的Docker URL貼上到欄位中 **[!UICONTROL Source URL]** 。 接著，透過拖放方式匯入提供的設定檔案，或使用檔案系統瀏 **覽器**。 可在中找到提供的配置檔案 `experience-platform-dsw-reference/recipes/python/retail/retail.config.json`。 在「 **[!UICONTROL Python]** 執行時 *期* 」下拉式清單 **[!UICONTROL Classification]** 和「類 *型* 」下拉式清單中選取。 一切填妥後，按一 **[!UICONTROL Next]** 下右上角的，繼續「管理 *結構」*。
 
 >[!NOTE]
-> *類型&#x200B;*支援&#x200B;**分類**和&#x200B;**回歸**。 如果模型未落在其中一種類型下，請選擇「自&#x200B;**訂」**。
+> *Type *supports **[!UICONTROL Classification]**和&#x200B;**[!UICONTROL Regression]**。 如果模型未落在其中一種類型下，請選擇&#x200B;**[!UICONTROL Custom]**。
 
 ![](../images/models-recipes/import-package-ui/recipe_source_python.png)
 
@@ -143,9 +143,9 @@ source-git-commit: a7db31793d33d4571a867f5632243c59b5cb7975
 
 ![](../images/models-recipes/import-package-ui/recipe_schema.png)
 
-在「功 *能管理* 」區段下，按一下架構檢視器中的租用戶識別碼，以展開「零售銷售」輸入架構。 通過反白顯示所需特徵，並在右側的「欄位屬性」(Field Properties)窗口中選擇「輸入特徵」( **Input Feature** )或「目標特徵」( **Target Feature** )，來選擇輸入和輸 **出特徵** 。 在本教學課程中，請將 **weeklySales** 設為 **Target功能** ，而將其他項目設為 **輸入功能**。 按一 **下「下一步** 」以檢閱新設定的方式。
+在「功 *能管理* 」區段下，按一下架構檢視器中的租用戶識別碼，以展開「零售銷售」輸入架構。 通過反白顯示所需特徵，並在右窗口中選擇或選擇 **[!UICONTROL Input Feature]** 輸入 **[!UICONTROL Target Feature]** 和輸出特 **[!UICONTROL Field Properties]** 徵。 在本教學課程中，請將 **[!UICONTROL weeklySales]** 其他項 **[!UICONTROL Target Feature]** 目設為 **[!UICONTROL Input Feature]**。 按一 **[!UICONTROL Next]** 下以檢閱新設定的方式。
 
-視需要檢閱方式、新增、修改或移除組態。 按一 **下「完成** 」以建立方式。
+視需要檢閱方式、新增、修改或移除組態。 按一 **[!UICONTROL Finish]** 下以建立方式。
 
 ![](../images/models-recipes/import-package-ui/recipe_review.png)
 
@@ -153,21 +153,21 @@ source-git-commit: a7db31793d33d4571a867f5632243c59b5cb7975
 
 ### 導入基於Docker的配方- R {#r}
 
-首先，導覽並選 **取** 「平台UI」左上角的「工作流程」。 接著，選取「匯 *入方式* 」，然後按一 **下「啟動」**。
+首先，導覽並選 **[!UICONTROL Workflows]** 取位於平台UI左上角的項目。 接著，選取「匯 *入方式* 」並按一下 **[!UICONTROL Launch]**。
 
 ![](../images/models-recipes/import-package-ui/launch-import.png)
 
-此時會 *顯示* 「匯入方式 ** 」工作流程的「設定」頁面。 輸入處方的名稱和說明，然後在右 **上角** 選擇「下一步」。
+此時會 *顯示* 「匯入方式 ** 」工作流程的「設定」頁面。 輸入處方的名稱和說明，然後 **[!UICONTROL Next]** 在右上角選擇。
 
 ![配置工作流](../images/models-recipes/import-package-ui/configure-workflow.png)
 
 >[!NOTE]
 > 在將來 [源檔案打包到配方教程中](./package-source-files-recipe.md) ，在使用R源檔案構建零售銷售配方的結束處提供了Docker URL。
 
-在「選擇源 *」頁上，將與使用R源檔案構建的打包方式對應的Docker URL貼上到「源URL」* 欄位中 **** 。 接著，透過拖放方式匯入提供的設定檔案，或使用檔案系統瀏 **覽器**。 可在中找到提供的配置檔案 `experience-platform-dsw-reference/recipes/R/Retail\ -\ GradientBoosting/retail.config.json`。 在「 **Runtime** 」下拉式清單中選取「R *」，在「Type* **drop」中選取「Classification**** 」。 一切填妥後，按一下右 **上角的** 「下一步」，繼續 *管理結構*。
+在「選擇源」頁 *面上* ，將與使用R源檔案構建的打包方式對應的Docker URL貼上到欄位中 **[!UICONTROL Source URL]** 。 接著，透過拖放方式匯入提供的設定檔案，或使用檔案系統瀏 **覽器**。 可在中找到提供的配置檔案 `experience-platform-dsw-reference/recipes/R/Retail\ -\ GradientBoosting/retail.config.json`。 在「 **[!UICONTROL R]** 執行時 *期* 」下拉式清單 **[!UICONTROL Classification]** 和「類 *型* 」下拉式清單中選取。 一切填妥後，按一 **[!UICONTROL Next]** 下右上角的，繼續「管理 *結構」*。
 
 >[!NOTE]
-> *類型&#x200B;*支援&#x200B;**分類**和&#x200B;**回歸**。 如果模型未落在其中一種類型下，請選擇「自&#x200B;**訂」**。
+> *Type *supports **[!UICONTROL Classification]**和&#x200B;**[!UICONTROL Regression]**。 如果模型未落在其中一種類型下，請選擇&#x200B;**[!UICONTROL Custom]**。
 
 ![](../images/models-recipes/import-package-ui/recipe_source_R.png)
 
@@ -175,7 +175,7 @@ source-git-commit: a7db31793d33d4571a867f5632243c59b5cb7975
 
 ![](../images/models-recipes/import-package-ui/recipe_schema.png)
 
-在「功 *能管理* 」區段下，按一下架構檢視器中的租用戶識別碼，以展開「零售銷售」輸入架構。 通過反白顯示所需特徵，並在右側的「欄位屬性」(Field Properties)窗口中選擇「輸入特徵」( **Input Feature** )或「目標特徵」( **Target Feature** )，來選擇輸入和輸 **出特徵** 。 在本教學課程中，請將 **weeklySales** 設為 **Target功能** ，而將其他項目設為 **輸入功能**。 按一 **下「下一** 步」以檢閱新的「已設定」方式。
+在「功 *能管理* 」區段下，按一下架構檢視器中的租用戶識別碼，以展開「零售銷售」輸入架構。 通過反白顯示所需特徵，並在右窗口中選擇或選擇 **[!UICONTROL Input Feature]** 輸入 **[!UICONTROL Target Feature]** 和輸出特 **[!UICONTROL Field Properties]** 徵。 在本教學課程中，請將 **[!UICONTROL weeklySales]** 其他項 **[!UICONTROL Target Feature]** 目設為 **[!UICONTROL Input Feature]**。 按一 **[!UICONTROL Next]** 下以檢閱新的「已設定」方式。
 
 視需要檢閱方式、新增、修改或移除組態。 按一 **下「完成** 」以建立方式。
 
@@ -185,21 +185,21 @@ source-git-commit: a7db31793d33d4571a867f5632243c59b5cb7975
 
 ### 匯入以Docker為基礎的方式- PySpark {#pyspark}
 
-首先，導覽並選 **取** 「平台UI」左上角的「工作流程」。 接著，選取「匯 *入方式* 」，然後按一 **下「啟動」**。
+首先，導覽並選 **[!UICONTROL Workflows]** 取位於平台UI左上角的項目。 接著，選取「匯 *入方式* 」並按一下 **[!UICONTROL Launch]**。
 
 ![](../images/models-recipes/import-package-ui/launch-import.png)
 
-此時會 *顯示* 「匯入方式 ** 」工作流程的「設定」頁面。 輸入處方的名稱和說明，然後在右上角 **選擇** 「下一步」以繼續。
+此時會 *顯示* 「匯入方式 ** 」工作流程的「設定」頁面。 輸入處方的名稱和說明，然後 **[!UICONTROL Next]** 在右上角選擇以繼續。
 
 ![配置工作流](../images/models-recipes/import-package-ui/configure-workflow.png)
 
 >[!NOTE]
 > 在將來 [源檔案封裝至配方教學課程中](./package-source-files-recipe.md) ，使用PySpark來源檔案建立零售銷售配方時，會提供Docker URL。
 
-在「選取來源 *」頁面上，將對應於使用PySpark來源檔案建立之封裝方式的Docker URL貼入「來源URL」欄* 位中 **** 。 接著，透過拖放方式匯入提供的設定檔案，或使用檔案系統瀏 **覽器**。 可在中找到提供的配置檔案 `experience-platform-dsw-reference/recipes/pyspark/retail/pipeline.json`。 在「 **執行階段** 」下拉式清單中選 *取PySpark* 。 在選取PySpark執行時期後，預設對象會自動填入 **Docker**。 接著，在「 **類型** 」下拉式清 *單中選* 取「分類」。 一切填妥後，按一下右 **上角的** 「下一步」，繼續 *管理結構*。
+在「選取來源」頁 *面上* ，請將對應於使用PySpark來源檔案建立之封裝方式的Docker URL貼入欄位中 **[!UICONTROL Source URL]** 。 接著，透過拖放方式匯入提供的設定檔案，或使用檔案系統瀏 **覽器**。 可在中找到提供的配置檔案 `experience-platform-dsw-reference/recipes/pyspark/retail/pipeline.json`。 在「 **[!UICONTROL PySpark]** 執行時 *期* 」下拉式清單中選取。 在選取PySpark執行時期後，預設對象會自動填入 **[!UICONTROL Docker]**。 接著，在「 **[!UICONTROL Classification]** 類型」下 *拉式清單中選取* 。 一切填妥後，按一 **[!UICONTROL Next]** 下右上角的，繼續「管理 *結構」*。
 
 >[!NOTE]
-> *類型&#x200B;*支援&#x200B;**分類**和&#x200B;**回歸**。 如果模型未落在其中一種類型下，請選擇「自&#x200B;**訂」**。
+> *Type *supports **[!UICONTROL Classification]**和&#x200B;**[!UICONTROL Regression]**。 如果模型未落在其中一種類型下，請選擇&#x200B;**[!UICONTROL Custom]**。
 
 ![](../images/models-recipes/import-package-ui/pyspark-databricks.png)
 
@@ -207,9 +207,9 @@ source-git-commit: a7db31793d33d4571a867f5632243c59b5cb7975
 
 ![](../images/models-recipes/import-package-ui/recipe_schema.png)
 
-在「功 *能管理* 」區段下，按一下架構檢視器中的租用戶識別碼，以展開「零售銷售」輸入架構。 通過反白顯示所需特徵，並在右側的「欄位屬性」(Field Properties)窗口中選擇「輸入特徵」( **Input Feature** )或「目標特徵」( **Target Feature** )，來選擇輸入和輸 **出特徵** 。 在本教學課程中，請將 **weeklySales** 設為 **Target功能** ，而將其他項目設為 **輸入功能**。 按一 **下「下一步** 」以檢閱新設定的方式。
+在「功 *能管理* 」區段下，按一下架構檢視器中的租用戶識別碼，以展開「零售銷售」輸入架構。 通過反白顯示所需特徵，並在右窗口中選擇或選擇 **[!UICONTROL Input Feature]** 輸入 **[!UICONTROL Target Feature]** 和輸出特 **[!UICONTROL Field Properties]** 徵。 在本教學課程中，請將 **[!UICONTROL weeklySales]** 其他項 **[!UICONTROL Target Feature]** 目設為 **[!UICONTROL Input Feature]**。 按一 **[!UICONTROL Next]** 下以檢閱新設定的方式。
 
-視需要檢閱方式、新增、修改或移除組態。 按一 **下「完成** 」以建立方式。
+視需要檢閱方式、新增、修改或移除組態。 按一 **[!UICONTROL Finish]** 下以建立方式。
 
 ![](../images/models-recipes/import-package-ui/recipe_review.png)
 
@@ -217,21 +217,21 @@ source-git-commit: a7db31793d33d4571a867f5632243c59b5cb7975
 
 ### 導入基於Docker的配方- Scala {#scala}
 
-首先，導覽並選 **取** 「平台UI」左上角的「工作流程」。 接著，選取「匯 *入方式* 」，然後按一 **下「啟動」**。
+首先，導覽並選 **[!UICONTROL Workflows]** 取位於平台UI左上角的項目。 接著，選取「匯 *入方式* 」並按一下 **[!UICONTROL Launch]**。
 
 ![](../images/models-recipes/import-package-ui/launch-import.png)
 
-此時會 *顯示* 「匯入方式 ** 」工作流程的「設定」頁面。 輸入處方的名稱和說明，然後在右上角 **選擇** 「下一步」以繼續。
+此時會 *顯示* 「匯入方式 ** 」工作流程的「設定」頁面。 輸入處方的名稱和說明，然後 **[!UICONTROL Next]** 在右上角選擇以繼續。
 
 ![配置工作流](../images/models-recipes/import-package-ui/configure-workflow.png)
 
 >[!NOTE]
-> 在將來 [源檔案封裝至配方教學課程中](./package-source-files-recipe.md) ，使用Scala(Spark)來源檔案建立零售銷售配方時，會提供Docker URL。
+> 在「將來 [源檔案封裝至配方」教學課程中](./package-source-files-recipe.md) ，使用Scala(Spark)來源檔案建立零售銷售配方時，會提供Docker URL。
 
-在「選擇源 *」頁上，將與使用「源URL」欄位中的Scala源檔案構建的打包方式對應的Docker URL* 貼上到 ** 。 接著，透過拖放方式匯入提供的設定檔案，或使用檔案系統瀏 **覽器**。 可在中找到提供的配置檔案 `experience-platform-dsw-reference/recipes/scala/retail/pipelineservice.json`。 在「 **Runtime** 」下拉式清 *單中選* 取Spark。 在選取Spark執行時期後，預設對象會自動填入 **Docker**。 接著，從「 **類型** 」下拉式選 *取「回歸* 」。 一切填妥後，按一下右 **上角的** 「下一步」，繼續 *管理結構*。
+在「選擇源 *」頁上，將與使用「源URL」欄位中的Scala源檔案構建的打包方式對應的Docker URL* 貼上到 ** 。 接著，透過拖放方式匯入提供的設定檔案，或使用檔案系統瀏 **覽器**。 可在中找到提供的配置檔案 `experience-platform-dsw-reference/recipes/scala/retail/pipelineservice.json`。 在「 **[!UICONTROL Spark]** 執行時 *期* 」下拉式清單中選取。 在選取Spark執行時期後，預設對象會自動填入 **[!UICONTROL Docker]**。 接著，從「 **[!UICONTROL Regression]** 類型」下 *拉式清單中選取* 。 一切填妥後，按一 **[!UICONTROL Next]** 下右上角的，繼續「管理 *結構」*。
 
 >[!NOTE]
-> *類型&#x200B;*支援&#x200B;**分類**和&#x200B;**回歸**。 如果模型未落在其中一種類型下，請選擇「自&#x200B;**訂」**。
+> *Type *supports **[!UICONTROL Classification]**和&#x200B;**[!UICONTROL Regression]**。 如果模型未落在其中一種類型下，請選擇&#x200B;**[!UICONTROL Custom]**。
 
 ![](../images/models-recipes/import-package-ui/scala-databricks.png)
 
@@ -239,15 +239,15 @@ source-git-commit: a7db31793d33d4571a867f5632243c59b5cb7975
 
 ![](../images/models-recipes/import-package-ui/recipe_schema.png)
 
-在「功 *能管理* 」區段下，按一下架構檢視器中的租用戶識別碼，以展開「零售銷售」輸入架構。 通過反白顯示所需特徵，並在右側的「欄位屬性」(Field Properties)窗口中選擇「輸入特徵」( **Input Feature** )或「目標特徵」( **Target Feature** )，來選擇輸入和輸 **出特徵** 。 在本教學課程中，請將 **weeklySales** 設為 **Target功能** ，而將其他項目設為 **輸入功能**。 按一 **下「下一步** 」以檢閱新設定的方式。
+在「功 *能管理* 」區段下，按一下架構檢視器中的租用戶識別碼，以展開「零售銷售」輸入架構。 通過反白顯示所需特徵，並在右窗口中選擇或選擇 **[!UICONTROL Input Feature]** 輸入 **[!UICONTROL Target Feature]** 和輸出特 **[!UICONTROL Field Properties]** 徵。 在本教學課程中，請將 **[!UICONTROL weeklySales]** 其他項 **[!UICONTROL Target Feature]** 目設為 **[!UICONTROL Input Feature]**。 按一 **[!UICONTROL Next]** 下以檢閱新設定的方式。
 
-視需要檢閱方式、新增、修改或移除組態。 按一 **下「完成** 」以建立方式。
+視需要檢閱方式、新增、修改或移除組態。 按一 **[!UICONTROL Finish]** 下以建立方式。
 
 ![](../images/models-recipes/import-package-ui/recipe_review.png)
 
 請繼續下 [一步](#next-steps) ，瞭解如何使用新建立的零售銷售方式，在資料科學工作區中建立模型。
 
-## 後續步驟
+## 下一步 {#next-steps}
 
 本教學課程提供如何設定方式並將其匯入Data Science Workspace的深入資訊。 您現在可以使用新建立的方式建立、訓練和評估模型。
 
