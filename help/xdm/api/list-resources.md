@@ -4,18 +4,16 @@ solution: Experience Platform
 title: 列出資源
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 4b052cdd3aca9c771855b2dc2a97ca48c7b8ffb0
+source-git-commit: 58549241f05f1bd604f33762f681c60946fa52f5
 
 ---
 
 
 # 列出資源
 
-您可以執行單一GET請求，以檢視容器內所有資源（結構、類別、混合或資料類型）的清單。
+通過執行單個GET請求，可以查看容器內特定類型（類、混合、方案、資料類型或描述符）的所有模式註冊表資源的清單。
 
 >[!NOTE] 列出資源時，方案註冊表將結果集限制為300個項。 若要傳回超出此限制的資源，您必須使用分 [頁參數](#paging)。 建議您使用查詢參數來篩 [選結果](#filtering) ，並減少傳回的資源數。
->
-> 如果您想要完全覆寫300個項目限制，您必須使用「接受」標題，以 `application/vnd.adobe.xdm-v2+json` 在單一請求中傳回所有結果。
 
 **API格式**
 
@@ -27,7 +25,7 @@ GET /{CONTAINER_ID}/{RESOURCE_TYPE}?{QUERY_PARAMS}
 | 參數 | 說明 |
 | --- | --- |
 | `{CONTAINER_ID}` | 資源所在的容器（「全域」或「租用戶」）。 |
-| `{RESOURCE_TYPE}` | 要從方案庫中檢索的資源類型。 有效類 `datatypes`型有 `mixins`、 `schemas`和 `classes`。 |
+| `{RESOURCE_TYPE}` | 要從方案庫中檢索的資源類型。 有效類 `classes`型有 `mixins`、 `schemas`、 `datatypes`和 `descriptors`。 |
 | `{QUERY_PARAMS`} | 可選查詢參數，以篩選結果。 如需詳細資訊，請 [參閱查詢](#query) 參數一節。 |
 
 **請求**
@@ -48,7 +46,7 @@ curl -X GET \
 | ------- | ------------ |
 | application/vnd.adobe.xed-id+json | 返回每個資源的簡短摘要。 這是列出資源的建議標題。 (限制：300) |
 | application/vnd.adobe.xed+json | 傳回每個資源的完整JSON結構描述，其中包含 `$ref` 原始 `allOf` 資源。 (限制：300) |
-| application/vnd.adobe.xdm-v2+json | 傳回單一請求中所有結果的完整JSON結構描述，並覆寫300個項目限制。 |
+| application/vnd.adobe.xdm-v2+json | 使用端點 `/descriptors` 時，必須使用此接受標頭才能使用尋呼功能。 |
 
 **回應**
 
