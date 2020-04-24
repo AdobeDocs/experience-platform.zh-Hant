@@ -4,7 +4,7 @@ solution: Experience Platform
 title: JupyterLab使用指南
 topic: Overview
 translation-type: tm+mt
-source-git-commit: d42a5de7094d305249b05454ce4aba79776a46e1
+source-git-commit: 19823c7cf0459e045366f0baae2bd8a98416154c
 
 ---
 
@@ -51,16 +51,16 @@ Experience Platform的JupyterLab整合隨附架構變更、設計考量、自訂
 * [程式碼儲存格](#code-cells)
 * [內核](#kernels)
 * [內核會話](#kernel-sessions)
-* [PySpark/Spark執行資源](#pysparkspark-execution-resource)
+* [PySpark/Spark執行資源](#execution-resource)
 * [啟動程式](#launcher)
 
-### 存取JupyterLab
+### 存取JupyterLab {#access-jupyterlab}
 
 在 [Adobe Experience Platform](https://platform.adobe.com)，從左側導覽欄選 **取「筆記型電腦** 」。 請給JupyterLab留出一些時間以完全初始化。
 
 ![](../images/jupyterlab/user-guide/access_jupyterlab.png)
 
-### JupyterLab介面
+### JupyterLab介面 {#jupyterlab-interface}
 
 JupyterLab介麵包含功能表列、可折疊的左側邊欄，以及包含檔案和活動標籤的主要工作區。
 
@@ -98,7 +98,7 @@ JupyterLab的主要工作區域可讓您將檔案和其他活動排列成標籤�
 
 ![](../images/jupyterlab/user-guide/main_work_area.gif)
 
-### 程式碼儲存格
+### 程式碼儲存格 {#code-cells}
 
 代碼單元格是筆記型電腦的主要內容。 它們包含的原始碼為筆記型電腦相關內核的語言，以及執行代碼單元格後的輸出。 每個代碼單元格的右側顯示一個執行計數，該代碼單元格表示其執行順序。
 
@@ -130,7 +130,7 @@ JupyterLab的主要工作區域可讓您將檔案和其他活動排列成標籤�
 | **Spark —— 已過時** | 無 | <ul><li>Sensei ML框架</li><li>目錄服務</li></ul> |
 | **斯卡拉** | 無 | <ul><li>Sensei ML框架</li><li>目錄服務</li></ul> |
 
-### 內核會話
+### 內核會話 {#kernel-sessions}
 
 JupyterLab上的每個活動筆記本或活動都使用內核會話。 從左側邊欄展開「運行終端和內核」 **頁籤，可找到所有活動會話** 。 通過觀察筆記本介面的右上角，可以確定筆記本內核的類型和狀態。 在下圖中，筆記本的關聯內核是 **Python 3** ，其當前狀態由右側的灰色圓表示。 空心圓表示空閒內核，實心圓表示忙碌內核。
 
@@ -193,7 +193,7 @@ PySpark和Spark內核可讓您在PySpark或Spark筆記型電腦中使用configur
 | 名稱 | 應用程式的名稱 | 字串 |
 | 會議 | Spark設定屬性 | key=val的映射 |
 
-### 啟動程式
+### 啟動程式 {#launcher}
 
 [//]: # (Talk about the different Notebooks, introduce that certain starter notebooks are limited to particular kernels)
 
@@ -799,7 +799,7 @@ timedf.show()
 | python | 3.6.7 |
 | mkl-rt | 11.1 |
 
-## 查詢服務的可選SQL標誌
+## 查詢服務的可選SQL標誌 {#optional-sql-flags-for-query-service}
 
 此表概述了可用於查詢服務的可選SQL標誌。
 
