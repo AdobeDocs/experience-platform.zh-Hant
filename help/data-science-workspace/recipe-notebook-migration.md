@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 配方和筆記本移轉指南
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 057001b0b4488f578bdd07387a66c647a91798c8
+source-git-commit: 36305d9098f24b40efd333e7d8a331ebca41ca59
 
 ---
 
@@ -144,12 +144,12 @@ COPY target/ml-retail-sample-spark-*-jar-with-dependencies.jar /application.jar
 
 ### 變更相依性(Spark) {#change-dependencies-spark}
 
-如果您使用現有配方，pom.xml檔案中需要更改相關性。 將模型編寫-sdk相依性版本變更為1.0.0。接著，將pom檔案中的Spark版本更新為2.4.3，將Scala版本更新為2.11.12。
+如果您使用現有配方，pom.xml檔案中需要更改相關性。 將模型編寫-sdk相依性版本變更為2.0.0。接著，將pom檔案中的Spark版本更新為2.4.3，將Scala版本更新為2.11.12。
 
 ```json
 <groupId>com.adobe.platform.ml</groupId>
 <artifactId>authoring-sdk_2.11</artifactId>
-<version>1.0.0</version>
+<version>2.0.0</version>
 <classifier>jar-with-dependencies</classifier>
 ```
 
