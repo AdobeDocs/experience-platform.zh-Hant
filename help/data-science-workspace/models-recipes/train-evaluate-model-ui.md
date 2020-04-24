@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 訓練和評估模型(UI)
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 5699022d1f18773c81a0a36d4593393764cb771a
+source-git-commit: 19823c7cf0459e045366f0baae2bd8a98416154c
 
 ---
 
@@ -79,7 +79,7 @@ source-git-commit: 5699022d1f18773c81a0a36d4593393764cb771a
 
 本教學課程將帶領您在資料科學工作區中建立、訓練和評估模型。 在您到達最佳化模型後，您就可以使用經過訓練的模型，依照UI教學課程中的「 [Score a Model」（對模型評分）來產生見解](./score-model-ui.md) 。
 
-## 參考
+## 參考 {#reference}
 
 ### 零售銷售方式配置
 
