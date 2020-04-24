@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 使用Jupyter筆記型電腦建立配方
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 10f157e0c9f8ab6e487b7dc83416b9e3b2f324c4
+source-git-commit: 19823c7cf0459e045366f0baae2bd8a98416154c
 
 ---
 
@@ -12,18 +12,6 @@ source-git-commit: 10f157e0c9f8ab6e487b7dc83416b9e3b2f324c4
 # 使用Jupyter筆記型電腦建立配方
 
 本教學課程將涵蓋兩個主要部分。 首先，您將使用JupyterLab Notebook中的範本建立機器學習模型。 接下來，您將在JupyterLab中練習筆記本至配方工作流程，以便在Data Science Workspace中建立配方。
-- [開始使用JupyterLab筆記型電腦環境](#get-started-with-the-jupyterlab-notebook-environment)
-- [編輯配方檔案](#make-edits-to-recipe-files)
-- [開始使用Recipe Builder筆記型電腦](#get-started-with-the-recipe-builder-notebook)
-   - [需求檔案](#requirements-file)
-   - [配置檔案](#configuration-files)
-   - [訓練資料載入器](#training-data-loader)
-   - [計分資料載入器](#scoring-data-loader)
-   - [管線檔案](#pipeline-file)
-   - [求值器檔案](#evaluator-file)
-   - [資料保護程式檔案](#data-saver-file)
-- [訓練與計分](#training-and-scoring)
-- [建立配方](#create-recipe)
 
 ## 引入的概念：
 
@@ -45,7 +33,7 @@ Recipe Builder筆記型電腦可讓您在筆記型電腦內執行訓練和計分
 
 當您從啟動器按一下Recipe Builder筆記型電腦時，筆記型電腦就會在標籤中開啟。 筆記本中使用的模板是Python Retail Sales Forecasting Recipe，也可以在此公共儲存庫 [中找到](https://github.com/adobe/experience-platform-dsw-reference/tree/master/recipes/python/retail/)
 
-您會注意到，在工具列中有三個額外的動作，即 **訓練**、 **分數****和建立方式**。 這些圖示只會出現在Recipe Builder筆記本中。 在筆記型電腦中建立配方後，有關這 [些動作的詳細資訊，請參閱訓練與計分區](#training-and-scoring) 。
+您會注意到，在工具列中有三個額外的動作，即 **[!UICONTROL Train]**- **[!UICONTROL Score]** 和 **[!UICONTROL Create Recipe]**。 這些圖示只會出現在Recipe Builder筆記本中。 在筆記型電腦中建立配方後，有關這 [些動作的詳細資訊，請參閱訓練與計分區](#training-and-scoring) 。
 
 ![](../images/jupyterlab/create-recipe/toolbar_actions.png)
 
@@ -69,7 +57,7 @@ Recipe Builder筆記型電腦可讓您在筆記型電腦內執行訓練和計分
 - [求值器檔案](#evaluator-file)
 - [資料保護程式檔案](#data-saver-file)
 
-### 需求檔案
+### 需求檔案 {#requirements-file}
 
 需求檔案可用來宣告您想要在配方中使用的其他程式庫。 如果存在相依性，可以指定版本號。 若要尋找其他資料庫，請造訪https://anaconda.org。 已在使用的主要程式庫清單包括：
 
@@ -84,7 +72,7 @@ data_access_sdk_python
 >[!NOTE]
 >您新增的程式庫或特定版本可能與上述程式庫不相容。
 
-### 配置檔案
+### 配置檔案 {#configuration-files}
 
 配置檔案和 `training.conf` 用 `scoring.conf`於指定要用於培訓和計分以及添加超參數的資料集。 培訓和計分有不同的配置。
 
@@ -108,7 +96,7 @@ data_access_sdk_python
 - `ML_FRAMEWORK_IMS_ML_TOKEN`
 - `ML_FRAMEWORK_IMS_TENANT_ID`
 
-## 訓練資料載入器
+## 訓練資料載入器 {#training-data-loader}
 
 訓練資料載入器的目的，是執行個體化用於建立機器學習模型的資料。 通常，培訓資料載入器將完成兩項工作：
 - 從平台載入資料
@@ -116,7 +104,7 @@ data_access_sdk_python
 
 以下兩節將重新載入資料和資料準備。
 
-### 載入資料
+### 載入資料 {#loading-data}
 
 這個步驟使用 [熊貓資料框](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.html)。 您可使用Platform SDK(`platform_sdk`)從Adobe Experience Platform中的檔案載入資料，或使用熊貓或功能從外部 `read_csv()` 來源 `read_json()` 載入資料。
 
@@ -126,11 +114,11 @@ data_access_sdk_python
 >[!NOTE]
 >在Recipe Builder筆記型電腦中，資料會透過資料載入器 `platform_sdk` 載入。
 
-### 平台SDK
+### 平台SDK {#platform-sdk}
 
 如需有關使用資料載入器的深入教 `platform_sdk` 學課程，請造訪 [Platform SDK指南](../authoring/platform-sdk.md)。 本教學課程提供有關建立驗證、基本資料讀取和基本資料寫入的資訊。
 
-### 外部來源
+### 外部來源 {#external-sources}
 
 本節將說明如何將JSON或CSV檔案匯入至Apcotes物件。 熊貓圖書館的官方檔案可在這裡找到：
 - [read_csv](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.read_csv.html)
@@ -180,7 +168,7 @@ df = prodreader.load(data_set_id=configProperties['trainingDataSetId'],
 
 既然您擁有了資料，您就可以從資料準備和功能工程開始。
 
-### 資料準備與功能工程
+### 資料準備與功能工程 {#data-preparation-and-feature-engineering}
 
 資料載入後，資料會進行準備，然後分割至資料 `train` 集 `val` 和。 范常式式碼如下：
 
@@ -222,7 +210,7 @@ dataframe.drop('date', axis=1, inplace=True)
 
 函 `load()` 數應以和資料集 `train` 為 `val` 輸出。
 
-### 計分資料載入器
+### 計分資料載入器 {#scoring-data-loader}
 
 載入計分資料的程式類似於在函式中載入訓練資 `split()` 料。 我們使用Data Access SDK來載入檔案中 `scoringDataSetId` 的資料 `recipe.conf` 。
 
@@ -292,11 +280,11 @@ df.dropna(0, inplace=True)
 
 計分 `load()` 資料載入器中的函式應以計分資料集作為輸出。
 
-### 管線檔案
+### 管線檔案 {#pipeline-file}
 
 該檔 `pipeline.py` 案包含訓練和計分的邏輯。
 
-### 訓練
+### 訓練 {#training}
 
 訓練的目的是使用訓練資料集中的功能和標籤來建立模型。
 
@@ -341,7 +329,7 @@ def train(configProperties, data):
 
 請注意，視您的應用程式而定，函式中會有引數 `GradientBoostingRegressor()` 。 `xTrainingDataset` 應包含您用於訓練的功能，但應 `yTrainingDataset` 包含您的標籤。
 
-### 計分
+### 計分 {#scoring}
 
 函 `score()` 數應包含計分演算法並傳回測量，以指出模型執行的成效。 該函 `score()` 數使用計分資料集標籤和訓練的模型來生成一組預測特徵。 然後，將這些預測值與計分資料集中的實際特徵進行比較。 在此範例中，函 `score()` 數使用訓練好的模型，使用計分資料集的標籤來預測特徵。 會傳回預計的功能。
 
@@ -363,11 +351,11 @@ def score(configProperties, data, model):
     return data
 ```
 
-### 求值器檔案
+### 求值器檔案 {#evaluator-file}
 
 檔 `evaluator.py` 案包含您如何評估訓練方式以及如何分割訓練資料的邏輯。 在零售銷售範例中，將包含載入和準備培訓資料的邏輯。 我們將詳細介紹以下兩節。
 
-### 分割資料集
+### 分割資料集 {#split-the-dataset}
 
 訓練的資料準備階段需要分割資料集以用於訓練和測試。 這 `val` 些資料在訓練後會隱含使用來評估模型。 此程式與計分不同。
 
@@ -386,7 +374,7 @@ def split(self, configProperties={}, dataframe=None):
     return train, val
 ```
 
-### 評估訓練好的模型
+### 評估訓練好的模型 {#evaluate-the-trained-model}
 
 函式 `evaluate()` 是在模型訓練後執行，並會傳回量度，以指出模型執行的成效。 此函 `evaluate()` 數使用測試資料集標籤和訓練模型來預測一組特徵。 然後，將這些預測值與測試資料集中的實際特徵進行比較。 常見的計分演算法包括：
 - [平均絕對百分比誤差(MAPE)](https://en.wikipedia.org/wiki/Mean_absolute_percentage_error)
@@ -415,7 +403,7 @@ def evaluate(self, data=[], model={}, configProperties={}):
 
 請注意，函式會傳回包 `metric` 含評估度量陣列的物件。 這些量度將用來評估受訓練模型的效能。
 
-### 資料保護程式檔案
+### 資料保護程式檔案 {#data-saver-file}
 
 檔案 `datasaver.py` 包含在測試計 `save()` 分時儲存預測的函式。 此函 `save()` 數將帶您的預測，並使用Experience Platform Catalog API，將資料寫入您在檔 `scoringResultsDataSetId` 案中指定的 `scoring.conf` 位置。
 
@@ -448,17 +436,17 @@ def save(configProperties, prediction):
     print(prediction)
 ```
 
-## 訓練與計分
+## 訓練與計分 {#training-and-scoring}
 
 當您變更筆記型電腦並想要訓練配方時，可以按一下列上方的相關按鈕，在儲存格中建立訓練執行。 按一下該按鈕後，培訓指令碼中的命令和輸出日誌將顯示在筆記本中(單元格 `evaluator.py` 下)。 Conda首先安裝所有相依項，然後開始培訓。
 
-請注意，您必須至少執行一次培訓，才能執行計分。 按一下「執 **行計分** 」按鈕，將對培訓期間產生的已訓練模型評分。 計分指令碼將出現在下方 `datasaver.py`。
+請注意，您必須至少執行一次培訓，才能執行計分。 按一下按 **[!UICONTROL Run Scoring]** 鈕，將對培訓期間產生的已訓練模型評分。 計分指令碼將出現在下方 `datasaver.py`。
 
 為了進行除錯，如果您想查看隱藏的輸出，請將 `debug` 其新增至輸出儲存格的結尾，然後重新執行。
 
-## 建立方式
+## 建立方式 {#create-recipe}
 
-編輯完配方並滿意培訓／計分輸出後，您可以按右上方導覽中的「建立配方 **** 」，從筆記本建立配方。
+編輯完配方並滿意培訓／計分輸出後，您可以按右上方導覽，從筆記型電腦 **[!UICONTROL Create Recipe]** 建立配方。
 
 ![](../images/jupyterlab/create-recipe/create-recipe.png)
 
@@ -466,7 +454,7 @@ def save(configProperties, prediction):
 
 ![](../images/jupyterlab/create-recipe/enter_recipe_name.png)
 
-按「確 **定** 」後，您就可以導覽至 [Adobe Experience Platform上的新配方](https://platform.adobe.com/)。 您可以按一下「檢 **視配方** 」按鈕，將您帶至「ML模型」下的「配方 **」標籤****。**
+按一下 **[!UICONTROL Ok]** ，您就可以導覽至 [Adobe Experience Platform上的新配方](https://platform.adobe.com/)。 您可以按一下按 **[!UICONTROL View Recipes]** 鈕，將您帶至下方的 **[!UICONTROL Recipes]** 標籤 **[!UICONTROL ML Models]**
 
 ![](../images/jupyterlab/create-recipe/recipe_creation_started.png)
 
@@ -480,13 +468,13 @@ def save(configProperties, prediction):
 > - 不要同時在不同的筆記本中建立配方
 
 
-## 後續步驟
+## 下一步 {#next-steps}
 
 完成本教學課程後，您就學會如何在Recipe Builder筆記型電腦中建立機器學習模型。 您也學會如何在筆記型電腦中，將筆記型電腦執行至配方工作流程，以便在Data Science Workspace中建立配方。
 
 若要繼續學習如何使用資料科學工作區中的資源，請造訪資料科學工作區配方和模型下拉式清單。
 
-## 其他資源
+## 其他資源 {#additional-resources}
 
 以下影片旨在協助您瞭解建立和部署模型。
 
