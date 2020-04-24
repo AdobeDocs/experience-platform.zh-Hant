@@ -4,7 +4,7 @@ solution: Experience Platform
 title: SDK開發人員指南
 topic: Overview
 translation-type: tm+mt
-source-git-commit: 897e897c80421c8eddd779222ddfa20298e72298
+source-git-commit: 19823c7cf0459e045366f0baae2bd8a98416154c
 
 ---
 
@@ -13,18 +13,9 @@ source-git-commit: 897e897c80421c8eddd779222ddfa20298e72298
 
 模型製作SDK可讓您開發自訂的機器學習方式和功能管道，這些方式和功能管道可用於Adobe Experience Platform資料科學工作區，提供PySpark和Spark中可實施的範本。
 
-本檔案提供有關「模型編寫SDK」中各類的資訊：
+本檔案提供有關「模型編寫SDK」中各類的資訊。
 
-- [DataLoader](#dataloader)
-   - [從平台資料集載入資料](#load-data-from-a-platform-dataset)
-- [DataSaver](#datasaver)
-   - [將資料儲存至平台資料集](#save-data-to-a-platform-dataset)
-- [DatasetTransformer](#datasettransformer)
-- [FeaturePipelineFactory](#featurepipelinefactory)
-- [PipelineFactory](#pipelinefactory)
-- [MLEvaluator](#mlevaluator)
-
-## DataLoader
+## DataLoader {#dataloader}
 
 DataLoader類封裝與擷取、篩選和傳回原始輸入資料相關的任何內容。 輸入資料的範例包括訓練、計分或功能工程的資料。 資料載入器擴展了抽象類， `DataLoader` 必須覆蓋抽象方法 `load`。
 
@@ -83,7 +74,7 @@ DataLoader類封裝與擷取、篩選和傳回原始輸入資料相關的任何�
     </tbody>
 </table>
 
-### 從平台資料集載入資料
+### 從平台資料集載入資料 {#load-data-from-a-platform-dataset}
 
 下面的示例按ID檢索平台資料並返回DataFrame，其中資料集ID(`datasetId`)是配置檔案中定義的屬性。
 
@@ -199,7 +190,7 @@ class MyDataLoader extends DataLoader {
 }
 ```
 
-## DataSaver
+## DataSaver {#datasaver}
 
 DataSaver類封裝了與儲存輸出資料相關的任何內容，包括來自計分或功能工程的輸出資料。 資料保護程式會擴充抽象類 `DataSaver` 別，且必須覆寫抽象方法 `save`。
 
@@ -258,7 +249,7 @@ DataSaver類封裝了與儲存輸出資料相關的任何內容，包括來自�
     </tbody>
 </table>
 
-### 將資料儲存至平台資料集
+### 將資料儲存至平台資料集 {#save-data-to-a-platform-dataset}
 
 若要將資料儲存至Platform資料集，必須在設定檔案中提供或定義屬性：
 
@@ -398,7 +389,7 @@ class ScoringDataSaver extends DataSaver {
 }
 ```
 
-## DatasetTransformer
+## DatasetTransformer {#datasettransformer}
 
 DatasetTransformer類別會修改並變換資料集的結構。 Sensei Machine Learning Runtime不需要定義此元件，而且會根據您的需求來實施。
 
@@ -459,7 +450,7 @@ DatasetTransformer類別會修改並變換資料集的結構。 Sensei Machine L
     </tbody>
 </table>
 
-## FeaturePipelineFactory
+## FeaturePipelineFactory {#featurepipelinefactory}
 
 FeaturePipelineFactory類包含特徵提取算法，並定義特徵管線從開始到結束的階段。
 
@@ -541,7 +532,7 @@ FeaturePipelineFactory類包含特徵提取算法，並定義特徵管線從開�
     </tbody>
 </table>
 
-## PipelineFactory
+## PipelineFactory {#pipelinefactory}
 
 PipelineFactory類別封裝了模型訓練和評分的方法和定義，其中訓練邏輯和演算法以Spark Pipeline的形式定義。
 
@@ -650,7 +641,7 @@ PipelineFactory類別封裝了模型訓練和評分的方法和定義，其中�
     </tbody>
 </table>
 
-## MLEvaluator
+## MLEvaluator {#mlevaluator}
 
 MLEvaluator類提供了用於定義評估度量和確定培訓和測試資料集的方法。
 
