@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 架構註冊API開發人員指南
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: eec5b07427aa9daa44d23f09cfaf1b38f8e811f3
+source-git-commit: 387cbdebccb9ae54a2907d1afe220e9711927ca6
 
 ---
 
@@ -52,7 +52,7 @@ Experience Platform中的所有資源（包括屬於架構註冊表的資源）�
 
 * 內容類型：application/json
 
-## 瞭解您的TENANT_ID {#know-your-tenant-id}
+## 瞭解您的TENANT_ID {#know-your-tenant_id}
 
 在本指南中，您將看到對的參考 `TENANT_ID`。 此ID可用來確保您建立的資源已正確命名並包含在IMS組織中。 如果您不知道您的ID，可以執行下列GET要求來存取它：
 
@@ -229,7 +229,7 @@ curl -X GET \
    * 定義某些類型可能需要選擇 `format`。
    * 當需要特定格式化資料時， `examples` 可新增為陣列。
    * 也可以使用註冊表中的任何資料類型定義欄位類型。 如需詳細資訊， [請參閱本指南中](create-data-type.md) 「建立資料類型」一節。
-* 說明 `description` 了有關現場資料的現場和相關資訊。 它應以完整的句子編寫，使用清楚的語言，讓任何存取架構的人都能瞭解欄位的意圖。
+* 說明 `description` 了有關現場資料的現場和相關資訊。 它應以完整的句子編寫，使用清楚的語言，讓任何存取架構的人都能瞭解該欄位的用意。
 
 如需如 [何定義API中欄位類型的詳細資訊，請參閱附錄](appendix.md) 。
 
