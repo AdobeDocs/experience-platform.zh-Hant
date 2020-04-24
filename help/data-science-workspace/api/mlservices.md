@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 服務
 topic: Developer guide
 translation-type: tm+mt
-source-git-commit: dabeee04dd6ec2bbdd37a6987efcb54b285df7ca
+source-git-commit: 19823c7cf0459e045366f0baae2bd8a98416154c
 
 ---
 
@@ -15,7 +15,7 @@ MLService是已發佈的訓練模型，可讓您的組織存取和重複使用�
 
 自動培訓和計分計畫定義有開始時間戳記、結束時間戳記和表示為 <a href="https://en.wikipedia.org/wiki/Cron" target="_blank">cron表達式的頻率</a>。 可在建立MLService時定 [義排程](#create-an-mlservice) ，或透過更新現 [有的MLService套用排程](#update-an-mlservice)。
 
-## 建立MLService
+## 建立MLService {#create-an-mlservice}
 
 您可以執行POST請求和裝載來建立MLService，此裝載提供服務名稱和有效的MLInstance ID。 建立MLService時所使用的MLInstance不需要有現有的訓練實驗，但您可以提供對應的實驗ID和訓練執行ID，選擇使用現有的訓練模型來建立MLService。
 
@@ -103,7 +103,7 @@ curl -X POST \
 }
 ```
 
-## 擷取MLServices清單
+## 擷取MLServices清單 {#retrieve-a-list-of-mlservices}
 
 您可以執行單一GET請求來擷取MLServices清單。 若要協助篩選結果，您可以在請求路徑中指定查詢參數。 有關可用查詢的清單，請參閱有關資產檢索查 [詢參數的附錄部分](./appendix.md#query)。
 
@@ -162,7 +162,7 @@ curl -X GET \
 }
 ```
 
-## 擷取特定MLService
+## 擷取特定MLService {#retrieve-a-specific-mlservice}
 
 您可以執行GET請求，在請求路徑中包含所需的MLService ID來擷取特定實驗的詳細資訊。
 
@@ -206,11 +206,11 @@ curl -X GET \
 }
 ```
 
-## 更新MLService
+## 更新MLService {#update-an-mlservice}
 
 您可以透過PUT請求覆寫現有MLService的屬性，以更新現有MLService，該PUT請求在請求路徑中包含目標MLService的ID，並提供包含已更新屬性的JSON裝載。
 
->[!TIP] 為確保此PUT請求成功，建議您先執行GET請求，以依ID [擷取MLService](#retrieve-a-specific-mlservice)。 然後，修改並更新傳回的JSON物件，並套用已修改的JSON物件作為PUT要求的裝載。
+>[!TIP] 為確保此PUT請求成功，建議您先執行GET請求，以依ID [擷取MLService](#retrieve-a-specific-mlservice)。 然後，修改並更新傳回的JSON物件，並套用已修改的JSON物件的完整內容作為PUT要求的裝載。
 
 **API格式**
 
