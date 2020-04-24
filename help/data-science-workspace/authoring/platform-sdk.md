@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 平台SDK指南
 topic: SDK authoring
 translation-type: tm+mt
-source-git-commit: a68aa62c3c3cc3e42083d6b0a1d1003f4137840f
+source-git-commit: 19823c7cf0459e045366f0baae2bd8a98416154c
 
 ---
 
@@ -17,7 +17,7 @@ source-git-commit: a68aa62c3c3cc3e42083d6b0a1d1003f4137840f
 - [資料的基本讀取](#basic-reading-of-data)
 - [基本資料寫入](#basic-writing-of-data)
 
-## 建立驗證
+## 建立驗證 {#build-authentication}
 
 必須進行驗證才能呼叫Adobe Experience Platform，且由API金鑰、IMS組織ID、使用者Token和服務Token組成。
 
@@ -64,7 +64,7 @@ client_context <- psdk$client_context$ClientContext(api_key={API_KEY},
               service_token={SERVICE_TOKEN})
 ```
 
-## 資料的基本讀取
+## 資料的基本讀取 {#basic-reading-of-data}
 
 有了全新的平台SDK，最大讀取大小為32 GB，最長讀取時間為10分鐘。
 
@@ -99,7 +99,7 @@ df <- dataset_reader$read()
 df
 ```
 
-## 依偏移和限制篩選
+## 依偏移和限制篩選 {#filter-by-offset-and-limit}
 
 由於不再支援依批次ID篩選，因此，若要對資料進行範圍讀取，您必須使用 `offset` 和 `limit`。
 
@@ -117,7 +117,7 @@ df <- dataset_reader$limit(100L)$offset(1L)$read()
 df
 ```
 
-## 依日期篩選
+## 依日期篩選 {#filter-by-date}
 
 日期篩選的詳細程度現在由時間戳記定義，而非依日期設定。
 
@@ -153,7 +153,7 @@ df2
 | And (`&`) | `And()` |
 | 或 (`|`) | `Or()` |
 
-## 依選取的欄篩選
+## 依選取的欄篩選 {#filter-by-selected-columns}
 
 若要進一步細化資料讀取，您也可以依欄名稱篩選。
 
@@ -169,7 +169,7 @@ df = dataset_reader.select(['column-a','column-b']).read()
 df <- dataset_reader$select(c('column-a','column-b'))$read() 
 ```
 
-## 取得排序結果
+## 取得排序結果 {#get-sorted-results}
 
 接收的結果可以分別按目標資料集的指定列及其順序(asc/desc)排序。
 
@@ -187,7 +187,7 @@ df = dataset_reader.sort([('column-a', 'asc'), ('column-b', 'desc')])
 df <- dataset_reader$sort(c(('column-a', 'asc'), ('column-b', 'desc')))$read()
 ```
 
-## 基本資料寫入
+## 基本資料寫入 {#basic-writing-of-data}
 
 >[!NOTE] IMS組織已設定在中 `client_context`。
 
