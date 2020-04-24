@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 列出資源
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: fe7b6acf86ebf39da728bb091334785a24d86b49
+source-git-commit: 4b052cdd3aca9c771855b2dc2a97ca48c7b8ffb0
 
 ---
 
@@ -12,6 +12,10 @@ source-git-commit: fe7b6acf86ebf39da728bb091334785a24d86b49
 # 列出資源
 
 您可以執行單一GET請求，以檢視容器內所有資源（結構、類別、混合或資料類型）的清單。
+
+>[!NOTE] 列出資源時，方案註冊表將結果集限制為300個項。 若要傳回超出此限制的資源，您必須使用分 [頁參數](#paging)。 建議您使用查詢參數來篩 [選結果](#filtering) ，並減少傳回的資源數。
+>
+> 如果您想要完全覆寫300個項目限制，您必須使用「接受」標題，以 `application/vnd.adobe.xdm-v2+json` 在單一請求中傳回所有結果。
 
 **API格式**
 
@@ -42,8 +46,9 @@ curl -X GET \
 
 | 接受標題 | 說明 |
 | ------- | ------------ |
-| application/vnd.adobe.xed-id+json | 傳回每個資源的簡短摘要，通常是列出的首選標題 |
-| application/vnd.adobe.xed+json | 傳回每個資源的完整JSON結構描述，其中包含 `$ref` 原始資 `allOf` 源 |
+| application/vnd.adobe.xed-id+json | 返回每個資源的簡短摘要。 這是列出資源的建議標題。 (限制：300) |
+| application/vnd.adobe.xed+json | 傳回每個資源的完整JSON結構描述，其中包含 `$ref` 原始 `allOf` 資源。 (限制：300) |
+| application/vnd.adobe.xdm-v2+json | 傳回單一請求中所有結果的完整JSON結構描述，並覆寫300個項目限制。 |
 
 **回應**
 
@@ -74,7 +79,7 @@ curl -X GET \
 
 >[!NOTE] 組合多個查詢參數時，必須以&amp;符號(`&`)分隔。
 
-### 分頁
+### 分頁 {#paging}
 
 最常用於分頁的查詢參數包括：
 
@@ -84,7 +89,7 @@ curl -X GET \
 | `limit` | 限制傳回的資源數。 範例：將 `limit=5` 返回5個資源的清單。 |
 | `orderby` | 依特定屬性排序結果。 範例：將 `orderby=title` 依標題以升序排序結果(A-Z)。 在標題 `-` 前加入(`orderby=-title`)會依標題以遞減順序(Z-A)排序項目。 |
 
-### 篩選
+### 篩選 {#filtering}
 
 您可以使用參數來篩選結 `property` 果，該參數可用來對擷取的資源內的指定JSON屬性套用特定運算子。 支援的運算子包括：
 
