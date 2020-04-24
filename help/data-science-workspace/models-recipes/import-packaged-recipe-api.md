@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 匯入封裝的方式(API)
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: ebf7c883ce89fdf8b0d468ab21d1c3a1ba8aca06
+source-git-commit: 19823c7cf0459e045366f0baae2bd8a98416154c
 
 ---
 
@@ -46,7 +46,7 @@ source-git-commit: ebf7c883ce89fdf8b0d468ab21d1c3a1ba8aca06
 - [使用Docker URL建立引擎](#create-an-engine-with-a-docker-url)
 - [使用二進位對象建立引擎（已過時）](#create-an-engine-with-a-binary-artifact-deprecated)
 
-### 使用Docker URL建立引擎
+### 使用Docker URL建立引擎 {#create-an-engine-with-a-docker-url}
 
 若要建立具有儲存在Docker容器中之封裝配方檔案的引擎，您必須為封裝配方檔案提供Docker URL。
 
@@ -199,11 +199,11 @@ curl -X POST \
 
 成功的回應會顯示JSON裝載，內含有關新建引擎的資訊。 此 `id` 鍵代表唯一的引擎識別碼，並在下一個教學課程中用來建立MLInstance。 請確定引擎識別碼已儲存，然後再繼續後續步驟。
 
-## 後續步驟
+## 下一步 {#next-steps}
 
 您已使用API建立引擎，並取得唯一的引擎識別碼作為回應本體的一部分。 在下一個教學課程中，您可以使用此引擎識別碼，學習如 [何使用API建立、訓練和評估模型](./train-evaluate-model-api.md)。
 
-### 使用二進位對象建立引擎（已過時）
+### 使用二進位對象建立引擎（已過時） {#create-an-engine-with-a-binary-artifact-deprecated}
 
 <!-- Will need to remove binary artifact documentation once the old flags are turned off -->
 
