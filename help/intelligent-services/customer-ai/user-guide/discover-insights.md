@@ -1,0 +1,124 @@
+---
+keywords: Experience Platform;insights; customer ai;popular topics
+solution: Experience Platform
+title: 透過客戶人工智慧發掘見解
+topic: Discovering insights
+translation-type: tm+mt
+source-git-commit: f7c59ef097c00073fbf9f6522b6e70ed24cc8bf1
+
+---
+
+
+# 透過客戶人工智慧發掘見解
+
+客戶人工智慧(Customer AI)是智慧型服務的一部分，可讓行銷人員運用Adobe Sensei來預測客戶的下一步行動。 客戶人工智慧可用來產生自訂傾向分數，例如大規模個別個人檔案的流失和轉換。 完成此項作業時，不需將業務需求轉換為機器學習問題、選擇演算法、訓練或部署。
+
+本檔案可做為在智慧型服務客戶AI使用者介面中與服務例項見解互動的指南。
+
+## 快速入門
+
+為了利用客戶AI的見解，您需要有一個運行狀態成功的服務實例。 若要建立新的服務例項，請造 [訪設定客戶AI例項](./configure.md)。 如果您最近建立了一個服務例項，但它仍在訓練和計分中，請允許24小時以完成執行。
+
+## 服務實例概述
+
+在Adobe Experience Platform UI中，按一下左 **[!UICONTROL Services]** 側導覽中的。 出現 *「服務* 」瀏覽器並顯示可用的「智慧型服務」。 在「客戶AI」的容器中，按一下 **[!UICONTROL Open]**。
+
+![存取您的例項](../images/insights/navigate-to-service.png)
+
+此時將顯示「客戶AI服務」頁。 本頁列出客戶AI的服務例項，並顯示其相關資訊，包括例項名稱、傾向類型、執行例項的頻率，以及上次更新的狀態。
+
+>[!NOTE] 只有已完成成功計分執行的服務例項才有見解。
+
+![建立例項](../images/insights/dashboard.png)
+
+按一下服務實例名稱開始。
+
+![建立例項](../images/insights/click-the-name.png)
+
+接著，該服務例項的前瞻分析頁面隨即出現，您會在此處獲得資料的視覺化。 本指南將詳細說明視覺化以及您可以如何處理資料。
+
+![設定頁面](../images/insights/landing-page.png)
+
+
+### 服務實例詳細資訊
+
+查看服務實例詳細資訊有兩種方法：第一種是從儀表板查看，另一種是從服務實例查看。
+
+若要從控制面板內檢視詳細資訊，請按一下服務例項容器，以避免附加至名稱的超連結。 這會開啟右側邊欄，提供其他詳細資訊，例如說明、計分頻率、預測目標和合格人口。 此外，您也可以選擇按一下或以編輯和刪除 **[!UICONTROL Edit]** 例項 **[!UICONTROL Delete]**。
+
+![右滑軌](../images/insights/success-run.png)
+
+>[!NOTE] 當計分執行失敗時，會提供錯誤訊息。 錯誤訊息會列在右側邊欄的「 *上次執行詳細資訊* 」下方，此欄位僅會顯示失敗的執行。
+
+![失敗的運行消息](../images/insights/failed-run.png)
+
+檢視服務例項其他詳細資訊的第二個方法位於前瞻分析頁面。 您可以按 **[!UICONTROL Show more]** 一下右上角的，以填入下拉式清單。 詳細資訊會列出，例如分數定義、建立時間和傾向類型。 如需所列任何屬性的詳細資訊，請造 [訪設定客戶AI例項](./configure.md)。
+
+![顯示更多](../images/insights/landing-show-more.png)
+
+![顯示更多](../images/insights/show-more.png)
+
+### 編輯例項
+
+若要編輯例項，請按 **[!UICONTROL Edit]** 一下右上方導覽中的。
+
+![按一下「編輯」按鈕](../images/insights/edit-button.png)
+
+此時將出現編輯對話框，允許您編輯實例 *的「說明* 」 *和「計分頻率* 」。 若要確認變更並關閉對話方塊，請 **[!UICONTROL Edit]** 按一下右下角的。
+
+![編輯跨欄](../images/insights/edit-instance.png)
+
+### 更多動作
+
+按 **[!UICONTROL More actions]** 鈕位於旁的右上導覽中 **[!UICONTROL Edit]**。 按一 **[!UICONTROL More actions]** 下可開啟下拉式清單，供您選取下列其中一個作業：
+
+- **[!UICONTROL Delete]**:刪除實例。
+- **[!UICONTROL Access scores]**:按一 *下「存取分數* 」會開啟對話方塊，提供客戶AI [](./download-scores.md) 教學課程下載分數的連結，此對話方塊也提供進行API呼叫所需的資料集ID。
+- **[!UICONTROL View run history]**:此時將顯示一個對話框，其中包含與服務實例關聯的所有計分運行的清單。
+
+![更多動作](../images/insights/more-actions.png)
+
+## 計分摘要 {#scoring-summary}
+
+計分摘要會顯示計分的描述檔總數，並將其分類至包含高、中和低傾向的時段。 傾向區間是根據得分範圍而決定，低於24，中度為25至74，高於74。 每個桶都有對應於圖例的顏色。
+
+>[!NOTE] 如果是轉換傾向分數，高分以綠色顯示，低分以紅色顯示。 如果您預測客戶流失傾向，這會反轉，高分會以紅色顯示，低分會是綠色。 無論您選擇何種傾向類型，中時段都會保持黃色。
+
+![計分摘要](../images/insights/scoring-summary.png)
+
+## 分數分佈
+
+「 *分數分佈* 」卡會根據分數提供人口的視覺化摘要。 您在「分數分佈」卡 *中看到的顏色* ，代表產生的傾向分數類型。
+
+![分數分佈](../images/insights/distribution-of-scores.png)
+
+## 影響因素
+
+對於每個分數貯體，會產生一張卡片，顯示該貯體的前10個影響因素。 這些影響因素提供您更多有關客戶為何屬於不同分數區間的詳細資訊。
+
+![影響因素](../images/insights/influential-factors.png)
+
+### 建立區段
+
+按一下 **[!UICONTROL Create Segment]** 低、中和高傾向任一區段中的按鈕，會將您重新導向至區段產生器。
+
+>[!NOTE]
+>只有 **[!UICONTROL Create Segment]** 在資料集啟用即時客戶設定檔時，此按鈕才可用。 如需如何啟用即時客戶個人檔案的詳細資訊，請造 [訪即時客戶個人檔案總覽](../../../rtcdp/overview.md)。
+
+![按一下建立區段](../images/insights/influential-factors-create-segment.png)
+
+![建立區段](../images/insights/create-segment.png)
+
+區段產生器可用來定義區段。 在從「 **[!UICONTROL Create Segment]** 前瞻分析」頁面選擇時，客戶人工智慧會自動將選取的區間資訊新增至區段。 若要完成區段的建立，只需填入區 *段產生器使用者介面右側導軌中的「名稱* 」和「說明 ** 」容器即可。 在您為區段指定名稱和說明後，按一 **[!UICONTROL Save]** 下右上角的。
+
+>!![NOTE] 由於傾向分數會寫入個別描述檔，因此在「區段產生器」中可使用這些分數，就像任何其他描述檔屬性一樣。 當您導覽至區段產生器以建立新區段時，可在您的命名空間「客戶人工智慧」下查看所有不同的傾向分數。
+
+![區段填入](../images/insights/segment-saving.png)
+
+若要在平台UI中檢視新區段，請按一下左 **[!UICONTROL Segments]** 側導覽中的。 「瀏 *覽* 」頁面隨即出現，並顯示所有可用區段。
+
+![您的所有區段](../images/insights/Segments-dashboard.png)
+
+## 後續步驟
+
+本檔案概述了客戶AI服務實例提供的見解。 您現在可以繼續教學課程，在 [Customer AI](./download-scores.md) （客戶人工智慧）中下載分數 [，或瀏覽其他](../../home.md) Adobe智慧型服務指南。
