@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 客戶AI快速入門
 topic: Getting started
 translation-type: tm+mt
-source-git-commit: 0eeb41fa06864cc28b3a76c2a69c76ea5430d45a
+source-git-commit: f7c59ef097c00073fbf9f6522b6e70ed24cc8bf1
 
 ---
 
@@ -22,7 +22,7 @@ source-git-commit: 0eeb41fa06864cc28b3a76c2a69c76ea5430d45a
 
 ## 下載客戶AI分數
 
->[!NOTE] 如果您不需要下載原始分數，可以略過此步驟，然後繼續使用者介面指南。
+>[!NOTE] 如果您不需要下載原始分數，可以略過此步驟並繼續設定 [指南](./user-guide/configure.md)。
 
 下載客戶AI分數是透過API呼叫的組合來完成。 若要呼叫平台API，您必須先完成驗證教 [學課程](../../tutorials/authentication.md)。 完成驗證教學課程後，所有Experience Platform API呼叫中每個必要標題的值都會顯示在下方：
 
@@ -42,4 +42,4 @@ Experience Platform中的所有資源都隔離至特定的虛擬沙盒。 所有
 
 ## 後續步驟
 
-在您準備好並準備好所有憑證和結構描述後，請從遵循 [Customer AI用戶介面指南開始](./user-guide.md)。 本指南會逐步引導您建立執行個體，並送出以進行訓練和計分。
+完成上述檔案中的步驟後，請造訪「輸入與輸 [出」檔案](./input-output.md) 。 本檔案簡要概述客戶AI中使用和產生的資料類型。
