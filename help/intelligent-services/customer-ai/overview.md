@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 客戶人工智慧概觀
 topic: Customer AI overview
 translation-type: tm+mt
-source-git-commit: 7987cec12c22e9b48ddc9fdc263d7cd28bd172f2
+source-git-commit: f4deee30f0f03b75dc7ee02152ceb6c519858c7c
 
 ---
 
@@ -42,4 +42,4 @@ source-git-commit: 7987cec12c22e9b48ddc9fdc263d7cd28bd172f2
 
 ## 後續步驟
 
-您可依照快速入 [門指南](./getting-started.md) 。 本指南會逐步帶您設定客戶人工智慧的所有必要預先要求。 如果您已準備好所有認證和資料，請造訪 [Customer AI使用指南](./user-guide.md)。 它提供使用客戶人工智慧的步驟，並示範如何使用傾向分數建立客戶細分。
+您可依照快速入 [門指南](./getting-started.md) 。 本指南會逐步帶您設定客戶AI的所有必要先決條件。 如果您已準備好所有認證和資料，請造 [訪設定Customer AI例項](./user-guide/configure.md)。 它提供使用客戶AI的步驟。
