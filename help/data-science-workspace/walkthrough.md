@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Data Science Workspace逐步說明
 topic: Walkthrough
 translation-type: tm+mt
-source-git-commit: 1f756e7bc71c9ff227757aee64af29e0772c24af
+source-git-commit: 19823c7cf0459e045366f0baae2bd8a98416154c
 
 ---
 
@@ -45,7 +45,7 @@ source-git-commit: 1f756e7bc71c9ff227757aee64af29e0772c24af
 
 ![](./images/walkthrough/retail_sales.png)
 
-### 設定
+### 設定 {#setup}
 
 當零售銷售筆記型電腦開啟時，我們首先要載入工作流程所需的程式庫。 下列清單將簡短說明每個清單的用途：
 - **numpy** —— 新增對大型、多維陣列和矩陣的支援的科學計算庫
@@ -55,7 +55,7 @@ source-git-commit: 1f756e7bc71c9ff227757aee64af29e0772c24af
 - **sklearn** —— 具備分類、回歸、支援向量和叢集演算法的機器學習庫
 - **警告** -控制警告訊息的程式庫
 
-### 探索資料
+### 探索資料 {#exploring-data}
 
 #### 載入資料
 
@@ -129,7 +129,7 @@ df.describe()
 
 請注意中心下方的對角線。 這顯示在比較變數本身時，其具有完全正相關性。 強正相關度將接近1，弱關聯度接近0。 負相關顯示，負系數顯示逆趨勢。
 
-### 功能工程
+### 功能工程 {#feature-engineering}
 
 在本節中，我們將修改我們的零售資料集。 我們將執行下列操作：
 
@@ -177,7 +177,7 @@ df.describe()
 
 ![](./images/walkthrough/df_info_new.png)
 
-### 培訓與驗證
+### 培訓與驗證 {#training-and-verification}
 
 現在，是時候建立一些資料模型，並選擇哪個模型在預測未來銷售時表現最佳。 我們將評估以下5種算法：
 
