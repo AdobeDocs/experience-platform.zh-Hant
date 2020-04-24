@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 將模型發佈為服務(API)
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 5699022d1f18773c81a0a36d4593393764cb771a
+source-git-commit: 19823c7cf0459e045366f0baae2bd8a98416154c
 
 ---
 
@@ -123,7 +123,7 @@ curl -X POST
 
 請注意，ML服務可使用ML例項建立，而不需排程任何訓練或計分實驗。 此類ML服務將建立一般實驗實體和單一實驗執行，以進行訓練和評分。
 
-### ML服務與計畫評分實驗
+### ML服務與計畫評分實驗 {#ml-service-with-scheduled-experiment-for-scoring}
 
 透過發佈具有計畫實驗執行以進行計分的ML例項來建立ML服務，將會建立一般的實驗實體以進行訓練。 產生的訓練實驗執行將用於所有排程的計分實驗執行。 請確定您具 `mlInstanceId`有、 `trainingDataSetId``scoringDataSetId` 和建立ML服務所需的值，並且它們是有效值。
 
@@ -197,7 +197,7 @@ curl -X POST
 
 根據回 `JSON` 應，關鍵點和建 `trainingExperimentId` 議 `scoringExperimentId` 為此ML服務建立了新的訓練和計分實驗實體。 物件的存在是指 `scoringSchedule` 有關計分「實驗執行」排程的詳細資訊。 回 `id` 應中的鍵指您剛建立的ML服務。
 
-### ML服務，具有計畫的訓練和評分實驗
+### ML服務，具有計畫的訓練和評分實驗 {#ml-service-with-scheduled-experiments-for-training-and-scoring}
 
 若要將現有的ML例項發佈為具有計畫培訓與計分實驗執行的ML服務，您必須同時提供培訓與計分排程。 建立此配置的ML服務時，也會建立培訓和評分的計畫實驗實體。 請注意，培訓和計分排程不一定相同。 在計分作業執行期間，將擷取由排程培訓「實驗執行」產生的最新受訓模型，並用於排程的計分執行。
 
@@ -281,7 +281,7 @@ curl -X POST "https://platform-int.adobe.io/data/sensei/mlServices"
 
 在響應體 `trainingExperimentId` 中加 `scoringExperimentId` 入和添加實驗實體，可建立訓練和評分實體。 上述實 `trainingSchedule` 驗實 `scoringSchedule` 體的存在和建議是預定實驗。 回 `id` 應中的鍵指您剛建立的ML服務。
 
-## 檢索ML服務
+## 檢索ML服務 {#retrieving-ml-services}
 
 檢索現有ML服務就像向端點發出請求 `GET` 一樣簡 `/mlServices` 單。 確保您嘗試檢索的特定ML服務具有ML服務標識。
 
