@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 運用機器學習見解豐富即時客戶個人檔案
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: b0b44f4aaf365f58086cfa17d27fbba6ed2a2a97
+source-git-commit: 19823c7cf0459e045366f0baae2bd8a98416154c
 
 ---
 
@@ -32,7 +32,7 @@ Adobe Experience Platform Data Science Workspace提供工具和資源，以建�
 * [架構構成基礎](../../xdm/schema/composition.md):說明XDM結構描述、建立區塊、原則，以及用於構成要在Experience Platform中使用的結構描述的最佳實務。
 * [架構編輯器教程](../../xdm/tutorials/create-schema-ui.md):提供在Experience Platform中使用架構編輯器建立架構的詳細說明。
 
-## 建立輸出模式和資料集
+## 建立輸出模式和資料集 {#create-an-output-schema-and-dataset}
 
 透過計分見解豐富即時客戶個人檔案的第一步，就是瞭解您的資料所定義的實際物件（例如個人）。 瞭解資料後，您就可以描述和設計對資料有意義的結構，就像設計關係式資料庫。
 
@@ -73,7 +73,7 @@ Adobe Experience Platform Data Science Workspace提供工具和資源，以建�
 
 現在您已建立輸出結構描述資料集，您可以繼續前往下一節，以設定並啟用它們以進行描述檔擴充。
 
-## 配置輸出模式和資料集
+## 配置輸出模式和資料集 {#configure-an-output-schema-and-dataset}
 
 在為配置檔案啟用資料集之前，您需要將資料集的模式配置為具有主標識欄位，然後為配置檔案啟用模式。 如果要建立並啟用新架構，可參考有關使用架構編輯器 [建立架構的教程](../../xdm/tutorials/create-schema-ui.md)。 否則，請依照下列指示啟用現有的架構和資料集。
 
@@ -97,7 +97,7 @@ Adobe Experience Platform Data Science Workspace提供工具和資源，以建�
 
 當資料被收錄至啟用描述檔的資料集時，相同的資料也會被收錄為描述檔記錄。 現在已準備好架構和資料集，請使用適當的模型執行計分執行，以產生資料集中的部分資料，並繼續本教學課程，使用「區段產生器」建立洞察力區段。
 
-## 使用區段產生器建立區段
+## 使用區段產生器建立區段 {#create-segments-using-the-segment-builder}
 
 現在您已產生並吸收見解至您啟用設定檔的資料集，您可以使用區段產生器識別相關元素的子集，以管理該資料。 請依照下列步驟建立您自己的區段。
 
@@ -117,6 +117,6 @@ Adobe Experience Platform Data Science Workspace提供工具和資源，以建�
    ![](../images/models-recipes/enrich-rtcdp/save_segment.png)
 
 
-## 後續步驟
+## 下一步 {#next-steps}
 
 本檔案會逐步引導您為描述檔啟用架構和資料集所需的步驟，並簡要展示使用區段產生器建立洞察力區段的工作流程。 若要進一步瞭解區段和區段產生器，請參閱區段服 [務總覽](../../segmentation/home.md)。
