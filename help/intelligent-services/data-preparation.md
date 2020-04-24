@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 準備資料以用於智慧型服務
 topic: Intelligent Services
 translation-type: tm+mt
-source-git-commit: 702ac3860e06951574fe48f7d8771a11f68bedc4
+source-git-commit: 1b367eb65d1e592412d601d089725671e42b7bbd
 
 ---
 
@@ -19,6 +19,10 @@ source-git-commit: 702ac3860e06951574fe48f7d8771a11f68bedc4
 
 消費者體驗事件結構描述個人的行為，因為它與數位行銷事件（網路或行動裝置）以及線上或離線商務活動有關。 智慧服務需要使用此模式，因為其語義上定義良好的欄位（列），以避免任何未知名稱，否則會使資料不那麼清晰。
 
+智慧型服務會利用此架構中的幾個關鍵欄位，從您的行銷事件資料產生深入資訊，所有這些資料都可在根層級找到並展開，以顯示其必要的子欄位。
+
+![](./images/data-preparation/schema-expansion.gif)
+
 與所有XDM模式一樣，CEE混合模式具有可擴充性。 換言之，CEE混音中可新增其他欄位，若有需要，可在多個結構中加入不同的變數。
 
 在公用 [XDM儲存庫中可找到混合的完整示例](https://github.com/adobe/xdm/blob/797cf4930d5a80799a095256302675b1362c9a15/docs/reference/context/experienceevent-consumer.schema.md)，並應用作以下部分中概述的關鍵欄位的參考。
@@ -30,6 +34,8 @@ source-git-commit: 702ac3860e06951574fe48f7d8771a11f68bedc4
 ### xdm:channel
 
 此欄位代表與ExperienceEvent相關的行銷渠道。 欄位包含頻道類型、媒體類型和位置類型的相關資訊。 **必須提&#x200B;_供此欄_,Attribution AI才能處理您的資料**。
+
+![](./images/data-preparation/channel.png)
 
 **範例架構**
 
@@ -63,25 +69,25 @@ source-git-commit: 702ac3860e06951574fe48f7d8771a11f68bedc4
 
 此欄位是代表客戶選擇之產品的一系列項目，包括產品SKU、名稱、價格和數量。
 
+![](./images/data-preparation/productListItems.png)
+
 **範例架構**
 
 ```json
 [
   {
     "xdm:SKU": "1002352692",
-    "xdm:lineItemId": "12345678",
     "xdm:name": "24-Watt 8-Light Chrome Integrated LED Bath Light",
     "xdm:currencyCode": "USD",
     "xdm:quantity": 1,
-    "xdm:priceTotal": 159
+    "xdm:priceTotal": 159.45
   },
   {
     "xdm:SKU": "3398033623",
-    "xdm:lineItemId": "48693817",
     "xdm:name": "16ft RGB LED Strips",
     "xdm:currencyCode": "USD",
     "xdm:quantity": 1,
-    "xdm:priceTotal": 80
+    "xdm:priceTotal": 79.99
   }
 ]
 ```
@@ -91,6 +97,8 @@ source-git-commit: 702ac3860e06951574fe48f7d8771a11f68bedc4
 ### xdm：商務
 
 此欄位包含ExperienceEvent的商務相關資訊，包括採購訂單編號和付款資訊。
+
+![](./images/data-preparation/commerce.png)
 
 **範例架構**
 
@@ -128,6 +136,8 @@ source-git-commit: 702ac3860e06951574fe48f7d8771a11f68bedc4
 
 此欄位代表與ExperienceEvent相關的網頁詳細資料，例如互動、頁面詳細資料和反向連結。
 
+![](./images/data-preparation/web.png)
+
 **範例架構**
 
 ```json
@@ -155,6 +165,8 @@ source-git-commit: 702ac3860e06951574fe48f7d8771a11f68bedc4
 ### xdm：行銷
 
 此欄位包含與觸點作用中之行銷活動相關的資訊。
+
+![](./images/data-preparation/marketing.png)
 
 **範例架構**
 
