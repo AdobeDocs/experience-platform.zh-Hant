@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 引擎
 topic: Developer guide
 translation-type: tm+mt
-source-git-commit: 19823c7cf0459e045366f0baae2bd8a98416154c
+source-git-commit: 45f310eb5747300e13f3c57b3f979c983a03d49d
 
 ---
 
@@ -22,7 +22,7 @@ source-git-commit: 19823c7cf0459e045366f0baae2bd8a98416154c
 
 **API格式**
 
-```http
+```https
 GET /engines/dockerRegistry
 ```
 
@@ -57,7 +57,7 @@ curl -X GET https://platform.adobe.io/data/sensei/engines/dockerRegistry \
 
 **API格式**
 
-```http
+```https
 POST /engines
 ```
 
@@ -165,13 +165,93 @@ curl -X POST \
 }
 ```
 
+## 使用Docker URL建立功能管線引擎 {#feature-pipeline-docker}
+
+您可以通過執行POST請求來建立功能管線引擎，同時提供其元資料和引用Docker影像的Docker URL。
+
+**API格式**
+
+```https
+POST /engines
+```
+
+**請求**
+
+```shell
+curl -X POST \
+ https://platform.adobe.io/data/sensei/engines \
+    -H 'Authorization: Bearer ' \
+    -H 'x-gw-ims-org-id: 20655D0F5B9875B20A495E23@AdobeOrg' \
+    -H 'Content-Type: application/vnd.adobe.platform.sensei+json;profile=engine.v1.json' \
+    -H 'x-api-key: acp_foundation_machineLearning' \
+    -H 'Content-Type: text/plain' \
+    -F '{
+    "type": "PySpark",
+    "algorithm":"fp",
+    "name": "Feature_Pipeline_Engine",
+    "description": "Feature_Pipeline_Engine",
+    "mlLibrary": "databricks-spark",
+    "artifacts": {
+       "default": {
+           "image": {
+                "location": "v7d1cs2mimnlttw.azurecr.io/ml-featurepipeline-pyspark:0.2.1",
+                "name": "datatransformation",
+                "executionType": "PySpark",
+                "packagingType": "docker"
+            },
+           "defaultMLInstanceConfigs": [
+           ]
+       }
+   }
+}'
+```
+
+| 屬性 | 說明 |
+| --- | --- |
+| `type` | 引擎的執行類型。 此值與Docker映像所基於的語言相對應。 此值可設為Spark或PySpark。 |
+| `algorithm` | 使用的演算法，請將此值設 `fp` 為（特徵管線）。 |
+| `name` | 特徵管線引擎的所需名稱。 與此引擎對應的配方將繼承此值，並以配方名稱顯示在UI中。 |
+| `description` | 引擎的選用說明。 與此引擎對應的方式將繼承此值，並以方式說明的形式顯示在UI中。 此為必要屬性。如果您不想提供說明，請將其值設為空字串。 |
+| `mlLibrary` | 建立PySpark和Scala配方的引擎時所需的欄位。 此欄位必須設定為 `databricks-spark`。 |
+| `artifacts.default.image.location` | Docker映像的位置。 僅支援Azure ACR或Public（未驗證）Dockerhub。 |
+| `artifacts.default.image.executionType` | 引擎的執行類型。 此值與Docker映像所基於的語言相對應。 這可以是「Spark」或「PySpark」。 |
+| `artifacts.default.image.packagingType` | 引擎的封裝類型。 此值應設為 `docker`。 |
+
+**回應**
+
+成功的回應會傳回包含新建立之功能管道引擎詳細資料（包括其唯一識別碼）的裝載`id`值。 以下是PySpark特徵管線引擎的示例響應。
+
+```json
+{
+    "id": "88236891-4309-4fd9-acd0-3de7827cecd1",
+    "name": "Feature_Pipeline_Engine",
+    "description": "Feature_Pipeline_Engine",
+    "type": "PySpark",
+    "algorithm": "fp",
+    "mlLibrary": "databricks-spark",
+    "created": "2020-04-24T20:46:58.382Z",
+    "updated": "2020-04-24T20:46:58.382Z",
+    "deprecated": false,
+    "artifacts": {
+        "default": {
+            "image": {
+                "location": "v7d1cs3mimnlttw.azurecr.io/ml-featurepipeline-pyspark:0.2.1",
+                "name": "datatransformation",
+                "executionType": "PySpark",
+                "packagingType": "docker"
+            }
+        }
+    }
+}
+```
+
 ## 擷取引擎清單
 
 您可以執行單一GET請求來擷取引擎清單。 若要協助篩選結果，您可以在請求路徑中指定查詢參數。 有關可用查詢的清單，請參閱有關資產檢索查 [詢參數的附錄部分](./appendix.md#query)。
 
 **API格式**
 
-```http
+```https
 GET /engines
 GET /engines?parameter_1=value_1
 GET /engines?parameter_1=value_1&parameter_2=value_2
@@ -246,7 +326,7 @@ curl -X GET \
 
 **API格式**
 
-```http
+```https
 GET /engines/{ENGINE_ID}
 ```
 
@@ -321,7 +401,7 @@ curl -X GET \
 
 **API格式**
 
-```http
+```https
 PUT /engines/{ENGINE_ID}
 ```
 
@@ -389,7 +469,7 @@ curl -X PUT \
 
 **API格式**
 
-```http
+```https
 DELETE /engines/{ENGINE_ID}
 ```
 
@@ -429,7 +509,7 @@ curl -X DELETE \
 
 **API格式**
 
-```http
+```https
 POST /engines
 ```
 
@@ -498,7 +578,7 @@ curl -X POST \
 
 **API格式**
 
-```http
+```https
 POST /engines
 ```
 
