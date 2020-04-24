@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 將來源檔案封裝至配方
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 4001e4fd6a2e04a04e7ea594175d9e3e5c8a00d6
+source-git-commit: 19823c7cf0459e045366f0baae2bd8a98416154c
 
 ---
 
@@ -29,7 +29,7 @@ source-git-commit: 4001e4fd6a2e04a04e7ea594175d9e3e5c8a00d6
 
 方式建立從封裝來源檔案開始，以建立封存檔案。 來源檔案定義機器學習邏輯和演算法，用於解決手邊的特定問題，並以Python、R、PySpark或Scala編寫。 構建的存檔檔案採用Docker映像的形式。 建立後，封裝的封存檔案會匯入Data Science Workspace，以在UI中 [或使用](./import-packaged-recipe-ui.md)[API建立方式](./import-packaged-recipe-api.md)。
 
-### 基於Docker的模型編寫
+### 基於Docker的模型編寫 {#docker-based-model-authoring}
 
 Docker映像允許開發人員將應用程式與其所需的所有部件（如庫和其他依賴項）打包，然後以一個包的形式發佈。
 
