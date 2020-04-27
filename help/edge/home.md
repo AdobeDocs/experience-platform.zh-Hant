@@ -4,7 +4,7 @@ seo-title: Adobe Experience Platform Web SDK說明
 description: 瞭解Adobe Experience Platform Web SDK是什麼，以及如何使用它。
 seo-description: 可讓Adobe Experience Cloud客戶與Experience Cloud中的各種服務互動
 translation-type: tm+mt
-source-git-commit: 0cc6e233646134be073d20e2acd1702d345ff35f
+source-git-commit: 68361835437026c86af2402cc8400a3b3f32cb81
 
 ---
 
@@ -13,9 +13,9 @@ source-git-commit: 0cc6e233646134be073d20e2acd1702d345ff35f
 
 >[!IMPORTANT]
 >
->Adobe Experience Platform Web SDK目前為測試版，並非所有使用者都能使用。 說明檔案和功能可能會有所變更。
+>Adobe Experience Platform Web SDK目前為測試版，並非所有使用者都能使用。 文件和功能可能會有所變更。
 
-Adobe Experience Platform Web SDK是用戶端JavaScript程式庫，可讓Adobe Experience Cloud的客戶與Experience Cloud中的各種服務互動。
+Adobe Experience Platform Web SDK是用戶端JavaScript程式庫，可讓Adobe Experience Cloud的客戶透過Adobe Experience Platform Edge Network與Experience Cloud中的各種服務互動。
 
 ## SDK已由Adobe Experience Platform Web SDK取代
 
