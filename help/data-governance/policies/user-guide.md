@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 資料使用原則使用指南
 topic: policies
 translation-type: tm+mt
-source-git-commit: 304a84b81758b2f2a343977533f9120857a1fb33
+source-git-commit: 235a43ad72dee45db1b3d35ae84ce9a1c4d729b8
 
 ---
 
@@ -66,4 +66,4 @@ Adobe Experience Platform Data Governance提供使用者介面，可讓您建立
 
 ## 後續步驟
 
-本檔案概述如何在Experience Platform UI中管理資料使用原則。 有關如何使用DULE策略API管理策略的步驟，請參見 [API策略建立教程](./create.md)。 如需如何實施資料使用原則的詳細資訊，請參閱 [原則實施概觀](../enforcement/overview.md)。
+本檔案概述如何在Experience Platform UI中管理資料使用原則。 如需如何使用DULE Policy API管理原則的步驟，請參閱開發 [人員指南](../api/getting-started.md)。 如需如何實施資料使用原則的詳細資訊，請參閱 [原則實施概觀](../enforcement/overview.md)。
