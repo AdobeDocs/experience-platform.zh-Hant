@@ -1,8 +1,14 @@
 ---
-source-git-commit: 1cf1e9c814601bdd4c7198463593be78452004dc
+keywords: Experience Platform;insights; customer ai;popular topics
+solution: Experience Platform
+title: 建立具有預測分數的客戶細分
+topic: Create a segment
 translation-type: tm+mt
+source-git-commit: 66ccea896846c1da4310c1077e2dc7066a258063
 
 ---
+
+
 # 建立具有預測分數的客戶細分
 
 當預測執行完成時，「設定檔」會自動使用預測傾向分數。 利用客戶人工智慧豐富個人檔案分數可建立客戶細分，以根據其傾向分數尋找受眾。 本節提供使用區段產生器建立區段的步驟。 如需建立區段的更強穩教學課程，請參閱「區段產 [生器」使用指南](../../../segmentation/tutorials/create-a-segment.md)。
