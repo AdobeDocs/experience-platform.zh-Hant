@@ -2,9 +2,9 @@
 title: Adobe Experience Platform Web SDK說明
 seo-title: Adobe Experience Platform Web SDK說明
 description: 瞭解Adobe Experience Platform Web SDK是什麼，以及如何使用它。
-seo-description: 可讓Adobe Experience Cloud客戶與Experience Cloud中的各種服務互動
+seo-description: 可讓Adobe Experience Cloud的客戶與Experience Cloud中的各種服務互動。
 translation-type: tm+mt
-source-git-commit: 6ad09df6f6867ebe057d0043dea4bc97de2b66b3
+source-git-commit: 5027ae2cd083631d7122346796ef93572c129d3f
 
 ---
 
