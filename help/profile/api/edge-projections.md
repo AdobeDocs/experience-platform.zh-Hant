@@ -4,7 +4,7 @@ solution: Adobe Experience Platform
 title: 即時客戶個人檔案API開發人員指南
 topic: guide
 translation-type: tm+mt
-source-git-commit: 5aad9fa71051a58fe1c4678553f47077d81d23fc
+source-git-commit: bb7aad4de681316cc9f9fd1d9310695bd220adb1
 
 ---
 
@@ -136,7 +136,12 @@ curl -X POST \
       }'
 ```
 
-|屬性|說明||`type` ( **必要)** |要建立的目標類型。 唯一接受的值&quot;EDGE&quot;會建立邊緣目的地。||`dataCenters` ( **必要)** |字串陣列，列出要向其佈線投影的邊緣。 可包含下列一或多個值：「OR1」 —— 美國西部，「VA5」 —— 美國東部，「NLD1」 - EMEA。||`ttl` ( **必要)** |指定投影有效期。 接受的值範圍：600至604800。 預設值：3600。||`replicationPolicy` ( **必要)** |定義從集線器到邊緣的資料複製行為。  支援的值：主動、被動。 預設值：被動。|
+| 屬性 | 說明 |
+|---|---|
+| `type` **(必填)** | 要建立的目標類型。 唯一接受的值&quot;EDGE&quot;會建立邊緣目的地。 |
+| `dataCenters` **(必填)** | 一個字串陣列，它列出要向其佈線投影的邊緣。 可包含下列一或多個值：「OR1」 —— 美國西部，「VA5」 —— 美國東部，「NLD1」 - EMEA。 |
+| `ttl` **(必填)** | 指定投影有效期。 接受的值範圍：600至604800。 預設值：3600。 |
+| `replicationPolicy` **(必填)** | 定義從集線器到邊緣的資料複製行為。  支援的值：主動、被動。 預設值：反應。 |
 
 **回應**
 
