@@ -4,19 +4,21 @@ solution: Experience Platform
 title: Adobe Experience Platform部分批次擷取概觀
 topic: overview
 translation-type: tm+mt
-source-git-commit: 5699022d1f18773c81a0a36d4593393764cb771a
+source-git-commit: d560e8dd07e9590376728ae6575766cc382325a5
 
 ---
 
 
 
-# 部分批次擷取
+# 部分批次擷取（測試版）
 
 部分批次擷取是指能夠擷取包含錯誤的資料，最高可達到特定臨界值。 透過這項功能，使用者可以成功將所有正確的資料內嵌至Adobe Experience Platform，而其所有不正確的資料都會個別批次處理，以及為何無效的詳細資訊。
 
 本檔案提供管理部分批次擷取的教學課程。
 
-此外，本教學課 [程的附錄](#partial-batch-ingestion-error-types) ，也提供部分批次擷取錯誤類型的參考。
+此外，本教學課 [程的附錄](#appendix) ，也提供部分批次擷取錯誤類型的參考。
+
+>[!IMPORTANT] 此功能僅存在於使用API。 請連絡您的團隊，以取得此功能。
 
 ## 快速入門
 
@@ -47,7 +49,7 @@ Experience Platform中的所有資源都隔離至特定的虛擬沙盒。 所有
 
 ## 在API中啟用資料集以進行部分批次擷取
 
->[!NOTE] 本節說明如何使用API啟用資料集以進行部分批次擷取。 如需使用UI的指示，請閱讀UI步 [驟中啟用資料集以擷取部分批次](#enable-a-dataset-for-partial-batch-ingestion-in-the-ui) 。
+<!-- >[!NOTE] This section describes enabling a dataset for partial batch ingestion using the API. For instructions on using the UI, please read the [enable a dataset for partial batch ingestion in the UI](#enable-a-dataset-for-partial-batch-ingestion-in-the-ui) step. -->
 
 您可以建立新的資料集，或修改啟用部分擷取的現有資料集。
 
@@ -71,35 +73,35 @@ Experience Platform中的所有資源都隔離至特定的虛擬沙盒。 所有
 
 在資料集中，您需要新增上述標籤。
 
-## 在UI中啟用資料集以進行部分批次擷取
+<!-- ## Enable a dataset for partial batch ingestion in the UI
 
->[!NOTE] 本節說明如何使用UI啟用資料集以進行部分批次擷取。 如果您已使用API啟用資料集進行部分批次擷取，則可跳至下一節。
+>[!NOTE] This section describes enabling a dataset for partial batch ingestion using the UI. If you have already enabled a dataset for partial batch ingestion using the API, you can skip ahead to the next section.
 
-若要透過平台UI啟用資料集以進行部分擷取，請按一下左側導 **覽中的** 「資料集」。 您可以建 [立新資料集](#create-a-new-dataset-with-partial-batch-ingestion-enabled) , [或修改現有資料集](#modify-an-existing-dataset-to-enable-partial-batch-ingestion)。
+To enable a dataset for partial ingestion through the Platform UI, click **Datasets** in the left navigation. You can either [create a new dataset](#create-a-new-dataset-with-partial-batch-ingestion-enabled) or [modify an existing dataset](#modify-an-existing-dataset-to-enable-partial-batch-ingestion).
 
-### 建立啟用部分批次擷取的新資料集
+### Create a new dataset with partial batch ingestion enabled
 
-若要建立新資料集，請依照資料集使用指南 [中的步驟](../../catalog/datasets/user-guide.md)。 在您到達「設 *定資料集* 」步驟後，請注意「部分擷取 *」和「錯* 誤診斷 ** 」欄位。
+To create a new dataset, follow the steps in the [dataset user guide](../../catalog/datasets/user-guide.md). Once you reach the *Configure dataset* step, take note of the *Partial Ingestion* and *Error Diagnostics* fields.
 
 ![](../images/batch-ingestion/partial-ingestion/configure-dataset-focus.png)
 
-「部 *分擷取* 」切換可讓您啟用或停用部分批次擷取的使用。
+The *Partial ingestion* toggle allows you to enable or disable the use of partial batch ingestion.
 
-只有在 *關閉「部分提取」(* Partial Ingestion *)切換時，才會顯示「錯誤診斷* 」(Error Diagnostics)切換。 此功能可讓平台產生有關您所擷取批次的詳細錯誤訊息。 如果開啟「 *部分擷取* 」切換，則會自動強化錯誤診斷。
+The *Error Diagnostics* toggle only appears when the *Partial Ingestion* toggle is off. This feature allows Platform to generate detailed error messages about your ingested batches. If the *Partial Ingestion* toggle is turned on, enhanced error diagnostics are automatically enforced.
 
 ![](../images/batch-ingestion/partial-ingestion/configure-dataset-partial-ingestion-focus.png)
 
-「錯 *誤閾值* 」(Error threshold)允許您在整個批失敗之前設定可接受錯誤的百分比。 依預設，此值會設為5%。
+The *Error threshold* allows you to set the percentage of acceptable errors before the entire batch will fail. By default, this value is set to 5%.
 
-### 修改現有資料集以啟用部分批次擷取
+### Modify an existing dataset to enable partial batch ingestion
 
-要修改現有資料集，請選擇要修改的資料集。 右側的側欄會填入資料集的相關資訊。
+To modify an existing dataset, select the dataset you want to modify. The sidebar on the right populates with information about the dataset. 
 
 ![](../images/batch-ingestion/partial-ingestion/modify-dataset-focus.png)
 
-「部 *分擷取* 」切換可讓您啟用或停用部分批次擷取的使用。
+The *Partial ingestion* toggle allows you to enable or disable the use of partial batch ingestion.
 
-「錯 *誤閾值* 」(Error threshold)允許您在整個批失敗之前設定可接受錯誤的百分比。 依預設，此值會設為5%。
+The *Error threshold* allows you to set the percentage of acceptable errors before the entire batch will fail. By default, this value is set to 5%. -->
 
 ## 擷取部分批次擷取錯誤
 
@@ -176,7 +178,7 @@ curl -X GET https://platform.adobe.io/data/foundation/catalog/batches/{BATCH_ID}
 
 本教學課程涵蓋如何建立或修改資料集以啟用部分批次擷取。 如需批次擷取的詳細資訊，請閱讀批次擷取開 [發人員指南](./api-overview.md)。
 
-## 部分批次擷取錯誤類型
+## 部分批次擷取錯誤類型 {#appendix}
 
 部分批次擷取在擷取資料時有四種不同的錯誤類型。
 
