@@ -4,7 +4,7 @@ solution: Adobe Experience Platform
 title: 即時客戶基本資料使用指南
 topic: guide
 translation-type: tm+mt
-source-git-commit: b5412b891a9457fa5e801d1f0479fc59fb08bf1b
+source-git-commit: ab289f07475abcbe966c723423825fd392eb3615
 
 ---
 
@@ -73,7 +73,7 @@ source-git-commit: b5412b891a9457fa5e801d1f0479fc59fb08bf1b
 
 ![](../images/user-guide/profile-merge-policies.png)
 
-有關在UI中使用合併策略的詳細資訊，請參閱 [mMerge策略使用手冊](merge-policies.md)。
+有關在UI中使用合併策略的詳細資訊，請參閱合 [並策略使用手冊](merge-policies.md)。
 
 ## 聯合模式
 
