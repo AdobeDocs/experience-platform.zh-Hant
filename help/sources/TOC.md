@@ -3,7 +3,7 @@ product: experience-platform
 audience: user
 user-guide-title: Adobe Experience Platform來源連接器說明
 translation-type: tm+mt
-source-git-commit: c60f374fddb7c2d0ae35c5a5e085ddc0e2f7b78f
+source-git-commit: 30f36d18f0e670ede02041db04f1cc8be55d11a3
 
 ---
 
@@ -37,12 +37,15 @@ source-git-commit: c60f374fddb7c2d0ae35c5a5e085ddc0e2f7b78f
       - [Amazon Redshift連接器](connectors/databases/redshift.md)
       - [Apache Hive on Azure HDInsights連接器](connectors/databases/hive.md)
       - [Apache Spark on Azure HDInsights連接器](connectors/databases/spark.md)
+      - [Azure資料總管連接器](connectors/databases/data-explorer.md)
       - [Azure Synapse Analytics連接器](connectors/databases/synapse-analytics.md)
       - [Azure表格儲存連接器](connectors/databases/ats.md)
       - [Google BigQuery連接器](connectors/databases/bigquery.md)
+      - [IBM DB2連接器](connectors/databases/ibm-db2.md)
       - [MariaDB連接器](connectors/databases/mariadb.md)
       - [Microsoft SQL Server連接器](connectors/databases/sql-server.md)
       - [MySQL連接器](connectors/databases/mysql.md)
+      - [Oracle連接器](connectors/databases/oracle.md)
       - [菲尼克斯連接器](connectors/databases/phoenix.md)
       - [PostgreSQL連接器](connectors/databases/postgres.md)
    - 行銷自動化 {#marketing-automation}
@@ -70,13 +73,16 @@ source-git-commit: c60f374fddb7c2d0ae35c5a5e085ddc0e2f7b78f
          - [ServiceNow連接器](tutorials/api/create/customer-success/servicenow.md)
       - 資料庫 {#databases}
          - [Amazon Redshift連接器](tutorials/api/create/databases/redshift.md)
+         - [Apache Hive on Azure HDInsights連接器](tutorials/api/create/databases/hive.md)
          - [Apache Spark on Azure HDInsights連接器](tutorials/api/create/databases/spark.md)
+         - [Azure資料總管連接器](tutorials/api/create/databases/data-explorer.md)
          - [Azure Synapse Analytics連接器](tutorials/api/create/databases/synapse-analytics.md)
          - [Azure表格儲存連接器](tutorials/api/create/databases/ats.md)
          - [Google BigQuery連接器](tutorials/api/create/databases/bigquery.md)
-         - [蜂窩連接器](tutorials/api/create/databases/hive.md)
+         - [IBM DB2連接器](tutorials/api/create/databases/ibm-db2.md)
          - [MariaDB連接器](tutorials/api/create/databases/mariadb.md)
          - [MySQL連接器](tutorials/api/create/databases/mysql.md)
+         - [Oracle連接器](tutorials/api/create/databases/oracle.md)
          - [菲尼克斯連接器](tutorials/api/create/databases/phoenix.md)
          - [PostgreSQL連接器](tutorials/api/create/databases/postgres.md)
          - [SQL Server連接器](tutorials/api/create/databases/sql-server.md)
@@ -126,16 +132,16 @@ source-git-commit: c60f374fddb7c2d0ae35c5a5e085ddc0e2f7b78f
          - [ServiceNow連接器](tutorials/ui/create/customer-success/servicenow.md)
       - 資料庫 {#databases}
          - [Amazon Redshift連接器](tutorials/ui/create/databases/redshift.md)
+         - [Apache Hive on Azure HDInsights連接器](tutorials/ui/create/databases/hive.md)
+         - [Apache Spark on Azure HDInsights連接器](tutorials/ui/create/databases/spark.md)
          - [Azure Synapse Analytics連接器](tutorials/ui/create/databases/synapse-analytics.md)
          - [Azure表格儲存連接器](tutorials/ui/create/databases/ats.md)
          - [Google Big Query連接器](tutorials/ui/create/databases/bigquery.md)
-         - [蜂窩連接器](tutorials/ui/create/databases/hive.md)
          - [MariaDB連接器](tutorials/ui/create/databases/mariadb.md)
          - [Microsoft SQL Server連接器](tutorials/ui/create/databases/sql-server.md)
          - [MySQL連接器](tutorials/ui/create/databases/mysql.md)
          - [菲尼克斯連接器](tutorials/ui/create/databases/phoenix.md)
          - [PostgreSQL連接器](tutorials/ui/create/databases/postgres.md)
-         - [火花連接器](tutorials/ui/create/databases/spark.md)
       - 行銷自動化 {#marketing-automation}
          - [HubSpot連接器](tutorials/ui/create/marketing-automation/hubspot.md)
       - 付款 {#payments}
