@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Adobe Experience Platform來源連接器概觀
 topic: overview
 translation-type: tm+mt
-source-git-commit: e81f138f933d4bb2c36260480e360dfacd412da0
+source-git-commit: 8ee88b27c79610827ff2627999e303b5fc43e1c6
 
 ---
 
@@ -67,12 +67,15 @@ Experience Platform支援從協力廠商資料庫擷取資料。 有關特定來
 - [Amazon Redshift連接器](connectors/databases/redshift.md)
 - [Apache Hive on Azure HDInsights連接器](connectors/databases/hive.md)
 - [Apache Spark on Azure HDInsights連接器](connectors/databases/spark.md)
+- [Azure資料總管連接器](connectors/databases/data-explorer.md)
 - [Azure Synapse Analytics連接器](connectors/databases/synapse-analytics.md)
 - [Azure表格儲存連接器](connectors/databases/ats.md)
 - [Google BigQuery連接器](connectors/databases/bigquery.md)
+- [IBM DB2連接器](connectors/databases/ibm-db2.md)
 - [MariaDB連接器](connectors/databases/mariadb.md)
 - [Microsoft SQL Server連接器](connectors/databases/sql-server.md)
 - [MySQL連接器](connectors/databases/mysql.md)
+- [Oracle連接器](connectors/databases/oracle.md)
 - [菲尼克斯連接器](connectors/databases/phoenix.md)
 - [PostgreSQL連接器](connectors/databases/postgres.md)
 
