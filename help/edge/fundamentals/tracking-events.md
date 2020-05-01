@@ -4,7 +4,7 @@ seo-title: 追蹤Adobe Experience Platform Web SDK事件
 description: 瞭解如何追蹤Experience Platform Web SDK活動
 seo-description: 瞭解如何追蹤Experience Platform Web SDK活動
 translation-type: tm+mt
-source-git-commit: a1161630c8edae107b784f32ee20af225f9f8c46
+source-git-commit: 3c6f9663ef5b83ceeb93539171017e2b282a613f
 
 ---
 
@@ -42,6 +42,9 @@ alloy("event", {
   }
 });
 ```
+
+>[!Note]
+>在XDM欄位中，每個事件都可傳送的資料有32 KB的限制。
 
 ### 發送非XDM資料
 
@@ -179,7 +182,7 @@ alloy("configure", {
 2. 自動收集的值。  (請參閱 [自動資訊](../reference/automatic-information.md)。)
 3. 回呼中所做的 `onBeforeEventSend` 變更。
 
-如果回 `onBeforeEventSend` 呼引發例外，事件仍會傳送；不過，回呼中所做的變更不會套用至最終事件。
+如果回 `onBeforeEventSend` 呼引發例外，事件仍會傳送； 不過，回呼中所做的變更不會套用至最終事件。
 
 ## 可能的可操作錯誤
 
