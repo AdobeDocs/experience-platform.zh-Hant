@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 即時客戶個人檔案中的隱私權要求處理
 topic: overview
 translation-type: tm+mt
-source-git-commit: 5f0e0deb4a2fae636ac4d2313a6541c25309c294
+source-git-commit: cc296670db91640e75fd7a47b874a46eaf57ecde
 
 ---
 
@@ -19,9 +19,9 @@ Adobe Experience Platform隱私服務會處理客戶存取、選擇退出銷售�
 
 建議您在閱讀本指南之前，先瞭解下列Experience Platform服務：
 
-* [隱私權服務](home.md):管理客戶在Adobe Experience Cloud應用程式中存取、選擇退出銷售或刪除其個人資料的要求。
-* [身分服務](../identity-service/home.md):透過跨裝置和系統橋接身分，解決客戶體驗資料分散所帶來的根本挑戰。
-* [即時客戶個人檔案](../profile/home.md):根據來自多個來源的匯整資料，提供統一、即時的消費者個人檔案。
+* [隱私權服務](home.md): 管理客戶在Adobe Experience Cloud應用程式中存取、選擇退出銷售或刪除其個人資料的要求。
+* [身分服務](../identity-service/home.md): 透過跨裝置和系統橋接身分，解決客戶體驗資料分散所帶來的根本挑戰。
+* [即時客戶個人檔案](../profile/home.md): 根據來自多個來源的匯整資料，提供統一、即時的消費者個人檔案。
 
 ## 瞭解身分名稱空間 {#namespaces}
 
@@ -33,7 +33,7 @@ Identity Service會維護全域定義（標準）和使用者定義（自訂）�
 
 ## 提交請求 {#submit}
 
->[!NOTE] 本節說明如何設定資料湖的隱私權要求的格式。 強烈建議您檢閱 [Privacy Service API](../privacy-service/api/getting-started.md) 或 [Privacy Service UI](../privacy-service/ui/overview.md) 檔案，以取得如何提交隱私權工作的完整步驟，包括如何在請求負載中正確格式化已提交的使用者身分資料。
+>[!NOTE] 本節說明如何建立描述檔資料存放區的隱私權要求。 強烈建議您檢閱 [Privacy Service API](../privacy-service/api/getting-started.md) 或 [Privacy Service UI](../privacy-service/ui/overview.md) 檔案，以取得如何提交隱私權工作的完整步驟，包括如何在請求負載中正確格式化已提交的使用者身分資料。
 
 下節將說明如何使用隱私權服務API或UI，對即時客戶個人檔案和資料湖提出隱私權要求。
 
@@ -94,7 +94,7 @@ curl -X POST \
 
 ## 刪除請求處理
 
-當Experience Platform收到來自隱私權服務的刪除要求時，平台會向隱私權服務傳送確認該要求已收到且受影響的資料已標示為刪除。 然後在7天內，會從資料湖或描述檔儲存區移除記錄。 在該七天的時段內，資料會被軟刪除，因此無法由任何平台服務存取。
+當Experience Platform收到來自隱私權服務的刪除要求時，平台會向隱私權服務傳送確認該要求已收到且受影響的資料已標示為刪除。 然後在7天內，這些記錄會從資料湖或描述檔儲存區中移除。 在該七天的時段內，資料會被軟刪除，因此無法由任何平台服務存取。
 
 在未來版本中，平台會在實際刪除資料後傳送確認給隱私權服務。
 
