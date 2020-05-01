@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 使用流程服務API建立Azure表格儲存連接器
 topic: overview
 translation-type: tm+mt
-source-git-commit: 69ea79aff57ad82d8bc462984526b2126858c0b1
+source-git-commit: 9556b85b26e2eb3d4a2b3e41db5f0c3a14459d32
 
 ---
 
@@ -19,8 +19,8 @@ Flow Service用於收集和集中Adobe Experience Platform內不同來源的客�
 
 本指南需要有效瞭解Adobe Experience Platform的下列元件：
 
-* [來源](../../../../home.md):Experience Platform可讓您從各種來源擷取資料，同時讓您能夠使用平台服務來建構、標示和增強傳入資料。
-* [沙盒](../../../../../sandboxes/home.md):Experience Platform提供虛擬沙盒，可將單一Platform實例分割為不同的虛擬環境，以協助開發和發展數位體驗應用程式。
+* [來源](../../../../home.md): Experience Platform可讓您從各種來源擷取資料，同時讓您能夠使用平台服務來建構、標示和增強傳入資料。
+* [沙盒](../../../../../sandboxes/home.md): Experience Platform提供虛擬沙盒，可將單一Platform實例分割為不同的虛擬環境，以協助開發和發展數位體驗應用程式。
 
 以下各節提供您必須知道的其他資訊，以便使用Flow Service API成功連線至ATS。
 
@@ -43,7 +43,7 @@ Flow Service用於收集和集中Adobe Experience Platform內不同來源的客�
 
 若要呼叫平台API，您必須先完成驗證教 [學課程](../../../../../tutorials/authentication.md)。 完成驗證教學課程後，所有Experience Platform API呼叫中每個必要標題的值都會顯示在下方：
 
-* 授權：生產者 `{ACCESS_TOKEN}`
+* 授權： 生產者 `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
 * x-gw-ims-org-id: `{IMS_ORG}`
 
@@ -67,8 +67,7 @@ POST /connections
 
 **請求**
 
-為了建立ATS連線，其唯一的連線規格ID必須作為POST要求的一部分提供。 ATS的連線規格ID為 `ecde33f2-c56f-46cc-bdea-ad151c16cd69`。
-
+若要建立ATS連線，其唯一的連線規格ID必須作為POST要求的一部分提供。 ATS的連線規格ID為 `ecde33f2-c56f-46cc-bdea-ad151c16cd69`。
 
 ```shell
 curl -X POST \
@@ -97,7 +96,7 @@ curl -X POST \
 | 參數 | 說明 |
 | --------- | ----------- |
 | `auth.params.connectionString` | 與您的ATS帳戶關聯的連線字串。 |
-| `connectionSpec.id` | ATS連接規範ID: `ecde33f2-c56f-46cc-bdea-ad151c16cd69`。 |
+| `connectionSpec.id` | ATS連接規範ID: `ecde33f2-c56f-46cc-bdea-ad151c16cd69`. |
 
 **回應**
 
