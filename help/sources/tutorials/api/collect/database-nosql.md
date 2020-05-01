@@ -1,32 +1,32 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: 透過來源連接器和API，從外部資料庫或NoSQL系統收集資料
+title: 透過來源連接器和API，從協力廠商資料庫收集資料
 topic: overview
 translation-type: tm+mt
-source-git-commit: 00764a59629eb8a5a06ac28ad446084b0bdb2293
+source-git-commit: c4162d88a688ce2028de08b63e7b7eab954a0e29
 
 ---
 
 
-# 透過來源連接器和API，從外部資料庫或NoSQL系統收集資料
+# 透過來源連接器和API，從協力廠商資料庫收集資料
 
 Flow Service用於收集和集中Adobe Experience Platform內不同來源的客戶資料。 該服務提供用戶介面和REST風格的API，所有支援的源都可從中連接。
 
-本教程介紹從資料庫或NoSQL系統檢索資料並通過源連接器和API將其導入平台的步驟。
+本教學課程涵蓋從協力廠商資料庫擷取資料，並透過來源連接器和API將其匯入平台的步驟。
 
 ## 快速入門
 
-本教程要求您通過有效的基本連接和要引入平台的檔案（包括檔案的路徑和結構）訪問第三方資料庫或NoSQL系統。 如果您沒有此資訊，請參閱教程，在嘗試本教 [程之前，使用流服務API來探索資料庫或NoSQL系統](../explore/database-nosql.md) 。
+本教學課程要求您必須與第三方資料庫建立有效的連線，以及要匯入平台的檔案（包括檔案的路徑和結構）的相關資訊。 如果您沒有此資訊，請先參閱教學課程， [在嘗試本教學課程之前，使用Flow Service API探索資料庫](../explore/database-nosql.md) 。
 
 本教學課程也要求您對Adobe Experience Platform的下列元件有正確的認識：
 
-* [體驗資料模型(XDM)系統](../../../../xdm/home.md):Experience Platform組織客戶體驗資料的標準化架構。
-   * [架構構成基礎](../../../../xdm/schema/composition.md):瞭解XDM架構的基本建置區塊，包括架構組合的主要原則和最佳實務。
-   * [架構註冊開發人員指南](../../../../xdm/api/getting-started.md):包含您必須知道的重要資訊，以便成功執行對架構註冊表API的呼叫。 這包括您 `{TENANT_ID}`的「容器」概念，以及提出要求所需的標題（請特別注意「接受」標題及其可能的值）。
-* [目錄服務](../../../../catalog/home.md):目錄是Experience Platform中資料位置和世系的記錄系統。
-* [批次擷取](../../../../ingestion/batch-ingestion/overview.md):批次擷取API可讓您將資料以批次檔案的形式內嵌至Experience Platform。
-* [沙盒](../../../../sandboxes/home.md):Experience Platform提供虛擬沙盒，可將單一Platform實例分割為不同的虛擬環境，以協助開發和發展數位體驗應用程式。
+* [體驗資料模型(XDM)系統](../../../../xdm/home.md): Experience Platform組織客戶體驗資料的標準化架構。
+   * [架構構成基礎](../../../../xdm/schema/composition.md): 瞭解XDM架構的基本建置區塊，包括架構組合的主要原則和最佳實務。
+   * [架構註冊開發人員指南](../../../../xdm/api/getting-started.md): 包含您必須知道的重要資訊，以便成功執行對架構註冊表API的呼叫。 這包括您 `{TENANT_ID}`的「容器」概念，以及提出要求所需的標題（請特別注意「接受」標題及其可能的值）。
+* [目錄服務](../../../../catalog/home.md): 目錄是Experience Platform中資料位置和世系的記錄系統。
+* [批次擷取](../../../../ingestion/batch-ingestion/overview.md): 批次擷取API可讓您將資料以批次檔案的形式內嵌至Experience Platform。
+* [沙盒](../../../../sandboxes/home.md): Experience Platform提供虛擬沙盒，可將單一Platform實例分割為不同的虛擬環境，以協助開發和發展數位體驗應用程式。
 
 以下各節提供您需要知道的其他資訊，以便使用流服務API成功連接到資料庫或NoSQL系統。
 
@@ -38,7 +38,7 @@ Flow Service用於收集和集中Adobe Experience Platform內不同來源的客�
 
 若要呼叫平台API，您必須先完成驗證教 [學課程](../../../../tutorials/authentication.md)。 完成驗證教學課程後，所有Experience Platform API呼叫中每個必要標題的值都會顯示在下方：
 
-* 授權：生產者 `{ACCESS_TOKEN}`
+* 授權： 生產者 `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
 * x-gw-ims-org-id: `{IMS_ORG}`
 
@@ -101,7 +101,7 @@ curl -X POST \
 
 | 屬性 | 說明 |
 | -------- | ----------- |
-| `baseConnectionId` | 資料庫或NoSQL系統的基本連接的ID。 |
+| `baseConnectionId` | 資料庫連接的ID。 |
 | `data.schema.id` | 臨 `$id` 機XDM架構。 |
 | `params.path` | 源檔案的路徑。 |
 | `connectionSpec.id` | 資料庫或NoSQL系統的連接規範ID。 |
@@ -463,7 +463,7 @@ curl -X POST \
 }
 ```
 
-## 查找資料流規範 {#specs}
+## 檢索資料流規範 {#specs}
 
 資料流負責從源收集資料並將其引入平台。 要建立資料流，必須首先通過對流服務API執行GET請求來獲取資料流規範。 資料流規範負責從外部資料庫或NoSQL系統收集資料。
 
@@ -648,16 +648,6 @@ curl -X POST \
         ],
         "transformations": [
             {
-                "name": "Copy",
-                "params": {
-                    "deltaColumn": {
-                        "name": "updatedAt",
-                        "dateFormat": "YYYY-MM-DD",
-                        "timezone": "UTC"
-                    }
-                }
-            },
-            {
                 "name": "Mapping",
                 "params": {
                     "mappingId": "ab91c736-1f3d-4b09-8424-311d3d3e3cea",
@@ -675,10 +665,10 @@ curl -X POST \
 
 | 屬性 | 說明 |
 | -------- | ----------- |
-| `flowSpec.id` | 與資料庫或NoSQL系統關聯的資料流規範ID。 |
-| `sourceConnectionIds` | 與資料庫或NoSQL系統關聯的源連接ID。 |
-| `targetConnectionIds` | 與資料庫或NoSQL系統關聯的目標連接ID。 |
-| `transformations.params.mappingId` | 與資料庫或NoSQL系統關聯的映射ID。 |
+| `flowSpec.id` | 與資料庫關聯的資料流規範ID。 |
+| `sourceConnectionIds` | 與資料庫關聯的源連接ID。 |
+| `targetConnectionIds` | 與資料庫關聯的目標連接ID。 |
+| `transformations.params.mappingId` | 與資料庫關聯的映射ID。 |
 
 **回應**
 
@@ -692,7 +682,30 @@ curl -X POST \
 
 ## 後續步驟
 
-在本教程中，您建立了源連接器，以按計畫從資料庫或NoSQL系統收集資料。 現在，下游平台服務（例如即時客戶個人檔案和資料科學工作區）可以使用傳入的資料。 如需詳細資訊，請參閱下列檔案：
+在本教學課程中，您已建立來源連接器，以依排程從協力廠商資料庫收集資料。 現在，下游平台服務（例如即時客戶個人檔案和資料科學工作區）可以使用傳入的資料。 如需詳細資訊，請參閱下列檔案：
 
 * [即時客戶個人檔案總覽](../../../../profile/home.md)
 * [資料科學工作區概觀](../../../../data-science-workspace/home.md)
+
+## 附錄
+
+下節列出不同的雲儲存源連接器及其連接規範。
+
+### 連接規範
+
+| 連接器名稱 | 連接規範ID |
+| -------------- | --------------- |
+| Amazon Redshift | `3416976c-a9ca-4bba-901a-1f08f66978ff` |
+| Apache Hive on Azure HDInsights | `aac9bbd4-6c01-46ce-b47e-51c6f0f6db3f` |
+| Apache Spark on Azure HDInsights | `6a8d82bc-1caf-45d1-908d-cadabc9d63a6` |
+| Azure資料總管 | `0479cc14-7651-4354-b233-7480606c2ac3` |
+| Azure突觸分析 | `a49bcc7d-8038-43af-b1e4-5a7a089a7d79` |
+| Azure表格儲存 | `ecde33f2-c56f-46cc-bdea-ad151c16cd69` |
+| Google BigQuery | `3c9b37f8-13a6-43d8-bad3-b863b941fedd` |
+| IBM DB2 | `09182899-b429-40c9-a15a-bf3ddbc8ced7` |
+| MariaDB | `000eb99-cd47-43f3-827c-43caf170f015` |
+| Microsoft SQL Server | `1f372ff9-38a4-4492-96f5-b9a4e4bd00ec` |
+| MySQL | `26d738e0-8963-47ea-aadf-c60de735468a` |
+| Oracle | `d6b52d86-f0f8-475f-89d4-ce54c8527328` |
+| 鳳凰城 | `102706fb-a5cd-42ee-afe0-bc42f017ff43` |
+| PostgreSQL | `74a1c565-4e59-48d7-9d67-7c03b8a13137` |
