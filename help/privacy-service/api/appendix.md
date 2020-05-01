@@ -4,14 +4,14 @@ solution: Experience Platform
 title: 接受的身份名稱空間和限定詞
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: a1161630c8edae107b784f32ee20af225f9f8c46
+source-git-commit: cc296670db91640e75fd7a47b874a46eaf57ecde
 
 ---
 
 
 # 附錄
 
-## 標準身分名稱空間
+## 標準身分名稱空間 {#standard-namespaces}
 
 所有傳送至隱私權服務的身分必須以特定的身分命名空間提供。 身分名稱空間是 [Adobe Experience Platform Identity Service的元件](../../identity-service/home.md) ，可指出身分相關的上下文。
 
