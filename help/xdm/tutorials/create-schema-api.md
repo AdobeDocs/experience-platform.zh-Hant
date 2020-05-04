@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 使用方案註冊表API建立方案
 topic: tutorials
 translation-type: tm+mt
-source-git-commit: 5aad9fa71051a58fe1c4678553f47077d81d23fc
+source-git-commit: 14cd3d17c7d9ba602d02925abddec9e0b246a8c8
 
 ---
 
@@ -19,10 +19,10 @@ source-git-commit: 5aad9fa71051a58fe1c4678553f47077d81d23fc
 
 本指南需要有效瞭解Adobe Experience Platform的下列元件：
 
-* [體驗資料模型(XDM)系統](../home.md):Experience Platform組織客戶體驗資料的標準化架構。
-   * [架構構成基礎](../schema/composition.md):瞭解XDM架構的基本建置區塊，包括架構組合的主要原則和最佳實務。
-* [即時客戶個人檔案](../../profile/home.md):根據來自多個來源的匯整資料，提供統一、即時的消費者個人檔案。
-* [沙盒](../../sandboxes/home.md):Experience Platform提供虛擬沙盒，可將單一Platform實例分割為不同的虛擬環境，以協助開發和發展數位體驗應用程式。
+* [體驗資料模型(XDM)系統](../home.md): Experience Platform組織客戶體驗資料的標準化架構。
+   * [架構構成基礎](../schema/composition.md): 瞭解XDM架構的基本建置區塊，包括架構組合的主要原則和最佳實務。
+* [即時客戶個人檔案](../../profile/home.md): 根據來自多個來源的匯整資料，提供統一、即時的消費者個人檔案。
+* [沙盒](../../sandboxes/home.md): Experience Platform提供虛擬沙盒，可將單一Platform實例分割為不同的虛擬環境，以協助開發和發展數位體驗應用程式。
 
 在開始本教學課程之前，請先閱讀開 [發人員指南](../api/getting-started.md) ，以取得成功呼叫架構註冊表API所需的重要資訊。 這包括您 `{TENANT_ID}`的「容器」概念，以及提出要求所需的標題（請特別注意「接受」標題及其可能的值）。
 
@@ -287,7 +287,7 @@ curl -X PATCH \
 
 回應會顯示陣列中新增的混 `meta:extends` 音，並在屬 `$ref` 性中包含混音 `allOf` 。
 
-「忠誠度成員」結構現在應該在陣 `$ref` 列中包含三個 `allOf` 值：「profile」、「profile-person-details」和「profile-personal-details」，如下所示。
+「忠誠度成員」結構現在應該在陣 `$ref` 列中包含三個 `allOf` 值： 「profile」、「profile-person-details」和「profile-personal-details」，如下所示。
 
 ```JSON
 {
@@ -351,7 +351,7 @@ POST /tenant/mixins
 
 **請求**
 
-此請求會建立新的混音，其中包含「忠誠度」物件，其中包含4個忠誠度方案特定欄位：&quot;loyaltyId&quot;、&quot;loyaltyLevel&quot;、&quot;loyaltyPoints&quot;和&quot;memberSince&quot;。
+此請求會建立新的混音，其中包含「忠誠度」物件，其中包含4個忠誠度方案特定欄位： &quot;loyaltyId&quot;、&quot;loyaltyLevel&quot;、&quot;loyaltyPoints&quot;和&quot;memberSince&quot;。
 
 ```SHELL
 curl -X POST\
@@ -951,7 +951,7 @@ curl -X PATCH \
 
 結構描述用於將資料擷取至Experience Platform。 這些資料最終會用於多個服務，以建立個人的單一統一檢視。 為協助處理此程式，關鍵欄位可標示為「身分」，而且在擷取資料時，這些欄位中的資料會插入該個人的「身分圖表」中。 然後，即時客戶個人檔案和其 [他Experience Platform服務可存取圖表資料](../../profile/home.md) ，以提供每個個別客戶的銜接檢視。
 
-通常標示為「身分」的欄位包括：電子郵件地址、電 [話號碼、Experience Cloud ID(ECID)](https://marketing.adobe.com/resources/help/en_US/mcvid/)、CRM ID或其他唯一ID欄位。
+通常標示為「身分」的欄位包括： 電子郵件地址、電 [話號碼、Experience Cloud ID(ECID)](https://docs.adobe.com/content/help/zh-Hant/id-service/using/home.html)、CRM ID或其他唯一ID欄位。
 
 請考慮您組織專屬的任何唯一識別碼，因為這些識別碼可能也是好的識別碼欄位。
 
@@ -1012,7 +1012,7 @@ curl -X POST \
 
 通過將&quot;union&quot;標籤添加到屬 `meta:immutableTags` 性中，您可以啟用「忠誠度成員」結構，以便由即時客戶配置檔案使用。
 
-有關使用聯合視圖的詳細資訊，請參閱「方案註冊 [表](../api/unions.md) 」開發人員指南中的「聯合」一節。
+有關使用聯合視圖的詳細資訊，請參閱「模式註冊 [表](../api/unions.md) 」開發人員指南中的「聯合」一節。
 
 ### 新增&quot;union&quot;標籤
 
@@ -1176,7 +1176,7 @@ curl -X GET \
 
 在本教學課程中，會合成一個結構描述零售忠誠度方案的成員。
 
-該方案實現了XDM個人配置檔案類，並結合了多個混合；使用標準「人員詳細資料」和「個人詳細資料」混合，以及透過教學課程中定義的「忠誠度詳細資料」混合，引入有關忠誠度會員的資訊。
+該方案實現了XDM個人配置檔案類，並結合了多個混合； 使用標準「人員詳細資料」和「個人詳細資料」混合，以及透過教學課程中定義的「忠誠度詳細資料」混合，引入有關忠誠度會員的資訊。
 
 以下顯示JSON格式的已完成忠誠度成員結構描述：
 
