@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 架構構成基礎
 topic: overview
 translation-type: tm+mt
-source-git-commit: d0ccaa5511375253a2eca8f1235c2f953b734709
+source-git-commit: 14cd3d17c7d9ba602d02925abddec9e0b246a8c8
 
 ---
 
@@ -47,8 +47,8 @@ Experience Platform所建立的基礎架構（稱為XDM System）有助於架構
 
 用於Experience Platform的資料分為兩種行為類型：
 
-* **記錄資料**:提供主題屬性的相關資訊。 主題可以是組織或個人。
-* **時間系列資料**:提供記錄主體直接或間接採取操作時系統的快照。
+* **記錄資料**: 提供主題屬性的相關資訊。 主題可以是組織或個人。
+* **時間系列資料**: 提供記錄主體直接或間接採取操作時系統的快照。
 
 所有XDM結構描述的資料可以分類為記錄或時間序列。 方案的資料行為由方案的類定 **義**，該類在首次建立方案時被分配給方案。 本文稍後將對XDM類作進一步的詳細說明。
 
@@ -60,7 +60,7 @@ Experience Platform所建立的基礎架構（稱為XDM System）有助於架構
 
 為協助處理此程式，關鍵欄位可標示為「識別」。 資料擷取時，這些欄位中的資料會插入該個人的「身分圖表」中。 然後，即時客戶個人檔案和其 [](../../profile/home.md) 他Experience Platform服務可存取圖表資料，以提供每個個別客戶的銜接檢視。
 
-通常標示為「身分」的欄位包括：電子郵件地址、電 [話號碼、Experience Cloud ID(ECID)](https://marketing.adobe.com/resources/help/en_US/mcvid/)、CRM ID或其他唯一ID欄位。 您也應考慮您組織專屬的任何唯一識別碼，因為這些識別碼可能也是好的「識別」欄位。
+通常標示為「身分」的欄位包括： 電子郵件地址、電 [話號碼、Experience Cloud ID(ECID)](https://docs.adobe.com/content/help/zh-Hant/id-service/using/home.html)、CRM ID或其他唯一ID欄位。 您也應考慮您組織專屬的任何唯一識別碼，因為這些識別碼可能也是好的「識別」欄位。
 
 在方案規劃階段，務必考慮客戶身份，以協助確保資料匯整在一起，以建立最強穩的個人檔案。 請參閱 [Identity Service總覽](../../identity-service/home.md) ，進一步瞭解身分資訊如何協助您為客戶提供數位體驗。
 
@@ -86,7 +86,7 @@ Experience Platform使用組合方法，將標準建置區塊組合以建立結�
 
 方案使用下列公式組成：
 
-**類+ Mixin&amp;ast;= XDM方案**
+**類+ Mixin&amp;ast; = XDM方案**
 
 &amp;ast；模式由類和零個或多個 _混合組成_ 。 這表示您完全不需使用mixin就可以合成資料集架構。
 
@@ -110,7 +110,7 @@ Experience Platform也允許「供應商」類別，這些類別由Experience Pl
 
 Mixins會根據所代表資料的行為（記錄或時間系列）來定義與哪些類別相容。 這表示並非所有混音都可用於所有類別。
 
-Mixin的範圍和定義與類相同：有由使用平台的個別組織所定義的產業混合、廠商混合和客戶混合。 Experience Platform包含許多標準的業界混搭，同時也允許廠商為其使用者定義混搭，而個別使用者則為其特定概念定義混搭。
+Mixin的範圍和定義與類相同： 有由使用平台的個別組織所定義的產業混合、廠商混合和客戶混合。 Experience Platform包含許多標準的業界混搭，同時允許廠商為其使用者定義混搭，而個別使用者則為其特定概念定義混搭。
 
 例如，若要擷取「忠誠會員」結構的詳細資訊，例如「名字」和「首頁位址」，您可以使用定義這些常見概念的標準混合。 但是，針對較不常見使用案例（例如「忠誠度方案等級」）的特定概念通常沒有預先定義的混合。 在這種情況下，您必須定義自己的混音，才能擷取此資訊。
 
