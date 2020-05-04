@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Analytics資料連接器
 topic: overview
 translation-type: tm+mt
-source-git-commit: 75c446aed75100bd2b5b4a3d365c090cb01dcc69
+source-git-commit: 14cd3d17c7d9ba602d02925abddec9e0b246a8c8
 
 ---
 
@@ -21,11 +21,9 @@ Adobe Analytics是一款功能強大的引擎，可協助您進一步瞭解客�
 
 ![](./images/analytics-data-experience-platform.png)
 
-Adobe Analytics從高層次上收集來自全球不同數位通道和多個資料中心的資料。 收集資料後，會套用訪客識別、分段與轉換架構(VISTA)規則和處理規則來塑造傳入資料的形狀。 在原始資料經過此輕量型處理後，即時客戶個人檔案會視為可供使用。 在與上述程式平行的過程中，相同的處理資料被微批處理並吸收到平台資料集中，以供資料科學工作區、查詢服務和其他資料發現應用程式使用。
+Adobe Analytics從高層次上收集來自全球不同數位通道和多個資料中心的資料。 收集資料後，會套用訪客識別、分段與轉換架構(VISTA)規則和處理規則，以塑造傳入資料的形狀。 在原始資料經過此輕量型處理後，即時客戶個人檔案會視為可供使用。 在與上述程式平行的過程中，相同的處理資料被微批處理並吸收到平台資料集中，以供資料科學工作區、查詢服務和其他資料發現應用程式使用。
 
-如需VISTA和處理規則的詳細資訊，請參閱下列檔案：
-* [VISTA規則概觀](https://marketing.adobe.com/resources/help/en_US/reference/VISTA.html)
-* [處理規則概觀](https://docs.adobe.com/content/help/zh-Hant/analytics/admin/admin-tools/processing-rules/processing-rules.html)
+如需處 [理規則的詳細資訊](https://docs.adobe.com/content/help/zh-Hant/analytics/admin/admin-tools/processing-rules/processing-rules.html) ，請參閱處理規則概觀。
 
 ## 體驗資料模型(XDM)
 
