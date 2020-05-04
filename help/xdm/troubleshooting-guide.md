@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Experience Data Model(XDM)系統疑難排解指南
 topic: troubleshooting
 translation-type: tm+mt
-source-git-commit: f7c87cc86bfc5017ec5c712d05e39be5c14a7147
+source-git-commit: 14cd3d17c7d9ba602d02925abddec9e0b246a8c8
 
 ---
 
@@ -49,7 +49,7 @@ source-git-commit: f7c87cc86bfc5017ec5c712d05e39be5c14a7147
 
 ### 如何定義我的架構的身分？
 
-在Experience Platform中，身分識別用於識別主體（通常為個人），不論所解讀的資料來源為何。 它們是在結構中定義的，方法是將鍵欄位標籤為「標識」。 常用的身分識別欄位包括電子郵件地址、電話號碼、 [Experience Cloud ID(ECID)](https://marketing.adobe.com/resources/help/en_US/mcvid/)、CRM ID和其他唯一ID欄位。
+在Experience Platform中，身分識別用於識別主體（通常為個人），不論所解讀的資料來源為何。 它們是在結構中定義的，方法是將鍵欄位標籤為「標識」。 常用的身分識別欄位包括電子郵件地址、電話號碼、 [Experience Cloud ID(ECID)](https://docs.adobe.com/content/help/zh-Hant/id-service/using/home.html)、CRM ID和其他唯一ID欄位。
 
 欄位可使用API或使用者介面標示為身分。
 
