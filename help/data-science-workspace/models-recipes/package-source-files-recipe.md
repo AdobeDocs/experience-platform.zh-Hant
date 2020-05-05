@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 將來源檔案封裝至配方
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 19823c7cf0459e045366f0baae2bd8a98416154c
+source-git-commit: e08460bc76d79920bbc12c7665a1416d69993f34
 
 ---
 
@@ -15,8 +15,8 @@ source-git-commit: 19823c7cf0459e045366f0baae2bd8a98416154c
 
 要瞭解的概念：
 
-- **方式**:配方是Adobe的模型規格術語，是代表特定機器學習、人工智慧演算法或整合演算法、處理邏輯和設定的頂層容器，以建立並執行已訓練的模型，進而協助解決特定商業問題。
-- **來源檔案**:專案中包含方式邏輯的個別檔案。
+- **方式**: 配方是Adobe的模型規格術語，是代表特定機器學習、人工智慧演算法或整合演算法、處理邏輯和設定的頂層容器，以建立並執行已訓練的模型，進而協助解決特定商業問題。
+- **來源檔案**: 專案中包含方式邏輯的個別檔案。
 
 ## 必要條件
 
@@ -35,24 +35,24 @@ Docker映像允許開發人員將應用程式與其所需的所有部件（如�
 
 內建的Docker影像會使用在方式建立工作流程期間提供給您的認證，推送至Azure容器註冊表。
 
-若要取得您的Azure容器註冊表認證，請登入 <a href="https://platform.adobe.com" target="_blank">Adobe Experience Platform</a>。 在左邊導覽欄，導覽至「工 **作流程」**。 選擇「 **匯入方式** 」，然後選 **取「啟動**」。 請參閱下方的螢幕擷取畫面以供參考。
+若要取得您的Azure容器註冊表認證，請登入 <a href="https://platform.adobe.com" target="_blank">Adobe Experience Platform</a>。 在左邊導覽欄上，導覽至 **[!UICONTROL Workflows]**。 選擇 **[!UICONTROL Import Recipe]** 後面，選擇 **[!UICONTROL Launch]**。 請參閱下方的螢幕擷取畫面以供參考。
 
 ![](../images/models-recipes/package-source-files/import.png)
 
-「設 *定* 」頁面隨即開啟。 提供適當的 **配方名稱**，例如「零售銷售配方」，並選擇性地提供說明或檔案URL。 完成後，按一下「 **Next（下一步）**」。
+「設 *定* 」頁面隨即開啟。 提供適當的 *配方名稱*，例如「零售銷售配方」，並選擇性地提供說明或檔案URL。 完成後，按一下 **[!UICONTROL Next]**。
 
 ![](../images/models-recipes/package-source-files/configure.png)
 
-選取適當的 *執行階段*，然後選擇類 **型的** 「分 *類」*。 您的Azure容器註冊表認證會在完成後產生。
+選取適當的 *執行階段*，然後選擇 **[!UICONTROL Classification]** 類型 *選項*。 您的Azure容器註冊表認證會在完成後產生。
 
 >[!NOTE]
 >*Type *是機器學習問題的類，它是為機器學習問題而設計的，在訓練後用於幫助定制評估訓練運行。
 
 >[!TIP]
->- 對於Python配方，請選擇 **Python** Runtime。
->- 對於R方式，請選擇 **R** Runtime。
->- 對於PySpark配方，請選取 **PySpark執行時** 期。 對象類型自動填充。
->- 對於Scala配方，請選取 **Spark執行** 階段。 對象類型自動填充。
+>- 對於Python配方，請選取執 **[!UICONTROL Python]** 行階段。
+>- 對於R方式，請選取執 **[!UICONTROL R]** 行階段。
+>- 對於PySpark配方，請選取執行 **[!UICONTROL PySpark]** 時期。 對象類型自動填充。
+>- 對於Scala方式，請選取執行 **[!UICONTROL Spark]** 時期。 對象類型自動填充。
 
 
 ![](../images/models-recipes/package-source-files/docker-creds.png)
@@ -189,7 +189,7 @@ git clone https://github.com/adobe/experience-platform-dsw-reference.git
 
 ## 下一步 {#next-steps}
 
-本教學課程將來源檔案封裝成「方式」，這是將「方式」匯入「資料科學工作區」的先決條件步驟。 您現在應該在Azure容器註冊表中有Docker影像，以及對應的影像URL。 您現在已準備好開始教學課程：將封 **裝的方式匯入資料科學工作區**。 請選取下列其中一個教學課程連結以開始使用。
+本教學課程將來源檔案封裝成「方式」，這是將「方式」匯入「資料科學工作區」的先決條件步驟。 您現在應該在Azure容器註冊表中有Docker影像，以及對應的影像URL。 您現在已準備好開始將封裝方式匯入「資料科學工作區」的教學課程。 請選取下列其中一個教學課程連結以開始使用：
 
 - [在UI中匯入封裝的方式](./import-packaged-recipe-ui.md)
 - [使用API匯入封裝的方式](./import-packaged-recipe-api.md)
