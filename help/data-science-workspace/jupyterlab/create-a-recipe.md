@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 使用Jupyter筆記型電腦建立配方
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 19823c7cf0459e045366f0baae2bd8a98416154c
+source-git-commit: 1447196da7dbf59c1f498de40f12ed74c328c0e6
 
 ---
 
@@ -22,7 +22,7 @@ source-git-commit: 19823c7cf0459e045366f0baae2bd8a98416154c
 
 ## 開始使用JupyterLab筆記型電腦環境
 
-從頭開始建立配方可在資料科學工作區中完成。 若要開始，請導覽至 [Adobe Experience Platform](https://platform.adobe.com) ，然後按一下左側的 **ML Models** 標籤，以前往Data Science Workspace。 在此處，按一下「 **Notebooks** sub-tab」（筆記型電腦子標籤），然後在Jupyterlab啟動器螢幕上，選取「Recipe Builder」範本以建立新的筆記型電腦。
+從頭開始建立配方可在資料科學工作區中完成。 若要開始，請導覽至 [Adobe Experience Platform](https://platform.adobe.com) ，然後按一 **[!UICONTROL Notebooks]** 下左側的標籤。 從JupyterLab Launcher中選取Recipe Builder範本，建立新的筆記型電腦。
 
 Recipe Builder筆記型電腦可讓您在筆記型電腦內執行訓練和計分。 這可讓您在針對訓練和計分資料執行 `train()` 實驗 `score()` 時，靈活地變更其和方法。 一旦您對訓練和計分的輸出感到滿意，就可以使用筆記型電腦建立要用於Data Science Workspace的配方功能，並內建在Recipe Builder筆記型電腦中。
 
