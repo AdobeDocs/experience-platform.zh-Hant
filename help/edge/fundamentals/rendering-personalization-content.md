@@ -4,22 +4,26 @@ seo-title: Adobe Experience Platform Web SDK轉換個人化內容
 description: 瞭解如何使用Experience Platform Web SDK呈現個人化內容
 seo-description: 瞭解如何使用Experience Platform Web SDK呈現個人化內容
 translation-type: tm+mt
-source-git-commit: 0cc6e233646134be073d20e2acd1702d345ff35f
+source-git-commit: bb3841da8a566105fde1b7ac78dccd79a7ea15d4
 
 ---
 
 
-# （測試版）轉換個人化內容
+# （測試版）個人化選項概觀
 
 >[!IMPORTANT]
 >
->Adobe Experience Platform Web SDK目前為測試版，並非所有使用者都能使用。 說明檔案和功能可能會有所變更。
+>Adobe Experience Platform Web SDK目前為測試版，並非所有使用者都能使用。 文件和功能可能會有所變更。
 
-當您將事件傳送至伺服器並設定為事件選項時，SDK會 `viewStart` 自 `true` 動轉譯個人化內容。
+Adobe Experience Platform Web SDK支援查詢Adobe的個人化解決方案，包括Adobe Target。 個人化有兩種模式： 擷取可自動轉譯的內容，以及開發人員必須轉譯的內容。 SDK也提供管理閃 [爍的功能](managing-flicker.md)。
+
+## 自動呈現內容
+
+當您將事件傳送至伺服器並設定為事件選項時，SDK會 `renderDecisions` 自 `true` 動轉譯個人化內容。
 
 ```javascript
 alloy("event", {
-  "viewStart": true,
+  "renderDecisions": true,
   "xdm": {
     "commerce": {
       "order": {
@@ -35,66 +39,61 @@ alloy("event", {
 
 個人化內容的呈現是非同步的，因此當特定內容片段是頁面的一部分時，不應有任何假設。
 
-## 管理閃爍
+## 手動呈現內容
 
-當嘗試轉譯個人化內容時，SDK必須確保不會閃爍。 Flicker（也稱為FOOC，原始內容的Flash），是在測試或個人化期間，原始內容在替代內容出現之前短暫顯示。 SDK會嘗試將CSS樣式套用至頁面的元素，以確保這些元素會隱藏，直到個人化內容成功呈現為止。
+您可以使用，請求將決策清單作為命令上的承諾 `event` 返回 `scopes`。 範圍是一個字串，可讓個人化解決方案知道您想要哪個決策。
 
-閃爍管理功能有幾個階段：
-
-1. 預隱藏
-1. 預處理
-1. 演算
-
-### 預隱藏
-
-在預先隱藏階段，SDK會使用 `prehidingStyle` 配置選項來建立HTML樣式標籤，並將它附加至DOM，以確保頁面的大部分部分已隱藏。 如果您不確定頁面的哪些部分會個人化，建議您將其設 `prehidingStyle` 為 `body { opacity: 0 !important }`。 這可確保整個頁面都隱藏。 但是，這會造成Lighthouse、網頁測試等工具報告的頁面轉換效能降低。 若要獲得最佳的頁面轉換效能，建議您設 `prehidingStyle` 定容器元素清單，其中包含將要個人化之頁面的部分。
-
-假設您有如下HTML頁面，而且您知道只有和容器元 `bar` 素 `bazz` 才會個人化：
-
-```html
-<html>
-  <head>
-  </head>
-  <body>
-    <div id="foo">
-      Foo foo foo
-    </div>
-
-    <div id="bar">
-      Bar bar bar
-    </div>
-
-    <div id="bazz">
-      Bazz bazz bazz
-    </div>
-  </body>
-</html>
+```javascript
+alloy("event",{
+    xdm:{...},
+    scopes:['demo-1', 'demo-2']
+  }).then(function(result){
+    if (result.decisions){
+      //do something with the decisions
+    }
+  })
 ```
 
-那就 `prehidingStyle` 應該設成這樣 `#bar, #bazz { opacity: 0 !important }`.
+這會以JSON物件形式傳回每個決策的決策清單。
 
-### 預處理
-
-當SDK從伺服器收到個人化內容後，預處理階段就開始。 在此階段中，會預先處理回應，確保必須包含個人化內容的元素會隱藏起來。 隱藏這些元素後，會移除根據設定選項所建立的HTML樣式標籤，並顯示 `prehidingStyle` HTML內文或隱藏的容器元素。
-
-### 演算
-
-在所有個人化內容轉換成功或發生任何錯誤後，會顯示所有先前隱藏的元素，以確保頁面上沒有SDK隱藏的隱藏元素。
-
-## 非同步載入SDK時管理閃爍
-
-建議您一律以非同步方式載入SDK，以取得最佳的頁面演算效能。 不過，這對個人化內容的呈現有一定影響。 當非同步載入SDK時，必須使用預先隱藏的程式碼片段。 預先隱藏的程式碼片段必須新增至HTML頁面的SDK之前。 以下是隱藏整個內文的范常式式碼片段：
-
-```html
-<script>
-  !function(e,a,n,t){
-    if (a) return;
-    var i=e.head;if(i){
-    var o=e.createElement("style");
-    o.id="alloy-prehiding",o.innerText=n,i.appendChild(o),
-    setTimeout(function(){o.parentNode&&o.parentNode.removeChild(o)},t)}}
-    (document, document.location.href.indexOf("mboxEdit") !== -1, "body { opacity: 0 !important }", 3000);
-</script>
+```javascript
+{
+  "decisions": [
+    {
+      "id": "TNT:123456:0",
+      "scope": "demo-1",
+      "items": [
+        {
+          "schema": "https://ns.adobe.com/personalization/html-content-item",
+          "data": {
+            "id": "11223344",
+            "content": "<h2 style=\"color: yellow\">Scoped Decision for location \"alloy-location-1\"</h2>"
+          }
+        }
+      ]
+    },
+    {
+      "id": "TNT:654321:1",
+      "scope": "demo-2",
+      "items": [
+        {
+          "schema": "https://ns.adobe.com/personalization/json-content-item",
+          "data": {
+            "id": "4433221",
+            "content": {
+              "name":"Scoped decision in JSON"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}
 ```
 
-為了確保HTML內文或容器元素在較長的一段時間內未隱藏，預先隱藏的程式碼片段會使用計時器，預設會在毫秒後移除程式碼片 `3000` 段。 毫 `3000` 秒是最長等待時間。 如果伺服器的回應已收到並處理得較早，則會盡快移除預先隱藏的HTML樣式標籤。
+{info}如果您使用Target示波器，則只有mBox會一次發出所有請求，而非個別發出。 全域mbox一律會傳送。
+{info}
+
+### 擷取自動內容
+
+如果您想要包含 `result.decisions` 自動可轉譯的決策，可以將 `renderDecisions` 其設定為false並包括特殊範圍 `__view__`
