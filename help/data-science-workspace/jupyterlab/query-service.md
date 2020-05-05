@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Jupyter筆記本中的查詢服務
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: d0596dc3c744e192c4d2ad04d6365846a0115371
+source-git-commit: 1447196da7dbf59c1f498de40f12ed74c328c0e6
 
 ---
 
@@ -13,16 +13,7 @@ source-git-commit: d0596dc3c744e192c4d2ad04d6365846a0115371
 
 Adobe Experience Platform可讓您將查詢服務整合到JupyterLab中，做為標準功能，在資料科學工作區中使用結構化查詢語言(SQL)。
 
-本教學課程示範下列常見使用案例的SQL查詢範例，以探索、轉換和分析Adobe Analytics資料：
-
-- [訪問JupyterLab和查詢服務](#access-jupyterlab-and-query-service)
-- [查詢您的資料](#query-your-data)
-   - [每小時訪客計數](#hourly-visitor-count)
-   - [每小時活動計數](#hourly-activity-count)
-   - [每個訪客作業的事件數](#number-of-events-per-visitor-session)
-   - [指定日期的熱門頁面](#popular-pages-for-a-given-day)
-   - [指定日期的作用中使用者](#active-users-for-a-given-day)
-   - [依使用者活動劃分的活躍城市](#active-cities-by-user-activity)
+本教學課程示範常見使用案例的SQL查詢範例，以探索、轉換和分析Adobe Analytics資料。
 
 ## 快速入門
 
@@ -38,25 +29,25 @@ Adobe Experience Platform可讓您將查詢服務整合到JupyterLab中，做為
    - [查詢服務SQL語法](../../query-service/sql/overview.md)
    - Adobe Analytics
 
-## 訪問JupyterLab和查詢服務
+## 訪問JupyterLab和查詢服務 {#access-jupyterlab-and-query-service}
 
-1. 在 [Experience Platform](https://platform.adobe.com)，從左側導 **覽欄導覽至Models** 。 按一下 **頂部頁首中的** 「Notebooks（筆記本）」以開啟JupyterLab。 請讓JupyterLab載入。
+1. 在 [Experience Platform](https://platform.adobe.com)，從左側導 **[!UICONTROL Notebooks]** 覽欄導覽至。 請讓JupyterLab載入。
 
-   ![](../images/jupyterlab/query/notebook_ui.png)
+   ![](../images/jupyterlab/query/jupyterlab_launcher.png)
 
-   > [!NOTE] 如果未自動顯示新的「啟動器」頁籤，請按一下「檔案」>「新建啟動器」以打 **開新的「啟動器」頁籤**。
+   > [!NOTE] 如果未自動顯示新的「啟動器」頁籤，請按一下並選擇以開啟新的「啟動器」 **[!UICONTROL File]** 頁籤 **[!UICONTROL New Launcher]**。
 
-2. 在「啟動器」(Launcher)頁籤中，按一下 **Python** 3環境中的「空白」(Blank)表徵圖以開啟空的筆記本。
+2. 在「啟動器」(Launcher)頁籤 **[!UICONTROL Blank]** 中，按一下Python 3環境中的表徵圖以開啟空的筆記本。
 
    ![](../images/jupyterlab/query/blank_notebook.png)
 
    > [!NOTE] Python 3目前是筆記型電腦中唯一支援查詢服務的環境。
 
-3. 在左側選擇邊欄上，按一下「 **資料** 」圖示，然後按兩下「資料集 **** 」目錄以列出所有資料集。
+3. 在左側選擇邊欄上，按一下圖 **[!UICONTROL Data]** 示並連按兩下目錄以 **[!UICONTROL Datasets]** 列出所有資料集。
 
    ![](../images/jupyterlab/query/dataset.png)
 
-4. 尋找要瀏覽的Adobe Analytics資料集並在清單上按一下滑鼠右鍵，按一下「筆記型電腦中的 **Query Data** 」，在空的筆記型電腦中產生SQL查詢。
+4. 尋找要瀏覽的Adobe Analytics資料集，並在清單上按一下滑鼠右鍵，按一 **[!UICONTROL Query Data in Notebook]** 下以在空的筆記本中產生SQL查詢。
 
 5. 按一下包含函式的第一個產生的儲存格， `qs_connect()` 然後按一下播放按鈕以執行它。 此函式在筆記本實例和查詢服務之間建立連接。
 
@@ -87,23 +78,23 @@ Adobe Experience Platform可讓您將查詢服務整合到JupyterLab中，做為
    target_day = "01"
    ```
 
-   - `target_table` :Adobe Analytics資料集的名稱。
-   - `target_year` :目標資料的特定年份。
-   - `target_month` :目標所在的特定月份。
-   - `target_day` :目標資料的特定來源日。
+   - `target_table` : Adobe Analytics資料集的名稱。
+   - `target_year` : 目標資料的特定年份。
+   - `target_month` : 目標所在的特定月份。
+   - `target_day` : 目標資料的特定來源日。
    >[!NOTE] 您可以隨時變更這些值。 執行此動作時，請務必執行要套用之變數儲存格。
 
-## 查詢您的資料
+## 查詢您的資料 {#query-your-data}
 
-在單個筆記本單元格中輸入以下SQL查詢。 按一下查詢的單元格，然後按一下播放按 **鈕** 。 成功的查詢結果或錯誤日誌顯示在已執行的單元格下面。
+在單個筆記本單元格中輸入以下SQL查詢。 通過按一下查詢的單元格，然後按一下該按鈕來執行 **[!UICONTROL play]** 查詢。 成功的查詢結果或錯誤日誌顯示在已執行的單元格下面。
 
-當筆記型電腦長時間處於非活動狀態時，筆記型電腦和查詢服務之間的連接可能會中斷。 在這種情況下，按一下右上角的 **Power** （電源）按鈕重新啟動JupyterLab。
+當筆記型電腦長時間處於非活動狀態時，筆記型電腦和查詢服務之間的連接可能會中斷。 在這種情況下，按一下右上角的 **[!UICONTROL Power]** 按鈕重新啟動JupyterLab。
 
 ![](../images/jupyterlab/query/restart_button.png)
 
-筆記本內核將重置，但單元格將保留，重 **新運行** 所有單元格以繼續您離開的位置。
+筆記本內核將重置，但單元格將保留，重 **[!UICONTROL all]** 新運行單元格以繼續您離開的位置。
 
-### 每小時訪客計數
+### 每小時訪客計數 {#hourly-visitor-count}
 
 下列查詢會傳回指定日期的每小時訪客計數：
 
@@ -144,7 +135,7 @@ fig = go.Figure(data = [trace], layout = layout)
 iplot(fig)
 ```
 
-### 每小時活動計數
+### 每小時活動計數 {#hourly-activity-count}
 
 以下查詢返回指定日期的每小時活動計數：
 
@@ -195,7 +186,7 @@ ORDER  BY Hour;
 hourly_actions_date_rage.head()
 ```
 
-### 每個訪客作業的事件數
+### 每個訪客作業的事件數 {#number-of-events-per-visitor-session}
 
 下列查詢會傳回指定日期每個訪客作業的事件數：
 
@@ -230,7 +221,7 @@ fig = go.Figure(data = data, layout = layout)
 iplot(fig)
 ```
 
-### 指定日期的熱門頁面
+### 指定日期的熱門頁面 {#popular-pages-for-a-given-day}
 
 下列查詢會傳回指定日期中十個人氣最高的頁面：
 
@@ -249,7 +240,7 @@ ORDER  BY page_views DESC
 LIMIT  10;
 ```
 
-### 指定日期的作用中使用者
+### 指定日期的作用中使用者 {#active-users-for-a-given-day}
 
 下列查詢會傳回指定日期中十位最活躍的使用者：
 
@@ -268,7 +259,7 @@ ORDER  BY Count DESC
 LIMIT  10;
 ```
 
-### 依使用者活動劃分的活躍城市
+### 依使用者活動劃分的活躍城市 {#active-cities-by-user-activity}
 
 以下查詢返回在指定日期生成大多數用戶活動的十個城市：
 
