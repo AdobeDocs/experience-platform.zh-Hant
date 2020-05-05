@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 在客戶人工智慧中下載分數
 topic: Downloading scores
 translation-type: tm+mt
-source-git-commit: 1cf1e9c814601bdd4c7198463593be78452004dc
+source-git-commit: 7c892d92a50312fb4b733431737b796651689804
 
 ---
 
@@ -36,12 +36,12 @@ source-git-commit: 1cf1e9c814601bdd4c7198463593be78452004dc
 
 ## 擷取您的批次ID {#retrieve-your-batch-id}
 
-使用上一步的資料集ID，您必須呼叫目錄API以擷取批次ID。 此API呼叫會使用其他查詢參數，以傳回單一批次，而非屬於貴組織的批次清單。 有關可用查詢參數類型的詳細資訊，請造訪使用查詢參數篩 [選目錄資料的指南](../../../catalog/api/filter-data.md)。
+使用上一步的資料集ID，您必須呼叫目錄API以擷取批次ID。 此API呼叫會使用其他查詢參數，以傳回最新成功的批次，而非屬於您組織的批次清單。 要返回附加批，請將限制查詢參數的數量增加到希望返回的所需金額。 有關可用查詢參數類型的詳細資訊，請造訪使用查詢參數篩 [選目錄資料的指南](../../../catalog/api/filter-data.md)。
 
 **API格式**
 
 ```http
-GET /batches?&dataSet={DATASET_ID}&orderBy=desc:created&limit=1
+GET /batches?&dataSet={DATASET_ID}&createdClient=acp_foundation_push&status=success&orderBy=desc:created&limit=1
 ```
 
 | 參數 | 說明 |
@@ -51,7 +51,7 @@ GET /batches?&dataSet={DATASET_ID}&orderBy=desc:created&limit=1
 **請求**
 
 ```shell
-curl -X GET 'https://platform.adobe.io/data/foundation/catalog/batches?dataSet=5cd9146b31dae914b75f654f&orderBy=desc:created&limit=1' \
+curl -X GET 'https://platform.adobe.io/data/foundation/catalog/batches?dataSet=5cd9146b31dae914b75f654f&createdClient=acp_foundation_push&status=success&orderBy=desc:created&limit=1' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
@@ -60,40 +60,51 @@ curl -X GET 'https://platform.adobe.io/data/foundation/catalog/batches?dataSet=5
 
 **回應**
 
-成功的回應會傳回包含分數批次ID物件的裝載。 In this example, the object is `5e602f67c2f39715a87f46b1`.
-
-分數批次ID物件中是數 `relatedObjects` 組。 此陣列包含兩個對象。 第一個物件的 `type` 值為&quot;batch&quot;，也包含ID。 在以下範例回應中，批次ID為 `035e2520-5e69-11ea-b624-51evfeba55d1`。 複製您的批次ID以用於下一個API呼叫。
+成功的回應會傳回包含批次ID物件的裝載。 在此範例中，傳回物件的索引鍵值是批次ID `01E5QSWCAASFQ054FNBKYV6TIQ`。 複製您的批次ID以用於下一個API呼叫。
 
 ```json
-{   
-    "5e602f67c2f39715a87f46b1": {
-        "imsOrg": "{IMS_ORG}",
+{
+    "01E5QSWCAASFQ054FNBKYV6TIQ": {
+        "status": "success",
+        "tags": {
+            "Tags": [ ... ],
+        },
         "relatedObjects": [
             {
-                "id": "5c01a91863540e14cd3d0432",
-                "type": "dataSet"
-            },
-            {
-                "id": "035e2520-5e69-11ea-b624-51evfeba55d1",
-                "type": "batch"
+                "type": "dataSet",
+                "id": "5cd9146b31dae914b75f654f"
             }
         ],
-        "status": "success",
-        "metrics": {
-            "recordsRead": 46721830,
-            "recordsWritten": 46721830,
-            "avgNumExecutorsPerTask": 33,
-            "startTime": 1583362385336,
-            "inputSizeInKb": 10242034,
-            "endTime": 1583363197517
+        "id": "01E5QSWCAASFQ054FNBKYV6TIQ",
+        "externalId": "01E5QSWCAASFQ054FNBKYV6TIQ",
+        "replay": {
+            "predecessors": [
+                "01E5N7EDQQP4JHJ93M7C3WM5SP"
+            ],
+            "reason": "Replacing for 2020-04-09",
+            "predecessorListingType": "IMMEDIATE"
         },
-        "errors": [],
-        "created": 1550791457173,
-        "createdClient": "{CLIENT_CREATED}",
-        "createdUser": "{CREATED_BY}",
-        "updatedUser": "{CREATED_BY}",
-        "updated": 1550792060301,
-        "version": "1.0.116"
+        "inputFormat": {
+            "format": "parquet"
+        },
+        "imsOrg": "412657965Y566A4A0A495D4A@AdobeOrg",
+        "started": 1586715571808,
+        "metrics": {
+            "partitionCount": 1,
+            "outputByteSize": 2380339,
+            "inputFileCount": -1,
+            "inputByteSize": 2381007,
+            "outputRecordCount": 24340,
+            "outputFileCount": 1,
+            "inputRecordCount": 24340
+        },
+        "completed": 1586715582735,
+        "created": 1586715571217,
+        "createdClient": "acp_foundation_push",
+        "createdUser": "sensei_exp_attributionai@AdobeID",
+        "updatedUser": "acp_foundation_dataTracker@AdobeID",
+        "updated": 1586715583582,
+        "version": "1.0.5"
     }
 }
 ```
