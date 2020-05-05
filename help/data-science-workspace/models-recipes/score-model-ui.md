@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 對模型(UI)評分
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 5699022d1f18773c81a0a36d4593393764cb771a
+source-git-commit: e08460bc76d79920bbc12c7665a1416d69993f34
 
 ---
 
@@ -27,36 +27,36 @@ source-git-commit: 5699022d1f18773c81a0a36d4593393764cb771a
 
 1. 尋找最佳的訓練執行，以使用其設定進行計分。 按一下所要的「訓練」執行名稱，以開啟它。
 
-2. 在「訓練執行 **評估** 」標籤中，按一 **下畫面右上方的「分數** 」按鈕。 這將啟動新的「執行計 **分」工作** 流程。
+2. 在「訓練執行」 **[!UICONTROL Evaluation]** 標籤中，按一 **[!UICONTROL Score]** 下畫面右上方的按鈕。 這將啟動新的「執行計 *分」工作* 流程。
    ![](../images/models-recipes/score/training_run_overview.png)
 
-3. 選取輸入計分資料集，然後按一下「 **下一步**」。
+3. 選取輸入計分資料集，然後按一下 **[!UICONTROL Next]**。
    ![](../images/models-recipes/score/scoring_input.png)
 
-4. 選擇輸出計分資料集，這是儲存計分結果的專用輸出資料集。 確認您的選擇，然後按一 **下下一步**。
+4. 選擇輸出計分資料集，這是儲存計分結果的專用輸出資料集。 確認您的選擇，然後按一下 **[!UICONTROL Next]**。
    ![](../images/models-recipes/score/scoring_results.png)
 
 5. 工作流程的最後一個步驟會提示您設定計分執行。 這些配置由模型用於計分運行。
-請注意，您將無法移除在建立「模型」期間設定的繼承參數。 您可以編輯或還原未繼承的參數，方法是按兩下該值，或在將滑鼠懸停在條目上時按一下還原表徵圖。
+請注意，您將無法移除在「模型」建立過程中設定的繼承參數。 您可以編輯或還原未繼承的參數，方法是按兩下該值，或在將滑鼠懸停在條目上時按一下還原表徵圖。
    ![](../images/models-recipes/score/configuration.png)
-檢閱並確認計分設定，然後按一 **下「完成** 」以建立並執行計分執行。 您將會被導向至「計 **分執行** 」索引標籤，而新的計分執行將會顯示狀態。
+檢閱並確認計分設定，然後按一 **[!UICONTROL Finish]** 下以建立並執行計分執行。 您將會被導向至「計 *分執行* 」索引標籤，而新的計分執行將會顯示狀態。
    ![](../images/models-recipes/score/scoring_runs_tab.png)
-計分執行將顯示下列四種狀態之一：暫掛、完成、失敗或正在運行，並且會自動更新。 如果狀態為「已完成」或「失敗」，請繼續下一步。
+計分執行將顯示下列四種狀態之一： 暫掛、完成、失敗或正在運行，並且會自動更新。 如果狀態為「已完成」或「失敗」，請繼續下一步。
 
 ## 檢視計分結果
 
-1. 尋找用於計分執行的訓練執行，然後按一下名稱以檢視其「評 **估** 」頁面。
+1. 尋找用於計分執行的訓練執行，然後按一下名稱以檢視其頁 **[!UICONTROL Evaluation]** 面。
 
-2. 在訓練執行評估頁面的頂端，按一下「計分執行」 **標籤** ，以檢視現有計分執行的清單。 按一下計分清單，在右欄中檢視其詳細資訊。
+2. 在訓練執行評估頁面的頂端附近，按一下標 **[!UICONTROL Scoring Runs]** 簽以檢視現有計分執行的清單。 按一下計分清單，在右欄中檢視其詳細資訊。
    ![](../images/models-recipes/score/view_details.png)
 
-3. 如果所選計分執行的狀態為「完成」或「失敗」，則右欄中的 **View Activity Logs** （查看活動日誌）連結將處於活動狀態。 按一下連結可查看或下載執行日誌。 如果計分運行失敗，執行日誌可以在確定失敗原因時提供有用資訊。
+3. 如果選取的計分執行狀態為「完整」或「失敗」，在右 **[!UICONTROL View Activity Logs]** 欄中找到的連結將處於作用中。 按一下連結可查看或下載執行日誌。 如果計分運行失敗，執行日誌可以在確定失敗原因時提供有用資訊。
    ![](../images/models-recipes/score/activity_logs.png)
 
-4. 按一下右 **欄中的「預覽計分結果資料集** 」連結。 您將可從計分執行中預覽輸出資料集。
+4. 按一下右 **[!UICONTROL Preview Scoring Results Dataset]** 欄中的連結。 您將可從計分執行中預覽輸出資料集。
    ![](../images/models-recipes/score/preview_results.png)
 
-5. 如需完整的計分結果集，請按一下右欄 **中的「計分結果資料集** 」連結。
+5. 如需完整的計分結果集，請按一下右 **[!UICONTROL Scoring Results Dataset]** 欄中的連結。
 
 ## 後續步驟
 
