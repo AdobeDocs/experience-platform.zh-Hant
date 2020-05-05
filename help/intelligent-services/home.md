@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 智慧型服務概觀
 topic: Intelligent Services overview
 translation-type: tm+mt
-source-git-commit: 7987cec12c22e9b48ddc9fdc263d7cd28bd172f2
+source-git-commit: c9d1fca0b14607f83657d5d8a751c2d0cc46bea0
 
 ---
 
@@ -12,6 +12,10 @@ source-git-commit: 7987cec12c22e9b48ddc9fdc263d7cd28bd172f2
 # 智慧型服務概觀
 
 智慧型服務可讓行銷分析師和從業人員在客戶體驗使用案例中運用人工智慧和機器學習的強大功能。 這可讓行銷分析人員使用商業層級的組態來設定特定公司需求的預測，而不需要資料科學的專業知識。 此外，行銷從業人員可在Adobe Experience Cloud、Adobe Experience Platform和第三方應用程式中啟動預測。
+
+以下影片旨在支援您對智慧型服務的瞭解。 本視訊以商業使用案例為例，說明高階工作流程，並概述Attribution AI和Customer AI的功能。
+
+>[!VIDEO](https://video.tv.adobe.com/v/32654?learn=on&quality=12)
 
 ## 智慧型服務的優點
 
@@ -23,7 +27,7 @@ Adobe具備AI/ML專業知識與深入的CXM經驗，而智慧型服務則是專�
 
 ### 預測性洞察更精確
 
-採用先進的算法AI/ML模型，以最高的精確度開發；在具有深度和粒度的通用資料集上運行AI/ML，以便對預測進行切片和切割；提供預測性客戶見解背後的原因和原因的智慧。
+採用先進的算法AI/ML模型，以最高的精確度開發； 在具有深度和粒度的通用資料集上運行AI/ML，以便對預測進行切片和切割； 提供預測性客戶見解背後的原因和原因的智慧。
 
 ### 快速獲取見解和投資報酬率
 
