@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 透過客戶人工智慧發掘見解
 topic: Discovering insights
 translation-type: tm+mt
-source-git-commit: f7c59ef097c00073fbf9f6522b6e70ed24cc8bf1
+source-git-commit: ec0de4c8775367be9e6016529471254ad9f8f453
 
 ---
 
@@ -72,9 +72,9 @@ source-git-commit: f7c59ef097c00073fbf9f6522b6e70ed24cc8bf1
 
 按 **[!UICONTROL More actions]** 鈕位於旁的右上導覽中 **[!UICONTROL Edit]**。 按一 **[!UICONTROL More actions]** 下可開啟下拉式清單，供您選取下列其中一個作業：
 
-- **[!UICONTROL Delete]**:刪除實例。
-- **[!UICONTROL Access scores]**:按一 *下「存取分數* 」會開啟對話方塊，提供客戶AI [](./download-scores.md) 教學課程下載分數的連結，此對話方塊也提供進行API呼叫所需的資料集ID。
-- **[!UICONTROL View run history]**:此時將顯示一個對話框，其中包含與服務實例關聯的所有計分運行的清單。
+- **[!UICONTROL Delete]**: 刪除實例。
+- **[!UICONTROL Access scores]**: 按一 *下「存取分數* 」會開啟對話方塊，提供客戶AI [](./download-scores.md) 教學課程下載分數的連結，此對話方塊也提供進行API呼叫所需的資料集ID。
+- **[!UICONTROL View run history]**: 此時將顯示一個對話框，其中包含與服務實例關聯的所有計分運行的清單。
 
 ![更多動作](../images/insights/more-actions.png)
 
@@ -122,3 +122,9 @@ source-git-commit: f7c59ef097c00073fbf9f6522b6e70ed24cc8bf1
 ## 後續步驟
 
 本檔案概述了客戶AI服務實例提供的見解。 您現在可以繼續教學課程，在 [Customer AI](./download-scores.md) （客戶人工智慧）中下載分數 [，或瀏覽其他](../../home.md) Adobe智慧型服務指南。
+
+## 其他資源
+
+以下視訊概述如何使用客戶人工智慧來檢視模型輸出及影響因素。
+
+>[!VIDEO](https://video.tv.adobe.com/v/32666?learn=on&quality=12)
