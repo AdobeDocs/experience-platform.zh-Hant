@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 產品購買方式
 topic: overview
 translation-type: tm+mt
-source-git-commit: f548fb6431b7bc71c205a2b2b7ca3884e57340b1
+source-git-commit: e08460bc76d79920bbc12c7665a1416d69993f34
 
 ---
 
@@ -56,6 +56,6 @@ source-git-commit: f548fb6431b7bc71c205a2b2b7ca3884e57340b1
 
 ## 演算法
 
-首先，載入 **ProductPrediction模式中的訓** 練資料集。 在此基礎上，利用隨機森林分類器對模 [型進行訓練](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestClassifier.html)。 隨機森林分類器是一種整合算法，它是指將多種算法結合起來以獲得改進預測效能的算法。 算法的思想是隨機森林分類器建立多個決策樹並合併它們，從而建立更準確、更穩定的預測。
+首先，載入 *ProductPrediction模式中的訓* 練資料集。 在此基礎上，利用隨機森林分類器對模 [型進行訓練](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestClassifier.html)。 隨機森林分類器是一種整合算法，它是指將多種算法結合起來以獲得改進預測效能的算法。 算法的思想是隨機森林分類器建立多個決策樹並合併它們，從而建立更準確、更穩定的預測。
 
 此程式首先建立一組決策樹，該決策樹隨機選擇訓練資料的子集。 然後，對每個決策樹的結果進行平均。
