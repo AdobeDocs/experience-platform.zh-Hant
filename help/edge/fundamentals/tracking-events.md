@@ -4,7 +4,7 @@ seo-title: 追蹤Adobe Experience Platform Web SDK事件
 description: 瞭解如何追蹤Experience Platform Web SDK活動
 seo-description: 瞭解如何追蹤Experience Platform Web SDK活動
 translation-type: tm+mt
-source-git-commit: 45ee1f79ac5953b7c407083b4352b2c751e8aec9
+source-git-commit: c49ac064d310fbe12e19d58b80c2267a35d585e8
 
 ---
 
@@ -81,35 +81,6 @@ alloy("event", {
 });
 ```
 
-### 啟動視圖
-
-當檢視開始時，請務必在命令中設定 `viewStart` 為 `true` 通知 `event` SDK。 這表示SDK應擷取並轉譯個人化內容。 即使您目前未使用個人化，它也能大幅簡化個人化或後續其他功能的啟用，因為您不需要修改頁面程式碼。 此外，在收集資料後檢視分析報表時，追蹤檢視也很有用。
-
-視圖的定義可以取決於上下文。
-
-* 在一般網站中，每個網頁通常都被視為獨特的檢視。 在這種情況下，應 `viewStart` 該在頁 `true` 面頂部盡快執行設定為的事件。
-* 在單頁應用程式\(SPA\)中，視圖的定義較少。 這通常表示使用者已在應用程式中導覽，而大部分內容已變更。 對於熟悉單頁應用程式技術基礎的使用者，這通常是當應用程式載入新路徑時。 每當使用者移至新檢視時，但您選擇定義檢 _視_，就應執 `viewStart` 行設定 `true` 的事件。
-
-設為的 `viewStart` 事件 `true` 是將資料傳送至Adobe Experience Cloud並從Adobe Experience Cloud請求內容的主要機制。 以下是您開始檢視的方式：
-
-```javascript
-alloy("event", {
-  "viewStart": true,
-  "xdm": {
-    "commerce": {
-      "order": {
-        "purchaseID": "a8g784hjq1mnp3",
-        "purchaseOrderNumber": "VAU3123",
-        "currencyCode": "USD",
-        "priceTotal": 999.98
-      }
-    }
-  }
-});
-```
-
-在傳送資料後，伺服器會以個人化內容等方式回應。 此個人化內容會自動呈現在您的檢視中。 連結處理常式也會自動附加至新檢視的內容。
-
 ## 使用sendBeacon API
 
 在網頁使用者離開之前傳送事件資料可能很棘手。 如果請求過長，瀏覽器可能會取消請求。 有些瀏覽器已實作一個叫做Web標準API `sendBeacon` 的API，讓資料在此期間更容易收集。 使用時， `sendBeacon`瀏覽器會在全域瀏覽內容中提出Web請求。 這表示瀏覽器會在背景提出信標請求，而不會保留頁面導覽。 若要告訴Adobe Experience Platform Web SDK要使 `sendBeacon`用，請將選項新 `"documentUnloading": true` 增至event命令。  其範例如下:
@@ -138,7 +109,7 @@ alloy("event", {
 
 ```javascript
 alloy("event", {
-  "viewStart": true,
+  "renderDecisions": true,
   "xdm": {
     "commerce": {
       "order": {
@@ -149,7 +120,7 @@ alloy("event", {
       }
     }
   }
-}).then(function() {
+}).then(function(results) {
     // Tracking the event succeeded.
   })
   .catch(function(error) {
