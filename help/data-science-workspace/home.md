@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 資料科學工作區概觀
 topic: overview
 translation-type: tm+mt
-source-git-commit: 9f3fc3ec3ce560534b057185e3fef2cc2bc1234d
+source-git-commit: e08460bc76d79920bbc12c7665a1416d69993f34
 
 ---
 
@@ -172,7 +172,6 @@ Adobe Experience Platform中的所有資料都符合標準化的XDM架構，毋�
 如果您沒有立即找到所需的資料，但是它存在於Adobe Experience Platform之外，則收集其他資料集相對簡單，這也會轉化為標準化的XDM架構。\
 您可以使用Jupyter Notebook簡化資料預處理——可能從您先前習慣購買的筆記型電腦範本或筆記型電腦開始。
 
-<!-- databricks update-->
 ![](./images/home/notebook_templates.png)
 
 ### 編寫配方
