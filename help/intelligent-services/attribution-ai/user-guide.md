@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Attribution AI使用指南
 topic: User guide
 translation-type: tm+mt
-source-git-commit: 5699022d1f18773c81a0a36d4593393764cb771a
+source-git-commit: 3e1e7bea7113b5db6b9bd02ce0dbe8cfd486206c
 
 ---
 
@@ -174,3 +174,9 @@ Attribution AI中的最後一頁是 *Advanced* page，用於設定訓練和計�
 ## 後續步驟
 
 遵循本教學課程，您已成功在Attribution AI中建立服務例項。 當例項完成計分（最多允許24小時）後，您就可以發現Attribution AI [見解](./discover-insights.md)。 此外，如果您想要下載計分結果，請造訪下載原始 [分數檔案](./download-scores.md) 。
+
+## 其他資源
+
+以下視訊概述在Attribution AI中建立新例項的端對端工作流程。
+
+>[!VIDEO](https://video.tv.adobe.com/v/32668?learn=on&quality=12)
