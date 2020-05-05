@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 在歸因AI中發現見解
 topic: Attribution AI insights
 translation-type: tm+mt
-source-git-commit: 0f6424c5afbf9b23016e1c40d156f6226f853cd6
+source-git-commit: ec0de4c8775367be9e6016529471254ad9f8f453
 
 ---
 
@@ -21,7 +21,7 @@ source-git-commit: 0f6424c5afbf9b23016e1c40d156f6226f853cd6
 
 ## 服務實例見解總覽
 
-在Adobe Experience Platform UI中，按一下左側導 **覽中** 「服務」。 「服 *務* 」瀏覽器隨即出現，並顯示可用的Adobe Intelligent Services。 在「歸因AI」的容器中，按一下「 **開啟**」。
+在Adobe Experience Platform UI中，按一下左側導 **覽中** 「服務」。 「服 *務* 」瀏覽器隨即出現，並顯示可用的Adobe智慧型服務。 在「歸因AI」的容器中，按一下「 **開啟**」。
 
 ![存取您的例項](./images/insights/open_Attribution_ai.png)
 
@@ -58,10 +58,10 @@ source-git-commit: 0f6424c5afbf9b23016e1c40d156f6226f853cd6
 
 「更 *多動作* 」按鈕位於「編輯」旁的右上導 *覽中*。 按一 **下「更多動作** 」會開啟下拉式清單，供您選取下列其中一個作業：
 
-- **刪除**:刪除實例。
-- **下載摘要資料**:下載包含摘要資料的CSV檔案。
-- **存取分數**:按一 *下「存取分數* 」會將您重新導向至 [「歸因AI」教學課程的存取分數](./download-scores.md)。
-- **檢視執行記錄**:此時會出現一個快顯視窗，其中包含與服務例項相關聯的所有計分執行的清單。
+- **刪除**: 刪除實例。
+- **下載摘要資料**: 下載包含摘要資料的CSV檔案。
+- **存取分數**: 按一 *下「存取分數* 」會將您重新導向至 [「歸因AI」教學課程的存取分數](./download-scores.md)。
+- **檢視執行記錄**: 此時會出現一個快顯視窗，其中包含與服務例項相關聯的所有計分執行的清單。
 
 ![更多動作](./images/insights/more-actions.png)
 
@@ -99,7 +99,7 @@ source-git-commit: 0f6424c5afbf9b23016e1c40d156f6226f853cd6
 
 ### 地區
 
->[!NOTE] 只有當您在建立服務例項時，在「歸因AI使用者介面 [指南」中執行選用步驟](./user-guide.md#region-based-modeling-optional) 、以區域為基礎的模型時，才會出現此篩選。
+>[!NOTE] 只有當您在建立服務例項時，在「歸因AI使用者介 [面指南」中執行選用步驟](./user-guide.md#region-based-modeling-optional) 、以地區為基礎的模型時，才會出現此篩選。
 
 此篩選器允許您選擇在實例建立過程中設定的任何區域。
 
@@ -152,3 +152,9 @@ source-git-commit: 0f6424c5afbf9b23016e1c40d156f6226f853cd6
 ## 後續步驟
 
 在您篩選完資料並能夠顯示適當資訊後，就可以選擇存取分數。 如需如何存取分數的深入指南，請造訪Attribution AI教 [學課程中的存取分數](./download-scores.md) 。 此外，您也可以下載摘要資料，如更多動作 [所示](#more-actions)。 選擇「下載摘要資料」會下載依日期匯總的摘要資料。
+
+## 其他資源
+
+以下視訊旨在協助學習如何使用「歸因AI」見解頁面來瞭解行銷通道和宣傳的投資報酬率。
+
+>[!VIDEO](https://video.tv.adobe.com/v/32669?learn=on&quality=12)
