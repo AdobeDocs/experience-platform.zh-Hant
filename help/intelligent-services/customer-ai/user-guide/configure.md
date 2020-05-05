@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 設定客戶AI例項
 topic: Instance creation
 translation-type: tm+mt
-source-git-commit: f7c59ef097c00073fbf9f6522b6e70ed24cc8bf1
+source-git-commit: ec0de4c8775367be9e6016529471254ad9f8f453
 
 ---
 
@@ -49,7 +49,7 @@ source-git-commit: f7c59ef097c00073fbf9f6522b6e70ed24cc8bf1
 
 ![](../images/user-guide/goal.png)
 
-### 設定排程 *（選用）*{#configure-a-schedule}
+### 設定排程 *（選用）* {#configure-a-schedule}
 
 將出 *現高級* 步驟。 此可選步驟可讓您設定排程以自動執行預測、定義預測排除以篩選特定事件，或在不需要時 **[!UICONTROL Finish]** 按一下。
 
@@ -76,4 +76,10 @@ source-git-commit: f7c59ef097c00073fbf9f6522b6e70ed24cc8bf1
 ## 下一步 {#next-steps}
 
 透過本教學課程，您已成功設定客戶AI的例項並產生傾向分數。 您現在可以選擇使用「區段產生器」來建立具 [有預測分數的客戶區段](./create-segment.md) ，或 [透過客戶人工智慧發掘見解](./discover-insights.md)。
+
+## 其他資源
+
+以下視訊旨在協助您瞭解客戶AI的設定工作流程。 此外，還提供最佳實務和使用案例範例。
+
+>[!VIDEO](https://video.tv.adobe.com/v/32665?learn=on&quality=12)
 
