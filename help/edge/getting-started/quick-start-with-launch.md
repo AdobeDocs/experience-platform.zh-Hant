@@ -4,7 +4,7 @@ seo-title: Launch讓您快速入門Adobe Experience Platform Web SDK
 description: 使用Experience Platform Web SDK擴充功能收集資料的快速入門手冊
 seo-description: 使用Experience Platform Web SDK擴充功能收集資料的快速入門手冊
 translation-type: tm+mt
-source-git-commit: a1161630c8edae107b784f32ee20af225f9f8c46
+source-git-commit: e23b0ce9c20d5d2d770d1c1261fe08de5743325a
 
 ---
 
@@ -32,14 +32,11 @@ source-git-commit: a1161630c8edae107b784f32ee20af225f9f8c46
 - 將Adobe Experience Platform Web SDK mixin新增至您建立的架構
 - [使用您的方案](https://platform.adobe.com/dataset/overview) ，建立資料集，讓資料著陸
 
-## 請求配置ID
+## 建立設定ID
 
-您必須有設定ID才能使用SDK。 設定ID可確保您的資料路由至正確位置。 您可以從顧問或透過Client Care取得設定ID。 他們需要下列資訊：
+您可以在啟動時使用邊配置工 [具來建立配置](../fundamentals/edge-configuration.md) ID。
 
-- **組織ID:** 您可以使用此處的指示找到 [此](https://docs.adobe.com/content/help/zh-Hant/core-services/interface/manage-users-and-products/organizations.html)
-- **資料集ID:** 當您按一下資料集時，資料集UI中即可使用此功能
-- **架構ID:** 這可在架構建立畫面的URL中使用
-- **好記名稱：** 此為好記名稱，將用於此組態的未來UI
+>注意： 您的組織必須列入功能白名單。 請連絡您的CSM以取得最終白名單。
 
 ## 在Launch中安裝SDK
 
