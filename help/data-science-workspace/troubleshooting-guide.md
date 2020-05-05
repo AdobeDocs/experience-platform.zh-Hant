@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Data Science Workspace疑難排解指南
 topic: Troubleshooting
 translation-type: tm+mt
-source-git-commit: ef7c37438990d3bc42024e7fb106d781a5ebbd12
+source-git-commit: 1447196da7dbf59c1f498de40f12ed74c328c0e6
 
 ---
 
@@ -103,4 +103,4 @@ Python內核已預先安裝許多常用的機器學習庫。 不過，您可以�
 }
 ```
 
-有關Spark群集資源配置的詳細資訊（包括可配置屬性的完整清單），請參 [閱JupyterLab使用手冊](./jupyterlab/overview.md#pyspark-spark-execution-resource)。
+有關Spark群集資源配置的詳細資訊（包括可配置屬性的完整清單），請參 [閱JupyterLab使用手冊](./jupyterlab/overview.md#kernels)。
