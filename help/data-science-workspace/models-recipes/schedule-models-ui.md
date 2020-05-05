@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 排程模型(UI)
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 19823c7cf0459e045366f0baae2bd8a98416154c
+source-git-commit: e08460bc76d79920bbc12c7665a1416d69993f34
 
 ---
 
@@ -28,13 +28,13 @@ Adobe Experience Platform Data Science Workspace可讓您在機器學習服務�
 
 模型計分可以配置為以計畫為基礎的自動化流程。 建立服務後，您可依照下列步驟設定並套用計分排程：
 
-1. 在Adobe Experience Platform中，按一下左側導 **覽欄中的** 「服務」標籤，以存取「服 *務收藏館」*。 尋找您要排程計分的服務，然後按一下「開 **啟** 」以檢視其 *概述頁面* 。
+1. 在Adobe Experience Platform中，按一 **[!UICONTROL Services]** 下左側導覽欄中的標籤以存取「服 *務收藏館」*。 尋找您要排程計分的服務，然後按一下以檢 **[!UICONTROL Open]** 視其「概 *述* 」頁。
    ![](../images/models-recipes/schedule/click_to_open.png)
 
-2. 「概述」頁面會顯示服務的計分資訊。 按一下「 **更新排程** 」連結，以設定計分排程。
+2. 「概述」頁面會顯示服務的計分資訊。 按一下 **[!UICONTROL Update Schedule]** 連結以設定計分排程。
    ![](../images/models-recipes/schedule/service_overview_score.png)
 
-3. 為計分排程設定頻率、開始日期、結束日期、輸入資料集和輸出資料集。 一旦您對設定滿意後，按一下「 **建立** 」以更新服務的計分排程。
+3. 為計分排程設定頻率、開始日期、結束日期、輸入資料集和輸出資料集。 一旦您對設定感到滿意，請按一 **[!UICONTROL Create]** 下以更新服務的計分排程。
    ![](../images/models-recipes/schedule/14_configure_scoring_schedule.png)
 
 4. 您更新的計分排程會顯示在「服務」的「概述 *」頁* 。
@@ -47,13 +47,13 @@ Adobe Experience Platform Data Science Workspace可讓您在機器學習服務�
 
 建立服務後，您可依照下列步驟設定並套用培訓計畫：
 
-1. 在Adobe Experience Platform中，按一下左側導 **覽欄中的** 「服務」標籤，以存取「服 *務收藏館」*。 尋找您要排程培訓執行的服務，然後按一下「開 **啟** 」以檢視其 *概述頁面* 。
+1. 在Adobe Experience Platform中，按一 **[!UICONTROL Services]** 下左側導覽欄中的標籤以存取「服 *務收藏館」*。 尋找您要排程培訓執行的服務，然後按一下以 **[!UICONTROL Open]** 檢視其 *概述頁面* 。
    ![](../images/models-recipes/schedule/click_to_open.png)
 
-2. 「概述」頁面會顯示服務的訓練資訊。 按一下「 **更新計畫** 」連結以設定培訓計畫。
+2. 「概述」頁面會顯示服務的訓練資訊。 按一下 **[!UICONTROL Update Schedule]** 連結以設定培訓排程。
    ![](../images/models-recipes/schedule/service_overview_train.png)
 
-3. 設定培訓計畫使用的頻率、開始日期、結束日期和輸入資料集。 一旦您對設定滿意後，按一下「 **建立** 」以更新「服務」的培訓排程。
+3. 設定培訓計畫使用的頻率、開始日期、結束日期和輸入資料集。 一旦您對設定感到滿意，請按一 **[!UICONTROL Create]** 下以更新服務的培訓排程。
    ![](../images/models-recipes/schedule/12_configure_training_schedule.png)
 
 4. 您更新的培訓計畫會顯示在「服務」的「概述 *」頁* 。
