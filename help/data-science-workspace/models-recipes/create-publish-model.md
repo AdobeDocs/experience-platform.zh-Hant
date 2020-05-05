@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 建立和發佈機器學習模型逐步說明
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 19823c7cf0459e045366f0baae2bd8a98416154c
+source-git-commit: e08460bc76d79920bbc12c7665a1416d69993f34
 
 ---
 
@@ -42,10 +42,10 @@ Adobe Experience Platform Data Science Workspace提供使用預先建立的產�
 * 從 <a href="https://github.com/adobe/experience-platform-dsw-reference/tree/master/Summit/2019/resources/Notebooks-Thurs" target="_blank">Adobe public Git儲存庫下載3個必要的Jupyter Notebook檔案</a>，這些檔案將用來示範Data Science Workspace的JupyterLab工作流程。
 
 * 對本教學課程中使用的下列主要概念有正確認識：
-   * [體驗資料模型](../../xdm/home.md):由Adobe領導的標準化工作，為客戶體驗管理定義標準架構，例如Profile和ExperienceEvent。
-   * 資料集：實際資料的儲存和管理結構。 XDM架構的物理實例 [化實例](../../xdm/schema/field-dictionary.md)。
-   * 批：資料集由批處理組成。 批是一組在一段時間內收集並作為單個單位一起處理的資料。
-   * JupyterLab:JupyterLab [](https://blog.jupyter.org/jupyterlab-is-ready-for-users-5a6f039b8906) 是Project Jupyter的開放原始碼網路介面，並與Experience Platform緊密整合。
+   * [體驗資料模型](../../xdm/home.md): 由Adobe領導的標準化工作，為客戶體驗管理定義標準架構，例如Profile和ExperienceEvent。
+   * 資料集： 實際資料的儲存和管理結構。 XDM架構的物理實例 [化實例](../../xdm/schema/field-dictionary.md)。
+   * 批： 資料集由批處理組成。 批是一組在一段時間內收集並作為單個單位一起處理的資料。
+   * JupyterLab: [JupyterLab](https://blog.jupyter.org/jupyterlab-is-ready-for-users-5a6f039b8906) 是Project Jupyter的開放原始碼網路介面，並與Experience Platform緊密整合。
 
 ## 準備資料 {#prepare-your-data}
 
@@ -53,9 +53,9 @@ Adobe Experience Platform Data Science Workspace提供使用預先建立的產�
 
 ### 探索資料並瞭解結構
 
-1. 登入 [Adobe Experience Platform](https://platform.adobe.com/) ，然後按一下「 **Datasets** 」以列出所有現有的資料集，並選取您要探索的資料集。 在此例中，Analytics資料集 **Golden Data Set postValues**。
+1. 登入 [Adobe Experience Platform](https://platform.adobe.com/) ，然後按一 **[!UICONTROL Datasets]** 下以列出所有現有的資料集，並選取您要探索的資料集。 在此例中，Analytics資料集 **Golden Data Set postValues**。
    ![](../images/models-recipes/model-walkthrough/datasets_110.png)
-2. 選取 **右上角的「預覽資料集** 」以檢查範例記錄，然後按一下「 **關閉」**。
+2. 選擇 **[!UICONTROL Preview Dataset]** 靠近右上角的樣本記錄，然後按一下 **[!UICONTROL Close]**。
    ![](../images/models-recipes/model-walkthrough/golden_data_set_110.png)
 3. 在右側欄的「架構」下選取連結，以檢視資料集的架構，然後返回資料集詳細資料頁面。」
    ![](../images/models-recipes/model-walkthrough/golden_schema_110.png)
@@ -76,11 +76,11 @@ Data Science Workspace生命週期的第二個元件包括編寫配方和模型�
 
 ### 探索產品建議方式
 
-1. 在Adobe Experience Platform中，從左側導覽欄導覽至 **Models** ，然後按一下頂端的 **Recipes** ，以檢視組織的可用Recipes清單。
+1. 在Adobe Experience Platform中，從左側導覽欄 **[!UICONTROL Models]** 導覽，然後按一下頂端的 **[!UICONTROL Recipes]** ，以檢視您組織的可用方式清單。
    ![](../images/models-recipes/model-walkthrough/browse_recipes.png)
-2. 按一下提供的 **Recommendations方式** ，尋找並開啟其名稱。
+2. 按一下提供的名稱， **[!UICONTROL Recommendations Recipe]** 即可找到並開啟。
    ![](../images/models-recipes/model-walkthrough/recommendations_recipe_110.png)
-3. 在右側邊欄中，按一下「 **Recommendations輸入結構」** ，以檢視支援方式的結構。 結構欄位 **itemId****和userId** 對應於該客戶在特定時間(timestampInteraction)購買的產品(**Type******)。 請依照相同的步驟，檢閱 **Recommendations輸出結構的欄位**。
+3. 在右側邊欄中，按一下以 **[!UICONTROL Recommendations Input Schema]** 檢視推動方式的架構。 結構欄 **[!UICONTROL itemId]** 位 **[!UICONTROL userId]** 與該客戶在特定時間(**[!UICONTROL interactionType]****[!UICONTROL timestamp]**)購買的產品相對應。 請遵循相同的步驟，檢閱的欄位 **[!UICONTROL Recommendations Output Schema]**。
    ![](../images/models-recipes/model-walkthrough/preview_schemas.png)
 
 您現在已檢視「產品建議方式」所需的輸入和輸出結構。 您現在可以繼續下一節，瞭解如何建立、訓練和評估產品建議模型。
@@ -93,13 +93,13 @@ Data Science Workspace生命週期的第二個元件包括編寫配方和模型�
 
 「模型」是「方式」的例項，可讓您以規模來訓練和評分資料。
 
-1. 在Adobe Experience Platform中，從左側導覽欄導覽至 **Models** ，然後按一下頁面頂端的 **Recipes** ，以顯示您組織的所有可用Recipes清單。
+1. 在Adobe Experience Platform中，從左側導 **[!UICONTROL Models]** 覽欄導覽至，然後按一下頁面頂端的 **[!UICONTROL Recipes]** ，以顯示您組織的所有可用方式清單。
    ![](../images/models-recipes/model-walkthrough/browse_recipes.png)
-2. 按一下「方式」的名 **** 稱，並輸入「方式」的概述頁面，以尋找並開啟提供的「建議方式」。 從中 **** 心（如果沒有現有模型）或從「方式概述」頁面的右上角按一下「建立模型」。
+2. 按一下提供的名 **[!UICONTROL Recommendations Recipe]** 稱，並輸入「方式」的概述頁面，以尋找並開啟提供的內容。 從中 **[!UICONTROL Create a Model]** 心（如果沒有現有模型）或從「方式概述」頁面的右上角按一下。
    ![](../images/models-recipes/model-walkthrough/recommendations_recipe_110.png)
-3. 會顯示可用的訓練輸入資料集清單，選取「 **Recommendations輸入資料集」** ，然後按一 **下「Next**」。
+3. 會顯示可用的訓練輸入資料集清單，並選取並按 **[!UICONTROL Recommendations Input Dataset]** 一下 **[!UICONTROL Next]**。
    ![](../images/models-recipes/model-walkthrough/select_dataset.png)
-4. 提供模型的名稱，例如「產品建議模型」。 列出模型的可用配置，包含模型的預設培訓和計分行為的設定。 由於這些配置是您組織專屬的，因此不需要進行任何更改。 查看配置，然後按一下 **完成**。
+4. 提供模型的名稱，例如「產品建議模型」。 列出模型的可用配置，包含模型的預設培訓和計分行為的設定。 由於這些配置是您組織專屬的，因此不需要進行任何更改。 查看配置並按一下 **[!UICONTROL Finish]**。
    ![](../images/models-recipes/model-walkthrough/configure_model.png)
 5. 模型現在已建立，而模型的「概 *述* 」(Overview)頁面會顯示在新產生的訓練執行中。 在建立模型時，預設情況下會生成培訓運行。
    ![](../images/models-recipes/model-walkthrough/model_post_creation.png)
@@ -108,13 +108,13 @@ Data Science Workspace生命週期的第二個元件包括編寫配方和模型�
 
 ### 使用自訂超參數訓練模型
 
-1. 在「模 *型概述* 」頁面上，按一 **下右上角的「** Train」（培訓）以建立新的培訓執行。 選取建立模型時使用的相同輸入資料集，然後按一下「下 **一步**」。
+1. 在「模 *型概述* 」頁面上， **[!UICONTROL Train]** 按一下右上角附近的，以建立新的訓練執行。 選取建立模型時所使用的相同輸入資料集，然後按一下 **[!UICONTROL Next]**。
    ![](../images/models-recipes/model-walkthrough/training_select_dataset.png)
-2. 此時將 *顯示* 「配置」頁。 您可以在這裡設定訓練執行的 **num_recommendations值** ，也稱為Hyperparameter。 訓練和優化的模型將根據訓練運行的結果利用效能最佳的超參數。
+2. 此時將 *顯示* 「配置」頁。 您可以在這裡設定訓練執行的 **[!UICONTROL num_recommendations]** 值，也稱為Hyperparameter。 訓練和優化的模型將根據訓練運行的結果利用效能最佳的超參數。
 
    無法學習超參數，因此必須在訓練執行之前先指派超參數。 調整超參數可能會改變訓練模型的精度。 由於模型最佳化是一個反覆的程式，因此在達到滿意的評估之前可能需要執行多次培訓。
 
-   >[!TIP] 將 **num_recommendations** 設為10。
+   >[!TIP] 設 **[!UICONTROL num_recommendations]** 為10。
 
    ![](../images/models-recipes/model-walkthrough/configure_hyperparameter.png)
 3. 新培訓執行完成後，模型評估圖表上會出現額外的資料點，這可能需要數分鐘。
@@ -137,12 +137,12 @@ Data Science工作流程的最後一步是將您的模型實際運作，以便�
 ### 分數並產生見解
 
 1. 在產品建議「模 *型概述* 」頁面上，按一下效能最佳的培訓執行名稱，其中包含最高召回率和精確度值。
-2. 在訓練執行詳細資訊頁面的右上方，按一下「分 **數」**。
-3. 選取「 **Recommendations輸入資料集** 」作為計分輸入資料集，此資料集與您建立模型並執行其訓練執行時使用的資料集相同。 然後，按一下「 **Next(下一步**)」。
+2. 在訓練執行詳細資訊頁面的右上方，按一下 **[!UICONTROL Score]**。
+3. 選取計 **[!UICONTROL Recommendations Input Dataset]** 分輸入資料集，此資料集與您建立模型並執行其訓練執行時使用的資料集相同。 Then, click **[!UICONTROL Next]**.
    ![](../images/models-recipes/model-walkthrough/scoring_input.png)
-4. 選取「 **Recommendations輸出資料集** 」作為計分輸出資料集。 計分結果會以批次形式儲存在此資料集中。
+4. 選擇計 **[!UICONTROL Recommendations Output Dataset]** 分輸出資料集。 計分結果會以批次形式儲存在此資料集中。
    ![](../images/models-recipes/model-walkthrough/scoring_output.png)
-5. 檢閱計分設定。 這些參數包含先前選取的輸入和輸出資料集以及適當的結構描述。 按一 **下「完成** 」以開始計分執行。 執行可能需要數分鐘才能完成。
+5. 檢閱計分設定。 這些參數包含先前選取的輸入和輸出資料集以及適當的結構描述。 按一 **[!UICONTROL Finish]** 下以開始計分執行。 執行可能需要數分鐘才能完成。
    ![](../images/models-recipes/model-walkthrough/scoring_configure.png)
 
 
@@ -150,10 +150,12 @@ Data Science工作流程的最後一步是將您的模型實際運作，以便�
 
 計分執行成功完成後，您就可以預覽結果並檢視產生的見解。
 
-1. 在計分執行頁面上，按一下已完成的計分執行，然後按一下右 **邊欄上的「預覽計分結果資料集** 」。
+1. 在計分執行頁面上，按一下已完成的計分執行，然後按一 **[!UICONTROL Preview Scoring Results Dataset]** 下右邊欄。
    ![](../images/models-recipes/model-walkthrough/score_complete.png)
-2. 在預覽表格中，每一列都包含特定客戶的產品建議，分別標示為 **Recommendations****和userId** 。 由於范 **例螢幕擷取畫面中的** num_recommendations Hyperparameter已設為10，因此每列建議最多可包含10個產品識別碼，由數字元號(#)分隔。
+2. 在預覽表格中，每一列都包含特定客戶的產品建議，分別標示為 **[!UICONTROL recommendations]** 和 **[!UICONTROL userId]** 。 由於 **[!UICONTROL num_recommendations]** 範例螢幕擷取畫面中的Hyperparameter設定為10，因此每列建議最多可包含10個產品身分識別碼(#)。
    ![](../images/models-recipes/model-walkthrough/preview_score_results.png)
+
+## 下一步 {#next-steps}
 
 做得好，您已成功產生產品建議！
 
