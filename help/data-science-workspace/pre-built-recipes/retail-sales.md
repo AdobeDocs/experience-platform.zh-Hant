@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 零售銷售方式
 topic: overview
 translation-type: tm+mt
-source-git-commit: f548fb6431b7bc71c205a2b2b7ca3884e57340b1
+source-git-commit: e08460bc76d79920bbc12c7665a1416d69993f34
 
 ---
 
@@ -53,11 +53,11 @@ source-git-commit: f548fb6431b7bc71c205a2b2b7ca3884e57340b1
 
 ## 演算法
 
-首先，載入 **DSWRetailSales模式中的訓練資** 料集。 在此基礎上，利用梯度推進回歸算法 [對模型進行訓練](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.GradientBoostingRegressor.html)。 漸層強化採用弱學員（至少略好於隨機機會的學員）可形成一連串的學員，專注於改善先前學員的弱點。 搭配使用，可用來建立強大的預測模型。
+首先，載入 *DSWRetailSales模式中的訓練資* 料集。 在此基礎上，利用梯度推進回歸算法 [對模型進行訓練](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.GradientBoostingRegressor.html)。 漸層強化採用弱學員（至少略好於隨機機會的學員）可形成一連串的學員，專注於改善先前學員的弱點。 搭配使用，可用來建立強大的預測模型。
 
-此程式包括三個要素：損失函式、弱學習者和加性模型。
+此程式包括三個要素： 損失函式、弱學習者和加性模型。
 
-損失函式是指預測模型在預測預期結果方面表現如何的度量——最小二乘回歸法用於此配方。
+損失函式是指預測模型在能夠預測預期結果方面表現如何的度量——最小二乘回歸在此配方中被使用。
 
 在漸層提升中，決策樹作為弱學習者。 通常，樹狀結構的圖層、節點和分割數目有限，可確保學習者保持弱。
 
