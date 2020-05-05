@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 客戶人工智慧概觀
 topic: Customer AI overview
 translation-type: tm+mt
-source-git-commit: f4deee30f0f03b75dc7ee02152ceb6c519858c7c
+source-git-commit: ec0de4c8775367be9e6016529471254ad9f8f453
 
 ---
 
@@ -35,6 +35,10 @@ source-git-commit: f4deee30f0f03b75dc7ee02152ceb6c519858c7c
 - 客戶人工智慧不是產品建議工具。 如果您有數千個SKU，請勿將客戶AI用作實際產品建議解決方案（例如Adobe Target）的代理程式。
 - 客戶人工智慧無法預測客戶在購買歷程的哪個階段，例如，如果他們處於「認知」、「考慮」、「購買」或「保留」階段。
 - 請勿使用客戶人工智慧來判斷日後可能購買產品的客戶。 這要求客戶AI必須在過去出現某些成功事件，才能成功訓練資料上的機器學習演算法。
+
+以下視訊旨在協助您瞭解客戶人工智慧。
+
+>[!VIDEO](https://video.tv.adobe.com/v/32664?learn=on&quality=12)
 
 ## 它如何運作？
 
