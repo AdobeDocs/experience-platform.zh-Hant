@@ -3,7 +3,10 @@ product: adobe experience platform
 audience: user
 user-guide-title: 即時客戶資料平台說明
 translation-type: tm+mt
-source-git-commit: 6f27a5eb12991fce0fbeef2d77622dfcf4a97cae
+source-git-commit: e0807f32ff5f3d16a6805074951e3b09723c5181
+workflow-type: tm+mt
+source-wordcount: '407'
+ht-degree: 11%
 
 ---
 
@@ -25,7 +28,7 @@ source-git-commit: 6f27a5eb12991fce0fbeef2d77622dfcf4a97cae
    * 目的地介面 {#destinations-interface}
       * [目標工作區](destinations/destinations-workspace.md)
       * [目標詳細資訊頁](destinations/destination-details-page.md)
-   * 目標目錄 {#destinations-cat}
+   * 目標目錄  {#destinations-cat}
       * [目標目錄概述](destinations/destinations-catalog.md)
       * Adobe目的地{#adobe-destinations}
          * [Adobe目標概觀](destinations/adobe-destinations.md)
@@ -75,7 +78,7 @@ source-git-commit: 6f27a5eb12991fce0fbeef2d77622dfcf4a97cae
          * [建立雲端儲存空間目標的工作流程](/help/rtcdp/destinations/cloud-storage-destinations-workflow.md)
          * [Amazon S3目的地](destinations/amazon-s3-destination.md)
          * [SFTP目的地](destinations/sftp-destination.md)
-      * 資料管理平台目標{dmp-destinations}
+      * 資料管理平台目標 {#dmp-destinations}
          * [資料管理平台目標概觀](destinations/dmp-destinations.md)
          * [Audience Manager DIL擴充功能](/help/rtcdp/destinations/aam-dil-extension.md)
       * 電子郵件行銷目標{#email-destinations}
