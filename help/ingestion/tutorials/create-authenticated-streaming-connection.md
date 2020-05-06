@@ -4,7 +4,10 @@ solution: Experience Platform
 title: 建立驗證的串流連線
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 79466c78fd78c0f99f198b11a9117c946736f47a
+source-git-commit: d9ce9506e43c4deed01f18e5913fda5a5c3cee84
+workflow-type: tm+mt
+source-wordcount: '649'
+ht-degree: 2%
 
 ---
 
@@ -21,8 +24,8 @@ source-git-commit: 79466c78fd78c0f99f198b11a9117c946736f47a
 
 本教學課程也需要具備各種Adobe Experience Platform服務的相關知識。 在開始本教學課程之前，請先閱讀下列服務的檔案：
 
-- [體驗資料模型(XDM)](../../xdm/home.md):平台組織體驗資料的標準化架構。
-- [即時客戶個人檔案](../../profile/home.md):根據來自多個來源的匯整資料，即時提供統一的消費者個人檔案。
+- [體驗資料模型(XDM)](../../xdm/home.md): 平台組織體驗資料的標準化架構。
+- [即時客戶個人檔案](../../profile/home.md): 根據來自多個來源的匯整資料，即時提供統一的消費者個人檔案。
 
 以下章節提供您需要知道的其他資訊，以便成功呼叫串流擷取API。
 
@@ -34,7 +37,7 @@ source-git-commit: 79466c78fd78c0f99f198b11a9117c946736f47a
 
 若要呼叫平台API，您必須先完成驗證教 [學課程](../../tutorials/authentication.md)。 完成驗證教學課程後，所有Experience Platform API呼叫中每個必要標題的值都會顯示在下方：
 
-- 授權：生產者 `{ACCESS_TOKEN}`
+- 授權： 生產者 `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
@@ -46,7 +49,7 @@ Experience Platform中的所有資源都隔離至特定的虛擬沙盒。 所有
 
 所有包含裝載(POST、PUT、PATCH)的請求都需要額外的標題：
 
-- 內容類型：application/json
+- 內容類型： application/json
 
 ## 建立連線
 
@@ -194,11 +197,3 @@ curl -X GET https://platform.adobe.io/data/foundation/flowservice/connections/{C
     }
 }
 ```
-
-### 使用授權將訊息傳送至未驗證的串流連線
-
-如果串流連線未啟用驗證，用戶端仍可（選擇性）將標題新 `Authorization` 增至其請求。
-
-如果 `Authorization` 標題不存在，或傳送無效／過期的存取Token，則會傳回HTTP 401未授權回應，資料仍會發佈，但欄位設 `authenticatedRequest` 為 `false`。
-
-如果標 `Authorization` 題存在且有效，資料將會以欄位設定 `authenticatedRequest` 為的方式發佈 `true`。
