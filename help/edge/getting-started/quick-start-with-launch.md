@@ -4,7 +4,10 @@ seo-title: Launch讓您快速入門Adobe Experience Platform Web SDK
 description: 使用Experience Platform Web SDK擴充功能收集資料的快速入門手冊
 seo-description: 使用Experience Platform Web SDK擴充功能收集資料的快速入門手冊
 translation-type: tm+mt
-source-git-commit: e23b0ce9c20d5d2d770d1c1261fe08de5743325a
+source-git-commit: 51acb07efe624c7cf1dfaabc4b03f04c76ac88f8
+workflow-type: tm+mt
+source-wordcount: '391'
+ht-degree: 4%
 
 ---
 
@@ -25,10 +28,7 @@ source-git-commit: e23b0ce9c20d5d2d770d1c1261fe08de5743325a
 
 若要能夠傳送資料至Adobe Experience Platform，您必須建立XDM架構和使用該架構的資料集。
 
-- [使用下列混音](../../xdm/tutorials/create-schema-ui.md) ，建立結構：
-   - ExperienceEvent實作詳細資訊
-   - ExperienceEvent環境詳細資訊
-   - ExperienceEvent Web詳細資訊
+- [建立架構](../../xdm/tutorials/create-schema-ui.md)
 - 將Adobe Experience Platform Web SDK mixin新增至您建立的架構
 - [使用您的方案](https://platform.adobe.com/dataset/overview) ，建立資料集，讓資料著陸
 
