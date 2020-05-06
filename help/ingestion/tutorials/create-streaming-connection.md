@@ -4,7 +4,10 @@ solution: Experience Platform
 title: 使用API建立串流連線
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 181719e729748adcde62199c9406a97b7a807182
+source-git-commit: 0eecd802fc8d0ace3a445f3f188a7f095b97d0c8
+workflow-type: tm+mt
+source-wordcount: '659'
+ht-degree: 2%
 
 ---
 
@@ -21,8 +24,8 @@ source-git-commit: 181719e729748adcde62199c9406a97b7a807182
 
 本教學課程也需要具備各種Adobe Experience Platform服務的相關知識。 在開始本教學課程之前，請先閱讀下列服務的檔案：
 
-- [體驗資料模型(XDM)](../../xdm/home.md):平台組織體驗資料的標準化架構。
-- [即時客戶個人檔案](../../profile/home.md):根據來自多個來源的匯整資料，即時提供統一的消費者個人檔案。
+- [體驗資料模型(XDM)](../../xdm/home.md): 平台組織體驗資料的標準化架構。
+- [即時客戶個人檔案](../../profile/home.md): 根據來自多個來源的匯整資料，即時提供統一的消費者個人檔案。
 
 以下章節提供您需要知道的其他資訊，以便成功呼叫串流擷取API。
 
@@ -34,7 +37,7 @@ source-git-commit: 181719e729748adcde62199c9406a97b7a807182
 
 若要呼叫平台API，您必須先完成驗證教 [學課程](../../tutorials/authentication.md)。 完成驗證教學課程後，所有Experience Platform API呼叫中每個必要標題的值都會顯示在下方：
 
-- 授權：生產者 `{ACCESS_TOKEN}`
+- 授權： 生產者 `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
@@ -46,7 +49,7 @@ Experience Platform中的所有資源都隔離至特定的虛擬沙盒。 所有
 
 所有包含裝載(POST、PUT、PATCH)的請求都需要額外的標題：
 
-- 內容類型：application/json
+- 內容類型： application/json
 
 ## 建立連線
 
@@ -60,7 +63,7 @@ POST /flowservice/connections
 
 **請求**
 
->[!NOTE] 必須使用列 `providerId` 出和的 `connectionSpec` 值 **** ，如示例中所示，因為它們是您要為流接收建立流連接的API所指定的值。
+>[!NOTE] 必須使用列 `providerId` 出和的 `connectionSpec` 值 **** ，如示例中所示，因為它們是您為串流擷取建立串流連線的API所指定的值。
 
 ```shell
 curl -X POST https://platform.adobe.io/data/foundation/flowservice/connections \
@@ -177,6 +180,6 @@ curl -X GET https://platform.adobe.io/data/foundation/flowservice/connections/{C
 
 ### 驗證的串流連線
 
-驗證資料收集可讓Adobe Experience Platform服務（例如即時客戶個人檔案和身分識別）區隔來自受信任來源和不受信任來源的記錄。 想要傳送個人識別資訊(PII)的客戶可以透過傳送IMS存取Token作為POST要求的一部分來傳送——如果IMS Token有效，則記錄會標示為從有效來源收集。
+驗證資料收集可讓Adobe Experience Platform服務（例如即時客戶個人檔案和身分識別）區隔來自受信任來源和不受信任來源的記錄。 想要傳送個人識別資訊(PII)的客戶可以透過傳送IMS存取Token作為POST要求的一部分進行傳送——如果IMS Token有效，則記錄會標示為從受信任來源收集。
 
 如需建立已驗證串流連線的詳細資訊，請參閱建立已驗 [證串流連線教學課程](create-authenticated-streaming-connection.md)。
