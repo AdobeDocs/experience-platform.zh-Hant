@@ -4,7 +4,10 @@ solution: Experience Platform
 title: 串流擷取疑難排解
 topic: troubleshooting
 translation-type: tm+mt
-source-git-commit: 4817162fe2b7cbf4ae4c1ed325db2af31da5b5d3
+source-git-commit: 0eecd802fc8d0ace3a445f3f188a7f095b97d0c8
+workflow-type: tm+mt
+source-wordcount: '1046'
+ht-degree: 0%
 
 ---
 
@@ -23,9 +26,9 @@ Adobe Experience Platform Data Ingestion提供REST風格的API，您可用來將
 
 資料擷取運用體驗資料模型(XDM)架構來驗證傳入資料的格式。 發送不符合預定義XDM模式結構的資料將導致接收失敗。 如需XDM及其在Experience Platform中使用的詳細資訊，請參閱 [XDM系統概觀](../../xdm/home.md)。
 
-串流擷取支援兩種驗證模式：同步與非同步。 每個驗證方法處理失敗資料的方式都不同。
+串流擷取支援兩種驗證模式： 同步與非同步。 每個驗證方法處理失敗資料的方式都不同。
 
-**在您的開發流程中** ，應使用同步驗證。 失敗驗證的記錄會被丟棄，並傳回錯誤訊息，說明其失敗的原因(例如：&quot;無效的XDM消息格式&quot;)。
+**在您的開發流程中** ，應使用同步驗證。 失敗驗證的記錄會被丟棄，並傳回錯誤訊息，說明其失敗的原因(例如： &quot;無效的XDM消息格式&quot;)。
 
 **在生產中** ，應使用非同步驗證。 任何未通過驗證的格式錯誤資料都會以失敗的批次檔案傳送至資料湖，稍後可在此擷取以進一步分析。
 
@@ -39,7 +42,7 @@ Adobe Experience Platform Data Ingestion提供REST風格的API，您可用來將
 
 當請求的位置不支援同步驗證時，會傳回501錯誤回應。 如需同步驗證 [的詳細資訊](../quality/streaming-validation.md) ，請參閱串流驗證總覽。
 
-### 如何驗證傳送的資料？
+### 如何確保僅從受信任來源收集資料？
 
 Experience Platform支援安全的資料收集。 啟用驗證資料收集後，用戶端必須傳送JSON Web Token(JWT)及其IMS組織ID作為請求標題。 如需如何傳送驗證資料至平台的詳細資訊，請參閱驗證資料收 [集指南](../tutorials/create-authenticated-streaming-connection.md)。
 
@@ -69,7 +72,7 @@ Experience Platform支援安全的資料收集。 啟用驗證資料收集後，
 
 成功的單一訊息API要求會傳回狀態碼200。 成功（或部分成功）批次訊息API請求會傳回狀態代碼207。
 
-下列JSON是含有兩則訊息之API要求的範例回應物件：一個成功，一個失敗。 成功串流的訊息會傳回 `xactionId` 屬性。 無法串流的訊息會傳回屬 `statusCode` 性和回應，並 `message` 包含更多資訊。
+下列JSON是含有兩則訊息之API要求的範例回應物件： 一個成功，一個失敗。 成功串流的訊息會傳回 `xactionId` 屬性。 無法串流的訊息會傳回屬 `statusCode` 性和回應，並 `message` 包含更多資訊。
 
 ```JSON
 {
@@ -95,6 +98,6 @@ Experience Platform支援安全的資料收集。 啟用驗證資料收集後，
 
 如果即時客戶個人檔案拒絕訊息，很可能是因為身分資訊不正確。 這可能是為身份提供無效值或命名空間的結果。
 
-身份名稱空間有兩種類型：預設值和自訂值。 使用自訂名稱空間時，請確定名稱空間已在Identity Service中註冊。 如需使用預 [設和自訂名稱空間的詳細資訊](../../identity-service/namespaces.md) ，請參閱身分名稱空間概觀。
+身份名稱空間有兩種類型： 預設值和自訂值。 使用自訂名稱空間時，請確定名稱空間已在Identity Service中註冊。 如需使用預 [設和自訂名稱空間的詳細資訊](../../identity-service/namespaces.md) ，請參閱身分名稱空間概觀。
 
 您可以使用 [Experience Platform UI](https://platform.adobe.com) ，查看訊息擷取失敗原因的詳細資訊。 按一 **下左側導覽中的** 「監控」，然後檢視「串流端對端 __ 」標籤，以查看在選取時段內串流的訊息批次。
