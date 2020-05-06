@@ -4,7 +4,10 @@ solution: Experience Platform
 title: 資料擷取教學課程
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: e4da80338dbfbad70dfb3cf7df9fe589e949e788
+source-git-commit: 0eecd802fc8d0ace3a445f3f188a7f095b97d0c8
+workflow-type: tm+mt
+source-wordcount: '516'
+ht-degree: 0%
 
 ---
 
@@ -27,7 +30,7 @@ Adobe Experience Platform可讓您輕鬆將資料匯入Platform做為批次檔�
 
 ## 建立串流連線
 
-若要開始將資料串流至Experience Platform，您必須先建立串流HTTP連線。 建立串流連線時，您需要提供關鍵詳細資料，例如串流資料來源，以及您是否要從受信任（已驗證）或不受信任（未驗證）來源傳送資料。 這可以使用Platform使用者介面或Experience Platform API來完成。 若要進一步瞭解，請依照教學課 [程，使用UI建立串流連線](../ingestion/tutorials/create-streaming-connection-ui.md) ，或 [使用API建立串流連線](../ingestion/tutorials/create-streaming-connection.md)。
+若要開始將資料串流至Experience Platform，您必須先要求HTTP端點。 您可以選擇設定此端點，以強制執行已驗證的行為。 這可以使用Platform使用者介面或Experience Platform API來完成。 若要進一步瞭解，請依照教學課 [程，使用UI建立串流連線](../ingestion/tutorials/create-streaming-connection-ui.md) ，或 [使用API建立串流連線](../ingestion/tutorials/create-streaming-connection.md)。
 
 ## 建立驗證的串流連線
 
