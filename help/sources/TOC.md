@@ -3,7 +3,10 @@ product: experience-platform
 audience: user
 user-guide-title: Adobe Experience Platform來源連接器說明
 translation-type: tm+mt
-source-git-commit: 2d22f48cc8f461774a77c3351332f21849d56545
+source-git-commit: de523ebef35564ebc2e5991ee14ae1c7284bf092
+workflow-type: tm+mt
+source-wordcount: '513'
+ht-degree: 0%
 
 ---
 
@@ -35,7 +38,6 @@ source-git-commit: 2d22f48cc8f461774a77c3351332f21849d56545
       - [ServiceNow連接器](connectors/customer-success/servicenow.md)
    - 資料庫 {#databases}
       - [Amazon Redshift連接器](connectors/databases/redshift.md)
-      - [Apache Cassandra連接器](connectors/databases/cassandra.md)
       - [Apache Hive on Azure HDInsights連接器](connectors/databases/hive.md)
       - [Apache Spark on Azure HDInsights連接器](connectors/databases/spark.md)
       - [Azure資料總管連接器](connectors/databases/data-explorer.md)
@@ -74,7 +76,6 @@ source-git-commit: 2d22f48cc8f461774a77c3351332f21849d56545
          - [ServiceNow連接器](tutorials/api/create/customer-success/servicenow.md)
       - 資料庫 {#databases}
          - [Amazon Redshift連接器](tutorials/api/create/databases/redshift.md)
-         - [Apache Cassandra連接器](tutorials/api/create/databases/cassandra.md)
          - [Apache Hive on Azure HDInsights連接器](tutorials/api/create/databases/hive.md)
          - [Apache Spark on Azure HDInsights連接器](tutorials/api/create/databases/spark.md)
          - [Azure資料總管連接器](tutorials/api/create/databases/data-explorer.md)
@@ -112,8 +113,8 @@ source-git-commit: 2d22f48cc8f461774a77c3351332f21849d56545
       - [收集行銷自動化資料](tutorials/api/collect/marketing-automation.md)
       - [收集付款資料](tutorials/api/collect/payments.md)
       - [收集通訊協定資料](tutorials/api/collect/protocols.md)
-   - [從協力廠商雲端儲存系統擷取鑲木地板資料](tutorials/api/create-dataset-base-connection.md)
-   - [使用Flow Service API建立資料集基本連線](tutorials/api/cloud-storage-parquet.md)
+   - [從協力廠商雲端儲存系統擷取鑲木地板資料](tutorials/api/cloud-storage-parquet.md)
+   - [使用Flow Service API建立資料集基本連線](tutorials/api/create-dataset-base-connection.md)
 - UI教學課程 {#ui-tutorials}
    - 建立源連接器 {#create}
       - Adobe應用程式 {#adobe-applications}
