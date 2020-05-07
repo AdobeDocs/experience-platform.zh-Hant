@@ -4,7 +4,10 @@ solution: Experience Platform
 title: 使用筆記型電腦分析資料
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 3dc16c835cb6ab0949fc0d4bf18349d415d680ed
+source-git-commit: 37213f29e8099f8587cde9eb66f9b75de3ad8a3a
+workflow-type: tm+mt
+source-wordcount: '1746'
+ht-degree: 0%
 
 ---
 
@@ -15,7 +18,7 @@ source-git-commit: 3dc16c835cb6ab0949fc0d4bf18349d415d680ed
 
 以下概念介紹：
 
-- **JupyterLab:** JupyterLab [](https://blog.jupyter.org/jupyterlab-is-ready-for-users-5a6f039b8906) 是Project Jupyter的新一代網路介面，並與Adobe Experience Platform緊密整合。
+- **JupyterLab:** [JupyterLab](https://blog.jupyter.org/jupyterlab-is-ready-for-users-5a6f039b8906) 是Project Jupyter的新一代網路介面，並與Adobe Experience Platform緊密整合。
 - **批：** 資料集由批處理組成。 批是一組在一段時間內收集並作為單個單位一起處理的資料。 新增資料至資料集時，會建立新的批次。
 - **資料存取SDK（已過時）:** 「資料存取SDK」現已停用。 請使用「平 [台SDK](../authoring/platform-sdk.md) 」指南。
 
@@ -71,7 +74,7 @@ Data Science Workspace可讓使用者透過JupyterLab平台建立Jupyter Noteboo
 
 ##### 依資料集ID
 
-在本節中，我們使用零售銷售資料集，該資料集與零售銷售樣本筆記型電腦中使用的資料集相同。
+在本節中，我們使用零售銷售資料集，該資料集與零售銷售示例筆記本中使用的資料集相同。
 
 在Jupyter Notebook中，我們可以從左側的「 **Data** 」（資料）頁籤訪問資料。 按一下該頁籤後，您將能夠看到資料集清單。
 
@@ -161,7 +164,7 @@ df.describe()
 
 [seaborn](https://seaborn.pydata.org/) 是以matplotlib為基礎的套件。 其主要目標是讓預設圖形更具視覺吸引力，並簡化複雜圖形的建立。
 
-[ggplot](https://ggplot2.tidyverse.org/) 是也建立在matplotlib之上的套件。 但主要區別在於，該工具是R的ggplot2埠。與西博恩類似，其目標是改進matplotlib。 熟悉gplot2 for R的使用者應考慮此程式庫。
+[ggplot](https://ggplot2.tidyverse.org/) 是也建立在matplotlib之上的套件。 但主要區別在於，該工具是R的ggplot2埠。 與西博恩類似，其目標是改進matplotlib。 熟悉gplot2 for R的使用者應考慮此程式庫。
 
 
 ##### 一元圖
