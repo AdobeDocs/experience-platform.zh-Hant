@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Adobe Experience Platform來源連接器概觀
 topic: overview
 translation-type: tm+mt
-source-git-commit: b58b933fce9d1abe658a908ec07f390e4991c5c6
+source-git-commit: eadf285ef5fd373eec54e6680b5f253b0b16dcf9
+workflow-type: tm+mt
+source-wordcount: '742'
+ht-degree: 0%
 
 ---
 
@@ -65,7 +68,6 @@ Experience Platform可支援從協力廠商客戶成功應用程式擷取資料�
 Experience Platform支援從協力廠商資料庫擷取資料。 有關特定來源連接器的詳細資訊，請參閱下列相關檔案：
 
 - [Amazon Redshift連接器](connectors/databases/redshift.md)
-- [Apache Cassandra連接器](connectors/databases/cassandra.md)
 - [Apache Hive on Azure HDInsights連接器](connectors/databases/hive.md)
 - [Apache Spark on Azure HDInsights連接器](connectors/databases/spark.md)
 - [Azure資料總管連接器](connectors/databases/data-explorer.md)
