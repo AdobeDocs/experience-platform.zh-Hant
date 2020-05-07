@@ -3,10 +3,10 @@ product: experience-platform
 audience: user
 user-guide-title: Adobe Experience Platform Data Science Workspace說明
 translation-type: tm+mt
-source-git-commit: f38a2ba85248bbd12f5ef2487e8d8e6fe3319b32
+source-git-commit: 37213f29e8099f8587cde9eb66f9b75de3ad8a3a
 workflow-type: tm+mt
-source-wordcount: '216'
-ht-degree: 3%
+source-wordcount: '195'
+ht-degree: 2%
 
 ---
 
@@ -29,12 +29,6 @@ ht-degree: 3%
    * [MLServices](api/mlservices.md)
    * [見解](api/insights.md)
    * [附錄](api/appendix.md)
-* 即時機器學習(Alpha) {#real-time-machine-learning}
-   * [概述](real-time-machine-learning/home.md)
-   * [快速入門](real-time-machine-learning/getting-started.md)
-   * [培訓即時ML模型](real-time-machine-learning/training-ml-model.md)
-   * [為即時ML模型評分](real-time-machine-learning/scoring-ml-model.md)
-   * [節點參考指南](real-time-machine-learning/node-reference.md)
 * 預先建立的配方 {#pre-built-recipes}
    * [產品建議方式](pre-built-recipes/product-recommendations.md)
    * [產品購買預測](pre-built-recipes/product-purchase-prediction.md)
