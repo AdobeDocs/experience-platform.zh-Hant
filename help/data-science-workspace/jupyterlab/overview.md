@@ -4,7 +4,10 @@ solution: Experience Platform
 title: JupyterLab使用指南
 topic: Overview
 translation-type: tm+mt
-source-git-commit: 19823c7cf0459e045366f0baae2bd8a98416154c
+source-git-commit: 37213f29e8099f8587cde9eb66f9b75de3ad8a3a
+workflow-type: tm+mt
+source-wordcount: '3356'
+ht-degree: 5%
 
 ---
 
@@ -85,7 +88,7 @@ JupyterLab介麵包含功能表列、可折疊的左側邊欄，以及包含檔�
 * **資料總管：** 瀏覽、存取和探索資料集和結構
 * **運行內核和終端：** 具有終止能力的活動內核和終端會話清單
 * **命令：** 有用命令的清單
-* **儲存格偵測器：** 一種單元格編輯器，它提供對工具和元資料的訪問，這些工具和元資料對於設定用於呈現目的的筆記型電腦非常有用
+* **儲存格偵測器：** 一種單元格編輯器，它提供對工具和元資料的訪問，這些工具和元資料對於設定用於演示的筆記本有用
 * **頁籤：** 開啟的標籤清單
 
 按一下標籤以顯示其功能，或按一下展開的標籤以收合左側邊欄，如下所示：
@@ -118,7 +121,7 @@ JupyterLab的主要工作區域可讓您將檔案和其他活動排列成標籤�
 
 筆記型電腦內核是用於處理筆記型電腦單元的語言專用計算引擎。 除了Python外，JupyterLab還提供R、PySpark和Spark的其他語言支援。 開啟筆記本文檔時，將啟動關聯內核。 當執行筆記本單元時，內核執行計算並產生可能消耗大量CPU和記憶體資源的結果。 請注意，在內核關閉之前，不會釋放已分配的記憶體。
 
->[!IMPORTANT] JupyterLab Launcher從Spark 2.3更新至Spark 2.4。Spark 2.4筆記型電腦不再支援Spark和PySpark內核。
+>[!IMPORTANT] JupyterLab Launcher從Spark 2.3更新至Spark 2.4。 Spark 2.4筆記型電腦不再支援Spark和PySpark內核。
 
 某些特性和功能限於下表所述的特定內核：
 
@@ -342,7 +345,7 @@ df <- dataset_reader$read()
 df
 ```
 
-* `{DATASET_ID}`:要訪問的資料集的唯一標識
+* `{DATASET_ID}`: 要訪問的資料集的唯一標識
 
 #### 從Python/R的資料集讀取並分頁
 
@@ -372,7 +375,7 @@ dataset_reader <- DatasetReader(client_context, "{DATASET_ID}")
 df <- dataset_reader$limit(100L)$offset(10L)$read() 
 ```
 
-* `{DATASET_ID}`:要訪問的資料集的唯一標識
+* `{DATASET_ID}`: 要訪問的資料集的唯一標識
 
 ### 從PySpark/Spark/Scala的資料集讀取
 
@@ -459,12 +462,12 @@ dataFrame.show()
 
 自訂資料科學工作區魔術指令，可從Python筆記型電腦（Python 3內核）讀取或寫入資料集。
 
-* **{action}**:要在資料集上執行的動作類型。 有兩個動作是「讀取」或「寫入」。
-* **—datasetId {id}**:用於提供要讀取或寫入的資料集的ID。 這是必要的引數。
-* **—dataFrame {df}**:熊貓資料框。 這是必要的引數。
+* **{action}**: 要在資料集上執行的動作類型。 有兩個動作是「讀取」或「寫入」。
+* **—datasetId {id}**: 用於提供要讀取或寫入的資料集的ID。 這是必要的引數。
+* **—dataFrame {df}**: 熊貓資料框。 這是必要的引數。
    * 當動作為&quot;read&quot;時，{df}是資料集讀取作業結果可用的變數。
    * 當動作為&quot;write&quot;時，此資料幀{df}將寫入資料集。
-* **—mode（可選）**:允許的參數為「批次」和「互動」。 依預設，模式會設為「互動」。 建議在讀取大量資料時使用「批次」模式。
+* **—mode（可選）**: 允許的參數為「批次」和「互動」。 依預設，模式會設為「互動」。 建議在讀取大量資料時使用「批次」模式。
 
 **範例**
 
@@ -515,13 +518,13 @@ FROM {table_name}
 
 篩選運算子的清單說明如下：
 
-* `eq()`:等於
-* `gt()`:大於
-* `ge()`:大於或等於
-* `lt()`:小於
-* `le()`:小於或等於
-* `And()`:邏輯AND運算子
-* `Or()`:邏輯OR運算子
+* `eq()`: 等於
+* `gt()`: 大於
+* `ge()`: 大於或等於
+* `lt()`: 小於
+* `le()`: 小於或等於
+* `And()`: 邏輯AND運算子
+* `Or()`: 邏輯OR運算子
 
 以下儲存格會將ExperienceEvent資料集篩選為2019年1月1日至2019年12月31日止期間僅存在的資料。
 
