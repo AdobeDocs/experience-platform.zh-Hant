@@ -3,9 +3,9 @@ product: experience-platform
 audience: user
 user-guide-title: Adobe Experience Platform來源連接器說明
 translation-type: tm+mt
-source-git-commit: 0e9b5e56ea40528446b69c1af6f6e0bbf17f8d08
+source-git-commit: 958decd19c0b2063e0e242dcd3ce321c02660707
 workflow-type: tm+mt
-source-wordcount: '516'
+source-wordcount: '518'
 ht-degree: 0%
 
 ---
@@ -144,6 +144,7 @@ ht-degree: 0%
          - [MariaDB連接器](tutorials/ui/create/databases/mariadb.md)
          - [Microsoft SQL Server連接器](tutorials/ui/create/databases/sql-server.md)
          - [MySQL連接器](tutorials/ui/create/databases/mysql.md)
+         - [Oracle連接器](tutorials/ui/create/databases/oracle.md)
          - [菲尼克斯連接器](tutorials/ui/create/databases/phoenix.md)
          - [PostgreSQL連接器](tutorials/ui/create/databases/postgres.md)
       - 行銷自動化 {#marketing-automation}
