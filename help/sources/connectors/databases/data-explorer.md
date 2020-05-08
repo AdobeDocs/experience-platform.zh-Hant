@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Azure資料總管連接器
 topic: overview
 translation-type: tm+mt
-source-git-commit: 1fb07723aedcf6dfd49765c10342b70b0a7d24f3
+source-git-commit: 58cc359527a590fce3825f41682cbb32be88f8d1
 workflow-type: tm+mt
 source-wordcount: '140'
 ht-degree: 0%
@@ -28,5 +28,5 @@ Adobe Experience Platform為Microsoft、MySQL和Azure等資料庫提供者提供
 
 ## 使用UI將Azure資料總管連線至平台
 
-- [在UI中建立Azure資料總管來源連接器](../../tutorials/ui/create/databases/ats.md)
+- [在UI中建立Azure資料總管來源連接器](../../tutorials/ui/create/databases/data-explorer.md)
 - [在UI中為資料庫連接器配置資料流](../../tutorials/ui/dataflow/databases.md)
