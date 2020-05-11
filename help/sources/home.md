@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Adobe Experience Platform來源連接器概觀
 topic: overview
 translation-type: tm+mt
-source-git-commit: eadf285ef5fd373eec54e6680b5f253b0b16dcf9
+source-git-commit: 492adad9b38c8850130931d3d393f28c67057d07
 workflow-type: tm+mt
-source-wordcount: '742'
+source-wordcount: '746'
 ht-degree: 0%
 
 ---
@@ -46,6 +46,7 @@ Experience Platform支援從協力廠商廣告系統擷取資料。 有關特定
 
 - [Azure Data Lake Storage Gen2連接器](connectors/cloud-storage/adls-gen2.md)
 - [Azure Blob和Amazon S3連接器](connectors/cloud-storage/blob-s3.md)
+- [Azure檔案儲存連接器](connectors/cloud-storage/azure-file-storage.md)
 - [FTP和SFTP連接器](connectors/cloud-storage/ftp-sftp.md)
 - [Google雲端儲存空間連接器](connectors/cloud-storage/google-cloud-storage.md)
 
