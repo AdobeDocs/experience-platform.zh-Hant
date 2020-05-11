@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Adobe Experience Platform常見問答集與疑難排解指南
 topic: getting started
 translation-type: tm+mt
-source-git-commit: 7f61cee8fb5160d0f393f8392b4ce2462d602981
+source-git-commit: d9aa21a7439a6c40f6f51dfbdf5c7b3690c4593a
+workflow-type: tm+mt
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -85,11 +88,11 @@ curl -X GET \
 
 ## 我的IMS組織是什麼？ {#what-is-my-ims-organization}
 
-IMS組織是客戶的Adobe代表。 任何授權的Adobe解決方案皆與此客戶組織整合。 當IMS組織有權使用Experience Platform時，它可指派存取權給開發人員。 IMS組織ID(`x-gw-ims-org-id`)代表應執行API呼叫的組織，因此是所有API請求中的標題。 此ID可透過 [Adobe I/O主控台找到](https://console.adobe.io/):在「整 **合** 」標籤中，導覽至任何特定整合的「概述」區段，以在「用戶端認證」下尋找 **ID******。 如需如何驗證至平台的逐步逐步說明，請參閱驗 [證教學課程](../tutorials/authentication.md)。
+IMS組織是客戶的Adobe代表。 任何授權的Adobe解決方案皆與此客戶組織整合。 當IMS組織有權使用Experience Platform時，它可指派存取權給開發人員。 IMS組織ID(`x-gw-ims-org-id`)代表應執行API呼叫的組織，因此是所有API請求中的標題。 此ID可透過 [Adobe Developer Console找到](https://www.adobe.com/go/devs_console_ui): 在「整 **合** 」標籤中，導覽至任何特定整合的「概述」區段，以在「用戶端認證」下尋找 **ID******。 如需如何驗證至平台的逐步逐步說明，請參閱驗 [證教學課程](../tutorials/authentication.md)。
 
 ## 我可以在哪裡找到API金鑰？ {#where-can-i-find-my-api-key}
 
-所有API請求中都需要API金鑰作為標題。 您可透過 [Adobe I/O Console找到](https://console.adobe.io/)。 在主控台的「整合 **」索引標籤上，導覽至特定整合的「概述** 」區段，然後在「用戶端認證」下方找到 **金鑰******。 如需如何驗證至平台的逐步逐步說明，請參閱驗 [證教學課程](../tutorials/authentication.md)。
+所有API請求中都需要API金鑰作為標題。 您可從 [Adobe Developer Console找到它](https://www.adobe.com/go/devs_console_ui)。 在主控台的「整合 **」索引標籤上，導覽至特定整合的「概述** 」區段，然後在「用戶端認證」下方找到 **金鑰******。 如需如何驗證至平台的逐步逐步說明，請參閱驗 [證教學課程](../tutorials/authentication.md)。
 
 ## 我要如何取得存取Token? {#how-do-i-get-an-access-token}
 
@@ -143,7 +146,7 @@ GET /batches?createdAfter=1559775880000&orderBy=desc:created
 | 401 | 驗證失敗 | 請求未通過驗證檢查。 您的存取Token可能遺失或無效。 如需詳細 [資訊，請參閱下方](#oauth-token-is-missing) 「OAuth Token錯誤」一節。 |
 | 403 | 禁止 | 已找到資源，但您沒有查看該資源的正確憑據。 |
 | 404 | 找不到 | 在伺服器上找不到所請求的資源。 資源可能已刪除，或請求的路徑輸入錯誤。 |
-| 500 | 內部伺服器錯誤 | 這是伺服器端錯誤。 如果您同時進行許多呼叫，可能已達到API限制，需要篩選結果。 (如需詳細資訊，請參閱Catalog Service API開發人員指南中 [的資料篩選](../catalog/api/filter-data.md) 子指南)。請稍候片刻，然後再次嘗試您的請求，如果問題仍然存在，請聯絡您的管理員。 |
+| 500 | 內部伺服器錯誤 | 這是伺服器端錯誤。 如果您同時進行許多呼叫，可能已達到API限制，需要篩選結果。 (如需詳細資訊，請參閱Catalog Service API開發人員指南中 [的資料篩選](../catalog/api/filter-data.md) 子指南)。 請稍候片刻，然後再次嘗試您的請求，如果問題仍然存在，請聯絡您的管理員。 |
 
 ## 請求標題錯誤 {#request-header-errors}
 
@@ -191,7 +194,7 @@ GET /batches?createdAfter=1559775880000&orderBy=desc:created
 }
 ```
 
-當提供的API金鑰標題(`x-api-key`)的值無效時，會顯示此錯誤訊息。 請確定您已正確輸入密鑰，然後再次嘗試。 如果您不知道您的API金鑰，可在 [Adobe I/O Console中找到它](https://console.adobe.io):在「整 **合** 」標籤中，導覽至特定整合的「概述」區段，以在「用戶端認證」下尋找API **金鑰******。
+當提供的API金鑰標題(`x-api-key`)的值無效時，會顯示此錯誤訊息。 請確定您已正確輸入密鑰，然後再次嘗試。 如果您不知道您的API金鑰，可在 [Adobe I/O Console中找到它](https://console.adobe.io): 在「整 **合** 」索引標籤中，導覽至特定整合的「概述」區段，以在「用戶端認證」下尋找API **金鑰******。
 
 
 ### 遺失標題
@@ -214,7 +217,7 @@ GET /batches?createdAfter=1559775880000&orderBy=desc:created
 }
 ```
 
-當使用者或Adobe I/O整合(由標題中的 [存取Token](#how-do-i-get-an-access-token) )無權呼叫標題中提供之IMS組織的Experience Platform API時，會顯示此錯誤 `Authorization``x-gw-ims-org-id` 訊息。 請確定您已在頁首中為您的IMS組織提供正確的ID，然後再次嘗試。 如果您不知道您的組織ID，可在 [Adobe I/O主控台中找到它](https://console.adobe.io):在「整 **合** 」索引標籤中，導覽至特定整合的「概述 **」區段，以在「用戶端認證」下尋找** ID ****。
+當使用者或Adobe I/O整合(由標題中的 [存取Token](#how-do-i-get-an-access-token) )無權呼叫標題中提供之IMS組織的Experience Platform API時，會顯示此錯誤 `Authorization``x-gw-ims-org-id` 訊息。 請確定您已在頁首中為您的IMS組織提供正確的ID，然後再次嘗試。 如果您不知道您的組織ID，可在 [Adobe I/O主控台中找到它](https://console.adobe.io): 在「整 **合** 」索引標籤中，導覽至特定整合的「概述 **」區段，以在「用戶端認證」下尋找** ID ****。
 
 ### 未指定有效的內容類型
 
