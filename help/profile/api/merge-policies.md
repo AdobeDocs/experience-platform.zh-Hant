@@ -4,7 +4,7 @@ solution: Adobe Experience Platform
 title: 即時客戶個人檔案API開發人員指南
 topic: guide
 translation-type: tm+mt
-source-git-commit: 33091568c850375b399435f375e854667493152c
+source-git-commit: 4bab89c981f7e30b28477068625d1b6f534fa838
 workflow-type: tm+mt
 source-wordcount: '2057'
 ht-degree: 1%
@@ -227,7 +227,7 @@ curl -X GET \
 
 ### 根據多個合併策略的ID檢索多個合併策略
 
-通過向端點發出POST請求並在請求主體中包 `/config/mergePolicies/bulk-get` 含要檢索的合併策略的ID，可以檢索多個合併策略。
+通過向端點發出POST請求並在請求主體中包括要檢索 `/config/mergePolicies/bulk-get` 的合併策略的ID，可以檢索多個合併策略。
 
 **API格式**
 
@@ -251,7 +251,7 @@ curl -X POST \
         "ids": [
           {
             "id": "0bf16e61-90e9-4204-b8fa-ad250360957b"
-          }
+          },
           {
             "id": "42d4a596-b1c6-46c0-994e-ca5ef1f85130"
           }
