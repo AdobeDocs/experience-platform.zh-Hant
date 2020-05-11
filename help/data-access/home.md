@@ -4,7 +4,10 @@ solution: Experience Platform
 title: 資料存取概述
 topic: overview
 translation-type: tm+mt
-source-git-commit: 4817162fe2b7cbf4ae4c1ed325db2af31da5b5d3
+source-git-commit: d9aa21a7439a6c40f6f51dfbdf5c7b3690c4593a
+workflow-type: tm+mt
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -237,7 +240,6 @@ Contents of the file
 
 如需其他範例，請參閱資料 [存取教學課程](tutorials/dataset-data.md)。
 
-
 ## 訂閱資料擷取事件
 
-平台可透過 [Adobe I/O主控台提供特定高價值事件供訂閱](https://console.adobe.io/)。 例如，您可以訂閱資料擷取事件，以通知您可能發生的延遲和失敗。 有關使用Adobe I/O事件的詳細資訊，請參閱快速入 [門指南](https://www.adobe.io/apis/experienceplatform/events/docs.html)。
+平台可透過 [Adobe Developer Console提供特定的高價值活動供訂閱](https://www.adobe.com/go/devs_console_ui)。 例如，您可以訂閱資料擷取事件，以通知您可能發生的延遲和失敗。 如需詳細資訊，請 [參閱訂閱資料擷取通知](../ingestion/quality/subscribe-events.md) 的教學課程。
