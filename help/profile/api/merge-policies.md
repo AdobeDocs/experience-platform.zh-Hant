@@ -4,7 +4,10 @@ solution: Adobe Experience Platform
 title: 即時客戶個人檔案API開發人員指南
 topic: guide
 translation-type: tm+mt
-source-git-commit: 21935bb36d8c2a0ef17e586c0909cf316ef026cf
+source-git-commit: 33091568c850375b399435f375e854667493152c
+workflow-type: tm+mt
+source-wordcount: '2057'
+ht-degree: 1%
 
 ---
 
@@ -96,7 +99,7 @@ Adobe Experience Platform可讓您從多個來源匯整資料並加以匯整，�
 其中 `{IDENTITY_GRAPH_TYPE}` 是下列其中一項：
 
 * **「無」:** 不執行身份聯繫。
-* **「pdg」:** 根據您的個人身分圖表執行身分識別接合。
+* **「pdg」:** 根據您的私人身分圖表執行身分識別接合。
 
 **範例`identityGraph`**
 
@@ -120,9 +123,9 @@ Adobe Experience Platform可讓您從多個來源匯整資料並加以匯整，�
 
 其中 `{ATTRIBUTE_MERGE_TYPE}` 是下列其中一項：
 
-* **&quot;timestampOrdered&quot;**:（預設值）優先處理在發生衝突時最後更新的描述檔。 使用此合併類型時， `data` 不需要屬性。
-* **&quot;dataSetPrecerance&quot;** :根據個人資料片段的來源資料集，為描述檔片段提供優先順序。 當一個資料集中的資訊比另一個資料集的資料更偏好或受信任時，就可使用此功能。 使用此合併類型時，需 `order` 要屬性，因為它按優先順序順序列出資料集。
-   * **「訂單」**:使用&quot;dataSetPrecense&quot;時，必須 `order` 向陣列提供資料集清單。 清單中未包含的任何資料集都不會合併。 換言之，必須明確列出資料集才能合併至描述檔。 陣 `order` 列按優先順序列出資料集的ID。
+* **&quot;timestampOrdered&quot;**: （預設值）優先處理在發生衝突時最後更新的描述檔。 使用此合併類型時， `data` 不需要屬性。
+* **&quot;dataSetPrecerance&quot;** : 根據個人資料片段的來源資料集，為描述檔片段提供優先順序。 當一個資料集中的資訊比另一個資料集的資料更偏好或受信任時，就可使用此功能。 使用此合併類型時，需 `order` 要屬性，因為它按優先順序順序列出資料集。
+   * **「訂單」**: 使用&quot;dataSetPrecense&quot;時，必須 `order` 向陣列提供資料集清單。 清單中未包含的任何資料集都不會合併。 換言之，必須明確列出資料集才能合併至描述檔。 陣 `order` 列按優先順序列出資料集的ID。
 
 **使用dataSetPrecence類型的attributeMerge對象示例**
 
@@ -170,7 +173,7 @@ Adobe Experience Platform可讓您從多個來源匯整資料並加以匯整，�
 
 ## 訪問合併策略 {#access-merge-policies}
 
-使用即時客戶描述檔API，端點可讓您執行查閱請求，以依其ID檢視特定合併原則，或存取您IMS組織中所有依特定條件篩選的合併原則。 `/config/mergePolicies`
+使用即時客戶描述檔API，端點可讓您執行查閱請求，以依其ID檢視特定合併原則，或存取您IMS組織中所有依特定條件篩選的合併原則。 `/config/mergePolicies` 您也可以使用端 `/config/mergePolicies/bulk-get` 點來依據其ID擷取多個合併原則。 以下各節將說明執行這些呼叫的步驟。
 
 ### 依ID存取單一合併原則
 
@@ -222,6 +225,99 @@ curl -X GET \
 
 有關 [](#components-of-merge-policies) 組成合併策略的各個元素的詳細資訊，請參閱本文檔開頭的合併策略元件部分。
 
+### 根據多個合併策略的ID檢索多個合併策略
+
+通過向端點發出POST請求並在請求主體中包 `/config/mergePolicies/bulk-get` 含要檢索的合併策略的ID，可以檢索多個合併策略。
+
+**API格式**
+
+```http
+POST /config/mergePolicies/bulk-get
+```
+
+**請求**
+
+請求主體包含一個「ids」陣列，其中包含您要擷取詳細資料之每個合併原則的「id」個別物件。
+
+```shell
+curl -X POST \
+  'https://platform.adobe.io/data/core/ups/config/mergePolicies/bulk-get' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+        "ids": [
+          {
+            "id": "0bf16e61-90e9-4204-b8fa-ad250360957b"
+          }
+          {
+            "id": "42d4a596-b1c6-46c0-994e-ca5ef1f85130"
+          }
+        ]
+      }'
+```
+
+**回應**
+
+成功的回應會傳回HTTP狀態207（多重狀態），以及POST請求中提供其ID的合併原則詳細資訊。
+
+```json
+{
+    "id": "0bf16e61-90e9-4204-b8fa-ad250360957b",
+    "name": "Profile Default Merge Policy",
+    "imsOrgId": "{IMS_ORG}",
+    "sandbox": {
+        "sandboxId": "ff0f6870-c46d-11e9-8ca3-036939a64204",
+        "sandboxName": "prod",
+        "type": "production",
+        "default": true
+    },
+    "schema": {
+        "name": "_xdm.context.profile"
+    },
+    "version": 1,
+    "identityGraph": {
+        "type": "none"
+    },
+    "attributeMerge": {
+        "type": "timestampOrdered"
+    },
+    "default": true,
+    "updateEpoch": 1552086578
+},
+{
+    "id": "42d4a596-b1c6-46c0-994e-ca5ef1f85130",
+    "name": "Dataset Precedence Merge Policy",
+    "imsOrgId": "{IMS_ORG}",
+    "sandbox": {
+        "sandboxId": "ff0f6870-c46d-11e9-8ca3-036939a64204",
+        "sandboxName": "prod",
+        "type": "production",
+        "default": true
+    },
+    "schema": {
+        "name": "_xdm.context.profile"
+    },
+    "version": 1,
+    "identityGraph": {
+        "type": "pdg"
+    },
+    "attributeMerge": {
+        "type": "dataSetPrecedence",
+        "order": [
+            "5b76f86b85d0e00000be5c8b",
+            "5b76f8d787a6af01e2ceda18"
+        ]
+    },
+    "default": false,
+    "updateEpoch": 1576099719
+}
+```
+
+有關 [](#components-of-merge-policies) 組成合併策略的各個元素的詳細資訊，請參閱本文檔開頭的合併策略元件部分。
+
 ### 按標準列出多個合併策略
 
 您可以在IMS組織內，透過向端點發出GET請求，並使用選用的查詢參數來篩選、排序和分頁回應，列出多個合併原則。 `/config/mergePolicies` 可包含多個參數，以&amp;符號分隔。 在沒有參數的情況下呼叫此端點將會擷取組織所有可用的合併原則。
@@ -235,12 +331,12 @@ GET /config/mergePolicies?{QUERY_PARAMS}
 | 參數 | 說明 |
 |---|---|
 | `default` | 一個布爾值，它根據合併策略是否是模式類的預設策略來過濾結果。 |
-| `limit` | 指定頁面大小限制，以控制包含在頁面中的結果數。 預設值：20 |
+| `limit` | 指定頁面大小限制，以控制包含在頁面中的結果數。 預設值： 20 |
 | `orderBy` | 指定按照欄位對結果進行排序，或 `orderBy=name` 按名 `orderBy=+name` 稱按升序排序，或 `orderBy=-name`按降序排序。 省略此值會導致預設的遞增 `name` 順序排序。 |
 | `schema.name` | 要為其檢索可用合併策略的方案的名稱。 |
 | `identityGraph.type` | 依身分圖形類型篩選結果。 可能的值包括「無」和「pdg」（專用圖形）。 |
 | `attributeMerge.type` | 依使用的屬性合併類型篩選結果。 可能的值包括&quot;timestampOrdered&quot;和&quot;dataSetPrecense&quot;。 |
-| `start` | 頁面偏移——指定要擷取資料的起始ID。 預設值：0 |
+| `start` | 頁面偏移——指定要擷取資料的起始ID。 預設值： 0 |
 | `version` | 如果您想要使用特定版本的合併原則，請指定此選項。 依預設，會使用最新版本。 |
 
 有關、和的 `schema.name`詳 `identityGraph.type`細信 `attributeMerge.type`息，請參閱本指 [南前面提供的合併策略部分](#components-of-merge-policies) 。
@@ -375,7 +471,7 @@ curl -X POST \
 | 屬性 | 說明 |
 |---|---|
 | `name` | 可在清單檢視中識別合併原則的人性化名稱。 |
-| `identityGraph.type` | 要從中獲取相關身份的身份圖類型。 可能的值：「無」或「pdg」（私用圖形）。 |
+| `identityGraph.type` | 要從中獲取相關身份的身份圖類型。 可能的值： 「無」或「pdg」（私用圖形）。 |
 | `attributeMerge` | 在發生資料衝突時，設定描述檔屬性值優先順序的方式。 |
 | `schema` | 與合併策略關聯的XDM模式類。 |
 | `default` | 指定此合併策略是否為方案的預設策略。 |
@@ -458,7 +554,7 @@ curl -X PATCH \
 | 屬性 | 說明 |
 |---|---|
 | `op` | 指定要執行的操作。 其他PATCH作業的範例可在 [JSON修補程式檔案中找到](http://jsonpatch.com) |
-| `path` | 要更新的欄位路徑。 接受的值為：&quot;/name&quot;、&quot;/identityGraph.type&quot;、&quot;/attributeMerge.type&quot;、&quot;/schema.name&quot;、&quot;/version&quot;、&quot;/default&quot; |
+| `path` | 要更新的欄位路徑。 接受的值為： &quot;/name&quot;、&quot;/identityGraph.type&quot;、&quot;/attributeMerge.type&quot;、&quot;/schema.name&quot;、&quot;/version&quot;、&quot;/default&quot; |
 | `value` | 將指定欄位設定為的值。 |
 
 有關詳細信 [息，請參閱合併策略](#components-of-merge-policies) 部分的元件。
