@@ -4,7 +4,7 @@ solution: Adobe Experience Platform
 title: 即時客戶個人檔案API開發人員指南
 topic: guide
 translation-type: tm+mt
-source-git-commit: 4bab89c981f7e30b28477068625d1b6f534fa838
+source-git-commit: 824e9eda41488efc362a6105c552f522185c046d
 workflow-type: tm+mt
 source-wordcount: '2057'
 ht-degree: 1%
@@ -99,7 +99,7 @@ Adobe Experience Platform可讓您從多個來源匯整資料並加以匯整，�
 其中 `{IDENTITY_GRAPH_TYPE}` 是下列其中一項：
 
 * **「無」:** 不執行身份聯繫。
-* **「pdg」:** 根據您的私人身分圖表執行身分識別接合。
+* **「pdg」:** 根據您的個人身分圖表執行身分識別接合。
 
 **範例`identityGraph`**
 
@@ -264,55 +264,59 @@ curl -X POST \
 成功的回應會傳回HTTP狀態207（多重狀態），以及POST請求中提供其ID的合併原則詳細資訊。
 
 ```json
-{
-    "id": "0bf16e61-90e9-4204-b8fa-ad250360957b",
-    "name": "Profile Default Merge Policy",
-    "imsOrgId": "{IMS_ORG}",
-    "sandbox": {
-        "sandboxId": "ff0f6870-c46d-11e9-8ca3-036939a64204",
-        "sandboxName": "prod",
-        "type": "production",
-        "default": true
-    },
-    "schema": {
-        "name": "_xdm.context.profile"
-    },
-    "version": 1,
-    "identityGraph": {
-        "type": "none"
-    },
-    "attributeMerge": {
-        "type": "timestampOrdered"
-    },
-    "default": true,
-    "updateEpoch": 1552086578
-},
-{
-    "id": "42d4a596-b1c6-46c0-994e-ca5ef1f85130",
-    "name": "Dataset Precedence Merge Policy",
-    "imsOrgId": "{IMS_ORG}",
-    "sandbox": {
-        "sandboxId": "ff0f6870-c46d-11e9-8ca3-036939a64204",
-        "sandboxName": "prod",
-        "type": "production",
-        "default": true
-    },
-    "schema": {
-        "name": "_xdm.context.profile"
-    },
-    "version": 1,
-    "identityGraph": {
-        "type": "pdg"
-    },
-    "attributeMerge": {
-        "type": "dataSetPrecedence",
-        "order": [
-            "5b76f86b85d0e00000be5c8b",
-            "5b76f8d787a6af01e2ceda18"
-        ]
-    },
-    "default": false,
-    "updateEpoch": 1576099719
+{ 
+    "results": { 
+        "0bf16e61-90e9-4204-b8fa-ad250360957b": {
+            "id": "0bf16e61-90e9-4204-b8fa-ad250360957b",
+            "name": "Profile Default Merge Policy",
+            "imsOrgId": "{IMS_ORG}",
+            "sandbox": {
+                "sandboxId": "ff0f6870-c46d-11e9-8ca3-036939a64204",
+                "sandboxName": "prod",
+                "type": "production",
+                "default": true
+            },
+            "schema": {
+                "name": "_xdm.context.profile"
+            },
+            "version": 1,
+            "identityGraph": {
+                "type": "none"
+            },
+            "attributeMerge": {
+                "type": "timestampOrdered"
+            },
+            "default": true,
+            "updateEpoch": 1552086578
+        },
+        "42d4a596-b1c6-46c0-994e-ca5ef1f85130": {
+            "id": "42d4a596-b1c6-46c0-994e-ca5ef1f85130",
+            "name": "Dataset Precedence Merge Policy",
+            "imsOrgId": "{IMS_ORG}",
+            "sandbox": {
+                "sandboxId": "ff0f6870-c46d-11e9-8ca3-036939a64204",
+                "sandboxName": "prod",
+                "type": "production",
+                "default": true
+            },
+            "schema": {
+                "name": "_xdm.context.profile"
+            },
+            "version": 1,
+            "identityGraph": {
+                "type": "pdg"
+            },
+            "attributeMerge": {
+                "type": "dataSetPrecedence",
+                "order": [
+                    "5b76f86b85d0e00000be5c8b",
+                    "5b76f8d787a6af01e2ceda18"
+                ]
+            },
+            "default": false,
+            "updateEpoch": 1576099719
+        }
+    }
 }
 ```
 
