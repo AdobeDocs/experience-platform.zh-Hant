@@ -28,6 +28,7 @@ ht-degree: 0%
    - 雲端儲存空間 {#cloud-storage}
       - [Azure Data Lake Storage Gen2連接器](connectors/cloud-storage/adls-gen2.md)
       - [Azure Blob和Amazon S3連接器](connectors/cloud-storage/blob-s3.md)
+      - [Azure File Storage connector](connectors/cloud-storage/azure-file-storage.md)
       - [FTP和SFTP連接器](connectors/cloud-storage/ftp-sftp.md)
       - [Google雲端儲存空間連接器](connectors/cloud-storage/google-cloud-storage.md)
    - CRM {#crm}
@@ -65,6 +66,7 @@ ht-degree: 0%
          - [Amazon S3連接器](tutorials/api/create/cloud-storage/s3.md)
          - [Azure Blob連接器](tutorials/api/create/cloud-storage/blob.md)
          - [Azure Data Lake Storage Gen2連接器](tutorials/api/create/cloud-storage/adls-gen2.md)
+         - [Azure File Storage connector](tutorials/api/create/cloud-storage/azure-file-storage.md)
          - [Google雲端儲存空間連接器](tutorials/api/create/cloud-storage/google.md)
          - [SFTP連接器](tutorials/api/create/cloud-storage/sftp.md)
       - CRM {#crm}
@@ -126,6 +128,7 @@ ht-degree: 0%
       - 雲端儲存空間 {#cloud-storage}
          - [Azure Data Lake Storage Gen2連接器](tutorials/ui/create/cloud-storage/adls-gen2.md)
          - [Azure Blob和Amazon S3連接器](tutorials/ui/create/cloud-storage/blob-s3.md)
+         - [Azure File Storage connector](tutorials/ui/create/cloud-storage/azure-file-storage.md)
          - [FTP和SFTP連接器](tutorials/ui/create/cloud-storage/ftp-sftp.md)
          - [Google雲端儲存空間連接器](tutorials/ui/create/cloud-storage/google-cloud-storage.md)
       - CRM {#crm}
