@@ -4,7 +4,10 @@ solution: Experience Platform
 title: 透過來源連接器和API收集雲端儲存空間資料
 topic: overview
 translation-type: tm+mt
-source-git-commit: 4309d668acf43a237648b405973ebd0701b6f977
+source-git-commit: 1eb6883ec9b78e5d4398bb762bba05a61c0f8308
+workflow-type: tm+mt
+source-wordcount: '1489'
+ht-degree: 1%
 
 ---
 
@@ -19,12 +22,12 @@ source-git-commit: 4309d668acf43a237648b405973ebd0701b6f977
 
 本教學課程也要求您對Adobe Experience Platform的下列元件有正確的認識：
 
-* [體驗資料模型(XDM)系統](../../../../xdm/home.md):Experience Platform組織客戶體驗資料的標準化架構。
-   * [架構構成基礎](../../../../xdm/schema/composition.md):瞭解XDM架構的基本建置區塊，包括架構組合的主要原則和最佳實務。
-   * [架構註冊開發人員指南](../../../../xdm/api/getting-started.md):包含您必須知道的重要資訊，以便成功執行對架構註冊表API的呼叫。 這包括您 `{TENANT_ID}`的「容器」概念，以及提出要求所需的標題（請特別注意「接受」標題及其可能的值）。
-* [目錄服務](../../../../catalog/home.md):目錄是Experience Platform中資料位置和世系的記錄系統。
-* [批次擷取](../../../../ingestion/batch-ingestion/overview.md):批次擷取API可讓您將資料以批次檔案的形式內嵌至Experience Platform。
-* [沙盒](../../../../sandboxes/home.md):Experience Platform提供虛擬沙盒，可將單一Platform實例分割為不同的虛擬環境，以協助開發和發展數位體驗應用程式。
+- [體驗資料模型(XDM)系統](../../../../xdm/home.md): Experience Platform組織客戶體驗資料的標準化架構。
+   - [架構構成基礎](../../../../xdm/schema/composition.md): 瞭解XDM架構的基本建置區塊，包括架構組合的主要原則和最佳實務。
+   - [架構註冊開發人員指南](../../../../xdm/api/getting-started.md): 包含您必須知道的重要資訊，以便成功執行對架構註冊表API的呼叫。 這包括您 `{TENANT_ID}`的「容器」概念，以及提出要求所需的標題（請特別注意「接受」標題及其可能的值）。
+- [目錄服務](../../../../catalog/home.md): 目錄是Experience Platform中資料位置和世系的記錄系統。
+- [批次擷取](../../../../ingestion/batch-ingestion/overview.md): 批次擷取API可讓您將資料以批次檔案的形式內嵌至Experience Platform。
+- [沙盒](../../../../sandboxes/home.md): Experience Platform提供虛擬沙盒，可將單一Platform實例分割為不同的虛擬環境，以協助開發和發展數位體驗應用程式。
 
 以下各節提供您需要知道的其他資訊，以便使用Flow Service API成功連線至雲端儲存空間。
 
@@ -36,17 +39,17 @@ source-git-commit: 4309d668acf43a237648b405973ebd0701b6f977
 
 若要呼叫平台API，您必須先完成驗證教 [學課程](../../../../tutorials/authentication.md)。 完成驗證教學課程後，所有Experience Platform API呼叫中每個必要標題的值都會顯示在下方：
 
-* 授權：生產者 `{ACCESS_TOKEN}`
-* x-api-key: `{API_KEY}`
-* x-gw-ims-org-id: `{IMS_ORG}`
+- 授權： 生產者 `{ACCESS_TOKEN}`
+- x-api-key: `{API_KEY}`
+- x-gw-ims-org-id: `{IMS_ORG}`
 
 Experience Platform中的所有資源（包括屬於Flow Service的資源）都隔離至特定的虛擬沙盒。 所有對平台API的請求都需要一個標題，該標題會指定要在中執行的操作的沙盒名稱：
 
-* x-sandbox-name: `{SANDBOX_NAME}`
+- x-sandbox-name: `{SANDBOX_NAME}`
 
 所有包含裝載(POST、PUT、PATCH)的請求都需要額外的媒體類型標題：
 
-* 內容類型： `application/json`
+- 內容類型： `application/json`
 
 ## 建立臨機XDM類別和架構
 
@@ -456,7 +459,7 @@ curl -X POST \
 }
 ```
 
-## 查找資料流規範 {#specs}
+## 檢索資料流規範 {#specs}
 
 資料流負責從源收集資料，並將其引入平台。 要建立資料流，必須首先獲得負責收集雲儲存資料的資料流規範。
 
@@ -575,10 +578,10 @@ curl -X GET \
 
 收集雲端儲存資料的最後一步是建立資料流。 目前，您已準備好下列必要值：
 
-* [源連接ID](#source)
-* [目標連線ID](#target)
-* [對應ID](#mapping)
-* [資料流規範ID](#specs)
+- [源連接ID](#source)
+- [目標連線ID](#target)
+- [對應ID](#mapping)
+- [資料流規範ID](#specs)
 
 資料流負責調度和收集源中的資料。 您可以通過執行POST請求來建立資料流，同時在裝載中提供先前提到的值。
 
@@ -653,5 +656,21 @@ curl -X POST \
 
 在本教學課程中，您已建立來源連接器，以依計畫從雲端儲存空間收集資料。 現在，下游平台服務（例如即時客戶個人檔案和資料科學工作區）可以使用傳入的資料。 如需詳細資訊，請參閱下列檔案：
 
-* [即時客戶個人檔案總覽](../../../../profile/home.md)
-* [資料科學工作區概觀](../../../../data-science-workspace/home.md)
+- [即時客戶個人檔案總覽](../../../../profile/home.md)
+- [資料科學工作區概觀](../../../../data-science-workspace/home.md)
+
+## 附錄
+
+下節列出不同的雲儲存源連接器及其連接規範。
+
+### 連接規範
+
+| 連接器名稱 | 連接規範 |
+| -------------- | --------------- |
+| Amazon S3(S3) | `ecadc60c-7455-4d87-84dc-2a0e293d997b` |
+| Amazon Kinesis(Kinesis) | `86043421-563b-46ec-8e6c-e23184711bf6` |
+| Azure Blob(Blob) | `4c10e202-c428-4796-9208-5f1f5732b1cf` |
+| Azure Data Lake Storage Gen2(ADLS Gen2) | `0ed90a81-07f4-4586-8190-b40eccef1c5a` |
+| Azure事件集線器(EventHub) | `bf9f5905-92b7-48bf-bf20-455bc6b60a4e` |
+| Google雲端儲存空間 | `32e8f412-cdf7-464c-9885-78184cb113fd` |
+| SFTP | `bf367b0d-3d9b-4060-b67b-0d3d9bd06094` |
