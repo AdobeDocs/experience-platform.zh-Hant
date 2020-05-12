@@ -4,7 +4,10 @@ seo-title: 設定Adobe Experience Platform Web SDK
 description: 瞭解如何設定Experience Platform Web SDK
 seo-description: 瞭解如何設定Experience Platform Web SDK
 translation-type: tm+mt
-source-git-commit: 0cc6e233646134be073d20e2acd1702d345ff35f
+source-git-commit: 767f0e1bfdfcc898313b546c804ba1287f2aec50
+workflow-type: tm+mt
+source-wordcount: '765'
+ht-degree: 12%
 
 ---
 
@@ -13,7 +16,7 @@ source-git-commit: 0cc6e233646134be073d20e2acd1702d345ff35f
 
 >[!IMPORTANT]
 >
->Adobe Experience Platform Web SDK目前為測試版，並非所有使用者都能使用。 說明檔案和功能可能會有所變更。
+>Adobe Experience Platform Web SDK目前為測試版，並非所有使用者都能使用。 文件和功能可能會有所變更。
 
 SDK的設定是使用命令 `configure` 完成。
 
@@ -35,7 +38,7 @@ alloy("configure", {
 
 | **類型** | **必填** | **預設值** |
 | -------- | ------------ | ----------------- |
-| 字串 | 是 | none |
+| 字串 | 是 | nown |
 
 您指派的設定ID，會將SDK連結至適當的帳戶和設定。  在單一頁面中設定多個例項時，您必須為每個例項設 `configId` 定不同的例項。
 
@@ -68,23 +71,15 @@ alloy("configure", {
 
 用於與Adobe服務互動的網域。 只有當您有第一方網域(CNAME)，可代理Adobe Edge基礎架構的請求時，才會使用此功能。
 
-### `errorsEnabled`
-
-| **類型** | **必填** | **預設值** |
-| -------- | ------------ | ----------------- |
-| 布林值 | 無 | `true` |
-
-指示是否應隱藏錯誤。 如執行命 [令中所述](executing-commands.md)，無論Adobe Experience Platform Web SDK是否啟用除錯，未捕獲的 __ 錯誤都會記錄到開發人員主控台。 借由設 `errorsEnabled` 定 `false`為，Adobe Experience Platform Web SDK傳回的承諾永遠不會遭到拒絕，不過，如果在Adobe Experience Platform Web SDK中啟用記錄，錯誤仍會記錄至主控台。
-
 ### `orgId`
 
 | **類型** | **必填** | **預設值** |
 | -------- | ------------ | ----------------- |
-| 字串 | 是 | none |
+| 字串 | 是 | nown |
 
 您指派的Experience Cloud組織ID。  在頁面內設定多個例項時，您必須為每個例項設 `orgId` 定不同的例項。
 
-## 資料收集
+## 資料彙集
 
 ### `clickCollectionEnabled`
 
@@ -97,14 +92,14 @@ alloy("configure", {
 | **屬性** |  |
 | ------------ | ----------------------------------- |
 | 連結名稱 | 由連結內容決定的名稱 |
-| 連結 URL | 標準化URL |
+| 連結URL | 標準化URL |
 | 連結類型 | 設為下載、退出或其他 |
 
 ### `onBeforeEventSend`
 
 | **類型** | **必填** | **預設值** |
 | -------- | ------------ | ----------------- |
-| 函數 | 無 | () => 未定義 |
+| 函數 | 無 | ()=>未定義 |
 
 設定此設定，以設定在每個事件傳送前呼叫的回呼。  包含該欄位的對 `xdm` 像將發送到回調。  修改xdm對象以更改所發送的內容。  在回呼中，物 `xdm` 件已在event命令中傳遞資料，並自動收集資訊。  有關此回呼的時間安排和示例的詳細資訊，請參 [閱全局修改事件](tracking-events.md#modifying-events-globally)。
 
@@ -124,7 +119,7 @@ alloy("configure", {
 
 | **類型** | **必填** | **預設值** |
 | -------- | ------------ | ----------------- |
-| 字串 | 無 | none |
+| 字串 | 無 | nown |
 
 用來建立CSS樣式定義，當從伺服器載入個人化內容時，會隱藏網頁的內容區域。 如果未提供此選項，SDK在載入個人化內容時不會嘗試隱藏任何內容區域，可能會導致「閃爍」。
 
@@ -158,7 +153,7 @@ alloy("configure", {
 
 | **類型** | **必填** | **預設值** |
 | -------- | ------------ | ----------------- |
-| 數字 | 無 | none |
+| 數字 | 無 | nown |
 
 指定引發哪個ID同步的容器ID。 這是可從顧問處獲得的非負整數。
 
@@ -176,4 +171,4 @@ alloy("configure", {
 | -------- | ------------ | ----------------- |
 | 布林值 | 無 | true |
 
-啟用Adobe協力廠商Cookie的設定。 SDK可將訪客ID保留在協力廠商內容中，以便讓相同的訪客ID可跨網站使用。 如果您有多個網站或想要與合作夥伴共用資料，這項功能會很有用；但是，有時出於隱私權原因並不需要這麼做。
+啟用Adobe協力廠商Cookie的設定。 SDK可將訪客ID保留在協力廠商內容中，以便讓相同的訪客ID可跨網站使用。 如果您有多個網站或想要與合作夥伴共用資料，這項功能會很有用； 但是，有時出於隱私權原因並不需要這麼做。
