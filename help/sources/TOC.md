@@ -3,9 +3,9 @@ product: experience-platform
 audience: user
 user-guide-title: Adobe Experience Platform來源連接器說明
 translation-type: tm+mt
-source-git-commit: e046054b871026c32858e06c022ea86f53fbafd5
+source-git-commit: 1eb6883ec9b78e5d4398bb762bba05a61c0f8308
 workflow-type: tm+mt
-source-wordcount: '522'
+source-wordcount: '551'
 ht-degree: 0%
 
 ---
@@ -26,9 +26,11 @@ ht-degree: 0%
    - 廣告 {#advertising}
       - [Google Ads連接器](connectors/advertising/ads.md)
    - 雲端儲存空間 {#cloud-storage}
+      - [Amazon Kinesis連接器](connectors/cloud-storage/kinesis.md)
       - [Azure Data Lake Storage Gen2連接器](connectors/cloud-storage/adls-gen2.md)
       - [Azure Blob和Amazon S3連接器](connectors/cloud-storage/blob-s3.md)
-      - [Azure File Storage connector](connectors/cloud-storage/azure-file-storage.md)
+      - [Azure事件集線器連接器](connectors/cloud-storage/eventhub.md)
+      - [Azure檔案儲存連接器](connectors/cloud-storage/azure-file-storage.md)
       - [FTP和SFTP連接器](connectors/cloud-storage/ftp-sftp.md)
       - [Google雲端儲存空間連接器](connectors/cloud-storage/google-cloud-storage.md)
    - CRM {#crm}
@@ -66,7 +68,7 @@ ht-degree: 0%
          - [Amazon S3連接器](tutorials/api/create/cloud-storage/s3.md)
          - [Azure Blob連接器](tutorials/api/create/cloud-storage/blob.md)
          - [Azure Data Lake Storage Gen2連接器](tutorials/api/create/cloud-storage/adls-gen2.md)
-         - [Azure File Storage connector](tutorials/api/create/cloud-storage/azure-file-storage.md)
+         - [Azure檔案儲存連接器](tutorials/api/create/cloud-storage/azure-file-storage.md)
          - [Google雲端儲存空間連接器](tutorials/api/create/cloud-storage/google.md)
          - [SFTP連接器](tutorials/api/create/cloud-storage/sftp.md)
       - CRM {#crm}
@@ -128,7 +130,7 @@ ht-degree: 0%
       - 雲端儲存空間 {#cloud-storage}
          - [Azure Data Lake Storage Gen2連接器](tutorials/ui/create/cloud-storage/adls-gen2.md)
          - [Azure Blob和Amazon S3連接器](tutorials/ui/create/cloud-storage/blob-s3.md)
-         - [Azure File Storage connector](tutorials/ui/create/cloud-storage/azure-file-storage.md)
+         - [Azure檔案儲存連接器](tutorials/ui/create/cloud-storage/azure-file-storage.md)
          - [FTP和SFTP連接器](tutorials/ui/create/cloud-storage/ftp-sftp.md)
          - [Google雲端儲存空間連接器](tutorials/ui/create/cloud-storage/google-cloud-storage.md)
       - CRM {#crm}
@@ -159,7 +161,8 @@ ht-degree: 0%
          - [通用OData連接器](tutorials/ui/create/protocols/odata.md)
    - 配置資料流 {#dataflow}
       - [為廣告連接器配置資料流](tutorials/ui/dataflow/advertising.md)
-      - [為雲儲存連接器配置資料流](tutorials/ui/dataflow/cloud-storage.md)
+      - [為批處理雲儲存連接器配置資料流](tutorials/ui/dataflow/batch/cloud-storage.md)
+      - [為流雲儲存連接器配置資料流](tutorials/ui/dataflow/streaming/cloud-storage.md)
       - [為資料庫連接器配置資料流](tutorials/ui/dataflow/databases.md)
       - [為CRM連接器配置資料流](tutorials/ui/dataflow/crm.md)
       - [為客戶成功連接器配置資料流](tutorials/ui/dataflow/customer-success.md)
