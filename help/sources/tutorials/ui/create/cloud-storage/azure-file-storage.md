@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 在UI中建立Azure檔案儲存來源連接器
 topic: overview
 translation-type: tm+mt
-source-git-commit: a5925c76ced3384e5eb3fc269dd8ffdbb2b820d2
+source-git-commit: aa1c6cb0f5702cfe444cb2046e4460e404f13e57
 workflow-type: tm+mt
 source-wordcount: '503'
 ht-degree: 0%
@@ -25,7 +25,7 @@ Adobe Experience Platform中的來源連接器可讓您依計畫吸收外部來�
    - [架構編輯器教程](../../../../../xdm/tutorials/create-schema-ui.md): 瞭解如何使用架構編輯器UI建立自訂架構。
 - [即時客戶個人檔案](../../../../../profile/home.md): 根據來自多個來源的匯整資料，提供統一、即時的消費者個人檔案。
 
-如果您已經有檔案儲存連線，則可略過本檔案的其餘部分，並繼續有關設定資料 [流的教學課程](../../dataflow/cloud-storage.md)。
+如果您已經有檔案儲存連線，則可略過本檔案的其餘部分，並繼續有關設定資料 [流的教學課程](../../dataflow/batch/cloud-storage.md)。
 
 ### 收集必要的認證
 
@@ -67,4 +67,4 @@ Adobe Experience Platform中的來源連接器可讓您依計畫吸收外部來�
 
 ## 後續步驟
 
-遵循本教學課程，您已建立與Azure檔案儲存帳戶的連線。 您現在可以繼續下一個教學課程，並 [設定資料流，將雲端儲存空間的資料匯入平台](../../dataflow/cloud-storage.md)。
+遵循本教學課程，您已建立與Azure檔案儲存帳戶的連線。 您現在可以繼續下一個教學課程，並 [設定資料流，將雲端儲存空間的資料匯入平台](../../dataflow/batch/cloud-storage.md)。
