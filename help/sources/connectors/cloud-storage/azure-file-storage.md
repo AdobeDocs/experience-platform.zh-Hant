@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Azure檔案儲存連接器
 topic: overview
 translation-type: tm+mt
-source-git-commit: a5925c76ced3384e5eb3fc269dd8ffdbb2b820d2
+source-git-commit: 70c8f4657fcc54e87b91f7b263b7da9e1e3d9677
 workflow-type: tm+mt
 source-wordcount: '176'
 ht-degree: 0%
@@ -29,4 +29,4 @@ Adobe Experience Platform為AWS、Google Cloud Platform和Azure等雲端供應�
 ## 使用UI將Azure檔案儲存空間連接至平台
 
 - [在UI中建立Azure檔案儲存來源連接器](../../tutorials/ui/create/cloud-storage/azure-file-storage.md)
-- [在UI中為雲端儲存連接器設定資料流](../../tutorials/ui/dataflow/cloud-storage.md)
+- [在UI中為雲端儲存連接器設定資料流](../../tutorials/ui/dataflow/batch/cloud-storage.md)
