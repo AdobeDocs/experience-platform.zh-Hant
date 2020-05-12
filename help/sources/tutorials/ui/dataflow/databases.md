@@ -4,7 +4,10 @@ solution: Experience Platform
 title: 在UI中為資料庫連接器配置資料流
 topic: overview
 translation-type: tm+mt
-source-git-commit: c55e48a90d57e538f3d096b31eae639a1cca882c
+source-git-commit: 415b59fc3fa20c09372549e92571c1b41006e540
+workflow-type: tm+mt
+source-wordcount: '1049'
+ht-degree: 0%
 
 ---
 
@@ -17,23 +20,23 @@ source-git-commit: c55e48a90d57e538f3d096b31eae639a1cca882c
 
 本教學課程需要對Adobe Experience Platform的下列元件有正確的認識：
 
-- [體驗資料模型(XDM)系統](../../../../xdm/home.md):Experience Platform組織客戶體驗資料的標準化架構。
-   - [架構構成基礎](../../../../xdm/schema/composition.md):瞭解XDM架構的基本建置區塊，包括架構組合的主要原則和最佳實務。
-   - [架構編輯器教程](../../../../xdm/tutorials/create-schema-ui.md):瞭解如何使用架構編輯器UI建立自訂架構。
-- [即時客戶個人檔案](../../../../profile/home.md):根據來自多個來源的匯整資料，提供統一、即時的消費者個人檔案。
+- [體驗資料模型(XDM)系統](../../../../xdm/home.md): Experience Platform組織客戶體驗資料的標準化架構。
+   - [架構構成基礎](../../../../xdm/schema/composition.md): 瞭解XDM架構的基本建置區塊，包括架構組合的主要原則和最佳實務。
+   - [架構編輯器教程](../../../../xdm/tutorials/create-schema-ui.md): 瞭解如何使用架構編輯器UI建立自訂架構。
+- [即時客戶個人檔案](../../../../profile/home.md): 根據來自多個來源的匯整資料，提供統一、即時的消費者個人檔案。
 
 此外，本教學課程要求您已建立資料庫連接器。 有關在UI中建立不同資料庫連接器的教學課程清單，請參閱來源連 [接器概觀](../../../home.md)。
 
 ## 選擇資料
 
-建立資料庫連接器後，將出 *現「選擇資料* 」步驟，為您提供一個交互介面以瀏覽資料庫層次。
+建立資料庫連接器後，將出 *[!UICONTROL 現「選擇資料]* 」步驟，為您提供一個交互介面以瀏覽資料庫層次。
 
 - 介面的左半部是瀏覽器，顯示您帳戶的資料庫清單。
 - 介面的右半部分可讓您預覽最多100列資料。
 
-選擇要使用的資料庫，然後按一下「下 **一步**」。
+選擇要使用的資料庫，然後按一下「下 **[!UICONTROL 一步]**」。
 
-![](../../../images/tutorials/dataflow/databases/select-data-next.png)
+![](../../../images/tutorials/dataflow/databases/add-data.png)
 
 ## 將資料欄位對應至XDM架構
 
@@ -43,33 +46,35 @@ source-git-commit: c55e48a90d57e538f3d096b31eae639a1cca882c
 
 ### 使用現有資料集
 
-若要將資料內嵌至現有資料集，請選取「使 **用現有資料集**」，然後按一下資料集圖示。
+若要將資料內嵌至現有資料集，請選取「 **[!UICONTROL 現有資料集]**」，然後按一下資料集圖示。
 
-![](../../../images/tutorials/dataflow/databases/use-existing-dataset.png)
+![](../../../images/tutorials/dataflow/databases/existing-dataset.png)
 
-將出 _現「選擇資料集_ 」對話框。 尋找您要使用的資料集，選取它，然後按一下「繼 **續**」。
+將出 *[!UICONTROL 現「選擇資料集]* 」對話框。 尋找您要使用的資料集，選取它，然後按一下「繼 **[!UICONTROL 續]**」。
 
-![](../../../images/tutorials/dataflow/databases/select-dataset.png)
+![](../../../images/tutorials/dataflow/databases/select-existing-dataset.png)
 
 ### 使用新資料集
 
-若要將資料新增至新資料集，請選取「 **建立新資料集** 」，並在提供的欄位中輸入資料集的名稱和說明。 接著，按一下結構圖示。
+若要將資料新增至新資料集，請選取「 **[!UICONTROL 新資料集]** 」，並在提供的欄位中輸入資料集的名稱和說明。
 
-![](../../../images/tutorials/dataflow/databases/use-new-dataset.png)
+通過在「選擇方案」搜索欄中鍵入方案名稱，可以附加 **[!UICONTROL 方案欄位]** 。 您也可以選擇下拉式圖示，查看現有結構的清單。 或者，您也可以選擇「 **[!UICONTROL 進階搜尋]** 」來顯示現有結構的畫面，包括其各自的詳細資料。
 
-將出 _現「選擇模式_ 」對話框。 選擇要應用於新資料集的模式，然後按一下「完 **成」**。
+![](../../../images/tutorials/dataflow/databases/new-dataset.png)
 
-![](../../../images/tutorials/dataflow/databases/select-schema.png)
+出現*[!UICONTROL Select schema] （選擇架構）對話框。 選擇要應用於新資料集的模式，然後按一下「完 **[!UICONTROL 成」]**。
+
+![](../../../images/tutorials/dataflow/databases/select-existing-schema.png)
 
 您可以根據需要選擇直接映射欄位，或使用映射器函式轉換源資料以導出計算值或計算值。 有關資料映射和映射器函式的詳細資訊，請參閱將CSV資料映 [射到XDM模式欄位的教程](../../../../ingestion/tutorials/map-a-csv-file.md)。
 
-映射源資料後，按一下「下 **一步**」。
+映射源資料後，按一下「下 **[!UICONTROL 一步]**」。
 
-![](../../../images/tutorials/dataflow/databases/mapping-data.png)
+![](../../../images/tutorials/dataflow/databases/mapping.png)
 
 ## 排程擷取執行
 
-此時 *會顯示「排程* 」步驟，允許您配置提取計畫，以使用配置的映射自動提取選定的源資料。 下表概述了用於計畫的不同可配置欄位：
+此時 *[!UICONTROL 會顯示「排程]* 」步驟，允許您配置提取計畫，以使用配置的映射自動提取選定的源資料。 下表概述了用於計畫的不同可配置欄位：
 
 | 欄位 | 說明 |
 | --- | --- |
@@ -77,48 +82,35 @@ source-git-commit: c55e48a90d57e538f3d096b31eae639a1cca882c
 | 間隔 | 一個整數，用於設定所選頻率的間隔。 |
 | 開始時間 | UTC時間戳記，將會發生第一次擷取。 |
 | 回填 | 一個布爾值，可決定最初收錄的資料。 如果 *啟用回填* ，則指定路徑中的所有目前檔案將在第一次排程擷取期間被擷取。 如果 *停用* 「回填」 *，則只會收錄在首次擷取執行和開始時間之間載入的* 檔案。 在開始時間之前載 *入的檔案* ，將不會收錄。 |
+| 增量列 | 具有類型、日期或時間的一組已篩選源架構欄位的選項。 此欄位用於區分新資料和現有資料。 增量資料將根據選取欄的時間戳記進行擷取。 |
 
-資料流設計為在計畫基礎上自動收錄資料。 如果您只想在此工作流程中收錄一次，可以將 **Frequency** （頻率）設為「Day」（日），並套用很大的 **Interval**（例如10000或類似）。
+資料流設計為在計畫基礎上自動收錄資料。 如果您只想在此工作流程中收錄一次，可以將 **[!UICONTROL Frequency]** （頻率）設為「Day」（日），並套用很大的 **[!UICONTROL Interval]**（例如10000或類似）。
 
-提供計畫值，然後按一下「下 **一步**」。
+為調度提供值並選擇「下 **[!UICONTROL 一步]**」。
 
-![](../../../images/tutorials/dataflow/databases/scheduling.png)
+![](../../../images/tutorials/dataflow/databases/schedule.png)
 
 ## 命名資料流
 
-出現 *「名稱流* 」步驟，您必須在其中為資料流提供名稱和可選說明。 完成後，按一下「下一步」。」
+出現 *[!UICONTROL 資料流詳細資訊]* ，您必須在其中為資料流提供名稱和可選說明。 完成後 **[!UICONTROL 選擇]** 「下一步」。
 
-![](../../../images/tutorials/dataflow/databases/name-flow.png)
+![](../../../images/tutorials/dataflow/databases/dataflow-detail.png)
 
 ## 查看資料流
 
-此時 *會出現* 「查看」步驟，允許您在建立新資料流之前對其進行查看。 詳細資訊會分組在下列類別中：
+此時 *[!UICONTROL 會出現]* 「查看」步驟，允許您在建立新資料流之前對其進行查看。 詳細資訊會分組在下列類別中：
 
-- *連接詳細資訊*:顯示源檔案的類型、所選源檔案的相關路徑，以及該源檔案中的列數。
-- *對應詳細資訊*:顯示源資料被吸收到的資料集，包括資料集所附的模式。
-- *排程詳細資訊*:顯示接收調度的活動期間、頻率和間隔。
+- *連接*: 顯示源檔案的類型、所選源檔案的相關路徑，以及該源檔案中的列數。
+- *指派資料集與地圖欄位*: 顯示源資料被吸收到的資料集，包括資料集所附的模式。
+- *排程*: 顯示接收調度的活動期間、頻率和間隔。
 
-複查資料流後，按一下 **完成** ，並為建立資料流留出一些時間。
+複查資料流後，按一下 **[!UICONTROL 完成]** ，並為建立資料流留出一些時間。
 
 ![](../../../images/tutorials/dataflow/databases/review.png)
 
 ## 監控資料流
 
-建立資料流後，您可以監視通過其獲取的資料。 按照以下步驟訪問資料流的資料集監視器。
-
-在「來 _源_ 」工作區中，按一 **下「瀏覽** 」標籤以列出基本連線。 在顯示的清單中，通過按一下要監視的資料流的名稱，查找包含該資料流的連接。
-
-![](../../../images/tutorials/dataflow/databases/browse-base-connectors.png)
-
-此時將 *顯示「源* 」活動螢幕。 在此處，按一下要監視其活動的資料集的名稱。
-
-![](../../../images/tutorials/dataflow/databases/select-dataflow-dataset.png)
-
-此時會 *顯示「資料集* 」活動畫面。 此頁面以圖形形式顯示消費訊息的比率。
-
-![](../../../images/tutorials/dataflow/databases/dataset-activity.png)
-
-有關監視資料集和提取的詳細資訊，請參閱有關監視流資料流 [的教程](../../../../ingestion/quality/monitor-data-flows.md)。
+建立資料流後，您可以監視通過其獲取的資料。 有關如何監視資料流的詳細資訊，請參見有關帳戶和數 [據流的教程](../monitor.md)。
 
 ## 後續步驟
 
@@ -135,13 +127,13 @@ source-git-commit: c55e48a90d57e538f3d096b31eae639a1cca882c
 
 建立資料流時，它會立即變為活動狀態，並根據給定的時間表收集資料。 您可以隨時按照以下說明禁用活動資料流。
 
-在「來源 _」工作_ 區中，按一下「 **瀏覽** 」標籤。 接下來，按一下與要禁用的資料流關聯的基本連接的名稱。
+在Sources工 *[!UICONTROL 作區]* ，選擇 **[!UICONTROL Dataflows]** 標籤。 接下來，選擇要禁用的資料流。
 
-![](../../../images/tutorials/dataflow/databases/browse-base-connectors.png)
+![](../../../images/tutorials/dataflow/databases/list-of-dataflows.png)
 
-此時將 _顯示「源_ 」活動頁。 從清單中選擇活動資料流，以在螢幕右側開啟其 *Properties* （屬性）列，該列包含 **** Enabled（啟用）切換按鈕。 按一下切換以禁用資料流。 在禁用資料流後，可以使用相同的切換來重新啟用資料流。
+「 *屬性* 」欄會顯示在畫面的右側，包括「啟用 **** 」切換按鈕。 選擇切換以禁用資料流。 在禁用資料流後，可以使用相同的切換來重新啟用資料流。
 
-![](../../../images/tutorials/dataflow/databases/toggle-enabled.png)
+![](../../../images/tutorials/dataflow/databases/disable.png)
 
 ### 啟用描述檔填入的傳入資料
 
