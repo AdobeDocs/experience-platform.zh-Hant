@@ -4,7 +4,10 @@ solution: Experience Platform
 title: 使用Flow Service API建立SFTP連接器
 topic: overview
 translation-type: tm+mt
-source-git-commit: a038abcdc411b638f41b94dea0140518c12f5600
+source-git-commit: 7ffe560f455973da3a37ad102fbb8cc5969d5043
+workflow-type: tm+mt
+source-wordcount: '550'
+ht-degree: 2%
 
 ---
 
@@ -21,8 +24,8 @@ Flow Service用於收集和集中Adobe Experience Platform內不同來源的客�
 
 本指南需要有效瞭解Adobe Experience Platform的下列元件：
 
-* [來源](../../../../home.md):Experience Platform可讓您從各種來源擷取資料，同時讓您能夠使用平台服務來建構、標示和增強傳入資料。
-* [沙盒](../../../../../sandboxes/home.md):Experience Platform提供虛擬沙盒，可將單一Platform實例分割為不同的虛擬環境，以協助開發和發展數位體驗應用程式。
+* [來源](../../../../home.md): Experience Platform可讓您從各種來源擷取資料，同時讓您能夠使用平台服務來建構、標示和增強傳入資料。
+* [沙盒](../../../../../sandboxes/home.md): Experience Platform提供虛擬沙盒，可將單一Platform實例分割為不同的虛擬環境，以協助開發和發展數位體驗應用程式。
 
 以下各節提供您需要知道的其他資訊，以便使用Flow Service API成功連線至SFTP伺服器。
 
@@ -44,7 +47,7 @@ Flow Service用於收集和集中Adobe Experience Platform內不同來源的客�
 
 若要呼叫平台API，您必須先完成驗證教 [學課程](../../../../../tutorials/authentication.md)。 完成驗證教學課程後，所有Experience Platform API呼叫中每個必要標題的值都會顯示在下方：
 
-* 授權：生產者 `{ACCESS_TOKEN}`
+* 授權： 生產者 `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
 * x-gw-ims-org-id: `{IMS_ORG}`
 
@@ -56,84 +59,9 @@ Experience Platform中的所有資源（包括屬於流服務的資源）都會�
 
 * 內容類型： `application/json`
 
-## 查找連接規格
+## 建立連線
 
-若要建立SFTP連線，Flow Service中必須有一組SFTP連線規格。 將平台連接至SFTP的第一步是擷取這些規格。
-
-**API格式**
-
-每個可用源都有其唯一的連接規範集，用於描述連接器屬性（如驗證要求）。 您可以執行GET請求並使用查詢參數來查找SFTP的連接規範。
-
-傳送不含查詢參數的GET請求時，會傳回所有可用來源的連線規格。 您可以包含查詢， `property=name=="sftp"` 以取得SFTP的特定資訊。
-
-```http
-GET /connectionSpecs
-GET /connectionSpecs?property=name=="sftp"
-```
-
-**請求**
-
-下列請求會擷取SFTP伺服器的連線規格。
-
-```shell
-curl -X GET \
-    'https://platform.adobe.io/data/foundation/flowservice/connectionSpecs?property=name=="sftp"' \
-    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-    -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
-    -H 'x-sandbox-name: {SANDBOX_NAME}'
-```
-
-**回應**
-
-成功的響應返回SFTP伺服器的連接規範，包括其唯一標識符(`id`)。 在下個步驟中需要此ID才能建立基本連線。
-
-```json
-{
-    "items": [
-        {
-            "id": "b7bf2577-4520-42c9-bae9-cad01560f7bc",
-            "name": "sftp",
-            "providerId": "0ed90a81-07f4-4586-8190-b40eccef1c5a",
-            "version": "1.0",
-            "authSpec": [
-                {
-                    "name": "Basic Authentication for sftp",
-                    "spec": {
-                        "$schema": "http://json-schema.org/draft-07/schema#",
-                        "type": "object",
-                        "description": "defines auth params required for connecting to sftp",
-                        "properties": {
-                            "host": {
-                                "type": "string",
-                                "description": "Specify the name or IP address of the SFTP server."
-                            },
-                            "userName": {
-                                "type": "string",
-                                "description": "Specify the user who has access to the SFTP server."
-                            },
-                            "password": {
-                                "type": "string",
-                                "description": "Specify the password for the user (userName).",
-                                "format": "password"
-                            }
-                        },
-                        "required": [
-                            "host",
-                            "userName",
-                            "password"
-                        ]
-                    }
-                }
-            ]
-        }
-    ]
-}
-```
-
-## 建立基本連接
-
-基本連接指定源，並包含該源的憑據。 每個SFTP帳戶只需要一個基本連線，因為它可用來建立多個來源連接器，以匯入不同的資料。
+連接指定源，並包含該源的憑據。 每個SFTP帳戶只需要一個連線，因為它可用來建立多個來源連接器以匯入不同的資料。
 
 **API格式**
 
@@ -171,11 +99,11 @@ curl -X POST \
 | `auth.params.host` | SFTP伺服器的主機名稱。 |
 | `auth.params.username` | 與您的SFTP伺服器相關聯的使用者名稱。 |
 | `auth.params.password` | 與您的SFTP伺服器相關聯的密碼。 |
-| `connectionSpec.id` | 在上一步 `id` 中擷取的SFTP伺服器連線規格。 |
+| `connectionSpec.id` | STFP伺服器連接規範ID: `b7bf2577-4520-42c9-bae9-cad01560f7bc` |
 
 **回應**
 
-成功的響應返回新建基本連`id`接的唯一標識符()。 在下一個教學課程中，瀏覽您的SFTP伺服器時需要此ID。
+成功的響應返回新建立的連`id`接的唯一標識符()。 在下一個教學課程中，瀏覽您的SFTP伺服器時需要此ID。
 
 ```json
 {
