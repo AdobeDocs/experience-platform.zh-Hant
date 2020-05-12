@@ -4,7 +4,10 @@ seo-title: 執行Adobe Experience Platform Web SDK命令
 description: 瞭解如何執行Experience Platform Web SDK命令
 seo-description: 瞭解如何執行Experience Platform Web SDK命令
 translation-type: tm+mt
-source-git-commit: 0cc6e233646134be073d20e2acd1702d345ff35f
+source-git-commit: 9bd6feb767e39911097bbe15eb2c370d61d9842a
+workflow-type: tm+mt
+source-wordcount: '445'
+ht-degree: 2%
 
 ---
 
@@ -13,7 +16,7 @@ source-git-commit: 0cc6e233646134be073d20e2acd1702d345ff35f
 
 >[!IMPORTANT]
 >
->Adobe Experience Platform Web SDK目前為測試版，並非所有使用者都能使用。 說明檔案和功能可能會有所變更。
+>Adobe Experience Platform Web SDK目前為測試版，並非所有使用者都能使用。 文件和功能可能會有所變更。
 
 在您的網頁上實作基本程式碼後，您就可以開始使用SDK執行指令。 執行命令之前，您不需要等待從伺服器載入外部檔案\(`alloy.js`\)。 如果SDK尚未完成載入，SDK會盡快將命令排入佇列並處理。
 
@@ -35,7 +38,7 @@ alloy("commandName", options);
 
 ```javascript
 alloy("commandName", options)
-  .then(function(value) {
+  .then(function(result) {
     // The command succeeded.
     // "value" is whatever the command returned
   })
@@ -59,12 +62,22 @@ alloy("commandName", options)
 
 ```javascript
 alloy("commandName", options)
-  .then(function(value) {
+  .then(function(result) {
     // The command succeeded.
     // "value" will be whatever the command returned
   })
 ```
 
-## 隱藏錯誤
+### 回應物件
 
-如果承諾遭拒而您尚未新增呼叫，則錯誤「泡泡上升」並記錄在您瀏覽器的開發人員主控台中，無論是否在Adobe Experience Platform Web SDK中啟用記錄。 `catch` 如果您擔心此問題，您可將設定選 `suppressErrors` 項設為 `true` 如 [設定SDK中所述](configuring-the-sdk.md)。
+從命令返回的所有承諾都通過對象解 `result` 決。 結果對象將包含取決於命令和用戶同意的資料。 例如，在以下命令中，庫資訊作為結果對象的屬性傳遞。
+
+```js
+alloy("getLibraryInfo").then(function(result) {
+  console.log(results.libraryInfo.version);
+});
+```
+
+### 同意
+
+如果用戶未就特定目的給予同意，承諾仍將得到解決； 但是，回應物件將僅包含使用者所同意內容中可提供的資訊。
