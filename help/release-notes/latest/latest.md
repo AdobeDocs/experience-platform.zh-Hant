@@ -1,122 +1,63 @@
 ---
 title: Adobe Experience Platform 發行說明
-description: Experience Platform發行說明2020年4月8日
+description: Experience Platform發行說明2020年5月13日
 doc-type: release notes
-last-update: April 13, 2020
-author: ens71067
-keywords: release notes;
+last-update: May 13, 2020
+author: crhoades, ens28527
 translation-type: tm+mt
-source-git-commit: 43db1992ae45e27134bc0c4405963c405275750e
+source-git-commit: 9d4c645e830790a7d5430fe3d514464ca8bef025
+workflow-type: tm+mt
+source-wordcount: '664'
+ht-degree: 4%
 
 ---
 
 
 # Adobe Experience Platform 發行說明
 
-**發行日期：2020 年 4 月 8 日**
+**發行日期: 2020 年 5 月 13 日**
 
-Adobe Experience Platform的新功能：
-* [智慧型服務](#intelligent)
+Adobe Experience Platform現有功能的更新：
 
-更新現有功能：
-* [體驗資料模型(XDM)](#xdm)
-* [資料控管](#governance)
-* [目的地](#destinations)
-* [隱私權服務](#privacy)
-* [來源](#sources)
+- [資料科學工作區](#dsw)
+- [Experience Platform Web SDK與Experience Platform Edge Network](#edge)
+- [來源](#sources)
 
-## 智慧型服務 {#intelligent}
+## 資料科學工作區 {#dsw}
 
-智慧型服務可讓行銷分析師和從業人員在客戶體驗使用案例中運用人工智慧和機器學習的強大功能。 這可讓行銷分析人員使用商業層級的組態來設定特定公司需求的預測，而不需要資料科學的專業知識。 此外，行銷從業人員可在Adobe Experience Cloud、Adobe Experience Platform和第三方應用程式中啟動預測。
-
-**主要功能**
-
-| 功能 | 說明 |
-|---|---|
-| 客戶人工智慧 | 客戶人工智慧為行銷人員提供能力，讓他們在個別層級產生客戶預測並加上說明。 借助影響因素，客戶人工智慧可以告訴您客戶可能做什麼以及為什麼。 此外，行銷人員可從客戶人工智慧預測和見解中獲益，透過提供最適當的優惠和訊息來個人化客戶體驗。 |
-| 歸因AI | 歸因人工智慧是一種多通道的算法歸因服務，可計算客戶互動對特定結果的影響和增量影響。 借助Attribution AI，行銷人員可以透過瞭解客戶歷程各個階段的每個個別客戶互動的影響，衡量並最佳化行銷和廣告支出。 |
-
-**已知問題**
-
-* 目前沒有已知問題。
-
-如需智慧型服務的詳細資訊，請參閱智慧型服務 [概觀](../../intelligent-services/home.md)。
-
-## 體驗資料模型(XDM)系統 {#xdm}
-
-標準化和互操作性是Experience Platform的主要概念。 Adobe推動的Experience Data Model(XDM)旨在標準化客戶體驗資料並定義客戶體驗管理的架構。
-
-XDM是公開記載的規格，旨在改善數位體驗的強大功能。 它提供任何應用程式的通用結構和定義，以便與Adobe Experience Platform上的服務通訊。 遵循XDM標準，所有客戶體驗資料都可整合在以更快速、更整合的方式提供見解的通用表現形式中。 您可以從客戶行動中獲得寶貴見解，透過細分定義客戶受眾，並將客戶屬性用於個人化目的。
+Data Science Workspace使用機器學習和人工智慧，從您的資料中釋放深入資訊。 Data Science Workspace整合至Adobe Experience Platform，可協助您透過Adobe解決方案使用內容和資料資產進行預測。 Data Science Workspace的其中一個實現方式是使用JupyterLab。 JupyterLab是專案Jupyter的網路使用者介面， <a href="https://jupyter.org/" target="_blank"></a> 並與Adobe Experience Platform緊密整合。 它為資料科學家提供互動式開發環境，以便與Jupyter筆記型電腦、程式碼和資料搭配使用。
 
 **新功能**
 
 | 功能 | 說明 |
-| --- | --- |
-| 自動替代顯示資訊 | 方案註冊表會自動應用描述符中配置的自定義標題和說明 `alternateDisplayInfo` 值。 |
-| 標量欄位限制 | 方案註冊表不允許在單個方案中有超過6000個標量欄位。 |
-| 效能大修 | 架構註冊表已進行全面改造，以更好地執行並滿足Experience Platform的需求。 |
-
-**錯誤修正**
-
-* 將XDM更新為XED，以支援標準XDM中巢狀URI欄位的更簡潔XED格式。
-
-**已知問題**
-
-* 已知
-
-## 資料控管 {#governance}
-
-Adobe Experience Platform資料治理是一系列策略和技術，用於管理客戶資料並確保符合適用於資料使用的法規、限制和政策。 它在Experience Platform的不同層次發揮關鍵作用，包括編目、資料傳承、資料使用標籤、資料存取政策，以及行銷動作的資料存取控制。
-
-開始使用資料治理需要對適用於客戶資料的法規、合約義務和公司政策有深入的瞭解。 在此基礎上，通過應用適當的資料使用標籤對資料進行分類，並通過定義資料使用策略來控制其使用。
-
-DULE架構透過Experience Platform使用者介面和DULE Policy Service API簡化資料分類和建立資料使用原則的程式。
-
-**新功能**
-
-| 功能 | 說明 |
-| -----------| ---------- |
-| 在UI中管理資料使用原則 | 資料使用原則現在可以在Experience Platform UI的「 _原則_ 」工作區中管理。 如需詳細 [資訊，請參閱原則使用指南](../../data-governance/policies/user-guide.md) 。 |
-
-**已知問題**
-
-* 無.
-
-如需詳細資訊，請參閱資 [料管理概觀](../../data-governance/home.md)。
-
-
-## 目的地 {#destinations}
-
-在 [Adobe即時客戶資料平台中](../../rtcdp/overview.md)，目標是與目標平台預先建立的整合，以順暢的方式將資料啟動給這些合作夥伴。
-
-**新目標**
-
-Adobe Real-time CDP現在支援將資料啟動至超過50種Experience Cloud Launch擴充功能，以便進行分析、個人化和其他使用案例。 如需詳細資訊，請參閱以下：
-
-| 文件 | 說明 |
 |--- | ---|
-| [目標類型和類別](/help/rtcdp/destinations/destination-types.md) | 本文將說明Adobe即時CDP介面中連線與擴充功能的差異，並建議何時使用這些目標。 |
-| [Experience Platform Launch擴充功能](/help/rtcdp/destinations/experience-platform-launch-extensions.md) | 本頁說明Launch擴充功能，列出使用這些擴充功能的使用案例，以及Adobe Real-time CDP中每個Launch擴充功能的檔案連結。 |
+| JupyterLab Launcher | JupyterLab Launcher現在包含Spark 2.4筆記型電腦的啟動器。 Spark 2.3筆記型起動器現在已標示為已過時，並設定在後續版本中移除。 |
+| Spark 2.4 | 全新Scala(Spark)和PySpark配方現在使用Spark 2.4。 |
+| 內核 | Scala(Spark)筆記本現在是透過Scala內核製作的。 PySpark筆記本現在是透過Python Kernel製作的。 Spark和PySpark內核已過時，並設定在後續版本中移除。 |
+| 配方 | 新的PySpark和Spark配方現在會遵循類似Python和R配方的Docker工作流程。 |
 
-如需詳細資訊，請參閱「目 [標」概觀](/help/rtcdp/destinations/destinations-overview.md)。
+有關遷移筆記型電腦和使用Spark 2.4的配方的詳細資訊，請參閱筆記本 [遷移指南](../../data-science-workspace/recipe-notebook-migration.md)。 如需資料科學工作區的詳細資訊，請參閱總 [覽檔案](../../data-science-workspace/home.md)。
 
-## 隱私權服務 {#privacy}
+## Experience Platform Web SDK與Experience Platform Edge Network {#edge}
 
-新的法律和組織法規讓使用者有權應要求從資料存放區存取或刪除其個人資料。 Adobe Experience Platform Privacy Service提供REST風格的API和使用者介面，可協助您管理客戶的這些資料要求。 透過隱私權服務，您可以提交從Adobe Experience Cloud應用程式存取和刪除私人或個人客戶資料的要求，以利自動符合法律和組織的隱私權法規。
+Experience Platform Web SDK和Experience Platform Edge Network可讓使用者針對一般使用者裝置和瀏覽器，即時將資料傳送至Adobe Experience Platform和其他Adobe解決方案。 我們的公開路線圖經常更新，您可以找到最 [新的](https://github.com/adobe/alloy/projects/5) 「使用案例」清單。
 
 **新功能**
 
 | 功能 | 說明 |
-| --- | --- |
-| PDPA支援 | 現在，您可以根據泰國的個人資料保護法(PDPA)來建立和追蹤隱私權要求。 在API中提出隱私權要求時， `regulation` 陣列接受&quot;pdpa_tha&quot;值。 |
-| UI中的名稱空間類型 | 您現在可以在「隱私服務」UI的「請求產生器」中指定不同的命名空間類型。 如需詳細 [資訊，請參閱](../../privacy-service/ui/user-guide.md) 「使用指南」。 |
-| 淘汰舊端點 | 舊API端點(`data/privacy/gdpr`)已過時。 |
+|--- | ---|
+| 支援ECID | SDK支援ECID立即可用，而不需安裝任何其他程式庫或資訊 |
+| 設定UI | 使用Launch中新的Edge組態UI管理您的組態ID設定，必須加入白名單才能存取 |
+| Adobe Experience Platform Web SDK Mixin | 與包含所有支援欄位的Experience Platform網頁SDK搭配使用的混合程式。 |
+| 課程許可控制 | 為公司提供選擇加入和選擇退出Experience Platform Web SDK的控制 |
+| 全新Experience Cloud除錯程式擴充功能的用戶端除錯支援 | 檢視來自Experience Platform網頁SDK的要求以及邊緣追蹤，以瞭解資料在系統中的流程。 |
+| Adobe Analytics | 透過邊緣設定，將資料傳送至Analytics報表套裝。 XDM已平面化為內容資料，支援多套裝標籤 |
+| Adobe Target | 支援Adobe Target。 包括VEC、表單撰寫器、A/B、XT、自動個人化、MVT |
+| Adobe Audience Manager支援 | 支援Audience Manager ID同步、URL目的地和Cookie目的地 |
+| `synceIdnetity` | 重新 `setCustomersIds` 命名 `syncIdentity` 為，以更清楚顯示 |
+| XDM Object Builder | 在啟動擴充功能中，您現在可以將XDM物件建立為資料元素 |
 
-已知問題
-
-* 無
-
-如需隱私權服務的詳細資訊，請先閱讀隱私權服務 [概觀](../../privacy-service/home.md)。
+如需有關Platform Web SDK和Edge Network的詳細資訊，請參閱文 [件](../../edge/home.md)。
 
 ## 來源 {#sources}
 
@@ -128,12 +69,11 @@ Experience Platform提供REST風格的API和互動式UI，讓您輕鬆為各種�
 
 | 功能 | 說明 |
 | ------- | ----------- |
-| 資料庫的API和UI支援 | Apache Spark（在HDInsights上）、Azure Synapse Analytics、Azure表格儲存、Hive（在HDInsights上）和Phoenix的新來源連接器。 |
-| 支援付款型應用程式的API和UI | PayPal的新來源連接器。 |
-| API和UI支援以通訊協定為基礎的應用程式 | 通用OData的新來源連接器。 |
+| 雲端儲存系統的其他API和UI支援 | Azure檔案儲存的新來源連接器。 |
+| 其他資料庫的API和UI支援 | Azure資料總管、IBM DB2和Oracle DB的新來源連接器。 |
 
 **已知問題**
 
-* 無
+- 無
 
 若要進一步瞭解來源，請參閱 [來源概觀](../../sources/home.md)。
