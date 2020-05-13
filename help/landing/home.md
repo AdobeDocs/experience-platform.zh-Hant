@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Adobe Experience Platform概觀
 topic: getting started
 translation-type: tm+mt
-source-git-commit: 96faba8d608d2fd057d256855b8b82af10558324
+source-git-commit: 7a36a3e3180c4ed4a9db23c0a33f6af3d7a3a5ec
 workflow-type: tm+mt
-source-wordcount: '503'
+source-wordcount: '505'
 ht-degree: 1%
 
 ---
@@ -27,11 +27,11 @@ Experience Platform檔案提供多種格式，以支援各種功能和服務。 
 
 >[!NOTE]
 >
->從2020年5月開始，Adobe推出網域和標題列的更新，以統一並改善您在所有Experience Cloud應用程式中的體驗。 這包括新的「說明」功能表。 新的「說明」功能表包含下列項目：
+>從2020年5月開始，Adobe將推出網域和標題列的更新，以統一並改善您在所有Experience Cloud應用程式中的體驗。 這包括新的「說明」功能表。 新的「說明」功能表包含下列項目：
 >
 >* 精選文章的連結
 >* 與上下文相關的檔案建議
->* 提供檔案和報告問題意見回應的能力
+>* 能夠提供有關Experience Platform的意見回應並報告問題
 >* 已改善搜尋結果，其中也包含社群論壇和視訊內容的結果。
 >
 > 
