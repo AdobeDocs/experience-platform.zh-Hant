@@ -4,7 +4,10 @@ solution: Experience Platform
 title: 資料使用標籤概觀
 topic: labels
 translation-type: tm+mt
-source-git-commit: 4411018aa1d531b53bbe2431df71829fa07fee75
+source-git-commit: 4b6b9ca5ae7861f8e8b974550be14fbce6efdcf1
+workflow-type: tm+mt
+source-wordcount: '365'
+ht-degree: 0%
 
 ---
 
@@ -22,6 +25,14 @@ source-git-commit: 4411018aa1d531b53bbe2431df71829fa07fee75
 在資料集層級套用的資料使用標籤會傳播至資料集內的所有欄位。 標籤也可以直接套用至資料集中的個別欄位（欄標題），而不需傳播。
 
 如需Experience Platform中可用資料使用標籤及其所代表之使用原則的詳細資訊，請參閱支援資料使 [用標籤的指南](reference.md)。
+
+## 對象區段的標籤繼承
+
+由 [Adobe Experience Platform Segmentation Service建立的所有受眾細分](../../segmentation/home.md) ，都會繼承其對應資料集的使用標籤。 這可讓以Experience Platform（例如即時客戶資料平台）為基礎的應用程式，在將區段啟動至目標時，提供自動資料使用原則的實施。
+
+除了繼承資料集層級標籤外，依預設，區段會繼承其關聯資料集的所有欄位層級標籤。 根據您的平台應用程式使用區段的方式，您可能會指定使用哪些欄位，從而防止區段繼承排除欄位的標籤。
+
+有關自動強制執行在即時CDP中如何運作的詳細資訊，請參 [見即時CDP資料治理概述](../../rtcdp/privacy/data-governance-overview.md#enforce-data-usage-compliance)。
 
 ## 後續步驟
 
