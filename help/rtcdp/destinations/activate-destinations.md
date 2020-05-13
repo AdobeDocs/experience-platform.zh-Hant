@@ -4,7 +4,10 @@ seo-title: 將描述檔和區段啟用至目標
 description: 將區段對應至目標，以啟用您在Adobe即時客戶資料平台中擁有的資料。 若要完成此作業，請遵循下列步驟。
 seo-description: 將區段對應至目標，以啟用您在Adobe即時客戶資料平台中擁有的資料。 若要完成此作業，請遵循下列步驟。
 translation-type: tm+mt
-source-git-commit: 2eddd5bb7b62dcc414ad906647b05ce10c766ac6
+source-git-commit: 7dafdf0dd1ad3af2defab3bf6b784fd37e777062
+workflow-type: tm+mt
+source-wordcount: '639'
+ht-degree: 0%
 
 ---
 
@@ -19,16 +22,16 @@ source-git-commit: 2eddd5bb7b62dcc414ad906647b05ce10c766ac6
 
 ## 啟動資料 {#activate-data}
 
-1. 在 **[!UICONTROL Destinations > Browse]**&#x200B;中，選取您要啟用區段的目標。
+1. 在「 **[!UICONTROL 目標>瀏覽]**」中，選取您要啟用區段的目標。
 2. 按一下目標的名稱。 這會帶您進入「啟動」流程。
-   ![activate-flow](/help/rtcdp/destinations/assets/activate-flow.png)請注意，如果目的地已有啟動流程，您可以看到目前傳送至目的地的區段。 在右 **[!UICONTROL Edit activation]** 側導軌中選擇，然後依照下列步驟修改啟動詳細資訊。
-3. 選擇 **[!UICONTROL Activate]**;
-4. 在工作 **[!UICONTROL Activate destination]** 流程中，在頁 **[!UICONTROL Select Segments]** 面上，選取要傳送至目的地的區段。
+   ![activate-flow](/help/rtcdp/destinations/assets/activate-flow.png)請注意，如果目的地已有啟動流程，您可以看到目前傳送至目的地的區段。 選取 **[!UICONTROL 右側邊欄]** 「編輯啟動」，然後依照下列步驟修改啟動詳細資訊。
+3. 選擇 **[!UICONTROL 激活]**;
+4. 在「啟 **[!UICONTROL 動目標]** 」工作流程的「選 **** 取區段」頁面上，選取要傳送至目標的區段。
    ![區段到目的地](/help/rtcdp/destinations/assets/select-segments.png)
-5. *有條件*. 此步驟僅適用於對應至電子郵件行銷目的地的區段。 <br> 在頁面 **[!UICONTROL Destination Attributes]** 上，選 **[!UICONTROL Add new field]** 擇並選擇要發送到目標的屬性。
+5. *有條件*. 此步驟僅適用於對應至雲端儲存空間目的地和電子郵件行銷目的地的區段。 <br> 在「目 **[!UICONTROL 標屬性]** 」頁上，選擇「 **[!UICONTROL 添加新欄位]** 」並選擇要發送到目標的屬性。
 我們建議其中一個屬性作為聯合 [架構的唯一](/help/rtcdp/destinations/email-marketing-destinations.md#identity) 標識符。 如需必要屬性的詳細資訊，請參閱「電子郵件行銷目標」 [文章中的「身分](/help/rtcdp/destinations/email-marketing-destinations.md#identity) 」。
    ![目標屬性](/help/rtcdp/destinations/assets/destination-attributes.png)
-6. 在頁面 **[!UICONTROL Segment schedule]** 上，您可以看到傳送資料至目的地的開始日期，以及傳送資料至目的地的頻率。
+6. 在「區 **[!UICONTROL 段排程]** 」頁面上，您可以看到傳送資料至目的地的開始日期，以及傳送資料至目的地的頻率。
 
    >[!IMPORTANT]
    >
@@ -36,7 +39,7 @@ source-git-commit: 2eddd5bb7b62dcc414ad906647b05ce10c766ac6
 
    ![選擇資料來源](/help/rtcdp/destinations/assets/choose-data-origin.png)
 
-7. 在頁面 **[!UICONTROL Review]** 上，您可以看到您所選取項目的摘要。 選 **[!UICONTROL Cancel]** 擇以劃分流程、 **[!UICONTROL Back]** 修改設定，或確 **[!UICONTROL Finish]** 認您的選擇並開始傳送資料至目的地。
+7. 在「審 **[!UICONTROL 閱]** 」頁面上，您可以看到您所選項目的摘要。 選擇 **[!UICONTROL 取消]** ，以劃分流程，選擇 **[!UICONTROL 返回]** ，修改設定，或選擇完 **[!UICONTROL 成]** ，確認選擇並開始向目標發送資料。
 
 ![確認選擇](/help/rtcdp/destinations/assets/confirm-selection.png)
 
@@ -44,8 +47,8 @@ source-git-commit: 2eddd5bb7b62dcc414ad906647b05ce10c766ac6
 
 請依照下列步驟，在即時CDP中編輯現有的啟動流程：
 
-1. 在左 **[!UICONTROL Destinations]** 側導覽列中選取，然後按一下標 **[!UICONTROL Browse]** 簽，然後按一下目標名稱。
-2. 在右 **[!UICONTROL Edit activation]** 側欄中選取以變更要傳送至目的地的區段。
+1. 在左 **[!UICONTROL 側導覽列中選取]** 「目標」，然後按一下「 **[!UICONTROL 瀏覽]** 」標籤，然後按一下目標名稱。
+2. 選取 **[!UICONTROL 右側欄]** 「編輯啟動」，以變更要傳送至目的地的區段。
 
 ## 確認區段啟動成功 {#verify-activation}
 
@@ -76,7 +79,7 @@ Salesforce_id3544_20191122124530.csv
 
 若要停用現有的啟動流程，請遵循下列步驟：
 
-1. 在左 **[!UICONTROL Destinations]** 側導覽列中選取，然後按一下標 **[!UICONTROL Browse]** 簽，然後按一下目標名稱。
-2. 按一下 **[!UICONTROL Enabled]** 右側導軌中的控制項，以變更啟動流程狀態。
+1. 在左 **[!UICONTROL 側導覽列中選取]** 「目標」，然後按一下「 **[!UICONTROL 瀏覽]** 」標籤，然後按一下目標名稱。
+2. 按一下 **[!UICONTROL 右邊欄]** 中的「已啟用」控制項，以變更啟動流程狀態。
 3. 在「更 **新資料流狀態** 」視窗中，選 **取「確認** 」以停用啟動流程。
 
