@@ -5,10 +5,10 @@ doc-type: release notes
 last-update: May 13, 2020
 author: crhoades, ens28527
 translation-type: tm+mt
-source-git-commit: 9d4c645e830790a7d5430fe3d514464ca8bef025
+source-git-commit: 47e03d3f58bd31b1aec45cbf268e3285dd5921ea
 workflow-type: tm+mt
-source-wordcount: '664'
-ht-degree: 4%
+source-wordcount: '875'
+ht-degree: 5%
 
 ---
 
@@ -19,9 +19,11 @@ ht-degree: 4%
 
 Adobe Experience Platform現有功能的更新：
 
-- [資料科學工作區](#dsw)
-- [Experience Platform Web SDK與Experience Platform Edge Network](#edge)
-- [來源](#sources)
+- [Adobe Experience Platform 發行說明](#adobe-experience-platform-release-notes)
+   - [資料科學工作區 {#dsw}](#data-science-workspace-dsw)
+   - [目的地 {#destinations}](#destinations-destinations)
+   - [Experience Platform Web SDK與Experience Platform Edge Network {#edge}](#experience-platform-web-sdk-and-experience-platform-edge-network-edge)
+   - [來源 {#sources}](#sources-sources)
 
 ## 資料科學工作區 {#dsw}
 
@@ -37,6 +39,26 @@ Data Science Workspace使用機器學習和人工智慧，從您的資料中釋�
 | 配方 | 新的PySpark和Spark配方現在會遵循類似Python和R配方的Docker工作流程。 |
 
 有關遷移筆記型電腦和使用Spark 2.4的配方的詳細資訊，請參閱筆記本 [遷移指南](../../data-science-workspace/recipe-notebook-migration.md)。 如需資料科學工作區的詳細資訊，請參閱總 [覽檔案](../../data-science-workspace/home.md)。
+
+## 目的地 {#destinations}
+
+在 [Adobe即時客戶資料平台中](../../rtcdp/overview.md)，目標是與目標平台預先建立的整合，以順暢的方式將資料啟動給這些合作夥伴。
+
+**新目標**
+
+Adobe即時CDP現在支援將資料啟動至串流雲端儲存目的地，讓您以JSON格式將觀眾資料和事件匯出至這些目的地。 然後，您可以在目的地的這些活動上描述商業邏輯。 如需詳細資訊，請參閱以下：
+
+>[!NOTE]
+>
+>Adobe [!DNL Amazon Kinesis] 即時 [!DNL Azure Event Hubs] CDP中的目標和目標目前都在測試中。 文件和功能可能會有所變更。
+
+| 文件 | 說明 |
+|--- | ---|
+| [（測試版）Amazon Kinesis目標](/help/rtcdp/destinations/amazon-kinesis-destination.md) | 本文說明如何建立儲存空間的即時出站連線，以 [!DNL Amazon Kinesis] 便從Adobe Experience Platform串流資料。 |
+| [（測試版）Azure事件集線器目標](/help/rtcdp/destinations/azure-event-hubs-destination.md) | 本文說明如何建立儲存空間的即時出站連線，以 [!DNL Azure Event Hubs] 便從Adobe Experience Platform串流資料。 |
+| [API教學課程——連線至串流目的地並啟用資料](/help/rtcdp/destinations/streaming-destinations-api-tutorial.md) | 本教學課程示範如何使用API呼叫連線至您的Adobe Experience Platform資料、建立串流雲端儲存目的地（Amazon Kinesis或Azure事件中樞）的連線、建立資料流至新建立的目的地，以及啟用資料至新建立的目的地。 |
+
+如需詳細資訊，請參閱「目 [標」概觀](/help/rtcdp/destinations/destinations-overview.md)。
 
 ## Experience Platform Web SDK與Experience Platform Edge Network {#edge}
 
