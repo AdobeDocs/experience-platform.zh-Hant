@@ -3,9 +3,9 @@ product: adobe experience platform
 audience: user
 user-guide-title: 即時客戶資料平台說明
 translation-type: tm+mt
-source-git-commit: e0807f32ff5f3d16a6805074951e3b09723c5181
+source-git-commit: 72511172c07b79c485660d59595aa6c8fdd6bdaa
 workflow-type: tm+mt
-source-wordcount: '407'
+source-wordcount: '413'
 ht-degree: 11%
 
 ---
@@ -28,7 +28,7 @@ ht-degree: 11%
    * 目的地介面 {#destinations-interface}
       * [目標工作區](destinations/destinations-workspace.md)
       * [目標詳細資訊頁](destinations/destination-details-page.md)
-   * 目標目錄  {#destinations-cat}
+   * 目標目錄 {#destinations-cat}
       * [目標目錄概述](destinations/destinations-catalog.md)
       * Adobe目的地{#adobe-destinations}
          * [Adobe目標概觀](destinations/adobe-destinations.md)
@@ -76,7 +76,9 @@ ht-degree: 11%
       * 雲端儲存空間目標{#cloud-storage}
          * [雲端儲存空間目標概觀](destinations/cloud-storage-destinations.md)
          * [建立雲端儲存空間目標的工作流程](/help/rtcdp/destinations/cloud-storage-destinations-workflow.md)
+         * [Amazon Kinesis目標](/help/rtcdp/destinations/amazon-kinesis-destination.md)
          * [Amazon S3目的地](destinations/amazon-s3-destination.md)
+         * [Azure EventHubs目的地](/help/rtcdp/destinations/azure-event-hubs-destination.md)
          * [SFTP目的地](destinations/sftp-destination.md)
       * 資料管理平台目標 {#dmp-destinations}
          * [資料管理平台目標概觀](destinations/dmp-destinations.md)
