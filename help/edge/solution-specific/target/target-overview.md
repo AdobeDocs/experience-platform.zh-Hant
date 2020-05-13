@@ -4,38 +4,125 @@ seo-title: Adobe Experience Platform Web SDK與使用Adobe Target
 description: 瞭解如何使用Adobe Target使用Experience Platform Web SDK來呈現個人化內容
 seo-description: 瞭解如何使用Adobe Target使用Experience Platform Web SDK來呈現個人化內容
 translation-type: tm+mt
-source-git-commit: db4bfec04a1116ce2b6a0be7ca0e8cb2f9639ad6
+source-git-commit: 9d66e926ff86f23b3dea34f37d3bb16ba97eb0ef
+workflow-type: tm+mt
+source-wordcount: '651'
+ht-degree: 2%
 
 ---
 
 
 # Target概觀
 
-Adobe Experience Platform Web SDK透過個人化功能與Adobe Target整 [合](../../fundamentals/rendering-personalization-content.md) ，讓您輕鬆提供個人化內容和決策。
+Adobe Experience Platform Web SDK可以透過Adobe Target提供及轉譯個人化的體驗，並透過網路通道管理。 您可以使用WYSIWYG編輯器(稱為 [Visual Experience Composer](https://docs.adobe.com/content/help/en/target/using/experiences/vec/visual-experience-composer.html) (VEC))或非視覺化介面( [Form-based Experience Composer](https://docs.adobe.com/content/help/en/target/using/experiences/form-experience-composer.html))來建立、啟動和傳遞您的活動和個人化體驗。
 
 ## 啟用Adobe Target
 
 若要啟用Target，您必須執行下列動作：
 
-- 使用適當的用戶 [端程式碼](../../fundamentals/edge-configuration.md) ，在邊緣設定中啟用Target。
-- 將選項 `renderDecisions` 新增至事件。
+1. 在Target UI中開啟activity.id和experience.id回應Token。
 
-您也可以選擇：
+![target_reponse_token](../../solution-specific/target/assets/target_response_token.png)
 
-- 新增 `scopes` 至事件以擷取特定活動（對於以表單為基礎的撰寫器所建立的活動非常有用）。
-- 新增預 [先隱藏的程式碼片段](../../fundamentals/managing-flicker.md) ，只隱藏頁面的某些部分。
+1. 使用適當的用戶 [端程式碼](../../fundamentals/edge-configuration.md) ，在邊緣設定中啟用Target。
+1. 將選項 `renderDecisions` 新增至事件。
 
-## 使用VEC
+然後，您也可以：
 
-在SDK中，您可正常使用VEC，但有一個例外，您將需要安裝 [目標VEC協助延伸模組](https://docs.adobe.com/content/help/en/target/using/experiences/vec/troubleshoot-composer/vec-helper-browser-extension.html) ，並啟用。
+* 新增 `decisionScopes` 至事件以擷取特定活動（對於使用表單式撰寫器建立的活動很有用）。
+* 新增預 [先隱藏的程式碼片段](../../solution-specific/target/flicker-management.md) ，以僅隱藏頁面的某些部分。
+
+## 使用Adobe Target VEC
+
+在SDK中，您可以正常使用VEC，但有一個例外： 您需要安裝 [目標VEC Helper Extension](https://docs.adobe.com/content/help/en/target/using/experiences/vec/troubleshoot-composer/vec-helper-browser-extension.html) 並啟用。
+
+## 自動演算VEC活動
+
+AEP Web SDK可讓您的使用者自動在網路上，透過Adobe Target的VEC呈現您定義的體驗。 若要向AEP Web SDK指出要自動演算VEC活動，請傳送事件，其中包含 `renderDecisions = true`:
+
+```javascript
+alloy
+("event", 
+  { 
+  "renderDecisions": true, 
+  "xdm": {
+    "commerce": { 
+      "order": {
+        "purchaseID": "a8g784hjq1mnp3", 
+         "purchaseOrderNumber": "VAU3123", 
+         "currencyCode": "USD", 
+         "priceTotal": 999.98 
+         } 
+      } 
+    }
+  }
+);
+```
 
 ## 使用表單式撰寫器
 
-表單撰寫器也可用來傳回內容。 範圍會以位置(mBox)顯示在Target UI。 此外，如果您決定使用範圍，您也需要確定您的開發人員正在尋找回應。
+表單型體驗撰寫器是非視覺化介面，對於使用不同的回應類型（例如JSON、HTML、影像等）來設定A/B測試、體驗定位、自動個人化和建議活動非常有用。 視Adobe Target傳回的回應類型或決策而定，您的核心商業邏輯可以執行。 若要擷取表單撰寫器活動的決策，請傳送包含所有您要擷取決策的「決策範圍」的事件。
+
+```javascript
+alloy
+  ("event", { 
+    decisionScopes: [
+      "foo", "bar"], 
+      "xdm": {
+        "commerce": { 
+          "order": { 
+            "purchaseID": "a8g784hjq1mnp3", 
+            "purchaseOrderNumber": "VAU3123", 
+            "currencyCode": "USD", 
+            "priceTotal": 999.98 
+          } 
+        } 
+      } 
+    }
+  );
+```
+
+## 決策範圍
+
+`decisionScopes` 定義您要呈現個人化體驗的頁面區域、位置或部分。 這些 `decisionScopes` 功能可自訂並由使用者定義。 對於目前的Target客 `decisionScopes` 戶，也稱為「mbox」。 在Target UI中， `decisionScopes` 顯示為「位置」。
+
+## __視圖範圍__
+
+AEP Web SDK提供一種功能，可讓您擷取VEC動作，而不需仰賴AEP Web SDK為您轉譯VEC動作。 傳送定義 `__view__` 為的事件 `decisionScopes`。
+
+```javascript
+alloy("event", {
+  decisionScopes: [“__view__”,"foo", "bar"], 
+  "xdm": { 
+    "web": { 
+      "webPageDetails": { 
+        "name": "Home Page"
+       }
+      } 
+     }
+    }
+   ).then(results){
+  for (decision of results.decisions){
+     if(decision.decisionScope == "__view__")
+       console.log(decision.content)
+}
+};
+```
 
 ## XDM中的觀眾
 
-在Target XDM中，資料會以自訂參數顯示在Audience Builder中。 XDM使用點標籤（例如，XDM）序列化。 `web.webPageDetails.name`)
+當為將透過AEP Web SDK傳送的Target活動定義「對象」時， [必須定義並使用XDM](https://docs.adobe.com/content/help/en/experience-platform/xdm/home.html) 。 定義XDM結構、類別和混合後，您可以建立由XDM資料定義的Target對象規則以進行定位。 在Target中，XDM資料會以自訂參數顯示在Audience Builder中。 XDM使用點標籤(例如 `web.webPageDetails.name`)序列化。
+
+如果您有預先定義的對象使用自訂參數或使用者設定檔，則必須知道這些活動無法透過AEP Web SDK正確傳送。 您必須改用XDM，而不是使用自訂參數或使用者描述檔。 不過，AEP Web SDK支援的觀眾定位欄位不需要XDM，而且有現成的欄位。 以下是Target UI中不需要XDM的欄位：
+
+* Target 資料庫
+* 地理
+* 網路
+* 作業系統 
+* 網頁
+* 瀏覽器
+* 流量來源
+* 時間段
 
 ## 術語
 
