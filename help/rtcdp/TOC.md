@@ -3,10 +3,10 @@ product: adobe experience platform
 audience: user
 user-guide-title: 即時客戶資料平台說明
 translation-type: tm+mt
-source-git-commit: 72511172c07b79c485660d59595aa6c8fdd6bdaa
+source-git-commit: be885faf8c1408f372d2eb6cd8d6a8fa8fc69e14
 workflow-type: tm+mt
-source-wordcount: '413'
-ht-degree: 11%
+source-wordcount: '439'
+ht-degree: 10%
 
 ---
 
@@ -122,9 +122,12 @@ ht-degree: 11%
          * [Invoca標籤擴充功能](/help/rtcdp/destinations/invoca-extension.md)
          * [Medallia擴充功能](destinations/medallia-extension.md)
          * [通話URL收件匣副檔名](destinations/talkurl-extension.md)
-   * 目標教學課程 {#dest-tutorials}
+   * 目標UI教學課程 {#dest-tutorials}
       * [連接到目標](/help/rtcdp/destinations/connect-destination.md)
       * [將描述檔和區段啟用至目標](destinations/activate-destinations.md)
+   * 目標API教學課程{api-tutorials}
+      * [連接到流目標（AWS Kinesis和Azure事件集線器）並激活資料](/help/rtcdp/destinations/streaming-destinations-api-tutorial.md)
+      * [連線至電子郵件行銷目的地並啟用資料](/help/tutorials/destinations/email-marketing-api.md)
 * 隱私權與資料管理 {#privacy}
    * [隱私權概觀](privacy/privacy-overview.md)
    * [資料治理概觀](privacy/data-governance-overview.md)
