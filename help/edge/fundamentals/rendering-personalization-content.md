@@ -4,7 +4,10 @@ seo-title: Adobe Experience Platform Web SDK轉換個人化內容
 description: 瞭解如何使用Experience Platform Web SDK呈現個人化內容
 seo-description: 瞭解如何使用Experience Platform Web SDK呈現個人化內容
 translation-type: tm+mt
-source-git-commit: bb3841da8a566105fde1b7ac78dccd79a7ea15d4
+source-git-commit: 938e0e56111c96f6b0b378c9e14fb92af70c5e10
+workflow-type: tm+mt
+source-wordcount: '262'
+ht-degree: 3%
 
 ---
 
@@ -15,7 +18,7 @@ source-git-commit: bb3841da8a566105fde1b7ac78dccd79a7ea15d4
 >
 >Adobe Experience Platform Web SDK目前為測試版，並非所有使用者都能使用。 文件和功能可能會有所變更。
 
-Adobe Experience Platform Web SDK支援查詢Adobe的個人化解決方案，包括Adobe Target。 個人化有兩種模式： 擷取可自動轉譯的內容，以及開發人員必須轉譯的內容。 SDK也提供管理閃 [爍的功能](managing-flicker.md)。
+Adobe Experience Platform Web SDK支援查詢Adobe的個人化解決方案，包括Adobe Target。 個人化有兩種模式： 擷取可自動轉譯的內容，以及開發人員必須轉譯的內容。 SDK也提供管理閃 [爍的功能](../../edge/solution-specific/target/flicker-management.md)。
 
 ## 自動呈現內容
 
