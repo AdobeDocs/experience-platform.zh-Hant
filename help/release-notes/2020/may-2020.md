@@ -5,9 +5,9 @@ doc-type: release notes
 last-update: May 13, 2020
 author: crhoades, ens28527
 translation-type: tm+mt
-source-git-commit: 47e03d3f58bd31b1aec45cbf268e3285dd5921ea
+source-git-commit: 0eca2f6e50024ec43c025dd75c34ca876d71c3f2
 workflow-type: tm+mt
-source-wordcount: '875'
+source-wordcount: '959'
 ht-degree: 5%
 
 ---
@@ -20,10 +20,21 @@ ht-degree: 5%
 Adobe Experience Platform現有功能的更新：
 
 - [Adobe Experience Platform 發行說明](#adobe-experience-platform-release-notes)
+   - [使用者介面更新 {#ux}](#user-interface-updates-ux)
    - [資料科學工作區 {#dsw}](#data-science-workspace-dsw)
    - [目的地 {#destinations}](#destinations-destinations)
    - [Experience Platform Web SDK與Experience Platform Edge Network {#edge}](#experience-platform-web-sdk-and-experience-platform-edge-network-edge)
    - [來源 {#sources}](#sources-sources)
+
+## 使用者介面更新 {#ux}
+
+Adobe Experience Platform將發佈網域和標題列的更新，以改善您的體驗並與其他Experience Cloud應用程式統一。
+
+- 更輕鬆地在組織之間切換或切換至不同的應用程式
+- 改善使用者說明，包括說明功能表中的精選文章和內容相關檔案
+- 能夠提供有關Experience Platform和檔案支援票證的意見回饋
+
+新體驗的推出是漸進的。 您可以在https://experience.adobe.com/platform上檢視 [體驗](https://experience.adobe.com/platform)。
 
 ## 資料科學工作區 {#dsw}
 
