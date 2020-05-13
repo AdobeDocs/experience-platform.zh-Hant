@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Adobe Experience Platform概觀
 topic: getting started
 translation-type: tm+mt
-source-git-commit: 51aa09e5eff86c480946bcf706f10864b82841d2
+source-git-commit: 96faba8d608d2fd057d256855b8b82af10558324
+workflow-type: tm+mt
+source-wordcount: '503'
+ht-degree: 1%
 
 ---
 
@@ -16,11 +19,25 @@ source-git-commit: 51aa09e5eff86c480946bcf706f10864b82841d2
 
 Adobe Experience Platform是市面上功能最強大、最靈活、最開放的系統，可協助您建立和管理能推動客戶體驗的完整解決方案。 Experience Platform可讓組織集中管理和標準化來自任何系統的客戶資料和內容，並套用資料科學和機器學習，大幅改善多樣化個人化體驗的設計和提供。
 
-Experience Platform以開放API為基礎，為開發人員提供系統的完整功能，支援使用熟悉工具輕鬆整合企業解決方案。 Experience Platform也支援合作夥伴視需要建立並整合其產品與技術。 這種強大的功能與彈性讓Experience Platform在市場上獨一無二。 它為合作夥伴、客戶和開發人員社群提供基礎，以建立推動體驗業務的創新：透過從客戶及其個人偏好的360度全方位檢視中不斷改善、完全個人化的體驗，超越客戶期望。
+Experience Platform以開放API為基礎，為開發人員提供系統的完整功能，支援使用熟悉工具輕鬆整合企業解決方案。 Experience Platform也支援合作夥伴視需要建立並整合其產品與技術。 這種強大的功能與彈性讓Experience Platform在市場上獨一無二。 它為合作夥伴、客戶和開發人員社群提供基礎，以建立推動體驗業務的創新： 透過從客戶及其個人偏好的360度全方位檢視中不斷改善、完全個人化的體驗，超越客戶期望。
 
 ## Experience Platform檔案
 
 Experience Platform檔案提供多種格式，以支援各種功能和服務。 若要進一步瞭解可用的檔案類型，以及閱讀各項平台服務的簡短說明，請造訪 [Experience Platform檔案總覽](documentation/overview.md)。 或者，若要立即開始進一步瞭解特定平台服務，請從左側導覽器的字母順序清單中選取指南。
+
+>[!NOTE]
+>
+>從2020年5月開始，Adobe推出網域和標題列的更新，以統一並改善您在所有Experience Cloud應用程式中的體驗。 這包括新的「說明」功能表。 新的「說明」功能表包含下列項目：
+>
+>* 精選文章的連結
+>* 與上下文相關的檔案建議
+>* 提供檔案和報告問題意見回應的能力
+>* 已改善搜尋結果，其中也包含社群論壇和視訊內容的結果。
+>
+> 
+您可能會不時收到調查以取得其他意見回應。
+>
+>此推出是漸進的，因此您可能不會立即看到變更。 您隨時都可前往https://experience.adobe.com/platform，以檢視更新的 [體驗](https://experience.adobe.com/platform)。
 
 ## 體驗平台教學課程
 
