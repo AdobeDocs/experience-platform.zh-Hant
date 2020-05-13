@@ -1,18 +1,22 @@
 ---
-title: Azure事件集線器目標
-seo-title: Azure事件集線器目標
+title: （測試版）Azure事件集線器目標
+seo-title: （測試版）Azure事件集線器目標
 description: 建立Azure事件中樞儲存空間的即時出站連線，以從Experience Platform串流資料。
 seo-description: 建立Azure事件中樞儲存空間的即時出站連線，以從Experience Platform串流資料。
 translation-type: tm+mt
-source-git-commit: a18f89531cf024f61b054b47a660bd26766bebf6
+source-git-commit: 47e03d3f58bd31b1aec45cbf268e3285dd5921ea
 workflow-type: tm+mt
-source-wordcount: '444'
-ht-degree: 0%
+source-wordcount: '470'
+ht-degree: 2%
 
 ---
 
 
-# Azure事件集線器目標
+# （測試版）Azure事件集線器目標
+
+>[!IMPORTANT]
+>
+>Adobe [!DNL Azure Event Hubs] 即時CDP的目的地目前為beta版。 文件和功能可能會有所變更。
 
 ## 概述 {#overview}
 
@@ -21,7 +25,7 @@ ht-degree: 0%
 您可以建立儲存的即時出站連線， [!DNL Azure Event Hubs] 以從Adobe Experience Platform串流資料。
 
 * 如需詳細資訊 [!DNL Azure Event Hubs]，請參閱 [Microsoft檔案](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-about)。
-* 若要連線至使 [!DNL Azure Event Hubs] 用API呼叫，請參閱串 [流目標API教學課程]。
+* 若要連線至使 [!DNL Azure Event Hubs] 用API呼叫，請參閱串 [流目標API教學課程](/help/rtcdp/destinations/streaming-destinations-api-tutorial.md)。
 * 若要使用 [!DNL Azure Event Hubs] Adobe即時CDP使用者介面連線，請參閱以下各節。
 
 ![UI中的AWS Kinesis](/help/rtcdp/destinations/assets/azure-event-hubs-destination.png)
@@ -89,6 +93,6 @@ ht-degree: 0%
 
 >[!MORELIKETHIS]
 >
->* 連結至Azure事件中樞API教學課程
+>* [連線至Azure事件中樞，並使用API呼叫啟用資料](/help/rtcdp/destinations/streaming-destinations-api-tutorial.md)
 >* [AWS Kinesis目標](/help/rtcdp/destinations/amazon-kinesis-destination.md)
 >* [目標類型和類別](/help/rtcdp/destinations/destination-types.md)
