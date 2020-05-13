@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 驗證及存取Experience Platform API
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: e1ba476fffc164b78decd7168192714993c791bc
+source-git-commit: 8c73363e88aab242ae258037deb80eeec872e519
 workflow-type: tm+mt
 source-wordcount: '849'
 ht-degree: 1%
@@ -127,9 +127,9 @@ curl -X GET https://platform.adobe.io/data/foundation/schemaregistry/global/clas
   -H 'x-gw-ims-org-id: {IMS_ORG}'
 ```
 
-如果您的回覆與下方所示的類似，則您的認證有效且有效。 （此回應已針對空格截斷。）
-
 **回應**
+
+如果您的回覆與下方所示的類似，則您的認證有效且有效。 （此回應已針對空格截斷。）
 
 ```JSON
 {
