@@ -1,9 +1,12 @@
 ---
 product: experience-platform
 audience: user
-user-guide-title: Adobe Experience Platform Privacy Service Help
+user-guide-title: Adobe Experience Platform隱私權服務說明
 translation-type: tm+mt
-source-git-commit: 1cb730f8663291d104d5fbe61ecbba7d0103b75d
+source-git-commit: 284768c0f5416972e51d2fa2078ad5267e1b8628
+workflow-type: tm+mt
+source-wordcount: '86'
+ht-degree: 11%
 
 ---
 
@@ -25,8 +28,11 @@ source-git-commit: 1cb730f8663291d104d5fbe61ecbba7d0103b75d
 * GDPR指南 {#gdpr}
    * [GDPR 常見問題集](gdpr/faq.md)
    * [GDPR 術語](gdpr/terminology.md)
-* CCPA指南 {#ccpa}
+* CCPA參考線 {#ccpa}
    * [CCPA常見問答集](ccpa/faq.md)
+* PDPA（泰國）指南 {#pdpa-tha}
+   * [PDPA（泰國）常見問答集](./pdpa-tha/faq.md)
+   * [PDPA（泰國）術語](./pdpa-tha/terminology.md)
 * [疑難排解指南](troubleshooting-guide.md)
-* [API 參考資料](https://www.adobe.io/apis/experiencecloud/gdpr/api-reference.html)
+* [API 參考資料](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/privacy-service.yaml)
 * [發行說明](release-notes.md)
