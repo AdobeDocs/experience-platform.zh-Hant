@@ -4,39 +4,34 @@ seo-title: Launch讓您快速入門Adobe Experience Platform Web SDK
 description: 使用Experience Platform Web SDK擴充功能收集資料的快速入門手冊
 seo-description: 使用Experience Platform Web SDK擴充功能收集資料的快速入門手冊
 translation-type: tm+mt
-source-git-commit: 51acb07efe624c7cf1dfaabc4b03f04c76ac88f8
+source-git-commit: e9fb726ddb84d7a08afb8c0f083a643025b0f903
 workflow-type: tm+mt
-source-wordcount: '391'
-ht-degree: 4%
+source-wordcount: '529'
+ht-degree: 3%
 
 ---
 
 
-# （測試版）必要條件
+# 歡迎
 
->[!IMPORTANT]
->
->Adobe Experience Platform Web SDK目前為測試版，並非所有使用者都能使用。 文件和功能可能會有所變更。
+本指南將帶您瞭解如何在Launch中設定Adobe Experience Platform Web SDK。 若要使用此功能，您必須加入白名單。 如果您想要加入等候清單，請聯絡您的CSM。
 
-目前Adobe Experience Platform Web SDK僅支援使用XDM將資料傳送至Adobe Experience Platform。 您必須符合下列必要條件。
-
-- 啟用 [第一方網域(CNAME)](https://docs.adobe.com/content/help/zh-Hant/core-services/interface/ec-cookies/cookies-first-party.html) 。 如果您已有Analytics的CNAME，則應使用該CNAME。
-- 有權使用Adobe Experience Platform
+- 啟用 [第一方網域(CNAME)](https://docs.adobe.com/content/help/zh-Hant/core-services/interface/ec-cookies/cookies-first-party.html) 。 如果您已有Analytics的CNAME，則應使用該CNAME。 在開發中進行測試時不需要CNAME，但您在開始生產之前需要CNAME
+- 有權使用Adobe Experience Platform Data Platform。 如果您尚未購買平台，我們將提供您Experience Platform Data Services Foundation以搭配SDK使用。
 - 正在使用最新版的訪客ID服務
-
-## 準備平台
-
-若要能夠傳送資料至Adobe Experience Platform，您必須建立XDM架構和使用該架構的資料集。
-
-- [建立架構](../../xdm/tutorials/create-schema-ui.md)
-- 將Adobe Experience Platform Web SDK mixin新增至您建立的架構
-- [使用您的方案](https://platform.adobe.com/dataset/overview) ，建立資料集，讓資料著陸
 
 ## 建立設定ID
 
-您可以在啟動時使用邊配置工 [具來建立配置](../fundamentals/edge-configuration.md) ID。
+您可以在啟動時使用邊配置工 [具來建立配置](../fundamentals/edge-configuration.md) ID。 這可讓您讓邊緣網路傳送資料至各種解決方案。 如需如何尋找每個選項的詳細資訊，請參閱「 [Edge Configuration Tool](../fundamentals/edge-configuration.md) 」（邊緣設定工具）頁面。
 
 >注意： 您的組織必須列入功能白名單。 請連絡您的CSM以取得最終白名單。
+
+## 準備架構
+
+Experience Platform Edge Network將資料視為XDM。 XDM是一種資料格式，可讓您定義結構描述。 此架構定義邊緣網路預期資料格式化的方式。 若要傳送資料，您需要定義您的架構。
+
+- [建立架構](../../xdm/tutorials/create-schema-ui.md)
+- 將Adobe Experience Platform Web SDK mixin新增至您建立的架構
 
 ## 在Launch中安裝SDK
 
@@ -44,28 +39,25 @@ ht-degree: 4%
 
 如需不同設定選項的詳細資訊，請參 [閱設定SDK](../fundamentals/configuring-the-sdk.md)。
 
+## 根據方案建立資料元素
+
+在啟動中，請將副檔名變更為AEP Web SDK並將類型設為XDM物件，以建立參照架構的資料元素。 這會載入您的架構，並允許您將資料元素映射至架構的不同部分。
+
+![啟動中的日期元素](../../assets/edge_data_element.png)
+
 ## 傳送事件
 
-安裝擴充功能後，從AEP Web SDK擴充功能新增「傳送信標」動作，開始傳送事件。 建議您在每次載入頁面時至少傳送一個事件，並勾選「在檢視開始時發生」選項。
+在安裝擴充功能後，從AEP Web SDK擴充功能新增「sendEvent」動作至規則，開始傳送事件。 請務必將您剛建立的資料元素新增至事件，做為XDM資料。 建議您每次載入頁面時至少傳送一個事件。
 
 如需追蹤事件的詳細資訊，請參閱追 [蹤事件](../fundamentals/tracking-events.md)。
 
-## 傳送資料
+## 後續步驟
 
-您可以傳送符合您先前建立之結構的資料以及您的事件。 例如，如果您擁有商務網站並將商務混合新增至您的架構，當有人檢視產品時，您會傳送下列結構。
+在資料流動後，您可以執行下列動作。
 
-```javascript
-{
-  "commerce": {
-    "productListAdds": {
-        "value":1
-    }
-  },
-  "productListItems":{
-      "name":"Floppy Green Hat",
-      "SKU":"HATFLP123",
-      "product":"1234567",
-      "quantity":2
-  }
-}
-```
+- [建立您的架構](https://docs.adobe.com/content/help/en/experience-platform/xdm/schema/composition.html)
+- 瞭解如何個 [人化體驗](../fundamentals/rendering-personalization-content.md)
+- 瞭解如何將資料傳送至多個解決方案
+   - [Adobe Analytics](../solution-specific/analytics/analytics-overview.md)
+   - [Adobe Audience Manager](../solution-specific/audience-manager/audience-manager-overview.md)
+   - [Adobe Target](../solution-specific/target/target-overview.md)
