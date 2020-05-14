@@ -4,9 +4,9 @@ seo-title: Launch讓您快速入門Adobe Experience Platform Web SDK
 description: 使用Experience Platform Web SDK擴充功能收集資料的快速入門手冊
 seo-description: 使用Experience Platform Web SDK擴充功能收集資料的快速入門手冊
 translation-type: tm+mt
-source-git-commit: e9fb726ddb84d7a08afb8c0f083a643025b0f903
+source-git-commit: 2ccb2c17590780f7f1bd5e553164209763ab9e24
 workflow-type: tm+mt
-source-wordcount: '529'
+source-wordcount: '539'
 ht-degree: 3%
 
 ---
@@ -17,14 +17,16 @@ ht-degree: 3%
 本指南將帶您瞭解如何在Launch中設定Adobe Experience Platform Web SDK。 若要使用此功能，您必須加入白名單。 如果您想要加入等候清單，請聯絡您的CSM。
 
 - 啟用 [第一方網域(CNAME)](https://docs.adobe.com/content/help/zh-Hant/core-services/interface/ec-cookies/cookies-first-party.html) 。 如果您已有Analytics的CNAME，則應使用該CNAME。 在開發中進行測試時不需要CNAME，但您在開始生產之前需要CNAME
-- 有權使用Adobe Experience Platform Data Platform。 如果您尚未購買平台，我們將提供您Experience Platform Data Services Foundation以搭配SDK使用。
+- 有權使用Adobe Experience Platform Data Platform。 如果您尚未購買Platform，我們將提供您Experience Platform Data Services Foundation，以便在SDK中以有限方式使用，不需額外付費。
 - 正在使用最新版的訪客ID服務
 
 ## 建立設定ID
 
 您可以在啟動時使用邊配置工 [具來建立配置](../fundamentals/edge-configuration.md) ID。 這可讓您讓邊緣網路傳送資料至各種解決方案。 如需如何尋找每個選項的詳細資訊，請參閱「 [Edge Configuration Tool](../fundamentals/edge-configuration.md) 」（邊緣設定工具）頁面。
 
->注意： 您的組織必須列入功能白名單。 請連絡您的CSM以取得最終白名單。
+>[!NOTE]
+>
+>您的組織必須列入功能白名單。 請連絡您的CSM以取得最終白名單。
 
 ## 準備架構
 
@@ -56,6 +58,7 @@ Experience Platform Edge Network將資料視為XDM。 XDM是一種資料格式�
 在資料流動後，您可以執行下列動作。
 
 - [建立您的架構](https://docs.adobe.com/content/help/en/experience-platform/xdm/schema/composition.html)
+- [瞭解除錯](../fundamentals/debugging.md)
 - 瞭解如何個 [人化體驗](../fundamentals/rendering-personalization-content.md)
 - 瞭解如何將資料傳送至多個解決方案
    - [Adobe Analytics](../solution-specific/analytics/analytics-overview.md)
