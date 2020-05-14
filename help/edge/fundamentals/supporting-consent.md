@@ -4,16 +4,15 @@ seo-title: 支援Adobe Experience Platform Web SDK同意偏好設定
 description: 瞭解如何使用Experience Platform Web SDK支援同意偏好設定
 seo-description: 瞭解如何使用Experience Platform Web SDK支援同意偏好設定
 translation-type: tm+mt
-source-git-commit: 0cc6e233646134be073d20e2acd1702d345ff35f
+source-git-commit: e9fb726ddb84d7a08afb8c0f083a643025b0f903
+workflow-type: tm+mt
+source-wordcount: '518'
+ht-degree: 0%
 
 ---
 
 
-# （測試版）支援同意
-
->[!IMPORTANT]
->
->Adobe Experience Platform Web SDK目前為測試版，並非所有使用者都能使用。 說明檔案和功能可能會有所變更。
+# 支援許可
 
 若要尊重使用者的隱私權，您可能會在允許SDK針對特定用途使用使用者特定資料之前，先要求使用者同意。 目前，SDK僅允許使用者選擇加入或退出所有用途，但Adobe希望未來能針對特定用途提供更精細的控制。
 
