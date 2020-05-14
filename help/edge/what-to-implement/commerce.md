@@ -4,7 +4,7 @@ seo-title: 使用Adobe Experience Platform Web SDK的支援產品
 description: 瞭解如何使用Experience Platform Web SDK新增產品或購物車的資料
 seo-description: 瞭解如何使用Experience Platform Web SDK新增產品或購物車的資料
 translation-type: tm+mt
-source-git-commit: e9fb726ddb84d7a08afb8c0f083a643025b0f903
+source-git-commit: 4bff4b20ccc1913151aa1783d5123ffbb141a7d0
 workflow-type: tm+mt
 source-wordcount: '1314'
 ht-degree: 5%
@@ -44,7 +44,7 @@ ht-degree: 5%
 以下是如何在SDK中設定這些 `Measures` 項目的範例。
 
 ```javascript
-alloy("event", {
+alloy("sendEvent", {
   "xdm":{
     "commerce":{
       "productViews":{
@@ -72,12 +72,12 @@ alloy("event", {
 以下是SDK中典型購買的範例。
 
 ```javascript
-alloy("event",{
+alloy("sendEvent",{
   "xdm":{
     "commerce":{
       "order":{
         "purchaseID":"123456789",
-        "currenceCode":"USD",
+        "currencyCode":"USD",
         "priceTotal":39.98,
         "payments":[
           {
@@ -100,7 +100,7 @@ alloy("event",{
         "SKU":"HT104",
         "name":"The Small Floppy Hat",
         "priceTotal":9.99,
-        "qauntity":1
+        "quantity":1
       }
     ]
   }
@@ -126,7 +126,7 @@ alloy("event",{
 `productView` 事件
 
 ```javascript
-alloy("event",{
+alloy("sendEvent",{
   "xdm":{
     "commerce":{
       "productViews":{
@@ -150,7 +150,7 @@ alloy("event",{
 `productView` 事件
 
 ```javascript
-alloy("event",{
+alloy("sendEvent",{
   "xdm":{
     "commerce":{
       "productListAdds":{
@@ -180,7 +180,7 @@ alloy("event",{
 `checkout` 事件
 
 ```javascript
-alloy("event",{
+alloy("sendEvent",{
   "xdm":{
     "commerce":{
       "checkouts":{
@@ -208,12 +208,12 @@ alloy("event",{
 `purchase` 事件
 
 ```javascript
-alloy("event",{
+alloy("sendEvent",{
   "xdm":{
     "commerce":{
       "order":{
         "purchaseID":"123456789",
-        "currenceCode":"USD",
+        "currencyCode":"USD",
         "priceTotal":39.98,
         "payments":[
           {
@@ -236,7 +236,7 @@ alloy("event",{
         "SKU":"HT104",
         "name":"The Small Floppy Hat",
         "priceTotal":9.99,
-        "qauntity":1
+        "quantity":1
       }
     ]
   }
