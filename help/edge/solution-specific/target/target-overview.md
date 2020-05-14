@@ -4,7 +4,7 @@ seo-title: Adobe Experience Platform Web SDK與使用Adobe Target
 description: 瞭解如何使用Adobe Target使用Experience Platform Web SDK來呈現個人化內容
 seo-description: 瞭解如何使用Adobe Target使用Experience Platform Web SDK來呈現個人化內容
 translation-type: tm+mt
-source-git-commit: 9d66e926ff86f23b3dea34f37d3bb16ba97eb0ef
+source-git-commit: 4bff4b20ccc1913151aa1783d5123ffbb141a7d0
 workflow-type: tm+mt
 source-wordcount: '651'
 ht-degree: 2%
@@ -42,7 +42,7 @@ AEP Web SDK可讓您的使用者自動在網路上，透過Adobe Target的VEC呈
 
 ```javascript
 alloy
-("event", 
+("sendEvent", 
   { 
   "renderDecisions": true, 
   "xdm": {
@@ -65,7 +65,7 @@ alloy
 
 ```javascript
 alloy
-  ("event", { 
+  ("sendEvent", { 
     decisionScopes: [
       "foo", "bar"], 
       "xdm": {
@@ -91,7 +91,7 @@ alloy
 AEP Web SDK提供一種功能，可讓您擷取VEC動作，而不需仰賴AEP Web SDK為您轉譯VEC動作。 傳送定義 `__view__` 為的事件 `decisionScopes`。
 
 ```javascript
-alloy("event", {
+alloy("sendEvent", {
   decisionScopes: [“__view__”,"foo", "bar"], 
   "xdm": { 
     "web": { 
