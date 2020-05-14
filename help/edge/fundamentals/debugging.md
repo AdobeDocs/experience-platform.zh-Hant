@@ -4,16 +4,15 @@ seo-title: Adobe Experience Platform Web SDK除錯
 description: 瞭解如何切換Experience Platform Web SDK除錯
 seo-description: 瞭解如何切換Experience Platform Web SDK除錯
 translation-type: tm+mt
-source-git-commit: 0cc6e233646134be073d20e2acd1702d345ff35f
+source-git-commit: e9fb726ddb84d7a08afb8c0f083a643025b0f903
+workflow-type: tm+mt
+source-wordcount: '323'
+ht-degree: 0%
 
 ---
 
 
-# （測試版）除錯
-
->[!IMPORTANT]
->
->Adobe Experience Platform Web SDK目前為測試版，並非所有使用者都能使用。 說明檔案和功能可能會有所變更。
+# 除錯
 
 啟用除錯時，SDK會將訊息輸出至瀏覽器主控台，以協助除錯您的實作並瞭解SDK的運作方式。 除錯也會針對您所設定的架構，產生伺服器端同步驗證所收集的資料。
 
