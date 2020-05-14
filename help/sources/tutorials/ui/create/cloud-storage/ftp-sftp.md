@@ -4,15 +4,18 @@ solution: Experience Platform
 title: 在UI中建立FTP或SFTP來源連接器
 topic: overview
 translation-type: tm+mt
-source-git-commit: 799445eca080175e2bffc49c6714f0c812b9bbea
+source-git-commit: 37a5f035023cee1fc2408846fb37d64b9a3fc4b6
 workflow-type: tm+mt
-source-wordcount: '513'
+source-wordcount: '529'
 ht-degree: 1%
 
 ---
 
 
 # 在UI中建立FTP或SFTP來源連接器
+
+>[!NOTE]
+>FTP和SFTP連接器為測試版。 功能和檔案可能會有所變更。
 
 Adobe Experience Platform中的來源連接器可讓您依計畫吸收外部來源的資料。 本教學課程提供使用平台使用者介面建立FTP或SFTP來源連接器的步驟。
 
