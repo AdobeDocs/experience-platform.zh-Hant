@@ -4,15 +4,18 @@ solution: Experience Platform
 title: 在UI中建立Oracle DB源連接器
 topic: overview
 translation-type: tm+mt
-source-git-commit: 2e10056a3dcbff1075d786327ea7a7ea2ccc776c
+source-git-commit: 2162c66b1664ecaaf0b609fe3f7ccf58c4a5d31d
 workflow-type: tm+mt
-source-wordcount: '476'
+source-wordcount: '490'
 ht-degree: 1%
 
 ---
 
 
 # 在UI中建立Oracle源連接器
+
+> [!NOTE]
+> Oracle連接器處於測試階段。 功能和檔案可能會有所變更。
 
 Adobe Experience Platform中的來源連接器可讓您依計畫吸收外部來源的資料。 本教程提供了使用平台用戶介面建立Oracle源連接器的步驟。
 
