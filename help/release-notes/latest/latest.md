@@ -5,10 +5,10 @@ doc-type: release notes
 last-update: May 13, 2020
 author: crhoades, ens28527
 translation-type: tm+mt
-source-git-commit: 53d72e6460c1ab3bc4459d8e108630f652b62dd6
+source-git-commit: e6731b54840eaf9dd2cdaeff5205e14277e78a3b
 workflow-type: tm+mt
-source-wordcount: '961'
-ht-degree: 5%
+source-wordcount: '1026'
+ht-degree: 4%
 
 ---
 
@@ -104,6 +104,7 @@ Experience Platform提供REST風格的API和互動式UI，讓您輕鬆為各種�
 | ------- | ----------- |
 | 雲端儲存系統的其他API和UI支援 | Azure檔案儲存的新來源連接器。 |
 | 其他資料庫的API和UI支援 | Azure資料總管、IBM DB2和Oracle DB的新來源連接器。 |
+| Adobe Audience Manager提供Experience Platform資料共用功能 | Audience Manager連接器的布建程式已更新。 「即時客戶個人檔案」的Audience Manager資料集現在預設為停用。 您可以手動選擇要提升至描述檔的資料集。 新的預設設定不具可回溯性，而且只會影響新Audience Manager連接器的布建。 請參閱「資料集使用 [指南」中的詳細資訊](../../catalog/datasets/user-guide.md)。 |
 
 **已知問題**
 
