@@ -4,16 +4,15 @@ seo-title: 使用Adobe Experience Platform Web SDK擷取資料庫資訊
 description: 瞭解如何擷取載入網站的資料庫相關資訊
 seo-description: 瞭解如何透過Adobe Experience Cloud SDK自動收集擷取載入網站的程式庫相關資訊
 translation-type: tm+mt
-source-git-commit: 0cc6e233646134be073d20e2acd1702d345ff35f
+source-git-commit: e9fb726ddb84d7a08afb8c0f083a643025b0f903
+workflow-type: tm+mt
+source-wordcount: '104'
+ht-degree: 0%
 
 ---
 
 
-# （測試版）擷取資料庫資訊
-
->[!IMPORTANT]
->
->Adobe Experience Platform Web SDK目前為測試版，並非所有使用者都能使用。 說明檔案和功能可能會有所變更。
+# 檢索庫資訊
 
 存取您載入網站之資料庫後的部分詳細資訊通常很實用。 要執行此操作，請按如 `getLibraryInfo` 下方式執行命令：
 
