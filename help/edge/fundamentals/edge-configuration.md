@@ -4,16 +4,15 @@ seo-title: Experience Platform Web SDK的Edge組態
 description: '瞭解如何設定Experience Platform Edge Network。 '
 seo-description: '瞭解如何設定Experience Platform Edge Network。 '
 translation-type: tm+mt
-source-git-commit: efbc080117754cee01f21c9f9ec409204648e757
+source-git-commit: e9fb726ddb84d7a08afb8c0f083a643025b0f903
+workflow-type: tm+mt
+source-wordcount: '883'
+ht-degree: 2%
 
 ---
 
 
-# （測試版）邊緣設定
-
->[!IMPORTANT]
->
->Adobe Experience Platform Web SDK目前為測試版，並非所有使用者都能使用。 文件和功能可能會有所變更。
+# Edge Configuration
 
 Adobe Experience Platfrom Web SDK的設定分為兩個位置。 SDK [中的configure命令](configuring-the-sdk.md) ，可控制用戶端上必須處理的事項，例如 `edgeDomain`。 邊緣設定可處理SDK的所有其他設定。 當請求傳送至Adobe Experience Platform Edge Network時，會使 `edgeConfigId` 用此參考伺服器端組態。 這可讓您更新設定，而不需在網站上變更程式碼。
 
@@ -39,17 +38,17 @@ SDK中使用的ID是指 `edgeConfigId` 定配置和環境的複合ID。 如果�
 
 以下是環境可用的每個設定。 大部分區域都可以啟用或禁用。 停用時，您的設定會儲存，但並未作用中。
 
-#### [!UICONTROL Identity]
+#### [!UICONTROL 身份]
 
 身分區段是唯一永遠開啟的區段。 它有兩個可用的設定： ID同步和ID同步容器ID。
 
 ![配置UI的標識部分](../../assets/edge_configuration_identity.png)
 
-##### [!UICONTROL ID Sync Enabled]
+##### [!UICONTROL 啟用ID同步]
 
 控制SDK是否與第三方合作夥伴執行身分同步。
 
-##### [!UICONTROL ID Sync Container ID]
+##### [!UICONTROL ID同步容器ID]
 
 ID同步可分組至容器，以允許在不同時間執行不同的ID同步。 這會控制為指定的設定ID執行哪個ID同步的容器。
 
@@ -59,17 +58,17 @@ ID同步可分組至容器，以允許在不同時間執行不同的ID同步。 
 
 ![Adobe Experience Platform設定區塊](../../assets/edge_configuration_aep.png)
 
-##### [!UICONTROL Sandbox]
+##### [!UICONTROL 沙盒]
 
 沙盒是Adobe Experience Platform中的位置，可讓客戶將資料和建置彼此隔離。 Sandboxs檔案中提供了如何運作的詳細 [資訊](../../sandboxes/home.md)。
 
-##### [!UICONTROL Streaming Inlet]
+##### [!UICONTROL 串流入口]
 
 串流入口是Adobe Experience Platform中的HTTP來源。 這些是在Adobe Experience Platform的 [!UICONTROL Sources] 標籤下建立為HTTP API。
 
-##### [!UICONTROL Event Dataset]
+##### [!UICONTROL 事件資料集]
 
-邊緣配置支援將資料發送到具有類模式的資料集 [!UICONTROL Experience Event]。
+邊緣設定支援將資料傳送至具有類別 [!UICONTROL Experience Event架構的資料集]。
 
 #### Adobe Target
 
@@ -81,21 +80,21 @@ ID同步可分組至容器，以允許在不同時間執行不同的ID同步。 
 >
 >與客戶端代碼關聯的組織必須與建立配置ID的組織匹配。
 
-##### [!UICONTROL Client Code]
+##### [!UICONTROL 用戶端代碼]
 
-目標帳戶的唯一ID。 若要尋找此項，您可導覽至 [!UICONTROL Adobe Target] > [!UICONTROL Setup]> [!UICONTROL Implementation] > [!UICONTROL edit settings] >按鈕旁，以 [!UICONTROL download][!UICONTROL at.js] 取得或 [!UICONTROL mbox.js]
+目標帳戶的唯一ID。 若要找到此項目，您可導覽至 [!UICONTROL Adobe Target] > [!UICONTROL Setup][!UICONTROL Implementation] >下一個要下載Button的Adobe Target. [!UICONTROL Js或Mbox.js的Adobe Target.Js.js的Adobe Button，以進行下載。]
 
-##### [!UICONTROL Property Token]
+##### [!UICONTROL 屬性Token]
 
 Target可讓客戶透過使用屬性來控制權限。 如需詳細資訊，請參 [閱Target檔案的](https://docs.adobe.com/content/help/en/target/using/administer/manage-users/enterprise/properties-overview.html) 「企業權限」區段。
 
-屬性Token可在 [!UICONTROL Adobe Target] > [!UICONTROL setup] > [UICONTROL屬性中找到]
+屬性Token可在 [!UICONTROL Adobe Target] >設 [!UICONTROL 定] > [UICONTROL屬性中找到]
 
-##### [!UICONTROL Target Environment ID]
+##### [!UICONTROL 目標環境ID]
 
 [Adobe](https://docs.adobe.com/content/help/en/target/using/administer/hosts.html) Target中的環境可協助您管理所有開發階段的實作。 此設定指定要與每個環境一起使用的環境。
 
-Adobe建議您對每個、和邊緣組態環境 `dev`設定 `stage`此 `prod` 項，以保持簡單。 不過，如果您已經定義 [!UICONTROL Adobe Target environments] ，則可使用這些功能。
+Adobe建議您對每個、和邊緣組態環境 `dev`設定 `stage`此 `prod` 項，以保持簡單。 不過，如果您已定義 [!UICONTROL Adobe Target環境] ，則可使用這些環境。
 
 #### Adobe Audience Manager
 
@@ -103,11 +102,11 @@ Adobe建議您對每個、和邊緣組態環境 `dev`設定 `stage`此 `prod` �
 
 ![Adobe Audience Manage設定區塊](../../assets/edge_configuration_aam.png)
 
-##### [!UICONTROL Cookie Destinations Enabled]
+##### [!UICONTROL Cookie目標已啟用]
 
 允許SDK透過Audience Manager的 [Cookie目的地](https://docs.adobe.com/content/help/en/audience-manager/user-guide/features/destinations/custom-destinations/create-cookie-destination.html) ，共用區段資訊。
 
-##### [!UICONTROL URL Destinations Enabled]
+##### [!UICONTROL 啟用URL目標]
 
 允許SDK透過 [URL目標分享區段資訊](https://docs.adobe.com/content/help/en/audience-manager/user-guide/features/destinations/custom-destinations/create-url-destination.html)。 這些設定在Audience Manager中。
 
@@ -117,6 +116,6 @@ Adobe建議您對每個、和邊緣組態環境 `dev`設定 `stage`此 `prod` �
 
 ![Adobe Analytics設定區塊](../../assets/edge_configuration_aa.png)
 
-##### [!UICONTROL Report Suite ID]
+##### [!UICONTROL 報告套裝 ID]
 
-報表套裝可在Adobe Analytics管理員區段的下方找到 [!UICONTROL Admin > ReportSuites]。 如果指定多個報表套裝，則資料會複製到每個報表套裝。
+報表套裝位於「管理員>報表套裝」下的「Adobe Analytics管 [!UICONTROL 理員」區段]。 如果指定多個報表套裝，則資料會複製到每個報表套裝。
