@@ -4,19 +4,19 @@ seo-title: 合併Adobe Experience Platform Web SDK事件資料
 description: 瞭解如何合併Experience Platform Web SDK事件資料
 seo-description: 瞭解如何合併Experience Platform Web SDK事件資料
 translation-type: tm+mt
-source-git-commit: 767f0e1bfdfcc898313b546c804ba1287f2aec50
+source-git-commit: e9fb726ddb84d7a08afb8c0f083a643025b0f903
 workflow-type: tm+mt
-source-wordcount: '444'
-ht-degree: 2%
+source-wordcount: '436'
+ht-degree: 0%
 
 ---
 
 
-# （測試版）合併事件資料
+# 合併事件資料
 
 >[!IMPORTANT]
 >
->Adobe Experience Platform Web SDK目前為測試版，並非所有使用者都能使用。 文件和功能可能會有所變更。
+>這項功能仍在開發中，因此並非所有解決方案都能合併這些資料。
 
 有時候，並非所有資料都可在事件發生時使用。 您可能想要擷取您所擁 _有的資料_ ，如此當使用者關閉瀏覽器時，就不會遺失資料。 另一方面，您也可能會包含任何日後可用的資料。
 
