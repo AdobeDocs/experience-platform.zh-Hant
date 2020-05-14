@@ -4,20 +4,19 @@ seo-title: 使用Adobe Experience Platform Web SDK的支援產品
 description: 瞭解如何使用Experience Platform Web SDK新增產品或購物車的資料
 seo-description: 瞭解如何使用Experience Platform Web SDK新增產品或購物車的資料
 translation-type: tm+mt
-source-git-commit: 0cc6e233646134be073d20e2acd1702d345ff35f
+source-git-commit: e9fb726ddb84d7a08afb8c0f083a643025b0f903
+workflow-type: tm+mt
+source-wordcount: '1314'
+ht-degree: 5%
 
 ---
 
 
-# （測試版）產品
-
->[!IMPORTANT]
->
->Adobe Experience Platform Web SDK目前為測試版，並非所有使用者都能使用。 說明檔案和功能可能會有所變更。
+# 產品
 
 如果您的網站上有產品，則這是您可能想要傳送的預設項目集，以啟用Adobe的最多功能。 雖然這是一個建議，但它從一開始就提供了一組非常強大的資料。
 
-本檔案使用「 [ExperienceEvent商務詳細資訊](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/context/experienceevent-commerce.schema.md) 」混合。 混 `commerce` 合蛋白分為兩部分：對象 `commerce` 和數 `productListItems` 組。 該對 `commerce` 像可讓您指示陣列正在執行哪些 `productListItems` 操作。
+本檔案使用「 [ExperienceEvent商務詳細資訊](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/context/experienceevent-commerce.schema.md) 」混合。 混 `commerce` 合蛋白分為兩部分： 對象 `commerce` 和數 `productListItems` 組。 該對 `commerce` 像可讓您指示陣列正在執行哪些 `productListItems` 操作。
 
 >[!Tip]
 >如果您熟悉Adobe Analytics，則與 `commerce` 變數最密切相 `events` 關。 變數 `productListItems` 與變數的關聯性更 `products` 密切。
@@ -58,7 +57,7 @@ alloy("event", {
 
 商務物件也有一個特殊欄位，用於收集名為的訂單詳細資訊 `order`。
 
-| **訂購** | **選項** | **建議** | **說明** |
+| **訂單** | **選項** | **建議** | **說明** |
 |---|---|---|---|
 | [currencyCode](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/data/order.schema.md#xdmcurrencycode) |  |  | 訂 [單合計的](https://en.wikipedia.org/wiki/ISO_4217) ISO 4217貨幣。 |
 | [payments[paymentItems]](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/data/order.schema.md#xdmpayments) |  |  | 訂單的付款清單。 paymentItem [包含](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/data/paymentitem.schema.md#payment-item-schema) 下列項目。 |
