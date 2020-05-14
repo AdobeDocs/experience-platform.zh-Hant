@@ -4,15 +4,18 @@ solution: Experience Platform
 title: 在UI中建立Azure檔案儲存來源連接器
 topic: overview
 translation-type: tm+mt
-source-git-commit: aa1c6cb0f5702cfe444cb2046e4460e404f13e57
+source-git-commit: b8ebe57482fdd10ccd8bdcf1a86009a373ea579e
 workflow-type: tm+mt
-source-wordcount: '503'
+source-wordcount: '517'
 ht-degree: 0%
 
 ---
 
 
 # 在UI中建立Azure檔案儲存來源連接器
+
+>[!NOTE]
+>Azure表格儲存已進行測試。 功能和檔案可能會有所變更。
 
 Adobe Experience Platform中的來源連接器可讓您依計畫吸收外部來源的資料。 本教學課程提供使用平台使用者介面驗證Azure檔案儲存來源連接器的步驟。
 
