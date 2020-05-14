@@ -4,19 +4,15 @@ seo-title: 設定Adobe Experience Platform Web SDK
 description: 瞭解如何設定Experience Platform Web SDK
 seo-description: 瞭解如何設定Experience Platform Web SDK
 translation-type: tm+mt
-source-git-commit: 767f0e1bfdfcc898313b546c804ba1287f2aec50
+source-git-commit: e9fb726ddb84d7a08afb8c0f083a643025b0f903
 workflow-type: tm+mt
-source-wordcount: '765'
-ht-degree: 12%
+source-wordcount: '739'
+ht-degree: 11%
 
 ---
 
 
-# （測試版）設定SDK
-
->[!IMPORTANT]
->
->Adobe Experience Platform Web SDK目前為測試版，並非所有使用者都能使用。 文件和功能可能會有所變更。
+# 設定SDK
 
 SDK的設定是使用命令 `configure` 完成。
 
