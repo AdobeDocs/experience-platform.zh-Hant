@@ -4,7 +4,7 @@ seo-title: Adobe Experience Platform Web SDK轉換個人化內容
 description: 瞭解如何使用Experience Platform Web SDK呈現個人化內容
 seo-description: 瞭解如何使用Experience Platform Web SDK呈現個人化內容
 translation-type: tm+mt
-source-git-commit: 4bea14d18ce119bdec0d428f885d240f92244cfc
+source-git-commit: 4bff4b20ccc1913151aa1783d5123ffbb141a7d0
 workflow-type: tm+mt
 source-wordcount: '236'
 ht-degree: 0%
@@ -21,7 +21,7 @@ Adobe Experience Platform Web SDK支援查詢Adobe的個人化解決方案，包
 當您將事件傳送至伺服器並設定為事件選項時，SDK會 `renderDecisions` 自 `true` 動轉譯個人化內容。
 
 ```javascript
-alloy("event", {
+alloy("sendEvent", {
   "renderDecisions": true,
   "xdm": {
     "commerce": {
@@ -43,7 +43,7 @@ alloy("event", {
 您可以使用，請求將決策清單作為命令上的承諾 `event` 返回 `scopes`。 範圍是一個字串，可讓個人化解決方案知道您想要哪個決策。
 
 ```javascript
-alloy("event",{
+alloy("sendEvent",{
     xdm:{...},
     scopes:['demo-1', 'demo-2']
   }).then(function(result){
