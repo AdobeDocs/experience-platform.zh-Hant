@@ -4,12 +4,18 @@ solution: Experience Platform
 title: 在Azure HDInsights上使用Flow Service API建立Apache Spark連接器
 topic: overview
 translation-type: tm+mt
-source-git-commit: 2fd9f38673750af705021d1e8f160be9304039a0
+source-git-commit: 37a5f035023cee1fc2408846fb37d64b9a3fc4b6
+workflow-type: tm+mt
+source-wordcount: '614'
+ht-degree: 1%
 
 ---
 
 
 # 在Azure HDInsights上使用Flow Service API建立Apache Spark連接器
+
+>[!NOTE]
+>Apache Spark on Azure HDInsights連接器為測試版。 功能和檔案可能會有所變更。
 
 Flow Service用於收集和集中Adobe Experience Platform內不同來源的客戶資料。 該服務提供用戶介面和REST風格的API，所有支援的源都可從中連接。
 
@@ -19,8 +25,8 @@ Flow Service用於收集和集中Adobe Experience Platform內不同來源的客�
 
 本指南需要有效瞭解Adobe Experience Platform的下列元件：
 
-* [來源](../../../../home.md):Experience Platform可讓您從各種來源擷取資料，同時讓您能夠使用平台服務來建構、標示和增強傳入資料。
-* [沙盒](../../../../../sandboxes/home.md):Experience Platform提供虛擬沙盒，可將單一Platform實例分割為不同的虛擬環境，以協助開發和發展數位體驗應用程式。
+* [來源](../../../../home.md): Experience Platform可讓您從各種來源擷取資料，同時讓您能夠使用平台服務來建構、標示和增強傳入資料。
+* [沙盒](../../../../../sandboxes/home.md): Experience Platform提供虛擬沙盒，可將單一Platform實例分割為不同的虛擬環境，以協助開發和發展數位體驗應用程式。
 
 以下各節提供您需要瞭解的其他資訊，以便使用Flow Service API成功連線至Spark。
 
@@ -45,7 +51,7 @@ Flow Service用於收集和集中Adobe Experience Platform內不同來源的客�
 
 若要呼叫平台API，您必須先完成驗證教 [學課程](../../../../../tutorials/authentication.md)。 完成驗證教學課程後，所有Experience Platform API呼叫中每個必要標題的值都會顯示在下方：
 
-* 授權：生產者 `{ACCESS_TOKEN}`
+* 授權： 生產者 `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
 * x-gw-ims-org-id: `{IMS_ORG}`
 
@@ -102,7 +108,7 @@ curl -X POST \
 | `auth.params.host` | Spark伺服器的主機。 |
 | `auth.params.username` | 與Spark連線關聯的使用者名稱。 |
 | `auth.params.password` | 與Spark連線關聯的密碼。 |
-| `connectionSpec.id` | Spark連線規格ID: `6a8d82bc-1caf-45d1-908d-cadabc9d63a6`。 |
+| `connectionSpec.id` | Spark連線規格ID: `6a8d82bc-1caf-45d1-908d-cadabc9d63a6`. |
 
 **回應**
 
