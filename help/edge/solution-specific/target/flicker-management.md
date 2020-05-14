@@ -1,11 +1,17 @@
 ---
-source-git-commit: e00dc3e8dec0117617081ca4fc9ffa752b01b3b7
-workflow-type: tm+mt
+title: 管理Flicker以提供個人化體驗
+seo-title: Adobe Experience Platform Web SDK管理Flicker
+description: 瞭解如何管理使用者體驗的閃爍
+seo-description: 瞭解如何使用Experience Platform Web SDK屬性來管理Flicker
 translation-type: tm+mt
-source-wordcount: '459'
+source-git-commit: 4bea14d18ce119bdec0d428f885d240f92244cfc
+workflow-type: tm+mt
+source-wordcount: '491'
 ht-degree: 0%
 
 ---
+
+
 # 管理閃爍
 
 當嘗試轉譯個人化內容時，SDK必須確保不會閃爍。 Flicker，也稱為FOOC（原始內容的Flash），是在測試／個人化期間，原始內容在替代項目出現之前先短暫顯示。 SDK會嘗試將CSS樣式套用至頁面的元素，以確保這些元素會隱藏，直到個人化內容成功呈現為止。
