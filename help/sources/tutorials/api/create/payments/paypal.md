@@ -4,12 +4,18 @@ solution: Experience Platform
 title: 使用Flow Service API建立PayPal連接器
 topic: overview
 translation-type: tm+mt
-source-git-commit: 34334a6ff5a3f0c16ad32b4d0438d4ee8513372f
+source-git-commit: 37a5f035023cee1fc2408846fb37d64b9a3fc4b6
+workflow-type: tm+mt
+source-wordcount: '601'
+ht-degree: 1%
 
 ---
 
 
 # 使用Flow Service API建立PayPal連接器
+
+>[!NOTE]
+>PayPal連接器為beta版。 功能和檔案可能會有所變更。
 
 Flow Service用於收集和集中Adobe Experience Platform內不同來源的客戶資料。 該服務提供用戶介面和REST風格的API，所有支援的源都可從中連接。
 
@@ -19,8 +25,8 @@ Flow Service用於收集和集中Adobe Experience Platform內不同來源的客�
 
 本指南需要有效瞭解Adobe Experience Platform的下列元件：
 
-* [來源](../../../../home.md):Experience Platform可讓您從各種來源擷取資料，同時讓您能夠使用平台服務來建構、標示和增強傳入資料。
-* [沙盒](../../../../../sandboxes/home.md):Experience Platform提供虛擬沙盒，可將單一Platform實例分割為不同的虛擬環境，以協助開發和發展數位體驗應用程式。
+* [來源](../../../../home.md): Experience Platform可讓您從各種來源擷取資料，同時讓您能夠使用平台服務來建構、標示和增強傳入資料。
+* [沙盒](../../../../../sandboxes/home.md): Experience Platform提供虛擬沙盒，可將單一Platform實例分割為不同的虛擬環境，以協助開發和發展數位體驗應用程式。
 
 以下各節提供您必須知道的其他資訊，以便使用Flow Service API成功連線至PayPal。
 
@@ -30,7 +36,7 @@ Flow Service用於收集和集中Adobe Experience Platform內不同來源的客�
 
 | 憑證 | 說明 |
 | ---------- | ----------- |
-| 主機 | PayPal例項的URL。 (預設值：api.sandbox.paypal.com)。 |
+| 主機 | PayPal例項的URL。 (預設值： api.sandbox.paypal.com)。 |
 | 用戶端ID | 與您的PayPal應用程式相關聯的用戶端ID。 |
 | 用戶端密碼 | 與您的PayPal應用程式相關聯的用戶端密碼。 |
 | 連接規範ID | 建立連線所需的唯一識別碼。 PayPal的連線規格ID為： `221c7626-58f6-4eec-8ee2-042b0226f03b` |
@@ -45,7 +51,7 @@ Flow Service用於收集和集中Adobe Experience Platform內不同來源的客�
 
 若要呼叫平台API，您必須先完成驗證教 [學課程](../../../../../tutorials/authentication.md)。 完成驗證教學課程後，所有Experience Platform API呼叫中每個必要標題的值都會顯示在下方：
 
-* 授權：生產者 `{ACCESS_TOKEN}`
+* 授權： 生產者 `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
 * x-gw-ims-org-id: `{IMS_ORG}`
 
@@ -102,7 +108,7 @@ curl -X POST \
 | `auth.params.host` | PayPal例項的URL。 |
 | `auth.params.clientId` | 與您的PayPal例項關聯的用戶端ID。 |
 | `auth.params.clientSecret` | 與您的PayPal例項關聯的用戶端密碼。 |
-| `connectionSpec.id` | PayPal連接規範ID: `221c7626-58f6-4eec-8ee2-042b0226f03b`。 |
+| `connectionSpec.id` | PayPal連接規範ID: `221c7626-58f6-4eec-8ee2-042b0226f03b`. |
 
 **回應**
 
