@@ -4,15 +4,15 @@ solution: Experience Platform
 title: FTP和SFTP連接器
 topic: overview
 translation-type: tm+mt
-source-git-commit: 799445eca080175e2bffc49c6714f0c812b9bbea
+source-git-commit: b8ebe57482fdd10ccd8bdcf1a86009a373ea579e
 workflow-type: tm+mt
-source-wordcount: '182'
+source-wordcount: '183'
 ht-degree: 0%
 
 ---
 
 
-# FTP和SFTP連接器
+# （測試版）FTP和SFTP連接器
 
 Adobe Experience Platform為AWS、Google Cloud Platform和Azure等雲端供應商提供原生連接功能。 您可以將這些系統的資料匯入平台。
 
