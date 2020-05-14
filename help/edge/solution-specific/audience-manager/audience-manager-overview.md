@@ -4,19 +4,15 @@ seo-title: 使用Adobe Experience Platform Web SDK將資料傳送至Adobe Audien
 description: 瞭解如何使用Experience Platform Web SDK將資料傳送至Adobe Audience Manager
 seo-description: 瞭解如何使用Experience Platform Web SDK將資料傳送至Adobe Audience Manager
 translation-type: tm+mt
-source-git-commit: dfe9ea2889b3ba2e74f8b10296bfb2d123ad9d57
+source-git-commit: 4bea14d18ce119bdec0d428f885d240f92244cfc
 workflow-type: tm+mt
-source-wordcount: '318'
-ht-degree: 2%
+source-wordcount: '292'
+ht-degree: 0%
 
 ---
 
 
-# （測試版）Experience Platform Edge Network上的Audience Manager
-
->[!IMPORTANT]
->
->Adobe Experience Platform Web SDK目前為測試版，並非所有使用者都能使用。 文件和功能可能會有所變更。
+# Experience Platform Edge網路上的Audience Manager
 
 Adobe Experience Platform Web SDK已與Adobe Audience Manager整合，並支援從Audience Manager、Cookie和URL目的地傳送及接收資料，以及ID同步。
 
