@@ -4,15 +4,21 @@ seo-title: 安裝SDK的Adobe Experience Platform Web SDK
 description: 瞭解如何安裝Experience Platform Web SDK
 seo-description: 瞭解如何安裝Experience Platform Web SDK
 translation-type: tm+mt
-source-git-commit: e9fb726ddb84d7a08afb8c0f083a643025b0f903
+source-git-commit: 5998473c665cb80ffddc092847533f51d81cf581
 workflow-type: tm+mt
-source-wordcount: '498'
+source-wordcount: '566'
 ht-degree: 0%
 
 ---
 
 
 # 安裝SDK
+
+AEP網頁SDK可在CDN上取用，供您使用。 您可以參考此檔案或下載它，並在您自己的基礎架構上代管它。 它提供微型和非微型版本。 非精簡版本有助於除錯。
+
+[https://cdn1.adoberesources.net/alloy/1.0.0/alloy.min.js](https://cdn1.adoberesources.net/alloy/1.0.0/alloy.min.js)[https://cdn1.adoberesources.net/alloy/1.0.0/alloy.js](https://cdn1.adoberesources.net/alloy/1.0.0/alloy.js)
+
+## 新增程式碼
 
 實作Adobe Experience Platform Web SDK的第一步是盡可能將下列「基本程式碼」複製並貼在HTML的標 `<head>` 記中：
 
@@ -23,7 +29,7 @@ ht-degree: 0%
   function(i,l){n[o].q.push([i,l,u])})},n[o].q=[])})}
   (window,["alloy"]);
 </script>
-<script src="alloy.js" async></script>
+<script src="https://cdn1.adoberesources.net/alloy/1.0.0/alloy.min.js" async></script>
 ```
 
 基本代碼建立名為的全局函式 `alloy`。 使用此函式與SDK互動。 如果您想要為全域函式命名其他名稱，可以按如下方 `alloy` 式更改名稱：
@@ -35,7 +41,7 @@ ht-degree: 0%
   function(i,l){n[o].q.push([i,l,u])})},n[o].q=[])})}
   (window,["mycustomname"]);
 </script>
-<script src="alloy.js" async></script>
+<script src="https://cdn1.adoberesources.net/alloy/1.0.0/alloy.min.js" async></script>
 ```
 
 在此範例中，全域函式會重新命 `mycustomname`名，而非 `alloy`。
@@ -80,5 +86,5 @@ ht-degree: 0%
   function(i,l){n[o].q.push([i,l,u])})},n[o].q=[])})}
   (window,["alloy"]);
 </script>
-<script src="alloy.js"></script>
+<script src="https://cdn1.adoberesources.net/alloy/1.0.0/alloy.min.js"></script>
 ```
