@@ -4,12 +4,15 @@ solution: Experience Platform
 title: Google BigQuery連接器
 topic: overview
 translation-type: tm+mt
-source-git-commit: 8a8e0f48cb4c5cad44e808a740ad70f2d0ea3332
+source-git-commit: 45ce6e876a42c5594ae4b7787757e5db7024a22f
+workflow-type: tm+mt
+source-wordcount: '168'
+ht-degree: 0%
 
 ---
 
 
-# Google BigQuery連接器
+# （測試版）Google BigQuery連接器
 
 Adobe Experience Platform可讓您從外部來源擷取資料，同時提供您使用平台服務來建構、標示及增強傳入資料的能力。 您可以從多種來源（例如Adobe應用程式、雲端儲存空間、資料庫等）擷取資料。
 
