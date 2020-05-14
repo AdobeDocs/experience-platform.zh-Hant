@@ -4,16 +4,15 @@ seo-title: 使用Adobe Experience Platform Web SDK將資料傳送至Adobe Analyt
 description: 瞭解如何使用Experience Platform Web SDK將資料傳送至Adobe Analytics
 seo-description: 瞭解如何使用Experience Platform Web SDK將資料傳送至Adobe Analytics
 translation-type: tm+mt
-source-git-commit: 0cc6e233646134be073d20e2acd1702d345ff35f
+source-git-commit: e9fb726ddb84d7a08afb8c0f083a643025b0f903
+workflow-type: tm+mt
+source-wordcount: '206'
+ht-degree: 0%
 
 ---
 
 
-# （測試版）傳送資料至Adobe Analytics
-
->[!IMPORTANT]
->
->Adobe Experience Platform Web SDK目前為測試版，並非所有使用者都能使用。 說明檔案和功能可能會有所變更。
+# 傳送資料至Adobe Analytics
 
 Adobe Experience Platform Web SDK可傳送資料至Adobe Analytics。 如此可轉譯 `xdm` 為Adobe Analytics可使用的格式。
 
