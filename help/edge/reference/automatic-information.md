@@ -4,16 +4,15 @@ seo-title: Adobe Experience Platform Web SDK自動收集的資訊
 description: Adobe Experience Cloud SDK自動收集的每項資訊說明
 seo-description: Adobe Experience Cloud SDK自動收集的每項資訊說明
 translation-type: tm+mt
-source-git-commit: 0cc6e233646134be073d20e2acd1702d345ff35f
+source-git-commit: e9fb726ddb84d7a08afb8c0f083a643025b0f903
+workflow-type: tm+mt
+source-wordcount: '382'
+ht-degree: 5%
 
 ---
 
 
-# （測試版）自動收集的資訊
-
->[!IMPORTANT]
->
->Adobe Experience Platform Web SDK目前為測試版，並非所有使用者都能使用。 說明檔案和功能可能會有所變更。
+# 自動收集的資訊
 
 Adobe Experience Cloud SDK會自動收集多項資訊，毋需任何特殊設定。 不過，如果需要，可使用命令中的選項 `context` 禁用此信 `configure` 息。 [請參閱設定SDK](../fundamentals/configuring-the-sdk.md)。 以下是這些資訊的清單。 括弧中的名稱表示配置上下文時要使用的字串。
 
@@ -33,7 +32,7 @@ Adobe Experience Cloud SDK會自動收集多項資訊，毋需任何特殊設定
 
 | **裝載中的路徑：** | **可能的值:** |
 | --------------------------------------- | ------------------------- |
-| `events[].xdm.device.screenOrientation` | `landscape`或 `portrait` |
+| `events[].xdm.device.screenOrientation` | `landscape` 或 `portrait` |
 
 畫面的方向。
 
@@ -119,7 +118,7 @@ Adobe Experience Cloud SDK會自動收集多項資訊，毋需任何特殊設定
 | ------------------------ | -------------------------- |
 | `events[].xdm.timestamp` | `2019-08-07T22:47:17.129Z` |
 
-事件的時間戳記。無法移除此部分的內容。
+事件的時間戳記。  無法移除此部分的內容。
 
 UTC時間戳記，適用於簡化的ISO擴充格式 [ISO 8601的使用者](https://tools.ietf.org/html/rfc3339#section-5.6)。
 
