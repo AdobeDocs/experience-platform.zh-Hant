@@ -4,12 +4,15 @@ solution: Experience Platform
 title: 通用OData連接器
 topic: overview
 translation-type: tm+mt
-source-git-commit: e1c92c010ee718138d4234abcb7b9f2f75187b8c
+source-git-commit: 45ce6e876a42c5594ae4b7787757e5db7024a22f
+workflow-type: tm+mt
+source-wordcount: '155'
+ht-degree: 0%
 
 ---
 
 
-# 通用OData連接器
+# （測試版）通用OData連接器
 
 Adobe Experience Platform可讓您從外部來源擷取資料，同時提供您使用平台服務來建構、標示及增強傳入資料的能力。 您可以從多種來源（例如Adobe應用程式、雲端儲存空間、資料庫等）擷取資料。
 
