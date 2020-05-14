@@ -4,15 +4,18 @@ solution: Experience Platform
 title: 在UI中建立Azure表格儲存來源連接器
 topic: overview
 translation-type: tm+mt
-source-git-commit: 899c4fbe8a1bb3fef24f606e77f13ef5184d1eda
+source-git-commit: 2162c66b1664ecaaf0b609fe3f7ccf58c4a5d31d
 workflow-type: tm+mt
-source-wordcount: '508'
+source-wordcount: '524'
 ht-degree: 0%
 
 ---
 
 
 # 在UI中建立Azure表格儲存來源連接器
+
+>[!NOTE]
+>Azure表格儲存連接器已測試。 功能和檔案可能會有所變更。
 
 Adobe Experience Platform中的來源連接器可讓您依計畫吸收外部來源的資料。 本教學課程提供使用平台使用者介面建立Azure表格儲存（以下稱為「ATS」）來源連接器的步驟。
 
