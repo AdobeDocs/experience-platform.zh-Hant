@@ -4,16 +4,15 @@ seo-title: 安裝SDK的Adobe Experience Platform Web SDK
 description: 瞭解如何安裝Experience Platform Web SDK
 seo-description: 瞭解如何安裝Experience Platform Web SDK
 translation-type: tm+mt
-source-git-commit: 0cc6e233646134be073d20e2acd1702d345ff35f
+source-git-commit: e9fb726ddb84d7a08afb8c0f083a643025b0f903
+workflow-type: tm+mt
+source-wordcount: '498'
+ht-degree: 0%
 
 ---
 
 
-# （測試版）安裝SDK
-
->[!IMPORTANT]
->
->Adobe Experience Platform Web SDK目前為測試版，並非所有使用者都能使用。 說明檔案和功能可能會有所變更。
+# 安裝SDK
 
 實作Adobe Experience Platform Web SDK的第一步是盡可能將下列「基本程式碼」複製並貼在HTML的標 `<head>` 記中：
 
