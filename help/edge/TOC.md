@@ -3,9 +3,9 @@ product: experience-platform
 audience: user
 user-guide-title: Adobe Experience Platform Edge網路說明
 translation-type: tm+mt
-source-git-commit: e00dc3e8dec0117617081ca4fc9ffa752b01b3b7
+source-git-commit: 4bea14d18ce119bdec0d428f885d240f92244cfc
 workflow-type: tm+mt
-source-wordcount: '91'
+source-wordcount: '85'
 ht-degree: 12%
 
 ---
@@ -16,7 +16,6 @@ ht-degree: 12%
 * [Edge Network概觀](home.md)
 * 快速入門 {#get-started}
    * [Launch快速入門](getting-started/quick-start-with-launch.md)
-   * [部署所有產品](getting-started/deploying-all-products.md)
 * 基礎 {#fundamentals}
    * [安裝SDK](fundamentals/installing-the-sdk.md)
    * [執行命令](fundamentals/executing-commands.md)
@@ -28,7 +27,6 @@ ht-degree: 12%
    * [與多個屬性互動](fundamentals/interacting-with-multiple-properties.md)
    * [呈現個人化內容](fundamentals/rendering-personalization-content.md)
    * [支援許可](fundamentals/supporting-consent.md)
-   * [支援應用程式內瀏覽器](fundamentals/supporting-in-app-browsers.md)
    * [身份](fundamentals/identity.md)
 * 實作內容 {#implement}
    * [產品](what-to-implement/commerce.md)
