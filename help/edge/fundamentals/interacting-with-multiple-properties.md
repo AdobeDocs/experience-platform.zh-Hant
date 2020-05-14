@@ -4,18 +4,17 @@ seo-title: Adobe Experience Platform Web SDK與多個屬性互動
 description: 瞭解如何與多個Experience Platform網頁SDK屬性互動
 seo-description: 瞭解如何與多個Experience Platform網頁SDK屬性互動
 translation-type: tm+mt
-source-git-commit: 0cc6e233646134be073d20e2acd1702d345ff35f
+source-git-commit: e9fb726ddb84d7a08afb8c0f083a643025b0f903
+workflow-type: tm+mt
+source-wordcount: '256'
+ht-degree: 1%
 
 ---
 
 
-# （測試版）與多個屬性互動
+# 與多個屬性互動
 
->[!IMPORTANT]
->
->Adobe Experience Platform Web SDK目前為測試版，並非所有使用者都能使用。 說明檔案和功能可能會有所變更。
-
-在某些情況下，您可能會想要在相同頁面上與兩個不同的屬性互動。 這些包括:
+在某些情況下，您可能會想要在相同頁面上與兩個不同的屬性互動。 這些類別包括：
 
 * 已收購並正致力於將其網站整合在一起的公司
 * 多家公司間的資料分享關係
