@@ -4,12 +4,18 @@ solution: Experience Platform
 title: 使用流程服務API建立Azure表格儲存連接器
 topic: overview
 translation-type: tm+mt
-source-git-commit: 9556b85b26e2eb3d4a2b3e41db5f0c3a14459d32
+source-git-commit: 37a5f035023cee1fc2408846fb37d64b9a3fc4b6
+workflow-type: tm+mt
+source-wordcount: '578'
+ht-degree: 2%
 
 ---
 
 
 # 使用流程服務API建立Azure表格儲存連接器
+
+>[!NOTE]
+>Azure表格儲存連接器已測試。 功能和檔案可能會有所變更。
 
 Flow Service用於收集和集中Adobe Experience Platform內不同來源的客戶資料。 該服務提供用戶介面和REST風格的API，所有支援的源都可從中連接。
 
