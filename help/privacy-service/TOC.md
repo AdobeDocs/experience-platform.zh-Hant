@@ -3,9 +3,9 @@ product: experience-platform
 audience: user
 user-guide-title: Adobe Experience Platform隱私權服務說明
 translation-type: tm+mt
-source-git-commit: 284768c0f5416972e51d2fa2078ad5267e1b8628
+source-git-commit: 63412f07b2e9237bbceaee8f1febef3ff655c286
 workflow-type: tm+mt
-source-wordcount: '86'
+source-wordcount: '87'
 ht-degree: 11%
 
 ---
@@ -19,6 +19,7 @@ ht-degree: 11%
 * Privacy Service API {#api}
    * [快速入門](api/getting-started.md)
    * [隱私權工作](api/privacy-jobs.md)
+   * [同意](api/consent.md)
    * [附錄](api/appendix.md)
 * 隱私權服務UI {#ui}
    * [隱私權服務UI概觀](ui/overview.md)
