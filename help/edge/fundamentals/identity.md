@@ -4,10 +4,10 @@ seo-title: Adobe Experience Platform Web SDK擷取Experience Cloud ID
 description: 瞭解如何取得Adobe Experience Cloud Id。
 seo-description: 瞭解如何取得Adobe Experience Cloud Id。
 translation-type: tm+mt
-source-git-commit: e9fb726ddb84d7a08afb8c0f083a643025b0f903
+source-git-commit: a9dd5fd93397e57d0876bec334d54c517fa86939
 workflow-type: tm+mt
-source-wordcount: '398'
-ht-degree: 6%
+source-wordcount: '416'
+ht-degree: 7%
 
 ---
 
@@ -77,6 +77,14 @@ alloy("syncIdentity",{
 | 字串 | 是 | nown |
 
 這是您要針對指定命名空間同步的ID。
+
+#### `authenticationState`
+
+| **類型** | **必填** | **預設值** | **可能的值** |
+| -------- | ------------ | ----------------- | ------------------------------------ |
+| 字串 | 是 | 模糊 | 不明確、已驗證和已登錄已註銷 |
+
+ID的驗證狀態。
 
 #### `primary`
 
