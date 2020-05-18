@@ -4,7 +4,10 @@ seo-title: 目標概觀
 description: 目標是與目標平台預先建立的整合，可讓即時客戶資料平台順暢地啟動資料。 您可以使用Adobe即時客戶資料平台中的「目標」來啟用您已知和未知的跨通道行銷宣傳、電子郵件宣傳、目標廣告及許多其他使用案例資料。
 seo-description: 目標是與目標平台預先建立的整合，可讓即時客戶資料平台順暢地啟動資料。 您可以使用Adobe即時客戶資料平台中的「目標」來啟用您已知和未知的跨通道行銷宣傳、電子郵件宣傳、目標廣告及許多其他使用案例資料。
 translation-type: tm+mt
-source-git-commit: a1161630c8edae107b784f32ee20af225f9f8c46
+source-git-commit: 49479cd1520bd2407ecd5140265661aefe0817a3
+workflow-type: tm+mt
+source-wordcount: '393'
+ht-degree: 0%
 
 ---
 
@@ -22,7 +25,7 @@ source-git-commit: a1161630c8edae107b784f32ee20af225f9f8c46
 ## 目標步驟
 
 * 從即時 [CDP中所有可用目標的自助](/help/rtcdp/destinations/destinations-catalog.md) -服務目錄中進行選擇。
-* 使用 **[!UICONTROL Destinations]** 來啟 [動個人檔案](/help/rtcdp/destinations/activate-destinations.md) ，並傳送個人檔案或細分至行銷自動化平台、數位廣告平台等。
+* 使用 **[!UICONTROL 目的地]** 啟動 [](/help/rtcdp/destinations/activate-destinations.md) ，並傳送個人檔案或區段至行銷自動化平台、數位廣告平台等。
 * 定期排程匯出至您偏好目的地的資料。
 
 ## 控制項
@@ -44,3 +47,15 @@ source-git-commit: a1161630c8edae107b784f32ee20af225f9f8c46
 即時CDP的目標功能可與Adobe Experience Platform存取控制權限搭配使用。 視使用者的權限層級而定，您可以檢視、管理和啟用目標。 如需個別權限的詳細資訊，請參 [閱Adobe Experience Platform中的存取控制](../../access-control/home.md) ，並向下捲動至頁面底部。
 
 如需存取控制的詳細資訊，請參閱存取控 [制使用指南](../../access-control/ui/overview.md)。
+
+<!--
+
+// Commenting out DULE in Destinations service
+
+## Destinations and Data Usage Labeling and Enforcement (DULE)
+
+Data Usage Labeling and Enforcement (DULE) is the core mechanism of Adobe Experience Platform Data Governance. DULE is currently *not* enforced in Adobe Real-time CDP destinations.
+
+You are responsible for understanding the limitations and obligations of your data and how you use that data in Experience Platform.
+
+-->
