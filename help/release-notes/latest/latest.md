@@ -5,9 +5,9 @@ doc-type: release notes
 last-update: May 13, 2020
 author: crhoades, ens28527
 translation-type: tm+mt
-source-git-commit: e6731b54840eaf9dd2cdaeff5205e14277e78a3b
+source-git-commit: d41952e5905d4ebc579a29ad3282a8f732b7c331
 workflow-type: tm+mt
-source-wordcount: '1026'
+source-wordcount: '1075'
 ht-degree: 4%
 
 ---
@@ -55,7 +55,15 @@ Data Science Workspace使用機器學習和人工智慧，從您的資料中釋�
 
 在 [Adobe即時客戶資料平台中](../../rtcdp/overview.md)，目標是與目標平台預先建立的整合，以順暢的方式將資料啟動給這些合作夥伴。
 
-**新目標**
+**Facebook**
+
+Adobe即時CDP現在支援Facebook的資料啟動功能，讓您啟用Facebook宣傳的個人檔案，以便根據雜湊的電子郵件鎖定受眾、個人化和抑制受眾。
+
+如需新功能的詳細資訊，請參閱 [Facebook目標頁面](/help/rtcdp/destinations/facebook-destination.md) 。
+
+<br> 
+
+**Amazon Kinesis和Azure事件集線器流雲儲存目標**
 
 Adobe即時CDP現在支援將資料啟動至串流雲端儲存目的地，讓您以JSON格式將觀眾資料和事件匯出至這些目的地。 然後，您可以在目的地的這些活動上描述商業邏輯。 如需詳細資訊，請參閱以下：
 
