@@ -4,7 +4,10 @@ solution: Experience Platform
 title: 訂閱隱私權事件
 topic: privacy events
 translation-type: tm+mt
-source-git-commit: e4cd042722e13dafc32b059d75fca2dab828df60
+source-git-commit: ab29c7771122267634dea24582b07f605abd7ed8
+workflow-type: tm+mt
+source-wordcount: '861'
+ht-degree: 0%
 
 ---
 
@@ -22,11 +25,11 @@ source-git-commit: e4cd042722e13dafc32b059d75fca2dab828df60
 | 產品完整 | 與此工作相關的解決方案之一已完成其工作。 |
 | 產品錯誤 | 其中一個解決方案在處理請求時報告錯誤。 |
 
-本檔案提供在Adobe I/O中設定隱私權服務通知整合的步驟。如需隱私權服務及其功能的高階概觀，請參閱隱私權 [服務概觀](home.md)。
+本檔案提供在Adobe I/O中設定隱私權服務通知整合的步驟。 如需隱私權服務及其功能的高階概觀，請參閱隱私權 [服務概觀](home.md)。
 
 ## 快速入門
 
-本教學課程使 **用ngrok**，這是一種軟體產品，可透過安全隧道讓本機伺服器連接至公共網際網路。 在開 [始本教學課程](https://ngrok.com/download) 之前，請先安裝ngrok，以便後續操作並建立本機電腦的Webhook。 本指南還要求您下載GIT儲存庫，其中包含寫入 [Node.js的簡單伺服器](https://nodejs.org/)。
+本教學課程使 **用ngrok**，這是一種軟體產品，可透過安全隧道讓本機伺服器連接至公共網際網路。 在開 [始本教學課程](https://ngrok.com/download) 之前，請先安裝ngrok，以便後續操作並建立本機電腦的網頁掛接。 本指南還要求您下載包含簡單 [Node.js伺服器的GIT儲存庫](https://nodejs.org/) 。
 
 ## 建立本地伺服器
 
@@ -57,71 +60,73 @@ app.listen(app.get('port'), function() {
 
 ## 使用ngrok建立網頁掛接
 
-在同一目錄和新命令行窗口中，鍵入以下命令：
+開啟新的命令列視窗，並導覽至您先前安裝程式碼的目錄。 在此處鍵入以下命令：
 
 ```shell
-ngrok http -bind-tls=true 3000
+./ngrok http -bind-tls=true 3000
 ```
 
 成功的輸出看起來類似下列：
 
 ![ngrok輸出](images/privacy-events/ngrok-output.png)
 
-請注意 `Forwarding` URL(`https://e142b577.ngrok.io`)，因為這將用來識別您的網頁鈎子，進行下一步。
+請注意 `Forwarding` URL(`https://212d6cd2.ngrok.io`)，因為這將用來識別您的網頁鈎子，進行下一步。
 
-## 使用Adobe I/O Console建立新的整合
+## 在Adobe Developer Console中建立新專案
 
-登入 [Adobe I/O Console](https://console.adobe.io) ，然後按一下「整 **合」標籤** 。 此時會 _出現_ 「整合」視窗。 在這裡，按一下「 **新增整合」**。
+前往 [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui) ，使用您的Adobe ID登入。 接著，請依照教學課程中說明的步驟， [在Adobe Developer Console檔案中建立空白的專案](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/projects-empty.md) 。
 
-![在Adobe I/O Console中檢視整合](images/privacy-events/integrations.png)
+## 新增隱私權事件至專案
 
-此時 *將出現「建立新整合* 」窗口。 選 **取「接收近即時事件」**，然後按一 **下「繼續」**。
+在主控台中建立完新專案後，按一下「專案概 **[!UICONTROL 述」畫面上的]** 「新 _增事件_ 」。
 
-![建立新整合](images/privacy-events/new-integration.png)
+![](./images/privacy-events/add-event-button.png)
 
-下一個畫面提供選項，可讓您根據您的訂閱、權益和權限，建立與組織可用的不同事件、產品和服務的整合。 對於此整合，請選取「隱 **私服務事件**」，然後按一 **下「繼續**」。
+此時將 _顯示「添加事件_ 」對話框。 選 **[!UICONTROL 擇Experience Cloud]** ，以篩選可用事件類型的清單，然後在按「下一步」前選 **[!UICONTROL 取「隱私服務事]** 件」 ****。
 
-![選擇隱私權事件](images/privacy-events/privacy-events.png)
+![](./images/privacy-events/add-privacy-events.png)
 
-此時 *會顯示「整合詳細資訊* 」表單，您必須提供整合的名稱和說明，以及公開金鑰憑證。
+此時將 _顯示「配置事件_ 註冊」對話框。 選擇您要接收的事件，方法是選擇相應的複選框。 您選取的事件會顯示在左 _[!UICONTROL 欄的「訂閱事件]_」下方。 完成後，按一下「**[!UICONTROL &#x200B;下一步&#x200B;]**」。
 
-![整合詳細資訊](images/privacy-events/integration-details.png)
+![](./images/privacy-events/choose-subscriptions.png)
 
-如果您沒有公用憑證，則可使用下列terminal命令產生公用憑證：
+下一個畫面會提示您提供活動註冊的公開金鑰。 您可以選擇自動產生金鑰對，或上傳您在終端機中產生的公開金鑰。
 
-```shell
-openssl req -x509 -sha256 -nodes -days 365 -newkey rsa:2048 -keyout private.key -out certificate_pub
-```
+在本教學課程中，會遵循第一個選項。 按一下「產生鍵 **[!UICONTROL 對」選項方塊]**，然後按一下右下角的「產 **[!UICONTROL 生鍵對]** 」按鈕。
 
-生成證書後，將檔案拖放到「 **Public keys certificates** 」（公鑰證書）框中，或按一下「 **Select a File** 」（選擇檔案）瀏覽檔案目錄並直接選擇證書。
+![](./images/privacy-events/generate-key-value.png)
 
-新增憑證後，會出現「事 *件註冊* 」選項。 按一 **下新增事件註冊**。
+當鍵對產生時，瀏覽器會自動下載它。 您必須自行儲存此檔案，因為它不會保存在Developer Console中。
 
-![新增事件註冊](images/privacy-events/add-event-registration.png)
+下一個畫面可讓您檢視新產生的金鑰對的詳細資訊。 按一 **[!UICONTROL 下]** 「下一步」繼續。
 
-對話方塊會展開以顯示其他控制項。 您可以在這裡選取所需的事件類型，並註冊網頁掛接。 輸入事件註冊的名稱、網頁掛接URL(您最 `Forwarding` 初建立網頁 [掛接時傳回的位址](#create-a-webhook-using-ngrok))，以及簡短說明。 最後，選取您要訂閱的事件類型，然後按一下「儲 **存**」。
+![](./images/privacy-events/keypair-generated.png)
 
-![活動註冊表單](images/privacy-events/event-registration-form.png)
+在下一個畫面中，提供事件註冊的名稱和說明。 最佳實務是建立獨特、可輕鬆辨識的名稱，以協助區隔此活動註冊與同一專案中的其他活動。
 
-完成「事件註冊」表單後，按一 **下「建立整合** 」,I/O整合就會完成。
+![](./images/privacy-events/event-details.png)
 
-![建立整合](images/privacy-events/create-integration.png)
+在同一螢幕的下方，您會獲得兩個選項來設定如何接收事件。 選 **[!UICONTROL 取Webhook]** ，並提供您 `Forwarding` 先前在Webhook URL下建立之網頁掛接的 _[!UICONTROL URL]_。 接著，在按一下「儲存已設定的事件」以完成事件註冊之前，請選取您偏好的傳送樣式(**[!UICONTROL &#x200B;單一或批次&#x200B;]**)。
+
+![](./images/privacy-events/webhook-details.png)
+
+專案的詳細資訊頁面會重新顯示，隱私權事件會顯示在左側導 _[!UICONTROL 覽器的]_「事件」下方。
 
 ## 檢視事件資料
 
-在您建立I/O整合和隱私權工作後，您就可以檢視該整合的任何接收通知。 從I/O Console的 **Integrations** （整合）標籤，導覽至您的整合，然後按一下 **View**。
+在您的專案和隱私權工作中註冊隱私權事件後，您就可以檢視該註冊的任何收到的通知。 從「開 **[!UICONTROL 發人員控制台]** 」的「專案」標籤中，從清單中選取您的專案，以開啟「產 _品概述」頁面_ 。 在這裡，從左側導 **[!UICONTROL 覽中選取]** 「隱私權事件」。
 
-![檢視整合](images/privacy-events/view-integration.png)
+![](./images/privacy-events/events-left-nav.png)
 
-此時會顯示整合的詳細資訊頁面。 按一 **下事件** ，檢視整合的事件註冊。 找到「隱私權事件」註冊，然後按一 **下「檢視**」。
+此時會 _顯示「註冊詳細資訊_ 」標籤，讓您檢視註冊的詳細資訊、編輯其設定，或檢視啟動網頁掛接後收到的實際事件。
 
-![檢視活動註冊](images/privacy-events/view-registration.png)
+![](./images/privacy-events/registration-details.png)
 
-此時 *會出現「事件詳細資料* 」視窗，可讓您檢視註冊的詳細資訊、編輯其設定，或檢視自啟動網頁掛接後收到的實際事件。 您可以檢視事件詳細資訊，並導覽至「除錯追蹤 **」選項** 。
+按一下「 **[!UICONTROL 除錯追蹤]** 」標籤，以檢視已接收事件的清單。 按一下列出的事件以檢視其詳細資訊。
 
-![除錯追蹤](images/privacy-events/debug-tracing.png)
+![](images/privacy-events/debug-tracing.png)
 
-「裝 **載** 」區段提供選取事件的詳細資訊，包括其事件類型(`"com.adobe.platform.gdpr.productcomplete"`)，如上例所強調。
+「裝 _[!UICONTROL 載]_」區段提供選取事件的詳細資訊，包括其事件類型(`com.adobe.platform.gdpr.productcomplete`)，如上例所強調。
 
 ## 後續步驟
 
