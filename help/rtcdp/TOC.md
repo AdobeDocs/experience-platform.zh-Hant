@@ -3,9 +3,9 @@ product: adobe experience platform
 audience: user
 user-guide-title: 即時客戶資料平台說明
 translation-type: tm+mt
-source-git-commit: be885faf8c1408f372d2eb6cd8d6a8fa8fc69e14
+source-git-commit: 75581529ede3772606bc18fea683da5d396996c5
 workflow-type: tm+mt
-source-wordcount: '439'
+source-wordcount: '440'
 ht-degree: 10%
 
 ---
@@ -78,7 +78,7 @@ ht-degree: 10%
          * [建立雲端儲存空間目標的工作流程](/help/rtcdp/destinations/cloud-storage-destinations-workflow.md)
          * [Amazon Kinesis目標](/help/rtcdp/destinations/amazon-kinesis-destination.md)
          * [Amazon S3目的地](destinations/amazon-s3-destination.md)
-         * [Azure EventHubs目的地](/help/rtcdp/destinations/azure-event-hubs-destination.md)
+         * [Azure事件集線器目標](/help/rtcdp/destinations/azure-event-hubs-destination.md)
          * [SFTP目的地](destinations/sftp-destination.md)
       * 資料管理平台目標 {#dmp-destinations}
          * [資料管理平台目標概觀](destinations/dmp-destinations.md)
