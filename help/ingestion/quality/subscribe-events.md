@@ -4,7 +4,10 @@ solution: Experience Platform
 title: 訂閱資料擷取事件
 topic: overview
 translation-type: tm+mt
-source-git-commit: 4817162fe2b7cbf4ae4c1ed325db2af31da5b5d3
+source-git-commit: 1498739d753bdb569e0d3e091e4160bdae40a32f
+workflow-type: tm+mt
+source-wordcount: '851'
+ht-degree: 1%
 
 ---
 
@@ -38,40 +41,52 @@ source-git-commit: 4817162fe2b7cbf4ae4c1ed325db2af31da5b5d3
 
 ## 訂閱資料擷取狀態通知
 
-透過 [Adobe I/O Events](https://www.adobe.io/apis/experienceplatform/events.html)，您可以使用Webhook訂閱多種通知類型。 若要進一步瞭解網頁勾選，以及如何使用網頁勾選訂閱Adobe I/O Events，請參 [閱「Adobe I/O Events Webhooks指南](https://www.adobe.io/apis/experienceplatform/events/docs.html#!adobedocs/adobeio-events/master/intro/webhook_docs_intro.md) 」。
+透過 [Adobe I/O Events](https://www.adobe.io/apis/experienceplatform/events.html)，您可以使用Webhook訂閱多種通知類型。 以下各節將說明使用Adobe Developer Console訂閱平台通知以擷取資料事件的步驟。
 
-### 使用Adobe I/O Console建立新的整合
+### 在Adobe Developer Console中建立新專案
 
-登入 [Adobe I/O Console](https://console.adobe.io/home) ，然後按一下「整合 *」標籤，或按一下「快* 速開始 **** 」下的「建立整合」。 出現「 *整合* 」畫面時，按一下「 **新增整合** 」以建立新整合。
+前往 [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui) ，使用您的Adobe ID登入。 接著，請依照教學課程中說明的步驟， [在Adobe Developer Console檔案中建立空白的專案](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/projects-empty.md) 。
 
-![建立新整合](../images/quality/subscribe-events/create_integration_start.png)
+### 將Experience Platform事件新增至專案
 
-此時會 *出現「建立新整合* 」畫面。 選 **取「接收近即時事件」**，然後按一 **下「繼續」**。
+建立新專案後，請導覽至該專案的概述畫面。 在這裡，按一下「 **[!UICONTROL 新增事件」]**。
 
-![接收近即時事件](../images/quality/subscribe-events/create_integration_receive_events.png)
+![](../images/quality/subscribe-events/add-event-button.png)
 
-下一個畫面提供選項，可讓您根據您的訂閱、權益和權限，建立與組織可用的不同事件、產品和服務的整合。 對於此整合，請選取「 **Experience Platform** 」（體驗平台）下的「Platform notifications **」（平台通知），然後按一**&#x200B;下「Continue」（繼續）。
+此時將 _[!UICONTROL 顯示「添加事件]_」對話框。 按一**[!UICONTROL &#x200B;下「Experience Platform ]**」(體驗平台**[!UICONTROL )以篩選可用選項清單，然後按一下「]**Platform notifications**[!UICONTROL 」（平台通知），再按「]**下一步」。
 
-![選擇事件提供者](../images/quality/subscribe-events/create_integration_select_provider.png)
+![](../images/quality/subscribe-events/select-platform-events.png)
 
-此時 *會顯示「整合詳細資訊* 」表單，您必須提供整合的名稱和說明，以及公開金鑰憑證。
+下一個畫面會顯示要訂閱的事件類型清單。 選取「 **[!UICONTROL 資料擷取通知]**」，然後按一 **[!UICONTROL 下「下一步]**」。
 
-如果您沒有公用憑證，則可使用下列命令在終端中產生一個憑證：
+![](../images/quality/subscribe-events/choose-event-subscriptions.png)
 
-```shell
-openssl req -x509 -sha256 -nodes -days 365 -newkey rsa:2048 -keyout private.key -out certificate_pub
-```
+下一個畫面會提示您建立JSON網頁Token(JWT)。 您可以選擇自動產生金鑰對，或上傳您在終端機中產生的公開金鑰。
 
-生成證書後，將檔案拖放到「 **Public keys certificates** 」（公鑰證書）框中，或按一下「 **Select a File** 」（選擇檔案）瀏覽檔案目錄並直接選擇證書。
+在本教學課程中，會遵循第一個選項。 按一下「Generate a key pair **[!UICONTROL (生成密鑰對]**)」選項框 **[!UICONTROL ，然後按一下右下角的「]** Generate keypair（生成密鑰對）」按鈕。
 
-新增憑證後，會出現「事 *件註冊* 」選項。 按一 **下新增事件註冊**。
+![](../images/quality/subscribe-events/generate-keypair.png)
 
-![整合詳細資訊](../images/quality/subscribe-events/create_integration_details.png)
+當鍵對產生時，瀏覽器會自動下載它。 您必須自行儲存此檔案，因為它不會保存在Developer Console中。
 
-「事 *件註冊詳細資訊* 」對話方塊會展開以顯示其他控制項。 您可以在這裡選取所需的事件類型，並註冊網頁掛接。 輸入事件註冊的名稱、網頁 *掛接URL（可選）*，以及簡短說明。 最後，選取您要訂閱的事件類型（資料擷取通知），然後按一下「儲 **存**」。
+下一個畫面可讓您檢視新產生的金鑰對的詳細資訊。 按一 **[!UICONTROL 下]** 「下一步」繼續。
 
-![選擇事件](../images/quality/subscribe-events/create_integration_select_event.png)
+![](../images/quality/subscribe-events/keypair-generated.png)
+
+在下一個畫面中，提供事件註冊的名稱和說明。 最佳實務是建立獨特、可輕鬆辨識的名稱，以協助區隔此活動註冊與同一專案中的其他活動。
+
+![](../images/quality/subscribe-events/registration-details.png)
+
+在同一螢幕的下方，您可選擇設定如何接收事件。 **[!UICONTROL Webhook]** 可讓您提供自訂的Webhook位址以接收事件，而 **[!UICONTROL Runtime動作則可讓您使用]** Adobe I/O Runtime進行相同動作 [](https://www.adobe.io/apis/experienceplatform/runtime/docs.html)。
+
+本教學課程會跳過此選用的設定步驟。 完成後，按一下「儲 **[!UICONTROL 存設定的事件]** 」以完成事件註冊。
+
+![](../images/quality/subscribe-events/receive-events.png)
+
+此時會顯示新建立事件註冊的詳細資訊頁面，您可在此處檢視已接收的事件、執行除錯追蹤及編輯其設定。
+
+![](../images/quality/subscribe-events/registration-complete.png)
 
 ## 後續步驟
 
-建立I/O整合後，您就可以檢視該整合的任何已接收通知。 如需如何追 [蹤事件的詳細指示，請參閱「追蹤Adobe I/O事件](https://www.adobe.io/apis/experienceplatform/events/docs.html#!adobedocs/adobeio-events/master/support/tracing.md) 」指南。
+在您將平台通知註冊到專案後，您就可以從專案儀表板檢視收到的事件。 如需如何追 [蹤事件的詳細指示，請參閱「追蹤Adobe I/O事件](https://www.adobe.io/apis/experienceplatform/events/docs.html#!adobedocs/adobeio-events/master/support/tracing.md) 」指南。
