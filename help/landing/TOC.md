@@ -3,7 +3,10 @@ product: experience-platform
 audience: user
 user-guide-title: Adobe Experience Platform說明
 translation-type: tm+mt
-source-git-commit: e4da80338dbfbad70dfb3cf7df9fe589e949e788
+source-git-commit: 2c95e34b56b322f7cfb098b27210dd5242128803
+workflow-type: tm+mt
+source-wordcount: '296'
+ht-degree: 30%
 
 ---
 
@@ -25,7 +28,6 @@ source-git-commit: e4da80338dbfbad70dfb3cf7df9fe589e949e788
    * [決策服務](https://docs.adobe.com/content/help/en/experience-platform/decisioning/home.html)
    * [目的地](https://docs.adobe.com/content/help/en/experience-platform/rtcdp/destinations/destinations-overview.html)
    * [ETL（擷取、轉換、載入）](https://docs.adobe.com/content/help/en/experience-platform/etl/home.html)
-   * [Experience Platform Web SDK（測試版）](https://docs.adobe.com/content/help/zh-Hant/experience-platform/edge/home.html)
    * [Identity 服務](https://docs.adobe.com/content/help/en/experience-platform/identity/home.html)
    * [智慧型服務](https://docs.adobe.com/content/help/en/experience-platform/intelligent-services/home.html)
    * [Launch](https://docs.adobe.com/content/help/zh-Hant/launch/using/overview.html)
@@ -37,7 +39,8 @@ source-git-commit: e4da80338dbfbad70dfb3cf7df9fe589e949e788
    * [沙盒](https://docs.adobe.com/content/help/en/experience-platform/sandbox/home.html)
    * [區段](https://docs.adobe.com/content/help/en/experience-platform/segmentation/home.html)
    * [來源（連接器）](https://docs.adobe.com/content/help/en/experience-platform/sources/home.html)
-   * [XDM（體驗資料模型）](https://docs.adobe.com/content/help/en/experience-platform/xdm/home.html)
+   * [網頁SDK](https://docs.adobe.com/content/help/zh-Hant/experience-platform/edge/home.html)
+   * [XDM（體驗資料模型）](https://docs.adobe.com/content/help/zh-Hant/experience-platform/xdm/home.html)
 * [體驗平台教學課程](https://docs.adobe.com/content/help/zh-Hant/experience-platform/tutorials/home.html)
 * [發行說明](https://docs.adobe.com/content/help/zh-Hant/experience-platform/release-notes/latest.html)
 * [字彙表](glossary.md)
