@@ -4,9 +4,9 @@ seo-title: 雲端儲存空間目標
 description: Adobe即時CDP可以將您的細分作為資料檔案傳遞到Amazon S3、AWS Kinesis、Azure事件集線器或SFTP雲儲存位置。
 seo-description: Adobe即時CDP可以將您的細分作為資料檔案傳遞到Amazon S3、AWS Kinesis、Azure事件集線器或SFTP雲儲存位置。
 translation-type: tm+mt
-source-git-commit: a18f89531cf024f61b054b47a660bd26766bebf6
+source-git-commit: 75581529ede3772606bc18fea683da5d396996c5
 workflow-type: tm+mt
-source-wordcount: '184'
+source-wordcount: '185'
 ht-degree: 0%
 
 ---
@@ -32,4 +32,4 @@ Adobe Real-time CDP可將您的細分作為資料檔案傳送至您的雲端儲�
 ## 可用的雲端儲存空間串流目的地
 
 * [Amazon Kinesis目標](/help/rtcdp/destinations/amazon-kinesis-destination.md)
-* [Azure EventHubs目的地](/help/rtcdp/destinations/azure-event-hubs-destination.md)
+* [Azure事件集線器目標](/help/rtcdp/destinations/azure-event-hubs-destination.md)
