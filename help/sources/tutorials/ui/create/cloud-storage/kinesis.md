@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 在UI中建立Amazon Kinesis源連接器
 topic: overview
 translation-type: tm+mt
-source-git-commit: 1eb6883ec9b78e5d4398bb762bba05a61c0f8308
+source-git-commit: dcd6293a71178fee14647f5b2c8b56d03d1ec7df
 workflow-type: tm+mt
 source-wordcount: '451'
 ht-degree: 1%
@@ -50,7 +50,7 @@ Adobe Experience Platform中的來源連接器可讓您依計畫吸收外部來�
 
 在「雲 *儲存* 」類別下，選擇 **Amazon Kinesis** ，然 **後按一下+表徵圖(+)** ，建立新的Kinesis連接器。
 
-![](../../../../images/tutorials/create/eventhub/catalog.png)
+![](../../../../images/tutorials/create/kinesis/catalog.png)
 
 此時 *將顯示「連接到Amazon Kinesis* 」對話框。 在此頁上，您可以使用新認證或現有認證。
 
@@ -58,13 +58,13 @@ Adobe Experience Platform中的來源連接器可讓您依計畫吸收外部來�
 
 如果您使用新認證，請選擇「新 **帳戶」**。 在顯示的輸入表單上，提供名稱、可選說明和Kinesis憑據。 完成後，選擇 **Connect** ，然後為建立新連接留出一些時間。
 
-![](../../../../images/tutorials/create/eventhub/new.png)
+![](../../../../images/tutorials/create/kinesis/new.png)
 
 ### 現有帳戶
 
 要連接現有帳戶，請選擇要連接的Kinesis帳戶，然後選擇「下 **一步** 」繼續。
 
-![](../../../../images/tutorials/create/eventhub/existing.png)
+![](../../../../images/tutorials/create/kinesis/existing.png)
 
 ## 後續步驟
 
