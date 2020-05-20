@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 使用流程服務API建立Azure事件集線器連接器
 topic: overview
 translation-type: tm+mt
-source-git-commit: 1eb6883ec9b78e5d4398bb762bba05a61c0f8308
+source-git-commit: fdffdd34d1ccb61d6c82fecc249ddeb501d79d0e
 workflow-type: tm+mt
-source-wordcount: '572'
+source-wordcount: '590'
 ht-degree: 2%
 
 ---
@@ -38,9 +38,10 @@ Flow Service用於收集和集中Adobe Experience Platform內不同來源的客�
 | ---------- | ----------- |
 | `sasKeyName` | 授權規則的名稱，也稱為SAS密鑰名稱。 |
 | `sasKey` | 產生的共用存取簽名。 |
-| `namespace` | 您正在存取的EventHub的名稱空間。 |
+| `namespace` | 您正在訪問的事件集線器的名稱空間。 |
+| `connectionSpec.id` | Azure事件集線器連接規範ID: `bf9f5905-92b7-48bf-bf20-455bc6b60a4e` |
 
-有關這些值的詳細資訊，請參 [閱此EventHub文檔](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature)。
+有關這些值的詳細資訊，請參 [閱此Event Hub文檔](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature)。
 
 ### 讀取範例API呼叫
 
@@ -86,10 +87,11 @@ curl -X POST \
         "name": "Azure Event Hubs connection",
         "description": "Connector for Azure Event Hubs",
         "auth": {
-            "specName": "Basic Authentication for EventHub",
+            "specName": "Basic Authentication for Event Hubs",
             "params": {
                 "sasKeyName": "sasKeyName",
-                "sasKey": "sasKey"
+                "sasKey": "sasKey",
+                "namespace": "namespace"
             }
         },
         "connectionSpec": {
@@ -103,6 +105,7 @@ curl -X POST \
 | -------- | ----------- |
 | `auth.params.sasKeyName` | 授權規則的名稱，也稱為SAS密鑰名稱。 |
 | `auth.params.sasKey` | 產生的共用存取簽名。 |
+| `namespace` | 您正在訪問的事件集線器的名稱空間。 |
 | `connectionSpec.id` | Azure事件集線器連接規範ID: `bf9f5905-92b7-48bf-bf20-455bc6b60a4e` |
 
 **回應**
