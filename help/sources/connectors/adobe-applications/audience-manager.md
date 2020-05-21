@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Audience Manager連接器
 topic: overview
 translation-type: tm+mt
-source-git-commit: 75c446aed75100bd2b5b4a3d365c090cb01dcc69
+source-git-commit: fb4ffa2c95365905f5417586fa7ecf88523009a0
+workflow-type: tm+mt
+source-wordcount: '742'
+ht-degree: 0%
 
 ---
 
@@ -51,7 +54,7 @@ XDM是公開記載的規格，可提供標準化的架構，讓平台組織客�
 
 資料集是資料集合的儲存和管理結構，通常是表，它包含模式（列）和欄位（行），並可通過資料連接使用。 Audience Manager資料包含即時資料、傳入資料和描述檔資料。 若要找到您的Audience Manager資料集，請使用UI中的搜尋函式，並針對每種資料類型使用提供的命名慣例。
 
-雖然使用者可以停用資料集，但不建議停用資料集，以用於描述檔中的區段成員資格。
+Audience Manager資料集依預設會停用至「設定檔」，而且使用者可以根據使用案例啟用或停用資料集。 建議不要停用將用於「描述檔」中區段成員資格的資料集。
 
 | 資料集名稱 | 說明 |
 | ------------ | ----------- |
