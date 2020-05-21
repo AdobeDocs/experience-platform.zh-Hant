@@ -4,7 +4,10 @@ solution: Experience Platform
 title: 準備資料以用於智慧型服務
 topic: Intelligent Services
 translation-type: tm+mt
-source-git-commit: 1b367eb65d1e592412d601d089725671e42b7bbd
+source-git-commit: 8e24c7c50d700bc3644ce710f77073e537207a6f
+workflow-type: tm+mt
+source-wordcount: '1445'
+ht-degree: 0%
 
 ---
 
@@ -30,6 +33,8 @@ source-git-commit: 1b367eb65d1e592412d601d089725671e42b7bbd
 ## 關鍵字欄位
 
 以下各節將重點介紹CEE混合內的關鍵欄位，這些欄位應用於智慧服務以生成有用的見解，包括說明和參考文檔的連結，以獲得更多示例。
+
+>[!IMPORTANT] Attribution `xdm:channel` AI必須填寫欄位（如下面第一節所述） **** ，才能與您的資料搭配使用，而客戶AI則沒有任何必填欄位。 強烈建議使用所有其他關鍵字欄位，但非必填欄位。
 
 ### xdm:channel
 
@@ -182,7 +187,9 @@ source-git-commit: 1b367eb65d1e592412d601d089725671e42b7bbd
 
 ## 對應和收錄資料
 
-一旦您確定行銷事件資料是否可映射至CEE架構後，就可以開始將資料帶入智慧型服務。 請連絡Adobe諮詢服務，協助您將資料對應至架構，並將其內嵌至服務。
+一旦您確定行銷事件資料是否可映射至CEE架構後，下一步就是決定要將哪些資料匯入智慧型服務。 智慧型服務中使用的所有歷史資料都必須落在資料四個月的最短時間範圍內，加上預期做為回顧期間的天數。
+
+在決定您要傳送的資料範圍後，請聯絡Adobe諮詢服務，協助將資料對應至架構，並將其內嵌至服務。
 
 如果您有Adobe Experience Platform訂閱，而且想要自行對應及收錄資料，請遵循下節所述的步驟。
 
@@ -208,9 +215,81 @@ source-git-commit: 1b367eb65d1e592412d601d089725671e42b7bbd
 * [在UI中建立資料集](../catalog/datasets/user-guide.md#create) （依照工作流程使用現有架構）
 * [在API中建立資料集](../catalog/datasets/create.md)
 
-#### 映射和收錄資料
+#### 新增主要身分命名空間標籤至資料集
+
+如果您要從Adobe Audience Manager、Adobe Analytics或其他外部來源匯入資料，則必須新增標 `primaryIdentityNameSpace` 記至資料集。 這可以通過向目錄服務API發出PATCH請求來完成。
+
+如果您從本機CSV檔案擷取資料，可跳至下一節的對應與 [擷取資料](#ingest)。
+
+在遵循下列範例API呼叫之前，請參閱目錄開 [發人員指南中的](../catalog/api/getting-started.md) 「快速入門」一節，以取得有關必要標題的重要資訊。
+
+**API格式**
+
+```http
+PATCH /dataSets/{DATASET_ID}
+```
+
+| 參數 | 說明 |
+| --- | --- |
+| `{DATASET_ID}` | 您先前建立之資料集的ID。 |
+
+**請求**
+
+您必須在請求裝載中提供適當的值和標 `primaryIdentityNamespace` 記值， `sourceConnectorId` 視您要從哪個來源擷取資料。
+
+下列請求會為Audience Manager新增適當的標籤值：
+
+```shell
+curl -X PATCH \
+  https://platform.adobe.io/data/foundation/catalog/dataSets/5ba9452f7de80400007fc52a \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+        "tags": {
+          "primaryIdentityNameSpace": ["mcid"],
+          "sourceConnectorId": ["audiencemanager"],
+        }
+      }'
+```
+
+下列請求會為Analytics新增適當的標籤值：
+
+```shell
+curl -X PATCH \
+  https://platform.adobe.io/data/foundation/catalog/dataSets/5ba9452f7de80400007fc52a \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+        "tags": {
+          "primaryIdentityNameSpace": ["aaid"],
+          "sourceConnectorId": ["analytics"],
+        }
+      }'
+```
+
+>[!NOTE] 如需在Platform中使用身分名稱空間的詳細資訊，請參閱身分名稱 [空間概觀](../identity-service/namespaces.md)。
+
+**回應**
+
+成功的回應會傳回包含已更新資料集ID的陣列。 此ID應與PATCH請求中發送的ID匹配。
+
+```json
+[
+    "@/dataSets/5ba9452f7de80400007fc52a"
+]
+```
+
+#### 映射和收錄資料 {#ingest}
 
 建立CEE架構和資料集後，您可以開始將資料表對應至架構，並將該資料內嵌至平台。 請參閱將CSV檔 [案對應至XDM架構的教學課程](../ingestion/tutorials/map-a-csv-file.md) ，以取得如何在UI中執行此動作的步驟。 在填入資料集後，可使用相同的資料集來擷取其他資料檔案。
+
+如果您的資料儲存在支援的協力廠商應用程式中，您也可以選擇建立來源連 [接器](../sources/home.md) ，即時將行銷事件資料收錄到平台。
 
 ## 下一步 {#next-steps}
 
