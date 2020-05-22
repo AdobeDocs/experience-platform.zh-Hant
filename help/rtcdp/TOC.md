@@ -3,9 +3,9 @@ product: adobe experience platform
 audience: user
 user-guide-title: 即時客戶資料平台說明
 translation-type: tm+mt
-source-git-commit: 75581529ede3772606bc18fea683da5d396996c5
+source-git-commit: fc8bdc6a46e0b64f29d89a36b0810f7312200616
 workflow-type: tm+mt
-source-wordcount: '440'
+source-wordcount: '439'
 ht-degree: 10%
 
 ---
@@ -125,7 +125,7 @@ ht-degree: 10%
    * 目標UI教學課程 {#dest-tutorials}
       * [連接到目標](/help/rtcdp/destinations/connect-destination.md)
       * [將描述檔和區段啟用至目標](destinations/activate-destinations.md)
-   * 目標API教學課程{api-tutorials}
+   * 目標API教學課程 {#api-tutorials}
       * [連接到流目標（AWS Kinesis和Azure事件集線器）並激活資料](/help/rtcdp/destinations/streaming-destinations-api-tutorial.md)
       * [連線至電子郵件行銷目的地並啟用資料](/help/tutorials/destinations/email-marketing-api.md)
 * 隱私權與資料管理 {#privacy}
