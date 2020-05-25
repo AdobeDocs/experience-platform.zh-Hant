@@ -4,7 +4,10 @@ solution: Experience Platform
 title: 使用API匯出資料
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 409d98818888f2758258441ea2d993ced48caf9a
+source-git-commit: d0b9223aebca0dc510a7457e5a5c65ac4a567933
+workflow-type: tm+mt
+source-wordcount: '1953'
+ht-degree: 1%
 
 ---
 
@@ -19,16 +22,16 @@ source-git-commit: 409d98818888f2758258441ea2d993ced48caf9a
 
 本教學課程需要對使用描述檔資料時涉及的各種Adobe Experience Platform服務有正確的認識。 在開始本教學課程之前，請先閱讀下列服務的檔案：
 
-- [即時客戶個人檔案](../../profile/home.md):根據來自多個來源的匯整資料，即時提供統一的客戶個人檔案。
-- [Adobe Experience Platform細分服務](../home.md):可讓您從即時客戶個人檔案資料建立受眾細分。
-- [體驗資料模型(XDM)](../../xdm/home.md):平台組織客戶體驗資料的標準化架構。
-- [沙盒](../../sandboxes/home.md):Experience Platform提供虛擬沙盒，可將單一Platform實例分割為不同的虛擬環境，以協助開發和發展數位體驗應用程式。
+- [即時客戶個人檔案](../../profile/home.md): 根據來自多個來源的匯整資料，即時提供統一的客戶個人檔案。
+- [Adobe Experience Platform細分服務](../home.md): 可讓您從即時客戶個人檔案資料建立受眾細分。
+- [體驗資料模型(XDM)](../../xdm/home.md): 平台組織客戶體驗資料的標準化架構。
+- [沙盒](../../sandboxes/home.md): Experience Platform提供虛擬沙盒，可將單一Platform實例分割為不同的虛擬環境，以協助開發和發展數位體驗應用程式。
 
 ### 必要的標題
 
 本教學課程也要求您完成驗證教 [學課程](../../tutorials/authentication.md) ，才能成功呼叫平台API。 完成驗證教學課程後，所有Experience Platform API呼叫中每個必要標題的值都會顯示在下方：
 
-- 授權：生產者 `{ACCESS_TOKEN}`
+- 授權： 生產者 `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
@@ -40,7 +43,7 @@ Experience Platform中的所有資源都隔離至特定的虛擬沙盒。 對平
 
 所有POST、PUT和PATCH請求都需要附加標題：
 
-- 內容類型：application/json
+- 內容類型： application/json
 
 ## 建立匯出工作
 
@@ -169,6 +172,9 @@ curl -X POST \
     },
     "schema": {
       "name": "_xdm.context.profile"
+    },
+    "evaluationInfo": {
+        "segmentation": true
     }
   }'
 ```
@@ -180,15 +186,16 @@ curl -X POST \
 | `mergePolicy.id` | 合併策略的ID。 |
 | `mergePolicy.version` | 要使用的合併策略的特定版本。 省略此值將預設為最新版本。 |
 | `filter` | *（可選）* 指定在匯出前套用至區段的下列一或多個篩選。 |
-| `filter.segments` | *（選用）* ，指定要匯出的區段。 省略此值將導致導出所有配置檔案中的所有資料。 接受區段物件的陣列，每個物件都包含下列欄位：<ul><li>`segmentId`:( **若使用`segments`)** 「區段ID」，以匯出描述檔。</li><li>`segmentNs` *（可選）* ，指定的區段命名空間 `segmentID`。</li><li>`status` *（可選）* ，提供狀態篩選的字串陣列 `segmentID`。 依預設， `status` 將會有值， `["realized", "existing"]` 代表目前時段屬於區段的所有描述檔。 可能的值包括： `"realized"`、 `"existing"`和 `"exited"`。</br></br>如需詳細資訊，請參閱「建立 [區段」教學課程](./create-a-segment.md)。</li></ul> |
+| `filter.segments` | *（選用）* ，指定要匯出的區段。 省略此值將導致導出所有配置檔案中的所有資料。 接受區段物件的陣列，每個物件都包含下列欄位：<ul><li>`segmentId`: **（若使用）`segments`** 「區段ID」，則需要匯出描述檔。</li><li>`segmentNs` *（可選）* ，指定的區段名稱空間 `segmentID`。</li><li>`status` *（可選）* ，提供狀態篩選的字串陣列 `segmentID`。 依預設， `status` 將會有值， `["realized", "existing"]` 代表目前時段屬於區段的所有描述檔。 可能的值包括： `"realized"`、 `"existing"`和 `"exited"`。</br></br>如需詳細資訊，請參閱「建立 [區段」教學課程](./create-a-segment.md)。</li></ul> |
 | `filter.segmentQualificationTime` | *（選用）* ，根據區段限定時間篩選。 可以提供開始時間和／或結束時間。 |
 | `filter.segmentQualificationTime.startTime` | *（可選）* ，指定狀態之區段ID的區段資格開始時間。 未提供，區段ID資格的開始時間將不會有篩選。 時間戳必須以 [RFC 3339格式提供](https://tools.ietf.org/html/rfc3339) 。 |
 | `filter.segmentQualificationTime.endTime` | *（可選）* ，指定狀態之區段ID的區段資格結束時間。 未提供，區段ID資格的結束時間將不會有篩選。 時間戳必須以 [RFC 3339格式提供](https://tools.ietf.org/html/rfc3339) 。 |
-| `filter.fromIngestTimestamp ` | *（可選）* 「限制」匯出的描述檔僅包含在此時間戳記後更新的描述檔。 時間戳必須以 [RFC 3339格式提供](https://tools.ietf.org/html/rfc3339) 。 <ul><li>`fromIngestTimestamp` 如果 **提供**，則適用於描述檔：包含所有合併的描述檔，其中合併的更新時間戳記大於指定的時間戳記。 支援操 `greater_than` 作數。</li><li>`fromTimestamp` 對於 **事件**:在此時間戳記之後收錄的所有事件都會匯出，以對應於產生的描述檔結果。 這不是事件時間本身，而是事件的擷取時間。</li> |
+| `filter.fromIngestTimestamp ` | *（可選）* 「限制」匯出的描述檔僅包含在此時間戳記後更新的描述檔。 時間戳必須以 [RFC 3339格式提供](https://tools.ietf.org/html/rfc3339) 。 <ul><li>`fromIngestTimestamp` 如果 **提供**，則適用於描述檔： 包含所有合併的描述檔，其中合併的更新時間戳記大於指定的時間戳記。 支援操 `greater_than` 作數。</li><li>`fromTimestamp` 對於 **事件**: 在此時間戳記之後收錄的所有事件都會匯出，以對應於產生的描述檔結果。 這不是事件時間本身，而是事件的擷取時間。</li> |
 | `filter.emptyProfiles` | *（可選）* Boolean。 設定檔可以包含設定檔記錄、ExperienceEvent記錄或兩者。 沒有設定檔記錄且只有ExperienceEvent記錄的設定檔稱為「emptyProfiles」。 要導出配置檔案儲存中的所有配置檔案，包括「emptyProfiles」，請將值設 `emptyProfiles` 置為 `true`。 如果 `emptyProfiles` 設定為， `false`則只導出儲存中具有配置檔案記錄的配置檔案。 預設情況下，如果不包 `emptyProfiles` 含屬性，則僅導出包含配置檔案記錄的配置檔案。 |
-| `additionalFields.eventList` | *（可選）* ，通過提供以下一個或多個設定來控制為子對象或關聯對象導出的時間系列事件欄位：<ul><li>`eventList.fields`:控制要匯出的欄位。</li><li>`eventList.filter`:指定限制關聯對象所包含結果的標準。 預期匯出所需的最低值，通常為日期。</li><li>`eventList.filter.fromIngestTimestamp`:將時間系列事件篩選為在提供時間戳記後所擷取的事件。 這不是事件時間本身，而是事件的擷取時間。</li></ul> |
+| `additionalFields.eventList` | *（可選）* ，通過提供以下一個或多個設定來控制為子對象或關聯對象導出的時間系列事件欄位：<ul><li>`eventList.fields`: 控制要匯出的欄位。</li><li>`eventList.filter`: 指定限制關聯對象所包含結果的標準。 預期匯出所需的最低值，通常為日期。</li><li>`eventList.filter.fromIngestTimestamp`: 將時間系列事件篩選為在提供時間戳記後所擷取的事件。 這不是事件時間本身，而是事件的擷取時間。</li></ul> |
 | `destination` | **（必要）** ，匯出資料的目標資訊：<ul><li>`destination.datasetId`: **（必要）** ，要匯出資料的資料集ID。</li><li>`destination.segmentPerBatch`: *（可選）* ，一個布爾值，如果未提供，則預設為 `false`。 值將所有 `false` 區段ID匯出為單一批次ID。 值將一個 `true` 區段ID匯出為一個批次ID。 請注意，將值設定為可能 `true` 會影響批導出效能。</li></ul> |
 | `schema.name` | **（必要）** ，與要匯出資料的資料集關聯的架構名稱。 |
+| `evaluationInfo.segmentation` | *（選用）* ，若未提供，則預設為布林值 `false`。 值表示 `true` 需要在匯出工作上執行分段。 |
 
 >[!NOTE] 若要僅匯出描述檔資料，而不要包含相關的ExperienceEvent資料，請從請求中移除「additionalFields」物件。
 
