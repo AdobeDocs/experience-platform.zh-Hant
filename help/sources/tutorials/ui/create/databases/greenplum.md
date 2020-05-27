@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 在UI中建立GreenPlum來源連接器
 topic: overview
 translation-type: tm+mt
-source-git-commit: a015d2612bc5a72004e15dc5706c7718617a0af4
+source-git-commit: 0a2247a9267d4da481b3f3a5dfddf45d49016e61
 workflow-type: tm+mt
 source-wordcount: '495'
 ht-degree: 1%
@@ -36,7 +36,7 @@ Adobe Experience Platform中的來源連接器可讓您依計畫吸收外部來�
 
 | 憑證 | 說明 |
 | ---------- | ----------- |
-| `connectionString` | 用於連接到GreenPlum實例的連接字串。 GreenPlum的連接字串模式為 `HOST=<server>;PORT=<port>;DB=<database>;UID=<user name>;PWD=<password>` |
+| `connectionString` | 用於連接到GreenPlum實例的連接字串。 GreenPlum的連接字串模式為 `Server={SERVER};Port={PORT};Database={DATABASE};UID={USERNAME};PWD={PASSWORD}` |
 
 有關快速入門的詳細資訊，請參 [閱此GreenPlum檔案](https://gpdb.docs.pivotal.io/580/security-guide/topics/Authenticate.html#topic_fzv_wb2_jr__config_ssl_client_conn)。
 
