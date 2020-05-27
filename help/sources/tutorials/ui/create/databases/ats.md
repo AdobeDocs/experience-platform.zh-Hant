@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 在UI中建立Azure表格儲存來源連接器
 topic: overview
 translation-type: tm+mt
-source-git-commit: 2162c66b1664ecaaf0b609fe3f7ccf58c4a5d31d
+source-git-commit: 0a2247a9267d4da481b3f3a5dfddf45d49016e61
 workflow-type: tm+mt
-source-wordcount: '524'
+source-wordcount: '539'
 ht-degree: 0%
 
 ---
@@ -36,7 +36,7 @@ Adobe Experience Platform中的來源連接器可讓您依計畫吸收外部來�
 
 | 憑證 | 說明 |
 | ---------- | ----------- |
-| `connectionString` | 連接到Azure表儲存實例的連接字串。 |
+| `connectionString` | 連接到Azure表儲存實例的連接字串。 連線至ATS例項的連線字串。 ATS的連接字串模式是 `DefaultEndpointsProtocol=https;AccountName={ACCOUNT_NAME};AccountKey={ACCOUNT_KEY}`。 |
 
 有關快速入門的詳細資訊，請參 [閱此Azure表格儲存檔案](https://docs.microsoft.com/en-us/azure/storage/common/storage-introduction)。
 
