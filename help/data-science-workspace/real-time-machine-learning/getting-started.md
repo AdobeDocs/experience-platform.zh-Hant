@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 即時機器學習快速入門
 topic: Getting started
 translation-type: tm+mt
-source-git-commit: dc63ad0c0764355aed267eccd1bcc4965b04dba4
+source-git-commit: 626bb7a0856a663e235ecd2b19954f4617fe9b6f
 workflow-type: tm+mt
 source-wordcount: '411'
 ht-degree: 0%
@@ -21,7 +21,7 @@ ht-degree: 0%
 
 即時機器學習指南需要對Python 3、 [Jupyter筆記型電腦](../jupyterlab/overview.md)、資料科學和機器學習有實際的瞭解。
 
-主要條款：
+**主要條款：**
 
 - **DSL:** 網域特定語言。
 - **邊緣：** 即時機器學習計分服務可在離您的啟動和應用程式更近的Edge叢集上執行。
