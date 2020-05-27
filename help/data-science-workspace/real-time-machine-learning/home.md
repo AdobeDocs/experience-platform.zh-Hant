@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 即時機器學習概觀
 topic: Overview
 translation-type: tm+mt
-source-git-commit: 8f9454730e3bab451ac75070fcd1623698df9196
+source-git-commit: 626bb7a0856a663e235ecd2b19954f4617fe9b6f
 workflow-type: tm+mt
 source-wordcount: '513'
 ht-degree: 1%
@@ -61,7 +61,7 @@ ht-degree: 1%
 > Alpha限制：
 > - 目前僅支援基於ONNX的型號。
 > - 節點中使用的函式無法序列化。 例如，Apcots節點中使用的lambda函式。
-> - 手動部署Edge後，會有60秒的睡眠。
+> - 手動部署Edge後，會有20秒的睡眠。
 > - 要進行深入學習，您需要以這樣的方式發送資料：在調用資料時， `df.values` 它會返回一個DL模型可接受的陣列。 這是因為ONNX模型計分節點使用並 `df.values` 發送輸出以對模型進行計分。
 
 
