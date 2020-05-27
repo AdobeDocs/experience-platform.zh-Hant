@@ -4,7 +4,10 @@ solution: Experience Platform
 title: 描述符
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 599991af774e283d9fb60216e3d3bd5b17cf8193
+source-git-commit: c8cc57a8629f04c7af68b6f5cfee365527caa3c1
+workflow-type: tm+mt
+source-wordcount: '1499'
+ht-degree: 1%
 
 ---
 
@@ -301,20 +304,25 @@ curl -X DELETE \
 
 #### 友好名稱描述符
 
-友好名稱描述符允許用戶修改核 `title` 心庫 `description` 模式欄位和值。 當使用您想要標示為包含您組織特定資訊的「eVar」和其他「一般」欄位時，特別有用。 UI可使用這些來顯示更好記的名稱，或僅顯示具有好記名稱的欄位。
+好記的名稱描述符允許用戶修改 `title`核心庫 `description`模式 `meta:enum` 欄位的、和值。 當使用您想要標示為包含您組織特定資訊的「eVar」和其他「一般」欄位時，特別有用。 UI可使用這些來顯示更好記的名稱，或僅顯示具有好記名稱的欄位。
 
 ```json
 {
   "@type": "xdm:alternateDisplayInfo",
   "xdm:sourceSchema": "https://ns.adobe.com/{TENANT_ID}/schemas/274f17bc5807ff307a046bab1489fb18",
-  "xdm:sourceVersion": 1
-  "xdm:sourceProperty": "/eVars/eVar1",
+  "xdm:sourceVersion": 1,
+  "xdm:sourceProperty": "/xdm:eventType",
   "xdm:title": {
-    "en_us":{"Loyalty ID"}
+    "en_us": "Event Type"
   },
   "xdm:description": {
-    "en_us":{"Unique ID of loyalty program member."}
+    "en_us": "The type of experience event detected by the system."
   },
+  "meta:enum": {
+    "click": "Mouse Click",
+    "addCart": "Add to Cart",
+    "checkout": "Cart Checkout"
+  }
 }
 ```
 
@@ -326,6 +334,7 @@ curl -X DELETE \
 | `xdm:sourceProperty` | 將作為身份的特定屬性的路徑。 路徑應以&quot;/&quot;開頭，而不以&quot;/&quot;結束。 路徑中不包含「屬性」（例如，使用「/personalEmail/address」而非「/properties/personalEmail/properties/address」） |
 | `xdm:title` | 您要為此欄位顯示的新標題，在「標題大小寫」中撰寫。 |
 | `xdm:description` | 可隨標題新增選擇性說明。 |
+| `meta:enum` | 如果由指示的欄位 `xdm:sourceProperty` 是字串欄位，則會 `meta:enum` 決定「體驗平台UI」中欄位的建議值清單。 請務必注意，不 `meta:enum` 要聲明枚舉或為XDM欄位提供任何資料驗證。<br><br>這僅應用於Adobe定義的核心XDM欄位。 如果來源屬性是您組織定義的自訂欄位，您應直接透過 `meta:enum` PUT請求編輯欄位 [屬性](./update-resource.md)。 |
 
 #### 關係描述子
 
