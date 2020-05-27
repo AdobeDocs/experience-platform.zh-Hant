@@ -4,10 +4,10 @@ solution: Experience Platform
 title: 使用流程服務API建立Azure Blob連接器
 topic: overview
 translation-type: tm+mt
-source-git-commit: 7ffe560f455973da3a37ad102fbb8cc5969d5043
+source-git-commit: 0a2247a9267d4da481b3f3a5dfddf45d49016e61
 workflow-type: tm+mt
-source-wordcount: '556'
-ht-degree: 2%
+source-wordcount: '619'
+ht-degree: 1%
 
 ---
 
@@ -35,9 +35,10 @@ Flow Service用於收集和集中Adobe Experience Platform內不同來源的客�
 
 | 憑證 | 說明 |
 | ---------- | ----------- |
-| `connectionString` | 訪問Blob儲存中的資料所需的連接字串。 |
+| `connectionString` | 訪問Blob儲存中的資料所需的連接字串。 Blob連接字串模式是： `DefaultEndpointsProtocol=https;AccountName={ACCOUNT_NAME};AccountKey={ACCOUNT_KEY}`. |
+| `connectionSpec.id` | 建立連線所需的唯一識別碼。 Blob的連接規範ID是： `4c10e202-c428-4796-9208-5f1f5732b1cf` |
 
-如需快速入門的詳細資訊，請造 [訪此Azure Blob檔案](https://docs.microsoft.com/en-us/azure/storage/common/storage-configure-connection-string)。
+如需有關取得連線字串的詳細資訊，請參 [閱此Azure Blob檔案](https://docs.microsoft.com/en-us/azure/storage/common/storage-configure-connection-string)。
 
 ### 讀取範例API呼叫
 
@@ -71,6 +72,8 @@ POST /connections
 
 **請求**
 
+要建立Blob連接，其唯一連接規範ID必須作為POST請求的一部分提供。 Blob的連接規範ID為 `4c10e202-c428-4796-9208-5f1f5732b1cf`。
+
 ```shell
 curl -X POST \
     'http://platform.adobe.io/data/foundation/flowservice/connections' \
@@ -85,7 +88,7 @@ curl -X POST \
         "auth": {
             "specName": "ConnectionString",
             "params": {
-                "connectionString": "{CONNECTION_STRING}"
+                "connectionString": "DefaultEndpointsProtocol=https;AccountName={ACCOUNT_NAME};AccountKey={ACCOUNT_KEY}"
             }
         },
         "connectionSpec": {
@@ -97,8 +100,8 @@ curl -X POST \
 
 | 屬性 | 說明 |
 | -------- | ----------- |
-| `auth.params.connectionString` | Blob儲存的連接字串。 |
-| `connectionSpec.id` | 點滴儲存連接規範ID: `4c10e202-c428-4796-9208-5f1f5732b1cf` |
+| `auth.params.connectionString` | 訪問Blob儲存中的資料所需的連接字串。 Blob連接字串模式是： `DefaultEndpointsProtocol=https;AccountName={ACCOUNT_NAME};AccountKey={ACCOUNT_KEY}`. |
+| `connectionSpec.id` | 點滴儲存連接規範ID是： `4c10e202-c428-4796-9208-5f1f5732b1cf` |
 
 **回應**
 
