@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 在UI中建立Azure Synapse Analytics來源連接器
 topic: overview
 translation-type: tm+mt
-source-git-commit: 2162c66b1664ecaaf0b609fe3f7ccf58c4a5d31d
+source-git-commit: 0a2247a9267d4da481b3f3a5dfddf45d49016e61
 workflow-type: tm+mt
-source-wordcount: '489'
+source-wordcount: '495'
 ht-degree: 1%
 
 ---
@@ -36,7 +36,7 @@ Adobe Experience Platform中的來源連接器可讓您依計畫吸收外部來�
 
 | 憑證 | 說明 |
 | ---------- | ----------- |
-| `connectionString` | 與Synapse驗證關聯的連接字串。 |
+| `connectionString` | 與Synapse驗證關聯的連接字串。 Synapse連接字串模式是 `Server=tcp:{SERVER_NAME}.database.windows.net,1433;Database={DATABASE};User ID={USERNAME}@{SERVER_NAME};Password={PASSWORD};Trusted_Connection=False;Encrypt=True;Connection Timeout=30`。 |
 
 有關此值的詳細資訊，請參 [閱Synapse文檔](https://docs.microsoft.com/en-us/azure/data-factory/connector-azure-sql-data-warehouse)。
 
