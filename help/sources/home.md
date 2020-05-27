@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Adobe Experience Platform來源連接器概觀
 topic: overview
 translation-type: tm+mt
-source-git-commit: 7c94d7a0aace7525e776f13e2975f91cf2b29e23
+source-git-commit: 22425c33e39cf788eec6fd0a54f65fb89fdaff4f
 workflow-type: tm+mt
 source-wordcount: '758'
 ht-degree: 0%
@@ -38,7 +38,7 @@ Experience Platform可讓您從其他Adobe應用程式擷取資料，包括Adobe
 
 Experience Platform支援從協力廠商廣告系統擷取資料。 有關特定來源連接器的詳細資訊，請參閱下列相關檔案：
 
-- [Google Ads連接器](connectors/advertising/ads.md)
+- [Google AdWords連接器](connectors/advertising/ads.md)
 
 ### 雲端儲存空間
 
