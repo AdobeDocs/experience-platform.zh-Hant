@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 在UI中建立PostgreSQL源連接器
 topic: overview
 translation-type: tm+mt
-source-git-commit: 2162c66b1664ecaaf0b609fe3f7ccf58c4a5d31d
+source-git-commit: 0a2247a9267d4da481b3f3a5dfddf45d49016e61
 workflow-type: tm+mt
-source-wordcount: '476'
+source-wordcount: '482'
 ht-degree: 1%
 
 ---
@@ -36,7 +36,7 @@ Adobe Experience Platform中的來源連接器可讓您依計畫吸收外部來�
 
 | 憑證 | 說明 |
 | ---------- | ----------- |
-| `connectionString` | 與PSQL帳戶關聯的連接字串。 |
+| `connectionString` | 與PSQL帳戶關聯的連接字串。 PSQL連接字串模式是： `Server={SERVER};Database={DATABASE};Port={PORT};UID={USERNAME};Password={PASSWORD}`. |
 
 有關快速入門的詳細資訊，請參閱此 [PSQL文檔](https://www.postgresql.org/docs/9.2/app-psql.html)。
 
