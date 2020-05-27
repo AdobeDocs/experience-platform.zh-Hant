@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 在UI中建立MariaDB來源連接器
 topic: overview
 translation-type: tm+mt
-source-git-commit: 2162c66b1664ecaaf0b609fe3f7ccf58c4a5d31d
+source-git-commit: 0a2247a9267d4da481b3f3a5dfddf45d49016e61
 workflow-type: tm+mt
-source-wordcount: '483'
+source-wordcount: '489'
 ht-degree: 1%
 
 ---
@@ -36,7 +36,7 @@ Adobe Experience Platform中的來源連接器可讓您依計畫吸收外部來�
 
 | 憑證 | 說明 |
 | ---------- | ----------- |
-| `connectionString` | 與您的MariaDB驗證相關聯的連接字串。 |
+| `connectionString` | 與您的MariaDB驗證相關聯的連接字串。 MariaDB連接字串模式是： `Server={HOST};Port={PORT};Database={DATABASE};UID={USERNAME};PWD={PASSWORD}`. |
 
 有關開始使 [用MariaDB的詳細資訊](https://mariadb.com/kb/en/about-mariadb-connector-odbc/) ，請參閱本檔案。
 
