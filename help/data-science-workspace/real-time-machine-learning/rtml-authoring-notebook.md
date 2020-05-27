@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 即時機器學習筆記型電腦使用指南
 topic: Training and scoring a ML model
 translation-type: tm+mt
-source-git-commit: dc63ad0c0764355aed267eccd1bcc4965b04dba4
+source-git-commit: 695eba3885dc319a9b7f73eb710b2ada0b17d24d
 workflow-type: tm+mt
-source-wordcount: '1570'
+source-wordcount: '1659'
 ht-degree: 0%
 
 ---
@@ -82,6 +82,8 @@ pprint(nf.discover_nodes())
 >[!NOTE]
 >在「即 **時ML** 」範本中， [從Github擷取汽車保險CSV資料集](https://github.com/adobe/experience-platform-dsw-reference/tree/master/datasets/insurance) 。
 
+![載入傳輸資料](../images/rtml/load_training.png)
+
 如果您想要從Adobe Experience Platform內使用資料集，請取消下方儲存格的註解。 接下來，您需要以適 `DATASET_ID` 當的值取代。
 
 ![rtml資料集](../images/rtml/rtml-dataset.png)
@@ -114,7 +116,7 @@ config_properties = {
 需 *要修改即時ML* 范 ** 本資料轉換儲存格，才能搭配您自己的資料集運作。 這通常涉及重新命名欄、資料統計以及資料準備／功能工程。
 
 >[!NOTE]
->以下範例已經過壓縮，以利於可讀性 `[ ... ]`。 請檢視完整 *程式碼儲存格的即時ML* 範本。
+>以下範例已經過壓縮，以利於可讀性 `[ ... ]`。 請檢視並展開完整 *程式碼儲存格的即時ML* 範本資料轉換區段。
 
 ```python
 df1.rename(columns = {config_properties['ten_id']+'.identification.ecid' : 'ecid',
@@ -189,7 +191,7 @@ cat_cols = ['age_bucket', 'gender', 'city', 'dayofweek', 'country', 'carbrand', 
 df_final = pd.get_dummies(df_final, columns = cat_cols)
 ```
 
-執行提供的儲存格，查看範例結果。 從資料集傳回的輸出表 `carinsurancedataset.csv` 格會傳回定義的修改。
+執行提供的儲存格，查看範例結果。 從資料集傳回的輸出表 `carinsurancedataset.csv` 格會傳回您定義的修改。
 
 ![資料轉換範例](../images/rtml/table-return.png)
 
@@ -237,18 +239,23 @@ import skl2onnx, subprocess
 model.generate_onnx_resources()
 ```
 
+>[!NOTE]
+>更改 `model_path` 字串值(`model.onnx`)以更改模型的名稱。
+
 ```python
 model_path = "model.onnx"
+```
 
+>[!NOTE]
+>以下儲存格不可編輯或刪除，您的即時機器學習應用程式必須有此儲存格才能運作。
+
+```python
 model = ModelUpload(params={'model_path': model_path})
 msg_model = model.process(None, 1)
 model_id = msg_model.model['model_id']
  
 print("Model ID : ", model_id)
 ```
-
->[!NOTE]
->變更字 `model_path` 串值以命名模型。
 
 ![ONNX型號](../images/rtml/onnx-model-rail.png)
 
@@ -272,7 +279,7 @@ print("Model ID : ", model_id)
 ### 節點製作
 
 >[!NOTE]
-> 您可能會根據使用的資料類型擁有多個節點。 以下示例僅概述即時ML模 *板中的單個節點* 。 請檢視完整 *程式碼儲存格的即時ML* 範本。
+> 您可能會根據使用的資料類型擁有多個節點。 以下示例僅概述即時ML模 *板中的單個節點* 。 請檢視完整 *程式碼儲存格的「即時ML* 范 *本節點製作* 」區段。
 
 下面的Apcotis節點 `"import": "map"` 將方法名稱作為字串輸入到參數中，然後輸入參數作為映射函式。 以下範例使用執行此動作 `{'arg': {'dataLayerNull': 'notgiven', 'no': 'no', 'yes': 'yes', 'notgiven': 'notgiven'}}`。 在對應到位後，您可以選擇設 `inplace` 為 `True` 或 `False`。 設 `inplace` 置為 `True` 或 `False` 基於是否要就地應用轉換。 預設情 `"inplace": False` 況下，建立新列。 對提供新欄名稱的支援已設定為在後續版本中新增。 最後一行 `cols` 可以是單欄名稱或欄清單。 指定要應用轉換的列。 在此示例中 `leasing` 指定。 有關可用節點以及如何使用這些節點的詳細資訊，請訪問節 [點參考指南](./node-reference.md)。
 
@@ -323,7 +330,7 @@ nodes = [json_df_node,
 edges = [(nodes[i], nodes[i+1]) for i in range(len(nodes)-1)]
 ```
 
-連接節點後，請建立圖形。
+連接節點後，請建立圖形。 下方的儲存格為強制儲存格，無法編輯或刪除。
 
 ```python
 dsl = GraphBuilder.generate_dsl(nodes=nodes, edges=edges)
@@ -413,10 +420,33 @@ time.sleep(20)
 
 計分完成後，會傳回Edge的Edge URL、Payload和計分輸出。
 
-## 從Edge刪除已部署的應用程式（可選）
+## 從Edge列出您已部署的應用程式
 
->!![CAUTION]
-此儲存格用於刪除已部署的Edge應用程式。 請勿使用下列儲存格，除非您需要刪除已部署的Edge應用程式。
+若要在Edge上產生目前部署之應用程式的清單，請執行下列程式碼儲存格。 無法編輯或刪除此儲存格。
+
+```python
+services = edge_utils.list_deployed_services()
+print(services)
+```
+
+傳回的回應是已部署服務的陣列。
+
+```json
+[
+    {
+        "created": "2020-05-25T19:18:52.731Z",
+        "deprecated": false,
+        "id": "40eq76c0-1c6f-427a-8f8f-54y9cdf041b7",
+        "type": "edge",
+        "updated": "2020-05-25T19:18:52.731Z"
+    }
+]
+```
+
+## 從Edge刪除已部署的應用程式或服務ID（選用）
+
+>[!CAUTION]
+>此儲存格用於刪除已部署的Edge應用程式。 請勿使用下列儲存格，除非您需要刪除已部署的Edge應用程式。
 
 ```python
 if edge_utils.delete_from_edge(service_id=service_id):
