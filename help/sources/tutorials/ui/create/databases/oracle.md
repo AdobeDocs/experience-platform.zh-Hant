@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 在UI中建立Oracle DB源連接器
 topic: overview
 translation-type: tm+mt
-source-git-commit: 2162c66b1664ecaaf0b609fe3f7ccf58c4a5d31d
+source-git-commit: 0a2247a9267d4da481b3f3a5dfddf45d49016e61
 workflow-type: tm+mt
 source-wordcount: '490'
 ht-degree: 1%
@@ -36,7 +36,7 @@ Adobe Experience Platform中的來源連接器可讓您依計畫吸收外部來�
 
 | 憑證 | 說明 |
 | ---------- | ----------- |
-| `connectionString` | 用於連接到Oracle的連接字串。 Oracle連接字串模式是： `Host=<host>;Port=<port>;Sid=<sid>;User Id=<username>;Password=<password>`. |
+| `connectionString` | 用於連接到Oracle的連接字串。 Oracle連接字串模式是： `Host={HOST};Port={PORT};Sid={SID};UserId={USERNAME};Password={PASSWORD}`. |
 | `connectionSpec.id` | 建立連線所需的唯一識別碼。 Oracle的連接規範ID是 `d6b52d86-f0f8-475f-89d4-ce54c8527328`。 |
 
 有關快速入門的詳細資訊，請參 [閱此Oracle文檔](https://docs.oracle.com/database/121/ODPNT/featConnecting.htm#ODPNT199)。
