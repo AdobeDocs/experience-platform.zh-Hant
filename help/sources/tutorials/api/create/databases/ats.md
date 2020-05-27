@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 使用流程服務API建立Azure表格儲存連接器
 topic: overview
 translation-type: tm+mt
-source-git-commit: 37a5f035023cee1fc2408846fb37d64b9a3fc4b6
+source-git-commit: 0a2247a9267d4da481b3f3a5dfddf45d49016e61
 workflow-type: tm+mt
-source-wordcount: '578'
+source-wordcount: '597'
 ht-degree: 2%
 
 ---
@@ -36,10 +36,10 @@ Flow Service用於收集和集中Adobe Experience Platform內不同來源的客�
 
 | 憑證 | 說明 |
 | ---------- | ----------- |
-| `connectionString` | 連接到Azure表儲存實例的連接字串。 |
-| `connectionSpec.id` | 建立連線所需的唯一識別碼。 ATS的連線規格ID為 `ecde33f2-c56f-46cc-bdea-ad151c16cd69`。 |
+| `connectionString` | 用來連線至ATS例項的連線字串。 ATS的連接字串模式是： `DefaultEndpointsProtocol=https;AccountName={ACCOUNT_NAME};AccountKey={ACCOUNT_KEY}`. |
+| `connectionSpec.id` | 用於產生連線的ID。 ATS的固定連接規範ID為 `ecde33f2-c56f-46cc-bdea-ad151c16cd69`。 |
 
-如需快速入門的詳細資訊，請參 [閱本ATS檔案](https://docs.microsoft.com/en-us/azure/storage/common/storage-introduction)。
+如需有關取得連線字串的詳細資訊，請參 [閱本ATS檔案](https://docs.microsoft.com/en-us/azure/storage/common/storage-introduction)。
 
 ### 讀取範例API呼叫
 
@@ -89,7 +89,7 @@ curl -X POST \
         "auth": {
             "specName": "Connection String Based Authentication",
             "params": {
-                "connectionString": "{CONNECTION_STRING}"
+                "connectionString": "DefaultEndpointsProtocol=https;AccountName={ACCOUNT_NAME};AccountKey={ACCOUNT_KEY}"
             }
         },
         "connectionSpec": {
@@ -101,8 +101,8 @@ curl -X POST \
 
 | 參數 | 說明 |
 | --------- | ----------- |
-| `auth.params.connectionString` | 與您的ATS帳戶關聯的連線字串。 |
-| `connectionSpec.id` | ATS連接規範ID: `ecde33f2-c56f-46cc-bdea-ad151c16cd69`. |
+| `auth.params.connectionString` | 用來連線至ATS例項的連線字串。 ATS的連接字串模式是： `DefaultEndpointsProtocol=https;AccountName={ACCOUNT_NAME};AccountKey={ACCOUNT_KEY}`. |
+| `connectionSpec.id` | ATS連接規範ID為： `ecde33f2-c56f-46cc-bdea-ad151c16cd69`. |
 
 **回應**
 
