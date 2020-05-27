@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 使用流服務API建立SQL Server連接器
 topic: overview
 translation-type: tm+mt
-source-git-commit: 37a5f035023cee1fc2408846fb37d64b9a3fc4b6
+source-git-commit: 0a2247a9267d4da481b3f3a5dfddf45d49016e61
 workflow-type: tm+mt
-source-wordcount: '679'
+source-wordcount: '607'
 ht-degree: 1%
 
 ---
@@ -36,9 +36,10 @@ Flow Service用於收集和集中Adobe Experience Platform內不同來源的客�
 
 | 憑證 | 說明 |
 | ---------- | ----------- |
-| `connectionString` | 與SQL Server帳戶關聯的連接字串。 |
+| `connectionString` | 與SQL Server帳戶關聯的連接字串。 SQL Server連接字串模式為： `Data Source={SERVER_NAME}\\<{INSTANCE_NAME} if using named instance>;Initial Catalog={DATABASE};Integrated Security=False;User ID={USERNAME};Password={PASSWORD};`. |
+| `connectionSpec.id` | 用於產生連線的ID。 SQL Server的固定連接規範ID為 `1f372ff9-38a4-4492-96f5-b9a4e4bd00ec`。 |
 
-有關開始使 [用SQL Server的詳細資訊](https://docs.microsoft.com/en-us/dotnet/framework/data/adonet/sql/authentication-in-sql-server) ，請參閱本文檔。
+有關獲取連接字串的詳細資訊，請參 [閱此SQL Server文檔](https://docs.microsoft.com/en-us/dotnet/framework/data/adonet/sql/authentication-in-sql-server)。
 
 ### 讀取範例API呼叫
 
@@ -60,77 +61,9 @@ Experience Platform中的所有資源（包括屬於流服務的資源）都會�
 
 * 內容類型： `application/json`
 
-## 查找連接規格
+## 建立連線
 
-要建立SQL Server連接，流服務中必須存在一組SQL Server連接規範。 將平台連接到SQL Server的第一步是檢索這些規範。
-
-**API格式**
-
-每個可用源都有其唯一的連接規範集，用於描述連接器屬性（如驗證要求）。 向端點發送GET請求 `/connectionSpecs` 將返回所有可用源的連接規範。 您也可以包括查詢以 `property=name=="sql-server"` 獲取SQL Server的具體資訊。
-
-```http
-GET /connectionSpecs
-GET /connectionSpecs?property=name=="sql-server"
-```
-
-**請求**
-
-以下請求檢索SQL Server的連接規範。
-
-```shell
-curl -X GET \
-    'https://platform.adobe.io/data/foundation/flowservice/connectionSpecs?property=name=="sql-server"' \
-    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-    -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
-    -H 'x-sandbox-name: {SANDBOX_NAME}'
-```
-
-**回應**
-
-成功的響應返回SQL Server的連接規範，包括其唯一標識符(`id`)。 在下個步驟中需要此ID才能建立基本連線。
-
-```json
-{
-    "items": [
-        {
-            "id": "1f372ff9-38a4-4492-96f5-b9a4e4bd00ec",
-            "name": "sql-server",
-            "providerId": "0ed90a81-07f4-4586-8190-b40eccef1c5a",
-            "version": "1.0",
-            "authSpec": [
-                {
-                    "name": "Connection String Based Authentication",
-                    "type": "connectionString",
-                    "spec": {
-                        "$schema": "http://json-schema.org/draft-07/schema#",
-                        "type": "object",
-                        "description": "defines auth params required for connecting to SQL Server database",
-                        "properties": {
-                            "connectionString": {
-                                "type": "string",
-                                "description": "connection string to connect to any SQL Server database.",
-                                "format": "password",
-                                "pattern": "^(Data Source=)(.*)(;Initial Catalog=)(.*)(;Integrated Security=)(.*)(;User ID=)(.*)(;Password=)(.*)(;)",
-                                "examples": [
-                                    "Data Source=<servername>\\<instance name if using named instance>;Initial Catalog=<databasename>;Integrated Security=False;User ID=<username>;Password=<password>;"
-                                ]
-                            }
-                        },
-                        "required": [
-                            "connectionString"
-                        ]
-                    }
-                }
-            ]
-        }
-    ]
-}
-```
-
-## 建立基本連接
-
-基本連接指定源，並包含該源的憑據。 每個SQL Server帳戶只需一個基本連接，因為它可用於建立多個源連接器以導入不同的資料。
+連接指定源，並包含該源的憑據。 每個SQL Server帳戶只需要一個連接，因為它可用於建立多個源連接器以導入不同的資料。
 
 **API格式**
 
@@ -139,6 +72,8 @@ POST /connections
 ```
 
 **請求**
+
+要建立SQL Server連接，必須在POST請求中提供其唯一連接規範ID。 SQL Server的連接規範ID為 `1f372ff9-38a4-4492-96f5-b9a4e4bd00ec`。
 
 ```shell
 curl -X POST \
@@ -154,7 +89,7 @@ curl -X POST \
         "auth": {
             "specName": "Connection String Based Authentication",
             "params": {
-                "connectionString": "{CONNECTION_STRING}"
+                "connectionString": "Data Source={SERVER_NAME}\\<{INSTANCE_NAME} if using named instance>;Initial Catalog={DATABASE};Integrated Security=False;User ID={USERNAME};Password={PASSWORD};"
             }
         },
         "connectionSpec": {
@@ -165,12 +100,12 @@ curl -X POST \
 
 | 屬性 | 說明 |
 | --------- | ----------- |
-| `auth.params.connectionString` | 與SQL Server驗證關聯的連接字串。 |
-| `connectionSpec.id` | 在上一步中收`id`集的連接規範()。 |
+| `auth.params.connectionString` | 與SQL Server帳戶關聯的連接字串。 SQL Server連接字串模式為： `Data Source={SERVER_NAME}\\<{INSTANCE_NAME} if using named instance>;Initial Catalog={DATABASE};Integrated Security=False;User ID={USERNAME};Password={PASSWORD};`. |
+| `connectionSpec.id` | SQL Server的連接規範ID為： `1f372ff9-38a4-4492-96f5-b9a4e4bd00ec`. |
 
 **回應**
 
-成功的響應返回新建立的基本連接的詳細資訊，包括其唯一標識符(`id`)。 在下一個教學課程中探索資料時，需要此ID。
+成功的回應會傳回新建立連線的詳細資料，包括其唯一識別碼(`id`)。 在下一個教學課程中探索資料庫時，需要此ID。
 
 ```json
 {
@@ -181,4 +116,4 @@ curl -X POST \
 
 ## 後續步驟
 
-在本教程中，您使用流服務API建立了SQL Server基本連接，並獲得了該連接的唯一ID值。 在下一個教程中，您可以使用此基本連接ID來學習如何使 [用流服務API來探索資料庫或NoSQL系統](../../explore/database-nosql.md)。
+在本教程中，您使用流服務API建立了SQL Server連接，並獲取了該連接的唯一ID值。 在下一個教程中，您可以使用此連接ID來學習如何使 [用流服務API來探索資料庫或NoSQL系統](../../explore/database-nosql.md)。
