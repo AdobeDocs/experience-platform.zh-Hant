@@ -3,7 +3,10 @@ product: experience-platform
 audience: user
 user-guide-title: Adobe Experience Platform細分服務說明
 translation-type: tm+mt
-source-git-commit: c60f374fddb7c2d0ae35c5a5e085ddc0e2f7b78f
+source-git-commit: 4eafccb54c07cba54ecef652ffdd1c9a4277f89f
+workflow-type: tm+mt
+source-wordcount: '100'
+ht-degree: 8%
 
 ---
 
@@ -14,6 +17,7 @@ source-git-commit: c60f374fddb7c2d0ae35c5a5e085ddc0e2f7b78f
 - 區段API {#api}
    - [快速入門](api/getting-started.md)
    - [區段工作](api/segment-jobs.md)
+   - [區段搜尋](api/segment-search.md)
    - [串流區段](api/streaming-segmentation.md)
 - 區段UI {#ui}
    - [概述](ui/overview.md)
