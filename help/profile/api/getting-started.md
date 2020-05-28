@@ -4,7 +4,10 @@ solution: Adobe Experience Platform
 title: 即時客戶個人檔案API開發人員指南
 topic: guide
 translation-type: tm+mt
-source-git-commit: d0ccaa5511375253a2eca8f1235c2f953b734709
+source-git-commit: 8449681a7fd0fc5dccf4837a1e8e512f1e2f2601
+workflow-type: tm+mt
+source-wordcount: '954'
+ht-degree: 0%
 
 ---
 
@@ -19,11 +22,11 @@ source-git-commit: d0ccaa5511375253a2eca8f1235c2f953b734709
 
 使用本開發人員指南需要對使用描述檔資料時涉及的各種Adobe Experience Platform服務有良好的瞭解。 在開始使用即時客戶設定檔API之前，請先檢閱下列服務的檔案：
 
-* [即時客戶個人檔案](../home.md):根據來自多個來源的匯整資料，即時提供統一的客戶個人檔案。
-* [Adobe Experience Platform Identity Service](../../identity-service/home.md):跨裝置和系統橋接身分，以更全面地瞭解客戶及其行為。
-* [Adobe Experience Platform細分服務](../../segmentation/home.md):可讓您從即時客戶個人檔案資料建立受眾細分。
-* [體驗資料模型(XDM)](../../xdm/home.md):平台組織客戶體驗資料的標準化架構。
-* [沙盒](../../sandboxes/home.md):Experience Platform提供虛擬沙盒，可將單一Platform實例分割為不同的虛擬環境，以協助開發和發展數位體驗應用程式。
+* [即時客戶個人檔案](../home.md): 根據來自多個來源的匯整資料，即時提供統一的客戶個人檔案。
+* [Adobe Experience Platform Identity Service](../../identity-service/home.md): 跨裝置和系統橋接身分，以更全面地瞭解客戶及其行為。
+* [Adobe Experience Platform細分服務](../../segmentation/home.md): 可讓您從即時客戶個人檔案資料建立受眾細分。
+* [體驗資料模型(XDM)](../../xdm/home.md): 平台組織客戶體驗資料的標準化架構。
+* [沙盒](../../sandboxes/home.md): Experience Platform提供虛擬沙盒，可將單一Platform實例分割為不同的虛擬環境，以協助開發和發展數位體驗應用程式。
 
 以下各節提供您必須知道的其他資訊，以便成功呼叫描述檔API端點。
 
@@ -35,7 +38,7 @@ source-git-commit: d0ccaa5511375253a2eca8f1235c2f953b734709
 
 API檔案也要求您完成驗證教學課 [程](../../tutorials/authentication.md) ，才能成功呼叫平台端點。 完成驗證教學課程時，會針對Experience Platform API呼叫中的每個必要標題提供值，如下所示：
 
-* 授權：生產者 `{ACCESS_TOKEN}`
+* 授權： 生產者 `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
 * x-gw-ims-org-id: `{IMS_ORG}`
 
@@ -75,10 +78,6 @@ Adobe Experience Platform讓資料可輕鬆在戰略性位置的伺服器（稱�
 使用「即時客戶個人檔案API」，您可以建立新的合併原則、管理現有原則，以及為組織設定預設的合併原則。 若要進一步瞭解如何使用API來處理合併原則，請造 [訪合併原則子指南](merge-policies.md)。
 
 有關使用平台UI使用合併策略的指南，請參閱合 [並策略使用手冊](../ui/merge-policies.md)。
-
-## 描述檔搜尋
-
-描述檔搜尋可用來搜尋並索引各種資料來源所包含的可設定欄位，並幾乎即時傳回這些欄位。 若要開始使用描述檔搜尋，請參 [閱搜尋子指南](profile-search.md)
 
 ## 描述檔系統工作
 
