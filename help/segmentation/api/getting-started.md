@@ -4,7 +4,10 @@ solution: Experience Platform
 title: 區段服務開發人員指南
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 3fbacf57d5f6741726cb54fb55eab05042046f49
+source-git-commit: e25ce403034a94d7024e8c244cb438bd9dfe0c5f
+workflow-type: tm+mt
+source-wordcount: '429'
+ht-degree: 0%
 
 ---
 
@@ -17,10 +20,10 @@ source-git-commit: 3fbacf57d5f6741726cb54fb55eab05042046f49
 
 本指南需要有效瞭解使用區段所涉及的各種Adobe Experience Platform服務。
 
-- [區段](../home.md):可讓您從即時客戶個人檔案資料建立受眾細分。
-- [體驗資料模型(XDM)系統](../../xdm/home.md):Experience Platform組織客戶體驗資料的標準化架構。
-- [即時客戶個人檔案](../../profile/home.md):根據來自多個來源的匯整資料，提供統一、即時的消費者個人檔案。
-- [沙盒](../../sandboxes/home.md):Experience Platform提供虛擬沙盒，可將單一Platform實例分割為不同的虛擬環境，以協助開發和發展數位體驗應用程式。
+- [區段](../home.md): 可讓您從即時客戶個人檔案資料建立受眾細分。
+- [體驗資料模型(XDM)系統](../../xdm/home.md): Experience Platform組織客戶體驗資料的標準化架構。
+- [即時客戶個人檔案](../../profile/home.md): 根據來自多個來源的匯整資料，提供統一、即時的消費者個人檔案。
+- [沙盒](../../sandboxes/home.md): Experience Platform提供虛擬沙盒，可將單一Platform實例分割為不同的虛擬環境，以協助開發和發展數位體驗應用程式。
 
 以下各節提供您必須知道的其他資訊，以便使用API成功使用區段。
 
@@ -83,6 +86,10 @@ For more information on using this endpoint, please read the [segment definition
 區段工作會處理先前建立的區段定義，以產生觀眾區段。 您可以使用端 `/segment/jobs` 點來擷取區段工作的清單、建立新的區段工作、擷取特定區段工作的詳細資料或刪除特定區段工作。
 
 如需使用此端點的詳細資訊，請閱讀區段工 [作開發人員指南](./segment-jobs.md)。
+
+## 區段搜尋
+
+區段搜尋可用來搜尋並索引各種資料來源所包含的可設定欄位，並幾乎即時傳回這些欄位。 若要開始使用區段搜尋，請參閱搜尋開 [發人員指南](segment-search.md)
 
 ## 後續步驟
 
