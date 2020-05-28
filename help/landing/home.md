@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Adobe Experience Platform概觀
 topic: getting started
 translation-type: tm+mt
-source-git-commit: 7a36a3e3180c4ed4a9db23c0a33f6af3d7a3a5ec
+source-git-commit: efc8598d14bcae9637ce80c25f1285d93aeee742
 workflow-type: tm+mt
-source-wordcount: '505'
-ht-degree: 1%
+source-wordcount: '526'
+ht-degree: 3%
 
 ---
 
@@ -15,13 +15,14 @@ ht-degree: 1%
 # Adobe Experience Platform概觀
 
 >[!NOTE]
+>
 >Adobe Experience Platform檔案最近已移轉。 請花點時間檢閱新的導覽功能，並更新任何現有的書籤。
 
 Adobe Experience Platform是市面上功能最強大、最靈活、最開放的系統，可協助您建立和管理能推動客戶體驗的完整解決方案。 Experience Platform可讓組織集中管理和標準化來自任何系統的客戶資料和內容，並套用資料科學和機器學習，大幅改善多樣化個人化體驗的設計和提供。
 
 Experience Platform以開放API為基礎，為開發人員提供系統的完整功能，支援使用熟悉工具輕鬆整合企業解決方案。 Experience Platform也支援合作夥伴視需要建立並整合其產品與技術。 這種強大的功能與彈性讓Experience Platform在市場上獨一無二。 它為合作夥伴、客戶和開發人員社群提供基礎，以建立推動體驗業務的創新： 透過從客戶及其個人偏好的360度全方位檢視中不斷改善、完全個人化的體驗，超越客戶期望。
 
-## Experience Platform檔案
+## Experience Platform 文件
 
 Experience Platform檔案提供多種格式，以支援各種功能和服務。 若要進一步瞭解可用的檔案類型，以及閱讀各項平台服務的簡短說明，請造訪 [Experience Platform檔案總覽](documentation/overview.md)。 或者，若要立即開始進一步瞭解特定平台服務，請從左側導覽器的字母順序清單中選取指南。
 
@@ -42,6 +43,10 @@ Experience Platform檔案提供多種格式，以支援各種功能和服務。 
 ## 體驗平台教學課程
 
 從準備資料以擷取到進階的機器學習演算法，您都可依照逐步教學課程快速輕鬆地開始使用Platform。 這些教學課程是為了補充Experience Platform檔案中的資訊而設計，因此為獲得最佳效果，在完成教學課程時，可保持檔案的現有狀態。 請造訪 [Experience Platform教學課程](../tutorials/home.md) ，以開始使用。
+
+## 教學影片
+
+觀看 [教學課程](https://docs.adobe.com/content/help/zh-Hant/platform-learn/tutorials/overview.html) ，以瞭解各種Experience Platform主題。
 
 ## 參考檔案與資源
 
