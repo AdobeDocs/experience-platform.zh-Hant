@@ -3,7 +3,10 @@ product: experience-platform
 audience: user
 user-guide-title: 即時客戶個人檔案說明
 translation-type: tm+mt
-source-git-commit: c60f374fddb7c2d0ae35c5a5e085ddc0e2f7b78f
+source-git-commit: 59831f5c2445f65371d1897f66dfc45507a9955c
+workflow-type: tm+mt
+source-wordcount: '78'
+ht-degree: 20%
 
 ---
 
@@ -17,7 +20,6 @@ source-git-commit: c60f374fddb7c2d0ae35c5a5e085ddc0e2f7b78f
    * [邊緣投影](api/edge-projections.md)
    * [實體（描述檔存取）](api/entities.md)
    * [合併原則](api/merge-policies.md)
-   * [描述檔搜尋](api/profile-search.md)
    * [描述檔系統工作（刪除請求）](api/profile-system-jobs.md)
 * 設定檔UI {#ui}
    * [設定檔使用指南](ui/user-guide.md)
