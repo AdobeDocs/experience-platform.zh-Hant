@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 描述符
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: c8cc57a8629f04c7af68b6f5cfee365527caa3c1
+source-git-commit: c3d23ce0081932e61f50d426ac6d98ab7f4dfa3b
 workflow-type: tm+mt
 source-wordcount: '1499'
 ht-degree: 1%
@@ -334,7 +334,7 @@ curl -X DELETE \
 | `xdm:sourceProperty` | 將作為身份的特定屬性的路徑。 路徑應以&quot;/&quot;開頭，而不以&quot;/&quot;結束。 路徑中不包含「屬性」（例如，使用「/personalEmail/address」而非「/properties/personalEmail/properties/address」） |
 | `xdm:title` | 您要為此欄位顯示的新標題，在「標題大小寫」中撰寫。 |
 | `xdm:description` | 可隨標題新增選擇性說明。 |
-| `meta:enum` | 如果由指示的欄位 `xdm:sourceProperty` 是字串欄位，則會 `meta:enum` 決定「體驗平台UI」中欄位的建議值清單。 請務必注意，不 `meta:enum` 要聲明枚舉或為XDM欄位提供任何資料驗證。<br><br>這僅應用於Adobe定義的核心XDM欄位。 如果來源屬性是您組織定義的自訂欄位，您應直接透過 `meta:enum` PUT請求編輯欄位 [屬性](./update-resource.md)。 |
+| `meta:enum` | 如果由指示的欄位 `xdm:sourceProperty` 是字串欄位，則會 `meta:enum` 決定「體驗平台UI」中欄位的建議值清單。 請務必注意，不 `meta:enum` 要聲明枚舉或為XDM欄位提供任何資料驗證。<br><br>這僅應用於Adobe定義的核心XDM欄位。 如果來源屬性是您組織定義的自訂欄位，您應直接透過 `meta:enum` PATCH請求編輯欄位 [屬性](./update-resource.md)。 |
 
 #### 關係描述子
 
