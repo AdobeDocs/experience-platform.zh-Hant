@@ -4,7 +4,10 @@ solution: Adobe Experience Platform
 title: 即時客戶個人檔案API開發人員指南
 topic: guide
 translation-type: tm+mt
-source-git-commit: bb7aad4de681316cc9f9fd1d9310695bd220adb1
+source-git-commit: 9600f315f162b6cd86e2dbe2fffc793cc91c9319
+workflow-type: tm+mt
+source-wordcount: '1940'
+ht-degree: 2%
 
 ---
 
@@ -16,6 +19,9 @@ source-git-commit: bb7aad4de681316cc9f9fd1d9310695bd220adb1
 ## 快速入門
 
 本指南中使用的API端點是即時客戶個人檔案API的一部分。 在繼續之前，請先閱讀「即 [時客戶基本資料開發人員指南」](getting-started.md)。 尤其是，「描述檔開 [發人員指南](getting-started.md#getting-started) 」的「快速入門」區段包含相關主題的連結、閱讀本檔案中範例API呼叫的指南，以及成功呼叫任何Experience Platform API所需之必要標題的重要資訊。
+
+>[!NOTE]
+>包含裝載(POST、PUT、PATCH)的請求需要標 `Content-Type` 頭。 本文檔中 `Content-Type` 使用了多個。 請特別注意範例呼叫中的標題，以確保您對每個請求都使 `Content-Type` 用正確。
 
 ## 投影目的地
 
@@ -139,9 +145,9 @@ curl -X POST \
 | 屬性 | 說明 |
 |---|---|
 | `type` **(必填)** | 要建立的目標類型。 唯一接受的值&quot;EDGE&quot;會建立邊緣目的地。 |
-| `dataCenters` **(必填)** | 一個字串陣列，它列出要向其佈線投影的邊緣。 可包含下列一或多個值：「OR1」 —— 美國西部，「VA5」 —— 美國東部，「NLD1」 - EMEA。 |
-| `ttl` **(必填)** | 指定投影有效期。 接受的值範圍：600至604800。 預設值：3600。 |
-| `replicationPolicy` **(必填)** | 定義從集線器到邊緣的資料複製行為。  支援的值：主動、被動。 預設值：反應。 |
+| `dataCenters` **(必填)** | 一個字串陣列，它列出要向其佈線投影的邊緣。 可包含下列一或多個值： 「OR1」 —— 美國西部，「VA5」 —— 美國東部，「NLD1」 - EMEA。 |
+| `ttl` **(必填)** | 指定投影有效期。 接受的值範圍： 600至604800。 預設值： 3600。 |
+| `replicationPolicy` **(必填)** | 定義從集線器到邊緣的資料複製行為。  支援的值： 主動、被動。 預設值： 反應。 |
 
 **回應**
 
@@ -422,6 +428,9 @@ POST /config/projections?schemaName={SCHEMA_NAME}
 
 **請求**
 
+>[!NOTE]
+>建立設定的POST要求需要特定的標 `Content-Type` 題，如下所示。 使用錯誤 `Content-Type` 的標題會導致HTTP狀態415（不支援的媒體類型）錯誤。
+
 ```shell
 curl -X POST \
   https://platform.adobe.io/data/core/ups/config/projections?schemaName=_xdm.context.profile \
@@ -429,7 +438,7 @@ curl -X POST \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
-  -H 'Content-Type: application/json' \
+  -H 'Content-Type: application/vnd.adobe.platform.projectionConfig+json; version=1' \
   -d '{
         "selector": "emails,person(firstName)",
         "name": "my_test_projection",
