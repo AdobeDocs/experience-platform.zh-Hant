@@ -4,7 +4,7 @@ solution: Adobe Experience Platform
 title: 即時客戶個人檔案API開發人員指南
 topic: guide
 translation-type: tm+mt
-source-git-commit: 824e9eda41488efc362a6105c552f522185c046d
+source-git-commit: 9600f315f162b6cd86e2dbe2fffc793cc91c9319
 workflow-type: tm+mt
 source-wordcount: '2057'
 ht-degree: 1%
@@ -45,8 +45,8 @@ Adobe Experience Platform可讓您從多個來源匯整資料並加以匯整，�
         "attributeMerge": {
             "type": "{ATTRIBUTE_MERGE_TYPE}"
         },
-        "default": {BOOLEAN},
-        "updateEpoch": {UPDATE_TIME}
+        "default": "{BOOLEAN}",
+        "updateEpoch": "{UPDATE_TIME}"
     }
 ```
 
@@ -149,7 +149,7 @@ Adobe Experience Platform可讓您從多個來源匯整資料並加以匯整，�
     }
 ```
 
-### 架構 {#schema}
+### 結構 {#schema}
 
 模式對象指定為此合併策略建立的XDM模式。
 
@@ -227,7 +227,7 @@ curl -X GET \
 
 ### 根據多個合併策略的ID檢索多個合併策略
 
-通過向端點發出POST請求並在請求主體中包括要檢索 `/config/mergePolicies/bulk-get` 的合併策略的ID，可以檢索多個合併策略。
+通過向端點發出POST請求並在請求主體中包 `/config/mergePolicies/bulk-get` 含要檢索的合併策略的ID，可以檢索多個合併策略。
 
 **API格式**
 
