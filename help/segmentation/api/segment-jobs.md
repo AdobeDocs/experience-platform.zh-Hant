@@ -4,7 +4,10 @@ solution: Experience Platform
 title: 區段工作
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: db4cdbfb7719d94919c896162ca7875fdf7d2502
+source-git-commit: b0554d931718bb6a8dd7d4f971daf3652a19a2a8
+workflow-type: tm+mt
+source-wordcount: '657'
+ht-degree: 3%
 
 ---
 
@@ -32,7 +35,7 @@ GET /segment/jobs
 GET /segment/jobs?{QUERY_PARAMETERS}
 ```
 
-- `{QUERY_PARAMETERS}`:(可&#x200B;*選*)新增至請求路徑的參數，用以設定回應中傳回的結果。 可包含多個參數，由&amp;符號(`&`)分隔。 以下列出可用參數。
+- `{QUERY_PARAMETERS}`: (可&#x200B;*選*)新增至請求路徑的參數，用以設定回應中傳回的結果。 可包含多個參數，由&amp;符號(`&`)分隔。 以下列出可用參數。
 
 **查詢參數**
 
@@ -320,6 +323,102 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/jobs/d3b4a50d-dfea-4
     "updateTime": 1579304339000,
     "creationTime": 1579304260897,
     "updateEpoch": 1579304339
+}
+```
+
+## 大量擷取區段工作
+
+您可以向端點提出POST請求，並在請求主體中提供段作業值，以檢 `/segment/jobs/bulk-get` 索多 `id` 個指定段作業的詳細資訊。
+
+**API格式**
+
+```http
+POST /segment/jobs/bulk-get
+```
+
+**請求**
+
+```shell
+curl -X POST https://platform.adobe.io/data/core/ups/segment/jobs/bulk-get \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'Content-Type: application/json' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -d '{
+        "ids": [
+            {
+                "id": "cc3419d3-0389-47f1-b174-fead6b3c830d"
+            },
+            {
+                "id": "c527dc3f-07fe-4b96-be4e-23f38e734ff8"
+            }
+        ]
+    }'
+```
+
+**回應**
+
+成功的回應會傳回HTTP狀態207與請求的區段工作。
+
+>[!NOTE] 下列回應已截斷空間，僅顯示每個區段工作的部分詳細資料。 完整回應會列出所請求之區段工作的完整詳細資訊。
+
+```json
+{
+    "results": {
+        "cc3419d3-0389-47f1-b174-fead6b3c830d": {
+            "id": "cc3419d3-0389-47f1-b174-fead6b3c830d",
+            "imsOrgId": "{IMS_ORG}",
+            "status": "SUCCEEDED",
+            "segments": [
+                {
+                    "segmentId": "30230300-ccf1-48ad-8012-c5563a007069",
+                    "segment": {
+                        "id": "30230300-ccf1-48ad-8012-c5563a007069",
+                        "expression": {
+                            "type": "PQL",
+                            "format": "pql/json",
+                            "value": "{PQL_EXPRESSION}"
+                        },
+                        "mergePolicyId": "b83185bb-0bc6-489c-9363-0075eb30b4c8",
+                        "mergePolicy": {
+                            "id": "b83185bb-0bc6-489c-9363-0075eb30b4c8",
+                            "version": 1
+                        }
+                    }
+                }
+            ],
+            "updateTime": 1573204395000,
+            "creationTime": 1573203600535,
+            "updateEpoch": 1573204395
+        },
+        "c527dc3f-07fe-4b96-be4e-23f38e734ff8": {
+            "id": "c527dc3f-07fe-4b96-be4e-23f38e734ff8",
+            "imsOrgId": "{IMS_ORG}",
+            "status": "SUCCEEDED",
+            "segments": [
+                {
+                    "segmentId": "4afe34ae-8c98-4513-8a1d-67ccaa54bc05",
+                    "segment": {
+                        "id": "4afe34ae-8c98-4513-8a1d-67ccaa54bc05",
+                        "expression": {
+                            "type": "PQL",
+                            "format": "pql/json",
+                            "value": "{PQL_EXPRESSION}"
+                        },
+                        "mergePolicyId": "b83185bb-0bc6-489c-9363-0075eb30b4c8",
+                        "mergePolicy": {
+                            "id": "b83185bb-0bc6-489c-9363-0075eb30b4c8",
+                            "version": 1
+                        }
+                    }
+                }
+            ],
+            "updateTime": 1573204395000,
+            "creationTime": 1573203600535,
+            "updateEpoch": 1573204395
+        }
+    }
 }
 ```
 
