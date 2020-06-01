@@ -4,7 +4,10 @@ solution: Adobe Experience Platform
 title: 即時客戶個人檔案總覽
 topic: guide
 translation-type: tm+mt
-source-git-commit: d349ffab7c0de72d38b5195585c14a4a8f80e37c
+source-git-commit: 86fe1f407afb24d7222cff51cf9937a42571fd54
+workflow-type: tm+mt
+source-wordcount: '1775'
+ht-degree: 1%
 
 ---
 
@@ -19,7 +22,7 @@ Adobe Experience Platform可讓您為客戶推動協調、一致且相關的體�
 
 ### 描述檔資料儲存
 
-雖然即時客戶個人檔案會處理所擷取的資料，並使用Adobe Experience Platform Identity Service透過身分對應合併相關資料，但它會在個人檔案商店中維護其專屬的資料。 換言之，描述檔儲存區與目錄資料（資料湖）和身分服務資料（身分圖表）不同。
+雖然即時客戶個人檔案會處理所擷取的資料，並使用Adobe Experience Platform Identity Service透過身分對應來合併相關資料，但是會在個人檔案商店中維護其專屬的資料。 換言之，描述檔儲存區與目錄資料（資料湖）和身分服務資料（身分圖表）不同。
 
 ### 個人檔案和平台服務
 
@@ -95,6 +98,37 @@ Adobe Experience Platform Segmentation Service可為您的個別客戶帶來推�
 ### 處理退出和資料隱私權要求
 
 Experience Platform可讓客戶在即時客戶個人檔案中傳送與資料使用和儲存相關的退出要求。 如需如何處理退出要求的詳細資訊，請參閱有關執行退出 [要求的檔案](../segmentation/honoring-opt-outs.md)。
+
+## 描述檔准則
+
+Experience Platform有一系列的方針可依循，以有效使用描述檔。
+
+| 章節 | 邊界 |
+| ------- | -------- |
+| 描述檔結合架構 | 最多可以 **為** 20個資料集貢獻Profile union模式。 |
+| 多實體關係 | 最多可以 **建立** 5個多實體關係。 |
+| 多實體關聯的JSON深度 | JSON深度上限為 **4**。 |
+| 時間序列資料 | 非人員實體不 **允許** 「設定檔」中使用時間序列資料。 |
+| 非人員結構關係 | 不允許非人員結構關係 **** 。 |
+| 描述檔片段 | 建議的描述檔片段大小上限為 **10kB**。<br><br> 描述檔片段的絕對最大大小 **為1MB**。 |
+| 非人員實體 | 單一非人員實體的最大總大小為 **200MB**。 |
+| 每個非人實體的資料集 | 最多可以 **將** 1個資料集關聯到非人實體。 |
+
+<!--
+| Section | Boundary | Enforcement |
+| ------- | -------- | ----------- |
+| Profile union schema | A maximum of **20** datasets can contribute to the Profile union schema. | A message stating you've reached the maximum number of datasets appears. You must either disable or clean up other obsolete datasets in order to create a new dataset. |
+| Multi-entity relationships | A maximum of **5** multi-entity relationship can be created. | A message stating all available mappings have been used appears when the fifth relationship is mapped. An error message letting you know you have exceeded the number of available mappings appears when attempting to map a sixth relationship. | 
+| JSON depth for multi-entity association | The maximum JSON depth is **4**. | When trying to use the relationship selector with a field that is more than four levels deep, an error message appears, stating it is ineligible for multi-entity association. |
+| Time series data | Time-series data is **not** permitted in Profile for non-people entities. | A message stating that this data cannot be enabled for Profile because it is of an unsupported type appears. |
+| Non-people schema relationships | Non-people schema relationships are **not** permitted. | Relationships between two non-people schemas cannot be created. The relationships checkbox will be disabled. |
+| Profile fragment | The recommended maximum size of a profile fragment is **10kB**.<br><br> The absolute maximum size of a profile fragment is **1MB**. | If you upload a fragment that is larger than 10kB, a warning appears, stating that performance may be degraded since the fragment exceeds the recommended maximum working size.<br><br> If you upload a fragment that is larger than 1MB, ingestion will fail, and an alert letting you know that records have failed will be sent. |
+| Non-person entity | The maximum total size for a single non-person entity is **200MB**. | If you load an object as a non-person entity that is larger than 200MB, an alert will appear, stating that the entity has exceeded the maximum allowable size and will not be useable for segmentation. |
+| Datasets per non-person entity | A maximum of **1** dataset can be associated to a non-person entity. | If you try to create a second dataset that is associated to the same non-person entity, an error appears, stating that only one dataset can be active per non-person entity. |
+
+--->
+
+>!![NOTE] 非人員實體是指不屬於「設定檔」的任 **何** XDM類別。
 
 ## 後續步驟和其他資源
 
