@@ -4,27 +4,32 @@ solution: Experience Platform
 title: 透過來源連接器和API收集CRM資料
 topic: overview
 translation-type: tm+mt
-source-git-commit: 88376a67e064208ab62dd339e820adb8e47d3c4e
+source-git-commit: 1fbc348f6355bbecf20616bb72193777b966b878
+workflow-type: tm+mt
+source-wordcount: '1623'
+ht-degree: 1%
 
 ---
 
 
 # 透過來源連接器和API收集CRM資料
 
-本教學課程涵蓋從CRM系統擷取資料，並透過來源連接器和API將其匯入平台的步驟。
+Flow Service用於收集和集中Adobe Experience Platform內不同來源的客戶資料。 該服務提供用戶介面和REST風格的API，所有支援的源都可從中連接。
+
+本教學課程涵蓋從協力廠商CRM系統擷取資料，並透過來源連接器和API將其匯入平台的步驟。
 
 ## 快速入門
 
-本教學課程要求您透過有效的基本連線和想要匯入平台的表格相關資訊（包括表格的路徑和結構）來存取CRM系統。 如果您沒有此資訊，請先參閱教學課程，以 [瞭解如何使用Flow Service API](../explore/crm.md) ，然後再嘗試本教學課程。
+本教學課程要求您透過有效的連線和想要匯入平台的表格相關資訊，包括表格的路徑和結構，來存取協力廠商CRM系統。 如果您沒有此資訊，請先參閱教學課程，以 [瞭解如何使用Flow Service API](../explore/crm.md) ，然後再嘗試本教學課程。
 
 本教學課程也要求您對Adobe Experience Platform的下列元件有正確的認識：
 
-* [體驗資料模型(XDM)系統](../../../../xdm/home.md):Experience Platform組織客戶體驗資料的標準化架構。
-   * [架構構成基礎](../../../../xdm/schema/composition.md):瞭解XDM架構的基本建置區塊，包括架構組合的主要原則和最佳實務。
-   * [架構註冊開發人員指南](../../../../xdm/api/getting-started.md):包含您必須知道的重要資訊，以便成功執行對架構註冊表API的呼叫。 這包括您 `{TENANT_ID}`的「容器」概念，以及提出要求所需的標題（請特別注意「接受」標題及其可能的值）。
-* [目錄服務](../../../../catalog/home.md):目錄是Experience Platform中資料位置和世系的記錄系統。
-* [批次擷取](../../../../ingestion/batch-ingestion/overview.md):批次擷取API可讓您將資料以批次檔案的形式內嵌至Experience Platform。
-* [沙盒](../../../../sandboxes/home.md):Experience Platform提供虛擬沙盒，可將單一Platform實例分割為不同的虛擬環境，以協助開發和發展數位體驗應用程式。
+* [體驗資料模型(XDM)系統](../../../../xdm/home.md): Experience Platform組織客戶體驗資料的標準化架構。
+   * [架構構成基礎](../../../../xdm/schema/composition.md): 瞭解XDM架構的基本建置區塊，包括架構組合的主要原則和最佳實務。
+   * [架構註冊開發人員指南](../../../../xdm/api/getting-started.md): 包含您必須知道的重要資訊，以便成功執行對架構註冊表API的呼叫。 這包括您 `{TENANT_ID}`的「容器」概念，以及提出要求所需的標題（請特別注意「接受」標題及其可能的值）。
+* [目錄服務](../../../../catalog/home.md): 目錄是Experience Platform中資料位置和世系的記錄系統。
+* [批次擷取](../../../../ingestion/batch-ingestion/overview.md): 批次擷取API可讓您將資料以批次檔案的形式內嵌至Experience Platform。
+* [沙盒](../../../../sandboxes/home.md): Experience Platform提供虛擬沙盒，可將單一Platform實例分割為不同的虛擬環境，以協助開發和發展數位體驗應用程式。
 
 以下各節提供您必須知道的其他資訊，以便使用Flow Service API成功連線至CRM系統。
 
@@ -36,7 +41,7 @@ source-git-commit: 88376a67e064208ab62dd339e820adb8e47d3c4e
 
 若要呼叫平台API，您必須先完成驗證教 [學課程](../../../../tutorials/authentication.md)。 完成驗證教學課程後，所有Experience Platform API呼叫中每個必要標題的值都會顯示在下方：
 
-* 授權：生產者 `{ACCESS_TOKEN}`
+* 授權： 生產者 `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
 * x-gw-ims-org-id: `{IMS_ORG}`
 
@@ -54,11 +59,23 @@ Experience Platform中的所有資源（包括屬於Flow Service的資源）都�
 
 若要建立臨機類別和架構，請依照臨機架構教學課程中 [所述的步驟進行](../../../../xdm/tutorials/ad-hoc.md)。 建立臨機類別時，來源資料中找到的所有欄位都必須在請求內文中說明。
 
-請繼續遵循開發人員指南中所述的步驟，直到您建立臨機架構為止。 取得並儲存臨機結構的唯一識別碼(`$id`)，然後繼續本教學課程的下一步。
+請繼續遵循開發人員指南中所述的步驟，直到您建立臨機架構為止。 臨機架構的唯`$id`一識別碼()是繼續本教學課程的下一步驟的必要項。
 
 ## 建立源連接 {#source}
 
-現在，只要建立臨機XDM架構，就可以使用Flow Service API的POST要求建立來源連線。 源連接由基本連接、源資料檔案和描述源資料的模式的引用組成。
+現在，只要建立臨機XDM架構，就可以使用Flow Service API的POST要求建立來源連線。 源連接由連接ID、源資料檔案和描述源資料的模式的引用組成。
+
+要建立源連接，還必須為資料格式屬性定義枚舉值。
+
+對基於檔案的連接器使 **用下列枚舉值**:
+
+| Data.format | 列舉值 |
+| ----------- | ---------- |
+| 分隔檔案 | `delimited` |
+| JSON檔案 | `json` |
+| 拼花檔案 | `parquet` |
+
+對於所 **有基於表的連接器** ，請使用枚舉值： `tabular`.
 
 **API格式**
 
@@ -70,7 +87,7 @@ POST /sourceConnections
 
 ```shell
 curl -X POST \
-    'http://platform.adobe.io/data/foundation/flowservice/sourceConnections' \
+    'https://platform.adobe.io/data/foundation/flowservice/sourceConnections' \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
     -H 'x-gw-ims-org-id: {IMS_ORG}' \
@@ -81,7 +98,7 @@ curl -X POST \
         "baseConnectionId": "4cb0c374-d3bb-4557-b139-5712880adc55",
         "description": "Source Connection for a CRM system",
         "data": {
-            "format": "parquet_xdm",
+            "format": "tabular",
             "schema": {
                 "id": "https://ns.adobe.com/{TENANT_ID}/schemas/140c03de81b959db95879033945cfd4c",
                 "version": "application/vnd.adobe.xed-full-notext+json; version=1"
@@ -118,17 +135,19 @@ curl -X POST \
 
 | 屬性 | 說明 |
 | --- | --- |
-| `baseConnectionId` | CRM系統的基本連線ID。 |
+| `baseConnectionId` | 您所存取之協力廠商CRM系統的唯一連線ID。 |
 | `data.schema.id` | 臨機XDM架構的ID。 |
 | `params.path` | 源檔案的路徑。 |
+| `connectionSpec.id` | 與特定第三方CRM系統關聯的連接規範ID。 有關連 [接規範](#appendix) ID的清單，請參見附錄。 |
 
 **回應**
 
-成功的響應返回新建立的源連`id`接的唯一標識符()。 在後續步驟中建立目標連線時，請依需要儲存此值。
+成功的響應返回新建立的源連`id`接的唯一標識符()。 在後續步驟中需要此ID才能建立資料流。
 
 ```json
 {
     "id": "9a603322-19d2-4de9-89c6-c98bd54eb184"
+    "etag": "\"4a00038b-0000-0200-0000-5ebc47fd0000\""
 }
 ```
 
@@ -180,7 +199,7 @@ curl -X POST \
 
 **回應**
 
-成功的回應會傳回新建立之架構的詳細資料，包括其唯一識別碼(`$id`)。 在後續步驟中，依需要儲存此ID以建立目標資料集、對應和資料流。
+成功的回應會傳回新建立之架構的詳細資料，包括其唯一識別碼(`$id`)。 在後續步驟中需要此ID，才能建立目標資料集、對應和資料流。
 
 ```json
 {
@@ -220,7 +239,7 @@ curl -X POST \
 
 ## 建立目標資料集
 
-目標資料集可以通過對目錄服務API執行POST請求來建立，提供裝載內目標方案的ID。
+目標資料集可以通過對目錄服務 [API執行POST請求](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml)，提供裝載內目標方案的ID來建立。
 
 **API格式**
 
@@ -253,7 +272,7 @@ curl -X POST \
 
 **回應**
 
-成功的回應會傳回包含新建立資料集ID的陣列，格式為 `"@/datasets/{DATASET_ID}"`。 資料集ID是唯讀、系統產生的字串，用於在API呼叫中參考資料集。 在後續步驟中，依需要儲存目標資料集ID以建立目標連線和資料流。
+成功的回應會傳回包含新建立資料集ID的陣列，格式為 `"@/datasets/{DATASET_ID}"`。 資料集ID是唯讀、系統產生的字串，用於在API呼叫中參考資料集。 在後續步驟中需要目標資料集ID才能建立目標連接和資料流。
 
 ```json
 [
@@ -261,15 +280,9 @@ curl -X POST \
 ]
 ```
 
-## 建立資料集基礎連線
-
-為了建立目標連線並將外部資料收錄到平台，必須先取得資料集基礎連線。
-
-要建立資料集基礎連接，請遵循資料集基礎連接教 [程中介紹的步驟](../create-dataset-base-connection.md)。
-
-請繼續遵循開發人員指南中所述的步驟，直到您建立資料集基本連線為止。 取得並儲存基本連線的唯一識別碼(`$id`)，然後繼續本教學課程的下一步。
-
 ## 建立目標連接
+
+目標連接表示到所收錄資料所在目的地的連接。 要建立目標連接，必須提供與資料庫關聯的固定連接規範ID。 此連接規範ID為： `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
 
 您現在擁有資料集基本連線、目標架構和目標資料集的唯一識別碼。 使用這些識別碼，您可以使用Flow Service API建立目標連線，以指定將包含傳入來源資料的資料集。
 
@@ -283,18 +296,16 @@ POST /targetConnections
 
 ```shell
 curl -X POST \
-    'http://platform.adobe.io/data/foundation/flowservice/targetConnections' \
+    'https://platform.adobe.io/data/foundation/flowservice/targetConnections' \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
     -H 'x-gw-ims-org-id: {IMS_ORG}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d '{
-        "baseConnectionId": "d6c3988d-14ef-4000-8398-8d14ef000021",
-        "name": "Target Connection",
+        "name": "Target Connection for a CRM connector",
         "description": "Target Connection for CRM data",
         "data": {
-            "format": "parquet_xdm",
             "schema": {
                 "id": "https://ns.adobe.com/{TENANT_ID}/schemas/417a33eg81a221bd10495920574gfa2d",
                 "version": "application/vnd.adobe.xed-full+json;version=1.0"
@@ -304,7 +315,7 @@ curl -X POST \
             "dataSetId": "5c8c3c555033b814b69f947f"
         },
         "connectionSpec": {
-            "id": "cfc0fee1-7dc0-40ef-b73e-d8b134c436f5",
+            "id": "c604ff05-7f1a-43c0-8e18-33bf874cb11c",
             "version": "1.0"
         }
     }'
@@ -312,12 +323,9 @@ curl -X POST \
 
 | 屬性 | 說明 |
 | -------- | ----------- |
-| `baseConnectionId` | 資料集基礎連線的ID。 |
 | `data.schema.id` | 目 `$id` 標XDM模式的。 |
 | `params.dataSetId` | 目標資料集的ID。 |
-| `connectionSpec.id` | CRM的連線規格ID。 |
-
->[!NOTE] 建立目標連線時，請務必針對基本連線使用資料集基本連線值，而非 `id` 使用協力廠商來源連線的基本連線。
+| `connectionSpec.id` | 已修正連接規範ID到資料湖。 此ID為： `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
 
 ```json
 {
@@ -386,7 +394,7 @@ curl -X POST \
 
 **回應**
 
-成功的回應會傳回新建立之對應的詳細資訊，包括其唯一識別碼(`id`)。 按照後續步驟中建立資料流所需儲存此值。
+成功的回應會傳回新建立之對應的詳細資訊，包括其唯一識別碼(`id`)。 在後續步驟中需要此值才能建立資料流。
 
 ```json
 {
@@ -456,7 +464,7 @@ curl -X POST \
 }
 ```
 
-## 查找資料流規範 {#specs}
+## 檢索資料流規範 {#specs}
 
 資料流負責從源收集資料，並將其引入平台。 要建立資料流，必須首先獲取負責收集CRM資料的資料流規範。
 
@@ -478,7 +486,7 @@ curl -X GET \
 
 **回應**
 
-成功的響應返回負責將CRM系統中的資料帶入平台的資料流規範的詳細資訊。 按照下一步中 `id` 建立新資料流所需儲存欄位值。
+成功的響應返回負責將CRM系統中的資料帶入平台的資料流規範的詳細資訊。 在下一步中需要此ID才能建立新的資料流。
 
 ```json
 {
@@ -611,6 +619,8 @@ curl -X GET \
 
 資料流負責調度和收集源中的資料。 您可以通過執行POST請求來建立資料流，同時在裝載中提供先前提到的值。
 
+若要排程擷取，您必須先將開始時間值設定為以秒為單位的紀元時間。 然後，您必須將頻率值設為以下五個選項之一： `once`、 `minute`、 `hour`、 `day`或 `week`。 間隔值指定兩個連續的提取之間的期間，並且建立一次性提取不需要設定間隔。 對於所有其它頻率，間隔值必須設定為等於或大於 `15`。
+
 **API格式**
 
 ```http
@@ -641,12 +651,6 @@ curl -X POST \
         ],
         "transformations": [
             {
-                "name": "Copy",
-                "params": {
-                    "mode": "append"
-                }
-            },
-            {
                 "name": "Mapping",
                 "params": {
                     "mappingId": "ab91c736-1f3d-4b09-8424-311d3d3e3cea"
@@ -663,10 +667,13 @@ curl -X POST \
 
 | 屬性 | 說明 |
 | --- | --- |
-| `flowSpec.id` | 資料流規範ID |
-| `sourceConnectionIds` | 源連接ID |
-| `targetConnectionIds` | 目標連線ID |
-| `transformations.params.mappingId` | 對應ID |
+| `flowSpec.id` | 在上一步中檢索的流規範ID。 |
+| `sourceConnectionIds` | 在先前步驟中擷取的來源連線ID。 |
+| `targetConnectionIds` | 在先前步驟中擷取的目標連線ID。 |
+| `transformations.params.mappingId` | 在先前步驟中擷取的對應ID。 |
+| `scheduleParams.startTime` | 資料流的開始時間（以秒為單位）。 |
+| `scheduleParams.frequency` | 可選頻率值包括： `once`、 `minute`、 `hour`、 `day`或 `week`。 |
+| `scheduleParams.interval` | 該間隔用於指定兩個連續流運行之間的期間。 間隔的值應為非零整數。 當頻率設為且應大於或等於其 `once` 他頻率值時，不需要 `15` 間隔。 |
 
 **回應**
 
@@ -675,6 +682,8 @@ curl -X POST \
 ```json
 {
     "id": "8256cfb4-17e6-432c-a469-6aedafb16cd5"
+    "etag": "\"04004fe9-0000-0200-0000-5ebc4c8b0000\""
+
 }
 ```
 
@@ -684,3 +693,14 @@ curl -X POST \
 
 * [即時客戶個人檔案總覽](../../../../profile/home.md)
 * [資料科學工作區概觀](../../../../data-science-workspace/home.md)
+
+## 附錄
+
+下節列出不同的CRM來源連接器及其連接規格。
+
+### 連接規範
+
+| 連接器名稱 | 連接規範 |
+| -------------- | --------------- |
+| Microsoft Dynamics | `38ad80fe-8b06-4938-94f4-d4ee80266b07` |
+| Salesforce | `cfc0fee1-7dc0-40ef-b73e-d8b134c436f5` |
