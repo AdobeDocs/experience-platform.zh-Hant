@@ -4,7 +4,7 @@ seo-title: Facebook目標
 description: 根據雜湊的電子郵件，啟用您Facebook宣傳的個人檔案，以鎖定受眾、個人化和抑制受眾。
 seo-description: 根據雜湊的電子郵件，啟用您Facebook宣傳的個人檔案，以鎖定受眾、個人化和抑制受眾。
 translation-type: tm+mt
-source-git-commit: 522014f8e5f3de0f553a69763d3a37482953b7c4
+source-git-commit: 79aecf4955507622ac7879c148cdcd23e893dd65
 workflow-type: tm+mt
 source-wordcount: '665'
 ht-degree: 0%
@@ -35,8 +35,10 @@ ht-degree: 0%
 
 
 航空公司有不同的客戶層級（銅、銀和金），並希望透過社交平台為每個層級提供個人化優惠。 不過，並非所有客戶都使用該航空公司的行動應用程式，其中有些客戶尚未登入該公司網站。 公司對於這些客戶的唯一識別碼是會籍ID和電子郵件地址。
-若要跨社交媒體鎖定客戶，他們可以將客戶資料從CRM載入Adobe即時CDP，並使用雜湊的電子郵件地址做為識別碼。
-接下來，他們可以將離線資料與現有的線上活動資料結合，以建立新的受眾細分，以便透過Facebook目標進行鎖定。
+
+若要跨社交媒體鎖定客戶，他們可以將客戶資料從CRM載入Adobe即時CDP，並使用電子郵件地址做為識別碼。
+
+接著，他們可以使用離線資料（包括相關的會籍ID和客戶層級）來建立新的受眾細分，以便透過Facebook目標鎖定。
 
 ## 目的地細節 {#destination-specs}
 
