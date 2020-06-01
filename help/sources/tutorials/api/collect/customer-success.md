@@ -4,7 +4,10 @@ solution: Experience Platform
 title: 透過來源連接器和API，從客戶成功系統收集資料
 topic: overview
 translation-type: tm+mt
-source-git-commit: c216e321fd913773578107df027d953f10d99a36
+source-git-commit: 6df2ccd06f506ada0be5805143c487edb853396b
+workflow-type: tm+mt
+source-wordcount: '1663'
+ht-degree: 1%
 
 ---
 
@@ -13,22 +16,22 @@ source-git-commit: c216e321fd913773578107df027d953f10d99a36
 
 Flow Service用於收集和集中Adobe Experience Platform內不同來源的客戶資料。 該服務提供用戶介面和REST風格的API，所有支援的源都可從中連接。
 
-本教學課程涵蓋從「客戶成功」(「CS」)系統擷取資料，並透過來源連接器和API將其匯入平台的步驟。
+本教學課程涵蓋從客戶成功系統擷取資料，並透過來源連接器和API將其匯入平台的步驟。
 
 ## 快速入門
 
-本教學課程要求您透過有效的基本連線存取協力廠商CS系統，並瞭解您要匯入平台的檔案，包括檔案的路徑和結構。 如果您沒有此資訊，請參閱教程，在嘗試本教 [程之前，使用流服務API來探索資料庫或NoSQL系統](../explore/customer-success.md) 。
+本教學課程要求您透過有效的連線和想要匯入平台的檔案相關資訊，包括檔案的路徑和結構，來存取協力廠商客戶成功系統。 如果您沒有此資訊，請參閱教程，在嘗試本教 [程之前，使用流服務API來探索資料庫或NoSQL系統](../explore/customer-success.md) 。
 
 本教學課程也要求您對Adobe Experience Platform的下列元件有正確的認識：
 
-* [體驗資料模型(XDM)系統](../../../../xdm/home.md):Experience Platform組織客戶體驗資料的標準化架構。
-   * [架構構成基礎](../../../../xdm/schema/composition.md):瞭解XDM架構的基本建置區塊，包括架構組合的主要原則和最佳實務。
-   * [架構註冊開發人員指南](../../../../xdm/api/getting-started.md):包含您必須知道的重要資訊，以便成功執行對架構註冊表API的呼叫。 這包括您 `{TENANT_ID}`的「容器」概念，以及提出要求所需的標題（請特別注意「接受」標題及其可能的值）。
-* [目錄服務](../../../../catalog/home.md):目錄是Experience Platform中資料位置和世系的記錄系統。
-* [批次擷取](../../../../ingestion/batch-ingestion/overview.md):批次擷取API可讓您將資料以批次檔案的形式內嵌至Experience Platform。
-* [沙盒](../../../../sandboxes/home.md):Experience Platform提供虛擬沙盒，可將單一Platform實例分割為不同的虛擬環境，以協助開發和發展數位體驗應用程式。
+* [體驗資料模型(XDM)系統](../../../../xdm/home.md): Experience Platform組織客戶體驗資料的標準化架構。
+   * [架構構成基礎](../../../../xdm/schema/composition.md): 瞭解XDM架構的基本建置區塊，包括架構組合的主要原則和最佳實務。
+   * [架構註冊開發人員指南](../../../../xdm/api/getting-started.md): 包含您必須知道的重要資訊，以便成功執行對架構註冊表API的呼叫。 這包括您 `{TENANT_ID}`的「容器」概念，以及提出要求所需的標題（請特別注意「接受」標題及其可能的值）。
+* [目錄服務](../../../../catalog/home.md): 目錄是Experience Platform中資料位置和世系的記錄系統。
+* [批次擷取](../../../../ingestion/batch-ingestion/overview.md): 批次擷取API可讓您將資料以批次檔案的形式內嵌至Experience Platform。
+* [沙盒](../../../../sandboxes/home.md): Experience Platform提供虛擬沙盒，可將單一Platform實例分割為不同的虛擬環境，以協助開發和發展數位體驗應用程式。
 
-以下各節提供您必須知道的其他資訊，以便使用Flow Service API成功連線至CS系統。
+以下各節提供您需要瞭解的其他資訊，以便使用Flow Service API成功連線至客戶成功系統。
 
 ### 讀取範例API呼叫
 
@@ -38,7 +41,7 @@ Flow Service用於收集和集中Adobe Experience Platform內不同來源的客�
 
 若要呼叫平台API，您必須先完成驗證教 [學課程](../../../../tutorials/authentication.md)。 完成驗證教學課程後，所有Experience Platform API呼叫中每個必要標題的值都會顯示在下方：
 
-* 授權：生產者 `{ACCESS_TOKEN}`
+* 授權： 生產者 `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
 * x-gw-ims-org-id: `{IMS_ORG}`
 
@@ -56,11 +59,23 @@ Experience Platform中的所有資源（包括屬於Flow Service的資源）都�
 
 若要建立臨機類別和架構，請依照臨機架構教學課程中 [所述的步驟進行](../../../../xdm/tutorials/ad-hoc.md)。 建立臨機類別時，來源資料中找到的所有欄位都必須在請求內文中說明。
 
-請繼續遵循開發人員指南中所述的步驟，直到您建立臨機架構為止。 取得並儲存臨機結構的唯一識別碼(`$id`)，然後繼續本教學課程的下一步。
+請繼續遵循開發人員指南中所述的步驟，直到您建立臨機架構為止。 臨機架構的唯`$id`一識別碼()是繼續本教學課程的下一步驟的必要項。
 
 ## 建立源連接 {#source}
 
-現在，只要建立臨機XDM架構，就可以使用Flow Service API的POST要求建立來源連線。 源連接由基本連接、源資料檔案和描述源資料的模式的引用組成。
+現在，只要建立臨機XDM架構，就可以使用Flow Service API的POST要求建立來源連線。 源連接由連接ID、源資料檔案和描述源資料的模式的引用組成。
+
+要建立源連接，還必須為資料格式屬性定義枚舉值。
+
+對基於檔案的連接器使 **用下列枚舉值**:
+
+| Data.format | 列舉值 |
+| ----------- | ---------- |
+| 分隔檔案 | `delimited` |
+| JSON檔案 | `json` |
+| 拼花檔案 | `parquet` |
+
+對於所 **有基於表的連接器** ，請使用枚舉值： `tabular`.
 
 **API格式**
 
@@ -79,13 +94,13 @@ curl -X POST \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d '{
-        "name": "Source connection for CS",
-        "baseConnectionId": "60a5c8b9-3c30-43ba-a5c8-b93c3093ba66",
-        "description": "Source Connection for CS to ingest Account",
+        "name": "Source connection for Customer Success",
+        "baseConnectionId": "f1da3694-38a9-403d-9a36-9438a9203d42",
+        "description": "Source connection for a Customer Success connector",
         "data": {
-            "format": "parquet_xdm",
+            "format": "tabular",
             "schema": {
-                "id": "https://ns.adobe.com/{TENANT_ID}/classes/51dd6dce662f8aebe4353c74bbb49c77cb3cbcd6c6b29021",
+                "id": "https://ns.adobe.com/adobe_mcdp_connectors_stg/classes/5d032b2230d5495aef49437d04d1c5fac4788b17ae85bf93",
                 "version": "application/vnd.adobe.xed-full-notext+json; version=1"
             }
         },
@@ -93,18 +108,18 @@ curl -X POST \
             "path": "Account"
         },
         "connectionSpec": {
-            "id": "eb13cb25-47ab-407f-ba89-c0125281c563",
+            "id": "cb66ab34-8619-49cb-96d1-39b37ede86ea",
             "version": "1.0"
-    }
-}'
+        }
+    }}'
 ```
 
 | 屬性 | 說明 |
 | -------- | ----------- |
-| `baseConnectionId` | CS系統的基本連線ID |
+| `baseConnectionId` | 您存取之協力廠商客戶成功系統的唯一連線ID。 |
 | `data.schema.id` | 臨 `$id` 機XDM架構。 |
 | `params.path` | 源檔案的路徑。 |
-| `connectionSpec.id` | CS系統的連接規範ID。 |
+| `connectionSpec.id` | 與特定第三方客戶成功系統關聯的連接規範ID。 有關連 [接規範](#appendix) ID的清單，請參見附錄。 |
 
 **回應**
 
@@ -112,8 +127,8 @@ curl -X POST \
 
 ```json
 {
-    "id": "01b7cbea-cf18-4552-b7cb-eacf18055294",
-    "etag": "\"2103ac94-0000-0200-0000-5e543ad70000\""
+    "id": "17faf955-2cf8-4b15-baf9-552cf88b1540",
+    "etag": "\"2900a761-0000-0200-0000-5ed18cea0000\""
 }
 ```
 
@@ -145,8 +160,8 @@ curl -X POST \
     -H 'Content-Type: application/json' \
     -d '{
         "type": "object",
-        "title": "Target schema for CS",
-        "description": "Target schema for CS",
+        "title": "Target schema for a Customer Success connector",
+        "description": "Target schema for Database",
         "allOf": [
             {
                 "$ref": "https://ns.adobe.com/xdm/context/profile"
@@ -158,6 +173,10 @@ curl -X POST \
                 "$ref": "https://ns.adobe.com/xdm/context/profile-personal-details"
             }
         ],
+        "meta:containerId": "tenant",
+        "meta:resourceType": "schemas",
+        "meta:xdmType": "object",
+        "meta:class": "https://ns.adobe.com/xdm/context/profile"
     }'
 ```
 
@@ -167,13 +186,13 @@ curl -X POST \
 
 ```json
 {
-    "$id": "https://ns.adobe.com/{TENANT_ID}/schemas/deb3e1096c35d8311b5d80868c4bd5b3cdfd4b3150e7345f",
-    "meta:altId": "_{TENANT_ID}.schemas.deb3e1096c35d8311b5d80868c4bd5b3cdfd4b3150e7345f",
+    "$id": "https://ns.adobe.com/{TENANT_ID}/schemas/b750bd161fef405bc324d0c8809b02c494d73e60e7ae9b3e",
+    "meta:altId": "_{TENANT_ID}.schemas.b750bd161fef405bc324d0c8809b02c494d73e60e7ae9b3e",
     "meta:resourceType": "schemas",
     "version": "1.0",
-    "title": "Target schema for CS",
+    "title": "Target schema for a Customer Success connector",
     "type": "object",
-    "description": "Target schema for CS",
+    "description": "Target schema for Database",
     "allOf": [
         {
             "$ref": "https://ns.adobe.com/xdm/context/profile",
@@ -208,13 +227,14 @@ curl -X POST \
     ],
     "meta:xdmType": "object",
     "meta:registryMetadata": {
-        "repo:createdDate": 1582578764554,
-        "repo:lastModifiedDate": 1582578764554,
+        "repo:createdDate": 1590791550228,
+        "repo:lastModifiedDate": 1590791550228,
         "xdm:createdClientId": "{CREATED_CLIENT_ID}",
         "xdm:lastModifiedClientId": "{LAST_MODIFIED_CLIENT_ID}",
         "xdm:createdUserId": "{CREATED_USER_ID}",
         "xdm:lastModifiedUserId": "{LAST_MODIFIED_USER_ID}",
-        "eTag": "213e4bf7cbac74e3a9e6f988da321e2f7353acacd9ea651a5652bd49b28b8d2a"
+        "eTag": "d730441903b95425145d9c742647ab4426d86549159182913e5f99cc904be5b1",
+        "meta:globalLibVersion": "1.10.4.2"
     },
     "meta:class": "https://ns.adobe.com/xdm/context/profile",
     "meta:containerId": "tenant",
@@ -229,7 +249,7 @@ curl -X POST \
 **API格式**
 
 ```http
-POST /dataSets
+POST catalog/dataSets
 ```
 
 **請求**
@@ -243,9 +263,9 @@ curl -X POST \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d '{
-        "name": "Target Dataset for CS",
+        "name": "Target dataset for a Customer Success connector",
         "schemaRef": {
-            "id": "https://ns.adobe.com/{TENANT_ID}/schemas/deb3e1096c35d8311b5d80868c4bd5b3cdfd4b3150e7345f",
+            "id": "https://ns.adobe.com/{TENANT_ID}/schemas/b750bd161fef405bc324d0c8809b02c494d73e60e7ae9b3e",
             "contentType": "application/vnd.adobe.xed-full-notext+json; version=1"
         }
     }'
@@ -261,21 +281,15 @@ curl -X POST \
 
 ```json
 [
-    "@/dataSets/5e543e8a60b15218ad44b95f"
+    "@/dataSets/5ed18e0f4f90b719196f44a9"
 ]
 ```
 
-## 建立資料集基礎連線
-
-為了將外部資料收入Platform，必須先取得Experience Platform資料集基本連線。
-
-要建立資料集基礎連接，請遵循資料集基礎連接教 [程中介紹的步驟](../create-dataset-base-connection.md)。
-
-請繼續遵循開發人員指南中所述的步驟，直到您建立資料集基本連線為止。 取得並儲存唯一識別碼(`$id`)，並繼續在下個步驟中，將它當做基本連線ID來建立目標連線。
-
 ## 建立目標連接
 
-您現在擁有資料集基本連線、目標架構和目標資料集的唯一識別碼。 您現在可以使用Flow Service API建立目標連線，以指定將包含傳入來源資料的資料集。
+目標連接表示到所收錄資料所在目的地的連接。 要建立目標連接，必須提供與資料庫關聯的固定連接規範ID。 此連接規範ID為： `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
+
+您現在擁有目標資料集的目標模式及與資料湖的連線規格ID作為唯一識別碼。 使用這些識別碼，您可以使用Flow Service API建立目標連線，以指定將包含傳入來源資料的資料集。
 
 **API格式**
 
@@ -314,10 +328,9 @@ curl -X POST \
 
 | 屬性 | 說明 |
 | -------- | ----------- |
-| `baseConnectionId` | 資料集基礎連線的ID。 |
 | `data.schema.id` | 目 `$id` 標XDM模式的。 |
 | `params.dataSetId` | 目標資料集的ID。 |
-| `connectionSpec.id` | 客戶成功系統的連線規格ID。 |
+| `connectionSpec.id` | 已修正連接規範ID到資料湖。 此ID為： `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
 
 **回應**
 
@@ -325,8 +338,8 @@ curl -X POST \
 
 ```json
 {
-    "id": "5ebaf0b3-66dc-46bf-baf0-b366dc76bfd5",
-    "etag": "\"5d02211d-0000-0200-0000-5e543f0f0000\""
+    "id": "1f5af99c-f1ef-4076-9af9-9cf1ef507678",
+    "etag": "\"530013e2-0000-0200-0000-5ebc4c110000\""
 }
 ```
 
@@ -352,12 +365,20 @@ curl -X POST \
     -H 'Content-Type: application/json' \
     -d '{
         "version": 0,
-        "xdmSchema": "https://ns.adobe.com/{TENANT_ID}/schemas/deb3e1096c35d8311b5d80868c4bd5b3cdfd4b3150e7345f",
+        "xdmSchema": "https://ns.adobe.com/{TENANT_ID}/schemas/b750bd161fef405bc324d0c8809b02c494d73e60e7ae9b3e",
         "xdmVersion": "1.0",
         "id": null,
         "mappings": [
             {
-                "destinationXdmPath": "person.name",
+                "destinationXdmPath": "_id",
+                "sourceAttribute": "Id",
+                "identity": false,
+                "identityGroup": null,
+                "namespaceCode": null,
+                "version": 0
+            },
+            {
+                "destinationXdmPath": "person.name.fullName",
                 "sourceAttribute": "Name",
                 "identity": false,
                 "identityGroup": null,
@@ -365,16 +386,8 @@ curl -X POST \
                 "version": 0
             },
             {
-                "destinationXdmPath": "mobilePhone.number",
-                "sourceAttribute": "Phone",
-                "identity": false,
-                "identityGroup": null,
-                "namespaceCode": null,
-                "version": 0
-            },
-            {
-                "destinationXdmPath": "personalEmail.address",
-                "sourceAttribute": "email",
+                "destinationXdmPath": "_repo.createDate",
+                "sourceAttribute": "CreatedDate",
                 "identity": false,
                 "identityGroup": null,
                 "namespaceCode": null,
@@ -394,75 +407,18 @@ curl -X POST \
 
 ```json
 {
-    "id": "ab91c736-1f3d-4b09-8424-311d3d3e3cea",
-    "version": 1,
-    "createdDate": 1568047685000,
-    "modifiedDate": 1568047703000,
-    "inputSchemaRef": {
-        "id": null,
-        "contentType": null
-    },
-    "outputSchemaRef": {
-        "id": "https://ns.adobe.com/{TENANT_ID}/schemas/efea012ad5deefcdf51afd23ceb3583f",
-        "contentType": "1.0"
-    },
-    "mappings": [
-        {
-            "id": "7bbea5c0f0ef498aa20aa2e2e5c22290",
-            "version": 0,
-            "createdDate": 1568047685000,
-            "modifiedDate": 1568047685000,
-            "sourceType": "text/x.schema-path",
-            "source": "Id",
-            "destination": "_id",
-            "identity": false,
-            "primaryIdentity": false,
-            "matchScore": 0.0,
-            "sourceAttribute": "Id",
-            "destinationXdmPath": "_id"
-        },
-        {
-            "id": "def7fd7db2244f618d072e8315f59c05",
-            "version": 0,
-            "createdDate": 1568047685000,
-            "modifiedDate": 1568047685000,
-            "sourceType": "text/x.schema-path",
-            "source": "FirstName",
-            "destination": "person.name.firstName",
-            "identity": false,
-            "primaryIdentity": false,
-            "matchScore": 0.0,
-            "sourceAttribute": "FirstName",
-            "destinationXdmPath": "person.name.firstName"
-        },
-        {
-            "id": "e974986b28c74ed8837570f421d0b2f4",
-            "version": 0,
-            "createdDate": 1568047685000,
-            "modifiedDate": 1568047685000,
-            "sourceType": "text/x.schema-path",
-            "source": "LastName",
-            "destination": "person.name.lastName",
-            "identity": false,
-            "primaryIdentity": false,
-            "matchScore": 0.0,
-            "sourceAttribute": "LastName",
-            "destinationXdmPath": "person.name.lastName"
-        }
-    ],
-    "status": "PUBLISHED",
-    "xdmVersion": "1.0",
-    "schemaRef": {
-        "id": "https://ns.adobe.com/{TENANT_ID}/schemas/2574494fdb01fa14c25b52d717ccb828",
-        "contentType": "1.0"
-    },
-    "xdmSchema": "https://ns.adobe.com/{TENANT_ID}/schemas/2574494fdb01fa14c25b52d717ccb828"
+    "id": "7c3547d3cfc14f568a51c32b4c0ed739",
+    "version": 0,
+    "createdDate": 1590792069173,
+    "modifiedDate": 1590792069173,
+    "createdBy": "28AF22BA5DE6B0B40A494036@AdobeID",
+    "modifiedBy": "28AF22BA5DE6B0B40A494036@AdobeID"
 }
 ```
 
-## 查找資料流規範 {#specs}
+## 檢索資料流規範 {#specs}
 
-資料流負責從源收集資料並將其引入平台。 要建立資料流，必須首先通過對流服務API執行GET請求來獲取資料流規範。 資料流規範負責從外部資料庫或NoSQL系統收集資料。
+資料流負責從源收集資料並將其引入平台。 要建立資料流，必須首先通過對流服務API執行GET請求來獲取資料流規範。 資料流規範負責從第三方客戶成功系統收集資料。
 
 **API格式**
 
@@ -482,7 +438,7 @@ curl -X GET \
 
 **回應**
 
-成功的回應會傳回負責將CS系統資料匯入平台的資料流規格詳細資訊。 在下一步中需要此ID才能建立新的資料流。
+成功的響應返回負責將客戶成功系統中的資料帶入平台的資料流規範的詳細資訊。 在下一步中需要此ID才能建立新的資料流。
 
 ```json
 {
@@ -613,7 +569,7 @@ curl -X GET \
 * [對應ID](#mapping)
 * [資料流規範ID](#specs)
 
-資料流負責調度和收集源中的資料。 您可以通過執行POST請求來建立資料流，同時在裝載中提供先前提到的值。
+若要排程擷取，您必須先將開始時間值設定為以秒為單位的紀元時間。 然後，您必須將頻率值設為以下五個選項之一： `once`、 `minute`、 `hour`、 `day`或 `week`。 間隔值指定兩個連續的提取之間的期間，並且建立一次性提取不需要設定間隔。 對於所有其它頻率，間隔值必須設定為等於或大於 `15`。
 
 **API格式**
 
@@ -631,41 +587,40 @@ curl -X POST \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d '{
-        "name": "Dataflow between database or NoSQL Platform",
-        "description": "Inbound data to Platform",
+        "name": "Creating a dataflow for a Customer Success connector",
+        "description": "Creating a dataflow for a Customer Success connector",
         "flowSpec": {
             "id": "14518937-270c-4525-bdec-c2ba7cce3860",
             "version": "1.0"
         },
         "sourceConnectionIds": [
-            "01b7cbea-cf18-4552-b7cb-eacf18055294"
+            "17faf955-2cf8-4b15-baf9-552cf88b1540"
         ],
         "targetConnectionIds": [
-            "5ebaf0b3-66dc-46bf-baf0-b366dc76bfd5"
+            "bc36ecd6-3b04-4067-b6ec-d63b04b0673d"
         ],
         "transformations": [
             {
                 "name": "Copy",
                 "params": {
                     "deltaColumn": {
-                        "name": "updatedAt",
-                        "dateFormat": "YYYY-MM-DD",
-                        "timezone": "UTC"
+                        "name": "date-time"
                     }
                 }
             },
             {
                 "name": "Mapping",
                 "params": {
-                    "mappingId": "ab91c736-1f3d-4b09-8424-311d3d3e3cea",
+                    "mappingId": "7c3547d3cfc14f568a51c32b4c0ed739",
                     "mappingVersion": "0"
                 }
             }
         ],
         "scheduleParams": {
-            "startTime": "1567411548",
-            "frequency":"minute",
-            "interval":"30"
+            "startTime": "1590792316",
+            "frequency": "minute",
+            "interval": "15",
+            "backfill": "true"
         }
     }'
 ```
@@ -676,13 +631,35 @@ curl -X POST \
 
 ```json
 {
-    "id": "8256cfb4-17e6-432c-a469-6aedafb16cd5"
+    "id": "e0bd8463-0913-4ca1-bd84-6309134ca1f6",
+    "etag": "\"04004fe9-0000-0200-0000-5ebc4c8b0000\""
 }
 ```
 
+| 屬性 | 說明 |
+| --- | --- |
+| `flowSpec.id` | 在上一步中檢索的流規範ID。 |
+| `sourceConnectionIds` | 在先前步驟中擷取的來源連線ID。 |
+| `targetConnectionIds` | 在先前步驟中擷取的目標連線ID。 |
+| `transformations.params.mappingId` | 在先前步驟中擷取的對應ID。 |
+| `scheduleParams.startTime` | 資料流的開始時間（以秒為單位）。 |
+| `scheduleParams.frequency` | 可選頻率值包括： `once`、 `minute`、 `hour`、 `day`或 `week`。 |
+| `scheduleParams.interval` | 該間隔用於指定兩個連續流運行之間的期間。 間隔的值應為非零整數。 當頻率設為且應大於或等於其 `once` 他頻率值時，不需要 `15` 間隔。 |
+
 ## 後續步驟
 
-在本教學課程中，您已建立來源連接器，以依排程從CS系統收集資料。 現在，下游平台服務（例如即時客戶個人檔案和資料科學工作區）可以使用傳入的資料。 如需詳細資訊，請參閱下列檔案：
+在本教學課程中，您已建立來源連接器，以依計畫從客戶成功系統收集資料。 現在，下游平台服務（例如即時客戶個人檔案和資料科學工作區）可以使用傳入的資料。 如需詳細資訊，請參閱下列檔案：
 
 * [即時客戶個人檔案總覽](../../../../profile/home.md)
 * [資料科學工作區概觀](../../../../data-science-workspace/home.md)
+
+## 附錄
+
+下節列出不同的雲儲存源連接器及其連接規範。
+
+### 連接規範
+
+| 連接器名稱 | 連接規範 |
+| -------------- | --------------- |
+| Salesforce Service Cloud | `cb66ab34-8619-49cb-96d1-39b37ede86ea` |
+| ServiceNow | `eb13cb25-47ab-407f-ba89-c0125281c563` |
