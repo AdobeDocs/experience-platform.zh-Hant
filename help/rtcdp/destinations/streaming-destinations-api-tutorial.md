@@ -4,10 +4,10 @@ solution: Experience Platform
 title: 連線至串流目的地並啟動資料
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 47e03d3f58bd31b1aec45cbf268e3285dd5921ea
+source-git-commit: 883bea4aba0548e96b891987f17b8535c4d2eba7
 workflow-type: tm+mt
-source-wordcount: '1861'
-ht-degree: 1%
+source-wordcount: '1847'
+ht-degree: 2%
 
 ---
 
@@ -310,8 +310,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
         "region": "{REGION}"
     },
     "params": { // use these values for Azure Event Hubs connections
-        "eventHubName": "{EVENT_HUB_NAME}",
-        "namespace": "EVENT_HUB_NAMESPACE"
+        "eventHubName": "{EVENT_HUB_NAME}"
     }
 }'
 ```
@@ -321,7 +320,6 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 * `{NAME_OF_DATA_STREAM}`: *用於Amazon Kinesis連接。* 在Amazon Kinesis帳戶中提供現有資料流的名稱。 Adobe即時CDP會將資料匯出至此串流。
 * `{REGION}`: *用於Amazon Kinesis連接。* Amazon Kinesis帳戶中Adobe即時CDP將流資料的區域。
 * `{EVENT_HUB_NAME}`: *用於Azure事件集線器連接。* 填寫Adobe即時CDP將串流您資料的Azure事件中樞名稱。 如需詳細資訊，請 [參閱Microsoft檔案中的](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hub) 「建立事件中樞」。
-* `{EVENT_HUB_NAMESPACE}`: *用於Azure事件集線器連接。* 填寫Adobe即時CDP將串流您資料的Azure事件中樞命名空間。 如需詳細資訊，請 [參閱Microsoft檔案中的建立事件中樞](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hubs-namespace) 。
 
 **回應**
 
@@ -376,7 +374,7 @@ curl -X POST \
     }
 ```
 
-* `{FLOW_SPEC_ID}`: 使用您要連線至的串流目的地的流量。 要獲取流規範，請在端點上執行GET操 `flowspecs` 作。 請參閱Swagger檔案： https://platform.adobe.io/data/foundation/flowservice/swagger#/Flow%20Specs%20API/getFlowSpecs。 在回應中，尋 `upsTo` 找並複製您要連線至的串流目的地的對應ID。
+* `{FLOW_SPEC_ID}`: 基於配置檔案的目標的流規範ID是 `71471eba-b620-49e4-90fd-23f1fa0174d8`。 在呼叫中使用此值。
 * `{SOURCE_CONNECTION_ID}`: 使用您在步驟「連線至您的Experience Platform」中 [取得的來源連線ID](#connect-to-your-experience-platform-data)。
 * `{TARGET_CONNECTION_ID}`: 使用您在步驟「連線至串流目的地」中 [取得的目標連線ID](#connect-to-streaming-destination)。
 
@@ -392,7 +390,7 @@ curl -X POST \
 ```
 
 
-## 將資料啟動至您的新目的地
+## 將資料啟動至您的新目的地 {#activate-data}
 
 ![目標步驟概述步驟5](/help/rtcdp/destinations/assets/step5-create-streaming-destination-api.png)
 
@@ -451,6 +449,18 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
                 "path": "{PROFILE_ATTRIBUTE}"
             }
         }
+    },
+        },
+        {
+        "op": "add",
+        "path": "/transformations/0/params/profileSelectors/selectors/-",
+        "value": {
+            "type": "JSON_PATH",
+            "value": {
+                "operator": "EXISTS",
+                "path": "{PROFILE_ATTRIBUTE}"
+            }
+        }
     }
 ]
 ```
@@ -458,7 +468,7 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 * `{DATAFLOW_ID}`: 使用您在上一步驟中取得的資料流。
 * `{ETAG}`: 使用您在上一步驟中取得的標籤。
 * `{SEGMENT_ID}`: 提供您要匯出至此目的地的區段ID。 若要擷取您要啟用之區段的區段ID，請前往https://www.adobe.io/apis/experienceplatform/home/api-reference.html#/，在左側導覽功能表中選取 **Segmentation Service API** ，並尋找該操 `GET /segment/jobs` 作。
-* `{PROFILE_ATTRIBUTE}`: 例如, `"person.lastName"`
+* `{PROFILE_ATTRIBUTE}`: 例如， `personalEmail.address` 或 `person.lastName`
 
 **回應**
 
@@ -503,8 +513,23 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
         "name": "GeneralTransform",
         "params": {
             "profileSelectors": {
-                "selectors": []
-            },
+                        "selectors": [
+                            {
+                                "type": "JSON_PATH",
+                                "value": {
+                                    "path": "personalEmail.address",
+                                    "operator": "EXISTS"
+                                }
+                            },
+                            {
+                                "type": "JSON_PATH",
+                                "value": {
+                                    "path": "person.lastname",
+                                    "operator": "EXISTS"
+                                }
+                            }
+                        ]
+                    },
             "segmentSelectors": {
                 "selectors": [
                     {
@@ -520,6 +545,50 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
         }
     }
 ],
+```
+
+**匯出的資料**
+
+>[!IMPORTANT]
+>
+> 除了將資料激活到新目標的步驟中的配置檔案屬性和細分 [](#activate-data),AWS Kinesis和Azure事件集線器中導出的資料還將包含有關身份映射的資訊。 這代表匯出的設定檔身分(例如 [ECID](https://docs.adobe.com/content/help/zh-Hant/id-service/using/intro/id-request.html)、行動ID、Google ID、電子郵件地址等)。 請參閱以下範例。
+
+```
+{
+  "person": {
+    "email": "yourstruly@adobe.con"
+  },
+  "segmentMembership": {
+    "ups": {
+      "72ddd79b-6b0a-4e97-a8d2-112ccd81bd02": {
+        "lastQualificationTime": "2020-03-03T21:24:39Z",
+        "status": "exited"
+      },
+      "7841ba61-23c1-4bb3-a495-00d695fe1e93": {
+        "lastQualificationTime": "2020-03-04T23:37:33Z",
+        "status": "existing"
+      }
+    }
+  },
+  "identityMap": {
+    "ecid": [
+      {
+        "id": "14575006536349286404619648085736425115"
+      },
+      {
+        "id": "66478888669296734530114754794777368480"
+      }
+    ],
+    "email_lc_sha256": [
+      {
+        "id": "655332b5fa2aea4498bf7a290cff017cb4"
+      },
+      {
+        "id": "66baf76ef9de8b42df8903f00e0e3dc0b7"
+      }
+    ]
+  }
+}
 ```
 
 ## 後續步驟
