@@ -4,7 +4,10 @@ seo-title: 電子郵件行銷目標
 description: 電子郵件服務供應商(ESP)可讓您管理電子郵件行銷活動，例如傳送促銷電子郵件促銷活動。
 seo-description: 電子郵件服務供應商(ESP)可讓您管理電子郵件行銷活動，例如傳送促銷電子郵件促銷活動。
 translation-type: tm+mt
-source-git-commit: 50e6b39c1eb0bda4f3b30991515fb1c13fa9ff87
+source-git-commit: 121ae74e9c352b1f6fc12093d815e711ebd817b8
+workflow-type: tm+mt
+source-wordcount: '498'
+ht-degree: 2%
 
 ---
 
@@ -21,11 +24,11 @@ source-git-commit: 50e6b39c1eb0bda4f3b30991515fb1c13fa9ff87
 
 ## 步驟1 —— 連接目標 {#connect-destination}
 
-1. 在 **[!UICONTROL Connections > Destinations]**&#x200B;中，選擇您要連線的電子郵件行銷目標，然後選擇 **[!UICONTROL Connect destination]**。
+1. 在「 **[!UICONTROL 連線>目的地]**」中，選取您要連線的電子郵件行銷目的地，然後選取「連 **[!UICONTROL 線目的地」]**。
 
-   ![連接到目標](/help/rtcdp/destinations/assets/connect-destination.png)
+   ![連接到目標](/help/rtcdp/destinations/assets/connect-destination-1.png)
 
-2. 在[連接]嚮導中，選擇 **[!UICONTROL Connection type]** 儲存位置。 您可以在 **Amazon S3**、 **SFTP with Password**、 **SFTP with SSH Key之間進行選擇**。 根據您的連線類型，填入下列資訊，然後選取 **[!UICONTROL Connect]**。
+2. 在[連接]嚮導中，選擇存 **[!UICONTROL 儲位置的]** [連接]類型。 您可以在 **Amazon S3**、 **SFTP with Password**、 **SFTP with SSH Key之間進行選擇**。 根據您的連線類型，填入下列資訊，然後選取「連 **[!UICONTROL 線」]**。
 
 對 **於S3連線**，您必須提供存取金鑰ID和機密存取金鑰。
 
@@ -41,7 +44,7 @@ source-git-commit: 50e6b39c1eb0bda4f3b30991515fb1c13fa9ff87
 
 ### 身份 {#identity}
 
-建議您從聯合架構中選擇唯一 [標識符](../../profile/home.md#profile-fragments-and-union-schemas)。 這是您使用者身分識別的欄位。 最常見的欄位是電子郵件地址，但也可以是忠誠度方案ID或電話號碼。 請參見下表，以瞭解統一架構中最常見的唯一標識符及其XDM欄位。
+建議您從聯合架構中選擇唯一 [識別碼](../../profile/home.md#profile-fragments-and-union-schemas)。 這是您使用者身分識別的欄位。 最常見的欄位是電子郵件地址，但也可以是忠誠度方案ID或電話號碼。 請參見下表，以瞭解統一架構中最常見的唯一標識符及其XDM欄位。
 
 | 唯一識別碼 | 統一模式中的XDM欄位 |
 ---------|----------
@@ -53,7 +56,7 @@ source-git-commit: 50e6b39c1eb0bda4f3b30991515fb1c13fa9ff87
 
 在「結構」欄位選擇器中，選擇要匯出至電子郵件目的地的其他欄位。 建議的選項包括：
 
-| 架構 | XDM欄位 |
+| 結構 | XDM欄位 |
 ---------|----------
 | 「名字」 | `person.name.firstName` |
 | 「姓氏」 | `person.name.lastName` |
