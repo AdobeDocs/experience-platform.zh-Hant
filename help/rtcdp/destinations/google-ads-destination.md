@@ -4,7 +4,10 @@ seo-title: Google廣告目的地
 description: Google Ads（先前稱為Google AdWords）是線上廣告服務，可讓企業透過文字搜尋、圖形顯示、YouTube視訊和應用程式內行動顯示，按點擊付費廣告。
 seo-description: Google Ads（先前稱為Google AdWords）是線上廣告服務，可讓企業透過文字搜尋、圖形顯示、YouTube視訊和應用程式內行動顯示，按點擊付費廣告。
 translation-type: tm+mt
-source-git-commit: 50e6b39c1eb0bda4f3b30991515fb1c13fa9ff87
+source-git-commit: 121ae74e9c352b1f6fc12093d815e711ebd817b8
+workflow-type: tm+mt
+source-wordcount: '532'
+ht-degree: 0%
 
 ---
 
@@ -19,7 +22,7 @@ Google Ads（先前稱為Google AdWords）是線上廣告服務，可讓企業�
 
 請注意Google Ads目標專屬的下列詳細資訊：
 
-* 您可以傳送下列身 [分](../../identity-service/namespaces.md) ，到Google Ads目的地：Google **Cookie ID、IDFA、GAID、Roku ID、Microsoft ID、Amazon Fire TV ID**。
+* 您可以傳送下列身 [分](../../identity-service/namespaces.md) ，到Google Ads目的地： **Google Cookie ID、IDFA、GAID、Roku ID、Microsoft ID、Amazon Fire TV ID**。
 * 在Google平台中以程式設計方式建立已啟用的觀眾。
 * Adobe即時CDP目前不包含測量量度，以驗證啟動是否成功。 請參閱Google中的觀眾計數，以驗證整合併瞭解觀眾鎖定規模。
 
@@ -41,22 +44,22 @@ Google已暫停與協力廠商的任何新Google Ads整合。 您必須已與Goo
 
 在Adobe即時CDP中建立Google Ads目標之前，您必須連絡Google，要求Adobe以資料提供者的身分加入白名單，而您的帳戶必須加入白名單。 聯絡Google並提供下列資訊：
 
-* **帳戶ID** :這是Adobe與Google的帳戶ID。 請聯絡Adobe客戶服務或您的Adobe代表以取得此ID。
-* **客戶ID** :這是Adobe與Google的客戶帳戶ID。 請聯絡Adobe客戶服務或您的Adobe代表以取得此ID。
+* **帳戶ID** : 這是Adobe與Google的帳戶ID。 請聯絡Adobe客戶服務或您的Adobe代表以取得此ID。
+* **客戶ID** : 這是Adobe與Google的客戶帳戶ID。 請聯絡Adobe客戶服務或您的Adobe代表以取得此ID。
 * 您的帳戶類型： **AdWords**
-* **Google AdWords ID** :這是您使用Google的ID。 ID格式通常為123-456-7890。
+* **Google AdWords ID** : 這是您使用Google的ID。 ID格式通常為123-456-7890。
 
 ## 建立目標
 
-1. 在中 **[!UICONTROL Connections > Destinations]**，選取「Google廣告」，然後選取 **[!UICONTROL Create destination]**。
+1. 在「連 **[!UICONTROL 線>目的地]**」中，選取「Google廣告」，然後選取「 **[!UICONTROL 建立目的地」]**。
    ![Connect Google Ads目的地](/help/rtcdp/destinations/assets/google-2-destination.png)
 
-2. 在「建立目標」工作流程中，填入目 [!UICONTROL Basic Information] 標的目標。
+2. 在「建立目標」工作流程中，填入目 [!UICONTROL 標的「基本] 」資訊。 <br>
    ![基本資訊Google廣告](/help/rtcdp/destinations/assets/google-2-basic-information.png)
-* **[!UICONTROL Name]**:填寫此目標的首選名稱。
-* **[!UICONTROL Description]**: 可選. 例如，您可以提及您使用此目的地的促銷活動。
-* **[!UICONTROL Account Type]**:AdWords是唯一可用的選項。
-* **[!UICONTROL Account ID]**:使用Google廣告填寫您的帳戶ID。 ID格式通常為123-456-7890。
+* **[!UICONTROL 名稱]**: 填寫此目標的首選名稱。
+* **[!UICONTROL 說明]**: 可選。 例如，您可以提及您使用此目的地的促銷活動。
+* **[!UICONTROL 帳戶類型]**: AdWords是唯一可用的選項。
+* **[!UICONTROL 帳戶ID]**: 使用Google廣告填寫您的帳戶ID。 ID格式通常為123-456-7890。
 
 ## 啟用區段至Google廣告
 
