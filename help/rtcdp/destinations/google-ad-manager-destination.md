@@ -4,7 +4,10 @@ seo-title: Google廣告管理員目標
 description: 'Google Ad Manager之前稱為DoubleClick for Publishers或DoubleClick AdX，是來自谷歌的廣告服務平台，可讓出版業者透過視訊和行動應用程式管理其網站上的廣告展示。 '
 seo-description: 'Google Ad Manager之前稱為DoubleClick for Publishers或DoubleClick AdX，是來自谷歌的廣告服務平台，可讓出版業者透過視訊和行動應用程式管理其網站上的廣告展示。 '
 translation-type: tm+mt
-source-git-commit: 50e6b39c1eb0bda4f3b30991515fb1c13fa9ff87
+source-git-commit: 121ae74e9c352b1f6fc12093d815e711ebd817b8
+workflow-type: tm+mt
+source-wordcount: '588'
+ht-degree: 0%
 
 ---
 
@@ -19,7 +22,7 @@ Google Ad Manager之前稱為DoubleClick for Publishers或DoubleClick AdX，是�
 
 請注意Google廣告管理員目標專屬的下列詳細資訊：
 
-* 您可以傳送下列身 [分](../../identity-service/namespaces.md) ，到Google Ad Manager目的地：Google **Cookie ID、IDFA、GAID、Roku ID、Microsoft ID、Amazon Fire TV ID**。
+* 您可以傳送下列身 [分](../../identity-service/namespaces.md) ，到Google Ad Manager目的地： **Google Cookie ID、IDFA、GAID、Roku ID、Microsoft ID、Amazon Fire TV ID**。
 * 在Google平台中以程式設計方式建立已啟用的觀眾。
 * Adobe即時CDP目前不包含測量量度，以驗證啟動是否成功。 請參閱Google中的觀眾計數，以驗證整合併瞭解觀眾鎖定規模。
 
@@ -37,25 +40,25 @@ Google Ad Manager之前稱為DoubleClick for Publishers或DoubleClick AdX，是�
 
 在Adobe即時CDP中建立Google Ad Manager目標之前，您必須連絡Google，要求Adobe以資料提供者的身分加入白名單，而您的帳戶必須加入白名單。 聯絡Google並提供下列資訊：
 
-* **帳戶ID** :這是Adobe與Google的帳戶ID。 請聯絡Adobe客戶服務或您的Adobe代表以取得此ID。
-* **客戶ID** :這是Adobe與Google的客戶帳戶ID。 請聯絡Adobe客戶服務或您的Adobe代表以取得此ID。
-* **網路ID** :這是您在Google廣告管理員的帳戶
-* **對象連結ID** :這是您在Google廣告管理員的帳戶
+* **帳戶ID** : 這是Adobe與Google的帳戶ID。 請聯絡Adobe客戶服務或您的Adobe代表以取得此ID。
+* **客戶ID** : 這是Adobe與Google的客戶帳戶ID。 請聯絡Adobe客戶服務或您的Adobe代表以取得此ID。
+* **網路ID** : 這是您在Google廣告管理員的帳戶
+* **對象連結ID** : 這是您在Google廣告管理員的帳戶
 * 您的帳戶類型。 **DFP，由Google** 或 **AdX購買者提供**。
 
 ## 建立目標
 
-1. 在中 **[!UICONTROL Connections > Destinations]**，選取「Google廣告管理員」，然後選取 **[!UICONTROL Create destination]**。
+1. 在「連 **[!UICONTROL 線>目的地]**」中，選取「Google廣告管理員」，然後選取「 **[!UICONTROL 建立目的地」]**。
    ![Connect Google Ad Manager目標](/help/rtcdp/destinations/assets/google-1-destination.png)
 
-2. 在「建立目標」工作流程中，填入目 [!UICONTROL Basic Information] 標的目標。
+2. 在「建立目標」工作流程中，填入目 [!UICONTROL 標的「基本] 」資訊。 <br>
    ![基本資訊Google廣告管理員](/help/rtcdp/destinations/assets/google-1-basic-information.png)
-* **[!UICONTROL Name]**:填寫此目標的首選名稱。
-* **[!UICONTROL Description]**: 可選. 例如，您可以提及您使用此目的地的促銷活動。
-* **[!UICONTROL Account Type]**:根據您使用Google的帳戶，選取一個選項：
+* **[!UICONTROL 名稱]**: 填寫此目標的首選名稱。
+* **[!UICONTROL 說明]**: 可選。 例如，您可以提及您使用此目的地的促銷活動。
+* **[!UICONTROL 帳戶類型]**: 根據您使用Google的帳戶，選取一個選項：
    * DoubleClick `DFP by Google` for Publishers的使用
    * 用 `AdX buyer` 於Google AdX
-* **[!UICONTROL Account ID]**:使用Google填寫您的帳戶ID。 這可以是您的網路ID或對象連結ID。 通常，這是8位數的ID。
+* **[!UICONTROL 帳戶ID]**: 使用Google填寫您的帳戶ID。 這可以是您的網路ID或對象連結ID。 通常，這是8位數的ID。
 
 >[!NOTE]
 >
