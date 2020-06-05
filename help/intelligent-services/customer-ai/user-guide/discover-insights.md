@@ -4,7 +4,10 @@ solution: Experience Platform
 title: 透過客戶人工智慧發掘見解
 topic: Discovering insights
 translation-type: tm+mt
-source-git-commit: ec0de4c8775367be9e6016529471254ad9f8f453
+source-git-commit: 83e74ad93bdef056c8aef07c9d56313af6f4ddfd
+workflow-type: tm+mt
+source-wordcount: '1059'
+ht-degree: 0%
 
 ---
 
@@ -21,7 +24,7 @@ source-git-commit: ec0de4c8775367be9e6016529471254ad9f8f453
 
 ## 服務實例概述
 
-在Adobe Experience Platform UI中，按一下左 **[!UICONTROL Services]** 側導覽中的。 出現 *「服務* 」瀏覽器並顯示可用的「智慧型服務」。 在「客戶AI」的容器中，按一下 **[!UICONTROL Open]**。
+在UI中 [!DNL Adobe Experience Platform] ，按一下左 **[!UICONTROL 側導覽]** 中的「服務」。 出現 *「服務* 」瀏覽器並顯示可用的「智慧型服務」。 在「客戶AI」的容器中，按一下「開 **[!UICONTROL 啟」]**。
 
 ![存取您的例項](../images/insights/navigate-to-service.png)
 
@@ -44,7 +47,7 @@ source-git-commit: ec0de4c8775367be9e6016529471254ad9f8f453
 
 查看服務實例詳細資訊有兩種方法：第一種是從儀表板查看，另一種是從服務實例查看。
 
-若要從控制面板內檢視詳細資訊，請按一下服務例項容器，以避免附加至名稱的超連結。 這會開啟右側邊欄，提供其他詳細資訊，例如說明、計分頻率、預測目標和合格人口。 此外，您也可以選擇按一下或以編輯和刪除 **[!UICONTROL Edit]** 例項 **[!UICONTROL Delete]**。
+若要從控制面板內檢視詳細資訊，請按一下服務例項容器，以避免附加至名稱的超連結。 這會開啟右側邊欄，提供其他詳細資訊，例如說明、計分頻率、預測目標和合格人口。 此外，您也可以選擇按一下「編輯」或「刪除」來編 **[!UICONTROL 輯]** 和刪 **[!UICONTROL 除實例]**。
 
 ![右滑軌](../images/insights/success-run.png)
 
@@ -52,7 +55,7 @@ source-git-commit: ec0de4c8775367be9e6016529471254ad9f8f453
 
 ![失敗的運行消息](../images/insights/failed-run.png)
 
-檢視服務例項其他詳細資訊的第二個方法位於前瞻分析頁面。 您可以按 **[!UICONTROL Show more]** 一下右上角的，以填入下拉式清單。 詳細資訊會列出，例如分數定義、建立時間和傾向類型。 如需所列任何屬性的詳細資訊，請造 [訪設定客戶AI例項](./configure.md)。
+檢視服務例項其他詳細資訊的第二個方法位於前瞻分析頁面。 您可以按一 **[!UICONTROL 下右上方]** 的「顯示更多」以填入下拉式清單。 詳細資訊會列出，例如分數定義、建立時間和傾向類型。 如需所列任何屬性的詳細資訊，請造 [訪設定客戶AI例項](./configure.md)。
 
 ![顯示更多](../images/insights/landing-show-more.png)
 
@@ -60,21 +63,21 @@ source-git-commit: ec0de4c8775367be9e6016529471254ad9f8f453
 
 ### 編輯例項
 
-若要編輯例項，請按 **[!UICONTROL Edit]** 一下右上方導覽中的。
+若要編輯例項，請按一 **[!UICONTROL 下右上方導覽]** 中的「編輯」。
 
 ![按一下「編輯」按鈕](../images/insights/edit-button.png)
 
-此時將出現編輯對話框，允許您編輯實例 *的「說明* 」 *和「計分頻率* 」。 若要確認變更並關閉對話方塊，請 **[!UICONTROL Edit]** 按一下右下角的。
+此時將出現編輯對話框，允許您編輯實例 *的「說明* 」 *和「計分頻率* 」。 若要確認變更並關閉對話方塊，請按一 **[!UICONTROL 下右下]** 角的「編輯」。
 
 ![編輯跨欄](../images/insights/edit-instance.png)
 
 ### 更多動作
 
-按 **[!UICONTROL More actions]** 鈕位於旁的右上導覽中 **[!UICONTROL Edit]**。 按一 **[!UICONTROL More actions]** 下可開啟下拉式清單，供您選取下列其中一個作業：
+「更 **[!UICONTROL 多動作]** 」按鈕位於「編輯」旁的右上導 **[!UICONTROL 覽中]**。 按一 **[!UICONTROL 下「更多動作]** 」會開啟下拉式清單，供您選取下列其中一個作業：
 
-- **[!UICONTROL Delete]**: 刪除實例。
-- **[!UICONTROL Access scores]**: 按一 *下「存取分數* 」會開啟對話方塊，提供客戶AI [](./download-scores.md) 教學課程下載分數的連結，此對話方塊也提供進行API呼叫所需的資料集ID。
-- **[!UICONTROL View run history]**: 此時將顯示一個對話框，其中包含與服務實例關聯的所有計分運行的清單。
+- **[!UICONTROL 刪除]**: 刪除實例。
+- **[!UICONTROL 存取分數]**: 按一 *下「存取分數* 」會開啟對話方塊，提供客戶AI [](./download-scores.md) 教學課程下載分數的連結，此對話方塊也提供進行API呼叫所需的資料集ID。
+- **[!UICONTROL 檢視執行記錄]**: 此時將顯示一個對話框，其中包含與服務實例關聯的所有計分運行的清單。
 
 ![更多動作](../images/insights/more-actions.png)
 
@@ -100,22 +103,22 @@ source-git-commit: ec0de4c8775367be9e6016529471254ad9f8f453
 
 ### 建立區段
 
-按一下 **[!UICONTROL Create Segment]** 低、中和高傾向任一區段中的按鈕，會將您重新導向至區段產生器。
+按一 **[!UICONTROL 下「低]** 」、「中」和「高傾向」任何區段中的「建立區段」按鈕，會將您重新導向至區段產生器。
 
 >[!NOTE]
->只有 **[!UICONTROL Create Segment]** 在資料集啟用即時客戶設定檔時，此按鈕才可用。 如需如何啟用即時客戶個人檔案的詳細資訊，請造 [訪即時客戶個人檔案總覽](../../../rtcdp/overview.md)。
+>只 **[!UICONTROL 有在資料集啟用即時客戶描述檔時]** ,「建立區段」按鈕才可用。 如需如何啟用即時客戶個人檔案的詳細資訊，請造 [訪即時客戶個人檔案總覽](../../../rtcdp/overview.md)。
 
 ![按一下建立區段](../images/insights/influential-factors-create-segment.png)
 
 ![建立區段](../images/insights/create-segment.png)
 
-區段產生器可用來定義區段。 在從「 **[!UICONTROL Create Segment]** 前瞻分析」頁面選擇時，客戶人工智慧會自動將選取的區間資訊新增至區段。 若要完成區段的建立，只需填入區 *段產生器使用者介面右側導軌中的「名稱* 」和「說明 ** 」容器即可。 在您為區段指定名稱和說明後，按一 **[!UICONTROL Save]** 下右上角的。
+區段產生器可用來定義區段。 在從「 **[!UICONTROL 前瞻分析]** 」頁面選取「建立區段」時，客戶AI會自動將選取的區段資訊新增至區段。 若要完成區段的建立，只需填入區 *段產生器使用者介面右側導軌中的「名稱* 」和「說明 ** 」容器即可。 在您為區段指定名稱和說明後，按一 **[!UICONTROL 下右上]** 角的「儲存」。
 
 >!![NOTE] 由於傾向分數會寫入個別描述檔，因此在「區段產生器」中可使用這些分數，就像任何其他描述檔屬性一樣。 當您導覽至區段產生器以建立新區段時，可在您的命名空間「客戶人工智慧」下查看所有不同的傾向分數。
 
 ![區段填入](../images/insights/segment-saving.png)
 
-若要在平台UI中檢視新區段，請按一下左 **[!UICONTROL Segments]** 側導覽中的。 「瀏 *覽* 」頁面隨即出現，並顯示所有可用區段。
+若要在平台UI中檢視新區段，請按一下左 **[!UICONTROL 側導覽]** 中的區段。 「瀏 *覽* 」頁面隨即出現，並顯示所有可用區段。
 
 ![您的所有區段](../images/insights/Segments-dashboard.png)
 
