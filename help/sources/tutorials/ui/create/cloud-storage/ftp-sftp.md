@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 在UI中建立FTP或SFTP來源連接器
 topic: overview
 translation-type: tm+mt
-source-git-commit: 37a5f035023cee1fc2408846fb37d64b9a3fc4b6
+source-git-commit: 46b57900d9323cffeb59a0a6250bf5a9f4ac64ab
 workflow-type: tm+mt
-source-wordcount: '529'
+source-wordcount: '556'
 ht-degree: 1%
 
 ---
@@ -42,22 +42,32 @@ Experience Platform支援下列從外部來源擷取的檔案格式：
 
 若要在平台上存取您的FTP或SFTP伺服器，您必須提供伺服器的 **主機名稱**、 **使用者名稱**，以及 **密碼**。
 
-## 連線至您的伺服器
+## 連線至您的FTP或SFTP伺服器
 
-在伺服器的認證就緒後，您可以依照下列步驟建立新的傳入基本連線，將FTP或SFTP伺服器連結至平台。
+收集完所需憑證後，您可依照下列步驟建立新的FTP或SFTP帳戶以連線至平台。
 
-登入 <a href="https://platform.adobe.com" target="_blank">Adobe Experience Platform</a> ，然後從左側導覽列選 **取Sources** ，以存取來源工作區。 「目 *錄* 」螢幕顯示各種源，您可以為其建立入站基本連接，而每個源顯示與其關聯的現有基本連接數。
+登入 [Adobe Experience Platform](https://platform.adobe.com) ，然後從左側導覽列選取 **[!UICONTROL Sources]** ，以存取 ** Sources工作區。 「目 *[!UICONTROL 錄]* 」螢幕顯示各種源，您可以為其建立入站帳戶，每個源顯示與其關聯的現有帳戶和資料流的數量。
 
-在「 *雲端儲存* 」類別下，選取 **FTP** 或 **SFTP** ，以顯示螢幕右側的資訊列。 資訊列提供所選來源的簡短說明，以及檢視其檔案或連線來源的選項。 要建立新的入站基本連接，請按一下「連 **接源」**。
+您可以從畫面左側的目錄中選取適當的類別。 或者，您也可以使用搜尋選項找到您要使用的特定來源。
 
-![](../../../../images/tutorials/create/sftp/sftp_sources_catalog.png)
+在「資 *[!UICONTROL 料庫]* 」類別下，選取「 **[!UICONTROL SFTP]** 」按一 **下+圖示(+)** ，以建立新的FTP或SFTP連接器。
 
-在輸入表單中，提供基本連線名稱、選用說明和您的FTP或SFTP憑證。 最後，按一下 **Connect** ，然後允許一些時間建立新的基本連接。
+![目錄](../../../../images/tutorials/create/sftp/catalog.png)
 
-![](../../../../images/tutorials/create/sftp/sftp_credentials.png)
+此時 *[!UICONTROL 將顯示「連接到SFTP]* 」頁。 在此頁上，您可以使用新認證或現有認證。
 
-建立與FTP或SFTP伺服器的基本連線後，您可以繼續下一節，並設定資料流，將資料匯入平台。
+### 新帳戶
+
+如果您使用新認證，請選擇「新 **[!UICONTROL 帳戶」]**。 在出現的輸入表單上，提供連線名稱、選用說明以及您的FTP或SFTP憑證。 完成後，選擇 **[!UICONTROL Connect]** ，然後為新帳戶建立留出一些時間。
+
+![連接](../../../../images/tutorials/create/sftp/new.png)
+
+### 現有帳戶
+
+若要連線現有帳戶，請選取您要連線的FTP或SFTP帳戶，然後選取「下 **[!UICONTROL 一]** 步」繼續。
+
+![現有](../../../../images/tutorials/create/sftp/existing.png)
 
 ## 後續步驟
 
-在本教學課程中，您已建立與FTP或SFTP伺服器的連線。 您現在可以繼續下一個教程，並 [配置資料流以將資料導入平台](../../dataflow/batch/cloud-storage.md)。
+在本教學課程中，您已建立與FTP或SFTP帳戶的連線。 您現在可以繼續下一個教學課程，並 [設定資料流，將雲端儲存空間的資料匯入平台](../../dataflow/batch/cloud-storage.md)。
