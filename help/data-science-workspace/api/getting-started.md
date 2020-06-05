@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Sensei Machine Learning API開發人員指南
 topic: Developer guide
 translation-type: tm+mt
-source-git-commit: b0b44f4aaf365f58086cfa17d27fbba6ed2a2a97
+source-git-commit: 83e74ad93bdef056c8aef07c9d56313af6f4ddfd
+workflow-type: tm+mt
+source-wordcount: '206'
+ht-degree: 2%
 
 ---
 
@@ -17,9 +20,9 @@ Sensei機器學習API為資料科學家提供機制，以組織和管理機器�
 
 ## 快速入門
 
-您必須完成驗證教 [學課程](../../tutorials/authentication.md) ，才能存取下列請求標題，以呼叫Adobe Experience Platform API:
+您必須完成驗證教 [學課程](../../tutorials/authentication.md) ，才能存取下列請求標題以呼叫 [!DNL Adobe Experience Platform] API:
 
-* 授權：生產者 `{ACCESS_TOKEN}`
+* 授權： 生產者 `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
 * x-gw-ims-org-id: `{IMS_ORG}`
 
@@ -31,7 +34,7 @@ Experience Platform中的所有資源都隔離至特定的虛擬沙盒。 所有
 
 所有包含裝載(POST、PUT、PATCH)的請求都需要額外的標題：
 
-* 內容類型：application/json
+* 內容類型： application/json
 
 ## 後續步驟
 
