@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Microsoft Dynamics連接器
 topic: overview
 translation-type: tm+mt
-source-git-commit: f46e95b1e1af3ff5021561eb45f408e45c657834
+source-git-commit: 565c8c4b084343e5488a725a6a93d5d50d59fe66
+workflow-type: tm+mt
+source-wordcount: '151'
+ht-degree: 0%
 
 ---
 
@@ -25,5 +28,5 @@ Experience Platform支援從協力廠商CRM系統擷取資料。 支援CRM供應
 
 ## 使用UI將Microsoft Dynamics連接至平台
 
-- [在UI中建立Microsoft Dynamics來源連接器](../../tutorials/ui/create/crm/dynamics-salesforce.md)
+- [在UI中建立Microsoft Dynamics來源連接器](../../tutorials/ui/create/crm/dynamics.md)
 - [在UI中為CRM連接器配置資料流](../../tutorials/ui/dataflow/crm.md)
