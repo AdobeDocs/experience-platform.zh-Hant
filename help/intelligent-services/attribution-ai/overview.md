@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Attribution AI概觀
 topic: Attribution AI
 translation-type: tm+mt
-source-git-commit: ec0de4c8775367be9e6016529471254ad9f8f453
+source-git-commit: 83e74ad93bdef056c8aef07c9d56313af6f4ddfd
+workflow-type: tm+mt
+source-wordcount: '654'
+ht-degree: 1%
 
 ---
 
@@ -19,7 +22,7 @@ source-git-commit: ec0de4c8775367be9e6016529471254ad9f8f453
 
 歸因AI輸出可以跨不同維度加以區隔，並可跨客戶歷程的不同階段使用。 完成此項作業時，不需將業務需求轉譯為機器學習問題、挑選演算法、訓練或部署模型。
 
-歸因AI資料可以來自Adobe（例如Analytics）或非Adobe資料來源。
+Attribution AI資料可來自Adobe(例如 [!DNL Analytics])或非Adobe資料來源。
 
 Attribution AI支援兩種分數類別：演算法和規則型。 演算法分數包括遞增和受影響的分數。 以規則為基礎的分數包括「首次接觸」、「上次接觸」、「線性」、「U形」和「時間衰減」。
 
@@ -57,7 +60,7 @@ Attribution AI可用來協助下列範例使用案例：
 
 ### 其他功能
 
-Attribution AI也提供與其他Adobe解決方案（例如Adobe Analytics）的整合。 這可讓您使用這些解決方案，運用可自訂的演算法模型來評估媒體效能並提供分析見解。
+Attribution AI也提供與其他Adobe解決方案(例如 [!DNL Adobe Analytics])的整合。 這可讓您使用這些解決方案，運用可自訂的演算法模型來評估媒體效能並提供分析見解。
 
 ## 後續步驟
 
