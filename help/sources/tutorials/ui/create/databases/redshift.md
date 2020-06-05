@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 在UI中建立Amazon Redshift源連接器
 topic: overview
 translation-type: tm+mt
-source-git-commit: 2162c66b1664ecaaf0b609fe3f7ccf58c4a5d31d
+source-git-commit: 75ba0bce7ce070af851bbf7e220dbf08febc4c20
 workflow-type: tm+mt
 source-wordcount: '503'
 ht-degree: 1%
@@ -51,7 +51,7 @@ Adobe Experience Platform中的來源連接器可讓您依計畫吸收外部來�
 
 在「數 *據庫* 」類別下，選擇 **Amazon Redshift** ，在螢幕右側顯示資訊欄。 資訊列提供所選來源的簡短說明，以及與來源連線或檢視其檔案的選項。 要建立新的入站基本連接，請選擇「 **連接源」**。
 
-![](../../../../images/tutorials/create/redshift/sources-catalog.png)
+![](../../../../images/tutorials/create/redshift/catalog.png)
 
 此時 *將顯示「連接到Amazon Redshift* 」頁。 在此頁上，您可以使用新認證或現有認證。
 
@@ -59,13 +59,13 @@ Adobe Experience Platform中的來源連接器可讓您依計畫吸收外部來�
 
 如果您使用新認證，請選擇「新 **帳戶」**。 在出現的輸入表單上，提供基本連線名稱、可選說明和您的Redshift憑證。 完成後，選擇 **Connect** ，然後為建立新的基本連接留出一些時間。
 
-![](../../../../images/tutorials/create/redshift/new-credentials.png)
+![](../../../../images/tutorials/create/redshift/new.png)
 
 ### 現有帳戶
 
 要連接現有帳戶，請選擇要連接的Redshift帳戶，然後選擇「下 **一步** 」繼續。
 
-![](../../../../images/tutorials/create/redshift/existing-credentials.png)
+![](../../../../images/tutorials/create/redshift/existing.png)
 
 ## 後續步驟
 
