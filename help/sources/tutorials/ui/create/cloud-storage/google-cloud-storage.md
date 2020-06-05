@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 在UI中建立Google Cloud儲存空間來源連接器
 topic: overview
 translation-type: tm+mt
-source-git-commit: 799445eca080175e2bffc49c6714f0c812b9bbea
+source-git-commit: 75ba0bce7ce070af851bbf7e220dbf08febc4c20
 workflow-type: tm+mt
-source-wordcount: '539'
+source-wordcount: '553'
 ht-degree: 1%
 
 ---
@@ -41,20 +41,30 @@ Experience Platform支援下列從外部儲存擷取的檔案格式：
 
 ## 連接您的GCS帳戶
 
-收集完所需憑證後，您可依照下列步驟建立新的入站基本連線，將GCS帳戶連結至平台。
+收集完所需的認證後，您可依照下列步驟建立新的GCS帳戶以連線至平台。
 
-登入 <a href="https://platform.adobe.com" target="_blank">Adobe Experience Platform</a> ，然後從左側導覽列選取 **Sources** ，以存取 ** Sources工作區。 「目 *錄* 」螢幕顯示各種源，您可以為其建立入站基本連接，而每個源顯示與其關聯的現有基本連接數。
+登入 [Adobe Experience Platform](https://platform.adobe.com) ，然後從左側導覽列選取 **[!UICONTROL Sources]** ，以存取 ** Sources工作區。 「目 *[!UICONTROL 錄]* 」螢幕顯示各種源，您可以為其建立入站帳戶，每個源顯示與其關聯的現有帳戶和資料流的數量。
 
-在「 *雲端儲存* 」類別下，選取 **Google Cloud Storage** ，以在螢幕右側顯示資訊列。 資訊欄提供所選源的簡要說明，以及與源視圖連接或與源連接的選項。 要建立新的入站基本連接，請按一下「連 **接源」**。
+您可以從畫面左側的目錄中選取適當的類別。 或者，您也可以使用搜尋選項找到您要使用的特定來源。
 
-![](../../../../images/tutorials/create/google-cloud-storage/sources-catalog.png)
+在「資 *[!UICONTROL 料庫]* 」類別下，選取「 **[!UICONTROL Google Cloud Storage]** 」(Google Cloud **儲存)，按一下+圖示(+)** ，以建立新的GCS連接器。
 
-此時 _會出現「連線至Google雲端儲存空間_ 」對話方塊。 在輸入表單中，提供基本連線名稱、選用說明和您的GCS認證。 完成後，按一下 **Connect** ，然後允許一段時間建立新的基本連接。
+![目錄](../../../../images/tutorials/create/google-cloud-storage/catalog.png)
 
-![](../../../../images/tutorials/create/google-cloud-storage/gcs-credentials.png)
+此時 *[!UICONTROL 會顯示「連線至Google雲端儲存空間]* 」頁面。 在此頁上，您可以使用新認證或現有認證。
 
-建立基本連接後，您可以繼續下一節，並配置資料流以將資料導入平台。
+### 新帳戶
+
+如果您使用新認證，請選擇「新 **[!UICONTROL 帳戶」]**。 在出現的輸入表單上，提供名稱、選用說明和您的GCS認證連線。 完成後，選擇 **[!UICONTROL Connect]** ，然後為新帳戶建立留出一些時間。
+
+![連接](../../../../images/tutorials/create/google-cloud-storage/connect.png)
+
+### 現有帳戶
+
+若要連線現有帳戶，請選取您要連線的GCS帳戶，然後選取「下 **[!UICONTROL 一步]** 」繼續。
+
+![現有](../../../../images/tutorials/create/google-cloud-storage/existing.png)
 
 ## 後續步驟
 
-在本教學課程中，您已建立GCS帳戶的基本連線。 您現在可以繼續下一個教程，並 [配置資料流以將資料導入平台](../../dataflow/batch/cloud-storage.md)。
+在本教學課程中，您已建立與GCS帳戶的連線。 您現在可以繼續下一個教學課程，並 [設定資料流，將雲端儲存空間的資料匯入平台](../../dataflow/batch/cloud-storage.md)。
