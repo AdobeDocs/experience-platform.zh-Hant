@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 使用Git在JupyterLab中協作
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 0134c21bc35c0cb1bde7f0201a33517a81addae3
+source-git-commit: 83e74ad93bdef056c8aef07c9d56313af6f4ddfd
 workflow-type: tm+mt
-source-wordcount: '276'
+source-wordcount: '273'
 ht-degree: 1%
 
 ---
@@ -25,7 +25,7 @@ Data Science Workspace JupyterLab環境是代管環境，不會部署在公司�
 
 ## 將Git連接到Data Science Workspace JupyterLab筆記型電腦環境
 
-首先，啟動Adobe Experience Platform並導覽至 [JupyterLabs Notebooks](https://platform.adobe.com/notebooks/jupyterLab) Environment。
+首先，啟動 [!DNL Adobe Experience Platform] 並導航到 [JupyterLabs Notebooks環境](https://platform.adobe.com/notebooks/jupyterLab) 。
 
 在JupyterLab中，選擇「 **[!UICONTROL File]** （檔案）」 ，然後將滑鼠暫留在「 **[!UICONTROL New（新建）」上]**。 從出現的下拉式清單中，選取「 **[!UICONTROL 終端機]**」。
 
