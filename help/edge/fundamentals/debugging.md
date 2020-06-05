@@ -4,7 +4,7 @@ seo-title: Adobe Experience Platform Web SDK除錯
 description: 瞭解如何切換Experience Platform Web SDK除錯
 seo-description: 瞭解如何切換Experience Platform Web SDK除錯
 translation-type: tm+mt
-source-git-commit: e9fb726ddb84d7a08afb8c0f083a643025b0f903
+source-git-commit: 31a527cb4ad1348262131f827c7e932404542c4b
 workflow-type: tm+mt
 source-wordcount: '323'
 ht-degree: 0%
@@ -19,7 +19,7 @@ ht-degree: 0%
 預設會停用除錯功能，但可以透過三種不同的方式來切換：
 
 * `configure` 命令
-* `debug` 命令
+* `setDebug` 命令
 * 查詢字串參數
 
 ## 使用Configure命令切換調試
@@ -42,7 +42,7 @@ alloy("configure", {
 使用個別命令切換除 `debug` 錯，如下所示：
 
 ```javascript
-alloy("debug", {
+alloy("setDebug", {
   "enabled": true
 });
 ```
