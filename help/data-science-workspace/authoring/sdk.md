@@ -4,14 +4,17 @@ solution: Experience Platform
 title: SDK開發人員指南
 topic: Overview
 translation-type: tm+mt
-source-git-commit: 19823c7cf0459e045366f0baae2bd8a98416154c
+source-git-commit: 83e74ad93bdef056c8aef07c9d56313af6f4ddfd
+workflow-type: tm+mt
+source-wordcount: '943'
+ht-degree: 1%
 
 ---
 
 
 # SDK開發人員指南
 
-模型製作SDK可讓您開發自訂的機器學習方式和功能管道，這些方式和功能管道可用於Adobe Experience Platform資料科學工作區，提供PySpark和Spark中可實施的範本。
+Model Authoring SDK可讓您開發自訂的機器學習方式和功能管道，可用於 [!DNL Adobe Experience Platform] Data Science Workspace，在PySpark和Spark中提供可實施的範本。
 
 本檔案提供有關「模型編寫SDK」中各類的資訊。
 
@@ -38,9 +41,9 @@ DataLoader類封裝與擷取、篩選和傳回原始輸入資料相關的任何�
             </td>
             <td>
                 <ul>
-                    <li><code class=" language-undefined">self</code>:自我參考</li>
-                    <li><code class=" language-undefined">configProperties</code>:配置屬性映射</li>
-                    <li><code class=" language-undefined">spark</code>:Spark作業</li>
+                    <li><code class=" language-undefined">self</code>: 自我參考</li>
+                    <li><code class=" language-undefined">configProperties</code>: 配置屬性映射</li>
+                    <li><code class=" language-undefined">spark</code>: Spark作業</li>
                 </ul>
             </td>
         </tr>
@@ -66,8 +69,8 @@ DataLoader類封裝與擷取、篩選和傳回原始輸入資料相關的任何�
             </td>
             <td>
                 <ul>
-                    <li><code class=" language-undefined">configProperties</code>:配置屬性映射</li>
-                    <li><code class=" language-undefined">sparkSession</code>:Spark作業</li>
+                    <li><code class=" language-undefined">configProperties</code>: 配置屬性映射</li>
+                    <li><code class=" language-undefined">sparkSession</code>: Spark作業</li>
                 </ul>
             </td>
         </tr>
@@ -213,9 +216,9 @@ DataSaver類封裝了與儲存輸出資料相關的任何內容，包括來自�
             </td>
             <td>
                 <ul>
-                    <li><code class=" language-undefined">self</code>:自我參考</li>
-                    <li><code class=" language-undefined">configProperties</code>:配置屬性映射</li>
-                    <li><code class=" language-undefined">dataframe</code>:以DataFrame形式儲存的資料</li>
+                    <li><code class=" language-undefined">self</code>: 自我參考</li>
+                    <li><code class=" language-undefined">configProperties</code>: 配置屬性映射</li>
+                    <li><code class=" language-undefined">dataframe</code>: 以DataFrame形式儲存的資料</li>
                 </ul>
             </td>
         </tr>
@@ -241,8 +244,8 @@ DataSaver類封裝了與儲存輸出資料相關的任何內容，包括來自�
             </td>
             <td>
                 <ul>
-                    <li><code class=" language-undefined">configProperties</code>:配置屬性映射</li>
-                    <li><code class=" language-undefined">dataFrame</code>:以DataFrame形式儲存的資料</li>
+                    <li><code class=" language-undefined">configProperties</code>: 配置屬性映射</li>
+                    <li><code class=" language-undefined">dataFrame</code>: 以DataFrame形式儲存的資料</li>
                 </ul>
             </td>
         </tr>
@@ -414,9 +417,9 @@ DatasetTransformer類別會修改並變換資料集的結構。 Sensei Machine L
             </td>
             <td>
                 <ul>
-                    <li><code class=" language-undefined">self</code>:自我參考</li>
-                    <li><code class=" language-undefined">configProperties</code>:配置屬性映射</li>
-                    <li><code class=" language-undefined">dataset</code>:轉換的輸入資料集</li>
+                    <li><code class=" language-undefined">self</code>: 自我參考</li>
+                    <li><code class=" language-undefined">configProperties</code>: 配置屬性映射</li>
+                    <li><code class=" language-undefined">dataset</code>: 轉換的輸入資料集</li>
                 </ul>
             </td>
         </tr>
@@ -442,8 +445,8 @@ DatasetTransformer類別會修改並變換資料集的結構。 Sensei Machine L
             </td>
             <td>
                 <ul>
-                    <li><code class=" language-undefined">configProperties</code>:配置屬性映射</li>
-                    <li><code class=" language-undefined">dataset</code>:轉換的輸入資料集</li>
+                    <li><code class=" language-undefined">configProperties</code>: 配置屬性映射</li>
+                    <li><code class=" language-undefined">dataset</code>: 轉換的輸入資料集</li>
                 </ul>
             </td>
         </tr>
@@ -473,8 +476,8 @@ FeaturePipelineFactory類包含特徵提取算法，並定義特徵管線從開�
             </td>
             <td>
                 <ul>
-                    <li><code class=" language-undefined">self</code>:自我參考</li>
-                    <li><code class=" language-undefined">configProperties</code>:配置屬性映射</li>
+                    <li><code class=" language-undefined">self</code>: 自我參考</li>
+                    <li><code class=" language-undefined">configProperties</code>: 配置屬性映射</li>
                 </ul>
             </td>
         </tr>
@@ -485,9 +488,9 @@ FeaturePipelineFactory類包含特徵提取算法，並定義特徵管線從開�
             </td>
             <td>
                 <ul>
-                    <li><code class=" language-undefined">self</code>:自我參考</li>
-                    <li><code class=" language-undefined">configProperties</code>:配置屬性</li>
-                    <li><code class=" language-undefined">sparkSession</code>:Spark作業</li>
+                    <li><code class=" language-undefined">self</code>: 自我參考</li>
+                    <li><code class=" language-undefined">configProperties</code>: 配置屬性</li>
+                    <li><code class=" language-undefined">sparkSession</code>: Spark作業</li>
                 </ul>
             </td>
         </tr>
@@ -513,7 +516,7 @@ FeaturePipelineFactory類包含特徵提取算法，並定義特徵管線從開�
             </td>
             <td>
                 <ul>
-                    <li><code class=" language-undefined">configProperties</code>:配置屬性映射</li>
+                    <li><code class=" language-undefined">configProperties</code>: 配置屬性映射</li>
                 </ul>
             </td>
         </tr>
@@ -524,8 +527,8 @@ FeaturePipelineFactory類包含特徵提取算法，並定義特徵管線從開�
             </td>
             <td>
                 <ul>
-                    <li><code class=" language-undefined">configProperties</code>:配置屬性</li>
-                    <li><code class=" language-undefined">sparkSession</code>:Spark作業</li>
+                    <li><code class=" language-undefined">configProperties</code>: 配置屬性</li>
+                    <li><code class=" language-undefined">sparkSession</code>: Spark作業</li>
                 </ul>
             </td>
         </tr>
@@ -555,8 +558,8 @@ PipelineFactory類別封裝了模型訓練和評分的方法和定義，其中�
             </td>
             <td>
                 <ul>
-                    <li><code class=" language-undefined">self</code>:自我參考</li>
-                    <li><code class=" language-undefined">configProperties</code>:配置屬性</li>
+                    <li><code class=" language-undefined">self</code>: 自我參考</li>
+                    <li><code class=" language-undefined">configProperties</code>: 配置屬性</li>
                 </ul>
             </td>
         </tr>
@@ -567,9 +570,9 @@ PipelineFactory類別封裝了模型訓練和評分的方法和定義，其中�
             </td>
             <td>
                 <ul>
-                    <li><code class=" language-undefined">self</code>:自我參考</li>
-                    <li><code class=" language-undefined">configProperties</code>:配置屬性</li>
-                    <li><code class=" language-undefined">dataframe</code>:訓練輸入的功能資料集</li>
+                    <li><code class=" language-undefined">self</code>: 自我參考</li>
+                    <li><code class=" language-undefined">configProperties</code>: 配置屬性</li>
+                    <li><code class=" language-undefined">dataframe</code>: 訓練輸入的功能資料集</li>
                 </ul>
             </td>
         </tr>
@@ -580,10 +583,10 @@ PipelineFactory類別封裝了模型訓練和評分的方法和定義，其中�
             </td>
             <td>
                 <ul>
-                    <li><code class=" language-undefined">self</code>:自我參考</li>
-                    <li><code class=" language-undefined">configProperties</code>:配置屬性</li>
-                    <li><code class=" language-undefined">dataframe</code>:用於計分的輸入資料集</li>
-                    <li><code class=" language-undefined">model</code>:用於評分的訓練模型</li>
+                    <li><code class=" language-undefined">self</code>: 自我參考</li>
+                    <li><code class=" language-undefined">configProperties</code>: 配置屬性</li>
+                    <li><code class=" language-undefined">dataframe</code>: 用於計分的輸入資料集</li>
+                    <li><code class=" language-undefined">model</code>: 用於評分的訓練模型</li>
                 </ul>
             </td>
         </tr>
@@ -594,9 +597,9 @@ PipelineFactory類別封裝了模型訓練和評分的方法和定義，其中�
             </td>
             <td>
                 <ul>
-                    <li><code class=" language-undefined">self</code>:自我參考</li>
-                    <li><code class=" language-undefined">configProperties</code>:配置屬性</li>
-                    <li><code class=" language-undefined">sparkSession</code>:Spark作業</li>
+                    <li><code class=" language-undefined">self</code>: 自我參考</li>
+                    <li><code class=" language-undefined">configProperties</code>: 配置屬性</li>
+                    <li><code class=" language-undefined">sparkSession</code>: Spark作業</li>
                 </ul>
             </td>
         </tr>
@@ -622,7 +625,7 @@ PipelineFactory類別封裝了模型訓練和評分的方法和定義，其中�
             </td>
             <td>
                 <ul>
-                    <li><code class=" language-undefined">configProperties</code>:配置屬性</li>
+                    <li><code class=" language-undefined">configProperties</code>: 配置屬性</li>
                 </ul>
             </td>
         </tr>
@@ -633,8 +636,8 @@ PipelineFactory類別封裝了模型訓練和評分的方法和定義，其中�
             </td>
             <td>
                 <ul>
-                    <li><code class=" language-undefined">configProperties</code>:配置屬性</li>
-                    <li><code class=" language-undefined">sparkSession</code>:Spark作業</li>
+                    <li><code class=" language-undefined">configProperties</code>: 配置屬性</li>
+                    <li><code class=" language-undefined">sparkSession</code>: Spark作業</li>
                 </ul>
             </td>
         </tr>
@@ -664,9 +667,9 @@ MLEvaluator類提供了用於定義評估度量和確定培訓和測試資料集
             </td>
             <td>
                 <ul>
-                    <li><code class=" language-undefined">self</code>:自我參考</li>
-                    <li><code class=" language-undefined">configProperties</code>:配置屬性</li>
-                    <li><code class=" language-undefined">dataframe</code>:要分割的輸入資料集</li>
+                    <li><code class=" language-undefined">self</code>: 自我參考</li>
+                    <li><code class=" language-undefined">configProperties</code>: 配置屬性</li>
+                    <li><code class=" language-undefined">dataframe</code>: 要分割的輸入資料集</li>
                 </ul>
             </td>
         </tr>
@@ -677,10 +680,10 @@ MLEvaluator類提供了用於定義評估度量和確定培訓和測試資料集
             </td>
             <td>
                 <ul>
-                    <li><code class=" language-undefined">self</code>:自我參考</li>
-                    <li><code class=" language-undefined">dataframe</code>:由訓練和測試資料組成的DataFrame</li>
-                    <li><code class=" language-undefined">model</code>:經過訓練的模型</li>
-                    <li><code class=" language-undefined">configProperties</code>:配置屬性</li>
+                    <li><code class=" language-undefined">self</code>: 自我參考</li>
+                    <li><code class=" language-undefined">dataframe</code>: 由訓練和測試資料組成的DataFrame</li>
+                    <li><code class=" language-undefined">model</code>: 經過訓練的模型</li>
+                    <li><code class=" language-undefined">configProperties</code>: 配置屬性</li>
                 </ul>
             </td>
         </tr>
@@ -706,8 +709,8 @@ MLEvaluator類提供了用於定義評估度量和確定培訓和測試資料集
             </td>
             <td>
                 <ul>
-                    <li><code class=" language-undefined">configProperties</code>:配置屬性</li>
-                    <li><code class=" language-undefined">data</code>:要分割的輸入資料集</li>
+                    <li><code class=" language-undefined">configProperties</code>: 配置屬性</li>
+                    <li><code class=" language-undefined">data</code>: 要分割的輸入資料集</li>
                 </ul>
             </td>
         </tr>
@@ -718,9 +721,9 @@ MLEvaluator類提供了用於定義評估度量和確定培訓和測試資料集
             </td>
             <td>
                 <ul>
-                    <li><code class=" language-undefined">configProperties</code>:配置屬性</li>
-                    <li><code class=" language-undefined">model</code>:經過訓練的模型</li>
-                    <li><code class=" language-undefined">data</code>:由訓練和測試資料組成的DataFrame</li>
+                    <li><code class=" language-undefined">configProperties</code>: 配置屬性</li>
+                    <li><code class=" language-undefined">model</code>: 經過訓練的模型</li>
+                    <li><code class=" language-undefined">data</code>: 由訓練和測試資料組成的DataFrame</li>
                 </ul>
             </td>
         </tr>
