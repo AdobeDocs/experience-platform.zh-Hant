@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 在歸因AI中發現見解
 topic: Attribution AI insights
 translation-type: tm+mt
-source-git-commit: 83e74ad93bdef056c8aef07c9d56313af6f4ddfd
+source-git-commit: 0ea96de956adb5a6c5286433a547772118c43aee
 workflow-type: tm+mt
 source-wordcount: '1164'
 ht-degree: 1%
@@ -57,7 +57,7 @@ ht-degree: 1%
 
 ![編輯跨欄](./images/insights/edit-popover.png)
 
-### 更多動作
+### 更多動作 {#more-actions}
 
 「更 *多動作* 」按鈕位於「編輯」旁的右上導 *覽中*。 按一 **下「更多動作** 」會開啟下拉式清單，供您選取下列其中一個作業：
 
