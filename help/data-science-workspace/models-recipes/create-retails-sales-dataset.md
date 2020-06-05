@@ -4,19 +4,22 @@ solution: Experience Platform
 title: 建立零售銷售結構和資料集
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 91c7b7e285a4745da20ea146f2334510ca11b994
+source-git-commit: 83e74ad93bdef056c8aef07c9d56313af6f4ddfd
+workflow-type: tm+mt
+source-wordcount: '526'
+ht-degree: 0%
 
 ---
 
 
 # 建立零售銷售結構和資料集
 
-本教學課程提供所有其他Adobe Experience Platform資料科學工作區教學課程的必要條件和必要資產。 完成後，您和您的IMS組織Experience Platform成員將可使用零售銷售架構和資料集。
+本教學課程提供所有其他資料科學工作區教學課程的必 [!DNL Adobe Experience Platform] 要條件和資產。 完成後，您和您的IMS組織Experience Platform成員將可使用零售銷售架構和資料集。
 
 ## 快速入門
 
 開始本教學課程之前，您必須具備下列必要條件：
-- 存取Adobe Experience Platform。 如果您無法存取Experience Platform中的IMS組織，請在繼續前先與系統管理員聯絡。
+- 存取權 [!DNL Adobe Experience Platform]。 如果您無法存取Experience Platform中的IMS組織，請在繼續前先與系統管理員聯絡。
 - 授權進行Experience Platform API呼叫。 完成「 [驗證並存取Adobe Experience Platform API](../../tutorials/authentication.md) 」教學課程，以取得下列值，以順利完成本教學課程：
    - 授權： `{ACCESS_TOKEN}`
    - x-api-key: `{API_KEY}`
@@ -62,11 +65,11 @@ source-git-commit: 91c7b7e285a4745da20ea146f2334510ca11b994
        kernel_type: Python
    ```
 
-   - `platform_gateway` :API呼叫的基本路徑。 請勿修改此值。
-   - `ims_token` :你 `{ACCESS_TOKEN}` 來這。
-   - `ingest_data` :在本教程中，請將此值設定為，以 `"True"` 便建立零售銷售方案和資料集。 值將僅 `"False"` 建立結構。
-   - `build_recipe_artifacts` :在本教學課程中，請將此值設 `"False"` 定為防止指令碼產生Recipe對象。
-   - `kernel_type` :處方對象的執行類型。 將此值保留為 `Python` 設 `build_recipe_artifacts` 為，否則 `"False"`請指定正確的執行類型。
+   - `platform_gateway` : API呼叫的基本路徑。 請勿修改此值。
+   - `ims_token` : 你 `{ACCESS_TOKEN}` 來這。
+   - `ingest_data` : 在本教程中，請將此值設定為，以 `"True"` 便建立零售銷售方案和資料集。 值將僅 `"False"` 建立結構。
+   - `build_recipe_artifacts` : 在本教學課程中，請將此值設 `"False"` 定為防止指令碼產生Recipe對象。
+   - `kernel_type` : 處方對象的執行類型。 將此值保留為 `Python` 設 `build_recipe_artifacts` 為，否則 `"False"`請指定正確的執行類型。
 
 4. 在「零 `Titles` 售銷售」範例資料中，請適當提供下列資訊，在編輯完成後儲存並關閉檔案。 範例如下：
 
