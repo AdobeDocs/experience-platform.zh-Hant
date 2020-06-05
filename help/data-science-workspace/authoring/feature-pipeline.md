@@ -4,14 +4,17 @@ solution: Experience Platform
 title: 建立特徵管線
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 19823c7cf0459e045366f0baae2bd8a98416154c
+source-git-commit: 83e74ad93bdef056c8aef07c9d56313af6f4ddfd
+workflow-type: tm+mt
+source-wordcount: '971'
+ht-degree: 0%
 
 ---
 
 
 # 建立特徵管線
 
-Adobe Experience Platform可讓您透過Sensei機器學習架構執行階段（以下稱為「執行階段」），建立並建立自訂功能管道，以大規模執行功能工程。
+[!DNL Adobe Experience Platform] 可讓您建立和建立自訂的功能管道，以透過Sensei機器學習架構執行時期（以下稱為「執行時期」）大規模執行功能工程。
 
 本檔案說明在「功能管道」中找到的各種類別，並提供使用PySpark和Spark中的「模型編寫SDK [](./sdk.md) 」建立自訂「功能管道」的逐步教學課程。
 
