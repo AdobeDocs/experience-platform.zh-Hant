@@ -3,7 +3,7 @@ product: experience-platform
 audience: user
 user-guide-title: Adobe Experience Platform來源連接器說明
 translation-type: tm+mt
-source-git-commit: 165d76224f4aeb292e72df1e2574ae1d0821c44c
+source-git-commit: 328b897c54453f23ad7b68fb2a288712cb4fe538
 workflow-type: tm+mt
 source-wordcount: '578'
 ht-degree: 0%
@@ -142,7 +142,8 @@ ht-degree: 0%
          - [FTP和SFTP連接器](tutorials/ui/create/cloud-storage/ftp-sftp.md)
          - [Google雲端儲存空間連接器](tutorials/ui/create/cloud-storage/google-cloud-storage.md)
       - CRM {#crm}
-         - [Microsoft Dynamics和Salesforce連接器](tutorials/ui/create/crm/dynamics-salesforce.md)
+         - [Microsoft Dynamics連接器](tutorials/ui/create/crm/dynamics.md)
+         - [Salesforce連接器](tutorials/ui/create/crm/salesforce.md)
       - 客戶成功 {#customer-success}
          - [Salesforce Service Cloud連接器](tutorials/ui/create/customer-success/salesforce-service-cloud.md)
          - [ServiceNow連接器](tutorials/ui/create/customer-success/servicenow.md)
