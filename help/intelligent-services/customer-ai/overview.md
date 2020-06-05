@@ -4,7 +4,10 @@ solution: Experience Platform
 title: 客戶人工智慧概觀
 topic: Customer AI overview
 translation-type: tm+mt
-source-git-commit: ec0de4c8775367be9e6016529471254ad9f8f453
+source-git-commit: 83e74ad93bdef056c8aef07c9d56313af6f4ddfd
+workflow-type: tm+mt
+source-wordcount: '487'
+ht-degree: 0%
 
 ---
 
@@ -32,7 +35,7 @@ source-git-commit: ec0de4c8775367be9e6016529471254ad9f8f453
 
 - 客戶人工智慧不應用於預測動態定價或客戶要購買的價格點。
 - 客戶人工智慧無法判斷提供選件是否會讓客戶更有可能購買產品。 雖然您可能會根據傾向分數決定傳送折扣優惠，但這未必是轉換這些客戶的最佳方式。
-- 客戶人工智慧不是產品建議工具。 如果您有數千個SKU，請勿將客戶AI用作實際產品建議解決方案（例如Adobe Target）的代理程式。
+- 客戶人工智慧不是產品建議工具。 如果您有數千個SKU，請勿將客戶AI當做實際產品建議解決方案（例如）的代理 [!DNL Adobe Target]。
 - 客戶人工智慧無法預測客戶在購買歷程的哪個階段，例如，如果他們處於「認知」、「考慮」、「購買」或「保留」階段。
 - 請勿使用客戶人工智慧來判斷日後可能購買產品的客戶。 這要求客戶AI必須在過去出現某些成功事件，才能成功訓練資料上的機器學習演算法。
 
