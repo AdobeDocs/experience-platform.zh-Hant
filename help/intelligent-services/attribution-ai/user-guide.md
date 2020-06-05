@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Attribution AI使用指南
 topic: User guide
 translation-type: tm+mt
-source-git-commit: 83e74ad93bdef056c8aef07c9d56313af6f4ddfd
+source-git-commit: 0ea96de956adb5a6c5286433a547772118c43aee
 workflow-type: tm+mt
 source-wordcount: '1430'
 ht-degree: 0%
@@ -52,7 +52,7 @@ ht-degree: 0%
 - **回顧視窗：** 提供一個時間範圍，指出應包含多少天前的轉換事件觸點。
 - **觸點：** 收件者、個人或Cookie層級行銷事件，用來評估轉換的數值或收入型影響。
 
-### 定義轉換事件
+### 定義轉換事件 {#define-conversion-events}
 
 若要定義轉換事件，您必須為事件指定名稱，並按一下「輸入欄位名稱」下拉式選單以選 **取事件類型** 。
 
@@ -144,7 +144,7 @@ Attribution AI中的最後一頁是 *Advanced* page，用於設定訓練和計�
 
 ![時鐘錶徵圖](./images/user-guide/time_of_day.png)
 
-### 區域型模型（選用）
+### 區域型模型（選用） {#region-based-modeling-optional}
 
 您客戶的行為可能會因國家／地區和地理區域而大不相同。 對於全球企業而言，使用以國家或地區為基礎的模型可以提高歸因準確度。 每個新增的區域都會建立包含該區域資料的新模型。
 
