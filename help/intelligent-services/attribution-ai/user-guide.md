@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Attribution AI使用指南
 topic: User guide
 translation-type: tm+mt
-source-git-commit: 3e1e7bea7113b5db6b9bd02ce0dbe8cfd486206c
+source-git-commit: 83e74ad93bdef056c8aef07c9d56313af6f4ddfd
+workflow-type: tm+mt
+source-wordcount: '1430'
+ht-degree: 0%
 
 ---
 
@@ -17,7 +20,7 @@ source-git-commit: 3e1e7bea7113b5db6b9bd02ce0dbe8cfd486206c
 
 ## 建立例項
 
-在Adobe Experience Platform UI中，按一下左側導 **覽中** 「服務」。 「服 *務* 」瀏覽器隨即出現，並顯示可用的Adobe智慧服務。 在「歸因AI」的容器中，按一下「 **開啟**」。
+在UI中 [!DNL Adobe Experience Platform] ，按一下左 **側導覽** 中的「服務」。 「服 *務* 」瀏覽器隨即出現，並顯示可用的Adobe智慧服務。 在「歸因AI」的容器中，按一下「 **開啟**」。
 
 ![存取您的例項](./images/user-guide/open_Attribution_ai.png)
 
@@ -109,7 +112,7 @@ source-git-commit: 3e1e7bea7113b5db6b9bd02ce0dbe8cfd486206c
 
 ![接觸點概述](./images/user-guide/add_group_touchpoint.png)
 
->[!NOTE] 使用「觸點名 *稱」下方的字串* ，快速概述您的觸點。 請注意，字串與接觸點的名稱相符。
+>[!NOTE] 使用「觸點名 *稱」下方的字串* ，快速概觀您的觸點。 請注意，字串與接觸點的名稱相符。
 
 ![](./images/user-guide/touchpoint_string.png)
 
