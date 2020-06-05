@@ -4,14 +4,17 @@ solution: Experience Platform
 title: 平台SDK指南
 topic: SDK authoring
 translation-type: tm+mt
-source-git-commit: 19823c7cf0459e045366f0baae2bd8a98416154c
+source-git-commit: 83e74ad93bdef056c8aef07c9d56313af6f4ddfd
+workflow-type: tm+mt
+source-wordcount: '451'
+ht-degree: 1%
 
 ---
 
 
 # 平台SDK指南
 
-本教學課程提供有關在Python和R `data_access_sdk_python` 中轉換為 `platform_sdk` 新Python的資訊。本教學課程提供下列操作的相關資訊：
+本教學課程提供有關在Python和R `data_access_sdk_python` 中轉換為 `platform_sdk` 新Python的資訊。 本教學課程提供下列操作的相關資訊：
 
 - [建立驗證](#build-authentication)
 - [資料的基本讀取](#basic-reading-of-data)
@@ -19,7 +22,7 @@ source-git-commit: 19823c7cf0459e045366f0baae2bd8a98416154c
 
 ## 建立驗證 {#build-authentication}
 
-必須進行驗證才能呼叫Adobe Experience Platform，且由API金鑰、IMS組織ID、使用者Token和服務Token組成。
+必須進行驗證才能 [!DNL Adobe Experience Platform]呼叫，且由API金鑰、IMS組織ID、使用者Token和服務Token組成。
 
 ### Python
 
