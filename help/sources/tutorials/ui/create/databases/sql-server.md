@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 在UI中建立Microsoft SQL Server源連接器
 topic: overview
 translation-type: tm+mt
-source-git-commit: 0a2247a9267d4da481b3f3a5dfddf45d49016e61
+source-git-commit: 75ba0bce7ce070af851bbf7e220dbf08febc4c20
 workflow-type: tm+mt
 source-wordcount: '511'
 ht-degree: 0%
@@ -48,7 +48,7 @@ Adobe Experience Platform中的來源連接器可讓您依計畫吸收外部來�
 
 在「數 *據庫* 」類別下，選擇 **Microsoft SQL Server** ，以在螢幕右側顯示資訊欄。 資訊列提供所選來源的簡短說明，以及與來源連線或檢視其檔案的選項。 要建立新的入站基本連接，請選擇「 **連接源」**。
 
-![](../../../../images/tutorials/create/microsoft-sql-server/sources-catalog.png)
+![](../../../../images/tutorials/create/microsoft-sql-server/catalog.png)
 
 此時 *將顯示「連接到Microsoft SQL Server* 」頁。 在此頁上，您可以使用新認證或現有認證。
 
@@ -56,13 +56,13 @@ Adobe Experience Platform中的來源連接器可讓您依計畫吸收外部來�
 
 如果您使用新認證，請選擇「新 **帳戶」**。 在顯示的輸入表單上，為基本連接提供名稱、可選說明和SQL Server憑據。 完成後，選擇 **Connect** ，然後為建立新的基本連接留出一些時間。
 
-![](../../../../images/tutorials/create/microsoft-sql-server/new-credentials.png)
+![](../../../../images/tutorials/create/microsoft-sql-server/new.png)
 
 ### 現有帳戶
 
 要連接現有帳戶，請選擇要連接的SQL Server帳戶，然後選擇「下 **一步** 」繼續。
 
-![](../../../../images/tutorials/create/microsoft-sql-server/existing-credentials.png)
+![](../../../../images/tutorials/create/microsoft-sql-server/existing.png)
 
 ## 後續步驟
 
