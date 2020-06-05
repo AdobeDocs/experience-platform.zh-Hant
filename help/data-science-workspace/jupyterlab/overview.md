@@ -4,9 +4,9 @@ solution: Experience Platform
 title: JupyterLab使用指南
 topic: Overview
 translation-type: tm+mt
-source-git-commit: 37213f29e8099f8587cde9eb66f9b75de3ad8a3a
+source-git-commit: 83e74ad93bdef056c8aef07c9d56313af6f4ddfd
 workflow-type: tm+mt
-source-wordcount: '3356'
+source-wordcount: '3349'
 ht-degree: 5%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 5%
 
 # JupyterLab使用指南
 
-JupyterLab是專案Jupyter的網路使用者介面， <a href="https://jupyter.org/" target="_blank"></a> 並與Adobe Experience Platform緊密整合。 它為資料科學家提供互動式開發環境，以便與Jupyter筆記型電腦、程式碼和資料搭配使用。
+JupyterLab是專案Jupyter的網路使用者介面 <a href="https://jupyter.org/" target="_blank">，並與之緊密整合</a>[!DNL Adobe Experience Platform]。 它為資料科學家提供互動式開發環境，以便與Jupyter筆記型電腦、程式碼和資料搭配使用。
 
 本文檔概述了JupyterLab及其功能，以及執行常見操作的說明。
 
@@ -29,7 +29,7 @@ Experience Platform的JupyterLab整合隨附架構變更、設計考量、自訂
 | **內核** | 內核提供筆記型電腦和其他JupyterLab前端，以不同的寫程式語言執行和查看代碼。 Experience Platform提供額外的核心，以支援在Python、R、PySpark和Spark中進行開發。 有關詳細 [資訊](#kernels) ，請參閱內核部分。 |
 | **資料存取** | 直接從JupyterLab存取現有資料集，並具備完整的讀取和寫入功能支援。 |
 | **平台服務整合** | 內建整合可讓您直接從JupyterLab運用其他平台服務。 「與其他平台服務整合」一節提供支援整合的 [完整清單](#service-integration)。 |
-| **驗證** | 除了 <a href="https://jupyter-notebook.readthedocs.io/en/latest/security.html" target="_blank">JupyterLab的內建安全性模型外</a>，您的應用程式與Experience Platform（包括平台服務對服務通訊）之間的每次互動都會透過 <a href="https://www.adobe.io/authentication/auth-methods.html" target="_blank">Adobe Identity Management System(IMS)進行加密和驗證</a>。 |
+| **驗證** | 除了 <a href="https://jupyter-notebook.readthedocs.io/en/latest/security.html" target="_blank">JupyterLab的內建安全性模型外</a>，您的應用程式與Experience Platform（包括平台服務對服務通訊）之間的每次互動都會透過 <a href="https://www.adobe.io/authentication/auth-methods.html" target="_blank">[!DNL Adobe Identity Management System] (IMS)加密和驗證</a>。 |
 | **開發程式庫** | 在Experience Platform中，JupyterLab提供Python、R和PySpark的預先安裝程式庫。 如需支援 [的程式庫](#supported-libraries) ，請參閱附錄。 |
 | **程式庫控制器** | 當預先安裝的程式庫不符合您的需求時，可為Python和R安裝其他程式庫，並暫時儲存在隔離的容器中，以維護平台的完整性並確保資料的安全。 有關詳細 [資訊](#kernels) ，請參閱內核部分。 |
 
@@ -43,7 +43,7 @@ Experience Platform的JupyterLab整合隨附架構變更、設計考量、自訂
 * **查詢服務：** 使用SQL訪問和探索資料集，在處理大量資料時提供較低的資料存取開銷。
 * **Sensei ML框架：** 模型開發具備訓練和評分資料的能力，而且只要按一下，就能建立配方。
 
->[!NOTE] JupyterLab上的某些平台服務整合僅限於特定內核。 有關詳細資訊，請參 [閱](#kernels) 「內核」一節。
+>[!NOTE] JupyterLab上的某些平台服務整合僅限於特定內核。 有關詳細資訊，請參 [閱](#kernels) 「內核」部分。
 
 ## 主要功能與常用作業
 
