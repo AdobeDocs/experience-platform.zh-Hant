@@ -4,7 +4,10 @@ solution: Experience Platform
 title: 列出資源
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 58549241f05f1bd604f33762f681c60946fa52f5
+source-git-commit: b4d8a6f8006d55c7aac19d705c6880fec915c147
+workflow-type: tm+mt
+source-wordcount: '519'
+ht-degree: 2%
 
 ---
 
@@ -44,8 +47,8 @@ curl -X GET \
 
 | 接受標題 | 說明 |
 | ------- | ------------ |
-| application/vnd.adobe.xed-id+json | 返回每個資源的簡短摘要。 這是列出資源的建議標題。 (限制：300) |
-| application/vnd.adobe.xed+json | 傳回每個資源的完整JSON結構描述，其中包含 `$ref` 原始 `allOf` 資源。 (限制：300) |
+| application/vnd.adobe.xed-id+json | 返回每個資源的簡短摘要。 這是列出資源的建議標題。 (限制： 300) |
+| application/vnd.adobe.xed+json | 傳回每個資源的完整JSON結構描述，其中包含 `$ref` 原始 `allOf` 資源。 (限制： 300) |
 | application/vnd.adobe.xdm-v2+json | 使用端點 `/descriptors` 時，必須使用此接受標頭才能使用尋呼功能。 |
 
 **回應**
@@ -83,9 +86,9 @@ curl -X GET \
 
 | 參數 | 說明 |
 | --- | --- |
-| `start` | 指定列出結果的起始位置。 範例：將列 `start=2` 出第三個傳回項目的結果。 |
-| `limit` | 限制傳回的資源數。 範例：將 `limit=5` 返回5個資源的清單。 |
-| `orderby` | 依特定屬性排序結果。 範例：將 `orderby=title` 依標題以升序排序結果(A-Z)。 在標題 `-` 前加入(`orderby=-title`)會依標題以遞減順序(Z-A)排序項目。 |
+| `start` | 指定列出的結果的開始位置。 此值可從清單回應 `_page.next` 的屬性中取得，並用於存取下一頁的結果。 如果 `_page.next` 值為null，則沒有其他頁面可用。 |
+| `limit` | 限制傳回的資源數。 範例： `limit=5` 將會傳回5個資源清單。 |
+| `orderby` | 依特定屬性排序結果。 範例： `orderby=title` 將按標題的升序排序結果(A-Z)。 在標題 `-` 前加入(`orderby=-title`)會依標題以遞減順序(Z-A)排序項目。 |
 
 ### 篩選 {#filtering}
 
