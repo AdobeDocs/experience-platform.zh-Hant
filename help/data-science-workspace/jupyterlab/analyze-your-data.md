@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 使用筆記型電腦分析資料
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 37213f29e8099f8587cde9eb66f9b75de3ad8a3a
+source-git-commit: 83e74ad93bdef056c8aef07c9d56313af6f4ddfd
 workflow-type: tm+mt
-source-wordcount: '1746'
+source-wordcount: '1729'
 ht-degree: 0%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 0%
 
 以下概念介紹：
 
-- **JupyterLab:** [JupyterLab](https://blog.jupyter.org/jupyterlab-is-ready-for-users-5a6f039b8906) 是Project Jupyter的新一代網路介面，並與Adobe Experience Platform緊密整合。
+- **JupyterLab:** [JupyterLab](https://blog.jupyter.org/jupyterlab-is-ready-for-users-5a6f039b8906) 是Project Jupyter的新一代Web介面，並與之緊密整合 [!DNL Adobe Experience Platform]。
 - **批：** 資料集由批處理組成。 批是一組在一段時間內收集並作為單個單位一起處理的資料。 新增資料至資料集時，會建立新的批次。
 - **資料存取SDK（已過時）:** 「資料存取SDK」現已停用。 請使用「平 [台SDK](../authoring/platform-sdk.md) 」指南。
 
@@ -38,7 +38,7 @@ Data Science Workspace可讓使用者透過JupyterLab平台建立Jupyter Noteboo
 
 ### 建立新筆記本
 
-在Adobe Experience Platform UI中，按一下頂端功能表中的「資料科學」標籤，即可帶您前往「資料科學工作區」。 在此頁中，按一下將開啟JupyterLab啟動程式的JupyterLab頁籤。 您應該會看到類似此的頁面。
+在UI中， [!DNL Adobe Experience Platform] 按一下頂端功能表中的「資料科學」標籤，將您帶往「資料科學工作區」。 在此頁中，按一下將開啟JupyterLab啟動程式的JupyterLab頁籤。 您應該會看到類似此的頁面。
 
 ![](../images/jupyterlab/analyze-data/jupyterlab_launcher.png)
 
@@ -52,7 +52,7 @@ Data Science Workspace可讓使用者透過JupyterLab平台建立Jupyter Noteboo
 
 >[!NOTE] 已過 `data_access_sdk_python` 時，不再建議使用。 請參閱將資料 [存取SDK轉換為平台SDK](../authoring/platform-sdk.md) 教學課程，以轉換您的程式碼。 本教學課程仍適用下列相同步驟。
 
-我們將從Adobe Experience Platform內部存取資料，從外部存取資料。 我們將使用程式庫 `data_access_sdk_python` 來存取內部資料，例如資料集和XDM架構。 對於外部資料，我們將使用熊貓蟒蛇圖庫。
+我們將重點介紹從外部訪問資料 [!DNL Adobe Experience Platform] 和資料。 我們將使用程式庫 `data_access_sdk_python` 來存取內部資料，例如資料集和XDM架構。 對於外部資料，我們將使用熊貓蟒蛇圖庫。
 
 #### 外部資料
 
@@ -70,7 +70,7 @@ Data Science Workspace可讓使用者透過JupyterLab平台建立Jupyter Noteboo
 
 #### 體驗平台資料
 
-現在，我們將重點討論如何存取Experience Platform資料。
+現在，我們將重點介紹如何訪問 [!DNL Experience Platform] 資料。
 
 ##### 依資料集ID
 
@@ -96,7 +96,7 @@ df = reader.load(data_set_id="xxxxxxxx", ims_org="xxxxxxxx@AdobeOrg")
 df.head()
 ```
 
-如果您使用的是Python以外的其他內核，請參 [閱本頁](https://github.com/adobe/acp-data-services-dsw-reference/wiki/Accessing-Data-on-the-Platform) ，以存取Adobe Experience Platform上的資料。
+如果您正在使用Python以外的其他內核，請參 [閱本頁](https://github.com/adobe/acp-data-services-dsw-reference/wiki/Accessing-Data-on-the-Platform) ，以訪問上的資料 [!DNL Adobe Experience Platform]。
 
 選擇可執行單元格，然後按工具欄中的播放按鈕將運行可執行代碼。 的輸出 `head()` 將是表，其中資料集的索引鍵為欄，而資料集中的前n列為欄。 `head()` 接受整數參數，以指定要輸出的行數。 預設為5。
 
@@ -190,7 +190,7 @@ df.describe()
 
 ## 後續步驟
 
-本教學課程將說明如何在資料科學工作區中建立新的Jupyter筆記型電腦，以及如何從外部以及從Adobe Experience Platform存取資料。 具體來說，我們逐一檢視下列步驟：
+本教學課程將說明如何在資料科學工作區中建立新的Jupyter筆記型電腦，以及如何從外部和外部存取資料 [!DNL Adobe Experience Platform]。 具體來說，我們逐一檢視下列步驟：
 - 建立新的Jupyter筆記型電腦
 - 存取資料集和結構
 - 探索資料集
