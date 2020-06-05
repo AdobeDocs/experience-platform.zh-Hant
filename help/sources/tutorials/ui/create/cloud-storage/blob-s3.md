@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 在UI中建立Azure Blob或Amazon S3來源連接器
 topic: overview
 translation-type: tm+mt
-source-git-commit: 0a2247a9267d4da481b3f3a5dfddf45d49016e61
+source-git-commit: 9fd00ec198f61843bb9a395103215e5441b23745
 workflow-type: tm+mt
-source-wordcount: '591'
+source-wordcount: '644'
 ht-degree: 1%
 
 ---
@@ -56,18 +56,30 @@ Experience Platform支援下列從外部儲存擷取的檔案格式：
 
 ## 連接您的Blob或S3帳戶
 
-在雲端儲存空間的認證就緒後，您可以依照下列步驟建立新的傳入基本連線，將您的Blob或S3帳戶連結至平台。
+收集完所需憑證後，您可依照下列步驟建立新的Blob或S3帳戶以連線至平台。
 
-登入 <a href="https://platform.adobe.com" target="_blank">Adobe Experience Platform</a> ，然後從左側導覽列選 **取Sources** ，以存取來源工作區。 「目 *錄* 」螢幕顯示各種源，您可以為其建立入站基本連接，而每個源顯示與其關聯的現有基本連接數。
+登入 [Adobe Experience Platform](https://platform.adobe.com) ，然後從左側導覽列選取 **[!UICONTROL Sources]** ，以存取 ** Sources工作區。 「目 *[!UICONTROL 錄]* 」螢幕顯示各種源，您可以為其建立入站帳戶，每個源顯示與其關聯的現有帳戶和資料流的數量。
 
-在「 *雲端儲存* 」類別下，選取「 **Azure Blob Storage** 」或「 **Amazon S3** 」，以在畫面右側顯示資訊列。 資訊列提供所選來源的簡短說明，以及檢視其檔案或連線來源的選項。 要建立新的入站基本連接，請按一下「連 **接源」**。
+您可以從畫面左側的目錄中選取適當的類別。 或者，您也可以使用搜尋選項找到您要使用的特定來源。
 
-![](../../../../images/tutorials/create/s3/s3_sources_catalog.png)
+在「數 *[!UICONTROL 據庫]* 」類別下，選擇 **[!UICONTROL Azure Blob Storage]** 或 **[!UICONTROL Amazon S3]** ，按一下 **** +表徵圖(+)以建立新的Blob或S3連接器。
 
-在輸入表單中，為基本連接提供名稱、可選說明和Blob或S3憑據。 最後，按一下 **Connect** ，然後允許一些時間建立新的基本連接。
+![目錄](../../../../images/tutorials/create/blob/catalog.png)
 
-![](../../../../images/tutorials/create/s3/s3_credentials.png)
+此時 *[!UICONTROL 將顯示「連接到Azure Blob儲存]* 」頁。 在此頁上，您可以使用新認證或現有認證。
+
+### 新帳戶
+
+如果您使用新認證，請選擇「新 **[!UICONTROL 帳戶」]**。 在顯示的輸入表單上，提供連線名稱、選用說明和您的Blob或S3憑證。 完成後，選擇 **[!UICONTROL Connect]** ，然後為新帳戶建立留出一些時間。
+
+![連接](../../../../images/tutorials/create/blob/new.png)
+
+### 現有帳戶
+
+要連接現有帳戶，請選擇要連接的Blob或S3帳戶，然後選擇「下 **[!UICONTROL 一步]** 」繼續。
+
+![現有](../../../../images/tutorials/create/blob/existing.png)
 
 ## 後續步驟
 
-通過本教程，您已建立了與Azure Blob或Amazon S3帳戶的基本連接。 您現在可以繼續下一個教程，並 [配置資料流以將資料導入平台](../../dataflow/batch/cloud-storage.md)。
+在本教程中，您已建立到Blob或S3帳戶的連接。 您現在可以繼續下一個教學課程，並 [設定資料流，將雲端儲存空間的資料匯入平台](../../dataflow/batch/cloud-storage.md)。
