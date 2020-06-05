@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 在UI中建立ServiceNow來源連接器
 topic: overview
 translation-type: tm+mt
-source-git-commit: 2162c66b1664ecaaf0b609fe3f7ccf58c4a5d31d
+source-git-commit: 75ba0bce7ce070af851bbf7e220dbf08febc4c20
 workflow-type: tm+mt
 source-wordcount: '519'
 ht-degree: 0%
@@ -60,13 +60,13 @@ Adobe Experience Platform中的來源連接器可讓您依計畫吸收外部來�
 
 如果您使用新認證，請選擇「新 **帳戶」**。 在出現的輸入表單上，提供連線名稱、選用說明和您的ServiceNow憑證。 完成後，選擇 **Connect** ，然後為新帳戶建立留出一些時間。
 
-![](../../../../images/tutorials/create/servicenow/new-credentials.png)
+![](../../../../images/tutorials/create/servicenow/new.png)
 
 ### 現有帳戶
 
 要連接現有帳戶，請選擇要連接的ServiceNow帳戶，然後選擇「下 **一步** 」繼續。
 
-![](../../../../images/tutorials/create/servicenow/existing-credentials.png)
+![](../../../../images/tutorials/create/servicenow/existing.png)
 
 ## 後續步驟
 
