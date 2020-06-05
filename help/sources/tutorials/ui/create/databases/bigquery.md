@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 在UI中建立Google Big Query來源連接器
 topic: overview
 translation-type: tm+mt
-source-git-commit: 2162c66b1664ecaaf0b609fe3f7ccf58c4a5d31d
+source-git-commit: 75ba0bce7ce070af851bbf7e220dbf08febc4c20
 workflow-type: tm+mt
 source-wordcount: '524'
 ht-degree: 0%
@@ -51,7 +51,7 @@ Adobe Experience Platform中的來源連接器可讓您依計畫吸收外部來�
 
 在「資 *料庫* 」類別下，選取 **Google Big Query** ，以在畫面右側顯示資訊列。 資訊列提供所選來源的簡短說明，以及與來源連線或檢視其檔案的選項。 要建立新的入站基本連接，請選擇「 **連接源」**。
 
-![](../../../../images/tutorials/create/google-big-query/sources-catalog.png)
+![](../../../../images/tutorials/create/google-big-query/catalog.png)
 
 此時 *會顯示「連線至Google Big Query* 」頁面。 在此頁上，您可以使用新認證或現有認證。
 
@@ -59,13 +59,13 @@ Adobe Experience Platform中的來源連接器可讓您依計畫吸收外部來�
 
 如果您使用新認證，請選擇「新 **帳戶」**。 在顯示的輸入表單上，為基本連接提供名稱、可選說明和GBQ憑據。 完成後，選擇 **Connect** ，然後為建立新的基本連接留出一些時間。
 
-![](../../../../images/tutorials/create/google-big-query/gbq-new-credentials.png)
+![](../../../../images/tutorials/create/google-big-query/new.png)
 
 ### 現有帳戶
 
 要連接現有帳戶，請選擇要連接的GBQ帳戶，然後選擇「下 **一步** 」繼續。
 
-![](../../../../images/tutorials/create/google-big-query/gbq-existing-credentials.png)
+![](../../../../images/tutorials/create/google-big-query/existing.png)
 
 ## 後續步驟
 
