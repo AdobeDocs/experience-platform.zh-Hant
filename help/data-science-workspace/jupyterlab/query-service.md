@@ -4,56 +4,59 @@ solution: Experience Platform
 title: Jupyter筆記本中的查詢服務
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 1447196da7dbf59c1f498de40f12ed74c328c0e6
+source-git-commit: 83e74ad93bdef056c8aef07c9d56313af6f4ddfd
+workflow-type: tm+mt
+source-wordcount: '799'
+ht-degree: 1%
 
 ---
 
 
 # Jupyter筆記本中的查詢服務
 
-Adobe Experience Platform可讓您將查詢服務整合到JupyterLab中，做為標準功能，在資料科學工作區中使用結構化查詢語言(SQL)。
+[!DNL Adobe Experience Platform] 允許您將查詢服務整合到JupyterLab作為標準功能，在資料科學工作區中使用結構化查詢語言(SQL)。
 
-本教學課程示範常見使用案例的SQL查詢範例，以探索、轉換和分析Adobe Analytics資料。
+本教程演示了用於探索、轉換和分析資料的常見使用案例的SQL查詢 [!DNL Adobe Analytics] 示例。
 
 ## 快速入門
 
 開始本教學課程之前，您必須具備下列必要條件：
 
-- 存取Adobe Experience Platform。 如果您無權存取Experience Platform中的IMS組織，請在繼續前先與系統管理員聯絡
+- 存取權 [!DNL Adobe Experience Platform]。 如果您無權存取Experience Platform中的IMS組織，請在繼續前先與系統管理員聯絡
 
-- Adobe Analytics資料集
+- 資料 [!DNL Adobe Analytics] 集
 
 - 對本教學課程中使用的下列主要概念有正確認識：
    - [體驗資料模型(XDM)和XDM系統](../../xdm/home.md)
    - [查詢服務](../../query-service/home.md)
    - [查詢服務SQL語法](../../query-service/sql/overview.md)
-   - Adobe Analytics
+   - [!DNL Adobe Analytics]
 
 ## 訪問JupyterLab和查詢服務 {#access-jupyterlab-and-query-service}
 
-1. 在 [Experience Platform](https://platform.adobe.com)，從左側導 **[!UICONTROL Notebooks]** 覽欄導覽至。 請讓JupyterLab載入。
+1. 在 [Experience Platform](https://platform.adobe.com)，從左側導覽欄 **[!UICONTROL 導覽至Notebooks]** 。 請讓JupyterLab載入。
 
    ![](../images/jupyterlab/query/jupyterlab_launcher.png)
 
-   > [!NOTE] 如果未自動顯示新的「啟動器」頁籤，請按一下並選擇以開啟新的「啟動器」 **[!UICONTROL File]** 頁籤 **[!UICONTROL New Launcher]**。
+   > [!NOTE] 如果未自動顯示新的「啟動器」頁籤，請按一下「檔案」開啟新的「啟動器」 **[!UICONTROL 頁籤]** ，然後選 **[!UICONTROL 擇「新建啟動器」]**。
 
-2. 在「啟動器」(Launcher)頁籤 **[!UICONTROL Blank]** 中，按一下Python 3環境中的表徵圖以開啟空的筆記本。
+2. 在「啟動器」(Launcher)頁籤中，按一下 **[!UICONTROL Python]** 3環境中的「空白」(Blank)表徵圖以開啟空的筆記本。
 
    ![](../images/jupyterlab/query/blank_notebook.png)
 
    > [!NOTE] Python 3目前是筆記型電腦中唯一支援查詢服務的環境。
 
-3. 在左側選擇邊欄上，按一下圖 **[!UICONTROL Data]** 示並連按兩下目錄以 **[!UICONTROL Datasets]** 列出所有資料集。
+3. 在左側選擇邊欄上，按一下「 **[!UICONTROL 資料]** 」圖示，然後按兩下「資料集 **** 」目錄以列出所有資料集。
 
    ![](../images/jupyterlab/query/dataset.png)
 
-4. 尋找要瀏覽的Adobe Analytics資料集，並在清單上按一下滑鼠右鍵，按一 **[!UICONTROL Query Data in Notebook]** 下以在空的筆記本中產生SQL查詢。
+4. 查找要 [!DNL Adobe Analytics] 瀏覽的資料集並按一下右鍵清單，按一下「筆記本」( **[!UICONTROL Notebook]** )中的「查詢資料」(Query Data)，在空的筆記本中生成SQL查詢。
 
 5. 按一下包含函式的第一個產生的儲存格， `qs_connect()` 然後按一下播放按鈕以執行它。 此函式在筆記本實例和查詢服務之間建立連接。
 
    ![](../images/jupyterlab/query/execute.png)
 
-6. 從第二個產生的SQL查詢複製Adobe Analytics資料集名稱，將是後面的值 `FROM`。
+6. 從第二個生 [!DNL Adobe Analytics] 成的SQL查詢中複製資料集名稱，它將是後面的值 `FROM`。
 
    ![](../images/jupyterlab/query/dataset_name.png)
 
@@ -78,7 +81,7 @@ Adobe Experience Platform可讓您將查詢服務整合到JupyterLab中，做為
    target_day = "01"
    ```
 
-   - `target_table` : Adobe Analytics資料集的名稱。
+   - `target_table` : 資料集的 [!DNL Adobe Analytics] 名稱。
    - `target_year` : 目標資料的特定年份。
    - `target_month` : 目標所在的特定月份。
    - `target_day` : 目標資料的特定來源日。
@@ -86,13 +89,13 @@ Adobe Experience Platform可讓您將查詢服務整合到JupyterLab中，做為
 
 ## 查詢您的資料 {#query-your-data}
 
-在單個筆記本單元格中輸入以下SQL查詢。 通過按一下查詢的單元格，然後按一下該按鈕來執行 **[!UICONTROL play]** 查詢。 成功的查詢結果或錯誤日誌顯示在已執行的單元格下面。
+在單個筆記本單元格中輸入以下SQL查詢。 按一下查詢的單元格，然後按一下播放按 **[!UICONTROL 鈕]** 。 成功的查詢結果或錯誤日誌顯示在已執行的單元格下面。
 
-當筆記型電腦長時間處於非活動狀態時，筆記型電腦和查詢服務之間的連接可能會中斷。 在這種情況下，按一下右上角的 **[!UICONTROL Power]** 按鈕重新啟動JupyterLab。
+當筆記型電腦長時間處於非活動狀態時，筆記型電腦和查詢服務之間的連接可能會中斷。 在這種情況下，按一下右上角的 **[!UICONTROL Power]** （電源）按鈕重新啟動JupyterLab。
 
 ![](../images/jupyterlab/query/restart_button.png)
 
-筆記本內核將重置，但單元格將保留，重 **[!UICONTROL all]** 新運行單元格以繼續您離開的位置。
+筆記本內核將重置，但單元格將保留，重 **[!UICONTROL 新運行]** 所有單元格以繼續您離開的位置。
 
 ### 每小時訪客計數 {#hourly-visitor-count}
 
