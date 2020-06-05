@@ -4,7 +4,10 @@ solution: Experience Platform
 title: 使用Jupyter筆記型電腦建立配方
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 1447196da7dbf59c1f498de40f12ed74c328c0e6
+source-git-commit: 83e74ad93bdef056c8aef07c9d56313af6f4ddfd
+workflow-type: tm+mt
+source-wordcount: '2330'
+ht-degree: 0%
 
 ---
 
@@ -22,7 +25,7 @@ source-git-commit: 1447196da7dbf59c1f498de40f12ed74c328c0e6
 
 ## 開始使用JupyterLab筆記型電腦環境
 
-從頭開始建立配方可在資料科學工作區中完成。 若要開始，請導覽至 [Adobe Experience Platform](https://platform.adobe.com) ，然後按一 **[!UICONTROL Notebooks]** 下左側的標籤。 從JupyterLab Launcher中選取Recipe Builder範本，建立新的筆記型電腦。
+從頭開始建立配方可在資料科學工作區中完成。 若要開始，請導覽至 [Adobe Experience Platform](https://platform.adobe.com) ，然後按一下左側 **[!UICONTROL 的「筆記型電腦]** 」標籤。 從JupyterLab Launcher中選取Recipe Builder範本，建立新的筆記型電腦。
 
 Recipe Builder筆記型電腦可讓您在筆記型電腦內執行訓練和計分。 這可讓您在針對訓練和計分資料執行 `train()` 實驗 `score()` 時，靈活地變更其和方法。 一旦您對訓練和計分的輸出感到滿意，就可以使用筆記型電腦建立要用於Data Science Workspace的配方功能，並內建在Recipe Builder筆記型電腦中。
 
@@ -33,7 +36,7 @@ Recipe Builder筆記型電腦可讓您在筆記型電腦內執行訓練和計分
 
 當您從啟動器按一下Recipe Builder筆記型電腦時，筆記型電腦就會在標籤中開啟。 筆記本中使用的模板是Python Retail Sales Forecasting Recipe，也可以在此公共儲存庫 [中找到](https://github.com/adobe/experience-platform-dsw-reference/tree/master/recipes/python/retail/)
 
-您會注意到，在工具列中有三個額外的動作，即 **[!UICONTROL Train]**- **[!UICONTROL Score]** 和 **[!UICONTROL Create Recipe]**。 這些圖示只會出現在Recipe Builder筆記本中。 在筆記型電腦中建立配方後，有關這 [些動作的詳細資訊，請參閱訓練與計分區](#training-and-scoring) 。
+您會注意到，在工具列中有三個額外的動作，即 **[!UICONTROL 訓練]**、 **[!UICONTROL 分數]****[!UICONTROL 和建立方式]**。 這些圖示只會出現在Recipe Builder筆記本中。 在筆記型電腦中建立配方後，有關這 [些動作的詳細資訊，請參閱訓練與計分區](#training-and-scoring) 。
 
 ![](../images/jupyterlab/create-recipe/toolbar_actions.png)
 
@@ -106,7 +109,7 @@ data_access_sdk_python
 
 ### 載入資料 {#loading-data}
 
-這個步驟使用 [熊貓資料框](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.html)。 您可使用Platform SDK(`platform_sdk`)從Adobe Experience Platform中的檔案載入資料，或使用熊貓或功能從外部 `read_csv()` 來源 `read_json()` 載入資料。
+這個步驟使用 [熊貓資料框](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.html)。 您可使用Platform SDK( [!DNL Adobe Experience Platform] )從檔案載入資料，或`platform_sdk`使用熊貓或功能從外部 `read_csv()` 來源載入 `read_json()` 資料。
 
 - [平台SDK](#platform-sdk)
 - [外部來源](#external-sources)
@@ -284,7 +287,7 @@ df.dropna(0, inplace=True)
 
 該檔 `pipeline.py` 案包含訓練和計分的邏輯。
 
-### 訓練 {#training}
+### 培訓 {#training}
 
 訓練的目的是使用訓練資料集中的功能和標籤來建立模型。
 
@@ -440,13 +443,13 @@ def save(configProperties, prediction):
 
 當您變更筆記型電腦並想要訓練配方時，可以按一下列上方的相關按鈕，在儲存格中建立訓練執行。 按一下該按鈕後，培訓指令碼中的命令和輸出日誌將顯示在筆記本中(單元格 `evaluator.py` 下)。 Conda首先安裝所有相依項，然後開始培訓。
 
-請注意，您必須至少執行一次培訓，才能執行計分。 按一下按 **[!UICONTROL Run Scoring]** 鈕，將對培訓期間產生的已訓練模型評分。 計分指令碼將出現在下方 `datasaver.py`。
+請注意，您必須至少執行一次培訓，才能執行計分。 按一下「執 **[!UICONTROL 行計分]** 」按鈕，將對培訓期間產生的已訓練模型進行分數。 計分指令碼將出現在下方 `datasaver.py`。
 
 為了進行除錯，如果您想查看隱藏的輸出，請將 `debug` 其新增至輸出儲存格的結尾，然後重新執行。
 
 ## 建立方式 {#create-recipe}
 
-編輯完配方並滿意培訓／計分輸出後，您可以按右上方導覽，從筆記型電腦 **[!UICONTROL Create Recipe]** 建立配方。
+編輯完配方並滿意培訓／計分輸出後，您可以按右上方導覽中的「建立配方 **** 」，從筆記本建立配方。
 
 ![](../images/jupyterlab/create-recipe/create-recipe.png)
 
@@ -454,7 +457,7 @@ def save(configProperties, prediction):
 
 ![](../images/jupyterlab/create-recipe/enter_recipe_name.png)
 
-按一下 **[!UICONTROL Ok]** ，您就可以導覽至 [Adobe Experience Platform上的新配方](https://platform.adobe.com/)。 您可以按一下按 **[!UICONTROL View Recipes]** 鈕，將您帶至下方的 **[!UICONTROL Recipes]** 標籤 **[!UICONTROL ML Models]**
+按「確 **[!UICONTROL 定]** 」後，您就可以導覽至 [Adobe Experience Platform上的新配方](https://platform.adobe.com/)。 您可以按一下「檢 **[!UICONTROL 視配方]** 」按鈕，將您帶至「ML模型」下的「配方 **[!UICONTROL 」標籤]****[!UICONTROL 。]**
 
 ![](../images/jupyterlab/create-recipe/recipe_creation_started.png)
 
