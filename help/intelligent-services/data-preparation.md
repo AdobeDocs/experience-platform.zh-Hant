@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 準備資料以用於智慧型服務
 topic: Intelligent Services
 translation-type: tm+mt
-source-git-commit: 8e24c7c50d700bc3644ce710f77073e537207a6f
+source-git-commit: 83e74ad93bdef056c8aef07c9d56313af6f4ddfd
 workflow-type: tm+mt
-source-wordcount: '1445'
+source-wordcount: '1437'
 ht-degree: 0%
 
 ---
@@ -191,7 +191,7 @@ ht-degree: 0%
 
 在決定您要傳送的資料範圍後，請聯絡Adobe諮詢服務，協助將資料對應至架構，並將其內嵌至服務。
 
-如果您有Adobe Experience Platform訂閱，而且想要自行對應及收錄資料，請遵循下節所述的步驟。
+如果您有訂閱， [!DNL Adobe Experience Platform] 而且想要親自對應及收錄資料，請依照下節所述的步驟進行。
 
 ### 使用Adobe Experience Platform
 
@@ -217,7 +217,7 @@ ht-degree: 0%
 
 #### 新增主要身分命名空間標籤至資料集
 
-如果您要從Adobe Audience Manager、Adobe Analytics或其他外部來源匯入資料，則必須新增標 `primaryIdentityNameSpace` 記至資料集。 這可以通過向目錄服務API發出PATCH請求來完成。
+如果您要從、或其他外 [!DNL Adobe Audience Manager]部來源 [!DNL Adobe Analytics]匯入資料，則必須新增標 `primaryIdentityNameSpace` 記至資料集。 這可以通過向目錄服務API發出PATCH請求來完成。
 
 如果您從本機CSV檔案擷取資料，可跳至下一節的對應與 [擷取資料](#ingest)。
 
