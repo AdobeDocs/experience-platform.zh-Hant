@@ -4,7 +4,10 @@ solution: Experience Platform
 title: 在歸因AI中發現見解
 topic: Attribution AI insights
 translation-type: tm+mt
-source-git-commit: ec0de4c8775367be9e6016529471254ad9f8f453
+source-git-commit: 83e74ad93bdef056c8aef07c9d56313af6f4ddfd
+workflow-type: tm+mt
+source-wordcount: '1164'
+ht-degree: 1%
 
 ---
 
@@ -21,7 +24,7 @@ source-git-commit: ec0de4c8775367be9e6016529471254ad9f8f453
 
 ## 服務實例見解總覽
 
-在Adobe Experience Platform UI中，按一下左側導 **覽中** 「服務」。 「服 *務* 」瀏覽器隨即出現，並顯示可用的Adobe智慧型服務。 在「歸因AI」的容器中，按一下「 **開啟**」。
+在UI中 [!DNL Adobe Experience Platform] ，按一下左 **側導覽** 中的「服務」。 「服 *務* 」瀏覽器隨即出現，並顯示可用的Adobe Intelligent Services。 在「歸因AI」的容器中，按一下「 **開啟**」。
 
 ![存取您的例項](./images/insights/open_Attribution_ai.png)
 
