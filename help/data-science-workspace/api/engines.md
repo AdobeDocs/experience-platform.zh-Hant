@@ -4,7 +4,10 @@ solution: Experience Platform
 title: 引擎
 topic: Developer guide
 translation-type: tm+mt
-source-git-commit: 45f310eb5747300e13f3c57b3f979c983a03d49d
+source-git-commit: f2a7300d4ad75e3910abbdf2ecc2946a2dfe553c
+workflow-type: tm+mt
+source-wordcount: '1114'
+ht-degree: 3%
 
 ---
 
@@ -18,7 +21,7 @@ source-git-commit: 45f310eb5747300e13f3c57b3f979c983a03d49d
 >[!TIP]
 >如果您沒有Docker URL，請造訪 [Package source files into a recipe](../models-recipes/package-source-files-recipe.md) tutorial，以取得建立Docker主機URL的逐步逐步說明。
 
-您的Docker註冊表憑證是上傳封裝的Recipe檔案（包括您的Docker主機URL、使用者名稱和密碼）所必需的。 您可以執行下列GET請求來查閱此資訊：
+您的Docker註冊表憑證是上傳封裝的Recipe檔案（包括您的Docker主機URL、使用者名稱和密碼）的必要條件。 您可以執行下列GET請求來查閱此資訊：
 
 **API格式**
 
@@ -495,145 +498,5 @@ curl -X DELETE \
     "title": "Success",
     "status": 200,
     "detail": "Engine deletion was successful"
-}
-```
-
-## 不建議使用的請求
-
->[!IMPORTANT]
->不再支援二進位對象，並將設定為在以後刪除。 新的PySpark和Scala配方現在應依照Docker影 [像範例](#docker-image) ，建立引擎。
-
-## 使用二進位對象建立引擎——已過時
-
-您可以使用本機或二進 `.jar` 位對象來建 `.egg` 立引擎，方法是執行POST請求，同時以多部分形式提供其中繼資料和對象的路徑。
-
-**API格式**
-
-```https
-POST /engines
-```
-
-**請求**
-
-```shell
-curl -X POST \
-    https://platform.adobe.io/data/sensei/engines \
-    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-    -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
-    -H 'x-sandbox-name: {SANDBOX_NAME}' \
-    -H 'content-type: multipart/form-data' \
-    -F 'engine={
-        "name": "A name for this Engine",
-        "description": "A description for this Engine",
-        "algorithm": "Classification",
-        "type": "PySpark",
-    }' \
-    -F 'defaultArtifact=@path/to/binary/artifact/file.egg'
-```
-
-| 屬性 | 說明 |
-| --- | --- |
-| `name` | 引擎的所需名稱。 與此引擎對應的配方將繼承此值，並以配方名稱顯示在UI中。 |
-| `description` | 引擎的選用說明。 與此引擎對應的方式將繼承此值，並以方式說明的形式顯示在UI中。 此為必要屬性。如果您不想提供說明，請將其值設為空字串。 |
-| `algorithm` | 指定機器學習演算法類型的字串。 支援的演算法類型包括「分類」、「回歸」或「自訂」。 |
-| `type` | 引擎的執行類型。 此值對應於二進位偽影所建立的語言，可以是&quot;PySpark&quot;或&quot;Spark&quot;。 |
-
-
-**回應**
-
-成功的回應會傳回包含新建立之引擎詳細資料（包括其唯一識別碼）的裝載`id`。
-
-```json
-{
-    "id": "{ENGINE_ID}",
-    "name": "A name for this Engine",
-    "description": "A description for this Engine",
-    "type": "PySpark",
-    "algorithm": "Classification",
-    "created": "2019-01-01T00:00:00.000Z",
-    "createdBy": {
-        "userId": "Jane_Doe@AdobeID"
-    },
-    "updated": "2019-01-01T00:00:00.000Z",
-    "artifacts": {
-        "default": {
-            "image": {
-                "location": "wasbs://artifact-location.blob.core.windows.net/Engine_ID/default.egg",
-                "name": "file.egg",
-                "executionType": "PySpark",
-                "packagingType": "egg"
-            }
-        }
-    }
-}
-```
-
-## 使用二進位工件建立功能管線引擎——已過時 {#create-a-feature-pipeline-engine-using-binary-artifacts}
-
->[!IMPORTANT]
->不再支援二進位對象，並將設定為在以後刪除。
-
-通過執行POST請求，同時以多部 `.jar` 分表單提供元資料 `.egg` 和對象的路徑，可以使用本地或二進位對象建立特徵管線引擎。 PySpark或Spark引擎可指定計算資源，例如內核數或記憶體量。 如需詳細資訊，請參閱 [PySpark和Spark資源設定的附錄](./appendix.md#resource-config) 。
-
-**API格式**
-
-```https
-POST /engines
-```
-
-**請求**
-
-```shell
-curl -X POST \
-    https://platform.adobe.io/data/sensei/engines \
-    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-    -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
-    -H 'x-sandbox-name: {SANDBOX_NAME}' \
-    -H 'content-type: multipart/form-data' \
-    -F 'engine={
-        "name": "Feature Pipeline Engine",
-        "description": "A feature pipeline Engine",
-        "algorithm":"fp",
-        "type": "PySpark"
-    }' \
-    -F 'featurePipelineOverrideArtifact=@path/to/binary/artifact/feature_pipeline.egg' \
-    -F 'defaultArtifact=@path/to/binary/artifact/feature_pipeline.egg'
-```
-
-| 屬性 | 說明 |
-| --- | --- |
-| `name` | 引擎的所需名稱。 與此引擎對應的配方將繼承此值，並以配方名稱顯示在UI中。 |
-| `description` | 引擎的選用說明。 與此引擎對應的方式將繼承此值，並以方式說明的形式顯示在UI中。 此為必要屬性。如果您不想提供說明，請將其值設為空字串。 |
-| `algorithm` | 指定機器學習演算法類型的字串。 將此值設定為&quot;fp&quot;，以將此建立指定為「特徵管線引擎」。 |
-| `type` | 引擎的執行類型。 此值對應於建立二進位工件時所使用的語言，可以是&quot;PySpark&quot;或&quot;Spark&quot;。 |
-
-**回應**
-
-成功的回應會傳回包含新建立之引擎詳細資料（包括其唯一識別碼）的裝載`id`。
-
-```json
-{
-    "id": "{ENGINE_ID}",
-    "name": "Feature Pipeline Engine",
-    "description": "A feature pipeline Engine",
-    "type": "PySpark",
-    "algorithm": "fp",
-    "created": "2019-01-01T00:00:00.000Z",
-    "createdBy": {
-        "userId": "Jane_Doe@AdobeID"
-    },
-    "updated": "2019-01-01T00:00:00.000Z",
-    "artifacts": {
-        "default": {
-            "image": {
-                "location": "wasbs://artifact-location.blob.core.windows.net/Engine_ID/default.egg",
-                "name": "file.egg",
-                "executionType": "PySpark",
-                "packagingType": "egg"
-            }
-        }
-    }
 }
 ```
