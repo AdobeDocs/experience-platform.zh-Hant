@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 透過來源連接器和API收集雲端儲存空間資料
 topic: overview
 translation-type: tm+mt
-source-git-commit: 4a66be0b49bdcd765fd5dcbd0e646d35df54c7e4
+source-git-commit: 2a8e8f2deffca06782f0ad9b8154ee763c05f06d
 workflow-type: tm+mt
-source-wordcount: '1688'
+source-wordcount: '1689'
 ht-degree: 1%
 
 ---
@@ -668,7 +668,7 @@ curl -X POST \
 - [即時客戶個人檔案總覽](../../../../profile/home.md)
 - [資料科學工作區概觀](../../../../data-science-workspace/home.md)
 
-## 附錄
+## 附錄 {#appendix}
 
 下節列出不同的雲儲存源連接器及其連接規範。
 
@@ -683,4 +683,5 @@ curl -X POST \
 | Azure事件集線器（事件集線器） | `bf9f5905-92b7-48bf-bf20-455bc6b60a4e` |
 | Azure檔案儲存 | `be5ec48c-5b78-49d5-b8fa-7c89ec4569b8` |
 | Google雲端儲存空間 | `32e8f412-cdf7-464c-9885-78184cb113fd` |
+| HDFS | `54e221aa-d342-4707-bcff-7a4bceef0001` |
 | SFTP | `bf367b0d-3d9b-4060-b67b-0d3d9bd06094` |
