@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 使用Flow Service API建立Google AdWords連接器
 topic: overview
 translation-type: tm+mt
-source-git-commit: 00f785577999d2ec3147a3cc2b8edd1028be2471
+source-git-commit: 0ed2ed3b08f262100746f255a78c248a1748eb5e
 workflow-type: tm+mt
-source-wordcount: '647'
+source-wordcount: '632'
 ht-degree: 1%
 
 ---
@@ -54,7 +54,7 @@ Flow Service用於收集和集中Adobe Experience Platform內不同來源的客�
 * x-api-key: `{API_KEY}`
 * x-gw-ims-org-id: `{IMS_ORG}`
 
-Experience Platform中的所有資源（包括屬於流服務的資源）都會隔離至特定的虛擬沙盒。 所有對平台API的請求都需要一個標題，該標題會指定要在中執行的操作的沙盒名稱：
+Experience Platform中的所有資源（包括屬於Flow Service的資源）都隔離至特定的虛擬沙盒。 所有對平台API的請求都需要一個標題，該標題會指定要在中執行的操作的沙盒名稱：
 
 * x-sandbox-name: `{SANDBOX_NAME}`
 
@@ -74,7 +74,8 @@ POST /connections
 
 **請求**
 
-若要建立Google AdWords連線，其唯一連線規格ID必須作為POST要求的一部分提供。 Google AdWords的連線規格ID為 `221c7626-58f6-4eec-8ee2-042b0226f03b`。
+下列請求會建立新的AdWords連線，由裝載中提供的屬性設定：
+
 
 ```shell
 curl -X POST \
