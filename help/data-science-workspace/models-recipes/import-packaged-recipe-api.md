@@ -4,7 +4,10 @@ solution: Experience Platform
 title: 匯入封裝的方式(API)
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 19823c7cf0459e045366f0baae2bd8a98416154c
+source-git-commit: f2a7300d4ad75e3910abbdf2ecc2946a2dfe553c
+workflow-type: tm+mt
+source-wordcount: '974'
+ht-degree: 2%
 
 ---
 
@@ -28,23 +31,21 @@ source-git-commit: 19823c7cf0459e045366f0baae2bd8a98416154c
 
 ## 快速入門
 
-本教學課程需要以二進位對象或Docker URL格式封裝的Recipe檔案。 請依照「 [封裝來源檔案」教學課程](./package-source-files-recipe.md) ，建立封裝的「配方」檔案或提供您自己的「配方」檔案。
+本教學課程需要以Docker URL格式封裝的配方檔案。 請依照「 [封裝來源檔案」教學課程](./package-source-files-recipe.md) ，建立封裝的「配方」檔案或提供您自己的「配方」檔案。
 
-- 二進位對象（已過時）:二進位偽像(如 JAR, EGG)，用於建立引擎。
-- `{DOCKER_URL}`:智慧服務的Docker影像的URL位址。
+- `{DOCKER_URL}`: 智慧服務的Docker影像的URL位址。
 
 本教學課程要求您完成「 [Adobe Experience Platform驗證」教學課程](../../tutorials/authentication.md) ，才能成功呼叫平台API。 完成驗證教學課程後，所有Experience Platform API呼叫中每個必要標題的值都會顯示在下方：
 
-- `{ACCESS_TOKEN}`:驗證後提供的您特定的載體Token值。
-- `{IMS_ORG}`:您的IMS組織認證可在您獨特的Adobe Experience Platform整合中找到。
-- `{API_KEY}`:您獨特的Adobe Experience Platform整合中提供您的特定API金鑰價值。
+- `{ACCESS_TOKEN}`: 驗證後提供的您特定的載體Token值。
+- `{IMS_ORG}`: 您的IMS組織認證可在您獨特的Adobe Experience Platform整合中找到。
+- `{API_KEY}`: 您獨特的Adobe Experience Platform整合中提供您的特定API金鑰價值。
 
 ## 建立引擎
 
 根據要包含在API請求中的封裝方式檔案的形式，引擎會透過下列兩種方式之一建立：
 
 - [使用Docker URL建立引擎](#create-an-engine-with-a-docker-url)
-- [使用二進位對象建立引擎（已過時）](#create-an-engine-with-a-binary-artifact-deprecated)
 
 ### 使用Docker URL建立引擎 {#create-an-engine-with-a-docker-url}
 
@@ -202,72 +203,3 @@ curl -X POST \
 ## 下一步 {#next-steps}
 
 您已使用API建立引擎，並取得唯一的引擎識別碼作為回應本體的一部分。 在下一個教學課程中，您可以使用此引擎識別碼，學習如 [何使用API建立、訓練和評估模型](./train-evaluate-model-api.md)。
-
-### 使用二進位對象建立引擎（已過時） {#create-an-engine-with-a-binary-artifact-deprecated}
-
-<!-- Will need to remove binary artifact documentation once the old flags are turned off -->
-
->[!CAUTION]
-> 舊版PySpark和Spark配方會使用二進位偽影。 Data Science Workspace現在支援所有配方的Docker URL。 透過此更新，所有引擎現在都使用Docker URL建立。 請參 [閱本檔案的](#create-an-engine-with-a-docker-url) 「Docker URL」區段。 二進位對象設定為在後續版本中刪除。
-
-要使用本地打包或二進位對象建立引 `.jar` 擎， `.egg` 必須提供本地檔案系統中二進位對象檔案的絕對路徑。 考慮導航到終端環境中包含二進位對象的目錄，並執行絕對路徑的 `pwd` Unix命令。
-
-下列呼叫會建立含二進位物件的引擎：
-
-**API格式**
-
-```http
-POST /engines
-```
-
-**請求**
-
-```shell
-curl -X POST \
-    https://platform.adobe.io/data/sensei/engines \
-    -H 'Authorization: {ACCESS_TOKEN}' \
-    -H 'X-API-KEY: {API_KEY}' \
-    -H 'content-type: multipart/form-data' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
-    -F 'engine={
-        "name": "Retail Sales Engine PySpark",
-        "description": "A description for Retail Sales Engine, this Engines execution type is PySpark",
-        "type": "PySpark"
-    }' \
-    -F 'defaultArtifact=@path/to/binary/artifact/file/pysparkretailapp-0.1.0-py3.7.egg'
-```
-
-| 屬性 | 說明 |
-| -------  | ----------- |
-| `engine.name` | 引擎的所需名稱。 與此引擎對應的配方將繼承此值，該值將作為配方的名稱顯示在資料科學工作區用戶介面中。 |
-| `engine.description` | 引擎的選用說明。 與此引擎對應的配方將繼承此值，該值將作為配方的說明顯示在Data Science Workspace用戶介面中。 請勿移除此屬性，如果您選擇不提供說明，請讓此值為空字串。 |
-| `engine.type` | 引擎的執行類型。 此值與在中開發二進位偽像的語言相對應。 上載二進位對象以建立引擎時， `type` 為 `Spark` 或 `PySpark`。 |
-| `defaultArtifact` | 用於建立引擎的二進位對象檔案的絕對路徑。 請確定在檔 `@` 案路徑之前加入。 |
-
-**回應**
-
-```JSON
-{
-    "id": "00000000-1111-2222-3333-abcdefghijkl",
-    "name": "Retail Sales Engine PySpark",
-    "description": "A description for Retail Sales Engine, this Engines execution type is PySpark",
-    "type": "PySpark",
-    "created": "2019-01-01T00:00:00.000Z",
-    "createdBy": {
-        "userId": "your_user_id@AdobeID"
-    },
-    "updated": "2019-01-01T00:00:00.000Z",
-    "artifacts": {
-        "default": {
-            "image": {
-                "location": "wasbs://some-storage-location.net/some-path/your-uploaded-binary-artifact.egg",
-                "name": "pysparkretailapp-0.1.0-py3.7.egg",
-                "executionType": "PySpark",
-                "packagingType": "egg"
-            }
-        }
-    }
-}
-```
-
-成功的回應會顯示JSON裝載，內含有關新建引擎的資訊。 此 `id` 鍵代表唯一的引擎識別碼，並在下一個教學課程中用來建立MLInstance。 請確定引擎識別碼已儲存，然後再繼續進 [行後續步驟](#next-steps)。
