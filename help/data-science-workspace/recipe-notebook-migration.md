@@ -4,7 +4,10 @@ solution: Experience Platform
 title: 配方和筆記本移轉指南
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 36305d9098f24b40efd333e7d8a331ebca41ca59
+source-git-commit: f2a7300d4ad75e3910abbdf2ecc2946a2dfe553c
+workflow-type: tm+mt
+source-wordcount: '3459'
+ht-degree: 0%
 
 ---
 
@@ -12,7 +15,7 @@ source-git-commit: 36305d9098f24b40efd333e7d8a331ebca41ca59
 # 配方和筆記本移轉指南
 
 >[!NOTE]
->使用Python/R的筆記型電腦和食譜不受影響。 此移轉僅適用於現有的PySpark/Spark配方和筆記型電腦。
+>使用Python/R的筆記型電腦和食譜不受影響。 此移轉僅適用於PySpark/Spark(2.3)配方和筆記型電腦。
 
 以下指南概述了遷移現有配方和筆記型電腦所需的步驟和資訊。
 
@@ -144,7 +147,7 @@ COPY target/ml-retail-sample-spark-*-jar-with-dependencies.jar /application.jar
 
 ### 變更相依性(Spark) {#change-dependencies-spark}
 
-如果您使用現有配方，pom.xml檔案中需要更改相關性。 將模型編寫-sdk相依性版本變更為2.0.0。接著，將pom檔案中的Spark版本更新為2.4.3，將Scala版本更新為2.11.12。
+如果您使用現有配方，pom.xml檔案中需要更改相關性。 將模型編寫-sdk相依性版本變更為2.0.0。 接著，將pom檔案中的Spark版本更新為2.4.3，將Scala版本更新為2.11.12。
 
 ```json
 <groupId>com.adobe.platform.ml</groupId>
@@ -308,7 +311,7 @@ PySpark配方不再使用二進位工件，而是需要建立Docker影像。 如
 
 ## 筆記型電腦移轉指南 {#notebook-migration}
 
-JupyterLab筆記型電腦的最新變更要求您將現有的PySpark和Spark 2.3筆記型電腦更新為2.4。JupyterLab Launcher已通過此項更改更新了新的啟動筆記型電腦。 有關如何轉換筆記型電腦的逐步指南，請選擇以下指南之一：
+JupyterLab筆記型電腦的最新變更要求您將現有的PySpark和Spark 2.3筆記型電腦更新為2.4。 JupyterLab Launcher已通過此項更改更新了新的啟動筆記型電腦。 有關如何轉換筆記型電腦的逐步指南，請選擇以下指南之一：
 
 - [PySpark 2.3到2.4遷移指南](#pyspark-notebook-migration)
 - [Spark 2.3到Spark 2.4(Scala)移轉指南](#spark-notebook-migration)
@@ -371,7 +374,7 @@ PySpark 3(Spark 2.4)筆記型電腦使用Python 3內核，而非PySpark 3（Spar
   </tr>
 </table>
 
-以下影像強調PySpark 2.3和PySpark 2.4的組態差異。此示例使用JupyterLab Launcher中 *提供的* Aggregation啟動器筆記型電腦。
+以下影像強調PySpark 2.3和PySpark 2.4的組態差異。 此示例使用JupyterLab Launcher中 *提供的* Aggregation啟動器筆記型電腦。
 
 **2.3的組態範例（不建議使用）**
 
@@ -393,12 +396,12 @@ PySpark 3(Spark 2.4)筆記型電腦使用Python 3內核，而非PySpark 3（Spar
 
 自訂資料科學工作區魔術指令，可從Python筆記型電腦（Python 3內核）讀取或寫入資料集。
 
-- **{action}**:要在資料集上執行的動作類型。 有兩個動作是「讀取」或「寫入」。
-- **—datasetId {id}**:用於提供要讀取或寫入的資料集的ID。 這是必要的引數。
-- **—dataFrame {df}**:熊貓資料框。 這是必要的引數。
+- **{action}**: 要在資料集上執行的動作類型。 有兩個動作是「讀取」或「寫入」。
+- **—datasetId {id}**: 用於提供要讀取或寫入的資料集的ID。 這是必要的引數。
+- **—dataFrame {df}**: 熊貓資料框。 這是必要的引數。
    - 當動作為&quot;read&quot;時，{df}是資料集讀取作業結果可用的變數。
    - 當動作為&quot;write&quot;時，此資料幀{df}將寫入資料集。
-- **—mode（可選）**:允許的參數為「批次」和「互動」。 依預設，模式會設為「互動」。 建議在讀取大量資料時使用「批次」模式。
+- **—mode（可選）**: 允許的參數為「批次」和「互動」。 依預設，模式會設為「互動」。 建議在讀取大量資料時使用「批次」模式。
 
 **範例**
 
@@ -429,7 +432,7 @@ pd0 = spark.read.format("com.adobe.platform.dataset")
 | pd0 | 要使用或建立的熊貓資料框對象的名稱。 |
 | [%dataset](#magic) | 在Python3內核中自訂資料存取功能。 |
 
-以下影像強調PySpark 2.3和PySpark 2.4載入資料的主要差異。此示例使用JupyterLab Launcher中 *提供的* Aggregation啟動器筆記型電腦。
+以下影像強調PySpark 2.3和PySpark 2.4載入資料的主要差異。 此示例使用JupyterLab Launcher中 *提供的* Aggregation啟動器筆記型電腦。
 
 **在PySpark 2.3（Luma資料集）中載入資料——已過時**
 
@@ -510,7 +513,7 @@ sample_df = df.sample(fration)
 
 >[!TIP] 您也可以指定選用的種子樣本，例如布林值withReplacement、雙分數或長種子。
 
-以下影像強調了在PySpark 2.3和PySpark 2.4中建立本機資料框架的主要差異。此示例使用JupyterLab Launcher中 *提供的* Aggregation啟動器筆記型電腦。
+以下影像強調了在PySpark 2.3和PySpark 2.4中建立本機資料框架的主要差異。 此示例使用JupyterLab Launcher中 *提供的* Aggregation啟動器筆記型電腦。
 
 **建立本機資料框架PySpark 2.3 —— 已過時**
 
@@ -558,7 +561,7 @@ pd0.show(10, False)
 
 >[!TIP] -mode可設定為 `interactive` 或 `batch`。 —mode的預設值為 `interactive`。 建議在讀取大量 `batch` 資料時使用模式。
 
-以下影像強調了在PySpark 2.3和PySpark 2.4中將資料寫回平台的主要差異。此示例使用JupyterLab Launcher中 *提供的* Aggregation啟動器筆記型電腦。
+以下影像強調了在PySpark 2.3和PySpark 2.4中將資料寫回平台的主要差異。 此示例使用JupyterLab Launcher中 *提供的* Aggregation啟動器筆記型電腦。
 
 **將資料寫回PySpark 2.3平台——已過時**
 
@@ -739,7 +742,7 @@ val df1 = spark.read.format("com.adobe.platform.query")
 | ims-org | 您使用自動擷取的ims組織ID `sys.env("IMS_ORG_ID")`。 |
 | api-key | 您的api金鑰會使用自動擷取 `sys.env("PYDASDK_IMS_CLIENT_ID")`。 |
 
-以下影像強調使用Spark 2.3和Spark 2.4載入資料的主要差異。此示例使用JupyterLab Launcher中 *提供的* Clustering啟動器筆記本。
+以下影像強調使用Spark 2.3和Spark 2.4載入資料的主要差異。 此示例使用JupyterLab Launcher中 *提供的* Clustering啟動器筆記本。
 
 **Spark（Spark 2.3 —— 已過時）**
 
