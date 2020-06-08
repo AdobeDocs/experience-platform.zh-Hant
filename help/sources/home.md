@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Adobe Experience Platform來源連接器概觀
 topic: overview
 translation-type: tm+mt
-source-git-commit: 22425c33e39cf788eec6fd0a54f65fb89fdaff4f
+source-git-commit: f181d544e93f0924bf4c239fad93d78c974afdc0
 workflow-type: tm+mt
-source-wordcount: '758'
+source-wordcount: '762'
 ht-degree: 0%
 
 ---
@@ -51,6 +51,7 @@ Experience Platform支援從協力廠商廣告系統擷取資料。 有關特定
 - [Azure檔案儲存連接器](connectors/cloud-storage/azure-file-storage.md)
 - [FTP和SFTP連接器](connectors/cloud-storage/ftp-sftp.md)
 - [Google雲端儲存空間連接器](connectors/cloud-storage/google-cloud-storage.md)
+- [HDFS連接器](connectors/cloud-storage/hdfs.md)
 
 ### 客戶關係管理(CRM)
 
@@ -76,6 +77,7 @@ Experience Platform支援從協力廠商資料庫擷取資料。 有關特定來
 - [Azure資料總管連接器](connectors/databases/data-explorer.md)
 - [Azure Synapse Analytics連接器](connectors/databases/synapse-analytics.md)
 - [Azure表格儲存連接器](connectors/databases/ats.md)
+- [CouchBase連接器](connectors/databases/couchbase.md)
 - [Google BigQuery連接器](connectors/databases/bigquery.md)
 - [GreenPlum連接器](connectors/databases/greenplum.md)
 - [HP Vertica連接器](connectors/databases/hp-vertica.md)
