@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Adobe Experience Platform產品檔案
 topic: getting started
 translation-type: tm+mt
-source-git-commit: a5268c2d31d356ce479bdcc143050cd513259235
+source-git-commit: f2a7300d4ad75e3910abbdf2ecc2946a2dfe553c
 workflow-type: tm+mt
-source-wordcount: '6973'
+source-wordcount: '6961'
 ht-degree: 0%
 
 ---
@@ -142,7 +142,7 @@ ht-degree: 0%
 
 **資料字典：** 在Experience Platform Launch中，資料字典是一組在屬性中定義的資料元素。
 
-**資料元素：** 在Experience Platform Launch中，資料元素是指針，用於規則和擴充功能，指向用戶端裝置上存在的特定資料片段。
+**資料元素：** 在Experience Platform Launch中，資料元素是指針，用於規則和擴充功能中，指向用戶端裝置上存在的特定資料片段。
 
 **資料層：** 在Experience Platform Launch中，資料層是存在於用戶端裝置上的資料結構，包含檢視頁面或螢幕的上下文相關中繼資料。
 
@@ -304,7 +304,7 @@ ht-degree: 0%
 
 **JupyterLab:** Project Jupyter的開放原始碼網路介面，並與Experience Platform緊密整合。
 
-**Jupyter Notebook:** 開放原始碼Web應用程式，可讓使用者建立並共用包含即時程式碼、方程式、視覺化和敘述文字的檔案。
+**Jupyter Notebook:** 開放原始碼Web應用程式，可讓使用者建立並共用包含即時程式碼、方程式、視覺化和敘事文字的檔案。
 
 ## K
 
@@ -426,7 +426,7 @@ ht-degree: 0%
 
 **規則元件：** 在Experience Platform Launch中，規則元件是組成規則的事件、條件和動作。
 
-**執行時期：** 執行時期會指定機器學習方式的執行時期環境。 Spark和PySpark執行時期可讓您直接上傳二進位方式來源(.jar)檔案。 Python、R和Tensorflow執行時期可讓您將URL輸入至配方來源的Docker影像。
+**執行時期：** 執行時期會指定機器學習方式的執行時期環境。 Python、R、Spark、PySpark和Tensorflow執行時期可讓您將URL輸入至配方來源的Docker影像。
 
 [回到頁首](#adobe-experience-platform-glossary)
 
