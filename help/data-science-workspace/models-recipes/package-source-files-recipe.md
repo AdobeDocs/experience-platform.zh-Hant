@@ -4,7 +4,10 @@ solution: Experience Platform
 title: 將來源檔案封裝至配方
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: e08460bc76d79920bbc12c7665a1416d69993f34
+source-git-commit: f2a7300d4ad75e3910abbdf2ecc2946a2dfe553c
+workflow-type: tm+mt
+source-wordcount: '1106'
+ht-degree: 0%
 
 ---
 
@@ -35,24 +38,24 @@ Docker映像允許開發人員將應用程式與其所需的所有部件（如�
 
 內建的Docker影像會使用在方式建立工作流程期間提供給您的認證，推送至Azure容器註冊表。
 
-若要取得您的Azure容器註冊表認證，請登入 <a href="https://platform.adobe.com" target="_blank">Adobe Experience Platform</a>。 在左邊導覽欄上，導覽至 **[!UICONTROL Workflows]**。 選擇 **[!UICONTROL Import Recipe]** 後面，選擇 **[!UICONTROL Launch]**。 請參閱下方的螢幕擷取畫面以供參考。
+若要取得您的Azure容器註冊表認證，請登入 <a href="https://platform.adobe.com" target="_blank">Adobe Experience Platform</a>。 在左邊導覽欄，導覽至「工 **[!UICONTROL 作流程」]**。 選擇「 **[!UICONTROL 匯入方式]** 」，然後選 **[!UICONTROL 取「啟動]**」。 請參閱下方的螢幕擷取畫面以供參考。
 
 ![](../images/models-recipes/package-source-files/import.png)
 
-「設 *定* 」頁面隨即開啟。 提供適當的 *配方名稱*，例如「零售銷售配方」，並選擇性地提供說明或檔案URL。 完成後，按一下 **[!UICONTROL Next]**。
+「設 *定* 」頁面隨即開啟。 提供適當的 *配方名稱*，例如「零售銷售配方」，並選擇性地提供說明或檔案URL。 完成後，按一下「 **[!UICONTROL Next（下一步）]**」。
 
 ![](../images/models-recipes/package-source-files/configure.png)
 
-選取適當的 *執行階段*，然後選擇 **[!UICONTROL Classification]** 類型 *選項*。 您的Azure容器註冊表認證會在完成後產生。
+選取適當的 *執行階段*，然後選擇類 **[!UICONTROL 型的]** 「分 *類」*。 您的Azure容器註冊表認證會在完成後產生。
 
 >[!NOTE]
 >*Type *是機器學習問題的類，它是為機器學習問題而設計的，在訓練後用於幫助定制評估訓練運行。
 
 >[!TIP]
->- 對於Python配方，請選取執 **[!UICONTROL Python]** 行階段。
->- 對於R方式，請選取執 **[!UICONTROL R]** 行階段。
->- 對於PySpark配方，請選取執行 **[!UICONTROL PySpark]** 時期。 對象類型自動填充。
->- 對於Scala方式，請選取執行 **[!UICONTROL Spark]** 時期。 對象類型自動填充。
+>- 對於Python配方，請選擇 **[!UICONTROL Python]** Runtime。
+>- 對於R方式，請選擇 **[!UICONTROL R]** Runtime。
+>- 對於PySpark配方，請選取 **[!UICONTROL PySpark執行時]** 期。 對象類型自動填充。
+>- 對於Scala配方，請選取 **[!UICONTROL Spark執行]** 階段。 對象類型自動填充。
 
 
 ![](../images/models-recipes/package-source-files/docker-creds.png)
@@ -193,46 +196,3 @@ git clone https://github.com/adobe/experience-platform-dsw-reference.git
 
 - [在UI中匯入封裝的方式](./import-packaged-recipe-ui.md)
 - [使用API匯入封裝的方式](./import-packaged-recipe-api.md)
-
-## 建立二進位檔（已過時）
-
->[!CAUTION]
-> 新的PySpark和Scala配方不支援二進位檔，並設定在未來版本中移除。 使用PySpark和Scala時，請 [遵循Docker](#docker-based-model-authoring) 工作流程。 下列工作流程僅適用於Spark 2.3配方。
-
-### 建立PySpark二進位檔（已過時）
-
-如果您尚未這樣做，請使用以下命令將github資料庫克隆到您的本地系統上：
-
-```BASH
-git clone https://github.com/adobe/experience-platform-dsw-reference.git
-```
-
-導覽至您本機系統上的已複製儲存庫，然後執行下列命令，以建立匯入PySpark方式 `.egg` 所需的檔案：
-
-```BASH
-cd recipes/pyspark
-./build.sh
-```
-
-檔案 `.egg` 會在資料夾中產 `dist` 生。
-
-您現在可以繼續下 [一步](#next-steps)。
-
-#### Build Scala二進位檔（已過時）
-
-如果尚未執行此操作，請運行以下命令將Github儲存庫克隆到本地系統：
-
-```BASH
-git clone https://github.com/adobe/experience-platform-dsw-reference.git
-```
-
-要構建用於 `.jar` 導入Scala配方的對象，請導航到克隆的儲存庫，然後執行以下步驟：
-
-```BASH
-cd recipes/scala/
-./build.sh
-```
-
-在目錄 `.jar` 中可找到已生成的具有相關性的 `/target` 對象。
-
-您現在可以繼續下 [一步](#next-steps)。
