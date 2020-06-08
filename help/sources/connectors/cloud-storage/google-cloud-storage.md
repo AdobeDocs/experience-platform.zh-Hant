@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Google雲端儲存空間連接器
 topic: overview
 translation-type: tm+mt
-source-git-commit: 256a193e56e69078d1c01c622656f0b1a18e73ff
+source-git-commit: 0ed2ed3b08f262100746f255a78c248a1748eb5e
 workflow-type: tm+mt
-source-wordcount: '377'
+source-wordcount: '376'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Google雲端儲存空間連接器
 
-Adobe Experience Platform為AWS、Google Cloud Platform和Azure等雲端供應商提供原生連接功能。 您可以將這些系統的資料匯入平台。
+Adobe Experience Platform為AWS、Google Cloud Platform和Azure等雲端供應商提供原生連接功能，讓您能夠從這些系統中取用資料。
 
 雲端儲存來源可將您自己的資料匯入平台，而不需下載、格式化或上傳。 收錄的資料可格式化為XDM JSON、XDM鑲木地板或分隔字元。 此程式的每個步驟都會整合至Sources工作流程中。 平台可讓您透過批次從Google雲端儲存區匯入資料。
 
