@@ -1,10 +1,10 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: 使用Flow Service API建立CouchBase連接器
+title: 使用Flow Service API建立Couchbase連接器
 topic: overview
 translation-type: tm+mt
-source-git-commit: 566db28997dce2c7e1181d140f12adc4250f5e0d
+source-git-commit: e5789a10c49b2933a0727692dedf2601a214dbc2
 workflow-type: tm+mt
 source-wordcount: '551'
 ht-degree: 2%
@@ -12,14 +12,14 @@ ht-degree: 2%
 ---
 
 
-# 使用Flow Service API建立CouchBase連接器
+# 使用Flow Service API建立Couchbase連接器
 
 >[!NOTE]
->CouchBase連接器為beta版。 功能和檔案可能會有所變更。
+>Couchbase連接器為測試版。 功能和檔案可能會有所變更。
 
 Flow Service可用來收集和集中來自不同來源的客戶資料，並將之匯入Adobe Experience Platform。 該服務提供用戶介面和REST風格的API，所有支援的源都可從中連接。
 
-本教學課程使用Flow Service API來引導您完成將CouchBase連接至Experience Platform的步驟。
+本教學課程使用Flow Service API來引導您完成將Couchbase連接至Experience Platform的步驟。
 
 ## 快速入門
 
@@ -28,14 +28,14 @@ Flow Service可用來收集和集中來自不同來源的客戶資料，並將�
 * [來源](../../../../home.md): Experience Platform可讓您從各種來源擷取資料，同時讓您能夠使用平台服務來建構、標示和增強傳入資料。
 * [沙盒](../../../../../sandboxes/home.md): Experience Platform提供虛擬沙盒，可將單一Platform實例分割為不同的虛擬環境，以協助開發和發展數位體驗應用程式。
 
-以下各節提供您需要瞭解的其他資訊，以便使用Flow Service API成功連線至CouchBase。
+以下各節提供您需要瞭解的其他資訊，以便使用Flow Service API成功連線至Couchbase。
 
 ### 收集必要的認證
 
 | 憑證 | 說明 |
 | ---------- | ----------- |
-| `connectionString` | 用來連線至CouchBase例項的連線字串。 CouchBase的連接字串模式為 `Server={SERVER}; Port={PORT};AuthMech=1;CredString=[{\"user\": \"{USER}\", \"pass\":\"{PASS}\"}];`。 有關獲取連接字串的詳細資訊，請參 [閱此CouchBase文檔](https://docs.couchbase.com/c-sdk/2.10/client-settings.html#configuring-overview)。 |
-| `connectionSpec.id` | 建立連線所需的識別碼。 CouchBase的固定連接規範ID為 `1fe283f6-9bec-11ea-bb37-0242ac130002`。 |
+| `connectionString` | 用於連接到Couchbase實例的連接字串。 Couchbase的連接字串模式為 `Server={SERVER}; Port={PORT};AuthMech=1;CredString=[{\"user\": \"{USER}\", \"pass\":\"{PASS}\"}];`。 有關獲取連接字串的詳細資訊，請參 [閱此Couchbase文檔](https://docs.Couchbase.com/c-sdk/2.10/client-settings.html#configuring-overview)。 |
+| `connectionSpec.id` | 建立連線所需的識別碼。 Couchbase的固定連接規範ID為 `1fe283f6-9bec-11ea-bb37-0242ac130002`。 |
 
 ### 讀取範例API呼叫
 
@@ -59,7 +59,7 @@ Experience Platform中的所有資源（包括屬於Flow Service的資源）都�
 
 ## 建立連線
 
-連接指定源，並包含該源的憑據。 每個CouchBase帳戶只需要一個連接器，因為它可用於建立多個源連接器以導入不同的資料。
+連接指定源，並包含該源的憑據。 每個Couchbase帳戶只需要一個連接器，因為它可用於建立多個源連接器以導入不同的資料。
 
 **API格式**
 
@@ -69,7 +69,7 @@ POST /connections
 
 **請求**
 
-下列請求會建立新的CouchBase連線，由裝載中提供的屬性設定：。
+下列請求會建立新的Couchbase連線，由裝載中提供的屬性設定：。
 
 ```shell
 curl -X POST \
@@ -80,8 +80,8 @@ curl -X POST \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d '{
-        "name": "CouchBase test connection",
-        "description": "A test connection for a CouchBase source",
+        "name": "Couchbase test connection",
+        "description": "A test connection for a Couchbase source",
         "auth": {
             "specName": "Connection String Based Authentication",
             "params": {
@@ -97,8 +97,8 @@ curl -X POST \
 
 | 屬性 | 說明 |
 | --------- | ----------- |
-| `auth.params.connectionString` | 用來連線至CouchBase帳戶的連線字串。 連接字串模式是： `Server={SERVER}; Port={PORT};AuthMech=1;CredString=[{\"user\": \"{USER}\", \"pass\":\"{PASS}\"}];`. |
-| `connectionSpec.id` | CouchBase連接規範ID: `1fe283f6-9bec-11ea-bb37-0242ac130002`. |
+| `auth.params.connectionString` | 用於連線至Couchbase帳戶的連線字串。 連接字串模式是： `Server={SERVER}; Port={PORT};AuthMech=1;CredString=[{\"user\": \"{USER}\", \"pass\":\"{PASS}\"}];`. |
+| `connectionSpec.id` | Couchbase連接規範ID: `1fe283f6-9bec-11ea-bb37-0242ac130002`. |
 
 **回應**
 
@@ -113,4 +113,4 @@ curl -X POST \
 
 ## 後續步驟
 
-在本教學課程中，您已使用Flow Service API建立CouchBase連線，並取得連線的唯一ID值。 在下一個教學課程中，您可以使用此ID來學習如何使 [用Flow Service API來探索資料庫](../../explore/database-nosql.md)。
+在本教學課程中，您已使用Flow Service API建立Couchbase連線，並已取得連線的唯一ID值。 在下一個教學課程中，您可以使用此ID來學習如何使 [用Flow Service API來探索資料庫](../../explore/database-nosql.md)。
