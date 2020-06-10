@@ -1,25 +1,25 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: 使用Flow Service API建立HDFS連接器
+title: 使用Flow Service API建立Apache HDFS連接器
 topic: overview
 translation-type: tm+mt
-source-git-commit: 0ed2ed3b08f262100746f255a78c248a1748eb5e
+source-git-commit: e5789a10c49b2933a0727692dedf2601a214dbc2
 workflow-type: tm+mt
-source-wordcount: '554'
+source-wordcount: '558'
 ht-degree: 2%
 
 ---
 
 
-# 使用Flow Service API建立HDFS連接器
+# 使用Flow Service API建立Apache HDFS連接器
 
 >[!NOTE]
->HDFS介面處於測試階段。 功能和檔案可能會有所變更。
+>Apache HDFS連接器正在測試中。 功能和檔案可能會有所變更。
 
 Flow Service可用來收集和集中來自不同來源的客戶資料，並將之匯入Adobe Experience Platform。 該服務提供用戶介面和REST風格的API，所有支援的源都可從中連接。
 
-本教學課程使用Flow Service API來引導您完成將Hadoop分佈式檔案系統（以下稱為「HDFS」）連接至Experience Platform的步驟。
+本教學課程使用Flow Service API來引導您完成將Apache Hadoop分佈式檔案系統（以下稱為「HDFS」）連接至Experience Platform的步驟。
 
 ## 快速入門
 
