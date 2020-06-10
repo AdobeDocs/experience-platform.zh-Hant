@@ -4,9 +4,9 @@ seo-title: Experience Platform Web SDK的Edge組態
 description: '瞭解如何設定Experience Platform Edge Network。 '
 seo-description: '瞭解如何設定Experience Platform Edge Network。 '
 translation-type: tm+mt
-source-git-commit: e9fb726ddb84d7a08afb8c0f083a643025b0f903
+source-git-commit: 2d58f7f95c6ad125e66856350aee2f29a0499061
 workflow-type: tm+mt
-source-wordcount: '883'
+source-wordcount: '886'
 ht-degree: 2%
 
 ---
@@ -24,7 +24,7 @@ Edge組態ID可在Launch中使用Edge組態工具建立。 此工具可讓您同
 
 >[!NOTE]
 >
->無論客戶是否使用Launch做為標籤管理程式，Edge設定工具都可供列入白名單的客戶使用。 此外，使用者需要在Launch中擁有「開發」權限。 如需詳細 [資訊，請參閱](https://docs.adobe.com/content/help/zh-Hant/launch/using/reference/admin/user-permissions.html) 「啟動」檔案中的「使用者權限」文章。
+>無論客戶是否使用Launch做為標籤管理器，允許清單上的客戶都可使用邊緣設定工具。 此外，使用者需要在Launch中擁有「開發」權限。 如需詳細 [資訊，請參閱](https://docs.adobe.com/content/help/zh-Hant/launch/using/reference/admin/user-permissions.html) 「啟動」檔案中的「使用者權限」文章。
 
 您可以按一下畫面右上方區域的 **[UICONTROL New Edge Configuration]** ，來建立邊緣設定。 在您提供名稱和說明後，系統會要求您針對每個環境提供預設設定。
 
