@@ -4,7 +4,10 @@ solution: Experience Platform
 title: 使用方案註冊表API建立方案
 topic: tutorials
 translation-type: tm+mt
-source-git-commit: 14cd3d17c7d9ba602d02925abddec9e0b246a8c8
+source-git-commit: 7cf873d19d26df9ebb70d11ee6e6513173ab45bb
+workflow-type: tm+mt
+source-wordcount: '2418'
+ht-degree: 1%
 
 ---
 
@@ -1012,7 +1015,7 @@ curl -X POST \
 
 通過將&quot;union&quot;標籤添加到屬 `meta:immutableTags` 性中，您可以啟用「忠誠度成員」結構，以便由即時客戶配置檔案使用。
 
-有關使用聯合視圖的詳細資訊，請參閱「模式註冊 [表](../api/unions.md) 」開發人員指南中的「聯合」一節。
+有關使用聯合視圖的詳細資訊，請參閱「方案註冊 [表](../api/unions.md) 」開發人員指南中的「聯合」一節。
 
 ### 新增&quot;union&quot;標籤
 
@@ -1775,7 +1778,7 @@ curl -X GET \
                         "active": "Active",
                         "incomplete": "Incomplete",
                         "pending_verification": "Pending Verification",
-                        "blacklisted": "Blacklisted",
+                        "denylist": "Deny List",
                         "blocked": "Blocked"
                     },
                     "meta:xdmField": "xdm:status",
@@ -1850,7 +1853,7 @@ curl -X GET \
                         "active": "Active",
                         "incomplete": "Incomplete",
                         "pending_verification": "Pending Verification",
-                        "blacklisted": "Blacklisted",
+                        "denylist": "Deny List",
                         "blocked": "Blocked"
                     },
                     "meta:xdmField": "xdm:status",
@@ -1902,7 +1905,7 @@ curl -X GET \
                     "meta:enum": {
                         "active": "Active",
                         "incomplete": "Incomplete",
-                        "blacklisted": "Blacklisted",
+                        "denylist": "Deny List",
                         "blocked": "Blocked"
                     },
                     "meta:xdmField": "xdm:status",
@@ -1967,7 +1970,7 @@ curl -X GET \
                     "meta:enum": {
                         "active": "Active",
                         "incomplete": "Incomplete",
-                        "blacklisted": "Blacklisted",
+                        "denylist": "Deny List",
                         "blocked": "Blocked"
                     },
                     "meta:xdmField": "xdm:status",
@@ -2032,7 +2035,7 @@ curl -X GET \
                     "meta:enum": {
                         "active": "Active",
                         "incomplete": "Incomplete",
-                        "blacklisted": "Blacklisted",
+                        "denylist": "Deny List",
                         "blocked": "Blocked"
                     },
                     "meta:xdmField": "xdm:status",
