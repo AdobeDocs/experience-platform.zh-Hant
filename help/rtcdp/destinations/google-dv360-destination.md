@@ -4,9 +4,9 @@ seo-title: Google Display & Video 360 Destination
 description: Display & Video 360（先前稱為DoubleClick競標管理器）是一種工具，用於在顯示、視訊和行動庫存來源中執行重新鎖定目標及受眾目標數位促銷活動。
 seo-description: 'Display & Video 360（先前稱為DoubleClick競標管理器）是一種工具，用於在顯示、視訊和行動庫存來源中執行重新鎖定目標及受眾目標數位促銷活動。 '
 translation-type: tm+mt
-source-git-commit: 121ae74e9c352b1f6fc12093d815e711ebd817b8
+source-git-commit: dc5ee796ca390d06fc8e08bd6c30e88a0d96dd53
 workflow-type: tm+mt
-source-wordcount: '574'
+source-wordcount: '586'
 ht-degree: 0%
 
 ---
@@ -32,13 +32,13 @@ Display &amp; Video 360（舊稱DoubleClick競標管理器）是一種工具，�
 
 ## 必要條件
 
-### 白名單
+### 允許清單
 
 >[!NOTE]
 >
->在Adobe Real-time CDP中設定您的第一個Google Display &amp; Video 360目標之前，必須填入白名單。 在建立目標之前，請確定Google已完成下列說明的白名單程式。
+>在Adobe Real-time CDP中設定您的第一個Google Display &amp; Video 360目標之前，允許清單是必填的。 請確定Google在建立目標之前已完成下列說明的允許清單程式。
 
-在Adobe即時CDP中建立Google Display &amp; Video 360目標之前，您必須連絡Google，要求Adobe以資料提供者身分加入白名單，而您的帳戶必須加入白名單。 聯絡Google並提供下列資訊：
+在Adobe即時CDP中建立Google Display &amp; Video 360目標之前，您必須聯絡Google，要求Adobe將Adobe加入允許的資料提供者清單中，並將您的帳戶加入允許清單中。 聯絡Google並提供下列資訊：
 
 * **帳戶ID** : 這是Adobe與Google的帳戶ID。 請聯絡Adobe客戶服務或您的Adobe代表以取得此ID。
 * **客戶ID** : 這是Adobe與Google的客戶帳戶ID。 請聯絡Adobe客戶服務或您的Adobe代表以取得此ID。
