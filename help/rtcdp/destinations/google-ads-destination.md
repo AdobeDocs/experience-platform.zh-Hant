@@ -4,9 +4,9 @@ seo-title: Google廣告目的地
 description: Google Ads（先前稱為Google AdWords）是線上廣告服務，可讓企業透過文字搜尋、圖形顯示、YouTube視訊和應用程式內行動顯示，按點擊付費廣告。
 seo-description: Google Ads（先前稱為Google AdWords）是線上廣告服務，可讓企業透過文字搜尋、圖形顯示、YouTube視訊和應用程式內行動顯示，按點擊付費廣告。
 translation-type: tm+mt
-source-git-commit: 121ae74e9c352b1f6fc12093d815e711ebd817b8
+source-git-commit: dc5ee796ca390d06fc8e08bd6c30e88a0d96dd53
 workflow-type: tm+mt
-source-wordcount: '532'
+source-wordcount: '544'
 ht-degree: 0%
 
 ---
@@ -34,15 +34,15 @@ Google Ads（先前稱為Google AdWords）是線上廣告服務，可讓企業�
 
 ### 現有Google Ads帳戶
 
-Google已暫停與協力廠商的任何新Google Ads整合。 您必須已與Google Ads整合，才能執行下一節的白名單步驟，並在Adobe即時CDP中建立Google Ads目標。
+Google已暫停與協力廠商的任何新Google Ads整合。 您必須已與Google Ads整合，才能執行下一節的允許清單步驟，並在Adobe即時CDP中建立Google Ads目標。
 
-### 白名單
+### 允許清單
 
 >[!NOTE]
 >
->在Adobe即時CDP中設定您的第一個Google Ads目標之前，必須填入白名單。 在建立目標之前，請確定Google已完成下列說明的白名單程式。
+>在Adobe即時CDP中設定您的第一個Google Ads目標之前，允許清單是強制清單。 請確定Google在建立目標之前已完成下列說明的允許清單程式。
 
-在Adobe即時CDP中建立Google Ads目標之前，您必須連絡Google，要求Adobe以資料提供者的身分加入白名單，而您的帳戶必須加入白名單。 聯絡Google並提供下列資訊：
+在Adobe即時CDP中建立Google Ads目標之前，您必須連絡Google，讓Adobe加入允許的資料提供者清單，並讓您的帳戶加入允許清單。 聯絡Google並提供下列資訊：
 
 * **帳戶ID** : 這是Adobe與Google的帳戶ID。 請聯絡Adobe客戶服務或您的Adobe代表以取得此ID。
 * **客戶ID** : 這是Adobe與Google的客戶帳戶ID。 請聯絡Adobe客戶服務或您的Adobe代表以取得此ID。
@@ -55,6 +55,7 @@ Google已暫停與協力廠商的任何新Google Ads整合。 您必須已與Goo
    ![Connect Google Ads目的地](/help/rtcdp/destinations/assets/google-2-destination.png)
 
 2. 在「建立目標」工作流程中，填入目 [!UICONTROL 標的「基本] 」資訊。 <br>
+
    ![基本資訊Google廣告](/help/rtcdp/destinations/assets/google-2-basic-information.png)
 * **[!UICONTROL 名稱]**: 填寫此目標的首選名稱。
 * **[!UICONTROL 說明]**: 可選。 例如，您可以提及您使用此目的地的促銷活動。
