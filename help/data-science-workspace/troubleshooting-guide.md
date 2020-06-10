@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Data Science Workspace疑難排解指南
 topic: Troubleshooting
 translation-type: tm+mt
-source-git-commit: 1447196da7dbf59c1f498de40f12ed74c328c0e6
+source-git-commit: e77b76bdcfa5137d9bd77400b15f2fe8db3b7c0b
+workflow-type: tm+mt
+source-wordcount: '704'
+ht-degree: 0%
 
 ---
 
@@ -35,7 +38,7 @@ source-git-commit: 1447196da7dbf59c1f498de40f12ed74c328c0e6
 
 ![chrome進階](./images/faq/toggle-off.png)
 
->[!NOTE] 或者，您也可以停用協力廠商Cookie和白名 [單*。]ds.adobe.net
+>[!NOTE] 或者，您也可以停用協力廠商Cookie並新增 [*。]ds.adobe.net到允許清單。
 
 導覽至您位址列中的「chrome://flags/」。 使用右側的下拉式選單， *搜尋並停用標題為「依預設設定SameSite* Cookie」的標幟。
 
@@ -45,7 +48,7 @@ source-git-commit: 1447196da7dbf59c1f498de40f12ed74c328c0e6
 
 ## 我為何無法在Safari中存取JupyterLab?
 
-Safari預設會在Safari &lt; 12中停用協力廠商Cookie。 由於您的Jupyter虛擬機器實例位於與其父框架不同的域上，因此Adobe Experience Platform目前需要啟用第三方Cookie。 請啟用協力廠商Cookie或切換至其他瀏覽器，例如Google Chrome。
+Safari預設會在Safari &lt; 12中停用協力廠商Cookie。 由於您的Jupyter虛擬機器實例位於與其父框架不同的域上，因此Adobe Experience Platform目前要求啟用第三方Cookie。 請啟用協力廠商Cookie或切換至其他瀏覽器，例如Google Chrome。
 
 對於Safari 12，您需要將使用者代理切換為「Chrome」或「Firefox」。 若要切換您的使用者代理，請先開啟 *Safari* 功能表，然後選 **取偏好設定**。 出現首選項窗口。
 
@@ -61,7 +64,7 @@ Safari預設會在Safari &lt; 12中停用協力廠商Cookie。 由於您的Jupyt
 
 ## 為什麼在JupyterLab中嘗試上傳或刪除檔案時，會看到「403 Forbidden」訊息？
 
-如果您的瀏覽器已啟用廣告封鎖軟體（例如Ghostery或AdBlock Plus），網域&quot;\*.adobe.net&quot;必須列入每個廣告封鎖軟體的白名單，JupyterLab才能正常運作。 這是因為JupyterLab虛擬機運行在與Experience Platform域不同的域上。
+如果您的瀏覽器已啟用廣告封鎖軟體，例如Ghostery或AdBlock Plus，則必須允許每個廣告封鎖軟體中的網域&quot;\*.adobe.net&quot;,JupyterLab才能正常運作。 這是因為JupyterLab虛擬機運行在與Experience Platform域不同的域上。
 
 ## 為什麼Jupyter筆記本的某些部分看起來亂了，或者沒有顯示為代碼？
 
