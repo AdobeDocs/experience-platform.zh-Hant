@@ -4,17 +4,17 @@ seo-title: 'Adobe Experience Platform Web SDK快速入門 '
 description: 使用Experience Platform Web SDK收集資料的快速入門手冊
 seo-description: 使用Experience Platform Web SDK收集資料的快速入門手冊
 translation-type: tm+mt
-source-git-commit: 7c5d4306f9964553cf48a208166fce265dcdd94d
+source-git-commit: 2d58f7f95c6ad125e66856350aee2f29a0499061
 workflow-type: tm+mt
-source-wordcount: '511'
-ht-degree: 3%
+source-wordcount: '515'
+ht-degree: 5%
 
 ---
 
 
 # 歡迎
 
-本指南會引導您以不同的方式來設定Adobe Experience Platform Web SDK。 若要使用此功能，您必須加入白名單。 如果您想要加入等候清單，請聯絡您的CSM。
+本指南會引導您以不同的方式來設定Adobe Experience Platform Web SDK。 若要使用此功能，您必須位於允許清單中。 如果您想要加入等候清單，請聯絡您的CSM。
 
 - 啟用 [第一方網域(CNAME)](https://docs.adobe.com/content/help/zh-Hant/core-services/interface/ec-cookies/cookies-first-party.html) 。 如果您已有Analytics的CNAME，則應使用該CNAME。 在開發中進行測試沒有CNAME，但您在投入生產前需要一個CNAME
 - 有權使用Adobe Experience Platform Data Platform。  如果您尚未購買Platform，我們將提供您Experience Platform Data Services Foundation，讓您以有限方式與SDK搭配使用，不需額外付費。
@@ -26,7 +26,7 @@ ht-degree: 3%
 
 >[!NOTE]
 >
->您的組織必須列入功能白名單。 請連絡您的CSM以取得最終白名單。
+>您的組織必須位於功能的允許清單中。 請連絡您的CSM以列入允許清單。
 
 ## 準備架構
 
@@ -92,7 +92,7 @@ alloy("sendEvent", {
 
 在資料流動後，您可以執行下列動作：
 
-- [建立您的架構](https://docs.adobe.com/content/help/en/experience-platform/xdm/schema/composition.html)
+- [建立您的架構](https://docs.adobe.com/content/help/zh-Hant/experience-platform/xdm/schema/composition.html)
 - [瞭解除錯](../fundamentals/debugging.md)
 - 瞭解如何個 [人化體驗](../fundamentals/rendering-personalization-content.md)
 - 瞭解如何將資料傳送至多個解決方案
