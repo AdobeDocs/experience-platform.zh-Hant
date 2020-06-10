@@ -3,9 +3,9 @@ product: experience-platform
 audience: user
 user-guide-title: Adobe Experience Platform來源連接器說明
 translation-type: tm+mt
-source-git-commit: bfbaaf0367b601c4ad521f42cd5ff6bdd25a8274
+source-git-commit: 03fd716d6f743d839bc24ff99660efdf47b187a0
 workflow-type: tm+mt
-source-wordcount: '586'
+source-wordcount: '594'
 ht-degree: 0%
 
 ---
@@ -27,13 +27,13 @@ ht-degree: 0%
       - [Google AdWords連接器](connectors/advertising/ads.md)
    - 雲端儲存空間 {#cloud-storage}
       - [Amazon Kinesis連接器](connectors/cloud-storage/kinesis.md)
+      - [Apache HDFS連接器](connectors/cloud-storage/hdfs.md)
       - [Azure Data Lake Storage Gen2連接器](connectors/cloud-storage/adls-gen2.md)
       - [Azure Blob和Amazon S3連接器](connectors/cloud-storage/blob-s3.md)
       - [Azure事件集線器連接器](connectors/cloud-storage/eventhub.md)
       - [Azure檔案儲存連接器](connectors/cloud-storage/azure-file-storage.md)
       - [FTP和SFTP連接器](connectors/cloud-storage/ftp-sftp.md)
       - [Google雲端儲存空間連接器](connectors/cloud-storage/google-cloud-storage.md)
-      - [HDFS連接器](connectors/cloud-storage/hdfs.md)
    - CRM {#crm}
       - [Microsoft Dynamics連接器](connectors/crm/ms-dynamics.md)
       - [Salesforce連接器](connectors/crm/salesforce.md)
@@ -47,7 +47,7 @@ ht-degree: 0%
       - [Azure資料總管連接器](connectors/databases/data-explorer.md)
       - [Azure Synapse Analytics連接器](connectors/databases/synapse-analytics.md)
       - [Azure表格儲存連接器](connectors/databases/ats.md)
-      - [CouchBase連接器](connectors/databases/couchbase.md)
+      - [Couchbase連接器](connectors/databases/couchbase.md)
       - [Google BigQuery連接器](connectors/databases/bigquery.md)
       - [GreenPlum連接器](connectors/databases/greenplum.md)
       - [HP Vertica連接器](connectors/databases/hp-vertica.md)
@@ -71,12 +71,12 @@ ht-degree: 0%
       - 雲端儲存空間 {#cloud-storage}
          - [Amazon Kinesis](tutorials/api/create/cloud-storage/kinesis.md)
          - [Amazon S3連接器](tutorials/api/create/cloud-storage/s3.md)
+         - [Apache HDFS連接器](tutorials/api/create/cloud-storage/hdfs.md)
          - [Azure Blob連接器](tutorials/api/create/cloud-storage/blob.md)
          - [Azure Data Lake Storage Gen2連接器](tutorials/api/create/cloud-storage/adls-gen2.md)
          - [Azure事件集線器連接器](tutorials/api/create/cloud-storage/eventhub.md)
          - [Azure檔案儲存連接器](tutorials/api/create/cloud-storage/azure-file-storage.md)
          - [Google雲端儲存空間連接器](tutorials/api/create/cloud-storage/google.md)
-         - [HDFS連接器](tutorials/api/create/cloud-storage/hdfs.md)
          - [SFTP連接器](tutorials/api/create/cloud-storage/sftp.md)
       - CRM {#crm}
          - [HubSpot連接器](tutorials/api/create/crm/hubspot.md)
@@ -92,7 +92,7 @@ ht-degree: 0%
          - [Azure資料總管連接器](tutorials/api/create/databases/data-explorer.md)
          - [Azure Synapse Analytics連接器](tutorials/api/create/databases/synapse-analytics.md)
          - [Azure表格儲存連接器](tutorials/api/create/databases/ats.md)
-         - [CouchBase連接器](tutorials/api/create/databases/couchbase.md)
+         - [Couchbase連接器](tutorials/api/create/databases/couchbase.md)
          - [Google BigQuery連接器](tutorials/api/create/databases/bigquery.md)
          - [GreenPlum連接器](tutorials/api/create/databases/greenplum.md)
          - [HP Vertica連接器](tutorials/api/create/databases/hp-vertica.md)
@@ -138,7 +138,8 @@ ht-degree: 0%
       - 廣告 {#create}
          - [Google AdWords連接器](tutorials/ui/create/advertising/ads.md)
       - 雲端儲存空間 {#cloud-storage}
-         - [Amazon Kinesis](tutorials/ui/create/cloud-storage/kinesis.md)
+         - [Amazon Kinesis連接器](tutorials/ui/create/cloud-storage/kinesis.md)
+         - [Apache HDFS連接器](tutorials/ui/create/cloud-storage/hdfs.md)
          - [Azure Data Lake Storage Gen2連接器](tutorials/ui/create/cloud-storage/adls-gen2.md)
          - [Azure Blob和Amazon S3連接器](tutorials/ui/create/cloud-storage/blob-s3.md)
          - [Azure事件集線器連接器](tutorials/ui/create/cloud-storage/eventhub.md)
@@ -158,6 +159,7 @@ ht-degree: 0%
          - [Azure資料總管連接器](tutorials/ui/create/databases/data-explorer.md)
          - [Azure Synapse Analytics連接器](tutorials/ui/create/databases/synapse-analytics.md)
          - [Azure表格儲存連接器](tutorials/ui/create/databases/ats.md)
+         - [Couchbase連接器](tutorials/ui/create/databases/couchbase.md)
          - [Google Big Query連接器](tutorials/ui/create/databases/bigquery.md)
          - [GreenPlum連接器](tutorials/ui/create/databases/greenplum.md)
          - [HP Vertica連接器](tutorials/ui/create/databases/hp-vertica.md)
