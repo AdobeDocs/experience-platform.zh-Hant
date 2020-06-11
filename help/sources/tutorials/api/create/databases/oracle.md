@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 使用流服務API建立Oracle連接器
 topic: overview
 translation-type: tm+mt
-source-git-commit: 0a2247a9267d4da481b3f3a5dfddf45d49016e61
+source-git-commit: c04106b42bef92344fb0474a986ec7dfd64a17d9
 workflow-type: tm+mt
 source-wordcount: '555'
 ht-degree: 2%
@@ -32,7 +32,7 @@ Flow Service用於收集和集中Adobe Experience Platform內不同來源的客�
 
 | 憑證 | 說明 |
 | ---------- | ----------- |
-| `connectionString` | 用於連接到Oracle的連接字串。 Oracle連接字串模式是： `Host={HOST};Port={PORT};Sid={SID};UserId={USERNAME};Password={PASSWORD}`. |
+| `connectionString` | 用於連接到Oracle的連接字串。 Oracle連接字串模式是： `Host={HOST};Port={PORT};Sid={SID};User Id={USERNAME};Password={PASSWORD}`. |
 | `connectionSpec.id` | 建立連線所需的唯一識別碼。 Oracle的連接規範ID是 `d6b52d86-f0f8-475f-89d4-ce54c8527328`。 |
 
 有關快速入門的詳細資訊，請參 [閱此Oracle文檔](https://docs.oracle.com/database/121/ODPNT/featConnecting.htm#ODPNT199)。
@@ -97,7 +97,7 @@ curl -X POST \
 
 | 參數 | 說明 |
 | --------- | ----------- |
-| `auth.params.connectionString` | 用於連接到Oracle資料庫的連接字串。 Oracle連接字串模式是： `Host={HOST};Port={PORT};Sid={SID};UserId={USERNAME};Password={PASSWORD}`. |
+| `auth.params.connectionString` | 用於連接到Oracle資料庫的連接字串。 Oracle連接字串模式是： `Host={HOST};Port={PORT};Sid={SID};User Id={USERNAME};Password={PASSWORD}`. |
 | `connectionSpec.id` | Oracle連接規範ID: `d6b52d86-f0f8-475f-89d4-ce54c8527328`. |
 
 **回應**
