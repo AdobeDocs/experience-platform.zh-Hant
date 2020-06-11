@@ -4,7 +4,7 @@ seo-title: Adobe Experience Platform Web SDK與多個屬性互動
 description: 瞭解如何與多個Experience Platform網頁SDK屬性互動
 seo-description: 瞭解如何與多個Experience Platform網頁SDK屬性互動
 translation-type: tm+mt
-source-git-commit: 4bff4b20ccc1913151aa1783d5123ffbb141a7d0
+source-git-commit: 7d4f364ebb9df1ce58481a35007ea75f86ab7825
 workflow-type: tm+mt
 source-wordcount: '256'
 ht-degree: 1%
@@ -40,7 +40,7 @@ SDK可讓您在基本程式碼中新增另一個名稱至陣列，以針對每�
 
 ```javascript
 mycustomname1("configure", {
-  "configId": "ebebf826-a01f-4458-8cec-ef61de241c93",
+  "edgeConfigId": "ebebf826-a01f-4458-8cec-ef61de241c93",
   "orgId": "ADB3LETTERSANDNUMBERS@AdobeOrg"
 });
 
@@ -51,7 +51,7 @@ mycustomname1("sendEvent", {
 });
 
 mycustomname2("configure", {
-  "configId": "f46e981f-fd03-4bdd-a9d9-73ce4447f870",
+  "edgeConfigId": "f46e981f-fd03-4bdd-a9d9-73ce4447f870",
   "orgId": "ADB3NUMBERSANDLETTERS2@AdobeOrg"
 });
 
@@ -66,4 +66,4 @@ mycustomname2("sendEvent", {
 
 ## 限制
 
-為避免與Cookie產生衝突，一個頁面中只有一個Adobe Experience Platform Web SDK例項可以有特定的例項 `configId`。  同樣地，只有一個Adobe Experience Platform Web SDK例項可以有特定的例項 `orgId`。
+為避免與Cookie產生衝突，一個頁面中只有一個Adobe Experience Platform Web SDK例項可以有特定的例項 `edgeConfigId`。  同樣地，只有一個Adobe Experience Platform Web SDK例項可以有特定的例項 `orgId`。
