@@ -4,7 +4,7 @@ seo-title: 設定Adobe Experience Platform Web SDK
 description: 瞭解如何設定Experience Platform Web SDK
 seo-description: 瞭解如何設定Experience Platform Web SDK
 translation-type: tm+mt
-source-git-commit: e9fb726ddb84d7a08afb8c0f083a643025b0f903
+source-git-commit: 7d4f364ebb9df1ce58481a35007ea75f86ab7825
 workflow-type: tm+mt
 source-wordcount: '739'
 ht-degree: 11%
@@ -21,7 +21,7 @@ SDK的設定是使用命令 `configure` 完成。
 
 ```javascript
 alloy("configure", {
-  "configId": "ebebf826-a01f-4458-8cec-ef61de241c93",
+  "edgeConfigId": "ebebf826-a01f-4458-8cec-ef61de241c93",
   "orgId":"ADB3LETTERSANDNUMBERS@AdobeOrg"
 });
 ```
@@ -30,13 +30,13 @@ alloy("configure", {
 
 ## 一般選項
 
-### `configId`
+### `edgeConfigId`
 
 | **類型** | **必填** | **預設值** |
 | -------- | ------------ | ----------------- |
 | 字串 | 是 | nown |
 
-您指派的設定ID，會將SDK連結至適當的帳戶和設定。  在單一頁面中設定多個例項時，您必須為每個例項設 `configId` 定不同的例項。
+您指派的設定ID，會將SDK連結至適當的帳戶和設定。  在單一頁面中設定多個例項時，您必須為每個例項設 `edgeConfigId` 定不同的例項。
 
 ### `context`
 
