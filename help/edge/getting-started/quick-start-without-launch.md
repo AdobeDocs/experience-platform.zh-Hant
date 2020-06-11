@@ -4,7 +4,7 @@ seo-title: 'Adobe Experience Platform Web SDK快速入門 '
 description: 使用Experience Platform Web SDK收集資料的快速入門手冊
 seo-description: 使用Experience Platform Web SDK收集資料的快速入門手冊
 translation-type: tm+mt
-source-git-commit: 2d58f7f95c6ad125e66856350aee2f29a0499061
+source-git-commit: f401780aa6b11f230506bfca1a747839fc6ae389
 workflow-type: tm+mt
 source-wordcount: '515'
 ht-degree: 5%
@@ -57,7 +57,7 @@ Experience Platform Edge Network將資料視為XDM。 XDM是一種資料格式�
 
 ```javascript
 alloy("configure", {
-  "configId": "ebebf826-a01f-4458-8cec-ef61de241c93:dev",
+  "edgeConfigId": "ebebf826-a01f-4458-8cec-ef61de241c93:dev",
   "orgId":"ADB3LETTERSANDNUMBERS@AdobeOrg"
 });
 ```
