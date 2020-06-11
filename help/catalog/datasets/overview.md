@@ -4,7 +4,10 @@ solution: Experience Platform
 title: 資料集總覽
 topic: datasets
 translation-type: tm+mt
-source-git-commit: 06733eb374d1b9409102a7cf13d61ed266cedaad
+source-git-commit: dcdd94a3a13a13b4104e57b74ecf613bc316b0af
+workflow-type: tm+mt
+source-wordcount: '776'
+ht-degree: 2%
 
 ---
 
@@ -31,7 +34,7 @@ Experience Data Model(XDM)是Platform組織客戶體驗資料的標準化架構�
 
 ## 將資料擷取至資料集
 
-Adobe Experience Platform資料擷取代表平台從各種來源擷取資料的多種方法。 不論擷取方法為何，所有成功擷取的資料都會轉換為批次檔案。 批是由一個或多個要作為單個單位接收的檔案組成的資料單位。 然後，這些批次檔案會新增至專用的資料集，並保存在資料湖中。
+Adobe Experience Platform資料擷取代表平台從各種來源擷取資料的多種方法。 不論擷取方法為何，所有成功擷取的資料都會轉換為批次檔案。 批次是多個資料單位，由一或多個要作為一個單位進行內嵌的檔案所組成。然後，這些批次檔案會新增至專用的資料集，並保存在資料湖中。
 
 如需詳細 [資訊，請參閱資料擷取](../../ingestion/home.md) 概觀。
 
@@ -41,7 +44,10 @@ Adobe Experience Platform資料治理可讓您管理客戶資料，以確保符�
 
 資料使用標籤可套用至整個資料集或個別資料集欄位。 在資料集層級新增的標籤會由該資料集內的所有欄位繼承。
 
-如需服務 [的詳細資訊](../../data-governance/home.md) ，請參閱資料管理概觀。 如需如何在Experience Platform UI中使用使用標籤的步驟，請參閱資 [料使用標籤使用指南](../../data-governance/labels/user-guide.md)。
+如需服務 [的詳細資訊](../../data-governance/home.md) ，請參閱資料管理概觀。 有關如何使用中的使用標籤的步 [!DNL Platform]驟，請參閱以下指南：
+
+* [管理UI中的標籤](../../data-governance/labels/user-guide.md)
+* [管理API中的標籤](../../data-governance/labels/api.md)
 
 ## 下游平台服務中的資料集
 
@@ -49,13 +55,13 @@ Adobe Experience Platform資料治理可讓您管理客戶資料，以確保符�
 
 以下是使用資料集進行各種操作的下游服務的清單。 請檢視每項服務的檔案，以取得更多資訊。
 
-* [資料存取API](../../data-access/home.md):允許您訪問和下載儲存在資料集中的檔案的內容。
-* [Adobe Experience Platform Identity Service](../../identity-service/home.md):跨裝置和系統橋接身分識別，並根據資料集符合的XDM架構所定義的身分欄位，將資料集連結在一起。
-* [即時客戶個人檔案](../../profile/home.md):利用Identity Service從資料集即時建立詳細的客戶個人檔案。 即時客戶從資料湖提取資料，並將客戶個人檔案保存在其個別的資料儲存中。
-* [Adobe Experience Platform細分服務](../../segmentation/home.md):可讓您建立細分，並從即時客戶個人檔案資料產生受眾。 然後，這些觀眾可匯出至資料湖中的專屬資料集。
-* [Adobe Experience Platform資料科學工作區](../../data-science-workspace/home.md):使用機器學習和人工智慧發掘大型資料集的見解。
-* [Adobe Experience Platform查詢服務](../../query-service/home.md):可讓您使用標準SQL來查詢Experience Platform中的資料、加入Data Lake中的任何資料集，並將查詢結果擷取為新資料集，以用於報告、Data Science Workspace或即時客戶個人檔案。
-* [Adobe Experience Platform決策服務](../../decisioning-service/home.md):利用「即時客戶配置檔案」，根據「配置檔案」從啟用的資料集提取的行為資料，確定客戶從一組選項中最可能做出的選擇。
+* [資料存取API](../../data-access/home.md): 允許您訪問和下載儲存在資料集中的檔案的內容。
+* [Adobe Experience Platform Identity Service](../../identity-service/home.md): 跨裝置和系統橋接身分識別，並根據資料集符合的XDM架構所定義的身分欄位，將資料集連結在一起。
+* [即時客戶個人檔案](../../profile/home.md): 利用Identity Service從資料集即時建立詳細的客戶個人檔案。 即時客戶從資料湖提取資料，並將客戶個人檔案保存在其個別的資料儲存中。
+* [Adobe Experience Platform細分服務](../../segmentation/home.md): 可讓您建立細分，並從即時客戶個人檔案資料產生受眾。 然後，這些觀眾可匯出至資料湖中的專屬資料集。
+* [Adobe Experience Platform資料科學工作區](../../data-science-workspace/home.md): 使用機器學習和人工智慧發掘大型資料集的見解。
+* [Adobe Experience Platform查詢服務](../../query-service/home.md): 可讓您使用標準SQL來查詢Experience Platform中的資料、加入Data Lake中的任何資料集，並將查詢結果擷取為新資料集，以用於報告、Data Science Workspace或即時客戶個人檔案。
+* [Adobe Experience Platform決策服務](../../decisioning-service/home.md): 利用「即時客戶配置檔案」，根據「配置檔案」從啟用的資料集提取的行為資料，確定客戶從一組選項中最可能做出的選擇。
 
 ## 後續步驟
 
