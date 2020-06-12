@@ -4,7 +4,10 @@ solution: Experience Platform
 title: 隱私權服務UI概觀
 topic: UI guide
 translation-type: tm+mt
-source-git-commit: d0fcae6b1b75584a2c26d6eee5b47e0d60a142ba
+source-git-commit: 8704d762ea71b44133cd6d394587342198c54b99
+workflow-type: tm+mt
+source-wordcount: '183'
+ht-degree: 1%
 
 ---
 
@@ -17,15 +20,17 @@ Adobe Experience Platform Privacy Service提供REST風格的API和使用者介�
 
 您必須有Adobe ID才能驗證隱私權服務UI。 此外，您必須在您的Adobe ID所關聯的組織內擁有系統管理員權限。
 
-導覽至Adobe Experience Cloud登入頁面，網址為https://experience.adobe.com。 按一 **下「使用Adobe ID登入** 」，並在出現提示時輸入您的Adobe ID認證。 登入後，按一下「管 **理」**。
+導覽至Adobe Experience Cloud登入頁面，網址為https://experience.adobe.com。 按一 **[!UICONTROL 下「使用Adobe ID登入]** 」，並在出現提示時輸入您的Adobe ID認證。
 
-![「管理」頁籤](../images/ui-overview/admin-tab.png)
+登入後，按一下「隱 **[!UICONTROL 私UI」]**。
 
->[!NOTE] 只有在您組織內擁有系統管理員權限時，才會顯示「管理」標籤。
+![](../images/ui-overview/quick-access.png)
 
-最後，在下 **一個畫面上選取「啟動隱私權UI** 」，以開啟隱私權服務UI。
+### 從Experience Platform登入
 
-![管理頁面](../images/ui-overview/admin-page.png)
+如果您有Adobe Experience Platform UI的存取權，您也可以透過左側導覽中的「請求」索引標籤，存取「隱私 **[!UICONTROL 服務]** 」UI。
+
+![](../images/ui-overview/platform.png)
 
 ## 後續步驟
 
