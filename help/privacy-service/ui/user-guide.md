@@ -4,7 +4,10 @@ solution: Experience Platform
 title: 隱私權服務使用指南
 topic: UI guide
 translation-type: tm+mt
-source-git-commit: 8a488944d530a4850f8946ed30af769ecb6e954f
+source-git-commit: 9fc95dd9194dca0fada603643c3de949764b2f17
+workflow-type: tm+mt
+source-wordcount: '1088'
+ht-degree: 0%
 
 ---
 
@@ -15,16 +18,17 @@ source-git-commit: 8a488944d530a4850f8946ed30af769ecb6e954f
 
 ## 瀏覽Privacy Service UI儀表板
 
-「隱私服務」UI的控制面板提供兩個Widget，可讓您檢視隱私權工作的狀態：狀 **態報表****和工作請求**。 控制面板還顯示所顯示作業的當前選定規則。
+「隱私服務」UI的控制面板提供兩個Widget，可讓您檢視隱私權工作的狀態： **狀態報表** 和 **工作請求**。 控制面板還顯示所顯示作業的當前選定規則。
 
 ![UI儀表板](../images/user-guide/dashboard.png)
 
 ### 規則類型
 
-隱私權服務支援兩種法規類型的工作要求：
+隱私權服務支援三種法規類型的工作要求：
 
-* 通用資料保護規則(GDPR)
-* 加州消費者隱私法(California Consumer Privacy Act,CCPA)。
+* 歐盟通用資料保護規則(GDPR)
+* 加州消費者隱私法(California Consumer Privacy Act,CCPA)
+* 泰國的個人資料保護法(PDPA_THA)
 
 每個規則類型的工作會個別追蹤。 要在規則類型之間切換，請按一下「規 **則類型** 」下拉菜單並從清單中選擇所需的規則。
 
