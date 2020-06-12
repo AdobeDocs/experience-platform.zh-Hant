@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 準備資料以用於智慧型服務
 topic: Intelligent Services
 translation-type: tm+mt
-source-git-commit: 83e74ad93bdef056c8aef07c9d56313af6f4ddfd
+source-git-commit: 9a2e6f7db441b804f17ec91d06d359439c3d5da5
 workflow-type: tm+mt
-source-wordcount: '1437'
+source-wordcount: '1595'
 ht-degree: 0%
 
 ---
@@ -18,7 +18,26 @@ ht-degree: 0%
 
 本檔案提供將行銷事件資料從多個管道對應至此架構的一般指引，概述有關架構中重要欄位的資訊，以協助您判斷如何有效地將資料對應至其架構。
 
-## 瞭解CEE架構
+## 工作流程摘要
+
+準備程式會視您的資料儲存在Adobe Experience Platform或外部而定。 本節概述了在兩種情況下需要採取的必要步驟。
+
+### 外部資料準備
+
+如果您的資料儲存在外部， [!DNL Experience Platform]請遵循下列步驟：
+
+1. 請連絡Adobe諮詢服務以要求專屬Azure Blob儲存容器的存取憑證。
+1. 使用您的存取憑證，將資料上傳至Blob容器。
+1. 與Adobe諮詢服務合作，將您的資料對應至 [Consumer ExperienceEvent架構](#cee-schema) ，並將其內嵌至智慧服務。
+
+### [!DNL Experience Platform] 資料準備
+
+如果您的資料已儲存在中 [!DNL Platform]，請遵循下列步驟：
+
+1. 檢閱Consumer ExperienceEvent架構的 [結構](#cee-schema) ，並判斷您的資料是否可對應至其欄位。
+1. 請連絡Adobe諮詢服務，協助您將資料對應至架構並將其內嵌至智慧型服務，或如 [果您要自行對應資料](#mapping) ，請依照本指南的步驟進行。
+
+## 瞭解CEE架構 {#cee-schema}
 
 消費者體驗事件結構描述個人的行為，因為它與數位行銷事件（網路或行動裝置）以及線上或離線商務活動有關。 智慧服務需要使用此模式，因為其語義上定義良好的欄位（列），以避免任何未知名稱，否則會使資料不那麼清晰。
 
@@ -185,9 +204,9 @@ ht-degree: 0%
 
 有關每個必填子欄位的完整資訊，請 `xdm:productListItems`參閱行銷 [說明](https://github.com/adobe/xdm/blob/797cf4930d5a80799a095256302675b1362c9a15/docs/reference/context/marketing.schema.md) 。
 
-## 對應和收錄資料
+## 對應和收錄資料(#mapping)
 
-一旦您確定行銷事件資料是否可映射至CEE架構後，下一步就是決定要將哪些資料匯入智慧型服務。 智慧型服務中使用的所有歷史資料都必須落在資料四個月的最短時間範圍內，加上預期做為回顧期間的天數。
+一旦您確定行銷事件資料是否可映射至CEE架構，下一步就是決定要將哪些資料匯入智慧型服務。 智慧型服務中使用的所有歷史資料都必須落在資料四個月的最短時間範圍內，加上預期做為回顧期間的天數。
 
 在決定您要傳送的資料範圍後，請聯絡Adobe諮詢服務，協助將資料對應至架構，並將其內嵌至服務。
 
