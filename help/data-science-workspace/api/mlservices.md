@@ -4,7 +4,10 @@ solution: Experience Platform
 title: 服務
 topic: Developer guide
 translation-type: tm+mt
-source-git-commit: 19823c7cf0459e045366f0baae2bd8a98416154c
+source-git-commit: 33f8c424c208bb61319b49e7ecb30e3144ef108a
+workflow-type: tm+mt
+source-wordcount: '811'
+ht-degree: 2%
 
 ---
 
@@ -13,7 +16,7 @@ source-git-commit: 19823c7cf0459e045366f0baae2bd8a98416154c
 
 MLService是已發佈的訓練模型，可讓您的組織存取和重複使用先前開發的模型。 MLServices的主要功能是能夠依計畫自動化培訓與計分。 排程的訓練執行可協助維持模型的效率和正確性，而排程的計分執行則可確保產生一致的新見解。
 
-自動培訓和計分計畫定義有開始時間戳記、結束時間戳記和表示為 <a href="https://en.wikipedia.org/wiki/Cron" target="_blank">cron表達式的頻率</a>。 可在建立MLService時定 [義排程](#create-an-mlservice) ，或透過更新現 [有的MLService套用排程](#update-an-mlservice)。
+自動培訓和計分計畫定義有開始時間戳記、結束時間戳記和表示為 [cron表達式的頻率](https://en.wikipedia.org/wiki/Cron)。 可在建立MLService時定 [義排程](#create-an-mlservice) ，或透過更新現 [有的MLService套用排程](#update-an-mlservice)。
 
 ## 建立MLService {#create-an-mlservice}
 
@@ -38,10 +41,10 @@ curl -X POST \
     -d '{
         "name": "A name for this MLService",
         "description": "A description for this MLService",
-        "mlInstanceId": "{MLINSTANCE_ID}",
-        "trainingDataSetId": "{DATASET_ID}",
-        "trainingExperimentId": "{TRAINING_ID}",
-        "trainingExperimentRunId": "{RUN_ID}",
+        "mlInstanceId": "46986c8f-7739-4376-8509-0178bdf32cda",
+        "trainingDataSetId": "5ee3cd7f2d34011913c56941",
+        "trainingExperimentId": "014d8acf-08fb-421c-8b65-760c8799c627",
+        "trainingExperimentRunId": "33408593-2871-4198-a812-6d1b7d939cda",
         "trainingSchedule": {
             "startTime": "2019-01-01T00:00",
             "endTime": "2019-12-31T00:00",
@@ -78,13 +81,13 @@ curl -X POST \
 
 ```json
 {
-    "id": "{MLSERVICE_ID}",
+    "id": "68d936d8-17e6-44ef-a4b6-c7502055638b",
     "name": "A name for this MLService",
     "description": "A description for this MLService",
-    "mlInstanceId": "{MLINSTANCE_ID}",
-    "trainingExperimentId": "{TRAINING_ID}",
-    "trainingDataSetId": "{DATASET_ID}",
-    "scoringExperimentId": "{SCORING_ID}",
+    "mlInstanceId": "46986c8f-7739-4376-8509-0178bdf32cda",
+    "trainingExperimentId": "014d8acf-08fb-421c-8b65-760c8799c627",
+    "trainingDataSetId": "5ee3cd7f2d34011913c56941",
+    "scoringExperimentId": "76c2b1b-fad7-4b31-8c54-19ecc18b1ea0",
     "created": "2019-01-01T00:00:00.000Z",
     "createdBy": {
         "userId": "Jane_Doe@AdobeID"
@@ -126,7 +129,7 @@ GET /mlServices?{QUERY_PARAMETER_1}={VALUE_1}&{QUERY_PARAMETER_2}={VALUE_2}
 
 ```shell
 curl -X GET \
-    'https://platform.adobe.io/data/sensei/mlServices?property=mlInstanceId=={MLINSTANCE_ID}' \
+    'https://platform.adobe.io/data/sensei/mlServices?property=mlInstanceId==46986c8f-7739-4376-8509-0178bdf32cda' \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
     -H 'x-gw-ims-org-id: {IMS_ORG}' \
@@ -141,12 +144,12 @@ curl -X GET \
 {
     "children": [
         {
-            "id": "{MLSERVICE_ID}",
+            "id": "68d936d8-17e6-44ef-a4b6-c7502055638b",
             "name": "A service created in UI",
-            "mlInstanceId": "{MLINSTANCE_ID}",
-            "trainingExperimentId": "{TRAINING_ID}",
-            "trainingDataSetId": "{DATASET_ID}",
-            "scoringExperimentId": "{SCORING_ID}",
+            "mlInstanceId": "46986c8f-7739-4376-8509-0178bdf32cda",
+            "trainingExperimentId": "014d8acf-08fb-421c-8b65-760c8799c627",
+            "trainingDataSetId": "5ee3cd7f2d34011913c56941",
+            "scoringExperimentId": "76c2b1b-fad7-4b31-8c54-19ecc18b1ea0",
             "created": "2019-01-01T00:00:00.000Z",
             "createdBy": {
                 "displayName": "Jane Doe",
@@ -156,7 +159,7 @@ curl -X GET \
         }
     ],
     "_page": {
-        "property": "mlInstanceId=={MLINSTANCE_ID},deleted==false",
+        "property": "mlInstanceId==46986c8f-7739-4376-8509-0178bdf32cda,deleted==false",
         "count": 1
     }
 }
@@ -172,13 +175,13 @@ curl -X GET \
 GET /mlServices/{MLSERVICE_ID}
 ```
 
-* `{MLSERVICE_ID}`:有效的MLService ID。
+* `{MLSERVICE_ID}`: 有效的MLService ID。
 
 **請求**
 
 ```shell
 curl -X GET \
-    https://platform.adobe.io/data/sensei/mlServices/{MLSERVICE_ID} \
+    https://platform.adobe.io/data/sensei/mlServices/68d936d8-17e6-44ef-a4b6-c7502055638b \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
     -H 'x-gw-ims-org-id: {IMS_ORG}' \
@@ -191,13 +194,13 @@ curl -X GET \
 
 ```json
 {
-    "id": "{MLSERVICE_ID}",
+    "id": "68d936d8-17e6-44ef-a4b6-c7502055638b",
     "name": "A name for this MLService",
     "description": "A description for this MLService",
-    "mlInstanceId": "{MLINSTANCE_ID}",
-    "trainingExperimentId": "{TRAINING_ID}",
-    "trainingDataSetId": "{DATASET_ID}",
-    "scoringExperimentId": "{SCORING_ID}",
+    "mlInstanceId": "46986c8f-7739-4376-8509-0178bdf32cda",
+    "trainingExperimentId": "014d8acf-08fb-421c-8b65-760c8799c627",
+    "trainingDataSetId": "5ee3cd7f2d34011913c56941",
+    "scoringExperimentId": "76c2b1b-fad7-4b31-8c54-19ecc18b1ea0",
     "created": "2019-01-01T00:00:00.000Z",
     "createdBy": {
         "userId": "Jane_Doe@AdobeID"
@@ -210,7 +213,7 @@ curl -X GET \
 
 您可以透過PUT請求覆寫現有MLService的屬性，以更新現有MLService，該PUT請求在請求路徑中包含目標MLService的ID，並提供包含已更新屬性的JSON裝載。
 
->[!TIP] 為確保此PUT請求成功，建議您先執行GET請求，以依ID [擷取MLService](#retrieve-a-specific-mlservice)。 然後，修改並更新傳回的JSON物件，並套用已修改的JSON物件的完整內容作為PUT要求的裝載。
+>[!TIP] 為確保此PUT請求成功，建議您先執行GET請求，以依ID [擷取MLService](#retrieve-a-specific-mlservice)。 然後，修改並更新傳回的JSON物件，並套用已修改的JSON物件作為PUT要求的裝載。
 
 **API格式**
 
@@ -218,13 +221,13 @@ curl -X GET \
 PUT /mlServices/{MLSERVICE_ID}
 ```
 
-* `{MLSERVICE_ID}`:有效的MLService ID。
+* `{MLSERVICE_ID}`: 有效的MLService ID。
 
 **請求**
 
 ```shell
 curl -X PUT \
-    https://platform.adobe.io/data/sensei/mlServices/{MLSERVICE_ID} \
+    https://platform.adobe.io/data/sensei/mlServices/68d936d8-17e6-44ef-a4b6-c7502055638b \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
     -H 'x-gw-ims-org-id: {IMS_ORG}' \
@@ -233,10 +236,10 @@ curl -X PUT \
     -d '{
         "name": "A name for this MLService",
         "description": "A description for this MLService",
-        "mlInstanceId": "{MLINSTANCE_ID}",
-        "trainingExperimentId": "{TRAINING_ID}",
-        "trainingDataSetId": "{DATASET_ID}",
-        "scoringExperimentId": "{SCORING_ID}",
+        "mlInstanceId": "46986c8f-7739-4376-8509-0178bdf32cda",
+        "trainingExperimentId": "014d8acf-08fb-421c-8b65-760c8799c627",
+        "trainingDataSetId": "5ee3cd7f2d34011913c56941",
+        "scoringExperimentId": "76c2b1b-fad7-4b31-8c54-19ecc18b1ea0",
         "trainingSchedule": {
             "startTime": "2019-01-01T00:00",
             "endTime": "2019-12-31T00:00",
@@ -256,13 +259,13 @@ curl -X PUT \
 
 ```json
 {
-    "id": "{MLSERVICE_ID}",
+    "id": "68d936d8-17e6-44ef-a4b6-c7502055638b",
     "name": "A name for this MLService",
     "description": "A description for this MLService",
-    "mlInstanceId": "{MLINSTANCE_ID}",
-    "trainingExperimentId": "{TRAINING_ID}",
-    "trainingDataSetId": "{DATASET_ID}",
-    "scoringExperimentId": "{SCORING_ID}",
+    "mlInstanceId": "46986c8f-7739-4376-8509-0178bdf32cda",
+    "trainingExperimentId": "014d8acf-08fb-421c-8b65-760c8799c627",
+    "trainingDataSetId": "5ee3cd7f2d34011913c56941",
+    "scoringExperimentId": "76c2b1b-fad7-4b31-8c54-19ecc18b1ea0",
     "created": "2019-01-01T00:00:00.000Z",
     "createdBy": {
         "userId": "Jane_Doe@AdobeID"
@@ -299,7 +302,7 @@ DELETE /mlServices/{MLSERVICE_ID}
 
 ```shell
 curl -X DELETE \
-    https://platform.adobe.io/data/sensei/mlServices/{MLSERVICE_ID} \
+    https://platform.adobe.io/data/sensei/mlServices/68d936d8-17e6-44ef-a4b6-c7502055638b \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
     -H 'x-gw-ims-org-id: {IMS_ORG}' \
@@ -328,13 +331,13 @@ DELETE /mlServices?mlInstanceId={MLINSTANCE_ID}
 
 | 參數 | 說明 |
 | --- | --- |
-| `{MLSERVICE_ID}` | 有效的MLService ID。 |
+| `{MLINSTANCE_ID}` | 有效的MLInstance ID。 |
 
 **請求**
 
 ```shell
 curl -X DELETE \
-    https://platform.adobe.io/data/sensei/mlServices?mlInstanceId={MLINSTANCE_ID} \
+    https://platform.adobe.io/data/sensei/mlServices?mlInstanceId=46986c8f-7739-4376-8509-0178bdf32cda \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
     -H 'x-gw-ims-org-id: {IMS_ORG}' \
