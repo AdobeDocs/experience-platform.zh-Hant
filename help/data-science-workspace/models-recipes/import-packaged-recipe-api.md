@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 匯入封裝的方式(API)
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: f2a7300d4ad75e3910abbdf2ecc2946a2dfe553c
+source-git-commit: 20e26c874204da75cac7e8d001770702658053f1
 workflow-type: tm+mt
-source-wordcount: '974'
+source-wordcount: '976'
 ht-degree: 2%
 
 ---
@@ -43,9 +43,7 @@ ht-degree: 2%
 
 ## 建立引擎
 
-根據要包含在API請求中的封裝方式檔案的形式，引擎會透過下列兩種方式之一建立：
-
-- [使用Docker URL建立引擎](#create-an-engine-with-a-docker-url)
+對/engines端點發出POST請求可以建立引擎。 所建立的引擎是根據封裝的方式檔案的格式來設定，該檔案必須包含在API要求中。
 
 ### 使用Docker URL建立引擎 {#create-an-engine-with-a-docker-url}
 
