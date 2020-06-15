@@ -4,7 +4,10 @@ solution: Experience Platform
 title: MLInstances
 topic: Developer guide
 translation-type: tm+mt
-source-git-commit: 19823c7cf0459e045366f0baae2bd8a98416154c
+source-git-commit: 0197c2f5e304f2fc194289b064cc37c91bb658c8
+workflow-type: tm+mt
+source-wordcount: '575'
+ht-degree: 4%
 
 ---
 
@@ -38,7 +41,7 @@ curl -X POST \
     -d '{
         "name": "A name for this MLInstance",
         "description": "A description for this MLInstance",
-        "engineId": "{ENGINE_ID}",
+        "engineId": "22f4166f-85ba-4130-a995-a2b8e1edde32",
         "tasks": [
             {
                 "name": "train",
@@ -84,10 +87,10 @@ curl -X POST \
 
 ```json
 {
-    "id": "{MLINSTANCE_ID}",
+    "id": "46986c8f-7739-4376-8509-0178bdf32cda",
     "name": "A name for this MLInstance",
     "description": "A description for this MLInstance",
-    "engineId": "{ENGINE_ID}",
+    "engineId": "22f4166f-85ba-4130-a995-a2b8e1edde32",
     "created": "2019-01-01T00:00:00.000Z",
     "createdBy": {
         "userId": "Jane_Doe@AdobeID"
@@ -161,10 +164,10 @@ curl -X GET \
 {
     "children": [
         {
-            "id": "{MLINSTANCE_ID}",
+            "id": "46986c8f-7739-4376-8509-0178bdf32cda",
             "name": "A name for this MLInstance",
             "description": "A description for this MLInstance",
-            "engineId": "{ENGINE_ID}",
+            "engineId": "22f4166f-85ba-4130-a995-a2b8e1edde32",
             "created": "2019-01-01T00:00:00.000Z",
             "createdBy": {
                 "displayName": "Jane Doe",
@@ -173,10 +176,10 @@ curl -X GET \
             "updated": "2019-01-01T00:00:00.000Z"
         },
         {
-            "id": "{MLINSTANCE_ID}",
+            "id": "56986c8f-7739-4376-8509-0178bdf32cda",
             "name": "Retail Sales Model",
             "description": "A Model created with the Retail Sales Recipe",
-            "engineId": "{ENGINE_ID}",
+            "engineId": "32f4166f-85ba-4130-a995-a2b8e1edde32",
             "created": "2019-01-01T00:00:00.000Z",
             "createdBy": {
                 "displayName": "Jane Doe",
@@ -211,7 +214,7 @@ GET /mlInstances/{MLINSTANCE_ID}
 
 ```shell
 curl -X GET \
-    https://platform.adobe.io/data/sensei/mlInstances/{MLINSTANCE_ID} \
+    https://platform.adobe.io/data/sensei/mlInstances/46986c8f-7739-4376-8509-0178bdf32cda \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
     -H 'x-gw-ims-org-id: {IMS_ORG}' \
@@ -224,10 +227,10 @@ curl -X GET \
 
 ```json
 {
-    "id": "{MLINSTANCE_ID}",
+    "id": "46986c8f-7739-4376-8509-0178bdf32cda",
     "name": "A name for this MLInstance",
     "description": "A description for this MLInstance",
-    "engineId": "{ENGINE_ID}",
+    "engineId": "22f4166f-85ba-4130-a995-a2b8e1edde32",
     "created": "2019-01-01T00:00:00.000Z",
     "createdBy": {
         "displayName": "Jane Doe",
@@ -254,7 +257,7 @@ curl -X GET \
             ]
         },
         {
-            "name": "fp",
+            "name": "featurePipeline",
             "parameters": [
                 {
                     "key": "feature pipeline parameter",
@@ -270,7 +273,7 @@ curl -X GET \
 
 您可以透過PUT請求覆寫現有MLInstance的屬性，以更新其屬性，該PUT請求在請求路徑中包含目標MLInstance的ID，並提供包含更新屬性的JSON裝載。
 
->[!TIP] 為確保此PUT請求成功，建議您先執行GET請求，以 [依ID擷取MLInstance](#retrieve-specific)。 然後，修改並更新傳回的JSON物件，並套用已修改的JSON物件的完整內容作為PUT要求的裝載。
+>[!TIP] 為確保此PUT請求成功，建議您先執行GET請求，以 [依ID擷取MLInstance](#retrieve-specific)。 然後，修改並更新傳回的JSON物件，並套用已修改的JSON物件作為PUT要求的裝載。
 
 下列範例API呼叫會在初步擁有這些屬性的同時，更新MLInstance的訓練和計分參數：
 
@@ -321,7 +324,7 @@ PUT /mlInstances/{MLINSTANCE_ID}
 
 ```shell
 curl -X PUT \
-    https://platform.adobe.io/data/sensei/mlInstances/{MLINSTANCE_ID} \
+    https://platform.adobe.io/data/sensei/mlInstances/46986c8f-7739-4376-8509-0178bdf32cda \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
     -H 'x-gw-ims-org-id: {IMS_ORG}' \
@@ -365,7 +368,7 @@ curl -X PUT \
 
 ```json
 {
-    "id": "{MLINSTANCE_ID}",
+    "id": "46986c8f-7739-4376-8509-0178bdf32cda",
     "name": "A name for this MLInstance",
     "description": "A description for this MLInstance",
     "engineId": "00000000-0000-0000-0000-000000000000",
@@ -416,7 +419,7 @@ DELETE /mlInstances?engineId={ENGINE_ID}
 
 ```shell
 curl -X DELETE \
-    https://platform.adobe.io/data/sensei/mlInstances?engineId={ENGINE_ID} \
+    https://platform.adobe.io/data/sensei/mlInstances?engineId=22f4166f-85ba-4130-a995-a2b8e1edde32 \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
     -H 'x-gw-ims-org-id: {IMS_ORG}' \
@@ -451,7 +454,7 @@ DELETE /mlInstances/{MLINSTANCE_ID}
 
 ```shell
 curl -X DELETE \
-    https://platform.adobe.io/data/sensei/mlInstances/{MLINSTANCE_ID} \
+    https://platform.adobe.io/data/sensei/mlInstances/46986c8f-7739-4376-8509-0178bdf32cda \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
     -H 'x-gw-ims-org-id: {IMS_ORG}' \
