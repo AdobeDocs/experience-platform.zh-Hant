@@ -4,7 +4,10 @@ solution: Experience Platform
 title: 模型
 topic: Developer guide
 translation-type: tm+mt
-source-git-commit: 01cfbc86516a05df36714b8c91666983f7a1b0e8
+source-git-commit: 33f8c424c208bb61319b49e7ecb30e3144ef108a
+workflow-type: tm+mt
+source-wordcount: '821'
+ht-degree: 4%
 
 ---
 
@@ -42,10 +45,10 @@ curl -X GET \
 {
     "children": [
         {
-            "id": "{MODEL_ID}",
+            "id": "15c53796-bd6b-4e09-b51d-7296aa20af71",
             "name": "A name for this Model",
-            "experimentId": "{EXPERIMENT_ID}",
-            "experimentRunId": "{EXPERIMENT_RUN_ID}",
+            "experimentId": "5cb25a2d-2cbd-4c99-a619-8ddae5250a7b",
+            "experimentRunId": "33408593-2871-4198-a812-6d1b7d939cda",
             "description": "A description for this Model",
             "modelArtifactUri": "wasb://test-models@mlpreprodstorage.blob.core.windows.net/model-name",
             "created": "2019-01-01T00:00:00.000Z",
@@ -55,10 +58,10 @@ curl -X GET \
             "updated": "2019-01-02T00:00:00.000Z"
        },
         {
-            "id": "{MODEL_ID}",
+            "id": "27c53796-bd6b-4u59-b51d-7296aa20er23",
             "name": "Model 2",
-            "experimentId": "{EXPERIMENT_ID}",
-            "experimentRunId": "{EXPERIMENT_RUN_ID}",
+            "experimentId": "3cb25a2d-2cbd-4d34-a619-8ddae5259a5t",
+            "experimentRunId": "33408593-2871-4198-a812-6d1b7d939cda",
             "description": "A description for Model2",
             "modelArtifactUri": "wasb://test-models@mlpreprodstorage.blob.core.windows.net/model-name",
             "created": "2019-01-01T00:00:00.000Z",
@@ -68,10 +71,10 @@ curl -X GET \
             "updated": "2019-01-02T00:00:00.000Z"
        },
         {
-            "id": "{MODEL_ID}",
+            "id": "15c53796-bd6b-4e09-b51d-7296aa20af71",
             "name": "Model 3",
-            "experimentId": "{EXPERIMENT_ID}",
-            "experimentRunId": "{EXPERIMENT_RUN_ID}",
+            "experimentId": "5cb25a2d-2cbd-4c99-a619-8ddae5250a7b",
+            "experimentRunId": "33408593-2871-4198-a812-6d1b7d939cda",
             "description": "A description for Model3",
             "modelArtifactUri": "wasb://test-models@mlpreprodstorage.blob.core.windows.net/model-name",
             "created": "2019-01-01T00:00:00.000Z",
@@ -117,7 +120,7 @@ GET /models/?property=experimentRunID=={EXPERIMENT_RUN_ID}
 
 ```shell
 curl -X GET \
-  https://platform.adobe.io/data/sensei/models/?property=experimentRunId=={EXPERIMENT_RUN_ID} \
+  https://platform.adobe.io/data/sensei/models/?property=experimentRunId==33408593-2871-4198-a812-6d1b7d939cda \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
     -H 'x-gw-ims-org-id: {IMS_ORG}' \
@@ -132,10 +135,10 @@ curl -X GET \
 {
     "children": [
         {
-            "id": "{MODEL_ID}",
+            "id": "15c53796-bd6b-4e09-b51d-7296aa20af71",
             "name": "A name for this Model",
-            "experimentId": "{EXPERIMENT_ID}",
-            "experimentRunId": "{EXPERIMENT_RUN_ID}",
+            "experimentId": "5cb25a2d-2cbd-4c99-a619-8ddae5250a7b",
+            "experimentRunId": "33408593-2871-4198-a812-6d1b7d939cda",
             "description": "A description for this Model",
             "modelArtifactUri": "wasb://test-models@mlpreprodstorage.blob.core.windows.net/model-name",
             "created": "2019-01-01T00:00:00.000Z",
@@ -146,7 +149,7 @@ curl -X GET \
        }
     ],
     "_page": {
-        "property": "experimentRunId=={EXPERIMENT_RUN_ID},deleted==false",
+        "property": "experimentRunId==33408593-2871-4198-a812-6d1b7d939cda,deleted==false",
         "count": 1
     }
 }
@@ -158,6 +161,60 @@ curl -X GET \
 | `modelArtifactUri` | 表示模型儲存位置的URI。 URI以模型 `name` 的值結束。 |
 | `experimentId` | 有效的實驗ID。 |
 | `experimentRunId` | 有效的實驗執行ID。 |
+
+## 註冊預先產生的模型 {#register-a-model}
+
+通過向端點發出POST請求，可以註冊預生成的 `/models` 模型。 為了註冊您的模型， `modelArtifact` 檔案 `model` 和屬性值必須包含在請求的正文中。
+
+**API格式**
+
+```http
+POST /models
+```
+
+**請求**
+
+以下POST包含所 `modelArtifact` 需的 `model` 檔案和屬性值。 有關這些值的詳細資訊，請參見下表。
+
+```shell
+curl -X POST \
+  https://platform.adobe.io/data/sensei/models \
+    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+    -H 'x-api-key: {API_KEY}' \
+    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-sandbox-name: {SANDBOX_NAME}' \
+    -F 'modelArtifact=@/Users/yourname/Desktop/model.onnx' \
+    -F 'model={
+            "name": "Your Model - 0615-1342-45",
+            "originType": "offline"
+    }'
+```
+
+| 參數 | 說明 |
+| --- | --- |
+| `modelArtifact` | 要包括的完整模型對象的位置。 |
+| `model` | 需要建立的Model對象的表單資料。 |
+
+**回應**
+
+成功的回應會傳回包含模型詳細資料（包括模型唯一識別碼）的裝載`id`。
+
+```json
+{
+  "id": "a28f151a-597a-4a7e-87e9-1c1dbc9c2af7",
+  "name": "Your Model - 0615-1342-45",
+  "originType": "offline",
+  "modelArtifactUri": "http://storageblobml.blob.core.windows.net/prod-models/a28f151a-597a-4a7e-87e9-1c1dbc9c2af7",
+  "created": "2020-06-15T20:55:41.520Z",
+  "updated": "2020-06-15T20:55:41.520Z",
+  "deprecated": false
+}
+```
+
+| 屬性 | 說明 |
+| --- | --- |
+| `id` | 與「模型」(Model)對應的ID。 |
+| `modelArtifactUri` | 表示模型儲存位置的URI。 URI以模型的 `id` 值結尾。 |
 
 ## 依ID更新模型
 
@@ -179,17 +236,17 @@ PUT /models/{MODEL_ID}
 
 ```shell
 curl -X PUT \
-  https://platform.adobe.io/data/sensei/models/{MODEL_ID} \
+  https://platform.adobe.io/data/sensei/models/15c53796-bd6b-4e09-b51d-7296aa20af71 \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'Content-Type: application/vnd.adobe.platform.sensei+json;profile=mlInstance.v1.json' \
     -H 'x-api-key: {API_KEY}' \
     -H 'x-gw-ims-org-id: {IMS_ORG}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
     -d '{
-        "id": "{MODEL_ID}",
+        "id": "15c53796-bd6b-4e09-b51d-7296aa20af71",
         "name": "A name for this Model",
-        "experimentId": "{EXPERIMENT_ID}",
-        "experimentRunId": "{EXPERIMENT_RUN_ID}",
+        "experimentId": "5cb25a2d-2cbd-4c99-a619-8ddae5250a7b",
+        "experimentRunId": "33408593-2871-4198-a812-6d1b7d939cda",
         "description": "An updated description for this Model",
         "modelArtifactUri": "wasb://test-models@mlpreprodstorage.blob.core.windows.net/model-name",
         "created": "2019-01-01T00:00:00.000Z",
@@ -206,10 +263,10 @@ curl -X PUT \
 
 ```json
 {
-        "id": "{MODEL_ID}",
+        "id": "15c53796-bd6b-4e09-b51d-7296aa20af71",
         "name": "A name for this Model",
-        "experimentId": "{EXPERIMENT_ID}",
-        "experimentRunId": "{EXPERIMENT_RUN_ID}",
+        "experimentId": "5cb25a2d-2cbd-4c99-a619-8ddae5250a7b",
+        "experimentRunId": "33408593-2871-4198-a812-6d1b7d939cda",
         "description": "An updated description for this Model",
         "modelArtifactUri": "wasb://test-models@mlpreprodstorage.blob.core.windows.net/model-name",
         "created": "2019-01-01T00:00:00.000Z",
@@ -238,7 +295,7 @@ DELETE /models/{MODEL_ID}
 
 ```shell
 curl -X DELETE \
-  https://platform.adobe.io/data/sensei/models/{MODEL_ID} \
+  https://platform.adobe.io/data/sensei/models/15c53796-bd6b-4e09-b51d-7296aa20af71 \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
     -H 'x-gw-ims-org-id: {IMS_ORG}' \
@@ -256,3 +313,163 @@ curl -X DELETE \
     "detail": "Model deletion was successful"
 }
 ```
+
+## 建立新的模型轉碼 {#create-transcoded-model}
+
+轉碼是將一種編碼直接數位轉換為另一種編碼。 通過提供和希望新輸出包含在中， `{MODEL_ID}` 可為模 `targetFormat` 型建立新的轉碼。
+
+**API格式**
+
+```http
+POST /models/{MODEL_ID}/transcodings
+```
+
+| 參數 | 說明 |
+| --- | --- |
+| `{MODEL_ID}` | 已訓練或已發佈模型的識別碼。 |
+
+**請求**
+
+```shell
+curl -X POST \
+  https://platform.adobe.io/data/sensei/models/15c53796-bd6b-4e09-b51d-7296aa20af71/transcodings \
+    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+    -H 'x-api-key: {API_KEY}' \
+    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-sandbox-name: {SANDBOX_NAME}' \
+    -H 'Content-Type: text/plain' \
+    -D '{
+ "id": "491a3be5-1d32-4541-94d5-cd1cd07affb5",
+ "modelId" : "15c53796-bd6b-4e09-b51d-7296aa20af71",
+ "targetFormat": "CoreML",
+ "created": "2019-12-16T19:59:08.360Z",
+ "createdBy": {
+    "userId": "FDD760CD5CD467380A495FE2@AdobeID"
+ },
+ "updated": "2019-12-19T18:37:43.696Z",
+ "deleted": false,
+}'
+```
+
+**回應**
+
+成功的回應會傳回包含JSON物件的裝載，並包含轉碼資訊。 這包括用於檢索特定轉碼模型`id`的轉碼唯 [一標識符()](#retrieve-transcoded-model)。
+
+```json
+{
+  "id": "491a3be5-1d32-4541-94d5-cd1cd07affb5",
+  "modelId": "15c53796-bd6b-4e09-b51d-7296aa20af71",
+  "targetFormat": "CoreML",
+  "created": "2020-06-12T22:01:55.886Z",
+  "createdBy": {
+    "userId": "FDD760CD5CD467380A495FE2@AdobeID"
+  },
+  "updated": "2020-06-12T22:01:55.886Z",
+  "deleted": false
+}
+```
+
+## 檢索模型的轉換清單 {#retrieve-transcoded-model-list}
+
+通過對您的GET請求執行GET，可以檢索已對模型執行的轉換的清單 `{MODEL_ID}`。
+
+**API格式**
+
+```http
+GET /models/{MODEL_ID}/transcodings
+```
+
+| 參數 | 說明 |
+| --- | --- |
+| `{MODEL_ID}` | 已訓練或已發佈模型的識別碼。 |
+
+**請求**
+
+```shell
+curl -X GET \
+  https://platform.adobe.io/data/sensei/models/15c53796-bd6b-4e09-b51d-7296aa20af71/transcodings \
+    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+    -H 'x-api-key: {API_KEY}' \
+    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-sandbox-name: {SANDBOX_NAME}'
+```
+
+**回應**
+
+成功的回應會傳回包含json物件的裝載，並列出在模型上執行的每個轉碼。 每個轉碼模型都會接收唯一識別碼(`id`)。
+
+```json
+{
+    "children": [
+        {
+            "id": "460aa5a1-e972-455d-b8dc-4bc6cd91edb6",
+            "modelId": "15c53796-bd6b-4e09-b51d-7296aa20af71",
+            "created": "2019-12-20T01:07:50.978Z",
+            "createdBy": {
+                "userId": "FDD760CD5CD467380A495FE2@AdobeID"
+            },
+            "updated": "2019-12-20T01:07:50.978Z",
+            "deprecated": false
+        },
+        {
+            "id": "bdb3e4c2-4702-4045-86b4-17ee40df91cc",
+            "modelId": "15c53796-bd6b-4e09-b51d-7296aa20af71",
+            "created": "2019-12-20T17:48:26.473Z",
+            "createdBy": {
+                "userId": "FDD760CD5CD467380A495FE2@AdobeID"
+            },
+            "updated": "2019-12-20T17:48:26.473Z",
+            "deprecated": false
+        }
+    ],
+    "_page": {
+        "property": "modelId==15c53796-bd6b-4e09-b51d-7296aa20af71,deleted==false,deprecated==false",
+        "count": 2
+    }
+}
+```
+
+## 檢索特定的轉碼模型 {#retrieve-transcoded-model}
+
+通過使用已轉碼模型的GET請求和ID來檢索特 `{MODEL_ID}` 定的已轉碼模型。
+
+**API格式**
+
+```http
+GET /models/{MODEL_ID}/transcodings/{TRANSCODING_ID}
+```
+
+| 參數 | 說明 |
+| --- | --- |
+| `{MODEL_ID}` | 已訓練或已發佈的模型的唯一識別碼。 |
+| `{TRANSCODING_ID}` | 轉碼模型的唯一識別碼。 |
+
+**請求**
+
+```shell
+curl -X GET \
+  https://platform.adobe.io/data/sensei/models/15c53796-bd6b-4e09-b51d-7296aa20af71/transcodings/460aa5a1-e972-455d-b8dc-4bc6cd91edb6 \
+    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+    -H 'x-api-key: {API_KEY}' \
+    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-sandbox-name: {SANDBOX_NAME}'
+```
+
+**回應**
+
+成功的回應會傳回包含JSON物件與轉碼模型資料的裝載。
+
+```json
+{
+    "id": "460aa5a1-e972-455d-b8dc-4bc6cd91edb6",
+    "modelId": "15c53796-bd6b-4e09-b51d-7296aa20af71",
+    "created": "2019-12-20T01:07:50.978Z",
+    "createdBy": {
+        "userId": "FDD760CD5CD467380A495FE2@AdobeID"
+    },
+    "updated": "2019-12-20T01:07:50.978Z",
+    "deprecated": false
+}
+```
+
+
