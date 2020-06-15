@@ -4,7 +4,10 @@ solution: Experience Platform
 title: 實驗
 topic: Developer guide
 translation-type: tm+mt
-source-git-commit: 01cfbc86516a05df36714b8c91666983f7a1b0e8
+source-git-commit: 63a128202826ec39911e70d34dda9dfb2bc585b2
+workflow-type: tm+mt
+source-wordcount: '744'
+ht-degree: 4%
 
 ---
 
@@ -13,7 +16,7 @@ source-git-commit: 01cfbc86516a05df36714b8c91666983f7a1b0e8
 
 模型開發與訓練是在實驗層級進行，其中實驗由MLInstance、訓練執行和計分執行組成。
 
-## 建立實驗
+## 建立實驗 {#create-an-experiment}
 
 您可以執行POST請求，同時在請求裝載中提供名稱和有效的MLInstance ID，以建立實驗。
 
@@ -64,7 +67,7 @@ curl -X POST \
 }
 ```
 
-## 建立並執行訓練或計分執行
+## 建立並執行訓練或計分執行 {#experiment-training-scoring}
 
 您可以執行POST請求並提供有效的實驗ID並指定執行任務，以建立訓練或計分執行。 只有在「實驗」有現有且成功的訓練執行時，才可建立計分執行。 成功建立培訓運行將初始化模型培訓過程，成功完成該過程將生成一個受培訓的模型。 產生已訓練的模型將取代任何先前現有的模型，使得實驗在任何指定時間只能使用單一已訓練的模型。
 
@@ -95,7 +98,7 @@ curl -X POST \
 
 | 屬性 | 說明 |
 | --- | --- |
-| `{TASK}` | 指定運行的任務。 將此值設為訓練 `train` 、計分 `score` 或功能管 `fp` 道的值。 |
+| `{TASK}` | 指定運行的任務。 將此值設為訓練 `train` 、計分 `score` 或功能管 `featurePipeline` 道的值。 |
 
 **回應**
 
@@ -216,7 +219,6 @@ curl -X GET \
     -H 'x-gw-ims-org-id: {IMS_ORG}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
-
 
 **回應**
 
