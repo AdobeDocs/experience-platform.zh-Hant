@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Adobe Experience Platform概觀
 topic: getting started
 translation-type: tm+mt
-source-git-commit: efc8598d14bcae9637ce80c25f1285d93aeee742
+source-git-commit: 19b67b57fa277c7ff85646a341cfb5dba1dd92e1
 workflow-type: tm+mt
-source-wordcount: '526'
-ht-degree: 3%
+source-wordcount: '637'
+ht-degree: 2%
 
 ---
 
@@ -21,6 +21,35 @@ ht-degree: 3%
 Adobe Experience Platform是市面上功能最強大、最靈活、最開放的系統，可協助您建立和管理能推動客戶體驗的完整解決方案。 Experience Platform可讓組織集中管理和標準化來自任何系統的客戶資料和內容，並套用資料科學和機器學習，大幅改善多樣化個人化體驗的設計和提供。
 
 Experience Platform以開放API為基礎，為開發人員提供系統的完整功能，支援使用熟悉工具輕鬆整合企業解決方案。 Experience Platform也支援合作夥伴視需要建立並整合其產品與技術。 這種強大的功能與彈性讓Experience Platform在市場上獨一無二。 它為合作夥伴、客戶和開發人員社群提供基礎，以建立推動體驗業務的創新： 透過從客戶及其個人偏好的360度全方位檢視中不斷改善、完全個人化的體驗，超越客戶期望。
+
+## 語言支援
+
+Adobe Experience Platform使用者介面和檔案提供多種語言版本。
+
+### 使用者介面語言
+
+Adobe Experience Platform使用者介面目前提供下列語言版本：
+
+* 英文
+* 法文
+* 德文
+* 日文
+
+您的預設使用者介面語言是由使用者描述檔中指定的地區所決定。 若要變更您的語言：
+
+>[!NOTE]
+>
+> 選取地區會決定Adobe.com上的語言和內容。
+
+1. 按一下Experience Platform介面頁尾中的目前語言。
+1. 在您的描述檔設定中，按一下「 **[!UICONTROL 變更地區」]**。
+1. 選擇您的地區。
+
+### 檔案語言
+
+Adobe Experience Platform檔案提供多種語言版本。 若要變更語言，請按一下語言下拉式清單並選取所要的語言。
+
+![image](assets/lang.jpg)
 
 ## Experience Platform 文件
 
@@ -58,7 +87,7 @@ Experience Platform檔案提供多種格式，以支援各種功能和服務。 
 
 * [**API基礎&#x200B;**](api-fundamentals.md)<br/>瞭解使用Platform API的基本知識。
 
-* [**API參考&#x200B;**](https://www.adobe.io/apis/experienceplatform/home/api-reference.html)<br/>Discover Experience Platform API，包括標題、參數、範例請求和回應。*這些檔案是在Adobe I/O上代管。*
+* [**API參考&#x200B;**](https://www.adobe.io/apis/experienceplatform/home/api-reference.html)<br/>Discover Experience Platform API，包括標題、參數、範例請求和回應。**
 
 
 
