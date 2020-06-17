@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 驗證及存取Experience Platform API
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 8c73363e88aab242ae258037deb80eeec872e519
+source-git-commit: 280456e68f54f49ce4a0134e226af89ad1f849a4
 workflow-type: tm+mt
-source-wordcount: '849'
+source-wordcount: '877'
 ht-degree: 1%
 
 ---
@@ -67,8 +67,9 @@ ht-degree: 1%
 
 ![](images/authentication/assign-user-details.png)
 
-
 ## 在Adobe Developer Console中產生存取認證
+
+>[!NOTE] 如果您從「隱私權服務開發人員指南」遵循本檔案 [](../privacy-service/api/getting-started.md)，現在可以返回該指南，以產生「隱私權服務」特有的存取憑證。
 
 使用Adobe Developer Console，您必須產生下列三種存取憑證：
 
