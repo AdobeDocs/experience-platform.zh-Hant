@@ -4,7 +4,10 @@ solution: Experience Platform
 title: 隱私權服務發行說明
 topic: release notes
 translation-type: tm+mt
-source-git-commit: 682436b29df4696e98ef96fe5a65ab32221098ba
+source-git-commit: 580cce74ab7da9547417a9e74e88b5ddab52171f
+workflow-type: tm+mt
+source-wordcount: '546'
+ht-degree: 5%
 
 ---
 
@@ -12,6 +15,8 @@ source-git-commit: 682436b29df4696e98ef96fe5a65ab32221098ba
 # 隱私權服務發行說明
 
 本檔案包含Adobe Experience Platform Privacy Service新功能的相關資訊，以及增強功能和重大錯誤修正。
+
+>[!NOTE] 如需其他Experience Platform服務的最新發行說明，請參閱 [這裡](../release-notes/latest/latest.md)。
 
 ## 2020 年 4 月 8 日
 
@@ -32,7 +37,7 @@ source-git-commit: 682436b29df4696e98ef96fe5a65ab32221098ba
 | 隱私權服務品牌重新塑造 | 此前稱為「GDPR服務」的服務已重新命名為「隱私服務」，因為除了GDPR外，該服務還不斷發展，以支援其他法規。 |
 | 新的API端點 | 隱私權服務API的基本路徑已從更新 `/data/privacy/gdpr` 為 `/data/core/privacy/jobs` |
 | 新的必要 `regulation` 屬性 | 在Privacy Service API中建立新工作時，必須在 `regulation` 請求裝載中提供屬性，以指出要追蹤工作的規則。 接受的值是 `gdpr` 和 `ccpa`。 如需詳細資訊，請 [參閱隱私權服務](api/privacy-jobs.md) 「開發人員指南」中有關隱私權工作的檔案。 |
-| 支援Adobe Primetime驗證 | 隱私權服務現在接受Adobe Primetime驗證的存取／刪除要求，並 `primetimeAuthentication` 以其產品價值為準。 如需詳細 [資訊，請參閱Primetime](http://tve.helpdocsonline.com/how-to-make-a-privacy-request) 驗證檔案。 |
+| 支援Adobe Primetime驗證 | 隱私權服務現在接受Adobe Primetime驗證的存取／刪除要求，並 `primetimeAuthentication` 以其產品價值為準。 See the [Primetime Authentication documentation](http://tve.helpdocsonline.com/how-to-make-a-privacy-request) for more information. |
 
 ### 增強功能
 
