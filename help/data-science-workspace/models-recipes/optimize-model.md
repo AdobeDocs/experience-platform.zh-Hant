@@ -4,21 +4,17 @@ solution: Experience Platform
 title: 最佳化模型
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 5699022d1f18773c81a0a36d4593393764cb771a
+source-git-commit: 7dc5075d3101b4780af92897c0381e73a9c5aef0
+workflow-type: tm+mt
+source-wordcount: '1242'
+ht-degree: 0%
 
 ---
 
 
-# 最佳化模型
+# 使用Model Insights框架優化模型
 
-
-本教學課程將逐一介紹：
-
-- 設定方式代碼
-- 定義自訂量度
-- 使用預先建立的評估度量和視覺化圖表
-
-在本教學課程結束時，您應該能夠設定方式代碼、定義自訂度量、使用預先建立的評估度量和預設視覺化圖表。
+模型洞察框架為資料科學家提供資料科學工作區中的工具，讓他們快速且知情地選擇以實驗為基礎的最佳機器學習模型。 該框架將提高機器學習工作流程的速度和效率，並改善資料科學家的使用便利性。 這是透過為每個機器學習演算法類型提供預設範本來協助模型調整來完成。 最終結果使資料科學家和公民資料科學家能夠為其最終客戶做出更好的模型優化決策。
 
 ## 什麼是量度？
 
@@ -27,10 +23,6 @@ source-git-commit: 5699022d1f18773c81a0a36d4593393764cb771a
 - 曲線下方的區域
 - 混淆矩陣
 - 分類報表
-
-## 什麼是Model Insights Framework?
-
-模型洞察框架為資料科學家提供資料科學工作區中的工具，讓他們快速且知情地選擇以實驗為基礎的最佳機器學習模型。 該框架將提高機器學習工作流程的速度和效率，並改善資料科學家的使用便利性。 這是透過為每個機器學習演算法類型提供預設範本來協助模型調整來完成。 最終結果使資料科學家和公民資料科學家能夠為其最終客戶做出更好的模型優化決策。
 
 ## 設定方式代碼
 
@@ -89,7 +81,7 @@ evaluation.metrics=com.adobe.platform.ml.impl.Constants.FSCORE
 
 #### Scala的自訂評估量度
 
-自訂求值器可延伸檔案中的介 `MLEvaluator.scala` 面來 `Evaluator.scala` 提供。 在範例 [Evaluator.scala](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/scala/src/main/scala/com/adobe/platform/ml/Evaluator.scala) 檔案中，我們定義自訂 `split()` 和函 `evaluate()` 數。 我們 `split()` 的函式會以8:2的比率隨機分割資料，而我們的函式會 `evaluate()` 定義並傳回3個量度：MAPE、MAE和RMSE。
+自訂求值器可延伸檔案中的介 `MLEvaluator.scala` 面來 `Evaluator.scala` 提供。 在範例 [Evaluator.scala](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/scala/src/main/scala/com/adobe/platform/ml/Evaluator.scala) 檔案中，我們定義自訂 `split()` 和函 `evaluate()` 數。 我們 `split()` 的函式會以8:2的比率隨機分割資料，而我們的函式會 `evaluate()` 定義並傳回3個量度： MAPE、MAE和RMSE。
 
 >[!IMPORTANT] 對於類 `MLMetric` 別，建立新量度時，請勿使用 `"measures"` , `valueType` 否則量度不會填 `MLMetric` 入自訂評估量度表格中。
 >  
@@ -145,7 +137,7 @@ class Evaluator(AbstractEvaluator):
 
 ### R {#r}
 
-目前，R沒有預設的評估量度。因此，若要取得R的評量度，您必須將類別定 `applicationEvaluator` 義為方式的一部分。
+目前，R沒有預設的評估量度。 因此，若要取得R的評量度，您必須將類別定 `applicationEvaluator` 義為方式的一部分。
 
 #### R的自訂評估量度
 
@@ -166,7 +158,7 @@ Sensei Model Insights Framework將支援每種機器學習演算法的一個預�
 --- | --- | ---
 | 回歸 | - RMSE<br>- MAPE<br>- MASE<br>- MAE | 預測與實際值覆蓋曲線 |
 | 二進位分類 | -混淆矩陣<br>- Precision-recall<br>- Accuracy<br>- F-score（具體是F1,F2）<br>- AUC<br>- ROC | ROC曲線與混淆矩陣 |
-| 多類別分類 | -混淆矩 <br>陣——對於每個類： <br>-精確召回精 <br>確性- F-score（具體是F1、F2） | ROC曲線與混淆矩陣 |
+| 多類別分類 | -混淆矩 <br>陣——對於每個類： <br>-精確召回準 <br>確性- F-score（具體是F1、F2） | ROC曲線與混淆矩陣 |
 | 叢集（含地面真值） | - NMI（標準化互資訊得分）、AMI（調整後互資訊得分）<br>- RI（Rand指數）、ARI（調整後蘭德指數）<br>-同質性得分、完整性得分和V-measure<br>- FMI（Fowlkes-Mallows指數）<br>- Preprity<br>- Jacard指數 | 具有相對簇大小的簇和中心的簇圖反映了簇內的資料點 |
 | 群集（無地面真值） | -慣性<br>-剪影系數<br>- CHI（Calinski-Harabaz指數）<br>- DBI（Davies-Bouldin指數）<br>- Dunn指數 | 具有相對簇大小的簇和中心的簇圖反映了簇內的資料點 |
 | 建議 | -平均平均精度(MAP) <br>-標準化累積增益 <br>-平均倒數排名 <br>-度量K | 待定 |
