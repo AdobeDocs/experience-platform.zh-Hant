@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 在UI中建立Azure資料總管來源連接器
 topic: overview
 translation-type: tm+mt
-source-git-commit: 2162c66b1664ecaaf0b609fe3f7ccf58c4a5d31d
+source-git-commit: 5ad763d2167c68f3293a2813248efaee22230a52
 workflow-type: tm+mt
-source-wordcount: '540'
+source-wordcount: '543'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 # 在UI中建立Azure資料總管來源連接器
 
 > [!NOTE]
-> Azure資料總管連接器正在測試中。 功能和檔案可能會有所變更。
+> Azure資料總管連接器正在測試中。 如需使用 [測試版標籤連接器的詳細資訊](../../../../home.md#terms-and-conditions) ，請參閱來源概觀。
 
 Adobe Experience Platform中的來源連接器可讓您依計畫吸收外部來源的資料。 本教學課程提供使用平台使用者介面建立Azure資料總管（以下稱為「資料總管」）來源連接器的步驟。
 
