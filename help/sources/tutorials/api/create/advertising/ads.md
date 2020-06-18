@@ -4,15 +4,18 @@ solution: Experience Platform
 title: 使用Flow Service API建立Google AdWords連接器
 topic: overview
 translation-type: tm+mt
-source-git-commit: 0ed2ed3b08f262100746f255a78c248a1748eb5e
+source-git-commit: b9e9207741044f118d53ab8eb3d3d6cd7451132d
 workflow-type: tm+mt
-source-wordcount: '632'
+source-wordcount: '650'
 ht-degree: 1%
 
 ---
 
 
 # 使用Flow Service API建立Google AdWords連接器
+
+>[!NOTE]
+>Google AdWords連接器是測試版。 如需使用 [測試版標籤連接器的詳細資訊](../../../../home.md#terms-and-conditions) ，請參閱來源概觀。
 
 Flow Service用於收集和集中Adobe Experience Platform內不同來源的客戶資料。 該服務提供用戶介面和REST風格的API，所有支援的源都可從中連接。
 
