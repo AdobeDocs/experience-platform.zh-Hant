@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 使用流服務API建立Amazon Kinesis連接器
 topic: overview
 translation-type: tm+mt
-source-git-commit: dcd6293a71178fee14647f5b2c8b56d03d1ec7df
+source-git-commit: 855f543a1cef394d121502f03471a60b97eae256
 workflow-type: tm+mt
-source-wordcount: '563'
+source-wordcount: '566'
 ht-degree: 2%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 2%
 # 使用流服務API建立Amazon Kinesis連接器
 
 >[!NOTE]
-> Amazon Kinesis連接器正在測試中。 功能和檔案可能會有所變更。
+>Amazon Kines連接器正在測試中。 如需使用 [測試版標籤連接器的詳細資訊](../../../../home.md#terms-and-conditions) ，請參閱來源概觀。
 
 Flow Service用於收集和集中Adobe Experience Platform內不同來源的客戶資料。 該服務提供用戶介面和REST風格的API，所有支援的源都可從中連接。
 
