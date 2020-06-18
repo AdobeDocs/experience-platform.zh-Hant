@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 使用Flow Service API建立HP Vertica連接器
 topic: overview
 translation-type: tm+mt
-source-git-commit: 0a2247a9267d4da481b3f3a5dfddf45d49016e61
+source-git-commit: e4ed6ae3ee668cd0db741bd07d2fb7be593db4c9
 workflow-type: tm+mt
-source-wordcount: '630'
+source-wordcount: '633'
 ht-degree: 3%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 3%
 # 使用Flow Service API建立HP Vertica連接器
 
 >[!NOTE]
->HP Vertica連接器正在測試中。 功能和檔案可能會有所變更。
+>HP Vertica連接器正在測試中。 如需使用 [測試版標籤連接器的詳細資訊](../../../../home.md#terms-and-conditions) ，請參閱來源概觀。
 
 Flow Service用於收集和集中Adobe Experience Platform內不同來源的客戶資料。 該服務提供用戶介面和REST風格的API，所有支援的源都可從中連接。
 
