@@ -4,15 +4,18 @@ solution: Experience Platform
 title: Google AdWords連接器
 topic: overview
 translation-type: tm+mt
-source-git-commit: f344b69ac7fc2c87880baf2ba47dce68b5a697f2
+source-git-commit: b9e9207741044f118d53ab8eb3d3d6cd7451132d
 workflow-type: tm+mt
-source-wordcount: '151'
+source-wordcount: '169'
 ht-degree: 0%
 
 ---
 
 
 # Google AdWords連接器
+
+>[!NOTE]
+>Google AdWords連接器是測試版。 如需使用 [測試版標籤連接器的詳細資訊](../../home.md#terms-and-conditions) ，請參閱來源概觀。
 
 Adobe Experience Platform可讓您從外部來源擷取資料，同時提供您使用平台服務來建構、標示及增強傳入資料的能力。 您可以從多種來源（例如Adobe應用程式、雲端儲存空間、資料庫等）擷取資料。
 
