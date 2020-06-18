@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 在Azure HDInsights的UI中建立Apache Spark來源連接器
 topic: overview
 translation-type: tm+mt
-source-git-commit: 2162c66b1664ecaaf0b609fe3f7ccf58c4a5d31d
+source-git-commit: 5ad763d2167c68f3293a2813248efaee22230a52
 workflow-type: tm+mt
-source-wordcount: '534'
+source-wordcount: '537'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 # 在Azure HDInsights的UI中建立Apache Spark來源連接器
 
 > [!NOTE]
-> Apache Spark on Azure HDInsights連接器為測試版。 功能和檔案可能會有所變更。
+> Apache Spark on Azure HDInsights連接器為測試版。 如需使用 [測試版標籤連接器的詳細資訊](../../../../home.md#terms-and-conditions) ，請參閱來源概觀。
 
 Adobe Experience Platform中的來源連接器可讓您依計畫吸收外部來源的資料。 本教學課程提供在Azure HDInsights來源連接器上使用平台使用者介面建立Apache Spark的步驟。
 
