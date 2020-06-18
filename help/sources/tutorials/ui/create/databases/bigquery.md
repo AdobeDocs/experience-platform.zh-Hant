@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 在UI中建立Google Big Query來源連接器
 topic: overview
 translation-type: tm+mt
-source-git-commit: 75ba0bce7ce070af851bbf7e220dbf08febc4c20
+source-git-commit: 5ad763d2167c68f3293a2813248efaee22230a52
 workflow-type: tm+mt
-source-wordcount: '524'
+source-wordcount: '527'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 # 在UI中建立Google Big Query來源連接器
 
 > [!NOTE]
-> Google BigQuery連接器正在測試中。 功能和檔案可能會有所變更。
+> Google BigQuery連接器正在測試中。 如需使用 [測試版標籤連接器的詳細資訊](../../../../home.md#terms-and-conditions) ，請參閱來源概觀。
 
 Adobe Experience Platform中的來源連接器可讓您依計畫吸收外部來源的資料。 本教學課程提供使用平台使用者介面來建立Google Big Query（以下稱為「GBQ」）來源連接器的步驟。
 
