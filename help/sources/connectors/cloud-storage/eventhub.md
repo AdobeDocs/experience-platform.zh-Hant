@@ -4,15 +4,18 @@ solution: Experience Platform
 title: Azure事件集線器連接器
 topic: overview
 translation-type: tm+mt
-source-git-commit: 1eb6883ec9b78e5d4398bb762bba05a61c0f8308
+source-git-commit: 855f543a1cef394d121502f03471a60b97eae256
 workflow-type: tm+mt
-source-wordcount: '177'
+source-wordcount: '196'
 ht-degree: 0%
 
 ---
 
 
 # （測試版）Azure事件集線器連接器
+
+>[!NOTE]
+>Azure事件集線器連接器處於測試狀態。 如需使用 [測試版標籤連接器的詳細資訊](../../home.md#terms-and-conditions) ，請參閱來源概觀。
 
 Adobe Experience Platform為AWS、Google Cloud Platform和Azure等雲端供應商提供原生連接功能。 您可以將這些系統的資料匯入平台。
 
