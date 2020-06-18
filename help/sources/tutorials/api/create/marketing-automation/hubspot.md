@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 使用Flow Service API建立HubSpot連接器
 topic: overview
 translation-type: tm+mt
-source-git-commit: 37a5f035023cee1fc2408846fb37d64b9a3fc4b6
+source-git-commit: 7328226b8349ffcdddadbd27b74fc54328b78dc5
 workflow-type: tm+mt
-source-wordcount: '627'
+source-wordcount: '630'
 ht-degree: 1%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 1%
 # 使用Flow Service API建立HubSpot連接器
 
 >[!NOTE]
->HubSpot連接器處於測試階段。 功能和檔案可能會有所變更。
+>HubSpot連接器處於測試階段。 如需使用 [測試版標籤連接器的詳細資訊](../../../../home.md#terms-and-conditions) ，請參閱來源概觀。
 
 Flow Service用於收集和集中Adobe Experience Platform內不同來源的客戶資料。 該服務提供用戶介面和REST風格的API，所有支援的源都可從中連接。
 
