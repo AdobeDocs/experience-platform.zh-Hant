@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Sensei Machine Learning API開發人員指南
 topic: Developer guide
 translation-type: tm+mt
-source-git-commit: 83e74ad93bdef056c8aef07c9d56313af6f4ddfd
+source-git-commit: 4f74acdc41d5049c1aa8eb3dfcef4e9d75c785ca
 workflow-type: tm+mt
 source-wordcount: '206'
 ht-degree: 2%
