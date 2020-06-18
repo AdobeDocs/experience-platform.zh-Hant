@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 使用流程服務API建立Azure事件集線器連接器
 topic: overview
 translation-type: tm+mt
-source-git-commit: fdffdd34d1ccb61d6c82fecc249ddeb501d79d0e
+source-git-commit: 855f543a1cef394d121502f03471a60b97eae256
 workflow-type: tm+mt
-source-wordcount: '590'
+source-wordcount: '593'
 ht-degree: 2%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 2%
 # 使用流程服務API建立Azure事件集線器連接器
 
 >[!NOTE]
-> Azure事件集線器連接器處於測試狀態。 功能和檔案可能會有所變更。
+> Azure事件集線器連接器處於測試狀態。 如需使用 [測試版標籤連接器的詳細資訊](../../../../home.md#terms-and-conditions) ，請參閱來源概觀。
 
 Flow Service用於收集和集中Adobe Experience Platform內不同來源的客戶資料。 該服務提供用戶介面和REST風格的API，所有支援的源都可從中連接。
 
