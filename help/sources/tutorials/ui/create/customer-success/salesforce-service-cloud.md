@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 在UI中建立Salesforce Service Cloud來源連接器
 topic: overview
 translation-type: tm+mt
-source-git-commit: 2162c66b1664ecaaf0b609fe3f7ccf58c4a5d31d
+source-git-commit: cada7c7eff7597015caa7333559bef16a59eab65
 workflow-type: tm+mt
-source-wordcount: '540'
+source-wordcount: '543'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 # 在UI中建立Salesforce Service Cloud來源連接器
 
 >[!NOTE]
->Salesforce Service Cloud連接器為測試版。 功能和檔案可能會有所變更。
+>Salesforce Service Cloud連接器為測試版。 如需使用 [測試版標籤連接器的詳細資訊](../../../../home.md#terms-and-conditions) ，請參閱來源概觀。
 
 Adobe Experience Platform中的來源連接器可讓您依計畫吸收外部來源的資料。 本教學課程提供使用平台使用者介面建立Salesforce Service Cloud（以下稱為「SSC」）來源連接器的步驟。
 
