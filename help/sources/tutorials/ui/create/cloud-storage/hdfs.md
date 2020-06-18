@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 在UI中建立Apache HDFS來源連接器
 topic: overview
 translation-type: tm+mt
-source-git-commit: adb9c46e7337897e2336971e58ebc90b0e497ea0
+source-git-commit: 855f543a1cef394d121502f03471a60b97eae256
 workflow-type: tm+mt
-source-wordcount: '485'
+source-wordcount: '490'
 ht-degree: 1%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 1%
 # 在UI中建立Apache HDFS來源連接器
 
 >[!NOTE]
->Apache HDFS正在測試中。 功能和檔案可能會有所變更。
+>Apache HDFS連接器正在測試中。 如需使用 [測試版標籤連接器的詳細資訊](../../../../home.md#terms-and-conditions) ，請參閱來源概觀。
 
 中的來源連 [!DNL Adobe Experience Platform] 接器可讓您依計畫接收外部來源的資料。 本教程提供使用用戶介面驗證Apache Hadoop分佈式檔案系統（以下稱為「HDFS」）源連接器的 [!DNL Platform] 步驟。
 
