@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 使用Flow Service API建立Salesforce Service Cloud連接器
 topic: overview
 translation-type: tm+mt
-source-git-commit: 0ed2ed3b08f262100746f255a78c248a1748eb5e
+source-git-commit: cada7c7eff7597015caa7333559bef16a59eab65
 workflow-type: tm+mt
-source-wordcount: '700'
+source-wordcount: '703'
 ht-degree: 1%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 1%
 # 使用Flow Service API建立Salesforce Service Cloud連接器
 
 >[!NOTE]
->Salesforce Service Cloud連接器為測試版。 功能和檔案可能會有所變更。
+>Salesforce Service Cloud連接器為測試版。 如需使用 [測試版標籤連接器的詳細資訊](../../../../home.md#terms-and-conditions) ，請參閱來源概觀。
 
 Flow Service用於收集和集中Adobe Experience Platform內不同來源的客戶資料。 該服務提供用戶介面和REST風格的API，所有支援的源都可從中連接。
 
