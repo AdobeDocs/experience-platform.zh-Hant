@@ -4,15 +4,18 @@ solution: Experience Platform
 title: 在UI中建立Google AdWords來源連接器
 topic: overview
 translation-type: tm+mt
-source-git-commit: e7211c9ebfd8fecff3780198d71e18436f3ffab3
+source-git-commit: b9e9207741044f118d53ab8eb3d3d6cd7451132d
 workflow-type: tm+mt
-source-wordcount: '519'
+source-wordcount: '537'
 ht-degree: 0%
 
 ---
 
 
 # 在UI中建立Google AdWords來源連接器
+
+>[!NOTE]
+>Google AdWords連接器是測試版。 如需使用 [測試版標籤連接器的詳細資訊](../../../../home.md#terms-and-conditions) ，請參閱來源概觀。
 
 Adobe Experience Platform中的來源連接器可讓您依計畫吸收外部來源的資料。 本教學課程提供使用平台使用者介面建立Google AdWords來源連接器的步驟。
 
