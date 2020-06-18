@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 在UI中建立PostgreSQL源連接器
 topic: overview
 translation-type: tm+mt
-source-git-commit: 0a2247a9267d4da481b3f3a5dfddf45d49016e61
+source-git-commit: 5ad763d2167c68f3293a2813248efaee22230a52
 workflow-type: tm+mt
-source-wordcount: '482'
+source-wordcount: '485'
 ht-degree: 1%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 1%
 # 在UI中建立PostgreSQL源連接器
 
 > [!NOTE]
-> PostgreSQL連接器處於測試版。 功能和檔案可能會有所變更。
+> PostgreSQL連接器處於測試版。 如需使用 [測試版標籤連接器的詳細資訊](../../../../home.md#terms-and-conditions) ，請參閱來源概觀。
 
 Adobe Experience Platform中的來源連接器可讓您依計畫吸收外部來源的資料。 本教程提供使用平台用戶介面建立PostgreSQL（以下稱為「PSQL」）源連接器的步驟。
 
