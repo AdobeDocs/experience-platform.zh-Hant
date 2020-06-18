@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 在UI中建立ServiceNow來源連接器
 topic: overview
 translation-type: tm+mt
-source-git-commit: 75ba0bce7ce070af851bbf7e220dbf08febc4c20
+source-git-commit: cada7c7eff7597015caa7333559bef16a59eab65
 workflow-type: tm+mt
-source-wordcount: '519'
+source-wordcount: '522'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 # 在UI中建立ServiceNow來源連接器
 
 >[!NOTE]
->ServiceNow連接器處於測試階段。 功能和檔案可能會有所變更。
+>ServiceNow連接器處於測試階段。 如需使用 [測試版標籤連接器的詳細資訊](../../../../home.md#terms-and-conditions) ，請參閱來源概觀。
 
 Adobe Experience Platform中的來源連接器可讓您依計畫吸收外部來源的資料。 本教學課程提供使用平台使用者介面建立ServiceNow來源連接器的步驟。
 
