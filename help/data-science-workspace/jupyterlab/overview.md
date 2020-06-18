@@ -4,10 +4,10 @@ solution: Experience Platform
 title: JupyterLab使用指南
 topic: Overview
 translation-type: tm+mt
-source-git-commit: 440310339003bf23c9fcfc69a6ec1eacddc9f413
+source-git-commit: 49f0678cf8bf4349d0b63f3525a1f707f725ede9
 workflow-type: tm+mt
-source-wordcount: '3672'
-ht-degree: 11%
+source-wordcount: '3782'
+ht-degree: 10%
 
 ---
 
@@ -44,7 +44,7 @@ Experience Platform的JupyterLab整合隨附架構變更、設計考量、自訂
 * **Sensei ML框架：** 模型開發具備訓練和評分資料的能力，而且只要按一下，就能建立配方。
 * **體驗資料模型(XDM):** 標準化和互操作性是Adobe Experience Platform的主要概念。 [Adobe推動的Experience Data Model(XDM)](https://www.adobe.com/go/xdm-home-en)，旨在標準化客戶體驗資料並定義客戶體驗管理的架構。
 
->[!NOTE] JupyterLab [!DNL Platform] 上的某些服務整合僅限於特定內核。 有關詳細資訊，請參 [閱](#kernels) 「內核」一節。
+>[!NOTE] JupyterLab [!DNL Platform] 上的某些服務整合僅限於特定內核。 有關詳細資訊，請參 [閱](#kernels) 「內核」部分。
 
 ## 主要功能與常用作業
 
@@ -227,6 +227,15 @@ JupyterLab上的每個活動筆記本或活動都使用內核會話。 從左側
 
 ![](../images/jupyterlab/user-guide/new_launcher.gif)
 
+### Python/R中的GPU和記憶體伺服器組態
+
+在 [!DNL JupyterLab] 中，選擇右上角的齒輪表徵圖以開啟「筆記本」( *Notebook)伺服器配置*。 您可以使用滑桿來切換GPU並分配所需的記憶體量。 可分配的記憶體量取決於您的組織已布建的記憶體量。 選擇 **[!UICONTROL 更新要保存]** 的配置。
+
+>[!NOTE]
+>每個組織只為筆記型電腦配置一個GPU。 如果GPU正在使用中，您需要等待目前已保留GPU的使用者釋放它。 若要這麼做，請登出或讓GPU處於閒置狀態達4小時以上。
+
+![](../images/jupyterlab/user-guide/notebook-gpu-config.png)
+
 ## 使用筆記本訪問平台資料
 
 每個支援的內核都提供內置功能，允許您從筆記本內的資料集中讀取平台資料。 但是，對分頁資料的支援僅限於Python和R筆記型電腦。
@@ -281,7 +290,7 @@ JupyterLab上的每個活動筆記本或活動都使用內核會話。 從左側
 | SDK（互動模式） | 33s | 32.4s | 55.1s | 253.5s | 489.2s | 729.6s | 1206.8s | - | - | - | - |
 | SDK（批次模式） | 815.8s | 492.8s | 379.1s | 637.4s | 624.5s | 869.2s | 1104.1s | 1786s | 5387.2s | 10624.6s | 50547s |
 
-**臨機架構：** 在互動模式下，您最多可在3分鐘內讀取10億行（磁碟上約1.05TB資料）的非XDM資料。 在批處理模式下，您應能在大約18分鐘內讀取非XDM資料的10億行（磁碟上約1.05TB資料）。
+**臨機架構：** 在交互模式下，您最多需要不到3分鐘的時間才能讀取10億行（磁碟上約1.05TB資料）的非XDM資料。 在批處理模式下，您應能在大約18分鐘內讀取非XDM資料的10億行（磁碟上約1.05TB資料）。
 
 | 行數 | 1K | 10K | 100K | 1M | 2M | 3M | 5M | 10M | 50M | 100M | 500M | 1B |
 |--------------|--------|---------|---------|-------|-------|-------|--------|--------|---------|--------|---------|-------|
