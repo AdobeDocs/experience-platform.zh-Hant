@@ -4,15 +4,18 @@ solution: Experience Platform
 title: FTP和SFTP連接器
 topic: overview
 translation-type: tm+mt
-source-git-commit: 0ed2ed3b08f262100746f255a78c248a1748eb5e
+source-git-commit: 855f543a1cef394d121502f03471a60b97eae256
 workflow-type: tm+mt
-source-wordcount: '182'
+source-wordcount: '201'
 ht-degree: 0%
 
 ---
 
 
 # （測試版）FTP和SFTP連接器
+
+>[!NOTE]
+>FTP和SFTP連接器為測試版。 如需使用 [測試版標籤連接器的詳細資訊](../../home.md#terms-and-conditions) ，請參閱來源概觀。
 
 Adobe Experience Platform為AWS、Google Cloud Platform和Azure等雲端供應商提供原生連接功能，讓您能夠從這些系統中取用資料。
 
