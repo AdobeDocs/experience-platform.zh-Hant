@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 在UI中建立Amazon Redshift源連接器
 topic: overview
 translation-type: tm+mt
-source-git-commit: 75ba0bce7ce070af851bbf7e220dbf08febc4c20
+source-git-commit: 5ad763d2167c68f3293a2813248efaee22230a52
 workflow-type: tm+mt
-source-wordcount: '503'
+source-wordcount: '506'
 ht-degree: 1%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 1%
 # 在UI中建立Amazon Redshift源連接器
 
 >此  [!NOTE]
->Amazon Redshift連接器處於測試階段。 功能和檔案可能會有所變更。
+>Amazon Redshift連接器處於測試階段。 如需使用 [測試版標籤連接器的詳細資訊](../../../../home.md#terms-and-conditions) ，請參閱來源概觀。
 
 Adobe Experience Platform中的來源連接器可讓您依計畫吸收外部來源的資料。 本教程提供了使用平台用戶介面建立Amazon Redshift（以下稱為「Redshift」）源連接器的步驟。
 
