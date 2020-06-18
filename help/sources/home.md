@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Adobe Experience Platform來源連接器概觀
 topic: overview
 translation-type: tm+mt
-source-git-commit: e5789a10c49b2933a0727692dedf2601a214dbc2
+source-git-commit: a9ce046d6ee8622e23f31edbbf777b045109c13b
 workflow-type: tm+mt
-source-wordcount: '763'
+source-wordcount: '906'
 ht-degree: 0%
 
 ---
@@ -120,3 +120,13 @@ Experience Platform支援從協力廠商通訊協定系統擷取資料。 有關
 | **關閉Sources** 並管 **理Sources** Off | 撤銷對來源的所有存取權。 |
 
 如需透過「管理控制台」授予之可用權限（包括這四個來源）的詳細資訊，請參閱存 [取控制概觀](../access-control/home.md)。
+
+## 條款與條件 {#terms-and-conditions}
+
+使用任何標示為測試版（「測試版」）的來源，即表示您承認測試版是「依現狀」提供， ***不提供任何類型的保證***。
+
+Adobe無義務維護、更正、更新、變更、修改或以其他方式支援測試版。 建議您務必小心謹慎，不要依賴測試版及／或隨附材料的正確運作或效能。 測試版視為Adobe的機密資訊。
+
+您提供給Adobe的任何「回饋」（有關測試版的資訊，包括但不限於您使用測試版時遇到的問題或缺陷、建議、改進和建議），茲此指派給Adobe，包括您對此等回饋的所有權利、所有權和興趣。
+
+提交開放意見或建立支援票證，以分享您的建議或報告錯誤，尋求功能增強功能。
