@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 在UI中建立HubSpot來源連接器
 topic: overview
 translation-type: tm+mt
-source-git-commit: 2162c66b1664ecaaf0b609fe3f7ccf58c4a5d31d
+source-git-commit: 7328226b8349ffcdddadbd27b74fc54328b78dc5
 workflow-type: tm+mt
-source-wordcount: '510'
+source-wordcount: '513'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 # 在UI中建立HubSpot來源連接器
 
 > [!NOTE]
-> HubSpot連接器處於測試階段。 功能和檔案可能會有所變更。
+> HubSpot連接器處於測試階段。 如需使用 [測試版標籤連接器的詳細資訊](../../../../home.md#terms-and-conditions) ，請參閱來源概觀。
 
 Adobe Experience Platform中的來源連接器可讓您依計畫吸收外部來源的資料。 本教學課程提供使用平台使用者介面建立HubSpot來源連接器的步驟。
 
@@ -69,4 +69,4 @@ Adobe Experience Platform中的來源連接器可讓您依計畫吸收外部來�
 
 ## 後續步驟
 
-在本教程中，您已建立了與HubSpot帳戶的基本連接。 您現在可以繼續下一個教學課程，並設 [定資料流，將行銷自動化系統資料匯入平台](../../dataflow/marketing-automation.md)。
+在本教程中，您建立了與HubSpot帳戶的基本連接。 您現在可以繼續下一個教學課程，並設 [定資料流，將行銷自動化系統資料匯入平台](../../dataflow/marketing-automation.md)。
