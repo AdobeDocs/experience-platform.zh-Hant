@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 使用流程服務API建立Azure檔案儲存連接器
 topic: overview
 translation-type: tm+mt
-source-git-commit: 0ed2ed3b08f262100746f255a78c248a1748eb5e
+source-git-commit: c843ebb72ee3f1e8d2233dd2be4021403417813b
 workflow-type: tm+mt
-source-wordcount: '622'
+source-wordcount: '626'
 ht-degree: 1%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 1%
 # 使用流程服務API建立Azure檔案儲存連接器
 
 >[!NOTE]
->Azure檔案儲存連接器正在測試中。 功能和檔案可能會有所變更。
+>Azure檔案儲存連接器正在測試中。 如需使用 [測試版標籤連接器的詳細資訊](../../../../home.md#terms-and-conditions) ，請參閱來源概觀。
 
 Flow Service用於收集和集中Adobe Experience Platform內不同來源的客戶資料。 該服務提供用戶介面和REST風格的API，所有支援的源都可從中連接。
 
