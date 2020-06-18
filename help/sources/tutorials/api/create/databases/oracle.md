@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 使用流服務API建立Oracle連接器
 topic: overview
 translation-type: tm+mt
-source-git-commit: c04106b42bef92344fb0474a986ec7dfd64a17d9
+source-git-commit: e4ed6ae3ee668cd0db741bd07d2fb7be593db4c9
 workflow-type: tm+mt
-source-wordcount: '555'
+source-wordcount: '558'
 ht-degree: 2%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 2%
 # 使用流服務API建立Oracle連接器
 
 >[!NOTE]
->Oracle連接器處於測試階段。 功能和檔案可能會有所變更。
+>Oracle連接器處於測試階段。 如需使用 [測試版標籤連接器的詳細資訊](../../../../home.md#terms-and-conditions) ，請參閱來源概觀。
 
 Flow Service用於收集和集中Adobe Experience Platform內不同來源的客戶資料。 該服務提供用戶介面和REST風格的API，所有支援的源都可從中連接。
 
