@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 在UI中建立Azure事件集線器來源連接器
 topic: overview
 translation-type: tm+mt
-source-git-commit: 75581529ede3772606bc18fea683da5d396996c5
+source-git-commit: 855f543a1cef394d121502f03471a60b97eae256
 workflow-type: tm+mt
-source-wordcount: '473'
+source-wordcount: '476'
 ht-degree: 1%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 1%
 # 在UI中建立Azure事件集線器來源連接器
 
 >[!NOTE]
-> Azure事件集線器連接器處於測試狀態。 功能和檔案可能會有所變更。
+> Azure事件集線器連接器處於測試狀態。 如需使用 [測試版標籤連接器的詳細資訊](../../../../home.md#terms-and-conditions) ，請參閱來源概觀。
 
 Adobe Experience Platform中的來源連接器可讓您依計畫吸收外部來源的資料。 本教學課程提供使用平台使用者介面驗證Azure事件集線器（以下稱為「事件集線器」）來源連接器的步驟。
 
