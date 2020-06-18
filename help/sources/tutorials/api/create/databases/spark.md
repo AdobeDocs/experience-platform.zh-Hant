@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 在Azure HDInsights上使用Flow Service API建立Apache Spark連接器
 topic: overview
 translation-type: tm+mt
-source-git-commit: 37a5f035023cee1fc2408846fb37d64b9a3fc4b6
+source-git-commit: e4ed6ae3ee668cd0db741bd07d2fb7be593db4c9
 workflow-type: tm+mt
-source-wordcount: '614'
+source-wordcount: '617'
 ht-degree: 1%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 1%
 # 在Azure HDInsights上使用Flow Service API建立Apache Spark連接器
 
 >[!NOTE]
->Apache Spark on Azure HDInsights連接器為測試版。 功能和檔案可能會有所變更。
+>Apache Spark on Azure HDInsights連接器為測試版。 如需使用 [測試版標籤連接器的詳細資訊](../../../../home.md#terms-and-conditions) ，請參閱來源概觀。
 
 Flow Service用於收集和集中Adobe Experience Platform內不同來源的客戶資料。 該服務提供用戶介面和REST風格的API，所有支援的源都可從中連接。
 
