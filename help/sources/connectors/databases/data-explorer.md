@@ -4,15 +4,18 @@ solution: Experience Platform
 title: Azure資料總管連接器
 topic: overview
 translation-type: tm+mt
-source-git-commit: 45ce6e876a42c5594ae4b7787757e5db7024a22f
+source-git-commit: b92f33627636b351dbd7b490e461d4f6b2866310
 workflow-type: tm+mt
-source-wordcount: '141'
+source-wordcount: '160'
 ht-degree: 0%
 
 ---
 
 
 # （測試版）Azure資料總管連接器
+
+>[!NOTE]
+>Azure資料總管連接器正在測試中。 如需使用 [測試版標籤連接器的詳細資訊](../../home.md#terms-and-conditions) ，請參閱來源概觀。
 
 Adobe Experience Platform為Microsoft、MySQL和Azure等資料庫提供者提供原生連接。 您可以將這些系統的資料匯入平台。
 
