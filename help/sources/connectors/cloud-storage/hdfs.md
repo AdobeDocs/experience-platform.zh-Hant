@@ -4,15 +4,18 @@ solution: Experience Platform
 title: HDFS連接器
 topic: overview
 translation-type: tm+mt
-source-git-commit: e11900146c67d6af05528af6993a8d67eba43b82
+source-git-commit: 855f543a1cef394d121502f03471a60b97eae256
 workflow-type: tm+mt
-source-wordcount: '131'
+source-wordcount: '149'
 ht-degree: 0%
 
 ---
 
 
 # （測試版）Apache HDFS連接器
+
+>[!NOTE]
+>Apache HDFS連接器正在測試中。 如需使用 [測試版標籤連接器的詳細資訊](../../home.md#terms-and-conditions) ，請參閱來源概觀。
 
 Adobe Experience Platform為AWS、Google Cloud Platform和Azure等雲端供應商提供原生連接功能，讓您能夠從這些系統中取用資料。 收錄的資料可格式化為JSON、鑲木地板或分隔字元。 雲端儲存空間供應商的支援包括Apache HDFS。
 
