@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 在UI中建立HP Vertica來源連接器
 topic: overview
 translation-type: tm+mt
-source-git-commit: 0a2247a9267d4da481b3f3a5dfddf45d49016e61
+source-git-commit: 5ad763d2167c68f3293a2813248efaee22230a52
 workflow-type: tm+mt
-source-wordcount: '509'
+source-wordcount: '512'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 # 在UI中建立HP Vertica來源連接器
 
 > [!NOTE]
-> HP Vertica連接器正在測試中。 功能和檔案可能會有所變更。
+> HP Vertica連接器正在測試中。 如需使用 [測試版標籤連接器的詳細資訊](../../../../home.md#terms-and-conditions) ，請參閱來源概觀。
 
 Adobe Experience Platform中的來源連接器可讓您依計畫吸收外部來源的資料。 本教學課程提供使用Platform使用者介面建立HP Vertica來源連接器的步驟。
 
