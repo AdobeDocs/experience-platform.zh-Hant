@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 在UI中建立Amazon Kinesis源連接器
 topic: overview
 translation-type: tm+mt
-source-git-commit: dcd6293a71178fee14647f5b2c8b56d03d1ec7df
+source-git-commit: 855f543a1cef394d121502f03471a60b97eae256
 workflow-type: tm+mt
-source-wordcount: '451'
+source-wordcount: '454'
 ht-degree: 1%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 1%
 # 在UI中建立Amazon Kinesis源連接器
 
 >[!NOTE]
-> Amazon Kinesis連接器正在測試中。 功能和檔案可能會有所變更。
+>Amazon Kinesis連接器正在測試中。 如需使用 [測試版標籤連接器的詳細資訊](../../../../home.md#terms-and-conditions) ，請參閱來源概觀。
 
 Adobe Experience Platform中的來源連接器可讓您依計畫吸收外部來源的資料。 本教程提供了使用平台用戶介面驗證Amazon Kinesis（以下稱為「Kinesis」）源連接器的步驟。
 
