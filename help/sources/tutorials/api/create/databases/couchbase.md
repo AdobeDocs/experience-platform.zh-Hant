@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 使用Flow Service API建立Couchbase連接器
 topic: overview
 translation-type: tm+mt
-source-git-commit: e5789a10c49b2933a0727692dedf2601a214dbc2
+source-git-commit: e4ed6ae3ee668cd0db741bd07d2fb7be593db4c9
 workflow-type: tm+mt
-source-wordcount: '551'
+source-wordcount: '554'
 ht-degree: 2%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 2%
 # 使用Flow Service API建立Couchbase連接器
 
 >[!NOTE]
->Couchbase連接器為測試版。 功能和檔案可能會有所變更。
+>Couchbase連接器為測試版。 如需使用 [測試版標籤連接器的詳細資訊](../../../../home.md#terms-and-conditions) ，請參閱來源概觀。
 
 Flow Service可用來收集和集中來自不同來源的客戶資料，並將之匯入Adobe Experience Platform。 該服務提供用戶介面和REST風格的API，所有支援的源都可從中連接。
 
