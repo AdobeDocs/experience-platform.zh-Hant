@@ -4,9 +4,9 @@ seo-title: Google Display & Video 360 Destination
 description: Display & Video 360（先前稱為DoubleClick競標管理器）是一種工具，用於在顯示、視訊和行動庫存來源中執行重新鎖定目標及受眾目標數位促銷活動。
 seo-description: 'Display & Video 360（先前稱為DoubleClick競標管理器）是一種工具，用於在顯示、視訊和行動庫存來源中執行重新鎖定目標及受眾目標數位促銷活動。 '
 translation-type: tm+mt
-source-git-commit: dc5ee796ca390d06fc8e08bd6c30e88a0d96dd53
+source-git-commit: 3c598454a868139b7604c5c7ca2b98fa0f1bb961
 workflow-type: tm+mt
-source-wordcount: '586'
+source-wordcount: '668'
 ht-degree: 0%
 
 ---
@@ -49,14 +49,15 @@ Display &amp; Video 360（舊稱DoubleClick競標管理器）是一種工具，�
 1. 在「連 **[!UICONTROL 線>目的地]**」中，選取「Google顯示與視訊360」，然後選取「 **[!UICONTROL 建立目的地」]**。
    ![Connect Google Display &amp; Video 360目標](/help/rtcdp/destinations/assets/google-dv360-destination.png)
 
-2. 在「建立目標」工作流程中，填入目 [!UICONTROL 標的「基本] 」資訊。 <br>
-   ![基本資訊Google Display &amp; Video 360](/help/rtcdp/destinations/assets/google-dv360-basic-information.png)
+2. 在建 **立目標工作流程的** 「設定」步驟中，填寫目標的「基本資訊  」，以及應套用至此目標的行銷使用案例。 <br>
+   ![基本資訊Google Display &amp; Video 360](/help/rtcdp/destinations/assets/dv360-setup-step.png)
 * **[!UICONTROL 名稱]**: 填寫此目標的首選名稱。
 * **[!UICONTROL 說明]**: 可選。 例如，您可以提及您使用此目的地的促銷活動。
 * **[!UICONTROL 帳戶類型]**: 根據您使用Google的帳戶，選取一個選項：
    * 使用 `Invite Advertiser` 可讓觀眾僅分享至您「顯示與視訊360」帳戶中的特定品牌。
    * 使用 `Invite Partner` 可讓觀眾分享至您「顯示與視訊360」帳戶中的所有品牌。
 * **[!UICONTROL 帳戶ID]**: 使用Google填 **[!DNL Invite partner]** 寫您 **[!DNL Invite advertiser]** 或帳戶ID。 通常為6或7位數的ID。
+* **[!UICONTROL 行銷使用案例]**: 行銷使用案例會指出將資料匯出至目的地的方式。 您可以從Adobe定義的行銷使用案例中選擇，也可以建立自己的行銷使用案例。 有關行銷使用案例的詳細資訊，請參 [閱即時CDP中的資料治理頁](/help/rtcdp/privacy/data-governance-overview.md#destinations) 。 如需個別Adobe定義之行銷使用案例的詳細資訊，請參閱「資 [料使用政策」概觀](/help/data-governance/policies/overview.md#core-actions)。
 
 >[!NOTE]
 >
