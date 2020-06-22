@@ -4,9 +4,9 @@ seo-title: Google廣告管理員目標
 description: 'Google Ad Manager之前稱為DoubleClick for Publishers或DoubleClick AdX，是來自谷歌的廣告服務平台，可讓出版業者透過視訊和行動應用程式管理其網站上的廣告展示。 '
 seo-description: 'Google Ad Manager之前稱為DoubleClick for Publishers或DoubleClick AdX，是來自谷歌的廣告服務平台，可讓出版業者透過視訊和行動應用程式管理其網站上的廣告展示。 '
 translation-type: tm+mt
-source-git-commit: dc5ee796ca390d06fc8e08bd6c30e88a0d96dd53
+source-git-commit: 3c598454a868139b7604c5c7ca2b98fa0f1bb961
 workflow-type: tm+mt
-source-wordcount: '599'
+source-wordcount: '668'
 ht-degree: 0%
 
 ---
@@ -51,18 +51,19 @@ Google Ad Manager之前稱為DoubleClick for Publishers或DoubleClick AdX，是�
 1. 在「連 **[!UICONTROL 線>目的地]**」中，選取「Google廣告管理員」，然後選取「 **[!UICONTROL 建立目的地」]**。
    ![Connect Google Ad Manager目標](/help/rtcdp/destinations/assets/google-1-destination.png)
 
-2. 在「建立目標」工作流程中，填入目 [!UICONTROL 標的「基本] 」資訊。 <br>
-   ![基本資訊Google廣告管理員](/help/rtcdp/destinations/assets/google-1-basic-information.png)
+2. 在建立 **目標工作流的** 「設定」步驟中，填寫目標的 [!UICONTROL 「基本資訊] 」。 <br>
+   ![基本資訊Google廣告管理員](/help/rtcdp/destinations/assets/ad-manager-setup-step.png)
 * **[!UICONTROL 名稱]**: 填寫此目標的首選名稱。
 * **[!UICONTROL 說明]**: 可選。 例如，您可以提及您使用此目的地的促銷活動。
 * **[!UICONTROL 帳戶類型]**: 根據您使用Google的帳戶，選取一個選項：
    * DoubleClick `DFP by Google` for Publishers的使用
    * 用 `AdX buyer` 於Google AdX
 * **[!UICONTROL 帳戶ID]**: 使用Google填寫您的帳戶ID。 這可以是您的網路ID或對象連結ID。 通常，這是8位數的ID。
+* **[!UICONTROL 行銷使用案例]**: 行銷使用案例會指出將資料匯出至目的地的方式。 您可以從Adobe定義的行銷使用案例中選擇，也可以建立自己的行銷使用案例。 有關行銷使用案例的詳細資訊，請參 [閱即時CDP中的資料治理頁](/help/rtcdp/privacy/data-governance-overview.md#destinations) 。 如需個別Adobe定義之行銷使用案例的詳細資訊，請參閱「資 [料使用政策」概觀](/help/data-governance/policies/overview.md#core-actions)。
 
->[!NOTE]
+> [!NOTE]
 >
->設定Google廣告管理員目標時，請與您的Google客戶經理或Adobe代表合作，以瞭解您擁有的帳戶類型。
+> 設定Google廣告管理員目標時，請與您的Google客戶經理或Adobe代表合作，以瞭解您擁有的帳戶類型。
 
 ## 啟用區段至Google廣告管理員
 
