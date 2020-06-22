@@ -4,12 +4,15 @@ solution: Experience Platform
 title: 建立資料使用原則
 topic: policies
 translation-type: tm+mt
-source-git-commit: da4fe8be360d5530d96078e4ef024bccf7f080f5
+source-git-commit: ba9d4b31cfc3b7924879a91bd125f72159e55fc4
+workflow-type: tm+mt
+source-wordcount: '1216'
+ht-degree: 2%
 
 ---
 
 
-# 建立資料使用原則
+# 在API中建立資料使用原則
 
 資料使用標籤與實施(DULE)是Adobe Experience Platform資料治理的核心機制。 DULE Policy Service API [](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) （DULE原則服務API）可讓您建立和管理DULE原則，以決定可針對包含特定DULE標籤的資料採取哪些行銷動作。
 
@@ -19,10 +22,10 @@ source-git-commit: da4fe8be360d5530d96078e4ef024bccf7f080f5
 
 本教程需要對建立和評估DULE策略時涉及的以下關鍵概念有充分的瞭解：
 
-* [資料治理](../home.md):平台實施資料使用合規性的框架。
-* [資料使用標籤](../labels/overview.md):資料使用標籤會套用至XDM資料欄位，指定資料存取限制。
-* [體驗資料模型(XDM)](../../xdm/home.md):平台組織客戶體驗資料的標準化架構。
-* [沙盒](../../sandboxes/home.md):Experience Platform提供虛擬沙盒，可將單一Platform實例分割為不同的虛擬環境，以協助開發和發展數位體驗應用程式。
+* [資料治理](../home.md): 平台實施資料使用合規性的框架。
+* [資料使用標籤](../labels/overview.md): 資料使用標籤會套用至XDM資料欄位，指定資料存取限制。
+* [體驗資料模型(XDM)](../../xdm/home.md): 平台組織客戶體驗資料的標準化架構。
+* [沙盒](../../sandboxes/home.md): Experience Platform提供虛擬沙盒，可將單一Platform實例分割為不同的虛擬環境，以協助開發和發展數位體驗應用程式。
 
 在開始本教學課程之前，請先閱讀開發人員指南 [](../api/getting-started.md) ，以取得成功呼叫DULE Policy Service API所需的重要資訊，包括必要的標題以及如何讀取範例API呼叫。
 
@@ -154,7 +157,7 @@ curl -X PUT \
 
 | 屬性 | 說明 |
 | --- | --- |
-| `name` | 您要建立之行銷動作的名稱。 此名稱必須符合請求路徑中提供的名稱，否則將發生400（錯誤請求）錯誤。 |
+| `name` | 您要建立之行銷動作的名稱。 此名稱必須符合請求路徑中提供的名稱，否則將會發生400（錯誤請求）錯誤。 |
 | `description` | 行銷動作的可人讀描述。 |
 
 **回應**
