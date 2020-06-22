@@ -4,9 +4,9 @@ solution: Adobe Experience Platform
 title: 即時客戶基本資料使用指南
 topic: guide
 translation-type: tm+mt
-source-git-commit: da3793a528fa919633e777423d77e7be9cbc0154
+source-git-commit: 4589d0cdca36992feea208850abdda1a9dc246c0
 workflow-type: tm+mt
-source-wordcount: '1206'
+source-wordcount: '1208'
 ht-degree: 0%
 
 ---
@@ -32,19 +32,21 @@ ht-degree: 0%
 
 ![](../images/user-guide/profiles-overview.png)
 
-## 描述檔瀏覽
+## 瀏覽
 
-按一下「 **瀏覽** 」標籤，以依身分瀏覽描述檔。
+選擇「瀏 *覽* 」頁籤，以便按身份瀏覽配置檔案。
+
+![](../images/user-guide/profiles-browse.png)
 
 ### 描述檔度量 {#profile-metrics}
 
-在「瀏覽」標籤的右側，有幾個與您的描述檔資料相關的重要描述檔度量，包括您的 **描述檔總計** ，以及依命名空間 [的描述檔清單](#profile-count)[](#profiles-by-namespace)。
+在「瀏覽」標籤的右側是幾個與您的描述檔資料相關的重要度量，包括您的 *描述檔總數* ，以及依命名空間 [的描述檔清單](#profile-count)[](#profiles-by-namespace)。
 
 這些描述檔度量會使用您組織的預設合併原則來評估。 有關使用合併策略的詳細資訊，包括如何定義預設合併策略，請參閱合 [並策略使用手冊](merge-policies.md)。
 
 除了這些量度外，描述檔量度區段也提供「上次更新 *的日期* 」和時間，顯示上次評估量度的時間。
 
-![](../images/user-guide/profiles-browse.png)
+![](../images/user-guide/profiles-profile-metrics.png)
 
 ### 描述檔計數 {#profile-count}
 
@@ -92,13 +94,13 @@ ht-degree: 0%
 
 ![](../images/user-guide/profiles-profile-detail.png)
 
-您可以檢視與描述檔相關的其他資訊，包括描述檔所屬的屬性、事件和區段。
+您可以檢視與描述檔相關的其他資訊，包括 *描述檔所屬*、事件和 **** 區段。
 
 ![](../images/user-guide/profiles-attributes-events-segments.png)
 
 ## 合併原則
 
-按一下 **合併策略** ，查看屬於您組織的合併策略清單。 每個列出的策略都顯示其名稱，無論它是否是預設合併策略，以及它所應用的方案。
+選擇「合 *並策略* 」頁籤可查看屬於您組織的合併策略清單。 每個列出的策略都顯示其名稱，無論它是否是預設合併策略，以及它所應用的方案。
 
 有關合併策略的詳細資訊，請參閱合 [並策略使用手冊](merge-policies.md)。
 
@@ -106,7 +108,7 @@ ht-degree: 0%
 
 ## 聯合模式
 
-按一下 **Union Schema** （聯合方案）查看配置檔案儲存的聯合方案。 聯合模式是同一類下所有Experience Data Model(XDM)欄位的合併，該類中的模式可用於即時客戶配置檔案。 按一下左側清單中的類別，在畫布中檢視其聯合架構的結構。
+選擇「 *聯合方案* 」頁籤，查看配置檔案儲存的聯合方案。 聯合模式是同一類下所有Experience Data Model(XDM)欄位的合併，該類中的模式可用於即時客戶配置檔案。 在左側清單中選擇一個類，以在畫布中查看其聯合架構的結構。
 
 例如，選擇「XDM配置檔案」會顯示XDM單個配置檔案類的聯合模式。
 
