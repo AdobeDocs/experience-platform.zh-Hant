@@ -4,9 +4,9 @@ seo-title: 雲端儲存目標工作流程
 description: 連線至雲端儲存空間的指示
 seo-description: 連線至雲端儲存空間的指示
 translation-type: tm+mt
-source-git-commit: 37c51435ce8330dbd61857bda408df03ff21a491
+source-git-commit: 3c598454a868139b7604c5c7ca2b98fa0f1bb961
 workflow-type: tm+mt
-source-wordcount: '329'
+source-wordcount: '503'
 ht-degree: 0%
 
 ---
@@ -31,13 +31,22 @@ ht-degree: 0%
    ![連線至雲端儲存空間目標——驗證步驟](/help/rtcdp/destinations/assets/cloud-destinations-authentication-step.png)
 
 3. 在「設 **[!UICONTROL 定]** 」步驟中，輸入啟 **[!UICONTROL 動流程的「名稱]** 」 **[!UICONTROL 和「說明]** 」。 <br>
+此外，您也可以在此步驟中選取 **[!UICONTROL 任何應套用至此目的地的Marketing]** 使用案例。 行銷使用案例會指出將資料匯出至目的地的方式。 您可以從Adobe定義的行銷使用案例中選擇，也可以建立自己的行銷使用案例。 有關行銷使用案例的詳細資訊，請參 [閱即時CDP中的資料治理頁](/help/rtcdp/privacy/data-governance-overview.md#destinations) 。 如需個別Adobe定義之行銷使用案例的詳細資訊，請參閱「資 [料使用政策」概觀](/help/data-governance/policies/overview.md#core-actions)。 <br>
 對於Amazon S3目標，請將儲 **[!UICONTROL 存貯體名稱]****** 、資料夾路徑插入雲端儲存目的地，以便傳送檔案。 在填 **[!UICONTROL 入上述欄位後]** ，選取「建立目標」。
 
-   ![連線至Amazon S3雲端儲存空間目標——驗證步驟](/help/rtcdp/destinations/assets/cloud-destinations-setup-step.png)
+   ![連線至Amazon S3雲端儲存空間目標——驗證步驟](/help/rtcdp/destinations/assets/amazon-s3-setup-step.png)
 
-   對於SFTP目標，插入 **[!UICONTROL 要傳送檔案的資料夾路徑]** 。
+   對於SFTP目標，插入 **[!UICONTROL 要傳送檔案的資料夾路徑]** 。 在填 **[!UICONTROL 入上述欄位後]** ，選取「建立目標」。
 
    ![連線至SFTP雲端儲存空間目標——驗證步驟](/help/rtcdp/destinations/assets/sftp-destinations-setup-step.png)
+
+   對於Amazon Kinesis目標，請提供帳戶中現有資料流的名 [!DNL Amazon Kinesis] 稱。 Adobe即時CDP會將資料匯出至此串流。 在填 **[!UICONTROL 入上述欄位後]** ，選取「建立目標」。
+
+   ![連接到Kinesis雲儲存目標——驗證步驟](/help/rtcdp/destinations/assets/kinesis-destinations-setup-step.png)
+
+   對於Azure事件中樞目的地，請提供您帳戶中現有資料流的名 [!DNL Amazon Kinesis] 稱。 Adobe即時CDP會將資料匯出至此串流。 在填 **[!UICONTROL 入上述欄位後]** ，選取「建立目標」。
+
+   ![連接到Kinesis雲儲存目標——驗證步驟](/help/rtcdp/destinations/assets/eventhubs-destinations-setup-step.png)
 
 4. 您的目標現在已建立。 如果您想 **[!UICONTROL 稍後啟動區段]** ，可以選取「儲存並退出」，或選取「下一步 **** 」以繼續工作流程，並選取要啟動的區段。 在這兩種情況下，請參閱下一 [節「啟用區段](#activate-segments)」，以匯出資料的其餘工作流程。
 
