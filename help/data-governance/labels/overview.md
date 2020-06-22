@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 資料使用標籤概觀
 topic: labels
 translation-type: tm+mt
-source-git-commit: 4b6b9ca5ae7861f8e8b974550be14fbce6efdcf1
+source-git-commit: e3c69589e0d4f8224b74a663b23f67e6731ddec4
 workflow-type: tm+mt
 source-wordcount: '365'
 ht-degree: 0%
@@ -33,6 +33,14 @@ ht-degree: 0%
 除了繼承資料集層級標籤外，依預設，區段會繼承其關聯資料集的所有欄位層級標籤。 根據您的平台應用程式使用區段的方式，您可能會指定使用哪些欄位，從而防止區段繼承排除欄位的標籤。
 
 有關自動強制執行在即時CDP中如何運作的詳細資訊，請參 [見即時CDP資料治理概述](../../rtcdp/privacy/data-governance-overview.md#enforce-data-usage-compliance)。
+
+<!-- (Add after DEC mapping reference is added to AAM docs to link out to)
+### Inheritance from Adobe Audience Manager Data Export Controls
+
+Experience Platform has the ability to share segments with Adobe Audience Manager. Any Data Export Controls that have been applied to Audience Manager segments are translated to equivalent labels and marketing actions recognized by Experience Platform Data Governance.
+
+For a reference on how specific Data Export Controls map to data usage labels in Platform, please refer to the [Audience Manager documentation](https://docs.adobe.com/content/help/en/audience-manager/user-guide/features/data-export-controls.html).
+-->
 
 ## 後續步驟
 
