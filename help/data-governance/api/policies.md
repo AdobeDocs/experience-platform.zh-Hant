@@ -4,7 +4,10 @@ solution: Experience Platform
 title: 策略
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 08d02e7323f75c450e7a250835f26a569685cdd1
+source-git-commit: ba9d4b31cfc3b7924879a91bd125f72159e55fc4
+workflow-type: tm+mt
+source-wordcount: '866'
+ht-degree: 1%
 
 ---
 
@@ -130,7 +133,7 @@ curl -X GET \
 }
 ```
 
-## 查找特定策略
+## 查找策略
 
 每個策略都包 `id` 含一個欄位，可用於請求特定策略的詳細資訊。 如果 `id``core``custom`策略未知，則可使用列出(GET)請求列出特定容器（或）內的所有策略，如上一步所示。
 
