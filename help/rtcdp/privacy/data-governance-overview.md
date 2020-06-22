@@ -4,9 +4,9 @@ seo-title: 即時客戶資料平台中的資料治理
 description: '「資料管理」可讓您管理客戶資料，並確保符合適用於資料使用的法規、限制和政策。 '
 seo-description: '「資料管理」可讓您管理客戶資料，並確保符合適用於資料使用的法規、限制和政策。 '
 translation-type: tm+mt
-source-git-commit: af7fa6048fa60392a98975fe6fc36e8302355a05
+source-git-commit: c81723d00f6b0a9338c8dd3be8c79385677b4e93
 workflow-type: tm+mt
-source-wordcount: '946'
+source-wordcount: '1085'
 ht-degree: 1%
 
 ---
@@ -30,18 +30,22 @@ Adobe Experience Platform資料管理可讓您管理客戶資料，並確保符�
 
 如需使用資料使用標籤的詳細資訊，請參 [閱Adobe Experience Platform的資料使用標籤](../../data-governance/labels/overview.md) 使用指南。
 
-## 設定目標限制
+## 設定目標的行銷使用案例 {#destinations}
 
-您可以定義目標的行銷使用案例，以設定目標的資料使用限制。 定義目的地的使用案例可讓您檢查是否違反使用原則，並確保傳送至該目的地的任何描述檔或區段都與「資料管理」規則相容。
+您可以定義目標的行銷使用案例（也稱為行銷動作），以設定目標的資料使用限制。 目的地的行銷使用案例會指出將匯出至該目的地的資料意圖。
 
-您可以在「編輯目標」工作流程的「 _設定_ 」階段中 _定義行銷使用案例_ 。 如需詳細資訊，請參閱目標檔案。
+>[!NOTE] 如需行銷動作及其在資料使用政策中使用的詳細資訊，請參閱Experience Platform文 [件中的資料使用政策](../../data-governance/policies/overview.md) 概觀。
+
+定義目的地的行銷使用案例可讓您確保傳送至這些目的地的任何描述檔或區段符合資料使用政策。 因此，您應根據組織對啟動實施政策限制的需求，將適當的行銷使用案例新增至您的目的地。
+
+行銷使用案例只能在第一次設定目標時選取。 根據您使用的目的地類型，設定行銷使用案例的機會會顯示在設定工作流程的不同點。 如需如 [何設定特定目的地](../destinations/destinations-overview.md) ，請參閱目的地檔案。
 
 
 ## 管理資料使用原則 {#policies}
 
 為了讓資料使用標籤有效支援資料遵循，必須定義並啟用資料使用原則。 資料使用原則是描述您允許或限制在即時CDP中對資料執行的行銷動作類型的規則。 如需詳細資訊，請參閱Experience Platform [Data Governance總覽中的「資料使](../../data-governance/home.md) 用政策」一節。
 
-Adobe Experience Platform針對常見客 **戶體驗使用案** 例提供數種核心政策。 如 [Policy Service Developer Guide中「List all policies」（列出所有原則）一節所示，可透過向](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml)DULE Policy Service API [(](../../data-governance/policies/overview.md)DULE Policy Service API)提出請求來檢視這些原則。 您也可以建立自己的自 **訂原則** ，以建立自訂使用限制的模型，如開發人員指南的「建立原則」一節所示。
+Adobe Experience Platform針對常見客 **戶體驗使用案** 例提供數種核心政策。 瀏覽至「原則」工作區並選取「瀏覽」標籤，即可在UI中 **[!UICONTROL 檢視]** 這些 **[!UICONTROL 原則]** 。 如需在UI中 [使用原則的詳細步驟](../../data-governance/policies/user-guide.md) ，包括如何制定您自己的自訂原則，請參閱Experience Platform檔案中的原則使用指南。
 
 ## （測試版）強制符合資料使用規範 {#enforce-data-usage-compliance}
 
@@ -58,6 +62,11 @@ Adobe Experience Platform針對常見客 **戶體驗使用案** 例提供數種�
 
 * 套用至區段內要啟用之欄位和資料集的資料使用標籤。
 * 目的地的行銷目的。
+
+>[!NOTE] 如果資料集（而非整個資料集）中的某些欄位僅套用資料使用標籤，則只有在下列情況下才會執行這些欄位層級標籤：
+>* 欄位會用於區段定義中。
+>* 欄位被配置為目標目標的預計屬性。
+
 
 ### 策略違規消息 {#enforcement}
 
