@@ -1,34 +1,34 @@
 ---
-title: 目標概觀
-seo-title: 目標概觀
+title: 目的地概述
+seo-title: 目的地概述
 description: 目標是與目標平台預先建立的整合，可讓即時客戶資料平台順暢地啟動資料。 您可以使用Adobe即時客戶資料平台中的「目標」來啟用您已知和未知的跨通道行銷宣傳、電子郵件宣傳、目標廣告及許多其他使用案例資料。
 seo-description: 目標是與目標平台預先建立的整合，可讓即時客戶資料平台順暢地啟動資料。 您可以使用Adobe即時客戶資料平台中的「目標」來啟用您已知和未知的跨通道行銷宣傳、電子郵件宣傳、目標廣告及許多其他使用案例資料。
 translation-type: tm+mt
-source-git-commit: 49479cd1520bd2407ecd5140265661aefe0817a3
+source-git-commit: a61a2a4d9d51c402bb50153c06a93d255a3613cb
 workflow-type: tm+mt
-source-wordcount: '393'
-ht-degree: 0%
+source-wordcount: '532'
+ht-degree: 1%
 
 ---
 
 
-# 目標概觀
+# 目的地概述 {#overview}
 
 ![目標概述橫幅](/help/rtcdp/destinations/assets/destinations-overview-banner.png)
 
 **目標** 是與目標平台預先建立的整合，可讓即時客戶資料平台順暢地啟動資料。 您可以使用目的地來啟用跨通道行銷宣傳、電子郵件宣傳、目標廣告和許多其他使用案例的已知和未知資料。
 
-## 目標和來源
+## 目標和來源 {#destinations-and-sources}
 
 即時CDP的核心功能之一是接收第一方資料並根據業務需要激活它。 使用源將資料嵌入即時CDP中，並使用目標從即時CDP中導出資料。
 
-## 目標步驟
+## 目標步驟 {#steps}
 
 * 從即時 [CDP中所有可用目標的自助](/help/rtcdp/destinations/destinations-catalog.md) -服務目錄中進行選擇。
 * 使用 **[!UICONTROL 目的地]** 啟動 [](/help/rtcdp/destinations/activate-destinations.md) ，並傳送個人檔案或區段至行銷自動化平台、數位廣告平台等。
 * 定期排程匯出至您偏好目的地的資料。
 
-## 控制項
+## 控制項 {#controls}
 
 「目標」工作區 [中的控制項](/help/rtcdp/destinations/destinations-workspace.md) ，可讓您：
 
@@ -38,24 +38,32 @@ ht-degree: 0%
 * 選擇哪些區段應啟動至目標；
 * 在啟用 [區段至電子郵件行銷目標時](../../xdm/home.md) ，選取要匯出的體驗資料模型(XDM)欄位。
 
-## 目標類型和類別
+## Destination types and categories {#types-and-categories}
 
 如需詳細資訊，請參 [閱目標類型和類別概觀](/help/rtcdp/destinations/destination-types.md)。
 
-## 目標與存取控制
+## 目標與存取控制 {#access-controls}
 
 即時CDP的目標功能可與Adobe Experience Platform存取控制權限搭配使用。 視使用者的權限層級而定，您可以檢視、管理和啟用目標。 如需個別權限的詳細資訊，請參 [閱Adobe Experience Platform中的存取控制](../../access-control/home.md) ，並向下捲動至頁面底部。
 
 如需存取控制的詳細資訊，請參閱存取控 [制使用指南](../../access-control/ui/overview.md)。
 
-<!--
+## 啟用資料至目的地的資料管理限制 {#data-governance}
 
-// Commenting out DULE in Destinations service
+通過以下方式對即時CDP目標實施資料治理：
 
-## Destinations and Data Usage Labeling and Enforcement (DULE)
+* *您可在建立目標* ，工作流程中選擇的行銷使用案例；
+* *資料使用原則* ，可限制包含特定使用標籤的資料被啟動至具有特定行銷使用案例的目的地。
 
-Data Usage Labeling and Enforcement (DULE) is the core mechanism of Adobe Experience Platform Data Governance. DULE is currently *not* enforced in Adobe Real-time CDP destinations.
+有關行銷使用案例和解決違反資料原則情況的詳細資訊，請參 [閱即時CDP](/help/rtcdp/privacy/data-governance-overview.md#destinations)[中的資料治理](/help/rtcdp/privacy/data-governance-overview.md#enforcement)。
 
-You are responsible for understanding the limitations and obligations of your data and how you use that data in Experience Platform.
+有關在建立目標工作流中選擇市場營銷使用案例的詳細資訊，請參閱以下有關即時CDP中不同目標類型的頁：
 
--->
+* [廣告目的地- Google Ad Manager ](/help/rtcdp/destinations/google-ad-manager-destination.md)
+* [廣告目的地- Google Ads](/help/rtcdp/destinations/google-ads-destination.md)
+* [廣告目的地- Google Display &amp; Video 360 ](/help/rtcdp/destinations/google-dv360-destination.md)
+* [雲端儲存空間目標](/help/rtcdp/destinations/cloud-storage-destinations-workflow.md)
+* [電子郵件行銷目標](/help/rtcdp/destinations/email-marketing-destinations.md)
+* [社交網路目的地](/help/rtcdp/destinations/social-network-destinations-workflow.md)
+
+如需區段啟動工作流程中違反資料原則的詳細資訊，請參閱「啟用設定檔和區段至 [目的地」中的步驟7](/help/rtcdp/destinations/activate-destinations.md)。
