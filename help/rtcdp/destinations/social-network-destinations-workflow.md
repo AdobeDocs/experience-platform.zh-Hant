@@ -4,9 +4,9 @@ seo-title: 社交網路目標工作流程
 description: 連線至您的社交網路和帳戶的指示
 seo-description: 連線至您的社交網路和帳戶的指示
 translation-type: tm+mt
-source-git-commit: ab53e2efffed536e8028beabd64aee843d1eeee8
+source-git-commit: 3c598454a868139b7604c5c7ca2b98fa0f1bb961
 workflow-type: tm+mt
-source-wordcount: '386'
+source-wordcount: '473'
 ht-degree: 0%
 
 ---
@@ -34,28 +34,18 @@ ht-degree: 0%
 
    ![認證已確認](/help/rtcdp/destinations/assets/facebook-post-connection-view.png)
 
-4. 在「設 **[!UICONTROL 定]** 」步驟中，輸入啟動流程的「名稱 **[!UICONTROL 」和「說明]** 」，並填寫您社交網路廣告 ******** 帳戶的「ID」帳戶。 選取任何應套用至此目的地的行銷使用案例。 在填 **[!UICONTROL 入上述欄位後]** ，選取「建立目標」。
+4. 在「設 **[!UICONTROL 定]** 」步驟中，輸入啟動流程的「名稱 **[!UICONTROL 」和「說明]** 」，並填寫您社交網路廣告 ******** 帳戶的「ID」帳戶。 <br> 此外，您也可以在此步驟中選取 **[!UICONTROL 任何應套用至此目的地的Marketing]** 使用案例。 行銷使用案例會指出將資料匯出至目的地的方式。 您可以從Adobe定義的行銷使用案例中選擇，也可以建立自己的行銷使用案例。 有關行銷使用案例的詳細資訊，請參 [閱即時CDP中的資料治理頁](/help/rtcdp/privacy/data-governance-overview.md#destinations) 。 如需個別Adobe定義之行銷使用案例的詳細資訊，請參閱「資 [料使用政策」概觀](/help/data-governance/policies/overview.md#core-actions)。 <br> 在填 **[!UICONTROL 入上述欄位後]** ，選取「建立目標」。
 
    >[!IMPORTANT]
    >
-   > 適用於Facebook目的地。 **[!UICONTROL 帳戶ID是]** 您的Facebook廣告帳戶ID。 您可以在Facebook廣告管理員中找到此ID。 將ID前置詞 `act_` 如下：
+   > * 「單 *一身分個人化* 」行銷使用案例預設會針對社交網路目的地選取，且無法移除。
+   > * 適用於Facebook目的地。 **[!UICONTROL 帳戶ID是]** 您的Facebook廣告帳戶ID。 您可以在Facebook廣告管理員中找到此ID。 將ID前置詞 `act_` 如下：
 
-   ![連線至社交網路目的地——設定步驟](/help/rtcdp/destinations/assets/social-network-setup-step.png)
+
+   ![連線至社交網路目的地——設定步驟](/help/rtcdp/destinations/assets/social-networks-setup-step.png)
 
 5. 您的目標現在已建立。 如果您想 **[!UICONTROL 稍後啟動區段]** ，可以選取「儲存並退出」，或選取「下一步 **** 」以繼續工作流程，並選取要啟動的區段。 在這兩種情況下，請參閱下一 [節「啟動社交網路的區段](#activate-segments)」，以瞭解其餘的工作流程。
 
 ## 將區段啟用至社交網路 {#activate-segments}
 
 如需如何將區段啟用至社交網路的指示，請參 [閱啟用資料至目標](/help/rtcdp/destinations/activate-destinations.md)。
-
-
-<!--
-
-// update IMPORTANT note in step 4 after marketing use cases are released for RTCDP
-
-    >[!IMPORTANT]
-    >
-    > * The *Single Identity Personalization* marketing use case is selected by default for social network destinations and cannot be removed. 
-    > * For Facebook destinations. **[!UICONTROL Account ID]** is your Facebook Ad Account ID. You can find this ID in the Facebook Ads Manager. Prefix the ID with `act_` as shown below: 
-
-    ![Connect to social network destination - setup step](/help/rtcdp/destinations/assets/social-networks-setup-step.png)
