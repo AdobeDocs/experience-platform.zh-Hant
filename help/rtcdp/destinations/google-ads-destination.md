@@ -4,9 +4,9 @@ seo-title: Google廣告目的地
 description: Google Ads（先前稱為Google AdWords）是線上廣告服務，可讓企業透過文字搜尋、圖形顯示、YouTube視訊和應用程式內行動顯示，按點擊付費廣告。
 seo-description: Google Ads（先前稱為Google AdWords）是線上廣告服務，可讓企業透過文字搜尋、圖形顯示、YouTube視訊和應用程式內行動顯示，按點擊付費廣告。
 translation-type: tm+mt
-source-git-commit: dc5ee796ca390d06fc8e08bd6c30e88a0d96dd53
+source-git-commit: 3c598454a868139b7604c5c7ca2b98fa0f1bb961
 workflow-type: tm+mt
-source-wordcount: '544'
+source-wordcount: '613'
 ht-degree: 0%
 
 ---
@@ -54,13 +54,13 @@ Google已暫停與協力廠商的任何新Google Ads整合。 您必須已與Goo
 1. 在「連 **[!UICONTROL 線>目的地]**」中，選取「Google廣告」，然後選取「 **[!UICONTROL 建立目的地」]**。
    ![Connect Google Ads目的地](/help/rtcdp/destinations/assets/google-2-destination.png)
 
-2. 在「建立目標」工作流程中，填入目 [!UICONTROL 標的「基本] 」資訊。 <br>
-
-   ![基本資訊Google廣告](/help/rtcdp/destinations/assets/google-2-basic-information.png)
+2. 在建立 **目標工作流的** 「設定」步驟中，填寫目標的 [!UICONTROL 「基本資訊] 」。 <br>
+   ![基本資訊Google廣告](/help/rtcdp/destinations/assets/google-ads-setup-step.png)
 * **[!UICONTROL 名稱]**: 填寫此目標的首選名稱。
 * **[!UICONTROL 說明]**: 可選。 例如，您可以提及您使用此目的地的促銷活動。
 * **[!UICONTROL 帳戶類型]**: AdWords是唯一可用的選項。
 * **[!UICONTROL 帳戶ID]**: 使用Google廣告填寫您的帳戶ID。 ID格式通常為123-456-7890。
+* **[!UICONTROL 行銷使用案例]**: 行銷使用案例會指出將資料匯出至目的地的方式。 您可以從Adobe定義的行銷使用案例中選擇，也可以建立自己的行銷使用案例。 有關行銷使用案例的詳細資訊，請參 [閱即時CDP中的資料治理頁](/help/rtcdp/privacy/data-governance-overview.md#destinations) 。 如需個別Adobe定義之行銷使用案例的詳細資訊，請參閱「資 [料使用政策」概觀](/help/data-governance/policies/overview.md#core-actions)。
 
 ## 啟用區段至Google廣告
 
