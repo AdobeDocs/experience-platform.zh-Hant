@@ -4,7 +4,7 @@ seo-title: Google廣告目的地
 description: Google Ads（先前稱為Google AdWords）是線上廣告服務，可讓企業透過文字搜尋、圖形顯示、YouTube視訊和應用程式內行動顯示，按點擊付費廣告。
 seo-description: Google Ads（先前稱為Google AdWords）是線上廣告服務，可讓企業透過文字搜尋、圖形顯示、YouTube視訊和應用程式內行動顯示，按點擊付費廣告。
 translation-type: tm+mt
-source-git-commit: 3c598454a868139b7604c5c7ca2b98fa0f1bb961
+source-git-commit: db2084024f7c25cb1f914f9b8da35298691fd95f
 workflow-type: tm+mt
 source-wordcount: '613'
 ht-degree: 0%
@@ -55,7 +55,7 @@ Google已暫停與協力廠商的任何新Google Ads整合。 您必須已與Goo
    ![Connect Google Ads目的地](/help/rtcdp/destinations/assets/google-2-destination.png)
 
 2. 在建立 **目標工作流的** 「設定」步驟中，填寫目標的 [!UICONTROL 「基本資訊] 」。 <br>
-   ![基本資訊Google廣告](/help/rtcdp/destinations/assets/google-ads-setup-step.png)
+   ![基本資訊Google廣告](/help/rtcdp/destinations/assets/google-2-destination-setup-step.png)
 * **[!UICONTROL 名稱]**: 填寫此目標的首選名稱。
 * **[!UICONTROL 說明]**: 可選。 例如，您可以提及您使用此目的地的促銷活動。
 * **[!UICONTROL 帳戶類型]**: AdWords是唯一可用的選項。
