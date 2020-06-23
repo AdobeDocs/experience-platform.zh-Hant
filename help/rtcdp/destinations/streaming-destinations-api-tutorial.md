@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 連線至串流目的地並啟動資料
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 883bea4aba0548e96b891987f17b8535c4d2eba7
+source-git-commit: ed9d6eadeb00db51278ea700f7698a1b5590632f
 workflow-type: tm+mt
-source-wordcount: '1847'
+source-wordcount: '1857'
 ht-degree: 2%
 
 ---
@@ -68,7 +68,7 @@ Experience Platform中的資源可以隔離至特定虛擬沙盒。 在對平台
 
 ### Swagger檔案 {#swagger-docs}
 
-您可在Swagger的本教學課程中，找到所有API呼叫的隨附參考檔案。 請參閱https://platform.adobe.io/data/foundation/flowservice/swagger#/。 建議您同時使用本教學課程和Swagger檔案頁面。
+您可在Swagger的本教學課程中，找到所有API呼叫的隨附參考檔案。 請參閱 [Adobe.io上的Flow Service API檔案](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml)。 建議您同時使用本教學課程和Swagger檔案頁面。
 
 ## 取得可用串流目的地清單 {#get-the-list-of-available-streaming-destinations}
 
