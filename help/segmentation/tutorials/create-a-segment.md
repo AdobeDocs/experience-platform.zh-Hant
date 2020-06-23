@@ -4,7 +4,10 @@ solution: Experience Platform
 title: 建立區段
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: a6a1ecd9ce49c0a55e14b0d5479ca7315e332904
+source-git-commit: 822f43b139b68b96b02f9a5fe0549736b2524ab7
+workflow-type: tm+mt
+source-wordcount: '1328'
+ht-degree: 2%
 
 ---
 
@@ -19,11 +22,11 @@ source-git-commit: a6a1ecd9ce49c0a55e14b0d5479ca7315e332904
 
 本教學課程需要有效瞭解建立受眾細分所涉及的各種Adobe Experience Platform服務。 在開始本教學課程之前，請先閱讀下列服務的檔案：
 
-- [即時客戶個人檔案](../../profile/home.md):根據來自多個來源的匯整資料，提供統一、即時的消費者個人檔案。
-- [Adobe Experience Platform細分服務](../home.md):可讓您從即時客戶個人檔案資料建立受眾細分。
-- [體驗資料模型(XDM)](../../xdm/home.md):平台組織客戶體驗資料的標準化架構。
+- [即時客戶個人檔案](../../profile/home.md): 根據來自多個來源的匯整資料，提供統一、即時的消費者個人檔案。
+- [Adobe Experience Platform細分服務](../home.md): 可讓您從即時客戶個人檔案資料建立受眾細分。
+- [體驗資料模型(XDM)](../../xdm/home.md): 平台組織客戶體驗資料的標準化架構。
 
-以下章節提供您必須知道的其他資訊，以便成功呼叫平台API。
+以下章節提供您必須知道的其他資訊，才能成功呼叫平台API。
 
 ### 讀取範例API呼叫
 
@@ -33,7 +36,7 @@ source-git-commit: a6a1ecd9ce49c0a55e14b0d5479ca7315e332904
 
 若要呼叫平台API，您必須先完成驗證教 [學課程](../../tutorials/authentication.md)。 完成驗證教學課程後，所有Experience Platform API呼叫中每個必要標題的值都會顯示在下方：
 
-- 授權：生產者 `{ACCESS_TOKEN}`
+- 授權： 生產者 `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
@@ -45,7 +48,7 @@ Experience Platform中的所有資源都隔離至特定的虛擬沙盒。 所有
 
 所有包含裝載(POST、PUT、PATCH)的請求都需要額外的標題：
 
-- 內容類型：application/json
+- 內容類型： application/json
 
 ## 開發區段定義
 
@@ -90,11 +93,11 @@ curl -X POST \
 
 | 屬性 | 說明 |
 | --------- | ------------ | 
-| `name` | **必填.** 參考區段的唯一名稱。 |
-| `schema` | **必填.** 與區段中的實體關聯的架構。 由或字 `id` 段 `name` 組成。 |
-| `expression` | **必填.** 包含區段定義之欄位資訊的實體。 |
+| `name` | **必填。** 參考區段的唯一名稱。 |
+| `schema` | **必填。** 與區段中的實體關聯的架構。 由或字 `id` 段 `name` 組成。 |
+| `expression` | **必填。** 包含區段定義之欄位資訊的實體。 |
 | `expression.type` | 指定表達式類型。 目前僅支援「PQL」。 |
-| `expression.format` | 指示值中表達式的結構。 目前支援下列格式： <ul><li>`pql/text`:根據發佈的PQL語法對段定義的文本表示。  例如, `workAddress.stateProvince = homeAddress.stateProvince`.</li></ul> |
+| `expression.format` | 指示值中表達式的結構。 目前支援下列格式： <ul><li>`pql/text`: 根據發佈的PQL語法對段定義的文本表示。  例如, `workAddress.stateProvince = homeAddress.stateProvince`.</li></ul> |
 | `expression.value` | 符合中指定類型的表達式 `expression.format`。 |
 | `mergePolicyId` | 用於導出資料的合併策略的標識符。 有關詳細資訊，請閱讀合 [並策略配置文檔](../../profile/api/merge-policies.md)。 |
 | `description` | 定義的人類可讀描述。 |
@@ -119,7 +122,7 @@ curl -X POST \
 }
 ```
 
-## 預估和預覽觀眾
+## 預估和預覽觀眾 {#estimate-and-preview-an-audience}
 
 當您開發區段定義時，可以使用即時客戶個人檔案中的估計和預覽工具來檢視摘要層級資訊，以協助您隔離預期的受眾。 估計值提供區段定義的統計資訊，例如預計讀者大小和信賴區間。 預覽提供區段定義的合格設定檔分頁清單，讓您比較結果與預期結果。
 
