@@ -4,7 +4,10 @@ solution: Experience Platform
 title: 區段教學課程
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 6705cb699b0785e317a6e437fc8a01ca77266f84
+source-git-commit: 636fae71f9c826ce9715bd96a974e5f6afbffb42
+workflow-type: tm+mt
+source-wordcount: '576'
+ht-degree: 0%
 
 ---
 
@@ -38,7 +41,7 @@ Adobe Experience Platform可讓您從多個來源匯整資料並加以匯整，�
 >[!NOTE]
 >串流區段採用測試版，可應要求提供。 功能和檔案可能會有所變更。
 
-串流區段（也稱為連續查詢評估）是當事件進入特定區段群組時，立即評估客戶的能力。 有了這項功能，大部份的區段規則現在都可以在資料傳入Adobe Experience Platform時進行評估，這表示區段會籍會保持最新狀態，而不會執行排程的區段工作。 若要進一步瞭解，請造訪串 [流區段總覽](../segmentation/api/streaming-segmentation.md)。
+串流區段是指當事件進入特定區段群組時，可立即評估客戶的能力。 有了這項功能，大部份的區段規則現在都可以在資料傳入Adobe Experience Platform時進行評估，這表示區段會籍會保持最新狀態，而不會執行排程的區段工作。 若要進一步瞭解，請造訪串 [流區段總覽](../segmentation/api/streaming-segmentation.md)。
 
 ## 多實體分段
 
