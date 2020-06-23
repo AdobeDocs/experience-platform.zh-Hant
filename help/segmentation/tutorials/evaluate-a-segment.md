@@ -4,7 +4,10 @@ solution: Experience Platform
 title: 評估區段
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 21935bb36d8c2a0ef17e586c0909cf316ef026cf
+source-git-commit: 822f43b139b68b96b02f9a5fe0549736b2524ab7
+workflow-type: tm+mt
+source-wordcount: '2841'
+ht-degree: 1%
 
 ---
 
@@ -17,16 +20,16 @@ source-git-commit: 21935bb36d8c2a0ef17e586c0909cf316ef026cf
 
 本教學課程需要有效瞭解建立受眾細分所涉及的各種Adobe Experience Platform服務。 在開始本教學課程之前，請先閱讀下列服務的檔案：
 
-- [即時客戶個人檔案](../../profile/home.md):根據來自多個來源的匯整資料，即時提供統一的客戶個人檔案。
-- [Adobe Experience Platform細分服務](../home.md):可讓您從即時客戶個人檔案資料建立受眾細分。
-- [體驗資料模型(XDM)](../../xdm/home.md):平台組織客戶體驗資料的標準化架構。
-- [沙盒](../../sandboxes/home.md):Experience Platform提供虛擬沙盒，可將單一Platform實例分割為不同的虛擬環境，以協助開發和發展數位體驗應用程式。
+- [即時客戶個人檔案](../../profile/home.md): 根據來自多個來源的匯整資料，即時提供統一的客戶個人檔案。
+- [Adobe Experience Platform細分服務](../home.md): 可讓您從即時客戶個人檔案資料建立受眾細分。
+- [體驗資料模型(XDM)](../../xdm/home.md): 平台組織客戶體驗資料的標準化架構。
+- [沙盒](../../sandboxes/home.md): Experience Platform提供虛擬沙盒，可將單一Platform實例分割為不同的虛擬環境，以協助開發和發展數位體驗應用程式。
 
 ### 必要的標題
 
 本教學課程也要求您完成驗證教 [學課程](../../tutorials/authentication.md) ，才能成功呼叫平台API。 完成驗證教學課程後，所有Experience Platform API呼叫中每個必要標題的值都會顯示在下方：
 
-- 授權：生產者 `{ACCESS_TOKEN}`
+- 授權： 生產者 `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
@@ -38,7 +41,7 @@ Experience Platform中的所有資源都隔離至特定的虛擬沙盒。 對平
 
 所有POST、PUT和PATCH請求都需要附加標題：
 
-- 內容類型：application/json
+- 內容類型： application/json
 
 ## 評估區段
 
@@ -48,7 +51,7 @@ Experience Platform中的所有資源都隔離至特定的虛擬沙盒。 對平
 
 如果您尚未完成「使用即時客戶描述檔 [API建立區段」教學課程，或是使用「區段產生器」建立區段定義](./create-a-segment.md)[](../ui/overview.md)，請在繼續本教學課程之前先執行此動作。
 
-## 排程的評估
+## 排程的評估 {#scheduled-evaulation}
 
 透過排程評估，您的IMS組織可以建立循環排程，以自動執行匯出工作。
 
@@ -94,7 +97,7 @@ curl -X POST \
 | `properties` | **（必要）** ，包含與計畫相關的其他屬性的物件。 |
 | `properties.segments` | **(等於時需`type`要`batch_segmentation`)** ：使用 `["*"]` 可確保包含所有區段。 |
 | `schedule` | **（必要）** ，包含工作排程的字串。 作業只能排程為每天執行一次，這表示您無法排程作業在24小時期間執行多次。 顯示的範例(`0 0 1 * * ?`)意指每天在UTC 1:00:00觸發工作。 如需詳細資訊，請參閱 [cron運算式格式檔案](http://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html) 。 |
-| `state` | *（可選）包含排程狀態的字串* 。 可用值： `active` 和 `inactive`。 預設值為 `inactive`. IMS組織只能建立一個排程。 本教學課程稍後將提供更新排程的步驟。 |
+| `state` | *（可選）包含排程狀態的字串* 。 可用值： `active` 和 `inactive`。 預設值為 `inactive`。IMS組織只能建立一個排程。 本教學課程稍後將提供更新排程的步驟。 |
 
 **回應**
 
@@ -440,11 +443,11 @@ curl -X GET \
 | 屬性 | 說明 |
 | -------- | ----------- |
 | `lastQualificationTime` | 斷言區段成員資格及設定檔輸入或退出區段時的時間戳記。 |
-| `status` | 目前請求中區段參與率的狀態。 必須等於下列其中一個已知值： <ul><li>`existing`:實體繼續在分部中。</li><li>`realized`:實體正在輸入區段。</li><li>`exited`:實體正在退出區段。</li></ul> |
+| `status` | 目前請求中區段參與率的狀態。 必須等於下列其中一個已知值： <ul><li>`existing`: 實體繼續在分部中。</li><li>`realized`: 實體正在輸入區段。</li><li>`exited`: 實體正在退出區段。</li></ul> |
 
 ## 存取區段結果
 
-可以通過以下兩種方式之一訪問段作業的結果：您可以存取個別設定檔，或將整個對象匯出至資料集。
+可以通過以下兩種方式之一訪問段作業的結果： 您可以存取個別設定檔，或將整個對象匯出至資料集。
 
 以下幾節將更詳細地概述這些選項。
 
