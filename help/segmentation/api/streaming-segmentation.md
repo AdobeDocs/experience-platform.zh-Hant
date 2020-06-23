@@ -4,69 +4,87 @@ solution: Experience Platform
 title: 串流區段
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 902ba5efbb5f18a2de826fffd023195d804309cc
+source-git-commit: 822f43b139b68b96b02f9a5fe0549736b2524ab7
+workflow-type: tm+mt
+source-wordcount: '1343'
+ht-degree: 1%
 
 ---
 
 
-# 使用串流區段(Beta)即時評估事件
+# 使用串流分段功能，即時評估事件
 
->[!NOTE] 串流區段是測試版功能，可應要求提供。
-
-串流區段（也稱為連續查詢評估）是當事件進入特定區段群組時，立即評估客戶的能力。 有了這項功能，大部份的區段規則現在都可以在資料傳入Adobe Experience Platform時進行評估，這表示區段會籍會保持最新狀態，而不會執行排程的區段工作。
+透過串流分 [!DNL Adobe Experience Platform] 段功能，客戶可以近乎即時地進行分段，同時專注於資料的豐富性。 透過串流分段，區段資格現在會在資料進入時進行 [!DNL Platform]，減輕排程和執行分段工作的需求。 有了這項功能，大部份的區段規則現在都可以在資料傳入時進行評估 [!DNL Platform]，這表示區段成員資格將會保持最新，而不會執行排程的區段工作。
 
 ![](../images/api/streaming-segment-evaluation.png)
 
 ## 快速入門
 
-本開發人員指南需要有效瞭解與串流細分相關的各種Adobe Experience Platform服務。 在開始本教學課程之前，請先閱讀下列服務的檔案：
+本開發人員指南需要對串流細分相關的 [!DNL Adobe Experience Platform] 各種服務有良好的認識。 在開始本教學課程之前，請先閱讀下列服務的檔案：
 
-- [即時客戶個人檔案](../../profile/home.md):根據來自多個來源的匯總資料，即時提供統一的消費者個人檔案。
-- [區段](../home.md):提供從即時客戶個人檔案資料建立細分和受眾的能力。
-- [體驗資料模型(XDM)](../../xdm/home.md):平台組織客戶體驗資料的標準化架構。
+- [!DNL Real-time Customer Profile](../../profile/home.md): 根據來自多個來源的匯總資料，即時提供統一的消費者個人檔案。
+- [!DNL Segmentation](../home.md): 提供從資料建立區段和觀眾的 [!DNL Real-time Customer Profile] 能力。
+- [!DNL Experience Data Model (XDM)](../../xdm/home.md): 組織客戶體驗資料 [!DNL Platform] 的標準化架構。
 
-以下章節提供您成功呼叫平台API所需的其他資訊。
+以下章節提供您成功呼叫API所需的其他資訊 [!DNL Platform] 。
 
 ### 讀取範例API呼叫
 
-本開發人員指南提供範例API呼叫，以示範如何格式化您的請求。 這些包括路徑、必要標題和正確格式化的請求負載。 也提供API回應中傳回的範例JSON。 如需範例API呼叫檔案中所用慣例的詳細資訊，請參閱「Experience Platform疑難排解指 [南」中有關如何讀取範例API呼叫的章節](../../landing/troubleshooting.md#how-do-i-format-an-api-request) 。
+本開發人員指南提供範例API呼叫，以示範如何格式化您的請求。 這些包括路徑、必要標題和正確格式化的請求負載。 也提供API回應中傳回的範例JSON。 如需範例API呼叫檔案中所用慣例的詳細資訊，請參閱疑難排解指 [南中有關如何讀取範例API呼叫的](../../landing/troubleshooting.md#how-do-i-format-an-api-request)[!DNL Experience Platform] 章節。
 
 ### 收集必要標題的值
 
-若要呼叫平台API，您必須先完成驗證教 [學課程](../../tutorials/authentication.md)。 完成驗證教學課程後，所有Experience Platform API呼叫中每個必要標題的值都會顯示在下方：
+若要呼叫API，您必 [!DNL Platform] 須先完成驗證教 [學課程](../../tutorials/authentication.md)。 完成驗證教學課程後，將提供所有 [!DNL Experience Platform] API呼叫中每個必要標題的值，如下所示：
 
-- 授權：生產者 `{ACCESS_TOKEN}`
+- 授權： 生產者 `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
-Experience Platform中的所有資源都隔離至特定的虛擬沙盒。 所有對平台API的請求都需要一個標題，該標題會指定要在中執行的操作的沙盒名稱：
+中的所有資 [!DNL Experience Platform] 源都與特定虛擬沙盒隔離。 對API的所 [!DNL Platform] 有請求都需要一個標題，該標題會指定要在中執行的操作的沙盒名稱：
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
->[!NOTE] 如需平台中沙盒的詳細資訊，請參閱沙盒 [概觀檔案](../../sandboxes/home.md)。
+>[!NOTE] 如需中沙盒的詳細資訊 [!DNL Platform]，請參閱沙 [盒概述檔案](../../sandboxes/home.md)。
 
 所有包含裝載(POST、PUT、PATCH)的請求都需要額外的標題：
 
-- 內容類型：application/json
+- 內容類型： application/json
 
 完成特定要求可能需要其他標題。 本檔案的每個範例都會顯示正確的標題。 請特別注意範例要求，以確保包含所有必要的標題。
 
-### 啟用串流分段的查詢類型
+### 啟用串流分段的查詢類型 {#streaming-segmentation-query-types}
 
-下表列出不同類型的分段查詢，以及它們是否支援串流分段。
+>[!NOTE] 您需要為組織啟用排程的分段，才能使串流分段正常運作。 如需啟用排程分段的詳細資訊，請參閱啟用排 [程分段區段一節](#enable-scheduled-segmentation)
 
-| 查詢類型 | 範例查詢 | 支援串流區段 |
-| ---------- | ------------ | --------------------------------- |
-| 簡單的人口統計 | 「把所有住址在加拿大的人都給我。」 | 支援 |
-| 時間系列事件 | 「請給我所有下載Lightroom的人。」 | 支援 |
-| 人口統計與時間系列 | 「請給我所有住在加拿大、在過去30天內下過訂單的人。」 | 支援 |
-| 事件缺席 | &quot;給我兩天內放棄兩輛車的人。&quot; | 支援 |
-| 多實體 | 「請給我所有權益類型為『有經驗』的人。」 | 不支援 |
-| 高級PQL函式 | 「請提供我上週下單的所有描述檔，並包含所有購買產品的SKU和名稱。」 | 不支援 |
+若要使用串流分段來評估區段，查詢必須符合下列准則。
+
+| 查詢類型 | 詳細資料 |
+| ---------- | ------- |
+| 傳入點擊 | 任何區段定義，是指沒有時間限制的單一傳入事件。 |
+| 在相對時間視窗內傳入點擊 | 任何區段定義，是指過去七天內 **的單一傳入事件**。 |
+| 參照描述檔的傳入點擊 | 任何區段定義，是指單一傳入事件（無時間限制）以及一或多個描述檔屬性。 |
+| 在相對時間視窗內參照描述檔的傳入點擊 | 任何區段定義，是指過去七天內傳入的單一事件和一或多個描述 **檔屬性**。 |
+| 參考描述檔的多個事件 | 任何區段定義是指過去24小時內 **的多個事件** ，且（可選）具有一或多個描述檔屬性。 |
+
+下節列出區段定義範例，這些範例 **將無法** 針對串流區段啟用。
+
+| 查詢類型 | 詳細資料 |
+| ---------- | ------- | 
+| 在相對時間視窗內傳入點擊 | 如果區段定義是指非在最 **近** 7天 **時段內的傳入事件**。 例如，在過去 **兩週內**。 |
+| 參照相對視窗中描述檔的傳入點擊 | 下列選項將不 **支援串流** 區段：<ul><li>非在最 **近** 7天 **時段內傳入的事件**。</li><li>包含Adobe Audience Manager(AAM)區段或特徵的區段定義。</li></ul> |
+| 參考描述檔的多個事件 | 下列選項將不 **支援串流** 區段：<ul><li>在過去24小 **時內** 未發 **生的事件**。</li><li>包含Adobe Audience Manager(AAM)區段或特徵的區段定義。</li></ul> |
+| 多實體查詢 | 整體而言，串流分段不支 **援多** 實體查詢。 |
+
+此外，執行串流區段時，也會套用一些准則：
+
+| 查詢類型 | 准則 |
+| ---------- | -------- |
+| 單一事件查詢 | 回顧視窗限制為 **七天**。 |
+| 具有事件歷史記錄的查詢 | <ul><li>回顧視窗限於一 **天**。</li><li>事件之間必須存 **在嚴格** 的時間順序條件。</li><li>僅允許事件之間的簡單時間順序（前後）。</li><li>無法否 **認個** 別事件。 不過，整個查詢 **可以** 否定。</li></ul> |
 
 ## 擷取所有啟用串流區段的區段
 
-在建立新的可串流化區段或更新現有區段為可串流化之前，您應先擷取所有可串流化區段的清單，以確保您不會複製資訊。
+您可以透過向端點提出GET請求，擷取IMS組織內所有已啟用串流分段的區段 `/segment/definitions` 清單。
 
 **API格式**
 
@@ -85,7 +103,7 @@ curl -X GET \
   -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG_ID}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME'
+  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
 **回應**
@@ -179,7 +197,7 @@ curl -X GET \
 
 ## 建立可串流化的區段
 
-在確認您要建立的區段尚未存在後，您可以建立新區段，以啟用串流區段。
+如果區段符合上列的其中一種串流區段類型，則會自 [動啟用串流](#streaming-segmentation-query-types)。
 
 **API格式**
 
@@ -188,8 +206,6 @@ POST /segment/definitions
 ```
 
 **請求**
-
-下列請求會建立啟用串流區段的新區段。 Note that the `continuous` section is set to `enabled: true`.
 
 ```shell
 curl -X POST \
@@ -210,22 +226,11 @@ curl -X POST \
         "type": "PQL",
         "format": "pql/text",
         "value": "select var1 from xEvent where var1._experience.analytics.endUser.firstWeb.webPageDetails.isHomePage = true"
-    },
-    "evaluationInfo": {
-        "batch": {
-            "enabled": false
-        },
-        "continuous": {
-            "enabled": true
-        },
-        "synchronous": {
-            "enabled": false
-        }
     }
 }'
 ```
 
->[!NOTE] 這是標準的「建立區段」請求，區段的新增參 `continuous` 數會設為 `enabled: true`。 如需建立區段定義的詳細資訊，請參閱建立區段的 [檔案](../tutorials/create-a-segment.md)。
+>[!NOTE] 這是標準的「建立區段」請求。 如需建立區段定義的詳細資訊，請閱讀建立區段 [的教學課程](../tutorials/create-a-segment.md)。
 
 **回應**
 
@@ -269,174 +274,9 @@ curl -X POST \
 }
 ```
 
-## 啟用現有的區段以進行串流區段
+## 啟用計畫評估 {#enable-scheduled-segmentation}
 
-您可以在PATCH請求的路徑中提供區段定義的ID，以啟用現有區段進行串流分段。 此外，此PATCH請求的裝載必須包含現有段定義的完整詳細資訊，可通過對相關段定義發出GET請求來訪問該定義。
-
-### 尋找現有的區段定義
-
-若要尋找現有的區段定義，您必須在GET請求的路徑中提供其ID。
-
-**API格式**
-
-```http
-GET /segment/definitions/{SEGMENT_DEFINITION_ID}
-```
-
-| 參數 | 說明 |
-| --------- | ----------- |
-| `{SEGMENT_DEFINITION_ID}` | 您要尋找的區段定義ID。 |
-
-**請求**
-
-```shell
-curl -X GET \
-  https://platform.adobe.io/data/core/ups/segment/definitions/15063cb-2da8-4851-a2e2-bf59ddd2f004\
-  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME}'
-```
-
-**回應**
-
-成功的回應會傳回您所要求之區段定義的詳細資訊。
-
-```json
-{
-    "id": "15063cb-2da8-4851-a2e2-bf59ddd2f004",
-    "schema": {
-        "name": "_xdm.context.profile"
-    },
-    "sandbox": {
-        "sandboxId": "",
-        "sandboxName": "",
-        "type": "production",
-        "default": true
-    },
-    "name": "TestStreaming1",
-    "expression": {
-        "type": "PQL",
-        "format": "pql/json",
-        "value": "select var1 from xEvent where var1._experience.analytics.endUser.firstWeb.webPageDetails.isHomePage = true"
-    },
-    "mergePolicyId": "50de2f9c-990c-4b96-945f-9570337ffe6d",
-    "evaluationInfo": {
-        "batch": {
-            "enabled": false
-        },
-        "continuous": {
-            "enabled": false
-        },
-        "synchronous": {
-            "enabled": false
-        }
-    }
-}
-```
-
->[!NOTE] 對於下一個請求，您需要此回應中傳回之區段定義的完整詳細資訊。 請複製此回應的詳細資訊，以便用於下次請求的正文。
-
-### 啟用現有的串流區段
-
-現在您知道要更新的區段的詳細資訊，可以執行PATCH請求以更新區段，以啟用串流區段。
-
-**API格式**
-
-```http
-PATCH /segment/definitions/{SEGMENT_DEFINITION_ID}
-```
-
-**請求**
-
-下列請求的裝載會提供區段定義的詳細資訊(在上 [一步驟中取得](#look-up-an-existing-segment-definition))，並將其屬性變更 `continuous.enabled` 為更新 `true`。
-
-```shell
-curl -X PATCH \
-  https://platform.adobe.io/data/core/ups/segment/definitions/15063cb-2da8-4851-a2e2-bf59ddd2f004 \
-  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'Content-Type: application/json' \
-  -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG_ID}' \
-  -d '{
-    "id": "15063cb-2da8-4851-a2e2-bf59ddd2f004",
-    "schema": {
-        "name": "_xdm.context.profile"
-    },
-    
-    "sandbox": {
-        "sandboxId": "{SANDBOX_ID}",
-        "sandboxName": "{SANDBOX_NAME}",
-        "type": "production",
-        "default": true
-    },
-    "name": "TestStreaming1",
-    "expression": {
-        "type": "PQL",
-        "format": "pql/json",
-        "value": "select var1 from xEvent where var1._experience.analytics.endUser.firstWeb.webPageDetails.isHomePage = true"
-    },
-    "mergePolicyId": "50de2f9c-990c-4b96-945f-9570337ffe6d",
-    "evaluationInfo": {
-        "batch": {
-            "enabled": false
-        },
-        "continuous": {
-            "enabled": true
-        },
-        "synchronous": {
-            "enabled": false
-        }
-    }
-}'
-```
-
-**回應**
-
-成功的回應會傳回新更新之區段定義的詳細資料。
-
-```json
-{
-    "id": "15063cb-2da8-4851-a2e2-bf59ddd2f004",
-    "schema": {
-        "name": "_xdm.context.profile"
-    },
-    "ttlInDays": 30,
-    "imsOrgId": "4A21D36B544916100A4C98A7@AdobeOrg",
-    "sandbox": {
-        "sandboxId": "{SANDBOX_ID}",
-        "sandboxName": "{SANDBOX_NAME}",
-        "type": "production",
-        "default": true
-    },
-    "name": "TestStreaming1",
-    "expression": {
-        "type": "PQL",
-        "format": "pql/text",
-        "value": "select var1 from xEvent where var1._experience.analytics.endUser.firstWeb.webPageDetails.isHomePage = true"
-    },
-    "evaluationInfo": {
-        "batch": {
-            "enabled": false
-        },
-        "continuous": {
-            "enabled": true
-        },
-        "synchronous": {
-            "enabled": false
-        }
-    },
-    "creationTime": 1572029711000,
-    "updateEpoch": 1572029712000,
-    "updateTime": 1572029712000
-}
-```
-
-## 啟用計畫評估
-
-在啟用串流評估後，必須建立基準（在此之後區段將永遠是最新的）。 系統會自動執行此作業，但必須先啟用排程評估（也稱為排程分段），才能進行基線建立。
-
-透過排程的分段，您的IMS組織可以建立循環排程，自動執行匯出工作以評估區段。
+在啟用串流評估後，必須建立基準（在此之後區段將永遠是最新的）。 必須先啟用計畫評估（也稱為計劃分段），系統才能自動執行基線。 透過排程的分段，您的IMS組織可以遵循循環排程，自動執行匯出工作以評估區段。
 
 >[!NOTE] XDM個別設定檔的合併原則上限為五(5)個沙盒，可啟用排程的評估。 如果貴組織在單一沙盒環境中有5種以上的XDM個人設定檔合併原則，您將無法使用排程的評估。
 
@@ -480,7 +320,7 @@ curl -X POST \
 | `properties` | **（必要）** ，包含與計畫相關的其他屬性的物件。 |
 | `properties.segments` | **(等於時需`type`要`batch_segmentation`)** ：使用 `["*"]` 可確保包含所有區段。 |
 | `schedule` | **（必要）** ，包含工作排程的字串。 作業只能排程為每天執行一次，這表示您無法排程作業在24小時期間執行多次。 顯示的範例(`0 0 1 * * ?`)意指每天在UTC 1:00:00觸發工作。 如需詳細資訊，請參閱 [cron運算式格式檔案](http://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html) 。 |
-| `state` | *（可選）包含排程狀態的字串* 。 可用值： `active` 和 `inactive`。 預設值為 `inactive`. IMS組織只能建立一個排程。 本教學課程稍後將提供更新排程的步驟。 |
+| `state` | *（可選）包含排程狀態的字串* 。 可用值： `active` 和 `inactive`。 預設值為 `inactive`。IMS組織只能建立一個排程。 本教學課程稍後將提供更新排程的步驟。 |
 
 **回應**
 
@@ -512,7 +352,7 @@ curl -X POST \
 
 ### 啟用排程
 
-預設情況下，建立計畫時，除非將屬 `state` 性設定為建立(POST) `active` 請求主體中，否則該計畫處於非活動狀態。 通過向端點發出PATCH請求並在路徑中包 `state``active``/config/schedules` 括調度的ID，可以啟用調度（將設定為）。
+預設情況下，建立計畫時不活動，除非 `state` 在建立(POST)請 `active` 求主體中將屬性設定為。 通過向端點發出PATCH請求並在路徑中包 `state``active``/config/schedules` 括調度的ID，可以啟用調度（將設定為）。
 
 **API格式**
 
