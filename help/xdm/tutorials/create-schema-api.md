@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 使用方案註冊表API建立方案
 topic: tutorials
 translation-type: tm+mt
-source-git-commit: 7cf873d19d26df9ebb70d11ee6e6513173ab45bb
+source-git-commit: b3fa5a17c3a5c2406d368d165da63f2f8c01154d
 workflow-type: tm+mt
 source-wordcount: '2418'
 ht-degree: 1%
@@ -135,7 +135,7 @@ curl -X GET \
   -H 'Accept: application/vnd.adobe.xed+json; version=1'
 ```
 
-**回應 **
+**回應**
 
 回應格式取決於隨請求傳送的「接受」標題。 嘗試使用不同的「接受」標題來試驗哪一個最符合您的需求。
 
