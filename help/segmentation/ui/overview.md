@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 區段產生器UI指南
 topic: ui guide
 translation-type: tm+mt
-source-git-commit: d00973a07c5fb137f756040fb1dc6eac5a1630f5
+source-git-commit: b5a425714b6d69ca241c8ad81eff779b993633a5
 workflow-type: tm+mt
-source-wordcount: '2562'
+source-wordcount: '2683'
 ht-degree: 0%
 
 ---
@@ -103,11 +103,23 @@ ht-degree: 0%
 
 您可以從「對象」索引標籤將對象拖放至 *[!UICONTROL 規則產生器畫布上]* ，以參考新區段定義中的對象成員資格。 這可讓您在新區段規則中加入或排除對象成員資格作為屬性。
 
-對於 [!DNL Platform] 使用「區段產生器」建立的對象，您可以選擇將對象轉換為用於該對象區段定義的規則集。 此轉換會建立規則邏輯的復本，然後可修改該邏輯，而不會影響原始區段定義。
+對於 [!DNL Platform] 使用「區 [!UICONTROL 段產生器」建立的觀眾]，您可以選擇將觀眾轉換為用於該觀眾區段定義的規則集。 此轉換會建立規則邏輯的復本，然後可修改該邏輯，而不會影響原始區段定義。 在將區段定義轉換為規則邏輯之前，請確定您已儲存區段定義的任何最近變更。
 
 >[!NOTE] 從外部來源新增對象時，只會參考對象會籍。 您無法將對象轉換為規則，因此，用於建立原始對象的規則無法在新區段定義中修改。
 
 ![](../images/segment-builder/add-audience-to-segment.png)
+
+如果在將觀眾轉換為規則時發生任何衝突， [!UICONTROL 「區段產生器] 」會嘗試將現有選項保留至其最佳能力。
+
+### 程式碼檢視
+
+或者，您也可以檢視在「區段產生器」中建立之規則的程式 [!UICONTROL 碼版本]。 在規則產生器畫布中建立規則後，您可以選取「程式碼檢視」 **** ，將區段視為PQL。
+
+![](../images/segment-builder/code-view.png)
+
+程式碼檢視提供一個按鈕，可讓您複製要用於API呼叫的區段值。 若要取得區段的最新版本，請確定您已儲存區段的最新變更。
+
+![](../images/segment-builder/copy-code.png)
 
 ## 容器
 
