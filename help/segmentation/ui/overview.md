@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 區段產生器UI指南
 topic: ui guide
 translation-type: tm+mt
-source-git-commit: 822f43b139b68b96b02f9a5fe0549736b2524ab7
+source-git-commit: d00973a07c5fb137f756040fb1dc6eac5a1630f5
 workflow-type: tm+mt
 source-wordcount: '2562'
 ht-degree: 0%
@@ -155,7 +155,7 @@ ht-degree: 0%
 
 建立區段定義後，您就可以透過隨選或排程（持續）評估來評估區段定義。 評估意指透過 [!DNL Real-time Customer Profile] 區段定義來移動資料，以產生對應的觀眾。 建立後，觀眾會儲存並儲存，以便使用API匯出 [!DNL Experience Platform] 觀眾。
 
-隨選評估包括視需要使用API來執行評估並建立觀眾，而排程評估（也稱為「排程區段」）可讓您建立循環排程，以評估特定時間（最多每天一次）的區段定義。
+隨選評估包括視需要使用API來執行評估並建立觀眾，而排程評估（也稱為「排程區段」）可讓您建立循環性排程，以評估特定時間（最多每天一次）的區段定義。
 
 您可使用UI或API來啟用計畫評估的區段定義。 在UI中，返回「區段」中的「 *[!UICONTROL 瀏覽]* 」標 **[!UICONTROL 簽]** ，並切換「 **[!UICONTROL 評估所有區段」]**。 這會導致根據您組織所設定的排程評估所有區段。
 
@@ -165,7 +165,7 @@ ht-degree: 0%
 
 ![](../images/segment-builder/scheduled-segmentation.png)
 
-## 串流區段
+## 串流區段 {#streaming-segmentation}
 
 >[!NOTE] 為了讓串流區段正常運作，客戶需要啟用組織的排程區段。 如需啟用排程分段的詳細資訊，請參 [閱本使用指南的上一節](#enable-scheduled-segmentation)。
 
