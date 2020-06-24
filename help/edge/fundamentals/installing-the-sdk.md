@@ -4,17 +4,17 @@ seo-title: 安裝SDK的Adobe Experience Platform Web SDK
 description: 瞭解如何安裝Experience Platform Web SDK
 seo-description: 瞭解如何安裝Experience Platform Web SDK
 translation-type: tm+mt
-source-git-commit: 5998473c665cb80ffddc092847533f51d81cf581
+source-git-commit: e0dee4e39143ae9d7f5e4aaf9c352555f1c7f5d0
 workflow-type: tm+mt
-source-wordcount: '566'
-ht-degree: 0%
+source-wordcount: '571'
+ht-degree: 1%
 
 ---
 
 
 # 安裝SDK
 
-AEP網頁SDK可在CDN上取用，供您使用。 您可以參考此檔案或下載它，並在您自己的基礎架構上代管它。 它提供微型和非微型版本。 非精簡版本有助於除錯。
+Adobe Experience Platform Web SDK可在內容傳送網路(CDN)上取得，供您使用。 您可以參考此檔案或下載它，並在您自己的基礎架構上代管它。 它提供微型和非微型版本。 非精簡版本有助於除錯。
 
 [https://cdn1.adoberesources.net/alloy/1.0.0/alloy.min.js](https://cdn1.adoberesources.net/alloy/1.0.0/alloy.min.js)[https://cdn1.adoberesources.net/alloy/1.0.0/alloy.js](https://cdn1.adoberesources.net/alloy/1.0.0/alloy.js)
 
@@ -53,7 +53,7 @@ AEP網頁SDK可在CDN上取用，供您使用。 您可以參考此檔案或下�
 
 ## 支援Internet Explorer
 
-本SDK利用承諾，即一種通信非同步任務完成的方法。 SDK使 [用的Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) 實作，除Internet Explorer外，其他目標瀏覽器都支援。 若要在Internet Explorer上使用SDK，您必須填入 `window.Promise` 多 [個](https://remysharp.com/2010/10/08/what-is-a-polyfill)。
+本SDK利用承諾，即一種通信非同步任務完成的方法。 SDK使 [用的Promise](https://developer.mozilla.org/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Promise) 實作，除Internet Explorer外，其他目標瀏覽器都支援。 若要在Internet Explorer上使用SDK，您必須填入 `window.Promise` 多 [個](https://remysharp.com/2010/10/08/what-is-a-polyfill)。
 
 若要判斷您是否已填入 `window.Promise` 填色：
 
