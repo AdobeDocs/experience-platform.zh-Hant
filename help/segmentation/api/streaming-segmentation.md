@@ -4,15 +4,17 @@ solution: Experience Platform
 title: 串流區段
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 822f43b139b68b96b02f9a5fe0549736b2524ab7
+source-git-commit: d00973a07c5fb137f756040fb1dc6eac5a1630f5
 workflow-type: tm+mt
-source-wordcount: '1343'
+source-wordcount: '1370'
 ht-degree: 1%
 
 ---
 
 
 # 使用串流分段功能，即時評估事件
+
+>[!NOTE] 下列檔案說明如何使用API使用串流分段。 如需使用UI使用串流區段的詳細資訊，請閱讀「區段產 [生器」指南](../ui/overview.md#streaming-segmentation)。
 
 透過串流分 [!DNL Adobe Experience Platform] 段功能，客戶可以近乎即時地進行分段，同時專注於資料的豐富性。 透過串流分段，區段資格現在會在資料進入時進行 [!DNL Platform]，減輕排程和執行分段工作的需求。 有了這項功能，大部份的區段規則現在都可以在資料傳入時進行評估 [!DNL Platform]，這表示區段成員資格將會保持最新，而不會執行排程的區段工作。
 
