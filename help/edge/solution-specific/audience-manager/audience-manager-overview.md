@@ -4,7 +4,7 @@ seo-title: 使用Adobe Experience Platform Web SDK將資料傳送至Adobe Audien
 description: 瞭解如何使用Experience Platform Web SDK將資料傳送至Adobe Audience Manager
 seo-description: 瞭解如何使用Experience Platform Web SDK將資料傳送至Adobe Audience Manager
 translation-type: tm+mt
-source-git-commit: 4bea14d18ce119bdec0d428f885d240f92244cfc
+source-git-commit: 6a83ab1c6405f45700f4f8899139010d50010b0c
 workflow-type: tm+mt
 source-wordcount: '292'
 ht-degree: 0%
