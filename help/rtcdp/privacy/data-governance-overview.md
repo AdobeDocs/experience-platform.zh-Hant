@@ -4,10 +4,10 @@ seo-title: 即時客戶資料平台中的資料治理
 description: '「資料管理」可讓您管理客戶資料，並確保符合適用於資料使用的法規、限制和政策。 '
 seo-description: '「資料管理」可讓您管理客戶資料，並確保符合適用於資料使用的法規、限制和政策。 '
 translation-type: tm+mt
-source-git-commit: c81723d00f6b0a9338c8dd3be8c79385677b4e93
+source-git-commit: 490154c23b0ae764ac30b7e93d42b33d09b8a5d6
 workflow-type: tm+mt
-source-wordcount: '1085'
-ht-degree: 1%
+source-wordcount: '1056'
+ht-degree: 0%
 
 ---
 
@@ -22,7 +22,7 @@ Adobe Experience Platform資料管理可讓您管理客戶資料，並確保符�
 
 * [將使用標籤套用至您的資料](#labels)
 * [管理資料使用原則](#policies)
-* [強制符合資料使用規範](#enforcement)
+* [強制符合資料使用規範](#enforce-data-usage-compliance)
 
 ## 將使用標籤套用至您的資料 {#labels}
 
@@ -38,7 +38,7 @@ Adobe Experience Platform資料管理可讓您管理客戶資料，並確保符�
 
 定義目的地的行銷使用案例可讓您確保傳送至這些目的地的任何描述檔或區段符合資料使用政策。 因此，您應根據組織對啟動實施政策限制的需求，將適當的行銷使用案例新增至您的目的地。
 
-行銷使用案例只能在第一次設定目標時選取。 根據您使用的目的地類型，設定行銷使用案例的機會會顯示在設定工作流程的不同點。 如需如 [何設定特定目的地](../destinations/destinations-overview.md) ，請參閱目的地檔案。
+行銷使用案例只能在首次設定目標時選取。 根據您使用的目的地類型，設定行銷使用案例的機會會顯示在設定工作流程的不同點。 如需如 [何設定特定目的地](../destinations/destinations-overview.md) ，請參閱目的地檔案。
 
 
 ## 管理資料使用原則 {#policies}
@@ -47,10 +47,7 @@ Adobe Experience Platform資料管理可讓您管理客戶資料，並確保符�
 
 Adobe Experience Platform針對常見客 **戶體驗使用案** 例提供數種核心政策。 瀏覽至「原則」工作區並選取「瀏覽」標籤，即可在UI中 **[!UICONTROL 檢視]** 這些 **[!UICONTROL 原則]** 。 如需在UI中 [使用原則的詳細步驟](../../data-governance/policies/user-guide.md) ，包括如何制定您自己的自訂原則，請參閱Experience Platform檔案中的原則使用指南。
 
-## （測試版）強制符合資料使用規範 {#enforce-data-usage-compliance}
-
->[!IMPORTANT]
->此功能目前為測試版，並非所有使用者都能使用。 可應要求啟用。 文件和功能可能會有所變更。
+## 強制符合資料使用規範 {#enforce-data-usage-compliance}
 
 在標籤資料並定義使用策略後，您就可以強制資料使用與策略相符。 在即時CDP中激活對象細分到目標時，資料治理會在發生任何違規時自動實施使用策略。
 
