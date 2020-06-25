@@ -4,7 +4,7 @@ solution: Adobe Experience Platform
 title: 即時客戶基本資料使用指南
 topic: guide
 translation-type: tm+mt
-source-git-commit: 4589d0cdca36992feea208850abdda1a9dc246c0
+source-git-commit: 62ed8892b4f359da3f0368013b5bfd0b9380cc22
 workflow-type: tm+mt
 source-wordcount: '1208'
 ht-degree: 0%
@@ -54,7 +54,7 @@ ht-degree: 0%
 
 描述檔計數也包含具有屬性（記錄資料）的描述檔，以及僅包含時間系列（事件）資料的描述檔，例如Adobe Analytics描述檔。 設定檔計數會定期重新整理，以提供平台內設定檔的最新總數。
 
-當將配置式提取到Profile Store時，計數會增加或減少5%以上，則會觸發作業以更新計數。 對於串流資料工作流程，會每小時檢查一次，以判斷是否符合5%增加或減少臨界值。 如果已觸發，則會自動觸發作業以更新描述檔計數。 對於批處理，在成功將批處理到配置檔案儲存的15分鐘內，如果達到5%增加或減少閾值，則運行作業以更新配置檔案計數。
+當將記錄提取到Profile Store時，計數會增加或減少5%以上，則會觸發一個作業以更新計數。 對於串流資料工作流程，會每小時檢查一次，以判斷是否符合5%增加或減少臨界值。 如果已觸發，則會自動觸發作業以更新描述檔計數。 對於批處理，在成功將批處理到配置檔案儲存的15分鐘內，如果達到5%增加或減少閾值，則運行作業以更新配置檔案計數。
 
 ### 依命名空間劃分的描述檔 {#profiles-by-namespace}
 
