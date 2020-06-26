@@ -4,9 +4,9 @@ solution: Adobe Experience Platform
 title: 即時客戶個人檔案API開發人員指南
 topic: guide
 translation-type: tm+mt
-source-git-commit: 9600f315f162b6cd86e2dbe2fffc793cc91c9319
+source-git-commit: d464a6b4abd843f5f8545bc3aa8000f379a86c6d
 workflow-type: tm+mt
-source-wordcount: '2057'
+source-wordcount: '2052'
 ht-degree: 1%
 
 ---
@@ -18,7 +18,7 @@ Adobe Experience Platform可讓您從多個來源匯整資料並加以匯整，�
 
 ## 快速入門
 
-本指南中使用的API端點是即時客戶個人檔案API的一部分。 在繼續之前，請先閱讀 [即時客戶個人檔案API開發人員指南](getting-started.md)。 尤其是，「描述檔開 [發人員指南](getting-started.md#getting-started) 」的「快速入門」區段包含相關主題的連結、閱讀本檔案中範例API呼叫的指南，以及成功呼叫任何Experience Platform API所需之必要標題的重要資訊。
+本指南中使用的API端點是即時客戶 [設定檔API的一部分](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml)。 在繼續之前，請先閱讀快速入門手冊 [](getting-started.md) ，以取得相關檔案的連結、閱讀本檔案中範例API呼叫的指南，以及成功呼叫任何Experience Platform API所需之必要標題的重要資訊。
 
 ## 合併策略的元件 {#components-of-merge-policies}
 
@@ -99,7 +99,7 @@ Adobe Experience Platform可讓您從多個來源匯整資料並加以匯整，�
 其中 `{IDENTITY_GRAPH_TYPE}` 是下列其中一項：
 
 * **「無」:** 不執行身份聯繫。
-* **「pdg」:** 根據您的個人身分圖表執行身分識別接合。
+* **「pdg」:** 根據您的私人身分圖表執行身分識別接合。
 
 **範例`identityGraph`**
 
@@ -227,7 +227,7 @@ curl -X GET \
 
 ### 根據多個合併策略的ID檢索多個合併策略
 
-通過向端點發出POST請求並在請求主體中包 `/config/mergePolicies/bulk-get` 含要檢索的合併策略的ID，可以檢索多個合併策略。
+通過向端點發出POST請求並在請求主體中包括要檢索 `/config/mergePolicies/bulk-get` 的合併策略的ID，可以檢索多個合併策略。
 
 **API格式**
 
