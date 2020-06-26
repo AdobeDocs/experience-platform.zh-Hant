@@ -4,33 +4,33 @@ seo-title: Experience Platform Web SDK的Edge組態
 description: '瞭解如何設定Experience Platform Edge Network。 '
 seo-description: '瞭解如何設定Experience Platform Edge Network。 '
 translation-type: tm+mt
-source-git-commit: 2d58f7f95c6ad125e66856350aee2f29a0499061
+source-git-commit: 5f263a2593cdb493b5cd48bc0478379faa3e155d
 workflow-type: tm+mt
-source-wordcount: '886'
+source-wordcount: '882'
 ht-degree: 2%
 
 ---
 
 
-# Edge Configuration
+# 設定Edge
 
-Adobe Experience Platfrom Web SDK的設定分為兩個位置。 SDK [中的configure命令](configuring-the-sdk.md) ，可控制用戶端上必須處理的事項，例如 `edgeDomain`。 邊緣設定可處理SDK的所有其他設定。 當請求傳送至Adobe Experience Platform Edge Network時，會使 `edgeConfigId` 用此參考伺服器端組態。 這可讓您更新設定，而不需在網站上變更程式碼。
+Adobe Experience Platform Web SDK的組態分為兩個部分。 SDK [中的configure命令](configuring-the-sdk.md) ，可控制用戶端上必須處理的事項，例如 `edgeDomain`。 邊緣設定可處理SDK的所有其他設定。 當請求傳送至Adobe Experience Platform Edge Network時，會使 `edgeConfigId` 用此參考伺服器端組態。 這可讓您更新設定，而不需在網站上變更程式碼。
 
 ## 建立邊配置ID
 
-Edge組態ID可在Launch中使用Edge組態工具建立。 此工具可讓您同時建立邊緣組態以及這些組態中的環境。
+Edge組態ID可在Adobe中使 [!DNL Launch] 用Edge組態工具建立。 此工具可讓您同時建立邊緣組態以及這些組態中的環境。
 
 ![邊緣配置工具導航](../../assets/edge_configuration_nav.png)
 
 >[!NOTE]
 >
->無論客戶是否使用Launch做為標籤管理器，允許清單上的客戶都可使用邊緣設定工具。 此外，使用者需要在Launch中擁有「開發」權限。 如需詳細 [資訊，請參閱](https://docs.adobe.com/content/help/zh-Hant/launch/using/reference/admin/user-permissions.html) 「啟動」檔案中的「使用者權限」文章。
+>無論客戶是否使用標籤管理器，允許清單上的邊緣設定工具 [!DNL Launch] 都可供客戶使用。 此外，使用者需要中的「開發」權限 [!DNL Launch]。 如需詳細 [資訊，請參閱](https://docs.adobe.com/content/help/zh-Hant/launch/using/reference/admin/user-permissions.html) 「使用者 [!DNL Launch] 權限」文章。
 
 您可以按一下畫面右上方區域的 **[UICONTROL New Edge Configuration]** ，來建立邊緣設定。 在您提供名稱和說明後，系統會要求您針對每個環境提供預設設定。
 
 ### 預設環境設定
 
-這些預設設定可用來建立前三個設定相同的環境。 這三個環境是dev、stage和prod。 它們符合Launch中的三個預設環境。 當您建立Launch程式庫至開發環境時，程式庫會自動使用您設定中的開發環境。 您可以視需要編輯個別環境中的設定。
+這些預設設定可用來建立前三個設定相同的環境。 這三種環境 *包括* dev、 *stage*&#x200B;和 *prod*。 它們與中的三個預設環境相匹配 [!DNL Launch]。 當您建立程式庫 [!DNL Launch] 至開發環境時，程式庫會自動使用您設定中的開發環境。 您可以視需要編輯個別環境中的設定。
 
 SDK中使用的ID是指 `edgeConfigId` 定配置和環境的複合ID。 如果沒有環境，則使用生產環境。
 
@@ -40,7 +40,7 @@ SDK中使用的ID是指 `edgeConfigId` 定配置和環境的複合ID。 如果�
 
 #### [!UICONTROL 身份]
 
-身分區段是唯一永遠開啟的區段。 它有兩個可用的設定： ID同步和ID同步容器ID。
+身分區段是唯一永遠開啟的區段。 它有兩個可用的設定： [!UICONTROL ID同步] , [!UICONTROL ID同步容器ID]。
 
 ![配置UI的標識部分](../../assets/edge_configuration_identity.png)
 
@@ -60,7 +60,7 @@ ID同步可分組至容器，以允許在不同時間執行不同的ID同步。 
 
 ##### [!UICONTROL 沙盒]
 
-沙盒是Adobe Experience Platform中的位置，可讓客戶將資料和建置彼此隔離。 Sandboxs檔案中提供了如何運作的詳細 [資訊](../../sandboxes/home.md)。
+沙盒是Adobe Experience Platform中的位置，可讓客戶將資料和建置彼此隔離。 如需其運作方式的詳細資訊，請參閱「 [Sandbox」檔案](../../sandboxes/home.md)。
 
 ##### [!UICONTROL 串流入口]
 
