@@ -4,15 +4,18 @@ solution: Adobe Experience Platform
 title: 即時客戶個人檔案API開發人員指南
 topic: guide
 translation-type: tm+mt
-source-git-commit: d0ccaa5511375253a2eca8f1235c2f953b734709
+source-git-commit: d464a6b4abd843f5f8545bc3aa8000f379a86c6d
+workflow-type: tm+mt
+source-wordcount: '2431'
+ht-degree: 1%
 
 ---
 
 
-# (Alpha)計算屬性
+# (Alpha)計算屬性端點
 
 >[!IMPORTANT]
->本文中概述的計算屬性功能目前為alpha格式，並非所有使用者都能使用。 說明檔案和功能可能會有所變更。
+>本文中概述的計算屬性功能目前為alpha格式，並非所有使用者都能使用。 文件和功能可能會有所變更。
 
 計算屬性可讓您根據其他值、計算和運算式自動計算欄位的值。 計算屬性在描述檔層級上運作，這表示您可以匯總所有記錄和事件的值。
 
@@ -22,9 +25,7 @@ source-git-commit: d0ccaa5511375253a2eca8f1235c2f953b734709
 
 ## 快速入門
 
-本指南中使用的API端點是即時客戶個人檔案API的一部分。 在繼續之前，請先閱讀「即 [時客戶基本資料開發人員指南」](getting-started.md)。
-
-尤其是，「描述檔開 [發人員指南](getting-started.md) 」的「快速入門」區段包含相關主題的連結、閱讀本檔案中範例API呼叫的指南，以及成功呼叫任何Experience Platform API所需之必要標題的重要資訊。
+本指南中使用的API端點是即時客戶 [設定檔API的一部分](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml)。 在繼續之前，請先閱讀快速入門手冊 [](getting-started.md) ，以取得相關檔案的連結、閱讀本檔案中範例API呼叫的指南，以及成功呼叫任何Experience Platform API所需之必要標題的重要資訊。
 
 ## 瞭解計算屬性
 
@@ -203,7 +204,7 @@ curl -X POST \
 
 | 屬性 | 說明 |
 |---|---|
-| `id` | 唯一、唯讀、系統產生的ID，可用於在其他API操作期間參考計算的屬性。 |
+| `id` | 唯一、唯讀、系統產生的ID，可用於在其他API操作期間引用計算的屬性。 |
 | `imsOrgId` | 與計算屬性相關的IMS組織應符合在請求中傳送的值。 |
 | `sandbox` | 沙盒物件包含沙盒的詳細資訊，此沙盒已設定計算屬性。 這項資訊是從請求中傳送的沙盒標題中擷取。 如需詳細資訊，請參閱 [沙盒總覽](../../sandboxes/home.md)。 |
 | `positionPath` | 包含解構至請求 `path` 中所傳送欄位的陣列。 |
@@ -353,7 +354,7 @@ curl -X GET \
 | 屬性 | 說明 |
 |---|---|
 | `_page.totalCount` | 由IMS組織定義的計算屬性總數。 |
-| `_page.pageSize` | 在此結果頁返回的計算屬性數。 如 `pageSize` 果等於 `totalCount`，表示只有一頁結果，且所有計算屬性都已傳回。 如果結果不相等，則可存取其他頁面的結果。 如需詳 `_links.next` 細資訊，請參閱。 |
+| `_page.pageSize` | 在此結果頁返回的計算屬性數。 如 `pageSize` 果等於 `totalCount`，表示只有一頁結果，且所有計算屬性都已傳回。 如果結果不相等，則可存取其他頁面的結果。 See `_links.next` for details. |
 | `children` | 由一個或多個對象組成的陣列，每個對象包含單個計算屬性的詳細資訊。 如果未定義任何計算屬性，則 `children` 陣列為空。 |
 | `id` | 建立計算屬性時自動分配給其的唯一隻讀系統生成值。 有關計算屬性對象的元件的詳細資訊，請參閱本教程前面 [有關建立計算屬性的部分](#create-a-computed-attribute) 。 |
 | `_links.next` | 如果返回計算屬性的單頁，則 `_links.next` 為空對象，如上面的示例響應所示。 如果您的組織有許多計算屬性，則會在多個頁面上傳回這些屬性，您可以透過對值進行GET請求來存 `_links.next` 取。 |
