@@ -4,7 +4,10 @@ solution: Adobe Experience Platform
 title: 使用API為Profile and Identity Service設定資料集
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 409d98818888f2758258441ea2d993ced48caf9a
+source-git-commit: 93aae0e394e1ea9b6089d01c585a94871863818e
+workflow-type: tm+mt
+source-wordcount: '1121'
+ht-degree: 1%
 
 ---
 
@@ -24,10 +27,10 @@ source-git-commit: 409d98818888f2758258441ea2d993ced48caf9a
 
 本教學課程需要對管理啟用設定檔的資料集時涉及的各種Adobe Experience Platform服務有充份的瞭解。 在開始本教學課程之前，請先閱讀這些相關平台服務的檔案：
 
-- [即時客戶個人檔案](../home.md):根據來自多個來源的匯整資料，提供統一、即時的消費者個人檔案。
-- [身分服務](../../identity-service/home.md):借由橋接來自不同資料來源的身分，並將之收錄至平台，以建立即時客戶個人檔案。
-- [目錄服務](../../catalog/home.md):REST風格的API，可讓您建立資料集，並針對即時客戶個人檔案和身分服務進行設定。
-- [體驗資料模型(XDM)](../../xdm/home.md):平台組織客戶體驗資料的標準化架構。
+- [即時客戶個人檔案](../home.md): 根據來自多個來源的匯整資料，提供統一、即時的消費者個人檔案。
+- [身分服務](../../identity-service/home.md): 借由橋接來自不同資料來源的身分，並將之收錄至平台，以建立即時客戶個人檔案。
+- [目錄服務](../../catalog/home.md): REST風格的API，可讓您建立資料集，並針對即時客戶個人檔案和身分服務進行設定。
+- [體驗資料模型(XDM)](../../xdm/home.md): 平台組織客戶體驗資料的標準化架構。
 
 以下章節提供您必須知道的其他資訊，才能成功呼叫平台API。
 
@@ -39,13 +42,13 @@ source-git-commit: 409d98818888f2758258441ea2d993ced48caf9a
 
 若要呼叫平台API，您必須先完成驗證教 [學課程](../../tutorials/authentication.md)。 完成驗證教學課程後，所有Experience Platform API呼叫中每個必要標題的值都會顯示在下方：
 
-- 授權：生產者 `{ACCESS_TOKEN}`
+- 授權： 生產者 `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
 所有包含裝載(POST、PUT、PATCH)的請求都需要額外的標題：
 
-- 內容類型：application/json
+- 內容類型： application/json
 
 Experience Platform中的所有資源都隔離至特定的虛擬沙盒。 所有對平台API的請求都需要一個標題，該標題會指定要進行操作的沙盒名稱。 如需平台中沙盒的詳細資訊，請參閱沙盒 [概觀檔案](../../sandboxes/home.md)。
 
@@ -245,7 +248,7 @@ curl -X PATCH \
 
 ## 按即時客戶個人檔案確認資料收錄 {#confirm-data-ingest-by-real-time-customer-profile}
 
-第一次上傳資料至新資料集，或是作為新ETL或資料來源相關程式的一部分，建議您仔細檢查資料，以確保資料已如預期上傳。 使用即時客戶描述檔存取API，您可以在批次資料載入資料集時擷取批次資料。 如果您無法擷取任何預期的實體，您的資料集可能無法啟用即時客戶個人檔案。 確認資料集已啟用後，請確定您的來源資料格式和識別碼支援您的期望。 如需如何使用即時客戶描述檔API存取描述檔資料的詳細指示，請依照實體的子指南（亦稱為「描述檔存取API」）進行 [](../api/entities.md)。
+第一次上傳資料至新資料集，或是作為新ETL或資料來源相關程式的一部分，建議您仔細檢查資料，以確保資料已如預期上傳。 使用即時客戶描述檔存取API，您可以在批次資料載入資料集時擷取批次資料。 如果您無法擷取任何預期的實體，您的資料集可能無法啟用即時客戶個人檔案。 確認資料集已啟用後，請確定您的來源資料格式和識別碼支援您的期望。 如需如何使用即時客戶描述檔API來存取描述檔資料的詳細指示，請遵循實 [體端點指南](../api/entities.md)，亦稱為「描述檔存取API」。
 
 ## 確認由Identity Service收錄的資料 {#confirm-data-ingest-by-identity-service}
 
