@@ -4,27 +4,25 @@ solution: Adobe Experience Platform
 title: 即時客戶個人檔案API開發人員指南
 topic: guide
 translation-type: tm+mt
-source-git-commit: 9600f315f162b6cd86e2dbe2fffc793cc91c9319
+source-git-commit: d464a6b4abd843f5f8545bc3aa8000f379a86c6d
 workflow-type: tm+mt
-source-wordcount: '1694'
+source-wordcount: '1690'
 ht-degree: 1%
 
 ---
 
 
-# 實體（描述檔存取）
+# 實體端點（配置檔案訪問）
 
-Adobe Experience Platform可讓您使用REST風格的API或使用者介面存取即時客戶個人檔案資料。 本指南概述如何使用API存取實體（通常稱為「設定檔」）。 有關使用平台UI存取描述檔資料的詳細資訊，請參閱「描述檔使 [用指南」](../ui/user-guide.md)。
+Adobe Experience Platform可讓您使用REST風格的API或使用者介面存取即時客戶個人檔案資料。 本指南概述如何使用API存取實體（通常稱為「設定檔」）。 有關使用平台UI存取設定檔的詳細資訊，請參閱「設定檔使 [用指南」](../ui/user-guide.md)。
 
 ## 快速入門
 
-本指南中使用的API端點是即時客戶個人檔案API的一部分。 在繼續之前，請先閱讀 [即時客戶個人檔案API開發人員指南](getting-started.md)。
-
-尤其是，「描述檔開 [發人員指南](getting-started.md#getting-started) 」的「快速入門」區段包含相關主題的連結、閱讀本檔案中範例API呼叫的指南，以及成功呼叫任何Experience Platform API所需之必要標題的重要資訊。
+本指南中使用的API端點是即時客戶 [設定檔API的一部分](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml)。 在繼續之前，請先閱讀快速入門手冊 [](getting-started.md) ，以取得相關檔案的連結、閱讀本檔案中範例API呼叫的指南，以及成功呼叫任何Experience Platform API所需之必要標題的重要資訊。
 
 ## 依身分存取個人檔案資料
 
-通過向端點發出GET請求並以一系列查詢參 `/access/entities` 數的形式提供實體的標識，可以訪問Profile實體。 此身分由ID值(`entityId`)和身分命名空間(`entityIdNS`)組成。
+通過向端點發出GET請求並以一系列查詢參數 `/access/entities` 的形式提供實體的標識，可以訪問Profile實體。 此身分由ID值(`entityId`)和身分命名空間(`entityIdNS`)組成。
 
 請求路徑中提供的查詢參數指定要存取的資料。 您可以包含多個參數，以&amp;符號分隔。 附錄的查詢參數部分提供了有 [效參數](#query-parameters) 的完整清單。
 
@@ -776,7 +774,7 @@ curl -X POST \
 
 ## 訪問多個模式實體中的時間序列事件
 
-可以訪問通過關係描述符連接的多個實體。 下列範例API呼叫假設兩個結構之間已定義了關係。 有關關係描述符的詳細資訊，請閱讀Schema Registry API Developer Guide(模式註冊表API開發 [人員指南)子指南](../../xdm/api/descriptors.md)。
+可以訪問通過關係描述符連接的多個實體。 下列範例API呼叫假設兩個結構之間已定義了關係。 有關關係描述符的詳細資訊，請閱讀《方案註冊表API開發人員指南》描述符 [端點指南](../../xdm/api/descriptors.md)。
 
 您可以在請求路徑中包含查詢參數，以指定要存取的資料。 您可以包含多個參數，以&amp;符號分隔。 附錄的查詢參數部分提供了有 [效參數](#query-parameters) 的完整清單。
 
