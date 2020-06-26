@@ -4,21 +4,21 @@ solution: Adobe Experience Platform
 title: 即時客戶個人檔案API開發人員指南
 topic: guide
 translation-type: tm+mt
-source-git-commit: 9600f315f162b6cd86e2dbe2fffc793cc91c9319
+source-git-commit: d464a6b4abd843f5f8545bc3aa8000f379a86c6d
 workflow-type: tm+mt
-source-wordcount: '1940'
+source-wordcount: '1919'
 ht-degree: 2%
 
 ---
 
 
-# 邊緣目的地和投影
+# 邊緣投影配置和目標端點
 
 為即時跨多個通道為客戶提供協調、一致且個人化的體驗，需要隨時提供適當的資料，並在變更時持續更新。 Adobe Experience Platform可讓您透過使用所謂的邊緣，即時存取資料。 邊緣是地理位置優越的伺服器，可儲存資料，讓應用程式可輕鬆存取。 例如，Adobe Target和Adobe Campaign等Adobe應用程式會利用優勢，即時提供個人化客戶體驗。 資料通過投影被路由到邊，投影目的地定義資料要發送到的邊，投影配置定義將在邊上提供的特定資訊。 本指南提供使用即時客戶描述檔API來處理邊緣預測的詳細指示，包括目標和設定。
 
 ## 快速入門
 
-本指南中使用的API端點是即時客戶個人檔案API的一部分。 在繼續之前，請先閱讀「即 [時客戶基本資料開發人員指南」](getting-started.md)。 尤其是，「描述檔開 [發人員指南](getting-started.md#getting-started) 」的「快速入門」區段包含相關主題的連結、閱讀本檔案中範例API呼叫的指南，以及成功呼叫任何Experience Platform API所需之必要標題的重要資訊。
+本指南中使用的API端點是即時客戶 [設定檔API的一部分](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml)。 在繼續之前，請先閱讀快速入門手冊 [](getting-started.md) ，以取得相關檔案的連結、閱讀本檔案中範例API呼叫的指南，以及成功呼叫任何Experience Platform API所需之必要標題的重要資訊。
 
 >[!NOTE]
 >包含裝載(POST、PUT、PATCH)的請求需要標 `Content-Type` 頭。 本文檔中 `Content-Type` 使用了多個。 請特別注意範例呼叫中的標題，以確保您對每個請求都使 `Content-Type` 用正確。
@@ -107,7 +107,7 @@ curl -X GET \
 
 有關個別目標屬性的詳細資訊，請參閱以下有關建 [立目標](#create-a-destination) 的章節。
 
-### 建立目標 {#create-a-destination}
+### Create a destination {#create-a-destination}
 
 如果所需的目標不存在，則可以通過向端點發出POST請求來建立新的投影目 `/config/destinations` 標。
 
@@ -639,4 +639,4 @@ curl -X POST \
 
 ## 後續步驟
 
-本指南已向您顯示設定邊緣投影和目標所涉及的步驟，包括如何正確格式化參 `selector` 數。 您現在可以根據組織的需求建立新的邊緣目的地和預測。 若要探索透過描述檔API提供的其他動作，請參閱 [即時客戶描述檔API開發人員指南](getting-started.md)。
+本指南已向您顯示設定投影和目標所涉及的步驟，包括如何正確設定參數的格 `selector` 式。 您現在可以根據組織的需求建立新的投影目的地和設定。
