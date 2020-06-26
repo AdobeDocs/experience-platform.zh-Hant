@@ -4,21 +4,24 @@ solution: Adobe Experience Platform
 title: 即時客戶個人檔案API開發人員指南
 topic: guide
 translation-type: tm+mt
-source-git-commit: d0ccaa5511375253a2eca8f1235c2f953b734709
+source-git-commit: d464a6b4abd843f5f8545bc3aa8000f379a86c6d
+workflow-type: tm+mt
+source-wordcount: '1501'
+ht-degree: 2%
 
 ---
 
 
 # 描述檔系統工作（刪除請求）
 
-Adobe Experience Platform可讓您從多個來源擷取資料，並為個別客戶建立強穩的個人檔案。 Data Lake和即時客戶個人檔案資料儲存中會儲存在Platform中。 有時可能需要從描述檔存放區刪除資料集或批次，以移除不再需要或錯誤新增的資料。 這需要使用即時客戶描述檔API來建立描述檔系統工作（也稱為「刪除請求」），如有需要，也可加以修改、監控或移除。
+Adobe Experience Platform可讓您從多個來源擷取資料，並為個別客戶建立強穩的個人檔案。 Data Lake和即時客戶個人檔案資料儲存中會儲存在Platform中。 有時可能需要從描述檔商店刪除資料集或批次，以移除不再需要或錯誤新增的資料。 這需要使用即時客戶描述檔API來建立描述檔系統工作（也稱為「刪除請求」），如有需要，也可加以修改、監控或移除。
 
 >[!NOTE]
 >如果您嘗試從資料湖刪除資料集或批次，請造訪目錄服 [務概觀](../../catalog/home.md) ，以取得指示。
 
 ## 快速入門
 
-本指南中使用的API端點是即時客戶個人檔案API的一部分。 在繼續之前，請先閱讀 [即時客戶個人檔案API開發人員指南](getting-started.md)。 尤其是，「描述檔開 [發人員指南](getting-started.md#getting-started) 」的「快速入門」區段包含相關主題的連結、閱讀本檔案中範例API呼叫的指南，以及成功呼叫任何Experience Platform API所需之必要標題的重要資訊。
+本指南中使用的API端點是即時客戶 [設定檔API的一部分](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml)。 在繼續之前，請先閱讀快速入門手冊 [](getting-started.md) ，以取得相關檔案的連結、閱讀本檔案中範例API呼叫的指南，以及成功呼叫任何Experience Platform API所需之必要標題的重要資訊。
 
 ## 檢視刪除請求
 
@@ -89,7 +92,7 @@ curl -X POST \
 | 屬性 | 說明 |
 |---|---|
 | _page.count | 請求總數。 此回應已針對空間截斷。 |
-| _page.next | 如果有其他結果頁面存在，請以提供的「下一頁」值取代查 [閱請求中的ID值](#view-a-specific-delete-request) ，以檢視下一頁結果。 |
+| _page.next | 如果有其他結果頁面存在，請將查閱請求中的ID值取代為 [提供的](#view-a-specific-delete-request) 「下一頁」值，以檢視下一頁結果。 |
 | jobType | 要建立的作業類型。 在這種情況下，它將始終返回&quot;DELETE&quot;。 |
 | 狀態 | 刪除請求的狀態。 可能的值為「新」、「處理」、「已完成」、「錯誤」。 |
 | 度量 | 包含已處理的記錄數(「recordsProcessed」)和請求已處理的時間（以秒為單位），或請求完成所需的時間(「timeTakenInSec」)的物件。 |
@@ -267,7 +270,7 @@ curl -X POST \
 | 屬性 | 說明 |
 |---|---|
 | jobType | 所建立作業的類型，在這種情況下，它將始終返回&quot;DELETE&quot;。 |
-| 狀態 | 刪除請求的狀態。 可能的值：「新」、「處理」、「完成」、「錯誤」。 |
+| 狀態 | 刪除請求的狀態。 可能的值： 「新」、「處理」、「完成」、「錯誤」。 |
 | 度量 | 一個陣列，包含已處理的記錄數(「recordsProcessed」)和請求已處理的時間（以秒為單位），或請求完成所需的時間(「timeTakenInSec」)。 |
 
 刪除請求狀態為「已完成」後，您可以嘗試使用資料存取API存取已刪除的資料，以確認資料已刪除。 有關如何使用Data Access API存取資料集和批次的指示，請參閱 [Data Access檔案](../../data-access/home.md)。
@@ -303,7 +306,7 @@ curl -X POST \
 
 ## 後續步驟
 
-現在，您知道從Experience Platform的Profile Store刪除資料集和批次時涉及的步驟，因此您可以安全地刪除已錯誤添加或您的組織不再需要的資料。 請注意，刪除請求無法撤消，因此您只應刪除您確信現在不需要且將來不需要的資料。
+現在，您知道從Experience Platform內的Profile Store刪除資料集和批次時涉及的步驟，因此您可以安全地刪除已錯誤新增或您的組織不再需要的資料。 請注意，刪除請求無法撤消，因此您只應刪除您確信現在不需要且將來不需要的資料。
 
 ## 附錄 {#appendix}
 
