@@ -3,9 +3,9 @@ product: experience-platform
 audience: user
 user-guide-title: 即時客戶個人檔案說明
 translation-type: tm+mt
-source-git-commit: 59831f5c2445f65371d1897f66dfc45507a9955c
+source-git-commit: 93aae0e394e1ea9b6089d01c585a94871863818e
 workflow-type: tm+mt
-source-wordcount: '78'
+source-wordcount: '81'
 ht-degree: 20%
 
 ---
@@ -14,14 +14,15 @@ ht-degree: 20%
 # 即時客戶個人檔案 {#profile}
 
 * [描述檔概述](home.md)
-* 設定檔API {#api}
+* 設定檔API開發人員指南 {#api}
+   * [概述](api/overview.md)
    * [快速入門](api/getting-started.md)
    * [(Alpha)計算屬性](api/computed-attributes.md)
    * [邊緣投影](api/edge-projections.md)
    * [實體（描述檔存取）](api/entities.md)
    * [合併原則](api/merge-policies.md)
    * [描述檔系統工作（刪除請求）](api/profile-system-jobs.md)
-* 設定檔UI {#ui}
+* UI指南 {#ui}
    * [設定檔使用指南](ui/user-guide.md)
    * [合併策略使用手冊](ui/merge-policies.md)
 * 教學課程 {#tutorials}
