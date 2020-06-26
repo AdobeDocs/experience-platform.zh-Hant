@@ -4,9 +4,9 @@ seo-title: Adobe Experience Platform Web SDK除錯
 description: 瞭解如何切換Experience Platform Web SDK除錯
 seo-description: 瞭解如何切換Experience Platform Web SDK除錯
 translation-type: tm+mt
-source-git-commit: 7d4f364ebb9df1ce58481a35007ea75f86ab7825
+source-git-commit: 5f263a2593cdb493b5cd48bc0478379faa3e155d
 workflow-type: tm+mt
-source-wordcount: '323'
+source-wordcount: '324'
 ht-degree: 0%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 0%
 
 啟用除錯時，SDK會將訊息輸出至瀏覽器主控台，以協助除錯您的實作並瞭解SDK的運作方式。 除錯也會針對您所設定的架構，產生伺服器端同步驗證所收集的資料。
 
-預設會停用除錯功能，但可以透過三種不同的方式來切換：
+預設會停用除錯功能，但可以以三種不同的方式開啟：
 
 * `configure` 命令
 * `setDebug` 命令
@@ -34,7 +34,8 @@ alloy("configure", {
 });
 ```
 
->[!Hint]
+>[!TIP]
+>
 >如此可讓網頁的所有使用者除錯，而不只是您的個人瀏覽器。
 
 ## 使用Debug命令切換除錯
@@ -61,7 +62,7 @@ http://example.com/?alloy_debug=true
 
 ## 優先順序和持續時間
 
-通過命令或查詢字串參 `debug` 數設定調試時，它會覆蓋命 `debug` 令中設定的任何 `configure` 選項。 在這兩種情況下，除錯也會在工作階段期間繼續切換。 換言之，如果您使用debug命令或查詢字串參數啟用除錯，則會一直啟用除錯功能，直到下列其中一項為止：
+通過命令或查詢字串參 `debug` 數設定調試時，它會覆蓋命 `debug` 令中設定的任何 `configure` 選項。 在這兩種情況下，除錯功能在工作階段期間仍會繼續開啟。 換言之，如果您使用debug命令或查詢字串參數啟用除錯，則會一直啟用除錯功能，直到下列其中一項為止：
 
 * 課程結束
 * 運行命 `debug` 令
