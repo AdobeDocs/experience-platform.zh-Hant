@@ -4,81 +4,120 @@ solution: Experience Platform
 title: 將CSV檔案對應至XDM架構
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 33282b1c8ab1129344bd4d7054e86fed75e7b899
+source-git-commit: 7876e6d52815968802bd73bb5e340c99ea3387a8
+workflow-type: tm+mt
+source-wordcount: '1354'
+ht-degree: 2%
 
 ---
 
 
 # 將CSV檔案對應至XDM架構
 
-若要將CSV資料內嵌至Adobe Experience Platform，資料必須對應至Experience Data Model(XDM)架構。 本教學課程涵蓋如何使用Experience Platform使用者介面，將CSV檔案對應至XDM架構。
+為了將CSV資料內嵌 [!DNL Adobe Experience Platform]至中，資料必須對應至 [!DNL Experience Data Model] (XDM)架構。 本教學課程介紹如何使用使用者介面將CSV檔案對應至XDM [!DNL Platform] 架構。
 
 此外，本教學課程的附錄還提供有關使用映射功能的進 [一步資訊](#mapping-functions)。
 
 ## 快速入門
 
-本教學課程需要對Adobe Experience Platform的下列元件有正確的認識：
+本教學課程需要有效瞭解下列元件 [!DNL Platform]:
 
-- [體驗資料模型（XDM系統）](../../xdm/home.md):Experience Platform組織客戶體驗資料的標準化架構。
-- [批次擷取](../batch-ingestion/overview.md):平台從用戶提供的資料檔案中接收資料的方法。
+- [!DNL Experience Data Model (XDM System)](../../xdm/home.md): 組織客戶體驗資料 [!DNL Platform] 的標準化架構。
+- [!DNL Batch ingestion](../batch-ingestion/overview.md): 從用戶提供的數 [!DNL Platform] 據檔案中提取資料的方法。
 
 本教學課程也要求您已建立資料集，以將CSV資料收錄至。 如需在UI中建立資料集的步驟，請參閱資料 [收錄教學課程](./ingest-batch-data.md)。
 
+## 選擇目標
+
+登入，然 [!DNL Adobe Experience Platform](https://platform.adobe.com) 後從左側導 **[!UICONTROL 覽列選取「工作流程]** 」以存取「工作 *[!UICONTROL 流程]* 」工作區。
+
+在「工 **[!UICONTROL 作流程]** 」螢幕中，選擇 **[!UICONTROL 「]** Data ingestion **[!UICONTROL 」部分下的「將CSV映射到XDM模式」，然後選]******&#x200B;擇LaunchChec。
+
+![](../images/tutorials/map-a-csv-file/workflows.png)
+
+將 *[!UICONTROL CSV對應至XDM架構]* ，從「目標」步驟 *[!UICONTROL 開始]* 。 選擇要接收傳入資料的資料集。 您可以使用現有資料集或建立新資料集。
+
+**使用現有資料集**
+
+若要將CSV資料內嵌至現有資料集，請選取「使 **[!UICONTROL 用現有資料集」]**。 您可以使用搜尋函式或捲動面板中現有資料集的清單來擷取現有資料集。
+
+![](../images/tutorials/map-a-csv-file/use-existing-dataset.png)
+
+若要將CSV資料內嵌至新資料集，請選取「 **[!UICONTROL Create new dataset]** 」（建立新資料集），並在提供的欄位中輸入資料集的名稱和說明。 使用搜索函式或滾動提供的方案清單來選擇方案。 選擇 **[!UICONTROL 下一步]** ，繼續。
+
+![](../images/tutorials/map-a-csv-file/create-new-dataset.png)
+
 ## 新增資料
 
-在Experience Platform UI中，按一下左側導 **覽中的** 「工作流程」，然後按一 **下「將CSV對應至XDM架構」**。 在出現的右側導軌中，按一下「啟 **動」**。
-
-![](../images/tutorials/map-a-csv-file/workflow-tab.png)
-
-將 _CSV對應至XDM架構_ ，從新增資料步驟 _開始_ 。
+此時將 *[!UICONTROL 顯示「添加資料]* 」步驟。 將CSV檔案拖放至提供的空間，或選取「選 **[!UICONTROL 擇檔案]** 」以手動輸入CSV檔案。
 
 ![](../images/tutorials/map-a-csv-file/add-data.png)
 
-將CSV檔案拖放至提供的空間，或按一下「瀏 **覽** 」直接選取檔案。 上 _傳檔案後_ ，會顯示「範例資料」區段，顯示前10列資料。 確認資料已如預期上傳後，按一下「下一 **步**」。
+上 *[!UICONTROL 傳檔案後]* ,「範例資料」區段就會出現，顯示前10列資料。 確認資料已如預期上傳後，請選取「下一 **[!UICONTROL 步」]**。
 
-![](../images/tutorials/map-a-csv-file/csv-added.png)
-
-## 選擇目標
-
-出現 _「Destination_ （目標）」步驟。 從提供的清單中，選取CSV資料將收錄到的資料集，然後按一下「下 **一步**」。
-
-![](../images/tutorials/map-a-csv-file/select-destination.png)
+![](../images/tutorials/map-a-csv-file/sample-data.png)
 
 ## 將CSV欄位對應至XDM結構欄位
 
-此時將 _顯示_ 「映射」步驟。 CSV檔案的欄位列在「來源欄位」 _下_，其對應的XDM架構欄位列在「目標欄位」 _下_。 未選取的目標欄位以紅色勾勒。
+此時將 *[!UICONTROL 顯示]* 「映射」步驟。 CSV檔案的欄位列在「來源欄位」 *[!UICONTROL 下]*，其對應的XDM架構欄位列在「目標欄位」 *[!UICONTROL 下]*。 未選取的目標欄位以紅色勾勒。 您可以使用篩選欄位選項來縮小可用來源欄位的清單。
 
-要將CSV列映射到XDM欄位，請按一下該列相應目標欄位旁的架構表徵圖。
+要將CSV列映射到XDM欄位，請選擇該列相應目標欄位旁的架構表徵圖。
 
-![](../images/tutorials/map-a-csv-file/target-field-mapping.png)
+![](../images/tutorials/map-a-csv-file/mapping.png)
 
-將出 _現「選擇方案_ 」欄位窗口。 您可以在這裡導覽XDM架構的結構，並找出您要將CSV欄對應至的欄位。 按一下XDM欄位以選取它，然後按一下「選 **取**」。
+將出 *[!UICONTROL 現「選擇方案]* 」欄位窗口。 您可以在這裡導覽XDM架構的結構，並找出您要將CSV欄對應至的欄位。 按一下XDM欄位以選取它，然後按一下「選 **[!UICONTROL 取]**」。
 
-![](../images/tutorials/map-a-csv-file/xdm-field-selection.png)
+![](../images/tutorials/map-a-csv-file/select-schema-field.png)
 
-「映 _射_ 」畫面會重新出現，選取的XDM欄位現在會顯示在「目標 _欄位」下_。
+「映 *[!UICONTROL 射]* 」畫面會重新出現，選取的XDM欄位現在會顯示在「目標 *[!UICONTROL 欄位」下]*。
 
-![](../images/tutorials/map-a-csv-file/xdm-field-mapped.png)
+![](../images/tutorials/map-a-csv-file/field-mapped.png)
 
-如果您不想映射特定CSV欄，可以按一下目標欄位旁的「移 **除** 」圖示來移除映射。 如果要添加新映射，請按一下列 **表底部的** 「添加新映射」。
+如果您不想映射特定CSV欄，可以按一下目標欄位旁的「移 **除** 」圖示來移除映射。 您也可以通過選擇清除所有映射按鈕來 **[!UICONTROL 刪除所有映射]**。
 
-![](../images/tutorials/map-a-csv-file/remove-or-add-mapping.png)
+![](../images/tutorials/map-a-csv-file/remove-mapping.png)
+
+如果要添加新映射，請選擇「源 **[!UICONTROL 欄位」清單頂部的]** 「添加 *[!UICONTROL 新映射]* 」。
+
+![](../images/tutorials/map-a-csv-file/add-mapping.png)
 
 在映射欄位時，您還可以包括函式，以便根據輸入源欄位計算值。 如需詳 [細資訊](#mapping-functions) ，請參閱附錄中的對應函式一節。
 
-重複上述步驟，繼續將CSV欄對應至XDM欄位。 完成後，按一下「下 **一步**」。
+### 新增計算欄位
 
-![](../images/tutorials/map-a-csv-file/mapping-finish.png)
+計算欄位允許根據輸入方案中的屬性建立值。 然後，這些值可以分配給目標方案中的屬性，並提供名稱和說明，以便更方便地引用。
 
-## 收錄資料
+選擇「添 **[!UICONTROL 加計算欄位]** 」按鈕以繼續。
 
-此時 _會顯示_ 「收錄」步驟，讓您檢視來源檔案和目標資料集的詳細資料。 按一 **下「收錄** 」以開始收錄CSV資料。 視CSV檔案的大小而定，此程式可能需要幾分鐘的時間。 擷取完成後，畫面會更新，指出成功或失敗。 Click **Finish** to complete the workflow.
+![](../images/tutorials/map-a-csv-file/add-calculated-field.png)
 
-![](../images/tutorials/map-a-csv-file/ingest-data.png)
+此時將 **[!UICONTROL 出現「建立計算欄位]** 」面板。 左側對話方塊包含計算欄位中支援的欄位、函式和運算子。 選擇一個頁籤，開始向表達式編輯器添加函式、欄位或運算子。
+
+![](../images/tutorials/map-a-csv-file/create-calculated-fields.png)
+
+| 定位 | 說明 |
+| --------- | ----------- |
+| 欄位 | 「欄位」頁籤列出了源方案中可用的欄位和屬性。 |
+| 函數 | 函式頁籤列出了可用於轉換資料的函式。 |
+| 運算子 | 運算子標籤會列出可用來轉換資料的運算子。 |
+
+您可以使用中心的運算式編輯器手動新增欄位、函式和運算子。 選擇編輯器以開始建立表達式。
+
+![](../images/tutorials/map-a-csv-file/expression-editor.png)
+
+選擇「 **[!UICONTROL 保存]** 」繼續。
+
+映射螢幕將重新顯示，並顯示新建立的源欄位。 應用相應的目標欄位並選擇 **[!UICONTROL 完成]** ，以完成映射。
+
+![](../images/tutorials/map-a-csv-file/new-field.png)
+
+## 監控資料流
+
+一旦映射並建立CSV檔案後，您就可以監控透過它擷取的資料。 有關監視資料流的詳細資訊，請參見有關監視流資料流 [的教程](../../ingestion/quality/monitor-data-flows.md)。
 
 ## 後續步驟
 
-在本教學課程中，您已成功將平面CSV檔案對應至XDM架構，並將其內嵌至平台。 現在，下游平台服務（例如即時客戶個人檔案）可以使用此資料。 如需詳 [細資訊，請參閱即時客戶個人檔案](../../profile/home.md) 。
+在本教學課程中，您已成功將平面CSV檔案對應至XDM架構，並將它加入其中 [!DNL Platform]。 此資料現在可供下游服務 [!DNL Platform] 使用，例如 [!DNL Real-time Customer Profile]。 如需詳細資訊， [!DNL Real-time Customer Profile](../../profile/home.md) 請參閱總覽。
 
 ## 附錄
 
@@ -86,7 +125,7 @@ source-git-commit: 33282b1c8ab1129344bd4d7054e86fed75e7b899
 
 ### 映射函式
 
-某些映射函式可用於根據在源欄位中輸入的內容計算和計算值。 若要使用函式，請在「來源欄位」下方輸入 _函式_ ，並輸入適當的語法和輸入。
+某些映射函式可用於根據在源欄位中輸入的內容計算和計算值。 若要使用函式，請在「來源欄位」下方輸入 *[!UICONTROL 函式]* ，並輸入適當的語法和輸入。
 
 例如，若要串連 **城市****CSV和國家／地區** CSV欄位，並將它們指派至 **城市** XDM欄位，請將來源欄位設為 `concat(city, ", ", county)`。
 
@@ -118,8 +157,8 @@ source-git-commit: 33282b1c8ab1129344bd4d7054e86fed75e7b899
 | 格式 | 根據指定的格式格式化輸入日期。 | format({DATE}, &quot;yyyy-MM-dd HH:mm:ss&quot;) | &quot;2019-10-23 11:24:35&quot; |
 | dformat | 根據指定的格式將時間戳轉換為日期字串。 | dformat(1571829875, &quot;dd-MMM-yyyy hh:mm&quot;) | 「2019年10月23日11:24」 |
 | 日期 | 將日期字串轉換為ZonedDateTime物件（ISO 8601格式）。 | date（&quot;2019年10月23日11:24&quot;） | &quot;2019-10-23T11:24:00+00:00&quot; |
-| date_part | 擷取日期的部分。 支援下列元件值： <br><br>&quot;<br>year&quot;<br>&quot;yy&quot;<br><br>&quot;yy&quot;<br>&quot;yy&quot;周&quot;<br>&quot;<br><br>.<br>&quot;yy&quot;周&quot;<br>&quot;<br><br>d&quot;<br>d&quot;<br>d&quot;d&quot;&quot;<br><br>d&quot;d&quot;&quot;<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>d&quot;y&quot;y&quot;y&quot;y&quot;y&quot;y&quot;y&quot;y&quot;y&quot;y&quot;yy&quot;y&quot;y&quot;y&quot;yyy&quot;y&quot;y&quot;y&quot;y&quot;y&quot;y4「&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;>>>>>>>>&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt; | date_part(date(&quot;2019-10-17 11:55:12&quot;), &quot;MM&quot;) | 10 |
-| set_date_part | 在指定日期中替換元件。 接受下列元件：yyyy <br><br>&quot;year&quot;<br>&quot;yyy<br>&quot;月&quot;<br><br>&quot;yymm&quot;<br>&quot;mm&quot;日&quot;dd&quot;小時&quot;&quot;<br>yyy&quot;yyy&quot;yyy&quot;<br><br>&quot;yyy&quot;月&quot;yyy&quot;yy&quot;<br><br><br><br><br><br><br><br><br><br><br><br><br>&quot;yyy&quot;yyy&quot;yyyy&quot;yyy&quot;日&quot;d&quot;小時&quot; | set_date_part(&quot;m&quot;, 4, date(&quot;2016-11-09T11:44:44.797&quot;) | &quot;2016-04-09T11:44:44.797&quot; |
+| date_part | 擷取日期的部分。 支援下列元件值： <br><br>「y」d<br>「d&#39;d&#39;<br>&#39;d&#39;「d&#39;d&#39;<br><br>&#39;d&#39;&#39;「d&#39;&#39;ww」「<br>」「<br>d」「<br><br>d」「<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>w」平日&quot;2h&quot;第二，&quot;第一，&quot;第二，&quot;第二，&quot;第二，&quot;第二，&quot;第二，&quot;第二，&quot;第二，&quot;第二，&quot;第二，&quot;第二，&quot;第二，&quot;第二，&quot;第二，&quot;第二，&quot;第二，&quot;第二，&quot;第二，&quot;第二，&quot;第二，&quot;。&quot;。&quot;。....................................................................................................................。 | date_part(date(&quot;2019-10-17 11:55:12&quot;), &quot;MM&quot;) | 10 |
+| set_date_part | 在指定日期中替換元件。 接受下列元件： <br><br>&quot;year&quot;<br>&quot;yyy&quot;月&quot;<br>&quot;<br><br>yy&quot;yyy&quot;月<br>&quot;mm&quot;<br>mm&quot;ddd&quot;ydd&quot;<br><br>dd&quot;hour&quot;<br>&quot;hh&quot;mi&quot;&quot;&quot;n&quot;sond&quot;&quot;yyy&quot;yyy&quot;yyy&quot;yyy&quot;yyyy&quot;yyyy&quot;yyyy&quot;yyyy&quot;月&quot;<br>&quot;<br><br><br><br><br><br><br><br><br><br><br>&quot;mmm&quot;mmmm&quot;m&quot;ddddd&quot;ddddd&quot;d&quot;dd&quot;d&quot;d&quot;d&quot;d&quot;d&quot;d&quot;d&quot;d&quot;d&quot;d&quot;d&quot;d&quot;d&quot;d&quot;d&quot;d&quot;d&quot;d&quot;d&quot;d&quot;d&quot;d&quot;d&quot;d&quot;h&quot;d&quot;d&quot;h&quot;h&quot;h&quot;h&quot;h&quot;h&quot; | set_date_part(&quot;m&quot;, 4, date(&quot;2016-11-09T11:44:44.797&quot;) | &quot;2016-04-09T11:44:44.797&quot; |
 | make_date_time /<br>make_timestamp | 從零件建立日期。 | make_date_time(2019、10、17、11、55、12、999、「America/Los_Angeles」) | `2019-10-17T11:55:12.0&#x200B;00000999-07:00[America/Los_Angeles]` |
 | current_timestamp | 傳回目前的時間戳記。 | current_timestamp() | 1571850624571 |
 | current_date | 傳回不含時間元件的目前日期。 | current_date() | 《2019年11月18日》 |
