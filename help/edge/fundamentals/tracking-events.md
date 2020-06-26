@@ -4,9 +4,9 @@ seo-title: 追蹤Adobe Experience Platform Web SDK事件
 description: 瞭解如何追蹤Experience Platform Web SDK活動
 seo-description: 瞭解如何追蹤Experience Platform Web SDK活動
 translation-type: tm+mt
-source-git-commit: 7d4f364ebb9df1ce58481a35007ea75f86ab7825
+source-git-commit: 5f263a2593cdb493b5cd48bc0478379faa3e155d
 workflow-type: tm+mt
-source-wordcount: '637'
+source-wordcount: '638'
 ht-degree: 0%
 
 ---
