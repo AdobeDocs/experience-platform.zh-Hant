@@ -4,9 +4,9 @@ seo-title: Launch讓您快速入門Adobe Experience Platform Web SDK
 description: 使用Experience Platform Web SDK擴充功能收集資料的快速入門手冊
 seo-description: 使用Experience Platform Web SDK擴充功能收集資料的快速入門手冊
 translation-type: tm+mt
-source-git-commit: 62b18ed8f70ad87b04f60ade5730ff30d8985415
+source-git-commit: 3f52def8318f57cfc6534e15415d172e768a8614
 workflow-type: tm+mt
-source-wordcount: '511'
+source-wordcount: '531'
 ht-degree: 5%
 
 ---
@@ -14,35 +14,35 @@ ht-degree: 5%
 
 # 歡迎
 
-本指南將引導您逐步瞭解如何在Launch中設定Adobe Experience Platform Web SDK。 若要能夠使用此功能，您必須擁有權限並位於允許清單上。 如果您想要加入等候清單，請聯絡您的CSM。
+本指南將引導您逐步瞭解如何在Adobe Launch中設定Adobe Experience Platform Web SDK。 您必須擁有權限並位於允許清單上才能使用此功能。 如果您想要加入等候清單，請聯絡您的CSM。 此外，若要使用此功能，您必須：
 
-- 啟用 [第一方網域(CNAME)](https://docs.adobe.com/content/help/zh-Hant/core-services/interface/ec-cookies/cookies-first-party.html) 。 如果您已有Analytics的CNAME，則應使用該CNAME。 在開發中進行測試時不需要CNAME，但您在開始生產之前需要CNAME
+- 啟用 [第一方網域(CNAME)](https://docs.adobe.com/content/help/zh-Hant/core-services/interface/ec-cookies/cookies-first-party.html) 。 如果您已擁有Adobe Analytics的CNAME，則應使用該CNAME。 在開發中進行測試時不需要CNAME，但您在開始生產之前需要CNAME
 - 正在使用最新版的訪客ID服務
 
 ## 建立設定ID
 
-您可以在啟動時使用邊配置工 [具來建立配置](../fundamentals/edge-configuration.md) ID。 這可讓您讓邊緣網路傳送資料至各種解決方案。 如需如何尋找每個選項的詳細資訊，請參閱「 [Edge Configuration Tool](../fundamentals/edge-configuration.md) 」（邊緣設定工具）頁面。
+您可以使用Adobe Launch中的 [Edge設定工具](../fundamentals/edge-configuration.md) ，來建立設定ID。 這可讓您讓邊緣網路傳送資料至各種解決方案。 如需如何 [尋找每個選項的詳細資訊](../fundamentals/edge-configuration.md) ，請參閱Edge Configuration Tool頁面。
 
 >[!NOTE]
 >
->您的組織必須位於功能的允許清單中。 請連絡您的CSM以列入允許清單。
+>您的組織必須位於功能的允許清單中。 請連絡您的CSM以新增至允許清單。
 
 ## 準備架構
 
-Experience Platform Edge Network將資料視為XDM。 XDM是一種資料格式，可讓您定義結構描述。 此架構定義邊緣網路預期資料格式化的方式。 若要傳送資料，您需要定義您的架構。
+Experience Platform Edge Network將資料視為XDM。 XDM是一種資料格式，可讓您定義結構描述。 此架構定義邊緣網路預期資料格式化的方式。 若要傳送資料，您需要定義您的架構。 請確定您已完成下列工作：
 
 - [建立架構](../../xdm/tutorials/create-schema-ui.md)
 - 將Adobe Experience Platform Web SDK mixin新增至您建立的架構
 
-## 在Launch中安裝SDK
+## 在Adobe Launch中安裝SDK
 
-登入啟動並安裝擴充 `AEP Web SDK` 功能。 在安裝SDK時，將會提示您設定擴充功能。 輸入上述請求的配置ID。 擴充功能會自動填入您的組織ID。
+登入Adobe Launch並安裝擴充 `AEP Web SDK` 功能。 在安裝SDK時，將會提示您設定擴充功能。 輸入您在上面請求的配置ID。 擴充功能會自動填入您的組織ID。
 
 如需不同設定選項的詳細資訊，請參 [閱設定SDK](../fundamentals/configuring-the-sdk.md)。
 
 ## 根據方案建立資料元素
 
-在啟動中，請將副檔名變更為AEP Web SDK並將類型設為XDM物件，以建立參照架構的資料元素。 這會載入您的架構，並允許您將資料元素映射至架構的不同部分。
+在Adobe Launch中，將副檔名變更為AEP Web SDK並將類型設為XDM物件，以建立參照架構的資料元素。 這會載入您的架構，並允許您將資料元素映射至架構的不同部分。
 
 ![啟動中的日期元素](../../assets/edge_data_element.png)
 
@@ -54,7 +54,7 @@ Experience Platform Edge Network將資料視為XDM。 XDM是一種資料格式�
 
 ## 後續步驟
 
-在資料流動後，您可以執行下列動作。
+一旦您有資料流動，您可以執行下列動作：
 
 - [建立您的架構](https://docs.adobe.com/content/help/zh-Hant/experience-platform/xdm/schema/composition.html)
 - [瞭解除錯](../fundamentals/debugging.md)
