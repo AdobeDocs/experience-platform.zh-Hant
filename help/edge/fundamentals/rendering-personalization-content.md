@@ -4,9 +4,9 @@ seo-title: Adobe Experience Platform Web SDK轉換個人化內容
 description: 瞭解如何使用Experience Platform Web SDK呈現個人化內容
 seo-description: 瞭解如何使用Experience Platform Web SDK呈現個人化內容
 translation-type: tm+mt
-source-git-commit: 4bff4b20ccc1913151aa1783d5123ffbb141a7d0
+source-git-commit: 5f263a2593cdb493b5cd48bc0478379faa3e155d
 workflow-type: tm+mt
-source-wordcount: '236'
+source-wordcount: '232'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # 個人化選項概觀
 
-Adobe Experience Platform Web SDK支援查詢Adobe的個人化解決方案，包括Adobe Target。 個人化有兩種模式： 擷取可自動轉譯的內容，以及開發人員必須轉譯的內容。 SDK也提供管理閃 [爍的功能](../../edge/solution-specific/target/flicker-management.md)。
+Adobe Experience Platform Web SDK支援在Adobe查詢個人化解決方案，包括Adobe Target。 個人化有兩種模式： 擷取可自動轉譯的內容，以及開發人員必須轉譯的內容。 SDK也提供管理閃 [爍的功能](../../edge/solution-specific/target/flicker-management.md)。
 
 ## 自動呈現內容
 
@@ -36,7 +36,7 @@ alloy("sendEvent", {
 });
 ```
 
-個人化內容的呈現是非同步的，因此當特定內容片段是頁面的一部分時，不應有任何假設。
+呈現個人化內容是非同步的，因此當特定內容是頁面的一部分時，不應有任何假設。
 
 ## 手動呈現內容
 
@@ -90,9 +90,10 @@ alloy("sendEvent",{
 }
 ```
 
-{info}如果您使用Target示波器，則只有mBox會一次發出所有請求，而非個別發出。 全域mbox一律會傳送。
-{info}
+>[!TIP]
+>
+> 如果您使用Target範圍，會變成伺服器上的mBox，則只有這些範圍一次是所有請求，而非個別請求。 全域mbox一律會傳送。
 
 ### 擷取自動內容
 
-如果您想要包含 `result.decisions` 自動可轉譯的決策，可以將 `renderDecisions` 其設定為false並包括特殊範圍 `__view__`
+如果您想要包含 `result.decisions` 自動可轉譯的決策，可以將其設 `renderDecisions` 置為false並包含特殊範圍 `__view__`。
