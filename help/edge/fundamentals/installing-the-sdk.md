@@ -4,21 +4,22 @@ seo-title: 安裝SDK的Adobe Experience Platform Web SDK
 description: 瞭解如何安裝Experience Platform Web SDK
 seo-description: 瞭解如何安裝Experience Platform Web SDK
 translation-type: tm+mt
-source-git-commit: e0dee4e39143ae9d7f5e4aaf9c352555f1c7f5d0
+source-git-commit: 90afc28d41878cbed90fc05176276a30d8aebe09
 workflow-type: tm+mt
-source-wordcount: '571'
+source-wordcount: '580'
 ht-degree: 1%
 
 ---
 
 
-# 安裝SDK
+# 安裝SDK {#installing-the-sdk}
 
 Adobe Experience Platform Web SDK可在內容傳送網路(CDN)上取得，供您使用。 您可以參考此檔案或下載它，並在您自己的基礎架構上代管它。 它提供微型和非微型版本。 非精簡版本有助於除錯。
 
-[https://cdn1.adoberesources.net/alloy/1.0.0/alloy.min.js](https://cdn1.adoberesources.net/alloy/1.0.0/alloy.min.js)[https://cdn1.adoberesources.net/alloy/1.0.0/alloy.js](https://cdn1.adoberesources.net/alloy/1.0.0/alloy.js)
+* 精簡版： [https://cdn1.adoberesources.net/alloy/1.0.0/alloy.min.js](https://cdn1.adoberesources.net/alloy/1.0.0/alloy.min.js)
+* 非精簡版： [https://cdn1.adoberesources.net/alloy/1.0.0/alloy.js](https://cdn1.adoberesources.net/alloy/1.0.0/alloy.js)
 
-## 新增程式碼
+## 新增程式碼 {#adding-the-code}
 
 實作Adobe Experience Platform Web SDK的第一步是盡可能將下列「基本程式碼」複製並貼在HTML的標 `<head>` 記中：
 
@@ -51,7 +52,7 @@ Adobe Experience Platform Web SDK可在內容傳送網路(CDN)上取得，供您
 
 此基本代碼除了建立全局函式外，還載入包含在伺服器上托管的外部檔案\(`alloy.js`\)中的其他代碼。 依預設，此程式碼會非同步載入，讓您的網頁發揮最佳效能。 這是建議的實作。
 
-## 支援Internet Explorer
+## 支援Internet Explorer {#support-internet-explore}
 
 本SDK利用承諾，即一種通信非同步任務完成的方法。 SDK使 [用的Promise](https://developer.mozilla.org/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Promise) 實作，除Internet Explorer外，其他目標瀏覽器都支援。 若要在Internet Explorer上使用SDK，您必須填入 `window.Promise` 多 [個](https://remysharp.com/2010/10/08/what-is-a-polyfill)。
 
@@ -71,9 +72,9 @@ Adobe Experience Platform Web SDK可在內容傳送網路(CDN)上取得，供您
 
 這會載入一個指令碼，以確 `window.Promise` 保是有效的Promise實作。
 
-## 同步載入JavaScript檔案
+## 同步載入JavaScript檔案 {#loading-javascript-synchronously}
 
-如前所述，您複製並貼入網站HTML的基本程式碼會載入內含其他程式碼的外部檔案。 此附加程式碼包含SDK的核心功能。 在載入此檔案時嘗試執行的任何命令都將排隊，然後在載入檔案後進行處理。 這是最具效能的安裝方式。
+如「新增程式碼 [](#adding-the-code)」一節所述，您複製並貼入網站HTML的基本程式碼會載入內含其他程式碼的外部檔案。 此附加程式碼包含SDK的核心功能。 在載入此檔案時嘗試執行的任何命令都將排隊，然後在載入檔案後進行處理。 這是最具效能的安裝方式。
 
 但是，在某些情況下，您可能希望同步載入檔案\（有關這些情況的詳細資訊稍後將進行說明\）。 這樣做會阻止瀏覽器解析和呈現其餘的HTML文檔，直到載入並執行外部檔案為止。 通常不建議在向使用者顯示主要內容之前再延遲此次，但視情況而定。
 
