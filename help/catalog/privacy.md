@@ -4,7 +4,10 @@ solution: Experience Platform
 title: 資料湖中的隱私權要求處理
 topic: overview
 translation-type: tm+mt
-source-git-commit: d3584202554baf46aad174d671084751e6557bbc
+source-git-commit: 327be13cbaaa40e4d0409cbb49a051b7067759bf
+workflow-type: tm+mt
+source-wordcount: '1275'
+ht-degree: 0%
 
 ---
 
@@ -28,7 +31,7 @@ Adobe Experience Platform隱私權服務會處理客戶存取、選擇退出銷�
 
 Adobe Experience Platform Identity Service可跨系統和裝置橋接客戶身分資料。 身分服務使用 **身分名稱空間** ，將身分值與其來源系統關聯，以提供其上下文。 命名空間可以代表一般概念，例如電子郵件地址（「電子郵件」），或將身分識別與特定應用程式(例如Adobe Advertising Cloud ID(「AdCloud」)或Adobe Target ID(「TNTID」))建立關聯。
 
-Identity Service會維護全域定義（標準）和使用者定義（自訂）身分名稱空間的儲存。 標準名稱空間適用於所有組織（例如「電子郵件」和「ECID」），而您的組織也可以建立自訂名稱空間，以符合其特定需求。
+Identity Service會維護全域定義（標準）和使用者定義（自訂）身分名稱空間的儲存。 標準名稱空間適用於所有組織（例如「電子郵件」和「ECID」），而您的組織也可以建立自訂名稱空間以符合其特定需求。
 
 如需Experience Platform中身分名稱空間的詳細資訊，請參閱身分 [名稱空間概觀](../identity-service/namespaces.md)。
 
@@ -40,7 +43,9 @@ Identity Service會維護全域定義（標準）和使用者定義（自訂）�
 
 本節將逐步介紹將身份描述符添加到現有資料集的XDM模式的步驟。 如果您已有具有身分描述符的資料集，則可跳至下 [一節](#nested-maps)。
 
->[!IMPORTANT] 在決定要設定為身分的架構欄位時，請記住使 [用巢狀映射類型欄位的限制](#nested-maps)。
+>[!IMPORTANT]
+>
+>在決定要設定為身分的架構欄位時，請記住使 [用巢狀映射類型欄位的限制](#nested-maps)。
 
 將身份描述符添加到資料集模式有兩種方法：
 
@@ -49,7 +54,7 @@ Identity Service會維護全域定義（標準）和使用者定義（自訂）�
 
 ### 使用UI {#identity-ui}
 
-在Experience Platform使用者介面中，工作區 _[!UICONTROL Schemas]_可讓您編輯現有的XDM結構。 要向方案添加標識描述符，請從清單中選擇方案，並遵循在方案編輯器教程[中將方案欄位設定為標識欄位的步驟](../xdm/tutorials/create-schema-ui.md#identity-field)。
+在Experience Platform使用者介面中，「 _[!UICONTROL 結構]_」工作區可讓您編輯現有的XDM結構。 要向方案添加標識描述符，請從清單中選擇方案，並遵循在方案編輯器教程[中將方案欄位設定為標識欄位的步驟](../xdm/tutorials/create-schema-ui.md#identity-field)。
 
 在您將架構中的適當欄位設定為身分欄位後，您就可以繼續下一節的隱私權 [要求](#submit)。
 
