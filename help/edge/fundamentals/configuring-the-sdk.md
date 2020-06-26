@@ -4,9 +4,9 @@ seo-title: 設定Adobe Experience Platform Web SDK
 description: 瞭解如何設定Experience Platform Web SDK
 seo-description: 瞭解如何設定Experience Platform Web SDK
 translation-type: tm+mt
-source-git-commit: 7d4f364ebb9df1ce58481a35007ea75f86ab7825
+source-git-commit: 5f263a2593cdb493b5cd48bc0478379faa3e155d
 workflow-type: tm+mt
-source-wordcount: '739'
+source-wordcount: '743'
 ht-degree: 11%
 
 ---
@@ -16,8 +16,9 @@ ht-degree: 11%
 
 SDK的設定是使用命令 `configure` 完成。
 
->[!I重要]
->`configure` 永遠 _是第_ 一個調用的命令。
+>[!IMPORTANT]
+>
+>`configure` 永遠 *是第* 一個調用的命令。
 
 ```javascript
 alloy("configure", {
@@ -54,7 +55,7 @@ alloy("configure", {
 
 指出是否應啟用除錯。 將此配置設 `true` 置為啟用以下功能：
 
-| **功能** |  |  |
+| **功能** | **函數** |
 | ---------------------- | ------------------ |
 | 同步驗證 | 驗證針對架構收集的資料，並在下列標籤下的回應中傳回錯誤： `collect:error OR success` |
 | 控制台記錄 | 啟用除錯訊息，以便顯示在瀏覽器的JavaScript主控台中 |
@@ -85,7 +86,7 @@ alloy("configure", {
 
 指出是否應自動收集與連結點按次數關聯的資料。 對於符合連結點按資格的點按，會收 [集下列Web Interaction](https://github.com/adobe/xdm/blob/master/docs/reference/context/webinteraction.schema.md) 資料：
 
-| **屬性** |  |
+| **屬性** | **說明** |
 | ------------ | ----------------------------------- |
 | 連結名稱 | 由連結內容決定的名稱 |
 | 連結URL | 標準化URL |
@@ -97,7 +98,7 @@ alloy("configure", {
 | -------- | ------------ | ----------------- |
 | 函數 | 無 | ()=>未定義 |
 
-設定此設定，以設定在每個事件傳送前呼叫的回呼。  包含該欄位的對 `xdm` 像將發送到回調。  修改xdm對象以更改所發送的內容。  在回呼中，物 `xdm` 件已在event命令中傳遞資料，並自動收集資訊。  有關此回呼的時間安排和示例的詳細資訊，請參 [閱全局修改事件](tracking-events.md#modifying-events-globally)。
+設定此設定，以設定在每個事件傳送前呼叫的回呼。  包含該欄位的對 `xdm` 像將發送到回調。  修改 `xdm` 對象以更改發送內容。  在回呼中，物 `xdm` 件已在event命令中傳遞資料，並自動收集資訊。  有關此回呼的時間安排和示例的詳細資訊，請參 [閱全局修改事件](tracking-events.md#modifying-events-globally)。
 
 ## 隱私權選項
 
@@ -133,7 +134,7 @@ alloy("configure", {
 | -------- | ------------ | ----------------- |
 | 布林值 | 無 | `true` |
 
-啟用Cookie目標，允許根據區段限定設定Cookie。
+啟用Audience Manager [!UICONTROL Cookie目標]，這可允許根據區段限定設定Cookie。
 
 ### `urlDestinationsEnabled`
 
@@ -141,7 +142,7 @@ alloy("configure", {
 | -------- | ------------ | ----------------- |
 | 布林值 | 無 | `true` |
 
-啟用URL目標，允許根據區段限定引發URL。
+啟用Audience Manager [!UICONTROL URL目標]，這可允許根據區段資格觸發URL。
 
 ## 身分選項
 
