@@ -4,7 +4,10 @@ solution: Adobe Experience Platform
 title: 新增資料至即時客戶個人檔案
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 6d24637dc6cc282f98288b6416e4a3b7cebe42ea
+source-git-commit: 93aae0e394e1ea9b6089d01c585a94871863818e
+workflow-type: tm+mt
+source-wordcount: '401'
+ht-degree: 0%
 
 ---
 
@@ -35,4 +38,4 @@ source-git-commit: 6d24637dc6cc282f98288b6416e4a3b7cebe42ea
 
 使用即時客戶描述檔存取API，您可以在批次資料載入資料集時擷取批次資料。 如果您無法擷取任何預期的實體，您的資料集可能無法啟用描述檔。 確認資料集已啟用後，請確定您的來源資料格式和識別碼支援您的期望。
 
-有關如何使用即時客戶描述檔API存取實體的詳細說明，請參閱「實體」的 [子指南，亦稱為「描述檔存取API」](../api/entities.md)。
+有關如何使用即時客戶描述檔API存取實體的詳細說明，請參閱實 [體端點指南](../api/entities.md)，亦稱為「描述檔存取API」。
