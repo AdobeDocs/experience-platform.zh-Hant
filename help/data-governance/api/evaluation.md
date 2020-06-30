@@ -4,7 +4,10 @@ solution: Experience Platform
 title: 策略
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 2997243622a7483ae23e21487128cea6badecb80
+source-git-commit: 1a835c6c20c70bf03d956c601e2704b68d4f90fa
+workflow-type: tm+mt
+source-wordcount: '940'
+ht-degree: 0%
 
 ---
 
@@ -35,7 +38,7 @@ GET /marketingActions/custom/{marketingActionName}/constraints?duleLabels={value
 **請求**
 
 以下的範例請求會評估標籤C1和C3的行銷動作。 使用資料使用標籤評估原則時，請牢記下列事項：
-* **資料使用標籤區分大小寫。** 上述請求會傳回違反的原則，而使用小寫標籤提出相同的請求(例如： `"c1,c3"`, `"C1,c3"``"c1,C3"`)不會。
+* **資料使用標籤區分大小寫。** 上述請求會傳回違反的原則，而使用小寫標籤提出相同的請求(例如： `"c1,c3"`, `"C1,c3"`, `"c1,C3"`)否。
 * **請注意您的原則運`AND`算式`OR`中的和運算子。** 在此範例中，如果請求中單獨顯`C1` 示了標籤( `C3`或)，行銷動作就不會違反此政策。 需要兩個標籤(`C1 AND C3`)才能傳回違反的原則。 請確定您正在仔細評估政策，並同時定義政策陳述式。
 
 ```SHELL
@@ -120,7 +123,7 @@ POST /marketingActions/custom/{marketingActionName}/constraints
 
 **請求**
 
-請求主體包含一個陣列，每個資料集ID都有一個物件。 由於您要傳送請求內文，因此「內容類型：application/json&quot;請求標題為必要項目，如下列範例所示。
+請求主體包含一個陣列，每個資料集ID都有一個物件。 由於您要傳送請求內文，因此「內容類型： application/json&quot;請求標題為必要項目，如下列範例所示。
 
 ```SHELL
 curl -X POST \
@@ -341,7 +344,7 @@ POST /marketingActions/custom/{marketingActionName}/constraints
 
 **請求**
 
-請求主體包含一個陣列，每個資料集ID包含一個對象，該資料集內應用於評估的欄位子集。 由於您要傳送請求內文，因此「內容類型：application/json&quot;請求標題為必要項目，如下列範例所示。
+請求主體包含一個陣列，每個資料集ID包含一個對象，該資料集內應用於評估的欄位子集。 由於您要傳送請求內文，因此「內容類型： application/json&quot;請求標題為必要項目，如下列範例所示。
 
 ```SHELL
 curl -X POST \
@@ -490,6 +493,6 @@ curl -X POST \
 }
 ```
 
-## 即時客戶個人檔案的政策評估
+## 策略評估 [!DNL Real-time Customer Profile]
 
-策略服務API也可用於檢查與使用即時客戶資料區段有關的違反策略的情況。 如需詳細資訊，請參 [閱關於強制受眾區段資料使用符合性](../../segmentation/tutorials/governance.md) 的教學課程。
+此 [!DNL Policy Service] API也可用來檢查與使用區段有關的原則違 [!DNL Real-time Customer Profile] 規。 如需詳細資訊，請參 [閱關於強制受眾區段資料使用符合性](../../segmentation/tutorials/governance.md) 的教學課程。
