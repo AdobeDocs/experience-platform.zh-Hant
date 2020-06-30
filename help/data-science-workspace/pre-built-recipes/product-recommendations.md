@@ -4,7 +4,10 @@ solution: Experience Platform
 title: 產品建議方式
 topic: overview
 translation-type: tm+mt
-source-git-commit: 5699022d1f18773c81a0a36d4593393764cb771a
+source-git-commit: 1e5526b54f3c52b669f9f6a792eda0abfc711fdd
+workflow-type: tm+mt
+source-wordcount: '421'
+ht-degree: 3%
 
 ---
 
@@ -23,9 +26,9 @@ source-git-commit: 5699022d1f18773c81a0a36d4593393764cb771a
 
 ## 如何開始使用？
 
-您可依照Adobe Experience Platform Lab教學課程（請參閱下面的Lab連結）開始使用。 本教學課程將示範如何在Jupyter筆記型電腦中建立「產品建議」方式，方法是依 [循筆記型電腦的方式](../jupyterlab/create-a-recipe.md) ，並在Experience Platform Data Science Workspace中實作方式。
+您可依照Adobe Experience Platform Lab教學課程（請參閱下面的Lab連結）開始使用。 本教學課程將示範如何在Jupyter筆記型電腦中建立「產品建議」配方，方法是依 [照筆記型電腦的配方工作流程](../jupyterlab/create-a-recipe.md) ，並在中實作配方 [!DNL Experience Platform][!DNL Data Science Workspace]。
 
-* [實驗：使用資料科學工作區預測未來](https://expleague.azureedge.net/labs/L777/index.html)
+* [實驗： 使用資料科學工作區預測未來](https://expleague.azureedge.net/labs/L777/index.html)
 * [實驗室資源](https://github.com/adobe/experience-platform-dsw-reference/tree/master/Summit/2019/resources)
 
 ## 資料架構
