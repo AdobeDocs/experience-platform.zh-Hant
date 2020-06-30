@@ -4,43 +4,46 @@ solution: Experience Platform
 title: 透過來源連接器和API收集通訊協定資料
 topic: overview
 translation-type: tm+mt
-source-git-commit: a5c4c78fe12141e7292fbb94fc37465319ba2bc8
+source-git-commit: 84ea3e45a3db749359f3ce4a0ea25429eee8bb66
+workflow-type: tm+mt
+source-wordcount: '1415'
+ht-degree: 1%
 
 ---
 
 
 # 透過來源連接器和API收集通訊協定資料
 
-Flow Service用於收集和集中Adobe Experience Platform內不同來源的客戶資料。 該服務提供用戶介面和REST風格的API，所有支援的源都可從中連接。
+[!DNL Flow Service] 用於收集和集中Adobe Experience Platform內不同來源的客戶資料。 該服務提供用戶介面和REST風格的API，所有支援的源都可從中連接。
 
-本教學課程涵蓋從通訊協定應用程式擷取資料並透過來源連接器和API將其匯入平台的步驟。
+本教學課程涵蓋從通訊協定應用程式擷取資料並透過來源連接器和API [!DNL Platform] 將其吸收的步驟。
 
 ## 快速入門
 
-本教學課程要求您透過有效的基本連線和想要匯入平台之檔案的相關資訊（包括表格的路徑和結構），來存取通訊協定系統。 如果您沒有此資訊，請先參閱教學課程，了 [解如何使用Flow Service API來探索通訊協定系統](../explore/protocols.md) ，然後再嘗試本教學課程。
+本教程要求您通過有效的基本連接和要導入的檔案（包括表的路徑和結構）來訪問協 [!DNL Platform]議系統。 如果您沒有此資訊，請先參閱教學課程，了 [解如何使用Flow Service API來探索通訊協定系統](../explore/protocols.md) ，然後再嘗試本教學課程。
 
-* [體驗資料模型(XDM)系統](../../../../xdm/home.md):Experience Platform組織客戶體驗資料的標準化架構。
-   * [架構構成基礎](../../../../xdm/schema/composition.md):瞭解XDM架構的基本建置區塊，包括架構組合的主要原則和最佳實務。
-   * [架構註冊開發人員指南](../../../../xdm/api/getting-started.md):包含您必須知道的重要資訊，以便成功執行對架構註冊表API的呼叫。 這包括您 `{TENANT_ID}`的「容器」概念，以及提出要求所需的標題（請特別注意「接受」標題及其可能的值）。
-* [目錄服務](../../../../catalog/home.md):目錄是Experience Platform中資料位置和世系的記錄系統。
-* [批次擷取](../../../../ingestion/batch-ingestion/overview.md):批次擷取API可讓您將資料以批次檔案的形式內嵌至Experience Platform。
-* [沙盒](../../../../sandboxes/home.md):Experience Platform提供虛擬沙盒，可將單一Platform實例分割為不同的虛擬環境，以協助開發和發展數位體驗應用程式。
+* [體驗資料模型(XDM)系統](../../../../xdm/home.md): 組織客戶體驗資料 [!DNL Experience Platform] 的標準化架構。
+   * [架構構成基礎](../../../../xdm/schema/composition.md): 瞭解XDM架構的基本建置區塊，包括架構組合的主要原則和最佳實務。
+   * [架構註冊開發人員指南](../../../../xdm/api/getting-started.md): 包含您必須知道的重要資訊，以便成功執行對架構註冊表API的呼叫。 這包括您 `{TENANT_ID}`的「容器」概念，以及提出要求所需的標題（請特別注意「接受」標題及其可能的值）。
+* [目錄服務](../../../../catalog/home.md): 目錄是記錄資料位置和世系的系統 [!DNL Experience Platform]。
+* [批次擷取](../../../../ingestion/batch-ingestion/overview.md): 「批次擷取API」可讓您將資料擷取為 [!DNL Experience Platform] 批次檔案。
+* [沙盒](../../../../sandboxes/home.md): [!DNL Experience Platform] 提供虛擬沙盒，可將單一執行個體分 [!DNL Platform] 割為不同的虛擬環境，以協助開發和發展數位體驗應用程式。
 
-以下各節提供您需要知道的其他資訊，以便使用Flow Service API成功連線至通訊協定應用程式。
+以下各節提供您需要知道的其他資訊，以便使用 [!DNL Flow Service] API成功連線至通訊協定應用程式。
 
 ### 讀取範例API呼叫
 
-本教學課程提供範例API呼叫，以示範如何設定請求的格式。 這些包括路徑、必要標題和正確格式化的請求負載。 也提供API回應中傳回的範例JSON。 如需範例API呼叫檔案中所用慣例的詳細資訊，請參閱「Experience Platform疑難排解指 [南」中有關如何讀取範例API呼叫的章節](../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) 。
+本教學課程提供範例API呼叫，以示範如何設定請求的格式。 這些包括路徑、必要標題和正確格式化的請求負載。 也提供API回應中傳回的範例JSON。 如需範例API呼叫檔案中所用慣例的詳細資訊，請參閱疑難排解指 [南中有關如何讀取範例API呼叫的](../../../../landing/troubleshooting.md#how-do-i-format-an-api-request)[!DNL Experience Platform] 章節。
 
 ### 收集必要標題的值
 
-若要呼叫平台API，您必須先完成驗證教 [學課程](../../../../tutorials/authentication.md)。 完成驗證教學課程後，所有Experience Platform API呼叫中每個必要標題的值都會顯示在下方：
+若要呼叫API，您必 [!DNL Platform] 須先完成驗證教 [學課程](../../../../tutorials/authentication.md)。 完成驗證教學課程後，將提供所有 [!DNL Experience Platform] API呼叫中每個必要標題的值，如下所示：
 
-* 授權：生產者 `{ACCESS_TOKEN}`
+* 授權： 生產者 `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
 * x-gw-ims-org-id: `{IMS_ORG}`
 
-Experience Platform中的所有資源（包括屬於Flow Service的資源）都隔離至特定的虛擬沙盒。 所有對平台API的請求都需要一個標題，該標題會指定要在中執行的操作的沙盒名稱：
+中的所有資 [!DNL Experience Platform]源(包括屬於這些資源 [!DNL Flow Service])都隔離到特定的虛擬沙盒。 對API的所 [!DNL Platform] 有請求都需要一個標題，該標題會指定要在中執行的操作的沙盒名稱：
 
 * x-sandbox-name: `{SANDBOX_NAME}`
 
@@ -50,7 +53,7 @@ Experience Platform中的所有資源（包括屬於Flow Service的資源）都�
 
 ## 建立臨機XDM類別和架構
 
-為了透過來源連接器將外部資料匯入平台，必須為原始來源資料建立臨機XDM類別和架構。
+為了透過來源連接器將 [!DNL Platform] 外部資料匯入，必須為原始來源資料建立臨機XDM類別和架構。
 
 若要建立臨機類別和架構，請依照臨機架構教學課程中 [所述的步驟進行](../../../../xdm/tutorials/ad-hoc.md)。 建立臨機類別時，來源資料中找到的所有欄位都必須在請求內文中說明。
 
@@ -58,7 +61,7 @@ Experience Platform中的所有資源（包括屬於Flow Service的資源）都�
 
 ## 建立源連接 {#source}
 
-現在，只要建立臨機XDM架構，就可以使用Flow Service API的POST要求建立來源連線。 源連接由連接ID、源資料檔案和描述源資料的模式的引用組成。
+現在，只要建立臨機XDM架構，就可以使用API的POST要求建立來源連 [!DNL Flow Service] 線。 源連接由連接ID、源資料檔案和描述源資料的模式的引用組成。
 
 **API格式**
 
@@ -117,9 +120,9 @@ curl -X POST \
 
 ## 建立目標XDM模式 {#target}
 
-在之前的步驟中，會建立臨機XDM架構來結構來源資料。 為了讓源資料用於平台，還必須建立目標模式以根據您的需求來構建源資料。 然後，目標模式用於建立包含源資料的平台資料集。 此目標XDM模式還擴展了XDM Individual Profile類。
+在之前的步驟中，會建立臨機XDM架構來結構來源資料。 為了使用源資料，還必須創 [!DNL Platform]建目標模式，以根據您的需要構建源資料。 然後，目標模式用於建立包含 [!DNL Platform] 源資料的資料集。 此目標XDM模式還擴展了XDM [!DNL Individual Profile] 類。
 
-通過對方案註冊表API執行POST請求，可以建立目標XDM [方案](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml)。 如果您想要在Experience Platform中使用使用者介面， [](../../../../xdm/tutorials/create-schema-ui.md) Schema Editor教學課程會提供在Schema Editor中執行類似動作的逐步指示。
+通過對方案註冊表API執行POST請求，可以建立目標XDM [方案](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml)。 如果希望在中使用用戶介面 [!DNL Experience Platform], [](../../../../xdm/tutorials/create-schema-ui.md) Schema Editor教程將提供在Schema Editor中執行類似操作的逐步說明。
 **API格式**
 
 ```http
@@ -128,7 +131,7 @@ POST /tenant/schemas
 
 **請求**
 
-以下示例請求建立一個XDM模式，以擴展XDM Individual Profile類。
+以下示例請求建立了擴展XDM類的XDM [!DNL Individual Profile] 架構。
 
 ```shell
 curl -X POST \
@@ -274,7 +277,7 @@ curl -X POST \
 
 ## 建立資料集基礎連線
 
-為了將外部資料收入Platform，必須先取得Experience Platform資料集基本連線。
+為了將外部資料嵌入 [!DNL Platform]，必須首 [!DNL Experience Platform] 先獲取資料集基礎連接。
 
 要建立資料集基礎連接，請遵循資料集基礎連接教 [程中介紹的步驟](../create-dataset-base-connection.md)。
 
@@ -282,7 +285,7 @@ curl -X POST \
 
 ## 建立目標連接
 
-您現在擁有資料集基本連線、目標架構和目標資料集的唯一識別碼。 您現在可以使用Flow Service API建立目標連線，以指定將包含傳入來源資料的資料集。
+您現在擁有資料集基本連線、目標架構和目標資料集的唯一識別碼。 您現在可以使用 [!DNL Flow Service] API建立目標連線，以指定將包含傳入來源資料的資料集。
 
 **API格式**
 
@@ -421,7 +424,7 @@ curl -X POST \
 
 ## 查找資料流規範 {#specs}
 
-資料流負責從源收集資料並將其引入平台。 要建立資料流，必須首先通過對流服務API執行GET請求來獲取資料流規範。 資料流規範負責從外部協定應用程式收集資料。
+資料流負責從源收集資料並將其引入 [!DNL Platform]。 要建立資料流，必須首先通過對 [!DNL Flow Service] API執行GET請求來獲取資料流規範。 資料流規範負責從外部協定應用程式收集資料。
 
 **API格式**
 
@@ -442,7 +445,7 @@ curl -X GET \
 
 **回應**
 
-成功的響應返回負責將協定應用程式中的資料帶入平台的資料流規範的詳細資訊。 在下一步中需要此ID才能建立新的資料流。
+成功的響應返回負責將協定應用程式中的資料引入資料流規範的詳細資訊 [!DNL Platform]。 在下一步中需要此ID才能建立新的資料流。
 
 ```json
 {
@@ -642,7 +645,7 @@ curl -X POST \
 
 ## 後續步驟
 
-在本教學課程中，您已建立來源連接器，以依排程從通訊協定應用程式收集資料。 現在，下游平台服務（例如即時客戶個人檔案和資料科學工作區）可以使用傳入的資料。 如需詳細資訊，請參閱下列檔案：
+在本教學課程中，您已建立來源連接器，以依排程從通訊協定應用程式收集資料。 現在，下游服務（例如和）可 [!DNL Platform] 以使用傳入 [!DNL Real-time Customer Profile] 的資料 [!DNL Data Science Workspace]。 如需詳細資訊，請參閱下列檔案：
 
 * [即時客戶個人檔案總覽](../../../../profile/home.md)
 * [資料科學工作區概觀](../../../../data-science-workspace/home.md)
