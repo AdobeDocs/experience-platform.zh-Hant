@@ -4,57 +4,57 @@ solution: Experience Platform
 title: 使用Flow Service API建立Salesforce連接器
 topic: overview
 translation-type: tm+mt
-source-git-commit: 72c1d53295d5c4204c02959c857edc06f246534c
+source-git-commit: 5839e4695589455bd32b6e3e33a7c377343f920d
 workflow-type: tm+mt
-source-wordcount: '732'
+source-wordcount: '683'
 ht-degree: 1%
 
 ---
 
 
-# 使用Flow Service API建立Salesforce連接器
+# 使用 [!DNL Salesforce] API建立連 [!DNL Flow Service] 接器
 
 Flow Service用於收集和集中Adobe Experience Platform內不同來源的客戶資料。 該服務提供用戶介面和REST風格的API，所有支援的源都可從中連接。
 
-本教學課程使用Flow Service API來引導您完成將平台連接至Salesforce帳戶以收集CRM資料的步驟。
+本教學課程使 [!DNL Flow Service] 用API來引導您完成連線至帳戶以 [!DNL Platform] 收集 [!DNL Salesforce] CRM資料的步驟。
 
-如果您偏好在Experience Platform中使用使用者介面， [](../../../ui/create/crm/salesforce.md) Salesforce來源連接器UI教學課程提供執行類似動作的逐步指示。
+如果您想要使用中的使用者介面 [!DNL Experience Platform], [](../../../ui/create/crm/salesforce.md) Salesforce來源連接器UI教學課程會提供執行類似動作的逐步指示。
 
 ## 快速入門
 
 本指南需要有效瞭解Adobe Experience Platform的下列元件：
 
-* [來源](../../../../home.md): Experience Platform可讓您從各種來源擷取資料，同時讓您能夠使用平台服務來建構、標示和增強傳入資料。
-* [沙盒](../../../../../sandboxes/home.md): Experience Platform提供虛擬沙盒，可將單一Platform實例分割為不同的虛擬環境，以協助開發和發展數位體驗應用程式。
+* [來源](../../../../home.md): [!DNL Experience Platform] 允許從各種來源接收資料，同時提供使用服務構建、標籤和增強傳入資料的 [!DNL Platform] 能力。
+* [沙盒](../../../../../sandboxes/home.md): [!DNL Experience Platform] 提供虛擬沙盒，可將單一執行個體分 [!DNL Platform] 割為不同的虛擬環境，以協助開發和發展數位體驗應用程式。
 
-以下各節提供您需要瞭解的其他資訊，以便使用Flow Service API成功將Platform連線至Salesforce帳戶。
+以下各節提供您必須知道的其他資訊，以便使用 [!DNL Platform] API [!DNL Salesforce] 成功連 [!DNL Flow Service] 線至帳戶。
 
 ### 收集必要的認證
 
-為了讓流式服務連線至Salesforce，您必須提供下列連線屬性的值：
+要連接 [!DNL Flow Service] 到，必須 [!DNL Salesforce]為以下連接屬性提供值：
 
 | 憑證 | 說明 |
 | ---------- | ----------- |
-| `environmentUrl` | Salesforce來源例項的URL。 |
-| `username` | Salesforce使用者帳戶的使用者名稱。 |
-| `password` | Salesforce使用者帳戶的密碼。 |
-| `securityToken` | Salesforce使用者帳戶的安全性Token。 |
+| `environmentUrl` | 來源例項的 [!DNL Salesforce] URL。 |
+| `username` | 使用者帳戶的 [!DNL Salesforce] 使用者名稱。 |
+| `password` | 使用者帳戶 [!DNL Salesforce] 的密碼。 |
+| `securityToken` | 使用者帳戶的安 [!DNL Salesforce] 全性Token。 |
 
 如需快速入門的詳細資訊，請造 [訪此Salesforce檔案](https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/intro_understanding_authentication.htm)。
 
 ### 讀取範例API呼叫
 
-本教學課程提供範例API呼叫，以示範如何設定請求的格式。 這些包括路徑、必要標題和正確格式化的請求負載。 也提供API回應中傳回的範例JSON。 如需範例API呼叫檔案中所用慣例的詳細資訊，請參閱「Experience Platform疑難排解指 [南」中有關如何讀取範例API呼叫的章節](../../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) 。
+本教學課程提供範例API呼叫，以示範如何設定請求的格式。 這些包括路徑、必要標題和正確格式化的請求負載。 也提供API回應中傳回的範例JSON。 如需範例API呼叫檔案中所用慣例的詳細資訊，請參閱疑難排解指 [南中有關如何讀取範例API呼叫的](../../../../../landing/troubleshooting.md#how-do-i-format-an-api-request)[!DNL Experience Platform] 章節。
 
 ### 收集必要標題的值
 
-若要呼叫平台API，您必須先完成驗證教 [學課程](../../../../../tutorials/authentication.md)。 完成驗證教學課程後，所有Experience Platform API呼叫中每個必要標題的值都會顯示在下方：
+若要呼叫API，您必 [!DNL Platform] 須先完成驗證教 [學課程](../../../../../tutorials/authentication.md)。 完成驗證教學課程後，將提供所有 [!DNL Experience Platform] API呼叫中每個必要標題的值，如下所示：
 
 * 授權： 生產者 `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
 * x-gw-ims-org-id: `{IMS_ORG}`
 
-Experience Platform中的所有資源（包括屬於流服務的資源）都會隔離至特定的虛擬沙盒。 所有對平台API的請求都需要一個標題，該標題會指定要在中執行的操作的沙盒名稱：
+中的所有資 [!DNL Experience Platform]源（包括屬於的資源）都 [!DNL Flow Service]被隔離到特定的虛擬沙盒中。 對API的所 [!DNL Platform] 有請求都需要一個標題，該標題會指定要在中執行的操作的沙盒名稱：
 
 * x-sandbox-name: `{SANDBOX_NAME}`
 
@@ -64,13 +64,13 @@ Experience Platform中的所有資源（包括屬於流服務的資源）都會�
 
 ## 查找連接規格
 
-在將Platform連接至Salesforce帳戶之前，您必須確認Salesforce的連線規格已存在。 如果連接規範不存在，則無法建立連接。
+在連接 [!DNL Platform] 到帳 [!DNL Salesforce] 戶之前，必須驗證是否存在連接規範 [!DNL Salesforce]。 如果連接規範不存在，則無法建立連接。
 
-每個可用源都有其唯一的連接規範集，用於描述連接器屬性（如驗證要求）。 您可以執行GET請求並使用查詢參數，以尋找Salesforce的連線規格。
+每個可用源都有其唯一的連接規範集，用於描述連接器屬性（如驗證要求）。 您可以執行GET請求並使 [!DNL Salesforce] 用查詢參數，查找連接規範。
 
 **API格式**
 
-傳送不含查詢參數的GET請求時，會傳回所有可用來源的連線規格。 您可以包含查詢， `property=name=="salesforce"` 以取得Salesforce的特定資訊。
+傳送不含查詢參數的GET請求時，會傳回所有可用來源的連線規格。 您可以包含查詢， `property=name=="salesforce"` 以取得特定的資訊 [!DNL Salesforce]。
 
 ```http
 GET /connectionSpecs
@@ -79,7 +79,7 @@ GET /connectionSpecs?property=name=="salesforce"
 
 **請求**
 
-下列請求會擷取Salesforce的連線規格。
+以下請求將檢索的連接規範 [!DNL Salesforce]。
 
 ```shell
 curl -X GET \
@@ -92,7 +92,7 @@ curl -X GET \
 
 **回應**
 
-成功的回應會傳回Salesforce的連線規格，包括其唯一識別碼(`id`)。 在下個步驟中需要此ID才能建立基本連線。
+成功的響應返回的連接規範 [!DNL Salesforce]，包括其唯一標識符(`id`)。 在下個步驟中需要此ID才能建立基本連線。
 
 ```json
 {
@@ -145,7 +145,7 @@ curl -X GET \
 
 ## 建立基本連接
 
-基本連接指定源，並包含該源的憑據。 每個Salesforce帳戶只需要一個基本連線，因為它可用於建立多個來源連接器，以匯入不同的資料。
+基本連接指定源，並包含該源的憑據。 每個帳戶只需要一個基本連 [!DNL Salesforce] 接，因為它可用於建立多個源連接器以導入不同的資料。
 
 執行以下POST請求以建立基本連接。
 
@@ -185,10 +185,10 @@ curl -X POST \
 
 | 屬性 | 說明 |
 | -------- | ----------- |
-| `auth.params.username` | 與您的Salesforce帳戶關聯的使用者名稱。 |
-| `auth.params.password` | 與您的Salesforce帳戶關聯的密碼。 |
-| `auth.params.securityToken` | 與您的Salesforce帳戶關聯的安全性Token。 |
-| `connectionSpec.id` | 在上一步 `id` 中擷取的Salesforce帳戶連線規格。 |
+| `auth.params.username` | 與您帳戶關聯的使用 [!DNL Salesforce] 者名稱。 |
+| `auth.params.password` | 與您帳戶關聯的 [!DNL Salesforce] 密碼。 |
+| `auth.params.securityToken` | 與您帳戶關聯的安全性 [!DNL Salesforce] Token。 |
+| `connectionSpec.id` | 在上一步 `id` 中檢索 [!DNL Salesforce] 的帳戶的連接規範。 |
 
 **回應**
 
@@ -203,4 +203,4 @@ curl -X POST \
 
 ## 後續步驟
 
-在本教學課程中，您已使用API為Salesforce帳戶建立基本連線，並且已取得唯一ID作為回應內文的一部分。 在下一個教學課程中，您可以使用此基本連線ID，同時學習如 [何使用Flow Service API來探索CRM系統](../../explore/crm.md)。
+在本教學課程中，您已使用API為您的帳戶建立基 [!DNL Salesforce] 本連線，而且已取得唯一ID作為回應內文的一部分。 在下一個教學課程中，您可以使用此基本連線ID，同時學習如 [何使用Flow Service API來探索CRM系統](../../explore/crm.md)。
