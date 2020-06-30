@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 使用Jupyter筆記型電腦建立配方
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 83e74ad93bdef056c8aef07c9d56313af6f4ddfd
+source-git-commit: c48079ba997a7b4c082253a0b2867df76927aa6d
 workflow-type: tm+mt
-source-wordcount: '2330'
+source-wordcount: '2292'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # 使用Jupyter筆記型電腦建立配方
 
-本教學課程將涵蓋兩個主要部分。 首先，您將使用JupyterLab Notebook中的範本建立機器學習模型。 接下來，您將在JupyterLab中練習筆記本至配方工作流程，以便在Data Science Workspace中建立配方。
+本教學課程將涵蓋兩個主要部分。 首先，您將使用中的範本建立機器學習模型 [!DNL JupyterLab Notebook]。 接下來，您將練習將筆記本移至內部的配方工作流 [!DNL JupyterLab] 程，以在內部建立配方 [!DNL Data Science Workspace]。
 
 ## 引入的概念：
 
@@ -23,20 +23,20 @@ ht-degree: 0%
 - **培訓：** 培訓是學習模式和從標籤資料獲得見解的過程。
 - **計分：** 計分是使用訓練好的模型，從資料產生見解的程式。
 
-## 開始使用JupyterLab筆記型電腦環境
+## 開始使用筆記 [!DNL JupyterLab] 本環境
 
-從頭開始建立配方可在資料科學工作區中完成。 若要開始，請導覽至 [Adobe Experience Platform](https://platform.adobe.com) ，然後按一下左側 **[!UICONTROL 的「筆記型電腦]** 」標籤。 從JupyterLab Launcher中選取Recipe Builder範本，建立新的筆記型電腦。
+從頭開始建立配方可在內部完成 [!DNL Data Science Workspace]。 若要開始，請導覽至 [Adobe Experience Platform](https://platform.adobe.com) ，然後按一下左側 **[!UICONTROL 的「筆記型電腦]** 」標籤。 從中選擇「方式產生器」範本，以建立新的筆記本 [!DNL JupyterLab Launcher]。
 
-Recipe Builder筆記型電腦可讓您在筆記型電腦內執行訓練和計分。 這可讓您在針對訓練和計分資料執行 `train()` 實驗 `score()` 時，靈活地變更其和方法。 一旦您對訓練和計分的輸出感到滿意，就可以使用筆記型電腦建立要用於Data Science Workspace的配方功能，並內建在Recipe Builder筆記型電腦中。
+Recipe Builder  筆記型電腦可讓您在筆記型電腦中執行訓練和計分。 這可讓您在針對訓練和計分資料執行 `train()` 實驗 `score()` 時，靈活地變更其和方法。 一旦您對訓練和計分的輸出感到滿意，就可以建立配方，以便使用筆記型電腦， [!DNL Data Science Workspace] 將配方功能內建在Recipe Builder筆記型電腦上。
 
 >[!NOTE]
->Recipe Builder筆記型電腦支援使用所有檔案格式，但目前「建立方式」功能僅支援Python。
+>Recipe Builder筆記型電腦支援使用所有檔案格式，但目前「建立方式」功能僅支援 [!DNL Python]。
 
 ![](../images/jupyterlab/create-recipe/recipe-builder.png)
 
 當您從啟動器按一下Recipe Builder筆記型電腦時，筆記型電腦就會在標籤中開啟。 筆記本中使用的模板是Python Retail Sales Forecasting Recipe，也可以在此公共儲存庫 [中找到](https://github.com/adobe/experience-platform-dsw-reference/tree/master/recipes/python/retail/)
 
-您會注意到，在工具列中有三個額外的動作，即 **[!UICONTROL 訓練]**、 **[!UICONTROL 分數]****[!UICONTROL 和建立方式]**。 這些圖示只會出現在Recipe Builder筆記本中。 在筆記型電腦中建立配方後，有關這 [些動作的詳細資訊，請參閱訓練與計分區](#training-and-scoring) 。
+您會注意到，在工具列中有三個額外的動作，即 **[!UICONTROL 訓練]**、 **[!UICONTROL 分數]****[!UICONTROL 和建立方式]**。 這些圖示只會出現在 [!UICONTROL Recipe Builder筆記本中] 。 在筆記型電腦中建立配方後，有關這 [些動作的詳細資訊，請參閱訓練與計分區](#training-and-scoring) 。
 
 ![](../images/jupyterlab/create-recipe/toolbar_actions.png)
 
@@ -50,7 +50,7 @@ Recipe Builder筆記型電腦可讓您在筆記型電腦內執行訓練和計分
 
 ## 開始使用Recipe Builder筆記型電腦
 
-現在，您已瞭解JupyterLab筆記型電腦環境的基本功能，可以開始檢視構成機器學習模型配方的檔案。 我們將討論的檔案如下所示：
+現在您已瞭解筆記型電腦環境的基 [!DNL JupyterLab] 本功能，可以開始檢視構成機器學習模型配方的檔案。 我們將討論的檔案如下所示：
 
 - [需求檔案](#requirements-file)
 - [配置檔案](#configuration-files)
@@ -102,22 +102,22 @@ data_access_sdk_python
 ## 訓練資料載入器 {#training-data-loader}
 
 訓練資料載入器的目的，是執行個體化用於建立機器學習模型的資料。 通常，培訓資料載入器將完成兩項工作：
-- 從平台載入資料
+- 從 [!DNL Platform]
 - 資料準備與功能工程
 
 以下兩節將重新載入資料和資料準備。
 
 ### 載入資料 {#loading-data}
 
-這個步驟使用 [熊貓資料框](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.html)。 您可使用Platform SDK( [!DNL Adobe Experience Platform] )從檔案載入資料，或`platform_sdk`使用熊貓或功能從外部 `read_csv()` 來源載入 `read_json()` 資料。
+這個步驟使用 [熊貓資料框](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.html)。 您可使用SDK( [!DNL Adobe Experience Platform] )從檔案載入資料，或使用熊貓或功能從外部來源 [!DNL Platform] 載入`platform_sdk``read_csv()``read_json()` 資料。
 
-- [平台SDK](#platform-sdk)
+- [!DNL Platform SDK](#platform-sdk)
 - [外部來源](#external-sources)
 
 >[!NOTE]
 >在Recipe Builder筆記型電腦中，資料會透過資料載入器 `platform_sdk` 載入。
 
-### 平台SDK {#platform-sdk}
+### [!DNL Platform] SDK {#platform-sdk}
 
 如需有關使用資料載入器的深入教 `platform_sdk` 學課程，請造訪 [Platform SDK指南](../authoring/platform-sdk.md)。 本教學課程提供有關建立驗證、基本資料讀取和基本資料寫入的資訊。
 
@@ -162,7 +162,7 @@ df = prodreader.load(data_set_id=configProperties['trainingDataSetId'],
 ```
 
 >[!NOTE]
->如「設定檔 [案」區段中所述](#configuration-files)，當您從Experience Platform存取資料時，會為您設定下列設定參數：
+>如「配置文 [件」部分中所述](#configuration-files)，在從中訪問資料時為您設定以下配置參數 [!DNL Experience Platform]:
 > - `ML_FRAMEWORK_IMS_USER_CLIENT_ID`
 > - `ML_FRAMEWORK_IMS_TOKEN`
 > - `ML_FRAMEWORK_IMS_ML_TOKEN`
@@ -203,7 +203,7 @@ dataframe.drop('date', axis=1, inplace=True)
 - 抵銷 `weeklySales` 以獲得未來和過去的銷售價值
 - 依日期分割資料至 `train` 資料 `val` 集
 
-首先， `week` 建立 `year` 和列，並將原始列 `date` 轉換為Python日期 [時間](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.to_datetime.html)。 周值和年值從日期時間對象中提取。
+首先， `week` 建立 `year` 列和列，並將原始列 `date` 轉換為日期時 [!DNL Python] 間 [](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.to_datetime.html)。 周值和年值從日期時間對象中提取。
 
 接著， `storeType` 會轉換為代表三種不同商店類型(`A`、 `B`和 `C`)的三欄。 每個值都包含一個布爾值，以狀態 `storeType` 為true。 該 `storeType` 列將被刪除。
 
@@ -408,7 +408,7 @@ def evaluate(self, data=[], model={}, configProperties={}):
 
 ### 資料保護程式檔案 {#data-saver-file}
 
-檔案 `datasaver.py` 包含在測試計 `save()` 分時儲存預測的函式。 此函 `save()` 數將帶您的預測，並使用Experience Platform Catalog API，將資料寫入您在檔 `scoringResultsDataSetId` 案中指定的 `scoring.conf` 位置。
+檔案 `datasaver.py` 包含在測試計 `save()` 分時儲存預測的函式。 函 `save()` 數會擷取您的預測，並使用 [!DNL Experience Platform Catalog] API，將資料寫入您 `scoringResultsDataSetId` 在檔案中指定的 `scoring.conf` 位置。
 
 此處顯示零售銷售範例配方中使用的範例。 請注意，使用程 `DataSetWriter` 式庫將資料寫入平台：
 
@@ -453,7 +453,7 @@ def save(configProperties, prediction):
 
 ![](../images/jupyterlab/create-recipe/create-recipe.png)
 
-按下按鈕後，系統會提示您輸入配方名稱。 此名稱代表在Platform上建立的實際方式。
+按下按鈕後，系統會提示您輸入配方名稱。 此名稱代表在上建立的實際方式 [!DNL Platform]。
 
 ![](../images/jupyterlab/create-recipe/enter_recipe_name.png)
 
@@ -473,9 +473,9 @@ def save(configProperties, prediction):
 
 ## 下一步 {#next-steps}
 
-完成本教學課程後，您就學會如何在Recipe Builder筆記型電腦中建立機器學習模型。 您也學會如何在筆記型電腦中，將筆記型電腦執行至配方工作流程，以便在Data Science Workspace中建立配方。
+完成本教學課程後，您就學會如何在Recipe Builder筆記型電腦中建立機器學習模型。 您還學習了如何在筆記型電腦中練習如何將筆記型電腦與配方工作流程結合，以便在其中建立配方 [!DNL Data Science Workspace]。
 
-若要繼續學習如何使用資料科學工作區中的資源，請造訪資料科學工作區配方和模型下拉式清單。
+若要繼續學習如何使用資源，請造 [!DNL Data Science Workspace]訪配方和模 [!DNL Data Science Workspace] 型下拉式清單。
 
 ## 其他資源 {#additional-resources}
 
