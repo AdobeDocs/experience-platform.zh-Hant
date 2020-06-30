@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 透過來源連接器和API收集廣告資料
 topic: overview
 translation-type: tm+mt
-source-git-commit: 577027e52041d642e03ca5abf5cb8b05c689b9f2
+source-git-commit: 6ffdcc2143914e2ab41843a52dc92344ad51bcfb
 workflow-type: tm+mt
-source-wordcount: '1596'
+source-wordcount: '1544'
 ht-degree: 1%
 
 ---
@@ -14,38 +14,38 @@ ht-degree: 1%
 
 # 透過來源連接器和API收集廣告資料
 
-Flow Service用於收集和集中Adobe Experience Platform內不同來源的客戶資料。 該服務提供用戶介面和REST風格的API，所有支援的源都可從中連接。
+[!DNL Flow Service] 用於收集和集中Adobe Experience Platform內不同來源的客戶資料。 該服務提供用戶介面和REST風格的API，所有支援的源都可從中連接。
 
-本教學課程涵蓋從協力廠商廣告應用程式擷取資料，並透過來源連接器和API將其匯入平台的步驟。
+本教學課程涵蓋從協力廠商廣告應用程式擷取資料，並透過來源連接器和API [!DNL Platform] 將其匯入的步驟。
 
 ## 快速入門
 
-本教學課程要求您具備要匯入平台之檔案的相關資訊，包括檔案的路徑和結構。 如果您沒有此資訊，請先參閱教學課程，以 [瞭解如何使用Flow Service API來探索廣告應用程式](../../api/create/advertising/ads.md) ，然後再嘗試本教學課程。
+本教學課程要求您提供有關要放入的檔案的資訊 [!DNL Platform]，包括檔案的路徑和結構。 如果您沒有此資訊，請先參閱教學課程，以 [瞭解如何使用Flow Service API來探索廣告應用程式](../../api/create/advertising/ads.md) ，然後再嘗試本教學課程。
 
 本教學課程也要求您對Adobe Experience Platform的下列元件有正確的認識：
 
-* [體驗資料模型(XDM)系統](../../../../xdm/home.md): Experience Platform組織客戶體驗資料的標準化架構。
+* [!DNL Experience Data Model (XDM) System](../../../../xdm/home.md): Experience Platform組織客戶體驗資料的標準化架構。
    * [架構構成基礎](../../../../xdm/schema/composition.md): 瞭解XDM架構的基本建置區塊，包括架構組合的主要原則和最佳實務。
    * [架構註冊開發人員指南](../../../../xdm/api/getting-started.md): 包含您必須知道的重要資訊，以便成功執行對架構註冊表API的呼叫。 這包括您 `{TENANT_ID}`的「容器」概念，以及提出要求所需的標題（請特別注意「接受」標題及其可能的值）。
-* [目錄服務](../../../../catalog/home.md): 目錄是Experience Platform中資料位置和世系的記錄系統。
-* [批次擷取](../../../../ingestion/batch-ingestion/overview.md): 批次擷取API可讓您將資料以批次檔案的形式內嵌至Experience Platform。
-* [沙盒](../../../../sandboxes/home.md): Experience Platform提供虛擬沙盒，可將單一Platform實例分割為不同的虛擬環境，以協助開發和發展數位體驗應用程式。
+* [!DNL Catalog Service](../../../../catalog/home.md): 目錄是記錄資料位置和世系的系統 [!DNL Experience Platform]。
+* [!DNL Batch ingestion](../../../../ingestion/batch-ingestion/overview.md): 「批次擷取API」可讓您將資料擷取為 [!DNL Experience Platform] 批次檔案。
+* [沙盒](../../../../sandboxes/home.md): [!DNL Experience Platform] 提供虛擬沙盒，可將單一執行個體分 [!DNL Platform] 割為不同的虛擬環境，以協助開發和發展數位體驗應用程式。
 
-以下各節提供您必須知道的其他資訊，以便使用Flow Service API成功連線至廣告系統。
+以下各節提供您必須知道的其他資訊，以便使用 [!DNL Flow Service] API成功連線至廣告系統。
 
 ### 讀取範例API呼叫
 
-本教學課程提供範例API呼叫，以示範如何設定請求的格式。 這些包括路徑、必要標題和正確格式化的請求負載。 也提供API回應中傳回的範例JSON。 如需範例API呼叫檔案中所用慣例的詳細資訊，請參閱「Experience Platform疑難排解指 [南」中有關如何讀取範例API呼叫的章節](../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) 。
+本教學課程提供範例API呼叫，以示範如何設定請求的格式。 這些包括路徑、必要標題和正確格式化的請求負載。 也提供API回應中傳回的範例JSON。 如需範例API呼叫檔案中所用慣例的詳細資訊，請參閱疑難排解指 [南中有關如何讀取範例API呼叫的](../../../../landing/troubleshooting.md#how-do-i-format-an-api-request)[!DNL Experience Platform] 章節。
 
 ### 收集必要標題的值
 
-若要呼叫平台API，您必須先完成驗證教 [學課程](../../../../tutorials/authentication.md)。 完成驗證教學課程後，所有Experience Platform API呼叫中每個必要標題的值都會顯示在下方：
+若要呼叫API，您必 [!DNL Platform] 須先完成驗證教 [學課程](../../../../tutorials/authentication.md)。 完成驗證教學課程後，將提供所有 [!DNL Experience Platform] API呼叫中每個必要標題的值，如下所示：
 
 * 授權： 生產者 `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
 * x-gw-ims-org-id: `{IMS_ORG}`
 
-Experience Platform中的所有資源（包括屬於Flow Service的資源）都隔離至特定的虛擬沙盒。 所有對平台API的請求都需要一個標題，該標題會指定要在中執行的操作的沙盒名稱：
+中的所有資 [!DNL Experience Platform]源(包括屬於這些資源 [!DNL Flow Service])都隔離到特定的虛擬沙盒。 對API的所 [!DNL Platform] 有請求都需要一個標題，該標題會指定要在中執行的操作的沙盒名稱：
 
 * x-sandbox-name: `{SANDBOX_NAME}`
 
@@ -55,7 +55,7 @@ Experience Platform中的所有資源（包括屬於Flow Service的資源）都�
 
 ## 建立臨機XDM類別和架構
 
-為了透過來源連接器將外部資料匯入平台，必須為原始來源資料建立臨機XDM類別和架構。
+為了透過來源連接器將 [!DNL Platform] 外部資料匯入，必須為原始來源資料建立臨機XDM類別和架構。
 
 若要建立臨機類別和架構，請依照臨機架構教學課程中 [所述的步驟進行](../../../../xdm/tutorials/ad-hoc.md)。 建立臨機類別時，來源資料中找到的所有欄位都必須在請求內文中說明。
 
@@ -63,7 +63,7 @@ Experience Platform中的所有資源（包括屬於Flow Service的資源）都�
 
 ## 建立源連接 {#source}
 
-現在，只要建立臨機XDM架構，就可以使用Flow Service API的POST要求建立來源連線。 源連接由基本連接、源資料檔案和描述源資料的模式的引用組成。
+現在，只要建立臨機XDM架構，就可以使用API的POST要求建立來源連 [!DNL Flow Service] 線。 源連接由基本連接、源資料檔案和描述源資料的模式的引用組成。
 
 要建立源連接，還必須為資料格式屬性定義枚舉值。
 
@@ -134,9 +134,9 @@ curl -X POST \
 
 ## 建立目標XDM模式 {#target}
 
-在之前的步驟中，會建立臨機XDM架構來結構來源資料。 為了讓源資料用於平台，還必須建立目標模式以根據您的需求來構建源資料。 然後，目標模式用於建立包含源資料的平台資料集。
+在之前的步驟中，會建立臨機XDM架構來結構來源資料。 為了使用源資料，還必須創 [!DNL Platform]建目標模式，以根據您的需要構建源資料。 然後，目標模式用於建立包含 [!DNL Platform] 源資料的資料集。
 
-通過對方案註冊表API執行POST請求，可以建立目標XDM [方案](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml)。 如果您想要在Experience Platform中使用使用者介面， [](../../../../xdm/tutorials/create-schema-ui.md) Schema Editor教學課程會提供在Schema Editor中執行類似動作的逐步指示。
+通過對方案註冊表API執行POST請求，可以建立目標XDM [方案](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml)。 如果希望在中使用用戶介面 [!DNL Experience Platform], [](../../../../xdm/tutorials/create-schema-ui.md) Schema Editor教程將提供在Schema Editor中執行類似操作的逐步說明。
 
 **API格式**
 
@@ -294,7 +294,7 @@ curl -X POST \
 
 目標連接表示到所收錄資料所在目的地的連接。 要建立目標連接，必須提供與資料庫關聯的固定連接規範ID。 此連接規範ID為： `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
 
-您現在擁有目標資料集的目標模式及與資料湖的連線規格ID作為唯一識別碼。 使用這些識別碼，您可以使用Flow Service API建立目標連線，以指定將包含傳入來源資料的資料集。
+您現在擁有目標資料集的目標模式及與資料湖的連線規格ID作為唯一識別碼。 使用這些識別碼，您可以使用 [!DNL Flow Service] API建立目標連線，以指定將包含傳入來源資料的資料集。
 
 **API格式**
 
@@ -346,7 +346,7 @@ curl -X POST \
 
 ## 建立對應 {#mapping}
 
-為了將源資料引入目標資料集，必須首先將其映射到目標資料集所遵守的目標模式。 這是透過對轉換服務API執行POST請求，並在請求裝載中定義資料映射來實現的。
+為了將源資料引入目標資料集，必須首先將其映射到目標資料集所遵守的目標模式。 這是透過在請求裝載中定義資 [!DNL Conversion Service] 料映射，對API執行POST請求而實現的。
 
 **API格式**
 
@@ -419,7 +419,7 @@ curl -X POST \
 
 ## 查找資料流規範 {#specs}
 
-資料流負責從源收集資料，並將其引入平台。 要建立資料流，必須首先獲取負責收集廣告資料的資料流規範。
+資料流負責從源收集資料並將其引入 [!DNL Platform]。 要建立資料流，必須首先獲取負責收集廣告資料的資料流規範。
 
 **API格式**
 
@@ -439,7 +439,7 @@ curl -X GET \
 
 **回應**
 
-成功的回應會傳回負責將廣告系統資料匯入平台的資料流規格詳細資訊。 按照下一步中 `id` 建立新資料流所需儲存欄位值。
+成功的響應返回負責將廣告系統中的資料引入資料流規範的詳細資訊 [!DNL Platform]。 按照下一步中 `id` 建立新資料流所需儲存欄位值。
 
 ```json
 {
@@ -642,7 +642,7 @@ curl -X POST \
 
 ## 後續步驟
 
-在本教學課程中，您已建立來源連接器，以依計畫從廣告系統收集資料。 現在，下游平台服務（例如即時客戶個人檔案和資料科學工作區）可以使用傳入的資料。 如需詳細資訊，請參閱下列檔案：
+在本教學課程中，您已建立來源連接器，以依計畫從廣告系統收集資料。 現在，下游服務（例如和）可 [!DNL Platform] 以使用傳入 [!DNL Real-time Customer Profile] 的資料 [!DNL Data Science Workspace]。 如需詳細資訊，請參閱下列檔案：
 
 * [即時客戶個人檔案總覽](../../../../profile/home.md)
 * [資料科學工作區概觀](../../../../data-science-workspace/home.md)
