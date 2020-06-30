@@ -4,68 +4,68 @@ solution: Experience Platform
 title: 在UI中建立Amazon Kinesis源連接器
 topic: overview
 translation-type: tm+mt
-source-git-commit: 855f543a1cef394d121502f03471a60b97eae256
+source-git-commit: d3c725c4760acb3857a67d0d30b24732c963a030
 workflow-type: tm+mt
-source-wordcount: '454'
+source-wordcount: '431'
 ht-degree: 1%
 
 ---
 
 
-# 在UI中建立Amazon Kinesis源連接器
+# 在UI中 [!DNL Amazon Kinesis] 建立來源連接器
 
 >[!NOTE]
->Amazon Kinesis連接器正在測試中。 如需使用 [測試版標籤連接器的詳細資訊](../../../../home.md#terms-and-conditions) ，請參閱來源概觀。
+>連接 [!DNL Amazon Kinesis] 器為測試版。 如需使用 [測試版標籤連接器的詳細資訊](../../../../home.md#terms-and-conditions) ，請參閱來源概觀。
 
-Adobe Experience Platform中的來源連接器可讓您依計畫吸收外部來源的資料。 本教程提供了使用平台用戶介面驗證Amazon Kinesis（以下稱為「Kinesis」）源連接器的步驟。
+Adobe Experience Platform中的來源連接器可讓您依計畫吸收外部來源的資料。 本教學課程提供使用使用者介 [!DNL Amazon Kinesis] 面驗證(以下稱 [!DNL "Kinesis"]為)來源連接器 [!DNL Platform] 的步驟。
 
 ## 快速入門
 
 本教學課程需要對Adobe Experience Platform的下列元件有正確的認識：
 
-- [體驗資料模型(XDM)系統](../../../../../xdm/home.md): Experience Platform組織客戶體驗資料的標準化架構。
+- [體驗資料模型(XDM)系統](../../../../../xdm/home.md): 組織客戶體驗資料 [!DNL Experience Platform] 的標準化架構。
    - [架構構成基礎](../../../../../xdm/schema/composition.md): 瞭解XDM架構的基本建置區塊，包括架構組合的主要原則和最佳實務。
    - [架構編輯器教程](../../../../../xdm/tutorials/create-schema-ui.md): 瞭解如何使用架構編輯器UI建立自訂架構。
 - [即時客戶個人檔案](../../../../../profile/home.md): 根據來自多個來源的匯整資料，提供統一、即時的消費者個人檔案。
 
-如果您已經擁有Kinesis帳戶，則可以跳過本文檔的其餘部分，並繼續有關配置資料 [流的教程](../../dataflow/streaming/cloud-storage.md)。
+如果您已經有帳 [!DNL Kinesis] 戶，則可以略過本文檔的其餘部分，然後繼續有關配置資料 [流的教程](../../dataflow/streaming/cloud-storage.md)。
 
 ### 收集必要的認證
 
-要驗證Kinesis源連接器，必須為以下連接屬性提供值：
+要驗證源連接器， [!DNL Kinesis] 必須為以下連接屬性提供值：
 
 | 憑證 | 說明 |
 | ---------- | ----------- |
-| `accessKeyId` | Kinesis帳戶的訪問密鑰ID。 |
-| `Secret access key` | Kinesis帳戶的秘密訪問密鑰。 |
+| `accessKeyId` | 您帳戶的存取金鑰 [!DNL Kinesis] ID。 |
+| `Secret access key` | 您帳戶的機密存取 [!DNL Kinesis] 金鑰。 |
 | `region` | 您的AWS伺服器所在地區。 |
 
 有關這些值的詳細資訊，請參 [閱本Kinesis文檔](https://docs.aws.amazon.com/streams/latest/dev/getting-started.html)。
 
-## 連接Kinesis帳戶
+## 連線您的帳 [!DNL Kinesis] 戶
 
-收集到所需憑據後，可以按照以下步驟將Kinesis帳戶連結到平台。
+收集完所需的認證後，您可依照下列步驟將帳戶連結 [!DNL Kinesis] 至 [!DNL Platform]。
 
-登入 [Adobe Experience Platform](https://platform.adobe.com) ，然後從左側導覽列選取 **Sources** ，以存取 ** Sources工作區。 「目 *錄* 」標籤會顯示可連接至「平台」的各種來源。 每個來源顯示與其關聯的現有帳戶數。
+登入 [Adobe Experience Platform](https://platform.adobe.com) ，然後從左側導覽列選取 **[!UICONTROL Sources]** ，以存取 ** Sources工作區。 「目 *錄* 」頁籤顯示可連接到的各種源 [!DNL Platform]。 每個來源顯示與其關聯的現有帳戶數。
 
-在「雲 *儲存* 」類別下，選擇 **Amazon Kinesis** ，然 **後按一下+表徵圖(+)** ，建立新的Kinesis連接器。
+在「雲 *[!UICONTROL 儲存]* 」類別下，選擇 **[!UICONTROL Amazon Kinesis]** ，然 **後按一下+表徵圖(+)** ，建立新的連 [!DNL Kinesis] 接器。
 
 ![](../../../../images/tutorials/create/kinesis/catalog.png)
 
-此時 *將顯示「連接到Amazon Kinesis* 」對話框。 在此頁上，您可以使用新認證或現有認證。
+此時 *[!UICONTROL 將顯示「連接到Amazon Kinesis]* 」對話框。 在此頁上，您可以使用新認證或現有認證。
 
 ### 新帳戶
 
-如果您使用新認證，請選擇「新 **帳戶」**。 在顯示的輸入表單上，提供名稱、可選說明和Kinesis憑據。 完成後，選擇 **Connect** ，然後為建立新連接留出一些時間。
+如果您使用新認證，請選擇「新 **[!UICONTROL 帳戶」]**。 在出現的輸入表單上，提供名稱、選用說明和您的認 [!DNL Kinesis] 證。 完成後，選擇 **[!UICONTROL Connect]** ，然後為建立新連接留出一些時間。
 
 ![](../../../../images/tutorials/create/kinesis/new.png)
 
 ### 現有帳戶
 
-要連接現有帳戶，請選擇要連接的Kinesis帳戶，然後選擇「下 **一步** 」繼續。
+若要連線現有帳戶，請選 [!DNL Kinesis] 取您要連線的帳戶，然後選取「下 **[!UICONTROL 一]** 步」繼續。
 
 ![](../../../../images/tutorials/create/kinesis/existing.png)
 
 ## 後續步驟
 
-通過本教程，您已將Kinesis帳戶連接到平台。 您現在可以繼續下一個教學課程，並 [設定資料流，將雲端儲存空間的資料匯入平台](../../dataflow/streaming/cloud-storage.md)。
+透過本教學課程，您已將帳戶連 [!DNL Kinesis] 線至 [!DNL Platform]。 您現在可以繼續下一個教學課程，並 [設定資料流，將雲端儲存空間的資料匯入平台](../../dataflow/streaming/cloud-storage.md)。
