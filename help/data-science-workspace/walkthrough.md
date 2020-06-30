@@ -4,19 +4,22 @@ solution: Experience Platform
 title: Data Science Workspace逐步說明
 topic: Walkthrough
 translation-type: tm+mt
-source-git-commit: 19823c7cf0459e045366f0baae2bd8a98416154c
+source-git-commit: 1e5526b54f3c52b669f9f6a792eda0abfc711fdd
+workflow-type: tm+mt
+source-wordcount: '1638'
+ht-degree: 0%
 
 ---
 
 
-# Data Science Workspace逐步說明
+# [!DNL Data Science Workspace] 漫步
 
-本檔案提供Adobe Experience Platform Data Science Workspace的逐步說明。 具體來說，我們將回顧資料科學家所經歷的一般工作流程，以解決使用機器學習的問題。
+本檔案提供Adobe Experience Platform的逐步說明 [!DNL Data Science Workspace]。 具體來說，我們將回顧資料科學家所經歷的一般工作流程，以解決使用機器學習的問題。
 
 ## 必要條件
 
 - 已註冊的Adobe ID帳戶
-   - Adobe ID帳戶必須已新增至可存取Adobe Experience Platform和Data Science Workspace的組織
+   - Adobe ID帳戶必須已新增至可存取Adobe Experience Platform的組織，且 [!DNL Data Science Workspace]
 
 ## 資料科學家的動機
 
@@ -26,22 +29,22 @@ source-git-commit: 19823c7cf0459e045366f0baae2bd8a98416154c
 
 資料科學家的解決方案是運用零售商可存取的豐富歷史資料，預測未來趨勢，並最佳化定價決策。 我們將使用過去的銷售資料來訓練我們的機器學習模型，並使用該模型來預測未來的銷售趨勢。 如此一來，零售商在變更定價時，將能獲得深入資訊以協助他們。
 
-在此概觀中，我們將逐一介紹資料科學家在取得資料集並建立模型以預測每週銷售。 我們將在Adobe Experience Platform Data Science Workspace的「零售銷售筆記型範例」中，瀏覽下列章節：
+在此概觀中，我們將逐一介紹資料科學家在取得資料集並建立模型以預測每週銷售。 我們將在Adobe Experience Platform上的「零售銷售筆記型範例」中瀏覽以下章節 [!DNL Data Science Workspace]:
 
 - [設定](#setup)
 - [探索資料](#exploring-data)
 - [功能工程](#feature-engineering)
 - [訓練與驗證](#training-and-verification)
 
-### Data Science Workspace中的筆記型電腦
+### 筆記本 [!DNL Data Science Workspace]
 
-首先，我們希望建立一個JupyterLab筆記本，以開啟「零售銷售」示例筆記本。 遵循筆記型電腦中資料科學家所執行的步驟，將讓我們瞭解典型的工作流程。
+首先，我們要建立一個筆記本， [!DNL JupyterLab] 以開啟「零售銷售」示例筆記本。 遵循筆記型電腦中資料科學家所執行的步驟，將讓我們瞭解典型的工作流程。
 
-在Adobe Experience Platform UI中，按一下頂端功能表中的「資料科學」標籤，即可帶您前往「資料科學工作區」。 在此頁中，按一下將開啟JupyterLab啟動程式的JupyterLab頁籤。 您應該會看到類似此的頁面。
+在Adobe Experience Platform UI中，按一下頂端功能表中的「資料科學」標籤，即可帶您前往 [!DNL Data Science Workspace]。 在此頁中，按一下將打 [!DNL JupyterLab] 開啟動程式的選 [!DNL JupyterLab] 項卡。 您應該會看到類似此的頁面。
 
 ![](./images/walkthrough/jupyterlab_launcher.png)
 
-在我們的教學課程中，我們將使用Jupyter筆記型電腦中的Python 3來示範如何存取和探索資料。 在「啟動器」頁面中，提供了示例筆記本。 我們將使用Python 3的「零售銷售」範例。
+在我們的教學課程中，我們將使用 [!DNL Python] 中的3來 [!DNL Jupyter Notebook] 示範如何存取和探索資料。 在「啟動器」頁面中，提供了示例筆記本。 我們將使用「零售銷售」範例來取得 [!DNL Python] 3。
 
 ![](./images/walkthrough/retail_sales.png)
 
@@ -59,7 +62,7 @@ source-git-commit: 19823c7cf0459e045366f0baae2bd8a98416154c
 
 #### 載入資料
 
-載入程式庫後，我們就可以開始檢視資料。 以下Python代碼使用熊貓的 `DataFrame` 資料結構和 [read_csv()](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.read_csv.html#pandas.read_csv) ，將Github上托管的CSV讀入熊貓的DataFrame:
+載入程式庫後，我們就可以開始檢視資料。 以下程 [!DNL Python] 式碼使用 `DataFrame` 熊貓的資料結構和 [read_csv()](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.read_csv.html#pandas.read_csv) 函式，讀取熊貓資料 [!DNL Github] 框上的CSV:
 
 ![](./images/walkthrough/read_csv.png)
 
@@ -73,7 +76,7 @@ source-git-commit: 19823c7cf0459e045366f0baae2bd8a98416154c
 
 #### 統計摘要
 
-我們可以利用Python的熊貓庫來獲取每個屬性的資料類型。 下列呼叫的輸出將提供每個欄的項目數和資料類型的相關資訊：
+我們可以利 [!DNL Python's] 用熊貓庫來獲取每個屬性的資料類型。 下列呼叫的輸出將提供每個欄的項目數和資料類型的相關資訊：
 
 ```PYTHON
 df.info()
