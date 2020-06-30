@@ -4,15 +4,15 @@ solution: Experience Platform
 title: 平台SDK指南
 topic: SDK authoring
 translation-type: tm+mt
-source-git-commit: 83e74ad93bdef056c8aef07c9d56313af6f4ddfd
+source-git-commit: c48079ba997a7b4c082253a0b2867df76927aa6d
 workflow-type: tm+mt
-source-wordcount: '451'
+source-wordcount: '447'
 ht-degree: 1%
 
 ---
 
 
-# 平台SDK指南
+# [!DNL Platform] SDK指南
 
 本教學課程提供有關在Python和R `data_access_sdk_python` 中轉換為 `platform_sdk` 新Python的資訊。 本教學課程提供下列操作的相關資訊：
 
@@ -69,7 +69,7 @@ client_context <- psdk$client_context$ClientContext(api_key={API_KEY},
 
 ## 資料的基本讀取 {#basic-reading-of-data}
 
-有了全新的平台SDK，最大讀取大小為32 GB，最長讀取時間為10分鐘。
+有了新 [!DNL Platform] 的SDK，最大讀取大小為32 GB，最長讀取時間為10分鐘。
 
 如果您的讀取時間過長，可以嘗試使用下列其中一個篩選選項：
 
@@ -144,7 +144,7 @@ df2 <- dataset_reader$where(
 df2
 ```
 
-全新平台SDK支援下列作業：
+新的 [!DNL Platform] SDK支援下列作業：
 
 | 操作 | 函數 |
 | --------- | -------- |
@@ -217,4 +217,4 @@ write_tracker <- dataset_writer$write({PANDA_DATAFRAME}, file_format='json')
 
 ## 後續步驟
 
-在您設定資料載 `platform_sdk` 入器後，資料會進行準備，然後分割至資料 `train` 集和 `val` 資料集。 若要瞭解資料準備和功能工程，請造訪使用JupyterLab筆記型 [電腦建立配方教學課程中有關資料準備和功能工程的章節](../jupyterlab/create-a-recipe.md#data-preparation-and-feature-engineering) 。
+在您設定資料載 `platform_sdk` 入器後，資料會進行準備，然後分割至資料 `train` 集和 `val` 資料集。 若要瞭解資料準備和功能工程，請造訪使用筆記型電腦 [建立配方教學課程中有關資料準備和功能工程的](../jupyterlab/create-a-recipe.md#data-preparation-and-feature-engineering)[!DNL JupyterLab] 章節。
