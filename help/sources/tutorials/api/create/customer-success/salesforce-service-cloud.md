@@ -4,35 +4,35 @@ solution: Experience Platform
 title: 使用Flow Service API建立Salesforce Service Cloud連接器
 topic: overview
 translation-type: tm+mt
-source-git-commit: cada7c7eff7597015caa7333559bef16a59eab65
+source-git-commit: fc5cdaa661c47e14ed5412868f3a54fd7bd2b451
 workflow-type: tm+mt
-source-wordcount: '703'
+source-wordcount: '661'
 ht-degree: 1%
 
 ---
 
 
-# 使用Flow Service API建立Salesforce Service Cloud連接器
+# 使用 [!DNL Salesforce Service Cloud] API建立連 [!DNL Flow Service] 接器
 
 >[!NOTE]
->Salesforce Service Cloud連接器為測試版。 如需使用 [測試版標籤連接器的詳細資訊](../../../../home.md#terms-and-conditions) ，請參閱來源概觀。
+>連接 [!DNL Salesforce Service Cloud] 器為測試版。 如需使用 [測試版標籤連接器的詳細資訊](../../../../home.md#terms-and-conditions) ，請參閱來源概觀。
 
-Flow Service用於收集和集中Adobe Experience Platform內不同來源的客戶資料。 該服務提供用戶介面和REST風格的API，所有支援的源都可從中連接。
+[!DNL Flow Service] 用於收集和集中Adobe Experience Platform內不同來源的客戶資料。 該服務提供用戶介面和REST風格的API，所有支援的源都可從中連接。
 
-本教學課程使用Flow Service API來引導您完成將Experience Platform連接至Salesforce Service Cloud（以下稱為「SSC」）的步驟。
+本教學課程使 [!DNL Flow Service] 用API來引導您完成連線至( [!DNL Experience Platform] 以 [!DNL Salesforce Service Cloud] 下稱為「SSC」)的步驟。
 
 ## 快速入門
 
 本指南需要有效瞭解Adobe Experience Platform的下列元件：
 
-* [來源](../../../../home.md): Experience Platform可讓您從各種來源擷取資料，同時讓您能夠使用平台服務來建構、標示和增強傳入資料。
-* [沙盒](../../../../../sandboxes/home.md): Experience Platform提供虛擬沙盒，可將單一Platform實例分割為不同的虛擬環境，以協助開發和發展數位體驗應用程式。
+* [來源](../../../../home.md): [!DNL Experience Platform] 允許從各種來源接收資料，同時提供使用服務構建、標籤和增強傳入資料的 [!DNL Platform] 能力。
+* [沙盒](../../../../../sandboxes/home.md): [!DNL Experience Platform] 提供虛擬沙盒，可將單一執行個體分 [!DNL Platform] 割為不同的虛擬環境，以協助開發和發展數位體驗應用程式。
 
-以下各節提供您需要知道的其他資訊，以便使用流服務API成功連接到SSC。
+以下各節提供您需要知道的其他資訊，以便使用 [!DNL Flow Service] API成功連接到SSC。
 
 ### 收集必要的認證
 
-要使流服務與SSC連接，您必須為以下連接屬性提供值：
+要與SSC [!DNL Flow Service] 連接，必須為以下連接屬性提供值：
 
 | 憑證 | 說明 |
 | ---------- | ----------- |
@@ -44,17 +44,17 @@ Flow Service用於收集和集中Adobe Experience Platform內不同來源的客�
 
 ### 讀取範例API呼叫
 
-本教學課程提供範例API呼叫，以示範如何設定請求的格式。 這些包括路徑、必要標題和正確格式化的請求負載。 也提供API回應中傳回的範例JSON。 如需範例API呼叫檔案中所用慣例的詳細資訊，請參閱「Experience Platform疑難排解指 [南」中有關如何讀取範例API呼叫的章節](../../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) 。
+本教學課程提供範例API呼叫，以示範如何設定請求的格式。 這些包括路徑、必要標題和正確格式化的請求負載。 也提供API回應中傳回的範例JSON。 如需範例API呼叫檔案中所用慣例的詳細資訊，請參閱疑難排解指 [南中有關如何讀取範例API呼叫的](../../../../../landing/troubleshooting.md#how-do-i-format-an-api-request)[!DNL Experience Platform] 章節。
 
 ### 收集必要標題的值
 
-若要呼叫平台API，您必須先完成驗證教 [學課程](../../../../../tutorials/authentication.md)。 完成驗證教學課程後，所有Experience Platform API呼叫中每個必要標題的值都會顯示在下方：
+若要呼叫API，您必 [!DNL Platform] 須先完成驗證教 [學課程](../../../../../tutorials/authentication.md)。 完成驗證教學課程後，將提供所有 [!DNL Experience Platform] API呼叫中每個必要標題的值，如下所示：
 
 * 授權： 生產者 `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
 * x-gw-ims-org-id: `{IMS_ORG}`
 
-Experience Platform中的所有資源（包括屬於Flow Service的資源）都隔離至特定的虛擬沙盒。 所有對平台API的請求都需要一個標題，該標題會指定要在中執行的操作的沙盒名稱：
+中的所有資 [!DNL Experience Platform]源(包括屬於這些資源 [!DNL Flow Service])都隔離到特定的虛擬沙盒。 對API的所 [!DNL Platform] 有請求都需要一個標題，該標題會指定要在中執行的操作的沙盒名稱：
 
 * x-sandbox-name: `{SANDBOX_NAME}`
 
@@ -64,7 +64,7 @@ Experience Platform中的所有資源（包括屬於Flow Service的資源）都�
 
 ## 查找連接規格
 
-要建立SSC連接，流服務中必須存在一組SSC連接規範。 將平台連接到SSC的第一步是檢索這些規範。
+要建立SSC連接，必須在中存在一組SSC連接規範 [!DNL Flow Service]。 連接到SSC的第 [!DNL Platform] 一步是檢索這些規範。
 
 **API格式**
 
@@ -199,4 +199,4 @@ curl -X POST \
 
 ## 後續步驟
 
-通過本教程，您已使用流服務API建立了SSC基本連接，並獲取了連接的唯一ID值。 在下一個教學課程中，您可以使用此基本連線ID，學習如 [何使用Flow Service API來探索客戶成功系統](../../explore/customer-success.md)。
+通過本教程，您已使用 [!DNL Flow Service] API建立了SSC基本連接，並獲取了該連接的唯一ID值。 在下一個教學課程中，您可以使用此基本連線ID，學習如 [何使用Flow Service API來探索客戶成功系統](../../explore/customer-success.md)。
