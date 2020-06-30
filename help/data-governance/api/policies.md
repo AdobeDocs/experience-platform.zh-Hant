@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 策略
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: ba9d4b31cfc3b7924879a91bd125f72159e55fc4
+source-git-commit: d4964231ee957349f666eaf6b0f5729d19c408de
 workflow-type: tm+mt
-source-wordcount: '866'
+source-wordcount: '862'
 ht-degree: 1%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 1%
 
 # 策略
 
-資料使用原則是貴組織採用的規則，可說明您在Experience Platform內對資料執行的行銷動作類型，或受其限制。
+資料使用原則是貴組織採用的規則，可說明您允許或限制對內部資料執行的行銷動作類型 [!DNL Experience Platform]。
 
 端 `/policies` 點用於與檢視、建立、更新或刪除資料使用原則相關的所有API呼叫。
 
@@ -406,7 +406,7 @@ curl -X PUT \
 
 策略的特定部分可以使用PATCH請求進行更新。 與重寫策略的PUT請 _求不同_ ,PATCH請求只更新請求主體中指定的路徑。 當您想要啟用或停用原則時，這特別有用，因為您只需要傳送您要更新的特定路徑(`/status`)及其值(`ENABLE` 或 `DISABLE`)。
 
-策略服務API當前支援「添加」、「替換」和「刪除」PATCH操作，並允許您通過將多個更新作為陣列中的對象添加到單個調用中，如以下示例所示。
+API [!DNL Policy Service] 目前支援「新增」、「取代」和「移除」PATCH作業，並可讓您將多個更新合併為單一呼叫，方法是將每個更新新增為陣列中的物件，如下列範例所示。
 
 **API格式**
 
