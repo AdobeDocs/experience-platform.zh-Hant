@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 即時機器學習筆記型電腦使用指南
 topic: Training and scoring a ML model
 translation-type: tm+mt
-source-git-commit: 695eba3885dc319a9b7f73eb710b2ada0b17d24d
+source-git-commit: 1e5526b54f3c52b669f9f6a792eda0abfc711fdd
 workflow-type: tm+mt
-source-wordcount: '1659'
+source-wordcount: '1637'
 ht-degree: 0%
 
 ---
@@ -25,7 +25,7 @@ ht-degree: 0%
 
 ![open JupyterLab](../images/rtml/open-jupyterlab.png)
 
-出現JupyterLab啟動程式。 向下捲動 *至「即時機器學習」* ，並選 **取「即時ML** 」筆記本。 範本開啟時，包含範例筆記型儲存格和範例資料集。
+出現 [!DNL JupyterLab] 啟動器。 向下捲動 *至「即時機器學習」* ，並選 **[!UICONTROL 取「即時ML]** 」筆記本。 範本開啟時，包含範例筆記型儲存格和範例資料集。
 
 ![空白python](../images/rtml/authoring-notebook.png)
 
@@ -70,7 +70,7 @@ pprint(nf.discover_nodes())
 
 ## 訓練即時機器學習模型
 
-使用下列選項之一，您將編寫Python程式碼以讀取、預處理和分析資料。 接下來，您需要訓練自己的ML模型，將其序列化為ONNX格式，然後將其上傳至Real-time Machine Learning模型商店。
+使用下列選項之一，您將編寫程式碼以 [!DNL Python] 讀取、預處理和分析資料。 接下來，您需要訓練自己的ML模型，將其序列化為ONNX格式，然後將其上傳至Real-time Machine Learning模型商店。
 
 - [在JupyterLab筆記型電腦中訓練您自己的機型](#training-your-own-model)
 - [將您自己預先培訓的ONNX型號上傳到JupyterLab筆記型電腦](#pre-trained-model-upload)
@@ -80,7 +80,7 @@ pprint(nf.discover_nodes())
 首先，載入您的訓練資料。
 
 >[!NOTE]
->在「即 **時ML** 」範本中， [從Github擷取汽車保險CSV資料集](https://github.com/adobe/experience-platform-dsw-reference/tree/master/datasets/insurance) 。
+>在「即 **時ML** 」範本中， [會從中擷取汽車保險CSV資料集](https://github.com/adobe/experience-platform-dsw-reference/tree/master/datasets/insurance)[!DNL Github]。
 
 ![載入傳輸資料](../images/rtml/load_training.png)
 
@@ -88,7 +88,7 @@ pprint(nf.discover_nodes())
 
 ![rtml資料集](../images/rtml/rtml-dataset.png)
 
-要訪問JupyterLab筆記本中的資料集，請在JupyterLab的左側導航中選 **擇** 「資料」頁籤。 此時將 *顯示Dataset* 和 *Schemas目錄* 。 選擇 **[!UICONTROL 資料集]** ，然後按一下滑鼠右鍵，然後從您要使用的資料集上的下拉式選單中選取「在筆記型電腦中 **[!UICONTROL 探索資料]** 」選項。 可執行代碼條目出現在筆記本底部。 這個牢房有你的 `dataset_id`。
+要訪問筆記本中的數 [!DNL JupyterLab] 據集，請在的左 **側導航中選擇** 「資料」頁籤 [!DNL JupyterLab]。 此時將 *[!UICONTROL 顯示Dataset]* 和 *[!UICONTROL Schemas目錄]* 。 選擇 **[!UICONTROL 資料集]** ，然後按一下滑鼠右鍵，然後從您要使用的資料集上的下拉式選單中選取「在筆記型電腦中 **[!UICONTROL 探索資料]** 」選項。 可執行代碼條目出現在筆記本底部。 這個牢房有你的 `dataset_id`。
 
 ![資料集存取](../images/rtml/access-dataset.png)
 
@@ -109,11 +109,11 @@ config_properties = {
 
 ### 準備您的模型
 
-使用 *即時ML範本* ，您需要分析、預處理、訓練和評估ML模型。 這是透過套用資料轉換和建立訓練管道來完成的。
+使用 *[!UICONTROL 即時ML範本]* ，您需要分析、預處理、訓練和評估ML模型。 這是透過套用資料轉換和建立訓練管道來完成的。
 
 **資料轉換**
 
-需 *要修改即時ML* 范 ** 本資料轉換儲存格，才能搭配您自己的資料集運作。 這通常涉及重新命名欄、資料統計以及資料準備／功能工程。
+需 *[!UICONTROL 要修改即時ML]* 范 ** 本資料轉換儲存格，才能搭配您自己的資料集運作。 這通常涉及重新命名欄、資料統計以及資料準備／功能工程。
 
 >[!NOTE]
 >以下範例已經過壓縮，以利於可讀性 `[ ... ]`。 請檢視並展開完整 *程式碼儲存格的即時ML* 範本資料轉換區段。
@@ -261,7 +261,7 @@ print("Model ID : ", model_id)
 
 ### 上傳您自己的預先培訓的ONNX模型 {#pre-trained-model-upload}
 
-使用JupyterLab筆記型電腦中的上傳按鈕，將您經過培訓的ONNX型號上傳到Data Science Workspace筆記型電腦環境。
+使用筆記型電腦中的上 [!DNL JupyterLab] 傳按鈕，將預先培訓的ONNX型號上傳到筆記本 [!DNL Data Science Workspace] 電腦環境。
 
 ![上傳圖示](../images/rtml/upload.png)
 
@@ -321,7 +321,7 @@ nodes = [json_df_node,
         onnx_node]
 ```
 
-接著，將節點與邊連接。 每個元組都是邊連接。
+接著，將節點與邊連接。 每個元組都是一 [!DNL Edge] 個連接。
 
 >[!TIP]
 > 由於節點彼此線性相依（每個節點都取決於前一個節點的輸出），因此您可以使用簡單的Python清單理解來建立連結。 如果節點依賴多個輸入，請添加您自己的連接。
@@ -346,10 +346,10 @@ pprint(json.loads(dsl))
 >[!NOTE]
 >即時機器學習會暫時部署至Adobe Experience Platform Hub並由其管理。 如需其他詳細資訊，請造訪「即時機器學 [習」架構的概觀章節](./home.md#architecture)。
 
-現在您已建立DSL圖形，您可將圖形部署至Edge。
+現在您已建立DSL圖形，您可將圖形部署至 [!DNL Edge]。
 
 >[!IMPORTANT]
->不要經常發佈至Edge，這會使Edge節點過載。 不建議多次發佈相同模型。
+>不要經常發佈， [!DNL Edge] 這可能會使節點過載 [!DNL Edge] 。 不建議多次發佈相同模型。
 
 ```python
 edge_utils = EdgeUtils()
@@ -365,7 +365,7 @@ print(f'Service ID: {service_id}')
 >[!NOTE]
 >只有當您想要更新已發佈至Edge的現有DSL時，才需要下列儲存格。
 
-您的模型可能會持續發展。 與其建立全新服務，您不如使用新模型更新現有服務。 您可以定義要更新的節點、為其指派新ID，然後將新DSL重新上傳至Edge。
+您的模型可能會持續發展。 與其建立全新服務，您不如使用新模型更新現有服務。 您可以定義要更新的節點、為其指派新ID，然後將新DSL重新上傳到 [!DNL Edge]。
 
 在以下範例中，節點0會以新ID更新。
 
@@ -397,7 +397,7 @@ print(f'Updated dsl: {updated_dsl}')
 
 ## 計分 {#scoring}
 
-發佈至Edge後，計分由用戶端的POST要求完成。 通常，這可以從需要ML分數的用戶端應用程式完成。 您也可以從郵遞員處完成。 即 *時ML範本使用EdgeUtils* 來示範此程式。
+發佈至後， [!DNL Edge]計分會由用戶端的POST要求來完成。 通常，這可以從需要ML分數的用戶端應用程式完成。 您也可以從郵遞員處完成。 即 *[!UICONTROL 時ML範本使用EdgeUtils]* 來示範此程式。
 
 >[!NOTE]
 >在開始計分之前，需要較短的處理時間。
@@ -414,15 +414,15 @@ time.sleep(20)
 
 ### 對Edge端點評分
 
-使用「即時ML」範本中 *的下列儲存格* ，對您的Edge服務評分。
+在「即時ML」範本中使 *用下列儲存格* ，對您的服務評分 [!DNL Edge] 。
 
 ![對邊緣評分](../images/rtml/scoring-edge.png)
 
-計分完成後，會傳回Edge的Edge URL、Payload和計分輸出。
+計分完成後，會傳 [!DNL Edge] 回URL、裝載和計分輸出 [!DNL Edge] 自的。
 
-## 從Edge列出您已部署的應用程式
+## 從 [!DNL Edge]
 
-若要在Edge上產生目前部署之應用程式的清單，請執行下列程式碼儲存格。 無法編輯或刪除此儲存格。
+若要在中產生目前部署的應用程式清單，請 [!DNL Edge]執行下列程式碼儲存格。 無法編輯或刪除此儲存格。
 
 ```python
 services = edge_utils.list_deployed_services()
@@ -443,10 +443,10 @@ print(services)
 ]
 ```
 
-## 從Edge刪除已部署的應用程式或服務ID（選用）
+## 從（可選）刪除已部署的應用程 [!DNL Edge] 式或服務ID
 
 >[!CAUTION]
->此儲存格用於刪除已部署的Edge應用程式。 請勿使用下列儲存格，除非您需要刪除已部署的Edge應用程式。
+>此儲存格用於刪除已部署的Edge應用程式。 請勿使用下列儲存格，除非您需要刪除已部署的應用程 [!DNL Edge] 式。
 
 ```python
 if edge_utils.delete_from_edge(service_id=service_id):
