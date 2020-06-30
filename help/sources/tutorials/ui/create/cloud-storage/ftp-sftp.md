@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 在UI中建立FTP或SFTP來源連接器
 topic: overview
 translation-type: tm+mt
-source-git-commit: 855f543a1cef394d121502f03471a60b97eae256
+source-git-commit: d3c725c4760acb3857a67d0d30b24732c963a030
 workflow-type: tm+mt
-source-wordcount: '559'
+source-wordcount: '554'
 ht-degree: 1%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 1%
 >[!NOTE]
 >FTP和SFTP連接器為測試版。 如需使用 [測試版標籤連接器的詳細資訊](../../../../home.md#terms-and-conditions) ，請參閱來源概觀。
 
-Adobe Experience Platform中的來源連接器可讓您依計畫吸收外部來源的資料。 本教學課程提供使用平台使用者介面建立FTP或SFTP來源連接器的步驟。
+Adobe Experience Platform中的來源連接器可讓您依計畫吸收外部來源的資料。 本教學課程提供使用使用者介面建立FTP或SFTP來源連接器 [!DNL Platform] 的步驟。
 
 ## 快速入門
 
@@ -32,7 +32,7 @@ Adobe Experience Platform中的來源連接器可讓您依計畫吸收外部來�
 
 ### 支援的檔案格式
 
-Experience Platform支援下列從外部來源擷取的檔案格式：
+[!DNL Experience Platform] 支援從外部來源擷取下列檔案格式：
 
 * 分隔字元分隔值(DSV): 目前，對DSV格式化資料檔案的支援僅限於逗號分隔值(CSV)。 DSV格式檔案中欄位標題的值只能由字母數字字元和下划線組成。 今後將提供對一般DSV的支援。
 * JavaScript物件符號(JSON): JSON格式的資料檔案必須符合XDM規範。
@@ -40,11 +40,11 @@ Experience Platform支援下列從外部來源擷取的檔案格式：
 
 ### 收集必要的認證
 
-若要在平台上存取您的FTP或SFTP伺服器，您必須提供伺服器的 **主機名稱**、 **使用者名稱**，以及 **密碼**。
+若要在上存取您的FTP或SFTP伺服器 [!DNL Platform]，您必須提供伺服器的 **主機名**、使 **用者名**&#x200B;稱和密 **碼**。
 
 ## 連線至您的FTP或SFTP伺服器
 
-收集完所需憑證後，您可依照下列步驟建立新的FTP或SFTP帳戶以連線至平台。
+收集完所需憑證後，您可依照下列步驟建立新的FTP或SFTP帳戶以連線至 [!DNL Platform]。
 
 登入 [Adobe Experience Platform](https://platform.adobe.com) ，然後從左側導覽列選取 **[!UICONTROL Sources]** ，以存取 ** Sources工作區。 「目 *[!UICONTROL 錄]* 」螢幕顯示各種源，您可以為其建立入站帳戶，每個源顯示與其關聯的現有帳戶和資料流的數量。
 
