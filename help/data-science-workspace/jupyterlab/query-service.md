@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Jupyter筆記本中的查詢服務
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 83e74ad93bdef056c8aef07c9d56313af6f4ddfd
+source-git-commit: c48079ba997a7b4c082253a0b2867df76927aa6d
 workflow-type: tm+mt
-source-wordcount: '799'
+source-wordcount: '764'
 ht-degree: 1%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 1%
 
 # Jupyter筆記本中的查詢服務
 
-[!DNL Adobe Experience Platform] 允許您將查詢服務整合到JupyterLab作為標準功能，在資料科學工作區中使用結構化查詢語言(SQL)。
+[!DNL Adobe Experience Platform] 允許您通過將結構化查詢語言(SQL)作為 [!DNL Data Science Workspace] 標準功能 [!DNL Query Service] 整合 [!DNL JupyterLab] 到中來使用。
 
 本教程演示了用於探索、轉換和分析資料的常見使用案例的SQL查詢 [!DNL Adobe Analytics] 示例。
 
@@ -22,19 +22,19 @@ ht-degree: 1%
 
 開始本教學課程之前，您必須具備下列必要條件：
 
-- 存取權 [!DNL Adobe Experience Platform]。 如果您無權存取Experience Platform中的IMS組織，請在繼續前先與系統管理員聯絡
+- 存取權 [!DNL Adobe Experience Platform]。 如果您無權存取中的IMS組織，請先與您的系統 [!DNL Experience Platform]管理員聯絡，然後再繼續
 
 - 資料 [!DNL Adobe Analytics] 集
 
 - 對本教學課程中使用的下列主要概念有正確認識：
-   - [體驗資料模型(XDM)和XDM系統](../../xdm/home.md)
-   - [查詢服務](../../query-service/home.md)
-   - [查詢服務SQL語法](../../query-service/sql/overview.md)
-   - [!DNL Adobe Analytics]
+   - [!DNL Experience Data Model (XDM) and XDM System](../../xdm/home.md)
+   - [!DNL Query Service](../../query-service/home.md)
+   - [!DNL Query Service SQL Syntax](../../query-service/sql/overview.md)
+   - [Adobe Analytics]
 
-## 訪問JupyterLab和查詢服務 {#access-jupyterlab-and-query-service}
+## 存取 [!DNL JupyterLab] 和 [!DNL Query Service] {#access-jupyterlab-and-query-service}
 
-1. 在 [Experience Platform](https://platform.adobe.com)，從左側導覽欄 **[!UICONTROL 導覽至Notebooks]** 。 請讓JupyterLab載入。
+1. 在中 [!DNL Experience Platform](https://platform.adobe.com)，從左側導 **[!UICONTROL 航列導航到Notebooks]** 。 請讓JupyterLab載入。
 
    ![](../images/jupyterlab/query/jupyterlab_launcher.png)
 
@@ -52,7 +52,7 @@ ht-degree: 1%
 
 4. 查找要 [!DNL Adobe Analytics] 瀏覽的資料集並按一下右鍵清單，按一下「筆記本」( **[!UICONTROL Notebook]** )中的「查詢資料」(Query Data)，在空的筆記本中生成SQL查詢。
 
-5. 按一下包含函式的第一個產生的儲存格， `qs_connect()` 然後按一下播放按鈕以執行它。 此函式在筆記本實例和查詢服務之間建立連接。
+5. 按一下包含函式的第一個產生的儲存格， `qs_connect()` 然後按一下播放按鈕以執行它。 此函式在筆記本實例和之間建立連接 [!DNL Query Service]。
 
    ![](../images/jupyterlab/query/execute.png)
 
@@ -91,7 +91,7 @@ ht-degree: 1%
 
 在單個筆記本單元格中輸入以下SQL查詢。 按一下查詢的單元格，然後按一下播放按 **[!UICONTROL 鈕]** 。 成功的查詢結果或錯誤日誌顯示在已執行的單元格下面。
 
-當筆記型電腦長時間處於非活動狀態時，筆記型電腦和查詢服務之間的連接可能會中斷。 在這種情況下，按一下右上角的 **[!UICONTROL Power]** （電源）按鈕重新啟動JupyterLab。
+當筆記本長時間處於非活動狀態時，筆記本和筆記本之間的連接可能 [!DNL Query Service] 中斷。 在這種情況下，請 [!DNL JupyterLab] 按一下右上角的 **[!UICONTROL Power]** （電源）按鈕重新啟動。
 
 ![](../images/jupyterlab/query/restart_button.png)
 
@@ -119,7 +119,7 @@ ORDER  BY Hour;
 
 在上述查詢中，子 `_acp_year` 句中 `WHERE` 的目標設定為值 `target_year`。 在SQL查詢中加入變數，方法是將變數以大括弧(`{}`)括住。
 
-查詢的第一行包含可選變數 `hourly_visitor`。 查詢結果將作為Pactices資料幀儲存在此變數中。 將結果儲存在資料幀中，可讓您以後使用所需的Python包直觀顯示查詢結果。 在新儲存格中執行下列Python程式碼以產生長條圖：
+查詢的第一行包含可選變數 `hourly_visitor`。 查詢結果將作為Pactices資料幀儲存在此變數中。 將結果儲存在資料幀中，可讓您以後使用所需的包直觀地顯示查詢 [!DNL Python] 結果。 在新儲存 [!DNL Python] 格中執行下列程式碼以產生長條圖：
 
 ```python
 trace = go.Bar(
@@ -209,7 +209,7 @@ GROUP BY aaid_sess_key
 ORDER BY Count DESC;
 ```
 
-執行下列Python程式碼，以產生每次瀏覽作業事件數的色階分佈圖：
+執行下列程 [!DNL Python] 式碼，以產生每次瀏覽作業事件數的色階分佈圖：
 
 ```python
 data = [go.Histogram(x = events_per_session['Count'])]
@@ -283,4 +283,4 @@ LIMIT  10;
 
 ## 下一步 <!-- omit in toc -->
 
-本教程演示了在Jupyter筆記本中使用查詢服務的一些示例使用案例。 請依循「 [使用Jupyter Notebooks](./analyze-your-data.md) 」教學課程分析資料，以瞭解如何使用資料存取SDK執行類似作業。
+本教程演示了在筆記型電腦中使用的一些 [!DNL Query Service] 示例使 [!DNL Jupyter] 用案例。 請依循「 [使用Jupyter Notebooks](./analyze-your-data.md) 」教學課程分析資料，以瞭解如何使用資料存取SDK執行類似作業。
