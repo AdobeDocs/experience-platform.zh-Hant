@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 在UI中為資料庫連接器配置資料流
 topic: overview
 translation-type: tm+mt
-source-git-commit: 415b59fc3fa20c09372549e92571c1b41006e540
+source-git-commit: d3c725c4760acb3857a67d0d30b24732c963a030
 workflow-type: tm+mt
-source-wordcount: '1049'
+source-wordcount: '1043'
 ht-degree: 0%
 
 ---
@@ -131,10 +131,10 @@ ht-degree: 0%
 
 ![](../../../images/tutorials/dataflow/databases/list-of-dataflows.png)
 
-「 *屬性* 」欄會顯示在畫面的右側，包括「啟用 **** 」切換按鈕。 選擇切換以禁用資料流。 在禁用資料流後，可以使用相同的切換來重新啟用資料流。
+「 *[!UICONTROL 屬性]* 」欄會顯示在畫面的右側，包括「啟用 **** 」切換按鈕。 選擇切換以禁用資料流。 在禁用資料流後，可以使用相同的切換來重新啟用資料流。
 
 ![](../../../images/tutorials/dataflow/databases/disable.png)
 
-### 啟用描述檔填入的傳入資料
+### 啟用傳入的人口資 [!DNL Profile] 料
 
-來自來源連接器的傳入資料可用於豐富和填入即時客戶個人檔案資料。 如需填入真實客戶個人檔案資料的詳細資訊，請參閱個人檔案填入 [教學課程](../profile.md)。
+來自來源連接器的傳入資料可用於豐富和填入資 [!DNL Real-time Customer Profile] 料。 如需填入資料的詳細資 [!DNL Real-time Customer Profile] 訊，請參閱描述檔填 [入教學課程](../profile.md)。
