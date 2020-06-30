@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 使用筆記型電腦分析資料
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 83e74ad93bdef056c8aef07c9d56313af6f4ddfd
+source-git-commit: c48079ba997a7b4c082253a0b2867df76927aa6d
 workflow-type: tm+mt
-source-wordcount: '1729'
+source-wordcount: '1702'
 ht-degree: 0%
 
 ---
@@ -18,31 +18,31 @@ ht-degree: 0%
 
 以下概念介紹：
 
-- **JupyterLab:** [JupyterLab](https://blog.jupyter.org/jupyterlab-is-ready-for-users-5a6f039b8906) 是Project Jupyter的新一代Web介面，並與之緊密整合 [!DNL Adobe Experience Platform]。
+- **[!DNL JupyterLab]:**[!DNL JupyterLab](https://blog.jupyter.org/jupyterlab-is-ready-for-users-5a6f039b8906)是Project Jupyter的新一代Web介面，並緊密整合在其中[!DNL Adobe Experience Platform]。
 - **批：** 資料集由批處理組成。 批是一組在一段時間內收集並作為單個單位一起處理的資料。 新增資料至資料集時，會建立新的批次。
-- **資料存取SDK（已過時）:** 「資料存取SDK」現已停用。 請使用「平 [台SDK](../authoring/platform-sdk.md) 」指南。
+- **資料存取SDK（已過時）:** 「資料存取SDK」現已停用。 請使用指 [!DNL Platform SDK](../authoring/platform-sdk.md) 南。
 
 ## 在Data Science Workspace中探索筆記型電腦
 
 在本節中，將探索先前納入零售銷售模式的資料。
 
-Data Science Workspace可讓使用者透過JupyterLab平台建立Jupyter Notebooks，讓他們建立和編輯機器學習工作流程。 JupyterLab是伺服器用戶端協同作業工具，可讓使用者透過網頁瀏覽器編輯筆記型電腦檔案。 這些筆記型電腦可同時包含可執行代碼和富格文本元素。 為了我們的目的，我們將使用Markdown進行分析描述，並使用可執行的Python程式碼來執行資料探索和分析。
+Data Science Workspace可讓使用者透過平 [!DNL Jupyter Notebooks] 台進行創 [!DNL JupyterLab] 作，以建立和編輯機器學習工作流程。 [!DNL JupyterLab] 是伺服器——用戶端共同作業工具，可讓使用者透過網頁瀏覽器編輯筆記型電腦檔案。 這些筆記型電腦可同時包含可執行代碼和富格文本元素。 為了我們的目的，我們將使用Markdown進行分析描述和可執 [!DNL Python] 行程式碼來執行資料探索和分析。
 
 ### 選擇您的工作區
 
-在啟動JupyterLab時，我們將為Jupyter Notebooks提供基於Web的介面。 根據我們選擇的筆記本類型，將啟動相應的內核。
+在啟動 [!DNL JupyterLab]時，我們將為Jupyter Notebooks提供基於Web的介面。 根據我們選擇的筆記本類型，將啟動相應的內核。
 
-在比較要使用的環境時，我們必須考慮每項服務的限制。 例如，如果我們將熊貓圖書館 [與](https://pandas.pydata.org/) Python搭配使用，作為普通用戶，RAM限制為2 GB。 即使身為強大使用者，我們也只能使用20 GB的記憶體。 如果處理較大的計算，則使用Spark是合理的，它提供1.5 TB的容量，可與所有筆記本實例共用。
+在比較要使用的環境時，我們必須考慮每項服務的限制。 例如，如果我們將熊貓圖書館 [與](https://pandas.pydata.org/) ，作為一 [!DNL Python]般用戶，RAM限制為2 GB。 即使身為強大使用者，我們也只能使用20 GB的記憶體。 如果處理較大的計算，則使用提供1.5 TB的內 [!DNL Spark] 容（與所有筆記本實例共用）是有意義的。
 
 依預設，Tensorflow方式可在GPU叢集中運作，而Python則可在CPU叢集中執行。
 
 ### 建立新筆記本
 
-在UI中， [!DNL Adobe Experience Platform] 按一下頂端功能表中的「資料科學」標籤，將您帶往「資料科學工作區」。 在此頁中，按一下將開啟JupyterLab啟動程式的JupyterLab頁籤。 您應該會看到類似此的頁面。
+在UI中， [!DNL Adobe Experience Platform] 按一下頂端功能表中的「資料科學」標籤，將您帶往「資料科學工作區」。 在此頁中，按一下將打 [!DNL JupyterLab] 開啟動程式的選 [!DNL JupyterLab] 項卡。 您應該會看到類似此的頁面。
 
 ![](../images/jupyterlab/analyze-data/jupyterlab_launcher.png)
 
-在我們的教學課程中，我們將使用Jupyter筆記型電腦中的Python 3來示範如何存取和探索資料。 在「啟動器」頁中，提供了示例筆記本。 我們將使用Python 3的零售銷售配方。
+在我們的教學課程中，我們將使用 [!DNL Python] Jupyter筆記型電腦中的3來展示如何存取和探索資料。 在「啟動器」頁中，提供了示例筆記本。 我們將使用零售銷售方 [!DNL Python] 式3。
 
 ![](../images/jupyterlab/analyze-data/retail_sales.png)
 
@@ -52,11 +52,11 @@ Data Science Workspace可讓使用者透過JupyterLab平台建立Jupyter Noteboo
 
 >[!NOTE] 已過 `data_access_sdk_python` 時，不再建議使用。 請參閱將資料 [存取SDK轉換為平台SDK](../authoring/platform-sdk.md) 教學課程，以轉換您的程式碼。 本教學課程仍適用下列相同步驟。
 
-我們將重點介紹從外部訪問資料 [!DNL Adobe Experience Platform] 和資料。 我們將使用程式庫 `data_access_sdk_python` 來存取內部資料，例如資料集和XDM架構。 對於外部資料，我們將使用熊貓蟒蛇圖庫。
+我們將重點介紹從外部訪問資料 [!DNL Adobe Experience Platform] 和資料。 我們將使用程式庫 `data_access_sdk_python` 來存取內部資料，例如資料集和XDM架構。 對於外部資料，我們將使用熊貓庫 [!DNL Python] 來。
 
 #### 外部資料
 
-當零售銷售筆記型電腦開啟時，尋找「載入資料」標題。 以下Python程式碼使用 `DataFrame` 熊貓的資料結構和 [read_csv()](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.read_csv.html#pandas.read_csv) ，將Github上代管的CSV讀入DataFrame:
+當零售銷售筆記型電腦開啟時，尋找「載入資料」標題。 以下程 [!DNL Python] 式碼使用 `DataFrame` 熊貓的資料結構 [和read_csv()函式，將DataFrame上代管的CSV](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.read_csv.html#pandas.read_csv)[!DNL Github] 讀入：
 
 ![](../images/jupyterlab/analyze-data/read_csv.png)
 
@@ -68,7 +68,7 @@ Data Science Workspace可讓使用者透過JupyterLab平台建立Jupyter Noteboo
 
 ![](../images/jupyterlab/analyze-data/df_head.png)
 
-#### 體驗平台資料
+#### [!DNL Experience Platform] 資料
 
 現在，我們將重點介紹如何訪問 [!DNL Experience Platform] 資料。
 
@@ -86,7 +86,7 @@ Data Science Workspace可讓使用者透過JupyterLab平台建立Jupyter Noteboo
 
 現在，我們可以在資料集上按一 `Retail-Training-<your-alias>` 下滑鼠右鍵，並在下拉式清單中選取「探索筆記型電腦中的資料」選項。 可執行的代碼條目將出現在您的筆記本中。
 
->[!TIP] 請參閱平 [台SDK](../authoring/platform-sdk.md) 指南以轉換程式碼。
+>[!TIP] 請參閱指 [!DNL Platform SDK](../authoring/platform-sdk.md) 南以轉換程式碼。
 
 ```PYTHON
 from data_access_sdk_python.reader import DataSetReader
@@ -96,7 +96,7 @@ df = reader.load(data_set_id="xxxxxxxx", ims_org="xxxxxxxx@AdobeOrg")
 df.head()
 ```
 
-如果您正在使用Python以外的其他內核，請參 [閱本頁](https://github.com/adobe/acp-data-services-dsw-reference/wiki/Accessing-Data-on-the-Platform) ，以訪問上的資料 [!DNL Adobe Experience Platform]。
+如果您正在處理除外的其他內核 [!DNL Python]，請參閱 [本頁](https://github.com/adobe/acp-data-services-dsw-reference/wiki/Accessing-Data-on-the-Platform) ，以訪問上的資料 [!DNL Adobe Experience Platform]。
 
 選擇可執行單元格，然後按工具欄中的播放按鈕將運行可執行代碼。 的輸出 `head()` 將是表，其中資料集的索引鍵為欄，而資料集中的前n列為欄。 `head()` 接受整數參數，以指定要輸出的行數。 預設為5。
 
@@ -122,7 +122,7 @@ df.head()
 
 #### 統計摘要
 
-我們可以利用Python的熊貓庫來獲取每個屬性的資料類型。 下列呼叫的輸出將提供每個欄的項目數和資料類型的相關資訊：
+我們可以利 [!DNL Python's] 用熊貓庫來獲取每個屬性的資料類型。 下列呼叫的輸出將提供每個欄的項目數和資料類型的相關資訊：
 
 ```PYTHON
 df.info()
@@ -150,7 +150,7 @@ df.describe()
 
 #### 資料視覺化
 
-既然我們知道我們的資料框值，我們想要以視覺化來補充，讓事物更清晰，更容易辨識模式。 在將結果傳達給觀眾時，圖表也很有用。 一些Python程式庫對視覺化有幫助，包括：
+既然我們知道我們的資料框值，我們想要以視覺化來補充，讓事物更清晰，更容易辨識模式。 在將結果傳達給觀眾時，圖表也很有用。 一些 [!DNL Python] 對視覺化有用的程式庫包括：
 - [馬特普洛特利卜](https://matplotlib.org/)
 - [熊貓](https://pandas.pydata.org/)
 - [西伯恩](https://seaborn.pydata.org/)
@@ -158,7 +158,7 @@ df.describe()
 
 在本節中，我們將快速介紹使用每個程式庫的一些優點。
 
-[Matplotlib](https://matplotlib.org/) 是最舊的Python視覺化套件。 他們的目標是讓「輕鬆、艱難的事情成為可能」。 這通常是正確的，因為該套產品功能極強，但同時也具有複雜性。 在不花費大量時間和精力的情況下，要獲得合理的外觀圖並不總是容易的。
+[Matplotlib](https://matplotlib.org/) 是最舊的視覺 [!DNL Python] 化套件。 他們的目標是讓「輕鬆、艱難的事情成為可能」。 這通常是正確的，因為該套產品功能極強，但同時也具有複雜性。 在不花費大量時間和精力的情況下，要獲得合理的外觀圖並不總是容易的。
 
 [Pactose](https://pandas.pydata.org/) 主要用於其DataFrame對象，它允許通過整合索引進行資料操作。 不過，熊貓也包括了一個基於matplotlib的內置繪圖功能。
 
