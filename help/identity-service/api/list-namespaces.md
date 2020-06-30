@@ -4,7 +4,10 @@ solution: Experience Platform
 title: 列出可用的名稱空間
 topic: API guide
 translation-type: tm+mt
-source-git-commit: df85ea955b7a308e6be1e2149fcdfb4224facc53
+source-git-commit: 6ffdcc2143914e2ab41843a52dc92344ad51bcfb
+workflow-type: tm+mt
+source-wordcount: '68'
+ht-degree: 5%
 
 ---
 
@@ -30,7 +33,7 @@ curl -X GET \
 
 **回應**
 
-響應包括對象陣列，每個對象表示可用的命名空間。 具有&quot;false&quot;的「自訂」值的名稱空間是標準名稱空間，而具有&quot;true&quot;的「自訂」值的名稱空間是貴組織已建立的名稱空間。
+響應包括對象陣列，每個對象表示可用的命名空間。 具有&quot;[!UICONTROL custom]&quot;值&quot;[!UICONTROL false]&quot;的名稱空間是標準名稱空間，而具有&quot;[!UICONTROL custom]&quot;值&quot;true&quot;值的名稱空間是貴組織已建立的名稱空間。
 
 >[!NOTE] 此回應已針對空間截斷。
 
