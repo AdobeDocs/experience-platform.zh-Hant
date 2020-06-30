@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 即時機器學習概觀
 topic: Overview
 translation-type: tm+mt
-source-git-commit: 626bb7a0856a663e235ecd2b19954f4617fe9b6f
+source-git-commit: 1e5526b54f3c52b669f9f6a792eda0abfc711fdd
 workflow-type: tm+mt
-source-wordcount: '513'
+source-wordcount: '504'
 ht-degree: 1%
 
 ---
@@ -17,9 +17,9 @@ ht-degree: 1%
 >[!IMPORTANT]
 >目前尚未針對所有使用者提供即時機器學習。 此功能是alpha版，仍在測試中。 本檔案可能會有所變更。
 
-即時機器學習功能可大幅提升數位體驗內容對使用者的相關性。 透過在Experience Edge上運用即時參考和持續學習，您就能做到這一點。
+即時機器學習功能可大幅提升數位體驗內容對使用者的相關性。 這可透過在上運用即時參考和持續學習來實現 [!DNL Experience Edge]。
 
-在Hub和Edge上結合流暢的運算，可大幅降低傳統上推動高度個人化體驗（既相關又回應快速）的延遲。 因此，即時機器學習為同步決策提供極低的延遲。 例如，轉換個人化網頁內容，或呈現優惠或折扣，以減少客戶流失並提高網路商店的轉化率。
+在Hub和Thab上結合流暢的運算，可大幅 [!DNL Edge] 降低傳統上為超個人化體驗提供相關與回應的延遲。 因此，即時機器學習為同步決策提供極低的延遲。 例如，轉換個人化網頁內容，或呈現優惠或折扣，以減少客戶流失並提高網路商店的轉化率。
 
 ## 即時機器學習架構 {#architecture}
 
@@ -35,7 +35,7 @@ ht-degree: 1%
 
 ### 資料擷取與準備
 
-透過Adobe Experience Platform上的Experience Data Model(XDM)，資料會被擷取並轉換。 此資料用於模型訓練。 若要進一步瞭解XDM，請造訪 [XDM概觀](../../xdm/home.md)。
+透過Adobe Experience Platform上的(XDM), [!DNL Experience Data Model] 擷取並轉換資料。 此資料用於模型訓練。 若要進一步瞭解XDM，請造訪 [XDM概觀](../../xdm/home.md)。
 
 ### 製作
 
@@ -43,7 +43,7 @@ ht-degree: 1%
 
 ### 部署
 
-將您的模型部署至Experience Edge，以使用預測API端點在服務收藏館中建立即時機器學習服務。
+部署您的模型 [!DNL Experience Edge] 以使用預測API端點，在服務收藏館 [!UICONTROL 中建立即時機器學習服務] 。
 
 ### 推理
 
@@ -61,7 +61,7 @@ ht-degree: 1%
 > Alpha限制：
 > - 目前僅支援基於ONNX的型號。
 > - 節點中使用的函式無法序列化。 例如，Apcots節點中使用的lambda函式。
-> - 手動部署Edge後，會有20秒的睡眠。
+> - 手動完成部署後，會有20 [!DNL Edge] 秒的睡眠時間。
 > - 要進行深入學習，您需要以這樣的方式發送資料：在調用資料時， `df.values` 它會返回一個DL模型可接受的陣列。 這是因為ONNX模型計分節點使用並 `df.values` 發送輸出以對模型進行計分。
 
 
