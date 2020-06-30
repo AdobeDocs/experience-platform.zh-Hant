@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 即時機器學習快速入門
 topic: Getting started
 translation-type: tm+mt
-source-git-commit: 626bb7a0856a663e235ecd2b19954f4617fe9b6f
+source-git-commit: 1e5526b54f3c52b669f9f6a792eda0abfc711fdd
 workflow-type: tm+mt
-source-wordcount: '411'
+source-wordcount: '405'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 0%
 >[!IMPORTANT]
 >目前尚未針對所有使用者提供即時機器學習。 此功能是alpha版，仍在測試中。 本檔案可能會有所變更。
 
-為了運用即時機器學習，您必須能夠存取配備Adobe Experience Platform和Data Science Workspace的組織。 此外，您需要有完整的資料集，才能用於訓練和計分。
+為了運用即時機器學習，您必須擁有Adobe Experience Platform和布建的組織的存取權 [!DNL Data Science Workspace]。 此外，您需要有完整的資料集，才能用於訓練和計分。
 
 即時機器學習指南需要對Python 3、 [Jupyter筆記型電腦](../jupyterlab/overview.md)、資料科學和機器學習有實際的瞭解。
 
@@ -30,18 +30,18 @@ ht-degree: 0%
 
 ## Adobe Experience Platform中的資料集
 
-若要開始使用即時機器學習，您必須擁有資料集的存取權。 您可以選擇使用外部資料集並將其上傳至JupyterLab環境，或在Platform中建立新資料集（如果您尚未這麼做）。
+若要開始使用即時機器學習，您必須擁有資料集的存取權。 您可以選擇使用外部資料集並將其上傳至您的環 [!DNL JupyterLab] 境，或在平台中建立新資料集（如果您尚未這麼做）。
 
 >[!NOTE]
 >如果您已有想要使用的資料集，可跳至「下 [一步」](#next-steps)。
 
 ### 使用外部資料集
 
-若要進一步瞭解如何使用外部資料集，例如將資料上傳至JupyterLab環境，請造訪使用筆記型 [電腦分析資料的教學課程](../jupyterlab/analyze-your-data.md#external-data)。
+若要進一步瞭解如何使用外部資料集，例如將資料上傳至您的環 [!DNL JupyterLab] 境，請造訪使用筆記型電腦 [分析資料的教學課程](../jupyterlab/analyze-your-data.md#external-data)。
 
 ### 建立新資料集
 
-若要建立新資料集以用於即時機器學習，您需要資料集的資料結構。 接下來，您需要使用您建立的架構來內嵌資料。 使用下列教學課程來建立並填入平台的資料集：
+若要建立新資料集以用於即時機器學習，您需要資料集的資料結構。 接下來，您需要使用您建立的架構來內嵌資料。 使用下列教學課程來建立和填入資料集 [!DNL Platform]:
 
 - [在API中建立和填入資料集](../../catalog/datasets/create.md)
 - [在UI中建立和填入資料集](../../ingestion/tutorials/ingest-batch-data.md)
