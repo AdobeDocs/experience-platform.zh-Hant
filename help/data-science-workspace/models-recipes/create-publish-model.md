@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 建立和發佈機器學習模型逐步說明
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 83e74ad93bdef056c8aef07c9d56313af6f4ddfd
+source-git-commit: c48079ba997a7b4c082253a0b2867df76927aa6d
 workflow-type: tm+mt
-source-wordcount: '1582'
+source-wordcount: '1542'
 ht-degree: 0%
 
 ---
@@ -18,9 +18,9 @@ ht-degree: 0%
 
 假裝您擁有線上零售網站。 當您的客戶在零售網站購物時，您想要向他們提供個人化產品建議，以公開您企業提供的各種其他產品。 在您網站的存在期間，您不斷收集客戶資料，並想以某種方式利用這些資料產生個人化產品建議。
 
-[!DNL Adobe Experience Platform] Data Science Workspace提供使用預先建立的產品建議方式達成目標 [的方式](../pre-built-recipes/product-recommendations.md)。 請依照本教學課程，瞭解如何存取和瞭解您的零售資料、建立和最佳化機器學習模型，以及在資料科學工作區中產生見解。
+[!DNL Adobe Experience Platform] [!DNL Data Science Workspace] 提供使用預先建立的產品建議方式達成 [目標的方式](../pre-built-recipes/product-recommendations.md)。 請依照本教學課程，瞭解如何存取和瞭解您的零售資料、建立和最佳化機器學習模型，以及產生深入見解 [!DNL Data Science Workspace]。
 
-本教學課程反映資料科學工作區的工作流程，並涵蓋建立機器學習模型的下列步驟：
+本教學課程反映的是 [!DNL Data Science Workspace]機器學習模型的工作流程，並涵蓋下列建立機器學習模型的步驟：
 
 1. [準備資料](#prepare-your-data)
 2. [製作您的模型](#author-your-model)
@@ -31,7 +31,7 @@ ht-degree: 0%
 
 開始本教學課程之前，您必須具備下列必要條件：
 
-* 存取權 [!DNL Adobe Experience Platform]。 如果您無法存取Experience Platform中的IMS組織，請在繼續前先與系統管理員聯絡。
+* 存取權 [!DNL Adobe Experience Platform]。 如果您無權存取中的IMS組織，請先與您的系 [!DNL Experience Platform]統管理員聯絡，然後再繼續。
 
 * 啟用資產。 請連絡您的帳戶代表，為您布建下列項目。
    * 建議方式
@@ -42,21 +42,21 @@ ht-degree: 0%
    * Golden Data Set postValues
    * 金色資料集架構
 
-* 從 <a href="https://github.com/adobe/experience-platform-dsw-reference/tree/master/Summit/2019/resources/Notebooks-Thurs" target="_blank">Adobe public Git儲存庫下載3個必要的Jupyter Notebook檔案</a>，這些檔案將用來示範Data Science Workspace的JupyterLab工作流程。
+* 從 [!DNL Jupyter Notebook] Adobe公用儲存 <a href="https://github.com/adobe/experience-platform-dsw-reference/tree/master/Summit/2019/resources/Notebooks-Thurs" target="_blank">庫下載三個必要的檔 [!DNL Git] 案</a>，這些檔案將用來示範 [!DNL JupyterLab] 中的工作流程 [!DNL Data Science Workspace]。
 
 * 對本教學課程中使用的下列主要概念有正確認識：
-   * [體驗資料模型](../../xdm/home.md): 由Adobe領導的標準化工作，為客戶體驗管理定義標準架構，例如Profile和ExperienceEvent。
+   * [!DNL Experience Data Model](../../xdm/home.md): 由Adobe領導的標準化工作，為客戶體驗管理定義標 [!DNL Profile] 準架構，例如和ExperienceEvent。
    * 資料集： 實際資料的儲存和管理結構。 XDM架構的物理實例 [化實例](../../xdm/schema/field-dictionary.md)。
    * 批： 資料集由批處理組成。 批是一組在一段時間內收集並作為單個單位一起處理的資料。
-   * JupyterLab: [JupyterLab](https://blog.jupyter.org/jupyterlab-is-ready-for-users-5a6f039b8906) 是Project Jupyter的開放原始碼網路介面，並與Experience Platform緊密整合。
+   * [!DNL JupyterLab]: [!DNL JupyterLab](https://blog.jupyter.org/jupyterlab-is-ready-for-users-5a6f039b8906) 是專案的開放原始碼Web介面， [!DNL Jupyter] 並緊密整合在 [!DNL Experience Platform]中。
 
 ## 準備資料 {#prepare-your-data}
 
-若要建立機器學習模型，向客戶提供個人化產品建議，您必須分析您網站上先前客戶購買的產品。 本節探討如何透過將此資料匯入Platform [!DNL Adobe Analytics]，以及如何將該資料轉換成機器學習模型要使用的功能資料集。
+若要建立機器學習模型，向客戶提供個人化產品建議，您必須分析您網站上先前客戶購買的產品。 本節探討如何將此資料吸收 [!DNL Platform] 到 [!DNL Adobe Analytics]其中，以及如何將該資料轉換成機器學習模型要使用的功能資料集。
 
 ### 探索資料並瞭解結構
 
-1. 登入 [Adobe Experience Platform](https://platform.adobe.com/) ，然後按一下「 **[!UICONTROL Datasets]** 」以列出所有現有的資料集，並選取您要探索的資料集。 在此例中，Analytics資料集 **Golden Data Set postValues**。
+1. 登入 [Adobe Experience Platform](https://platform.adobe.com/) ，然後按一下「 **[!UICONTROL Datasets]** 」以列出所有現有的資料集，並選取您要探索的資料集。 在此例中，資料 [!DNL Analytics] 集 **Golden Data Set postValues**。
    ![](../images/models-recipes/model-walkthrough/datasets_110.png)
 2. 選取 **[!UICONTROL 右上角的「預覽資料集]** 」以檢查範例記錄，然後按一下「 **[!UICONTROL 關閉」]**。
    ![](../images/models-recipes/model-walkthrough/golden_data_set_110.png)
@@ -67,13 +67,13 @@ ht-degree: 0%
 
 | 資料集名稱 | 結構 | 說明 |
 | ----- | ----- | ----- |
-| Golden Data Set postValues | Golden Data Set架構 | 來自您網站的分析來源資料 |
-| Recommendations輸入資料集 | Recommendations輸入結構 | Analytics資料會使用功能管道轉換為訓練資料集。 此資料用於訓練Product Recommendations機器學習模型。 `itemid` 並對 `userid` 應該客戶購買的產品。 |
+| Golden Data Set postValues | Golden Data Set架構 | [!DNL Analytics] 您網站的來源資料 |
+| Recommendations輸入資料集 | Recommendations輸入結構 | 使用 [!DNL Analytics] 特徵管線將資料轉換成訓練資料集。 此資料用於訓練Product Recommendations機器學習模型。 `itemid` 並對 `userid` 應該客戶購買的產品。 |
 | Recommendations輸出資料集 | Recommendations輸出結構 | 儲存計分結果的資料集，會包含每個客戶的建議產品清單。 |
 
 ## 製作您的模型 {#author-your-model}
 
-Data Science Workspace生命週期的第二個元件包括編寫配方和模型。 「產品建議方式」旨在利用過去的購買資料和機器學習，大規模產生產品建議。
+生命週期的第二個元 [!DNL Data Science Workspace] 素包括製作方式和模型。 「產品建議方式」旨在利用過去的購買資料和機器學習，大規模產生產品建議。
 
 配方是模型的基礎，因為配方包含機器學習演算法和邏輯，可解決特定問題。 更重要的是，配方可讓您在組織內普及機器學習，讓其他使用者存取不同使用案例的模型，而不需撰寫任何程式碼。
 
@@ -162,4 +162,4 @@ Data Science工作流程的最後一步是將您的模型實際運作，以便�
 
 做得好，您已成功產生產品建議！
 
-本教學課程將您介紹資料科學工作區的工作流程，以示範如何透過機器學習將原始未處理的資料轉換為有用的資訊。 若要進一步瞭解如何使用Data Science Workspace，請繼續下一個建立零售 [銷售模式和資料集的指南](./create-retails-sales-dataset.md)。
+本教學課程將您介紹的工作流程， [!DNL Data Science Workspace]示範如何透過機器學習將原始未處理的資料轉換為有用的資訊。 若要進一步瞭解如何使 [!DNL Data Science Workspace]用，請繼續下一個建立零售 [銷售模式和資料集的指南](./create-retails-sales-dataset.md)。
