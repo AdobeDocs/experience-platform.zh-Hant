@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 建立資料使用原則
 topic: policies
 translation-type: tm+mt
-source-git-commit: ba9d4b31cfc3b7924879a91bd125f72159e55fc4
+source-git-commit: d4964231ee957349f666eaf6b0f5729d19c408de
 workflow-type: tm+mt
-source-wordcount: '1216'
+source-wordcount: '1194'
 ht-degree: 2%
 
 ---
@@ -16,22 +16,22 @@ ht-degree: 2%
 
 資料使用標籤與實施(DULE)是Adobe Experience Platform資料治理的核心機制。 DULE Policy Service API [](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) （DULE原則服務API）可讓您建立和管理DULE原則，以決定可針對包含特定DULE標籤的資料採取哪些行銷動作。
 
-本檔案提供使用Policy Service API建立DULE原則的逐步教學課程。 如需API中可用不同作業的更完整指南，請參閱「原則服務開 [發人員指南」](../api/getting-started.md)。
+本檔案提供使用 [!DNL Policy Service] API建立DULE原則的逐步教學課程。 如需API中可用不同作業的更完整指南，請參閱「原則服務開 [發人員指南」](../api/getting-started.md)。
 
 ## 快速入門
 
 本教程需要對建立和評估DULE策略時涉及的以下關鍵概念有充分的瞭解：
 
-* [資料治理](../home.md): 平台實施資料使用合規性的框架。
+* [資料治理](../home.md): 強制執行資料使用 [!DNL Platform] 合規性的框架。
 * [資料使用標籤](../labels/overview.md): 資料使用標籤會套用至XDM資料欄位，指定資料存取限制。
-* [體驗資料模型(XDM)](../../xdm/home.md): 平台組織客戶體驗資料的標準化架構。
-* [沙盒](../../sandboxes/home.md): Experience Platform提供虛擬沙盒，可將單一Platform實例分割為不同的虛擬環境，以協助開發和發展數位體驗應用程式。
+* [體驗資料模型(XDM)](../../xdm/home.md): 組織客戶體驗資料 [!DNL Platform] 的標準化架構。
+* [沙盒](../../sandboxes/home.md): [!DNL Experience Platform] 提供虛擬沙盒，可將單一執行個體分 [!DNL Platform] 割為不同的虛擬環境，以協助開發和發展數位體驗應用程式。
 
-在開始本教學課程之前，請先閱讀開發人員指南 [](../api/getting-started.md) ，以取得成功呼叫DULE Policy Service API所需的重要資訊，包括必要的標題以及如何讀取範例API呼叫。
+在開始本教學課程之前，請先閱讀開發人員指南 [，以取得成功呼叫DULE](../api/getting-started.md)[!DNL Policy Service] API所需的重要資訊，包括必要的標題以及如何讀取範例API呼叫。
 
 ## 定義行銷動作 {#define-action}
 
-在資料治理架構中，行銷動作是Experience Platform資料使用者採取的動作，需要檢查是否有違反資料使用政策的行為。
+在架構 [!DNL Data Governance] 中，行銷動作是資料使用者採取的 [!DNL Experience Platform] 動作，需要檢查資料使用政策是否違規。
 
 建立DULE原則的第一步是決定該原則將評估的行銷動作。 您可以使用下列其中一個選項來完成此作業：
 
@@ -44,7 +44,7 @@ ht-degree: 2%
 
 **API格式**
 
-視您要尋找的是Experience Platform提供的行銷動作或您的組織建立的自訂行銷動作，請分別使 `marketingActions/core` 用 `marketingActions/custom` 端點。
+視您是在尋找由您的組織提供的行銷動作或由 [!DNL Experience Platform] 您的組織建立的自訂行銷動作而定，請分別 `marketingActions/core` 使用 `marketingActions/custom` 或端點。
 
 ```http
 GET /marketingActions/core
@@ -157,7 +157,7 @@ curl -X PUT \
 
 | 屬性 | 說明 |
 | --- | --- |
-| `name` | 您要建立之行銷動作的名稱。 此名稱必須符合請求路徑中提供的名稱，否則將會發生400（錯誤請求）錯誤。 |
+| `name` | 您要建立之行銷動作的名稱。 此名稱必須符合請求路徑中提供的名稱，否則將發生400（錯誤請求）錯誤。 |
 | `description` | 行銷動作的可人讀描述。 |
 
 **回應**
@@ -414,6 +414,6 @@ curl -X PATCH \
 
 遵循本教學課程，您已成功建立行銷動作的資料使用原則。 您現在可以繼續學習如何強制使 [用資料原則的教學課程](../enforcement/api-enforcement.md) ，以瞭解如何檢查是否有違反原則的情況，並在您的體驗應用程式中加以處理。
 
-如需Policy Service API中不同可用作業的詳細資訊，請參閱 [Policy Service開發人員指南](../api/getting-started.md)。 如需如何為即時客戶個人檔案資料實施原則的詳細資訊，請參閱關於為受眾區 [段實施資料使用合規性的教學課程](../../segmentation/tutorials/governance.md)。
+如需有關 [!DNL Policy Service] API中不同可用作業的詳細資訊，請參 [閱「原則服務開](../api/getting-started.md)發人員指南」。 如需如何強制執行資料原則的 [!DNL Real-time Customer Profile] 詳細資訊，請參閱關於強制受 [眾區段資料使用符合性的教學課程](../../segmentation/tutorials/governance.md)。
 
-若要瞭解如何在Experience Platform使用者介面中管理使用原則，請參閱原 [則使用指南](user-guide.md)。
+要瞭解如何在用戶介面中管理使 [!DNL Experience Platform] 用策略，請參 [閱策略使用手冊](user-guide.md)。
