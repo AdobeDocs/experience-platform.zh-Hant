@@ -4,7 +4,10 @@ solution: Experience Platform
 title: 訓練和評估模型(UI)
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: e08460bc76d79920bbc12c7665a1416d69993f34
+source-git-commit: 1e5526b54f3c52b669f9f6a792eda0abfc711fdd
+workflow-type: tm+mt
+source-wordcount: '975'
+ht-degree: 2%
 
 ---
 
@@ -17,48 +20,48 @@ source-git-commit: e08460bc76d79920bbc12c7665a1416d69993f34
 
 ## 快速入門
 
-若要完成本教學課程，您必須擁有Experience Platform的存取權。 如果您無法存取Experience Platform中的IMS組織，請在繼續前先與系統管理員聯絡。
+若要完成本教學課程，您必須擁有存取權 [!DNL Experience Platform]。 如果您無權存取中的IMS組織，請先與您的系 [!DNL Experience Platform]統管理員聯絡，然後再繼續。
 
 本教學課程需要現有的配方。 如果您沒有配方，請依照UI教學課程 [中的匯入封裝配方](./import-packaged-recipe-ui.md) ，然後再繼續。
 
 ## 建立模型
 
-1. 在Adobe Experience Platform中，按一下左 **[!UICONTROL Models]** 側導覽欄中的連結，以列出所有現有的模型。 單 **[!UICONTROL Create Model]** 擊頁面右上方附近的，開始建立模型。
+1. 在Adobe Experience Platform中，按一下左側導 **[!UICONTROL 覽欄中的]** 「模型」連結，以列出所有現有的模型。 按一下 **[!UICONTROL 頁面右上角的「建立模型]** 」(Create Model)，開始建立模型。
    ![](../images/models-recipes/train-evaluate-ui/models_browse.png)
 
-2. 瀏覽現有配方的清單，尋找並選取要用來建立模型的配方，然後按一下 **[!UICONTROL Next]**。
+2. 瀏覽現有配方的清單，尋找並選取要用來建立模型的配方，然後按一下「下 **[!UICONTROL 一步]**」。
    ![](../images/models-recipes/train-evaluate-ui/select_recipe.png)
 
-3. 選取適當的輸入資料集，然後按一下 **[!UICONTROL Next]**。 這將設定模型的預設輸入訓練資料集。
+3. 選取適當的輸入資料集，然後按一下「下 **[!UICONTROL 一步]**」。 這將設定模型的預設輸入訓練資料集。
    ![](../images/models-recipes/train-evaluate-ui/select_dataset.png)
 
-4. 為「模型」(Model)提供名稱並查看預設「模型」(Model)配置。 在「配方」建立過程中，通過按兩下配置值來應用預設配置，複查和修改配置值。 若要提供一組新的設定，請按一 **[!UICONTROL Upload New Config]** 下並拖曳包含模型組態的JSON檔案至瀏覽器視窗。 按一下 **[!UICONTROL Finish]** 建立模型。
+4. 為「模型」(Model)提供名稱並查看預設「模型」(Model)配置。 在「配方」建立過程中，通過按兩下配置值來應用預設配置，複查和修改配置值。 若要提供新的組態，請按一下「上 **[!UICONTROL 傳新設定」]** ，並將包含「模型」組態的JSON檔案拖曳至瀏覽器視窗。 按一下「 **[!UICONTROL 完成]** 」(Finish)建立「模型」(Model)。
    >[!NOTE]配置是獨特且特定於其預定配方的，這意味著零售銷售配方的配置將不適用於產品建議配方。 如需零售 [銷售方式](#reference) 組態的清單，請參閱參考章節。
 
    ![](../images/models-recipes/train-evaluate-ui/name_and_configure.png)
 
 ## 建立訓練執行
 
-1. 在Adobe Experience Platform中，按一下左 **[!UICONTROL Models]** 側導覽欄中的連結，以列出所有現有的模型。 查找並按一下要培訓的模型的名稱。
+1. 在Adobe Experience Platform中，按一下左側導 **[!UICONTROL 覽欄中的]** 「模型」連結，以列出所有現有的模型。 查找並按一下要培訓的模型的名稱。
    ![](../images/models-recipes/train-evaluate-ui/models_browse.png)
 
-2. 所有現有培訓執行都會列出其目前的培訓狀態。 對於使用「資料科學工作區」使用者介面建立的「模型」，會自動產生訓練執行，並使用預設組態和輸入訓練資料集來執行。
+2. 所有現有培訓執行都會列出其目前的培訓狀態。 對於使用使用者介面建 [!DNL Data Science Workspace] 立的模型，會使用預設組態和輸入訓練資料集自動產生並執行訓練執行。
    ![](../images/models-recipes/train-evaluate-ui/model_overview.png)
 
-3. 按一下「模型概述」頁 **[!UICONTROL Train]** 面右上角的附近，建立新的訓練執行。
+3. 按一下「模型概述」頁面右上 **[!UICONTROL 方附近的]** 「訓練」，建立新的訓練執行。
    ![](../images/models-recipes/train-evaluate-ui/training_input.png)
 
-4. 選取訓練執行的訓練輸入資料集，然後按一下 **[!UICONTROL Next]**。
+4. 選取訓練執行的訓練輸入資料集，然後按一下「下 **[!UICONTROL 一步]**」。
    ![](../images/models-recipes/train-evaluate-ui/training_configuration.png)
 
-5. 如圖所示，建立模型期間提供的預設配置，請按兩下這些值，以相應地更改和修改這些配置。 按一 **[!UICONTROL Finish]** 下以建立並執行訓練執行。
+5. 如圖所示，建立模型期間提供的預設配置，請按兩下這些值，以相應地更改和修改這些配置。 按一 **[!UICONTROL 下「完成]** 」以建立並執行培訓執行。
    >[!NOTE]配置是獨特且特定於其預定配方的，這意味著零售銷售配方的配置將不適用於產品建議配方。 如需零售 [銷售方式](#reference) 組態的清單，請參閱參考章節。
 
    ![](../images/models-recipes/train-evaluate-ui/training_configuration.png)
 
 ## 評估模型
 
-1. 在Adobe Experience Platform中，按一下左 **[!UICONTROL Models]** 側導覽欄中的連結，以列出所有現有的模型。 查找並按一下要評估的模型的名稱。
+1. 在Adobe Experience Platform中，按一下左側導 **[!UICONTROL 覽欄中的]** 「模型」連結，以列出所有現有的模型。 查找並按一下要評估的模型的名稱。
    ![](../images/models-recipes/train-evaluate-ui/models_browse.png)
 
 2. 所有現有培訓執行都會列出其目前的培訓狀態。 在完成多個培訓執行後，可以在「模型評估」圖表中比較不同培訓執行的評估度量，並使用圖表上方的下拉式清單選取評估度量。
@@ -77,7 +80,7 @@ source-git-commit: e08460bc76d79920bbc12c7665a1416d69993f34
 
 ## 後續步驟
 
-本教學課程將帶領您在資料科學工作區中建立、訓練和評估模型。 在您到達最佳化模型後，您就可以使用經過訓練的模型，依照UI教學課程中的「 [Score a Model」（對模型評分）來產生見解](./score-model-ui.md) 。
+本教學課程將逐步引導您建立、訓練和評估模型 [!DNL Data Science Workspace]。 在您到達最佳化模型後，您就可以使用經過訓練的模型，依照UI教學課程中的「 [Score a Model」（對模型評分）來產生見解](./score-model-ui.md) 。
 
 ## 參考 {#reference}
 
