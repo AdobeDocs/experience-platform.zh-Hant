@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 建立零售銷售結構和資料集
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 83e74ad93bdef056c8aef07c9d56313af6f4ddfd
+source-git-commit: 4b0f0dda97f044590f55eaf75a220f631f3313ee
 workflow-type: tm+mt
-source-wordcount: '526'
+source-wordcount: '497'
 ht-degree: 0%
 
 ---
@@ -14,26 +14,26 @@ ht-degree: 0%
 
 # 建立零售銷售結構和資料集
 
-本教學課程提供所有其他資料科學工作區教學課程的必 [!DNL Adobe Experience Platform] 要條件和資產。 完成後，您和您的IMS組織Experience Platform成員將可使用零售銷售架構和資料集。
+本教學課程提供所有其他教學課程的必要條件和 [!DNL Adobe Experience Platform] 資 [!DNL Data Science Workspace] 產。 完成後，您和您的IMS組織成員將可使用零售銷售架構和資料集 [!DNL Experience Platform]。
 
 ## 快速入門
 
 開始本教學課程之前，您必須具備下列必要條件：
-- 存取權 [!DNL Adobe Experience Platform]。 如果您無法存取Experience Platform中的IMS組織，請在繼續前先與系統管理員聯絡。
-- 授權進行Experience Platform API呼叫。 完成「 [驗證並存取Adobe Experience Platform API](../../tutorials/authentication.md) 」教學課程，以取得下列值，以順利完成本教學課程：
+- 存取權 [!DNL Adobe Experience Platform]。 如果您無權存取中的IMS組織，請先與您的系 [!DNL Experience Platform]統管理員聯絡，然後再繼續。
+- 進行 [!DNL Experience Platform] API呼叫的授權。 完成「 [驗證並存取Adobe Experience Platform API](../../tutorials/authentication.md) 」教學課程，以取得下列值，以順利完成本教學課程：
    - 授權： `{ACCESS_TOKEN}`
    - x-api-key: `{API_KEY}`
    - x-gw-ims-org-id: `{IMS_ORG}`
    - 用戶端密碼： `{CLIENT_SECRET}`
    - 用戶端憑證： `{PRIVATE_KEY}`
-- 零售銷售方式的資料和來 [源檔案範例](../pre-built-recipes/retail-sales.md)。 從 [Adobe公用Git存放庫下載本課程和其他資料科學工作區教學課程所需的資產](https://github.com/adobe/experience-platform-dsw-reference/)。
-- [Python >= 2.7](https://www.python.org/downloads/) ，以及下列Python套件：
+- 零售銷售方式的資料和來 [源檔案範例](../pre-built-recipes/retail-sales.md)。 從 [!DNL Data Science Workspace] Adobe public Git儲存庫下載本教學課程和其 [他教學課程所](https://github.com/adobe/experience-platform-dsw-reference/)需的資產。
+- [Python >= 2.7](https://www.python.org/downloads/) ，以及下列 [!DNL Python] 套件：
    - [pip](https://pypi.org/project/pip/)
    - [PyYAML](https://pyyaml.org/)
    - [dictor](https://pypi.org/project/dictor/)
    - [JWT](https://pypi.org/project/jwt/)
 - 對本教學課程中使用的下列概念有正確認識：
-   - [體驗資料模型(XDM)](../../xdm/home.md)
+   - [!DNL Experience Data Model (XDM)](../../xdm/home.md)
    - [架構構成基礎](../../xdm/schema/field-dictionary.md)
 
 ## 建立零售銷售結構和資料集
@@ -42,7 +42,7 @@ ht-degree: 0%
 
 ### 設定檔案
 
-1. 在Experience Platform教學課程資源套件中，導覽至目錄，然 `bootstrap`後使用適 `config.yaml` 當的文字編輯器開啟。
+1. 在教學課 [!DNL Experience Platform] 程資源套件中，導覽至目錄 `bootstrap`，然後使用 `config.yaml` 適當的文字編輯器開啟。
 2. 在區段 `Enterprise` 下輸入下列值：
 
    ```yaml
@@ -91,8 +91,8 @@ ht-degree: 0%
 
 ### 運行引導指令碼
 
-1. 開啟您的終端應用程式，並導覽至Experience Platform教學課程資源目錄。
-2. 將目 `bootstrap` 錄設定為當前工作路徑，並輸入以 `bootstrap.py` 下命令運行Python指令碼：
+1. 開啟您的終端應用程式，並導覽至教學課 [!DNL Experience Platform] 程資源目錄。
+2. 將目 `bootstrap` 錄設定為當前工作路徑，並通過輸 `bootstrap.py` 入以 [!DNL Python] 下命令運行指令碼：
 
    ```bash
    python bootstrap.py
@@ -102,12 +102,12 @@ ht-degree: 0%
 
 ## 後續步驟
 
-成功完成引導指令碼後，您就可在Experience Platform上檢視零售銷售的輸入和輸出結構描述和資料集。 如需詳細 [資訊，請參閱預覽](./preview-schema-data.md)架構資料教學課程。
+成功完成引導指令碼後，可以在上查看零售銷售部門的輸入和輸出方案和資料集 [!DNL Experience Platform]。 如需詳細 [資訊，請參閱預覽](./preview-schema-data.md)架構資料教學課程。
 
-您也已使用提供的引導指令碼，成功將零售銷售範例資料納入Experience Platform。
+您也已使用提供的引導指令碼成功將零售 [!DNL Experience Platform] 銷售示例資料導入。
 
 要繼續使用收錄的資料：
 - [使用Jupyter筆記型電腦分析資料](../jupyterlab/analyze-your-data.md)
    - 使用Data Science Workspace中的Jupyter筆記型電腦存取、探索、視覺化和瞭解您的資料。
 - [將來源檔案封裝至配方](./package-source-files-recipe.md)
-   - 請依照本教學課程學習如何將來源檔案封裝在可匯入的方式檔案中，將您自己的模型帶入資料科學工作區。
+   - 請依照本教學課程，瞭解如何將來源檔案封裝在可匯入 [!DNL Data Science Workspace] 的方式檔案中，將您自己的模型帶入。
