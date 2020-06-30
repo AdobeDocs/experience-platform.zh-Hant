@@ -4,14 +4,17 @@ solution: Experience Platform
 title: 行銷動作
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 08d02e7323f75c450e7a250835f26a569685cdd1
+source-git-commit: 1a835c6c20c70bf03d956c601e2704b68d4f90fa
+workflow-type: tm+mt
+source-wordcount: '536'
+ht-degree: 1%
 
 ---
 
 
 # 行銷動作
 
-在Adobe Experience Platform資料治理的背景下，行銷行動是Experience Platform資料消費者採取的行動，需要檢查資料使用政策是否違規。
+在Adobe Experience Platform資料治理範圍內的行銷行動，是資料消費者採取的行動，需要檢查是否有違反資料使用政策的行為。 [!DNL Experience Platform]
 
 在API中處理行銷動作時，您必須使用端 `/marketingActions` 點。
 
@@ -139,7 +142,7 @@ curl -X GET \
 
 ## 建立或更新行銷動作
 
-「原則服務API」可讓您定義自己的行銷動作，並更新現有的行銷動作。 建立和更新都是使用PUT作業來建立行銷動作名稱。
+API [!DNL Policy Service] 可讓您定義自己的行銷動作，並更新現有的行銷動作。 建立和更新都是使用PUT作業來建立行銷動作名稱。
 
 **API格式**
 
