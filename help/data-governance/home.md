@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Adobe Experience Platform資料治理
 topic: overview
 translation-type: tm+mt
-source-git-commit: 42d4fe7eecf1f64fab1c9554cfdc4bfeb42ffdeb
+source-git-commit: d4964231ee957349f666eaf6b0f5729d19c408de
 workflow-type: tm+mt
-source-wordcount: '1462'
+source-wordcount: '1448'
 ht-degree: 0%
 
 ---
@@ -14,9 +14,9 @@ ht-degree: 0%
 
 # 資料治理概觀
 
-Adobe Experience Platform的核心功能之一，就是將來自多個企業系統的資料整合在一起，讓行銷人員能夠更好地識別、瞭解並吸引客戶。 此資料可能受您組織或法律法規所定義的使用限制所約束。 因此，務必確保平台內的資料操作符合資料使用政策。
+Adobe Experience Platform的核心功能之一，就是將來自多個企業系統的資料整合在一起，讓行銷人員能夠更好地識別、瞭解並吸引客戶。 此資料可能受您組織或法律法規所定義的使用限制所約束。 因此，務必確保您的資料操作符合資 [!DNL Platform] 料使用政策。
 
-Adobe Experience Platform資料管理可讓您管理客戶資料，並確保符合資料使用適用的法規、限制和政策。 它在Experience Platform的不同層次發揮關鍵作用，包括編目、資料傳承、資料使用標籤、資料使用政策，以及控制資料在行銷動作中的使用。
+Adobe Experience Platform資料管理可讓您管理客戶資料，並確保符合資料使用適用的法規、限制和政策。 它在各個層級中都發揮著關鍵作用， [!DNL Experience Platform] 包括編目、資料傳承、資料使用標籤、資料使用政策，以及控制資料在行銷動作中的使用。
 
 ## 資料治理角色
 
@@ -44,7 +44,7 @@ Adobe Experience Platform資料管理可讓您管理客戶資料，並確保符�
 
 ## DULE框架
 
-資料使用標籤與實施(DULE)是Experience Platform資料治理的核心架構。 DULE可簡化資料分類和建立資料使用原則的程式。 一旦套用資料標籤並制定資料使用政策後，就可評估行銷動作，以確保正確使用資料。
+Data Usage Labeling and Enforcement(DULE)是資料治理的核心 [!DNL Experience Platform] 架構。 DULE可簡化資料分類和建立資料使用原則的程式。 一旦套用資料標籤並制定資料使用政策後，就可評估行銷動作，以確保正確使用資料。
 
 DULE框架有三個關鍵要素： 標籤、原則與實施。
 
@@ -66,17 +66,17 @@ DULE框架包含預先定義的資料使用標籤，可用來以三種方式對�
 
 >[!NOTE] 如需可用標籤的 [完整清單](labels/reference.md) ，請參閱支援資料使用標籤的指南，以及每種標籤類型的定義。
 
-標籤可隨時套用，提供您選擇控制資料的彈性。 最佳做法建議在資料被收錄到Experience Platform或資料在Platform上可用時，立即加上標籤。
+標籤可隨時套用，提供您選擇控制資料的彈性。 最佳做法建議在資料被吸收或資料 [!DNL Experience Platform]在中提供時立即加以標籤 [!DNL Platform]。
 
 如需詳細資訊，請 [參閱資料使用標籤](./labels/overview.md) 概觀。
 
 ## 資料使用原則
 
-為了讓資料使用標籤有效支援資料合規性，必須實作資料使用政策。 資料使用原則是描述您在Experience Platform內對資料執行的行銷動作類型或限制的規則。
+為了讓資料使用標籤有效支援資料合規性，必須實作資料使用政策。 資料使用原則是描述您允許或限制對內資料執行之行銷動作類型的規則 [!DNL Experience Platform]。
 
 行銷動作的範例可能是想要將資料集匯出至第三方服務。 如果有原則指出無法匯出特定類型的資料，例如個人識別資訊(PII)，且「I」標籤（身分資料）已套用至資料集，您會收到來自原則服務的回覆，告知您已違反資料使用原則。
 
-一旦套用資料使用標籤後，資料管理員就可以使用DULE Policy Service API或Experience Platform使用者介面來建立原則。
+在套用資料使用標籤後，資料管理員就可使用DULE Policy Service API或使用者介面來建立 [!DNL Experience Platform] 原則。
 
 >[!IMPORTANT] 預設會停用所有資料使用政策（包括Adobe提供的核心政策）。 要考慮實施單個策略，您必須手動啟用該策略。
 
@@ -117,7 +117,7 @@ Data Governance目前支援兩個層級（資料集和欄位）的DULE標籤。 
 | **地理科學** | 地緣是由GPS或RFID技術定義的虛擬地理邊界，可讓軟體在行動裝置進入或離開特定區域時觸發回應。 |
 | **身分標籤** | 身分「I」標籤可用來分類可識別或聯絡特定人員的資料。 |
 | **興趣型定位** | 如果符合下列三個條件，就會發生喜好式定位（也稱為個人化）: 網站上收集的資料會用於對使用者的興趣做出推論，會用於其他內容，例如在其他網站或應用程式（非網站）上，並會用來根據這些推論來選取要提供哪些內容或廣告。 |
-| **行銷動作** | 在資料治理架構中的行銷行動是Experience Platform資料使用者採取的行動，需要檢查資料使用政策是否違規 |
+| **行銷動作** | 在資料治理架構中的行銷行動是資料使用者採取的 [!DNL Experience Platform] 行動，需要檢查是否有違反資料使用政策的行為 |
 | **政策** | 在資料治理架構中，原則是描述允許或不允許對特定資料採取何種行銷動作的規則。 |
 | **敏感標籤** | 敏感的「S」標籤可用來將您和您的組織認為敏感的資料分類。 |
 
