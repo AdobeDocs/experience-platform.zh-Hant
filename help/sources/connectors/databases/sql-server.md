@@ -4,29 +4,29 @@ solution: Experience Platform
 title: SQL Server連接器
 topic: overview
 translation-type: tm+mt
-source-git-commit: 45ce6e876a42c5594ae4b7787757e5db7024a22f
+source-git-commit: 6ffdcc2143914e2ab41843a52dc92344ad51bcfb
 workflow-type: tm+mt
-source-wordcount: '175'
+source-wordcount: '163'
 ht-degree: 0%
 
 ---
 
 
-# （測試版）Microsoft SQL Server連接器
+# （測試版） [!DNL Microsoft] SQL Server連接器
 
-Adobe Experience Platform可讓您從外部來源擷取資料，同時提供您使用平台服務來建構、標示及增強傳入資料的能力。 您可以從多種來源（例如Adobe應用程式、雲端儲存空間、資料庫等）擷取資料。
+Adobe Experience Platform可讓您從外部來源擷取資料，同時提供您使用服務建構、標示及增強傳入資料的 [!DNL Platform] 能力。 您可以從多種來源（例如Adobe應用程式、雲端儲存空間、資料庫等）擷取資料。
 
-Experience Platform支援從協力廠商資料庫擷取資料。 平台可以連接到不同類型的資料庫，如關係型、NoSQL或資料倉庫。 支援資料庫提供者包括Microsoft SQL Server。
+[!DNL Experience Platform] 提供從第三方資料庫擷取資料的支援。 [!DNL Platform] 可以連接到不同類型的資料庫，如關係型、 NoSQL或資料倉庫。 支援資料庫提供者包括 [!DNL Microsoft] SQL Server。
 
-以下文檔提供了如何使用API或用戶介面將Microsoft SQL Server連接到平台的資訊：
+以下文檔提供了有關如何將 [!DNL Microsoft] SQL Server連接到 [!DNL Platform] API或用戶介面的資訊：
 
-## 使用API將Microsoft SQL Server連接到平台
+## 將 [!DNL Microsoft] SQL Server連接到使 [!DNL Platform] 用API
 
 - [使用流服務API建立Microsoft SQL Server連接器](../../tutorials/api/create/databases/sql-server.md)
 - [使用Flow Service API探索資料庫系統](../../tutorials/api/explore/database-nosql.md)
 - [使用Flow Service API從資料庫收集資料](../../tutorials/api/collect/database-nosql.md)
 
-## 使用UI將Microsoft SQL Server連接到平台
+## 將 [!DNL Microsoft] SQL Server連接到 [!DNL Platform] 使用UI
 
 - [在UI中建立Microsoft SQL Server源連接器](../../tutorials/ui/create/databases/sql-server.md)
 - [在UI中為資料庫連接器配置資料流](../../tutorials/ui/dataflow/databases.md)
