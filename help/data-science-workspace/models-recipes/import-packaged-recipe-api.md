@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 匯入封裝的方式(API)
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 20e26c874204da75cac7e8d001770702658053f1
+source-git-commit: 4b0f0dda97f044590f55eaf75a220f631f3313ee
 workflow-type: tm+mt
-source-wordcount: '976'
+source-wordcount: '955'
 ht-degree: 2%
 
 ---
@@ -14,9 +14,9 @@ ht-degree: 2%
 
 # 匯入封裝的方式(API)
 
-本教學課程使 [用Sensei Machine Learning API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml) 來建立引擎 [](../api/engines.md)，也稱為使用者介面中的方式。
+本教學課程 [!DNL Sensei Machine Learning API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml) 使用建立 [引擎](../api/engines.md)，在使用者介面中也稱為「方式」。
 
-在開始使用之前，請務必注意，Adobe Experience Platform Data Science Workspace使用不同的術語來參照API和UI中的類似元素。 本教學課程中使用API詞語，下表概述相關詞語：
+在開始使用之前，請務必注意，Adobe Experience Platform使用不 [!DNL Data Science Workspace] 同的術語來參照API和UI中的類似元素。 本教學課程中使用API詞語，下表概述相關詞語：
 
 | UI詞語 | API期限 |
 | ---- | ---- |
@@ -25,7 +25,7 @@ ht-degree: 2%
 | 培訓與評估 | [實驗](../api/experiments.md) |
 | 服務 | [MLService](../api/mlservices.md) |
 
-引擎包含機器學習演算法和邏輯，以解決特定問題。 下圖顯示資料科學工作區中的API工作流程。 本教學課程著重於建立引擎，即機器學習模型的大腦。
+引擎包含機器學習演算法和邏輯，以解決特定問題。 下圖顯示了中的API工作流程 [!DNL Data Science Workspace]。 本教學課程著重於建立引擎，即機器學習模型的大腦。
 
 ![](../images/models-recipes/import-package-api/engine_hierarchy_api.png)
 
@@ -35,7 +35,7 @@ ht-degree: 2%
 
 - `{DOCKER_URL}`: 智慧服務的Docker影像的URL位址。
 
-本教學課程要求您完成「 [Adobe Experience Platform驗證」教學課程](../../tutorials/authentication.md) ，才能成功呼叫平台API。 完成驗證教學課程後，所有Experience Platform API呼叫中每個必要標題的值都會顯示在下方：
+本教學課程要求您完成「 [Adobe Experience Platform驗證」教學課程](../../tutorials/authentication.md) ，才能成功呼叫 [!DNL Platform] API。 完成驗證教學課程後，將提供所有 [!DNL Experience Platform] API呼叫中每個必要標題的值，如下所示：
 
 - `{ACCESS_TOKEN}`: 驗證後提供的您特定的載體Token值。
 - `{IMS_ORG}`: 您的IMS組織認證可在您獨特的Adobe Experience Platform整合中找到。
@@ -50,7 +50,7 @@ ht-degree: 2%
 若要建立具有儲存在Docker容器中之封裝配方檔案的引擎，您必須為封裝配方檔案提供Docker URL。
 
 >[!CAUTION]
-> 如果您使用Python或R，請使用下列請求。 如果您使用PySpark或Scala，請使用位於Python/R範例下方的PySpark/Scala請求範例。
+> 如果您使用或 [!DNL Python] R使用下列請求。 如果您使用PySpark或Scala，請使用位於Python/R範例下方的PySpark/Scala請求範例。
 
 **API格式**
 
@@ -86,8 +86,8 @@ curl -X POST \
 
 | 屬性 | 說明 |
 | -------  | ----------- |
-| `engine.name` | 引擎的所需名稱。 與此引擎對應的配方將繼承此值，該值將作為配方的名稱顯示在資料科學工作區用戶介面中。 |
-| `engine.description` | 引擎的選用說明。 與此引擎對應的配方將繼承此值，該值將作為配方的說明顯示在Data Science Workspace用戶介面中。 請勿移除此屬性，如果您選擇不提供說明，請讓此值為空字串。 |
+| `engine.name` | 引擎的所需名稱。 與此引擎對應的處方將繼承此值，該值將作為處方 [!DNL Data Science Workspace] 的名稱顯示在用戶介面中。 |
+| `engine.description` | 引擎的選用說明。 與此引擎對應的處方將繼承此值，該值將作為處方 [!DNL Data Science Workspace] 的說明顯示在用戶介面中。 請勿移除此屬性，如果您選擇不提供說明，請讓此值為空字串。 |
 | `engine.type` | 引擎的執行類型。 此值與Docker影像開發所用的語言相對應。 當提供Docker URL來建立引擎時， `type` 為 `Python`、 `R`、 `PySpark`( `Spark` Scala)或 `Tensorflow`。 |
 | `artifacts.default.image.location` | 你 `{DOCKER_URL}` 來這。 完整的Docker URL具有下列結構： `your_docker_host.azurecr.io/docker_image_file:version` |
 | `artifacts.default.image.name` | Docker映像檔案的附加名稱。 請勿移除此屬性，如果您選擇不提供其他Docker影像檔名，請讓此值為空字串。 |
@@ -169,7 +169,7 @@ curl -X POST \
 
 **回應**
 
-成功的回應會傳回包含新建立之引擎詳細資料（包括其唯一識別碼）的裝載`id`。 以下是Python引擎的範例回應。 根據 `executionType` 提供 `type` 的開機自檢更改和鍵。
+成功的回應會傳回包含新建立之引擎詳細資料（包括其唯一識別碼）的裝載`id`。 以下是引擎的範例回 [!DNL Python] 應。 根據 `executionType` 提供 `type` 的開機自檢更改和鍵。
 
 ```json
 {
