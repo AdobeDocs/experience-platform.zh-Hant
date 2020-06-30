@@ -4,32 +4,32 @@ solution: Experience Platform
 title: Oracle連接器
 topic: overview
 translation-type: tm+mt
-source-git-commit: b92f33627636b351dbd7b490e461d4f6b2866310
+source-git-commit: 6ffdcc2143914e2ab41843a52dc92344ad51bcfb
 workflow-type: tm+mt
-source-wordcount: '142'
+source-wordcount: '130'
 ht-degree: 0%
 
 ---
 
 
-# （測試版）Oracle連接器
+# （測試版）連 [!DNL Oracle] 接器
 
 >[!NOTE]
->Oracle連接器處於測試階段。 如需使用 [測試版標籤連接器的詳細資訊](../../home.md#terms-and-conditions) ，請參閱來源概觀。
+>連接 [!DNL Oracle] 器為測試版。 如需使用 [測試版標籤連接器的詳細資訊](../../home.md#terms-and-conditions) ，請參閱來源概觀。
 
-Adobe Experience Platform為Microsoft、MySQL和Azure等資料庫提供者提供原生連接。 您可以將這些系統的資料匯入平台。
+Adobe Experience Platform為資料庫提供者(例如MySQL [!DNL Microsoft]和)提供原生連接 [!DNL Azure]。 您可以將這些系統的資料匯入其中 [!DNL Platform]。
 
-支援不同類型的第三方資料庫，包括關聯式、NoSQL或資料倉庫。 對資料庫提供方的支援包括Oracle。
+支援不同類型的第三方資料庫，包括關聯式、NoSQL或資料倉庫。 支援資料庫提供者包括 [!DNL Oracle]。
 
-以下文檔提供了有關如何使用API或用戶介面將Oracle連接到平台的資訊：
+以下檔案提供如何連線至使用API [!DNL Oracle] 或使 [!DNL Platform] 用者介面的資訊：
 
-## 使用API將Oracle連接到平台
+## 連線 [!DNL Oracle] 至使 [!DNL Platform] 用API
 
 - [使用流服務API建立Oracle連接器](../../tutorials/api/create/databases/oracle.md)
 - [使用Flow Service API探索資料庫系統](../../tutorials/api/explore/database-nosql.md)
 - [使用Flow Service API從資料庫收集資料](../../tutorials/api/collect/database-nosql.md)
 
-## 使用UI將Oracle連接到平台
+## 使用 [!DNL Oracle] UI [!DNL Platform] 連線至
 
 - [在UI中建立Oracle源連接器](../../tutorials/ui/create/databases/oracle.md)
 - [在UI中為資料庫連接器配置資料流](../../tutorials/ui/dataflow/databases.md)
