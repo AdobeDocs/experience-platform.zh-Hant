@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 最佳化模型
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 7dc5075d3101b4780af92897c0381e73a9c5aef0
+source-git-commit: 4b0f0dda97f044590f55eaf75a220f631f3313ee
 workflow-type: tm+mt
-source-wordcount: '1242'
+source-wordcount: '1219'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # 使用Model Insights框架優化模型
 
-模型洞察框架為資料科學家提供資料科學工作區中的工具，讓他們快速且知情地選擇以實驗為基礎的最佳機器學習模型。 該框架將提高機器學習工作流程的速度和效率，並改善資料科學家的使用便利性。 這是透過為每個機器學習演算法類型提供預設範本來協助模型調整來完成。 最終結果使資料科學家和公民資料科學家能夠為其最終客戶做出更好的模型優化決策。
+模型洞察框架為資料科學家提供工具，讓他 [!DNL Data Science Workspace] 們快速且知情地選擇以實驗為基礎的最佳機器學習模型。 該框架將提高機器學習工作流程的速度和效率，並改善資料科學家的使用便利性。 這是透過為每個機器學習演算法類型提供預設範本來協助模型調整來完成。 最終結果使資料科學家和公民資料科學家能夠為其最終客戶做出更好的模型優化決策。
 
 ## 什麼是量度？
 
@@ -28,7 +28,7 @@ ht-degree: 0%
 
 目前，Model Insights Framework支援下列執行時期：
 - [斯卡拉](#scala)
-- [Python/Tensorflow](#pythontensorflow)
+- [!DNL Python/Tensorflow](#pythontensorflow)
 - [R](#r)
 
 配方的范常式式碼可在 [experience-platform-dsw-reference儲存庫](https://github.com/adobe/experience-platform-dsw-reference) ，位於 `recipes`。 本教程將引用此儲存庫中的特定檔案。
@@ -95,19 +95,19 @@ evaluation.metrics=com.adobe.platform.ml.impl.Constants.FSCORE
 evaluation.class=com.adobe.platform.ml.Evaluator
 ```
 
-在「資料科學工作區」中，使用者可在實驗頁面的「評估量度」索引標籤中查看見解。
+在中， [!DNL Data Science Workspace]使用者將可在實驗頁面的「評估量度」索引標籤中查看見解。
 
-### Python/Tensorflow {#pythontensorflow}
+### [!DNL Python/Tensorflow] {#pythontensorflow}
 
-截至目前，Python或Tensorflow沒有預設的評估量度。 因此，若要取得Python或Tensorflow的評估量度，您必須建立自訂的評估量度。 這可以通過實施類來 `Evaluator` 實現。
+截至目前，或的預設評估量度尚 [!DNL Python] 無 [!DNL Tensorflow]。 因此，若要取得或的評 [!DNL Python] 估量度 [!DNL Tensorflow]，您必須建立自訂的評估量度。 這可以通過實施類來 `Evaluator` 實現。
 
-#### Python的自訂評估量度
+#### 自訂評估量度 [!DNL Python]
 
 對於自訂評估量度，需要為評估者實作兩種主要方法： `split()` 和 `evaluate()`。
 
-對於Python，這些方法將定義在 [類的evaluator.py](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/python/retail/retail/evaluator.py)`Evaluator` 中。 請依 [照evaluator.py連結](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/python/retail/retail/evaluator.py) ，以取得範例 `Evaluator`。
+對 [!DNL Python]於，這些方法將在類 [別的evaluator.py中定](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/python/retail/retail/evaluator.py)`Evaluator` 義。 請依 [照evaluator.py連結](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/python/retail/retail/evaluator.py) ，以取得範例 `Evaluator`。
 
-在Python中建立評估量度時，使用者必須實作 `evaluate()` 和方 `split()` 法。
+在中建立評 [!DNL Python] 估量度時，使用者必須實作 `evaluate()` 和 `split()` 方法。
 
 方法 `evaluate()` 會傳回包含量度物件陣列的量度物件，其屬性 `name`為 `value`、和 `valueType`。
 
@@ -117,7 +117,7 @@ evaluation.class=com.adobe.platform.ml.Evaluator
 
 #### Tensorflow的自訂評估量度
 
-對於Tensorflow，類似於Python，需 `evaluate()` 要 `split()` 實 `Evaluator` 現方法和類。 對於 `evaluate()`，在傳回訓練和測試資料集 `split()` 時，應傳回量度。
+因 [!DNL Tensorflow]為類似 [!DNL Python]，需要實現類 `evaluate()` 中的方法 `split()``Evaluator` 和方法。 對於 `evaluate()`，在傳回訓練和測試資料集 `split()` 時，應傳回量度。
 
 ```PYTHON
 from ml.runtime.python.Interfaces.AbstractEvaluator import AbstractEvaluator
@@ -152,7 +152,7 @@ class Evaluator(AbstractEvaluator):
 
 ## 使用預先建立的度量和視覺化圖表
 
-Sensei Model Insights Framework將支援每種機器學習演算法的一個預設範本。 下表顯示常見的高階機器學習演算法類別以及對應的評估度量和視覺化。
+這個 [!DNL Sensei Model Insights Framework] 範本將支援每種機器學習演算法的一個預設範本。 下表顯示常見的高階機器學習演算法類別以及對應的評估度量和視覺化。
 
 | ML演算法類型 | 評估量度 | 視覺效果 |
 --- | --- | ---
