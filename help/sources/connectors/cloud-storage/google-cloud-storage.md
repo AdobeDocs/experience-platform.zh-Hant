@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Google雲端儲存空間連接器
 topic: overview
 translation-type: tm+mt
-source-git-commit: 0ed2ed3b08f262100746f255a78c248a1748eb5e
+source-git-commit: 6ffdcc2143914e2ab41843a52dc92344ad51bcfb
 workflow-type: tm+mt
-source-wordcount: '376'
+source-wordcount: '337'
 ht-degree: 0%
 
 ---
@@ -14,17 +14,17 @@ ht-degree: 0%
 
 # Google雲端儲存空間連接器
 
-Adobe Experience Platform為AWS、Google Cloud Platform和Azure等雲端供應商提供原生連接功能，讓您能夠從這些系統中取用資料。
+Adobe Experience Platform為AWS等雲端提供商提供原生連接 [!DNL Google Cloud Platform]功能 [!DNL Azure]，讓您能夠從這些系統中取得資料。
 
-雲端儲存來源可將您自己的資料匯入平台，而不需下載、格式化或上傳。 收錄的資料可格式化為XDM JSON、XDM鑲木地板或分隔字元。 此程式的每個步驟都會整合至Sources工作流程中。 平台可讓您透過批次從Google雲端儲存區匯入資料。
+雲端儲存來源可將您自己的資料匯入 [!DNL Platform] 其中，而不需下載、格式化或上傳。 收錄的資料可格式化為XDM JSON、XDM鑲木地板或分隔字元。 此程式的每個步驟都會整合至Sources工作流程中。 [!DNL Platform] 允許您從批中導入 [!DNL Google Cloud Storage] 資料。
 
-## 連接Google雲端儲存空間帳戶的先決條件設定
+## 連線帳戶的先決條件設 [!DNL Google Cloud Storage] 定
 
-若要連線至平台，您必須先啟用Google雲端儲存空間帳戶的互操作性。 若要存取互操作性設定，請開啟Google Cloud Platform，然後從導覽面板的「 **[!UICONTROL 儲存]** 」選 **[!UICONTROL 項中選取「設定]** 」。
+為了連接至，您必 [!DNL Platform]須先啟用您帳戶的互用 [!DNL Google Cloud Storage] 性。 要訪問互操作性設定，請打 [!DNL Google Cloud Platform] 開並從導航面 **[!UICONTROL 板的「存]** 儲 **** 」選項中選擇「設定」。
 
 ![](../../images/tutorials/create/google-cloud-storage/nav.png)
 
-此時會 **[!UICONTROL 顯示]** 「設定」頁面。 從這裡，您可以看到有關您Google專案ID的資訊，以及您Google雲端儲存空間帳戶的詳細資訊。 要訪問互操作性設定，請從 **[!UICONTROL 頂部標題中]** 選擇「互操作性」。
+此時會 **[!UICONTROL 顯示]** 「設定」頁面。 從這裡，您可以看到有關您的專案ID [!DNL Google] 的資訊，以及您帳戶的詳 [!DNL Google Cloud Storage] 細資訊。 要訪問互操作性設定，請從 **[!UICONTROL 頂部標題中]** 選擇「互操作性」。
 
 ![](../../images/tutorials/create/google-cloud-storage/project-access.png)
 
@@ -34,13 +34,13 @@ Adobe Experience Platform為AWS、Google Cloud Platform和Azure等雲端供應�
 
 ![](../../images/tutorials/create/google-cloud-storage/interoperability.png)
 
-您可以使用新產生的存取金鑰ID和機密存取金鑰，將您的Google雲端儲存帳戶連接至平台。
+您可以使用新產生的存取金鑰ID和機密存取金鑰，將您的帳戶連 [!DNL Google Cloud Storage] 接至 [!DNL Platform]。
 
-以下檔案提供如何使用API或使用者介面將Google雲端儲存空間連接至平台的資訊：
+以下檔案提供如何連線至使用API [!DNL Google Cloud Storage] 或使 [!DNL Platform] 用者介面的資訊：
 
-## 將Google雲端儲存空間連接至平台
+## 連線 [!DNL Google Cloud Storage] 至 [!DNL Platform]
 
-以下檔案提供如何使用API或使用者介面將Google雲端儲存空間連接至平台的資訊：
+以下檔案提供如何連線至使用API [!DNL Google Cloud Storage] 或使 [!DNL Platform] 用者介面的資訊：
 
 ### 使用API
 
