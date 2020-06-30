@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 將模型發佈為服務(API)
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 967ca85efba315819c6241d034dc3c25a5b1fc70
+source-git-commit: 4b0f0dda97f044590f55eaf75a220f631f3313ee
 workflow-type: tm+mt
-source-wordcount: '1487'
+source-wordcount: '1478'
 ht-degree: 1%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 1%
 
 # 將模型發佈為服務(API)
 
-本教學課程涵蓋使用 [Sensei Machine Learning API將模型發佈為服務的程式](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml)。
+本教學課程涵蓋使用發佈模型為服務的程式 [!DNL Sensei Machine Learning API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml)。
 
 ## 快速入門
 
@@ -22,7 +22,7 @@ ht-degree: 1%
 
 要遵循本教學課程，您必須有現有的ML引擎、ML實例和實驗。 如需如何在API中建立這些功能的步驟，請參閱匯入封裝 [方式的教學課程](./import-packaged-recipe-api.md)。
 
-最後，在開始本教學課程之前，請先閱讀開發人員指南的 [getting](../api/getting-started.md) started section，以取得您需要瞭解的重要資訊，以成功呼叫Sensei Machine Learning API，包括本教學課程中使用的必要標題：
+最後，在開始本教學課程之前，請先閱讀開發人員指南的 [getting](../api/getting-started.md) started [!DNL Sensei Machine Learning] section，以取得成功呼叫API所需的重要資訊，包括本教學課程中使用的必要標題：
 
 - `{ACCESS_TOKEN}`
 - `{IMS_ORG}`
@@ -38,7 +38,7 @@ ht-degree: 1%
 
 | 詞語 | 定義 |
 --- | ---
-| **機器學習實例（ML實例）** | 特定租用戶的Sensei引擎例項，包含特定資料、參數和Sensei程式碼。 |
+| **機器學習實例（ML實例）** | 特定租用戶 [!DNL Sensei] 的引擎例項，包含特定資料、參數和程 [!DNL Sensei] 式碼。 |
 | **實驗** | 用於舉行培訓實驗運行、打分實驗運行或兩者的傘形實體。 |
 | **排程實驗** | 描述由使用者定義之排程管理之「實驗執行」訓練或計分自動化的術語。 |
 | **實驗執行** | 訓練或計分實驗的特定例項。 來自特定實驗的多個實驗執行，在訓練或計分的資料集值上可能不同。 |
