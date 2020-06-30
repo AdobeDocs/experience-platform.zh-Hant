@@ -4,39 +4,42 @@ solution: Experience Platform
 title: 使用Flow Service API從第三方雲端儲存系統內嵌鑲木地板資料
 topic: overview
 translation-type: tm+mt
-source-git-commit: 0e993e3b0ad4ff58a67e7db742f97c5fb2c3308d
+source-git-commit: fc5cdaa661c47e14ed5412868f3a54fd7bd2b451
+workflow-type: tm+mt
+source-wordcount: '1069'
+ht-degree: 2%
 
 ---
 
 
-# 使用Flow Service API從第三方雲端儲存系統內嵌鑲木地板資料
+# 使用 [!DNL Flow Service] API從協力廠商雲端儲存系統內嵌鑲木地板資料
 
-Flow Service用於收集和集中Adobe Experience Platform內不同來源的客戶資料。 該服務提供用戶介面和REST風格的API，所有支援的源都可從中連接。
+[!DNL Flow Service] 用於收集和集中Adobe Experience Platform內不同來源的客戶資料。 該服務提供用戶介面和REST風格的API，所有支援的源都可從中連接。
 
-本教學課程使用Flow Service API來引導您逐步從協力廠商雲端儲存系統擷取鑲木地板資料。
+本教學課程使 [!DNL Flow Service] 用API來引導您逐步從協力廠商雲端儲存系統擷取鑲木地板資料。
 
 ## 快速入門
 
 本指南需要有效瞭解Adobe Experience Platform的下列元件：
 
-- [來源](../../home.md):Experience Platform可讓您從各種來源擷取資料，同時讓您能夠使用平台服務來建構、標示和增強傳入資料。
-- [沙盒](../../../sandboxes/home.md):Experience Platform提供虛擬沙盒，可將單一Platform實例分割為不同的虛擬環境，以協助開發和發展數位體驗應用程式。
+- [來源](../../home.md): [!DNL Experience Platform] 允許從各種來源接收資料，同時提供使用服務構建、標籤和增強傳入資料的 [!DNL Platform] 能力。
+- [沙盒](../../../sandboxes/home.md): [!DNL Experience Platform] 提供虛擬沙盒，可將單一執行個體分 [!DNL Platform] 割為不同的虛擬環境，以協助開發和發展數位體驗應用程式。
 
-以下各節提供您必須知道的其他資訊，以便使用Flow Service API從協力廠商雲端儲存空間成功擷取鑲木地板資料。
+以下各節提供您必須知道的其他資訊，以便使用 [!DNL Flow Service] API成功從協力廠商雲端儲存空間擷取鑲木地板資料。
 
 ### 讀取範例API呼叫
 
-本教學課程提供範例API呼叫，以示範如何設定請求的格式。 這些包括路徑、必要標題和正確格式化的請求負載。 也提供API回應中傳回的範例JSON。 如需範例API呼叫檔案中所用慣例的詳細資訊，請參閱「Experience Platform疑難排解指 [南」中有關如何讀取範例API呼叫的章節](../../../landing/troubleshooting.md#how-do-i-format-an-api-request) 。
+本教學課程提供範例API呼叫，以示範如何設定請求的格式。 這些包括路徑、必要標題和正確格式化的請求負載。 也提供API回應中傳回的範例JSON。 如需範例API呼叫檔案中所用慣例的詳細資訊，請參閱疑難排解指 [南中有關如何讀取範例API呼叫的](../../../landing/troubleshooting.md#how-do-i-format-an-api-request)[!DNL Experience Platform] 章節。
 
 ### 收集必要標題的值
 
-若要呼叫平台API，您必須先完成驗證教 [學課程](../../../tutorials/authentication.md)。 完成驗證教學課程後，所有Experience Platform API呼叫中每個必要標題的值都會顯示在下方：
+若要呼叫API，您必 [!DNL Platform] 須先完成驗證教 [學課程](../../../tutorials/authentication.md)。 完成驗證教學課程後，將提供所有 [!DNL Experience Platform] API呼叫中每個必要標題的值，如下所示：
 
-- 授權：生產者 `{ACCESS_TOKEN}`
+- 授權： 生產者 `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
-Experience Platform中的所有資源（包括屬於Flow Service的資源）都隔離至特定的虛擬沙盒。 所有對平台API的請求都需要一個標題，該標題會指定要在中執行的操作的沙盒名稱：
+中的所有資 [!DNL Experience Platform]源(包括屬於這些資源 [!DNL Flow Service])都隔離到特定的虛擬沙盒。 對API的所 [!DNL Platform] 有請求都需要一個標題，該標題會指定要在中執行的操作的沙盒名稱：
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
@@ -46,7 +49,7 @@ Experience Platform中的所有資源（包括屬於Flow Service的資源）都�
 
 ## 建立連線
 
-若要使用Platform API來收錄拼花資料，您必須擁有您所存取之第三方雲端儲存來源的有效連線。 如果您尚未連接要使用的儲存，則可以通過以下教程建立一個：
+若要使用API來收錄拼花 [!DNL Platform] 資料，您必須擁有您所存取之第三方雲端儲存來源的有效連線。 如果您尚未連接要使用的儲存，則可以通過以下教程建立一個：
 
 - [Amazon S3](./create/cloud-storage/s3.md)
 - [Azure Blob](./create/cloud-storage/blob.md)
@@ -58,9 +61,9 @@ Experience Platform中的所有資源（包括屬於Flow Service的資源）都�
 
 ## 建立目標方案
 
-為了讓源資料用於平台，還必須建立目標模式以根據您的需求來構建源資料。 然後，目標模式用於建立包含源資料的平台資料集。
+為了使用源資料，還必須創 [!DNL Platform]建目標模式，以根據您的需要構建源資料。 然後，目標模式用於建立包含 [!DNL Platform] 源資料的資料集。
 
-如果您想要在Experience Platform中使用使用者介面， [](../../../xdm/tutorials/create-schema-ui.md) Schema Editor教學課程會提供在Schema Editor中執行類似動作的逐步指示。
+如果希望在中使用用戶介面 [!DNL Experience Platform], [](../../../xdm/tutorials/create-schema-ui.md) Schema Editor教程將提供在Schema Editor中執行類似操作的逐步說明。
 
 **API格式**
 
@@ -70,7 +73,7 @@ POST /schemaregistry/tenant/schemas
 
 **請求**
 
-以下示例請求建立一個XDM模式，以擴展XDM Individual Profile類。
+以下示例請求建立了擴展XDM類的XDM [!DNL Individual Profile] 架構。
 
 ```shell
 curl -X POST \
@@ -195,7 +198,7 @@ curl -X POST \
 
 ## 建立源連接 {#source}
 
-在建立目標XDM架構後，現在可以使用Flow Service API的POST請求來建立來源連線。 源連接由API的連接、源資料格式和對在前一步驟中檢索的目標XDM模式的引用組成。
+在建立目標XDM架構後，現在可以使用API的POST請求來建立來源連 [!DNL Flow Service] 線。 源連接由API的連接、源資料格式和對在前一步驟中檢索的目標XDM模式的引用組成。
 
 **API格式**
 
@@ -254,7 +257,7 @@ curl -X POST \
 
 ## 建立資料集基礎連線
 
-為了將外部資料收入Platform，必須先取得Experience Platform資料集基本連線。
+為了將外部資料嵌入 [!DNL Platform]，必須首 [!DNL Experience Platform] 先獲取資料集基礎連接。
 
 要建立資料集基礎連接，請遵循資料集基礎連接教 [程中介紹的步驟](./create-dataset-base-connection.md)。
 
@@ -308,7 +311,7 @@ curl -X POST \
 
 ## 建立目標連接 {#target}
 
-您現在擁有資料集基本連線、目標架構和目標資料集的唯一識別碼。 使用這些識別碼，您可以使用Flow Service API建立目標連線，以指定將包含傳入來源資料的資料集。
+您現在擁有資料集基本連線、目標架構和目標資料集的唯一識別碼。 使用這些識別碼，您可以使用 [!DNL Flow Service] API建立目標連線，以指定將包含傳入來源資料的資料集。
 
 **API格式**
 
@@ -427,7 +430,7 @@ curl -X POST \
 
 ## 後續步驟
 
-在本教學課程中，您已建立來源連接器，以依計畫從協力廠商雲端儲存系統收集鑲木地板資料。 現在，下游平台服務（例如即時客戶個人檔案和資料科學工作區）可以使用傳入的資料。 如需詳細資訊，請參閱下列檔案：
+在本教學課程中，您已建立來源連接器，以依計畫從協力廠商雲端儲存系統收集鑲木地板資料。 現在，下游服務（例如和）可 [!DNL Platform] 以使用傳入 [!DNL Real-time Customer Profile] 的資料 [!DNL Data Science Workspace]。 如需詳細資訊，請參閱下列檔案：
 
 - [即時客戶個人檔案總覽](../../../profile/home.md)
 - [資料科學工作區概觀](../../../data-science-workspace/home.md)
