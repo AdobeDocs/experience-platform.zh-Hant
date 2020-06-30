@@ -4,45 +4,48 @@ solution: Experience Platform
 title: 使用Flow Service API建立Experience Platform資料集基本連線
 topic: overview
 translation-type: tm+mt
-source-git-commit: e409b287d6965ede4030829287bd3e405e9d709b
+source-git-commit: fc5cdaa661c47e14ed5412868f3a54fd7bd2b451
+workflow-type: tm+mt
+source-wordcount: '690'
+ht-degree: 1%
 
 ---
 
 
-# 使用Flow Service API建立Experience Platform資料集基本連線
+# 使用 [!DNL Experience Platform] API建立資料集基本連 [!DNL Flow Service] 線
 
-Flow Service用於收集和集中Adobe Experience Platform內不同來源的客戶資料。 該服務提供用戶介面和REST風格的API，所有支援的源都可從中連接。
+[!DNL Flow Service] 用於收集和集中Adobe Experience Platform內不同來源的客戶資料。 該服務提供用戶介面和REST風格的API，所有支援的源都可從中連接。
 
-為了將第三方來源的資料連接至平台，必須先建立資料集基礎連線。
+為了將第三方源的資料連接到 [!DNL Platform]，必須首先建立資料集基礎連接。
 
-本教學課程使用Flow Service API來引導您完成建立資料集基礎連線的步驟。
+本教學課程使 [!DNL Flow Service] 用API來引導您完成建立資料集基礎連線的步驟。
 
 ## 快速入門
 
 本教學課程需要對Adobe Experience Platform的下列元件有正確的認識：
 
-* [體驗資料模型(XDM)系統](../../../xdm/home.md):Experience Platform組織客戶體驗資料的標準化架構。
-   * [架構構成基礎](../../../xdm/schema/composition.md):瞭解XDM架構的基本建置區塊，包括架構組合的主要原則和最佳實務。
-   * [架構註冊開發人員指南](../../../xdm/api/getting-started.md):包含您必須知道的重要資訊，以便成功執行對架構註冊表API的呼叫。 這包括您 `{TENANT_ID}`的「容器」概念，以及提出要求所需的標題（請特別注意「接受」標題及其可能的值）。
-* [目錄服務](../../../catalog/home.md):目錄是Experience Platform中資料位置和世系的記錄系統。
-* [批次擷取](../../../ingestion/batch-ingestion/overview.md):批次擷取API可讓您將資料以批次檔案的形式內嵌至Experience Platform。
-* [沙盒](../../../sandboxes/home.md):Experience Platform提供虛擬沙盒，可將單一Platform實例分割為不同的虛擬環境，以協助開發和發展數位體驗應用程式。
+* [體驗資料模型(XDM)系統](../../../xdm/home.md): 組織客戶體驗資料 [!DNL Experience Platform] 的標準化架構。
+   * [架構構成基礎](../../../xdm/schema/composition.md): 瞭解XDM架構的基本建置區塊，包括架構組合的主要原則和最佳實務。
+   * [架構註冊開發人員指南](../../../xdm/api/getting-started.md): 包含您必須知道的重要資訊，以便成功執行對架構註冊表API的呼叫。 這包括您 `{TENANT_ID}`的「容器」概念，以及提出要求所需的標題（請特別注意「接受」標題及其可能的值）。
+* [目錄服務](../../../catalog/home.md): 目錄是記錄資料位置和世系的系統 [!DNL Experience Platform]。
+* [批次擷取](../../../ingestion/batch-ingestion/overview.md): 批次擷取API可讓您將資料以批次檔案的形式內嵌至Experience Platform。
+* [沙盒](../../../sandboxes/home.md): [!DNL Experience Platform] 提供虛擬沙盒，可將單一執行個體分 [!DNL Platform] 割為不同的虛擬環境，以協助開發和發展數位體驗應用程式。
 
-以下各節提供您需要瞭解的其他資訊，以便使用Flow Service API成功連線至Data Lake。
+以下各節提供您必須知道的其他資訊，以便使用 [!DNL Flow Service] API成功連線至資料湖。
 
 ### 讀取範例API呼叫
 
-本教學課程提供範例API呼叫，以示範如何設定請求的格式。 這些包括路徑、必要標題和正確格式化的請求負載。 也提供API回應中傳回的範例JSON。 如需範例API呼叫檔案中所用慣例的詳細資訊，請參閱「Experience Platform疑難排解指 [南」中有關如何讀取範例API呼叫的章節](../../../landing/troubleshooting.md#how-do-i-format-an-api-request) 。
+本教學課程提供範例API呼叫，以示範如何設定請求的格式。 這些包括路徑、必要標題和正確格式化的請求負載。 也提供API回應中傳回的範例JSON。 如需範例API呼叫檔案中所用慣例的詳細資訊，請參閱疑難排解指 [南中有關如何讀取範例API呼叫的](../../../landing/troubleshooting.md#how-do-i-format-an-api-request)[!DNL Experience Platform] 章節。
 
 ### 收集必要標題的值
 
-若要呼叫平台API，您必須先完成驗證教 [學課程](../../../tutorials/authentication.md)。 完成驗證教學課程後，所有Experience Platform API呼叫中每個必要標題的值都會顯示在下方：
+若要呼叫API，您必 [!DNL Platform] 須先完成驗證教 [學課程](../../../tutorials/authentication.md)。 完成驗證教學課程後，將提供所有 [!DNL Experience Platform] API呼叫中每個必要標題的值，如下所示：
 
-* 授權：生產者 `{ACCESS_TOKEN}`
+* 授權： 生產者 `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
 * x-gw-ims-org-id: `{IMS_ORG}`
 
-Experience Platform中的所有資源（包括屬於Flow Service的資源）都隔離至特定的虛擬沙盒。 所有對平台API的請求都需要一個標題，該標題會指定要在中執行的操作的沙盒名稱：
+中的所有資 [!DNL Experience Platform]源(包括屬於這些資源 [!DNL Flow Service])都隔離到特定的虛擬沙盒。 對API的所 [!DNL Platform] 有請求都需要一個標題，該標題會指定要在中執行的操作的沙盒名稱：
 
 * x-sandbox-name: `{SANDBOX_NAME}`
 
@@ -52,7 +55,7 @@ Experience Platform中的所有資源（包括屬於Flow Service的資源）都�
 
 ## 查找連接規格
 
-建立資料集基礎連線的第一步是從Flow Service中擷取一組連線規格。
+建立資料集基礎連接的第一步是從內部檢索一組連接規範 [!DNL Flow Service]。
 
 **API格式**
 
@@ -179,7 +182,7 @@ curl -X POST \
 
 ## 後續步驟
 
-在本教學課程中，您已使用Flow Service API建立資料集基礎連線，並取得連線的唯一ID值。 您可以使用此基本連接建立目標連接。 下列教學課程將逐步說明建立目標連線的步驟，視您使用的來源連接器類別而定：
+在本教學課程中，您已使用 [!DNL Flow Service] API建立資料集基礎連線，並取得連線的唯一ID值。 您可以使用此基本連接建立目標連接。 下列教學課程將逐步說明建立目標連線的步驟，視您使用的來源連接器類別而定：
 
 * [雲端儲存空間](./collect/cloud-storage.md)
 * [CRM](./collect/crm.md)
