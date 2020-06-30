@@ -4,9 +4,9 @@ solution: Experience Platform
 title: FTP和SFTP連接器
 topic: overview
 translation-type: tm+mt
-source-git-commit: 855f543a1cef394d121502f03471a60b97eae256
+source-git-commit: 6ffdcc2143914e2ab41843a52dc92344ad51bcfb
 workflow-type: tm+mt
-source-wordcount: '201'
+source-wordcount: '192'
 ht-degree: 0%
 
 ---
@@ -17,19 +17,19 @@ ht-degree: 0%
 >[!NOTE]
 >FTP和SFTP連接器為測試版。 如需使用 [測試版標籤連接器的詳細資訊](../../home.md#terms-and-conditions) ，請參閱來源概觀。
 
-Adobe Experience Platform為AWS、Google Cloud Platform和Azure等雲端供應商提供原生連接功能，讓您能夠從這些系統中取用資料。
+Adobe Experience Platform為AWS等雲端提供商提供原生連接 [!DNL Google Cloud Platform]功能 [!DNL Azure]，讓您能夠從這些系統中取得資料。
 
-雲端儲存來源可將您自己的資料匯入平台，而不需下載、格式化或上傳。 收錄的資料可格式化為XDM JSON、XDM鑲木地板或分隔字元。 此程式的每個步驟都會整合至Sources工作流程中。 平台可讓您透過批次從FTP或SFTP伺服器匯入資料。
+雲端儲存來源可將您自己的資料匯入 [!DNL Platform] 其中，而不需下載、格式化或上傳。 收錄的資料可格式化為XDM JSON、XDM鑲木地板或分隔字元。 此程式的每個步驟都會整合至Sources工作流程中。 [!DNL Platform] 可讓您透過批次從FTP或SFTP伺服器匯入資料。
 
-以下檔案提供如何使用API或使用者介面將FTP或STFP伺服器連接至平台的資訊：
+以下檔案提供如何將FTP或STFP伺服器連線至使用API或使 [!DNL Platform] 用者介面的資訊：
 
-## 使用API將FTP和SFTP連接至平台
+## 將FTP和SFTP連線至使 [!DNL Platform] 用API
 
 - [使用流程服務API建立FTP或SFTP連接器](../../tutorials/api/create/cloud-storage/sftp.md)
 - [使用Flow Service API探索雲端儲存系統](../../tutorials/api/explore/cloud-storage.md)
 - [使用Flow Service API收集雲端儲存空間資料](../../tutorials/api/collect/cloud-storage.md)
 
-## 使用UI將FTP或SFTP連線至平台
+## 將FTP或SFTP連接 [!DNL Platform] 至使用UI
 
 - [在UI中建立FTP或SFTP來源連接器](../../tutorials/ui/create/cloud-storage/ftp-sftp.md)
 - [在UI中為雲端儲存連接器設定資料流](../../tutorials/ui/dataflow/batch/cloud-storage.md)
