@@ -4,17 +4,17 @@ solution: Experience Platform
 title: 在UI中建立Google Cloud儲存空間來源連接器
 topic: overview
 translation-type: tm+mt
-source-git-commit: 75ba0bce7ce070af851bbf7e220dbf08febc4c20
+source-git-commit: d3c725c4760acb3857a67d0d30b24732c963a030
 workflow-type: tm+mt
-source-wordcount: '553'
+source-wordcount: '540'
 ht-degree: 1%
 
 ---
 
 
-# 在UI中建立Google Cloud儲存空間來源連接器
+# 在UI中 [!DNL Google Cloud Storage] 建立來源連接器
 
-Adobe Experience Platform中的來源連接器可讓您依計畫吸收外部來源的資料。 本教學課程提供使用平台使用者介面建立Google雲端儲存空間（以下稱為「GCS」）來源連接器的步驟。
+Adobe Experience Platform中的來源連接器可讓您依計畫吸收外部來源的資料。 本教學課程提供使用使 [!DNL Google Cloud Storage] 用者介面來建立（以下稱為「GCS」）來源連接器的 [!DNL Platform] 步驟。
 
 ## 快速入門
 
@@ -29,7 +29,7 @@ Adobe Experience Platform中的來源連接器可讓您依計畫吸收外部來�
 
 ### 支援的檔案格式
 
-Experience Platform支援下列從外部儲存擷取的檔案格式：
+[!DNL Experience Platform] 支援從外部儲存中提取的以下檔案格式：
 
 * 分隔字元分隔值(DSV): 目前，對DSV格式化資料檔案的支援僅限於逗號分隔值。 DSV格式檔案中欄位標題的值只能由字母數字字元和下划線組成。 將來將提供對一般DSV檔案的支援。
 * JavaScript物件符號(JSON): JSON格式的資料檔案必須符合XDM規範。
@@ -37,11 +37,11 @@ Experience Platform支援下列從外部儲存擷取的檔案格式：
 
 ### 收集必要的認證
 
-若要在平台上存取您的GCS資料，您必須提供有效的GCS **存取金鑰ID** 和 **密碼**。 您可以閱讀Google Cloud的伺服器對伺服器驗證指南，進 <a href="https://cloud.google.com/docs/authentication/production" target="_blank">一步瞭解如何取得這些值</a> 。
+若要存取您的GCS資料， [!DNL Platform]您必須提供有效的GCS **存取金鑰ID** 和 **密碼**。 如需進一步瞭解如何取得這些值，請閱 <a href="https://cloud.google.com/docs/authentication/production" target="_blank">讀伺服器對伺服器驗證指南</a>[!DNL Google Cloud]。
 
 ## 連接您的GCS帳戶
 
-收集完所需的認證後，您可依照下列步驟建立新的GCS帳戶以連線至平台。
+收集完所需的認證後，您可依照下列步驟建立新的GCS帳戶以連線至 [!DNL Platform]。
 
 登入 [Adobe Experience Platform](https://platform.adobe.com) ，然後從左側導覽列選取 **[!UICONTROL Sources]** ，以存取 ** Sources工作區。 「目 *[!UICONTROL 錄]* 」螢幕顯示各種源，您可以為其建立入站帳戶，每個源顯示與其關聯的現有帳戶和資料流的數量。
 
