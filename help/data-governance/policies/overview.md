@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 資料使用政策概觀
 topic: policies
 translation-type: tm+mt
-source-git-commit: 92092620a7ba9129eef4bde852b1e0afc6612d74
+source-git-commit: d4964231ee957349f666eaf6b0f5729d19c408de
 workflow-type: tm+mt
-source-wordcount: '985'
+source-wordcount: '979'
 ht-degree: 0%
 
 ---
@@ -14,22 +14,22 @@ ht-degree: 0%
 
 # 資料使用政策概觀
 
-為了讓資料使用標籤有效支援資料合規性，必須實作資料使用政策。 資料使用原則是描述您在Experience Platform內對資料執行的行銷動作類型或限制的規則。
+為了讓資料使用標籤有效支援資料合規性，必須實作資料使用政策。 資料使用原則是描述您允許或限制對內資料執行之行銷動作類型的規則 [!DNL Experience Platform]。
 
 本檔案提供資料使用原則的高階概述，並提供在UI或API中使用原則的進一步檔案連結。
 
 ## 行銷動作 {#marketing-actions}
 
-**在資料治理架構中**，行銷動作(也稱為 **行銷使用案例**)是Experience Platform資料使用者可以採取的動作，您的組織想要針對這些動作限制資料使用。 因此，資料使用原則由下列項目定義：
+**資料管理架構中的行銷動作**(也稱為行銷使用案例 ****[!DNL Experience Platform] )，是資料消費者可以採取的動作，您的組織想要針對這些動作限制資料使用。 因此，資料使用原則由下列項目定義：
 
 1. 特定行銷動作
 2. 限制動作的資料使用標籤
 
-行銷動作的範例可能是想要將資料集匯出至第三方服務。 如果有原則指出無法匯出特定資料類型(例如個人識別資訊(PII))，而您嘗試匯出包含「I」標籤（身分資料）的資料集，則會收到「原則服務」的回覆，告知您已違反資料使用原則。
+行銷動作的範例可能是想要將資料集匯出至第三方服務。 如果有原則指出無法匯出特定資料類型(例如個人識別資訊(PII))，且您嘗試匯出包含「I」標籤（身分資料）的資料集，您會收到回應，告知您資料使用政策已遭違反。 [!DNL Policy Service]
 
 >[!NOTE] 行銷動作本身並不限制資料使用。 必須將它們納入已啟用的資料使用策略中，才能針對策略違規評估這些操作。
 
-當組織的服務中發生資料使用情形時，應指出相關的行銷動作，以便識別任何違反原則的行為。 然後，您可以使 [用DULE Policy Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) ，檢查整合中是否有違反原則的情況。
+當組織的服務中發生資料使用情形時，應指出相關的行銷動作，以便識別任何違反政策的行為。 然後，您可以使 [用DULE Policy Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) ，檢查整合中是否有違反原則的情況。
 
 >[!NOTE] 如果您使用即時客戶資料平台，您可以在目的地上設定行銷使用案例，以自動執行政策。 有關詳細資訊， [請參閱即時CDP中的資料治理](../../rtcdp/privacy/data-governance-overview.md) 文檔。
 
