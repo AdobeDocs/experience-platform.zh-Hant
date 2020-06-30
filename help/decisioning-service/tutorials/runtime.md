@@ -4,47 +4,50 @@ solution: Experience Platform
 title: 使用API搭配決策服務執行階段
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 5699022d1f18773c81a0a36d4593393764cb771a
+source-git-commit: c48079ba997a7b4c082253a0b2867df76927aa6d
+workflow-type: tm+mt
+source-wordcount: '1985'
+ht-degree: 0%
 
 ---
 
 
 # 使用API搭配決策服務執行階段
 
-本檔案提供使用Adobe Experience Platform API使用決策服務執行時期服務的教學課程。
+本檔案提供使用Adobe Experience Platform API執行時期服務 [!DNL Decisioning Service] 的教學課程。
 
 ## 快速入門
 
-本教學課程需要對Experience Platform服務有深入的瞭解，這些服務涉及決策，並確定在客戶體驗期間要呈現的下一個最佳方案。 在開始本教學課程之前，請先閱讀以下檔案：
+本教學課程需要對決策中涉及的 [!DNL Experience Platform] 服務有深入的瞭解，並決定在客戶體驗期間要呈現的下一個最佳方案。 在開始本教學課程之前，請先閱讀以下檔案：
 
-- [決策服務](./../home.md):提供新增和移除選件的架構，以及建立演算法，以在客戶體驗期間選擇最佳呈現。
-- [體驗資料模型(XDM)](../../xdm/home.md):平台組織客戶體驗資料的標準化架構。
-- [配置檔案查詢語言(PQL)](../../segmentation/pql/overview.md):PQL用於定義規則和篩選器。
-- [使用API管理決策物件和規則](./entities.md):在使用「決策服務」執行階段之前，您必須設定相關實體。
+- [!DNL Decisioning Service](./../home.md): 提供新增和移除選件的架構，以及建立演算法，以在客戶體驗期間選擇最佳呈現。
+- [!DNL Experience Data Model (XDM)](../../xdm/home.md): 平台組織客戶體驗資料的標準化架構。
+- [!DNL Profile Query Language (PQL)](../../segmentation/pql/overview.md): PQL用於定義規則和篩選器。
+- [使用API管理決策物件和規則](./entities.md): 在使用「決策服務」執行階段之前，您必須設定相關實體。
 
-以下章節提供您必須知道的其他資訊，以便成功呼叫平台API。
+以下章節提供您必須知道的其他資訊，才能成功呼叫 [!DNL Platform] API。
 
 ### 讀取範例API呼叫
 
-本教學課程提供範例API呼叫，以示範如何設定請求的格式。 這些包括路徑、必要標題和正確格式化的請求負載。 也提供API回應中傳回的範例JSON。 如需範例API呼叫檔案中所用慣例的詳細資訊，請參閱「Experience Platform疑難排解指 [南」中有關如何讀取範例API呼叫的章節](../../landing/troubleshooting.md#how-do-i-format-an-api-request) 。
+本教學課程提供範例API呼叫，以示範如何設定請求的格式。 這些包括路徑、必要標題和正確格式化的請求負載。 也提供API回應中傳回的範例JSON。 如需範例API呼叫檔案中所用慣例的詳細資訊，請參閱疑難排解指 [南中有關如何讀取範例API呼叫的](../../landing/troubleshooting.md#how-do-i-format-an-api-request)[!DNL Experience Platform] 章節。
 
 ### 收集必要標題的值
 
-若要呼叫平台API，您必須先完成驗證教 [學課程](../../tutorials/authentication.md)。 完成驗證教學課程後，所有Experience Platform API呼叫中每個必要標題的值都會顯示在下方：
+若要呼叫API，您必 [!DNL Platform] 須先完成驗證教 [學課程](../../tutorials/authentication.md)。 完成驗證教學課程後，將提供所有 [!DNL Experience Platform] API呼叫中每個必要標題的值，如下所示：
 
-- 授權：生產者 `{ACCESS_TOKEN}`
+- 授權： 生產者 `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
-Experience Platform中的所有資源都隔離至特定的虛擬沙盒。 所有對平台API的請求都需要一個標題，該標題會指定要在中執行的操作的沙盒名稱：
+中的所有資 [!DNL Experience Platform] 源都與特定虛擬沙盒隔離。 對API的所 [!DNL Platform] 有請求都需要一個標題，該標題會指定要在中執行的操作的沙盒名稱：
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
->[!NOTE] 如需平台中沙盒的詳細資訊，請參閱沙盒 [概觀檔案](../../tutorials/authentication.md)。
+>[!NOTE] 如需中沙盒的詳細資訊 [!DNL Platform]，請參閱沙 [盒概述檔案](../../tutorials/authentication.md)。
 
 所有包含裝載(POST、PUT、PATCH)的請求都需要額外的標題：
 
-- 內容類型：application/json
+- 內容類型： application/json
 
 執行時期要求也需要：
 
@@ -52,7 +55,7 @@ Experience Platform中的所有資源都隔離至特定的虛擬沙盒。 所有
 
 >[!NOTE] `UUID` 是UUID格式的字串，其全域唯一，且不得重複用於不同的API呼叫
 
-決策服務由多個彼此相關的業務對象控制。 所有業務對象都儲存在平台的業務對象儲存庫XDM核心對象儲存庫中。 此儲存庫的一個主要功能是API與業務對象類型正交。 與其使用POST、GET、PUT、PATCH或DELETE API來指出其API端點中的資源類型，只有6個通用端點，但它們接受或返回在需要消除歧義時指示對象類型的參數。 方案必須在儲存庫中註冊，但除此之外，該儲存庫可用於一組開放式對象類型。
+[!DNL Decisioning Service] 由多個彼此相關的業務對象控制。 所有業務對象都儲存在 [!DNL Platform’s] 業務對象儲存庫XDM核心對象儲存庫中。 此儲存庫的一個主要功能是API與業務對象類型正交。 與其使用POST、GET、PUT、PATCH或DELETE API來指出其API端點中的資源類型，只有6個通用端點，但它們接受或返回在需要消除歧義時指示對象類型的參數。 方案必須在儲存庫中註冊，但除此之外，該儲存庫可用於一組開放式對象類型。
 
 所有XDM核心對象儲存庫API的端點路徑以開頭 `https://platform.adobe.io/data/core/ode/`。
 
@@ -60,7 +63,7 @@ Experience Platform中的所有資源都隔離至特定的虛擬沙盒。 所有
 
 ## 決策模型的編製
 
-商業邏輯實體的啟動會自動且持續進行。 一旦在儲存庫中保存新選項並將其標籤為「已批准」，它將成為包含該組可用選項的候選選項。 一旦更新決策規則，規則集就會重新組合併準備執行時期。 在此自動啟動步驟中，將評估由商業邏輯定義且不依賴執行時期內容的任何限制。 此啟動步驟的結果會傳送至快取，供決策服務執行階段使用。
+商業邏輯實體的啟動會自動且持續進行。 一旦在儲存庫中保存新選項並將其標籤為「已批准」，它將成為包含該組可用選項的候選選項。 一旦更新決策規則，規則集就會重新組合併準備執行時期。 在此自動啟動步驟中，將評估由商業邏輯定義且不依賴執行時期內容的任何限制。 此啟動步驟的結果會傳送至快取，供執行階段使 [!DNL Decisioning Service] 用。
 
 ### 位置、篩選器和生命週期狀態的影響
 
@@ -168,11 +171,11 @@ curl -X GET {DECISION_SERVICE_ENDPOINT_PATH}/{CONTAINER_ID}/diagnostics \
 
 ## 執行決策的REST API呼叫
 
-REST API是在Platform上執行的應用程式，以根據組織為其使用者設定的規則、模型和限制，獲得下一個最佳體驗的路由之一。 應用程式會傳送描述檔的其中一個身分（描述檔ID和身分命名空間），決策服務會尋找描述檔，並使用資訊來套用商業邏輯。 其他上下文資料可傳遞至請求，如果業務規則中已指定，則會納入資料中以做出決定。
+REST API是在應用程式上執行的路由之一，以根據組織為其使用者設定的規則、模型和限制 [!DNL Platform] ，獲得下一個最佳體驗。 應用程式會傳送描述檔的其中一個身分（描述檔ID和識別名稱空間）, [!DNL Decisioning Service] 以尋找描述檔，並使用資訊來套用商業邏輯。 其他上下文資料可傳遞至請求，如果業務規則中已指定，則會納入資料中以做出決定。
 
 應用程式可一次要求最多30個活動的決策，以取得更佳的效能。 活動的URI會在相同請求中傳遞。 REST API是同步的，如果沒有個人化選項符合限制，則會傳回所有這些活動的建議選項或備援選項。
 
-有兩種不同的活動可能會提供與其「最佳」相同的選項。 為避免重複合成的體驗，預設情況下，決策服務會在同一請求中引用的活動之間進行仲裁。 仲裁意指，對於每項活動，都會考慮其前N個選項，但在這些活動中，不會多提議一次。 如果兩個活動有相同的排名最前選項，其中一個活動將被選為使用其次優或第三優等。 這些重複資料消除規則嘗試避免任何活動都必須使用其備援選項。
+有兩種不同的活動可能會提供與其「最佳」相同的選項。 為避免重複合成的體驗，依預設，會 [!DNL Decisioning Service] 在相同請求中參考的活動之間進行仲裁。 仲裁意指，對於每項活動，都會考慮其前N個選項，但在這些活動中，不會多提議一次。 如果兩個活動有相同的排名最前選項，其中一個活動將被選為使用其次優或第三優等。 這些重複資料消除規則嘗試避免任何活動都必須使用其備援選項。
 
 決策請求包含其POST請求主體的參數。 內文的格式為JSON標 `Content-Type` 題值 `application/vnd.adobe.xdm+json; schema="{REQUEST_SCHEMA_AND_VERSION}"`
 
@@ -217,7 +220,7 @@ curl -X POST {DECISION_SERVICE_ENDPOINT_PATH}/{CONTAINER_ID}/decisions \
 }’
 ```
 
-- **`xdm:dryRun`** -如果此可選屬性的值設定為true，則決策請求將遵守封閉約束，但實際上不會提取這些計數器，則預期呼叫者絕不會向概要檔案提出建議。 決策服務不會將提案記錄為正式的XDM決策事件，也不會出現在報告資料集中。 此屬性的預設值為false，若省略屬性，則不會將決定視為測試執行，因此應向使用者呈現。
+- **`xdm:dryRun`** -如果此可選屬性的值設定為true，則決策請求將遵守封閉約束，但實際上不會提取這些計數器，則預期呼叫者絕不會向概要檔案提出建議。 該 [!DNL Decisioning Service] 提案不會記錄為正式的XDM決策事件，也不會出現在報告資料集中。 此屬性的預設值為false，若省略屬性，則不會將決定視為測試執行，因此應向使用者呈現。
 - **`xdm:validateContextData`** -此可選屬性可開啟或關閉上下文資料的驗證。 如果啟用了驗證，則對於每個提供的上下文資料項，將從XDM註冊表中提取模式(基於 `@type` 欄位)，並對該對 `xdm:data` 像進行驗證。
 
 此架構的請求包含參照選件活動的URI陣列、描述檔識別和上下文資料項目陣列：
@@ -289,4 +292,4 @@ Schema Registry [API開發人員指南說明如何以程式方式存取結構](.
 描述檔和體驗事件實體的所有記錄都已在描述檔存放區中管理。 將一或多個描述檔識別碼傳遞至要求，這些識別碼的描述檔就會從商店中識別並查閱。 然後，該資料自動可用於由決策策略評估的決策規則和模型。
 
 若要擷取描述檔和體驗記錄，會套用預設的合併原則。
-請注意，將描述檔記錄上傳至平台資料表後，會有輕微的延遲，直到可以查找描述檔記錄為止。 透過串流API接收描述檔和體驗記錄時也是如此，只要幾秒後，資料才可用於評估決策規則，以評估描述檔和體驗事件資料。
+請注意，在將描述檔記錄上傳至資料 [!DNL Platform] 表後，會有輕微的延遲，直到可以查找描述檔記錄為止。 透過串流API接收描述檔和體驗記錄時也是如此，只要幾秒後，資料才可用於評估決策規則，以評估描述檔和體驗事件資料。
