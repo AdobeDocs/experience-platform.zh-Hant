@@ -4,30 +4,30 @@ solution: Experience Platform
 title: 資料使用原則使用指南
 topic: policies
 translation-type: tm+mt
-source-git-commit: c4554e3fbc0dd527606b81e2767cb5777b6e81e7
+source-git-commit: d4964231ee957349f666eaf6b0f5729d19c408de
 workflow-type: tm+mt
-source-wordcount: '739'
-ht-degree: 1%
+source-wordcount: '727'
+ht-degree: 0%
 
 ---
 
 
 # 資料使用原則使用指南
 
-Adobe Experience Platform Data Governance提供使用者介面，可讓您建立和管理資料使用政策。 本檔案概述您可在Experience Platform使用者介面的「原則 __ 」工作區中執行的動作。
+Adobe Experience Platform Data Governance提供使用者介面，可讓您建立和管理資料使用政策。 本文檔概述了在用戶介面的「策略」( _Policys_ )工作區中可執 [!DNL Experience Platform] 行的操作。
 
 >[!IMPORTANT] 預設會停用所有資料使用政策（包括Adobe提供的核心政策）。 要考慮實施單個策略，您必須手動啟用該策略。 如需如何在UI中 [執行此動作](#enable) ，請參閱啟用原則一節。
 
 ## 必要條件
 
-本指南需要有效瞭解下列Experience Platform概念：
+本指南需要對下列概念有充分的 [!DNL Experience Platform] 瞭解：
 
-- [資料控管](../home.md)
+- [!DNL Data Governance](../home.md)
 - [資料使用原則](./overview.md)
 
 ## 檢視資料使用原則 {#view-policies}
 
-在Experience Platform UI中，按一下「 **[!UICONTROL 原則]** 」以開啟 *[!UICONTROL 「原則]* 」工作區。 在「瀏 **[!UICONTROL 覽]** 」索引標籤中，您可以看到可用原則的清單，包括其相關標籤、行銷動作和狀態。
+在UI中 [!DNL Experience Platform] ，按一下「 **[!UICONTROL 原則]** 」以開啟「 *[!UICONTROL 原則]* 」工作區。 在「瀏 **[!UICONTROL 覽]** 」索引標籤中，您可以看到可用原則的清單，包括其相關標籤、行銷動作和狀態。
 
 ![](../images/policies/browse-policies.png)
 
@@ -107,8 +107,8 @@ Adobe Experience Platform Data Governance提供使用者介面，可讓您建立
 
 ## 後續步驟
 
-本檔案概述如何在Experience Platform UI中管理資料使用原則。 如需如何使用DULE Policy API管理原則的步驟，請參閱開發 [人員指南](../api/getting-started.md)。 如需如何實施資料使用原則的詳細資訊，請參閱 [原則實施概觀](../enforcement/overview.md)。
+本檔案概述如何在 [!DNL Experience Platform] UI中管理資料使用原則。 如需如何使用DULE Policy API管理原則的步驟，請參閱開發 [人員指南](../api/getting-started.md)。 如需如何實施資料使用原則的詳細資訊，請參閱 [原則實施概觀](../enforcement/overview.md)。
 
-以下視訊示範如何在Experience Platform UI中使用使用原則：
+以下視訊示範如何在 [!DNL Experience Platform] UI中使用使用原則：
 
 >[!VIDEO](https://video.tv.adobe.com/v/32977?quality=12&learn=on)
