@@ -4,17 +4,17 @@ solution: Experience Platform
 title: 在UI中建立Azure Blob或Amazon S3來源連接器
 topic: overview
 translation-type: tm+mt
-source-git-commit: 9fd00ec198f61843bb9a395103215e5441b23745
+source-git-commit: d3c725c4760acb3857a67d0d30b24732c963a030
 workflow-type: tm+mt
-source-wordcount: '644'
+source-wordcount: '628'
 ht-degree: 1%
 
 ---
 
 
-# 在UI中建立Azure Blob或Amazon S3來源連接器
+# 在UI中 [!DNL Azure Blob] 建立 [!DNL Amazon] 或S3來源連接器
 
-Adobe Experience Platform中的來源連接器可讓您依計畫吸收外部來源的資料。 本教學課程提供使用平台使用者介面建立Azure Blob（以下稱為「Blob」）或Amazon S3（以下稱為「S3」）來源連接器的步驟。
+Adobe Experience Platform中的來源連接器可讓您依計畫吸收外部來源的資料。 本教學課程提供使用使 [!DNL Azure Blob] 用者介面來建立 [!DNL Amazon] S3或 [!DNL Platform] S3來源連接器（以下稱為「Blob」）的步驟。
 
 ## 快速入門
 
@@ -29,7 +29,7 @@ Adobe Experience Platform中的來源連接器可讓您依計畫吸收外部來�
 
 ### 支援的檔案格式
 
-Experience Platform支援下列從外部儲存擷取的檔案格式：
+[!DNL Experience Platform] 支援從外部儲存中提取的以下檔案格式：
 
 - 分隔字元分隔值(DSV): 目前，對DSV格式化資料檔案的支援僅限於逗號分隔值。 DSV格式檔案中欄位標題的值只能由字母數字字元和下划線組成。 將來將提供對一般DSV檔案的支援。
 - JavaScript物件符號(JSON): JSON格式的資料檔案必須符合XDM規範。
@@ -37,7 +37,7 @@ Experience Platform支援下列從外部儲存擷取的檔案格式：
 
 ### 收集必要的認證
 
-要訪問平台上的Blob儲存，必須為以下憑據提供有效值：
+要在上訪問Blob儲存， [!DNL Platform]必須為以下憑據提供有效值：
 
 | 憑證 | 說明 |
 | ---------- | ----------- |
@@ -45,7 +45,7 @@ Experience Platform支援下列從外部儲存擷取的檔案格式：
 
 如需快速入門的詳細資訊，請造 [訪此Azure Blob檔案](https://docs.microsoft.com/en-us/azure/storage/common/storage-configure-connection-string)。
 
-同樣地，在「平台」上存取S3儲存貯體時，您必須提供下列憑證的有效值：
+同樣地，在上存取您的S3儲 [!DNL Platform] 存貯體時，您必須提供下列憑證的有效值：
 
 | 憑證 | 說明 |
 | ---------- | ----------- |
@@ -56,13 +56,13 @@ Experience Platform支援下列從外部儲存擷取的檔案格式：
 
 ## 連接您的Blob或S3帳戶
 
-收集完所需憑證後，您可依照下列步驟建立新的Blob或S3帳戶以連線至平台。
+收集完所需憑證後，您可依照下列步驟建立新的Blob或S3帳戶以連線至 [!DNL Platform]。
 
 登入 [Adobe Experience Platform](https://platform.adobe.com) ，然後從左側導覽列選取 **[!UICONTROL Sources]** ，以存取 ** Sources工作區。 「目 *[!UICONTROL 錄]* 」螢幕顯示各種源，您可以為其建立入站帳戶，每個源顯示與其關聯的現有帳戶和資料流的數量。
 
 您可以從畫面左側的目錄中選取適當的類別。 或者，您也可以使用搜尋選項找到您要使用的特定來源。
 
-在「數 *[!UICONTROL 據庫]* 」類別下，選擇 **[!UICONTROL Azure Blob Storage]** 或 **[!UICONTROL Amazon S3]** ，按一下 **** +表徵圖(+)以建立新的Blob或S3連接器。
+在「數 *[!UICONTROL 據庫]* 」類別下，選擇 **[!UICONTROL Azure Blob Storage]** 或 **[!UICONTROL Amazon S3]** ，按一下 ****[!DNL Blob] +上的表徵圖(+)建立新的或S3連接器。
 
 ![目錄](../../../../images/tutorials/create/blob/catalog.png)
 
@@ -70,16 +70,16 @@ Experience Platform支援下列從外部儲存擷取的檔案格式：
 
 ### 新帳戶
 
-如果您使用新認證，請選擇「新 **[!UICONTROL 帳戶」]**。 在顯示的輸入表單上，提供連線名稱、選用說明和您的Blob或S3憑證。 完成後，選擇 **[!UICONTROL Connect]** ，然後為新帳戶建立留出一些時間。
+如果您使用新認證，請選擇「新 **[!UICONTROL 帳戶」]**。 在出現的輸入表單上，提供連線名稱、選用說明和您或S3 [!DNL Blob] 憑證。 完成後，選擇 **[!UICONTROL Connect]** ，然後為新帳戶建立留出一些時間。
 
 ![連接](../../../../images/tutorials/create/blob/new.png)
 
 ### 現有帳戶
 
-要連接現有帳戶，請選擇要連接的Blob或S3帳戶，然後選擇「下 **[!UICONTROL 一步]** 」繼續。
+若要連線現有帳戶，請選 [!DNL Blob] 取您要連線的或S3帳戶，然後選取「下 **[!UICONTROL 一]** 步」繼續。
 
 ![現有](../../../../images/tutorials/create/blob/existing.png)
 
 ## 後續步驟
 
-在本教程中，您已建立到Blob或S3帳戶的連接。 您現在可以繼續下一個教學課程，並 [設定資料流，將雲端儲存空間的資料匯入平台](../../dataflow/batch/cloud-storage.md)。
+在本教學課程中，您已建立與您或S3 [!DNL Blob] 帳戶的連線。 您現在可以繼續下一個教學課程，並 [設定資料流，將雲端儲存空間的資料匯入平台](../../dataflow/batch/cloud-storage.md)。
