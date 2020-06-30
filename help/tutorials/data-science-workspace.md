@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 資料科學工作區教學課程
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 4d7d61660e6691d77701db1c089b84eee7f60974
+source-git-commit: 1a835c6c20c70bf03d956c601e2704b68d4f90fa
 workflow-type: tm+mt
-source-wordcount: '1253'
+source-wordcount: '1252'
 ht-degree: 0%
 
 ---
@@ -137,12 +137,12 @@ Adobe Experience Platform可讓您透過Sensei機器學習架構執行階段，�
 
 ## 建立即時機器學習應用程式(alpha)
 
-在Hub和Edge上結合流暢的運算，可大幅降低傳統上推動高度個人化體驗（既相關又回應快速）的延遲。 因此，即時機器學習為同步決策提供極低的延遲。 例如轉換個人化網頁內容、呈現選件，以及折扣以減少客戶流失，同時提高網站商店的轉換率。
+在Hub和Thab上結合流暢的運算，可大幅 [!DNL Edge] 降低傳統上為超個人化體驗提供相關與回應的延遲。 因此，即時機器學習為同步決策提供極低的延遲。 例如轉換個人化網頁內容、呈現選件，以及折扣以減少客戶流失，同時提高網站商店的轉換率。
 
 **本指南將幫助您：**
 - 瞭解即時機器學習架構。
 - 瞭解即時機器學習工作流程。
 - 瞭解即時機器學習的目前功能。
-- 提供建立您自己即時機器學習模型的後續步驟。
+- 提供建立您自己的即時機器學習模型的後續步驟。
 
 若要進一步瞭解，請造 [訪即時機器學習總覽](../data-science-workspace/real-time-machine-learning/home.md)。
