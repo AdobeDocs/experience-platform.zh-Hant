@@ -4,14 +4,17 @@ solution: Experience Platform
 title: 獲取身份的群集歷史記錄
 topic: API guide
 translation-type: tm+mt
-source-git-commit: df85ea955b7a308e6be1e2149fcdfb4224facc53
+source-git-commit: 6ffdcc2143914e2ab41843a52dc92344ad51bcfb
+workflow-type: tm+mt
+source-wordcount: '303'
+ht-degree: 1%
 
 ---
 
 
 # 獲取身份的群集歷史記錄
 
-身分可在各種裝置圖表執行過程中移動叢集。 Identity Service可讓您隨時間檢視特定身分的叢集關聯。
+身分可在各種裝置圖表執行過程中移動叢集。 [!DNL Identity Service] 可隨時間查看指定身份的群集關聯。
 
 使用可 `graph-type` 選參數指示從中獲取群集的輸出類型。 選項包括：
 
@@ -28,7 +31,7 @@ GET https://platform-{REGION}.adobe.io/data/core/identity/cluster/history
 
 **請求**
 
-選項1:提供身分識別作為namespace(`nsId`依ID)和ID值(`id`)。
+選項1: 提供身分識別作為namespace(`nsId`依ID)和ID值(`id`)。
 
 ```shell
 curl -X GET \
@@ -39,7 +42,7 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-選項2:提供身分識別為namespace(`ns`依名稱)和ID值(`id`)。
+選項2: 提供身分識別為namespace(`ns`依名稱)和ID值(`id`)。
 
 ```shell
 curl -X GET \
@@ -50,7 +53,7 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-選項3:提供身份作為XID(`xid`)。 如需如何取得身分識別的XID的詳細資訊，請參閱本檔案中有關取得 [身分識別的XID一節](./list-native-id.md)。
+選項3: 提供身份作為XID(`xid`)。 如需如何取得身分識別的XID的詳細資訊，請參閱本檔案中有關取得 [身分識別的XID一節](./list-native-id.md)。
 
 ```shell
 curl -X GET \
@@ -75,7 +78,7 @@ POST https://platform-va7.adobe.io/data/core/identity/clusters/history
 
 **請求正文**
 
-選項1:提供要為其檢索群整合員的XID清單。
+選項1: 提供要為其檢索群整合員的XID清單。
 
 ```shell
 {
@@ -84,7 +87,7 @@ POST https://platform-va7.adobe.io/data/core/identity/clusters/history
 }
 ```
 
-選項2:提供身分清單作為複合ID，其中每個ID值皆以命名空間程式碼命名。
+選項2: 提供身分清單作為複合ID，其中每個ID值皆以命名空間程式碼命名。
 
 ```shell
 {
