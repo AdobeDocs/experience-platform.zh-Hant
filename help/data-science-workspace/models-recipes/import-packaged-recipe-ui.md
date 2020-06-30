@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 匯入封裝的方式(UI)
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: f2a7300d4ad75e3910abbdf2ecc2946a2dfe553c
+source-git-commit: 4b0f0dda97f044590f55eaf75a220f631f3313ee
 workflow-type: tm+mt
-source-wordcount: '1798'
+source-wordcount: '1760'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # 匯入封裝的方式(UI)
 
-本教學課程提供如何使用提供的零售銷售範例來設定和匯入封裝方式的見解。 在本教學課程結束時，您將準備好在Adobe Experience Platform資料科學工作區中建立、訓練和評估模型。
+本教學課程提供如何使用提供的零售銷售範例來設定和匯入封裝方式的見解。 在本教學課程結束時，您將準備好在Adobe Experience Platform中建立、訓練和評估模型 [!DNL Data Science Workspace]。
 
 ## 必要條件
 
@@ -22,7 +22,7 @@ ht-degree: 0%
 
 ## UI工作流程
 
-將封裝的方式匯入Data Science Workspace需要特定的方式設定，並編譯為單一JavaScript物件標籤(JSON)檔案，此方式組態編譯稱為設定 **檔案**。 具有一組特定配置的打包配方稱為配方 **實例**。 在「資料科學工作區」中，可使用一種方式建立許多方式例項。
+將封裝的方式匯入 [!DNL Data Science Workspace] 時，需要特定的方式設定，並編譯為單一JavaScript物件註解(JSON)檔案，此方式組態編譯稱為設定 **檔案**。 具有一組特定配置的打包配方稱為配方 **實例**。 一個配方可用於在中建立多個配方實例 [!DNL Data Science Workspace]。
 
 用於導入包配方的工作流包括以下步驟：
 - [設定方式](#configure)
@@ -33,7 +33,7 @@ ht-degree: 0%
 
 ### 設定方式 {#configure}
 
-「資料科學工作區」中的每個配方實例都隨附一組配置，可根據特定使用案例量身打造配方實例。 配置檔案定義使用此配方實例建立的模型的預設培訓和計分行為。
+中的每個配方 [!DNL Data Science Workspace] 實例都附帶一組配置，這些配置定製了配方實例以適合特定使用案例。 配置檔案定義使用此配方實例建立的模型的預設培訓和計分行為。
 
 >[!NOTE] 配置檔案是特定於配方和大小寫的。
 
@@ -116,11 +116,11 @@ ht-degree: 0%
 | `evaluation.metrics` | 字串 | 用於評估模型的評估度量的逗號分隔清單。 |
 | `ACP_DSW_SCORING_RESULTS_XDM_SCHEMA` | 字串 | 用於計分模型的輸出方案。 在UI中匯入時保留此空白，在使用API匯入時，以計分SchemaID取代。 |
 
-在本教學課程中，您可以將「Data Science Workspace參考」中「零售銷售」配方的預設設定檔保留為原樣。
+在本教學課程中，您可以將「參考」中「零售銷售」配方的預設配置檔案 [!DNL Data Science Workspace] 保留為原樣。
 
-### 匯入以Docker為基礎的方式- Python {#python}
+### 導入基於Docker的配方- [!DNL Python] {#python}
 
-首先，導覽並選 **[!UICONTROL 取]** 「平台UI」左上角的「工作流程」。 接著，選取「匯 *入方式* 」，然後按一 **[!UICONTROL 下「啟動」]**。
+首先，導覽並選 **[!UICONTROL 取]** UI左上角的「工作流程 [!DNL Platform] 」。 接著，選取「匯 *入方式* 」，然後按一 **[!UICONTROL 下「啟動」]**。
 
 ![](../images/models-recipes/import-package-ui/launch-import.png)
 
@@ -131,7 +131,7 @@ ht-degree: 0%
 >[!NOTE]
 > 在「將 [來源檔案封裝為配方」教學課程中](./package-source-files-recipe.md) ，使用Python來源檔案建立零售銷售配方時，會提供Docker URL。
 
-在「選擇來源 *」頁面上，將與使用Python來源檔案建立的封裝方式對應的Docker URL貼入「來源* URL **** 」欄位。 接著，透過拖放方式匯入提供的設定檔案，或使用檔案系統瀏 **覽器**。 可在中找到提供的配置檔案 `experience-platform-dsw-reference/recipes/python/retail/retail.config.json`。 在「 **[!UICONTROL Runtime]** 」下拉式清單中選取「 *Python* 」，並在「 **[!UICONTROL Type]** ** Drop」中選取「Classification」。 一切填妥後，按一下右 **[!UICONTROL 上角的]** 「下一步」，繼續 *管理結構*。
+在「選擇來源 *」頁上，將與使用來源檔案建立的封裝方式對應的Docker URL貼到「來源URL」欄位中，* 即可貼到「 [!DNL Python] 來源URL **** 」欄位中。 接著，透過拖放方式匯入提供的設定檔案，或使用檔案系統瀏 **覽器**。 可在中找到提供的配置檔案 `experience-platform-dsw-reference/recipes/python/retail/retail.config.json`。 在「 **[!UICONTROL Runtime]** 」下拉式清單中選取「 *Python* 」，並在「 **[!UICONTROL Type]** ** Drop」中選取「Classification」。 一切填妥後，按一下右 **[!UICONTROL 上角的]** 「下一步」，繼續 *管理結構*。
 
 >[!NOTE]
 > *類型&#x200B;*支援&#x200B;**[!UICONTROL 分類]**和&#x200B;**[!UICONTROL 回歸]**。 如果模型未落在其中一種類型下，請選擇「自&#x200B;**[!UICONTROL 訂」]**。
@@ -148,11 +148,11 @@ ht-degree: 0%
 
 ![](../images/models-recipes/import-package-ui/recipe_review.png)
 
-請繼續下 [一步](#next-steps) ，瞭解如何使用新建立的零售銷售方式，在資料科學工作區中建立模型。
+繼續下 [一步](#next-steps) ，瞭解如何使用新建立的零售 [!DNL Data Science Workspace] 銷售方式建立模型。
 
 ### 導入基於Docker的配方- R {#r}
 
-首先，導覽並選 **[!UICONTROL 取]** 「平台UI」左上角的「工作流程」。 接著，選取「匯 *入方式* 」，然後按一 **[!UICONTROL 下「啟動」]**。
+首先，導覽並選 **[!UICONTROL 取]** UI左上角的「工作流程 [!DNL Platform] 」。 接著，選取「匯 *入方式* 」，然後按一 **[!UICONTROL 下「啟動」]**。
 
 ![](../images/models-recipes/import-package-ui/launch-import.png)
 
@@ -163,7 +163,7 @@ ht-degree: 0%
 >[!NOTE]
 > 在將來 [源檔案打包到配方教程中](./package-source-files-recipe.md) ，在使用R源檔案構建零售銷售配方的結束處提供了Docker URL。
 
-在「選擇源 *」頁上，將與使用R源檔案構建的打包方式對應的Docker URL貼上到「源URL」* 欄位中 **** 。 接著，透過拖放方式匯入提供的設定檔案，或使用檔案系統瀏 **覽器**。 可在中找到提供的配置檔案 `experience-platform-dsw-reference/recipes/R/Retail\ -\ GradientBoosting/retail.config.json`。 在「 **[!UICONTROL Runtime]** 」下拉式清單中選取「R *」，在「Type* **[!UICONTROL drop」中選取「Classification]**** 」。 一切填妥後，按一下右 **[!UICONTROL 上角的]** 「下一步」，繼續 *管理結構*。
+在「選擇源 *」頁上，將與使用R源檔案構建的打包方式對應的Docker URL貼上到「* 源URL **** 」欄位中。 接著，透過拖放方式匯入提供的設定檔案，或使用檔案系統瀏 **覽器**。 可在中找到提供的配置檔案 `experience-platform-dsw-reference/recipes/R/Retail\ -\ GradientBoosting/retail.config.json`。 在「 **[!UICONTROL Runtime]** 」下拉式清單中選取「R *」，在「Type* **[!UICONTROL drop」中選取「Classification]**** 」。 一切填妥後，按一下右 **[!UICONTROL 上角的]** 「下一步」，繼續 *管理結構*。
 
 >[!NOTE]
 > *類型&#x200B;*支援&#x200B;**[!UICONTROL 分類]**和&#x200B;**[!UICONTROL 回歸]**。 如果模型未落在其中一種類型下，請選擇「自&#x200B;**[!UICONTROL 訂」]**。
@@ -180,11 +180,11 @@ ht-degree: 0%
 
 ![](../images/models-recipes/import-package-ui/recipe_review.png)
 
-請繼續下 [一步](#next-steps) ，瞭解如何使用新建立的零售銷售方式，在資料科學工作區中建立模型。
+繼續下 [一步](#next-steps) ，瞭解如何使用新建立的零售 [!DNL Data Science Workspace] 銷售方式建立模型。
 
 ### 匯入以Docker為基礎的方式- PySpark {#pyspark}
 
-首先，導覽並選 **[!UICONTROL 取]** 「平台UI」左上角的「工作流程」。 接著，選取「匯 *入方式* 」，然後按一 **[!UICONTROL 下「啟動」]**。
+首先，導覽並選 **[!UICONTROL 取]** UI左上角的「工作流程 [!DNL Platform] 」。 接著，選取「匯 *入方式* 」，然後按一 **[!UICONTROL 下「啟動」]**。
 
 ![](../images/models-recipes/import-package-ui/launch-import.png)
 
@@ -212,11 +212,11 @@ ht-degree: 0%
 
 ![](../images/models-recipes/import-package-ui/recipe_review.png)
 
-請繼續下 [一步](#next-steps) ，瞭解如何使用新建立的零售銷售方式，在資料科學工作區中建立模型。
+繼續下 [一步](#next-steps) ，瞭解如何使用新建立的零售 [!DNL Data Science Workspace] 銷售方式建立模型。
 
 ### 導入基於Docker的配方- Scala {#scala}
 
-首先，導覽並選 **[!UICONTROL 取]** 「平台UI」左上角的「工作流程」。 接著，選取「匯 *入方式* 」，然後按一 **[!UICONTROL 下「啟動」]**。
+首先，導覽並選 **[!UICONTROL 取]** UI左上角的「工作流程 [!DNL Platform] 」。 接著，選取「匯 *入方式* 」，然後按一 **[!UICONTROL 下「啟動」]**。
 
 ![](../images/models-recipes/import-package-ui/launch-import.png)
 
@@ -225,9 +225,9 @@ ht-degree: 0%
 ![配置工作流](../images/models-recipes/import-package-ui/configure-workflow.png)
 
 >[!NOTE]
-> 在「將來 [源檔案封裝至配方」教學課程中](./package-source-files-recipe.md) ，使用Scala(Spark)來源檔案建立零售銷售配方時，會提供Docker URL。
+> 在將來 [源檔案封裝成配方教學課程中](./package-source-files-recipe.md) ，使用Scala([!DNL Spark])來源檔案建立零售銷售配方時，會提供Docker URL。
 
-在「選擇源 *」頁上，將與使用「源URL」欄位中的Scala源檔案構建的打包方式對應的Docker URL* 貼上到 ** 。 接著，透過拖放方式匯入提供的設定檔案，或使用檔案系統瀏 **覽器**。 可在中找到提供的配置檔案 `experience-platform-dsw-reference/recipes/scala/retail/pipelineservice.json`。 在「 **[!UICONTROL Runtime]** 」下拉式清 *單中選* 取Spark。 在選取Spark執行時期後，預設對象會自動填入 **[!UICONTROL Docker]**。 接著，從「 **[!UICONTROL 類型]** 」下拉式選 *取「回歸* 」。 一切填妥後，按一下右 **[!UICONTROL 上角的]** 「下一步」，繼續 *管理結構*。
+在「選擇源 *」頁上，將與使用「源URL」欄位中的Scala源檔案構建的打包方式對應的Docker URL* 貼上到 ** 。 接著，透過拖放方式匯入提供的設定檔案，或使用檔案系統瀏 **覽器**。 可在中找到提供的配置檔案 `experience-platform-dsw-reference/recipes/scala/retail/pipelineservice.json`。 在「 **[!UICONTROL Runtime]** 」下拉式清 *單中選* 取Spark。 一旦選 [!DNL Spark] 取執行階段，預設對象會自動填入 **[!UICONTROL Docker]**。 接著，從「 **[!UICONTROL 類型]** 」下拉式選 *取「回歸* 」。 一切填妥後，按一下右 **[!UICONTROL 上角的]** 「下一步」，繼續 *管理結構*。
 
 >[!NOTE]
 > *類型&#x200B;*支援&#x200B;**[!UICONTROL 分類]**和&#x200B;**[!UICONTROL 回歸]**。 如果模型未落在其中一種類型下，請選擇「自&#x200B;**[!UICONTROL 訂」]**。
@@ -244,11 +244,11 @@ ht-degree: 0%
 
 ![](../images/models-recipes/import-package-ui/recipe_review.png)
 
-請繼續下 [一步](#next-steps) ，瞭解如何使用新建立的零售銷售方式，在資料科學工作區中建立模型。
+繼續下 [一步](#next-steps) ，瞭解如何使用新建立的零售 [!DNL Data Science Workspace] 銷售方式建立模型。
 
 ## 下一步 {#next-steps}
 
-本教學課程提供如何設定方式並將其匯入Data Science Workspace的深入資訊。 您現在可以使用新建立的方式建立、訓練和評估模型。
+本教學課程提供如何設定方式並將其匯入的見解 [!DNL Data Science Workspace]。 您現在可以使用新建立的方式建立、訓練和評估模型。
 
 - [在UI中訓練和評估模型](./train-evaluate-model-ui.md)
 - [使用API來訓練和評估模型](./train-evaluate-model-api.md)
