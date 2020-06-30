@@ -4,10 +4,10 @@ solution: Experience Platform
 title: 即時機器學習節點參考指南
 topic: Nodes reference
 translation-type: tm+mt
-source-git-commit: dc63ad0c0764355aed267eccd1bcc4965b04dba4
+source-git-commit: 1e5526b54f3c52b669f9f6a792eda0abfc711fdd
 workflow-type: tm+mt
-source-wordcount: '595'
-ht-degree: 1%
+source-wordcount: '594'
+ht-degree: 0%
 
 ---
 
@@ -23,7 +23,7 @@ ht-degree: 1%
 
 ## 發現要在ML管線中使用的節點
 
-將以下代碼複製到Python筆記本中，以查看所有可用節點。
+將以下代碼複製到 [!DNL Python] 筆記本中，以查看所有可用節點。
 
 ```python
 from pprint import pprint
@@ -120,7 +120,7 @@ msg6 = model_train.process(msg5)
 
 | 值 | 說明 |
 | --- | --- |
-| 功能 | 輸入模型特徵（字串清單）。 <br> 例如: `browser`, `device`, `login_page`, `product_page`, `search_page` |
+| 功能 | 輸入模型特徵（字串清單）。 <br> 例如： `browser`, `device`, `login_page`, `product_page`, `search_page` |
 | 標籤 | 目標欄名稱（字串）。 |
 | 模式 | 訓練／測試（字串）。 |
 | model_path | 以onnx格式本機儲存模型的路徑。 |
