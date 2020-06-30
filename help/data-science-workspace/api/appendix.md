@@ -4,18 +4,21 @@ solution: Experience Platform
 title: 附錄
 topic: Developer guide
 translation-type: tm+mt
-source-git-commit: 2940f69d193ff8a4ec6ad4a58813b5426201ef45
+source-git-commit: c48079ba997a7b4c082253a0b2867df76927aa6d
+workflow-type: tm+mt
+source-wordcount: '298'
+ht-degree: 4%
 
 ---
 
 
 # 附錄
 
-以下各節提供Sensei Machine Learning API各種功能的參考資訊。
+以下各節提供API各種功能的參考 [!DNL Sensei Machine Learning] 資訊。
 
 ## 用於資產檢索的查詢參數 {#query}
 
-Sensei Machine Learning API支援擷取資產的查詢參數。 下表介紹了可用查詢參數及其用法：
+API [!DNL Sensei Machine Learning] 支援擷取資產時的查詢參數。 下表介紹了可用查詢參數及其用法：
 
 | 查詢參數 | 說明 | 預設值 |
 | --------------- | ----------- | ------- |
