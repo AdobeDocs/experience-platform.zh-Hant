@@ -4,20 +4,23 @@ solution: Experience Platform
 title: Apache Cassandra連接器
 topic: overview
 translation-type: tm+mt
-source-git-commit: 1fd2f526ee3efb4ae9f4d7af851bb5cd5d63cfa9
+source-git-commit: 6ffdcc2143914e2ab41843a52dc92344ad51bcfb
+workflow-type: tm+mt
+source-wordcount: '122'
+ht-degree: 0%
 
 ---
 
 
-# Apache Cassandra連接器
+# [!DNL Apache Cassandra ]連接器
 
-Adobe Experience Platform可讓您從外部來源擷取資料，同時提供您使用平台服務來建構、標示及增強傳入資料的能力。 您可以從多種來源（例如Adobe應用程式、雲端儲存空間、資料庫等）擷取資料。
+Adobe Experience Platform可讓您從外部來源擷取資料，同時提供您使用服務建構、標示及增強傳入資料的 [!DNL Platform] 能力。 您可以從多種來源（例如Adobe應用程式、雲端儲存空間、資料庫等）擷取資料。
 
-Experience Platform支援從協力廠商資料庫擷取資料。 平台可以連接到不同類型的資料庫，如關係型、NoSQL或資料倉庫。 支援資料庫提供者，包括Apache Cassandra。
+[!DNL Experience Platform] 提供從第三方資料庫擷取資料的支援。 [!DNL Platform] 可以連接到不同類型的資料庫，如關係型、 NoSQL或資料倉庫。 支援資料庫提供者包括 [!DNL Apache Cassandra]。
 
-以下檔案提供如何使用API將Apache Cassandra連接至平台的資訊：
+以下檔案提供如何連線至使用API [!DNL Apache Cassandra] 的 [!DNL Platform] 資訊：
 
-## 使用API將Apache Cassandra連接至平台
+## 連線 [!DNL Apache Cassandra] 至使 [!DNL Platform] 用API
 
 - [使用Flow Service API建立Apache Cassandra連接器](../../tutorials/api/create/databases/cassandra.md)
 - [使用Flow Service API探索資料庫系統](../../tutorials/api/explore/database-nosql.md)
