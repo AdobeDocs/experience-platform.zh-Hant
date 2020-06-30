@@ -4,20 +4,23 @@ solution: Experience Platform
 title: Adobe Experience Platform Identity Service疑難排解指南
 topic: troubleshooting
 translation-type: tm+mt
-source-git-commit: df85ea955b7a308e6be1e2149fcdfb4224facc53
+source-git-commit: 6ffdcc2143914e2ab41843a52dc92344ad51bcfb
+workflow-type: tm+mt
+source-wordcount: '2225'
+ht-degree: 1%
 
 ---
 
 
 # Identity Service疑難排解指南
 
-本檔案提供有關Adobe Experience Platform Identity Service常見問題的解答，以及常見錯誤的疑難排解指南。 如需有關Platform API的一般問題和疑難排解，請參閱 [Adobe Experience Platform API疑難排解指南](../landing/troubleshooting.md)。
+本檔案提供有關Adobe Experience Platform常見問題的解答， [!DNL Identity Service]以及常見錯誤的疑難排解指南。 如需一般API的相關問 [!DNL Platform] 題和疑難排解，請參閱 [Adobe Experience Platform API疑難排解指南](../landing/troubleshooting.md)。
 
-識別單一客戶的資料通常會分散在他們用來與您的品牌互動的各種裝置和系統上。 **Identity Service** 可將這些零散的身分識別匯集在一起，以利全面瞭解客戶行為，讓您即時提供具影響力的數位體驗。 如需詳細資訊，請參閱 [Identity Service總覽](./home.md)。
+識別單一客戶的資料通常會分散在他們用來與您的品牌互動的各種裝置和系統上。 [!DNL Identity Service] 將這些零散的身份匯集在一起，以便全面瞭解客戶行為，以便您即時提供具影響力的數位體驗。 如需詳細資訊，請參閱 [Identity Service總覽](./home.md)。
 
 ## 常見問題集
 
-以下是有關Identity Service常見問題的解答清單。
+以下是有關常見問題的解答清單 [!DNL Identity Service]。
 
 ## 什麼是身分資料？
 
@@ -29,15 +32,15 @@ source-git-commit: df85ea955b7a308e6be1e2149fcdfb4224facc53
 
 ## 什麼是已知和匿名身份？
 
-已 **知身份** ，是指可單獨使用或與其他資訊一起使用的識別值，以識別、聯絡或尋找個人。 已知身分的範例可能包括電子郵件地址、電話號碼和CRM ID。
+已知身份是指可單獨使用或與其他資訊一起使用的身份值，以識別、聯絡或尋找個人。 已知身分的範例可能包括電子郵件地址、電話號碼和CRM ID。
 
-匿 **名身分** ，是指無法單獨使用或與其他資訊一起使用的身分值，以識別、聯絡或尋找個別人員（例如Cookie ID）。
+匿名身分是指無法單獨使用或與其他資訊一起使用的身分值，以識別、聯絡或尋找個別人員（例如Cookie ID）。
 
 ## 什麼是私人身分圖？
 
 「私人身分圖」是銜接與連結身分之間關係的私人地圖，僅供您的組織使用。
 
-當從串流端點擷取或傳送至啟用身分服務的資料集的資料中包含多個身分識別時，這些身分識別會連結在「私人身分圖」中。 Identity Service利用此圖表來收集特定消費者或實體的身分，允許身份拼接和描述檔合併。
+當從串流端點擷取或傳送至啟用的資料集的任何資料中包含多個身分識別時，這些身分識別會連結在 [!DNL Identity Service]「私用身分圖」中。 [!DNL Identity Service] 利用此圖表來收集特定消費者或實體的身分識別，以便進行身分識別拼接和描述檔合併。
 
 ## 如何在XDM架構中建立多個識別欄位？
 
@@ -59,7 +62,7 @@ source-git-commit: df85ea955b7a308e6be1e2149fcdfb4224facc53
 
 身分名稱空間提供識別欄位與客戶身份相關的上下文。 例如，「電子郵件」名稱空間下的身分欄位應符合標準電子郵件格式(名稱<span>@emailprovider.com)，而使用「Phone」名稱空間的欄位應符合標準電話號碼（例如北美地區的987-555-1234）。
 
-名稱空間可區分不同CRM系統之間的相似身分值。 例如，假設描述檔包含與公司獎勵方案相關聯的數值「忠誠度ID」。 「忠誠度」的命名空間會將此值與電子商務系統的類似數值ID（也會顯示在相同的描述檔中）區隔。
+名稱空間可區分不同CRM系統之間的相似身分值。 例如，假設描述檔包含與公司獎勵方案相關聯的數值忠誠度ID。 「忠誠度」的命名空間會將此值與電子商務系統的類似數值ID（也會顯示在相同的描述檔中）區隔。
 
 如需詳細 [資訊，請參閱身分命名空間](./home.md) 概觀。
 
@@ -75,13 +78,13 @@ Experience Platform內的所有組織都可使用下列標準名稱空間：
 
 | 顯示名稱 | ID | 程式碼 | 說明 |
 | ------------ | --- | --- | ----------- |
-| 核心 | 0 | 核心 | 舊名稱：&quot;Adobe AudienceManager&quot; |
-| ECID | 4 | ECID | 別名：「Adobe Marketing Cloud ID」、「Adobe Experience Cloud ID」、「Adobe Experience Platform ID」 |
+| 核心 | 0 | 核心 | 舊名稱： &quot;Adobe AudienceManager&quot; |
+| ECID | 4 | ECID | 別名： 「Adobe Marketing Cloud ID」、「Adobe Experience Cloud ID」、「Adobe Experience Platform ID」 |
 | 電子郵件 | 6 | 電子郵件 |  |
 | 電子郵件（SHA256，小寫） | 11 | 電子郵件 | 預先雜湊的電子郵件的標準命名空間。 在使用SHA-256進行雜湊處理之前，此命名空間中提供的值會轉換為小寫。 |
 | 電話 | 7 | 電話 |  |
 | Windows AID | 8 | WAID |  |
-| AdCloud | 411 | AdCloud | 別名：Ad Cloud |
+| AdCloud | 411 | AdCloud | 別名： Ad Cloud |
 | Adobe Target | 9 | TNTID | 目標ID |
 | Google廣告ID | 20914 | GAID | GAID |
 | Apple IDFA | 20915 | IDFA | 廣告商的ID |
@@ -130,11 +133,11 @@ Internal solutions|Preferred|Common
 
 ## 疑難排解
 
-下節提供疑難排解建議，以瞭解使用Identity Service API時可能遇到的特定錯誤碼和非預期行為。
+下節提供疑難排解建議，以瞭解使用 [!DNL Identity Service] API時可能遇到的特定錯誤碼和非預期行為。
 
-## Identity Service錯誤訊息
+## [!DNL Identity Service] 錯誤消息
 
-以下是使用Identity Service API時可能遇到的錯誤訊息清單。
+以下是您使用 [!DNL Identity Service] API時可能遇到的錯誤訊息清單。
 
 ### 缺少必需的查詢參數
 
@@ -166,7 +169,7 @@ Internal solutions|Preferred|Common
 }
 ```
 
-Identity Service會清除180天以上的資料。 當您嘗試存取早於此日期的資料時，會顯示此錯誤訊息。
+[!DNL Identity Service] 清除180天以上的資料。 當您嘗試存取早於此日期的資料時，會顯示此錯誤訊息。
 
 ### 單一呼叫的XID上限為1000個
 
@@ -203,7 +206,7 @@ Identity Service會清除180天以上的資料。 當您嘗試存取早於此日
 }
 ```
 
-當請求路徑中的查詢參 `graph-type` 數被指定為無效值時，會顯示此錯誤訊息。 請參閱Identity Service概 [述中的](./home.md) 「身分圖」一節，瞭解支援哪些圖形類型。
+當請求路徑中的查詢參 `graph-type` 數被指定為無效值時，會顯示此錯誤訊息。 請參閱概觀中 [的身分圖](./home.md) ，以 [!DNL Identity Service] 瞭解支援哪些圖形類型。
 
 ### 服務Token沒有有效範圍
 
@@ -215,7 +218,7 @@ Identity Service會清除180天以上的資料。 當您嘗試存取早於此日
 }
 ```
 
-當您的IMS組織尚未布建適當的Identity Service權限時，會顯示此錯誤訊息。 請連絡您的系統管理員以解決此問題。
+當您的IMS組織尚未布建適當的權限時，會顯示此錯誤訊息 [!DNL Identity Service]。 請連絡您的系統管理員以解決此問題。
 
 ### 閘道服務Token無效
 
@@ -227,7 +230,7 @@ Identity Service會清除180天以上的資料。 當您嘗試存取早於此日
 }
 ```
 
-如果發生此錯誤，您的存取Token無效。 存取Token每24小時過期一次，且必須重新產生才能繼續使用平台API。 請參閱驗 [證教學課程](../tutorials/authentication.md) ，以取得有關產生新存取Token的指示。
+如果發生此錯誤，您的存取Token無效。 存取Token每24小時過期一次，且必須重新產生才能繼續使用 [!DNL Platform] API。 請參閱驗 [證教學課程](../tutorials/authentication.md) ，以取得有關產生新存取Token的指示。
 
 ### 授權服務Token無效
 
@@ -239,7 +242,7 @@ Identity Service會清除180天以上的資料。 當您嘗試存取早於此日
 }
 ```
 
-如果發生此錯誤，您的存取Token無效。 存取Token每24小時過期一次，且必須重新產生才能繼續使用平台API。 請參閱驗 [證教學課程](../tutorials/authentication.md) ，以取得有關產生新存取Token的指示。
+如果發生此錯誤，您的存取Token無效。 存取Token每24小時過期一次，且必須重新產生才能繼續使用 [!DNL Platform] API。 請參閱驗 [證教學課程](../tutorials/authentication.md) ，以取得有關產生新存取Token的指示。
 
 ### 使用者Token沒有有效的產品內容
 
@@ -251,7 +254,7 @@ Identity Service會清除180天以上的資料。 當您嘗試存取早於此日
 }
 ```
 
-當您的存取Token尚未從Experience Platform整合產生時，會顯示此錯誤訊息。 請參閱驗 [證教學課程](../tutorials/authentication.md) ，以取得有關為Experience Platform整合產生新存取Token的指示。
+當您的存取Token尚未從整合產生時，會顯示此錯誤 [!DNL Experience Platform] 訊息。 請參閱驗 [證教學課程](../tutorials/authentication.md) ，以取得有關產生整合新存取Token的 [!DNL Experience Platform] 指示。
 
 ### 從識別碼和命名空間程式碼取得原生XID時發生內部錯誤
 
@@ -263,9 +266,9 @@ Identity Service會清除180天以上的資料。 當您嘗試存取早於此日
 }
 ```
 
-當Identity Service保留身分時，會為身分的ID和關聯的命名空間ID指派一個稱為XID的唯一識別碼。 當在尋找指定ID值和命名空間的XID過程中發生錯誤時，會顯示此訊息。
+當持 [!DNL Identity Service] 續存在身份時，會為該身份的ID和關聯的命名空間ID分配一個稱為XID的唯一標識符。 當在尋找指定ID值和命名空間的XID過程中發生錯誤時，會顯示此訊息。
 
-### IMS組織未針對Identity Service用途布建
+### 未布建IMS組織供使 [!DNL Identity Service] 用
 
 ```json
 {
@@ -275,7 +278,7 @@ Identity Service會清除180天以上的資料。 當您嘗試存取早於此日
 }
 ```
 
-當您的IMS組織尚未布建適當的Identity Service權限時，會顯示此錯誤訊息。 請連絡您的系統管理員以解決此問題。
+當您的IMS組織尚未布建適當的權限時，會顯示此錯誤訊息 [!DNL Identity Service]。 請連絡您的系統管理員以解決此問題。
 
 ### 內部伺服器錯誤
 
@@ -287,13 +290,13 @@ Identity Service會清除180天以上的資料。 當您嘗試存取早於此日
 }
 ```
 
-當平台服務調用執行中發生意外異常時，將顯示此錯誤。 最佳實務是，在收到此錯誤時，設定您的自動呼叫程式，以計時間隔重試其要求幾次。 如果問題仍然存在，請與系統管理員聯繫。
+當服務調用的執行中發生意外異常時，將顯 [!DNL Platform] 示此錯誤。 最佳實務是，在收到此錯誤時，設定您的自動呼叫程式，以計時間隔重試其要求幾次。 如果問題仍然存在，請與系統管理員聯繫。
 
 ## 批次擷取錯誤碼
 
-Identity Service會從使用批次擷取功能上傳至平台的記錄和時間序列資料擷取身分資料。 由於批處理提取是非同步流程，因此您必須查看批處理的詳細資訊才能查看錯誤。 錯誤會隨著批處理進行而累積，直到批處理完成為止。
+[!DNL Identity Service] 從使用「批次擷取」上傳至的記錄和時間序列資料擷取 [!DNL Platform] 身分資料。 由於批處理提取是非同步流程，因此您必須查看批處理的詳細資訊才能查看錯誤。 錯誤會隨著批處理進行而累積，直到批處理完成為止。
 
-以下是使用「資料擷取API」時可能遇到的與Identity Service相關的錯 [誤訊息清單](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml)。
+以下是使用「資料擷取API」時可 [!DNL Identity Service] 能會遇到的錯誤訊息 [清單](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml)。
 
 ### 未知的XDM模式
 
@@ -305,7 +308,7 @@ Identity Service會從使用批次擷取功能上傳至平台的記錄和時間�
 }
 ```
 
-Identity Service僅會針對分別符合Profile或ExperienceEvent類的記錄或時間系列資料使用身分。 嘗試為未遵守任一類別的Identity Service收錄資料會觸發此錯誤。
+[!DNL Identity Service] 僅對分別符合或類的記錄或時間序列資料 [!DNL Profile] 使用 [!DNL ExperienceEvent] 身份。 嘗試為未符合任 [!DNL Identity Service] 一類別的資料擷取會觸發此錯誤。
 
 ### 處理批的前100行中有0個有效身份
 
@@ -329,7 +332,7 @@ Identity Service僅會針對分別符合Profile或ExperienceEvent類的記錄或
 }
 ```
 
-Identity Service僅在單一記錄顯示兩個或更多身分值時連結身分。 每個收錄的批次都會發生此錯誤訊息一次，並顯示只能找到一個身分的記錄數，且不會造成身分圖表變更。
+[!DNL Identity Service] 只有當單一記錄顯示兩個或更多身分值時，才會連結身分。 每個收錄的批次都會發生此錯誤訊息一次，並顯示只能找到一個身分的記錄數，且不會造成身分圖表變更。
 
 ### 未為此IMS組織註冊命名空間代碼
 
@@ -353,7 +356,7 @@ Identity Service僅在單一記錄顯示兩個或更多身分值時連結身分�
 }
 ```
 
-在擷取批次資料時，當您的IMS組織尚未布建適當的Identity Service權限時，會顯示此錯誤訊息。 請連絡您的系統管理員以解決此問題。
+在擷取批次資料時，當您的IMS組織尚未布建適當的權限時，會顯示此錯誤訊息 [!DNL Identity Service]。 請連絡您的系統管理員以解決此問題。
 
 ### 內部錯誤
 
