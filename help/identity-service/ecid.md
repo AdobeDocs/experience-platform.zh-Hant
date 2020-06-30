@@ -4,14 +4,17 @@ solution: Experience Platform
 title: Adobe Experience Platform ECID
 topic: overview
 translation-type: tm+mt
-source-git-commit: 14cd3d17c7d9ba602d02925abddec9e0b246a8c8
+source-git-commit: 6ffdcc2143914e2ab41843a52dc92344ad51bcfb
+workflow-type: tm+mt
+source-wordcount: '162'
+ht-degree: 9%
 
 ---
 
 
 # ECID概觀
 
-Experience Cloud識別碼(ECID)是用戶端模組，可存取身分識別管理，提供三項主要功能：
+( [!DNL Experience Cloud Identifier] ECID)是用戶端模組，可存取身分識別管理，提供三項主要功能：
 
 - 識別每位訪客
 - 與合作夥伴提供同步
