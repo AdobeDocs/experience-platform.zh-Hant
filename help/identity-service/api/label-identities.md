@@ -4,14 +4,17 @@ solution: Experience Platform
 title: 將欄位標示為身分
 topic: api guide
 translation-type: tm+mt
-source-git-commit: 40ce232e39f62f1ee478ef05229dd2fc125ee4c0
+source-git-commit: 6ffdcc2143914e2ab41843a52dc92344ad51bcfb
+workflow-type: tm+mt
+source-wordcount: '145'
+ht-degree: 1%
 
 ---
 
 
 # 將欄位標示為身分
 
-包含個人識別資訊(PII)的欄位可標示為識別欄位。 身分欄位中提供的值，由Identity Service解譯為身分。 標識的名稱空間指定為標籤欄位的一部分。
+包含個人識別資訊(PII)的欄位可標示為識別欄位。 身份欄位中提供的值被解釋為身份 [!DNL Identity Service]。 標識的名稱空間指定為標籤欄位的一部分。
 
 欄位必須符合下列標示為身分的條件：
 
