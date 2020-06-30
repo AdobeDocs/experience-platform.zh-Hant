@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 配方和筆記本移轉指南
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: f2a7300d4ad75e3910abbdf2ecc2946a2dfe553c
+source-git-commit: 1e5526b54f3c52b669f9f6a792eda0abfc711fdd
 workflow-type: tm+mt
-source-wordcount: '3459'
+source-wordcount: '3311'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 # 配方和筆記本移轉指南
 
 >[!NOTE]
->使用Python/R的筆記型電腦和食譜不受影響。 此移轉僅適用於PySpark/Spark(2.3)配方和筆記型電腦。
+>使用 [!DNL Python]/R的筆記型電腦和配方保持不變。 遷移僅適用於PySpark/[!DNL Spark] (2.3)配方和筆記型電腦。
 
 以下指南概述了遷移現有配方和筆記型電腦所需的步驟和資訊。
 
@@ -24,7 +24,7 @@ ht-degree: 0%
 
 ## 配方移轉指南 {#recipe-migration}
 
-「資料科學工作區」的最新變更需要更新現有的Spark和PySpark配方。 使用下列工作流程協助轉換配方。
+最近的變 [!DNL Data Science Workspace] 更要求更 [!DNL Spark] 新現有和PySpark配方。 使用下列工作流程協助轉換配方。
 
 - [Spark移轉指南](#spark-migration-guide)
    - [修改資料集的讀取和寫入方式](#read-write-recipe-spark)
@@ -40,17 +40,17 @@ ht-degree: 0%
    - [準備docker指令碼](#pyspark-prepare-docker)
    - [與Docker一起建立配方](#pyspark-create-recipe)
 
-## Spark移轉指南 {#spark-migration-guide}
+## [!DNL Spark] 遷移指南 {#spark-migration-guide}
 
-由生成步驟生成的方式對象現在是包含。jar二進位檔案的Docker映像。 此外，使用Platform SDK讀取和寫入資料集的語法已變更，並要求您修改方式代碼。
+由生成步驟生成的方式對象現在是包含。jar二進位檔案的Docker映像。 此外，使用 [!DNL Platform] SDK讀取和寫入資料集的語法已變更，並要求您修改方式代碼。
 
-以下影片旨在進一步協助您瞭解Spark配方所需的變更：
+以下影片旨在進一步協助瞭解配方所需的變 [!DNL Spark] 更：
 
 >[!VIDEO](https://video.tv.adobe.com/v/33243)
 
-### 讀取和寫入資料集(Spark) {#read-write-recipe-spark}
+### 讀取和寫入資料集([!DNL Spark]) {#read-write-recipe-spark}
 
-在您建立Docker影像之前，請先檢閱以下章節中提供的在Platform SDK中讀取和寫入資料集的範例。 如果您要轉換現有方式，您的平台SDK程式碼需要更新。
+在您建立Docker影像之前，請先閱讀以下章節中提供的 [!DNL Platform] SDK中讀取和寫入資料集的範例。 如果您要轉換現有方式， [!DNL Platform] 則需要更新您的SDK程式碼。
 
 #### 讀取資料集
 
@@ -69,7 +69,7 @@ ht-degree: 0%
 
 **讀取資料集的新方式**
 
-有了Spark配方的更新，您需要新增和變更數個值。 首先， `DataSetOptions` 不再使用。 Replace `DataSetOptions` with `QSOption`. 此外，還需 `option` 要新的參數。 兩者 `QSOption.mode` 都 `QSOption.datasetId` 是必要的。 最後， `orgId` 需 `serviceApiKey` 要將更改為 `imsOrg` 和 `apiKey`。 請檢視下列範例，以取得讀取資料集的比較：
+透過方式 [!DNL Spark] 更新，需要新增和變更數個值。 首先， `DataSetOptions` 不再使用。 Replace `DataSetOptions` with `QSOption`. 此外，還需 `option` 要新的參數。 兩者 `QSOption.mode` 都 `QSOption.datasetId` 是必要的。 最後， `orgId` 需 `serviceApiKey` 要將更改為 `imsOrg` 和 `apiKey`。 請檢視下列範例，以取得讀取資料集的比較：
 
 ```scala
 import com.adobe.platform.query.QSOption
@@ -103,7 +103,7 @@ df.write.format("com.adobe.platform.dataset")
 
 **編寫資料集的新方式**
 
-有了Spark配方的更新，您需要新增和變更數個值。 首先， `DataSetOptions` 不再使用。 Replace `DataSetOptions` with `QSOption`. 此外，還需 `option` 要新的參數。 `QSOption.datasetId` 中，並取代載入中的 `{dataSetId}` 需 `.save()`求。 最後， `orgId` 需 `serviceApiKey` 要將更改為 `imsOrg` 和 `apiKey`。 請參閱下列範例，以取得編寫資料集的比較：
+透過方式 [!DNL Spark] 更新，需要新增和變更數個值。 首先， `DataSetOptions` 不再使用。 Replace `DataSetOptions` with `QSOption`. 此外，還需 `option` 要新的參數。 `QSOption.datasetId` 中，並取代載入中的 `{dataSetId}` 需 `.save()`求。 最後， `orgId` 需 `serviceApiKey` 要將更改為 `imsOrg` 和 `apiKey`。 請參閱下列範例，以取得編寫資料集的比較：
 
 ```scala
 import com.adobe.platform.query.QSOption
@@ -116,13 +116,13 @@ df.write.format("com.adobe.platform.query")
   .save()
 ```
 
-### 封裝以Docker為基礎的來源檔案(Spark) {#package-docker-spark}
+### 封裝Docker型來源檔案([!DNL Spark]) {#package-docker-spark}
 
 首先，導覽至配方所在的目錄。
 
 以下幾節使用新的Scala零售銷售方式，可在 [Data Science Workspace公用Github儲存庫中找到](https://github.com/adobe/experience-platform-dsw-reference)。
 
-### 下載範例配方(Spark) {#download-sample-spark}
+### 下載範例配方([!DNL Spark]) {#download-sample-spark}
 
 範例配方包含需要複製至現有配方的檔案。 若要仿製包含所有範例配方的公用Github，請在終端機中輸入下列：
 
@@ -132,7 +132,7 @@ git clone https://github.com/adobe/experience-platform-dsw-reference.git
 
 Scala配方位於以下目錄中 `experience-platform-dsw-reference/recipes/scala/retail`。
 
-### 新增Dockerfile(Spark) {#add-dockerfile-spark}
+### 添加Dockerfile([!DNL Spark]) {#add-dockerfile-spark}
 
 配方檔案夾中需要有新檔案，才能使用以Docker為基礎的工作流程。 從位於的配方資料夾複製並貼上Dockerfile `experience-platform-dsw-reference/recipes/scala/Dockerfile`。 或者，您也可以將下方的程式碼複製並貼至名為的新檔案 `Dockerfile`。
 
@@ -145,9 +145,9 @@ FROM adobe/acp-dsw-ml-runtime-spark:0.0.1
 COPY target/ml-retail-sample-spark-*-jar-with-dependencies.jar /application.jar
 ```
 
-### 變更相依性(Spark) {#change-dependencies-spark}
+### 變更相依性([!DNL Spark]) {#change-dependencies-spark}
 
-如果您使用現有配方，pom.xml檔案中需要更改相關性。 將模型編寫-sdk相依性版本變更為2.0.0。 接著，將pom檔案中的Spark版本更新為2.4.3，將Scala版本更新為2.11.12。
+如果您使用現有配方，pom.xml檔案中需要更改相關性。 將模型編寫-sdk相依性版本變更為2.0.0。 接著，將 [!DNL Spark] pom檔案中的版本更新為2.4.3，將Scala版本更新為2.11.12。
 
 ```json
 <groupId>com.adobe.platform.ml</groupId>
@@ -156,9 +156,9 @@ COPY target/ml-retail-sample-spark-*-jar-with-dependencies.jar /application.jar
 <classifier>jar-with-dependencies</classifier>
 ```
 
-### 準備Docker指令碼(Spark) {#prepare-docker-spark}
+### 準備Docker指令碼([!DNL Spark]) {#prepare-docker-spark}
 
-Spark配方不再使用二進位工件，而是需要建立Docker影像。 如果您尚未這麼做，請 [下載並安裝Docker](https://www.docker.com/products/docker-desktop)。
+[!DNL Spark] 方式不再使用二進位工件，而是需要建立Docker影像。 如果您尚未這麼做，請 [下載並安裝Docker](https://www.docker.com/products/docker-desktop)。
 
 在提供的Scala範例配方中，您可找到指令碼， `login.sh` 並 `build.sh` 位於 `experience-platform-dsw-reference/recipes/scala/` 。 將這些檔案複製並貼至您現有的配方中。
 
@@ -168,7 +168,7 @@ Spark配方不再使用二進位工件，而是需要建立Docker影像。 如�
 
 下一步是將套件來源檔 [案納入配方教學課程](./models-recipes/package-source-files-recipe.md) 。 本教學課程包含一節，其中概述如何為Scala(Spark)配方建立Docker影像。 完成後，Azure容器註冊表中會提供您Docker影像，以及對應的影像URL。
 
-### 建立配方(Spark) {#create-recipe-spark}
+### 建立方式([!DNL Spark]) {#create-recipe-spark}
 
 若要建立配方，您必須先完成套件來源檔 [案教學課程](./models-recipes/package-source-files-recipe.md) ，並讓docker影像URL準備就緒。 您可以使用UI或API建立配方。
 
@@ -178,7 +178,7 @@ Spark配方不再使用二進位工件，而是需要建立Docker影像。 如�
 
 ## PySpark移轉指南 {#pyspark-migration-guide}
 
-建置步驟產生的方式工件現在是包含。egg二進位檔案的Docker影像。 此外，使用Platform SDK讀取和寫入資料集的語法已變更，並要求您修改方式代碼。
+建置步驟產生的方式工件現在是包含。egg二進位檔案的Docker影像。 此外，使用 [!DNL Platform] SDK讀取和寫入資料集的語法已變更，並要求您修改方式代碼。
 
 以下影片旨在進一步協助您瞭解PySpark配方所需的變更：
 
@@ -186,7 +186,7 @@ Spark配方不再使用二進位工件，而是需要建立Docker影像。 如�
 
 ### 讀取和寫入資料集(PySpark) {#pyspark-read-write}
 
-在您建立Docker影像之前，請先檢閱以下章節中提供的在Platform SDK中讀取和寫入資料集的範例。 如果您要轉換現有方式，您的平台SDK程式碼需要更新。
+在您建立Docker影像之前，請先閱讀以下章節中提供的 [!DNL Platform] SDK中讀取和寫入資料集的範例。 如果您要轉換現有方式， [!DNL Platform] 則需要更新您的SDK程式碼。
 
 #### 讀取資料集
 
@@ -206,7 +206,7 @@ pd = spark.read.format("com.adobe.platform.dataset")
 
 **讀取資料集的新方式**
 
-有了Spark配方的更新，您需要新增和變更數個值。 首先， `DataSetOptions` 不再使用。 Replace `DataSetOptions` with `qs_option`. 此外，還需 `option` 要新的參數。 兩者 `qs_option.mode` 都 `qs_option.datasetId` 是必要的。 最後， `orgId` 需 `serviceApiKey` 要將更改為 `imsOrg` 和 `apiKey`。 請檢視下列範例，以取得讀取資料集的比較：
+透過方式 [!DNL Spark] 更新，需要新增和變更數個值。 首先， `DataSetOptions` 不再使用。 Replace `DataSetOptions` with `qs_option`. 此外，還需 `option` 要新的參數。 兩者 `qs_option.mode` 都 `qs_option.datasetId` 是必要的。 最後， `orgId` 需 `serviceApiKey` 要將更改為 `imsOrg` 和 `apiKey`。 請檢視下列範例，以取得讀取資料集的比較：
 
 ```python
 qs_option = spark_context._jvm.com.adobe.platform.query.QSOption
@@ -261,7 +261,7 @@ scored_df.write.format("com.adobe.platform.query")
 
 ### 下載範例配方(PySpark) {#pyspark-download-sample}
 
-範例配方包含需要複製至現有配方的檔案。 若要仿製包含所有範例配方的公用Github，請在終端機中輸入下列項目。
+範例配方包含需要複製至現有配方的檔案。 要克隆包含所 [!DNL Github] 有樣例配方的公用配方，請在終端機中輸入以下內容。
 
 ```BASH
 git clone https://github.com/adobe/experience-platform-dsw-reference.git
@@ -311,28 +311,28 @@ PySpark配方不再使用二進位工件，而是需要建立Docker影像。 如
 
 ## 筆記型電腦移轉指南 {#notebook-migration}
 
-JupyterLab筆記型電腦的最新變更要求您將現有的PySpark和Spark 2.3筆記型電腦更新為2.4。 JupyterLab Launcher已通過此項更改更新了新的啟動筆記型電腦。 有關如何轉換筆記型電腦的逐步指南，請選擇以下指南之一：
+筆記型電腦 [!DNL JupyterLab] 的最新更改要求您將現有的PySpark和 [!DNL Spark] 2.3筆記型電腦更新為2.4。 有了這項改變， [!DNL JupyterLab Launcher] 新的入門筆記型電腦已更新。 有關如何轉換筆記型電腦的逐步指南，請選擇以下指南之一：
 
 - [PySpark 2.3到2.4遷移指南](#pyspark-notebook-migration)
 - [Spark 2.3到Spark 2.4(Scala)移轉指南](#spark-notebook-migration)
 
-以下視頻旨在進一步幫助瞭解JupyterLab筆記型電腦所需的更改：
+以下視訊旨在進一步協助您瞭解所需的變更 [!DNL JupyterLab Notebooks]:
 
 >[!VIDEO](https://video.tv.adobe.com/v/33444?quality=12&learn=on)
 
 ## PySpark 2.3到2.4筆記型電腦移轉指南 {#pyspark-notebook-migration}
 
-隨著PySpark 2.4推出至JupyterLab筆記型電腦，配備PySpark 2.4的新款Python筆記型電腦現在使用Python 3內核，而非PySpark 3內核。 這表示PySpark 2.4不支援在PySpark 2.3上執行的現有程式碼。
+隨著PySpark 2.4的推出， [!DNL JupyterLab Notebooks]新 [!DNL Python] 款PySpark 2.4筆記型電腦現在使用 [!DNL Python] 3內核，而非PySpark 3內核。 這表示PySpark 2.4不支援在PySpark 2.3上執行的現有程式碼。
 
 >[!IMPORTANT] PySpark 2.3已過時，並設定在後續版本中移除。 所有現有的範例都會設定為以PySpark 2.4範例取代。
 
-若要將您現有的PySpark 3(Spark 2.3)筆記型電腦轉換為Spark 2.4，請依照下列範例進行：
+若要將您現有的PySpark 3([!DNL Spark] 2.3)筆記型電腦轉換為 [!DNL Spark] 2.4，請依照下列範例進行：
 
 ### 內核
 
-PySpark 3(Spark 2.4)筆記型電腦使用Python 3內核，而非PySpark 3（Spark 2.3 —— 已停用）筆記型電腦中已停用的PySpark內核。
+PySpark 3([!DNL Spark] 2.4)筆記型電腦使用Python 3 Kernel，而非PySpark 3（Spark 2.3 —— 不建議使用）筆記型電腦中已過時的PySpark內核。
 
-要在JupyterLab UI中確認或更改內核，請選擇筆記本右上方導航欄中的內核按鈕。 如果您使用其中一個預定義的啟動程式筆記型電腦，則會預選內核。 以下示例使用PySpark 3(Spark 2.4) *Aggregation* 筆記本啟動器。
+要在 [!DNL JupyterLab] UI中確認或更改內核，請選擇筆記本右上方導航欄中的內核按鈕。 如果您使用其中一個預定義的啟動程式筆記型電腦，則會預選內核。 以下示例使用PySpark 3([!DNL Spark] 2.4) *Aggregation* 筆記本啟動器。
 
 ![檢查內核](./images/migration/pyspark-migration/check-kernel.png)
 
@@ -342,18 +342,18 @@ PySpark 3(Spark 2.4)筆記型電腦使用Python 3內核，而非PySpark 3（Spar
 
 ![內核下拉菜單](./images/migration/pyspark-migration/select-kernel.png)
 
-對於PySpark 3(Spark 2.4)筆記型電腦，請選取Python 3內核，然後按一下「選取」按 **鈕** 確認。
+對於PySpark 3([!DNL Spark] 2.4)筆記型電腦，請選擇Python 3內核，然後按一下「選擇」 **按鈕** 。
 
 ![確認內核](./images/migration/pyspark-migration/confirm-kernel.png)
 
 ## 初始化sparkSession
 
-所有Spark 2.4筆記型電腦都需要您使用新的簡短字母組合程式碼來初始化工作階段。
+所有 [!DNL Spark] 2.4筆記型電腦都需要您使用新的簡短字母組合程式碼來初始化工作階段。
 
 <table>
   <th>筆記本</th>
-  <th>PySpark 3（Spark 2.3 —— 已過時）</th>
-  <th>PySpark 3(Spark 2.4)</th>
+  <th>PySpark 3（[!DNL Spark] 2.3 —— 已過時）</th>
+  <th>PySpark 3([!DNL Spark] 2.4)</th>
   <tr>
   <th>內核</th>
   <td align="center">PySpark 3</td>
@@ -363,7 +363,7 @@ PySpark 3(Spark 2.4)筆記型電腦使用Python 3內核，而非PySpark 3（Spar
   <th>程式碼</th>
   <td>
   <pre class="JSON language-JSON hljs">
-  火花
+  [!DNL spark]
 </pre>
   </td>
   <td>
@@ -374,7 +374,7 @@ PySpark 3(Spark 2.4)筆記型電腦使用Python 3內核，而非PySpark 3（Spar
   </tr>
 </table>
 
-以下影像強調PySpark 2.3和PySpark 2.4的組態差異。 此示例使用JupyterLab Launcher中 *提供的* Aggregation啟動器筆記型電腦。
+以下影像強調PySpark 2.3和PySpark 2.4的組態差異。 此示例使用中 *提供的* Aggregation啟動筆記本 [!DNL JupyterLab Launcher]。
 
 **2.3的組態範例（不建議使用）**
 
@@ -386,7 +386,7 @@ PySpark 3(Spark 2.4)筆記型電腦使用Python 3內核，而非PySpark 3（Spar
 
 ## 使用%dataset魔術 {#magic}
 
-隨著Spark 2.4的推出， `%dataset` 自訂的魔術功能已推出，可用於全新的PySpark 3(Spark 2.4)筆記型電腦（Python 3內核）。
+隨著 [!DNL Spark] 2.4的推出， `%dataset` 為新的PySpark 3([!DNL Spark] 2.4)筆記型電腦([!DNL Python] 3內核)提供了定制功能。
 
 **使用狀況**
 
@@ -394,7 +394,7 @@ PySpark 3(Spark 2.4)筆記型電腦使用Python 3內核，而非PySpark 3（Spar
 
 **說明**
 
-自訂資料科學工作區魔術指令，可從Python筆記型電腦（Python 3內核）讀取或寫入資料集。
+用於 [!DNL Data Science Workspace] 從筆記本( [!DNL Python] 3內核)讀取或寫入資料集的自定[!DNL Python] 義魔術命令。
 
 - **{action}**: 要在資料集上執行的動作類型。 有兩個動作是「讀取」或「寫入」。
 - **—datasetId {id}**: 用於提供要讀取或寫入的資料集的ID。 這是必要的引數。
@@ -410,9 +410,9 @@ PySpark 3(Spark 2.4)筆記型電腦使用Python 3內核，而非PySpark 3（Spar
 
 ## 在LocalContext中載入到資料幀
 
-隨著Spark 2.4的推出，自訂功能 [`%dataset`](#magic) 也隨之提供。 以下範例重點說明在PySpark(Spark 2.3)和PySpark(Spark 2.4)筆記型電腦中載入資料框架的主要差異：
+隨著 [!DNL Spark] 2.4的推出， [`%dataset`](#magic) 提供自訂功能。 以下示例重點說明在PySpark([!DNL Spark] 2.3)和PySpark([!DNL Spark] 2.4)筆記型電腦中載入資料幀的主要差異：
 
-**使用PySpark 3（Spark 2.3 —— 已過時）- PySpark 3內核**
+**使用PySpark 3([!DNL Spark]2.3 —— 已過時)- PySpark 3內核**
 
 ```python
 dataset_options = sc._jvm.com.adobe.platform.dataset.DataSetOptions
@@ -421,7 +421,7 @@ pd0 = spark.read.format("com.adobe.platform.dataset")
   .load("5e68141134492718af974844")
 ```
 
-**使用PySpark 3(Spark 2.4)- Python 3內核**
+**使用PySpark 3([!DNL Spark]2.4)- Python 3內核**
 
 ```python
 %dataset read --datasetId 5e68141134492718af974844 --dataFrame pd0
@@ -430,9 +430,9 @@ pd0 = spark.read.format("com.adobe.platform.dataset")
 | 元素 | 說明 |
 | ------- | ----------- |
 | pd0 | 要使用或建立的熊貓資料框對象的名稱。 |
-| [%dataset](#magic) | 在Python3內核中自訂資料存取功能。 |
+| [%dataset](#magic) | 在 [!DNL Python] 3個內核中自訂資料存取功能。 |
 
-以下影像強調PySpark 2.3和PySpark 2.4載入資料的主要差異。 此示例使用JupyterLab Launcher中 *提供的* Aggregation啟動器筆記型電腦。
+以下影像強調PySpark 2.3和PySpark 2.4載入資料的主要差異。 此示例使用中 *提供的* Aggregation啟動筆記本 [!DNL JupyterLab Launcher]。
 
 **在PySpark 2.3（Luma資料集）中載入資料——已過時**
 
@@ -444,25 +444,25 @@ PySpark 3(Spark 2.4)是在載入中 `sc = spark.sparkContext` 定義的。
 
 ![載入1](./images/migration/pyspark-migration/2.4-load.png)
 
-**在PySpark 2.3中載入Experience Cloud平台資料——已過時**
+**在PySpark 2.3[!DNL Experience Cloud Platform]中載入資料——已過時**
 
 ![載入2](./images/migration/pyspark-migration/2.3-load-alt.png)
 
-**在PySpark 2.4中載入Experience Cloud平台資料**
+**在PySpark 2.4[!DNL Experience Cloud Platform]中載入資料**
 
-有了PySpark 3(Spark 2.4)，您 `org_id` 就不 `dataset_id` 需要再定義Spark 2。 此外， `df = spark.read.format` 已取代為自訂功能，讓閱 [`%dataset`](#magic) 讀和寫入資料集更輕鬆。
+有了PySpark 3([!DNL Spark] 2.4)，您就 `org_id` 不 `dataset_id` 需要再定義和。 此外， `df = spark.read.format` 已取代為自訂功能，讓閱 [`%dataset`](#magic) 讀和寫入資料集更輕鬆。
 
 ![載入2](./images/migration/pyspark-migration/2.4-load-alt.png)
 
 | 元素 | 描述 |
 | ------- | ----------- |
-| [%dataset](#magic) | 在Python3內核中自訂資料存取功能。 |
+| [%dataset](#magic) | 在 [!DNL Python] 3個內核中自訂資料存取功能。 |
 
 >[!TIP] -mode可設定為 `interactive` 或 `batch`。 —mode的預設值為 `interactive`。 建議在讀取大量 `batch` 資料時使用模式。
 
 ## 建立本地資料幀
 
-有了PySpark 3(Spark 2.4) `%%` ，就不再支援Sparkmagic。 無法再使用下列操作：
+PySpark 3([!DNL Spark] 2.4)不再 `%%` 支援sparkmagic。 無法再使用下列操作：
 
 - `%%help`
 - `%%info`
@@ -475,12 +475,12 @@ PySpark 3(Spark 2.4)是在載入中 `sc = spark.sparkContext` 定義的。
 
 <table>
   <th>筆記本</th>
-  <th>PySpark 3（Spark 2.3 —— 已過時）</th>
-  <th>PySpark 3(Spark 2.4)</th>
+  <th>PySpark 3（[!DNL Spark] 2.3 —— 已過時）</th>
+  <th>PySpark 3([!DNL Spark] 2.4)</th>
   <tr>
   <th>內核</th>
   <td align="center">PySpark 3</td>
-  <td align="center">Python 3</td>
+  <td align="center">[!DNL Python] 3</td>
   </tr>
   <tr>
   <th>程式碼</th>
@@ -513,7 +513,7 @@ sample_df = df.sample(fration)
 
 >[!TIP] 您也可以指定選用的種子樣本，例如布林值withReplacement、雙分數或長種子。
 
-以下影像強調了在PySpark 2.3和PySpark 2.4中建立本機資料框架的主要差異。 此示例使用JupyterLab Launcher中 *提供的* Aggregation啟動器筆記型電腦。
+以下影像強調了在PySpark 2.3和PySpark 2.4中建立本機資料框架的主要差異。 此示例使用中 *提供的* Aggregation啟動筆記本 [!DNL JupyterLab Launcher]。
 
 **建立本機資料框架PySpark 2.3 —— 已過時**
 
@@ -521,15 +521,15 @@ sample_df = df.sample(fration)
 
 **建立本機資料框架PySpark 2.4**
 
-使用PySpark 3(Spark 2.4) `%%sql` ,Sparkmagic不再受支援，而已取代為：
+使用PySpark 3([!DNL Spark] 2.4)時 `%%sql` ,Sparkmagic不再受支援，而已取代為：
 
 ![資料幀2](./images/migration/pyspark-migration/2.4-dataframe.png)
 
 ## 寫入資料集
 
-隨著Spark 2.4的推出，自訂功能 [`%dataset`](#magic) 也隨之提供，讓撰寫資料集變得更簡潔。 若要寫入資料集，請使用下列Spark 2.4範例：
+隨著2. [!DNL Spark] 4的推出， [`%dataset`](#magic) 提供自訂功能，讓撰寫資料集更簡潔。 若要寫入資料集，請使用下 [!DNL Spark] 列2.4範例：
 
-**使用PySpark 3（Spark 2.3 —— 已過時）- PySpark 3內核**
+**使用PySpark 3([!DNL Spark]2.3 —— 已過時)- PySpark 3內核**
 
 ```python
 userToken = spark.sparkContext.getConf().get("spark.yarn.appMasterEnv.USER_TOKEN")
@@ -546,7 +546,7 @@ pd0.write.format("com.adobe.platform.dataset")
   .save("5e68141134492718af974844")
 ```
 
-**使用PySpark 3(Spark 2.4)- Python 3內核**
+**使用PySpark 3([!DNL Spark]2.4)-[!DNL Python]3個內核**
 
 ```python
 %dataset write --datasetId 5e68141134492718af974844 --dataFrame pd0
@@ -557,35 +557,35 @@ pd0.show(10, False)
 | 元素 | 描述 |
 | ------- | ----------- |
 | pd0 | 要使用或建立的熊貓資料框對象的名稱。 |
-| [%dataset](#magic) | 在Python3內核中自訂資料存取功能。 |
+| [%dataset](#magic) | 在 [!DNL Python] 3個內核中自訂資料存取功能。 |
 
 >[!TIP] -mode可設定為 `interactive` 或 `batch`。 —mode的預設值為 `interactive`。 建議在讀取大量 `batch` 資料時使用模式。
 
-以下影像強調了在PySpark 2.3和PySpark 2.4中將資料寫回平台的主要差異。 此示例使用JupyterLab Launcher中 *提供的* Aggregation啟動器筆記型電腦。
+以下影像強調在PySpark 2.3和PySpark 2.4中將資 [!DNL Platform] 料寫回的主要差異。 此示例使用中 *提供的* Aggregation啟動筆記本 [!DNL JupyterLab Launcher]。
 
-**將資料寫回PySpark 2.3平台——已過時**
+**將資料寫回[!DNL Platform]PySpark 2.3 —— 已過時**
 
 ![dataframe 1](./images/migration/pyspark-migration/2.3-write.png)![dataframe 1](./images/migration/pyspark-migration/2.3-write-2.png)![dataframe 1](./images/migration/pyspark-migration/2.3-write-3.png)
 
-**將資料寫回PySpark 2.4平台**
+**將資料寫回[!DNL Platform]PySpark 2.4**
 
-有了PySpark 3(Spark 2.4)，自訂 `%dataset` 的魔術功能就不需要定義 `userToken`、 `serviceToken`、 `serviceApiKey`和等值 `.option`。 此外， `orgId` 不再需要定義。
+有了PySpark 3([!DNL Spark] 2.4)，自訂的 `%dataset` 魔力就不需要定義 `userToken`、 `serviceToken``serviceApiKey`和等值 `.option`。 此外， `orgId` 不再需要定義。
 
 ![dataframe 2](./images/migration/pyspark-migration/2.4-write.png)![dataframe 2](./images/migration/pyspark-migration/2.4-write-2.png)
 
-## Spark 2.3到Spark 2.4(Scala)筆記型電腦移轉指南 {#spark-notebook-migration}
+## [!DNL Spark] 2.3到 [!DNL Spark] 2.4(Scala)筆記本遷移指南 {#spark-notebook-migration}
 
-隨著Spark 2.4推出至JupyterLab筆記型電腦，現有的Spark(Spark 2.3)筆記型電腦現在使用Scala內核，而非Spark內核。 這表示Spark(Spark 2.3)上執行的現有程式碼在Scala(Spark 2.4)中不受支援。 此外，所有新的Spark筆記型電腦都應在JupyterLab啟動器中使用Scala(Spark 2.4)。
+隨著2. [!DNL Spark] 4到的推出 [!DNL JupyterLab Notebooks]，現 [!DNL Spark] 有([!DNL Spark] 2.3)筆記本現在使用Scala內核而非內 [!DNL Spark] 核。 這表示Scala( [!DNL Spark] 2.4)不支援在([!DNL Spark][!DNL Spark] 2.3)上執行的現有程式碼。 此外，所有新 [!DNL Spark] 筆記型電腦都應使用[!DNL Spark] Scala(2.4) [!DNL JupyterLab Launcher]。
 
->[!IMPORTANT] Spark(Spark 2.3)已過時，並設定在後續版本中移除。 所有現有的範例都會設為以Scala(Spark 2.4)範例取代。
+>[!IMPORTANT] [!DNL Spark] ([!DNL Spark] 2.3)已過時，並設定為在後續版本中移除。 所有現有示例都設定為用Scala([!DNL Spark] 2.4)示例替換。
 
-若要將現有的Spark(Spark 2.3)筆記型電腦轉換為Scala(Spark 2.4)，請依照下列範例進行：
+要將現有的 [!DNL Spark] ([!DNL Spark] 2.3)筆記型電腦轉換為Scala([!DNL Spark] 2.4)，請遵循以下示例：
 
 ## 內核
 
-Scala(Spark 2.4)筆記型電腦使用Scala Kernel，而非Spark（Spark 2.3 —— 不建議使用）筆記型電腦中已過時的Spark內核。
+Scala(Spark 2.4)筆記型電腦使用Scala Kernel，而非( [!DNL Spark] 2.3 —— 不建議使用)筆記型電腦中使 [!DNL Spark] 用的已過時[!DNL Spark] 內核。
 
-要在JupyterLab UI中確認或更改內核，請選擇筆記本右上方導航欄中的內核按鈕。 此時將 *顯示「選擇內核* 」窗口。 如果您使用其中一個預定義的啟動程式筆記型電腦，則會預選內核。 以下示例使用JupyterLab Launcher中的Scala *Clustering* notebook。
+要在 [!DNL JupyterLab] UI中確認或更改內核，請選擇筆記本右上方導航欄中的內核按鈕。 此時將 *顯示「選擇內核* 」窗口。 如果您使用其中一個預定義的啟動程式筆記型電腦，則會預選內核。 以下示例使用中的Scala *Clustering* （斯卡拉群集）筆記本 [!DNL JupyterLab Launcher]。
 
 ![檢查內核](./images/migration/spark-scala/scala-kernel.png)
 
@@ -601,15 +601,15 @@ Scala(Spark 2.4)筆記型電腦使用Scala Kernel，而非Spark（Spark 2.3 —�
 
 ## 初始化SparkSession {#initialize-sparksession-scala}
 
-所有Scala(Spark 2.4)筆記型電腦都要求您使用下列簡短字母組合代碼初始化會話：
+所有Scala([!DNL Spark] 2.4)筆記型電腦都要求您使用以下簡短字母組合代碼初始化會話：
 
 <table>
   <th>筆記本</th>
-  <th>Spark（Spark 2.3 —— 已過時）</th>
-  <th>Scala(Spark 2.4)</th>
+  <th>Spark（[!DNL Spark] 2.3 —— 已過時）</th>
+  <th>Scala([!DNL Spark] 2.4)</th>
   <tr>
   <th>內核</th>
-  <td align="center">Spark</td>
+  <td align="center">[!DNL Spark]</td>
   <td align="center">斯卡拉</td>
   </tr>
   <tr>
@@ -625,21 +625,21 @@ Scala(Spark 2.4)筆記型電腦使用Scala Kernel，而非Spark（Spark 2.3 —�
   </tr>
 </table>
 
-下方的Scala(Spark 2.4)影像強調了使用Spark 2.3 Spark內核和Spark 2.4 Scala內核初始化sparkSession時的主要差異。 此示例使用JupyterLab Launcher中 *提供的* Clustering啟動器筆記本。
+下面的Scala([!DNL Spark] 2.4)影像突出顯示了初始化sparkSession時與 [!DNL Spark] 2.3 [!DNL Spark] 內核和 [!DNL Spark] 2.4 Scala內核的關鍵區別。 此示例使用中 *提供的* Clustering啟動筆記本 [!DNL JupyterLab Launcher]。
 
-**Spark（Spark 2.3 —— 已過時）**
+**[!DNL Spark]([!DNL Spark]2.3 —— 不建議使用)**
 
-Spark（Spark 2.3 —— 已過時）使用Spark內核，因此您不需要定義Spark。
+[!DNL Spark] ([!DNL Spark] 2.3 —— 不建議使用)使 [!DNL Spark] 用內核，因此您不需要定義 [!DNL Spark]。
 
-**Scala(Spark 2.4)**
+**Scala([!DNL Spark]2.4)**
 
-搭配使用Spark 2.4和Scala內核時，您必須定義 `val spark` 並匯 `SparkSesson` 入，才能讀取或寫入：
+將 [!DNL Spark] 2.4與Scala內核一起使用時，需要定義 `val spark` 並導 `SparkSesson` 入以讀取或寫入：
 
 ![導入和定義Spark](./images/migration/spark-scala/start-session.png)
 
 ## 查詢資料
 
-Scala(Spark 2.4)不再 `%%` 支援sparkmagic。 無法再使用下列操作：
+Scala([!DNL Spark] 2.4)不再 `%%` 支援sparkmagic。 無法再使用下列操作：
 
 - `%%help`
 - `%%info`
@@ -652,11 +652,11 @@ Scala(Spark 2.4)不再 `%%` 支援sparkmagic。 無法再使用下列操作：
 
 <table>
   <th>筆記本</th>
-  <th>Spark（Spark 2.3 —— 已過時）</th>
-  <th>Scala(Spark 2.4)</th>
+  <th>[!DNL Spark]（[!DNL Spark] 2.3 —— 已過時）</th>
+  <th>Scala([!DNL Spark] 2.4)</th>
   <tr>
   <th>內核</th>
-  <td align="center">Spark</td>
+  <td align="center">[!DNL Spark]</td>
   <td align="center">斯卡拉</td>
   </tr>
   <tr>
@@ -691,15 +691,15 @@ val sample_df = df.sample(fration) </pre>
    </tr>
 </table>
 
-下面的Scala(Spark 2.4)影像強調了使用Spark 2.3 Spark內核和Spark 2.4 Scala內核進行查詢時的主要差異。 此示例使用JupyterLab Launcher中 *提供的* Clustering啟動器筆記本。
+下面的Scala([!DNL Spark] 2.4)影像強調了使用 [!DNL Spark] 2.3內核和Spark 2.4 Scala內核進行查詢時的 [!DNL Spark] 主要差異。 此示例使用中 *提供的* Clustering啟動筆記本 [!DNL JupyterLab Launcher]。
 
-**Spark（Spark 2.3 —— 已過時）**
+**[!DNL Spark]([!DNL Spark]2.3 —— 不建議使用)**
 
-Spark（Spark 2.3 —— 已過時）筆記型電腦使用Spark內核。 Spark內核支援並使用sparkmagic `%%sql` 。
+( [!DNL Spark] 2.3 —— 不建議使用)筆記本使用內[!DNL Spark][!DNL Spark] 核。 內核 [!DNL Spark] 支援並使用sparkmagic `%%sql` 。
 
 ![](./images/migration/spark-scala/sql-2.3.png)
 
-**Scala(Spark 2.4)**
+**Scala([!DNL Spark]2.4)**
 
 Scala內核不再支援sparkmagic `%%sql` 。 必須轉換現有的Sparkmagic程式碼。
 
@@ -707,9 +707,9 @@ Scala內核不再支援sparkmagic `%%sql` 。 必須轉換現有的Sparkmagic程
 
 ## 讀取資料集 {#notebook-read-dataset-spark}
 
-在Spark 2.3中，您需要為用來讀取資 `option` 料或使用程式碼儲存格中原始值的值定義變數。 在Scala中，您可以 `sys.env("PYDASDK_IMS_USER_TOKEN")` 用來宣告和傳回值，如此就不需要定義變數，例如 `var userToken`。 在下方的Scala(Spark 2.4)範例中， `sys.env` 用來定義並傳回讀取資料集所需的所有值。
+在 [!DNL Spark] 2.3中，您需要為用來讀取資料或 `option` 在程式碼儲存格中使用原始值的值定義變數。 在Scala中，您可以 `sys.env("PYDASDK_IMS_USER_TOKEN")` 用來宣告和傳回值，如此就不需要定義變數，例如 `var userToken`。 在下方的Scala(Spark 2.4)範例中， `sys.env` 用來定義並傳回讀取資料集所需的所有值。
 
-**使用Spark（Spark 2.3 —— 已過時）- Spark Kernel**
+**使[!DNL Spark]用([!DNL Spark]2.3 —— 不建議使用)-內核[!DNL Spark]**
 
 ```scala
 import com.adobe.platform.dataset.DataSetOptions
@@ -719,7 +719,7 @@ var df1 = spark.read.format("com.adobe.platform.dataset")
   .load("5e68141134492718af974844")
 ```
 
-**使用Scala(Spark 2.4)- Scala內核**
+**使用Scala([!DNL Spark]2.4)- Scala內核**
 
 ```scala
 import org.apache.spark.sql.{Dataset, SparkSession}
@@ -742,17 +742,17 @@ val df1 = spark.read.format("com.adobe.platform.query")
 | ims-org | 您使用自動擷取的ims組織ID `sys.env("IMS_ORG_ID")`。 |
 | api-key | 您的api金鑰會使用自動擷取 `sys.env("PYDASDK_IMS_CLIENT_ID")`。 |
 
-以下影像強調使用Spark 2.3和Spark 2.4載入資料的主要差異。 此示例使用JupyterLab Launcher中 *提供的* Clustering啟動器筆記本。
+以下影像會反白標示2.3和 [!DNL Spark] 2. [!DNL Spark] 4載入資料的主要差異。 此示例使用中 *提供的* Clustering啟動筆記本 [!DNL JupyterLab Launcher]。
 
-**Spark（Spark 2.3 —— 已過時）**
+**[!DNL Spark]([!DNL Spark]2.3 —— 不建議使用)**
 
-Spark（Spark 2.3 —— 已過時）筆記型電腦使用Spark內核。 以下兩個儲存格顯示以日期範圍(2019-3-21, 2019-3-29)內指定資料集ID載入資料集的範例。
+( [!DNL Spark] 2.3 —— 不建議使用)筆記本使用內[!DNL Spark][!DNL Spark] 核。 以下兩個儲存格顯示以日期範圍(2019-3-21, 2019-3-29)內指定資料集ID載入資料集的範例。
 
 ![載入spark 2.3](./images/migration/spark-scala/load-2.3.png)
 
-**Scala(Spark 2.4)**
+**Scala([!DNL Spark]2.4)**
 
-Scala(Spark 2.4)筆記型電腦使用Scala內核，當設定時，此內核需要更多值，如第一個程式碼儲存格中反白顯示。 此外， `var mdata` 需要填 `option` 入更多值。 在本筆記本中，前述初始化SparkSession [的程式碼會包含在程式碼](#initialize-sparksession-scala)`var mdata` 儲存格中。
+Scala([!DNL Spark] 2.4)筆記型電腦使用Scala內核，當設定時，該內核需要更多值，如第一個代碼單元格中突出顯示的。 此外， `var mdata` 需要填 `option` 入更多值。 在本筆記本中，前述初始化SparkSession [的程式碼會包含在程式碼](#initialize-sparksession-scala)`var mdata` 儲存格中。
 
 ![載入spark 2.4](./images/migration/spark-scala/load-2.4.png)
 
@@ -766,7 +766,7 @@ Scala(Spark 2.4)筆記型電腦使用Scala內核，當設定時，此內核需�
 
 與讀取 [資料集類似](#notebook-read-dataset-spark)，寫入資料集需要下 `option` 列範例中概述的額外值。 在Scala中，您可以 `sys.env("PYDASDK_IMS_USER_TOKEN")` 用來宣告和傳回值，如此就不需要定義變數，例如 `var userToken`。 在下面的Scala範例中， `sys.env` 用於定義並傳回寫入資料集所需的所有必要值。
 
-**使用Spark（Spark 2.3 —— 已過時）- Spark Kernel**
+**使[!DNL Spark]用([!DNL Spark]2.3 —— 不建議使用)-內核[!DNL Spark]**
 
 ```scala
 import com.adobe.platform.dataset.DataSetOptions
@@ -783,7 +783,7 @@ df1.write.format("com.adobe.platform.dataset")
   .save("5e68141134492718af974844")
 ```
 
-**使用Scala(Spark 2.4)- Scala內核**
+**使用Scala([!DNL Spark]2.4)- Scala內核**
 
 ```scala
 import org.apache.spark.sql.{Dataset, SparkSession}
