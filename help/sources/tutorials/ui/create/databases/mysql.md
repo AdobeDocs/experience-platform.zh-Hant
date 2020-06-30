@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 在UI中建立MySQL源連接器
 topic: overview
 translation-type: tm+mt
-source-git-commit: 5ad763d2167c68f3293a2813248efaee22230a52
+source-git-commit: d3c725c4760acb3857a67d0d30b24732c963a030
 workflow-type: tm+mt
-source-wordcount: '487'
+source-wordcount: '485'
 ht-degree: 1%
 
 ---
@@ -32,7 +32,7 @@ Adobe Experience Platform中的來源連接器可讓您依計畫吸收外部來�
 
 ### 收集必要的認證
 
-要訪問平台上的MySQL帳戶，必須提供以下值：
+要訪問MySQL帳戶， [!DNL Platform]必須提供以下值：
 
 | 憑證 | 說明 |
 | ---------- | ----------- |
@@ -42,25 +42,25 @@ Adobe Experience Platform中的來源連接器可讓您依計畫吸收外部來�
 
 ## 連接您的MySQL帳戶
 
-收集到所需憑據後，您可以按照以下步驟建立新的入站基本連接，以將MySQL帳戶連結到平台。
+收集到所需憑據後，可以按照以下步驟建立新的入站基本連接，以將MySQL帳戶連結到 [!DNL Platform]。
 
-登入 <a href="https://platform.adobe.com" target="_blank">Adobe Experience Platform</a> ，然後從左側導覽列選取 **Sources** ，以存取 ** Sources工作區。 「目 *錄* 」螢幕顯示各種源，您可以為其建立入站基本連接，而每個源顯示與其關聯的現有基本連接數。
+登入 <a href="https://platform.adobe.com" target="_blank">Adobe Experience Platform</a> ，然後從左側導覽列選取 **[!UICONTROL Sources]** ，以存取 ** Sources工作區。 「目 *錄* 」螢幕顯示各種源，您可以為其建立入站基本連接，而每個源顯示與其關聯的現有基本連接數。
 
-在「數 *據庫* 」類別下，選擇 **MySQL** ，以在螢幕右側顯示資訊欄。 資訊列提供所選來源的簡短說明，以及與來源連線或檢視其檔案的選項。 要建立新的入站基本連接，請選擇「 **連接源」**。
+在「數 *[!UICONTROL 據庫]* 」類別下，選擇 **[!UICONTROL MySQL]** ，以在螢幕右側顯示資訊欄。 資訊列提供所選來源的簡短說明，以及與來源連線或檢視其檔案的選項。 要建立新的入站基本連接，請選擇「 **[!UICONTROL 連接源」]**。
 
 ![](../../../../images/tutorials/create/my-sql/catalog.png)
 
-此時 *將顯示「連接到MySQL* 」頁。 在此頁上，您可以使用新認證或現有認證。
+此時 *[!UICONTROL 將顯示「連接到MySQL]* 」頁。 在此頁上，您可以使用新認證或現有認證。
 
 ### 新帳戶
 
-如果您使用新認證，請選擇「新 **帳戶」**。 在出現的輸入表單上，提供基本連線名稱、可選說明和您的MySQL憑證。 完成後，選擇 **Connect** ，然後為建立新的基本連接留出一些時間。
+如果您使用新認證，請選擇「新 **[!UICONTROL 帳戶」]**。 在出現的輸入表單上，提供基本連線名稱、可選說明和您的MySQL憑證。 完成後，選擇 **[!UICONTROL Connect]** ，然後為建立新的基本連接留出一些時間。
 
 ![](../../../../images/tutorials/create/my-sql/new.png)
 
 ### 現有帳戶
 
-要連接現有帳戶，請選擇要連接的MySQL帳戶，然後選擇「下 **一步** 」繼續。
+要連接現有帳戶，請選擇要連接的MySQL帳戶，然後選擇「下 **[!UICONTROL 一步]** 」繼續。
 
 ![](../../../../images/tutorials/create/my-sql/existing.png)
 
