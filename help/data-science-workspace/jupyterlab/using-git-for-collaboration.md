@@ -4,30 +4,30 @@ solution: Experience Platform
 title: 使用Git在JupyterLab中協作
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 83e74ad93bdef056c8aef07c9d56313af6f4ddfd
+source-git-commit: c48079ba997a7b4c082253a0b2867df76927aa6d
 workflow-type: tm+mt
-source-wordcount: '273'
+source-wordcount: '248'
 ht-degree: 1%
 
 ---
 
 
-# 使用Git在JupyterLab中協作
+# 使用 [!DNL JupyterLab] [!DNL Git]
 
-Git是一種分佈式版本控制系統，用於跟蹤軟體開發過程中原始碼的更改。 Git已預先安裝在Data Science Workspace JupyterLab環境中。
+[!DNL Git] 是一種分佈式版本控制系統，用於跟蹤軟體開發過程中原始碼的更改。 Git已預先安裝在環境 [!DNL Data Science Workspace JupyterLab] 中。
 
 ## 必要條件
 
 >[!NOTE]
 > 您要使用的Git伺服器必須可透過網際網路存取。
 
-Data Science Workspace JupyterLab環境是代管環境，不會部署在公司防火牆內，因此您所連接的Git伺服器必須可從公共網際網路存取。 這可以是 [GitHub上的公用或專用儲存庫](https://github.com/) ，也可以是您決定自行托管的Git伺服器的另一實例。
+此環 [!DNL Data Science Workspace JupyterLab] 境是代管環境，並未部署在公司防火牆內，因此您所連接的Git伺服器必須可從公共網際網路存取。 這可以是 [GitHub上的公用或專用儲存庫](https://github.com/) ，也可以是您決定自 [!DNL Git] 己托管的另一個伺服器實例。
 
-## 將Git連接到Data Science Workspace JupyterLab筆記型電腦環境
+## 連接 [!DNL Git] 到環 [!DNL Data Science Workspace JupyterLab Notebooks] 境
 
-首先，啟動 [!DNL Adobe Experience Platform] 並導航到 [JupyterLabs Notebooks環境](https://platform.adobe.com/notebooks/jupyterLab) 。
+首先，啟動 [!DNL Adobe Experience Platform] 並導覽至環 [!DNL JupyterLabs Notebooks](https://platform.adobe.com/notebooks/jupyterLab) 境。
 
-在JupyterLab中，選擇「 **[!UICONTROL File]** （檔案）」 ，然後將滑鼠暫留在「 **[!UICONTROL New（新建）」上]**。 從出現的下拉式清單中，選取「 **[!UICONTROL 終端機]**」。
+在中 [!DNL JupyterLab]，選擇「 **[!UICONTROL File]** （檔案）」 ，然後將滑鼠暫留在「 **[!UICONTROL New（新建）]**」上。 從出現的下拉式清單中，選取「 **[!UICONTROL 終端機]**」。
 
 ![JupyterLab Nav](../images/jupyterlab/tutorials/open-terminal.png)
 
@@ -55,4 +55,4 @@ Data Science Workspace JupyterLab環境是代管環境，不會部署在公司�
 
 ## 後續步驟
 
-克隆完儲存庫後，您可以像在本地電腦上一樣使用Git，以便與其他人在筆記本上協作。 有關在JupyterLab中可以做什麼的詳細資訊，請參閱 [JupyterLab使用手冊](./overview.md)。
+克隆完儲存庫後，您可以像在本地電腦上一樣使用Git，以便與其他人在筆記本上協作。 有關您可在其中執行的操作的詳細 [!DNL JupyterLab]資訊，請參見 [!DNL JupyterLab user guide](./overview.md)。
