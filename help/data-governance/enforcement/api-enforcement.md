@@ -4,7 +4,10 @@ solution: Experience Platform
 title: 使用原則服務API強制執行資料使用原則
 topic: enforcement
 translation-type: tm+mt
-source-git-commit: 3e5245a718295cc5318c277a5cf9ee71da2a911b
+source-git-commit: 1a835c6c20c70bf03d956c601e2704b68d4f90fa
+workflow-type: tm+mt
+source-wordcount: '875'
+ht-degree: 2%
 
 ---
 
@@ -15,18 +18,18 @@ source-git-commit: 3e5245a718295cc5318c277a5cf9ee71da2a911b
 
 >[!NOTE] 預設情況下，只有其狀態設定為的策 `ENABLED` 略才能參與評估。 若要允 `DRAFT` 許原則參與評估，您必須在請求路徑中加 `includeDraft=true` 入查詢參數。
 
-本檔案提供如何使用Policy Service API來檢查不同情況下是否違反原則的步驟。
+本檔案提供如何使用 [!DNL Policy Service] API檢查不同情況下是否違反原則的步驟。
 
 ## 快速入門
 
 本教程需要對執行DULE策略時涉及的以下關鍵概念有充分的瞭解：
 
-* [資料治理](../home.md):平台實施資料使用合規性的框架。
-   * [資料使用標籤](../labels/overview.md):資料使用標籤會套用至資料集（和／或這些資料集內的個別欄位），並指定資料的使用限制。
-   * [資料使用原則](../policies/overview.md):資料使用原則是描述特定DULE標籤集所允許或限制之行銷動作類型的規則。
-* [沙盒](../../sandboxes/home.md):Experience Platform提供虛擬沙盒，可將單一Platform實例分割為不同的虛擬環境，以協助開發和發展數位體驗應用程式。
+* [資料治理](../home.md): 強制執行資料使用 [!DNL Platform] 合規性的框架。
+   * [資料使用標籤](../labels/overview.md): 資料使用標籤會套用至資料集（和／或這些資料集內的個別欄位），並指定資料的使用限制。
+   * [資料使用原則](../policies/overview.md): 資料使用原則是描述特定DULE標籤集所允許或限制之行銷動作類型的規則。
+* [沙盒](../../sandboxes/home.md): [!DNL Experience Platform] 提供虛擬沙盒，可將單一執行個體分 [!DNL Platform] 割為不同的虛擬環境，以協助開發和發展數位體驗應用程式。
 
-在開始本教學課程之前，請先閱讀開發人員指南 [](../api/getting-started.md) ，以取得成功呼叫DULE Policy Service API所需的重要資訊，包括必要的標題以及如何讀取範例API呼叫。
+在開始本教學課程之前，請先閱讀開發人員指南 [，以取得成功呼叫DULE](../api/getting-started.md)[!DNL Policy Service] API所需的重要資訊，包括必要的標題以及如何讀取範例API呼叫。
 
 ## 使用DULE標籤和行銷動作進行評估
 
@@ -125,7 +128,7 @@ curl -X GET \
 
 ## 使用資料集進行評估
 
-您可以測試針對可從中收集DULE標籤的一或多個資料集的行銷動作，以評估DULE原則。 若要這麼做，請向請求內文提出POST `/marketingActions/core/{MARKETING_ACTION_NAME}/constraints` 請求，並在請求內文中提供資料集ID，如下例所示。
+您可以測試針對可從中收集DULE標籤的一或多個資料集的行銷動作，以評估DULE原則。 若要這麼做，請向請求主體提 `/marketingActions/core/{MARKETING_ACTION_NAME}/constraints` 出POST請求並提供資料集ID，如下例所示。
 
 **API格式**
 
@@ -362,4 +365,4 @@ curl -X POST \
 
 閱讀本檔案後，您已在資料集或一組DULE標籤上執行行銷動作時，成功檢查是否有違反原則的情況。 使用API回應中傳回的資料，您可以在體驗應用程式中設定通訊協定，以便在發生違反原則的情況時適當強制執行。
 
-如需如何在即時客戶個人檔案中為受眾細分強制實施資料使用政策的步驟，請參閱下列教 [學課程](../../segmentation/tutorials/governance.md)。
+有關如何在中為受眾細分強制執行資料使用策略的 [!DNL Real-time Customer Profile]步驟，請參閱以下教 [學課程](../../segmentation/tutorials/governance.md)。
