@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 將來源檔案封裝至配方
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: f2a7300d4ad75e3910abbdf2ecc2946a2dfe553c
+source-git-commit: 4b0f0dda97f044590f55eaf75a220f631f3313ee
 workflow-type: tm+mt
-source-wordcount: '1106'
+source-wordcount: '1077'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # 將來源檔案封裝至配方
 
-本教學課程提供如何將提供的零售銷售範例來源檔案封裝成封存檔案的指示，此檔案可依循UI或API中的方式匯入工作流程，用來在Adobe Experience Platform Data Science Workspace中建立方式。
+本教學課程提供如何將提供的零售銷售範例來源檔案封裝成封存檔案的指示，此檔案可透過遵循UI或API中的方式匯入工作流程，在Adobe Experience Platform中用來建立方式。 [!DNL Data Science Workspace]
 
 要瞭解的概念：
 
@@ -23,14 +23,14 @@ ht-degree: 0%
 
 ## 必要條件
 
-- [Docker](https://docs.docker.com/install/#supported-platforms)
-- [Python 3和pip](https://docs.conda.io/en/latest/miniconda.html)
-- [斯卡拉](https://www.scala-sbt.org/download.html?_ga=2.42231906.690987621.1558478883-2004067584.1558478883)
-- [馬文](https://maven.apache.org/install.html)
+- [!DNL Docker](https://docs.docker.com/install/#supported-platforms)
+- [!DNL Python 3 and pip](https://docs.conda.io/en/latest/miniconda.html)
+- [!DNL Scala](https://www.scala-sbt.org/download.html?_ga=2.42231906.690987621.1558478883-2004067584.1558478883)
+- [!DNL Maven](https://maven.apache.org/install.html)
 
 ## 方式建立
 
-方式建立從封裝來源檔案開始，以建立封存檔案。 來源檔案定義機器學習邏輯和演算法，用於解決手邊的特定問題，並以Python、R、PySpark或Scala編寫。 構建的存檔檔案採用Docker映像的形式。 建立後，封裝的封存檔案會匯入Data Science Workspace，以在UI中 [或使用](./import-packaged-recipe-ui.md)[API建立方式](./import-packaged-recipe-api.md)。
+方式建立從封裝來源檔案開始，以建立封存檔案。 來源檔案會定義機器學習邏輯和演算法，用於解決手邊的特定問題，並以 [!DNL Python]R、PySpark或Scala編寫。 構建的存檔檔案採用Docker映像的形式。 建立後，封裝的封存檔案會匯入至UI [!DNL Data Science Workspace] 中，以 [或使用](./import-packaged-recipe-ui.md) API [建立方式](./import-packaged-recipe-api.md)。
 
 ### 基於Docker的模型編寫 {#docker-based-model-authoring}
 
@@ -52,7 +52,7 @@ Docker映像允許開發人員將應用程式與其所需的所有部件（如�
 >*Type *是機器學習問題的類，它是為機器學習問題而設計的，在訓練後用於幫助定制評估訓練運行。
 
 >[!TIP]
->- 對於Python配方，請選擇 **[!UICONTROL Python]** Runtime。
+>- 對於方 [!DNL Python] 式，請選取 **[!UICONTROL Python]** 執行階段。
 >- 對於R方式，請選擇 **[!UICONTROL R]** Runtime。
 >- 對於PySpark配方，請選取 **[!UICONTROL PySpark執行時]** 期。 對象類型自動填充。
 >- 對於Scala配方，請選取 **[!UICONTROL Spark執行]** 階段。 對象類型自動填充。
@@ -60,7 +60,7 @@ Docker映像允許開發人員將應用程式與其所需的所有部件（如�
 
 ![](../images/models-recipes/package-source-files/docker-creds.png)
 
-請注意Docker主 *機*、 *Username*&#x200B;和 *Password的值*。 這些功能可用來在下列工作流程中建立和推播您的Docker影像。
+請注意Docker主 *機*、 *Username*&#x200B;和 *Password的值*。 這些功能可用來在下列工作流程中 [!DNL Docker] 建立和推播您的影像。
 
 >[!NOTE]
 >完成下列步驟後，即會提供來源URL。 後續的教學課程會說明設定檔案，這些教學課程可在後續 [步驟中找到](#next-steps)。
@@ -74,15 +74,15 @@ Docker映像允許開發人員將應用程式與其所需的所有部件（如�
 - [建立PySpark Docker影像](#pyspark-docker)
 - [建立Scala(Spark)Docker影像](#scala-docker)
 
-### 建立Python Docker影像 {#python-docker}
+### 建立 [!DNL Python] Docker影像 {#python-docker}
 
-如果您尚未這樣做，請使用以下命令將github資料庫克隆到您的本地系統上：
+如果尚未執行此操作，請使用以下命 [!DNL GitHub] 令將儲存庫克隆到本地系統上：
 
 ```shell
 git clone https://github.com/adobe/experience-platform-dsw-reference.git
 ```
 
-Navigate to the directory `experience-platform-dsw-reference/recipes/python/retail`. 在這裡，您將找到用於登 `login.sh` 錄 `build.sh` 到Docker和生成Python Docker映像的指令碼。 如果您的 [Docker憑據已就緒](#docker-based-model-authoring) ，請按順序輸入以下命令：
+Navigate to the directory `experience-platform-dsw-reference/recipes/python/retail`. 在這裡，您將找到用於登 `login.sh` 錄 `build.sh` 到Docker和構建映像的指令碼 [!DNL Python Docker] 。 如果您的 [Docker憑據已就緒](#docker-based-model-authoring) ，請按順序輸入以下命令：
 
 ```BASH
 # for logging in to Docker
@@ -103,9 +103,9 @@ Navigate to the directory `experience-platform-dsw-reference/recipes/python/reta
 
 複製此URL，並移至下 [一步](#next-steps)。
 
-### 構建R Docker映像 {#r-docker}
+### Build R影 [!DNL Docker] 像 {#r-docker}
 
-如果您尚未這樣做，請使用以下命令將github資料庫克隆到您的本地系統上：
+如果尚未執行此操作，請使用以下命 [!DNL GitHub] 令將儲存庫克隆到本地系統上：
 
 ```BASH
 git clone https://github.com/adobe/experience-platform-dsw-reference.git
@@ -134,7 +134,7 @@ git clone https://github.com/adobe/experience-platform-dsw-reference.git
 
 ### 建立PySpark Docker影像 {#pyspark-docker}
 
-首先，使用以下命令將github資料庫克隆到本地系統：
+首先，使用以 [!DNL GitHub] 下命令將儲存庫克隆到本地系統：
 
 ```shell
 git clone https://github.com/adobe/experience-platform-dsw-reference.git
@@ -163,7 +163,7 @@ Navigate to the directory `experience-platform-dsw-reference/recipes/pyspark/ret
 
 ### 建立Scala Docker影像 {#scala-docker}
 
-首先，在終端機中使用下列命令將github資料庫克隆到您的本地系統：
+首先，在終端 [!DNL GitHub] 機中使用以下命令將儲存庫克隆到本地系統：
 
 ```shell
 git clone https://github.com/adobe/experience-platform-dsw-reference.git
@@ -192,7 +192,7 @@ git clone https://github.com/adobe/experience-platform-dsw-reference.git
 
 ## 下一步 {#next-steps}
 
-本教學課程將來源檔案封裝成「方式」，這是將「方式」匯入「資料科學工作區」的先決條件步驟。 您現在應該在Azure容器註冊表中有Docker影像，以及對應的影像URL。 您現在已準備好開始將封裝方式匯入「資料科學工作區」的教學課程。 請選取下列其中一個教學課程連結以開始使用：
+本教學課程將來源檔案封裝為「配方」，這是將「配方」匯入的先決條件步驟 [!DNL Data Science Workspace]。 您現在應該在Azure容器註冊表中有Docker影像，以及對應的影像URL。 您現在已準備好開始將封裝配方匯入的教學課程 [!DNL Data Science Workspace]。 請選取下列其中一個教學課程連結以開始使用：
 
 - [在UI中匯入封裝的方式](./import-packaged-recipe-ui.md)
 - [使用API匯入封裝的方式](./import-packaged-recipe-api.md)
