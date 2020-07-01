@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Adobe Experience Platform產品檔案
 topic: getting started
 translation-type: tm+mt
-source-git-commit: f2a7300d4ad75e3910abbdf2ecc2946a2dfe553c
+source-git-commit: 2e5668a8b1d5fb831188fbd4e453b9f4aa7474df
 workflow-type: tm+mt
-source-wordcount: '6961'
+source-wordcount: '6594'
 ht-degree: 0%
 
 ---
@@ -16,33 +16,33 @@ ht-degree: 0%
 
 ## A
 
-**存取控制：** {#access-control} Experience Platform的存取控制功能可透過Adobe Admin Console中的產品設定檔，將使用者連結至存取權限和沙盒環境。
+**存取控制：** {#access-control} 透過Adobe Admin Console中 [!DNL Experience Platform] 的產品設定檔，將使用者連結至存取權限和沙盒環境的存取控制。
 
 **存取金鑰ID:** 存取金鑰ID是與Amazon S3機密存取金鑰關聯的唯一識別碼。 訪問密鑰ID和秘密訪問密鑰一起用於簽署AWS請求。
 
-**動作：** 在Experience Platform Launch中，動作是特定類型的規則元件，可定義事件發生後應發生的事件，並評估及傳遞條件。
+**動作：** 在中， [!DNL Experience Platform Launch]動作是一種特定類型的規則元件，可定義事件發生後應發生的事件，並評估和傳遞條件。
 
-**啟動：** 在即時客戶資料平台中，啟動是指使用者將區段或描述檔對應至目標（例如Oracle Exolica、Google或Salesforce Marketing Cloud）所採取的動作。
+**啟動：** 在 [!DNL Real-time Customer Data Platform]中，啟動是使用者將區段或描述檔對應至目標（例如、或）所 [!DNL Oracle Eloqua]採取 [!DNL Google]的動作 [!DNL Salesforce Marketing Cloud]。
 
-**活動：** 在決策服務中，活動是行銷人員希望決策引擎從中選擇最佳選件的一組選件。
+**活動：** 在中， [!DNL Decisioning Service]活動是行銷人員希望決策引擎從中選擇最佳選件的一組選件。
 
 **Adobe Admin Console:** Adobe Admin Console為您的組織提供管理存取權和功能權限的集中位置。
 
 **Adobe Experience Platform:** Adobe Experience Platform可標準化整個企業的資料和內容、提供即時的消費者個人檔案、啟用資料科學，並加速內容速度，以推動客戶體驗個人化。
 
-**Adobe Connectors:** Adobe Connectors是由Adobe建立的預先設定連線，讓資料進出Experience Platform。 連接器包括Microsoft Dynamics、Salesforce、Amazon S3和Azure Blob。
+**Adobe Connectors:** Adobe Connectors是預先設定的由Adobe建立的連線，讓資料進出 [!DNL Experience Platform]。 連接器 [!DNL Microsoft Dynamics]包括 [!DNL Salesforce]、 [!DNL Amazon S3]和 [!DNL Azure Blob]。
 
-**Adobe Intelligent Services:** Adobe Sensei是Experience Platform的智慧架構。 它還提供一組AI服務，讓品牌能夠增強提供即時、個人化客戶體驗的能力。
+**Adobe Intelligent Services:** Adobe Sensei是強大的智慧架構 [!DNL Experience Platform]。 它還提供一組AI服務，讓品牌能夠增強提供即時、個人化客戶體驗的能力。
 
-**Adobe I/O:** Adobe I/O是Experience Platform的一部分，可讓開發人員存取整合、擴充和自訂Adobe Experience Platform所需的一切，包括API、事件、開發人員主控台和實用工具。
+**Adobe I/O:** Adobe I/O是開發人員的一部 [!DNL Experience Platform] 份，可存取開發人員整合、擴充和自訂Adobe Experience Platform所需的一切，包括API、事件、開發人員主控台和實用工具。
 
-**Adobe Sensei:** Adobe Sensei是Experience Platform的智慧架構。 它還提供一組AI服務，讓品牌能夠增強提供即時、個人化客戶體驗的能力。
+**Adobe Sensei:** Adobe Sensei是強大的智慧架構 [!DNL Experience Platform]。 它還提供一組AI服務，讓品牌能夠增強提供即時、個人化客戶體驗的能力。
 
-**Amazon S3儲存貯體：** Amazon S3儲存桶是儲存在Amazon生態系統中的資料的基本容器。 儲存桶包含對象，每個對象都使用由開發人員指派的唯一密鑰進行儲存和檢索。
+**Amazon S3儲存貯體：** [!DNL Amazon S3] 儲存桶是儲存在生態系統中的資料的基本容 [!DNL Amazon] 器。 儲存桶包含對象，每個對象都使用由開發人員指派的唯一密鑰進行儲存和檢索。
 
-**Amazon S3連接器：** Amazon S3連接器可讓Experience Platform客戶安全地連接及存取其Amazon S3資料。
+**Amazon S3連接器：** [!DNL Amazon] S3連接器可讓客戶 [!DNL Experience Platform] 安全地連接及存取 [!DNL Amazon] 其S3資料。
 
-**附加儲存策略：** 儲 `Append` 存策略是指定第三方資料以透過連線進行內嵌，並在資料集結尾附加任何新資料或列時使用的選項。 先前擷取的列仍保持不變，且只有自上次排程執行後建立的列會被擷取至Experience Platform。 在Experience Platform上，來源系統中變更的任何列都保持不變。
+**附加儲存策略：** 儲 `Append` 存策略是指定第三方資料以透過連線進行內嵌，並在資料集結尾附加任何新資料或列時使用的選項。 先前收錄的列保持不變，且只有自上次排程執行後建立的列會收錄至 [!DNL Experience Platform]。 源系統中更改的任何行在上保持不變 [!DNL Experience Platform]。
 
 **應用程式生命週期管理：** 應用程式生命週期管理可讓您建立獨立的虛擬環境，以開發和發展數位體驗應用程式。
 
@@ -54,7 +54,7 @@ ht-degree: 0%
 
 **屬性合併：** 屬性合併定義合併策略在發生資料衝突時如何優先排列配置檔案屬性值。
 
-**歸因AI:** Attribution AI是Adobe Sensei服務，可在整個客戶生命週期中提供演算法多通道歸因功能。
+**歸因AI:** [!DNL Attribution AI] 是Adobe Sensei Service，可在整個客戶生命週期中提供演算法多通道歸因功能。
 
 **觀眾**: 對象是符合區段定義條件的設定檔產生集。
 
@@ -64,47 +64,47 @@ ht-degree: 0%
 
 ## B
 
-**回填：** 在即時客戶資料平台中，在排程的來源連線中，回填可擷取歷史資料。
+**回填：** 在排 [!DNL Real-time Customer Data Platform]程的來源連線中，回填可擷取歷史資料。
 
-**回填期間：** `Backfill period` 是一個選項，用於設定通過連接接收第三方歷史資料的時間長度。 選取永久的回填期間，會將來源資料的整個歷史記錄擷取至Experience Platform。
+**回填期間：** `Backfill period` 是一個選項，用於設定通過連接接收第三方歷史資料的時間長度。 選取永久的回填期間，會將來源資料的整個歷史記錄收錄至 [!DNL Experience Platform]。
 
 **批：** 批是在一段時間內收集並以單一單位一起處理的一組資料。
 
 **批次ID:** 批次ID是Adobe產生的一批資料識別碼。
 
-**批次擷取：** 批處理允許用戶接收數PB的資料，並使其在企業系統中可用。 使用最新技術，使用者現在可以將任何架構XDM和非XDM內嵌至Experience Platform。
+**批次擷取：** 批處理允許用戶接收數PB的資料，並使其在企業系統中可用。 使用最新技術，用戶現在可以將任何模式XDM和非XDM嵌入其中 [!DNL Experience Platform]。
 
 **批次分段：** 批次分段是持續資料選擇程式的替代選擇，並透過區段定義一次移動所有描述檔資料，以產生對應的觀眾。 建立後，會儲存此區段，以便匯出以供使用。
 
-**構建：** 在Experience Platform Launch中，組建是已部署的程式庫。 構建版本是包含執行該庫內包含的業務邏輯所需的所有配置和代碼的檔案或檔案集。
+**構建：** 在 [!DNL Experience Platform Launch]中，構建是部署的庫。 構建版本是包含執行該庫內包含的業務邏輯所需的所有配置和代碼的檔案或檔案集。
 
-**商業智慧工具：** 商業智慧（又稱為「BI」工具）主要與Experience Platform Query Service整合。 BI工具是一種應用程式軟體類型，可從內部和外部系統收集和處理大量非結構化資料。
+**商業智慧工具：** 商業智慧（又稱為「BI」工具）主要與整合 [!DNL Experience Platform Query Service]。 BI工具是一種應用程式軟體類型，可從內部和外部系統收集和處理大量非結構化資料。
 
 [回到頁首](#adobe-experience-platform-glossary)
 
 ## C
 
-**上限設定：** 在決策服務中，決策規則會使用上限設定來定義選件的呈現次數。 有兩種上限，一個選件在合併的目標對象中可建議多少次（也稱為「全域上限」），以及一個選件可建議給同一使用者（亦稱為「設定檔上限」）的次數。
+**上限設定：** 在中， [!DNL Decisioning Service]決策規則會使用上限設定來定義選件的顯示次數。 有兩種上限，一個選件在合併的目標對象中可建議多少次（也稱為「全域上限」），以及一個選件可建議給同一使用者（亦稱為「設定檔上限」）的次數。
 
-**目錄：** 在即時客戶資料平台中，在來源和目的地，目錄是可與Adobe應用程式和第三方技術連線的收藏館。
+**目錄：** 在來 [!DNL Real-time Customer Data Platform]源和目的地中，目錄是展示館，可與Adobe應用程式和第三方技術連線。
 
 **類別：** 類定義用於構建方案的最小欄位集，是描述業務對象的基本行為。
 
-**客戶：** 用戶端是透過postgres通訊協定或HTTP API連線至查詢服務的外部工具或應用程式。
+**客戶：** 用戶端是透過postgres通訊協定或HTTP API連線至 [!DNL Query Service] 的外部工具或應用程式。
 
-**系列：** 在決策服務中，系列是根據行銷人員定義的預先定義條件（例如選件類別）來劃分選件的子集。
+**系列：** 在中， [!DNL Decisioning Service]系列是選件的子集，是根據行銷人員定義的預先定義條件（例如選件類別）。
 
-**命令行介面：** 命令行介面是用於連接到查詢服務以執行原始查詢的命令行工具。
+**命令行介面：** 命令行介面是用於連接到以執行原始查詢 [!DNL Query Service] 的命令行工具。
 
 **構圖**: 構成是組成架構的一組元件。
 
-**連接：** 連線是虛擬管線，可讓資料進出Experience Platform。 連線現在會由來源取代。
+**連接：** 連線是虛擬管線，可讓資料進出 [!DNL Experience Platform]。 連線現在會由來源取代。
 
-**連接器：** Adobe Experience Platform Source連接器可協助使用者輕鬆從多個來源擷取資料，允許使用Experience Platform Services來建構、標籤和增強資料。 資料可從多種來源擷取，例如雲端儲存空間、協力廠商軟體和CRM系統。
+**連接器：** Adobe Experience Platform Source連接器可協助使用者輕鬆從多個來源擷取資料，讓您使用來建構、標示和增強資料 [!DNL Experience Platform Services]。 資料可從多種來源擷取，例如雲端儲存空間、協力廠商軟體和CRM系統。
 
 **條件：** 在Experience Platform Launch中，條件是一個規則元件，可評估必須傳回或的邏輯陳述 `true` 式 `false`。 所有條件都必須評估 `true` 為，所有例外條件必須評估為 `false` ，才能執行規則上的任何操作。
 
-**控制台：** 在查詢服務中，控制台提供有關查詢狀態和操作的資訊。 控制台顯示與查詢服務的連接狀態、正在執行的查詢操作以及這些查詢產生的任何錯誤消息。
+**控制台：** 在 [!DNL Query Service]中，控制台提供查詢的狀態和操作資訊。 控制台顯示與的連接狀 [!DNL Query Service]態、正在執行的查詢操作，以及這些查詢產生的任何錯誤消息。
 
 **合約資料「C」標籤：** 合約 `C` 標籤可用來分類具有合約義務或與客戶資料管理政策相關的資料。
 
@@ -112,7 +112,7 @@ ht-degree: 0%
 
 **C2合同標籤：** `C2` 合約資料治理標籤會指定無法匯出至第三方的資料。 有些資料提供者在其合約中有條款禁止從原始收集位置匯出資料。  例如，社交網路合約通常會限制您從其接收到的資料傳輸。 C2的限制比C1更嚴格，因為C1隻需要聚合和匿名資料。
 
-**C3合同標籤：** `C3` 合約資料治理標籤指定無法結合或與直接可識別資訊搭配使用的資料。 有些資料提供者在其合約中有條款禁止將資料與直接可識別資訊合併或使用。  例如，源自廣告網路、廣告伺服器和第三方資料供應商的資料合約通常包含使用直接可識別資料的特定合約禁止規定。
+**C3合同標籤：** `C3` 合約資料治理標籤指定無法結合或與直接可識別資訊搭配使用的資料。 有些資料提供者在其合約中有條款禁止將資料與直接可識別資訊合併或使用。  例如，源自廣告網路、廣告伺服器和第三方資料供應商的資料合約通常包含使用直接可識別資料的特定合約禁止。
 
 **C4合同標籤：** `C4` 合約資料控管標籤指定資料無法用於定位任何廣告或內容，不論是在網站上或跨網站。 C4是最嚴格的標籤，因為它包含C5、C6和C7標籤。
 
@@ -128,7 +128,7 @@ ht-degree: 0%
 
 **建立日期列：** 透過連 `Created Date` 線指定第三方資料時，選取欄是選項。 當選擇附加保存策略且資料集包含多個與日期相關的方案時，用戶必須從可用的日期／時間方案中選擇以指定一個 `Created Date` 關鍵字列。 `Created Date` 選中覆蓋保存策略時，選項不可用。
 
-**按選擇建立表：** 「建立表為選擇」是SQL命令，作為完整有效的SQL查詢的一部分執行時，該命令將指示查詢服務將查詢結果保存在資料湖上的資料集中。 選項包括： 「建立新」、「覆寫所有上一個」和「附加至上一個」。
+**按選擇建立表：** 「建立表為選擇」是SQL命令，作為完整有效的SQL查詢的一部分執行時，該命令將指示查詢結果保存在資料湖上的資料集中。 [!DNL Query Service] 選項包括： 「建立新」、「覆寫所有上一個」和「附加至上一個」。
 
 **跨網站資料：** 跨網站資料是來自多個網站的資料組合，包括現場資料與非現場資料的組合，或來自數個非現場來源的資料組合。
 
@@ -140,25 +140,25 @@ ht-degree: 0%
 
 ## D
 
-**資料字典：** 在Experience Platform Launch中，資料字典是一組在屬性中定義的資料元素。
+**資料字典：** 在 [!DNL Experience Platform Launch]中，資料字典是在屬性中定義的一組資料元素。
 
-**資料元素：** 在Experience Platform Launch中，資料元素是指針，用於規則和擴充功能中，指向用戶端裝置上存在的特定資料片段。
+**資料元素：** 在 [!DNL Experience Platform Launch]中，資料元素是指在規則和擴充功能中用來指向用戶端裝置上特定資料片段的指標。
 
-**資料層：** 在Experience Platform Launch中，資料層是存在於用戶端裝置上的資料結構，包含檢視頁面或螢幕的上下文相關中繼資料。
+**資料層：** 在 [!DNL Experience Platform Launch]中，資料層是存在於用戶端裝置上的資料結構，包含檢視頁面或畫面之上下文的中繼資料。
 
 **資料對應：** 資料映射是將源資料欄位映射到目標相關目標欄位的過程。
 
 **資料流：** 資料流是一組或一組消息，這些消息共用相同的模式，並由同一源發送。
 
-**資料治理：** 資料治理包括用於確保資料遵守有關資料使用的法規和組織政策的戰略和技術。
+**資料治理：** [!DNL Data governance] 涵蓋用於確保資料遵守有關資料使用的法規和組織策略的戰略和技術。
 
-**資料治理標籤：** 資料治理標籤可讓使用者將反映隱私權相關考量和合約條件的資料分類，以符合法規和公司政策。 新增至資料集的資料控管標籤會繼承或套用至該資料集內的所有欄位。  資料控管標籤也可以直接套用至欄位。
+**資料治理標籤：** [!DNL Data governance] 標籤可讓使用者將反映隱私權相關考量的資料分類，並符合法規和公司政策的合約條件。 [!DNL Data governance] 新增至資料集的標籤會繼承或套用至該資料集內的所有欄位。 [!DNL Data governance] 標籤也可以直接套用至欄位。
 
-**資料整合合作夥伴：** 資料整合合作夥伴可簡化並自動化從200多個來源將大量資料載入和轉換至Experience Platform，毋需編寫程式碼。
+**資料整合合作夥伴：** 資料整合合作夥伴可簡化並自動化從200多個來源載入和轉換大量資料的作業，而不需 [!DNL Experience Platform] 撰寫程式碼。
 
 **資料集標籤：** 資料使用量標籤可以新增至資料集。 該資料集內的所有欄位都將繼承該資料集的標籤。
 
-**資料科學工作區：** Experience Platform中的Data Science Workspace可讓客戶利用Experience Platform和Adobe應用程式中的資料建立機器學習模型，以產生智慧見解和預測，以打造令人愉悅的使用者數位體驗。
+**資料科學工作區：** [!DNL Data Science Workspace] 內建 [!DNL Experience Platform] 功能可讓客戶建立機器學習模型，並運用跨應用程式和 [!DNL Experience Platform] Adobe應用程式的資料，產生智慧見解和預測，以打造令人愉悅的使用者數位體驗。
 
 **資料來源：** 資料源是用戶指定的資料源。 資料來源的範例包括行動應用程式、個人檔案和／或體驗事件、網站個人檔案事件或CRM。
 
@@ -168,29 +168,29 @@ ht-degree: 0%
 
 **資料使用標籤：** 資料使用標籤可讓使用者將反映隱私權相關考量和合約條件的資料分類，以符合法規和公司政策。
 
-**資料流：** 在即時客戶資料平台中，資料流是從源到目的地流入平台的虛擬資料流。
+**資料流：** 在中， [!DNL Real-time Customer Data Platform]資料流是從源流到目標流 [!DNL Platform] 的虛擬資料流。
 
 **資料集：** 資料集是資料集合的儲存和管理結構，通常是包含結構（欄）和欄（列）的表格。
 
 **資料集ID:** 收錄資料集的Adobe產生識別碼。
 
-**資料集輸出：** 資料集輸出提供一種機制，用於確 *定「將表建立為選擇* 」選項將用於特定查詢服務運行。
+**資料集輸出：** 資料集輸出提供一種機制，用於確 *定「將表格建立為選取* 」選項將用於特定 [!DNL Query Service] 執行。
 
 **決策事件：** 決策事件用於捕獲關於決策活動的結果和上下文的觀察。 決策事件捕獲有關決策如何做出、何時作出、建議（選擇）哪些選項以及在決策過程中影響決策或可以觀察到哪些上下文狀態的資訊。 決策事件也會擷取提案ID，此為全域唯一識別碼，可用來將決策關聯至其他事件。
 
-**決策規則：** 在決策服務中，決策規則是定義並控制對使用者呈現選件的內容、時間、地點和方式的邏輯。
+**決策規則：** 在中， [!DNL Decisioning Service]決策規則是定義並控制對使用者呈現選件的內容、時間、地點和方式的邏輯。
 
-**決策服務：** 決策服務是服務和UI的集合，可讓行銷人員使用商業邏輯和決策規則，跨通道和應用程式建立和提供使用者個人化的優惠體驗。
+**決策服務：** 這是 [!DNL Decisioning Service] 服務和UI的集合，可讓行銷人員使用商業邏輯和決策規則，跨通道和應用程式建立和提供使用者個人化優惠體驗。
 
-**增量列：** 在即時客戶資料平台中，Delta欄可讓您針對增量擷取的時間戳記選擇來源資料欄位
+**增量列：** 在中， [!DNL Real-time Customer Data Platform]Delta列啟用源資料欄位的選擇，以用於增量接收的時間戳
 
-**增量保存策略：** `Delta save strategy` 是透過連線接收第三方資料的選項。 此選項可讓使用者指定新或變更的來源資料列會收錄至Experience Platform。 新列會新增至資料集的結尾，而變更的列則會在Experience Platform的資料集中更新。
+**增量保存策略：** `Delta save strategy` 是透過連線接收第三方資料的選項。 此選項允許用戶指定新行或更改的源資料行被接收到 [!DNL Experience Platform]。 將新行添加到資料集的末尾，並在上的資料集中更新更改的行 [!DNL Experience Platform]。
 
-**目標：** 在即時客戶資料平台中，目標是任何系統的一般術語，例如啟動並傳送對象的Adobe應用程式、廣告伺服器或廣告網路。
+**目標：** 目 [!DNL Real-time Customer Data Platform] 標是任何系統的一般術語，例如啟動並傳送對象的Adobe應用程式、廣告伺服器或廣告網路。
 
-**目標類別：** 目標類別是一組具有相似特性的即時客戶資料平台目標。
+**目標類別：** 目標類別是具有相似特 [!DNL Real-time Customer Data Platform] 徵的目標分組。
 
-**目標目錄：** 目標目錄是即時客戶資料平台中可用目標的清單。
+**目標目錄：** 目標目錄是中可用目標的清單 [!DNL Real-time Customer Data Platform]。
 
 **顯示名稱：** 顯示名稱是UI中顯示之欄位的易用名稱。
 
@@ -202,41 +202,41 @@ ht-degree: 0%
 
 **錯誤診斷：** 錯誤診斷允許為接收的批生成詳細的錯誤消息。 「錯誤」閾值用於配置在整個批失敗之前可接受的錯誤百分比。
 
-**合格優惠：** 在決策服務中，合格選件符合上游定義的限制條件，這些限制條件可以一致地提供給描述檔。
+**合格優惠：** 在中，合 [!DNL Decisioning Service]格選件符合上游定義的限制，可一致地提供給描述檔。
 
-**合格規則：** 在決策服務中，資格規則會套用至與日曆、排程和限制限制相關的描述檔。
+**合格規則：** 在中，資 [!DNL Decisioning Service]格規則會套用至與日曆、排程和上限限制相關的描述檔。
 
-**內嵌代碼：** 在Experience Platform Launch中，內嵌代碼是置於網站或環境HTML中的指令碼標籤。 內嵌代碼指示瀏覽器在何處擷取建置。
+**內嵌代碼：** 在中 [!DNL Experience Platform Launch]，內嵌代碼是置於網站或環境之HTML中的指令碼標籤。 內嵌代碼指示瀏覽器在何處擷取建置。
 
 **枚舉：** 列舉是代表欄位有效資料的值清單。
 
-**環境：** 在Experience Platform Launch中，環境是一組部署指示，指定建置的主機傳送和檔案格式。 庫必須與環境成對才能構建。
+**環境：** 在 [!DNL Experience Platform Launch]中，環境是一組部署指示，它指定了構建的主機交付和檔案格式。 庫必須與環境成對才能構建。
 
-**事件** 在Experience Platform Launch中，事件是特定類型的規則元件，是在用戶端裝置上發生的觸發器，用以開始執行規則。
+**事件**[!DNL Experience Platform Launch]中，事件是規則元件的特定類型，是在用戶端裝置上發生以開始執行規則的觸發器。
 
 **事件：** 事件是與描述檔關聯的行為資料。
 
-**體驗資料模型(XDM):** Experience Data Model(XDM)的概念是使用標準架構統一資料，以便與Experience Platform和Adobe Experience Cloud應用程式搭配使用。 XDM標準化資料的結構，並加速並簡化從大量資料中獲得洞見的程式。
+**體驗資料模型(XDM):** [!DNL Experience Data Model] (XDM)是使用標準結構來統一資料，以便與Adobe Experience Cloud應用程 [!DNL Experience Platform] 式搭配使用的概念。 XDM標準化資料的結構，並加速並簡化從大量資料中獲得洞見的程式。
 
-**體驗平台發佈：** Launch是標籤和SDK管理生態系統，與Experience Platform和Experience Cloud應用程式整合。 Launch提供了部署、統一及管理分析、行銷和廣告整合的工具，這些工具是在所有客戶裝置上提供相關客戶體驗的必要工具。
+**體驗平台發佈：** [!DNL Launch] 是標籤和SDK管理生態系統，與應用程式 [!DNL Experience Platform] 和應 [!DNL Experience Cloud] 用程式。 [!DNL Launch] 提供部署、統一及管理分析、行銷和廣告整合的工具，以在所有用戶端裝置上提供相關客戶體驗。
 
-**Experience Platform Launch Extensions:** Experience Platform Launch擴充功能可將原始事件資料直接傳送至即時客戶資料平台目標。 安裝Launch擴充功能需要存取Launch屬性。
+**Experience Platform Launch Extensions:** [!DNL Experience Platform Launch] 擴充功能可將原始事件資料直接傳送至 [!DNL Real-time Customer Data Platform] 目的地。 安裝擴 [!DNL Launch] 充功能需要存取屬 [!DNL Launch] 性。
 
 **實驗：** 實驗是建立受訓練模型的程式，方法是使用即時生產資料的樣本部分來訓練實例。
 
 **實驗：** 實驗是將訓練好的模型套用至一小部分即時生產資料，以驗證其效能的程式。 這與針對抑制測試資料集測試的訓練模型不同。 這也與某些ML架構中的「實驗」概念不同，其實際意思是範例模型專案。
 
-**ExperienceEvent:** ExperienceEvent是Experience Platform標準架構，可擷取觀察，包括所涉主題的時間點和身分。 「體驗事件」是所發生事件的事實記錄，代表所發生的事件，不經匯總或解釋。
+**ExperienceEvent:** ExperienceEvent是一 [!DNL Experience Platform] 種標準架構，可擷取觀察，包括所涉主題的時間點和身分。 「體驗事件」是所發生事件的事實記錄，代表所發生的事件，不經匯總或解釋。
 
-**擴充功能：** 在Experience Platform Launch中，擴充功能是新增至Launch屬性的功能套件。  擴充功能通常以特定行銷或分析解決方案為中心，並提供將技術部署至用戶端環境所需的工具。
+**擴充功能：** 在 [!DNL Experience Platform Launch]中，擴充功能是新增至屬性的功能 [!DNL Launch] 套件。  擴充功能通常以特定行銷或分析解決方案為中心，並提供將技術部署至用戶端環境所需的工具。
 
-**擴充功能套件：** 在Experience Platform Launch中，擴充功能套件是擴充功能開發人員建立並上傳的。zip檔案，提供Launch使用者在其屬性內安裝擴充功能所需的一切。  擴充功能套件包含資訊清單，其中指定使用者在需要時設定發佈擴充功能和傳送至用戶端環境之可執行JavaScript的行為時，所需之擴充功能、HTML和JavaScript的資訊。
+**擴充功能套件：** 在中， [!DNL Experience Platform Launch]擴充功能套件是擴充功能開發人員建立並上傳的。zip檔案，提供使用者在其屬性內 [!DNL Launch] 安裝擴充功能所需的一切。  擴充功能套件包含資訊清單，指定使用者在需要時，設定傳送至用戶端環境之擴充功能和可執行JavaScript的行為所需之擴充功能、HTML和JavaScript的資訊。 [!DNL Launch]
 
 [回到頁首](#adobe-experience-platform-glossary)
 
 ## F
 
-**備援選件：** 在決策服務中，當使用者不符合使用之系列中任何選件的資格時，會顯示回退選件。
+**備援選件：** 在中， [!DNL Decisioning Service]備援選件是當使用者不符合使用之系列中任何選件的資格時，所顯示的預設選件。
 
 **功能對應：** 特徵映射是指將特徵從資料映射到機器學習模型所需輸入和目標特徵的過程。
 
@@ -246,7 +246,7 @@ ht-degree: 0%
 
 **欄位名稱：** 欄位是用於引用查詢和服務中欄位的名稱。
 
-**頻率：** 頻率決定週期性排程查詢服務查詢的執行頻率。
+**頻率：** 頻率決定循環排程查詢的 [!DNL Query Service] 執行頻率。
 
 [回到頁首](#adobe-experience-platform-glossary)
 
@@ -262,7 +262,7 @@ ht-degree: 0%
 
 ## H
 
-**主機：** 在Experience Platform Launch中，主機會指定Launch傳送組建所需的位置、網域和使用者憑證。
+**主機：** 在中， [!DNL Experience Platform Launch]主機指定傳送構建版本所需的位置、域 [!DNL Launch] 和用戶憑據。
 
 [回到頁首](#adobe-experience-platform-glossary)
 
@@ -274,11 +274,11 @@ ht-degree: 0%
 
 **身分圖：** 身分圖是銜接與連結身分之間關係的地圖，可隨客戶活動即時更新。
 
-**身份名稱空間：** 身分名稱空間是識別碼，例如Cookie ID、裝置ID或電子郵件ID，用以指出資料來源的上下文，並用於識別和連結Experience Cloud中的身分。
+**身份名稱空間：** 身分名稱空間是一種識別碼，例如Cookie ID、裝置ID或電子郵件ID，用以指出資料來源的上下文，並用來識別及連結各種身分 [!DNL Experience Cloud]。
 
-**身分服務：** Experience Platform Identity Service UI可讓您建立和管理身分類型，以便跨裝置和通道連結身分，以便從即時客戶個人檔案中完整檢視使用者。
+**身分服務：** [!DNL Experience Platform Identity Service] UI可讓您建立和管理身分類型，以便跨裝置和通道連結身分，以便從中取得完整的使用者檢視 [!DNL Real-time Customer Profile]。
 
-**身份聯繫：** 身分拼接是識別資料片段並將它們拼接在一起，以形成描述檔的完整記錄的程式。
+**身份聯繫：** 身分拼接是識別資料片段並將它們拼合在一起，以形成描述檔的完整記錄的程式。
 
 **身分符號：** 身分符號是身分名稱空間的縮寫，可用作API中的參考。
 
@@ -288,13 +288,13 @@ ht-degree: 0%
 
 **I2資料標籤：** 該 `I2` 資料標籤用於對可與任何其他資料組合使用的間接可識別資料進行分類，以識別或聯繫特定人。
 
-**收錄：** 擷取是從來源新增資料至Experience Platform的程式。 資料可透過多種方式接收至Experience Platform，包括串流、批次或透過連接器新增。
+**收錄：** 擷取是從來源新增資料至的程式 [!DNL Experience Platform]。 資料可透過多種方 [!DNL Experience Platform] 式接收，包括串流、批次或透過連接器新增。
 
-**擷取排程：** 擷取排程提供從來源擷取至Experience Platform時的時間型選項。
+**擷取排程：** 擷取排程提供從來源擷取至時間的選項 [!DNL Experience Platform]。
 
 **輸入功能：** 輸入特徵在特徵映射中指定，並被機器學習模型用於預測。
 
-**智慧型服務：** 智慧型服務（例如Attribution.ai和Customer.ai）是機器學習、以人工智慧為基礎、需要Experience Platform執行和運作的模型。
+**智慧型服務：** [!DNL Intelligent Services] 例如， [!DNL Attribution AI] 以機 [!DNL Customer AI] 器學習為基礎的、需要運行和操作的基於人工智慧的 [!DNL Experience Platform] 模型。
 
 **興趣型定位或個人化：** 如果符合下列三個條件，就會發生喜好式定位（也稱為個人化）: 網站上收集的資料可用來推斷使用者的興趣、將資料用於其他內容，例如其他網站或應用程式（非網站），以及如果資料用於根據這些推論來選擇提供哪些內容或廣告。
 
@@ -302,9 +302,9 @@ ht-degree: 0%
 
 ## J
 
-**JupyterLab:** Project Jupyter的開放原始碼網路介面，並與Experience Platform緊密整合。
+**[!DNL JupyterLab]:**專案的開放原始碼Web介面，並[!DNL Jupyter]與之緊密整合[!DNL Experience Platform]。
 
-**Jupyter Notebook:** 開放原始碼Web應用程式，可讓使用者建立並共用包含即時程式碼、方程式、視覺化和敘事文字的檔案。
+**[!DNL Jupyter Notebook]:**開放原始碼Web應用程式，可讓使用者建立並共用包含即時程式碼、方程式、視覺化和敘述文字的檔案。
 
 ## K
 
@@ -312,7 +312,7 @@ ht-degree: 0%
 
 ## L
 
-**資料庫：** 在Experience Platform Launch中，程式庫是一組商業邏輯，其中包含Launch程式庫在用戶端裝置上應如何運作的指示。
+**資料庫：** 在 [!DNL Experience Platform Launch]中，庫是一組業務邏輯，包含有關庫在客戶端設備上 [!DNL Launch] 應如何運作的說明。
 
 [回到頁首](#adobe-experience-platform-glossary)
 
@@ -320,21 +320,21 @@ ht-degree: 0%
 
 **機器學習(ML):** 機器學習是一個研究領域，它讓電腦能夠學習，而不需明確寫程式。
 
-**機器學習模型：** 機器學習模型是使用歷史資料和配置進行訓練的機器學習配方的實例，用於解決業務使用案例。 在Adobe Data Science Workspace中，機器學習模型稱為配方。
+**機器學習模型：** 機器學習模型是使用歷史資料和配置進行訓練的機器學習配方的實例，用於解決業務使用案例。 在Adobe中， [!DNL Data Science Workspace]機器學習模型稱為「配方」。
 
-**對應：** 在即時客戶資料平台中，資料映射是將源資料欄位映射到目標相關目標欄位的過程。
+**對應：** 在 [!DNL Real-time Customer Data Platform]中，資料映射是將源資料欄位映射到目標相關目標欄位的過程。
 
-**行銷動作：** 在資料治理架構中，行銷行動是Experience Platform資料使用者採取的行動，需要檢查資料使用政策是否違規。
+**行銷動作：** 在資料治理架構中，行銷動作是資料使用者採取的動作， [!DNL Experience Platform] 有必要檢查是否有違反資料使用政策的行為。
 
 **合併方法：** 合 `merge method` 並策略選項允許對合併資料片段進行優先順序排序。 合併方法選項按資料集優先順序或資料集時間戳進行合併。
 
-**合併策略：** 合併策略是「描述檔」使用的一組規則，用以確定在特定條件下如何將資料排定優先順序並合併為統一檢視。
+**合併策略：** 合併策略是一組規則，用於確定在特 [!DNL Profile] 定條件下如何對資料進行優先化並合併為統一視圖。
 
 **Mixin:** 混音可讓使用者擴充可重複使用的欄位，其中包含定義一或多個屬性的變數，這些屬性會包含在架構中或新增至類別中。
 
 **修改日期列：** 透過連 `Modified Date` 線指定第三方資料時，選取欄是選項。 當選擇 `Delta` 了保存策略且資料集包含多個與日期相關的方案時，用戶必須從可用的日期／時間類型方案中選擇，以指定修改的日期鍵列。 `Modified Date` 選擇保存策略時， `Overwrite` 該選項不可用。
 
-**模組：** 在Experience Platform Launch中，模組是擴充功能提供的可執行JavaScript程式碼片段，可在用戶端環境中執行動作，而不需Launch使用者建立規則。
+**模組：** 在 [!DNL Experience Platform Launch]中，模組是由擴展提供的可執行JavaScript的片段，它在客戶端環境中執行操作而無需用 [!DNL Launch] 戶建立規則。
 
 [回到頁首](#adobe-experience-platform-glossary)
 
@@ -342,21 +342,21 @@ ht-degree: 0%
 
 **非生產沙盒：** 非生產沙盒是資料虛擬化的一種形式，可讓您將資料與其他沙盒隔離，通常用於開發實驗、測試或試用。 非生產沙盒可重設及刪除。
 
-**筆記型電腦：** 筆記本是使用 *Jupyter Notebook* （Jupyter筆記本）編寫的，包含分析說明、結果，並可運行以執行資料分析。
+**[!DNL Notebooks]:**[!DNL Notebooks]是使用並包&#x200B;*[!DNL Jupyter Notebook]*含分析說明、結果來編寫，並可執行以執行資料分析。
 
 [回到頁首](#adobe-experience-platform-glossary)
 
 ## O
 
-**優惠：** 在「決策服務」中，選件是行銷訊息，其規則可能與其相關聯，以指定誰有資格檢視選件。
+**優惠：** 在中， [!DNL Decisioning Service]選件是行銷訊息，其規則可能與選件相關聯，以指定誰有資格檢視選件。
 
-**選件決策：** 在決策服務中，選件決策可讓行銷人員根據透過通道和應用程式收集的資料，在與使用者接洽時，管理選件建議的規則和經過訓練的模型。
+**選件決策：** 在此中， [!DNL Decisioning Service]選件決策可讓行銷人員根據透過通道和應用程式收集的資料，在與使用者接觸時，管理選件建議的規則和經過訓練的模型。
 
-**選件程式庫：** 在決策服務中，選件程式庫是用於管理個人化和備援選件、決策規則和活動的中央程式庫。
+**選件程式庫：** 在中， [!DNL Decisioning Service]選件程式庫是用來管理個人化和備援選件、決策規則和活動的中央程式庫。
 
 **組織：** 「組織」是用來識別公司或公司內某特定群組的Adobe產品名稱。 管理員可設定並管理功能對組織使用者的存取權和權限。
 
-**覆寫儲存策略：** `Overwrite` 保存策略是用於通過連接接收第三方資料的選項，用戶在此指定是否將在指定的調度中覆蓋所提取的資料。 Experience Platform會從第三方來源擷取指定的資料集，並覆寫Experience Platform上的資料集。
+**覆寫儲存策略：** `Overwrite` 保存策略是用於通過連接接收第三方資料的選項，用戶在此指定是否將在指定的調度中覆蓋所提取的資料。 [!DNL Experience Platform] 將會從第三方來源擷取指定的資料集並覆寫上的資料集 [!DNL Experience Platform]。
 
 [回到頁首](#adobe-experience-platform-glossary)
 
@@ -366,31 +366,31 @@ ht-degree: 0%
 
 **拼花檔案：** 鑲木地板檔案是具有複雜嵌套資料結構的柱狀儲存檔案格式。 新增資料以填入結構資料集時，需要使用拼花檔案。
 
-**個人化優惠：** 在決策服務中，個人化優惠是根據資格規則和限制而自訂的行銷訊息。
+**個人化優惠：** 在中，個 [!DNL Decisioning Service]人化優惠是可自訂的行銷訊息，以符合資格規則和限制為基礎。
 
-**位置：** 在決策服務中，位置是選件出現在使用者的位置和內容。
+**位置：** 在中， [!DNL Decisioning Service]位置是選件顯示給使用者的位置和內容。
 
-**政策：** 資料使用原則是指定行銷動作的規則，這些動作會根據Experience Platform中資料上資料使用標籤的應用而加以限制。
+**政策：** 資料使用原則是指定行銷動作的規則，這些動作會根據資料使用標籤在中的應用而加以限制 [!DNL Experience Platform]。
 
 **主鍵：** 主鍵是方案中的指定，用於唯一標識所有記錄。
 
-**優先順序：** 在決策服務中，優先順序用於排名符合所有限制的選件，例如資格、日曆和上限設定。
+**優先順序：** 在中， [!DNL Decisioning Service]優先順序會用來排名符合所有限制的選件，例如資格、日曆和上限設定。
 
 **私有身份圖：** 「私人身分圖」是銜接與連結身分之間關係的私人地圖，僅由您的組織可見，並以您的第一方資料為基礎建立。
 
-**產品設定檔：** 產品設定檔可讓管理員授予使用者存取與Experience Platform相關之全部或一部分服務的權限。
+**產品設定檔：** 產品設定檔可讓管理員授予使用者存取與相關之全部或一部分服務的權限 [!DNL Experience Platform]。
 
 **生產沙盒：** 在無法重設或刪除的平台上隔離虛擬資料的生產沙盒。
 
-**設定檔：** 描述檔是Experience Platform標準資料模型，用來定義消費者屬性。 描述檔也可以是與人員和裝置相關的事件資料和屬性的匯總。
+**設定檔：** [!DNL Profile] 是用於 [!DNL Experience Platform] 定義消費者屬性的標準資料模型。 描述檔也可以是與人員和裝置相關的事件資料和屬性的匯總。
 
-**描述檔匯出：** 描述檔匯出是即時客戶資料平台中的兩種目的地類型之一。 描述檔匯出會產生包含描述檔和屬性的檔案，並將原始PII資料與電子郵件搭配使用，並用於整合行銷和電子郵件自動化平台。
+**描述檔匯出：** [!DNL Profile] 導出是中的兩種目標之一 [!DNL Real-time Customer Data Platform][!DNL Profile] 匯出會產生包含描述檔和屬性的檔案，並將原始PII資料與電子郵件搭配使用，並用於整合行銷和電子郵件自動化平台。
 
 **描述檔FProfile Fragragment:** 描述檔片段是特定使用者在身分清單中僅有一個身分的描述檔資訊。
 
 **描述檔ID:** 描述檔ID是與識別類型相關聯的自動產生的識別碼，並代表描述檔。
 
-**屬性：** 在Experience Platform Launch中，屬性是部署一組標籤所需的一切容器。
+**屬性：** 在 [!DNL Experience Platform Launch]中，屬性是部署一組標籤所需的一切容器。
 
 [回到頁首](#adobe-experience-platform-glossary)
 
@@ -398,35 +398,35 @@ ht-degree: 0%
 
 **查詢：** 查詢是對資料庫表中資料的請求。
 
-**查詢編輯器：** 查詢編輯器是用於在查詢服務中編寫、驗證和提交SQL陳述式的工具。
+**查詢編輯器：** 查詢編輯器是用於在中編寫、驗證和提交SQL陳述式的工具 [!DNL Query Service]。
 
-**Adobe Experience Platform的查詢服務：** *Experience Platform Query Service* 可讓資料分析人員查詢ExperienceEvents和XDM，以便用於分析和機器學習。 透過查詢服務，資料科學家和分析師將能夠提取他們儲存在Experience Platform中的所有資料集——包括行為資料、銷售點(POS)、客戶關係管理(CRM)等——並查詢這些資料集以回答有關資料的特定問題。
+**Adobe Experience Platform的查詢服務：** *[!DNL Experience Platform Query Service]* 讓資料分析人員可 [!DNL ExperienceEvents] 以查詢和XDM，以便用於分析和機器學習。 有了 [!DNL Query Service]，資料科學家和分析師將能夠提取他們儲存在中的所有資料集 [!DNL Experience Platform] -包括行為資料、銷售點(POS)、客戶關係管理(CRM)等——並查詢這些資料集以回答有關資料的特定問題。
 
 [回到頁首](#adobe-experience-platform-glossary)
 
 ## R
 
-**即時客戶資料平台：** Adobe的即時客戶資料平台將已知和未知的客戶資料匯集在一起，透過簡化的整合、智慧細分和即時啟動數位客戶歷程，建立值得信賴的客戶個人檔案。
+**即時客戶資料平台：** Adobe將已知和 [!DNL Real-time Customer Data Platform] 未知的客戶資料整合在一起，透過簡化的整合、智慧細分和即時啟動數位客戶歷程，建立值得信賴的客戶個人檔案。
 
-**即時客戶個人檔案：** 即時客戶個人檔案是集中式個人檔案，用於目標明確的個人化體驗管理。
+**即時客戶個人檔案：** [!DNL Real-time Customer Profile] 是集中式個人檔案，用於目標明確的個人化體驗管理。
 
 **方式：** 配方是Adobe的模型規格術語，是代表特定機器學習、AI演算法或整合演算法、處理邏輯和設定的頂層容器，用來建立並執行已訓練的模型，進而協助解決特定的商業問題。
 
 **記錄：** 記錄是資料集中持續存在的列。
 
-**定期：** 定期定義查詢服務查詢計畫僅運行一次還是循環運行一次。
+**定期：** 定期定義查詢 [!DNL Query Service] 計畫僅運行一次還是循環運行。
 
-**表示法：** 在決策服務中，表示法是頻道使用的資訊，例如顯示選件的位置或語言。
+**表示法：** 在中， [!DNL Decisioning Service]表示法是頻道使用的資訊，例如顯示選件的位置或語言。
 
-**資源：** 在Experience Platform Launch中，資源是一般術語，指的是Launch使用者可在用戶端環境內設定的選項，包括擴充功能、資料元素和規則。
+**資源：** 在中， [!DNL Experience Platform Launch]資源是一個通用術語，它指的是用戶可以在客戶端 [!DNL Launch] 環境內配置的選項，包括擴展、資料元素和規則。
 
-**基於角色的訪問控制：** 基於角色的存取控制可讓管理員將存取權和權限指派給Experience Platform的使用者。 權限包括檢視和／或使用Experience Platform功能的能力，例如建立沙盒、定義結構描述以及管理資料集。
+**基於角色的訪問控制：** 基於角色的存取控制可讓管理員將存取權和權限指派給使用者 [!DNL Experience Platform]。 權限包括檢視和／或使用功能 [!DNL Experience Platform] 的能力，例如建立沙盒、定義結構描述以及管理資料集。
 
-**規則：** 在Experience Platform Launch中，規則是一組規則元件，可定義一組應以邏輯方式分組的特定事件、條件和動作。
+**規則：** 在中， [!DNL Experience Platform Launch]規則是一組規則元件，用於定義一組應在邏輯上分組的特定事件、條件和操作。
 
-**規則元件：** 在Experience Platform Launch中，規則元件是組成規則的事件、條件和動作。
+**規則元件：** 在 [!DNL Experience Platform Launch]中，規則元件是組成規則的事件、條件和動作。
 
-**執行時期：** 執行時期會指定機器學習方式的執行時期環境。 Python、R、Spark、PySpark和Tensorflow執行時期可讓您將URL輸入至配方來源的Docker影像。
+**執行時期：** 執行時期會指定機器學習方式的執行時期環境。 [!DNL Python]、R、 [!DNL Spark]PySpark和Tensorflow執行時期可讓您將URL輸入至配方來源的Docker影像。
 
 [回到頁首](#adobe-experience-platform-glossary)
 
@@ -434,25 +434,25 @@ ht-degree: 0%
 
 **範例資料：** 範例資料是資料檔案的預覽，通常是前100列，讓資料科學家或工程師瞭解資料檔案中的架構或資料。
 
-**沙盒：** 沙盒是隔離Experience Platform使用者組織內虛擬資料的形式。
+**沙盒：** 沙盒是隔離使用者組織內虛擬資料的形式 [!DNL Experience Platform]。
 
 **沙盒重設：** 沙盒重設、刪除沙盒內的所有資料，包括資料、描述檔和區段。 沙盒重設可能會影響連接至內部或外部目的地的資料。
 
-**沙盒切換器：** Experience Platform中的沙盒切換器控制項可讓使用者在他們可以存取的沙盒之間導覽。 切換沙盒會變更所有內容，並可能會根據權限變更功能存取。
+**沙盒切換器：** 中的沙盒切換器控 [!DNL Experience Platform] 制項可讓使用者在可存取的沙盒之間導覽。 切換沙盒會變更所有內容，並可能會根據權限變更功能存取。
 
-**排程：** 排程是使用者定義的規格，說明從協力廠商資料來源擷取資料至Adobe Experience Platform的頻率或速度。
+**排程：** 排程是使用者定義的規格，說明從協力廠商資料來源擷取資料至Adobe的頻率或速度 [!DNL Experience Platform]。
 
 **計分：** 計分是使用訓練好的模型，從資料產生見解的程式。
 
 **架構：** 架構由類和可選混音組成，用於建立資料集和資料流。 架構包括行為屬性、時間戳記、身分、屬性定義和關係。
 
-**方案描述符：** 架構描述符是其他與架構相關的中繼資料，可說明Experience Platform可用來瞭解預期架構行為的行為，例如兩個架構之間的關係。
+**方案描述符：** 模式描述符是描述行為的附加模式相關元資料，可用於 [!DNL Experience Platform] 瞭解預期的模式行為，如兩個模式之間的關係。
 
-**機密存取金鑰：** 機密存取金鑰是與存取金鑰ID搭配使用的Amazon S3金鑰，用來簽署AWS要求。
+**機密存取金鑰：** 機密存取金鑰是 [!DNL Amazon] S3金鑰，與存取金鑰ID搭配使用以簽署AWS要求。
 
 **區段：** 區段是一組規則，包含屬性和事件資料，可限定數個設定檔成為觀眾。
 
-**區段產生器：** 「區段產生器」是視覺化開發環境，用來建立區段定義，並且是所有使用Experience Platform上即時客戶描述檔區段的應用程式的常用元件。
+**區段產生器：** [!DNL Segment Builder] 是用來建立區段定義的視覺化開發環境，並做為所有使用區段的應用程式的 [!DNL Real-time Customer Profile] 通用元件 [!DNL Experience Platform]。
 
 **區段定義：** 區段定義是用於描述目標對象之關鍵特性或行為的規則集。 概念化後，區段定義中概述的規則會用來決定區段的合格讀者成員。
 
@@ -466,43 +466,43 @@ ht-degree: 0%
 
 **區段規則：** 區段規則是使用者定義哪些描述檔符合區段的位置和方式。
 
-**區段類型：** 區段有兩種類型： 一個是會隨著Experience Platform資料變更動態更新的區段，另一個是會擷取所有符合區段規則的個人檔案的受眾快照，這些不會變更。
+**區段類型：** 區段有兩種類型： 一個是隨著資料變更動態更新的 [!DNL Experience Platform] 區段，另一個是觀眾快照，可擷取符合區段規則的所有個人檔案，而這些不會變更。
 
 **區段：** 區段是將大量客戶、潛在客戶或消費者分成小型群組的程式，這些群組具有相似的屬性，並會以類似的行銷策略回應。
 
-**Sensei ML框架：** Sensei ML Framework是跨Adobe的統一機器學習架構，運用Experience Platform上的資料，讓資料科學家以更快速、可擴充且可重複使用的方式，開發機器學習導向的智慧服務。
+**Sensei ML框架：** Sensei ML Framework是跨Adobe的統一機器學習架構，運用相關資料，讓資料科學家以更快速、可擴充且可重複使用的方式，開發機器學習導向的智慧服務。 [!DNL Experience Platform]
 
 **敏感資料標籤：** 敏感的「S」標籤可用來分類被視為敏感的資料，例如您想要標示為敏感的不同行為或地理資料類型。
 
 **服務：** 運用Adobe智慧型服務來運作AI和ML服務的強大架構。 服務可提供即時、個人化的客戶體驗，或將自訂智慧服務付諸實作。
 
-**S1資料標籤：** `S1` 資料標籤用於分類指定緯度和經度的資料，以判斷裝置的精確位置。
+**S1資料標籤：** `S1` 資料標籤用於分類指定緯度和經度的資料，可用來判斷裝置的精確位置。
 
 **S2資料標籤：** `S2` 資料標籤用於分類可用來判斷廣泛定義的地理圍欄區域的資料。
 
-**來源：** 「來源」是即時客戶資料平台中任何輸入連接器的一般術語。
+**來源：** Source是中任何輸入連接器的一般術語 [!DNL Real-time Customer Data Platform]。
 
 **來源屬性：** 來源屬性是來源資料集中的欄位。  源屬性映射到目標方案欄位。
 
-**源連接器：** Adobe Experience Platform Source連接器可協助使用者輕鬆從多個來源擷取資料，允許使用Experience Platform Services來建構、標籤和增強資料。 資料可從多種來源擷取，例如雲端儲存空間、協力廠商軟體和CRM系統。
+**源連接器：** Adobe Experience Platform Source連接器可協助使用者輕鬆從多個來源擷取資料，讓您使用來建構、標示和增強資料 [!DNL Experience Platform Services]。 資料可從多種來源擷取，例如雲端儲存空間、協力廠商軟體和CRM系統。
 
-**來源類別：** 來源類別是一組具有類似特徵的即時客戶資料平台來源。
+**來源類別：** 來源類別是一組具有相似 [!DNL Real-time Customer Data Platform] 特性的來源。
 
-**源目錄：** 來源目錄是即時客戶資料平台中可用來源的清單。
+**源目錄：** 源目錄是中可用源的清單 [!DNL Real-time Customer Data Platform]。
 
 **標準識別名稱空間：** 標準識別名稱空間是Adobe預先定義的識別碼，包括Adobe和業界標準解決方案，用來識別使用者。
 
 **標準架構：** 標準結構描述由類和混合組成，用於重複使用。
 
-**串流擷取：** 串流擷取提供使用者一種方法，即時從用戶端和伺服器端裝置傳送資料至Experience Platform。
+**串流擷取：** 串流擷取為使用者提供從用戶端和伺服器端裝置即時傳送資料 [!DNL Experience Platform] 的方法。
 
-**串流端點URL:** 串流端點URL是Adobe提供的獨特端點，並系結至客戶的IMS組織，以串流資料至Experience Platform。
+**串流端點URL:** 串流端點URL是Adobe提供的獨特端點，並系結至客戶的IMS組織，以串流資料至 [!DNL Experience Platform]。
 
-**串流區段：** 串流區段是持續不斷的資料選擇程式，可因應使用者活動而更新區段。 建立並儲存區段後，區段定義會套用至即時客戶描述檔的傳入資料。 區段新增和移除作業會定期處理，確保目標受眾保持相關性。
+**串流區段：** 串流區段是持續不斷的資料選擇程式，可因應使用者活動而更新區段。 建立並儲存區段後，區段定義會套用至的傳入資料 [!DNL Real-time Customer Profile]。 區段新增和移除作業會定期處理，確保目標受眾保持相關性。
 
 **符號：** Symbol是身分名稱空間的縮寫，可用作API中的參考。
 
-**系統視圖：** 「系統視圖」是源資料集的視覺化表示，通過「即時客戶概要檔案」流向目標。
+**系統視圖：** 「系統視圖」是源資料集的視覺化表示，這些資料集流經目 [!DNL Real-time Customer Profile] 標。
 
 [回到頁首](#adobe-experience-platform-glossary)
 
@@ -512,7 +512,7 @@ ht-degree: 0%
 
 **訓練好的模型：** 訓練模型表示模型訓練過程的可執行輸出，其中一組訓練資料被應用到模型實例。 經過訓練的模型將保留對任何由其建立的智慧Web服務的引用。 該訓練模型適用於計分和建立智慧Web服務。 可將訓練模型的修改視為新版本來追蹤。
 
-**代號：** Token是一種雙因素驗證安全性，可用來授權搭配查詢服務使用電腦服務。
+**代號：** Token是一種雙因素驗證安全性，可用來授權搭配使用電腦服務 [!DNL Query Service]。
 
 **類型：** 類型是機器學習問題的類別，它是專門設計的，在培訓後用於幫助定制評估培訓運行。
 
@@ -520,7 +520,7 @@ ht-degree: 0%
 
 ## U
 
-**聯合架構：** 聯合方案是對「即時客戶概要檔案」啟用的方案的合併。
+**聯合架構：** 聯合模式是已為啟用的方案的合併 [!DNL Real-time Customer Profile]。
 
 [回到頁首](#adobe-experience-platform-glossary)
 
@@ -534,15 +534,15 @@ ht-degree: 0%
 
 ## X
 
-**XDM（體驗資料模型）:** XDM(Experience Data Model)是使用標準架構統一資料，以便與Experience Platform和Adobe Experience Cloud應用程式搭配使用的概念。 XDM是一種正式的規格，用於以單一語言或標準資料模型來呈現所有客戶體驗資料，並標準化資料的結構化方式，並加速並簡化從大量資料中獲取見解的程式。
+**XDM（體驗資料模型）:** XDM(Experience Data Model)是使用標準架構統一資料以便與Adobe Experience Cloud應用程 [!DNL Experience Platform] 式搭配使用的概念。 XDM是一種正式的規格，用於以單一語言或標準資料模型來呈現所有客戶體驗資料，並標準化資料的結構化方式，並加速並簡化從大量資料中獲取見解的程式。
 
 **XDM DecisionEvent:** DecisionEvent用於捕獲關於決策活動結果和背景的觀察，包括關於決策如何作出、決策何時提出（和選擇）哪些備選方案以及決策過程中存在哪些影響決策或可以觀察到哪些情境狀態的資訊。 DecisionEvents也會擷取提案ID，此為全域唯一識別碼，可用來將決策關聯至其他事件。 DecisionEvents不僅與影響決策的「體驗事件」相關，也與直接回應主張的ExperienceEvents相關。 預期應用程式會參照每個受主張影響之ExperienceEvent中的主張ID。 使用命題ID來維護個別描述檔中的命題——回應歷史記錄。
 
 **XDM ExperienceEvent:** ExperienceEvent是所發生事件的事實記錄，包括相關個人的時間點和身分。 ExperienceEvents可以是明確（直接可觀察的人為動作）或隱含（在沒有直接人為動作的情況下提出），並且記錄時不會匯總或解讀。 它們對於時域分析至關重要，因為它們可讓觀察和分析特定時間範圍內發生的變更，以及比較多個時間窗口以追蹤趨勢。
 
-**XDM個人資料：** XDM個人簡檔對已識別和部分識別個人的屬性和興趣形成單一表示。 較少識別的描述檔僅能包含匿名的行為訊號，例如瀏覽器Cookie，而高度識別的描述檔則可能包含詳細的個人資訊，例如姓名、出生日期、位置和電子郵件地址。 隨著個人檔案的增長，它會成為個人資訊、身分識別資訊、聯絡資訊和通訊偏好設定的強穩儲存庫。
+**XDM個人資料：** XDM形 [!DNL Individual Profile] 成對已識別和部分識別個體的屬性和興趣的單一表示。 較少識別的描述檔僅能包含匿名的行為訊號，例如瀏覽器Cookie，而高度識別的描述檔則可能包含詳細的個人資訊，例如姓名、出生日期、位置和電子郵件地址。 隨著個人檔案的增長，它會成為個人資訊、身分識別資訊、聯絡資訊和通訊偏好設定的強穩儲存庫。
 
-**XDM系統：** XDM系統是Experience Platform中由標準架構提供支援的基礎架構、資料語義和工作流程。
+**XDM系統：** XDM系統是由標準模式支援的基礎架構、資料 [!DNL Experience Platform] 語義和工作流。
 
 [回到頁首](#adobe-experience-platform-glossary)
 
