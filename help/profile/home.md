@@ -4,9 +4,9 @@ solution: Adobe Experience Platform
 title: 即時客戶個人檔案總覽
 topic: guide
 translation-type: tm+mt
-source-git-commit: e34b0b92a8fdf0986b10753d6c983b66dde42503
+source-git-commit: 4d853dfee931789ca1badd410ce0b4b73c8c2803
 workflow-type: tm+mt
-source-wordcount: '1796'
+source-wordcount: '1795'
 ht-degree: 1%
 
 ---
@@ -54,7 +54,7 @@ Adobe Experience Platform Segmentation Service可為您的個別客戶帶來推�
 
 當從多個來源匯整資料並合併資料，以便瞭解每個客戶的完整檢視時，平台會使用合併原則來判斷資料的優先順序以及將哪些資料合併以建立該統一檢視。 使用REST風格的API或用戶介面，您可以建立新的合併策略、管理現有策略，並為組織設定預設的合併策略。 有關使用即時客戶配置檔案API使用合併策略的詳細資訊，請參閱合 [並策略端點指南](api/merge-policies.md)。 若要使用Experience Platform UI處理合併原則，請參閱合 [並原則使用指南](ui/merge-policies.md)。
 
-## (Alpha)設定計算屬性
+### (Alpha)設定計算屬性
 
 >[!IMPORTANT]
 >本文中概述的計算屬性功能為alpha。 文件和功能可能會有所變更。
@@ -80,7 +80,7 @@ Adobe Experience Platform Segmentation Service可為您的個別客戶帶來推�
 >[!Note]
 >透過Adobe解決方案（包括Analytics Cloud、Marketing Cloud和Advertising Cloud）收集的資料會流入Experience Platform並吸收至「設定檔」。
 
-### 描述檔串流擷取量度
+### 描述檔擷取量度
 
 可觀性洞察可讓您在Adobe Experience Platform中公開關鍵指標。 除了平台使用統計資料和各種平台功能的效能指標外，還有特定的描述檔相關度量，可讓您深入瞭解傳入的請求率、成功的擷取率、收錄的記錄大小等。 若要進一步瞭解，請先閱讀「可觀 [性洞察」概觀](../observability/home.md)，並參閱可用度量的檔案，以取得描述檔度 [量的完整清單](../observability/metrics.md)。
 
