@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Analytics對應欄位
 topic: overview
 translation-type: tm+mt
-source-git-commit: 53fb7ea201ed9361584d24c8bd2ad10edd9f3975
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '3328'
+ht-degree: 12%
 
 ---
 
@@ -21,7 +24,9 @@ Adobe Experience Platform可讓您透過Analytics資料連接器(ADC)來內嵌Ad
 
 下表包含顯示Analytics欄位(*Analytics欄位*)名稱、對應的XDM欄位(*XDM欄位*)及其類型(*XDM類型)的欄，以及欄位說明(*** DescriptionComprization)。
 
->[!NOTE] 請向左／向右滾動以查看表的完整內容。
+>[!NOTE]
+>
+>請向左／向右滾動以查看表的完整內容。
 
 | Analytics欄位 | XDM欄位 | XDM類型 | 說明 |
 | --------------- | --------- | -------- | ---------- |
@@ -51,7 +56,7 @@ Adobe Experience Platform可讓您透過Analytics資料連接器(ADC)來內嵌Ad
 | ipv6 | environment.ipV6 | 字串 |
 | j_jscript | environment.browserDetails.javaScriptVersion | 字串 | 瀏覽器支援的JavaScript版本。 |
 | user_agent | environment.browserDetails.userAgent | 字串 | 在HTTP標題中傳送的使用者代理字串。 |
-| mobileappid | application.</span>name | 字串 | 以下列格式儲存的行動應用程式ID: `[AppName][BundleVersion]`。 |
+| mobileappid | application.</span>name | 字串 | 以下列格式儲存的行動應用程式ID: `[AppName][BundleVersion]`. |
 | mobiledevice | device.model | 字串 | 行動裝置的名稱。 在iOS上，它會儲存為逗號分隔的2位數字串。 第一數字代表裝置產生，第二數字代表裝置系列。 |
 | pointofinterest | placeContext.POIinteraction.POIDetail.</span>名稱 | 字串 | 行動服務使用。 代表興趣點。 |
 | pointofinterestdistance | placeContext.POIinteraction.POIDetail.geoInteractionDetails.distanceToCenter | 數字 | 行動服務使用。 表示興趣點距離。 |
@@ -134,7 +139,9 @@ Adobe Experience Platform可讓您透過Analytics資料連接器(ADC)來內嵌Ad
 
 下表包含顯示Analytics欄位(*Analytics欄位*)名稱、對應的XDM欄位(*XDM欄位*)及其類型(*XDM類型)的欄，以及欄位說明(*** DescriptionComprization)。
 
->[!NOTE] 請向左／向右滾動以查看表的完整內容。
+>[!NOTE]
+>
+>請向左／向右滾動以查看表的完整內容。
 
 | Analytics欄位 | XDM欄位 | XDM類型 | 說明 |
 | --------------- | --------- | -------- | ----------- |
@@ -157,7 +164,7 @@ Adobe Experience Platform可讓您透過Analytics資料連接器(ADC)來內嵌Ad
 | m_pagename_no_url | web.webPageDetails.pageViews.value | 數字 | 頁面名稱（若已設定）。 如果未指定任何頁面，此值會留空。 |
 | m_paid_search | search.isPaid | 布林值 | 如果點擊符合付費搜尋偵測而設定的旗標。 |
 | m_product_list | productListItems[].items | 陣列 | 透過產品變數傳入的產品清單。 | {SKU（字串）、quantity(integer)、priceTotal(number)} |
-| m_ref_type | web.webReferrer.type | 字串 | 代表點擊之反向連結類型的數值ID。 1表示您的網站內部，2表示其他網站，3表示搜尋引擎，4表示硬碟，5表示USENET,6表示分類／建立書籤（無反向連結）,7表示電子郵件，8表示無JavaScript,9表示社交網路。 |
+| m_ref_type | web.webReferrer.type | 字串 | 此數值 ID 表示點擊的反向連結類型。1表示您的網站內部，2表示其他網站，3表示搜尋引擎，4表示硬碟，5表示USENET,6表示分類／建立書籤（無反向連結）,7表示電子郵件，8表示無JavaScript,9表示社交網路。 |
 | m_search_engine | search.searchEngine | 字串 | 代表將訪客引薦至您網站之搜尋引擎的數值ID。 |
 | post_currency | commerce.order.currencyCode | 字串 | 交易期間使用的貨幣代碼。 |
 | post_cust_hit_time_gmt | timestamp | 字串 | 這僅適用於啟用時間戳記的資料集。 這是隨其一起發送的基於Unix時間的時間戳。 |
@@ -192,7 +199,9 @@ Adobe Experience Platform可讓您透過Analytics資料連接器(ADC)來內嵌Ad
 
 下表包含顯示Analytics欄位(*Analytics欄位*)名稱、對應的XDM欄位(*XDM欄位*)及其類型(*XDM類型)的欄，以及欄位說明(*** DescriptionComprization)。
 
->[!NOTE] 請向左／向右滾動以查看表的完整內容。
+>[!NOTE]
+>
+>請向左／向右滾動以查看表的完整內容。
 
 | Analytics欄位 | XDM欄位 | XDM類型 | 說明 |
 | --------------- | --------- | -------- | ---------- |
@@ -226,11 +235,11 @@ Adobe Experience Platform可讓您透過Analytics資料連接器(ADC)來內嵌Ad
 | visit_num | _experience.analytics.session.num | 整數 | 用於「瀏覽次數」維度的變數。 這從1開始，並在每次新瀏覽開始時（每位使用者）遞增。 |
 | visit_page_num | _experience.analytics.session.depth | 整數 | 「點擊深度」維度中使用的變數。 此值會針對使用者產生的每次點擊增加1，並在每次瀏覽後重設。 |
 | visit_referrer | _experience.analytics.session.web.webReferrer.URL | 字串 | 瀏覽的第一個反向連結。 |
-| visit_search_page_num | _experience.analytics.session.search.pageDepth | 整數 | 瀏覽的第一個頁面名稱。 |
+| visit_search_page_num | _experience.analytics.session.search.pageDepth | 整數 | 造訪的第一個頁面名稱。 |
 | post_prop1 - post_prop75 | _experience.analytics.customDimensions.listprops.prop1 - _experience.analytics.customDimensions.listprops.prop75 | 物件 | 自訂流量變數1-75。 |
 | post_hier1 - post_hier5 | _experience.analytics.customDimensions.hier1 - _experience.analytics.customDimensions.hier5 | 物件 | 階層變數使用，並包含分隔值清單。 | {values(array)，分隔字元（字串）} |
 | post_mvvar1 - post_mvvar3 | _experience.analytics.customDimensions.lists.list1.list[] - _experience.analytics.customDimensions.list3.list[] | 陣列 | 變數值清單。 包含自訂值的分隔清單，視實作而定。 | {value(string), key(string)} |
-| post_cookies | environment.browserDetails.cookiesEnabled | 布林值 | 用於Cookie支援維度的變數。 |
+| post_cookies | environment.browserDetails.cookiesEnabled | 布林值 | 「Cookie 支援」維度所使用的變數。 |
 | post_event_list | commerce.purchases、commerce.productViews、commerce.productListOpens、commerce.checkouts、commerce.productListAdds、commerce.productListRemoves、commerce.productListViews | 物件 | 點擊時觸發的標準商務事件。 | {id（字串），值（數字）} |
 | post_event_list | _experience.analytics.event1to100.event1 - _experience.analytics.event1to100.event100, _experience.analytics.event101to200.event101 - _experience.analytics.event101to200.event200, _experience.event200analytics.event201to300.event201 - _experience.analytics.event201to300.event300, _experience.analytics.event301to400.event301 - _experience.analytics.event301to400.event400, _experience.analytics.event401to500.event401 - _experience.analytics.event401to500.event500, _experience.analytics.event501to600.event501 - _experience.analytics.event501501to600.event600, _experience.analytics.event601to700.event601 - _experience.analytics.event601to700.event700, _experience.analytics.event701to800.event7_01 - _experience.analytics.event701to800.event800, _experience.analytics.event801to900.event801 - _experience.analytics.event801to900.event900, _experience.analytics.event9001to1000.event901 - _experience.analytics.event901to1000.event1000 | 物件 | 點擊時觸發的自訂事件。 | {id（物件）, value（物件）} |
 | post_java_enabled | environment.browserDetails.javaEnabled | 布林值 | 指示是否啟用Java的標籤。 |
@@ -249,12 +258,12 @@ Adobe Experience Platform可讓您透過Analytics資料連接器(ADC)來內嵌Ad
 |  | mvvar3_instances | .list.items[] | 物件 | 變數值清單。 包含自訂值的分隔清單，視實作而定。 |
 | 顏色 | device.colorDepth | 整數 | 色彩深度ID，根據c_color欄的值。 |
 | first_hit_ref_type | _experience.analytics.endUser.firstWeb.webReferrer.type | 字串 | 數值ID，代表訪客第一個反向連結的反向連結類型。 |
-| first_hit_time_gmt | _experience.analytics.endUser.firstTimestamp | 整數 | 訪客在Unix時間內首次點擊的時間戳記。 |
+| first_hit_time_gmt | _experience.analytics.endUser.firstTimestamp | 整數 | 訪客初次點擊的時間戳記，格式為 Unix 時間。 |
 | geo_country | placeContext.geo.countryCode | 字串 | 根據IP，點擊來源國家的縮寫。 |
 | geo_latitude | placeContext.geo._schema.latitude | 數字 | <!-- MISSING --> |
 | geo_longidute | placeContext.geo._schema.hongitude | 數字 | <!-- MISSING --> |
 | paid_search | search.isPaid | 布林值 | 如果點擊符合付費搜尋偵測而設定的旗標。 |
-| ref_type | web.webReferrer.type | 字串 | 代表點擊之反向連結類型的數值ID。 |
+| ref_type | web.webReferrer.type | 字串 | 此數值 ID 表示點擊的反向連結類型。 |
 | visit_paid_search | _experience.analytics.session.search.isPaid | 布林值 | 標幟（1=付費，0=未付費），指出瀏覽的第一次點擊是否來自付費搜尋點擊。 |
 | visit_ref_type | _experience.analytics.session.web.webReferrer.type | 字串 | 代表瀏覽之第一個反向連結反向連結類型的數值ID。 |
 | visit_search_engine | _experience.analytics.session.search.searchEngine | 字串 | 瀏覽之第一個搜尋引擎的數值ID。 |
