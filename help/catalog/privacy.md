@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 資料湖中的隱私權要求處理
 topic: overview
 translation-type: tm+mt
-source-git-commit: 327be13cbaaa40e4d0409cbb49a051b7067759bf
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1275'
 ht-degree: 0%
@@ -31,7 +31,7 @@ Adobe Experience Platform隱私權服務會處理客戶存取、選擇退出銷�
 
 Adobe Experience Platform Identity Service可跨系統和裝置橋接客戶身分資料。 身分服務使用 **身分名稱空間** ，將身分值與其來源系統關聯，以提供其上下文。 命名空間可以代表一般概念，例如電子郵件地址（「電子郵件」），或將身分識別與特定應用程式(例如Adobe Advertising Cloud ID(「AdCloud」)或Adobe Target ID(「TNTID」))建立關聯。
 
-Identity Service會維護全域定義（標準）和使用者定義（自訂）身分名稱空間的儲存。 標準名稱空間適用於所有組織（例如「電子郵件」和「ECID」），而您的組織也可以建立自訂名稱空間以符合其特定需求。
+Identity Service會維護全域定義（標準）和使用者定義（自訂）身分名稱空間的儲存。 標準名稱空間適用於所有組織（例如「電子郵件」和「ECID」），而您的組織也可以建立自訂名稱空間，以符合其特定需求。
 
 如需Experience Platform中身分名稱空間的詳細資訊，請參閱身分 [名稱空間概觀](../identity-service/namespaces.md)。
 
@@ -39,7 +39,9 @@ Identity Service會維護全域定義（標準）和使用者定義（自訂）�
 
 當建立資料湖的隱私權要求時，必須為每個個別客戶提供有效的身分值（及其相關的名稱空間），以找出其資料並據以處理。 因此，所有受隱私請求約束的資料集都必須在其關聯的XDM **模式中包含** 身份描述符。
 
->[!NOTE] 目前無法在隱私權要求中處理任何以不支援身分描述子中繼資料（例如臨機資料集）的結構為基礎的資料集。
+>[!NOTE]
+>
+>目前無法在隱私權要求中處理任何以不支援身分描述子中繼資料（例如臨機資料集）的結構為基礎的資料集。
 
 本節將逐步介紹將身份描述符添加到現有資料集的XDM模式的步驟。 如果您已有具有身分描述符的資料集，則可跳至下 [一節](#nested-maps)。
 
@@ -60,7 +62,9 @@ Identity Service會維護全域定義（標準）和使用者定義（自訂）�
 
 ### 使用API {#identity-api}
 
->[!NOTE] 本節假定您知道資料集的XDM架構的唯一URI ID值。 如果您不知道此值，可使用Catalog Service API來擷取該值。 閱讀開發人 [員指南的](./api/getting-started.md) 「快速入門」一節後，請依照中所述的步驟列 [出或](./api/list-objects.md) 尋找 [](./api/look-up-object.md) Catalog物件以尋找您的資料集。 可在 `schemaRef.id`
+>[!NOTE]
+>
+>本節假定您知道資料集的XDM架構的唯一URI ID值。 如果您不知道此值，可使用Catalog Service API來擷取該值。 閱讀開發人 [員指南的](./api/getting-started.md) 「快速入門」一節後，請依照中所述的步驟列 [出或](./api/list-objects.md) 尋找 [](./api/look-up-object.md) Catalog物件以尋找您的資料集。 可在 `schemaRef.id`
 >
 > 本節包含對方案註冊表API的調用。 如需有關使用API的重要資訊，包括瞭解您 `{TENANT_ID}` 的概念和容器概念，請參閱開 [發人員指南的](../xdm/api/getting-started.md) 「快速入門」一節。
 
@@ -126,7 +130,9 @@ curl -X POST \
 
 ## 提交請求 {#submit}
 
->[!NOTE] 本節說明如何設定資料湖的隱私權要求的格式。 強烈建議您檢閱 [Privacy Service UI](../privacy-service/ui/overview.md) 或 [Privacy Service API](../privacy-service/api/getting-started.md) 檔案，以取得如何提交隱私權工作的完整步驟，包括如何在請求負載中正確格式化已提交的使用者身分資料。
+>[!NOTE]
+>
+>本節說明如何設定資料湖的隱私權要求的格式。 強烈建議您檢閱 [Privacy Service UI](../privacy-service/ui/overview.md) 或 [Privacy Service API](../privacy-service/api/getting-started.md) 檔案，以取得如何提交隱私權工作的完整步驟，包括如何在請求負載中正確格式化已提交的使用者身分資料。
 
 下節將說明如何使用隱私權服務UI或API來提出資料湖的隱私權要求。
 
