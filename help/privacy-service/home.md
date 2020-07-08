@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Adobe Experience Platform隱私權服務
 topic: overview
 translation-type: tm+mt
-source-git-commit: 66fef5b98d2c21d1ac8b272e2c8557d26daa3364
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '596'
+ht-degree: 10%
 
 ---
 
@@ -21,7 +24,7 @@ Adobe Experience Platform Privacy Service提供REST風格的API和使用者介�
 
 ### 隱私權服務與GDPR
 
-通用 [資料保護規則](https://eugdpr.org/) (GDPR)為歐盟成員國引進了數項新的資料隱私權，包括存取權 **和** 被遺忘權 ****。 這表示，您的企業已收集個人資料的任何歐盟公民，都可隨時要求存取或刪除其資料。 若未能在30天內遵守這些要求，您的組織將面臨數百萬美元的罰款。
+[](https://eugdpr.org/)一般資料保護規範 (GDPR) 為歐盟成員國引進了許多新的資料隱私權，包括&#x200B;**存取權**&#x200B;和&#x200B;**被遺忘權**。這表示貴公司已收集其個人資料的任何歐盟公民，都有權隨時請求存取或刪除其資料。若未能在30天內遵守這些要求，您的組織將面臨數百萬美元的罰款。
 
 隱私權服務支援存取和刪除GDPR要求，並與CCPA規則下的要求分開追蹤。 請參閱 [GDPR常見問答](gdpr/faq.md)[和術語文](gdpr/terminology.md) 件，以取得詳細資訊。
 
@@ -35,7 +38,9 @@ The [California Consumer Privacy Act](https://www.caprivacy.org/about) (CCPA) en
 
 隱私權服務提供REST風格的API和使用者介面，讓您管理客戶存取／刪除其私人資料或選擇退出銷售的要求(也稱為隱 **私工作**)。 此服務也提供集中稽核與記錄機制，讓您檢視與Experience Cloud應用程式有關的隱私權工作狀態與結果。
 
->[!NOTE] 退出要求目前僅受隱私權服務API支援。
+>[!NOTE]
+>
+>退出要求目前僅受隱私權服務API支援。
 
 ### 使用API
 
