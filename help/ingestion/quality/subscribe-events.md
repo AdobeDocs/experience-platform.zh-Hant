@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 訂閱資料擷取事件
 topic: overview
 translation-type: tm+mt
-source-git-commit: 1498739d753bdb569e0d3e091e4160bdae40a32f
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '851'
 ht-degree: 1%
@@ -24,7 +24,9 @@ ht-degree: 1%
 
 以下是可供訂閱的可用資料擷取狀態通知清單。
 
->[!NOTE] 所有資料擷取通知只提供一個事件主題。 為了區分不同的狀態，可以使用事件代碼。
+>[!NOTE]
+>
+>所有資料擷取通知只提供一個事件主題。 為了區分不同的狀態，可以使用事件代碼。
 
 | 平台服務 | 狀態 | 事件說明 | 事件代碼 |
 | ---------------- | ------ | ----------------- | ---------- |
