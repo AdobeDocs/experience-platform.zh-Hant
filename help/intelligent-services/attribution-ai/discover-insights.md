@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 在歸因AI中發現見解
 topic: Attribution AI insights
 translation-type: tm+mt
-source-git-commit: 0ea96de956adb5a6c5286433a547772118c43aee
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1164'
 ht-degree: 1%
@@ -30,7 +30,9 @@ ht-degree: 1%
 
 此時會顯示「歸因AI」服務頁面。 本頁列出Attribution AI的服務例項，並顯示其相關資訊，包括例項名稱、轉換事件、執行例項的頻率，以及上次更新的狀態。 按一下服務實例名稱開始。
 
->[!NOTE] 只能選擇已完成成功計分運行的服務實例。
+>[!NOTE]
+>
+>只能選擇已完成成功計分運行的服務實例。
 
 ![建立例項](./images/insights/select-service-instance.png)
 
@@ -72,7 +74,9 @@ ht-degree: 1%
 
 歸因AI見解可讓您篩選資料，並根據選取的篩選條件自動更新UI視覺效果。
 
->[!NOTE] 依預設，除了 ** Attribution模型篩選器設為「增量和受影響的歸因轉換」外，每個篩選器都會設為「全部」。
+>[!NOTE]
+>
+>依預設，除了 ** Attribution模型篩選器設為「增量和受影響的歸因轉換」外，每個篩選器都會設為「全部」。
 
 ### 轉換事件
 
@@ -98,19 +102,23 @@ ht-degree: 1%
 
 「地 *理位置* 」篩選器會根據地區模型填入國家代碼。 根據您的資料，此篩選器可能存在或不存在。
 
->[!NOTE] 國家／地區代碼有兩個字元長。 如需完整清單，請 [參閱ISO 3166-1 alpha-2](https://datahub.io/core/country-list)。
+>[!NOTE]
+>
+>國家／地區代碼有兩個字元長。 如需完整清單，請 [參閱ISO 3166-1 alpha-2](https://datahub.io/core/country-list)。
 
 ### 地區
 
->[!NOTE] 只有當您在建立服務例項時，在「歸因AI使用者介 [面指南」中執行選用步驟](./user-guide.md#region-based-modeling-optional) 、以地區為基礎的模型時，才會出現此篩選。
+>[!NOTE]
+>
+>只有當您在建立服務例項時，在「歸因AI使用者介 [面指南」中執行選用步驟](./user-guide.md#region-based-modeling-optional) 、以地區為基礎的模型時，才會出現此篩選。
 
 此篩選器允許您選擇在實例建立過程中設定的任何區域。
 
-### Player Name
+### Channel
 
 按一下 *渠道篩選* ，會顯示包含所有可用行銷渠道的下拉式清單。 您可以選取多個渠道來比較。
 
-![Player Name](./images/insights/channel.png)
+![Channel](./images/insights/channel.png)
 
 ### 日期範圍
 
