@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 資料科學工作區概觀
 topic: overview
 translation-type: tm+mt
-source-git-commit: 1e5526b54f3c52b669f9f6a792eda0abfc711fdd
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '2569'
 ht-degree: 0%
@@ -123,7 +123,9 @@ Adobe [!DNL Data Science Workspace]Experience Platform可讓您將以體驗為�
 
 存取控制 [!DNL Experience Platform] 權是透過 [Adobe Admin Console管理](https://adminconsole.adobe.com)。 此功能運用Admin Console中的產品設定檔，可連結使用者與權限和沙盒。 如需詳細 [資訊，請參閱存取控制概觀](../access-control/home.md) 。
 
->[!IMPORTANT] 若要使用， [!DNL Data Science Workspace]必須啟 [!UICONTROL 用「管理資料科學工作區] 」權限。
+>[!IMPORTANT]
+>
+>若要使用， [!DNL Data Science Workspace]必須啟 [!UICONTROL 用「管理資料科學工作區] 」權限。
 
 下表概述啟用或停用此權限的效果：
 
@@ -199,7 +201,7 @@ Adobe Experience Platform中的所有資料都符合標準化的XDM架構，毋�
 
 當您選擇最符合您業務需求的最佳訓練方式時，您就可以建立智慧型服務，毋需開發人員 [!DNL Data Science Workspace] 的協助。 只需按幾下滑鼠，不需要撰寫程式碼。 發佈的智慧型服務可供貴組織的其他成員存取，而不需重新建立模型。
 
-已發佈的智慧型服務可設定為在新資料可用時，使用新資料自動不時進行訓練。 這可確保您的服務在時間持續時仍能維持其效率和效能。
+已發佈的智慧型服務可設定為在新資料可用時，使用新資料自動自動進行培訓。 這可確保您的服務在時間持續時仍能維持其效率和效能。
 
 ## 後續步驟
 
