@@ -4,7 +4,10 @@ solution: Experience Platform
 title: 清單對象
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 71c73a3899ccdd1c024a811b36c411915a3b14be
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '204'
+ht-degree: 1%
 
 ---
 
@@ -42,7 +45,9 @@ curl -X GET \
 
 成功的響應以鍵值對的形式返回目錄對象的清單，該清單由請求中提供的查詢參數篩選。 對於每個鍵值對，鍵代表有關目錄對象的唯一標識符，然後可用於另一個調用中，以查看該特 [定對象](look-up-object.md) ，以瞭解詳細資訊。
 
->[!NOTE] 如果返回的對象不包含查詢所指示的一個或多個請求屬性，則響應只返回它所包含的請求屬性，如下面的「示例資料集3」和「示例資料集4」所示。 `properties`
+>[!NOTE]
+>
+>如果返回的對象不包含查詢所指示的一個或多個請求屬性，則響應只返回它所包含的請求屬性，如下面的「示例資料集3」和「示例資料集4」所示。 `properties`
 
 ```json
 {
