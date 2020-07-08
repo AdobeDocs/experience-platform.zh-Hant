@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Audience Manager對應欄位
 topic: overview
 translation-type: tm+mt
-source-git-commit: 53fb7ea201ed9361584d24c8bd2ad10edd9f3975
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '148'
+ht-degree: 0%
 
 ---
 
@@ -17,7 +20,7 @@ source-git-commit: 53fb7ea201ed9361584d24c8bd2ad10edd9f3975
 
 ## 即時資料
 
-類型：即時資料
+類型： 即時資料
 
 | 即時資料欄位 | XDM欄位 |
 | --- | --- |
@@ -37,7 +40,7 @@ source-git-commit: 53fb7ea201ed9361584d24c8bd2ad10edd9f3975
 
 ## 傳入資 **料（已過時）**
 
-類型：ExperienceEvent
+類型： ExperienceEvent
 
 | 入站欄位 | XDM欄位 |
 | --- | --- |
@@ -47,11 +50,13 @@ source-git-commit: 53fb7ea201ed9361584d24c8bd2ad10edd9f3975
 | `b_time` | `ExperienceEvent.timeStamp` |
 | `overwrite` | `overwriteTraits` |
 
->[!NOTE] 未來版本中已排程「傳入欄位」已過時。
+>[!NOTE]
+>
+>未來版本中已排程「傳入欄位」已過時。
 
 ## 描述檔資料
 
-類型：概要檔案XDM
+類型： 概要檔案XDM
 
 | 描述檔欄位 | XDM欄位 |
 | --- | --- |
