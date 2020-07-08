@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 引擎
 topic: Developer guide
 translation-type: tm+mt
-source-git-commit: 76f68fea1bea970bab4c25061527b7ebae33faf3
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1118'
 ht-degree: 3%
@@ -44,6 +44,8 @@ curl -X GET https://platform.adobe.io/data/sensei/engines/dockerRegistry \
 成功的響應返回包含Docker註冊表詳細資訊的裝載，包括Docker URL(`host`)、用戶名(`username`)和密碼(`password`)。
 
 >[!NOTE]
+>
+>
 >每當您的Docker密碼更新時， `{ACCESS_TOKEN}` 密碼就會變更。
 
 ```json
@@ -383,7 +385,9 @@ curl -X GET \
 
 您可以透過PUT請求覆寫現有引擎的屬性，以修改和更新現有引擎，該請求在請求路徑中包含目標引擎的ID，並提供包含更新屬性的JSON裝載。
 
->[!NOTE] 為確保此PUT請求成功，建議您先執行GET請求，以依ID [擷取引擎](#retrieve-specific)。 然後，修改並更新傳回的JSON物件，並套用已修改的JSON物件作為PUT要求的裝載。
+>[!NOTE]
+>
+>為確保此PUT請求成功，建議您先執行GET請求，以依ID [擷取引擎](#retrieve-specific)。 然後，修改並更新傳回的JSON物件，並套用已修改的JSON物件作為PUT要求的裝載。
 
 下列範例API呼叫會在最初具有這些屬性時更新引擎的名稱和說明：
 
