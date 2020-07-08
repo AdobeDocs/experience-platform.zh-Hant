@@ -4,7 +4,7 @@ seo-title: 即時客戶資料平台中的資料治理
 description: '「資料管理」可讓您管理客戶資料，並確保符合適用於資料使用的法規、限制和政策。 '
 seo-description: '「資料管理」可讓您管理客戶資料，並確保符合適用於資料使用的法規、限制和政策。 '
 translation-type: tm+mt
-source-git-commit: c4e5e8ccac1af976c890adb1c9f0ff7f7b5ed9b4
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1085'
 ht-degree: 1%
@@ -34,7 +34,9 @@ Adobe Experience Platform資料管理可讓您管理客戶資料，並確保符�
 
 您可以定義目標的行銷使用案例（也稱為行銷動作），以設定目標的資料使用限制。 目的地的行銷使用案例會指出將匯出至該目的地的資料意圖。
 
->[!NOTE] 如需行銷動作及其在資料使用政策中使用的詳細資訊，請參閱Experience Platform文 [件中的資料使用政策](../../data-governance/policies/overview.md) 概觀。
+>[!NOTE]
+>
+>如需行銷動作及其在資料使用政策中使用的詳細資訊，請參閱Experience Platform文 [件中的資料使用政策](../../data-governance/policies/overview.md) 概觀。
 
 定義目的地的行銷使用案例可讓您確保傳送至這些目的地的任何描述檔或區段符合資料使用政策。 因此，您應根據組織對啟動實施政策限制的需求，將適當的行銷使用案例新增至您的目的地。
 
@@ -63,7 +65,9 @@ Adobe Experience Platform針對常見客 **戶體驗使用案** 例提供數種�
 * 套用至區段內要啟用之欄位和資料集的資料使用標籤。
 * 目的地的行銷目的。
 
->[!NOTE] 如果資料集（而非整個資料集）中的某些欄位僅套用資料使用標籤，則只有在下列情況下才會執行這些欄位層級標籤：
+>[!NOTE]
+>
+>如果資料集（而非整個資料集）中的某些欄位僅套用資料使用標籤，則只有在下列情況下才會執行這些欄位層級標籤：
 >* 欄位會用於區段定義中。
 >* 欄位被配置為目標目標的預計屬性。
 
