@@ -4,7 +4,10 @@ solution: Experience Platform
 title: 架構註冊API開發人員指南
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 387cbdebccb9ae54a2907d1afe220e9711927ca6
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '1246'
+ht-degree: 0%
 
 ---
 
@@ -21,10 +24,10 @@ source-git-commit: 387cbdebccb9ae54a2907d1afe220e9711927ca6
 
 本指南需要有效瞭解Adobe Experience Platform的下列元件：
 
-* [體驗資料模型(XDM)系統](../home.md):Experience Platform組織客戶體驗資料的標準化架構。
-   * [架構構成基礎](../schema/composition.md):瞭解XDM架構的基本建置區塊。
-* [即時客戶個人檔案](../../profile/home.md):根據來自多個來源的匯整資料，提供統一、即時的消費者個人檔案。
-* [沙盒](../../sandboxes/home.md):Experience Platform提供虛擬沙盒，可將單一Platform實例分割為不同的虛擬環境，以協助開發和發展數位體驗應用程式。
+* [體驗資料模型(XDM)系統](../home.md): Experience Platform組織客戶體驗資料的標準化架構。
+   * [架構構成基礎](../schema/composition.md): 瞭解XDM架構的基本建置區塊。
+* [即時客戶個人檔案](../../profile/home.md): 根據來自多個來源的匯整資料，提供統一、即時的消費者個人檔案。
+* [沙盒](../../sandboxes/home.md): Experience Platform提供虛擬沙盒，可將單一Platform實例分割為不同的虛擬環境，以協助開發和發展數位體驗應用程式。
 
 以下各節提供您必須知道的其他資訊，才能成功呼叫架構註冊表API。
 
@@ -36,7 +39,7 @@ source-git-commit: 387cbdebccb9ae54a2907d1afe220e9711927ca6
 
 若要呼叫平台API，您必須先完成驗證教 [學課程](../../tutorials/authentication.md)。 完成驗證教學課程後，所有Experience Platform API呼叫中每個必要標題的值都會顯示在下方：
 
-* 授權：生產者 `{ACCESS_TOKEN}`
+* 授權： 生產者 `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
 * x-gw-ims-org-id: `{IMS_ORG}`
 
@@ -44,13 +47,15 @@ Experience Platform中的所有資源（包括屬於架構註冊表的資源）�
 
 * x-sandbox-name: `{SANDBOX_NAME}`
 
->[!NOTE] 如需平台中沙盒的詳細資訊，請參閱沙盒 [概觀檔案](../../sandboxes/home.md)。
+>[!NOTE]
+>
+>如需平台中沙盒的詳細資訊，請參閱沙盒 [概觀檔案](../../sandboxes/home.md)。
 
 對方案註冊表的所有查閱(GET)請求都需要額外的「接受」標題，其值會決定API傳回的資訊格式。 如需詳細 [資訊，請參閱下方](#accept) 「接受標題」一節。
 
 所有包含裝載(POST、PUT、PATCH)的請求都需要額外的標題：
 
-* 內容類型：application/json
+* 內容類型： application/json
 
 ## 瞭解您的TENANT_ID {#know-your-tenant_id}
 
@@ -152,11 +157,11 @@ curl -X GET \
  }
 ```
 
-* `tenantId`:IMS `TENANT_ID` 組織的值。
+* `tenantId`: IMS `TENANT_ID` 組織的值。
 
-## 瞭解 `CONTAINER_ID`{#container}
+## 瞭解 `CONTAINER_ID` {#container}
 
-對架構註冊表API的呼叫需要使用 `CONTAINER_ID`。 有兩個容器可對其進行API呼叫：全 **域容器** ，租 **戶容器**。
+對架構註冊表API的呼叫需要使用 `CONTAINER_ID`。 有兩個容器可對其進行API呼叫： 全 **域容器** ，租 **戶容器**。
 
 ### 全域容器
 
@@ -198,7 +203,9 @@ curl -X GET \
 | `application/vnd.adobe.xed-full-notext+json; version={MAJOR_VERSION}` | `$ref` 屬性和已解 `allOf` 決。 無標題或說明。 |
 | `application/vnd.adobe.xed-full-desc+json; version={MAJOR_VERSION}` | `$ref` 屬性和已解 `allOf` 決。 包括描述符。 |
 
->[!NOTE] 如果僅提 `major` 供版本（例如1、2、3），則註冊表將返回最新 `minor` 版本(例如.1、.2、.3)。
+>[!NOTE]
+>
+>如果僅提 `major` 供版本（例如1、2、3），則註冊表將返回最新 `minor` 版本(例如 .1、.2、.3)。
 
 ## XDM現場限制和最佳做法
 
@@ -221,7 +228,7 @@ curl -X GET \
 ```
 
 * 欄位物件的名稱可能包含英數字元、破折號或底線字元，但 **不得以底線** 開頭。
-   * **正確：**`fieldName`, `field_name2``Field-Name`, `field-name_3`
+   * **正確：** `fieldName`, `field_name2`, `Field-Name`, `field-name_3`
    * **錯誤：** `_fieldName`
 * camelCase是欄位對象名稱的首選參數。 範例: `fieldName`
 * 欄位應包含在「 `title`標題大小寫」中寫入的。 範例: `Field Name`
