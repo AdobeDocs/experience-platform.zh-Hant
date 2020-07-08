@@ -4,7 +4,10 @@ solution: Experience Platform
 title: 使用RStudio連線
 topic: connect
 translation-type: tm+mt
-source-git-commit: 7d5d98d8e32607abf399fdc523d2b3bc99555507
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '222'
+ht-degree: 2%
 
 ---
 
@@ -40,7 +43,9 @@ con <- dbConnect(drv,
 | `{HOST_NUMBER` 和 `{PORT_NUMBER}` | 查詢服務的主機端點及其埠。 |
 | `{USERNAME}` 和 `{PASSWORD}` | 將使用的登錄憑據。 用戶名的形式為 `ORG_ID@AdobeOrg`。 |
 
->[!NOTE] 有關查找資料庫名稱、主機、埠和登錄憑據的詳細資訊，請訪問平台 [上的憑據頁](https://platform.adobe.com/query/configuration)。 若要尋找您的認證，請登入「平台」，按一下「 **查詢**」，然後按一 **下「認證」**。
+>[!NOTE]
+>
+>有關查找資料庫名稱、主機、埠和登錄憑據的詳細資訊，請訪問平台 [上的憑據頁](https://platform.adobe.com/query/configuration)。 若要尋找您的認證，請登入「平台」，按一下「 **查詢**」，然後按一 **下「認證」**。
 
 ## 後續步驟
 
