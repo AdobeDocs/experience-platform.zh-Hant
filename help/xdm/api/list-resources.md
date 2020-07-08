@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 列出資源
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: b4d8a6f8006d55c7aac19d705c6880fec915c147
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '519'
 ht-degree: 2%
@@ -16,7 +16,9 @@ ht-degree: 2%
 
 通過執行單個GET請求，可以查看容器內特定類型（類、混合、方案、資料類型或描述符）的所有模式註冊表資源的清單。
 
->[!NOTE] 列出資源時，方案註冊表將結果集限制為300個項。 若要傳回超出此限制的資源，您必須使用分 [頁參數](#paging)。 建議您使用查詢參數來篩 [選結果](#filtering) ，並減少傳回的資源數。
+>[!NOTE]
+>
+>列出資源時，方案註冊表將結果集限制為300個項。 若要傳回超出此限制的資源，您必須使用分 [頁參數](#paging)。 建議您使用查詢參數來篩 [選結果](#filtering) ，並減少傳回的資源數。
 
 **API格式**
 
@@ -78,7 +80,9 @@ curl -X GET \
 
 方案註冊表支援在列出資源時使用查詢參數對頁面和篩選結果。
 
->[!NOTE] 組合多個查詢參數時，必須以&amp;符號(`&`)分隔。
+>[!NOTE]
+>
+>組合多個查詢參數時，必須以&amp;符號(`&`)分隔。
 
 ### 分頁 {#paging}
 
@@ -105,4 +109,6 @@ curl -X GET \
 | `~` | 依屬性是否與提供的規則運算式相符來篩選。 | `property=title~test$` |
 | (無) | 僅聲明屬性名稱僅返回存在屬性的條目。 | `property=title` |
 
->[!TIP] 您可以使用參 `property` 數依其相容類別來篩選混音。 例如，只 `property=meta:intendedToExtend==https://ns.adobe.com/xdm/context/profile` 返回與XDM Individual Profile類相容的混音。
+>[!TIP]
+>
+>您可以使用參 `property` 數依其相容類別來篩選混音。 例如，只 `property=meta:intendedToExtend==https://ns.adobe.com/xdm/context/profile` 返回與XDM Individual Profile類相容的混音。
