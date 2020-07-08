@@ -1,10 +1,10 @@
 ---
 keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API
 solution: Adobe Experience Platform
-title: 即時客戶個人檔案API開發人員指南
+title: 計算屬性——即時客戶配置檔案API
 topic: guide
 translation-type: tm+mt
-source-git-commit: d464a6b4abd843f5f8545bc3aa8000f379a86c6d
+source-git-commit: d1656635b6d082ce99f1df4e175d8dd69a63a43a
 workflow-type: tm+mt
 source-wordcount: '2431'
 ht-degree: 1%
@@ -204,7 +204,7 @@ curl -X POST \
 
 | 屬性 | 說明 |
 |---|---|
-| `id` | 唯一、唯讀、系統產生的ID，可用於在其他API操作期間引用計算的屬性。 |
+| `id` | 唯一、唯讀、系統產生的ID，可用於在其他API操作期間參考計算的屬性。 |
 | `imsOrgId` | 與計算屬性相關的IMS組織應符合在請求中傳送的值。 |
 | `sandbox` | 沙盒物件包含沙盒的詳細資訊，此沙盒已設定計算屬性。 這項資訊是從請求中傳送的沙盒標題中擷取。 如需詳細資訊，請參閱 [沙盒總覽](../../sandboxes/home.md)。 |
 | `positionPath` | 包含解構至請求 `path` 中所傳送欄位的陣列。 |
@@ -483,6 +483,8 @@ curl -X PATCH \
 您也可以使用API刪除計算屬性。 這是通過向端點發出DELETE請求並 `/config/computedAttributes` 在請求路徑中包括要刪除的計算屬性的ID來完成的。
 
 >[!Note]
+>
+>
 >刪除計算屬性時請小心，因為該屬性可能在多個方案中使用，且DELETE操作無法撤消。
 
 **API格式**
