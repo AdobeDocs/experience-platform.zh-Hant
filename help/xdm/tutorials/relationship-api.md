@@ -4,7 +4,10 @@ solution: Experience Platform
 title: 使用方案註冊表API定義兩個方案之間的關係
 topic: tutorials
 translation-type: tm+mt
-source-git-commit: 7e867ee12578f599c0c596decff126420a9aca01
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '1504'
+ht-degree: 1%
 
 ---
 
@@ -20,10 +23,10 @@ Adobe Experience Platform的重要部分，在於能夠跨不同通道瞭解客�
 
 本教學課程需要對體驗資料模型(XDM)和XDM系統有良好的認識。 在開始本教學課程之前，請先閱讀下列檔案：
 
-* [Experience Platform中的XDM系統](../home.md):XDM及其在Experience Platform中的實作概觀。
-   * [架構構成基礎](../schema/composition.md):介紹XDM模式的構建塊。
-* [即時客戶個人檔案](../../profile/home.md):根據來自多個來源的匯整資料，提供統一、即時的消費者個人檔案。
-* [沙盒](../../sandboxes/home.md):Experience Platform提供虛擬沙盒，可將單一Platform實例分割為不同的虛擬環境，以協助開發和發展數位體驗應用程式。
+* [Experience Platform中的XDM系統](../home.md): XDM及其在Experience Platform中的實作概觀。
+   * [架構構成基礎](../schema/composition.md): 介紹XDM模式的構建塊。
+* [即時客戶個人檔案](../../profile/home.md): 根據來自多個來源的匯整資料，提供統一、即時的消費者個人檔案。
+* [沙盒](../../sandboxes/home.md): Experience Platform提供虛擬沙盒，可將單一Platform實例分割為不同的虛擬環境，以協助開發和發展數位體驗應用程式。
 
 在開始本教學課程之前，請先閱讀開 [發人員指南](../api/getting-started.md) ，以取得成功呼叫架構註冊表API所需的重要資訊。 這包括您 `{TENANT_ID}`的「容器」概念，以及提出要求所需的標題（請特別注意「接受」標題及其可能的值）。
 
@@ -53,7 +56,9 @@ curl -X GET \
   -H 'Accept: application/vnd.adobe.xed-id+json'
 ```
 
->[!NOTE] 「接受」標 `application/vnd.adobe.xed-id+json` 題只會傳回產生的結構描述的標題、ID和版本。
+>[!NOTE]
+>
+>「接受」標 `application/vnd.adobe.xed-id+json` 題只會傳回產生的結構描述的標題、ID和版本。
 
 **回應**
 
@@ -99,13 +104,15 @@ curl -X GET \
 
 ## 定義兩個方案的參考欄位
 
-在模式註冊表中，關係描述符的工作方式與SQL表中的外鍵類似：源模式中的欄位用作對目標模式欄位的引用。 在定義關係時，每個方案必須有一個專用欄位作為對其他方案的引用。
+在模式註冊表中，關係描述符的工作方式與SQL表中的外鍵類似： 源模式中的欄位用作對目標模式欄位的引用。 在定義關係時，每個方案必須有一個專用欄位作為對其他方案的引用。
 
->[!IMPORTANT] 如果要在「即時客戶配置檔案」中啟 [用方案](../../profile/home.md)，則目標方案的參考欄位必須是其主 **要標識**。 本教學課程稍後會詳細說明此問題。
+>[!IMPORTANT]
+>
+>如果要在「即時客戶配置檔案」中啟 [用方案](../../profile/home.md)，則目標方案的參考欄位必須是其主 **要標識**。 本教學課程稍後會詳細說明此問題。
 
 如果任一方案沒有用於此目的的欄位，您可能需要使用新欄位建立混音，並將其新增至方案。 此新欄位必須 `type` 有&quot;string&quot;值。
 
-在本教學課程中，目標模式&quot;Hotels&quot;已包含一個用於此目的的欄位： `hotelId`。 但是，源模式「忠誠度成員」沒有此欄位，並且必須給予新混音，在其名稱空間下 `favoriteHotel`添加新字 `TENANT_ID` 段。
+在本教學課程中，目標模式&quot;Hotels&quot;已包含一個用於此目的的欄位： `hotelId`. 但是，源模式「忠誠度成員」沒有此欄位，並且必須給予新混音，在其名稱空間下 `favoriteHotel`添加新字 `TENANT_ID` 段。
 
 ### 建立新的混音
 
@@ -323,7 +330,9 @@ curl -X PATCH \
 
 ## 為兩個方案定義主標識欄位
 
->[!NOTE] 只有在「即時客戶設定檔」中啟用的方案才 [需要此步驟](../../profile/home.md)。 如果不希望任一方案參與聯合，或者如果方案已定義主要標識，則可以跳至為目標方案建立引用標識描述符 [的下一步](#create-descriptor) 。
+>[!NOTE]
+>
+>只有在「即時客戶設定檔」中啟用的方案才 [需要此步驟](../../profile/home.md)。 如果不希望任一方案參與聯合，或者如果方案已定義主要標識，則可以跳至為目標方案建立引用標識描述符 [的下一步](#create-descriptor) 。
 
 要使結構能夠在即時客戶配置檔案中使用，必須定義主要標識。 此外，關係的目標模式必須使用其主要標識作為其引用欄位。
 
