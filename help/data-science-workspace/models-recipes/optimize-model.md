@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 最佳化模型
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 4b0f0dda97f044590f55eaf75a220f631f3313ee
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1219'
 ht-degree: 0%
@@ -62,7 +62,9 @@ training.evaluate=true
 evaluation.metrics.com=com.adobe.platform.ml.impl.Constants.DEFAULT
 ```
 
->[!NOTE] 如果未定義量度，預設量度將會作用中。
+>[!NOTE]
+>
+>如果未定義量度，預設量度將會作用中。
 
 您可以變更的值來啟用特定量度 `evaluation.metrics.com`。 在下列範例中，F分數量度已啟用。
 
@@ -83,7 +85,9 @@ evaluation.metrics=com.adobe.platform.ml.impl.Constants.FSCORE
 
 自訂求值器可延伸檔案中的介 `MLEvaluator.scala` 面來 `Evaluator.scala` 提供。 在範例 [Evaluator.scala](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/scala/src/main/scala/com/adobe/platform/ml/Evaluator.scala) 檔案中，我們定義自訂 `split()` 和函 `evaluate()` 數。 我們 `split()` 的函式會以8:2的比率隨機分割資料，而我們的函式會 `evaluate()` 定義並傳回3個量度： MAPE、MAE和RMSE。
 
->[!IMPORTANT] 對於類 `MLMetric` 別，建立新量度時，請勿使用 `"measures"` , `valueType` 否則量度不會填 `MLMetric` 入自訂評估量度表格中。
+>[!IMPORTANT]
+>
+>對於類 `MLMetric` 別，建立新量度時，請勿使用 `"measures"` , `valueType` 否則量度不會填 `MLMetric` 入自訂評估量度表格中。
 >  
 > 執行下列動作： `metrics.add(new MLMetric("MAPE", mape, "double"))`\
 > 不是這樣： `metrics.add(new MLMetric("MAPE", mape, "measures"))`
