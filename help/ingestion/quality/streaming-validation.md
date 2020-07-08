@@ -4,7 +4,10 @@ solution: Experience Platform
 title: 串流擷取驗證
 topic: overview
 translation-type: tm+mt
-source-git-commit: 79466c78fd78c0f99f198b11a9117c946736f47a
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '842'
+ht-degree: 3%
 
 ---
 
@@ -17,8 +20,8 @@ source-git-commit: 79466c78fd78c0f99f198b11a9117c946736f47a
 
 本指南需要有效瞭解Adobe Experience Platform的下列元件：
 
-- [體驗資料模型(XDM)系統](../../xdm/home.md):Experience Platform組織客戶體驗資料的標準化架構。
-- [串流擷取](../streaming-ingestion/overview.md):其中一種方法可將資料傳送至Experience Platform。
+- [體驗資料模型(XDM)系統](../../xdm/home.md): Experience Platform組織客戶體驗資料的標準化架構。
+- [串流擷取](../streaming-ingestion/overview.md): 其中一種方法可將資料傳送至Experience Platform。
 
 ### 讀取範例API呼叫
 
@@ -28,7 +31,7 @@ source-git-commit: 79466c78fd78c0f99f198b11a9117c946736f47a
 
 若要呼叫平台API，您必須先完成驗證教 [學課程](../../tutorials/authentication.md)。 完成驗證教學課程後，所有Experience Platform API呼叫中每個必要標題的值都會顯示在下方：
 
-- 授權：生產者 `{ACCESS_TOKEN}`
+- 授權： 生產者 `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
@@ -36,7 +39,9 @@ Experience Platform中的所有資源（包括屬於架構註冊表的資源）�
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
->[!NOTE] 如需平台中沙盒的詳細資訊，請參閱沙盒 [概觀檔案](../../sandboxes/home.md)。
+>[!NOTE]
+>
+>如需平台中沙盒的詳細資訊，請參閱沙盒 [概觀檔案](../../sandboxes/home.md)。
 
 所有包含裝載(POST、PUT、PATCH)的請求都需要額外的標題：
 
@@ -161,7 +166,9 @@ curl -X POST https://dcs.adobedc.net/collection/{CONNECTION_ID} \
 | --------- | ----------- |
 | `{JSON_PAYLOAD}` | 您要收錄之資料的JSON內文。 |
 
->[!NOTE] 不需要額外的查詢參數，因為非同步驗證預設會啟用。
+>[!NOTE]
+>
+>不需要額外的查詢參數，因為非同步驗證預設會啟用。
 
 **回應**
 
@@ -189,8 +196,8 @@ curl -X POST https://dcs.adobedc.net/collection/{CONNECTION_ID} \
 | 狀態代碼 | 這意味著什麼 |
 | ----------- | ------------- |
 | 200 | 成功. 對於同步驗證，這表示它已通過驗證檢查。 對於非同步驗證，這表示它只成功接收了訊息。 使用者可透過觀察資料集來找出最終的訊息狀態。 |
-| 400 | 錯誤。 您的要求有問題。 從串流驗證服務接收含有詳細資訊的錯誤訊息。 |
-| 401 | 錯誤。 您的要求未經授權——您需要使用不記名代號來要求。 如需如何要求存取的詳細資訊，請參閱本教 [學課程](../../tutorials/authentication.md) 或此 [部落格文章](https://medium.com/adobetech/using-postman-for-jwt-authentication-on-adobe-i-o-7573428ffe7f)。 |
-| 500 | 錯誤。 出現內部系統錯誤。 |
-| 501 | 錯誤。 這表示此位置不 **支援** 同步驗證。 |
-| 503 | 錯誤。 服務目前無法使用。 客戶端至少應使用指數式回退策略重試三次。 |
+| 400 | 錯誤. 您的要求有問題。 從串流驗證服務接收含有詳細資訊的錯誤訊息。 |
+| 401 | 錯誤. 您的要求未經授權——您需要使用不記名代號來要求。 如需如何要求存取的詳細資訊，請參閱本教 [學課程](../../tutorials/authentication.md) 或此 [部落格文章](https://medium.com/adobetech/using-postman-for-jwt-authentication-on-adobe-i-o-7573428ffe7f)。 |
+| 500 | 錯誤. 出現內部系統錯誤。 |
+| 501 | 錯誤. 這表示此位置不支 **援同** 步驗證。 |
+| 503 | 錯誤. 服務目前無法使用。 客戶端至少應使用指數式回退策略重試三次。 |
