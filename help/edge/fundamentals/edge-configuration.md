@@ -4,7 +4,7 @@ seo-title: Experience Platform Web SDK的Edge組態
 description: '瞭解如何設定Experience Platform Edge Network。 '
 seo-description: '瞭解如何設定Experience Platform Edge Network。 '
 translation-type: tm+mt
-source-git-commit: 5f263a2593cdb493b5cd48bc0478379faa3e155d
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '882'
 ht-degree: 2%
@@ -23,6 +23,8 @@ Edge組態ID可在Adobe中使 [!DNL Launch] 用Edge組態工具建立。 此工�
 ![邊緣配置工具導航](../../assets/edge_configuration_nav.png)
 
 >[!NOTE]
+>
+>
 >
 >無論客戶是否使用標籤管理器，允許清單上的邊緣設定工具 [!DNL Launch] 都可供客戶使用。 此外，使用者需要中的「開發」權限 [!DNL Launch]。 如需詳細 [資訊，請參閱](https://docs.adobe.com/content/help/zh-Hant/launch/using/reference/admin/user-permissions.html) 「使用者 [!DNL Launch] 權限」文章。
 
@@ -77,6 +79,8 @@ ID同步可分組至容器，以允許在不同時間執行不同的ID同步。 
 ![Adobe Target設定區塊](../../assets/edge_configuration_target.png)
 
 >[!NOTE]
+>
+>
 >
 >與客戶端代碼關聯的組織必須與建立配置ID的組織匹配。
 
