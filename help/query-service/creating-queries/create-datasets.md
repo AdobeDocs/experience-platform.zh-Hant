@@ -4,7 +4,10 @@ solution: Experience Platform
 title: 從查詢結果生成資料集
 topic: queries
 translation-type: tm+mt
-source-git-commit: 7d5d98d8e32607abf399fdc523d2b3bc99555507
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '298'
+ht-degree: 0%
 
 ---
 
@@ -19,13 +22,15 @@ source-git-commit: 7d5d98d8e32607abf399fdc523d2b3bc99555507
 2. 登入平台UI並前往查詢。
 3. 在清單中尋找查詢，並將滑鼠指標暫留在列上。
 4. 按一下 **建立資料集**。 ![影像](../images/queries/create-datasets/click-create-dataset.png)
-5. 輸入資料集名稱，並加上您的LDAP ID(不必是唯一或SQL-safe;系統會根據此處提供的名稱生成「表名」)。
+5. 輸入資料集名稱，並加上您的LDAP ID(不必是唯一或SQL-safe; 系統會根據此處提供的名稱生成「表名」)。
 6. 輸入資料集說明，然後按一下「 **執行查詢」**。![影像](../images/queries/create-datasets/run-query.png)
 7. 觀看查詢完成，然後前往資料集清單頁面，查看您剛建立的資料集。
 
 建立資料集後，可像資料湖中的任何其他資料集一樣加以存取，並用於多種使用案例。
 
->[!NOTE] 在即時實作中，您必須在建立資料集後套用「資料控管」標籤。
+>[!NOTE]
+>
+>在即時實作中，您必須在建立資料集後套用「資料控管」標籤。
 
 ## 使用預先定義的Experience Data Model架構產生資料集
 
