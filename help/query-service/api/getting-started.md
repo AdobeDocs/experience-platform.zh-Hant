@@ -4,7 +4,10 @@ solution: Experience Platform
 title: 查詢服務開發人員指南
 topic: query templates
 translation-type: tm+mt
-source-git-commit: 91104399e50bce03fed7c9196e6e83fc48a54d1c
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '391'
+ht-degree: 1%
 
 ---
 
@@ -17,9 +20,9 @@ source-git-commit: 91104399e50bce03fed7c9196e6e83fc48a54d1c
 
 本指南需要對使用查詢服務所涉及的各種Adobe Experience Platform服務有良好的瞭解。
 
-- [查詢服務](../home.md):提供在Experience Platform中查詢資料集並將產生的查詢擷取為新資料集的能力。
-- [體驗資料模型(XDM)系統](../../xdm/home.md):Experience Platform組織客戶體驗資料的標準化架構。
-- [沙盒](../../sandboxes/home.md):Experience Platform提供虛擬沙盒，可將單一Platform實例分割為不同的虛擬環境，以協助開發和發展數位體驗應用程式。
+- [查詢服務](../home.md): 提供在Experience Platform中查詢資料集並將產生的查詢擷取為新資料集的能力。
+- [體驗資料模型(XDM)系統](../../xdm/home.md): Experience Platform組織客戶體驗資料的標準化架構。
+- [沙盒](../../sandboxes/home.md): Experience Platform提供虛擬沙盒，可將單一Platform實例分割為不同的虛擬環境，以協助開發和發展數位體驗應用程式。
 
 以下各節提供您必須知道的其他資訊，以便使用API成功使用查詢服務。
 
@@ -39,7 +42,9 @@ Experience Platform中的所有資源都隔離至特定的虛擬沙盒。 所有
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
->[!NOTE] 如需在Experience Platform中使用沙盒的詳細資訊，請參閱沙盒 [概觀檔案](../../sandboxes/home.md)。
+>[!NOTE]
+>
+>如需在Experience Platform中使用沙盒的詳細資訊，請參閱沙盒 [概觀檔案](../../sandboxes/home.md)。
 
 ## 範例API呼叫
 
