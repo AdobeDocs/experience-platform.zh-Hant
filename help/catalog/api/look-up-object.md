@@ -4,7 +4,10 @@ solution: Experience Platform
 title: 查找對象
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 4dcd174eda98fee1e8cf668819809bd061c6e8bb
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '134'
+ht-degree: 2%
 
 ---
 
@@ -13,7 +16,9 @@ source-git-commit: 4dcd174eda98fee1e8cf668819809bd061c6e8bb
 
 如果您知道特定目錄物件的唯一識別碼，則可執行GET要求以檢視該物件的詳細資訊。
 
->[!NOTE] 在檢視特定物件時，依屬性篩選 [並僅傳回您感興趣的屬性](filter-data.md) ，仍是最佳實務。
+>[!NOTE]
+>
+>在檢視特定物件時，依屬性篩選 [並僅傳回您感興趣的屬性](filter-data.md) ，仍是最佳實務。
 
 **API格式**
 
@@ -60,4 +65,6 @@ curl -X GET \
 }
 ```
 
->[!NOTE] 其值前置詞為前置詞的屬性代表 `@` 相互關聯的對象。 有關如何查看這些對 [像的詳細資訊](appendix.md#view-interrelated-objects) ，請參見查看相關對象的附錄部分。
+>[!NOTE]
+>
+>其值前置詞為前置詞的屬性代表 `@` 相互關聯的對象。 有關如何查看這些對 [像的詳細資訊](appendix.md#view-interrelated-objects) ，請參見查看相關對象的附錄部分。
