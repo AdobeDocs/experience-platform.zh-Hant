@@ -4,7 +4,10 @@ solution: Experience Platform
 title: 刪除沙盒
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 974e93b1c24493734848151b9be00758f6a84578
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '84'
+ht-degree: 4%
 
 ---
 
@@ -13,7 +16,9 @@ source-git-commit: 974e93b1c24493734848151b9be00758f6a84578
 
 您可以透過提出DELETE請求來刪除沙盒，請求路徑中包含沙 `name` 盒的請求。
 
->[!NOTE] 使用此API呼叫會將沙盒的屬性 `status` 更新為「已刪除」並停用它。 刪除沙盒後，GET請求仍可擷取其詳細資訊。
+>[!NOTE]
+>
+>使用此API呼叫會將沙盒的屬性 `status` 更新為「已刪除」並停用它。 刪除沙盒後，GET請求仍可擷取其詳細資訊。
 
 **API格式**
 
