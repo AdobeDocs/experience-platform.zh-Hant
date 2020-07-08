@@ -4,7 +4,10 @@ solution: Experience Platform
 title: 替換資源
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 67826f838951b3202a6a04321c28daa8ee883d20
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '207'
+ht-degree: 1%
 
 ---
 
@@ -15,7 +18,9 @@ source-git-commit: 67826f838951b3202a6a04321c28daa8ee883d20
 
 如果您想一次更新資源中的大量資訊，此方法特別有用。
 
->[!NOTE] 如果您只想更新資源的一部分，而不是完全替換它，請參見有關使用PATCH操 [作更新資源的文檔](update-resource.md)。
+>[!NOTE]
+>
+>如果您只想更新資源的一部分，而不是完全替換它，請參見有關使用PATCH操 [作更新資源的文檔](update-resource.md)。
 
 **API格式**
 
