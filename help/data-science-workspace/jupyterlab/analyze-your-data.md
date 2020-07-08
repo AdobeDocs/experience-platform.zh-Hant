@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 使用筆記型電腦分析資料
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: c48079ba997a7b4c082253a0b2867df76927aa6d
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1702'
 ht-degree: 0%
@@ -50,7 +50,9 @@ Data Science Workspace可讓使用者透過平 [!DNL Jupyter Notebooks] 台進�
 
 ### 存取資料
 
->[!NOTE] 已過 `data_access_sdk_python` 時，不再建議使用。 請參閱將資料 [存取SDK轉換為平台SDK](../authoring/platform-sdk.md) 教學課程，以轉換您的程式碼。 本教學課程仍適用下列相同步驟。
+>[!NOTE]
+>
+>已過 `data_access_sdk_python` 時，不再建議使用。 請參閱將資料 [存取SDK轉換為平台SDK](../authoring/platform-sdk.md) 教學課程，以轉換您的程式碼。 本教學課程仍適用下列相同步驟。
 
 我們將重點介紹從外部訪問資料 [!DNL Adobe Experience Platform] 和資料。 我們將使用程式庫 `data_access_sdk_python` 來存取內部資料，例如資料集和XDM架構。 對於外部資料，我們將使用熊貓庫 [!DNL Python] 來。
 
@@ -86,7 +88,9 @@ Data Science Workspace可讓使用者透過平 [!DNL Jupyter Notebooks] 台進�
 
 現在，我們可以在資料集上按一 `Retail-Training-<your-alias>` 下滑鼠右鍵，並在下拉式清單中選取「探索筆記型電腦中的資料」選項。 可執行的代碼條目將出現在您的筆記本中。
 
->[!TIP] 請參閱指 [!DNL Platform SDK](../authoring/platform-sdk.md) 南以轉換程式碼。
+>[!TIP]
+>
+>請參閱指 [!DNL Platform SDK](../authoring/platform-sdk.md) 南以轉換程式碼。
 
 ```PYTHON
 from data_access_sdk_python.reader import DataSetReader
