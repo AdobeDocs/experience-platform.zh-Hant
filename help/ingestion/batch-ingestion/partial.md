@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Adobe Experience Platform部分批次擷取概觀
 topic: overview
 translation-type: tm+mt
-source-git-commit: d560e8dd07e9590376728ae6575766cc382325a5
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '795'
+ht-degree: 2%
 
 ---
 
@@ -18,14 +21,16 @@ source-git-commit: d560e8dd07e9590376728ae6575766cc382325a5
 
 此外，本教學課 [程的附錄](#appendix) ，也提供部分批次擷取錯誤類型的參考。
 
->[!IMPORTANT] 此功能僅存在於使用API。 請連絡您的團隊，以取得此功能。
+>[!IMPORTANT]
+>
+>此功能僅存在於使用API。 請連絡您的團隊，以取得此功能。
 
 ## 快速入門
 
 本教學課程需要對部分批次擷取所涉及的各種Adobe Experience Platform服務有相關的使用知識。 在開始本教學課程之前，請先閱讀下列服務的檔案：
 
-- [批次擷取](./overview.md):Platform從資料檔案（例如CSV和Parke）擷取和儲存資料的方法。
-- [體驗資料模型(XDM)](../../xdm/home.md):平台組織客戶體驗資料的標準化架構。
+- [批次擷取](./overview.md): Platform從資料檔案（例如CSV和Parke）擷取和儲存資料的方法。
+- [體驗資料模型(XDM)](../../xdm/home.md): 平台組織客戶體驗資料的標準化架構。
 
 以下章節提供您成功呼叫平台API所需的其他資訊。
 
@@ -37,7 +42,7 @@ source-git-commit: d560e8dd07e9590376728ae6575766cc382325a5
 
 若要呼叫平台API，您必須先完成驗證教 [學課程](../../tutorials/authentication.md)。 完成驗證教學課程後，所有Experience Platform API呼叫中每個必要標題的值都會顯示在下方：
 
-- 授權：生產者 `{ACCESS_TOKEN}`
+- 授權： 生產者 `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
@@ -45,7 +50,9 @@ Experience Platform中的所有資源都隔離至特定的虛擬沙盒。 所有
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
->[!NOTE] 如需平台中沙盒的詳細資訊，請參閱沙盒 [概觀檔案](../../sandboxes/home.md)。
+>[!NOTE]
+>
+>如需平台中沙盒的詳細資訊，請參閱沙盒 [概觀檔案](../../sandboxes/home.md)。
 
 ## 在API中啟用資料集以進行部分批次擷取
 
@@ -75,7 +82,9 @@ Experience Platform中的所有資源都隔離至特定的虛擬沙盒。 所有
 
 <!-- ## Enable a dataset for partial batch ingestion in the UI
 
->[!NOTE] This section describes enabling a dataset for partial batch ingestion using the UI. If you have already enabled a dataset for partial batch ingestion using the API, you can skip ahead to the next section.
+>[!NOTE]
+>
+>This section describes enabling a dataset for partial batch ingestion using the UI. If you have already enabled a dataset for partial batch ingestion using the API, you can skip ahead to the next section.
 
 To enable a dataset for partial ingestion through the Platform UI, click **Datasets** in the left navigation. You can either [create a new dataset](#create-a-new-dataset-with-partial-batch-ingestion-enabled) or [modify an existing dataset](#modify-an-existing-dataset-to-enable-partial-batch-ingestion).
 
