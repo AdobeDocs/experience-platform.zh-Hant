@@ -4,7 +4,10 @@ solution: Experience Platform
 title: 建立類
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 60911e32fd9235be2a258e60818011a42cd5ceba
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '485'
+ht-degree: 0%
 
 ---
 
@@ -15,7 +18,9 @@ source-git-commit: 60911e32fd9235be2a258e60818011a42cd5ceba
 
 Adobe和其他Experience Platform合作夥伴提供了數種標準類別，但您也可以定義自己的類別，並將它們儲存至架構註冊表。 然後，您可以合成實現所建立類的架構，並定義與新定義類相容的混合。
 
->[!NOTE] 根據您定義的類合成模式時，將無法使用標準混音。 每個mixin都定義其屬性中相容的類 `meta:intendedToExtend` 別。 一旦開始定義與新類相容的混音(使用混音的欄位中的 `$id``meta:intendedToExtend` 新類)，您每次定義實現所定義類的方案時，都可以重複使用這些混音。 如需詳細資訊，請 [參閱有關建立](create-mixin.md)[混合](create-schema.md) 檔案和建立結構的章節。
+>[!NOTE]
+>
+>根據您定義的類合成模式時，將無法使用標準混音。 每個mixin都定義其屬性中相容的類 `meta:intendedToExtend` 別。 一旦開始定義與新類相容的混音(使用混音的欄位中的 `$id``meta:intendedToExtend` 新類)，您每次定義實現所定義類的方案時，都可以重複使用這些混音。 如需詳細資訊，請 [參閱有關建立](create-mixin.md)[混合](create-schema.md) 檔案和建立結構的章節。
 
 **API格式**
 
@@ -25,7 +30,7 @@ POST /tenant/classes
 
 **請求**
 
-建立(POST)類別的請求必須包含包含 `allOf` 兩個值之 `$ref` 一的屬性：或 `https://ns.adobe.com/xdm/data/record` 者 `https://ns.adobe.com/xdm/data/time-series`。 這些值代表類別所依據的行為（分別是記錄或時間序列）。 有關記錄資料和時間序列資料之間差異的詳細資訊，請參閱架構構成基礎中有關行 [為類型的部分](../schema/composition.md)。
+建立(POST)類別的請求必須包含包含 `allOf` 兩個值之 `$ref` 一的屬性： `https://ns.adobe.com/xdm/data/record` 或 `https://ns.adobe.com/xdm/data/time-series`者。 這些值代表類別所依據的行為（分別是記錄或時間序列）。 有關記錄資料和時間序列資料之間差異的詳細資訊，請參閱架構構成基礎中有關行 [為類型的部分](../schema/composition.md)。
 
 在定義類時，您也可以在類定義中包含混合或自訂欄位。 這會導致新增的混音和欄位包含在實施類別的所有結構中。 下列範例請求定義名為&quot;Property&quot;的類別，可擷取公司擁有和經營之不同屬性的相關資訊。 它包含 `propertyId` 每次使用類時要包含的欄位。
 
