@@ -4,7 +4,10 @@ solution: Experience Platform
 title: 架構構成基礎
 topic: overview
 translation-type: tm+mt
-source-git-commit: 14cd3d17c7d9ba602d02925abddec9e0b246a8c8
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '2761'
+ht-degree: 0%
 
 ---
 
@@ -74,7 +77,9 @@ Experience Platform所建立的基礎架構（稱為XDM System）有助於架構
 |------------------------------------|---------------------------------|
 | <ul><li>將新欄位添加到現有模式</li><li>將強制欄位設為選填</li></ul> | <ul><li>移除先前定義的欄位</li><li>推出新的必填欄位</li><li>更名或重定義現有欄位</li><li>移除或限制先前支援的欄位值</li><li>將屬性移動到樹中的不同位置</li></ul> |
 
->[!NOTE] 如果尚未使用架構將資料內嵌至Experience Platform，您可能會對該架構進行突破性變更。 但是，一旦在Platform中使用架構，它就必須遵循附加版本控制原則。
+>[!NOTE]
+>
+>如果尚未使用架構將資料內嵌至Experience Platform，您可能會對該架構進行突破性變更。 但是，一旦在Platform中使用架構，它就必須遵循附加版本控制原則。
 
 ### 結構描述與資料擷取
 
@@ -116,7 +121,7 @@ Mixin的範圍和定義與類相同： 有由使用平台的個別組織所定�
 
 請記住，結構描述是由「零個或更多」混合組成，因此這表示您無需使用任何混合即可合成有效結構描述。
 
-### 資料類型 {#data-type}
+### Data type {#data-type}
 
 資料類型與基本常值欄位的使用方式相同，在類或方案中用作參考欄位類型。 關鍵區別在於資料類型可以定義多個子欄位。 與混音類似，資料類型允許一致地使用多欄位結構，但比混音更具靈活性，因為通過將資料類型添加為欄位的「資料類型」，資料類型可以包括在模式中的任意位置。
 
@@ -143,7 +148,9 @@ Experience Platform在架構註冊表中提供多種常見資料類型，以支�
 * 日期時間
 * 地圖
 
->[!NOTE] 「映射」欄位類型允許鍵值對資料，包括單個鍵的多個值。 映射只能在系統級別定義，這表示您可能在行業或供應商定義的方案中遇到映射，但無法用於您定義的欄位。 Schema Registry [API開發人員指南包含有關定義欄位類型的詳細資訊](../api/getting-started.md) 。
+>[!NOTE]
+>
+>「映射」欄位類型允許鍵值對資料，包括單個鍵的多個值。 映射只能在系統級別定義，這表示您可能在行業或供應商定義的方案中遇到映射，但無法用於您定義的欄位。 Schema Registry [API開發人員指南包含有關定義欄位類型的詳細資訊](../api/getting-started.md) 。
 
 下游服務和應用程式使用的某些資料操作對特定欄位類型強制執行限制。 受影響的服務包括但不限於：
 
@@ -175,7 +182,7 @@ Experience Platform在架構註冊表中提供多種常見資料類型，以支�
 
 ![](../images/schema-composition/composition.png)
 
-### 聯合 {#union}
+### 聯集 {#union}
 
 雖然Experience Platform可讓您針對特定使用案例合成架構，但也可讓您查看特定類別類型的架構「結合」。 上圖顯示基於XDM ExperienceEvent類的兩個模式和基於XDM Individual Profile類的兩個模式。 The union（如下所示）匯總了共用同一類的所有方案的欄位（分別為XDM ExperienceEvent和XDM Individual Profile）。
 
