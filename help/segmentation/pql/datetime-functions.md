@@ -4,7 +4,10 @@ solution: Experience Platform
 title: 日期和時間函式
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 902ba5efbb5f18a2de826fffd023195d804309cc
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '471'
+ht-degree: 4%
 
 ---
 
@@ -138,13 +141,15 @@ product.sale.getDayOfMonth() <= 15
 
 | 引數 | 說明 |
 | --------- | ----------- |
-| `{COMPARISON}` | 比較運算子。 可以是下列任何運算子： `>`, `>=``<`, `<=`, `=`, `!=`. 有關比較函式的更多資訊，請參見比 [較函式文檔](./comparison-functions.md)。 |
+| `{COMPARISON}` | 比較運算子。 可以是下列任何運算子： `>`, `>=`, `<`, `<=`, `=`, `!=`有關比較函式的更多資訊，請參見比 [較函式文檔](./comparison-functions.md)。 |
 | `{INTEGER}` | 非負整數。 |
-| `{TIME_UNIT}` | 時間單位。 可以是下列任何字詞： `millisecond(s)`, `second(s)`, `minute(s)`,,,,,,,, `hour(s)`, `day(s)`, `week(s)`,J,J, `month(s)``year(s)``decade(s)``century``centuries``millennium``millennia`J. |
-| `{DIRECTION}` | 描述日期比較時機的前置詞。 可以是下列任何字詞： `before`, `after`, `from`。 |
+| `{TIME_UNIT}` | 時間單位。 可以是下列任何字詞： `millisecond(s)`、 、 `second(s)`、 、 `minute(s)`、 、 `hour(s)`、 `day(s)`、 `week(s)``month(s)``year(s)``decade(s)``century``centuries``millennium``millennia`、 」 、 」 |
+| `{DIRECTION}` | 描述日期比較時機的前置詞。 可以是下列任何字詞： `before`, `after`, `from` |
 | `{TIME}` | 可以是時間戳記常值(`today`、 `now`、 `yesterday`、 `tomorrow`)、相對時間單位(時間單位之一、 `this`或 `last``next` 後跟時間單位)或時間戳記屬性。 |
 
->[!NOTE] 單字的使用是可 `on` 選的。 它可改善某些組合的可讀性，例如 `timestamp occurs on date(2019,12,31)`。
+>[!NOTE]
+>
+>單字的使用是可 `on` 選的。 它可改善某些組合的可讀性，例如 `timestamp occurs on date(2019,12,31)`。
 
 **範例**
 
