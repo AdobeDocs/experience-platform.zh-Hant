@@ -4,16 +4,19 @@ solution: Experience Platform
 title: 沙盒總覽
 topic: overview
 translation-type: tm+mt
-source-git-commit: 564940f37b66159c84ca7402bd3648010232182b
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '680'
+ht-degree: 0%
 
 ---
 
 
 # 沙盒總覽
 
-Adobe Experience Platform旨在讓全球數位體驗應用程式更加豐富。 公司通常並行執行多種數位體驗應用程式，並需要滿足這些應用程式的開發、測試和部署需求，同時確保運作符合規範。
+Adobe Experience Platform旨在讓全球數位體驗應用程式更加豐富。 公司通常會並行執行多種數位體驗應用程式，並需要滿足這些應用程式的開發、測試和部署需求，同時確保運作符合規範。
 
-為瞭解決這個需求，Experience Platform提供沙盒 **** ，可將單一Platform實例分割為不同的虛擬環境，以協助開發和發展數位體驗應用程式。
+In order to address this need, Experience Platform provides **sandboxes** which partition a single Platform instance into separate virtual environments to help develop and evolve digital experience applications.
 
 本檔案提供Experience Platform中沙盒的高階概觀。
 
@@ -23,13 +26,15 @@ Adobe Experience Platform旨在讓全球數位體驗應用程式更加豐富。 
 
 非生產沙盒可讓您測試功能、執行實驗並建立自訂組態，而不會影響生產沙盒。 此外，非生產沙盒具有重設功能，可從沙盒移除所有客戶建立的資源。 非生產沙盒無法轉換為生產沙盒。
 
->[!NOTE] 第一次建立沙盒時，沙盒不包含任何資料。 由於每個沙盒都會維護其獨立的資料儲存，因此它們也必須個別收錄資料。
+>[!NOTE]
+>
+>第一次建立沙盒時，沙盒不包含任何資料。 由於每個沙盒都會維護其獨立的資料儲存，因此它們也必須個別收錄資料。
 
 總之，沙盒提供下列優點：
 
-* **應用程式生命週期管理**:建立個別的虛擬環境，以開發和發展數位體驗應用程式。
-* **專案與品牌管理**:允許多個專案在相同的IMS組織內並行執行，同時提供隔離和存取控制。 未來版本將支援在多個地區部署。
-* **有彈性的開發生態系統**:以順暢、可擴充且具成本效益的方式提供沙盒，以利探索、啟用和展示。
+* **應用程式生命週期管理**: 建立個別的虛擬環境，以開發和發展數位體驗應用程式。
+* **專案與品牌管理**: 允許多個專案在相同的IMS組織內並行執行，同時提供隔離和存取控制。 未來版本將支援在多個地區部署。
+* **有彈性的開發生態系統**: 以順暢、可擴充且具成本效益的方式提供沙盒，以利探索、啟用和展示。
 
 ## 沙盒的存取控制
 
@@ -45,7 +50,7 @@ Adobe Experience Platform旨在讓全球數位體驗應用程式更加豐富。 
 
 ## Experience Platform API中的沙盒
 
-呼叫Experience Platform API時，必須在標題下提供沙盒名稱 `x-sandbox-name`。 例如，當呼叫 [Catalog Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml) ，以檢視「生產」沙盒內的所有資料集時，沙盒的名稱(&quot;prod&quot;)會以API請求的標題提供：
+呼叫Experience Platform API時，必須在標題下提供沙盒名稱 `x-sandbox-name`。 例如，當呼叫 [Catalog Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml) ，以檢視「生產」沙盒內的所有資料集時，沙盒的名稱(&quot;prod&quot;)會作為API請求的標題提供：
 
 ```shell
 curl -X GET \
