@@ -1,18 +1,18 @@
 ---
 keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API
 solution: Adobe Experience Platform
-title: 即時客戶個人檔案API開發人員指南
+title: 合併政策——即時客戶個人檔案API
 topic: guide
 translation-type: tm+mt
-source-git-commit: d464a6b4abd843f5f8545bc3aa8000f379a86c6d
+source-git-commit: d1656635b6d082ce99f1df4e175d8dd69a63a43a
 workflow-type: tm+mt
-source-wordcount: '2052'
+source-wordcount: '2053'
 ht-degree: 1%
 
 ---
 
 
-# 合併原則
+# 合併策略端點
 
 Adobe Experience Platform可讓您從多個來源匯整資料並加以匯整，以全面瞭解每個客戶。 將這些資料整合在一起時，合併原則是平台用來決定資料的優先順序以及將哪些資料合併以建立統一檢視的規則。 使用REST風格的API或用戶介面，您可以建立新的合併策略、管理現有策略，並為組織設定預設的合併策略。 本指南說明使用API處理合併原則的步驟。 要使用UI使用合併策略，請參閱合 [並策略使用手冊](../ui/merge-policies.md)。
 
@@ -227,7 +227,7 @@ curl -X GET \
 
 ### 根據多個合併策略的ID檢索多個合併策略
 
-通過向端點發出POST請求並在請求主體中包括要檢索 `/config/mergePolicies/bulk-get` 的合併策略的ID，可以檢索多個合併策略。
+通過向端點發出POST請求並在請求主體中包 `/config/mergePolicies/bulk-get` 含要檢索的合併策略的ID，可以檢索多個合併策略。
 
 **API格式**
 
