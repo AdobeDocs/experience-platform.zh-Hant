@@ -4,7 +4,10 @@ solution: Experience Platform
 title: 使用查詢參數篩選目錄資料
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 5699022d1f18773c81a0a36d4593393764cb771a
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '2060'
+ht-degree: 1%
 
 ---
 
@@ -147,10 +150,10 @@ curl -X GET \
 
 根據上述回應，可推斷出下列項目：
 
-* 如果對象缺少任何請求的屬性，則它將只顯示它包含的請求屬性。(`Dataset1`)
-* 如果對象不包含任何請求的屬性，則它將顯示為空對象。(`Dataset2`)
-* 如果資料集包含屬性但沒有值，則可將請求的屬性傳回為空物件。(`Dataset3`)
-* 否則，資料集會顯示所有請求屬性的完整值。(`Dataset4`)
+* 如果對象缺少任何請求的屬性，則它將只顯示它包含的請求屬性。 (`Dataset1`)
+* 如果對象不包含任何請求的屬性，則它將顯示為空對象。 (`Dataset2`)
+* 如果資料集包含屬性但沒有值，則可將請求的屬性傳回為空物件。 (`Dataset3`)
+* 否則，資料集會顯示所有請求屬性的完整值。 (`Dataset4`)
 
 ## 響應清單的偏移起始索引
 
@@ -203,8 +206,8 @@ curl -X GET \
 * 標籤名稱是IMS組織唯一的。
 * Adobe程式可能會針對某些行為使用標籤。 這些標籤的名稱會以&quot;adobe&quot;為前置詞作為標準。 因此，在聲明標籤名稱時，應避免此慣例。
 * 下列標籤名稱會保留供跨Experience Platform使用，因此無法宣告為您組織的標籤名稱：
-   * `unifiedProfile`:此標籤名稱保留給要由即時客戶配置 [檔案接收的資料集](../../profile/home.md)。
-   * `unifiedIdentity`:此標籤名稱保留給要由 [Identity Service收錄的資料集](../../identity-service/home.md)。
+   * `unifiedProfile`: 此標籤名稱保留給要由即時客戶配置 [檔案接收的資料集](../../profile/home.md)。
+   * `unifiedIdentity`: 此標籤名稱保留給要由 [Identity Service收錄的資料集](../../identity-service/home.md)。
 
 以下是包含屬性的資料集范 `tags` 例。 該屬性中的標籤採用鍵值配對的形式，每個標籤值顯示為包含單一字串的陣列：
 
@@ -247,7 +250,7 @@ curl -X GET \
 
 參數的 `tags` 值採用鍵值對的形式，使用格式 `{TAG_NAME}:{TAG_VALUE}`。 可以以逗號分隔的清單形式提供多個鍵值對。 當提供多個標籤時，會假設AND關係。
 
-此參數支援標籤值`*`的萬用字元()。 例如，搜尋字串會傳 `test*` 回任何標籤值以&quot;test&quot;開頭的物件。 僅由通配符組成的搜索字串可用於根據對象是否包含特定標籤（無論其值如何）來過濾對象。
+此參數支援標籤值`*`的萬用字元()。 例如，搜尋字串會傳 `test*` 回標籤值以&quot;test&quot;開頭的任何物件。 僅由通配符組成的搜索字串可用於根據對象是否包含特定標籤（無論其值如何）來過濾對象。
 
 ```http
 GET /{OBJECT_TYPE}?tags={TAG_NAME}:{TAG_VALUE}
@@ -393,7 +396,7 @@ curl -X GET \
 
 可以在逗號分隔的清單中提供多個排序屬性。 如果第一個排序屬性生成多個對象，這些對象包含該屬性的相同值，則使用第二個排序屬性進一步排序這些匹配對象。
 
-例如，請考慮以下查詢： `orderBy=name,desc:created`。 根據第一個排序屬性，結果會以升序排序 `name`。 在多個記錄共用相同屬性的情 `name` 況下，這些匹配記錄隨後會按第二個排序屬性排序 `created`。 如果沒有傳回的記錄共用相 `name`同， `created` 則屬性不會納入排序。
+例如，請考慮以下查詢： `orderBy=name,desc:created`. 根據第一個排序屬性，結果會以升序排序 `name`。 在多個記錄共用相同屬性的情 `name` 況下，這些匹配記錄隨後會按第二個排序屬性排序 `created`。 如果沒有傳回的記錄共用相 `name`同， `created` 則屬性不會納入排序。
 
 
 **API格式**
@@ -471,8 +474,8 @@ curl -X GET \
 
 Catalog提供兩種依屬性篩選的方法，這些方法在下列各節中進一步概述：
 
-* [使用簡單篩選](#using-simple-filters):依特定屬性是否符合特定值來篩選。
-* [使用屬性參數](#using-the-property-parameter):使用條件運算式來篩選屬性是否存在，或屬性的值是否與其他指定值或規則運算式相符、相近或相比較。
+* [使用簡單篩選](#using-simple-filters): 依特定屬性是否符合特定值來篩選。
+* [使用屬性參數](#using-the-property-parameter): 使用條件運算式來篩選屬性是否存在，或屬性的值是否與其他指定值或規則運算式相符、相近或相比較。
 
 ### 使用簡單濾鏡 {#using-simple-filters}
 
@@ -586,7 +589,9 @@ GET /{OBJECT_TYPE}?property={CONDITION}
 | > | 僅傳回屬性值大於（但不等於）指定金額的物件。 | `property=version>1.0.0` |
 | >= | 僅返回屬性值大於（或等於）指定金額的對象。 | `property=version>=1.0.0` |
 
->[!NOTE] 屬 `name` 性支援使用通配符， `*`作為整個搜索字串或通配符的一部分。 萬用字元會比對空字元，如此搜尋字串 `te*st` 就會比對值&quot;test&quot;。 星號加倍(`**`)可逸出。 搜尋字串中的雙星號代表單一星號做為常值字串。
+>[!NOTE]
+>
+>屬 `name` 性支援使用通配符， `*`作為整個搜索字串或通配符的一部分。 萬用字元會比對空字元，如此搜尋字串 `te*st` 就會比對值&quot;test&quot;。 星號加倍(`**`)可逸出。 搜尋字串中的雙星號代表單一星號做為常值字串。
 
 **請求**
 
@@ -603,7 +608,7 @@ curl -X GET \
 
 **回應**
 
-成功的響應包含版本號大於1.0.3的資料集清單。除非另有指定限制，否則回應最多包含20個物件。
+成功的響應包含版本號大於1.0.3的資料集清單。 除非另有指定限制，否則回應最多包含20個物件。
 
 ```json
 {
