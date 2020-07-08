@@ -4,7 +4,10 @@ solution: Experience Platform
 title: 管理產品設定檔的權限
 topic: user guide
 translation-type: tm+mt
-source-git-commit: df85ea955b7a308e6be1e2149fcdfb4224facc53
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '279'
+ht-degree: 2%
 
 ---
 
@@ -29,7 +32,9 @@ source-git-commit: df85ea955b7a308e6be1e2149fcdfb4224facc53
 
 ![新增權限](../images/add-permissions.png)
 
->[!NOTE] 「包 *含的權限項目* 」清單只會顯示目前選取類別中新增的權限。
+>[!NOTE]
+>
+>「包 *含的權限項目* 」清單只會顯示目前選取類別中新增的權限。
 
 若要移除權限，請按一下權限名稱旁的 **X** 圖示，或選取「全部移除 **** 」以移除目前類別下的所有權限。 移除的權限會重新出現在「可 *用權限項目」下*。
 
