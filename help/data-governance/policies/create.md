@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 建立資料使用原則
 topic: policies
 translation-type: tm+mt
-source-git-commit: d4964231ee957349f666eaf6b0f5729d19c408de
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1194'
 ht-degree: 2%
@@ -217,7 +217,9 @@ curl -X PUT \
 }
 ```
 
->[!NOTE] 僅支援OR和AND運算子。
+>[!NOTE]
+>
+>僅支援OR和AND運算子。
 
 配置策略表達式後，可以通過向端點發出POST請求來建立新的DULE策 `/policies/custom` 略。
 
@@ -322,7 +324,9 @@ curl -X POST \
 
 ## 啟用DULE策略
 
->[!NOTE] 如果您希望將DULE策略保留為狀態，則此步驟是可選的， `DRAFT` 但請注意，預設情況下，策略必須將其狀態設定為 `ENABLED` ，才能參與評估。 有關如何對處於狀 [態的策略執行例外的資訊](../enforcement/api-enforcement.md) ，請參見有關強制執行DULE策略的 `DRAFT` 教程。
+>[!NOTE]
+>
+>如果您希望將DULE策略保留為狀態，則此步驟是可選的， `DRAFT` 但請注意，預設情況下，策略必須將其狀態設定為 `ENABLED` ，才能參與評估。 有關如何對處於狀 [態的策略執行例外的資訊](../enforcement/api-enforcement.md) ，請參見有關強制執行DULE策略的 `DRAFT` 教程。
 
 預設情況下，將其屬性設定為 `status` 的DULE策略 `DRAFT` 不參與評估。 通過向端點發出PATCH請求並在請求路徑的末尾為策略提供唯一標識符，您可以啟用 `/policies/custom/` 策略進行評估。
 
@@ -414,6 +418,6 @@ curl -X PATCH \
 
 遵循本教學課程，您已成功建立行銷動作的資料使用原則。 您現在可以繼續學習如何強制使 [用資料原則的教學課程](../enforcement/api-enforcement.md) ，以瞭解如何檢查是否有違反原則的情況，並在您的體驗應用程式中加以處理。
 
-如需有關 [!DNL Policy Service] API中不同可用作業的詳細資訊，請參 [閱「原則服務開](../api/getting-started.md)發人員指南」。 如需如何強制執行資料原則的 [!DNL Real-time Customer Profile] 詳細資訊，請參閱關於強制受 [眾區段資料使用符合性的教學課程](../../segmentation/tutorials/governance.md)。
+如需有關 [!DNL Policy Service] API中不同可用作業的詳細資訊，請參 [閱政策服務開](../api/getting-started.md)發人員指南。 如需如何強制執行資料原則的 [!DNL Real-time Customer Profile] 詳細資訊，請參閱關於強制受 [眾區段資料使用符合性的教學課程](../../segmentation/tutorials/governance.md)。
 
 要瞭解如何在用戶介面中管理使 [!DNL Experience Platform] 用策略，請參 [閱策略使用手冊](user-guide.md)。
