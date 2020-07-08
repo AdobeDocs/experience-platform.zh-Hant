@@ -4,7 +4,10 @@ solution: Experience Platform
 title: 檢索失敗的批
 topic: overview
 translation-type: tm+mt
-source-git-commit: 4817162fe2b7cbf4ae4c1ed325db2af31da5b5d3
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '623'
+ht-degree: 1%
 
 ---
 
@@ -19,8 +22,8 @@ Adobe Experience Platform提供兩種上傳和接收資料的方法。 您可以
 
 本指南需要有效瞭解Adobe Experience Platform的下列元件：
 
-- [體驗資料模型(XDM)系統](../../xdm/home.md):Experience Platform組織客戶體驗資料的標準化架構。
-- [資料擷取](../home.md):資料傳送至Experience Platform的方法。
+- [體驗資料模型(XDM)系統](../../xdm/home.md): Experience Platform組織客戶體驗資料的標準化架構。
+- [資料擷取](../home.md): 資料傳送至Experience Platform的方法。
 
 ### 讀取範例API呼叫
 
@@ -30,7 +33,7 @@ Adobe Experience Platform提供兩種上傳和接收資料的方法。 您可以
 
 若要呼叫平台API，您必須先完成驗證教 [學課程](../../tutorials/authentication.md)。 完成驗證教學課程後，所有Experience Platform API呼叫中每個必要標題的值都會顯示在下方：
 
-- 授權：生產者 `{ACCESS_TOKEN}`
+- 授權： 生產者 `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
@@ -38,7 +41,9 @@ Experience Platform中的所有資源（包括屬於架構註冊表的資源）�
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
->[!NOTE] 如需平台中沙盒的詳細資訊，請參閱沙盒 [概觀檔案](../../sandboxes/home.md)。
+>[!NOTE]
+>
+>如需平台中沙盒的詳細資訊，請參閱沙盒 [概觀檔案](../../sandboxes/home.md)。
 
 所有包含裝載(POST、PUT、PATCH)的請求都需要額外的標題：
 
