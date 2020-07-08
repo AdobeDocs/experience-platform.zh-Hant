@@ -4,7 +4,10 @@ solution: Experience Platform
 title: 列出群集標識
 topic: API guide
 translation-type: tm+mt
-source-git-commit: df85ea955b7a308e6be1e2149fcdfb4224facc53
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '312'
+ht-degree: 1%
 
 ---
 
@@ -30,7 +33,7 @@ GET https://platform-{REGION}.adobe.io/data/core/identity/cluster/members?{PARAM
 
 **請求**
 
-選項1:提供身分識別作為namespace(`nsId`依ID)和ID值(`id`)。
+選項1: 提供身分識別作為namespace(`nsId`依ID)和ID值(`id`)。
 
 ```shell
 curl -X GET \
@@ -41,7 +44,7 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-選項2:提供身分識別為namespace(`ns`依名稱)和ID值(`id`)。
+選項2: 提供身分識別為namespace(`ns`依名稱)和ID值(`id`)。
 
 ```shell
 curl -X GET \
@@ -52,7 +55,7 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-選項3:提供身份作為XID(`xid`)。 如需如何取得身分識別的XID的詳細資訊，請參閱本檔案中有關取得 [身分識別的XID一節](./list-native-id.md)。
+選項3: 提供身份作為XID(`xid`)。 如需如何取得身分識別的XID的詳細資訊，請參閱本檔案中有關取得 [身分識別的XID一節](./list-native-id.md)。
 
 ```shell
 curl -X GET \
@@ -67,7 +70,9 @@ curl -X GET \
 
 使用 `POST` 作為上述方法的批 `GET` 次等效，以傳回多個身分的叢集中的身分。
 
->[!NOTE] 請求應指明最多1000個身分。 超過1000個身分的要求將產生400個狀態碼。
+>[!NOTE]
+>
+>請求應指明最多1000個身分。 超過1000個身分的要求將產生400個狀態碼。
 
 **API格式**
 
@@ -231,7 +236,9 @@ curl -X POST \
 }
 ```
 
->[!NOTE] 無論請求的XID是否屬於同一群集，或是一個或多個XID是否與任何群集相關聯，響應始終為請求中提供的每個XID都包含一個條目。
+>[!NOTE]
+>
+>無論請求的XID是否屬於同一群集，或是一個或多個XID是否與任何群集相關聯，響應始終為請求中提供的每個XID都包含一個條目。
 
 ## 後續步驟
 
