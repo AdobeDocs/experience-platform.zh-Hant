@@ -4,7 +4,10 @@ solution: Experience Platform
 title: 陣列、清單和設定函式
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 92f92f480f29f7d6440f4e90af3225f9a1fcc3d0
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '740'
+ht-degree: 5%
 
 ---
 
@@ -35,7 +38,9 @@ person.birthMonth in [3, 6, 9]
 
 此函 `notIn` 數用於確定項目是否不是陣列或清單的成員。
 
->[!NOTE] 此函 `notIn` 數 *也可確保* ，兩個值均不等於null。 因此，結果不是函式的完全否 `in` 定。
+>[!NOTE]
+>
+>此函 `notIn` 數 *也可確保* ，兩個值均不等於null。 因此，結果不是函式的完全否 `in` 定。
 
 **格式**
 
@@ -182,7 +187,7 @@ person.orders.storeId.distinct().count() > 1
 orders.groupBy(storeId)
 ```
 
-## 篩選
+## 篩選器
 
 該函 `filter` 數用於根據表達式過濾陣列或清單。
 
