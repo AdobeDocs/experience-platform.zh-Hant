@@ -4,7 +4,10 @@ solution: Experience Platform
 title: 更新資源
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 0d3bee939226d9ef4ac1672b71e0d240f32c5dcf
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '379'
+ht-degree: 2%
 
 ---
 
@@ -15,7 +18,9 @@ source-git-commit: 0d3bee939226d9ef4ac1672b71e0d240f32c5dcf
 
 如需JSON修補程式的詳細資訊，包括可用的作業，請參閱官方的 [JSON修補程式檔案](http://jsonpatch.com/)。
 
->[!NOTE] 如果要用新值替換整個資源，而不是更新單個欄位，請參閱有關使用PUT [操作替換資源的文檔](replace-resource.md)。
+>[!NOTE]
+>
+>如果要用新值替換整個資源，而不是更新單個欄位，請參閱有關使用PUT [操作替換資源的文檔](replace-resource.md)。
 
 ## 將混合新增至架構
 
