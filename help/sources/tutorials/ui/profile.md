@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 啟用傳入來源資料以填入客戶個人檔案
 topic: overview
 translation-type: tm+mt
-source-git-commit: d3c725c4760acb3857a67d0d30b24732c963a030
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '481'
 ht-degree: 0%
@@ -61,7 +61,9 @@ ht-degree: 0%
 
 在同時啟用模式和資料集的情 [!DNL Profile]況下，收入至該資料集的資料現在也會填入客戶個人檔案。
 
->[!NOTE] 最近啟用的資料集內的現有資料不會被 [!DNL Profile]
+>[!NOTE]
+>
+>最近啟用的資料集內的現有資料不會被 [!DNL Profile]
 
 ## 後續步驟
 
