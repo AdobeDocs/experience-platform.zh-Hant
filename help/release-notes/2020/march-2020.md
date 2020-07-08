@@ -6,7 +6,10 @@ last-update: March 10, 2020
 author: ens71067
 keywords: release notes;
 translation-type: tm+mt
-source-git-commit: e5fa12b92f7006f2c5c428b25f81dade57733498
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '922'
+ht-degree: 5%
 
 ---
 
@@ -31,7 +34,9 @@ Adobe Experience Platform資料治理是一系列策略和技術，用於管理�
 
 **新功能**
 
->[!NOTE] 下列部分新功能目前已在測試版中，並非所有使用者都能使用。 測試版功能可能會有所變更。
+>[!NOTE]
+>
+>下列部分新功能目前已在測試版中，並非所有使用者都能使用。 測試版功能可能會有所變更。
 
 | 功能 | 說明 |
 | ------- | ----------- |
@@ -73,7 +78,7 @@ Adobe Experience Platform提供一組豐富的功能，可吸收任何類型的�
 | 目的地 | 說明 |
 |--- | ---|
 | 雲端儲存空間目標 | Adobe即時CDP現在可將區段作為資料檔案傳送至您的Amazon S3或SFTP雲端儲存位置。 這可讓您透過CSV或Tab分隔檔案，將觀眾及其描述檔屬性傳送至內部系統。 |
-| 廣告目的地 | Google目標卡現在分為三個目標卡，適用於Adobe即時CDP目前支援的三種Google平台：Google Ads、Google Ad Manager、Google Display &amp; Video 360。 |
+| 廣告目的地 | Google目標卡現在分為三個目標卡，適用於Adobe即時CDP目前支援的三種Google平台： Google Ads、Google Ad Manager、Google Display &amp; Video 360。 |
 
 若要進一步瞭解，請造訪目 [標總覽](../../rtcdp/destinations/destinations-overview.md)
 
