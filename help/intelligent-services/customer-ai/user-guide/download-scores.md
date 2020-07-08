@@ -4,7 +4,10 @@ solution: Experience Platform
 title: 在客戶人工智慧中下載分數
 topic: Downloading scores
 translation-type: tm+mt
-source-git-commit: 7c892d92a50312fb4b733431737b796651689804
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '933'
+ht-degree: 2%
 
 ---
 
@@ -26,7 +29,7 @@ source-git-commit: 7c892d92a50312fb4b733431737b796651689804
 
 ## Find your dataset ID {#dataset-id}
 
-在您的客戶AI見解服務例項中，按一下右上方導覽中的 *「更多動作* 」下拉式清單，然後選取 **[!UICONTROL Access scores]**。
+在您的客戶AI見解服務例項中，按一下右上方導覽中的「更多 *動作* 」下拉式清單，然後選取「存 **[!UICONTROL 取分數」]**。
 
 ![更多動作](../images/insights/more-actions.png)
 
@@ -240,7 +243,9 @@ curl -X GET 'https://platform.adobe.io:443/data/foundation/export/files/035e2520
 
 若要下載檔案資料，請對您在上一步驟中復 `"href"` 制的檔案值提出GET [要求](#retrieving-your-files)。
 
->[!NOTE] 如果您直接在命令列中提出此請求，可能會提示您在請求標題後新增輸出。 以下請求範例使用 `--output {FILENAME.FILETYPE}`。
+>[!NOTE]
+>
+>如果您直接在命令列中提出此請求，可能會提示您在請求標題後新增輸出。 以下請求範例使用 `--output {FILENAME.FILETYPE}`。
 
 **API格式**
 
@@ -264,7 +269,9 @@ curl -X GET 'https://platform.adobe.io:443/data/foundation/export/files/035e2520
   -O 'filename.parquet'
 ```
 
->[!TIP] 在您提出GET請求前，請確定您位於要儲存檔案的正確目錄或資料夾中。
+>[!TIP]
+>
+>在您提出GET請求前，請確定您位於要儲存檔案的正確目錄或資料夾中。
 
 **回應**
 
@@ -274,9 +281,11 @@ curl -X GET 'https://platform.adobe.io:443/data/foundation/export/files/035e2520
 
 ## 下載使用客戶AI設定的區段 {#segment}
 
-另一種下載分數資料的方式是將讀者匯出至資料集。 分段工作成功完成(屬性的值為 `status` 「成功」)後，您可將對象匯出至資料集，供您存取及操作。 若要進一步瞭解區段，請造訪區 [段總覽](../../../segmentation/home.md)。
+另一種下載分數資料的方式是將讀者匯出至資料集。 分段工作成功完成(屬性的值為 `status` 「成功」)後，您可以將對象匯出至資料集，供您存取並執行操作。 若要進一步瞭解區段，請造訪區 [段總覽](../../../segmentation/home.md)。
 
->[!IMPORTANT] 為了運用此匯出方法，資料集需要啟用即時客戶設定檔。
+>[!IMPORTANT]
+>
+>為了運用此匯出方法，資料集需要啟用即時客戶設定檔。
 
 區 [段評估指南中的](../../../segmentation/tutorials/evaluate-a-segment.md) 「匯出區段」區段涵蓋匯出觀眾資料集的必要步驟。 本指南概述並提供下列範例：
 
