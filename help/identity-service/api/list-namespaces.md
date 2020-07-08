@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 列出可用的名稱空間
 topic: API guide
 translation-type: tm+mt
-source-git-commit: 6ffdcc2143914e2ab41843a52dc92344ad51bcfb
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '68'
 ht-degree: 5%
@@ -35,7 +35,9 @@ curl -X GET \
 
 響應包括對象陣列，每個對象表示可用的命名空間。 具有&quot;[!UICONTROL custom]&quot;值&quot;[!UICONTROL false]&quot;的名稱空間是標準名稱空間，而具有&quot;[!UICONTROL custom]&quot;值&quot;true&quot;值的名稱空間是貴組織已建立的名稱空間。
 
->[!NOTE] 此回應已針對空間截斷。
+>[!NOTE]
+>
+>此回應已針對空間截斷。
 
 ```json
 [
