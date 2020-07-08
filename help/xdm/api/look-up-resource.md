@@ -4,7 +4,10 @@ solution: Experience Platform
 title: 查找資源
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 71c73a3899ccdd1c024a811b36c411915a3b14be
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '176'
+ht-degree: 2%
 
 ---
 
@@ -47,7 +50,9 @@ curl -X GET \
 | `application/vnd.adobe.xed-full-notext+json; version={MAJOR_VERSION}` | `$ref` 並解 `allOf` 決，沒有標題或說明。 |
 | `application/vnd.adobe.xed-full-desc+json; version={MAJOR_VERSION}` | `$ref` 和已解 `allOf` 析的包含描述符。 |
 
->[!NOTE] 如果僅提 `major` 供版本（1、2、3等），註冊表將自動返回最 `minor` 新版本（.1、.2、.3等）。
+>[!NOTE]
+>
+>如果僅提 `major` 供版本（1、2、3等），註冊表將自動返回最 `minor` 新版本（.1、.2、.3等）。
 
 **回應**
 
