@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 使用方案註冊表API建立方案
 topic: tutorials
 translation-type: tm+mt
-source-git-commit: b3fa5a17c3a5c2406d368d165da63f2f8c01154d
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '2418'
 ht-degree: 1%
@@ -256,7 +256,9 @@ curl -X PATCH \
 
 您現在可以使用另一個混音重複步驟，以新增另一個標準混音。
 
->[!TIP] 請務必檢閱所有可用的混音，以熟悉每個混音中所包含的欄位。 您可以針對每個「全域」和「租用戶」容器執行請求，列出(GET)所有可用於特定類別的混音，只傳回「meta:intededToExtend」欄位符合您所使用類別的混音。 在這種情況下，它是XDM Individual Profile類，因此使用XDM Individual Profile `$id` :
+>[!TIP]
+>
+>請務必檢閱所有可用的混音，以熟悉每個混音中所包含的欄位。 您可以針對每個「全域」和「租用戶」容器執行請求，列出(GET)所有可用於特定類別的混音，只傳回「meta:intededToExtend」欄位符合您所使用類別的混音。 在這種情況下，它是XDM Individual Profile類，因此使用XDM Individual Profile `$id` :
 
 ```http
 GET /global/mixins?property=meta:intendedToExtend==https://ns.adobe.com/xdm/context/profile
@@ -415,7 +417,7 @@ curl -X POST\
 
 **回應**
 
-成功的請求會傳回HTTP回應狀態201（已建立），其回應主體包含新建立的混音的詳細資訊，包括 `$id`、 `meta:altIt`和 `version`。 這些值是只讀的，由方案註冊表指定。
+成功的請求會傳回HTTP回應狀態201（已建立），回應主體包含新建立混合的詳細資料，包括 `$id`、 `meta:altIt`和 `version`。 這些值是只讀的，由方案註冊表指定。
 
 ```JSON
 {
@@ -991,7 +993,9 @@ curl -X POST \
       }'
 ```
 
->[!NOTE] 您可以使用 [Identity Service API列出可用的&quot;xdm:namespace&quot;值，或建立新值](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/id-service-api.yaml)。 「xdm:property」的值可以是&quot;xdm:code&quot;或&quot;xdm:id&quot;，視使用的&quot;xdm:namespace&quot;而定。
+>[!NOTE]
+>
+>您可以使用 [Identity Service API列出可用的&quot;xdm:namespace&quot;值，或建立新值](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/id-service-api.yaml)。 「xdm:property」的值可以是&quot;xdm:code&quot;或&quot;xdm:id&quot;，視使用的&quot;xdm:namespace&quot;而定。
 
 **回應**
 
