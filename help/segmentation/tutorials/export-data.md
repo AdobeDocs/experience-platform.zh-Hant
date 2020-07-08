@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 使用API匯出資料
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: d0b9223aebca0dc510a7457e5a5c65ac4a567933
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1953'
 ht-degree: 1%
@@ -39,7 +39,9 @@ Experience Platform中的所有資源都隔離至特定的虛擬沙盒。 對平
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
->[!NOTE] 如需平台中沙盒的詳細資訊，請參閱沙盒 [概觀檔案](../../sandboxes/home.md)。
+>[!NOTE]
+>
+>如需平台中沙盒的詳細資訊，請參閱沙盒 [概觀檔案](../../sandboxes/home.md)。
 
 所有POST、PUT和PATCH請求都需要附加標題：
 
@@ -197,7 +199,9 @@ curl -X POST \
 | `schema.name` | **（必要）** ，與要匯出資料的資料集關聯的架構名稱。 |
 | `evaluationInfo.segmentation` | *（選用）* ，若未提供，則預設為布林值 `false`。 值表示 `true` 需要在匯出工作上執行分段。 |
 
->[!NOTE] 若要僅匯出描述檔資料，而不要包含相關的ExperienceEvent資料，請從請求中移除「additionalFields」物件。
+>[!NOTE]
+>
+>若要僅匯出描述檔資料，而不要包含相關的ExperienceEvent資料，請從請求中移除「additionalFields」物件。
 
 **回應**
 
