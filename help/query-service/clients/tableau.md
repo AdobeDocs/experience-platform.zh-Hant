@@ -4,7 +4,10 @@ solution: Experience Platform
 title: 與Tableau連結
 topic: connect
 translation-type: tm+mt
-source-git-commit: 8310204071375a55329f661c9ac678f96979a594
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '82'
+ht-degree: 2%
 
 ---
 
@@ -13,7 +16,9 @@ source-git-commit: 8310204071375a55329f661c9ac678f96979a594
 
 安裝Tableau（如果尚未安裝）。
 
->[!NOTE] 您可在這裡取得「Tableau Desktop」的14天試用 [版](https://www.tableau.com/products/desktop/download)。
+>[!NOTE]
+>
+>您可在這裡取得「Tableau Desktop」的14天試用 [版](https://www.tableau.com/products/desktop/download)。
 >    
 > 此版本 `2018.1.2 (20181.18.0615.1128 64 bit)` 已成功連接到查詢服務。
 
