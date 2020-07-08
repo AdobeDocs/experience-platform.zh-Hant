@@ -4,7 +4,10 @@ solution: Experience Platform
 title: 沙盒使用指南
 topic: user guide
 translation-type: tm+mt
-source-git-commit: 6438c1841889ff345e1ebaedabfed0531c1f97f9
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '514'
+ht-degree: 0%
 
 ---
 
@@ -45,7 +48,9 @@ source-git-commit: 6438c1841889ff345e1ebaedabfed0531c1f97f9
 
 ![](../images/ui/create-sandbox-dialog.png)
 
->[!NOTE] 由於您僅限於建立非生產沙盒類型， **type** （類型）選項會鎖定在「非生產」，因此無法加以控制。
+>[!NOTE]
+>
+>由於您僅限於建立非生產沙盒類型， **type** （類型）選項會鎖定在「非生產」，因此無法加以控制。
 
 建立完沙盒後，請重新整理頁面，新沙盒就會出現在 _Sandbox_ （沙盒）控制面板中，狀態為「建立」。 新沙盒需要約15分鐘的時間才能由系統布建，之後其狀態會變更為「作用中」。
 
@@ -53,7 +58,9 @@ source-git-commit: 6438c1841889ff345e1ebaedabfed0531c1f97f9
 
 ## 重設沙盒
 
->[!NOTE] 此功能僅適用於非生產沙盒。 無法重設生產沙盒。
+>[!NOTE]
+>
+>此功能僅適用於非生產沙盒。 無法重設生產沙盒。
 
 重設非生產沙盒會刪除與該沙盒（結構、資料集等）相關的所有資源，同時仍會保留沙盒的名稱和相關權限。 對於具有存取權的使用者，這個「乾淨」的沙盒仍以相同名稱提供。
 
@@ -71,7 +78,9 @@ source-git-commit: 6438c1841889ff345e1ebaedabfed0531c1f97f9
 
 ## 刪除沙盒
 
->[!NOTE] 此功能僅適用於非生產沙盒。 無法刪除生產沙盒。
+>[!NOTE]
+>
+>此功能僅適用於非生產沙盒。 無法刪除生產沙盒。
 
 刪除非生產沙盒會永久移除與該沙盒相關的所有資源，包括權限。
 
