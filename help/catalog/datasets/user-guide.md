@@ -4,7 +4,10 @@ solution: Experience Platform
 title: 資料集使用指南
 topic: datasets
 translation-type: tm+mt
-source-git-commit: 7d3f64db787aebe46179c0e08ad01878b0ad2877
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '1181'
+ht-degree: 0%
 
 ---
 
@@ -17,12 +20,12 @@ source-git-commit: 7d3f64db787aebe46179c0e08ad01878b0ad2877
 
 本使用指南需要有效瞭解Adobe Experience Platform的下列元件：
 
-* [資料集](overview.md):Experience Platform中資料永續性的儲存和管理架構。
-* [體驗資料模型(XDM)系統](../../xdm/home.md):Experience Platform組織客戶體驗資料的標準化架構。
-   * [架構構成基礎](../../xdm/schema/composition.md):瞭解XDM架構的基本建置區塊，包括架構組合的主要原則和最佳實務。
-   * [架構編輯器](../../xdm/tutorials/create-schema-ui.md):瞭解如何使用平台用戶介面中的架構編輯器構建您自己的自定義XDM架構。
-* [即時客戶個人檔案](../../profile/home.md):根據來自多個來源的匯整資料，提供統一、即時的消費者個人檔案。
-* [資料治理](../../data-governance/home.md):確保遵守有關客戶資料使用的法規、限制和政策。
+* [資料集](overview.md): Experience Platform中資料永續性的儲存和管理架構。
+* [體驗資料模型(XDM)系統](../../xdm/home.md): Experience Platform組織客戶體驗資料的標準化架構。
+   * [架構構成基礎](../../xdm/schema/composition.md): 瞭解XDM架構的基本建置區塊，包括架構組合的主要原則和最佳實務。
+   * [架構編輯器](../../xdm/tutorials/create-schema-ui.md): 瞭解如何使用平台用戶介面中的架構編輯器構建您自己的自定義XDM架構。
+* [即時客戶個人檔案](../../profile/home.md): 根據來自多個來源的匯整資料，提供統一、即時的消費者個人檔案。
+* [資料治理](../../data-governance/home.md): 確保遵守有關客戶資料使用的法規、限制和政策。
 
 ## 檢視資料集
 
@@ -87,7 +90,9 @@ source-git-commit: 7d3f64db787aebe46179c0e08ad01878b0ad2877
 
 此時將 *顯示「添加資料* 」步驟。 將CSV檔案拖放至畫面中央，或按一下「瀏覽」以瀏覽 **您的檔案目錄** ，即可上傳它。 該檔案最大可以有10GB的大小。 上傳CSV檔案後，按一下「 **儲存** 」以建立資料集。
 
->[!NOTE] CSV欄名稱必須以英數字元開頭，且只能包含字母、數字和底線。
+>[!NOTE]
+>
+>CSV欄名稱必須以英數字元開頭，且只能包含字母、數字和底線。
 
 ![](../images/datasets/user-guide/add_csv_data.png)
 
@@ -114,7 +119,9 @@ source-git-commit: 7d3f64db787aebe46179c0e08ad01878b0ad2877
 
 您可以先存取資料集活動畫面，以刪除 *資料集* 。 然後，按一下 **刪除資料集** ，將其刪除。
 
->[!NOTE] Adobe應用程式和服務（例如Adobe Analytics、Adobe Audience Manager或決策服務）所建立和使用的資料集無法刪除。
+>[!NOTE]
+>
+>Adobe應用程式和服務（例如Adobe Analytics、Adobe Audience Manager或決策服務）所建立和使用的資料集無法刪除。
 
 ![](../images/datasets/user-guide/delete_dataset.png)
 
