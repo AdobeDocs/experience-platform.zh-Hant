@@ -4,7 +4,10 @@ solution: Experience Platform
 title: 建立ETL整合
 topic: overview
 translation-type: tm+mt
-source-git-commit: 4817162fe2b7cbf4ae4c1ed325db2af31da5b5d3
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '4227'
+ht-degree: 0%
 
 ---
 
@@ -55,7 +58,7 @@ ETL連接器整合涉及多個Experience Platform元件。 下列清單概述數
 
 若要呼叫平台API，您必須先完成驗證教 [學課程](../tutorials/authentication.md)。 完成驗證教學課程後，所有Experience Platform API呼叫中每個必要標題的值都會顯示在下方：
 
-- 授權：生產者 `{ACCESS_TOKEN}`
+- 授權： 生產者 `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
@@ -63,11 +66,13 @@ Experience Platform中的所有資源都隔離至特定的虛擬沙盒。 所有
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
->[!NOTE] 如需平台中沙盒的詳細資訊，請參閱沙盒 [概觀檔案](../sandboxes/home.md)。
+>[!NOTE]
+>
+>如需平台中沙盒的詳細資訊，請參閱沙盒 [概觀檔案](../sandboxes/home.md)。
 
 所有包含裝載(POST、PUT、PATCH)的請求都需要額外的標題：
 
-- 內容類型：application/json
+- 內容類型： application/json
 
 ## 一般使用者流程
 
@@ -79,7 +84,9 @@ Experience Platform中的所有資源都隔離至特定的虛擬沙盒。 所有
 
 ETL工作流程中已提供範例ETL工具和工作流程的 [模型](./workflow.md)。 雖然ETL工具的格式可能不同，但大部分都會公開類似的功能。
 
->[!NOTE] ETL連接器必須指定一個時間戳記篩選器，標籤要收錄資料和偏移的日期（即要讀取其資料的視窗）。 ETL工具應支援在此或其他相關UI中取用這兩個參數。 在Adobe Experience Platform中，這些參數會對應至資料集批次物件中的可用日期（如果存在）或擷取日期。
+>[!NOTE]
+>
+>ETL連接器必須指定一個時間戳記篩選器，標籤要收錄資料和偏移的日期（即要讀取其資料的視窗）。 ETL工具應支援在此或其他相關UI中取用這兩個參數。 在Adobe Experience Platform中，這些參數會對應至資料集批次物件中的可用日期（如果存在）或擷取日期。
 
 ### 查看資料集清單
 
@@ -163,7 +170,9 @@ XDM架構是您在需要向用戶顯示可寫入的所有可用欄位的清單�
 
 上一個響應對象(`https://ns.adobe.com/{TENANT_ID}/schemas/274f17bc5807ff307a046bab1489fb18`)中的第一個&quot;schemaRef.id&quot;值是指向模式註冊表中特定XDM模式的URI。 可通過對方案註冊表API進行查找(GET)請求來檢索方案。
 
->[!NOTE] &quot;schemaRef&quot;屬性會取代現已過時的&quot;schema&quot;屬性。 如果資料集中沒有&quot;schemaRef&quot;或不包含值，則需要檢查是否存在&quot;schema&quot;屬性。 若要這麼做，請在先前呼叫的查詢參數中，將&quot;schemaRef&quot; `properties` 取代為&quot;schema&quot;。 下面的「資料集」「架構」屬性區段中提供了有關 [「架構」屬性的詳細資訊](#dataset-schema-property-deprecated---eol-2019-05-30) 。
+>[!NOTE]
+>
+>&quot;schemaRef&quot;屬性會取代現已過時的&quot;schema&quot;屬性。 如果資料集中沒有&quot;schemaRef&quot;或不包含值，則需要檢查是否存在&quot;schema&quot;屬性。 若要這麼做，請在先前呼叫的查詢參數中，將&quot;schemaRef&quot; `properties` 取代為&quot;schema&quot;。 下面的「資料集」「架構」屬性區段中提供了有關 [「架構」屬性的詳細資訊](#dataset-schema-property-deprecated---eol-2019-05-30) 。
 
 **API格式**
 
@@ -196,11 +205,13 @@ curl -X GET \
 | `application/vnd.adobe.xed-full-notext+json; version={major version}` | $refs and allOf已解析，無標題或說明 |
 | `application/vnd.adobe.xed-full-desc+json; version={major version}` | $refs and allOf已解析，包含描述符 |
 
->[!NOTE] 而且 `application/vnd.adobe.xed-id+json` 是 `application/vnd.adobe.xed-full+json; version={major version}` 最常使用的「接受」標題。 `application/vnd.adobe.xed-id+json` 優先於在架構註冊表中列出資源，因為它只返回&quot;title&quot;、&quot;id&quot;和&quot;version&quot;。 `application/vnd.adobe.xed-full+json; version={major version}` 偏好用於檢視特定資源（依其「id」），因為它會傳回所有欄位（巢狀內嵌於「屬性」下）以及標題和說明。
+>[!NOTE]
+>
+>`application/vnd.adobe.xed-id+json` 而且 `application/vnd.adobe.xed-full+json; version={major version}` 是最常用的「接受」標題。 `application/vnd.adobe.xed-id+json` 優先於在架構註冊表中列出資源，因為它只返回&quot;title&quot;、&quot;id&quot;和&quot;version&quot;。 `application/vnd.adobe.xed-full+json; version={major version}` 偏好用於檢視特定資源（依其「id」），因為它會傳回所有欄位（巢狀內嵌於「屬性」下）以及標題和說明。
 
 **回應**
 
-傳回的JSON結構描述說明結構和欄位層級資訊（「類型」、「格式」、「最小」、「最大」等）資料的序號，序號為JSON。 如果使用JSON以外的序列化格式擷取（例如Parce或Scala）, [Schema Registry Guide](../xdm/tutorials/create-schema-api.md) （架構註冊表指南）會包含一個表格，其中顯示所要的JSON類型(「meta:xdmType」)及其他格式的對應表示法。
+傳回的JSON結構描述說明結構和欄位層級資訊（「類型」、「格式」、「最小」、「最大」等） 資料的序號，序號為JSON。 如果使用JSON以外的序列化格式擷取（例如Parce或Scala）, [Schema Registry Guide](../xdm/tutorials/create-schema-api.md) （架構註冊表指南）會包含一個表格，其中顯示所要的JSON類型(「meta:xdmType」)及其他格式的對應表示法。
 
 除了此表之外，《方案註冊開發人員指南》還包含使用「方案註冊表API」可進行的所有可能調用的深入示例。
 
@@ -236,13 +247,17 @@ curl -X GET "https://platform.adobe.io/data/foundation/catalog/xdms/context/pers
   -H "x-api-key: {API_KEY}"
 ```
 
->[!NOTE] 選用的查詢參 `expansion=xdm`數會告訴API完全展開並內嵌任何參考的結構。 當向用戶顯示所有潛在欄位的清單時，可能希望執行此操作。
+>[!NOTE]
+>
+>選用的查詢參 `expansion=xdm`數會告訴API完全展開並內嵌任何參考的結構。 當向用戶顯示所有潛在欄位的清單時，可能希望執行此操作。
 
 **回應**
 
 與檢視資料集結 [構描述的步驟類似](#view-dataset-schema)，回應包含JSON結構描述資料的結構和欄位層級資訊，序列化為JSON。
 
->[!NOTE] 當&quot;schema&quot;欄位為空或完全不存在時，連接器應讀取&quot;schemaRef&quot;欄位，並使用 [Schema Registry API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml) (如前面步驟中所 [示)查看資料集模式](#view-dataset-schema)。
+>[!NOTE]
+>
+>當&quot;schema&quot;欄位為空或完全不存在時，連接器應讀取&quot;schemaRef&quot;欄位，並使用 [Schema Registry API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml) (如前面步驟中所 [示)查看資料集模式](#view-dataset-schema)。
 
 ### &quot;voocableSchema&quot;屬性
 
@@ -557,9 +572,11 @@ curl -X GET "https://platform.adobe.io/data/foundation/export/files/{DATASET_FIL
 
 如果您使用 [GitHub上的參考實作](https://github.com/adobe/experience-platform-etl-reference/blob/fd08dd9f74ae45b849d5482f645f859f330c1951/README.md)，則可使用系統屬性在此實作中開啟架構驗證 `-DenableSchemaValidation=true`。
 
-可對邏輯XDM類型使用屬性（如字串）和 `minLength` 整數 `maxlength` 等， `minimum` 以 `maximum` 及更多屬性執行驗證。 Schema Registry [API開發人員指南包含](../xdm/api/getting-started.md) ，其中包含一個表，其中列出XDM類型和可用於驗證的屬性。
+可對邏輯XDM類型使用屬性（如字串）和 `minLength` 整數 `maxlength` 等， `minimum` 以 `maximum` 及更多屬性執行驗證。 Schema Registry [API開發人員指南中包含一個表](../xdm/api/getting-started.md) ，它概述了XDM類型和可用於驗證的屬性。
 
->[!NOTE] 為各種類型提供的最小值和最大值是 `integer` MIN和MAX值，這些值可進一步限制為您選擇的最小值和最大值。
+>[!NOTE]
+>
+>為各種類型提供的最小值和最大值是 `integer` MIN和MAX值，這些值可進一步限制為您選擇的最小值和最大值。
 
 ### 建立批次
 
@@ -583,7 +600,7 @@ curl -X POST "https://platform.adobe.io/data/foundation/import/batches" \
 
 ### 寫入資料集
 
-成功建立新批次後，檔案就可以上傳到特定資料集。 多個檔案可以在批次中張貼，直到升級為止。 檔案可以使用小型檔案 _上傳API上傳_;不過，如果您的檔案過大且已超出閘道限制，則可使用「大 _型檔案上傳API」_。 如需使用「大型和小型檔案上傳」的詳細資訊，請參閱「批次擷 [取」概觀](../ingestion/batch-ingestion/overview.md)。
+成功建立新批次後，檔案就可以上傳到特定資料集。 多個檔案可以在批次中張貼，直到升級為止。 檔案可以使用小型檔案 _上傳API上傳_; 不過，如果您的檔案過大且已超出閘道限制，則可使用「大 _型檔案上傳API」_。 如需使用「大型和小型檔案上傳」的詳細資訊，請參閱「批次擷 [取」概觀](../ingestion/batch-ingestion/overview.md)。
 
 **請求**
 
