@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 使用原則服務API強制執行資料使用原則
 topic: enforcement
 translation-type: tm+mt
-source-git-commit: 1a835c6c20c70bf03d956c601e2704b68d4f90fa
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '875'
 ht-degree: 2%
@@ -16,7 +16,9 @@ ht-degree: 2%
 
 為您的資料建立資料使用標籤並針對這些標籤建立行銷動作的使用原則後，您就可以使用 [DULE Policy Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) ，評估在資料集或任意標籤群組上執行的行銷動作是否構成原則違規。 然後，您可以設定自己的內部通訊協定，以根據API回應來處理原則違規。
 
->[!NOTE] 預設情況下，只有其狀態設定為的策 `ENABLED` 略才能參與評估。 若要允 `DRAFT` 許原則參與評估，您必須在請求路徑中加 `includeDraft=true` 入查詢參數。
+>[!NOTE]
+>
+>預設情況下，只有其狀態設定為的策 `ENABLED` 略才能參與評估。 若要允 `DRAFT` 許原則參與評估，您必須在請求路徑中加 `includeDraft=true` 入查詢參數。
 
 本檔案提供如何使用 [!DNL Policy Service] API檢查不同情況下是否違反原則的步驟。
 
@@ -51,7 +53,9 @@ GET /marketingActions/custom/{MARKETING_ACTION_NAME}/constraints?duleLabels={LAB
 
 下列請求會針對標籤 `exportToThirdParty` 和測試行銷 `C1` 動作 `C3`。 由於您在本教學課程中先前建立的資料使用原則將標籤定義為其原則運算式中的 `C1``deny` 其中一個條件，因此行銷動作應觸發原則違規。
 
->[!NOTE] 資料使用標籤會區分大小寫。 策略違規僅在其策略表達式中定義的標籤完全匹配時才發生。 在此範例中，標 `C1` 簽會觸發違規，而標 `c1` 簽則不會。
+>[!NOTE]
+>
+>資料使用標籤會區分大小寫。 策略違規僅在其策略表達式中定義的標籤完全匹配時才發生。 在此範例中，標 `C1` 簽會觸發違規，而標 `c1` 簽則不會。
 
 ```shell
 curl -X GET \
@@ -128,7 +132,7 @@ curl -X GET \
 
 ## 使用資料集進行評估
 
-您可以測試針對可從中收集DULE標籤的一或多個資料集的行銷動作，以評估DULE原則。 若要這麼做，請向請求主體提 `/marketingActions/core/{MARKETING_ACTION_NAME}/constraints` 出POST請求並提供資料集ID，如下例所示。
+您可以測試針對可從中收集DULE標籤的一或多個資料集的行銷動作，以評估DULE原則。 若要這麼做，請向請求內文提出POST `/marketingActions/core/{MARKETING_ACTION_NAME}/constraints` 請求，並在請求內文中提供資料集ID，如下例所示。
 
 **API格式**
 
