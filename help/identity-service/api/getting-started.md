@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 快速入門
 topic: API guide
 translation-type: tm+mt
-source-git-commit: 6ffdcc2143914e2ab41843a52dc92344ad51bcfb
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '714'
 ht-degree: 1%
@@ -42,7 +42,9 @@ Adobe Experience Platform可 [!DNL Identity Service] 在Adobe Experience Platfor
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
->[!NOTE] 如需中沙盒的詳細資訊 [!DNL Platform]，請參閱沙 [盒概述檔案](../../sandboxes/home.md)。
+>[!NOTE]
+>
+>如需中沙盒的詳細資訊 [!DNL Platform]，請參閱沙 [盒概述檔案](../../sandboxes/home.md)。
 
 所有包含裝載(POST、PUT、PATCH)的請求都需要額外的標題：
 
@@ -61,7 +63,9 @@ API目前支援兩個地 [!DNL Identity Service] 區： VA7和NLD2。
 | [!DNL Identity Service] API | https://</span>platform-va7.adobe。</span>io/data/core/identity/{ENDPOINT} | https://</span>platform-nld2.adobe。</span>io/data/core/identity/{ENDPOINT} |
 | [!DNL Identity Namespace] API | https://</span>platform-va7.adobe。</span>io/data/core/idnamespace/{ENDPOINT} | https://</span>platform-nld2.adobe。</span>io/data/core/idnamespace{ENDPOINT} |
 
->[!NOTE] 未指定區域的請求可能導致呼叫路由到錯誤區域，或導致呼叫意外失敗。
+>[!NOTE]
+>
+>未指定區域的請求可能導致呼叫路由到錯誤區域，或導致呼叫意外失敗。
 
 如果您無法在IMS組織設定檔中找到地區，請聯絡您的系統管理員以取得支援。
 
@@ -77,7 +81,9 @@ API目前支援兩個地 [!DNL Identity Service] 區： VA7和NLD2。
 
 本文中的範例不涵蓋 [!DNL Identity Service] API的完整功能。 如需完整的API，請參閱 [Swagger API參考](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/id-service-api.yaml)。
 
->[!NOTE] 在請求中使用原生XID時，傳回的所有身分都會以原生XID格式。 建議使用ID/namespace表單。 如需詳細資訊，請參閱有關 [取得XID以取得身分的章節](./create-custom-namespace.md)。
+>[!NOTE]
+>
+>在請求中使用原生XID時，傳回的所有身分都會以原生XID格式。 建議使用ID/namespace表單。 如需詳細資訊，請參閱有關 [取得XID以取得身分的章節](./create-custom-namespace.md)。
 
 ## 後續步驟
 
