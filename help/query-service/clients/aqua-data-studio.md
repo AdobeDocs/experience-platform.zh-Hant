@@ -4,7 +4,10 @@ solution: Experience Platform
 title: 使用Aqua Data Studio連接
 topic: connect
 translation-type: tm+mt
-source-git-commit: 7d5d98d8e32607abf399fdc523d2b3bc99555507
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '257'
+ht-degree: 0%
 
 ---
 
@@ -19,12 +22,14 @@ source-git-commit: 7d5d98d8e32607abf399fdc523d2b3bc99555507
 
 將出 *現「註冊伺服器* 」對話框。 在「常 *規* 」頁籤下，從左側的列 **表中選擇「PostgreSQL** 」。 在出現的對話方塊中，提供伺服器設定的下列詳細資訊。
 
-- **名稱**:連線的名稱。
-- **登入名稱和密碼**:將使用的登錄憑據。 用戶名的形式為 `ORG_ID@AdobeOrg`。
-- **主機和埠**:查詢服務的主機端點及其埠。
+- **名稱**: 連線的名稱。
+- **登入名稱和密碼**: 將使用的登錄憑據。 用戶名的形式為 `ORG_ID@AdobeOrg`。
+- **主機和埠**: 查詢服務的主機端點及其埠。
 - **資料庫：** 將使用的資料庫。
 
->[!NOTE] 有關查找登錄憑據、主機、埠和資料庫名稱的詳細資訊，請訪問平台 [上的憑據頁](https://platform.adobe.com/query/configuration)。 若要尋找您的認證，請登入「平台」，按一下「 **查詢**」，然後按一 **下「認證」**。
+>[!NOTE]
+>
+>有關查找登錄憑據、主機、埠和資料庫名稱的詳細資訊，請訪問平台 [上的憑據頁](https://platform.adobe.com/query/configuration)。 若要尋找您的認證，請登入「平台」，按一下「 **查詢**」，然後按一 **下「認證」**。
 
 ![](../images/clients/aqua-data-studio/register-server-general-tab.png)
 
