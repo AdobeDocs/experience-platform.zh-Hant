@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 同意
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: a3178ab54a7ab5eacd6c5f605b8bd894779f9e85
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '226'
 ht-degree: 1%
@@ -66,7 +66,9 @@ curl -X POST \
 | `nameSpace` | 陣列中的每個對 `entities` 像都必須包含Privacy Service API所識 [別的標準身份名稱空間](./appendix.md#standard-namespaces) 。 |
 | `values` | 每個用戶的值陣列，對應於所提供的值 `nameSpace`。 |
 
->[!NOTE] 如需如何決定要傳送至隱私權服務之客戶身分值的詳細資訊，請參閱提供身 [分資料指南](../identity-data.md)。
+>[!NOTE]
+>
+>如需如何決定要傳送至隱私權服務之客戶身分值的詳細資訊，請參閱提供身 [分資料指南](../identity-data.md)。
 
 **回應**
 
