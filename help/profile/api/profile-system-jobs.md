@@ -1,18 +1,18 @@
 ---
 keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API
 solution: Adobe Experience Platform
-title: 即時客戶個人檔案API開發人員指南
+title: 描述檔系統工作——即時客戶描述檔API
 topic: guide
 translation-type: tm+mt
-source-git-commit: d464a6b4abd843f5f8545bc3aa8000f379a86c6d
+source-git-commit: d1656635b6d082ce99f1df4e175d8dd69a63a43a
 workflow-type: tm+mt
-source-wordcount: '1501'
+source-wordcount: '1503'
 ht-degree: 2%
 
 ---
 
 
-# 描述檔系統工作（刪除請求）
+# 描述系統作業端點（刪除請求）
 
 Adobe Experience Platform可讓您從多個來源擷取資料，並為個別客戶建立強穩的個人檔案。 Data Lake和即時客戶個人檔案資料儲存中會儲存在Platform中。 有時可能需要從描述檔商店刪除資料集或批次，以移除不再需要或錯誤新增的資料。 這需要使用即時客戶描述檔API來建立描述檔系統工作（也稱為「刪除請求」），如有需要，也可加以修改、監控或移除。
 
