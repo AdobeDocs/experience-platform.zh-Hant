@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Adobe Experience Platform Identity Service
 topic: overview
 translation-type: tm+mt
-source-git-commit: 6ffdcc2143914e2ab41843a52dc92344ad51bcfb
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1530'
 ht-degree: 0%
@@ -94,7 +94,9 @@ PII（例如電子郵件地址和電話號碼）可直接識別客戶。 因此�
 
 雖然 [!DNL Experience Platform] 提供多種標準名稱空間，但您可能需要建立其他名稱空間，以正確分類您的身分。 如需詳細資訊，請參閱識別名稱空 [間概觀中有關檢視和建立組織名稱空間](./namespaces.md) 的章節。
 
->[!NOTE] 身份名稱空間是身份的限定詞。 因此，命名空間一旦建立後，便無法刪除。
+>[!NOTE]
+>
+>身份名稱空間是身份的限定詞。 因此，命名空間一旦建立後，便無法刪除。
 
 ### 在(XDM)中包 [!DNL Experience Data Model] 含身分資料
 
@@ -109,7 +111,9 @@ PII（例如電子郵件地址和電話號碼）可直接識別客戶。 因此�
 如果身分欄位共用共同的PII資料，也允許連結身分。
 例如，將電話號碼欄位標示為身分欄位， [!DNL Identity Service] 即可自動繪製與其他使用相同電話號碼之個人的關係圖。
 
->[!NOTE] 在標籤欄位時，會提供產生的身分名稱空間。
+>[!NOTE]
+>
+>在標籤欄位時，會提供產生的身分名稱空間。
 
 ### 設定資料集 [!DNL Identity Service]
 
@@ -121,8 +125,8 @@ PII（例如電子郵件地址和電話號碼）可直接識別客戶。 因此�
 
 ## 資料治理
 
-Adobe Experience Platform是以隱私權為考量而建立，並包含資料治理架構，以保護客戶PII資料。 「電子郵件」或「電話」名稱空間下的身分資料預設會加密，但為了確保機密資料在保存前已加密，資料使用標籤可在收到資料時或傳入資料時套用至資料 [!DNL Platform]。 如需詳細資訊，請閱讀資 [料治理概觀](../data-governance/home.md)。
+Adobe Experience Platform was built with privacy in mind and includes a data governance framework to protect your customer PII data. Identity data under the &quot;email&quot; or &quot;phone&quot; namespace is encrypted by default, but in order to ensure sensitive data is encrypted before it is persisted, data usage labels can be applied to data as it is ingested or once it arrives in [!DNL Platform]. For more information, please read the [Data Governance overview](../data-governance/home.md).
 
 ## 後續步驟
 
-現在，您已瞭解其關鍵概 [!DNL Identity Service] 念及其在其中的角色 [!DNL Experience Platform]，可以開始學習如何使用您的識別圖表 [!DNL Identity Service API](./api/getting-started.md)。
+Now that you understand the key concepts of [!DNL Identity Service] and its role within [!DNL Experience Platform], you can begin to learn how to work with your identity graph using the [!DNL Identity Service API](./api/getting-started.md).
