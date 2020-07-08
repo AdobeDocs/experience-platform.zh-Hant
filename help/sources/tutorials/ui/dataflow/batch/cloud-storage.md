@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 在UI中為雲儲存批處理連接器配置資料流
 topic: overview
 translation-type: tm+mt
-source-git-commit: d3c725c4760acb3857a67d0d30b24732c963a030
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1184'
 ht-degree: 0%
@@ -48,7 +48,9 @@ ht-degree: 0%
 
 在預覽視窗填入後，您可以按一下「下 **[!UICONTROL 一步]** 」，上傳所選資料夾中的所有檔案。 如果要上傳至特定檔案，請在按「下一步」前，從清單中選取該 **[!UICONTROL 檔案]**。
 
->[!NOTE] 支援的檔案格式包括CSV、JSON和Parce。 JSON和Parce檔案必須符合XDM規範。
+>[!NOTE]
+>
+>支援的檔案格式包括CSV、JSON和Parce。 JSON和Parce檔案必須符合XDM規範。
 
 ![](../../../../images/tutorials/dataflow/cloud-storage/batch/select-data-next.png)
 
