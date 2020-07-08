@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 透過客戶人工智慧發掘見解
 topic: Discovering insights
 translation-type: tm+mt
-source-git-commit: 83e74ad93bdef056c8aef07c9d56313af6f4ddfd
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1059'
 ht-degree: 0%
@@ -30,7 +30,9 @@ ht-degree: 0%
 
 此時將顯示「客戶AI服務」頁。 本頁列出客戶AI的服務例項，並顯示其相關資訊，包括例項名稱、傾向類型、執行例項的頻率，以及上次更新的狀態。
 
->[!NOTE] 只有已完成成功計分執行的服務例項才有見解。
+>[!NOTE]
+>
+>只有已完成成功計分執行的服務例項才有見解。
 
 ![建立例項](../images/insights/dashboard.png)
 
@@ -51,7 +53,9 @@ ht-degree: 0%
 
 ![右滑軌](../images/insights/success-run.png)
 
->[!NOTE] 當計分執行失敗時，會提供錯誤訊息。 錯誤訊息會列在右側邊欄的「 *上次執行詳細資訊* 」下方，此欄位僅會顯示失敗的執行。
+>[!NOTE]
+>
+>當計分執行失敗時，會提供錯誤訊息。 錯誤訊息會列在右側邊欄的「 *上次執行詳細資訊* 」下方，此欄位僅會顯示失敗的執行。
 
 ![失敗的運行消息](../images/insights/failed-run.png)
 
@@ -85,7 +89,9 @@ ht-degree: 0%
 
 計分摘要會顯示計分的描述檔總數，並將其分類至包含高、中和低傾向的時段。 傾向區間是根據得分範圍而決定，低於24，中度為25至74，高於74。 每個桶都有對應於圖例的顏色。
 
->[!NOTE] 如果是轉換傾向分數，高分以綠色顯示，低分以紅色顯示。 如果您預測客戶流失傾向，這會反轉，高分會以紅色顯示，低分會是綠色。 無論您選擇何種傾向類型，中時段都會保持黃色。
+>[!NOTE]
+>
+>如果是轉換傾向分數，高分以綠色顯示，低分以紅色顯示。 如果您預測客戶流失傾向，這會反轉，高分會以紅色顯示，低分會是綠色。 無論您選擇何種傾向類型，中時段都會保持黃色。
 
 ![計分摘要](../images/insights/scoring-summary.png)
 
