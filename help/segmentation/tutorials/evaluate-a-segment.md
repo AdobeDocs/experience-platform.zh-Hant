@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 評估區段
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 822f43b139b68b96b02f9a5fe0549736b2524ab7
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '2841'
 ht-degree: 1%
@@ -37,7 +37,9 @@ Experience Platform中的所有資源都隔離至特定的虛擬沙盒。 對平
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
->[!NOTE] 如需平台中沙盒的詳細資訊，請參閱沙盒 [概觀檔案](../../sandboxes/home.md)。
+>[!NOTE]
+>
+>如需平台中沙盒的詳細資訊，請參閱沙盒 [概觀檔案](../../sandboxes/home.md)。
 
 所有POST、PUT和PATCH請求都需要附加標題：
 
@@ -55,7 +57,9 @@ Experience Platform中的所有資源都隔離至特定的虛擬沙盒。 對平
 
 透過排程評估，您的IMS組織可以建立循環排程，以自動執行匯出工作。
 
->[!NOTE] XDM個別設定檔的合併原則上限為五(5)個沙盒，可啟用排程的評估。 如果貴組織在單一沙盒環境中有5種以上的XDM個人設定檔合併原則，您將無法使用排程的評估。
+>[!NOTE]
+>
+>XDM個別設定檔的合併原則上限為五(5)個沙盒，可啟用排程的評估。 如果貴組織在單一沙盒環境中有5種以上的XDM個人設定檔合併原則，您將無法使用排程的評估。
 
 ### 建立排程
 
