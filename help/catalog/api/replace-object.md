@@ -4,7 +4,10 @@ solution: Experience Platform
 title: 替換對象
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: a753c6460bfe89e2b78fb3e087e9ba7397206dec
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '141'
+ht-degree: 2%
 
 ---
 
@@ -13,7 +16,9 @@ source-git-commit: a753c6460bfe89e2b78fb3e087e9ba7397206dec
 
 您可以使用PUT請求覆寫目錄對象的內容，其中整個資源將替換為請求裝載。
 
->[!NOTE] 如果只需要更新目錄對象中的幾個特定欄位，則使用PATCH請求可能會更有效。
+>[!NOTE]
+>
+>如果只需要更新目錄對象中的幾個特定欄位，則使用PATCH請求可能會更有效。
 
 **API格式**
 
