@@ -4,7 +4,10 @@ solution: Experience Platform
 title: 在Attribution AI中存取分數
 topic: Accessing scores
 translation-type: tm+mt
-source-git-commit: 01a500959802aa8c02bdaa8f024a9849ec23be51
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '983'
+ht-degree: 2%
 
 ---
 
@@ -21,7 +24,7 @@ Attribution AI可讓您以鑲木地板檔案格式下載分數。 本教學課�
 
 ## Find your dataset ID {#dataset-id}
 
-在您的Attribution AI前瞻分析服務例項中，按一下右上方導覽中的 *More actions* droplank，然後選取 **[!UICONTROL Access scores]**。
+在您的「歸因AI」前瞻分析服務例項中，按一下右上方導覽中的「更多 *動作* 」下拉式清單，然後選取「存 **[!UICONTROL 取分數」]**。
 
 ![更多動作](./images/download-scores/more-actions.png)
 
@@ -220,7 +223,9 @@ curl -X GET 'https://platform.adobe.io/data/foundation/export/files/01E5QSWCAASF
 
 若要下載檔案資料，請對您在上一步驟中復 `"href"` 制的檔案值提出GET [要求](#retrieving-your-files)。
 
->[!NOTE] 如果您直接在命令列中提出此請求，可能會提示您在請求標題後新增輸出。 以下請求範例使用 `--output {FILENAME.FILETYPE}`。
+>[!NOTE]
+>
+>如果您直接在命令列中提出此請求，可能會提示您在請求標題後新增輸出。 以下請求範例使用 `--output {FILENAME.FILETYPE}`。
 
 **API格式**
 
@@ -244,7 +249,9 @@ curl -X GET 'https://platform.adobe.io:443/data/foundation/export/files/01E5QSWC
   -O 'file.parquet'
 ```
 
->[!TIP] 在您提出GET請求前，請確定您位於要儲存檔案的正確目錄或資料夾中。
+>[!TIP]
+>
+>在您提出GET請求前，請確定您位於要儲存檔案的正確目錄或資料夾中。
 
 **回應**
 
@@ -258,7 +265,9 @@ curl -X GET 'https://platform.adobe.io:443/data/foundation/export/files/01E5QSWC
 
 ## 使用雪花存取分數
 
->[!IMPORTANT] 有關使用SnowFlake存取分數的詳細資訊，請聯絡attributionai-support@adobe.com。
+>[!IMPORTANT]
+>
+>有關使用SnowFlake存取分數的詳細資訊，請聯絡attributionai-support@adobe.com。
 
 您可以透過Snowflake存取匯總的歸因AI分數。 目前，您需要以電子郵件寄送Adobe支援，來信請寄至attributionai-support@adobe.com，以設定並接收Snowflake的讀者帳戶認證。
 
@@ -268,7 +277,9 @@ curl -X GET 'https://platform.adobe.io:443/data/foundation/export/files/01E5QSWC
 - 使用者名稱
 - 密碼
 
->[!NOTE] Reader帳戶是使用支援JDBC連接器的SQL客戶端、工作表和BI解決方案查詢資料。
+>[!NOTE]
+>
+>Reader帳戶是使用支援JDBC連接器的SQL客戶端、工作表和BI解決方案查詢資料。
 
 取得認證和URL後，您就可以查詢模型表格、依觸點日期或轉換日期進行匯總。
 
