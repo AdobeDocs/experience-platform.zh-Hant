@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Adobe Experience Platform批次擷取概觀
 topic: overview
 translation-type: tm+mt
-source-git-commit: 79466c78fd78c0f99f198b11a9117c946736f47a
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '1170'
+ht-degree: 2%
 
 ---
 
@@ -50,7 +53,7 @@ source-git-commit: 79466c78fd78c0f99f198b11a9117c946736f47a
 
 若要呼叫平台API，您必須先完成驗證教 [學課程](../../tutorials/authentication.md)。 完成驗證教學課程後，所有Experience Platform API呼叫中每個必要標題的值都會顯示在下方：
 
-- 授權：生產者 `{ACCESS_TOKEN}`
+- 授權： 生產者 `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
@@ -58,11 +61,13 @@ Experience Platform中的所有資源都隔離至特定的虛擬沙盒。 所有
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
->[!NOTE] 如需平台中沙盒的詳細資訊，請參閱沙盒 [概觀檔案](../../sandboxes/home.md)。
+>[!NOTE]
+>
+>如需平台中沙盒的詳細資訊，請參閱沙盒 [概觀檔案](../../sandboxes/home.md)。
 
 所有包含裝載(POST、PUT、PATCH)的請求都需要額外的標題：
 
-- 內容類型：application/json
+- 內容類型： application/json
 
 ### 建立批次
 
@@ -123,7 +128,9 @@ curl -X POST "https://platform.adobe.io/data/foundation/import/batches" \
 
 您可以使用「小型檔案上 **傳API」上傳檔案**。 不過，如果您的檔案過大且已超出閘道限制（例如延長逾時、超出內文大小的要求，以及其他限制），您可以切換至「大型檔案上傳 **API」**。 此API會以區塊上傳檔案，並使用「大型檔案上傳完成 **API」呼叫將資料連結在一起** 。
 
->[!NOTE] 以下範例使用 [鑲木地板](https://parquet.apache.org/documentation/latest/) 檔案格式。 如需使用JSON檔案格式的範例，請參閱批次擷取開發 [人員指南](./api-overview.md)。
+>[!NOTE]
+>
+>以下範例使用 [鑲木地板](https://parquet.apache.org/documentation/latest/) 檔案格式。 如需使用JSON檔案格式的範例，請參閱批次擷取開發 [人員指南](./api-overview.md)。
 
 ### 小型檔案上傳
 
@@ -384,7 +391,7 @@ curl GET "https://platform.adobe.io/data/foundation/catalog/batch/{BATCH_ID}" \
 | 已中止 | 已明確呼叫 **(透過** 「批次內嵌API」)指定批次的中止作業。 一旦批處於「已載入 **」狀態** ，便無法中止。 |
 | 作用中 | 批已成功升級，可用於下游衝減。 此狀態可與「成功」交替 **使用**。 |
 | 已刪除 | 批次的資料已完全移除。 |
-| 失敗 | 由錯誤配置和／或錯誤資料引起的終端狀態。 失敗批次的資料 **將不** 顯示。 此狀態可與「故障」( **Failure)互換使用**。 |
+| 已失敗 | 由錯誤配置和／或錯誤資料引起的終端狀態。 失敗批次的資料 **將不** 顯示。 此狀態可與「故障」( **Failure)互換使用**。 |
 | 非活動 | 批已成功升級，但已還原或已過期。 批不再可用於下游衝減。 |
 | 已載入 | 批的資料已完成，批已準備好進行升級。 |
 | 正在載入 | 正在上載此批的資料，且該批當前尚 **未** 準備升級。 |
