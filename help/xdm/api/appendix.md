@@ -4,7 +4,10 @@ solution: Experience Platform
 title: 架構註冊開發人員附錄
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: f7c87cc86bfc5017ec5c712d05e39be5c14a7147
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '1296'
+ht-degree: 3%
 
 ---
 
@@ -33,12 +36,12 @@ Experience Data Model(XDM)是公開記載的規格，由Adobe推動，以提升�
   <tr>
   <td>
   <pre class="JSON language-JSON hljs">
-        { "xdm:borthDate":{ "title":「出生日期」、「類型」:"string", "format":"date", }, "xdm:birthDayAndMonth":{ "title":「出生日期」、「類型」:"string", "pattern":"[0-1][0-9]-[0-9][0-9]", }, "xdm:borthYear":{ "title":「出生年」、「類型」:"integer", "minimum":1, "maximum":32767 }
+        { "xdm:borthDate": { "title": 「出生日期」、「類型」: "string", "format": "date", }, "xdm:birthDayAndMonth": { "title": 「出生日期」、「類型」: "string", "pattern": "[0-1][0-9]-[0-9][0-9]", }, "xdm:borthYear": { "title": 「出生年」、「類型」: "integer", "minimum": 1, "maximum": 32767 }
       </pre>
   </td>
   <td>
   <pre class="JSON language-JSON hljs">
-        { "borthDate":{ "title":「出生日期」、「類型」:"string", "format":"date"、"meta:xdmField":"xdm:birthDate", "meta:xdmType":"date" }, "birthDayAndMonth":{ "title":「出生日期」、「類型」:"string", "pattern":"[0-1][0-9]-[0-9][0-9]", "meta:xdmField":"xdm:birthDayAndMonth", "meta:xdmType":"string" }, "borthYear":{ "title":「出生年」、「類型」:"integer", "minimum":1, "maximum":32767, "meta:xdmField":"xdm:birthYear", "meta:xdmType":"short" }
+        { "borthDate": { "title": 「出生日期」、「類型」: "string", "format": "date"、"meta:xdmField": "xdm:birthDate", "meta:xdmType": "date" }, "birthDayAndMonth": { "title": 「出生日期」、「類型」: "string", "pattern": "[0-1][0-9]-[0-9][0-9]", "meta:xdmField": "xdm:birthDayAndMonth", "meta:xdmType": "string" }, "borthYear": { "title": 「出生年」、「類型」: "integer", "minimum": 1, "maximum": 32767, "meta:xdmField": "xdm:birthYear", "meta:xdmType": "short" }
       </pre>
   </td>
   </tr>
@@ -58,7 +61,9 @@ Adobe Experience Platform可搭配多種解決方案和服務運作，每種解�
 
 XDM結構描述是使用JSON結構描述標準和基本欄位類型來定義，並加上Experience Platform所強制之欄位名稱的其他限制。 XDM允許您通過使用格式和可選約束定義其他欄位類型。 XDM欄位類型由欄位級屬性公開 `meta:xdmType`。
 
->[!NOTE] 是 `meta:xdmType` 系統產生的值，因此您不需要將此屬性新增至欄位的JSON。 最佳實務是使用JSON結構描述類型（例如字串和整數），並依下表所定義的適當最小／最大限制。
+>[!NOTE]
+>
+>`meta:xdmType` 是系統產生的值，因此您不需要將此屬性新增至欄位的JSON。 最佳實務是使用JSON結構描述類型（例如字串和整數），並依下表所定義的適當最小／最大限制。
 
 下表概述了使用可選屬性定義標量欄位類型和更具體欄位類型的適當格式。 如需選用屬性和類型特定關鍵字的詳細資訊，請參閱 [JSON結構描述檔案](https://json-schema.org/understanding-json-schema/reference/type.html)。
 
@@ -72,7 +77,7 @@ XDM結構描述是使用JSON結構描述標準和基本欄位類型來定義，�
   </tr>
   <tr>
     <td>字串</td>
-    <td>類型：字<br/><br/><strong>串可選屬性：</strong><br/>
+    <td>類型： 字<br/><br/><strong>串可選屬性：</strong><br/>
       <ul>
         <li>模式</li>
         <li>minLength</li>
@@ -81,152 +86,152 @@ XDM結構描述是使用JSON結構描述標準和基本欄位類型來定義，�
     </td>
     <td>
       <pre class="JSON language-JSON hljs">
-        "sampleField":{ "type":"string", "pattern":"^[A-Z]{2}$", "maxLength":2 }
+        "sampleField": { "type": "string", "pattern": "^[A-Z]{2}$", "maxLength": 2 }
       </pre>
     </td>
   </tr>
   <tr>
     <td>uri<br/>(xdmType:string)</td>
-    <td>類型：字<br/>串格式：uri</td>
+    <td>類型： 字<br/>串格式： uri</td>
     <td>
       <pre class="JSON language-JSON hljs">
-        "sampleField":{ "type":"string", "format":"uri" }
+        "sampleField": { "type": "string", "format": "uri" }
       </pre>
     </td>
   </tr>
   <tr>
-    <td>列舉<br/>(xdmType:字串)</td>
-    <td>類型：字<br/><br/><strong>串可選屬性：</strong><br/>
+    <td>列舉<br/>(xdmType: 字串)</td>
+    <td>類型： 字<br/><br/><strong>串可選屬性：</strong><br/>
       <ul>
         <li>預設</li>
       </ul>
     </td>
     <td>使用「meta:enum」指定面向客戶的選項標籤：
       <pre class="JSON language-JSON hljs">
-        "sampleField":{ "type":「字串」、「列舉」:[ "value1"、"value2"、"value3" ]、"meta:enum":{ "value1":"值1"、"值2":"值2"、"值3":"Value 3" }, "default":"value1" }
+        "sampleField": { "type": 「字串」、「列舉」: [ "value1"、"value2"、"value3" ]、"meta:enum": { "value1": "值1"、"值2": "值2"、"值3": "Value 3" }, "default": "value1" }
       </pre>
     </td>
   </tr>
   <tr>
     <td>數字</td>
-    <td>類型：最低<br/>數量：最大為±2.23×10^308<br/>:±1.80×10^308</td>
+    <td>類型： 最低<br/>數量： 最大為±2.23×10^308<br/>: ±1.80×10^308</td>
     <td>
       <pre class="JSON language-JSON hljs">
-        "sampleField":{ "type":"number" }
+        "sampleField": { "type": "number" }
       </pre>
     </td>
   </tr>
   <tr>
     <td>long</td>
-    <td>類型：最<br/>大積分：2^53+1<br>最小值：-2^53+1</td>
+    <td>類型： 最<br/>大積分：2^53+1<br>最小值：-2^53+1</td>
     <td>
       <pre class="JSON language-JSON hljs">
-        "sampleField":{ "type":"integer", "minimum":-9007199254740992,「最大值」:9007199254740992 }
+        "sampleField": { "type": "integer", "minimum": -9007199254740992,「最大值」: 9007199254740992 }
       </pre>
     </td>
   </tr>
   <tr>
     <td>int</td>
-    <td>類型：最<br/>小積分：2<br>^31，最小：-2^31</td>
+    <td>類型： 最<br/>小積分：2<br>^31，最小：-2^31</td>
     <td>
       <pre class="JSON language-JSON hljs">
-        "sampleField":{ "type":"integer", "minimum":-2147483648,「最大值」:2147483648 }
+        "sampleField": { "type": "integer", "minimum": -2147483648,「最大值」: 2147483648 }
       </pre>
     </td>
   </tr>
   <tr>
     <td>短</td>
-    <td>類型：最<br/>小積分：2<br>^15，最小：-2^15</td>
+    <td>類型： 最<br/>小積分：2<br>^15，最小：-2^15</td>
     <td>
       <pre class="JSON language-JSON hljs">
-        "sampleField":{ "type":"integer", "minimum":-32768,「最大值」:32768 }
+        "sampleField": { "type": "integer", "minimum": -32768,「最大值」: 32768 }
       </pre>
     </td>
   </tr>
   <tr>
     <td>位元組</td>
-    <td>類型：最<br/>小積分：2^7<br>最小：-2^7</td>
+    <td>類型： 最<br/>小積分：2^7<br>最小：-2^7</td>
     <td>
       <pre class="JSON language-JSON hljs">
-        "sampleField":{ "type":"integer", "minimum":-128,「最大值」:128 }
+        "sampleField": { "type": "integer", "minimum": -128,「最大值」: 128 }
       </pre>
     </td>
   </tr>
   <tr>
     <td>布林值</td>
-    <td><br/>類型：boolean<br/>{true, false}<br/><br/><strong>Optional屬性：</strong><br/>
+    <td><br/>類型： boolean<br/>{true, false}<br/><br/><strong>Optional屬性：</strong><br/>
       <ul>
         <li>預設</li>
       </ul>
     </td>
     <td>
       <pre class="JSON language-JSON hljs">
-        "sampleField":{ "type":"boolean", "default":false }
+        "sampleField": { "type": "boolean", "default": false }
       </pre>
     </td>
   </tr>
   <tr>
     <td>日期</td>
-    <td>類型：字<br/>串格式：日期</td>
+    <td>類型： 字<br/>串格式： 日期</td>
     <td>
       <pre class="JSON language-JSON hljs">
-        "sampleField":{ "type":"string", "format":"date"、"examples":["2004-10-23"] }
+        "sampleField": { "type": "string", "format": "date"、"examples": ["2004-10-23"] }
       </pre>
       由 <a href="https://tools.ietf.org/html/rfc3339#section-5.6" target="_blank">RFC 3339第5.6節定義的日期，其中</a>"full-date" = date-fullyear "-" date-month "-" date-mday(YYYY-MM-DD)
     </td>
   </tr>
   <tr>
     <td>日期——時間</td>
-    <td>類型：字<br/>串格式：日期——時間</td>
+    <td>類型： 字<br/>串格式： 日期——時間</td>
     <td>
       <pre class="JSON language-JSON hljs">
-        "sampleField":{ "type":"string", "format":"date-time"、"examples":["2004-10-23T12:00:00-06:00"] }
+        "sampleField": { "type": "string", "format": "date-time"、"examples": ["2004-10-23T12:00:00-06:00"] }
       </pre>
       日期——時間，由 <a href="https://tools.ietf.org/html/rfc3339#section-5.6" target="_blank">RFC 3339第5.6節定義</a>，其中"date-time" =完整日期的"T"全時：<br/>(YYYY-MM-DD'T'HH:MM:SS.SSX)
     </td>
   </tr>
   <tr>
     <td>陣列</td>
-    <td>類型：陣列</td>
+    <td>類型： 陣列</td>
     <td>items.type可使用任何標量類型定義：
       <pre class="JSON language-JSON hljs">
-        "sampleField":{ "type":"array", "items":{ "type":"字串" }
+        "sampleField": { "type": "array", "items": { "type": "字串" }
       </pre>
       由另一個方案定義的對象陣列：<br/>
       <pre class="JSON language-JSON hljs">
-        "sampleField":{ "type":"array", "items":{ "$ref":"id" } }
+        "sampleField": { "type": "array", "items": { "$ref": "id" } }
       </pre>
       其中，「id」是參考架構的{id}。
     </td>
   </tr>
   <tr>
     <td>物件</td>
-    <td>類型：物件</td>
+    <td>類型： 物件</td>
     <td>屬性。{field}.type可使用任何標量類型來定義：
       <pre class="JSON language-JSON hljs">
-        "sampleField":{ "type":"object"、"properties":{ "field1":{ "type":"string" }, "field2":{ "type":"number" } } }
+        "sampleField": { "type": "object"、"properties": { "field1": { "type": "string" }, "field2": { "type": "number" } } }
       </pre>
       由引用方案定義的「對象」類型欄位：
       <pre class="JSON language-JSON hljs">
-        "sampleField":{ "type":"object", "$ref":"id" }
+        "sampleField": { "type": "object", "$ref": "id" }
       </pre>
       其中，「id」是參考架構的{id}。
     </td>
   </tr>
   <tr>
     <td>地圖</td>
-    <td>類型：對<br/><br/><strong>像注</strong><br/>意：'map'資料類型的使用保留給產業和廠商架構使用，不適用於租用戶定義的欄位。 當資料表示為映射至某個值的索引鍵，或當索引鍵無法合理地包含在靜態架構中且必須視為資料值時，標準架構會使用它。</td>
+    <td>類型： 對<br/><br/><strong>像注</strong><br/>意：'map'資料類型的使用保留給產業和廠商架構使用，不適用於租用戶定義的欄位。 當資料表示為映射至某個值的索引鍵，或當索引鍵無法合理地包含在靜態架構中且必須視為資料值時，標準架構會使用它。</td>
     <td>'map'不能定義任何屬性。 它必須定義單個"additionalProperties"架構，以說明'map'中包含的值類型。 XDM中的'map'只能包含單一資料類型。 值可以是任何有效的XDM模式定義，包括陣列或對象，或作為對其他模式的引用（通過$ref）。<br/><br/>值類型為'string'的映射欄位：
       <pre class="JSON language-JSON hljs">
-        "sampleField":{ "type":"object", "additionalProperties":{ "type":"字串" }
+        "sampleField": { "type": "object", "additionalProperties":{ "type": "字串" }
       </pre>
     值為字串陣列的映射欄位：
       <pre class="JSON language-JSON hljs">
-        "sampleField":{ "type":"object", "additionalProperties":{ "type":"array", "items":{ "type":"字串" } } }
+        "sampleField": { "type": "object", "additionalProperties":{ "type": "array", "items": { "type": "字串" } } }
       </pre>
     引用其他方案的映射欄位：
       <pre class="JSON language-JSON hljs">
-        "sampleField":{ "type":"object", "additionalProperties":{ "$ref":"id" } }
+        "sampleField": { "type": "object", "additionalProperties":{ "$ref": "id" } }
       </pre>
       其中，「id」是參考架構的{id}。
     </td>
