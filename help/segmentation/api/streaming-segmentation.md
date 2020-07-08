@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 串流區段
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: d00973a07c5fb137f756040fb1dc6eac5a1630f5
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1370'
 ht-degree: 1%
@@ -14,7 +14,9 @@ ht-degree: 1%
 
 # 使用串流分段功能，即時評估事件
 
->[!NOTE] 下列檔案說明如何使用API使用串流分段。 如需使用UI使用串流區段的詳細資訊，請閱讀「區段產 [生器」指南](../ui/overview.md#streaming-segmentation)。
+>[!NOTE]
+>
+>下列檔案說明如何使用API使用串流分段。 如需使用UI使用串流區段的詳細資訊，請閱讀「區段產 [生器」指南](../ui/overview.md#streaming-segmentation)。
 
 透過串流分 [!DNL Adobe Experience Platform] 段功能，客戶可以近乎即時地進行分段，同時專注於資料的豐富性。 透過串流分段，區段資格現在會在資料進入時進行 [!DNL Platform]，減輕排程和執行分段工作的需求。 有了這項功能，大部份的區段規則現在都可以在資料傳入時進行評估 [!DNL Platform]，這表示區段成員資格將會保持最新，而不會執行排程的區段工作。
 
@@ -46,7 +48,9 @@ ht-degree: 1%
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
->[!NOTE] 如需中沙盒的詳細資訊 [!DNL Platform]，請參閱沙 [盒概述檔案](../../sandboxes/home.md)。
+>[!NOTE]
+>
+>如需中沙盒的詳細資訊 [!DNL Platform]，請參閱沙 [盒概述檔案](../../sandboxes/home.md)。
 
 所有包含裝載(POST、PUT、PATCH)的請求都需要額外的標題：
 
@@ -56,7 +60,9 @@ ht-degree: 1%
 
 ### 啟用串流分段的查詢類型 {#streaming-segmentation-query-types}
 
->[!NOTE] 您需要為組織啟用排程的分段，才能使串流分段正常運作。 如需啟用排程分段的詳細資訊，請參閱啟用排 [程分段區段一節](#enable-scheduled-segmentation)
+>[!NOTE]
+>
+>您需要為組織啟用排程的分段，才能使串流分段正常運作。 如需啟用排程分段的詳細資訊，請參閱啟用排 [程分段區段一節](#enable-scheduled-segmentation)
 
 若要使用串流分段來評估區段，查詢必須符合下列准則。
 
@@ -232,7 +238,9 @@ curl -X POST \
 }'
 ```
 
->[!NOTE] 這是標準的「建立區段」請求。 如需建立區段定義的詳細資訊，請閱讀建立區段 [的教學課程](../tutorials/create-a-segment.md)。
+>[!NOTE]
+>
+>這是標準的「建立區段」請求。 如需建立區段定義的詳細資訊，請閱讀建立區段 [的教學課程](../tutorials/create-a-segment.md)。
 
 **回應**
 
@@ -280,7 +288,9 @@ curl -X POST \
 
 在啟用串流評估後，必須建立基準（在此之後區段將永遠是最新的）。 必須先啟用計畫評估（也稱為計劃分段），系統才能自動執行基線。 透過排程的分段，您的IMS組織可以遵循循環排程，自動執行匯出工作以評估區段。
 
->[!NOTE] XDM個別設定檔的合併原則上限為五(5)個沙盒，可啟用排程的評估。 如果貴組織在單一沙盒環境中有5種以上的XDM個人設定檔合併原則，您將無法使用排程的評估。
+>[!NOTE]
+>
+>XDM個別設定檔的合併原則上限為五(5)個沙盒，可啟用排程的評估。 如果貴組織在單一沙盒環境中有5種以上的XDM個人設定檔合併原則，您將無法使用排程的評估。
 
 ### 建立排程
 
@@ -354,7 +364,7 @@ curl -X POST \
 
 ### 啟用排程
 
-預設情況下，建立計畫時不活動，除非 `state` 在建立(POST)請 `active` 求主體中將屬性設定為。 通過向端點發出PATCH請求並在路徑中包 `state``active``/config/schedules` 括調度的ID，可以啟用調度（將設定為）。
+預設情況下，建立計畫時，除非將屬 `state` 性設定為建立(POST) `active` 請求主體中，否則該計畫處於非活動狀態。 通過向端點發出PATCH請求並在路徑中包 `state``active``/config/schedules` 括調度的ID，可以啟用調度（將設定為）。
 
 **API格式**
 
