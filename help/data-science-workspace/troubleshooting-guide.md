@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Data Science Workspace疑難排解指南
 topic: Troubleshooting
 translation-type: tm+mt
-source-git-commit: 1e5526b54f3c52b669f9f6a792eda0abfc711fdd
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '665'
 ht-degree: 0%
@@ -12,19 +12,21 @@ ht-degree: 0%
 ---
 
 
-# [!DNL Data Science Workspace] 疑難排解指南
+# [!DNL Data Science Workspace] troubleshooting guide
 
-本檔案提供有關Adobe Experience Platform的常見問題解答 [!DNL Data Science Workspace]。 如需一般API的相關問 [!DNL Platform] 題和疑難排解，請參閱 [Adobe Experience Platform API疑難排解指南](../landing/troubleshooting.md)。
+本檔案提供有關Adobe Experience Platform的常見問題解答 [!DNL Data Science Workspace]。 For questions and troubleshooting regarding [!DNL Platform] APIs in general, see the [Adobe Experience Platform API troubleshooting guide](../landing/troubleshooting.md).
 
-## [!DNL JupyterLab] 環境未載入 [!DNL Google Chrome]
+## [!DNL JupyterLab] environment is not loading in [!DNL Google Chrome]
 
->[!IMPORTANT] 此問題已解決，但仍可能存在於Google Chrome 80.x瀏覽器中。 請確定您的Chrome瀏覽器是最新的。
+>[!IMPORTANT]
+>
+>此問題已解決，但仍可能存在於Google Chrome 80.x瀏覽器中。 請確定您的Chrome瀏覽器是最新的。
 
-在瀏覽 [!DNL Google Chrome] 器版本80.x中，所有協力廠商Cookie都預設會遭到封鎖。 此政策可防止 [!DNL JupyterLab] 在Adobe Experience Platform中載入。
+With the [!DNL Google Chrome] browser version 80.x, all third-party cookies are blocked by default. 此政策可防止 [!DNL JupyterLab] 在Adobe Experience Platform中載入。
 
 要解決此問題，請使用以下步驟：
 
-在您的 [!DNL Chrome] 瀏覽器中，導覽至右上角並選取「設定」( **Settings** )(或者，您也可以在位址列中複製並貼上「chrome://settings/」)。 接著，捲動至頁面底部，然後按一下「進階 **」下拉** 式清單。
+在您的 [!DNL Chrome] 瀏覽器中，導覽至右上角並選取「設定」 **** (或者，您也可以複製並貼上位址列中的「chrome://settings/」)。 接著，捲動至頁面底部，然後按一下「進階 **」下拉** 式清單。
 
 ![chrome進階](./images/faq/chrome-advanced.png)
 
@@ -38,7 +40,9 @@ ht-degree: 0%
 
 ![chrome進階](./images/faq/toggle-off.png)
 
->[!NOTE] 或者，您也可以停用協力廠商Cookie並新增 [*。]ds.adobe.net到允許清單。
+>[!NOTE]
+>
+>或者，您也可以停用協力廠商Cookie並新增 [*。]ds.adobe.net到允許清單。
 
 導覽至您位址列中的「chrome://flags/」。 使用右側的下拉式選單， *搜尋並停用標題為「依預設設定SameSite* Cookie」的標幟。
 
