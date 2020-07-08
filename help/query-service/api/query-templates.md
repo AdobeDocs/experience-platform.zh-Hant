@@ -4,7 +4,10 @@ solution: Experience Platform
 title: 查詢服務開發人員指南
 topic: query templates
 translation-type: tm+mt
-source-git-commit: 7d5d98d8e32607abf399fdc523d2b3bc99555507
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '643'
+ht-degree: 3%
 
 ---
 
@@ -102,7 +105,9 @@ curl -X GET https://platform.adobe.io/data/foundation/query/query-templates?limi
 }
 ```
 
->[!NOTE] 您可以使用的值來 `_links.delete` 刪 [除查詢模板](#delete-a-specified-query-template)。
+>[!NOTE]
+>
+>您可以使用的值來 `_links.delete` 刪 [除查詢模板](#delete-a-specified-query-template)。
 
 ### 建立查詢範本
 
@@ -163,7 +168,9 @@ curl -X POST https://platform.adobe.io/data/foundation/query/query-templates
 }
 ```
 
->[!NOTE] 您可以使用的值來 `_links.delete` 刪 [除查詢模板](#delete-a-specified-query-template)。
+>[!NOTE]
+>
+>您可以使用的值來 `_links.delete` 刪 [除查詢模板](#delete-a-specified-query-template)。
 
 ### 檢索指定的查詢模板
 
@@ -219,7 +226,9 @@ curl -X GET https://platform.adobe.io/data/foundation/query/query-templates/0094
 }
 ```
 
->[!NOTE] 您可以使用的值來 `_links.delete` 刪 [除查詢模板](#delete-a-specified-query-template)。
+>[!NOTE]
+>
+>您可以使用的值來 `_links.delete` 刪 [除查詢模板](#delete-a-specified-query-template)。
 
 ### 更新指定的查詢模板
 
@@ -237,7 +246,9 @@ PUT /query-templates/{TEMPLATE_ID}
 
 **請求**
 
->[!NOTE] PUT請求需要同時填入sql和name欄位，並將覆 **寫該查詢模板** 的當前內容。
+>[!NOTE]
+>
+>PUT請求需要同時填入sql和name欄位，並將覆 **寫該查詢模板** 的當前內容。
 
 ```shell
 curl -X PUT https://platform.adobe.io/data/foundation/query/query-templates/0094d000-9062-4e6a-8fdb-05606805f08f
@@ -287,7 +298,9 @@ curl -X PUT https://platform.adobe.io/data/foundation/query/query-templates/0094
 }
 ```
 
->[!NOTE] 您可以使用的值來 `_links.delete` 刪 [除查詢模板](#delete-a-specified-query-template)。
+>[!NOTE]
+>
+>您可以使用的值來 `_links.delete` 刪 [除查詢模板](#delete-a-specified-query-template)。
 
 ### 刪除指定的查詢模板
 
