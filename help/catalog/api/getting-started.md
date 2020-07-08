@@ -4,7 +4,10 @@ solution: Experience Platform
 title: 目錄服務開發人員指南
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: eec5b07427aa9daa44d23f09cfaf1b38f8e811f3
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '598'
+ht-degree: 0%
 
 ---
 
@@ -19,9 +22,9 @@ source-git-commit: eec5b07427aa9daa44d23f09cfaf1b38f8e811f3
 
 目錄可追蹤Experience Platform中數種資源與作業的中繼資料。 本開發人員指南需要對建立和管理這些資源時涉及的各種Experience Platform服務有良好的認識：
 
-* [體驗資料模型(XDM)](../../xdm/home.md):平台組織客戶體驗資料的標準化架構。
-* [批次擷取](../../ingestion/batch-ingestion/overview.md):Experience Platform如何從資料檔案（例如CSV和Parpec）擷取和儲存資料。
-* [串流擷取](../../ingestion/streaming-ingestion/overview.md):Experience Platform如何即時從用戶端和伺服器端裝置擷取和儲存資料。
+* [體驗資料模型(XDM)](../../xdm/home.md): 平台組織客戶體驗資料的標準化架構。
+* [批次擷取](../../ingestion/batch-ingestion/overview.md): Experience Platform如何從資料檔案（例如CSV和Parpec）擷取和儲存資料。
+* [串流擷取](../../ingestion/streaming-ingestion/overview.md): Experience Platform如何即時從用戶端和伺服器端裝置擷取和儲存資料。
 
 以下各節提供您必須知道或掌握的額外資訊，才能成功呼叫目錄服務API。
 
@@ -33,7 +36,7 @@ source-git-commit: eec5b07427aa9daa44d23f09cfaf1b38f8e811f3
 
 若要呼叫平台API，您必須先完成驗證教 [學課程](../../tutorials/authentication.md)。 完成驗證教學課程後，所有Experience Platform API呼叫中每個必要標題的值都會顯示在下方：
 
-* 授權：生產者 `{ACCESS_TOKEN}`
+* 授權： 生產者 `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
 * x-gw-ims-org-id: `{IMS_ORG}`
 
@@ -41,11 +44,13 @@ Experience Platform中的所有資源都隔離至特定的虛擬沙盒。 所有
 
 * x-sandbox-name: `{SANDBOX_NAME}`
 
->[!NOTE] 如需平台中沙盒的詳細資訊，請參閱沙盒 [概觀檔案](../../sandboxes/home.md)。
+>[!NOTE]
+>
+>如需平台中沙盒的詳細資訊，請參閱沙盒 [概觀檔案](../../sandboxes/home.md)。
 
 所有包含裝載(POST、PUT、PATCH)的請求都需要額外的標題：
 
-* 內容類型：application/json
+* 內容類型： application/json
 
 ## 目錄API呼叫的最佳實務
 
