@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 區段工作
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: b0554d931718bb6a8dd7d4f971daf3652a19a2a8
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '657'
 ht-degree: 3%
@@ -63,7 +63,9 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/jobs?status=SUCCEEDE
 
 成功的回應會傳回HTTP狀態200，並將指定IMS組織的區段工作清單列為JSON。 下列回應會傳回IMS組織所有成功區段工作的清單。
 
->[!NOTE] 下列回應已截斷空間，且只會顯示第一個傳回的工作。
+>[!NOTE]
+>
+>下列回應已截斷空間，且只會顯示第一個傳回的工作。
 
 ```json
 {
@@ -361,7 +363,9 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/jobs/bulk-get \
 
 成功的回應會傳回HTTP狀態207與請求的區段工作。
 
->[!NOTE] 下列回應已截斷空間，僅顯示每個區段工作的部分詳細資料。 完整回應會列出所請求之區段工作的完整詳細資訊。
+>[!NOTE]
+>
+>下列回應已截斷空間，僅顯示每個區段工作的部分詳細資料。 完整回應會列出所請求之區段工作的完整詳細資訊。
 
 ```json
 {
