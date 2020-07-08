@@ -4,7 +4,10 @@ solution: Experience Platform
 title: 連接Power BI
 topic: connect
 translation-type: tm+mt
-source-git-commit: 7d5d98d8e32607abf399fdc523d2b3bc99555507
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '366'
+ht-degree: 0%
 
 ---
 
@@ -43,7 +46,9 @@ PC用戶可以從https://powerbi.microsoft.com/en-us/desktop/安裝Power BI [](h
 
 - *（可選，但在為資料庫聲明「全部」時建議）* 輸入SQL陳述式。
 
->[!NOTE] 如果未提供SQL陳述式，則Power BI將預覽資料庫中的所有表。 對於分層資料，應使用自定義SQL陳述式。 如果表模式是平面的，則它將使用或不使用自定義SQL陳述式。 Power BI尚未支援複合類型——要從複合類型中獲得基本類型，您需要編寫SQL陳述式來導出它們。
+>[!NOTE]
+>
+>如果未提供SQL陳述式，則Power BI將預覽資料庫中的所有表。 對於分層資料，應使用自定義SQL陳述式。 如果表模式是平面的，則它將使用或不使用自定義SQL陳述式。 Power BI尚未支援複合類型——要從複合類型中獲得基本類型，您需要編寫SQL陳述式來導出它們。
 
 ```sql
 SELECT web.webPageDetails.name AS Page_Name, 
