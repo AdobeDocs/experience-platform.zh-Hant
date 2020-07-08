@@ -4,7 +4,10 @@ solution: Experience Platform
 title: 查詢服務開發人員指南
 topic: runs for scheduled queries
 translation-type: tm+mt
-source-git-commit: 7d5d98d8e32607abf399fdc523d2b3bc99555507
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '659'
+ht-degree: 2%
 
 ---
 
@@ -144,7 +147,9 @@ curl -X GET https://platform.adobe.io/data/foundation/query/schedules/e95186d65a
 }
 ```
 
->[!NOTE] 您可以使用的值來 `_links.cancel` 停 [止指定計畫查詢的運行](#immediately-stop-a-run-for-a-specific-scheduled-query)。
+>[!NOTE]
+>
+>您可以使用的值來 `_links.cancel` 停 [止指定計畫查詢的運行](#immediately-stop-a-run-for-a-specific-scheduled-query)。
 
 ### 立即觸發特定排程查詢的執行
 
