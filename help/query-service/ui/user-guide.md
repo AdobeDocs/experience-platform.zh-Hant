@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Adobe Experience Platform Query Service查詢編輯器指南
 topic: query editor
 translation-type: tm+mt
-source-git-commit: 45da024d45b5eebdfc393ee14890e24aed6021ce
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '1060'
+ht-degree: 1%
 
 ---
 
@@ -89,7 +92,9 @@ Query Editor是Adobe Experience Platform Query Service提供的互動式工具�
 
 如需詳細 [資訊，請參閱查詢服務][query-service-ui] UI總覽。
 
->[!NOTE] 日誌不保存未執行的查詢。 要使查詢在查詢服務中可用，它必須在查詢編輯器中運行或保存。
+>[!NOTE]
+>
+>日誌不保存未執行的查詢。 要使查詢在查詢服務中可用，它必須在查詢編輯器中運行或保存。
 
 ## 使用查詢編輯器執行查詢
 
@@ -101,7 +106,9 @@ Query Editor是Adobe Experience Platform Query Service提供的互動式工具�
 
 ![影像](../images/queries/query-editor-overview/console.png)
 
->[!NOTE] 控制台僅顯示因執行查詢而導致的錯誤。 在執行查詢之前，不會顯示查詢驗證錯誤。
+>[!NOTE]
+>
+>控制台僅顯示因執行查詢而導致的錯誤。 在執行查詢之前，不會顯示查詢驗證錯誤。
 
 ### 查詢結果
 
