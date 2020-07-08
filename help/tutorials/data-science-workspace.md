@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 資料科學工作區教學課程
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 1a835c6c20c70bf03d956c601e2704b68d4f90fa
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1252'
 ht-degree: 0%
@@ -60,6 +60,8 @@ Docker映像允許您使用應用程式所需的所有部件來封裝應用程�
 ## 匯入方式
 
 >[!NOTE]
+>
+>
 >本教學課程要求您具有Docker源檔案URL。 如果您 [沒有Docker來源檔案URL](../data-science-workspace/models-recipes/package-source-files-recipe.md) ，請造訪套件來源檔案至配方教學課程。
 
 匯入方式教學課程提供如何設定和匯入封裝方式的深入資訊。 在本教學課程結束時，您可以在Adobe Experience Platform資料科學工作區中建立、訓練和評估模型。
@@ -143,6 +145,6 @@ Adobe Experience Platform可讓您透過Sensei機器學習架構執行階段，�
 - 瞭解即時機器學習架構。
 - 瞭解即時機器學習工作流程。
 - 瞭解即時機器學習的目前功能。
-- 提供建立您自己的即時機器學習模型的後續步驟。
+- 提供建立您自己即時機器學習模型的後續步驟。
 
 若要進一步瞭解，請造 [訪即時機器學習總覽](../data-science-workspace/real-time-machine-learning/home.md)。
