@@ -4,7 +4,10 @@ solution: Experience Platform
 title: 建立資料集以匯出觀眾區隔
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 6d24637dc6cc282f98288b6416e4a3b7cebe42ea
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '766'
+ht-degree: 0%
 
 ---
 
@@ -32,7 +35,9 @@ Experience Platform UI中的資料集工作區可讓您檢視和管理IMS組織�
 
 若要檢視資料集工作區，請按一 **下左側導覽中的「資料集** 」，然後按一下「 *瀏覽* 」標籤。 資料集工作區包含資料集清單，包括 *Name*、Created *（日期和時間）、* Source *（日期和時間）、* Source Schema、 ****** Batch Last Status、Woll as the date ad time the dataset was Last Updated Jocraded 視每欄的寬度而定，您可能需要向左或向右捲動，才能查看所有欄。
 
->[!NOTE] 按一下搜尋列旁的篩選圖示，使用篩選功能，只檢視為「即時客戶描述檔」啟用的資料集。
+>[!NOTE]
+>
+>按一下搜尋列旁的篩選圖示，使用篩選功能，只檢視為「即時客戶描述檔」啟用的資料集。
 
 ![查看所有資料集](../images/tutorials/segment-export-dataset/datasets-workspace.png)
 
