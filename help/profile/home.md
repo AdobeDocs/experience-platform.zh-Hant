@@ -4,7 +4,7 @@ solution: Adobe Experience Platform
 title: 即時客戶個人檔案總覽
 topic: guide
 translation-type: tm+mt
-source-git-commit: 4d853dfee931789ca1badd410ce0b4b73c8c2803
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1795'
 ht-degree: 1%
@@ -129,6 +129,8 @@ Experience Platform有一系列的方針可依循，以有效使用描述檔。
 --->
 
 >[!NOTE]
+>
+>
 >非人員實體是指不屬於「設定檔」的任 **何** XDM類別。
 
 ## 後續步驟和其他資源
