@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 刪除對象
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 327be13cbaaa40e4d0409cbb49a051b7067759bf
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '178'
 ht-degree: 2%
@@ -16,7 +16,9 @@ ht-degree: 2%
 
 可以通過在DELETE請求的路徑中提供目錄對象的ID來刪除目錄對象。
 
->[!WARNING] 刪除物件時請格外小心，因為這無法復原，而且可能會在Experience Platform的其他位置產生中斷變更。
+>[!WARNING]
+>
+>刪除物件時請格外小心，因為這無法復原，而且可能會在Experience Platform的其他位置產生中斷變更。
 
 **API格式**
 
@@ -56,4 +58,6 @@ curl -X DELETE \
 ]
 ```
 
->[!NOTE] 如果沒有目錄物件符合您請求中提供的ID，您仍可能收到HTTP狀態代碼200，但回應陣列會是空的。
+>[!NOTE]
+>
+>如果沒有目錄物件符合您請求中提供的ID，您仍可能收到HTTP狀態代碼200，但回應陣列會是空的。
