@@ -4,7 +4,10 @@ solution: Experience Platform
 title: 建立沙盒
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: ef423a8c1b412315d03cddf7d8c351a232eb509b
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '136'
+ht-degree: 2%
 
 ---
 
@@ -58,4 +61,6 @@ curl -X POST \
 }
 ```
 
->[!NOTE] 沙盒需要大約15分鐘的時間才能由系統布建，之後它們 `state` 會變成「活動」或「失敗」。
+>[!NOTE]
+>
+>沙盒需要大約15分鐘的時間才能由系統布建，之後它們 `state` 會變成「活動」或「失敗」。
