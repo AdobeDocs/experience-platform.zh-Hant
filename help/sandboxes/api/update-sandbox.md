@@ -4,7 +4,10 @@ solution: Experience Platform
 title: 更新沙盒
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 974e93b1c24493734848151b9be00758f6a84578
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '87'
+ht-degree: 4%
 
 ---
 
@@ -13,7 +16,9 @@ source-git-commit: 974e93b1c24493734848151b9be00758f6a84578
 
 您可以透過提出PATCH請求來更新沙盒中的一或多個欄位，該請求會在請求路徑中包含沙盒的 `name` ，並在請求裝載中包含要更新的屬性。
 
->[!NOTE] 目前只能更新沙盒 `title` 的屬性。
+>[!NOTE]
+>
+>目前只能更新沙盒 `title` 的屬性。
 
 **API格式**
 
