@@ -1,10 +1,10 @@
 ---
 keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API
 solution: Adobe Experience Platform
-title: 即時客戶個人檔案API開發人員指南
+title: Edge預測——即時客戶個人檔案API
 topic: guide
 translation-type: tm+mt
-source-git-commit: d464a6b4abd843f5f8545bc3aa8000f379a86c6d
+source-git-commit: d1656635b6d082ce99f1df4e175d8dd69a63a43a
 workflow-type: tm+mt
 source-wordcount: '1919'
 ht-degree: 2%
@@ -224,7 +224,7 @@ curl -X GET \
 
 ### 更新目標
 
-通過向端點發出PUT請求並在請求路 `/config/destinations` 徑中包括要更新的目標的ID，可以更新現有目標。 此操作實質上是 _重寫目標_ ，因此，在建立新目標時，必須在請求主體中提供與建立新目標相同的屬性。
+通過向端點發出PUT請求並在請求路 `/config/destinations` 徑中包括要更新的目標的ID，可以更新現有目標。 此操作實質上 _是重寫目標_ ，因此，在建立新目標時，必須在請求主體中提供與建立新目標相同的屬性。
 
 >[!CAUTION]
 >API對更新請求的回應是立即的，不過，對預測的變更會以非同步方式套用。 換言之，對目標的定義進行更新和應用更新之間存在時間差。
