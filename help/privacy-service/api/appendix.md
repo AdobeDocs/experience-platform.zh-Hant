@@ -4,7 +4,10 @@ solution: Experience Platform
 title: 接受的身份名稱空間和限定詞
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: cc296670db91640e75fd7a47b874a46eaf57ecde
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '479'
+ht-degree: 9%
 
 ---
 
@@ -29,7 +32,9 @@ source-git-commit: cc296670db91640e75fd7a47b874a46eaf57ecde
 | Google廣告ID | GAID | 20914 |
 | Windows AID | WAID | 8 |
 
->[!NOTE] 每個身分類型也有 `namespaceId` 一個整數值，當將身分屬性設定為&quot;namespaceId&quot;時， `namespace` 可使用此整 `type` 數值來取代字串。 如需詳細資訊，請參 [閱命名空間限](#namespace-qualifiers) 定詞一節。
+>[!NOTE]
+>
+>每個身分類型也有 `namespaceId` 一個整數值，當將身分屬性設定為&quot;namespaceId&quot;時， `namespace` 可使用此整 `type` 數值來取代字串。 如需詳細資訊，請參 [閱命名空間限](#namespace-qualifiers) 定詞一節。
 
 您可以向Identity Service API中的端點提出GET請求，以擷取組織所使 `idnamespace/identities` 用的識別名稱空間清單。 如需詳細 [資訊，請參閱Identity Service開發人員指南](../../identity-service/api/getting-started.md) 。
 
@@ -56,7 +61,7 @@ source-git-commit: cc296670db91640e75fd7a47b874a46eaf57ecde
 | Adobe Advertising Cloud | &quot;AdCloud&quot; |
 | Adobe Analytics | &quot;Analytics&quot; |
 | Adobe Audience Manager | &quot;AudienceManager&quot; |
-| Adobe Campaign | &quot;Campaign&quot; |
+| Adobe Campaign | &quot;行銷活動&quot; |
 | Adobe Experience Platform | &quot;aepDataLake&quot; |
 | Adobe Primetime驗證 | &quot;primetimeAuthentication&quot; |
 | Adobe Target | &quot;Target&quot; |
