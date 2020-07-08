@@ -4,7 +4,10 @@ solution: Experience Platform
 title: 管理產品設定檔的使用者
 topic: user guide
 translation-type: tm+mt
-source-git-commit: df85ea955b7a308e6be1e2149fcdfb4224facc53
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '184'
+ht-degree: 1%
 
 ---
 
@@ -19,7 +22,9 @@ source-git-commit: df85ea955b7a308e6be1e2149fcdfb4224facc53
 
 ![add-user-autocomplete](../images/add-user-autocomplete.png)
 
->[!NOTE] 如果使用者未出現在自動完成視窗中，請在搜尋列中輸入其完整電子郵件地址。 邀請函會隨附設定Adobe ID帳戶的指示，傳送至電子郵件。
+>[!NOTE]
+>
+>如果使用者未出現在自動完成視窗中，請在搜尋列中輸入其完整電子郵件地址。 邀請函會隨附設定Adobe ID帳戶的指示，傳送至電子郵件。
 
 在您選取使用者後，按一下「 **儲存** 」，將使用者新增至產品設定檔。
 
