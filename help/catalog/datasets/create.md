@@ -4,7 +4,10 @@ solution: Experience Platform
 title: 使用API建立資料集
 topic: datasets
 translation-type: tm+mt
-source-git-commit: a6a1ecd9ce49c0a55e14b0d5479ca7315e332904
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '1263'
+ht-degree: 1%
 
 ---
 
@@ -17,11 +20,11 @@ source-git-commit: a6a1ecd9ce49c0a55e14b0d5479ca7315e332904
 
 本指南需要有效瞭解Adobe Experience Platform的下列元件：
 
-* [批次擷取](../../ingestion/batch-ingestion/overview.md):Experience Platform可讓您將資料內嵌為批次檔案。
-* [體驗資料模型(XDM)系統](../../xdm/home.md):Experience Platform組織客戶體驗資料的標準化架構。
-* [沙盒](../../sandboxes/home.md):Experience Platform提供虛擬沙盒，可將單一Platform實例分割為不同的虛擬環境，以協助開發和發展數位體驗應用程式。
+* [批次擷取](../../ingestion/batch-ingestion/overview.md): Experience Platform可讓您將資料內嵌為批次檔案。
+* [體驗資料模型(XDM)系統](../../xdm/home.md): Experience Platform組織客戶體驗資料的標準化架構。
+* [沙盒](../../sandboxes/home.md): Experience Platform提供虛擬沙盒，可將單一Platform實例分割為不同的虛擬環境，以協助開發和發展數位體驗應用程式。
 
-以下章節提供您必須知道的其他資訊，才能成功呼叫平台API。
+以下章節提供您必須知道的其他資訊，以便成功呼叫平台API。
 
 ### 讀取範例API呼叫
 
@@ -31,7 +34,7 @@ source-git-commit: a6a1ecd9ce49c0a55e14b0d5479ca7315e332904
 
 若要呼叫平台API，您必須先完成驗證教 [學課程](../../tutorials/authentication.md)。 完成驗證教學課程後，所有Experience Platform API呼叫中每個必要標題的值都會顯示在下方：
 
-* 授權：生產者 `{ACCESS_TOKEN}`
+* 授權： 生產者 `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
 * x-gw-ims-org-id: `{IMS_ORG}`
 
@@ -39,11 +42,13 @@ Experience Platform中的所有資源都隔離至特定的虛擬沙盒。 所有
 
 * x-sandbox-name: `{SANDBOX_NAME}`
 
->[!NOTE] 如需平台中沙盒的詳細資訊，請參閱沙盒 [概觀檔案](../../sandboxes/home.md)。
+>[!NOTE]
+>
+>如需平台中沙盒的詳細資訊，請參閱沙盒 [概觀檔案](../../sandboxes/home.md)。
 
 所有包含裝載(POST、PUT、PATCH)的請求都需要額外的標題：
 
-* 內容類型：application/json
+* 內容類型： application/json
 
 ## 教學課程
 
@@ -207,7 +212,9 @@ curl -X POST \
 }'
 ```
 
->[!NOTE] 本教學課程的所 [有範例](https://parquet.apache.org/documentation/latest/) ，都使用鑲木地板檔案格式。 使用JSON檔案格式的範例，請參閱批次擷取開發人 [員指南](../../ingestion/batch-ingestion/api-overview.md)
+>[!NOTE]
+>
+>本教學課程的所 [有範例](https://parquet.apache.org/documentation/latest/) ，都使用鑲木地板檔案格式。 使用JSON檔案格式的範例，請參閱批次擷取開發人 [員指南](../../ingestion/batch-ingestion/api-overview.md)
 
 **回應**
 
@@ -289,7 +296,9 @@ curl -X POST 'https://platform.adobe.io/data/foundation/import/batches' \
 
 成功建立新批次以上傳後，您現在可以將檔案上傳至特定資料集。 請務必記住，當您定義資料集時，將檔案格式指定為鑲木地板。 因此，您上傳的檔案必須是該格式。
 
->[!NOTE] 支援的最大資料上傳檔案為512 MB。 如果您的資料檔案大於此，則需要將它分割為不大於512 MB的區塊，以一次上傳一個。 您可以對每個檔案重複此步驟，使用相同的批次ID，以相同批次上傳每個檔案。 如果您可以在批次中上傳檔案，則數目沒有限制。
+>[!NOTE]
+>
+>支援的最大資料上傳檔案為512 MB。 如果您的資料檔案大於此，則需要將它分割為不大於512 MB的區塊，以一次上傳一個。 您可以對每個檔案重複此步驟，使用相同的批次ID，以相同批次上傳每個檔案。 如果您可以在批次中上傳檔案，則數目沒有限制。
 
 **API格式**
 
@@ -446,7 +455,9 @@ curl -X GET \
 }
 ```
 
->[!NOTE] 建議的輪詢間隔為2分鐘。
+>[!NOTE]
+>
+>建議的輪詢間隔為2分鐘。
 
 ## 從資料集讀取資料
 
