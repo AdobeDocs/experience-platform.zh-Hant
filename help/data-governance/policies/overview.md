@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 資料使用政策概觀
 topic: policies
 translation-type: tm+mt
-source-git-commit: d4964231ee957349f666eaf6b0f5729d19c408de
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '979'
 ht-degree: 0%
@@ -27,11 +27,15 @@ ht-degree: 0%
 
 行銷動作的範例可能是想要將資料集匯出至第三方服務。 如果有原則指出無法匯出特定資料類型(例如個人識別資訊(PII))，且您嘗試匯出包含「I」標籤（身分資料）的資料集，您會收到回應，告知您資料使用政策已遭違反。 [!DNL Policy Service]
 
->[!NOTE] 行銷動作本身並不限制資料使用。 必須將它們納入已啟用的資料使用策略中，才能針對策略違規評估這些操作。
+>[!NOTE]
+>
+>行銷動作本身並不限制資料使用。 必須將它們納入已啟用的資料使用策略中，才能針對策略違規評估這些操作。
 
-當組織的服務中發生資料使用情形時，應指出相關的行銷動作，以便識別任何違反政策的行為。 然後，您可以使 [用DULE Policy Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) ，檢查整合中是否有違反原則的情況。
+當組織的服務中發生資料使用情形時，應指出相關的行銷動作，以便識別任何違反原則的行為。 然後，您可以使 [用DULE Policy Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) ，檢查整合中是否有違反原則的情況。
 
->[!NOTE] 如果您使用即時客戶資料平台，您可以在目的地上設定行銷使用案例，以自動執行政策。 有關詳細資訊， [請參閱即時CDP中的資料治理](../../rtcdp/privacy/data-governance-overview.md) 文檔。
+>[!NOTE]
+>
+>如果您使用即時客戶資料平台，您可以在目的地上設定行銷使用案例，以自動執行政策。 有關詳細資訊， [請參閱即時CDP中的資料治理](../../rtcdp/privacy/data-governance-overview.md) 文檔。
 
 如需Adobe定義之可用行銷動作清單，請參 [閱本檔案附錄](#core-actions)。 您也可以使用DULE Policy Service API或Experience Platform使用者介面來定義您自己的自訂行銷動作。 有關使用行銷動作和政策的詳細資訊，請參閱下一節。
 
@@ -47,7 +51,9 @@ For a reference on how specific Data Export Controls map to marketing actions in
 
 在套用資料使用標籤後，資料管理員可使用DULE Policy Service API或Experience Platform UI來管理和評估與針對包含資料使用標籤的資料所執行的行銷動作相關的政策。 您可以建立和更新原則、決定原則的狀態，以及使用行銷動作來評估特定動作是否違反資料使用原則。
 
->[!IMPORTANT] 預設會停用所有資料使用政策（包括Adobe提供的核心政策）。 若要考慮實施個別原則，您必須透過API或UI手動啟用該原則。
+>[!IMPORTANT]
+>
+>預設會停用所有資料使用政策（包括Adobe提供的核心政策）。 若要考慮實施個別原則，您必須透過API或UI手動啟用該原則。
 
 如需在API中使用行銷動作和資料使用原則的逐步指示，請參閱建立和評估資 [料使用原則的教學課程](create.md)。 如需Policy Service API所提供之主要作業的詳細資訊，請參閱 [Policy Service開發人員指南](../api/getting-started.md)。
 
@@ -65,7 +71,9 @@ For a reference on how specific Data Export Controls map to marketing actions in
 
 下表說明Adobe現成可用的核心行銷動作。
 
->[!NOTE] 核心行銷動作應視為起點，以協助您識別要建立和檢查違規的使用政策。 定義及其解讀方式取決於貴組織的需求和政策。
+>[!NOTE]
+>
+>核心行銷動作應視為起點，以協助您識別要建立和檢查違規的使用政策。 定義及其解讀方式取決於貴組織的需求和政策。
 
 | 行銷動作 | 說明 |
 | --- | --- |
