@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 使用API搭配決策服務執行階段
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: c48079ba997a7b4c082253a0b2867df76927aa6d
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1985'
 ht-degree: 0%
@@ -43,7 +43,9 @@ ht-degree: 0%
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
->[!NOTE] 如需中沙盒的詳細資訊 [!DNL Platform]，請參閱沙 [盒概述檔案](../../tutorials/authentication.md)。
+>[!NOTE]
+>
+>如需中沙盒的詳細資訊 [!DNL Platform]，請參閱沙 [盒概述檔案](../../tutorials/authentication.md)。
 
 所有包含裝載(POST、PUT、PATCH)的請求都需要額外的標題：
 
@@ -53,7 +55,9 @@ ht-degree: 0%
 
 - x-request-id: `{UUID}`
 
->[!NOTE] `UUID` 是UUID格式的字串，其全域唯一，且不得重複用於不同的API呼叫
+>[!NOTE]
+>
+>`UUID` 是UUID格式的字串，其全域唯一，且不得重複用於不同的API呼叫
 
 [!DNL Decisioning Service] 由多個彼此相關的業務對象控制。 所有業務對象都儲存在 [!DNL Platform’s] 業務對象儲存庫XDM核心對象儲存庫中。 此儲存庫的一個主要功能是API與業務對象類型正交。 與其使用POST、GET、PUT、PATCH或DELETE API來指出其API端點中的資源類型，只有6個通用端點，但它們接受或返回在需要消除歧義時指示對象類型的參數。 方案必須在儲存庫中註冊，但除此之外，該儲存庫可用於一組開放式對象類型。
 
@@ -175,7 +179,7 @@ REST API是在應用程式上執行的路由之一，以根據組織為其使用
 
 應用程式可一次要求最多30個活動的決策，以取得更佳的效能。 活動的URI會在相同請求中傳遞。 REST API是同步的，如果沒有個人化選項符合限制，則會傳回所有這些活動的建議選項或備援選項。
 
-有兩種不同的活動可能會提供與其「最佳」相同的選項。 為避免重複合成的體驗，依預設，會 [!DNL Decisioning Service] 在相同請求中參考的活動之間進行仲裁。 仲裁意指，對於每項活動，都會考慮其前N個選項，但在這些活動中，不會多提議一次。 如果兩個活動有相同的排名最前選項，其中一個活動將被選為使用其次優或第三優等。 這些重複資料消除規則嘗試避免任何活動都必須使用其備援選項。
+有可能會有兩種不同的活動提供與其「最佳」相同的選項。 為避免重複合成的體驗，依預設，會 [!DNL Decisioning Service] 在相同請求中參考的活動之間進行仲裁。 仲裁意指，對於每項活動，都會考慮其前N個選項，但在這些活動中，不會多提議一次。 如果兩個活動有相同的排名最前選項，其中一個活動將被選為使用其次優或第三優等。 這些重複資料消除規則嘗試避免任何活動都必須使用其備援選項。
 
 決策請求包含其POST請求主體的參數。 內文的格式為JSON標 `Content-Type` 題值 `application/vnd.adobe.xdm+json; schema="{REQUEST_SCHEMA_AND_VERSION}"`
 
