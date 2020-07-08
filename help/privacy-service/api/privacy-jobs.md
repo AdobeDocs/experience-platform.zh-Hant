@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 工作
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: a3178ab54a7ab5eacd6c5f605b8bd894779f9e85
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1669'
 ht-degree: 2%
@@ -20,14 +20,18 @@ ht-degree: 2%
 
 在建立新工作請求之前，您必須先收集您要存取、刪除或選擇退出銷售之資料主體的相關識別資訊。 在您取得所需資料後，必須在POST要求的裝載中提供至根端點。
 
->[!NOTE] 相容的Adobe Experience Cloud應用程式使用不同的值來識別資料主體。 如需您應用程 [式所需識別碼的詳細資訊](../experience-cloud-apps.md) ，請參閱隱私權服務和Experience Cloud應用程式指南。
+>[!NOTE]
+>
+>相容的Adobe Experience Cloud應用程式使用不同的值來識別資料主體。 如需您應用程 [式所需識別碼的詳細資訊](../experience-cloud-apps.md) ，請參閱隱私權服務和Experience Cloud應用程式指南。
 
 隱私服務API支援兩種個人資料的工作要求：
 
 * [存取和／或刪除](#access-delete): 存取（讀取）或刪除個人資料。
 * [選擇退出銷售](#opt-out): 將個人資料標示為不銷售。
 
->[!IMPORTANT] 雖然存取和刪除請求可合併為單一API呼叫，但必須個別提出退出請求。
+>[!IMPORTANT]
+>
+>雖然存取和刪除請求可合併為單一API呼叫，但必須個別提出退出請求。
 
 ### 建立訪問／刪除作業 {#access-delete}
 
@@ -288,7 +292,9 @@ curl -X POST \
 
 使用上一步 `jobId` 中傳回的值之一，您可以擷取有關該工作的資訊，例如其目前的處理狀態。
 
->[!IMPORTANT] 先前建立的作業的資料僅在作業完成日期的30天內可供檢索。
+>[!IMPORTANT]
+>
+>先前建立的作業的資料僅在作業完成日期的30天內可供檢索。
 
 **API格式**
 
@@ -383,7 +389,9 @@ curl -X GET \
 | 3 | 已提交 | 工作會提交至每個適用的應用程式。 |
 | 4 | 錯誤 | 處理作業時發生故障——檢索單個作業詳細資訊可以獲得更具體的資訊。 |
 
->[!NOTE] 如果提交的作業具有仍在處理的從屬子作業，則該作業可能仍處於處理狀態。
+>[!NOTE]
+>
+>如果提交的作業具有仍在處理的從屬子作業，則該作業可能仍處於處理狀態。
 
 ## 列出所有作業
 
@@ -403,7 +411,7 @@ GET /jobs?regulation={REGULATION}&page={PAGE}&size={SIZE}
 | 參數 | 說明 |
 | --- | --- |
 | `{REGULATION}` | 要查詢的規則類型。 接受的 `gdpr`值 `ccpa`為和 `pdpa_tha`。 |
-| `{PAGE}` | 要顯示的資料頁，使用基於0的編號。 預設值為 `0`. |
+| `{PAGE}` | 要顯示的資料頁，使用基於0的編號。 預設值為 `0`。 |
 | `{SIZE}` | 每個頁面上要顯示的結果數。 預設值 `1` 為，最大值為 `100`。 超過最大值會導致API傳回400碼錯誤。 |
 
 **請求**
