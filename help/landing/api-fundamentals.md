@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Adobe Experience Platform API基礎知識
 topic: getting started
 translation-type: tm+mt
-source-git-commit: 2e5668a8b1d5fb831188fbd4e453b9f4aa7474df
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '425'
 ht-degree: 0%
@@ -81,6 +81,8 @@ JSON指標是用於識別JSON檔案內特定值的標準字[串語法(RFC 6901](
 | `"/definitions/loyalty/properties/_{TENANT_ID}/properties/loyaltyLevel/enum/0"` | `"platinum"` |
 
 >[!Note]
+>
+>
 >處理(XDM)描述 `xdm:sourceProperty` 符的 `xdm:destinationProperty` 和屬性時，必 [!DNL Experience Data Model] 須從「JSON指針」字串 `properties` 中排除任 **** 何索引鍵。 有關詳細資訊，請參見描述符上的Schema Registry API開發 [人員指南](../xdm/api/descriptors.md) 子指南。
 
 ## JSON修補程式
