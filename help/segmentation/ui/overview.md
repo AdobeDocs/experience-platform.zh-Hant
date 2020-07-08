@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 區段產生器UI指南
 topic: ui guide
 translation-type: tm+mt
-source-git-commit: b5a425714b6d69ca241c8ad81eff779b993633a5
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '2683'
 ht-degree: 0%
@@ -69,7 +69,9 @@ ht-degree: 0%
 
 在使用 [Lucene搜尋語法的搜尋列中輸入元件名稱，即可搜尋任何類型的元件](https://docs.microsoft.com/en-us/azure/search/query-lucene-syntax)。 當輸入整個字詞時，搜尋結果開始填入。 例如，若要根據XDM欄位建立規則，請 `ExperienceEvent.commerce.productViews`開始在搜尋欄位中輸入「產品檢視」。 輸入&quot;product&quot;後，搜尋結果就會開始顯示。 每個結果都包括它所屬的對象層次。
 
->[!NOTE] 您的組織定義的自訂結構欄位可能需要24小時才能顯示，並可用於建立規則。
+>[!NOTE]
+>
+>您的組織定義的自訂結構欄位可能需要24小時才能顯示，並可用於建立規則。
 
 然後，您可以輕鬆將「事 [!DNL ExperienceEvents] 件類 [!UICONTROL 型] 」拖放至區段定義。
 
@@ -105,7 +107,9 @@ ht-degree: 0%
 
 對於 [!DNL Platform] 使用「區 [!UICONTROL 段產生器」建立的觀眾]，您可以選擇將觀眾轉換為用於該觀眾區段定義的規則集。 此轉換會建立規則邏輯的復本，然後可修改該邏輯，而不會影響原始區段定義。 在將區段定義轉換為規則邏輯之前，請確定您已儲存區段定義的任何最近變更。
 
->[!NOTE] 從外部來源新增對象時，只會參考對象會籍。 您無法將對象轉換為規則，因此，用於建立原始對象的規則無法在新區段定義中修改。
+>[!NOTE]
+>
+>從外部來源新增對象時，只會參考對象會籍。 您無法將對象轉換為規則，因此，用於建立原始對象的規則無法在新區段定義中修改。
 
 ![](../images/segment-builder/add-audience-to-segment.png)
 
@@ -137,7 +141,9 @@ ht-degree: 0%
 
 按一下「解 **[!UICONTROL 除包裝容器]** 」後，子容器即會移除，而標準會內嵌在內。
 
->[!NOTE] 展開容器時，請小心邏輯是否仍符合所需的區段定義。
+>[!NOTE]
+>
+>展開容器時，請小心邏輯是否仍符合所需的區段定義。
 
 ![](../images/segment-builder/unwrapped-container-inline.png)
 
@@ -161,17 +167,21 @@ ht-degree: 0%
 
 ![](../images/segment-builder/segment-properties.png)
 
->[!NOTE] 觀眾估計是使用當天樣本資料的樣本大小產生。 如果您的描述檔儲存區中有少於100萬個實體，則會使用完整資料集； 100萬到2000萬個單位使用100萬個單位； 超過2000萬個單位，佔全部單位的5%。 有關產生區段估計的詳細資訊，請參閱區 [段建立教學課程的](../tutorials/create-a-segment.md#estimate-and-preview-an-audience) 「估計產生」區段。
+>[!NOTE]
+>
+>觀眾估計是使用當天樣本資料的樣本大小產生。 如果您的描述檔儲存區中有少於100萬個實體，則會使用完整資料集； 100萬到2000萬個單位使用100萬個單位； 超過2000萬個單位，佔全部單位的5%。 有關產生區段估計的詳細資訊，請參閱區 [段建立教學課程的](../tutorials/create-a-segment.md#estimate-and-preview-an-audience) 「估計產生」區段。
 
 ## 啟用排程的分段 {#enable-scheduled-segmentation}
 
 建立區段定義後，您就可以透過隨選或排程（持續）評估來評估區段定義。 評估意指透過 [!DNL Real-time Customer Profile] 區段定義來移動資料，以產生對應的觀眾。 建立後，觀眾會儲存並儲存，以便使用API匯出 [!DNL Experience Platform] 觀眾。
 
-隨選評估包括視需要使用API來執行評估並建立觀眾，而排程評估（也稱為「排程區段」）可讓您建立循環性排程，以評估特定時間（最多每天一次）的區段定義。
+隨選評估包括視需要使用API來執行評估並建立觀眾，而排程評估（也稱為「排程區段」）可讓您建立循環排程，以評估特定時間（最多每天一次）的區段定義。
 
 您可使用UI或API來啟用計畫評估的區段定義。 在UI中，返回「區段」中的「 *[!UICONTROL 瀏覽]* 」標 **[!UICONTROL 簽]** ，並切換「 **[!UICONTROL 評估所有區段」]**。 這會導致根據您組織所設定的排程評估所有區段。
 
->[!NOTE] 對於最多5(5)個合併策略的沙盒，可啟用計畫評估 [!DNL XDM Individual Profile]。 如果貴組織在單一沙盒環境中有5 [!DNL XDM Individual Profile] 種以上的合併原則，您將無法使用排程的評估。
+>[!NOTE]
+>
+>對於最多5(5)個合併策略的沙盒，可啟用計畫評估 [!DNL XDM Individual Profile]。 如果貴組織在單一沙盒環境中有5 [!DNL XDM Individual Profile] 種以上的合併原則，您將無法使用排程的評估。
 
 目前只能使用API建立排程。 有關使用API建立、編輯和使用排程的詳細步驟，請依照教學課程來評估和存取區段結果，尤其是使用API進行排 [程評估的章節](../tutorials/evaluate-a-segment.md#scheduled-evaluation)。
 
@@ -179,7 +189,9 @@ ht-degree: 0%
 
 ## 串流區段 {#streaming-segmentation}
 
->[!NOTE] 為了讓串流區段正常運作，客戶需要啟用組織的排程區段。 如需啟用排程分段的詳細資訊，請參 [閱本使用指南的上一節](#enable-scheduled-segmentation)。
+>[!NOTE]
+>
+>為了讓串流區段正常運作，客戶需要啟用組織的排程區段。 如需啟用排程分段的詳細資訊，請參 [閱本使用指南的上一節](#enable-scheduled-segmentation)。
 
 如果查詢符合下列任一條件，則會使用串流分段自動評估該查詢：
 
@@ -223,7 +235,9 @@ ht-degree: 0%
 
 ## DULE策略違規
 
->[!NOTE] DULE策略違規僅在建立已分配給目標的段時適用。
+>[!NOTE]
+>
+>DULE策略違規僅在建立已分配給目標的段時適用。
 
 建立完區段後，會依據區段進行分析，以 [!DNL Data Governance] 確保區段內沒有違反原則的情況。 有關DULE和違反策略的詳細資訊，請參閱數 [據使用標籤概述](../../data-governance/labels/overview.md)。
 
