@@ -4,7 +4,10 @@ solution: Experience Platform
 title: 對受眾細分強制執行資料使用規範
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 97ba7aeb8a67735bd65af372fbcba5e71aee6aae
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '1372'
+ht-degree: 1%
 
 ---
 
@@ -17,16 +20,16 @@ source-git-commit: 97ba7aeb8a67735bd65af372fbcba5e71aee6aae
 
 本教學課程需要對Adobe Experience Platform的下列元件有正確的認識：
 
-- [即時客戶個人檔案](../../profile/home.md):即時客戶描述檔是一般查閱實體儲存，用於管理平台內的體驗資料模型(XDM)資料。 描述檔會合併各種企業資料資產的資料，並以統一的簡報來存取該資料。
-   - [合併策略](../../profile/api/merge-policies.md):「即時客戶個人檔案」用來判斷哪些資料可在特定條件下合併為統一檢視的規則。 可以為「資料治理」目的配置合併策略。
-- [區段](../home.md):即時客戶個人檔案如何將個人檔案存放區中包含的大量個人群組分割為具有類似特性且回應類似行銷策略的較小群組。
-- [資料治理](../../data-governance/home.md):Data Governance使用下列元件為資料使用標籤和強制實施(DULE)提供了基礎架構：
-   - [資料使用標籤](../../data-governance/labels/user-guide.md):標籤用來說明資料集和欄位，以處理其個別資料的敏感度等級為準。
-   - [資料使用原則](../../data-governance/policies/overview.md):指示允許針對依特定資料使用標籤分類之資料執行哪些行銷動作的設定。
-   - [政策實施](../../data-governance/enforcement/overview.md):允許您強制實施資料使用策略並防止構成違反策略的資料操作。
-- [沙盒](../../sandboxes/home.md):Experience Platform提供虛擬沙盒，可將單一Platform實例分割為不同的虛擬環境，以協助開發和發展數位體驗應用程式。
+- [即時客戶個人檔案](../../profile/home.md): 即時客戶描述檔是一般查閱實體儲存，用於管理平台內的體驗資料模型(XDM)資料。 描述檔會合併各種企業資料資產的資料，並以統一的簡報來存取該資料。
+   - [合併策略](../../profile/api/merge-policies.md): 「即時客戶個人檔案」用來判斷哪些資料可在特定條件下合併為統一檢視的規則。 可以為「資料治理」目的配置合併策略。
+- [區段](../home.md): 即時客戶個人檔案如何將個人檔案存放區中包含的大量個人群組分割為具有類似特性且回應類似行銷策略的較小群組。
+- [資料治理](../../data-governance/home.md): Data Governance使用下列元件為資料使用標籤和強制實施(DULE)提供了基礎架構：
+   - [資料使用標籤](../../data-governance/labels/user-guide.md): 標籤用來說明資料集和欄位，以處理其個別資料的敏感度等級為準。
+   - [資料使用原則](../../data-governance/policies/overview.md): 指示允許針對依特定資料使用標籤分類之資料執行哪些行銷動作的設定。
+   - [政策實施](../../data-governance/enforcement/overview.md): 允許您強制實施資料使用策略並防止構成違反策略的資料操作。
+- [沙盒](../../sandboxes/home.md): Experience Platform提供虛擬沙盒，可將單一Platform實例分割為不同的虛擬環境，以協助開發和發展數位體驗應用程式。
 
-以下章節提供您必須知道的其他資訊，才能成功呼叫平台API。
+以下章節提供您必須知道的其他資訊，以便成功呼叫平台API。
 
 ### 讀取範例API呼叫
 
@@ -36,7 +39,7 @@ source-git-commit: 97ba7aeb8a67735bd65af372fbcba5e71aee6aae
 
 若要呼叫平台API，您必須先完成驗證教 [學課程](../../tutorials/authentication.md)。 完成驗證教學課程後，所有Experience Platform API呼叫中每個必要標題的值都會顯示在下方：
 
-- 授權：生產者 `{ACCESS_TOKEN}`
+- 授權： 生產者 `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
@@ -44,11 +47,13 @@ Experience Platform中的所有資源都隔離至特定的虛擬沙盒。 所有
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
->[!NOTE] 如需平台中沙盒的詳細資訊，請參閱沙盒 [概觀檔案](../../sandboxes/home.md)。
+>[!NOTE]
+>
+>如需平台中沙盒的詳細資訊，請參閱沙盒 [概觀檔案](../../sandboxes/home.md)。
 
 所有包含裝載(POST、PUT、PATCH)的請求都需要額外的標題：
 
-- 內容類型：application/json
+- 內容類型： application/json
 
 ## 尋找區段定義的合併原則 {#merge-policy}
 
@@ -178,7 +183,9 @@ curl -X GET \
 
 ## 評估資料集中的策略違規情況
 
->[!NOTE]  此步驟假設您至少有一個作用中的資料使用原則，可防止對包含特定標籤的資料執行特定行銷動作。 如果您沒有任何適用於評估資料集的使用策略，請遵循策略創 [建教程](../../data-governance/policies/create.md) ，以建立一個策略，然後繼續此步驟。
+>[!NOTE]
+>
+> 此步驟假設您至少有一個作用中的資料使用原則，可防止對包含特定標籤的資料執行特定行銷動作。 如果您沒有任何適用於評估資料集的使用策略，請遵循策略創 [建教程](../../data-governance/policies/create.md) ，以建立一個策略，然後繼續此步驟。
 
 在您取得合併原則來源資料集的ID後，就可以使用 [DULE Policy Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) ，針對特定行銷動作評估這些資料集，以檢查資料使用原則違規情況。
 
