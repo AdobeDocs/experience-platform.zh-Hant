@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 即時機器學習筆記型電腦使用指南
 topic: Training and scoring a ML model
 translation-type: tm+mt
-source-git-commit: 1e5526b54f3c52b669f9f6a792eda0abfc711fdd
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1637'
 ht-degree: 0%
@@ -274,6 +274,8 @@ print("Model ID : ", model_id)
 本節概述如何建立DSL。 您將編寫包含任何資料預處理的節點以及ONNX節點。 接著，使用節點和邊建立DSL圖形。 邊使用基於元組的格式(node_1、node_2)連接節點。 圖表不應有循環。
 
 >[!IMPORTANT]
+>
+>
 >必須使用ONNX節點。 如果沒有ONNX節點，應用程式將不成功。
 
 ### 節點製作
