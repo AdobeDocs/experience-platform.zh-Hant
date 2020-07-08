@@ -4,7 +4,10 @@ solution: Experience Platform
 title: 監控資料擷取
 topic: overview
 translation-type: tm+mt
-source-git-commit: 9cbc22a34613aeb58a2c5090b10978ae4428dbdb
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '530'
+ht-degree: 0%
 
 ---
 
@@ -31,7 +34,9 @@ source-git-commit: 9cbc22a34613aeb58a2c5090b10978ae4428dbdb
 
 下圖顯示描述檔在過去七天內成功處理串流事件的比率。 按一下反白顯示的按鈕，即可調整此日期範圍，以顯示不同的時段。
 
-> [!NOTE] 為了讓資料顯示在此圖表上，必須為描述檔明 **確啟** 用資料。 要瞭解如何啟用配置檔案的流資料，請閱讀數 [據集使用手冊](../../catalog/datasets/user-guide.md#enable-a-dataset-for-real-time-customer-profile)。
+>[!NOTE]
+>
+>為了讓資料顯示在此圖表上，必須為描述檔明 **確啟** 用資料。 要瞭解如何啟用配置檔案的流資料，請閱讀數 [據集使用手冊](../../catalog/datasets/user-guide.md#enable-a-dataset-for-real-time-customer-profile)。
 
 ![](../images/quality/monitor-data-flows/list-streams-focus-on-bottom-graph.png)
 
