@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Adobe Experience Platform Identity Service
 topic: overview
 translation-type: tm+mt
-source-git-commit: 6ffdcc2143914e2ab41843a52dc92344ad51bcfb
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '721'
 ht-degree: 1%
@@ -72,7 +72,9 @@ Adobe Experience Platform提供數個可供所有組織使用的身分名稱空�
 
 與「標準」名稱空間類似，您可以從「瀏覽」索引標籤按一下「自訂」名稱空間來檢視其詳細資訊，但是使用「自訂」名稱空間，您也可以從詳細資訊區域編輯其「顯示名稱」和「說明」。 **
 
->[!NOTE] 命名空間一旦建立後，就無法刪除，其「身分符號」（或API中的「程式碼」）和「類型」也無法變更。
+>[!NOTE]
+>
+>命名空間一旦建立後，就無法刪除，其「身分符號」（或API中的「程式碼」）和「類型」也無法變更。
 
 ## 身分資料中的命名空間
 
