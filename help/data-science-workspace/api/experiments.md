@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 實驗
 topic: Developer guide
 translation-type: tm+mt
-source-git-commit: 76f68fea1bea970bab4c25061527b7ebae33faf3
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '744'
 ht-degree: 4%
@@ -20,7 +20,9 @@ ht-degree: 4%
 
 您可以執行POST請求，同時在請求裝載中提供名稱和有效的MLInstance ID，以建立實驗。
 
->[!NOTE] 與UI中的模型訓練不同，透過明確的API呼叫建立實驗不會自動建立並執行訓練執行。
+>[!NOTE]
+>
+>與UI中的模型訓練不同，透過明確的API呼叫建立實驗不會自動建立並執行訓練執行。
 
 **API格式**
 
@@ -242,7 +244,9 @@ curl -X GET \
 
 您可以執行單一GET要求並提供有效的實驗ID，以擷取屬於特定實驗的訓練或計分執行清單。 若要協助篩選結果，您可以在請求路徑中指定查詢參數。 有關可用查詢參數的完整清單，請參閱有關資產檢索 [查詢參數的附錄部分](./appendix.md#query)。
 
->[!NOTE] 組合多個查詢參數時，必須以&amp;符號分隔。
+>[!NOTE]
+>
+>組合多個查詢參數時，必須以&amp;符號分隔。
 
 **API格式**
 
@@ -301,7 +305,9 @@ curl -X GET \
 
 您可以透過PUT請求覆寫現有實驗的屬性，該請求在請求路徑中包含目標實驗的ID，並提供包含已更新屬性的JSON裝載，借此更新現有實驗。
 
->[!TIP] 為確保此PUT請求成功，建議您先執行GET請求，以依ID [擷取實驗](#retrieve-specific)。 然後，修改並更新傳回的JSON物件，並套用已修改的JSON物件作為PUT要求的裝載。
+>[!TIP]
+>
+>為確保此PUT請求成功，建議您先執行GET請求，以依ID [擷取實驗](#retrieve-specific)。 然後，修改並更新傳回的JSON物件，並套用已修改的JSON物件作為PUT要求的裝載。
 
 下列範例API呼叫會在最初具有這些屬性時更新實驗的名稱：
 
