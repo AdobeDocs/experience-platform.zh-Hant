@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 建立區段
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 822f43b139b68b96b02f9a5fe0549736b2524ab7
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1328'
 ht-degree: 2%
@@ -44,7 +44,9 @@ Experience Platform中的所有資源都隔離至特定的虛擬沙盒。 所有
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
->[!NOTE] 如需平台中沙盒的詳細資訊，請參閱沙盒 [概觀檔案](../../sandboxes/home.md)。
+>[!NOTE]
+>
+>如需平台中沙盒的詳細資訊，請參閱沙盒 [概觀檔案](../../sandboxes/home.md)。
 
 所有包含裝載(POST、PUT、PATCH)的請求都需要額外的標題：
 
