@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Adobe定義的函式
 topic: queries
 translation-type: tm+mt
-source-git-commit: 41fdee979db32b97a5935a02e9ffcde3308b6d54
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '248'
+ht-degree: 6%
 
 ---
 
@@ -92,7 +95,9 @@ LIMIT 31;
 
 此範例著重於上次接觸歸因，但Adobe也提供首次接觸歸因。
 
->[!NOTE] 未來的查詢服務版本將提供其他超時和事件型過期選項。
+>[!NOTE]
+>
+>未來的查詢服務版本將提供其他超時和事件型過期選項。
 
 **語法：**
 
