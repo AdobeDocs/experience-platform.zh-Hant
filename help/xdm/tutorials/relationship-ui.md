@@ -4,7 +4,10 @@ solution: Experience Platform
 title: 使用架構架構編輯器定義兩個架構之間的關係
 topic: tutorials
 translation-type: tm+mt
-source-git-commit: f8c34d84e30ae14c3936c2e32ee84a2fcd3abdc3
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '836'
+ht-degree: 0%
 
 ---
 
@@ -19,9 +22,9 @@ Adobe Experience Platform的重要部分，在於能夠跨不同通道瞭解客�
 
 本教學課程需要在Experience Platform UI中瞭解XDM系統和架構編輯器。 在開始本教學課程之前，請先閱讀下列檔案：
 
-* [Experience Platform中的XDM系統](../home.md):XDM及其在Experience Platform中的實作概觀。
-* [架構構成基礎](../schema/composition.md):介紹XDM模式的構建塊。
-* [使用架構編輯器建立架構](create-schema-ui.md):教學課程，介紹使用架構編輯器的基本知識。
+* [Experience Platform中的XDM系統](../home.md): XDM及其在Experience Platform中的實作概觀。
+* [架構構成基礎](../schema/composition.md): 介紹XDM模式的構建塊。
+* [使用架構編輯器建立架構](create-schema-ui.md): 教學課程，介紹使用架構編輯器的基本知識。
 
 ## 定義源和目標方案
 
@@ -45,7 +48,9 @@ Adobe Experience Platform的重要部分，在於能夠跨不同通道瞭解客�
 
 ## 建立關係混合
 
->[!NOTE] 只有在源架構沒有專用字串類型欄位用作另一個架構的引用時，才需要此步驟。 如果此欄位已在源方案中定義，請跳至定義關係欄位 [的下一步](#relationship-field)。
+>[!NOTE]
+>
+>只有在源架構沒有專用字串類型欄位用作另一個架構的引用時，才需要此步驟。 如果此欄位已在源方案中定義，請跳至定義關係欄位 [的下一步](#relationship-field)。
 
 為了定義兩個方案之間的關係，源方案必須具有專用欄位以用作目標方案的引用。 通過建立新混音，可以將此欄位添加到源模式。
 
