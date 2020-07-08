@@ -4,7 +4,10 @@ solution: Experience Platform
 title: CCPA常見問答集
 topic: troubleshooting
 translation-type: tm+mt
-source-git-commit: d0fcae6b1b75584a2c26d6eee5b47e0d60a142ba
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '807'
+ht-degree: 0%
 
 ---
 
@@ -17,7 +20,9 @@ source-git-commit: d0fcae6b1b75584a2c26d6eee5b47e0d60a142ba
 
 加州消費者隱私法(CCPA)是加州新推出的隱私法，為居民提供個人資訊的新權利，並對在加州經營業務的特定實體負有資料保護責任。
 
->[!NOTE] 雖然從技術上講，2020年1月生效，但CCPA仍由法律制定者進行微調。 此外，加州監管機構尚未制定的規則中，即將出台重要的實施措施和其他指導細節。
+>[!NOTE]
+>
+>雖然從技術上講，2020年1月生效，但CCPA仍由法律制定者進行微調。 此外，加州監管機構尚未制定的規則中，即將出台重要的實施措施和其他指導細節。
 
 雖然CCPA確實分享了歐盟通用資料保護規則(GDPR)所提供的一些概念，例如個人存取和刪除個人資訊的權利，但CCPA與GDPR有幾種主要不同之處。 例如，CCPA為消費者提供特定資料分享活動的選擇退出權，這些活動符合「銷售」個人資訊給第三方的資格，而不需事先取得同意。
 
@@ -72,7 +77,9 @@ Adobe服務可用於啟用特定資料分享和傳輸給第三方。 這些第�
 
 在您採取必要步驟來驗證CA消費者後，Adobe Experience Platform Privacy Service可讓您將消費者隱私權要求提交至相容的Experience Cloud應用程式。 如需詳細 [資訊，請參閱隱私服務](../home.md) 概觀。 有關您的特定Experience Cloud應用程式如何滿足隱私權要求的資訊，請參閱「隱私權服務」和「Experience Cloud應 [用程式」指南](../experience-cloud-apps.md)。
 
->[!NOTE] 美國加州監管機構仍將就哪些類型的資料符合消費者隱私要求提供進一步指導。
+>[!NOTE]
+>
+>美國加州監管機構仍將就哪些類型的資料符合消費者隱私要求提供進一步指導。
 
 ## Adobe是否提供其他有助於解決CCPA需求的工具？
 
