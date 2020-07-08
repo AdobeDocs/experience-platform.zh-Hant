@@ -4,7 +4,10 @@ solution: Experience Platform
 title: 更新物件
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 4361032b419622d7decc02194d38885b114749e4
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '316'
+ht-degree: 2%
 
 ---
 
@@ -16,7 +19,9 @@ source-git-commit: 4361032b419622d7decc02194d38885b114749e4
 * 使用欄位
 * 使用JSON修補程式符號
 
->[!NOTE] 對對象的PATCH操作不能修改其可展開欄位，這些欄位表示相互關聯的對象。  必須直接對相關對象進行修改。
+>[!NOTE]
+>
+>對對象的PATCH操作不能修改其可展開欄位，這些欄位表示相互關聯的對象。  必須直接對相關對象進行修改。
 
 ## 使用欄位更新
 
