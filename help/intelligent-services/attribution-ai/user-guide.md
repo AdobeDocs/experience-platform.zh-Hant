@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Attribution AI使用指南
 topic: User guide
 translation-type: tm+mt
-source-git-commit: 0ea96de956adb5a6c5286433a547772118c43aee
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1430'
 ht-degree: 0%
@@ -60,7 +60,9 @@ ht-degree: 0%
 
 選取事件後，新的下拉式清單會顯示在其右側。 第二個下拉式清單會用來透過使用操作，為您的事件提供進一步的內容。 對於此轉換事件，會使用預 *設操* 作。
 
->[!NOTE] 當您定義事件時 *，會更新轉換名* 稱下的字串。
+>[!NOTE]
+>
+>當您定義事件時 *，會更新轉換名* 稱下的字串。
 
 ![無下拉式清單](./images/user-guide/conversion_event_1.png)
 
@@ -98,7 +100,9 @@ ht-degree: 0%
 
 選取接觸點的運算子後，就 *可使用「輸入欄位值* 」。 「輸入欄位值 ** 」的下拉式值會根據您先前選取的運算元和觸點值填入。 如果值未填入下拉式清單中，您可以手動輸入該值。 按一下下拉式清單，然後選 **取「按一下**」。
 
->[!NOTE] 運算子&quot;exists&quot;和&quot;not exists&quot;沒有與它們關聯的欄位值。
+>[!NOTE]
+>
+>運算子&quot;exists&quot;和&quot;not exists&quot;沒有與它們關聯的欄位值。
 
 ![接觸點下拉式選單](./images/user-guide/touchpoint_dropdown.png)
 
@@ -112,7 +116,9 @@ ht-degree: 0%
 
 ![接觸點概述](./images/user-guide/add_group_touchpoint.png)
 
->[!NOTE] 使用「觸點名 *稱」下方的字串* ，快速概觀您的觸點。 請注意，字串與接觸點的名稱相符。
+>[!NOTE]
+>
+>使用「觸點名 *稱」下方的字串* ，快速概述您的觸點。 請注意，字串與接觸點的名稱相符。
 
 ![](./images/user-guide/touchpoint_string.png)
 
@@ -140,7 +146,9 @@ Attribution AI中的最後一頁是 *Advanced* page，用於設定訓練和計�
 
 要更改要進行計分的日期，請按一下時鐘錶徵圖。 在出現的新覆蓋中，輸入您要進行計分的日期。 按一下覆蓋外部以關閉覆蓋。
 
->[!NOTE] 每個計分程式最多需要24小時才能完成。
+>[!NOTE]
+>
+>每個計分程式最多需要24小時才能完成。
 
 ![時鐘錶徵圖](./images/user-guide/time_of_day.png)
 
@@ -158,7 +166,9 @@ Attribution AI中的最後一頁是 *Advanced* page，用於設定訓練和計�
 
 最後，在「輸入欄位值」下拉式清單中 *輸入國家代碼* 。
 
->[!NOTE] 國家／地區代碼有兩個字元長。 如需完整清單，請 [參閱ISO 3166-1 alpha-2](https://datahub.io/core/country-list)。
+>[!NOTE]
+>
+>國家／地區代碼有兩個字元長。 如需完整清單，請 [參閱ISO 3166-1 alpha-2](https://datahub.io/core/country-list)。
 
 ![地區](./images/user-guide/region-based.png)
 
@@ -166,7 +176,9 @@ Attribution AI中的最後一頁是 *Advanced* page，用於設定訓練和計�
 
 為確保您獲得盡可能精確的模型，請務必使用代表您業務的歷史資料來訓練模型。 根據預設，模型會使用2個季度（6個月）的資料進行訓練。 選擇下拉式清單以變更預設值。 您可以選擇培訓四分之一至四的資料（3-12個月）。
 
->[!NOTE] 較短的訓練窗口對最近的趨勢更敏感，而較長的訓練窗口則建立更強穩的模型，對最近的趨勢更不敏感。
+>[!NOTE]
+>
+>較短的訓練窗口對最近的趨勢更敏感，而較長的訓練窗口則建立更強穩的模型，對最近的趨勢更不敏感。
 
 ![訓練窗口](./images/user-guide/training_window.png)
 
