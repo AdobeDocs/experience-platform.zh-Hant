@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 準備資料以用於智慧型服務
 topic: Intelligent Services
 translation-type: tm+mt
-source-git-commit: 9905f0248fe88bac5194560318cf8eced32ba93c
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1878'
 ht-degree: 0%
@@ -82,7 +82,9 @@ CEE混合中有幾個關鍵欄位，要使智慧服務生成有用的見解，�
 
 #### xdm:channel {#channel}
 
->[!NOTE] 只有在使用Attribution AI時，此欄位才是必填欄位。
+>[!NOTE]
+>
+>只有在使用Attribution AI時，此欄位才是必填欄位。
 
 此欄位代表與ExperienceEvent相關的行銷渠道。 欄位包含頻道類型、媒體類型和位置類型的相關資訊。
 
@@ -105,7 +107,7 @@ CEE混合中有幾個關鍵欄位，要使智慧服務生成有用的見解，�
 
 下表提供映射至架構的行銷渠道的一些范 `xdm:channel` 例：
 
-| 管道 | `@type` | `mediaType` | `mediaAction` |
+| Channel | `@type` | `mediaType` | `mediaAction` |
 | --- | --- | --- | --- |
 | 付費搜尋 | https:/<span>/ns.adobe.com/xdm/channel-types/search | 付款 | 點擊 |
 | 社交——行銷 | https:/<span>/ns.adobe.com/xdm/channel-types/social | 掙 | 點擊 |
@@ -245,7 +247,9 @@ CEE混合中有幾個關鍵欄位，要使智慧服務生成有用的見解，�
 
 ### 使用Adobe Experience Platform
 
->[!NOTE] 下列步驟需要訂閱Experience Platform。 如果您沒有平台存取權，請跳至下 [一步](#next-steps) 。
+>[!NOTE]
+>
+>下列步驟需要訂閱Experience Platform。 如果您沒有平台存取權，請跳至下 [一步](#next-steps) 。
 
 本節概述將資料對應並收錄至Experience Platform以用於智慧型服務的工作流程，包括教學課程的連結以取得詳細步驟。
 
@@ -256,7 +260,9 @@ CEE混合中有幾個關鍵欄位，要使智慧服務生成有用的見解，�
 * [在UI中建立結構](../xdm/tutorials/create-schema-ui.md)
 * [在API中建立結構](../xdm/tutorials/create-schema-api.md)
 
->[!IMPORTANT] 上述教學課程會遵循建立架構的一般工作流程。 為架構選擇類時，必須使用 **XDM ExperienceEvent類**。 選擇此類後，可以將CEE混合添加到模式。
+>[!IMPORTANT]
+>
+>上述教學課程會遵循建立架構的一般工作流程。 為架構選擇類時，必須使用 **XDM ExperienceEvent類**。 選擇此類後，可以將CEE混合添加到模式。
 
 將CEE混音新增至架構後，您就可以視資料中其他欄位的需要新增其他混音。
 
@@ -271,7 +277,9 @@ CEE混合中有幾個關鍵欄位，要使智慧服務生成有用的見解，�
 
 #### 新增主要身分命名空間標籤至資料集
 
->[!NOTE] 未來版本的智慧型服務將整合 [Adobe Experience Platform Identity Service](../identity-service/home.md) ，使其具備客戶識別功能。 因此，下列步驟可能會有所變更。
+>[!NOTE]
+>
+>未來版本的智慧型服務將整合 [Adobe Experience Platform Identity Service](../identity-service/home.md) ，使其具備客戶識別功能。 因此，下列步驟可能會有所變更。
 
 如果您要從、或其他外 [!DNL Adobe Audience Manager]部來源 [!DNL Adobe Analytics]匯入資料，則必須新增標 `primaryIdentityNameSpace` 記至資料集。 這可以通過向目錄服務API發出PATCH請求來完成。
 
@@ -329,7 +337,9 @@ curl -X PATCH \
       }'
 ```
 
->[!NOTE] 如需在Platform中使用身分名稱空間的詳細資訊，請參閱身分名稱 [空間概觀](../identity-service/namespaces.md)。
+>[!NOTE]
+>
+>如需在Platform中使用身分名稱空間的詳細資訊，請參閱身分名稱 [空間概觀](../identity-service/namespaces.md)。
 
 **回應**
 
