@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 隱私權服務發行說明
 topic: release notes
 translation-type: tm+mt
-source-git-commit: 580cce74ab7da9547417a9e74e88b5ddab52171f
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '546'
 ht-degree: 5%
@@ -16,7 +16,9 @@ ht-degree: 5%
 
 本檔案包含Adobe Experience Platform Privacy Service新功能的相關資訊，以及增強功能和重大錯誤修正。
 
->[!NOTE] 如需其他Experience Platform服務的最新發行說明，請參閱 [這裡](../release-notes/latest/latest.md)。
+>[!NOTE]
+>
+>如需其他Experience Platform服務的最新發行說明，請參閱 [這裡](../release-notes/latest/latest.md)。
 
 ## 2020 年 4 月 8 日
 
