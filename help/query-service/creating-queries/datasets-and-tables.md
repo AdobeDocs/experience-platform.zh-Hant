@@ -4,7 +4,10 @@ solution: Experience Platform
 title: 資料集與表和方案
 topic: queries
 translation-type: tm+mt
-source-git-commit: 7d5d98d8e32607abf399fdc523d2b3bc99555507
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '183'
+ht-degree: 1%
 
 ---
 
@@ -12,7 +15,9 @@ source-git-commit: 7d5d98d8e32607abf399fdc523d2b3bc99555507
 # 資料集與表和方案
 
 檢視 [Adobe Experience Platform UI中可用的資料集清單](https://platform.adobe.com/datasets)，請務必觀察資料集名稱。
->[!NOTE] 有些資料集名稱有空格，否則可能不是SQL安全。
+>[!NOTE]
+>
+>有些資料集名稱有空格，否則可能不是SQL安全。
 
 ![](../images/queries/datasets-and-tables/dataset-names.png)
 
@@ -21,7 +26,7 @@ source-git-commit: 7d5d98d8e32607abf399fdc523d2b3bc99555507
 
 ![](../images/queries/datasets-and-tables/schema-information.png)
 
-開啟PSQL命令行，然後從此處使用連接詳細資訊： [https://platform.adobe.com/query/configuration](https://platform.adobe.com/query/configuration)。
+開啟PSQL命令行，然後從此處使用連接詳細資訊： [https://platform.adobe.com/query/configuration](https://platform.adobe.com/query/configuration).
 
 ![](../images/clients/psql/connect-bi.png)
 
@@ -51,7 +56,9 @@ source-git-commit: 7d5d98d8e32607abf399fdc523d2b3bc99555507
 
 要查看表的根模式，請使用該命 `\d table_name` 令。
 
->[!NOTE] 顯示的架構顯示根欄位，其中大多數是複雜的，在資料集架構UI中引用了對象類型。
+>[!NOTE]
+>
+>顯示的架構顯示根欄位，其中大多數是複雜的，在資料集架構UI中引用了對象類型。
 
 `\d luma_midvalues`
 
