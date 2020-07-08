@@ -4,7 +4,10 @@ solution: Experience Platform
 title: 重複資料消除
 topic: queries
 translation-type: tm+mt
-source-git-commit: 7d5d98d8e32607abf399fdc523d2b3bc99555507
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '414'
+ht-degree: 1%
 
 ---
 
@@ -26,7 +29,9 @@ Adobe Experience Platform Query Service支援重複資料刪除，因為可能�
 
 若是重複的ExperienceEvents，您可能會希望忽略整列。
 
->[!CAUTION] Experience Platform中的許多資料集（包括Adobe Analytics Data Connector製作的資料集）都已套用ExperienceEvent層級的去重複化。 因此，無需重新應用此級別的重複資料消除，並會減慢查詢速度。 請務必瞭解DataSet的來源，並瞭解是否已在ExperienceEvent層級應用重複資料消除。 對於任何串流化的DataSet（例如Adobe Target），您需要套用ExperienceEvent層級的去重複化，因為這些資料來源具有「至少一次」的語義。
+>[!CAUTION]
+>
+>Experience Platform中的許多資料集（包括Adobe Analytics Data Connector製作的資料集）都已套用ExperienceEvent層級的去重複化。 因此，無需重新應用此級別的重複資料消除，並會減慢查詢速度。 請務必瞭解DataSet的來源，並瞭解是否已在ExperienceEvent層級應用重複資料消除。 對於任何串流化的DataSet（例如Adobe Target），您必須套用ExperienceEvent層級的去重複化，因為這些資料來源具有「至少一次」的語義。
 
 **範圍：** 全球
 
