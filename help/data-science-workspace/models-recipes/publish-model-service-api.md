@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 將模型發佈為服務(API)
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 4b0f0dda97f044590f55eaf75a220f631f3313ee
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1478'
 ht-degree: 1%
@@ -338,7 +338,9 @@ curl -X GET 'https://platform.adobe.io/data/sensei/mlServices/{SERVICE_ID}'
 }
 ```
 
->[!NOTE] 檢索不同的ML服務時，可能會返回帶有一個或多個鍵值對的響應。 以上回應是 [ML服務的呈現方式，其中包含已排程的訓練和計分實驗執行](#ml-service-with-scheduled-experiments-for-training-and-scoring)。
+>[!NOTE]
+>
+>檢索不同的ML服務時，可能會返回帶有一個或多個鍵值對的響應。 以上回應是 [ML服務的呈現方式，其中包含已排程的訓練和計分實驗執行](#ml-service-with-scheduled-experiments-for-training-and-scoring)。
 
 
 ## 排程培訓或計分
@@ -388,7 +390,9 @@ curl -X PUT 'https://platform.adobe.io/data/sensei/mlServices/{SERVICE_ID}'
       }'
 ```
 
->[!WARNING] 請勿嘗試修改現有已排 `startTime` 程的訓練和計分工作。 如果必 `startTime` 須修改，請考慮發佈相同的模型並重新計畫培訓和計分任務。
+>[!WARNING]
+>
+>請勿嘗試修改現有已排 `startTime` 程的訓練和計分工作。 如果必 `startTime` 須修改，請考慮發佈相同的模型並重新計畫培訓和計分任務。
 
 **回應**
 
