@@ -4,7 +4,10 @@ solution: Experience Platform
 title: 與Looker連接
 topic: connect
 translation-type: tm+mt
-source-git-commit: 7d5d98d8e32607abf399fdc523d2b3bc99555507
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '217'
+ht-degree: 0%
 
 ---
 
@@ -31,7 +34,9 @@ source-git-commit: 7d5d98d8e32607abf399fdc523d2b3bc99555507
 - **資料庫：** 將使用的資料庫。
 - **使用者名稱與密碼：** 將使用的登錄憑據。 用戶名的格式為 `ORG_ID@AdobeOrg`。
 
->[!NOTE] 有關查找主機和埠、資料庫名和登錄憑據的詳細資訊，請訪問平台 [上的憑據頁](https://platform.adobe.com/query/configuration)。 若要尋找您的認證，請登入「平台」，按一下「 **查詢**」，然後按一 **下「認證」**。
+>[!NOTE]
+>
+>有關查找主機和埠、資料庫名和登錄憑據的詳細資訊，請訪問平台 [上的憑據頁](https://platform.adobe.com/query/configuration)。 若要尋找您的認證，請登入「平台」，按一下「 **查詢**」，然後按一 **下「認證」**。
 
 輸入連線詳細資訊後，按一下「測 **試這些設定」** ，以確保憑證正常運作。 如果是，則會在下方顯示訊息，告知您可以連線。 如果您的連線確實成功，請按一下「 **新增連線** 」以建立連線。
 
