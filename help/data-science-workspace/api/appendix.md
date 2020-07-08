@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 附錄
 topic: Developer guide
 translation-type: tm+mt
-source-git-commit: c48079ba997a7b4c082253a0b2867df76927aa6d
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '298'
 ht-degree: 4%
@@ -27,7 +27,9 @@ API [!DNL Sensei Machine Learning] 支援擷取資產時的查詢參數。 下�
 | `orderby` | 指示用於按優先順序順序排序的屬性。 在屬性名稱前加入破折號(**-**)，以遞減順序排序，否則結果會依遞增順序排序。 | `orderby=created` |
 | `property` | 表示要返回對象必須滿足的比較表達式。 | `property=deleted==false` |
 
->[!NOTE] 組合多個查詢參數時，必須以&amp;符號分隔(**&amp;**)。
+>[!NOTE]
+>
+>組合多個查詢參數時，必須以&amp;符號分隔(**&amp;**)。
 
 ## Python CPU和GPU組態 {#cpu-gpu-config}
 
@@ -66,7 +68,9 @@ Python引擎能夠在CPU或GPU之間選擇，以用於訓練或計分，並在 [
 ]
 ```
 
->[!NOTE] 和的值 `cpus` 不表 `gpus` 示CPU或GPU的數量，而是表示物理電腦的數量。 這些值是可允許 `"1"` 的，否則會引發例外。
+>[!NOTE]
+>
+>和的值 `cpus` 不表 `gpus` 示CPU或GPU的數量，而是表示物理電腦的數量。 這些值是可允許 `"1"` 的，否則會引發例外。
 
 ## PySpark和Spark資源配置 {#resource-config}
 
