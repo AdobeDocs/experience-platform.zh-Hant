@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 使用API建立串流連線
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 0eecd802fc8d0ace3a445f3f188a7f095b97d0c8
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '659'
 ht-degree: 2%
@@ -45,7 +45,9 @@ Experience Platform中的所有資源都隔離至特定的虛擬沙盒。 所有
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
->[!NOTE] 如需平台中沙盒的詳細資訊，請參閱沙盒 [概觀檔案](../../sandboxes/home.md)。
+>[!NOTE]
+>
+>如需平台中沙盒的詳細資訊，請參閱沙盒 [概觀檔案](../../sandboxes/home.md)。
 
 所有包含裝載(POST、PUT、PATCH)的請求都需要額外的標題：
 
@@ -63,7 +65,9 @@ POST /flowservice/connections
 
 **請求**
 
->[!NOTE] 必須使用列 `providerId` 出和的 `connectionSpec` 值 **** ，如示例中所示，因為它們是您為串流擷取建立串流連線的API所指定的值。
+>[!NOTE]
+>
+>必須使用列 `providerId` 出和的 `connectionSpec` 值 **** ，如示例中所示，因為它們是您為串流擷取建立串流連線的API所指定的值。
 
 ```shell
 curl -X POST https://platform.adobe.io/data/foundation/flowservice/connections \
