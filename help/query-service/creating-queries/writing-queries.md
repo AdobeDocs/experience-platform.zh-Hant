@@ -4,7 +4,10 @@ solution: Experience Platform
 title: 編寫查詢
 topic: queries
 translation-type: tm+mt
-source-git-commit: 7d5d98d8e32607abf399fdc523d2b3bc99555507
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '667'
+ht-degree: 1%
 
 ---
 
@@ -17,7 +20,7 @@ source-git-commit: 7d5d98d8e32607abf399fdc523d2b3bc99555507
 
 ## 查詢執行模型
 
-Adobe Experience Platform Query Service有兩種查詢執行模式：互動式和非互動式。 交互執行用於商業智慧工具中的查詢開發和報告生成，而非交互用於作為資料處理工作流的一部分的較大作業和操作查詢。
+Adobe Experience Platform Query Service有兩種查詢執行模式： 互動式和非互動式。 交互執行用於商業智慧工具中的查詢開發和報告生成，而非交互用於作為資料處理工作流的一部分的較大作業和操作查詢。
 
 ### 互動式查詢執行
 
@@ -31,7 +34,9 @@ Adobe Experience Platform Query Service有兩種查詢執行模式：互動式�
 | 返回的最大行數 | 50,000 |
 | 最大併發查詢數 | 5 |
 
->[!NOTE] 若要覆寫最大列限制，請在查詢 `LIMIT 0` 中加入。 查詢逾時10分鐘仍適用。
+>[!NOTE]
+>
+>若要覆寫最大列限制，請在查詢 `LIMIT 0` 中加入。 查詢逾時10分鐘仍適用。
 
 預設情況下，交互查詢的結果將返回給客戶端，並且不 **會** 持續。 若要將結果保存為Experience Platform中的資料集，查詢必須使用語 `CREATE TABLE AS SELECT` 法。
 
@@ -67,7 +72,9 @@ LIMIT 1
 | -------- | ----------- |
 | `{ANALYTICS_TABLE_NAME}` | 分析表格的名稱。 |
 
->[!NOTE] 由於每個符號類型都返回相同的結果，因此您選擇使用的結果取決於您的首選項。
+>[!NOTE]
+>
+>由於每個符號類型都返回相同的結果，因此您選擇使用的結果取決於您的首選項。
 
 上述兩個範例查詢都會傳回平面化物件，而非單一值：
 
@@ -147,7 +154,9 @@ FROM
 )
 ```
 
->[!NOTE] 雙引號 **不能** 與點標籤欄位訪問一起使用。
+>[!NOTE]
+>
+>雙引號 **不能** 與點標籤欄位訪問一起使用。
 
 ### 反引號
 
