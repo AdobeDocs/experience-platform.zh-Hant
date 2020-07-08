@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 描述符
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: c3d23ce0081932e61f50d426ac6d98ab7f4dfa3b
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1499'
 ht-degree: 1%
@@ -22,7 +22,9 @@ ht-degree: 1%
 
 本文檔提供描述符的示例API調用，以及可用描述符的完整清單和定義每種類型所需的欄位。
 
->[!NOTE] 描述符需要用唯一的「接受」標 `xed` 頭替換， `xdm`但其外觀與「方案註冊表」中其他位置使用的「接受」標頭非常相似。 下列範例呼叫中已包含正確的「接受」標題，但請格外小心，以確保使用正確的標題。
+>[!NOTE]
+>
+>描述符需要用唯一的「接受」標 `xed` 頭替換， `xdm`但其外觀與「方案註冊表」中其他位置使用的「接受」標頭非常相似。 下列範例呼叫中已包含正確的「接受」標題，但請格外小心，以確保使用正確的標題。
 
 ## 清單描述符
 
