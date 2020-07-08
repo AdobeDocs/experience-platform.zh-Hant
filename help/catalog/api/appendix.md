@@ -4,7 +4,10 @@ solution: Experience Platform
 title: 目錄服務開發人員指南附錄
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 409d98818888f2758258441ea2d993ced48caf9a
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '908'
+ht-degree: 0%
 
 ---
 
@@ -17,7 +20,7 @@ source-git-commit: 409d98818888f2758258441ea2d993ced48caf9a
 
 某些目錄對象可以與其他目錄對象相互關聯。 任何在響應負載中前置詞的 `@` 欄位都表示相關對象。 這些欄位的值採用URI的形式，可用於個別的GET請求，以擷取其所代表的相關物件。
 
-查找特定資料集時在文檔中 [返回的示例資料集包含](look-up-object.md)`files` 具有以下URI值的欄位： `"@/dataSets/5ba9452f7de80400007fc52a/views/5ba9452f7de80400007fc52b/files"`。 使用此URI `files` 作為新GET請求的路徑，即可檢視欄位內容。
+查找特定資料集時在文檔中 [返回的示例資料集包含](look-up-object.md)`files` 具有以下URI值的欄位： `"@/dataSets/5ba9452f7de80400007fc52a/views/5ba9452f7de80400007fc52b/files"`. 使用此URI `files` 作為新GET請求的路徑，即可檢視欄位內容。
 
 **API格式**
 
@@ -105,7 +108,9 @@ POST /
 
 例如，如果您想要參考從先前的子請求傳回的值，則可以建立以下格式的參考： `<<{REQUEST_ID}.{ATTRIBUTE_NAME}>>` (其 `{REQUEST_ID}` 中是使用者提供的子請求ID，如下所示)。 您可以使用這些範本，來參考先前子請求回應物件內文中可用的任何屬性。
 
->[!NOTE] 當執行的子請求只傳回物件的參考（在目錄API中，大部分POST和PUT請求的預設值）時，此參考會設為值 `id` 別名，可當做 `<<{OBJECT_ID}.id>>`。
+>[!NOTE]
+>
+>當執行的子請求只傳回物件的參考（在目錄API中，大部分POST和PUT請求的預設值）時，此參考會設為值 `id` 別名，可當做 `<<{OBJECT_ID}.id>>`。
 
 ```shell
 curl -X POST \
