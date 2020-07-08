@@ -4,7 +4,10 @@ solution: Experience Platform
 title: 將資料內嵌至Adobe Experience Platform
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 79466c78fd78c0f99f198b11a9117c946736f47a
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '1291'
+ht-degree: 0%
 
 ---
 
@@ -25,7 +28,9 @@ Experience Platform中的資料集工作區可讓您檢視和管理IMS組織建�
 
 按一下左側導覽中的「資 **料集** 」，檢視「資料集」工作區。 「資料集」清單包含 _Name_、Created _（日期和時間）、Created_ (Source Date and Time)、 ________ Source Chema Last Batch Status、As as the Date and time the date ad Last Jodat Jadepated Last Plast.
 
->[!NOTE] 按一下搜尋列旁的篩選圖示，使用篩選功能僅檢視為描述檔啟用的資料集。
+>[!NOTE]
+>
+>按一下搜尋列旁的篩選圖示，使用篩選功能僅檢視為描述檔啟用的資料集。
 
 ![查看所有資料集](../images/tutorials/ingest-batch-data/datasets_workspace.png)
 
@@ -97,7 +102,9 @@ Experience Platform中的資料集工作區可讓您檢視和管理IMS組織建�
 
 若要開始將資料新增至資料集，請按一下「新增 **資料** 」標籤。 您現在可以拖放檔案，或瀏覽您的電腦以尋找您要新增的檔案。
 
->[!NOTE] 平台支援兩種檔案類型以擷取資料，分為鑲木地板或JSON。 一次最多可以添加五個檔案，每個檔案的最大檔案大小為10 GB。
+>[!NOTE]
+>
+>平台支援兩種檔案類型以擷取資料，分為鑲木地板或JSON。 一次最多可以添加五個檔案，每個檔案的最大檔案大小為10 GB。
 
 ![「添加資料」頁籤](../images/tutorials/ingest-batch-data/add_data.png)
 
