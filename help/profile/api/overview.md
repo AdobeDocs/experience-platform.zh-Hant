@@ -4,7 +4,7 @@ solution: Adobe Experience Platform
 title: 即時客戶個人檔案API開發人員指南
 topic: guide
 translation-type: tm+mt
-source-git-commit: fd6516d1c1d3792b41de65d0f44d78af1124ccc7
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '666'
 ht-degree: 0%
@@ -23,13 +23,15 @@ ht-degree: 0%
 ## (Alpha)計算屬性
 
 >[!IMPORTANT]
+>
+>
 >計算屬性功能為alpha，並非所有使用者皆可使用。 檔案和功能可能會有所變更。
 
 計算屬性可讓您根據其他值、計算和運算式自動計算欄位的值。 計算屬性在描述檔層級上運作，這表示您可以匯總所有記錄和事件的值。 每個計算屬性都包含一個運算式（或「規則」），可評估傳入的資料，並將產生的值儲存在描述檔屬性或事件中。 這些計算可協助您輕鬆回答與期限購買值、購買間隔時間或應用程式開啟次數等相關的問題，而不需在每次需要資訊時手動執行複雜的計算。 您可以使用端點建立、查看、編輯和刪除計算屬 `config/computedAttributes` 性。 要瞭解如何使用此端點，請訪問計算 [的屬性端點指南](computed-attributes.md)。
 
 ## 邊緣投影
 
-Adobe Experience Platform讓資料可輕鬆地在戰略性位置的伺服器（稱為「邊緣」）上存取，讓客戶體驗即時個人化。 即時客戶個人檔案API提供端點，以透過稱為「預測」的元件處理邊緣。 這包括確定應將哪些資料投影到每個邊的投影配置，以及定義投影路由位置的投影目標。 有關使用邊緣投影的詳細資訊，請造訪投影 [設定和目標端點指南](edge-projections.md)。
+Adobe Experience Platform讓資料可輕鬆在戰略性位置的伺服器（稱為「邊緣」）上存取，讓客戶體驗即時個人化。 即時客戶個人檔案API提供端點，以透過稱為「預測」的元件處理邊緣。 這包括確定應將哪些資料投影到每個邊的投影配置，以及定義投影路由位置的投影目標。 有關使用邊緣投影的詳細資訊，請造訪投影 [設定和目標端點指南](edge-projections.md)。
 
 ## 實體
 
