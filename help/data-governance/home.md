@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Adobe Experience Platform資料治理
 topic: overview
 translation-type: tm+mt
-source-git-commit: d4964231ee957349f666eaf6b0f5729d19c408de
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1448'
 ht-degree: 0%
@@ -64,7 +64,9 @@ DULE框架包含預先定義的資料使用標籤，可用來以三種方式對�
 * **身份「I」資料標籤：** 為可識別或聯絡特定人員的資料加上標籤並加以分類。
 * **敏感「S」資料標籤：** 標籤與敏感資料（例如地理資料）相關的資料並加以分類。
 
->[!NOTE] 如需可用標籤的 [完整清單](labels/reference.md) ，請參閱支援資料使用標籤的指南，以及每種標籤類型的定義。
+>[!NOTE]
+>
+>如需可用標籤的 [完整清單](labels/reference.md) ，請參閱支援資料使用標籤的指南，以及每種標籤類型的定義。
 
 標籤可隨時套用，提供您選擇控制資料的彈性。 最佳做法建議在資料被吸收或資料 [!DNL Experience Platform]在中提供時立即加以標籤 [!DNL Platform]。
 
@@ -78,7 +80,9 @@ DULE框架包含預先定義的資料使用標籤，可用來以三種方式對�
 
 在套用資料使用標籤後，資料管理員就可使用DULE Policy Service API或使用者介面來建立 [!DNL Experience Platform] 原則。
 
->[!IMPORTANT] 預設會停用所有資料使用政策（包括Adobe提供的核心政策）。 要考慮實施單個策略，您必須手動啟用該策略。
+>[!IMPORTANT]
+>
+>預設會停用所有資料使用政策（包括Adobe提供的核心政策）。 要考慮實施單個策略，您必須手動啟用該策略。
 
 如需資料使用政策和行銷動作的詳細資訊，請參閱 [政策概觀](./policies/overview.md)。
 
