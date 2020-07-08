@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 客戶AI快速入門
 topic: Getting started
 translation-type: tm+mt
-source-git-commit: 83e74ad93bdef056c8aef07c9d56313af6f4ddfd
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '532'
 ht-degree: 0%
@@ -25,7 +25,9 @@ ht-degree: 0%
 
 ## 下載客戶AI分數
 
->[!NOTE] 如果您不需要下載原始分數，可以略過此步驟並繼續設定 [指南](./user-guide/configure.md)。
+>[!NOTE]
+>
+>如果您不需要下載原始分數，可以略過此步驟並繼續設定 [指南](./user-guide/configure.md)。
 
 下載客戶AI分數是透過API呼叫的組合來完成。 若要呼叫平台API，您必須先完成驗證教 [學課程](../../tutorials/authentication.md)。 完成驗證教學課程後，所有Experience Platform API呼叫中每個必要標題的值都會顯示在下方：
 
@@ -37,7 +39,9 @@ Experience Platform中的所有資源都隔離至特定的虛擬沙盒。 所有
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
->[!NOTE] 如需平台中沙盒的詳細資訊，請參閱沙盒 [概觀檔案](../../sandboxes/home.md)。
+>[!NOTE]
+>
+>如需平台中沙盒的詳細資訊，請參閱沙盒 [概觀檔案](../../sandboxes/home.md)。
 
 ### 讀取範例API呼叫
 
