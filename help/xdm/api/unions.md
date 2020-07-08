@@ -4,7 +4,10 @@ solution: Experience Platform
 title: 工會
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 7f61cee8fb5160d0f393f8392b4ce2462d602981
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '806'
+ht-degree: 1%
 
 ---
 
@@ -23,7 +26,7 @@ source-git-commit: 7f61cee8fb5160d0f393f8392b4ce2462d602981
 
 聯合模式是聯 `identityMap` 合的關聯記錄模式內已知身份的表示。 標識映射將標識分成由命名空間鍵入的不同陣列。 每個列出的身份本身都是包含唯一值的 `id` 對象。
 
-如需詳細 [資訊，請參閱Identity Service](../../identity-service/home.md) 檔案。
+See the [Identity Service documentation](../../identity-service/home.md) for more information.
 
 ### 時間系列事件
 
@@ -39,7 +42,9 @@ source-git-commit: 7f61cee8fb5160d0f393f8392b4ce2462d602981
 
 要使架構包括在合併的union視圖中，必須將&quot;union&quot;標籤添加到架構的 `meta:immutableTags` 屬性中。 這是通過PATCH請求來更新模式並添加值為&quot;union&quot; `meta:immutableTags` 的陣列來完成的。
 
->[!NOTE] 不可變標籤是要設定但從不移除的標籤。
+>[!NOTE]
+>
+>不可變標籤是要設定但從不移除的標籤。
 
 **API格式**
 
@@ -161,7 +166,9 @@ curl -X GET \
 
 您可以通過執行GET請求來查看特定的聯合，該請求包括 `$id` 和（取決於「接受」標題），聯合的部分或全部詳細資訊。
 
->[!NOTE] 聯合查找可使用和 `/unions` 端點 `/schemas` 來啟用它們，以便用於將配置檔案導出到資料集中。
+>[!NOTE]
+>
+>聯合查找可使用和 `/unions` 端點 `/schemas` 來啟用它們，以便用於將配置檔案導出到資料集中。
 
 **API格式**
 
@@ -192,8 +199,8 @@ Union查閱要求必須 `version` 包含在Accept標題中。
 
 | 接受 | 說明 |
 | -------|------------ |
-| application/vnd.adobe.xed+json;version={MAJOR_VERSION} | Raw搭配 `$ref` 和 `allOf`。 包含標題和說明。 |
-| application/vnd.adobe.xed-full+json;version={MAJOR_VERSION} | `$ref` 屬性和已解 `allOf` 決。 包含標題和說明。 |
+| application/vnd.adobe.xed+json; version={MAJOR_VERSION} | Raw搭配 `$ref` 和 `allOf`。 包含標題和說明。 |
+| application/vnd.adobe.xed-full+json; version={MAJOR_VERSION} | `$ref` 屬性和已解 `allOf` 決。 包含標題和說明。 |
 
 **回應**
 
