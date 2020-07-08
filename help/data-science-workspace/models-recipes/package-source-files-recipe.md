@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 將來源檔案封裝至配方
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 4b0f0dda97f044590f55eaf75a220f631f3313ee
+source-git-commit: 45461e3420f3b7e227f80fe775d80b8442a1069c
 workflow-type: tm+mt
-source-wordcount: '1077'
+source-wordcount: '1097'
 ht-degree: 0%
 
 ---
@@ -169,7 +169,7 @@ Navigate to the directory `experience-platform-dsw-reference/recipes/pyspark/ret
 git clone https://github.com/adobe/experience-platform-dsw-reference.git
 ```
 
-接著，導覽至您可 `experience-platform-dsw-reference/recipes/scala/retail` 以找到指令碼和的 `login.sh` 目錄 `build.sh`。 這些指令碼用於登錄到Docker並生成Docker映像。 如果您的 [Docker認證已就緒](#docker-based-model-authoring) ，請按順序向終端輸入以下命令：
+接著，導覽至您可 `experience-platform-dsw-reference/recipes/scala` 以找到指令碼和的 `login.sh` 目錄 `build.sh`。 這些指令碼用於登錄到Docker並生成Docker映像。 如果您的 [Docker認證已就緒](#docker-based-model-authoring) ，請按順序向終端輸入以下命令：
 
 ```BASH
 # for logging in to Docker
@@ -178,6 +178,9 @@ git clone https://github.com/adobe/experience-platform-dsw-reference.git
 # for building Docker image
 ./build.sh
 ```
+
+>[!TIP]
+>如果您在嘗試使用指令碼登錄Docker時收到權限錯誤，請 `login.sh` 嘗試使用命令 `bash login.sh`。
 
 執行登錄指令碼時，需要提供Docker主機、用戶名和密碼。 建立時，您必須提供Docker主機和版本標籤以用於建立。
 
