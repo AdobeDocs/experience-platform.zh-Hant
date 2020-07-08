@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 資料使用原則使用指南
 topic: policies
 translation-type: tm+mt
-source-git-commit: d4964231ee957349f666eaf6b0f5729d19c408de
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '727'
 ht-degree: 0%
@@ -16,7 +16,9 @@ ht-degree: 0%
 
 Adobe Experience Platform Data Governance提供使用者介面，可讓您建立和管理資料使用政策。 本文檔概述了在用戶介面的「策略」( _Policys_ )工作區中可執 [!DNL Experience Platform] 行的操作。
 
->[!IMPORTANT] 預設會停用所有資料使用政策（包括Adobe提供的核心政策）。 要考慮實施單個策略，您必須手動啟用該策略。 如需如何在UI中 [執行此動作](#enable) ，請參閱啟用原則一節。
+>[!IMPORTANT]
+>
+>預設會停用所有資料使用政策（包括Adobe提供的核心政策）。 要考慮實施單個策略，您必須手動啟用該策略。 如需如何在UI中 [執行此動作](#enable) ，請參閱啟用原則一節。
 
 ## 必要條件
 
@@ -51,7 +53,9 @@ Adobe Experience Platform Data Governance提供使用者介面，可讓您建立
 
 此時會 *[!UICONTROL 顯示「選擇行銷]* 」動作步驟。 從提供的清單中選擇適當的行銷動作，然後按一下「 **[!UICONTROL 下一步]** 」繼續。
 
->[!NOTE] 選取多個行銷動作時，原則會將其解譯為「OR」規則。 換言之，如果執行任何選 _定的行銷_ ，則套用原則。
+>[!NOTE]
+>
+>選取多個行銷動作時，原則會將其解譯為「OR」規則。 換言之，如果執行任何選 _定的行銷_ ，則套用原則。
 
 ![](../images/policies/add-marketing-actions.png)
 
@@ -93,7 +97,9 @@ Adobe Experience Platform Data Governance提供使用者介面，可讓您建立
 
 ## 編輯或刪除行銷動作 {#edit-delete-marketing-action}
 
->[!NOTE] 只能編輯您組織定義的自訂行銷動作。 Adobe定義的行銷動作無法變更或刪除。
+>[!NOTE]
+>
+>只能編輯您組織定義的自訂行銷動作。 Adobe定義的行銷動作無法變更或刪除。
 
 在「原 **[!UICONTROL 則]** 」工作區中，選取「 **[!UICONTROL 行銷動作]** 」標籤，以檢視Adobe及您自己組織定義的可用行銷動作清單。 從清單中選取自訂行銷動作，然後使用右側區段中提供的欄位來編輯行銷動作的詳細資料。
 
@@ -101,7 +107,9 @@ Adobe Experience Platform Data Governance提供使用者介面，可讓您建立
 
 如果任何現有的使用政策未使用行銷動作，您可以按一下刪除行銷動 **[!UICONTROL 作來刪除動作]**。
 
->[!NOTE] 嘗試刪除現有原則使用的行銷動作時，會顯示錯誤訊息，指出刪除嘗試失敗。
+>[!NOTE]
+>
+>嘗試刪除現有原則使用的行銷動作時，會顯示錯誤訊息，指出刪除嘗試失敗。
 
 ![](../images/policies/delete-marketing-action.png)
 
