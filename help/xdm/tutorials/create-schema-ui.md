@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 使用結構編輯器建立架構
 topic: tutorials
 translation-type: tm+mt
-source-git-commit: b3fa5a17c3a5c2406d368d165da63f2f8c01154d
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '3409'
 ht-degree: 0%
@@ -84,7 +84,9 @@ ht-degree: 0%
 
 欄位以「fieldName」格式顯示 |資料類型」。 本教學課程稍後提供在UI中定義架構欄位的步驟。
 
->[!NOTE] 在保 [存架構之前，您可以在初始合成過程中的任意點更改架構類](#change-class) ，但應該非常小心。 Mixins僅與特定類別相容，因此變更類別會重設畫布和您新增的任何欄位。
+>[!NOTE]
+>
+>在保 [存架構之前，您可以在初始合成過程中的任意點更改架構類](#change-class) ，但應該非常小心。 Mixins僅與特定類別相容，因此變更類別會重設畫布和您新增的任何欄位。
 
 ## 新增混音 {#mixin}
 
@@ -108,7 +110,9 @@ ht-degree: 0%
 
 此混音在頂層名稱&quot;person&quot;下提供數個欄位，資料類型為&quot;Person&quot;。 此欄位群組說明個人的相關資訊，包括姓名、出生日期和性別。
 
->[!NOTE] 請記住，欄位可能使用標量類型（如字串、整數、陣列或日期）作為其資料類型，以及模式註冊表中的任何「資料類型」（表示通用概念的一組欄位）。
+>[!NOTE]
+>
+>請記住，欄位可能使用標量類型（如字串、整數、陣列或日期）作為其資料類型，以及模式註冊表中的任何「資料類型」（表示通用概念的一組欄位）。
 
 請注意，「名稱」欄位的資料類型為「人員姓名」，這表示該欄位也說明一般概念，並包含與名稱相關的子欄位，例如名字、姓氏和全名。
 
@@ -247,7 +251,9 @@ Experience Platform可讓您透過使用架構編輯器中的「身分」核取�
 
 ![](../images/tutorials/create-schema/loyaltyId_primary_identity.png)
 
->[!NOTE] 一旦將架構欄位設定為主標識，如果您稍後嘗試將架構中的另一個欄位設定為主標識，將會收到錯誤消息。 每個架構只能包含一個主標識欄位。
+>[!NOTE]
+>
+>一旦將架構欄位設定為主標識，如果您稍後嘗試將架構中的另一個欄位設定為主標識，將會收到錯誤消息。 每個架構只能包含一個主標識欄位。
 
 若要進一步瞭解如何使用身分識別，請參閱 [Identity Service](../../identity-service/home.md) 檔案。
 
@@ -279,7 +285,9 @@ More information about relationships and other schema metadata can be found in t
 
 ![](../images/tutorials/create-schema/enable_unified_profile.png)
 
->[!NOTE] 一旦對即時客戶描述檔啟用並儲存結構後，便無法停用它。
+>[!NOTE]
+>
+>一旦對即時客戶描述檔啟用並儲存結構後，便無法停用它。
 
 ## 後續步驟
 
@@ -303,13 +311,17 @@ Experience Platform提供根據組織專屬類別定義架構的彈性。
 
 ![新類詳細資訊](../images/tutorials/create-schema/create_new_class.png)
 
->[!NOTE] 當建立實作組織定義之類的架構時，請記住混合僅可用於相容類。 由於您定義的類是新的，因此「添加混音」對話框中沒有列 *出相容混音* 。 您需要選取「建立新 **Mixin」** ，並定義混音以用於該類別。 下次構建實施新類的模式時，將列出您定義的混合併可供使用。
+>[!NOTE]
+>
+>當建立實作組織定義之類的架構時，請記住混合僅可用於相容類。 由於您定義的類是新的，因此「添加混音」對話框中沒有列 *出相容混音* 。 您需要選取「建立新 **Mixin」** ，並定義混音以用於該類別。 下次構建實施新類的模式時，將列出您定義的混合併可供使用。
 
 ### 更改方案的類 {#change-class}
 
 在初始模式合成過程中，在保存模式之前，您可以隨時更改模式所基於的類。
 
->[!WARNING] 在更改課程之前，請務必小心。 Mixins僅與特定類別相容，因此變更類別會重設畫布，並移除您已新增至該點的任何欄位。
+>[!WARNING]
+>
+>在更改課程之前，請務必小心。 Mixins僅與特定類別相容，因此變更類別會重設畫布，並移除您已新增至該點的任何欄位。
 
 要更改類，請按一下編 **輯器** 「合成 *」部分中* 「類」旁邊的「指定 ** 」。
 
