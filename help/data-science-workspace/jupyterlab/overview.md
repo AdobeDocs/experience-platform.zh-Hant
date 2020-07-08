@@ -4,7 +4,7 @@ solution: Experience Platform
 title: JupyterLab使用指南
 topic: Overview
 translation-type: tm+mt
-source-git-commit: c48079ba997a7b4c082253a0b2867df76927aa6d
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '3647'
 ht-degree: 11%
@@ -33,7 +33,9 @@ Experience Platform的JupyterLab整合隨附架構變更、設計考量、自訂
 | **開發程式庫** | 在中 [!DNL Experience Platform], [!DNL JupyterLab] 提供預先安裝的 [!DNL Python]、R和PySpark程式庫。 如需支援 [的程式庫](#supported-libraries) ，請參閱附錄。 |
 | **程式庫控制器** | 當預先安裝的程式庫不符合您的需求時，可為Python和R安裝其他程式庫，並暫時儲存在隔離的容器中，以維持資料的完整性並保 [!DNL Platform] 持資料的安全。 有關詳細 [資訊](#kernels) ，請參閱內核部分。 |
 
->[!NOTE] 其他程式庫僅適用於安裝程式庫的作業階段。 啟動新會話時，必須重新安裝所需的任何其他庫。
+>[!NOTE]
+>
+>其他程式庫僅適用於安裝程式庫的作業階段。 啟動新會話時，必須重新安裝所需的任何其他庫。
 
 ## 與其他服務整 [!DNL Platform] 合 {#service-integration}
 
@@ -44,7 +46,9 @@ Experience Platform的JupyterLab整合隨附架構變更、設計考量、自訂
 * **[!DNL Sensei ML Framework]:**模型開發具備訓練和評分資料的能力，而且只要按一下，就能建立配方。
 * **[!DNL Experience Data Model (XDM)]:**標準化和互操作性是Adobe Experience Platform的主要概念。[Adobe推動的Experience Data Model(XDM)](https://www.adobe.com/go/xdm-home-en)，旨在標準化客戶體驗資料並定義客戶體驗管理的架構。
 
->[!NOTE] 上的 [!DNL Platform] 某些服務整合 [!DNL JupyterLab] 僅限於特定內核。 有關詳細資訊，請參 [閱](#kernels) 「內核」一節。
+>[!NOTE]
+>
+>上的 [!DNL Platform] 某些服務整合 [!DNL JupyterLab] 僅限於特定內核。 有關詳細資訊，請參 [閱](#kernels) 「內核」一節。
 
 ## 主要功能與常用作業
 
@@ -598,6 +602,8 @@ timedf.show()
 ```
 
 >[!TIP]
+>
+>
 >在Scala中，可以使 `sys.env()` 用在中聲明和返回值 `option`。 如此，若您知道變數只會在單次使用，就不需要定義變數。 以下示例從 `val userToken` 上述示例中取得，並聲明它為 `option` 替代項：
 > 
 ```scala
