@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Adobe隱私權JavaScript程式庫概觀
 topic: overview
 translation-type: tm+mt
-source-git-commit: 3b916ac5529db6ca383bf8bad56961bb1b8a0b0c
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '972'
+ht-degree: 5%
 
 ---
 
@@ -15,7 +18,9 @@ source-git-commit: 3b916ac5529db6ca383bf8bad56961bb1b8a0b0c
 
 Adobe隱 **私權JavaScript程式庫** ，讓資料掌控者自動擷取Experience Cloud解決方案針對特定網域產生的所有資料主體身分。 然後，使用 [Adobe Experience Platform Privacy Service提供的API](home.md)，這些身分識別可用於建立屬於這些資料主體的私人資料的存取和刪除要求。
 
->[!NOTE] 隱私權JS程式庫通常只需要安裝在隱私權相關頁面，也不需要安裝在網站或網域的所有頁面上。
+>[!NOTE]
+>
+>隱私權JS程式庫通常只需要安裝在隱私權相關頁面，也不需要安裝在網站或網域的所有頁面上。
 
 ## 函數
 
@@ -29,7 +34,9 @@ Adobe隱 **私權JavaScript程式庫** ，讓資料掌控者自動擷取Experien
 | `removeIdentities` | 從瀏覽器移除每個相符（有效）的識別。 傳回符合身分的陣列(`validIds`)，每個身分包含一個布林值，指 `isDeleteClientSide` 出此ID是否已刪除。 |
 | `retrieveThenRemoveIdentities` | 擷取符合身分的陣列(`validIds`)，然後從瀏覽器移除這些身分。 雖然此函式類似 `removeIdentities`，但您使用的Adobe解決方案在可能刪除之前需要存取請求時，最好使用此函式（例如在刪除請求中提供唯一識別碼之前必須先擷取此唯一識別碼）。 |
 
->[!NOTE] 而且 `removeIdentities` 只 `retrieveThenRemoveIdentities` 會從瀏覽器移除支援特定Adobe解決方案的身分識別。 例如，Adobe Audience Manager不會刪除儲存在第三方Cookie中的Demdex ID，而Adobe Target會刪除儲存其ID的所有Cookie。
+>[!NOTE]
+>
+>`removeIdentities` 而且 `retrieveThenRemoveIdentities` 只會從瀏覽器移除支援特定Adobe解決方案的身分。 例如，Adobe Audience Manager不會刪除儲存在第三方Cookie中的Demdex ID，而Adobe Target會刪除儲存其ID的所有Cookie。
 
 由於這三個函式都代表非同步進程，所以必須使用回呼或承諾來處理任何擷取的身分。
 
@@ -179,7 +186,7 @@ adobePrivacy.removeIdentities().then(handleRemovedIDs)…
 | 參數 | 說明 |
 | --- | --- |
 | `cookieDomainPeriods` | 用於Cookie追蹤的網域中的句號數（預設為2）。 |
-| `dataCenter` | Adobe資料收集資料中心。 只有在JavaScript網站信標中指定時，才應包含此項。 潛在值為： <ul><li>&quot;d1&quot;:聖荷西資料中心。</li><li>&quot;d2&quot;:達拉斯資料中心。</li></ul> |
+| `dataCenter` | Adobe資料收集資料中心。 只有在JavaScript網站信標中指定時，才應包含此項。 潛在值為： <ul><li>&quot;d1&quot;: 聖荷西資料中心。</li><li>&quot;d2&quot;: 達拉斯資料中心。</li></ul> |
 | `reportSuite` | 報表套裝ID，如JavaScript網站信標中所指定（例如「s_code.js」或「dtm」）。 |
 | `trackingServer` | 資料收集網域（非SSL）。 只有在JavaScript網站信標中指定時，才應包含此項。 |
 | `trackingServerSecure` | 資料收集網域(SSL)。 只有在JavaScript網站信標中指定時，才應包含此項。 |
