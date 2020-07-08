@@ -4,7 +4,10 @@ solution: Experience Platform
 title: 重設沙盒
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 974e93b1c24493734848151b9be00758f6a84578
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '122'
+ht-degree: 4%
 
 ---
 
@@ -59,4 +62,6 @@ curl -X PUT \
 }
 ```
 
->[!NOTE] 重設沙盒後，系統大約需要15分鐘才能布建。 布建後，沙盒的 `state` 變為「活動」或「失敗」。
+>[!NOTE]
+>
+>重設沙盒後，系統大約需要15分鐘才能布建。 布建後，沙盒的 `state` 變為「活動」或「失敗」。
