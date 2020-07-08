@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 行銷動作
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 1a835c6c20c70bf03d956c601e2704b68d4f90fa
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '536'
 ht-degree: 1%
@@ -154,7 +154,9 @@ PUT /marketingActions/custom/{marketingActionName}
 
 在後續的請求中，請注意 `name` 請求裝載中的與API呼叫 `{marketingActionName}` 中的相同。 與唯 `id` 讀和系統產生的原則不同，建立行銷動作需要您在建立行銷動作時 __ ，提供預期的行銷動作名稱。
 
->[!NOTE] 無法在呼叫 `{marketingActionName}` 中提供，將導致405錯誤（不允許使用方法），因為您不允許直接對端點執行PUT `/marketingActions/custom` 。 此外，如果 `name` 裝載中的不符合路徑中 `{marketingActionName}` 的，您會收到400錯誤（錯誤請求）。
+>[!NOTE]
+>
+>無法在呼叫 `{marketingActionName}` 中提供，將導致405錯誤（不允許使用方法），因為您不允許直接對端點執行PUT `/marketingActions/custom` 。 此外，如果 `name` 裝載中的不符合路徑中 `{marketingActionName}` 的，您會收到400錯誤（錯誤請求）。
 
 ```SHELL
 curl -X PUT \
@@ -197,7 +199,9 @@ curl -X PUT \
 
 您可以將DELETE請求傳送至您要移除的行銷 `{marketingActionName}` 動作，以刪除行銷動作。
 
->[!NOTE] 您無法刪除現有政策所參照的行銷動作。 嘗試這麼做會產生400錯誤（錯誤請求），並出現錯誤訊息，其中包含任何原則（或原則）的 `id` （或多個ID），其中包含您嘗試刪除之行銷動作的參考。
+>[!NOTE]
+>
+>您無法刪除現有政策所參照的行銷動作。 嘗試這麼做會產生400錯誤（錯誤請求），並出現錯誤訊息，其中包含任何原則（或原則）的 `id` （或多個ID），其中包含您嘗試刪除之行銷動作的參考。
 
 **API格式**
 
