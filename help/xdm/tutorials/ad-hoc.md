@@ -4,7 +4,10 @@ solution: Experience Platform
 title: 建立臨機結構
 topic: tutorials
 translation-type: tm+mt
-source-git-commit: 956d1e5b4a994c9ea52d818f3dd6d3ff88cb16b6
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '742'
+ht-degree: 2%
 
 ---
 
@@ -19,8 +22,8 @@ source-git-commit: 956d1e5b4a994c9ea52d818f3dd6d3ff88cb16b6
 
 本教學課程需要對體驗資料模型(XDM)系統有良好的認識。 開始本教學課程之前，請先閱讀下列XDM檔案：
 
-- [XDM系統概述](../home.md):XDM及其在Experience Platform中的實作概觀。
-- [架構構成基礎](../schema/composition.md):概述XDM架構的基本元件。
+- [XDM系統概述](../home.md): XDM及其在Experience Platform中的實作概觀。
+- [架構構成基礎](../schema/composition.md): 概述XDM架構的基本元件。
 
 在開始本教學課程之前，請先閱讀開 [發人員指南](../api/getting-started.md) ，以取得成功呼叫架構註冊表API所需的重要資訊。 這包括您 `{TENANT_ID}`的「容器」概念，以及提出要求所需的標題（請特別注意「接受」標題及其可能的值）。
 
@@ -38,7 +41,9 @@ POST /tenant/classes
 
 下列請求會建立新的XDM類別，由裝載中提供的屬性設定。 通過在數 `$ref` 組中提供 `https://ns.adobe.com/xdm/data/adhoc` 設定為的 `allOf` 屬性，此類繼承行為 `adhoc` 。 此請求還定義 `_adhoc` 了一個對象，該對象包含類的自定義欄位。
 
->[!NOTE] 在下定義的自訂欄 `_adhoc` 位會依臨機架構的使用案例而有所不同。 請參考適當教學課程中的特定工作流程，以根據使用案例，針對必要的自訂欄位。
+>[!NOTE]
+>
+>在下定義的自訂欄 `_adhoc` 位會依臨機架構的使用案例而有所不同。 請參考適當教學課程中的特定工作流程，以根據使用案例，針對必要的自訂欄位。
 
 ```shell
 curl -X POST \
@@ -216,7 +221,9 @@ curl -X POST \
 
 ## 檢視完整的臨機架構
 
->[!NOTE] 此步驟為可選步驟。 如果您不想檢查臨機架構的欄位結構，可跳至本教學課程結 [束時的](#next-steps) 「後續步驟」一節。
+>[!NOTE]
+>
+>此步驟為選填。如果您不想檢查臨機架構的欄位結構，可跳至本教學課程結 [束時的](#next-steps) 「後續步驟」一節。
 
 在建立臨機結構描述後，您就可以進行查詢(GET)請求，以擴充的形式檢視結構描述。 在GET請求中使用適當的「接受」標題即可完成，如下所示。
 
