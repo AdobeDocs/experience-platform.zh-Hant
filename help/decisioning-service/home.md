@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 決策服務
 topic: overview
 translation-type: tm+mt
-source-git-commit: c48079ba997a7b4c082253a0b2867df76927aa6d
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1592'
 ht-degree: 0%
@@ -40,7 +40,7 @@ ht-degree: 0%
 
 ## 如何運 [!DNL Decisioning Service] 作？
 
-當客戶透過傳入通道( [!DNL Decisioning Service] 例如您的網站或行動應用程式)與您的品牌互動時，可即時自訂體驗。 決策也可用來透過對外通道（例如電子郵件或推播通知）自訂訊息。
+當客戶透過傳入通道( [!DNL Decisioning Service] 例如您的網站或行動應用程式)與您的品牌互動時，可即時自訂體驗。 決策也可用來透過對外通道自訂訊息，例如電子郵件或推播通知。
 
 決策可以用很多方式做出。 一種方法是先後排除選項，直到僅剩一個或選項已縮減，且剩餘部分或從約簡集中隨機挑選成功者為止。 根據計算公式選擇成功選項的這種方法的變體。 合格選項的排名是使用函式來完成。 對於選件決策，該函式可計算成本、選件給企業的價值，並使用預先確定的選件被使用者接受的可能性。 產生的分數可用來排序選件。
 
@@ -68,7 +68,9 @@ ht-degree: 0%
 
 使用是 [!DNL Decisioning Service] 可選的，除了建立和管理實體所需的典型步驟外，只需要 [!DNL Profile] 幾個步驟。
 
->[!NOTE] 為了充份運用， [!DNL Real-time Customer Profile]此軟體直 [!DNL Decisioning Service] 接與描述檔存放區整合。 API呼叫只需要指定指定描述檔的其中一個身分。
+>[!NOTE]
+>
+>為了充份運用， [!DNL Real-time Customer Profile]此軟體直 [!DNL Decisioning Service] 接與描述檔存放區整合。 API呼叫只需要指定指定描述檔的其中一個身分。
 
 一般的步驟順序是從建立描述檔開始：
 
@@ -80,7 +82,7 @@ ht-degree: 0%
 
 此外，若要使 [!DNL Decisioning Service]用，請執行下列步驟：
 
-- 使用儲存庫API定義決策元件。 這些是構成決策策略的商業邏輯實體。 決策元件將自動編譯為由使用的格式 [!DNL Decision Service Runtime]。 資料庫API在下圖的左側說明。
+- 使用儲存庫API定義決策元件。 這些是構成決策策略的商業邏輯實體。 決策元件將自動編譯為由使用的格式 [!DNL Decision Service Runtime]。 資料庫API在下圖的左側顯示。
 - 呼叫執行階段API，以取得前一步驟所定義之商業邏輯的最佳選項。 API [!DNL Decision Service Runtime] 在下圖的右側說明。
 
 ![decisioning-API1](./images/decisioning-API1.png)
