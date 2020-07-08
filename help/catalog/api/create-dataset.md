@@ -4,7 +4,10 @@ solution: Experience Platform
 title: 建立資料集
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 6d24637dc6cc282f98288b6416e4a3b7cebe42ea
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '203'
+ht-degree: 1%
 
 ---
 
@@ -13,7 +16,9 @@ source-git-commit: 6d24637dc6cc282f98288b6416e4a3b7cebe42ea
 
 若要使用目錄API建立資料集，您必須知道 `$id` 資料集所依據的體驗資料模型(XDM)架構值。 一旦您擁有結構ID，就可以透過對目錄API中的端點提出POST要求來 `/datasets` 建立資料集。
 
->[!NOTE] 本檔案僅涵蓋如何在目錄中建立資料集物件。 有關如何建立、填入和監視資料集的完整步驟，請參閱下列教 [學課程](../datasets/create.md)。
+>[!NOTE]
+>
+>本檔案僅涵蓋如何在目錄中建立資料集物件。 有關如何建立、填入和監視資料集的完整步驟，請參閱下列教 [學課程](../datasets/create.md)。
 
 **API格式**
 
@@ -52,7 +57,9 @@ curl -X POST \
 | `name` | 要建立的資料集的名稱。 |
 | `schemaRef.id` | 資料 `$id` 集所依據之XDM架構的URI值。 |
 
->[!NOTE] 此示例使用 [parce](https://parquet.apache.org/documentation/latest/) file for its `containerFormat` property. 如需使用JSON檔案格式的範例，請參閱批次擷取開發 [人員指南](../../ingestion/batch-ingestion/api-overview.md)。
+>[!NOTE]
+>
+>此示例使用 [parce](https://parquet.apache.org/documentation/latest/) file for its `containerFormat` property. 如需使用JSON檔案格式的範例，請參閱批次擷取開發 [人員指南](../../ingestion/batch-ingestion/api-overview.md)。
 
 **回應**
 
