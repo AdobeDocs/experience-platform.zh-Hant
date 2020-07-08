@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 使用API管理決策服務實體
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: c48079ba997a7b4c082253a0b2867df76927aa6d
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '7207'
 ht-degree: 0%
@@ -48,7 +48,9 @@ ht-degree: 0%
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
->[!NOTE] 如需中沙盒的詳細資訊 [!DNL Platform]，請參閱沙 [盒概述檔案](../../sandboxes/home.md)。
+>[!NOTE]
+>
+>如需中沙盒的詳細資訊 [!DNL Platform]，請參閱沙 [盒概述檔案](../../sandboxes/home.md)。
 
 所有包含裝載(POST、PUT、PATCH)的請求都需要額外的標題：
 
@@ -102,7 +104,9 @@ API裝載格式會以或標 `Accept` 題協 `Content-Type` 商。 {FORMAT}依據
 
 容器的上 [!DNL Platform] 下文 [!DNL Decisioning Service] 目前為 `dma_offers`。
 
->[!NOTE] 我們很快 [!DNL Platform Decisioning Containers] 就會改為 `acp`。 篩選是選用的，但篩選條件僅限篩 `dma_offers` 選條件需要在日後發行時進行編輯。 要準備此更改，客戶端不應使用篩選器，或應用兩個產品上下文作為其篩選器。
+>[!NOTE]
+>
+>我們很快 [!DNL Platform Decisioning Containers] 就會改為 `acp`。 篩選是選用的，但篩選條件僅限篩 `dma_offers` 選條件需要在日後發行時進行編輯。 要準備此更改，客戶端不應使用篩選器，或應用兩個產品上下文作為其篩選器。
 
 **請求**
 
@@ -233,7 +237,9 @@ curl -X GET {ENDPOINT_PATH}/{CONTAINER_ID}/instances/{INSTANCE_ID} \
   -H 'x-request-id: {NEW_UUID}'  
 ```
 
->[!NOTE] 雖然應 `instanceId` 用程式會以路徑參數的形式提供，但應盡可能不要自行建立路徑，而應依循清單和搜尋作業所包含之例項的連結。 如需詳‎細資訊，請參閱‎6.4.4和6.4.6節。
+>[!NOTE]
+>
+>雖然應 `instanceId` 用程式會以路徑參數的形式提供，但應盡可能不要自行建立路徑，而應依循清單和搜尋作業所包含之例項的連結。 如需詳‎細資訊，請參閱‎6.4.4和6.4.6節。
 
 **回應**
 
@@ -326,7 +332,9 @@ curl -X GET {ENDPOINT_PATH}/{CONTAINER_ID}/instances?schema="{SCHEMA_ID}" \
 }
 ```
 
->[!NOTE] 結果包含給定方案或此清單第一頁的實例。 請注意，例項可以符合多個架構，因此可以出現在多個清單中。
+>[!NOTE]
+>
+>結果包含給定方案或此清單第一頁的實例。 請注意，例項可以符合多個架構，因此可以出現在多個清單中。
 
 頁面資源是瞬時的，是唯讀的； 無法更新或刪除。 該尋呼模型在延長的時間段內提供對大型清單子集的隨機訪問，而不維護任何每個客戶端狀態。
 
@@ -347,22 +355,17 @@ curl -X GET {ENDPOINT_PATH}/{CONTAINER_ID}/instances?schema="{SCHEMA_ID}" \
 篩選清單結果是可能的，且與分頁機制無關。 篩選器只需略過清單順序中的例項，或明確要求僅包含滿足特定條件的例項。 客戶端可以請求屬性表達式作為篩選器，也可以指定URI清單作為實例的主鍵值。
 
 - **`property`**: 包含屬性名稱路徑，後面接著比較運算子，後面接著值。 <br/>
-傳回的例項清單包含運算式評估為true的例項。 例如，假設該例項具有裝載屬性 
-`status` 而可能的值是， `draft`則查詢參 `approved`數只返回 `archived``deleted``property=_instance.status==approved` 已批准狀態的實例。 <br/>
-<br/>
-要與給定值進行比較的屬性被標識為路徑。 個別路徑元件由「.」分隔，如： `_instance.xdm:prop1.xdm:prop1_1.xdm:prop1_1`<br/>
+傳回的例項清單包含運算式評估為true的例項。 例如，假設例項具有裝載屬性， `status` 且可能的值為 `draft`, `approved`則查詢參數只 `archived``deleted``property=_instance.status==approved` 會傳回已核准狀態的例項。 <br/>
 
-對於具有字串、數值或日期／時間值的屬性，允許的運算子為： `==`、 `!=`、 `<`、 `<=`和 `>` 等 `>=`。 此外，對於具有字串值的屬性，可以使 `~` 用運算子。 運算 `~` 子會根據規則運算式來比對指定屬性。 屬性的字串值必須與要包 **含在篩選結果中的實體** 的整個表達式相匹配。 例如，在屬性值內的任 `cars` 何位置尋找字串時，規則運算式必須為 `.*cars.*`。 沒有前導或尾隨 `.*`，則只有屬性值分別以開頭或結尾的實體 `cars`才會符合。 對於運 `~` 算子，字母字元的比較不區分大小寫。 對於所有其他運算子，比較會區分大小寫。<br/><br/>
-篩選運算式中不僅可使用例項裝載屬性。 以相同的方式比較包絡特性，例如： `property=repo:lastModifiedDate>=2019-02-23T16:30:00.000Z`. <br/>
-<br/>
-可 `property` 以重複查詢參數，以便套用多個篩選條件，例如返回在特定日期之後和特定日期之前上次修改的所有例項。 這些運算式中的值必須進行URL編碼。 如果未指定運算式，且屬性名稱只會列出符合條件的項目，即是具有指定名稱之屬性的項目。<br/>
-<br/>
 
-- **`id`**: 有時，清單需要依例項的URI來篩選。 查 `property` 詢參數可用來篩選一個例項，但若要取得多個例項，則可向請求提供URI清單。 參 `id` 數會重複，每個出現項都指定一個URI值， `id={URI_1}&id={URI_2},…` URI值必須經過URL編碼。
 
-分頁結果將作為特殊的mime類型返回 `application/vnd.adobe.platform.xcore.hal+json; schema="https://ns.adobe.com/experience/xcore/hal/results"`。
+**`id`**: 有時，清單需要依例項的URI來篩選。 查 `property` 詢參數可用來篩選一個例項，但若要取得多個例項，則可向請求提供URI清單。 參 `id` 數會重複，每個出現項都指定一個URI值， `id={URI_1}&id={URI_2},…` URI值必須經過URL編碼。`!=``<``~``~`****`cars``.*cars.*``.*``cars``~`<br/><br/>`property=repo:lastModifiedDate>=2019-02-23T16:30:00.000Z`<br/><br/>`property`<br/><br/>
+
+- 分頁結果將作為特殊的mime類型返回 `application/vnd.adobe.platform.xcore.hal+json; schema="https://ns.adobe.com/experience/xcore/hal/results"`。`property``id``id={URI_1}&id={URI_2},…`
 
 **請求**
+
+**回應**
 
 ```shell
 curl -X GET {ENDPOINT_PATH}/{CONTAINER_ID}/instances?schema="{SCHEMA_ID}"&orderby${ORDER_BY_PROPERTY_PATH}&property={TIMESTAMP_PROPERTY_PATH}>=2019-02-19T03:19:03.627Z&property${TIMESTAMP_PROPERTY_PATH}<=2019-06-19T03:19:03.627Z \ 
@@ -373,7 +376,7 @@ curl -X GET {ENDPOINT_PATH}/{CONTAINER_ID}/instances?schema="{SCHEMA_ID}"&orderb
   -H 'x-request-id: {NEW_UUID}'  
 ```
 
-**回應**
+**回應包含JSON屬性結果內的結果項目清單，旁邊是兩個屬性，這些屬性會指出此頁面上的結果數目，以及篩選清單中從剛傳回的頁面開始的項目總數。**
 
 ```json
 { 
@@ -435,13 +438,13 @@ curl -X GET {ENDPOINT_PATH}/{CONTAINER_ID}/instances?schema="{SCHEMA_ID}"&orderb
 } 
 ```
 
-回應包含JSON屬性結果內的結果項目清單，旁邊是兩個屬性，這些屬性會指出此頁面上的結果數目，以及篩選清單中從剛傳回的頁面開始的項目總數。
+全文搜尋與結構化查詢
 
-### 全文搜尋與結構化查詢
-
-如果客戶希望根據字串屬性中包含的術語提供更複雜的篩選條件和搜索實例，儲存庫會提供更強大的搜索API。
+### 如果客戶希望根據字串屬性中包含的術語提供更複雜的篩選條件和搜索實例，儲存庫會提供更強大的搜索API。
 
 **請求**
+
+**除了清單API中的分頁和篩選參數外，此API還允許客戶新增全文和布林查詢參數。**
 
 ```shell
 curl -X GET {ENDPOINT_PATH}/{CONTAINER_ID}/queries/core/search?schema="{SCHEMA_ID}"&… \ 
@@ -454,21 +457,21 @@ curl -X GET {ENDPOINT_PATH}/{CONTAINER_ID}/queries/core/search?schema="{SCHEMA_I
 
 <!-- TODO: needs example response -->
 
-除了清單API中的分頁和篩選參數外，此API還允許客戶新增全文和布林查詢參數。
-
 全文搜尋由下列參數控制：
 
-- **`q`**: 包含以空格分隔的無序詞語清單，這些詞語在與例項的任何字串屬性相符之前，先加以標準化。 字串屬性會針對詞語進行分析，而且這些詞語也會標準化。 搜尋查詢會嘗試比對參數中指定的一或多個詞 `q` 語。 字元+、-、=和&amp;、 ||, >, &lt;,!,(,), {, }, [,],^, &quot;, ~, *, ?, :, /對於確定查詢字串中的字詞邊界有特殊含義，當出現在應與字元匹配的標籤中時，應使用反斜線進行逸出。 查詢字串可以用雙引號括住，以取得精確的字串比對，並逸出特殊字元。
-- **`field`**: 如果搜尋詞只應與屬性的子集相符，則欄位參數可指出該屬性的路徑。 可以重複此參數，以指出應該與之匹配的多個屬性。
+**`q`**: 包含以空格分隔的無序詞語清單，這些詞語在與例項的任何字串屬性相符之前，先加以標準化。 字串屬性會針對詞語進行分析，而且這些詞語也會標準化。 搜尋查詢會嘗試比對參數中指定的一或多個詞 `q` 語。 字元+、-、=和&amp;、 ||, >, &lt;,!,(,), {, }, [,],^, &quot;, ~, *, ?, :, /對於確定查詢字串中的字詞邊界有特殊含義，當出現在應與字元匹配的標籤中時，應使用反斜線進行逸出。 查詢字串可以用雙引號括住，以取得精確的字串比對，並逸出特殊字元。
+
+- **`field`**: 如果搜尋詞只應與屬性的子集相符，則欄位參數可指出該屬性的路徑。 可以重複此參數，以指出應該與之匹配的多個屬性。`q`[]
 - **`qop`**: 包含用於修改搜索的匹配行為的控制參數。 當參數設為且所有搜尋詞必須相符時，當參數不存在或其值設為或任一詞語可計算相符時。
+- **`qop`**更新和修補實例
 
-### 更新和修補實例
-
-若要更新例項，用戶端可以一次覆寫完整的屬性清單，或使用JSON PATCH請求來控制個別屬性值，包括清單。
+### 若要更新例項，用戶端可以一次覆寫完整的屬性清單，或使用JSON PATCH請求來控制個別屬性值，包括清單。
 
 在這兩種情況下，請求的URL都會指定實體例項的路徑，在這兩種情況下，回應都會是JSON收據裝載，就像建立作業傳回 [的一樣](#create-instances)。 用戶端最好應使用 `Location` 其從先前此物件的API呼叫所收到的標頭或HAL連結，作為此API的完整URL路徑。 如果不可能，客戶端可以從和構建 `containerId` URL `instanceId`。
 
-**請求** (PUT)
+**請求** (PUT)`Location``containerId``instanceId`
+
+**請求** （修補程式）
 
 ```shell
 curl -X PUT {ENDPOINT_PATH}/{CONTAINER_ID}/instances/{INSTANCE_ID} \ 
@@ -488,7 +491,7 @@ curl -X PUT {ENDPOINT_PATH}/{CONTAINER_ID}/instances/{INSTANCE_ID} \
 }'  
 ```
 
-**請求** （修補程式）
+**PATCH請求會應用這些指示，然後根據模式和與PUT請求相同的實體和參照完整性規則驗證生成的實體。**
 
 ```shell
 curl -X PATCH {ENDPOINT_PATH}/{CONTAINER_ID}/instances/{INSTANCE_ID} \ 
@@ -505,24 +508,24 @@ curl -X PATCH {ENDPOINT_PATH}/{CONTAINER_ID}/instances/{INSTANCE_ID} \
 ]'
 ```
 
-PATCH請求會應用這些指示，然後根據模式和與PUT請求相同的實體和參照完整性規則驗證生成的實體。
-
 **控制屬性值編輯**
 
-您可以使用下列註解，防止在建立和／或更新時設定屬性：
+**您可以使用下列註解，防止在建立和／或更新時設定屬性：**
 
-- **`"meta:usereditable"`**: 布爾值——當請求源自使用者代理（以使用者或技術帳戶存取Token來識別呼叫者）時，註解為的屬性不 `"meta:usereditable": false` 應出現在裝載中。 如果是，則它們不得具有與當前設定的值不同的值。 如果值不同，則更新請求或修補程式請求將被拒絕，狀態為422「不可處理實體」。
+**`"meta:usereditable"`**: 布爾值——當請求源自使用者代理（以使用者或技術帳戶存取Token來識別呼叫者）時，註解為的屬性不 `"meta:usereditable": false` 應出現在裝載中。 如果是，則它們不得具有與當前設定的值不同的值。 如果值不同，則更新請求或修補程式請求將被拒絕，狀態為422「不可處理實體」。
+
 - **`"meta:immutable"`**: Boolean —— 設定注釋後， `"meta:immutable": true` 不能更改這些屬性。 這適用於來自使用者、技術帳戶整合或特殊服務的要求。
-
-**測試並行更新**
+- **測試並行更新**`"meta:immutable": true`
 
 有些情況下，多個客戶端嘗試並行更新實例。 該儲存庫在計算節點群集上操作，而不需要集中事務管理。 為避免一個客戶端同時寫入另一個客戶端編寫的實例，客戶端可以使用條件更新或修補程式請求。 通過在頭 `etag` 部指定字 `If-Match` 符串，儲存庫確保只有第一個請求成功，而使用相同值的其他客戶機的後續請求 `etag` 將失敗。 值隨 `etag` 著實例的每次修改而改變。 客戶端必須檢索實例以獲取最新 `etag` 值，然後，在嘗試更新的眾多客戶中，只有一個客戶端能夠使用該值成功。 其他客戶會收到409衝突訊息。
 
-### 刪除例項
+刪除例項`etag``If-Match``etag``etag``etag`
 
-可以使用DELETE調用刪除實例。 用戶端最好將其 `Location` 從先前API呼叫中收到的標題或HAL連結當做完整的URL路徑。 如果不可能，客戶端可以從和物理 `containerId` 構造URL `instanceId`。
+### 可以使用DELETE調用刪除實例。 用戶端最好將其 `Location` 從先前API呼叫中收到的標題或HAL連結當做完整的URL路徑。 如果不可能，客戶端可以從和物理 `containerId` 構造URL `instanceId`。
 
-**請求**
+**請求**`instanceId`
+
+**回應**
 
 ```shell
 curl -X DELETE {ENDPOINT_PATH}/{CONTAINER_ID}/instances/{INSTANCE_ID} \ 
@@ -533,7 +536,7 @@ curl -X DELETE {ENDPOINT_PATH}/{CONTAINER_ID}/instances/{INSTANCE_ID} \
   -H 'x-request-id: {NEW_UUID}'  
 ```
 
-**回應**
+在收到刪除請求時，儲存庫會檢查是否有任何其他實例（包括任何方案）仍引用要刪除的實例。 在分佈式、高可用性系統中，不能立即檢查參照完整性。 當定義了外鍵關係時，將非同步執行檢查。 這會導致對刪除請求結果的回應稍微延遲。 當執行這些檢查時，立即響應包括狀態202已接受和連結，用於檢查標題中刪除操作的結 `Location` 果。 然後，客戶應檢查該連結以取得結果。**
 
 ```json
 { 
@@ -549,15 +552,15 @@ curl -X DELETE {ENDPOINT_PATH}/{CONTAINER_ID}/instances/{INSTANCE_ID} \
 } 
 ```
 
-在收到刪除請求時，儲存庫會檢查是否有任何其他實例（包括任何方案）仍引用要刪除的實例。 在分佈式、高可用性系統中，不能立即檢查參照完整性。 當定義了外鍵關係時，將非同步執行檢查。 這會導致對刪除請求結果的回應稍微延遲。 當執行這些檢查時，立即響應包括狀態202已接受和連結，用於檢查標題中刪除操作的結 `Location` 果。 然後，客戶應檢查該連結以取得結果。
-
 如果發現某個實例引用了要刪除的實例，則結果是刪除操作的拒絕。 如果未發現其他外鍵引用，則完成刪除。 如果結果尚未決定，則回應會指出在202年接受的另一個回應中，標題相同，並 `Location` 會要求客戶繼續檢查。 確定結果後，響應將指示狀態為200正確且響應的有效負載將包含原始刪除請求的結果。 請注意，200 Ok回應僅表示已知結果，回應主體將包含確認或拒絕刪除請求。
 
-## 建立選件及其子元件
+建立選件及其子元件`Location`
 
-上節所述的API統一套用至所有類型的商業物件。 建立選件和活動之間的唯一差異，是標 `content-type` 題會注明JSON結構描述為符合結構描述之請求的JSON裝載。 因此，以下幾節只需關注這些方案及其之間的關係。
+## 上節所述的API統一套用至所有類型的商業物件。 建立選件和活動之間的唯一差異，是標 `content-type` 題會注明JSON結構描述為符合結構描述之請求的JSON裝載。 因此，以下幾節只需關注這些方案及其之間的關係。
 
 當使用內容類型的API `application/vnd.adobe.platform.xcore.hal+json; schema="{SCHEMA_ID}"`時，例項本身的屬性會內嵌 `_instance` 在有屬性的屬性中 `_links` 。 此格式將是所有實例的一般格式：
+
+[!NOTE]`_instance``_links`
 
 ```json
 { 
@@ -571,14 +574,16 @@ curl -X DELETE {ENDPOINT_PATH}/{CONTAINER_ID}/instances/{INSTANCE_ID} \
 }
 ```
 
->[!NOTE] 為簡單起見，在所有JSON片段中，只會說明例項屬性，而且只有在需要時才會顯示封套屬性和_links區段。
+>[!NOTE]為簡單起見，在所有JSON片段中，只會說明例項屬性，而且只有在需要時才會顯示封套屬性和_links區段。
+>
+>一般選件屬性
 
-### 一般選件屬性
+### 選件是一種決策選項，選件的JSON結構描述會繼承每個選項例項將擁有的標準選項屬性。
 
-選件是一種決策選項，選件的JSON結構描述會繼承每個選項例項將擁有的標準選項屬性。
+**`@id`** -每個選項的唯一標識符，它是主鍵，用於從其他對象引用該選項。 當建立實例時，將分配此屬性，該屬性是不可變的，且不可編輯。
 
-- **`@id`** -每個選項的唯一標識符，它是主鍵，用於從其他對象引用該選項。 當建立實例時，將分配此屬性，該屬性是不可變的，且不可編輯。
 - **`xdm:name`** -每個選項都有一個用於搜索和顯示的名稱。 名稱不是不可變的，不能用於唯一標識實例。 名稱可自由選取，但應在選件例項間具有唯一性。
+- 如需 [完整的cURL語法](#updating-and-patching-instances) ，請參閱更新和修補例項。 參數 `schemaId` 必須是 `https://ns.adobe.com/experience/offer-management/personalized-offer` ，或 `https://ns.adobe.com/experience/offer-management/fallback-offer` 如果選件是後援選件。
 
 ```json
 { 
@@ -590,19 +595,19 @@ curl -X DELETE {ENDPOINT_PATH}/{CONTAINER_ID}/instances/{INSTANCE_ID} \
 }
 ```
 
-如需 [完整的cURL語法](#updating-and-patching-instances) ，請參閱更新和修補例項。 參數 `schemaId` 必須是 `https://ns.adobe.com/experience/offer-management/personalized-offer` ，或 `https://ns.adobe.com/experience/offer-management/fallback-offer` 如果選件是後援選件。
+每個選件例項都可以有一組選擇性屬性，這些屬性僅代表該例項。 不同選件可針對這些屬性使用不同的索引鍵，但值必須是字串。 這些屬性可用於決策和分段規則。 您也可以存取這些內容，以匯整決定的體驗，進一步自訂訊息。[](#updating-and-patching-instances)`schemaId``https://ns.adobe.com/experience/offer-management/personalized-offer``https://ns.adobe.com/experience/offer-management/fallback-offer`
 
-每個選件例項都可以有一組選擇性屬性，這些屬性僅代表該例項。 不同選件可針對這些屬性使用不同的索引鍵，但值必須是字串。 這些屬性可用於決策和分段規則。 您也可以存取這些內容，以匯整決定的體驗，進一步自訂訊息。
+優惠生命週期
 
-### 優惠生命週期
-
-有一個簡單的狀態轉換流，所有選項都將遵循。 他們從草案狀態開始，等他們準備好時，他們的狀態將設為批准。 當其結束日期過後，可將其移入封存狀態。 在該狀態下，通過將它們再次移入起草狀態，可以刪除或重複使用它們。
+### 有一個簡單的狀態轉換流，所有選項都將遵循。 他們從草案狀態開始，等他們準備好時，他們的狀態將設為批准。 當其結束日期過後，可將其移入封存狀態。 在該狀態下，通過將它們再次移入起草狀態，可以刪除或重複使用它們。
 
 ![](../images/entities/offer-lifecycle.png)
 
-- **`xdm:status`** -此屬性用於實例的生命週期管理。 此值代表工作流程狀態，用來指出選件是否仍在建置中（值=草稿）、執行階段通常可考慮（值=核准），或是不應再使用（值=封存）。
+**`xdm:status`** -此屬性用於實例的生命週期管理。 此值代表工作流程狀態，用來指出選件是否仍在建置中（值=草稿）、執行階段通常可考慮（值=核准），或是不應再使用（值=封存）。
 
-對實例執行簡單的PATCH操作通常用於僅操縱屬 `xdm:status` 性：
+- 對實例執行簡單的PATCH操作通常用於僅操縱屬 `xdm:status` 性：
+
+如需 [完整的cURL語法](#updating-and-patching-instances) ，請參閱更新和修補例項。 參數 `schemaId` 必須是 `https://ns.adobe.com/experience/offer-management/personalized-offer` ，或 `https://ns.adobe.com/experience/offer-management/fallback-offer` 如果選件是後援選件。
 
 ```json
 [
@@ -614,14 +619,14 @@ curl -X DELETE {ENDPOINT_PATH}/{CONTAINER_ID}/instances/{INSTANCE_ID} \
 ]
 ```
 
-如需 [完整的cURL語法](#updating-and-patching-instances) ，請參閱更新和修補例項。 參數 `schemaId` 必須是 `https://ns.adobe.com/experience/offer-management/personalized-offer` ，或 `https://ns.adobe.com/experience/offer-management/fallback-offer` 如果選件是後援選件。
+表示和位置[](#updating-and-patching-instances)`schemaId``https://ns.adobe.com/experience/offer-management/personalized-offer``https://ns.adobe.com/experience/offer-management/fallback-offer`
 
-### 表示和位置
-
-選件是具有內容表示的決策選項。 當做出決定時，會選擇該選項，並使用其識別碼來取得需要提供之位置的內容或內容參考。 選件可以有多個表示法，但每個表示法都需要有不同的放置參照。 這可確保在給定位置時，可以明確確定表示。
+### 選件是具有內容表示的決策選項。 當做出決定時，會選擇該選項，並使用其識別碼來取得需要提供之位置的內容或內容參考。 選件可以有多個表示法，但每個表示法都需要有不同的放置參照。 這可確保在給定位置時，可以明確確定表示。
 在決策操作期間，與活動對象一起確定放置。 沒有以該位置作為參照的表示法的選件會自動從選擇清單中移除。
 
 在將表示法新增至選件之前，放置例項必須存在。 這些例項會建立結構識別碼`https://ns.adobe.com/experience/offer-management/offer-placement`。
+
+如需 [完整的cURL語法](#updating-and-patching-instances) ，請參閱更新和修補例項。 參數 `schemaId` 必須是 `https://ns.adobe.com/experience/offer-management/personalized-offer` ，或 `https://ns.adobe.com/experience/offer-management/fallback-offer` 如果選件是後援選件。
 
 ```json
 {
@@ -636,47 +641,47 @@ curl -X DELETE {ENDPOINT_PATH}/{CONTAINER_ID}/instances/{INSTANCE_ID} \
 } 
 ```
 
-如需 [完整的cURL語法](#updating-and-patching-instances) ，請參閱更新和修補例項。 參數 `schemaId` 必須是 `https://ns.adobe.com/experience/offer-management/personalized-offer` ，或 `https://ns.adobe.com/experience/offer-management/fallback-offer` 如果選件是後援選件。
+Placement **實例** 可具有以下屬性：`schemaId``https://ns.adobe.com/experience/offer-management/personalized-offer``https://ns.adobe.com/experience/offer-management/fallback-offer`
 
-Placement **實例** 可具有以下屬性：
+**`xdm:name`** -包含指定的位置名稱，以在人機互動和使用者介面中參照。**
 
-- **`xdm:name`** -包含指定的位置名稱，以在人機互動和使用者介面中參照。
 - **`xdm:description`** -用於傳達在整體訊息傳遞中如何使用此位置內容的人類可讀意圖。 當傳送渠道定義新位置時，他們可以在此屬性中新增更多資訊，讓內容建立者可以據以建立或選擇內容。 這些指令不會正式解釋或執行。 這處房產只是表達意圖的場所。
 - **`xdm:channel`** -渠道的URI。 頻道指出動態內容的傳送位置。 渠道限制不僅用於傳達將使用選件的位置，還用於判斷用於體驗的內容編輯器或驗證器。
 - **`xdm:componentType`** -模型標識符，即URI，用於可在此位置描述的位置中顯示的內容。 元件類型包括： 影像連結、html或純文字。 每個元件類型可能暗示內容項目可能具有的一組特定屬性（模型）。 可以擴展元件類型清單。 有三個預先定義的元件類型值：
-   - `https://ns.adobe.com/experience/offer-management/content-component-imagelink`
+- `https://ns.adobe.com/experience/offer-management/content-component-imagelink`
    - `https://ns.adobe.com/experience/offer-management/content-component-text`
    - `https://ns.adobe.com/experience/offer-management/content-component-html`
-- **`xdm:contentTypes`**，此位置中預期元件的介質類型的約束。 一種元件類型（例如不同的影像格式）可能有多種媒體類型。
+   - **`xdm:contentTypes`**，此位置中預期元件的介質類型的約束。 一種元件類型（例如不同的影像格式）可能有多種媒體類型。
+- **選件中** ，表示項目在陣列屬性中具有物件結構 `xdm:representations`。 每個項目都可以有下列屬性：
 
-**選件中** ，表示項目在陣列屬性中具有物件結構 `xdm:representations`。 每個項目都可以有下列屬性：
+**`xdm:placement`** -此屬性包含對放置實例的引用。 當表示法新增至選件時，會檢查該值。 具有該URI的位置實例必須存在，且不能標籤為已刪除。 此外，還會執行檢查，以確保選件實例的放置參考值沒有兩個具有相同值的表示法。**`xdm:representations`
 
-- **`xdm:placement`** -此屬性包含對放置實例的引用。 當表示法新增至選件時，會檢查該值。 具有該URI的位置實例必須存在，且不能標籤為已刪除。 此外，還會執行檢查，以確保選件實例的放置參考值沒有兩個具有相同值的表示法。
 - **`xdm:components`** -內容元件是與特定選件表示法相關聯的片段。 這些片段稍後會用來構成使用者體驗。 請注意，決策服務本身並不構成完整的使用者體驗。 以下屬性是每個元件模型的一部分。
-   - **`@type`** -此屬性標識元件類型。 這個概念的另一個名稱是內容片段模型。 組 `@type` 件只是由組合最終用戶體驗的應用程式或服務定義的模型的URI。
-   - **`repo:id`** -此屬性包含儲存資產的儲存庫中元件的主資源的全局唯一、不可變的標識符。
+- **`@type`** -此屬性標識元件類型。 這個概念的另一個名稱是內容片段模型。 組 `@type` 件只是由組合最終用戶體驗的應用程式或服務定義的模型的URI。
+   - **`repo:id`** -此屬性包含儲存資產的儲存庫中元件的主資源的全局唯一、不可變的標識符。`@type`
    - **`repo:name`** -此屬性包含儲存庫中資產的人工可讀名稱。 此名稱是用戶定義的，不保證是唯一的。
    - **`repo:resolveURL`** -此屬性包含一個唯一的資源定位器，用於讀取內容儲存庫中的資產。 這樣，在用戶端不瞭解要呼叫的API的情況下，取得資產會更輕鬆。 URL會傳回資產主要資源的位元組。
    - **`dc:format`** -此屬性來自Dublin Core Metadata Initiative。 該格式可用於確定顯示或操作該資源所需的軟體、硬體或其它設備。 建議的最佳實務是從受控辭彙中選取值（例如定義電腦媒體格式的網際網路媒體類型清單）。
    - **`dc:language`** -此屬性包含資源的語言或語言。 語言在IETF RFC 3066中定義的語言代碼中指定。
+   - 屬性中表示了三種預定義的元件 `@type` 類型：
 
-屬性中表示了三種預定義的元件 `@type` 類型：
+https<span></span>://ns.adobe.com/experience/offer-management/content-component-imagelink
 
-- https<span></span>://ns.adobe.com/experience/offer-management/content-component-imagelink
 - https<span></span>://ns.adobe.com/experience/offer-management/content-component-text
 - https<span></span>://ns.adobe.com/experience/offer-management/content-component-html
+- 視屬性的值而定， `@type` 將包 `xdm:components` 含其他屬性：
 
-視屬性的值而定， `@type` 將包 `xdm:components` 含其他屬性：
+**`xdm:linkURL`** -當元件為影像連結時顯示。 此屬性將包含與影像關聯的連結，當使 `user-agent` 用者與選件內容互動時，該連結將導覽至該連結。`xdm:components`
 
-- **`xdm:linkURL`** -當元件為影像連結時顯示。 此屬性將包含與影像關聯的連結，當使 `user-agent` 用者與選件內容互動時，該連結將導覽至該連結。
-- **`xdm:copyline`** -當元件為文字時使用。 除了參照文字資產（例如，對於可包含格式的長篇文字選件）外，短文字字串也可以直接儲存在xdm:copyline屬性中。
+- **`xdm:copyline`** -當元件是文本時使用。 除了參照文字資產（例如，對於可包含格式的長篇文字選件）外，短文字字串也可以直接儲存在xdm:copyline屬性中。`user-agent`
+- **`xdm:copyline`**用戶端可以使用其他屬性來設定和評估上下文處理指示。 例如，「選件UI程式庫」用戶端會新增下列選用屬性，以更輕鬆地處理顯示：
 
-用戶端可以使用其他屬性來設定和評估上下文處理指示。 例如，「選件UI程式庫」用戶端會新增下列選用屬性，以更輕鬆地處理顯示：
+在陣列中的每個項 `xdm:components` 目內，選件程式庫UI用戶端會新增下列屬性。 如果不瞭解對UI的影響，則不應刪除或處理這些屬性：
 
-- 在陣列中的每個項 `xdm:components` 目內，選件程式庫UI用戶端會新增下列屬性。 如果不瞭解對UI的影響，則不應刪除或處理這些屬性：
-   - **`offerui:previewThumbnail`** -此為選用屬性，選件程式庫UI會用來顯示資產的轉譯。 此轉譯與資產本身不同。 例如，內容可以是HTML，而轉譯是點陣圖影像，只顯示其近似值。 此（低品質）轉譯會顯示在選件的呈現區塊中。
+- **`offerui:previewThumbnail`** -此為選用屬性，選件程式庫UI會用來顯示資產的轉譯。 此轉譯與資產本身不同。 例如，內容可以是HTML，而轉譯是點陣圖影像，只顯示其近似值。 此（低品質）轉譯會顯示在選件的呈現區塊中。
+   - **`offerui:previewThumbnail`**選件實例上的PATCH操作示例說明如何操作表示法：
 
-選件實例上的PATCH操作示例說明如何操作表示法：
+如需 [完整的cURL語法](#updating-and-patching-instances) ，請參閱更新和修補例項。 參數 `schemaId` 必須是 `https://ns.adobe.com/experience/offer-management/personalized-offer` ，或 `https://ns.adobe.com/experience/offer-management/fallback-offer` 如果選件是後援選件。
 
 ```json
 [
@@ -697,22 +702,22 @@ Placement **實例** 可具有以下屬性：
 ]' 
 ```
 
-如需 [完整的cURL語法](#updating-and-patching-instances) ，請參閱更新和修補例項。 參數 `schemaId` 必須是 `https://ns.adobe.com/experience/offer-management/personalized-offer` ，或 `https://ns.adobe.com/experience/offer-management/fallback-offer` 如果選件是後援選件。
-
 當尚未有屬性時，PATCH操作可能 `xdm:representations` 失敗。 在這種情況下，上述添加操作前面可能有一個建立陣列的添加操作， `xdm:representations` 或者單個添加操作直接設定陣列。
-描述的結構和屬性用於所有選件類型、個人化選件以及備援選件。 以下兩節說明個人化選件各方面的限制與決策規則。
+描述的結構和屬性用於所有選件類型、個人化選件以及備援選件。 以下兩節說明個人化選件各方面的限制與決策規則。`schemaId``https://ns.adobe.com/experience/offer-management/personalized-offer``https://ns.adobe.com/experience/offer-management/fallback-offer`
 
-## 設定選件限制
+設定選件限制`xdm:representations``xdm:representations`
 
-### 日曆限制
+## 日曆限制
 
-一般而言，決策選項可提供作為日曆限制的開始和結束日期和時間。 屬性嵌入在屬性中 `xdm:selectionConstraint`:
+### 一般而言，決策選項可提供作為日曆限制的開始和結束日期和時間。 屬性嵌入在屬性中 `xdm:selectionConstraint`:
 
-- **`xdm:startDate`** -此屬性指示開始日期和時間。 該值是按RFC 3339規則格式化的字串，例如，此時間戳： 「2019-06-13T11:21:23.356Z」。
+**`xdm:startDate`** -此屬性指示開始日期和時間。 該值是按RFC 3339規則格式化的字串，例如，此時間戳： 「2019-06-13T11:21:23.356Z」。
 尚未到達其開始日期和時間的決策選項在決策中尚未被視為合格。
-- **`xdm:endDate`** -此屬性指示結束日期和時間。 該值是按RFC 3339規則格式化的字串，例如，此時間戳： 「2019-07-13T11:00:00.000Z」已通過其結束日期和時間的決策選項在決策過程中不再被視為合格。
 
-更改日曆約束可以通過以下PATCH調用完成：
+- **`xdm:endDate`** -此屬性指示結束日期和時間。 該值是按RFC 3339規則格式化的字串，例如，此時間戳： 「2019-07-13T11:00:00.000Z」已通過其結束日期和時間的決策選項在決策過程中不再被視為合格。
+- **`xdm:endDate`**更改日曆約束可以通過以下PATCH調用完成：
+
+如需 [完整的cURL語法](#updating-and-patching-instances) ，請參閱更新和修補例項。 參 `schemaId` 數必須 `https://ns.adobe.com/experience/offer-management/personalized-offer`。 備援選件沒有任何限制。
 
 ```json
 [
@@ -727,16 +732,16 @@ Placement **實例** 可具有以下屬性：
 ]' 
 ```
 
-如需 [完整的cURL語法](#updating-and-patching-instances) ，請參閱更新和修補例項。 參 `schemaId` 數必須 `https://ns.adobe.com/experience/offer-management/personalized-offer`。 備援選件沒有任何限制。
+封閉約束[](#updating-and-patching-instances)`schemaId``https://ns.adobe.com/experience/offer-management/personalized-offer`
 
-### 封閉約束
+### 封閉約束是定義封閉參數的決策選項中的元件。 封閉是一種過程，用於限制每個描述檔以及所有描述檔中可建議選項的次數。 屬性包含必須大於或等於1的整數值。 屬性嵌套在屬性內 `xdm:cappingConstraint`:
 
-封閉約束是定義封閉參數的決策選項中的元件。 封閉是一種過程，用於限制每個描述檔以及所有描述檔中可建議選項的次數。 屬性包含必須大於或等於1的整數值。 屬性嵌套在屬性內 `xdm:cappingConstraint`:
+**`xdm:globalCap`** -全域上限是限制選件可整體建議的次數。
 
-- **`xdm:globalCap`** -全域上限是限制選件可整體建議的次數。
 - **`xdm:profileCap`** -描述檔上限是對特定描述檔建議選件次數的限制。
+- **`xdm:profileCap`**在個人化選件上設定或變更封頂限制，可透過下列PATCH呼叫完成：
 
-在個人化選件上設定或變更封頂限制，可透過下列PATCH呼叫完成：
+如需 [完整的cURL語法](#updating-and-patching-instances) ，請參閱更新和修補例項。 參 `schemaId` 數必須 `https://ns.adobe.com/experience/offer-management/personalized-offer`。 備援選件沒有任何限制。
 
 ```json
 [
@@ -751,19 +756,19 @@ Placement **實例** 可具有以下屬性：
 ]' 
 ```
 
-如需 [完整的cURL語法](#updating-and-patching-instances) ，請參閱更新和修補例項。 參 `schemaId` 數必須 `https://ns.adobe.com/experience/offer-management/personalized-offer`。 備援選件沒有任何限制。
+要刪除封閉值，操作&quot;add&quot;將替換為操作&quot;remove&quot;。 請注意，封閉值單獨存在，也可以單獨設定或移除。[](#updating-and-patching-instances)`schemaId``https://ns.adobe.com/experience/offer-management/personalized-offer`
 
-要刪除封閉值，操作&quot;add&quot;將替換為操作&quot;remove&quot;。 請注意，封閉值單獨存在，也可以單獨設定或移除。
+資格限制
 
-### 資格限制
-
-選件可在決策程式中有條件地選取。 當個人化選件參考資格規則時，規則條件必須評估為true，才能將選件物件視為指定的描述檔。 資格規則是獨立於決策選項而建立和管理的，同一規則可從多個個人化選件參考。
+### 選件可在決策程式中有條件地選取。 當個人化選件參考資格規則時，規則條件必須評估為true，才能將選件物件視為指定的描述檔。 資格規則是獨立於決策選項而建立和管理的，同一規則可從多個個人化選件參考。
 
 規則的參考內嵌在屬性中 `xdm:selectionConstraint`:
 
-- **`xdm:eligibilityRule`** -此屬性包含資格規則的參考。 該值是schema `@id` https://ns.adobe.com/experience/offer-management/eligibility-rule的實例。
+**`xdm:eligibilityRule`** -此屬性包含資格規則的參考。 該值是schema `@id` https://ns.adobe.com/experience/offer-management/eligibility-rule的實例。
 
-添加和刪除規則也可以通過PATCH操作完成：
+- **`xdm:eligibilityRule`**添加和刪除規則也可以通過PATCH操作完成：`@id`
+
+如需 [完整的cURL語法](#updating-and-patching-instances) ，請參閱更新和修補例項。 參 `schemaId` 數必須 `https://ns.adobe.com/experience/offer-management/personalized-offer`。 備援選件沒有任何限制。
 
 ```
 [
@@ -775,18 +780,18 @@ Placement **實例** 可具有以下屬性：
 ]'
 ```
 
-如需 [完整的cURL語法](#updating-and-patching-instances) ，請參閱更新和修補例項。 參 `schemaId` 數必須 `https://ns.adobe.com/experience/offer-management/personalized-offer`。 備援選件沒有任何限制。
+請注意，資格規則會與日曆約 `xdm:selectionConstraint` 束一起嵌入屬性中。 PATCH操作不應嘗試刪除整個 `SelectionConstraint` 屬性。`schemaId``https://ns.adobe.com/experience/offer-management/personalized-offer`
 
-請注意，資格規則會與日曆約 `xdm:selectionConstraint` 束一起嵌入屬性中。 PATCH操作不應嘗試刪除整個 `SelectionConstraint` 屬性。
+設定選件的優先順序`xdm:selectionConstraint``SelectionConstraint`
 
-## 設定選件的優先順序
-
-符合資格的決策選項將會被排名，以決定給定描述檔的最佳選項。 為了支援該排名，並在排名不能由另一個機制確定的情況下提供預設值，可以為每個個性化選件設定基本優先順序。
+## 符合資格的決策選項將會被排名，以決定給定描述檔的最佳選項。 為了支援該排名，並在排名不能由另一個機制確定的情況下提供預設值，可以為每個個性化選件設定基本優先順序。
 基本優先順序嵌入到屬性中 `xdm:rank`:
 
-- **`xdm:priority`** -此屬性代表在沒有已知描述檔特定排名順序的情況下，選取一個選件的預設順序。 如果比較優先順序值後，仍會系結兩個或兩個以上的個人化選件，則會隨機選擇一個選件，並用於選件提案中。 此屬性的值必須是大於或等於0的整數。
+**`xdm:priority`** -此屬性代表在沒有已知描述檔特定排名順序的情況下，選取一個選件的預設順序。 如果比較優先順序值後，仍會系結兩個或兩個以上的個人化選件，則會隨機選擇一個選件，並用於選件提案中。 此屬性的值必須是大於或等於0的整數。
 
-通過以下PATCH調用可以調整基本優先順序：
+- **`xdm:priority`**通過以下PATCH調用可以調整基本優先順序：
+
+如需 [完整的cURL語法](#updating-and-patching-instances) ，請參閱更新和修補例項。 參 `schemaId` 數必須 `https://ns.adobe.com/experience/offer-management/personalized-offer`。 備援選件沒有任何排名屬性。
 
 ```shell
 curl -X PATCH {ENDPOINT_PATH}/{CONTAINER_ID}/instances/{INSTANCE_ID} \
@@ -805,15 +810,15 @@ curl -X PATCH {ENDPOINT_PATH}/{CONTAINER_ID}/instances/{INSTANCE_ID} \
 ]'
 ```
 
-如需 [完整的cURL語法](#updating-and-patching-instances) ，請參閱更新和修補例項。 參 `schemaId` 數必須 `https://ns.adobe.com/experience/offer-management/personalized-offer`。 備援選件沒有任何排名屬性。
+管理決策規則[](#updating-and-patching-instances)`schemaId``https://ns.adobe.com/experience/offer-management/personalized-offer`
 
-## 管理決策規則
+## 資格規則會保留評估的條件，以判斷特定決策選項是否符合指定描述檔的資格。 將規則附加至一或多個決策選項會隱式定義，對於此選項，規則必須評估為true，才能讓此使用者考慮該選項。 規則可包含描述檔屬性的測試、可評估與此描述檔的體驗事件相關的運算式，以及可包含傳遞至決策請求的上下文資料。 例如，條件可描述為：
 
-資格規則會保留評估的條件，以判斷特定決策選項是否符合指定描述檔的資格。 將規則附加至一或多個決策選項會隱式定義，對於此選項，規則必須評估為true，才能讓此使用者考慮該選項。 規則可包含描述檔屬性的測試、可評估與此描述檔的體驗事件相關的運算式，以及可包含傳遞至決策請求的上下文資料。 例如，條件可描述為：
+「包括那些擁有精英地位、在過去6個月中曾三次坐過航班的個人，他們的航班號碼與目前的航班號相同。」
 
-> 「包括那些擁有精英地位、在過去6個月中曾三次坐過航班的個人，他們的航班號碼與目前的航班號相同。」
+> 使用架構識別碼https://ns.adobe.com/experience/offer-management/eligibility-rule建立例項。 建 `_instance` 立或更新呼叫的屬性如下：
 
-使用架構識別碼https://ns.adobe.com/experience/offer-management/eligibility-rule建立例項。 建 `_instance` 立或更新呼叫的屬性如下：
+如需 [完整的cURL語法](#updating-and-patching-instances) ，請參閱更新和修補例項。 參 `schemaId` 數必須 `https://ns.adobe.com/experience/offer-management/eligibility-rule`。
 
 ```json
 {
@@ -832,28 +837,28 @@ curl -X PATCH {ENDPOINT_PATH}/{CONTAINER_ID}/instances/{INSTANCE_ID} \
 }
 ```
 
-如需 [完整的cURL語法](#updating-and-patching-instances) ，請參閱更新和修補例項。 參 `schemaId` 數必須 `https://ns.adobe.com/experience/offer-management/eligibility-rule`。
-
-規則條件屬性中的值包含PQL運算式。 上下文資料是透過特殊路徑運算式@{schemaID}來參考。
+規則條件屬性中的值包含PQL運算式。 上下文資料是透過特殊路徑運算式@{schemaID}來參考。[](#updating-and-patching-instances)`schemaId``https://ns.adobe.com/experience/offer-management/eligibility-rule`
 
 規則自然會與設定檔中的區 [!DNL Experience Platform] 段對齊，而規則通常只會透過測試描述檔屬性，重複使用區段的意 `segmentMembership` 圖。 屬 `segmentMembership` 性包含已評估的區段條件結果。 這可讓組織定義其網域特定對象一次、命名對象並評估條件一次。
 
-## 管理選件集合
+管理選件集合[!DNL Experience Platform]`segmentMembership``segmentMembership`
 
-### 建立標籤和標籤選件
+## 建立標籤和標籤選件
 
-選件可以組織在系列中，其中每個系列都定義要套用的篩選條件。 目前，系列中的篩選運算式可以有下列兩種表單之一：
+### 選件可以組織在系列中，其中每個系列都定義要套用的篩選條件。 目前，系列中的篩選運算式可以有下列兩種表單之一：
 
-1. 選件 `@id` 的參數必須符合系列中選件識別碼清單中的一個參數。 此篩選器只是系列中選件的URI列舉。
-2. 選件可以有標籤參考清單，而系列的篩選器則包含標籤清單。 在下列情況下，選件會出現在系列中：\
-   a. 任何篩選標籤都符合選件的其中一個標籤\
-   b. 所有篩選的標籤都符合選件的其中一個標籤
+選件 `@id` 的參數必須符合系列中選件識別碼清單中的一個參數。 此篩選器只是系列中選件的URI列舉。
 
-標籤是可連結至選件例項的簡單例項。 它們是獨立的例項，具有顯示它們的名稱。 此名稱在各執行個體間必須是唯一的，讓使用者介面中更容易顯示。
+1. 選件可以有標籤參考清單，而系列的篩選器則包含標籤清單。 在下列情況下，選件會出現在系列中：`@id`
+2. a. 任何篩選標籤都符合選件的其中一個標籤\
+   b. 所有篩選的標籤都符合選件的其中一個標籤\
+   標籤是可連結至選件例項的簡單例項。 它們是獨立的例項，具有顯示它們的名稱。 此名稱在各執行個體間必須是唯一的，讓使用者介面中更容易顯示。
 
 標籤物件可用於在決策選項（選件）中建立分類。 標籤可以由許多選件連結，而選件可以有許多標籤參考。 選件類別是參照與一組特定標籤例項相關的所有選件來建立。
 
 標籤例項是使用架構識別碼https://ns.adobe.com/experience/offer-management/tag建立。 建 `_instance` 立或更新呼叫的屬性如下：
+
+如需 [完整的cURL語法](#updating-and-patching-instances) ，請參閱更新和修補例項。 參 `schemaId` 數必須 `https://ns.adobe.com/experience/offer-management/tag`。
 
 ```json
 {
@@ -861,10 +866,10 @@ curl -X PATCH {ENDPOINT_PATH}/{CONTAINER_ID}/instances/{INSTANCE_ID} \
 } 
 ```
 
-如需 [完整的cURL語法](#updating-and-patching-instances) ，請參閱更新和修補例項。 參 `schemaId` 數必須 `https://ns.adobe.com/experience/offer-management/tag`。
+您可以使用標籤參考清單來建立選件例項，例如：[](#updating-and-patching-instances)`schemaId``https://ns.adobe.com/experience/offer-management/tag`
 
 
-您可以使用標籤參考清單來建立選件例項，例如：
+或者，選件可修補以變更其標籤清單：
 
 ```json
 {
@@ -876,7 +881,7 @@ curl -X PATCH {ENDPOINT_PATH}/{CONTAINER_ID}/instances/{INSTANCE_ID} \
 }
 ```
 
-或者，選件可修補以變更其標籤清單：
+對於這兩種情況，請參 [閱更新和修補例項](#updating-and-patching-instances) ，以取得完整的cURL語法。 參 `schemaId` 數必須 `https://ns.adobe.com/experience/offer-management/personalized-offer`。
 
 ```json
 [
@@ -888,13 +893,13 @@ curl -X PATCH {ENDPOINT_PATH}/{CONTAINER_ID}/instances/{INSTANCE_ID} \
 ]' 
 ```
 
-對於這兩種情況，請參 [閱更新和修補例項](#updating-and-patching-instances) ，以取得完整的cURL語法。 參 `schemaId` 數必須 `https://ns.adobe.com/experience/offer-management/personalized-offer`。
+請注意， `xdm:tags` 屬性必須已存在，才能成功添加操作。 PATCH操作可以先添加array屬性，然後向該陣列添加標籤引用，實例中不存在標籤。](#updating-and-patching-instances)`schemaId``https://ns.adobe.com/experience/offer-management/personalized-offer`
 
-請注意， `xdm:tags` 屬性必須已存在，才能成功添加操作。 PATCH操作可以先添加array屬性，然後向該陣列添加標籤引用，實例中不存在標籤。
+定義選件系列的篩選`xdm:tags`
 
-### 定義選件系列的篩選
+### 篩選例項是使用架構識別碼https://ns.adobe.com/experience/offer-management/offer-filter來建立。 建立 `_instance` 或更新呼叫的屬性可能如下所示：
 
-篩選例項是使用架構識別碼https://ns.adobe.com/experience/offer-management/offer-filter來建立。 建立 `_instance` 或更新呼叫的屬性可能如下所示：
+如需 [完整的cURL語法](#updating-and-patching-instances) ，請參閱更新和修補例項。 參 `schemaId` 數必須 `https://ns.adobe.com/experience/offer-management/offer-filter`。
 
 ```json
 {
@@ -907,15 +912,15 @@ curl -X PATCH {ENDPOINT_PATH}/{CONTAINER_ID}/instances/{INSTANCE_ID} \
 }
 ```
 
-如需 [完整的cURL語法](#updating-and-patching-instances) ，請參閱更新和修補例項。 參 `schemaId` 數必須 `https://ns.adobe.com/experience/offer-management/offer-filter`。
+**`xdm:filterType`** -此屬性指出篩選是使用標籤設定，還是直接參照其ID的選件。 當篩選設定為使用標籤時，篩選類型可進一步指出所有標籤是否必須符合特定選件上的標籤，或任一指定標籤是否足以讓選件符合篩選條件。 此列舉屬性的有效值為：](#updating-and-patching-instances)`schemaId``https://ns.adobe.com/experience/offer-management/offer-filter`
 
-- **`xdm:filterType`** -此屬性指出篩選是使用標籤設定，還是直接參照其ID的選件。 當篩選設定為使用標籤時，篩選類型可進一步指出所有標籤是否必須符合特定選件上的標籤，或任一指定標籤是否足以讓選件符合篩選條件。 此列舉屬性的有效值為：
-   - `offers`
+- `offers`
    - `anyTags`
    - `allTags`
-- **`ids`** -屬性包含URI的陣列，這些URI是選件例項或標籤例項的參考，視值而定 `xdm:filterType`。 .
+   - **`ids`** -屬性包含URI的陣列，這些URI是選件例項或標籤例項的參考，視值而定 `xdm:filterType`。 .
+- 下列呼叫說明建立或 `_instance` 更新呼叫的屬性在選件被直接參考時的外觀：`xdm:filterType`
 
-下列呼叫說明建立或 `_instance` 更新呼叫的屬性在選件被直接參考時的外觀：
+管理活動`_instance`
 
 ```json
 {
@@ -935,11 +940,11 @@ curl -X PATCH {ENDPOINT_PATH}/{CONTAINER_ID}/instances/{INSTANCE_ID} \
 } 
 ```
 
-## 管理活動
-
-選件活動可用來控制決策程式。 它會指定套用至總庫存的選件篩選條件，以依主題／類別縮小選件，將庫存縮小至符合預留空間的選件的位置，並指定當組合的限制不符合所有可用的個人化選件（選件）時的備援選項。
+## 選件活動可用來控制決策程式。 它會指定套用至總庫存的選件篩選條件，以依主題／類別縮小選件，將庫存縮小至符合預留空間的選件的位置，並指定當組合的限制不符合所有可用的個人化選件（選件）時的備援選項。
 
 活動實例是使用方案標識符建立的`https://ns.adobe.com/experience/offer-management/offer-activity`。 建 `_instance` 立或更新呼叫的屬性如下：
+
+如需 [完整的cURL語法](#updating-and-patching-instances) ，請參閱更新和修補例項。 參 `schemaId` 數必須 `https://ns.adobe.com/experience/offer-management/offer-activity`。
 
 ```json
 {
@@ -953,17 +958,17 @@ curl -X PATCH {ENDPOINT_PATH}/{CONTAINER_ID}/instances/{INSTANCE_ID} \
 }
 ```
 
-如需 [完整的cURL語法](#updating-and-patching-instances) ，請參閱更新和修補例項。 參 `schemaId` 數必須 `https://ns.adobe.com/experience/offer-management/offer-activity`。
+**`xdm:name`** -此強制屬性包含活動名稱。 名稱會顯示在各種使用者介面中。](#updating-and-patching-instances)`schemaId``https://ns.adobe.com/experience/offer-management/offer-activity`
 
-- **`xdm:name`** -此強制屬性包含活動名稱。 名稱會顯示在各種使用者介面中。
 - **`xdm:status`** -此屬性用於實例的生命週期管理。 此值代表工作流程狀態，用於指出活動是否仍在建置中（值=草稿）、執行階段通常可考慮（值=即時），或是不應再使用（值=封存）。
 - **`xdm:placement`** -強制屬性，包含對選件位置的參考，當做出決策時，選件位置會套用至庫存。 值是所使用之選`@id`件位置的URI()。
 - **`xdm:filter`** -強制屬性，包含對選件篩選的參考，當在此活動中做出決策時，選件篩選會套用至庫存。 值是所使用之選`@id`件篩選器的URI()。
 - **`xdm:fallback`** -包含備援選件參考的必備屬性。 當此活動的決策不符合任何個人化選件的資格時，會使用備援選件。 該值是備援選件`@id`例項的URI()。
+- **`xdm:fallback`**管理備援選件`@id`
 
-### 管理備援選件
+### 建立活動例項之前，必須有符合活動位置的備援選件。 備援選件例項是使用結構識別碼建立`https://ns.adobe.com/experience/offer-management/fallback-offer`。 建 `_instance` 立或更新呼叫的屬性包含與個人化選件相同的一般屬性，但不能有任何其他限制。
 
-建立活動例項之前，必須有符合活動位置的備援選件。 備援選件例項是使用結構識別碼建立`https://ns.adobe.com/experience/offer-management/fallback-offer`。 建 `_instance` 立或更新呼叫的屬性包含與個人化選件相同的一般屬性，但不能有任何其他限制。
+如需 [完整的cURL語法](#updating-and-patching-instances) ，請參閱更新和修補例項。 參 `schemaId` 數必須 `https://ns.adobe.com/experience/offer-management/fallback-offer`。
 
 ```json
 {
@@ -984,5 +989,5 @@ curl -X PATCH {ENDPOINT_PATH}/{CONTAINER_ID}/instances/{INSTANCE_ID} \
 }  
 ```
 
-如需 [完整的cURL語法](#updating-and-patching-instances) ，請參閱更新和修補例項。 參 `schemaId` 數必須 `https://ns.adobe.com/experience/offer-management/fallback-offer`。
+See [Updating and patching instances](#updating-and-patching-instances) for the full cURL syntax. The `schemaId` parameter must be `https://ns.adobe.com/experience/offer-management/fallback-offer`.
 
