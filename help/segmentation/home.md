@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Adobe Experience Platform細分服務
 topic: overview
 translation-type: tm+mt
-source-git-commit: b0ef50e25c27aba121bb01c602867953eb2a5f7e
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '2386'
 ht-degree: 0%
@@ -40,7 +40,9 @@ Adobe Experience Platform Segmentation Service提供使用者介面和REST風格
 
 如需使用API建立區段定義的詳細資訊，請參閱使用API [建立觀眾區段的教學課程](./tutorials/create-a-segment.md)。
 
->[!NOTE] 在模式被擴展時，所有以後的上載都必須相應地更新新添加的欄位。 如需自訂Experience Data Model(XDM)的詳細資訊，請造訪架構編輯 [器教學課程](../xdm/tutorials/create-schema-ui.md)。
+>[!NOTE]
+>
+>在模式被擴展時，所有以後的上載都必須相應地更新新添加的欄位。 如需自訂Experience Data Model(XDM)的詳細資訊，請造訪架構編輯 [器教學課程](../xdm/tutorials/create-schema-ui.md)。
 
 ## 評估區段
 
@@ -70,14 +72,18 @@ Adobe Experience Platform Segmentation Service提供使用者介面和REST風格
 
 建立新區段時，您必須提供區段名稱。 區段名稱用於識別區段服務所建立之系列中的特定區段。 因此，區段名稱應具有說明性、簡明和獨特性。
 
->[!NOTE] 在規劃區段時，請記住，區段可從任何其他區段參考，並與之結合。 選取名稱時，請考慮您的群體可能包含可重複使用的部分。
+>[!NOTE]
+>
+>在規劃區段時，請記住，區段可從任何其他區段參考，並與之結合。 選取名稱時，請考慮您的群體可能包含可重複使用的部分。
 
 ### 合併原則
 
 合併策略是描述檔使用的規則，可決定在特定條件下如何將資料排定優先順序並合併為統一檢視。
 如果未定義合併策略，則使用預設的平台合併策略。 如果您想要使用組織專屬的合併原則，可以建立自己的合併原則，並將其標示為組織的預設值。
 
->[!NOTE] 觀眾人數的估計是根據組織的預設描述檔合併原則。
+>[!NOTE]
+>
+>觀眾人數的估計是根據組織的預設描述檔合併原則。
 
 ### 其他區段中繼資料
 
@@ -138,7 +144,9 @@ Adobe Experience Platform Segmentation Service提供使用者介面和REST風格
 
 **解決方案**
 
->[!NOTE] 在此範例中，我們假設資料架構師已建立ID命名空間。
+>[!NOTE]
+>
+>在此範例中，我們假設資料架構師已建立ID命名空間。
 
 使用API，資料架構師會將ExperienceEvent架構的金鑰與「產品」類別建立關聯。 如此，資料架構師就可使用「產品」類別中的其他欄位，就像這些欄位是ExperienceEvent架構的原生欄位一樣。 作為配置工作的最後一步，資料架構師需要將適當的資料引入即時客戶配置檔案中。 若要這麼做，請啟用「產品」資料集以搭配「設定檔」使用。 在設定工作完成後，資料架構人員或行銷人員都可以在「區段產生器」中建立目標區段。
 
