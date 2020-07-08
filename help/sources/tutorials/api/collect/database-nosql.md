@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 透過來源連接器和API，從協力廠商資料庫收集資料
 topic: overview
 translation-type: tm+mt
-source-git-commit: 84ea3e45a3db749359f3ce4a0ea25429eee8bb66
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1522'
 ht-degree: 1%
@@ -323,7 +323,9 @@ curl -X POST \
 | `params.dataSetId` | 目標資料集的ID。 |
 | `connectionSpec.id` | 第三方資料庫的連接規範ID。 |
 
->[!NOTE] 建立目標連線時，請務必針對基本連線使用資料集基本連線值，而非 `id` 使用協力廠商來源連線的基本連線。
+>[!NOTE]
+>
+>建立目標連線時，請務必針對基本連線使用資料集基本連線值，而非 `id` 使用協力廠商來源連線的基本連線。
 
 **回應**
 
