@@ -4,7 +4,10 @@ solution: Experience Platform
 title: 串流記錄資料
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 79466c78fd78c0f99f198b11a9117c946736f47a
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '1107'
+ht-degree: 2%
 
 ---
 
@@ -17,9 +20,9 @@ source-git-commit: 79466c78fd78c0f99f198b11a9117c946736f47a
 
 本教學課程需要具備各種Adobe Experience Platform服務的相關知識。 在開始本教學課程之前，請先閱讀下列服務的檔案：
 
-- [體驗資料模型(XDM)](../../xdm/home.md):平台組織體驗資料的標準化架構。
-- [即時客戶個人檔案](../../profile/home.md):根據來自多個來源的匯整資料，即時提供統一的消費者個人檔案。
-- [架構註冊開發人員指南](../../xdm/api/getting-started.md):完整的指南，涵蓋架構註冊表API的每個可用端點，以及如何對其進行呼叫。 這包括瞭解您 `{TENANT_ID}`的資料集（在本教學課程的呼叫中顯示），以及瞭解如何建立結構描述（用於建立資料集以擷取）。
+- [體驗資料模型(XDM)](../../xdm/home.md): 平台組織體驗資料的標準化架構。
+- [即時客戶個人檔案](../../profile/home.md): 根據來自多個來源的匯整資料，即時提供統一的消費者個人檔案。
+- [架構註冊開發人員指南](../../xdm/api/getting-started.md): 完整的指南，涵蓋架構註冊表API的每個可用端點，以及如何對其進行呼叫。 這包括瞭解您 `{TENANT_ID}`的資料集（在本教學課程的呼叫中顯示），以及瞭解如何建立結構描述（用於建立資料集以擷取）。
 
 此外，本教學課程要求您已建立串流連線。 如需建立串流連線的詳細資訊，請閱讀建立串 [流連線教學課程](./create-streaming-connection.md)。
 
@@ -33,7 +36,7 @@ source-git-commit: 79466c78fd78c0f99f198b11a9117c946736f47a
 
 若要呼叫平台API，您必須先完成驗證教 [學課程](../../tutorials/authentication.md)。 完成驗證教學課程後，所有Experience Platform API呼叫中每個必要標題的值都會顯示在下方：
 
-- 授權：生產者 `{ACCESS_TOKEN}`
+- 授權： 生產者 `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
@@ -41,11 +44,13 @@ Experience Platform中的所有資源都隔離至特定的虛擬沙盒。 所有
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
->[!NOTE] 如需平台中沙盒的詳細資訊，請參閱沙盒 [概觀檔案](../../sandboxes/home.md)。
+>[!NOTE]
+>
+>如需平台中沙盒的詳細資訊，請參閱沙盒 [概觀檔案](../../sandboxes/home.md)。
 
 所有包含裝載(POST、PUT、PATCH)的請求都需要額外的標題：
 
-- 內容類型：application/json
+- 內容類型： application/json
 
 ## 基於XDM單個配置檔案類合成方案
 
@@ -182,7 +187,9 @@ curl -X POST https://platform.adobe.io/data/foundation/schemaregistry/tenant/des
 | -------- | ----------- |
 | `{SCHEMA_REF_ID}` | 構 `$id` 成架構時先前收到的。 它應該看起來像這樣： `"https://ns.adobe.com/{TENANT_ID}/schemas/{SCHEMA_ID}"` |
 
->[!NOTE] 識&#x200B;&#x200B;別名稱空間代碼&#x200B;****
+>[!NOTE]
+>
+>識&#x200B;&#x200B;別名稱空間代碼&#x200B;****
 >
 > 請確定代碼有效——上述範例使用「電子郵件」，此為標準身分命名空間。 其他常用的標準身分名稱空間可在 [Identity Service常見問答集中找到](../../identity-service/troubleshooting-guide.md#what-are-the-standard-identity-namespaces-provided-by-experience-platform)。
 >
@@ -212,7 +219,9 @@ curl -X POST https://platform.adobe.io/data/foundation/schemaregistry/tenant/des
 
 建立結構後，您需要建立資料集來收錄記錄資料。
 
->[!NOTE] 此資料集將啟用「即 **時客戶設定檔** 」 **和「身分服務」**。
+>[!NOTE]
+>
+>此資料集將啟用「即 **時客戶設定檔** 」 **和「身分服務」**。
 
 **API格式**
 
@@ -270,7 +279,9 @@ POST /collection/{CONNECTION_ID}?synchronousValidation=true
 
 **請求**
 
->[!NOTE] 下列API呼叫不需 **要** 任何驗證標題。
+>[!NOTE]
+>
+>下列API呼叫不需 **要** 任何驗證標題。
 
 ```shell
 curl -X POST https://dcs.adobedc.net/collection/{CONNECTION_ID}?synchronousValidation=true \
@@ -342,7 +353,9 @@ curl -X POST https://dcs.adobedc.net/collection/{CONNECTION_ID}?synchronousValid
 
 若要驗證先前擷取的記錄，您可以使用描述檔 [存取API](../../profile/api/entities.md) ，擷取記錄資料。
 
->[!NOTE] 如果未定義合併策略ID和架構。</span>name或relatedSchema</span>.name為 `_xdm.context.profile`，描述檔存取會擷取所 **有相關** 的身分。
+>[!NOTE]
+>
+>如果未定義合併策略ID和架構。</span>name或relatedSchema</span>.name為 `_xdm.context.profile`，描述檔存取會擷取所 **有相關** 的身分。
 
 **API格式**
 
@@ -354,7 +367,7 @@ GET /access/entities?schema.name=_xdm.context.profile&entityId=janedoe@example.c
 
 | 參數 | 說明 |
 | --------- | ----------- |
-| `schema.name` | **必填.** 您正在訪問的架構的名稱。 |
+| `schema.name` | **必填。** 您正在訪問的架構的名稱。 |
 | `entityId` | 實體的ID。 如果提供，您也必須提供實體名稱空間。 |
 | `entityIdNS` | 您嘗試擷取之ID的命名空間。 |
 
