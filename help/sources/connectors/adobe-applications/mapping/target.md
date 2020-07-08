@@ -4,7 +4,10 @@ solution: Experience Platform
 title: 目標映射欄位
 topic: overview
 translation-type: tm+mt
-source-git-commit: 53fb7ea201ed9361584d24c8bd2ad10edd9f3975
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '427'
+ht-degree: 0%
 
 ---
 
@@ -15,7 +18,9 @@ Adobe Experience Platform可讓您透過Target來源連接器來收錄Adobe Targ
 
 下表概述「體驗事件」結構描述(*XDM ExperienceEvent欄位*)的欄位，以及對應至的「目標」欄位(*「目標請求」欄位*)。 另外，也提供一些映射的附加說明。
 
->[!NOTE] 請向左／向右滾動以查看表的完整內容。
+>[!NOTE]
+>
+>請向左／向右滾動以查看表的完整內容。
 
 | XDM ExperienceEvent欄位 | 目標請求欄位 | 附註 |
 | ------------------------- | -------------------- | ----- |
@@ -23,7 +28,7 @@ Adobe Experience Platform可讓您透過Target來源連接器來收錄Adobe Targ
 | **`dataSource`** |  | 已配置為「1」（所有客戶端）。 |
 | `dataSource._id` | 無法隨請求傳遞的系統產生值。 | 此資料來源的唯一ID。 這將由建立資料源的個人或系統提供。 |
 | `dataSource.code` | 無法隨請求傳遞的系統產生值。 | 通往完整@id的捷徑。 您至少可以使用其中一個程式碼或@id。 有時，此程式碼稱為資料來源整合程式碼。 |
-| `dataSource.tags` | 無法隨請求傳遞的系統產生值。 | 標籤用於指示應用程式如何使用給定資料源表示的別名。<br><br>範例:<br><ul><li>`isAVID`:代表Analytics訪客ID的資料來源。</li><li>`isCRSKey`:表示應當用作CRS中鍵的別名的資料源。</li></ul>標籤是在建立資料源時設定的，但在引用給定資料源時，標籤也包括在管線消息中。 |
+| `dataSource.tags` | 無法隨請求傳遞的系統產生值。 | 標籤用於指示應用程式如何使用給定資料源表示的別名。<br><br>範例:<br><ul><li>`isAVID`: 代表Analytics訪客ID的資料來源。</li><li>`isCRSKey`: 表示應當用作CRS中鍵的別名的資料源。</li></ul>標籤是在建立資料源時設定的，但在引用給定資料源時，標籤也包括在管線消息中。 |
 | **`timestamp`** | 事件時間戳記 |
 | **`channel`** | `context.channel` | 僅適用於檢視傳送。 選項為「web」和「mobile」，預設值為「web」。 |
 | **`endUserIds`** |
