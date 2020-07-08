@@ -4,7 +4,7 @@ solution: Experience Platform
 title: MLInstances
 topic: Developer guide
 translation-type: tm+mt
-source-git-commit: 0197c2f5e304f2fc194289b064cc37c91bb658c8
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '575'
 ht-degree: 4%
@@ -273,7 +273,9 @@ curl -X GET \
 
 您可以透過PUT請求覆寫現有MLInstance的屬性，以更新其屬性，該PUT請求在請求路徑中包含目標MLInstance的ID，並提供包含更新屬性的JSON裝載。
 
->[!TIP] 為確保此PUT請求成功，建議您先執行GET請求，以 [依ID擷取MLInstance](#retrieve-specific)。 然後，修改並更新傳回的JSON物件，並套用已修改的JSON物件作為PUT要求的裝載。
+>[!TIP]
+>
+>為確保此PUT請求成功，建議您先執行GET請求，以 [依ID擷取MLInstance](#retrieve-specific)。 然後，修改並更新傳回的JSON物件，並套用已修改的JSON物件作為PUT要求的裝載。
 
 下列範例API呼叫會在初步擁有這些屬性的同時，更新MLInstance的訓練和計分參數：
 
