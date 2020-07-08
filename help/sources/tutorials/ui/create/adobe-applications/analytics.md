@@ -4,7 +4,10 @@ solution: Experience Platform
 title: 在UI中建立Adobe Analytics來源連接器
 topic: overview
 translation-type: tm+mt
-source-git-commit: d2f8e11591b30a0bfd345e56a33a8bb62501358c
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '726'
+ht-degree: 2%
 
 ---
 
@@ -23,25 +26,27 @@ source-git-commit: d2f8e11591b30a0bfd345e56a33a8bb62501358c
 
 ## 使用Adobe Analytics建立來源連線
 
-登入 <a href="https://platform.adobe.com" target="_blank">Adobe Experience Platform</a> ，然後從左側導 **[!UICONTROL Sources]** 覽列選擇以存取來源工作區。 「目 *錄* 」螢幕顯示可用的源以建立入站連接，每個源顯示與其關聯的現有帳戶和資料集流的數量。
+登入 <a href="https://platform.adobe.com" target="_blank">Adobe Experience Platform</a> ，然後從左側導覽列選 **[!UICONTROL 取Sources]** ，以存取來源工作區。 「目 *錄* 」螢幕顯示可用的源以建立入站連接，每個源顯示與其關聯的現有帳戶和資料集流的數量。
 
 您可以從畫面左側的目錄中選取適當的類別。 或者，您也可以使用搜尋選項找到您要使用的特定來源。
 
-在「 *Adobe應用程式* 」類別下，選 **[!UICONTROL Adobe Analytics]** 取以顯示螢幕右側的資訊列。 資訊列提供所選來源的簡短說明，以及與來源連線或檢視其檔案的選項。 要查看現有帳戶，請選擇 **[!UICONTROL Accounts]**。
+在「 *Adobe應用程式* 」類別下，選取「 **[!UICONTROL Adobe Analytics]** 」以在螢幕右側顯示資訊列。 資訊列提供所選來源的簡短說明，以及與來源連線或檢視其檔案的選項。 要查看現有帳戶，請選擇 **[!UICONTROL 帳戶]**。
 
 ![](../../../../images/tutorials/create/analytics/catalog.png)
 
 ### 選擇資料
 
-此時 *會顯示Adobe Analytics* 步驟。 此螢幕上會列出先前建立的Analytics資料集流程。 您可以按一下以建立新的資料集流程 **[!UICONTROL Select data]**。
+此時 *會顯示Adobe Analytics* 步驟。 此螢幕上會列出先前建立的Analytics資料集流程。 您可以按一下「選取資料」，建立新的資 **[!UICONTROL 料集流程]**。
 
->[!NOTE] 可以建立多個源的綁定內連接以引入不同的資料。
+>[!NOTE]
+>
+>可以建立多個源的綁定內連接以引入不同的資料。
 
 ![](../../../../images/tutorials/create/analytics/dataset-flows.png)
 
 <!---Analytics report suites can be configured for one sandbox at a time. To import the same report suite into a different sandbox, the dataset flow will have to be deleted and instantiated again via configuration for a different sandbox.--->
 
-從可用報表套裝清單中，選取您要匯入「平台」的報表套裝，然後按一下 **[!UICONTROL Next]**。
+從可用報表套裝清單中，選取您要匯入「平台」的報表套裝，然後按一下「下 **[!UICONTROL 一步]**」。
 
 ![](../../../../images/tutorials/create/analytics/select-data.png)
 
@@ -92,7 +97,7 @@ source-git-commit: d2f8e11591b30a0bfd345e56a33a8bb62501358c
 
 ## 後續步驟
 
-建立連線後，會自動建立目標模式和資料集流程，以包含傳入的資料。 此外，還會進行資料回填，並且會收集長達13個月的歷史資料。 當初始擷取完成時，Analytics資料並供下游平台服務（例如即時客戶個人檔案和細分服務）使用。 如需詳細資訊，請參閱下列檔案：
+建立連線後，會自動建立目標模式和資料集流程，以包含傳入的資料。 此外，還會進行資料回填，以及內嵌長達 13 個月的歷史資料。當初始擷取完成時，Analytics資料並供下游平台服務（例如即時客戶個人檔案和細分服務）使用。 如需詳細資訊，請參閱下列檔案：
 
 * [即時客戶個人檔案總覽](../../../../../profile/home.md)
 * [區段服務概觀](../../../../../segmentation/home.md)
