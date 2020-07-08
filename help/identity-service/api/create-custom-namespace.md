@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 建立自訂命名空間
 topic: API guide
 translation-type: tm+mt
-source-git-commit: 6ffdcc2143914e2ab41843a52dc92344ad51bcfb
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '75'
 ht-degree: 5%
@@ -18,7 +18,9 @@ ht-degree: 5%
 
 如需有關建立自訂名稱空間的建議，請參 [閱Identity Service常見問答檔案](../troubleshooting-guide.md)。
 
->[!NOTE] 名稱空間是身份的限定詞。 因此，一旦建立了命名空間，就無法刪除。
+>[!NOTE]
+>
+>名稱空間是身份的限定詞。 因此，一旦建立了命名空間，就無法刪除。
 
 **API格式**
 
