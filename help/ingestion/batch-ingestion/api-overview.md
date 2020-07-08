@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Adobe Experience Platform批次擷取開發人員指南
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 6c17351b04fedefd4b57b9530f1d957da8183a68
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '2577'
+ht-degree: 6%
 
 ---
 
@@ -23,9 +26,9 @@ source-git-commit: 6c17351b04fedefd4b57b9530f1d957da8183a68
 
 本指南需要有效瞭解Adobe Experience Platform的下列元件：
 
-- [批次擷取](./overview.md):可讓您將資料以批次檔案的形式內嵌至Adobe Experience Platform。
-- [體驗資料模型(XDM)系統](../../xdm/home.md):Experience Platform組織客戶體驗資料的標準化架構。
-- [沙盒](../../sandboxes/home.md):Experience Platform提供虛擬沙盒，可將單一Platform實例分割為不同的虛擬環境，以協助開發和發展數位體驗應用程式。
+- [批次擷取](./overview.md): 可讓您將資料以批次檔案的形式內嵌至Adobe Experience Platform。
+- [體驗資料模型(XDM)系統](../../xdm/home.md): Experience Platform組織客戶體驗資料的標準化架構。
+- [沙盒](../../sandboxes/home.md): Experience Platform提供虛擬沙盒，可將單一Platform實例分割為不同的虛擬環境，以協助開發和發展數位體驗應用程式。
 
 ### 讀取範例API呼叫
 
@@ -35,7 +38,7 @@ source-git-commit: 6c17351b04fedefd4b57b9530f1d957da8183a68
 
 若要呼叫平台API，您必須先完成驗證教 [學課程](../../tutorials/authentication.md)。 完成驗證教學課程後，所有Experience Platform API呼叫中每個必要標題的值都會顯示在下方：
 
-- 授權：生產者 `{ACCESS_TOKEN}`
+- 授權： 生產者 `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
@@ -43,12 +46,14 @@ Experience Platform中的所有資源都隔離至特定的虛擬沙盒。 所有
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
->[!NOTE] 如需平台中沙盒的詳細資訊，請參閱沙盒 [概觀檔案](../../sandboxes/home.md)。
+>[!NOTE]
+>
+>如需平台中沙盒的詳細資訊，請參閱沙盒 [概觀檔案](../../sandboxes/home.md)。
 
 包含裝載(POST、PUT、PATCH)的請求可能需要額外的標 `Content-Type` 題。 在呼叫參數中提供每個呼叫的接受值。 本指南使用下列內容類型：
 
-- 內容類型：application/json
-- 內容類型：application/octet-stream
+- 內容類型： application/json
+- 內容類型： application/octet-stream
 
 ## 類型
 
@@ -73,25 +78,31 @@ Experience Platform中的所有資源都隔離至特定的虛擬沙盒。 所有
 | 物件 |  |  |  |  |  |  |  |  | X | X |
 | 地圖 |  |  |  |  |  |  |  |  | X | X |
 
->[!NOTE] Boolean和陣列不能轉換為其他類型。
+>[!NOTE]
+>
+>Boolean和陣列不能轉換為其他類型。
 
 ## 擷取限制
 
 批次資料擷取有一些限制：
-- 每批檔案的最大數量：1500
-- 最大批大小：100 GB
-- 每列的屬性或欄位數上限：10000
-- 每位使用者每分鐘的批次數上限：138
+- 每批檔案的最大數量： 1500
+- 最大批大小： 100 GB
+- 每列的屬性或欄位數上限： 10000
+- 每位使用者每分鐘的批次數上限： 138
 
 ## 收錄JSON檔案
 
->[!NOTE] 以下步驟適用於小型檔案（256 MB或以下）。 如果您遇到閘道逾時或要求內文大小錯誤，則需要切換至大型檔案上傳。
+>[!NOTE]
+>
+>以下步驟適用於小型檔案（256 MB或以下）。 如果您遇到閘道逾時或要求內文大小錯誤，則需要切換至大型檔案上傳。
 
 ### 建立批次
 
 首先，您需要建立以JSON為輸入格式的批次。 建立批次時，您需要提供資料集ID。 您還需要確保作為批處理的一部分上載的所有檔案都符合連結到所提供的資料集的XDM模式。
 
->[!NOTE] 以下範例適用於單行JSON。 若要收錄多行JSON, `isMultiLineJson` 必須設定旗標。 如需詳細資訊，請閱讀批次擷 [取疑難排解指南](./troubleshooting.md)。
+>[!NOTE]
+>
+>以下範例適用於單行JSON。 若要收錄多行JSON, `isMultiLineJson` 必須設定旗標。 如需詳細資訊，請閱讀批次擷 [取疑難排解指南](./troubleshooting.md)。
 
 **API格式**
 
@@ -151,7 +162,9 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches \
 
 現在您已建立批次，您可以使用之 `batchId` 前的開始，將檔案上傳至批次。 您可以上傳多個檔案至批次。
 
->[!NOTE] 如需格式正確的JSON資 [料檔案範例，請參閱附錄一節](#data-transformation-for-batch-ingestion)。
+>[!NOTE]
+>
+>如需格式正確的JSON資 [料檔案範例，請參閱附錄一節](#data-transformation-for-batch-ingestion)。
 
 **API格式**
 
@@ -167,7 +180,9 @@ PUT /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 
 **請求**
 
->[!NOTE] API支援單一部分上傳。 請確定內容類型為application/octet-stream。
+>[!NOTE]
+>
+>API支援單一部分上傳。 請確定內容類型為application/octet-stream。
 
 ```shell
 curl -X PUT https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}.json \
@@ -221,7 +236,9 @@ curl -X POST "https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID
 
 ## 收錄Parce檔案
 
->[!NOTE] 以下步驟適用於小型檔案（256 MB或以下）。 如果您遇到閘道逾時或要求內文大小錯誤，則需要切換至大型檔案上傳。
+>[!NOTE]
+>
+>以下步驟適用於小型檔案（256 MB或以下）。 如果您遇到閘道逾時或要求內文大小錯誤，則需要切換至大型檔案上傳。
 
 ### 建立批次
 
@@ -298,7 +315,9 @@ PUT /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 
 **請求**
 
->[!CAUTION] 此API支援單一部分上傳。 請確定內容類型為application/octet-stream。
+>[!CAUTION]
+>
+>此API支援單一部分上傳。 請確定內容類型為application/octet-stream。
 
 ```shell
 curl -X PUT https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}.parquet \
@@ -352,7 +371,9 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}
 
 ## 收錄大型拼花檔案
 
->[!NOTE] 本節詳細說明如何上傳大於256 MB的檔案。 大型檔案會以區塊上傳，然後透過API訊號加以銜接。
+>[!NOTE]
+>
+>本節詳細說明如何上傳大於256 MB的檔案。 大型檔案會以區塊上傳，然後透過API訊號加以銜接。
 
 ### 建立批次
 
@@ -467,7 +488,9 @@ PATCH /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 
 **請求**
 
->[!CAUTION] 此API支援單一部分上傳。 請確定內容類型為application/octet-stream。
+>[!CAUTION]
+>
+>此API支援單一部分上傳。 請確定內容類型為application/octet-stream。
 
 ```shell
 curl -X PATCH https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}.parquet \
@@ -559,7 +582,9 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}
 
 若要收錄CSV檔案，您必須建立支援CSV的類別、結構和資料集。 有關如何建立必要類和架構的詳細資訊，請遵循臨機架構建立教 [程中提供的說明](../../xdm/api/ad-hoc.md)。
 
->[!NOTE] 以下步驟適用於小型檔案（256 MB或以下）。 如果您遇到閘道逾時或要求內文大小錯誤，則需要切換至大型檔案上傳。
+>[!NOTE]
+>
+>以下步驟適用於小型檔案（256 MB或以下）。 如果您遇到閘道逾時或要求內文大小錯誤，則需要切換至大型檔案上傳。
 
 ### 建立資料集
 
@@ -695,7 +720,9 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches \
 
 現在您已建立批次，您可以使用之 `batchId` 前的開始，將檔案上傳至批次。 您可以上傳多個檔案至批次。
 
->[!NOTE] 如需格式正確的CSV資 [料檔案範例，請參閱附錄一節](#data-transformation-for-batch-ingestion)。
+>[!NOTE]
+>
+>如需格式正確的CSV資 [料檔案範例，請參閱附錄一節](#data-transformation-for-batch-ingestion)。
 
 **API格式**
 
@@ -711,7 +738,9 @@ PUT /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 
 **請求**
 
->[!CAUTION] 此API支援單一部分上傳。 請確定內容類型為application/octet-stream。
+>[!CAUTION]
+>
+>此API支援單一部分上傳。 請確定內容類型為application/octet-stream。
 
 ```shell
 curl -X PUT https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}.csv \
@@ -916,7 +945,9 @@ PUT /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 
 **請求**
 
->[!CAUTION] 此API支援單一部分上傳。 請確定內容類型為application/octet-stream。 請勿使用curl -F選項，因為它預設為與API不相容的多部分請求。
+>[!CAUTION]
+>
+>此API支援單一部分上傳。 請確定內容類型為application/octet-stream。 請勿使用curl -F選項，因為它預設為與API不相容的多部分請求。
 
 ```shell
 curl -X PUT https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}.json \
