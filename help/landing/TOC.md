@@ -3,10 +3,10 @@ product: experience-platform
 audience: user
 user-guide-title: Adobe Experience Platform說明
 translation-type: tm+mt
-source-git-commit: 2c95e34b56b322f7cfb098b27210dd5242128803
+source-git-commit: a2726bfc5ef7feac374e57af9c986a9c521efa48
 workflow-type: tm+mt
-source-wordcount: '296'
-ht-degree: 30%
+source-wordcount: '306'
+ht-degree: 37%
 
 ---
 
@@ -15,28 +15,29 @@ ht-degree: 30%
 
 * [體驗平台概觀](home.md)
 * [快速入門](get-started.md)
-* Experience Platform documentation {#documentation}
+* Experience Platform 文件 {#documentation}
    * [檔案總覽](documentation/overview.md)
    * [存取控制](https://docs.adobe.com/content/help/en/experience-platform/access-control/home.html)
-   * [Auditor](https://docs.adobe.com/content/help/en/auditor/using/overview.html)
+   * [Auditor](https://docs.adobe.com/content/help/zh-Hant/auditor/using/overview.html)
    * [目錄和資料集](https://docs.adobe.com/content/help/en/experience-platform/catalog/home.html)
    * [資料存取](https://docs.adobe.com/content/help/en/experience-platform/data-access/home.html)
    * [資料控管](https://docs.adobe.com/content/help/en/experience-platform/data-governance/home.html)
    * [資料擷取](https://docs.adobe.com/content/help/en/experience-platform/ingestion/home.html)
    * [資料科學工作區](https://docs.adobe.com/content/help/en/experience-platform/data-science-workspace/home.html)
    * [Debugger](https://docs.adobe.com/content/help/zh-Hant/debugger/using/experience-cloud-debugger.html)
+   * [除錯程式2.0（測試版）](https://docs.adobe.com/content/help/en/debugger/using-v2/experience-cloud-debugger.html)
    * [決策服務](https://docs.adobe.com/content/help/en/experience-platform/decisioning/home.html)
    * [目的地](https://docs.adobe.com/content/help/en/experience-platform/rtcdp/destinations/destinations-overview.html)
    * [ETL（擷取、轉換、載入）](https://docs.adobe.com/content/help/en/experience-platform/etl/home.html)
-   * [Identity 服務](https://docs.adobe.com/content/help/en/experience-platform/identity/home.html)
+   * [Identity 服務](https://docs.adobe.com/content/help/zh-Hant/experience-platform/identity/home.html)
    * [智慧型服務](https://docs.adobe.com/content/help/en/experience-platform/intelligent-services/home.html)
    * [Launch](https://docs.adobe.com/content/help/zh-Hant/launch/using/overview.html)
    * [可觀性見解](https://docs.adobe.com/content/help/en/experience-platform/observability/home.html)
    * [隱私權服務](https://docs.adobe.com/content/help/en/experience-platform/privacy/home.html)
-   * [個人檔案（即時客戶個人檔案）](https://docs.adobe.com/content/help/en/experience-platform/profile/home.html)
+   * [個人檔案（即時客戶個人檔案）](https://docs.adobe.com/content/help/zh-Hant/experience-platform/profile/home.html)
    * [查詢服務](https://docs.adobe.com/content/help/en/experience-platform/query/home.html)
    * [即時客戶資料平台](https://docs.adobe.com/content/help/en/experience-platform/rtcdp/overview.html)
-   * [沙盒](https://docs.adobe.com/content/help/en/experience-platform/sandbox/home.html)
+   * [沙盒](https://docs.adobe.com/content/help/zh-Hant/experience-platform/sandbox/home.html)
    * [區段](https://docs.adobe.com/content/help/en/experience-platform/segmentation/home.html)
    * [來源（連接器）](https://docs.adobe.com/content/help/en/experience-platform/sources/home.html)
    * [網頁SDK](https://docs.adobe.com/content/help/zh-Hant/experience-platform/edge/home.html)
