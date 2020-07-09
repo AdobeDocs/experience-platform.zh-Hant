@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 使用結構編輯器建立架構
 topic: tutorials
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: d55dc9776968099901325c58506c5e322449368e
 workflow-type: tm+mt
-source-wordcount: '3409'
+source-wordcount: '3462'
 ht-degree: 0%
 
 ---
@@ -289,13 +289,25 @@ More information about relationships and other schema metadata can be found in t
 >
 >一旦對即時客戶描述檔啟用並儲存結構後，便無法停用它。
 
-## 後續步驟
+## 後續步驟和其他資源
 
 現在您已完成「忠誠成員」架構的構成，您可以在編輯器的「結構」區 *段中* ，看到完整架構。 按一下 **保存** ，架構將保存到架構庫，使架構註冊表可以訪問該架構庫。
 
 您的新架構現在可用來將資料內嵌至平台。 請記住，一旦使用架構來收錄資料，則只能進行加性變更。 有關方案 [版本化的詳細資訊](../schema/composition.md) ，請參閱方案構成的基本資訊。
 
 「Loyalty Members」結構也可供使用「結構註冊表API」來檢視和管理。 若要開始使用API，請先閱讀 [Schema Registry API開發人員指南](../api/getting-started.md)。
+
+>[!WARNING]
+>
+>以 [!DNL Platform] 下影片中顯示的UI已過時。 請參閱上述檔案以取得最新的UI螢幕擷取和功能。
+
+以下視訊說明如何在UI中建立簡單的 [!DNL Platform] 架構。
+
+>[!VIDEO](https://video.tv.adobe.com/v/27012?quality=12&learn=on)
+
+以下影片旨在強化您對使用混合與類別的瞭解。
+
+>[!VIDEO](https://video.tv.adobe.com/v/27013?quality=12&learn=on)
 
 ## 附錄
 
