@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Adobe Experience Platform隱私權服務
 topic: overview
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: d358b200d574ca8de77ee2274836c03f7cc84c40
 workflow-type: tm+mt
-source-wordcount: '596'
-ht-degree: 10%
+source-wordcount: '1587'
+ht-degree: 5%
 
 ---
 
@@ -16,36 +16,87 @@ ht-degree: 10%
 
 為了提供更好的客戶體驗，您需要收集和儲存客戶的個人資料。 使用這些資料時，請務必瞭解並尊重客戶的隱私權。 新的法律和組織法規讓使用者有權應要求從資料存放區存取或刪除其個人資料。
 
-Adobe Experience Platform Privacy Service提供REST風格的API和使用者介面，可協助您管理客戶的這些資料要求。 透過隱私權服務，您可以提交從Adobe Experience Cloud應用程式存取和刪除私人或個人客戶資料的要求，以利自動符合法律和組織的隱私權法規。
+Adobe Experience Platform隱私權服務是因應企業管理客戶個人資料的方式發生根本轉變而開發。 隱私權服務的主要目的是自動遵守資料隱私權規定，一旦違反該規定，可能會導致貴公司遭受重大罰款並中斷資料營運。
 
-## 為何選擇隱私權服務？
+隱私權服務提供REST風格的API和使用者介面，可協助您管理客戶資料要求。 透過隱私權服務，您可以提交從Adobe Experience Cloud應用程式存取和刪除個人客戶資料的要求，以利自動符合法律和組織的隱私權法規。
 
-隱私權服務是因應企業管理客戶個人資料的方式發生根本轉變而開發。 隱私權服務的主要目的是自動遵守資料隱私權規定，一旦違反該規定，可能會導致貴公司遭受重大罰款並中斷資料營運。
+## 隱私權服務快速入門 {#getting-started}
 
-### 隱私權服務與GDPR
+若要使用隱私權服務，您必鬚根據貴組織的隱私權要求、您從客戶收集的身分資料種類，以及將CRM系統與服務介接的最佳方式，做出幾項關鍵決策。
 
-[](https://eugdpr.org/)一般資料保護規範 (GDPR) 為歐盟成員國引進了許多新的資料隱私權，包括&#x200B;**存取權**&#x200B;和&#x200B;**被遺忘權**。這表示貴公司已收集其個人資料的任何歐盟公民，都有權隨時請求存取或刪除其資料。若未能在30天內遵守這些要求，您的組織將面臨數百萬美元的罰款。
+這些決定可透過下列問題加以總結：
 
-隱私權服務支援存取和刪除GDPR要求，並與CCPA規則下的要求分開追蹤。 請參閱 [GDPR常見問答](gdpr/faq.md)[和術語文](gdpr/terminology.md) 件，以取得詳細資訊。
+1. **我從客戶那裡收集哪些資訊？**
+   * 為了充份運用隱私權服務，您必須詳細瞭解您從客戶收集的資料類型，以及其中哪些資料受隱私權法規的規範。 如需詳細資訊，請 [參閱決定隱私權](#requirements) 要求一節。
+1. **我是否已正確標示資料？**
+   * 必須正確標示資料，服務才能決定在隱私權工作期間要存取或刪除哪些欄位。 如需詳細資訊，請 [參閱標籤](#label) 資料一節。
+1. **我知道要傳送哪些ID至隱私權服務嗎？**
+   * 傳送隱私權要求時，必須提供特定Adobe應用程式專屬的個別客戶ID。 如需詳細資訊，請 [參閱提供身分資](#identity)[料](#requests) 及提出隱私權要求的相關章節。
+1. **我要如何追蹤我的隱私權工作？**
+   * 在您提出隱私權要求後，有幾個選項可用來追蹤其狀態和結果。 如需詳細資訊，請 [參閱監控隱私](#monitor) 工作一節。
 
-### 隱私權服務與CCPA
+以下各節提供這些重要先決條件步驟的一般指引，並提供隱私權服務檔案的連結，以取得詳細資訊。
 
-The [California Consumer Privacy Act](https://www.caprivacy.org/about) (CCPA) enhances privacy rights and consumer protection for residents of California, United States. CCPA為加州居民提供新的資料隱私權，包括存取和刪除其個人資料的權利，以得知其個人資料是賣給或披露（以及向誰），以及選擇不將其資料賣給第三方的權利。
+### 確定您組織的隱私權要求 {#requirements}
 
-隱私權服務支援存取和刪除CCPA規則的要求，並與GDPR要求分開追蹤。 隱私權服務也支援傳送支援Experience Cloud應用程式的退出銷售要求。 請參閱 [CCPA常見問答](ccpa/faq.md) ，以取得詳細資訊。
+根據您的業務性質及其經營所在的司法轄區，您的資料營運可能會受到法律隱私權法規的約束。 這些法規通常會賦予您的客戶要求存取您從他們收集的資料的權利，以及要求刪除該儲存資料的權利。 這些客戶對其個人資料的要求在整個檔案中稱為「隱私權要求」。
 
-## 如何使用隱私權服務管理隱私權工作要求
+下表概述隱私權服務管理要求的法律隱私權規範，包括檔案連結以取得詳細資訊：
 
-隱私權服務提供REST風格的API和使用者介面，讓您管理客戶存取／刪除其私人資料或選擇退出銷售的要求(也稱為隱 **私工作**)。 此服務也提供集中稽核與記錄機制，讓您檢視與Experience Cloud應用程式有關的隱私權工作狀態與結果。
+| 法規 | 說明 |
+| --- | --- |
+| CCPA（加州） | 加州消費者隱私權法案 (California Consumer Privacy Act, CCPA) 強化了美國加州居民的隱私權和消費者保護力道。CCPA為加州居民提供新的資料隱私權，包括存取和刪除其個人資料的權利，以得知其個人資料是賣給或披露（以及向誰），以及選擇不將其資料賣給第三方的權利。<br/><br/>進一步說明檔案的連結： <ul><li>[法律概觀](https://oag.ca.gov/privacy/ccpa)</li><li>[CCPA常見問答集](ccpa/faq.md)</li></ul> |
+| GDPR（歐盟） | 一般資料保護規範 (GDPR) 為歐盟成員國引進了許多新的資料隱私權，包括&#x200B;**存取權**&#x200B;和&#x200B;**被遺忘權**。這表示貴公司已收集其個人資料的任何歐盟公民，都有權隨時請求存取或刪除其資料。<br/><br/>進一步說明檔案的連結： <ul><li>[法律概觀](https://gdpr-info.eu/)</li><li>[GDPR 常見問題集](gdpr/faq.md)</li><li>[GDPR 術語](gdpr/terminology.md)</li></ul> |
+| PDPA_THA（泰國） | 泰國的個人資料保護法(PDPA)是為保護泰國資料擁有者不被非法收集、使用或揭露其個人資料而制定的。 受歐盟GDPR的啟發，該規定授予泰國公民要求訪問或刪除其儲存的個人資料的權利。<br/><br/>進一步說明檔案的連結： <ul><li>[法律概觀](https://www.dataprotectionreport.com/2020/02/thailand-personal-data-protection-law/)</li><li>[PDPA_THA常見問答集](pdpa-tha/faq.md)</li><li>[PDPA_THA術語](pdpa-tha/terminology.md)</li></ul> |
+
+如果您的資料作業屬於上述任何法規的權限，請檢閱其檔案，以取得重要資訊，例如客戶所享有的特定隱私權，以及遵守隱私權要求的遵循窗口。 在決定如何將隱私權服務整合至CRM系統時，應考量到這項資訊，以及客戶應如何與您的網站互動以提出隱私權要求。
+
+除了法律法規外，在做出這些決定時，您組織適用的任何組織或產業標準也應予以考慮。
+
+### 隱私權要求的標籤資料 {#label}
+
+根據您使用的Experience Cloud應用程式，您必須為應根據隱私權要求而存取或刪除的特定資料欄位加上標籤。 標籤資料的程式會因應用程式而異。 如要瞭解如何為每個支援的Adobe應用程式標示資料，請參閱 [Experience Cloud應用程式的檔案](./experience-cloud-apps.md)。
+
+### 判斷要傳送至隱私權服務的身分資料類型 {#identity}
+
+為了讓隱私權服務處理客戶的隱私權要求，該要求本身必須提供該客戶的至少一個唯一識別值。 唯一識別值是可用來識別個人及其儲存在Experience Cloud資料儲存區中的個人資料的任何資訊。 隱私權服務會根據要求（存取、刪除或選擇退出）的性質，使用此身分資訊來尋找和處理客戶的個人資料。
+
+視您的CRM系統所使用的Experience Cloud應用程式而定，您必須為每位客戶提供的身分值類型和數目會有所不同。 有些應用程式會使用其專屬的內部客戶ID值（例如Adobe Target ID），而其他解決方案則依賴Adobe Experience Cloud Identity Service(ECID)的全域識別碼，可追蹤所有Experience Cloud應用程式的客戶活動。 此外，電子郵件地址或電話號碼等一般個人資訊也可當成有效的身分資料。
+
+隱私權要 [求的身分資料檔案](./identity-data.md) ，提供隱私權服務接受的身分資訊類型的詳細資訊。 本檔案也提供如何運用Adobe技術，在客戶與您的網站互動時，有效地從他們擷取適當的身分資訊的指引，並在API要求中將該資料傳送至隱私權服務。
+
+### 開始提出隱私權要求 {#requests}
+
+一旦您決定了企業的隱私權需求，並決定要傳送至隱私權服務的身分值，您就可以開始提出隱私權要求。 隱私權服務可讓您透過API或UI傳送隱私權要求。
+
+>[!IMPORTANT]
+>
+>以下各節提供說明如何在API或UI中提出一般隱私權要求的檔案連結。 不過，視您使用的Experience Cloud應用程式而定，您必須在請求裝載中傳送的欄位可能與這些指南中顯示的範例不同。
+>
+>在遵循API或UI指南時，請參閱 [](./experience-cloud-apps.md) Privacy Service和Experience Cloud應用程式上的檔案，以取得有關如何設定特定Experience Cloud應用程式隱私權要求格式的詳細檔案。
+
+#### 使用API
+
+隱私 [服務API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/privacy-service.yaml) 提供數個端點，可讓您使用REST風格的API呼叫來建立和管理隱私權工作，讓您以程式設計方式處理Experience Cloud應用程式的隱私權規範合規性。 如需如何使用API的詳細步驟，請參閱「隱私 [服務API開發人員指南」](api/getting-started.md)。
+
+#### 使用UI
 
 >[!NOTE]
 >
->退出要求目前僅受隱私權服務API支援。
-
-### 使用API
-
-隱 [私權服務API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/privacy-service.yaml) 可讓您使用REST風格的API呼叫來建立和管理隱私權工作，讓您以程式設計方式處理Experience Cloud應用程式的隱私權法規遵循。 如需如何使用API的詳細步驟，請參閱「隱私 [服務API開發人員指南」](api/getting-started.md)。
-
-### 使用UI
+>隱私權服務UI目前僅支援存取和刪除要求。 所有選擇退出要求必須改為透過API提出。
 
 「隱私服務」UI允許您使用圖形介面建立和監視隱私作業。 UI包含狀態報 **告介面工具集** ，可以視覺化呈現所有作用中請求的狀態，並可讓您使用內建的 **Request Builder** 或上傳JSON檔案來建立新請求。 如需使用UI的詳細資訊，請參閱「隱私 [服務」使用指南](ui/overview.md)。
+
+### 監控隱私權工作 {#monitor}
+
+完成隱私權工作後，您有數個選項可用來監控其狀態和結果：
+
+| 監控方法 | 說明 |
+| --- | --- |
+| 隱私權服務UI | 「隱私服務」UI提供監控控制面板，可讓您檢視所有作用中請求狀態的視覺呈現。 如需詳細 [資訊，請參閱Privacy Service使用指南](ui/overview.md) 。 |
+| 隱私權服務API | 您可以使用隱私權服務API提供的查閱端點，以程式設計方式監控隱私權工作的狀態。 請參閱隱 [私權服務開發人員指南](./api/getting-started.md) ，以取得如何使用API的詳細步驟。 |
+| 隱私權事件 | 「隱私權事件」會運用傳送至已設定網頁掛接的Adobe I/O事件，以利有效率地自動化工作要求。 它們可降低或免除輪詢隱私權服務API的需求，以檢查工作是否完成或工作流程中是否達到特定里程碑。 如需詳細資訊，請 [參閱訂閱隱私權事件](./privacy-events.md) 的教學課程。 |
+
+## 後續步驟
+
+本檔案提供隱私權服務的高階概述，以及開始使用服務功能所需的主要步驟。 請參閱整個概述中連結的檔案，以取得有關使用隱私權服務各方面的深入資訊。
