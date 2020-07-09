@@ -3,7 +3,7 @@ product: experience-platform
 audience: user
 user-guide-title: Adobe Experience Platform隱私權服務說明
 translation-type: tm+mt
-source-git-commit: 63412f07b2e9237bbceaee8f1febef3ff655c286
+source-git-commit: 8c617631f2c1eb58871ed5eb0c9218cd943764cb
 workflow-type: tm+mt
 source-wordcount: '87'
 ht-degree: 11%
@@ -11,10 +11,11 @@ ht-degree: 11%
 ---
 
 
-# Adobe Experience Platform Privacy Service {#privacy}
+# Adobe Experience Platform隱私權服務 {#privacy}
 
 * [隱私權服務概觀](home.md)
 * [隱私權服務與Experience Cloud應用程式](experience-cloud-apps.md)
+* [隱私權要求的身分資料](identity-data.md)
 * [隱私權JS程式庫概觀](js-library.md)
 * Privacy Service API {#api}
    * [快速入門](api/getting-started.md)
@@ -24,7 +25,6 @@ ht-degree: 11%
 * 隱私權服務UI {#ui}
    * [隱私權服務UI概觀](ui/overview.md)
    * [隱私權服務使用指南](ui/user-guide.md)
-* [隱私權要求的身分資料](identity-data.md)
 * [訂閱隱私權事件](privacy-events.md)
 * GDPR指南 {#gdpr}
    * [GDPR 常見問題集](gdpr/faq.md)
