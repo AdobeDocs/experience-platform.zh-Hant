@@ -4,9 +4,9 @@ solution: Adobe Experience Platform
 title: 描述檔系統工作——即時客戶描述檔API
 topic: guide
 translation-type: tm+mt
-source-git-commit: d1656635b6d082ce99f1df4e175d8dd69a63a43a
+source-git-commit: c0b059d6654a98b74be5bc6a55f360c4dc2f216b
 workflow-type: tm+mt
-source-wordcount: '1503'
+source-wordcount: '1466'
 ht-degree: 2%
 
 ---
@@ -38,10 +38,10 @@ GET /system/jobs?{QUERY_PARAMETERS}
 
 | 參數 | 說明 |
 |---|---|
-| `start` | 依照請求的建立時間，偏移傳回的結果頁面。 範例: `start=4` |
-| `limit` | 限制傳回的結果數。 範例: `limit=10` |
-| `page` | 依照請求的建立時間傳回特定的結果頁面。 範例: `page=2` |
-| `sort` | 依特定欄位的升序(`asc`)或降序(`desc`)排序結果。 傳回多頁結果時，排序參數無法運作。 範例: `sort=batchId:asc` |
+| `start` | 依照請求的建立時間，偏移傳回的結果頁面。 範例: *`start=4`* |
+| `limit` | 限制傳回的結果數。 範例: *`limit=10`* |
+| `page` | 依照請求的建立時間傳回特定的結果頁面。 範例: ***`page=2`*** |
+| `sort` | 依特定欄位的升序(*`asc`*)或降序(**`desc`**)排序結果。 傳回多頁結果時，排序參數無法運作。 範例: `sort=batchId:asc` |
 
 **請求**
 
@@ -91,11 +91,11 @@ curl -X POST \
 
 | 屬性 | 說明 |
 |---|---|
-| _page.count | 請求總數。 此回應已針對空間截斷。 |
-| _page.next | 如果有其他結果頁面存在，請將查閱請求中的ID值取代為 [提供的](#view-a-specific-delete-request) 「下一頁」值，以檢視下一頁結果。 |
-| jobType | 要建立的作業類型。 在這種情況下，它將始終返回&quot;DELETE&quot;。 |
-| 狀態 | 刪除請求的狀態。 可能的值為「新」、「處理」、「已完成」、「錯誤」。 |
-| 度量 | 包含已處理的記錄數(「recordsProcessed」)和請求已處理的時間（以秒為單位），或請求完成所需的時間(「timeTakenInSec」)的物件。 |
+| `_page.count` | 請求總數。 此回應已針對空間截斷。 |
+| `_page.next` | 如果有其他結果頁面存在，請以提供的值取代查閱請求中的ID值，以檢 [視下一頁](#view-a-specific-delete-request)`"next"` 結果。 |
+| `jobType` | 要建立的作業類型。 在這種情況下，它將始終返回 `"DELETE"`。 |
+| `status` | 刪除請求的狀態。 可能的值 `"NEW"`是 `"PROCESSING"`、 `"COMPLETED"`、 `"ERROR"`。 |
+| `metrics` | 包含已處理的記錄數(`"recordsProcessed"`)和請求已處理的時間（秒），或請求完成所需時間(`"timeTakenInSec"`)的物件。 |
 
 ## 建立刪除請求 {#create-a-delete-request}
 
@@ -131,11 +131,11 @@ curl -X POST \
 
 | 屬性 | 說明 |
 |---|---|
-| dataSetId | **（必要）** ，您要刪除的資料集ID。 |
+| `dataSetId` | **（必要）** ，您要刪除的資料集ID。 |
 
 **回應**
 
-成功的回應會傳回新建立之刪除要求的詳細資料，包括要求的唯一、系統產生的唯讀ID。 這可用來查詢請求並檢查其狀態。 在 `status` 建立請求時，請求會一直保留到 `"NEW"` 開始處理為止。 回 `dataSetId` 應中的應符合在請 `dataSetId` 求中傳送的。
+成功的回應會傳回新建立之刪除要求的詳細資料，包括要求的唯一、系統產生的唯讀ID。 這可用來查詢請求並檢查其狀態。 在 **`status`** 建立請求時，請求會一直保留到 *`"NEW"`* 開始處理為止。 回 **`dataSetId`** 應中的應符合在請 ***`dataSetId`*** 求中傳送的。
 
 ```json
 {
@@ -151,15 +151,15 @@ curl -X POST \
 
 | 屬性 | 說明 |
 |---|---|
-| id | 刪除請求的唯一、系統產生的唯讀ID。 |
-| dataSetId | 資料集的ID，如POST請求中所指定。 |
+| `id` | 刪除請求的唯一、系統產生的唯讀ID。 |
+| `dataSetId` | 資料集的ID，如POST請求中所指定。 |
 
 ### 刪除批
 
 若要刪除批，批ID必須包含在POST請求的正文中。 請注意，不能根據記錄結構描述刪除資料集的批處理。 只能刪除基於時間系列方案的資料集的批處理。
 
 >[!NOTE]
-> 無法根據記錄結構描述刪除資料集的批的原因是，記錄類型資料集批會覆蓋以前的記錄，因此無法「撤消」或刪除。 基於記錄結構描述的資料集刪除錯誤批處理的影響的唯一方法是使用正確的資料重新生成批處理，以覆蓋錯誤的記錄。
+> 無法根據記錄結構描述刪除資料集的批的原因是，記錄類型資料集批會覆蓋以前的記錄，因此無法「撤消」或刪除。 要根據記錄方案消除資料集錯誤批處理的影響，唯一的方法是使用正確的資料重新收錄批，以覆蓋錯誤的記錄。
 
 有關記錄和時間序列行為的詳細資訊，請參閱「XDM [系統概述」中有關XDM資料行為](../../xdm/home.md#data-behaviors) 的一節。
 
@@ -186,11 +186,11 @@ curl -X POST \
 
 | 屬性 | 說明 |
 |---|---|
-| batchId | **（必要）** ，您要刪除的批次ID。 |
+| `batchId` | **（必要）** ，您要刪除的批次ID。 |
 
 **回應**
 
-成功的回應會傳回新建立之刪除要求的詳細資料，包括要求的唯一、系統產生的唯讀ID。 這可用來查詢請求並檢查其狀態。 在建立請求時，請求的「狀態」為「新」，直到開始處理為止。 回應中的&quot;batchId&quot;應與請求中傳送的&quot;batchId&quot;相符。
+成功的回應會傳回新建立之刪除要求的詳細資料，包括要求的唯一、系統產生的唯讀ID。 這可用來查詢請求並檢查其狀態。 在 `"status"` 建立請求時，請求會一直保留到 `"NEW"` 開始處理為止。 回 `"batchId"` 應中的應符合在請 `"batchId"` 求中傳送的。
 
 ```json
 {
@@ -206,8 +206,8 @@ curl -X POST \
 
 | 屬性 | 說明 |
 |---|---|
-| id | 刪除請求的唯一、系統產生的唯讀ID。 |
-| batchId | 批次的ID，如POST請求中所指定。 |
+| `id` | 刪除請求的唯一、系統產生的唯讀ID。 |
+| `batchId` | 批次的ID，如POST請求中所指定。 |
 
 如果您嘗試為記錄資料集批次啟動刪除請求，將會遇到400級錯誤，類似下列：
 
@@ -237,7 +237,7 @@ GET /system/jobs/{DELETE_REQUEST_ID}
 
 | 參數 | 說明 |
 |---|---|
-| {DELETE_REQUEST_ID} | **（必要）** ，您要檢視的刪除請求ID。 |
+| `{DELETE_REQUEST_ID}` | **（必要）** ，您要檢視的刪除請求ID。 |
 
 **請求**
 
@@ -269,11 +269,11 @@ curl -X POST \
 
 | 屬性 | 說明 |
 |---|---|
-| jobType | 所建立作業的類型，在這種情況下，它將始終返回&quot;DELETE&quot;。 |
-| 狀態 | 刪除請求的狀態。 可能的值： 「新」、「處理」、「完成」、「錯誤」。 |
-| 度量 | 一個陣列，包含已處理的記錄數(「recordsProcessed」)和請求已處理的時間（以秒為單位），或請求完成所需的時間(「timeTakenInSec」)。 |
+| `jobType` | 所建立作業的類型，在此情況下，它將始終返回 `"DELETE"`。 |
+| `status` | 刪除請求的狀態。 Possible values: `"NEW"`, `"PROCESSING"`, `"COMPLETED"`, `"ERROR"`. |
+| `metrics` | 一個陣列，包含已處理的記錄數(`"recordsProcessed"`)和請求已處理的時間（秒），或請求完成所需的時間(`"timeTakenInSec"`)。 |
 
-刪除請求狀態為「已完成」後，您可以嘗試使用資料存取API存取已刪除的資料，以確認資料已刪除。 有關如何使用Data Access API存取資料集和批次的指示，請參閱 [Data Access檔案](../../data-access/home.md)。
+刪除請求狀態一旦生效， `"COMPLETED"` 您就可以嘗試使用「資料存取API」存取已刪除的資料，以確認資料已被刪除。 有關如何使用Data Access API存取資料集和批次的指示，請參閱 [Data Access檔案](../../data-access/home.md)。
 
 ## 刪除刪除請求
 
