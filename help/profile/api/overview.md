@@ -4,9 +4,9 @@ solution: Adobe Experience Platform
 title: 即時客戶個人檔案API開發人員指南
 topic: guide
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: c0b059d6654a98b74be5bc6a55f360c4dc2f216b
 workflow-type: tm+mt
-source-wordcount: '666'
+source-wordcount: '668'
 ht-degree: 0%
 
 ---
@@ -33,7 +33,7 @@ ht-degree: 0%
 
 Adobe Experience Platform讓資料可輕鬆在戰略性位置的伺服器（稱為「邊緣」）上存取，讓客戶體驗即時個人化。 即時客戶個人檔案API提供端點，以透過稱為「預測」的元件處理邊緣。 這包括確定應將哪些資料投影到每個邊的投影配置，以及定義投影路由位置的投影目標。 有關使用邊緣投影的詳細資訊，請造訪投影 [設定和目標端點指南](edge-projections.md)。
 
-## 實體
+## 實體（描述檔存取） {#entities}
 
 透過Adobe Experience Platform，您可以使用REST風格的API或使用者介面存取即時客戶個人檔案資料。 若要瞭解如何使用API存取實體（更常稱為「設定檔」），請依照實體端點指南中 [的步驟](entities.md)。 若要使用平台UI存取描述檔，請參閱「描述檔 [使用指南」](../ui/user-guide.md)。
 
