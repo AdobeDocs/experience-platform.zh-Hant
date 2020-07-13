@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Adobe定義的函式
 topic: queries
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: cc101b1a439408861961c6fcd0899ca7c48bfa04
 workflow-type: tm+mt
-source-wordcount: '248'
+source-wordcount: '292'
 ht-degree: 6%
 
 ---
@@ -240,4 +240,10 @@ LIMIT 10;
 ```
 
 ![影像](../images/queries/adobe-functions/create-breakdown-report.png)
+
+## 其他資源
+
+以下視訊說明如何在Adobe Experience Platform介面和PSQL用戶端中執行查詢。 此外，視訊還使用XDM物件中涉及個別屬性的範例、使用Adobe定義的函式，以及使用CREATE TABLE AS SELECT(CTAS)。
+
+>[!VIDEO](https://video.tv.adobe.com/v/29796?quality=12&learn=on)
 
