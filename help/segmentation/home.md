@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Adobe Experience Platform細分服務
 topic: overview
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 1c9b50f8f71e917b86c34b061df7e2da6fe475a2
 workflow-type: tm+mt
-source-wordcount: '2386'
+source-wordcount: '2408'
 ht-degree: 0%
 
 ---
@@ -129,6 +129,10 @@ Adobe Experience Platform Segmentation Service提供使用者介面和REST風格
 透過進階的多實體分段功能，您可以使用多個XDM類別來建立區段，從而為人員結構描述新增擴充功能。 因此，區段服務可在區段定義期間存取其他欄位，就像這些欄位是描述檔資料儲存的原生欄位。
 
 多實體細分提供根據業務需求相關資料識別受眾所需的彈性。 此程式可以快速、輕鬆地完成，而不需要查詢資料庫的專業知識。 這可讓您將關鍵資料新增至區段，而不需對資料串流進行昂貴的變更，或等待後端資料合併。
+
+以下影片旨在支援您對多實體分段的瞭解，並概述多實體分段和分段內容（分段負載）。
+
+>[!VIDEO](https://video.tv.adobe.com/v/28947?quality=12&learn=on)
 
 ### 使用案例： 價格驅動促銷
 
