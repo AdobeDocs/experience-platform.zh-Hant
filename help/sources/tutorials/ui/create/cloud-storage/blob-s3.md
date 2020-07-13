@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 在UI中建立Azure Blob或Amazon S3來源連接器
 topic: overview
 translation-type: tm+mt
-source-git-commit: d3c725c4760acb3857a67d0d30b24732c963a030
+source-git-commit: 3f1c3c77a0755a3e305da0fb8a234be0f0ee1863
 workflow-type: tm+mt
-source-wordcount: '628'
+source-wordcount: '631'
 ht-degree: 1%
 
 ---
@@ -56,7 +56,7 @@ Adobe Experience Platform中的來源連接器可讓您依計畫吸收外部來�
 
 ## 連接您的Blob或S3帳戶
 
-收集完所需憑證後，您可依照下列步驟建立新的Blob或S3帳戶以連線至 [!DNL Platform]。
+收集完所需憑證後，您可以遵循下列步驟，建立新的Blob或S3帳戶以連線至 [!DNL Platform]。
 
 登入 [Adobe Experience Platform](https://platform.adobe.com) ，然後從左側導覽列選取 **[!UICONTROL Sources]** ，以存取 ** Sources工作區。 「目 *[!UICONTROL 錄]* 」螢幕顯示各種源，您可以為其建立入站帳戶，每個源顯示與其關聯的現有帳戶和資料流的數量。
 
@@ -80,6 +80,6 @@ Adobe Experience Platform中的來源連接器可讓您依計畫吸收外部來�
 
 ![現有](../../../../images/tutorials/create/blob/existing.png)
 
-## 後續步驟
+## 後續步驟和其他資源
 
 在本教學課程中，您已建立與您或S3 [!DNL Blob] 帳戶的連線。 您現在可以繼續下一個教學課程，並 [設定資料流，將雲端儲存空間的資料匯入平台](../../dataflow/batch/cloud-storage.md)。
