@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 區段產生器UI指南
 topic: ui guide
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 1c9b50f8f71e917b86c34b061df7e2da6fe475a2
 workflow-type: tm+mt
-source-wordcount: '2683'
+source-wordcount: '2766'
 ht-degree: 0%
 
 ---
@@ -175,7 +175,7 @@ ht-degree: 0%
 
 建立區段定義後，您就可以透過隨選或排程（持續）評估來評估區段定義。 評估意指透過 [!DNL Real-time Customer Profile] 區段定義來移動資料，以產生對應的觀眾。 建立後，觀眾會儲存並儲存，以便使用API匯出 [!DNL Experience Platform] 觀眾。
 
-隨選評估包括視需要使用API來執行評估並建立觀眾，而排程評估（也稱為「排程區段」）可讓您建立循環排程，以評估特定時間（最多每天一次）的區段定義。
+隨選評估包括視需要使用API來執行評估並建立觀眾，而排程評估（也稱為「排程區段」）可讓您建立循環性排程，以評估特定時間（最多每天一次）的區段定義。
 
 您可使用UI或API來啟用計畫評估的區段定義。 在UI中，返回「區段」中的「 *[!UICONTROL 瀏覽]* 」標 **[!UICONTROL 簽]** ，並切換「 **[!UICONTROL 評估所有區段」]**。 這會導致根據您組織所設定的排程評估所有區段。
 
@@ -233,6 +233,12 @@ ht-degree: 0%
 
 ![](../images/segment-builder/info-bubble.png)
 
+### 串流細分影片示範
+
+以下視訊旨在支援您對串流區段的瞭解。 它顯示客戶體驗範例，然後快速導覽介面中的主要功 [!DNL Platform] 能。
+
+>[!VIDEO](https://video.tv.adobe.com/v/36184?quality=12&learn=on)
+
 ## DULE策略違規
 
 >[!NOTE]
@@ -243,7 +249,7 @@ ht-degree: 0%
 
 ![](../images/segment-builder/segment-dule-policy-violations.png)
 
-## 後續步驟
+## 後續步驟和其他資源 {#next-steps}
 
 「區段產生器」提供豐富的工作流程，讓您將有價值的受眾與資料隔 [!DNL Real-time Customer Profile] 離。 閱讀本指南後，您現在可以：
 
@@ -253,4 +259,16 @@ ht-degree: 0%
 - 為排程的區段啟用所有區段定義。
 - 為串流區段啟用指定的區段定義。
 
-如需使用API的逐步指示，請參 [!DNL Segmentation Service] 閱使用API [!DNL Segmentation Service] 建立 [觀眾區段教學課程](../tutorials/create-a-segment.md) 。
+若要進一步了 [!DNL Segmentation Service]解，請繼續閱讀檔案，並觀賞以下影片以補充您的學習。 如需使用API的逐步指示，請參 [!DNL Segmentation Service] 閱使用API [!DNL Segmentation Service] 建立 [觀眾區段教學課程](../tutorials/create-a-segment.md) 。
+
+>[!WARNING]
+>
+> 下 [!DNL Platform] 列影片中顯示的UI已過時。 請參閱上述檔案以取得最新的UI螢幕擷取和功能。
+
+**建立區段：**
+
+>[!VIDEO](https://video.tv.adobe.com/v/27254?quality=12&learn=on)
+
+**建立動態區段：**
+
+>[!VIDEO](https://video.tv.adobe.com/v/27428?quality=12&learn=on)
