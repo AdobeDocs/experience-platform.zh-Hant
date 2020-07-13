@@ -4,7 +4,10 @@ solution: Experience Platform
 title: 多實體分段
 topic: overview
 translation-type: tm+mt
-source-git-commit: 902ba5efbb5f18a2de826fffd023195d804309cc
+source-git-commit: 7110be2654e55ea411580f8c9e2e92bb52badab5
+workflow-type: tm+mt
+source-wordcount: '406'
+ht-degree: 0%
 
 ---
 
@@ -13,15 +16,17 @@ source-git-commit: 902ba5efbb5f18a2de826fffd023195d804309cc
 
 多實體分段是指能夠根據產品、商店或其他非描述檔類別，以額外資料擴充描述檔資料。 連線後，其他類別的資料就會變成描述檔架構的原生資料。
 
-如需多實體區段的詳細資訊，請閱讀區段 [概觀](./home.md)。
+若要進一步瞭解多實體細分，請繼續閱讀檔案，並透過觀看以下影片或探索細分概觀，來補充您 [的學習](./home.md)。]
+
+>[!VIDEO](https://video.tv.adobe.com/v/28947?quality=12&learn=on)
 
 ## 快速入門
 
 本教學課程需要對使用區段時涉及的各種Adobe Experience Platform服務有深入的瞭解。 在開始本教學課程之前，請先閱讀下列服務的檔案：
 
-- [即時客戶個人檔案](../profile/home.md):根據來自多個來源的匯總資料，即時提供統一的消費者個人檔案。
-- [Adobe Experience Platform細分服務](./home.md):可讓您從即時客戶個人檔案建立細分。
-- [體驗資料模型(XDM)](../xdm/home.md):平台組織客戶體驗資料的標準化架構。
+- [即時客戶個人檔案](../profile/home.md): 根據來自多個來源的匯總資料，即時提供統一的消費者個人檔案。
+- [Adobe Experience Platform細分服務](./home.md): 可讓您從即時客戶個人檔案建立細分。
+- [體驗資料模型(XDM)](../xdm/home.md): 平台組織客戶體驗資料的標準化架構。
 
 ## 如何定義XDM關係
 
