@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Adobe Experience Platform串流擷取概觀
 topic: overview
 translation-type: tm+mt
-source-git-commit: a570a7a3d905c4618d80f56f01747cced1d124e8
+source-git-commit: 3f1c3c77a0755a3e305da0fb8a234be0f0ee1863
+workflow-type: tm+mt
+source-wordcount: '278'
+ht-degree: 3%
 
 ---
 
@@ -16,6 +19,10 @@ Adobe Experience Platform的串流擷取為使用者提供一種方法，可即�
 ## 您可以使用串流擷取功能做什麼？
 
 Adobe Experience Platform可讓您針對個別客戶建立即時客戶個人檔案，以推動協調、一致且相關的體驗。 串流擷取在建立這些描述檔時扮演了關鍵角色，讓您盡可能少的延遲將描述檔資料傳送至資料湖。
+
+以下視訊旨在協助您瞭解串流擷取，並概述上述概念。
+
+>[!VIDEO](https://video.tv.adobe.com/v/28425?quality=12&learn=on)
 
 ### 串流描述檔記錄和ExperienceEvents
 
