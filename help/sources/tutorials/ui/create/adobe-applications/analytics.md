@@ -4,10 +4,10 @@ solution: Experience Platform
 title: 在UI中建立Adobe Analytics來源連接器
 topic: overview
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 3f1c3c77a0755a3e305da0fb8a234be0f0ee1863
 workflow-type: tm+mt
-source-wordcount: '726'
-ht-degree: 2%
+source-wordcount: '769'
+ht-degree: 1%
 
 ---
 
@@ -95,7 +95,7 @@ ht-degree: 2%
 
 ![](../../../../images/tutorials/create/analytics/labels.png)
 
-## 後續步驟
+## 後續步驟和其他資源
 
 建立連線後，會自動建立目標模式和資料集流程，以包含傳入的資料。 此外，還會進行資料回填，以及內嵌長達 13 個月的歷史資料。當初始擷取完成時，Analytics資料並供下游平台服務（例如即時客戶個人檔案和細分服務）使用。 如需詳細資訊，請參閱下列檔案：
 
@@ -103,3 +103,12 @@ ht-degree: 2%
 * [區段服務概觀](../../../../../segmentation/home.md)
 * [資料科學工作區概觀](../../../../../data-science-workspace/home.md)
 * [查詢服務概述](../../../../../query-service/home.md)
+
+以下視訊旨在支援您對使用Adobe Analytics Source連接器擷取資料的瞭解：
+
+>[!WARNING]
+>
+> 下 [!DNL Platform] 列視訊中顯示的UI已過時。 請參閱上述檔案以取得最新的UI螢幕擷取和功能。
+
+>[!VIDEO](https://video.tv.adobe.com/v/29687?quality=12&learn=on)
+
