@@ -5,7 +5,7 @@ title: 隱私權服務開發人員指南
 description: 使用REST風格的API，跨Adobe Experience Cloud應用程式管理資料主體的個人資料
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 6f93191defad6a79a3f6623da3492ab405787b5c
+source-git-commit: b45fdfff70ce4ba857f23e7116812a07825871bc
 workflow-type: tm+mt
 source-wordcount: '793'
 ht-degree: 0%
@@ -17,9 +17,9 @@ ht-degree: 0%
 
 Adobe Experience Platform Privacy Service提供REST風格的API和使用者介面，可讓您跨Adobe Experience Cloud應用程式管理（存取和刪除）您資料主體（客戶）的個人資料。 隱私權服務也提供集中稽核和記錄機制，讓您存取與Experience Cloud應用程式有關的工作狀態和結果。
 
-本指南涵蓋如何使用隱私權服務API。 如需如何使用UI的詳細資訊，請參閱隱 [私服務UI概觀](../ui/overview.md)。 如需隱私權服務API中所有可用端點的完整清單，請參閱 [API參考](https://www.adobe.io/apis/experiencecloud/gdpr/api-reference.html)。
+本指南涵蓋如何使用隱私權服務API。 如需如何使用UI的詳細資訊，請參閱隱私 [服務UI概觀](../ui/overview.md)。 如需隱私權服務API中所有可用端點的完整清單，請參閱 [API參考](https://www.adobe.io/apis/experiencecloud/gdpr/api-reference.html)。
 
-## 快速入門
+## 快速入門 {#getting-started}
 
 本指南需要有效瞭解下列Experience Platform功能：
 
