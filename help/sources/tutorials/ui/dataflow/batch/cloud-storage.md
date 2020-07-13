@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 在UI中為雲儲存批處理連接器配置資料流
 topic: overview
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 3f1c3c77a0755a3e305da0fb8a234be0f0ee1863
 workflow-type: tm+mt
-source-wordcount: '1184'
+source-wordcount: '1223'
 ht-degree: 0%
 
 ---
@@ -129,10 +129,16 @@ ht-degree: 0%
 
 ## 後續步驟
 
-在本教程中，您成功建立了一個資料流，以便從外部雲儲存中導入資料，並獲得了對監控資料集的深入瞭解。 現在，下游服務（例如和）可 [!DNL Platform] 以使用傳入 [!DNL Real-time Customer Profile] 的資料 [!DNL Data Science Workspace]。 如需詳細資訊，請參閱下列檔案：
+在本教程中，您成功建立了一個資料流，以便從外部雲儲存中導入資料，並獲得了對監控資料集的深入瞭解。 若要進一步瞭解建立資料流，您可以觀賞以下視訊來補充學習內容。 此外，下游服務（例如和）現在可以 [!DNL Platform] 使用傳入 [!DNL Real-time Customer Profile] 的資料 [!DNL Data Science Workspace]。 如需詳細資訊，請參閱下列檔案：
 
 * [即時客戶個人檔案總覽](../../../../../profile/home.md)
 * [資料科學工作區概觀](../../../../../data-science-workspace/home.md)
+
+>[!WARNING]
+>
+> 下 [!DNL Platform] 列視訊中顯示的UI已過時。 請參閱上述檔案以取得最新的UI螢幕擷取和功能。
+
+>[!VIDEO](https://video.tv.adobe.com/v/29695?quality=12&learn=on)
 
 ## 附錄
 
