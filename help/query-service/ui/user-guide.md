@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Adobe Experience Platform Query Service查詢編輯器指南
 topic: query editor
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: cc101b1a439408861961c6fcd0899ca7c48bfa04
 workflow-type: tm+mt
-source-wordcount: '1060'
+source-wordcount: '1106'
 ht-degree: 1%
 
 ---
@@ -115,6 +115,12 @@ Query Editor是Adobe Experience Platform Query Service提供的互動式工具�
 查詢完成後，結果將顯示在「控制台」( *Console* )頁籤旁的「結 *果」(Results* )頁籤中。 此視圖顯示查詢的表格式輸出，最多顯示100行。 此視圖允許您驗證查詢是否生成了預期輸出。 若要使用查詢產生資料集，請移除傳回的列限制，並執行查詢，以 `CREATE TABLE tablename AS SELECT` 便使用輸出產生資料集。 有關如何 [在查詢編輯器中從查詢結果生成資料集的說明][query-service-create-datasets] ，請參見生成資料集教程。
 
 ![影像](../images/queries/query-editor-overview/query-results.png)
+
+## 使用查詢服務教程視頻運行查詢
+
+以下視訊說明如何在Adobe Experience Platform介面和PSQL用戶端中執行查詢。 此外，還演示了在XDM對象中使用單個屬性、使用Adobe定義的函式以及使用CREATE TABLE AS SELECT(CTAS)。
+
+>[!VIDEO](https://video.tv.adobe.com/v/29796?quality=12&learn=on)
 
 ## 後續步驟
 
