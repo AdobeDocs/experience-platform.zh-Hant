@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: 監控帳戶和資料集流
+title: 監視和刪除資料流
 topic: overview
 translation-type: tm+mt
-source-git-commit: d3c725c4760acb3857a67d0d30b24732c963a030
+source-git-commit: f08ad2c9cc48c08bcdc0e278481992e8789000b5
 workflow-type: tm+mt
-source-wordcount: '466'
+source-wordcount: '640'
 ht-degree: 0%
 
 ---
 
 
-# 監控帳戶和資料集流
+# 監視和刪除資料流
 
-Adobe Experience Platform中的來源連接器可讓您依計畫吸收外部來源的資料。 本教學課程提供從 *[!UICONTROL Sources工作區檢視現有帳戶和資料集流程的]* 步驟。
+Adobe Experience Platform中的來源連接器可讓您依計畫吸收外部來源的資料。 本教學課程提供從 *[!UICONTROL Sources工作區檢視現有帳戶和資料流]* 的步驟。 本教學課程也提供從 *[!UICONTROL Sources工作區刪除資料流]* 的步驟。
 
 ## 快速入門
 
@@ -27,15 +27,15 @@ Adobe Experience Platform中的來源連接器可讓您依計畫吸收外部來�
 
 ## 監控帳戶
 
-登入 <a href="https://platform.adobe.com" target="_blank">Adobe Experience Platform</a> ，然後從左側導覽列選取 **[!UICONTROL Sources]** ，以存取 ** Sources工作區。 「目 *[!UICONTROL 錄]* 」畫面會顯示多種來源，您可以用來建立帳戶資料集流。 每個來源會顯示與其關聯的現有帳戶和資料集流的數量。
+登入 [Adobe Experience Platform](https://platform.adobe.com) ，然後從左側導覽列選取 **[!UICONTROL Sources]** ，以存取 ** Sources工作區。 「目 *[!UICONTROL 錄]* 」螢幕顯示了各種源，您可以用這些源建立帳戶和資料流。 每個源顯示與其關聯的現有帳戶和資料流的數量。
 
 從頂 *[!UICONTROL 端標題]* ，選擇「帳戶」以檢視現有帳戶。
 
 ![目錄](../../images/tutorials/monitor/catalog.png)
 
-此時 *[!UICONTROL 會顯示]* 「帳戶」頁面。 此頁面是可檢視帳戶的清單，包括其來源、使用者名稱、資料集流量和建立日期的相關資訊。
+此時 *[!UICONTROL 會顯示]* 「帳戶」頁面。 此頁面是可查看帳戶的清單，包括有關其源、用戶名、資料流數和建立日期的資訊。
 
-選擇左上角的表徵圖以啟動排序窗口。
+選擇左上角的漏斗表徵圖以啟動排序窗口。
 
 ![帳戶](../../images/tutorials/monitor/accounts-list.png)
 
@@ -43,33 +43,63 @@ Adobe Experience Platform中的來源連接器可讓您依計畫吸收外部來�
 
 ![accounts-select](../../images/tutorials/monitor/accounts-sort.png)
 
-從「帳 *[!UICONTROL 戶]* 」頁面，您可以檢視與您存取之帳戶相關聯的現有資料集流程清單。 選擇您要檢視的資料集流程。
+在「帳 *[!UICONTROL 戶]* 」頁中，可以查看與您訪問的帳戶關聯的現有資料流的清單。 選擇要查看的資料流。
 
-![accounts-page](../../images/tutorials/monitor/dataset-flows.png)
+![accounts-page](../../images/tutorials/monitor/dataflows.png)
 
-此時會 *[!UICONTROL 顯示「資料集流量]* 」活動畫面。 此頁面以圖形形式顯示消費訊息的比率。
+出現「 *[!UICONTROL Dataflow(資料流]* )」活動螢幕。 此頁面以圖形形式顯示消費訊息的比率。
 
-![dataset-flow-activity](../../images/tutorials/monitor/dataset-flows-activity.png)
+![dataset-flow-activity](../../images/tutorials/monitor/dataflow-activity.png)
 
-## 監控資料集流
+## 監視資料流
 
-您可以直接從「目錄」頁面存取資料集 *[!UICONTROL 流程]* ，而不需檢視 *[!UICONTROL 帳戶]*。 從上 *[!UICONTROL 方標題選取資料集流]* ，以檢視現有資料集流的清單。
+可以直接從「目錄」頁訪問數 *[!UICONTROL 據流]* ，而不查看 *[!UICONTROL 帳戶]*。 從頂 *[!UICONTROL 部標題中]* ，選擇資料流以查看現有資料流清單。
 
-![dataset-flows](../../images/tutorials/monitor/dataset-flows-list.png)
+![目錄資料流](../../images/tutorials/monitor/catalog-dataflows.png)
 
-與帳戶類似，您可以使用左上角的排序圖示來排序資料集流的清單。 選擇要查看的源，並從右側的清單中選擇資料集流。
+此時將顯示現有資料流清單。 本頁列出了可查看的資料流，包括有關其源、用戶名、資料流數和狀態的資訊。 選擇左上角的漏斗圖示進行排序。
 
-![select-dataset-flows](../../images/tutorials/monitor/dataset-flows-sort.png)
+![dataflows-list](../../images/tutorials/monitor/dataflows-list.png)
 
-此時會 *[!UICONTROL 顯示「資料集流量]* 」活動畫面。 此頁面以圖形形式顯示消費訊息的比率。
+出現排序面板。 從滾動菜單中選擇要訪問的源，然後從右側的清單中選擇資料流。
 
-![dataset-flow-activity](../../images/tutorials/monitor/dataset-flows-activity.png)
+![sort-dataflows](../../images/tutorials/monitor/dataflows-sort.png)
 
-有關監視資料集和提取的詳細資訊，請參閱有關監視流資料流 [的教程](../../../ingestion/quality/monitor-data-flows.md)。
+出現「 *[!UICONTROL Dataflow(資料流]* )」活動螢幕。 此頁面以圖形形式顯示消費訊息的比率。
+
+![dataset-flow-activity](../../images/tutorials/monitor/dataflow-activity.png)
+
+有關監視資料流和接收的詳細資訊，請參閱監視流資料流 [的教程](../../../ingestion/quality/monitor-data-flows.md)。
+
+## 刪除資料流
+
+通過訪問資料流螢幕，可以刪除錯誤建立或不再需要的資料流。 使用排序漏斗表徵圖找到要刪除的資料流，並選擇資料流以開啟「屬 **[!UICONTROL 性]** 」面板。
+
+要刪除資料流，請從右 **[!UICONTROL 上角的]** 「屬性」中選擇「刪除」。
+
+![delete-dataflows](../../images/tutorials/monitor/dataflows-sort-delete.png)
+
+此時會顯示最終確認訊息。 選擇「 **[!UICONTROL 刪除]** 」進行確認。
+
+![確認刪除](../../images/tutorials/monitor/confirm-delete.png)
+
+片刻後，畫面底部會出現綠色的確認方塊，以確認刪除成功。
+
+![delete-successful](../../images/tutorials/monitor/deletion-confirmed.png)
+
+或者，您也可以從「帳戶」螢幕中刪 *[!UICONTROL 除資料]* 流。 使用排序漏斗圖示找出您想要存取的帳戶，然後從清單中選取帳戶。
+
+![accounts-select](../../images/tutorials/monitor/accounts-sort.png)
+
+此時將 *[!UICONTROL 顯示]* 「帳戶」頁。 選擇要刪除的資料流，然後從屬性面板 **[!UICONTROL 中選擇]** 「刪除」以完成該過程。
+
+![accounts-delete](../../images/tutorials/monitor/accounts-delete.png)
+
+請依照上述確認步驟完成程式。
 
 ## 後續步驟
 
-遵循本教學課程，您已成功存取 *[!UICONTROL Sources工作區的現有帳戶和資料集流]* 程。 現在，下游服務（例如和）可 [!DNL Platform] 以使用傳入 [!DNL Real-time Customer Profile] 的資料 [!DNL Data Science Workspace]。 如需詳細資訊，請參閱下列檔案：
+遵循本教學課程，您已成功存取 *[!UICONTROL Sources工作區的現有帳戶和]* 資料流。 現在，下游服務（例如和）可 [!DNL Platform] 以使用傳入 [!DNL Real-time Customer Profile] 的資料 [!DNL Data Science Workspace]。 如需詳細資訊，請參閱下列檔案：
 
 - [即時客戶個人檔案總覽](../../../profile/home.md)
 - [資料科學工作區概觀](../../../data-science-workspace/home.md)
