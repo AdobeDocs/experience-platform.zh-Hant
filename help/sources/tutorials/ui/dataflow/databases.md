@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 在UI中為資料庫連接器配置資料流
 topic: overview
 translation-type: tm+mt
-source-git-commit: d3c725c4760acb3857a67d0d30b24732c963a030
+source-git-commit: 168ac3a3ab9f475cb26dc8138cbc90a3e35c836d
 workflow-type: tm+mt
-source-wordcount: '1043'
+source-wordcount: '1048'
 ht-degree: 0%
 
 ---
@@ -108,9 +108,9 @@ ht-degree: 0%
 
 ![](../../../images/tutorials/dataflow/databases/review.png)
 
-## 監控資料流
+## 監視和刪除資料流
 
-建立資料流後，您可以監視通過其獲取的資料。 有關如何監視資料流的詳細資訊，請參見有關帳戶和數 [據流的教程](../monitor.md)。
+建立資料流後，您可以監視通過其獲取的資料。 有關如何監視和刪除資料流的詳細資訊，請參見有關監視和刪 [除資料流的教程](../monitor.md)。
 
 ## 後續步驟
 
