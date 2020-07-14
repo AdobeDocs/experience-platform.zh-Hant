@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 在UI中為客戶成功連接器配置資料流
 topic: overview
 translation-type: tm+mt
-source-git-commit: d3c725c4760acb3857a67d0d30b24732c963a030
+source-git-commit: 168ac3a3ab9f475cb26dc8138cbc90a3e35c836d
 workflow-type: tm+mt
-source-wordcount: '1111'
+source-wordcount: '1022'
 ht-degree: 0%
 
 ---
@@ -104,23 +104,9 @@ ht-degree: 0%
 
 ![審查](../../../images/tutorials/dataflow/customer-success/review.png)
 
-## 監控資料流
+## 監視和刪除資料流
 
-建立資料流後，您可以監視通過其獲取的資料。 按照以下步驟訪問資料流的資料集監視器。
-
-在「來 *[!UICONTROL 源]* 」工作區中，選取您要在「客戶成功」類別下檢視的客戶 *[!UICONTROL 成功來源]* 。 選擇 *[!UICONTROL 連接源]* ，啟動驗證介面。 要查看現有資料流，請選擇 *[!UICONTROL 現有帳戶]* ，然後選擇要訪問的帳戶。
-
-![monitor](../../../images/tutorials/dataflow/customer-success/monitor.png)
-
-此時將 *[!UICONTROL 顯示「源]* 」活動螢幕。 在此處，按一下要監視其活動的資料集的名稱。
-
-![select-dataflow-dataset](../../../images/tutorials/dataflow/customer-success/select-dataflow-dataset.png)
-
-此時會 *[!UICONTROL 顯示「資料集]* 」活動畫面。 此頁面以圖形形式顯示消費訊息的比率。
-
-![dataset-activity](../../../images/tutorials/dataflow/customer-success/dataset-activity.png)
-
-有關監視資料集和提取的詳細資訊，請參閱有關監視流資料流 [的教程](../../../../ingestion/quality/monitor-data-flows.md)。
+建立資料流後，您可以監視通過其獲取的資料。 有關如何監視和刪除資料流的詳細資訊，請參見有關監視和刪 [除資料流的教程](../monitor.md)。
 
 ## 後續步驟
 
