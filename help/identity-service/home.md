@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Adobe Experience Platform Identity Service
 topic: overview
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: d02f12202e51b00453f719604052a54f6fcfe4ab
 workflow-type: tm+mt
-source-wordcount: '1530'
+source-wordcount: '1672'
 ht-degree: 0%
 
 ---
@@ -60,6 +60,14 @@ PII（例如電子郵件地址和電話號碼）可直接識別客戶。 因此�
 您的客戶可能會透過結合線上及線下通道與品牌互動，因此，如何將這些零散的互動整合為單一客戶識別，是個挑戰。
 
 [!DNL Experience Platform] 通過兩個概念來解決此難題： [身分名稱空間](#identity-namespaces) 和 [身分圖表](#identity-graphs)。
+
+以下影片旨在協助您瞭解身分和身分圖。 以下視訊涵蓋Identity Collection、Identity Graphs和API的3種功能。 此外，還說明如何使用確定性和概率性演算法來建構私人身分識別圖，並討論私人身分識別圖、Adobe Experience Platform Identity Service Co-Op Graph和協力廠商圖的角色。
+
+>[!IMPORTANT]
+>
+> 概率私用圖表仍在開發中，並設定稍後發佈。
+
+>[!VIDEO](https://video.tv.adobe.com/v/27841?quality=12&learn=on)
 
 ### 身分名稱空間
 
@@ -123,10 +131,18 @@ PII（例如電子郵件地址和電話號碼）可直接識別客戶。 因此�
 
 [!DNL Identity Service] 使用批次擷取或串流擷取 [!DNL Experience Platform] 傳送至 [的XDM相](../ingestion/batch-ingestion/overview.md) 容資料 [](../ingestion/streaming-ingestion/overview.md)。
 
+以下視訊旨在支援您對Identity Service的瞭解。 此影片示範如何將資料欄位標示為身分、擷取身分資料，然後確認資料已傳至Adobe Experience Platform Identity Service私用圖表。
+
+>[!WARNING]
+>
+> 下 [!DNL Platform] 列視訊中顯示的UI已過時。 請參閱檔案以取得最新的UI螢幕擷取和功能。
+
+>[!VIDEO](https://video.tv.adobe.com/v/28167?quality=12&learn=on)
+
 ## 資料治理
 
-Adobe Experience Platform was built with privacy in mind and includes a data governance framework to protect your customer PII data. Identity data under the &quot;email&quot; or &quot;phone&quot; namespace is encrypted by default, but in order to ensure sensitive data is encrypted before it is persisted, data usage labels can be applied to data as it is ingested or once it arrives in [!DNL Platform]. For more information, please read the [Data Governance overview](../data-governance/home.md).
+Adobe Experience Platform是以隱私權為考量而建立，並包含資料治理架構，以保護客戶PII資料。 「電子郵件」或「電話」名稱空間下的身分資料預設會加密，但為了確保機密資料在保存前已加密，資料使用標籤可在收到資料時或傳入資料時套用至資料 [!DNL Platform]。 如需詳細資訊，請閱讀資 [料治理概觀](../data-governance/home.md)。
 
 ## 後續步驟
 
-Now that you understand the key concepts of [!DNL Identity Service] and its role within [!DNL Experience Platform], you can begin to learn how to work with your identity graph using the [!DNL Identity Service API](./api/getting-started.md).
+現在，您已瞭解其關鍵概 [!DNL Identity Service] 念及其在其中的角色 [!DNL Experience Platform]，可以開始學習如何使用您的識別圖表 [!DNL Identity Service API](./api/getting-started.md)。
