@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 沙盒使用指南
 topic: user guide
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: d02f12202e51b00453f719604052a54f6fcfe4ab
 workflow-type: tm+mt
-source-wordcount: '514'
+source-wordcount: '527'
 ht-degree: 0%
 
 ---
@@ -37,6 +37,10 @@ ht-degree: 0%
 ![](../images/ui/sandbox-switched.png)
 
 ## 建立新的沙盒
+
+請使用下列影片，以快速概述如何在中 [!DNL Sandboxes] 使用 [!DNL Experience Platform]。
+
+>[!VIDEO](https://video.tv.adobe.com/v/29838/?quality=12&learn=on)
 
 若要在UI中建立新沙盒，請按一下左導覽中的「沙盒」 **，然後按一下「** 建立沙盒」 ****。
 
