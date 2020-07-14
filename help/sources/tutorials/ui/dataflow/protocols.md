@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 在UI中為協定連接器配置資料流
 topic: overview
 translation-type: tm+mt
-source-git-commit: d3c725c4760acb3857a67d0d30b24732c963a030
+source-git-commit: 168ac3a3ab9f475cb26dc8138cbc90a3e35c836d
 workflow-type: tm+mt
-source-wordcount: '1073'
+source-wordcount: '1071'
 ht-degree: 1%
 
 ---
@@ -29,7 +29,7 @@ ht-degree: 1%
 
 ## 選擇資料
 
-在建立您的通訊協定帳戶後，會出 *[!UICONTROL 現「選取資料]* 」步驟，提供互動式介面供您探索檔案階層。
+建立通訊協定帳戶後，會出 *[!UICONTROL 現「選取資料]* 」步驟，提供互動式介面供您探索檔案階層。
 
 - 介面的左半部分是目錄瀏覽器，顯示伺服器的檔案和目錄。
 - 介面的右半部分可讓您從相容檔案中預覽最多100列資料。
@@ -85,19 +85,19 @@ ht-degree: 1%
 | 開始時間 | UTC時間戳記，將會發生第一次擷取。 |
 | 回填 | 一個布爾值，可決定最初收錄的資料。 如果 *[!UICONTROL 啟用回填]* ，則指定路徑中的所有目前檔案將在第一次排程擷取期間被擷取。 如果 *[!UICONTROL 停用]* 「回填」 *[!UICONTROL ，則只會收錄在首次擷取執行和開始時間之間載入的]* 檔案。 在開始時間之前載 *[!UICONTROL 入的檔案]* ，將不會收錄。 |
 
-資料集流是設計為在排程基礎上自動收錄資料。 如果您只想在此工作流程中收錄一次，可以將 **[!UICONTROL Frequency]** （頻率）設為「Day」（日），並套用很大的 **[!UICONTROL Interval]**（例如10000或類似）。
+資料流設計為在計畫基礎上自動收錄資料。 如果您只想在此工作流程中收錄一次，可以將 **[!UICONTROL Frequency]** （頻率）設為「Day」（日），並套用很大的 **[!UICONTROL Interval]**（例如10000或類似）。
 
 提供計畫值，然後按一下「下 **[!UICONTROL 一步]**」。
 
 ![調度](../../../images/tutorials/dataflow/protocols/scheduling.png)
 
-## 命名資料集流程
+## 命名資料流
 
 此時 *[!UICONTROL 會顯示資料集流程詳細資料]* ，您必須在其中提供資料集流程的名稱和選用說明。 完成後，按&#x200B;**[!UICONTROL 「下一步」]**。
 
 ![dataset-flow-details](../../../images/tutorials/dataflow/protocols/dataset-flow-details.png)
 
-## 檢閱資料集流程
+## 查看資料流
 
 此時 *[!UICONTROL 會出現]* 「查看」步驟，允許您在建立新資料流之前對其進行查看。 詳細資訊會分組在下列類別中：
 
@@ -109,9 +109,9 @@ ht-degree: 1%
 
 ![審查](../../../images/tutorials/dataflow/protocols/review.png)
 
-## 監控資料集流程
+## 監視和刪除資料流
 
-建立資料集流程後，您就可以監控透過它擷取的資料。 如需如何監控資料集流程的詳細資訊，請參閱帳戶和資料集流 [程的教學課程](../monitor.md)。
+建立資料流後，您可以監視通過其獲取的資料。 有關如何監視和刪除資料流的詳細資訊，請參見有關監視和刪 [除資料流的教程](../monitor.md)。
 
 ## 後續步驟
 
