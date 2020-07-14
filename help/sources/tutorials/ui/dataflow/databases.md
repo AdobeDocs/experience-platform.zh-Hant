@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 在UI中為資料庫連接器配置資料流
 topic: overview
 translation-type: tm+mt
-source-git-commit: 168ac3a3ab9f475cb26dc8138cbc90a3e35c836d
+source-git-commit: c3d85485d0c4a910e7ba777858e2f6cf7185ef54
 workflow-type: tm+mt
-source-wordcount: '1048'
+source-wordcount: '1060'
 ht-degree: 0%
 
 ---
@@ -80,7 +80,7 @@ ht-degree: 0%
 | --- | --- |
 | 頻率 | 可選頻率包括分鐘、小時、日和周。 |
 | 間隔 | 一個整數，用於設定所選頻率的間隔。 |
-| 開始時間 | UTC時間戳記，將會發生第一次擷取。 |
+| 開始時間 | UTC時間戳記，將會發生第一次擷取。 開始時間值必須以時元時間（以秒為單位）設定。 |
 | 回填 | 一個布爾值，可決定最初收錄的資料。 如果 *啟用回填* ，則指定路徑中的所有目前檔案將在第一次排程擷取期間被擷取。 如果 *停用* 「回填」 *，則只會收錄在首次擷取執行和開始時間之間載入的* 檔案。 在開始時間之前載 *入的檔案* ，將不會收錄。 |
 | 增量列 | 具有類型、日期或時間的一組已篩選源架構欄位的選項。 此欄位用於區分新資料和現有資料。 增量資料將根據選取欄的時間戳記進行擷取。 |
 
