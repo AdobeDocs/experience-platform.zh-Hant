@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 在UI中為客戶成功連接器配置資料流
 topic: overview
 translation-type: tm+mt
-source-git-commit: 168ac3a3ab9f475cb26dc8138cbc90a3e35c836d
+source-git-commit: 649ec680148417a718aa9be121de2336521a1791
 workflow-type: tm+mt
-source-wordcount: '1022'
+source-wordcount: '1164'
 ht-degree: 0%
 
 ---
@@ -80,17 +80,29 @@ ht-degree: 0%
 
 | 欄位 | 說明 |
 | --- | --- |
-| 頻率 | 可選頻率包括分鐘、小時、日和周。 |
+| 頻率 | 可選頻率包括「一次」、「分鐘」、「小時」、「日」和「周」。 |
 | 間隔 | 一個整數，用於設定所選頻率的間隔。 |
-| 開始時間 | UTC時間戳記，將會發生第一次擷取。 |
-| 回填 | 一個布爾值，可決定最初收錄的資料。 如果 *[!UICONTROL 啟用回填]* ，則指定路徑中的所有目前檔案將在第一次排程擷取期間被擷取。 如果 *[!UICONTROL 停用]* 「回填」 *[!UICONTROL ，則只會收錄在首次擷取執行和開始時間之間載入的]* 檔案。 在開始時間之前載 *[!UICONTROL 入的檔案]* ，將不會收錄。 |
+| 開始時間 | UTC時間戳記，指出何時設定第一次擷取 |
+| 回填 | 一個布爾值，可決定最初收錄的資料。 如果 *啟用回填* ，則指定路徑中的所有目前檔案將在第一次排程擷取期間被擷取。 如果 *停用* 「回填」 *，則只會收錄在首次擷取執行和開始時間之間載入的* 檔案。 在開始時間之前載 *入的檔案* ，將不會收錄。 |
+| 增量列 | 具有類型、日期或時間的一組已篩選源架構欄位的選項。 此欄位用於區分新資料和現有資料。 增量資料將根據選取欄的時間戳記進行擷取。 |
 
-資料流設計為在計畫基礎上自動收錄資料。 如果您只想在此工作流程中收錄一次，可以將 **[!UICONTROL Frequency]** （頻率）設為「Day」（日），並套用很大的 **[!UICONTROL Interval]**（例如10000或類似）。
+資料流設計為在計畫基礎上自動收錄資料。 從選取擷取頻率開始。 接著，設定間隔，以指定兩個流程執行之間的期間。 間隔的值應為非零整數，且應設定為大於或等於15。
 
-提供計畫值，然後按一下「下 **[!UICONTROL 一步]**」。
+若要設定擷取的開始時間，請調整顯示在開始時間方塊中的日期和時間。 或者，您也可以選取日曆圖示來編輯開始時間值。 開始時間必須大於或等於當前UTC時間。
 
-![調度](../../../images/tutorials/dataflow/customer-success/scheduling.png)
+選擇 **[!UICONTROL 載入增量資料]** ，以分配增量列。 此欄位可區分新資料和現有資料。
 
+![](../../../images/tutorials/dataflow/databases/schedule-interval-on.png)
+
+### 設定一次性提取資料流
+
+若要設定一次性擷取，請選取頻率下拉箭頭，然後選取「 **[!UICONTROL Once]**」。
+
+>[!TIP] **[!UICONTROL 在單]** 次擷取期間 **** ，不會顯示間隔和回填。
+
+![](../../../images/tutorials/dataflow/databases/schedule-once.png)
+
+在為計畫提供適當值後，選擇「下 **[!UICONTROL 一步」]**。
 
 ## 查看資料流
 
