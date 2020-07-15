@@ -4,9 +4,9 @@ seo-title: Experience Platform Web SDK的Edge組態
 description: '瞭解如何設定Experience Platform Edge Network。 '
 seo-description: '瞭解如何設定Experience Platform Edge Network。 '
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 013e6abb0922e39bd6b9da6a66bba9a1bcefdd25
 workflow-type: tm+mt
-source-wordcount: '882'
+source-wordcount: '881'
 ht-degree: 2%
 
 ---
@@ -28,7 +28,7 @@ Edge組態ID可在Adobe中使 [!DNL Launch] 用Edge組態工具建立。 此工�
 >
 >無論客戶是否使用標籤管理器，允許清單上的邊緣設定工具 [!DNL Launch] 都可供客戶使用。 此外，使用者需要中的「開發」權限 [!DNL Launch]。 如需詳細 [資訊，請參閱](https://docs.adobe.com/content/help/zh-Hant/launch/using/reference/admin/user-permissions.html) 「使用者 [!DNL Launch] 權限」文章。
 
-您可以按一下畫面右上方區域的 **[UICONTROL New Edge Configuration]** ，來建立邊緣設定。 在您提供名稱和說明後，系統會要求您針對每個環境提供預設設定。
+您可以按一下畫面右上方區域 **[!UICONTROL 的「新增邊緣設定」]** ，建立邊緣設定。 在您提供名稱和說明後，系統會要求您針對每個環境提供預設設定。
 
 ### 預設環境設定
 
