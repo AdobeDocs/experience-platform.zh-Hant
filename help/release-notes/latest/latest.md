@@ -5,10 +5,10 @@ doc-type: release notes
 last-update: July 15, 2020
 author: crhoades, ens25212
 translation-type: tm+mt
-source-git-commit: 2bbd62fc53d304ff05250688733f1b18dfd18007
+source-git-commit: e864073c27ba20ce32c962c469aed52608f199ac
 workflow-type: tm+mt
-source-wordcount: '328'
-ht-degree: 6%
+source-wordcount: '686'
+ht-degree: 4%
 
 ---
 
@@ -19,36 +19,34 @@ ht-degree: 6%
 
 Adobe Experience Platform現有功能的更新：
 
-<!-- - [Data Governance](#governance) -->
-<!-- - [Real-time Customer Profile](#profile) -->
+- [資料控管](#governance)
+- [即時客戶個人檔案](#profile)
 - [區段服務](#segmentation)
 - [來源](#sources)
 
-<!-- ## [!DNL Data Governance] {#governance}
+## [!DNL Data Governance] {#governance}
 
-Adobe Experience Platform Data Governance is a series of strategies and technologies used to manage customer data and ensure compliance with regulations, restrictions, and policies applicable to data usage. It plays a key role within [!DNL Experience Platform] at various levels, including cataloging, data lineage, data usage labeling, data access policies, and access control on data for marketing actions.
+Adobe Experience Platform資料治理是一系列策略和技術，用於管理客戶資料並確保符合適用於資料使用的法規、限制和政策。 它在各個層級中都扮演了關 [!DNL Experience Platform] 鍵角色，包括編目、資料傳承、資料使用標籤、資料存取政策，以及對行銷動作資料的存取控制。
 
-**New features**
+**新功能**
 
-| Feature    | Description  |
+| 功能 | 說明 |
 | -----------| ---------- |
-| Automatic policy enforcement in [!DNL Real-time Customer Data Platform] | Data usage policies are now automatically enforced in [!DNL Real-time CDP] when violating actions occur, including activating segments to destinations. When a policy violation is triggered, users get real-time visibility into usage restrictions within the activation workflow, indicating what data they cannot use and why.<br><br>See the section on [enforcing data usage compliance](../../rtcdp/privacy/data-governance-overview.md#enforce-data-usage-compliance) within the overview on [!DNL Data Governance] in [!DNL Real-time CDP] for more information. |
-| Adobe Audience Manager integration | Any segments that are shared with [!DNL Audience Manager] from [!DNL Platform] inherit any applied data usage labels as [!DNL Data Export Controls], and vice versa. See the [!DNL Audience Manager] documentation for specific [mappings between usage labels and Data Export Controls](https://docs.adobe.com/content/help/en/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aam-data-export-control-in-aep). |
-| Custom data usage labels | You can now create custom data usage labels using the Policy Service API or in the UI. See the [labels overview](../../data-governance/labels/overview.md) for more information. |
+| 自動執行 [!DNL Real-time Customer Data Platform] | 現在，當發生違反動作(包括將區段啟 [!DNL Real-time CDP] 用至目標)時，會自動強制執行資料使用原則。 觸發原則違規時，使用者即時檢視啟動工作流程中的使用限制，指出他們無法使用哪些資料及原因。<br><br>如需詳細資訊，請參 [閱中的概述中](../../rtcdp/privacy/data-governance-overview.md#enforce-data-usage-compliance) ，關於強制資料使 [!DNL Data Governance] 用規範的 [!DNL Real-time CDP] 章節。 |
+| Adobe Audience Manager整合 | 從中共用的任何區段 [!DNL Audience Manager] 會繼 [!DNL Platform] 承任何套用的資料使用標籤，反之亦然 [!DNL Data Export Controls]。 請參閱文 [!DNL Audience Manager] 件，瞭解使用 [標籤與資料匯出控制項之間的特定對應](https://docs.adobe.com/content/help/en/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aam-data-export-control-in-aep)。 |
+| 自訂資料使用標籤 | 您現在可以使用原則服務API或在UI中建立自訂資料使用標籤。 如需詳細 [資訊，請參閱](../../data-governance/labels/overview.md) 「標籤概觀」。 |
 
-See the [Data Governance overview](../../data-governance/home.md) for more information on the service.
+如需服務 [的詳細資訊](../../data-governance/home.md) ，請參閱資料管理概觀。
 
 ## [!DNL Real-time Customer Profile] {#profile}
 
-Adobe Experience Platform enables you to drive coordinated, consistent, and relevant experiences for your customers no matter where or when they interact with your brand. With [!DNL Real-time Customer Profile], you can see a holistic view of each individual customer that combines data from multiple channels, including online, offline, CRM, and third party data. [!DNL Profile] allows you to consolidate your disparate customer data into a unified view offering an actionable, timestamped account of every customer interaction.
+Adobe Experience Platform可讓您為客戶推動協調、一致且相關的體驗，不論客戶在何處或何時與您的品牌互動。 透過 [!DNL Real-time Customer Profile]此功能，您可以全面瞭解每個客戶，並結合來自多個通道的資料，包括線上、離線、CRM和第三方資料。 [!DNL Profile] 可讓您將分散的客戶資料整合為統一的檢視，提供每個客戶互動的可操作、時間戳記帳戶。
 
-**New features**
+**新功能**
 
-| Feature | Description |
+| 功能 | 說明 |
 | ------- | ----------- |
-| Data usage policy enforcement | In [!DNL Real-time Customer Data Platform], data usage policy violations are automatically surfaced when a violating action in the [!UICONTROL Profile] workspace is attempted. See the [release notes for Data Governance](#governance) for more information on automatic policy enforcement. | 
-
--->
+| 資料使用政策實施 | 在中 [!DNL Real-time Customer Data Platform]，當嘗試在「描述檔」工作區中執行違規動作時，會自動呈現資 [!UICONTROL 料使用] 原則違規。 如需自動 [執行原則的詳細資訊，請參閱資料管理](#governance) 的發行說明。 |
 
 ## [!DNL Segmentation Service] {#segmentation}
 
@@ -61,8 +59,7 @@ Adobe Experience Platform Segmentation Service提供使用者介面和REST風格
 | 功能 | 說明 |
 | ------- | ----------- |
 | 串流區段 | 串流區段現在可以在資料進入區段時符合使用者資格，因 [!DNL Platform]此可大幅縮短區段限定時間。 串流分段也可減輕手動執行分段工作的需求。 |
-
-<!-- | Data usage policy enforcement | In [!DNL Real-time Customer Data Platform], data usage policy violations are automatically surfaced when a violating action in the [!UICONTROL Segments] workspace is attempted. See the [release notes for Data Governance](#governance) for more information on automatic policy enforcement. | -->
+| 資料使用政策實施 | 在中 [!DNL Real-time Customer Data Platform]，當嘗試「區段」工作區中的違規動作時，資料使用原則違 [!UICONTROL 規會自動呈現] 。 如需自動 [執行原則的詳細資訊，請參閱資料管理](#governance) 的發行說明。 |
 
 如需詳細資訊， [!DNL Segmentation Service]請參閱區 [段概觀](../../segmentation/home.md)
 
