@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Adobe Experience Platform資料治理
 topic: overview
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 7f6612f7dd649d68aa7ebe5b971b72d7b433b1e3
 workflow-type: tm+mt
-source-wordcount: '1448'
+source-wordcount: '1434'
 ht-degree: 0%
 
 ---
@@ -92,7 +92,6 @@ Data Governance目前支援兩個層級（資料集和欄位）的DULE標籤。 
 
 後續版本將提供下列功能：
 
-* 自訂資料使用標籤： 根據您組織的需求建立新的標籤和定義。
 * 政策實施： 使用策略框架來建議並強制不同資料存取模式的策略。
 * 審計： 監控資料存取活動，並識別並報告合規性問題。
 
