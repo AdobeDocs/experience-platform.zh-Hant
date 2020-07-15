@@ -4,17 +4,17 @@ solution: Experience Platform
 title: 在UI中為協定連接器配置資料流
 topic: overview
 translation-type: tm+mt
-source-git-commit: 168ac3a3ab9f475cb26dc8138cbc90a3e35c836d
+source-git-commit: 2590c28df6d0fff3e207eb232a02abe16830ee17
 workflow-type: tm+mt
-source-wordcount: '1071'
-ht-degree: 1%
+source-wordcount: '1205'
+ht-degree: 0%
 
 ---
 
 
 # 在UI中為協定連接器配置資料流
 
-資料集流程是排程的工作，可從來源擷取資料並將資料擷取至Adobe Experience Platform資料集。 本教學課程提供使用通訊協定帳戶設定新資料集流程的步驟。
+資料流是從來源擷取資料並將資料擷取至Adobe Experience Platform資料集的排程任務。 本教程提供使用協定帳戶配置新資料流的步驟。
 
 ## 快速入門
 
@@ -29,7 +29,7 @@ ht-degree: 1%
 
 ## 選擇資料
 
-建立通訊協定帳戶後，會出 *[!UICONTROL 現「選取資料]* 」步驟，提供互動式介面供您探索檔案階層。
+在建立您的通訊協定帳戶後，會出 *[!UICONTROL 現「選取資料]* 」步驟，提供互動式介面供您探索檔案階層。
 
 - 介面的左半部分是目錄瀏覽器，顯示伺服器的檔案和目錄。
 - 介面的右半部分可讓您從相容檔案中預覽最多100列資料。
@@ -70,30 +70,45 @@ ht-degree: 1%
 
 您可以根據需要選擇直接映射欄位，或使用映射器函式轉換源資料以導出計算值或計算值。 有關資料映射和映射器函式的詳細資訊，請參閱將CSV資料映 [射到XDM模式欄位的教程](../../../../ingestion/tutorials/map-a-csv-file.md)。
 
-「映 *[!UICONTROL 射]* 」螢幕還允許您設定 *[!UICONTROL 「增量」列]*。 建立資料集流時，可以設定任何時間戳欄位作為基準，以決定在計畫增量提取中提取哪些記錄。
+「映 *[!UICONTROL 射]* 」螢幕還允許您設定 *[!UICONTROL 「增量」列]*。 建立資料流時，可以設定任何時間戳欄位作為基準，以決定在計畫增量提取中提取哪些記錄。
 
 映射源資料後，按一下「下 **[!UICONTROL 一步]**」。
 
 ![](../../../images/tutorials/dataflow/protocols/mapping.png)
 
+## 排程擷取執行
+
 此時 *[!UICONTROL 會顯示「排程]* 」步驟，允許您配置提取計畫，以使用配置的映射自動提取選定的源資料。 下表概述了用於計畫的不同可配置欄位：
 
 | 欄位 | 說明 |
 | --- | --- |
-| 頻率 | 可選頻率包括分鐘、小時、日和周。 |
+| 頻率 | 可選頻率包括「一次」、「分鐘」、「小時」、「日」和「周」。 |
 | 間隔 | 一個整數，用於設定所選頻率的間隔。 |
-| 開始時間 | UTC時間戳記，將會發生第一次擷取。 |
-| 回填 | 一個布爾值，可決定最初收錄的資料。 如果 *[!UICONTROL 啟用回填]* ，則指定路徑中的所有目前檔案將在第一次排程擷取期間被擷取。 如果 *[!UICONTROL 停用]* 「回填」 *[!UICONTROL ，則只會收錄在首次擷取執行和開始時間之間載入的]* 檔案。 在開始時間之前載 *[!UICONTROL 入的檔案]* ，將不會收錄。 |
+| 開始時間 | UTC時間戳記，指出何時設定第一次擷取 |
+| 回填 | 一個布爾值，可決定最初收錄的資料。 如果 *啟用回填* ，則指定路徑中的所有目前檔案將在第一次排程擷取期間被擷取。 如果 *停用* 「回填」 *，則只會收錄在首次擷取執行和開始時間之間載入的* 檔案。 在開始時間之前載 *入的檔案* ，將不會收錄。 |
+| 增量列 | 具有類型、日期或時間的一組已篩選源架構欄位的選項。 此欄位用於區分新資料和現有資料。 增量資料將根據選取欄的時間戳記進行擷取。 |
 
-資料流設計為在計畫基礎上自動收錄資料。 如果您只想在此工作流程中收錄一次，可以將 **[!UICONTROL Frequency]** （頻率）設為「Day」（日），並套用很大的 **[!UICONTROL Interval]**（例如10000或類似）。
+資料流設計為在計畫基礎上自動收錄資料。 從選取擷取頻率開始。 接著，設定間隔，以指定兩個流程執行之間的期間。 間隔的值應為非零整數，且應設定為大於或等於15。
 
-提供計畫值，然後按一下「下 **[!UICONTROL 一步]**」。
+若要設定擷取的開始時間，請調整顯示在開始時間方塊中的日期和時間。 或者，您也可以選取日曆圖示來編輯開始時間值。 開始時間必須大於或等於當前UTC時間。
 
-![調度](../../../images/tutorials/dataflow/protocols/scheduling.png)
+選擇 **[!UICONTROL 載入增量資料]** ，以分配增量列。 此欄位可區分新資料和現有資料。
+
+![](../../../images/tutorials/dataflow/databases/schedule-interval-on.png)
+
+### 設定一次性提取資料流
+
+若要設定一次性擷取，請選取頻率下拉箭頭，然後選取「 **[!UICONTROL Once]**」。
+
+>[!TIP] **[!UICONTROL 在單]** 次擷取期間 **** ，不會顯示間隔和回填。
+
+![](../../../images/tutorials/dataflow/databases/schedule-once.png)
+
+在為計畫提供適當值後，選擇「下 **[!UICONTROL 一步」]**。
 
 ## 命名資料流
 
-此時 *[!UICONTROL 會顯示資料集流程詳細資料]* ，您必須在其中提供資料集流程的名稱和選用說明。 完成後，按&#x200B;**[!UICONTROL 「下一步」]**。
+此時 *[!UICONTROL 將顯示「資料流]* 」詳細資訊步驟，您必須在此為資料流提供名稱和可選說明。 完成後，按&#x200B;**[!UICONTROL 「下一步」]**。
 
 ![dataset-flow-details](../../../images/tutorials/dataflow/protocols/dataset-flow-details.png)
 
@@ -115,7 +130,7 @@ ht-degree: 1%
 
 ## 後續步驟
 
-透過本教學課程，您已成功建立資料集流程，從行銷自動化系統匯入資料，並深入瞭解監控資料集。 現在，下游服務（例如和）可 [!DNL Platform] 以使用傳入 [!DNL Real-time Customer Profile] 的資料 [!DNL Data Science Workspace]。 如需詳細資訊，請參閱下列檔案：
+遵循本教學課程，您已成功建立資料流，從行銷自動化系統匯入資料，並深入瞭解監控資料集。 現在，下游服務（例如和）可 [!DNL Platform] 以使用傳入 [!DNL Real-time Customer Profile] 的資料 [!DNL Data Science Workspace]。 如需詳細資訊，請參閱下列檔案：
 
 - [即時客戶個人檔案總覽](../../../../profile/home.md)
 - [資料科學工作區概觀](../../../../data-science-workspace/home.md)
@@ -124,11 +139,11 @@ ht-degree: 1%
 
 以下各節提供了使用源連接器的附加資訊。
 
-### 停用資料集流
+### 禁用資料流
 
-當建立資料集流程時，資料集流程會立即變為作用中，並依據給定的排程來擷取資料。 您隨時都可以依照下列指示停用作用中的資料集流程。
+建立資料流時，它會立即變為活動狀態，並根據給定的時間表收集資料。 您可以隨時按照以下說明禁用活動資料流。
 
-在「資 *[!UICONTROL 料集流]* 」畫面中，選取您要停用的資料集流程名稱。
+在「數 *[!UICONTROL 據流]* 」螢幕中，選擇要禁用的資料流的名稱。
 
 ![browse-dataset-flow](../../../images/tutorials/dataflow/protocols/view-dataset-flows.png)
 
