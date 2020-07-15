@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 資料使用標籤使用指南
 topic: labels
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: b36f67fd7d597d5d6a8cd514d95908ae26189c83
 workflow-type: tm+mt
-source-wordcount: '975'
+source-wordcount: '1112'
 ht-degree: 0%
 
 ---
@@ -99,6 +99,30 @@ ht-degree: 0%
 ![選取多個欄位以同時套用欄位層級標籤。](../images/labels/fields_select_multiple.png)
 
 請務必記住，繼承僅從頂層向下移動(dataset → fields)，這表示在欄位級別應用的標籤不會傳播到其他欄位或資料集。
+
+## 管理自訂標籤
+
+您可以在UI的「原則」工作區中 *[!UICONTROL 建立自訂]* ，使用 [!DNL Experience Platform] 標籤。 按一 **[!UICONTROL 下左側導覽]** 中的「原則」，然後按一下「 **[!UICONTROL 標籤]** 」以檢視現有標籤的清單。 在這裡，按一下「 **[!UICONTROL 建立標籤]**」。
+
+![](../images/labels/create-label-btn.png)
+
+此時將 *[!UICONTROL 顯示「建立標籤]* 」對話框。 從這裡，為新標籤提供以下資訊：
+
+* **[!UICONTROL 識別碼]**: 標籤的唯一識別碼。 此值用於查閱，因此應簡短且簡明。
+* **[!UICONTROL 名稱]**: 標籤的好記顯示名稱。
+* **[!UICONTROL 說明]**: （可選）標籤的說明，以提供進一步的內容。
+
+完成後，按一下「 **[!UICONTROL 建立]**」。
+
+![](../images/labels/create-label.png)
+
+對話框關閉，新建立的自定義標籤將顯示在「標籤」( *[!UICONTROL Labels]* )頁籤下的清單中。
+
+![](../images/labels/label-created.png)
+
+現在，編輯資料集和欄位的使用 ** 標籤時，或建立資料使用策略時，可以在「自定義標籤」下選擇標籤。
+
+<img src="../images/labels/add-custom-label.png" width="600" /><br>
 
 ## 後續步驟
 
