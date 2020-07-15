@@ -5,10 +5,10 @@ doc-type: release notes
 last-update: July 15, 2020
 author: crhoades, ens25212
 translation-type: tm+mt
-source-git-commit: 1e420d26f89150999f356f9cf5af94d434076c2b
+source-git-commit: 2bbd62fc53d304ff05250688733f1b18dfd18007
 workflow-type: tm+mt
-source-wordcount: '331'
-ht-degree: 7%
+source-wordcount: '328'
+ht-degree: 6%
 
 ---
 
@@ -20,7 +20,7 @@ ht-degree: 7%
 Adobe Experience Platform現有功能的更新：
 
 <!-- - [Data Governance](#governance) -->
-- [即時客戶個人檔案](#profile)
+<!-- - [Real-time Customer Profile](#profile) -->
 - [區段服務](#segmentation)
 - [來源](#sources)
 
