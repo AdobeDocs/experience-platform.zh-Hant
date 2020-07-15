@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 資料使用標籤概觀
 topic: labels
 translation-type: tm+mt
-source-git-commit: d4964231ee957349f666eaf6b0f5729d19c408de
+source-git-commit: f4b3148db3b4a17d071c1c8ad2aff8dd64ddd0b7
 workflow-type: tm+mt
-source-wordcount: '351'
+source-wordcount: '494'
 ht-degree: 0%
 
 ---
@@ -24,7 +24,9 @@ ht-degree: 0%
 
 在資料集層級套用的資料使用標籤會傳播至資料集內的所有欄位。 標籤也可以直接套用至資料集中的個別欄位（欄標題），而不需傳播。
 
-有關中可用資料使用標籤及其所代表 [!DNL Experience Platform] 的使用策略的詳細資訊，請參見有關支援的數 [據使用標籤的指南](reference.md)。
+[!DNL Platform] 提供數種「核心」資料使用標籤，其中涵蓋適用於資料治理的各種常見限制。 如需這些標籤及其所代表之使用原則的詳細資訊，請參閱核心資料使 [用標籤的指南](reference.md)。
+
+除了Adobe提供的標籤外，您也可以定義您自己的自訂標籤。 如需如何在UI中執行此動作的步驟，請參閱資 [料使用標籤使用指南](./user-guide.md)。 如需如何使用API呼叫執行此動作的步驟，請參閱資 [料使用標籤API指南](./api.md)。
 
 ## 對象區段的標籤繼承
 
@@ -34,14 +36,13 @@ ht-degree: 0%
 
 如需有關自動強制執行在即時CDP中如何運作的詳細資訊，請參閱 [Adobe即時CDP資料治理總覽](../../rtcdp/privacy/data-governance-overview.md#enforce-data-usage-compliance)。
 
-<!-- (Add after DEC mapping reference is added to AAM docs to link out to)
-### Inheritance from Adobe Audience Manager Data Export Controls
+### 繼承Adobe Audience Manager資料匯出控制項
 
-Experience Platform has the ability to share segments with Adobe Audience Manager. Any Data Export Controls that have been applied to Audience Manager segments are translated to equivalent labels and marketing actions recognized by Experience Platform Data Governance.
+Experience Platform能夠與Adobe Audience Manager共用細分。 已套用至Audience Manager區段的任何「資料匯出控制」都會轉換為「Experience Platform Data Governance」所識別的等同標籤和行銷動作。
 
-For a reference on how specific Data Export Controls map to data usage labels in Platform, please refer to the [Audience Manager documentation](https://docs.adobe.com/content/help/en/audience-manager/user-guide/features/data-export-controls.html).
--->
+如需特定「資料匯出控制」如何對應至平台中資料使用標籤的參考，請參閱 [Audience Manager檔案](https://docs.adobe.com/content/help/en/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aam-data-export-control-in-aep)。
+
 
 ## 後續步驟
 
-現在，您已引進資料使用標籤，您可以繼續閱讀使用 [指南](user-guide.md) ，以瞭解如何在 [!DNL Experience Platform] UI中管理標籤。 如需如何使用API管理標籤的步驟，請參閱目錄服務開發人員指 [南中的適當章節](../../catalog/api/labels.md)。
+現在，您已引進資料使用標籤，您可以繼續閱讀使用 [指南](user-guide.md) ，以瞭解如何在 [!DNL Experience Platform] UI中管理標籤。 如需如何使用API管理標籤的步驟，請參 [閱使用標籤API指南](./api.md)。
