@@ -4,9 +4,9 @@ seo-title: Launch讓您快速入門Adobe Experience Platform Web SDK
 description: 使用Experience Platform Web SDK擴充功能收集資料的快速入門手冊
 seo-description: 使用Experience Platform Web SDK擴充功能收集資料的快速入門手冊
 translation-type: tm+mt
-source-git-commit: 9b8bddf39301cdc39bfa5370ef98d99434fc64f8
+source-git-commit: 9d58693646f472e84f04a64c4ad66f61dc5d3eba
 workflow-type: tm+mt
-source-wordcount: '553'
+source-wordcount: '560'
 ht-degree: 4%
 
 ---
@@ -31,8 +31,9 @@ ht-degree: 4%
 
 Experience Platform Edge Network將資料視為XDM。 XDM是一種資料格式，可讓您定義結構描述。 此架構定義邊緣網路預期資料格式化的方式。 若要傳送資料，您需要定義您的架構。 請確定您已完成下列工作：
 
-- [建立架構](../../xdm/tutorials/create-schema-ui.md)
-- 將Adobe Experience Platform Web SDK mixin新增至您建立的架構
+1. [建立架構](../../xdm/tutorials/create-schema-ui.md)
+2. 將AEP Web SDK ExperienceEvent Mixin新增至您建立的架構。
+3. 從您建立的架構建立資料集。
 
 以下視訊旨在支援您建立Web SDK資料的架構、資料集和串流來源連接器。
 
