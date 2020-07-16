@@ -4,17 +4,17 @@ solution: Experience Platform
 title: 使用原則服務API強制執行資料使用原則
 topic: enforcement
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 0534fe8dcc11741ddc74749d231e732163adf5b0
 workflow-type: tm+mt
-source-wordcount: '875'
+source-wordcount: '869'
 ht-degree: 2%
 
 ---
 
 
-# 使用原則服務API強制執行資料使用原則
+# 使用 [!DNL Policy Service] API強制執行資料使用原則
 
-為您的資料建立資料使用標籤並針對這些標籤建立行銷動作的使用原則後，您就可以使用 [DULE Policy Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) ，評估在資料集或任意標籤群組上執行的行銷動作是否構成原則違規。 然後，您可以設定自己的內部通訊協定，以根據API回應來處理原則違規。
+一旦您為資料建立了資料使用標籤，並針對這些標籤建立了行銷動作的使用原則，您就可以使用 [!DNL DULE Policy Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) ，評估在資料集或任意標籤群組上執行的行銷動作是否構成原則違規。 然後，您可以設定自己的內部通訊協定，以根據API回應來處理原則違規。
 
 >[!NOTE]
 >
