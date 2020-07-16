@@ -4,42 +4,42 @@ solution: Experience Platform
 title: 使用方案註冊表API建立方案
 topic: tutorials
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: d04bf35e49488ab7d5e07de91eb77d0d9921b6fa
 workflow-type: tm+mt
-source-wordcount: '2418'
+source-wordcount: '2322'
 ht-degree: 1%
 
 ---
 
 
-# 使用方案註冊表API建立方案
+# 使用 [!DNL Schema Registry] API建立結構
 
-架構註冊表用於存取Adobe Experience Platform內的架構庫。 架構庫包含Adobe、Experience Platform合作夥伴和您所使用應用程式的廠商所提供的資源。 註冊表提供用戶介面和REST風格的API，可從中訪問所有可用的庫資源。
+用 [!DNL Schema Registry] 於存取Adobe Experience Platform [!DNL Schema Library] 內的。 其中 [!DNL Schema Library] 包含您所使用之應用程式的Adobe、合作夥伴 [!DNL Experience Platform] 和廠商所提供的資源。 註冊表提供用戶介面和REST風格的API，可從中訪問所有可用的庫資源。
 
-本教程使用方案註冊表API來引導您完成使用標準類合成方案的步驟。 如果您想要在Experience Platform中使用使用者介面，「架構編輯器教學課程」( [Schema Editor Tutorial](create-schema-ui.md) )提供在架構編輯器中執行類似動作的逐步指示。
+本教學課程使 [!DNL Schema Registry] 用API來引導您完成使用標準類來構建架構的步驟。 如果希望在中使用用戶介面 [!DNL Experience Platform], [Schema Editor Tutorial](create-schema-ui.md) （架構編輯器教程）將提供在架構編輯器中執行類似操作的逐步說明。
 
 ## 快速入門
 
 本指南需要有效瞭解Adobe Experience Platform的下列元件：
 
-* [體驗資料模型(XDM)系統](../home.md): Experience Platform組織客戶體驗資料的標準化架構。
+* [!DNL Experience Data Model (XDM) System](../home.md): 組織客戶體驗資料 [!DNL Experience Platform] 的標準化架構。
    * [架構構成基礎](../schema/composition.md): 瞭解XDM架構的基本建置區塊，包括架構組合的主要原則和最佳實務。
-* [即時客戶個人檔案](../../profile/home.md): 根據來自多個來源的匯整資料，提供統一、即時的消費者個人檔案。
-* [沙盒](../../sandboxes/home.md): Experience Platform提供虛擬沙盒，可將單一Platform實例分割為不同的虛擬環境，以協助開發和發展數位體驗應用程式。
+* [!DNL Real-time Customer Profile](../../profile/home.md): 根據來自多個來源的匯整資料，提供統一、即時的消費者個人檔案。
+* [!DNL Sandboxes](../../sandboxes/home.md): [!DNL Experience Platform] 提供虛擬沙盒，可將單一執行個體分 [!DNL Platform] 割為不同的虛擬環境，以協助開發和發展數位體驗應用程式。
 
-在開始本教學課程之前，請先閱讀開 [發人員指南](../api/getting-started.md) ，以取得成功呼叫架構註冊表API所需的重要資訊。 這包括您 `{TENANT_ID}`的「容器」概念，以及提出要求所需的標題（請特別注意「接受」標題及其可能的值）。
+在開始本教學課程之前，請先閱讀開 [發人員指南](../api/getting-started.md) ，以取得成功呼叫 [!DNL Schema Registry] API所需的重要資訊。 這包括您 `{TENANT_ID}`的「容器」概念，以及提出要求所需的標題（請特別注意「接受」標題及其可能的值）。
 
 本教學課程將逐步介紹如何構建「忠誠度成員」結構，以說明與零售忠誠度方案成員相關的資料。 在開始之前，您可能希望在附錄中 [預覽完整的「忠誠成員](#complete-schema) 」結構。
 
 ## 使用標準類合成方案
 
-架構可視為您要匯入Experience Platform之資料的藍圖。 每個模式由類和零個或多個混合組成。 換言之，您不必新增混音來定義結構，但在大多數情況下，至少會使用一個混音。
+架構可視為您要收錄至之資料的藍圖 [!DNL Experience Platform]。 每個模式由類和零個或多個混合組成。 換言之，您不必新增混音來定義結構，但在大多數情況下，至少會使用一個混音。
 
 ### 指派類別
 
 模式合成過程從選擇類開始。 該類定義了資料的關鍵行為方面（記錄與時間序列），以及描述將接收的資料所需的最小欄位。
 
-您在本教程中所建立的架構使用XDM Individual Profile類。 XDM個人設定檔是Adobe為定義記錄行為而提供的標準類別。 有關行為的詳細資訊，請參 [閱架構構成基礎](../schema/composition.md)。
+您在本教學課程中所建立的架構使用 [!DNL XDM Individual Profile] 類別。 [!DNL XDM Individual Profile] 是Adobe提供的標準類別，用於定義記錄行為。 有關行為的詳細資訊，請參 [閱架構構成基礎](../schema/composition.md)。
 
 若要指派類別，會進行API呼叫，以在租用戶容器中建立(POST)新架構。 此呼叫包含架構將實作的類別。 每個架構只能實現一個類。
 
@@ -51,7 +51,7 @@ POST /tenant/schemas
 
 **請求**
 
-請求必須包含 `allOf` 引用類的 `$id` 屬性。 此屬性定義了方案將實施的「基本類」。 在此示例中，基類是XDM Individual Profile類。 XDM `$id` Individual Profile類用作下面陣列中 `$ref` 的欄位 `allOf` 值。
+請求必須包含 `allOf` 引用類的 `$id` 屬性。 此屬性定義了方案將實施的「基本類」。 在此示例中，基類是類 [!DNL XDM Individual Profile] 。 類 `$id` 的 [!DNL XDM Individual Profile] 值用作下面陣列中 `$ref` 的欄位 `allOf` 的值。
 
 ```SHELL
 curl -X POST \
@@ -75,7 +75,7 @@ curl -X POST \
 
 **回應**
 
-成功的請求會傳回HTTP回應狀態201（已建立），其回應主體包含新建立之架構的詳細資料，包括 `$id`、 `meta:altIt`和 `version`。 這些值是只讀的，由方案註冊表指定。
+成功的請求會傳回HTTP回應狀態201（已建立），其回應主體包含新建立之架構的詳細資料，包括 `$id`、 `meta:altIt`和 `version`。 這些值是唯讀的，由指定 [!DNL Schema Registry]。
 
 ```JSON
 {
@@ -258,7 +258,7 @@ curl -X PATCH \
 
 >[!TIP]
 >
->請務必檢閱所有可用的混音，以熟悉每個混音中所包含的欄位。 您可以針對每個「全域」和「租用戶」容器執行請求，列出(GET)所有可用於特定類別的混音，只傳回「meta:intededToExtend」欄位符合您所使用類別的混音。 在這種情況下，它是XDM Individual Profile類，因此使用XDM Individual Profile `$id` :
+>請務必檢閱所有可用的混音，以熟悉每個混音中所包含的欄位。 您可以針對每個「全域」和「租用戶」容器執行請求，列出(GET)所有可用於特定類別的混音，只傳回「meta:intededToExtend」欄位符合您所使用類別的混音。 在本例中，它是類 [!DNL XDM Individual Profile] 別，因此 [!DNL XDM Individual Profile]`$id` 使用：
 
 ```http
 GET /global/mixins?property=meta:intendedToExtend==https://ns.adobe.com/xdm/context/profile
@@ -342,7 +342,7 @@ curl -X PATCH \
 
 「忠誠會員」結構需要擷取忠誠度方案專屬的資訊。 這些資訊不包含在任何標準混音中。
 
-「架構註冊表」可讓您在租用戶容器中定義自己的混音，以解決此問題。 這些混音是貴組織獨有的，IMS組織以外的任何人都看不到或可編輯。
+這 [!DNL Schema Registry] 可讓您在租用戶容器中定義自己的混音。 這些混音是貴組織獨有的，IMS組織以外的任何人都看不到或可編輯。
 
 為了建立(POST)新混音，您的請求必須包含一個欄位，其中 `meta:intendedToExtend` 包含 `$id` 混音與之相容的基本類別，以及混音將包含的屬性。
 
@@ -417,7 +417,7 @@ curl -X POST\
 
 **回應**
 
-成功的請求會傳回HTTP回應狀態201（已建立），回應主體包含新建立混合的詳細資料，包括 `$id`、 `meta:altIt`和 `version`。 這些值是只讀的，由方案註冊表指定。
+成功的請求會傳回HTTP回應狀態201（已建立），回應主體包含新建立混合的詳細資料，包括 `$id`、 `meta:altIt`和 `version`。 這些值是唯讀的，由指定 [!DNL Schema Registry]。
 
 ```JSON
 {
@@ -754,7 +754,7 @@ curl -X POST \
 
 **回應**
 
-成功的請求會傳回HTTP回應狀態201（已建立），其回應主體包含新建立之資料類型的詳細資料，包括 `$id`、 `meta:altIt`和 `version`。 這些值是只讀的，由方案註冊表指定。
+成功的請求會傳回HTTP回應狀態201（已建立），其回應主體包含新建立之資料類型的詳細資料，包括 `$id`、 `meta:altIt`和 `version`。 這些值是唯讀的，由指定 [!DNL Schema Registry]。
 
 ```JSON
 {
@@ -954,9 +954,9 @@ curl -X PATCH \
 
 ### 定義身份描述符
 
-結構描述用於將資料擷取至Experience Platform。 這些資料最終會用於多個服務，以建立個人的單一統一檢視。 為協助處理此程式，關鍵欄位可標示為「身分」，而且在擷取資料時，這些欄位中的資料會插入該個人的「身分圖表」中。 然後，即時客戶個人檔案和其 [他Experience Platform服務可存取圖表資料](../../profile/home.md) ，以提供每個個別客戶的銜接檢視。
+結構描述用於將資料吸收到中 [!DNL Experience Platform]。 這些資料最終會用於多個服務，以建立個人的單一統一檢視。 為協助處理此程式，關鍵欄位可標示為「身分」，而且在擷取資料時，這些欄位中的資料會插入該個人的「身分圖表」中。 圖形資料隨後可由和其他服 [!DNL Real-time Customer Profile](../../profile/home.md) 務訪問， [!DNL Experience Platform] 以提供每個客戶的拼接視圖。
 
-通常標示為「身分」的欄位包括： 電子郵件地址、電 [話號碼、Experience Cloud ID(ECID)](https://docs.adobe.com/content/help/zh-Hant/id-service/using/home.html)、CRM ID或其他唯一ID欄位。
+通常標示為「身分」的欄位包括： 電子郵件地址、電話號碼、 [!DNL Experience Cloud ID (ECID)](https://docs.adobe.com/content/help/zh-Hant/id-service/using/home.html)CRM ID或其他唯一ID欄位。
 
 請考慮您組織專屬的任何唯一識別碼，因為這些識別碼可能也是好的識別碼欄位。
 
@@ -972,7 +972,7 @@ POST /tenant/descriptors
 
 **請求**
 
-以下請求在&quot;loyaltyId&quot;欄位上定義身分描述符。 這會告訴Experience Platform使用唯一的忠誠度方案會員識別碼（在此例中為會員的電子郵件地址），協助將個人相關資訊拼湊在一起。
+以下請求在&quot;loyaltyId&quot;欄位上定義身分描述符。 這會告 [!DNL Experience Platform] 訴您使用唯一的忠誠度方案會員識別碼（在此例中為會員的電子郵件地址），協助將個人相關資訊拼湊在一起。
 
 ```SHELL
 curl -X POST \
@@ -995,11 +995,11 @@ curl -X POST \
 
 >[!NOTE]
 >
->您可以使用 [Identity Service API列出可用的&quot;xdm:namespace&quot;值，或建立新值](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/id-service-api.yaml)。 「xdm:property」的值可以是&quot;xdm:code&quot;或&quot;xdm:id&quot;，視使用的&quot;xdm:namespace&quot;而定。
+>您可以列出可用的&quot;xdm:namespace&quot;值，或使用建立新值 [!DNL Identity Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/id-service-api.yaml)。 「xdm:property」的值可以是&quot;xdm:code&quot;或&quot;xdm:id&quot;，視使用的&quot;xdm:namespace&quot;而定。
 
 **回應**
 
-成功的響應返回HTTP狀態201（已建立），其響應主體包含新建立的描述符的詳細資訊，包括其詳細資訊 `@id`。 是 `@id` 由方案註冊表分配的只讀欄位，用於引用API中的描述符。
+成功的響應返回HTTP狀態201（已建立），其響應主體包含新建立的描述符的詳細資訊，包括其詳細資訊 `@id`。 是 `@id` 由指派的只讀欄位，用 [!DNL Schema Registry] 於引用API中的描述符。
 
 ```JSON
 {
@@ -1015,11 +1015,11 @@ curl -X POST \
 }
 ```
 
-## 啟用結構以用於即時客戶個人檔案
+## 啟用模式以用於 [!DNL Real-time Customer Profile]
 
-通過將&quot;union&quot;標籤添加到屬 `meta:immutableTags` 性中，您可以啟用「忠誠度成員」結構，以便由即時客戶配置檔案使用。
+通過將&quot;union&quot;標籤添加到屬 `meta:immutableTags` 性中，可以啟用「忠誠度成員」結構供使用 [!DNL Real-time Customer Profile]。
 
-有關使用聯合視圖的詳細資訊，請參閱「方案註冊 [表](../api/unions.md) 」開發人員指南中的「聯合」一節。
+如需使用工會檢視的詳細資訊，請參閱開發人員指南中 [的](../api/unions.md) 「工會 [!DNL Schema Registry] 」一節。
 
 ### 新增&quot;union&quot;標籤
 
@@ -1103,9 +1103,9 @@ curl -X PATCH \
 
 ### 列出聯合中的結構
 
-您現在已成功將模式添加到XDM Individual Profile Union。 為了查看屬於同一聯合的所有方案的清單，您可以使用查詢參數來執行GET請求以篩選響應。
+您現在已成功將結構新增至 [!DNL XDM Individual Profile] 聯合。 為了查看屬於同一聯合的所有方案的清單，您可以使用查詢參數來執行GET請求以篩選響應。
 
-使用查 `property` 詢參數，可以指定只返回包含一個字 `meta:immutableTags` 段的方案，該欄位 `meta:class` 等於 `$id` XDM Individual Profile類。
+使用查 `property` 詢參數，可以指定只返回包含欄位的方案，該欄位 `meta:immutableTags` 的欄位等 `meta:class` 於類的 `$id`[!DNL XDM Individual Profile] 方案。
 
 **API格式**
 
@@ -1115,7 +1115,7 @@ GET /tenant/schemas?property=meta:immutableTags==union&property=meta:class=={CLA
 
 **請求**
 
-下面的示例請求返回屬於XDM Individual Profile Union的所有方案。
+下面的示例請求返回屬於聯合的所有方案 [!DNL XDM Individual Profile] 。
 
 ```SHELL
 curl -X GET \
@@ -1183,7 +1183,7 @@ curl -X GET \
 
 在本教學課程中，會合成一個結構描述零售忠誠度方案的成員。
 
-該方案實現了XDM個人配置檔案類，並結合了多個混合； 使用標準「人員詳細資料」和「個人詳細資料」混合，以及透過教學課程中定義的「忠誠度詳細資料」混合，引入有關忠誠度會員的資訊。
+該模式實現了類 [!DNL XDM Individual Profile] 並結合了多個混合； 使用標準「人員詳細資料」和「個人詳細資料」混合，以及透過教學課程中定義的「忠誠度詳細資料」混合，引入有關忠誠度會員的資訊。
 
 以下顯示JSON格式的已完成忠誠度成員結構描述：
 
