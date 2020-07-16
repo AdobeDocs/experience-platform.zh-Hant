@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 同意
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 5b32c1955fac4f137ba44e8189376c81cdbbfc40
 workflow-type: tm+mt
-source-wordcount: '226'
+source-wordcount: '220'
 ht-degree: 1%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 1%
 
 # 同意
 
-某些法規要求客戶明確同意才能收集其個人資料。 隱私 `/consent` 服務API的端點可讓您處理客戶同意請求，並將它們整合到您的隱私工作流程中。
+某些法規要求客戶明確同意才能收集其個人資料。 API `/consent` 的端點可 [!DNL Privacy Service] 讓您處理客戶同意要求，並將它們整合到您的隱私權工作流程中。
 
 在使用本指南之前，請參閱快速入 [門](./getting-started.md) ，以取得以下範例API呼叫中所需驗證標題的相關資訊。
 
@@ -68,8 +68,8 @@ curl -X POST \
 
 >[!NOTE]
 >
->如需如何決定要傳送至隱私權服務之客戶身分值的詳細資訊，請參閱提供身 [分資料指南](../identity-data.md)。
+>如需如何決定要傳送給哪些客戶身分值的詳細資訊，請 [!DNL Privacy Service]參閱提供身 [分資料指南](../identity-data.md)。
 
 **回應**
 
-成功的回應會傳回HTTP狀態202（已接受），但沒有裝載，表示該要求已被隱私權服務接受，且正在處理中。
+成功的回應會傳回沒有裝載的HTTP狀態202（已接受），表示請求已被接受， [!DNL Privacy Service] 且正在處理中。
