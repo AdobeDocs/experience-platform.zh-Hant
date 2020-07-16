@@ -5,45 +5,45 @@ title: 隱私權服務開發人員指南
 description: 使用REST風格的API，跨Adobe Experience Cloud應用程式管理資料主體的個人資料
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: b45fdfff70ce4ba857f23e7116812a07825871bc
+source-git-commit: 5b32c1955fac4f137ba44e8189376c81cdbbfc40
 workflow-type: tm+mt
-source-wordcount: '793'
+source-wordcount: '759'
 ht-degree: 0%
 
 ---
 
 
-# 隱私權服務開發人員指南
+# [!DNL Privacy Service] 開發人員指南
 
-Adobe Experience Platform Privacy Service提供REST風格的API和使用者介面，可讓您跨Adobe Experience Cloud應用程式管理（存取和刪除）您資料主體（客戶）的個人資料。 隱私權服務也提供集中稽核和記錄機制，讓您存取與Experience Cloud應用程式有關的工作狀態和結果。
+Adobe Experience Platform提 [!DNL Privacy Service] 供REST風格的API和使用者介面，可讓您跨Adobe Experience Cloud應用程式管理（存取和刪除）資料主體（客戶）的個人資料。 [!DNL Privacy Service] 還提供了集中審計和記錄機制，允許您訪問涉及應用程式的作業的狀態和 [!DNL Experience Cloud] 結果。
 
-本指南涵蓋如何使用隱私權服務API。 如需如何使用UI的詳細資訊，請參閱隱私 [服務UI概觀](../ui/overview.md)。 如需隱私權服務API中所有可用端點的完整清單，請參閱 [API參考](https://www.adobe.io/apis/experiencecloud/gdpr/api-reference.html)。
+本指南涵蓋如何使用 [!DNL Privacy Service] API。 如需如何使用UI的詳細資訊，請參閱隱 [私服務UI概觀](../ui/overview.md)。 如需API中所有可用端點的完整清 [!DNL Privacy Service] 單，請參閱 [API參考](https://www.adobe.io/apis/experiencecloud/gdpr/api-reference.html)。
 
 ## 快速入門 {#getting-started}
 
-本指南需要有效瞭解下列Experience Platform功能：
+本指南需要熟悉下列功 [!DNL Experience Platform] 能：
 
-* [隱私權服務](../home.md): 提供REST風格的API和使用者介面，可讓您跨Adobe Experience Cloud應用程式管理資料主體（客戶）的存取和刪除要求。
+* [!DNL Privacy Service](../home.md): 提供REST風格的API和使用者介面，可讓您跨Adobe Experience Cloud應用程式管理資料主體（客戶）的存取和刪除要求。
 
 以下各節提供您必須知道的其他資訊，以便成功呼叫隱私權服務API。
 
 ### 讀取範例API呼叫
 
-本教學課程提供範例API呼叫，以示範如何設定請求的格式。 這些包括路徑、必要標題和正確格式化的請求負載。 也提供API回應中傳回的範例JSON。 如需範例API呼叫檔案中所用慣例的詳細資訊，請參閱「Experience Platform疑難排解指 [南」中有關如何讀取範例API呼叫的章節](../../landing/troubleshooting.md) 。
+本教學課程提供範例API呼叫，以示範如何設定請求的格式。 這些包括路徑、必要標題和正確格式化的請求負載。 也提供API回應中傳回的範例JSON。 如需範例API呼叫檔案中所用慣例的詳細資訊，請參閱疑難排解指 [南中有關如何讀取範例API呼叫的](../../landing/troubleshooting.md)[!DNL Experience Platform] 章節。
 
 ## 收集必要標題的值
 
-若要呼叫Privacy Service API，您必須先收集存取認證，以便用於必要的標題：
+若要呼叫 [!DNL Privacy Service] API，您必須先收集要用於必要標題的存取認證：
 
 * 授權： 生產者 `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
 * x-gw-ims-org-id: `{IMS_ORG}`
 
-這包括在Adobe Admin Console中取得Experience Platform的開發人員權限，然後在Adobe Developer Console中產生認證。
+這包括在Adobe Admin Console中取 [!DNL Experience Platform] 得開發人員權限，然後在Adobe Developer Console中產生認證。
 
-### 讓開發人員存取Experience Platform
+### 取得開發人員的存取權 [!DNL Experience Platform]
 
-若要取得開發人員對平台的存取權，請依照 [Experience Platform驗證教學課程的開始步驟](../../tutorials/authentication.md)。 在您進入「在Adobe Developer Console中產生存取認證」步驟後，請返回本教學課程，以產生隱私權服務專屬的認證。
+若要取得開發人員的 [!DNL Platform]存取權，請依照 [Experience Platform驗證教學課程的開](../../tutorials/authentication.md)始步驟進行。 在您進入「在Adobe Developer Console中產生存取認證」步驟後，請返回本教學課程，以產生特定的認證 [!DNL Privacy Service]。
 
 ### 生成訪問憑據
 
@@ -77,7 +77,7 @@ Adobe Experience Platform Privacy Service提供REST風格的API和使用者介�
 
 ![](../images/api/getting-started/key-pair-generated.png)
 
-在將API新增至專案後，專案頁面會重新顯示在「隱私權服務 _API概觀」頁面_ 。 從這裡，向下捲動至「 _[!UICONTROL Service Account(JWT)]_」區段，該區段提供所有對「Privacy Service API」的呼叫所需的下列存取憑證：
+在將API新增至專案後，專案頁面會重新顯示在「隱私權服務 _API概觀」頁面_ 。 從這裡，向下捲動至「 _[!UICONTROL Service Account(JWT)]_」區段，該區段提供對[!DNL Privacy Service]API的所有呼叫所需的下列存取憑證：
 
 * **[!UICONTROL 用戶端ID]**: 必須在x-api-key標 `{API_KEY}` 題中提供用戶端ID。
 * **[!UICONTROL 組織ID]**: 組織ID是必 `{IMS_ORG}` 須用在x-gw-ims-org-id標題中的值。
@@ -86,7 +86,7 @@ Adobe Experience Platform Privacy Service提供REST風格的API和使用者介�
 
 #### 每個會話的驗證
 
-您必須收集的最終必要憑證是您 `{ACCESS_TOKEN}`的，此憑證會用於「授權」標題。 與和的值不 `{API_KEY}` 同， `{IMS_ORG}`必須每24小時產生一個新Token，才能繼續使用平台API。
+您必須收集的最終必要憑證是您 `{ACCESS_TOKEN}`的，此憑證會用於「授權」標題。 與和的值不 `{API_KEY}` 同， `{IMS_ORG}`必須每24小時產生一個新的Token，才能繼續使用 [!DNL Platform] API。
 
 若要產生新 `{ACCESS_TOKEN}`密鑰，請開啟先前下載的私密金鑰，並將其內容貼入「產生存取Token」旁的文字方塊， _[!UICONTROL 再按一下「產]_生Token****」。
 
@@ -98,4 +98,4 @@ Adobe Experience Platform Privacy Service提供REST風格的API和使用者介�
 
 ## 後續步驟
 
-現在您已瞭解要使用的標題，可以開始呼叫隱私權服務API。 隱私權工 [作的檔案](privacy-jobs.md) ，會逐步說明您可使用隱私權服務API進行的各種API呼叫。 每個範例呼叫都包含一般API格式、顯示必要標題的範例要求，以及範例回應。
+現在，您已瞭解要使用哪些標題，可以開始呼叫 [!DNL Privacy Service] API。 隱私權工 [作的檔案](privacy-jobs.md) ，會逐步說明您可使用API進行的各種API [!DNL Privacy Service] 呼叫。 每個範例呼叫都包含一般API格式、顯示必要標題的範例要求，以及範例回應。
