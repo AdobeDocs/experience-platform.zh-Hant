@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 工會
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: d04bf35e49488ab7d5e07de91eb77d0d9921b6fa
 workflow-type: tm+mt
-source-wordcount: '806'
+source-wordcount: '788'
 ht-degree: 1%
 
 ---
@@ -14,13 +14,13 @@ ht-degree: 1%
 
 # 工會
 
-聯合（或聯合視圖）是系統生成的只讀模式，可匯總共用相同類（XDM ExperienceEvent或XDM單個配置檔案）並啟用「即時客戶配置檔案」的所 [有方案的欄位](../../profile/home.md)。
+聯合（或聯合視圖）是系統生成的只讀模式，用於聚合所有共用相同類(或[!DNL XDM ExperienceEvent][!DNL XDM Individual Profile])並啟用的方案的欄位 [!DNL Real-time Customer Profile](../../profile/home.md)。
 
 本文檔介紹在方案註冊表API中與工會合作的基本概念，包括各種操作的示例調用。 有關XDM中的聯合的更多一般資訊，請參見架構構成基 [礎中的聯合部分](../schema/composition.md#union)。
 
 ## 聯合混音
 
-架構註冊表自動在聯合架構中包含三個混合： `identityMap`、 `timeSeriesEvents`和 `segmentMembership`。
+此 [!DNL Schema Registry] 組合結構會自動包含三個混合： `identityMap`、 `timeSeriesEvents`和 `segmentMembership`。
 
 ### 身分圖
 
@@ -30,7 +30,7 @@ See the [Identity Service documentation](../../identity-service/home.md) for mor
 
 ### 時間系列事件
 
-數 `timeSeriesEvents` 組是與與聯合相關聯的記錄方案相關的時間序列事件的清單。 將配置檔案資料導出到資料集時，每個記錄都包含此陣列。 這對於各種使用案例都很有用，例如機器學習，其中模型除了記錄屬性外還需要描述檔的整個行為歷史記錄。
+數 `timeSeriesEvents` 組是與與聯合相關聯的記錄方案相關的時間序列事件的清單。 將數 [!DNL Profile] 據導出到資料集時，每個記錄都包含此陣列。 這對於各種使用案例都很有用，例如機器學習，其中模型除了記錄屬性外還需要描述檔的整個行為歷史記錄。
 
 ### 區段會籍圖
 
@@ -54,7 +54,7 @@ PATCH /tenant/schemas/{SCHEMA_ID}
 
 | 參數 | 說明 |
 | --- | --- |
-| `{SCHEMA_ID}` | URL編碼的 `$id` URI或您要 `meta:altId` 啟用用於描述檔的架構。 |
+| `{SCHEMA_ID}` | URL編碼的 `$id` URI或 `meta:altId` 您要啟用以用於的架構 [!DNL Profile]。 |
 
 **請求**
 
@@ -117,7 +117,7 @@ curl -X PATCH \
 
 ## List unions
 
-在架構上設定&quot;union&quot;標籤時，架構註冊表會自動為架構所基於的類建立並維護聯合。 聯 `$id` 合與類的標準類似，唯一的 `$id` 區別是附加兩個下划線和單詞&quot;union&quot;(`"__union"`)。
+在架構上設定&quot;union&quot;標籤時，會自動 [!DNL Schema Registry] 為架構所基於的類建立並維護一個union。 聯 `$id` 合與類的標準類似，唯一的 `$id` 區別是附加兩個下划線和單詞&quot;union&quot;(`"__union"`)。
 
 要查看可用聯合的清單，可以對端點執行GET請 `/unions` 求。
 
@@ -168,7 +168,7 @@ curl -X GET \
 
 >[!NOTE]
 >
->聯合查找可使用和 `/unions` 端點 `/schemas` 來啟用它們，以便用於將配置檔案導出到資料集中。
+>聯合查找可使用 `/unions` 和端 `/schemas` 點，以便用於導 [!DNL Profile] 出到資料集。
 
 **API格式**
 
@@ -265,7 +265,7 @@ GET /tenant/schemas?property=meta:immutableTags==union&property=meta:class=={CLA
 
 **請求**
 
-以下請求查找屬於XDM Individual Profile類聯合的所有方案。
+以下請求會查找屬於類聯合的所有 [!DNL XDM Individual Profile] 方案。
 
 ```SHELL
 curl -X GET \
