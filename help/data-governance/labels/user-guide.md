@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 資料使用標籤使用指南
 topic: labels
 translation-type: tm+mt
-source-git-commit: b36f67fd7d597d5d6a8cd514d95908ae26189c83
+source-git-commit: 0534fe8dcc11741ddc74749d231e732163adf5b0
 workflow-type: tm+mt
-source-wordcount: '1112'
+source-wordcount: '1109'
 ht-degree: 0%
 
 ---
@@ -28,7 +28,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->在此範例中，資料集是使用預先設定的體驗資料模型(XDM)架構來建立。 有關XDM架構的詳細資訊，請參見 [XDM系統概述](../../xdm/home.md)[和架構構成基礎](../../xdm/schema/composition.md)。
+>在此範例中，使用預先設定(XDM)的架構來 [!DNL Experience Data Model] 建立資料集。 有關XDM架構的詳細資訊，請參見 [XDM系統概述](../../xdm/home.md)[和架構構成基礎](../../xdm/schema/composition.md)。
 
 若要建立新資料集，請按一 **[!UICONTROL 下「資料集]** 」工作區右上角的「建立資 _[!UICONTROL 料集]_」。
 
