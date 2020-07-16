@@ -4,39 +4,39 @@ solution: Experience Platform
 title: 使用方案註冊表API定義兩個方案之間的關係
 topic: tutorials
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: d04bf35e49488ab7d5e07de91eb77d0d9921b6fa
 workflow-type: tm+mt
-source-wordcount: '1504'
+source-wordcount: '1467'
 ht-degree: 1%
 
 ---
 
 
-# 使用方案註冊表API定義兩個方案之間的關係
+# 使用 [!DNL Schema Registry] API定義兩個結構之間的關係
 
 
-Adobe Experience Platform的重要部分，在於能夠跨不同通道瞭解客戶之間的關係以及客戶與品牌之間的互動。 在體驗資料模型(XDM)結構中定義這些關係，可讓您獲得客戶資料的複雜見解。
+Adobe Experience Platform的重要部分，在於能夠跨不同通道瞭解客戶之間的關係以及客戶與品牌之間的互動。 在(XDM)結構中定義這 [!DNL Experience Data Model] 些關係，可讓您獲得客戶資料的複雜見解。
 
-本文檔提供了一個教程，用於定義由組織使用方案註冊表API定義的兩個方案之間的一對 [一關係](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml)。
+本文檔提供了一個教程，用於定義組織使用定義的兩個方案之間的一對一關係 [!DNL Schema Registry API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml)。
 
 ## 快速入門
 
-本教學課程需要對體驗資料模型(XDM)和XDM系統有良好的認識。 在開始本教學課程之前，請先閱讀下列檔案：
+本教學課程需要對(XDM) [!DNL Experience Data Model] 和進行有效的瞭解 [!DNL XDM System]。 在開始本教學課程之前，請先閱讀下列檔案：
 
 * [Experience Platform中的XDM系統](../home.md): XDM及其在Experience Platform中的實作概觀。
    * [架構構成基礎](../schema/composition.md): 介紹XDM模式的構建塊。
-* [即時客戶個人檔案](../../profile/home.md): 根據來自多個來源的匯整資料，提供統一、即時的消費者個人檔案。
-* [沙盒](../../sandboxes/home.md): Experience Platform提供虛擬沙盒，可將單一Platform實例分割為不同的虛擬環境，以協助開發和發展數位體驗應用程式。
+* [!DNL Real-time Customer Profile](../../profile/home.md): 根據來自多個來源的匯整資料，提供統一、即時的消費者個人檔案。
+* [!DNL Sandboxes](../../sandboxes/home.md): [!DNL Experience Platform] 提供虛擬沙盒，可將單一執行個體分 [!DNL Platform] 割為不同的虛擬環境，以協助開發和發展數位體驗應用程式。
 
-在開始本教學課程之前，請先閱讀開 [發人員指南](../api/getting-started.md) ，以取得成功呼叫架構註冊表API所需的重要資訊。 這包括您 `{TENANT_ID}`的「容器」概念，以及提出要求所需的標題（請特別注意「接受」標題及其可能的值）。
+在開始本教學課程之前，請先閱讀開 [發人員指南](../api/getting-started.md) ，以取得成功呼叫 [!DNL Schema Registry] API所需的重要資訊。 這包括您 `{TENANT_ID}`的「容器」概念，以及提出要求所需的標題（請特別注意「接受」標題及其可能的值）。
 
 ## 定義源和目標方案 {#define-schemas}
 
 預期您已經建立了將在關係中定義的兩個方案。 本教學課程在組織的當前忠誠度方案（在「忠誠度成員」架構中定義）的成員與其最愛的酒店（在「酒店」架構中定義）之間建立關係。
 
-模式關係由源模式 **表示** ，該源模式具有引用目標模式內另一欄位的 **欄位**。 在後續步驟中，「忠誠度會員」將是來源方案，而「酒店」將充當目標方案。
+模式關係由源模式 **[!UICONTROL 表示]** ，該源模式具有引用目標模式內另一欄位的 **[!UICONTROL 欄位]**。 在後續步驟中，「[!UICONTROL Loyalty Members]」將是來源結構描述，而「[!UICONTROL Hotels]」將充當目標結構描述。
 
-要定義兩個方案之間的關係，必須首先獲取兩個 `$id` 方案的值。 如果您知道結構的顯示名`title`稱()，則可以通過向「結構註冊表API」中的端點發出GET請 `$id``/tenant/schemas` 求來查找其值。
+要定義兩個方案之間的關係，必須首先獲取兩個 `$id` 方案的值。 如果您知道結構的顯示名`title`稱()，則可以通過向 `$id` API中的端點發出GET請求 `/tenant/schemas` 來查找其 [!DNL Schema Registry] 值。
 
 **API格式**
 
@@ -104,11 +104,11 @@ curl -X GET \
 
 ## 定義兩個方案的參考欄位
 
-在模式註冊表中，關係描述符的工作方式與SQL表中的外鍵類似： 源模式中的欄位用作對目標模式欄位的引用。 在定義關係時，每個方案必須有一個專用欄位作為對其他方案的引用。
+在中，關 [!DNL Schema Registry]系描述符的工作方式與SQL表中的外鍵類似： 源模式中的欄位用作對目標模式欄位的引用。 在定義關係時，每個方案必須有一個專用欄位作為對其他方案的引用。
 
 >[!IMPORTANT]
 >
->如果要在「即時客戶配置檔案」中啟 [用方案](../../profile/home.md)，則目標方案的參考欄位必須是其主 **要標識**。 本教學課程稍後會詳細說明此問題。
+>如果要啟用方案以便在中使用， [!DNL Real-time Customer Profile](../../profile/home.md)則目標方案的引用欄位必須是其主 **[!UICONTROL 要標識]**。 本教學課程稍後會詳細說明此問題。
 
 如果任一方案沒有用於此目的的欄位，您可能需要使用新欄位建立混音，並將其新增至方案。 此新欄位必須 `type` 有&quot;string&quot;值。
 
@@ -332,9 +332,9 @@ curl -X PATCH \
 
 >[!NOTE]
 >
->只有在「即時客戶設定檔」中啟用的方案才 [需要此步驟](../../profile/home.md)。 如果不希望任一方案參與聯合，或者如果方案已定義主要標識，則可以跳至為目標方案建立引用標識描述符 [的下一步](#create-descriptor) 。
+>只有在中啟用的方案才需要此步驟 [!DNL Real-time Customer Profile](../../profile/home.md)。 如果不希望任一方案參與聯合，或者如果方案已定義主要標識，則可以跳至為目標方案建立引用標識描述符 [的下一步](#create-descriptor) 。
 
-要使結構能夠在即時客戶配置檔案中使用，必須定義主要標識。 此外，關係的目標模式必須使用其主要標識作為其引用欄位。
+要在中啟用方案，必須定 [!DNL Real-time Customer Profile]義主標識。 此外，關係的目標模式必須使用其主要標識作為其引用欄位。
 
 在本教程中，源模式已定義了主標識，但目標模式沒有。 通過建立標識描述符，可以將模式欄位標籤為主標識欄位。 這是通過向端點發出POST請求來完 `/tenant/descriptors` 成的。
 
@@ -513,4 +513,4 @@ curl -X POST \
 
 ## 後續步驟
 
-遵循本教學課程，您已成功建立兩個結構之間的一對一關係。 有關使用方案註冊表API使用描述符的詳細資訊，請參 [閱方案註冊開發人員指南](../api/getting-started.md)。 有關如何在UI中定義架構關係的步驟，請參見使用架構編輯器 [定義架構關係的教程](relationship-ui.md)。
+遵循本教學課程，您已成功建立兩個結構之間的一對一關係。 有關使用API描述符的詳細資訊，請參 [!DNL Schema Registry] 閱方案註冊 [開發人員指南](../api/getting-started.md)。 有關如何在UI中定義架構關係的步驟，請參見使用架構編輯器 [定義架構關係的教程](relationship-ui.md)。
