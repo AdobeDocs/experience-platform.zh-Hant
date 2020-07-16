@@ -4,15 +4,15 @@ solution: Experience Platform
 title: 建立電子郵件行銷目標
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: ed9d6eadeb00db51278ea700f7698a1b5590632f
+source-git-commit: 5c5f6c4868e195aef76bacc0a1e5df3857647bde
 workflow-type: tm+mt
-source-wordcount: '1670'
+source-wordcount: '1611'
 ht-degree: 1%
 
 ---
 
 
-# 在Adobe的即時客戶資料平台中建立電子郵件行銷目的地並啟用資料
+# 在Adobe的 [!DNL Real-time Customer Data Platform]
 
 本教學課程示範如何使用API呼叫來連線至您的Adobe Experience Platform資料、建立電子郵件行銷目的地 [](../../rtcdp/destinations/email-marketing-destinations.md)、建立資料流至您新建立的目的地，以及啟用資料至您新建立的目的地。
 
@@ -26,9 +26,9 @@ ht-degree: 1%
 
 本指南需要有效瞭解Adobe Experience Platform的下列元件：
 
-* [體驗資料模型(XDM)系統](../../xdm/home.md): Experience Platform組織客戶體驗資料的標準化架構。
-* [目錄服務](../../catalog/home.md): 目錄是Experience Platform中資料位置和世系的記錄系統。
-* [沙盒](../../sandboxes/home.md): Experience Platform提供虛擬沙盒，可將單一Platform實例分割為不同的虛擬環境，以協助開發和發展數位體驗應用程式。
+* [!DNL Experience Data Model (XDM) System](../../xdm/home.md): 組織客戶體驗資料 [!DNL Experience Platform] 的標準化架構。
+* [!DNL Catalog Service](../../catalog/home.md): [!DNL Catalog] 是資料位置和世系的記錄系統 [!DNL Experience Platform]。
+* [!DNL Sandboxes](../../sandboxes/home.md): [!DNL Experience Platform] 提供虛擬沙盒，可將單一執行個體分 [!DNL Platform] 割為不同的虛擬環境，以協助開發和發展數位體驗應用程式。
 
 以下各節提供您需要瞭解的其他資訊，以便在Adobe即時CDP中將資料啟動至電子郵件行銷目的地。
 
@@ -36,27 +36,27 @@ ht-degree: 1%
 
 要完成本教學課程中的步驟，您應準備好下列憑證，這取決於您要連接和啟用區段的目標類型。
 
-* 對於Amazon S3與電子郵件行銷平台的連線： `accessId`的 `secretKey`
+* 對於 [!DNL Amazon] S3連線至電子郵件行銷平台： `accessId`的 `secretKey`
 * 對於電子郵件行銷平台的SFTP連線： `domain`、 `port`、 `username``password` 或 `ssh key` （視FTP位置的連線方法而定）
 
 ### 讀取範例API呼叫
 
-本教學課程提供範例API呼叫，以示範如何設定請求的格式。 這些包括路徑、必要標題和正確格式化的請求負載。 也提供API回應中傳回的範例JSON。 如需範例API呼叫檔案中所用慣例的詳細資訊，請參閱「Experience Platform疑難排解指 [南」中有關如何讀取範例API呼叫的章節](../../landing/troubleshooting.md#how-do-i-format-an-api-request) 。
+本教學課程提供範例API呼叫，以示範如何設定請求的格式。 這些包括路徑、必要標題和正確格式化的請求負載。 也提供API回應中傳回的範例JSON。 如需範例API呼叫檔案中所用慣例的詳細資訊，請參閱疑難排解指 [南中有關如何讀取範例API呼叫的](../../landing/troubleshooting.md#how-do-i-format-an-api-request)[!DNL Experience Platform] 章節。
 
 ### 收集必要和選用標題的值
 
-若要呼叫平台API，您必須先完成驗證教 [學課程](../authentication.md)。 完成驗證教學課程後，所有Experience Platform API呼叫中每個必要標題的值都會顯示在下方：
+若要呼叫API，您必 [!DNL Platform] 須先完成驗證教 [學課程](../authentication.md)。 完成驗證教學課程後，將提供所有 [!DNL Experience Platform] API呼叫中每個必要標題的值，如下所示：
 
 * 授權： 生產者 `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
 * x-gw-ims-org-id: `{IMS_ORG}`
 
-Experience Platform中的資源可以隔離至特定虛擬沙盒。 在對平台API的請求中，您可以指定要進行操作的沙盒的名稱和ID。 這些是可選參數。
+中的資 [!DNL Experience Platform] 源可以隔離到特定虛擬沙盒。 在對API [!DNL Platform] 的請求中，您可以指定要進行作業的沙盒名稱和ID。 這些是可選參數。
 
 * x-sandbox-name: `{SANDBOX_NAME}`
 
 >[!Note]
->如需Experience Platform中沙盒的詳細資訊，請參閱沙盒 [概觀檔案](../../sandboxes/home.md)。
+>如需中沙盒的詳細資訊 [!DNL Experience Platform]，請參閱沙 [盒概述檔案](../../sandboxes/home.md)。
 
 所有包含裝載(POST、PUT、PATCH)的請求都需要額外的媒體類型標題：
 
@@ -134,17 +134,17 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 }
 ```
 
-## 連線至您的Experience Platform資料 {#connect-to-your-experience-platform-data}
+## 連線至您的資 [!DNL Experience Platform] 料 {#connect-to-your-experience-platform-data}
 
 ![目標步驟概述步驟2](../images/destinations/flow-api-destinations-step2.png)
 
-接著，您必須連線至您的Experience Platform資料，以便匯出描述檔資料並在您偏好的目的地啟用它。 這包括兩個子步驟，如下所述。
+接著，您必須連線至您的 [!DNL Experience Platform] 資料，以便匯出描述檔資料並在偏好的目的地啟用。 這包括兩個子步驟，如下所述。
 
-1. 首先，您必須透過設定基本連線，執行呼叫以授權存取Experience Platform中的資料。
-2. 然後，使用基本連線ID，您將進行另一次呼叫，以建立來源連線，以建立與您的Experience Platform資料的連線。
+1. 首先，您必須透過設定基本連線，執行呼叫，以授 [!DNL Experience Platform]權存取您的資料。
+2. 然後，使用基本連接ID，您將進行另一次呼叫，在該呼叫中建立源連接，從而建立與資料的 [!DNL Experience Platform] 連接。
 
 
-### 授權存取Experience Platform中的資料
+### 授權存取您的資料，位於 [!DNL Experience Platform]
 
 **API格式**
 
@@ -208,7 +208,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 }
 ```
 
-### 連線至您的Experience Platform資料
+### 連線至您的資 [!DNL Experience Platform] 料
 
 **API格式**
 
@@ -270,11 +270,11 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 ```
 
 * `{BASE_CONNECTION_ID}`: 使用您在上一步驟中取得的ID。
-* `{CONNECTION_SPEC_ID}`: 使用統一配置式服務的連接規範ID - `8a9c3494-9708-43d7-ae3f-cda01e5030e1`。
+* `{CONNECTION_SPEC_ID}`: 使用——的連接規範 [!DNL Unified Profile Service] ID `8a9c3494-9708-43d7-ae3f-cda01e5030e1`。
 
 **回應**
 
-成功的響應返回新建立的源連接`id`到統一配置檔案服務的唯一標識符()。 這可確認您已成功連線至您的Experience Platform資料。 在後續步驟中，視需要儲存此值。
+成功的響應將返回新建立的源`id`連接的唯一標識符() [!DNL Unified Profile Service]。 這可確認您已成功連線至您的 [!DNL Experience Platform] 資料。 在後續步驟中，視需要儲存此值。
 
 ```json
 {
@@ -359,8 +359,8 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 * `{CONNECTION_SPEC_ID}`: 使用在步驟獲取可用目標清單 [中獲得的連接規範ID](#get-the-list-of-available-destinations)。
 * `{S3 or SFTP}`: 填寫此目的地的所需連線類型。 在目 [標目錄中](../../rtcdp/destinations/destinations-catalog.md)，捲動至您偏好的目標，以查看是否支援S3和／或SFTP連線類型。
-* `{ACCESS_ID}`: Amazon S3儲存位置的存取ID。
-* `{SECRET_KEY}`: Amazon S3儲存位置的機密金鑰。
+* `{ACCESS_ID}`: 您的 [!DNL Amazon] S3儲存位置存取ID。
+* `{SECRET_KEY}`: S3儲存位置的 [!DNL Amazon] 機密金鑰。
 
 **回應**
 
@@ -448,8 +448,8 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 * `{BASE_CONNECTION_ID}`: 使用您在上述步驟中取得的基本連線ID。
 * `{CONNECTION_SPEC_ID}`: 使用在步驟獲取可用目標列 [表中獲得的連接規範](#get-the-list-of-available-destinations)。
-* `{BUCKETNAME}`: 您的Amazon S3儲存桶，Real-time CDP將儲存資料導出。
-* `{FILEPATH}`: Amazon S3儲存桶目錄中的路徑，Real-time CDP將儲存資料導出。
+* `{BUCKETNAME}`: 您 [!DNL Amazon] 的S3儲存段，即時CDP將儲存資料導出。
+* `{FILEPATH}`: S3儲存桶目 [!DNL Amazon] 錄中的路徑，即時CDP將儲存資料導出。
 
 **回應**
 
@@ -465,7 +465,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 ![目標步驟概述步驟4](../images/destinations/flow-api-destinations-step4.png)
 
-使用您在前述步驟中取得的ID，您現在可以在Experience Platform資料和要啟用資料的目標之間建立資料流。 將此步驟設想成在Experience Platform和您所要的目的地之間建構資料稍後會透過的管道。
+使用您在前述步驟中取得的ID，您現在可以在資料和要啟用資料的目標 [!DNL Experience Platform] 之間建立資料流。 將此步驟設想成建立管道，資料稍後會透過管道在您所要的目 [!DNL Experience Platform] 的地之間流動。
 
 要建立資料流，請執行如下所示的POST請求，同時在裝載中提供以下提及的值。
 
