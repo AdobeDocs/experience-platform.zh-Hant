@@ -4,14 +4,17 @@ solution: Experience Platform
 title: 建立架構
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 162316c3b908ffa87d8df4dff72e26ba237993db
+source-git-commit: d04bf35e49488ab7d5e07de91eb77d0d9921b6fa
+workflow-type: tm+mt
+source-wordcount: '235'
+ht-degree: 1%
 
 ---
 
 
 # 建立架構
 
-架構可視為您要匯入Experience Platform之資料的藍圖。 每個模式由類和零個或多個混合組成。 換言之，您不必新增混音來定義結構，但在大多數情況下，至少會使用一個混音。
+架構可視為您要收錄至之資料的藍圖 [!DNL Experience Platform]。 每個模式由類和零個或多個混合組成。 換言之，您不必新增混音來定義結構，但在大多數情況下，至少會使用一個混音。
 
 架構構成過程從分配類開始。 該類定義資料的關鍵行為方面（記錄或時間序列），以及描述將接收的資料所需的最小欄位。
 
@@ -51,7 +54,7 @@ curl -X POST \
 
 **回應**
 
-成功的回應會傳回HTTP狀態201（已建立）和包含新建架構詳細資訊的裝載，包括 `$id`、 `meta:altId`和 `version`。 這些值是只讀的，由方案註冊表指定。
+成功的回應會傳回HTTP狀態201（已建立）和包含新建架構詳細資訊的裝載，包括 `$id`、 `meta:altId`和 `version`。 這些值是唯讀的，由指定 [!DNL Schema Registry]。
 
 ```JSON
 {
