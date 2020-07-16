@@ -4,54 +4,54 @@ solution: Experience Platform
 title: 架構註冊API開發人員指南
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: d04bf35e49488ab7d5e07de91eb77d0d9921b6fa
 workflow-type: tm+mt
-source-wordcount: '1246'
+source-wordcount: '1195'
 ht-degree: 0%
 
 ---
 
 
-# 架構註冊API開發人員指南
+# [!DNL Schema Registry] API開發人員指南
 
-架構註冊表用於存取Adobe Experience Platform中的架構程式庫，提供使用者介面和RESTful API，讓所有可用的程式庫資源都可從中存取。
+此 [!DNL Schema Registry] 程式庫用於存取Adobe Experience Platform中的「架構庫」，提供使用者介面和RESTful API，讓所有可用的程式庫資源都可從中存取。
 
-使用「架構註冊表API」，您可以執行基本的CRUD作業，以檢視並管理Adobe Experience Platform中所有可用的架構及相關資源。 這包括由Adobe、Experience Platform合作夥伴及您所使用之應用程式的廠商所定義的應用程式。 您也可以使用API呼叫為組織建立新的結構和資源，以及檢視和編輯已定義的資源。
+使用「架構註冊表API」，您可以執行基本的CRUD作業，以檢視並管理Adobe Experience Platform中所有可用的架構及相關資源。 這包括由您使用之應用程式的Adobe [!DNL Experience Platform] 、合作夥伴和廠商所定義的應用程式。 您也可以使用API呼叫為組織建立新的結構和資源，以及檢視和編輯已定義的資源。
 
-本開發人員指南提供協助您開始使用架構註冊表API的步驟。 然後，該指南提供使用方案註冊表執行鍵操作的示例API調用。
+本開發人員指南提供協助您開始使用 [!DNL Schema Registry] API的步驟。 然後，該指南提供使用執行鍵操作的示例API調用 [!DNL Schema Registry]。
 
 ## 必要條件
 
 本指南需要有效瞭解Adobe Experience Platform的下列元件：
 
-* [體驗資料模型(XDM)系統](../home.md): Experience Platform組織客戶體驗資料的標準化架構。
+* [!DNL Experience Data Model (XDM) System](../home.md): 組織客戶體驗資料 [!DNL Experience Platform] 的標準化架構。
    * [架構構成基礎](../schema/composition.md): 瞭解XDM架構的基本建置區塊。
-* [即時客戶個人檔案](../../profile/home.md): 根據來自多個來源的匯整資料，提供統一、即時的消費者個人檔案。
-* [沙盒](../../sandboxes/home.md): Experience Platform提供虛擬沙盒，可將單一Platform實例分割為不同的虛擬環境，以協助開發和發展數位體驗應用程式。
+* [!DNL Real-time Customer Profile](../../profile/home.md): 根據來自多個來源的匯整資料，提供統一、即時的消費者個人檔案。
+* [!DNL Sandboxes](../../sandboxes/home.md): [!DNL Experience Platform] 提供虛擬沙盒，可將單一執行個體分 [!DNL Platform] 割為不同的虛擬環境，以協助開發和發展數位體驗應用程式。
 
-以下各節提供您必須知道的其他資訊，才能成功呼叫架構註冊表API。
+以下章節提供您成功呼叫 [!DNL Schema Registry] API時需要知道的其他資訊。
 
 ## 讀取範例API呼叫
 
-本指南提供範例API呼叫，以示範如何格式化您的請求。 這些包括路徑、必要標題和正確格式化的請求負載。 也提供API回應中傳回的範例JSON。 如需範例API呼叫檔案中所用慣例的詳細資訊，請參閱「Experience Platform疑難排解指 [南」中有關如何讀取範例API呼叫的章節](../../landing/troubleshooting.md#how-do-i-format-an-api-request) 。
+本指南提供範例API呼叫，以示範如何格式化您的請求。 這些包括路徑、必要標題和正確格式化的請求負載。 也提供API回應中傳回的範例JSON。 如需範例API呼叫檔案中所用慣例的詳細資訊，請參閱疑難排解指 [南中有關如何讀取範例API呼叫的](../../landing/troubleshooting.md#how-do-i-format-an-api-request)[!DNL Experience Platform] 章節。
 
 ## 收集必要標題的值
 
-若要呼叫平台API，您必須先完成驗證教 [學課程](../../tutorials/authentication.md)。 完成驗證教學課程後，所有Experience Platform API呼叫中每個必要標題的值都會顯示在下方：
+若要呼叫API，您必 [!DNL Platform] 須先完成驗證教 [學課程](../../tutorials/authentication.md)。 完成驗證教學課程後，將提供所有 [!DNL Experience Platform] API呼叫中每個必要標題的值，如下所示：
 
 * 授權： 生產者 `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
 * x-gw-ims-org-id: `{IMS_ORG}`
 
-Experience Platform中的所有資源（包括屬於架構註冊表的資源）都隔離至特定的虛擬沙盒。 所有對平台API的請求都需要一個標題，該標題會指定要在中執行的操作的沙盒名稱：
+中的所有資 [!DNL Experience Platform]源（包括屬於的資源）都 [!DNL Schema Registry]被隔離到特定的虛擬沙盒中。 對API的所 [!DNL Platform] 有請求都需要一個標題，該標題會指定要在中執行的操作的沙盒名稱：
 
 * x-sandbox-name: `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
->如需平台中沙盒的詳細資訊，請參閱沙盒 [概觀檔案](../../sandboxes/home.md)。
+>如需中沙盒的詳細資訊 [!DNL Platform]，請參閱沙 [盒概述檔案](../../sandboxes/home.md)。
 
-對方案註冊表的所有查閱(GET)請求都需要額外的「接受」標題，其值會決定API傳回的資訊格式。 如需詳細 [資訊，請參閱下方](#accept) 「接受標題」一節。
+對的所有查閱(GET)請 [!DNL Schema Registry] 求都需要額外的「接受」標題，其值會決定API傳回的資訊格式。 如需詳細 [資訊，請參閱下方](#accept) 「接受標題」一節。
 
 所有包含裝載(POST、PUT、PATCH)的請求都需要額外的標題：
 
@@ -80,7 +80,7 @@ curl -X GET \
 
 **回應**
 
-成功的回應會傳回貴組織使用架構註冊表的相關資訊。 這包括 `tenantId` 屬性，其值為您的 `TENANT_ID`。
+成功的回應會傳回您組織使用的相關資訊 [!DNL Schema Registry]。 這包括 `tenantId` 屬性，其值為您的 `TENANT_ID`。
 
 ```JSON
 {
@@ -161,17 +161,17 @@ curl -X GET \
 
 ## 瞭解 `CONTAINER_ID` {#container}
 
-對架構註冊表API的呼叫需要使用 `CONTAINER_ID`。 有兩個容器可對其進行API呼叫： 全 **域容器** ，租 **戶容器**。
+對 [!DNL Schema Registry] API的呼叫需要使用 `CONTAINER_ID`。 有兩個容器可對其進行API呼叫： 全 **域容器** ，租 **戶容器**。
 
 ### 全域容器
 
-全域容器包含所有標準Adobe和Experience Platform合作夥伴提供的類別、混合、資料類型和結構描述。 您只能對全域容器執行清單和查閱(GET)請求。
+全域容器包含所有標準Adobe及 [!DNL Experience Platform] 合作夥伴提供的類別、混合、資料類型和結構。 您只能對全域容器執行清單和查閱(GET)請求。
 
 ### 租用戶容器
 
 不要與您的獨特性混淆，租 `TENANT_ID`用戶容器包含由IMS組織定義的所有類別、混合、資料類型、結構和描述子。 這是每個組織所獨有的，也就是說，其他IMS組織無法看到或管理。 您可以針對您在租用戶容器中建立的資源，執行所有CRUD作業(GET、POST、PUT、PATCH、DELETE)。
 
-當您在租用戶容器中建立類別、mixin、結構或資料類型時，它會儲存至結構註冊表，並指派一個 `$id` URI給您的URI `TENANT_ID`。 這 `$id` 會在整個API中用來參考特定資源。 值的范 `$id` 例會在下一節中提供。
+當您在租用戶容器中建立類別、混合、結構或資料類型時，會將其儲存至並指 [!DNL Schema Registry] 派包含您 `$id` 的URI `TENANT_ID`。 這 `$id` 會在整個API中用來參考特定資源。 值的范 `$id` 例會在下一節中提供。
 
 ## 模式識別 {#schema-identification}
 
@@ -189,7 +189,7 @@ curl -X GET \
 
 ## 接受標題 {#accept}
 
-在「方案註冊表API」中執行清單和查閱(GET)作業時，需要有「接受」標題來判斷API傳回之資料的格式。 查找特定資源時，「接受」標題中還必須包含版本號。
+在 [!DNL Schema Registry] API中執行清單和查閱(GET)作業時，需要「接受」標題，以決定API傳回的資料格式。 查找特定資源時，「接受」標題中還必須包含版本號。
 
 下表列出相容的「接受」標題值，包括具有版本號碼的值，以及使用API時傳回內容的說明。
 
@@ -242,4 +242,4 @@ curl -X GET \
 
 ## 後續步驟
 
-本檔案涵蓋對架構註冊表API進行呼叫所需的先決條件知識，包括必要的驗證憑證。 您現在可以繼續閱讀本開發人員指南中提供的範例呼叫，並依照其指示進行。 有關如何在API中建立架構的完整逐步說明，請參閱下列教 [學課程](../tutorials/create-schema-api.md)。
+本檔案涵蓋對 [!DNL Schema Registry] API進行呼叫所需的先決條件知識，包括必要的驗證憑證。 您現在可以繼續閱讀本開發人員指南中提供的範例呼叫，並依照其指示進行。 有關如何在API中建立架構的完整逐步說明，請參閱下列教 [學課程](../tutorials/create-schema-api.md)。
