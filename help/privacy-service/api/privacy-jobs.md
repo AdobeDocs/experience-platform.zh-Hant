@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 工作
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: df36d88de8ac117206d8d744cfcdd7804fcec61e
+source-git-commit: 5b32c1955fac4f137ba44e8189376c81cdbbfc40
 workflow-type: tm+mt
-source-wordcount: '1807'
+source-wordcount: '1795'
 ht-degree: 2%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 2%
 
 # 隱私權工作
 
-本檔案涵蓋如何使用API呼叫的隱私權工作。 具體來說，它涵蓋隱私權服 `/job` 務API中端點的使用。 在閱讀本指南之前，請參閱快速入門 [章節](./getting-started.md#getting-started) ，以取得成功呼叫API所需的重要資訊，包括必要的標題和如何讀取範例API呼叫。
+本檔案涵蓋如何使用API呼叫的隱私權工作。 具體來說，它涵蓋 `/job`[!DNL Privacy Service] API中端點的使用。 在閱讀本指南之前，請參閱快速入門 [章節](./getting-started.md#getting-started) ，以取得成功呼叫API所需的重要資訊，包括必要的標題和如何讀取範例API呼叫。
 
 ## 列出所有作業 {#list}
 
@@ -63,9 +63,9 @@ curl -X GET \
 
 >[!NOTE]
 >
->相容的Adobe Experience Cloud應用程式使用不同的值來識別資料主體。 如需您應用程 [式所需識別碼的詳細資訊](../experience-cloud-apps.md) ，請參閱隱私權服務和Experience Cloud應用程式指南。 如需決定要傳送哪些ID至隱私權服務的更一般指引，請參閱隱私權要求 [中的身分資料檔案](../identity-data.md)。
+>相容的Adobe Experience Cloud應用程式使用不同的值來識別資料主體。 如需您應用程 [式所需識別碼的詳細資訊](../experience-cloud-apps.md) ，請參閱隱私權服務和Experience Cloud應用程式指南。 如需決定要傳送哪些ID的更一般指引，請 [!DNL Privacy Service]參閱隱私權要求中 [的身分資料檔案](../identity-data.md)。
 
-隱私服務API支援兩種個人資料的工作要求：
+API [!DNL Privacy Service] 支援兩種個人資料的工作要求：
 
 * [存取和／或刪除](#access-delete): 存取（讀取）或刪除個人資料。
 * [選擇退出銷售](#opt-out): 將個人資料標示為不銷售。
@@ -150,7 +150,7 @@ curl -X POST \
 | `companyContexts` **(必填)** | 包含貴組織驗證資訊的陣列。 每個列出的識別碼都包含下列屬性： <ul><li>`namespace`: 識別碼的名稱空間。</li><li>`value`: 識別碼的值。</li></ul>必須 **有一個識別碼** 用作識別 `imsOrgId` 碼，其中包含 `namespace``value` IMS組織的唯一ID。 <br/><br/>其他識別碼可以是產品特定的公司限定詞(例如 `Campaign`)，可識別與您組織所屬的Adobe應用程式整合。 潛在值包括帳戶名稱、用戶端代碼、租用戶ID或其他應用程式識別碼。 |
 | `users` **(必填)** | 包含至少一個用戶集合的陣列，您希望訪問或刪除其資訊。 在單一請求中最多可提供1000個使用者ID。 每個用戶對象都包含以下資訊： <ul><li>`key`: 用於用戶的標識符，用於限定響應資料中的單獨作業ID。 為此值選擇唯一、可輕鬆識別的字串是最佳實務，以便日後輕鬆參考或查閱。</li><li>`action`: 列出對用戶資料採取所需操作的陣列。 根據您要執行的操作，此陣列必須包括、 `access`或 `delete`兩者。</li><li>`userIDs`: 使用者身分的集合。 單一使用者可擁有的身分數目限制為9。 每個身分都由 `namespace`、 `value`和namespace限定詞(`type`)組成。 如需這些 [必要屬性](appendix.md) ，請參閱附錄。</li></ul> 有關和的更詳細說 `users` 明 `userIDs`，請參 [閱疑難解答指南](../troubleshooting-guide.md#user-ids)。 |
 | `include` **(必填)** | 要納入您處理中的Adobe產品陣列。 如果此值遺失或空白，則會拒絕請求。 僅包含貴組織已整合的產品。 如需詳細資訊，請 [參閱附錄中](appendix.md) 「接受的產品值」一節。 |
-| `expandIDs` | 可選屬性，若設為 `true`，代表處理應用程式中ID的最佳化（目前僅Analytics支援）。 If omitted, this value defaults to `false`. |
+| `expandIDs` | 可選屬性，若設為 `true`，代表處理應用程式中ID的最佳化(目前僅支援 [!DNL Analytics])。 If omitted, this value defaults to `false`. |
 | `priority` | Adobe Analytics使用的可選屬性，可設定處理請求的優先順序。 接受的值是 `normal` 和 `low`。 如果 `priority` 省略，則預設行為為 `normal`。 |
 | `analyticsDeleteMethod` | 可選屬性，指定Adobe Analytics如何處理個人資料。 此屬性接受兩個可能的值： <ul><li>`anonymize`: 指定使用者ID集合所參考的所有資料都會設為匿名。 如果 `analyticsDeleteMethod` 省略，則此為預設行為。</li><li>`purge`: 所有資料都會完全移除。</li></ul> |
 | `regulation` **(必填)** | 要求的規定。 必須是下列三個值之一： <ul><li>gdpr</li><li>ccpa</li><li>pdpa_tha</li></ul> |
@@ -283,7 +283,7 @@ curl -X POST \
 | `companyContexts` **(必填)** | 包含貴組織驗證資訊的陣列。 每個列出的識別碼都包含下列屬性： <ul><li>`namespace`: 識別碼的名稱空間。</li><li>`value`: 識別碼的值。</li></ul>必須 **有一個識別碼** 用作識別 `imsOrgId` 碼，其中包含 `namespace``value` IMS組織的唯一ID。 <br/><br/>其他識別碼可以是產品特定的公司限定詞(例如 `Campaign`)，可識別與您組織所屬的Adobe應用程式整合。 潛在值包括帳戶名稱、用戶端代碼、租用戶ID或其他應用程式識別碼。 |
 | `users` **(必填)** | 包含至少一個用戶集合的陣列，您希望訪問或刪除其資訊。 在單一請求中最多可提供1000個使用者ID。 每個用戶對象都包含以下資訊： <ul><li>`key`: 用於用戶的標識符，用於限定響應資料中的單獨作業ID。 為此值選擇唯一、可輕鬆識別的字串是最佳實務，以便日後輕鬆參考或查閱。</li><li>`action`: 列出要對資料執行的所需操作的陣列。 對於退出銷售請求，陣列只能包含值 `opt-out-of-sale`。</li><li>`userIDs`: 使用者身分的集合。 單一使用者可擁有的身分數目限制為9。 每個身分都由 `namespace`、 `value`和namespace限定詞(`type`)組成。 如需這些 [必要屬性](appendix.md) ，請參閱附錄。</li></ul> 有關和的更詳細說 `users` 明 `userIDs`，請參 [閱疑難解答指南](../troubleshooting-guide.md#user-ids)。 |
 | `include` **(必填)** | 要納入您處理中的Adobe產品陣列。 如果此值遺失或空白，則會拒絕請求。 僅包含貴組織已整合的產品。 如需詳細資訊，請 [參閱附錄中](appendix.md) 「接受的產品值」一節。 |
-| `expandIDs` | 可選屬性，若設為 `true`，代表處理應用程式中ID的最佳化（目前僅Analytics支援）。 If omitted, this value defaults to `false`. |
+| `expandIDs` | 可選屬性，若設為 `true`，代表處理應用程式中ID的最佳化(目前僅支援 [!DNL Analytics])。 If omitted, this value defaults to `false`. |
 | `priority` | Adobe Analytics使用的可選屬性，可設定處理請求的優先順序。 接受的值是 `normal` 和 `low`。 如果 `priority` 省略，則預設行為為 `normal`。 |
 | `analyticsDeleteMethod` | 可選屬性，指定Adobe Analytics如何處理個人資料。 此屬性接受兩個可能的值： <ul><li>`anonymize`: 指定使用者ID集合所參考的所有資料都會設為匿名。 如果 `analyticsDeleteMethod` 省略，則此為預設行為。</li><li>`purge`: 所有資料都會完全移除。</li></ul> |
 | `regulation` **(必填)** | 要求的規定。 必須是下列三個值之一： <ul><li>gdpr</li><li>ccpa</li><li>pdpa_tha</li></ul> |
@@ -438,7 +438,7 @@ curl -X GET \
 | `productStatusResponse` | 陣列中的每個對 `productResponses` 像都包含有關特定應用程式的作業當前狀態的信 [!DNL Experience Cloud] 息。 |
 | `productStatusResponse.status` | 作業的當前狀態類別。 請參閱下表以取得可用狀態類 [別的清單](#status-categories) ，以及其對應含義。 |
 | `productStatusResponse.message` | 作業的特定狀態，對應於狀態類別。 |
-| `productStatusResponse.responseMsgCode` | 隱私權服務收到之產品回應訊息的標準代碼。 消息的詳細資訊在下面提供 `responseMsgDetail`。 |
+| `productStatusResponse.responseMsgCode` | 由接收的產品回應訊息的標準代碼 [!DNL Privacy Service]。 消息的詳細資訊在下面提供 `responseMsgDetail`。 |
 | `productStatusResponse.responseMsgDetail` | 對工作狀態的更詳細說明。 類似狀態的訊息可能會因產品而異。 |
 | `productStatusResponse.results` | 對於某些狀態，某些產品可能會傳回 `results` 物件，提供未涵蓋的其他資訊 `responseMsgDetail`。 |
 | `downloadURL` | 如果作業的狀態為 `complete`，此屬性會提供URL，以ZIP檔案形式下載作業結果。 此檔案可在工作完成後60天內下載。 |
@@ -460,4 +460,4 @@ curl -X GET \
 
 ## 後續步驟
 
-您現在知道如何使用隱私權服務API來建立和監控隱私權工作。 如需如何使用使用者介面執行相同工作的詳細資訊，請參 [閱隱私服務UI概觀](../ui/overview.md)。
+您現在知道如何使用 [!DNL Privacy Service] API建立和監控隱私權工作。 如需如何使用使用者介面執行相同工作的詳細資訊，請參 [閱隱私服務UI概觀](../ui/overview.md)。
