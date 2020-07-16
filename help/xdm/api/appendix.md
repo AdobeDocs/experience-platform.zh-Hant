@@ -4,23 +4,23 @@ solution: Experience Platform
 title: 架構註冊開發人員附錄
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: d04bf35e49488ab7d5e07de91eb77d0d9921b6fa
 workflow-type: tm+mt
-source-wordcount: '1296'
-ht-degree: 3%
+source-wordcount: '1265'
+ht-degree: 4%
 
 ---
 
 
 # 附錄
 
-本文檔提供與使用方案註冊表API有關的補充資訊。
+本檔案提供與使用 [!DNL Schema Registry] API相關的補充資訊。
 
 ## 相容模式
 
-Experience Data Model(XDM)是公開記載的規格，由Adobe推動，以提升數位體驗的互操作性、表現力和強大性。 Adobe在GitHub上的開放原始碼專案中維護原始碼 [和正式的XDM定義](https://github.com/adobe/xdm/)。 這些定義是以XDM標準記法撰寫，使用JSON-LD（連結資料的JavaScript物件記法）和JSON結構描述作為定義XDM結構描述的語法。
+[!DNL Experience Data Model] (XDM)是公開記載的規格，由Adobe推動，以改善數位體驗的互用性、表現力和力量。 Adobe在GitHub上的開放原始碼專案中維護原始碼 [和正式的XDM定義](https://github.com/adobe/xdm/)。 這些定義是以XDM標準記法撰寫，使用JSON-LD（連結資料的JavaScript物件記法）和JSON結構描述作為定義XDM結構描述的語法。
 
-在公共資料庫中查看正式的XDM定義時，您可以看到標準XDM與您在Adobe Experience Platform中看到的不同。 您在Experience Platform中看到的稱為相容模式，它提供標準XDM與平台內使用方式之間的簡單對應。
+在公共資料庫中查看正式的XDM定義時，您可以看到標準XDM與您在Adobe Experience Platform中看到的不同。 您在中看到的 [!DNL Experience Platform] 是「相容性模式」，它提供了標準XDM與其使用方式之間的簡單映射 [!DNL Platform]。
 
 ### 相容性模式的運作方式
 
@@ -51,15 +51,15 @@ Experience Data Model(XDM)是公開記載的規格，由Adobe推動，以提升�
 
 Adobe Experience Platform可搭配多種解決方案和服務運作，每種解決方案和服務都有各自的技術挑戰和限制（例如，某些技術如何處理特殊特徵）。 為了克服這些限制，開發了相容模式。
 
-大部分的體驗平台服務（包括目錄、資料湖和即時客戶個人檔案）都使用相容模式來取代標準XDM。 方案註冊表API也使用相容模式，本文檔中的示例都使用相容模式顯示。
+大部 [!DNL Experience Platform] 分服務 [!DNL Catalog]，包括 [!DNL Data Lake]、使用和 [!DNL Real-time Customer Profile] 取代 [!DNL Compatibility Mode] 標準XDM。 此 [!DNL Schema Registry] API也使用 [!DNL Compatibility Mode]，而本文中的範例都使用 [!DNL Compatibility Mode]。
 
-值得知道的是，標準XDM與在Experience Platform中運作的方式之間有對應關係，但這不應影響您對Platform服務的使用。
+值得知道的是，標準XDM和其操作方式之間會進行映射 [!DNL Experience Platform]，但不應影響您的服務使 [!DNL Platform] 用。
 
-開放原始碼專案可供您使用，但是在透過「架構註冊表」與資源互動時，本檔案中的API範例提供您應瞭解和遵循的最佳實務。
+開放原始碼專案可供您使用，但是在透過與資源互動時 [!DNL Schema Registry]，本檔案中的API範例提供您應瞭解和遵循的最佳實務。
 
 ## 在API中定義XDM欄位類型 {#field-types}
 
-XDM結構描述是使用JSON結構描述標準和基本欄位類型來定義，並加上Experience Platform所強制之欄位名稱的其他限制。 XDM允許您通過使用格式和可選約束定義其他欄位類型。 XDM欄位類型由欄位級屬性公開 `meta:xdmType`。
+XDM結構描述是使用JSON結構描述標準和基本欄位類型來定義，並對欄位名稱加上其他限制，由強制執行 [!DNL Experience Platform]。 XDM允許您通過使用格式和可選約束定義其他欄位類型。 XDM欄位類型由欄位級屬性公開 `meta:xdmType`。
 
 >[!NOTE]
 >
@@ -221,7 +221,7 @@ XDM結構描述是使用JSON結構描述標準和基本欄位類型來定義，�
   <tr>
     <td>地圖</td>
     <td>類型： 對<br/><br/><strong>像注</strong><br/>意：'map'資料類型的使用保留給產業和廠商架構使用，不適用於租用戶定義的欄位。 當資料表示為映射至某個值的索引鍵，或當索引鍵無法合理地包含在靜態架構中且必須視為資料值時，標準架構會使用它。</td>
-    <td>'map'不能定義任何屬性。 它必須定義單個"additionalProperties"架構，以說明'map'中包含的值類型。 XDM中的'map'只能包含單一資料類型。 值可以是任何有效的XDM模式定義，包括陣列或對象，或作為對其他模式的引用（通過$ref）。<br/><br/>值類型為'string'的映射欄位：
+    <td>'map'不能定義任何屬性。 它必須定義單個"[!UICONTROL additionalProperties]"模式，以說明'map'中包含的值類型。 XDM中的'map'只能包含單一資料類型。 值可以是任何有效的XDM模式定義，包括陣列或對象，或作為對其他模式的引用（通過$ref）。<br/><br/>值類型為'string'的映射欄位：
       <pre class="JSON language-JSON hljs">
         "sampleField": { "type": "object", "additionalProperties":{ "type": "字串" }
       </pre>
@@ -243,7 +243,7 @@ XDM結構描述是使用JSON結構描述標準和基本欄位類型來定義，�
 
 下表說明「meta:xdmType」和其他序列化格式之間的對應。
 
-| XDM類型<br>(meta:xdmType) | JSON<br>（JSON結構描述） | Parce<br>(type/annotation) | Spark SQL | Java | 斯卡拉 | .NET | CosmosDB | MongoDB | 塞式飛行器 | Protobuf 2 |
+| XDM類型<br>(meta:xdmType) | JSON<br>（JSON結構描述） | Parce<br>(type/annotation) | [!DNL Spark] SQL | Java | 斯卡拉 | .NET | CosmosDB | MongoDB | 塞式飛行器 | Protobuf 2 |
 |---|---|---|---|---|---|---|---|---|---|---|
 | 字串 | 類型：字串 | BYTE_ARRAY/UTF8 | StringType | java.lang.String | 字串 | System.String | 字串 | 字串 | 字串 | 字串 |
 | 數字 | 類型：數字 | DOUBLE | DoubleType | java.lang.Double | 雙倍 | System.Double | 數字 | 雙倍 | 雙倍 | 雙倍 |
