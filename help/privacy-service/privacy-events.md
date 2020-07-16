@@ -4,28 +4,28 @@ solution: Experience Platform
 title: 訂閱隱私權事件
 topic: privacy events
 translation-type: tm+mt
-source-git-commit: ab29c7771122267634dea24582b07f605abd7ed8
+source-git-commit: 5b32c1955fac4f137ba44e8189376c81cdbbfc40
 workflow-type: tm+mt
-source-wordcount: '861'
+source-wordcount: '843'
 ht-degree: 0%
 
 ---
 
 
-# 訂閱隱私權事件
+# 訂閱 [!DNL Privacy Events]
 
-隱私權事件是Adobe Experience Platform Privacy Service提供的訊息，該服務運用傳送至已設定網頁掛接的Adobe I/O Events，以協助有效率的工作要求自動化。 它們可降低或免除輪詢隱私權服務API的需求，以檢查工作是否完成或工作流程中是否達到特定里程碑。
+[!DNL Privacy Events] 是Adobe Experience Platform提供的訊息，它運 [!DNL Privacy Service]用傳送至已設定網頁掛接的Adobe I/O事件，以協助有效率的工作要求自動化。 它們可降低或免除輪詢 [!DNL Privacy Service] API的需求，以檢查工作是否完成或工作流程中是否達到特定里程碑。
 
 目前有四種與隱私作業請求生命週期相關的通知類型：
 
 | 類型 | 說明 |
 --- | ---
-| 工作完成 | 所有Experience Cloud解決方案都已回報，工作的整體或全域狀態已標示為完整。 |
+| 工作完成 | 所有 [!DNL Experience Cloud] 解決方案都已回報，作業的整體或全域狀態已標示為完成。 |
 | 作業錯誤 | 一或多個解決方案在處理請求時報告錯誤。 |
 | 產品完整 | 與此工作相關的解決方案之一已完成其工作。 |
 | 產品錯誤 | 其中一個解決方案在處理請求時報告錯誤。 |
 
-本檔案提供在Adobe I/O中設定隱私權服務通知整合的步驟。 如需隱私權服務及其功能的高階概觀，請參閱隱私權 [服務概觀](home.md)。
+本檔案提供在Adobe I/O中設定通 [!DNL Privacy Service] 知整合的步驟。 如需隱私權服務概觀 [!DNL Privacy Service] 及其功能的詳細 [資訊](home.md)。
 
 ## 快速入門
 
@@ -110,11 +110,11 @@ app.listen(app.get('port'), function() {
 
 ![](./images/privacy-events/webhook-details.png)
 
-專案的詳細資訊頁面會重新顯示，隱私權事件會顯示在左側導 _[!UICONTROL 覽器的]_「事件」下方。
+專案的詳細資訊頁面會重新顯示，並 [!DNL Privacy Events] 顯示在左 _[!UICONTROL 側導覽]_的「事件」下方。
 
 ## 檢視事件資料
 
-在您的專案和隱私權工作中註冊隱私權事件後，您就可以檢視該註冊的任何收到的通知。 從「開 **[!UICONTROL 發人員控制台]** 」的「專案」標籤中，從清單中選取您的專案，以開啟「產 _品概述」頁面_ 。 在這裡，從左側導 **[!UICONTROL 覽中選取]** 「隱私權事件」。
+在您已註冊專 [!DNL Privacy Events] 案和隱私權工作後，您就可以檢視該註冊的任何收到通知。 從「開 **[!UICONTROL 發人員控制台]** 」的「專案」標籤中，從清單中選取您的專案，以開啟「產 _品概述」頁面_ 。 在這裡，從左側導 **[!UICONTROL 覽中選取]** 「隱私權事件」。
 
 ![](./images/privacy-events/events-left-nav.png)
 
