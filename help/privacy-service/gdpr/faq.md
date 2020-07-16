@@ -4,14 +4,17 @@ solution: Experience Platform
 title: GDPR 常見問題集
 topic: troubleshooting
 translation-type: tm+mt
-source-git-commit: e176cc69613fad1d4a6b44138a6d88a688438578
+source-git-commit: 5b32c1955fac4f137ba44e8189376c81cdbbfc40
+workflow-type: tm+mt
+source-wordcount: '642'
+ht-degree: 0%
 
 ---
 
 
 # GDPR 常見問題集
 
-本檔案針對有關通用資料保護規則(GDPR)及其在Adobe Experience Cloud中實作的常見問題提供解答。
+本檔案提供有關(GDPR)及其在Adobe Experience Cloud中實 [!DNL General Data Protection Regulation] 作的常見問題的解答。
 
 本文中使用的各種GDPR相關術語的定義可在 [GDPR術語文章中找到](terminology.md) 。
 
@@ -37,7 +40,7 @@ GDPR適用於儲存和處理歐盟內部公民個人資料的所有組織，不�
 
 GDPR加強了有效資料主體同意的條件。 公司不能再提供難以理解的條款和條件，因為許可請求必須以易懂易懂的形式提供。 資料處理的目的必須在要求中明確說明，以取得資料主體的同意。
 
-**明確同意** ，必須與其他事項明確，並且可區分，以易懂易懂的形式，使用簡單的語言提供。 此外，撤回同意必須和給予同意一樣容易&#x200B;。只有在處理敏感個人資料時，才需要明確同意，只要「選擇加入」即可。 但是，對於非敏感性資料， **明確同意** 是可接受的。
+**明確同意** ，必須與其他事項明確，並且可區分，以易懂易懂的形式，使用簡單的語言提供。 此外，撤回同意必須和給予同意一樣容易&#x200B;。 只有在處理敏感個人資料時，才需要明確同意，只要「選擇加入」即可。 但是，對於非敏感性資料， **明確同意** 是可接受的。
 
 ## 16歲以下的資料主體能否表示同意？
 
