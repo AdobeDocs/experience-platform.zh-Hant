@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 更新資源
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: d04bf35e49488ab7d5e07de91eb77d0d9921b6fa
 workflow-type: tm+mt
-source-wordcount: '379'
+source-wordcount: '373'
 ht-degree: 2%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 2%
 
 # 更新資源
 
-您可以使用PATCH請求修改或更新租用戶容器中的資源。 結構註冊表支援所有標準JSON修補程式作業，包括新增、移除和取代。
+您可以使用PATCH請求修改或更新租用戶容器中的資源。 支援 [!DNL Schema Registry] 所有標準的JSON修補程式作業，包括新增、移除和取代。
 
 如需JSON修補程式的詳細資訊，包括可用的作業，請參閱官方的 [JSON修補程式檔案](http://jsonpatch.com/)。
 
@@ -34,7 +34,7 @@ PATCH /tenant/{RESOURCE_TYPE}/{RESOURCE_ID}
 
 | 參數 | 說明 |
 | --- | --- |
-| `{RESOURCE_TYPE}` | 要從架構庫更新的資源類型。 有效類 `datatypes`型有 `mixins`、 `schemas`和 `classes`。 |
+| `{RESOURCE_TYPE}` | 要從中更新的資源類型 [!DNL Schema Library]。 有效類 `datatypes`型有 `mixins`、 `schemas`和 `classes`。 |
 | `{RESOURCE_ID}` | URL編碼的 `$id` URI或 `meta:altId` 資源。 |
 
 **請求**
@@ -110,12 +110,12 @@ PATCH /tenant/{RESOURCE_TYPE}/{RESOURCE_ID}
 
 | 參數 | 說明 |
 | --- | --- |
-| `{RESOURCE_TYPE}` | 要從架構庫更新的資源類型。 有效類 `datatypes`型有 `mixins`、 `schemas`和 `classes`。 |
+| `{RESOURCE_TYPE}` | 要從中更新的資源類型 [!DNL Schema Library]。 有效類 `datatypes`型有 `mixins`、 `schemas`和 `classes`。 |
 | `{RESOURCE_ID}` | URL編碼的 `$id` URI或 `meta:altId` 資源。 |
 
 **請求**
 
-請求主體包括更新混`op`合所需的操作(`path`)、位置(`value`)和資訊()。 此請求會更新「屬性詳細資料」混音，以移除「propertyCity」欄位，並新增「propertyAddress」欄位，以參考包含位址資訊的標準資料類型。 此外，還新增了「emailAddress」欄位，其中引用電子郵件資訊的標準資料類型。
+請求主體包括更新混`op`合所需的操作(`path`)、位置(`value`)和資訊()。 此請求會更新「屬性詳細資料」混音，以移除「propertyCity」欄位，並新增「propertyAddress」欄位，以參考包含位址資訊的標準資料類型。 此外，還新增了「emailAddress」欄位，以引用標準資料類型與電子郵件資訊。
 
 ```SHELL
 curl -X PATCH \
