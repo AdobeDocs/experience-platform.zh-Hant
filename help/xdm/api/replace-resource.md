@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 替換資源
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: d04bf35e49488ab7d5e07de91eb77d0d9921b6fa
 workflow-type: tm+mt
-source-wordcount: '207'
+source-wordcount: '203'
 ht-degree: 1%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 1%
 
 # 替換資源
 
-方案註冊表允許您通過PUT操作替換整個資源。 此操作實際上重寫資源，因此請求主體必須包括使用POST請求建立新資源時需要的所有欄位。
+通過 [!DNL Schema Registry] PUT操作，可以替換整個資源。 此操作實際上重寫資源，因此請求主體必須包括使用POST請求建立新資源時需要的所有欄位。
 
 如果您想一次更新資源中的大量資訊，此方法特別有用。
 
@@ -32,7 +32,7 @@ PUT /tenant/{RESOURCE_TYPE}/{RESOURCE_ID}
 
 | 參數 | 說明 |
 | --- | --- |
-| `{RESOURCE_TYPE}` | 要從架構庫更新的資源類型。 有效類 `datatypes`型有 `mixins`、 `schemas`和 `classes`。 |
+| `{RESOURCE_TYPE}` | 要從中更新的資源類型 [!DNL Schema Library]。 有效類 `datatypes`型有 `mixins`、 `schemas`和 `classes`。 |
 | `{RESOURCE_ID}` | URL編碼的 `$id` URI或 `meta:altId` 資源。 |
 
 **請求**
