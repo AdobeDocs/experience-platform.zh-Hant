@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 策略
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 1a835c6c20c70bf03d956c601e2704b68d4f90fa
+source-git-commit: 0534fe8dcc11741ddc74749d231e732163adf5b0
 workflow-type: tm+mt
-source-wordcount: '940'
+source-wordcount: '938'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # 政策評估
 
-建立行銷動作並定義原則後，您就可以使用「原則服務API」來評估是否有某些動作違反了任何原則。 傳回的限制採用一組原則的形式，這些原則會因嘗試對包含資料使用標籤的指定資料執行行銷動作而遭到違反。
+建立行銷動作並定義原則後，您就可以使用 [!DNL Policy Service] API來評估某些動作是否違反任何原則。 傳回的限制採用一組原則的形式，這些原則會因嘗試對包含資料使用標籤的指定資料執行行銷動作而遭到違反。
 
 預設情況下， **只有狀態設定為「ENABLED」的策略才參與評估**，但您可以使用查詢參數 `?includeDraft=true` ，在評估中包括「DRAFT」策略。
 
