@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 行銷動作
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 0534fe8dcc11741ddc74749d231e732163adf5b0
 workflow-type: tm+mt
-source-wordcount: '536'
+source-wordcount: '534'
 ht-degree: 1%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 1%
 
 # 行銷動作
 
-在Adobe Experience Platform資料治理範圍內的行銷行動，是資料消費者採取的行動，需要檢查是否有違反資料使用政策的行為。 [!DNL Experience Platform]
+Adobe Experience Platform中的行銷行動是資料消費者採取的 [!DNL Data Governance]行動， [!DNL Experience Platform] 需要檢查資料使用政策是否違規。
 
 在API中處理行銷動作時，您必須使用端 `/marketingActions` 點。
 
