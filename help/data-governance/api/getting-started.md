@@ -4,9 +4,9 @@ solution: Experience Platform
 title: DULE Policy Service API開發人員指南
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 0534fe8dcc11741ddc74749d231e732163adf5b0
 workflow-type: tm+mt
-source-wordcount: '678'
+source-wordcount: '655'
 ht-degree: 0%
 
 ---
@@ -14,11 +14,11 @@ ht-degree: 0%
 
 # DULE [!DNL Policy Service] API開發人員指南
 
-資料使用標籤與實施(DULE)是Adobe Experience Platform資料治理的核心機制。 DULE策略服務提供REST風格的API，允許您建立和管理資料使用策略，以確定可以針對已標籤有特定資料使用標籤的資料執行哪些行銷操作。
+資料使用標籤與實施(DULE)是Adobe Experience Platform的核心機制 [!DNL Data Governance]。 DULE提 [!DNL Policy Service] 供REST風格的API，可讓您建立和管理資料使用政策，以決定可針對已標示特定資料使用標籤的資料採取哪些行銷動作。
 
-本檔案提供如何執行「原則服務API」中可用之關鍵作業的指示。 如果您尚未這麼做，請先檢閱資料管理概觀 [](../home.md) ，以熟悉DULE架構。 有關建立和實施DULE策略的逐步說明，請參見 [DULE策略教程](../policies/create.md)。
+本檔案提供執行 [!DNL Policy Service] API中可用關鍵作業的指示。 如果您尚未這麼做，請先檢閱資料管理概觀 [](../home.md) ，以熟悉DULE架構。 有關建立和實施DULE策略的逐步說明，請參見 [DULE策略教程](../policies/create.md)。
 
-本檔案提供您在嘗試呼叫Policy Service API之前，需要瞭解的核心概念的簡介。
+本檔案提供您在嘗試呼叫 [!DNL Policy Service] API之前，需要瞭解的核心概念。
 
 ## DULE快速入門 [!DNL Policy Service]
 
@@ -28,11 +28,11 @@ ht-degree: 0%
 
 本指南需要有效瞭解Adobe Experience Platform的下列元件：
 
-* [資料治理](../home.md): 強制執行資料使用 [!DNL Experience Platform] 合規性的框架。
-   * [DULE標籤](../labels/overview.md): 資料使用標籤會套用至「體驗資料模型」(XDM)資料欄位，指定資料存取限制。
-* [體驗資料模型(XDM)系統](../../xdm/home.md): 組織客戶體驗資料 [!DNL Experience Platform] 的標準化架構。
-* [即時客戶個人檔案](../../profile/home.md): 根據來自多個來源的匯整資料，提供統一、即時的消費者個人檔案。
-* [沙盒](../../sandboxes/home.md): [!DNL Experience Platform] 提供虛擬沙盒，可將單一平台實例分割為獨立的虛擬環境，以協助開發和發展數位體驗應用程式。
+* [!DNL Data Governance](../home.md): 強制執行資料使用 [!DNL Experience Platform] 合規性的框架。
+   * [DULE標籤](../labels/overview.md): 資料使用標籤會套用 [!DNL Experience Data Model] 至(XDM)資料欄位，指定存取該資料的限制。
+* [!DNL Experience Data Model (XDM) System](../../xdm/home.md): 組織客戶體驗資料 [!DNL Experience Platform] 的標準化架構。
+* [!DNL Real-time Customer Profile](../../profile/home.md): 根據來自多個來源的匯整資料，提供統一、即時的消費者個人檔案。
+* [!DNL Sandboxes](../../sandboxes/home.md): [!DNL Experience Platform] 提供虛擬沙盒，可將單一執行個體分 [!DNL Platform] 割為不同的虛擬環境，以協助開發和發展數位體驗應用程式。
 
 ## 讀取範例API呼叫
 
