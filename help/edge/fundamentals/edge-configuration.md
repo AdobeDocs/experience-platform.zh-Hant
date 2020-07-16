@@ -4,9 +4,9 @@ seo-title: Experience Platform Web SDK的Edge組態
 description: '瞭解如何設定Experience Platform Edge Network。 '
 seo-description: '瞭解如何設定Experience Platform Edge Network。 '
 translation-type: tm+mt
-source-git-commit: 013e6abb0922e39bd6b9da6a66bba9a1bcefdd25
+source-git-commit: 2d47a00c91000c68c7331f88015264259a4e6323
 workflow-type: tm+mt
-source-wordcount: '881'
+source-wordcount: '880'
 ht-degree: 2%
 
 ---
@@ -92,7 +92,7 @@ ID同步可分組至容器，以允許在不同時間執行不同的ID同步。 
 
 Target可讓客戶透過使用屬性來控制權限。 如需詳細資訊，請參 [閱Target檔案的](https://docs.adobe.com/content/help/en/target/using/administer/manage-users/enterprise/properties-overview.html) 「企業權限」區段。
 
-屬性Token可在 [!UICONTROL Adobe Target] >設 [!UICONTROL 定] > [UICONTROL屬性中找到]
+屬性Token可在 [!UICONTROL Adobe Target] >設定 [!UICONTROL >屬][!UICONTROL 性]
 
 ##### [!UICONTROL 目標環境ID]
 
