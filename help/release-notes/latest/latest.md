@@ -5,9 +5,9 @@ doc-type: release notes
 last-update: July 15, 2020
 author: crhoades, ens25212
 translation-type: tm+mt
-source-git-commit: e864073c27ba20ce32c962c469aed52608f199ac
+source-git-commit: 9fbd30adcb29c8925f02745be924477eb4e3fe2a
 workflow-type: tm+mt
-source-wordcount: '686'
+source-wordcount: '681'
 ht-degree: 4%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 4%
 
 # Adobe Experience Platform 發行說明
 
-**發行日期: 2020 年 7 月 15 日**
+**發行日期：2020 年 7 月 15 日**
 
 Adobe Experience Platform現有功能的更新：
 
@@ -73,7 +73,7 @@ Experience Platform提供REST風格的API和互動式UI，讓您輕鬆為各種�
 
 | 功能 | 說明 |
 | ------- | ----------- |
-| API和UI支援刪除資料流 | 現在，可以透過API或使用UI刪除有錯誤或已不必要的資料流。 |
+| 刪除資料流的UI支援 | 現在，可以通過UI刪除錯誤或已不必要的資料流。 |
 | 單次擷取的API和UI支援 | 現在，可以通過API或使用UI執行資料流的一次性提取，其中僅提供開始日期，而且未計畫將來的提取。 |
 
 若要進一步瞭解來源，請參閱 [來源概觀](../../sources/home.md)。
