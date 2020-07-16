@@ -4,7 +4,10 @@ solution: Experience Platform
 title: 建立混音
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: b2ceac3de73ac622dc885eb388e46e93551f43a8
+source-git-commit: d04bf35e49488ab7d5e07de91eb77d0d9921b6fa
+workflow-type: tm+mt
+source-wordcount: '303'
+ht-degree: 0%
 
 ---
 
@@ -13,7 +16,7 @@ source-git-commit: b2ceac3de73ac622dc885eb388e46e93551f43a8
 
 Mixin是一組用於描述特定概念的欄位，例如「位址」或「描述檔偏好設定」。 有許多標準混音可供使用，或者，當您想要擷取組織專屬的資訊時，可以自行定義。 每個混音都包 `meta:intendedToExtend` 含一個欄位，該欄位列出混音與相容的類。
 
-您可能會發現，檢閱所有可用的混音，讓您熟悉其中各欄位。 您可以針對「全域」和「租用戶」容器執行請求，列出(GET)與特定類別相容的所有混音，只傳回「meta:intededToExtend」欄位符合您所使用類別的混音。 以下範例將傳回可與XDM個人設定檔類別搭配使用的所有混音：
+您可能會發現，檢閱所有可用的混音，讓您熟悉其中各欄位。 您可以針對「全域」和「租用戶」容器執行請求，列出(GET)與特定類別相容的所有混音，只傳回「meta:intededToExtend」欄位符合您所使用類別的混音。 下列範例將傳回可與類別搭配使用的所有混 [!DNL XDM Individual Profile] 音：
 
 ```http
 GET /global/mixins?property=meta:intendedToExtend==https://ns.adobe.com/xdm/context/profile
@@ -99,7 +102,7 @@ curl -X POST \
 
 **回應**
 
-成功的回應會傳回HTTP狀態201（已建立）和包含新建立混音詳細資料的裝載，包括 `$id`、 `meta:altId`和 `version`。 這些值是只讀的，由方案註冊表指定。
+成功的回應會傳回HTTP狀態201（已建立）和包含新建立混音詳細資料的裝載，包括 `$id`、 `meta:altId`和 `version`。 這些值是唯讀的，由指定 [!DNL Schema Registry]。
 
 ```JSON
 {
