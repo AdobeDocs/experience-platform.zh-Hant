@@ -4,14 +4,17 @@ solution: Experience Platform
 title: 資料存取教學課程
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 6705cb699b0785e317a6e437fc8a01ca77266f84
+source-git-commit: 5c5f6c4868e195aef76bacc0a1e5df3857647bde
+workflow-type: tm+mt
+source-wordcount: '102'
+ht-degree: 0%
 
 ---
 
 
 # 存取體驗平台資料
 
-Adobe Experience Platform可讓使用者使用資料存取API，在Experience Platform中探索並存取已擷取的資料集。
+Adobe Experience Platform可讓使用者使用資料存取API來探索和存取 [!DNL Experience Platform] 內嵌的資料集。
 
 ## 使用API存取資料
 
@@ -19,4 +22,4 @@ Adobe Experience Platform可讓使用者使用資料存取API，在Experience Pl
 
 ## 建立資料集
 
-請依照使用平台API建立資料集以及使用建立資料集教學課程中的檔案填入資料集的逐 [步指示](../catalog/datasets/create.md)。
+請依照使用API建立資料集以及使用建立資料集教學課程中的檔案填入 [!DNL Platform] 資料集的逐 [步指示進行](../catalog/datasets/create.md)。
