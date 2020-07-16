@@ -4,7 +4,10 @@ solution: Experience Platform
 title: GDPR 術語
 topic: troubleshooting
 translation-type: tm+mt
-source-git-commit: 39d5446c04fcceaf9d75db91ecb2c136986de098
+source-git-commit: 5b32c1955fac4f137ba44e8189376c81cdbbfc40
+workflow-type: tm+mt
+source-wordcount: '1066'
+ht-degree: 10%
 
 ---
 
@@ -61,7 +64,7 @@ __備案系統：__ 根據特定條件可存取或可查詢的任何特定個人
 
 ## G
 
-__GDPR:__ 通用資料保護規則(GDPR)是一套法律架構，為歐盟(EU)內個人個人資訊的收集與處理設定了方針。 GDPR 說明資料管理原則以及個人的權利，同時按收入處以罰款。GDPR 涵蓋處理歐盟公民資料的所有公司，因此對於銀行、保險業者和其他金融公司等公司合規人員而言為一重要規範。GDPR 將於 2018 年 5 月 25 日起於歐盟生效。
+__GDPR:__ ( [!DNL General Data Protection Regulation] GDPR)是一個法律框架，為歐盟(EU)內的個人個人資訊收集和處理制定了准則。 GDPR 說明資料管理原則以及個人的權利，同時按收入處以罰款。GDPR 涵蓋處理歐盟公民資料的所有公司，因此對於銀行、保險業者和其他金融公司等公司合規人員而言為一重要規範。GDPR 將於 2018 年 5 月 25 日起於歐盟生效。
 
 __遺傳資料：__ 關於遺傳或獲得的個體特徵的資料，這些資料提供關於個體健康或生理學的獨特資訊。
 
@@ -71,7 +74,7 @@ __承諾組：__ 控制性事業及其控制性事業。
 
 ## I
 
-__身分管理服務(IMS):__ Adobe實作Federated ID和OAuth 2.0，以驗證Adobe ID使用者並授權Adobe資源。 您必須整合 IMS 和您的 Adobe 應用程式或服務以讓使用者登入及存取 Adobe 服務。使用者可以直接使用Renga（Adobe身分服務提供者）登入，或透過受信任的第三方驗證網域（例如Google、Facebook或公司／組織LDAP）登入。
+__身分管理服務(IMS):__ Adobe實作Federated ID和OAuth 2.0，以驗證Adobe ID使用者並授權Adobe資源。 您必須整合 IMS 和您的 Adobe 應用程式或服務以讓使用者登入及存取 Adobe 服務。Users can log in directly with Renga (the Adobe identity services provider), or log in through a trusted third party authentication domain (such as [!DNL Google], [!DNL Facebook], or a corporate/organization LDAP).
 
 __IMS組織ID:__ 指服務對服務驗證的Adobe授權Token，不需要使用者登入。 它發佈給IMS用戶端，且沒有相關使用者。 IMS用戶端需要服務Token來授權服務之間的後通道請求。 (「系統代號」一詞通常用於指稱服務代號。)
 
@@ -83,7 +86,7 @@ __IMS組織ID:__ 指服務對服務驗證的Adobe授權Token，不需要使用�
 
 ## M
 
-__主要機構：__ 在歐盟內部，對資料處理做出主要決策的地方；處理器。
+__主要機構：__ 在歐盟內部，對資料處理做出主要決策的地方； 處理器。
 
 ## N
 
@@ -97,7 +100,7 @@ __個人資料洩露：__ 違反安全性導致意外或非法存取、銷毀、
 
 __依設計劃分的隱私權：__ 這一原則要求從系統設計開始就納入資料保護，而不是添加。
 
-__隱私權影響評估__:一種工具，用於識別並降低實體的隱私風險，方法是分析所處理的個人資料以及保護資料的現行政策。
+__隱私權影響評估__: 一種工具，用於識別並降低實體的隱私風險，方法是分析所處理的個人資料以及保護資料的現行政策。
 
 __處理：__ 對個人資料執行的任何操作，不論是否透過自動方式執行，包括收集、使用、錄制等。
 
