@@ -4,17 +4,17 @@ solution: Experience Platform
 title: 驗證及存取Experience Platform API
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 5c5f6c4868e195aef76bacc0a1e5df3857647bde
 workflow-type: tm+mt
-source-wordcount: '877'
+source-wordcount: '850'
 ht-degree: 1%
 
 ---
 
 
-# 驗證及存取Experience Platform API
+# 驗證和存取 [!DNL Experience Platform] API
 
-本檔案提供逐步教學課程，以存取Adobe Experience Platform開發人員帳戶，以呼叫Experience Platform API。
+本檔案提供逐步教學課程，以存取Adobe Experience Platform開發人員帳戶，以便呼叫 [!DNL Experience Platform] API。
 
 ## 驗證以進行API呼叫
 
@@ -25,7 +25,7 @@ ht-degree: 1%
 
 ## 必要條件
 
-為了成功呼叫Experience Platform API，您需要下列項目：
+為了成功呼叫 [!DNL Experience Platform] API，您需要：
 
 * 可存取Adobe Experience Platform的IMS組織
 * 已註冊的Adobe ID帳戶
@@ -38,16 +38,16 @@ ht-degree: 1%
 如果您沒有Adobe ID，可使用下列步驟建立Adobe ID:
 
 1. 前往 [Adobe Developer Console](https://console.adobe.io)
-2. 按一 **下建立新帳戶**
+2. 按一 **[!UICONTROL 下建立新帳戶]**
 3. 完成註冊程式
 
-## 成為組織Experience Platform的開發人員和使用者
+## 成為組織的開發人員 [!DNL Experience Platform] 和使用者
 
 在Adobe I/O上建立整合之前，您的帳戶必須擁有IMS組織中產品的開發人員權限。 有關Admin Console開發人員帳戶的詳細資訊，請參閱管理開發人 [員的支援](https://helpx.adobe.com/tw/enterprise/using/manage-developers.html) 檔案。
 
 **取得開發人員存取權**
 
-請連絡您組織中的Admin Console管理員，以便使用 [Admin Console將您新增為組織產品的開發人員](https://adminconsole.adobe.com/)。
+請連絡 [!DNL Admin Console] 您組織中的管理員，以使用新增您為組織產品之一的開發人員 [!DNL Admin Console](https://adminconsole.adobe.com/)。
 
 ![](images/authentication/assign-developer.png)
 
@@ -59,7 +59,7 @@ ht-degree: 1%
 
 **取得使用者存取權**
 
-您的Admin Console管理員也必須以使用者身分將您新增至產品。
+您的 [!DNL Admin Console] 管理員也必須以使用者身分將您加入產品。
 
 ![](images/authentication/assign-users.png)
 
@@ -71,7 +71,7 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->如果您從「隱私權服務開發人員指南」遵循本檔案 [](../privacy-service/api/getting-started.md)，現在可以返回該指南，以產生「隱私權服務」特有的存取憑證。
+>如果您要從「隱私服務開發人員指南」中遵循本檔案 [，現在可以返回該指南，以產生唯一的存取憑證](../privacy-service/api/getting-started.md)[!DNL Privacy Service]。
 
 使用Adobe Developer Console，您必須產生下列三種存取憑證：
 
@@ -79,7 +79,7 @@ ht-degree: 1%
 * `{API_KEY}`
 * `{ACCESS_TOKEN}`
 
-您的 `{IMS_ORG}` API `{API_KEY}` 只需產生一次，就可在日後的平台API呼叫中重複使用。 但是，您的 `{ACCESS_TOKEN}` 作業是暫時的，必須每24小時重新生一次。
+您 `{IMS_ORG}` 的 `{API_KEY}` API呼叫只需產生一次，就可重複使用 [!DNL Platform] 。 但是，您的 `{ACCESS_TOKEN}` 作業是暫時的，必須每24小時重新生一次。
 
 這些步驟將在下面詳細介紹。
 
@@ -95,9 +95,9 @@ ht-degree: 1%
 
 ![](images/authentication/add-platform-api.png)
 
-在您選取Experience Platform作為要新增至專案的API後，請依照教學課程中所述的步驟，使用服務帳戶( [JWT)](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/services-add-api-jwt.md) （從「設定API」步驟開始）將API新增至專案，以完成程式。
+在您選取要新 [!DNL Experience Platform] 增至專案的API後，請依照教學課程中所述的步驟，使用服務帳戶( [JWT)](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/services-add-api-jwt.md) （從「設定API」步驟開始）將API新增至專案，以完成程式。
 
-將API新增至專案後，「專案概述 __ 」頁面會顯示所有對Experience Platform API的呼叫所需的下列認證：
+將API新增至專案後，「專案概述 _」頁面會顯示所有對API的呼叫所需的_[!DNL Experience Platform] 下列憑證：
 
 * `{API_KEY}` （用戶端ID）
 * `{IMS_ORG}` (組織 ID)
@@ -106,13 +106,13 @@ ht-degree: 1%
 
 ### 每個會話的驗證
 
-您必須收集的最終必要憑證是您的 `{ACCESS_TOKEN}`。 與和的值不 `{API_KEY}` 同， `{IMS_ORG}`必須每24小時產生一個新Token，才能繼續使用平台API。
+您必須收集的最終必要憑證是您的 `{ACCESS_TOKEN}`。 與和的值不 `{API_KEY}` 同， `{IMS_ORG}`必須每24小時產生一個新的Token，才能繼續使用 [!DNL Platform] API。
 
 若要產生新 `{ACCESS_TOKEN}`的Developer Console認證指南， [請依照步驟產生JWT Token](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/credentials.md) 。
 
 ## 測試存取認證
 
-收集完所有三個必要的認證後，您可以嘗試進行下列API呼叫。 此呼叫將列出架構註冊表容器內的所有Experience Data Model(XDM)類 `global` 別：
+收集完所有三個必要的認證後，您可以嘗試進行下列API呼叫。 此調用將列出 [!DNL Experience Data Model] 方案註冊表容器內的所有(XDM)類 `global` :
 
 **API格式**
 
@@ -159,6 +159,6 @@ curl -X GET https://platform.adobe.io/data/foundation/schemaregistry/global/clas
 
 ## 後續步驟
 
-閱讀本檔案後，您已收集並成功測試了Platform API的存取認證。 您現在可以遵循檔案中提供的範例API呼 [叫](../landing/documentation/overview.md)。
+閱讀本檔案後，您已收集並成功測試API的存取認 [!DNL Platform] 證。 您現在可以遵循檔案中提供的範例API呼 [叫](../landing/documentation/overview.md)。
 
-除了您在本教學課程中收集的驗證值之外，許多平台API也需要提供有 `{SANDBOX_NAME}` 效的標頭。 如需詳細 [資訊，請參閱](../sandboxes/home.md) 「沙盒總覽」。
+除了您在本教學課程中收集的驗證值外，許多 [!DNL Platform] API也需要提供有 `{SANDBOX_NAME}` 效的標頭。 如需詳細 [資訊，請參閱](../sandboxes/home.md) 「沙盒總覽」。
