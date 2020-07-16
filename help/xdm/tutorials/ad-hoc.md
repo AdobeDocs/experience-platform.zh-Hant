@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 建立臨機結構
 topic: tutorials
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: d04bf35e49488ab7d5e07de91eb77d0d9921b6fa
 workflow-type: tm+mt
-source-wordcount: '742'
+source-wordcount: '724'
 ht-degree: 2%
 
 ---
@@ -14,18 +14,18 @@ ht-degree: 2%
 
 # 建立臨機結構
 
-在特定情況下，可能需要建立Experience Data Model(XDM)架構，其中欄位的名稱僅限單一資料集使用。 這稱為「臨機」架構。 臨機結構描述用於Experience Platform的各種資料擷取工作流程，包括擷取CSV檔案並建立特定類型的來源連線。
+在特定情況下，可能需要建立(XDM)架構，其中欄位的名稱僅限單一資料集使用。 [!DNL Experience Data Model] 這稱為「臨機」架構。 臨機結構描述用於各種資料擷取工作流程中， [!DNL Experience Platform]包括擷取CSV檔案並建立特定類型的來源連線。
 
-本檔案提供使用架構註冊表API建立臨機架構的一 [般步驟](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml)。 它可與其他需要在工作流程中建立臨機架構的Experience Platform教學課程搭配使用。 這些文檔中的每個文檔都提供了有關如何為特定使用案例正確配置臨時架構的詳細資訊。
+本檔案提供使用架構註冊表API建立臨機架構的一 [般步驟](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml)。 它可與其他需要在其工作流程中 [!DNL Experience Platform] 建立臨機架構的教學課程搭配使用。 這些文檔中的每個文檔都提供了有關如何為特定使用案例正確配置臨時架構的詳細資訊。
 
 ## 快速入門
 
-本教學課程需要對體驗資料模型(XDM)系統有良好的認識。 開始本教學課程之前，請先閱讀下列XDM檔案：
+本教學課程需要對(XDM) [!DNL Experience Data Model] 系統有良好的認識。 開始本教學課程之前，請先閱讀下列XDM檔案：
 
-- [XDM系統概述](../home.md): XDM及其在Experience Platform中的實作概觀。
+- [XDM系統概述](../home.md): XDM及其實施的高階概觀 [!DNL Experience Platform]。
 - [架構構成基礎](../schema/composition.md): 概述XDM架構的基本元件。
 
-在開始本教學課程之前，請先閱讀開 [發人員指南](../api/getting-started.md) ，以取得成功呼叫架構註冊表API所需的重要資訊。 這包括您 `{TENANT_ID}`的「容器」概念，以及提出要求所需的標題（請特別注意「接受」標題及其可能的值）。
+在開始本教學課程之前，請先閱讀開 [發人員指南](../api/getting-started.md) ，以取得成功呼叫 [!DNL Schema Registry] API所需的重要資訊。 這包括您 `{TENANT_ID}`的「容器」概念，以及提出要求所需的標題（請特別注意「接受」標題及其可能的值）。
 
 ## 建立臨機類別
 
@@ -239,7 +239,7 @@ GET /tenant/schemas/{SCHEMA_ID}
 
 **請求**
 
-以下請求使用「接受」標 `application/vnd.adobe.xed-full+json; version=1`題，該標題會傳回架構的擴充形式。 請注意，從方案註冊表檢索特定資源時，請求的「接受」標題必須包含相關資源的主要版本。
+以下請求使用「接受」標 `application/vnd.adobe.xed-full+json; version=1`題，該標題會傳回架構的擴充形式。 請注意，從中檢索特定資源時，請 [!DNL Schema Registry]求的「接受」標題必須包含相關資源的主要版本。
 
 ```shell
 curl -X GET \
@@ -305,4 +305,4 @@ curl -X GET \
 
 遵循本教學課程，您已成功建立新的臨機結構。 如果您是作為另一個教學課程的一部分來到本檔案，您現在可以使用臨機 `$id` 架構依照指示完成工作流程。
 
-有關使用架構註冊表API的詳細資訊，請參閱開發人員 [指南](../api/getting-started.md)。
+如需使用 [!DNL Schema Registry] API的詳細資訊，請參閱開發 [人員指南](../api/getting-started.md)。
