@@ -4,7 +4,10 @@ solution: Experience Platform
 title: 建立資料類型
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: b0d8c8ee4df11d601d8feb122c70a9cd5d7d5b77
+source-git-commit: d04bf35e49488ab7d5e07de91eb77d0d9921b6fa
+workflow-type: tm+mt
+source-wordcount: '200'
+ht-degree: 1%
 
 ---
 
@@ -64,7 +67,7 @@ curl -X POST \
 
 **回應**
 
-成功的回應會傳回HTTP狀態201（已建立）和包含新建立資料類型詳細資訊的裝載，包括 `$id`、 `meta:altId`和 `version`。 這三個值是只讀的，由架構註冊表指定。
+成功的回應會傳回HTTP狀態201（已建立）和包含新建立資料類型詳細資訊的裝載，包括 `$id`、 `meta:altId`和 `version`。 這三個值是唯讀的，由指定 [!DNL Schema Registry]。
 
 ```JSON
 {
