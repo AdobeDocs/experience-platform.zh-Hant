@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 資料使用標籤概觀
 topic: labels
 translation-type: tm+mt
-source-git-commit: f4b3148db3b4a17d071c1c8ad2aff8dd64ddd0b7
+source-git-commit: 0534fe8dcc11741ddc74749d231e732163adf5b0
 workflow-type: tm+mt
-source-wordcount: '494'
+source-wordcount: '485'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # 資料使用標籤概觀
 
-資料使用標籤與實施(DULE)是Adobe Experience Platform資料治理的核心機制。 DULE功能可讓您將資料使用量標籤套用至資料集和欄位，並依據相關資料使用策略將每個標籤分類。
+資料使用標籤與實施(DULE)是Adobe Experience Platform的核心機制 [!DNL Data Governance]。 DULE功能可讓您將資料使用量標籤套用至資料集和欄位，並依據相關資料使用策略將每個標籤分類。
 
 本文檔概述中的資料使用標籤（也稱為DULE標籤） [!DNL Experience Platform]。 在閱讀本指南之前，請參閱 [資料治理概觀](../home.md) ，以取得DULE架構的更強穩簡介。
 
@@ -38,9 +38,9 @@ ht-degree: 0%
 
 ### 繼承Adobe Audience Manager資料匯出控制項
 
-Experience Platform能夠與Adobe Audience Manager共用細分。 已套用至Audience Manager區段的任何「資料匯出控制」都會轉換為「Experience Platform Data Governance」所識別的等同標籤和行銷動作。
+[!DNL Experience Platform] 能夠與Adobe Audience Manager共用區段。 套用至Audience Manager區段的任何「資料匯出控制」都會轉換為由所識別的相同標籤和行銷動 [!DNL Experience Platform] 作 [!DNL Data Governance]。
 
-如需特定「資料匯出控制」如何對應至平台中資料使用標籤的參考，請參閱 [Audience Manager檔案](https://docs.adobe.com/content/help/en/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aam-data-export-control-in-aep)。
+如需特定「資料匯出控制」如何對應至中的資料使用標籤的參考 [!DNL Platform]資訊，請參閱 [Audience Manager檔案](https://docs.adobe.com/content/help/en/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aam-data-export-control-in-aep)。
 
 
 ## 後續步驟
