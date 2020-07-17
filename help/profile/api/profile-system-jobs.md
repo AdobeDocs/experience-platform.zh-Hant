@@ -4,9 +4,9 @@ solution: Adobe Experience Platform
 title: 描述檔系統工作——即時客戶描述檔API
 topic: guide
 translation-type: tm+mt
-source-git-commit: c0b059d6654a98b74be5bc6a55f360c4dc2f216b
+source-git-commit: f910351d49de9c4a18a444b99b7f102f4ce3ed5b
 workflow-type: tm+mt
-source-wordcount: '1466'
+source-wordcount: '1420'
 ht-degree: 2%
 
 ---
@@ -14,14 +14,14 @@ ht-degree: 2%
 
 # 描述系統作業端點（刪除請求）
 
-Adobe Experience Platform可讓您從多個來源擷取資料，並為個別客戶建立強穩的個人檔案。 Data Lake和即時客戶個人檔案資料儲存中會儲存在Platform中。 有時可能需要從描述檔商店刪除資料集或批次，以移除不再需要或錯誤新增的資料。 這需要使用即時客戶描述檔API來建立描述檔系統工作（也稱為「刪除請求」），如有需要，也可加以修改、監控或移除。
+Adobe Experience Platform可讓您從多個來源擷取資料，並為個別客戶建立強穩的個人檔案。 所吸收的 [!DNL Platform] 資料被儲存在 [!DNL Data Lake] 資料儲存 [!DNL Real-time Customer Profile] 器中。 有時可能需要從描述檔商店刪除資料集或批次，以移除不再需要或錯誤新增的資料。 這需要使 [!DNL Real-time Customer Profile] 用API來建立 [!DNL Profile] 系統工作(也稱為「[!DNL delete request]」)，如有需要，也可加以修改、監視或移除。
 
 >[!NOTE]
->如果您嘗試從資料湖刪除資料集或批次，請造訪目錄服 [務概觀](../../catalog/home.md) ，以取得指示。
+>如果您嘗試從中刪除資料集或批處理 [!DNL Data Lake]，請訪問目錄 [服務概述](../../catalog/home.md) ，以獲得說明。
 
 ## 快速入門
 
-本指南中使用的API端點是即時客戶 [設定檔API的一部分](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml)。 在繼續之前，請先閱讀快速入門手冊 [](getting-started.md) ，以取得相關檔案的連結、閱讀本檔案中範例API呼叫的指南，以及成功呼叫任何Experience Platform API所需之必要標題的重要資訊。
+本指南中使用的API端點是的一部分 [!DNL Real-time Customer Profile API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml)。 在繼續之前，請先閱讀快速入門 [指南](getting-started.md) ，以取得相關檔案的連結、閱讀本檔案中範例API呼叫的指南，以及成功呼叫任何 [!DNL Experience Platform] API所需之必要標題的重要資訊。
 
 ## 檢視刪除請求
 
@@ -103,10 +103,10 @@ curl -X POST \
 
 ### 刪除資料集
 
-若要刪除資料集，資料集ID必須包含在POST請求的正文中。 此動作會刪除指定資料集的ALL資料。 Experience Platform可讓您根據記錄和時間系列結構描述來刪除資料集。
+若要刪除資料集，資料集ID必須包含在POST請求的正文中。 此動作會刪除指定資料集的ALL資料。 [!DNL Experience Platform] 允許您根據記錄和時間序列模式刪除資料集。
 
 >[!CAUTION]
-> 嘗試使用Experience Platform UI刪除啟用設定檔的資料集時，資料集會因擷取而停用，但是在使用API建立刪除請求後，才會刪除。 如需詳細資訊，請參 [閱本文](#appendix) 件附錄。
+> 嘗試使用 [!DNL Profile][!DNL Experience Platform] UI刪除已啟用的資料集時，資料集會因擷取而停用，但在使用API建立刪除要求之前，資料集不會刪除。 如需詳細資訊，請參 [閱本文](#appendix) 件附錄。
 
 **API格式**
 
@@ -161,7 +161,7 @@ curl -X POST \
 >[!NOTE]
 > 無法根據記錄結構描述刪除資料集的批的原因是，記錄類型資料集批會覆蓋以前的記錄，因此無法「撤消」或刪除。 要根據記錄方案消除資料集錯誤批處理的影響，唯一的方法是使用正確的資料重新收錄批，以覆蓋錯誤的記錄。
 
-有關記錄和時間序列行為的詳細資訊，請參閱「XDM [系統概述」中有關XDM資料行為](../../xdm/home.md#data-behaviors) 的一節。
+有關記錄和時間序列行為的更多資訊，請參閱 [概述中有關XDM資料行為](../../xdm/home.md#data-behaviors) 的一 [!DNL XDM System] 節。
 
 **API格式**
 
@@ -277,7 +277,7 @@ curl -X POST \
 
 ## 刪除刪除請求
 
-Experience Platform可讓您刪除先前的請求，這在許多原因（包括刪除工作未完成或在處理階段卡住）中可能很有用。 為了刪除刪除請求，您可以對端點執行DELETE請求，並包括 `/system/jobs` 要刪除到請求路徑的刪除請求的ID。
+[!DNL Experience Platform] 可讓您刪除先前的請求，這可能因為許多原因（包括刪除作業未完成或在處理階段卡住）而有用。 為了刪除刪除請求，您可以對端點執行DELETE請求，並包括 `/system/jobs` 要刪除到請求路徑的刪除請求的ID。
 
 **API格式**
 
@@ -306,19 +306,19 @@ curl -X POST \
 
 ## 後續步驟
 
-現在，您知道從Experience Platform內的Profile Store刪除資料集和批次時涉及的步驟，因此您可以安全地刪除已錯誤新增或您的組織不再需要的資料。 請注意，刪除請求無法撤消，因此您只應刪除您確信現在不需要且將來不需要的資料。
+現在，您已瞭解從中刪除資料集和批處理所涉及的步 [!DNL Profile Store] 驟 [!DNL Experience Platform]，因此您可以安全地刪除錯誤地添加的資料或您的組織不再需要的資料。 請注意，刪除請求無法撤消，因此您只應刪除您確信現在不需要且將來不需要的資料。
 
 ## 附錄 {#appendix}
 
-下列資訊是從描述檔儲存區刪除資料集動作的補充。
+以下資訊是從中刪除資料集的操作的補充 [!DNL Profile Store]。
 
-### 使用Experience Platform UI刪除資料集
+### 使用 [!DNL Experience Platform] UI刪除資料集
 
-當使用Experience Platform使用者介面刪除已啟用設定檔的資料集時，會開啟對話方塊詢問「您確定要從Experience Data Lake刪除此資料集嗎？ 使用&#39;profile systems jobs&#39; API從Profile Service刪除此資料集。&quot;
+使用使 [!DNL Experience Platform] 用者介面刪除已啟用的資料集時，會開啟對話 [!DNL Profile]方塊，詢問「您確定要從中刪除此資料集嗎 [!DNL Experience Data Lake]? 使用&#39;p[!DNL rofile systems jobs]&#39; API從中刪除此資 [!DNL Profile Service]料集。&quot;
 
-按一 **下UI中的** 「刪除」會停用擷取資料集，但「不」會自動刪除後端的資料集。 若要永久刪除資料集，必須使用本指南中建立刪除請求的步驟手動 [建立刪除請求](#create-a-delete-request)。
+按一 **[!UICONTROL 下UI中的]** 「刪除」會停用擷取資料集，但「不」會自動刪除後端的資料集。 若要永久刪除資料集，必須使用本指南中建立刪除請求的步驟手動 [建立刪除請求](#create-a-delete-request)。
 
-下圖顯示嘗試使用UI刪除啟用設定檔的資料集時的警告。
+下圖顯示嘗試使用UI刪除已啟用 [!DNL Profile]的資料集時的警告。
 
 ![](../images/delete-profile-dataset.png)
 
