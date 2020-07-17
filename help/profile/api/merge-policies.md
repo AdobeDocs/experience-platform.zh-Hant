@@ -4,9 +4,9 @@ solution: Adobe Experience Platform
 title: 合併政策——即時客戶個人檔案API
 topic: guide
 translation-type: tm+mt
-source-git-commit: d1656635b6d082ce99f1df4e175d8dd69a63a43a
+source-git-commit: f910351d49de9c4a18a444b99b7f102f4ce3ed5b
 workflow-type: tm+mt
-source-wordcount: '2053'
+source-wordcount: '2035'
 ht-degree: 1%
 
 ---
@@ -14,15 +14,15 @@ ht-degree: 1%
 
 # 合併策略端點
 
-Adobe Experience Platform可讓您從多個來源匯整資料並加以匯整，以全面瞭解每個客戶。 將這些資料整合在一起時，合併原則是平台用來決定資料的優先順序以及將哪些資料合併以建立統一檢視的規則。 使用REST風格的API或用戶介面，您可以建立新的合併策略、管理現有策略，並為組織設定預設的合併策略。 本指南說明使用API處理合併原則的步驟。 要使用UI使用合併策略，請參閱合 [並策略使用手冊](../ui/merge-policies.md)。
+Adobe Experience Platform可讓您從多個來源匯整資料並加以匯整，以全面瞭解每個客戶。 將這些資料整合在一起時，合併原則是用來決定 [!DNL Platform] 資料的優先順序以及將哪些資料合併以建立該統一檢視的規則。 使用REST風格的API或用戶介面，您可以建立新的合併策略、管理現有策略，並為組織設定預設的合併策略。 本指南說明使用API處理合併原則的步驟。 要使用UI使用合併策略，請參閱合 [並策略使用手冊](../ui/merge-policies.md)。
 
 ## 快速入門
 
-本指南中使用的API端點是即時客戶 [設定檔API的一部分](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml)。 在繼續之前，請先閱讀快速入門手冊 [](getting-started.md) ，以取得相關檔案的連結、閱讀本檔案中範例API呼叫的指南，以及成功呼叫任何Experience Platform API所需之必要標題的重要資訊。
+本指南中使用的API端點是的一部分 [!DNL Real-time Customer Profile API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml)。 在繼續之前，請先閱讀快速入門 [指南](getting-started.md) ，以取得相關檔案的連結、閱讀本檔案中範例API呼叫的指南，以及成功呼叫任何 [!DNL Experience Platform] API所需之必要標題的重要資訊。
 
 ## 合併策略的元件 {#components-of-merge-policies}
 
-合併原則是IMS組織專用的，可讓您建立不同的原則，以所需的特定方式合併結構。 任何存取描述檔資料的API都需要合併原則，但若未明確提供，則會使用預設原則。 平台提供預設的合併策略，或者，您可以為特定方案建立合併策略，並將其標籤為組織的預設策略。 每個組織可能每個方案有多個合併策略，但每個方案只能有一個預設的合併策略。 在提供方案名稱且需要但未提供合併策略的情況下，將使用任何設定為預設的合併策略集。 當您將合併策略設定為預設值時，任何先前設定為預設值的現有合併策略都將自動更新為不再用作預設值。
+合併原則是IMS組織專用的，可讓您建立不同的原則，以所需的特定方式合併結構。 任何存取資 [!DNL Profile] 料的API都需要合併原則，但若未明確提供，則會使用預設原則。 [!DNL Platform] 提供預設合併策略，或者，您可以為特定方案建立合併策略，並將其標籤為組織的預設策略。 每個組織可能每個方案有多個合併策略，但每個方案只能有一個預設的合併策略。 在提供方案名稱且需要但未提供合併策略的情況下，將使用任何設定為預設的合併策略集。 當您將合併策略設定為預設值時，任何先前設定為預設值的現有合併策略都將自動更新為不再用作預設值。
 
 ### 完整合併策略對象
 
@@ -59,7 +59,7 @@ Adobe Experience Platform可讓您從多個來源匯整資料並加以匯整，�
 | `attributeMerge` | [屬性合併](#attribute-merge) 對象，指示在發生資料衝突時合併策略優先配置檔案屬性值的方式。 |
 | `schema` | 可 [以使用](#schema) 合併策略的方案對象。 |
 | `default` | 指示此合併策略是否為指定方案的預設布爾值。 |
-| `version` | 平台維護的合併原則版本。 每當合併策略更新時，此唯讀值都會增加。 |
+| `version` | [!DNL Platform] 合併策略的維護版本。 每當合併策略更新時，此唯讀值都會增加。 |
 | `updateEpoch` | 合併策略的上次更新日期。 |
 
 **合併策略示例**
@@ -86,7 +86,7 @@ Adobe Experience Platform可讓您從多個來源匯整資料並加以匯整，�
 
 ### 身分圖 {#identity-graph}
 
-[Adobe Experience Platform Identity Service](../../identity-service/home.md) 管理Experience Platform上全球及每個組織使用的識別圖。 合併 `identityGraph` 策略的屬性定義了如何確定用戶的相關身份。
+[Adobe Experience Platform Identity Service](../../identity-service/home.md) 管理全球及每個組織使用的識別圖表 [!DNL Experience Platform]。 合併 `identityGraph` 策略的屬性定義了如何確定用戶的相關身份。
 
 **identityGraph物件**
 
@@ -99,7 +99,7 @@ Adobe Experience Platform可讓您從多個來源匯整資料並加以匯整，�
 其中 `{IDENTITY_GRAPH_TYPE}` 是下列其中一項：
 
 * **「無」:** 不執行身份聯繫。
-* **「pdg」:** 根據您的私人身分圖表執行身分識別接合。
+* **「pdg」:** 根據您的個人身分圖表執行身分識別接合。
 
 **範例`identityGraph`**
 
@@ -173,7 +173,7 @@ Adobe Experience Platform可讓您從多個來源匯整資料並加以匯整，�
 
 ## 訪問合併策略 {#access-merge-policies}
 
-使用即時客戶描述檔API，端點可讓您執行查閱請求，以依其ID檢視特定合併原則，或存取您IMS組織中所有依特定條件篩選的合併原則。 `/config/mergePolicies` 您也可以使用端 `/config/mergePolicies/bulk-get` 點來依據其ID擷取多個合併原則。 以下各節將說明執行這些呼叫的步驟。
+使用 [!DNL Real-time Customer Profile]`/config/mergePolicies` API，端點可讓您執行查閱請求，以依其ID檢視特定合併原則，或存取IMS組織中所有依特定條件篩選的合併原則。 您也可以使用端 `/config/mergePolicies/bulk-get` 點來依據其ID擷取多個合併原則。 以下各節將說明執行這些呼叫的步驟。
 
 ### 依ID存取單一合併原則
 
@@ -227,7 +227,7 @@ curl -X GET \
 
 ### 根據多個合併策略的ID檢索多個合併策略
 
-通過向端點發出POST請求並在請求主體中包 `/config/mergePolicies/bulk-get` 含要檢索的合併策略的ID，可以檢索多個合併策略。
+通過向端點發出POST請求並在請求主體中包括要檢索 `/config/mergePolicies/bulk-get` 的合併策略的ID，可以檢索多個合併策略。
 
 **API格式**
 
@@ -724,7 +724,7 @@ curl -X DELETE \
 
 ## 後續步驟
 
-現在您知道如何為IMS組織建立及設定合併原則，您可以使用這些原則從即時客戶個人檔案資料建立受眾細分。 請參閱 [Adobe Experience Platform細分服務檔案](../../segmentation/home.md) ，開始定義和使用細分。
+現在您知道如何為IMS組織建立和設定合併原則，您可以使用這些原則從您的資料建立受眾 [!DNL Real-time Customer Profile] 區段。 請參閱 [Adobe Experience Platform細分服務檔案](../../segmentation/home.md) ，開始定義和使用細分。
 
 
 
