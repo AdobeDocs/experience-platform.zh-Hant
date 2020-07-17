@@ -4,9 +4,9 @@ solution: Adobe Experience Platform
 title: 實體——即時客戶個人檔案API
 topic: guide
 translation-type: tm+mt
-source-git-commit: d1656635b6d082ce99f1df4e175d8dd69a63a43a
+source-git-commit: f910351d49de9c4a18a444b99b7f102f4ce3ed5b
 workflow-type: tm+mt
-source-wordcount: '1689'
+source-wordcount: '1671'
 ht-degree: 1%
 
 ---
@@ -14,15 +14,15 @@ ht-degree: 1%
 
 # 實體端點（配置檔案訪問）
 
-Adobe Experience Platform可讓您使用REST風格的API或使用者介面存取即時客戶個人檔案資料。 本指南概述如何使用API存取實體（通常稱為「設定檔」）。 有關使用平台UI存取設定檔的詳細資訊，請參閱「設定檔使 [用指南」](../ui/user-guide.md)。
+Adobe Experience Platform可讓您使用REST風格的API [!DNL Real-time Customer Profile] 或使用者介面存取資料。 本指南概述如何使用API存取實體（通常稱為「設定檔」）。 有關使用UI存取設定檔的詳細資 [!DNL Platform] 訊，請參閱「設定檔使 [用指南」](../ui/user-guide.md)。
 
 ## 快速入門
 
-本指南中使用的API端點是即時客戶 [設定檔API的一部分](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml)。 在繼續之前，請先閱讀快速入門手冊 [](getting-started.md) ，以取得相關檔案的連結、閱讀本檔案中範例API呼叫的指南，以及成功呼叫任何Experience Platform API所需之必要標題的重要資訊。
+本指南中使用的API端點是的一部分 [!DNL Real-time Customer Profile API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml)。 在繼續之前，請先閱讀快速入門 [指南](getting-started.md) ，以取得相關檔案的連結、閱讀本檔案中範例API呼叫的指南，以及成功呼叫任何 [!DNL Experience Platform] API所需之必要標題的重要資訊。
 
 ## 依身分存取個人檔案資料
 
-通過向端點發出GET請求並以一系列查詢參數 `/access/entities` 的形式提供實體的標識，可以訪問Profile實體。 此身分由ID值(`entityId`)和身分命名空間(`entityIdNS`)組成。
+通過向端點 [!DNL Profile] 發出GET請求並提供實體的身份作為一 `/access/entities` 系列查詢參數，可以訪問實體。 此身分由ID值(`entityId`)和身分命名空間(`entityIdNS`)組成。
 
 請求路徑中提供的查詢參數指定要存取的資料。 您可以包含多個參數，以&amp;符號分隔。 附錄的查詢參數部分提供了有 [效參數](#query-parameters) 的完整清單。
 
@@ -774,7 +774,7 @@ curl -X POST \
 
 ## 訪問多個模式實體中的時間序列事件
 
-可以訪問通過關係描述符連接的多個實體。 下列範例API呼叫假設兩個結構之間已定義了關係。 有關關係描述符的詳細資訊，請閱讀《方案註冊表API開發人員指南》描述符 [端點指南](../../xdm/api/descriptors.md)。
+可以訪問通過關係描述符連接的多個實體。 下列範例API呼叫假設兩個結構之間已定義了關係。 有關關係描述符的詳細資訊，請閱讀 [!DNL Schema Registry] API開發人員指南描述 [符端點指南](../../xdm/api/descriptors.md)。
 
 您可以在請求路徑中包含查詢參數，以指定要存取的資料。 您可以包含多個參數，以&amp;符號分隔。 附錄的查詢參數部分提供了有 [效參數](#query-parameters) 的完整清單。
 
@@ -884,11 +884,11 @@ curl -X GET \
 
 ## 後續步驟
 
-按照本指南，您成功訪問了「即時客戶概要檔案」資料欄位、概要檔案和時間系列資料。 如要瞭解如何存取儲存在平台中的其他資料資源，請參閱資 [料存取概觀](../../data-access/home.md)。
+按照本指南，您成功訪問了 [!DNL Real-time Customer Profile] 資料欄位、配置檔案和時間系列資料。 要瞭解如何訪問儲存在中的其他資料資 [!DNL Platform]源，請參 [閱資料存取概述](../../data-access/home.md)。
 
 ## 附錄 {#appendix}
 
-下節提供有關使用API存取描述檔資料的補充資訊。
+下節提供有關使用API存取資 [!DNL Profile] 料的補充資訊。
 
 ### 查詢參數 {#query-parameters}
 
