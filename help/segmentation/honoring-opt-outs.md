@@ -4,38 +4,39 @@ solution: Experience Platform
 title: 支援退出
 topic: overview
 translation-type: tm+mt
-source-git-commit: 902ba5efbb5f18a2de826fffd023195d804309cc
+source-git-commit: f156679601c2ed0bb933a66a56661c29c1b9c778
+workflow-type: tm+mt
+source-wordcount: '954'
+ht-degree: 0%
 
 ---
 
 
 # 允許區段中的退出請求
 
-Experience Platform可讓您的客戶在即時客戶個人檔案中傳送有關資料使用與儲存的退出要求。 這些選擇退出要求是加州消費者隱私法(CCPA)的一部分，該法案賦予加州居民存取和刪除個人資料的權利，並可得知他們的個人資料是否被出售或披露（以及向誰）。
+[!DNL Experience Platform] 可讓客戶針對資料的使用和儲存方式，傳送退出要求 [!DNL Real-time Customer Profile]。 這些選擇退出要求是 [!DNL California Consumer Privacy Act] (CCPA)的一部分。 CCPA讓加州居民有權存取和刪除個人資料，並知道他們的個人資料是出售還是披露（以及向誰）。
 
 當客戶選擇退出後，貴組織在產生行銷活動的觀眾時，請務必遵守這些選擇退出。 本檔案說明有關執行退出要求的重要詳細資訊。
 
 ## 快速入門
 
-履行退出要求需要瞭解所涉及的各種Adobe Experience Platform服務。 在處理選擇退出請求之前，請先檢閱下列服務的檔案：
+履行退出要求需要瞭解所涉及的各 [!DNL Adobe Experience Platform] 種服務。 在處理選擇退出請求之前，請先檢閱下列服務的檔案：
 
-- [即時客戶個人檔案](../profile/home.md):根據來自多個來源的匯整資料，即時提供統一的客戶個人檔案。
-- [Adobe Experience Platform細分服務](./home.md):可讓您從即時客戶個人檔案資料建立受眾細分。
-- [體驗資料模型(XDM)](../xdm/home.md):平台組織客戶體驗資料的標準化架構。
-- [Adobe Experience Platform隱私權服務](../privacy-service/home.md):協助組織自動遵守與平台內客戶資料相關的資料隱私權規定。 這些規定包括：
-   - 加州消費者隱私法(CCPA):加州居民的資料隱私權，包括存取和刪除個人資料以及得知個人資料是否被出售或披露（以及向誰）的權利。
-   - 通用資料保護規則(GDPR):歐盟成員國的資料隱私權，包括「存取權」和「被遺忘權」。
+- [!DNL Real-time Customer Profile](../profile/home.md): 根據來自多個來源的匯整資料，即時提供統一的客戶個人檔案。
+- [!DNL Adobe Experience Platform Segmentation Service](./home.md): 可讓您從資料建立受眾 [!DNL Real-time Customer Profile] 區段。
+- [!DNL Experience Data Model (XDM)](../xdm/home.md): 平台組織客戶體驗資料的標準化架構。
+- [!DNL Adobe Experience Platform Privacy Service](../privacy-service/home.md): 協助組織自動遵守與客戶資料相關的資料隱私權法規 [!DNL Platform]。
 
 ## 選擇退出混音
 
-為了滿足CCPA選擇退出請求，作為聯合模式一部分的方案之一必須包含必要的體驗資料模型(XDM)選擇退出欄位。 有兩種混音可用來將選擇退出欄位新增至結構，每種混音在下列各節中會有更詳細的說明：
+為了滿足CCPA選擇退出請求，作為聯合模式一部分的其中一個方案必須包含必要的 [!DNL Experience Data Model] (XDM)選擇退出欄位。 有兩種混音可用來將選擇退出欄位新增至結構，每種混音在下列各節中會有更詳細的說明：
 
-- [設定檔隱私權](#profile-privacy):用於擷取不同的退出類型（一般或銷售／共用）。
-- [描述檔偏好設定詳細資訊](#profile-preferences-details):用於擷取特定XDM頻道的退出要求。
+- [設定檔隱私權](#profile-privacy): 用於擷取不同的退出類型（一般或銷售／共用）。
+- [描述檔偏好設定詳細資訊](#profile-preferences-details): 用於擷取特定XDM頻道的退出要求。
 
 有關如何將混音新增至架構的逐步指示，請參閱下列XDM檔案中的「新增混音」一節：
-- [方案註冊表API教程](../xdm/api/getting-started.md)。:使用方案註冊表API構建方案。
-- [架構編輯器教程](../xdm/tutorials/create-schema-ui.md):使用平台使用者介面建立架構。
+- [方案註冊表API教程](../xdm/api/getting-started.md)。: 使用方案註冊表API構建方案。
+- [架構編輯器教程](../xdm/tutorials/create-schema-ui.md): 使用平台使用者介面建立架構。
 
 以下是使用者介面中新增至架構的退出混音範例影像：
 
@@ -43,29 +44,29 @@ Experience Platform可讓您的客戶在即時客戶個人檔案中傳送有關�
 
 以下各節將詳細說明每個混音的結構，以及它們對架構所貢獻的欄位說明。
 
-### 設定檔隱私權
+### [!DNL Profile Privacy]
 
-「設定檔隱私權混合」可讓您擷取客戶的兩種CCPA選擇退出要求：
+混 [!DNL Profile Privacy] 音可讓您擷取客戶的兩種CCPA退出要求：
 
 1. 一般退出
 2. 銷售／分享選擇退出
 
 ![](images/opt-outs/profile-privacy.png)
 
-「描述檔隱私權」混合包含下列欄位：
+混 [!DNL Profile Privacy] 音包含下列欄位：
 
-- 隱私權退出(`privacyOptOuts`):包含退出對象清單的陣列。
-- 退出類型(`optOutType`):選擇退出的類型。 此欄位是具有兩個可能值的列舉：
+- 隱私權退出(`privacyOptOuts`): 包含退出對象清單的陣列。
+- 退出類型(`optOutType`): 選擇退出的類型。 此欄位是具有兩個可能值的列舉：
    - 一般退出(`general_opt_out`)
    - 銷售分享選擇退出(`sales_sharing_opt_out`)
-- 退出值(`optOutValue`):根據指定的退出類型，退出的活動狀態也稱為退出信號的值。 此欄位是包含四個可能值的列舉：
-   - 未提供(`not_provided`):未提供選擇退出要求。
-   - 待定驗證(`pending`):選擇退出請求正在等待驗證。
-   - 退出(`out`):客戶已選擇退出。
-   - 選擇加入(`in`):客戶已選擇加入。
-- 退出時間戳記(`timestamp`):接收的選擇退出信號的時間戳。
+- 退出值(`optOutValue`): 根據指定的退出類型，退出的活動狀態也稱為退出信號的值。 此欄位是包含四個可能值的列舉：
+   - 未提供(`not_provided`): 未提供選擇退出要求。
+   - 待定驗證(`pending`): 選擇退出請求正在等待驗證。
+   - 退出(`out`): 客戶已選擇退出。
+   - 選擇加入(`in`): 客戶已選擇加入。
+- 退出時間戳記(`timestamp`): 接收的選擇退出信號的時間戳。
 
-若要檢視描述檔隱私權混合檔的完整結構，請參閱 [XDM公用GitHub存放庫](https://github.com/adobe/xdm/blob/master/schemas/context/profile-privacy.schema.json) ，或使用平台UI預覽混合檔。
+若要檢視混音的完整 [!DNL Profile Privacy] 結構，請參閱 [XDM公用GitHub存放庫](https://github.com/adobe/xdm/blob/master/schemas/context/profile-privacy.schema.json) ，或使用Platform UI預覽混音。
 
 ### 描述檔偏好設定詳細資訊
 
@@ -75,12 +76,12 @@ Experience Platform可讓您的客戶在即時客戶個人檔案中傳送有關�
 
 「描述檔偏好設定詳細資料」混合包含下列與退出相關的欄位：
 
-- OptInOut(`optInOut`):其中每個密鑰代表通信通道的有效和已知URI的對象，以及每個通道的退出的活動狀態。 每個渠道可能有四個可能值之一：
-   - 未提供(`not_provided`):此渠道未提供選擇退出請求。
-   - 待定驗證(`pending`):此頻道的退出要求正在待覈實。
-   - 退出(`out`):客戶已選擇退出此渠道。
-   - 選擇加入(`in`):客戶已選擇加入此通道。
-- 全域退出(`globalOptout`):布爾值，當設定為true時，會為配置檔案設定全局退出覆蓋。 此欄位的預設值為false。
+- OptInOut(`optInOut`): 其中每個密鑰代表通信通道的有效和已知URI的對象，以及每個通道的退出的活動狀態。 每個渠道可能有四個可能值之一：
+   - 未提供(`not_provided`): 此渠道未提供選擇退出請求。
+   - 待定驗證(`pending`): 此頻道的退出要求正在待覈實。
+   - 退出(`out`): 客戶已選擇退出此渠道。
+   - 選擇加入(`in`): 客戶已選擇加入此通道。
+- 全域退出(`globalOptout`): 布爾值，當設定為true時，會為配置檔案設定全局退出覆蓋。 此欄位的預設值為false。
 
 以下範例JSON反白顯示OptInOut物件如何針對不同的通訊管道擷取多個退出訊號：
 
@@ -98,7 +99,7 @@ Experience Platform可讓您的客戶在即時客戶個人檔案中傳送有關�
 }
 ```
 
-若要檢視「描述檔偏好設定詳細資料」混合檔的完整結構，請造訪 [XDM公用GitHub存放庫](https://github.com/adobe/xdm/blob/master/schemas/context/profile-preferences-details.schema.json) ，或使用平台UI預覽混合檔。
+若要檢視「描述檔偏好設定詳細資料」混合檔的完整結構，請造訪 [XDM公用GitHub存放庫](https://github.com/adobe/xdm/blob/master/schemas/context/profile-preferences-details.schema.json) ，或使用 [!DNL Platform] UI預覽混合檔。
 
 ## 處理區段中的退出選項
 
@@ -110,15 +111,15 @@ Experience Platform可讓您的客戶在即時客戶個人檔案中傳送有關�
 
 ### 一般退出
 
-區段會自動接受包含「一般退出」標幟的所有設定檔，這表示這些設定檔預設不會包含在觀眾或匯出中。 但是，最佳做法是新增適當欄位，以確保觀眾和行銷活動中不包含選擇退出的設定檔。
+[!DNL Segmentation] 自動接受包含「一般退出[!UICONTROL 」標幟的所有設定檔]，這表示這些設定檔預設不會包含在觀眾或匯出中。 但是，最佳做法是新增適當欄位，以確保觀眾和行銷活動中不包含選擇退出的設定檔。
 
-您可使用「區段產生器」使用者介面新增「隱私權退 **出」屬性** 。 在此例中，區段設定為僅包含已選擇加入的群體（這表示他們的描述檔上沒有一般選擇退出標幟）。 這是透過宣告「選擇退出類型」等於「一般選擇退出」，而「選擇退出值」等於「選擇加入」來完成的。
+這可以透過新增隱私權退出屬性， **[!UICONTROL 使用使用者介面來完成]** 。 在此例中，區段設為僅包含已選擇加入的群體（這表示他們的描述檔上沒有一般的選擇退出標幟）。 這是透過宣告「退出類型[!UICONTROL 」等於「]General Opt-Out[!UICONTROL 」，而「]Opt-Out Value[!UICONTROL 」等於「Opt-inPot-Opt-Ot-Ont]」來完成的。
 
 ![](images/opt-outs/segment-general-opt-out.png)
 
 ### 銷售／分享選擇退出
 
-如果使用者的描述檔已設定銷售／分享選擇退出標幟，此描述檔不應再用於任何區段建立或行銷活動。 為確保符合此標幟，「選擇退出類型」必須等於「銷售分享選擇退出」，而「選擇退出值」必須等於「選擇加入」。
+如果使用者的描述檔已設定銷售／分享選擇退出標幟，此描述檔不應再用於任何區段建立或行銷活動。 為確保符合此標幟，「選擇退出類型[!UICONTROL 」必須等於「]Sales Sharing Opt-Out[!UICONTROL 」，而「]Opt-Out Value[!UICONTROL 」必須等於「Opt-In Opt-Opt]」。
 
 ![](images/opt-outs/segment-sales-sharing-opt-out.png)
 
@@ -130,4 +131,4 @@ In some instances, such as building a segment of people who have opted out, it m
 
 如需細分的詳細資訊，包括透過API和使用者介面使用細分定義和觀眾，請先閱讀細分概 [述](./home.md)。
 
-若要進一步瞭解平台中的資料隱私權，包括隱私權服務如何協助促進自動遵守法律和組織隱私權法規，請參閱隱私權 [服務檔案](../privacy-service/home.md)。
+若要進一步瞭解內部的資料 [!DNL Platform]隱私，包括如 [!DNL Privacy Service] 何協助協助自動符合法律和組織隱私權規定，請參閱相關檔案 [!DNL Privacy Service](../privacy-service/home.md)。
