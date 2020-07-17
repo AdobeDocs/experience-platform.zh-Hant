@@ -4,9 +4,9 @@ solution: Adobe Experience Platform
 title: Edge預測——即時客戶個人檔案API
 topic: guide
 translation-type: tm+mt
-source-git-commit: d1656635b6d082ce99f1df4e175d8dd69a63a43a
+source-git-commit: f910351d49de9c4a18a444b99b7f102f4ce3ed5b
 workflow-type: tm+mt
-source-wordcount: '1919'
+source-wordcount: '1900'
 ht-degree: 2%
 
 ---
@@ -14,11 +14,11 @@ ht-degree: 2%
 
 # 邊緣投影配置和目標端點
 
-為即時跨多個通道為客戶提供協調、一致且個人化的體驗，需要隨時提供適當的資料，並在變更時持續更新。 Adobe Experience Platform可讓您透過使用所謂的邊緣，即時存取資料。 邊緣是地理位置優越的伺服器，可儲存資料，讓應用程式可輕鬆存取。 例如，Adobe Target和Adobe Campaign等Adobe應用程式會利用優勢，即時提供個人化客戶體驗。 資料通過投影被路由到邊，投影目的地定義資料要發送到的邊，投影配置定義將在邊上提供的特定資訊。 本指南提供使用即時客戶描述檔API來處理邊緣預測的詳細指示，包括目標和設定。
+為即時跨多個通道為客戶提供協調、一致且個人化的體驗，需要隨時提供適當的資料，並在變更時持續更新。 Adobe Experience Platform可讓您透過使用所謂的邊緣，即時存取資料。 邊緣是地理位置優越的伺服器，可儲存資料，讓應用程式可輕鬆存取。 例如，Adobe Target和Adobe Campaign等Adobe應用程式會利用優勢，即時提供個人化客戶體驗。 資料通過投影被路由到邊，投影目的地定義資料要發送到的邊，投影配置定義將在邊上提供的特定資訊。 本指南提供使用 [!DNL Real-time Customer Profile] API處理邊緣投影的詳細指示，包括目標和設定。
 
 ## 快速入門
 
-本指南中使用的API端點是即時客戶 [設定檔API的一部分](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml)。 在繼續之前，請先閱讀快速入門手冊 [](getting-started.md) ，以取得相關檔案的連結、閱讀本檔案中範例API呼叫的指南，以及成功呼叫任何Experience Platform API所需之必要標題的重要資訊。
+本指南中使用的API端點是的一部分 [!DNL Real-time Customer Profile API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml)。 在繼續之前，請先閱讀快速入門 [指南](getting-started.md) ，以取得相關檔案的連結、閱讀本檔案中範例API呼叫的指南，以及成功呼叫任何 [!DNL Experience Platform] API所需之必要標題的重要資訊。
 
 >[!NOTE]
 >包含裝載(POST、PUT、PATCH)的請求需要標 `Content-Type` 頭。 本文檔中 `Content-Type` 使用了多個。 請特別注意範例呼叫中的標題，以確保您對每個請求都使 `Content-Type` 用正確。
@@ -224,7 +224,7 @@ curl -X GET \
 
 ### 更新目標
 
-通過向端點發出PUT請求並在請求路 `/config/destinations` 徑中包括要更新的目標的ID，可以更新現有目標。 此操作實質上 _是重寫目標_ ，因此，在建立新目標時，必須在請求主體中提供與建立新目標相同的屬性。
+通過向端點發出PUT請求並在請求路 `/config/destinations` 徑中包括要更新的目標的ID，可以更新現有目標。 此操作實質上是 _重寫目標_ ，因此，在建立新目標時，必須在請求主體中提供與建立新目標相同的屬性。
 
 >[!CAUTION]
 >API對更新請求的回應是立即的，不過，對預測的變更會以非同步方式套用。 換言之，對目標的定義進行更新和應用更新之間存在時間差。
@@ -325,7 +325,7 @@ curl -X DELETE \
 
 ## 投影配置
 
-投影配置提供了有關每個邊緣上應提供哪些資料的資訊。 投影不會將完整的體驗資料模型(XDM)架構投影到邊緣，而只提供架構中的特定資料或欄位。 您的組織可以為每個XDM架構定義多個投影配置。
+投影配置提供了有關每個邊緣上應提供哪些資料的資訊。 投影不會將完 [!DNL Experience Data Model] 整(XDM)架構投影到邊緣，而只提供架構中的特定資料或欄位。 您的組織可以為每個XDM架構定義多個投影配置。
 
 ### 列出所有投影配置
 
@@ -349,7 +349,7 @@ GET /config/projections?schemaName={SCHEMA_NAME}&name={PROJECTION_NAME}
 
 **請求**
 
-下列請求會列出與「體驗資料模型」架構類別XDM個別描述檔相關的所有投影設定。 有關XDM及其在平台中的角色的更多資訊，請從閱讀 [XDM系統概述開始](../../xdm/home.md)。
+以下請求列出與方案類關聯的所 [!DNL Experience Data Model] 有投影配置 [!DNL XDM Individual Profile]。 有關XDM及其在中的角色的更 [!DNL Platform]多資訊，請從閱讀 [XDM系統概述開始](../../xdm/home.md)。
 
 ```shell
 curl -X GET \
