@@ -1,30 +1,28 @@
 ---
 keywords: Experience Platform;segmentation;segmentation service;troubleshooting;API;seg;
 solution: Adobe Experience Platform
-title: 區段API開發人員指南
+title: 區段搜尋端點指南
 topic: guide
 translation-type: tm+mt
-source-git-commit: f489e9f9dfc9c7e94f76a6825e7ca24c41ee8a66
+source-git-commit: 41a5d816f9dc6e7c26141ff5e9173b1b5631d75e
 workflow-type: tm+mt
-source-wordcount: '1172'
+source-wordcount: '1141'
 ht-degree: 2%
 
 ---
 
 
-# 區段搜尋
+# 區段搜尋端點指南
 
-「區段搜尋」可用來搜尋並索引各種資料來源所包含的可設定欄位，並近乎即時地傳回這些欄位。
+「區段搜尋」可用來搜尋各種資料來源所包含的欄位，並幾乎即時傳回這些欄位。
 
 本指南提供相關資訊，以協助您進一步瞭解區段搜尋，並包含使用API執行基本動作的範例API呼叫。
 
 ## 快速入門
 
-本指南中使用的API端點是區段API的一部分。 在繼續之前，請先閱讀區 [段開發人員指南](getting-started.md)。
+本指南中使用的端點是 [!DNL Adobe Experience Platform Segmentation Service] API的一部分。 在繼續之前，請先檢閱 [快速入門手冊](./getting-started.md) ，以取得成功呼叫API所需的重要資訊，包括必要的標題和如何讀取範例API呼叫。
 
-尤其是，區 [段開發人員指南的](getting-started.md) 「快速入門」區段包含相關主題的連結、閱讀本檔案中範例API呼叫的指南，以及成功呼叫Experience Platform API所需之必要標題的重要資訊。
-
-除了快速入門區段中概述的必要標題外，對「區段搜尋API」的所有請求都需要下列額外標題：
+除了快速入門區段中概述的必要標題外，對「區段搜尋」端點的所有要求都需要下列額外標題：
 
 - x-ups-search-version: &quot;1.0&quot;
 
@@ -223,7 +221,7 @@ curl -X GET \
 
 ## 後續步驟
 
-閱讀本指南後，您現在可以更深入瞭解「區段搜尋」的運作方式。 如需劃分的詳細資訊，請閱讀劃分 [概觀](../home.md)。
+閱讀本指南後，您現在可以更深入瞭解「區段搜尋」的運作方式。
 
 ## 附錄 {#appendix}
 
