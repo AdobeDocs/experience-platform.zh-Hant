@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 對受眾細分強制執行資料使用規範
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: cb6a2f91eb6c18835bd9542e5b66af4682227491
 workflow-type: tm+mt
-source-wordcount: '1372'
+source-wordcount: '1325'
 ht-degree: 1%
 
 ---
@@ -14,42 +14,42 @@ ht-degree: 1%
 
 # 使用API強制觀眾區隔的資料使用符合性
 
-本教學課程涵蓋使用API強制「即時客戶個人檔案」受眾細分資料使用合規性的步驟。
+本教學課程涵蓋使用API強制觀眾區段資料使用 [!DNL Real-time Customer Profile] 符合性的步驟。
 
 ## 快速入門
 
-本教學課程需要對Adobe Experience Platform的下列元件有正確的認識：
+本教學課程需要有效瞭解下列元件 [!DNL Adobe Experience Platform]:
 
-- [即時客戶個人檔案](../../profile/home.md): 即時客戶描述檔是一般查閱實體儲存，用於管理平台內的體驗資料模型(XDM)資料。 描述檔會合併各種企業資料資產的資料，並以統一的簡報來存取該資料。
-   - [合併策略](../../profile/api/merge-policies.md): 「即時客戶個人檔案」用來判斷哪些資料可在特定條件下合併為統一檢視的規則。 可以為「資料治理」目的配置合併策略。
-- [區段](../home.md): 即時客戶個人檔案如何將個人檔案存放區中包含的大量個人群組分割為具有類似特性且回應類似行銷策略的較小群組。
-- [資料治理](../../data-governance/home.md): Data Governance使用下列元件為資料使用標籤和強制實施(DULE)提供了基礎架構：
+- [!DNL Real-time Customer Profile](../../profile/home.md): [!DNL Real-time Customer Profile] 是一般查閱實體儲存區，用來管理 [!DNL Experience Data Model] (XDM)內的資料 [!DNL Platform]。 描述檔會合併各種企業資料資產的資料，並以統一的簡報來存取該資料。
+   - [合併策略](../../profile/api/merge-policies.md): 用於確定在 [!DNL Real-time Customer Profile] 特定條件下哪些資料可以合併到統一視圖中的規則。 可以為「資料治理」目的配置合併策略。
+- [!DNL Segmentation](../home.md): 如 [!DNL Real-time Customer Profile] 何將描述檔商店中的龐大個人群組分割為具有類似特性且回應類似行銷策略的較小群組。
+- [!DNL Data Governance](../../data-governance/home.md): [!DNL Data Governance] 使用以下元件為資料使用標籤和強制實施(DULE)提供基礎架構：
    - [資料使用標籤](../../data-governance/labels/user-guide.md): 標籤用來說明資料集和欄位，以處理其個別資料的敏感度等級為準。
    - [資料使用原則](../../data-governance/policies/overview.md): 指示允許針對依特定資料使用標籤分類之資料執行哪些行銷動作的設定。
    - [政策實施](../../data-governance/enforcement/overview.md): 允許您強制實施資料使用策略並防止構成違反策略的資料操作。
-- [沙盒](../../sandboxes/home.md): Experience Platform提供虛擬沙盒，可將單一Platform實例分割為不同的虛擬環境，以協助開發和發展數位體驗應用程式。
+- [沙盒](../../sandboxes/home.md): [!DNL Experience Platform] 提供虛擬沙盒，可將單一執行個體分 [!DNL Platform] 割為不同的虛擬環境，以協助開發和發展數位體驗應用程式。
 
-以下章節提供您必須知道的其他資訊，以便成功呼叫平台API。
+以下章節提供您必須知道的其他資訊，才能成功呼叫 [!DNL Platform] API。
 
 ### 讀取範例API呼叫
 
-本教學課程提供範例API呼叫，以示範如何設定請求的格式。 這些包括路徑、必要標題和正確格式化的請求負載。 也提供API回應中傳回的範例JSON。 如需範例API呼叫檔案中所用慣例的詳細資訊，請參閱「Experience Platform疑難排解指 [南」中有關如何讀取範例API呼叫的章節](../../landing/troubleshooting.md#how-do-i-format-an-api-request) 。
+本教學課程提供範例API呼叫，以示範如何設定請求的格式。 這些包括路徑、必要標題和正確格式化的請求負載。 也提供API回應中傳回的範例JSON。 如需範例API呼叫檔案中所用慣例的詳細資訊，請參閱疑難排解指 [南中有關如何讀取範例API呼叫的](../../landing/troubleshooting.md#how-do-i-format-an-api-request)[!DNL Experience Platform] 章節。
 
 ### 收集必要標題的值
 
-若要呼叫平台API，您必須先完成驗證教 [學課程](../../tutorials/authentication.md)。 完成驗證教學課程後，所有Experience Platform API呼叫中每個必要標題的值都會顯示在下方：
+若要呼叫API，您必 [!DNL Platform] 須先完成驗證教 [學課程](../../tutorials/authentication.md)。 完成驗證教學課程後，將提供所有 [!DNL Experience Platform] API呼叫中每個必要標題的值，如下所示：
 
 - 授權： 生產者 `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
-Experience Platform中的所有資源都隔離至特定的虛擬沙盒。 所有對平台API的請求都需要一個標題，該標題會指定要在中執行的操作的沙盒名稱：
+中的所有資 [!DNL Experience Platform] 源都與特定虛擬沙盒隔離。 對API的所 [!DNL Platform] 有請求都需要一個標題，該標題會指定要在中執行的操作的沙盒名稱：
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
->如需平台中沙盒的詳細資訊，請參閱沙盒 [概觀檔案](../../sandboxes/home.md)。
+>如需中沙盒的詳細資訊 [!DNL Platform]，請參閱沙 [盒概述檔案](../../sandboxes/home.md)。
 
 所有包含裝載(POST、PUT、PATCH)的請求都需要額外的標題：
 
@@ -57,9 +57,9 @@ Experience Platform中的所有資源都隔離至特定的虛擬沙盒。 所有
 
 ## 尋找區段定義的合併原則 {#merge-policy}
 
-此工作流程從存取已知觀眾區隔開始。 在即時客戶描述檔中啟用的區段在其區段定義中包含合併原則ID。 此合併策略包含有關哪些資料集要包含在段中的資訊，這些資料集又包含任何適用的資料使用標籤。
+此工作流程從存取已知觀眾區隔開始。 在中啟用的區段在其區 [!DNL Real-time Customer Profile] 段定義中包含合併原則ID。 此合併策略包含有關哪些資料集要包含在段中的資訊，這些資料集又包含任何適用的資料使用標籤。
 
-使用 [分段API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/segmentation.yaml)，您可以依其ID來尋找區段定義，以尋找其相關的合併原則。
+使用 [!DNL Segmentation] API，您可以依其ID來尋找區段定義，以尋找其關聯的合併原則。
 
 **API格式**
 
@@ -126,7 +126,7 @@ curl -X GET \
 
 ## 從合併策略中查找源資料集 {#datasets}
 
-合併策略包含有關其源資料集的資訊，而源資料集又包含資料使用標籤。 您可以在GET請求中提供合併原則ID給描述檔API，以查閱合併原則的詳細資訊。
+合併策略包含有關其源資料集的資訊，而源資料集又包含資料使用標籤。 您可以在GET請求中提供合併原則ID給 [!DNL Profile] API，以查閱合併原則的詳細資訊。 有關合併策略的詳細資訊，請參閱合 [並策略端點指南](../../profile/api/merge-policies.md)。
 
 **API格式**
 
@@ -375,7 +375,7 @@ curl -X POST \
 
 ### 匯出區段時限制特定資料欄位
 
-使用即時客戶描述檔API將區段匯出至資料集時，您可以使用參數來篩選匯出中包含的資 `fields` 料。 新增至此參數的任何資料欄位都會包含在匯出中，而所有其他資料欄位則會被排除。
+當使用 [!DNL Segmentation] API將區段匯出至資料集時，您可以使用參數來篩選匯出中包含的資 `fields` 料。 新增至此參數的任何資料欄位都會包含在匯出中，而所有其他資料欄位則會被排除。
 
 請考慮具有名為&quot;A&quot;、&quot;B&quot;和&quot;C&quot;的資料欄位的區段。 如果您只想匯出欄位&quot;C&quot;，則參 `fields` 數將僅包含欄位&quot;C&quot;。 執行此動作後，匯出區段時會排除欄位&quot;A&quot;和&quot;B&quot;。
 
@@ -383,4 +383,4 @@ curl -X POST \
 
 ## 後續步驟
 
-透過本教學課程，您已查找與觀眾區隔相關的資料使用標籤，並測試它們是否違反特定行銷動作的政策。 如需Experience Platform中資料治理的詳細資訊，請參閱資 [料治理概觀](../../data-governance/home.md)。
+透過本教學課程，您已查找與觀眾區隔相關的資料使用標籤，並測試它們是否違反特定行銷動作的政策。 有關中的詳 [!DNL Data Governance] 細信 [!DNL Experience Platform]息，請閱讀的概述 [!DNL Data Governance](../../data-governance/home.md)。
