@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Adobe Experience Platform概觀
 topic: getting started
 translation-type: tm+mt
-source-git-commit: b73bd7e163c2861c751b1b505894923f70c99755
+source-git-commit: 6c90e68bde1fb8474ba23127ecf7b6fd617c7765
 workflow-type: tm+mt
-source-wordcount: '755'
+source-wordcount: '747'
 ht-degree: 2%
 
 ---
@@ -22,7 +22,7 @@ Adobe Experience Platform是市面上功能最強大、最靈活、最開放的�
 
 以開放API為基礎， [!DNL Experience Platform] 將系統的完整功能公開給開發人員，支援使用熟悉工具輕鬆整合企業解決方案。 [!DNL Experience Platform] 也支援合作夥伴以視需要建立和整合其產品與技術。 這種強大的功能和靈活 [!DNL Experience Platform] 性讓市場獨一無二。 它為合作夥伴、客戶和開發人員社群提供基礎，以建立推動體驗業務的創新： 透過從客戶及其個人偏好的360度全方位檢視中不斷改善、完全個人化的體驗，超越客戶期望。
 
-以下視訊概述以Adobe Experience Platform建立的假設性體驗，從客戶的角度來看。 瞭解如 [!DNL Experience Platform] 何建立豐富、相關且即時的體驗。
+以下影片概述 [!DNL Experience Platform] 如何建立豐富、相關的即時體驗，首先從客戶的角度，然後從幕後技術的角度。
 
 **客戶觀點：**
 
@@ -86,7 +86,7 @@ Adobe Experience Platform檔案提供多種語言版本。 若要變更語言，
 
 ## 教學影片
 
-觀看 [教學課程](https://docs.adobe.com/content/help/zh-Hant/platform-learn/tutorials/overview.html) ，以瞭解各種 [!DNL Experience Platform] 主題。
+觀看 [教學課程](https://docs.adobe.com/content/help/en/platform-learn/tutorials/overview.html) ，以瞭解各種 [!DNL Experience Platform] 主題。
 
 如需使用者介面的快 [!DNL Experience Platform's] 速導覽，請觀看下列影片：
 
@@ -126,7 +126,7 @@ Adobe Experience Platform的主要優點之一，就是能夠與其他現有Adob
 
 >[!VIDEO](https://video.tv.adobe.com/v/32502?quality=12&learn=on)
 
-**使用個案:**
+**使用案例:**
 
 >[!VIDEO](https://video.tv.adobe.com/v/32806?quality=12&learn=on)
 
