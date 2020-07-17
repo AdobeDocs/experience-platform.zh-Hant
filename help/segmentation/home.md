@@ -4,21 +4,21 @@ solution: Experience Platform
 title: Adobe Experience Platform細分服務
 topic: overview
 translation-type: tm+mt
-source-git-commit: 1c9b50f8f71e917b86c34b061df7e2da6fe475a2
+source-git-commit: f44e42a4faa3b10f147dbaf929048054ce0bec42
 workflow-type: tm+mt
-source-wordcount: '2408'
+source-wordcount: '1986'
 ht-degree: 0%
 
 ---
 
 
-# 區段服務概觀
+# Adobe Experience Platform細分服務概觀
 
-Adobe Experience Platform Segmentation Service提供使用者介面和REST風格的API，可讓您建立細分並從即時客戶個人檔案資料產生受眾。 這些區段是在Platform上集中設定和維護的，任何Adobe解決方案都可輕鬆存取。
+Adobe Experience Platform Segmentation Service提供使用者介面和REST風格的API，可讓您建立細分並從資料中產生受 [!DNL Real-time Customer Profile] 眾。 這些區段是在Platform上集中設定和維護的，任何Adobe解決方案都可輕鬆存取。
 
-本檔案概述區段服務及其在Adobe Experience Platform中所扮演的角色。
+本檔案概述其在Adobe [!DNL Segmentation Service] Experience Platform中所扮演的角色。
 
-## 區段服務快速入門
+## Getting started with [!DNL Segmentation Service]
 
 請務必瞭解本檔案中使用的下列主要術語：
 
@@ -30,25 +30,25 @@ Adobe Experience Platform Segmentation Service提供使用者介面和REST風格
 
 區段是定義描述檔商店中描述檔子集所共用的特定屬性或行為，以區分適銷人員群組和客戶群的程式。 例如，在名為「您忘記購買運動鞋嗎？」的電子郵件促銷活動中，您可能希望擁有在過去30天內搜尋跑鞋但未完成購買的所有使用者的觀眾。
 
-在概念上定義區段後，就會在Experience Platform中建立區段。 通常，區段是由行銷人員或受眾專員建立，但有些組織希望由行銷部門與資料分析人員共同建立。 在檢視傳送至平台的資料時，資料分析人員會選擇將用來建立區段規則或條件的欄位和值，以建立區段定義。 這是使用UI或API來完成的。
+在概念上定義區段後，就會內建區段 [!DNL Experience Platform]。 通常，區段是由行銷人員或受眾專員建立，但有些組織希望由行銷部門與資料分析人員共同建立。 在檢視要傳送至的資料時 [!DNL Platform]，資料分析人員會選擇將用來建立區段規則或條件的欄位和值，以建立區段定義。 這是使用UI或API來完成的。
 
 ## 建立區段
 
-無論是使用API建立還是使用「區段產生器」，區段最終都是使用描述檔查詢語言(PQL)來定義。 在此處，概念區段定義會以擷取符合標準的描述檔所建立的語言加以說明。 有關詳細資訊，請參 [見PQL概述](./pql/overview.md)。
+無論是使用API建立還是使用， [!DNL Segment Builder]區段最終都會使用( [!DNL Profile Query Language] PQL)定義。 在此處，概念區段定義會以擷取符合標準的描述檔所建立的語言加以說明。 有關詳細資訊，請參 [見PQL概述](./pql/overview.md)。
 
-若要瞭解如何在區段產生器（區段服務的UI實作）中建立和使用區段，請參閱區段產生 [器指南](./ui/overview.md)。
+若要瞭解如何在（的UI實作）中建 [!DNL Segment Builder] 立和使用區段，請參 [!DNL Segmentation Service]閱區段產 [生器指南](./ui/overview.md)。
 
 如需使用API建立區段定義的詳細資訊，請參閱使用API [建立觀眾區段的教學課程](./tutorials/create-a-segment.md)。
 
 >[!NOTE]
 >
->在模式被擴展時，所有以後的上載都必須相應地更新新添加的欄位。 如需自訂Experience Data Model(XDM)的詳細資訊，請造訪架構編輯 [器教學課程](../xdm/tutorials/create-schema-ui.md)。
+>在模式被擴展時，所有以後的上載都必須相應地更新新添加的欄位。 如需自訂(XDM)的 [!DNL Experience Data Model] 詳細資訊，請造訪 [架構編輯器教學課程](../xdm/tutorials/create-schema-ui.md)。
 
 ## 評估區段
 
 ### 串流區段
 
-串流區段是持續不斷的資料選擇程式，可因應使用者活動而更新區段。 建立並儲存區段後，區段定義會套用至即時客戶描述檔的傳入資料。 區段新增和移除作業會定期處理，確保目標受眾保持相關性。
+串流區段是持續不斷的資料選擇程式，可因應使用者活動而更新區段。 建立並儲存區段後，區段定義會套用至的傳入資料 [!DNL Real-time Customer Profile]。 區段新增和移除作業會定期處理，確保目標受眾保持相關性。
 
 若要進一步瞭解串流區段，請閱讀串流 [區段檔案](./api/streaming-segmentation.md)。
 
@@ -66,11 +66,11 @@ Adobe Experience Platform Segmentation Service提供使用者介面和REST風格
 
 區段中繼資料可協助您在任何區段重複使用及／或組合時建立索引。
 
-合成區段（透過API或區段產生器）需要您定義區段名稱並合併原則。
+合成區段(透過API或 [!DNL Segment Builder])需要您定義區段名稱並合併原則。
 
 ### 區段名稱
 
-建立新區段時，您必須提供區段名稱。 區段名稱用於識別區段服務所建立之系列中的特定區段。 因此，區段名稱應具有說明性、簡明和獨特性。
+建立新區段時，您必須提供區段名稱。 區段名稱可用來識別由建立之系列中的特定區段 [!DNL Segmentation Service]。 因此，區段名稱應具有說明性、簡明和獨特性。
 
 >[!NOTE]
 >
@@ -78,8 +78,10 @@ Adobe Experience Platform Segmentation Service提供使用者介面和REST風格
 
 ### 合併原則
 
-合併策略是描述檔使用的規則，可決定在特定條件下如何將資料排定優先順序並合併為統一檢視。
-如果未定義合併策略，則使用預設的平台合併策略。 如果您想要使用組織專屬的合併原則，可以建立自己的合併原則，並將其標示為組織的預設值。
+合併策略是用於確定在 [!DNL Profile] 特定條件下如何將資料按優先順序排列並合併為統一視圖的規則。
+如果未定義合併策略，則使用默 [!DNL Platform] 認的合併策略。 如果您想要使用組織專屬的合併原則，可以建立自己的合併原則，並將其標示為組織的預設值。
+
+有關合併策略的詳細資訊，請參閱合 [並策略指南](../profile/api/merge-policies.md)。
 
 >[!NOTE]
 >
@@ -87,7 +89,7 @@ Adobe Experience Platform Segmentation Service提供使用者介面和REST風格
 
 ### 其他區段中繼資料
 
-除了區段名稱和合併原則外，「區段產生器」還提供額外的「區段說明」中繼資料欄位，供您概述區段定義的用途。
+除了區段名稱和合併原則外， [!DNL Segment Builder] 還提供您額外的「區段說明」中繼資料欄位，您可在此欄位摘要區段定義的用途。
 
 ## 進階細分功能
 
@@ -100,7 +102,7 @@ Adobe Experience Platform Segmentation Service提供使用者介面和REST風格
 
 ## 循序分段 {#sequential}
 
-標準的使用者歷程在本質上是循序的。  Adobe Experience Platform可讓您定義一系列有序的細分，以反映此歷程，從而在事件發生時捕捉事件序列。 您可以使用區段產生器中的視覺化事件時間軸，依所需順序排列事件。
+標準的使用者歷程在本質上是循序的。 Adobe Experience Platform可讓您定義一系列有序的細分，以反映此歷程，從而在事件發生時捕捉事件序列。 您可以使用中的視覺化事件時間軸，依所需順序排列事件 [!DNL Segment Builder]。
 
 需要循序劃分的客戶歷程範例包括產品檢視>產品新增>結帳>無購買。
 
@@ -152,7 +154,7 @@ Adobe Experience Platform Segmentation Service提供使用者介面和REST風格
 >
 >在此範例中，我們假設資料架構師已建立ID命名空間。
 
-使用API，資料架構師會將ExperienceEvent架構的金鑰與「產品」類別建立關聯。 如此，資料架構師就可使用「產品」類別中的其他欄位，就像這些欄位是ExperienceEvent架構的原生欄位一樣。 作為配置工作的最後一步，資料架構師需要將適當的資料引入即時客戶配置檔案中。 若要這麼做，請啟用「產品」資料集以搭配「設定檔」使用。 在設定工作完成後，資料架構人員或行銷人員都可以在「區段產生器」中建立目標區段。
+使用API，資料架構師會將ExperienceEvent架構的金鑰與「產品」類別建立關聯。 如此，資料架構師就可使用「產品」類別中的其他欄位，就像這些欄位是ExperienceEvent架構的原生欄位一樣。 作為配置工作的最後一步，資料架構師需要將適當的資料引入配置工作中 [!DNL Real-time Customer Profile]。 若要這麼做，請啟用「產品」資料集以搭配使用 [!DNL Profile]。 在設定工作完成後，資料架構人員或行銷人員都可在中建立目標區段 [!DNL Segment Builder]。
 
 請參閱 [架構構成概述](../xdm/schema/composition.md#union) ，瞭解如何定義跨XDM類的關係。
 
@@ -194,58 +196,10 @@ Adding this specific data to the segment itself allows execution engines to pers
 
 行銷人員面臨的另一個傳統挑戰，是建立廣告以重新鎖定已放棄購物車項目的客戶。 雖然區段定義可解決此項挑戰，但在增強功能之前，並沒有正式的方法來區分購買的產品與放棄的產品。 現在，您可以在區段定義期間鎖定特定資料集。
 
-## 區段服務資料類型
+## [!DNL Segmentation Service] 資料類型
 
-區段服務支援所有XDM資料類型。 構成區段定義的規則會依下列資料類型來情境化。
+[!DNL Segmentation Service] 支援多種資料類型，包括：
 
-### 字串資料
-
-區段定義使用字串資料來定義區段對象的非數值限制，例如「國家／地區名稱」或「忠誠度方案層級」。
-
-字串資料會使用邏輯、包含／排除和比較陳述式包含在區段定義中。 在將字串屬性新增至區段定義後，您就可以使用字串相關陳述式，針對其他字串欄位來評估。
-
-| 語句類型 | 範例 |
-| -------------- | -------- |
-| 邏輯 | 和，或，不是 |
-| 包含／排除 | 包含，必須存在，排除，不可存在 |
-| 比較 | 等於，不等於，包含，開頭為 |
-
-
-### 日期資料
-
-日期資料可讓您使用特定的開始／結束日期或使用與日期相關的陳述式，將時間相關的內容指派給區段定義。 其中一項實作可能是為今年任何時間與您品牌互動且在過 *去幾天內也**活躍的客* 戶建立觀眾。
-
-| 範例欄位 | 與日期相關的聲明 | 時間表 |
-| ------------- | ------------------------ | --------- |
-| person.firstPurchase | 今天，昨天，這個月，今年 | 與區段建立當日相關。 |
-| person.lastPurchase | in last, whire, before, after, within | 在任何指定的周／月內相關。 |
-
-### 體驗事件
-
-XDM ExperienceEvents以Adobe Experience Platform架構記錄客戶與平台整合應用程式的明確和隱含互動，包括互動發生時系統的快照。 ExperienceEvents是事實記錄。 因此，它們是區段定義期間可供您使用的資料來源。
-
-如下表所示，事件資料會使用有助於調整事件行為並指定事件屬性的關鍵字來呈現。
-
-| 關鍵字 | 使用 |
-| ------- | --- |
-| 包含／排除 | 說明事件透過包含或遺漏資料的行為。 |
-| 任何／所有 | 協助判斷符合資格的區段數。 |
-| 「套用時間規則」切換按鈕 | 整合日期資料。 |
-| 等於、不等於、開頭為、不開頭為、結尾為、不結尾為、包含、不包含、存在、不存在 | 整合字串資料。 |
-
-### 區段
-
-現有區段定義也可用作新區段定義的元件，並新增其屬性和事件型規則至新區段。
-
-### 受眾
-
-外部對象也可以用作新區段定義的元件，將其屬性規則新增至新區段。
-
-目前，只有Adobe Audience Manager才受支援。 未來將啟用其他來源。
-
-### 其他資料類型
-
-除了上述內容外，支援的資料類型清單還包括：
 - 字串
 - 統一資源標識符
 - Enum
@@ -262,11 +216,13 @@ XDM ExperienceEvents以Adobe Experience Platform架構記錄客戶與平台整�
 - 地圖
 - 事件
 
+有關這些受支援資料類型的詳細資訊，請參閱支援資 [料類型檔案](./data-types.md)。
+
 ## 後續步驟
 
-區段服務提供整合的工作流程，以從即時客戶個人檔案資料建立區段。 總之：
+[!DNL Segmentation Service] 提供整合的工作流程，從資料建立區 [!DNL Real-time Customer Profile] 段。 總之：
 
-- 分段是從描述檔商店定義描述檔子集的程式，可讓您描述所要有價群組的行為或屬性。 區段服務可讓此程式成為可能。
+- [!DNL Segmentation] 是從描述檔商店定義描述檔子集的程式，可讓您描述所需有價群組的行為或屬性。 [!DNL Segmentation Service] 使這個過程成為可能。
 - 規劃區段時，請記住，區段可從任何其他區段參考，並與之結合。
 - 您可以根據描述檔資料、相關時間系列資料或兩者，從規則建立區段。
 - 區段可依需求或持續評估。 在隨選評估時，所有描述檔資料都會一次傳遞至區段定義。 持續評估時，資料串流會在進入平台時透過區段定義。
