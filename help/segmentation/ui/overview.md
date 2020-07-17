@@ -4,15 +4,15 @@ solution: Experience Platform
 title: 區段產生器UI指南
 topic: ui guide
 translation-type: tm+mt
-source-git-commit: 1c9b50f8f71e917b86c34b061df7e2da6fe475a2
+source-git-commit: f44e42a4faa3b10f147dbaf929048054ce0bec42
 workflow-type: tm+mt
-source-wordcount: '2766'
+source-wordcount: '2750'
 ht-degree: 0%
 
 ---
 
 
-# [!UICONTROL 區段產生器] 使用指南
+# [!DNL Segment Builder] 使用者指南
 
 [!DNL Adobe Experience Platform Segmentation Service] 提供REST風格的API和使用者介面，以從資料建立區段 [!DNL Real-time Customer Profile] 定義。
 
@@ -41,9 +41,9 @@ ht-degree: 0%
 
 ![](../images/segment-builder/segment-browse.png)
 
-## [!UICONTROL 區段產生器] 工作區
+## [!DNL Segment Builder] 工作區
 
-[!UICONTROL 區段產生器] (Segment Builder)提供多樣化工作區，可讓您與資料元素 [!DNL Profile] 互動。 工作區提供建立和編輯規則的直覺式控制項，例如用來表示資料屬性的拖放圖格。
+[!DNL Segment Builder] 提供多樣化工作區，讓您與資料元素 [!DNL Profile] 互動。 工作區提供建立和編輯規則的直覺式控制項，例如用來表示資料屬性的拖放圖格。
 
 ![](../images/segment-builder/segment-builder.png)
 
@@ -51,7 +51,7 @@ ht-degree: 0%
 
 區段定義的基本建置區塊是「屬 **[!UICONTROL 性]** 」和 **[!UICONTROL 「事件」]**。 此外，現有「觀眾」中包含的屬性和 **[!UICONTROL 事件]** ，也可當成新定義的元件。
 
-您可在「區段產生器」工作區 *左側的* 「欄位」區段中，看 [!UICONTROL 到這些建置區塊] 。 *[!UICONTROL 欄位]* (Fields)包含每個主要建置區塊的標籤： **[!UICONTROL 屬性]**、 **[!UICONTROL 事件]**&#x200B;和 **[!UICONTROL 觀眾]**。
+您可以在工作區左側的「欄 *[!UICONTROL 位]* 」區段中看到這些構 [!DNL Segment Builder] 建區塊。 *[!UICONTROL 欄位]* (Fields)包含每個主要建置區塊的標籤： **[!UICONTROL 屬性]**、 **[!UICONTROL 事件]**&#x200B;和 **[!UICONTROL 觀眾]**。
 
 ![](../images/segment-builder/segment-fields.png)
 
@@ -95,7 +95,7 @@ ht-degree: 0%
 
 ## 規則產生器畫布 {#rule-builder-canvas}
 
-區段定義是用於描述目標對象之主要特性或行為的規則集合。 這些規則是使用「區段產 *[!UICONTROL 生器」中心的規則產生器畫布]*&#x200B;建立的 。
+區段定義是用於描述目標對象之主要特性或行為的規則集合。 這些規則是使用位於中 *[!UICONTROL 心的規則產生器畫布]*&#x200B;來建立的 [!DNL Segment Builder]。
 
 若要將新規則新增至區段定義，請從「欄位」標籤拖曳圖格 ** ，並將其拖曳至規則產生器畫布。 然後，您會根據所新增資料的類型，看到內容特定的選項。 可用的資料類型包括： 字串、日期、 [!DNL ExperienceEvents]事件 [!UICONTROL 類型]和 [!UICONTROL 觀眾]。
 
@@ -105,7 +105,7 @@ ht-degree: 0%
 
 您可以從「對象」索引標籤將對象拖放至 *[!UICONTROL 規則產生器畫布上]* ，以參考新區段定義中的對象成員資格。 這可讓您在新區段規則中加入或排除對象成員資格作為屬性。
 
-對於 [!DNL Platform] 使用「區 [!UICONTROL 段產生器」建立的觀眾]，您可以選擇將觀眾轉換為用於該觀眾區段定義的規則集。 此轉換會建立規則邏輯的復本，然後可修改該邏輯，而不會影響原始區段定義。 在將區段定義轉換為規則邏輯之前，請確定您已儲存區段定義的任何最近變更。
+對於 [!DNL Platform] 使用建立 [!DNL Segment Builder]的觀眾，您可以選擇將觀眾轉換為用於該觀眾區段定義的規則集。 此轉換會建立規則邏輯的復本，然後可修改該邏輯，而不會影響原始區段定義。 在將區段定義轉換為規則邏輯之前，請確定您已儲存區段定義的任何最近變更。
 
 >[!NOTE]
 >
@@ -113,11 +113,11 @@ ht-degree: 0%
 
 ![](../images/segment-builder/add-audience-to-segment.png)
 
-如果在將觀眾轉換為規則時發生任何衝突， [!UICONTROL 「區段產生器] 」會嘗試將現有選項保留至其最佳能力。
+如果在將觀眾轉換為規則時發生任何 [!DNL Segment Builder] 衝突，將嘗試將現有選項保留至其最佳能力。
 
 ### 程式碼檢視
 
-或者，您也可以檢視在「區段產生器」中建立之規則的程式 [!UICONTROL 碼版本]。 在規則產生器畫布中建立規則後，您可以選取「程式碼檢視」 **** ，將區段視為PQL。
+或者，您也可以檢視在中建立之規則的程式碼型版本 [!DNL Segment Builder]。 在規則產生器畫布中建立規則後，您可以選取「程式碼檢視」 **** ，將區段視為PQL。
 
 ![](../images/segment-builder/code-view.png)
 
@@ -175,7 +175,7 @@ ht-degree: 0%
 
 建立區段定義後，您就可以透過隨選或排程（持續）評估來評估區段定義。 評估意指透過 [!DNL Real-time Customer Profile] 區段定義來移動資料，以產生對應的觀眾。 建立後，觀眾會儲存並儲存，以便使用API匯出 [!DNL Experience Platform] 觀眾。
 
-隨選評估包括視需要使用API來執行評估並建立觀眾，而排程評估（也稱為「排程區段」）可讓您建立循環性排程，以評估特定時間（最多每天一次）的區段定義。
+隨選評估包括視需要使用API來執行評估並建立觀眾，而排程評估（也稱為「排程區段」）可讓您建立循環排程，以評估特定時間（最多每天一次）的區段定義。
 
 您可使用UI或API來啟用計畫評估的區段定義。 在UI中，返回「區段」中的「 *[!UICONTROL 瀏覽]* 」標 **[!UICONTROL 簽]** ，並切換「 **[!UICONTROL 評估所有區段」]**。 這會導致根據您組織所設定的排程評估所有區段。
 
