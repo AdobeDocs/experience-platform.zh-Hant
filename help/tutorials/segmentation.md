@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 區段教學課程
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 5c5f6c4868e195aef76bacc0a1e5df3857647bde
+source-git-commit: ae244711ed89f4c7d6f87fd38bf7f8324e9b64be
 workflow-type: tm+mt
-source-wordcount: '538'
+source-wordcount: '540'
 ht-degree: 0%
 
 ---
@@ -26,7 +26,7 @@ Adobe Experience Platform提 [!DNL Segmentation Service] 供使用者介面和RE
 
 ## 匯出區段資料
 
-匯出包含資 [!DNL Profile] 料的區段 [時，必須先建立資料匯出至的資料集](../segmentation/tutorials/create-dataset-export-segment.md)，然後開始新的匯出工作。 有關產生匯出工作的步驟，請參閱匯出 [API教學課程](../segmentation/tutorials/export-data.md)。
+匯出包含資 [!DNL Profile] 料的區段 [時，必須先建立資料匯出至的資料集](../segmentation/tutorials/create-dataset-export-segment.md)，然後開始新的匯出工作。 有關產生匯出工作的步驟，請參閱評估區段 [的教學課程](../segmentation/tutorials/evaluate-a-segment.md)。
 
 ## 配置合併策略
 
