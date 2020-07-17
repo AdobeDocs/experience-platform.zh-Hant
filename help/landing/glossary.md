@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Adobe Experience Platform產品檔案
 topic: getting started
 translation-type: tm+mt
-source-git-commit: 2e5668a8b1d5fb831188fbd4e453b9f4aa7474df
+source-git-commit: f910351d49de9c4a18a444b99b7f102f4ce3ed5b
 workflow-type: tm+mt
-source-wordcount: '6594'
+source-wordcount: '6593'
 ht-degree: 0%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 0%
 
 **存取控制：** {#access-control} 透過Adobe Admin Console中 [!DNL Experience Platform] 的產品設定檔，將使用者連結至存取權限和沙盒環境的存取控制。
 
-**存取金鑰ID:** 存取金鑰ID是與Amazon S3機密存取金鑰關聯的唯一識別碼。 訪問密鑰ID和秘密訪問密鑰一起用於簽署AWS請求。
+**存取金鑰ID:** 存取金鑰ID是與 [!DNL Amazon] S3機密存取金鑰相關聯的唯一識別碼。 訪問密鑰ID和秘密訪問密鑰一起用於簽署AWS請求。
 
 **動作：** 在中， [!DNL Experience Platform Launch]動作是一種特定類型的規則元件，可定義事件發生後應發生的事件，並評估和傳遞條件。
 
@@ -100,7 +100,7 @@ ht-degree: 0%
 
 **連接：** 連線是虛擬管線，可讓資料進出 [!DNL Experience Platform]。 連線現在會由來源取代。
 
-**連接器：** Adobe Experience Platform Source連接器可協助使用者輕鬆從多個來源擷取資料，讓您使用來建構、標示和增強資料 [!DNL Experience Platform Services]。 資料可從多種來源擷取，例如雲端儲存空間、協力廠商軟體和CRM系統。
+**連接器：** Adobe Experience Platform Source連接器可協助使用者輕鬆從多個來源擷取資料，允許使用資料進行建構、加上標籤和增強 [!DNL Experience Platform Services]。 資料可從多種來源擷取，例如雲端儲存空間、協力廠商軟體和CRM系統。
 
 **條件：** 在Experience Platform Launch中，條件是一個規則元件，可評估必須傳回或的邏輯陳述 `true` 式 `false`。 所有條件都必須評估 `true` 為，所有例外條件必須評估為 `false` ，才能執行規則上的任何操作。
 
@@ -112,7 +112,7 @@ ht-degree: 0%
 
 **C2合同標籤：** `C2` 合約資料治理標籤會指定無法匯出至第三方的資料。 有些資料提供者在其合約中有條款禁止從原始收集位置匯出資料。  例如，社交網路合約通常會限制您從其接收到的資料傳輸。 C2的限制比C1更嚴格，因為C1隻需要聚合和匿名資料。
 
-**C3合同標籤：** `C3` 合約資料治理標籤指定無法結合或與直接可識別資訊搭配使用的資料。 有些資料提供者在其合約中有條款禁止將資料與直接可識別資訊合併或使用。  例如，源自廣告網路、廣告伺服器和第三方資料供應商的資料合約通常包含使用直接可識別資料的特定合約禁止。
+**C3合同標籤：** `C3` 合約資料治理標籤指定無法結合或與直接可識別資訊搭配使用的資料。 有些資料提供者在其合約中有條款禁止將資料與直接可識別資訊合併或使用。  例如，源自廣告網路、廣告伺服器和第三方資料供應商的資料合約通常包含使用直接可識別資料的特定合約禁止規定。
 
 **C4合同標籤：** `C4` 合約資料控管標籤指定資料無法用於定位任何廣告或內容，不論是在網站上或跨網站。 C4是最嚴格的標籤，因為它包含C5、C6和C7標籤。
 
