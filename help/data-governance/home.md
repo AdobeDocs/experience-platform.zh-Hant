@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Adobe Experience Platform資料治理
 topic: overview
 translation-type: tm+mt
-source-git-commit: 0534fe8dcc11741ddc74749d231e732163adf5b0
+source-git-commit: 53225525feb1878aae58939338c1a94f98ec1607
 workflow-type: tm+mt
-source-wordcount: '1406'
+source-wordcount: '1342'
 ht-degree: 0%
 
 ---
@@ -85,15 +85,6 @@ DULE框架包含預先定義的資料使用標籤，可用來以三種方式對�
 >預設會停用所有資料使用政策（包括Adobe提供的核心政策）。 要考慮實施單個策略，您必須手動啟用該策略。
 
 如需資料使用政策和行銷動作的詳細資訊，請參閱 [政策概觀](./policies/overview.md)。
-
-## 未來版本
-
-[!DNL Data Governance] 目前支援兩個層級（資料集和欄位）的DULE標籤。 [!DNL Data Governance] 也支援透過DULE [!DNL Policy Service] API建立和管理資料使用政策和行銷動作。
-
-後續版本將提供下列功能：
-
-* 政策實施： 使用策略框架來建議並強制不同資料存取模式的策略。
-* 審計： 監控資料存取活動，並識別並報告合規性問題。
 
 ## 後續步驟
 
