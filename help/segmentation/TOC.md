@@ -3,9 +3,9 @@ product: experience-platform
 audience: user
 user-guide-title: Adobe Experience Platform細分服務說明
 translation-type: tm+mt
-source-git-commit: 58781fb5622564b29cf250459a9149cf25672bfa
+source-git-commit: a1f80b86a1e761c15d567821b13c7533b7fcf622
 workflow-type: tm+mt
-source-wordcount: '102'
+source-wordcount: '103'
 ht-degree: 7%
 
 ---
@@ -14,6 +14,7 @@ ht-degree: 7%
 # Adobe Experience Platform細分服務說明 {#segmentation}
 
 - [概述](home.md)
+- [區段資料類型](data-types.md)
 - 區段API {#api}
    - [快速入門](api/getting-started.md)
    - [區段定義](api/segment-definitions.md)
@@ -40,7 +41,6 @@ ht-degree: 7%
 - 教學課程 {#tutorials}
    - [建立區段](tutorials/create-a-segment.md)
    - [評估區段](tutorials/evaluate-a-segment.md)
-   - [匯出資料](tutorials/export-data.md)
    - [建立資料集以匯出資料](tutorials/create-dataset-export-segment.md)
    - [強制區段的資料使用符合性](tutorials/governance.md)
 - [API 參考資料](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/segmentation.yaml)
