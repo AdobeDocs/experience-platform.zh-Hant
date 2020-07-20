@@ -4,7 +4,7 @@ solution: Adobe Experience Platform
 title: Adobe Experience Platform細分服務開發人員指南
 topic: guide
 translation-type: tm+mt
-source-git-commit: 41a5d816f9dc6e7c26141ff5e9173b1b5631d75e
+source-git-commit: aff81a4f3243ef77cbdfc776220a5de46e360084
 workflow-type: tm+mt
 source-wordcount: '469'
 ht-degree: 0%
@@ -16,7 +16,7 @@ ht-degree: 0%
 
 [!DNL Adobe Experience Platform Segmentation Service] 可讓您建立區段，並從資料中產 [!DNL Adobe Experience Platform] 生受 [!DNL Real-time Customer Profile] 眾。
 
-API提 [!DNL Segmentation Service] 供多個端點，可讓您以程式設計方式在中管理區段作業 [!DNL Experience Platform]。 本概述檔案提供這些端點的高階介紹，以及其相關端點指南的連結，以取得詳細資訊。 在閱讀個別端點指南之前，請參閱快速入 [門指南](getting-started.md) ，以取得必要標題、讀取範例API呼叫等重要資訊。
+API提 [!DNL Segmentation Service] 供多個端點，可讓您以程式設計方式在中管理區段作業 [!DNL Experience Platform]。 本概述檔案提供這些端點的高階介紹，以及其相關端點指南的連結，以取得詳細資訊。 在閱讀個別端點指南之前，請參閱快速入 [門指南](./getting-started.md) ，以取得必要標題、讀取範例API呼叫等重要資訊。
 
 若要檢視所有可用的端點和CRUD作業，請參閱區 [段服務API參考](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/segmentation.yaml)。
 
