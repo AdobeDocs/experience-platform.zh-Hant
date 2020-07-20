@@ -1,18 +1,18 @@
 ---
 keywords: Experience Platform;segmentation;segmentation service;troubleshooting;API;seg;
 solution: Adobe Experience Platform
-title: 區段搜尋端點指南
+title: 區段搜尋端點
 topic: guide
 translation-type: tm+mt
-source-git-commit: 41a5d816f9dc6e7c26141ff5e9173b1b5631d75e
+source-git-commit: b3e6a6f1671a456b2ffa61139247c5799c495d92
 workflow-type: tm+mt
-source-wordcount: '1141'
+source-wordcount: '1139'
 ht-degree: 2%
 
 ---
 
 
-# 區段搜尋端點指南
+# 區段搜尋端點
 
 「區段搜尋」可用來搜尋各種資料來源所包含的欄位，並幾乎即時傳回這些欄位。
 
