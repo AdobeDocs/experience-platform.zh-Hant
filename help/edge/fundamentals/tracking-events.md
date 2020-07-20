@@ -4,9 +4,9 @@ seo-title: 追蹤Adobe Experience Platform Web SDK事件
 description: 瞭解如何追蹤Experience Platform Web SDK活動
 seo-description: 瞭解如何追蹤Experience Platform Web SDK活動
 translation-type: tm+mt
-source-git-commit: 5f263a2593cdb493b5cd48bc0478379faa3e155d
+source-git-commit: 7b07a974e29334cde2dee7027b9780a296db7b20
 workflow-type: tm+mt
-source-wordcount: '638'
+source-wordcount: '632'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # 追蹤事件
 
-若要傳送事件資料至Adobe Experience Cloud，請使用命 `sendEvent` 令。 此 `sendEvent` 命令是傳送資料至Experience Cloud並擷取個人化內容、身分和受眾目的地的主要方式。
+若要傳送事件資料至Adobe Experience Cloud，請使用命 `sendEvent` 令。 此命 `sendEvent` 令是傳送資料至，並擷取個人化內容、身 [!DNL Experience Cloud]分和受眾目的地的主要方式。
 
 傳送至Adobe Experience Cloud的資料分為兩類：
 
@@ -82,7 +82,7 @@ alloy("sendEvent", {
 
 ## 使用sendBeacon API
 
-在網頁使用者離開之前傳送事件資料可能很棘手。 如果請求過長，瀏覽器可能會取消請求。 有些瀏覽器已實作一個叫做Web標準API `sendBeacon` 的API，讓資料在此期間更容易收集。 使用時， `sendBeacon`瀏覽器會在全域瀏覽內容中提出Web請求。 這表示瀏覽器會在背景提出信標請求，而不會保留頁面導覽。 若要告訴Adobe Experience Platform Web SDK要使 `sendBeacon`用，請將選項新 `"documentUnloading": true` 增至event命令。  其範例如下:
+在網頁使用者離開之前傳送事件資料可能很棘手。 如果請求過長，瀏覽器可能會取消請求。 有些瀏覽器已實作一個叫做Web標準API `sendBeacon` 的API，讓資料在此期間更容易收集。 使用時， `sendBeacon`瀏覽器會在全域瀏覽內容中提出Web請求。 這表示瀏覽器會在背景提出信標請求，而不會保留頁面導覽。 若要告訴Adobe Experience Platform [!DNL Web SDK] 使用 `sendBeacon`，請將選項新 `"documentUnloading": true` 增至event命令。  其範例如下:
 
 ```javascript
 alloy("sendEvent", {
@@ -100,7 +100,7 @@ alloy("sendEvent", {
 });
 ```
 
-瀏覽器已對一次可傳送的資料量加 `sendBeacon` 以限制。 在許多瀏覽器中，限制為64K。 如果瀏覽器因負載過大而拒絕事件，Adobe Experience Platform Web SDK會回到使用其一般傳輸方法（例如擷取）。
+瀏覽器已對一次可傳送的資料量加 `sendBeacon` 以限制。 在許多瀏覽器中，限制為64K。 如果瀏覽器因負載過大而拒絕事件，Adobe Experience Platform會回 [!DNL Web SDK] 到使用其一般傳輸方法（例如擷取）。
 
 ## 處理事件的回應
 
