@@ -4,9 +4,9 @@ seo-title: 合併Adobe Experience Platform Web SDK事件資料
 description: 瞭解如何合併Experience Platform Web SDK事件資料
 seo-description: 瞭解如何合併Experience Platform Web SDK事件資料
 translation-type: tm+mt
-source-git-commit: 5f263a2593cdb493b5cd48bc0478379faa3e155d
+source-git-commit: 7b07a974e29334cde2dee7027b9780a296db7b20
 workflow-type: tm+mt
-source-wordcount: '411'
+source-wordcount: '408'
 ht-degree: 0%
 
 ---
@@ -58,7 +58,7 @@ alloy("sendEvent", {
 });
 ```
 
-通過在本示例中 `eventMergeID` 將相同的值傳遞給兩個事件命令，第二事件命令中的資料被擴展為先前在第一事件命令上發送的資料。 每個事件指令的記錄會在Experience Data Platform中建立，但在報告期間，記錄會使用連結在一起， `eventMergeID` 並顯示為單一事件。
+通過在本示例中 `eventMergeID` 將相同的值傳遞給兩個事件命令，第二事件命令中的資料被擴展為先前在第一事件命令上發送的資料。 每個事件命令的記錄都在中建立 [!DNL Experience Data Platform]，但在報告期間，這些記錄使用聯合在一起， `eventMergeID` 並顯示為單個事件。
 
 如果您要將特定事件的相關資料傳送給第三方提供者，您也可以將相同的資料 `eventMergeID` 加入該資料中。 之後，如果您選擇將協力廠商資料匯入Adobe Experience Platform, `eventMergeID` 則會用來合併因您網頁上發生的離散事件而收集的所有資料。
 
