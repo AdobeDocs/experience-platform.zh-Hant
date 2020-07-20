@@ -4,9 +4,9 @@ seo-title: Experience Platform Web SDK的Edge組態
 description: '瞭解如何設定Experience Platform Edge Network。 '
 seo-description: '瞭解如何設定Experience Platform Edge Network。 '
 translation-type: tm+mt
-source-git-commit: 2d47a00c91000c68c7331f88015264259a4e6323
+source-git-commit: 7b07a974e29334cde2dee7027b9780a296db7b20
 workflow-type: tm+mt
-source-wordcount: '880'
+source-wordcount: '870'
 ht-degree: 2%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 2%
 
 # 設定Edge
 
-Adobe Experience Platform Web SDK的組態分為兩個部分。 SDK [中的configure命令](configuring-the-sdk.md) ，可控制用戶端上必須處理的事項，例如 `edgeDomain`。 邊緣設定可處理SDK的所有其他設定。 當請求傳送至Adobe Experience Platform Edge Network時，會使 `edgeConfigId` 用此參考伺服器端組態。 這可讓您更新設定，而不需在網站上變更程式碼。
+Adobe Experience Platform的設定分 [!DNL Web SDK] 為兩個位置。 SDK [中的configure命令](configuring-the-sdk.md) ，可控制用戶端上必須處理的事項，例如 `edgeDomain`。 邊緣設定可處理SDK的所有其他設定。 當請求傳送至Adobe Experience Platform時， [!DNL Edge Network]會 `edgeConfigId` 用來參考伺服器端組態。 這可讓您更新設定，而不需在網站上變更程式碼。
 
 ## 建立邊配置ID
 
@@ -90,7 +90,7 @@ ID同步可分組至容器，以允許在不同時間執行不同的ID同步。 
 
 ##### [!UICONTROL 屬性Token]
 
-Target可讓客戶透過使用屬性來控制權限。 如需詳細資訊，請參 [閱Target檔案的](https://docs.adobe.com/content/help/en/target/using/administer/manage-users/enterprise/properties-overview.html) 「企業權限」區段。
+[!DNL Target] 可讓客戶透過使用屬性來控制權限。 如需詳細資訊，請參 [閱檔案的](https://docs.adobe.com/content/help/en/target/using/administer/manage-users/enterprise/properties-overview.html) 「企業權限」 [!DNL Target] 區段。
 
 屬性Token可在 [!UICONTROL Adobe Target] >設定 [!UICONTROL >屬][!UICONTROL 性]
 
@@ -108,11 +108,11 @@ Adobe建議您對每個、和邊緣組態環境 `dev`設定 `stage`此 `prod` �
 
 ##### [!UICONTROL Cookie目標已啟用]
 
-允許SDK透過Audience Manager的 [Cookie目的地](https://docs.adobe.com/content/help/en/audience-manager/user-guide/features/destinations/custom-destinations/create-cookie-destination.html) ，共用區段資訊。
+允許SDK透過Cookie目標共用區 [段資訊](https://docs.adobe.com/content/help/en/audience-manager/user-guide/features/destinations/custom-destinations/create-cookie-destination.html)[!DNL Audience Manager]。
 
 ##### [!UICONTROL 啟用URL目標]
 
-允許SDK透過 [URL目標分享區段資訊](https://docs.adobe.com/content/help/en/audience-manager/user-guide/features/destinations/custom-destinations/create-url-destination.html)。 這些設定在Audience Manager中。
+允許SDK透過 [URL目標分享區段資訊](https://docs.adobe.com/content/help/en/audience-manager/user-guide/features/destinations/custom-destinations/create-url-destination.html)。 這些配置在中 [!DNL Audience Manager]。
 
 #### Adobe Analytics
 
