@@ -4,9 +4,9 @@ seo-title: Launch讓您快速入門Adobe Experience Platform Web SDK
 description: 使用Experience Platform Web SDK擴充功能收集資料的快速入門手冊
 seo-description: 使用Experience Platform Web SDK擴充功能收集資料的快速入門手冊
 translation-type: tm+mt
-source-git-commit: 9d58693646f472e84f04a64c4ad66f61dc5d3eba
+source-git-commit: 7b07a974e29334cde2dee7027b9780a296db7b20
 workflow-type: tm+mt
-source-wordcount: '560'
+source-wordcount: '543'
 ht-degree: 4%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 4%
 
 # 歡迎
 
-本指南將引導您逐步瞭解如何在Adobe Launch中設定Adobe Experience Platform Web SDK。 您必須擁有權限並位於允許清單上才能使用此功能。 如果您想要加入等候清單，請聯絡您的CSM。 此外，若要使用此功能，您必須：
+本指南將引導您逐步瞭解如何在Adobe Launch中設定Adobe Experience Platform的 [!DNL Web SDK] 不同步驟。 您必須擁有權限並位於允許清單上才能使用此功能。 如果您想要加入等候清單，請聯絡您的CSM。 此外，若要使用此功能，您必須：
 
 - 啟用 [第一方網域(CNAME)](https://docs.adobe.com/content/help/zh-Hant/core-services/interface/ec-cookies/cookies-first-party.html) 。 如果您已擁有Adobe Analytics的CNAME，則應使用該CNAME。 在開發中進行測試時不需要CNAME，但您在開始生產之前需要CNAME
 - 正在使用最新版的訪客ID服務
@@ -29,13 +29,13 @@ ht-degree: 4%
 
 ## 準備架構
 
-Experience Platform Edge Network將資料視為XDM。 XDM是一種資料格式，可讓您定義結構描述。 此架構定義邊緣網路預期資料格式化的方式。 若要傳送資料，您需要定義您的架構。 請確定您已完成下列工作：
+將 [!DNL Experience Platform Edge Network] 資料視為XDM。 XDM是一種資料格式，可讓您定義結構描述。 架構定義資料 [!DNL Edge Network] 的格式化方式。 若要傳送資料，您需要定義您的架構。 請確定您已完成下列工作：
 
 1. [建立架構](../../xdm/tutorials/create-schema-ui.md)
-2. 將AEP Web SDK ExperienceEvent Mixin新增至您建立的架構。
+2. 將AEP [!DNL Web SDK ExperienceEvent] Mixin新增至您建立的架構。
 3. 從您建立的架構建立資料集。
 
-以下視訊旨在支援您建立Web SDK資料的架構、資料集和串流來源連接器。
+以下視訊旨在支援您建立資料的架構、資料集和串流來源連 [!DNL Web SDK] 接器。
 
 >[!VIDEO](https://video.tv.adobe.com/v/35395?quality=12&learn=on)
 
@@ -47,13 +47,13 @@ Experience Platform Edge Network將資料視為XDM。 XDM是一種資料格式�
 
 ## 根據方案建立資料元素
 
-在Adobe Launch中，將副檔名變更為AEP Web SDK並將類型設為XDM物件，以建立參照架構的資料元素。 這會載入您的架構，並允許您將資料元素映射至架構的不同部分。
+在Adobe Launch中，將副檔名變更為AEP並將類型設為XDM物件，以建立參 [!DNL Web SDK] 照架構的資料元素。 這會載入您的架構，並允許您將資料元素映射至架構的不同部分。
 
 ![啟動中的日期元素](../../assets/edge_data_element.png)
 
 ## 傳送事件
 
-在安裝擴充功能後，從AEP Web SDK擴充功能新增「sendEvent」動作至規則，開始傳送事件。 請務必將您剛建立的資料元素新增至事件，做為XDM資料。 建議您每次載入頁面時至少傳送一個事件。
+安裝擴充功能後，從AEP擴充功能新增「sendEvent」動作至規則， [!DNL Web SDK] 開始傳送事件。 請務必將您剛建立的資料元素新增至事件，做為XDM資料。 建議您每次載入頁面時至少傳送一個事件。
 
 如需追蹤事件的詳細資訊，請參閱追 [蹤事件](../fundamentals/tracking-events.md)。
 
