@@ -4,9 +4,9 @@ seo-title: 支援Adobe Experience Platform Web SDK同意偏好設定
 description: 瞭解如何使用Experience Platform Web SDK支援同意偏好設定
 seo-description: 瞭解如何使用Experience Platform Web SDK支援同意偏好設定
 translation-type: tm+mt
-source-git-commit: c86ae6d887f52d8bb4b78dadc06060791c7a02c0
+source-git-commit: 7b07a974e29334cde2dee7027b9780a296db7b20
 workflow-type: tm+mt
-source-wordcount: '518'
+source-wordcount: '516'
 ht-degree: 0%
 
 ---
@@ -79,7 +79,7 @@ alloy("setConsent", {
 
 >[!NOTE]
 >
->目前，SDK僅支援其目 `general` 的。 雖然我們計畫建立一套更健全的目的或類別，以對應不同的Adobe功能和產品方案，但目前的實作方式是完全或完全不選擇加入。  這僅適用於Adobe Experience Platform Web SDK，而不適用於其他Adobe JavaScript程式庫。
+>目前，SDK僅支援其目 `general` 的。 雖然我們計畫建立一套更健全的目的或類別，以對應不同的Adobe功能和產品方案，但目前的實作方式是完全或完全不選擇加入。  這僅適用於Adobe Experience Platform，而不適 [!DNL Web SDK] 用於其他Adobe JavaScript程式庫。
 
 ## 持續遵守同意偏好
 
