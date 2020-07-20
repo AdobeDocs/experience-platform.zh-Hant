@@ -4,9 +4,9 @@ seo-title: 設定Adobe Experience Platform Web SDK
 description: 瞭解如何設定Experience Platform Web SDK
 seo-description: 瞭解如何設定Experience Platform Web SDK
 translation-type: tm+mt
-source-git-commit: 5f263a2593cdb493b5cd48bc0478379faa3e155d
+source-git-commit: 7b07a974e29334cde2dee7027b9780a296db7b20
 workflow-type: tm+mt
-source-wordcount: '743'
+source-wordcount: '737'
 ht-degree: 11%
 
 ---
@@ -74,7 +74,7 @@ alloy("configure", {
 | -------- | ------------ | ----------------- |
 | 字串 | 是 | nown |
 
-您指派的Experience Cloud組織ID。  在頁面內設定多個例項時，您必須為每個例項設 `orgId` 定不同的例項。
+Your assigned [!DNL Experience Cloud] organization ID.  在頁面內設定多個例項時，您必須為每個例項設 `orgId` 定不同的例項。
 
 ## 資料彙集
 
@@ -134,7 +134,7 @@ alloy("configure", {
 | -------- | ------------ | ----------------- |
 | 布林值 | 無 | `true` |
 
-啟用Audience Manager [!UICONTROL Cookie目標]，這可允許根據區段限定設定Cookie。
+啟用 [!DNL Audience Manager] Cookie [!UICONTROL 目標]，允許根據區段限定設定Cookie。
 
 ### `urlDestinationsEnabled`
 
@@ -142,7 +142,7 @@ alloy("configure", {
 | -------- | ------------ | ----------------- |
 | 布林值 | 無 | `true` |
 
-啟用Audience Manager [!UICONTROL URL目標]，這可允許根據區段資格觸發URL。
+啟用 [!DNL Audience Manager] URL目的地 ，這可允許根據區段限定引發URL。
 
 ## 身分選項
 
