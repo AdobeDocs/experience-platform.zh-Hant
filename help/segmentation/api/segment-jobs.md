@@ -4,15 +4,15 @@ solution: Experience Platform
 title: 區段工作
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 2327ce9a87647fb2416093d4a27eb7d4dc4aa4d7
+source-git-commit: b3e6a6f1671a456b2ffa61139247c5799c495d92
 workflow-type: tm+mt
-source-wordcount: '994'
+source-wordcount: '993'
 ht-degree: 3%
 
 ---
 
 
-# 區段作業端點指南
+# 區段作業端點
 
 區段工作是建立新讀者區段的非同步程式。 它引用段定 [義](./segment-definitions.md)，以及任何合併策略 [，以控制如何合併配置檔案片段](../../profile/api/merge-policies.md)[!DNL Real-time Customer Profile] 中的重疊屬性。 當區段工作成功完成時，您可以收集區段的各種資訊，例如處理期間可能發生的任何錯誤，以及您的受眾的最終規模。
 
