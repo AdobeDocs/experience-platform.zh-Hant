@@ -4,19 +4,22 @@ solution: Experience Platform
 title: 範例查詢
 topic: queries
 translation-type: tm+mt
-source-git-commit: 33282b1c8ab1129344bd4d7054e86fed75e7b899
+source-git-commit: 7b07a974e29334cde2dee7027b9780a296db7b20
+workflow-type: tm+mt
+source-wordcount: '227'
+ht-degree: 2%
 
 ---
 
 
 # Adobe Target資料的範例查詢
 
-來自Adobe Target的資料會轉換為Experience Event XDM架構，並以資料集的形式匯入Experience Platform。 Query Service使用此資料的使用案例很多，下列範例查詢應與您的Adobe Target資料集搭配使用。
+來自Adobe Target的資料會轉換為Experience Event XDM架構，並作為資料集 [!DNL Experience Platform] 加入您。 此資料有許多使用 [!DNL Query Service] 案例，下列範例查詢應適用於您的Adobe Target資料集。
 
 >[!NOTE]
 >在以下範例中，您需要編輯SQL，以根據您想要評估的資料集、變數或時間範圍，填寫您查詢的預期參數。 在SQL中查看的任何位 `{ }` 置都提供參數。
 
-## 平台上Target資料來源的標準資料集名稱：
+## Target資料來源的標準資料集名稱，位於 [!DNL Platform]:
 
 Adobe Target體驗事件（好記名稱） <br>`adobe_target_experience_events` （用於查詢的名稱）
 
@@ -28,7 +31,7 @@ Adobe Target體驗事件（好記名稱） <br>`adobe_target_experience_events` 
 | ---- | --------- | ----- |
 | mboxName | `_experience.target.mboxname` |  |
 | 活動 ID | `_experience.target.activities.activityID` |  |
-| 體驗ID | `_experience.target.activities[].activityEvents[]._experience.target.activity.activityevent.context.experienceID` |  |
+| 體驗 ID | `_experience.target.activities[].activityEvents[]._experience.target.activity.activityevent.context.experienceID` |  |
 | 區段ID | `_experience.target.activities[].activityEvents[].segmentEvents[].segmentID._id` |  |
 | 事件範圍 | `_experience.target.activities[].activityEvents[].eventScope` | 追蹤新訪客和瀏覽 |
 | 步驟ID | `_experience.target.activities[].activityEvents[]._experience.target.activity.activityevent.context.stepID` | 促銷活動的自訂步驟ID |
