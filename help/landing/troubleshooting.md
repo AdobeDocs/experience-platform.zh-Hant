@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Adobe Experience Platform常見問答集與疑難排解指南
 topic: getting started
 translation-type: tm+mt
-source-git-commit: 635f8cf8173cc7db2032f2181848b0ce1e9095cc
+source-git-commit: 9eeddfaf3e704d66b81f983afcdf5ef3c45c6075
 workflow-type: tm+mt
 source-wordcount: '1962'
 ht-degree: 2%
@@ -118,7 +118,7 @@ API中的許多PATCH [!DNL Platform] 作業都使 [](https://tools.ietf.org/html
 
 ## 我可以使用Postman來呼叫 [!DNL Platform] API嗎？ {#how-do-i-use-postman-to-make-calls-to-platform-apis}
 
-[Postman](https://www.getpostman.com/) 是一種實用的工具，用於可視化對REST風格API的調用。 此 [中篇貼文](https://medium.com/adobetech/using-postman-for-jwt-authentication-on-adobe-i-o-7573428ffe7f) ，說明如何設定Postman以自動執行驗證，並使用它來使用 [!DNL Experience Platform] API。
+[Postman](https://www.postman.com/) 是一種實用的工具，用於可視化對REST風格API的調用。 此 [中篇貼文](https://medium.com/adobetech/using-postman-for-jwt-authentication-on-adobe-i-o-7573428ffe7f) ，說明如何設定Postman以自動執行驗證，並使用它來使用 [!DNL Experience Platform] API。
 
 ## 系統需求為何 [!DNL Platform]? {#what-are-the-system-requirements-for-platform}
 
