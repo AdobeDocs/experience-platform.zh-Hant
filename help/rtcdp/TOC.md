@@ -3,18 +3,18 @@ product: adobe experience platform
 audience: user
 user-guide-title: 即時客戶資料平台說明
 translation-type: tm+mt
-source-git-commit: fc8bdc6a46e0b64f29d89a36b0810f7312200616
+source-git-commit: b0068c0ef0897d5d4ec578f0c97b20aef3b2931c
 workflow-type: tm+mt
-source-wordcount: '439'
-ht-degree: 10%
+source-wordcount: '440'
+ht-degree: 11%
 
 ---
 
 
 # Real-time Customer Data Platform Help {#rtcdp}
 
-* [產品概觀](overview.md)
-* Real-time Customer Data Platform {#intro}
+* [即時CDP概述](overview.md)
+* 快速入門 {#intro}
    * [快速入門](get-started.md)
    * [量度概觀](home-page-dashboards.md)
 * 管理 {#admin}
@@ -30,7 +30,7 @@ ht-degree: 10%
       * [目標詳細資訊頁](destinations/destination-details-page.md)
    * 目標目錄 {#destinations-cat}
       * [目標目錄概述](destinations/destinations-catalog.md)
-      * Adobe目的地{#adobe-destinations}
+      * Adobe destinations{#adobe-destinations}
          * [Adobe目標概觀](destinations/adobe-destinations.md)
          * [Adobe Campaign](destinations/adobe-campaign-destination.md)
       * 廣告目的地{#advertising-destinations}
@@ -55,7 +55,7 @@ ht-degree: 10%
       * Analytics目標 {#analytics-destinations}
          * [Analytics目標概觀](destinations/analytics-destinations.md)
          * [Adform網站追蹤擴充功能](/help/rtcdp/destinations/adform-extension.md)
-         * [Adobe Analytics擴充功能](/help/rtcdp/destinations/adobe-analytics-extension.md)
+         * [Adobe Analytics 擴充功能](/help/rtcdp/destinations/adobe-analytics-extension.md)
          * [Adobe Media Analytics for Audio and Video 擴充功能](/help/rtcdp/destinations/adobe-video-analytics-extension.md)
          * [Clicktale擴充功能](/help/rtcdp/destinations/clicktale-extension.md)
          * [Contentsquare擴充功能](/help/rtcdp/destinations/contentsquare-extension.md)
@@ -131,7 +131,7 @@ ht-degree: 10%
 * 隱私權與資料管理 {#privacy}
    * [隱私權概觀](privacy/privacy-overview.md)
    * [資料治理概觀](privacy/data-governance-overview.md)
-* 即時客戶個人檔案 {#profile}
+* 設定檔 {#profile}
    * [描述檔概述](profile/profile-overview.md)
    * [身分與身分名稱空間](profile/identities-overview.md)
    * [合併原則](profile/merge-policies.md)
@@ -142,5 +142,5 @@ ht-degree: 10%
 * 來源 {#sources}
    * [來源概觀](sources/sources-overview.md)
    * [使用Adobe Launch實作網站標籤](sources/launch.md)
-* [發行說明](https://www.adobe.com/go/platform-release-notes-en)
-* [字彙表](https://www.adobe.com/go/platform-glossary-en)
+* [Experience Platform發行說明](https://www.adobe.com/go/platform-release-notes-en)
+* [體驗平台辭彙表](https://www.adobe.com/go/platform-glossary-en)
