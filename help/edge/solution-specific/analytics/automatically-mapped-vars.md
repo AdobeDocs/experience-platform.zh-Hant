@@ -4,19 +4,19 @@ seo-title: 使用Adobe Experience Platform Web SDK自動在Analytics中映射的
 description: 瞭解哪些變數在Analytics中使用Experience Platform Web SDK自動對應
 seo-description: 瞭解哪些變數在Analytics中使用Experience Platform Web SDK自動對應
 translation-type: tm+mt
-source-git-commit: a7c8830c5c8152b1f21373a506b2fff97d43c40a
+source-git-commit: 7b07a974e29334cde2dee7027b9780a296db7b20
 workflow-type: tm+mt
-source-wordcount: '550'
+source-wordcount: '543'
 ht-degree: 2%
 
 ---
 
 
-# Analytics中自動映射的變數
+# 自動映射至 [!DNL Analytics]
 
-以下是Adobe Experience Platform Edge Network自動對應至Analytics的變數清單。
+以下是Adobe Experience Platform自動對應至的變 [!DNL Edge Network] 數清單 [!DNL Analytics]。
 
-| XDM欄位路徑 | Analytics查詢字串/HTTP標題 | 說明 |
+| XDM欄位路徑 | [!DNL Analytics Query String] / HTTP 標題 | 說明 |
 | ---------- | ------------------------- | -------- |
 | `commerce.order.purchaseID` | `pi` | AppMeasurement查詢參數PURCHASEID映射。 |
 | `commerce.order.currencyCode` | `cc` | AppMeasurement查詢參數CURRENCY映射。 |
