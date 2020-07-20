@@ -4,9 +4,9 @@ seo-title: Adobe Experience Platform Web SDK轉換個人化內容
 description: 瞭解如何使用Experience Platform Web SDK呈現個人化內容
 seo-description: 瞭解如何使用Experience Platform Web SDK呈現個人化內容
 translation-type: tm+mt
-source-git-commit: 5f263a2593cdb493b5cd48bc0478379faa3e155d
+source-git-commit: 7b07a974e29334cde2dee7027b9780a296db7b20
 workflow-type: tm+mt
-source-wordcount: '232'
+source-wordcount: '229'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # 個人化選項概觀
 
-Adobe Experience Platform Web SDK支援在Adobe查詢個人化解決方案，包括Adobe Target。 個人化有兩種模式： 擷取可自動轉譯的內容，以及開發人員必須轉譯的內容。 SDK也提供管理閃 [爍的功能](../../edge/solution-specific/target/flicker-management.md)。
+Adobe Experience Platform支援在Adobe [!DNL Web SDK] 查詢個人化解決方案，包括Adobe Target。 個人化有兩種模式： 擷取可自動轉譯的內容，以及開發人員必須轉譯的內容。 SDK也提供管理閃 [爍的功能](../../edge/solution-specific/target/flicker-management.md)。
 
 ## 自動呈現內容
 
@@ -92,7 +92,7 @@ alloy("sendEvent",{
 
 >[!TIP]
 >
-> 如果您使用Target範圍，會變成伺服器上的mBox，則只有這些範圍一次是所有請求，而非個別請求。 全域mbox一律會傳送。
+> 如果您使用 [!DNL Target] 範圍會變成伺服器上的mBox，則只有這些範圍會一次全部是要求，而非個別。 全域mbox一律會傳送。
 
 ### 擷取自動內容
 
