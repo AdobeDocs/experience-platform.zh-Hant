@@ -1,20 +1,24 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: 導出作業端點指南
+title: 導出作業端點
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 3e39333207ef6c94b6d792be33a4605f185ff5ab
+source-git-commit: b3e6a6f1671a456b2ffa61139247c5799c495d92
 workflow-type: tm+mt
-source-wordcount: '1469'
+source-wordcount: '1497'
 ht-degree: 2%
 
 ---
 
 
-# 導出作業端點指南
+# 導出作業端點
 
 匯出工作是非同步程式，用來將讀者區段成員持續存留至資料集。 您可以使用 `/export/jobs` Adobe Experience Platform Segmentation API中的端點，此端點可讓您以程式設計方式擷取、建立和取消匯出工作。
+
+>[!NOTE]
+>
+>本指南涵蓋在中使用匯出工作 [!DNL Segmentation API]。 如需如何管理資料匯出工作的詳細 [!DNL Real-time Customer Profile] 資訊，請參閱描述檔API [中的匯出工作指南](../../profile/api/export-jobs.md)
 
 ## 快速入門
 
