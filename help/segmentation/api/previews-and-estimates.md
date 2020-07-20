@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: 預覽和估計端點指南
+title: 預覽和估計端點
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 41a5d816f9dc6e7c26141ff5e9173b1b5631d75e
+source-git-commit: b3e6a6f1671a456b2ffa61139247c5799c495d92
 workflow-type: tm+mt
-source-wordcount: '752'
+source-wordcount: '750'
 ht-degree: 2%
 
 ---
 
 
-# 預覽和估計端點指南
+# 預覽和估計端點
 
-當您開發區段定義時，可以使用中的估計和預覽工具來檢 [!DNL Adobe Experience Platform] 視摘要層級的資訊，以協助您隔離預期的觀眾。 **預覽** 提供區段定義之合格描述檔的分頁清單，讓您比較結果與預期結果。 **估計** 提供區段定義的統計資訊，例如預測受眾大小、信賴區間和錯誤標準差。
+當您開發區段定義時，可以使用中的估計和預覽工具來檢 [!DNL Adobe Experience Platform] 視摘要層級的資訊，以協助您隔離預期的觀眾。 **預覽** 提供區段定義之合格描述檔的分頁清單，讓您比較結果與預期。 **估計** 提供區段定義的統計資訊，例如預測受眾大小、信賴區間和錯誤標準差。
 
 ## 快速入門
 
