@@ -3,9 +3,9 @@ product: experience-platform
 audience: user
 user-guide-title: Adobe Experience Platform細分服務說明
 translation-type: tm+mt
-source-git-commit: 82067c3bfa6d80cd5f5dcc6644cdbcacbae85053
+source-git-commit: c5880153f4ba9a6518423985e42fb1b3b71cd862
 workflow-type: tm+mt
-source-wordcount: '111'
+source-wordcount: '112'
 ht-degree: 8%
 
 ---
@@ -20,6 +20,7 @@ ht-degree: 8%
    - [快速入門](api/getting-started.md)
    - [匯出工作](api/export-jobs.md)
    - [預覽和估計](api/previews-and-estimates.md)
+   - [計畫](api/schedules.md)
    - [區段定義](api/segment-definitions.md)
    - [區段工作](api/segment-jobs.md)
    - [區段搜尋](api/segment-search.md)
