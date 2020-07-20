@@ -4,9 +4,9 @@ seo-title: 'Adobe Experience Platform Web SDK快速入門 '
 description: 使用Experience Platform Web SDK收集資料的快速入門手冊
 seo-description: 使用Experience Platform Web SDK收集資料的快速入門手冊
 translation-type: tm+mt
-source-git-commit: 9b8bddf39301cdc39bfa5370ef98d99434fc64f8
+source-git-commit: 7b07a974e29334cde2dee7027b9780a296db7b20
 workflow-type: tm+mt
-source-wordcount: '537'
+source-wordcount: '515'
 ht-degree: 5%
 
 ---
@@ -14,15 +14,15 @@ ht-degree: 5%
 
 # 歡迎
 
-本指南會引導您以不同的方式來設定Adobe Experience Platform Web SDK。 若要使用此功能，您必須位於允許清單中。 如果您想要加入等候清單，請聯絡您的CSM。
+本指南會引導您以不同的方式來設定Adobe Experience Platform [!DNL Web SDK]。 若要使用此功能，您必須位於允許清單中。 如果您想要加入等候清單，請聯絡您的CSM。
 
-- 啟用 [第一方網域(CNAME)](https://docs.adobe.com/content/help/zh-Hant/core-services/interface/ec-cookies/cookies-first-party.html) 。 如果您已有Analytics的CNAME，則應使用該CNAME。 在開發中進行測試沒有CNAME，但您在投入生產前需要一個CNAME
-- 有權使用Adobe Experience Platform Data Platform。  如果您尚未購買Platform，我們將提供您Experience Platform Data Services Foundation，讓您以有限方式與SDK搭配使用，不需額外付費。
+- 啟用 [第一方網域(CNAME)](https://docs.adobe.com/content/help/zh-Hant/core-services/interface/ec-cookies/cookies-first-party.html) 。 如果您已有CNAME [!DNL Analytics]，則應使用該CNAME。 在開發中進行測試沒有CNAME，但您在投入生產前需要一個CNAME
+- 取得Adobe Experience Platform的權益 [!DNL Data Platform]。  如果您尚未購買平台，我們將提供您有限 [!DNL Experience Platform Data Services Foundation] 的SDK使用方式，不需額外付費。
 - 正在使用最新版的訪客ID服務
 
 ## 建立設定ID
 
-您可以使用Adobe Launch中的 [Edge設定工具](../fundamentals/edge-configuration.md) ，建立設定ID，即使您未使用標籤管理功能亦然。 這可讓您讓邊緣網路傳送資料至各種解決方案。 如需如何尋找每個選項的詳細資訊，請參閱「 [Edge Configuration Tool](../fundamentals/edge-configuration.md) 」（邊緣設定工具）頁面。
+您可以使用Adobe Launch中的 [Edge設定工具](../fundamentals/edge-configuration.md) ，建立設定ID，即使您未使用標籤管理功能亦然。 這可讓您將資料 [!DNL Edge Network] 傳送至各種解決方案。 如需如何尋找每個選項的詳細資訊，請參閱「 [Edge Configuration Tool](../fundamentals/edge-configuration.md) 」（邊緣設定工具）頁面。
 
 >[!NOTE]
 >
@@ -30,12 +30,12 @@ ht-degree: 5%
 
 ## 準備架構
 
-Experience Platform Edge Network將資料視為XDM。 XDM是一種資料格式，可讓您定義結構描述。 此架構定義邊緣網路預期資料格式化的方式。 若要傳送資料，您必須定義您的架構。
+將 [!DNL Experience Platform Edge Network] 資料視為XDM。 XDM是一種資料格式，可讓您定義結構描述。 架構定義資料 [!DNL Edge Network] 的格式化方式。 若要傳送資料，您必須定義您的架構。
 
 - [建立架構](../../xdm/tutorials/create-schema-ui.md)
-- 將Adobe Experience Platform Web SDK mixin新增至您建立的架構
+- 將Adobe Experience Platform混合新 [!DNL Web SDK] 增至您建立的架構
 
-以下視訊旨在支援您建立Web SDK資料的架構、資料集和串流來源連接器。
+以下視訊旨在支援您建立資料的架構、資料集和串流來源連 [!DNL Web SDK] 接器。
 
 >[!VIDEO](https://video.tv.adobe.com/v/35395?quality=12&learn=on)
 
