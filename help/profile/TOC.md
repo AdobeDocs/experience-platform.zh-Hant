@@ -3,9 +3,9 @@ product: experience-platform
 audience: user
 user-guide-title: 即時客戶個人檔案說明
 translation-type: tm+mt
-source-git-commit: 93aae0e394e1ea9b6089d01c585a94871863818e
+source-git-commit: 635f8cf8173cc7db2032f2181848b0ce1e9095cc
 workflow-type: tm+mt
-source-wordcount: '81'
+source-wordcount: '83'
 ht-degree: 20%
 
 ---
@@ -30,5 +30,6 @@ ht-degree: 20%
    * [設定描述檔與身分識別的資料集](tutorials/dataset-configuration.md)
    * [更多教學課程](https://docs.adobe.com/content/help/zh-Hant/experience-platform/tutorials/home.html)
 * [隱私權要求處理](privacy.md)
+* [疑難排解指南](troubleshooting.md)
 * [API 參考資料](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml)
 * [平台版本注意事項](https://www.adobe.com/go/platform-release-notes-en)
