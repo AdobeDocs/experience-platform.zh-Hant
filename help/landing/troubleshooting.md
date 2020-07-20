@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Adobe Experience Platform常見問答集與疑難排解指南
 topic: getting started
 translation-type: tm+mt
-source-git-commit: 2e5668a8b1d5fb831188fbd4e453b9f4aa7474df
+source-git-commit: 635f8cf8173cc7db2032f2181848b0ce1e9095cc
 workflow-type: tm+mt
-source-wordcount: '1959'
+source-wordcount: '1962'
 ht-degree: 2%
 
 ---
@@ -194,7 +194,7 @@ API中的許多PATCH [!DNL Platform] 作業都使 [](https://tools.ietf.org/html
 }
 ```
 
-當提供的API金鑰標題(`x-api-key`)的值無效時，會顯示此錯誤訊息。 請確定您已正確輸入密鑰，然後再次嘗試。 如果您不知道您的API金鑰，可在 [Adobe I/O Console中找到它](https://console.adobe.io): 在「整 **合** 」標籤中，導覽至特定整合的「概述」區段，以在「用戶端認證」下尋找API **金鑰******。
+當提供的API金鑰標題(`x-api-key`)的值無效時，會顯示此錯誤訊息。 請確定您已正確輸入密鑰，然後再次嘗試。 如果您不知道您的API金鑰，可在 [Adobe I/O Console中找到它](https://console.adobe.io): 在「整 **合** 」索引標籤中，導覽至特定整合的「概述」區段，以在「用戶端認證」下尋找API **金鑰******。
 
 
 ### 遺失標題
@@ -248,6 +248,6 @@ API中的許多PATCH [!DNL Platform] 作業都使 [](https://tools.ietf.org/html
 | 體驗資料模型(XDM) | [方案註冊表API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml) | [XDM系統常見問答集和疑難排解指南](../xdm/troubleshooting-guide.md) |
 | Identity 服務 | [Identity Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/id-service-api.yaml) | [Identity Service疑難排解指南](../identity-service/troubleshooting-guide.md) |
 | 查詢服務 | [查詢服務API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/qs-api.yaml) | [查詢服務疑難排解指南](../query-service/troubleshooting-guide.md) |
-| 即時客戶個人檔案 | [即時客戶個人檔案API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml) |  |
+| 即時客戶個人檔案 | [即時客戶個人檔案API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml) | [描述檔疑難排解指南](../profile/troubleshooting.md) |
 | 沙盒 | [沙盒API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sandbox-api.yaml) | [沙盒疑難排解指南](../sandboxes/troubleshooting-guide.md) |
 | 區段 | [區段API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/segmentation.yaml) |
