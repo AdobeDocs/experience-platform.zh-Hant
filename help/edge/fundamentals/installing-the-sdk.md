@@ -4,9 +4,9 @@ seo-title: 安裝SDK的Adobe Experience Platform Web SDK
 description: 瞭解如何安裝Experience Platform Web SDK
 seo-description: 瞭解如何安裝Experience Platform Web SDK
 translation-type: tm+mt
-source-git-commit: 90afc28d41878cbed90fc05176276a30d8aebe09
+source-git-commit: 7b07a974e29334cde2dee7027b9780a296db7b20
 workflow-type: tm+mt
-source-wordcount: '580'
+source-wordcount: '570'
 ht-degree: 1%
 
 ---
@@ -14,14 +14,14 @@ ht-degree: 1%
 
 # 安裝SDK {#installing-the-sdk}
 
-Adobe Experience Platform Web SDK可在內容傳送網路(CDN)上取得，供您使用。 您可以參考此檔案或下載它，並在您自己的基礎架構上代管它。 它提供微型和非微型版本。 非精簡版本有助於除錯。
+Adobe Experience Platform可 [!DNL Web SDK] 在內容放送網路(CDN)上取得，供您使用。 您可以參考此檔案或下載它，並在您自己的基礎架構上代管它。 它提供微型和非微型版本。 非精簡版本有助於除錯。
 
 * 精簡版： [https://cdn1.adoberesources.net/alloy/1.0.0/alloy.min.js](https://cdn1.adoberesources.net/alloy/1.0.0/alloy.min.js)
 * 非精簡版： [https://cdn1.adoberesources.net/alloy/1.0.0/alloy.js](https://cdn1.adoberesources.net/alloy/1.0.0/alloy.js)
 
 ## 新增程式碼 {#adding-the-code}
 
-實作Adobe Experience Platform Web SDK的第一步是盡可能將下列「基本程式碼」複製並貼在HTML的標 `<head>` 記中：
+實作Adobe Experience Platform的第一步是 [!DNL Web SDK] 盡可能將下列「基本程式碼」複製並貼在HTML的 `<head>` 標籤中：
 
 ```markup
 <script>
@@ -54,11 +54,11 @@ Adobe Experience Platform Web SDK可在內容傳送網路(CDN)上取得，供您
 
 ## 支援Internet Explorer {#support-internet-explore}
 
-本SDK利用承諾，即一種通信非同步任務完成的方法。 SDK使 [用的Promise](https://developer.mozilla.org/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Promise) 實作，除Internet Explorer外，其他目標瀏覽器都支援。 若要在Internet Explorer上使用SDK，您必須填入 `window.Promise` 多 [個](https://remysharp.com/2010/10/08/what-is-a-polyfill)。
+本SDK利用承諾，即一種通信非同步任務完成的方法。 SDK所 [使用的Promise](https://developer.mozilla.org/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Promise) 實作本身受到所有目標瀏覽器（除外）的支援 [!DNL Internet Explorer]。 若要在上使用SDK [!DNL Internet Explorer]，您必須填入 `window.Promise` 多 [元](https://remysharp.com/2010/10/08/what-is-a-polyfill)。
 
 若要判斷您是否已填入 `window.Promise` 填色：
 
-1. 在Internet Explorer中開啟您的網站。
+1. 在中開啟您的網站 [!DNL Internet Explorer]。
 1. 開啟瀏覽器的除錯主控台。
 1. 輸入 `window.Promise` 控制台，然後按Enter鍵。
 
