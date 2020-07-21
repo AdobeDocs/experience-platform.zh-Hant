@@ -4,17 +4,17 @@ solution: Experience Platform
 title: 重複資料消除
 topic: queries
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 3b710e7a20975880376f7e434ea4d79c01fa0ce5
 workflow-type: tm+mt
-source-wordcount: '414'
+source-wordcount: '405'
 ht-degree: 1%
 
 ---
 
 
-# 查詢服務中的重複資料消除
+# 在 [!DNL Query Service]
 
-Adobe Experience Platform Query Service支援重複資料刪除，因為可能需要從計算中移除整個列，或忽略特定欄位集，因為只有列中的部分資料是重複資料。 重複資料消除的常見模式包括 `ROW_NUMBER()``timestamp` ，跨窗口對ID（或對ID）按順序使用函式(使用「體驗資料模型」(XDM)欄位)，以返回表示檢測到重複的次數的新欄位。 當此值為時， `1`即表示原始例項，在大多數情況下，即您想使用的例項，而忽略其他每個例項。 這通常是在子選擇內完成的，在子選擇內，重複資料消除是在較高級別(如執行聚合計 `SELECT` 數)中完成的。
+Adobe Experience Platform可 [!DNL Query Service] 能需要從計算中移除整列，或忽略特定欄位集，因為只有該列中的部分資料是重複資料，因此支援重複資料刪除。 重複資料消除的常見模式包括 `ROW_NUMBER()` ，在有序時間(使用 [!DNL Experience Data Model]`timestamp` (XDM)欄位)跨窗口使用ID或一對ID的函式，以返回表示檢測到重複的次數的新欄位。 當此值為時， `1`即表示原始例項，在大多數情況下，即您想使用的例項，而忽略其他每個例項。 這通常是在子選擇內完成的，在子選擇內，重複資料消除是在較高級別(如執行聚合計 `SELECT` 數)中完成的。
 
 ## 使用個案
 
@@ -31,7 +31,7 @@ Adobe Experience Platform Query Service支援重複資料刪除，因為可能�
 
 >[!CAUTION]
 >
->Experience Platform中的許多資料集（包括Adobe Analytics Data Connector製作的資料集）都已套用ExperienceEvent層級的去重複化。 因此，無需重新應用此級別的重複資料消除，並會減慢查詢速度。 請務必瞭解DataSet的來源，並瞭解是否已在ExperienceEvent層級應用重複資料消除。 對於任何串流化的DataSet（例如Adobe Target），您必須套用ExperienceEvent層級的去重複化，因為這些資料來源具有「至少一次」的語義。
+>許多DataSets(包 [!DNL Experience Platform]括Adobe Analytics Data Connector製作的DataSets)都已套用ExperienceEvent層級的去重複化功能。 因此，無需重新應用此級別的重複資料消除，並會減慢查詢速度。 請務必瞭解DataSet的來源，並瞭解是否已在ExperienceEvent層級應用重複資料消除。 對於任何串流化的DataSet（例如Adobe Target），您必須套用ExperienceEvent層級的去重複化，因為這些資料來源具有「至少一次」的語義。
 
 **範圍：** 全球
 
