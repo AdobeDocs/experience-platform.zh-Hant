@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 資料集與表和方案
 topic: queries
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 3b710e7a20975880376f7e434ea4d79c01fa0ce5
 workflow-type: tm+mt
-source-wordcount: '183'
+source-wordcount: '181'
 ht-degree: 1%
 
 ---
@@ -30,7 +30,7 @@ ht-degree: 1%
 
 ![](../images/clients/psql/connect-bi.png)
 
-要使用SQL查看平台上的可用表，可以使用或 `\d` 選擇 `SHOW TABLES;`。
+要使用SQL查看可用 [!DNL Platform] 表，可使用或 `\d` 兩者 `SHOW TABLES;`。
 
 
 `\d` 顯示標準PostgreSQL視圖
@@ -44,7 +44,7 @@ ht-degree: 1%
 (2 rows)
 ```
 
-`SHOW TABLES;` 是自訂命令，可提供更詳細的檢視並呈現表格，以及平台UI中的資料集名稱。
+`SHOW TABLES;` 是自訂命令，可提供更詳細的檢視並呈現表格，以及UI中的資料集名 [!DNL Platform] 稱。
 
 ```
        name      |        dataSetId         |     dataSet    | description | resolved 
