@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 支援退出
 topic: overview
 translation-type: tm+mt
-source-git-commit: f156679601c2ed0bb933a66a56661c29c1b9c778
+source-git-commit: 6a0a9b020b0dc89a829c557bdf29b66508a10333
 workflow-type: tm+mt
-source-wordcount: '954'
+source-wordcount: '945'
 ht-degree: 0%
 
 ---
@@ -68,13 +68,13 @@ ht-degree: 0%
 
 若要檢視混音的完整 [!DNL Profile Privacy] 結構，請參閱 [XDM公用GitHub存放庫](https://github.com/adobe/xdm/blob/master/schemas/context/profile-privacy.schema.json) ，或使用Platform UI預覽混音。
 
-### 描述檔偏好設定詳細資訊
+### [!DNL Profile Preferences Details]
 
-「描述檔偏好設定詳細資訊」混合檔提供數個欄位，代表客戶描述檔的偏好設定（例如電子郵件格式、偏好語言和時區）。 此混音中包含的其中一個欄位OptInOut(`optInOut`)可讓個別頻道設定選擇退出值。
+混 [!DNL Profile Preferences Details] 音提供數個欄位，代表客戶個人檔案的偏好設定（例如電子郵件格式、偏好語言和時區）。 此混音中包含的其中一個欄位OptInOut(`optInOut`)可讓個別頻道設定選擇退出值。
 
 ![](images/opt-outs/profile-preferences-details.png)
 
-「描述檔偏好設定詳細資料」混合包含下列與退出相關的欄位：
+混 [!DNL Profile Preferences Details] 音包含下列與退出相關的欄位：
 
 - OptInOut(`optInOut`): 其中每個密鑰代表通信通道的有效和已知URI的對象，以及每個通道的退出的活動狀態。 每個渠道可能有四個可能值之一：
    - 未提供(`not_provided`): 此渠道未提供選擇退出請求。
