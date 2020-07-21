@@ -4,19 +4,19 @@ solution: Experience Platform
 title: 使用RStudio連線
 topic: connect
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 3b710e7a20975880376f7e434ea4d79c01fa0ce5
 workflow-type: tm+mt
-source-wordcount: '222'
+source-wordcount: '209'
 ht-degree: 2%
 
 ---
 
 
-# 使用RStudio連線
+# 連接 [!DNL RStudio]
 
-本檔案將逐步說明如何將R Studio與Adobe Experience Platform Query Service連接。
+本檔案將逐步說明如何將R Studio與Adobe Experience Platform連接 [!DNL Query Service]。
 
-在安裝RStudio後，在出現的 *Console* 螢幕上，首先需要準備R指令碼以使用PostgreSQL。
+在安裝 [!DNL RStudio]後，在出現的 *Console* （控制台）畫面上，您首先需要準備R指令碼才能使用 [!DNL PostgreSQL]。
 
 ```r
 install.packages("RPostgreSQL")
@@ -25,7 +25,7 @@ require("RPostgreSQL")
 require("rstudioapi")
 ```
 
-在準備好R指令碼以使用PostgreSQL後，現在可以通過載入PostgreSQL驅動程式將RStudio連接到查詢服務。
+在準備好R指令碼使用後 [!DNL PostgreSQL]，您現在可以通過加 [!DNL RStudio] 載驅 [!DNL Query Service] 動程式連接 [!DNL PostgreSQL] 到。
 
 ```r
 drv <- dbDriver("PostgreSQL")
@@ -45,11 +45,11 @@ con <- dbConnect(drv,
 
 >[!NOTE]
 >
->有關查找資料庫名稱、主機、埠和登錄憑據的詳細資訊，請訪問平台 [上的憑據頁](https://platform.adobe.com/query/configuration)。 若要尋找您的認證，請登入「平台」，按一下「 **查詢**」，然後按一 **下「認證」**。
+>有關查找資料庫名稱、主機、埠和登錄憑據的詳細資訊，請訪問平台 [上的憑據頁](https://platform.adobe.com/query/configuration)。 若要尋找您的認證，請登入，按一 [!DNL Platform]下「查 **[!UICONTROL 詢]**」，然後按一 **[!UICONTROL 下「認證]**」。
 
 ## 後續步驟
 
-現在您已連接到查詢服務，可以編寫查詢以執行和編輯SQL陳述式。 例如，您可以使 `dbGetQuery(con, sql)` 用執行查詢，其 `sql` 中是要運行的SQL查詢。
+現在您已連接到 [!DNL Query Service]，您可以編寫查詢以執行和編輯SQL陳述式。 例如，您可以使 `dbGetQuery(con, sql)` 用執行查詢，其 `sql` 中是要運行的SQL查詢。
 
 下列查詢使用包含 [ExperienceEvents的資料集](../creating-queries/experience-event-queries.md) ，並根據裝置的螢幕高度建立網站頁面檢視的色階分佈圖。
 
