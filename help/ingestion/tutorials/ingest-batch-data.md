@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 將資料內嵌至Adobe Experience Platform
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 3f1c3c77a0755a3e305da0fb8a234be0f0ee1863
+source-git-commit: bfbf2074a9dcadd809de043d62f7d2ddaa7c7b31
 workflow-type: tm+mt
-source-wordcount: '1284'
+source-wordcount: '1277'
 ht-degree: 0%
 
 ---
@@ -26,7 +26,7 @@ Adobe Experience Platform可讓您輕鬆將資料匯入成批 [!DNL Platform] �
 
 Datasets工作區 [!DNL Experience Platform] 可讓您檢視和管理IMS組織建立的所有資料集，並建立新的資料集。
 
-按一下左側導覽中的「資 **[!UICONTROL 料集]** 」，檢視「資料集」工作區。 「資料集」清單包含 _Name_、Created _（日期和時間）、Created_ (Source Date and Time)、 ________ Source Chema Last Batch Status、As as the Date and time the date ad Last Jodat Jadepated Last Plast.
+按一下左側導覽中的「資 **[!UICONTROL 料集]** 」，檢視「資料集」工作區。 「資料集」清單包含 _[!UICONTROL Name]_、Created_[!UICONTROL （日期和時間）、Created]_ (Source Date and Time)、 ________Source Chema Last Batch Status、As as the Date and time the date ad Last Jodat Jadepated Last Plast.
 
 >[!NOTE]
 >
@@ -70,9 +70,9 @@ Datasets工作區 [!DNL Experience Platform] 可讓您檢視和管理IMS組織�
 
 現在已建立空的資料集，您已返回「資料集」工作區 **[!UICONTROL 的「資料集活動]** 」標籤。 您應該會在工作區的左上角看到資料集名稱，以及「未新增任何批次」通知。 由於您尚未將任何批次新增至此資料集，因此預期會出現此情況。
 
-在Datasets的右側，您會看到與新資料集相關的 **[!UICONTROL Info]**_Tab，例如_ Info _ID、AdSignDesignDesignDesignDesignDesignDatases,___________ DDDSigSiDSinasig。 「資訊」標籤也包含資料集何時建立及其「上 _次修改_ 」日 _期的相關資訊_ 。
+在Datasets的右側，您會看到與新資料集相關的 **[!UICONTROL Info]**_[!UICONTROL Tab，例如]_Info_[!UICONTROL  ID、AdSignDesignDesignDesignDesignDesignDatases,]___________DDDSigSiDSinasig。 「資訊」標籤也包含資料集何時建立及其「上_[!UICONTROL &#x200B;次修改]_ 」日 _[!UICONTROL 期的相關資訊]_。
 
-另外，在「資訊」索引標籤中 _也有「設定檔_ 」切換，用於啟用您的資料集以搭配使用 [!DNL Real-time Customer Profile]。 此切換的使用， [!DNL Real-time Customer Profile]以及，將在後面的章節中詳細說明。
+另外，在「資訊」索引標籤中 _[!UICONTROL 也有「設定檔]_」切換，用於啟用您的資料集以搭配使用[!DNL Real-time Customer Profile]。 此切換的使用，[!DNL Real-time Customer Profile]以及，將在後面的章節中詳細說明。
 
 ![資料集活動](../images/tutorials/ingest-batch-data/dataset_activity.png)
 
@@ -88,7 +88,7 @@ Datasets工作區 [!DNL Experience Platform] 可讓您檢視和管理IMS組織�
 
 ![描述檔切換](../images/tutorials/ingest-batch-data/enable_dataset_unified_profile.png)
 
-會出現對話方塊，要求您確認您要啟用即時客戶個人檔案的資料集。
+將出現一個對話框，要求您確認要為啟用資料集 [!DNL Real-time Customer Profile]。
 
 ![「啟用配置檔案」對話框](../images/tutorials/ingest-batch-data/confirm_dataset_enable.png)
 
@@ -98,7 +98,7 @@ Datasets工作區 [!DNL Experience Platform] 可讓您檢視和管理IMS組織�
 
 ## 新增資料至資料集
 
-資料可以多種不同的方式新增至資料集。 您可以選擇使用資料擷取API或ETL合作夥伴，例如Unifi或Informatica。 在本教學課程中，資料將會使用UI中的「新增資 **[!UICONTROL 料]** 」標籤新增至資料集。
+資料可以多種不同的方式新增至資料集。 您可以選擇使 [!DNL Data Ingestion] 用API或ETL合作夥伴， [!DNL Unifi] 例如或 [!DNL Informatica]。 在本教學課程中，資料將會使用UI中的「新增資 **[!UICONTROL 料]** 」標籤新增至資料集。
 
 若要開始將資料新增至資料集，請按一下「新增 **[!UICONTROL 資料]** 」標籤。 您現在可以拖放檔案，或瀏覽您的電腦以尋找您要新增的檔案。
 
@@ -116,19 +116,19 @@ Datasets工作區 [!DNL Experience Platform] 可讓您檢視和管理IMS組織�
 
 ## 資料集度量
 
-檔案上傳完成後，「資料集活 **[!UICONTROL 動]** 」標籤不會再顯示「未新增任何批次」。 現在，「資料集活動」標籤會顯示資料集度量。 由於批次尚未載入，所有量度在此階段會顯示「0」。
+檔案上傳完成後，「資料集活 **[!UICONTROL 動]** 」標籤不會再顯示「未新增任何批次」。 現在，「資料集 *[!UICONTROL 活動」標籤]* ，會顯示資料集度量。 由於批次尚未載入，所有量度在此階段會顯示「0」。
 
-在標籤的底部有一個清單，其中顯示剛透過「新增資料至資料集」程式所擷取之 _資料的批次ID_[](#add-data-to-dataset) 。 另外還包括與批相關的資訊，包括「 _吸收日期_ 」、「吸收 _記錄數_」和當前批狀 _態_。
+在標籤的底部有一個清單，其中顯示剛透過「新增資料至資料集」程式所擷取之 _[!UICONTROL 資料的批次ID]_[](#add-data-to-dataset)。 另外還包括與批相關的資訊，包括「_[!UICONTROL &#x200B;吸收日期]_ 」、「吸收 _[!UICONTROL 記錄數]_」和當前批狀_[!UICONTROL &#x200B;態]_。
 
 ![資料集度量](../images/tutorials/ingest-batch-data/batch_loading.png)
 
 ## 批次詳細資訊
 
-按一下「批 _次ID_ 」以檢視「批 **[!UICONTROL 次概述」]**，顯示有關批次的其他詳細資訊。 在批次完成載入後，有關批次的資訊將會更新，以顯示「已收錄的記 _錄數_ 」和「檔 _案大小」_。 「狀 _態_ 」也會變更為「成功」或「失敗」。 如果批處理失敗，「錯 _誤代碼_ 」部分將包含有關接收過程中任何錯誤的詳細資訊。
+按一下「批 _[!UICONTROL 次ID]_」以檢視「批**[!UICONTROL &#x200B;次概述」]**，顯示有關批次的其他詳細資訊。 在批次完成載入後，有關批次的資訊將會更新，以顯示「已收錄的記_[!UICONTROL &#x200B;錄數]_ 」和「檔 _[!UICONTROL 案大小」]_。 「狀_[!UICONTROL &#x200B;態]_ 」也會變更為「成功」或「失敗」。 如果批處理失敗，「錯 _[!UICONTROL 誤代碼]_」部分將包含有關接收過程中任何錯誤的詳細資訊。
 
 如需有關批次擷取的詳細資訊和常見問題，請參閱批次擷取 [疑難排解指南](../batch-ingestion/troubleshooting.md)。
 
-若要返回「資 **料集活動** 」畫面，請按一下網站導覽路徑標示中的資料集名稱(_Loyalty Details_)。
+若要返回「資 **[!UICONTROL 料集活動]** 」畫面，請按一下網站導覽路徑標示中的資料集名稱(_[!UICONTROL Loyalty Details]_)。
 
 ![批次概述](../images/tutorials/ingest-batch-data/batch_overview.png)
 
