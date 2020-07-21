@@ -4,14 +4,17 @@ solution: Experience Platform
 title: 算術函式
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 92f92f480f29f7d6440f4e90af3225f9a1fcc3d0
+source-git-commit: 6a0a9b020b0dc89a829c557bdf29b66508a10333
+workflow-type: tm+mt
+source-wordcount: '230'
+ht-degree: 5%
 
 ---
 
 
 # 算術函式
 
-算術函式用於對配置檔案查詢語言(PQL)中的值執行基本計算。 有關其他PQL函式的詳細資訊，請參閱「配置檔案查 [詢語言」概述](./overview.md)。
+算術函式用於對(PQL)中的值執 [!DNL Profile Query Language] 行基本計算。 有關其他PQL函式的詳細資訊，請參閱「配置檔案查 [詢語言」概述](./overview.md)。
 
 ## 新增
 
