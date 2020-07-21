@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 評估區段
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: c0eacfba2feea66803e63ed55ad9d0a97e9ae47c
+source-git-commit: 6a0a9b020b0dc89a829c557bdf29b66508a10333
 workflow-type: tm+mt
-source-wordcount: '1543'
+source-wordcount: '1519'
 ht-degree: 0%
 
 ---
@@ -59,7 +59,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->XDM個別設定檔的合併原則上限為五(5)個沙盒，可啟用排程的評估。 如果貴組織在單一沙盒環境中有5種以上的XDM個人設定檔合併原則，您將無法使用排程的評估。
+>對於最多5(5)個合併策略的沙盒，可啟用計畫評估 [!DNL XDM Individual Profile]。 如果貴組織在單一沙盒環境中有5 [!DNL XDM Individual Profile] 種以上的合併原則，您將無法使用排程的評估。
 
 ### 建立排程
 
@@ -69,7 +69,7 @@ ht-degree: 0%
 
 ### 啟用排程
 
-預設情況下，建立計畫時不活動，除非 `state` 在建立(POST)請 `active` 求主體中將屬性設定為。 通過向端點發出PATCH請求並在路徑中包 `state``active``/config/schedules` 括調度的ID，可以啟用調度（將設定為）。
+預設情況下，建立計畫時，除非將屬 `state` 性設定為建立(POST) `active` 請求主體中，否則該計畫處於非活動狀態。 通過向端點發出PATCH請求並在路徑中包 `state``active``/config/schedules` 括調度的ID，可以啟用調度（將設定為）。
 
 有關使用此端點的詳細資訊，請參閱計畫端 [點指南](../api/schedules.md#update-state)
 
@@ -157,11 +157,11 @@ ht-degree: 0%
 
 匯出對象時，必須先建立目標資料集。 請務必正確設定資料集，以確保匯出成功。
 
-主要考量事項之一是資料集所依據的架構(在下`schemaRef.id` 面的API範例請求中)。 若要匯出區段，資料集必須以XDM個別描述檔結合架構(`https://ns.adobe.com/xdm/context/profile__union`)為基礎。 聯合模式是系統生成的只讀模式，它聚合共用相同類的模式的欄位（在本例中為XDM Individual Profile類）。 有關聯合視圖方案的詳細資訊，請參閱 [方案註冊開發人員指南的「即時客戶概要檔案」部分](../../xdm/api/getting-started.md)。
+主要考量事項之一是資料集所依據的架構(在下`schemaRef.id` 面的API範例請求中)。 若要匯出區段，資料集必須以( [!DNL XDM Individual Profile Union Schema]`https://ns.adobe.com/xdm/context/profile__union`)為基礎。 聯合模式是系統生成的只讀模式，它聚合共用相同類的模式的欄位（在本例中為XDM Individual Profile類）。 有關聯合視圖方案的詳細資訊，請參閱 [方案註冊開發人員指南的「即時客戶概要檔案」部分](../../xdm/api/getting-started.md)。
 
 建立必要資料集有兩種方式：
 
-- **使用API:** 本教學課程中的後續步驟概述如何使用目錄API建立參照XDM個別描述檔結合架構的資料集。
+- **使用API:** 本教學課程中後續的步驟概述如何建立使用API參考 [!DNL XDM Individual Profile Union Schema] 的資 [!DNL Catalog] 料集。
 - **使用UI:** 若要使用 [!DNL Adobe Experience Platform] 使用者介面來建立參照聯合架構的資料集，請依照 [UI教學課程中的步驟進行，然後返回本教學課程，以繼續產生觀眾設定檔](../ui/overview.md) 的步驟 [](#generate-xdm-profiles-for-audience-members)。
 
 如果您已擁有相容的資料集並知道其ID，則可直接執行步驟，以產生觀 [眾設定檔](#generate-xdm-profiles-for-audience-members)。
@@ -228,10 +228,10 @@ curl -X POST \
 
 ## 後續步驟
 
-匯出成功後，您的資料就可在中的「資料湖」中使用 [!DNL Experience Platform]。 然後，您就可以使 [用「資料存取API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-access-api.yaml) 」，使用與匯出相 `batchId` 關的資料來存取資料。 視區段大小而定，資料可能以區塊為單位，而批次可能由數個檔案組成。
+成功完成導出後，您的資料即可在中 [!DNL Data Lake] 使用 [!DNL Experience Platform]。 然後，您可以使用 [!DNL Data Access API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-access-api.yaml) 與導出相關聯的 `batchId` 訪問資料。 視區段大小而定，資料可能以區塊為單位，而批次可能由數個檔案組成。
 
 如需如何使用 [!DNL Data Access] API存取和下載批次檔案的逐步指示，請遵循資料存取 [教學課程](../../data-access/tutorials/dataset-data.md)。
 
-您也可以使用存取成功匯出的區段資料 [!DNL Adobe Experience Platform Query Service]。 使用UI或RESTful API, [!DNL Query Service] 可讓您在資料湖中編寫、驗證及執行資料查詢。
+您也可以使用存取成功匯出的區段資料 [!DNL Adobe Experience Platform Query Service]。 使用UI或RESTful API, [!DNL Query Service] 可讓您編寫、驗證及執行查詢中的資料 [!DNL Data Lake]。
 
 有關如何查詢受眾資料的更多資訊，請參閱上的檔案 [!DNL Query Service](../../query-service/home.md)。
