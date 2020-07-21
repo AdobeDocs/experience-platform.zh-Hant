@@ -4,15 +4,15 @@ solution: Experience Platform
 title: Adobe Experience Platform細分服務資料類型
 topic: overview
 translation-type: tm+mt
-source-git-commit: cb6a2f91eb6c18835bd9542e5b66af4682227491
+source-git-commit: 6a0a9b020b0dc89a829c557bdf29b66508a10333
 workflow-type: tm+mt
-source-wordcount: '411'
+source-wordcount: '406'
 ht-degree: 1%
 
 ---
 
 
-# Adobe Experience Platform細分服務支援的資料類型
+# Adobe Experience Platform支援 [!DNL Segmentation Service] 的資料類型
 
 支援內的所有XDM資料類型 [!DNL Segmentation Service]。 構成區段定義的規則會依下列資料類型來情境化。
 
@@ -39,7 +39,7 @@ ht-degree: 1%
 
 ## 體驗事件
 
-XDM ExperienceEvents是Adobe Experience Platform架構，記錄客戶與整合式應用程式的明確和隱含互動，包括互動發生時的系統快照。 [!DNL Platform]ExperienceEvents是事實記錄。 因此，它們是區段定義期間可供您使用的資料來源。
+以Adobe Experience Platform架構 [!DNL XDM ExperienceEvents][!DNL Platform]記錄客戶與整合式應用程式的明確和隱含互動，包括互動發生時的系統快照。 [!DNL ExperienceEvents] 是事實記錄。 因此，它們是區段定義期間可供您使用的資料來源。
 
 如下表所示，事件資料會使用有助於調整事件行為並指定事件屬性的關鍵字來呈現。
 
