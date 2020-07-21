@@ -4,23 +4,23 @@ solution: Experience Platform
 title: 使用查詢參數篩選目錄資料
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
 workflow-type: tm+mt
-source-wordcount: '2060'
+source-wordcount: '2033'
 ht-degree: 1%
 
 ---
 
 
-# 使用查詢參數篩選目錄資料
+# 使用查 [!DNL Catalog] 詢參數篩選資料
 
-目錄服務API允許透過使用請求查詢參數來篩選回應資料。 目錄的最佳實務是在所有API呼叫中使用篩選器，因為這些篩選器可減輕API的負載，並有助於改善整體效能。
+API [!DNL Catalog Service] 允許透過使用請求查詢參數來篩選回應資料。 最佳實務的一 [!DNL Catalog] 部分是在所有API呼叫中使用篩選器，因為這些篩選器可減少API的負載並協助改善整體效能。
 
-本檔案概述在API中篩選目錄物件的最常用方法。 建議您在閱讀 [Catalog開發人員指南時參考本檔案](getting-started.md) ，以進一步瞭解如何與Catalog API互動。 有關目錄服務的更多一般資訊，請參 [閱目錄概述](../home.md)。
+本檔案概述API中篩選物件 [!DNL Catalog] 最常用的方法。 建議您在閱讀 [Catalog開發人員指南時參考本檔案](getting-started.md) ，以進一步瞭解如何與 [!DNL Catalog] API互動。 有關的更多一般信 [!DNL Catalog Service]息，請參閱 [目錄概述](../home.md)。
 
 ## 限制返回的對象
 
-查詢 `limit` 參數會限制在回應中傳回的物件數目。 目錄回應會根據設定的限制自動計量：
+查詢 `limit` 參數會限制在回應中傳回的物件數目。 [!DNL Catalog] 回應會根據設定的限制自動計量：
 
 * 如果未 `limit` 指定參數，則每個回應裝載的物件數上限為20。
 * 對於資料集查詢，如 `observableSchema` 果使用查詢參數 `properties` 請求，則返回的資料集的最大數量為20。
@@ -36,7 +36,7 @@ GET /{OBJECT_TYPE}?limit={LIMIT}
 
 | 參數 | 說明 |
 | --- | --- |
-| `{OBJECT_TYPE}` | 要檢索的目錄對象的類型。 有效對象包括： <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_TYPE}` | 要檢索 [!DNL Catalog] 的對象類型。 有效對象包括： <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
 | `{LIMIT}` | 一個整數，表示要返回的對象數，範圍從1到100。 |
 
 **請求**
@@ -104,9 +104,9 @@ GET /{OBJECT_TYPE}/{OBJECT_ID}?properties={PROPERTY_1},{PROPERTY_2},{PROPERTY_3}
 
 | 參數 | 說明 |
 | --- | --- |
-| `{OBJECT_TYPE}` | 要檢索的目錄對象的類型。 有效對象包括： <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_TYPE}` | 要檢索 [!DNL Catalog] 的對象類型。 有效對象包括： <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
 | `{PROPERTY}` | 要包含在響應主體中的屬性的名稱。 |
-| `{OBJECT_ID}` | 要檢索的特定目錄對象的唯一標識符。 |
+| `{OBJECT_ID}` | 要檢索的特定對象的唯 [!DNL Catalog] 一標識符。 |
 
 **請求**
 
@@ -123,7 +123,7 @@ curl -X GET \
 
 **回應**
 
-成功的響應返回僅顯示請求屬性的目錄對象清單。
+成功的響應返回僅顯示所 [!DNL Catalog] 請求屬性的對象清單。
 
 ```json
 {
@@ -205,9 +205,9 @@ curl -X GET \
 * 目前唯一支援標籤的目錄對象是資料集、批處理和連接。
 * 標籤名稱是IMS組織唯一的。
 * Adobe程式可能會針對某些行為使用標籤。 這些標籤的名稱會以&quot;adobe&quot;為前置詞作為標準。 因此，在聲明標籤名稱時，應避免此慣例。
-* 下列標籤名稱會保留供跨Experience Platform使用，因此無法宣告為您組織的標籤名稱：
-   * `unifiedProfile`: 此標籤名稱保留給要由即時客戶配置 [檔案接收的資料集](../../profile/home.md)。
-   * `unifiedIdentity`: 此標籤名稱保留給要由 [Identity Service收錄的資料集](../../identity-service/home.md)。
+* 下列標籤名稱會保留供跨組織使 [!DNL Experience Platform]用，因此無法宣告為您組織的標籤名稱：
+   * `unifiedProfile`: 此標籤名稱保留給要被收錄的資料集 [!DNL Real-time Customer Profile](../../profile/home.md)。
+   * `unifiedIdentity`: 此標籤名稱保留給要被收錄的資料集 [!DNL Identity Service](../../identity-service/home.md)。
 
 以下是包含屬性的資料集范 `tags` 例。 該屬性中的標籤採用鍵值配對的形式，每個標籤值顯示為包含單一字串的陣列：
 
@@ -250,7 +250,7 @@ curl -X GET \
 
 參數的 `tags` 值採用鍵值對的形式，使用格式 `{TAG_NAME}:{TAG_VALUE}`。 可以以逗號分隔的清單形式提供多個鍵值對。 當提供多個標籤時，會假設AND關係。
 
-此參數支援標籤值`*`的萬用字元()。 例如，搜尋字串會傳 `test*` 回標籤值以&quot;test&quot;開頭的任何物件。 僅由通配符組成的搜索字串可用於根據對象是否包含特定標籤（無論其值如何）來過濾對象。
+此參數支援標籤值`*`的萬用字元()。 例如，搜尋字串會傳 `test*` 回任何標籤值以&quot;test&quot;開頭的物件。 僅由通配符組成的搜索字串可用於根據對象是否包含特定標籤（無論其值如何）來過濾對象。
 
 ```http
 GET /{OBJECT_TYPE}?tags={TAG_NAME}:{TAG_VALUE}
@@ -261,7 +261,7 @@ GET /{OBJECT_TYPE}?tags={TAG_NAME}:*
 
 | 參數 | 說明 |
 | --- | --- |
-| `{OBJECT_TYPE}` | 要檢索的目錄對象的類型。 有效對象包括： <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`dataSets`</li></ul> |
+| `{OBJECT_TYPE}` | 要檢索 [!DNL Catalog] 的對象類型。 有效對象包括： <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`dataSets`</li></ul> |
 | `{TAG_NAME}` | 要篩選依據的標籤名稱。 |
 | `{TAG_VALUE}` | 要篩選依據的標籤值。 支援萬用字元(`*`)。 |
 
@@ -332,7 +332,7 @@ curl -X GET \
 
 ## 依日期範圍篩選
 
-目錄API中的某些端點具有允許區間查詢的查詢參數，在日期的情況下最常出現。
+API中的某些 [!DNL Catalog] 端點具有允許區間查詢的查詢參數，在日期的情況下最常出現。
 
 **API格式**
 
@@ -359,7 +359,7 @@ curl -X GET \
 
 **回應**
 
-成功的回應包含位於指定日期範圍內的目錄物件清單。 除非另有指定限制，否則回應最多包含20個物件。
+成功的回應包含位於指 [!DNL Catalog] 定日期範圍內的物件清單。 除非另有指定限制，否則回應最多包含20個物件。
 
 ```json
 {
@@ -427,7 +427,7 @@ curl -X GET \
 
 **回應**
 
-成功的響應包含根據參數排序的目錄對象列 `orderBy` 表。 除非另有指定限制，否則回應最多包含20個物件。
+成功的響應包含根據參 [!DNL Catalog] 數排序的對象列 `orderBy` 表。 除非另有指定限制，否則回應最多包含20個物件。
 
 ```json
 {
@@ -472,7 +472,7 @@ curl -X GET \
 
 ## 依屬性篩選
 
-Catalog提供兩種依屬性篩選的方法，這些方法在下列各節中進一步概述：
+[!DNL Catalog] 提供兩種依屬性篩選的方法，這些方法在下列章節中進一步概述：
 
 * [使用簡單篩選](#using-simple-filters): 依特定屬性是否符合特定值來篩選。
 * [使用屬性參數](#using-the-property-parameter): 使用條件運算式來篩選屬性是否存在，或屬性的值是否與其他指定值或規則運算式相符、相近或相比較。
@@ -496,7 +496,7 @@ GET /{OBJECT_TYPE}?{PROPERTY_NAME}=!{VALUE_1},{VALUE_2},{VALUE_3}
 
 | 參數 | 說明 |
 | --- | --- |
-| `{OBJECT_TYPE}` | 要檢索的目錄對象的類型。 有效對象包括： <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_TYPE}` | 要檢索 [!DNL Catalog] 的對象類型。 有效對象包括： <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
 | `{PROPERTY_NAME}` | 您要篩選其值的屬性名稱。 |
 | `{VALUE}` | 一個屬性值，它決定要包括（或排除，視查詢而定）哪些結果。 |
 
@@ -572,7 +572,7 @@ GET /{OBJECT_TYPE}?property={CONDITION}
 
 | 參數 | 說明 |
 | --- | --- |
-| `{OBJECT_TYPE}` | 要檢索的目錄對象的類型。 有效對象包括： <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_TYPE}` | 要檢索 [!DNL Catalog] 的對象類型。 有效對象包括： <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
 | `{CONDITION}` | 一個條件式運算式，指出要查詢的屬性，以及如何評估其值。 以下提供範例。 |
 
 參數的值支 `property` 援數種不同的條件運算式。 下表概述支援運算式的基本語法：
