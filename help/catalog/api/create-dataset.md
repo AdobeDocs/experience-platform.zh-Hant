@@ -4,21 +4,21 @@ solution: Experience Platform
 title: 建立資料集
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
 workflow-type: tm+mt
-source-wordcount: '203'
-ht-degree: 1%
+source-wordcount: '197'
+ht-degree: 2%
 
 ---
 
 
 # 建立資料集
 
-若要使用目錄API建立資料集，您必須知道 `$id` 資料集所依據的體驗資料模型(XDM)架構值。 一旦您擁有結構ID，就可以透過對目錄API中的端點提出POST要求來 `/datasets` 建立資料集。
+若要使用 [!DNL Catalog] API建立資料集，您必須知 `$id` 道資料 [!DNL Experience Data Model] 集所依據的(XDM)架構值。 一旦您擁有架構ID，就可以透過對API中的端點提出POST要求來 `/datasets` 建立資 [!DNL Catalog] 料集。
 
 >[!NOTE]
 >
->本檔案僅涵蓋如何在目錄中建立資料集物件。 有關如何建立、填入和監視資料集的完整步驟，請參閱下列教 [學課程](../datasets/create.md)。
+>本文檔僅介紹如何在中建立資料集對象 [!DNL Catalog]。 有關如何建立、填入和監視資料集的完整步驟，請參閱下列教 [學課程](../datasets/create.md)。
 
 **API格式**
 
