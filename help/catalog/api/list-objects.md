@@ -4,10 +4,10 @@ solution: Experience Platform
 title: 清單對象
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
 workflow-type: tm+mt
-source-wordcount: '204'
-ht-degree: 1%
+source-wordcount: '197'
+ht-degree: 2%
 
 ---
 
@@ -25,7 +25,7 @@ GET /{OBJECT_TYPE}?{FILTER}={VALUE}&{FILTER_2}={VALUE}
 
 | 參數 | 說明 |
 | --- | --- |
-| `{OBJECT_TYPE}` | 要列出的目錄對象類型。 有效對象包括： <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_TYPE}` | 要列出 [!DNL Catalog] 的對象類型。 有效對象包括： <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
 | `{FILTER}` | 用於篩選在回應中傳回結果的查詢參數。 多個參數會以&amp;符號(`&`)分隔。 如需詳細資訊，請 [參閱篩選目錄資料](filter-data.md) 指南。 |
 
 **請求**
@@ -43,11 +43,11 @@ curl -X GET \
 
 **回應**
 
-成功的響應以鍵值對的形式返回目錄對象的清單，該清單由請求中提供的查詢參數篩選。 對於每個鍵值對，鍵代表有關目錄對象的唯一標識符，然後可用於另一個調用中，以查看該特 [定對象](look-up-object.md) ，以瞭解詳細資訊。
+成功的響應以鍵值對的 [!DNL Catalog] 形式返回對象清單，該清單由請求中提供的查詢參數過濾。 對於每個鍵值對，鍵代表有關對象的唯一標識符，然後，該標識符可用於另一個調用中，以查看該 [!DNL Catalog] 特定對象 [](look-up-object.md) ，以瞭解詳細資訊。
 
 >[!NOTE]
 >
->如果返回的對象不包含查詢所指示的一個或多個請求屬性，則響應只返回它所包含的請求屬性，如下面的「示例資料集3」和「示例資料集4」所示。 `properties`
+>如果返回的對象不包含查詢所指示的一個或多個請求屬性，則響應僅返回它所包含的請求屬性，如下 `properties` 所示 ***`Sample Dataset 3`******`Sample Dataset 4`*** 。
 
 ```json
 {
