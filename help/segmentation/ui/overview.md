@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 區段產生器UI指南
 topic: ui guide
 translation-type: tm+mt
-source-git-commit: f44e42a4faa3b10f147dbaf929048054ce0bec42
+source-git-commit: 6a0a9b020b0dc89a829c557bdf29b66508a10333
 workflow-type: tm+mt
-source-wordcount: '2750'
+source-wordcount: '2745'
 ht-degree: 0%
 
 ---
@@ -20,9 +20,9 @@ ht-degree: 0%
 
 使用區段定義需要瞭解區段所涉 [!DNL Experience Platform] 及的各種服務。 閱讀本使用指南之前，請先閱讀下列服務的說明檔案：
 
-- [!DNL Segmentation Service](../home.md): 區段服務可讓您將儲存在與個人( [!DNL Experience Platform] 例如客戶、潛在客戶、使用者或組織)相關的資料分割為小型群組，這些群組具有類似的特性，並會以類似的方式回應行銷策略。
+- [!DNL Segmentation Service](../home.md): [!DNL Segmentation Service] 可讓您將儲存在與個人( [!DNL Experience Platform] 如客戶、潛在客戶、使用者或組織)相關的資料分割為具有類似特性且回應類似行銷策略的較小群組。
 - [!DNL Real-time Customer Profile](../../profile/home.md): 根據來自多個來源的匯整資料，提供統一、即時的消費者個人檔案。
-- [!DNL Identity Service](../../identity-service/home.md): 可借 [!DNL Real-time Customer Profile] 由橋接來自不同資料來源的身分識別，並將其收錄至平台。
+- [!DNL Identity Service](../../identity-service/home.md): 可借 [!DNL Real-time Customer Profile] 由橋接來自不同資料來源的身分識別，並將之收錄在 [!DNL Platform]中。
 - [!DNL Experience Data Model (XDM)](../../xdm/home.md): 組織客戶體驗資料 [!DNL Platform] 的標準化架構。
 
 此外，務必瞭解本檔案使用的兩個關鍵詞，並瞭解它們之間的差異：
@@ -63,7 +63,7 @@ ht-degree: 0%
 
 ### 事件
 
-「事 **[!UICONTROL 件]** 」索引標籤可讓您根據使用XDM ExperienceEvent資料元素發生的事件或動作來建立觀眾。 您也可以在「事件」標籤上找 **[!UICONTROL 到事件類型]** ，這是常用事件的集合，可讓您更快速地建立區段。
+「事 **[!UICONTROL 件]** 」標籤可讓您根據使用資料元素發生的事件或動作來建立 [!DNL XDM ExperienceEvent] 對象。 您也可以在「事件」標籤上找 **[!UICONTROL 到事件類型]** ，這是常用事件的集合，可讓您更快速地建立區段。
 
 除了能夠瀏覽元素外，您還 [!DNL ExperienceEvent] 可以搜尋事件類型。 事件類型使用與相同的編碼邏 [!DNL ExperienceEvents]輯，而不需要您在類別中搜尋， [!DNL XDM ExperienceEvent] 以尋找正確的事件。 例如，使用搜尋列來搜尋「購物車」會傳回「事件類型」「[!UICONTROL AddCart]」和「[!UICONTROL RemoveCart]」，這兩個動作在建立區段定義時非常常用。
 
@@ -129,7 +129,7 @@ ht-degree: 0%
 
 區段規則依其列出順序進行評估。 容器允許使用巢狀查詢來控制執行順序。
 
-在規則產生器畫布中至少新增一個方塊後，您就可以開始新增容器。 若要建立新容器，請按一下圖格右上角的省略號(...)，然後按一下「新增容 **[!UICONTROL 器」]**。
+在規則產生器畫布中至少新增一個方塊後，您就可以開始新增容器。 若要建立新容器，請按一下圖格右上角的橢圓(...)，然後按一下「新增容 **[!UICONTROL 器」]**。
 
 ![](../images/segment-builder/add-container.png)
 
