@@ -4,9 +4,9 @@ seo-title: 雲端儲存目標工作流程
 description: 連線至雲端儲存空間的指示
 seo-description: 連線至雲端儲存空間的指示
 translation-type: tm+mt
-source-git-commit: 3c598454a868139b7604c5c7ca2b98fa0f1bb961
+source-git-commit: 6f680a60c88bc5fee6ce9cb5a4f314c4b9d02249
 workflow-type: tm+mt
-source-wordcount: '503'
+source-wordcount: '493'
 ht-degree: 0%
 
 ---
@@ -22,7 +22,7 @@ ht-degree: 0%
 
    ![連線至雲端儲存空間目標](/help/rtcdp/destinations/assets/connect-cloud-destination.png)
 
-2. 在「驗 **[!UICONTROL 證]** 」步驟中，如果您先前已設定雲端儲存空間目的地的連線，請選取「現有帳戶 **** 」並選取您現有的連線。 或者，您也可以選 **[!UICONTROL 取「新帳戶]** 」來設定雲端儲存目的地的新連線。 填寫您的帳戶驗證憑證，並選取「 **[!UICONTROL 連線至目的地」]**。 <br> 請參 [閱Amazon S3](/help/rtcdp/destinations/amazon-s3-destination.md) 、 [Amazon Kinesis](/help/rtcdp/destinations/amazon-kinesis-destination.md) 目標、 [Azure事件目標和](/help/rtcdp/destinations/azure-event-hubs-destination.md)[](/help/rtcdp/destinations/sftp-destination.md)**** SFTP目標，以獲得在Amazon Kinesis步驟中輸入的認證認證的相關憑證。
+2. 在「驗 **[!UICONTROL 證]** 」步驟中，如果您先前已設定雲端儲存空間目的地的連線，請選取「現有帳戶 **** 」並選取您現有的連線。 或者，您也可以選 **[!UICONTROL 取「新帳戶]** 」來設定雲端儲存目的地的新連線。 填寫您的帳戶驗證憑證，並選取「 **[!UICONTROL 連線至目的地」]**。 <br> 如需 [Amazon S3](/help/rtcdp/destinations/amazon-s3-destination.md) 、 [!DNL Amazon Kinesis](/help/rtcdp/destinations/amazon-kinesis-destination.md) Amazon S3目標、 [!DNL Azure Event Hubs](/help/rtcdp/destinations/azure-event-hubs-destination.md) 目標和 [SFTP](/help/rtcdp/destinations/sftp-destination.md) Destination的詳細資訊，請參閱 **** Amazon S3 Destination、Destination和SFTP Destination。
 
    >[!NOTE]
    >
@@ -40,11 +40,11 @@ ht-degree: 0%
 
    ![連線至SFTP雲端儲存空間目標——驗證步驟](/help/rtcdp/destinations/assets/sftp-destinations-setup-step.png)
 
-   對於Amazon Kinesis目標，請提供帳戶中現有資料流的名 [!DNL Amazon Kinesis] 稱。 Adobe即時CDP會將資料匯出至此串流。 在填 **[!UICONTROL 入上述欄位後]** ，選取「建立目標」。
+   對於 [!DNL Amazon Kinesis] 目標，請提供帳戶中現有資料流的名 [!DNL Amazon Kinesis] 稱。 Adobe即時CDP會將資料匯出至此串流。 在填 **[!UICONTROL 入上述欄位後]** ，選取「建立目標」。
 
    ![連接到Kinesis雲儲存目標——驗證步驟](/help/rtcdp/destinations/assets/kinesis-destinations-setup-step.png)
 
-   對於Azure事件中樞目的地，請提供您帳戶中現有資料流的名 [!DNL Amazon Kinesis] 稱。 Adobe即時CDP會將資料匯出至此串流。 在填 **[!UICONTROL 入上述欄位後]** ，選取「建立目標」。
+   對於 [!DNL Azure Event Hubs] 目標，請提供帳戶中現有資料流的名 [!DNL Amazon Kinesis] 稱。 Adobe即時CDP會將資料匯出至此串流。 在填 **[!UICONTROL 入上述欄位後]** ，選取「建立目標」。
 
    ![連接到Kinesis雲儲存目標——驗證步驟](/help/rtcdp/destinations/assets/eventhubs-destinations-setup-step.png)
 
