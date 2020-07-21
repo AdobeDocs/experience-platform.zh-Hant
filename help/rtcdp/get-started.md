@@ -4,7 +4,10 @@ seo-title: Adobe即時客戶資料平台快速入門
 description: Adobe即時客戶資料平台的範例案例
 seo-description: Adobe即時客戶資料平台的範例案例
 translation-type: tm+mt
-source-git-commit: eb26b9fbe2f4b63ea411ca61735f6e1b5308777c
+source-git-commit: b96286f6a06f0583b45343a513ee64f0025d79a7
+workflow-type: tm+mt
+source-wordcount: '2326'
+ht-degree: 0%
 
 ---
 
@@ -16,7 +19,7 @@ source-git-commit: eb26b9fbe2f4b63ea411ca61735f6e1b5308777c
 此範例說明Adobe Experience Platform所提供的Adobe即時客戶資料平台對下列各項的強大功能：
 
 * 從多個來源收錄資料
-* 將它們合併為單一即時客戶個人檔案
+* 將它們合併為單一 [!DNL real-time customer profile]
 * 跨裝置提供一致、相關且個人化的體驗。
 
 ## 使用案例
@@ -62,9 +65,9 @@ source-git-commit: eb26b9fbe2f4b63ea411ca61735f6e1b5308777c
 
 當客戶第一次瀏覽您的網站時，您對他們一無所知。
 
-![影像](assets/luma-site.png)
+![image](assets/luma-site.png)
 
-資料在導覽時即時擷取，不僅會傳送至Adobe Analytics中的報表套裝，還會直接傳送至Adobe Experience Platform。 在收集資料時，您會開始根據Experience Platform即時客戶個人檔案中的行為資料，對消費者形成單一檢視。
+資料在導覽時即時擷取，不僅會傳送至Adobe Analytics中的報表套裝，還會直接傳送至Adobe Experience Platform。 在收集資料時，您會開始根據中的行為資料，對消費者形成單一檢視 [!DNL Experience Platform's real-time customer profile]。
 
 許多網站的訪客可能是舊有從Luma購買的客戶。  Luma必須個人化訊息傳遞和產品，以解決新訪客和回頭訪客以及已知客戶的問題。
 
@@ -72,9 +75,9 @@ source-git-commit: eb26b9fbe2f4b63ea411ca61735f6e1b5308777c
 
 例如，獨立身份的訪客導覽至Luma網站的「男」區段，並檢視兩對穿運動衫的訪客。
 
-![影像](assets/luma-sweatshirts.png)
+![image](assets/luma-sweatshirts.png)
 
-當客戶點按以進一步瞭解這些產品時，這些產品檢視會收集在Adobe Analytics中，並傳送至Experience Platform。
+當客戶點按以進一步瞭解這些產品時，這些產品檢視會收集在Adobe Analytics中並傳送至 [!DNL Experience Platform]。
 
 <!--![image](assets/luma-shirt-detail.png)-->
 
@@ -86,16 +89,16 @@ Luma可將訪客的行為對應至Adobe Experience Platform上的使用者個人
 
 當客戶登入時，她把自己稱為莎拉·羅斯。
 
-![影像](assets/luma-login.png)
+![image](assets/luma-login.png)
 
 將合併兩個標識：
 
 * 匿名瀏覽資料
 * 與Sarah Rose帳戶相關的現有資料
 
-這兩個識別碼都會結合為Experience Platform中的單一個人檔案。 Luma現在對這個消費者有了統一的看法。
+這兩個識別都會合併為單一描述檔 [!DNL Experience Platform]。 Luma現在對這個消費者有了統一的看法。
 
-根據網站「男性」區段中匿名訪客的瀏覽行為，可能假設該客戶為男性。 現在她登入後，Luma就認識Sarah Rose。 Luma運用即時客戶個人檔案的強大功能，來調整跨通道傳遞給她的訊息。
+根據網站「男性」區段中匿名訪客的瀏覽行為，可能假設該客戶為男性。 現在她登入後，Luma就認識Sarah Rose。 Luma運用Adobe的強大功 [!DNL Real-time Customer Profile] 能來調整跨通道傳遞給她的訊息。
 
 ## 個人化使用者體驗
 
@@ -103,9 +106,9 @@ Sarah受到了忠誠的歡迎，並感謝她成為銅牌會員，獲得了更多
 
 她點選首頁以瀏覽更多內容。
 
-![影像](assets/luma-personal.png)
+![image](assets/luma-personal.png)
 
-Sarah會根據Adobe Experience Platform中的即時客戶個人檔案，獲得動態傳遞的個人化首頁體驗。
+Sarah會根據她在Adobe Experience Platform中的表現，獲得動態傳遞的個 [!DNL Real-time Customer Profile] 人化首頁體驗。
 
 Adobe Target採用Adobe Sensei支援的個人化功能，可讓她看到相關內容，其中會考慮到她過去的購買行為，以及對跑步服裝和服裝的親和力。 Luma還根據她最近的瀏覽，為男性量身訂做男性跑步器材的目錄內容。
 
@@ -125,9 +128,9 @@ Adobe Real-time Customer Data Platform採用Adobe Experience Platform，專為�
 
 ## 使用多個資料來源
 
-Luma團隊在單一位置擁有所有的行為和客戶資料。
+Luma團隊在單一位置擁有所有行為和客戶資料。
 
-![影像](assets/luma-dash.png)
+![image](assets/luma-dash.png)
 
 他們可以從下列所有來源擷取資料：
 
@@ -138,25 +141,25 @@ Luma團隊在單一位置擁有所有的行為和客戶資料。
 
 所有這些來自不同來源的資料都會合併為單一統一的客戶個人檔案。
 
-## 配置資料源
+## 設定資料來源
 
-使用即時客戶資料平台，將新的資料來源帶入平台。 即時CDP包括一個資料源目錄，只需按幾下滑鼠，即可添加到配置檔案中。
+用 [!DNL Real-time Customer Data Platform] 於將新的資料來源帶入平台。 即時CDP包括一個資料源目錄，只需按幾下滑鼠，即可添加到配置檔案中。
 
-![影像](assets/luma-source-cat.png)
+![image](assets/luma-source-cat.png)
 
-例如，若要收錄Luma的CRM資料，請依 *CRM*&#x200B;篩選型錄，並列出包含 ** CRM的所有現成可用連接器。 要添加Microsoft Dynamics CRM資料：
+例如，若要收錄Luma的CRM資料，請依 *CRM*&#x200B;篩選型錄，並列出包含 ** CRM的所有現成可用連接器。 要添加數 [!DNL Microsoft Dynamics CRM] 據：
 
 1. 授權連線。
 
-   ![影像](assets/luma-source-auth.png)
+   ![image](assets/luma-source-auth.png)
 
 1. 從建議的XDM預映射表清單中選擇要導入的內容。
 
    <!--    ![image](assets/luma-source-import.png) -->
 
-   例如，選擇 **[!UICONTROL Contacts]**。 預覽的連絡人資料會自動載入，因此您可以確保一切如預期般呈現。
+   例如，選擇「聯 **[!UICONTROL 系人」]**。 預覽的連絡人資料會自動載入，因此您可以確保一切如預期般呈現。
 
-   Adobe Experience Platform透過自動將標準欄位對應至Experience Data Model(XDM)描述檔架構，在此程式中耗費了大量的人工工作。
+   Adobe Experience Platform透過自動將標準欄位對應至(XDM)描述檔架構，在此程式中耗費了大 [!DNL Experience Data Model] 量的人工工作。
 
 1. 檢閱欄位對應。
 
@@ -167,17 +170,17 @@ Luma團隊在單一位置擁有所有的行為和客戶資料。
 
 1. 設定排程。
 
-   ![影像](assets/luma-source-sched.png)
+   ![image](assets/luma-source-sched.png)
 
-都搞定了。 您剛剛將Microsoft CRM新增為Experience Platform的資料來源。
+都搞定了。 您剛將資 [!DNL Microsoft CRM] 料來源新增至 [!DNL Experience Platform]。
 
 ### 為使用策略的收錄資料加標籤
 
-Luma有許多內部政策限制使用特定種類收集到的資訊，而且還必須遵守與資料使用相關的法律和隱私權相關的顧慮。 使用Adobe Experience Platform Data Governance，可將預先定義的資料使用標籤套用至資料集（以及這些資料集內的特定欄位），讓Luma根據特定的使用限制來分類其資料。
+Luma有許多內部政策限制使用特定種類收集到的資訊，而且還必須遵守與資料使用相關的法律和隱私權相關的顧慮。 使用Adobe Experience Platform，可 [!DNL Data Governance]將預先定義的資料使用標籤套用至資料集（以及這些資料集中的特定欄位），讓Luma根據特定的使用限制來分類其資料。
 
 ![](assets/governance-labels.png)
 
-在套用資料使用標籤後，Luma就可以使用「資料管理」來建立資料使用原則。 資料使用原則是描述允許您對包含特定標籤的資料執行動作種類的規則。 嘗試在構成策略違規的即時CDP中執行操作時，會阻止該操作，並發出警報以顯示違反了哪些策略以及原因。
+在套用資料使用標籤後，Luma就可用來建 [!DNL Data Governance] 立資料使用原則。 資料使用原則是描述允許您對包含特定標籤的資料執行動作種類的規則。 嘗試在構成策略違規的即時CDP中執行操作時，會阻止該操作，並發出警報以顯示違反了哪些策略以及原因。
 
 ## 為特定客戶整合資料
 
@@ -189,16 +192,16 @@ Luma擁有的關於Sarah的所有個人檔案資訊都會顯示出來。 這包�
 
 | 類別 | 說明 |
 |---|---|
-| 身份 | 顯示Sarah透過跨通道和裝置與Luma互動在Platform中連結的身分。 會顯示她來自網站的ECID。 她的身分也包含其行動應用程式的ECID、電子郵件ID、最近新增之Microsoft Dynamics資料集的CRM ID，以及從Luma忠誠度系統傳入Adobe Experience Platform的忠誠度ID。 |
+| 身份 | 顯示Sarah與Luma互動中跨通道 [!DNL Platform] 和裝置連結的身分識別。 會顯示她來自網站的ECID。 她的身分也包含其行動應用程式的ECID、電子郵件ID、最近新增資料集的CRM ID，以及從Luma忠誠度系統傳入Adobe Experience Platform的 [!DNL Microsoft Dynamics] 忠誠度ID。 |
 | 事件 | 顯示Sarah與Luma品牌的所有互動資料。 這包括她剛剛檢視的項目、她過去檢視的任何內容、她收到的電子郵件、她與客服中心的互動，以及每個互動的通道和裝置。 |
 
 Real-time CDP配置檔案將Luma營銷團隊的工作流程從數週縮減為幾分鐘，並基於此360度客戶視圖，為個人化開啟可能性。 此描述檔會合併她登入前瀏覽網站時的行為資料，以及她現有的客戶描述檔，以建立Sarah的完整檢視。
 
-行銷團隊可運用這個增強的即時客戶個人檔案，更個人化Sarah的體驗，並提升她對Luma的品牌忠誠度。
+行銷團隊可運用這項增強功 [!DNL Real-time Customer Profile] 能，更個人化Sarah的體驗，並提高她對Luma的品牌忠誠度。
 
 ## 區段
 
-強大的Adobe Experience Platform細分功能可讓行銷人員根據即時客戶個人檔案中擷取的資料，結合屬性、事件和現有細分。
+強大的Adobe Experience Platform細分功能可讓行銷人員根據擷取到的資料，結合屬性、事件和現有細分 [!DNL Real-time Customer Profile]。
 
 <!-- ![image](assets/luma-segments.png) -->
 
@@ -231,18 +234,19 @@ Loyalty member
 
 當您新增「贈送購物車放棄者」區段時，您可以大致瞭解有多少人加入此區段。 您可以採取行動，讓它跨通道個人化。
 
-按一下「**[!UICONTROL Send to destinations]**」。
+按一 **[!UICONTROL 下傳送至目的地]**。
 
 在Adobe Real-time CDP中，Luma可以順暢地依受眾細分行動，以利個人化。\
 在此，我們看到Luma將此目的地傳送至Adobe和非Adobe解決方案的所有可用目的地：
 
-![影像](assets/luma-dest.png)
+![image](assets/luma-dest.png)
 
 ### 選擇目標
 
 在此案例中，Luma想透過這些目標的個人化重新鎖定此受眾：
 
 * Google，用於顯示
+
    <!--* Facebook -->
 * Adobe Campaign，適用於電子郵件
 
@@ -255,7 +259,7 @@ Loyalty member
 >[!NOTE]
 >（可選）如果您在日期欄位中按一下，系統會自動排程90天外。
 
-按一 **[!UICONTROL Save]** 下以前往下一頁。
+按一 **[!UICONTROL 下「儲存]** 」以前往下一頁。
 
 當此觀眾中的客戶進行購買時，他們對此觀眾的會籍會即時抑制。 由於狀態已改變，他們不再符合資格。
 
@@ -267,13 +271,13 @@ Adobe Experience Platform包含隱私權與安全性控制，可判斷區段是�
 
 如果您的活動違反原則，會出現警告。 此警告包含資料世系資訊，可協助您識別違反原則的原因，以及您可以採取哪些措施來解決違規問題。
 
-透過這些控制項，Experience Platform可協助Luma以負責任的態度遵守法規和行銷。 這些控制項是有彈性的，可加以修改，以符合Luma的安全性和管理團隊的需求，讓他們能夠放心地處理管理已知和未知客戶資料的地區和組織需求。
+借助這些管制， [!DNL Experience Platform] Luma以負責任的態度遵守法規和市場。 這些控制項是有彈性的，可加以修改，以符合Luma的安全性和管理團隊的需求，讓他們能夠放心地處理管理已知和未知客戶資料的地區和組織需求。
 
 ### 資料流畫布
 
 儲存時，視覺化資料流畫布會顯示從統一描述檔映射至您選取的三個目的地的區段。
 
-![影像](assets/luma-flow.png)
+![image](assets/luma-flow.png)
 
 ## 跨裝置身分識別
 
