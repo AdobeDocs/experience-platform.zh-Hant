@@ -4,14 +4,17 @@ solution: Experience Platform
 title: 使用PSQL連接
 topic: connect
 translation-type: tm+mt
-source-git-commit: f5bc9beb59e83b0411d98d901d5055122a124d07
+source-git-commit: 3b710e7a20975880376f7e434ea4d79c01fa0ce5
+workflow-type: tm+mt
+source-wordcount: '170'
+ht-degree: 1%
 
 ---
 
 
 # 使用PSQL連接
 
-PSQL是命令行介面，在電腦上安裝Postgres時會出現。 您可依照下列指示進行安裝。
+PSQL是命令行介面，安裝在電腦上 [!DNL Postgres] 時會出現。 您可依照下列指示進行安裝。
 
 ## 在Mac上安裝Postgres
 
@@ -35,15 +38,15 @@ which psql
 /usr/local/bin/psql
 ```
 
-## 在PC上安裝Postgres
+## 安裝 [!DNL Postgres] 在PC上
 
-從此位置下載並安裝 [Postgres](https://www.postgresql.org/download/windows/)。
+從此位置下 [!DNL Postgres] 載和安 [裝](https://www.postgresql.org/download/windows/)。
 
 編輯路徑變數：
 
 ![影像](../images/clients/psql/path.png)
 
-新增顯示的兩行，其中包含「Postgres」。
+新增顯示的兩行，其中包[!DNL Postgres]括&quot;。
 
 儲存更新，然後開啟命令提示符並輸入：
 
@@ -57,15 +60,15 @@ psql -V
 psql (PostgreSQL) 9.5.14
 ```
 
-## 連接PSQL和查詢服務
+## 連接PSQL和 [!DNL Query Service]
 
-返回「連接BI工具」頁面上的平台UI。
+返回「連 [!DNL Platform] 接BI工 *[!UICONTROL 具」頁上的]* UI。
 
-按一下 **「** PSQL命令」的複製。
+按一下 **[!UICONTROL 「復]** 制PSQL命令」 **。
 
 ![影像](../images/clients/psql/connect-bi.png)
 
->[!IMPORTANT]:如果您在PC上，請使用文本編輯器刪除命令字串中的分行符，然後複製該字串。
+>[!IMPORTANT]: 如果您在PC上，請使用文本編輯器刪除命令字串中的分行符，然後複製該字串。
 
 將命令字串貼上到終端或命令窗口中，然後按Enter鍵。
 
