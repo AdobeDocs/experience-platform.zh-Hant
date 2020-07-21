@@ -5,7 +5,10 @@ doc-type: release notes
 last-update: November 18, 2019
 author: crhoades, ens28527
 translation-type: tm+mt
-source-git-commit: e5fa12b92f7006f2c5c428b25f81dade57733498
+source-git-commit: f881c1365684b1ca9e6bf9a8ce866d234dc54128
+workflow-type: tm+mt
+source-wordcount: '1884'
+ht-degree: 2%
 
 ---
 
@@ -15,21 +18,21 @@ source-git-commit: e5fa12b92f7006f2c5c428b25f81dade57733498
 **發行日期：2019 年 11 月 18 日**
 
 Adobe Experience Platform的新功能：
-* [即時客戶資料平台](#rtcdp)
-* [目的地](#destinations)
-* [來源](#sources)
+* [!DNL Real-time Customer Data Platform](#rtcdp)
+* [!DNL Destinations](#destinations)
+* [!DNL Sources](#sources)
 
 更新現有功能：
-* [資料科學工作區](#dsw)
-* [體驗資料模型(XDM)系統](#xdm)
-* [即時客戶個人檔案](#profile)
-* [區段服務](#segmentation)
+* [!DNL Data Science Workspace](#dsw)
+* [!DNL Experience Data Model (XDM) System](#xdm)
+* [!DNL Real-time Customer Profile](#profile)
+* [!DNL Segmentation Service](#segmentation)
 
-## Real-time Customer Data Platform {#rtcdp}
+## [!DNL Real-time Customer Data Platform] {#rtcdp}
 
 Adobe即時客戶資料平台（Real-time Customer Data Platform，即時CDP）以Adobe Experience Platform為基礎，可協助公司將已知和未知的資料匯整在一起，在整個客戶歷程中運用智慧決策來啟動客戶個人檔案。 即時CDP結合了多個企業資料源，以即時建立統一的配置檔案，可用於跨所有通道和設備提供一對一的個性化客戶體驗。
 
-即時客戶資料平台包含資料治理、身分管理、進階細分和資料科學等工具，讓您能夠建立個人檔案並定義受眾，並獲得豐富的見解，同時能夠執行嚴格的資料治理政策。
+[!DNL Real-time Customer Data Platform] 包括資料管理、身分識別管理、進階細分和資料科學等工具，讓您能夠建立個人檔案並定義受眾，並獲得豐富的洞見，同時能夠執行嚴格的資料治理政策。
 
 Adobe可連接到龐大的合作夥伴生態系統，更不用說與Adobe Experience Cloud的原生整合，因此您可以透過所有通道順暢地激活這些受眾，並提供絕佳的客戶體驗，從現場或應用程式內個人化到電子郵件、付費媒體、客服中心、連線裝置等。
 
@@ -46,11 +49,11 @@ Adobe可連接到龐大的合作夥伴生態系統，更不用說與Adobe Experi
 
 | 功能 | 說明 |
 |---|---|
-| 目的地 | 與Adobe即時客戶資料平台支援的目標平台預先建立整合，以順暢的方式將資料匯入這些合作夥伴。 See [Destinations](#destinations) below for more information. |
+| 目的地 | 預先建立與Adobe支援之目標平台的整合， [!DNL Real-time Customer Data Platform] 以順暢的方式將資料匯入這些合作夥伴。 See [Destinations](#destinations) below for more information. |
 | 首頁度量控制面板 | Adobe即時客戶資料平台（即時CDP）首頁包含量度控制面板，可顯示描述檔和區段的相關資訊。 首頁也包含學習教材的連結。 請參閱下方「 [即時客戶資料平台」度量一節](#real-time-customer-data-platform-metrics) 。 |
 | 來源 | 您可以從多種來源收集資料，例如Adobe解決方案、雲端儲存空間、協力廠商軟體和您的CRM。 請參閱下 [面的](#sources) 「來源」一節，瞭解更多資訊。 |
 
-**即時客戶資料平台量度**
+**[!DNL Real-time Customer Data Platform]度量&#x200B;**
 
 當您登入即時CDP時，會顯示Adobe即時客戶資料平台（即時CDP）首頁，其中包含量度控制面板。
 
@@ -60,17 +63,17 @@ Adobe可連接到龐大的合作夥伴生態系統，更不用說與Adobe Experi
 
 如需詳細資訊，請參 [閱即時客戶資料平台量度總覽](../../rtcdp/home-page-dashboards.md)
 
-## 目的地 {#destinations}
+## [!DNL Destinations] {#destinations}
 
-目標是預先建立的與Adobe即時客戶資料平台所支援之目標平台的整合，以順暢的方式將資料啟動給這些合作夥伴。 如需詳細資訊，請閱讀「目 [標概觀](../../rtcdp/destinations/destinations-overview.md) 」文章。
+[!DNL Destinations] 預先建立與Adobe即時客戶資料平台所支援之目標平台的整合，以順暢的方式將資料啟動給這些合作夥伴。 如需詳細資訊，請閱讀「目 [標概觀](../../rtcdp/destinations/destinations-overview.md) 」文章。
 
 **可用目的地**
 
 在11月的版本中，Adobe的即時客戶資料平台支援下列目標：
 
-* 廣告：Google
-* 電子郵件行銷：Adobe Campaign、Salesforce Marketing Cloud、Oracle Responsys、Oracle Exola
-
+* 廣告: [!DNL Google]
+* 電子郵件行銷： Adobe Campaign、 [!DNL Salesforce Marketing Cloud]、 [!DNL Responsys][!DNL Oracle Exolica
+   ]
 請參 [閱目標目錄](../../rtcdp/destinations/destinations-catalog.md) ，以取得每個目標的相關資訊。
 
 **已知限制**
@@ -82,17 +85,17 @@ Adobe可連接到龐大的合作夥伴生態系統，更不用說與Adobe Experi
 
 ## 來源 {#sources}
 
-Adobe Experience Platform可以從外部來源擷取資料，同時允許您使用平台服務來建構、標示和增強該資料。 您可以從多種來源收集資料，例如Adobe解決方案、雲端儲存空間、協力廠商軟體和您的CRM系統。
+Adobe Experience Platform可以從外部來源擷取資料，同時讓您使用服務來建構、標示和增強該資 [!DNL Platform] 料。 您可以從多種來源收集資料，例如Adobe解決方案、雲端儲存空間、協力廠商軟體和您的CRM系統。
 
-Experience Platform提供REST風格的API和互動式UI，讓您輕鬆為各種資料提供者設定來源連線。 這些源連接允許您對儲存系統和CRM服務進行身份驗證，設定接收運行的時間，並管理資料接收吞吐量。
+[!DNL Experience Platform] 提供REST風格的API和互動式UI，讓您輕鬆地為各種資料提供者設定來源連線。 這些源連接允許您對儲存系統和CRM服務進行身份驗證，設定接收運行的時間，並管理資料接收吞吐量。
 
 **主要功能**
 
 | 功能 | 說明 |
 | ---------- | ------------ |
 | Sources UI | 用於建立、查看和管理源連接的新用戶介面。 |
-| 改良的CRM連接器工作流程 | 建立和管理Microsoft Dynamics和Salesforce連接器的全新直覺式UI工作流程。 |
-| 雲端儲存空間的連接器支援 | 連接器現在可以存取雲端儲存空間。 新來源包括Amazon S3、Azure Blob和FTP/SFTP伺服器。 |
+| 改良的CRM連接器工作流程 | 建立和管理連接器的全新直覺式UI [!DNL Microsoft Dynamics] 工作 [!DNL Salesforce] 流程。 |
+| 雲端儲存空間的連接器支援 | 連接器現在可以存取雲端儲存空間。 新來源包 [!DNL Amazon S3]括、 [!DNL Azure Blob]和FTP/SFTP伺服器。 |
 
 **已知問題**
 
@@ -100,22 +103,22 @@ Experience Platform提供REST風格的API和互動式UI，讓您輕鬆為各種�
 
 如需來源的詳細資訊，請參閱 [來源概觀](../../sources/home.md)。
 
-## 資料科學工作區 {#dsw}
+## [!DNL Data Science Workspace] {#dsw}
 
-Adobe Experience Platform Data Science Workspace可讓資料科學家建立並執行機器學習模型，從Adobe應用程式和協力廠商系統的資料和內容順暢地產生見解。 Data Science Workspace與平台緊密整合，為端對端資料科學生命週期提供了動力，包括探索和準備XDM資料，然後開發並實施模型，以利用機器學習見解自動豐富即時客戶個人檔案。
+Adobe Experience Platform可讓資 [!DNL Data Science Workspace] 料科學家建立並執行機器學習模型，從Adobe應用程式和協力廠商系統的資料和內容順暢地產生見解。 [!DNL Data Science Workspace] 與端對端資 [!DNL Platform] 料科學生命週期緊密整合，並推動端對端資料科學生命週期，包括探索和準備XDM資料，然後開發和運作模型，以自動豐富機器學習 [!DNL Real-time Customer Profile] 見解。
 
 **新功能**
 
 | 功能 | 說明 |
 | -----------| ---------- |
-| 使用Platform SDK存取資料 | Python中預先建立的Recipes和啟動程式筆記型電腦現在使用Platform SDK來存取資料。 |
+| 使用 [!DNL Platform] SDK存取資料 | 現在，內建的Recipes和啟動筆記型電腦 [!DNL Python] 使用 [!DNL Platform] SDK來存取資料。 |
 | 支援沙盒 | 支援即將推出的沙盒功能（目前為測試版），包括將筆記型電腦和配方隔離至開發或生產沙盒的功能。 如需詳細 [資訊，請參閱](../../sandboxes/home.md) 「沙盒總覽」。 |
 
 如需詳細資訊，請參閱資 [料科學工作區概觀](../../data-science-workspace/home.md)。
 
-## 體驗資料模型(XDM)系統 {#xdm}
+## [!DNL Experience Data Model] (XDM)系統 {#xdm}
 
-標準化和互操作性是Experience Platform的主要概念。 Adobe推動的Experience Data Model(XDM)旨在標準化客戶體驗資料並定義客戶體驗管理的架構。
+標準化和互操作性是其背後的關鍵概念 [!DNL Experience Platform]。 [!DNL Experience Data Model] (XDM)是由Adobe推動，旨在標準化客戶體驗資料並定義客戶體驗管理的架構。
 
 XDM是公開記載的規格，旨在改善數位體驗的強大功能。 它提供任何應用程式的通用結構和定義，以便與Adobe Experience Platform上的服務通訊。 遵循XDM標準，所有客戶體驗資料都可整合在以更快速、更整合的方式提供見解的通用表現形式中。 您可以從客戶行動中獲得寶貴見解，透過細分定義客戶受眾，並將客戶屬性用於個人化目的。
 
@@ -124,27 +127,27 @@ XDM是公開記載的規格，旨在改善數位體驗的強大功能。 它提�
 | 功能 | 說明 |
 | ---------- | ------------ |
 | 通知結構 | 表示資料擷取程式期間傳送之通知資料的新架構。 |
-| Adobe AdCloud DSP架構 | 已新增5種新結構來表示Adobe Advertising Cloud需求端平台(DSP)中繼資料：位置、促銷活動、封裝、廣告商、帳戶。 |
+| Adobe AdCloud DSP架構 | 已新增5種新結構來表示Adobe Advertising Cloud需求端平台(DSP)中繼資料： 位置、促銷活動、封裝、廣告商、帳戶。 |
 | ExperienceEvent實作詳細資訊混合 | 新增ExperienceEvent混音，新增標準欄位以儲存用於收集事件之軟體的相關資訊。 |
-| 描述檔隱私權混合 | 新的描述檔混合，新增欄位，以接受即時客戶描述檔的一般退出和銷售／分享選擇退出訊號。 |
+| [!DNL Profile Privacy] mixin | 新的描述檔混合，新增欄位以接受一般退出和銷售／分享退出訊號 [!DNL Real-time Customer Profile]。 |
 | 格式限制 `xdm:alternateDisplayInfo` | 的「標題」和「說明」欄位必 `xdm:alternateDisplayInfo` 須同時為字串才能通過驗證。 |
-| 名稱變更：XDM個人資料 | 「XDM Profile」類的「title」已更新為「XDM Individual Profile」。 班級的 `$id` 正式程式沒有改變。 |
+| 名稱變更： XDM [!DNL Individual Profile] | 「XDM」類的「 [!DNL Profile]標題」已更新為「XDM [!DNL Individual Profile]」。 班級的 `$id` 正式程式沒有改變。 |
 
 **已知問題**
 
-* 無.
+* 無。
 
-要瞭解有關使用架構註冊表API和架構編輯器用戶介面使用XDM的更多資訊，請閱讀 [XDM系統文檔](../../xdm/home.md)。
+若要進一步瞭解如何使用 [!DNL Schema Registry] API和使用者介 [!DNL Schema Editor] 面使用XDM，請閱讀 [XDM系統檔案](../../xdm/home.md)。
 
-## 即時客戶個人檔案 {#profile}
+## [!DNL Real-time Customer Profile] {#profile}
 
-Adobe Experience Platform可讓您為客戶推動協調、一致且相關的體驗，不論客戶在何處或何時與您的品牌互動。 透過即時客戶個人檔案，您可以全面瞭解每個客戶，並結合來自多個通道的資料，包括線上、離線、CRM和第三方資料。 個人檔案可讓您將分散的客戶資料整合到統一的檢視中，為每次客戶互動提供可操作的時間戳記帳戶。
+Adobe Experience Platform可讓您為客戶推動協調、一致且相關的體驗，不論客戶在何處或何時與您的品牌互動。 透過 [!DNL Real-time Customer Profile]此功能，您可以全面瞭解每個客戶，並結合來自多個通道的資料，包括線上、離線、CRM和第三方資料。 [!DNL Profile] 可讓您將分散的客戶資料整合為統一的檢視，提供每個客戶互動的可操作、時間戳記帳戶。
 
 | 功能 | 說明 |
 | -----------| ---------- |
-| 描述檔查閱的增強功能 | 使用者現在可以使用參考描述子和相關實體來尋找描述檔。 |
-| 清除指定資料集的資料 | 使用者現在可以使用描述檔系統工作API，刪除特定資料集或批次的資料。 |
-| 邊緣描述檔查詢增強功能 | 應用程式現在可以依據指定描述檔的任何身分來查詢邊緣描述檔。 |
+| 查閱增強 [!DNL Profile] 功能 | 使用者現在可以使用參考描述子和相關實體來尋找描述檔。 |
+| 清除指定資料集的資料 | 使用者現在可以使用系統工作API刪除指定資料集或批 [!DNL Profile] 次的資料。 |
+| 邊緣查 [!DNL Profile] 詢增強功能 | 應用程式現在可以 [!DNL Profile] 依指定描述檔的任何身分來查詢Edge。 |
 | 根據投影配置合併策略 | 應用程式現在可以針對每個投影設定合併原則，以產生由特定合併原則所控制之資料的檢視。 |
 | 計算屬性 | 計算屬性會根據其他值、計算和運算式自動計算欄位的值。 計算屬性在描述檔層級上運作，以根據傳入事件、傳入事件和描述檔資料，或傳入事件、描述檔資料和歷史事件，來匯總「購買總計」、「期限值」或「漏斗狀態」等值。 |
 
@@ -154,24 +157,24 @@ Adobe Experience Platform可讓您為客戶推動協調、一致且相關的體�
 
 **已知問題**
 
-* 無.
+* 無。
 
-如需即時客戶個人檔案的詳細資訊，包括使用個人檔案資料的教學課程和最佳實務，請閱 [讀即時客戶個人檔案概觀](../../profile/home.md)。
+有關使用資 [!DNL Real-time Customer Profile]料的更多資訊，包括教學課程和最佳實務，請 [!DNL Profile] 閱讀即時 [客戶個人檔案概觀](../../profile/home.md)。
 
-## 區段服務 {#segmentation}
+## [!DNL Segmentation Service] {#segmentation}
 
-Adobe Experience Platform Segmentation Service提供使用者介面和REST風格的API，可讓您建立細分並從即時客戶個人檔案資料產生受眾。 這些區段是在Platform上集中設定和維護的，讓任何Adobe應用程式都能輕鬆存取。
+Adobe Experience Platform提 [!DNL Segmentation Service] 供使用者介面和REST風格的API，讓您從資料中建立細分並產生受 [!DNL Real-time Customer Profile] 眾。 這些區段是集中設定並維護的， [!DNL Platform]讓任何Adobe應用程式都可輕鬆存取。
 
-區段服務會透過說明區分客戶群中可銷售人員群組的標準，來定義特定的設定檔子集。 區段可以根據記錄資料（例如人口統計資訊）或代表客戶與品牌互動的時間系列事件來劃分。
+[!DNL Segmentation Service] 定義個人檔案的特定子集，方法是描述區分客戶群中有價人群的標準。 區段可以根據記錄資料（例如人口統計資訊）或代表客戶與品牌互動的時間系列事件來劃分。
 
 | 功能 | 說明 |
 | -----------| ---------- |
-| 排程的區段 | 使用者現在可以透過UI和API，為所有區段啟用排程的區段評估。 啟用後，每天會評估一次所有區段。 這不會影響依需求而繼續運作的區段功能。<br/><br/>注意：針對XDM個別設定檔，具有5個以上合併原則的沙盒無法使用排程的分段功能。 |
-| 串流區段 | 支援持續評估區段（串流分段），可讓大部分區段規則在資料傳入平台時進行評估。 此功能表示區段會籍將是最新的，不需要執行排程的區段工作。 有些例外適用，例如使用多實體關係或包含豐富負載的區段。 |
-| 區段做為建立區塊 | 使用「區段產生器」UI建立區段時，使用者現在可以使用先前定義的區段作為其他區段的建立區塊。 <ul><li>參考目前的觀眾會籍：隨著受眾的移入和移出而更新。</li><li>複製邏輯：將選取的區段定義複製到新區段。</li></ul> |
+| 排程的區段 | 使用者現在可以透過UI和API，為所有區段啟用排程的區段評估。 啟用後，每天會評估一次所有區段。 這不會影響依需求而繼續運作的區段功能。<br/><br/>注意： 已排程的分段功能無法用於超過五個合併原則的沙盒 [!DNL XDM Individual Profile]。 |
+| 串流區段 | 支援持續評估區段（串流分段），可讓大部分區段規則在資料傳入時進行評估 [!DNL Platform]。 此功能表示區段會籍將是最新的，不需要執行排程的區段工作。 有些例外適用，例如使用多實體關係或包含豐富負載的區段。 |
+| 區段做為建立區塊 | 使用「區段產生器」UI建立區段時，使用者現在可以使用先前定義的區段作為其他區段的建立區塊。 <ul><li>參考目前的觀眾會籍： 隨著受眾的移入和移出而更新。</li><li>複製邏輯： 將選取的區段定義複製到新區段。</li></ul> |
 | 依ID命名空間檢視區段成員資格 | 區段會籍現在可依ID命名空間（電子郵件、ECID和總計）來檢視。 |
 | RBAC支援 | 區段產生器現在支援基本的角色存取控制與權限。 |
-| 增強支援平台與Adobe解決方案之間的外部觀眾分享 | 使用者現在可以在觀眾數量龐大或先驗未知的情況下，引入外部（非Experience Platform）觀眾中繼資料。 此版本包含對已布建解決方案連接器之客戶的Audience Manager中繼資料存取。 此觀眾中繼資料可用於「區段產生器」中，以建立新的「體驗平台」區段。 <br/><br/> 此外，在Experience Platform中建立的細分現在可用於整合的Adobe解決方案，包括Audience Manager、Target和Ad Cloud。 |
+| 增強支援外部觀眾在Adobe解決方案之 [!DNL Platform] 間分享 | 使用者現在可以在觀眾數量龐大或先驗未知的情況下，引入外部(非[!DNL Experience Platform])觀眾中繼資料。 此版本包含對已布建解決 [!DNL Audience Manager] 方案連接器之客戶的中繼資料存取。 此觀眾中繼資料可用於「區段產生器」中，以建立新 [!DNL Experience Platform] 區段。 <br/><br/> 此外，在中建立的 [!DNL Experience Platform] 區段現在可用於整合的Adobe解決方案， [!DNL Audience Manager]包括 [!DNL Target]、和 [!DNL Ad Cloud]。 |
 
 **錯誤修正**
 
@@ -183,6 +186,6 @@ Adobe Experience Platform Segmentation Service提供使用者介面和REST風格
 
 **已知問題**
 
-* 無.
+* 無。
 
-若要進一步瞭解分段服務，請閱讀分段 [服務概觀](../../segmentation/home.md)。
+若要進一步了 [!DNL Segmentation Service]解，請閱讀區 [段服務概觀](../../segmentation/home.md)。
