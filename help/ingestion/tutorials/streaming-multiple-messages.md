@@ -4,7 +4,10 @@ solution: Experience Platform
 title: 在單一HTTP要求中串流多個訊息
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: cd251c0816a7e653596b6c3faaceb0cebad367ea
+source-git-commit: 6a371aab5435bac97f714e5cf96a93adf4aa0303
+workflow-type: tm+mt
+source-wordcount: '1504'
+ht-degree: 1%
 
 ---
 
@@ -19,16 +22,16 @@ source-git-commit: cd251c0816a7e653596b6c3faaceb0cebad367ea
 
 本教學課程需要對Adobe Experience Platform資料擷取有充份的瞭解。 在開始本教學課程之前，請先閱讀下列檔案：
 
-- [資料擷取概觀](../home.md):涵蓋Experience Platform資料擷取的核心概念，包括擷取方法和資料連接器。
-- [串流擷取概觀](../streaming-ingestion/overview.md):串流擷取的工作流程和建立區塊，例如串流連線、資料集、XDM個人設定檔和XDM ExperienceEvent。
+- [資料擷取概觀](../home.md): 涵蓋Experience Platform資料擷取的核心概念，包括擷取方法和資料連接器。
+- [串流擷取概觀](../streaming-ingestion/overview.md): 串流擷取的工作流程和建立區塊，例如串流連線、資料集、XDM個人設定檔和XDM ExperienceEvent。
 
 本教學課程也要求您完成 [](../../tutorials/authentication.md) Adobe Experience Platform驗證教學課程，才能成功呼叫平台API。 完成驗證教學課程時，提供本教學課程中所有API呼叫所需之「授權」標題的值。 標題在範例呼叫中顯示如下：
 
-- 授權：生產者 `{ACCESS_TOKEN}`
+- 授權： 生產者 `{ACCESS_TOKEN}`
 
 所有POST請求都需要額外的標題：
 
-- 內容類型：application/json
+- 內容類型： application/json
 
 ## 建立串流連線
 
@@ -68,9 +71,6 @@ curl -X POST https://dcs.adobedc.net/collection/batch/{CONNECTION_ID} \
           "contentType": "application/vnd.adobe.xed-full+json;{SCHEMA_VERSION}"
         },
         "imsOrgId": "{IMS_ORG}",
-        "source": {
-          "name": "GettingStarted"
-        },
         "datasetId": "{DATASET_ID}",
         "createdAt": 1526283801869
       },
@@ -130,9 +130,6 @@ curl -X POST https://dcs.adobedc.net/collection/batch/{CONNECTION_ID} \
           "contentType": "application/vnd.adobe.xed-full+json;{SCHEMA_VERSION}"
         },
         "imsOrgId": "{IMS_ORG}",
-        "source": {
-          "name": "GettingStarted"
-        },
         "datasetId": "{DATASET_ID}",
         "createdAt": 1526283801869
       },
@@ -213,7 +210,7 @@ curl -X POST https://dcs.adobedc.net/collection/batch/{CONNECTION_ID} \
 
 ## 標識失敗消息
 
-與使用單一訊息傳送請求相比，當傳送含有多則訊息的HTTP請求時，需考慮其他因素，例如：如何識別資料何時無法傳送、哪些特定訊息無法傳送、如何擷取，以及當相同請求中的其他訊息失敗時，成功的資料會發生什麼情況。
+與使用單一訊息傳送請求相比，當傳送含有多則訊息的HTTP請求時，需考慮其他因素，例如： 如何識別資料何時無法傳送、哪些特定訊息無法傳送、如何擷取，以及當相同請求中的其他訊息失敗時，成功的資料會發生什麼情況。
 
 繼續本教程之前，建議先閱讀檢索失敗 [批次的指南](../quality/retrieve-failed-batches.md) 。
 
@@ -250,9 +247,6 @@ curl -X POST https://dcs.adobedc.net/collection/batch/{CONNECTION_ID} \
           "contentType": "application/vnd.adobe.xed-full+json;{SCHEMA_VERSION}"
         },
         "imsOrgId": "{IMS_ORG}",
-        "source": {
-          "name": "GettingStarted"
-        },
         "datasetId": "{DATASET_ID}",
         "createdAt": 1526283801869
       },
@@ -312,9 +306,6 @@ curl -X POST https://dcs.adobedc.net/collection/batch/{CONNECTION_ID} \
           "contentType": "application/vnd.adobe.xed-full+json;{SCHEMA_VERSION}"
         },
         "imsOrgId": "{IMS_ORG}",
-        "source": {
-          "name": "GettingStarted"
-        },
         "datasetId": "{DATASET_ID}",
         "createdAt": 1526283801869
       }
@@ -326,9 +317,6 @@ curl -X POST https://dcs.adobedc.net/collection/batch/{CONNECTION_ID} \
           "contentType": "application/vnd.adobe.xed-full+json;{SCHEMA_VERSION}"
         },
         "imsOrgId": "invalidIMSOrg@AdobeOrg",
-        "source": {
-          "name": "GettingStarted"
-        },
         "datasetId": "{DATASET_ID}",
         "createdAt": 1526283801869
       },
@@ -388,9 +376,6 @@ curl -X POST https://dcs.adobedc.net/collection/batch/{CONNECTION_ID} \
           "contentType": "application/vnd.adobe.xed-full+json;{SCHEMA_VERSION}"
         },
         "imsOrgId": "{IMS_ORG}",
-        "source": {
-          "name": "GettingStarted"
-        },
         "datasetId": "{DATASET_ID}",
         "createdAt": 1526283801869
       },
@@ -440,9 +425,6 @@ curl -X POST https://dcs.adobedc.net/collection/batch/{CONNECTION_ID} \
           "name": "_xdm.context.experienceevent"
         },
         "imsOrgId": "{IMS_ORG}",
-        "source": {
-          "name": "GettingStarted"
-        },
         "datasetId": "{DATASET_ID}",
         "createdAt": 1526283801869
       },
@@ -561,8 +543,8 @@ curl -X POST https://dcs.adobedc.net/collection/batch/{CONNECTION_ID} \
 | :---: | --- |
 | 207 | 儘管「207」用作整體響應狀態代碼，但接收方需要查閱多狀態響應主體的內容，以瞭解有關方法執行的成功或失敗的進一步資訊。 回應程式碼用於成功、部分成功以及失敗情況。 |
 | 400 | 請求有問題。 請參閱回應內文以取得更具體的錯誤訊息（例如，「訊息裝載遺失必要欄位，或「訊息」為未知xdm格式）。 |
-| 401 | 未授權：請求缺少有效的授權標題。 僅對啟用了身份驗證的入口返回。 |
-| 403 | 未授權： 提供的授權Token無效或已過期。 僅對啟用了身份驗證的入口返回。 |
+| 401 | 未授權： 請求缺少有效的授權標題。 僅對啟用了身份驗證的入口返回。 |
+| 403 | 未授權：  提供的授權Token無效或已過期。 僅對啟用了身份驗證的入口返回。 |
 | 413 | 裝載過大——當總裝載要求大於1MB時拋出。 |
 | 429 | 指定時段內的請求過多。 |
 | 500 | 處理負載時出錯。 請參閱回應內文以取得更具體的錯誤訊息（例如，未指定訊息裝載模式，或不符合平台中的XDM定義）。 |
