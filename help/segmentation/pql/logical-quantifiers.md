@@ -4,14 +4,17 @@ solution: Experience Platform
 title: 邏輯量詞
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 92f92f480f29f7d6440f4e90af3225f9a1fcc3d0
+source-git-commit: 6a0a9b020b0dc89a829c557bdf29b66508a10333
+workflow-type: tm+mt
+source-wordcount: '188'
+ht-degree: 5%
 
 ---
 
 
 # 邏輯量詞函式
 
-邏輯量詞可用於在配置檔案查詢語言(PQL)中用陣列來斷言條件。 有關其他PQL函式的詳細資訊，請參閱「配置檔案查 [詢語言」概述](./overview.md)。
+邏輯量詞可用來斷言(PQL)中的 [!DNL Profile Query Language] 陣列條件。 有關其他PQL函式的詳細資訊，請參閱「配置檔案查 [詢語言」概述](./overview.md)。
 
 ## 存在
 
