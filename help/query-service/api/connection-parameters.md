@@ -4,7 +4,10 @@ solution: Experience Platform
 title: 查詢服務開發人員指南
 topic: connection parameters
 translation-type: tm+mt
-source-git-commit: 7d5d98d8e32607abf399fdc523d2b3bc99555507
+source-git-commit: 3b710e7a20975880376f7e434ea4d79c01fa0ce5
+workflow-type: tm+mt
+source-wordcount: '122'
+ht-degree: 1%
 
 ---
 
@@ -13,7 +16,7 @@ source-git-commit: 7d5d98d8e32607abf399fdc523d2b3bc99555507
 
 ## 範例API呼叫
 
-現在您已瞭解要使用的標題，可以開始呼叫查詢服務API。 以下各節將介紹您可使用查詢服務API進行的各種API呼叫。 每個呼叫都包含一般API格式、顯示必要標題的範例要求，以及範例回應。
+現在，您已瞭解要使用哪些標題，可以開始呼叫 [!DNL Query Service] API。 以下各節將介紹您可使用API進行的各種API [!DNL Query Service] 呼叫。 每個呼叫都包含一般API格式、顯示必要標題的範例要求，以及範例回應。
 
 ### 請求互動式服務的連接參數
 
