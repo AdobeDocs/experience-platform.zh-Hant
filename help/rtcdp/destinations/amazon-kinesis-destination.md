@@ -4,15 +4,15 @@ seo-title: Amazon Kinesis目標
 description: 建立到Amazon Kinesis儲存的即時出站連接，以便從Adobe Experience Platform流資料。
 seo-description: 建立到Amazon Kinesis儲存的即時出站連接，以便從Adobe Experience Platform流資料。
 translation-type: tm+mt
-source-git-commit: e93bfc028d5e23c3add55677c4003ca549a902c6
+source-git-commit: b96286f6a06f0583b45343a513ee64f0025d79a7
 workflow-type: tm+mt
-source-wordcount: '458'
+source-wordcount: '442'
 ht-degree: 2%
 
 ---
 
 
-# （測試版）Amazon Kinesis目標
+# （測試版）目 [!DNL Amazon Kinesis] 標
 
 
 >[!IMPORTANT]
@@ -21,7 +21,7 @@ ht-degree: 2%
 
 ## 概述 {#overview}
 
-Amazon [!DNL Kinesis Data Streams] Web Services提供的服務可讓您即時收集和處理大量資料記錄。
+該服 [!DNL Kinesis Data Streams] 務可 [!DNL Amazon Web Services] 讓您即時收集和處理大量資料記錄。
 
 您可以建立儲存的即時出站連線， [!DNL Amazon Kinesis] 以從Adobe Experience Platform串流資料。
 
@@ -34,9 +34,9 @@ Amazon [!DNL Kinesis Data Streams] Web Services提供的服務可讓您即時收
 
 ## 使用案例 {#use-cases}
 
-通過使用Amazon Kinesis等流目標，您可以輕鬆地將高價值細分事件和相關的配置檔案屬性反饋到您選擇的系統中。
+透過使用串流目的地(例如 [!DNL Amazon Kinesis])，您可以輕鬆將高價值分段事件和相關的描述檔屬性饋送到您選擇的系統中。
 
-例如，潛在客戶下載了白皮書，使其符合「高轉換傾向」區段的資格。 通過將潛在客戶所屬的段映射到Amazon Kinesis目標，您將在Amazon Kinesis中收到此事件。 在這裡，您可以採用自行動手的方法，並在活動之上描述業務邏輯，因為您認為最適合企業IT系統。
+例如，潛在客戶下載了白皮書，使其符合「高轉換傾向」區段的資格。 將潛在客戶所處的區段對應至目標， [!DNL Amazon Kinesis] 您就會收到此事件 [!DNL Amazon Kinesis]。 在這裡，您可以採用自行動手的方法，並在活動之上描述業務邏輯，因為您認為最適合企業IT系統。
 
 ## 連接目標 {#connect-destination}
 
@@ -46,7 +46,7 @@ Amazon [!DNL Kinesis Data Streams] Web Services提供的服務可讓您即時收
 
 ### 在驗證步驟中 {#authentication-step}
 
-* **Amazon Web Services訪問密鑰和密鑰**: 在中 [!DNL Amazon Web Services]，生成訪問密鑰——秘密訪問密鑰對，以授予Adobe即時CDP對您帳戶的訪 [!DNL Amazon Kinesis] 問權。 請參閱 [Amazon Web Services檔案瞭解更多](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html)。
+* **[!DNL Amazon Web Services]訪問密鑰和密鑰&#x200B;**: 在中[!DNL Amazon Web Services]，生成訪問密鑰——秘密訪問密鑰對，以授予Adobe即時CDP對您帳戶的訪[!DNL Amazon Kinesis]問權。 請參閱[Amazon Web Services檔案瞭解更多](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html)。
 * **地區**: 指出要 [!DNL Amazon Web Services] 將資料串流至的區域。
 
 ![帳戶步驟中的輸入欄位](/help/rtcdp/destinations/assets/aws-kinesis-account-step.png)
@@ -73,7 +73,7 @@ Amazon [!DNL Kinesis Data Streams] Web Services提供的服務可讓您即時收
 
 ## 匯出的資料 {#exported-data}
 
-您匯出的Experience Platform資料會以JSON [!DNL Amazon Kinesis] 格式登入。 例如，以下事件包含符合特定區段資格並退出其他區段之對象的電子郵件地址設定檔屬性。 此潛在客戶的身分是ECID和電子郵件。
+您匯出的 [!DNL Experience Platform] 資料會以JSON [!DNL Amazon Kinesis] 格式著陸。 例如，以下事件包含符合特定區段資格並退出其他區段之對象的電子郵件地址設定檔屬性。 此潛在客戶的身分是ECID和電子郵件。
 
 ```
 {
