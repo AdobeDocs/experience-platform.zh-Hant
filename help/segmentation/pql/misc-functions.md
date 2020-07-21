@@ -4,14 +4,17 @@ solution: Experience Platform
 title: 其他函式
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: d7ec6240864916d3b54db8bd641f4917a38f9480
+source-git-commit: 6a0a9b020b0dc89a829c557bdf29b66508a10333
+workflow-type: tm+mt
+source-wordcount: '105'
+ht-degree: 3%
 
 ---
 
 
 # 其他函式
 
-以下函式是描述檔查詢語言(PQL)的其他函式。 有關其他PQL函式的詳細資訊，請參閱「配置檔案查 [詢語言」概述](./overview.md)。
+以下函式是(PQL)的 [!DNL Profile Query Language] 其他函式。 有關其他PQL函式的詳細資訊，請參閱「配置檔案查 [詢語言」概述](./overview.md)。
 
 ## 讓
 
