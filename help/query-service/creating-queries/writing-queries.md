@@ -4,27 +4,27 @@ solution: Experience Platform
 title: 編寫查詢
 topic: queries
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 3b710e7a20975880376f7e434ea4d79c01fa0ce5
 workflow-type: tm+mt
-source-wordcount: '667'
+source-wordcount: '643'
 ht-degree: 1%
 
 ---
 
 
-# 查詢服務中查詢執行的一般指南
+# 查詢執行的一般指南 [!DNL Query Service]
 
-本檔案詳細說明在Adobe Experience Platform Query Service中撰寫查詢時要知道的重要詳細資訊。
+本檔案詳細說明在Adobe Experience Platform中撰寫查詢時要知道的重要詳細資訊 [!DNL Query Service]。
 
-有關查詢服務中使用的SQL語法的詳細資訊，請閱讀 [SQL語法文檔](../sql/syntax.md)。
+有關中使用的SQL語法的詳細信 [!DNL Query Service]息，請閱讀 [SQL語法文檔](../sql/syntax.md)。
 
 ## 查詢執行模型
 
-Adobe Experience Platform Query Service有兩種查詢執行模式： 互動式和非互動式。 交互執行用於商業智慧工具中的查詢開發和報告生成，而非交互用於作為資料處理工作流的一部分的較大作業和操作查詢。
+Adobe Experience Platform有 [!DNL Query Service] 兩種查詢執行模型： 互動式和非互動式。 交互執行用於商業智慧工具中的查詢開發和報告生成，而非交互用於作為資料處理工作流的一部分的較大作業和操作查詢。
 
 ### 互動式查詢執行
 
-查詢可透過查詢服務UI或透過連接的用戶端提交，以 [互動方式執行](../clients/overview.md)。 在通過連接的客戶機運行查詢服務時，活動會話在客戶機和查詢服務之間運行，直到提交的查詢返回或超時。
+查詢可透過UI或連線的用戶端 [!DNL Query Service] 提交，以 [互動方式執行](../clients/overview.md)。 在連接的 [!DNL Query Service] 用戶端上執行時，會在用戶端和之間執行作用中的作業， [!DNL Query Service] 直到提交的查詢傳回或逾時為止。
 
 互動式查詢執行有下列限制：
 
@@ -38,11 +38,11 @@ Adobe Experience Platform Query Service有兩種查詢執行模式： 互動式�
 >
 >若要覆寫最大列限制，請在查詢 `LIMIT 0` 中加入。 查詢逾時10分鐘仍適用。
 
-預設情況下，交互查詢的結果將返回給客戶端，並且不 **會** 持續。 若要將結果保存為Experience Platform中的資料集，查詢必須使用語 `CREATE TABLE AS SELECT` 法。
+預設情況下，交互查詢的結果將返回給客戶端，並且不 **會** 持續。 要將結果保存為中的資料集， [!DNL Experience Platform]查詢必須使用語 `CREATE TABLE AS SELECT` 法。
 
 ### 非互動式查詢執行
 
-通過查詢服務API提交的查詢將非交互運行。 非互動式執行意指查詢服務接收API呼叫，並依其接收順序執行查詢。 非互動式查詢通常會導致在Experience Platform中產生新資料集以接收結果，或將新列插入現有資料集。
+透過 [!DNL Query Service] API提交的查詢會非互動執行。 非互動執行意指接 [!DNL Query Service] 收API呼叫並按接收順序執行查詢。 非互動式查詢通常會導致產生新資料集以 [!DNL Experience Platform] 接收結果，或將新列插入現有資料集。
 
 ## 訪問對象中的特定欄位
 
@@ -189,4 +189,4 @@ LIMIT 10
 
 ## 後續步驟
 
-閱讀本檔案後，您在使用Query Service編寫查詢時，會受到一些重要考量。 有關如何使用SQL語法編寫您自己查詢的詳細資訊，請閱讀 [SQL語法文檔](../sql/syntax.md)。
+閱讀本檔案後，您在使用編寫查詢時，會注意到一些重要的考量 [!DNL Query Service]。 有關如何使用SQL語法編寫您自己查詢的詳細資訊，請閱讀 [SQL語法文檔](../sql/syntax.md)。
