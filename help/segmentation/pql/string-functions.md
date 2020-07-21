@@ -4,14 +4,17 @@ solution: Experience Platform
 title: 字串函式
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 92f92f480f29f7d6440f4e90af3225f9a1fcc3d0
+source-git-commit: 6a0a9b020b0dc89a829c557bdf29b66508a10333
+workflow-type: tm+mt
+source-wordcount: '757'
+ht-degree: 6%
 
 ---
 
 
 # 字串函式
 
-描述檔查詢語言(PQL)提供函式，讓字串互動更簡單。 有關其他PQL函式的詳細資訊，請參閱「配置檔案查 [詢語言」概述](./overview.md)。
+[!DNL Profile Query Language] (PQL)提供函式，讓字串互動更簡單。 有關其他PQL函式的詳細資訊，請參閱「配置檔案查 [詢語言」概述](./overview.md)。
 
 ## 贊
 
