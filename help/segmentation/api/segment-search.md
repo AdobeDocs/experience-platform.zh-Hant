@@ -4,9 +4,9 @@ solution: Adobe Experience Platform
 title: 區段搜尋端點
 topic: guide
 translation-type: tm+mt
-source-git-commit: b3e6a6f1671a456b2ffa61139247c5799c495d92
+source-git-commit: 995fadef9abacf22d0561e0590dfbe172adf0a43
 workflow-type: tm+mt
-source-wordcount: '1139'
+source-wordcount: '1138'
 ht-degree: 2%
 
 ---
@@ -225,7 +225,7 @@ curl -X GET \
 
 ## 附錄 {#appendix}
 
-以下各節提供搜尋詞如何運作的其他資訊。 搜索查詢的編寫方式如下： `s={FieldName}:{SearchExpression}`. 因此，例如，若要搜尋名為AAM或平台的區段，您應使用下列搜尋查詢： `s=segmentName:AAM%20OR%20Platform`.
+以下各節提供搜尋詞如何運作的其他資訊。 搜索查詢的編寫方式如下： `s={FieldName}:{SearchExpression}`. 因此，例如，若要搜尋名為AAM或的區段 [!DNL Platform]，您應使用下列搜尋查詢： `s=segmentName:AAM%20OR%20Platform`.
 
 > !![NOTE] 為獲得最佳實務，搜尋運算式應採用HTML編碼，如上例所示。
 
