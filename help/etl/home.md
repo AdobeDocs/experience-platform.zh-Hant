@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 建立ETL整合
 topic: overview
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: bfbf2074a9dcadd809de043d62f7d2ddaa7c7b31
 workflow-type: tm+mt
-source-wordcount: '4227'
+source-wordcount: '4102'
 ht-degree: 0%
 
 ---
@@ -14,18 +14,18 @@ ht-degree: 0%
 
 # 開發Adobe Experience Platform的ETL整合
 
-ETL整合指南概述建立Experience Platform的高效能、安全連接器以及將資料匯入Platform的一般步驟。
+ETL整合指南概述建立高效能、安全的連接器，以便將資料 [!DNL Experience Platform] 匯入的一般步驟 [!DNL Platform]。
 
 
-- [目錄](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml)
-- [資料存取](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-access-api.yaml)
-- [資料擷取](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml)
+- [!DNL Catalog](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml)
+- [!DNL Data Access](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-access-api.yaml)
+- [!DNL Data Ingestion](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml)
 - [驗證與授權API](../tutorials/authentication.md)
-- [架構註冊表](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml)
+- [!DNL Schema Registry](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml)
 
-本指南也包含設計ETL連接器時要使用的範例API呼叫，其中包含說明每個Experience Platform服務的檔案連結，以及其API的使用，有更詳細的說明。
+本指南也包含設計ETL連接器時要使用的範例API呼叫，其中包含說明每項服務的檔案連結， [!DNL Experience Platform] 以及其API的使用，有更詳細的說明。
 
-GitHub上可透過 [ETL Cestium Integration Reference Code](https://github.com/adobe/acp-data-services-etl-reference) (Apache License Version 2.0)取得範例整合。
+您可透過「授權2.0版」 [!DNL GitHub] 下的「 [ETL生態系統整合參考程式碼](https://github.com/adobe/acp-data-services-etl-reference) 」取得 [!DNL Apache] 範例整合。
 
 ## 工作流程
 
@@ -40,35 +40,35 @@ ETL連接器整合涉及多個Experience Platform元件。 下列清單概述數
 - **Adobe Identity Management System(IMS)** —— 提供Adobe服務驗證的架構。
 - **IMS組織** -可擁有或授權產品與服務並允許存取其會員的公司實體。
 - **IMS使用者** - IMS組織的成員。 「組織與使用者」的關係是多對多的關係。
-- **沙盒** -單一平台實例的虛擬分區，可協助開發和發展數位體驗應用程式。
-- **資料發現** -在Experience Platform中記錄所擷取和轉換資料的中繼資料。
-- **資料存取** -為使用者提供介面，以存取Experience Platform中的資料。
-- **資料擷取** -使用資料擷取API將資料推送至Experience Platform。
-- **架構註冊表** -定義並儲存描述Experience Platform中要使用之資料結構的架構。
+- **[!DNL Sandbox]** -將虛擬分區放在單個實 [!DNL Platform] 例中，以幫助開發和發展數位體驗應用程式。
+- **Data Discovery** —在中記錄所攝取和轉換資料的元資料 [!DNL Experience Platform]。
+- **[!DNL Data Access]** -為用戶提供訪問其資料的介面 [!DNL Experience Platform]。
+- **[!DNL Data Ingestion]** -使用API將資料 [!DNL Experience Platform] 推送 [!DNL Data Ingestion] 至。
+- **[!DNL Schema Registry]** -定義和儲存描述要使用的資料結構的模式 [!DNL Experience Platform]。
 
-## Experience Platform API快速入門
+## Getting started with [!DNL Experience Platform] APIs
 
-以下章節提供您必須知道或掌握的額外資訊，才能成功呼叫Experience Platform API。
+以下章節提供您必須知道或掌握的額外資訊，才能成功呼叫 [!DNL Experience Platform] API。
 
 ### 讀取範例API呼叫
 
-本指南提供範例API呼叫，以示範如何格式化您的請求。 這些包括路徑、必要標題和正確格式化的請求負載。 也提供API回應中傳回的範例JSON。 如需範例API呼叫檔案中所用慣例的詳細資訊，請參閱「Experience Platform疑難排解指 [南」中有關如何讀取範例API呼叫的章節](../landing/troubleshooting.md#how-do-i-format-an-api-request) 。
+本指南提供範例API呼叫，以示範如何格式化您的請求。 這些包括路徑、必要標題和正確格式化的請求負載。 也提供API回應中傳回的範例JSON。 如需範例API呼叫檔案中所用慣例的詳細資訊，請參閱疑難排解指 [南中有關如何讀取範例API呼叫的](../landing/troubleshooting.md#how-do-i-format-an-api-request)[!DNL Experience Platform] 章節。
 
 ### 收集必要標題的值
 
-若要呼叫平台API，您必須先完成驗證教 [學課程](../tutorials/authentication.md)。 完成驗證教學課程後，所有Experience Platform API呼叫中每個必要標題的值都會顯示在下方：
+若要呼叫API，您必 [!DNL Platform] 須先完成驗證教 [學課程](../tutorials/authentication.md)。 完成驗證教學課程後，將提供所有 [!DNL Experience Platform] API呼叫中每個必要標題的值，如下所示：
 
 - 授權： 生產者 `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
-Experience Platform中的所有資源都隔離至特定的虛擬沙盒。 所有對平台API的請求都需要一個標題，該標題會指定要在中執行的操作的沙盒名稱：
+中的所有資 [!DNL Experience Platform] 源都與特定虛擬沙盒隔離。 對API的所 [!DNL Platform] 有請求都需要一個標題，該標題會指定要在中執行的操作的沙盒名稱：
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
->如需平台中沙盒的詳細資訊，請參閱沙盒 [概觀檔案](../sandboxes/home.md)。
+>如需中沙盒的詳細資訊 [!DNL Platform]，請參閱沙 [盒概述檔案](../sandboxes/home.md)。
 
 所有包含裝載(POST、PUT、PATCH)的請求都需要額外的標題：
 
@@ -76,11 +76,11 @@ Experience Platform中的所有資源都隔離至特定的虛擬沙盒。 所有
 
 ## 一般使用者流程
 
-首先，ETL使用者會登入Experience Platform使用者介面(UI)，並使用標準連接器或推播服務連接器建立資料集以擷取。
+首先，ETL使用者會登入使用者介面( [!DNL Experience Platform] UI)，並使用標準連接器或推播服務連接器建立擷取資料集。
 
-在UI中，用戶通過選擇資料集模式建立輸出資料集。 方案的選擇取決於被引入平台的資料類型（記錄或時間序列）。 通過按一下UI中的「方案」頁籤，用戶將能夠查看所有可用的方案，包括方案支援的行為類型。
+在UI中，用戶通過選擇資料集模式建立輸出資料集。 方案的選擇取決於所吸收的資料類型（記錄或時間序列） [!DNL Platform]。 通過按一下UI中的「方案」頁籤，用戶將能夠查看所有可用的方案，包括方案支援的行為類型。
 
-在ETL工具中，使用者將在設定適當的連線（使用其認證）後，開始設計其對應轉換。 假定ETL工具已安裝Experience Platform連接器（此整合指南中未定義的程式）。
+在ETL工具中，使用者將在設定適當的連線（使用其認證）後，開始設計其對應轉換。 假定ETL工具已安裝連接 [!DNL Experience Platform] 器（此整合指南中未定義的程式）。
 
 ETL工作流程中已提供範例ETL工具和工作流程的 [模型](./workflow.md)。 雖然ETL工具的格式可能不同，但大部分都會公開類似的功能。
 
@@ -90,20 +90,20 @@ ETL工作流程中已提供範例ETL工具和工作流程的 [模型](./workflow
 
 ### 查看資料集清單
 
-使用資料來源進行對應，可使用目錄API擷取所有可用資料集 [的清單](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml)。
+使用資料源進行映射，可使用獲取所有可用資料集的清單 [!DNL Catalog API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml)。
 
 您可以發出單一API要求來檢視所有可用的資料集(例如 `GET /dataSets`)，最佳實務是包含限制回應大小的查詢參數。
 
-在要求完整 _資料集資訊_ 時，回應負載可能會達到超過3GB的大小，進而降低整體效能。 因此，只使用查詢參數來過濾所需資訊將使目錄查詢更加有效。
+在要求完整 _資料集資訊_ 時，回應負載可能會達到超過3GB的大小，進而降低整體效能。 因此，只使用查詢參數來過濾所需的資訊將使查詢 [!DNL Catalog] 更加有效。
 
 #### 清單篩選
 
 在篩選回應時，您可以在單一呼叫中使用多個篩選器，方法是使用&amp;符號(`&`)分隔參數。 有些查詢參數接受逗號分隔的值清單，例如下方範例請求中的「屬性」篩選。
 
-目錄回應會根據設定的限制自動計量，但「限制」查詢參數可用來自訂限制並限制傳回的物件數。 預先設定的目錄回應限制為：
+[!DNL Catalog] 回應會根據設定的限制自動計量，但「限制」查詢參數可用來自訂限制並限制傳回的物件數。 預先設定的 [!DNL Catalog] 回應限制為：
 
 - 如果未指定限制參數，則每個回應裝載的物件數上限為20。
-- 所有其他目錄查詢的全局限制是100個對象。
+- 所有其他查詢的全 [!DNL Catalog] 域限制為100個物件。
 - 對於資料集查詢，如果使用屬性查詢參數請求evocableSchema，則返回的資料集的最大數量為20。
 - 無效的限制參數( `limit=0`包括)會遇到HTTP 400錯誤，該錯誤會概述正確的範圍。
 - 如果限制或偏移作為查詢參數傳遞，則其優先於作為標題傳遞的限制或偏移。
@@ -127,7 +127,7 @@ curl -X GET "https://platform.adobe.io/data/foundation/catalog/dataSets?limit=3&
   -H "x-sandbox-name: {SANDBOX_NAME}"
 ```
 
-請參閱目錄服 [務概觀](../catalog/home.md) ，以取得如何呼叫目錄API的詳細 [範例](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml)。
+請參閱目錄 [服務概觀](../catalog/home.md) ，以取得如何呼叫的詳細範例 [!DNL Catalog API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml)。
 
 **回應**
 
@@ -168,7 +168,7 @@ curl -X GET "https://platform.adobe.io/data/foundation/catalog/dataSets?limit=3&
 
 XDM架構是您在需要向用戶顯示可寫入的所有可用欄位的清單時所使用的架構。
 
-上一個響應對象(`https://ns.adobe.com/{TENANT_ID}/schemas/274f17bc5807ff307a046bab1489fb18`)中的第一個&quot;schemaRef.id&quot;值是指向模式註冊表中特定XDM模式的URI。 可通過對方案註冊表API進行查找(GET)請求來檢索方案。
+上一個響應對象(`https://ns.adobe.com/{TENANT_ID}/schemas/274f17bc5807ff307a046bab1489fb18`)中的第一個&quot;schemaRef.id&quot;值是指向中的特定XDM模式的URI [!DNL Schema Registry]。 可以透過對API進行查閱(GET)請求來擷取 [!DNL Schema Registry] 架構。
 
 >[!NOTE]
 >
@@ -207,17 +207,17 @@ curl -X GET \
 
 >[!NOTE]
 >
->`application/vnd.adobe.xed-id+json` 而且 `application/vnd.adobe.xed-full+json; version={major version}` 是最常用的「接受」標題。 `application/vnd.adobe.xed-id+json` 優先於在架構註冊表中列出資源，因為它只返回&quot;title&quot;、&quot;id&quot;和&quot;version&quot;。 `application/vnd.adobe.xed-full+json; version={major version}` 偏好用於檢視特定資源（依其「id」），因為它會傳回所有欄位（巢狀內嵌於「屬性」下）以及標題和說明。
+>`application/vnd.adobe.xed-id+json` 而且 `application/vnd.adobe.xed-full+json; version={major version}` 是最常用的「接受」標題。 `application/vnd.adobe.xed-id+json` 優先於在中列出資 [!DNL Schema Registry] 源，因為它僅傳回&quot;title&quot;、&quot;id&quot;和&quot;version&quot;。 `application/vnd.adobe.xed-full+json; version={major version}` 偏好用於檢視特定資源（依其「id」），因為它會傳回所有欄位（巢狀內嵌於「屬性」下）以及標題和說明。
 
 **回應**
 
 傳回的JSON結構描述說明結構和欄位層級資訊（「類型」、「格式」、「最小」、「最大」等） 資料的序號，序號為JSON。 如果使用JSON以外的序列化格式擷取（例如Parce或Scala）, [Schema Registry Guide](../xdm/tutorials/create-schema-api.md) （架構註冊表指南）會包含一個表格，其中顯示所要的JSON類型(「meta:xdmType」)及其他格式的對應表示法。
 
-除了此表之外，《方案註冊開發人員指南》還包含使用「方案註冊表API」可進行的所有可能調用的深入示例。
+除了此表格外，「開發 [!DNL Schema Registry] 人員指南」還包含使用API可進行的所有可能呼叫的深入 [!DNL Schema Registry] 範例。
 
 ### 資料集「架構」屬性（已過時- EOL 2019-05-30）
 
-資料集可能包含「架構」屬性，該屬性現在已過時，並且暫時可用以向後相容。 例如，與先前所做的清單(GET)要求類似，其中查詢參數中的&quot;schema&quot;被取代為&quot;schemaRef&quot;的 `properties` 請求可能會傳回下列內容：
+資料集可能包含「架構」屬性，該屬性現在已過時，並且暫時可用以向後相容。 例如，與先前所做的清單(GET)請求類似，其中查詢參數中的&quot;schema&quot;被取代為&quot;schemaRef&quot;，可能會傳 `properties` 回下列內容：
 
 ```json
 {
@@ -229,7 +229,7 @@ curl -X GET \
 }
 ```
 
-如果填入資料集的「架構」屬性，這表示架構是已過時的架構，而且在支援的情況下，ETL連接器應使用「架構」屬性中的值與端點( `/xdms``/xdms`[](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml)Catalog API中已過時的端點)來擷取舊式架構。
+如果填入資料集的「架構」屬性，這表示架構是已過時的架構，而且在支援的情況下，ETL連接器應使用「架構」屬性中的值與端點(在中是已過時的端點 `/xdms``/xdms`[!DNL Catalog API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml))來擷取舊式架構。
 
 **API格式**
 
@@ -261,7 +261,7 @@ curl -X GET "https://platform.adobe.io/data/foundation/catalog/xdms/context/pers
 
 ### &quot;voocableSchema&quot;屬性
 
-資料集的「可觀察結構」屬性具有與XDM結構JSON相符的JSON結構。 &quot;oveableSchema&quot;包含傳入輸入檔案中的欄位。 將資料寫入Experience Platform時，使用者不需要使用目標架構中的每個欄位。 而應僅提供正在使用的欄位。
+資料集的「可觀察結構」屬性具有與XDM結構JSON相符的JSON結構。 &quot;oveableSchema&quot;包含傳入輸入檔案中的欄位。 向寫入資料時 [!DNL Experience Platform]，用戶不需要使用目標模式中的每個欄位。 而應僅提供正在使用的欄位。
 
 可觀察模式是讀取資料或顯示可從中讀取／映射的欄位清單時要使用的模式。
 
@@ -392,9 +392,9 @@ curl -X GET "https://platform.adobe.io/data/foundation/catalog/dataSets/5bf479a6
 
 ### 擷取檔案詳細資訊
 
-在先前響應中返回的資料集檔案ID可以用於GET請求中，以通過資料存取API獲取更多檔案詳細資訊。
+在先前回應中傳回的資料集檔案ID可用於GET請求中，以透過 [!DNL Data Access] API擷取更多檔案詳細資訊。
 
-資 [料存取概述](../data-access/home.md) ，包含如何使用資料存取API的詳細資訊。
+資 [料存取概述](../data-access/home.md) ，包含如何使用 [!DNL Data Access] API的詳細資訊。
 
 **API格式**
 
@@ -430,7 +430,7 @@ curl -X GET "https://platform.adobe.io/data/foundation/export/files/ea40946ac031
 
 ### 預覽檔案資料
 
-&quot;href&quot;屬性可用來透過資料存取API擷取預 [覽資料](../data-access/home.md)。
+&quot;href&quot;屬性可用來透過擷取預覽資料 [!DNL Data Access API](../data-access/home.md)。
 
 **API格式**
 
@@ -450,7 +450,7 @@ curl -X GET "https://platform.adobe.io/data/foundation/export/files/ea40946ac031
 
 對上述要求的回應將包含檔案內容的預覽。
 
-資料存取概述中提供有關資料存取API的詳細資訊，包括詳細的請求 [和回應](../data-access/home.md)。
+資料存取概述 [!DNL Data Access] 中提供有關API的詳細資訊，包括詳細的請 [求和回應](../data-access/home.md)。
 
 ### 從資料集取得「fileDescription」
 
@@ -491,21 +491,21 @@ curl -X GET "https://platform.adobe.io/data/foundation/catalog/dataSets/59c93f3d
 }
 ```
 
-資料將使用資料擷取API寫入 [Experience Platform](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml)。  資料寫入是非同步的程式。 當資料寫入Adobe Experience Platform時，只有在資料完全寫入後，才會建立批次並標示為成功。
+資料將會使用資料 [!DNL Experience Platform] 擷取 [API寫入](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml)。  資料寫入是非同步的程式。 當資料寫入Adobe Experience Platform時，只有在資料完全寫入後，才會建立批次並標示為成功。
 
-Experience Platform中的資料應以拼花檔案的形式寫入。
+中的數 [!DNL Experience Platform] 據應以拼花檔案的形式寫入。
 
 ## 執行階段
 
-當執行開始時，連接器（如來源元件中所定義）將使用資料存取API從Experience Platform讀取 [資料](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-access-api.yaml)。 轉換過程將讀取特定時間範圍的資料。 內部查詢源資料集的批次。 查詢時，會使用參數化（滾動時間序列資料或增量資料）的開始日期和列出這些批的資料集檔案，並開始請求這些資料集檔案的資料。
+當執行開始時，連接器（如源元件中定義）將使用從中讀取 [!DNL Experience Platform] 資料 [!DNL Data Access API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-access-api.yaml)。 轉換過程將讀取特定時間範圍的資料。 內部查詢源資料集的批次。 查詢時，會使用參數化（滾動時間序列資料或增量資料）的開始日期和列出這些批的資料集檔案，並開始請求這些資料集檔案的資料。
 
 ### 範例轉換
 
 范 [例ETL轉換檔案](./transformations.md) ，包含許多範例轉換，包括身分處理和資料類型映射。 請使用這些轉換以供參考。
 
-### 從Experience Platform讀取資料
+### 從中讀取資料 [!DNL Experience Platform]
 
-使用 [Catalog API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml)，您可以擷取指定開始時間和結束時間之間的所有批次，並依其建立順序加以排序。
+使用 [!DNL Catalog API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml)時，您可以提取指定開始時間和結束時間之間的所有批，並按建立順序對它們進行排序。
 
 **請求**
 
@@ -518,11 +518,11 @@ curl -X GET "https://platform.adobe.io/data/foundation/catalog/batches?dataSet=D
   -H "x-sandbox-name: {SANDBOX_NAME}"
 ```
 
-有關篩選批次的詳細資訊，請參閱資料 [存取教學課程](../data-access/tutorials/dataset-data.md)。
+有關篩選批次的詳細資訊，請參閱「資料存取」教 [學課程](../data-access/tutorials/dataset-data.md)。
 
 ### 從批次中取出檔案
 
-在您擁有所尋找(`{BATCH_ID}`)批次的ID後，就可透過資料存取API擷取屬於特定批次的檔 [案清單](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-access-api.yaml)。  資料存取教學課程中提供了相關 [的詳細資訊](../data-access/tutorials/dataset-data.md)。
+在您擁有所尋找(`{BATCH_ID}`)批次的ID後，就可以透過擷取屬於特定批次的檔案清單 [!DNL Data Access API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-access-api.yaml)。  「資料存取」教學課程中提供了相關 [的詳細資訊](../data-access/tutorials/dataset-data.md)。
 
 **請求**
 
@@ -536,7 +536,7 @@ curl -X GET "https://platform.adobe.io/data/foundation/export/batches/{BATCH_ID}
 
 ### 使用檔案ID存取檔案
 
-使用檔案(`{FILE_ID`)的唯一ID，資料存取 [API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-access-api.yaml) 可用來存取檔案的特定詳細資訊，包括檔案名稱、大小（位元組），以及下載檔案的連結。
+使用檔案(`{FILE_ID`)的唯一ID [!DNL Data Access API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-access-api.yaml) ，可用來存取檔案的特定詳細資訊，包括檔案名稱、大小（以位元組為單位），以及下載檔案的連結。
 
 **請求**
 
@@ -548,11 +548,11 @@ curl -X GET "https://platform.adobe.io/data/foundation/export/files/{FILE_ID}" \
   -H "x-api-key : {API_KEY}"
 ```
 
-響應可指向單個檔案或目錄。 資料存取教學課程中提供每項資 [料的詳細資訊](../data-access/tutorials/dataset-data.md)。
+響應可指向單個檔案或目錄。 有關每項資訊的詳細資訊，請參閱「資 [料存取」教學課程](../data-access/tutorials/dataset-data.md)。
 
 ### 存取檔案內容
 
-資 [料存取API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-access-api.yaml) ，可用來存取特定檔案的內容。 若要擷取內容，會使用使用檔案ID存取檔案時傳回 `_links.self.href` 的值來提出GET要求。
+可 [!DNL Data Access API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-access-api.yaml) 用於訪問特定檔案的內容。 若要擷取內容，會使用使用檔案ID存取檔案時傳回 `_links.self.href` 的值來提出GET要求。
 
 **請求**
 
@@ -570,7 +570,7 @@ curl -X GET "https://platform.adobe.io/data/foundation/export/files/{DATASET_FIL
 
 在寫入資料時，使用者可以根據XDM架構中定義的驗證規則來驗證資料。 有關模式驗證的詳細資訊，請參閱GitHub上的 [ETL生態系統整合參考程式碼](https://github.com/adobe/experience-platform-etl-reference/blob/fd08dd9f74ae45b849d5482f645f859f330c1951/README.md#validation)。
 
-如果您使用 [GitHub上的參考實作](https://github.com/adobe/experience-platform-etl-reference/blob/fd08dd9f74ae45b849d5482f645f859f330c1951/README.md)，則可使用系統屬性在此實作中開啟架構驗證 `-DenableSchemaValidation=true`。
+如果您使用上找到的參考實作 [!DNL GitHub](https://github.com/adobe/experience-platform-etl-reference/blob/fd08dd9f74ae45b849d5482f645f859f330c1951/README.md)，則可使用系統屬性在此實作中開啟架構驗證 `-DenableSchemaValidation=true`。
 
 可對邏輯XDM類型使用屬性（如字串）和 `minLength` 整數 `maxlength` 等， `minimum` 以 `maximum` 及更多屬性執行驗證。 Schema Registry [API開發人員指南中包含一個表](../xdm/api/getting-started.md) ，它概述了XDM類型和可用於驗證的屬性。
 
@@ -580,7 +580,7 @@ curl -X GET "https://platform.adobe.io/data/foundation/export/files/{DATASET_FIL
 
 ### 建立批次
 
-資料處理完成後，ETL工具會使用批次擷取API將資料寫回 [Experience Platform](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml)。 資料必須連結至批次，之後才能上傳至特定資料集。
+資料處理完成後，ETL工具會使用「批次擷取API」將 [!DNL Experience Platform] 資料 [寫回](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml)。 資料必須連結至批次，之後才能上傳至特定資料集。
 
 **請求**
 
@@ -604,7 +604,7 @@ curl -X POST "https://platform.adobe.io/data/foundation/import/batches" \
 
 **請求**
 
-Experience Platform中的資料應以拼花檔案的形式寫入。
+中的數 [!DNL Experience Platform] 據應以拼花檔案的形式寫入。
 
 ```shell
 curl -X PUT "https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/dataSets/{DATASET_ID}/files/{FILE_NAME}.parquet" \
@@ -618,7 +618,7 @@ curl -X PUT "https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}
 
 ### 標籤批次上傳完成
 
-將所有檔案上傳到批後，可以向批發出完成信號。 通過執行此操作，將為已完成的檔案建立目錄「DataSetFile」條目，並與生成批關聯。 然後目錄批次會標示為成功，這會觸發下游流程，以擷取可用資料。
+將所有檔案上傳到批後，可以向批發出完成信號。 通過執行此操作， [!DNL Catalog] 將為已完成的檔案建立「DataSetFile」條目，並與生成批關聯。 然後 [!DNL Catalog] 將批標籤為成功，這會觸發下游流來提取可用資料。
 
 資料將先登入Adobe Experience Platform的測試位置，然後在編目及驗證後移至最終位置。 所有資料移至永久位置後，批次就會標示為成功。
 
@@ -640,7 +640,7 @@ ETL工具會確保在讀取資料時記下來源資料集的時間戳記。
 
 ### 取得上次批次狀態
 
-在ETL工具中執行新任務之前，您必須確保已成功完成最後一批。 目 [錄服務API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml) 提供批次特定選項，可提供相關批次的詳細資訊。
+在ETL工具中執行新任務之前，您必須確保已成功完成最後一批。 提供 [!DNL Catalog Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml) 了批特定選項，其中提供了相關批的詳細資訊。
 
 **請求**
 
@@ -674,7 +674,7 @@ curl -X GET "https://platform.adobe.io/data/foundation/catalog/batches?limit=1&s
 
 ### 依ID取得上次批次狀態
 
-您可以透過目錄服務API [來擷取個別的批次狀態](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml) ，方法是使用 `{BATCH_ID}`。 使 `{BATCH_ID}` 用的值與建立批次時傳回的ID相同。
+通過使用發出GET請求，可以 [!DNL Catalog Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml) 通過檢索單個批狀態 `{BATCH_ID}`。 使 `{BATCH_ID}` 用的值與建立批次時傳回的ID相同。
 
 **請求**
 
@@ -759,9 +759,9 @@ curl -X GET "https://platform.adobe.io/data/foundation/catalog/batches/{BATCH_ID
 
 當客戶發現在過去的n天中，ETL處理的資料未如預期發生或來源資料本身可能不正確時，可能需要進行批次重播和資料重新處理。
 
-為此，客戶端的資料管理員將使用平台UI刪除包含損壞資料的批。 然後，ETL可能需要重新執行，因此會重新填入正確的資料。 如果來源本身有損壞的資料，資料工程師／管理員將需要更正來源批次並重新收錄資料（可以是透過Adobe Experience Platform或ETL連接器）。
+為此，客戶的資料管理員將使用 [!DNL Platform] UI來移除包含損毀資料的批次。 然後，ETL可能需要重新執行，因此會重新填入正確的資料。 如果來源本身有損壞的資料，資料工程師／管理員將需要更正來源批次並重新收錄資料（可以是透過Adobe Experience Platform或ETL連接器）。
 
-根據所生成的資料類型，資料工程師可以選擇從某些資料集中刪除單個批或所有批。 資料將依據「體驗平台」方針移除／封存。
+根據所生成的資料類型，資料工程師可以選擇從某些資料集中刪除單個批或所有批。 資料將依照准則移除／封存 [!DNL Experience Platform] 。
 
 清除資料的ETL功能很可能很重要。
 
@@ -781,7 +781,7 @@ curl -X GET "https://platform.adobe.io/data/foundation/catalog/batches/{BATCH_ID
 
 遞延是指輸入資料尚未完整到可傳送至下遊程式的程式，但日後可能可用的程式。 客戶將確定他們對資料窗口的個別容限，以便將來匹配和處理成本，以便通知他們決定在下次轉換執行中保留資料並重新處理資料，希望在保留窗口內的某個將來時間豐富和協調／銜接資料。 此週期一直持續，直到行被充分處理或認為過時，才能繼續投資。 每個迭代都將生成延遲資料，這是以前迭代中所有延遲資料的超集。
 
-Adobe Experience Platform目前不會識別延遲資料，因此用戶端實作必須仰賴ETL和資料集手動組態，才能在平台中建立另一個資料集，以鏡像可用來保留延遲資料的來源資料集。 在這種情況下，延遲的資料將類似於快照資料。 在ETL轉換的每次執行中，源資料將與延遲資料相結合，並被發送以進行處理。
+Adobe Experience Platform目前不會識別延遲資料，因此用戶端實作必須仰賴ETL和資料集手動組態，在鏡像來源資料集時建立另一個資料集，以用於保留延遲資料。 [!DNL Platform] 在這種情況下，延遲的資料將類似於快照資料。 在ETL轉換的每次執行中，源資料將與延遲資料相結合，並被發送以進行處理。
 
 ## 更改日誌
 
@@ -789,5 +789,5 @@ Adobe Experience Platform目前不會識別延遲資料，因此用戶端實作�
 | ---- | ------ | ----------- |
 | 2019-01-19 | 已從資料集移除「欄位」屬性 | 資料集以前包含「欄位」屬性，該屬性包含模式的副本。 不應再使用此功能。 如果找到&quot;fields&quot;屬性，則應忽略它，並改用&quot;oscementedSchema&quot;或&quot;schemaRef&quot;。 |
 | 2019-03-15 | &quot;schemaRef&quot;屬性添加到資料集 | 資料集的&quot;schemaRef&quot;屬性包含參照資料集所依據之XDM架構的URI，並代表資料集可使用的所有潛在欄位。 |
-| 2019-03-15 | 所有使用者識別碼都對應至&quot;identityMap&quot;屬性 | 「identityMap」是主體所有唯一識別碼的封裝，例如CRM ID、ECID或忠誠度方案ID。 此地圖由 [Identity Service使用](../identity-service/home.md) ，以解析主體的所有已知和匿名身份，為每位使用者建立單一身分圖。 |
-| 2019-05-30 | EOL和從資料集中刪除「模式」屬性 | 資料集「架構」屬性使用目錄API中已過時的端點，提供 `/xdms` 架構的參考連結。 這已由&quot;schemaRef&quot;取代，該&quot;schemaRef&quot;提供新架構註冊表API中引用的架構的&quot;id&quot;、&quot;version&quot;和&quot;contentType&quot;。 |
+| 2019-03-15 | 所有使用者識別碼都對應至&quot;identityMap&quot;屬性 | 「identityMap」是主體所有唯一識別碼的封裝，例如CRM ID、ECID或忠誠度方案ID。 此地圖可用來解 [!DNL Identity Service](../identity-service/home.md) 析主體的所有已知和匿名身份，為每位使用者形成單一身份圖。 |
+| 2019-05-30 | EOL和從資料集中刪除「模式」屬性 | 資料集&quot;schema&quot;屬性使用 `/xdms` API中已過時的端點，提供指向架構的 [!DNL Catalog] 參考連結。 這已由&quot;schemaRef&quot;取代，該&quot;schemaRef&quot;提供新 [!DNL Schema Registry] API中所參考之架構的&quot;id&quot;、&quot;version&quot;和&quot;contentType&quot;。 |
