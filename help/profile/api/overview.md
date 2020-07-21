@@ -4,9 +4,9 @@ solution: Adobe Experience Platform
 title: 即時客戶個人檔案API開發人員指南
 topic: guide
 translation-type: tm+mt
-source-git-commit: 57ef7df4b9323b58a90660d515ade61a3974779f
+source-git-commit: d80d49df9c5ac197bdc7f851bbfff18d9b3019d4
 workflow-type: tm+mt
-source-wordcount: '690'
+source-wordcount: '704'
 ht-degree: 0%
 
 ---
@@ -18,7 +18,9 @@ ht-degree: 0%
 
 API包 [!DNL Real-time Customer Profile] 含多個端點，概述如下。 如需詳細資訊，請造訪個別端點指南，並參 [閱快速入門手冊](getting-started.md) ，以取得必要標題、讀取範例API呼叫等重要資訊。
 
-若要檢視所有可用的端點和CRUD作業，請參閱即 [時客戶個人檔案API參考設定檔](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml)。
+若要檢視所有可用的端點和CRUD作業，請造 [訪即時客戶個人檔案API參考設定檔](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml)。
+
+如需在UI中使用資料 [!DNL Real-time Customer Profile] 的指南，請 [!DNL Experience Platform] 參閱描述檔使 [用指南](../ui/user-guide.md)。
 
 ## (Alpha)計算屬性 {#computed-attributes}
 
@@ -52,4 +54,4 @@ Adobe Experience Platform讓資料可輕鬆在戰略性位置的伺服器（稱�
 
 ## 下一步 {#next-steps}
 
-若要開始使用 [!DNL Real-time Customer Profile] API進行呼叫，請閱讀快速入門 [指南](getting-started.md) ，然後選取其中一個端點指南，以瞭解如何使用特定的 [!DNL Profile]相關端點。 若要進一步瞭解如何使 [!DNL Profile] 用UI處理 [!DNL Platform] 資料，請參閱 [即時客戶個人檔案使用指南](../ui/user-guide.md)。
+若要開始使用 [!DNL Real-time Customer Profile] API進行呼叫，請閱讀 [快速入門手冊](getting-started.md) ，然後選取其中一個端點指南，以瞭解如何使用特定的 [!DNL Profile]相關端點。 若要使用 [!DNL Profile] UI處理資料 [!DNL Experience Platform] ，請參閱即時客 [戶個人檔案使用指南](../ui/user-guide.md)。
