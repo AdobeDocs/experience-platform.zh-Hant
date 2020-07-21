@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 檢視有效的原則
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
 workflow-type: tm+mt
-source-wordcount: '273'
+source-wordcount: '265'
 ht-degree: 1%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 1%
 
 # 檢視有效的原則
 
-若要檢視目前使用者的有效原則，請在存取控制API中向 `/acl/effective-policies` 端點提出POST要求。 您要擷取的權限和資源類型必須以陣列的形式提供在請求裝載中。 以下範例API呼叫中說明此點。
+若要檢視目前使用者的有效原則，請向API中的端點 `/acl/effective-policies` 提出POST要 [!DNL Access Control] 求。 您要擷取的權限和資源類型必須以陣列的形式提供在請求裝載中。 以下範例API呼叫中說明此點。
 
 **API格式**
 
@@ -24,7 +24,7 @@ POST /acl/effective-policies
 
 **請求**
 
-以下請求將檢索有關當前用戶的「管理資料集」權限和對「方案」資源類型的訪問權限的資訊。
+以下請求將檢索有關當前用戶的「[!UICONTROL Manage Datasets]」權限和對「[!UICONTROL Schemas]」資源類型的訪問權限的資訊。
 
 ```shell
 curl -X POST \
@@ -65,11 +65,11 @@ curl -X POST \
 
 ## 後續步驟
 
-本檔案說明如何呼叫存取控制API，以傳回有關資源類型之作用中權限和相關原則的資訊。 如需Experience Platform存取控制的詳細資訊，請參閱存取 [控制概觀](../home.md)。
+本檔案說明如何呼叫 [!DNL Access Control] API，以傳回資源類型之作用中權限和相關原則的資訊。 有關訪問控制的詳細信 [!DNL Experience Platform]息，請參 [閱訪問控制概述](../home.md)。
 
 ## 附錄
 
-本節提供使用存取控制API的補充資訊。
+本節提供使用API的補充 [!DNL Access Control] 資訊。
 
 ### 接受的權限和資源類型
 
