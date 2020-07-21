@@ -4,14 +4,17 @@ solution: Experience Platform
 title: 聚集函式
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 902ba5efbb5f18a2de826fffd023195d804309cc
+source-git-commit: 6a0a9b020b0dc89a829c557bdf29b66508a10333
+workflow-type: tm+mt
+source-wordcount: '208'
+ht-degree: 6%
 
 ---
 
 
 # 聚集函式
 
-聚合函式用於將配置檔案查詢語言(PQL)陣列中的多個值組合在一起，以形成單個摘要值。 有關其他PQL函式的詳細資訊，請參閱「配置檔案查 [詢語言」概述](./overview.md)。
+聚合函式用於將(PQL)陣列中的多 [!DNL Profile Query Language] 個值組合在一起，以形成單個摘要值。 有關其他PQL函式的詳細資訊，請參閱「配置檔案查 [詢語言」概述](./overview.md)。
 
 ## 計數
 
