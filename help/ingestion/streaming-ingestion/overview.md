@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Adobe Experience Platform串流擷取概觀
 topic: overview
 translation-type: tm+mt
-source-git-commit: 3f1c3c77a0755a3e305da0fb8a234be0f0ee1863
+source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
 workflow-type: tm+mt
-source-wordcount: '278'
+source-wordcount: '249'
 ht-degree: 3%
 
 ---
@@ -14,29 +14,29 @@ ht-degree: 3%
 
 # 串流擷取概觀
 
-Adobe Experience Platform的串流擷取為使用者提供一種方法，可即時從用戶端和伺服器端裝置傳送資料至Experience Platform。
+Adobe Experience Platform的串流擷取為使用者提供即時從用戶端和伺服器端裝置傳送資料 [!DNL Experience Platform] 的方法。
 
 ## 您可以使用串流擷取功能做什麼？
 
-Adobe Experience Platform可讓您針對個別客戶建立即時客戶個人檔案，以推動協調、一致且相關的體驗。 串流擷取在建立這些描述檔時扮演了關鍵角色，讓您盡可能少的延遲將描述檔資料傳送至資料湖。
+Adobe Experience Platform可讓您為個別客戶產生一致、一致且相關的 [!DNL Real-time Customer Profile] 協調體驗。 串流擷取在建立這些描述檔時扮演了關鍵角色，讓您在盡可能 [!DNL Profile] 少的延遲 [!DNL Data Lake] 下，將資料傳送至其中。
 
 以下視訊旨在協助您瞭解串流擷取，並概述上述概念。
 
 >[!VIDEO](https://video.tv.adobe.com/v/28425?quality=12&learn=on)
 
-### 串流描述檔記錄和ExperienceEvents
+### 串流描述檔記錄和 [!DNL ExperienceEvents]
 
-透過串流擷取，使用者只需數秒即可將描述檔記錄和ExperienceEvents串流至Platform，以協助推動即時個人化。 傳送至串流擷取API的所有資料都會自動保留在資料湖中。
+透過串流擷取，使用者可以在數秒 [!DNL ExperienceEvents] 內串流 [!DNL Platform] 個人檔案記錄，協助推動即時個人化。 傳送至串流擷取API的所有資料都會自動保留在 [!DNL Data Lake]中。
 
 請閱讀建立 [串流連線指南](../tutorials/create-streaming-connection.md) ，以取得詳細資訊。
 
 ### 串流至資料集
 
-一旦您確信您的資料是乾淨的，您就可以啟用資料集以用於即時客戶個人檔案和身分服務。
+一旦您確信資料是乾淨的，您就可以為和啟用資料 [!DNL Real-time Customer Profile] 集 [!DNL Identity Service]。
 
-如需啟用描述檔與身分服務資料集的詳細資訊，請閱讀設定 [資料集指南](../../profile/tutorials/dataset-configuration.md)。
+有關為和啟用資料集的更 [!DNL Profile] 多信 [!DNL Identity Service]息，請閱 [讀配置資料集指南](../../profile/tutorials/dataset-configuration.md)。
 
-## 平台上串流擷取的預期延遲為何？
+## What is the expected latency for streaming ingestion on [!DNL Platform]?
 
 | 目的地 | 預期延遲 |
 | --------- | ---------------- |
@@ -45,4 +45,4 @@ Adobe Experience Platform可讓您針對個別客戶建立即時客戶個人檔�
 
 ## Adobe Experience Platform 擴充功能
 
-您可以使用Adobe Experience Platform擴充功能建立新的串流連線。 Experience Platform擴充功能可提供動作，以傳送Experience Data Model(XDM)格式的信標，以便即時擷取至Experience Platform。 請造訪 [Experience Platform Extension](https://docs.adobe.com/content/help/en/launch/using/extensions-ref/adobe-extension/adobe-experience-platform-extension.html) 檔案，以取得詳細資訊。
+您可以使用Adobe Experience Platform擴充功能建立新的串流連線。 擴充 [!DNL Experience Platform] 功能可提供動作，讓您傳送格式 [!DNL Experience Data Model] 為(XDM)的信標，以便即時擷取 [!DNL Experience Platform]至。 請造訪 [Experience Platform Extension](https://docs.adobe.com/content/help/en/launch/using/extensions-ref/adobe-extension/adobe-experience-platform-extension.html) 檔案，以取得詳細資訊。
