@@ -4,19 +4,19 @@ seo-title: 目的地概述
 description: 目標是與目標平台預先建立的整合，可讓即時客戶資料平台順暢地啟動資料。 您可以使用Adobe即時客戶資料平台中的「目標」來啟用您已知和未知的跨通道行銷宣傳、電子郵件宣傳、目標廣告及許多其他使用案例資料。
 seo-description: 目標是與目標平台預先建立的整合，可讓即時客戶資料平台順暢地啟動資料。 您可以使用Adobe即時客戶資料平台中的「目標」來啟用您已知和未知的跨通道行銷宣傳、電子郵件宣傳、目標廣告及許多其他使用案例資料。
 translation-type: tm+mt
-source-git-commit: a61a2a4d9d51c402bb50153c06a93d255a3613cb
+source-git-commit: 7aa15772003cce1dfc7c3636048bce9a35bf8197
 workflow-type: tm+mt
-source-wordcount: '532'
-ht-degree: 1%
+source-wordcount: '526'
+ht-degree: 0%
 
 ---
 
 
-# 目的地概述 {#overview}
+# [!DNL Destinations]概述{#overview}
 
 ![目標概述橫幅](/help/rtcdp/destinations/assets/destinations-overview-banner.png)
 
-**目標** 是與目標平台預先建立的整合，可讓即時客戶資料平台順暢地啟動資料。 您可以使用目的地來啟用跨通道行銷宣傳、電子郵件宣傳、目標廣告和許多其他使用案例的已知和未知資料。
+**[!DNL Destinations]** 是與目標平台預先建立的整合，可讓即時客戶資料平台順暢地啟動資料。 您可以使用目的地來啟用跨通道行銷宣傳、電子郵件宣傳、目標廣告和許多其他使用案例的已知和未知資料。
 
 ## 目標和來源 {#destinations-and-sources}
 
@@ -48,14 +48,14 @@ ht-degree: 1%
 
 如需存取控制的詳細資訊，請參閱存取控 [制使用指南](../../access-control/ui/overview.md)。
 
-## 啟用資料至目的地的資料管理限制 {#data-governance}
+## [!DNL Data Governance] 啟用資料至目的地的限制 {#data-governance}
 
 通過以下方式對即時CDP目標實施資料治理：
 
 * *您可在建立目標* ，工作流程中選擇的行銷使用案例；
 * *資料使用原則* ，可限制包含特定使用標籤的資料被啟動至具有特定行銷使用案例的目的地。
 
-有關行銷使用案例和解決違反資料原則情況的詳細資訊，請參 [閱即時CDP](/help/rtcdp/privacy/data-governance-overview.md#destinations)[中的資料治理](/help/rtcdp/privacy/data-governance-overview.md#enforcement)。
+有關行 [!DNL Data Governance] 銷使用案例和解決資料原則違規 [的詳細資訊](/help/rtcdp/privacy/data-governance-overview.md#destinations) ，請 [參閱即時CDP檔案](/help/rtcdp/privacy/data-governance-overview.md#enforcement)。
 
 有關在建立目標工作流中選擇市場營銷使用案例的詳細資訊，請參閱以下有關即時CDP中不同目標類型的頁：
 
