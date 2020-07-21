@@ -4,17 +4,17 @@ solution: Experience Platform
 title: Adobe Experience Platform細分服務
 topic: overview
 translation-type: tm+mt
-source-git-commit: f44e42a4faa3b10f147dbaf929048054ce0bec42
+source-git-commit: 6a0a9b020b0dc89a829c557bdf29b66508a10333
 workflow-type: tm+mt
-source-wordcount: '1986'
+source-wordcount: '1971'
 ht-degree: 0%
 
 ---
 
 
-# Adobe Experience Platform細分服務概觀
+# Adobe Experience Platform [!DNL Segmentation Service] overview
 
-Adobe Experience Platform Segmentation Service提供使用者介面和REST風格的API，可讓您建立細分並從資料中產生受 [!DNL Real-time Customer Profile] 眾。 這些區段是在Platform上集中設定和維護的，任何Adobe解決方案都可輕鬆存取。
+Adobe Experience Platform提 [!DNL Segmentation Service] 供使用者介面和REST風格的API，讓您從資料中建立細分並產生受 [!DNL Real-time Customer Profile] 眾。 這些區段是集中設定和維護的， [!DNL Platform]任何Adobe解決方案都可輕鬆存取。
 
 本檔案概述其在Adobe [!DNL Segmentation Service] Experience Platform中所扮演的角色。
 
@@ -128,7 +128,7 @@ Adobe Experience Platform Segmentation Service提供使用者介面和REST風格
 
 ## 多實體分段 {#multi-entity}
 
-透過進階的多實體分段功能，您可以使用多個XDM類別來建立區段，從而為人員結構描述新增擴充功能。 因此，區段服務可在區段定義期間存取其他欄位，就像這些欄位是描述檔資料儲存的原生欄位。
+透過進階的多實體分段功能，您可以使用多個XDM類別來建立區段，從而為人員結構描述新增擴充功能。 因此，在區段定 [!DNL Segmentation Service] 義期間，可以存取其他欄位，就像這些欄位是描述檔資料儲存的原生欄位。
 
 多實體細分提供根據業務需求相關資料識別受眾所需的彈性。 此程式可以快速、輕鬆地完成，而不需要查詢資料庫的專業知識。 這可讓您將關鍵資料新增至區段，而不需對資料串流進行昂貴的變更，或等待後端資料合併。
 
@@ -140,7 +140,7 @@ Adobe Experience Platform Segmentation Service提供使用者介面和REST風格
 
 為了說明此進階細分功能的價值，請考慮由資料架構師與行銷人員協作。
 
-在此示例中，資料架構師使用鍵將個人（由以XDM Individual Profile和XDM ExperienceEvent作為基本類的架構組成）的資料連接到另一個類。 加入後，資料架構師或行銷人員可以在區段定義期間使用這些新欄位，就像這些欄位是基本類別架構的原生欄位。
+在此示例中，資料架構師使用鍵將個人(由具有和作為其基本類的方案 [!DNL XDM Individual Profile][!DNL XDM ExperienceEvent] 組成)的資料連接到另一個類。 加入後，資料架構師或行銷人員可以在區段定義期間使用這些新欄位，就像這些欄位是基本類別架構的原生欄位。
 
 **問題**
 
@@ -154,7 +154,7 @@ Adobe Experience Platform Segmentation Service提供使用者介面和REST風格
 >
 >在此範例中，我們假設資料架構師已建立ID命名空間。
 
-使用API，資料架構師會將ExperienceEvent架構的金鑰與「產品」類別建立關聯。 如此，資料架構師就可使用「產品」類別中的其他欄位，就像這些欄位是ExperienceEvent架構的原生欄位一樣。 作為配置工作的最後一步，資料架構師需要將適當的資料引入配置工作中 [!DNL Real-time Customer Profile]。 若要這麼做，請啟用「產品」資料集以搭配使用 [!DNL Profile]。 在設定工作完成後，資料架構人員或行銷人員都可在中建立目標區段 [!DNL Segment Builder]。
+使用API，資料架構師會將架構的金鑰 [!DNL ExperienceEvent] 與「產品」類別建立關聯。 這樣做可讓資料架構師使用「產品」類別中的其他欄位，就像這些欄位是架構的原生欄 [!DNL ExperienceEvent] 位。 作為配置工作的最後一步，資料架構師需要將適當的資料引入配置工作中 [!DNL Real-time Customer Profile]。 若要這麼做，請啟用「產品」資料集以搭配使用 [!DNL Profile]。 在設定工作完成後，資料架構人員或行銷人員都可在中建立目標區段 [!DNL Segment Builder]。
 
 請參閱 [架構構成概述](../xdm/schema/composition.md#union) ，瞭解如何定義跨XDM類的關係。
 
@@ -225,6 +225,6 @@ Adding this specific data to the segment itself allows execution engines to pers
 - [!DNL Segmentation] 是從描述檔商店定義描述檔子集的程式，可讓您描述所需有價群組的行為或屬性。 [!DNL Segmentation Service] 使這個過程成為可能。
 - 規劃區段時，請記住，區段可從任何其他區段參考，並與之結合。
 - 您可以根據描述檔資料、相關時間系列資料或兩者，從規則建立區段。
-- 區段可依需求或持續評估。 在隨選評估時，所有描述檔資料都會一次傳遞至區段定義。 持續評估時，資料串流會在進入平台時透過區段定義。
+- 區段可依需求或持續評估。 在隨選評估時，所有描述檔資料都會一次傳遞至區段定義。 持續評估時，資料流會在資料流進入區段定義時 [!DNL Platform]。
 
 若要瞭解如何在UI中定義區段，請參閱「區 [段產生器」指南](./ui/overview.md)。 如需使用API建立區段定義的詳細資訊，請參閱使用API [建立區段的教學課程](./tutorials/create-a-segment.md)。
