@@ -4,14 +4,17 @@ seo-title: 在即時客戶資料平台中使用合併策略
 description: 在即時客戶資料平台中使用合併策略
 seo-description: 在即時客戶資料平台中使用合併策略
 translation-type: tm+mt
-source-git-commit: 50e6b39c1eb0bda4f3b30991515fb1c13fa9ff87
+source-git-commit: b96286f6a06f0583b45343a513ee64f0025d79a7
+workflow-type: tm+mt
+source-wordcount: '162'
+ht-degree: 0%
 
 ---
 
 
 # 在即時CDP中合併策略
 
-即時客戶資料平台建立在Adobe Experience Platform之上，可讓您從多個來源匯整資料並加以匯整，以全面瞭解每個客戶。 將這些資料整合在一起時，合併原則是平台用來決定資料的優先順序以及將哪些資料合併以建立統一檢視的規則。
+以Adobe Experience Platform為基礎， [!DNL Real-time Customer Data Platform] 可讓您從多個來源匯整資料，並加以匯整，以全面瞭解每個客戶。 將這些資料整合在一起時，合併原則是用來決定 [!DNL Platform] 資料的優先順序以及將哪些資料合併以建立該統一檢視的規則。
 
 通過用戶介面，您可以建立新的合併策略、管理現有策略，並為組織設定預設的合併策略。 您也可以指定資料來源的偏好設定，並決定在合併時發生衝突時，哪些資料具有優先順序。
 
