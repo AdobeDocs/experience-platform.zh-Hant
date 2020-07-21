@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 串流擷取驗證
 topic: overview
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
 workflow-type: tm+mt
-source-wordcount: '842'
+source-wordcount: '815'
 ht-degree: 3%
 
 ---
@@ -20,28 +20,28 @@ ht-degree: 3%
 
 本指南需要有效瞭解Adobe Experience Platform的下列元件：
 
-- [體驗資料模型(XDM)系統](../../xdm/home.md): Experience Platform組織客戶體驗資料的標準化架構。
-- [串流擷取](../streaming-ingestion/overview.md): 其中一種方法可將資料傳送至Experience Platform。
+- [!DNL Experience Data Model (XDM) System](../../xdm/home.md): 組織客戶體驗資料 [!DNL Experience Platform] 的標準化架構。
+- [!DNL Streaming Ingestion](../streaming-ingestion/overview.md): 其中一種方法可傳送資料 [!DNL Experience Platform]。
 
 ### 讀取範例API呼叫
 
-本教學課程提供範例API呼叫，以示範如何設定請求的格式。 這些包括路徑、必要標題和正確格式化的請求負載。 也提供API回應中傳回的範例JSON。 如需範例API呼叫檔案中所用慣例的詳細資訊，請參閱「Experience Platform疑難排解指 [南」中有關如何讀取範例API呼叫的章節](../../landing/troubleshooting.md#how-do-i-format-an-api-request) 。
+本教學課程提供範例API呼叫，以示範如何設定請求的格式。 這些包括路徑、必要標題和正確格式化的請求負載。 也提供API回應中傳回的範例JSON。 如需範例API呼叫檔案中所用慣例的詳細資訊，請參閱疑難排解指 [南中有關如何讀取範例API呼叫的](../../landing/troubleshooting.md#how-do-i-format-an-api-request)[!DNL Experience Platform] 章節。
 
 ### 收集必要標題的值
 
-若要呼叫平台API，您必須先完成驗證教 [學課程](../../tutorials/authentication.md)。 完成驗證教學課程後，所有Experience Platform API呼叫中每個必要標題的值都會顯示在下方：
+若要呼叫API，您必 [!DNL Platform] 須先完成驗證教 [學課程](../../tutorials/authentication.md)。 完成驗證教學課程後，將提供所有 [!DNL Experience Platform] API呼叫中每個必要標題的值，如下所示：
 
 - 授權： 生產者 `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
-Experience Platform中的所有資源（包括屬於架構註冊表的資源）都隔離至特定的虛擬沙盒。 所有對平台API的請求都需要一個標題，該標題會指定要在中執行的操作的沙盒名稱：
+中的所有資 [!DNL Experience Platform]源（包括屬於的資源）都 [!DNL Schema Registry]被隔離到特定的虛擬沙盒中。 對API的所 [!DNL Platform] 有請求都需要一個標題，該標題會指定要在中執行的操作的沙盒名稱：
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
->如需平台中沙盒的詳細資訊，請參閱沙盒 [概觀檔案](../../sandboxes/home.md)。
+>如需中沙盒的詳細資訊 [!DNL Platform]，請參閱沙 [盒概述檔案](../../sandboxes/home.md)。
 
 所有包含裝載(POST、PUT、PATCH)的請求都需要額外的標題：
 
@@ -49,7 +49,7 @@ Experience Platform中的所有資源（包括屬於架構註冊表的資源）�
 
 ### 驗證涵蓋範圍
 
-串流驗證服務涵蓋下列方面的驗證：
+[!DNL Streaming Validation Service] 涵蓋下列方面的驗證：
 - 範圍
 - Presence
 - Enum
@@ -140,7 +140,7 @@ curl -X POST https://dcs.adobedc.net/collection/{CONNECTION_ID}?synchronousValid
 
 ## 非同步驗證
 
-非同步驗證是驗證方法，不會立即提供意見回應。 相反，資料會傳送至Data Lake中的失敗批次，以防止資料遺失。 此失敗的資料稍後可以擷取以供進一步分析和重播。 這種方法應用於生產中。 除非另有要求，否則串流擷取會在非同步驗證模式中運作。
+非同步驗證是驗證方法，不會立即提供意見回應。 而是將資料傳送至失敗的批次，以防 [!DNL Data Lake] 止資料遺失。 此失敗的資料稍後可以擷取以供進一步分析和重播。 這種方法應用於生產中。 除非另有要求，否則串流擷取會在非同步驗證模式中運作。
 
 **API格式**
 
