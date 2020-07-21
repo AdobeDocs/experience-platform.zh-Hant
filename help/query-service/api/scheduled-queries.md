@@ -4,19 +4,19 @@ solution: Experience Platform
 title: 查詢服務開發人員指南
 topic: scheduled queries
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 3b710e7a20975880376f7e434ea4d79c01fa0ce5
 workflow-type: tm+mt
-source-wordcount: '947'
+source-wordcount: '943'
 ht-degree: 3%
 
 ---
 
 
-# Scheduled queries
+# 排程查詢
 
 ## 範例API呼叫
 
-現在您已瞭解要使用的標題，可以開始呼叫查詢服務API。 以下各節將介紹您可使用查詢服務API進行的各種API呼叫。 每個呼叫都包含一般API格式、顯示必要標題的範例要求，以及範例回應。
+現在，您已瞭解要使用哪些標題，可以開始呼叫 [!DNL Query Service] API。 以下各節將介紹您可使用API進行的各種API [!DNL Query Service] 呼叫。 每個呼叫都包含一般API格式、顯示必要標題的範例要求，以及範例回應。
 
 ### 擷取排程查詢的清單
 
@@ -42,11 +42,11 @@ GET /schedules?{QUERY_PARAMETERS}
 | `orderby` | 指定結果排序依據的欄位。 支援的欄位 `created` 為和 `updated`。 例如，將 `orderby=created` 依據以升序建立的結果排序。 在建立 `-` 前新增(`orderby=-created`)，將依建立項目的遞減順序排序。 |
 | `limit` | 指定頁面大小限制，以控制包含在頁面中的結果數。 (*Default value: 20*) |
 | `start` | 使用零編號來偏移響應清單。 例如，將 `start=2` 返回從第三個列出查詢開始的清單。 (*Default value: 0*) |
-| `property` | 根據欄位篩選結果。 篩選器 **必須** HTML逸出。 逗號可用來組合多組篩選器。 The supported fields are `created`, `templateId`, and `userId`. The list of supported operators are `>` (greater than), `<` (less than), and `==` (equal to). For example, `userId==6ebd9c2d-494d-425a-aa91-24033f3abeec` will return all scheduled queries where the user ID is as specified. |
+| `property` | 根據欄位篩選結果。 篩選器 **必須** HTML逸出。 逗號可用來組合多組篩選器。 支援的欄位 `created`有、 `templateId`和 `userId`。 支援的運算子 `>` 清單有（大於）、 `<` （小於） `==` 和（等於）。 例如，將傳 `userId==6ebd9c2d-494d-425a-aa91-24033f3abeec` 回使用者ID如指定的所有排程查詢。 |
 
 **請求**
 
-The following request retrieves the latest scheduled query created for your IMS organization.
+下列請求會擷取為IMS組織建立的最新排程查詢。
 
 ```shell
 curl -X GET https://platform.adobe.io/data/foundation/query/schedules?limit=1
@@ -58,7 +58,7 @@ curl -X GET https://platform.adobe.io/data/foundation/query/schedules?limit=1
 
 **回應**
 
-A successful response returns HTTP status 200 with a list of scheduled queries for the specified IMS Organization. The following response returns the latest scheduled query created for your IMS organization.
+成功的回應會傳回HTTP狀態200，並包含指定IMS組織的排程查詢清單。 下列回應會傳回為IMS組織建立的最新排程查詢。
 
 ```json
 {
@@ -122,7 +122,7 @@ A successful response returns HTTP status 200 with a list of scheduled queries f
 }
 ```
 
-### Create a new scheduled query
+### 建立新的排程查詢
 
 您可以通過向端點發出POST請求來建立新的計畫查 `/schedules` 詢。
 
@@ -162,7 +162,7 @@ curl -X POST https://platform.adobe.io/data/foundation/query/schedules
 | `query.sql` | 要建立的SQL查詢。 |
 | `query.name` | 計畫查詢的名稱。 |
 | `schedule.schedule` | 查詢的cron調度。 有關cron時間表的更多資訊，請閱讀 [cron表達式格式文檔](http://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html) 。 在此範例中，&quot;30 * * * * *&quot;表示查詢將在30分鐘標籤下每小時運行一次。 |
-| `schedule.startDate` | The start date for your scheduled query, written as a UTC timestamp. |
+| `schedule.startDate` | 排程查詢的開始日期，寫入為UTC時間戳記。 |
 
 **回應**
 
@@ -247,7 +247,7 @@ curl -X GET https://platform.adobe.io/data/foundation/query/schedules/e95186d65a
 
 **回應**
 
-A successful response returns HTTP status 200 with details of the specified scheduled query.
+成功的回應會傳回HTTP狀態200，並包含指定之排程查詢的詳細資訊。
 
 ```json
 {
@@ -304,15 +304,15 @@ A successful response returns HTTP status 200 with details of the specified sche
 >
 >您可以使用的值刪 `_links.delete` 除 [已建立的計畫查詢](#delete-a-specified-scheduled-query)。
 
-### Update details of a specified scheduled query
+### 更新指定計畫查詢的詳細資料
 
-You can update the details for a specified scheduled query by making a PATCH request to the `/schedules` endpoint and by providing its ID in the request path.
+通過向端點發出PATCH請求並在請求路徑中提供其ID，可以更 `/schedules` 新指定計畫查詢的詳細資訊。
 
-The PATCH request supports two different paths: `/state` and `/schedule/schedule`.
+PATCH請求支援兩種不同的路徑： `/state` 和 `/schedule/schedule`。
 
-### Update scheduled query state
+### 更新計畫查詢狀態
 
-You can use `/state` to update the state of the selected scheduled query - ENABLED or DISABLED. 若要更新狀態，您必須將值設為 `enable` 或 `disable`。
+您可以使用 `/state` 更新所選計畫查詢的狀態- ENABLED或DISABLED。 若要更新狀態，您必須將值設為 `enable` 或 `disable`。
 
 **API格式**
 
@@ -348,8 +348,8 @@ curl -X PATCH https://platform.adobe.io/data/foundation/query/schedules/e95186d6
 
 | 屬性 | 說明 |
 | -------- | ----------- |
-| `path` | 您要修補的值的路徑。 In this case, since you are updating the scheduled query&#39;s state, you need to set the value of `path` to `/state`. |
-| `value` | 的更新值 `/state`。 This value can either be set as `enable` or `disable` to enable or disable the scheduled query. |
+| `path` | 您要修補的值的路徑。 在這種情況下，由於您要更新計畫查詢的狀態，因此需要將值設 `path` 置為 `/state`。 |
+| `value` | 的更新值 `/state`。 此值可設為，或 `enable` 啟 `disable` 用或停用排程查詢。 |
 
 **回應**
 
@@ -362,9 +362,9 @@ curl -X PATCH https://platform.adobe.io/data/foundation/query/schedules/e95186d6
 }
 ```
 
-### Update scheduled query schedule
+### 更新計畫查詢排程
 
-You can use `/schedule/schedule` to update the cron schedule of the scheduled query. 有關cron時間表的更多資訊，請閱讀 [cron表達式格式文檔](http://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html) 。
+您可以使用 `/schedule/schedule` 來更新已排程查詢的cron排程。 有關cron時間表的更多資訊，請閱讀 [cron表達式格式文檔](http://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html) 。
 
 **API格式**
 
@@ -399,7 +399,7 @@ curl -X PATCH https://platform.adobe.io/data/foundation/query/schedules/e95186d6
 
 | 屬性 | 說明 |
 | -------- | ----------- |
-| `path` | 您要修補的值的路徑。 In this case, since you are updating the scheduled query&#39;s schedule, you need to set the value of `path` to `/schedule/schedule`. |
+| `path` | 您要修補的值的路徑。 在此情況下，由於您要更新排程查詢的排程，因此需要將值設 `path` 為 `/schedule/schedule`。 |
 | `value` | 的更新值 `/schedule`。 此值必須以cron計畫的形式。 因此，在此範例中，排程的查詢會在每小時45分鐘標籤下執行。 |
 
 **回應**
@@ -413,13 +413,13 @@ curl -X PATCH https://platform.adobe.io/data/foundation/query/schedules/e95186d6
 }
 ```
 
-### Delete a specified scheduled query
+### 刪除指定的計畫查詢
 
-You can delete a specified scheduled query by making a DELETE request to the `/schedules` endpoint and providing the ID of the scheduled query you want to delete in the request path.
+通過向端點發出DELETE請求並提供要在請求路徑中刪除的 `/schedules` 已調度查詢的ID，可以刪除指定的已調度查詢。
 
 >[!NOTE]
 >
->The schedule **must** be disabled before being deleted.
+>刪除前 **必須禁** 用該計畫。
 
 **API格式**
 
