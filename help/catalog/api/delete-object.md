@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 刪除對象
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
 workflow-type: tm+mt
-source-wordcount: '178'
+source-wordcount: '173'
 ht-degree: 2%
 
 ---
@@ -14,11 +14,11 @@ ht-degree: 2%
 
 # 刪除對象
 
-可以通過在DELETE請求的路徑中提供目錄對象的ID來刪除目錄對象。
+您可以在DELETE [!DNL Catalog] 請求的路徑中提供物件ID來刪除物件。
 
 >[!WARNING]
 >
->刪除物件時請格外小心，因為這無法復原，而且可能會在Experience Platform的其他位置產生中斷變更。
+>刪除物件時請格外小心，因為這無法復原，而且可能會在其他位置產生中斷變更 [!DNL Experience Platform]。
 
 **API格式**
 
@@ -32,7 +32,7 @@ DELETE /{OBJECT_TYPE}/{OBJECT_ID}
 
 | 參數 | 說明 |
 | --- | --- |
-| `{OBJECT_TYPE}` | 要刪除的目錄對象類型。 有效對象包括： <ul><li>`accounts`</li><li>`connections`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_TYPE}` | 要刪除 [!DNL Catalog] 的對象類型。 有效對象包括： <ul><li>`accounts`</li><li>`connections`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
 | `{OBJECT_ID}` | 您要更新的特定物件的識別碼。 |
 
 **請求**
@@ -60,4 +60,4 @@ curl -X DELETE \
 
 >[!NOTE]
 >
->如果沒有目錄物件符合您請求中提供的ID，您仍可能收到HTTP狀態代碼200，但回應陣列會是空的。
+>如果沒 [!DNL Catalog] 有物件符合您請求中提供的ID，您仍可能收到HTTP狀態碼200，但回應陣列會是空的。
