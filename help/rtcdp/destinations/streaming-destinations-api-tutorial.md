@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 連線至串流目的地並啟動資料
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: ed9d6eadeb00db51278ea700f7698a1b5590632f
+source-git-commit: 6f680a60c88bc5fee6ce9cb5a4f314c4b9d02249
 workflow-type: tm+mt
-source-wordcount: '1857'
+source-wordcount: '1810'
 ht-degree: 2%
 
 ---
@@ -30,8 +30,8 @@ ht-degree: 2%
 
 本指南需要有效瞭解Adobe Experience Platform的下列元件：
 
-* [體驗資料模型(XDM)系統](../../xdm/home.md): Experience Platform組織客戶體驗資料的標準化架構。
-* [目錄服務](../../catalog/home.md): 目錄是Experience Platform中資料位置和世系的記錄系統。
+* [!DNL Experience Data Model (XDM) System](../../xdm/home.md): Experience Platform組織客戶體驗資料的標準化架構。
+* [!DNL Catalog Service](../../catalog/home.md): [!DNL Catalog] 是Experience Platform中資料位置和世系的記錄系統。
 * [沙盒](../../sandboxes/home.md): Experience Platform提供虛擬沙盒，可將單一Platform實例分割為不同的虛擬環境，以協助開發和發展數位體驗應用程式。
 
 以下各節提供您需要瞭解的其他資訊，以便在Adobe即時CDP中將資料啟動至串流目的地。
@@ -261,12 +261,12 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 * `{CONNECTION_SPEC_ID}`: 使用在步驟獲取可用目標清單 [中獲得的連接規範ID](#get-the-list-of-available-destinations)。
 * `{AUTHENTICATION_CREDENTIALS}`: 填寫您的串流目的地名稱，例如： `Amazon Kinesis authentication credentials` 或 `Azure Event Hubs authentication credentials`者。
-* `{ACCESS_ID}`: *用於Amazon Kinesis連接。* Amazon Kinesis儲存位置的訪問ID。
-* `{SECRET_KEY}`: *用於Amazon Kinesis連接。* Amazon Kinesis儲存位置的密鑰。
-* `{REGION}`: *用於Amazon Kinesis連接。* Amazon Kinesis帳戶中Adobe即時CDP將流資料的區域。
-* `{SAS_KEY_NAME}`: *用於Azure事件集線器連接。* 填寫您的SAS密鑰名稱。 瞭解 [!DNL Azure Event Hubs] Microsoft文檔中 [如何使用SAS密鑰驗證](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature)。
-* `{SAS_KEY}`: *用於Azure事件集線器連接。* 填寫SAS密鑰。 瞭解 [!DNL Azure Event Hubs] Microsoft文檔中 [如何使用SAS密鑰驗證](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature)。
-* `{EVENT_HUB_NAMESPACE}`: *用於Azure事件集線器連接。* 填寫Adobe即時CDP將串流您資料的Azure事件中樞命名空間。 如需詳細資訊，請 [參閱Microsoft檔案中的建立事件中樞](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hubs-namespace) 。
+* `{ACCESS_ID}`: *用於[!DNL Amazon Kinesis]連接。* Amazon Kinesis儲存位置的訪問ID。
+* `{SECRET_KEY}`: *用於[!DNL Amazon Kinesis]連接。* Amazon Kinesis儲存位置的密鑰。
+* `{REGION}`: *用於[!DNL Amazon Kinesis]連接。* 您帳戶中Adobe [!DNL Amazon Kinesis] 即時CDP將串流您資料的地區。
+* `{SAS_KEY_NAME}`: *用於[!DNL Azure Event Hubs]連接。* 填寫您的SAS密鑰名稱。 瞭解 [!DNL Azure Event Hubs] Microsoft文檔中 [如何使用SAS密鑰驗證](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature)。
+* `{SAS_KEY}`: *用於[!DNL Azure Event Hubs]連接。* 填寫SAS密鑰。 瞭解 [!DNL Azure Event Hubs] Microsoft文檔中 [如何使用SAS密鑰驗證](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature)。
+* `{EVENT_HUB_NAMESPACE}`: *用於[!DNL Azure Event Hubs]連接。* 填寫Adobe [!DNL Azure Event Hubs] 即時CDP將串流您資料的命名空間。 如需詳細資訊，請 [參閱檔案中的建立事件中樞](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hubs-namespace) ，命名 [!DNL Microsoft] 空間。
 
 **回應**
 
@@ -317,9 +317,9 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 * `{BASE_CONNECTION_ID}`: 使用您在上述步驟中取得的基本連線ID。
 * `{CONNECTION_SPEC_ID}`: 使用在步驟獲取可用目標列 [表中獲得的連接規範](#get-the-list-of-available-destinations)。
-* `{NAME_OF_DATA_STREAM}`: *用於Amazon Kinesis連接。* 在Amazon Kinesis帳戶中提供現有資料流的名稱。 Adobe即時CDP會將資料匯出至此串流。
-* `{REGION}`: *用於Amazon Kinesis連接。* Amazon Kinesis帳戶中Adobe即時CDP將流資料的區域。
-* `{EVENT_HUB_NAME}`: *用於Azure事件集線器連接。* 填寫Adobe即時CDP將串流您資料的Azure事件中樞名稱。 如需詳細資訊，請 [參閱Microsoft檔案中的](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hub) 「建立事件中樞」。
+* `{NAME_OF_DATA_STREAM}`: *用於[!DNL Amazon Kinesis]連接。* 提供帳戶中現有資料流的名 [!DNL Amazon Kinesis] 稱。 Adobe即時CDP會將資料匯出至此串流。
+* `{REGION}`: *用於[!DNL Amazon Kinesis]連接。* Amazon Kinesis帳戶中Adobe即時CDP將流資料的區域。
+* `{EVENT_HUB_NAME}`: *用於[!DNL Azure Event Hubs]連接。* 填寫Adobe [!DNL Azure Event Hub] 即時CDP將串流您資料的名稱。 如需詳細資訊，請 [參閱檔案中的建立事件](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hub)[!DNL Microsoft] 中心。
 
 **回應**
 
@@ -467,7 +467,7 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 
 * `{DATAFLOW_ID}`: 使用您在上一步驟中取得的資料流。
 * `{ETAG}`: 使用您在上一步驟中取得的標籤。
-* `{SEGMENT_ID}`: 提供您要匯出至此目的地的區段ID。 若要擷取您要啟用之區段的區段ID，請前往https://www.adobe.io/apis/experienceplatform/home/api-reference.html#/，在左側導覽功能表中選取 **Segmentation Service API** ，並尋找該操 `GET /segment/jobs` 作。
+* `{SEGMENT_ID}`: 提供您要匯出至此目的地的區段ID。 若要擷取您要啟用之區段的區段ID，請前往https://www.adobe.io/apis/experienceplatform/home/api-reference.html#/，在左側導覽功能表中選取 **[!UICONTROL Segmentation Service API]** ，並尋找該操 `GET /segment/jobs` 作。
 * `{PROFILE_ATTRIBUTE}`: 例如， `personalEmail.address` 或 `person.lastName`
 
 **回應**
@@ -551,7 +551,7 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 
 >[!IMPORTANT]
 >
-> 除了將資料激活到新目標的步驟中的配置檔案屬性和細分 [](#activate-data),AWS Kinesis和Azure事件集線器中導出的資料還將包含有關身份映射的資訊。 這代表匯出的設定檔身分(例如 [ECID](https://docs.adobe.com/content/help/zh-Hant/id-service/using/intro/id-request.html)、行動ID、Google ID、電子郵件地址等)。 請參閱以下範例。
+> 除了設定檔屬性和步驟「啟用資料至新目的地」中的區段外 [，和中的匯出資](#activate-data)料也 [!DNL AWS Kinesis][!DNL Azure Event Hubs] 會包含有關識別地圖的資訊。 這代表匯出的設定檔身分(例如 [ECID](https://docs.adobe.com/content/help/zh-Hant/id-service/using/intro/id-request.html)、行動ID、Google ID、電子郵件地址等)。 請參閱以下範例。
 
 ```
 {
