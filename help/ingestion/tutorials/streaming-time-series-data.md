@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 串流時間系列資料
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 6a371aab5435bac97f714e5cf96a93adf4aa0303
+source-git-commit: 80392190c7fcae9b6e73cc1e507559f834853390
 workflow-type: tm+mt
-source-wordcount: '1173'
+source-wordcount: '1130'
 ht-degree: 2%
 
 ---
@@ -14,15 +14,15 @@ ht-degree: 2%
 
 # 將時間系列資料串流至Adobe Experience Platform
 
-本教學課程將協助您開始使用串流擷取API，這是Adobe Experience Platform Data Ingestion Service API的一部分。
+本教學課程將協助您開始使用串流擷取API，這是Adobe Experience Platform API的一 [!DNL Data Ingestion Service] 部分。
 
 ## 快速入門
 
 本教學課程需要具備各種Adobe Experience Platform服務的相關知識。 在開始本教學課程之前，請先閱讀下列服務的檔案：
 
-- [體驗資料模型(XDM)](../../xdm/home.md): 平台組織體驗資料的標準化架構。
-- [即時客戶個人檔案](../../profile/home.md): 根據來自多個來源的匯整資料，即時提供統一的消費者個人檔案。
-- [架構註冊開發人員指南](../../xdm/api/getting-started.md): 完整的指南，涵蓋架構註冊表API的每個可用端點，以及如何對其進行呼叫。 這包括瞭解您 `{TENANT_ID}`的資料集（在本教學課程的呼叫中顯示），以及瞭解如何建立結構描述（用於建立資料集以擷取）。
+- [!DNL Experience Data Model (XDM)](../../xdm/home.md): 組織體驗資料的 [!DNL Platform] 標準化架構。
+- [!DNL Real-time Customer Profile](../../profile/home.md): 根據來自多個來源的匯整資料，即時提供統一的消費者個人檔案。
+- [架構註冊開發人員指南](../../xdm/api/getting-started.md): 完整的指南，涵蓋 [!DNL Schema Registry] API的每個可用端點，以及如何呼叫這些端點。 這包括瞭解您 `{TENANT_ID}`的資料集（在本教學課程的呼叫中顯示），以及瞭解如何建立結構描述（用於建立資料集以擷取）。
 
 此外，本教學課程要求您已建立串流連線。 如需建立串流連線的詳細資訊，請閱讀建立串 [流連線教學課程](./create-streaming-connection.md)。
 
@@ -30,23 +30,23 @@ ht-degree: 2%
 
 ### 讀取範例API呼叫
 
-本指南提供範例API呼叫，以示範如何格式化您的請求。 這些包括路徑、必要標題和正確格式化的請求負載。 也提供API回應中傳回的範例JSON。 如需範例API呼叫檔案中所用慣例的詳細資訊，請參閱「Experience Platform疑難排解指 [南」中有關如何讀取範例API呼叫的章節](../../landing/troubleshooting.md#how-do-i-format-an-api-request) 。
+本指南提供範例API呼叫，以示範如何格式化您的請求。 這些包括路徑、必要標題和正確格式化的請求負載。 也提供API回應中傳回的範例JSON。 如需範例API呼叫檔案中所用慣例的詳細資訊，請參閱疑難排解指 [南中有關如何讀取範例API呼叫的](../../landing/troubleshooting.md#how-do-i-format-an-api-request)[!DNL Experience Platform] 章節。
 
 ### 收集必要標題的值
 
-若要呼叫平台API，您必須先完成驗證教 [學課程](../../tutorials/authentication.md)。 完成驗證教學課程後，所有Experience Platform API呼叫中每個必要標題的值都會顯示在下方：
+若要呼叫API，您必 [!DNL Platform] 須先完成驗證教 [學課程](../../tutorials/authentication.md)。 完成驗證教學課程後，將提供所有 [!DNL Experience Platform] API呼叫中每個必要標題的值，如下所示：
 
 - 授權： 生產者 `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
-Experience Platform中的所有資源都隔離至特定的虛擬沙盒。 所有對平台API的請求都需要一個標題，該標題會指定要在中執行的操作的沙盒名稱：
+中的所有資 [!DNL Experience Platform] 源都與特定虛擬沙盒隔離。 對API的所 [!DNL Platform] 有請求都需要一個標題，該標題會指定要在中執行的操作的沙盒名稱：
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
->如需平台中沙盒的詳細資訊，請參閱沙盒 [概觀檔案](../../sandboxes/home.md)。
+>如需中沙盒的詳細資訊 [!DNL Platform]，請參閱沙 [盒概述檔案](../../sandboxes/home.md)。
 
 所有包含裝載(POST、PUT、PATCH)的請求都需要額外的標題：
 
@@ -54,7 +54,7 @@ Experience Platform中的所有資源都隔離至特定的虛擬沙盒。 所有
 
 ## 基於XDM ExperienceEvent類合成模式
 
-若要建立資料集，您首先需要建立實作XDM ExperienceEvent類別的新架構。 如需如何建立結構描述的詳細資訊，請閱讀「結構描述注 [冊表API開發人員指南」](../../xdm/api/getting-started.md)。
+若要建立資料集，您首先需要建立實作類別的新 [!DNL XDM ExperienceEvent] 架構。 如需如何建立結構描述的詳細資訊，請閱讀「結構描述注 [冊表API開發人員指南」](../../xdm/api/getting-started.md)。
 
 **API格式**
 
@@ -99,7 +99,7 @@ curl -X POST https://platform.adobe.io/data/foundation/schemaregistry/tenant/sch
 | -------- | ----------- |
 | `title` | 您要用於架構的名稱。 此名稱必須是唯一的。 |
 | `description` | 正在建立的方案的有意義說明。 |
-| `meta:immutableTags` | 在此範例中，標 `union` 記會用來將您的資料保存 [在即時客戶個人檔案中](../../profile/home.md)。 |
+| `meta:immutableTags` | 在此範例中，標 `union` 記會用來保存您的資料 [!DNL Real-time Customer Profile](../../profile/home.md)。 |
 
 **回應**
 
@@ -187,7 +187,7 @@ curl -X POST https://platform.adobe.io/data/foundation/schemaregistry/tenant/sch
 
 1. 工作電子郵件地址將成為必填欄位。 這表示未使用此欄位傳送的訊息將無法驗證，且不會被收錄。
 
-2. 即時客戶個人檔案會使用工作電子郵件地址做為識別碼，協助拼湊更多有關該個人的資訊。
+2. [!DNL Real-time Customer Profile] 將會使用工作電子郵件地址做為識別碼，協助拼湊出更多有關該個人的資訊。
 
 ### 請求
 
@@ -246,7 +246,7 @@ curl -X POST https://platform.adobe.io/data/foundation/schemaregistry/tenant/des
 
 >[!NOTE]
 >
->透過設定適當的標 **記，此資料集將啟用「即時客戶****個人檔案」和** 「身分識別」。
+>此資料集將會透過設 **[!DNL Real-time Customer Profile]** 定適當 **[!DNL Identity]** 的標籤來啟用。
 
 **API格式**
 
@@ -294,7 +294,7 @@ curl -X POST https://platform.adobe.io/data/foundation/catalog/dataSets \
 
 ## 將時間系列資料收錄至串流連線
 
-有了資料集和串流連線，您就可以內嵌XDM格式的JSON記錄，以便在Platform中內嵌時間系列資料。
+有了資料集和串流連線，您就可以內嵌XDM格式的JSON記錄，以內嵌時間系列資料 [!DNL Platform]。
 
 **API格式**
 
@@ -379,7 +379,7 @@ curl -X POST https://dcs.adobedc.net/collection/{CONNECTION_ID}?synchronousValid
 
 **回應**
 
-成功的回應會傳回HTTP狀態200，並包含新串流描述檔的詳細資訊。
+成功的回應會傳回HTTP狀態200，並包含新串流的詳細資訊 [!DNL Profile]。
 
 ```json
 {
@@ -401,11 +401,11 @@ curl -X POST https://dcs.adobedc.net/collection/{CONNECTION_ID}?synchronousValid
 
 ## 擷取新擷取的時間序列資料
 
-若要驗證先前擷取的記錄，您可以使用描述檔 [存取API](../../profile/api/entities.md) ，擷取時間系列資料。 這可以使用對端點的GET請求和 `/access/entities` 可選查詢參數來完成。 可以使用多個參數，由&amp;符號(&amp;)分隔。&quot;
+要驗證先前提取的記錄，可以使 [!DNL Profile Access API](../../profile/api/entities.md) 用檢索時間序列資料。 這可以使用對端點的GET請求和 `/access/entities` 可選查詢參數來完成。 可以使用多個參數，由&amp;符號(&amp;)分隔。&quot;
 
 >[!NOTE]
 >
->如果未定義合併策略ID和架構。</span>name或relatedSchema</span>.name為 `_xdm.context.profile`，描述檔存取會擷取所 **有相關** 的身分。
+>如果未定義合併策略ID和架構。</span>name或relatedSchema</span>.name為 `_xdm.context.profile`, [!DNL Profile Access] 將讀取 **所有相關身份** 。
 
 **API格式**
 
@@ -503,6 +503,6 @@ curl -X GET \
 
 ## 後續步驟
 
-閱讀本檔案，您現在就瞭解如何使用串流連線將錄制資料內嵌至平台。 您可以嘗試使用不同值進行更多呼叫並擷取更新的值。 此外，您還可以透過平台UI開始監控所擷取的資料。 如需詳細資訊，請閱讀監控資 [料擷取指南](../quality/monitor-data-flows.md) 。
+閱讀本檔案，您現在就瞭解如何使用串流連線將記錄資 [!DNL Platform] 料內嵌入。 您可以嘗試使用不同值進行更多呼叫並擷取更新的值。 此外，您還可以透過 [!DNL Platform] UI開始監控所擷取的資料。 如需詳細資訊，請閱讀監控資 [料擷取指南](../quality/monitor-data-flows.md) 。
 
 如需串流擷取的詳細資訊，請閱讀串流擷取 [概觀](../streaming-ingestion/overview.md)。
