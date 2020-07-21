@@ -4,14 +4,17 @@ solution: Experience Platform
 title: 建立資料集
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: a25ca22fb8ec9eb95f74e4fd76a7f18e87343085
+source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
+workflow-type: tm+mt
+source-wordcount: '86'
+ht-degree: 4%
 
 ---
 
 
 # 建立批次
 
-為了讓資料集收錄資料，資料集必須有與其關聯的批次。 使用現 `id` 有資料集的值，您可以透過對目錄API中的端點提出POST請 `/batches` 求來建立批次。
+為了讓資料集收錄資料，資料集必須有與其關聯的批次。 使用現 `id` 有資料集的值，您可以透過對API中的端點提出POST要求來 `/batches` 建立批 [!DNL Catalog] 次。
 
 **API格式**
 
