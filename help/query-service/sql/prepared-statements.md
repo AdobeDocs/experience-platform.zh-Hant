@@ -4,14 +4,17 @@ solution: Experience Platform
 title: 準備的陳述
 topic: prepared statements
 translation-type: tm+mt
-source-git-commit: 5699022d1f18773c81a0a36d4593393764cb771a
+source-git-commit: 3b710e7a20975880376f7e434ea4d79c01fa0ce5
+workflow-type: tm+mt
+source-wordcount: '340'
+ht-degree: 8%
 
 ---
 
 
 # 準備的陳述
 
-在SQL中，預準備語句用於模擬類似的查詢或更新。 Adobe Experience Platform Query Service支援使用參數化查詢來準備陳述式。 這可用來最佳化效能，因為您將不再需要反複重新剖析查詢。
+在SQL中，預準備語句用於模擬類似的查詢或更新。 Adobe Experience Platform支援使 [!DNL Query Service] 用參數化查詢來準備陳述式。 這可用來最佳化效能，因為您將不再需要反複重新剖析查詢。
 
 ## 使用預準備的語句
 
