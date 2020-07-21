@@ -4,16 +4,19 @@ solution: Experience Platform
 title: 濾鏡函式
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 92f92f480f29f7d6440f4e90af3225f9a1fcc3d0
+source-git-commit: 6a0a9b020b0dc89a829c557bdf29b66508a10333
+workflow-type: tm+mt
+source-wordcount: '191'
+ht-degree: 4%
 
 ---
 
 
 # 濾鏡函式
 
-篩選函式用於篩選描述檔查詢語言(PQL)中陣列內的資料。 有關其他PQL函式的詳細資訊，請參閱「配置檔案查 [詢語言」概述](./overview.md)。
+篩選函式用於篩選(PQL)中數 [!DNL Profile Query Language] 組內的資料。 有關其他PQL函式的詳細資訊，請參閱「配置檔案查 [詢語言」概述](./overview.md)。
 
-## 篩選
+## 篩選器
 
 該 `[]` （過濾器）函式允許將過濾器應用於陣列並返回與指定條件匹配的陣列的子集。
 
