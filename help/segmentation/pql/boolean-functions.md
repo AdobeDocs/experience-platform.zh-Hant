@@ -4,14 +4,17 @@ solution: Experience Platform
 title: 布爾函式
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 902ba5efbb5f18a2de826fffd023195d804309cc
+source-git-commit: 6a0a9b020b0dc89a829c557bdf29b66508a10333
+workflow-type: tm+mt
+source-wordcount: '223'
+ht-degree: 6%
 
 ---
 
 
 # 布爾函式
 
-布林函式用於對配置檔案查詢語言(PQL)中的不同元素執行布爾邏輯。  有關其他PQL函式的詳細資訊，請參閱「配置檔案查 [詢語言」概述](./overview.md)。
+布爾函式用於對(PQL)中的不同元素執行 [!DNL Profile Query Language] 布爾邏輯。  有關其他PQL函式的詳細資訊，請參閱「配置檔案查 [詢語言」概述](./overview.md)。
 
 ## 和
 
@@ -94,4 +97,4 @@ if (homeAddress.countryISO = "CA", 1, 2)
 
 ## 後續步驟
 
-現在，您已經瞭解了布爾函式，您可以在PQL查詢中使用它們。 有關其他PQL函式的詳細資訊，請閱讀配置式查 [詢語言概述](./overview.md)。
+現在，您已瞭解了布爾函式，您可以在PQL查詢中使用它們。 有關其他PQL函式的詳細資訊，請閱讀配置式查 [詢語言概述](./overview.md)。
