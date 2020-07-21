@@ -4,18 +4,21 @@ seo-title: Marketo Web Personalization擴充功能
 description: Marketo Web Personalization擴充功能是Adobe即時客戶資料平台中的個人化目的地。 如需擴充功能的詳細資訊，請參閱Adobe Exchange的擴充功能頁面。
 seo-description: Marketo Web Personalization擴充功能是Adobe即時客戶資料平台中的個人化目的地。 如需擴充功能的詳細資訊，請參閱Adobe Exchange的擴充功能頁面。
 translation-type: tm+mt
-source-git-commit: bfcbc56f05fa1c3b5fafd57b1166e50130b6007d
+source-git-commit: 6f680a60c88bc5fee6ce9cb5a4f314c4b9d02249
+workflow-type: tm+mt
+source-wordcount: '600'
+ht-degree: 4%
 
 ---
 
 
-# Marketo Web Personalization Extension {#marketo-web-personalization-extension}
+# [!DNL Marketo Web Personalization] 擴充功能 {#marketo-web-personalization-extension}
 
 ## 概述 {#overview}
 
-此擴充功能會部署Marketo的Web個人化和ContentAI應用程式的指令碼。 Marketo Web Personalization可獨特識別並個人化網頁訪客特徵的內容，例如匿名訪客的圖片，以及已知訪客在Marketo Engagement Platform中廣泛的行為屬性。 Marketo ContentAI包含AI支援的建議以及個人化網頁和電子郵件宣傳的功能，對B2B客戶而言是獨一無二的。
+此擴充功能會部署Web個人化 [!DNL Marketo’s] 和ContentAI應用程式的指令碼。 [!DNL Marketo] Web Personalization可獨特地識別並個人化網頁訪客特徵的內容，例如匿名訪客的圖片，以及已知訪客的 [!DNL Marketo] Engagement Platform中廣泛的行為屬性。 [!DNL Marketo] ContentAI包含針對B2B客戶獨一無二之網頁和電子郵件宣傳的AI支援建議和個人化功能。
 
-Marketo Web Personalization是Adobe即時客戶資料平台中的個人化延伸。 如需擴充功能的詳細資訊，請參閱 [Adobe Exchange的擴充功能頁面](https://exchange.adobe.com/experiencecloud.details.101232.marketo-web-personalization.html)。
+[!DNL Marketo Web Personalization] 是Adobe即時客戶資料平台中的個人化延伸。 如需擴充功能的詳細資訊，請參閱 [Adobe Exchange的擴充功能頁面](https://exchange.adobe.com/experiencecloud.details.101232.marketo-web-personalization.html)。
 
 此目標是Experience Platform Launch擴充功能。 如需Launch擴充功能如何在Adobe Real-time CDP中運作的詳細資訊，請參閱 [Experience Platform Launch擴充功能總覽](/help/rtcdp/destinations/experience-platform-launch-extensions.md)。
 
@@ -23,18 +26,18 @@ Marketo Web Personalization是Adobe即時客戶資料平台中的個人化延伸
 
 ## 先決條件 {#prerequisites}
 
-此擴充功能可在「目標」目錄中，針對所有已購買Adobe即時CDP的客戶提供。
+此擴充功能可在目錄 [!DNL Destinations] 中提供給所有已購買Adobe即時CDP的客戶。
 
-若要使用此擴充功能，您需要存取Experience Platform Launch。 Experience Platform Launch是以附加的增值功能提供給Adobe Experience Cloud客戶。 請連絡您的組織管理員以取得Launch的存取權，並要求他們授予您權限， **[!UICONTROL manage_properties]** 以便您安裝擴充功能。
+若要使用此擴充功能，您需要存取Experience Platform Launch。 Experience Platform Launch是以附加的增值功能提供給Adobe Experience Cloud客戶。 請連絡您的組織管理員以取得Launch的存取權，並要求他們授予您 **[!UICONTROL manage_properties]** 權限，以便安裝擴充功能。
 
 ## 安裝擴充功能 {#install-extension}
 
-若要安裝Marketo Web Personalization擴充功能：
+要安裝擴展 [!DNL Marketo Web Personalization] 名：
 
-1. 在 [Adobe Real-time CDP介面中](http://platform.adobe.com/)，請轉至 **[!UICONTROL Destinations > Catalog]**。
+1. 在 [Adobe Real-time CDP介面中](http://platform.adobe.com/)，前往「目 **[!UICONTROL 標>目錄」]**。
 2. 從目錄中選擇副檔名或使用搜索欄。
-3. 按一下目的地以反白標示，然後在右 **[!UICONTROL Install Extension]** 側導軌中選取。 如果控 **[!UICONTROL Install Extension]** 制項呈灰色，表示您遺失權 **[!UICONTROL manage_properties]** 限。 請參 [閱必要條件](#prerequisites)。
-4. 在窗 **[!UICONTROL Select available Launch property]** 口中，選擇要在其中安裝擴展的Launch屬性。 您也可以在Launch中選擇建立新屬性。 屬性是規則、資料元素、設定的擴充功能、環境和程式庫的集合。瞭解Launch檔案「屬 [性」頁面](https://docs.adobe.com/content/help/en/launch/using/reference/admin/companies-and-properties.html#properties-page) ，以取得屬性。
+3. 按一下目的地以反白標示，然後選取右 **[!UICONTROL 側導軌中的「安裝擴充功能]** 」。 如果 **[!UICONTROL Install Extension]** （安裝擴充功能）控制項呈灰色顯示 **[!UICONTROL ，表示您遺失]** manage_properties權限。 請參 [閱必要條件](#prerequisites)。
+4. 在「選 **[!UICONTROL 擇可用的啟動屬性]** 」窗口中，選擇要安裝擴展的啟動屬性。 您也可以在Launch中選擇建立新屬性。 屬性是規則、資料元素、設定的擴充功能、環境和程式庫的集合。瞭解Launch檔案「屬 [性」頁面](https://docs.adobe.com/content/help/en/launch/using/reference/admin/companies-and-properties.html#properties-page) ，以取得屬性。
 5. 工作流程會帶您至Launch以完成安裝。
 
 如需擴充功能設定選項和安裝支援的詳細資訊，請參 [閱Adobe Exchange上的Marketo Web Personalization頁面](https://exchange.adobe.com/experiencecloud.details.101232.marketo-web-personalization.html)。
@@ -53,6 +56,6 @@ Marketo Web Personalization是Adobe即時客戶資料平台中的個人化延伸
 
 >[!TIP]
 >
->如果擴充功能已安裝在您的其中一個屬性上，Adobe即時CDP使用者介面仍會顯示該 **[!UICONTROL Install]** 擴充功能。 如「安裝擴充功能」中所述，開始安 [裝工作流程](#install-extension) ，以開始啟動並設定或刪除您的擴充功能。
+>如果擴充功能已安裝在您的其中一個屬性上，Adobe即時CDP使用者介面仍會顯示擴充 **[!UICONTROL 功能的]** 「安裝」。 如「安裝擴充功能」中所述，開始安 [裝工作流程](#install-extension) ，以開始啟動並設定或刪除您的擴充功能。
 
 若要升級您的擴充功能，請參 [閱Launch檔案中](https://docs.adobe.com/content/help/en/launch/using/reference/manage-resources/extensions/extension-upgrade.html) 的擴充功能升級。
