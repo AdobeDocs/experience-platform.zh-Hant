@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Adobe Experience Platform產品檔案
 topic: getting started
 translation-type: tm+mt
-source-git-commit: f910351d49de9c4a18a444b99b7f102f4ce3ed5b
+source-git-commit: 1ecff21343c8b39070afdb4f486d0961c024235a
 workflow-type: tm+mt
-source-wordcount: '6593'
+source-wordcount: '6665'
 ht-degree: 0%
 
 ---
@@ -100,7 +100,7 @@ ht-degree: 0%
 
 **連接：** 連線是虛擬管線，可讓資料進出 [!DNL Experience Platform]。 連線現在會由來源取代。
 
-**連接器：** Adobe Experience Platform Source連接器可協助使用者輕鬆從多個來源擷取資料，允許使用資料進行建構、加上標籤和增強 [!DNL Experience Platform Services]。 資料可從多種來源擷取，例如雲端儲存空間、協力廠商軟體和CRM系統。
+**連接器：** Adobe Experience Platform Source連接器可協助使用者輕鬆從多個來源擷取資料，讓您使用來建構、標示和增強資料 [!DNL Experience Platform Services]。 資料可從多種來源擷取，例如雲端儲存空間、協力廠商軟體和CRM系統。
 
 **條件：** 在Experience Platform Launch中，條件是一個規則元件，可評估必須傳回或的邏輯陳述 `true` 式 `false`。 所有條件都必須評估 `true` 為，所有例外條件必須評估為 `false` ，才能執行規則上的任何操作。
 
@@ -112,7 +112,7 @@ ht-degree: 0%
 
 **C2合同標籤：** `C2` 合約資料治理標籤會指定無法匯出至第三方的資料。 有些資料提供者在其合約中有條款禁止從原始收集位置匯出資料。  例如，社交網路合約通常會限制您從其接收到的資料傳輸。 C2的限制比C1更嚴格，因為C1隻需要聚合和匿名資料。
 
-**C3合同標籤：** `C3` 合約資料治理標籤指定無法結合或與直接可識別資訊搭配使用的資料。 有些資料提供者在其合約中有條款禁止將資料與直接可識別資訊合併或使用。  例如，源自廣告網路、廣告伺服器和第三方資料供應商的資料合約通常包含使用直接可識別資料的特定合約禁止規定。
+**C3合同標籤：** `C3` 合約資料治理標籤指定無法結合或與直接可識別資訊搭配使用的資料。 有些資料提供者在其合約中有條款禁止將資料與直接可識別資訊合併或使用。  例如，源自廣告網路、廣告伺服器和第三方資料供應商的資料合約通常包含使用直接可識別資料的特定合約禁止。
 
 **C4合同標籤：** `C4` 合約資料控管標籤指定資料無法用於定位任何廣告或內容，不論是在網站上或跨網站。 C4是最嚴格的標籤，因為它包含C5、C6和C7標籤。
 
@@ -191,6 +191,8 @@ ht-degree: 0%
 **目標類別：** 目標類別是具有相似特 [!DNL Real-time Customer Data Platform] 徵的目標分組。
 
 **目標目錄：** 目標目錄是中可用目標的清單 [!DNL Real-time Customer Data Platform]。
+
+**直接呼叫規則：** 在中 [!DNL Experience Platform Launch]，您可以設定直接 [!UICONTROL 呼叫規則] ，在從頁面  直接呼叫該規則時執行。 如果您的頁面載入或網站上的動作非常簡單，或是它是唯一的，而且每次都可以執行一組特定指示(設為 [!DNL eVar4] X並每次觸發 [!DNL event2] )，則可以使用直接呼叫 [!UICONTROL 規] 則 。 請參 [!DNL Launch] 閱有關建立直接 [!UICONTROL 呼叫規] 則的檔案 。
 
 **顯示名稱：** 顯示名稱是UI中顯示之欄位的易用名稱。
 
@@ -304,7 +306,7 @@ ht-degree: 0%
 
 **[!DNL JupyterLab]:**專案的開放原始碼Web介面，並[!DNL Jupyter]與之緊密整合[!DNL Experience Platform]。
 
-**[!DNL Jupyter Notebook]:**開放原始碼Web應用程式，可讓使用者建立並共用包含即時程式碼、方程式、視覺化和敘述文字的檔案。
+**[!DNL Jupyter Notebook]:**開放原始碼Web應用程式，可讓使用者建立並共用包含即時程式碼、方程式、視覺化和敘事文字的檔案。
 
 ## K
 
