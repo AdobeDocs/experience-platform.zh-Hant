@@ -4,45 +4,49 @@ seo-title: Oracle Exolca目標
 description: Oracle Exvola是Oracle為行銷自動化提供的軟體即服務(SaaS)平台，旨在幫助B2B行銷人員和組織管理營銷活動和銷售線索生成。
 seo-description: Oracle Exvola是Oracle為行銷自動化提供的軟體即服務(SaaS)平台，旨在幫助B2B行銷人員和組織管理營銷活動和銷售線索生成。
 translation-type: tm+mt
-source-git-commit: 50e6b39c1eb0bda4f3b30991515fb1c13fa9ff87
+source-git-commit: 6f680a60c88bc5fee6ce9cb5a4f314c4b9d02249
+workflow-type: tm+mt
+source-wordcount: '462'
+ht-degree: 0%
 
 ---
 
 
-# Oracle Exovila
+# [!DNL Oracle Eloqua]
 
 ## 概述
 
-[Evolca](https://www.oracle.com/marketingcloud/products/marketing-automation/) 是Oracle針對行銷自動化提供的軟體即服務(SaaS)平台，旨在幫助B2B行銷人員和組織管理行銷活動和銷售線索產生。
+[Evolca](https://www.oracle.com/marketingcloud/products/marketing-automation/) 是行銷自動化的軟體即服務(SaaS)平台， [!DNL Oracle] 旨在協助B2B行銷人員和組織管理行銷活動和銷售線索產生。
 
-要將段資料發送到Oracle Exporca，您必須先連接 [Adobe Real-time Customer](#connect-destination) Data Platform中的目標，然後 [](#import-data-into-eloqua) 設定從儲存位置將資料導入Oracle Exporca。
+若要傳送區段資 [!DNL Oracle Eloqua]料至，您必須先 [在Adobe即時客戶資料平台中連線目的地](#connect-destination) ，然後設 [定從儲存位置匯入資料的方式](#import-data-into-eloqua)[!DNL Oracle Eloqua]。
 
 ## 連接到目標 {#connect-destination}
 
-1. 在中 **[!UICONTROL Connections > Destinations]**，選擇Oracle Exolca，然後選擇 **[!UICONTROL Connect destination]**。
+1. 在「連 **[!UICONTROL 接」>「目標]**」中，選 [!DNL Oracle Eloqua]擇，然後選擇「 **[!UICONTROL 連接目標」]**。
 
    ![連線Exola](/help/rtcdp/destinations/assets/connect-oracle-eloqua.png)
 
-2. 在此步 **[!UICONTROL Authentication]** 驟中，如果您先前已設定雲端儲存空間目的地的連線，請選取並選 **[!UICONTROL Existing Account]** 取其中一個現有連線。 或者，您可以選 **[!UICONTROL New Account]** 擇設定新連接。 填寫您的帳戶驗證憑證並選取 **[!UICONTROL Connect to destination]**。 對於Oracle Exolca，您可以選擇 **[!UICONTROL SFTP with Password]** 和 **[!UICONTROL SFTP with SSH Key]**。 根據您的連線類型，填寫下列資訊，然後選取 **[!UICONTROL Connect to destination]**。
+2. 在「驗 **[!UICONTROL 證]** 」步驟中，如果您先前已設定雲端儲存空間目的地的連線，請選取「現有帳戶 **** 」並選取您現有的連線。 或者，您可以選 **[!UICONTROL 擇「新帳戶]** 」來設定新連線。 填寫您的帳戶驗證憑證，並選取「 **[!UICONTROL 連線至目的地」]**。 對於 [!DNL Oracle Eloqua]，您可以在 **[!UICONTROL SFTP與Password之間選擇]** , **[!UICONTROL SFTP與SSH密鑰之間選擇]**。 根據您的連線類型，填寫下列資訊，然後選取「連 **[!UICONTROL 線至目的地」]**。
 
-   對於 **[!UICONTROL SFTP with Password]** 連接，必須提供域、埠、用戶名和密碼。
-對於 **[!UICONTROL SFTP with SSH Key]** 連接，必須提供域、埠、用戶名和SSH密鑰。
+   對於 **[!UICONTROL 具有密碼連接的SFTP]** ，必須提供域、埠、用戶名和密碼。
+對於 **[!UICONTROL 具有SSH密鑰連接的SFTP]** ，必須提供域、埠、用戶名和SSH密鑰。
 
    ![設定Exola精靈](/help/rtcdp/destinations/assets/eloqua-authentication.png)
 
-3. 在步驟 **[!UICONTROL Setup]** 中，請填寫您目的地的相關資訊，如下所示：
-   * **[!UICONTROL Name]**:為目的地選擇相關名稱。
-   * **[!UICONTROL Description]**:輸入目標的說明。
-   * **[!UICONTROL Folder Path]**:在儲存位置中提供路徑，即時CDP會將導出資料儲存為CSV或Tab分隔檔案。
-   * **[!UICONTROL File Format]**: **CSV****或TAB_DELIMITED**。 選擇要導出到儲存位置的檔案格式。
+3. 在「設 **[!UICONTROL 定]** 」步驟中，填入您目的地的相關資訊，如下所示：
+   * **[!UICONTROL 名稱]**: 為目的地選擇相關名稱。
+   * **[!UICONTROL 說明]**: 輸入目標的說明。
+   * **[!UICONTROL 資料夾路徑]**: 在儲存位置中提供路徑，即時CDP會將導出資料儲存為CSV或Tab分隔檔案。
+   * **[!UICONTROL 檔案格式]**: **CSV** 或 **TAB_DELIMITED**。 選擇要導出到儲存位置的檔案格式。
+
    ![雄辯基本資訊](/help/rtcdp/destinations/assets/eloqua-basic-information.png)
 
-4. 填寫 **[!UICONTROL Create destination]** 上述欄位後按一下。 您的目標現在已建立，您可 [以啟用區段](/help/rtcdp/destinations/activate-destinations.md) 至目標。
+4. 填寫 **[!UICONTROL 上述欄位後]** ，按一下「建立目標」。 您的目標現在已建立，您可 [以啟用區段](/help/rtcdp/destinations/activate-destinations.md) 至目標。
 
 ## 目標屬性
 
-在 [激活段](/help/rtcdp/destinations/activate-destinations.md) 到Oracle Exolca目標時 [，我們建議您從聯合方案中選擇唯一](../../profile/home.md#profile-fragments-and-union-schemas)標識符。 選擇唯一標識符和要導出到目標的任何其他XDM欄位。 如需詳細資訊，請參 [閱「電子郵件行銷目標」中，選取要在匯出檔案中當做目標屬性使用的架構欄位](/help/rtcdp/destinations/email-marketing-destinations.md#destination-attributes) 。
+在啟 [用區段](/help/rtcdp/destinations/activate-destinations.md) ，到目 [!DNL Oracle Eloqua] 的地時，建議您從聯合架構中選取唯一 [識別碼](../../profile/home.md#profile-fragments-and-union-schemas)。 選擇唯一標識符以及要導出到目標的任何其它XDM欄位。 如需詳細資訊，請參 [閱「電子郵件行銷目標」中，選取要在匯出檔案中當做目標屬性使用的架構欄位](/help/rtcdp/destinations/email-marketing-destinations.md#destination-attributes) 。
 
-## 設定資料導入到Oracle Exolca {#import-data-into-eloqua}
+## 設定資料匯入至 [!DNL Oracle Eloqua] {#import-data-into-eloqua}
 
-將即時CDP連接到Amazon S3或SFTP儲存後，您必須設定從儲存位置將資料導入Oracle Exporca。 要瞭解如何完成此操作，請參 [閱Oracle Expolca幫助中心的](https://docs.oracle.com/cloud/latest/marketingcs_gs/OMCAA/Help/DataImportExport/Tasks/ImportingContactsOrAccounts.htm) 「導入聯繫人或帳戶」。
+將即時CDP連接到Amazon S3或SFTP儲存後，您必須將資料從儲存位置導入到中 [!DNL Oracle Eloqua]。 要瞭解如何完成此操作，請參 [閱中的導入聯繫人](https://docs.oracle.com/cloud/latest/marketingcs_gs/OMCAA/Help/DataImportExport/Tasks/ImportingContactsOrAccounts.htm) 或帳戶 [!DNL Oracle Eloqua Help Center]。
