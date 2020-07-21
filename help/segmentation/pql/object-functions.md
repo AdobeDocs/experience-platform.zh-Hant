@@ -4,14 +4,17 @@ solution: Experience Platform
 title: 物件函式
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 92f92f480f29f7d6440f4e90af3225f9a1fcc3d0
+source-git-commit: 6a0a9b020b0dc89a829c557bdf29b66508a10333
+workflow-type: tm+mt
+source-wordcount: '111'
+ht-degree: 5%
 
 ---
 
 
 # 物件函式
 
-描述檔查詢語言(PQL)提供多種功能，讓與物件的互動更簡單。 有關其他PQL函式的詳細資訊，請參閱「配置檔案查 [詢語言」概述](./overview.md)。
+[!DNL Profile Query Language] (PQL)提供的功能可簡化與物件的互動。 有關其他PQL函式的詳細資訊，請參閱「配置檔案查 [詢語言」概述](./overview.md)。
 
 ## 為空
 
