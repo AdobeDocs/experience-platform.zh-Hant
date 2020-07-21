@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 建立資料集以匯出觀眾區隔
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: cb6a2f91eb6c18835bd9542e5b66af4682227491
+source-git-commit: 6a0a9b020b0dc89a829c557bdf29b66508a10333
 workflow-type: tm+mt
-source-wordcount: '751'
+source-wordcount: '733'
 ht-degree: 0%
 
 ---
@@ -22,7 +22,7 @@ ht-degree: 0%
 
 ## 快速入門
 
-若要匯出區段，資料集必須以XDM個別描述檔結合架構為基礎。 聯合模式是系統生成的只讀模式，它聚合了共用相同類的所有模式的欄位（在本例中為XDM Individual Profile類）。 有關聯合視圖方案的詳細資訊，請參閱 [方案註冊開發人員指南的「即時客戶概要檔案」部分](../../xdm/schema/composition.md#union)。
+若要匯出區段，資料集必須以為基礎 [!DNL XDM Individual Profile Union Schema]。 聯合模式是系統生成的只讀模式，它聚合了共用同一類的所有模式的欄位（在本例中為類）。 [!DNL XDM Individual Profile] 有關聯合視圖方案的詳細資訊，請參閱 [方案註冊開發人員指南的「即時客戶概要檔案」部分](../../xdm/schema/composition.md#union)。
 
 要在UI中查看聯合架構，請按一下左側導 **[!UICONTROL 航中的]** Profiles，然後按一下 **** Union架構頁籤，如下所示。
 
@@ -31,7 +31,7 @@ ht-degree: 0%
 
 ## 資料集工作區
 
-UI中的資料集工 [!DNL Experience Platform] 作區可讓您檢視並管理IMS組織建立的所有資料集，並建立新的資料集。
+UI中的資料集工 [!DNL Experience Platform] 作區可讓您檢視和管理IMS組織建立的所有資料集，並建立新的資料集。
 
 若要檢視資料集工作區，請按一 **[!UICONTROL 下左側導覽中的「資料集]** 」，然後按一下「 *[!UICONTROL 瀏覽]* 」標籤。 資料集工作區包含資料集清單，包括 *[!UICONTROL Name]*、Created *[!UICONTROL （日期和時間）、]* Source *[!UICONTROL （日期和時間）、]* Source Schema、 ****** Batch Last Status、Woll as the date ad time the dataset was Last Updated Jocraded 視每欄的寬度而定，您可能需要向左或向右捲動，才能查看所有欄。
 
@@ -53,7 +53,7 @@ UI中的資料集工 [!DNL Experience Platform] 作區可讓您檢視並管理IM
 
 ## 選擇XDM單個配置式聯合模式
 
-要選擇要在資料集中使用的XDM Individual Profile Union Schema，請在「選擇Select Schema（選擇模式）」螢幕中查找類型為「[!UICONTROL Union]」的「[!UICONTROL XDM Individual Profile]** 」模式。
+若要選擇 [!DNL XDM Individual Profile Union Schema] 要在資料集中使用的配置式，請在「選擇配置式」螢幕中查找類型為「[!UICONTROL Union]」的「[!UICONTROL XDM Individual Profile]** 」架構。
 
 已選取「 **[!UICONTROL XDM Individual Profile]**」( **[!UICONTROL XDM個人設定檔)旁的選項按鈕]** ，然後按一下右上角的「Next」（下一步）。
 
@@ -84,6 +84,6 @@ UI中的資料集工 [!DNL Experience Platform] 作區可讓您檢視並管理IM
 
 ## 後續步驟
 
-現在您已根據XDM個別描述檔結合架構建立資料集，您可以使用資料集 **[!UICONTROL ID]** ，繼續 [評估和存取區段結果教學課程](./evaluate-a-segment.md) 。
+現在您已根據建立資料集 [!DNL XDM Individual Profile Union Schema]，可以使用資料集 **[!UICONTROL ID]** ，繼續 [評估和存取區段結果教學課程](./evaluate-a-segment.md) 。
 
 目前，請返回評估區段結果教學課程，並從匯出區段工作流程 [的觀眾成員產生設定檔](./evaluate-a-segment.md#generate-profiles) ，中挑選一些。
