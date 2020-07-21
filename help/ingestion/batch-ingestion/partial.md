@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Adobe Experience Platform部分批次擷取概觀
 topic: overview
 translation-type: tm+mt
-source-git-commit: 0be45675e4a2e3308cb77a8bbe3189f09c2b6fd8
+source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
 workflow-type: tm+mt
-source-wordcount: '1243'
+source-wordcount: '1237'
 ht-degree: 1%
 
 ---
@@ -26,7 +26,7 @@ ht-degree: 1%
 本教學課程需要對部分批次擷取所涉及的各種Adobe Experience Platform服務有相關的使用知識。 在開始本教學課程之前，請先閱讀下列服務的檔案：
 
 - [批次擷取](./overview.md): 從資料檔 [!DNL Platform] 案（例如CSV和Parce）擷取和儲存資料的方法。
-- [體驗資料模型(XDM)](../../xdm/home.md): 平台組織客戶體驗資料的標準化架構。
+- [!DNL Experience Data Model (XDM)](../../xdm/home.md): 組織客戶體驗資料 [!DNL Platform] 的標準化架構。
 
 以下章節提供您成功呼叫API所需的其他資訊 [!DNL Platform] 。
 
@@ -42,7 +42,7 @@ ht-degree: 1%
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
-中的所有資 [!DNL Experience Platform] 源都與特定虛擬沙盒隔離。 所有對平台API的請求都需要一個標題，該標題會指定要在中執行的操作的沙盒名稱：
+中的所有資 [!DNL Experience Platform] 源都與特定虛擬沙盒隔離。 對API的所 [!DNL Platform] 有請求都需要一個標題，該標題會指定要在中執行的操作的沙盒名稱：
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
@@ -115,7 +115,7 @@ ht-degree: 1%
 
 ### 使用「將[!UICONTROL CSV對應至XDM架構]」流程 {#map-flow}
 
-若要使用「將[!UICONTROL CSV對應至XDM架構]」流程，請遵循「將CSV檔案對應」教學課程中 [所列的步驟](../tutorials/map-a-csv-file.md)。 一旦到達「添 *加資料* 」步驟 *[!UICONTROL ，請記下「部分提取」和「錯誤診斷」欄位]*** 。
+若要使用「將[!UICONTROL CSV對應至XDM架構]」流程，請遵循「將CSV檔案對應」教學課程中 [所列的步驟](../tutorials/map-a-csv-file.md)。 一旦到達「添 *[!UICONTROL 加資料]* 」步驟 *[!UICONTROL ，請記下「部分提取」和「錯誤診斷」欄位]*** 。
 
 ![](../images/batch-ingestion/partial-ingestion/xdm-csv-workflow.png)
 
