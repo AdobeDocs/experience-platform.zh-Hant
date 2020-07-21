@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 使用API建立資料集
 topic: datasets
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: bfbf2074a9dcadd809de043d62f7d2ddaa7c7b31
 workflow-type: tm+mt
-source-wordcount: '1263'
+source-wordcount: '1234'
 ht-degree: 1%
 
 ---
@@ -20,31 +20,31 @@ ht-degree: 1%
 
 本指南需要有效瞭解Adobe Experience Platform的下列元件：
 
-* [批次擷取](../../ingestion/batch-ingestion/overview.md): Experience Platform可讓您將資料內嵌為批次檔案。
-* [體驗資料模型(XDM)系統](../../xdm/home.md): Experience Platform組織客戶體驗資料的標準化架構。
-* [沙盒](../../sandboxes/home.md): Experience Platform提供虛擬沙盒，可將單一Platform實例分割為不同的虛擬環境，以協助開發和發展數位體驗應用程式。
+* [批次擷取](../../ingestion/batch-ingestion/overview.md): [!DNL Experience Platform] 可讓您將資料內嵌為批次檔案。
+* [!DNL Experience Data Model (XDM) System](../../xdm/home.md): 組織客戶體驗資料 [!DNL Experience Platform] 的標準化架構。
+* [!DNL Sandboxes](../../sandboxes/home.md): [!DNL Experience Platform] 提供虛擬沙盒，可將單一執行個體分 [!DNL Platform] 割為不同的虛擬環境，以協助開發和發展數位體驗應用程式。
 
-以下章節提供您必須知道的其他資訊，以便成功呼叫平台API。
+以下章節提供您必須知道的其他資訊，才能成功呼叫 [!DNL Platform] API。
 
 ### 讀取範例API呼叫
 
-本教學課程提供範例API呼叫，以示範如何設定請求的格式。 這些包括路徑、必要標題和正確格式化的請求負載。 也提供API回應中傳回的範例JSON。 如需範例API呼叫檔案中所用慣例的詳細資訊，請參閱「Experience Platform疑難排解指 [南」中有關如何讀取範例API呼叫的章節](../../landing/troubleshooting.md#how-do-i-format-an-api-request) 。
+本教學課程提供範例API呼叫，以示範如何設定請求的格式。 這些包括路徑、必要標題和正確格式化的請求負載。 也提供API回應中傳回的範例JSON。 如需範例API呼叫檔案中所用慣例的詳細資訊，請參閱疑難排解指 [南中有關如何讀取範例API呼叫的](../../landing/troubleshooting.md#how-do-i-format-an-api-request)[!DNL Experience Platform] 章節。
 
 ### 收集必要標題的值
 
-若要呼叫平台API，您必須先完成驗證教 [學課程](../../tutorials/authentication.md)。 完成驗證教學課程後，所有Experience Platform API呼叫中每個必要標題的值都會顯示在下方：
+若要呼叫API，您必 [!DNL Platform] 須先完成驗證教 [學課程](../../tutorials/authentication.md)。 完成驗證教學課程後，將提供所有 [!DNL Experience Platform] API呼叫中每個必要標題的值，如下所示：
 
 * 授權： 生產者 `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
 * x-gw-ims-org-id: `{IMS_ORG}`
 
-Experience Platform中的所有資源都隔離至特定的虛擬沙盒。 所有對平台API的請求都需要一個標題，該標題會指定要在中執行的操作的沙盒名稱：
+中的所有資 [!DNL Experience Platform] 源都與特定虛擬沙盒隔離。 對API的所 [!DNL Platform] 有請求都需要一個標題，該標題會指定要在中執行的操作的沙盒名稱：
 
 * x-sandbox-name: `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
->如需平台中沙盒的詳細資訊，請參閱沙盒 [概觀檔案](../../sandboxes/home.md)。
+>如需中沙盒的詳細資訊 [!DNL Platform]，請參閱沙 [盒概述檔案](../../sandboxes/home.md)。
 
 所有包含裝載(POST、PUT、PATCH)的請求都需要額外的標題：
 
@@ -60,9 +60,9 @@ Experience Platform中的所有資源都隔離至特定的虛擬沙盒。 所有
 
 本教學課程從結束 [「方案註冊表API」教學課程的地方開始](../../xdm/tutorials/create-schema-api.md) ，並運用在該教學課程中建立的「忠誠成員」結構。
 
-如果尚未完成「方案註冊表」教程，請從此處開始，並僅在構建必要的方案後繼續此資料集教程。
+如果您尚未完成教學課程， [!DNL Schema Registry] 請從這裡開始，並只有在您編寫必要的架構後，才繼續使用此資料集教學課程。
 
-以下調用可用於查看在「方案註冊表API」教程中建立的「忠誠成員」方案：
+以下呼叫可用於查看您在 [!DNL Schema Registry] API教學課程中建立的忠誠度成員結構：
 
 **API格式**
 
@@ -329,7 +329,7 @@ curl -X PUT 'https://platform.adobe.io/data/foundation/import/batches/5d01230fc7
 
 ## 信號批次完成
 
-將所有資料檔案上傳至批次後，您可以向批次發出完成訊號。 信令完成使服務為已上載檔案創 `DataSetFile` 建目錄條目，並將它們與先前生成的批關聯。 目錄批次已標示為成功，這會觸發任何下游流程，然後可處理現有可用資料。
+將所有資料檔案上傳至批次後，您可以向批次發出完成訊號。 信令完成使服務為已上載文 [!DNL Catalog]`DataSetFile` 件建立條目，並將它們與先前生成的批關聯。 批處 [!DNL Catalog] 理被標籤為成功，這會觸發任何下游流，然後這些流就可以處理現在可用的資料。
 
 **API格式**
 
