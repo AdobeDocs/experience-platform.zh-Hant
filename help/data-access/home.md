@@ -4,31 +4,31 @@ solution: Experience Platform
 title: 資料存取概述
 topic: overview
 translation-type: tm+mt
-source-git-commit: 49aa2e2664fe658d89b6279d1f869eb30c48ccad
+source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
 workflow-type: tm+mt
-source-wordcount: '197'
-ht-degree: 0%
+source-wordcount: '188'
+ht-degree: 2%
 
 ---
 
 
-# 資料存取概述
+# [!DNL Data Access]概述
 
-[!DNL Data Access] 支援Adobe Experience Platform，提供使用者工具，著重於在Experience Platform中發現和存取收錄資料集。
+[!DNL Data Access] 支援Adobe Experience Platform，提供使用者工具，著重於在Adobe Experience Platform中發現和存取內嵌資料集 [!DNL Experience Platform]。
 
 ![Experience Platform上的資料存取](images/Data_Access_Experience_Platform.png)
 
-## 資料存取API
+## [!DNL Data Access] API
 
 有關使用 [!DNL Data Access] API連線的詳細資訊，請參 [!DNL Platform] 閱資料存取開 [發人員指南](api.md)。
 
-## Python SDK
+## [!DNL Python] SDK
 
 您可以使用 [!DNL Python] SDK讀取和寫入資料集。 有關 [!DNL Python] SDK的詳細資訊，請參閱 [Python SDK教學課程](./tutorials/python-sdk.md)。
 
-[!DNL Data Science Workspace] 在筆記型電腦和配方中使用Python SDK。 如需詳細資訊， [!DNL Data Science Workspace]請先閱讀資料科學工 [作區概觀](../data-science-workspace/home.md)。
+[!DNL Data Science Workspace] 在「筆記型 [!DNL Python] 電腦和方式」中使用SDK。 如需詳細資訊， [!DNL Data Science Workspace]請先閱讀資料科學工 [作區概觀](../data-science-workspace/home.md)。
 
-## Spark SDK
+## [!DNL Spark] SDK
 
 您可以使用 [!DNL Spark] SDK讀取和寫入資料集。 有關 [!DNL Spark] SDK的詳細資訊，請參閱 [Spark SDK教學課程](./tutorials/spark-sdk.md)。
 
