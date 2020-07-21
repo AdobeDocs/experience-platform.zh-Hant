@@ -4,30 +4,30 @@ solution: Experience Platform
 title: 與Tableau連結
 topic: connect
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 3b710e7a20975880376f7e434ea4d79c01fa0ce5
 workflow-type: tm+mt
-source-wordcount: '82'
+source-wordcount: '74'
 ht-degree: 2%
 
 ---
 
 
-# 與Tableau連結
+# 連接 [!DNL Tableau]
 
-安裝Tableau（如果尚未安裝）。
+安 [!DNL Tableau]裝，如果尚未安裝。
 
 >[!NOTE]
 >
->您可在這裡取得「Tableau Desktop」的14天試用 [版](https://www.tableau.com/products/desktop/download)。
+>您可在這裡取得「桌上型電腦」的14[!DNL Tableau] 天試 [用版](https://www.tableau.com/products/desktop/download)。
 >    
-> 此版本 `2018.1.2 (20181.18.0615.1128 64 bit)` 已成功連接到查詢服務。
+> 此版本 `2018.1.2 (20181.18.0615.1128 64 bit)` 已成功連接到 [!DNL Query Service]。
 
-執行Tableau，然後在開啟畫面上按一下以開啟Postgres連線。
+執 [!DNL Tableau]行，然後在開啟畫面上按一下以開啟連 [!DNL Postgres] 線。
 
 ![影像](../images/clients/tableau/open-connection.png)
 
-個別從 `Host, Port, Database, Username, Password` Platform UI的「 **Connect BI工具** 」頁面複製至對應的Tableau欄位。
+個別從 `Host, Port, Database, Username, Password` UI的「 [!DNL Platform] Connect BI工具」頁 **** 面複製至對應的Tableau欄位。
 
-確認您已勾選「 **SSL必要** 」方塊，然後再嘗試連線。
+確認您已勾選「 **[!UICONTROL SSL必要]** 」方塊，然後再嘗試連線。
 
 ![影像](../images/clients/tableau/ssl-required.png)
