@@ -4,20 +4,23 @@ solution: Experience Platform
 title: ExperienceEvent查詢
 topic: queries
 translation-type: tm+mt
-source-git-commit: 45da024d45b5eebdfc393ee14890e24aed6021ce
+source-git-commit: bfbf2074a9dcadd809de043d62f7d2ddaa7c7b31
+workflow-type: tm+mt
+source-wordcount: '275'
+ht-degree: 0%
 
 ---
 
 
-# ExperienceEvent查詢
+# [!DNL ExperienceEvent] 查詢
 
-除了標準SQL查詢外，Adobe Experience Platform Query Service還支援使用ExperienceEvents編寫查詢。 ExperienceEvent是Experience Data Model(XDM)類別，當使用者與網站或服務互動時，它代表系統不可變的非匯總快照，因此可用於時域分析。 有關XDM和體驗事件的更多資訊，請參閱XDM系統概觀。 透過結合查詢服務與ExperienceEvents，您可以有效追蹤使用者的行為趨勢。 以下檔案提供與ExperienceEvents相關的查詢範例。
+除了標準SQL查詢外，Adobe Experience Platform還支 [!DNL Query Service] 援使用編寫查詢 [!DNL ExperienceEvents]。 一 [!DNL ExperienceEvent] 種 [!DNL Experience Data Model] (XDM)類，它表示當用戶與網站或服務交互時系統的不可變的非聚合快照，因此可用於時域分析。 有關XDM的更多信 [!DNL Experience Events] 息，請參閱概 [!DNL XDM System] 述。 透過結 [!DNL Query Service] 合， [!DNL ExperienceEvents]您可以有效追蹤使用者的行為趨勢。 以下文檔提供了涉及查詢的示例 [!DNL ExperienceEvents]。
 
 ## 依日期建立特定日期範圍內事件的趨勢報表
 
 下列範例會建立指定日期範圍內事件的趨勢報表，依日期分組。 具體而言，它會將各種分析值總結為A、B和C，然後總結已檢視parkas的次數。
 
-在Experience Event資料集中找到的時間戳記欄位位於UTC中。 下面的示例使用函 `from_utc_timestamp()` 數將時間戳從UTC轉換為EDT。 然後，它使用 `date_format()` 函式將日期與時間戳記的其餘部分隔離。
+在資料集中找到的時 [!DNL Experience Event] 間戳列位於UTC中。 下面的示例使用函 `from_utc_timestamp()` 數將時間戳從UTC轉換為EDT。 然後，它使用 `date_format()` 函式將日期與時間戳記的其餘部分隔離。
 
 ```sql
 SELECT 
