@@ -6,9 +6,9 @@ last-update: March 10, 2020
 author: ens71067
 keywords: release notes;
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: f881c1365684b1ca9e6bf9a8ce866d234dc54128
 workflow-type: tm+mt
-source-wordcount: '922'
+source-wordcount: '848'
 ht-degree: 5%
 
 ---
@@ -20,17 +20,17 @@ ht-degree: 5%
 
 Adobe Experience Platform現有功能的更新：
 
-* [資料控管](#governance)
-* [資料擷取](#ingestion)
-* [目的地](#destinations)
-* [Identity 服務](#identity)
-* [來源](#sources)
+* [!DNL Data Governance](#governance)
+* [!DNL Data Ingestion](#ingestion)
+* [!DNL Destinations](#destinations)
+* [!DNL Identity Service](#identity)
+* [!DNL Sources](#sources)
 
-## 資料控管 {#governance}
+## [!DNL Data Governance] {#governance}
 
-Experience Platform可讓公司將來自多個企業系統的資料整合在一起，讓行銷人員能夠識別、瞭解並吸引客戶。 Experience Platform包含端對端資料治理基礎架構，包括資料使用標籤與強制(DULE)，以確保在平台內及系統間共用資料時能正確使用。
+[!DNL Experience Platform] 讓公司將多個企業系統的資料整合在一起，讓行銷人員更能識別、瞭解並吸引客戶。 [!DNL Experience Platform] 包括端對端資料治理基礎架構，包括資料使用標籤與實施(DULE)，以確保在系統內和系統間共用資料時，能 [!DNL Platform] 夠正確使用資料。
 
-Adobe Experience Platform資料治理是一系列策略和技術，用於管理客戶資料並確保符合適用於資料使用的法規、限制和政策。 它在Experience Platform的不同層次發揮關鍵作用，包括編目、資料傳承、資料使用標籤、資料存取政策，以及行銷動作的資料存取控制。
+Adobe Experience Platform是一 [!DNL Data Governance] 系列用於管理客戶資料及確保符合資料使用相關法規、限制和政策的策略與技術。 它在各個層級中都扮演了關 [!DNL Experience Platform] 鍵角色，包括編目、資料傳承、資料使用標籤、資料存取政策，以及對行銷動作資料的存取控制。
 
 **新功能**
 
@@ -40,7 +40,7 @@ Adobe Experience Platform資料治理是一系列策略和技術，用於管理�
 
 | 功能 | 說明 |
 | ------- | ----------- |
-| 針對即時客戶資料平台自動實施資料使用政策 | 資料使用原則現在會在啟動資料至目的地的工作流程中執行。 在進行影響現有啟動的變更（例如對資料集標籤、合併原則、區段定義等）時，也會嵌入並強制執行資料控管。 |
+| 自動執行 [!DNL Real-time Customer Data Platform] | 資料使用原則現在會在啟動資料至目的地的工作流程中執行。 [!DNL Data Governance] 也會在進行影響現有啟動的變更（例如變更資料集標籤、合併原則、區段定義等）時嵌入並強制執行。 |
 | 用於實施的資料世系 | 當Real-time CDP中違反資料使用原則時，UI會顯示一則通知，其中包含資料世系資訊，以協助使用者瞭解違反原則的原因，以及他們可以採取哪些措施來解決違規問題。 |
 
 
@@ -48,11 +48,11 @@ Adobe Experience Platform資料治理是一系列策略和技術，用於管理�
 
 * 無
 
-如需資料治理的詳細資訊，請參閱資 [料治理概觀](../../data-governance/home.md)。
+如需詳細資訊， [!DNL Data Governance]請參閱資 [料治理概觀](../../data-governance/home.md)。
 
 ## 資料擷取 {#ingestion}
 
-Adobe Experience Platform提供一組豐富的功能，可吸收任何類型的資料和延遲。 Adobe Experience Platform Data Ingestion提供多種替代方式來擷取資料，包括批次API、串流API、原生Adobe連接器、資料整合合作夥伴或Adobe Experience Platform UI。
+Adobe Experience Platform提供一組豐富的功能，可吸收任何類型的資料和延遲。 Adobe Experience Platform提供 [!DNL Data Ingestion] 多種替代方式來擷取資料，包括批次API、串流API、原生Adobe連接器、資料整合合作夥伴或Adobe Experience Platform UI。
 
 **新功能**
 
@@ -77,34 +77,34 @@ Adobe Experience Platform提供一組豐富的功能，可吸收任何類型的�
 
 | 目的地 | 說明 |
 |--- | ---|
-| 雲端儲存空間目標 | Adobe即時CDP現在可將區段作為資料檔案傳送至您的Amazon S3或SFTP雲端儲存位置。 這可讓您透過CSV或Tab分隔檔案，將觀眾及其描述檔屬性傳送至內部系統。 |
-| 廣告目的地 | Google目標卡現在分為三個目標卡，適用於Adobe即時CDP目前支援的三種Google平台： Google Ads、Google Ad Manager、Google Display &amp; Video 360。 |
+| 雲端儲存空間目標 | Adobe即時CDP現在可將區段作為資料檔案傳送至您的或SFTP雲 [!DNL Amazon S3] 端儲存位置。 這可讓您透過CSV或Tab分隔檔案，將觀眾及其描述檔屬性傳送至內部系統。 |
+| 廣告目的地 | 目 [!DNL Google] 標卡現在分為三個目標卡，適用於Adobe即時CDP [!DNL Google] 目前支援的三種不同平台： [!DNL Google Ads]、 [!DNL Google Ad Manager]顯示 [!DNL Google] 與視訊360。 |
 
 若要進一步瞭解，請造訪目 [標總覽](../../rtcdp/destinations/destinations-overview.md)
 
-## Identity 服務 {#identity}
+## [!DNL Identity Service] {#identity}
 
 要提供相關的數位體驗，必須全面瞭解客戶。 當客戶資料分散在不同的系統上時，這會更加困難，導致每個客戶看起來都有多個「身分」。
 
-Adobe Experience Platform Identity Service可跨裝置和系統橋接身分，協助您更全面地瞭解客戶及其行為，讓您即時提供具影響力的個人化數位體驗。
+Adobe Experience Platform可 [!DNL Identity Service] 協助您跨裝置和系統橋接身分，以便即時提供具影響力的個人化數位體驗，從而更全面地瞭解客戶及其行為。
 
 **新功能**
 
 | 功能 | 說明 |
 | ------- | ----------- |
-| 增強的私用圖表 | 專用圖形功能已增強，可減少圖形產生延遲，從每週批次處理流程縮短為每日重新整理的圖形，讓Identity Service客戶存取更新的識別圖形和連結。 |
+| 增強的私用圖表 | 專用圖表功能已增強，可減少從每週批次處理到每日重新整理的圖表產生延遲，讓客 [!DNL Identity Service] 戶存取更新的身分圖表和連結。 |
 
 **已知問題**
 
 * 無
 
-如需Identity Service的詳細資訊，請參閱 [Identity Service總覽](../../identity-service/home.md)。
+如需詳細資訊 [!DNL Identity Service]，請參 [閱Identity Service總覽](../../identity-service/home.md)。
 
 ## 來源 {#sources}
 
-Adobe Experience Platform可以從外部來源擷取資料，同時允許您使用平台服務來建構、標示和增強該資料。 您可以從多種來源收集資料，例如Adobe應用程式、雲端儲存空間、協力廠商軟體和您的CRM系統。
+Adobe Experience Platform可以從外部來源擷取資料，同時讓您使用服務來建構、標示和增強該資 [!DNL Platform] 料。 您可以從多種來源收集資料，例如Adobe應用程式、雲端儲存空間、協力廠商軟體和您的CRM系統。
 
-Experience Platform提供REST風格的API和互動式UI，讓您輕鬆為各種資料提供者設定來源連線。 這些源連接允許您驗證並連接到外部儲存系統和CRM服務、設定接收運行的時間，以及管理資料接收吞吐量。
+[!DNL Experience Platform] 提供REST風格的API和互動式UI，讓您輕鬆地為各種資料提供者設定來源連線。 這些源連接允許您驗證並連接到外部儲存系統和CRM服務、設定接收運行的時間，以及管理資料接收吞吐量。
 
 **新功能**
 
@@ -112,10 +112,10 @@ Experience Platform提供REST風格的API和互動式UI，讓您輕鬆為各種�
 | ------- | ----------- |
 | Adobe Audience Manager連接器不建議使用的信號 | Audience Manger的訊號層級資料將不再傳送。 請注意，「特徵」和「區段」的區段會籍仍將包含在內。 由於此更改，將不再生成入站資料集。 |
 | 重新命名的資料集 | 由Audience Manger連接器產生的資料集會有更新的名稱和說明。 |
-| 在Audience Manager中啟用描述檔切換 | 設定檔切換可以啟用或停用，以將資料集提升為即時客戶設定檔。 預設會啟用切換。 |
-| 雲端儲存系統的UI支援 | UI中Azure Data Lake Storage Gen2的新來源連接器。 |
-| CRM系統的UI支援 | UI中HubSpot、Salesforce Service Cloud和ServiceNow的新來源連接器。 |
-| 資料庫系統的UI支援 | UI中用於AWS Redshift、Google BigQuery、MariaDB、Microsoft SQL Server和MySQL的新源連接器。 |
+| 在Audience [!DNL Profile] Manger中啟用切換 | [!DNL Profile] 可以啟用或停用切換，將資料集提升為 [!DNL Real-time Customer Profile]。 預設會啟用切換。 |
+| 雲端儲存系統的UI支援 | UI中的新 [!DNL Azure Data Lake Storage Gen2] 來源連接器。 |
+| CRM系統的UI支援 | 在UI中為 [!DNL HubSpot]、 [!DNL Salesforce Service Cloud]和 [!DNL ServiceNow] 新增來源連接器。 |
+| 資料庫系統的UI支援 | UI中的、、、 [!DNL AWS Redshift]、和 [!DNL Google BigQuery]新的來 [!DNL MariaDB][!DNL Microsoft SQL Server][!DNL MySQL] 源連接器。 |
 
 **已知問題**
 
