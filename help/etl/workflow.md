@@ -4,7 +4,10 @@ solution: Experience Platform
 title: ETL工作流程
 topic: overview
 translation-type: tm+mt
-source-git-commit: 943b45d1c6de5f0e2be761d8246b9de4c4c0b4e7
+source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
+workflow-type: tm+mt
+source-wordcount: '177'
+ht-degree: 0%
 
 ---
 
@@ -23,7 +26,7 @@ source-git-commit: 943b45d1c6de5f0e2be761d8246b9de4c4c0b4e7
 
 ![](images/image2.png)
 
-### 圖2 —— 已激活Experience Platform連接器：
+### 圖2 —— 已激活 [!DNL Experience Platform] 連接器：
 
 ![](images/image3.png)
 
@@ -31,11 +34,11 @@ source-git-commit: 943b45d1c6de5f0e2be761d8246b9de4c4c0b4e7
 
 ![](images/image4.png)
 
-### 圖4 —— 新的轉換UI，選擇Experience Platform Connection:
+### 圖4 —— 新的轉換UI，選擇 [!DNL Experience Platform] 連接：
 
 ![](images/image5.png)
 
-### 圖5 —— 瀏覽來源Experience Platform資料集：
+### 圖5 —— 瀏覽源資料 [!DNL Experience Platform] 集：
 
 ![](images/image6.png)
 
@@ -55,7 +58,7 @@ source-git-commit: 943b45d1c6de5f0e2be761d8246b9de4c4c0b4e7
 
 ![](images/image10.png)
 
-### 圖10 —— 定義體驗資料模型(XDM)目標資料集：
+### 圖10 —— 定義(XDM) [!DNL Experience Data Model] 目標資料集：
 
 ![](images/image11.png)
 
