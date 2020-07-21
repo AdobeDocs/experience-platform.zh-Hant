@@ -4,9 +4,9 @@ solution: Experience Platform
 title: GreenPlum連接器
 topic: overview
 translation-type: tm+mt
-source-git-commit: 6ffdcc2143914e2ab41843a52dc92344ad51bcfb
+source-git-commit: 3b5e76afea5689dbd59f64f6192e6ef2a6acb7d3
 workflow-type: tm+mt
-source-wordcount: '130'
+source-wordcount: '179'
 ht-degree: 0%
 
 ---
@@ -20,6 +20,38 @@ ht-degree: 0%
 Adobe Experience Platform為資料庫提供者(例如MySQL [!DNL Microsoft]和)提供原生連接 [!DNL Azure]。 您可以將這些系統的資料匯入其中 [!DNL Platform]。
 
 支援不同類型的第三方資料庫，包括關聯式、NoSQL或資料倉庫。 支援資料庫提供者包括 [!DNL GreenPlum]。
+
+## IP位址允許清單
+
+在使用源連接器之前，必須將下列IP位址新增至允許清單。 若未將您地區專屬的IP位址新增至您的允許清單，在使用來源時可能會導致錯誤或效能不佳。
+
+### 美國東部地區
+
+- `20.41.2.0/23`
+- `20.41.4.0/26`
+- `20.44.17.80/28`
+- `20.49.102.16/29`
+- `40.70.148.160/28`
+- `52.167.107.224/28`
+
+### 西歐地區
+
+- `13.69.67.192/28`
+- `13.69.107.112/28`
+- `13.69.112.128/28`
+- `40.74.24.192/26`
+- `40.74.26.0/23`
+- `40.113.176.232/29`
+- `52.236.187.112/28`
+
+### 澳洲東部
+
+- `13.70.74.144/28`
+- `20.37.193.0/25`
+- `20.37.193.128/26`
+- `20.37.198.224/29`
+- `40.79.163.80/28`
+- `40.79.171.160/28`
 
 以下檔案提供如何連線至使用API [!DNL GreenPlum] 或使 [!DNL Platform] 用者介面的資訊：
 
