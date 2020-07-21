@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 日期和時間函式
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 6a0a9b020b0dc89a829c557bdf29b66508a10333
 workflow-type: tm+mt
-source-wordcount: '471'
+source-wordcount: '468'
 ht-degree: 4%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 4%
 
 # 日期和時間函式
 
-日期和時間函式用於對配置檔案查詢語言(PQL)中的值執行日期和時間操作。 有關其他PQL函式的詳細資訊，請參閱「配置檔案查 [詢語言」概述](./overview.md)。
+日期和時間函式用於對(PQL)中的值執行日期和時間 [!DNL Profile Query Language] 操作。 有關其他PQL函式的詳細資訊，請參閱「配置檔案查 [詢語言」概述](./overview.md)。
 
 ## 當月
 
