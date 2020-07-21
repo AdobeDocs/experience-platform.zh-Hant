@@ -4,9 +4,9 @@ seo-title: 'Adobe Experience Platform Web SDK快速入門 '
 description: 使用Experience Platform Web SDK收集資料的快速入門手冊
 seo-description: 使用Experience Platform Web SDK收集資料的快速入門手冊
 translation-type: tm+mt
-source-git-commit: 7b07a974e29334cde2dee7027b9780a296db7b20
+source-git-commit: 8574a2d54c00f1bd3c41780fb12ff739a7d98fc3
 workflow-type: tm+mt
-source-wordcount: '515'
+source-wordcount: '517'
 ht-degree: 5%
 
 ---
@@ -14,11 +14,11 @@ ht-degree: 5%
 
 # 歡迎
 
-本指南會引導您以不同的方式來設定Adobe Experience Platform [!DNL Web SDK]。 若要使用此功能，您必須位於允許清單中。 如果您想要加入等候清單，請聯絡您的CSM。
+本指南會引導您以不同的方式來設定Adobe Experience Platform Web SDK。 若要使用此功能，您必須加入白名單。 如果您想要加入等候清單，請聯絡您的CSM。
 
-- 啟用 [第一方網域(CNAME)](https://docs.adobe.com/content/help/zh-Hant/core-services/interface/ec-cookies/cookies-first-party.html) 。 如果您已有CNAME [!DNL Analytics]，則應使用該CNAME。 在開發中進行測試沒有CNAME，但您在投入生產前需要一個CNAME
-- 取得Adobe Experience Platform的權益 [!DNL Data Platform]。  如果您尚未購買平台，我們將提供您有限 [!DNL Experience Platform Data Services Foundation] 的SDK使用方式，不需額外付費。
-- 正在使用最新版的訪客ID服務
+- 啟用 [第一方網域(CNAME)](https://docs.adobe.com/content/help/zh-Hant/core-services/interface/ec-cookies/cookies-first-party.html) 。 如果您已有Analytics的CNAME，則應使用該CNAME。 在開發中進行測試沒有CNAME，但您在開始生產之前需要CNAME。
+- 取得Adobe Experience Platform的權益。  如果您尚未購買Platform,Adobe將提供您Experience Platform Data Services Foundation，讓您以有限方式與SDK搭配使用，不需額外付費。
+- 使用最新版的訪客ID服務。
 
 ## 建立設定ID
 
