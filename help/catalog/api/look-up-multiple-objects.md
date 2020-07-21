@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 查找多個對象
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
 workflow-type: tm+mt
-source-wordcount: '183'
+source-wordcount: '176'
 ht-degree: 1%
 
 ---
@@ -14,11 +14,11 @@ ht-degree: 1%
 
 # 查找多個對象
 
-如果您想要檢視數個特定物件，而不是每個物件提出一個要求，「目錄」會提供簡單的捷徑，讓您要求同一類型的多個物件。 您可以使用單一GET請求來傳回多個特定物件，方法是加入以逗號分隔的ID清單。
+如果您想要檢視數個特定物件，而不是每個物件提出一個要求，則提供 [!DNL Catalog] 簡單的捷徑，讓您要求同類型的多個物件。 您可以使用單一GET請求來傳回多個特定物件，方法是加入以逗號分隔的ID清單。
 
 >[!NOTE]
 >
->即使在請求特定目錄物件時，查詢參數只傳 `properties` 回所需的屬性仍是最佳實務。
+>即使在請求特定 [!DNL Catalog] 物件時，查詢參數僅傳 `properties` 回所需的屬性仍是最佳實務。
 
 **API格式**
 
@@ -27,7 +27,7 @@ GET /{OBJECT_TYPE}/{ID_1},{ID_2},{ID_3},{ID_4}
 GET /{OBJECT_TYPE}/{ID_1},{ID_2},{ID_3},{ID_4}?properties={PROPERTY_1},{PROPERTY_2},{PROPERTY_3}
 ```
 
-| `{OBJECT_TYPE}` |要檢索的目錄對象類型。 有效對象包括： <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_TYPE}` |要檢索的 [!DNL Catalog] 對象類型。 有效對象包括： <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
 | `{ID}` |您要擷取之特定物件的識別碼。 |
 
 **請求**
@@ -49,7 +49,7 @@ curl -X GET \
 
 >[!NOTE]
 >
->如果返回的對象不包含查詢所指示的一個或多個請求屬性，則響應只返回它所包含的請求屬性，如下面的「示例資料集3」和「示例資料集4」所示。 `properties`
+>如果返回的對象不包含查詢所指示的一個或多個請求屬性，則 `properties` 響應只返回它所包含的請求屬性，如下 ***`Sample Dataset 3`*** 所示 ***`Sample Dataset 4`*** 。
 
 ```json
 {
