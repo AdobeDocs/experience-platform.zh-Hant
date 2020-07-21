@@ -4,25 +4,25 @@ seo-title: Google Display & Video 360 Destination
 description: Display & Video 360（先前稱為DoubleClick競標管理器）是一種工具，用於在顯示、視訊和行動庫存來源中執行重新鎖定目標及受眾目標數位促銷活動。
 seo-description: 'Display & Video 360（先前稱為DoubleClick競標管理器）是一種工具，用於在顯示、視訊和行動庫存來源中執行重新鎖定目標及受眾目標數位促銷活動。 '
 translation-type: tm+mt
-source-git-commit: 3c598454a868139b7604c5c7ca2b98fa0f1bb961
+source-git-commit: 6f680a60c88bc5fee6ce9cb5a4f314c4b9d02249
 workflow-type: tm+mt
-source-wordcount: '668'
+source-wordcount: '633'
 ht-degree: 0%
 
 ---
 
 
-# Google Display &amp; Video 360 Destination
+# [!DNL Google Display & Video 360] 目的地
 
 ## 概述
 
-Display &amp; Video 360（舊稱DoubleClick競標管理器）是一種工具，可用來在顯示、視訊和行動庫存來源中執行重新鎖定目標及受眾目標數位促銷活動。
+[!DNL Display & Video 360](先前稱為 [!DNL DoubleClick Bid Manager])工具，用於在顯示、視訊和行動庫存來源上執行重新定位和受眾鎖定的數位促銷活動。
 
 ## 目標規格
 
-請注意Google Display &amp; Video 360目標專屬的下列詳細資訊：
+請注意以下特定於目標的詳細 [!DNL Google Display & Video 360] 資訊：
 
-* 您可以傳送下列 [身分](../../identity-service/namespaces.md) ，到Google Display &amp; Video 360目的地： **Google Cookie ID、IDFA、GAID、Roku ID、Microsoft ID、Amazon Fire TV ID**。
+* 您可以傳送下列身 [分](../../identity-service/namespaces.md) ，到 [!DNL Google Display & Video 360] 目的地： **Google Cookie ID、IDFA、GAID、Roku ID、Microsoft ID、Amazon Fire TV ID**。
 * 在Google平台中以程式設計方式建立已啟用的觀眾。
 * Adobe即時CDP目前不包含測量量度，以驗證啟動是否成功。 請參閱Google中的觀眾計數，以驗證整合併瞭解觀眾鎖定規模。
 
@@ -36,9 +36,9 @@ Display &amp; Video 360（舊稱DoubleClick競標管理器）是一種工具，�
 
 >[!NOTE]
 >
->在Adobe Real-time CDP中設定您的第一個Google Display &amp; Video 360目標之前，允許清單是必填的。 請確定Google在建立目標之前已完成下列說明的允許清單程式。
+>在Adobe即時CDP中設定您的第一個目 [!DNL Google Display & Video 360] 標之前，允許清單是必填的。 請確定Google在建立目標之前已完成下列說明的允許清單程式。
 
-在Adobe即時CDP中建立Google Display &amp; Video 360目標之前，您必須聯絡Google，要求Adobe將Adobe加入允許的資料提供者清單中，並將您的帳戶加入允許清單中。 聯絡Google並提供下列資訊：
+在Adobe [!DNL Google Display & Video 360] 即時CDP中建立目標之前，您必須聯絡Google，要求Adobe將其加入允許的資料提供者清單中，並讓您的帳戶加入允許清單中。 聯絡Google並提供下列資訊：
 
 * **帳戶ID** : 這是Adobe與Google的帳戶ID。 請聯絡Adobe客戶服務或您的Adobe代表以取得此ID。
 * **客戶ID** : 這是Adobe與Google的客戶帳戶ID。 請聯絡Adobe客戶服務或您的Adobe代表以取得此ID。
@@ -46,10 +46,11 @@ Display &amp; Video 360（舊稱DoubleClick競標管理器）是一種工具，�
 
 ## 建立目標
 
-1. 在「連 **[!UICONTROL 線>目的地]**」中，選取「Google顯示與視訊360」，然後選取「 **[!UICONTROL 建立目的地」]**。
+1. 在「連 **[!UICONTROL 接」>「目標]**」中，選 [!DNL Google Display & Video 360]擇並選擇「創 **[!UICONTROL 建目標」]**。
    ![Connect Google Display &amp; Video 360目標](/help/rtcdp/destinations/assets/google-dv360-destination.png)
 
 2. 在建 **立目標工作流程的** 「設定」步驟中，填寫目標的「基本資訊  」，以及應套用至此目標的行銷使用案例。 <br>
+
    ![基本資訊Google Display &amp; Video 360](/help/rtcdp/destinations/assets/dv360-setup-step.png)
 * **[!UICONTROL 名稱]**: 填寫此目標的首選名稱。
 * **[!UICONTROL 說明]**: 可選。 例如，您可以提及您使用此目的地的促銷活動。
@@ -61,8 +62,8 @@ Display &amp; Video 360（舊稱DoubleClick競標管理器）是一種工具，�
 
 >[!NOTE]
 >
->設定Google Display &amp; Video 360目標時，請與您的Google帳戶管理員或Adobe代表合作，以瞭解您擁有的帳戶類型。
+>設定目的地時， [!DNL Google Display & Video 360] 請與您或Adobe代表 [!DNL Google Account Manager] 合作，以瞭解您擁有的帳戶類型。
 
-## 啟用區段至Google Display &amp; Video 360
+## 啟用區段至 [!DNL Google Display & Video 360]
 
-如需如何啟用區段至Google Display &amp; Video 360的指示，請參閱啟 [用資料至目標](/help/rtcdp/destinations/activate-destinations.md)。
+如需如何啟用區段至目的地的指示 [!DNL Google Display & Video 360]，請參 [閱啟用資料至目的地](/help/rtcdp/destinations/activate-destinations.md)。
