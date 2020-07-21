@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 使用架構架構編輯器定義兩個架構之間的關係
 topic: tutorials
 translation-type: tm+mt
-source-git-commit: d04bf35e49488ab7d5e07de91eb77d0d9921b6fa
+source-git-commit: 1445646be8fa3416a34408205eadca0a792290c6
 workflow-type: tm+mt
 source-wordcount: '811'
 ht-degree: 0%
@@ -62,7 +62,7 @@ Adobe Experience Platform的重要部分，在於能夠跨不同通道瞭解客�
 
 <img src="../images/tutorials/relationship/loyalty-create-new-mixin.png" width="750"><br>
 
-畫布會重新顯示，「[!UICONTROL 忠誠度關係]」會顯示 _在Mixins區段中_ 。 按一下混音名稱，然後按一 **[!UICONTROL 下根層級]** 「忠誠會員」欄位旁的「新增欄位」。
+畫布會重新顯示，「[!UICONTROL Favorite Hotel]」(最愛的酒店 _)會出現_ 在Mixins區。 按一下混音名稱，然後按一 **[!UICONTROL 下根層級]** 「忠誠會員」欄位旁的「新增欄位」。
 
 ![](../images/tutorials/relationship/loyalty-add-field.png)
 
@@ -74,7 +74,7 @@ Adobe Experience Platform的重要部分，在於能夠跨不同通道瞭解客�
 
 ![](../images/tutorials/relationship/relationship-field-apply.png)
 
-更新的「[!UICONTROL loyaltyRelationship]」欄位會出現在畫布中。 按一下 **[!UICONTROL 保存]** ，完成對架構的更改。
+更新的「[!UICONTROL favoriteHotel]」欄位會出現在畫布中。 按一下 **[!UICONTROL 保存]** ，完成對架構的更改。
 
 ![](../images/tutorials/relationship/relationship-field-save.png)
 
