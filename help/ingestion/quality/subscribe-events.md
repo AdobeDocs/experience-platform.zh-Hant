@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 訂閱資料擷取事件
 topic: overview
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: bfbf2074a9dcadd809de043d62f7d2ddaa7c7b31
 workflow-type: tm+mt
-source-wordcount: '851'
+source-wordcount: '832'
 ht-degree: 1%
 
 ---
@@ -14,11 +14,11 @@ ht-degree: 1%
 
 # 資料擷取通知
 
-將資料擷取至Adobe Experience Platform的程式由多個步驟組成。 一旦您識別需要擷取至平台的資料檔案，擷取程式就會開始，每個步驟都會連續進行，直到資料被成功擷取或失敗為止。 您可以使用 [Adobe Experience Platform Data Ingestion API或Experience Platform使用者介面來啟動擷取程式](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml) 。
+將資料擷取至Adobe Experience Platform的程式由多個步驟組成。 一旦您識別需要擷取的資料檔案後，擷取程 [!DNL Platform]序就會開始，每個步驟都會連續進行，直到資料被成功擷取或失敗為止。 您可以使用 [Adobe Experience Platform Data Ingestion API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml) ，或使用使用者介面來啟 [!DNL Experience Platform] 動擷取程式。
 
-載入平台的資料必須經過多個步驟，才能到達其目的地、資料湖或即時客戶個人檔案資料儲存。 每個步驟都包括處理資料、驗證資料，然後儲存資料，再傳遞至下一步驟。 視所擷取的資料量而定，這可能會變成耗時的程式，而且程式總會因為驗證、語義或處理錯誤而失敗。 發生故障時，需要修正資料問題，然後必須使用修正的資料檔案重新啟動整個擷取程式。
+載入的資 [!DNL Platform] 料必須經過多個步驟，才能到達其目的地、 [!DNL Data Lake] 或資 [!DNL Real-time Customer Profile] 料儲存。 每個步驟都包括處理資料、驗證資料，然後儲存資料，再傳遞至下一步驟。 視所擷取的資料量而定，這可能會變成耗時的程式，而且程式總會因為驗證、語義或處理錯誤而失敗。 發生故障時，需要修正資料問題，然後必須使用修正的資料檔案重新啟動整個擷取程式。
 
-為協助監控擷取程式，Experience Platform可讓您訂閱流程每個步驟所發佈的一組事件，並通知您所擷取資料的狀態和任何可能的失敗。
+為協助監控擷取程式， [!DNL Experience Platform] 可訂閱由程式每個步驟所發佈的一組事件，並通知您所擷取資料的狀態和任何可能的失敗。
 
 ## 可用狀態通知事件
 
@@ -39,17 +39,17 @@ ht-degree: 1%
 
 ## 通知裝載方案
 
-資料擷取通知事件模式是包含欄位和值的體驗資料模型(XDM)模式，提供有關所擷取資料狀態的詳細資訊。 請造訪公開的XDM GitHub回購網站，以檢視最新的通知 [裝載方案](https://github.com/adobe/xdm/blob/master/schemas/common/notifications/ingestion.schema.json)。
+資料擷取通知事件模式是 [!DNL Experience Data Model] (XDM)模式，包含欄位和值，提供有關所擷取資料狀態的詳細資訊。 請造訪公開的XDM [!DNL GitHub] repo，以檢視最新的通知 [裝載架構](https://github.com/adobe/xdm/blob/master/schemas/common/notifications/ingestion.schema.json)。
 
 ## 訂閱資料擷取狀態通知
 
-透過 [Adobe I/O Events](https://www.adobe.io/apis/experienceplatform/events.html)，您可以使用Webhook訂閱多種通知類型。 以下各節將說明使用Adobe Developer Console訂閱平台通知以擷取資料事件的步驟。
+透過 [Adobe I/O Events](https://www.adobe.io/apis/experienceplatform/events.html)，您可以使用Webhook訂閱多種通知類型。 以下各節將說明使用Adobe Developer Console訂閱 [!DNL Platform] 資料擷取事件通知的步驟。
 
 ### 在Adobe Developer Console中建立新專案
 
 前往 [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui) ，使用您的Adobe ID登入。 接著，請依照教學課程中說明的步驟， [在Adobe Developer Console檔案中建立空白的專案](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/projects-empty.md) 。
 
-### 將Experience Platform事件新增至專案
+### 新增 [!DNL Experience Platform] 事件至專案
 
 建立新專案後，請導覽至該專案的概述畫面。 在這裡，按一下「 **[!UICONTROL 新增事件」]**。
 
@@ -91,4 +91,4 @@ ht-degree: 1%
 
 ## 後續步驟
 
-在您將平台通知註冊到專案後，您就可以從專案儀表板檢視收到的事件。 如需如何追 [蹤事件的詳細指示，請參閱「追蹤Adobe I/O事件](https://www.adobe.io/apis/experienceplatform/events/docs.html#!adobedocs/adobeio-events/master/support/tracing.md) 」指南。
+在您將通知注 [!DNL Platform] 冊到專案後，您就可以從專案儀表板檢視收到的事件。 如需如何追 [蹤事件的詳細指示，請參閱「追蹤Adobe I/O事件](https://www.adobe.io/apis/experienceplatform/events/docs.html#!adobedocs/adobeio-events/master/support/tracing.md) 」指南。
