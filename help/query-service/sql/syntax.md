@@ -4,9 +4,9 @@ solution: Experience Platform
 title: SQL語法
 topic: syntax
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 3b710e7a20975880376f7e434ea4d79c01fa0ce5
 workflow-type: tm+mt
-source-wordcount: '1957'
+source-wordcount: '1940'
 ht-degree: 1%
 
 ---
@@ -14,11 +14,11 @@ ht-degree: 1%
 
 # SQL語法
 
-查詢服務提供對語句和其他有限命令使用標 `SELECT` 準ANSI SQL的能力。 本文檔顯示查詢服務支援的SQL語法。
+[!DNL Query Service] 提供了對語句和其他有限命令使用標 `SELECT` 準ANSI SQL的能力。 本文檔顯示支援的SQL語法 [!DNL Query Service]。
 
 ## 定義SELECT查詢
 
-下列語法定義查詢 `SELECT` 服務支援的查詢：
+以下語法定義 `SELECT` 由支援的查詢 [!DNL Query Service]:
 
 ```
 [ WITH with_query [, ...] ]
@@ -35,7 +35,7 @@ SELECT [ ALL | DISTINCT [( expression [, ...] ) ] ]
     [ OFFSET start ]
 ```
 
-其中 `from_item` 可以是下列其中之一：
+其中 `from_item` 可以是：
 
 ```
 table_name [ * ] [ [ AS ] alias [ ( column_alias [, ...] ) ] ]
@@ -111,7 +111,7 @@ SELECT statement 2
 
 ## 按選擇建立表
 
-下列語法定義 `CREATE TABLE AS SELECT` 查詢服務支援的(CTAS)查詢：
+下列語法定義 `CREATE TABLE AS SELECT` (CTAS)查詢，支援 [!DNL Query Service]:
 
 ```
 CREATE TABLE table_name [ WITH (schema='target_schema_title') ] AS (select_query)
@@ -136,7 +136,7 @@ CREATE TABLE Chairs WITH (schema='target schema title') AS (SELECT color, count(
 
 ## 插入
 
-下列語法定義查詢 `INSERT INTO` 服務支援的查詢：
+以下語法定義 `INSERT INTO` 由支援的查詢 [!DNL Query Service]:
 
 ```
 INSERT INTO table_name select_query
@@ -170,7 +170,7 @@ DROP [TEMP] TABLE [IF EXISTS] [db_name.]table_name
 
 ## 建立檢視
 
-下列語法定義查詢 `CREATE VIEW` 服務支援的查詢：
+以下語法定義 `CREATE VIEW` 由支援的查詢 [!DNL Query Service]:
 
 ```
 CREATE [ OR REPLACE ] VIEW view_name AS select_query
@@ -187,7 +187,7 @@ CREATE OR REPLACE VIEW V1 AS SELECT model, version FROM Inventory
 
 ### 拖放檢視
 
-下列語法定義查詢 `DROP VIEW` 服務支援的查詢：
+以下語法定義 `DROP VIEW` 由支援的查詢 [!DNL Query Service]:
 
 ```
 DROP VIEW [IF EXISTS] view_name
@@ -202,7 +202,7 @@ DROP VIEW v1
 DROP VIEW IF EXISTS v1
 ```
 
-## Spark SQL命令
+## [!DNL Spark] SQL命令
 
 ### SET
 
@@ -242,7 +242,7 @@ CLOSE { name }
 
 ### 提交
 
-查詢服務中不執行任何操作作為提交事務語句的響應。
+不執行任何作 [!DNL Query Service] 為對commit事務語句的響應。
 
 ```
 COMMIT [ WORK | TRANSACTION ]
@@ -341,7 +341,7 @@ EXPLAIN SELECT * FROM foo;
 
 `FETCH` 使用先前建立的游標檢索行。
 
-游標具有關聯位置，由使用 `FETCH`。 游標位置可以在查詢結果的第一行之前、在結果的任何特定行上或在結果的最後一行之後。 建立游標時，游標位於第一行之前。 在讀取某些行後，游標將位於最近檢索到的行上。 如 `FETCH` 果在可用行的結尾處運行，則游標將放在最後一行後面。 如果沒有這樣的行，則返回空結果，並且游標將放在第一行之前或最後一行之後（如適當）。
+游標具有關聯位置，由使用 `FETCH`。 游標位置可以在查詢結果的第一行、結果的任何特定行上或結果的最後一行之後。 建立游標時，游標位於第一行之前。 在讀取某些行後，游標將位於最近檢索到的行上。 如 `FETCH` 果在可用行的結尾處運行，則游標將放在最後一行後面。 如果沒有這樣的行，則返回空結果，並且游標將放在第一行之前或最後一行之後（如適當）。
 
 ```
 FETCH num_of_rows [ IN | FROM ] cursor_name
