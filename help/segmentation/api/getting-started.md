@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 區段服務開發人員指南
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: aff81a4f3243ef77cbdfc776220a5de46e360084
+source-git-commit: bfbf2074a9dcadd809de043d62f7d2ddaa7c7b31
 workflow-type: tm+mt
-source-wordcount: '305'
+source-wordcount: '288'
 ht-degree: 0%
 
 ---
@@ -14,24 +14,24 @@ ht-degree: 0%
 
 # Getting started with [!DNL Segmentation Service] {#getting-started}
 
-Adobe Experience Platform細分服務可讓您在Adobe Experience Platform中建立細分，並從資料中產生受 [!DNL Real-time Customer Profile] 眾。
+Adobe Experience Platform可 [!DNL Segmentation Service] 讓您在Adobe Experience Platform中從資料建立細分並產生受 [!DNL Real-time Customer Profile] 眾。
 
-開發人員指南需要對使用中涉及的各種Experience Platform服務有良好的瞭解 [!DNL Segmentation Service]。
+開發人員指南需要對使用中涉及的各 [!DNL Experience Platform] 種服務有良好的認識 [!DNL Segmentation Service]。
 
-- [!DNL Segmentation](../home.md): 可讓您從即時客戶個人檔案資料建立受眾細分。
-- [!DNL Experience Data Model (XDM) System](../../xdm/home.md): Experience Platform組織客戶體驗資料的標準化架構。
+- [!DNL Segmentation](../home.md): 可讓您從資料建立受眾 [!DNL Real-time Customer Profile] 區段。
+- [!DNL Experience Data Model (XDM) System](../../xdm/home.md): 組織客戶體驗資料 [!DNL Experience Platform] 的標準化架構。
 - [!DNL Real-time Customer Profile](../../profile/home.md): 根據來自多個來源的匯整資料，提供統一、即時的消費者個人檔案。
-- [沙盒](../../sandboxes/home.md): Experience Platform提供虛擬沙盒，可將單一Platform實例分割為不同的虛擬環境，以協助開發和發展數位體驗應用程式。
+- [沙盒](../../sandboxes/home.md): [!DNL Experience Platform] 提供虛擬沙盒，可將單一執行個體分 [!DNL Platform] 割為不同的虛擬環境，以協助開發和發展數位體驗應用程式。
 
 以下各節提供您成功使用 [!DNL Segmentation] API時需要瞭解的其他資訊。
 
 ## 讀取範例API呼叫
 
-API文 [!DNL Segmentation Service] 件提供範例API呼叫，以示範如何設定請求的格式。 這些包括路徑、必要標題和正確格式化的請求負載。 也提供API回應中傳回的範例JSON。 如需範例API呼叫檔案中所用慣例的詳細資訊，請參閱「Experience Platform疑難排解指 [南」中有關如何讀取範例API呼叫的章節](../../landing/troubleshooting.md#how-do-i-format-an-api-request) 。
+API文 [!DNL Segmentation Service] 件提供範例API呼叫，以示範如何設定請求的格式。 這些包括路徑、必要標題和正確格式化的請求負載。 也提供API回應中傳回的範例JSON。 如需範例API呼叫檔案中所用慣例的詳細資訊，請參閱疑難排解指 [南中有關如何讀取範例API呼叫的](../../landing/troubleshooting.md#how-do-i-format-an-api-request)[!DNL Experience Platform] 章節。
 
 ## 必要的標題
 
-API檔案也要求您完成驗證教學課 [程](../../tutorials/authentication.md) ，才能成功呼叫平台端點。 完成驗證教學課程時，會針對Experience Platform API呼叫中的每個必要標題提供值，如下所示：
+API檔案也要求您完成驗證教學 [課程](../../tutorials/authentication.md) ，才能成功呼叫端點 [!DNL Platform] 。 完成驗證教學課程可提供 [!DNL Experience Platform] API呼叫中每個必要標題的值，如下所示：
 
 - 授權： `Bearer {ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
