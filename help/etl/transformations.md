@@ -4,7 +4,10 @@ solution: Experience Platform
 title: 範例ETL轉換
 topic: overview
 translation-type: tm+mt
-source-git-commit: 4817162fe2b7cbf4ae4c1ed325db2af31da5b5d3
+source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
+workflow-type: tm+mt
+source-wordcount: '466'
+ht-degree: 1%
 
 ---
 
@@ -17,12 +20,12 @@ source-git-commit: 4817162fe2b7cbf4ae4c1ed325db2af31da5b5d3
 
 ### 範例檔案
 
-Adobe維護的公開ETL參考GitHub回購中提供範例CSV和JSON檔案：
+Adobe維護的公開ETL參考回購提供範例CSV和JSON [!DNL GitHub] 檔案：
 
 - [CRM_profiles.csv](https://github.com/adobe/experience-platform-etl-reference/blob/master/example_files/CRM_profiles.csv)
 - [CRM_profiles.json](https://github.com/adobe/experience-platform-etl-reference/blob/master/example_files/CRM_profiles.json)
 
-### 範例CSV
+### 範例 CSV
 
 下列CRM資料已匯出為 `CRM_profiles.csv`:
 
@@ -37,7 +40,7 @@ Mr  Eugenie Bechley F   1969-05-19  ebechley9r@telegraph.co.uk  b0c76a3f-6526-0a
 Dr  Cammi   Haslen  F   1973-12-17  chaslenqv@ehow.com  56059cd5-5006-ce5f-2f5f-15b4d856a204    61747117963243728095047674165570746095  2e33192080007c25-2ec0600000000006   86268258269066295956223980330791223320  865-538-8291    83 Veith Street Knoxville   Tennessee   US  37995   35.95   -84.05
 ```
 
-### 對應
+### 映射
 
 下表概述了CRM資料的對應需求，並包含下列轉換：
 - 屬性的身份 `identityMap` 列
@@ -46,14 +49,14 @@ Dr  Cammi   Haslen  F   1973-12-17  chaslenqv@ehow.com  56059cd5-5006-ce5f-2f5f-
 
 | CSV欄 | XDM路徑 | 資料格式 |
 | ---------- | -------- | --------------- |
-| 標題 | person.name.courtlyTitle | 複製為字串 |
+| 標題 | person.name.courtesyTitle | 複製為字串 |
 | F_NAME | person.name.firstName | 複製為字串 |
 | L_NAME | person.name.lastName | 複製為字串 |
-| 性別 | person.gedem | 將性別轉換為對應人。性別列舉值 |
-| DOB | person.byrthDayAndMonth:&quot;MM-DD&quot;<br/>person.birthDate:&quot;YYYY-MM-DD&quot;<br/>person.birthYear:YYYY | 將brithDayAndMonth轉換為字<br/>串將birthDate轉換<br/>為字串將birthYear轉換為short int |
+| 性別 | person.gender | 將性別轉換為對應人。性別列舉值 |
+| DOB | person.byrthDayAndMonth: &quot;MM-DD&quot;<br/>person.birthDate: &quot;YYYY-MM-DD&quot;<br/>person.birthYear: YYYY | 將brithDayAndMonth轉換為字<br/>串將birthDate轉換<br/>為字串將birthYear轉換為short int |
 | 電子郵件 | personalEmail.address | 複製為字串 |
 | CRMID | identityMap.CRMID[{&quot;id&quot;:x, primary:false}] | 複製為字串至identityMap中的CRMID陣列，並將Primary設為false |
-| ECID | identityMap.ECID[{&quot;id&quot;:x,primary:false}] | 複製為字串至identityMap中ECID陣列中的第一個項目，並將Primary設為false |
+| ECID | identityMap.ECID[{&quot;id&quot;:x,primary: false}] | 複製為字串至identityMap中ECID陣列中的第一個項目，並將Primary設為false |
 | Loyaltyid | identityMap.LOYALTYID[{&quot;id&quot;:x, primary:true}] | 複製為字串至identityMap中的LOYALTYID陣列，並將Primary設為true |
 | ECID2 | identityMap.ECID[{&quot;id&quot;:x, primary:false}] | 複製為字串至identityMap中ECID陣列中的第二個項目，並將Primary設為false |
 | 電話 | homePhone.number | 複製為字串 |
@@ -63,7 +66,7 @@ Dr  Cammi   Haslen  F   1973-12-17  chaslenqv@ehow.com  56059cd5-5006-ce5f-2f5f-
 | 國家／地區 | homeAddress.country | 複製為字串 |
 | ZIP | homeAddress.postalCode | 複製為字串 |
 | LAT | homeAddress.latitude | 轉換為雙重 |
-| 長 | homeAddress.longity | 轉換為雙重 |
+| 長 | homeAddress.longitude | 轉換為雙重 |
 
 
 ### 輸出XDM
@@ -174,7 +177,7 @@ Dr  Cammi   Haslen  F   1973-12-17  chaslenqv@ehow.com  56059cd5-5006-ce5f-2f5f-
 
 ### 資料幀示例
 
-以下示例資料幀的結構已映射到實現XDM Individual Profile類的架構，並包含與該類型的架構關聯的最常見欄位。
+以下示例資料幀的結構已映射到實現類的方案，並包含與該類型的方案 [!DNL XDM Individual Profile] 關聯的最常見欄位。
 
 ```python
 [
@@ -276,7 +279,7 @@ Dr  Cammi   Haslen  F   1973-12-17  chaslenqv@ehow.com  56059cd5-5006-ce5f-2f5f-
 ]
 ```
 
-### 對應
+### 映射
 
 下表概述了身份陣列的映射要求：
 
