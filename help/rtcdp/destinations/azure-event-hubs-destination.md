@@ -4,15 +4,15 @@ seo-title: （測試版）Azure事件集線器目標
 description: 建立Azure事件中樞儲存空間的即時出站連線，以從Experience Platform串流資料。
 seo-description: 建立Azure事件中樞儲存空間的即時出站連線，以從Experience Platform串流資料。
 translation-type: tm+mt
-source-git-commit: e93bfc028d5e23c3add55677c4003ca549a902c6
+source-git-commit: b96286f6a06f0583b45343a513ee64f0025d79a7
 workflow-type: tm+mt
-source-wordcount: '481'
+source-wordcount: '467'
 ht-degree: 2%
 
 ---
 
 
-# （測試版）Azure事件集線器目標
+# （測試版）目 [!DNL Azure Event Hubs] 標
 
 >[!IMPORTANT]
 >
@@ -32,9 +32,9 @@ ht-degree: 2%
 
 ## 使用案例 {#use-cases}
 
-透過使用串流目的地（例如Azure事件中樞），您可以輕鬆地將高價值區段事件和相關的描述檔屬性饋送到您選擇的系統中。
+透過使用串流目的地(例如 [!DNL Azure Event Hubs])，您可以輕鬆將高價值分段事件和相關的描述檔屬性饋送到您選擇的系統中。
 
-例如，潛在客戶下載了白皮書，使其符合「高轉換傾向」區段的資格。 通過將潛在客戶所屬的段映射到Azure事件集線器目標，您將在Azure事件集線器中接收此事件。 在這裡，您可以採用自行動手的方法，並在活動之上描述業務邏輯，因為您認為最適合企業IT系統。
+例如，潛在客戶下載了白皮書，使其符合「高轉換傾向」區段的資格。 將潛在客戶所處的區段對應至目標， [!DNL Azure Event Hubs] 您就會收到此事件 [!DNL Azure Event Hubs]。 在這裡，您可以採用自行動手的方法，並在活動之上描述業務邏輯，因為您認為最適合企業IT系統。
 
 ## 連接目標 {#connect-destination}
 
@@ -64,7 +64,7 @@ ht-degree: 2%
 
 ## 匯出的資料 {#exported-data}
 
-您匯出的Experience Platform資料會以JSON [!DNL Azure Event Hubs] 格式登入。 例如，以下事件包含符合特定區段資格並退出其他區段之對象的電子郵件地址設定檔屬性。 此潛在客戶的身分是ECID和電子郵件。
+您匯出的 [!DNL Experience Platform] 資料會以JSON [!DNL Azure Event Hubs] 格式著陸。 例如，以下事件包含符合特定區段資格並退出其他區段之對象的電子郵件地址設定檔屬性。 此潛在客戶的身分是ECID和電子郵件。
 
 ```
 {
