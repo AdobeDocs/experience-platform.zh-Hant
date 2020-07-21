@@ -4,43 +4,43 @@ solution: Experience Platform
 title: 資料存取概述
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
 workflow-type: tm+mt
-source-wordcount: '1367'
-ht-degree: 2%
+source-wordcount: '1332'
+ht-degree: 3%
 
 ---
 
 
-# 使用資料存取API查詢資料集資料
+# 使用 [!DNL Data Access] API查詢資料集資料
 
-本檔案提供逐步教學課程，其中涵蓋如何使用Adobe Experience Platform中的資料存取API來尋找、存取及下載儲存在資料集中的資料。 您也將會瞭解資料存取API的一些獨特功能，例如分頁和部分下載。
+本檔案提供逐步教學課程，其中涵蓋如何使用Adobe Experience Platform中的 [!DNL Data Access] API來尋找、存取及下載儲存在資料集中的資料。 此外，您還將瞭解API的一些獨特功能， [!DNL Data Access] 例如分頁和部分下載。
 
 ## 快速入門
 
 本教學課程旨在瞭解如何建立和填入資料集。 如需詳細 [資訊，請參閱資料集建立教學課程](../../catalog/datasets/create.md) 。
 
-以下章節提供您必須知道的其他資訊，以便成功呼叫平台API。
+以下章節提供您必須知道的其他資訊，才能成功呼叫平台API。
 
 ### 讀取範例API呼叫
 
-本教學課程提供範例API呼叫，以示範如何設定請求的格式。 這些包括路徑、必要標題和正確格式化的請求負載。 也提供API回應中傳回的範例JSON。 如需範例API呼叫檔案中所用慣例的詳細資訊，請參閱「Experience Platform疑難排解指 [南」中有關如何讀取範例API呼叫的章節](../../landing/troubleshooting.md#how-do-i-format-an-api-request) 。
+本教學課程提供範例API呼叫，以示範如何設定請求的格式。 這些包括路徑、必要標題和正確格式化的請求負載。 也提供API回應中傳回的範例JSON。 如需範例API呼叫檔案中所用慣例的詳細資訊，請參閱疑難排解指 [南中有關如何讀取範例API呼叫的](../../landing/troubleshooting.md#how-do-i-format-an-api-request)[!DNL Experience Platform] 章節。
 
 ### 收集必要標題的值
 
-若要呼叫平台API，您必須先完成驗證教 [學課程](../../tutorials/authentication.md)。 完成驗證教學課程後，所有Experience Platform API呼叫中每個必要標題的值都會顯示在下方：
+若要呼叫API，您必 [!DNL Platform] 須先完成驗證教 [學課程](../../tutorials/authentication.md)。 完成驗證教學課程後，將提供所有 [!DNL Experience Platform] API呼叫中每個必要標題的值，如下所示：
 
 - 授權： 生產者 `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
-Experience Platform中的所有資源都隔離至特定的虛擬沙盒。 所有對平台API的請求都需要一個標題，該標題會指定要在中執行的操作的沙盒名稱：
+中的所有資 [!DNL Experience Platform] 源都與特定虛擬沙盒隔離。 對API的所 [!DNL Platform] 有請求都需要一個標題，該標題會指定要在中執行的操作的沙盒名稱：
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
->如需平台中沙盒的詳細資訊，請參閱沙盒 [概觀檔案](../../sandboxes/home.md)。
+>如需中沙盒的詳細資訊 [!DNL Platform]，請參閱沙 [盒概述檔案](../../sandboxes/home.md)。
 
 所有包含裝載(POST、PUT、PATCH)的請求都需要額外的標題：
 
@@ -48,23 +48,23 @@ Experience Platform中的所有資源都隔離至特定的虛擬沙盒。 所有
 
 ## 序列圖
 
-本教學課程依循下列順序圖中概述的步驟，反白顯示資料存取API的核心功能。</br>
+本教學課程依循下列順序圖中概述的步驟，反白顯示 [!DNL Data Access] API的核心功能。</br>
 ![](../images/sequence_diagram.png)
 
-目錄API可讓您擷取有關批次和檔案的資訊。 資料存取API可讓您透過HTTP存取和下載這些檔案，視檔案大小而定，為完整或部分下載。
+API [!DNL Catalog] 可讓您擷取有關批次和檔案的資訊。 API [!DNL Data Access] 可讓您透過HTTP存取和下載這些檔案，視檔案大小而定，為完整或部分下載。
 
 ## 找出資料
 
-開始使用資料存取API之前，您必須先識別您要存取的資料位置。 在目錄API中，有兩個端點可用來瀏覽組織的中繼資料並擷取您要存取的批次或檔案ID:
+開始使用 [!DNL Data Access] API之前，您需要識別您要存取的資料位置。 在 [!DNL Catalog] API中，有兩個端點可用來瀏覽組織的中繼資料並擷取您要存取之批次或檔案的ID:
 
 - `GET /batches`: 返回組織下的批清單
 - `GET /dataSetFiles`: 傳回組織下的檔案清單
 
-如需目錄API中端點的完整清單，請參閱 [API參考](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml)。
+如需API中端點的完整清 [!DNL Catalog] 單，請參閱 [API參考](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml)。
 
 ## 擷取IMS組織下的批次清單
 
-使用目錄API，您可以在組織下傳回批次清單：
+使用 [!DNL Catalog] API，您可以在組織下返回批的清單：
 
 **API格式**
 
@@ -195,7 +195,7 @@ curl -X GET 'https://platform.adobe.io/data/foundation/catalog/batches?createdAf
 
 ## 檢索屬於特定批的所有檔案的清單
 
-現在您擁有要存取之批次的ID，可使用資料存取API來取得屬於該批次的檔案清單。
+現在您擁有要存取之批次的ID，可以使用 [!DNL Data Access] API取得屬於該批次的檔案清單。
 
 **API格式**
 
@@ -252,7 +252,7 @@ curl -X GET 'https://platform.adobe.io/data/foundation/export/batches/5c6f332168
 
 ## 使用檔案ID訪問檔案
 
-擁有唯一的檔案ID後，您就可以使用資料存取API來存取檔案的特定詳細資訊，包括檔案名稱、檔案大小（以位元組為單位），以及下載檔案的連結。
+擁有唯一的檔案ID後，您就可以使用 [!DNL Data Access] API來存取檔案的特定詳細資訊，包括檔案名稱、檔案大小（以位元組為單位），以及下載檔案的連結。
 
 **API格式**
 
@@ -385,7 +385,7 @@ curl -I 'https://platform.adobe.io/data/foundation/export/files/8dcedb36-1cb2-44
 
 ## 存取檔案內容
 
-您也可以使用資料存取API存取檔案的內容。
+您也可以使用 [!DNL Data Access] API存取檔案內容。
 
 **API格式**
 
@@ -414,7 +414,7 @@ curl -X GET 'https://platform.adobe.io/data/foundation/export/files/8dcedb36-1cb
 
 ## 下載檔案的部分內容
 
-資料存取API允許以區塊下載檔案。 在從檔案下載特定位元組范 `GET /files/{FILE_ID}` 圍的請求期間，可指定範圍標題。 如果未指定範圍，API預設會下載整個檔案。
+API [!DNL Data Access] 允許以區塊下載檔案。 在從檔案下載特定位元組范 `GET /files/{FILE_ID}` 圍的請求期間，可指定範圍標題。 如果未指定範圍，API預設會下載整個檔案。
 
 上一節中的HEAD [示例](#retrieve-the-metadata-of-a-file) ，以位元組為單位提供特定檔案的大小。
 
@@ -454,7 +454,7 @@ curl -X GET 'https://platform.adobe.io/data/foundation/export/files/8dcedb36-1cb
 
 ## 設定API回應分頁
 
-資料存取API中的回應會編頁。 依預設，每頁的登入點數上限為100。 分頁參數可用於修改預設行為。
+API內的回應 [!DNL Data Access] 會進行編頁。 依預設，每頁的登入點數上限為100。 分頁參數可用於修改預設行為。
 
 - `limit`: 您可以使用「限制」參數，根據您的需求指定每頁的登入次數。
 - `start`: 偏移可以由&quot;start&quot;查詢參數設定。
