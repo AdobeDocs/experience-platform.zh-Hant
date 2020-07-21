@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 預覽和估計端點
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: b3e6a6f1671a456b2ffa61139247c5799c495d92
+source-git-commit: 995fadef9abacf22d0561e0590dfbe172adf0a43
 workflow-type: tm+mt
-source-wordcount: '750'
+source-wordcount: '742'
 ht-degree: 2%
 
 ---
@@ -71,7 +71,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/preview \
 | -------- | ----------- |
 | `predicateExpression` | 用於查詢資料的PQL表達式。 |
 | `predicateType` | 下查詢表達式的謂詞類型 `predicateExpression`。 目前，此屬性唯一接受的值是 `pql/text`。 |
-| `predicateModel` | 描述檔資料所依據之體驗資料模型(XDM)架構的名稱。 |
+| `predicateModel` | 描述檔資 [!DNL Experience Data Model] 料所依據之(XDM)架構的名稱。 |
 
 **回應**
 
@@ -167,7 +167,7 @@ curl -X GET https://platform.adobe.io/data/core/ups/preview/MDphcHAtMzJiZTAzMjgt
 
 | 屬性 | 說明 |
 | -------- | ----------- |
-| `results` | 實體ID的清單，以及其相關身分。 提供的連結可用來使用描述檔存取API來查 [找指定實體](../../profile/api/entities.md)。 |
+| `results` | 實體ID的清單，以及其相關身分。 提供的連結可用於查找指定的實體，使用 [!DNL Profile Access API](../../profile/api/entities.md)。 |
 
 ## 檢索特定估計作業的結果 {#get-estimate}
 
@@ -226,4 +226,4 @@ curl -X GET https://platform.adobe.io/data/core/ups/estimate/MDoyOjRhNDVlODUzLWF
 
 ## 後續步驟
 
-閱讀本指南後，您現在更能瞭解如何使用預覽和估計。 若要進一步瞭解其他分段服務API端點，請閱讀分段服務開 [發人員指南總覽](./overview.md)。
+閱讀本指南後，您現在更能瞭解如何使用預覽和估計。 若要進一步瞭解其他 [!DNL Segmentation Service] API端點，請閱讀區 [段服務開發人員指南概觀](./overview.md)。
