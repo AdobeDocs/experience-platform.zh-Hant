@@ -4,15 +4,15 @@ solution: Adobe Experience Platform
 title: Adobe Experience Platform細分服務開發人員指南
 topic: guide
 translation-type: tm+mt
-source-git-commit: aff81a4f3243ef77cbdfc776220a5de46e360084
+source-git-commit: 995fadef9abacf22d0561e0590dfbe172adf0a43
 workflow-type: tm+mt
-source-wordcount: '469'
+source-wordcount: '467'
 ht-degree: 0%
 
 ---
 
 
-# Adobe Experience Platform Segmentation Service API開發人員指南
+# Adobe Experience Platform [!DNL Segmentation Service] API開發人員指南
 
 [!DNL Adobe Experience Platform Segmentation Service] 可讓您建立區段，並從資料中產 [!DNL Adobe Experience Platform] 生受 [!DNL Real-time Customer Profile] 眾。
 
