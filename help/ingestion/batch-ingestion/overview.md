@@ -4,17 +4,17 @@ solution: Experience Platform
 title: Adobe Experience Platform批次擷取概觀
 topic: overview
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
 workflow-type: tm+mt
-source-wordcount: '1170'
+source-wordcount: '1144'
 ht-degree: 2%
 
 ---
 
 
-# 批次擷取概觀
+# [!DNL Batch Ingestion]概述
 
-批次擷取API可讓您將資料以批次檔案的形式內嵌至Adobe Experience Platform。 所吸收的資料可以是CRM系統中平面檔案（例如鑲木地板檔案）的描述檔資料，或是符合Experience Data Model(XDM)註冊表中已知架構的資料。
+API [!DNL Batch Ingestion] 可讓您將資料以批次檔案的形式內嵌至Adobe Experience Platform。 所吸收的資料可以是來自CRM系統中平面檔案（例如鑲木地板檔案）的描述檔資料，或是符合(XDM)註冊表中已知架構的資料。 [!DNL Experience Data Model]
 
 「資 [料擷取API參考」](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml) ，提供這些API呼叫的其他資訊。
 
@@ -24,17 +24,17 @@ ht-degree: 2%
 
 ## 使用API
 
-資料擷取API可讓您透過三個基本步驟，將資料以批次形式（由一或多個要以單一單位格式擷取的檔案組成的資料單位）擷取至Experience Platform:
+API [!DNL Data Ingestion] 可讓您將資料以批次形式（由一或多個要以單一單位形式收錄的檔案組成的資料單位），透過三個基 [!DNL Experience Platform] 本步驟：
 
 1. 建立新批。
 2. 將檔案上傳至符合資料XDM架構的指定資料集。
 3. 發出批次結束的信號。
 
 
-### 資料擷取先決條件
+### [!DNL Data Ingestion] 先決條件
 
 - 要上傳的資料必須採用Parce或JSON格式。
-- 在目錄服務中建立的 [資料集](../../catalog/home.md)。
+- 在中建立的資料集 [!DNL Catalog services](../../catalog/home.md)。
 - 拼字檔案的內容必須符合上傳資料集之模式的子集。
 - 在驗證後取得您唯一的存取Token。
 
@@ -47,23 +47,23 @@ ht-degree: 2%
 
 ### 讀取範例API呼叫
 
-本指南提供範例API呼叫，以示範如何格式化您的請求。 這些包括路徑、必要標題和正確格式化的請求負載。 也提供API回應中傳回的範例JSON。 如需範例API呼叫檔案中所用慣例的詳細資訊，請參閱「Experience Platform疑難排解指 [南」中有關如何讀取範例API呼叫的章節](../../landing/troubleshooting.md#how-do-i-format-an-api-request) 。
+本指南提供範例API呼叫，以示範如何格式化您的請求。 這些包括路徑、必要標題和正確格式化的請求負載。 也提供API回應中傳回的範例JSON。 如需範例API呼叫檔案中所用慣例的詳細資訊，請參閱疑難排解指 [南中有關如何讀取範例API呼叫的](../../landing/troubleshooting.md#how-do-i-format-an-api-request)[!DNL Experience Platform] 章節。
 
 ### 收集必要標題的值
 
-若要呼叫平台API，您必須先完成驗證教 [學課程](../../tutorials/authentication.md)。 完成驗證教學課程後，所有Experience Platform API呼叫中每個必要標題的值都會顯示在下方：
+若要呼叫API，您必 [!DNL Platform] 須先完成驗證教 [學課程](../../tutorials/authentication.md)。 完成驗證教學課程後，將提供所有 [!DNL Experience Platform] API呼叫中每個必要標題的值，如下所示：
 
 - 授權： 生產者 `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
-Experience Platform中的所有資源都隔離至特定的虛擬沙盒。 所有對平台API的請求都需要一個標題，該標題會指定要在中執行的操作的沙盒名稱：
+中的所有資 [!DNL Experience Platform] 源都與特定虛擬沙盒隔離。 對API的所 [!DNL Platform] 有請求都需要一個標題，該標題會指定要在中執行的操作的沙盒名稱：
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
->如需平台中沙盒的詳細資訊，請參閱沙盒 [概觀檔案](../../sandboxes/home.md)。
+>如需中沙盒的詳細資訊 [!DNL Platform]，請參閱沙 [盒概述檔案](../../sandboxes/home.md)。
 
 所有包含裝載(POST、PUT、PATCH)的請求都需要額外的標題：
 
@@ -237,7 +237,7 @@ curl -X PATCH "https://platform.adobe.io/data/foundation/import/batches/{BATCH_I
 
 ## 信號批次完成
 
-將所有檔案上傳到批後，可以向批發出完成信號。 通過執行此操作，將為已完 **成的檔案建立目錄DataSetFile** 條目，並與上面生成的批相關聯。 然後目錄批次會標示為成功，這會觸發下游流程，以擷取可用資料。
+將所有檔案上傳到批後，可以向批發出完成信號。 通過執行此操作，將 [!DNL Catalog] 為完成的文 **** 件建立DataSetFile條目，並與上面生成的批相關聯。 然後 [!DNL Catalog] 將批標籤為成功，這會觸發下游流來提取可用資料。
 
 **請求**
 
