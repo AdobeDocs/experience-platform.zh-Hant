@@ -4,14 +4,17 @@ solution: Experience Platform
 title: Adobe Experience Platform批次擷取疑難排解指南
 topic: troubleshooting
 translation-type: tm+mt
-source-git-commit: 79466c78fd78c0f99f198b11a9117c946736f47a
+source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
+workflow-type: tm+mt
+source-wordcount: '1335'
+ht-degree: 1%
 
 ---
 
 
 # 批次擷取疑難排解指南
 
-本檔案將協助解答有關Adobe Experience Platform批次資料擷取API的常見問題。
+本檔案將協助解答有關Adobe Experience Platform API的常見問 [!DNL Batch Data Ingestion] 題。
 
 ## 批次API呼叫
 
@@ -106,7 +109,7 @@ curl -X POST "https://platform.adobe.io/data/foundation/import/batches" \
 ]
 ```
 
-依預設，「批次資料擷取」使用單行JSON。
+依預設， [!DNL Batch Data Ingestion] 使用單行JSON。
 
 ### 是否支援CSV擷取？
 
@@ -168,11 +171,11 @@ curl -X GET "https://platform.adobe.io/data/foundation/catalog/batches/{BATCH_ID
 | 狀態 | 寫入主版的資料 | 說明 |
 | ------ | ---------------------- | ----------- |
 | 已放棄 |  | 客戶端未能在預期的時間範圍內完成批處理。 |
-| 已中止 |  | 用戶端已透過「批次資料擷取API」明確呼叫指定批次的中止作業。 一旦批處於「已載入」狀態，便無法中止該批。 |
-| 作用中／成功 | x 中的頁面載入要求 | 批已成功從階段升級到主批，現在可用於下游衝減。 **注意：** 「作用中」和「成功」可互換使用。 |
+| 已中止 |  | 用戶端已透過API明確呼 [!DNL Batch Data Ingestion] 叫指定批次的中止作業。 一旦批處於「已載入」狀態，便無法中止該批。 |
+| 作用中／成功 | x | 批已成功從階段升級到主批，現在可用於下游衝減。 **注意：** 「作用中」和「成功」可互換使用。 |
 | 已封存 |  | 批已存檔到冷儲存中。 |
 | 失敗／失敗 |  | 由錯誤配置和／或錯誤資料引起的終端狀態。 系統會記錄可操作的錯誤以及批次，讓客戶能夠更正並重新提交資料。 **注意：** 「失敗」和「失敗」可互換使用。 |
-| 非活動 | x 中的頁面載入要求 | 批已成功升級，但已還原或過期。 批將不再可用於下游衝減，但基礎資料將保留在「主」中，直到保留、存檔或以其他方式刪除。 |
+| 非活動 | x | 批已成功升級，但已還原或過期。 批將不再可用於下游衝減，但基礎資料將保留在「主」中，直到保留、存檔或以其他方式刪除。 |
 | 正在載入 |  | 客戶端當前正在編寫批的資料。 此時，批 **尚未** 準備升級。 |
 | 已載入 |  | 客戶端已完成編寫批處理資料。 批已準備好升級。 |
 | 保留 |  | 資料已從Master中取出，並存放在Adobe Data Lake的指定封存中。 |
@@ -190,7 +193,7 @@ curl -X GET "https://platform.adobe.io/data/foundation/catalog/batches/{BATCH_ID
 
 ### 當批處理為「停止」時，它意味著什麼？
 
-當批處於「停止」狀態時，這表示Data Ingestion Services在接收批時遇到了困難，並且所有重試都已經完成。
+當批處於「停止」狀態時，這表示嘗試批 [!DNL Data Ingestion Services] 時遇到了困難，且所有重試都已完成。
 
 ### 如果批仍然是「正在載入」，這意味著什麼？
 
@@ -225,7 +228,7 @@ curl -X GET "https://platform.adobe.io/data/foundation/catalog/batches/{BATCH_ID
 
 ### 如何刪除批？
 
-應使用下列任一方法移除批次，而不直接從目錄中刪除：
+不應直接從中刪除批 [!DNL Catalog]處理，應使用以下任一方法刪除批處理：
 
 1. 如果批正在進行中，則應中止該批。
 2. 如果批已成功掌握，則應還原批。
@@ -236,11 +239,11 @@ curl -X GET "https://platform.adobe.io/data/foundation/catalog/batches/{BATCH_ID
 
 | 量度 | 說明 |
 | ------ | ----------- |
-| inputByteSize | Data Ingestion Services要處理的分段總位元組數。 |
-| inputRecordSize | Data Ingestion Services要處理的分段行總數。 |
-| outputByteSize | Data Ingestion Services輸出至Data Lake的位元組總數。 |
-| outputRecordSize | 資料擷取服務輸出至資料湖的總列數。 |
-| partitionCount | 寫入資料湖的分區總數。 |
+| inputByteSize | 要處理的分段位元組 [!DNL Data Ingestion Services] 總數。 |
+| inputRecordSize | 要處理的分段行 [!DNL Data Ingestion Services] 總數。 |
+| outputByteSize | 輸出的總位元組數 [!DNL Data Ingestion Services] 為 [!DNL Data Lake]。 |
+| outputRecordSize | 輸出到的總行 [!DNL Data Ingestion Services] 數 [!DNL Data Lake]。 |
+| partitionCount | 寫入的分區總數 [!DNL Data Lake]。 |
 
 ### 為什麼某些批次無法使用量度？
 
@@ -256,6 +259,6 @@ curl -X GET "https://platform.adobe.io/data/foundation/catalog/batches/{BATCH_ID
 | 106 | 資料集檔案為空。 |
 | 118 | CSV檔案包含空的標題列。 |
 | 200 | 批已接受處理，並將轉換到最終狀態，如「活動」或「失敗」。 提交後，可以使用端點監視批 `GetBatch` 處理。 |
-| 400 | 錯誤請求。如果批中缺少或重疊的塊，則返回。 |
+| 400 | Bad Request。如果批中缺少或重疊的塊，則返回。 |
 
 [large-file-upload]: batch_data_ingestion_developer_guide.md#how-to-ingest-large-parquet-files
