@@ -4,21 +4,21 @@ solution: Experience Platform
 title: 安全的Python資料存取SDK
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 49aa2e2664fe658d89b6279d1f869eb30c48ccad
+source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
 workflow-type: tm+mt
-source-wordcount: '483'
+source-wordcount: '478'
 ht-degree: 1%
 
 ---
 
 
-# Secure Python [!DNL Data Access] SDK
+# 安全 [!DNL Python][!DNL Data Access] SDK
 
-Secure Python [!DNL Data Access] SDK是軟體開發套件，可讓您從Adobe Experience Platform讀取和寫入資料集。
+Secure [!DNL Python][!DNL Data Access] SDK是軟體開發套件，可讓您從Adobe Experience Platform讀取和寫入資料集。
 
 ## 快速入門
 
-您必須完成驗證教 [學課程](../../tutorials/authentication.md) ，才能存取值以呼叫Secure Python [!DNL Data Access] SDK:
+您必須完成驗證教 [學課程](../../tutorials/authentication.md) ，才能存取值以呼叫安全 [!DNL Python][!DNL Data Access] SDK:
 
 - `{ACCESS_TOKEN}`
 - `{API_KEY}`
@@ -63,7 +63,7 @@ Secure Python [!DNL Data Access] SDK是軟體開發套件，可讓您從Adobe Ex
 python3 setup.py bdist_wheel --universal
 ```
 
-從項目目錄，將載輪載入Python 3環境。
+從項目目錄，將載荷輪載入 [!DNL Python] 3個環境。
 
 ```python
 pip3 install ./dist/<name_of_wheel_file>.whl
@@ -148,7 +148,7 @@ df = dataset_reader.where(experience_ds['timestamp'].gt(87879779797).And(experie
 
 ### ORDER BY子句
 
-ORDER BY子句允許按指定列按特定順序（升序或降序）對接收結果進行排序。 在Python SDK中，這是使用函式來完成 `sort()` 的。
+ORDER BY子句允許按指定列按特定順序（升序或降序）對接收結果進行排序。 在 [!DNL Python] SDK中，這是使用函式來完 `sort()` 成。
 
 以下是使用函 `sort()` 數的範例：
 
