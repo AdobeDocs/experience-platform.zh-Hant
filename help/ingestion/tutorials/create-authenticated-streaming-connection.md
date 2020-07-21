@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 建立驗證的串流連線
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
 workflow-type: tm+mt
-source-wordcount: '649'
+source-wordcount: '624'
 ht-degree: 2%
 
 ---
@@ -14,40 +14,40 @@ ht-degree: 2%
 
 # 建立驗證的串流連線
 
-「已驗證的資料收集」可讓Adobe Experience Platform服務（例如即時客戶個人檔案和身分識別）區隔來自受信任來源和不受信任來源的記錄。 想要傳送個人識別資訊(PII)的客戶可以透過傳送存取Token作為POST要求的一部分來傳送。
+「已驗證的資料收集」可讓Adobe Experience Platform服務( [!DNL Real-time Customer Profile] 例如 [!DNL Identity]和)區隔來自受信任來源和不受信任來源的記錄。 想要傳送個人識別資訊(PII)的客戶可以透過傳送存取Token作為POST要求的一部分來傳送。
 
 ## 快速入門
 
 必須註冊串流連線，才能開始將資料串流至Adobe Experience Platform。 在註冊串流連線時，您需要提供一些關鍵詳細資訊，例如串流資料來源。
 
-在註冊串流連線後，身為資料產生者的您將擁有可用來將資料串流至平台的唯一URL。
+在註冊串流連線後，身為資料產生者的您將擁有可用來串流資料的唯一URL [!DNL Platform]。
 
 本教學課程也需要具備各種Adobe Experience Platform服務的相關知識。 在開始本教學課程之前，請先閱讀下列服務的檔案：
 
-- [體驗資料模型(XDM)](../../xdm/home.md): 平台組織體驗資料的標準化架構。
-- [即時客戶個人檔案](../../profile/home.md): 根據來自多個來源的匯整資料，即時提供統一的消費者個人檔案。
+- [!DNL Experience Data Model (XDM)](../../xdm/home.md): 組織體驗資料的 [!DNL Platform] 標準化架構。
+- [!DNL Real-time Customer Profile](../../profile/home.md): 根據來自多個來源的匯整資料，即時提供統一的消費者個人檔案。
 
 以下章節提供您需要知道的其他資訊，以便成功呼叫串流擷取API。
 
 ### 讀取範例API呼叫
 
-本指南提供範例API呼叫，以示範如何格式化您的請求。 這些包括路徑、必要標題和正確格式化的請求負載。 也提供API回應中傳回的範例JSON。 如需範例API呼叫檔案中所用慣例的詳細資訊，請參閱「Experience Platform疑難排解指 [南」中有關如何讀取範例API呼叫的章節](../../landing/troubleshooting.md#how-do-i-format-an-api-request) 。
+本指南提供範例API呼叫，以示範如何格式化您的請求。 這些包括路徑、必要標題和正確格式化的請求負載。 也提供API回應中傳回的範例JSON。 如需範例API呼叫檔案中所用慣例的詳細資訊，請參閱疑難排解指 [南中有關如何讀取範例API呼叫的](../../landing/troubleshooting.md#how-do-i-format-an-api-request)[!DNL Experience Platform] 章節。
 
 ### 收集必要標題的值
 
-若要呼叫平台API，您必須先完成驗證教 [學課程](../../tutorials/authentication.md)。 完成驗證教學課程後，所有Experience Platform API呼叫中每個必要標題的值都會顯示在下方：
+若要呼叫API，您必 [!DNL Platform] 須先完成驗證教 [學課程](../../tutorials/authentication.md)。 完成驗證教學課程後，將提供所有 [!DNL Experience Platform] API呼叫中每個必要標題的值，如下所示：
 
 - 授權： 生產者 `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
-Experience Platform中的所有資源都隔離至特定的虛擬沙盒。 所有對平台API的請求都需要一個標題，該標題會指定要在中執行的操作的沙盒名稱：
+中的所有資 [!DNL Experience Platform] 源都與特定虛擬沙盒隔離。 對API的所 [!DNL Platform] 有請求都需要一個標題，該標題會指定要在中執行的操作的沙盒名稱：
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
->如需平台中沙盒的詳細資訊，請參閱沙盒 [概觀檔案](../../sandboxes/home.md)。
+>如需中沙盒的詳細資訊 [!DNL Platform]，請參閱沙 [盒概述檔案](../../sandboxes/home.md)。
 
 所有包含裝載(POST、PUT、PATCH)的請求都需要額外的標題：
 
@@ -177,7 +177,7 @@ curl -X GET https://platform.adobe.io/data/foundation/flowservice/connections/{C
 
 ## 後續步驟
 
-現在您已建立驗證的串流連線，您可以串流時間序列或記錄資料，讓您在平台中內嵌資料。 若要瞭解如何將時間系列資料串流至Platform，請至串流時 [間系列資料教學課程](./streaming-time-series-data.md)。 若要瞭解如何將記錄資料串流至Platform，請至串流 [記錄資料教學課程](./streaming-record-data.md)。
+現在您已建立驗證的串流連線，您可以串流化時間序列或記錄資料，讓您在其中內嵌資料 [!DNL Platform]。 若要瞭解如何將時間系列資料串流 [!DNL Platform]至，請前往串 [流時間系列資料教學課程](./streaming-time-series-data.md)。 若要瞭解如何將記錄資料串流 [!DNL Platform]至，請至串流 [記錄資料教學課程](./streaming-record-data.md)。
 
 ## 附錄
 
