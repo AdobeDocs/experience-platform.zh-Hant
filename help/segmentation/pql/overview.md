@@ -4,14 +4,17 @@ solution: Experience Platform
 title: 配置檔案查詢語言(PQL)概述
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 902ba5efbb5f18a2de826fffd023195d804309cc
+source-git-commit: 6a0a9b020b0dc89a829c557bdf29b66508a10333
+workflow-type: tm+mt
+source-wordcount: '670'
+ht-degree: 2%
 
 ---
 
 
-# 配置檔案查詢語言(PQL)概述
+# [!DNL Profile Query Language] (PQL)概述
 
-描述檔查詢語言(PQL)是符合Experience Data Model(XDM)的查詢語言，旨在支援對即時客戶描述檔資料的分段查詢的定義和執行。
+[!DNL Profile Query Language] (PQL)是一種 [!DNL Experience Data Model] (XDM)相容的查詢語言，旨在支援資料分段查詢的定義和 [!DNL Real-time Customer Profile] 執行。
 
 本指南提供PQL的一般概述，涵蓋格式准則並提供PQL表達式示例。
 
@@ -80,10 +83,10 @@ PQL支援以下常值類型：
 | 算術 | 用於對PQL元素執行基本算術。 有關這些函式的更多資訊，請參閱算術函 [數檔案](./arithmetic-functions.md) |
 | 聚總 | 用於將陣列的結果組合為單一結果。 有關聚合函式的詳細資訊，請參見聚合函 [數文檔](./aggregation-functions.md)。 |
 | 日期和時間 | 與日期、時間和日期時間對象一起使用。 有關這些函式的更多資訊，請參閱日 [期／時間函式檔案](./datetime-functions.md)。 |
-| 篩選 | 用於篩選陣列內的資料。 有關這些函式的更多資訊，請參閱篩 [選函式文檔](./filter-functions.md)。 |
+| 篩選器 | 用於篩選陣列內的資料。 有關這些函式的更多資訊，請參閱篩 [選函式文檔](./filter-functions.md)。 |
 | 邏輯量詞 | 用於斷言陣列中的條件。 在邏輯量詞文檔中可以找 [到更多資訊](./logical-quantifiers.md)。 |
 | 其他 | 不適用於上述任何類別的函式可在其他函式文 [件中找到](./misc-functions.md)。 |
 
 ## 後續步驟
 
-現在您已學會如何使用描述檔查詢語言，因此在建立和修改區段時，可以使用PQL。 如需細分的詳細資訊，請閱讀分 [段概觀](../home.md)。
+現在您已學會如何使用，您 [!DNL Profile Query Language]可以在建立和修改區段時使用PQL。 如需細分的詳細資訊，請閱讀分 [段概觀](../home.md)。
