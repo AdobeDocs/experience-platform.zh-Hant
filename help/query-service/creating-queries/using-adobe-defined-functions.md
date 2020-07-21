@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Adobe定義的函式
 topic: queries
 translation-type: tm+mt
-source-git-commit: cc101b1a439408861961c6fcd0899ca7c48bfa04
+source-git-commit: 3b710e7a20975880376f7e434ea4d79c01fa0ce5
 workflow-type: tm+mt
-source-wordcount: '292'
+source-wordcount: '287'
 ht-degree: 6%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 6%
 
 Adobe的主要競爭優勢之一，就是瞭解體驗資料以及客戶需要如何運用這些資料。 您可運用這種認識來建立協助功能，讓工作更輕鬆。
 
-本檔案涵蓋Adobe定義的功能(ADF)，以支援三項主要Analytics活動：
+本檔案涵蓋Adobe定義的功能(ADF)，以支援三項主要 [!DNL Analytics] 活動：
 - [作業化](#sessionization)
 - [出處](#attribution)
 - [路徑分析](#pathing)
@@ -91,13 +91,13 @@ LIMIT 31;
 
 在Adobe Analytics中，歸因設定是使用eVars等變數來設定，並會在擷取資料時產生。
 
-查詢服務中找到的歸因ADF允許在查詢時定義和生成這些分配。
+中找到的歸因ADF [!DNL Query Service] 允許在查詢時定義和生成這些分配。
 
 此範例著重於上次接觸歸因，但Adobe也提供首次接觸歸因。
 
 >[!NOTE]
 >
->未來的查詢服務版本將提供其他超時和事件型過期選項。
+>其他具有逾時和事件型過期的選項，將可供未來版本使用 [!DNL Query Service]。
 
 **語法：**
 
