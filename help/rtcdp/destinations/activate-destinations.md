@@ -4,9 +4,9 @@ seo-title: 將描述檔和區段啟用至目標
 description: 將區段對應至目標，以啟用您在Adobe即時客戶資料平台中擁有的資料。 若要完成此作業，請遵循下列步驟。
 seo-description: 將區段對應至目標，以啟用您在Adobe即時客戶資料平台中擁有的資料。 若要完成此作業，請遵循下列步驟。
 translation-type: tm+mt
-source-git-commit: b1f8cbe245f73e31a8941fc45cefcee595968a70
+source-git-commit: b96286f6a06f0583b45343a513ee64f0025d79a7
 workflow-type: tm+mt
-source-wordcount: '1019'
+source-wordcount: '1013'
 ht-degree: 0%
 
 ---
@@ -36,6 +36,7 @@ ht-degree: 0%
    >如果任何資料使用標籤已套用至資料集內的特定欄位（而非整個資料集），在啟動時會在下列情況下強制執行這些欄位層級標籤：
    >* 欄位會用於區段定義中。
    >* 欄位被配置為目標目標的預計屬性。
+
    >
    > 請考慮以下螢幕擷取。 例如，如果欄位有某些與目標的行銷使用案例 `person.name.first.Name` 相衝突的資料使用標籤，則您會在檢閱步驟（步驟7）中顯示資料使用政策違規。 有關詳細資訊，請 [參閱即時CDP中的資料治理](/help/rtcdp/privacy/data-governance-overview.md#destinations)
 
@@ -56,7 +57,7 @@ ht-degree: 0%
    ![忠誠度ID身分](/help/rtcdp/destinations/assets/rewardsid-as-identity.gif)
 
 
-   如果 `Email_LC_SHA256` 您根據Facebook電子郵件雜湊要求，將資料擷取的客戶電子郵件地址雜湊到Adobe Experience Platform中，請選 [為目標身分](/help/rtcdp/destinations/facebook-destination.md#email-hashing-requirements)。 <br> 如果 `Email` 您使用的電子郵件地址未雜湊，請選取為目標身分。 Adobe即時CDP會雜湊電子郵件地址，以符合Facebook的要求。
+   如果 `Email_LC_SHA256` 您根據電子郵件雜湊要求，將客戶資料擷取的電子郵件地址雜湊到Adobe Experience Platform中，請選 [!DNL Facebook][為目標身分](/help/rtcdp/destinations/facebook-destination.md#email-hashing-requirements)。 <br> 如果 `Email` 您使用的電子郵件地址未雜湊，請選取為目標身分。 Adobe Real-time CDP會雜湊電子郵件地址以符合 [!DNL Facebook] 要求。
 
    ![填入欄位後的身分對應](/help/rtcdp/destinations/assets/identity-mapping.png)
 
@@ -112,11 +113,11 @@ Salesforce_id3544_20191122124530.csv
 
 ### 社交網路目的地
 
-對於Facebook，成功的啟動表示Facebook自訂對象會以程式設計方式在 [Facebook廣告管理員中建立](https://www.facebook.com/adsmanager/manage/)。 當使用者符合已啟用區段的資格或被取消資格時，會新增及移除觀眾中的區段成員資格。
+例 [!DNL Facebook]如，成功啟動表示將在 [!DNL Facebook] Facebook廣告管理員中以程式設計方式建立自訂對象 [](https://www.facebook.com/adsmanager/manage/)。 當使用者符合已啟用區段的資格或被取消資格時，會新增及移除觀眾中的區段成員資格。
 
 >[!TIP]
 >
->Adobe即時CDP與Facebook的整合可支援歷史觀眾回填。 當您將區段啟動至目標時，所有歷史區段資格都會傳送至Facebook。
+>Adobe即時CDP與支援歷史觀眾回填的 [!DNL Facebook] 整合。 當您將區段啟動至目的地 [!DNL Facebook] 時，所有歷史區段資格都會傳送至。
 
 ## 停用啟動 {#disable-activation}
 
