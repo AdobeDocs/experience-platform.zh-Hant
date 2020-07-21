@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 對受眾細分強制執行資料使用規範
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: cb6a2f91eb6c18835bd9542e5b66af4682227491
+source-git-commit: 6a0a9b020b0dc89a829c557bdf29b66508a10333
 workflow-type: tm+mt
-source-wordcount: '1325'
+source-wordcount: '1323'
 ht-degree: 1%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 1%
 本教學課程需要有效瞭解下列元件 [!DNL Adobe Experience Platform]:
 
 - [!DNL Real-time Customer Profile](../../profile/home.md): [!DNL Real-time Customer Profile] 是一般查閱實體儲存區，用來管理 [!DNL Experience Data Model] (XDM)內的資料 [!DNL Platform]。 描述檔會合併各種企業資料資產的資料，並以統一的簡報來存取該資料。
-   - [合併策略](../../profile/api/merge-policies.md): 用於確定在 [!DNL Real-time Customer Profile] 特定條件下哪些資料可以合併到統一視圖中的規則。 可以為「資料治理」目的配置合併策略。
+   - [合併策略](../../profile/api/merge-policies.md): 用於確定在 [!DNL Real-time Customer Profile] 特定條件下哪些資料可以合併到統一視圖中的規則。 可以配置合併策略以 [!DNL Data Governance] 用於目的。
 - [!DNL Segmentation](../home.md): 如 [!DNL Real-time Customer Profile] 何將描述檔商店中的龐大個人群組分割為具有類似特性且回應類似行銷策略的較小群組。
 - [!DNL Data Governance](../../data-governance/home.md): [!DNL Data Governance] 使用以下元件為資料使用標籤和強制實施(DULE)提供基礎架構：
    - [資料使用標籤](../../data-governance/labels/user-guide.md): 標籤用來說明資料集和欄位，以處理其個別資料的敏感度等級為準。
