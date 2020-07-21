@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 資料存取開發人員指南
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: f7714b8bebe37b29290794a48314962e42b24058
+source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
 workflow-type: tm+mt
-source-wordcount: '486'
+source-wordcount: '485'
 ht-degree: 4%
 
 ---
@@ -242,4 +242,4 @@ Contents of the file
 
 ## 訂閱資料擷取事件
 
-平台可透過 [Adobe Developer Console提供特定的高價值活動供訂閱](https://www.adobe.com/go/devs_console_ui)。 例如，您可以訂閱資料擷取事件，以通知您可能發生的延遲和失敗。 如需詳細資訊，請 [參閱訂閱資料擷取通知](../ingestion/quality/subscribe-events.md) 的教學課程。
+[!DNL Platform] 透過 [Adobe Developer Console提供特定高價值事件供訂閱](https://www.adobe.com/go/devs_console_ui)。 例如，您可以訂閱資料擷取事件，以通知您可能發生的延遲和失敗。 如需詳細資訊，請 [參閱訂閱資料擷取通知](../ingestion/quality/subscribe-events.md) 的教學課程。
