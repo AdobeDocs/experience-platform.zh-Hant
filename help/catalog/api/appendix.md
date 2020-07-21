@@ -4,21 +4,21 @@ solution: Experience Platform
 title: 目錄服務開發人員指南附錄
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
 workflow-type: tm+mt
-source-wordcount: '908'
+source-wordcount: '893'
 ht-degree: 0%
 
 ---
 
 
-# 目錄服務開發人員指南附錄
+# [!DNL Catalog Service] 開發人員指南附錄
 
-本檔案包含協助您使用目錄API的其他資訊。
+本檔案包含協助您使用 [!DNL Catalog] API的其他資訊。
 
 ## 查看相關對象 {#view-interrelated-objects}
 
-某些目錄對象可以與其他目錄對象相互關聯。 任何在響應負載中前置詞的 `@` 欄位都表示相關對象。 這些欄位的值採用URI的形式，可用於個別的GET請求，以擷取其所代表的相關物件。
+某些 [!DNL Catalog] 對象可以與其他對象相 [!DNL Catalog] 關。 任何在響應負載中前置詞的 `@` 欄位都表示相關對象。 這些欄位的值採用URI的形式，可用於個別的GET請求，以擷取其所代表的相關物件。
 
 查找特定資料集時在文檔中 [返回的示例資料集包含](look-up-object.md)`files` 具有以下URI值的欄位： `"@/dataSets/5ba9452f7de80400007fc52a/views/5ba9452f7de80400007fc52b/files"`. 使用此URI `files` 作為新GET請求的路徑，即可檢視欄位內容。
 
@@ -92,9 +92,9 @@ curl -X GET \
 
 ## 在單一呼叫中提出多個請求
 
-目錄API的根端點允許在單次呼叫中發出多個請求。 請求裝載包含代表通常是個別請求的物件陣列，然後依序執行。
+API的根端點 [!DNL Catalog] 允許在單一呼叫中提出多個請求。 請求裝載包含代表通常是個別請求的物件陣列，然後依序執行。
 
-如果這些請求是目錄的修改或添加，且任何更改都失敗，則所有更改都將恢復。
+如果這些請求是對的修改或添加，而 [!DNL Catalog] 且任何更改都失敗，則所有更改都將恢復。
 
 **API格式**
 
@@ -144,14 +144,14 @@ curl -X POST \
 
 | 屬性 | 說明 |
 | --- | --- |
-| `id` | 附加至回應物件的使用者提供ID，以便您將要求與回應相符。 目錄不會儲存此值，只會在回應中傳回該值，以供參考。 |
-| `resource` | 目錄API根目錄的資源路徑。 協定和域不應是此值的一部分，並且應加上前置詞&quot;/&quot;。 <br/><br/> 使用PATCH或DELETE作為子請求時， `method`請在資源路徑中包含對象ID。 不要與用戶提供的路徑混淆 `id`，資源路徑使用目錄對象本身的ID(例如 `resource: "/dataSets/1234567890"`)。 |
+| `id` | 附加至回應物件的使用者提供ID，以便您將要求與回應相符。 [!DNL Catalog] 不會儲存此值，只會在回應中傳回該值，以供參考。 |
+| `resource` | 與 [!DNL Catalog] API根目錄相對的資源路徑。 協定和域不應是此值的一部分，並且應加上前置詞&quot;/&quot;。 <br/><br/> 使用PATCH或DELETE作為子請求時， `method`請在資源路徑中包含對象ID。 不要與用戶提供的路 `id`徑混淆，資源路徑使用對 [!DNL Catalog] 像本身的ID(例如 `resource: "/dataSets/1234567890"`)。 |
 | `method` | 與請求中發生的動作相關的方法名稱（GET、PUT、POST、PATCH或DELETE）。 |
 | `body` | 通常會在POST、PUT或PATCH請求中作為裝載傳遞的JSON檔案。 GET或DELETE請求不需要此屬性。 |
 
 **回應**
 
-成功的回應會傳回一組物件，其中包 `id` 含您指派給每個請求的物件、個別請求的HTTP狀態碼，以及回應 `body`。 由於這三個範例請求都是為了建立新物件，因此每個物件的陣列都只包含新建立物件的ID，而Catalog中最成功的POST回應也是標準。 `body`
+成功的回應會傳回一組物件，其中包 `id` 含您指派給每個請求的物件、個別請求的HTTP狀態碼，以及回應 `body`。 由於這三個範例請求都是為了建立新物件，因此每個物件的陣列都只包含新建立物件的ID，而標準的POST回應在中也是最成功的 `body`[!DNL Catalog]。
 
 ```json
 [
@@ -176,7 +176,7 @@ curl -X POST \
 
 ## 其他請求標題
 
-目錄提供數種標題慣例，可協助您在更新期間維持資料的完整性。
+[!DNL Catalog] 提供數種標題慣例，以協助您在更新期間維持資料的完整性。
 
 ### If-Match
 
@@ -192,6 +192,6 @@ curl -X POST \
 
 ## 資料壓縮
 
-Compaction是Experience Platform服務，可將小檔案的資料合併為大檔案，而不會變更任何資料。 基於效能的考慮，將一組小型檔案合併為較大的檔案有時很有幫助，以便在查詢資料時能更快速地存取資料。
+壓縮是一種 [!DNL Experience Platform] 服務，可將小檔案的資料合併為大檔案，而不會變更任何資料。 基於效能的考慮，將一組小型檔案合併為較大的檔案有時很有幫助，以便在查詢資料時能更快速地存取資料。
 
-當收錄批次中的檔案已壓縮時，會更新其關聯的目錄物件，以利監控。
+當收錄批次中的檔案已壓縮時，會更新其相 [!DNL Catalog] 關物件以用於監控。
