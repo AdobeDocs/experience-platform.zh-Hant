@@ -4,7 +4,10 @@ solution: Experience Platform
 title: 權限和資源類型的清單名稱
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 7b354a96d70332cf7a7e9eff322cd3d6ee0fc96a
+source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
+workflow-type: tm+mt
+source-wordcount: '123'
+ht-degree: 1%
 
 ---
 
@@ -13,7 +16,7 @@ source-git-commit: 7b354a96d70332cf7a7e9eff322cd3d6ee0fc96a
 
 通過向端點發出GET請求，可以列出所有權限和資源類型的 `/acl/reference` 名稱。 然後，這些名稱可用於API呼叫中，以 [檢視目前使用者的](./effective-policies.md) 有效原則。
 
-權 **限** 是透過Adobe Admin Console管理的原則，並對應至零或多個資源類型原則。 資 **源類型** ，是一種策略，可為特定類型的平台資源（如資料集或方案）啟用讀、寫和／或刪除功能。
+權 **限** 是透過Adobe Admin Console管理的原則，並對應至零或多個資源類型原則。 資 **源類型** ，是一種策略，可為特定資源類型（如資料集或方案）啟用讀、寫和/ [!DNL Platform] 或刪除功能。
 
 **API格式**
 
