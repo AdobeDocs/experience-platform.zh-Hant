@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 陣列、清單和設定函式
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 6a0a9b020b0dc89a829c557bdf29b66508a10333
 workflow-type: tm+mt
-source-wordcount: '740'
+source-wordcount: '737'
 ht-degree: 5%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 5%
 
 # 陣列、清單和設定函式
 
-配置式查詢語言(PQL)提供一些功能，使與陣列、清單和字串的交互更加容易。 有關其他PQL函式的詳細資訊，請參閱「配置檔案查 [詢語言」概述](./overview.md)。
+[!DNL Profile Query Language] (PQL)提供的功能可讓與陣列、清單和字串的交互更輕鬆。 有關其他PQL函式的詳細資訊，請參閱「配置檔案查 [詢語言」概述](./overview.md)。
 
 ## 在
 
