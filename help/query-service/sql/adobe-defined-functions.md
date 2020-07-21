@@ -4,22 +4,25 @@ solution: Experience Platform
 title: Adobe定義的函式
 topic: functions
 translation-type: tm+mt
-source-git-commit: 7d5d98d8e32607abf399fdc523d2b3bc99555507
+source-git-commit: 3b710e7a20975880376f7e434ea4d79c01fa0ce5
+workflow-type: tm+mt
+source-wordcount: '2156'
+ht-degree: 3%
 
 ---
 
 
 # Adobe定義的函式
 
-Adobe定義的函式(ADF)是查詢服務中預先建立的函式，可協助您對ExperienceEvent資料執行常見的商業相關工作。 這些功能包括作業化和歸因功能，如Adobe Analytics中的功能。 如需 [Adobe Analytics的詳細資訊](https://docs.adobe.com/content/help/en/analytics/landing/home.html) ，請參閱Adobe Analytics檔案以及本頁所定義之ADF背後的概念。 本檔案提供查詢服務中Adobe定義函式的資訊。
+Adobe定義的函式(ADF)是預先建立的函式，可協 [!DNL Query Service] 助您對資料執行一般的商業相關 [!DNL ExperienceEvent] 工作。 這些功能包括作業化和歸因功能，如Adobe Analytics中的功能。 如需 [Adobe Analytics的詳細資訊](https://docs.adobe.com/content/help/zh-Hant/analytics/landing/home.html) ，請參閱Adobe Analytics檔案以及本頁所定義之ADF背後的概念。 本檔案提供有關Adobe定義功能的資訊，請參閱 [!DNL Query Service]。
 
 ## 窗口函式
 
-大部份的商業邏輯都需要收集客戶的觸點，並依時間排序。 此支援由Spark SQL以視窗函式的形式提供。 窗口函式是標準SQL的一部分，並受許多其它SQL引擎支援。
+大部份的商業邏輯都需要收集客戶的觸點，並依時間排序。 此支援由 [!DNL Spark] SQL以窗口函式的形式提供。 窗口函式是標準SQL的一部分，並受許多其它SQL引擎支援。
 
 窗口函式會更新匯總，並為有序子集中的每個行返回單個物料。 最基本的聚合函式是 `SUM()`。 `SUM()` 取出您的行，然後總計給您一個。 如果您改為套 `SUM()` 用至視窗，將其轉換為視窗函式，則會收到每列的累積總和。
 
-大部分的Spark SQL幫助器都是窗口函式，用於更新窗口中每一行，並添加該行的狀態。
+大多數 [!DNL Spark] SQL幫助器都是窗口函式，用於更新窗口中的每一行，並添加該行的狀態。
 
 ### 規格
 
@@ -33,7 +36,7 @@ Adobe定義的函式(ADF)是查詢服務中預先建立的函式，可協助您�
 
 ## 作業化
 
-當您使用源自網站、行動應用程式、互動式語音回應系統或任何其他客戶互動管道的ExperienceEvent資料時，如果事件可圍繞相關活動期間分組，將會有所幫助。 通常，您有特定的動機來推動您的活動，例如研究產品、支付帳單、檢查帳戶餘額、填寫應用程式等。 此群組有助於關聯事件，以發掘客戶體驗的更多相關內容。
+當您使用來自網站、行 [!DNL ExperienceEvent] 動應用程式、互動式語音回應系統或任何其他客戶互動管道的資料時，如果事件可依相關活動期間分組，將會有所幫助。 通常，您有特定的動機來推動您的活動，例如研究產品、支付帳單、檢查帳戶餘額、填寫應用程式等。 此群組有助於關聯事件，以發掘客戶體驗的更多相關內容。
 
 如需Adobe Analytics中作業化的詳細資訊，請參閱內容感 [知作業的檔案](https://docs.adobe.com/content/help/en/analytics/components/virtual-report-suites/vrs-mobile-visit-processing.html)。
 
@@ -91,13 +94,13 @@ LIMIT 10
 
 將客戶行動與成功聯繫起來，是瞭解影響客戶體驗的因素的重要部分。 下列ADF支援「第一個」和「最後一個」歸因，並設定不同的過期設定。
 
-如需Adobe Analytics中歸因的詳細資訊，請參閱「分析指 [南」中的「歸因IQ](https://docs.adobe.com/content/help/en/analytics/analyze/analysis-workspace/panels/attribution.html) 」概觀。
+如需Adobe Analytics中歸因的詳細資訊，請參閱分析指 [南中的歸因IQ](https://docs.adobe.com/content/help/en/analytics/analyze/analysis-workspace/panels/attribution.html)[!DNL Analytics] 概觀。
 
 ### 首次接觸歸因
 
-傳回目標ExperienceEvent資料集中單一渠道的首次接觸歸因值和詳細資料。 查詢會傳回具 `struct` 有首次接觸值、時間戳記和屬性的物件，以供選定渠道每一列傳回。
+傳回目標資料集中單一渠道的首次接觸歸因值和詳細 [!DNL ExperienceEvent] 資訊。 查詢會傳回具 `struct` 有首次接觸值、時間戳記和屬性的物件，以供選定渠道每一列傳回。
 
-如果您想瞭解哪些互動導致了一系列客戶動作，此查詢會很有用。 在下列範例中，ExperienceEvent資料中的初始追蹤代碼(`em:946426`)會歸因為客戶動作的100%(`1.0`)責任，因為這是第一次互動。
+如果您想瞭解哪些互動導致了一系列客戶動作，此查詢會很有用。 在下列範例中，資料中的初始追蹤代碼(`em:946426`)會歸因為客戶動作是第一次互動時的100%( [!DNL ExperienceEvent]`1.0`)責任。
 
 ### 規格
 
@@ -113,8 +116,8 @@ LIMIT 10
 | 傳回的物件參數 | 說明 |
 | ---------------------- | ------------- |
 | `name` | 在 `channelName` ADF中輸入為標籤 |
-| `value` | ExperienceEvent中 `channelValue` 首次接觸的值 |
-| `timestamp` | 發生首次接觸的ExperienceEvent時間戳記 |
+| `value` | 來自的 `channelValue` 值是 [!DNL ExperienceEvent] |
+| `timestamp` | 首次接觸 [!DNL ExperienceEvent] 發生的時間戳記 |
 | `fraction` | 首次接觸的歸因：分數信用 |
 
 #### 範例查詢
@@ -151,9 +154,9 @@ LIMIT 10
 
 ### 上次接觸歸因
 
-傳回目標ExperienceEvent資料集中單一渠道的上次接觸歸因值和詳細資料。 查詢會傳回具 `struct` 有上次接觸值、時間戳記和屬性的物件，這些物件會針對所選渠道傳回的每一列。
+傳回目標資料集中單一渠道的上次接觸歸因值和詳細 [!DNL ExperienceEvent] 資訊。 查詢會傳回具 `struct` 有上次接觸值、時間戳記和屬性的物件，這些物件會針對所選渠道傳回的每一列。
 
-如果您想在一系列客戶動作中查看最終交互，此查詢非常實用。 在下列範例中，傳回物件中的追蹤代碼是每個ExperienceEvent記錄中的最後一次互動。 每個代碼都歸因於客戶`1.0`動作的100%()責任，因為這是上次互動。
+如果您想在一系列客戶動作中查看最終交互，此查詢非常實用。 在下列範例中，傳回物件中的追蹤代碼是每個記錄中的最後一個互 [!DNL ExperienceEvent] 動。 每個代碼都歸因於客戶`1.0`動作的100%()責任，因為這是上次互動。
 
 ### 規格
 
@@ -169,8 +172,8 @@ LIMIT 10
 | 傳回的物件參數 | 說明 |
 | ---------------------- | ------------- |
 | `name` | 在 `channelName` ADF中輸入為標籤 |
-| `value` | ExperienceEvent中 `channelValue` 上次接觸的值 |
-| `timestamp` | 使用ExperienceEvent的ExperienceEvent `channelValue` 時間戳記 |
+| `value` | 來自的 `channelValue` 值是 [!DNL ExperienceEvent] |
+| `timestamp` | 使用的 [!DNL ExperienceEvent] 時間 `channelValue` 戳 |
 | `fraction` | 上次接觸的歸因表示為分數信用 |
 
 #### 範例查詢
@@ -206,9 +209,9 @@ ORDER BY endUserIds._experience.mcid.id, timestamp ASC
 
 ### 具有過期條件的首次接觸歸因
 
-傳回目標ExperienceEvent資料集中單一渠道的首次接觸歸因值和詳細資料，該值在條件之後或之前過期。 查詢會傳回具 `struct` 有首次接觸值、時間戳記和屬性的物件，以供選定渠道每一列傳回。
+傳回目標資料集中單一頻道的首次接觸歸因值和詳細資訊，在條 [!DNL ExperienceEvent] 件之後或之前過期。 查詢會傳回具 `struct` 有首次接觸值、時間戳記和屬性的物件，以供選定渠道每一列傳回。
 
-如果您想要查看哪些互動導致ExperienceEvent資料集中由您選擇的條件所決定的一部分出現一連串客戶動作，此查詢會很有用。 在下列範例中，購買會(`commerce.purchases.value IS NOT NULL`)記錄在結果（7月15日、21日、23日和29日）中顯示的四天中的每一天，而每天的初始追蹤代碼會歸因為客戶活動的100%(`1.0`)責任。
+如果您想要查看互動在資料集的某個部分內導致一連串客戶動作，此查詢會很有 [!DNL ExperienceEvent] 用，因為您的選擇條件已決定。 在下列範例中，購買會(`commerce.purchases.value IS NOT NULL`)記錄在結果（7月15日、21日、23日和29日）中顯示的四天中的每一天，而每天的初始追蹤代碼會歸因為客戶活動的100%(`1.0`)責任。
 
 #### 規格
 
@@ -225,8 +228,8 @@ ORDER BY endUserIds._experience.mcid.id, timestamp ASC
 | 傳回的物件參數 | 說明 |
 | ---------------------- | ------------- |
 | `name` | 在 `channelName` ADF中輸入為標籤 |
-| `value` | 此值是 `channelValue` ExperienceEvent中在 `expCondition` |
-| `timestamp` | 發生首次接觸的ExperienceEvent時間戳記 |
+| `value` | 此值 `channelValue`[!DNL ExperienceEvent] 是 `expCondition` |
+| `timestamp` | 首次接觸 [!DNL ExperienceEvent] 發生的時間戳記 |
 | `fraction` | 首次接觸的歸因：分數信用 |
 
 #### 範例查詢
@@ -262,7 +265,7 @@ ORDER BY endUserIds._experience.mcid.id, timestamp ASC
 
 ### 具有過期逾時的首次接觸歸因
 
-傳回指定時段內目標ExperienceEvent資料集中單一渠道的首次接觸歸因值和詳細資料。 查詢會傳回具 `struct` 有首次接觸值、時間戳記和屬性的物件，以供選定渠道每一列傳回。 如果您想查看在選定時間間隔內導致客戶操作的交互，此查詢非常有用。 在下列範例中，每個客戶動作傳回的首次接觸是前七天(`expTimeout = 86400 * 7`)內最早的互動。
+傳回指定時段內目標資料集中單一頻道的首次接觸歸 [!DNL ExperienceEvent] 因值和詳細資料。 查詢會傳回具 `struct` 有首次接觸值、時間戳記和屬性的物件，以供選定渠道每一列傳回。 如果您想查看在選定時間間隔內導致客戶操作的交互，此查詢非常有用。 在下列範例中，每個客戶動作傳回的首次接觸是前七天(`expTimeout = 86400 * 7`)內最早的互動。
 
 #### 規格
 
@@ -279,7 +282,7 @@ ORDER BY endUserIds._experience.mcid.id, timestamp ASC
 | ---------------------- | ------------- |
 | `name` | 在 `channelName` ADF中輸入為標籤 |
 | `value` | 指定時 `channelValue` 間間隔內首次接觸的值 `expTimeout` 。 |
-| `timestamp` | 發生首次接觸的ExperienceEvent時間戳記 |
+| `timestamp` | 首次接觸 [!DNL ExperienceEvent] 發生的時間戳記 |
 | `fraction` | 首次接觸的歸因：分數信用 |
 
 #### 範例查詢
@@ -315,7 +318,7 @@ ORDER BY endUserIds._experience.mcid.id, timestamp ASC
 
 ### 具有過期條件的上次接觸歸因
 
-傳回目標ExperienceEvent資料集中單一渠道的上次接觸歸因值和詳細資料，該值在條件之後或之前過期。 查詢會傳回具 `struct` 有上次接觸值、時間戳記和屬性的物件，這些物件會針對所選渠道傳回的每一列。 如果您想要在ExperienceEvent資料集的一部分中查看一系列客戶動作的最後一次互動（由您選擇的條件決定），此查詢會很有用。 在下列範例中，購買會(`commerce.purchases.value IS NOT NULL`)記錄在結果（7月15日、21日、23日和29日）顯示的四天中的每一天，而每天的最後一個追蹤代碼會歸因為客戶活動的100%(`1.0`)責任。
+傳回目標資料集中單一頻道的上次接觸歸因值和詳細資訊， [!DNL ExperienceEvent] 在條件之後或之前過期。 查詢會傳回具 `struct` 有上次接觸值、時間戳記和屬性的物件，這些物件會針對所選渠道傳回的每一列。 如果您想在資料集的一部分中查看一系列客戶動作中由您選擇的條件所決定的最後一個互動， [!DNL ExperienceEvent] 此查詢會很有用。 在下列範例中，購買會(`commerce.purchases.value IS NOT NULL`)記錄在結果（7月15日、21日、23日和29日）顯示的四天中的每一天，而每天的最後一個追蹤代碼會歸因為客戶活動的100%(`1.0`)責任。
 
 #### 規格
 
@@ -332,8 +335,8 @@ ORDER BY endUserIds._experience.mcid.id, timestamp ASC
 | 傳回的物件參數 | 說明 |
 | ---------------------- | ------------- |
 | `name` | 在 `channelName` ADF中輸入為標籤 |
-| `value` | 此值是 `channelValue` ExperienceEvent中在 `expCondition` |
-| `timestamp` | 發生上次接觸的ExperienceEvent時間戳記 |
+| `value` | 此值 `channelValue`[!DNL ExperienceEvent] 是 `expCondition` |
+| `timestamp` | 上次接觸發 [!DNL ExperienceEvent] 生的時間戳記 |
 | `percentage` | 上次接觸的歸因表示為分數信用 |
 
 #### 範例查詢
@@ -369,7 +372,7 @@ ORDER BY endUserIds._experience.mcid.id, timestamp ASC
 
 ### 具有過期逾時的上次接觸歸因
 
-傳回指定時段內目標ExperienceEvent資料集中單一渠道的上次接觸歸因值和詳細資料。 查詢會傳回具 `struct` 有上次接觸值、時間戳記和屬性的物件，這些物件會針對所選渠道傳回的每一列。 如果您想查看所選時間間隔內的最後一次交互，此查詢非常有用。 在下列範例中，每個客戶動作的上次接觸是後七天(`expTimeout = 86400 * 7`)內的最終互動。
+傳回指定時段內目標資料集中單一頻道的上次接觸歸 [!DNL ExperienceEvent] 因值和詳細資料。 查詢會傳回具 `struct` 有上次接觸值、時間戳記和屬性的物件，這些物件會針對所選渠道傳回的每一列。 如果您想查看所選時間間隔內的最後一次交互，此查詢非常有用。 在下列範例中，每個客戶動作的上次接觸是後七天(`expTimeout = 86400 * 7`)內的最終互動。
 
 #### 規格
 
@@ -386,7 +389,7 @@ ORDER BY endUserIds._experience.mcid.id, timestamp ASC
 | ---------------------- | ------------- |
 | `name` | 在 `channelName` ADF中輸入為標籤 |
 | `value` | 指定間隔 `channelValue``expTimeout` 內上次接觸的值（來自） |
-| `timestamp` | 發生上次接觸的ExperienceEvent時間戳記 |
+| `timestamp` | 上次接觸發 [!DNL ExperienceEvent] 生的時間戳記 |
 | `percentage` | 上次接觸的歸因表示為分數信用 |
 
 #### 範例查詢
@@ -541,9 +544,9 @@ LIMIT 10
 | --- | --- |
 | `timestamp` | 在所有事件上填入的資料集中找到時間戳記欄位。 |
 | `eventDefintion` | 運算式以限定上一個事件。 |
-| `timeUnit` | 輸出單位：日、小時、分和秒。 預設值為秒。 |
+| `timeUnit` | 輸出單位： 日、小時、分和秒。 預設值為秒。 |
 
-輸出：傳回代表上次顯示相符事件以來的時間單位的數字，若未找到相符事件，則仍為null。
+輸出： 傳回代表上次顯示相符事件以來的時間單位的數字，若未找到相符事件，則仍為null。
 
 #### 範例查詢
 
@@ -599,9 +602,9 @@ LIMIT 10
 | --- | --- |
 | `timestamp` | 在所有事件上填入的資料集中找到時間戳記欄位。 |
 | `eventDefintion` | 運算式以限定下一個事件。 |
-| `timeUnit` | 輸出單位：日、小時、分和秒。 預設值為秒。 |
+| `timeUnit` | 輸出單位： 日、小時、分和秒。 預設值為秒。 |
 
-輸出：傳回表示下一個匹配事件後的時間單位的負數，如果找不到匹配事件，則仍為null。
+輸出： 傳回表示下一個匹配事件後的時間單位的負數，如果找不到匹配事件，則仍為null。
 
 #### 範例查詢
 
@@ -647,4 +650,4 @@ LIMIT 10
 
 ## 後續步驟
 
-使用此處所述的函式，您可以編寫查詢，以使用查詢服務訪問您自己的ExperienceEvent資料集。 有關在Query Service中編寫查詢的詳細資訊，請參閱有關建立查詢 [的檔案](../creating-queries/creating-queries.md)。
+使用此處所述的函式，您可以編寫查詢來訪問您自己的 [!DNL ExperienceEvent] 資料集 [!DNL Query Service]。 有關在中編寫查詢的詳細信 [!DNL Query Service]息，請參閱有關建立查 [詢的文檔](../creating-queries/creating-queries.md)。
