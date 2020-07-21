@@ -4,9 +4,9 @@ seo-title: 社交網路目標工作流程
 description: 連線至您的社交網路和帳戶的指示
 seo-description: 連線至您的社交網路和帳戶的指示
 translation-type: tm+mt
-source-git-commit: 3c598454a868139b7604c5c7ca2b98fa0f1bb961
+source-git-commit: 6f680a60c88bc5fee6ce9cb5a4f314c4b9d02249
 workflow-type: tm+mt
-source-wordcount: '473'
+source-wordcount: '464'
 ht-degree: 0%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 0%
 
 ## 建立社交網路目的地的工作流程
 
-本教學課程以Facebook為例，但Adobe即時客戶資料平台中的工作流程對於所有社交網路目的地都會相同，只要再將工作流程新增至產品即可。
+本教學課 [!DNL Facebook] 程以Adobe即時客戶資料平台為例，但Adobe即時客戶資料平台中的工作流程對於所有社交網路目的地而言都相同，只要再新增至產品即可。
 
 1. 在「 **[!UICONTROL 目標>目錄]**」中，捲動至 **[!UICONTROL Social類別]** 。 選擇您偏好的社交網路目的地，然後選 **[!UICONTROL 擇連線目的地]**。
 
@@ -39,7 +39,7 @@ ht-degree: 0%
    >[!IMPORTANT]
    >
    > * 「單 *一身分個人化* 」行銷使用案例預設會針對社交網路目的地選取，且無法移除。
-   > * 適用於Facebook目的地。 **[!UICONTROL 帳戶ID是]** 您的Facebook廣告帳戶ID。 您可以在Facebook廣告管理員中找到此ID。 將ID前置詞 `act_` 如下：
+   > * 適用於 [!DNL Facebook] 目的地。 **[!UICONTROL 帳戶ID]** 是您的 [!DNL Facebook Ad Account ID]。 您可以在中找到此ID [!DNL Facebook Ads Manager]。 將ID前置詞 `act_` 如下：
 
 
    ![連線至社交網路目的地——設定步驟](/help/rtcdp/destinations/assets/social-networks-setup-step.png)
