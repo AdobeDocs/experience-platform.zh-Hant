@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 監控資料擷取
 topic: overview
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
 workflow-type: tm+mt
-source-wordcount: '530'
+source-wordcount: '519'
 ht-degree: 0%
 
 ---
@@ -14,17 +14,17 @@ ht-degree: 0%
 
 # 監控資料擷取
 
-資料擷取可讓您將資料擷取至Adobe Experience Platform。 您可以使用批次擷取，讓您使用各種檔案類型（例如CSV）來插入資料，或使用串流擷取，讓您使用串流端點即時將資料擷取至平台。
+資料擷取可讓您將資料擷取至Adobe Experience Platform。 您可以使用批次擷取功能(可讓您使用各種檔案類型（例如CSV）插入資料)或串流擷取功能（可讓您即時將資料擷取至使用串流端點） [!DNL Platform] 。
 
 本使用指南提供如何在Adobe Experience Platform使用者介面中監控資料的步驟。 本指南要求您必須擁有Adobe ID和Adobe Experience Platform的存取權。
 
 ## 監控端對端資料擷取
 
-在 [Experience Platform UI](https://platform.adobe.com)，按一下左側導覽功能表上的「監視 **」，然後按一** 下「端對端串流」 ****。
+在 [Experience Platform UI](https://platform.adobe.com)，按一下左側導覽功能表上的「監視 **[!UICONTROL 」，然後按一]** 下「端對端串流」 ****。
 
 ![](../images/quality/monitor-data-flows/click-streaming-end-to-end.png)
 
-此時 *會顯示「串流端對端監控* 」頁面。 此工作區提供一個圖表，可顯示平台所接收的串流事件的速率，一個圖表，可顯示即時客戶個人檔案成功處理的串流事件的速率 [](../../profile/home.md)，以及詳細的傳入資料清單。
+此時 *[!UICONTROL 會顯示「串流端對端監控]* 」頁面。 此工作區提供顯示接收的串流事件比率的圖表、顯示成功處理的串流事件比率的圖表 [!DNL Platform][!DNL Real-time Customer Profile](../../profile/home.md)，以及傳入資料的詳細清單。
 
 ![](../images/quality/monitor-data-flows/list-streams.png)
 
@@ -32,11 +32,11 @@ ht-degree: 0%
 
 ![](../images/quality/monitor-data-flows/list-streams-focus-on-top-graph.png)
 
-下圖顯示描述檔在過去七天內成功處理串流事件的比率。 按一下反白顯示的按鈕，即可調整此日期範圍，以顯示不同的時段。
+下圖顯示過去七天內成功處理串流事 [!DNL Profile] 件的比率。 按一下反白顯示的按鈕，即可調整此日期範圍，以顯示不同的時段。
 
 >[!NOTE]
 >
->為了讓資料顯示在此圖表上，必須為描述檔明 **確啟** 用資料。 要瞭解如何啟用配置檔案的流資料，請閱讀數 [據集使用手冊](../../catalog/datasets/user-guide.md#enable-a-dataset-for-real-time-customer-profile)。
+>為了讓資料顯示在此圖表上，必須明確啟 **用** for [!DNL Profile]。 若要瞭解如何啟用串流資料，請 [!DNL Profile]閱讀資料集 [使用指南](../../catalog/datasets/user-guide.md#enable-a-dataset-for-real-time-customer-profile)。
 
 ![](../images/quality/monitor-data-flows/list-streams-focus-on-bottom-graph.png)
 
@@ -60,11 +60,11 @@ ht-degree: 0%
 
 ## 監控批次端對端資料擷取
 
-在「 [Experience Platform UI](https://platform.adobe.com)」中，按一下左 **側導覽功能表上的** 「監控」。
+在中， [!DNL Experience Platform UI](https://platform.adobe.com)按一下左 **[!UICONTROL 側導覽功能表上的]** 「監視」。
 
 ![](../images/quality/monitor-data-flows/click-monitoring.png)
 
-此時 **將顯示「批端對端監視** 」頁，其中顯示先前提取的批的清單。 您可以按一下任一批以瞭解有關該記錄的詳細資訊。
+此時 **[!UICONTROL 將顯示「批端對端監視]** 」頁，其中顯示先前提取的批的清單。 您可以按一下任一批以瞭解有關該記錄的詳細資訊。
 
 ![](../images/quality/monitor-data-flows/list-batches.png)
 
