@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 中繼資料命令
 topic: metadata
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 3b710e7a20975880376f7e434ea4d79c01fa0ce5
 workflow-type: tm+mt
-source-wordcount: '299'
+source-wordcount: '297'
 ht-degree: 0%
 
 ---
@@ -43,5 +43,5 @@ ht-degree: 0%
 
 所有以開頭的命令都可 `\d` 以組合。 例如，您可以發佈 `\dtsn` 以顯示所有表、序列和結構的清單。 `\d` 單獨顯示所有可見表、視圖、實體化視圖和序列。
 
-有關上述命令的其他資訊，請參閱 [postgresql.org上的文檔](https://www.postgresql.org/docs/10/app-psql.html)。 不過，請注意，Experience Platform並不支援PostgreSQL檔案中顯示的所有選項。
+有關上述命令的其他資訊，請參閱 [postgresql.org上的文檔](https://www.postgresql.org/docs/10/app-psql.html)。 但是，請注意，並非PostgreSQL文檔中顯示的所有選項都受支援 [!DNL Experience Platform]。
 
