@@ -4,21 +4,24 @@ solution: Experience Platform
 title: 將客戶端連接到查詢服務
 topic: connect
 translation-type: tm+mt
-source-git-commit: c5bb112220b40fa6c2adfa89c80ddb87d382fbda
+source-git-commit: 3b710e7a20975880376f7e434ea4d79c01fa0ce5
+workflow-type: tm+mt
+source-wordcount: '56'
+ht-degree: 0%
 
 ---
 
 
-# 將客戶端連接到查詢服務
+# 將客戶端連接到 [!DNL Query Service]
 
-本節說明如何從各種案頭用戶端應用程式連接至查詢服務，以及如何驗證這些連線。 查詢服務使用Postgres協定，因此本節中的說明說明如何使用Postgres工具和驅動程式來連接和寫入查詢。
+本節說明如何從各種案頭客 [!DNL Query Service] 戶端應用程式連接至，以及如何驗證這些連線。 [!DNL Query Service] 使用協 [!DNL Postgres] 議，因此本節中的說明說明如何使用工 [!DNL Postgres] 具和驅動程式來連接和寫入查詢。
 
 為下列客戶提供說明：
 
-- [Aqua Data Studio](./aqua-data-studio.md)
-- [Looker](./looker.md)
-- [波斯蒂科(Mac)](./postico.md)
-- [Power BI(PC)](./power-bi.md)
-- [PSQL](./psql.md)
-- [RStudio](./rstudio.md)
-- [Tableau](./tableau.md)
+- [!DNL Aqua Data Studio](./aqua-data-studio.md)
+- [!DNL Looker](./looker.md)
+- [!DNL Postico (Mac)](./postico.md)
+- [!DNL Power BI (PC)](./power-bi.md)
+- [!DNL PSQL](./psql.md)
+- [!DNL RStudio](./rstudio.md)
+- [!DNL Tableau](./tableau.md)
