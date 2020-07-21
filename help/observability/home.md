@@ -4,26 +4,29 @@ solution: Experience Platform
 title: Adobe Experience Platform可觀性見解
 topic: overview
 translation-type: tm+mt
-source-git-commit: d349ffab7c0de72d38b5195585c14a4a8f80e37c
+source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
+workflow-type: tm+mt
+source-wordcount: '396'
+ht-degree: 2%
 
 ---
 
 
 # Adobe Experience Platform可觀性洞察概觀
 
-可觀測性洞察是REST風格的API，可讓您在Adobe Experience Platform中公開關鍵的可觀測性度量。 這些量度可提供平台使用統計資料、平台服務狀況檢查、歷史趨勢以及各種平台功能效能指標的深入資訊。
+可觀測性洞察是REST風格的API，可讓您在Adobe Experience Platform中公開關鍵的可觀測性度量。 這些量度可提供使用統 [!DNL Platform] 計資料的深入資訊、服務狀況 [!DNL Platform] 檢查、歷史趨勢，以及各種功能的效能 [!DNL Platform] 指標。
 
 本檔案示範對Encomberity Insights API的範例呼叫。 如需完整的可觀測端點清單，請參閱可觀 [測洞察API參考](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/observability-insights.yaml)。
 
 ## 快速入門
 
-若要呼叫平台API，您必須先完成驗證教 [學課程](../tutorials/authentication.md)。 完成驗證教學課程後，所有Experience Platform API呼叫中每個必要標題的值都會顯示在下方：
+若要呼叫API，您必 [!DNL Platform] 須先完成驗證教 [學課程](../tutorials/authentication.md)。 完成驗證教學課程後，將提供所有 [!DNL Experience Platform] API呼叫中每個必要標題的值，如下所示：
 
-* 授權：生產者 `{ACCESS_TOKEN}`
+* 授權： 生產者 `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
 * x-gw-ims-org-id: `{IMS_ORG}`
 
-Experience Platform中的所有資源都隔離至特定的虛擬沙盒。 所有對平台API的請求都需要一個標題，該標題會指定要進行操作的沙盒名稱。 如需平台中沙盒的詳細資訊，請參閱沙盒 [概觀檔案](../sandboxes/home.md)。
+中的所有資 [!DNL Experience Platform] 源都與特定虛擬沙盒隔離。 對API的所 [!DNL Platform] 有請求都需要一個標題，該標題會指定要進行操作的沙盒名稱。 如需中沙盒的詳細資訊 [!DNL Platform]，請參閱沙 [盒概述檔案](../sandboxes/home.md)。
 
 * x-sandbox-name: `{SANDBOX_NAME}`
 
@@ -46,7 +49,7 @@ GET /metrics?metric={METRIC}&metric={METRIC_2}&id={ID}&dateRange={DATE_RANGE}
 | 參數 | 說明 |
 | --- | --- |
 | `{METRIC}` | 您要公開的量度。 在單一呼叫中合併多個量度時，您必須使用&amp;符號(`&`)來分隔個別量度。 例如, `metric={METRIC_1}&metric={METRIC_2}`. |
-| `{ID}` | 您要公開其量度的特定平台資源的識別碼。 此ID可能是選用、必要或不適用，視使用的量度而定。 如需每個度量的可用度量清單以及支援的ID（必要和可選），請參閱可用度量的參考 [檔案](metrics.md)。 |
+| `{ID}` | 您要公開其度 [!DNL Platform] 量的特定資源的識別碼。 此ID可能是選用、必要或不適用，視使用的量度而定。 如需每個度量的可用度量清單以及支援的ID（必要和可選），請參閱可用度量的參考 [檔案](metrics.md)。 |
 | `{DATE_RANGE}` | 您要公開的量度日期範圍，使用ISO 8601格式(例如 `2018-10-01T07:00:00.000Z/2018-10-09T07:00:00.000Z`)。 |
 
 **請求**
@@ -62,7 +65,7 @@ curl -X GET \
 
 **回應**
 
-成功的響應返回對象清單，每個對象都包含提供的時間戳和請求路徑中 `dateRange` 指定的度量的相應值。 如果 `id` 請求路徑中包含平台資源，則結果僅適用於該特定資源。 若省略 `id` 此項目，結果將套用至IMS組織內的所有適用資源。
+成功的響應返回對象清單，每個對象都包含提供的時間戳和請求路徑中 `dateRange` 指定的度量的相應值。 如果請 `id` 求路 [!DNL Platform] 徑中包含資源，則結果將僅適用於該特定資源。 若省略 `id` 此項目，結果將套用至IMS組織內的所有適用資源。
 
 ```json
 {
