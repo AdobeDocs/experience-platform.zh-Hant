@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Adobe Experience Platform資料擷取概觀
 topic: overview
 translation-type: tm+mt
-source-git-commit: 3f1c3c77a0755a3e305da0fb8a234be0f0ee1863
+source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
 workflow-type: tm+mt
-source-wordcount: '420'
+source-wordcount: '417'
 ht-degree: 10%
 
 ---
@@ -36,7 +36,7 @@ Adobe Experience Platform將來自多個來源的資料匯集在一起，以協�
 
 [!DNL Experience Platform] 可讓您設定與各種資料提供者的來源連線。 這些連線可讓您向外部資料來源驗證、設定擷取執行的時間，以及管理擷取總處理能力。
 
-來源連線可設定為從其他Adobe應用程式（例如Adobe Analytics和Adobe Audience Manager）、協力廠商雲端儲存來源(例如 [!DNL Azure Blob], [!DNL Amazon] S3、FTP伺服器和SFTP伺服器)以及協力廠商CRM系統（例如Microsoft Dynamics和Salesforce）收集資料。
+來源連線可設定為從其他Adobe應用程式（例如Adobe Analytics和Adobe Audience Manager）、協力廠商雲端儲存來源(例如 [!DNL Azure Blob], [!DNL Amazon] S3、FTP伺服器和SFTP伺服器)以及協力廠商CRM系統(例如 [!DNL Microsoft Dynamics] 和 [!DNL Salesforce])收集資料。
 
 如需詳細 [資訊，請參閱](../sources/home.md) 「來源概觀」。
 
