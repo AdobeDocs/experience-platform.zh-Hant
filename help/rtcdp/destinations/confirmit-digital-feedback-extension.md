@@ -4,16 +4,19 @@ seo-title: 確認數位回饋擴充功能
 description: 確認數位意見延伸功能是Adobe即時客戶資料平台中的客戶目標之聲。 如需擴充功能的詳細資訊，請參閱Adobe Exchange的擴充功能頁面。
 seo-description: null
 translation-type: tm+mt
-source-git-commit: ff91395844c239415123a33d65fa0deb2221ae25
+source-git-commit: 6f680a60c88bc5fee6ce9cb5a4f314c4b9d02249
+workflow-type: tm+mt
+source-wordcount: '564'
+ht-degree: 4%
 
 ---
 
 
-# 確認數位意見延伸
+# [!DNL Confirmit Digital Feedback] 擴充功能
 
 ## 概述 {#overview}
 
-確認數位回饋解決方案可協助您將網站流量轉化為即時見解。 透過確認，可以根據您的需求顯示不顯眼且目標明確的調查，鼓勵訪客提供意見回應，例如：
+[!DNL Confirmit Digital Feedback] 解決方案可協助您將網站流量轉化為即時見解。 有了 [!DNL Confirmit]不顯眼且目標明確的調查，您就可以根據您的需求顯示，鼓勵訪客提供意見回應，例如：
 
 * 網站意見回應
 * 交易滿意度
@@ -22,7 +25,7 @@ source-git-commit: ff91395844c239415123a33d65fa0deb2221ae25
 * 整體客戶滿意度
 * 還有更多功能
 
-「確認數位意見回應」是Adobe即時客戶資料平台中的客戶延伸之聲。 如需擴充功能的詳細資訊，請參閱 [Adobe Exchange的擴充功能頁面](https://exchange.adobe.com/experiencecloud.details.103247.confirmit-digital-feedback-for-adobe-launch.html)。
+[!DNL Confirmit] 數位意見回應是Adobe即時客戶資料平台中的客戶延伸之聲。 如需擴充功能的詳細資訊，請參閱 [Adobe Exchange的擴充功能頁面](https://exchange.adobe.com/experiencecloud.details.103247.confirmit-digital-feedback-for-adobe-launch.html)。
 
 此目標是Experience Platform Launch擴充功能。 如需Launch擴充功能如何在Adobe Real-time CDP中運作的詳細資訊，請參閱 [Experience Platform Launch擴充功能總覽](/help/rtcdp/destinations/experience-platform-launch-extensions.md)。
 
@@ -31,18 +34,18 @@ source-git-commit: ff91395844c239415123a33d65fa0deb2221ae25
 
 ## 先決條件 {#prerequisites}
 
-此擴充功能可在「目標」目錄中，針對所有已購買Adobe即時CDP的客戶提供。
+此擴充功能可在目錄 [!DNL Destinations] 中提供給所有已購買Adobe即時CDP的客戶。
 
-若要使用此擴充功能，您需要存取Experience Platform Launch。 Experience Platform Launch是以附加的增值功能提供給Adobe Experience Cloud客戶。 請連絡您的組織管理員以取得Launch的存取權，並要求他們授予您權限， **[!UICONTROL manage_properties]** 以便您安裝擴充功能。
+若要使用此擴充功能，您需要存取Experience Platform Launch。 Experience Platform Launch是以附加的增值功能提供給Adobe Experience Cloud客戶。 請連絡您的組織管理員以取得Launch的存取權，並要求他們授予您 **[!UICONTROL manage_properties]** 權限，以便安裝擴充功能。
 
 ## 安裝擴充功能 {#install-extension}
 
-若要安裝「確認數位意見」擴充功能：
+若要安裝數位 [!DNL Confirmit] 意見延伸模組：
 
-1. 在 [Adobe Real-time CDP介面中](http://platform.adobe.com/)，請轉至 **[!UICONTROL Destinations > Catalog]**。
+1. 在 [Adobe Real-time CDP介面中](http://platform.adobe.com/)，前往「目 **[!UICONTROL 標>目錄」]**。
 2. 從目錄中選擇副檔名或使用搜索欄。
-3. 按一下目的地以反白標示，然後在右 **[!UICONTROL Install Extension]** 側導軌中選取。 如果控 **[!UICONTROL Install Extension]** 制項呈灰色，表示您遺失權 **[!UICONTROL manage_properties]** 限。 請參 [閱必要條件](#prerequisites)。
-4. 在窗 **[!UICONTROL Select available Launch property]** 口中，選擇要在其中安裝擴展的Launch屬性。 您也可以在Launch中選擇建立新屬性。 屬性是規則、資料元素、設定的擴充功能、環境和程式庫的集合。瞭解Launch檔案「屬 [性」頁面](https://docs.adobe.com/content/help/en/launch/using/reference/admin/companies-and-properties.html#properties-page) ，以取得屬性。
+3. 按一下目的地以反白標示，然後選取右 **[!UICONTROL 側導軌中的「安裝擴充功能]** 」。 如果 **[!UICONTROL Install Extension]** （安裝擴充功能）控制項呈灰色顯示 **[!UICONTROL ，表示您遺失]** manage_properties權限。 請參 [閱必要條件](#prerequisites)。
+4. 在「選 **[!UICONTROL 擇可用的啟動屬性]** 」窗口中，選擇要安裝擴展的啟動屬性。 您也可以在Launch中選擇建立新屬性。 屬性是規則、資料元素、設定的擴充功能、環境和程式庫的集合。瞭解Launch檔案「屬 [性」頁面](https://docs.adobe.com/content/help/en/launch/using/reference/admin/companies-and-properties.html#properties-page) ，以取得屬性。
 5. 工作流程會帶您至Launch以完成安裝。
 
 如需擴充功能設定選項和安裝支援的詳細資訊，請參 [閱Adobe Exchange的「確認數位意見」頁面](https://exchange.adobe.com/experiencecloud.details.103247.confirmit-digital-feedback-for-adobe-launch.html)。
@@ -62,6 +65,6 @@ source-git-commit: ff91395844c239415123a33d65fa0deb2221ae25
 
 >[!TIP]
 >
->如果擴充功能已安裝在您的其中一個屬性上，Adobe即時CDP使用者介面仍會顯示該 **[!UICONTROL Install]** 擴充功能。 如「安裝擴充功能」中所述，開始安 [裝工作流程](#install-extension) ，以開始啟動並設定或刪除您的擴充功能。
+>如果擴充功能已安裝在您的其中一個屬性上，Adobe即時CDP使用者介面仍會顯示擴充 **[!UICONTROL 功能的]** 「安裝」。 如「安裝擴充功能」中所述，開始安 [裝工作流程](#install-extension) ，以開始啟動並設定或刪除您的擴充功能。
 
 若要升級您的擴充功能，請參 [閱Launch檔案中](https://docs.adobe.com/content/help/en/launch/using/reference/manage-resources/extensions/extension-upgrade.html) 的擴充功能升級。
