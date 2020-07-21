@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Adobe Experience Platform批次擷取開發人員指南
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
 workflow-type: tm+mt
-source-wordcount: '2577'
+source-wordcount: '2552'
 ht-degree: 6%
 
 ---
@@ -27,28 +27,28 @@ ht-degree: 6%
 本指南需要有效瞭解Adobe Experience Platform的下列元件：
 
 - [批次擷取](./overview.md): 可讓您將資料以批次檔案的形式內嵌至Adobe Experience Platform。
-- [體驗資料模型(XDM)系統](../../xdm/home.md): Experience Platform組織客戶體驗資料的標準化架構。
-- [沙盒](../../sandboxes/home.md): Experience Platform提供虛擬沙盒，可將單一Platform實例分割為不同的虛擬環境，以協助開發和發展數位體驗應用程式。
+- [!DNL Experience Data Model (XDM) System](../../xdm/home.md): 組織客戶體驗資料 [!DNL Experience Platform] 的標準化架構。
+- [!DNL Sandboxes](../../sandboxes/home.md): [!DNL Experience Platform] 提供虛擬沙盒，可將單一執行個體分 [!DNL Platform] 割為不同的虛擬環境，以協助開發和發展數位體驗應用程式。
 
 ### 讀取範例API呼叫
 
-本指南提供範例API呼叫，以示範如何格式化您的請求。 這些包括路徑、必要標題和正確格式化的請求負載。 也提供API回應中傳回的範例JSON。 如需範例API呼叫檔案中所用慣例的詳細資訊，請參閱「Experience Platform疑難排解指 [南」中有關如何讀取範例API呼叫的章節](../../landing/troubleshooting.md#how-do-i-format-an-api-request) 。
+本指南提供範例API呼叫，以示範如何格式化您的請求。 這些包括路徑、必要標題和正確格式化的請求負載。 也提供API回應中傳回的範例JSON。 如需範例API呼叫檔案中所用慣例的詳細資訊，請參閱疑難排解指 [南中有關如何讀取範例API呼叫的](../../landing/troubleshooting.md#how-do-i-format-an-api-request)[!DNL Experience Platform] 章節。
 
 ### 收集必要標題的值
 
-若要呼叫平台API，您必須先完成驗證教 [學課程](../../tutorials/authentication.md)。 完成驗證教學課程後，所有Experience Platform API呼叫中每個必要標題的值都會顯示在下方：
+若要呼叫API，您必 [!DNL Platform] 須先完成驗證教 [學課程](../../tutorials/authentication.md)。 完成驗證教學課程後，將提供所有 [!DNL Experience Platform] API呼叫中每個必要標題的值，如下所示：
 
 - 授權： 生產者 `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
-Experience Platform中的所有資源都隔離至特定的虛擬沙盒。 所有對平台API的請求都需要一個標題，該標題會指定要在中執行的操作的沙盒名稱：
+中的所有資 [!DNL Experience Platform] 源都與特定虛擬沙盒隔離。 對API的所 [!DNL Platform] 有請求都需要一個標題，該標題會指定要在中執行的操作的沙盒名稱：
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
->如需平台中沙盒的詳細資訊，請參閱沙盒 [概觀檔案](../../sandboxes/home.md)。
+>如需中沙盒的詳細資訊 [!DNL Platform]，請參閱沙 [盒概述檔案](../../sandboxes/home.md)。
 
 包含裝載(POST、PUT、PATCH)的請求可能需要額外的標 `Content-Type` 題。 在呼叫參數中提供每個呼叫的接受值。 本指南使用下列內容類型：
 
@@ -57,7 +57,7 @@ Experience Platform中的所有資源都隔離至特定的虛擬沙盒。 所有
 
 ## 類型
 
-在擷取資料時，請務必瞭解Experience Data Model(XDM)架構的運作方式。 有關XDM欄位類型如何映射到不同格式的詳細資訊，請閱讀 [Schema Registry Developer Guide](../../xdm/api/getting-started.md)。
+在擷取資料時，請務必瞭解(XDM) [!DNL Experience Data Model] 架構的運作方式。 有關XDM欄位類型如何映射到不同格式的詳細資訊，請閱讀 [Schema Registry Developer Guide](../../xdm/api/getting-started.md)。
 
 在擷取資料時有一些彈性——如果某個類型不符合目標架構中的內容，資料將會轉換為表示的目標類型。 如果無法，則批次將失敗，並帶有 `TypeCompatibilityException`。
 
@@ -1003,7 +1003,7 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}
 
 ### 批次擷取的資料轉換
 
-為了將資料檔案內嵌至Experience Platform，檔案的階層結構必須符合與上傳資料集相關的 [Experience Data Model(XDM)](../../xdm/home.md) 架構。
+為了將資料檔案內嵌至其中 [!DNL Experience Platform]，檔案的階層結構必須符合與上傳資料集相關的 [Experience Data Model(XDM)](../../xdm/home.md) 架構。
 
 有關如何映射CSV檔案以符合XDM架構的資訊，請參閱範例轉換文 [件](../../etl/transformations.md) ，以及格式正確的JSON資料檔案範例。 可在以下位置找到文檔中提供的示例檔案：
 
