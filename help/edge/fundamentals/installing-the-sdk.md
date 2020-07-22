@@ -4,9 +4,9 @@ seo-title: 安裝SDK的Adobe Experience Platform Web SDK
 description: 瞭解如何安裝Experience Platform Web SDK
 seo-description: 瞭解如何安裝Experience Platform Web SDK
 translation-type: tm+mt
-source-git-commit: 7b07a974e29334cde2dee7027b9780a296db7b20
+source-git-commit: c5afced244c661b0ec0bcf0109191a2dacf886aa
 workflow-type: tm+mt
-source-wordcount: '570'
+source-wordcount: '583'
 ht-degree: 1%
 
 ---
@@ -71,6 +71,10 @@ Adobe Experience Platform可 [!DNL Web SDK] 在內容放送網路(CDN)上取得�
 ```
 
 這會載入一個指令碼，以確 `window.Promise` 保是有效的Promise實作。
+
+>[!NOTE]
+>
+>如果您選擇載入不同的Promise實施，請確保它支援 `Promise.prototype.finally`。
 
 ## 同步載入JavaScript檔案 {#loading-javascript-synchronously}
 
