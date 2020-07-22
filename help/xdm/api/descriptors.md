@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 描述符
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: d04bf35e49488ab7d5e07de91eb77d0d9921b6fa
+source-git-commit: b021b6813af18e29f544dc55541f23dd7dd57d47
 workflow-type: tm+mt
 source-wordcount: '1477'
 ht-degree: 1%
@@ -369,7 +369,7 @@ curl -X DELETE \
 
 #### 參考身份描述符
 
-參考標識描述符提供到模式欄位的參考上下文，允許其與目標模式的主標識欄位連結。 在將引用描述符應用到這些欄位之前，必須已使用標識描述符標籤欄位。
+參考標識描述符為模式欄位的主標識提供參考上下文，允許其他模式中的欄位引用它。 在將引用描述符應用到這些欄位之前，必須已使用標識描述符標籤欄位。
 
 ```json
 {
