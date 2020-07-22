@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 體驗資料模型(XDM)欄位字典
 topic: overview
 translation-type: tm+mt
-source-git-commit: d04bf35e49488ab7d5e07de91eb77d0d9921b6fa
+source-git-commit: 661789fa15ea11b0e42060b1b90d74785c04fa1f
 workflow-type: tm+mt
 source-wordcount: '25163'
 ht-degree: 3%
@@ -21,7 +21,7 @@ ht-degree: 3%
 
 下表包含欄位名稱（並非所有XDM欄位都使用&quot;xdm&quot;命名），以及其標題和說明、類型和格式（視需要而定），以及其對應的XDM類型和可找到欄位的資源（混合、資料類型和結構）。
 
-您可以使用中的搜索功 [!DNL Schema Editor] 能來查看這些資源的詳細資訊，如 [方案編輯器教程所示](../tutorials/create-schema-ui.md)。
+您可以使用中的搜索功 [!DNL Schema Editor] 能來查看這些資源的詳細資訊，如 [方案編輯器教程所示](../tutorials/create-schema-ui.md#browse)。
 
 >[!NOTE]
 >
@@ -135,7 +135,7 @@ ht-degree: 3%
 | xdm:contractID | 合約ID | 此訂閱之主管合約的唯一ID。 | 字串 |  | 字串 | https://ns.adobe.com/experience/campaign/experienceevent-profile-subscriptions、https://ns.adobe.com/xdm/context/profile-subscriptions、https://ns.adobe.com/xdm/context/subscription |
 | xdm:controlGroupMember | 控制組成員 | 此訊息的收件者是此促銷活動控制群組的成員。 控制組是不接收交貨的人口； 它可用來透過比較控制群組（或暫留群組）與已收到傳送的目標人口行為，來追蹤傳送後的行為和促銷活動影響。 | 布林值 |  | 布林值 | https://ns.adobe.com/experience/campaign-experienceevent, https://ns.adobe.com/experience/campaign/experienceevent-all |
 | xdm：轉換 | 轉換 | 客戶預先定義的動作，觸發事件以進行效能評估。 | 物件 |  | 物件 | https://ns.adobe.com/experience/adcloud-experienceevent、https://ns.adobe.com/experience/analytics-experienceevent、https://ns.adobe.com/experience/campaign-experienceevent、https://ns.adobe.com/experience/target-experienceevent、https://ns.adobe.com/xdm/context/advertising、https://ns.adobe.com/xdm/context/experienceevent-advertising、 |
-| xdm:cookiesEnabled | 允許Cookie | 目前的使用者代理設定允許編寫Cookie。&#39; | 布林值 |  | 布林值 | https://ns.adobe.com/experience/aam-experienceevent、https://ns.adobe.com/experience/adcloud-experienceevent、https://ns.adobe.com/experience/analytics-experienceevent、https://ns.adobe.com/experience/campaign-experienceevent、https://ns.adobe.com/experience/campaign/experienceevent-all、https://ns.adobe.com/experience/campaign/experienceevent-profile-push-details、https://ns.adobe.com/experience/campaign/experienceevent-profile-subscriptions、https://ns.adobe.com/experience/campaign/profile-snapshot、https://ns.adobe.com/experience/target-experienceevent、https://ns.adobe.com/xdm/context/experienceevent-environment-details、https://ns.adobe.com/xdm/context/profile-push-details、https://ns.adobe.com/xdm/context/profile-subscriptions、、、、 |
+| xdm:cookiesEnabled | 允許Cookie | 目前的使用者代理設定允許編寫Cookie。」 | 布林值 |  | 布林值 | https://ns.adobe.com/experience/aam-experienceevent、https://ns.adobe.com/experience/adcloud-experienceevent、https://ns.adobe.com/experience/analytics-experienceevent、https://ns.adobe.com/experience/campaign-experienceevent、https://ns.adobe.com/experience/campaign/experienceevent-all、https://ns.adobe.com/experience/campaign/experienceevent-profile-push-details、https://ns.adobe.com/experience/campaign/experienceevent-profile-subscriptions、https://ns.adobe.com/experience/campaign/profile-snapshot、https://ns.adobe.com/experience/target-experienceevent、https://ns.adobe.com/xdm/context/experienceevent-environment-details、https://ns.adobe.com/xdm/context/profile-push-details、https://ns.adobe.com/xdm/context/profile-subscriptions、、、、 |
 | xdm:costCurrency | 成本貨幣 | ISO 4217貨幣代碼，用於支付合作夥伴的廣告機會費用。 | 字串 |  | 字串 | https://ns.adobe.com/experience/adcloud-experienceevent、https://ns.adobe.com/experience/adcloud/experienceevent-all、https://ns.adobe.com/experience/adcloud/inventory |
 | xdm:country | 國家/地區 | 政府管理領土的名稱。 除此 `xdm:countryCode`之外，這是自由格式欄位，可以使用任何語言提供國家／地區名稱。 | 字串 |  | 字串 | https://ns.adobe.com/experience/campaign-experienceevent、https://ns.adobe.com/experience/campaign/experienceevent-all、https://ns.adobe.com/experience/campaign/experienceevent-profile-personal-details、https://ns.adobe.com/experience/campaign/experienceevent-profile-subscriptions、https://ns.adobe.com/experience/campaign/experienceevent-profile-work-details、https://ns.adobe.com/experience/campaign/profile-snapshot、https://ns.adobe.com/xdm/context/profile-directmarketing、https://ns.adobe.com/xdm/context/profile-personal-details、https://ns.adobe.com/xdm/context/profile-subscriptions、https://ns.adobe.com/xdm/context/profile-work-details、、、 |
 | xdm:countryCode | 國家／地區代碼 | 國家／地區 [的雙字元ISO 3166-1 alpha-2](https://datahub.io/core/country-list) 程式碼。 | 字串 |  | 字串 | https://ns.adobe.com/experience/aam-experienceevent、https://ns.adobe.com/experience/adcloud-experienceevent、https://ns.adobe.com/experience/analytics-experienceevent、https://ns.adobe.com/experience/campaign-experienceevent、https://ns.adobe.com/experience/campaign/experienceevent-all、https://ns.adobe.com/experience/campaign/experienceevent-profile-personal-details、https://ns.adobe.com/experience/campaign/experienceevent-profile-work-details、https://ns.adobe.com/experience/campaign/profile-snapshot、https://ns.adobe.com/experience/target-experienceevent、https://ns.adobe.com/xdm/context/experienceevent-environment-details、https://ns.adobe.com/xdm/context/profile-directmarketing、https://ns.adobe.com/xdm/context/profile-personal-details、https://ns.adobe.com/xdm/context/profile-work-details、、、、、 |
