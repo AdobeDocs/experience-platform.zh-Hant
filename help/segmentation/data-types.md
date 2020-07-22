@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Adobe Experience Platform細分服務資料類型
 topic: overview
 translation-type: tm+mt
-source-git-commit: 6a0a9b020b0dc89a829c557bdf29b66508a10333
+source-git-commit: 96b6f820e5d372446c4927e7719aedadb2b11bc9
 workflow-type: tm+mt
-source-wordcount: '406'
-ht-degree: 1%
+source-wordcount: '456'
+ht-degree: 3%
 
 ---
 
@@ -50,15 +50,15 @@ ht-degree: 1%
 | 「套用時間規則」切換按鈕 | 整合日期資料。 |
 | 等於、不等於、開頭為、不開頭為、結尾為、不結尾為、包含、不包含、存在、不存在 | 整合字串資料。 |
 
-## 區段
-
-現有區段定義也可用作新區段定義的元件，並新增其屬性和事件型規則至新區段。
-
-## 受眾
+### 觀眾分享
 
 外部對象也可以用作新區段定義的元件，將其屬性規則新增至新區段。
 
-目前，只有Adobe Audience Manager才受支援。 未來將啟用其他來源。
+目前，只有Adobe Audience Manager才支援做為外部觀眾，未來會啟用其他來源。 有關搭配使用Adobe Audience Manager觀眾的更多資訊，請參閱Adobe Audience Manager [檔案中的觀眾分享指南](https://docs.adobe.com/content/help/en/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html)。
+
+### 區段共用
+
+在Platform中建立的區段可用於其他 [Adobe Experience Cloud核心服務](https://docs.adobe.com/content/help/zh-Hant/core-services/interface/experience-cloud.html)。 若要啟用此功能，您必須聯絡解決方案架構師或顧問。
 
 ## 其他資料類型
 
