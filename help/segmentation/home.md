@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Adobe Experience Platform細分服務
 topic: overview
 translation-type: tm+mt
-source-git-commit: 6a0a9b020b0dc89a829c557bdf29b66508a10333
+source-git-commit: 96b6f820e5d372446c4927e7719aedadb2b11bc9
 workflow-type: tm+mt
-source-wordcount: '1971'
+source-wordcount: '1974'
 ht-degree: 0%
 
 ---
@@ -215,8 +215,10 @@ Adding this specific data to the segment itself allows execution engines to pers
 - 物件
 - 地圖
 - 事件
+- 外部受眾
+- 區段
 
-有關這些受支援資料類型的詳細資訊，請參閱支援資 [料類型檔案](./data-types.md)。
+有關這些支援資料類型的詳細資訊，請參閱支援的資 [料類型檔案](./data-types.md)。
 
 ## 後續步驟
 
