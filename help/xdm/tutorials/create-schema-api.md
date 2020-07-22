@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 使用方案註冊表API建立方案
 topic: tutorials
 translation-type: tm+mt
-source-git-commit: d04bf35e49488ab7d5e07de91eb77d0d9921b6fa
+source-git-commit: b021b6813af18e29f544dc55541f23dd7dd57d47
 workflow-type: tm+mt
 source-wordcount: '2322'
 ht-degree: 1%
@@ -1015,7 +1015,7 @@ curl -X POST \
 }
 ```
 
-## 啟用模式以用於 [!DNL Real-time Customer Profile]
+## 啟用模式以用於 [!DNL Real-time Customer Profile] {#profile}
 
 通過將&quot;union&quot;標籤添加到屬 `meta:immutableTags` 性中，可以啟用「忠誠度成員」結構供使用 [!DNL Real-time Customer Profile]。
 
