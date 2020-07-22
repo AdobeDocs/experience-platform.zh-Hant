@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 使用結構編輯器建立架構
 topic: tutorials
 translation-type: tm+mt
-source-git-commit: d04bf35e49488ab7d5e07de91eb77d0d9921b6fa
+source-git-commit: 661789fa15ea11b0e42060b1b90d74785c04fa1f
 workflow-type: tm+mt
 source-wordcount: '3376'
 ht-degree: 0%
@@ -273,7 +273,7 @@ More information about relationships and other schema metadata can be found in t
 
 要啟用與一起使用的模式， [!DNL Real-time Customer Profile]它必須定義主標識。 如果您嘗試啟用方案而未先定義主要識別，則會收到「缺少主要識別」錯誤訊息。
 
-![](../images/tutorials/create-schema/missing_primary_identity.png)
+<img src="../images/tutorials/create-schema/missing_primary_identity.png" width="600" /><br>
 
 若要啟用「忠誠成員」結構供使用， [!DNL Profile]請先按一下編輯器「結構」區段中的「忠誠 *成員* 」。
 
