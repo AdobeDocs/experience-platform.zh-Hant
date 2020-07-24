@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Adobe Experience Platform概觀
 topic: getting started
 translation-type: tm+mt
-source-git-commit: 0c4395556a546915df4718a0e812b38b15e04735
+source-git-commit: f86625f2cf9a08b2395f190a50d7fb40c71bc49b
 workflow-type: tm+mt
 source-wordcount: '812'
 ht-degree: 4%
@@ -40,7 +40,7 @@ Adobe Experience Platform可在最新版Google Chrome、Safari、Firefox **和**
 |---|---|---|---|
 | Mac OS X | Google Chrome | Safari | Firefox |
 | Windows 10 | Google Chrome | Microsoft Edge | Firefox |
-| Windows 7 | Google Chrome |  | Firefox&lt; |
+| Windows 7 | Google Chrome |  | Firefox |
 
 不支援這些瀏覽器：
 
