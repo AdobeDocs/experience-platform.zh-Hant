@@ -3,7 +3,10 @@ product: experience-platform
 audience: user
 user-guide-title: 智慧型服務說明
 translation-type: tm+mt
-source-git-commit: 9bdd2b17953c1c72243ae07be3e40d53ced9360b
+source-git-commit: a0b85809d0703c0366c73ed6d66319af0f62cb27
+workflow-type: tm+mt
+source-wordcount: '64'
+ht-degree: 3%
 
 ---
 
@@ -22,7 +25,7 @@ source-git-commit: 9bdd2b17953c1c72243ae07be3e40d53ced9360b
    * [概述](customer-ai/overview.md)
    * [客戶AI快速入門](customer-ai/getting-started.md)
    * [輸入與輸出](customer-ai/input-output.md)
-   * 使用者介面指南 {#user-guide}
+   * UI指南{#user-guide}
       * [設定例項](customer-ai/user-guide/configure.md)
       * [發現見解](customer-ai/user-guide/discover-insights.md)
       * [使用客戶AI分數建立區段](customer-ai/user-guide/create-segment.md)
