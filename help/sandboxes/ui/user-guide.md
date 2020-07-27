@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 沙盒使用指南
 topic: user guide
 translation-type: tm+mt
-source-git-commit: d02f12202e51b00453f719604052a54f6fcfe4ab
+source-git-commit: c52d8cdbc5a4ee6fab8c2b1b284efea5f735d424
 workflow-type: tm+mt
-source-wordcount: '527'
+source-wordcount: '530'
 ht-degree: 0%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 0%
 
 ## 檢視沙盒
 
-在Experience Platform UI中，按一下左側導 **覽中的** 「沙盒」，以開啟「 _沙盒_ 」控制面板。 控制面板會列出您組織的所有可用沙盒，包括沙盒類型（生產或開發）和狀態（作用中、建立、刪除或失敗）。
+在Experience Platform UI中，按一下左側導 **[!UICONTROL 覽中的]** 「沙盒」，以開啟「 _[!UICONTROL 沙盒]_」控制面板。 控制面板會列出您組織的所有可用沙盒，包括沙盒類型（生產或開發）和狀態（作用中、建立、刪除或失敗）。
 
 ![](../images/ui/sandboxes-tab.png)
 
@@ -38,25 +38,25 @@ ht-degree: 0%
 
 ## 建立新的沙盒
 
-請使用下列影片，以快速概述如何在中 [!DNL Sandboxes] 使用 [!DNL Experience Platform]。
+使用下列影片快速概述如何在Experience Platform中使用沙盒。
 
 >[!VIDEO](https://video.tv.adobe.com/v/29838/?quality=12&learn=on)
 
-若要在UI中建立新沙盒，請按一下左導覽中的「沙盒」 **，然後按一下「** 建立沙盒」 ****。
+若要在UI中建立新沙盒，請按一下左導覽中的「沙盒」 **[!UICONTROL ，然後按一下「]** 建立沙盒」 ****。
 
 ![](../images/ui/create-sandbox-button.png)
 
-此時會 _出現「建立沙盒_ 」對話方塊，提示您提供沙盒的顯示標題和名稱。 顯 **示標題** (Display Title)應為人類可讀，且應具備足夠的描述性，以方便識別。 沙盒名 **稱** 是全小寫的識別碼，可用於API呼叫，因此應是唯一且簡明的。
+此時會 _[!UICONTROL 出現「建立沙盒]_」對話方塊，提示您提供沙盒的顯示標題和名稱。 顯&#x200B;**示標題**(Display Title)應為人類可讀，且應具備足夠的描述性，以方便識別。 沙盒名**[!UICONTROL &#x200B;稱&#x200B;]**(Sandbox Name)是全小寫的識別碼，可用於API呼叫，因此應是唯一且簡明的。
 
-完成後，按一下「 **建立**」。
+完成後，按一下「 **[!UICONTROL 建立]**」。
 
 ![](../images/ui/create-sandbox-dialog.png)
 
 >[!NOTE]
 >
->由於您僅限於建立非生產沙盒類型， **type** （類型）選項會鎖定在「非生產」，因此無法加以控制。
+>由於您僅限於建立非生產沙盒類型， **[!UICONTROL type]** （類型）選項會鎖定在「非生產」，因此無法加以控制。
 
-建立完沙盒後，請重新整理頁面，新沙盒就會出現在 _Sandbox_ （沙盒）控制面板中，狀態為「建立」。 新沙盒需要約15分鐘的時間才能由系統布建，之後其狀態會變更為「作用中」。
+建立完沙盒後，請重新整理頁面，新沙盒就會出現在 _[!UICONTROL Sandboxs]_（沙盒）控制面板中，狀態為「[!UICONTROL Creating]」。 新沙盒需要約15分鐘的時間才能由系統布建，之後其狀態會變更為「[!UICONTROL Active]」。
 
 ![](../images/ui/sandbox-created.png)
 
@@ -68,15 +68,15 @@ ht-degree: 0%
 
 重設非生產沙盒會刪除與該沙盒（結構、資料集等）相關的所有資源，同時仍會保留沙盒的名稱和相關權限。 對於具有存取權的使用者，這個「乾淨」的沙盒仍以相同名稱提供。
 
-若要在UI中重設沙盒，請按一下左導覽中的「沙盒」 **** ，然後按一下您要重設的沙盒。 在顯示在畫面右側的對話方塊中，按一下「重設 **沙盒」**。
+若要在UI中重設沙盒，請按一下左導覽中的「沙盒」 **** ，然後按一下您要重設的沙盒。 在顯示在畫面右側的對話方塊中，按一下「重設 **[!UICONTROL 沙盒」]**。
 
 ![](../images/ui/reset-sandbox-button.png)
 
-出現對話方塊提示您確認選擇。 按一 **下重設** ，繼續。
+出現對話方塊提示您確認選擇。 按一 **[!UICONTROL 下重設]** ，繼續。
 
 <img src="../images/ui/reset-are-you-sure.png" width="350"><br>
 
-隨即出現確認訊息，沙盒的狀態會變更為「重設」。 一旦系統布建它，其狀態將更新為「活動」或「失敗」。
+出現確認訊息，沙盒的狀態會變更為「重[!UICONTROL 設]」。 一旦系統布建它，其狀態將更新為「[!UICONTROL Active]」或「[!UICONTROL Failed]」。
 
 ![](../images/ui/sandbox-resetting.png)
 
@@ -88,15 +88,15 @@ ht-degree: 0%
 
 刪除非生產沙盒會永久移除與該沙盒相關的所有資源，包括權限。
 
-若要刪除UI中的沙盒，請按一下左導覽中的「沙盒」 **** ，然後按一下您要刪除的沙盒。 在顯示在畫面右側的對話方塊中，按一下「刪除沙 **盒」**。
+若要刪除UI中的沙盒，請按一下左導覽中的「沙盒」 **** ，然後按一下您要刪除的沙盒。 在顯示在畫面右側的對話方塊中，按一下「刪除沙 **[!UICONTROL 盒」]**。
 
 ![](../images/ui/delete-sandbox-button.png)
 
-出現對話方塊提示您確認選擇。 按一 **下「刪** 」繼續。
+出現對話方塊提示您確認選擇。 按一 **[!UICONTROL 下「刪]** 」繼續。
 
 <img src="../images/ui/delete-are-you-sure.png" width="350"><br>
 
-隨即出現確認訊息，沙盒會從「沙盒」工作區 _移除_ 。
+隨即出現確認訊息，沙盒會從「沙盒」工作區 _[!UICONTROL 移除]_。
 
 ## 後續步驟
 
