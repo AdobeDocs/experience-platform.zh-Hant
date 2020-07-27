@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 沙盒總覽
 topic: overview
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: c52d8cdbc5a4ee6fab8c2b1b284efea5f735d424
 workflow-type: tm+mt
-source-wordcount: '680'
+source-wordcount: '677'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # 沙盒總覽
 
-Adobe Experience Platform旨在讓全球數位體驗應用程式更加豐富。 公司通常會並行執行多種數位體驗應用程式，並需要滿足這些應用程式的開發、測試和部署需求，同時確保運作符合規範。
+Adobe Experience Platform旨在讓全球數位體驗應用程式更加豐富。 公司通常並行執行多種數位體驗應用程式，並需要滿足這些應用程式的開發、測試和部署需求，同時確保運作符合規範。
 
 In order to address this need, Experience Platform provides **sandboxes** which partition a single Platform instance into separate virtual environments to help develop and evolve digital experience applications.
 
@@ -50,7 +50,7 @@ In order to address this need, Experience Platform provides **sandboxes** which 
 
 ## Experience Platform API中的沙盒
 
-呼叫Experience Platform API時，必須在標題下提供沙盒名稱 `x-sandbox-name`。 例如，當呼叫 [Catalog Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml) ，以檢視「生產」沙盒內的所有資料集時，沙盒的名稱(&quot;prod&quot;)會作為API請求的標題提供：
+呼叫Experience Platform API時，必須在標題下提供沙盒名稱 `x-sandbox-name`。 例如，在呼叫以檢視「生產」 [!DNL Catalog Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml) 沙盒內的所有資料集時，沙盒的名稱(&quot;prod&quot;)會作為API請求的標題提供：
 
 ```shell
 curl -X GET \
