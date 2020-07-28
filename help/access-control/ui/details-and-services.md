@@ -18,7 +18,7 @@ ht-degree: 2%
 
 ![profile-settings](../images/profile-settings.png)
 
-此時將 *[!UICONTROL 出現]* 「配置檔案設定」菜單，從「詳細 *[!UICONTROL 資訊]* 」頁籤開始。 此頁籤允許您輸入和編輯配置式 **[!UICONTROL 名稱]** 和 **[!UICONTROL 說明]**。 您也可以修改您 **[!UICONTROL 帳戶的「顯示名稱]** 」以及電子郵件通知設定。
+此時 *[!UICONTROL 會出現]* 「描述檔設定」功能表，從「詳細資 *[!UICONTROL 訊]* 」標籤開始。 此頁籤允許您輸入和編輯配置式 **[!UICONTROL 名稱]** 和 **[!UICONTROL 說明]**。 您也可以修改您 **[!UICONTROL 帳戶的「顯示名稱]** 」以及電子郵件通知設定。
 
 ![edit-details-settings](../images/edit-details-settings.png)
 
