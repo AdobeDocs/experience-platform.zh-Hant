@@ -16,7 +16,7 @@ ht-degree: 4%
 
 ## 概述 {#overview}
 
-直接 [!DNL Demandbase] 取得Adobe Analytics的B2B帳戶見解，您可依據產業、收入和目標帳戶劃分流量和行為。 此以帳戶為基礎的檢視可針對您最有價值的訪客提供參與、轉化和來源的獨特見解。
+直接 [!DNL Demandbase] 取得Adobe Analytics的B2B帳戶見解，您可依據產業、收入和目標帳戶劃分流量和行為。 此以帳戶為基礎的檢視為最具價值的訪客提供參與度、轉化和來源的獨特見解。
 
 [!DNL Demandbase] 是Adobe即時客戶資料平台中的分析擴充功能。 如需擴充功能的詳細資訊，請參閱 [Adobe Exchange的擴充功能頁面](https://exchange.adobe.com/experiencecloud.details.101605.html)。
 
