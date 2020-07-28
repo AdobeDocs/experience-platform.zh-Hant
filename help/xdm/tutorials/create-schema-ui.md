@@ -291,7 +291,7 @@ More information about relationships and other schema metadata can be found in t
 
 ## 後續步驟和其他資源
 
-現在，您已完成「忠誠[!UICONTROL 成員]」架構的構成，您可以在編輯器的「結構 ** 」區段中看到完整架構。 單 **[!UICONTROL 擊]** 「保存」(Save [!DNL Schema Library])，模式將保存到中， [!DNL Schema Registry]以便由訪問。
+現在，您已完成「忠誠[!UICONTROL 成員]」架構的構成，您可以在編輯器的「結構 ** 」區段中看到完整架構。 單 **[!UICONTROL 擊]** 「保存」(Save [!DNL Schema Library])，模式將保存到中， [!DNL Schema Registry]供訪問。
 
 您的新架構現在可用來將資料內嵌至 [!DNL Platform]。 請記住，一旦使用架構來收錄資料，則只能進行加性變更。 有關方案 [版本化的詳細資訊](../schema/composition.md) ，請參閱方案構成的基本資訊。
 
