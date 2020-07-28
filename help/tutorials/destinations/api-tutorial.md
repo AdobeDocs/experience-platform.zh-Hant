@@ -5,6 +5,9 @@ title: 使用API建立目標並啟用資料
 topic: tutorial
 translation-type: tm+mt
 source-git-commit: 4b232ac12db32ff1102f634af2bbde706edfa05a
+workflow-type: tm+mt
+source-wordcount: '57'
+ht-degree: 14%
 
 ---
 
