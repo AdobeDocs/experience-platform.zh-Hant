@@ -20,7 +20,7 @@ ht-degree: 5%
 
 該函 `isNull` 數確定對象引用是否不存在。
 
-**格式**
+**Format**
 
 ```sql
 {OBJECT}.isNull()
@@ -38,7 +38,7 @@ person.homeAddress.isNull()
 
 該函 `isNotNull` 數確定是否存在對象引用。
 
-**格式**
+**Format**
 
 ```sql
 {OBJECT}.isNotNull()
