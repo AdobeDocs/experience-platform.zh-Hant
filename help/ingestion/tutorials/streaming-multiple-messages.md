@@ -29,7 +29,7 @@ ht-degree: 1%
 
 - 授權： 生產者 `{ACCESS_TOKEN}`
 
-所有POST請求都需要額外的標題：
+所有POST要求都需要額外的標題：
 
 - 內容類型： application/json
 
