@@ -217,7 +217,7 @@ curl -X GET \
 
 ### 資料集「架構」屬性（已過時- EOL 2019-05-30）
 
-資料集可能包含「架構」屬性，該屬性現在已過時，並且暫時可用以向後相容。 例如，與先前所做的清單(GET)請求類似，其中查詢參數中的&quot;schema&quot;被取代為&quot;schemaRef&quot;，可能會傳 `properties` 回下列內容：
+資料集可能包含「架構」屬性，該屬性現在已過時，並且暫時可用以向後相容。 例如，與先前所做的清單(GET)要求類似，其中查詢參數中的&quot;schema&quot;被取代為&quot;schemaRef&quot;的 `properties` 請求可能會傳回下列內容：
 
 ```json
 {
