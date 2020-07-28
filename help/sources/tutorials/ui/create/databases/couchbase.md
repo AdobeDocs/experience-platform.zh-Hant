@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 在UI中建立Couchbase來源連接器
 topic: overview
 translation-type: tm+mt
-source-git-commit: d3c725c4760acb3857a67d0d30b24732c963a030
+source-git-commit: 4f7d7e2bf255afe1588dbe7cfb2ec055f2dcbf75
 workflow-type: tm+mt
 source-wordcount: '466'
 ht-degree: 1%
@@ -14,7 +14,7 @@ ht-degree: 1%
 
 # 在UI中 [!DNL Couchbase] 建立來源連接器
 
-> [!NOTE]
+>[!NOTE]
 > 連接 [!DNL Couchbase] 器為測試版。 如需使用 [測試版標籤連接器的詳細資訊](../../../../home.md#terms-and-conditions) ，請參閱來源概觀。
 
 中的來源連 [!DNL Adobe Experience Platform] 接器可讓您依計畫接收外部來源的資料。 本教學課程提供使用使用者介 [!DNL Couchbase] 面建立來源連接器 [!DNL Platform] 的步驟。
