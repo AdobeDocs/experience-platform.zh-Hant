@@ -5,6 +5,9 @@ title: 沙盒API開發人員指南
 topic: developer guide
 translation-type: tm+mt
 source-git-commit: b4741cdfd065bbaed7f2feeafe8619191e4b8f6c
+workflow-type: tm+mt
+source-wordcount: '337'
+ht-degree: 0%
 
 ---
 
@@ -27,7 +30,7 @@ Adobe Experience Platform中的沙盒可提供獨立的開發環境，讓您測�
 
 本指南要求您完成驗證教 [學課程](../../tutorials/authentication.md) ，才能成功呼叫平台API。 完成驗證教學課程後，所有Experience Platform API呼叫中每個必要標題的值都會顯示在下方：
 
-* 授權：生產者 `{ACCESS_TOKEN}`
+* 授權： 生產者 `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
 * x-gw-ims-org-id: `{IMS_ORG}`
 
@@ -37,7 +40,7 @@ Adobe Experience Platform中的沙盒可提供獨立的開發環境，讓您測�
 
 所有包含裝載（POST、PUT和PATCH）的請求都需要額外的標題：
 
-* 內容類型：application/json
+* 內容類型： application/json
 
 ## 後續步驟
 
