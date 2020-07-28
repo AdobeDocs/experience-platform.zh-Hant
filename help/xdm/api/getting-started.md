@@ -242,4 +242,4 @@ curl -X GET \
 
 ## 後續步驟
 
-本檔案涵蓋對 [!DNL Schema Registry] API進行呼叫所需的先決條件知識，包括必要的驗證憑證。 您現在可以繼續閱讀本開發人員指南中提供的範例呼叫，並依照其指示進行。 有關如何在API中建立架構的完整逐步說明，請參閱下列教 [學課程](../tutorials/create-schema-api.md)。
+本檔案涵蓋對 [!DNL Schema Registry] API進行呼叫所需的先決條件知識，包括必要的驗證認證。 您現在可以繼續閱讀本開發人員指南中提供的範例呼叫，並依照其指示進行。 有關如何在API中建立架構的完整逐步說明，請參閱下列教 [學課程](../tutorials/create-schema-api.md)。
