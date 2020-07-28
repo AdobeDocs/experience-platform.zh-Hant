@@ -5,6 +5,9 @@ title: 在UI中建立Adobe Audience Manager來源連接器
 topic: overview
 translation-type: tm+mt
 source-git-commit: f09ff4d1b159a6989868c5cfc35b361cfb640a99
+workflow-type: tm+mt
+source-wordcount: '269'
+ht-degree: 2%
 
 ---
 
@@ -23,7 +26,7 @@ source-git-commit: f09ff4d1b159a6989868c5cfc35b361cfb640a99
 
 ![](../../../../images/tutorials/create/aam/aam_catalog.png)
 
-將出現一個對話框。 按一下 **連接** ，建立連接。
+對話方塊隨即顯示。按一下 **連接** ，建立連接。
 
 ![](../../../../images/tutorials/create/aam/aam_connect_full.png)
 
