@@ -258,7 +258,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/jobs \
 
 ## 擷取特定區段工作 {#get}
 
-您可以向端點發出GET請求，並提供您想在請求路徑中檢索的區段作業ID，以檢索有關特定區段作業的詳細資訊。 `/segment/jobs`
+您可以向端點提出GET請求，並在請求路徑中提供您要檢索的區段作業的ID，以檢索有關特定區段作業的詳細資訊。 `/segment/jobs`
 
 **API格式**
 
