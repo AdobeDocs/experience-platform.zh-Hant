@@ -5,6 +5,9 @@ description: 建立與SFTP伺服器的即時對外連線，以定期從Experienc
 seo-description: 建立與SFTP伺服器的即時對外連線，以定期從Experience Platform匯出分隔資料檔案。
 translation-type: tm+mt
 source-git-commit: c3fe5753fb23f99076f9c85b4e07af2d25a121a9
+workflow-type: tm+mt
+source-wordcount: '132'
+ht-degree: 0%
 
 ---
 
@@ -23,6 +26,6 @@ source-git-commit: c3fe5753fb23f99076f9c85b4e07af2d25a121a9
 
 對於SFTP目標，在「驗證」步驟的建立目標工作流中輸入以 **下資訊** :
 
-* **主機**:SFTP儲存位置的位址
-* **使用者名稱**:登入SFTP儲存位置的使用者名稱
-* **密碼**:登入SFTP儲存位置的密碼
+* **主機**: SFTP儲存位置的位址
+* **使用者名稱**: 登入SFTP儲存位置的使用者名稱
+* **密碼**: 登入SFTP儲存位置的密碼
