@@ -20,7 +20,7 @@ ht-degree: 4%
 
 該 `[]` （過濾器）函式允許將過濾器應用於陣列並返回與指定條件匹配的陣列的子集。
 
-**格式**
+**Format**
 
 ```sql
 {ARRAY}[filter]
@@ -38,7 +38,7 @@ xEvent[productListItems[SKU="PS"]]
 
 ( `^` up)運算子可讓您參考上層篩選器中的屬性。
 
-**格式**
+**Format**
 
 ```sql
 {ARRAY}[{FILTER_1}[{FILTER_2} or ^{PROPERTY}]]
