@@ -26,7 +26,7 @@ Adobe Experience Platform的重要部分，在於能夠跨不同通道瞭解客�
 
 ## 建立臨機結構
 
-在特定情況下，可能需要建立(XDM)架構，其中欄位的名稱僅限單一資料集使用。 [!DNL Experience Data Model] 這稱為「臨機」架構。 臨機結構描述用於各種資料擷 [取工作流程](../ingestion/home.md) , [!DNL Experience Platform]包括擷取CSV檔案並建立特定類型的 [來源連線](../sources/home.md)。 建立臨機架構是使用「架構註冊表API」來完成的，其目的是與其他教學課程搭配使用，而教學課程需要在工作流程中建立臨機架構。 [!DNL Experience Platform] 若要開始建立臨機結構，請參閱使用API [建立臨機結構的教學課程](../xdm/tutorials/ad-hoc.md)。
+在特定情況下，可能需要建立(XDM)架構，其中欄位的名稱僅限單一資料集使用。 [!DNL Experience Data Model] 這稱為「臨機」架構。 臨機結構描述用於各種資料擷 [取工作流程](../ingestion/home.md) , [!DNL Experience Platform]包括擷取CSV檔案並建立特定類型的 [來源連線](../sources/home.md)。 建立臨機架構是使用「架構註冊表API」來完成的，其用途是與其他教學課程搭配使用，而教學課程需要在工作流程中建立臨機架構。 [!DNL Experience Platform] 若要開始建立臨機結構，請參閱使用API [建立臨機結構的教學課程](../xdm/tutorials/ad-hoc.md)。
 
 ## 後續步驟
 
