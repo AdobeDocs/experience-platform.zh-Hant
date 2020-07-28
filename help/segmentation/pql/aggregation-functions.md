@@ -20,7 +20,7 @@ ht-degree: 6%
 
 此函 `count` 數返回給定陣列中的元素數。
 
-**格式**
+**Format**
 
 ```sql
 {ARRAY}.count()
@@ -38,7 +38,7 @@ orders.count()
 
 該 `sum` 函式返回陣列中所有選定值的總和。
 
-**格式**
+**Format**
 
 ```sql
 {ARRAY}.sum()
@@ -56,7 +56,7 @@ orders.sum(order.price)
 
 該函 `average` 數返回陣列中所有選定值的算術平均值。
 
-**格式**
+**Format**
 
 ```sql
 {ARRAY}.average()
@@ -74,7 +74,7 @@ orders.average(order.price)
 
 該函 `min` 數返回陣列中所有選定值的最小值。
 
-**格式**
+**Format**
 
 ```sql
 {ARRAY}.min()
@@ -92,7 +92,7 @@ orders.min(order.price)
 
 函 `max` 數返回陣列中所有選定值中最大的值。
 
-**格式**
+**Format**
 
 ```sql
 {ARRAY}.max()
