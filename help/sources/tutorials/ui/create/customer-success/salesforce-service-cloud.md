@@ -17,7 +17,7 @@ ht-degree: 0%
 >[!NOTE]
 >連接 [!DNL Salesforce Service Cloud] 器為測試版。 如需使用 [測試版標籤連接器的詳細資訊](../../../../home.md#terms-and-conditions) ，請參閱來源概觀。
 
-Adobe Experience Platform中的來源連接器可讓您依計畫吸收外部來源的資料。 本教程提供使用用戶 [!DNL Salesforce Service Cloud] 介面建立源連接器（下稱「SSC」）的 [!DNL Platform] 步驟。
+Adobe Experience Platform中的來源連接器可讓您依計畫吸收外部來源的資料。 本教程提供使用用戶 [!DNL Salesforce Service Cloud] 介面建立源連接器（以下稱為「SSC」）的 [!DNL Platform] 步驟。
 
 ## 快速入門
 
