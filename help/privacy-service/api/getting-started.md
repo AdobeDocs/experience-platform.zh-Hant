@@ -17,7 +17,7 @@ ht-degree: 0%
 
 Adobe Experience Platform提 [!DNL Privacy Service] 供REST風格的API和使用者介面，可讓您跨Adobe Experience Cloud應用程式管理（存取和刪除）資料主體（客戶）的個人資料。 [!DNL Privacy Service] 還提供了集中審計和記錄機制，允許您訪問涉及應用程式的作業的狀態和 [!DNL Experience Cloud] 結果。
 
-本指南涵蓋如何使用 [!DNL Privacy Service] API。 如需如何使用UI的詳細資訊，請參閱隱 [私服務UI概觀](../ui/overview.md)。 如需API中所有可用端點的完整清 [!DNL Privacy Service] 單，請參閱 [API參考](https://www.adobe.io/apis/experiencecloud/gdpr/api-reference.html)。
+本指南涵蓋如何使用 [!DNL Privacy Service] API。 如需如何使用UI的詳細資訊，請參閱隱私 [服務UI概觀](../ui/overview.md)。 如需API中所有可用端點的完整清 [!DNL Privacy Service] 單，請參閱 [API參考](https://www.adobe.io/apis/experiencecloud/gdpr/api-reference.html)。
 
 ## 快速入門 {#getting-started}
 
