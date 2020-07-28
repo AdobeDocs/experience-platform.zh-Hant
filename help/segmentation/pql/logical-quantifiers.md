@@ -20,7 +20,7 @@ ht-degree: 5%
 
 該函 `exists` 數確定在滿足所提供條件的陣列中項的存在。
 
-**格式**
+**Format**
 
 ```sql
 exists {VARIABLE} from {EXPRESSION} where {CONDITION}
@@ -45,7 +45,7 @@ exists E from xEvent where (E.commerce.item.price > 50), I from E.productListIte
 
 該函 `forall` 數確定陣列中滿足所有給定條件的所有項目。
 
-**格式**
+**Format**
 
 ```sql
 forall {VARIABLE} from {EXPRESSION} where {CONDITION}
