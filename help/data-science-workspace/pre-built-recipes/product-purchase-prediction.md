@@ -5,6 +5,9 @@ title: 產品購買方式
 topic: overview
 translation-type: tm+mt
 source-git-commit: e08460bc76d79920bbc12c7665a1416d69993f34
+workflow-type: tm+mt
+source-wordcount: '358'
+ht-degree: 6%
 
 ---
 
@@ -39,7 +42,7 @@ source-git-commit: e08460bc76d79920bbc12c7665a1416d69993f34
 | gederRatio | 數字 |
 | ageY | 數字 |
 | ageM | 數字 |
-| OptinEmail | 布林值 |
+| OptinEmail | Boolean |
 | optinMobile | 布林值 |
 | optinAddress | 布林值 |
 | 已建立 | 整數 |
