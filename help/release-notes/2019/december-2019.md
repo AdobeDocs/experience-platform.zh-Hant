@@ -55,7 +55,7 @@ Adobe Experience Platform可 [!DNL Decisioning Service] 讓您以程式設計方
 
 **已知問題**
 
-* 無。
+* 無.
 
 如需服 [務的完整簡介](../../decisioning-service/home.md) ，請參閱決策服務概觀。
 
@@ -74,7 +74,7 @@ Adobe Experience Platform可以從外部來源擷取資料，同時讓您使用�
 
 **已知問題**
 
-* 無。
+* 無.
 
 如需來源的詳細資訊，請參閱來 [源概觀](../../sources/home.md)。
 
