@@ -417,7 +417,7 @@ curl -X POST\
 
 **回應**
 
-成功的請求會傳回HTTP回應狀態201（已建立），回應主體包含新建立混合的詳細資料，包括 `$id`、 `meta:altIt`和 `version`。 這些值是唯讀的，由指定 [!DNL Schema Registry]。
+成功的請求會傳回HTTP回應狀態201（已建立），其回應主體包含新建立的混音的詳細資訊，包括 `$id`、 `meta:altIt`和 `version`。 這些值是唯讀的，由指定 [!DNL Schema Registry]。
 
 ```JSON
 {
