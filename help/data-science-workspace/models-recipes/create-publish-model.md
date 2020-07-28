@@ -100,7 +100,7 @@ ht-degree: 0%
    ![](../images/models-recipes/model-walkthrough/browse_recipes.png)
 2. 按一下「方式」的名 **** 稱，並輸入「方式」的概述頁面，以尋找並開啟提供的「建議方式」。 從中 **** 心（如果沒有現有模型）或從「方式概述」頁面的右上角按一下「建立模型」。
    ![](../images/models-recipes/model-walkthrough/recommendations_recipe_110.png)
-3. 會顯示可用的訓練輸入資料集清單，選取「 **[!UICONTROL Recommendations輸入資料集」]** ，然後按一 **[!UICONTROL 下「Next]**」。
+3. 會顯示可用的訓練輸入資料集清單，選取「 **[!UICONTROL Recommendations輸入資料集」]** ，然後按一 **[!UICONTROL 下「Next」]**。
    ![](../images/models-recipes/model-walkthrough/select_dataset.png)
 4. 提供模型的名稱，例如「產品建議模型」。 列出模型的可用配置，包含模型的預設培訓和計分行為的設定。 由於這些配置是您組織專屬的，因此不需要進行任何更改。 查看配置，然後按一下 **[!UICONTROL 完成]**。
    ![](../images/models-recipes/model-walkthrough/configure_model.png)
