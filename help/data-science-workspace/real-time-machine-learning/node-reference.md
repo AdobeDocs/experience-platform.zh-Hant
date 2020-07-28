@@ -128,7 +128,7 @@ msg6 = model_train.process(msg5)
 | params.model_params | 模型超參數，請參閱 [sklearn API(map/dict)檔案](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html) ，以取得詳細資訊。 |
 | node_instance.process(data_message_from_previous_node) | 該方法 `process()` 從前一個節點取用DataMsg並應用轉換。 這取決於當前使用的節點。 |
 
-### 分割
+### Split
 
 使用以下節點將資料幀拆分為通過或進行訓練和 `train_size` 測試 `test_size`。 這會傳回具有多索引的資料幀。 您可以使用以下示例訪問訓練和測試資料幀 `msg5.data.xs(“train”)`。
 
