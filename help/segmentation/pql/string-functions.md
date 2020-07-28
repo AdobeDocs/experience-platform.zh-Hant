@@ -20,7 +20,7 @@ ht-degree: 6%
 
 函 `like` 數用於確定字串是否與指定的模式匹配。
 
-**格式**
+**Format**
 
 ```sql
 {STRING_1} like {STRING_2}
@@ -43,7 +43,7 @@ city like "%es%"
 
 函 `startsWith` 數用來判斷字串是否以指定的子字串開頭。
 
-**格式**
+**Format**
 
 ```sql
 {STRING_1}.startsWith({STRING_2}, {BOOLEAN})
@@ -67,7 +67,7 @@ person.name.startsWith("Joe")
 
 函 `doesNotStartWith` 數用於判斷字串是否不以指定的子字串開頭。
 
-**格式**
+**Format**
 
 ```sql
 {STRING_1}.doesNotStartWith({STRING_2}, {BOOLEAN})
@@ -81,7 +81,7 @@ person.name.startsWith("Joe")
 
 **範例**
 
-以下PQL查詢會區分大小寫確定人員的姓名不是以&quot;Joe&quot;開頭。
+以下PQL查詢會區分大小寫，確定人員名稱不以&quot;Joe&quot;開頭。
 
 ```sql
 person.name.doesNotStartWith("Joe")
@@ -91,7 +91,7 @@ person.name.doesNotStartWith("Joe")
 
 函 `endsWith` 數用於確定字串是否以指定的子字串結尾。
 
-**格式**
+**Format**
 
 ```sql
 {STRING_1}.endsWith({STRING_2}, {BOOLEAN})
@@ -115,7 +115,7 @@ person.emailAddress.endsWith(".com")
 
 函 `doesNotEndWith` 數用於判斷字串是否未以指定的子字串結尾。
 
-**格式**
+**Format**
 
 ```sql
 {STRING_1}.doesNotEndWith({STRING_2}, {BOOLEAN})
@@ -139,7 +139,7 @@ person.emailAddress.doesNotEndWith(".com")
 
 函 `contains` 數用於確定字串是否包含指定的子字串。
 
-**格式**
+**Format**
 
 ```sql
 {STRING_1}.contains({STRING_2}, {BOOLEAN})
@@ -163,7 +163,7 @@ person.emailAddress.contains("2010@gm")
 
 函 `doesNotContain` 數用於判斷字串是否不包含指定的子字串。
 
-**格式**
+**Format**
 
 ```sql
 {STRING_1}.doesNotContain({STRING_2}, {BOOLEAN})
@@ -187,7 +187,7 @@ person.emailAddress.doesNotContain("2010@gm")
 
 函 `equals` 數用來判斷字串是否等於指定字串。
 
-**格式**
+**Format**
 
 ```sql
 {STRING_1}.equals({STRING_2})
@@ -210,7 +210,7 @@ person.name.equals("John")
 
 函 `notEqualTo` 數用於判斷字串是否不等於指定字串。
 
-**格式**
+**Format**
 
 ```sql
 {STRING_1}.notEqualTo({STRING_2})
@@ -233,7 +233,7 @@ person.name.notEqualTo("John")
 
 函 `matches` 數用於確定字串是否與特定規則運算式匹配。 如需規則運算 [式中的比對模式](https://docs.oracle.com/javase/8/docs/api/java/util/regex/Pattern.html) ，請參閱本檔案。
 
-**格式**
+**Format**
 
 ```sql
 {STRING_1}.matches(STRING_2})
@@ -251,7 +251,7 @@ person.name.matches("(?i)^John")
 
 該函 `regexGroup` 數用於根據所提供的規則運算式提取特定資訊。
 
-**格式**
+**Format**
 
 ```sql
 {STRING}.regexGroup({EXPRESSION})
