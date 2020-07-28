@@ -5,6 +5,9 @@ description: 描述
 seo-description: seo說明
 translation-type: tm+mt
 source-git-commit: f5bc9beb59e83b0411d98d901d5055122a124d07
+workflow-type: tm+mt
+source-wordcount: '37'
+ht-degree: 5%
 
 ---
 
@@ -25,4 +28,4 @@ source-git-commit: f5bc9beb59e83b0411d98d901d5055122a124d07
 
 >[!VIDEO](https://youtu.be/ypS_CKym5NQ)
 
-選擇「編輯> [!UICONTROL Processing Rules] 執行某些動作」。 使用 [!DNL Microsoft Visual Code]。
+選擇「編輯> [!UICONTROL 處理規則] 」以執行某些動作。 使用 [!DNL Microsoft Visual Code]。
