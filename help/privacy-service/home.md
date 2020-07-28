@@ -94,7 +94,7 @@ UI [!DNL Privacy Service] 允許您使用圖形介面建立和監視隱私作業
 | 監控方法 | 說明 |
 | --- | --- |
 | [!DNL Privacy Service] UI | UI [!DNL Privacy Service] 提供監控控制面板，可讓您檢視所有作用中請求狀態的視覺化表示。 如需詳細 [資訊，請參閱Privacy Service使用指南](ui/overview.md) 。 |
-| [!DNL Privacy Service] API | 您可以使用API提供的查閱端點，以程式設計方式監控隱私權工作的 [!DNL Privacy Service] 狀態。 請參閱隱 [私權服務開發人員指南](./api/getting-started.md) ，以取得如何使用API的詳細步驟。 |
+| [!DNL Privacy Service] API | 您可以使用API提供的查閱端點，以程式設計方式監控隱私權工作的 [!DNL Privacy Service] 狀態。 如需如何 [使用API的詳細步驟](./api/getting-started.md) ，請參閱隱私權服務開發人員指南。 |
 | [!DNL Privacy Events] | [!DNL Privacy Events] 運用傳送至已設定網頁掛接的Adobe I/O事件，以協助有效率的工作要求自動化。 它們可降低或免除輪詢 [!DNL Privacy Service] API的需求，以檢查工作是否完成或工作流程中是否達到特定里程碑。 如需詳細資訊，請 [參閱訂閱隱私權事件](./privacy-events.md) 的教學課程。 |
 
 ## 後續步驟
