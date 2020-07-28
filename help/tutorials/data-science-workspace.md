@@ -53,7 +53,7 @@ API [!DNL Sensei Machine Learning] 為資料科學家提供機制來組織和管
 - 下載建立方式的必要先決條件。
 - 瞭解以 [!DNL Docker] 模型為基礎的製作。
 - 建立適 [!DNL Docker] 用於 [!DNL Python]、R、PySpark或Scala([!DNL Spark])的影像。
-- 取得來 [!DNL Docker] 源檔案URL。
+- 取得 [!DNL Docker] 來源檔案URL。
 
 若要進一步瞭解，請依照套件 [來源檔案，進入配方教學課程](../data-science-workspace/models-recipes/package-source-files-recipe.md)。
 
