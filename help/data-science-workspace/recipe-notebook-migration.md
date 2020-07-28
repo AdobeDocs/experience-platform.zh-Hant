@@ -334,7 +334,7 @@ PySpark配方不再使用二進位工件，而是需要建立Docker影像。 如
 
 PySpark 3([!DNL Spark] 2.4)筆記型電腦使用Python 3 Kernel，而非PySpark 3（Spark 2.3 —— 不建議使用）筆記型電腦中已過時的PySpark內核。
 
-要在 [!DNL JupyterLab] UI中確認或更改內核，請選擇筆記本右上方導航欄中的內核按鈕。 如果您使用其中一個預定義的啟動程式筆記型電腦，則會預選內核。 以下示例使用PySpark 3([!DNL Spark] 2.4) *Aggregation* 筆記本啟動器。
+要在 [!DNL JupyterLab] UI中確認或更改內核，請選擇筆記本右上方導航欄中的內核按鈕。 如果您使用其中一個預定義的啟動程式筆記型電腦，則會預選內核。 以下示例使用PySpark 3([!DNL Spark] 2.4) *Aggregation筆記本啟動器* 。
 
 ![檢查內核](./images/migration/pyspark-migration/check-kernel.png)
 
