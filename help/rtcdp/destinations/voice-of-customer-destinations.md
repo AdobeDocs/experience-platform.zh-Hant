@@ -5,6 +5,9 @@ description: 語音平台收集和整理來自各種來源的資料，包括語�
 seo-description: 語音平台收集和整理來自各種來源的資料，包括語音訊息、通話資料和聊天對話。 可以篩選和分析收集的資訊，讓公司最佳化其網站，以符合其需求。
 translation-type: tm+mt
 source-git-commit: e4da80338dbfbad70dfb3cf7df9fe589e949e788
+workflow-type: tm+mt
+source-wordcount: '164'
+ht-degree: 0%
 
 ---
 
