@@ -7,7 +7,7 @@ translation-type: tm+mt
 source-git-commit: fb4ffa2c95365905f5417586fa7ecf88523009a0
 workflow-type: tm+mt
 source-wordcount: '742'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
@@ -76,5 +76,5 @@ Adobe Audience Manager在目錄中建立一個連線： **Audience Manager Conne
 | Audience Manager資料 | 延遲性 | 附註 |
 | --- | --- | --- |
 | 即時資料 | &lt; 35 分鐘. | 從在Realtime節點捕獲到在Platform Data Lake上顯示的時間。 |
-| 傳入資料 | &lt; 13小時 | 從在S3儲存區擷取到出現在平台資料湖上的時間。 |
+| 傳入資料 | &lt; 13 小時 | 從在S3儲存區擷取到出現在平台資料湖上的時間。 |
 | 描述檔資料 | &lt; 2 天 | 從Realtime/Inbound（即時／入站）資料捕獲到添加到用戶配置檔案並最終顯示在平台資料湖上的時間。 |
