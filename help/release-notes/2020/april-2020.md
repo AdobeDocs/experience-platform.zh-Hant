@@ -83,7 +83,7 @@ DULE框架通過用戶介面和DULE [!DNL Experience Platform][!DNL Policy Servi
 
 **已知問題**
 
-* 無。
+* 無.
 
 如需詳細資訊，請參閱資 [料管理概觀](../../data-governance/home.md)。
 
