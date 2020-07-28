@@ -98,7 +98,7 @@ ht-degree: 1%
 
 ![產品篩選](./images/insights/product-filter.png)
 
-### 地理位置
+### Geography
 
 「地 *理位置* 」篩選器會根據地區模型填入國家代碼。 根據您的資料，此篩選器可能存在或不存在。
 
