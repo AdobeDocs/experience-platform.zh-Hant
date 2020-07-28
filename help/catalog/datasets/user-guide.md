@@ -29,11 +29,11 @@ ht-degree: 0%
 
 ## 檢視資料集
 
-在UI中 [!DNL Experience Platform] ，按一下左 **[!UICONTROL 側導覽中的「資料集]** 」，以開啟「資料集 ** 」控制面板。 控制面板會列出您組織的所有可用資料集。 會針對每個列出的資料集顯示詳細資訊，包括其名稱、資料集所遵守的架構，以及最近擷取執行的狀態。
+在UI中 [!DNL Experience Platform] ，按一下左 **[!UICONTROL 側導覽中的「資料集]** 」，以開啟「資料集 ** 」控制面板。 控制面板會列出您組織的所有可用資料集。 系統會針對每個列出的資料集顯示詳細資訊，包括其名稱、資料集所遵守的架構，以及最近擷取執行的狀態。
 
 ![](../images/datasets/user-guide/browse_datasets.png)
 
-按一下資料集的名稱以存取其「資 *[!UICONTROL 料集」活動畫面]* ，並查看您選取之資料集的詳細資訊。 該活動頁籤包括圖形，該圖形可視化正在消耗的消息速率以及成功和失敗批的清單。
+按一下資料集的名稱以存取其「資 *[!UICONTROL 料集」活動畫面]* ，並查看您選取之資料集的詳細資訊。 活動頁籤包括圖形，該圖形可視化正在消耗的消息速率以及成功和失敗批的清單。
 
 ![](../images/datasets/user-guide/dataset_activity_1.png)
 ![](../images/datasets/user-guide/dataset_activity_2.png)
