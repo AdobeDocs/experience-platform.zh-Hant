@@ -19,7 +19,7 @@ ht-degree: 0%
 ## 引入的概念：
 
 - **方式：** 配方是Adobe的模型規格術語，是代表特定機器學習、AI演算法或整合演算法、處理邏輯和設定的頂層容器，用來建立並執行已訓練的模型，進而協助解決特定的商業問題。
-- **Model:** A model is an instance of a machine learning recipe that is trained using historical data and configurations to solve for a business use case.
+- **型號：** 模型是機器學習方式的實例，使用歷史資料和配置進行訓練，以針對業務使用案例進行解決。
 - **培訓：** 培訓是學習模式和從標籤資料獲得見解的過程。
 - **計分：** 計分是使用訓練好的模型，從資料產生見解的程式。
 
@@ -27,7 +27,7 @@ ht-degree: 0%
 
 從頭開始建立配方可在內部完成 [!DNL Data Science Workspace]。 若要開始，請導覽至 [Adobe Experience Platform](https://platform.adobe.com) ，然後按一下左側 **[!UICONTROL 的「筆記型電腦]** 」標籤。 從中選擇「方式產生器」範本，以建立新的筆記本 [!DNL JupyterLab Launcher]。
 
-Recipe Builder  筆記型電腦可讓您在筆記型電腦中執行訓練和計分。 This gives you the flexibility to make changes to their `train()` and `score()` methods in between running experiments on the training and scoring data. 一旦您對訓練和計分的輸出感到滿意，就可以建立配方，以便使用筆記型電腦， [!DNL Data Science Workspace] 將配方功能內建在Recipe Builder筆記型電腦上。
+Recipe Builder  筆記型電腦可讓您在筆記型電腦中執行訓練和計分。 這可讓您在針對訓練和計分資料執行 `train()` 實驗 `score()` 時，靈活地變更其和方法。 一旦您對訓練和計分的輸出感到滿意，就可以建立配方，以便使用筆記型電腦， [!DNL Data Science Workspace] 將配方功能內建在Recipe Builder筆記型電腦上。
 
 >[!NOTE]
 >
@@ -96,9 +96,9 @@ data_access_sdk_python
 
 ![](../images/jupyterlab/create-recipe/datasets.png)
 
-The same information can be found on [Adobe Experience Platform](https://platform.adobe.com/) under the **[Schema](https://platform.adobe.com/schema)**and**[Datasets](https://platform.adobe.com/dataset/overview)** tabs.
+在 [Adobe Experience Platform的「架構」和「資料集](https://platform.adobe.com/) 」標籤下 **[，可找到相](https://platform.adobe.com/schema)**同的資訊**[](https://platform.adobe.com/dataset/overview)** 。
 
-By default, the following configuration parameters are set for you when you access data:
+預設情況下，在訪問資料時會為您設定以下配置參數：
 
 - `ML_FRAMEWORK_IMS_USER_CLIENT_ID`
 - `ML_FRAMEWORK_IMS_TOKEN`
@@ -107,56 +107,56 @@ By default, the following configuration parameters are set for you when you acce
 
 ## 訓練資料載入器 {#training-data-loader}
 
-訓練資料載入器的目的，是執行個體化用於建立機器學習模型的資料。 Typically, there are two tasks that the training data loader will accomplish:
-- Load data from [!DNL Platform]
+訓練資料載入器的目的，是執行個體化用於建立機器學習模型的資料。 通常，培訓資料載入器將完成兩項工作：
+- 從 [!DNL Platform]
 - 資料準備與功能工程
 
-The following two sections will go over loading data and data preparation.
+以下兩節將重新載入資料和資料準備。
 
-### Loading data {#loading-data}
+### 載入資料 {#loading-data}
 
-This step uses the [pandas dataframe](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.html). 您可使用SDK( [!DNL Adobe Experience Platform] )從檔案載入資料，或使用熊貓或功能從外部來源 [!DNL Platform] 載入`platform_sdk``read_csv()``read_json()` 資料。
+這個步驟使用 [熊貓資料框](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.html)。 您可使用SDK( [!DNL Adobe Experience Platform] )從檔案載入資料，或使用熊貓或功能從外部來源 [!DNL Platform] 載入`platform_sdk``read_csv()``read_json()` 資料。
 
 - [!DNL Platform SDK](#platform-sdk)
-- [External sources](#external-sources)
+- [外部來源](#external-sources)
 
 >[!NOTE]
 >
 >
->In the Recipe Builder notebook, data is loaded via the `platform_sdk` data loader.
+>在Recipe Builder筆記型電腦中，資料會透過資料載入器 `platform_sdk` 載入。
 
 ### [!DNL Platform] SDK {#platform-sdk}
 
-For an in-depth tutorial on using the `platform_sdk` data loader, please visit the [Platform SDK guide](../authoring/platform-sdk.md). This tutorial provides information on build authentication, basic reading of data, and basic writing of data.
+如需有關使用資料載入器的深入教 `platform_sdk` 學課程，請造訪 [Platform SDK指南](../authoring/platform-sdk.md)。 本教學課程提供有關建立驗證、基本資料讀取和基本資料寫入的資訊。
 
-### External sources {#external-sources}
+### 外部來源 {#external-sources}
 
-This section shows you how to import a JSON or CSV file to a pandas object. Official documentation from the pandas library can be found here:
+本節將說明如何將JSON或CSV檔案匯入至Apcotes物件。 熊貓圖書館的官方檔案可在這裡找到：
 - [read_csv](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.read_csv.html)
 - [read_json](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.read_json.html)
 
-首先，以下是匯入CSV檔案的範例。 引 `data` 數是CSV檔案的路徑。 This variable was imported from the `configProperties` in the [previous section](#configuration-files).
+首先，以下是匯入CSV檔案的範例。 引 `data` 數是CSV檔案的路徑。 此變數是從上一節 `configProperties` 中匯 [入的](#configuration-files)。
 
 ```PYTHON
 df = pd.read_csv(data)
 ```
 
-You can also import from a JSON file. The `data` argument is the path to the CSV file. This variable was imported from the `configProperties` in the [previous section](#configuration-files).
+您也可以從JSON檔案匯入。 引 `data` 數是CSV檔案的路徑。 此變數是從上一節 `configProperties` 中匯 [入的](#configuration-files)。
 
 ```PYTHON
 df = pd.read_json(data)
 ```
 
-Now your data is in the dataframe object and can be analyzed and manipulated in the [next section](#data-preparation-and-feature-engineering).
+現在，您的資料已位於dataframe物件中，可在下一節中加以分 [析和處理](#data-preparation-and-feature-engineering)。
 
-### From Data Access SDK (Deprecated)
+### 從資料存取SDK（已過時）
 
 >[!CAUTION]
 >
 >
 > `data_access_sdk_python` 不再建議使用，請參閱「將 [資料存取程式碼轉換為平台SDK](../authoring/platform-sdk.md) 」，以取得有關使用資料載入器 `platform_sdk` 的指南。
 
-Users can load data using the Data Access SDK. The library can be imported at the top of the page by including the line:
+使用者可使用資料存取SDK載入資料。 您可加入下列行，將程式庫匯入頁面頂端：
 
 `from data_access_sdk_python.reader import DataSetReader`
 
@@ -174,7 +174,7 @@ df = prodreader.load(data_set_id=configProperties['trainingDataSetId'],
 >[!NOTE]
 >
 >
->As mentioned in the [Configuration File section](#configuration-files), the following configuration parameters are set for you when you access data from [!DNL Experience Platform]:
+>如「配置文 [件」部分中所述](#configuration-files)，在從中訪問資料時為您設定以下配置參數 [!DNL Experience Platform]:
 > - `ML_FRAMEWORK_IMS_USER_CLIENT_ID`
 > - `ML_FRAMEWORK_IMS_TOKEN`
 > - `ML_FRAMEWORK_IMS_ML_TOKEN`
@@ -209,25 +209,25 @@ dataframe.drop('date', axis=1, inplace=True)
 ```
 
 在此範例中，對原始資料集有5項動作：
-- add `week` and `year` columns
+- 新增 `week` 和欄 `year`
 - 轉換 `storeType` 為指示符變數
 - 轉換 `isHoliday` 為數值變數
-- offset `weeklySales` to get future and past sales value
-- split data, by date, to `train` and `val` dataset
+- 抵銷 `weeklySales` 以獲得未來和過去的銷售價值
+- 依日期分割資料至 `train` 資料 `val` 集
 
-First, `week` and `year` columns are created and the original `date` column converted to [!DNL Python] [datetime](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.to_datetime.html). 周值和年值從日期時間對象中提取。
+首先， `week` 建立 `year` 列和列，並將原始列 `date` 轉換為日期時 [!DNL Python] 間 [](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.to_datetime.html)。 周值和年值從日期時間對象中提取。
 
 接著， `storeType` 會轉換為代表三種不同商店類型(`A`、 `B`和 `C`)的三欄。 每個值都包含一個布爾值，以狀態 `storeType` 為true。 該 `storeType` 列將被刪除。
 
-Similarly, `weeklySales` changes the `isHoliday` boolean to a numerical representation, one or zero.
+同樣地， `weeklySales` 將布爾值 `isHoliday` 更改為數字表示，一或零。
 
-This data is split between `train` and `val` dataset.
+此資料會在資料集和資 `train` 料集 `val` 之間分割。
 
-The `load()` function should complete with the `train` and `val` dataset as the output.
+函 `load()` 數應以和資料集 `train` 為 `val` 輸出。
 
 ### 計分資料載入器 {#scoring-data-loader}
 
-The procedure to load data for scoring is similar to the loading training data in the `split()` function. We use the Data Access SDK to load data from the `scoringDataSetId` found in our `recipe.conf` file.
+載入計分資料的程式類似於在函式中載入訓練資 `split()` 料。 我們使用Data Access SDK來載入檔案中 `scoringDataSetId` 的資料 `recipe.conf` 。
 
 ```PYTHON
 def load(configProperties):
@@ -245,7 +245,7 @@ def load(configProperties):
                          ims_org=configProperties['ML_FRAMEWORK_IMS_TENANT_ID'])
 ```
 
-After loading the data, data preparation and feature engineering is done.
+在載入資料後，完成資料準備和特徵工程。
 
 ```PYTHON
 #########################################
@@ -272,22 +272,22 @@ print("Scoring Data Load Finish")
 return df
 ```
 
-Since the purpose of our model is to predict future weekly sales, you will need to create a scoring dataset used to evaluate how well the model&#39;s prediction performs.
+由於我們模型的目的是預測未來每週銷售量，因此您需要建立評分資料集來評估模型預測的成效。
 
-This Recipe Builder notebook does this by offsetting our weeklySales 7 days forwards. Notice that there are measurements for 45 stores every week so you can shift the `weeklySales` values 45 datasets forwards into a new column called `weeklySalesAhead`.
+此Recipe Builder筆記型電腦可將我們每週7天的銷售額提前抵銷。 請注意，每週有45個商店的測量值，因此您可以將 `weeklySales` 45個資料集的值向前移入新的欄位，稱為 `weeklySalesAhead`。
 
 ```PYTHON
 df['weeklySalesAhead'] = df.shift(-45)['weeklySales']
 ```
 
-Similarly, you can create a column `weeklySalesLag` by shifted 45 back. Using this you can also calculate the difference in weekly sales and store them in column `weeklySalesDiff`.
+同樣地，您也可以將45位移 `weeklySalesLag` 回建立欄。 使用此功能，您也可以計算每週銷售額的差值，並將它們儲存在欄中 `weeklySalesDiff`。
 
 ```PYTHON
 df['weeklySalesLag'] = df.shift(45)['weeklySales']
 df['weeklySalesDiff'] = (df['weeklySales'] - df['weeklySalesLag']) / df['weeklySalesLag']
 ```
 
-Since you are offsetting the `weeklySales` datapoints 45 datasets forwards and 45 datasets backwards to create new columns, the first and last 45 data points will have NaN values. 您可以使用函式從資料集中移除這些點， `df.dropna()` 此函式可移除所有具有NaN值的列。
+由於您要向前偏移45 `weeklySales` 個資料集，並向後偏移45個資料集以建立新欄，因此前45個和後45個資料點將有NaN值。 您可以使用函式從資料集中移除這些點， `df.dropna()` 此函式可移除所有具有NaN值的列。
 
 ```PYTHON
 df.dropna(0, inplace=True)
@@ -297,20 +297,20 @@ df.dropna(0, inplace=True)
 
 ### 管線檔案 {#pipeline-file}
 
-The `pipeline.py` file includes logic for training and scoring.
+該檔 `pipeline.py` 案包含訓練和計分的邏輯。
 
 ### 培訓 {#training}
 
-The purpose of training is to create a model using features and labels in your training dataset.
+訓練的目的是使用訓練資料集中的功能和標籤來建立模型。
 
 >[!NOTE]
 >
 > 
->_Features_ refer to the input variable used by the machine learning model to predict the _labels_.
+>_功能_ ，是指機器學習模型用來預測標籤的輸入變 _數_。
 
-The `train()` function should include the training model and return the trained model. Some examples of different models can be found in the [scikit-learn user guide documentation](https://scikit-learn.org/stable/user_guide.html).
+功能 `train()` 應包括訓練模型和返回訓練模型。 scikit-learn使用指南檔案中提供 [了一些不同型號的示例](https://scikit-learn.org/stable/user_guide.html)。
 
-After choosing your training model, you will fit your x and y training dataset to the model and the function will return the trained model. 顯示此情況的範例如下：
+在選擇您的訓練模型後，您會將x和y訓練資料集符合模型，而函式會傳回已訓練的模型。 顯示此情況的範例如下：
 
 ```PYTHON
 def train(configProperties, data):
@@ -348,7 +348,7 @@ def train(configProperties, data):
 
 ### 計分 {#scoring}
 
-函 `score()` 數應包含計分演算法並傳回測量，以指出模型執行的成效。 該函 `score()` 數使用計分資料集標籤和訓練的模型來生成一組預測特徵。 These predicted values are then compared with the actual features in the scoring dataset. 在此範例中，函 `score()` 數使用訓練好的模型，使用計分資料集的標籤來預測特徵。 The predicted features are returned.
+函 `score()` 數應包含計分演算法並傳回測量，以指出模型執行的成效。 該函 `score()` 數使用計分資料集標籤和訓練的模型來生成一組預測特徵。 然後，將這些預測值與計分資料集中的實際特徵進行比較。 在此範例中，函 `score()` 數使用訓練好的模型，使用計分資料集的標籤來預測特徵。 會傳回預計的功能。
 
 ```PYTHON
 def score(configProperties, data, model):
@@ -370,7 +370,7 @@ def score(configProperties, data, model):
 
 ### 求值器檔案 {#evaluator-file}
 
-The `evaluator.py` file contains logic for how you wish to evaluate your trained recipe as well as how your training data should be split. In the retail sales example, the logic for loading and preparing the training data will be included. We will go over the two sections below.
+檔 `evaluator.py` 案包含您如何評估訓練方式以及如何分割訓練資料的邏輯。 在零售銷售範例中，將包含載入和準備培訓資料的邏輯。 我們將詳細介紹以下兩節。
 
 ### 分割資料集 {#split-the-dataset}
 
@@ -424,7 +424,7 @@ def evaluate(self, data=[], model={}, configProperties={}):
 
 檔案 `datasaver.py` 包含在測試計 `save()` 分時儲存預測的函式。 函 `save()` 數會擷取您的預測，並使用 [!DNL Experience Platform Catalog] API，將資料寫入您 `scoringResultsDataSetId` 在檔案中指定的 `scoring.conf` 位置。
 
-The example used in the retail sales sample recipe is seen here. Note the use of `DataSetWriter` library to write data to Platform:
+此處顯示零售銷售範例配方中使用的範例。 請注意，使用程 `DataSetWriter` 式庫將資料寫入平台：
 
 ```PYTHON
 from data_access_sdk_python.writer import DataSetWriter
@@ -455,7 +455,7 @@ def save(configProperties, prediction):
 
 ## 訓練與計分 {#training-and-scoring}
 
-當您變更筆記型電腦並想要訓練配方時，可以按一下列上方的相關按鈕，在儲存格中建立訓練執行。 Upon clicking the button, a log of commands and outputs from the training script will appear in the notebook (under the `evaluator.py` cell). Conda first installs all the dependencies, then the training is initiated.
+當您變更筆記型電腦並想要訓練配方時，可以按一下列上方的相關按鈕，在儲存格中建立訓練執行。 按一下該按鈕後，培訓指令碼中的命令和輸出日誌將顯示在筆記本中(單元格 `evaluator.py` 下)。 Conda首先安裝所有相依項，然後開始培訓。
 
 請注意，您必須至少執行一次培訓，才能執行計分。 按一下「執 **[!UICONTROL 行計分]** 」按鈕，將對培訓期間產生的已訓練模型評分。 計分指令碼將出現在下方 `datasaver.py`。
 
@@ -467,11 +467,11 @@ def save(configProperties, prediction):
 
 ![](../images/jupyterlab/create-recipe/create-recipe.png)
 
-After pressing the button, you are prompted to enter a recipe name. This name represents the actual recipe created on [!DNL Platform].
+按下按鈕後，系統會提示您輸入配方名稱。 此名稱代表在上建立的實際方式 [!DNL Platform]。
 
 ![](../images/jupyterlab/create-recipe/enter_recipe_name.png)
 
-Once you press **[!UICONTROL Ok]** you will be able to navigate to the new recipe on [Adobe Experience Platform](https://platform.adobe.com/). You can click on the **[!UICONTROL View Recipes]** button to take you to the **[!UICONTROL Recipes]** tab under **[!UICONTROL ML Models]**
+按「確 **[!UICONTROL 定]** 」後，您就可以導覽至 [Adobe Experience Platform上的新配方](https://platform.adobe.com/)。 您可以按一下「檢 **[!UICONTROL 視配方]** 」按鈕，將您帶至「ML模型」下的「配方 **[!UICONTROL 」標籤]****[!UICONTROL 。]**
 
 ![](../images/jupyterlab/create-recipe/recipe_creation_started.png)
 
@@ -482,18 +482,18 @@ Once you press **[!UICONTROL Ok]** you will be able to navigate to the new recip
 >[!CAUTION]
 > - 不要刪除任何檔案單元格
 > - 不要編輯 `%%writefile` 檔案儲存格頂端的行
-> - Do not create recipes in different notebooks at the same time
+> - 不要同時在不同的筆記本中建立配方
 
 
 ## 下一步 {#next-steps}
 
-By completing this tutorial, you have learned how to create a machine learning model in the Recipe Builder notebook. You have also learned how to exercise the notebook to recipe workflow within the notebook to create a recipe within [!DNL Data Science Workspace].
+完成本教學課程後，您就學會如何在Recipe Builder筆記型電腦中建立機器學習模型。 您還學習了如何在筆記型電腦中練習如何將筆記型電腦與配方工作流程結合，以便在其中建立配方 [!DNL Data Science Workspace]。
 
-To continue learning how to work with resources within [!DNL Data Science Workspace], please visit the [!DNL Data Science Workspace] recipes and models dropdown.
+若要繼續學習如何使用資源，請造 [!DNL Data Science Workspace]訪配方和模 [!DNL Data Science Workspace] 型下拉式清單。
 
 ## 其他資源 {#additional-resources}
 
-The following video is designed to support your understanding of building and deploying models.
+以下影片旨在協助您瞭解建立和部署模型。
 
 >[!VIDEO](https://video.tv.adobe.com/v/30575?quality=12&enable10seconds=on&speedcontrol=on)
 
