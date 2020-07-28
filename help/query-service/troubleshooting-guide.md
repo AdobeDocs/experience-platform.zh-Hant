@@ -5,6 +5,9 @@ title: Adobe Experience Platform查詢服務疑難排解指南
 topic: troubleshooting
 translation-type: tm+mt
 source-git-commit: c5bb112220b40fa6c2adfa89c80ddb87d382fbda
+workflow-type: tm+mt
+source-wordcount: '154'
+ht-degree: 3%
 
 ---
 
