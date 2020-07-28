@@ -4,17 +4,42 @@ seo-title: Adobe Experience Platform Web SDK說明
 description: 瞭解Adobe Experience Platform Web SDK是什麼，以及如何使用它。
 seo-description: 可讓Adobe Experience Cloud的客戶與Experience Cloud中的各種服務互動。
 translation-type: tm+mt
-source-git-commit: 7b07a974e29334cde2dee7027b9780a296db7b20
+source-git-commit: fc8b26e237821d5fa2d72fb38189894ed0b05271
 workflow-type: tm+mt
-source-wordcount: '429'
-ht-degree: 0%
+source-wordcount: '702'
+ht-degree: 2%
 
 ---
 
 
 # 什麼是Adobe Experience Platform Web SDK
 
-Adobe Experience Platform Web SDK是用戶端JavaScript程式庫，可讓Adobe Experience Cloud的客戶透過Adobe與各種服務 [!DNL Experience Cloud] 互動 [!DNL Experience Platform Edge Network]。
+Adobe Experience Platform Web SDK是用戶端JavaScript程式庫，可讓Adobe Experience Cloud的客戶透過Adobe與各種服務 [!DNL Experience Cloud] 互動 [!DNL Experience Platform Edge Network]。 除了JavaScript程式庫外，還有 [Launch擴充功能](https://docs.adobe.com/content/help/zh-Hant/launch/using/extensions-ref/adobe-extension/aep-extension/overview.html) ，可協助您進行Web SDK設定。
+
+## Experience Edge
+
+[!DNL Adobe Experience Platform Web SDK] 是組成Experience Edge的系列的一部分。 Experience Edge包含三種技術：
+
+* **[!DNL Adobe Experience Platform Web SDK]:**JavaScript SDK和擴充功能可[!DNL Launch]大幅簡化部署技術的作[!DNL Adobe]業
+* **Adobe Experience Platform Mobile SDK:** v5行動SDK的擴充功能，可讓客戶使用新的部署方法
+* **[!DNL Adobe Experience Platform Edge Network]:**全球分散式伺服器網路，提供新的產品部署方[!DNL Adobe]法
+
+此 [!DNL Adobe Experience Edge] 新架構適用於所有可定址通道的低延遲資料收集、可插拔運算和快速啟動資料。
+
+[!DNL Adobe Experience Edge] 為每個通道（JavaScript、Mobile、伺服器端）提供單一整合SDK，可將資料傳送至共同的Adobe網域(`adobedc.net`)，並接收單一裝載回傳資料和體驗。
+
+在伺服器端，統一的邊緣閘道和通用的平台服務架構，讓您輕鬆將外掛程式和部署新功能至此即時運算環境。  此架構特色：
+
+* 縮短客戶實現價值的時間
+* 結束「點」整合的需求
+* 與舊程式庫相比，提高效能
+* 降低成本
+* 提高創新速度
+* 為Adobe客戶創造持續的競爭優勢
+
+單一整合的邊緣系統可讓客戶將其所有通道的廣告、行銷或個人化宣傳活動管理為整合體驗。  它可讓 [!DNL Adobe] 客戶以較低的總擁有成本提供服務。  它還可讓即時邊緣可插拔，並讓其客戶更快速地在該即時系統中新增功能和客戶定義邏輯，以協助提高產品創新的速度。 [!DNL Adobe]
+
+## 影片概述
 
 以下視訊提供Adobe Experience Platform和的概 [!DNL Web SDK] 觀 [!DNL Edge Network]。
 
@@ -37,14 +62,13 @@ Adobe Experience Platform Web SDK取代下列SDK:
 
 >[!VIDEO](https://video.tv.adobe.com/v/34148?quality=12&learn=on)
 
-
 ## 快速入門
 
 我們強烈建議您 [參閱我們的快速入門手冊](getting-started/quick-start-with-launch.md) ，以取得如何開始使用Adobe Launch的快速教學課程。
 
 本產品不斷發展，不斷成長，以支援越來越多的使用案例。 為跟上最新的腳步，請查看我們支援 [的使用案例展示板](https://github.com/adobe/alloy/projects/5)。 我們會隨時更新目前支援的使用案例，以及我們正在進行的使用案例，讓您做出最佳決策。
 
-* __尚未支援的使用案例__ -這些是我們規劃中未來將支援的使用案例。
-* __使用案例進行中__ -這些是團隊目前正在完成的發行使用案例。
-* __支援的使用案例__ -這些是目前支援和適用的使用案例。
-* __我們不支援的使用案例__ -這些是我們決定不支援的使用案例。
+* **尚未支援的使用案例：** 這些是我們規劃中未來將支援的使用案例。
+* **進行中的使用案例：** 這些是團隊目前正在完成的發行使用案例。
+* **支援的使用案例：** 這些是目前支援的使用案例。
+* **我們不支援的使用案例：** 這些是我們決定不支援的使用案例。
