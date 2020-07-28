@@ -418,6 +418,6 @@ curl -X PATCH \
 
 遵循本教學課程，您已成功建立行銷動作的資料使用原則。 您現在可以繼續學習如何強制使 [用資料原則的教學課程](../enforcement/api-enforcement.md) ，以瞭解如何檢查是否有違反原則的情況，並在您的體驗應用程式中加以處理。
 
-如需有關 [!DNL Policy Service] API中不同可用作業的詳細資訊，請參 [閱政策服務開](../api/getting-started.md)發人員指南。 如需如何強制執行資料原則的 [!DNL Real-time Customer Profile] 詳細資訊，請參閱關於強制受 [眾區段資料使用符合性的教學課程](../../segmentation/tutorials/governance.md)。
+如需有關 [!DNL Policy Service] API中不同可用作業的詳細資訊，請參 [閱「原則服務開](../api/getting-started.md)發人員指南」。 如需如何強制執行資料原則的 [!DNL Real-time Customer Profile] 詳細資訊，請參閱關於強制受 [眾區段資料使用符合性的教學課程](../../segmentation/tutorials/governance.md)。
 
 要瞭解如何在用戶介面中管理使 [!DNL Experience Platform] 用策略，請參 [閱策略使用手冊](user-guide.md)。
