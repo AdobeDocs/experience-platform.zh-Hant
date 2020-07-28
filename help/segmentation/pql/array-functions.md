@@ -20,7 +20,7 @@ ht-degree: 5%
 
 此函 `in` 數用於確定項目是否是陣列或清單的成員。
 
-**格式**
+**Format**
 
 ```sql
 {VALUE} in {ARRAY}
@@ -42,7 +42,7 @@ person.birthMonth in [3, 6, 9]
 >
 >此函 `notIn` 數 *也可確保* ，兩個值均不等於null。 因此，結果不是函式的完全否 `in` 定。
 
-**格式**
+**Format**
 
 ```sql
 {VALUE} notIn {ARRAY}
@@ -60,7 +60,7 @@ person.birthMonth notIn [3, 6, 9]
 
 該函 `intersects` 數用於確定兩個陣列或清單是否具有至少一個公共成員。
 
-**格式**
+**Format**
 
 ```sql
 {ARRAY}.intersects({ARRAY})
@@ -78,7 +78,7 @@ person.favoriteColors.intersects(["red", "blue", "green"])
 
 函式 `intersection` 用於確定兩個陣列或清單的公共成員。
 
-**格式**
+**Format**
 
 ```sql
 {ARRAY}.intersection({ARRAY})
@@ -96,7 +96,7 @@ person1.favoriteColors.intersection(person2.favoriteColors) = ["red", "blue", "g
 
 該函 `subsetOf` 數用於確定特定陣列（陣列A）是否是另一陣列（陣列B）的子集。 換言之，陣列A中的所有元素都是陣列B的元素。
 
-**格式**
+**Format**
 
 ```sql
 {ARRAY}.subsetOf({ARRAY})
@@ -114,7 +114,7 @@ person.favoriteCities.subsetOf(person.visitedCities)
 
 該函 `supersetOf` 數用於確定特定陣列（陣列A）是否是另一陣列（陣列B）的超集。 換言之，陣列A包含陣列B中的所有元素。
 
-**格式**
+**Format**
 
 ```sql
 {ARRAY}.supersetOf({ARRAY})
@@ -132,7 +132,7 @@ person.eatenFoods.supersetOf(["sushi", "pizza"])
 
 函 `includes` 數用於確定陣列或清單是否包含給定項。
 
-**格式**
+**Format**
 
 ```sql
 {ARRAY}.includes({ITEM})
@@ -150,7 +150,7 @@ person.favoriteColors.includes("red")
 
 此函 `distinct` 數用於從陣列或清單中刪除重複值。
 
-**格式**
+**Format**
 
 ```sql
 {ARRAY}.distinct()
@@ -168,7 +168,7 @@ person.orders.storeId.distinct().count() > 1
 
 該 `groupBy` 函式用於根據表達式的值將陣列或清單的值分成組。
 
-**格式**
+**Format**
 
 ```sql
 {ARRAY}.groupBy({EXPRESSION)
@@ -191,7 +191,7 @@ orders.groupBy(storeId)
 
 該函 `filter` 數用於根據表達式過濾陣列或清單。
 
-**格式**
+**Format**
 
 ```sql
 {ARRAY}.filter({EXPRESSION})
@@ -214,7 +214,7 @@ person.filter(age >= 21)
 
 此函 `map` 數可用來透過將運算式套用至指定陣列中的每個項目來建立新陣列。
 
-**格式**
+**Format**
 
 ```sql
 array.map(expression)
@@ -232,7 +232,7 @@ numbers.map(square)
 
 當根 `topN` 據給定的數值表達式按升 `N` 序排序時，該函式用於返回陣列中的第一個項。
 
-**格式**
+**Format**
 
 ```sql
 {ARRAY}.topN({VALUE}, {AMOUNT})
@@ -256,7 +256,7 @@ orders.topN(price, 5)
 
 當根 `bottomN` 據給定的數值表達式按升 `N` 序排序時，該函式用於返回陣列中的最後一個項。
 
-**格式**
+**Format**
 
 ```sql
 {ARRAY}.bottomN({VALUE}, {AMOUNT})
@@ -280,7 +280,7 @@ orders.bottomN(price, 5)
 
 函 `head` 數用於返回陣列或清單中的第一個項。
 
-**格式**
+**Format**
 
 ```sql
 {ARRAY}.head()
