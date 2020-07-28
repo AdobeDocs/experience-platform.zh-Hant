@@ -199,5 +199,5 @@ curl -X POST https://dcs.adobedc.net/collection/{CONNECTION_ID} \
 | 400 | 錯誤. 您的要求有問題。 從串流驗證服務接收含有詳細資訊的錯誤訊息。 |
 | 401 | 錯誤. 您的要求未經授權——您需要使用不記名代號來要求。 如需如何要求存取的詳細資訊，請參閱本教 [學課程](../../tutorials/authentication.md) 或此 [部落格文章](https://medium.com/adobetech/using-postman-for-jwt-authentication-on-adobe-i-o-7573428ffe7f)。 |
 | 500 | 錯誤. 出現內部系統錯誤。 |
-| 501 | 錯誤. 這表示此位置不支 **援同** 步驗證。 |
+| 501 | 錯誤. 這表示此位置不 **支援** 同步驗證。 |
 | 503 | 錯誤. 服務目前無法使用。 客戶端至少應使用指數式回退策略重試三次。 |
