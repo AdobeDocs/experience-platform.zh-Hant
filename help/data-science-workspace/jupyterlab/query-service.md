@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Jupyter筆記本中的查詢服務
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: c48079ba997a7b4c082253a0b2867df76927aa6d
+source-git-commit: 4f7d7e2bf255afe1588dbe7cfb2ec055f2dcbf75
 workflow-type: tm+mt
 source-wordcount: '764'
 ht-degree: 1%
@@ -38,13 +38,13 @@ ht-degree: 1%
 
    ![](../images/jupyterlab/query/jupyterlab_launcher.png)
 
-   > [!NOTE] 如果未自動顯示新的「啟動器」頁籤，請按一下「檔案」開啟新的「啟動器」 **[!UICONTROL 頁籤]** ，然後選 **[!UICONTROL 擇「新建啟動器」]**。
+   >[!NOTE] 如果未自動顯示新的「啟動器」頁籤，請按一下「檔案」開啟新的「啟動器」 **[!UICONTROL 頁籤]** ，然後選 **[!UICONTROL 擇「新建啟動器」]**。
 
-2. 在「啟動器」(Launcher)頁籤中，按一下 **[!UICONTROL Python]** 3環境中的「空白」(Blank)表徵圖以開啟空的筆記本。
+2. 在「啟動器」(Launcher)頁籤中，單 **[!UICONTROL 擊]** Python 3環境中的「空白」(Blank)表徵圖以開啟空的筆記本。
 
    ![](../images/jupyterlab/query/blank_notebook.png)
 
-   > [!NOTE] Python 3目前是筆記型電腦中唯一支援查詢服務的環境。
+   >[!NOTE] Python 3目前是筆記型電腦中唯一支援查詢服務的環境。
 
 3. 在左側選擇邊欄上，按一下「 **[!UICONTROL 資料]** 」圖示，然後按兩下「資料集 **** 」目錄以列出所有資料集。
 
@@ -85,6 +85,7 @@ ht-degree: 1%
    - `target_year` : 目標資料的特定年份。
    - `target_month` : 目標所在的特定月份。
    - `target_day` : 目標資料的特定來源日。
+
    >[!NOTE] 您可以隨時變更這些值。 執行此動作時，請務必執行要套用之變數儲存格。
 
 ## 查詢您的資料 {#query-your-data}
