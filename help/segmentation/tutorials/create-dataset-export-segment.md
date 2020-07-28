@@ -31,7 +31,7 @@ ht-degree: 0%
 
 ## 資料集工作區
 
-UI中的資料集工 [!DNL Experience Platform] 作區可讓您檢視和管理IMS組織建立的所有資料集，並建立新的資料集。
+UI中的資料集工 [!DNL Experience Platform] 作區可讓您檢視並管理IMS組織建立的所有資料集，並建立新的資料集。
 
 若要檢視資料集工作區，請按一 **[!UICONTROL 下左側導覽中的「資料集]** 」，然後按一下「 *[!UICONTROL 瀏覽]* 」標籤。 資料集工作區包含資料集清單，包括 *[!UICONTROL Name]*、Created *[!UICONTROL （日期和時間）、]* Source *[!UICONTROL （日期和時間）、]* Source Schema、 ****** Batch Last Status、Woll as the date ad time the dataset was Last Updated Jocraded 視每欄的寬度而定，您可能需要向左或向右捲動，才能查看所有欄。
 
