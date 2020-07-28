@@ -462,7 +462,7 @@ SQL [!DNL Spark] 幫助器提供內置的 [!DNL Spark] SQL函式以擴展SQL功�
 
 #### monotonically_ingrading_id
 
-`monotonically_increasing_id()`: 傳回單調遞增的64位元整數。 所生成的ID被保證單調地增加和唯一，但不連續。 當前實現將分區ID放在上部31位中，而下部33位代表每個分區中的記錄數。 假設資料幀的分區數少於10億個，而每個分區的記錄數少於80億個。 函式是非確定性的，因為其結果取決於分區ID。
+`monotonically_increasing_id()`: 傳回單調遞增的64位元整數。 所生成的ID被保證單調地增加且唯一，但不連續。 當前實現將分區ID放在上部31位中，而下部33位代表每個分區中的記錄數。 假設資料幀的分區數少於10億個，而每個分區的記錄數少於80億個。 函式是非確定性的，因為其結果取決於分區ID。
 
 #### 負
 
@@ -1297,7 +1297,7 @@ SQL [!DNL Spark] 幫助器提供內置的 [!DNL Spark] SQL函式以擴展SQL功�
 
 #### to_timestamp
 
-`to_timestamp(timestamp[, fmt])`: 將含有運 `timestamp` 算式的運算式 `fmt` 剖析為時間戳記。 傳回輸入無效的null。 依預設，如果省略，則會將轉存規則遵循至 `fmt` 時間戳記。
+`to_timestamp(timestamp[, fmt])`: 使用運算 `timestamp` 式剖析運算式 `fmt` 至時間戳記。 傳回輸入無效的null。 依預設，如果省略，則會將轉存規則遵循至 `fmt` 時間戳記。
 
 範例：
 
