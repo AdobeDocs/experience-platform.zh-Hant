@@ -31,7 +31,7 @@ ht-degree: 3%
 - 管理員可以視需要檢視 [預設產品設定檔](#product-profiles) ，或建立新的客戶產品設定檔。
 - 管理員可以編輯任何現有產品設定檔的權限和使用者。
 - 在建立或編輯產品配置檔案時，管理員使用 **[!UICONTROL users]** 頁籤將用戶添加到配置檔案中，並通過訪問[!UICONTROL permissionsTab來授予這些用戶(如「]Read Datasets[!UICONTROL 」或「]Manage Schemas **** 」)的權限。 同樣地，管理員也可以使用相同的權限標籤來指派沙盒的存取權。
-- 當使用者登入使 [!DNL Experience Platform] 用者介面時，其權 [!DNL Platform] 能存取權是由步驟2授與的權限所驅動。 例如，如果用戶沒有「[!UICONTROL View Datasets]」權限，則側面菜單中的 *[!UICONTROL Datasets]* 頁籤對該用戶不可見。
+- 當使用者登入使 [!DNL Experience Platform] 用者介面時，其權 [!DNL Platform] 能存取權是由步驟2授與的權限所驅動。 例如，如果用戶沒有「[!UICONTROL View Datasets]」權限，則側面菜單中的 *[!UICONTROL Datasets]* 頁籤對該用戶將不可見。
 
 有關如何在中管理訪問控制的詳細步驟 [!DNL Experience Platform]，請參 [閱訪問控制使用手冊](./ui/overview.md)。
 
