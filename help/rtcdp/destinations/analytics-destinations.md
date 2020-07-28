@@ -5,6 +5,9 @@ description: 分析目的地會追蹤訪客如何與您網站上的內容互動�
 seo-description: 分析目的地會追蹤訪客如何與您網站上的內容互動，並收集資料以瞭解讀者的行為。 這些平台提供您最具價值訪客參與度與轉化率的獨特見解。
 translation-type: tm+mt
 source-git-commit: e3b7dd4788042deaeba68bfdbe08e8448b46c270
+workflow-type: tm+mt
+source-wordcount: '202'
+ht-degree: 5%
 
 ---
 
@@ -16,7 +19,7 @@ source-git-commit: e3b7dd4788042deaeba68bfdbe08e8448b46c270
 目前，Adobe即時客戶資料平台支援下列分析目標。 如需如何連線至這些目的地的詳細資訊，請參閱個別連結：
 
 * [Adform網站追蹤擴充功能](/help/rtcdp/destinations/adform-extension.md)
-* [Adobe Analytics擴充功能](/help/rtcdp/destinations/adobe-analytics-extension.md)
+* [Adobe Analytics 擴充功能](/help/rtcdp/destinations/adobe-analytics-extension.md)
 * [Adobe Media Analytics for Audio and Video 擴充功能](/help/rtcdp/destinations/adobe-video-analytics-extension.md)
 * [Clicktale擴充功能](/help/rtcdp/destinations/clicktale-extension.md)
 * [Contentsquare擴充功能](/help/rtcdp/destinations/contentsquare-extension.md)
