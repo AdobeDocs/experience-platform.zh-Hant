@@ -5,6 +5,9 @@ title: 零售銷售方式
 topic: overview
 translation-type: tm+mt
 source-git-commit: e08460bc76d79920bbc12c7665a1416d69993f34
+workflow-type: tm+mt
+source-wordcount: '523'
+ht-degree: 2%
 
 ---
 
@@ -57,7 +60,7 @@ source-git-commit: e08460bc76d79920bbc12c7665a1416d69993f34
 
 此程式包括三個要素： 損失函式、弱學習者和加性模型。
 
-損失函式是指預測模型在能夠預測預期結果方面表現如何的度量——最小二乘回歸在此配方中被使用。
+損失函式是指預測模型在預測預期結果方面表現如何的度量——最小二乘回歸法用於此配方。
 
 在漸層提升中，決策樹作為弱學習者。 通常，樹狀結構的圖層、節點和分割數目有限，可確保學習者保持弱。
 
