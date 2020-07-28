@@ -20,7 +20,7 @@ ht-degree: 5%
 
 ( `+` addition)函式用於查找兩個參數表達式的和。
 
-**格式**
+**Format**
 
 ```sql
 {NUMBER} + {NUMBER}
@@ -38,7 +38,7 @@ product1.price + product2.price
 
 ( `*` 乘法)函式用於查找兩個參數表達式的乘積。
 
-**格式**
+**Format**
 
 ```sql
 {NUMBER} * {NUMBER}
@@ -56,7 +56,7 @@ product.inventory * product.price
 
 利用 `-` （減法）函式來尋找兩個引數表達式的差異。
 
-**格式**
+**Format**
 
 ```sql
 {NUMBER} - {NUMBER}
@@ -74,7 +74,7 @@ product1.price - product2.price
 
 ( `/` 除法)函式用於查找兩個引數表達式的商。
 
-**格式**
+**Format**
 
 ```sql
 {NUMBER} / {NUMBER}
@@ -92,7 +92,7 @@ totalProduct.price / totalProduct.sold
 
 ( `%` modulo/remainder)函式用於在將兩個引數表達式除以後查找余數。
 
-**格式**
+**Format**
 
 ```sql
 {NUMBER} % {NUMBER}
