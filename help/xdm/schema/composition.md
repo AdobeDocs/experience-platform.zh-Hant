@@ -164,7 +164,7 @@ Mixin的範圍和定義與類相同： 有由個別組織使用定義的產業�
 
 ### XDM欄位
 
-除了基本欄位和定義您自己的資料類型的能力外，XDM還提供一套標準的欄位和資料類型，這些欄位和資料類型會由服務隱含地理解，並在跨元件使用時提供 [!DNL Experience Platform] 更一致 [!DNL Platform] 性。
+除了基本欄位和定義您自己的資料類型的能力外，XDM還提供一套標準的欄位和資料類型集，這些欄位和資料類型會由服務隱含地理解，並在跨元件使用時提供 [!DNL Experience Platform] 更一致 [!DNL Platform] 性。
 
 這些欄位（例如「名字」和「電子郵件地址」）除了基本標量欄位類型之外，還包含其他附加含義，告訴 [!DNL Platform] 任何共用相同XDM資料類型的欄位將以相同的方式運作。 無論資料來自何處，或資料使用於何種服務，都可信 [!DNL Platform] 任此行為一致。
 
@@ -182,7 +182,7 @@ Mixin的範圍和定義與類相同： 有由個別組織使用定義的產業�
 
 ![](../images/schema-composition/composition.png)
 
-### 聯集 {#union}
+### Union {#union}
 
 雖然 [!DNL Experience Platform] 允許您為特定使用案例合成方案，但它也允許您查看特定類型方案的「聯合」。 上圖顯示基於XDM ExperienceEvent類的兩個模式和基於類的兩個模 [!DNL XDM Individual Profile] 式。 The union（如下所示）匯總了共用相同類的所有方案([!DNL XDM ExperienceEvent] 和 [!DNL XDM Individual Profile]分別)的欄位。
 
