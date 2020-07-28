@@ -314,7 +314,7 @@ curl -X PATCH https://platform.adobe.io/data/core/ups/config/schedules/4e538382-
 | 屬性 | 說明 |
 | -------- | ----------- |
 | `path` | 您要更新的值的路徑。 在這種情況下，由於您要更新cron計畫，因此需要將值設 `path` 為 `/schedule`。 |
-| `value` | cron計畫的更新值。 此值必須以cron計畫的形式。 在此範例中，排程將在每月的第二天執行。 |
+| `value` | cron計畫的更新值。 此值必須以cron排程的形式。 在此範例中，排程將在每月的第二天執行。 |
 
 **回應**
 
