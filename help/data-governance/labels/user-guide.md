@@ -86,7 +86,7 @@ ht-degree: 0%
 
 <img alt="編輯個別欄位的治理標籤" src="../images/labels/field-label-inheritance.png" width="700"><br>
 
-按一下您要使用之每個標籤旁的核取方塊，以選取欄位層級標籤。 在您選擇標籤時，「已套用的標籤 _[!UICONTROL 」標題會更新，以顯示已套用至「選取欄位」標題中所]_示欄位的標籤__ 。 在您選取欄位層級標籤後，按一下「儲存 **[!UICONTROL 變更」]**。
+按一下您要使用之每個標籤旁的核取方塊，以選取欄位層級標籤。 在您選擇標籤時，「已套用 _[!UICONTROL 的標籤]_」標題會更新，以顯示已套用至「選取欄位」標題中所_[!UICONTROL &#x200B;示欄位的標籤]_ 。 在您選取欄位層級標籤後，按一下「儲存 **[!UICONTROL 變更」]**。
 
 <img alt="套用欄位層級標籤" src="../images/labels/apply-labels-field.png" width="700"><br>
 
