@@ -35,7 +35,7 @@ SELECT [ ALL | DISTINCT [( expression [, ...] ) ] ]
     [ OFFSET start ]
 ```
 
-其中 `from_item` 可以是：
+其中 `from_item` 可以是下列其中之一：
 
 ```
 table_name [ * ] [ [ AS ] alias [ ( column_alias [, ...] ) ] ]
@@ -432,7 +432,7 @@ SHOW name
 
 - `name`:
    - `SERVER_VERSION`: 顯示伺服器的版本號。
-   - `SERVER_ENCODING`: 顯示伺服器端字元集編碼。 目前，此參數可顯示但不可設定，因為編碼是在資料庫建立時確定的。
+   - `SERVER_ENCODING`: 顯示伺服器端字元集編碼。 目前，此參數可顯示但不可設定，因為編碼是在建立資料庫時決定的。
    - `LC_COLLATE`: 顯示資料庫的歸類區域設定（文本排序）。 目前，此參數可顯示但不可設定，因為設定是在建立資料庫時確定的。
    - `LC_CTYPE`: 顯示字元分類的資料庫的區域設定。 目前，此參數可顯示但不可設定，因為設定是在建立資料庫時確定的。
       `IS_SUPERUSER`: 如果當前角色具有超級用戶權限，則返回true。
