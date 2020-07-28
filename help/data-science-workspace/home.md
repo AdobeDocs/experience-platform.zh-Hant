@@ -99,7 +99,7 @@ Adobe [!DNL Data Science Workspace]Experience Platform可讓您將以體驗為�
 
 - 瀏覽預先建立的方式，以符合您的業務需求，並依現狀使用或設定，以節省時間。
 - 從頭開始建立配方，使用Jupyter Notebook中的製作執行時期來開發和註冊配方。
-- 使用和之間的驗證和整合，將Adobe Experience Platform以外 [!DNL Data Science Workspace] 撰寫的方式上傳至儲存庫或從 [!DNL Git]儲存庫匯入方式 [!DNL Git] 代碼 [!DNL Data Science Workspace]。
+- 使用和之間提供的驗證和整合，將Adobe Experience Platform以外 [!DNL Data Science Workspace] 撰寫的方式上傳至儲存庫或從 [!DNL Git]儲存庫匯入方式 [!DNL Git] 代碼 [!DNL Data Science Workspace]。
 
 ### 實驗
 
@@ -201,7 +201,7 @@ Adobe Experience Platform中的所有資料都符合標準化的XDM架構，毋�
 
 當您選擇最符合您業務需求的最佳訓練方式時，您就可以建立智慧型服務，毋需開發人員 [!DNL Data Science Workspace] 的協助。 只需按幾下滑鼠，不需要撰寫程式碼。 發佈的智慧型服務可供貴組織的其他成員存取，而不需重新建立模型。
 
-已發佈的智慧型服務可設定為在新資料可用時，使用新資料自動自動進行培訓。 這可確保您的服務在時間持續時仍能維持其效率和效能。
+已發佈的智慧型服務可設定為在新資料可用時，使用新資料自動不時進行訓練。 這可確保您的服務在時間持續時仍能維持其效率和效能。
 
 ## 後續步驟
 
