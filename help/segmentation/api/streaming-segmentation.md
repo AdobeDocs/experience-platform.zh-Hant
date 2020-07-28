@@ -364,7 +364,7 @@ curl -X POST \
 
 ### 啟用排程
 
-預設情況下，建立計畫時，除非將屬 `state` 性設定為建立(POST) `active` 請求主體中，否則該計畫處於非活動狀態。 通過向端點發出PATCH請求並在路徑中包 `state``active``/config/schedules` 括調度的ID，可以啟用調度（將設定為）。
+預設情況下，建立計畫時不活動，除非 `state` 在建立(POST)請 `active` 求主體中將屬性設定為。 通過向端點發出PATCH請求並在路徑中包 `state``active``/config/schedules` 括調度的ID，可以啟用調度（將設定為）。
 
 **API格式**
 
