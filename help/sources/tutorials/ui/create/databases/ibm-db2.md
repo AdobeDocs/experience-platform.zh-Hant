@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 在UI中建立IBM DB2源連接器
 topic: overview
 translation-type: tm+mt
-source-git-commit: d3c725c4760acb3857a67d0d30b24732c963a030
+source-git-commit: 4f7d7e2bf255afe1588dbe7cfb2ec055f2dcbf75
 workflow-type: tm+mt
 source-wordcount: '529'
 ht-degree: 0%
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 # 在UI中建立IBM DB2源連接器
 
-> [!NOTE]
+>[!NOTE]
 > IBM DB2連接器處於測試階段。 如需使用 [測試版標籤連接器的詳細資訊](../../../../home.md#terms-and-conditions) ，請參閱來源概觀。
 
 Adobe Experience Platform中的來源連接器可讓您依計畫吸收外部來源的資料。 本教程提供使用用戶介面建立IBM DB2（以下稱為「DB2」）源連接器的 [!DNL Platform] 步驟。
@@ -72,4 +72,4 @@ Adobe Experience Platform中的來源連接器可讓您依計畫吸收外部來�
 
 ## 後續步驟
 
-通過本教程，您已建立了與DB2帳戶的連接。 您現在可以繼續下一個教程，並 [配置資料流以將資料導入平台](../../dataflow/databases.md)。
+通過本教程，您已建立到DB2帳戶的連接。 您現在可以繼續下一個教程，並 [配置資料流以將資料導入平台](../../dataflow/databases.md)。
