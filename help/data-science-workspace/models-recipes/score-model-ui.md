@@ -40,7 +40,7 @@ ht-degree: 0%
    ![](../images/models-recipes/score/scoring_results.png)
 
 5. 工作流程的最後一個步驟會提示您設定計分執行。 這些配置由模型用於計分運行。
-請注意，您將無法移除在建立「模型」期間設定的繼承參數。 您可以編輯或還原未繼承的參數，方法是按兩下該值，或在將滑鼠懸停在條目上時按一下還原表徵圖。
+請注意，您將無法移除在「模型」建立過程中設定的繼承參數。 您可以編輯或還原未繼承的參數，方法是按兩下該值，或在將滑鼠懸停在條目上時按一下還原表徵圖。
    ![](../images/models-recipes/score/configuration.png)
 檢閱並確認計分設定，然後按一 **[!UICONTROL 下「完成]** 」以建立並執行計分執行。 您將會被導向至「計 *分執行* 」索引標籤，而新的計分執行將會顯示狀態。
    ![](../images/models-recipes/score/scoring_runs_tab.png)
