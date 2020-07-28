@@ -133,7 +133,7 @@ curl -X GET \
 
 ## 建立描述符
 
-允許 [!DNL Schema Registry] 您定義幾種不同的描述符類型。 每個描述符類型都要求在POST請求中發送自己的特定欄位。 定義描述符的附錄部分提供了描述符的完整清單以及定義它們所需 [的欄位](#defining-descriptors)。
+允許 [!DNL Schema Registry] 您定義幾種不同的描述符類型。 每個描述符類型都需要在POST請求中發送其自己的特定欄位。 定義描述符的附錄部分提供了描述符的完整清單以及定義它們所需 [的欄位](#defining-descriptors)。
 
 **API格式**
 
