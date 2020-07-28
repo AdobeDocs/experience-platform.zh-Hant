@@ -97,7 +97,7 @@ Adobe Experience Platform可 [!DNL Query Service] 讓您使用標準SQL來查詢
 
 當資 [!DNL XDM Individual Profile] 料被 [!DNL XDM ExperienceEvent] 擷取及管理時，會觸發 [!DNL Catalog][!DNL Real-time Customer Profile] 開始擷取已啟用其使用功能的資料。 所擷取的互動與詳細資訊越多，個別描述檔就越強穩。
 
-[!DNL XDM Individual Profile] 資料有助於透過任何通道或Adobe解決方案整合，為行動提供資訊並賦予其能力，當資料與豐富的行為與互動資料記錄搭配使用時，這些資料可協助機器學習。 此 [!DNL Real-time Customer Profile] API也可用來豐富協力廠商解決方案、CRM和專屬解決方案的功能。
+[!DNL XDM Individual Profile] 資料有助於透過任何通道或Adobe解決方案整合，為行動提供資訊並賦予其能力，當資料與豐富的行為與互動資料記錄搭配使用時，此資料可協助機器學習。 此 [!DNL Real-time Customer Profile] API也可用來豐富協力廠商解決方案、CRM和專屬解決方案的功能。
 
 如需詳 [細資訊，請參閱即時客戶個人檔案](../profile/home.md) 。
 
