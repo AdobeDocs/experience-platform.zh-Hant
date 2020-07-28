@@ -4,11 +4,14 @@ audience: user
 user-guide-title: Adobe Experience Platform說明中的存取控制
 translation-type: tm+mt
 source-git-commit: c60f374fddb7c2d0ae35c5a5e085ddc0e2f7b78f
+workflow-type: tm+mt
+source-wordcount: '82'
+ht-degree: 6%
 
 ---
 
 
-# 存取控制 {#access-control}
+# Access control {#access-control}
 
 * [存取控制概觀](home.md)
 * 存取控制UI {#ui}
