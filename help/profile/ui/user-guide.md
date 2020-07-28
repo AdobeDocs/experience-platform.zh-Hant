@@ -16,7 +16,7 @@ ht-degree: 0%
 
 [!DNL Real-time Customer Profile] 建立個別客戶的全方位檢視，結合來自多個通道的資料，包括線上、離線、CRM和協力廠商資料。
 
-本檔案可做為在Adobe Experience Platform使用者介 [!DNL Real-time Customer Profile] 面中與之互動的指南。
+本檔案可做為在Adobe Experience Platform使用者介 [!DNL Real-time Customer Profile] 面中互動的指南。
 
 ## 快速入門
 
