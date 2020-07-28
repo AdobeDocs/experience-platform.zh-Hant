@@ -41,7 +41,7 @@ Adobe可連接到龐大的合作夥伴生態系統，更不用說與Adobe Experi
 * 從企業內部串流收集客戶資料，讓客戶獲得單一視圖。
 * 使用受信任的治理及已知和未知識別碼的隱私權控制，以負責任的方式管理個人檔案。
 * 運用Adobe Sensei的人工智慧和機器學習功能，為行銷人員建立可執行的見解並擴大受眾。
-* 跨所有通道和目的地即時提供個人化體驗。
+* Deliver personalized experiences in realtime across all channels and destinations.
 
 如需詳細資訊，請參 [閱Adobe即時客戶資料平台檔案](../../rtcdp/overview.md)。
 
@@ -50,14 +50,14 @@ Adobe可連接到龐大的合作夥伴生態系統，更不用說與Adobe Experi
 | 功能 | 說明 |
 |---|---|
 | 目的地 | 預先建立與Adobe支援之目標平台的整合， [!DNL Real-time Customer Data Platform] 以順暢的方式將資料匯入這些合作夥伴。 See [Destinations](#destinations) below for more information. |
-| 首頁度量控制面板 | Adobe即時客戶資料平台（即時CDP）首頁包含量度控制面板，可顯示描述檔和區段的相關資訊。 首頁也包含學習教材的連結。 請參閱下方「 [即時客戶資料平台」度量一節](#real-time-customer-data-platform-metrics) 。 |
+| Home page metrics dashboard | The Adobe Real-time Customer Data Platform (Real-time CDP) home page includes a metrics dashboard that shows information about profiles and segments. 首頁也包含學習教材的連結。 請參閱下方「 [即時客戶資料平台」度量一節](#real-time-customer-data-platform-metrics) 。 |
 | 來源 | 您可以從多種來源收集資料，例如Adobe解決方案、雲端儲存空間、協力廠商軟體和您的CRM。 請參閱下 [面的](#sources) 「來源」一節，瞭解更多資訊。 |
 
 **[!DNL Real-time Customer Data Platform]度量&#x200B;**
 
 當您登入即時CDP時，會顯示Adobe即時客戶資料平台（即時CDP）首頁，其中包含量度控制面板。
 
-首頁只是顯示量度卡片的位置之一。 即時CDP在您的整個體驗中提供度量卡。 這些量度會通知您系統中的資料、設定檔和區段對象。
+The home page is only one of the places where metric cards appear. 即時CDP在您的整個體驗中提供度量卡。 這些量度會通知您系統中的資料、設定檔和區段對象。
 
 如果登錄到即時CDP時系統中沒有資料，則首頁上的儀表板不會顯示。 在這種情況下，首頁會提供首次使用者體驗的學習教材。 當收集資料時，控制面板會自動更新以顯示該資料的相關資訊。
 
@@ -135,7 +135,7 @@ XDM是公開記載的規格，旨在改善數位體驗的強大功能。 它提�
 
 **已知問題**
 
-* 無。
+* 無.
 
 若要進一步瞭解如何使用 [!DNL Schema Registry] API和使用者介 [!DNL Schema Editor] 面使用XDM，請閱讀 [XDM系統檔案](../../xdm/home.md)。
 
@@ -157,7 +157,7 @@ Adobe Experience Platform可讓您為客戶推動協調、一致且相關的體�
 
 **已知問題**
 
-* 無。
+* 無.
 
 有關使用資 [!DNL Real-time Customer Profile]料的更多資訊，包括教學課程和最佳實務，請 [!DNL Profile] 閱讀即時 [客戶個人檔案概觀](../../profile/home.md)。
 
@@ -186,6 +186,6 @@ Adobe Experience Platform提 [!DNL Segmentation Service] 供使用者介面和RE
 
 **已知問題**
 
-* 無。
+* 無.
 
 若要進一步了 [!DNL Segmentation Service]解，請閱讀區 [段服務概觀](../../segmentation/home.md)。
