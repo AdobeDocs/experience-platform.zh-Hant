@@ -37,7 +37,7 @@ Adobe Experience Platform的新功能：
 
 ## [!DNL Sandboxes] {#sandboxes}
 
-[!DNL Experience Platform] 旨在讓全球數位體驗應用程式更加豐富。 公司通常會並行執行多種數位體驗應用程式，並需要滿足這些應用程式的開發、測試和部署需求，同時確保運作符合規範。 為了滿足此需求，提供 [!DNL Experience Platform] 沙盒，將單一執行個體分割為 [!DNL Platform] 個別的虛擬環境，以協助開發和發展數位體驗應用程式。
+[!DNL Experience Platform] 旨在讓全球數位體驗應用程式更加豐富。 公司通常並行執行多種數位體驗應用程式，並需要滿足這些應用程式的開發、測試和部署需求，同時確保運作符合規範。 為了滿足此需求，提供 [!DNL Experience Platform] 沙盒，將單一執行個體分割為 [!DNL Platform] 個別的虛擬環境，以協助開發和發展數位體驗應用程式。
 
 **主要功能**
 
