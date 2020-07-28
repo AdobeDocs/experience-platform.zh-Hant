@@ -14,7 +14,7 @@ ht-degree: 1%
 
 # 在 [!DNL Query Service]
 
-Adobe Experience Platform可 [!DNL Query Service] 能需要從計算中移除整列，或忽略特定欄位集，因為只有該列中的部分資料是重複資料，因此支援重複資料刪除。 重複資料消除的常見模式包括 `ROW_NUMBER()` ，在有序時間(使用 [!DNL Experience Data Model]`timestamp` (XDM)欄位)跨窗口使用ID或一對ID的函式，以返回表示檢測到重複的次數的新欄位。 當此值為時， `1`即表示原始例項，在大多數情況下，即您想使用的例項，而忽略其他每個例項。 這通常是在子選擇內完成的，在子選擇內，重複資料消除是在較高級別(如執行聚合計 `SELECT` 數)中完成的。
+Adobe Experience Platform可 [!DNL Query Service] 能需要從計算中移除整個列，或忽略特定欄位集，因為只有行中的部分資料是重複資料，因此支援重複資料處理。 重複資料消除的常見模式包括 `ROW_NUMBER()` ，在有序時間(使用 [!DNL Experience Data Model]`timestamp` (XDM)欄位)跨窗口使用ID或一對ID的函式，以返回表示檢測到重複的次數的新欄位。 當此值為時， `1`即表示原始例項，在大多數情況下，即您想使用的例項，而忽略其他每個例項。 這通常是在子選擇內完成的，在子選擇內，重複資料消除是在較高級別(如執行聚合計 `SELECT` 數)中完成的。
 
 ## 使用個案
 
