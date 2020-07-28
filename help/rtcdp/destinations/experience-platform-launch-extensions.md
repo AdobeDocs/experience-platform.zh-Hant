@@ -1,17 +1,20 @@
 ---
 title: Experience Platform Launch Extensions
 seo-title: Experience Platform Launch Extensions
-description: ' Launch 是新一代 Adobe 標籤管理功能。Launch 可讓客戶透過簡單的方式部署及管理所有必要的分析、行銷及廣告標籤功能，以便支援相關客戶體驗。'
-seo-description: ' Launch 是新一代 Adobe 標籤管理功能。Launch 可讓客戶透過簡單的方式部署及管理所有必要的分析、行銷及廣告標籤功能，以便支援相關客戶體驗。'
+description: Launch 是新一代 Adobe 標籤管理功能。 Launch 可讓客戶透過簡單的方式部署及管理所有必要的分析、行銷及廣告整合功能，以便支援相關客戶體驗。
+seo-description: Launch 是新一代 Adobe 標籤管理功能。 Launch 可讓客戶透過簡單的方式部署及管理所有必要的分析、行銷及廣告整合功能，以便支援相關客戶體驗。
 translation-type: tm+mt
 source-git-commit: 98c3356db178507e0a8d94b47030e9490e721e46
+workflow-type: tm+mt
+source-wordcount: '622'
+ht-degree: 21%
 
 ---
 
 
 # Experience Platform Launch extensions {#experience-platform-launch-extensions}
 
-Experience Platform Launch 是新一代 Adobe 標籤管理功能。Launch 可讓客戶透過簡單的方式部署及管理所有必要的分析、行銷及廣告標籤功能，以便支援相關客戶體驗。Launch是以隨附的增值功能提供給Adobe Experience Cloud客戶。
+Experience Platform Launch 是新一代 Adobe 標籤管理功能。 Launch 可讓客戶透過簡單的方式部署及管理所有必要的分析、行銷及廣告整合功能，以便支援相關客戶體驗。Launch是以隨附的增值功能提供給Adobe Experience Cloud客戶。
 
 如需Experience Platform Launch功能的簡介，請參閱下列資源：
 * Experience Platform Launch [documentation](https://docs.adobe.com/content/help/zh-Hant/launch/using/overview.html)
@@ -19,7 +22,7 @@ Experience Platform Launch 是新一代 Adobe 標籤管理功能。Launch 可讓
 
 ## 如何在Adobe即時CDP介面中尋找Launch擴充功能 {#how-to-find-extensions-in-interface}
 
-若要在Adobe即時CDP介面中尋找Launch擴充功能，請瀏覽至篩 **[!UICONTROL Destinations > Catalog]** 選器並 **[!UICONTROL Extensions]** 選取 **[!UICONTROL Types]** 選項。
+若要在Adobe即時CDP介面中尋找Launch擴充功能，請瀏覽至「目標>目錄」 **[!UICONTROL ，然後在「類型」篩選器中選取「延伸功能]********** 」。
 
 ![介面中的擴充功能篩選](/help/rtcdp/destinations/assets/extensions-filter.png)
 
