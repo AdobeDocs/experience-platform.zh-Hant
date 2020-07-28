@@ -5,6 +5,9 @@ description: 調查平台會偵測調查事件、透過資料元素即時擷取�
 seo-description: 調查平台會偵測調查事件、透過資料元素即時擷取客戶意見，並與Adobe即時CDP共用資料。
 translation-type: tm+mt
 source-git-commit: e4da80338dbfbad70dfb3cf7df9fe589e949e788
+workflow-type: tm+mt
+source-wordcount: '104'
+ht-degree: 0%
 
 ---
 
