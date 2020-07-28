@@ -20,7 +20,7 @@ ht-degree: 3%
 
 此函 `let` 數允許將表達式儲存為變數，以便稍後在查詢中使用。
 
-**格式**
+**Format**
 
 ```sql
 let {VARIABLE} = {EXPRESSION}
