@@ -6,7 +6,7 @@ translation-type: tm+mt
 source-git-commit: a2726bfc5ef7feac374e57af9c986a9c521efa48
 workflow-type: tm+mt
 source-wordcount: '306'
-ht-degree: 37%
+ht-degree: 40%
 
 ---
 
@@ -18,7 +18,7 @@ ht-degree: 37%
 * Experience Platform 文件 {#documentation}
    * [檔案總覽](documentation/overview.md)
    * [存取控制](https://docs.adobe.com/content/help/en/experience-platform/access-control/home.html)
-   * [Auditor](https://docs.adobe.com/content/help/zh-Hant/auditor/using/overview.html)
+   * [Auditor](https://docs.adobe.com/content/help/en/auditor/using/overview.html)
    * [目錄和資料集](https://docs.adobe.com/content/help/en/experience-platform/catalog/home.html)
    * [資料存取](https://docs.adobe.com/content/help/en/experience-platform/data-access/home.html)
    * [資料控管](https://docs.adobe.com/content/help/en/experience-platform/data-governance/home.html)
