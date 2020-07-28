@@ -44,7 +44,7 @@ ht-degree: 1%
 | 跨裝置 | 這表明， [!DNL Identity Service] 應將此視為強大的人物識別碼，並永久保留。 例如登入ID、CRM ID、忠誠度ID等。 |
 | 裝置 | 包含IDFA、GAID和其他IOT ID。 家庭中的人可以分享。 |
 | 電子郵件 | 此類型的身分識別資訊(PII)。 這是一個靈敏 [!DNL Identity Service] 地處理值的指標。 |
-| 行動 | 此類型的身份包括PII。 這是一個靈敏地處 [!DNL Identity Service] 理這個值的指示。 |
+| 行動 | 此類型的身份包括PII。 這是一個靈敏 [!DNL Identity Service] 地處理值的指標。 |
 | 非人 | 用於儲存需要名稱空間但未綁定到人員群集的標識符。 然後，從標識圖中過濾這些標識符。 可能的使用案例包括與產品、組織、商店等相關的資料。 （例如產品SKU。） |
 | 電話 | 此類型的身份包括PII。 這表明該 [!DNL Identity Service] 值處理靈敏。 |
 
