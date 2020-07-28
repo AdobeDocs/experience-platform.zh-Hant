@@ -40,7 +40,7 @@ ht-degree: 1%
 
    >[!NOTE] 如果未自動顯示新的「啟動器」頁籤，請按一下「檔案」開啟新的「啟動器」 **[!UICONTROL 頁籤]** ，然後選 **[!UICONTROL 擇「新建啟動器」]**。
 
-2. 在「啟動器」(Launcher)頁籤中，單 **[!UICONTROL 擊]** Python 3環境中的「空白」(Blank)表徵圖以開啟空的筆記本。
+2. 在「啟動器」(Launcher)頁籤中，按一下 **[!UICONTROL Python]** 3環境中的「空白」(Blank)表徵圖以開啟空的筆記本。
 
    ![](../images/jupyterlab/query/blank_notebook.png)
 
