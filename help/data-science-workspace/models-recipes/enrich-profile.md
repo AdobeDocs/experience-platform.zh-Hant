@@ -50,6 +50,7 @@ ht-degree: 0%
 
    * 若要建立自訂類別，請按一 **[!UICONTROL 下瀏覽器視窗中央頂端附近的「建立新類別]** 」。 提供類名、說明，並選擇類的行為。 完成後 **[!UICONTROL ，按一下]** 「指派類別」。
       ![](../images/models-recipes/enrich-rtcdp/create_new_class.png)
+
    此時，架構的結構應包含一些類欄位，並且您已準備好指定混音。 混音是描述特定概念的一或多個欄位的組。
 
 3. 在「合 *成* 」視窗中，按一 **[!UICONTROL 下]** Mixins子區段中的「新增 ** 」。
