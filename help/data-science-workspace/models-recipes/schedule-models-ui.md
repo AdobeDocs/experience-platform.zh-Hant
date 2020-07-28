@@ -34,7 +34,7 @@ Adobe Experience Platform可 [!DNL Data Science Workspace] 讓您在機器學習
 1. 在Adobe Experience Platform中，按一下左 **[!UICONTROL 側導覽欄]** 中的「服務」標籤以存取 *[!DNL Service Gallery]*。 尋找您要排程計分的服務，然後按一下「開 **[!UICONTROL 啟]** 」以檢視其 *概述頁面* 。
    ![](../images/models-recipes/schedule/click_to_open.png)
 
-2. 「概述」頁面會顯示服務的計分資訊。 按一下「 **[!UICONTROL 更新排程]** 」連結，以設定計分排程。
+2. 「概述」頁面會顯示服務的計分資訊。 按一下「 **[!UICONTROL 更新排程]** 」連結以設定計分排程。
    ![](../images/models-recipes/schedule/service_overview_score.png)
 
 3. 為計分排程設定頻率、開始日期、結束日期、輸入資料集和輸出資料集。 一旦您對設定滿意後，按一下「 **[!UICONTROL 建立]** 」以更新服務的計分排程。
