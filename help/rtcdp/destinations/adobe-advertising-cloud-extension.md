@@ -1,6 +1,6 @@
 ---
 title: Adobe Advertising Cloud擴充功能
-seo-title: Adobe Advertising Cloud擴充功能
+seo-title: Adobe Advertising Cloud Extension
 description: Adobe Advertising Cloud擴充功能是Adobe即時客戶資料平台中的廣告目的地。 如需擴充功能的詳細資訊，請參閱Adobe Exchange的擴充功能頁面。
 seo-description: null
 translation-type: tm+mt
@@ -12,7 +12,7 @@ ht-degree: 5%
 ---
 
 
-# Adobe Advertising Cloud Extension {#adobe-advertising-cloud-extension}
+# Adobe Advertising Cloud擴充功能 {#adobe-advertising-cloud-extension}
 
 ## 概述 {#overview}
 
@@ -22,7 +22,7 @@ Adobe Advertising Cloud是Adobe即時客戶資料平台中的廣告延伸。
 
 此目的地是分 [!DNL Experience Platform Launch] 機。 如需Adobe Real- [!DNL Launch] time CDP擴充功能如何運作的詳細資訊，請參閱 [Experience Platform Launch擴充功能總覽](/help/rtcdp/destinations/experience-platform-launch-extensions.md)。
 
-![Adobe Advertising Cloud擴充功能](/help/rtcdp/destinations/assets/adobe-advertising-cloud-extension.png)
+![Adobe Advertising Cloud Extension](/help/rtcdp/destinations/assets/adobe-advertising-cloud-extension.png)
 
 ## 先決條件 {#prerequisites}
 
