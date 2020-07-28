@@ -5,6 +5,9 @@ title: 比較函式
 topic: developer guide
 translation-type: tm+mt
 source-git-commit: 92f92f480f29f7d6440f4e90af3225f9a1fcc3d0
+workflow-type: tm+mt
+source-wordcount: '295'
+ht-degree: 5%
 
 ---
 
@@ -17,7 +20,7 @@ source-git-commit: 92f92f480f29f7d6440f4e90af3225f9a1fcc3d0
 
 ( `=` equals)函式會檢查一個值或運算式是否等於另一個值或運算式。
 
-**格式**
+**Format**
 
 ```sql
 {EXPRESSION} = {VALUE}
@@ -35,7 +38,7 @@ homeAddress.countryISO = "CA"
 
 ( `!=` 不等於)函式會檢查一個值或運算式是否 **不等於** 其他值或運算式。
 
-**格式**
+**Format**
 
 ```sql
 {EXPRESSION} != {VALUE}
@@ -53,7 +56,7 @@ homeAddress.countryISO != "CA"
 
 ( `>` 大於)函式用於檢查第一值是否大於第二值。
 
-**格式**
+**Format**
 
 ```sql
 {EXPRESSION} > {EXPRESSION} 
@@ -71,7 +74,7 @@ person.birthMonth > 2
 
 使 `>=` 用（大於或等於）函式來檢查第一值是否大於或等於第二值。
 
-**格式**
+**Format**
 
 ```sql
 {EXPRESSION} >= {EXPRESSION} 
@@ -89,7 +92,7 @@ person.birthMonth >= 3
 
 該 `<` （小於）比較函式用於檢查第一值是否小於第二值。
 
-**格式**
+**Format**
 
 ```sql
 {EXPRESSION} < {EXPRESSION} 
@@ -107,7 +110,7 @@ person.birthMonth < 2
 
 比 `<=` 較函式（小於或等於）用於檢查第一值是否小於或等於第二值。
 
-**格式**
+**Format**
 
 ```sql
 {EXPRESSION} <= {EXPRESSION} 
