@@ -16,7 +16,7 @@ ht-degree: 1%
 
 [!DNL Flow Service](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) 用於收集和集中Adobe Experience Platform內不同來源的客戶資料。 該服務提供用戶介面和REST風格的API，所有支援的源都可從中連接。
 
-本教學課程涵蓋從協力廠商資料庫擷取資料，並透過來源連接器和API將其 [!DNL Platform] 吸收到其中的步驟。
+本教學課程涵蓋從協力廠商資料庫擷取資料，並透過來源連接器和API將其 [!DNL Platform] 內嵌至其中的步驟。
 
 ## 快速入門
 
