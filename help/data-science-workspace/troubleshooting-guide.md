@@ -12,17 +12,17 @@ ht-degree: 0%
 ---
 
 
-# [!DNL Data Science Workspace] troubleshooting guide
+# [!DNL Data Science Workspace] 疑難排解指南
 
-本檔案提供有關Adobe Experience Platform的常見問題解答 [!DNL Data Science Workspace]。 For questions and troubleshooting regarding [!DNL Platform] APIs in general, see the [Adobe Experience Platform API troubleshooting guide](../landing/troubleshooting.md).
+本檔案提供有關Adobe Experience Platform的常見問題解答 [!DNL Data Science Workspace]。 如需一般API的相關問 [!DNL Platform] 題和疑難排解，請參閱 [Adobe Experience Platform API疑難排解指南](../landing/troubleshooting.md)。
 
-## [!DNL JupyterLab] environment is not loading in [!DNL Google Chrome]
+## [!DNL JupyterLab] 環境未載入 [!DNL Google Chrome]
 
 >[!IMPORTANT]
 >
 >此問題已解決，但仍可能存在於Google Chrome 80.x瀏覽器中。 請確定您的Chrome瀏覽器是最新的。
 
-With the [!DNL Google Chrome] browser version 80.x, all third-party cookies are blocked by default. 此政策可防止 [!DNL JupyterLab] 在Adobe Experience Platform中載入。
+在瀏覽 [!DNL Google Chrome] 器版本80.x中，所有協力廠商Cookie都預設會遭到封鎖。 此政策可防止 [!DNL JupyterLab] 在Adobe Experience Platform中載入。
 
 要解決此問題，請使用以下步驟：
 
