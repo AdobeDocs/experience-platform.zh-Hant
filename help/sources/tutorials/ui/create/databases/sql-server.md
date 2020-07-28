@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 在UI中建立Microsoft SQL Server源連接器
 topic: overview
 translation-type: tm+mt
-source-git-commit: d3c725c4760acb3857a67d0d30b24732c963a030
+source-git-commit: 4f7d7e2bf255afe1588dbe7cfb2ec055f2dcbf75
 workflow-type: tm+mt
 source-wordcount: '508'
 ht-degree: 0%
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # 在UI中 [!DNL Microsoft] 建立SQL Server源連接器
 
-> [!NOTE]
+>[!NOTE]
 > SQL [!DNL Microsoft] Server連接器正在測試中。 如需使用 [測試版標籤連接器的詳細資訊](../../../../home.md#terms-and-conditions) ，請參閱來源概觀。
 
 Adobe Experience Platform中的來源連接器可讓您依計畫吸收外部來源的資料。 本教程提供了使用用戶介面創 [!DNL Microsoft] 建SQL Server（以下稱為「SQL Server」）源連接器的 [!DNL Platform] 步驟。
