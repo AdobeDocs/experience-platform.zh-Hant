@@ -20,7 +20,7 @@ ht-degree: 6%
 
 函式 `and` 用於建立邏輯連接。
 
-**格式**
+**Format**
 
 ```sql
 {QUERY} and {QUERY}
@@ -38,7 +38,7 @@ homeAddress.countryISO = "CA" and person.birthYear = 1985
 
 該 `or` 函式用於建立邏輯分離。
 
-**格式**
+**Format**
 
 ```sql
 {QUERY} or {QUERY}
@@ -56,7 +56,7 @@ homeAddress.countryISO = "CA" or person.birthYear = 1985
 
 ( `not` 或 `!`)函式用來建立邏輯否定。
 
-**格式**
+**Format**
 
 ```sql
 not ({QUERY})
@@ -75,7 +75,7 @@ not (homeAddress.countryISO = "CA")
 
 函式 `if` 用於根據指定的條件是否為真來解析表達式。
 
-**格式**
+**Format**
 
 ```sql
 if ({TEST_EXPRESSION}, {TRUE_EXPRESSION}, {FALSE_EXPRESSION})
@@ -97,4 +97,4 @@ if (homeAddress.countryISO = "CA", 1, 2)
 
 ## 後續步驟
 
-現在，您已瞭解了布爾函式，您可以在PQL查詢中使用它們。 有關其他PQL函式的詳細資訊，請閱讀配置式查 [詢語言概述](./overview.md)。
+現在，您已經瞭解了布爾函式，您可以在PQL查詢中使用它們。 有關其他PQL函式的詳細資訊，請閱讀配置式查 [詢語言概述](./overview.md)。
