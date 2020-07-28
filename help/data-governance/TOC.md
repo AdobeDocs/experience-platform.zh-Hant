@@ -4,6 +4,9 @@ audience: user
 user-guide-title: Adobe Experience Platform資料治理說明
 translation-type: tm+mt
 source-git-commit: e135bc33e6c3daa411e85cb37e407322fd0bca5b
+workflow-type: tm+mt
+source-wordcount: '103'
+ht-degree: 4%
 
 ---
 
