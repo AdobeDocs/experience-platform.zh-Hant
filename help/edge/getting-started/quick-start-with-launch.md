@@ -4,7 +4,7 @@ seo-title: Launch讓您快速入門Adobe Experience Platform Web SDK
 description: 使用Experience Platform Web SDK擴充功能收集資料的快速入門手冊
 seo-description: 使用Experience Platform Web SDK擴充功能收集資料的快速入門手冊
 translation-type: tm+mt
-source-git-commit: 8574a2d54c00f1bd3c41780fb12ff739a7d98fc3
+source-git-commit: d958e323df2535c168edd3a35b878fcc4bb73370
 workflow-type: tm+mt
 source-wordcount: '538'
 ht-degree: 5%
@@ -20,14 +20,6 @@ ht-degree: 5%
 - 取得Adobe Experience Platform的權益。 如果您尚未購買Platform,Adobe將提供您Experience Platform Data Services Foundation，讓您以有限方式與SDK搭配使用，不需額外付費。
 - 使用最新版的訪客ID服務。
 
-## 建立設定ID
-
-您可以使用Launch中的邊配置工 [具來建立配](../fundamentals/edge-configuration.md) 置ID。 這可讓您讓邊緣網路傳送資料至各種解決方案。 如需如何尋找每個選項的詳細資訊，請參閱「 [Edge Configuration Tool](../fundamentals/edge-configuration.md) 」（邊緣設定工具）頁面。
-
->[!NOTE]
->
->您的組織必須列入此功能的白名單。 請連絡您的CSM以取得最終白名單。
-
 ## 準備架構
 
 Experience Platform Edge Network將資料視為XDM。 XDM是一種資料格式，可讓您定義結構描述。 此架構定義邊緣網路預期資料格式化的方式。 若要傳送資料，您必須定義您的結構。
@@ -42,6 +34,14 @@ Experience Platform Edge Network將資料視為XDM。 XDM是一種資料格式�
 
 
 如需不同設定選項的詳細資訊，請參 [閱設定SDK](../fundamentals/configuring-the-sdk.md)。
+
+## 建立設定ID
+
+您可以使用Launch中的邊配置工 [具來建立配](../fundamentals/edge-configuration.md) 置ID。 這可讓您讓邊緣網路傳送資料至各種解決方案。 如需如何尋找每個選項的詳細資訊，請參閱「 [Edge Configuration Tool](../fundamentals/edge-configuration.md) 」（邊緣設定工具）頁面。
+
+>[!NOTE]
+>
+>您的組織必須列入此功能的白名單。 請連絡您的CSM以取得最終白名單。
 
 ## 根據您的架構建立資料元素
 
