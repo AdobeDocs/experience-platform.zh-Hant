@@ -3,10 +3,10 @@ product: experience-platform
 audience: user
 user-guide-title: 體驗資料模型(XDM)系統說明
 translation-type: tm+mt
-source-git-commit: c60f374fddb7c2d0ae35c5a5e085ddc0e2f7b78f
+source-git-commit: d4ed33ea4684049e8604ce214cb351d0cb949ed4
 workflow-type: tm+mt
-source-wordcount: '109'
-ht-degree: 7%
+source-wordcount: '115'
+ht-degree: 6%
 
 ---
 
@@ -17,6 +17,8 @@ ht-degree: 7%
 * XDM架構 {#schema}
    * [架構構成基礎](schema/composition.md)
    * [XDM欄位字典](schema/field-dictionary.md)
+   * 架構使用案例
+      * [隱私權許可混合](schema/privacy-consent.md)
 * 方案註冊表API {#api}
    * [快速入門](api/getting-started.md)
    * [列出資源](api/list-resources.md)
