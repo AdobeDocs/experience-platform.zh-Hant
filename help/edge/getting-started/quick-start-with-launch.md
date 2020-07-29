@@ -4,7 +4,7 @@ seo-title: Launch讓您快速入門Adobe Experience Platform Web SDK
 description: 使用Experience Platform Web SDK擴充功能收集資料的快速入門手冊
 seo-description: 使用Experience Platform Web SDK擴充功能收集資料的快速入門手冊
 translation-type: tm+mt
-source-git-commit: d958e323df2535c168edd3a35b878fcc4bb73370
+source-git-commit: bc18ca26da37ecfca2ade9403be22d7de222facb
 workflow-type: tm+mt
 source-wordcount: '538'
 ht-degree: 5%
@@ -29,6 +29,9 @@ Experience Platform Edge Network將資料視為XDM。 XDM是一種資料格式�
 3. 從您建立的架構建立資料集。
 
 以下視訊旨在支援您建立資料的架構、資料集和串流來源連 [!DNL Web SDK] 接器。
+
+
+>[!VIDEO](https://video.tv.adobe.com/v/35395?quality=12&learn=on)
 
 登入啟動並安裝擴充 `AEP Web SDK` 功能。 當您安裝SDK時，系統會提示您設定擴充功能。 輸入上述請求的配置ID。 擴充功能會自動填入您的組織ID。
 
