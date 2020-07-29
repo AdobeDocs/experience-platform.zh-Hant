@@ -4,7 +4,7 @@ seo-title: 'Adobe Experience Platform Web SDK快速入門 '
 description: 使用Experience Platform Web SDK收集資料的快速入門手冊
 seo-description: 使用Experience Platform Web SDK收集資料的快速入門手冊
 translation-type: tm+mt
-source-git-commit: 8574a2d54c00f1bd3c41780fb12ff739a7d98fc3
+source-git-commit: d958e323df2535c168edd3a35b878fcc4bb73370
 workflow-type: tm+mt
 source-wordcount: '517'
 ht-degree: 5%
@@ -20,14 +20,6 @@ ht-degree: 5%
 - 取得Adobe Experience Platform的權益。  如果您尚未購買Platform,Adobe將提供您Experience Platform Data Services Foundation，讓您以有限方式與SDK搭配使用，不需額外付費。
 - 使用最新版的訪客ID服務。
 
-## 建立設定ID
-
-您可以使用Adobe Launch中的 [Edge設定工具](../fundamentals/edge-configuration.md) ，建立設定ID，即使您未使用標籤管理功能亦然。 這可讓您將資料 [!DNL Edge Network] 傳送至各種解決方案。 如需如何尋找每個選項的詳細資訊，請參閱「 [Edge Configuration Tool](../fundamentals/edge-configuration.md) 」（邊緣設定工具）頁面。
-
->[!NOTE]
->
->您的組織必須位於功能的允許清單中。 請連絡您的CSM以列入允許清單。
-
 ## 準備架構
 
 將 [!DNL Experience Platform Edge Network] 資料視為XDM。 XDM是一種資料格式，可讓您定義結構描述。 架構定義資料 [!DNL Edge Network] 的格式化方式。 若要傳送資料，您必須定義您的架構。
@@ -38,6 +30,14 @@ ht-degree: 5%
 以下視訊旨在支援您建立資料的架構、資料集和串流來源連 [!DNL Web SDK] 接器。
 
 >[!VIDEO](https://video.tv.adobe.com/v/35395?quality=12&learn=on)
+
+## 建立設定ID
+
+您可以使用Adobe Launch中的 [Edge設定工具](../fundamentals/edge-configuration.md) ，建立設定ID，即使您未使用標籤管理功能亦然。 這可讓您將資料 [!DNL Edge Network] 傳送至各種解決方案。 如需如何尋找每個選項的詳細資訊，請參閱「 [Edge Configuration Tool](../fundamentals/edge-configuration.md) 」（邊緣設定工具）頁面。
+
+>[!NOTE]
+>
+>您的組織必須位於功能的允許清單中。 請連絡您的CSM以列入允許清單。
 
 ## 安裝SDK
 
