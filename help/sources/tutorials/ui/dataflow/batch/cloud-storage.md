@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 在UI中為雲儲存批處理連接器配置資料流
 topic: overview
 translation-type: tm+mt
-source-git-commit: 168ac3a3ab9f475cb26dc8138cbc90a3e35c836d
+source-git-commit: f532bd6393bfad84fa09c2fc753d1d5c5b39d013
 workflow-type: tm+mt
-source-wordcount: '1226'
+source-wordcount: '1482'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # 在UI中為雲儲存批處理連接器配置資料流
 
-資料流是從源中檢索資料並將資料收錄到資料集的計畫 [!DNL Platform] 任務。 本教學課程提供使用雲端儲存空間連接器來設定新資料流的步驟。
+資料流是從源中檢索資料並將資料收錄到資料集的計畫 [!DNL Platform] 任務。 本教學課程提供使用雲端儲存帳戶設定新資料流的步驟。
 
 ## 快速入門
 
@@ -25,7 +25,7 @@ ht-degree: 0%
    * [架構編輯器教程](../../../../../xdm/tutorials/create-schema-ui.md): 瞭解如何使用架構編輯器UI建立自訂架構。
 * [即時客戶個人檔案](../../../../../profile/home.md): 根據來自多個來源的匯整資料，提供統一、即時的消費者個人檔案。
 
-此外，本教學課程要求您已建立雲端儲存空間連接器。 如需在UI中建立不同雲端儲存空間連接器的教學課程清單，請參閱來源連 [接器概觀](../../../../home.md)。
+此外，本教學課程要求您擁有已建立的雲端儲存空間帳戶。 如需在UI中建立不同雲端儲存空間帳戶的教學課程清單，請參閱來源連接 [器概觀](../../../../home.md)。
 
 ### 支援的檔案格式
 
@@ -37,22 +37,28 @@ ht-degree: 0%
 
 ## 選擇資料
 
-建立雲端儲存空間連接器後，會出 *[!UICONTROL 現「選取資料]* 」步驟，提供互動式介面供您探索雲端儲存空間階層。
+在建立雲端儲存帳戶後，會出 *[!UICONTROL 現「選取資料]* 」步驟，提供互動式介面供您探索雲端儲存階層。
 
 * 介面的左半部分是目錄瀏覽器，顯示伺服器的檔案和目錄。
 * 介面的右半部分可讓您從相容檔案中預覽最多100列資料。
 
-按一下列出的資料夾可讓您將資料夾層次結構遍歷到更深的資料夾中。 在您選取相容的檔案或資料夾後，就會出現「選取資料格式 **** 」下拉式清單，您可在其中選擇格式以在預覽視窗中顯示資料。
+選擇列出的資料夾可讓您將資料夾層次結構遍歷到更深的資料夾中。 在您選取相容的檔案或資料夾後，就會出現「選取資料格式 **** 」下拉式清單，您可在其中選擇格式以在預覽視窗中顯示資料。
 
 ![](../../../../images/tutorials/dataflow/cloud-storage/batch/select-data.png)
 
-在預覽視窗填入後，您可以按一下「下 **[!UICONTROL 一步]** 」，上傳所選資料夾中的所有檔案。 如果要上傳至特定檔案，請在按「下一步」前，從清單中選取該 **[!UICONTROL 檔案]**。
+在預覽視窗填入後，您可以選取「下 **[!UICONTROL 一步]** 」來上傳所選資料夾中的所有檔案。 如果要上傳到特定檔案，請在選擇「下一步」之前，從清單中選擇該 **[!UICONTROL 檔案]**。
 
->[!NOTE]
+![](../../../../images/tutorials/dataflow/cloud-storage/batch/select-data-preview.png)
+
+### 收錄Parce或JSON檔案
+
+雲端儲存帳戶支援的檔案格式也包含JSON和Parce。 JSON和Parce檔案必須符合XDM規範。 若要擷取JSON或Parce檔案，請從目錄瀏覽器中選取適當的檔案格式，並從正確的介面套用相容的資料格式。 選擇 **[!UICONTROL 下一步]** ，繼續。
+
+>[!IMPORTANT]
 >
->支援的檔案格式包括CSV、JSON和Parce。 JSON和Parce檔案必須符合XDM規範。
+>與分隔的檔案類型不同，JSON和Parce格式的檔案無法用於預覽。
 
-![](../../../../images/tutorials/dataflow/cloud-storage/batch/select-data-next.png)
+![](../../../../images/tutorials/dataflow/cloud-storage/batch/select-data-parquet.png)
 
 ## 將資料欄位對應至XDM架構
 
@@ -62,27 +68,27 @@ ht-degree: 0%
 
 **使用現有資料集**
 
-若要將資料內嵌至現有資料集，請選取「使 **[!UICONTROL 用現有資料集]**」，然後按一下資料集圖示。
+若要將資料內嵌至現有資料集，請選取「 **[!UICONTROL 現有資料集]**」，然後選取資料集圖示。
 
 ![](../../../../images/tutorials/dataflow/cloud-storage/batch/use-existing-data.png)
 
-將出 _現「選擇資料集_ 」對話框。 尋找您要使用的資料集，選取它，然後按一下「繼 **[!UICONTROL 續]**」。
+將出 *[!UICONTROL 現「選擇資料集]* 」對話框。 尋找您要使用的資料集，選取它，然後按一下「繼 **[!UICONTROL 續]**」。
 
-![](../../../../images/tutorials/dataflow/cloud-storage/batch/select-existing-data.png)
+![](../../../../images/tutorials/dataflow/cloud-storage/batch/select-existing-dataset.png)
 
 **使用新資料集**
 
-若要將資料新增至新資料集，請選取「 **[!UICONTROL 建立新資料集]** 」，並在提供的欄位中輸入資料集的名稱和說明。 接著，按一下結構圖示。
+若要將資料新增至新資料集，請選取「 **[!UICONTROL 新資料集]** 」，並在提供的欄位中輸入資料集的名稱和說明。 要添加方案，可以在「選擇方案」對話框中輸入現 *[!UICONTROL 有方案]* 名稱。 或者，您也可以選擇「方 **[!UICONTROL 案」高級搜索]** ，以搜索適當的方案。
 
-![](../../../../images/tutorials/dataflow/cloud-storage/batch/use-new-schema.png)
+![](../../../../images/tutorials/dataflow/cloud-storage/batch/use-new-dataset.png)
 
-將出 _現「選擇模式_ 」對話框。 選擇要應用於新資料集的模式，然後按一下「完 **[!UICONTROL 成」]**。
+將出 *[!UICONTROL 現「選擇模式]* 」對話框。 選擇要應用於新資料集的模式，然後選擇「完 **[!UICONTROL 成」]**。
 
 ![](../../../../images/tutorials/dataflow/cloud-storage/batch/select-schema.png)
 
 您可以根據需要選擇直接映射欄位，或使用映射器函式轉換源資料以導出計算值或計算值。 有關資料映射和映射器函式的詳細資訊，請參閱將CSV資料映 [射到XDM模式欄位的教程](../../../../../ingestion/tutorials/map-a-csv-file.md)。
 
-映射源資料後，按一下「下 **[!UICONTROL 一步]**」。
+映射源資料後，選擇「下 **[!UICONTROL 一步]**」。
 
 ![](../../../../images/tutorials/dataflow/cloud-storage/batch/mapping.png)
 
@@ -92,32 +98,46 @@ ht-degree: 0%
 
 | 欄位 | 說明 |
 | --- | --- |
-| 頻率 | 可選頻率包括分鐘、小時、日和周。 |
+| 頻率 | 可選頻率 `Once`包括 `Minute`、 `Hour`、 `Day`和 `Week`。 |
 | 間隔 | 一個整數，用於設定所選頻率的間隔。 |
-| 開始時間 | UTC時間戳記，將會發生第一次擷取。 |
-| 回填 | 一個布爾值，可決定最初收錄的資料。 如果 *[!UICONTROL 啟用回填]* ，則指定路徑中的所有目前檔案將在第一次排程擷取期間被擷取。 如果 *[!UICONTROL 停用]* 「回填」 *[!UICONTROL ，則只會收錄在首次擷取執行和開始時間之間載入的]* 檔案。 在開始時間之前載 *[!UICONTROL 入的檔案]* ，將不會收錄。 |
+| 開始時間 | UTC時間戳記，指示何時設定進行第一次擷取。 |
+| 回填 | 一個布爾值，可決定最初收錄的資料。 如果 *[!UICONTROL 啟用回填]* ，則指定路徑中的所有目前檔案將在第一次排程擷取期間被擷取。 如果 *停用* 「回填」 *[!UICONTROL ，則只會收錄在首次擷取執行和開始時間之間載入的]* 檔案。 在開始時間之前載 *[!UICONTROL 入的檔案]* ，將不會收錄。 |
 
-資料流設計為在計畫基礎上自動收錄資料。 如果您只想在此工作流程中收錄一次，可以將 **[!UICONTROL Frequency]** （頻率）設為「Day」（日），並套用很大的 **[!UICONTROL Interval]**（例如10000或類似）。
+資料流設計為在計畫基礎上自動收錄資料。 從選取擷取頻率開始。 接著，設定間隔，以指定兩個流程執行之間的期間。 間隔的值應為非零整數，且應設定為大於或等於15。
 
-提供計畫值，然後按一下「下 **一步**」。
+若要設定擷取的開始時間，請調整顯示在開始時間方塊中的日期和時間。 或者，您也可以選取日曆圖示來編輯開始時間值。 開始時間必須大於或等於UTC中的當前時間。
 
-![](../../../../images/tutorials/dataflow/cloud-storage/batch/scheduling.png)
+為調度提供值並選擇「下 **[!UICONTROL 一步]**」。
 
-## 命名資料流
+![](../../../../images/tutorials/dataflow/cloud-storage/batch/scheduling-interval-on.png)
 
-將出 *[!UICONTROL 現「命名流]* 」步驟，允許您命名新資料流並提供有關新資料流的簡要說明。
+### 設定一次性提取資料流
 
-提供資料流的值，然後按一下「下 **[!UICONTROL 一步]**」。
+若要設定一次性擷取，請選取頻率下拉箭頭，然後選取「 **[!UICONTROL Once]**」。 只要開始時間未來仍在，您就可以繼續編輯資料流集以進行一次性頻率接收。 一旦開始時間過去，就無法再編輯一次頻率值。
 
-![](../../../../images/tutorials/dataflow/cloud-storage/batch/name-your-dataflow.png)
+>[!TIP] **[!UICONTROL 在單]** 次擷取期間 **** ，不會顯示間隔和回填。
 
-### 查看資料流
+在為計畫提供適當值後，選擇「下 **[!UICONTROL 一步」]**。
+
+![](../../../../images/tutorials/dataflow/cloud-storage/batch/scheduling-once.png)
+
+## 提供資料流詳細資訊
+
+此時將顯示 *[!UICONTROL 資料流詳細資訊]* ，允許您命名新資料流並提供有關新資料流的簡要說明。
+
+在此過程中，您還可以啟用「部 *[!UICONTROL 分提取]* 」和「 *[!UICONTROL 錯誤診斷」]*。 啟用 *[!UICONTROL 部分擷取]* ，可讓您擷取包含錯誤的資料，最多可設定特定臨界值。 啟用 *[!UICONTROL 錯誤診斷]* ，將提供任何個別批次錯誤資料的詳細資訊。 如需詳細資訊，請參閱部 [分批次擷取概觀](../../../../../ingestion/batch-ingestion/partial.md)。
+
+為資料流提供值並選擇「下 **[!UICONTROL 一步]**」。
+
+![](../../../../images/tutorials/dataflow/cloud-storage/batch/dataflow-detail.png)
+
+## 查看資料流
 
 此時 *[!UICONTROL 會出現]* 「查看」步驟，允許您在建立新資料流之前對其進行查看。 詳細資訊會分組在下列類別中：
 
-* *[!UICONTROL 來源詳細資訊]*: 顯示源檔案的類型、所選源檔案的相關路徑，以及該源檔案中的列數。
-* *[!UICONTROL 目標詳細資訊]*: 顯示源資料被吸收到的資料集，包括資料集所附的模式。
-* *[!UICONTROL 排程詳細資訊]*: 顯示接收調度的活動期間、頻率和間隔。
+* *[!UICONTROL 連接]*: 顯示源檔案的類型、所選源檔案的相關路徑，以及該源檔案中的列數。
+* *[!UICONTROL 指派資料集與地圖欄位]*: 顯示源資料被吸收到的資料集，包括資料集所附的模式。
+* *[!UICONTROL 排程]*: 顯示接收調度的活動期間、頻率和間隔。
 
 複查資料流後，按一下 **[!UICONTROL 完成]** ，並為建立資料流留出一些時間。
 
