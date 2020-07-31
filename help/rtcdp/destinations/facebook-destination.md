@@ -4,9 +4,9 @@ seo-title: Facebook目標
 description: 根據雜湊的電子郵件，啟用您Facebook宣傳的個人檔案，以鎖定受眾、個人化和抑制受眾。
 seo-description: 根據雜湊的電子郵件，啟用您Facebook宣傳的個人檔案，以鎖定受眾、個人化和抑制受眾。
 translation-type: tm+mt
-source-git-commit: 6f680a60c88bc5fee6ce9cb5a4f314c4b9d02249
+source-git-commit: 7f3df12da5e93c3d0cc53eed1aa603ddbafdb0b2
 workflow-type: tm+mt
-source-wordcount: '652'
+source-wordcount: '722'
 ht-degree: 2%
 
 ---
@@ -93,3 +93,11 @@ ht-degree: 2%
 ## 啟用區段至 [!DNL Facebook] {#activate-segments}
 
 如需如何啟用區段至目的地的指示 [!DNL Facebook]，請參 [閱啟用資料至目的地](/help/rtcdp/destinations/activate-destinations.md)。
+
+## 匯出的資料 {#exported-data}
+
+例 [!DNL Facebook]如，成功啟動表示將 [!DNL Facebook] 在 [[!DNL Facebook廣告管理員]中以程式設計方式建立自訂對象](https://www.facebook.com/adsmanager/manage/)。 當使用者符合已啟用區段的資格或被取消資格時，會新增及移除觀眾中的區段成員資格。
+
+>[!TIP]
+>
+>Adobe即時CDP與支援歷史觀眾回填的 [!DNL Facebook] 整合。 當您將區段啟動至目的地 [!DNL Facebook] 時，所有歷史區段資格都會傳送至。
