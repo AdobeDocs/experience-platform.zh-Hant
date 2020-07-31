@@ -4,9 +4,9 @@ seo-title: Google廣告目的地
 description: Google Ads（先前稱為Google AdWords）是線上廣告服務，可讓企業透過文字搜尋、圖形顯示、YouTube視訊和應用程式內行動顯示，按點擊付費廣告。
 seo-description: Google Ads（先前稱為Google AdWords）是線上廣告服務，可讓企業透過文字搜尋、圖形顯示、YouTube視訊和應用程式內行動顯示，按點擊付費廣告。
 translation-type: tm+mt
-source-git-commit: 6f680a60c88bc5fee6ce9cb5a4f314c4b9d02249
+source-git-commit: 7f3df12da5e93c3d0cc53eed1aa603ddbafdb0b2
 workflow-type: tm+mt
-source-wordcount: '572'
+source-wordcount: '598'
 ht-degree: 0%
 
 ---
@@ -67,3 +67,6 @@ ht-degree: 0%
 
 如需如何啟用區段至目的地的指示 [!DNL Google Ads]，請參 [閱啟用資料至目的地](/help/rtcdp/destinations/activate-destinations.md)。
 
+## 匯出的資料
+
+若要確認資料是否已成功匯出至目 [!DNL Google Ads] 標，請檢查您的 [!DNL Google Ads] 帳戶。 如果啟動成功，您的帳戶會填入觀眾。
