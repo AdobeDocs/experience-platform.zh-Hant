@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Adobe Experience Platform概觀
 topic: getting started
 translation-type: tm+mt
-source-git-commit: c79d9690f5d1f6c199d0c0a74238225c5b6fd2c2
+source-git-commit: 99bee24a8b1a0a212424ca63464f7733adba2ba2
 workflow-type: tm+mt
 source-wordcount: '815'
-ht-degree: 4%
+ht-degree: 3%
 
 ---
 
@@ -36,11 +36,11 @@ Adobe Experience Platform是市面上功能最強大、最靈活、最開放的�
 
 Adobe Experience Platform可在最新版Google Chrome、Safari、Firefox **和** Microsoft Edge中以最佳方式運作。 您在舊版瀏覽器上使用某些功能時可能遇到問題。
 
-| 作業系統 | 受支援的瀏覽器 |  |  |
-|---|---|---|---|
-| Mac OS X | Google Chrome | Safari | Firefox |
-| Windows 10 | Google Chrome | Microsoft Edge | Firefox |
-| Windows 7 | Google Chrome |  | Firefox |
+| 作業系統 | 受支援的瀏覽器 |
+|---|---|
+| **Mac OS X** | Google Chrome、Safari、Firefox |
+| **Windows 10** | Google Chrome、Microsoft Edge、Firefox |
+| **Windows 7** | Google Chrome、Firefox |
 
 不支援這些作業系統和瀏覽器：
 
