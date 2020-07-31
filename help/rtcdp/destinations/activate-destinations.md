@@ -4,9 +4,9 @@ seo-title: 將描述檔和區段啟用至目標
 description: 將區段對應至目標，以啟用您在Adobe即時客戶資料平台中擁有的資料。 若要完成此作業，請遵循下列步驟。
 seo-description: 將區段對應至目標，以啟用您在Adobe即時客戶資料平台中擁有的資料。 若要完成此作業，請遵循下列步驟。
 translation-type: tm+mt
-source-git-commit: b96286f6a06f0583b45343a513ee64f0025d79a7
+source-git-commit: 098dd31be4d6ee6971cd87bcbfe0f686e34918e1
 workflow-type: tm+mt
-source-wordcount: '1013'
+source-wordcount: '1036'
 ht-degree: 0%
 
 ---
@@ -92,20 +92,20 @@ ht-degree: 0%
 
 ## 確認區段啟動成功 {#verify-activation}
 
-### 電子郵件行銷目的地和雲端儲存空間目的地
+### 電子郵件行銷目的地和雲端儲存空間目的地 {#esp-and-cloud-storage}
 
 對於電子郵件行銷目標和雲端儲存目標，Adobe即時CDP會在您提供的儲存位置 `.txt` 中 `.csv` 建立以定位點分隔或檔案。 希望每天在您的儲存位置中建立一個新檔案。 The file format is:
-`<destination name>id<destination id><timestamp-yyyymmddhhmmss>`
+`<destinationName>_segment<segmentID>_<timestamp-yyyymmddhhmmss>.csv`
 
 您在連續三天收到的檔案可能如下所示：
 
 ```
-Salesforce_id3544_20191120110000.csv
-Salesforce_id3544_20191121123000.csv
-Salesforce_id3544_20191122124530.csv
+Salesforce_Marketing_Cloud_segment12341e18-abcd-49c2-836d-123c88e76c39_20200408061804.csv
+Salesforce_Marketing_Cloud_segment12341e18-abcd-49c2-836d-123c88e76c39_20200409052200.csv
+Salesforce_Marketing_Cloud_segment12341e18-abcd-49c2-836d-123c88e76c39_20200410061130.csv
 ```
 
-這些檔案在您的儲存位置即表示確認是否成功啟動。
+這些檔案在您的儲存位置即表示確認是否成功啟動。 若要瞭解匯出檔案的結構，您可 [以下載範例。csv檔案](/help/rtcdp/destinations/assets/sample_export_file_segment12341e18-abcd-49c2-836d-123c88e76c39_20200408061804.csv)。 此範例檔案包含描述檔 `person.firstname`屬性 `person.lastname`、 `person.gender`、 `person.birthyear`和 `personalEmail.address`。
 
 ### 廣告目的地
 
