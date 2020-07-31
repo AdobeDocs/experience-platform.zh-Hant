@@ -4,9 +4,9 @@ seo-title: Google Display & Video 360 Destination
 description: Display & Video 360（先前稱為DoubleClick競標管理器）是一種工具，用於在顯示、視訊和行動庫存來源中執行重新鎖定目標及受眾目標數位促銷活動。
 seo-description: 'Display & Video 360（先前稱為DoubleClick競標管理器）是一種工具，用於在顯示、視訊和行動庫存來源中執行重新鎖定目標及受眾目標數位促銷活動。 '
 translation-type: tm+mt
-source-git-commit: 6f680a60c88bc5fee6ce9cb5a4f314c4b9d02249
+source-git-commit: 7f3df12da5e93c3d0cc53eed1aa603ddbafdb0b2
 workflow-type: tm+mt
-source-wordcount: '633'
+source-wordcount: '659'
 ht-degree: 0%
 
 ---
@@ -67,3 +67,7 @@ ht-degree: 0%
 ## 啟用區段至 [!DNL Google Display & Video 360]
 
 如需如何啟用區段至目的地的指示 [!DNL Google Display & Video 360]，請參 [閱啟用資料至目的地](/help/rtcdp/destinations/activate-destinations.md)。
+
+## 匯出的資料
+
+若要確認資料是否已成功匯出至目 [!DNL Google Display & Video 360] 標，請檢查您的 [!DNL Google Display & Video 360] 帳戶。 如果啟動成功，您的帳戶會填入觀眾。
