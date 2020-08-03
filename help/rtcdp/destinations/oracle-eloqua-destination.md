@@ -4,7 +4,7 @@ seo-title: Oracle Exolca目標
 description: Oracle Exvola是Oracle為行銷自動化提供的軟體即服務(SaaS)平台，旨在幫助B2B行銷人員和組織管理營銷活動和銷售線索生成。
 seo-description: Oracle Exvola是Oracle為行銷自動化提供的軟體即服務(SaaS)平台，旨在幫助B2B行銷人員和組織管理營銷活動和銷售線索生成。
 translation-type: tm+mt
-source-git-commit: 098dd31be4d6ee6971cd87bcbfe0f686e34918e1
+source-git-commit: 570c627672439a5ee0f4215b7bf7915ec3dd2bb3
 workflow-type: tm+mt
 source-wordcount: '517'
 ht-degree: 0%
@@ -22,7 +22,7 @@ ht-degree: 0%
 
 ## 連接到目標 {#connect-destination}
 
-1. 在「連 **[!UICONTROL 接」>「目標]**」中，選 [!DNL Oracle Eloqua]擇，然後選擇「 **[!UICONTROL 連接目標」]**。
+1. 在「連 **[!UICONTROL 接]** >目 **[!UICONTROL 的地]**」中，選 [!DNL Oracle Eloqua]擇，然後選 **[!UICONTROL 擇「連接目標]**」。
 
    ![連線Exola](/help/rtcdp/destinations/assets/connect-oracle-eloqua.png)
 
@@ -49,7 +49,7 @@ ht-degree: 0%
 
 ## 目標屬性 {#destination-attributes}
 
-在啟 [用區段](/help/rtcdp/destinations/activate-destinations.md) ，到目 [!DNL Oracle Eloqua] 的地時，建議您從聯合架構中選取唯一 [識別碼](../../profile/home.md#profile-fragments-and-union-schemas)。 選擇唯一標識符和要導出到目標的任何其他XDM欄位。 如需詳細資訊，請參 [閱「電子郵件行銷目標」中，選取要在匯出檔案中當做目標屬性使用的架構欄位](/help/rtcdp/destinations/email-marketing-destinations.md#destination-attributes) 。
+在啟 [用區段](/help/rtcdp/destinations/activate-destinations.md) ，到目 [!DNL Oracle Eloqua] 的地時，建議您從聯合架構中選取唯一 [識別碼](../../profile/home.md#profile-fragments-and-union-schemas)。 選擇唯一標識符以及要導出到目標的任何其它XDM欄位。 如需詳細資訊，請參 [閱「電子郵件行銷目標」中，選取要在匯出檔案中當做目標屬性使用的架構欄位](/help/rtcdp/destinations/email-marketing-destinations.md#destination-attributes) 。
 
 ## 匯出的資料 {#exported-data}
 
