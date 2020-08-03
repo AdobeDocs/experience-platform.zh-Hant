@@ -4,7 +4,7 @@ seo-title: Google Display & Video 360 Destination
 description: Display & Video 360（先前稱為DoubleClick競標管理器）是一種工具，用於在顯示、視訊和行動庫存來源中執行重新鎖定目標及受眾目標數位促銷活動。
 seo-description: 'Display & Video 360（先前稱為DoubleClick競標管理器）是一種工具，用於在顯示、視訊和行動庫存來源中執行重新鎖定目標及受眾目標數位促銷活動。 '
 translation-type: tm+mt
-source-git-commit: 7f3df12da5e93c3d0cc53eed1aa603ddbafdb0b2
+source-git-commit: 570c627672439a5ee0f4215b7bf7915ec3dd2bb3
 workflow-type: tm+mt
 source-wordcount: '659'
 ht-degree: 0%
@@ -46,7 +46,7 @@ ht-degree: 0%
 
 ## 建立目標
 
-1. 在「連 **[!UICONTROL 接」>「目標]**」中，選 [!DNL Google Display & Video 360]擇並選擇「創 **[!UICONTROL 建目標」]**。
+1. 在「連 **[!UICONTROL 接]** >目標 **[!UICONTROL 」中，選]**&#x200B;擇並選 [!DNL Google Display & Video 360]擇「建立目標 ****」。
    ![Connect Google Display &amp; Video 360目標](/help/rtcdp/destinations/assets/google-dv360-destination.png)
 
 2. 在建 **立目標工作流程的** 「設定」步驟中，填寫目標的「基本資訊  」，以及應套用至此目標的行銷使用案例。 <br>
