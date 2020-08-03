@@ -4,7 +4,7 @@ seo-title: 社交網路目標工作流程
 description: 連線至您的社交網路和帳戶的指示
 seo-description: 連線至您的社交網路和帳戶的指示
 translation-type: tm+mt
-source-git-commit: 6f680a60c88bc5fee6ce9cb5a4f314c4b9d02249
+source-git-commit: be4cf64c89a189a09a4a7774c8fadc76c6ee8458
 workflow-type: tm+mt
 source-wordcount: '464'
 ht-degree: 0%
@@ -18,7 +18,7 @@ ht-degree: 0%
 
 本教學課 [!DNL Facebook] 程以Adobe即時客戶資料平台為例，但Adobe即時客戶資料平台中的工作流程對於所有社交網路目的地而言都相同，只要再新增至產品即可。
 
-1. 在「 **[!UICONTROL 目標>目錄]**」中，捲動至 **[!UICONTROL Social類別]** 。 選擇您偏好的社交網路目的地，然後選 **[!UICONTROL 擇連線目的地]**。
+1. 在「 **[!UICONTROL 目標]** >目錄 **[!UICONTROL 」中，捲動至]** Social類別 **** 。 選擇您偏好的社交網路目的地，然後選 **[!UICONTROL 擇連線目的地]**。
 
    ![連線至社交網路目的地](/help/rtcdp/destinations/assets/facebook-catalog-view.png)
 
