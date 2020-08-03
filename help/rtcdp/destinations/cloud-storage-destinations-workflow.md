@@ -4,7 +4,7 @@ seo-title: 雲端儲存目標工作流程
 description: 連線至雲端儲存空間的指示
 seo-description: 連線至雲端儲存空間的指示
 translation-type: tm+mt
-source-git-commit: 6f680a60c88bc5fee6ce9cb5a4f314c4b9d02249
+source-git-commit: 570c627672439a5ee0f4215b7bf7915ec3dd2bb3
 workflow-type: tm+mt
 source-wordcount: '493'
 ht-degree: 0%
@@ -18,7 +18,7 @@ ht-degree: 0%
 
 本頁說明如何連線至Adobe即時客戶資料平台中的雲端儲存空間。
 
-1. 在「連 **[!UICONTROL 線>目的地]**」中，選取您偏好的雲端儲存空間目的地，然後選取「 **[!UICONTROL 連線目的地」]**。
+1. 在「連 **[!UICONTROL 線]** >目 **[!UICONTROL 的地]**」中，選取您偏好的雲端儲存空間目的地，然後選取「 **[!UICONTROL 連線目的地」]**。
 
    ![連線至雲端儲存空間目標](/help/rtcdp/destinations/assets/connect-cloud-destination.png)
 
