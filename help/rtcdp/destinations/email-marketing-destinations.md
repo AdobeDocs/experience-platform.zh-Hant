@@ -4,7 +4,7 @@ seo-title: 電子郵件行銷目標
 description: 電子郵件服務供應商(ESP)可讓您管理電子郵件行銷活動，例如傳送促銷電子郵件促銷活動。
 seo-description: 電子郵件服務供應商(ESP)可讓您管理電子郵件行銷活動，例如傳送促銷電子郵件促銷活動。
 translation-type: tm+mt
-source-git-commit: 3c598454a868139b7604c5c7ca2b98fa0f1bb961
+source-git-commit: 570c627672439a5ee0f4215b7bf7915ec3dd2bb3
 workflow-type: tm+mt
 source-wordcount: '731'
 ht-degree: 1%
@@ -24,7 +24,7 @@ ht-degree: 1%
 
 ## 步驟1 —— 連接目標 {#connect-destination}
 
-1. 在「 **[!UICONTROL 連線>目的地]**」中，選取您要連線的電子郵件行銷目的地，然後選取「連 **[!UICONTROL 線目的地」]**。
+1. 在「 **[!UICONTROL 連線]** >目 **[!UICONTROL 的地]**」中，選取您要連線的電子郵件行銷目的地，然後選取「 **[!UICONTROL 連線目的地」]**。
 
    ![連接到目標](/help/rtcdp/destinations/assets/connect-email-marketing.png)
 
@@ -59,7 +59,7 @@ ht-degree: 1%
 
 | 唯一識別碼 | 統一模式中的XDM欄位 |
 ---------|----------
-| 電子郵件地址 | `personalEmail.address` |
+| Email Address | `personalEmail.address` |
 | 電話 | `mobilePhone.number` |
 | 忠誠度方案ID | `Customer-defined XDM field` |
 
