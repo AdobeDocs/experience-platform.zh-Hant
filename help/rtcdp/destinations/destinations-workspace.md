@@ -4,7 +4,7 @@ seo-title: 目標工作區
 description: 在Adobe即時客戶資料平台中，從左側導覽列選取「目標」以存取目標工作區。
 seo-description: 在Adobe即時客戶資料平台中，從左側導覽列選取「目標」以存取目標工作區。
 translation-type: tm+mt
-source-git-commit: 336aa90cf1e059a92a36dd0ef3222ef6a6f5123b
+source-git-commit: 570c627672439a5ee0f4215b7bf7915ec3dd2bb3
 workflow-type: tm+mt
 source-wordcount: '609'
 ht-degree: 3%
@@ -34,7 +34,7 @@ ht-degree: 3%
 
 ## [!UICONTROL 瀏覽] {#browse}
 
-「瀏 **[!UICONTROL 覽]** 」頁籤顯示已建立連接的目標。 啟用切換 **[!UICONTROL 功能的]** 「目標」會將目標設為「活動」，反之亦然。 您也可以選取「區段>瀏覽」，並選取要檢查的區段， **[!UICONTROL 以檢視您有資料流動的目的地]** 。 有關「瀏覽」頁籤中為每個目標提供的所有資訊，請參見下表：
+「瀏 **[!UICONTROL 覽]** 」頁籤顯示已建立連接的目標。 啟用切換 **[!UICONTROL 功能的]** 「目標」會將目標設為「活動」，反之亦然。 您也可以選取「區段」>「瀏覽」，並選取要檢 **[!UICONTROL 查的區段，以檢]****** 視資料流動的目的地。 有關「瀏覽」頁籤中為每個目標提供的所有資訊，請參見下表：
 
 ![瀏覽標籤](/help/rtcdp/destinations/assets/browse-tab.png)
 
