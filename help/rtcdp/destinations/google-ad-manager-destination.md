@@ -4,7 +4,7 @@ seo-title: Google廣告管理員目標
 description: 'Google Ad Manager之前稱為DoubleClick for Publishers或DoubleClick AdX，是來自谷歌的廣告服務平台，可讓出版業者透過視訊和行動應用程式管理其網站上的廣告展示。 '
 seo-description: 'Google Ad Manager之前稱為DoubleClick for Publishers或DoubleClick AdX，是來自谷歌的廣告服務平台，可讓出版業者透過視訊和行動應用程式管理其網站上的廣告展示。 '
 translation-type: tm+mt
-source-git-commit: f23d7dae7883cc14dc8b54d8b1ba2d94f0786cbc
+source-git-commit: 570c627672439a5ee0f4215b7bf7915ec3dd2bb3
 workflow-type: tm+mt
 source-wordcount: '636'
 ht-degree: 0%
@@ -48,7 +48,7 @@ ht-degree: 0%
 
 ## 建立目標
 
-1. 在「連 **[!UICONTROL 接」>「目標]**」中，選 [!DNL Google Ad Manager]擇並選擇「創 **[!UICONTROL 建目標」]**。
+1. 在「連 **[!UICONTROL 接]** >目標 **[!UICONTROL 」中，選]**&#x200B;擇並選 [!DNL Google Ad Manager]擇「建立目標 ****」。
    ![Connect Google Ad Manager目標](/help/rtcdp/destinations/assets/google-1-destination.png)
 
 2. 在建立 **目標工作流的** 「設定」步驟中，填寫目標的 [!UICONTROL 「基本資訊] 」。 <br>
