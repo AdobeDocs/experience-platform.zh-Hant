@@ -4,7 +4,7 @@ seo-title: 將描述檔和區段啟用至目標
 description: 將區段對應至目標，以啟用您在Adobe即時客戶資料平台中擁有的資料。 若要完成此作業，請遵循下列步驟。
 seo-description: 將區段對應至目標，以啟用您在Adobe即時客戶資料平台中擁有的資料。 若要完成此作業，請遵循下列步驟。
 translation-type: tm+mt
-source-git-commit: 08b6fd2d43e8ca9d0208ac1bfadc2db15e3f2e90
+source-git-commit: be4cf64c89a189a09a4a7774c8fadc76c6ee8458
 workflow-type: tm+mt
 source-wordcount: '1039'
 ht-degree: 0%
@@ -22,7 +22,7 @@ ht-degree: 0%
 
 ## 啟動資料 {#activate-data}
 
-1. 在「 **[!UICONTROL 目標>瀏覽]**」中，選取您要啟用區段的目標。
+1. 在「 **[!UICONTROL 目標]** >瀏 **[!UICONTROL 覽]**」中，選取您要啟用區段的目標。
 2. 按一下目標的名稱。 這會帶您進入「啟動」流程。
    ![activate-flow](/help/rtcdp/destinations/assets/activate-flow.png)請注意，如果目的地已有啟動流程，您可以看到目前傳送至目的地的區段。 選取 **[!UICONTROL 右側邊欄]** 「編輯啟動」，然後依照下列步驟修改啟動詳細資訊。
 3. 選擇 **[!UICONTROL 激活]**;
