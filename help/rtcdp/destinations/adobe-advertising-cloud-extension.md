@@ -1,10 +1,10 @@
 ---
 title: Adobe Advertising Cloud擴充功能
-seo-title: Adobe Advertising Cloud Extension
+seo-title: Adobe Advertising Cloud擴充功能
 description: Adobe Advertising Cloud擴充功能是Adobe即時客戶資料平台中的廣告目的地。 如需擴充功能的詳細資訊，請參閱Adobe Exchange的擴充功能頁面。
 seo-description: null
 translation-type: tm+mt
-source-git-commit: b96286f6a06f0583b45343a513ee64f0025d79a7
+source-git-commit: be4cf64c89a189a09a4a7774c8fadc76c6ee8458
 workflow-type: tm+mt
 source-wordcount: '478'
 ht-degree: 5%
@@ -12,7 +12,7 @@ ht-degree: 5%
 ---
 
 
-# Adobe Advertising Cloud擴充功能 {#adobe-advertising-cloud-extension}
+# Adobe Advertising Cloud Extension {#adobe-advertising-cloud-extension}
 
 ## 概述 {#overview}
 
@@ -22,7 +22,7 @@ Adobe Advertising Cloud是Adobe即時客戶資料平台中的廣告延伸。
 
 此目的地是分 [!DNL Experience Platform Launch] 機。 如需Adobe Real- [!DNL Launch] time CDP擴充功能如何運作的詳細資訊，請參閱 [Experience Platform Launch擴充功能總覽](/help/rtcdp/destinations/experience-platform-launch-extensions.md)。
 
-![Adobe Advertising Cloud Extension](/help/rtcdp/destinations/assets/adobe-advertising-cloud-extension.png)
+![Adobe Advertising Cloud擴充功能](/help/rtcdp/destinations/assets/adobe-advertising-cloud-extension.png)
 
 ## 先決條件 {#prerequisites}
 
@@ -34,7 +34,7 @@ Adobe Advertising Cloud是Adobe即時客戶資料平台中的廣告延伸。
 
 若要安裝Adobe Advertising Cloud擴充功能：
 
-1. 在 [Adobe Real-time CDP介面中](http://platform.adobe.com/)，前往「目 **[!UICONTROL 標>目錄」]**。
+1. 在 [Adobe Real-time CDP介面中](http://platform.adobe.com/)，前往「目 **[!UICONTROL 的地]** >目 **[!UICONTROL 錄]**」。
 2. 從目錄中選擇副檔名或使用搜索欄。
 3. 按一下目的地以反白標示，然後選取右 **[!UICONTROL 側導軌中的「安裝擴充功能]** 」。 如果 **[!UICONTROL Install Extension]** （安裝擴充功能）控制項呈灰色顯示 **[!UICONTROL ，表示您遺失]** manage_properties權限。 請參 [閱必要條件](#prerequisites)。
 4. 在「選 **[!UICONTROL 擇可用的啟動屬性]** 」窗口中，選擇 [!DNL Launch] 要安裝副檔名的屬性。 您也可以在中選擇建立新屬性 [!DNL Launch]。 屬性是規則、資料元素、設定的擴充功能、環境和程式庫的集合。瞭解檔案「屬性」 [頁面區段中](https://docs.adobe.com/content/help/en/launch/using/reference/admin/companies-and-properties.html#properties-page) 的 [!DNL Launch] 屬性。
