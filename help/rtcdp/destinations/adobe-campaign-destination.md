@@ -4,7 +4,7 @@ seo-title: Adobe Campaign
 description: Adobe Campaign是一套解決方案，可協助您跨所有線上及線下通道個人化並傳遞宣傳活動。
 seo-description: Adobe Campaign是一套解決方案，可協助您跨所有線上及線下通道個人化並傳遞宣傳活動。
 translation-type: tm+mt
-source-git-commit: 098dd31be4d6ee6971cd87bcbfe0f686e34918e1
+source-git-commit: 570c627672439a5ee0f4215b7bf7915ec3dd2bb3
 workflow-type: tm+mt
 source-wordcount: '517'
 ht-degree: 1%
@@ -22,7 +22,7 @@ Adobe Campaign是一套解決方案，可協助您跨所有線上及線下通道
 
 ## 連接目標 {#connect-destination}
 
-1. 在「連 **[!UICONTROL 線>目的地]**」中，選取「Adobe Campaign」，然後選取「 **[!UICONTROL 連線目的地」]**。
+1. 在「 **[!UICONTROL 連線]** >目 **[!UICONTROL 的地]**」中，選取「Adobe Campaign」，然後選取「 **[!UICONTROL 連線目的地」]**。
 
    ![連線至Adobe Campaign](/help/rtcdp/destinations/assets/connect-adobe-campaign.png)
 
@@ -53,7 +53,7 @@ Adobe Campaign是一套解決方案，可協助您跨所有線上及線下通道
 
 ## 目標屬性 {#destination-attributes}
 
-在啟 [用區段](/help/rtcdp/destinations/activate-destinations.md) 至Adobe Campaign目的地時，我們建議您從聯合架構中選取唯一 [識別碼](../../profile/home.md#profile-fragments-and-union-schemas)。 選擇唯一標識符和要導出到目標的任何其他XDM欄位。 如需詳細資訊，請參 [閱「電子郵件行銷目標」中，選取要在匯出檔案中當做目標屬性使用的架構欄位](/help/rtcdp/destinations/email-marketing-destinations.md#destination-attributes) 。
+在啟 [用區段](/help/rtcdp/destinations/activate-destinations.md) 至Adobe Campaign目的地時，我們建議您從聯合架構中選取唯一 [識別碼](../../profile/home.md#profile-fragments-and-union-schemas)。 選擇唯一標識符以及要導出到目標的任何其它XDM欄位。 如需詳細資訊，請參 [閱「電子郵件行銷目標」中，選取要在匯出檔案中當做目標屬性使用的架構欄位](/help/rtcdp/destinations/email-marketing-destinations.md#destination-attributes) 。
 
 ## 匯出的資料 {#exported-data}
 
