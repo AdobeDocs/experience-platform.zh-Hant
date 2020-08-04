@@ -3,10 +3,10 @@ product: experience-platform
 audience: user
 user-guide-title: Adobe Experience Platform資料治理說明
 translation-type: tm+mt
-source-git-commit: e135bc33e6c3daa411e85cb37e407322fd0bca5b
+source-git-commit: 876ac35f6366411adda821805bf628470839f80e
 workflow-type: tm+mt
-source-wordcount: '103'
-ht-degree: 4%
+source-wordcount: '106'
+ht-degree: 5%
 
 ---
 
@@ -16,9 +16,9 @@ ht-degree: 4%
 * [資料治理概觀](home.md)
 * 資料使用標籤 {#labels}
    * [資料使用標籤概觀](labels/overview.md)
+   * [核心資料使用標籤](labels/reference.md)
    * [在UI中管理資料使用標籤](labels/user-guide.md)
-   * [在API中管理資料使用標籤](labels/api.md)
-   * [支援的資料使用標籤](labels/reference.md)
+   * [使用API管理資料集和欄位的標籤](labels/dataset-api.md)
 * 資料使用原則 {#policies}
    * [資料使用政策概觀](policies/overview.md)
    * [資料使用原則使用指南](policies/user-guide.md)
@@ -26,8 +26,9 @@ ht-degree: 4%
 * 政策執行 {#enforcement}
    * [策略實施概述](enforcement/overview.md)
    * [使用原則服務API強制執行資料使用原則](enforcement/api-enforcement.md)
-* DULE Policy Service API {#api}
+* 政策服務API開發人員指南 {#api}
    * [快速入門](api/getting-started.md)
+   * [標籤](api/labels.md)
    * [策略](api/policies.md)
    * [行銷動作](api/marketing-actions.md)
    * [評估](api/evaluation.md)
