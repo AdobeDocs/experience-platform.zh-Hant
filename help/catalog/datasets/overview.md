@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 資料集總覽
 topic: datasets
 translation-type: tm+mt
-source-git-commit: bfbf2074a9dcadd809de043d62f7d2ddaa7c7b31
+source-git-commit: 1bf6b0948c47c7941fb8f9cf2edfac4d665b8189
 workflow-type: tm+mt
-source-wordcount: '711'
+source-wordcount: '712'
 ht-degree: 2%
 
 ---
@@ -47,7 +47,7 @@ Adobe Experience Platform可 [!DNL Data Governance] 讓您管理客戶資料，�
 如需服務 [的詳細資訊](../../data-governance/home.md) ，請參閱資料管理概觀。 有關如何使用中的使用標籤的步 [!DNL Platform]驟，請參閱以下指南：
 
 * [管理UI中的標籤](../../data-governance/labels/user-guide.md)
-* [管理API中的標籤](../../data-governance/labels/api.md)
+* [在API中管理資料集標籤](../../data-governance/labels/dataset-api.md)
 
 ## 下游服務中的數 [!DNL Platform] 據集
 
