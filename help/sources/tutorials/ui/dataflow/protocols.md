@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 在UI中為協定連接器配置資料流
 topic: overview
 translation-type: tm+mt
-source-git-commit: 2590c28df6d0fff3e207eb232a02abe16830ee17
+source-git-commit: 91714bea4e165d64bcc33e32e73d1d32a505ba00
 workflow-type: tm+mt
-source-wordcount: '1205'
+source-wordcount: '1225'
 ht-degree: 0%
 
 ---
@@ -58,11 +58,9 @@ ht-degree: 0%
 
 若要將資料新增至新資料集，請選取「 **[!UICONTROL 建立新資料集]** 」，並在提供的欄位中輸入資料集的名稱和說明。
 
-在此過程中，您還可以啟用「部 *[!UICONTROL 分提取]* 」和「 *[!UICONTROL 錯誤診斷」]*。 啟用 *[!UICONTROL 部分擷取]* ，可讓您擷取包含錯誤的資料，最多可設定特定臨界值。 啟用錯誤診斷可提供任何個別批次錯誤資料的詳細資訊。 如需詳細資訊，請參閱部 [分批次擷取概觀](../../../../ingestion/batch-ingestion/partial.md)。
+通過在「選擇方案」搜索欄中輸入方案名稱，可以附加 **[!UICONTROL 方案]** 欄位。 您也可以選擇下拉式圖示，查看現有結構的清單。 或者，您也可以選擇「 **[!UICONTROL 進階搜尋]** 」來存取現有結構的畫面，包括其各自的詳細資料。
 
-完成後，按一下架構表徵圖。
-
-![create-new-dataset](../../../images/tutorials/dataflow/protocols/use-new-dataset.png)
+![create-new-dataset](../../../images/tutorials/dataflow/all-tabular/new-target-dataset.png)
 
 將出 *[!UICONTROL 現「選擇模式]* 」對話框。 選擇要應用於新資料集的模式，然後按一下「完 **[!UICONTROL 成」]**。
 
@@ -70,11 +68,9 @@ ht-degree: 0%
 
 您可以根據需要選擇直接映射欄位，或使用映射器函式轉換源資料以導出計算值或計算值。 有關資料映射和映射器函式的詳細資訊，請參閱將CSV資料映 [射到XDM模式欄位的教程](../../../../ingestion/tutorials/map-a-csv-file.md)。
 
-「映 *[!UICONTROL 射]* 」螢幕還允許您設定 *[!UICONTROL 「增量」列]*。 建立資料流時，可以設定任何時間戳欄位作為基準，以決定在計畫增量提取中提取哪些記錄。
-
 映射源資料後，按一下「下 **[!UICONTROL 一步]**」。
 
-![](../../../images/tutorials/dataflow/protocols/mapping.png)
+![](../../../images/tutorials/dataflow/all-tabular/mapping-updated.png)
 
 ## 排程擷取執行
 
@@ -82,10 +78,10 @@ ht-degree: 0%
 
 | 欄位 | 說明 |
 | --- | --- |
-| 頻率 | 可選頻率包括「一次」、「分鐘」、「小時」、「日」和「周」。 |
+| 頻率 | 可選頻率 `Once`包括 `Minute`、 `Hour`、 `Day`和 `Week`。 |
 | 間隔 | 一個整數，用於設定所選頻率的間隔。 |
-| 開始時間 | UTC時間戳記，指出何時設定第一次擷取 |
-| 回填 | 一個布爾值，可決定最初收錄的資料。 如果 *啟用回填* ，則指定路徑中的所有目前檔案將在第一次排程擷取期間被擷取。 如果 *停用* 「回填」 *，則只會收錄在首次擷取執行和開始時間之間載入的* 檔案。 在開始時間之前載 *入的檔案* ，將不會收錄。 |
+| 開始時間 | UTC時間戳記，指示何時設定進行第一次擷取。 |
+| 回填 | 一個布爾值，可決定最初收錄的資料。 如果 *[!UICONTROL 啟用回填]* ，則指定路徑中的所有目前檔案將在第一次排程擷取期間被擷取。 如果 *停用* 「回填」 *[!UICONTROL ，則只會收錄在首次擷取執行和開始時間之間載入的]* 檔案。 在開始時間之前載 *[!UICONTROL 入的檔案]* ，將不會收錄。 |
 | 增量列 | 具有類型、日期或時間的一組已篩選源架構欄位的選項。 此欄位用於區分新資料和現有資料。 增量資料將根據選取欄的時間戳記進行擷取。 |
 
 資料流設計為在計畫基礎上自動收錄資料。 從選取擷取頻率開始。 接著，設定間隔，以指定兩個流程執行之間的期間。 間隔的值應為非零整數，且應設定為大於或等於15。
@@ -102,15 +98,19 @@ ht-degree: 0%
 
 >[!TIP] **[!UICONTROL 在單]** 次擷取期間 **** ，不會顯示間隔和回填。
 
-![](../../../images/tutorials/dataflow/databases/schedule-once.png)
-
 在為計畫提供適當值後，選擇「下 **[!UICONTROL 一步」]**。
 
-## 命名資料流
+![](../../../images/tutorials/dataflow/databases/schedule-once.png)
 
-此時 *[!UICONTROL 將顯示「資料流]* 」詳細資訊步驟，您必須在此為資料流提供名稱和可選說明。 完成後，按&#x200B;**[!UICONTROL 「下一步」]**。
+## 提供資料流詳細資訊
 
-![dataset-flow-details](../../../images/tutorials/dataflow/protocols/dataset-flow-details.png)
+此時將顯示 *[!UICONTROL 資料流詳細資訊]* ，允許您命名新資料流並提供有關新資料流的簡要說明。
+
+在此過程中，您還可以啟用「部 *[!UICONTROL 分提取]* 」和「 *[!UICONTROL 錯誤診斷」]*。 啟用 *[!UICONTROL 部分擷取]* ，可讓您擷取包含錯誤至特定臨界值的資料。 啟用 *[!UICONTROL 部分提取]* ，請拖動「錯誤閾值% ** dial」以調整批的錯誤閾值。 或者，也可以通過選擇輸入框手動調整閾值。 如需詳細資訊，請參閱部 [分批次擷取概觀](../../../../ingestion/batch-ingestion/partial.md)。
+
+為資料流提供值並選擇「下 **[!UICONTROL 一步]**」。
+
+![dataflow-details](../../../images/tutorials/dataflow/all-tabular/dataflow-detail.png)
 
 ## 查看資料流
 
