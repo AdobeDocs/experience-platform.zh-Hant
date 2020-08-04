@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 在Attribution AI中存取分數
 topic: Accessing scores
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 24449d0138ab449dbc01aecbbe9f70e05c781c89
 workflow-type: tm+mt
-source-wordcount: '983'
+source-wordcount: '1028'
 ht-degree: 2%
 
 ---
@@ -259,9 +259,11 @@ curl -X GET 'https://platform.adobe.io:443/data/foundation/export/files/01E5QSWC
 
 ![終端](./images/download-scores/terminal-output.png)
 
+下載的樂譜將採用鑲木格式，需要 [!DNL Spark]-shell或鑲木閱讀器才能檢視樂譜。 若要檢視原始分數，您可以使用 [鑲木地板](https://github.com/apache/parquet-mr/tree/master/parquet-tools)。 拼花工具可以分析資料 [!DNL Spark]。
+
 ## 後續步驟
 
-本檔案概述下載Attribution AI分數所需的步驟。 您現在可以繼續瀏覽其他 [智慧型服務](../home.md) 和參考線。
+本檔案概述下載Attribution AI分數所需的步驟。 如需分數輸出的詳細資訊，請造訪屬 [性AI輸入與輸出檔案](./input-output.md) 。
 
 ## 使用雪花存取分數
 
