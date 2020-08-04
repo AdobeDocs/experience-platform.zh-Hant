@@ -3,10 +3,10 @@ product: experience-platform
 audience: user
 user-guide-title: 智慧型服務說明
 translation-type: tm+mt
-source-git-commit: a0b85809d0703c0366c73ed6d66319af0f62cb27
+source-git-commit: 24449d0138ab449dbc01aecbbe9f70e05c781c89
 workflow-type: tm+mt
-source-wordcount: '64'
-ht-degree: 3%
+source-wordcount: '67'
+ht-degree: 2%
 
 ---
 
@@ -18,6 +18,7 @@ ht-degree: 3%
 * 歸因AI {#attribution-ai}
    * [概述](attribution-ai/overview.md)
    * [Attribution AI快速入門](attribution-ai/getting-started.md)
+   * [輸入與輸出](attribution-ai/input-output.md)
    * [使用者介面指南](attribution-ai/user-guide.md)
    * [發現見解](attribution-ai/discover-insights.md)
    * [存取分數](attribution-ai/download-scores.md)
