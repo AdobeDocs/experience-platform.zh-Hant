@@ -4,10 +4,10 @@ solution: Experience Platform
 title: '使用API管理資料集的資料使用標籤 '
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 2f35765c0dfadbfb4782b6c3904e33ae7a330b2f
+source-git-commit: 3b6f46c5a81e1b6e8148bf4b78ae2560723f9d20
 workflow-type: tm+mt
-source-wordcount: '653'
-ht-degree: 3%
+source-wordcount: '912'
+ht-degree: 2%
 
 ---
 
@@ -94,16 +94,21 @@ PUT /datasets/{DATASET_ID}/labels
 
 **請求**
 
-下列POST要求會將一系列標籤新增至資料集，以及該資料集內的特定欄位。 裝載中提供的欄位與PUT請求所需的欄位相同。
+下列PUT請求會更新資料集的現有標籤以及該資料集內的特定欄位。 裝載中提供的欄位與POST要求所需的欄位相同。
+
+>[!IMPORTANT]
+>
+>對端點 `If-Match` 發出PUT請求時，必須提供有效的標 `/datasets/{DATASET_ID}/labels` 頭。 如需使 [用必要標題的詳細資訊](#if-match) ，請參閱附錄一節。
 
 ```shell
-curl -X POST \
+curl -X PUT \
   'https://platform.adobe.io/data/foundation/dataset/datasets/5abd49645591445e1ba04f87/labels' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -H 'Content-Type: application/json' \
+  -H 'If-Match: 8f00d38e-0000-0200-0000-5ef4fc6d0000' \
   -d '{
         "labels": [ "C1", "C2", "C3", "I1", "I2" ],
         "optionalLabels": [
@@ -160,13 +165,20 @@ DELETE /datasets/{DATASET_ID}/labels
 
 **請求**
 
+下列請求會移除路徑中指定之資料集的標籤。
+
+>[!IMPORTANT]
+>
+>向端點 `If-Match` 發出DELETE請求時，必須提供有效的 `/datasets/{DATASET_ID}/labels` 標頭。 如需使 [用必要標題的詳細資訊](#if-match) ，請參閱附錄一節。
+
 ```shell
 curl -X DELETE \
   'https://platform.adobe.io/data/foundation/dataset/datasets/5abd49645591445e1ba04f87/labels' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME}'
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'If-Match: 8f00d38e-0000-0200-0000-5ef4fc6d0000'
 ```
 
 **回應**
@@ -182,3 +194,17 @@ curl -X DELETE \
 您現在也可以根據已套用的標籤來定義資料使用原則。 如需詳細資訊，請參閱資 [料使用政策概觀](../policies/overview.md)。
 
 有關在中管理資料集的詳細信 [!DNL Experience Platform]息，請參 [見資料集概述](../../catalog/datasets/overview.md)。
+
+## 附錄 {#appendix}
+
+下節包含使用資料集服務API使用標籤的其他資訊。
+
+### [!DNL If-Match] 標題 {#if-match}
+
+在進行更新資料集（PUT和DELETE）現有標籤的API呼叫時，必須包含 `If-Match` 標題，指出資料集服務中資料集標籤實體的目前版本。 為避免資料衝突，只有當包含的字串符合系統為該資料集產生的最新版本標籤時， `If-Match` 服務才會更新資料集實體。
+
+>[!NOTE]
+>
+>如果目前沒有相關資料集的標籤，則只能透過POST要求新增新標籤，而不需要標 `If-Match` 題。 將標籤新增至資料集後，會指 `etag` 派一個值，供稍後用來更新或移除標籤。
+
+若要擷取最新版本的dataset-label實體，請向端點 [提出GET](#look-up)`/datasets/{DATASET_ID}/labels` 請求。 在回應中的標題下傳回目前 `etag` 值。 在更新現有資料集標籤時，最佳實務是先對資料集執行查閱請求，以便在後續PUT或DELETE請求的標題中使用該值之前，先擷取其最 `etag` 新 `If-Match` 值。
