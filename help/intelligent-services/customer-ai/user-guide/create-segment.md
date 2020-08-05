@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 建立具有預測分數的客戶細分
 topic: Create a segment
 translation-type: tm+mt
-source-git-commit: fba6ae701a38737812dccbf4f63e5a07f935ad8b
+source-git-commit: e351a2d489730c1f1bd5f87be8d85612090bc009
 workflow-type: tm+mt
 source-wordcount: '272'
 ht-degree: 0%
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # 建立具有預測分數的客戶細分
 
-當預測執行完成時，「設定檔」會自動使用預測傾向分數。 利用客戶人工智慧豐富個人檔案分數可建立客戶細分，以根據其傾向分數尋找受眾。 本節提供使用區段產生器建立區段的步驟。 如需建立區段的更強穩教學課程，請參閱「區段產 [生器」使用指南](../../../segmentation/ui/overview.md)。
+當預測執行完成時，「設定檔」會自動使用預測傾向分數。 利用客戶人工智慧豐富個人檔案分數可建立客戶細分，以根據其傾向分數尋找受眾。 本節提供使用區段產生器建立區段的步驟。 如需建立區段的更強穩教學課程，請參閱「區段產 [生器」使用指南](../../../segmentation/ui/segment-builder.md)。
 
 >[!IMPORTANT]
 >
