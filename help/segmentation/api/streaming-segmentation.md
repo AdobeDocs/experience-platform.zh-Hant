@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 串流區段
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 6a0a9b020b0dc89a829c557bdf29b66508a10333
+source-git-commit: e351a2d489730c1f1bd5f87be8d85612090bc009
 workflow-type: tm+mt
-source-wordcount: '1364'
+source-wordcount: '1365'
 ht-degree: 1%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->下列檔案說明如何使用API使用串流分段。 如需使用UI使用串流區段的詳細資訊，請閱讀「區段產 [生器」指南](../ui/overview.md#streaming-segmentation)。
+>下列檔案說明如何使用API使用串流分段。 如需使用UI使用串流區段的詳細資訊，請閱讀串 [流區段UI指南](../ui/streaming-segmentation.md)。
 
 透過串流分 [!DNL Adobe Experience Platform] 段功能，客戶可以近乎即時地進行分段，同時專注於資料的豐富性。 透過串流分段，區段資格現在會在資料進入時進行 [!DNL Platform]，減輕排程和執行分段工作的需求。 有了這項功能，大部份的區段規則現在都可以在資料傳入時進行評估 [!DNL Platform]，這表示區段成員資格將會保持最新，而不會執行排程的區段工作。
 
@@ -364,7 +364,7 @@ curl -X POST \
 
 ### 啟用排程
 
-預設情況下，建立計畫時不活動，除非 `state` 在建立(POST)請 `active` 求主體中將屬性設定為。 通過向端點發出PATCH請求並在路徑中包 `state``active``/config/schedules` 括調度的ID，可以啟用調度（將設定為）。
+預設情況下，建立計畫時，除非將屬 `state` 性設定為建立(POST) `active` 請求主體中，否則該計畫處於非活動狀態。 通過向端點發出PATCH請求並在路徑中包 `state``active``/config/schedules` 括調度的ID，可以啟用調度（將設定為）。
 
 **API格式**
 
@@ -403,4 +403,4 @@ curl -X POST \
 
 現在您已啟用新區段和現有區段的串流區段，並啟用排程區段來建立基準並執行循環評估，您就可以開始為組織建立區段。
 
-若要瞭解如何使用Adobe Experience Platform使用者介面執行類似動作及使用區段，請造訪區段產生 [器使用指南](../ui/overview.md)。
+若要瞭解如何使用Adobe Experience Platform使用者介面執行類似動作及使用區段，請造訪區段產生 [器使用指南](../ui/segment-builder.md)。
