@@ -3,10 +3,10 @@ product: experience-platform
 audience: user
 user-guide-title: Adobe Experience Platform細分服務說明
 translation-type: tm+mt
-source-git-commit: c5880153f4ba9a6518423985e42fb1b3b71cd862
+source-git-commit: e351a2d489730c1f1bd5f87be8d85612090bc009
 workflow-type: tm+mt
-source-wordcount: '112'
-ht-degree: 8%
+source-wordcount: '116'
+ht-degree: 9%
 
 ---
 
@@ -27,6 +27,8 @@ ht-degree: 8%
    - [串流區段](api/streaming-segmentation.md)
 - 區段UI {#ui}
    - [概述](ui/overview.md)
+   - [區段產生器](ui/segment-builder.md)
+   - [串流區段](ui/streaming-segmentation.md)
 - [支援退出](honoring-opt-outs.md)
 - [多實體分段](multi-entity-segmentation.md)
 - 描述檔查詢語言 {#pql}
