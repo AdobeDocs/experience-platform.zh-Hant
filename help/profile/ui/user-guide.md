@@ -4,7 +4,7 @@ solution: Adobe Experience Platform
 title: 即時客戶基本資料使用指南
 topic: guide
 translation-type: tm+mt
-source-git-commit: f910351d49de9c4a18a444b99b7f102f4ce3ed5b
+source-git-commit: 5c2429f10dfed8cc927914572c690a0536ddae99
 workflow-type: tm+mt
 source-wordcount: '1147'
 ht-degree: 0%
@@ -16,7 +16,7 @@ ht-degree: 0%
 
 [!DNL Real-time Customer Profile] 建立個別客戶的全方位檢視，結合來自多個通道的資料，包括線上、離線、CRM和協力廠商資料。
 
-本檔案可做為在Adobe Experience Platform使用者介 [!DNL Real-time Customer Profile] 面中互動的指南。
+本檔案可做為在Adobe Experience Platform使用者介 [!DNL Real-time Customer Profile] 面中與之互動的指南。
 
 ## 快速入門
 
@@ -88,7 +88,7 @@ ht-degree: 0%
 
 ![](../images/user-guide/profiles-display-profile.png)
 
-### 描述檔詳細資料
+### 描述檔詳細資料 {#profile-detail}
 
 在選擇「配置 **[!UICONTROL 式ID]**」後， _[!UICONTROL 將開啟]_「詳細資訊」頁籤。 此頁顯示有關所選配置檔案的資訊，包括基本屬性、連結身份和可用聯繫渠道。 顯示的描述檔資訊已從多個描述檔片段合併在一起，以形成個別客戶的單一檢視。
 
