@@ -4,9 +4,9 @@ seo-title: 支援Adobe Experience Platform Web SDK同意偏好設定
 description: 瞭解如何使用Experience Platform Web SDK支援同意偏好設定
 seo-description: 瞭解如何使用Experience Platform Web SDK支援同意偏好設定
 translation-type: tm+mt
-source-git-commit: 7b07a974e29334cde2dee7027b9780a296db7b20
+source-git-commit: 0869c6c54e8936a1ac1225cf6510f7139dce1936
 workflow-type: tm+mt
-source-wordcount: '516'
+source-wordcount: '756'
 ht-degree: 0%
 
 ---
@@ -39,17 +39,17 @@ alloy("configure", {
 
 此時，您可能會希望使用者在使用者介面中選擇加入。 收集使用者的偏好設定後，請將這些偏好設定傳達給SDK。
 
-## 傳達同意偏好
+## 透過Adobe Standard傳達同意偏好
 
 如果用戶選擇，請執行 `setConsent` 將選項設定 `general` 為如 `in` 下的命令：
 
 ```javascript
 alloy("setConsent", {
-    consent: [{ 
+    consent: [{
       standard: "Adobe",
       version: "1.0",
-      value: { 
-        general: "in" 
+      value: {
+        general: "in"
       }
     }]
 });
@@ -61,11 +61,11 @@ alloy("setConsent", {
 
 ```javascript
 alloy("setConsent", {
-    consent: [{ 
+    consent: [{
       standard: "Adobe",
       version: "1.0",
-      value: { 
-        general: "out" 
+      value: {
+        general: "out"
       }
     }]
 });
@@ -81,6 +81,49 @@ alloy("setConsent", {
 >
 >目前，SDK僅支援其目 `general` 的。 雖然我們計畫建立一套更健全的目的或類別，以對應不同的Adobe功能和產品方案，但目前的實作方式是完全或完全不選擇加入。  這僅適用於Adobe Experience Platform，而不適 [!DNL Web SDK] 用於其他Adobe JavaScript程式庫。
 
-## 持續遵守同意偏好
+## 透過IAB TCF標準傳達同意偏好
 
-在您使用命令將使用者偏好設定傳達至SDK `setConsent` 後，SDK會將使用者偏好設定保留至Cookie。 下次使用者將您的網站載入瀏覽器時，SDK將會擷取並使用這些持續的偏好設定。 您不需要再次執行該 `setConsent` 命令，只需要通知用戶首選項的更改，您隨時都可以這樣做。
+SDK支援記錄使用者透過互動式廣告局歐洲(IAB)透明度與同意框架(TCF)標準提供的同意偏好。 同意字串可透過與上述相同的setConnence命令來設定，如下所示：
+
+```javascript
+alloy("setConsent", {
+    consent: [{
+      standard: "IAB TCF",
+      version: "2.0",
+      value: "CO1Z4yuO1Z4yuAcABBENArCsAP_AAH_AACiQGCNX_T5eb2vj-3Zdt_tkaYwf55y3o-wzhhaIse8NwIeH7BoGP2MwvBX4JiQCGBAkkiKBAQdtHGhcCQABgIhRiTKMYk2MjzNKJLJAilsbe0NYCD9mnsHT3ZCY70--u__7P3fAwQgkwVLwCRIWwgJJs0ohTABCOICpBwCUEIQEClhoACAnYFAR6gAAAIDAACAAAAEEEBAIABAAAkIgAAAEBAKACIBAACAEaAhAARIEAsAJEgCAAVA0JACKIIQBCDgwCjlACAoAAAAA.YAAAAAAAAAAA",
+      gdprApplies: true
+    }]
+});
+```
+
+以此方式設定同意書時，會以同意資訊更新「統一描述檔」。 為了達到此目的，配置式XDM架構需要包含配置式 [隱私混合](https://github.com/adobe/xdm/blob/master/docs/reference/context/profile-privacy.schema.md)。 在傳送事件時，需要手動將IAB同意資訊新增至事件xdm物件。 SDK不會自動在事件中包含同意資訊。 若要在事件中傳送同意資訊， [Experience Event Privacy Mixin](https://github.com/adobe/xdm/blob/master/docs/reference/context/experienceevent-privacy.schema.md) 必須新增至體驗事件架構。
+
+## 在單一請求中傳送兩個標準
+
+SDK也支援在請求中傳送多個同意物件。
+
+```javascript
+alloy("setConsent", {
+    consent: [{
+      standard: "Adobe",
+      version: "1.0",
+      value: {
+        general: "in"
+      }
+    },{
+      standard: "IAB TCF",
+      version: "2.0",
+      value: "CO1Z4yuO1Z4yuAcABBENArCsAP_AAH_AACiQGCNX_T5eb2vj-3Zdt_tkaYwf55y3o-wzhhaIse8NwIeH7BoGP2MwvBX4JiQCGBAkkiKBAQdtHGhcCQABgIhRiTKMYk2MjzNKJLJAilsbe0NYCD9mnsHT3ZCY70--u__7P3fAwQgkwVLwCRIWwgJJs0ohTABCOICpBwCUEIQEClhoACAnYFAR6gAAAIDAACAAAAEEEBAIABAAAkIgAAAEBAKACIBAACAEaAhAARIEAsAJEgCAAVA0JACKIIQBCDgwCjlACAoAAAAA.YAAAAAAAAAAA",
+      gdprApplies: true
+    }]
+});
+```
+
+## 持續使用許可偏好
+
+在您使用命令將使用者偏好設定傳達至SDK `setConsent` 後，SDK會將使用者偏好設定保留至Cookie。 下次使用者將您的網站載入瀏覽器時，SDK將會擷取並使用這些持續的偏好設定來判斷事件是否可傳送至Adobe。 您不需要再次執行該 `setConsent` 命令，只需要通知用戶首選項的更改，您隨時都可以這樣做。
+
+## 在設定許可時同步身份
+
+當預設同意擱置中時，「setConnence」可能是第一個發出並確立身分的要求。 因此，在第一個要求上同步身分可能很重要。 身分圖可以像「sendEvent」命令一樣新增至「setConmonence」命令。 請參 [閱擷取Experience Cloud ID](./identity.md)
+
