@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 區段服務使用指南
 topic: ui guide
 translation-type: tm+mt
-source-git-commit: ab43c677ab45c7aa047a50049c0dd8613b003403
+source-git-commit: e7266fba14b2dffe46ce77428ad6fe0dd92abdf5
 workflow-type: tm+mt
-source-wordcount: '1361'
+source-wordcount: '1365'
 ht-degree: 0%
 
 ---
@@ -47,7 +47,7 @@ ht-degree: 0%
 
 ![](../images/ui/overview/segment-browse-segments.png)
 
-頁面頂端有「新增所有區段 **[!UICONTROL 至排程和建立區段]** 」 **[!UICONTROL 的選項]**。
+頁面頂端有選項，可將所有區段新增至排程並建立新區段。
 
 切換新 **[!UICONTROL 增所有區段以排程]** ，將啟用排程的區段。 如需排程分段的詳細資訊，請參閱本使 [用指南的排程分段區段](#scheduled-segmentation)。
 
@@ -73,7 +73,7 @@ ht-degree: 0%
 
 ### 區段摘要
 
-「區 *[!UICONTROL 段摘要]* 」區段提供如屬性的ID、名稱、說明和詳細資訊等資訊。
+「區 **[!UICONTROL 段摘要]** 」區段提供如屬性的ID、名稱、說明和詳細資訊等資訊。
 
 此外，您也可以選擇編輯區段。 選取 **[!UICONTROL 「編輯]** 」區段會帶您進入 [!DNL Segment Builder]。 有關使用工作區的更多詳 [!DNL Segment Builder] 細資訊，請閱讀使 [[!DNL Segment Builder] 用指南](./segment-builder.md)。
 
