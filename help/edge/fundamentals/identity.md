@@ -4,10 +4,10 @@ seo-title: Adobe Experience Platform Web SDK擷取Experience Cloud ID
 description: 瞭解如何取得Adobe Experience Cloud Id。
 seo-description: 瞭解如何取得Adobe Experience Cloud Id。
 translation-type: tm+mt
-source-git-commit: 7b07a974e29334cde2dee7027b9780a296db7b20
+source-git-commit: d2870df230811486c09ae29bf9f600beb24fe4f8
 workflow-type: tm+mt
-source-wordcount: '408'
-ht-degree: 9%
+source-wordcount: '730'
+ht-degree: 5%
 
 ---
 
@@ -23,6 +23,14 @@ Adobe Experience Platform運用 [!DNL Web SDK] 了 [Adobe Identity Service](../.
 ## 第三方身份
 
 可 [!DNL Identity Service] 以將ID與第三方網域(demdex.net)同步，以便跨網站追蹤。 啟用此功能後，會對demdex.net提出對訪客的第一個要求（例如，沒有ECID的訪客）。 這只會在允許其執行的瀏覽器（例如Chrome）上執行，並由設定中的 `thirdPartyCookiesEnabled` 參數控制。 如果您想要一起停用此功能，請設 `thirdPartyCookiesEnabled` 為false。
+
+## ID移轉
+
+從使用訪客API進行移轉時，您也可以移轉現有的AMCV Cookie。 若要啟用ECID移轉，請在 `idMigrationEnabled` 設定中設定參數。 ID移轉已設定為啟用某些使用案例：
+
+* 當網域的某些頁面使用訪客API，而其他頁面使用此SDK時。 為支援此案例，SDK會讀取現有的AMCV Cookie，並使用現有的ECID寫入新Cookie。 此外，SDK會編寫AMCV Cookie，如此，如果ECID是先在使用AEP Web SDK所創作的頁面上取得，則使用訪客API所創作的後續頁面具有相同的ECID。
+* 當AEP Web SDK設定在具有訪客API的頁面上時。 為支援此案例，如果未設定AMCV Cookie,SDK會在頁面上尋找訪客API並呼叫它以取得ECID。
+* 當整個網站使用AEP Web SDK且沒有訪客API時，移轉ECID以保留回訪訪客資訊會很有用。 在SDK與部署一段 `idMigrationEnabled` 時間後，如此大部分的訪客Cookie都會移轉，就可關閉設定。
 
 ## 擷取訪客ID
 
@@ -45,20 +53,34 @@ alloy("getIdentity")
 
 ## 同步身分識別
 
+>[!NOTE]
+>
+>除了 `syncIdentity` 雜湊功能外，2.1.0版中也移除了該方法。 如果您使用2.1.0+版，並想要同步身分識別，可以直接在命令的選項( `xdm` 位於 `sendEvent` 欄位下)中 `identityMap` 傳送。
+
 此外， [!DNL Identity Service] 還允許您使用命令將自己的標識符與ECID `syncIdentity` 同步。
 
+>[!NOTE]
+>
+>強烈建議在每個命令上傳遞所有可用的 `sendEvent` 身份。 這可解鎖一系列使用案例，包括個人化。 現在，您可以在命令中傳遞這些身 `sendEvent` 分識別，因此可將它們直接放在DataLayer中。
+
+同步身分可讓您使用多個身分識別裝置／使用者、設定其驗證狀態，並決定哪個識別碼被視為主要識別碼。 如果未將標識符設定為 `primary`，則主要預設值為 `ECID`。
+
 ```javascript
-alloy("syncIdentity",{
-    identity:{
-      "AppNexus":{
-        "id":"123456,
-        "authenticationState":"ambiguous",
-        "primary":false,
-        "hashEnabled": true,
-      }
+alloy("sendEvent", {
+  xdm: {
+    "identityMap": {
+      "ID_NAMESPACE": [ // Notice how each namespace can contain multiple identifiers.
+        {
+          "id": "1234",
+          "authenticatedState": "ambiguous",
+          "primary": true
+        }
+      ]
     }
+  }
 })
 ```
+
 
 ### 同步身分選項
 
