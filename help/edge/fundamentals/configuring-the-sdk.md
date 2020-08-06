@@ -4,10 +4,10 @@ seo-title: 設定Adobe Experience Platform Web SDK
 description: 瞭解如何設定Experience Platform Web SDK
 seo-description: 瞭解如何設定Experience Platform Web SDK
 translation-type: tm+mt
-source-git-commit: 7b07a974e29334cde2dee7027b9780a296db7b20
+source-git-commit: abd72993577f298141ed0d25b6c4abc42050b68e
 workflow-type: tm+mt
-source-wordcount: '737'
-ht-degree: 11%
+source-wordcount: '749'
+ht-degree: 10%
 
 ---
 
@@ -146,21 +146,13 @@ Your assigned [!DNL Experience Cloud] organization ID.  在頁面內設定多個
 
 ## 身分選項
 
-### `idSyncContainerId`
+### `idMigrationEnabled`
 
 | **類型** | **必填** | **預設值** |
 | -------- | ------------ | ----------------- |
-| 數字 | 無 | nown |
+| 布林值 | 無 | true |
 
-指定引發哪個ID同步的容器ID。 這是可從顧問處獲得的非負整數。
-
-### `idSyncEnabled`
-
-| **類型** | **必填** | **預設值** |
-| -------- | ------------ | ----------------- |
-| 布林值 | 無 | `true` |
-
-啟用ID同步功能，可讓觸發URL將Adobe唯一使用者ID與協力廠商資料來源的唯一使用者ID同步。
+如果為true,SDK將讀取並設定舊的AMCV Cookie。 這有助於轉換至使用AEP Web SDK，而網站的某些部分可能仍在使用Visitor.js。 此外，如果頁面上已定義訪客API,SDK將查詢訪客API以取得ECID。 這可讓您使用AEP Web SDK來建立雙標籤頁面，而且仍有相同的ECID。
 
 ### `thirdPartyCookiesEnabled`
 
