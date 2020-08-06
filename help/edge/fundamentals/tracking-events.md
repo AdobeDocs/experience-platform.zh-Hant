@@ -4,9 +4,9 @@ seo-title: 追蹤Adobe Experience Platform Web SDK事件
 description: 瞭解如何追蹤Experience Platform Web SDK活動
 seo-description: 瞭解如何追蹤Experience Platform Web SDK活動
 translation-type: tm+mt
-source-git-commit: 7b07a974e29334cde2dee7027b9780a296db7b20
+source-git-commit: 8ac603f749928440438f2e0d1f3f1f1cc95b2916
 workflow-type: tm+mt
-source-wordcount: '632'
+source-wordcount: '688'
 ht-degree: 0%
 
 ---
@@ -79,6 +79,24 @@ alloy("sendEvent", {
   "type": "commerce.purchases"
 });
 ```
+
+### 覆寫資料集ID
+
+在某些使用情況下，您可能會想要將事件傳送至設定UI中設定的資料集以外的資料集。 為此，您需要設定命 `datasetId` 令上的選 `sendEvent` 項：
+
+```javascript
+var myXDMData = { ... };
+
+alloy("sendEvent", {
+  "xdm": myXDMData,
+  "type": "commerce.checkout",
+  "datasetId": "YOUR_DATASET_ID"
+});
+```
+
+### 添加身份資訊
+
+自訂身分資訊也可以新增至事件。 請參 [閱擷取Experience Cloud ID](./identity.md)
 
 ## 使用sendBeacon API
 
