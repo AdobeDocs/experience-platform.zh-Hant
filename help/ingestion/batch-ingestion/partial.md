@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Adobe Experience Platform部分批次擷取概觀
 topic: overview
 translation-type: tm+mt
-source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
+source-git-commit: df6a6e20733953a0983bbfdf66ca2abc6f03e977
 workflow-type: tm+mt
-source-wordcount: '1237'
+source-wordcount: '1420'
 ht-degree: 1%
 
 ---
@@ -26,7 +26,7 @@ ht-degree: 1%
 本教學課程需要對部分批次擷取所涉及的各種Adobe Experience Platform服務有相關的使用知識。 在開始本教學課程之前，請先閱讀下列服務的檔案：
 
 - [批次擷取](./overview.md): 從資料檔 [!DNL Platform] 案（例如CSV和Parce）擷取和儲存資料的方法。
-- [!DNL Experience Data Model (XDM)](../../xdm/home.md): 組織客戶體驗資料 [!DNL Platform] 的標準化架構。
+- [[!DNL Experience Data Model] (XDM)](../../xdm/home.md): 組織客戶體驗資料 [!DNL Platform] 的標準化架構。
 
 以下章節提供您成功呼叫API所需的其他資訊 [!DNL Platform] 。
 
@@ -58,14 +58,12 @@ ht-degree: 1%
 
 您可以建立啟用部分擷取的新批次。
 
-若要建立新批次，請依照批次擷取開發人員指 [南中的步驟進行](./api-overview.md)。 在您達到「建 *立批次* 」步驟後，在請求內文中新增下列欄位：
+若要建立新批次，請依照批次擷取開發人員指 [南中的步驟進行](./api-overview.md)。 在您達到「建 **[!UICONTROL 立批次]** 」步驟後，在請求內文中新增下列欄位：
 
 ```json
 {
-    ...
     "enableErrorDiagnostics": true,
     "partialIngestionPercentage": 5
-    ...
 }
 ```
 
@@ -85,17 +83,17 @@ ht-degree: 1%
 
 ### 建立新源連接 {#new-source}
 
-要建立新源連接，請遵循「源」概述中列出的 [步驟](../../sources/home.md)。 在到達「資料 *[!UICONTROL 流詳細資訊]* 」步驟後 *[!UICONTROL ，請注意「部分]* 提取 *[!UICONTROL 」和「]* 錯誤診斷」欄位。
+要建立新源連接，請遵循「源」概述中列出的 [步驟](../../sources/home.md)。 在到達「資料 **[!UICONTROL 流詳細資訊]** 」步驟後 **[!UICONTROL ，請注意「部分]** 提取 **[!UICONTROL 」和「]** 錯誤診斷」欄位。
 
 ![](../images/batch-ingestion/partial-ingestion/configure-batch.png)
 
-「部 *[!UICONTROL 分擷取]* 」切換可讓您啟用或停用部分批次擷取的使用。
+「部 **[!UICONTROL 分擷取]** 」切換可讓您啟用或停用部分批次擷取的使用。
 
-僅當 *[!UICONTROL Partial Ingestion（部分攝取）關]* 閉時，才會顯示 ** Error diagnostics（錯誤診斷）切換。 此功能可 [!DNL Platform] 產生有關您所擷取批次的詳細錯誤訊息。 如果已 *[!UICONTROL 開啟「部分擷取]* 」切換，則會自動強制執行增強的錯誤診斷。
+只有在 **[!UICONTROL 關閉「部分提取]** 」( **[!UICONTROL Partial ingestion]** )切換時，才會顯示「錯誤診斷」(Error diagnostics)切換。 此功能可 [!DNL Platform] 產生有關您所擷取批次的詳細錯誤訊息。 如果已 *[!UICONTROL 開啟「部分擷取]* 」切換，則會自動強制執行增強的錯誤診斷。
 
 ![](../images/batch-ingestion/partial-ingestion/configure-batch-partial-ingestion-focus.png)
 
-「錯 *[!UICONTROL 誤閾值]* 」(Error threshold)允許您在整個批失敗之前設定可接受錯誤的百分比。 依預設，此值會設為5%。
+「錯 **[!UICONTROL 誤閾值]** 」(Error threshold)允許您在整個批失敗之前設定可接受錯誤的百分比。 依預設，此值會設為5%。
 
 ### 使用現有資料集 {#existing-dataset}
 
@@ -103,29 +101,103 @@ ht-degree: 1%
 
 ![](../images/batch-ingestion/partial-ingestion/monitor-dataset.png)
 
-「部 *[!UICONTROL 分擷取]* 」切換可讓您啟用或停用部分批次擷取的使用。
+「部 **[!UICONTROL 分擷取]** 」切換可讓您啟用或停用部分批次擷取的使用。
 
-僅當 *[!UICONTROL Partial Ingestion（部分攝取）關]* 閉時，才會顯示 ** Error diagnostics（錯誤診斷）切換。 此功能可 [!DNL Platform] 產生有關您所擷取批次的詳細錯誤訊息。 如果已 *[!UICONTROL 開啟「部分擷取]* 」切換，則會自動強制執行增強的錯誤診斷。
+僅當 **[!UICONTROL Partial Ingestion（部分攝取）關]** 閉時，才會顯示 **** Error diagnostics（錯誤診斷）切換。 此功能可 [!DNL Platform] 產生有關您所擷取批次的詳細錯誤訊息。 如果已 **[!UICONTROL 開啟「部分擷取]** 」切換，則會自動強制執行增強的錯誤診斷。
 
 ![](../images/batch-ingestion/partial-ingestion/monitor-dataset-partial-ingestion-focus.png)
 
-「錯 *[!UICONTROL 誤閾值]* 」(Error threshold)允許您在整個批失敗之前設定可接受錯誤的百分比。 依預設，此值會設為5%。
+「錯 **[!UICONTROL 誤閾值]** 」(Error threshold)允許您在整個批失敗之前設定可接受錯誤的百分比。 依預設，此值會設為5%。
 
 現在，您可以使用「新增資料」 **按鈕來上傳資料** ，而且會使用部分擷取來擷取資料。
 
 ### 使用「將[!UICONTROL CSV對應至XDM架構]」流程 {#map-flow}
 
-若要使用「將[!UICONTROL CSV對應至XDM架構]」流程，請遵循「將CSV檔案對應」教學課程中 [所列的步驟](../tutorials/map-a-csv-file.md)。 一旦到達「添 *[!UICONTROL 加資料]* 」步驟 *[!UICONTROL ，請記下「部分提取」和「錯誤診斷」欄位]*** 。
+若要使用「將[!UICONTROL CSV對應至XDM架構]」流程，請遵循「將CSV檔案對應」教學課程中 [所列的步驟](../tutorials/map-a-csv-file.md)。 一旦到達「添 **[!UICONTROL 加資料]** 」步驟 **[!UICONTROL ，請記下「部分提取」和「錯誤診斷」欄位]****** 。
 
 ![](../images/batch-ingestion/partial-ingestion/xdm-csv-workflow.png)
 
-「部 *[!UICONTROL 分擷取]* 」切換可讓您啟用或停用部分批次擷取的使用。
+「部 **[!UICONTROL 分擷取]** 」切換可讓您啟用或停用部分批次擷取的使用。
 
-僅當 *[!UICONTROL Partial Ingestion（部分攝取）關]* 閉時，才會顯示 ** Error diagnostics（錯誤診斷）切換。 此功能可 [!DNL Platform] 產生有關您所擷取批次的詳細錯誤訊息。 如果已 *[!UICONTROL 開啟「部分擷取]* 」切換，則會自動強制執行增強的錯誤診斷。
+僅當 **[!UICONTROL Partial Ingestion（部分攝取）關]** 閉時，才會顯示 **** Error diagnostics（錯誤診斷）切換。 此功能可 [!DNL Platform] 產生有關您所擷取批次的詳細錯誤訊息。 如果已 **[!UICONTROL 開啟「部分擷取]** 」切換，則會自動強制執行增強的錯誤診斷。
 
 ![](../images/batch-ingestion/partial-ingestion/xdm-csv-workflow-partial-ingestion-focus.png)
 
-「錯 *[!UICONTROL 誤閾值]* 」(Error threshold)允許您在整個批失敗之前設定可接受錯誤的百分比。 依預設，此值會設為5%。
+「錯 **[!UICONTROL 誤閾值]** 」(Error threshold)允許您在整個批失敗之前設定可接受錯誤的百分比。 依預設，此值會設為5%。
+
+## 下載檔案層級的中繼資料 {#download-metadata}
+
+Adobe Experience Platform可讓使用者下載輸入檔案的中繼資料。 中繼資料將在30 [!DNL Platform] 天內保留。
+
+### 列出輸入檔案 {#list-files}
+
+以下請求可讓您檢視已完成批次中提供之所有檔案的清單。
+
+**請求**
+
+```shell
+curl -X GET https://platform.adobe.io/data/foundation/export/batches/{BATCH_ID}/meta?path=input_files \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}'
+```
+
+**回應**
+
+成功的回應會傳回HTTP狀態200，其中包含路徑物件，詳細說明儲存中繼資料的位置。
+
+```json
+{
+    "_page": {
+        "count": 1,
+        "limit": 100
+    },
+    "data": [
+        {
+            "_links": {
+                "self": {
+                    "href": "https://platform.adobe.io/data/foundation/export/batches/{BATCH_ID}/meta?path=input_files/fileMetaData1.json"
+                }
+            },
+            "length": "1337",
+            "name": "fileMetaData1.json"
+        },
+                {
+            "_links": {
+                "self": {
+                    "href": "https://platform.adobe.io/data/foundation/export/batches/{BATCH_ID}/meta?path=input_files/fileMetaData2.json"
+                }
+            },
+            "length": "1042",
+            "name": "fileMetaData2.json"
+        }
+    ]
+}
+```
+
+### 擷取輸入檔案中繼資料 {#retrieve-metadata}
+
+檢索到所有不同輸入檔案的清單後，可以使用以下端點檢索單個檔案的元資料。
+
+**請求**
+
+```shell
+curl -X GET https://platform.adobe.io/data/foundation/export/batches/{BATCH_ID}/meta?path=input_files/fileMetaData1.json \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}'
+```
+
+**回應**
+
+成功的回應會傳回HTTP狀態200，其中包含路徑物件，詳細說明儲存中繼資料的位置。
+
+```json
+{"path": "F1.json"}
+{"path": "etc/F2.json"}
+```
 
 ## 擷取部分批次擷取錯誤 {#retrieve-errors}
 
@@ -155,7 +227,7 @@ curl -X GET https://platform.adobe.io/data/foundation/catalog/batches/{BATCH_ID}
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-**回應**
+**回應無錯誤**
 
 成功的回應會傳回HTTP狀態200，並包含批次狀態的詳細資訊。
 
@@ -164,10 +236,8 @@ curl -X GET https://platform.adobe.io/data/foundation/catalog/batches/{BATCH_ID}
     "af838510-2233-11ea-acf0-f3edfcded2d2": {
         "status": "success",
         "tags": {
-            ...
             "acp_enableErrorDiagnostics": true,
             "acp_partialIngestionPercent": 5
-            ...
         },
         "relatedObjects": [
             {
@@ -186,7 +256,8 @@ curl -X GET https://platform.adobe.io/data/foundation/catalog/batches/{BATCH_ID}
             "inputByteSize": 568,
             "inputFileCount": 4,
             "inputRecordCount": 519,
-            "outputRecordCount": 497
+            "outputRecordCount": 497,
+            "failedRecordCount": 0
         },
         "completed": 1576741722026,
         "created": 1576741597205,
@@ -199,7 +270,86 @@ curl -X GET https://platform.adobe.io/data/foundation/catalog/batches/{BATCH_ID}
 }
 ```
 
-如果批次發生錯誤並啟用錯誤診斷，則狀態會是「成功」，並在可下載的錯誤檔案中提供錯誤的詳細資訊。
+| 屬性 | 說明 |
+| -------- | ----------- |
+| `metrics.failedRecordCount` | 由於剖析、轉換或驗證而無法處理的列數。 此值可從中減去 `inputRecordCount` 來衍生 `outputRecordCount`。 無論是否啟用，都將在所有批上生 `errorDiagnostics` 成此值。 |
+
+**回應有錯誤**
+
+如果批有一個或多個錯誤並啟用了錯誤診斷，則狀態將包含有關響應內 `success` 和可下載錯誤檔案中提供的錯誤的詳細資訊。
+
+```json
+{
+    "01E8043CY305K2MTV5ANH9G1GC": {
+        "status": "success",
+        "tags": {
+            "acp_enableErrorDiagnostics": true,
+            "acp_partialIngestionPercent": 5
+        },
+        "relatedObjects": [
+            {
+                "type": "dataSet",
+                "id": "5deac2648a19d218a888d2b1"
+            }
+        ],
+        "id": "01E8043CY305K2MTV5ANH9G1GC",
+        "externalId": "01E8043CY305K2MTV5ANH9G1GC",
+        "inputFormat": {
+            "format": "parquet"
+        },
+        "imsOrg": "{IMS_ORG}",
+        "started": 1576741718543,
+        "metrics": {
+            "inputByteSize": 568,
+            "inputFileCount": 4,
+            "inputRecordCount": 519,
+            "outputRecordCount": 514,
+            "failedRecordCount": 5
+        },
+        "completed": 1576741722026,
+        "created": 1576741597205,
+        "createdClient": "{API_KEY}",
+        "createdUser": "{USER_ID}",
+        "updatedUser": "{USER_ID}",
+        "updated": 1576741722644,
+        "version": "1.0.5",
+        "errors": [
+           {
+             "code": "INGEST-1212-400",
+             "description": "Encountered 5 errors in the data. Successfully ingested 514 rows. Please review the associated diagnostic files for more details."
+           },
+           {
+             "code": "INGEST-1401-400",
+             "description": "The row has corrupted data and cannot be read or parsed. Fix the corrupted data and try again.",
+             "recordCount": 2
+           },
+           {
+             "code": "INGEST-1555-400",
+             "description": "A required field is either missing or has a value of null. Add the required field to the input row and try again.",
+             "recordCount": 3
+           }
+        ]
+    }
+}
+```
+
+| 屬性 | 說明 |
+| -------- | ----------- |
+| `metrics.failedRecordCount` | 由於剖析、轉換或驗證而無法處理的列數。 此值可從中減去 `inputRecordCount` 來衍生 `outputRecordCount`。 無論是否啟用，都將在所有批上生 `errorDiagnostics` 成此值。 |
+| `errors.recordCount` | 指定錯誤代碼失敗的行數。 此值僅 **在啟用**`errorDiagnostics` 時產生。 |
+
+>[!NOTE]
+>
+>如果錯誤診斷不可用，則會出現以下錯誤消息：
+> 
+```json
+> {
+>         "errors": [{
+>                 "code": "INGEST-1211-400",
+>                 "description": "Encountered errors while parsing, converting or otherwise validating the data. Please resend the data with error diagnostics enabled to collect additional information on failure types"
+>         }]
+> }
+> ```
 
 ## 下一步 {#next-steps}
 
@@ -207,12 +357,11 @@ curl -X GET https://platform.adobe.io/data/foundation/catalog/batches/{BATCH_ID}
 
 ## 部分批次擷取錯誤類型 {#appendix}
 
-部分批次擷取在擷取資料時有四種不同的錯誤類型。
+部分批次擷取在擷取資料時有三種不同的錯誤類型。
 
 - [無法讀取的檔案](#unreadable)
 - [無效的結構或標題](#schemas-headers)
 - [不可分的行](#unparsable)
-- [無效的XDM轉換](#conversion)
 
 ### 無法讀取的檔案 {#unreadable}
 
@@ -229,7 +378,7 @@ curl -X GET https://platform.adobe.io/data/foundation/catalog/batches/{BATCH_ID}
 **API格式**
 
 ```http
-GET /export/batches/{BATCH_ID}/failed?path=parse_errors
+GET /export/batches/{BATCH_ID}/meta?path=row_errors
 ```
 
 | 參數 | 說明 |
@@ -239,7 +388,7 @@ GET /export/batches/{BATCH_ID}/failed?path=parse_errors
 **請求**
 
 ```shell
-curl -X GET https://platform.adobe.io/data/foundation/export/batches/{BATCH_ID}/failed?path=parse_errors \
+curl -X GET https://platform.adobe.io/data/foundation/export/batches/{BATCH_ID}/meta?path=row_errors \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
@@ -252,68 +401,11 @@ curl -X GET https://platform.adobe.io/data/foundation/export/batches/{BATCH_ID}/
 
 ```json
 {
-    "_corrupt_record":"{missingQuotes:"v1"}",
+    "_corrupt_record": "{missingQuotes:"v1"}",
     "_errors": [{
-         "code":"1401",
-         "message":"Row is corrupted and cannot be read, please fix and resend."
+         "code": "1401",
+         "message": "Row is corrupted and cannot be read, please fix and resend."
     }],
     "_filename": "a1.json"
-}
-```
-
-### 無效的XDM轉換 {#conversion}
-
-如果接收的批具有無效的XDM轉換，則批的錯誤將儲存在可通過以下端點訪問的檔案中。
-
-**API格式**
-
-```http
-GET /export/batches/{BATCH_ID}/failed?path=conversion_errors
-```
-
-| 參數 | 說明 |
-| --------- | ----------- |
-| `{BATCH_ID}` | 從 `id` 中檢索錯誤資訊的批的值。 |
-
-**請求**
-
-```shell
-curl -X GET https://platform.adobe.io/data/foundation/export/batches/{BATCH_ID}/failed?path=conversion_errors \
-  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME}'
-```
-
-**回應**
-
-成功的回應會傳回HTTP狀態200，其中包含XDM轉換失敗的詳細資訊。
-
-```json
-{
-    "col1":"v1",
-    "col2":"v2",
-    "col3":[{
-        "g1":"h1"
-    }],
-    "_errors":[{
-        "column":"col3",
-        "code":"123",
-        "message":"Cannot convert array element from Object to String"
-    }],
-    "_filename":"a1.json"
-},
-{
-    "col1":"v1",
-    "col2":"v2",
-    "col3":[{
-        "g1":"h1"
-    }],
-    "_errors":[{
-        "column":"col1",
-        "code":"100",
-        "message":"Cannot convert string to float"
-    }],
-    "_filename":"a2.json"
 }
 ```
