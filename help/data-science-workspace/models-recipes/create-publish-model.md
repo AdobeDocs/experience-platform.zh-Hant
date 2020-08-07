@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 建立和發佈機器學習模型逐步說明
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: c48079ba997a7b4c082253a0b2867df76927aa6d
+source-git-commit: 86ded28b1830d3607c8b5214c8d31dfcbf446252
 workflow-type: tm+mt
 source-wordcount: '1542'
 ht-degree: 0%
@@ -100,7 +100,7 @@ ht-degree: 0%
    ![](../images/models-recipes/model-walkthrough/browse_recipes.png)
 2. 按一下「方式」的名 **** 稱，並輸入「方式」的概述頁面，以尋找並開啟提供的「建議方式」。 從中 **** 心（如果沒有現有模型）或從「方式概述」頁面的右上角按一下「建立模型」。
    ![](../images/models-recipes/model-walkthrough/recommendations_recipe_110.png)
-3. 會顯示可用的訓練輸入資料集清單，選取「 **[!UICONTROL Recommendations輸入資料集」]** ，然後按一 **[!UICONTROL 下「Next」]**。
+3. 會顯示可用的訓練輸入資料集清單，選取「 **[!UICONTROL Recommendations輸入資料集」]** ，然後按一 **[!UICONTROL 下「Next]**」。
    ![](../images/models-recipes/model-walkthrough/select_dataset.png)
 4. 提供模型的名稱，例如「產品建議模型」。 列出模型的可用配置，包含模型的預設培訓和計分行為的設定。 由於這些配置是您組織專屬的，因此不需要進行任何更改。 查看配置，然後按一下 **[!UICONTROL 完成]**。
    ![](../images/models-recipes/model-walkthrough/configure_model.png)
@@ -117,7 +117,9 @@ ht-degree: 0%
 
    無法學習超參數，因此必須在訓練執行之前先指派超參數。 調整超參數可能會改變訓練模型的精度。 由於模型最佳化是一個反覆的程式，因此在達到滿意的評估之前可能需要執行多次培訓。
 
-   >[!TIP] 將 **[!UICONTROL num_recommendations]** 設為10。
+   >[!TIP]
+   >
+   >將 **[!UICONTROL num_recommendations]** 設為10。
 
    ![](../images/models-recipes/model-walkthrough/configure_hyperparameter.png)
 3. 新培訓執行完成後，模型評估圖表上會出現額外的資料點，這可能需要數分鐘。
