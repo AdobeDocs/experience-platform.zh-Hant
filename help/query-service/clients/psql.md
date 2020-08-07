@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 使用PSQL連接
 topic: connect
 translation-type: tm+mt
-source-git-commit: 3b710e7a20975880376f7e434ea4d79c01fa0ce5
+source-git-commit: 1214728063c5835510fda1a16bf1fdcca4abee48
 workflow-type: tm+mt
 source-wordcount: '170'
 ht-degree: 1%
@@ -68,7 +68,9 @@ psql (PostgreSQL) 9.5.14
 
 ![影像](../images/clients/psql/connect-bi.png)
 
->[!IMPORTANT]: 如果您在PC上，請使用文本編輯器刪除命令字串中的分行符，然後複製該字串。
+>[!IMPORTANT]
+>
+>如果您在PC上，請使用文本編輯器刪除命令字串中的分行符，然後複製該字串。
 
 將命令字串貼上到終端或命令窗口中，然後按Enter鍵。
 
