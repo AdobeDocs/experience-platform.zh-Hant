@@ -4,9 +4,9 @@ seo-title: 安裝SDK的Adobe Experience Platform Web SDK
 description: 瞭解如何安裝Experience Platform Web SDK
 seo-description: 瞭解如何安裝Experience Platform Web SDK
 translation-type: tm+mt
-source-git-commit: c5afced244c661b0ec0bcf0109191a2dacf886aa
+source-git-commit: 12cbcc26956cba2e14d64734c9210fa79bcc70b9
 workflow-type: tm+mt
-source-wordcount: '583'
+source-wordcount: '623'
 ht-degree: 1%
 
 ---
@@ -14,10 +14,16 @@ ht-degree: 1%
 
 # 安裝SDK {#installing-the-sdk}
 
-Adobe Experience Platform可 [!DNL Web SDK] 在內容放送網路(CDN)上取得，供您使用。 您可以參考此檔案或下載它，並在您自己的基礎架構上代管它。 它提供微型和非微型版本。 非精簡版本有助於除錯。
+使用Adobe Experience Platform Web SDK的偏好方式是透過 [Launch](http://launch.adobe.com/)。 在擴充功能 `AEP Web SDK` 目錄中搜尋，然後安裝並設定擴充功能。
 
-* 精簡版： [https://cdn1.adoberesources.net/alloy/1.0.0/alloy.min.js](https://cdn1.adoberesources.net/alloy/1.0.0/alloy.min.js)
-* 非精簡版： [https://cdn1.adoberesources.net/alloy/1.0.0/alloy.js](https://cdn1.adoberesources.net/alloy/1.0.0/alloy.js)
+AEP網頁SDK也可在CDN上取得，供您使用。 您可以參考此檔案或下載它，並在您自己的基礎架構上代管它。 它提供微型和非微型版本。 非精簡版本有助於除錯。
+
+URL結構：https://cdn1.adoberesources.net/alloy/[VERSION]/alloy.min.js或alloy.js，用於非精簡版。
+
+例如：
+
+* 精簡： [https://cdn1.adoberesources.net/alloy/1.0.0/alloy.min.js](https://cdn1.adoberesources.net/alloy/1.0.0/alloy.min.js)
+* 未精簡： [https://cdn1.adoberesources.net/alloy/1.0.0/alloy.js](https://cdn1.adoberesources.net/alloy/1.0.0/alloy.js)
 
 ## 新增程式碼 {#adding-the-code}
 
