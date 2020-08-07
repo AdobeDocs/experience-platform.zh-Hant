@@ -1,20 +1,20 @@
 ---
-keywords: Experience Platform;home;intelligent services;popular topics
+keywords: Experience Platform;home;Intelligent Services;popular topics
 solution: Experience Platform
 title: 準備資料以用於智慧型服務
 topic: Intelligent Services
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 88e4a183422dd1bc625fd842e24c2604fb249c91
 workflow-type: tm+mt
-source-wordcount: '1878'
+source-wordcount: '1924'
 ht-degree: 0%
 
 ---
 
 
-# 準備資料以用於智慧型服務
+# 準備要用於 [!DNL Intelligent Services]
 
-為了讓智慧型服務能夠從行銷事件資料中發掘見解，資料必須以標準結構進行語義豐富和維護。 智慧型服務運用Experience Data Model(XDM)架構來達成此目標。 具體而言，Intelligent Services中使用的所有資料集都必須符合 **Consumer ExperienceEvent(CEE)** XDM架構。
+為了從行 [!DNL Intelligent Services] 銷事件資料中發掘見解，資料必須語義豐富並維護在標準結構中。 [!DNL Intelligent Services] 運 [!DNL Experience Data Model] 用(XDM)架構來達成此目的。 具體來說，所有使用的資料集 [!DNL Intelligent Services] 都必須符合 **Consumer ExperienceEvent(CEE)** XDM架構。
 
 本檔案提供將行銷事件資料從多個管道對應至此架構的一般指引，概述有關架構中重要欄位的資訊，以協助您判斷如何有效地將資料對應至其架構。
 
@@ -28,36 +28,36 @@ ht-degree: 0%
 
 1. 請連絡Adobe諮詢服務以要求專屬Azure Blob儲存容器的存取憑證。
 1. 使用您的存取憑證，將資料上傳至Blob容器。
-1. 使用Adobe諮詢服務可將您的資料對應至 [Consumer ExperienceEvent架構](#cee-schema) ，並納入智慧型服務。
+1. 使用Adobe諮詢服務可將您的資料對應至 [Consumer ExperienceEvent架構](#cee-schema) ，並內嵌至 [!DNL Intelligent Services]。
 
 ### [!DNL Experience Platform] 資料準備
 
 如果您的資料已儲存在中 [!DNL Platform]，請遵循下列步驟：
 
 1. 檢閱Consumer ExperienceEvent架構的 [結構](#cee-schema) ，並判斷您的資料是否可對應至其欄位。
-1. 請連絡Adobe諮詢服務，協助您將資料對應至架構並將其內嵌至智慧型服務，或 [如果您要自行對應資料](#mapping) ，請依照本指南的步驟進行。
+1. 請連絡Adobe諮詢服務，協助您將資料對應至架構並將其內嵌 [!DNL Intelligent Services]，或 [如果您要自行對應資料，請遵循本指南中的步驟](#mapping) 。
 
 ## 瞭解CEE架構 {#cee-schema}
 
-消費者體驗事件結構描述個人的行為，因為它與數位行銷事件（網路或行動裝置）以及線上或離線商務活動有關。 智慧服務需要使用此模式，因為其語義上定義良好的欄位（列），以避免任何未知名稱，否則會使資料不那麼清晰。
+消費者體驗事件結構描述個人的行為，因為它與數位行銷事件（網路或行動裝置）以及線上或離線商務活動有關。 由於此模式在語義上定義 [!DNL Intelligent Services] 良好的欄位（列），因此需要使用此模式，以避免任何未知名稱，否則會使資料不那麼清晰。
 
 CEE架構與所有XDM ExperienceEvent架構一樣，會在發生事件（或事件集）時擷取系統的時間序列狀態，包括時間點和相關主體的身分。 「體驗事件」是所發生事件的事實記錄，因此它們是不可變的，代表所發生的事件，而無需匯總或解讀。
 
-智慧型服務會利用此架構中的幾個關鍵欄位，從您的行銷事件資料產生深入資訊，所有這些資料都可在根層級找到並展開，以顯示其必要的子欄位。
+[!DNL Intelligent Services] 利用此架構中的幾個關鍵欄位，從行銷事件資料產生深入資訊，所有這些資料都可在根層級找到並展開，以顯示其必要的子欄位。
 
 ![](./images/data-preparation/schema-expansion.gif)
 
 與所有XDM模式一樣，CEE混合模式具有可擴充性。 換言之，CEE混音中可新增其他欄位，若有需要，可在多個結構中加入不同的變數。
 
-在公用 [XDM儲存庫中可找到混合的完整示例](https://github.com/adobe/xdm/blob/797cf4930d5a80799a095256302675b1362c9a15/docs/reference/context/experienceevent-consumer.schema.md)，並應用作以下部分中概述的關鍵欄位的參考。
+在公共XDM儲存庫中可找到混 [合的完整示例](https://github.com/adobe/xdm/blob/797cf4930d5a80799a095256302675b1362c9a15/docs/reference/context/experienceevent-consumer.schema.md)。 此外，您還可以檢視並複製下列 [JSON檔案](https://github.com/AdobeDocs/experience-platform.en/blob/master/help/intelligent-services/assets/CEE_XDM_sample_rows.json) ，以取得如何結構化資料以符合CEE結構的範例。 在瞭解以下章節中概述的關鍵欄位時，請參閱這兩個範例，以決定如何將您自己的資料對應至架構。
 
 ## 關鍵字欄位
 
-CEE混合中有幾個關鍵欄位，要使智慧服務生成有用的見解，應使用這些欄位。 本節說明這些欄位的使用案例和預期資料，並提供參考檔案的連結，以取得更多範例。
+CEE混合內有幾個關鍵欄位，為了產生有用的見解，應 [!DNL Intelligent Services] 該使用這些欄位。 本節說明這些欄位的使用案例和預期資料，並提供參考檔案的連結，以取得更多範例。
 
 ### 必填欄位
 
-雖然強烈建議使用所有關鍵字欄位，但有兩個欄位是必 **要的** ，讓智慧型服務運作：
+雖然強烈建議使用所有關鍵欄位，但有兩個欄位是必 **要** ，才 [!DNL Intelligent Services] 能運作：
 
 * [主要身份欄位](#identity)
 * [xdm:timestamp](#timestamp)
@@ -65,7 +65,7 @@ CEE混合中有幾個關鍵欄位，要使智慧服務生成有用的見解，�
 
 #### 主要身分 {#identity}
 
-架構中的其中一個欄位必須設為主要身分欄位，讓智慧型服務將每個時間序列資料例項連結至個別人員。
+架構中的其中一個欄位必須設為主要識別欄位，這可 [!DNL Intelligent Services] 讓每個時間系列資料例項連結至個人。
 
 您必鬚根據資料的來源和性質，決定最佳欄位作為主要身分識別。 身分欄位必須包含 **識別名稱空間** ，以指出欄位預期的身分資料類型為值。 某些有效的命名空間值包括：
 
@@ -120,7 +120,7 @@ CEE混合中有幾個關鍵欄位，要使智慧服務生成有用的見解，�
 
 ### 建議欄位
 
-本節將概述其餘的關鍵欄位。 雖然這些欄位不一定是智慧型服務運作的必要欄位，但強烈建議您盡可能多地使用這些欄位，以獲得更豐富的見解。
+本節將概述其餘的關鍵欄位。 雖然這些欄位不一定需要 [!DNL Intelligent Services] 才能運作，但強烈建議您盡可能多地使用這些欄位，以獲得更豐富的見解。
 
 #### xdm:productListItems
 
@@ -239,7 +239,7 @@ CEE混合中有幾個關鍵欄位，要使智慧服務生成有用的見解，�
 
 ## 對應和收錄資料(#mapping)
 
-一旦您確定行銷事件資料是否可映射至CEE架構後，下一步就是決定要將哪些資料匯入智慧型服務。 智慧型服務中使用的所有歷史資料都必須落在資料四個月的最短時間範圍內，加上預期做為回顧期間的天數。
+一旦您決定行銷事件資料是否可映射至CEE結構，下一步就是決定要放入哪些資料 [!DNL Intelligent Services]。 所有使用的歷 [!DNL Intelligent Services] 史資料都必須落在資料四個月的最短時段內，加上預期做為回顧時段的天數。
 
 在決定您要傳送的資料範圍後，請聯絡Adobe諮詢服務，協助將資料對應至架構，並將其內嵌至服務。
 
@@ -251,7 +251,7 @@ CEE混合中有幾個關鍵欄位，要使智慧服務生成有用的見解，�
 >
 >下列步驟需要訂閱Experience Platform。 如果您沒有平台存取權，請跳至下 [一步](#next-steps) 。
 
-本節概述將資料對應並收錄至Experience Platform以用於智慧型服務的工作流程，包括教學課程的連結以取得詳細步驟。
+本節概述將資料對應並收錄至Experience Platform以供使用的工作流程，包 [!DNL Intelligent Services]括教學課程的連結，以取得詳細步驟。
 
 #### 建立CEE架構和資料集
 
@@ -279,7 +279,7 @@ CEE混合中有幾個關鍵欄位，要使智慧服務生成有用的見解，�
 
 >[!NOTE]
 >
->未來版本的智慧型服務將整合 [Adobe Experience Platform Identity Service](../identity-service/home.md) ，使其具備客戶識別功能。 因此，下列步驟可能會有所變更。
+>未來的版 [!DNL Intelligent Services] 本將整 [合Adobe Experience Platform Identity Service](../identity-service/home.md) ，使其客戶識別功能。 因此，下列步驟可能會有所變更。
 
 如果您要從、或其他外 [!DNL Adobe Audience Manager]部來源 [!DNL Adobe Analytics]匯入資料，則必須新增標 `primaryIdentityNameSpace` 記至資料集。 這可以通過向目錄服務API發出PATCH請求來完成。
 
@@ -353,15 +353,17 @@ curl -X PATCH \
 
 #### 映射和收錄資料 {#ingest}
 
-建立CEE架構和資料集後，您可以開始將資料表對應至架構，並將該資料內嵌至平台。 請參閱將CSV檔 [案對應至XDM架構的教學課程](../ingestion/tutorials/map-a-csv-file.md) ，以取得如何在UI中執行此動作的步驟。 在填入資料集後，可使用相同的資料集來擷取其他資料檔案。
+建立CEE架構和資料集後，您可以開始將資料表對應至架構，並將該資料內嵌至平台。 請參閱將CSV檔 [案對應至XDM架構的教學課程](../ingestion/tutorials/map-a-csv-file.md) ，以取得如何在UI中執行此動作的步驟。 您可以使用下列 [範例JSON檔案](https://github.com/AdobeDocs/experience-platform.en/blob/master/help/intelligent-services/assets/CEE_XDM_sample_rows.json) ，在使用您自己的資料之前，先測試擷取程式。
 
-如果您的資料儲存在支援的協力廠商應用程式中，您也可以選擇建立來源連 [接器](../sources/home.md) ，即時將行銷事件資料收錄到平台。
+在填入資料集後，可使用相同的資料集來擷取其他資料檔案。
+
+如果您的資料儲存在支援的協力廠商應用程式中，您也可以選擇建立來源連 [接器](../sources/home.md) ，以即時將行銷事件 [!DNL Platform] 資料收入。
 
 ## 下一步 {#next-steps}
 
-本檔案提供有關準備資料以用於智慧型服務的一般指引。 如果您需要根據使用案例提供其他諮詢服務，請聯絡Adobe諮詢支援。
+本檔案提供有關準備資料以供使用的一般指引 [!DNL Intelligent Services]。 如果您需要根據使用案例提供其他諮詢服務，請聯絡Adobe諮詢支援。
 
-在您成功將客戶體驗資料填入資料集後，您就可以使用智慧服務產生見解。 請參閱下列檔案以開始使用：
+在您成功將客戶體驗資料填入資料集後，您就可用來產 [!DNL Intelligent Services] 生見解。 請參閱下列檔案以開始使用：
 
 * [Attribution AI概觀](./attribution-ai/overview.md)
 * [客戶人工智慧概觀](./customer-ai/overview.md)
