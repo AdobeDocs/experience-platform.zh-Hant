@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 計畫
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: b3e6a6f1671a456b2ffa61139247c5799c495d92
+source-git-commit: 86ded28b1830d3607c8b5214c8d31dfcbf446252
 workflow-type: tm+mt
 source-wordcount: '1171'
 ht-degree: 3%
@@ -55,7 +55,9 @@ curl -X GET https://platform.adobe.io/data/core/ups/config/schedules?limit=10 \
 
 成功的回應會傳回HTTP狀態200，並將指定IMS組織的排程清單列為JSON。
 
->[!NOTE] 下列回應已截斷空間，並僅顯示傳回的第一個排程。
+>[!NOTE]
+>
+>下列回應已截斷空間，並僅顯示傳回的第一個排程。
 
 ```json
 {
@@ -314,7 +316,7 @@ curl -X PATCH https://platform.adobe.io/data/core/ups/config/schedules/4e538382-
 | 屬性 | 說明 |
 | -------- | ----------- |
 | `path` | 您要更新的值的路徑。 在這種情況下，由於您要更新cron計畫，因此需要將值設 `path` 為 `/schedule`。 |
-| `value` | cron計畫的更新值。 此值必須以cron排程的形式。 在此範例中，排程將在每月的第二天執行。 |
+| `value` | cron計畫的更新值。 此值必須以cron計畫的形式。 在此範例中，排程將在每月的第二天執行。 |
 
 **回應**
 
