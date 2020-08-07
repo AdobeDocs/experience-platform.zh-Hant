@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 訓練和評估模型(UI)
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 1e5526b54f3c52b669f9f6a792eda0abfc711fdd
+source-git-commit: 1214728063c5835510fda1a16bf1fdcca4abee48
 workflow-type: tm+mt
 source-wordcount: '975'
 ht-degree: 2%
@@ -36,7 +36,10 @@ ht-degree: 2%
    ![](../images/models-recipes/train-evaluate-ui/select_dataset.png)
 
 4. 為「模型」(Model)提供名稱並查看預設「模型」(Model)配置。 在「配方」建立過程中，通過按兩下配置值來應用預設配置，複查和修改配置值。 若要提供新的組態，請按一下「上 **[!UICONTROL 傳新設定」]** ，並將包含「模型」組態的JSON檔案拖曳至瀏覽器視窗。 按一下「 **[!UICONTROL 完成]** 」(Finish)建立「模型」(Model)。
-   >[!NOTE]配置是獨特且特定於其預定配方的，這意味著零售銷售配方的配置將不適用於產品建議配方。 如需零售 [銷售方式](#reference) 組態的清單，請參閱參考章節。
+
+   >[!NOTE]
+   >
+   >配置是獨特且特定於其預定配方的，這意味著零售銷售配方的配置將不適用於產品建議配方。 如需零售 [銷售方式](#reference) 組態的清單，請參閱參考章節。
 
    ![](../images/models-recipes/train-evaluate-ui/name_and_configure.png)
 
@@ -55,7 +58,10 @@ ht-degree: 2%
    ![](../images/models-recipes/train-evaluate-ui/training_configuration.png)
 
 5. 如圖所示，建立模型期間提供的預設配置，請按兩下這些值，以相應地更改和修改這些配置。 按一 **[!UICONTROL 下「完成]** 」以建立並執行培訓執行。
-   >[!NOTE]配置是獨特且特定於其預定配方的，這意味著零售銷售配方的配置將不適用於產品建議配方。 如需零售 [銷售方式](#reference) 組態的清單，請參閱參考章節。
+
+   >[!NOTE]
+   >
+   >配置是獨特且特定於其預定配方的，這意味著零售銷售配方的配置將不適用於產品建議配方。 如需零售 [銷售方式](#reference) 組態的清單，請參閱參考章節。
 
    ![](../images/models-recipes/train-evaluate-ui/training_configuration.png)
 
