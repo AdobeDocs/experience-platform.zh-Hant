@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 在UI中為雲儲存批處理連接器配置資料流
 topic: overview
 translation-type: tm+mt
-source-git-commit: f532bd6393bfad84fa09c2fc753d1d5c5b39d013
+source-git-commit: 86ded28b1830d3607c8b5214c8d31dfcbf446252
 workflow-type: tm+mt
 source-wordcount: '1482'
 ht-degree: 0%
@@ -115,7 +115,9 @@ ht-degree: 0%
 
 若要設定一次性擷取，請選取頻率下拉箭頭，然後選取「 **[!UICONTROL Once]**」。 只要開始時間未來仍在，您就可以繼續編輯資料流集以進行一次性頻率接收。 一旦開始時間過去，就無法再編輯一次頻率值。
 
->[!TIP] **[!UICONTROL 在單]** 次擷取期間 **** ，不會顯示間隔和回填。
+>[!TIP]
+>
+>**[!UICONTROL 在單]** 次擷取期間 **** ，不會顯示間隔和回填。
 
 在為計畫提供適當值後，選擇「下 **[!UICONTROL 一步」]**。
 
