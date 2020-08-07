@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 在UI中為廣告連接器配置資料流
 topic: overview
 translation-type: tm+mt
-source-git-commit: 91714bea4e165d64bcc33e32e73d1d32a505ba00
+source-git-commit: 86ded28b1830d3607c8b5214c8d31dfcbf446252
 workflow-type: tm+mt
 source-wordcount: '1225'
 ht-degree: 0%
@@ -96,7 +96,9 @@ ht-degree: 0%
 
 若要設定一次性擷取，請選取頻率下拉箭頭，然後選取「 **[!UICONTROL Once]**」。
 
->[!TIP] **[!UICONTROL 在單]** 次擷取期間 **** ，不會顯示間隔和回填。
+>[!TIP]
+>
+>**[!UICONTROL 在單]** 次擷取期間 **** ，不會顯示間隔和回填。
 
 在為計畫提供適當值後，選擇「下 **[!UICONTROL 一步」]**。
 
