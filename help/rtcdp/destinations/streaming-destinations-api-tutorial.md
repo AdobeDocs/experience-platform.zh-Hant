@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 連線至串流目的地並啟動資料
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 6f680a60c88bc5fee6ce9cb5a4f314c4b9d02249
+source-git-commit: dce9a7040ad25d5bb08de95fce7655f1fec7c226
 workflow-type: tm+mt
-source-wordcount: '1810'
+source-wordcount: '1809'
 ht-degree: 2%
 
 ---
@@ -30,9 +30,9 @@ ht-degree: 2%
 
 本指南需要有效瞭解Adobe Experience Platform的下列元件：
 
-* [!DNL Experience Data Model (XDM) System](../../xdm/home.md): Experience Platform組織客戶體驗資料的標準化架構。
+* [!DNL Experience Data Model (XDM) System](../../xdm/home.md):Experience Platform組織客戶體驗資料的標準化架構。
 * [!DNL Catalog Service](../../catalog/home.md): [!DNL Catalog] 是Experience Platform中資料位置和世系的記錄系統。
-* [沙盒](../../sandboxes/home.md): Experience Platform提供虛擬沙盒，可將單一Platform實例分割為不同的虛擬環境，以協助開發和發展數位體驗應用程式。
+* [沙盒](../../sandboxes/home.md):Experience Platform提供虛擬沙盒，可將單一Platform實例分割為不同的虛擬環境，以協助開發和發展數位體驗應用程式。
 
 以下各節提供您需要瞭解的其他資訊，以便在Adobe即時CDP中將資料啟動至串流目的地。
 
@@ -51,7 +51,7 @@ ht-degree: 2%
 
 若要呼叫平台API，您必須先完成驗證教 [學課程](/help/tutorials/authentication.md)。 完成驗證教學課程後，所有Experience Platform API呼叫中每個必要標題的值都會顯示在下方：
 
-* 授權： 生產者 `{ACCESS_TOKEN}`
+* 授權：生產者 `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
 * x-gw-ims-org-id: `{IMS_ORG}`
 
@@ -59,7 +59,8 @@ Experience Platform中的資源可以隔離至特定虛擬沙盒。 在對平台
 
 * x-sandbox-name: `{SANDBOX_NAME}`
 
->[!Note]
+>[!NOTE]
+>
 >如需Experience Platform中沙盒的詳細資訊，請參閱沙盒 [概觀檔案](../../sandboxes/home.md)。
 
 所有包含裝載(POST、PUT、PATCH)的請求都需要額外的媒體類型標題：
@@ -152,7 +153,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 ```
 
 
-* `{CONNECTION_SPEC_ID}`: 使用統一配置式服務的連接規範ID - `8a9c3494-9708-43d7-ae3f-cda01e5030e1`。
+* `{CONNECTION_SPEC_ID}`:使用統一配置式服務的連接規範ID - `8a9c3494-9708-43d7-ae3f-cda01e5030e1`。
 
 **回應**
 
@@ -196,8 +197,8 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 }'
 ```
 
-* `{BASE_CONNECTION_ID}`: 使用您在上一步驟中取得的ID。
-* `{CONNECTION_SPEC_ID}`: 使用統一配置式服務的連接規範ID - `8a9c3494-9708-43d7-ae3f-cda01e5030e1`。
+* `{BASE_CONNECTION_ID}`:使用您在上一步驟中取得的ID。
+* `{CONNECTION_SPEC_ID}`:使用統一配置式服務的連接規範ID - `8a9c3494-9708-43d7-ae3f-cda01e5030e1`。
 
 **回應**
 
@@ -259,8 +260,8 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 }'
 ```
 
-* `{CONNECTION_SPEC_ID}`: 使用在步驟獲取可用目標清單 [中獲得的連接規範ID](#get-the-list-of-available-destinations)。
-* `{AUTHENTICATION_CREDENTIALS}`: 填寫您的串流目的地名稱，例如： `Amazon Kinesis authentication credentials` 或 `Azure Event Hubs authentication credentials`者。
+* `{CONNECTION_SPEC_ID}`:使用在步驟獲取可用目標清單 [中獲得的連接規範ID](#get-the-list-of-available-destinations)。
+* `{AUTHENTICATION_CREDENTIALS}`:填寫您的串流目的地名稱，例如： `Amazon Kinesis authentication credentials` 或 `Azure Event Hubs authentication credentials`者。
 * `{ACCESS_ID}`: *用於[!DNL Amazon Kinesis]連接。* Amazon Kinesis儲存位置的訪問ID。
 * `{SECRET_KEY}`: *用於[!DNL Amazon Kinesis]連接。* Amazon Kinesis儲存位置的密鑰。
 * `{REGION}`: *用於[!DNL Amazon Kinesis]連接。* 您帳戶中Adobe [!DNL Amazon Kinesis] 即時CDP將串流您資料的地區。
@@ -315,8 +316,8 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 }'
 ```
 
-* `{BASE_CONNECTION_ID}`: 使用您在上述步驟中取得的基本連線ID。
-* `{CONNECTION_SPEC_ID}`: 使用在步驟獲取可用目標列 [表中獲得的連接規範](#get-the-list-of-available-destinations)。
+* `{BASE_CONNECTION_ID}`:使用您在上述步驟中取得的基本連線ID。
+* `{CONNECTION_SPEC_ID}`:使用在步驟獲取可用目標列 [表中獲得的連接規範](#get-the-list-of-available-destinations)。
 * `{NAME_OF_DATA_STREAM}`: *用於[!DNL Amazon Kinesis]連接。* 提供帳戶中現有資料流的名 [!DNL Amazon Kinesis] 稱。 Adobe即時CDP會將資料匯出至此串流。
 * `{REGION}`: *用於[!DNL Amazon Kinesis]連接。* Amazon Kinesis帳戶中Adobe即時CDP將流資料的區域。
 * `{EVENT_HUB_NAME}`: *用於[!DNL Azure Event Hubs]連接。* 填寫Adobe [!DNL Azure Event Hub] 即時CDP將串流您資料的名稱。 如需詳細資訊，請 [參閱檔案中的建立事件](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hub)[!DNL Microsoft] 中心。
@@ -374,9 +375,9 @@ curl -X POST \
     }
 ```
 
-* `{FLOW_SPEC_ID}`: 基於配置檔案的目標的流規範ID是 `71471eba-b620-49e4-90fd-23f1fa0174d8`。 在呼叫中使用此值。
-* `{SOURCE_CONNECTION_ID}`: 使用您在步驟「連線至您的Experience Platform」中 [取得的來源連線ID](#connect-to-your-experience-platform-data)。
-* `{TARGET_CONNECTION_ID}`: 使用您在步驟「連線至串流目的地」中 [取得的目標連線ID](#connect-to-streaming-destination)。
+* `{FLOW_SPEC_ID}`:基於配置檔案的目標的流規範ID是 `71471eba-b620-49e4-90fd-23f1fa0174d8`。 在呼叫中使用此值。
+* `{SOURCE_CONNECTION_ID}`:使用您在步驟「連線至您的Experience Platform」中 [取得的來源連線ID](#connect-to-your-experience-platform-data)。
+* `{TARGET_CONNECTION_ID}`:使用您在步驟「連線至串流目的地」中 [取得的目標連線ID](#connect-to-streaming-destination)。
 
 **回應**
 
@@ -465,10 +466,10 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 ]
 ```
 
-* `{DATAFLOW_ID}`: 使用您在上一步驟中取得的資料流。
-* `{ETAG}`: 使用您在上一步驟中取得的標籤。
-* `{SEGMENT_ID}`: 提供您要匯出至此目的地的區段ID。 若要擷取您要啟用之區段的區段ID，請前往https://www.adobe.io/apis/experienceplatform/home/api-reference.html#/，在左側導覽功能表中選取 **[!UICONTROL Segmentation Service API]** ，並尋找該操 `GET /segment/jobs` 作。
-* `{PROFILE_ATTRIBUTE}`: 例如， `personalEmail.address` 或 `person.lastName`
+* `{DATAFLOW_ID}`:使用您在上一步驟中取得的資料流。
+* `{ETAG}`:使用您在上一步驟中取得的標籤。
+* `{SEGMENT_ID}`:提供您要匯出至此目的地的區段ID。 若要擷取您要啟用之區段的區段ID，請前往https://www.adobe.io/apis/experienceplatform/home/api-reference.html#/，在左側導覽功能表中選取 **[!UICONTROL Segmentation Service API]** ，並尋找該操 `GET /segment/jobs` 作。
+* `{PROFILE_ATTRIBUTE}`:例如， `personalEmail.address` 或 `person.lastName`
 
 **回應**
 
@@ -500,8 +501,8 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 --header 'If-Match: "{ETAG}"' 
 ```
 
-* `{DATAFLOW_ID}`: 使用上一步驟的資料流。
-* `{ETAG}`: 使用上一步驟的etag。
+* `{DATAFLOW_ID}`:使用上一步驟的資料流。
+* `{ETAG}`:使用上一步驟的etag。
 
 **回應**
 
