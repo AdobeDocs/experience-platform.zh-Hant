@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 建立零售銷售結構和資料集
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 4f7d7e2bf255afe1588dbe7cfb2ec055f2dcbf75
+source-git-commit: 86ded28b1830d3607c8b5214c8d31dfcbf446252
 workflow-type: tm+mt
 source-wordcount: '497'
 ht-degree: 0%
@@ -98,7 +98,9 @@ ht-degree: 0%
    python bootstrap.py
    ```
 
-   >[!NOTE] 完成指令碼可能需要幾分鐘的時間。
+   >[!NOTE]
+   >
+   >完成指令碼可能需要幾分鐘的時間。
 
 ## 後續步驟
 
