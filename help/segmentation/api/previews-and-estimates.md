@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 預覽和估計端點
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 995fadef9abacf22d0561e0590dfbe172adf0a43
+source-git-commit: 86ded28b1830d3607c8b5214c8d31dfcbf446252
 workflow-type: tm+mt
 source-wordcount: '742'
 ht-degree: 2%
@@ -14,7 +14,7 @@ ht-degree: 2%
 
 # 預覽和估計端點
 
-當您開發區段定義時，可以使用中的估計和預覽工具來檢 [!DNL Adobe Experience Platform] 視摘要層級的資訊，以協助您隔離預期的觀眾。 **預覽** 提供區段定義之合格描述檔的分頁清單，讓您比較結果與預期。 **估計** 提供區段定義的統計資訊，例如預測受眾大小、信賴區間和錯誤標準差。
+當您開發區段定義時，可以使用中的估計和預覽工具來檢 [!DNL Adobe Experience Platform] 視摘要層級的資訊，以協助您隔離預期的觀眾。 **預覽** 提供區段定義之合格描述檔的分頁清單，讓您比較結果與預期結果。 **估計** 提供區段定義的統計資訊，例如預測受眾大小、信賴區間和錯誤標準差。
 
 ## 快速入門
 
@@ -36,13 +36,17 @@ ht-degree: 2%
 | 1000萬到2000萬 | 100萬 |
 | 超過2000萬 | 總共5% |
 
->[!NOTE] 估計通常需要10到15秒才能執行，從粗略的估計開始，並隨著讀取更多記錄而調整。
+>[!NOTE]
+>
+>估計通常需要10到15秒才能執行，從粗略的估計開始，並隨著讀取更多記錄而調整。
 
 ## Create a new preview {#create-preview}
 
 您可以向端點發出POST請求，以建立新的預 `/preview` 覽。
 
->[!NOTE] 在建立預覽作業時自動建立估計作業。 這兩個工作將共用相同的ID。
+>[!NOTE]
+>
+>在建立預覽作業時自動建立估計作業。 這兩個工作將共用相同的ID。
 
 **API格式**
 
@@ -181,7 +185,7 @@ GET /estimate/{PREVIEW_ID}
 
 | 參數 | 說明 |
 | --------- | ----------- |
-| `{PREVIEW_ID}` | 只有在建立預覽工作且兩個工作共用相同的ID值以供查閱時，才會觸發估計工作。 具體而言，這是建 `previewId` 立預覽工作時傳回的值。 |
+| `{PREVIEW_ID}` | 只有在建立預覽工作且兩個工作共用相同的ID值以進行查閱時，才會觸發估計工作。 具體而言，這是建 `previewId` 立預覽工作時傳回的值。 |
 
 **請求**
 
