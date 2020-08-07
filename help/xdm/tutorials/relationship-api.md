@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 使用方案註冊表API定義兩個方案之間的關係
 topic: tutorials
 translation-type: tm+mt
-source-git-commit: 849142e44c56f2958e794ca6aefaccd5670c28ba
+source-git-commit: 86ded28b1830d3607c8b5214c8d31dfcbf446252
 workflow-type: tm+mt
 source-wordcount: '1274'
 ht-degree: 1%
@@ -38,7 +38,9 @@ Adobe Experience Platform的重要部分，在於能夠跨不同通道瞭解客�
 
 模式關係由源模式 **表示** ，該源模式具有引用目標模式內另一欄位的 **欄位**。 在後續步驟中，&quot;[!DNL Loyalty Members]&quot;將是源模式，而&quot;[!DNL Hotels]&quot;將充當目標模式。
 
->[!IMPORTANT] 為了建立關係，兩個方案都必須已定義主要身份，並啟用 [!DNL Real-time Customer Profile]。 如果需要有關如何 [相應配置方案的指導](./create-schema-api.md#profile) ，請參見架構建立教程中啟用方案以便在配置檔案中使用一節。
+>[!IMPORTANT]
+>
+>為了建立關係，兩個方案都必須已定義主要身份，並啟用 [!DNL Real-time Customer Profile]。 如果需要有關如何 [相應配置方案的指導](./create-schema-api.md#profile) ，請參見架構建立教程中啟用方案以便在配置檔案中使用一節。
 
 要定義兩個方案之間的關係，必須首先獲取兩個 `$id` 方案的值。 如果您知道結構的顯示名`title`稱()，則可以通過向 `$id` API中的端點發出GET請求 `/tenant/schemas` 來查找其 [!DNL Schema Registry] 值。
 
@@ -116,7 +118,9 @@ curl -X GET \
 
 在本教程中，目標模式&quot;[!DNL Hotels]&quot;包含一個 `email` 欄位，該欄位用作模式的主要標識，因此也將用作其引用欄位。 但是，源模式[!DNL Loyalty Members]&quot;&quot;沒有專用欄位作為引用，並且必須為其指定新混音，以向模式添加新欄位： `favoriteHotel`.
 
->[!NOTE] 如果源方案已有您打算用作參考欄位的專用欄位，則可跳至建立參考描述符 [的步驟](#reference-identity)。
+>[!NOTE]
+>
+>如果源方案已有您打算用作參考欄位的專用欄位，則可跳至建立參考描述符 [的步驟](#reference-identity)。
 
 ### 建立新的混音
 
