@@ -4,7 +4,7 @@ solution: Adobe Experience Platform
 title: 匯出工作——即時客戶個人檔案API
 topic: guide
 translation-type: tm+mt
-source-git-commit: 2c0466bf0534d09e3cad54caef213def122d948b
+source-git-commit: 86ded28b1830d3607c8b5214c8d31dfcbf446252
 workflow-type: tm+mt
 source-wordcount: '1494'
 ht-degree: 2%
@@ -146,7 +146,9 @@ curl -X POST \
 | `destination` | **（必要）** ，匯出資料的目標資訊：<ul><li>`destination.datasetId`: **（必要）** ，要匯出資料的資料集ID。</li><li>`destination.segmentPerBatch`: *（可選）* ，一個布爾值，如果未提供，則預設為 `false`。 值將所有 `false` 區段ID匯出為單一批次ID。 值將一個 `true` 區段ID匯出為一個批次ID。 請注意，將值設定為可能 `true` 會影響批導出效能。</li></ul> |
 | `schema.name` | **（必要）** ，與要匯出資料的資料集關聯的架構名稱。 |
 
->[!NOTE] 若要僅匯出描述檔資料而不包含相關的時間系列資料，請從請求中移除「additionalFields」物件。
+>[!NOTE]
+>
+>若要僅匯出描述檔資料而不包含相關的時間系列資料，請從請求中移除「additionalFields」物件。
 
 **回應**
 
