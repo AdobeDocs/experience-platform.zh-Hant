@@ -5,7 +5,7 @@ title: 歸因人工智慧輸入與輸出
 topic: Input and Output data for Attribution AI
 description: 以下檔案概述Attribution AI中使用的不同輸入和輸出。
 translation-type: tm+mt
-source-git-commit: 5126ef74330d9cee7234ccd1ee7260b09db9e78c
+source-git-commit: 86ded28b1830d3607c8b5214c8d31dfcbf446252
 workflow-type: tm+mt
 source-wordcount: '2174'
 ht-degree: 3%
@@ -118,7 +118,7 @@ Attribution AI輸出如下：
 | eventType（字串） | True | 此時間系列記錄的主要事件類型。 <br> **範例：** 「訂購」、「購買」、「瀏覽」 |
 | eventMergeId（字串） | True | ID，可關聯或合併多 [!DNL Experience Events] 個本質上相同或應合併的事件。 這將由資料產生器在擷取之前填入。 <br> **範例：** 575525617716-0-edc2ed37-1ab-4750-a820-1c2b3844b8c4 |
 | _id（字串） | False | 時間序列事件的唯一識別碼。 <br> **範例：** 4461-edc2ed37-1aab-4750-a820-1c2b3844b8c4 |
-| _tenantId（物件） | False | 與您的Tentant ID相關聯的頂層物件容器。 <br> **範例：** _atsdsnrmmsv2 |
+| _tenantId（物件） | False | 與您的保留ID對應的頂層物件容器。 <br> **範例：** _atsdsnrmmsv2 |
 | your_schema_name（對象） | False | 使用轉換事件對所有與其關聯的觸點事件及其元資料進行分數。 <br> **範例：** 歸因AI分數——型號名稱__2020 |
 | 區段（字串） | True | 轉換區段，例如模型所依據的地域劃分。 若沒有區段，則區段與conversionName相同。 <br> **範例：** ORDER_US |
 | conversionName（字串） | True | 設定期間設定的轉換名稱。 <br> **範例：** 訂購、潛在客戶、瀏覽 |
