@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 串流區段
 topic: ui guide
 translation-type: tm+mt
-source-git-commit: ab43c677ab45c7aa047a50049c0dd8613b003403
+source-git-commit: 2adadad855edd01436a6961cc9be3e58e6483732
 workflow-type: tm+mt
-source-wordcount: '656'
+source-wordcount: '668'
 ht-degree: 0%
 
 ---
@@ -32,6 +32,7 @@ ht-degree: 0%
 | ---------- | ------- | ------- |
 | 傳入點擊 | 任何區段定義，是指沒有時間限制的單一傳入事件。 | ![](../images/ui/streaming-segmentation/incoming-hit.png) |
 | 在相對時間視窗內傳入點擊 | 任何區段定義，是指過去七天內 **的單一傳入事件**。 | ![](../images/ui/streaming-segmentation/relative-hit-success.png) |
+| 僅限描述檔 | 任何僅指描述檔屬性的區段定義。 |  |
 | 參照描述檔的傳入點擊 | 任何區段定義，是指單一傳入事件（無時間限制）以及一或多個描述檔屬性。 | ![](../images/ui/streaming-segmentation/profile-hit.png) |
 | 在相對時間視窗內參照描述檔的傳入點擊 | 任何區段定義，是指過去七天內傳入的單一事件和一或多個描述 **檔屬性**。 | ![](../images/ui/streaming-segmentation/profile-relative-success.png) |
 | 參考描述檔的多個事件 | 任何區段定義是指過去24小時內 **的多個事件** ，且（可選）具有一或多個描述檔屬性。 | ![](../images/ui/streaming-segmentation/event-history-success.png) |
