@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 串流區段
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: e351a2d489730c1f1bd5f87be8d85612090bc009
+source-git-commit: 2adadad855edd01436a6961cc9be3e58e6483732
 workflow-type: tm+mt
-source-wordcount: '1365'
+source-wordcount: '1377'
 ht-degree: 1%
 
 ---
@@ -26,9 +26,9 @@ ht-degree: 1%
 
 本開發人員指南需要對串流細分相關的 [!DNL Adobe Experience Platform] 各種服務有良好的認識。 在開始本教學課程之前，請先閱讀下列服務的檔案：
 
-- [!DNL Real-time Customer Profile](../../profile/home.md): 根據來自多個來源的匯總資料，即時提供統一的消費者個人檔案。
-- [!DNL Segmentation](../home.md): 提供從資料建立區段和觀眾的 [!DNL Real-time Customer Profile] 能力。
-- [!DNL Experience Data Model (XDM)](../../xdm/home.md): 組織客戶體驗資料 [!DNL Platform] 的標準化架構。
+- [!DNL Real-time Customer Profile](../../profile/home.md):根據來自多個來源的匯總資料，即時提供統一的消費者個人檔案。
+- [!DNL Segmentation](../home.md):提供從資料建立區段和觀眾的 [!DNL Real-time Customer Profile] 能力。
+- [!DNL Experience Data Model (XDM)](../../xdm/home.md):組織客戶體驗資料 [!DNL Platform] 的標準化架構。
 
 以下章節提供您成功呼叫API所需的其他資訊 [!DNL Platform] 。
 
@@ -40,7 +40,7 @@ ht-degree: 1%
 
 若要呼叫API，您必 [!DNL Platform] 須先完成驗證教 [學課程](../../tutorials/authentication.md)。 完成驗證教學課程後，將提供所有 [!DNL Experience Platform] API呼叫中每個必要標題的值，如下所示：
 
-- 授權： 生產者 `{ACCESS_TOKEN}`
+- 授權：生產者 `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
@@ -54,7 +54,7 @@ ht-degree: 1%
 
 所有包含裝載(POST、PUT、PATCH)的請求都需要額外的標題：
 
-- 內容類型： application/json
+- 內容類型：application/json
 
 完成特定要求可能需要其他標題。 本檔案的每個範例都會顯示正確的標題。 請特別注意範例要求，以確保包含所有必要的標題。
 
@@ -70,6 +70,7 @@ ht-degree: 1%
 | ---------- | ------- |
 | 傳入點擊 | 任何區段定義，是指沒有時間限制的單一傳入事件。 |
 | 在相對時間視窗內傳入點擊 | 任何區段定義，是指過去七天內 **的單一傳入事件**。 |
+| 僅限描述檔 | 任何僅指描述檔屬性的區段定義。 |
 | 參照描述檔的傳入點擊 | 任何區段定義，是指單一傳入事件（無時間限制）以及一或多個描述檔屬性。 |
 | 在相對時間視窗內參照描述檔的傳入點擊 | 任何區段定義，是指過去七天內傳入的單一事件和一或多個描述 **檔屬性**。 |
 | 參考描述檔的多個事件 | 任何區段定義是指過去24小時內 **的多個事件** ，且（可選）具有一或多個描述檔屬性。 |
@@ -364,7 +365,7 @@ curl -X POST \
 
 ### 啟用排程
 
-預設情況下，建立計畫時，除非將屬 `state` 性設定為建立(POST) `active` 請求主體中，否則該計畫處於非活動狀態。 通過向端點發出PATCH請求並在路徑中包 `state``active``/config/schedules` 括調度的ID，可以啟用調度（將設定為）。
+預設情況下，建立計畫時不活動，除非 `state` 在建立(POST)請 `active` 求主體中將屬性設定為。 通過向端點發出PATCH請求並在路徑中包 `state``active``/config/schedules` 括調度的ID，可以啟用調度（將設定為）。
 
 **API格式**
 
