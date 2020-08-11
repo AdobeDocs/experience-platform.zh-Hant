@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 使用流程服務API建立Azure Blob連接器
 topic: overview
 translation-type: tm+mt
-source-git-commit: 11431ffcfc2204931fe3e863bfadc7878a40b49c
+source-git-commit: 8e39cc206efa3fc314ae689845c88f0923ac1743
 workflow-type: tm+mt
-source-wordcount: '585'
+source-wordcount: '582'
 ht-degree: 2%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 2%
 
 本教學課程使 [!DNL Flow Service] 用API來引導您完成連線至 [!DNL Experience Platform][!DNL Azure Blob] （以下稱為「Blob」）儲存空間的步驟。
 
-如果您希望使用中的用戶介面 [!DNL Experience Platform], [](../../../ui/create/cloud-storage/blob-s3.md) Azure Blob或Amazon S3源連接器UI教程提供了執行類似操作的逐步說明。
+如果您想要使用中的使用者介面 [!DNL Experience Platform], [](../../../ui/create/cloud-storage/blob.md) Azure Blob來源連接器UI教學課程會提供執行類似動作的逐步指示。
 
 ## 快速入門
 
@@ -48,7 +48,7 @@ ht-degree: 2%
 
 若要呼叫API，您必 [!DNL Platform] 須先完成驗證教 [學課程](../../../../../tutorials/authentication.md)。 完成驗證教學課程後，將提供所有 [!DNL Experience Platform] API呼叫中每個必要標題的值，如下所示：
 
-* 授權： 生產者 `{ACCESS_TOKEN}`
+* 授權：生產者 `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
 * x-gw-ims-org-id: `{IMS_ORG}`
 
