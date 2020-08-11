@@ -3,9 +3,9 @@ product: adobe experience platform
 audience: user
 user-guide-title: 即時客戶資料平台說明
 translation-type: tm+mt
-source-git-commit: b0068c0ef0897d5d4ec578f0c97b20aef3b2931c
+source-git-commit: 836feb48c62e0e0ed11248846d63021125796b76
 workflow-type: tm+mt
-source-wordcount: '440'
+source-wordcount: '443'
 ht-degree: 11%
 
 ---
@@ -47,6 +47,7 @@ ht-degree: 11%
          * [Google廣告](/help/rtcdp/destinations/google-ads-destination.md)
          * [Google Ads擴充功能](/help/rtcdp/destinations/google-ads-extension.md)
          * [Google廣告管理員](/help/rtcdp/destinations/google-ad-manager-destination.md)
+         * [Google客戶符合](/help/rtcdp/destinations/google-customer-match-destination.md)
          * [Google Display &amp; Video 360](/help/rtcdp/destinations/google-dv360-destination.md)
          * [Google gtag擴充功能](/help/rtcdp/destinations/gtag-advertising-extension.md)
          * [LinkedIn In Insight標籤擴充功能](/help/rtcdp/destinations/linkedin-extension.md)
