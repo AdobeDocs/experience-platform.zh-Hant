@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 在UI中為付款連接器配置資料流
 topic: overview
 translation-type: tm+mt
-source-git-commit: 86ded28b1830d3607c8b5214c8d31dfcbf446252
+source-git-commit: d80622aaa8408d640a1a80b6a37f4083344e7fa1
 workflow-type: tm+mt
-source-wordcount: '1224'
+source-wordcount: '1273'
 ht-degree: 0%
 
 ---
@@ -20,10 +20,10 @@ ht-degree: 0%
 
 本教學課程需要對Adobe Experience Platform的下列元件有正確的認識：
 
-- [體驗資料模型(XDM)系統](../../../../xdm/home.md): 組織客戶體驗資料 [!DNL Experience Platform] 的標準化架構。
-   - [架構構成基礎](../../../../xdm/schema/composition.md): 瞭解XDM架構的基本建置區塊，包括架構組合的主要原則和最佳實務。
-   - [架構編輯器教程](../../../../xdm/tutorials/create-schema-ui.md): 瞭解如何使用架構編輯器UI建立自訂架構。
-- [即時客戶個人檔案](../../../../profile/home.md): 根據來自多個來源的匯整資料，提供統一、即時的消費者個人檔案。
+- [體驗資料模型(XDM)系統](../../../../xdm/home.md):組織客戶體驗資料 [!DNL Experience Platform] 的標準化架構。
+   - [架構構成基礎](../../../../xdm/schema/composition.md):瞭解XDM架構的基本建置區塊，包括架構組合的主要原則和最佳實務。
+   - [架構編輯器教程](../../../../xdm/tutorials/create-schema-ui.md):瞭解如何使用架構編輯器UI建立自訂架構。
+- [即時客戶個人檔案](../../../../profile/home.md):根據來自多個來源的匯整資料，提供統一、即時的消費者個人檔案。
 
 此外，本教學課程要求您已建立付款帳戶。 如需在UI中建立不同付款連接器的教學課程清單，請參閱來源連 [接器概觀](../../../home.md)。
 
@@ -118,17 +118,21 @@ ht-degree: 0%
 
 此時 *[!UICONTROL 會出現]* 「查看」步驟，允許您在建立新資料流之前對其進行查看。 詳細資訊會分組在下列類別中：
 
-- *[!UICONTROL 連接]*: 顯示源檔案的類型、所選源檔案的相關路徑，以及該源檔案中的列數。
-- *[!UICONTROL 指派資料集與地圖欄位]*: 顯示源資料被吸收到的資料集，包括資料集所附的模式。
-- *[!UICONTROL 排程]*: 顯示接收調度的活動期間、頻率和間隔。
+- *[!UICONTROL 連接]*:顯示源檔案的類型、所選源檔案的相關路徑，以及該源檔案中的列數。
+- *[!UICONTROL 指派資料集與地圖欄位]*:顯示源資料被吸收到的資料集，包括資料集所附的模式。
+- *[!UICONTROL 排程]*:顯示接收調度的活動期間、頻率和間隔。
 
 複查資料流後，按一下 **[!UICONTROL 完成]** ，並為建立資料流留出一些時間。
 
 ![審查](../../../images/tutorials/dataflow/payments/review.png)
 
-## 監視和刪除資料流
+## 監控資料流
 
-建立資料流後，您可以監視通過其獲取的資料。 有關如何監視和刪除資料流的詳細資訊，請參見有關監視和刪 [除資料流的教程](../monitor.md)。
+建立資料流後，您可以監視通過其獲取的資料，以查看有關提取率、成功和錯誤的資訊。 有關如何監視資料流的詳細資訊，請參見UI中有關監 [視帳戶和資料流的教程](../monitor.md)。
+
+## 刪除資料流
+
+您可以使用「資料流」工作區中的「刪除」功能刪除不再需要或 *[!UICONTROL 建立錯誤的]* 資料流 ** 。 有關如何刪除資料流的詳細資訊，請參見UI中有關 [刪除資料流的教程](../delete.md)。
 
 ## 後續步驟
 
