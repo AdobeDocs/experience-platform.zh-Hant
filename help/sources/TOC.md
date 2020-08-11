@@ -3,9 +3,9 @@ product: experience-platform
 audience: user
 user-guide-title: Adobe Experience Platform來源連接器說明
 translation-type: tm+mt
-source-git-commit: 03fd716d6f743d839bc24ff99660efdf47b187a0
+source-git-commit: 23653949cd16e9d4ee8c3f345cbee74f147263cd
 workflow-type: tm+mt
-source-wordcount: '594'
+source-wordcount: '595'
 ht-degree: 0%
 
 ---
@@ -187,5 +187,6 @@ ht-degree: 0%
       - [為付款連接器配置資料流](tutorials/ui/dataflow/payments.md)
       - [為協定連接器配置資料流](tutorials/ui/dataflow/protocols.md)
    - [啟用傳入資料以填入客戶個人檔案](tutorials/ui/profile.md)
-   - [監控帳戶和資料集流](tutorials/ui/monitor.md)
+   - [監視帳戶和資料流](tutorials/ui/monitor.md)
+   - [刪除資料流](tutorials/ui/delete.md)
 - [平台版本注意事項](https://www.adobe.com/go/platform-release-notes-en)
