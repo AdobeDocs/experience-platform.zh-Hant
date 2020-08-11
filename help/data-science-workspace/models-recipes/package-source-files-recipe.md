@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 將來源檔案封裝至配方
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 45461e3420f3b7e227f80fe775d80b8442a1069c
+source-git-commit: 41fe3e5b2a830c3182b46b3e0873b1672a1f1b03
 workflow-type: tm+mt
 source-wordcount: '1097'
 ht-degree: 0%
@@ -18,8 +18,8 @@ ht-degree: 0%
 
 要瞭解的概念：
 
-- **方式**: 配方是Adobe的模型規格術語，是代表特定機器學習、人工智慧演算法或整合演算法、處理邏輯和設定的頂層容器，以建立並執行已訓練的模型，進而協助解決特定商業問題。
-- **來源檔案**: 專案中包含方式邏輯的個別檔案。
+- **方式**:配方是Adobe的模型規格術語，是代表特定機器學習、人工智慧演算法或整合演算法、處理邏輯和設定的頂層容器，以建立並執行已訓練的模型，進而協助解決特定商業問題。
+- **來源檔案**:專案中包含方式邏輯的個別檔案。
 
 ## 必要條件
 
@@ -38,7 +38,7 @@ Docker映像允許開發人員將應用程式與其所需的所有部件（如�
 
 內建的Docker影像會使用在方式建立工作流程期間提供給您的認證，推送至Azure容器註冊表。
 
-若要取得您的Azure容器註冊表認證，請登入 <a href="https://platform.adobe.com" target="_blank">Adobe Experience Platform</a>。 在左邊導覽欄，導覽至「工 **[!UICONTROL 作流程」]**。 選擇「 **[!UICONTROL 匯入方式]** 」，然後選 **[!UICONTROL 取「啟動]**」。 請參閱下方的螢幕擷取畫面以供參考。
+若要取得您的Azure容器註冊表認證，請登入 [Adobe Experience Platform](https://platform.adobe.com)。 在左邊導覽欄，導覽至「工 **[!UICONTROL 作流程」]**。 選擇「 **[!UICONTROL 匯入方式]** 」，然後選 **[!UICONTROL 取「啟動]**」。 請參閱下方的螢幕擷取畫面以供參考。
 
 ![](../images/models-recipes/package-source-files/import.png)
 
