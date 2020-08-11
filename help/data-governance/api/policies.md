@@ -4,23 +4,25 @@ solution: Experience Platform
 title: 策略
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: d4964231ee957349f666eaf6b0f5729d19c408de
+source-git-commit: 7bc7050d64727f09d3a13d803d532a9a3ba5d1a7
 workflow-type: tm+mt
-source-wordcount: '862'
-ht-degree: 1%
+source-wordcount: '1756'
+ht-degree: 2%
 
 ---
 
 
-# 策略
+# 策略端點
 
-資料使用原則是貴組織採用的規則，可說明您允許或限制對內部資料執行的行銷動作類型 [!DNL Experience Platform]。
+資料使用原則是描述您允許或限制對內資料執行之行銷動作類型的規則 [!DNL Experience Platform]。 中的 `/policies` 端點允許您 [!DNL Policy Service API] 以寫程式方式管理組織的資料使用策略。
 
-端 `/policies` 點用於與檢視、建立、更新或刪除資料使用原則相關的所有API呼叫。
+## 快速入門
 
-## 列出所有原則
+本指南中使用的API端點是 [[!DNL Policy Service] API的一部分](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml)。 在繼續之前，請先閱讀快速入門 [指南](getting-started.md) ，以取得相關檔案的連結、閱讀本檔案中範例API呼叫的指南，以及成功呼叫任何 [!DNL Experience Platform] API所需之必要標題的重要資訊。
 
-若要檢視原則清單，可對指定容器提出GET `/policies/core` 要 `/policies/custom` 求或傳回所有原則。
+## 檢索策略清單 {#list}
+
+您可以分別向 `core` 或 `custom` 分別發出GET請求，以列 `/policies/core` 出所有或 `/policies/custom`策略。
 
 **API格式**
 
@@ -31,7 +33,9 @@ GET /policies/custom
 
 **請求**
 
-```SHELL
+下列請求會擷取您組織所定義的自訂原則清單。
+
+```sh
 curl -X GET \
   https://platform.adobe.io/data/foundation/dulepolicy/policies/custom \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -42,7 +46,7 @@ curl -X GET \
 
 **回應**
 
-回應包含「計數」，顯示指定容器內的原則總數，以及每個原則的詳細資訊（包括其中） `id`。 該 `id` 欄位用於執行查閱請求以查看特定策略，以及執行更新和刪除操作。
+成功的響應包括一 `children` 個陣列，該陣列列出每個檢索到的策略的詳細資訊，包括其 `id` 值。 您可以使用特 `id` 定原則的欄位來執行 [查閱](#lookup)、 [更新和刪](#update)除該原則 [的請求](#delete) 。
 
 ```JSON
 {
@@ -85,11 +89,11 @@ curl -X GET \
             },
             "imsOrg": "{IMS_ORG}",
             "created": 1550691551888,
-            "createdClient": "string",
-            "createdUser": "string",
+            "createdClient": "{CLIENT_ID}",
+            "createdUser": "{USER_ID}",
             "updated": 1550701472910,
-            "updatedClient": "string",
-            "updatedUser": "string",
+            "updatedClient": "{CLIENT_ID}",
+            "updatedUser": "{USER_ID}",
             "_links": {
                 "self": {
                     "href": "https://platform.adobe.io/data/foundation/dulepolicy/policies/custom/5c6dacdf685a4913dc48937c"
@@ -117,11 +121,11 @@ curl -X GET \
             },
             "imsOrg": "{IMS_ORG}",
             "created": 1550703519823,
-            "createdClient": "string",
-            "createdUser": "string",
+            "createdClient": "{CLIENT_ID}",
+            "createdUser": "{USER_ID}",
             "updated": 1550714340335,
-            "updatedClient": "string",
-            "updatedUser": "string",
+            "updatedClient": "{CLIENT_ID}",
+            "updatedUser": "{USER_ID}",
             "_links": {
                 "self": {
                     "href": "https://platform.adobe.io/data/foundation/dulepolicy/policies/custom/5c6ddb9f5c404513dc2dc454"
@@ -133,20 +137,33 @@ curl -X GET \
 }
 ```
 
-## 查找策略
+| 屬性 | 說明 |
+| --- | --- |
+| `_page.count` | 檢索的策略總數。 |
+| `name` | 原則的顯示名稱。 |
+| `status` | 策略的當前狀態。 有三種可能的狀態： `DRAFT`、 `ENABLED`或 `DISABLED`。 預設情況下，只 `ENABLED` 有策略參與評估。 如需詳細資訊，請 [參閱政策評](../enforcement/overview.md) 估概觀。 |
+| `marketingActionRefs` | 列出策略所有適用行銷動作的URI的陣列。 |
+| `description` | 可選說明，提供策略使用案例的進一步上下文。 |
+| `deny` | 一種對象，它描述了策略的關聯行銷操作無法對其執行的特定資料使用標籤。 有關此屬性的 [詳細資訊](#create-policy) ，請參閱建立策略一節。 |
 
-每個策略都包 `id` 含一個欄位，可用於請求特定策略的詳細資訊。 如果 `id``core``custom`策略未知，則可使用列出(GET)請求列出特定容器（或）內的所有策略，如上一步所示。
+## 查找策略 {#look-up}
+
+您可以在GET請求的路徑中加入該策略 `id` 的屬性，以查找特定策略。
 
 **API格式**
 
 ```http
-GET /policies/core/{id}
-GET /policies/custom/{id}
+GET /policies/core/{POLICY_ID}
+GET /policies/custom/{POLICY_ID}
 ```
+
+| 參數 | 說明 |
+| --- | --- |
+| `{POLICY_ID}` | 你 `id` 想查的政策。 |
 
 **請求**
 
-```SHELL
+```sh
 curl -X GET \
   https://platform.adobe.io/data/foundation/dulepolicy/policies/custom/5c6dacdf685a4913dc48937c \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -157,7 +174,7 @@ curl -X GET \
 
 **回應**
 
-回應包含原則的詳細資訊，包括關鍵欄位 `id` (此欄位應符合請求中所傳送的 `id` )、 `name`、 `status`和 `description`，以及策略所依據之行銷動作的參考連結(`marketingActionRefs`)。
+成功的回應會傳回原則的詳細資訊。
 
 ```JSON
 {
@@ -187,12 +204,12 @@ curl -X GET \
         ]
     },
     "imsOrg": "{IMS_ORG}",
-    "created": 1550691551888,
-    "createdClient": "string",
-    "createdUser": "string",
-    "updated": 1550701472910,
-    "updatedClient": "string",
-    "updatedUser": "string",
+    "created": 1550703519823,
+    "createdClient": "{CLIENT_ID}",
+    "createdUser": "{USER_ID}",
+    "updated": 1550714340335,
+    "updatedClient": "{CLIENT_ID}",
+    "updatedUser": "{USER_ID}",
     "_links": {
         "self": {
             "href": "https://platform.adobe.io/data/foundation/dulepolicy/policies/custom/5c6dacdf685a4913dc48937c"
@@ -202,11 +219,34 @@ curl -X GET \
 }
 ```
 
-## 建立原則 {#create-policy}
+| 屬性 | 說明 |
+| --- | --- |
+| `name` | 原則的顯示名稱。 |
+| `status` | 策略的當前狀態。 有三種可能的狀態： `DRAFT`、 `ENABLED`或 `DISABLED`。 預設情況下，只 `ENABLED` 有策略參與評估。 如需詳細資訊，請 [參閱政策評](../enforcement/overview.md) 估概觀。 |
+| `marketingActionRefs` | 列出策略所有適用行銷操作的URI的陣列。 |
+| `description` | 可選說明，提供策略使用案例的進一步上下文。 |
+| `deny` | 一種對象，它描述了策略的關聯行銷操作無法對其執行的特定資料使用標籤。 有關此屬性的 [詳細資訊](#create-policy) ，請參閱建立策略一節。 |
 
-建立原則需要包含行銷動作，並包含禁止該行銷動作的DULE標籤。 策略定義必須包 `deny` 含一個屬性，該屬性是與DULE標籤存在相關的布爾表達式。
+## Create a custom policy {#create-policy}
 
-此表達式稱為 `PolicyExpression` a，是包含標籤 _或運_ 算符和操作數的對象 __ ，但不同時包含兩者。 反過來，每個操作數也是一個 `PolicyExpression` 對象。 例如，如果標籤存在，則可能禁止將資料匯出至第三 `C1 OR (C3 AND C7)` 方的政策。 此表達式將指定為：
+在 [!DNL Policy Service] API中，原則由下列項目定義：
+
+* 特定行銷動作的參考
+* 描述限制行銷動作執行之資料使用標籤的運算式
+
+為滿足後一個要求，策略定義必須包含關於資料使用標籤存在的布爾表達式。 此表達式稱為策 **略表達式**。
+
+在每個策略定義中以屬性的形式 `deny` 提供策略表達式。 僅檢查單一標 `deny` 簽是否存在的簡單對象示例如下所示：
+
+```json
+"deny": {
+    "label": "C1"
+}
+```
+
+但是，許多策略會針對資料使用標籤的存在指定更複雜的條件。 若要支援這些使用案例，您也可以包含布林運算，以說明原則運算式。 策略表達式對象必須包 _含標籤_ , _或運算_ 符和操作數，但不能同時包含兩者。 反過來，每個操作數也是策略表達式對象。
+
+例如，為了定義禁止對存在標籤的資料執行行銷動作的原則， `C1 OR (C3 AND C7)` 原則的屬 `deny` 性會指定為：
 
 ```JSON
 "deny": {
@@ -224,6 +264,14 @@ curl -X GET \
 }
 ```
 
+| 屬性 | 說明 |
+| --- | --- |
+| `operator` | 指示同級陣列中提供的標籤之間的條件 `operands` 關係。 接受的值為： <ul><li>`OR`:如果陣列中有任何標籤存在，表達式會解 `operands` 析為true。</li><li>`AND`:運算式只會在陣列中所有標籤都存在時解析 `operands` 為true。</li></ul> |
+| `operands` | 對象陣列，每個對象表示單個標籤或另一對和屬 `operator` 性 `operands` 。 陣列中標籤和／或操作的存在會根 `operands` 據其同級屬性的值解析為true或false `operator` 。 |
+| `label` | 套用至原則的單一資料使用標籤的名稱。 |
+
+您可以向端點發出POST請求，以建立新的自訂 `/policies/custom` 原則。
+
 **API格式**
 
 ```http
@@ -232,7 +280,9 @@ POST /policies/custom
 
 **請求**
 
-```SHELL
+下列請求會建立新原則，限制對包含標籤的 `exportToThirdParty` 資料執行行銷動作 `C1 OR (C3 AND C7)`。
+
+```sh
 curl -X POST \
   https://platform.adobe.io/data/foundation/dulepolicy/policies/custom \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -244,7 +294,7 @@ curl -X POST \
         "name": "Export Data to Third Party",
         "status": "DRAFT",
         "marketingActionRefs": [
-          "../marketingActions/custom/exportToThirdParty"
+          "https://platform.adobe.io/data/foundation/dulepolicy/marketingActions/custom/exportToThirdParty"
         ],
         "description": "Conditions under which data cannot be exported to a third party",
         "deny": {
@@ -263,9 +313,17 @@ curl -X POST \
       }'
 ```
 
+| 屬性 | 說明 |
+| --- | --- |
+| `name` | 原則的顯示名稱。 |
+| `status` | 策略的當前狀態。 有三種可能的狀態： `DRAFT`、 `ENABLED`或 `DISABLED`。 預設情況下，只 `ENABLED` 有策略參與評估。 如需詳細資訊，請 [參閱政策評](../enforcement/overview.md) 估概觀。 |
+| `marketingActionRefs` | 列出策略所有適用行銷操作的URI的陣列。 行銷動作的URI是在查詢行 `_links.self.href` 銷動作的回 [應下提供的](./marketing-actions.md#look-up)。 |
+| `description` | 可選說明，提供策略使用案例的進一步上下文。 |
+| `deny` | 描述策略相關行銷動作之特定資料使用標籤的原則運算式，會限制其無法執行。 |
+
 **回應**
 
-如果成功建立，您將會收到HTTP狀態201（已建立），回應主體將包含新建立之原則的詳細資訊，包括其中 `id`。 此值是唯讀的，在建立原則時會自動指派。
+成功的回應會傳回新建立之原則的詳細資料，包括其詳細資訊 `id`。 此值是唯讀的，在建立原則時會自動指派。
 
 ```JSON
 {
@@ -296,11 +354,11 @@ curl -X POST \
     },
     "imsOrg": "{IMS_ORG}",
     "created": 1550691551888,
-    "createdClient": "string",
-    "createdUser": "string",
+    "createdClient": "{CLIENT_ID}",
+    "createdUser": "{USER_ID}",
     "updated": 1550691551888,
-    "updatedClient": "string",
-    "updatedUser": "string",
+    "updatedClient": "{CLIENT_ID}",
+    "updatedUser": "{USER_ID}",
     "_links": {
         "self": {
             "href": "https://platform.adobe.io/data/foundation/dulepolicy/policies/custom/5c6dacdf685a4913dc48937c"
@@ -310,21 +368,35 @@ curl -X POST \
 }
 ```
 
-## 更新原則
+## 更新自訂原則 {#update}
 
-您可能會發現，在建立資料使用政策後，您必須更新該資料使用政策。 這是通過對策略的PUT請求而完成的， `id` 該請求具有包含策略的更新形式的完整的有效負載。 換言之，PUT請求實質上是 _重寫策略_ ，因此機構必須包括如下例所示的所有必需資訊。
+>[!IMPORTANT]
+>
+>您只能更新自訂原則。 如果要啟用或禁用核心策略，請參閱有關更 [新已啟用核心策略清單的部分](#update-enabled-core)。
+
+您可以在PUT請求路徑中提供現有自訂原則的ID，以包含完整原則的更新形式的裝載，借此更新現有自訂原則。 換句話說，PUT請求實質上 _重寫_ 了策略。
+
+>[!NOTE]
+>
+>如果您只想 [要更新策略的一個或多個欄位](#patch) ，而不是覆寫策略，請參閱更新自定義策略部分的章節。
 
 **API格式**
 
 ```http
-PUT /policies/custom/{id}
+PUT /policies/custom/{POLICY_ID}
 ```
+
+| 參數 | 說明 |
+| --- | --- |
+| `{POLICY_ID}` | 您 `id` 要更新的原則。 |
 
 **請求**
 
-在此範例中，將資料匯出至第三方的條件已經變更，現在您需要建立的原則才能在資料標籤存在時拒絕 `C1 AND (C3 OR C7)` 此行銷動作。 您會使用下列呼叫來更新現有原則。
+在此範例中，將資料匯出至第三方的條件已經變更，現在您需要建立的原則才能在資料標籤存在時拒絕 `C1 AND C5` 此行銷動作。
 
-```SHELL
+以下請求會更新現有策略以包含新策略表達式。 請注意，由於此請求實際上會重寫原則，因此所有欄位都必須包含在裝載中，即使部分欄位值未更新亦然。
+
+```sh
 curl -X PUT \
   https://platform.adobe.io/data/foundation/dulepolicy/policies/custom/5c6dacdf685a4913dc48937c \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -343,21 +415,23 @@ curl -X PUT \
           "operator": "AND",
           "operands": [
             {"label": "C1"},
-            {
-              "operator": "OR",
-              "operands": [
-                {"label": "C3"},
-                {"label": "C7"}
-              ]
-            }
+            {"label": "C5"}
           ]
         }
       }'
 ```
 
+| 屬性 | 說明 |
+| --- | --- |
+| `name` | 原則的顯示名稱。 |
+| `status` | 策略的當前狀態。 有三種可能的狀態： `DRAFT`、 `ENABLED`或 `DISABLED`。 預設情況下，只 `ENABLED` 有策略參與評估。 如需詳細資訊，請 [參閱政策評](../enforcement/overview.md) 估概觀。 |
+| `marketingActionRefs` | 列出策略所有適用行銷操作的URI的陣列。 行銷動作的URI是在查詢行 `_links.self.href` 銷動作的回 [應下提供的](./marketing-actions.md#look-up)。 |
+| `description` | 可選說明，提供策略使用案例的進一步上下文。 |
+| `deny` | 描述策略相關行銷動作之特定資料使用標籤的原則運算式，會限制其無法執行。 有關此屬性的 [詳細資訊](#create-policy) ，請參閱建立策略一節。 |
+
 **回應**
 
-成功的更新請求會傳回HTTP狀態200（確定），回應主體會顯示更新的原則。 應符 `id` 合在請求 `id` 中傳送的內容。
+成功的回應會傳回更新之原則的詳細資料。
 
 ```JSON
 {
@@ -374,25 +448,17 @@ curl -X PUT \
                 "label": "C1"
             },
             {
-                "operator": "OR",
-                "operands": [
-                    {
-                        "label": "C3"
-                    },
-                    {
-                        "label": "C7"
-                    }
-                ]
+                "label": "C5"
             }
         ]
     },
     "imsOrg": "{IMS_ORG}",
     "created": 1550691551888,
-    "createdClient": "string",
-    "createdUser": "string",
+    "createdClient": "{CLIENT_ID}",
+    "createdUser": "{USER_ID}",
     "updated": 1550701472910,
-    "updatedClient": "string",
-    "updatedUser": "string",
+    "updatedClient": "{CLIENT_ID}",
+    "updatedUser": "{USER_ID}",
     "_links": {
         "self": {
             "href": "https://platform.adobe.io/data/foundation/dulepolicy/policies/custom/5c6dacdf685a4913dc48937c"
@@ -402,37 +468,37 @@ curl -X PUT \
 }
 ```
 
-## 更新策略的一部分
+## 更新自訂原則的一部分 {#patch}
 
-策略的特定部分可以使用PATCH請求進行更新。 與重寫策略的PUT請 _求不同_ ,PATCH請求只更新請求主體中指定的路徑。 當您想要啟用或停用原則時，這特別有用，因為您只需要傳送您要更新的特定路徑(`/status`)及其值(`ENABLE` 或 `DISABLE`)。
+>[!IMPORTANT]
+>
+>您只能更新自訂原則。 如果要啟用或禁用核心策略，請參閱有關更 [新已啟用核心策略清單的部分](#update-enabled-core)。
 
-API [!DNL Policy Service] 目前支援「新增」、「取代」和「移除」PATCH作業，並可讓您將多個更新合併為單一呼叫，方法是將每個更新新增為陣列中的物件，如下列範例所示。
+策略的特定部分可以使用PATCH請求進行更新。 與重寫策略的PUT請求不同，PATCH請求只更新請求主體中指定的屬性。 當您想要啟用或停用原則時，這特別有用，因為您只需要提供適當屬性(`/status`)及其值(`ENABLED` 或 `DISABLED`)的路徑。
+
+>[!NOTE]
+>
+>PATCH請求的裝載會遵循JSON修補程式格式。 如需接受 [語法的詳細資訊](../../landing/api-fundamentals.md) ，請參閱API基礎指南。
+
+API [!DNL Policy Service] 支援JSON修補程式 `add`、 `remove``replace`和，並可讓您將多個更新合併為單一呼叫，如以下範例所示。
 
 **API格式**
 
 ```http
-PATCH /policies/custom/{id}
+PATCH /policies/custom/{POLICY_ID}
 ```
+
+| 參數 | 說明 |
+| --- | --- |
+| `{POLICY_ID}` | 要 `id` 更新其屬性的策略。 |
 
 **請求**
 
-在此示例中，我們使用「替換」操作將策略狀態從「DRAFT」更改為「ENABLED」，並使用新說明更新說明欄位。 我們還可以使用「刪除」操作來刪除策略說明，然後使用「添加」操作來添加新的一次，例如：
+以下請求使用兩 `replace` 個操作將策略狀態從 `DRAFT` 更 `ENABLED`改為，並使用新說明更 `description` 新欄位。
 
-```SHELL
-[
-    {
-        "op": "remove",
-        "path": "/description"
-    },
-    {
-        "op": "add",
-        "path": "/description",
-        "value": "New policy description."
-    }
-]
-```
-
-在單個請求中發送多個PATCH操作時，請記住，這些操作將按照它們在陣列中的顯示順序進行處理，以確保在需要時以正確的順序發送請求。
+>[!IMPORTANT]
+>
+>在單個請求中發送多個PATCH操作時，將按照它們在陣列中的顯示順序進行處理。 請務必視需要以正確順序傳送請求。
 
 ```SHELL
 curl -X PATCH \
@@ -458,7 +524,7 @@ curl -X PATCH \
 
 **回應**
 
-成功的更新請求將傳回HTTP狀態200（確定），回應主體將顯示更新的原則（「狀態」現在為「已啟用」，且「說明」已變更）。 原則 `id` 應符合請 `id` 求中傳送的。
+成功的回應會傳回更新之原則的詳細資料。
 
 
 ```JSON
@@ -490,11 +556,11 @@ curl -X PATCH \
     },
     "imsOrg": "{IMS_ORG}",
     "created": 1550703519823,
-    "createdClient": "string",
-    "createdUser": "string",
+    "createdClient": "{CLIENT_ID}",
+    "createdUser": "{USER_ID}",
     "updated": 1550712163182,
-    "updatedClient": "string",
-    "updatedUser": "string",
+    "updatedClient": "{CLIENT_ID}",
+    "updatedUser": "{USER_ID}",
     "_links": {
         "self": {
             "href": "https://platform.adobe.io/data/foundation/dulepolicy/policies/custom/5c6dacdf685a4913dc48937c"
@@ -504,19 +570,27 @@ curl -X PATCH \
 }
 ```
 
-## 刪除原則
+## 刪除自訂原則 {#delete}
 
-如果您需要刪除已建立的策略，可以通過向要刪除的策略發出DELETE請 `id` 求來執行此操作。 最好先執行查閱(GET)請求，以檢視原則並確認這是您要移除的正確原則。 **刪除後，將無法恢復策略。**
+您可以將自訂原則納入DELETE請 `id` 求的路徑，以刪除該原則。
+
+>[!WARNING]
+>
+>刪除後，將無法恢復策略。 最好先執行查 [閱(GET)請求](#lookup) ，以檢視原則並確認這是您要移除的正確原則。
 
 **API格式**
 
 ```http
-DELETE /policies/custom/{id}
+DELETE /policies/custom/{POLICY_ID}
 ```
+
+| 參數 | 說明 |
+| --- | --- |
+| `{POLICY_ID}` | 您要刪除之原則的ID。 |
 
 **請求**
 
-```SHELL
+```sh
 curl -X DELETE \
   https://platform.adobe.io/data/foundation/dulepolicy/policies/custom/5c6ddb56eb60ca13dbf8b9a8 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -527,6 +601,128 @@ curl -X DELETE \
 
 **回應**
 
-如果策略已成功刪除，則響應主體將為空，且HTTP狀態為200（確定）。
+成功的回應會傳回HTTP狀態200（確定），但會傳回空白的內文。
 
-您可以再次嘗試查閱(GET)原則，以確認刪除。 您應該會收到HTTP狀態404（找不到）以及「找不到」錯誤訊息，因為原則已移除。
+您可以嘗試再次查找(GET)原則，以確認刪除。 如果策略已成功刪除，您應該會收到HTTP 404（找不到）錯誤。
+
+## 檢索已啟用的核心策略清單 {#list-enabled-core}
+
+依預設，只有啟用的資料使用政策才會參與評估。 您可以向端點發出GET請求，以擷取組織目前啟用的核心原則清 `/enabledCorePolicies` 單。
+
+**API格式**
+
+```http
+GET /enabledCorePolicies
+```
+
+**請求**
+
+```sh
+curl -X GET \
+  https://platform.adobe.io/data/foundation/dulepolicy/enabledCorePolicies \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}'
+```
+
+**回應**
+
+成功的響應返回陣列下啟用的核心策略 `policyIds` 清單。
+
+```json
+{
+  "policyIds": [
+    "corepolicy_0001",
+    "corepolicy_0002",
+    "corepolicy_0003",
+    "corepolicy_0004",
+    "corepolicy_0005",
+    "corepolicy_0006",
+    "corepolicy_0007",
+    "corepolicy_0008"
+  ],
+  "imsOrg": "{IMS_ORG}",
+  "created": 1529696681413,
+  "createdClient": "{CLIENT_ID}",
+  "createdUser": "{USER_ID}",
+  "updated": 1529697651972,
+  "updatedClient": "{CLIENT_ID}",
+  "updatedUser": "{USER_ID}",
+  "_links": {
+    "self": {
+      "href": "https://platform.adobe.io:443/data/foundation/dulepolicy/enabledCorePolicies"
+    }
+  }
+}
+```
+
+## 更新已啟用核心原則的清單 {#update-enabled-core}
+
+依預設，只有啟用的資料使用政策才會參與評估。 通過向端點發出PUT請 `/enabledCorePolicies` 求，您可以使用單次呼叫更新組織的已啟用核心策略清單。
+
+>[!NOTE]
+>
+>此端點只能啟用或禁用核心策略。 要啟用或禁用自定義策略，請參 [閱更新策略部分一節](#patch)。
+
+**API格式**
+
+```http
+PUT /enabledCorePolicies
+```
+
+**請求**
+
+下列請求會根據裝載中提供的ID更新已啟用核心原則的清單。
+
+```sh
+curl -X GET \
+  https://platform.adobe.io/data/foundation/dulepolicy/enabledCorePolicies \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -d '{
+        "policyIds": [
+          "corepolicy_0001",
+          "corepolicy_0002",
+          "corepolicy_0007",
+          "corepolicy_0008"
+        ]
+      }'
+```
+
+| 屬性 | 說明 |
+| --- | --- |
+| `policyIds` | 要啟用的核心原則ID清單。 未包含的任何核心政策都設為 `DISABLED` 狀態，不會參與評估。 |
+
+**回應**
+
+成功的響應返回陣列下啟用的核心策略的更新 `policyIds` 清單。
+
+```json
+{
+  "policyIds": [
+    "corepolicy_0001",
+    "corepolicy_0002",
+    "corepolicy_0007",
+    "corepolicy_0008"
+  ],
+  "imsOrg": "{IMS_ORG}",
+  "created": 1529696681413,
+  "createdClient": "{CLIENT_ID}",
+  "createdUser": "{USER_ID}",
+  "updated": 1595876052649,
+  "updatedClient": "{CLIENT_ID}",
+  "updatedUser": "{USER_ID}",
+  "_links": {
+    "self": {
+      "href": "https://platform.adobe.io:443/data/foundation/dulepolicy/enabledCorePolicies"
+    }
+  }
+}
+```
+
+## 後續步驟
+
+定義新策略或更新現有策略後，您可以使用 [!DNL Policy Service] API測試針對特定標籤或資料集的行銷動作，並查看您的策略是否如預期提高違規。 如需詳細資訊，請參 [閱政策評估端點](./evaluation.md) 的指南。
