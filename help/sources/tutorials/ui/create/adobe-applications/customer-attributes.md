@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 在UI中建立客戶屬性來源連接器
 topic: overview
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 41fe3e5b2a830c3182b46b3e0873b1672a1f1b03
 workflow-type: tm+mt
 source-wordcount: '364'
 ht-degree: 7%
@@ -18,13 +18,13 @@ ht-degree: 7%
 
 ## 建立源連接
 
-登入 <a href="https://platform.adobe.com" target="_blank">Adobe Experience Platform</a> ，然後從左側導覽列選 **取Sources** ，以存取來源工作區。 「目 *錄* 」螢幕顯示可用的源以建立入站連接，每個源顯示與其關聯的現有連接數。 選擇「客戶屬性」 **的選項** ，然後按一下「 **連接源」**。 如果連線成功建立，將會重新導向您。
+登入 [Adobe Experience Platform](https://platform.adobe.com) ，然後從左側導覽列選 **[!UICONTROL 取Sources]** ，以存取來源工作區。 「目 **[!UICONTROL 錄]** 」螢幕顯示可用的源以建立入站連接，每個源顯示與其關聯的現有連接數。 選擇「客戶屬性」 **[!UICONTROL 的選項]** ，然後選擇「 **[!UICONTROL 添加資料」]**。 如果連線成功建立，將會重新導向您。
 
 >[!NOTE]
 >
 >如果您已建立客戶屬性描述檔資料的來源連接器，則與來源連線的選項將會停用。
 
-![](../../../../images/tutorials/create/customer-attributes/CA-sources_catalog.png)
+![](../../../../images/tutorials/create/customer-attributes/catalog.png)
 
 「源 *活動* 」螢幕列出客戶屬性配置檔案資料的所有先前建立的連接，您可以通過按一下「選擇資料」來建立 **新連接**。
 
@@ -32,7 +32,7 @@ ht-degree: 7%
 >
 >可以建立多個來源的入站連接，以導入不同的資料。
 
-![](../../../../images/tutorials/create/customer-attributes/CA-source_activity.png)
+![](../../../../images/tutorials/create/customer-attributes/source_activity.png)
 
 從可用客戶屬性配置檔案資料集清單中，選擇要導入平台的資料集，然後按一下「下 **一步」**。
 
@@ -40,14 +40,14 @@ ht-degree: 7%
 >
 >每個客戶屬性來源連線只能選取一個資料集。
 
-![](../../../../images/tutorials/create/customer-attributes/CA-select_data.png)
+![](../../../../images/tutorials/create/customer-attributes/select_data.png)
 
 此時 *會出現* 「查看」步驟，允許您在建立新入站連接之前查看該連接。 連接的詳細資訊按類別分組，包括：
 
-* *來源詳細資訊*: 顯示源連接的類型和選定的源資料。
-* *目標詳細資訊*: 建立其他來源連接器時，此容器會顯示來源資料所吸收的資料集，包括資料集所遵守的架構。 客戶屬性描述檔資料會自動對應並收錄至即時客戶描述檔。
+* *來源詳細資訊*:顯示源連接的類型和選定的源資料。
+* *目標詳細資訊*:建立其他來源連接器時，此容器會顯示來源資料所吸收的資料集，包括資料集所遵守的架構。 客戶屬性描述檔資料會自動對應並收錄至即時客戶描述檔。
 
-![](../../../../images/tutorials/create/customer-attributes/CA-review.png)
+![](../../../../images/tutorials/create/customer-attributes/review.png)
 
 ## 後續步驟
 
