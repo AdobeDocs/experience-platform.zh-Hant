@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Azure Blob和Amazon S3連接器
 topic: overview
 translation-type: tm+mt
-source-git-commit: 340f5d0611e9e9eb4676018ee10c8a8aa08dbb2d
+source-git-commit: 3cee9b2515d833a640b091a90cd2152f0c1b1e64
 workflow-type: tm+mt
-source-wordcount: '228'
+source-wordcount: '106'
 ht-degree: 0%
 
 ---
@@ -18,48 +18,6 @@ Adobe Experience Platform為AWS和AWS等雲提供商提供 [!DNL Google Cloud Pl
 
 雲端儲存來源可將您自己的資料匯入 [!DNL Platform] 其中，而不需下載、格式化或上傳。 收錄的資料可格式化為XDM JSON、XDM鑲木地板或分隔字元。 此程式的每個步驟都會整合至Sources工作流程中。 [!DNL Platform] 可讓您透過批次從和S3 [!DNL Azure Blob] 傳入資料。
 
-## IP位址允許清單
+有關連接器的詳 [!DNL Azure Blob] 細資訊，請閱讀連 [[!DNL Azure Blob] 接器概述](./blob.md)。
 
-在使用源連接器之前，必須將下列IP位址新增至允許清單。 若未將您地區專屬的IP位址新增至您的允許清單，在使用來源時可能會導致錯誤或效能不佳。
-
-### 美國東部地區
-
-- `20.41.2.0/23`
-- `20.41.4.0/26`
-- `20.44.17.80/28`
-- `20.49.102.16/29`
-- `40.70.148.160/28`
-- `52.167.107.224/28`
-
-### 西歐地區
-
-- `13.69.67.192/28`
-- `13.69.107.112/28`
-- `13.69.112.128/28`
-- `40.74.24.192/26`
-- `40.74.26.0/23`
-- `40.113.176.232/29`
-- `52.236.187.112/28`
-
-### 澳洲東部
-
-- `13.70.74.144/28`
-- `20.37.193.0/25`
-- `20.37.193.128/26`
-- `20.37.198.224/29`
-- `40.79.163.80/28`
-- `40.79.171.160/28`
-
-以下檔案提供如何使用API或使用者介面將Azure Blob和S3連接至平台的資訊：
-
-## 連 [!DNL Azure Blob] 接和S3以使用 [!DNL Platform] API
-
-- [使用流程服務API建立Azure Blob連接器](../../tutorials/api/create/cloud-storage/blob.md)
-- [使用Flow Service API建立S3連接器](../../tutorials/api/create/cloud-storage/s3.md)
-- [使用Flow Service API探索雲端儲存系統](../../tutorials/api/explore/cloud-storage.md)
-- [使用Flow Service API收集雲端儲存空間資料](../../tutorials/api/collect/cloud-storage.md)
-
-## 連 [!DNL Blob] 接和S3以 [!DNL Platform] 使用UI
-
-- [在UI中建立Azure Blob或Amazon S3來源連接器](../../tutorials/ui/create/cloud-storage/blob-s3.md)
-- [在UI中為雲端儲存連接器設定資料流](../../tutorials/ui/dataflow/batch/cloud-storage.md)
+有關連接器的詳 [!DNL Amazon S3] 細資訊，請閱讀連 [[!DNL Amazon S3] 接器概述](./s3.md)。
