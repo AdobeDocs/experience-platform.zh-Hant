@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Adobe Experience Platform來源連接器概觀
 topic: overview
 translation-type: tm+mt
-source-git-commit: 6ffdcc2143914e2ab41843a52dc92344ad51bcfb
+source-git-commit: 8e39cc206efa3fc314ae689845c88f0923ac1743
 workflow-type: tm+mt
-source-wordcount: '800'
+source-wordcount: '801'
 ht-degree: 0%
 
 ---
@@ -45,8 +45,9 @@ Adobe Experience Platform可讓您從外部來源擷取資料，同時提供您�
 雲端儲存來源可將您自己的資料匯入 [!DNL Platform] 其中，而不需下載、格式化或上傳。 收錄的資料可格式化為XDM JSON、XDM鑲木地板或分隔字元。 此程式的每個步驟都會使用使用者介面整合至Sources工作流程。 如需詳細資訊，請參閱下列相關檔案：
 
 - [!DNL Azure Data Lake Storage Gen2](connectors/cloud-storage/adls-gen2.md) 連接器
-- [!DNL Azure Blob and Amazon S3](connectors/cloud-storage/blob-s3.md) 連接器
+- [!DNL Azure Blob](connectors/cloud-storage/blob.md) 連接器
 - [!DNL Amazon Kinesis](connectors/cloud-storage/kinesis.md) 連接器
+- [!DNL Amazon S3](connectors/cloud-storage/s3.md) 連接器
 - [!DNL Apache HDFS](connectors/cloud-storage/hdfs.md) 連接器
 - [!DNL Azure Event Hubs](connectors/cloud-storage/eventhub.md) 連接器
 - [!DNL Azure File Storage](connectors/cloud-storage/azure-file-storage.md) 連接器
