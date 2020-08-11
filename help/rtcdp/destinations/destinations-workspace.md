@@ -4,10 +4,10 @@ seo-title: 目標工作區
 description: 在Adobe即時客戶資料平台中，從左側導覽列選取「目標」以存取目標工作區。
 seo-description: 在Adobe即時客戶資料平台中，從左側導覽列選取「目標」以存取目標工作區。
 translation-type: tm+mt
-source-git-commit: 570c627672439a5ee0f4215b7bf7915ec3dd2bb3
+source-git-commit: f3e489416a9bc80cfb0502d3973a86748123a687
 workflow-type: tm+mt
-source-wordcount: '609'
-ht-degree: 3%
+source-wordcount: '807'
+ht-degree: 2%
 
 ---
 
@@ -22,15 +22,34 @@ ht-degree: 3%
 
 ## [!UICONTROL 目錄] {#catalog}
 
-「目 **[!UICONTROL 錄]** 」標籤會顯示Adobe提供的所有目的地清單，您可將資料傳送至這些目的地。
+「目 **[!UICONTROL 錄]** 」標籤會顯示Adobe即時CDP中所有可傳送資料的目標清單。
 
-使用頁面上的搜尋功能，使用「類別」控制項來尋找特定目標或篩選 **[!UICONTROL 目標]** 。
+Adobe即時CDP使用者介面在目標目錄頁面上提供許多搜尋和篩選選項：
 
-在目錄中選擇目標以開啟右邊欄。 在這裡，您可以設定到目的地的連線(**[!UICONTROL Connect目的地]**)、檢視現有的目的地連線(**[!UICONTROL Browse目的地]**)，或檢視檔案(**[!UICONTROL View documentation]**)，以進一步瞭解每個目的地的詳細資訊。
+* 使用頁面上的搜尋功能來尋找特定目標。
+* 使用「類別」控制項 **[!UICONTROL 篩選目]** 標。
+* 在「所有目 **[!UICONTROL 標」和「我]** 」目 **[!UICONTROL 標之間切換]**。 選取 **[!UICONTROL 所有目標]** ，會顯示所有可用的Adobe即時CDP目標。 選 **[!UICONTROL 取「我的目標]** 」時，您只能看到您已建立連線的目標。
+* 選擇以查看 **[!UICONTROL 連接]** 和／或擴 **[!UICONTROL 展]**。 要瞭解兩個類別之間的差異，請參閱目 [標類型和類別](/help/rtcdp/destinations/destination-types.md)。
 
-![目標目錄選項](/help/rtcdp/destinations/assets/destination-ui-catalog-options.png)
+![目標篩選和搜尋示範](/help/rtcdp/destinations/assets/destinations-search-and-filter.gif)
 
-有關目標類別和每個目標資訊的詳細資訊，請參 [閱目標目錄](/help/rtcdp/destinations/destinations-catalog.md)。
+目標卡包含「設 **[!UICONTROL 定]** 」或「啟 **** 動」控制項，以及可顯示更多選項的次要控制項。 以下說明這些內容：
+
+| 控制 | 說明 |
+---------|----------
+| [!UICONTROL 設定] | 允許您建立到目標的連接。 |
+| [!UICONTROL 啟動] | 一旦建立與目標的連線後，您就可以啟動區段。 |
+| [!UICONTROL 檢視帳戶] | 查看您已為目標連接的帳戶。 |
+| [!UICONTROL 查看資料流] | 檢視目的地的資料啟動流程 |
+| [!UICONTROL 檢視檔案] | 開啟該特定目的地的檔案頁面連結，以取得詳細資訊並協助您設定。 |
+
+![目標卡的控制項](/help/rtcdp/destinations/assets/destination-card-options.png)
+
+在目錄中選取目標卡片，以開啟右側導軌。  在這裡，您可以看到目的地的說明。 右側導軌提供與上表所述相同的控制項，以及目的地的描述，以及目的地類別和類型的指示。
+
+![目標目錄選項](/help/rtcdp/destinations/assets/destination-right-rail.png)
+
+有關目標類別和每個目標資訊的詳細資訊，請參 [閱目標目錄](/help/rtcdp/destinations/destinations-catalog.md)[和目標類型和類別](/help/rtcdp/destinations/destination-types.md)。
 
 ## [!UICONTROL 瀏覽] {#browse}
 
@@ -42,7 +61,7 @@ ht-degree: 3%
 ---------|----------
 | 名稱 | 您為啟動流程提供的名稱，會前往此目的地。 |
 | [!UICONTROL 目標] | 您為啟動流程選擇的目標平台。 |
-| [!UICONTROL 連線類型] | 表示與儲存桶或目標的連接類型。 <ul><li>對於電子郵件行銷目標： 可以是S3或FTP。</li><li>針對即時廣告目的地： 伺服器對伺服器</li></ul> |
+| [!UICONTROL 連線類型] | 表示與儲存桶或目標的連接類型。 <ul><li>對於電子郵件行銷目標：可以是S3或FTP。</li><li>針對即時廣告目的地：伺服器對伺服器</li></ul> |
 | [!UICONTROL 使用者名稱] | 您為目標流選擇的帳戶憑據。 |
 | [!UICONTROL 區段] | 要啟動至此目標的區段數。 |
 | [!UICONTROL 已建立] | 建立啟動流程至目的地的日期和UTC時間。 |
@@ -63,7 +82,7 @@ ht-degree: 3%
 | 元素 | 說明 |
 ---------|----------
 | [!UICONTROL 平台] | 您已設定連接的目標。 |
-| [!UICONTROL 連線類型] | 表示與儲存桶或目標的連接類型。 <ul><li>對於電子郵件行銷目標： 可以是S3或FTP。</li><li>針對即時廣告目的地： 伺服器對伺服器</li><li>對於Amazon S3雲端儲存空間目標： 存取金鑰 </li><li>對於SFTP雲端儲存空間目標： SFTP的基本驗證</li></ul> |
+| [!UICONTROL 連線類型] | 表示與儲存桶或目標的連接類型。 <ul><li>對於電子郵件行銷目標：可以是S3或FTP。</li><li>針對即時廣告目的地：伺服器對伺服器</li><li>對於Amazon S3雲端儲存空間目標：存取金鑰 </li><li>對於SFTP雲端儲存空間目標：SFTP的基本驗證</li></ul> |
 | [!UICONTROL 使用者名稱] | 在連接目標嚮導中選 [擇的用戶名](/help/rtcdp/destinations/email-marketing-destinations.md#connect-destination)。 |
 | [!UICONTROL 資料流] | 表示與為目標建立的基本資訊連接的唯一成功目標流的數量。 |
 | [!UICONTROL 已驗證] | 授權此目的地的連線的日期。 |
