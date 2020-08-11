@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 在UI中建立Adobe Analytics來源連接器
 topic: overview
 translation-type: tm+mt
-source-git-commit: 3f1c3c77a0755a3e305da0fb8a234be0f0ee1863
+source-git-commit: 41fe3e5b2a830c3182b46b3e0873b1672a1f1b03
 workflow-type: tm+mt
 source-wordcount: '769'
 ht-degree: 1%
@@ -20,13 +20,13 @@ ht-degree: 1%
 
 本教學課程需要對Adobe Experience Platform的下列元件有正確的認識：
 
-* [體驗資料模型(XDM)系統](../../../../../xdm/home.md): Experience Platform組織客戶體驗資料的標準化架構。
-* [即時客戶個人檔案](../../../../../profile/home.md): 根據來自多個來源的匯整資料，提供統一、即時的消費者個人檔案。
-* [沙盒](../../../../../sandboxes/home.md): Experience Platform提供虛擬沙盒，可將單一Platform實例分割為不同的虛擬環境，以協助開發和發展數位體驗應用程式。
+* [體驗資料模型(XDM)系統](../../../../../xdm/home.md):Experience Platform組織客戶體驗資料的標準化架構。
+* [即時客戶個人檔案](../../../../../profile/home.md):根據來自多個來源的匯整資料，提供統一、即時的消費者個人檔案。
+* [沙盒](../../../../../sandboxes/home.md):Experience Platform提供虛擬沙盒，可將單一Platform實例分割為不同的虛擬環境，以協助開發和發展數位體驗應用程式。
 
 ## 使用Adobe Analytics建立來源連線
 
-登入 <a href="https://platform.adobe.com" target="_blank">Adobe Experience Platform</a> ，然後從左側導覽列選 **[!UICONTROL 取Sources]** ，以存取來源工作區。 「目 *錄* 」螢幕顯示可用的源以建立入站連接，每個源顯示與其關聯的現有帳戶和資料集流的數量。
+登入 [Adobe Experience Platform](https://platform.adobe.com) ，然後從左側導覽列選 **[!UICONTROL 取Sources]** ，以存取來源工作區。 「目 *錄* 」螢幕顯示可用的源以建立入站連接，每個源顯示與其關聯的現有帳戶和資料集流的數量。
 
 您可以從畫面左側的目錄中選取適當的類別。 或者，您也可以使用搜尋選項找到您要使用的特定來源。
 
@@ -60,8 +60,8 @@ ht-degree: 1%
 
 此時 *會顯示* 「檢閱」步驟，讓您在建立新的Analytics內嵌資料集流程之前，先加以檢閱。 連接的詳細資訊按類別分組，包括：
 
-* *連接*: 顯示來源連線和所選報表套裝的類型。
-* *指派資料集與地圖欄位*: 建立其他來源連接器時，此容器會顯示來源資料所吸收的資料集，包括資料集所遵守的架構。 輸出結構描述和資料集會自動設定為Analytics資料集流程。
+* *連接*:顯示來源連線和所選報表套裝的類型。
+* *指派資料集與地圖欄位*:建立其他來源連接器時，此容器會顯示來源資料所吸收的資料集，包括資料集所遵守的架構。 輸出結構描述和資料集會自動設定為Analytics資料集流程。
 
 ![](../../../../images/tutorials/create/analytics/review.png)
 
