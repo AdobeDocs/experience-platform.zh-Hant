@@ -4,9 +4,9 @@ seo-title: Google客戶符合目的地
 description: Google Customer Match可讓您使用您的線上和離線資料，透過Google的自有和營運資產（例如搜尋、購物、Gmail和YouTube）觸及客戶並與其重新互動。
 seo-description: Google Customer Match可讓您使用您的線上和離線資料，透過Google的自有和營運資產（例如搜尋、購物、Gmail和YouTube）觸及客戶並與其重新互動。
 translation-type: tm+mt
-source-git-commit: 31eb03c6625f820c9729caf5181c56e748e853a5
+source-git-commit: 6a57c0da3425b7b83050f1b734d4abe8a290c8bc
 workflow-type: tm+mt
-source-wordcount: '1482'
+source-wordcount: '1517'
 ht-degree: 0%
 
 ---
@@ -118,7 +118,9 @@ Links to be added when activation based on phone number and device IDs becomes a
 
    >[!IMPORTANT]
    >
-   > 適用於 [!DNL Google Customer Match] 目的地。 **[!UICONTROL 帳戶ID]** 是您使用Google的客戶用戶端ID。 ID的格式為xxx-xxx-xxxx。
+   > * 依預 **[!UICONTROL 設，「與PII結合]** 」行銷使用案例會針對目的地 [!DNL Google Customer Match] 選取，且無法移除。
+   > * 適用於 [!DNL Google Customer Match] 目的地。 **[!UICONTROL 帳戶ID]** 是您使用Google的客戶用戶端ID。 ID的格式為xxx-xxx-xxxx。
+
 
    ![連線Google客戶符合——驗證步驟](/help/rtcdp/destinations/assets/google-customer-match-authentication-step.png)
 
@@ -150,7 +152,7 @@ Links to be added when activation based on phone number and device IDs becomes a
 
 ![確認選擇](/help/rtcdp/destinations/assets/data-policy-violation.png)
 
-如果未檢測到任何違反策略的情況，請選擇「完 **[!UICONTROL 成]** 」以確認您的選擇並開始向目標發送資料。
+如果未檢測到任何違反策略的情況，請選擇 **[!UICONTROL 完成]** ，確認您的選擇並開始向目標發送資料。
 
 ![確認選擇](/help/rtcdp/destinations/assets/gcm-review.png)
 
@@ -170,3 +172,7 @@ Insert in Step 6 when mobile device ID activation is available
 ## 確認區段啟動成功 {#verify-activation}
 
 完成啟動流程後，請切換至您的 **[!UICONTROL Google Ads帳戶]** 。 啟用的區段現在會以客戶清單的形式顯示在您的Google帳戶中。 請注意，視您的區段大小而定，除非有超過100位使用中使用者可供服務，否則不會填入某些對象。
+
+## 其他資源 {#additional-resources}
+
+* [整合Google客戶符合——教學課程影片](https://docs.adobe.com/content/help/en/platform-learn/tutorials/rtcdp/integrate-with-google-customer-match.html)
