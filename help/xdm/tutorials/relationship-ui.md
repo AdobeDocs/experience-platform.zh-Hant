@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 使用架構架構編輯器定義兩個架構之間的關係
 topic: tutorials
 translation-type: tm+mt
-source-git-commit: 6d291ac9a8c194dd63e411e4d064492c38412749
+source-git-commit: d847329f675c7ac34a4feabb9e57a9e97f7e3ed1
 workflow-type: tm+mt
-source-wordcount: '912'
+source-wordcount: '911'
 ht-degree: 0%
 
 ---
@@ -48,7 +48,7 @@ Adobe Experience Platform的重要部分，在於能夠跨不同通道瞭解客�
 
 ### 酒店模式
 
-目標架構「[!UICONTROL Hotels]」是以自訂的「[!UICONTROL Hotels]」類別為基礎，並包含描述酒店的欄位。 「電[!UICONTROL 子郵件]」欄位是「電子郵件」命名空間下之架構的主要[!UICONTROL 身分]。 與「[!UICONTROL 忠誠成員]」一樣，此架構也已啟用 [!DNL Real-time Customer Profile]。
+目標架構「[!UICONTROL Hotels]」是以自訂的「[!UICONTROL Hotels]」類別為基礎，並包含描述酒店的欄位。 「[!DNL hotelId]」欄位是自訂「」命名空間下之架構的主要[!DNL hotelId]身分。 與「[!UICONTROL 忠誠成員]」一樣，此架構也已啟用 [!DNL Real-time Customer Profile]。
 
 ![](../images/tutorials/relationship/hotels.png)
 
