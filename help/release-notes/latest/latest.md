@@ -5,10 +5,10 @@ doc-type: release notes
 last-update: August 10, 2020
 author: crhoades, ens28527
 translation-type: tm+mt
-source-git-commit: c64d4cc01b5125fad5f7c75914dfc1e4b20bc069
+source-git-commit: dba7ae62b51b5cc4556f7f12d43b84e90f6c29dc
 workflow-type: tm+mt
-source-wordcount: '297'
-ht-degree: 7%
+source-wordcount: '480'
+ht-degree: 5%
 
 ---
 
@@ -20,6 +20,7 @@ ht-degree: 7%
 Adobe Experience Platform現有功能的更新：
 
 - [[!DNL資料科學工作區]](#dsw)
+- [!DNL Destinations](#destinations)
 - [[!DNL源]](#sources)
 
 ## [!DNL Data Science Workspace] {#dsw}
@@ -33,6 +34,25 @@ Adobe Experience Platform現有功能的更新：
 | 虛擬機在 [!DNL JupyterLab] | 已改善長期運行虛擬機的 [!DNL JupyterLab notebook] 穩定性。 |
 
 如需詳細資訊 [!DNL JupyterLab]，請參閱使 [[!DNL JupyterLab] 用指南](../../data-science-workspace/jupyterlab/overview.md)。
+
+## 目的地 {#destinations}
+
+在 [Adobe即時客戶資料平台中](../../rtcdp/overview.md)，目標是與目標平台預先建立的整合，以順暢的方式將資料啟動給這些合作夥伴。
+
+**新目標**
+
+您可以在新目的地啟用Adobe Experience Platform資料。 如需詳細資訊，請參閱以下：
+
+| 目的地 | 說明 |
+|--- | ---|
+| [!DNL Google Customer Match] | Google Customer Match可讓您使用您的線上和離線資料，透過Google擁有和營運的資產觸及客戶並與其重新互動，例如： [!DNL Search]、 [!DNL Shopping]Gmail和YouTube。 請造訪 [!DNL Google Customer Match] 目 [的地目錄中的頁面](/help/rtcdp/destinations/google-customer-match-destination.md) ，以取得有關目的地以及如何在Adobe即時CDP中設定目標的詳細資訊。 |
+
+**新功能**
+
+| 功能 | 說明 |
+|------- | -----------|
+| 自訂檔案名稱編輯器 | 更新至電子郵件行銷目的地和雲端儲存空間目的地的資料啟動工作流程，讓您編輯匯出檔案的名稱。 如需詳細資訊，請參閱啟 [ 動工作流程中的](/help/rtcdp/destinations/activate-destinations.md#configure) 「設定」步驟。 |
+| 建議的屬性 | 更新至電子郵件行銷目的地和雲端儲存空間目的地的資料啟動工作流程，以顯示您要新增至匯出檔案的建議屬性。 如需詳細資訊，請參閱啟 [動工作流程中的](/help/rtcdp/destinations/activate-destinations.md#select-attributes) 「選取屬性」步驟。 |
 
 ## 來源 {#sources}
 
