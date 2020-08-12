@@ -5,9 +5,9 @@ doc-type: release notes
 last-update: August 10, 2020
 author: crhoades, ens28527
 translation-type: tm+mt
-source-git-commit: 89531ad458bd41720090ef2c429376af4460d7c0
+source-git-commit: c64d4cc01b5125fad5f7c75914dfc1e4b20bc069
 workflow-type: tm+mt
-source-wordcount: '296'
+source-wordcount: '297'
 ht-degree: 7%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 7%
 
 **發行日期: 2020 年 8 月 12 日**
 
-Experience Platform的最新發行說明
+Adobe Experience Platform現有功能的更新：
 
 - [[!DNL資料科學工作區]](#dsw)
 - [[!DNL源]](#sources)
