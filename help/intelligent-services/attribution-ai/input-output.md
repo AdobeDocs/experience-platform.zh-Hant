@@ -5,9 +5,9 @@ title: 歸因人工智慧輸入與輸出
 topic: Input and Output data for Attribution AI
 description: 以下檔案概述Attribution AI中使用的不同輸入和輸出。
 translation-type: tm+mt
-source-git-commit: 86ded28b1830d3607c8b5214c8d31dfcbf446252
+source-git-commit: 2b51569a4c3dd9863edb6831bd182a7fa9d1d891
 workflow-type: tm+mt
-source-wordcount: '2174'
+source-wordcount: '2075'
 ht-degree: 3%
 
 ---
@@ -58,7 +58,7 @@ ht-degree: 3%
 > - 您至少需要1000個轉換。
 
 
-Attribution AI需要歷史資料作為模型訓練的輸入。 所需的資料持續時間主要由兩個關鍵因素決定： 訓練窗口和回顧窗口。 縮短培訓視窗的輸入會更敏感於最新趨勢，而較長的培訓視窗有助於產生更穩定、更精確的模型。 以最能代表您業務目標的歷史資料來建立目標模型非常重要。
+Attribution AI需要歷史資料作為模型訓練的輸入。 所需的資料持續時間主要由兩個關鍵因素決定：訓練窗口和回顧窗口。 縮短培訓視窗的輸入會更敏感於最新趨勢，而較長的培訓視窗有助於產生更穩定、更精確的模型。 以最能代表您業務目標的歷史資料來建立目標模型非常重要。
 
 訓練 [視窗設定](./user-guide.md#training-window) ，會根據發生時間篩選要納入模型訓練的轉換事件。 目前，最低培訓時間為1個季度（90天）。 回 [顧視窗](./user-guide.md#lookback-window) ，提供一個時間範圍，指出應包含多少天前的轉換事件接觸點與此轉換事件相關。 這兩個概念一起決定應用程式所需的輸入資料量（以天計）。
 
@@ -69,7 +69,7 @@ Attribution AI需要歷史資料作為模型訓練的輸入。 所需的資料�
 所需資料的最小長度=訓練視窗+回顧視窗
 
 >[!TIP]
-> 具有預設組態的應用程式所需的資料最小長度為： 2個季度（180天）+ 56天= 236天。
+> 具有預設組態的應用程式所需的資料最小長度為：2個季度（180天）+ 56天= 236天。
 
 範例：
 
@@ -81,18 +81,6 @@ Attribution AI輸出如下：
 
 - [原始粒度分數](#raw-granular-scores)
 - [匯總分數](#aggregated-attribution-scores)
-
-在下列範例中，範例CSV輸出用於繪圖用途。 以下是範例檔案的一些特性。
-
-- 檔案沒有任何Token化事件。
-- 檔案沒有任何僅轉換的事件（它不包含0作為邊際分數的分數列）。
-- 資料特性：
-   - 總共368行樣本。
-   - 每個通道至少有8個轉換。
-   - 151個轉換類型的轉換 `“Digital_Product_Purchase”`。
-   - 10個不同的觸點，電子郵件、SOCIAL_LINKEDIN、ADS_GOOGLE、SOCIAL_OTHER、ADS_OTHER、SOCIAL_TWITTER、LANDINGPAGE、SOCIAL_FB、ADS_BING、PRINT。
-   - 轉換率和觸點分別超過8個月和9個月。
-   - 行按和 `id`排 `conversion_timestamp` 序 `touchpoint_timestamp`。
 
 **輸出模式示例：**
 
@@ -118,7 +106,7 @@ Attribution AI輸出如下：
 | eventType（字串） | True | 此時間系列記錄的主要事件類型。 <br> **範例：** 「訂購」、「購買」、「瀏覽」 |
 | eventMergeId（字串） | True | ID，可關聯或合併多 [!DNL Experience Events] 個本質上相同或應合併的事件。 這將由資料產生器在擷取之前填入。 <br> **範例：** 575525617716-0-edc2ed37-1ab-4750-a820-1c2b3844b8c4 |
 | _id（字串） | False | 時間序列事件的唯一識別碼。 <br> **範例：** 4461-edc2ed37-1aab-4750-a820-1c2b3844b8c4 |
-| _tenantId（物件） | False | 與您的保留ID對應的頂層物件容器。 <br> **範例：** _atsdsnrmmsv2 |
+| _tenantId（物件） | False | 與您的Tentant ID相關聯的頂層物件容器。 <br> **範例：** _atsdsnrmmsv2 |
 | your_schema_name（對象） | False | 使用轉換事件對所有與其關聯的觸點事件及其元資料進行分數。 <br> **範例：** 歸因AI分數——型號名稱__2020 |
 | 區段（字串） | True | 轉換區段，例如模型所依據的地域劃分。 若沒有區段，則區段與conversionName相同。 <br> **範例：** ORDER_US |
 | conversionName（字串） | True | 設定期間設定的轉換名稱。 <br> **範例：** 訂購、潛在客戶、瀏覽 |
@@ -135,7 +123,7 @@ Attribution AI輸出如下：
 | skuId（字串） | True | 庫存保留單位(SKU)，由廠商定義之產品的唯一識別碼。 <br> **範例：** MJ-03-XS-Black |
 | 時間戳記(DateTime) | True | 轉換的時間戳記。 <br> **範例：** 2020-06-09T00:01:51.000Z |
 | passThrough（物件） | True | 設定模型時，使用者指定的其他分數資料集欄。 |
-| commerce_order_purchaseCity（字串） | True | 其他分數資料集欄。 <br> **範例：** 城市： 聖荷西 |
+| commerce_order_purchaseCity（字串） | True | 其他分數資料集欄。 <br> **範例：** 城市：聖荷西 |
 | customerProfile（對象） | False | 用於建立模型之使用者的身分詳細資訊。 |
 | identity（物件） | False | 包含用於建立模型的使用者的詳細資料，例如 `id` 和 `namespace`。 |
 | id（字串） | True | 使用者的身分識別碼，例如Cookie ID、AAID或MCID等。 <br> **範例：** 17348762725408665634688320891369597404 |
@@ -200,20 +188,20 @@ Attribution AI輸出如下：
 
 | 欄名稱 | 約束 | 可為空 | 說明 |
 | --- | --- | --- | --- |
-| customerevents_date(DateTime) | 用戶定義和固定格式 | False | YYYY-MM-DD格式的客戶事件日期。 <br> **範例**: 2016-05-02 |
-| mediatouchpoints_date(DateTime) | 用戶定義和固定格式 | True | YYYY-MM-DD格式的媒體接觸點日期 <br> **範例**: 2017-04-21 |
-| segment（字串） | 計算 | False | 轉換區段，例如模型所依據的地域劃分。 若沒有區段，則區段會與conversion_scope相同。 <br> **範例**: ORDER_AMER |
-| conversion_scope（字串） | 用戶定義 | False | 使用者設定的轉換名稱。 <br> **範例**: 訂單 |
-| touchpoint_scope（字串） | 用戶定義 | True | 使用者設定的Touchpoint名稱 <br> **範例**: PAID_SEARCH_CLICK |
-| product（字串） | 用戶定義 | True | 產品的XDM識別碼。 <br> **範例**: CC |
-| product_type（字串） | 用戶定義 | True | 產品的顯示名稱，如此顯示給此產品檢視的使用者。 <br> **範例**: gpus，筆記型電腦 |
-| geo（字串） | 用戶定義 | True | 傳送轉換的地理位置(placeContext.geo.countryCode) <br> **範例**: 美國 |
-| event_type（字串） | 用戶定義 | True | 此時間系列記錄的主要事件類型 <br> **範例**: 付費轉換 |
-| media_type（字串） | ENUM | False | 說明媒體類型是付費、擁有還是免費。 <br> **範例**: 付費、擁有 |
-| channel（字串） | ENUM | False | 用 `channel._type` 於提供XDM中具有相似屬性之渠道的粗略分類的屬 [!DNL Consumer Experience Event] 性。 <br> **範例**: 搜尋 |
-| action(String) | ENUM | False | 屬性 `mediaAction` 可用來提供體驗事件媒體動作類型。 <br> **範例**: 按一下 |
-| campaign_group（字串） | 用戶定義 | True | 將多個促銷活動分組在一起的促銷活動群組名稱，例如&#39;50%_DISCOUNT&#39;。 <br> **範例**: 商業 |
-| campaign_name（字串） | 用戶定義 | True | 用於識別行銷促銷活動的促銷活動名稱，例如&#39;50%_DISCOUNT_USA&#39;或&#39;50%_DISCOUNT_ASIA&#39;。 <br> **範例**: 感恩節大甩賣 |
+| customerevents_date(DateTime) | 用戶定義和固定格式 | False | YYYY-MM-DD格式的客戶事件日期。 <br> **範例**:2016-05-02 |
+| mediatouchpoints_date(DateTime) | 用戶定義和固定格式 | True | YYYY-MM-DD格式的媒體接觸點日期 <br> **範例**:2017-04-21 |
+| segment（字串） | 計算 | False | 轉換區段，例如模型所依據的地域劃分。 若沒有區段，則區段會與conversion_scope相同。 <br> **範例**:ORDER_AMER |
+| conversion_scope（字串） | 用戶定義 | False | 使用者設定的轉換名稱。 <br> **範例**:訂單 |
+| touchpoint_scope（字串） | 用戶定義 | True | 使用者設定的Touchpoint名稱 <br> **範例**:PAID_SEARCH_CLICK |
+| product（字串） | 用戶定義 | True | 產品的XDM識別碼。 <br> **範例**:CC |
+| product_type（字串） | 用戶定義 | True | 產品的顯示名稱，如此顯示給此產品檢視的使用者。 <br> **範例**:gpus，筆記型電腦 |
+| geo（字串） | 用戶定義 | True | 傳送轉換的地理位置(placeContext.geo.countryCode) <br> **範例**:美國 |
+| event_type（字串） | 用戶定義 | True | 此時間系列記錄的主要事件類型 <br> **範例**:付費轉換 |
+| media_type（字串） | ENUM | False | 說明媒體類型是付費、擁有還是免費。 <br> **範例**:付費、擁有 |
+| channel（字串） | ENUM | False | 用 `channel._type` 於提供XDM中具有相似屬性之渠道的粗略分類的屬 [!DNL Consumer Experience Event] 性。 <br> **範例**:搜尋 |
+| action(String) | ENUM | False | 屬性 `mediaAction` 可用來提供體驗事件媒體動作類型。 <br> **範例**:按一下 |
+| campaign_group（字串） | 用戶定義 | True | 將多個促銷活動分組在一起的促銷活動群組名稱，例如&#39;50%_DISCOUNT&#39;。 <br> **範例**:商業 |
+| campaign_name（字串） | 用戶定義 | True | 用於識別行銷促銷活動的促銷活動名稱，例如&#39;50%_DISCOUNT_USA&#39;或&#39;50%_DISCOUNT_ASIA&#39;。 <br> **範例**:感恩節大甩賣 |
 
 **原始分數參考（匯總）**
 
