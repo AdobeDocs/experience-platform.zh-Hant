@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Audience Manager對應欄位
 topic: overview
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: a1b09f3e88e489f1b0ec0c1fcb72a2a5a4356d87
 workflow-type: tm+mt
-source-wordcount: '148'
+source-wordcount: '127'
 ht-degree: 0%
 
 ---
@@ -20,7 +20,7 @@ ht-degree: 0%
 
 ## 即時資料
 
-類型： 即時資料
+類型：即時資料
 
 | 即時資料欄位 | XDM欄位 |
 | --- | --- |
@@ -36,27 +36,10 @@ ht-degree: 0%
 | `location` | `ExperienceEvent.placeContext.geo` <ul><li>d_country→countryCode</li><li>d_state→stateProvince</li><li>d_city→城市</li><li>d_postal → postalCode</li><li>d_lat → latitude</li><li>d_lognitude →經度</li></ul> |
 | `request_user_agent` | `ExperienceEvent.environment.browserDetails` <ul><li>h_user-agent→ userAgent</li><li>h_accept-language → acceptLanguage</li></ul> |
 | `client_ip` | `ExperienceEvent.environment` <ul><li>d_os_name → os名稱 </li><li>d_os_version → os_version</li></ul> |
-| `Signals` | ExperienceEvent.signals |
-
-## 傳入資 **料（已過時）**
-
-類型： ExperienceEvent
-
-| 入站欄位 | XDM欄位 |
-| --- | --- |
-| `uuid` | `ExperienceEvent.identityMap[<ID Type>]` |
-| `deviceIds` | `ExperienceEvent.identityMap["CORE"] And calculated ECIDs  ExperienceEvent.identityMap["ECID"]` |
-| `signals` | `ExperienceEvent.signals` |
-| `b_time` | `ExperienceEvent.timeStamp` |
-| `overwrite` | `overwriteTraits` |
-
->[!NOTE]
->
->未來版本中已排程「傳入欄位」已過時。
 
 ## 描述檔資料
 
-類型： 概要檔案XDM
+類型：概要檔案XDM
 
 | 描述檔欄位 | XDM欄位 |
 | --- | --- |
