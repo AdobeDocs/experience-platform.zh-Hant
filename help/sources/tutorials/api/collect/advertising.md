@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 透過來源連接器和API收集廣告資料
 topic: overview
 translation-type: tm+mt
-source-git-commit: 6ffdcc2143914e2ab41843a52dc92344ad51bcfb
+source-git-commit: 773823333fe0553515ebf169b4fd956b8737a9c3
 workflow-type: tm+mt
-source-wordcount: '1544'
+source-wordcount: '1626'
 ht-degree: 1%
 
 ---
@@ -24,11 +24,11 @@ ht-degree: 1%
 
 本教學課程也要求您對Adobe Experience Platform的下列元件有正確的認識：
 
-* [!DNL Experience Data Model (XDM) System](../../../../xdm/home.md): Experience Platform組織客戶體驗資料的標準化架構。
-   * [架構構成基礎](../../../../xdm/schema/composition.md): 瞭解XDM架構的基本建置區塊，包括架構組合的主要原則和最佳實務。
-   * [架構註冊開發人員指南](../../../../xdm/api/getting-started.md): 包含您必須知道的重要資訊，以便成功執行對架構註冊表API的呼叫。 這包括您 `{TENANT_ID}`的「容器」概念，以及提出要求所需的標題（請特別注意「接受」標題及其可能的值）。
-* [!DNL Catalog Service](../../../../catalog/home.md): 目錄是記錄資料位置和世系的系統 [!DNL Experience Platform]。
-* [!DNL Batch ingestion](../../../../ingestion/batch-ingestion/overview.md): 「批次擷取API」可讓您將資料擷取為 [!DNL Experience Platform] 批次檔案。
+* [!DNL Experience Data Model (XDM) System](../../../../xdm/home.md):Experience Platform組織客戶體驗資料的標準化架構。
+   * [架構構成基礎](../../../../xdm/schema/composition.md):瞭解XDM架構的基本建置區塊，包括架構組合的主要原則和最佳實務。
+   * [架構註冊開發人員指南](../../../../xdm/api/getting-started.md):包含您必須知道的重要資訊，以便成功執行對架構註冊表API的呼叫。 這包括您 `{TENANT_ID}`的「容器」概念，以及提出要求所需的標題（請特別注意「接受」標題及其可能的值）。
+* [!DNL Catalog Service](../../../../catalog/home.md):目錄是記錄資料位置和世系的系統 [!DNL Experience Platform]。
+* [!DNL Batch ingestion](../../../../ingestion/batch-ingestion/overview.md):「批次擷取API」可讓您將資料擷取為 [!DNL Experience Platform] 批次檔案。
 * [沙盒](../../../../sandboxes/home.md): [!DNL Experience Platform] 提供虛擬沙盒，可將單一執行個體分 [!DNL Platform] 割為不同的虛擬環境，以協助開發和發展數位體驗應用程式。
 
 以下各節提供您必須知道的其他資訊，以便使用 [!DNL Flow Service] API成功連線至廣告系統。
@@ -41,7 +41,7 @@ ht-degree: 1%
 
 若要呼叫API，您必 [!DNL Platform] 須先完成驗證教 [學課程](../../../../tutorials/authentication.md)。 完成驗證教學課程後，將提供所有 [!DNL Experience Platform] API呼叫中每個必要標題的值，如下所示：
 
-* 授權： 生產者 `{ACCESS_TOKEN}`
+* 授權：生產者 `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
 * x-gw-ims-org-id: `{IMS_ORG}`
 
@@ -132,7 +132,7 @@ curl -X POST \
 }
 ```
 
-## 建立目標XDM模式 {#target}
+## 建立目標XDM模式 {#target-schema}
 
 在之前的步驟中，會建立臨機XDM架構來結構來源資料。 為了使用源資料，還必須創 [!DNL Platform]建目標模式，以根據您的需要構建源資料。 然後，目標模式用於建立包含 [!DNL Platform] 源資料的資料集。
 
@@ -290,7 +290,7 @@ curl -X POST \
 ]
 ```
 
-## 建立目標連接
+## 建立目標連接 {#target-connection}
 
 目標連接表示到所收錄資料所在目的地的連接。 要建立目標連接，必須提供與資料庫關聯的固定連接規範ID。 此連接規範ID為： `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
 
@@ -620,13 +620,15 @@ curl -X POST \
 ```
 
 | 屬性 | 說明 |
-| --- | --- |
-| `flowSpec.id` | 在上一步中檢索的流規範ID。 |
-| `sourceConnectionIds` | 在先前步驟中擷取的來源連線ID。 |
-| `targetConnectionIds` | 在先前步驟中擷取的目標連線ID。 |
-| `transformations.params.mappingId` | 在先前步驟中擷取的對應ID。 |
-| `scheduleParams.startTime` | 資料流的開始時間（以秒為單位）。 |
-| `scheduleParams.frequency` | 可選頻率值包括： `once`、 `minute`、 `hour`、 `day`或 `week`。 |
+| -------- | ----------- |
+| `flowSpec.id` | 在上 [一步驟中檢索的流式規範ID](#specs) 。 |
+| `sourceConnectionIds` | 在先 [前步驟中擷取的來源連線ID](#source) 。 |
+| `targetConnectionIds` | 在先 [前步驟中擷取的目標連線ID](#target-connection) 。 |
+| `transformations.params.mappingId` | 在先 [前步驟中擷取](#mapping) 的對應ID。 |
+| `transformations.params.deltaColum` | 用於區分新資料和現有資料的指定欄。 增量資料將根據選取欄的時間戳記進行擷取。 |
+| `transformations.params.mappingId` | 與資料庫關聯的映射ID。 |
+| `scheduleParams.startTime` | 資料流在時代時間中的開始時間。 |
+| `scheduleParams.frequency` | 資料流收集資料的頻率。 可接受的值包括： `once`、 `minute`、 `hour`、 `day`或 `week`。 |
 | `scheduleParams.interval` | 該間隔用於指定兩個連續流運行之間的期間。 間隔的值應為非零整數。 當頻率設為且應大於或等於其 `once` 他頻率值時，不需要 `15` 間隔。 |
 
 **回應**
@@ -639,6 +641,10 @@ curl -X POST \
     "etag": "\"04004fe9-0000-0200-0000-5ebc4c8b0000\""
 }
 ```
+
+## 監控資料流
+
+建立資料流後，您可以監視通過其接收的資料，以查看有關流運行、完成狀態和錯誤的資訊。 有關如何監視資料流的詳細資訊，請參見API中有關監 [視資料流的教程 ](../monitor.md)
 
 ## 後續步驟
 
