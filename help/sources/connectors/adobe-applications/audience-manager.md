@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Audience Manager連接器
 topic: overview
 translation-type: tm+mt
-source-git-commit: fb4ffa2c95365905f5417586fa7ecf88523009a0
+source-git-commit: a1b09f3e88e489f1b0ec0c1fcb72a2a5a4356d87
 workflow-type: tm+mt
-source-wordcount: '742'
+source-wordcount: '643'
 ht-degree: 1%
 
 ---
@@ -17,10 +17,9 @@ ht-degree: 1%
 Adobe Audience Manager資料連接器可將在Adobe Audience Manager中收集的第一方資料串流至Adobe Experience Platform。 Audience Manager連接器將三種資料類別擷取至平台：
 
 - **即時資料：** 在Audience Manager的資料收集伺服器上即時擷取的資料。 此資料用於Audience Manager中，以填入以規則為基礎的特性，並會在最短的延遲時間內在平台中呈現。
-- **已登錄（入站）資料：** 這些是使用者上傳至Audience Manager代管之Amazon S3位置的檔案。 Audience Manager使用此資料，使用傳入檔案方法填入已登入的特徵，並會有延遲。
 - **描述檔資料：** Audience Manager使用即時和已登入的資料來衍生客戶個人檔案。 這些描述檔可用來填入區段實現的身分圖表和特徵。
 
-Audience Manager連接器會將這些資料類別對應至Experience Data Model(XDM)架構，並將它們傳送至平台。 即時資料和已登入的資料會以XDM ExperienceEvent資料傳送，而描述檔資料則會以XDM個別描述檔傳送。
+Audience Manager連接器會將這些資料類別對應至Experience Data Model(XDM)架構，並將它們傳送至平台。 即時資料會以XDM ExperienceEvent資料傳送，而設定檔資料則會以XDM個別設定檔傳送。
 
 如需有關使用平台UI建立與Adobe Audience Manager連線的指示，請參閱 [Audience Manager連接器教學課程](../../tutorials/ui/create/adobe-applications/audience-manager.md)。
 
@@ -64,8 +63,6 @@ Audience Manager資料集依預設會停用至「設定檔」，而且使用者�
 | Audience Manager裝置設定檔資料 | 用於Audience Manager連接器診斷。 |
 | Audience Manager驗證的設定檔 | 此資料集包含Audience Manager驗證的設定檔。 |
 | Audience Manager驗證的設定檔中繼資料 | 用於Audience Manager Connector診斷。 |
-| Audience Manager傳入{Datasource ID} **（已過時）** | 此資料集代表Audience Manager中透過傳入檔案方法的已登入記錄。 此資料流已過時，將在後續版本中移除。 |
-| Audience Manager傳入中繼資料 **（已過時）** | 用於Audience Manager連接器診斷。 此資料流已過時，將在後續版本中移除。 |
 
 ### 連線
 
