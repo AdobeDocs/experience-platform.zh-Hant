@@ -5,7 +5,7 @@ doc-type: release notes
 last-update: August 10, 2020
 author: crhoades, ens28527
 translation-type: tm+mt
-source-git-commit: dba7ae62b51b5cc4556f7f12d43b84e90f6c29dc
+source-git-commit: 1d9c8cbf273e9aef13e34df91a98b6c08180c8ff
 workflow-type: tm+mt
 source-wordcount: '480'
 ht-degree: 5%
@@ -45,7 +45,7 @@ Adobe Experience Platform現有功能的更新：
 
 | 目的地 | 說明 |
 |--- | ---|
-| [!DNL Google Customer Match] | Google Customer Match可讓您使用您的線上和離線資料，透過Google擁有和營運的資產觸及客戶並與其重新互動，例如： [!DNL Search]、 [!DNL Shopping]Gmail和YouTube。 請造訪 [!DNL Google Customer Match] 目 [的地目錄中的頁面](/help/rtcdp/destinations/google-customer-match-destination.md) ，以取得有關目的地以及如何在Adobe即時CDP中設定目標的詳細資訊。 |
+| [!DNL Google Customer Match] | Google Customer Match可讓您使用您的線上和離線資料，透過Google擁有和營運的資產觸及客戶並與其重新互動，例如： [!DNL Search]、 [!DNL Shopping]Gmail和YouTube。 <br><br> 請造訪 [!DNL Google Customer Match] 目 [的地目錄中的頁面](/help/rtcdp/destinations/google-customer-match-destination.md) ，以取得有關目的地以及如何在Adobe即時CDP中設定目標的詳細資訊。 |
 
 **新功能**
 
