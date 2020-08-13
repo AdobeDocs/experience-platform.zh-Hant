@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Adobe Experience Platform產品檔案
 topic: getting started
 translation-type: tm+mt
-source-git-commit: b67513a83a46861872e92d9db57232554e7d831b
+source-git-commit: c91bcdff5b57ef69f79e211fbeb912e3d7fcdb39
 workflow-type: tm+mt
-source-wordcount: '7237'
+source-wordcount: '7245'
 ht-degree: 0%
 
 ---
@@ -116,7 +116,7 @@ ht-degree: 0%
 
 **連接：** 連線是虛擬管線，可讓資料進出 [!DNL Experience Platform]。 連線現在會由來源取代。
 
-**連接器：** Adobe Experience Platform Source連接器可協助使用者輕鬆從多個來源擷取資料，允許使用資料進行建構、加上標籤和增強 [!DNL Experience Platform Services]。 資料可從多種來源擷取，例如雲端儲存空間、協力廠商軟體和CRM系統。
+**連接器：** Adobe Experience Platform Source連接器可協助使用者輕鬆從多個來源擷取資料，讓您使用來建構、標示和增強資料 [!DNL Experience Platform Services]。 資料可從多種來源擷取，例如雲端儲存空間、協力廠商軟體和CRM系統。
 
 **條件：** 在Experience Platform Launch中，條件是一個規則元件，可評估必須傳回或的邏輯陳述 `true` 式 `false`。 所有條件都必須評估 `true` 為，所有例外條件必須評估為 `false` ，才能執行規則上的任何操作。
 
@@ -128,7 +128,7 @@ ht-degree: 0%
 
 **C2合同標籤：**`C2` 合約資料治理標籤會指定無法匯出至第三方的資料。 有些資料提供者在其合約中有條款禁止從原始收集位置匯出資料。  例如，社交網路合約通常會限制您從其接收到的資料傳輸。 C2的限制比C1更嚴格，因為C1隻需要聚合和匿名資料。
 
-**C3合同標籤：**`C3` 合約資料治理標籤指定無法結合或與直接可識別資訊搭配使用的資料。 有些資料提供者在其合約中有條款禁止將資料與直接可識別資訊合併或使用。  例如，源自廣告網路、廣告伺服器和第三方資料供應商的資料合約通常包含使用直接可識別資料的特定合約禁止。
+**C3合同標籤：**`C3` 合約資料治理標籤指定無法結合或與直接可識別資訊搭配使用的資料。 有些資料提供者在其合約中有條款禁止將資料與直接可識別資訊合併或使用。  例如，源自廣告網路、廣告伺服器和第三方資料供應商的資料合約通常包含使用直接可識別資料的特定合約禁止規定。
 
 **C4合同標籤：**`C4` 合約資料控管標籤指定資料無法用於定位任何廣告或內容，不論是在網站上或跨網站。 C4是最嚴格的標籤，因為它包含C5、C6和C7標籤。
 
@@ -210,7 +210,7 @@ ht-degree: 0%
 
 **增量保存策略：**`Delta save strategy` 是透過連線接收第三方資料的選項。 此選項允許用戶指定新行或更改的源資料行被接收到 [!DNL Experience Platform]。 將新行添加到資料集的末尾，並在上的資料集中更新更改的行 [!DNL Experience Platform]。
 
-**目標：** 目 [!DNL Real-time Customer Data Platform] 標是任何系統的一般術語，例如啟動並傳送對象的Adobe應用程式、廣告伺服器或廣告網路。
+**目標：** 目 [!DNL Real-time Customer Data Platform] 的地是任何端點的一般術語，例如啟動並傳送觀眾的Adobe應用程式、廣告平台、雲端儲存服務或行銷服務。
 
 **目標類別：** 目標類別是具有相似特 [!DNL Real-time Customer Data Platform] 徵的目標分組。
 
@@ -314,7 +314,7 @@ ht-degree: 0%
 
 **收錄：** 擷取是從來源新增資料至的程式 [!DNL Experience Platform]。 資料可透過多種方 [!DNL Experience Platform] 式接收，包括串流、批次或透過連接器新增。
 
-**擷取排程：** 擷取排程提供從來源擷取至時間的選項 [!DNL Experience Platform]。
+**擷取排程：** 擷取排程提供從來源擷取時的時間型選項 [!DNL Experience Platform]。
 
 **輸入功能：** 輸入特徵在特徵映射中指定，並被機器學習模型用於預測。
 
@@ -326,9 +326,9 @@ ht-degree: 0%
 
 ## J
 
-**[!DNL JupyterLab]:**專案的開放原始碼Web介面，並[!DNL Jupyter]與之緊密整合[!DNL Experience Platform]。
+**[!DNL JupyterLab]:** 專案的開放原始碼Web介面，並 [!DNL Jupyter] 與之緊密整合 [!DNL Experience Platform]。
 
-**[!DNL Jupyter Notebook]:**開放原始碼Web應用程式，可讓使用者建立並共用包含即時程式碼、方程式、視覺化和敘述文字的檔案。
+**[!DNL Jupyter Notebook]:** 開放原始碼Web應用程式，可讓使用者建立並共用包含即時程式碼、方程式、視覺化和敘述文字的檔案。
 
 ## K
 
@@ -352,7 +352,7 @@ ht-degree: 0%
 
 **合併方法：** 合 `merge method` 並策略選項允許對合併資料片段進行優先順序排序。 合併方法選項按資料集優先順序或資料集時間戳進行合併。
 
-**合併策略：** 合併策略是一組規則，用於確定在特 [!DNL Profile] 定條件下如何對資料進行優先化並合併為統一視圖。
+**合併策略：** 合併策略是一組規則，用於確定在特 [!DNL Profile] 定條件下如何對資料進行優先化並合併到統一視圖中。
 
 **Mixin:** 混音可讓使用者擴充可重複使用的欄位，其中包含定義一或多個屬性的變數，這些屬性會包含在架構中或新增至類別中。
 
@@ -366,7 +366,7 @@ ht-degree: 0%
 
 **非生產沙盒：** 非生產沙盒是資料虛擬化的一種形式，可讓您將資料與其他沙盒隔離，通常用於開發實驗、測試或試用。 非生產沙盒可重設及刪除。
 
-**[!DNL Notebooks]:**[!DNL Notebooks]是使用並包&#x200B;*[!DNL Jupyter Notebook]*含分析說明、結果來編寫，並可執行以執行資料分析。
+**[!DNL Notebooks]:**[!DNL Notebooks] 是使用並包 *[!DNL Jupyter Notebook]* 含分析說明、結果來編寫，並可執行以執行資料分析。
 
 [回到頁首](#adobe-experience-platform-glossary)
 
@@ -418,7 +418,7 @@ ht-degree: 0%
 
 **描述檔匯出：**[!DNL Profile] 導出是中的兩種目標之一 [!DNL Real-time Customer Data Platform][!DNL Profile] 匯出會產生包含描述檔和屬性的檔案，並將原始PII資料與電子郵件搭配使用，並用於整合行銷和電子郵件自動化平台。
 
-**描述檔FProfile Fragragment:** 描述檔片段是特定使用者在身分清單中僅有一個身分的描述檔資訊。
+**描述檔片段：** 描述檔片段是特定使用者在身分清單中僅有一個身分的描述檔資訊。
 
 **描述檔ID:** 描述檔ID是與識別類型相關聯的自動產生的識別碼，並代表描述檔。
 
@@ -490,7 +490,7 @@ ht-degree: 0%
 
 **區段評估方法：** 區段排程評估可啟用循環排程，以便在特定時間執行匯出工作，而隨選評估則包括建立區段工作以立即建立觀眾。
 
-**區段匯出：** 區段匯出是兩種目的地類型之一，並傳送符合資格且已映射至目的地的描述檔。 使用群體和使用者ID以及假名資料，並通常與社交網路和其他數位媒體目標平台整合。
+**區段匯出：** 區段匯出是中的兩種目的地類型之一 [!DNL Real-time Customer Data Platform]。 透過區段匯出，您可以傳送符合資格且已映射至目標的描述檔。 使用群體和使用者ID以及假名資料，並通常與社交網路和其他數位媒體目標平台整合。
 
 **區段ID:** 區段ID是自動產生的識別碼，與區段相關聯。
 
@@ -510,7 +510,7 @@ ht-degree: 0%
 
 **單一身分個人化行銷動作** ：使用資料進行現場內容個人化的行銷動作。 Onsite個人化是用於推論使用者興趣的任何資料，並用於根據這些推論選擇提供哪些內容或廣告。
 
-**S1資料標籤：**`S1` 資料標籤用於分類指定緯度和經度的資料，可用來判斷裝置的精確位置。
+**S1資料標籤：**`S1` 資料標籤用於分類指定緯度和經度的資料，以判斷裝置的精確位置。
 
 **S2資料標籤：**`S2` 資料標籤用於分類可用來判斷廣泛定義的地理圍欄區域的資料。
 
@@ -522,7 +522,7 @@ ht-degree: 0%
 
 **來源類別：** 來源類別是一組具有相似 [!DNL Real-time Customer Data Platform] 特性的來源。
 
-**源連接器：** Adobe Experience Platform Source連接器可協助使用者輕鬆從多個來源擷取資料，允許使用資料進行建構、加上標籤和增強 [!DNL Experience Platform Services]。 資料可從多種來源擷取，例如雲端儲存空間、協力廠商軟體和CRM系統。
+**源連接器：** Adobe Experience Platform Source連接器可協助使用者輕鬆從多個來源擷取資料，讓您使用來建構、標示和增強資料 [!DNL Experience Platform Services]。 資料可從多種來源擷取，例如雲端儲存空間、協力廠商軟體和CRM系統。
 
 **標準識別名稱空間：** 標準識別名稱空間是Adobe預先定義的識別碼，包括Adobe和業界標準解決方案，用來識別使用者。
 
