@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 即時客戶資料平台中的IAB TCF 2.0支援
 topic: privacy events
 translation-type: tm+mt
-source-git-commit: 67c598000cec36a170e7324877d4d9f2db9453a4
+source-git-commit: 350526e172b4ec3cf3b8cbe4d96f7b771aa1d669
 workflow-type: tm+mt
 source-wordcount: '2373'
 ht-degree: 1%
@@ -135,7 +135,7 @@ Adobe Audience Manager（透過來源連接器或其他方式）共用的任何�
 
 ### 進行許可更改命令
 
-當您建立上一節所述的邊緣設定後，就可以開始使用SDK命令傳送同意資料 [!DNL Platform]。 以下各節提供如何在不同案例中使用每個SDK命令的範例。
+當您建立上一節所述的邊緣設定後，就可以開始使用SDK命令傳送同意資料給 [!DNL Platform]。 以下各節提供如何在不同案例中使用每個SDK命令的範例。
 
 >[!NOTE]
 >
@@ -150,7 +150,7 @@ Adobe Audience Manager（透過來源連接器或其他方式）共用的任何�
 ```js
 alloy("setConsent", {
   consent: [{
-    standard: "IAB",
+    standard: "IAB TCF",
     version: "2.0",
     value: "CLcVDxRMWfGmWAVAHCENAXCkAKDAADnAABRgA5mdfCKZuYJez-NQm0TBMYA4oCAAGQYIAAAAAAEAIAEgAA.argAC0gAAAAAAAAAAAA",
     gdprApplies: "true"
