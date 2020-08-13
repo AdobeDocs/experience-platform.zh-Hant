@@ -3,10 +3,10 @@ product: adobe experience platform
 audience: user
 user-guide-title: 即時客戶資料平台說明
 translation-type: tm+mt
-source-git-commit: 836feb48c62e0e0ed11248846d63021125796b76
+source-git-commit: 759c96d091194d1d7d670d947169eceac7910730
 workflow-type: tm+mt
-source-wordcount: '443'
-ht-degree: 11%
+source-wordcount: '460'
+ht-degree: 10%
 
 ---
 
@@ -132,6 +132,9 @@ ht-degree: 11%
 * 隱私權與資料管理 {#privacy}
    * [隱私權概觀](privacy/privacy-overview.md)
    * [資料治理概觀](privacy/data-governance-overview.md)
+   * IAB TCF 2.0支援 {#iab}
+      * [即時CDP中的IAB TCF 2.0支援](./privacy/iab/overview.md)
+      * [建立資料集，以擷取IAB TCF 2.0同意資料](./privacy/iab/dataset-preparation.md)
 * 設定檔 {#profile}
    * [描述檔概述](profile/profile-overview.md)
    * [身分與身分名稱空間](profile/identities-overview.md)
