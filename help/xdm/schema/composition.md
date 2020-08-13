@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 架構構成基礎
 topic: overview
 translation-type: tm+mt
-source-git-commit: d04bf35e49488ab7d5e07de91eb77d0d9921b6fa
+source-git-commit: dae86df3ca4fcc9c5951068e905081df29e3b5f2
 workflow-type: tm+mt
-source-wordcount: '2628'
+source-wordcount: '2782'
 ht-degree: 0%
 
 ---
@@ -50,8 +50,8 @@ XDM模式通過嵌入對象的使用，可以直接表示複雜的資料，並�
 
 要用於的資料會 [!DNL Experience Platform] 分為兩種行為類型：
 
-* **記錄資料**: 提供主題屬性的相關資訊。 主題可以是組織或個人。
-* **時間系列資料**: 提供記錄主體直接或間接採取操作時系統的快照。
+* **記錄資料**:提供主題屬性的相關資訊。 主題可以是組織或個人。
+* **時間系列資料**:提供記錄主體直接或間接採取操作時系統的快照。
 
 所有XDM結構描述的資料可以分類為記錄或時間序列。 方案的資料行為由方案的類定 **義**，該類在首次建立方案時被分配給方案。 本文稍後將對XDM類作進一步的詳細說明。
 
@@ -59,13 +59,52 @@ XDM模式通過嵌入對象的使用，可以直接表示複雜的資料，並�
 
 ### [!UICONTROL 身份]
 
-結構描述用於將資料吸收到中 [!DNL Experience Platform]。 此資料可跨多個服務使用，以建立個別實體的單一統一檢視。 因此，在考慮結構時，請務必考慮「[!UICONTROL Identity]」，以及哪些欄位可用來識別主體，而不論資料來自何處。
+結構描述用於將資料吸收到中 [!DNL Experience Platform]。 此資料可跨多個服務使用，以建立個別實體的單一統一檢視。 因此，在考慮結構時，請務必考慮客戶身分，以及哪些欄位可用來識別主題，而不論資料來自何處。
 
-為協助處理此程式，關鍵欄位可標示為「[!UICONTROL Identity]」。 資料擷取時，這些欄位中的資料會插入該個人的「[!UICONTROL 身分圖表]」中。 圖形資料隨後可由和其他服 [!DNL Real-time Customer Profile](../../profile/home.md) 務訪問， [!DNL Experience Platform] 以提供每個客戶的拼接視圖。
+為了協助此程式，您的架構中的關鍵欄位可標示為身分。 資料擷取時，這些欄位中的資料會插入該個人的「[!UICONTROL 身分圖表]」中。 圖形資料隨後可由和其他服 [!DNL Real-time Customer Profile](../../profile/home.md) 務訪問， [!DNL Experience Platform] 以提供每個客戶的拼接視圖。
 
-通常標示為「[!UICONTROL Identity]」的欄位包括： 電子郵件地址、電話號碼、 [!DNL Experience Cloud ID (ECID)](https://docs.adobe.com/content/help/zh-Hant/id-service/using/home.html)CRM ID或其他唯一ID欄位。 您也應考慮組織專屬的任何唯一識別碼，因為這些識別碼可能也是[!UICONTROL 好的「Identity]」欄位。
+通常標示為「[!UICONTROL Identity]」的欄位包括：電子郵件地址、電話號碼、 [!DNL Experience Cloud ID (ECID)](https://docs.adobe.com/content/help/zh-Hant/id-service/using/home.html)CRM ID或其他唯一ID欄位。 您也應考慮組織專屬的任何唯一識別碼，因為這些識別碼可能也是[!UICONTROL 好的「Identity]」欄位。
 
-在方案規劃階段，務必考慮客戶身份，以協助確保資料匯整在一起，以建立最強穩的個人檔案。 請參閱 [Identity Service總覽](../../identity-service/home.md) ，進一步瞭解身分資訊如何協助您為客戶提供數位體驗。
+在方案規劃階段，務必考慮客戶身份，以協助確保資料匯整在一起，以建立最強穩的個人檔案。 請參閱 [Adobe Experience Platform Identity Service的概觀](../../identity-service/home.md) ，進一步瞭解身分資訊如何協助您為客戶提供數位體驗。
+
+#### xdm:identityMap
+
+`xdm:identityMap` 是映射類型欄位，它描述單個的各種標識值及其關聯的名稱空間。 此欄位可用於為方案提供身份資訊，而不是在方案本身的結構中定義身份值。
+
+簡單身份映射的示例如下所示：
+
+```json
+"identityMap": {
+  "email": [
+    {
+      "id": "jsmith@example.com",
+      "primary": false
+    }
+  ],
+  "ECID": [
+    {
+      "id": "87098882279810196101440938110216748923",
+      "primary": false
+    },
+    {
+      "id": "55019962992006103186215643814973128178",
+      "primary": false
+    }
+  ],
+  "loyaltyId": [
+    {
+      "id": "2e33192000007456-0365c00000000000",
+      "primary": true
+    }
+  ]
+}
+```
+
+如上例所示，物件中的每個索引鍵都 `identityMap` 代表一個識別名稱空間。 每個索引鍵的值是對象的陣列，代表各自命名空間的`id`標識值()。 請參閱檔案 [!DNL Identity Service] 以取得Adobe應 [用程式所識別之標準身分名稱空間](../../identity-service/troubleshooting-guide.md#standard-namespaces) 。
+
+>[!NOTE]
+>
+>也可以為每個標識值提供一個布爾值，用於確定該值是否`primary`是主標識()。 僅需為要用於的方案設定主標識 [!DNL Real-time Customer Profile]。 如需詳細資訊，請參 [閱聯合](#union) 架構一節。
 
 ### 模式演化原則 {#evolution}
 
@@ -91,7 +130,7 @@ XDM模式通過嵌入對象的使用，可以直接表示複雜的資料，並�
 
 方案使用下列公式組成：
 
-**類+ Mixin&amp;ast; = XDM方案**
+**類+ Mixin&amp;ast;= XDM方案**
 
 &amp;ast；模式由類和零個或多個 _混合組成_ 。 這表示您完全不需使用mixin就可以合成資料集架構。
 
@@ -115,7 +154,7 @@ XDM模式通過嵌入對象的使用，可以直接表示複雜的資料，並�
 
 Mixins會根據所代表資料的行為（記錄或時間系列）來定義與哪些類別相容。 這表示並非所有混音都可用於所有類別。
 
-Mixin的範圍和定義與類相同： 有由個別組織使用定義的產業混合、廠商混合和客戶混合 [!DNL Platform]。 [!DNL Experience Platform] 包括許多標準的業界混搭，同時允許廠商為其使用者定義混搭，以及個別使用者為其特定概念定義混搭。
+Mixin的範圍和定義與類相同：有由個別組織使用定義的產業混合、廠商混合和客戶混合 [!DNL Platform]。 [!DNL Experience Platform] 包括許多標準的業界混搭，同時允許廠商為其使用者定義混搭，以及個別使用者為其特定概念定義混搭。
 
 例如，若要擷取「忠誠會員[!UICONTROL 」結構的詳細資訊，例如「名字]」和「首位地址」，您可以使用定義這些常見概念的標準混音。 但是，針對較不常見使用案例(例如「[!UICONTROL Loyalty Program Level]」)的特定概念通常沒有預先定義的混音。 在這種情況下，您必須定義自己的混音，才能擷取此資訊。
 
@@ -200,7 +239,7 @@ Mixin的範圍和定義與類相同： 有由個別組織使用定義的產業�
 
 現在，您瞭解了架構構成的基本知識，可以開始使用構建架構 [!DNL Schema Registry]。
 
-此 [!DNL Schema Registry] 程式可用來存取Adobe Experience Platform中 [!DNL Schema Library] 的，並提供使用者介面和RESTful API，讓您存取所有可用的程式庫資源。 本 [!DNL Schema Library] 軟體包含由Adobe定義的產業資源、由合作夥伴定義的廠商資 [!DNL Experience Platform] 源，以及由您組織成員組成的類別、混合、資料類型和結構。
+此 [!DNL Schema Registry] 程式可用來存取Adobe Experience Platform中 [!DNL Schema Library] 的，並提供使用者介面和RESTful API，讓您存取所有可用的程式庫資源。 包 [!DNL Schema Library] 含由Adobe定義的產業資源、由合作夥伴定義的廠商資 [!DNL Experience Platform] 源，以及由您組織成員組成的類別、混合、資料類型和結構。
 
 若要開始使用UI編寫架構，請遵循「架構編輯器」教學課程 [](../tutorials/create-schema-ui.md) ，以建立本檔案中提及的「忠誠成員」架構。
 
