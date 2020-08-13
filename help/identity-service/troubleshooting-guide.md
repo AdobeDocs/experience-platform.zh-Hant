@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Adobe Experience Platform Identity Service疑難排解指南
 topic: troubleshooting
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 5d7e6387382e20b3e7f07070006b6d9d59ac47eb
 workflow-type: tm+mt
 source-wordcount: '2225'
 ht-degree: 1%
@@ -72,19 +72,19 @@ ht-degree: 1%
 
 有關使用API建立標識描述符時定義命名空間的逐步說明，請參閱「方案註冊」開發 [人員指南中有關建立描述符的一節](../xdm/tutorials/create-schema-ui.md) 。 要在UI中將架構欄位標籤為標識，請遵循「架構編輯器」教程中 [的步驟](../xdm/tutorials/create-schema-api.md)。
 
-## Experience Platform提供的標準身分名稱空間為何？
+## Experience Platform提供的標準身分名稱空間為何？ {#standard-namespaces}
 
 Experience Platform內的所有組織都可使用下列標準名稱空間：
 
 | 顯示名稱 | ID | 程式碼 | 說明 |
 | ------------ | --- | --- | ----------- |
-| 核心 | 0 | 核心 | 舊名稱： &quot;Adobe AudienceManager&quot; |
-| ECID | 4 | ECID | 別名： 「Adobe Marketing Cloud ID」、「Adobe Experience Cloud ID」、「Adobe Experience Platform ID」 |
+| 核心 | 0 | 核心 | 舊名稱：&quot;Adobe AudienceManager&quot; |
+| ECID | 4 | ECID | 別名：「Adobe Marketing Cloud ID」、「Adobe Experience Cloud ID」、「Adobe Experience Platform ID」 |
 | 電子郵件 | 6 | 電子郵件 |  |
 | 電子郵件（SHA256，小寫） | 11 | 電子郵件 | 預先雜湊的電子郵件的標準命名空間。 在使用SHA-256進行雜湊處理之前，此命名空間中提供的值會轉換為小寫。 |
 | 電話 | 7 | 電話 |  |
 | Windows AID | 8 | WAID |  |
-| AdCloud | 411 | AdCloud | 別名： Ad Cloud |
+| AdCloud | 411 | AdCloud | 別名：Ad Cloud |
 | Adobe Target | 9 | TNTID | 目標ID |
 | Google廣告ID | 20914 | GAID | GAID |
 | Apple IDFA | 20915 | IDFA | 廣告商的ID |
