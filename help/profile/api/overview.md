@@ -4,9 +4,9 @@ solution: Adobe Experience Platform
 title: 即時客戶個人檔案API開發人員指南
 topic: guide
 translation-type: tm+mt
-source-git-commit: d80d49df9c5ac197bdc7f851bbfff18d9b3019d4
+source-git-commit: 84789a8e6e8c1f0fc91d0b54ba29d449963c3117
 workflow-type: tm+mt
-source-wordcount: '704'
+source-wordcount: '796'
 ht-degree: 0%
 
 ---
@@ -32,7 +32,7 @@ API包 [!DNL Real-time Customer Profile] 含多個端點，概述如下。 如�
 
 ## 邊緣投影 {#edge-projections}
 
-Adobe Experience Platform讓資料可輕鬆在戰略性位置的伺服器（稱為「邊緣」）上存取，讓客戶體驗即時個人化。 API [!DNL Real-time Customer Profile] 提供端點，讓您透過稱為「投影」的元件處理邊緣。 這包括確定應將哪些資料投影到每個邊的投影配置，以及定義投影路由位置的投影目標。 有關使用邊緣投影的詳細資訊，請造訪投影 [設定和目標端點指南](edge-projections.md)。
+Adobe Experience Platform讓資料可輕鬆地在戰略性位置的伺服器（稱為「邊緣」）上存取，讓客戶體驗即時個人化。 API [!DNL Real-time Customer Profile] 提供端點，讓您透過稱為「投影」的元件處理邊緣。 這包括確定應將哪些資料投影到每個邊的投影配置，以及定義投影路由位置的投影目標。 有關使用邊緣投影的詳細資訊，請造訪投影 [設定和目標端點指南](edge-projections.md)。
 
 ## 實體([!DNL Profile] 存取) {#entities}
 
@@ -47,6 +47,10 @@ Adobe Experience Platform讓資料可輕鬆在戰略性位置的伺服器（稱�
 將多個來源的資料匯整在一起時 [!DNL Experience Platform][!DNL Platform] ，合併原則是用來判斷資料的優先順序，以及將哪些資料合併以建立個別客戶個人檔案的規則。 使用 [!DNL Real-time Customer Profile] API，您可以建立新的合併原則、管理現有原則，以及為組織設定預設的合併原則。 若要進一步瞭解如何使用API來使用合併原則，請造訪合 [並原則端點指南](merge-policies.md)。
 
 有關使用 [!DNL Platform] UI使用合併策略的指南，請參 [閱合併策](../ui/merge-policies.md)略使用手冊。
+
+## 預覽範例狀態([!DNL Profile] 預覽) {#profile-preview}
+
+當為描述檔啟用的資料已收錄到Experience Platform中時，它會儲存在描述檔資料儲存區中。 隨著描述檔儲存區中記錄數的增加或減少，會執行範例工作，其中包含資料儲存區中有多少描述檔片段和合併的描述檔的相關資訊。 使用描述檔API，您可以預覽最新成功的範例，以及依資料集和身分命名空間來列出描述檔散發。 若要開始使用端點， `/profilepreviewstatus` 請參閱預覽 [範例狀態端點指南](preview-sample-status.md)。
 
 ## 描述檔系統工作 {#profile-system-jobs}
 
