@@ -4,7 +4,7 @@ seo-title: 執行Adobe Experience Platform Web SDK命令
 description: 瞭解如何執行Experience Platform Web SDK命令
 seo-description: 瞭解如何執行Experience Platform Web SDK命令
 translation-type: tm+mt
-source-git-commit: 5f263a2593cdb493b5cd48bc0478379faa3e155d
+source-git-commit: bf4194e1449bddd662f2152f84dbbe90060b5d30
 workflow-type: tm+mt
 source-wordcount: '419'
 ht-degree: 2%
@@ -28,7 +28,7 @@ alloy("commandName", options);
 
 [承諾](https://developer.mozilla.org/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Promise) ，是SDK如何與您網頁上的程式碼通訊的基礎。 承諾是常見的程式設計結構，並非本SDK或甚至JavaScript的特定功能。 承諾作為建立承諾時未知值的代理。 一旦知道值，承諾就會與值「解決」。 處理常式函式可與承諾相關聯，以便在承諾已解決或在解決承諾過程中出現錯誤時向您發出通知。 若要進一步瞭解承諾，請閱 [讀本教學課程](https://javascript.info/promise-basics) ，或Web上的任何其他資源。
 
-## 處理成功或失敗
+## 處理成功或失敗 {#handling-success-or-failure}
 
 每次執行命令時，都會傳回承諾。 這一承諾意味著最終完成該命令。 在以下示例中，可以使用和 `then` 方法 `catch` 確定命令何時成功或失敗。
 
@@ -76,4 +76,4 @@ alloy("getLibraryInfo").then(function(result) {
 
 ### 同意
 
-如果用戶未就特定目的給予同意，承諾仍將得到解決； 但是，回應物件將僅包含使用者所同意內容中可提供的資訊。
+如果用戶未就特定目的給予同意，承諾仍將得到解決；但是，回應物件將僅包含使用者所同意內容中可提供的資訊。
