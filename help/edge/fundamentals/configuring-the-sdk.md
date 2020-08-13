@@ -4,7 +4,7 @@ seo-title: 設定Adobe Experience Platform Web SDK
 description: 瞭解如何設定Experience Platform Web SDK
 seo-description: 瞭解如何設定Experience Platform Web SDK
 translation-type: tm+mt
-source-git-commit: abd72993577f298141ed0d25b6c4abc42050b68e
+source-git-commit: b7b206573a130af70a82c73a3f9b0a0eb28a513a
 workflow-type: tm+mt
 source-wordcount: '749'
 ht-degree: 10%
@@ -78,7 +78,7 @@ Your assigned [!DNL Experience Cloud] organization ID.  在頁面內設定多個
 
 ## 資料彙集
 
-### `clickCollectionEnabled`
+### `clickCollectionEnabled` {#clickCollectionEnabled}
 
 | **類型** | **必填** | **預設值** |
 | -------- | ------------ | ----------------- |
@@ -160,4 +160,4 @@ Your assigned [!DNL Experience Cloud] organization ID.  在頁面內設定多個
 | -------- | ------------ | ----------------- |
 | 布林值 | 無 | true |
 
-啟用Adobe協力廠商Cookie的設定。 SDK可將訪客ID保留在協力廠商內容中，以便讓相同的訪客ID可跨網站使用。 如果您有多個網站或想要與合作夥伴共用資料，這項功能會很有用； 但是，有時出於隱私權原因並不需要這麼做。
+啟用Adobe協力廠商Cookie的設定。 SDK可將訪客ID保留在協力廠商內容中，以便讓相同的訪客ID可跨網站使用。 如果您有多個網站或想要與合作夥伴共用資料，這項功能會很有用；但是，有時出於隱私權原因並不需要這麼做。
