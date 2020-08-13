@@ -3,10 +3,10 @@ product: experience-platform
 audience: user
 user-guide-title: 即時客戶個人檔案說明
 translation-type: tm+mt
-source-git-commit: d80d49df9c5ac197bdc7f851bbfff18d9b3019d4
+source-git-commit: 84789a8e6e8c1f0fc91d0b54ba29d449963c3117
 workflow-type: tm+mt
-source-wordcount: '78'
-ht-degree: 21%
+source-wordcount: '84'
+ht-degree: 20%
 
 ---
 
@@ -22,6 +22,7 @@ ht-degree: 21%
    * [實體（[!DNL配置檔案]訪問）](api/entities.md)
    * [導出作業（[!DNL配置檔案]導出）](api/export-jobs.md)
    * [合併原則](api/merge-policies.md)
+   * [預覽範例狀態（[!DNL描述檔]預覽）](api/preview-sample-status.md)
    * [[!DNL Profile] 系統作業（刪除請求）](api/profile-system-jobs.md)
 * UI指南 {#ui}
    * [[!DNL Profile] 使用者指南](ui/user-guide.md)
