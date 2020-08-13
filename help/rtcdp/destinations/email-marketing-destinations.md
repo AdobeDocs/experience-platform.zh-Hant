@@ -4,9 +4,9 @@ seo-title: 電子郵件行銷目標
 description: 電子郵件服務供應商(ESP)可讓您管理電子郵件行銷活動，例如傳送促銷電子郵件促銷活動。
 seo-description: 電子郵件服務供應商(ESP)可讓您管理電子郵件行銷活動，例如傳送促銷電子郵件促銷活動。
 translation-type: tm+mt
-source-git-commit: 570c627672439a5ee0f4215b7bf7915ec3dd2bb3
+source-git-commit: 6850a1ee5a578a3dccce9f9decd8f6a368705f4a
 workflow-type: tm+mt
-source-wordcount: '731'
+source-wordcount: '800'
 ht-degree: 1%
 
 ---
@@ -38,7 +38,7 @@ ht-degree: 1%
 
 3. 在「設 **[!UICONTROL 置]** 」步驟中，為新目標輸入「名稱」( **[!UICONTROL Name]** )和「說明 **[!UICONTROL 」(Description]** )，以及導出檔案的 **** 「檔案格式」(File format)。 <br>
 如果您在上一步驟中選擇Amazon S3作為儲存選項，請在將要傳送檔案的雲端儲存目的地中，插入 **[!UICONTROL Bucket name]** （儲存貯體名稱）和 **** Folder路徑。 對於SFTP儲存選項，插入 **[!UICONTROL 資料夾路徑]** （資料夾路徑）。 <br>
-此外，您也可以在此步驟中，選取 **[!UICONTROL 任何應套用至此目的地的Marketing]** 使用案例。 行銷使用案例會指出將資料匯出至目的地的方式。 您可以從Adobe定義的行銷使用案例中選擇，也可以建立自己的行銷使用案例。 有關行銷使用案例的詳細資訊，請參 [閱即時CDP中的資料治理頁](/help/rtcdp/privacy/data-governance-overview.md#destinations) 。 如需個別Adobe定義之行銷使用案例的詳細資訊，請參閱「資 [料使用政策」概觀](/help/data-governance/policies/overview.md#core-actions)。 <br>
+此外，您也可以在此步驟中選取 **[!UICONTROL 任何應套用至此目的地的Marketing]** 使用案例。 行銷使用案例會指出將資料匯出至目的地的方式。 您可以從Adobe定義的行銷使用案例中選擇，也可以建立自己的行銷使用案例。 有關行銷使用案例的詳細資訊，請參 [閱即時CDP中的資料治理頁](/help/rtcdp/privacy/data-governance-overview.md#destinations) 。 如需個別Adobe定義之行銷使用案例的詳細資訊，請參閱「資 [料使用政策」概觀](/help/data-governance/policies/overview.md#core-actions)。 <br>
    ![電子郵件設定步驟](/help/rtcdp/destinations/assets/email-setup-step.png)
 
 ## 步驟2 —— 選擇要包含在目標導出中的段成員 {#select-segments}
@@ -47,15 +47,21 @@ ht-degree: 1%
 
 ![選取區段](/help/rtcdp/destinations/assets/email-select-segments.png)
 
-## 步驟3 —— 選擇在導出的檔案中用作目標屬性的架構欄位 {#destination-attributes}
+## 步驟3 —— 配置檔案名
+
+有關檔案名編輯選項的資訊，請參閱激活目標教 [程中](/help/rtcdp/destinations/activate-destinations.md#configure) 「配置」步驟。
+
+## 步驟4 —— 選擇屬性——選擇要在導出檔案中用作目標屬性的方案欄位 {#destination-attributes}
 
 在此步驟中，您會選取要匯出至電子郵件行銷目的地的欄位。
 
-![目標屬性](/help/rtcdp/destinations/assets/destination-attributes.png)
+![目標屬性](/help/rtcdp/destinations/assets/recommended-attributes.png)
+
+有關此步驟的詳細資訊，請參閱激活目 [標教程中的](/help/rtcdp/destinations/activate-destinations.md#select-attributes) 「選擇屬性」步驟。
 
 ### 身份 {#identity}
 
-建議您從聯合架構中選擇唯一 [識別碼](../../profile/home.md#profile-fragments-and-union-schemas)。 這是您使用者身分識別的欄位。 最常見的欄位是電子郵件地址，但也可以是忠誠度方案ID或電話號碼。 請參見下表，瞭解聯合模式中最常見的唯一標識符及其XDM欄位。
+建議您從聯合架構中選擇唯一 [識別碼](../../profile/home.md#profile-fragments-and-union-schemas)。 這是您使用者身分識別的欄位。 最常見的欄位是電子郵件地址，但也可以是忠誠度方案ID或電話號碼。 請參見下表，瞭解模式中最常見的唯一標識符及其XDM欄位。
 
 | 唯一識別碼 | 統一模式中的XDM欄位 |
 ---------|----------
@@ -76,8 +82,9 @@ ht-degree: 1%
 | 地址狀態 | `homeAddress.stateProvince` |
 | 地址郵遞區號 | `homeAddress.postalCode` |
 | 生日 | `person.birthDayAndMonth` |
+| 區段會籍 | `segmentMembership.status` |
 
-## 步驟3 —— 將資料從儲存位置匯入目的地
+## 步驟5 —— 將資料從儲存位置導入目標
 
 請參閱個別電子郵件行銷目標文章，瞭解如何將資料從儲存位置匯入目標：
 
@@ -89,3 +96,8 @@ ht-degree: 1%
 ## 啟用區段至電子郵件行銷目標
 
 如需如何啟用區段至電子郵件行銷目的地的指示，請參閱啟 [用資料至目的地](/help/rtcdp/destinations/activate-destinations.md)。
+
+## 其他資源
+
+* [將資料啟動至目標](/help/rtcdp/destinations/activate-destinations.md)
+* [使用Flow Service API建立電子郵件行銷目標並啟用資料](https://docs.adobe.com/content/help/en/experience-platform/tutorials/destinations/email-marketing-api.html)
