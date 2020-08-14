@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 即時客戶資料平台中的IAB TCF 2.0支援
 topic: privacy events
 translation-type: tm+mt
-source-git-commit: 350526e172b4ec3cf3b8cbe4d96f7b771aa1d669
+source-git-commit: 28106d5db179e71f47b7e071b359ffe4934a3bbe
 workflow-type: tm+mt
-source-wordcount: '2373'
+source-wordcount: '2388'
 ht-degree: 1%
 
 ---
@@ -42,6 +42,7 @@ ht-degree: 1%
 * [Adobe Experience Platform Identity Service](../../../identity-service/home.md):透過跨裝置和系統橋接身分，解決客戶體驗資料分散所帶來的根本挑戰。
 * [即時客戶個人檔案](../../../profile/home.md):利用 [!DNL Identity Service] 資料集即時建立詳細的客戶個人檔案。 [!DNL Real-time Customer Profile] 從資料湖提取資料，並將客戶個人檔案保留在其個別的資料儲存中。
 * [Adobe Experience Platform Web SDK](../../../edge/home.md):用戶端JavaScript程式庫，可讓您將各種服務整 [!DNL Platform] 合至您的客戶導向網站。
+   * [SDK同意命令](../../../edge/fundamentals/supporting-consent.md):本指南中所示同意相關SDK命令的使用案例概述。
 * [Adobe Experience Platform細分服務](../../../segmentation/home.md):可讓您將資料分 [!DNL Real-time Customer Profile] 為具有類似特徵且回應類似行銷策略的個人群組。
 
 除了上述 [!DNL Platform] 服務外，您也應熟悉目 [的地](../../destinations/destinations-overview.md) 及其用途 [!DNL Real-time CDP]。
@@ -135,7 +136,7 @@ Adobe Audience Manager（透過來源連接器或其他方式）共用的任何�
 
 ### 進行許可更改命令
 
-當您建立上一節所述的邊緣設定後，就可以開始使用SDK命令傳送同意資料給 [!DNL Platform]。 以下各節提供如何在不同案例中使用每個SDK命令的範例。
+當您建立上一節所述的邊緣設定後，就可以開始使用SDK命令傳送同意資料 [!DNL Platform]。 以下各節提供如何在不同案例中使用每個SDK命令的範例。
 
 >[!NOTE]
 >
@@ -241,7 +242,7 @@ TCF 2.0還要求資料源必須在向目標發送資料之前檢查目標的供�
 
 >[!NOTE]
 >
->任何與Adobe Audience Manager共用的區段都會包含與其對應者相同的TCF 2.0同意 [!DNL Platform] 值。 由於 [!DNL Audience Manager] 與(565)共用相同的 [!DNL Real-time CDP] 廠商ID，因此需要相同的目的和廠商權限。 如需詳細資訊，請參 [閱適用於IAB TCF的Adobe Audience Manager外掛程式](https://docs.adobe.com/help/zh-Hant/audience-manager/user-guide/overview/data-privacy/consent-management/aam-iab-plugin.html) 。
+>任何與Adobe Audience Manager共用的區段都會包含與其對應者相同的TCF 2.0同意 [!DNL Platform] 值。 由於 [!DNL Audience Manager] 與(565)共用同 [!DNL Real-time CDP] 一供應商ID，因此需要相同的目的和供應商權限。 如需詳細資訊，請參 [閱適用於IAB TCF的Adobe Audience Manager外掛程式](https://docs.adobe.com/help/zh-Hant/audience-manager/user-guide/overview/data-privacy/consent-management/aam-iab-plugin.html) 。
 
 ## Test your implementation {#test-implementation}
 
