@@ -5,7 +5,7 @@ solution: Experience Platform
 title: 監視帳戶和資料流
 topic: overview
 translation-type: tm+mt
-source-git-commit: 8bdd0493444c2c3b0f56db1166a6fa5d616e41be
+source-git-commit: dcdb1eb1f89b7393b83941a18abb2be2afa3576f
 workflow-type: tm+mt
 source-wordcount: '893'
 ht-degree: 0%
@@ -100,7 +100,9 @@ Adobe Experience Platform中的來源連接器可讓您依計畫吸收外部來�
 
 本節也包含包含錯誤的欄預覽。
 
-> [!IMPORTANT] 要啟用「 *[!UICONTROL 錯誤診斷」預覽]* ，在配置資料流時，必須激活「部 *[!UICONTROL 分提取]* 」和「 ** 錯誤診斷」。 這樣，系統將能夠掃描在流運行期間吸收的所有記錄。
+>[!IMPORTANT]
+>
+>要啟用「 *[!UICONTROL 錯誤診斷」預覽]* ，在配置資料流時，必須激活「部 *[!UICONTROL 分提取]* 」和「 ** 錯誤診斷」。 這樣，系統將能夠掃描在流運行期間吸收的所有記錄。
 
 ![預覽——錯誤——診斷](../../images/tutorials/monitor/preview-error-diagnostics.png)
 
