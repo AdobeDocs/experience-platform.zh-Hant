@@ -3,10 +3,10 @@ product: experience-platform
 audience: user
 user-guide-title: Adobe Experience Platform 教學課程
 translation-type: tm+mt
-source-git-commit: ee08f43400fa72abce95ed52aff879f954f4b4d6
+source-git-commit: d833257b4dffbf2a02ab4a3fc7a6a9e7347e7df5
 workflow-type: tm+mt
-source-wordcount: '52'
-ht-degree: 9%
+source-wordcount: '41'
+ht-degree: 12%
 
 ---
 
@@ -19,9 +19,7 @@ ht-degree: 9%
 * [資料管理與隱私權](data-governance-privacy.md)
 * [資料科學工作區](data-science-workspace.md)
 * [決策](decisioning.md)
-* 目的地 {#destinations}
-   * [建立目標並啟用資料(API)](destinations/api-tutorial.md)
-   * [電子郵件行銷目標(API)](destinations/email-marketing-api.md)
+* [目的地](destinations.md)
 * [將資料內嵌至平台](data-ingestion.md)
 * [設定檔與身分](configure-profile.md)
 * [模式和關係描述符](schemas.md)
