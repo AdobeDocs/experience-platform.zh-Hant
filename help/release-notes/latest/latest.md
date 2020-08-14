@@ -5,17 +5,17 @@ doc-type: release notes
 last-update: August 10, 2020
 author: crhoades, ens28527
 translation-type: tm+mt
-source-git-commit: 1d9c8cbf273e9aef13e34df91a98b6c08180c8ff
+source-git-commit: 8b540a108336ae4475f072b71a34e37cac064826
 workflow-type: tm+mt
-source-wordcount: '480'
-ht-degree: 5%
+source-wordcount: '452'
+ht-degree: 6%
 
 ---
 
 
 # Adobe Experience Platform 發行說明
 
-**發行日期: 2020 年 8 月 12 日**
+**發行日期：2020 年 8 月 12 日**
 
 Adobe Experience Platform現有功能的更新：
 
@@ -45,7 +45,7 @@ Adobe Experience Platform現有功能的更新：
 
 | 目的地 | 說明 |
 |--- | ---|
-| [!DNL Google Customer Match] | Google Customer Match可讓您使用您的線上和離線資料，透過Google擁有和營運的資產觸及客戶並與其重新互動，例如： [!DNL Search]、 [!DNL Shopping]Gmail和YouTube。 <br><br> 請造訪 [!DNL Google Customer Match] 目 [的地目錄中的頁面](/help/rtcdp/destinations/google-customer-match-destination.md) ，以取得有關目的地以及如何在Adobe即時CDP中設定目標的詳細資訊。 |
+| [!DNL Google Customer Match] | Google Customer Match可讓您使用您的線上和離線資料，透過Google擁有和營運的資產觸及並重新與客戶互動，例如： [!DNL Search]、 [!DNL Shopping]Gmail和YouTube。 <br><br> 請造訪 [!DNL Google Customer Match] 目 [的地目錄中的頁面](/help/rtcdp/destinations/google-customer-match-destination.md) ，以取得有關目的地以及如何在Adobe即時CDP中設定目標的詳細資訊。 |
 
 **新功能**
 
@@ -65,7 +65,6 @@ Adobe Experience Platform可以從外部來源擷取資料，同時讓您使用�
 | 功能 | 說明 |
 | ------- | ----------- |
 | 流運行監控 | 使用者可監控所有流程執行，並檢視每個執行的詳細檢視，包括完成狀態、執行持續時間、已處理檔案清單、錯誤和度量。 有關詳細信 [息，請參見](../../sources/tutorials/ui/monitor.md) 「監視資料流」文檔。 |
-| 帳戶更新 | 使用者可以更新任何現有帳戶的認證、名稱和說明，以提供更有意義的資訊，並修正可能已建立的錯誤。 |
 | 流量執行通知 | 使用者可訂閱事件並註冊網頁勾點，以接收有關流量執行的狀態、量度和錯誤的即時通知。 |
 | UI目錄改良 | 更新來源目錄畫面，讓您更輕鬆地存取選取物件的主要動作。 |
 
