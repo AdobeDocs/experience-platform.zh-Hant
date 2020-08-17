@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;opt-out
 solution: Experience Platform
 title: 支援退出
 topic: overview
+description: 'Experience Platform可讓您的客戶在即時客戶個人檔案中，針對資料的使用和儲存，傳送選擇退出要求。 這些選擇退出要求是加州消費者隱私法(CCPA)的一部分，該法案賦予加州居民存取和刪除個人資料的權利，並可得知他們的個人資料是否被出售或披露（以及向誰）。 '
 translation-type: tm+mt
-source-git-commit: 6a0a9b020b0dc89a829c557bdf29b66508a10333
+source-git-commit: 8f7ce97cdefd4fe79cb806e71e12e936caca3774
 workflow-type: tm+mt
-source-wordcount: '945'
+source-wordcount: '1006'
 ht-degree: 0%
 
 ---
@@ -22,21 +23,21 @@ ht-degree: 0%
 
 履行退出要求需要瞭解所涉及的各 [!DNL Adobe Experience Platform] 種服務。 在處理選擇退出請求之前，請先檢閱下列服務的檔案：
 
-- [!DNL Real-time Customer Profile](../profile/home.md): 根據來自多個來源的匯整資料，即時提供統一的客戶個人檔案。
-- [!DNL Adobe Experience Platform Segmentation Service](./home.md): 可讓您從資料建立受眾 [!DNL Real-time Customer Profile] 區段。
-- [!DNL Experience Data Model (XDM)](../xdm/home.md): 平台組織客戶體驗資料的標準化架構。
-- [!DNL Adobe Experience Platform Privacy Service](../privacy-service/home.md): 協助組織自動遵守與客戶資料相關的資料隱私權法規 [!DNL Platform]。
+- [!DNL Real-time Customer Profile](../profile/home.md):根據來自多個來源的匯整資料，即時提供統一的客戶個人檔案。
+- [!DNL Adobe Experience Platform Segmentation Service](./home.md):可讓您從資料建立受眾 [!DNL Real-time Customer Profile] 區段。
+- [!DNL Experience Data Model (XDM)](../xdm/home.md):平台組織客戶體驗資料的標準化架構。
+- [!DNL Adobe Experience Platform Privacy Service](../privacy-service/home.md):協助組織自動遵守與客戶資料相關的資料隱私權法規 [!DNL Platform]。
 
 ## 選擇退出混音
 
 為了滿足CCPA選擇退出請求，作為聯合模式一部分的其中一個方案必須包含必要的 [!DNL Experience Data Model] (XDM)選擇退出欄位。 有兩種混音可用來將選擇退出欄位新增至結構，每種混音在下列各節中會有更詳細的說明：
 
-- [設定檔隱私權](#profile-privacy): 用於擷取不同的退出類型（一般或銷售／共用）。
-- [描述檔偏好設定詳細資訊](#profile-preferences-details): 用於擷取特定XDM頻道的退出要求。
+- [設定檔隱私權](#profile-privacy):用於擷取不同的退出類型（一般或銷售／共用）。
+- [描述檔偏好設定詳細資訊](#profile-preferences-details):用於擷取特定XDM頻道的退出要求。
 
 有關如何將混音新增至架構的逐步指示，請參閱下列XDM檔案中的「新增混音」一節：
-- [方案註冊表API教程](../xdm/api/getting-started.md)。: 使用方案註冊表API構建方案。
-- [架構編輯器教程](../xdm/tutorials/create-schema-ui.md): 使用平台使用者介面建立架構。
+- [方案註冊表API教程](../xdm/api/getting-started.md)。:使用方案註冊表API構建方案。
+- [架構編輯器教程](../xdm/tutorials/create-schema-ui.md):使用平台使用者介面建立架構。
 
 以下是使用者介面中新增至架構的退出混音範例影像：
 
@@ -55,18 +56,18 @@ ht-degree: 0%
 
 混 [!DNL Profile Privacy] 音包含下列欄位：
 
-- 隱私權退出(`privacyOptOuts`): 包含退出對象清單的陣列。
-- 退出類型(`optOutType`): 選擇退出的類型。 此欄位是具有兩個可能值的列舉：
+- 隱私權退出(`privacyOptOuts`):包含退出對象清單的陣列。
+- 退出類型(`optOutType`):選擇退出的類型。 此欄位是具有兩個可能值的列舉：
    - 一般退出(`general_opt_out`)
    - 銷售分享選擇退出(`sales_sharing_opt_out`)
-- 退出值(`optOutValue`): 根據指定的退出類型，退出的活動狀態也稱為退出信號的值。 此欄位是包含四個可能值的列舉：
-   - 未提供(`not_provided`): 未提供選擇退出要求。
-   - 待定驗證(`pending`): 選擇退出請求正在等待驗證。
-   - 退出(`out`): 客戶已選擇退出。
-   - 選擇加入(`in`): 客戶已選擇加入。
-- 退出時間戳記(`timestamp`): 接收的選擇退出信號的時間戳。
+- 退出值(`optOutValue`):根據指定的退出類型，退出的活動狀態也稱為退出信號的值。 此欄位是包含四個可能值的列舉：
+   - 未提供(`not_provided`):未提供選擇退出要求。
+   - 待定驗證(`pending`):選擇退出請求正在等待驗證。
+   - 退出(`out`):客戶已選擇退出。
+   - 選擇加入(`in`):客戶已選擇加入。
+- 退出時間戳記(`timestamp`):接收的選擇退出信號的時間戳。
 
-若要檢視混音的完整 [!DNL Profile Privacy] 結構，請參閱 [XDM公用GitHub存放庫](https://github.com/adobe/xdm/blob/master/schemas/context/profile-privacy.schema.json) ，或使用Platform UI預覽混音。
+若要檢視混音的完整結 [!DNL Profile Privacy] 構，請參閱 [XDM公用GitHub存放庫](https://github.com/adobe/xdm/blob/master/schemas/context/profile-privacy.schema.json) ，或使用Platform UI預覽混音。
 
 ### [!DNL Profile Preferences Details]
 
@@ -76,12 +77,12 @@ ht-degree: 0%
 
 混 [!DNL Profile Preferences Details] 音包含下列與退出相關的欄位：
 
-- OptInOut(`optInOut`): 其中每個密鑰代表通信通道的有效和已知URI的對象，以及每個通道的退出的活動狀態。 每個渠道可能有四個可能值之一：
-   - 未提供(`not_provided`): 此渠道未提供選擇退出請求。
-   - 待定驗證(`pending`): 此頻道的退出要求正在待覈實。
-   - 退出(`out`): 客戶已選擇退出此渠道。
-   - 選擇加入(`in`): 客戶已選擇加入此通道。
-- 全域退出(`globalOptout`): 布爾值，當設定為true時，會為配置檔案設定全局退出覆蓋。 此欄位的預設值為false。
+- OptInOut(`optInOut`):其中每個密鑰代表通信通道的有效和已知URI的對象，以及每個通道的退出的活動狀態。 每個渠道可能有四個可能值之一：
+   - 未提供(`not_provided`):此渠道未提供選擇退出請求。
+   - 待定驗證(`pending`):此頻道的退出要求正在待覈實。
+   - 退出(`out`):客戶已選擇退出此渠道。
+   - 選擇加入(`in`):客戶已選擇加入此通道。
+- 全域退出(`globalOptout`):布爾值，當設定為true時，會為配置檔案設定全局退出覆蓋。 此欄位的預設值為false。
 
 以下範例JSON反白顯示OptInOut物件如何針對不同的通訊管道擷取多個退出訊號：
 
