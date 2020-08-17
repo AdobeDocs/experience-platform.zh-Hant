@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;crm schema;crm;CRM;dataflow;Dataflow
 solution: Experience Platform
 title: 在UI中為CRM連接器配置資料流
 topic: overview
+description: 資料流是從源中檢索資料並將資料帶入平台資料集的計畫任務。 本教學課程提供使用CRM帳戶設定新資料流的步驟。
 translation-type: tm+mt
-source-git-commit: d80622aaa8408d640a1a80b6a37f4083344e7fa1
+source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
 workflow-type: tm+mt
-source-wordcount: '1325'
+source-wordcount: '1356'
 ht-degree: 0%
 
 ---
