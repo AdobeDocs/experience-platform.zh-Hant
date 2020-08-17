@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;data ingestion;data location;Data Location;Data management;data management;Lineage;lineage;batch;Batch;ingested data
 solution: Experience Platform
 title: Adobe Experience Platform資料擷取概觀
 topic: overview
+description: 本檔案介紹將資料收錄至Platform的三種主要方式，以及各自概述檔案的連結，以取得更詳細的資訊。
 translation-type: tm+mt
-source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
+source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
 workflow-type: tm+mt
-source-wordcount: '417'
-ht-degree: 10%
+source-wordcount: '442'
+ht-degree: 9%
 
 ---
 
@@ -42,7 +43,7 @@ Adobe Experience Platform將來自多個來源的資料匯集在一起，以協�
 
 ## 後續步驟和其他資源
 
-本檔案對中的不同方面作了簡 [!DNL Data Ingestion] 要介 [!DNL Experience Platform]紹 請繼續閱讀每種擷取方法的概述檔案，以熟悉其不同的功能、使用案例和最佳實務。 您也可以觀看下方的擷取概觀影片，以提供您的學習經驗。 如需如何追蹤已收錄 [!DNL Experience Platform] 記錄之中繼資料的詳細資訊，請參閱目錄 [服務總覽](../catalog/home.md)。
+本檔案對中的不同方面作了簡 [!DNL Data Ingestion] 要介 [!DNL Experience Platform]紹 請繼續閱讀每種擷取方法的概述檔案，以熟悉其不同的功能、使用案例和最佳實務。 您也可以觀看下方的擷取概觀影片，以補充您的學習成果。 如需如何追蹤已收錄 [!DNL Experience Platform] 記錄之中繼資料的詳細資訊，請參閱目錄 [服務總覽](../catalog/home.md)。
 
 >[!WARNING]
 >
