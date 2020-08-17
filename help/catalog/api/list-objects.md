@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;filter;Filter;filter data;Filter data
 solution: Experience Platform
 title: 清單對象
 topic: developer guide
+description: 您可以透過單一API呼叫擷取特定類型所有可用物件的清單，最佳實務是納入限制回應大小的篩選。
 translation-type: tm+mt
-source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
+source-git-commit: c081a7521be9715ca32d35504922a70767924fd7
 workflow-type: tm+mt
-source-wordcount: '197'
-ht-degree: 2%
+source-wordcount: '229'
+ht-degree: 1%
 
 ---
 
