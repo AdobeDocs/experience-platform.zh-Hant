@@ -1,10 +1,10 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;GDPR;gdpr;ccpa:CCPA
 solution: Experience Platform
 title: Adobe Experience Platform隱私權服務
 topic: overview
 translation-type: tm+mt
-source-git-commit: 5b32c1955fac4f137ba44e8189376c81cdbbfc40
+source-git-commit: cc81d590f308c7e2677cec000c27e8aca42437f5
 workflow-type: tm+mt
 source-wordcount: '1498'
 ht-degree: 2%
@@ -31,7 +31,7 @@ Adobe Experience Platform是為 [!DNL Privacy Service] 因應企業管理客戶�
 1. **我是否已正確標示資料？**
    * 必須正確標示資料，服務才能決定在隱私權工作期間要存取或刪除哪些欄位。 如需詳細資訊，請 [參閱標籤](#label) 資料一節。
 1. **我知道要傳送哪些ID嗎[!DNL Privacy Service]?**
-   * 傳送隱私權要求時，必須提供特定Adobe應用程式專屬的個別客戶ID。 如需詳細資訊，請 [參閱提供身分資](#identity)[料](#requests) 和提出隱私權要求的相關章節。
+   * 傳送隱私權要求時，必須提供特定Adobe應用程式專屬的個別客戶ID。 如需詳細資訊，請 [參閱提供身分資](#identity)[料](#requests) 及提出隱私權要求的相關章節。
 1. **我要如何追蹤我的隱私權工作？**
    * 在您提出隱私權要求後，有幾個選項可用來追蹤其狀態和結果。 如需詳細資訊，請 [參閱監控隱私](#monitor) 工作一節。
 
