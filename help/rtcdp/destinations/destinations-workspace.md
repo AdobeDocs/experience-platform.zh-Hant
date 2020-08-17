@@ -1,10 +1,11 @@
 ---
+keywords: RTCDP;rtcdp
 title: 目標工作區
 seo-title: 目標工作區
 description: 在Adobe即時客戶資料平台中，從左側導覽列選取「目標」以存取目標工作區。
 seo-description: 在Adobe即時客戶資料平台中，從左側導覽列選取「目標」以存取目標工作區。
 translation-type: tm+mt
-source-git-commit: f3e489416a9bc80cfb0502d3973a86748123a687
+source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
 workflow-type: tm+mt
 source-wordcount: '807'
 ht-degree: 2%
