@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;catalog service;catalog;Catalog service;data location;Data Location;Data management;data management;Lineage;lineage;Catalog;enable dataset
 solution: Experience Platform
 title: 目錄服務概述
 topic: overview
+description: 目錄服務是Adobe Experience Platform中資料位置和世系的記錄系統。 雖然所有收錄到Experience Platform的資料都會以檔案和目錄的形式儲存在資料湖中，但目錄會保留這些檔案和目錄的中繼資料和說明，以供查閱和監控之用。
 translation-type: tm+mt
-source-git-commit: bfbf2074a9dcadd809de043d62f7d2ddaa7c7b31
+source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
 workflow-type: tm+mt
-source-wordcount: '732'
-ht-degree: 6%
+source-wordcount: '783'
+ht-degree: 5%
 
 ---
 
