@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;filter;Filter;filter data;Filter data;date range
 solution: Experience Platform
 title: 使用查詢參數篩選目錄資料
 topic: developer guide
+description: 目錄服務API允許透過使用請求查詢參數來篩選回應資料。 目錄的最佳實務是在所有API呼叫中使用篩選器，因為這些篩選器可減輕API的負載，並有助於改善整體效能。
 translation-type: tm+mt
-source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
+source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
 workflow-type: tm+mt
-source-wordcount: '2033'
+source-wordcount: '2078'
 ht-degree: 1%
 
 ---
@@ -150,10 +151,10 @@ curl -X GET \
 
 根據上述回應，可推斷出下列項目：
 
-* 如果對象缺少任何請求的屬性，則它將只顯示它包含的請求屬性。 (`Dataset1`)
-* 如果對象不包含任何請求的屬性，則它將顯示為空對象。 (`Dataset2`)
-* 如果資料集包含屬性但沒有值，則可將請求的屬性傳回為空物件。 (`Dataset3`)
-* 否則，資料集會顯示所有請求屬性的完整值。 (`Dataset4`)
+* 如果對象缺少任何請求的屬性，則它將只顯示它包含的請求屬性。(`Dataset1`)
+* 如果對象不包含任何請求的屬性，則它將顯示為空對象。(`Dataset2`)
+* 如果資料集包含屬性但沒有值，則可將請求的屬性傳回為空物件。(`Dataset3`)
+* 否則，資料集會顯示所有請求屬性的完整值。(`Dataset4`)
 
 ## 響應清單的偏移起始索引
 
@@ -206,8 +207,8 @@ curl -X GET \
 * 標籤名稱是IMS組織唯一的。
 * Adobe程式可能會針對某些行為使用標籤。 這些標籤的名稱會以&quot;adobe&quot;為前置詞作為標準。 因此，在聲明標籤名稱時，應避免此慣例。
 * 下列標籤名稱會保留供跨組織使 [!DNL Experience Platform]用，因此無法宣告為您組織的標籤名稱：
-   * `unifiedProfile`: 此標籤名稱保留給要被收錄的資料集 [!DNL Real-time Customer Profile](../../profile/home.md)。
-   * `unifiedIdentity`: 此標籤名稱保留給要被收錄的資料集 [!DNL Identity Service](../../identity-service/home.md)。
+   * `unifiedProfile`:此標籤名稱保留給要被收錄的資料集 [!DNL Real-time Customer Profile](../../profile/home.md)。
+   * `unifiedIdentity`:此標籤名稱保留給要被收錄的資料集 [!DNL Identity Service](../../identity-service/home.md)。
 
 以下是包含屬性的資料集范 `tags` 例。 該屬性中的標籤採用鍵值配對的形式，每個標籤值顯示為包含單一字串的陣列：
 
@@ -396,7 +397,7 @@ curl -X GET \
 
 可以在逗號分隔的清單中提供多個排序屬性。 如果第一個排序屬性生成多個對象，這些對象包含該屬性的相同值，則使用第二個排序屬性進一步排序這些匹配對象。
 
-例如，請考慮以下查詢： `orderBy=name,desc:created`. 根據第一個排序屬性，結果會以升序排序 `name`。 在多個記錄共用相同屬性的情 `name` 況下，這些匹配記錄隨後會按第二個排序屬性排序 `created`。 如果沒有傳回的記錄共用相 `name`同， `created` 則屬性不會納入排序。
+For example, consider the following query: `orderBy=name,desc:created`. 根據第一個排序屬性，結果會以升序排序 `name`。 在多個記錄共用相同屬性的情 `name` 況下，這些匹配記錄隨後會按第二個排序屬性排序 `created`。 如果沒有傳回的記錄共用相 `name`同， `created` 則屬性不會納入排序。
 
 
 **API格式**
@@ -474,8 +475,8 @@ curl -X GET \
 
 [!DNL Catalog] 提供兩種依屬性篩選的方法，這些方法在下列章節中進一步概述：
 
-* [使用簡單篩選](#using-simple-filters): 依特定屬性是否符合特定值來篩選。
-* [使用屬性參數](#using-the-property-parameter): 使用條件運算式來篩選屬性是否存在，或屬性的值是否與其他指定值或規則運算式相符、相近或相比較。
+* [使用簡單篩選](#using-simple-filters):依特定屬性是否符合特定值來篩選。
+* [使用屬性參數](#using-the-property-parameter):使用條件運算式來篩選屬性是否存在，或屬性的值是否與其他指定值或規則運算式相符、相近或相比較。
 
 ### 使用簡單濾鏡 {#using-simple-filters}
 
@@ -608,7 +609,7 @@ curl -X GET \
 
 **回應**
 
-成功的響應包含版本號大於1.0.3的資料集清單。 除非另有指定限制，否則回應最多包含20個物件。
+成功的響應包含版本號大於1.0.3的資料集清單。除非另有指定限制，否則回應最多包含20個物件。
 
 ```json
 {
