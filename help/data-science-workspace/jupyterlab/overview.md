@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;JupyterLab;notebooks;Data Science Workspace;popular topics
+keywords: Experience Platform;JupyterLab;notebooks;Data Science Workspace;popular topics;jupyterlab
 solution: Experience Platform
 title: JupyterLab使用指南
 topic: Overview
+description: JupyterLab是Project Jupyter的網路使用者介面，並與Adobe Experience Platform緊密整合。 它為資料科學家提供互動式開發環境，以便與Jupyter筆記型電腦、程式碼和資料搭配使用。
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 8f7ce97cdefd4fe79cb806e71e12e936caca3774
 workflow-type: tm+mt
-source-wordcount: '3647'
+source-wordcount: '3684'
 ht-degree: 11%
 
 ---
@@ -14,7 +15,7 @@ ht-degree: 11%
 
 # [!DNL JupyterLab] 使用者指南
 
-[!DNL JupyterLab] 是Project Jupyter的Web使用者介 <a href="https://jupyter.org/" target="_blank">面</a> ，並緊密整合在 [!DNL Adobe Experience Platform]中 它為資料科學家提供互動式開發環境，以便與Jupyter筆記型電腦、程式碼和資料搭配使用。
+[!DNL JupyterLab] 是Project Jupyter的網路型使用者介 [面](https://jupyter.org/) ，並與Adobe Experience Platform緊密整合。 它為資料科學家提供互動式開發環境，以便與Jupyter筆記型電腦、程式碼和資料搭配使用。
 
 本檔案提供執行常 [!DNL JupyterLab] 見動作的概觀及功能說明。
 
@@ -28,7 +29,7 @@ Experience Platform的JupyterLab整合隨附架構變更、設計考量、自訂
 | --- | --- |
 | **內核** | 內核提供筆記型電腦和 [!DNL JupyterLab] 其他前端，能夠以不同的寫程式語言執行和查看代碼。 [!DNL Experience Platform] 提供額外的內核，以支 [!DNL Python]援R、PySpark和的開發 [!DNL Spark]。 有關詳細 [資訊](#kernels) ，請參閱內核部分。 |
 | **資料存取** | 直接從內部存取現有資料集， [!DNL JupyterLab] 並具備完整的讀取和寫入功能支援。 |
-| **[!DNL Platform]服務整合&#x200B;** | 內建整合可讓您直接從內部運用 [!DNL Platform] 其他服務 [!DNL JupyterLab]。 「與其他平台服務整合」一節提供支援整合的 [完整清單](#service-integration)。 |
+| **[!DNL Platform]服務整合** | 內建整合可讓您直接從內部運用 [!DNL Platform] 其他服務 [!DNL JupyterLab]。 「與其他平台服務整合」一節提供支援整合的 [完整清單](#service-integration)。 |
 | **驗證** | 除了 <a href="https://jupyter-notebook.readthedocs.io/en/latest/security.html" target="_blank">JupyterLab的內建安全性模型外</a>，您的應用程式與Experience Platform（包括平台服務對服務通訊）之間的每次互動都會透過 <a href="https://www.adobe.io/authentication/auth-methods.html" target="_blank">[!DNL Adobe Identity Management System] (IMS)加密和驗證</a>。 |
 | **開發程式庫** | 在中 [!DNL Experience Platform], [!DNL JupyterLab] 提供預先安裝的 [!DNL Python]、R和PySpark程式庫。 如需支援 [的程式庫](#supported-libraries) ，請參閱附錄。 |
 | **程式庫控制器** | 當預先安裝的程式庫不符合您的需求時，可為Python和R安裝其他程式庫，並暫時儲存在隔離的容器中，以維持資料的完整性並保 [!DNL Platform] 持資料的安全。 有關詳細 [資訊](#kernels) ，請參閱內核部分。 |
@@ -41,14 +42,14 @@ Experience Platform的JupyterLab整合隨附架構變更、設計考量、自訂
 
 標準化和互操作性是其背後的關鍵概念 [!DNL Experience Platform]。 將on整 [!DNL JupyterLab] 合為 [!DNL Platform] 內嵌IDE，可讓它與其他服務互動， [!DNL Platform] 讓您充份運用 [!DNL Platform] 其潛能。 下列服 [!DNL Platform] 務可在下列網站取得 [!DNL JupyterLab]:
 
-* **[!DNL Catalog Service]:**使用讀寫功能存取和探索資料集。
-* **[!DNL Query Service]:**使用SQL訪問和探索資料集，在處理大量資料時提供較低的資料存取開銷。
-* **[!DNL Sensei ML Framework]:**模型開發具備訓練和評分資料的能力，而且只要按一下，就能建立配方。
-* **[!DNL Experience Data Model (XDM)]:**標準化和互操作性是Adobe Experience Platform的主要概念。[Adobe推動的Experience Data Model(XDM)](https://www.adobe.com/go/xdm-home-en)，旨在標準化客戶體驗資料並定義客戶體驗管理的架構。
+* **[!DNL Catalog Service]:** 使用讀寫功能存取和探索資料集。
+* **[!DNL Query Service]:** 使用SQL訪問和探索資料集，在處理大量資料時提供較低的資料存取開銷。
+* **[!DNL Sensei ML Framework]:** 模型開發具備訓練和評分資料的能力，而且只要按一下，就能建立配方。
+* **[!DNL Experience Data Model (XDM)]:** 標準化和互操作性是Adobe Experience Platform的主要概念。 [Adobe推動的Experience Data Model(XDM)](https://www.adobe.com/go/xdm-home-en)，旨在標準化客戶體驗資料並定義客戶體驗管理的架構。
 
 >[!NOTE]
 >
->上的 [!DNL Platform] 某些服務整合 [!DNL JupyterLab] 僅限於特定內核。 有關詳細資訊，請參 [閱](#kernels) 「內核」一節。
+>上的 [!DNL Platform] 某些服務整合 [!DNL JupyterLab] 僅限於特定內核。 有關詳細資訊，請參 [閱](#kernels) 「內核」部分。
 
 ## 主要功能與常用作業
 
@@ -136,7 +137,7 @@ Experience Platform的JupyterLab整合隨附架構變更、設計考量、自訂
 
 ### 內核會話 {#kernel-sessions}
 
-每個活動的筆記本或活動都 [!DNL JupyterLab] 使用內核會話。 從左側邊欄展開「運行終端和內核」 **頁籤，可找到所有活動會話** 。 通過觀察筆記本介面的右上角，可以確定筆記本內核的類型和狀態。 在下圖中，筆記本的關聯內核為 **[!DNL Python]3 **，其當前狀態由右側的灰色圓圈表示。 空心圓表示空閒內核，實心圓表示忙碌內核。
+每個活動的筆記本或活動都 [!DNL JupyterLab] 使用內核會話。 從左側邊欄展開「運行終端和內核」 **頁籤，可找到所有活動會話** 。 通過觀察筆記本介面的右上角，可以確定筆記本內核的類型和狀態。 在下圖中，筆記本的關聯內核為 **[!DNL Python]3** ，其當前狀態由右側的灰色圓圈表示。 空心圓表示空閒內核，實心圓表示忙碌內核。
 
 ![](../images/jupyterlab/user-guide/kernel_and_state_1.png)
 
@@ -159,7 +160,7 @@ Experience Platform的JupyterLab整合隨附架構變更、設計考量、自訂
 | [!DNL Query Service] | 預先填入的筆記型電腦，可直接在提供的范 [!DNL Query Service] 例工作流程 [!DNL JupyterLab] 中展示其使用方式，可進行大規模資料分析。 |
 | XDM事件 | 預先填入的筆記型電腦，展示後值Experience Event資料的資料探索，著重於資料結構中常見的功能。 |
 | XDM查詢 | 預先填入的筆記型電腦，展示Experience Event資料的範例商業查詢。 |
-| 聚總 | 預先填充的筆記本演示了將大量資料匯總到較小、可管理的塊中的示例工作流。 |
+| 彙總 | 預先填充的筆記本演示了將大量資料匯總到較小、可管理的塊中的示例工作流。 |
 | 集群 | 預填充的筆記型電腦，演示使用群集算法的端到端機器學習建模過程。 |
 
 某些筆記型電腦模板僅限於某些內核。 每個內核的模板可用性在下表中映射：
@@ -174,7 +175,7 @@ Experience Platform的JupyterLab整合隨附架構變更、設計考量、自訂
         <th><strong>[!DNL查詢服務]</strong></th>
         <th><strong>XDM事件</strong></th>
         <th><strong>XDM查詢</strong></th>
-        <th><strong>聚總</strong></th>
+        <th><strong>彙總</strong></th>
         <th><strong>集群</strong></th>
     </tr>
     <tr>
@@ -294,7 +295,7 @@ Experience Platform的JupyterLab整合隨附架構變更、設計考量、自訂
 | SDK（互動模式） | 33s | 32.4s | 55.1s | 253.5s | 489.2s | 729.6s | 1206.8s | - | - | - | - |
 | SDK（批次模式） | 815.8s | 492.8s | 379.1s | 637.4s | 624.5s | 869.2s | 1104.1s | 1786s | 5387.2s | 10624.6s | 50547s |
 
-**臨機架構：** 在交互模式下，您最多需要不到3分鐘的時間才能讀取10億行（磁碟上約1.05TB資料）的非XDM資料。 在批處理模式下，您應能在大約18分鐘內讀取非XDM資料的10億行（磁碟上約1.05TB資料）。
+**臨機架構：** 在互動模式下，您最多可在3分鐘內讀取10億行（磁碟上約1.05TB資料）的非XDM資料。 在批處理模式下，您應能在大約18分鐘內讀取非XDM資料的10億行（磁碟上約1.05TB資料）。
 
 | 行數 | 1K | 10K | 100K | 1M | 2M | 3M | 5M | 10M | 50M | 100M | 500M | 1B |
 |--------------|--------|---------|---------|-------|-------|-------|--------|--------|---------|--------|---------|-------|
@@ -312,7 +313,7 @@ Experience Platform的JupyterLab整合隨附架構變更、設計考量、自訂
 | SDK互動模式（以秒為單位） | 37.9s | 22.7s | 45.6s | 231.7s | 444.7s | 660.6s | 1100s | - | - | - | - |
 | SDK批次模式（以秒為單位） | 374.4s | 398.5s | 527s | 487.9s | 588.9s | 829s | 939.1s | 1441s | 5473.2s | 10118.8 | 49207.6 |
 
-**臨機架構：** 在互動模式下，您最多可在3分鐘內讀取10億行（磁碟上約1.05TB資料）的非XDM資料。 在批處理模式下，您應能在大約16分鐘內讀取非XDM資料的最多10億行（磁碟上約1.05TB資料）。
+**臨機架構：** 在交互模式下，您最多需要不到3分鐘的時間才能讀取10億行（磁碟上約1.05TB資料）的非XDM資料。 在批處理模式下，您應能在大約16分鐘內讀取非XDM資料的10億行（磁碟上約1.05TB資料）。
 
 | 行數 | 1K | 10K | 100K | 1M | 2M | 3M | 5M | 10M | 50M | 100M | 500M | 1B |
 |--------------|--------|---------|---------|-------|-------|-------|---------|---------|---------|--------|---------|-------|
@@ -354,7 +355,7 @@ df <- dataset_reader$read()
 df
 ```
 
-* `{DATASET_ID}`: 要訪問的資料集的唯一標識
+* `{DATASET_ID}`:要訪問的資料集的唯一標識
 
 #### 在 [!DNL Python]/R中從資料集讀取並分頁
 
@@ -384,7 +385,7 @@ dataset_reader <- DatasetReader(client_context, "{DATASET_ID}")
 df <- dataset_reader$limit(100L)$offset(10L)$read() 
 ```
 
-* `{DATASET_ID}`: 要訪問的資料集的唯一標識
+* `{DATASET_ID}`:要訪問的資料集的唯一標識
 
 ### 從PySpark/[!DNL Spark]/Scala的資料集讀取
 
@@ -438,12 +439,12 @@ dataFrame.show()
 
 用於 [!DNL Data Science Workspace] 從筆記本( [!DNL Python] 3內核)讀取或寫入資料集的自定[!DNL Python] 義魔術命令。
 
-* **{action}**: 要在資料集上執行的動作類型。 有兩個動作是「讀取」或「寫入」。
-* **—datasetId {id}**: 用於提供要讀取或寫入的資料集的ID。 這是必要的引數。
-* **—dataFrame {df}**: 熊貓資料框。 這是必要的引數。
+* **{action}**:要在資料集上執行的動作類型。 有兩個動作是「讀取」或「寫入」。
+* **—datasetId {id}**:用於提供要讀取或寫入的資料集的ID。 這是必要的引數。
+* **—dataFrame {df}**:熊貓資料框。 這是必要的引數。
    * 當動作為&quot;read&quot;時，{df}是資料集讀取作業結果可用的變數。
    * 當動作為&quot;write&quot;時，此資料幀{df}將寫入資料集。
-* **—mode（可選）**: 允許的參數為「批次」和「互動」。 依預設，模式會設為「互動」。 建議在讀取大量資料時使用「批次」模式。
+* **—mode（可選）**:允許的參數為「批次」和「互動」。 依預設，模式會設為「互動」。 建議在讀取大量資料時使用「批次」模式。
 
 **範例**
 
@@ -494,13 +495,13 @@ FROM {table_name}
 
 篩選運算子的清單說明如下：
 
-* `eq()`: 等於
-* `gt()`: 大於
-* `ge()`: 大於或等於
-* `lt()`: 小於
-* `le()`: 小於或等於
-* `And()`: 邏輯AND運算子
-* `Or()`: 邏輯OR運算子
+* `eq()`: Equal to
+* `gt()`: Greater than
+* `ge()`: Greater than or equal to
+* `lt()`: Less than
+* `le()`: Less than or equal to
+* `And()`:邏輯AND運算子
+* `Or()`:邏輯OR運算子
 
 以下儲存格會將ExperienceEvent資料集篩選為2019年1月1日至2019年12月31日止期間僅存在的資料。
 
