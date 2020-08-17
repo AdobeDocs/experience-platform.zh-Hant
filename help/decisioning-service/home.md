@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;offer management;Offer Management;Journey;customer journey;journey;decision events;decision event;Decision events
 solution: Experience Platform
 title: 決策服務
 topic: overview
+description: 決策服務提供在Adobe Experience Platform上執行之應用程式中建立個人化、最佳化且精心策劃的體驗的功能。 使用決策服務，您可以從一組可用選項中確定最佳選項。 這些選項（也稱為替代選項）可以是選件、產品建議、網頁體驗的內容元件、對話指令碼和要採取的動作。
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
 workflow-type: tm+mt
-source-wordcount: '1592'
+source-wordcount: '1648'
 ht-degree: 0%
 
 ---
@@ -40,7 +41,7 @@ ht-degree: 0%
 
 ## 如何運 [!DNL Decisioning Service] 作？
 
-當客戶透過傳入通道( [!DNL Decisioning Service] 例如您的網站或行動應用程式)與您的品牌互動時，可即時自訂體驗。 決策也可用來透過對外通道（例如電子郵件或推播通知）自訂訊息。
+當客戶透過傳入通道( [!DNL Decisioning Service] 例如您的網站或行動應用程式)與您的品牌互動時，可即時自訂體驗。 決策也可用來透過對外通道自訂訊息，例如電子郵件或推播通知。
 
 決策可以用很多方式做出。 一種方法是先後排除選項，直到僅剩一個或選項已縮減，且剩餘部分或從約簡集中隨機挑選成功者為止。 根據計算公式選擇成功選項的這種方法的變體。 合格選項的排名是使用函式來完成。 對於選件決策，該函式可計算成本、選件給企業的價值，並使用預先確定的選件被使用者接受的可能性。 產生的分數可用來排序選件。
 
