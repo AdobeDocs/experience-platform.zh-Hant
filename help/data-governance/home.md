@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;DULE;dule
 solution: Experience Platform
 title: Adobe Experience Platform資料治理
 topic: overview
+description: Adobe Experience Platform資料管理可讓您管理客戶資料，並確保符合資料使用適用的法規、限制和政策。 它在Experience Platform的不同層次發揮關鍵作用，包括編目、資料傳承、資料使用標籤、資料使用政策，以及控制資料在行銷動作中的使用
 translation-type: tm+mt
-source-git-commit: 53225525feb1878aae58939338c1a94f98ec1607
+source-git-commit: c081a7521be9715ca32d35504922a70767924fd7
 workflow-type: tm+mt
-source-wordcount: '1342'
+source-wordcount: '1394'
 ht-degree: 0%
 
 ---
@@ -46,7 +47,7 @@ Adobe Experience Platform可 [!DNL Data Governance] 讓您管理客戶資料，�
 
 Data Usage Labeling and Enforcement(DULE)是核心架構 [!DNL Experience Platform][!DNL Data Governance]。 DULE可簡化資料分類和建立資料使用原則的程式。 一旦套用資料標籤並制定資料使用政策後，就可評估行銷動作，以確保正確使用資料。
 
-DULE框架有三個關鍵要素： 標籤、原則與實施。
+DULE框架有三個關鍵要素：標籤、原則與實施。
 
 1. **標籤：** 將反映隱私權相關考量和合約條件的資料分類，以符合法規和組織政策。
 1. **策略：** 說明允許或不允許對特定資料採取何種行銷動作。
@@ -110,7 +111,7 @@ DULE框架包含預先定義的資料使用標籤，可用來以三種方式對�
 | **欄位標籤** | 欄位標籤是從資料集繼承或直接套用至欄位的資料控管標籤。  套用至欄位的資料控管標籤不會繼承至資料集。 |
 | **地理科學** | 地緣是由GPS或RFID技術定義的虛擬地理邊界，可讓軟體在行動裝置進入或離開特定區域時觸發回應。 |
 | **身分標籤** | 身分「I」標籤可用來分類可識別或聯絡特定人員的資料。 |
-| **興趣型定位** | 如果符合下列三個條件，就會發生喜好式定位（也稱為個人化）: 網站上收集的資料會用於對使用者的興趣做出推論，會用於其他內容，例如在其他網站或應用程式（非網站）上，並會用來根據這些推論來選取要提供哪些內容或廣告。 |
+| **興趣型定位** | 如果符合下列三個條件，就會發生喜好式定位（也稱為個人化）:網站上收集的資料會用於對使用者的興趣做出推論，會用於其他內容，例如在其他網站或應用程式（非網站）上，並會用來根據這些推論來選取要提供哪些內容或廣告。 |
 | **行銷動作** | 在資料治理架構中的行銷行動是資料使用者採取的 [!DNL Experience Platform] 行動，需要檢查是否有違反資料使用政策的行為 |
 | **政策** | 在資料治理架構中，原則是描述允許或不允許對特定資料採取何種行銷動作的規則。 |
 | **敏感標籤** | 敏感的「S」標籤可用來將您和您的組織認為敏感的資料分類。 |
