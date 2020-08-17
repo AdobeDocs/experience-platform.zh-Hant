@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;PQL;pql;profile query language
 solution: Experience Platform
 title: 配置檔案查詢語言(PQL)概述
 topic: developer guide
+description: 本指南提供PQL的一般概述，涵蓋格式准則並提供PQL表達式示例。
 translation-type: tm+mt
-source-git-commit: 6a0a9b020b0dc89a829c557bdf29b66508a10333
+source-git-commit: 691af873e0753217b9e7566042c508d9d9b8d8d5
 workflow-type: tm+mt
-source-wordcount: '670'
+source-wordcount: '686'
 ht-degree: 2%
 
 ---
@@ -81,7 +82,7 @@ PQL支援以下常值類型：
 | 地圖 | 用來與地圖互動。 有關這些函式的詳細資訊，請參閱地圖函 [數檔案](./map-functions.md)。 |
 | 字串 | 用來與字串互動。 有關這些函式的詳細資訊，請參閱字 [串函式檔案](./string-functions.md)。 |
 | 算術 | 用於對PQL元素執行基本算術。 有關這些函式的更多資訊，請參閱算術函 [數檔案](./arithmetic-functions.md) |
-| 聚總 | 用於將陣列的結果組合為單一結果。 有關聚合函式的詳細資訊，請參見聚合函 [數文檔](./aggregation-functions.md)。 |
+| 彙總 | 用於將陣列的結果組合為單一結果。 有關聚合函式的詳細資訊，請參見聚合函 [數文檔](./aggregation-functions.md)。 |
 | 日期和時間 | 與日期、時間和日期時間對象一起使用。 有關這些函式的更多資訊，請參閱日 [期／時間函式檔案](./datetime-functions.md)。 |
 | 篩選器 | 用於篩選陣列內的資料。 有關這些函式的更多資訊，請參閱篩 [選函式文檔](./filter-functions.md)。 |
 | 邏輯量詞 | 用於斷言陣列中的條件。 在邏輯量詞文檔中可以找 [到更多資訊](./logical-quantifiers.md)。 |
