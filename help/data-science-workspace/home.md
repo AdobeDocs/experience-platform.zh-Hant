@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;Data Science Workspace;popular topics
+keywords: Experience Platform;home;Data Science Workspace;popular topics;data science workspace;data science
 solution: Experience Platform
 title: 資料科學工作區概觀
 topic: overview
+description: 本指南概述與Data Science Workspace相關的主要概念。
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 8f7ce97cdefd4fe79cb806e71e12e936caca3774
 workflow-type: tm+mt
-source-wordcount: '2569'
+source-wordcount: '2584'
 ht-degree: 0%
 
 ---
@@ -99,7 +100,7 @@ Adobe [!DNL Data Science Workspace]Experience Platform可讓您將以體驗為�
 
 - 瀏覽預先建立的方式，以符合您的業務需求，並依現狀使用或設定，以節省時間。
 - 從頭開始建立配方，使用Jupyter Notebook中的製作執行時期來開發和註冊配方。
-- 使用和之間提供的驗證和整合，將Adobe Experience Platform以外 [!DNL Data Science Workspace] 撰寫的方式上傳至儲存庫或從 [!DNL Git]儲存庫匯入方式 [!DNL Git] 代碼 [!DNL Data Science Workspace]。
+- 使用和之間的驗證和整合，將Adobe Experience Platform以外 [!DNL Data Science Workspace] 撰寫的方式上傳至儲存庫或從 [!DNL Git]儲存庫匯入方式 [!DNL Git] 代碼 [!DNL Data Science Workspace]。
 
 ### 實驗
 
