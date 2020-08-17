@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API
+keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API;unified profile;Unified Profile;unified;Profile;rtcp;XDM graphs
 solution: Adobe Experience Platform
 title: 即時客戶個人檔案總覽
 topic: guide
+description: 即時客戶描述檔是一般查閱實體儲存，可合併來自各種企業資料資產的資料，然後以個別客戶描述檔和相關時間系列事件的形式提供對該資料的存取。 此功能可讓行銷人員跨多個通道，推動與受眾之間協調、一致且相關的體驗。
 translation-type: tm+mt
-source-git-commit: fa439ebb9d02d4a08c8ed92b18f2db819d089174
+source-git-commit: 05032ba72afd5224e33cb4fdc93c97ba6ec6f8e8
 workflow-type: tm+mt
-source-wordcount: '1665'
+source-wordcount: '1718'
 ht-degree: 1%
 
 ---
