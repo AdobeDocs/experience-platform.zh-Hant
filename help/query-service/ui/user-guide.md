@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Query editor;query editor
 solution: Experience Platform
-title: Adobe Experience Platform Query Service查詢編輯器指南
+title: 查詢編輯器使用手冊
 topic: query editor
+description: Query Editor是Adobe Experience Platform Query Service提供的互動式工具，可讓您在Experience Platform使用者介面中編寫、驗證及執行客戶體驗資料查詢。 Query Editor支援開發分析和資料探索的查詢，並可讓您執行互動式查詢以用於開發，以及非互動式查詢以填入Experience Platform中的資料集。
 translation-type: tm+mt
-source-git-commit: bfbf2074a9dcadd809de043d62f7d2ddaa7c7b31
+source-git-commit: 3376d6cace9ab196f457e2bf7b84cde06693103c
 workflow-type: tm+mt
-source-wordcount: '1027'
+source-wordcount: '1086'
 ht-degree: 1%
 
 ---
