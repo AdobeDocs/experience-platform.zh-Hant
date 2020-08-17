@@ -4,9 +4,9 @@ seo-title: Adobe Experience Platform Web SDK轉換個人化內容
 description: 瞭解如何使用Experience Platform Web SDK呈現個人化內容
 seo-description: 瞭解如何使用Experience Platform Web SDK呈現個人化內容
 translation-type: tm+mt
-source-git-commit: 7b07a974e29334cde2dee7027b9780a296db7b20
+source-git-commit: c342e8d7698c1d213658f3f1dae751edbde04b83
 workflow-type: tm+mt
-source-wordcount: '229'
+source-wordcount: '237'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # 個人化選項概觀
 
-Adobe Experience Platform支援在Adobe [!DNL Web SDK] 查詢個人化解決方案，包括Adobe Target。 個人化有兩種模式： 擷取可自動轉譯的內容，以及開發人員必須轉譯的內容。 SDK也提供管理閃 [爍的功能](../../edge/solution-specific/target/flicker-management.md)。
+Adobe Experience Platform支援在Adobe [!DNL Web SDK] 查詢個人化解決方案，包括Adobe Target。 個人化有兩種模式：擷取可自動轉譯的內容，以及開發人員必須轉譯的內容。 SDK也提供管理閃 [爍的功能](../../edge/solution-specific/target/flicker-management.md)。
 
 ## 自動呈現內容
 
@@ -40,15 +40,15 @@ alloy("sendEvent", {
 
 ## 手動呈現內容
 
-您可以使用，請求將決策清單作為命令上的承諾 `event` 返回 `scopes`。 範圍是一個字串，可讓個人化解決方案知道您想要哪個決策。
+通過指定選項，您可以請求作為命令承諾返回的 `sendEvent` 決策列 `decisionScopes` 表。 範圍是一個字串，可讓個人化解決方案知道您想要哪個決策。
 
 ```javascript
 alloy("sendEvent",{
     xdm:{...},
-    scopes:['demo-1', 'demo-2']
+    decisionScopes:['demo-1', 'demo-2']
   }).then(function(result){
     if (result.decisions){
-      //do something with the decisions
+      // Do something with the decisions.
     }
   })
 ```
@@ -92,8 +92,8 @@ alloy("sendEvent",{
 
 >[!TIP]
 >
-> 如果您使用 [!DNL Target] 範圍會變成伺服器上的mBox，則只有這些範圍會一次全部是要求，而非個別。 全域mbox一律會傳送。
+> 如果您使 [!DNL Target]用，示波器會變成伺服器上的mBox，只會一次要求所有mBox，而非個別要求。 全域mbox一律會傳送。
 
 ### 擷取自動內容
 
-如果您想要包含 `result.decisions` 自動可轉譯的決策，可以將其設 `renderDecisions` 置為false並包含特殊範圍 `__view__`。
+如果要包含自動可 `result.decisions` 渲染決策，而「不使用合金」(Not have Alloy)自動渲染決策，可以將其設定為 `renderDecisions``false`，並包括特殊範圍 `__view__`。
