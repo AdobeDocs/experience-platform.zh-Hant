@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;CJA;journey analytics;customer journey analytics;campaign orchestration;orchestration;customer journey;journey
 solution: Experience Platform
 title: Adobe Experience Platform概觀
 topic: getting started
+description: Adobe Experience Platform是市面上功能最強大、最靈活、最開放的系統，可協助您建立和管理能推動客戶體驗的完整解決方案。 Experience Platform可讓組織集中管理和標準化來自任何系統的客戶資料和內容，並套用資料科學和機器學習，大幅改善多樣化個人化體驗的設計和提供。
 translation-type: tm+mt
-source-git-commit: 99bee24a8b1a0a212424ca63464f7733adba2ba2
+source-git-commit: 4c3a947051c11860ab4f0f53b48d8f4bda8dc195
 workflow-type: tm+mt
-source-wordcount: '815'
+source-wordcount: '872'
 ht-degree: 3%
 
 ---
@@ -20,7 +21,7 @@ ht-degree: 3%
 
 Adobe Experience Platform是市面上功能最強大、最靈活、最開放的系統，可協助您建立和管理能推動客戶體驗的完整解決方案。 [!DNL Experience Platform] 讓組織能夠集中化和標準化任何系統的客戶資料和內容，並套用資料科學和機器學習，以大幅改善多樣化個人化體驗的設計和提供。
 
-以開放API為基礎， [!DNL Experience Platform] 將系統的完整功能公開給開發人員，支援使用熟悉工具輕鬆整合企業解決方案。 [!DNL Experience Platform] 也支援合作夥伴以視需要建立和整合其產品與技術。 這種強大的功能和靈活 [!DNL Experience Platform] 性讓市場獨一無二。 它為合作夥伴、客戶和開發人員社群提供基礎，以建立推動體驗業務的創新： 透過從客戶及其個人偏好的360度全方位檢視中不斷改善、完全個人化的體驗，超越客戶期望。
+以開放API為基礎， [!DNL Experience Platform] 將系統的完整功能公開給開發人員，支援使用熟悉工具輕鬆整合企業解決方案。 [!DNL Experience Platform] 也支援合作夥伴以視需要建立和整合其產品與技術。 這種強大的功能和靈活 [!DNL Experience Platform] 性讓市場獨一無二。 它為合作夥伴、客戶和開發人員社群提供基礎，以建立推動體驗業務的創新：透過從客戶及其個人偏好的360度全方位檢視中不斷改善、完全個人化的體驗，超越客戶期望。
 
 以下影片概述 [!DNL Experience Platform] 如何建立豐富、相關的即時體驗，首先從客戶的角度，然後從幕後技術的角度。
 
@@ -110,15 +111,15 @@ Adobe Experience Platform檔案提供多種語言版本。 若要變更語言，
 
 ## 參考檔案與資源
 
-* [**發行說明&#x200B;**](../release-notes/latest/latest.md)<br/>尋找最新發行的相關資訊，並[!DNL Experience Platform]檢視過去的發行。
+* [**發行說明**](../release-notes/latest/latest.md)<br/>&#x200B;尋找最新發行的相關資訊，並 [!DNL Experience Platform] 檢視過去的發行。
 
-* [**辭彙表&#x200B;**](glossary.md)<br/>檢閱Adobe Experience Platform術語。
+* [**辭彙表**](glossary.md)<br/>&#x200B;檢閱Adobe Experience Platform術語。
 
-* [**疑難排解指&#x200B;**](troubleshooting.md)<br/>南尋找常見錯誤的解析度，以及常見問題的解答。
+* [**疑難排解指**](troubleshooting.md)<br/>&#x200B;南尋找常見錯誤的解析度，以及常見問題的解答。
 
-* [**API基礎&#x200B;**](api-fundamentals.md)<br/>瞭解使用API的基本[!DNL Platform]知識。
+* [**API基礎**](api-fundamentals.md)<br/>&#x200B;瞭解使用API的基本 [!DNL Platform] 知識。
 
-* [**API參考&#x200B;**](https://www.adobe.io/apis/experienceplatform/home/api-reference.html)<br/>Discover[!DNL Experience Platform]API，包括標題、參數、範例要求和回應。*這些檔案是在Adobe I/O上代管。*
+* [**API參考**](https://www.adobe.io/apis/experienceplatform/home/api-reference.html)<br/>Discover [!DNL Experience Platform] API，包括標題、參數、範例要求和回應。 *這些檔案是在Adobe I/O上代管。*
 
 ## Adobe Experience Platform整合視訊資源
 
