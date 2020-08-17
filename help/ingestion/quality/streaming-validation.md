@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;streaming
 solution: Experience Platform
 title: 串流擷取驗證
 topic: overview
+description: 串流擷取可讓您使用即時串流端點，將資料上傳至Adobe Experience Platform。 串流擷取API支援同步和非同步兩種驗證模式。
 translation-type: tm+mt
-source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
+source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
 workflow-type: tm+mt
-source-wordcount: '815'
+source-wordcount: '843'
 ht-degree: 3%
 
 ---
@@ -20,8 +21,8 @@ ht-degree: 3%
 
 本指南需要有效瞭解Adobe Experience Platform的下列元件：
 
-- [!DNL Experience Data Model (XDM) System](../../xdm/home.md): 組織客戶體驗資料 [!DNL Experience Platform] 的標準化架構。
-- [!DNL Streaming Ingestion](../streaming-ingestion/overview.md): 其中一種方法可傳送資料 [!DNL Experience Platform]。
+- [!DNL Experience Data Model (XDM) System](../../xdm/home.md):組織客戶體驗資料 [!DNL Experience Platform] 的標準化架構。
+- [!DNL Streaming Ingestion](../streaming-ingestion/overview.md):其中一種方法可傳送資料 [!DNL Experience Platform]。
 
 ### 讀取範例API呼叫
 
@@ -31,7 +32,7 @@ ht-degree: 3%
 
 若要呼叫API，您必 [!DNL Platform] 須先完成驗證教 [學課程](../../tutorials/authentication.md)。 完成驗證教學課程後，將提供所有 [!DNL Experience Platform] API呼叫中每個必要標題的值，如下所示：
 
-- 授權： 生產者 `{ACCESS_TOKEN}`
+- 授權：生產者 `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
