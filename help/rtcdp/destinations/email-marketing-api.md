@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 建立電子郵件行銷目標
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: d833257b4dffbf2a02ab4a3fc7a6a9e7347e7df5
+source-git-commit: fa439ebb9d02d4a08c8ed92b18f2db819d089174
 workflow-type: tm+mt
-source-wordcount: '1611'
+source-wordcount: '1610'
 ht-degree: 1%
 
 ---
@@ -55,7 +55,8 @@ ht-degree: 1%
 
 * x-sandbox-name: `{SANDBOX_NAME}`
 
->[!Note]
+>[!NOTE]
+>
 >如需中沙盒的詳細資訊 [!DNL Experience Platform]，請參閱沙 [盒概述檔案](../../sandboxes/home.md)。
 
 所有包含裝載(POST、PUT、PATCH)的請求都需要額外的媒體類型標題：
