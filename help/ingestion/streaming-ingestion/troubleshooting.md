@@ -1,10 +1,10 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;streaming
 solution: Experience Platform
 title: 串流擷取疑難排解
 topic: troubleshooting
 translation-type: tm+mt
-source-git-commit: bfbf2074a9dcadd809de043d62f7d2ddaa7c7b31
+source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
 workflow-type: tm+mt
 source-wordcount: '993'
 ht-degree: 0%
@@ -26,9 +26,9 @@ Adobe Experience Platform提 [!DNL Data Ingestion] 供REST風格的API，您可�
 
 [!DNL Data Ingestion] 利用 [!DNL Experience Data Model] (XDM)模式來驗證傳入資料的格式。 發送不符合預定義XDM模式結構的資料將導致接收失敗。 有關XDM及其在中使用的詳細信 [!DNL Experience Platform]息，請參閱 [XDM系統概述](../../xdm/home.md)。
 
-串流擷取支援兩種驗證模式： 同步與非同步。 每個驗證方法處理失敗資料的方式都不同。
+串流擷取支援兩種驗證模式：同步與非同步。 每個驗證方法處理失敗資料的方式都不同。
 
-**在您的開發流程中** ，應使用同步驗證。 失敗驗證的記錄會被丟棄，並傳回錯誤訊息，說明其失敗的原因(例如： &quot;無效的XDM消息格式&quot;)。
+**在您的開發流程中** ，應使用同步驗證。 失敗驗證的記錄會被丟棄，並傳回錯誤訊息，說明其失敗的原因(例如：&quot;無效的XDM消息格式&quot;)。
 
 **在生產中** ，應使用非同步驗證。 任何未通過驗證的格式錯誤的資料都會作為失敗的 [!DNL Data Lake] 批處理檔案發送到該檔案，以便稍後檢索該檔案以進一步分析。
 
@@ -72,7 +72,7 @@ Adobe Experience Platform提 [!DNL Data Ingestion] 供REST風格的API，您可�
 
 成功的單一訊息API要求會傳回狀態碼200。 成功（或部分成功）批次訊息API請求會傳回狀態代碼207。
 
-下列JSON是含有兩則訊息之API要求的範例回應物件： 一個成功，一個失敗。 成功串流的訊息會傳回 `xactionId` 屬性。 無法串流的訊息會傳回屬 `statusCode` 性和回應，並 `message` 包含更多資訊。
+下列JSON是含有兩則訊息之API要求的範例回應物件：一個成功，一個失敗。 成功串流的訊息會傳回 `xactionId` 屬性。 無法串流的訊息會傳回屬 `statusCode` 性和回應，並 `message` 包含更多資訊。
 
 ```JSON
 {
@@ -98,6 +98,6 @@ Adobe Experience Platform提 [!DNL Data Ingestion] 供REST風格的API，您可�
 
 如果 [!DNL Real-time Customer Profile] 拒絕訊息，很可能是因為身分資訊不正確。 這可能是為身份提供無效值或命名空間的結果。
 
-身份名稱空間有兩種類型： 預設值和自訂值。 使用自訂名稱空間時，請確定名稱空間已在中註冊 [!DNL Identity Service]。 如需使用預 [設和自訂名稱空間的詳細資訊](../../identity-service/namespaces.md) ，請參閱身分名稱空間概觀。
+身份名稱空間有兩種類型：預設值和自訂值。 使用自訂名稱空間時，請確定名稱空間已在中註冊 [!DNL Identity Service]。 如需使用預 [設和自訂名稱空間的詳細資訊](../../identity-service/namespaces.md) ，請參閱身分名稱空間概觀。
 
 您可以使用來查 [!DNL Experience Platform UI](https://platform.adobe.com) 看有關消息未能獲取原因的詳細資訊。 按一 **[!UICONTROL 下左側導覽中的]** 「監控」，然後檢視「串流端對端 __」標籤，以查看在選取時段內串流的訊息批次。
