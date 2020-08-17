@@ -1,10 +1,10 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;enable dataset;Dataset;dataset
 solution: Experience Platform
 title: 資料集使用指南
 topic: datasets
 translation-type: tm+mt
-source-git-commit: bfbf2074a9dcadd809de043d62f7d2ddaa7c7b31
+source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
 workflow-type: tm+mt
 source-wordcount: '1135'
 ht-degree: 0%
@@ -20,12 +20,12 @@ ht-degree: 0%
 
 本使用指南需要有效瞭解Adobe Experience Platform的下列元件：
 
-* [資料集](overview.md): 中用於資料持久性的儲存和管理結構 [!DNL Experience Platform]。
-* [!DNL Experience Data Model (XDM) System](../../xdm/home.md): 組織客戶體驗資料 [!DNL Experience Platform] 的標準化架構。
-   * [架構構成基礎](../../xdm/schema/composition.md): 瞭解XDM架構的基本建置區塊，包括架構組合的主要原則和最佳實務。
-   * [架構編輯器](../../xdm/tutorials/create-schema-ui.md): 瞭解如何使用使用者介面建立您自己 [!DNL Schema Editor] 的自訂 [!DNL Platform] XDM架構。
-* [!DNL Real-time Customer Profile](../../profile/home.md): 根據來自多個來源的匯整資料，提供統一、即時的消費者個人檔案。
-* [!DNL Data Governance](../../data-governance/home.md): 確保遵守有關客戶資料使用的法規、限制和政策。
+* [資料集](overview.md):中用於資料持久性的儲存和管理結構 [!DNL Experience Platform]。
+* [!DNL Experience Data Model (XDM) System](../../xdm/home.md):組織客戶體驗資料 [!DNL Experience Platform] 的標準化架構。
+   * [架構構成基礎](../../xdm/schema/composition.md):瞭解XDM架構的基本建置區塊，包括架構組合的主要原則和最佳實務。
+   * [架構編輯器](../../xdm/tutorials/create-schema-ui.md):瞭解如何使用使用者介面建立您自己 [!DNL Schema Editor] 的自訂 [!DNL Platform] XDM架構。
+* [!DNL Real-time Customer Profile](../../profile/home.md):根據來自多個來源的匯整資料，提供統一、即時的消費者個人檔案。
+* [!DNL Data Governance](../../data-governance/home.md):確保遵守有關客戶資料使用的法規、限制和政策。
 
 ## 檢視資料集
 
@@ -33,7 +33,7 @@ ht-degree: 0%
 
 ![](../images/datasets/user-guide/browse_datasets.png)
 
-按一下資料集的名稱以存取其「資 *[!UICONTROL 料集」活動畫面]* ，並查看您選取之資料集的詳細資訊。 活動頁籤包括圖形，該圖形可視化正在消耗的消息速率以及成功和失敗批的清單。
+按一下資料集的名稱以存取其「資 *[!UICONTROL 料集」活動畫面]* ，並查看您選取之資料集的詳細資訊。 該活動頁籤包括圖形，該圖形可視化正在消耗的消息速率以及成功和失敗批的清單。
 
 ![](../images/datasets/user-guide/dataset_activity_1.png)
 ![](../images/datasets/user-guide/dataset_activity_2.png)
