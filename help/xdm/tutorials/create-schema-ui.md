@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;schema;Schema;create schema;enum;XDM individual profile;primary identity;primary idenity;enum datatype;schema design
 solution: Experience Platform
 title: 使用結構編輯器建立架構
 topic: tutorials
+description: 本教學課程涵蓋使用Experience Platform中的架構編輯器建立架構的步驟。
 translation-type: tm+mt
-source-git-commit: 661789fa15ea11b0e42060b1b90d74785c04fa1f
+source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
 workflow-type: tm+mt
-source-wordcount: '3376'
+source-wordcount: '3392'
 ht-degree: 0%
 
 ---
@@ -24,9 +25,9 @@ ht-degree: 0%
 
 本教學課程需要對使用架構編輯器時涉及的Adobe Experience Platform各個方面有深入的瞭解。 在開始本教學課程之前，請先閱讀說明檔案，瞭解下列概念：
 
-* [!DNL Experience Data Model (XDM)](../home.md): 平台組織客戶體驗資料的標準化架構。
-* [架構構成基礎](../schema/composition.md): 概述XDM結構描述及其構建塊，包括類、混合、資料類型和欄位。
-* [!DNL Real-time Customer Profile](../../profile/home.md): 根據來自多個來源的匯整資料，提供統一、即時的消費者個人檔案。
+* [!DNL Experience Data Model (XDM)](../home.md):平台組織客戶體驗資料的標準化架構。
+* [架構構成基礎](../schema/composition.md):概述XDM結構描述及其構建塊，包括類、混合、資料類型和欄位。
+* [!DNL Real-time Customer Profile](../../profile/home.md):根據來自多個來源的匯整資料，提供統一、即時的消費者個人檔案。
 
 本教學課程要求您具有存取權 [!DNL Experience Platform]。 如果您無權存取中的IMS組織，請先與您的系 [!DNL Experience Platform]統管理員聯絡，然後再繼續。
 
@@ -156,13 +157,13 @@ ht-degree: 0%
 
 按一 **[!UICONTROL 下「忠誠]** 度成員」旁的「新增欄位」，在結構中建立新節點。 此節點（在此範例中稱為&quot;_tenantId&quot;）代表您IMS組織的租用戶ID，前面加上底線。 租用戶ID的存在表示您新增的欄位包含在您組織的命名空間中。
 
-換言之，您新增的欄位對您的組織而言是獨一無二的，而且將儲存在您IMS [!DNL Schema Registry] 組織只能存取的特定區域。 您定義的欄位必須一律新增至您的命名空間，以避免與其他標準類別、混合、資料類型和欄位的名稱產生衝突。
+換言之，您新增的欄位對您的組織而言是獨一無二的，而且將儲存在您IMS [!DNL Schema Registry] 組織只能存取的特定區域。您定義的欄位必須一律新增至您的命名空間，以避免與其他標準類別、混合、資料類型和欄位的名稱產生衝突。
 
 該命名空間節點內部有一個「[!UICONTROL 新欄位]」。 這是「忠誠度詳細資[!UICONTROL 訊]」混合的開始。
 
 ![](../images/tutorials/create-schema/new_field_loyalty.png)
 
-使用 *[!UICONTROL 編輯器右側的「欄位屬性]* 」，首先建立「[!UICONTROL loyant]」欄位，其類型為「[!UICONTROL Object]」，用來保存您的忠誠度相關欄位。 完成後，按一下「 **[!UICONTROL 套用]**」。
+使用 *[!UICONTROL 編輯器右側的「欄位屬性]* 」，首先建立「[!UICONTROL loyant]」欄位，其類型為「[!UICONTROL Object]」，用來保存您的忠誠度相關欄位。 When finished, click **[!UICONTROL Apply]**.
 
 ![](../images/tutorials/create-schema/loyalty_object.png)
 
@@ -172,10 +173,10 @@ ht-degree: 0%
 
 每個欄位都需要下列資訊：
 
-* **[!UICONTROL 欄位名稱]:**欄位的名稱，用駝峰寫的。 範例： loyaltyLevel
-* **[!UICONTROL 顯示名稱]:**欄位名稱，以標題大寫寫。 範例： 忠誠度等級
-* **[!UICONTROL 類型]:**欄位的資料類型。 這包括基本標量類型和中定義的任何資料類型[!DNL Schema Registry]。 範例： 字串、整數、布林值、人員、地址、電話號碼等。
-* **[!UICONTROL 說明]:**該欄位的可選說明應包括在句子中。 （最多200個字元）
+* **[!UICONTROL 欄位名稱]:** 欄位的名稱，用駝峰寫的。 範例：loyaltyLevel
+* **[!UICONTROL 顯示名稱]:** 欄位名稱，以標題大寫寫。 範例：忠誠度等級
+* **[!UICONTROL 類型]:** 欄位的資料類型。 這包括基本標量類型和中定義的任何資料類型 [!DNL Schema Registry]。 範例：字串、整數、布林值、人員、地址、電話號碼等。
+* **[!UICONTROL 說明]:** 該欄位的可選說明應包括在句子中。 （最多200個字元）
 
 「忠誠度」物件的第一個欄位將是名為「[!UICONTROL loyaltyId]」的字串。 將新欄位的類型設定為「[!UICONTROL String]」時，「欄位屬性 *[!UICONTROL 」窗口會填入幾個用於應用約束的選項，包括]* Default Value **[!UICONTROL 、]********** Format Format Legnth和Jonjest LingthMaximum。
 
@@ -194,7 +195,7 @@ ht-degree: 0%
 
 每個欄位都是透過按一 **[!UICONTROL 下忠誠度物件上的「新增欄位]** 」並填入所需資訊來新增。
 
-完成時，「忠誠度」物件將包含下列欄位： 忠誠度ID、點數和會員。
+完成時，「忠誠度」物件將包含下列欄位：忠誠度ID、點數和會員。
 
 ![](../images/tutorials/create-schema/loyalty_object_fields.png)
 
@@ -214,10 +215,10 @@ ht-degree: 0%
 
 有關可用附加約束的詳細資訊：
 
-* **[!UICONTROL 必要]:**指出資料擷取需要此欄位。 任何根據此架構上傳至資料集且不包含此欄位的資料，在擷取時都會失敗。
-* **[!UICONTROL 陣列]:**指出欄位包含一組值，每個值都指定了資料類型。 例如，選取「字串」的資料類型並勾選「陣列」核取方塊表示欄位將包含字串陣列。
-* **[!UICONTROL 列舉]:**指出此欄位必須包含可能值列舉清單中的其中一個值。
-* **[!UICONTROL 身份]:**指出此欄位是身分欄位。 有關身分欄位的詳細資訊，請[參閱本教學課程](#identity-field)。
+* **[!UICONTROL 必要]:** 指出資料擷取需要此欄位。 任何根據此架構上傳至資料集且不包含此欄位的資料，在擷取時都會失敗。
+* **[!UICONTROL 陣列]:** 指出欄位包含一組值，每個值都指定了資料類型。 例如，選取「字串」的資料類型並勾選「陣列」核取方塊表示欄位將包含字串陣列。
+* **[!UICONTROL 列舉]:** 指出此欄位必須包含可能值列舉清單中的其中一個值。
+* **[!UICONTROL 身份]:** 指出此欄位是身分欄位。 有關身分欄位的詳細資訊，請 [參閱本教學課程](#identity-field)。
 
 ## 將多欄位物件轉換為資料類型 {#datatype}
 
@@ -291,7 +292,7 @@ More information about relationships and other schema metadata can be found in t
 
 ## 後續步驟和其他資源
 
-現在，您已完成「忠誠[!UICONTROL 成員]」架構的構成，您可以在編輯器的「結構 ** 」區段中看到完整架構。 單 **[!UICONTROL 擊]** 「保存」(Save [!DNL Schema Library])，模式將保存到中， [!DNL Schema Registry]供訪問。
+現在，您已完成「忠誠[!UICONTROL 成員]」架構的構成，您可以在編輯器的「結構 ** 」區段中看到完整架構。 單 **[!UICONTROL 擊]** 「保存」(Save [!DNL Schema Library])，模式將保存到中， [!DNL Schema Registry]以便由訪問。
 
 您的新架構現在可用來將資料內嵌至 [!DNL Platform]。 請記住，一旦使用架構來收錄資料，則只能進行加性變更。 有關方案 [版本化的詳細資訊](../schema/composition.md) ，請參閱方案構成的基本資訊。
 
