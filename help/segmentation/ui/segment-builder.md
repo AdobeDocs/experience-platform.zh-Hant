@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;segment;Segment;segment builder;Segment builder
 solution: Experience Platform
 title: 區段服務區段產生器使用指南
 topic: ui guide
+description: '「區段產生器」提供豐富的工作區，可讓您與描述檔資料元素互動。 工作區提供建立和編輯規則的直覺式控制項，例如用來表示資料屬性的拖放圖格。 '
 translation-type: tm+mt
-source-git-commit: ab43c677ab45c7aa047a50049c0dd8613b003403
+source-git-commit: 8f7ce97cdefd4fe79cb806e71e12e936caca3774
 workflow-type: tm+mt
-source-wordcount: '1689'
+source-wordcount: '1723'
 ht-degree: 0%
 
 ---
@@ -68,7 +69,7 @@ ht-degree: 0%
 
 區段定義是用於描述目標對象之主要特性或行為的規則集合。 這些規則是使用位於中心的規則產生器畫布來建立的 [!DNL Segment Builder]。
 
-若要將新規則新增至區段定義，請從「欄位」標籤拖曳圖格 **** ，並將其拖曳至規則產生器畫布。 然後，您會根據所新增資料的類型，看到內容特定的選項。 可用的資料類型包括： 字串、日期、 [!DNL ExperienceEvents]事件 [!UICONTROL 類型]和 [!UICONTROL 觀眾]。
+若要將新規則新增至區段定義，請從「欄位」標籤拖曳圖格 **** ，並將其拖曳至規則產生器畫布。 然後，您會根據所新增資料的類型，看到內容特定的選項。 可用的資料類型包括：字串、日期、 [!DNL ExperienceEvents]事件 [!UICONTROL 類型]和 [!UICONTROL 觀眾]。
 
 ![](../images/ui/segment-builder/rule-builder-canvas.png)
 
@@ -140,7 +141,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->觀眾估計是使用當天樣本資料的樣本大小產生。 如果您的描述檔儲存區中有少於100萬個實體，則會使用完整資料集； 100萬到2000萬個單位使用100萬個單位； 超過2000萬個單位，佔全部單位的5%。 有關產生區段估計的詳細資訊，請參閱區 [段建立教學課程的](../tutorials/create-a-segment.md#estimate-and-preview-an-audience) 「估計產生」區段。
+>觀眾估計是使用當天樣本資料的樣本大小產生。 如果您的描述檔儲存區中有少於100萬個實體，則會使用完整資料集；100萬到2000萬個單位使用100萬個單位；超過2000萬個單位，佔全部單位的5%。 有關產生區段估計的詳細資訊，請參閱區 [段建立教學課程的](../tutorials/create-a-segment.md#estimate-and-preview-an-audience) 「估計產生」區段。
 
 ## 後續步驟和其他資源 {#next-steps}
 
