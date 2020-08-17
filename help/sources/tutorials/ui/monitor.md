@@ -1,11 +1,11 @@
 ---
-keywords: Experience Platform;home;popular topics; monitor accounts; monitor dataflows
+keywords: Experience Platform;home;popular topics;monitor accounts;monitor dataflows;data flows
 description: Adobe Experience Platform中的來源連接器可讓您依計畫吸收外部來源的資料。 本教學課程提供從Sources工作區檢視現有帳戶和資料流的步驟。
 solution: Experience Platform
 title: 監視帳戶和資料流
 topic: overview
 translation-type: tm+mt
-source-git-commit: dcdb1eb1f89b7393b83941a18abb2be2afa3576f
+source-git-commit: 04efbf63741ef39bbf0b22795be74087f1f7c595
 workflow-type: tm+mt
 source-wordcount: '893'
 ht-degree: 0%
