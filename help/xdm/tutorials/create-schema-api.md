@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;schema;Schema;create schema;schema api;enum;primary identity;primary idenity;enum datatype;schema design
 solution: Experience Platform
 title: 使用方案註冊表API建立方案
 topic: tutorials
+description: 本教程使用方案註冊表API來引導您完成使用標準類合成方案的步驟。
 translation-type: tm+mt
-source-git-commit: b021b6813af18e29f544dc55541f23dd7dd57d47
+source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
 workflow-type: tm+mt
-source-wordcount: '2322'
+source-wordcount: '2343'
 ht-degree: 1%
 
 ---
@@ -22,9 +23,9 @@ ht-degree: 1%
 
 本指南需要有效瞭解Adobe Experience Platform的下列元件：
 
-* [!DNL Experience Data Model (XDM) System](../home.md): 組織客戶體驗資料 [!DNL Experience Platform] 的標準化架構。
-   * [架構構成基礎](../schema/composition.md): 瞭解XDM架構的基本建置區塊，包括架構組合的主要原則和最佳實務。
-* [!DNL Real-time Customer Profile](../../profile/home.md): 根據來自多個來源的匯整資料，提供統一、即時的消費者個人檔案。
+* [!DNL Experience Data Model (XDM) System](../home.md):組織客戶體驗資料 [!DNL Experience Platform] 的標準化架構。
+   * [架構構成基礎](../schema/composition.md):瞭解XDM架構的基本建置區塊，包括架構組合的主要原則和最佳實務。
+* [!DNL Real-time Customer Profile](../../profile/home.md):根據來自多個來源的匯整資料，提供統一、即時的消費者個人檔案。
 * [!DNL Sandboxes](../../sandboxes/home.md): [!DNL Experience Platform] 提供虛擬沙盒，可將單一執行個體分 [!DNL Platform] 割為不同的虛擬環境，以協助開發和發展數位體驗應用程式。
 
 在開始本教學課程之前，請先閱讀開 [發人員指南](../api/getting-started.md) ，以取得成功呼叫 [!DNL Schema Registry] API所需的重要資訊。 這包括您 `{TENANT_ID}`的「容器」概念，以及提出要求所需的標題（請特別注意「接受」標題及其可能的值）。
@@ -292,7 +293,7 @@ curl -X PATCH \
 
 回應會顯示陣列中新增的混 `meta:extends` 音，並在屬 `$ref` 性中包含混音 `allOf` 。
 
-「忠誠度成員」結構現在應該在陣 `$ref` 列中包含三個 `allOf` 值： 「profile」、「profile-person-details」和「profile-personal-details」，如下所示。
+「忠誠度成員」結構現在應該在陣 `$ref` 列中包含三個 `allOf` 值：「profile」、「profile-person-details」和「profile-personal-details」，如下所示。
 
 ```JSON
 {
@@ -356,7 +357,7 @@ POST /tenant/mixins
 
 **請求**
 
-此請求會建立新的混音，其中包含「忠誠度」物件，其中包含4個忠誠度方案特定欄位： &quot;loyaltyId&quot;、&quot;loyaltyLevel&quot;、&quot;loyaltyPoints&quot;和&quot;memberSince&quot;。
+此請求會建立新的混音，其中包含「忠誠度」物件，其中包含4個忠誠度方案特定欄位：&quot;loyaltyId&quot;、&quot;loyaltyLevel&quot;、&quot;loyaltyPoints&quot;和&quot;memberSince&quot;。
 
 ```SHELL
 curl -X POST\
@@ -956,7 +957,7 @@ curl -X PATCH \
 
 結構描述用於將資料吸收到中 [!DNL Experience Platform]。 這些資料最終會用於多個服務，以建立個人的單一統一檢視。 為協助處理此程式，關鍵欄位可標示為「身分」，而且在擷取資料時，這些欄位中的資料會插入該個人的「身分圖表」中。 圖形資料隨後可由和其他服 [!DNL Real-time Customer Profile](../../profile/home.md) 務訪問， [!DNL Experience Platform] 以提供每個客戶的拼接視圖。
 
-通常標示為「身分」的欄位包括： 電子郵件地址、電話號碼、 [!DNL Experience Cloud ID (ECID)](https://docs.adobe.com/content/help/zh-Hant/id-service/using/home.html)CRM ID或其他唯一ID欄位。
+通常標示為「身分」的欄位包括：電子郵件地址、電話號碼、 [!DNL Experience Cloud ID (ECID)](https://docs.adobe.com/content/help/zh-Hant/id-service/using/home.html)CRM ID或其他唯一ID欄位。
 
 請考慮您組織專屬的任何唯一識別碼，因為這些識別碼可能也是好的識別碼欄位。
 
@@ -1183,7 +1184,7 @@ curl -X GET \
 
 在本教學課程中，會合成一個結構描述零售忠誠度方案的成員。
 
-該模式實現了類 [!DNL XDM Individual Profile] 並結合了多個混合； 使用標準「人員詳細資料」和「個人詳細資料」混合，以及透過教學課程中定義的「忠誠度詳細資料」混合，引入有關忠誠度會員的資訊。
+該模式實現了類 [!DNL XDM Individual Profile] 並結合了多個混合；使用標準「人員詳細資料」和「個人詳細資料」混合，以及透過教學課程中定義的「忠誠度詳細資料」混合，引入有關忠誠度會員的資訊。
 
 以下顯示JSON格式的已完成忠誠度成員結構描述：
 
