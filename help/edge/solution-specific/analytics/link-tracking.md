@@ -4,7 +4,7 @@ seo-title: 使用Adobe Experience Platform Web SDK追蹤Adobe Analytics的連結
 description: 瞭解如何使用Experience Platform Web SDK將連結資料傳送至Adobe Analytics
 seo-description: 瞭解如何使用Experience Platform Web SDK將連結資料傳送至Adobe Analytics
 translation-type: tm+mt
-source-git-commit: ab73e4d793cf39c29ddca385487bf027002db883
+source-git-commit: b50082405cd0392ff827a83ad82091fbcd370b21
 workflow-type: tm+mt
 source-wordcount: '236'
 ht-degree: 0%
@@ -33,7 +33,7 @@ alloy("sendEvent", {
 });
 ```
 
-雖然分析在技術上記錄頁面檢視，即使未設定此變數，但最好在您想要將頁面檢視記錄為明確資料且未來可證明您實施時，設定此變數。
+雖然分析在技術上記錄頁面檢視，即使未設定此變數，但是最好在您想要記錄頁面檢視在資料中明確顯示且未來可證明您實施時，設定此變數。
 
 ## 追蹤連結
 
