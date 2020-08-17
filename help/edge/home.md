@@ -1,10 +1,11 @@
 ---
+keywords: web sdk;SDK;web SDK;Launch;launch
 title: Adobe Experience Platform Web SDK說明
 seo-title: Adobe Experience Platform Web SDK說明
 description: 瞭解Adobe Experience Platform Web SDK是什麼，以及如何使用它。
 seo-description: 可讓Adobe Experience Cloud的客戶與Experience Cloud中的各種服務互動。
 translation-type: tm+mt
-source-git-commit: fc8b26e237821d5fa2d72fb38189894ed0b05271
+source-git-commit: 8f7ce97cdefd4fe79cb806e71e12e936caca3774
 workflow-type: tm+mt
 source-wordcount: '702'
 ht-degree: 2%
@@ -20,9 +21,9 @@ Adobe Experience Platform Web SDK是用戶端JavaScript程式庫，可讓Adobe E
 
 [!DNL Adobe Experience Platform Web SDK] 是組成Experience Edge的系列的一部分。 Experience Edge包含三種技術：
 
-* **[!DNL Adobe Experience Platform Web SDK]:**JavaScript SDK和擴充功能可[!DNL Launch]大幅簡化部署技術的作[!DNL Adobe]業
+* **[!DNL Adobe Experience Platform Web SDK]:** JavaScript SDK和擴充功能可 [!DNL Launch] 大幅簡化部署技術的作 [!DNL Adobe] 業
 * **Adobe Experience Platform Mobile SDK:** v5行動SDK的擴充功能，可讓客戶使用新的部署方法
-* **[!DNL Adobe Experience Platform Edge Network]:**全球分散式伺服器網路，提供新的產品部署方[!DNL Adobe]法
+* **[!DNL Adobe Experience Platform Edge Network]:** 全球分散式伺服器網路，提供新的產品部署方 [!DNL Adobe] 法
 
 此 [!DNL Adobe Experience Edge] 新架構適用於所有可定址通道的低延遲資料收集、可插拔運算和快速啟動資料。
 
