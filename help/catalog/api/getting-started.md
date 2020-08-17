@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;catalog service;catalog;Catalog service;Catalog
 solution: Experience Platform
 title: 目錄服務開發人員指南
 topic: developer guide
+description: 本開發人員指南提供協助您開始使用目錄API的步驟。 然後，本指南提供使用目錄執行關鍵操作的範例API調用。
 translation-type: tm+mt
-source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
+source-git-commit: c081a7521be9715ca32d35504922a70767924fd7
 workflow-type: tm+mt
-source-wordcount: '558'
+source-wordcount: '584'
 ht-degree: 0%
 
 ---
@@ -22,9 +23,9 @@ ht-degree: 0%
 
 [!DNL Catalog] 跟蹤中數種資源和操作的元資料 [!DNL Experience Platform]。 本開發人員指南需要對建立和管理這些資 [!DNL Experience Platform] 源所涉及的各種服務有良好的認識：
 
-* [!DNL Experience Data Model (XDM)](../../xdm/home.md): 組織客戶體驗資料 [!DNL Platform] 的標準化架構。
-* [批次擷取](../../ingestion/batch-ingestion/overview.md): 如何 [!DNL Experience Platform] 從資料檔案（例如CSV和Parpec）中擷取和儲存資料。
-* [串流擷取](../../ingestion/streaming-ingestion/overview.md): 如 [!DNL Experience Platform] 何即時從用戶端和伺服器端裝置擷取和儲存資料。
+* [!DNL Experience Data Model (XDM)](../../xdm/home.md):組織客戶體驗資料 [!DNL Platform] 的標準化架構。
+* [批次擷取](../../ingestion/batch-ingestion/overview.md):如何 [!DNL Experience Platform] 從資料檔案（例如CSV和Parpec）中擷取和儲存資料。
+* [串流擷取](../../ingestion/streaming-ingestion/overview.md):如 [!DNL Experience Platform] 何即時從用戶端和伺服器端裝置擷取和儲存資料。
 
 以下章節提供您必須知道或掌握的額外資訊，才能成功呼叫 [!DNL Catalog Service] API。
 
@@ -36,7 +37,7 @@ ht-degree: 0%
 
 若要呼叫API，您必 [!DNL Platform] 須先完成驗證教 [學課程](../../tutorials/authentication.md)。 完成驗證教學課程後，將提供所有 [!DNL Experience Platform] API呼叫中每個必要標題的值，如下所示：
 
-* 授權： 生產者 `{ACCESS_TOKEN}`
+* 授權：生產者 `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
 * x-gw-ims-org-id: `{IMS_ORG}`
 
@@ -50,7 +51,7 @@ ht-degree: 0%
 
 所有包含裝載(POST、PUT、PATCH)的請求都需要額外的標題：
 
-* 內容類型： application/json
+* 內容類型：application/json
 
 ## API呼叫的最 [!DNL Catalog] 佳實務
 
