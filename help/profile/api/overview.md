@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API
+keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API;unified profile;Unified Profile;unified;Profile;rtcp;enable profile;Enable profile
 solution: Adobe Experience Platform
 title: 即時客戶個人檔案API開發人員指南
 topic: guide
+description: 即時客戶個人檔案API包含多個端點，概述如下。
 translation-type: tm+mt
-source-git-commit: 84789a8e6e8c1f0fc91d0b54ba29d449963c3117
+source-git-commit: 04efbf63741ef39bbf0b22795be74087f1f7c595
 workflow-type: tm+mt
-source-wordcount: '796'
+source-wordcount: '806'
 ht-degree: 0%
 
 ---
@@ -32,7 +33,7 @@ API包 [!DNL Real-time Customer Profile] 含多個端點，概述如下。 如�
 
 ## 邊緣投影 {#edge-projections}
 
-Adobe Experience Platform讓資料可輕鬆地在戰略性位置的伺服器（稱為「邊緣」）上存取，讓客戶體驗即時個人化。 API [!DNL Real-time Customer Profile] 提供端點，讓您透過稱為「投影」的元件處理邊緣。 這包括確定應將哪些資料投影到每個邊的投影配置，以及定義投影路由位置的投影目標。 有關使用邊緣投影的詳細資訊，請造訪投影 [設定和目標端點指南](edge-projections.md)。
+Adobe Experience Platform讓資料可輕鬆在戰略性位置的伺服器（稱為「邊緣」）上存取，讓客戶體驗即時個人化。 API [!DNL Real-time Customer Profile] 提供端點，讓您透過稱為「投影」的元件處理邊緣。 這包括確定應將哪些資料投影到每個邊的投影配置，以及定義投影路由位置的投影目標。 有關使用邊緣投影的詳細資訊，請造訪投影 [設定和目標端點指南](edge-projections.md)。
 
 ## 實體([!DNL Profile] 存取) {#entities}
 
