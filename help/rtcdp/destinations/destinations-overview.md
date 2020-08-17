@@ -1,10 +1,11 @@
 ---
+keywords: RTCDP;rtcdp
 title: 目的地概述
 seo-title: 目的地概述
 description: 目標是與目標平台預先建立的整合，可讓即時客戶資料平台順暢地啟動資料。 您可以使用Adobe即時客戶資料平台中的「目標」來啟用您已知和未知的跨通道行銷宣傳、電子郵件宣傳、目標廣告及許多其他使用案例資料。
 seo-description: 目標是與目標平台預先建立的整合，可讓即時客戶資料平台順暢地啟動資料。 您可以使用Adobe即時客戶資料平台中的「目標」來啟用您已知和未知的跨通道行銷宣傳、電子郵件宣傳、目標廣告及許多其他使用案例資料。
 translation-type: tm+mt
-source-git-commit: 7aa15772003cce1dfc7c3636048bce9a35bf8197
+source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
 workflow-type: tm+mt
 source-wordcount: '526'
 ht-degree: 0%
