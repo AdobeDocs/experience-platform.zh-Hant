@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;GDPR;gdpr
 solution: Experience Platform
 title: GDPR 術語
 topic: troubleshooting
+description: 以下是與通用資料保護規則(GDPR)相關之關鍵術語的定義清單。
 translation-type: tm+mt
-source-git-commit: 5b32c1955fac4f137ba44e8189376c81cdbbfc40
+source-git-commit: c081a7521be9715ca32d35504922a70767924fd7
 workflow-type: tm+mt
-source-wordcount: '1066'
-ht-degree: 10%
+source-wordcount: '1084'
+ht-degree: 11%
 
 ---
 
@@ -86,7 +87,7 @@ __IMS組織ID:__ 指服務對服務驗證的Adobe授權Token，不需要使用�
 
 ## M
 
-__主要機構：__ 在歐盟內部，對資料處理做出主要決策的地方； 處理器。
+__主要機構：__ 在歐盟內部，對資料處理做出主要決策的地方；處理器。
 
 ## N
 
@@ -100,7 +101,7 @@ __個人資料洩露：__ 違反安全性導致意外或非法存取、銷毀、
 
 __依設計劃分的隱私權：__ 這一原則要求從系統設計開始就納入資料保護，而不是添加。
 
-__隱私權影響評估__: 一種工具，用於識別並降低實體的隱私風險，方法是分析所處理的個人資料以及保護資料的現行政策。
+__隱私權影響評估__:一種工具，用於識別並降低實體的隱私風險，方法是分析所處理的個人資料以及保護資料的現行政策。
 
 __處理：__ 對個人資料執行的任何操作，不論是否透過自動方式執行，包括收集、使用、錄制等。
 
