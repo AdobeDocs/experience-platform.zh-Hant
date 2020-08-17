@@ -1,10 +1,10 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;ingested data
 solution: Experience Platform
 title: Adobe Experience Platform批次擷取疑難排解指南
 topic: troubleshooting
 translation-type: tm+mt
-source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
+source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
 workflow-type: tm+mt
 source-wordcount: '1335'
 ht-degree: 1%
@@ -259,6 +259,6 @@ curl -X GET "https://platform.adobe.io/data/foundation/catalog/batches/{BATCH_ID
 | 106 | 資料集檔案為空。 |
 | 118 | CSV檔案包含空的標題列。 |
 | 200 | 批已接受處理，並將轉換到最終狀態，如「活動」或「失敗」。 提交後，可以使用端點監視批 `GetBatch` 處理。 |
-| 400 | Bad Request。如果批中缺少或重疊的塊，則返回。 |
+| 400 | Bad Request. 如果批中缺少或重疊的塊，則返回。 |
 
 [large-file-upload]: batch_data_ingestion_developer_guide.md#how-to-ingest-large-parquet-files
