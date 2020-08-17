@@ -1,10 +1,11 @@
 ---
+keywords: RTCDP;rtcdp
 title: Adobe即時客戶資料平台快速入門
 seo-title: Adobe即時客戶資料平台快速入門
 description: Adobe即時客戶資料平台的範例案例
 seo-description: Adobe即時客戶資料平台的範例案例
 translation-type: tm+mt
-source-git-commit: b96286f6a06f0583b45343a513ee64f0025d79a7
+source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
 workflow-type: tm+mt
 source-wordcount: '2326'
 ht-degree: 0%
@@ -102,7 +103,7 @@ Luma可將訪客的行為對應至Adobe Experience Platform上的使用者個人
 
 ## 個人化使用者體驗
 
-Sarah受到了忠誠的歡迎，並感謝她成為銅牌會員，獲得了更多關於福利以及如何提高她的地位和分數的資訊。
+Sarah受到歡迎，並感謝她成為銅牌會員，獲得更多有關福利以及如何提高她的地位和分數的資訊。
 
 她點選首頁以瀏覽更多內容。
 
@@ -128,7 +129,7 @@ Adobe Real-time Customer Data Platform採用Adobe Experience Platform，專為�
 
 ## 使用多個資料來源
 
-Luma團隊在單一位置擁有所有行為和客戶資料。
+Luma團隊在單一位置擁有所有的行為和客戶資料。
 
 ![image](assets/luma-dash.png)
 
