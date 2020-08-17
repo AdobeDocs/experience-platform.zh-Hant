@@ -1,28 +1,29 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;namespace;Namespace;Namespaces;namespaces;identity namespace;Identity namespace;identity;Identity;Identity service;identity service
 solution: Experience Platform
 title: Adobe Experience Platform Identity Service
 topic: overview
+description: '身分識別命名空間是 Identity Service 的元件，用途是作為身分識別相關內容的指標。例如，他們會將"name<span>@email.com"值區分為電子郵件地址，或將"443522"區分為數值CRM ID。 '
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
 workflow-type: tm+mt
-source-wordcount: '721'
-ht-degree: 1%
+source-wordcount: '761'
+ht-degree: 4%
 
 ---
 
 
 # 身分命名空間概觀
 
-身份名稱空間是用 [!DNL Identity Service](./home.md) 作身份相關上下文的指標的元件。 例如，他們會將&quot;name<span>@email.com&quot;值區分為電子郵件地址，或將&quot;443522&quot;區分為數值CRM ID。
+Identity namespaces are a component of [!DNL Identity Service](./home.md) that serve as indicators of the context to which an identity relates. 例如，他們會將&quot;name<span>@email.com&quot;值區分為電子郵件地址，或將&quot;443522&quot;區分為數值CRM ID。
 
 ## 快速入門
 
 使用身分名稱空間需要瞭解所涉及的各種Adobe Experience Platform服務。 開始使用名稱空間之前，請先閱讀下列服務的檔案：
 
-- [!DNL Real-time Customer Profile](../profile/home.md): 根據來自多個來源的匯整資料，即時提供統一的客戶個人檔案。
-- [!DNL Identity Service](./home.md): 跨裝置和系統橋接身分，以更全面地瞭解個別客戶及其行為。
-- [!DNL Privacy Service](../privacy-service/home.md): 身分名稱空間用於遵守通用資料保護規則(GDPR)，在GDPR中，可以相對於名稱空間提出GDPR請求。
+- [!DNL Real-time Customer Profile](../profile/home.md):根據來自多個來源的匯整資料，即時提供統一的客戶個人檔案。
+- [!DNL Identity Service](./home.md):跨裝置和系統橋接身分，以更全面地瞭解個別客戶及其行為。
+- [!DNL Privacy Service](../privacy-service/home.md):身分名稱空間用於遵守通用資料保護規則(GDPR)，在GDPR中，可以相對於名稱空間提出GDPR請求。
 
 ## 瞭解身分名稱空間
 
@@ -43,8 +44,8 @@ ht-degree: 1%
 | Cookie | 這些身份對於擴展至關重要，並且是身份圖的大部分。 然而，從本質上講，它們會迅速衰敗，並隨著時間而失去價值。 刪除Cookie會特別在識別圖中處理。 |
 | 跨裝置 | 這表明， [!DNL Identity Service] 應將此視為強大的人物識別碼，並永久保留。 例如登入ID、CRM ID、忠誠度ID等。 |
 | 裝置 | 包含IDFA、GAID和其他IOT ID。 家庭中的人可以分享。 |
-| 電子郵件 | 此類型的身分識別資訊(PII)。 這是一個靈敏 [!DNL Identity Service] 地處理值的指標。 |
-| 行動 | 此類型的身份包括PII。 這是一個靈敏 [!DNL Identity Service] 地處理值的指標。 |
+| 電子郵件 | 此類型的身分識別資訊(PII)。 這是一個靈敏地處 [!DNL Identity Service] 理這個值的指示。 |
+| 行動 | 此類型的身份包括PII。 這是一個靈敏地處 [!DNL Identity Service] 理這個值的指示。 |
 | 非人 | 用於儲存需要名稱空間但未綁定到人員群集的標識符。 然後，從標識圖中過濾這些標識符。 可能的使用案例包括與產品、組織、商店等相關的資料。 （例如產品SKU。） |
 | 電話 | 此類型的身份包括PII。 這表明該 [!DNL Identity Service] 值處理靈敏。 |
 
