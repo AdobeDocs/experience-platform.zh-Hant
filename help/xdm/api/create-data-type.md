@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;data type;data types;Data types;Data type;datatype;Datatype
 solution: Experience Platform
 title: 建立資料類型
 topic: developer guide
+description: '當您的組織希望以多種方式使用常見的資料結構時，您可能希望定義資料類型。 資料類型允許一致地使用多欄位結構，其靈活性比混合要大，因為通過將它們添加為欄位的「類型」，它們可以包含在模式中的任意位置。 '
 translation-type: tm+mt
-source-git-commit: d04bf35e49488ab7d5e07de91eb77d0d9921b6fa
+source-git-commit: cc81d590f308c7e2677cec000c27e8aca42437f5
 workflow-type: tm+mt
-source-wordcount: '200'
-ht-degree: 1%
+source-wordcount: '256'
+ht-degree: 0%
 
 ---
 
