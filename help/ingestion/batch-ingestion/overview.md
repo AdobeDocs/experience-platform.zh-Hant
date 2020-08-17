@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;data ingestion;batch;Batch;enable dataset
 solution: Experience Platform
 title: Adobe Experience Platform批次擷取概觀
 topic: overview
+description: 批次擷取API可讓您將資料以批次檔案的形式內嵌至Adobe Experience Platform。 所吸收的資料可以是CRM系統中平面檔案（例如鑲木地板檔案）的描述檔資料，或是符合Experience Data Model(XDM)註冊表中已知架構的資料。
 translation-type: tm+mt
-source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
+source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
 workflow-type: tm+mt
-source-wordcount: '1144'
+source-wordcount: '1196'
 ht-degree: 2%
 
 ---
@@ -53,7 +54,7 @@ API [!DNL Data Ingestion] 可讓您將資料以批次形式（由一或多個要
 
 若要呼叫API，您必 [!DNL Platform] 須先完成驗證教 [學課程](../../tutorials/authentication.md)。 完成驗證教學課程後，將提供所有 [!DNL Experience Platform] API呼叫中每個必要標題的值，如下所示：
 
-- 授權： 生產者 `{ACCESS_TOKEN}`
+- 授權：生產者 `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
@@ -67,7 +68,7 @@ API [!DNL Data Ingestion] 可讓您將資料以批次形式（由一或多個要
 
 所有包含裝載(POST、PUT、PATCH)的請求都需要額外的標題：
 
-- 內容類型： application/json
+- 內容類型：application/json
 
 ### 建立批次
 
