@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;segmentation;segmentation service;troubleshooting;API;seg;
+keywords: Experience Platform;segmentation;segmentation service;troubleshooting;API;seg;segment;Segment
 solution: Adobe Experience Platform
 title: 區段搜尋端點
 topic: guide
+description: 「區段搜尋」可用來搜尋各種資料來源所包含的欄位，並幾乎即時傳回這些欄位。 本指南提供相關資訊，以協助您進一步瞭解區段搜尋，並包含使用API執行基本動作的範例API呼叫。
 translation-type: tm+mt
-source-git-commit: 995fadef9abacf22d0561e0590dfbe172adf0a43
+source-git-commit: 23516c66a67ae5663dcf90a40ccba98bfd266ab0
 workflow-type: tm+mt
-source-wordcount: '1138'
+source-wordcount: '1179'
 ht-degree: 2%
 
 ---
@@ -24,7 +25,7 @@ ht-degree: 2%
 
 除了快速入門區段中概述的必要標題外，對「區段搜尋」端點的所有要求都需要下列額外標題：
 
-- x-ups-search-version: &quot;1.0&quot;
+- x-ups-search-version:&quot;1.0&quot;
 
 ### 跨多個名稱空間搜尋
 
@@ -254,7 +255,7 @@ curl -X GET \
 | foo AND列 | 布爾式搜尋。 如果在任何可搜尋 **的欄位** 中都找到&quot;foo&quot;和&quot;bar&quot;兩字，就會傳回結果。 |
 | foo OR列 | 布爾式搜尋。 如果在任何可搜 **尋的欄位中** ，找到&quot;foo&quot;或&quot;bar&quot;兩字，就會傳回結果。 |
 | foo NOT欄 | 布爾式搜尋。 如果找到&quot;foo&quot;字詞，但在任何可搜尋欄位中找不到&quot;bar&quot;字詞，則會傳回結果。 |
-| 名稱： foo AND列 | 布爾式搜尋。 如果在「名稱」欄 **位中** ，同時找到&quot;foo&quot;和&quot;bar&quot;兩個字，則會傳回結果。 |
+| 名稱：foo AND列 | 布爾式搜尋。 如果在「名稱」欄 **位中** ，同時找到&quot;foo&quot;和&quot;bar&quot;兩個字，則會傳回結果。 |
 | run* | 通配符搜索。 使用星號(*)符合0個或多個字元，這表示如果任何可搜尋欄位的內容包含以&quot;run&quot;開頭的字詞，則會傳回結果。 例如，如果出現&quot;runs&quot;、&quot;running&quot;、&quot;runner&quot;或&quot;runt&quot;等字詞，則會傳回結果。 |
 | 小卡？ | 通配符搜索。 使用問號(?) 只匹配一個字元，這表示如果任何可搜尋欄位的內容以「cam」和其他字母開頭，則會傳回結果。 例如，如果出現&quot;camp&quot;或&quot;cams&quot;字樣，則會傳回結果，但如果出現&quot;camera&quot;或&quot;campfire&quot;字樣，則不會傳回結果。 |
 | &quot;藍傘&quot; | 片語搜尋。 如果任何可搜尋欄位的內容包含完整字句「blue burmal」，則會傳回結果。 |
