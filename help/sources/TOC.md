@@ -3,9 +3,9 @@ product: experience-platform
 audience: user
 user-guide-title: Adobe Experience Platform來源連接器說明
 translation-type: tm+mt
-source-git-commit: 2ee74c9ea0e4838eacfaba1b1e6b8aac7012f427
+source-git-commit: 18af4226c07cd7bc8a093aa4b1ce2b5f8f018cb6
 workflow-type: tm+mt
-source-wordcount: '613'
+source-wordcount: '616'
 ht-degree: 0%
 
 ---
@@ -194,4 +194,5 @@ ht-degree: 0%
    - [啟用傳入資料以填入客戶個人檔案](tutorials/ui/profile.md)
    - [監視帳戶和資料流](tutorials/ui/monitor.md)
    - [刪除資料流](tutorials/ui/delete.md)
+- [流量執行通知](notifications.md)
 - [平台版本注意事項](https://www.adobe.com/go/platform-release-notes-en)
