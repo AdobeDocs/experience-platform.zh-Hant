@@ -1,10 +1,11 @@
 ---
+keywords: segmentation; segmentation rtcdp;real time customer data platform segmentation
 title: 區段服務概觀
 seo-title: Adobe即時客戶資料平台中的細分服務
 description: 描述分段服務的概述。
 seo-description: 概述，說明Adobe即時客戶資料平台上的細分服務和細分。
 translation-type: tm+mt
-source-git-commit: b96286f6a06f0583b45343a513ee64f0025d79a7
+source-git-commit: 23516c66a67ae5663dcf90a40ccba98bfd266ab0
 workflow-type: tm+mt
 source-wordcount: '254'
 ht-degree: 1%
