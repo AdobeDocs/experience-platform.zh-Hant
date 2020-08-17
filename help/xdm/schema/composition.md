@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;schema;Schema;enum;mixin;Mixin;Mixins;mixins;data type;data types;Data types;Data type;primary identity;primary idenity;XDM individual profile;XDM fields;enum datatype;Experience event;XDM Experience Event;XDM ExperienceEvent;experienceEvent;experienceevent;XDM Experienceevenet;schema design
 solution: Experience Platform
 title: 架構構成基礎
 topic: overview
+description: 本檔案提供Experience Data Model(XDM)架構的簡介，以及構成Adobe Experience Platform中要使用之架構的建置區塊、原則和最佳實務。
 translation-type: tm+mt
-source-git-commit: dae86df3ca4fcc9c5951068e905081df29e3b5f2
+source-git-commit: 04efbf63741ef39bbf0b22795be74087f1f7c595
 workflow-type: tm+mt
-source-wordcount: '2782'
+source-wordcount: '2811'
 ht-degree: 0%
 
 ---
@@ -203,7 +204,7 @@ Mixin的範圍和定義與類相同：有由個別組織使用定義的產業混
 
 ### XDM欄位
 
-除了基本欄位和定義您自己的資料類型的能力外，XDM還提供一套標準的欄位和資料類型集，這些欄位和資料類型會由服務隱含地理解，並在跨元件使用時提供 [!DNL Experience Platform] 更一致 [!DNL Platform] 性。
+除了基本欄位和定義您自己的資料類型的能力外，XDM還提供一套標準的欄位和資料類型，這些欄位和資料類型會由服務隱含地理解，並在跨元件使用時提供 [!DNL Experience Platform] 更一致 [!DNL Platform] 性。
 
 這些欄位（例如「名字」和「電子郵件地址」）除了基本標量欄位類型之外，還包含其他附加含義，告訴 [!DNL Platform] 任何共用相同XDM資料類型的欄位將以相同的方式運作。 無論資料來自何處，或資料使用於何種服務，都可信 [!DNL Platform] 任此行為一致。
 
@@ -239,7 +240,7 @@ Mixin的範圍和定義與類相同：有由個別組織使用定義的產業混
 
 現在，您瞭解了架構構成的基本知識，可以開始使用構建架構 [!DNL Schema Registry]。
 
-此 [!DNL Schema Registry] 程式可用來存取Adobe Experience Platform中 [!DNL Schema Library] 的，並提供使用者介面和RESTful API，讓您存取所有可用的程式庫資源。 包 [!DNL Schema Library] 含由Adobe定義的產業資源、由合作夥伴定義的廠商資 [!DNL Experience Platform] 源，以及由您組織成員組成的類別、混合、資料類型和結構。
+此 [!DNL Schema Registry] 程式可用來存取Adobe Experience Platform中 [!DNL Schema Library] 的，並提供使用者介面和RESTful API，讓您存取所有可用的程式庫資源。 本 [!DNL Schema Library] 軟體包含由Adobe定義的產業資源、由合作夥伴定義的廠商資 [!DNL Experience Platform] 源，以及由您組織成員組成的類別、混合、資料類型和結構。
 
 若要開始使用UI編寫架構，請遵循「架構編輯器」教學課程 [](../tutorials/create-schema-ui.md) ，以建立本檔案中提及的「忠誠成員」架構。
 
