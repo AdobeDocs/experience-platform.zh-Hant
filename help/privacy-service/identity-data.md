@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;ECID;ecid
 solution: Experience Platform
 title: 隱私權要求的身分資料
 topic: overview
+description: 本檔案提供如何設定資料作業的一般指引，並運用Adobe技術，以有效擷取適當的客戶隱私權要求識別資訊。
 translation-type: tm+mt
-source-git-commit: 5b32c1955fac4f137ba44e8189376c81cdbbfc40
+source-git-commit: 4c3a947051c11860ab4f0f53b48d8f4bda8dc195
 workflow-type: tm+mt
-source-wordcount: '616'
+source-wordcount: '643'
 ht-degree: 3%
 
 ---
@@ -32,7 +33,7 @@ Adobe Experience Platform Identity Service會維護全域定義與使用者定�
 
 Adobe Experience Cloud可 [!DNL Identity Service] 做為每個網站訪客的通用識別 [!DNL Experience Cloud]架構，並為每個網站訪客指派唯一、永久的ID。 ID( [!DNL Experience Cloud] ECID)可透過使用第一方Cookie來追蹤客戶的活動，可以跨多個應用程式唯一識別裝置，並可讓您識別不同應用程式中的相同網站訪客及其資 [!DNL Experience Cloud] 料。 See the [Experience Cloud Identity Service overview](https://docs.adobe.com/content/help/zh-Hant/id-service/using/intro/overview.html) for more information.
 
-「選擇加入服務」是應用程 [!DNL Experience Cloud Identity Service]式的擴充功能，可讓您在應用程式上設定通訊協定，讓訪客決定您是否可在訪客的裝置或瀏覽器上設定Cookie。 如需有關選擇加入服務的詳細資訊，包括如何為您的應用程式設定服務，請參閱選擇 [加入服務檔案](https://docs.adobe.com/content/help/zh-Hant/id-service/using/implementation/opt-in-service/optin-overview.html)。
+「選擇加入服務」是應用程式的延 [!DNL Experience Cloud Identity Service]伸功能，可讓您在應用程式上設定通訊協定，讓訪客決定您是否可在訪客的裝置或瀏覽器上設定Cookie。 如需有關選擇加入服務的詳細資訊，包括如何為您的應用程式設定服務，請參閱選擇 [加入服務檔案](https://docs.adobe.com/content/help/zh-Hant/id-service/using/implementation/opt-in-service/optin-overview.html)。
 
 一旦您的網站訪客獲得ECID，您就可以利用Adobe [!DNL Privacy JavaScript Library] 擷取這些ID，以便用於隱私權要求，如下節所述。
 
