@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;segmentation;Segmentation;segment service;segment;Segment;Segments;segments
 solution: Experience Platform
 title: Adobe Experience Platform細分服務
 topic: overview
+description: 本檔案概述區段服務及其在Adobe Experience Platform中所扮演的角色。
 translation-type: tm+mt
-source-git-commit: 96b6f820e5d372446c4927e7719aedadb2b11bc9
+source-git-commit: 8f7ce97cdefd4fe79cb806e71e12e936caca3774
 workflow-type: tm+mt
-source-wordcount: '1974'
+source-wordcount: '1991'
 ht-degree: 0%
 
 ---
@@ -22,9 +23,9 @@ Adobe Experience Platform提 [!DNL Segmentation Service] 供使用者介面和RE
 
 請務必瞭解本檔案中使用的下列主要術語：
 
-- **區段**: 將大量個人（例如客戶、潛在客戶、使用者或組織）分成具有相似特性且回應類似行銷策略的較小群組。
-- **區段定義**: 用於描述目標對象的關鍵特性或行為的規則集。 概念化後，區段定義中概述的規則會用來決定區段的合格讀者成員。
-- **觀眾**: 符合區段定義條件的結果描述檔集。
+- **區段**:將大量個人（例如客戶、潛在客戶、使用者或組織）分成具有相似特性且回應類似行銷策略的較小群組。
+- **區段定義**:用於描述目標對象的關鍵特性或行為的規則集。 概念化後，區段定義中概述的規則會用來決定區段的合格讀者成員。
+- **觀眾**:符合區段定義條件的結果描述檔集。
 
 ## 區段的運作方式
 
@@ -112,7 +113,7 @@ Adobe Experience Platform提 [!DNL Segmentation Service] 供使用者介面和RE
 
 與靜態分段不同，動態分段需要明確且重複擷取每個可能的使用案例，動態分段使用變數來建立規則邏輯並動態表達關係。
 
-### 使用案例： 尋找在家庭以外購買的客戶
+### 使用案例：尋找在家庭以外購買的客戶
 
 為了說明此進階細分功能的價值，請考慮由資料架構師與行銷人員協作，以識別在其祖國以外進行採購的客戶。
 
@@ -136,7 +137,7 @@ Adobe Experience Platform提 [!DNL Segmentation Service] 供使用者介面和RE
 
 >[!VIDEO](https://video.tv.adobe.com/v/28947?quality=12&learn=on)
 
-### 使用案例： 價格驅動促銷
+### 使用案例：價格驅動促銷
 
 為了說明此進階細分功能的價值，請考慮由資料架構師與行銷人員協作。
 
