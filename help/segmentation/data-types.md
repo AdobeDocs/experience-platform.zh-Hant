@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;data type;data types;Data types;Data type
 solution: Experience Platform
 title: Adobe Experience Platform細分服務資料類型
 topic: overview
+description: 區段服務支援所有XDM資料類型。 構成區段定義的規則會依下列資料類型來情境化。
 translation-type: tm+mt
-source-git-commit: 96b6f820e5d372446c4927e7719aedadb2b11bc9
+source-git-commit: 23516c66a67ae5663dcf90a40ccba98bfd266ab0
 workflow-type: tm+mt
-source-wordcount: '456'
+source-wordcount: '479'
 ht-degree: 3%
 
 ---
@@ -50,7 +51,7 @@ ht-degree: 3%
 | 「套用時間規則」切換按鈕 | 整合日期資料。 |
 | 等於、不等於、開頭為、不開頭為、結尾為、不結尾為、包含、不包含、存在、不存在 | 整合字串資料。 |
 
-### 觀眾分享
+### 受眾分享
 
 外部對象也可以用作新區段定義的元件，將其屬性規則新增至新區段。
 
