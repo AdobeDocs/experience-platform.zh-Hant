@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API
+keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API;enable profile;Enable profile
 solution: Adobe Experience Platform
 title: 新增資料至即時客戶個人檔案
 topic: tutorial
+description: 本教學課程概述將資料新增至即時客戶個人檔案的必要步驟。
 translation-type: tm+mt
-source-git-commit: f910351d49de9c4a18a444b99b7f102f4ce3ed5b
+source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
 workflow-type: tm+mt
-source-wordcount: '355'
+source-wordcount: '368'
 ht-degree: 0%
 
 ---
