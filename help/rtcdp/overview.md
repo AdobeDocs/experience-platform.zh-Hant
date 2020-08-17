@@ -1,10 +1,11 @@
 ---
+keywords: RTCDP;CDP
 title: 即時客戶資料平台概觀
 seo-title: 即時客戶資料平台概觀
 description: 即時客戶資料平台概觀
 seo-description: 即時客戶資料平台概觀
 translation-type: tm+mt
-source-git-commit: c16232179701aa40ae06da45e0581d70d0437191
+source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
 workflow-type: tm+mt
 source-wordcount: '292'
 ht-degree: 0%
