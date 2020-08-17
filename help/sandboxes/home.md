@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;sandbox;Sandbox
 solution: Experience Platform
 title: 沙盒總覽
 topic: overview
+description: 沙盒是Experience Platform單一執行個體中的虛擬分區，可讓您與數位體驗應用程式的開發流程順暢整合。
 translation-type: tm+mt
-source-git-commit: c52d8cdbc5a4ee6fab8c2b1b284efea5f735d424
+source-git-commit: c081a7521be9715ca32d35504922a70767924fd7
 workflow-type: tm+mt
-source-wordcount: '677'
+source-wordcount: '702'
 ht-degree: 0%
 
 ---
@@ -32,9 +33,9 @@ In order to address this need, Experience Platform provides **sandboxes** which 
 
 總之，沙盒提供下列優點：
 
-* **應用程式生命週期管理**: 建立個別的虛擬環境，以開發和發展數位體驗應用程式。
-* **專案與品牌管理**: 允許多個專案在相同的IMS組織內並行執行，同時提供隔離和存取控制。 未來版本將支援在多個地區部署。
-* **有彈性的開發生態系統**: 以順暢、可擴充且具成本效益的方式提供沙盒，以利探索、啟用和展示。
+* **應用程式生命週期管理**:建立個別的虛擬環境，以開發和發展數位體驗應用程式。
+* **專案與品牌管理**:允許多個專案在相同的IMS組織內並行執行，同時提供隔離和存取控制。 未來版本將支援在多個地區部署。
+* **有彈性的開發生態系統**:以順暢、可擴充且具成本效益的方式提供沙盒，以利探索、啟用和展示。
 
 ## 沙盒的存取控制
 
