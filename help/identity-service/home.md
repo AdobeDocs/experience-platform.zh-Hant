@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;identity;Identity;XDM graphs;identity service;Identity service
 solution: Experience Platform
 title: Adobe Experience Platform Identity Service
 topic: overview
+description: Adobe Experience Platform Identity Service可跨裝置和系統橋接身分，協助您更全面地瞭解客戶及其行為，讓您即時提供具影響力的個人化數位體驗。
 translation-type: tm+mt
-source-git-commit: d02f12202e51b00453f719604052a54f6fcfe4ab
+source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
 workflow-type: tm+mt
-source-wordcount: '1672'
+source-wordcount: '1707'
 ht-degree: 0%
 
 ---
@@ -24,7 +25,7 @@ ht-degree: 0%
 
 Mary在您的電子商務網站上有一個帳戶，她過去在那裡完成了幾筆訂單。 她通常使用個人筆記型電腦購物，每次都會登錄。 不過，在一次拜訪中，她使用平板電腦購買涼鞋，但並未下訂單，也未登入。
 
-此時，Mary的活動會以兩個不同的配置檔案的形式出現： 她的電子商務登入和平板電腦裝置，可能是透過裝置ID識別。
+此時，Mary的活動會以兩個不同的配置檔案的形式出現：她的電子商務登入和平板電腦裝置，可能是透過裝置ID識別。
 
 瑪麗稍後會繼續其平板電腦作業，並在訂閱您的電子報時提供電子郵件地址。 在這麼做時，串流擷取會在其個人檔案中新增新的身分識別作為記錄資料。 因此，現在 [!DNL Identity Service] Mary的平板電腦裝置活動與其電子商務帳戶記錄有關。
 
@@ -49,11 +50,11 @@ PII（例如電子郵件地址和電話號碼）可直接識別客戶。 因此�
 - 電信公司可能依賴「電話號碼」值，其中電話號碼是指線下和線上資料集的同一個人。
 - 零售公司可能會在離線資料集中使用「電子郵件地址」，而且由於匿名訪客的比例很高，因此可能會線上上資料集中使用ECID。
 - 銀行可能偏好離線資料集中的「帳號」，例如分行交易。 他們可能依賴線上資料集中的「登入ID」，因為大部分訪客在瀏覽期間都會經過驗證。
-- 您的客戶也可能擁有唯一的專屬ID，例如GUID或其他通用唯一識別碼。
+- 您的客戶也可能擁有唯一的專屬ID，例如GUID或其他普遍唯一識別碼。
 
 ### 身分資料
 
-如果你問一個人&quot;你的身份證是什麼？&quot; 如果沒有進一步的背景，他們很難提供有用的答案。 根據相同邏輯，表示身分值的字串值（無論是系統產生的ID還是電子郵件地址）只有在提供給字串值上下文的限定詞時才會完成： 識別名稱空間。
+如果你問一個人&quot;你的身份證是什麼？&quot; 如果沒有進一步的背景，他們很難提供有用的答案。 根據相同邏輯，表示身分值的字串值（無論是系統產生的ID還是電子郵件地址）只有在提供給字串值上下文的限定詞時才會完成：識別名稱空間。
 
 ## 身份名稱空間和身份圖
 
@@ -108,7 +109,7 @@ PII（例如電子郵件地址和電話號碼）可直接識別客戶。 因此�
 
 ### 在(XDM)中包 [!DNL Experience Data Model] 含身分資料
 
-作為組織客戶資料的 [!DNL Platform] 標準化框架， [!DNL Experience Data Model] (XDM)允許在與其他服務互動時，共 [!DNL Experience Platform] 用和瞭解資料 [!DNL Platform]。 如需詳細資訊，請參閱 [XDM系統概觀](../xdm/home.md)。
+作為組織客戶資料的 [!DNL Platform] 標準化框架， [!DNL Experience Data Model] (XDM)讓資料能夠在與其他服務互動時 [!DNL Experience Platform] 共用和理解 [!DNL Platform]。 如需詳細資訊，請參閱 [XDM系統概觀](../xdm/home.md)。
 
 記錄和時間序列模式都提供了包含身份資料的方法。 當擷取資料時，如果發現不同名稱空間的資料片段共用共同身分資料，則識別圖會在它們之間建立新的關係。
 
