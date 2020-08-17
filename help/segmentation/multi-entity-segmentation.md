@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;segmentation;Segmentation;segment service;segments;Segments
 solution: Experience Platform
 title: 多實體分段
 topic: overview
+description: 多實體分段是指能夠根據產品、商店或其他非描述檔類別，以額外資料擴充描述檔資料。 連線後，其他類別的資料就會變成描述檔架構的原生資料。
 translation-type: tm+mt
-source-git-commit: bfbf2074a9dcadd809de043d62f7d2ddaa7c7b31
+source-git-commit: 8f7ce97cdefd4fe79cb806e71e12e936caca3774
 workflow-type: tm+mt
-source-wordcount: '372'
+source-wordcount: '409'
 ht-degree: 0%
 
 ---
@@ -24,9 +25,9 @@ ht-degree: 0%
 
 本教學課程需要對使用區段時涉及的各種Adobe Experience Platform服務有深入的瞭解。 在開始本教學課程之前，請先閱讀下列服務的檔案：
 
-- [!DNL Real-time Customer Profile](../profile/home.md): 根據來自多個來源的匯總資料，即時提供統一的消費者個人檔案。
-- [Adobe Experience Platform細分服務](./home.md): 可讓您從即時客戶個人檔案建立細分。
-- [!DNL Experience Data Model (XDM)](../xdm/home.md): 組織客戶體驗資料 [!DNL Platform] 的標準化架構。
+- [!DNL Real-time Customer Profile](../profile/home.md):根據來自多個來源的匯總資料，即時提供統一的消費者個人檔案。
+- [Adobe Experience Platform細分服務](./home.md):可讓您從即時客戶個人檔案建立細分。
+- [!DNL Experience Data Model (XDM)](../xdm/home.md):組織客戶體驗資料 [!DNL Platform] 的標準化架構。
 
 ## 如何定義XDM關係
 
