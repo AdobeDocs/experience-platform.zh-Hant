@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;segment evaluation
 solution: Experience Platform
 title: 評估區段
 topic: tutorial
+description: 本檔案提供使用區段API評估區段及存取區段結果的教學課程。
 translation-type: tm+mt
-source-git-commit: 6a0a9b020b0dc89a829c557bdf29b66508a10333
+source-git-commit: 23516c66a67ae5663dcf90a40ccba98bfd266ab0
 workflow-type: tm+mt
-source-wordcount: '1519'
+source-wordcount: '1535'
 ht-degree: 0%
 
 ---
@@ -20,16 +21,16 @@ ht-degree: 0%
 
 本教學課程需要對建立觀眾區隔時 [!DNL Adobe Experience Platform] 涉及的各種服務有充份的瞭解。 在開始本教學課程之前，請先閱讀下列服務的檔案：
 
-- [!DNL Real-time Customer Profile](../../profile/home.md): 根據來自多個來源的匯整資料，即時提供統一的客戶個人檔案。
-- [!DNL Adobe Experience Platform Segmentation Service](../home.md): 可讓您從資料建立受眾 [!DNL Real-time Customer Profile] 區段。
-- [!DNL Experience Data Model (XDM)](../../xdm/home.md): 平台組織客戶體驗資料的標準化架構。
+- [!DNL Real-time Customer Profile](../../profile/home.md):根據來自多個來源的匯整資料，即時提供統一的客戶個人檔案。
+- [!DNL Adobe Experience Platform Segmentation Service](../home.md):可讓您從資料建立受眾 [!DNL Real-time Customer Profile] 區段。
+- [!DNL Experience Data Model (XDM)](../../xdm/home.md):平台組織客戶體驗資料的標準化架構。
 - [沙盒](../../sandboxes/home.md): [!DNL Experience Platform] 提供虛擬沙盒，可將單一執行個體分 [!DNL Platform] 割為不同的虛擬環境，以協助開發和發展數位體驗應用程式。
 
 ### 必要的標題
 
 本教學課程也要求您完成驗 [證教學課程](../../tutorials/authentication.md) ，才能成功呼叫 [!DNL Platform] API。 完成驗證教學課程後，將提供所有 [!DNL Experience Platform] API呼叫中每個必要標題的值，如下所示：
 
-- 授權： 生產者 `{ACCESS_TOKEN}`
+- 授權：生產者 `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
@@ -43,7 +44,7 @@ ht-degree: 0%
 
 所有POST、PUT和PATCH請求都需要附加標題：
 
-- 內容類型： application/json
+- 內容類型：application/json
 
 ## 評估區段
 
@@ -130,11 +131,11 @@ ht-degree: 0%
 | 屬性 | 說明 |
 | -------- | ----------- |
 | `lastQualificationTime` | 斷言區段成員資格及設定檔輸入或退出區段時的時間戳記。 |
-| `status` | 目前請求中區段參與率的狀態。 必須等於下列其中一個已知值： <ul><li>`existing`: 實體繼續在分部中。</li><li>`realized`: 實體正在輸入區段。</li><li>`exited`: 實體正在退出區段。</li></ul> |
+| `status` | 目前請求中區段參與率的狀態。 必須等於下列其中一個已知值： <ul><li>`existing`:實體繼續在分部中。</li><li>`realized`:實體正在輸入區段。</li><li>`exited`:實體正在退出區段。</li></ul> |
 
 ## 存取區段結果
 
-可以通過以下兩種方式之一訪問段作業的結果： 您可以存取個別設定檔，或將整個對象匯出至資料集。
+可以通過以下兩種方式之一訪問段作業的結果：您可以存取個別設定檔，或將整個對象匯出至資料集。
 
 以下幾節將更詳細地概述這些選項。
 
