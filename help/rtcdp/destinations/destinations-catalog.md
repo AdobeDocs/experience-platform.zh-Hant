@@ -1,10 +1,11 @@
 ---
+keywords: Catalog;catalog
 title: 目標目錄
 seo-title: 目標目錄
 description: 「目標目錄」提供可接收資料的可用目標清單。 這些目標包括Adobe解決方案、廣告平台、調查平台、電子郵件行銷平台等。
 seo-description: 「目標目錄」提供可接收資料的可用目標清單。 這些目標包括Adobe解決方案、廣告平台、調查平台、電子郵件行銷平台等。
 translation-type: tm+mt
-source-git-commit: 6f680a60c88bc5fee6ce9cb5a4f314c4b9d02249
+source-git-commit: 8f7ce97cdefd4fe79cb806e71e12e936caca3774
 workflow-type: tm+mt
 source-wordcount: '170'
 ht-degree: 0%
