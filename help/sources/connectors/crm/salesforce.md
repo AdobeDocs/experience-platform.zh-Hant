@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;crm schema;crm;CRM
 solution: Experience Platform
 title: Salesforce連接器
 topic: overview
+description: Experience Platform支援從協力廠商CRM系統擷取資料。 支援CRM供應商包括Salesforce。
 translation-type: tm+mt
-source-git-commit: 25f4589ff1f4fa11f3cd5b96c11731577949b5b0
+source-git-commit: 23516c66a67ae5663dcf90a40ccba98bfd266ab0
 workflow-type: tm+mt
-source-wordcount: '181'
+source-wordcount: '199'
 ht-degree: 0%
 
 ---
