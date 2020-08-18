@@ -4,9 +4,9 @@ seo-title: Flashtalking OneTag擴充功能
 description: Flashtalking OneTag擴充功能是Adobe即時客戶資料平台中的廣告目的地。 如需擴充功能的詳細資訊，請參閱Adobe Exchange的擴充功能頁面。
 seo-description: null
 translation-type: tm+mt
-source-git-commit: be4cf64c89a189a09a4a7774c8fadc76c6ee8458
+source-git-commit: a251d843401d2f092e368a4cdac217171fa4687f
 workflow-type: tm+mt
-source-wordcount: '531'
+source-wordcount: '529'
 ht-degree: 5%
 
 ---
@@ -36,7 +36,7 @@ Experience Platform [!DNL Flashtalking OneTag] Launch的擴充功能可讓您輕
 
 1. 在 [Adobe Real-time CDP介面中](http://platform.adobe.com/)，前往「目 **[!UICONTROL 的地]** >目 **[!UICONTROL 錄]**」。
 2. 從目錄中選擇副檔名或使用搜索欄。
-3. 按一下目的地以反白標示，然後選取右 **[!UICONTROL 側導軌中的「安裝擴充功能]** 」。 如果 **[!UICONTROL Install Extension]** （安裝擴充功能）控制項呈灰色顯示 **[!UICONTROL ，表示您遺失]** manage_properties權限。 請參 [閱必要條件](#prerequisites)。
+3. 按一下目標以反白顯示，然後選 **[!UICONTROL 取右邊欄]** 中的設定。 如果「 **[!UICONTROL 設定]** 」控制項呈灰色，表示您遺失 **[!UICONTROL manage_properties]** 權限。 請參 [閱必要條件](#prerequisites)。
 4. 在「選 **[!UICONTROL 擇可用的啟動屬性]** 」窗口中，選擇要安裝擴展的啟動屬性。 您也可以在Launch中選擇建立新屬性。 屬性是規則、資料元素、設定的擴充功能、環境和程式庫的集合。瞭解Launch檔案「屬 [性」頁面](https://docs.adobe.com/content/help/en/launch/using/reference/admin/companies-and-properties.html#properties-page) ，以取得屬性。
 5. 工作流程會帶您至Launch以完成安裝。
 
