@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 在UI中建立Adobe Analytics來源連接器
 topic: overview
 translation-type: tm+mt
-source-git-commit: 41fe3e5b2a830c3182b46b3e0873b1672a1f1b03
+source-git-commit: 0479f5097b530dd97e28474d8e5eb832e5e44e5a
 workflow-type: tm+mt
-source-wordcount: '769'
+source-wordcount: '768'
 ht-degree: 1%
 
 ---
@@ -30,13 +30,13 @@ ht-degree: 1%
 
 您可以從畫面左側的目錄中選取適當的類別。 或者，您也可以使用搜尋選項找到您要使用的特定來源。
 
-在「 *Adobe應用程式* 」類別下，選取「 **[!UICONTROL Adobe Analytics]** 」以在螢幕右側顯示資訊列。 資訊列提供所選來源的簡短說明，以及與來源連線或檢視其檔案的選項。 要查看現有帳戶，請選擇 **[!UICONTROL 帳戶]**。
+在「 **[!UICONTROL Adobe應用程式]** 」類別下，選取「 **[!UICONTROL Adobe Analytics]** 」以在螢幕右側顯示資訊列。 資訊列提供所選來源的簡短說明，以及與來源連線或檢視其檔案的選項。 要查看現有帳戶，請選擇 **[!UICONTROL 帳戶]**。
 
 ![](../../../../images/tutorials/create/analytics/catalog.png)
 
 ### 選擇資料
 
-此時 *會顯示Adobe Analytics* 步驟。 此螢幕上會列出先前建立的Analytics資料集流程。 您可以按一下「選取資料」，建立新的資 **[!UICONTROL 料集流程]**。
+此時 **[!UICONTROL 會顯示Adobe Analytics]** 步驟。 此螢幕上會列出先前建立的Analytics資料集流程。 您可以按一下「選取資料」，建立新的資 **[!UICONTROL 料集流程]**。
 
 >[!NOTE]
 >
@@ -52,22 +52,22 @@ ht-degree: 1%
 
 ### 命名資料集流程
 
-此時 *會顯示資料集流程詳細資料* ，您必須在其中提供資料集流程的名稱和選用說明。 選擇 **[UICONTROL! 完成時]** ，下一個。
+此時 **[!UICONTROL 會顯示資料集流程詳細資料]** ，您必須在其中提供資料集流程的名稱和選用說明。 完成後 **[!UICONTROL 選擇]** 「下一步」。
 
 ![](../../../../images/tutorials/create/analytics/dataset-flow-detail.png)
 
 ### 檢閱資料集流程
 
-此時 *會顯示* 「檢閱」步驟，讓您在建立新的Analytics內嵌資料集流程之前，先加以檢閱。 連接的詳細資訊按類別分組，包括：
+此時 **[!UICONTROL 會顯示]** 「檢閱」步驟，讓您在建立新的Analytics內嵌資料集流程之前，先加以檢閱。 連接的詳細資訊按類別分組，包括：
 
-* *連接*:顯示來源連線和所選報表套裝的類型。
-* *指派資料集與地圖欄位*:建立其他來源連接器時，此容器會顯示來源資料所吸收的資料集，包括資料集所遵守的架構。 輸出結構描述和資料集會自動設定為Analytics資料集流程。
+* **[!UICONTROL 連接]**:顯示來源連線和所選報表套裝的類型。
+* **[!UICONTROL 指派資料集與地圖欄位]**:建立其他來源連接器時，此容器會顯示來源資料所吸收的資料集，包括資料集所遵守的架構。 輸出結構描述和資料集會自動設定為Analytics資料集流程。
 
 ![](../../../../images/tutorials/create/analytics/review.png)
 
 ### 監控資料集流程
 
-建立資料集流程後，您就可以監控透過它擷取的資料。 從「目 *錄* 」畫面中，選取「資 *料集流」* ，以檢視與您的Analytics帳戶相關的已建立流清單。
+建立資料集流程後，您就可以監控透過它擷取的資料。 從「目 **[!UICONTROL 錄]** 」畫面中，選取「資 **[!UICONTROL 料集流」]** ，以檢視與您的Analytics帳戶相關的已建立流清單。
 
 ![](../../../../images/tutorials/create/analytics/catalog-dataset-flows.png)
 
