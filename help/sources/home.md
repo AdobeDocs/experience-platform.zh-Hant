@@ -5,9 +5,9 @@ title: Adobe Experience Platform來源連接器概觀
 topic: overview
 description: Adobe Experience Platform可讓您從外部來源擷取資料，同時提供您使用平台服務來建構、標示及增強傳入資料的能力。 您可以從多種來源（例如Adobe應用程式、雲端儲存空間、資料庫等）擷取資料。
 translation-type: tm+mt
-source-git-commit: c15f582eeaa895f03441b2f488686a9a48942f3d
+source-git-commit: 88f999691cde2fbebdf23f940f6d48acdfb188e3
 workflow-type: tm+mt
-source-wordcount: '846'
+source-wordcount: '863'
 ht-degree: 0%
 
 ---
@@ -31,6 +31,8 @@ Adobe Experience Platform可讓您從外部來源擷取資料，同時提供您�
 
 - [Adobe Audience Manager連接器概觀](connectors/adobe-applications/audience-manager.md)
 - [在UI中建立Adobe Audience Manager來源連接器](./tutorials/ui/create/adobe-applications/audience-manager.md)
+- [Adobe Analytics分類資料連接器概觀](connectors/adobe-applications/classifications.md)
+- [在UI中建立Adobe Analytics分類資料來源連接器](./tutorials/ui/create/adobe-applications/classifications.md)
 - [Adobe Analytics資料連接器概觀](connectors/adobe-applications/analytics.md)
 - [在UI中建立Adobe Analytics來源連接器](./tutorials/ui/create/adobe-applications/analytics.md)
 - [在UI中建立客戶屬性來源連接器](./tutorials/ui/create/adobe-applications/customer-attributes.md)
