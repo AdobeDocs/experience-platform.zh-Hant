@@ -5,7 +5,7 @@ seo-title: 目標工作區
 description: 在Adobe即時客戶資料平台中，從左側導覽列選取「目標」以存取目標工作區。
 seo-description: 在Adobe即時客戶資料平台中，從左側導覽列選取「目標」以存取目標工作區。
 translation-type: tm+mt
-source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
+source-git-commit: ac9c629e8c83d3e056ba94b30d978edbda274923
 workflow-type: tm+mt
 source-wordcount: '807'
 ht-degree: 2%
@@ -41,7 +41,7 @@ Adobe即時CDP使用者介面在目標目錄頁面上提供許多搜尋和篩選
 | [!UICONTROL 設定] | 允許您建立到目標的連接。 |
 | [!UICONTROL 啟動] | 一旦建立與目標的連線後，您就可以啟動區段。 |
 | [!UICONTROL 檢視帳戶] | 查看您已為目標連接的帳戶。 |
-| [!UICONTROL 查看資料流] | 檢視目的地的資料啟動流程 |
+| [!UICONTROL 查看資料流] | 檢視目的地的資料啟動流程。 |
 | [!UICONTROL 檢視檔案] | 開啟該特定目的地的檔案頁面連結，以取得詳細資訊並協助您設定。 |
 
 ![目標卡的控制項](/help/rtcdp/destinations/assets/destination-card-options.png)
