@@ -3,9 +3,9 @@ product: experience-platform
 audience: user
 user-guide-title: Adobe Experience Platform來源連接器說明
 translation-type: tm+mt
-source-git-commit: c15f582eeaa895f03441b2f488686a9a48942f3d
+source-git-commit: 88f999691cde2fbebdf23f940f6d48acdfb188e3
 workflow-type: tm+mt
-source-wordcount: '610'
+source-wordcount: '619'
 ht-degree: 0%
 
 ---
@@ -16,6 +16,7 @@ ht-degree: 0%
 - [來源連接器概觀](home.md)
 - 可用的來源連接器 {#connectors}
    - Adobe應用程式 {#adobe-applications}
+      - [Analytics分類資料連接器](connectors/adobe-applications/classifications.md)
       - [Analytics資料連接器](connectors/adobe-applications/analytics.md)
       - [Audience Manager連接器](connectors/adobe-applications/audience-manager.md)
       - [客戶屬性連接器](connectors/adobe-applications/customer-attributes.md)
@@ -133,6 +134,7 @@ ht-degree: 0%
 - UI教學課程 {#ui-tutorials}
    - 建立源連接器 {#create}
       - Adobe應用程式 {#adobe-applications}
+         - [Adobe Analytics分類資料連接器](tutorials/ui/create/adobe-applications/classifications.md)
          - [Adobe Analytics連接器](tutorials/ui/create/adobe-applications/analytics.md)
          - [Adobe Audience Manager連接器](tutorials/ui/create/adobe-applications/audience-manager.md)
          - [客戶屬性連接器](tutorials/ui/create/adobe-applications/customer-attributes.md)
