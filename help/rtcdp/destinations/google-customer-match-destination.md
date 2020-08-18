@@ -4,9 +4,9 @@ seo-title: Google客戶符合目的地
 description: Google Customer Match可讓您使用您的線上和離線資料，透過Google的自有和營運資產（例如搜尋、購物、Gmail和YouTube）觸及客戶並與其重新互動。
 seo-description: Google Customer Match可讓您使用您的線上和離線資料，透過Google的自有和營運資產（例如搜尋、購物、Gmail和YouTube）觸及客戶並與其重新互動。
 translation-type: tm+mt
-source-git-commit: 6a57c0da3425b7b83050f1b734d4abe8a290c8bc
+source-git-commit: a251d843401d2f092e368a4cdac217171fa4687f
 workflow-type: tm+mt
-source-wordcount: '1517'
+source-wordcount: '1555'
 ht-degree: 0%
 
 ---
@@ -102,6 +102,10 @@ Links to be added when activation based on phone number and device IDs becomes a
 
    ![連線至Google客戶符合目的地](/help/rtcdp/destinations/assets/connect-google-customer-match.png)
 
+   >[!NOTE]
+   >
+   >如果此目標已存在連接，您可以在目標卡上看到 **[!UICONTROL 「激活]** 」按鈕。 有關「激活」( **[!UICONTROL Activate]** )和「配置」( **[!UICONTROL Configure]**)之間差異的詳細資訊，請參 [閱目標工作區文檔的「目錄](/help/rtcdp/destinations/destinations-workspace.md#catalog) 」(Catalog)部分。
+
 2. 在「 **Account** 」（帳戶）步驟中 [!DNL Google Customer Match] ，如果您先前已設定連線至您的目的地，請選取「 **** Existing Account」（現有帳戶）並選取您現有的連線。 或者，您可以選 **[!UICONTROL 擇「新帳戶]** 」來設定新連線 [!DNL Google Customer Match]。 選 **[!UICONTROL 擇「連線至目的地]** 」以登入，並將Adobe Experience Cloud連線至您的 [!DNL Google Ad] 帳戶。
 
    >[!NOTE]
@@ -152,7 +156,7 @@ Links to be added when activation based on phone number and device IDs becomes a
 
 ![確認選擇](/help/rtcdp/destinations/assets/data-policy-violation.png)
 
-如果未檢測到任何違反策略的情況，請選擇 **[!UICONTROL 完成]** ，確認您的選擇並開始向目標發送資料。
+如果未檢測到任何違反策略的情況，請選擇「完 **[!UICONTROL 成]** 」以確認您的選擇並開始向目標發送資料。
 
 ![確認選擇](/help/rtcdp/destinations/assets/gcm-review.png)
 
