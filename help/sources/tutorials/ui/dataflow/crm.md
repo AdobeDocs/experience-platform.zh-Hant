@@ -5,9 +5,9 @@ title: 在UI中為CRM連接器配置資料流
 topic: overview
 description: 資料流是從源中檢索資料並將資料帶入平台資料集的計畫任務。 本教學課程提供使用CRM帳戶設定新資料流的步驟。
 translation-type: tm+mt
-source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
+source-git-commit: c15f582eeaa895f03441b2f488686a9a48942f3d
 workflow-type: tm+mt
-source-wordcount: '1356'
+source-wordcount: '1353'
 ht-degree: 0%
 
 ---
@@ -21,10 +21,10 @@ ht-degree: 0%
 
 本教學課程需要對Adobe Experience Platform的下列元件有正確的認識：
 
-* [體驗資料模型(XDM)系統](../../../../xdm/home.md):組織客戶體驗資料 [!DNL Experience Platform] 的標準化架構。
+* [[!DNL Experience Data Model] (XDM)系統](../../../../xdm/home.md):組織客戶體驗資料 [!DNL Experience Platform] 的標準化架構。
    * [架構構成基礎](../../../../xdm/schema/composition.md):瞭解XDM架構的基本建置區塊，包括架構組合的主要原則和最佳實務。
    * [架構編輯器教程](../../../../xdm/tutorials/create-schema-ui.md):瞭解如何使用架構編輯器UI建立自訂架構。
-* [即時客戶個人檔案](../../../../profile/home.md):根據來自多個來源的匯整資料，提供統一、即時的消費者個人檔案。
+* [[!DNL即時客戶基本資料]](../../../../profile/home.md):根據來自多個來源的匯整資料，提供統一、即時的消費者個人檔案。
 
 此外，本教學課程要求您已建立CRM帳戶。 如需在UI中建立不同CRM連接器的教學課程清單，請參閱來源連 [接器概觀](../../../home.md)。
 
@@ -156,7 +156,7 @@ ht-degree: 0%
 
 建立資料流時，它會立即變為活動狀態，並根據給定的時間表收集資料。 您可以隨時按照以下說明禁用活動資料流。
 
-在驗 *[!UICONTROL 證螢幕]* ，選擇與要禁用的資料流關聯的基本連接的名稱。
+在驗 *[!UICONTROL 證螢幕]* ，選擇與要禁用的資料流關聯的連接的名稱。
 
 ![](../../../images/tutorials/dataflow/crm/monitor.png)
 
