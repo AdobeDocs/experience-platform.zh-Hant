@@ -4,9 +4,9 @@ seo-title: Google廣告管理員目標
 description: 'Google Ad Manager之前稱為DoubleClick for Publishers或DoubleClick AdX，是來自谷歌的廣告服務平台，可讓出版業者透過視訊和行動應用程式管理其網站上的廣告展示。 '
 seo-description: 'Google Ad Manager之前稱為DoubleClick for Publishers或DoubleClick AdX，是來自谷歌的廣告服務平台，可讓出版業者透過視訊和行動應用程式管理其網站上的廣告展示。 '
 translation-type: tm+mt
-source-git-commit: 570c627672439a5ee0f4215b7bf7915ec3dd2bb3
+source-git-commit: a251d843401d2f092e368a4cdac217171fa4687f
 workflow-type: tm+mt
-source-wordcount: '636'
+source-wordcount: '673'
 ht-degree: 0%
 
 ---
@@ -40,27 +40,31 @@ ht-degree: 0%
 
 在Adobe [!DNL Google Ad Manager] 即時CDP中建立目標之前，您必須聯絡 [!DNL Google] Adobe，才能將Adobe列入允許的資料提供者清單，並將您的帳戶新增至允許清單。 請聯 [!DNL Google] 絡並提供下列資訊：
 
-* **帳戶ID** : 這是Adobe的帳戶ID [!DNL Google]。 請聯絡Adobe客戶服務或您的Adobe代表以取得此ID。
-* **客戶ID** : 這是Adobe的客戶帳戶ID [!DNL Google]。 請聯絡Adobe客戶服務或您的Adobe代表以取得此ID。
-* **網路ID** : 這是您的帳戶， [!DNL Google Ad Manager]
-* **對象連結ID** : 這是您的帳戶， [!DNL Google Ad Manager]
+* **帳戶ID** :這是Adobe的帳戶ID [!DNL Google]。 請聯絡Adobe客戶服務或您的Adobe代表以取得此ID。
+* **客戶ID** :這是Adobe的客戶帳戶ID [!DNL Google]。 請聯絡Adobe客戶服務或您的Adobe代表以取得此ID。
+* **網路ID** :這是您的帳戶， [!DNL Google Ad Manager]
+* **對象連結ID** :這是您的帳戶， [!DNL Google Ad Manager]
 * 您的帳戶類型。 **DFP，由Google** 或 **AdX購買者提供**。
 
-## 建立目標
+## 配置目標
 
-1. 在「連 **[!UICONTROL 接]** >目標 **[!UICONTROL 」中，選]**&#x200B;擇並選 [!DNL Google Ad Manager]擇「建立目標 ****」。
+1. 在「連 **[!UICONTROL 接]** >目 **[!UICONTROL 標]**」中，選 [!DNL Google Ad Manager]擇並選 **[!UICONTROL 擇配置]**。
    ![Connect Google Ad Manager目標](/help/rtcdp/destinations/assets/google-1-destination.png)
+
+   >[!NOTE]
+   >
+   >如果此目標已存在連接，您可以在目標卡上看到 **[!UICONTROL 「激活]** 」按鈕。 有關「激活」( **[!UICONTROL Activate]** )和「配置」( **[!UICONTROL Configure]**)之間差異的詳細資訊，請參 [閱目標工作區文檔的「目錄](/help/rtcdp/destinations/destinations-workspace.md#catalog) 」(Catalog)部分。
 
 2. 在建立 **目標工作流的** 「設定」步驟中，填寫目標的 [!UICONTROL 「基本資訊] 」。 <br>
 
    ![基本資訊Google廣告管理員](/help/rtcdp/destinations/assets/google-1-destination-setup-step.png)
-* **[!UICONTROL 名稱]**: 填寫此目標的首選名稱。
-* **[!UICONTROL 說明]**: 可選。 例如，您可以提及您使用此目的地的促銷活動。
-* **[!UICONTROL 帳戶類型]**: 根據您使用Google的帳戶，選取一個選項：
+* **[!UICONTROL 名稱]**:填寫此目標的首選名稱。
+* **[!UICONTROL 說明]**:可選。 例如，您可以提及您使用此目的地的促銷活動。
+* **[!UICONTROL 帳戶類型]**:根據您使用Google的帳戶，選取一個選項：
    * 用於 `DFP by Google` 發佈 [!DNL DoubleClick] 者
    * 用 `AdX buyer` 於 [!DNL Google AdX]
-* **[!UICONTROL 帳戶ID]**: 在您的帳戶ID中填入 [!DNL Google]。 這可以是您的網路ID或對象連結ID。 通常，這是8位數的ID。
-* **[!UICONTROL 行銷使用案例]**: 行銷使用案例會指出將資料匯出至目的地的方式。 您可以從Adobe定義的行銷使用案例中選擇，也可以建立自己的行銷使用案例。 有關行銷使用案例的詳細資訊，請參 [閱即時CDP中的資料治理頁](/help/rtcdp/privacy/data-governance-overview.md#destinations) 。 如需個別Adobe定義之行銷使用案例的詳細資訊，請參閱「資 [料使用政策」概觀](/help/data-governance/policies/overview.md#core-actions)。
+* **[!UICONTROL 帳戶ID]**:在您的帳戶ID中填入 [!DNL Google]。 這可以是您的網路ID或對象連結ID。 通常，這是8位數的ID。
+* **[!UICONTROL 行銷使用案例]**:行銷使用案例會指出將資料匯出至目的地的方式。 您可以從Adobe定義的行銷使用案例中選擇，也可以建立自己的行銷使用案例。 有關行銷使用案例的詳細資訊，請參 [閱即時CDP中的資料治理頁](/help/rtcdp/privacy/data-governance-overview.md#destinations) 。 如需個別Adobe定義之行銷使用案例的詳細資訊，請參閱「資 [料使用政策」概觀](/help/data-governance/policies/overview.md#core-actions)。
 
 >[!NOTE]
 >
