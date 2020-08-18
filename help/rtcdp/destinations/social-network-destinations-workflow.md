@@ -4,9 +4,9 @@ seo-title: 社交網路目標工作流程
 description: 連線至您的社交網路和帳戶的指示
 seo-description: 連線至您的社交網路和帳戶的指示
 translation-type: tm+mt
-source-git-commit: be4cf64c89a189a09a4a7774c8fadc76c6ee8458
+source-git-commit: 9306266edc0a4afdcf378e94b46b239187b18644
 workflow-type: tm+mt
-source-wordcount: '464'
+source-wordcount: '501'
 ht-degree: 0%
 
 ---
@@ -18,9 +18,13 @@ ht-degree: 0%
 
 本教學課 [!DNL Facebook] 程以Adobe即時客戶資料平台為例，但Adobe即時客戶資料平台中的工作流程對於所有社交網路目的地而言都相同，只要再新增至產品即可。
 
-1. 在「 **[!UICONTROL 目標]** >目錄 **[!UICONTROL 」中，捲動至]** Social類別 **** 。 選擇您偏好的社交網路目的地，然後選 **[!UICONTROL 擇連線目的地]**。
+1. 在「 **[!UICONTROL 目標]** >目錄 **[!UICONTROL 」中，捲動至]** Social類別 **** 。 選擇您偏好的社交網路目的地，然後選 **[!UICONTROL 擇設定]**。
 
    ![連線至社交網路目的地](/help/rtcdp/destinations/assets/facebook-catalog-view.png)
+
+   >[!NOTE]
+   >
+   >如果此目標已存在連接，您可以在目標卡上看到 **[!UICONTROL 「激活]** 」按鈕。 有關「激活」( **[!UICONTROL Activate]** )和「配置」( **[!UICONTROL Configure]**)之間差異的詳細資訊，請參 [閱目標工作區文檔的「目錄](/help/rtcdp/destinations/destinations-workspace.md#catalog) 」(Catalog)部分。
 
 2. 在「驗 **證** 」步驟中，如果您先前已設定連線至您的社交網路目的地，請選取「現有帳戶 **** 」並選取您現有的連線。 或者，您可以選取「 **[!UICONTROL 新帳戶]** 」來設定與社交網路目的地的新連線。 選 **[!UICONTROL 取「連線至目的地]** 」，這會將您帶往選取的社交網路目的地，以登入Adobe Experience Cloud並將其連接至您的社交網路廣告帳戶。
 
@@ -34,7 +38,7 @@ ht-degree: 0%
 
    ![認證已確認](/help/rtcdp/destinations/assets/facebook-post-connection-view.png)
 
-4. 在「設 **[!UICONTROL 定]** 」步驟中，輸入啟動流程的「名稱 **[!UICONTROL 」和「說明]** 」，並填寫您社交網路廣告 ******** 帳戶的「ID」帳戶。 <br> 此外，您也可以在此步驟中，選取 **[!UICONTROL 任何應套用至此目的地的Marketing]** 使用案例。 行銷使用案例會指出將資料匯出至目的地的方式。 您可以從Adobe定義的行銷使用案例中選擇，也可以建立自己的行銷使用案例。 有關行銷使用案例的詳細資訊，請參 [閱即時CDP中的資料治理頁](/help/rtcdp/privacy/data-governance-overview.md#destinations) 。 如需個別Adobe定義之行銷使用案例的詳細資訊，請參閱「資 [料使用政策」概觀](/help/data-governance/policies/overview.md#core-actions)。 <br> 在填 **[!UICONTROL 入上述欄位後]** ，選取「建立目標」。
+4. 在「設 **[!UICONTROL 定]** 」步驟中，輸入啟動流程的「名稱 **[!UICONTROL 」和「說明]** 」，並填寫您社交網路廣告 ******** 帳戶的「ID」帳戶。 <br> 此外，您也可以在此步驟中選取 **[!UICONTROL 任何應套用至此目的地的Marketing]** 使用案例。 行銷使用案例會指出將資料匯出至目的地的方式。 您可以從Adobe定義的行銷使用案例中選擇，也可以建立自己的行銷使用案例。 有關行銷使用案例的詳細資訊，請參 [閱即時CDP中的資料治理頁](/help/rtcdp/privacy/data-governance-overview.md#destinations) 。 如需個別Adobe定義之行銷使用案例的詳細資訊，請參閱「資 [料使用政策」概觀](/help/data-governance/policies/overview.md#core-actions)。 <br> 在填 **[!UICONTROL 入上述欄位後]** ，選取「建立目標」。
 
    >[!IMPORTANT]
    >
