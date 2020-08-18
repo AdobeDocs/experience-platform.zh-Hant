@@ -4,9 +4,9 @@ seo-title: 雲端儲存目標工作流程
 description: 連線至雲端儲存空間的指示
 seo-description: 連線至雲端儲存空間的指示
 translation-type: tm+mt
-source-git-commit: 570c627672439a5ee0f4215b7bf7915ec3dd2bb3
+source-git-commit: 9306266edc0a4afdcf378e94b46b239187b18644
 workflow-type: tm+mt
-source-wordcount: '493'
+source-wordcount: '530'
 ht-degree: 0%
 
 ---
@@ -18,9 +18,13 @@ ht-degree: 0%
 
 本頁說明如何連線至Adobe即時客戶資料平台中的雲端儲存空間。
 
-1. 在「連 **[!UICONTROL 線]** >目 **[!UICONTROL 的地]**」中，選取您偏好的雲端儲存空間目的地，然後選取「 **[!UICONTROL 連線目的地」]**。
+1. 在「連 **[!UICONTROL 線]** >目 **[!UICONTROL 的地]**」中，選取您偏好的雲端儲存空間目的地，然後選取「 **[!UICONTROL 設定」]**。
 
    ![連線至雲端儲存空間目標](/help/rtcdp/destinations/assets/connect-cloud-destination.png)
+
+   >[!NOTE]
+   >
+   >如果此目標已存在連接，您可以在目標卡上看到 **[!UICONTROL 「激活]** 」按鈕。 有關「激活」( **[!UICONTROL Activate]** )和「配置」( **[!UICONTROL Configure]**)之間差異的詳細資訊，請參 [閱目標工作區文檔的「目錄](/help/rtcdp/destinations/destinations-workspace.md#catalog) 」(Catalog)部分。
 
 2. 在「驗 **[!UICONTROL 證]** 」步驟中，如果您先前已設定雲端儲存空間目的地的連線，請選取「現有帳戶 **** 」並選取您現有的連線。 或者，您也可以選 **[!UICONTROL 取「新帳戶]** 」來設定雲端儲存目的地的新連線。 填寫您的帳戶驗證憑證，並選取「 **[!UICONTROL 連線至目的地」]**。 <br> 如需 [Amazon S3](/help/rtcdp/destinations/amazon-s3-destination.md) 、 [!DNL Amazon Kinesis](/help/rtcdp/destinations/amazon-kinesis-destination.md) Amazon S3目標、 [!DNL Azure Event Hubs](/help/rtcdp/destinations/azure-event-hubs-destination.md) 目標和 [SFTP](/help/rtcdp/destinations/sftp-destination.md) Destination的詳細資訊，請參閱 **** Amazon S3 Destination、Destination和SFTP Destination。
 
