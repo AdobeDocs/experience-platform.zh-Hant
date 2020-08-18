@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 在UI中為廣告連接器配置資料流
 topic: overview
 translation-type: tm+mt
-source-git-commit: d80622aaa8408d640a1a80b6a37f4083344e7fa1
+source-git-commit: 6bd5dc5a68fb2814ab99d43b34f90aa7e50aa463
 workflow-type: tm+mt
-source-wordcount: '1274'
+source-wordcount: '1272'
 ht-degree: 0%
 
 ---
@@ -20,10 +20,10 @@ ht-degree: 0%
 
 本教學課程需要對Adobe Experience Platform的下列元件有正確的認識：
 
-- [體驗資料模型(XDM)系統](../../../../xdm/home.md):組織客戶體驗資料 [!DNL Experience Platform] 的標準化架構。
+- [[!DNL Experience Data Model] (XDM)系統](../../../../xdm/home.md):組織客戶體驗資料 [!DNL Experience Platform] 的標準化架構。
    - [架構構成基礎](../../../../xdm/schema/composition.md):瞭解XDM架構的基本建置區塊，包括架構組合的主要原則和最佳實務。
    - [架構編輯器教程](../../../../xdm/tutorials/create-schema-ui.md):瞭解如何使用架構編輯器UI建立自訂架構。
-- [即時客戶個人檔案](../../../../profile/home.md):根據來自多個來源的匯整資料，提供統一、即時的消費者個人檔案。
+- [[!DNL即時客戶基本資料]](../../../../profile/home.md):根據來自多個來源的匯整資料，提供統一、即時的消費者個人檔案。
 
 此外，本教學課程要求您已建立廣告帳戶。 如需在UI中建立不同付款連接器的教學課程清單，請參閱來源連 [接器概觀](../../../home.md)。
 
@@ -106,20 +106,20 @@ ht-degree: 0%
 
 ## 提供資料流詳細資訊
 
-此時將顯示 *[!UICONTROL 資料流詳細資訊]* ，允許您命名新資料流並提供有關新資料流的簡要說明。
+此時將顯示 **[!UICONTROL 資料流詳細資訊]** ，允許您命名新資料流並提供有關新資料流的簡要說明。
 
-在此過程中，您還可以啟用「部 *[!UICONTROL 分提取]* 」和「 *[!UICONTROL 錯誤診斷」]*。 啟用 *[!UICONTROL 部分擷取]* ，可讓您擷取包含錯誤至特定臨界值的資料。 啟用 *[!UICONTROL 部分提取]* ，請拖動「錯誤閾值% ** dial」以調整批的錯誤閾值。 或者，也可以通過選擇輸入框手動調整閾值。 如需詳細資訊，請參閱部 [分批次擷取概觀](../../../../ingestion/batch-ingestion/partial.md)。
+在此過程中，您還可以啟用「部 **[!UICONTROL 分提取]** 」和「 **[!UICONTROL 錯誤診斷」]**。 啟用 **[!UICONTROL 部分擷取]** ，可讓您擷取包含錯誤至特定臨界值的資料。 啟用 **[!UICONTROL 部分提取]** ，請拖動「錯誤閾值% **** dial」以調整批的錯誤閾值。 或者，也可以通過選擇輸入框手動調整閾值。 如需詳細資訊，請參閱部 [分批次擷取概觀](../../../../ingestion/batch-ingestion/partial.md)。
 為資料流提供值並選擇「下 **[!UICONTROL 一步]**」。
 
 ![dataflow-details](../../../images/tutorials/dataflow/all-tabular/dataflow-detail.png)
 
 ## 查看資料流
 
-此時 *[!UICONTROL 會出現]* 「查看」步驟，允許您在建立新資料流之前對其進行查看。 詳細資訊會分組在下列類別中：
+此時 **[!UICONTROL 會出現]** 「查看」步驟，允許您在建立新資料流之前對其進行查看。 詳細資訊會分組在下列類別中：
 
-- *[!UICONTROL 連接]*:顯示源檔案的類型、所選源檔案的相關路徑，以及該源檔案中的列數。
-- *[!UICONTROL 指派資料集與地圖欄位]*:顯示源資料被吸收到的資料集，包括資料集所附的模式。
-- *[!UICONTROL 排程]*:顯示接收調度的活動期間、頻率和間隔。
+- **[!UICONTROL 連接]**:顯示源檔案的類型、所選源檔案的相關路徑，以及該源檔案中的列數。
+- **[!UICONTROL 指派資料集與地圖欄位]**:顯示源資料被吸收到的資料集，包括資料集所附的模式。
+- **[!UICONTROL 排程]**:顯示接收調度的活動期間、頻率和間隔。
 
 複查資料流後，按一下 **[!UICONTROL 完成]** ，並為建立資料流留出一些時間。
 
@@ -131,7 +131,7 @@ ht-degree: 0%
 
 ## 刪除資料流
 
-您可以使用「資料流」工作區中的「刪除」功能刪除不再需要或 *[!UICONTROL 建立錯誤的]* 資料流 ** 。 有關如何刪除資料流的詳細資訊，請參見UI中有關 [刪除資料流的教程](../delete.md)。
+您可以使用「資料流」工作區中的「刪除」功能刪除不再需要或 **[!UICONTROL 建立錯誤的]** 資料流 **** 。 有關如何刪除資料流的詳細資訊，請參見UI中有關 [刪除資料流的教程](../delete.md)。
 
 ## 後續步驟
 
@@ -148,11 +148,11 @@ ht-degree: 0%
 
 建立資料流時，它會立即變為活動狀態，並根據給定的時間表收集資料。 您可以隨時按照以下說明禁用活動資料流。
 
-在「數 *[!UICONTROL 據流]* 」螢幕中，選擇要禁用的資料流的名稱。
+在「數 **[!UICONTROL 據流]** 」螢幕中，選擇要禁用的資料流的名稱。
 
 ![browse-dataset-flow](../../../images/tutorials/dataflow/advertising/view-dataset-flows.png)
 
-「 *[!UICONTROL 屬性]* 」欄會出現在畫面的右側。 此面板包含「啟 **[!UICONTROL 用]** 」切換按鈕。 按一下切換以禁用資料流。 在禁用資料流後，可以使用相同的切換來重新啟用資料流。
+「 **[!UICONTROL 屬性]** 」欄會出現在畫面的右側。 此面板包含「啟 **[!UICONTROL 用]** 」切換按鈕。 按一下切換以禁用資料流。 在禁用資料流後，可以使用相同的切換來重新啟用資料流。
 
 ![disable](../../../images/tutorials/dataflow/advertising/disable.png)
 
