@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Adobe Experience Platform部分批次擷取概觀
 topic: overview
 translation-type: tm+mt
-source-git-commit: df6a6e20733953a0983bbfdf66ca2abc6f03e977
+source-git-commit: ac75b1858b6a731915bbc698107f0be6043267d8
 workflow-type: tm+mt
-source-wordcount: '1420'
+source-wordcount: '1446'
 ht-degree: 1%
 
 ---
@@ -25,8 +25,8 @@ ht-degree: 1%
 
 本教學課程需要對部分批次擷取所涉及的各種Adobe Experience Platform服務有相關的使用知識。 在開始本教學課程之前，請先閱讀下列服務的檔案：
 
-- [批次擷取](./overview.md): 從資料檔 [!DNL Platform] 案（例如CSV和Parce）擷取和儲存資料的方法。
-- [[!DNL Experience Data Model] (XDM)](../../xdm/home.md): 組織客戶體驗資料 [!DNL Platform] 的標準化架構。
+- [批次擷取](./overview.md):從資料檔 [!DNL Platform] 案（例如CSV和Parce）擷取和儲存資料的方法。
+- [[!DNL Experience Data Model] (XDM)](../../xdm/home.md):組織客戶體驗資料 [!DNL Platform] 的標準化架構。
 
 以下章節提供您成功呼叫API所需的其他資訊 [!DNL Platform] 。
 
@@ -38,7 +38,7 @@ ht-degree: 1%
 
 若要呼叫API，您必 [!DNL Platform] 須先完成驗證教 [學課程](../../tutorials/authentication.md)。 完成驗證教學課程後，將提供所有 [!DNL Experience Platform] API呼叫中每個必要標題的值，如下所示：
 
-- 授權： 生產者 `{ACCESS_TOKEN}`
+- 授權：生產者 `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
@@ -89,7 +89,7 @@ ht-degree: 1%
 
 「部 **[!UICONTROL 分擷取]** 」切換可讓您啟用或停用部分批次擷取的使用。
 
-只有在 **[!UICONTROL 關閉「部分提取]** 」( **[!UICONTROL Partial ingestion]** )切換時，才會顯示「錯誤診斷」(Error diagnostics)切換。 此功能可 [!DNL Platform] 產生有關您所擷取批次的詳細錯誤訊息。 如果已 *[!UICONTROL 開啟「部分擷取]* 」切換，則會自動強制執行增強的錯誤診斷。
+僅當 **[!UICONTROL Partial Ingestion（部分攝取）關]** 閉時，才會顯示 **** Error diagnostics（錯誤診斷）切換。 此功能可 [!DNL Platform] 產生有關您所擷取批次的詳細錯誤訊息。 如果已 *[!UICONTROL 開啟「部分擷取]* 」切換，則會自動強制執行增強的錯誤診斷。
 
 ![](../images/batch-ingestion/partial-ingestion/configure-batch-partial-ingestion-focus.png)
 
@@ -373,7 +373,7 @@ curl -X GET https://platform.adobe.io/data/foundation/catalog/batches/{BATCH_ID}
 
 ### 不可分的行 {#unparsable}
 
-如果接受的批處理具有不可分割的行，則批處理的錯誤將儲存在檔案中，該檔案可以使用下面概述的端點進行訪問。
+如果所吸收的批具有不可分解的行，則可以使用以下端點查看包含錯誤的檔案清單。
 
 **API格式**
 
@@ -397,15 +397,48 @@ curl -X GET https://platform.adobe.io/data/foundation/export/batches/{BATCH_ID}/
 
 **回應**
 
-成功的回應會傳回HTTP狀態200，其中包含不可分列的詳細資料。
+成功的回應會傳回HTTP狀態200，並列出有錯誤的檔案。
 
 ```json
 {
-    "_corrupt_record": "{missingQuotes:"v1"}",
+    "data": [
+        {
+            "name": "conversion_errors_0.json",
+            "length": "1162",
+            "_links": {
+                "self": {
+                    "href": "https://platform.adobe.io:443/data/foundation/export/batches/01EFZ7W203PEKSAMVJC3X99VHQ/meta?path=row_errors%2Fconversion_errors_0.json"
+                }
+            }
+        },
+        {
+            "name": "parsing_errors_0.json",
+            "length": "153",
+            "_links": {
+                "self": {
+                    "href": "https://platform.adobe.io:443/data/foundation/export/batches/01EFZ7W203PEKSAMVJC3X99VHQ/meta?path=row_errors%2Fparsing_errors_0.json"
+                }
+            }
+        }
+    ],
+    "_page": {
+        "limit": 100,
+        "count": 2
+    }
+}
+```
+
+然後，您可以使用中繼資料擷取端點來擷取有關錯誤 [的詳細資訊](#retrieve-metadata)。
+
+檢索錯誤檔案的示例響應如下：
+
+```json
+{
+    "_corrupt_record": "{missingQuotes: "v1"}",
     "_errors": [{
-         "code": "1401",
-         "message": "Row is corrupted and cannot be read, please fix and resend."
+        "code": "1401",
+        "message": "Row is corrupted and cannot be read, please fix and resend."
     }],
-    "_filename": "a1.json"
+    "_filename": "parsing_errors_0.json"
 }
 ```
