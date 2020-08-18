@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 在UI中建立FTP或SFTP來源連接器
 topic: overview
 translation-type: tm+mt
-source-git-commit: 41fe3e5b2a830c3182b46b3e0873b1672a1f1b03
+source-git-commit: 9995a1d7daae3860783d2b4e4e0d2f1314eaa643
 workflow-type: tm+mt
-source-wordcount: '554'
+source-wordcount: '545'
 ht-degree: 1%
 
 ---
@@ -23,10 +23,10 @@ Adobe Experience Platform中的來源連接器可讓您依計畫吸收外部來�
 
 本教學課程需要對Adobe Experience Platform的下列元件有正確的認識：
 
-* [體驗資料模型(XDM)系統](../../../../../xdm/home.md):Experience Platform組織客戶體驗資料的標準化架構。
+* [[!DNL Experience Data Model] (XDM)系統](../../../../../xdm/home.md):Experience Platform組織客戶體驗資料的標準化架構。
    * [架構構成基礎](../../../../../xdm/schema/composition.md):瞭解XDM架構的基本建置區塊，包括架構組合的主要原則和最佳實務。
    * [架構編輯器教程](../../../../../xdm/tutorials/create-schema-ui.md):瞭解如何使用架構編輯器UI建立自訂架構。
-* [即時客戶個人檔案](../../../../../profile/home.md):根據來自多個來源的匯整資料，提供統一、即時的消費者個人檔案。
+* [[!DNL即時客戶基本資料]](../../../../../profile/home.md):根據來自多個來源的匯整資料，提供統一、即時的消費者個人檔案。
 
 如果您已經有有效的FTP或SFTP連線，則可略過本文檔的其餘部分，並繼續有關配置資料 [流的教程](../../dataflow/batch/cloud-storage.md)。
 
@@ -46,19 +46,19 @@ Adobe Experience Platform中的來源連接器可讓您依計畫吸收外部來�
 
 收集完所需憑證後，您可依照下列步驟建立新的FTP或SFTP帳戶以連線至 [!DNL Platform]。
 
-登入 [Adobe Experience Platform](https://platform.adobe.com) ，然後從左側導覽列選取 **[!UICONTROL Sources]** ，以存取 ** Sources工作區。 「目 *[!UICONTROL 錄]* 」螢幕顯示各種源，您可以為其建立入站帳戶，每個源顯示與其關聯的現有帳戶和資料流的數量。
+登入 [Adobe Experience Platform](https://platform.adobe.com) ，然後從左側導覽列選取 **[!UICONTROL Sources]** ，以存取 **** Sources工作區。 「目 **[!UICONTROL 錄]** 」畫面會顯示多種來源，您可為其建立傳入帳戶。
 
 您可以從畫面左側的目錄中選取適當的類別。 或者，您也可以使用搜尋選項找到您要使用的特定來源。
 
-在「資 *[!UICONTROL 料庫]* 」類別下，選取 **[!UICONTROL SFTP]** ，接著 **[!UICONTROL 新增資料]** ，以建立新的FTP或SFTP連接器。
+在「數 **[!UICONTROL 據庫]** 」類別下，選 **[!UICONTROL 擇SFTP]**。 如果這是您第一次使用此連接器，請選擇「配 **[!UICONTROL 置」]**。 否則，請選 **[!UICONTROL 取「新增資料]** 」以建立新的FTP或SFTP連接器。
 
 ![目錄](../../../../images/tutorials/create/sftp/catalog.png)
 
-此時 *[!UICONTROL 將顯示「連接到SFTP]* 」頁。 在此頁上，您可以使用新認證或現有認證。
+此時 **[!UICONTROL 將顯示「連接到SFTP]** 」頁。 在此頁上，您可以使用新認證或現有認證。
 
 ### 新帳戶
 
-如果您使用新認證，請選擇「新 **[!UICONTROL 帳戶」]**。 在出現的輸入表單上，提供連線名稱、選用說明以及您的FTP或SFTP憑證。 完成後，選擇 **[!UICONTROL Connect]** ，然後為新帳戶建立留出一些時間。
+如果您使用新認證，請選擇「新 **[!UICONTROL 帳戶」]**。 在出現的輸入表單上，提供名稱、選用說明以及您的FTP或SFTP憑證。 完成後，選擇 **[!UICONTROL Connect]** ，然後為建立新連接留出一些時間。
 
 ![連接](../../../../images/tutorials/create/sftp/new.png)
 
@@ -70,4 +70,4 @@ Adobe Experience Platform中的來源連接器可讓您依計畫吸收外部來�
 
 ## 後續步驟
 
-在本教學課程中，您已建立與FTP或SFTP帳戶的連線。 您現在可以繼續下一個教學課程，並 [設定資料流，將雲端儲存空間的資料匯入平台](../../dataflow/batch/cloud-storage.md)。
+在本教學課程中，您已建立與FTP或SFTP帳戶的連線。 您現在可以繼續下一個教學課程，並 [設定資料流，將雲端儲存空間的資料匯入 [!DNL Platform]](../../dataflow/batch/cloud-storage.md)。
