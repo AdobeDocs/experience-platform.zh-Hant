@@ -3,9 +3,9 @@ product: experience-platform
 audience: user
 user-guide-title: Adobe Experience Platform來源連接器說明
 translation-type: tm+mt
-source-git-commit: 18af4226c07cd7bc8a093aa4b1ce2b5f8f018cb6
+source-git-commit: c15f582eeaa895f03441b2f488686a9a48942f3d
 workflow-type: tm+mt
-source-wordcount: '616'
+source-wordcount: '610'
 ht-degree: 0%
 
 ---
@@ -54,7 +54,6 @@ ht-degree: 0%
       - [GreenPlum連接器](connectors/databases/greenplum.md)
       - [HP Vertica連接器](connectors/databases/hp-vertica.md)
       - [IBM DB2連接器](connectors/databases/ibm-db2.md)
-      - [MariaDB連接器](connectors/databases/mariadb.md)
       - [Microsoft SQL Server連接器](connectors/databases/sql-server.md)
       - [MySQL連接器](connectors/databases/mysql.md)
       - [Oracle連接器](connectors/databases/oracle.md)
@@ -99,7 +98,6 @@ ht-degree: 0%
          - [GreenPlum連接器](tutorials/api/create/databases/greenplum.md)
          - [HP Vertica連接器](tutorials/api/create/databases/hp-vertica.md)
          - [IBM DB2連接器](tutorials/api/create/databases/ibm-db2.md)
-         - [MariaDB連接器](tutorials/api/create/databases/mariadb.md)
          - [MySQL連接器](tutorials/api/create/databases/mysql.md)
          - [Oracle連接器](tutorials/api/create/databases/oracle.md)
          - [菲尼克斯連接器](tutorials/api/create/databases/phoenix.md)
@@ -169,7 +167,6 @@ ht-degree: 0%
          - [GreenPlum連接器](tutorials/ui/create/databases/greenplum.md)
          - [HP Vertica連接器](tutorials/ui/create/databases/hp-vertica.md)
          - [IBM DB2連接器](tutorials/ui/create/databases/ibm-db2.md)
-         - [MariaDB連接器](tutorials/ui/create/databases/mariadb.md)
          - [Microsoft SQL Server連接器](tutorials/ui/create/databases/sql-server.md)
          - [MySQL連接器](tutorials/ui/create/databases/mysql.md)
          - [Oracle連接器](tutorials/ui/create/databases/oracle.md)
