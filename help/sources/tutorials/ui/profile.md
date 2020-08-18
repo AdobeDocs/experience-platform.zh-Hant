@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 啟用傳入來源資料以填入客戶個人檔案
 topic: overview
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 6bd5dc5a68fb2814ab99d43b34f90aa7e50aa463
 workflow-type: tm+mt
-source-wordcount: '481'
+source-wordcount: '476'
 ht-degree: 0%
 
 ---
@@ -20,10 +20,10 @@ ht-degree: 0%
 
 本教學課程需要對Adobe Experience Platform的下列元件有正確的認識：
 
-- [體驗資料模型(XDM)系統](../../../xdm/home.md): 組織客戶體驗資料 [!DNL Experience Platform] 的標準化架構。
-   - [架構構成基礎](../../../xdm/schema/composition.md): 瞭解XDM架構的基本建置區塊，包括架構組合的主要原則和最佳實務。
-   - [架構編輯器教程](../../../xdm/tutorials/create-schema-ui.md): 瞭解如何使用架構編輯器UI建立自訂架構。
-- [即時客戶個人檔案](../../../profile/home.md): 根據來自多個來源的匯整資料，提供統一、即時的消費者個人檔案。
+- [[!DNL Experience Data Model] (XDM)系統](../../../xdm/home.md):組織客戶體驗資料 [!DNL Experience Platform] 的標準化架構。
+   - [架構構成基礎](../../../xdm/schema/composition.md):瞭解XDM架構的基本建置區塊，包括架構組合的主要原則和最佳實務。
+   - [架構編輯器教程](../../../xdm/tutorials/create-schema-ui.md):瞭解如何使用架構編輯器UI建立自訂架構。
+- [[!DNL即時客戶基本資料]](../../../profile/home.md):根據來自多個來源的匯整資料，提供統一、即時的消費者個人檔案。
 
 此外，本教學課程要求您已建立並設定來源連接器。  如需在UI中建立不同連接器的教學課程清單，請參閱來源連 [接器概觀](../../home.md)。
 
@@ -39,23 +39,23 @@ ht-degree: 0%
 
 ![](../../images/tutorials/dataflow/cloud-storage/batch/browse.png)
 
-此時將顯示連 *[!UICONTROL 接的「源」活動]* 螢幕，顯示連接正在將源資料收錄到的資料集。 按一下您要啟用的資料集名稱 [!DNL Profile]。
+此時將顯示連 **[!UICONTROL 接的「源」活動]** 螢幕，顯示連接正在將源資料收錄到的資料集。 按一下您要啟用的資料集名稱 [!DNL Profile]。
 
 ![](../../images/tutorials/dataflow/cloud-storage/batch/dataset-dataflow.png)
 
-此時會 *[!UICONTROL 顯示「資料集]* 」活動畫面。 畫面 *[!UICONTROL 右側的]***** 「屬性」欄會顯示資料集的詳細資料，並包含「描述檔」切換器和資料集所遵守之架構的連結。 按一下架構的名稱可查看其構成。
+此時會 **[!UICONTROL 顯示「資料集]** 」活動畫面。 畫面 **[!UICONTROL 右側的]****** 「屬性」欄會顯示資料集的詳細資料，並包含「描述檔」切換器和資料集所遵守之架構的連結。 按一下架構的名稱可查看其構成。
 
 ![](../../images/tutorials/dataflow/cloud-storage/batch/select-dataset-schema.png)
 
-此時 *[!UICONTROL 會出現]* 「架構編輯器」，在中央畫布中顯示架構的結構。 在畫布中，選取要設為主要身分的欄位。 在出現的 *[!UICONTROL 欄位屬性]* (Field properties **[!UICONTROL )標籤下，選取「]** Identity **[!UICONTROL 」核取方塊，然後選取「]** Primary identity」。 最後，選取適當的 **[!UICONTROL Identity命名空間]**，然後按一下 **[!UICONTROL 套用]**。
+此時 **[!UICONTROL 會出現]** 「架構編輯器」，在中央畫布中顯示架構的結構。 在畫布中，選取要設為主要身分的欄位。 在出現的 *[!UICONTROL 欄位屬性]* (Field properties **[!UICONTROL )標籤下，選取「]** Identity **[!UICONTROL 」核取方塊，然後選取「]** Primary identity」。 最後，選取適當的 **[!UICONTROL Identity命名空間]**，然後按一下 **[!UICONTROL 套用]**。
 
 ![](../../images/tutorials/dataflow/cloud-storage/batch/set-schema-identity.png)
 
-按一下方案結構的頂級對象，並顯示「方 *[!UICONTROL 案屬性]* 」列。 通過切換配置 [!DNL Profile] 式交換機啟 **[!UICONTROL 用模式]** 。 按一 **[!UICONTROL 下「儲存]** 」以完成變更。
+按一下方案結構的頂級對象，並顯示「方 **[!UICONTROL 案屬性]** 」列。 通過切換配置 [!DNL Profile] 式交換機啟 **[!UICONTROL 用模式]** 。 按一 **[!UICONTROL 下「儲存]** 」以完成變更。
 
 ![](../../images/tutorials/dataflow/cloud-storage/batch/enable-profile.png)
 
-現在已啟用方案，請 [!DNL Profile]返回「資料集」活動畫面，然後按一下「屬性」欄內的「設定檔 *[!UICONTROL 」切換]* 資料集，以啟 [!DNL Profile]****** 用該活動。
+現在已啟用方案，請 [!DNL Profile]返回「資料集」活動畫面，然後按一下「屬性」欄內的「設定檔 **[!UICONTROL 」切換]** 資料集，以啟 [!DNL Profile]******** 用該活動。
 
 ![](../../images/tutorials/dataflow/cloud-storage/batch/enable-dataset-profile.png)
 
@@ -63,8 +63,8 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->最近啟用的資料集內的現有資料不會被 [!DNL Profile]
+>最近啟用的資料集內的現有資料不會被使用 [!DNL Profile]。
 
 ## 後續步驟
 
-遵循本教學課程，您已成功啟動傳入的人口 [!DNL Profile] 資料。 如需詳細資訊，請參 [閱即時客戶個人檔案總覽](../../../profile/home.md)。
+遵循本教學課程，您已成功啟動傳入的人口 [!DNL Profile] 資料。 For more information, see the [[!DNL Real-time Customer Profile] overview](../../../profile/home.md).
