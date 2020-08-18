@@ -4,10 +4,10 @@ solution: Experience Platform
 title: 在UI中建立客戶屬性來源連接器
 topic: overview
 translation-type: tm+mt
-source-git-commit: 41fe3e5b2a830c3182b46b3e0873b1672a1f1b03
+source-git-commit: 999ff0e9525d7d9f67298862c68bb59ddc35e558
 workflow-type: tm+mt
-source-wordcount: '364'
-ht-degree: 7%
+source-wordcount: '352'
+ht-degree: 8%
 
 ---
 
@@ -34,7 +34,7 @@ ht-degree: 7%
 
 ![](../../../../images/tutorials/create/customer-attributes/source_activity.png)
 
-從可用客戶屬性配置檔案資料集清單中，選擇要導入平台的資料集，然後按一下「下 **一步」**。
+從可用客戶屬性配置檔案資料集清單中，選擇要導入的資料集，然後按一下「下 [!DNL Platform] 一步」 ****。
 
 >[!NOTE]
 >
@@ -51,7 +51,7 @@ ht-degree: 7%
 
 ## 後續步驟
 
-建立連線後，系統會自動建立目標結構和資料集以包含傳入的資料。當初始擷取完成時，下游平台服務（例如即時客戶個人檔案和細分服務）可使用客戶屬性個人檔案資料。 如需詳細資訊，請參閱下列檔案：
+建立連線後，系統會自動建立目標結構和資料集以包含傳入的資料。當初始擷取完成時，下游服務（例如和）可使用客戶屬 [!DNL Platform] 性描述檔 [!DNL Real-time Customer Profile] 資料 [!DNL Segmentation Service]。 如需詳細資訊，請參閱下列檔案：
 
-* [即時客戶個人檔案總覽](../../../../../profile/home.md)
-* [區段服務概觀](../../../../../segmentation/home.md)
+* [[!DNL Real-time Customer Profile] 概述](../../../../../profile/home.md)
+* [[!DNL Segmentation Service] 概述](../../../../../segmentation/home.md)
