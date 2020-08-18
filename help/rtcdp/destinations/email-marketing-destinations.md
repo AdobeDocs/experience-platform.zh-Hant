@@ -4,9 +4,9 @@ seo-title: 電子郵件行銷目標
 description: 電子郵件服務供應商(ESP)可讓您管理電子郵件行銷活動，例如傳送促銷電子郵件促銷活動。
 seo-description: 電子郵件服務供應商(ESP)可讓您管理電子郵件行銷活動，例如傳送促銷電子郵件促銷活動。
 translation-type: tm+mt
-source-git-commit: 6850a1ee5a578a3dccce9f9decd8f6a368705f4a
+source-git-commit: a251d843401d2f092e368a4cdac217171fa4687f
 workflow-type: tm+mt
-source-wordcount: '800'
+source-wordcount: '799'
 ht-degree: 1%
 
 ---
@@ -22,9 +22,9 @@ ht-degree: 1%
 
 在連接目標流中（如下節所述），連接到Amazon S3或SFTP。 即時CDP將您的細分導出為 `.csv` 或文 `.txt` 件，並將其發送到您的首選位置。 從即時CDP中啟用的儲存位置，排程您在電子郵件行銷平台中的資料匯入。 匯入資料的程式會因每個合作夥伴而異。 如需詳細資訊，請參閱個別的目標文章。
 
-## 步驟1 —— 連接目標 {#connect-destination}
+## 步驟1 —— 配置目標 {#connect-destination}
 
-1. 在「 **[!UICONTROL 連線]** >目 **[!UICONTROL 的地]**」中，選取您要連線的電子郵件行銷目的地，然後選取「 **[!UICONTROL 連線目的地」]**。
+1. 在「 **[!UICONTROL 連線]** >目 **[!UICONTROL 的地]**」中，選取您要連線的電子郵件行銷目的地，然後選取「設 **[!UICONTROL 定」]**。
 
    ![連接到目標](/help/rtcdp/destinations/assets/connect-email-marketing.png)
 
