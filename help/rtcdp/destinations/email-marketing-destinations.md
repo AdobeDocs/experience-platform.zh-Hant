@@ -1,10 +1,11 @@
 ---
+keywords: email;Email;e-mail;email destinations
 title: 電子郵件行銷目標
 seo-title: 電子郵件行銷目標
 description: 電子郵件服務供應商(ESP)可讓您管理電子郵件行銷活動，例如傳送促銷電子郵件促銷活動。
 seo-description: 電子郵件服務供應商(ESP)可讓您管理電子郵件行銷活動，例如傳送促銷電子郵件促銷活動。
 translation-type: tm+mt
-source-git-commit: a251d843401d2f092e368a4cdac217171fa4687f
+source-git-commit: 2dfa46906374151628d46c309df724a59f8dc50e
 workflow-type: tm+mt
 source-wordcount: '799'
 ht-degree: 1%
@@ -38,7 +39,7 @@ ht-degree: 1%
 
 3. 在「設 **[!UICONTROL 置]** 」步驟中，為新目標輸入「名稱」( **[!UICONTROL Name]** )和「說明 **[!UICONTROL 」(Description]** )，以及導出檔案的 **** 「檔案格式」(File format)。 <br>
 如果您在上一步驟中選擇Amazon S3作為儲存選項，請在將要傳送檔案的雲端儲存目的地中，插入 **[!UICONTROL Bucket name]** （儲存貯體名稱）和 **** Folder路徑。 對於SFTP儲存選項，插入 **[!UICONTROL 資料夾路徑]** （資料夾路徑）。 <br>
-此外，您也可以在此步驟中選取 **[!UICONTROL 任何應套用至此目的地的Marketing]** 使用案例。 行銷使用案例會指出將資料匯出至目的地的方式。 您可以從Adobe定義的行銷使用案例中選擇，也可以建立自己的行銷使用案例。 有關行銷使用案例的詳細資訊，請參 [閱即時CDP中的資料治理頁](/help/rtcdp/privacy/data-governance-overview.md#destinations) 。 如需個別Adobe定義之行銷使用案例的詳細資訊，請參閱「資 [料使用政策」概觀](/help/data-governance/policies/overview.md#core-actions)。 <br>
+此外，您也可以在此步驟中，選取 **[!UICONTROL 任何應套用至此目的地的Marketing]** 使用案例。 行銷使用案例會指出將資料匯出至目的地的方式。 您可以從Adobe定義的行銷使用案例中選擇，也可以建立自己的行銷使用案例。 有關行銷使用案例的詳細資訊，請參 [閱即時CDP中的資料治理頁](/help/rtcdp/privacy/data-governance-overview.md#destinations) 。 如需個別Adobe定義之行銷使用案例的詳細資訊，請參閱「資 [料使用政策」概觀](/help/data-governance/policies/overview.md#core-actions)。 <br>
    ![電子郵件設定步驟](/help/rtcdp/destinations/assets/email-setup-step.png)
 
 ## 步驟2 —— 選擇要包含在目標導出中的段成員 {#select-segments}
