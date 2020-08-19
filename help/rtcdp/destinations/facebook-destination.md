@@ -1,10 +1,11 @@
 ---
+keywords: facebook extensions;facebook extension;facebook destinations;facebook
 title: Facebook目標
 seo-title: Facebook目標
 description: 根據雜湊的電子郵件，啟用您Facebook宣傳的個人檔案，以鎖定受眾、個人化和抑制受眾。
 seo-description: 根據雜湊的電子郵件，啟用您Facebook宣傳的個人檔案，以鎖定受眾、個人化和抑制受眾。
 translation-type: tm+mt
-source-git-commit: 7f3df12da5e93c3d0cc53eed1aa603ddbafdb0b2
+source-git-commit: 15323134f0c626cad2c4e90b3e1c0662cf7e57dd
 workflow-type: tm+mt
 source-wordcount: '722'
 ht-degree: 2%
@@ -70,7 +71,7 @@ ht-degree: 2%
 
 如果您選擇自行排列電子郵件地址，請務必符合下列要求：
 
-* 從電子郵件字串中修剪所有前導和尾隨空格； 範例： `johndoe@example.com`，不是 `<space>johndoe@example.com<space>`;
+* 從電子郵件字串中修剪所有前導和尾隨空格；範例： `johndoe@example.com`，不是 `<space>johndoe@example.com<space>`;
 * 在對電子郵件字串進行散列時，請務必對小寫字串進行散列；
    * 範例： `example@email.com`，不是 `EXAMPLE@EMAIL.COM`;
 * 請確定雜湊字串全部為小寫
