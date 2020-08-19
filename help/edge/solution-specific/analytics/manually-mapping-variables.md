@@ -4,10 +4,10 @@ seo-title: 使用Web SDK手動對應Analytics中的變數
 description: 如何使用處理規則手動將變數映射至Analytics
 seo-description: 將變數與網頁SDK搭配使用處理規則手動對應至Analytics
 translation-type: tm+mt
-source-git-commit: 7b07a974e29334cde2dee7027b9780a296db7b20
+source-git-commit: 075d71353877045e12985b3914aaeeb478ed46d6
 workflow-type: tm+mt
 source-wordcount: '371'
-ht-degree: 11%
+ht-degree: 47%
 
 ---
 
@@ -16,13 +16,13 @@ ht-degree: 11%
 
 Adobe Experience Platform(AEP)可以自 [!DNL Web SDK] 動映射某些變數，但自訂變數必須手動映射。
 
-對於未自動映射到的XDM資料 [!DNL Analytics]，可以使 [用上下文資料](https://docs.adobe.com/content/help/zh-Hant/analytics/implementation/vars/page-vars/contextdata.html) ，與模式 [匹配](https://docs.adobe.com/content/help/zh-Hant/experience-platform/xdm/schema/composition.html)。 然後，可使用處理規則將 [!DNL Analytics] 其映 [射至](https://docs.adobe.com/content/help/zh-Hant/analytics/admin/admin-tools/processing-rules/processing-rules-configuration/t-processing-rules.html) ，以填入 [!DNL Analytics] 變數。
+For XDM data that is not automatically mapped to [!DNL Analytics], you can use [context data](https://docs.adobe.com/content/help/zh-Hant/analytics/implementation/vars/page-vars/contextdata.html) to match your [schema](https://docs.adobe.com/content/help/zh-Hant/experience-platform/xdm/schema/composition.html). 然後，可使用處理規則將 [!DNL Analytics] 其映 [射至](https://docs.adobe.com/content/help/zh-Hant/analytics/admin/admin-tools/processing-rules/processing-rules-configuration/t-processing-rules.html) ，以填入 [!DNL Analytics] 變數。
 
-此外，您也可以使用一組預設的動作和產品清單，以傳送或擷取AEP的資料 [!DNL Web SDK]。 若要這麼做，請參閱 [產品](https://docs.adobe.com/content/help/en/experience-platform/edge/implement/commerce.html)。
+Also, you can use a default set of actions and product lists to send or retrieve data with the AEP [!DNL Web SDK]. 若要這麼做，請參閱[產品](https://docs.adobe.com/content/help/zh-Hant/experience-platform/edge/implement/commerce.html)。
 
-## 上下文資料
+## 內容資料
 
-XDM資料會使 [!DNL Analytics]用點符號平面化，並設為可用 `contextData`。 下列值對清單顯示下列範例 `context data`:
+To be used by [!DNL Analytics], XDM data is flattened using dot notation and made available as `contextData`. 下列值配對清單顯示 `context data` 的範例：
 
 ```javascript
 {
@@ -49,21 +49,21 @@ XDM資料會使 [!DNL Analytics]用點符號平面化，並設為可用 `context
 
 ## 處理規則
 
-邊緣網路收集的所有資料都可透過處理 [規則存取](https://docs.adobe.com/content/help/zh-Hant/analytics/admin/admin-tools/processing-rules/processing-rules-configuration/t-processing-rules.html)。 在中 [!DNL Analytics]，您可以使用處理規則將上下文資料併入變數 [!DNL Analytics] 中。
+邊緣網路收集的所有資料都可透過[處理規則](https://docs.adobe.com/content/help/zh-Hant/analytics/admin/admin-tools/processing-rules/processing-rules-configuration/t-processing-rules.html)來存取。In [!DNL Analytics], you can use processing rules to incorporate context data into [!DNL Analytics] variables.
 
-例如，在下列規則中，Analytics會設為將與 **a.x_atag.search.term（上下文資料）關聯的資料填入內部搜尋詞(eVar2)******。
+以下列規則為例，Analytics 設為會在&#x200B;**內部搜尋詞彙 (eVar2)** 中填入與 **a.x_atag.search.term (內容資料)** 相關聯的資料。
 
 ![](assets/examplerule.png)
 
 
-## XDM架構
+## XDM 結構
 
-[!DNL Experience Platform] 使用結構描述以一致且可重複使用的方式來描述資料結構。 透過跨系統一致地定義資料，保留意義並從資料中獲取價值變得更容易。 [!DNL Analytics] 上下文資料可與架構定義的結構搭配使用。
+[!DNL Experience Platform] 會使用結構，以一致且可重複使用的方式說明資料結構。透過跨系統一致地定義資料，保留意義並從資料中獲取價值變得更容易。 [!DNL Analytics] 上下文資料可與架構定義的結構搭配使用。
 
-下列範例說明如何搭配 [`event` 使用命令](https://docs.adobe.com/content/help/en/experience-platform/edge/fundamentals/tracking-events.html) ，以 `xdm` 及如何使用AEP來傳送和擷取資料 [!DNL Web SDK]。 在此範例中，命 `event` 令與 [ExperienceEvent商務詳細資訊結構方案相符](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/context/experienceevent-commerce.schema.md) ，以便追蹤productListItems `name` 和 `SKU` 值：
+The following example shows how the [`event` command](https://docs.adobe.com/content/help/zh-Hant/experience-platform/edge/fundamentals/tracking-events.html) can be used with the `xdm` option to send and retrieve data with the AEP [!DNL Web SDK]. 在此範例中，`event` 命令與 [ExperienceEvent 商務詳細資料結構](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/context/experienceevent-commerce.schema.md)相符，因此會追蹤 productListItems `name` 和 `SKU` 值：
 
 
-```
+```javascript
 alloy("event",{
   "xdm":{
     "commerce":{
@@ -85,4 +85,4 @@ alloy("event",{
 });
 ```
 
-如需使用AEP追蹤事件的詳細資訊，請參 [!DNL Web SDK]閱追 [蹤事件](https://docs.adobe.com/content/help/en/experience-platform/edge/fundamentals/tracking-events.html)。
+For more information on tracking events with the AEP [!DNL Web SDK], see [Tracking events](https://docs.adobe.com/content/help/zh-Hant/experience-platform/edge/fundamentals/tracking-events.html).
