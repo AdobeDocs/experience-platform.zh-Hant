@@ -1,11 +1,11 @@
 ---
-keywords: rtcdp profile;real-time customer profile
+keywords: rtcdp profile;profiles rtcdp;rtcdp identities;rtcdp merge policies;real-time customer profile
 title: 即時客戶個人檔案總覽
 seo-title: 即時客戶資料平台中的即時客戶個人檔案
 description: 概述即時客戶資料平台如何讓您使用即時客戶個人檔案，為客戶提供協調一致的相關體驗。
 seo-description: 即時客戶資料平台、個人檔案、資料、體驗、通道
 translation-type: tm+mt
-source-git-commit: 23516c66a67ae5663dcf90a40ccba98bfd266ab0
+source-git-commit: 54df4778a025811504801306120bda78e04281c1
 workflow-type: tm+mt
 source-wordcount: '394'
 ht-degree: 0%
