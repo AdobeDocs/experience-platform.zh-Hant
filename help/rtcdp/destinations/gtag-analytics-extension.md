@@ -1,10 +1,11 @@
 ---
+keywords: Google Global Site Tag;gtag;google gtag;google extension;google gtag extension;GTAG
 title: Google全域網站標籤延伸功能
 seo-title: Google全域網站標籤延伸功能
 description: Google全域網站標籤擴充功能是Adobe即時客戶資料平台中的分析目的地。 如需擴充功能的詳細資訊，請參閱Adobe Exchange的擴充功能頁面。
 seo-description: Google全域網站標籤擴充功能是Adobe即時客戶資料平台中的分析目的地。 如需擴充功能的詳細資訊，請參閱Adobe Exchange的擴充功能頁面。
 translation-type: tm+mt
-source-git-commit: a251d843401d2f092e368a4cdac217171fa4687f
+source-git-commit: 2dfa46906374151628d46c309df724a59f8dc50e
 workflow-type: tm+mt
 source-wordcount: '550'
 ht-degree: 5%
