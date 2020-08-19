@@ -1,10 +1,11 @@
 ---
+keywords: destinations;destination;destinations detail page;destinations details page
 title: 「目標詳細資料」頁
 seo-title: 「目標詳細資料」頁
 description: '個別目的地的詳細資訊頁面提供目的地詳細資訊的概述，例如目的地名稱、ID、對應至目的地的區段，以及編輯啟動和啟用和停用資料流的控制項。 '
 seo-description: '個別目的地的詳細資訊頁面提供目的地詳細資訊的概述，例如目的地名稱、ID、對應至目的地的區段，以及編輯啟動和啟用和停用資料流的控制項。 '
 translation-type: tm+mt
-source-git-commit: 6f680a60c88bc5fee6ce9cb5a4f314c4b9d02249
+source-git-commit: 15323134f0c626cad2c4e90b3e1c0662cf7e57dd
 workflow-type: tm+mt
 source-wordcount: '505'
 ht-degree: 1%
@@ -27,11 +28,11 @@ ht-degree: 1%
 
 導覽至個別目標頁面，以取得目標詳細資訊的概述，例如：
 
-## 1. 目標名稱和ID
+## 1.目標名稱和ID
 
 您可以在頁面標題中看到目標名稱，在頁面URL中看到目標ID。
 
-## 2. 區段已啟動至目標
+## 2.區段已啟動至目標
 
 此區段顯示哪些區段目前已對應至目標，以及這些區段的詳細資訊。 如需詳細資訊，請參閱下表：
 
@@ -43,7 +44,7 @@ ht-degree: 1%
 | 結束日期 | 這些區段將停止啟動至目的地的日期。 |
 | 對應ID | *電子郵件行銷目的地不適用*。 指出目標平台中區段已知的ID。 |
 
-## 3. 右側欄位資訊
+## 3.右側欄位資訊
 
 右邊欄包含您目的地的相關資訊。 如需詳細資訊，請參閱下表：
 
@@ -58,7 +59,7 @@ ht-degree: 1%
 | 建立者 | 表示建立此目標流的用戶。 |
 | 已建立 | 表示建立此目標流的UTC日期和時間。 |
 
-## 4. 控制項，以編輯啟動和啟用／停用資料流
+## 4.控制項，以編輯啟動和啟用／停用資料流
 
 「編輯啟動」控制項可讓您編輯對應至目的地的區段。 按「編輯啟動」以開啟區 [段啟動工作流程](/help/rtcdp/destinations/activate-destinations.md)。
 
