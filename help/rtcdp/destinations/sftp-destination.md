@@ -1,10 +1,11 @@
 ---
+keywords: SFTP;sftp
 title: SFTP目的地
 seo-title: SFTP目的地
 description: 建立與SFTP伺服器的即時對外連線，以定期從Experience Platform匯出分隔資料檔案。
 seo-description: 建立與SFTP伺服器的即時對外連線，以定期從Experience Platform匯出分隔資料檔案。
 translation-type: tm+mt
-source-git-commit: 08b6fd2d43e8ca9d0208ac1bfadc2db15e3f2e90
+source-git-commit: cbd748c1881c61f5e636567d94b68f2cf7302fa5
 workflow-type: tm+mt
 source-wordcount: '171'
 ht-degree: 0%
@@ -26,9 +27,9 @@ ht-degree: 0%
 
 對於SFTP目標，在「驗證」步驟的建立目標工作流中輸入以 **下資訊** :
 
-* **主機**: SFTP儲存位置的位址
-* **使用者名稱**: 登入SFTP儲存位置的使用者名稱
-* **密碼**: 登入SFTP儲存位置的密碼
+* **主機**:SFTP儲存位置的位址
+* **使用者名稱**:登入SFTP儲存位置的使用者名稱
+* **密碼**:登入SFTP儲存位置的密碼
 
 ## 匯出的資料 {#exported-data}
 
