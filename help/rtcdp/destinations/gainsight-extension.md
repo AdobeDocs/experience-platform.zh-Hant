@@ -1,10 +1,11 @@
 ---
+keywords: foresee;foresee extension;foresee destination
 title: Gainsight擴充功能
 seo-title: Gainsight擴充功能
 description: Gainsight擴充功能是Adobe即時客戶資料平台中的個人化目的地。 如需擴充功能的詳細資訊，請參閱Adobe Exchange的擴充功能頁面。
 seo-description: Gainsight擴充功能是Adobe即時客戶資料平台中的個人化目的地。 如需擴充功能的詳細資訊，請參閱Adobe Exchange的擴充功能頁面。
 translation-type: tm+mt
-source-git-commit: a251d843401d2f092e368a4cdac217171fa4687f
+source-git-commit: 2dfa46906374151628d46c309df724a59f8dc50e
 workflow-type: tm+mt
 source-wordcount: '542'
 ht-degree: 5%
