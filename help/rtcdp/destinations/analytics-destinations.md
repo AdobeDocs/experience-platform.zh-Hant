@@ -1,10 +1,11 @@
 ---
+keywords: analytics destinations;analytics destination
 title: Analytics目標
 seo-title: Analytics目標
 description: 分析目的地會追蹤訪客如何與您網站上的內容互動，並收集資料以瞭解讀者的行為。 這些平台提供您最具價值訪客參與度與轉化率的獨特見解。
 seo-description: 分析目的地會追蹤訪客如何與您網站上的內容互動，並收集資料以瞭解讀者的行為。 這些平台提供您最具價值訪客參與度與轉化率的獨特見解。
 translation-type: tm+mt
-source-git-commit: e3b7dd4788042deaeba68bfdbe08e8448b46c270
+source-git-commit: 15323134f0c626cad2c4e90b3e1c0662cf7e57dd
 workflow-type: tm+mt
 source-wordcount: '202'
 ht-degree: 5%
