@@ -1,10 +1,11 @@
 ---
+keywords: Invoca;invoca
 title: Invoca標籤擴充功能
 seo-title: Invoca標籤擴充功能
 description: Invoca Tags擴充功能是Adobe即時客戶資料平台中客戶目的地的聲音。 如需擴充功能的詳細資訊，請參閱Adobe Exchange的擴充功能頁面。
 seo-description: null
 translation-type: tm+mt
-source-git-commit: 33eba9e3f2e993c6958480b091ff004dc057f438
+source-git-commit: 2dfa46906374151628d46c309df724a59f8dc50e
 workflow-type: tm+mt
 source-wordcount: '538'
 ht-degree: 5%
