@@ -1,10 +1,11 @@
 ---
+keywords: bizible;bizible extension;bizible destination
 title: Bizible extension
 seo-title: Bizible extension
 description: The Bizbile Extension是Adobe即時客戶資料平台中的電子郵件目的地。 如需擴充功能的詳細資訊，請參閱Adobe Exchange的擴充功能頁面。
 seo-description: Bizible擴充功能是Adobe即時客戶資料平台中的電子郵件目的地。 如需擴充功能的詳細資訊，請參閱Adobe Exchange的擴充功能頁面。
 translation-type: tm+mt
-source-git-commit: a251d843401d2f092e368a4cdac217171fa4687f
+source-git-commit: 2dfa46906374151628d46c309df724a59f8dc50e
 workflow-type: tm+mt
 source-wordcount: '527'
 ht-degree: 5%
