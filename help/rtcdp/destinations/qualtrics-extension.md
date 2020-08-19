@@ -1,10 +1,11 @@
 ---
+keywords: Qualtrics;qualtrics;Qualtrics Website Feedback;qualtrics website feedback;Qualtricks website feedback
 title: Qualtrics網站意見延伸功能
 seo-title: Qualtrics網站意見延伸功能
 description: The Qualtrics網站意見擴充功能是Adobe即時客戶資料平台中的調查目的地。 如需擴充功能的詳細資訊，請參閱Adobe Exchange的擴充功能頁面。
 seo-description: Qualtrics網站意見延伸功能是Adobe即時客戶資料平台中的調查目的地。 如需擴充功能的詳細資訊，請參閱Adobe Exchange的擴充功能頁面。
 translation-type: tm+mt
-source-git-commit: a251d843401d2f092e368a4cdac217171fa4687f
+source-git-commit: 2dfa46906374151628d46c309df724a59f8dc50e
 workflow-type: tm+mt
 source-wordcount: '613'
 ht-degree: 4%
@@ -18,7 +19,7 @@ ht-degree: 4%
 
 [!DNL Qualtrics Website Feedback] 可讓您在正確的時間，以適當的訊息吸引網站訪客。 不論您是想要改善網站意見調查的訪客體驗，還是想增加轉 [!DNL Qualtrics Website Feedback] 化率，您都能獲得。
 
-使用直覺式的指向按下介面，在數分鐘內建立和部署高目標、品牌化的Web訊息。 您從網站收集的資料和見解會與跨所有通道的客戶意見資料一起呈現，提供您客戶體驗的完整檢視——全都在單一平台上。
+使用直覺式的指向按下介面，在數分鐘內建立和部署高針對性、品牌化的Web訊息。 您從網站收集的資料和見解會與跨所有通道的客戶意見資料一起呈現，提供您客戶體驗的完整檢視——全都在單一平台上。
 
 [!DNL Qualtrics Website Feedback] 是Adobe即時客戶資料平台中的調查擴充功能。 如需擴充功能的詳細資訊，請參閱 [Adobe Exchange的擴充功能頁面](https://exchange.adobe.com/experiencecloud.details.101569.qualtrics-website-feedback.html)。
 
