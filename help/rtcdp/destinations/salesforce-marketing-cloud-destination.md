@@ -1,10 +1,11 @@
 ---
+keywords: email;Email;e-mail;email destinations;salesforce;salesforce destination
 title: Salesforce Marketing Cloud
 seo-title: Salesforce Marketing Cloud
 description: Salesforce Marketing Cloud是數位行銷套裝，先前稱為ExactTarget，可讓您為訪客和客戶建構並自訂歷程，以個人化其體驗。
 seo-description: Salesforce Marketing Cloud是數位行銷套裝，先前稱為ExactTarget，可讓您為訪客和客戶建構並自訂歷程，以個人化其體驗。
 translation-type: tm+mt
-source-git-commit: 570c627672439a5ee0f4215b7bf7915ec3dd2bb3
+source-git-commit: 15323134f0c626cad2c4e90b3e1c0662cf7e57dd
 workflow-type: tm+mt
 source-wordcount: '503'
 ht-degree: 0%
@@ -34,9 +35,9 @@ ht-degree: 0%
    ![填寫Salesforce資訊](/help/rtcdp/destinations/assets/salesforce-authenticate.png)
 
 3. 在「設 **[!UICONTROL 定]** 」步驟中，填入您目的地的相關資訊，如下所示：
-   * **[!UICONTROL 名稱]**: 為目的地選擇相關名稱。
-   * **[!UICONTROL 說明]**: 輸入目標的說明。
-   * **[!UICONTROL 資料夾路徑]**: 在儲存位置中提供路徑，即時CDP會將導出資料儲存為CSV或Tab分隔檔案。
+   * **[!UICONTROL 名稱]**:為目的地選擇相關名稱。
+   * **[!UICONTROL 說明]**:輸入目標的說明。
+   * **[!UICONTROL 資料夾路徑]**:在儲存位置中提供路徑，即時CDP會將導出資料儲存為CSV或Tab分隔檔案。
    * **[!UICONTROL 檔案格式]**: **[!UICONTROL CSV]** 或 **[!UICONTROL TAB_DELIMITED]**。 選擇要導出到儲存位置的檔案格式。
 
    ![Salesforce基本資訊](/help/rtcdp/destinations/assets/salesforce-basic-information.png)
@@ -49,7 +50,7 @@ ht-degree: 0%
 
 ## 目標屬性 {#destination-attributes}
 
-在啟 [用區段](/help/rtcdp/destinations/activate-destinations.md) ，到目 [!DNL Salesforce Marketing Cloud] 的地時，建議您從聯合架構中選取唯一 [識別碼](../../profile/home.md#profile-fragments-and-union-schemas)。 選擇唯一標識符以及要導出到目標的任何其它XDM欄位。 如需詳細資訊，請參 [閱「電子郵件行銷目標」中，選取要在匯出檔案中當做目標屬性使用的架構欄位](/help/rtcdp/destinations/email-marketing-destinations.md#destination-attributes) 。
+在啟 [用區段](/help/rtcdp/destinations/activate-destinations.md) ，到目 [!DNL Salesforce Marketing Cloud] 的地時，建議您從聯合架構中選取唯一 [識別碼](../../profile/home.md#profile-fragments-and-union-schemas)。 選擇唯一標識符和要導出到目標的任何其他XDM欄位。 如需詳細資訊，請參 [閱「電子郵件行銷目標」中，選取要在匯出檔案中當做目標屬性使用的架構欄位](/help/rtcdp/destinations/email-marketing-destinations.md#destination-attributes) 。
 
 ## 匯出的資料 {#exported-data}
 
