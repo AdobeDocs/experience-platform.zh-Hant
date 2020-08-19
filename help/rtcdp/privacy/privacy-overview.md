@@ -1,10 +1,11 @@
 ---
+keywords: data governance rtcdp;rtcdp data governance;real time customer data profile data governance;privacy rtcdp;rtcdp privacy
 title: 即時客戶資料設定檔中的隱私權
 seo-title: 即時客戶資料設定檔中的隱私權
 description: 即時客戶資料設定檔可讓您簡化維持資料作業符合隱私權規範的程式。
 seo-description: 即時客戶資料設定檔可讓您簡化維持資料作業符合隱私權規範的程式。
 translation-type: tm+mt
-source-git-commit: b96286f6a06f0583b45343a513ee64f0025d79a7
+source-git-commit: 15323134f0c626cad2c4e90b3e1c0662cf7e57dd
 workflow-type: tm+mt
 source-wordcount: '304'
 ht-degree: 0%
