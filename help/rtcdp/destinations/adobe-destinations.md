@@ -1,10 +1,11 @@
 ---
+keywords: destinations;experience cloud solutions
 title: Adobe目標
 seo-title: Adobe目標
 description: 將Adobe Real-time CDP中的資料連結至其他Adobe Experience Cloud解決方案，以利廣告鎖定、個人化、行銷自動化等，以管理客戶體驗
 seo-description: 將Adobe Real-time CDP中的資料連結至其他Adobe Experience Cloud解決方案，以利廣告鎖定、個人化、行銷自動化等，以管理客戶體驗
 translation-type: tm+mt
-source-git-commit: e3b7dd4788042deaeba68bfdbe08e8448b46c270
+source-git-commit: 15323134f0c626cad2c4e90b3e1c0662cf7e57dd
 workflow-type: tm+mt
 source-wordcount: '129'
 ht-degree: 21%
