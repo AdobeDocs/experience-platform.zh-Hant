@@ -4,7 +4,7 @@ seo-title: 安裝SDK的Adobe Experience Platform Web SDK
 description: 瞭解如何安裝Experience Platform Web SDK
 seo-description: 瞭解如何安裝Experience Platform Web SDK
 translation-type: tm+mt
-source-git-commit: 12cbcc26956cba2e14d64734c9210fa79bcc70b9
+source-git-commit: 075d71353877045e12985b3914aaeeb478ed46d6
 workflow-type: tm+mt
 source-wordcount: '623'
 ht-degree: 1%
@@ -54,6 +54,7 @@ URL結構：https://cdn1.adoberesources.net/alloy/[VERSION]/alloy.min.js或alloy
 在此範例中，全域函式會重新命 `mycustomname`名，而非 `alloy`。
 
 >[!IMPORTANT]
+>
 >為避免潛在問題，請使用至少包含一個非數字且與上已找到的屬性名稱不衝突的字元名稱 `window`。
 
 此基本代碼除了建立全局函式外，還載入包含在伺服器上托管的外部檔案\(`alloy.js`\)中的其他代碼。 依預設，此程式碼會非同步載入，讓您的網頁發揮最佳效能。 這是建議的實作。
