@@ -1,10 +1,11 @@
 ---
+keywords: media analytics extension;media analytics;audio and video extension
 title: Adobe Media Analytics for Audio and Video 擴充功能
 seo-title: Adobe Media Analytics for Audio and Video 擴充功能
 description: Adobe Media Analytics for Audio and Video Extension是Adobe即時客戶資料平台中的分析目的地。 如需擴充功能的詳細資訊，請參閱Adobe Exchange的擴充功能頁面。
 seo-description: Adobe Media Analytics for Video Extension是Adobe即時客戶資料平台中的分析目的地。 如需擴充功能的詳細資訊，請參閱Adobe Exchange的擴充功能頁面。
 translation-type: tm+mt
-source-git-commit: 33eba9e3f2e993c6958480b091ff004dc057f438
+source-git-commit: 2dfa46906374151628d46c309df724a59f8dc50e
 workflow-type: tm+mt
 source-wordcount: '585'
 ht-degree: 12%
