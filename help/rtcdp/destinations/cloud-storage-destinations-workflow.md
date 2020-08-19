@@ -1,10 +1,11 @@
 ---
+keywords: cloud storage destination;cloud storage
 title: 雲端儲存目標工作流程
 seo-title: 雲端儲存目標工作流程
 description: 連線至雲端儲存空間的指示
 seo-description: 連線至雲端儲存空間的指示
 translation-type: tm+mt
-source-git-commit: 9306266edc0a4afdcf378e94b46b239187b18644
+source-git-commit: 2dfa46906374151628d46c309df724a59f8dc50e
 workflow-type: tm+mt
 source-wordcount: '530'
 ht-degree: 0%
