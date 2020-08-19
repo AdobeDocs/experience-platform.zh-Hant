@@ -1,10 +1,11 @@
 ---
+keywords: metrics overview; rtcdp metrics overview
 title: 即時客戶資料平台首頁和資料板
 seo-title: 即時客戶資料平台首頁和資料板
 description: Adobe Experience Platform的儀表板、首頁和首次使用者體驗
 seo-description: Adobe Experience Platform的儀表板、首頁和首次使用者體驗
 translation-type: tm+mt
-source-git-commit: b96286f6a06f0583b45343a513ee64f0025d79a7
+source-git-commit: 15323134f0c626cad2c4e90b3e1c0662cf7e57dd
 workflow-type: tm+mt
 source-wordcount: '634'
 ht-degree: 1%
