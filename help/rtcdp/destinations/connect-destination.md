@@ -1,9 +1,10 @@
 ---
+keywords: connect destination;destination connect;how to connect destination
 title: 連線至Adobe即時客戶資料平台中的目的地
 seo-title: 連線至Adobe即時客戶資料平台中的目的地
 description: 本教學課程列出在Adobe即時客戶資料平台中連線目標的步驟
 translation-type: tm+mt
-source-git-commit: b070a8a6eee1c1b95b20468c7067181ec62bdbd0
+source-git-commit: 15323134f0c626cad2c4e90b3e1c0662cf7e57dd
 workflow-type: tm+mt
 source-wordcount: '126'
 ht-degree: 0%
