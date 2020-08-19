@@ -2,12 +2,12 @@
 keywords: RTCDP;rtcdp
 title: 目標工作區
 seo-title: 目標工作區
-description: 在Adobe即時客戶資料平台中，從左側導覽列選取「目標」以存取目標工作區。
+description: 「目標」工作區包含4個部分：目錄、瀏覽、帳戶和系統視圖，這些部分在以下各節中介紹。
 seo-description: 在Adobe即時客戶資料平台中，從左側導覽列選取「目標」以存取目標工作區。
 translation-type: tm+mt
-source-git-commit: ac9c629e8c83d3e056ba94b30d978edbda274923
+source-git-commit: 2dfa46906374151628d46c309df724a59f8dc50e
 workflow-type: tm+mt
-source-wordcount: '807'
+source-wordcount: '809'
 ht-degree: 2%
 
 ---
