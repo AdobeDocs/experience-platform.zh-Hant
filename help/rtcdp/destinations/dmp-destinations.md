@@ -1,10 +1,11 @@
 ---
+keywords: dmp destinations;DIL;audience manager dmp extension;dmp extension;data management platform;data management platform destinations
 title: 資料管理平台(DMP)目標
 seo-title: 資料管理平台(DMP)目標
 description: 資料管理平台(DMP)可讓廣告商、發行商和代理商建立獨特的受眾個人檔案、識別最有價值的細分，並跨任何數位通道使用。 這可讓您建立真正360度的消費者個人檔案檢視，建立並啟動有意義的受眾。
 seo-description: 資料管理平台(DMP)可讓廣告商、發行商和代理商建立獨特的受眾個人檔案、識別最有價值的細分，並跨任何數位通道使用。 這可讓您建立真正360度的消費者個人檔案檢視，建立並啟動有意義的受眾。
 translation-type: tm+mt
-source-git-commit: 6f680a60c88bc5fee6ce9cb5a4f314c4b9d02249
+source-git-commit: 15323134f0c626cad2c4e90b3e1c0662cf7e57dd
 workflow-type: tm+mt
 source-wordcount: '170'
 ht-degree: 0%
