@@ -1,10 +1,11 @@
 ---
+keywords: Azure event hub destination;azure event hub;azure eventhub
 title: （測試版）Azure事件集線器目標
 seo-title: （測試版）Azure事件集線器目標
 description: 建立Azure事件中樞儲存空間的即時出站連線，以從Experience Platform串流資料。
 seo-description: 建立Azure事件中樞儲存空間的即時出站連線，以從Experience Platform串流資料。
 translation-type: tm+mt
-source-git-commit: b96286f6a06f0583b45343a513ee64f0025d79a7
+source-git-commit: 15323134f0c626cad2c4e90b3e1c0662cf7e57dd
 workflow-type: tm+mt
 source-wordcount: '467'
 ht-degree: 2%
@@ -44,16 +45,16 @@ ht-degree: 2%
 
 ### 在驗證步驟中 {#authentication-step}
 
-* **[!UICONTROL SAS密鑰名]** 和 **[!UICONTROL SAS密鑰]**: 填寫您的SAS密鑰名稱和密鑰。 瞭解 [!DNL Azure Event Hubs] Microsoft文檔中 [如何使用SAS密鑰驗證](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature)。
-* **[!UICONTROL 命名空間]**: 填寫您的命名 [!DNL Azure Event Hubs] 空間。 在 [!DNL Azure Event Hubs] Microsoft [檔案中瞭解命名](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hubs-namespace)空間。
+* **[!UICONTROL SAS密鑰名]** 和 **[!UICONTROL SAS密鑰]**:填寫您的SAS密鑰名稱和密鑰。 瞭解 [!DNL Azure Event Hubs] Microsoft文檔中 [如何使用SAS密鑰驗證](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature)。
+* **[!UICONTROL 命名空間]**:填寫您的命名 [!DNL Azure Event Hubs] 空間。 在 [!DNL Azure Event Hubs] Microsoft [檔案中瞭解命名](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hubs-namespace)空間。
 
 ![驗證步驟中需要的輸入](/help/rtcdp/destinations/assets/event-hubs-authentication.png)
 
 ### 在設定步驟中 {#setup-step}
 
-* **[!UICONTROL 名稱]**: 填寫連接的名稱 [!DNL Azure Event Hubs]。
-* **[!UICONTROL 說明]**: 提供連接的說明。  範例： 「Premium tier customers」、「Males intered to kitesurfing」。
-* **[!UICONTROL eventHubName]**: 提供串流至您目的地的名 [!DNL Azure Event Hubs] 稱。
+* **[!UICONTROL 名稱]**:填寫連接的名稱 [!DNL Azure Event Hubs]。
+* **[!UICONTROL 說明]**:提供連接的說明。  範例：「Premium tier customers」、「Males intered to kitesurfing」。
+* **[!UICONTROL eventHubName]**:提供串流至您目的地的名 [!DNL Azure Event Hubs] 稱。
 
 ![設定步驟中所需的資料](/help/rtcdp/destinations/assets/event-hubs-setup-step.png)
 
