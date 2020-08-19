@@ -1,10 +1,11 @@
 ---
+keywords: google customer match;Google customer match;Google Customer Match
 title: Google客戶符合目的地
 seo-title: Google客戶符合目的地
 description: Google Customer Match可讓您使用您的線上和離線資料，透過Google的自有和營運資產（例如搜尋、購物、Gmail和YouTube）觸及客戶並與其重新互動。
 seo-description: Google Customer Match可讓您使用您的線上和離線資料，透過Google的自有和營運資產（例如搜尋、購物、Gmail和YouTube）觸及客戶並與其重新互動。
 translation-type: tm+mt
-source-git-commit: a251d843401d2f092e368a4cdac217171fa4687f
+source-git-commit: 2dfa46906374151628d46c309df724a59f8dc50e
 workflow-type: tm+mt
 source-wordcount: '1555'
 ht-degree: 0%
@@ -118,7 +119,7 @@ Links to be added when activation based on phone number and device IDs becomes a
 
    ![認證已確認](/help/rtcdp/destinations/assets/google-customer-match-connection-success.png)
 
-4. 在「驗 **[!UICONTROL 證]** 」步驟中，輸入啟動流程的「名稱 **[!UICONTROL 」和「說明]** 」，然後填寫Google帳戶 ******** ID。 <br> 此外，您也可以在此步驟中選取 **[!UICONTROL 任何應套用至此目的地的Marketing]** 使用案例。 行銷使用案例會指出將資料匯出至目的地的方式。 您可以從Adobe定義的行銷使用案例中選擇，也可以建立自己的行銷使用案例。 有關行銷使用案例的詳細資訊，請參 [閱即時CDP中的資料治理頁](/help/rtcdp/privacy/data-governance-overview.md#destinations) 。 如需個別Adobe定義之行銷使用案例的詳細資訊，請參閱「資 [料使用政策」概觀](/help/data-governance/policies/overview.md#core-actions)。 <br> 在填 **[!UICONTROL 入上述欄位後]** ，選取「建立目標」。
+4. 在「驗 **[!UICONTROL 證]** 」步驟中，輸入啟動流程的「名稱 **[!UICONTROL 」和「說明]** 」，然後填寫Google帳戶 ******** ID。 <br> 此外，您也可以在此步驟中，選取 **[!UICONTROL 任何應套用至此目的地的Marketing]** 使用案例。 行銷使用案例會指出將資料匯出至目的地的方式。 您可以從Adobe定義的行銷使用案例中選擇，也可以建立自己的行銷使用案例。 有關行銷使用案例的詳細資訊，請參 [閱即時CDP中的資料治理頁](/help/rtcdp/privacy/data-governance-overview.md#destinations) 。 如需個別Adobe定義之行銷使用案例的詳細資訊，請參閱「資 [料使用政策」概觀](/help/data-governance/policies/overview.md#core-actions)。 <br> 在填 **[!UICONTROL 入上述欄位後]** ，選取「建立目標」。
 
    >[!IMPORTANT]
    >
@@ -156,7 +157,7 @@ Links to be added when activation based on phone number and device IDs becomes a
 
 ![確認選擇](/help/rtcdp/destinations/assets/data-policy-violation.png)
 
-如果未檢測到任何違反策略的情況，請選擇「完 **[!UICONTROL 成]** 」以確認您的選擇並開始向目標發送資料。
+如果未檢測到任何違反策略的情況，請選擇 **[!UICONTROL 完成]** ，確認您的選擇並開始向目標發送資料。
 
 ![確認選擇](/help/rtcdp/destinations/assets/gcm-review.png)
 
