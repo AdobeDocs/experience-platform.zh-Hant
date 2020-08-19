@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 資料存取概述
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
+source-git-commit: cb5df9b44486bda84f08805f1077d6097e3666e2
 workflow-type: tm+mt
 source-wordcount: '1332'
 ht-degree: 3%
@@ -30,7 +30,7 @@ ht-degree: 3%
 
 若要呼叫API，您必 [!DNL Platform] 須先完成驗證教 [學課程](../../tutorials/authentication.md)。 完成驗證教學課程後，將提供所有 [!DNL Experience Platform] API呼叫中每個必要標題的值，如下所示：
 
-- 授權： 生產者 `{ACCESS_TOKEN}`
+- 授權：生產者 `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
@@ -44,7 +44,7 @@ ht-degree: 3%
 
 所有包含裝載(POST、PUT、PATCH)的請求都需要額外的標題：
 
-- 內容類型： application/json
+- 內容類型：application/json
 
 ## 序列圖
 
@@ -57,8 +57,8 @@ API [!DNL Catalog] 可讓您擷取有關批次和檔案的資訊。 API [!DNL Da
 
 開始使用 [!DNL Data Access] API之前，您需要識別您要存取的資料位置。 在 [!DNL Catalog] API中，有兩個端點可用來瀏覽組織的中繼資料並擷取您要存取之批次或檔案的ID:
 
-- `GET /batches`: 返回組織下的批清單
-- `GET /dataSetFiles`: 傳回組織下的檔案清單
+- `GET /batches`:返回組織下的批清單
+- `GET /dataSetFiles`:傳回組織下的檔案清單
 
 如需API中端點的完整清 [!DNL Catalog] 單，請參閱 [API參考](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml)。
 
@@ -119,7 +119,7 @@ GET /batches?createdAfter={START_TIMESTAMP}&dataSet={DATASET_ID}&sort={SORT_BY}
 | -------- | ----------- |
 | `{START_TIMESTAMP}` | 開始時間戳記（以毫秒為單位，例如1514836799000）。 |
 | `{DATASET_ID}` | 資料集識別碼。 |
-| `{SORT_BY}` | 依提供的值排序回應。 例如，按創 `desc:created` 建日期以降序排序對象。 |
+| `{SORT_BY}` | 依提供的值排序回應。 例如，按 `desc:created` 建立日期以降序對對象進行排序。 |
 
 **請求**
 
@@ -276,7 +276,7 @@ curl -X GET 'https://platform.adobe.io/data/foundation/export/files/8dcedb36-1cb
 
 根據檔案ID指向單個檔案或目錄，返回的資料陣列可能包含屬於該目錄的單個條目或檔案清單。 每個檔案元素都包含詳細資訊，例如檔案名稱、檔案大小（以位元組為單位），以及下載檔案的連結。
 
-**案例1: 檔案ID指向單一檔案**
+**案例1:檔案ID指向單一檔案**
 
 **回應**
 
@@ -305,7 +305,7 @@ curl -X GET 'https://platform.adobe.io/data/foundation/export/files/8dcedb36-1cb
 | `{FILE_NAME}.parquet` | 檔案的名稱。 |
 | `_links.self.href` | 下載檔案的URL。 |
 
-**案例2: 檔案ID指向目錄**
+**案例2:檔案ID指向目錄**
 
 **回應**
 
@@ -365,7 +365,7 @@ HEAD /files/{FILE_ID}?path={FILE_NAME}
 | 屬性 | 說明 |
 | -------- | ----------- |
 | `{FILE_ID}` | 檔案的識別碼。 |
-| `{FILE_NAME`} | 檔案名稱（例如profiles.parce） |
+| `{FILE_NAME}` | 檔案名稱（例如profiles.parce） |
 
 **請求**
 
@@ -380,8 +380,8 @@ curl -I 'https://platform.adobe.io/data/foundation/export/files/8dcedb36-1cb2-44
 **回應**
 
 回應標題包含查詢檔案的中繼資料，包括：
-- `Content-Length`: 以位元組表示裝載的大小
-- `Content-Type`: 指示檔案類型。
+- `Content-Length`:以位元組表示裝載的大小
+- `Content-Type`:指示檔案類型。
 
 ## 存取檔案內容
 
@@ -396,7 +396,7 @@ GET /files/{FILE_ID}?path={FILE_NAME}
 | 屬性 | 說明 |
 | -------- | ----------- |
 | `{FILE_ID}` | 檔案的識別碼。 |
-| `{FILE_NAME`} | 檔案名稱（例如profiles.parce）。 |
+| `{FILE_NAME}` | 檔案名稱（例如profiles.parce）。 |
 
 **請求**
 
@@ -448,17 +448,17 @@ curl -X GET 'https://platform.adobe.io/data/foundation/export/files/8dcedb36-1cb
 
 回應內文包含檔案的前100位元組（如請求中的「範圍」標題所指定），以及HTTP狀態206（部分內容）。 回應也包含下列標題：
 
-- 內容長度： 100（傳回的位元組數）
-- 內容類型： application/parec（請求的是拼花檔案，因此響應內容類型是拼花的）
-- 內容範圍： 位元組0-99/249058(請求的範圍(0-99)，佔位元組總數(249058))
+- 內容長度：100（傳回的位元組數）
+- 內容類型：application/parec（請求的是拼花檔案，因此響應內容類型是拼花的）
+- 內容範圍：位元組0-99/249058(請求的範圍(0-99)，佔位元組總數(249058))
 
 ## 設定API回應分頁
 
 API內的回應 [!DNL Data Access] 會進行編頁。 依預設，每頁的登入點數上限為100。 分頁參數可用於修改預設行為。
 
-- `limit`: 您可以使用「限制」參數，根據您的需求指定每頁的登入次數。
-- `start`: 偏移可以由&quot;start&quot;查詢參數設定。
-- `&`: 您可以使用和符號，在單一呼叫中結合多個參數。
+- `limit`:您可以使用「限制」參數，根據您的需求指定每頁的登入次數。
+- `start`:偏移可以由&quot;start&quot;查詢參數設定。
+- `&`:您可以使用和符號，在單一呼叫中結合多個參數。
 
 **API格式**
 
