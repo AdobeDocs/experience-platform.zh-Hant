@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 列出資源
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: d04bf35e49488ab7d5e07de91eb77d0d9921b6fa
+source-git-commit: cb5df9b44486bda84f08805f1077d6097e3666e2
 workflow-type: tm+mt
 source-wordcount: '508'
 ht-degree: 2%
@@ -31,7 +31,7 @@ GET /{CONTAINER_ID}/{RESOURCE_TYPE}?{QUERY_PARAMS}
 | --- | --- |
 | `{CONTAINER_ID}` | 資源所在的容器（「全域」或「租用戶」）。 |
 | `{RESOURCE_TYPE}` | 要從中檢索的資源類型 [!DNL Schema Library]。 有效類 `classes`型有 `mixins`、 `schemas`、 `datatypes`和 `descriptors`。 |
-| `{QUERY_PARAMS`} | 可選查詢參數，以篩選結果。 如需詳細資訊，請 [參閱查詢](#query) 參數一節。 |
+| `{QUERY_PARAMS}` | 可選查詢參數，以篩選結果。 如需詳細資訊，請 [參閱查詢](#query) 參數一節。 |
 
 **請求**
 
@@ -49,8 +49,8 @@ curl -X GET \
 
 | 接受標題 | 說明 |
 | ------- | ------------ |
-| application/vnd.adobe.xed-id+json | 返回每個資源的簡短摘要。 這是列出資源的建議標題。 (限制： 300) |
-| application/vnd.adobe.xed+json | 傳回每個資源的完整JSON結構描述，其中包含 `$ref` 原始 `allOf` 資源。 (限制： 300) |
+| application/vnd.adobe.xed-id+json | 返回每個資源的簡短摘要。 這是列出資源的建議標題。 (限制：300) |
+| application/vnd.adobe.xed+json | 傳回每個資源的完整JSON結構描述，其中包含 `$ref` 原始 `allOf` 資源。 (限制：300) |
 | application/vnd.adobe.xdm-v2+json | 使用端點 `/descriptors` 時，必須使用此接受標頭才能使用尋呼功能。 |
 
 **回應**
