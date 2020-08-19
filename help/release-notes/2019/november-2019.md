@@ -5,9 +5,9 @@ doc-type: release notes
 last-update: November 18, 2019
 author: crhoades, ens28527
 translation-type: tm+mt
-source-git-commit: f881c1365684b1ca9e6bf9a8ce866d234dc54128
+source-git-commit: cb5df9b44486bda84f08805f1077d6097e3666e2
 workflow-type: tm+mt
-source-wordcount: '1884'
+source-wordcount: '1882'
 ht-degree: 2%
 
 ---
@@ -41,7 +41,7 @@ Adobe可連接到龐大的合作夥伴生態系統，更不用說與Adobe Experi
 * 從企業內部串流收集客戶資料，讓客戶獲得單一視圖。
 * 使用受信任的治理及已知和未知識別碼的隱私權控制，以負責任的方式管理個人檔案。
 * 運用Adobe Sensei的人工智慧和機器學習功能，為行銷人員建立可執行的見解並擴大受眾。
-* Deliver personalized experiences in realtime across all channels and destinations.
+* 跨所有通道和目的地即時提供個人化體驗。
 
 如需詳細資訊，請參 [閱Adobe即時客戶資料平台檔案](../../rtcdp/overview.md)。
 
@@ -50,14 +50,14 @@ Adobe可連接到龐大的合作夥伴生態系統，更不用說與Adobe Experi
 | 功能 | 說明 |
 |---|---|
 | 目的地 | 預先建立與Adobe支援之目標平台的整合， [!DNL Real-time Customer Data Platform] 以順暢的方式將資料匯入這些合作夥伴。 See [Destinations](#destinations) below for more information. |
-| Home page metrics dashboard | The Adobe Real-time Customer Data Platform (Real-time CDP) home page includes a metrics dashboard that shows information about profiles and segments. 首頁也包含學習教材的連結。 請參閱下方「 [即時客戶資料平台」度量一節](#real-time-customer-data-platform-metrics) 。 |
+| 首頁度量控制面板 | Adobe即時客戶資料平台（即時CDP）首頁包含量度控制面板，可顯示描述檔和區段的相關資訊。 首頁也包含學習教材的連結。 請參閱下方「 [即時客戶資料平台」度量一節](#real-time-customer-data-platform-metrics) 。 |
 | 來源 | 您可以從多種來源收集資料，例如Adobe解決方案、雲端儲存空間、協力廠商軟體和您的CRM。 請參閱下 [面的](#sources) 「來源」一節，瞭解更多資訊。 |
 
-**[!DNL Real-time Customer Data Platform]度量&#x200B;**
+**[!DNL Real-time Customer Data Platform]度量**
 
 當您登入即時CDP時，會顯示Adobe即時客戶資料平台（即時CDP）首頁，其中包含量度控制面板。
 
-The home page is only one of the places where metric cards appear. 即時CDP在您的整個體驗中提供度量卡。 這些量度會通知您系統中的資料、設定檔和區段對象。
+首頁只是顯示量度卡片的位置之一。 即時CDP在您的整個體驗中提供度量卡。 這些量度會通知您系統中的資料、設定檔和區段對象。
 
 如果登錄到即時CDP時系統中沒有資料，則首頁上的儀表板不會顯示。 在這種情況下，首頁會提供首次使用者體驗的學習教材。 當收集資料時，控制面板會自動更新以顯示該資料的相關資訊。
 
@@ -72,8 +72,8 @@ The home page is only one of the places where metric cards appear. 即時CDP在�
 在11月的版本中，Adobe的即時客戶資料平台支援下列目標：
 
 * 廣告: [!DNL Google]
-* 電子郵件行銷： Adobe Campaign、 [!DNL Salesforce Marketing Cloud]、 [!DNL Responsys][!DNL Oracle Exolica
-   ]
+* 電子郵件行銷：Adobe Campaign、 [!DNL Salesforce Marketing Cloud]、 [!DNL Responsys]、 [!DNL Oracle Eloqua]
+
 請參 [閱目標目錄](../../rtcdp/destinations/destinations-catalog.md) ，以取得每個目標的相關資訊。
 
 **已知限制**
@@ -127,11 +127,11 @@ XDM是公開記載的規格，旨在改善數位體驗的強大功能。 它提�
 | 功能 | 說明 |
 | ---------- | ------------ |
 | 通知結構 | 表示資料擷取程式期間傳送之通知資料的新架構。 |
-| Adobe AdCloud DSP架構 | 已新增5種新結構來表示Adobe Advertising Cloud需求端平台(DSP)中繼資料： 位置、促銷活動、封裝、廣告商、帳戶。 |
+| Adobe AdCloud DSP架構 | 已新增5種新結構來表示Adobe Advertising Cloud需求端平台(DSP)中繼資料：位置、促銷活動、封裝、廣告商、帳戶。 |
 | ExperienceEvent實作詳細資訊混合 | 新增ExperienceEvent混音，新增標準欄位以儲存用於收集事件之軟體的相關資訊。 |
 | [!DNL Profile Privacy] mixin | 新的描述檔混合，新增欄位以接受一般退出和銷售／分享退出訊號 [!DNL Real-time Customer Profile]。 |
 | 格式限制 `xdm:alternateDisplayInfo` | 的「標題」和「說明」欄位必 `xdm:alternateDisplayInfo` 須同時為字串才能通過驗證。 |
-| 名稱變更： XDM [!DNL Individual Profile] | 「XDM」類的「 [!DNL Profile]標題」已更新為「XDM [!DNL Individual Profile]」。 班級的 `$id` 正式程式沒有改變。 |
+| 名稱變更：XDM [!DNL Individual Profile] | 「XDM」類的「 [!DNL Profile]標題」已更新為「XDM [!DNL Individual Profile]」。 班級的 `$id` 正式程式沒有改變。 |
 
 **已知問題**
 
@@ -169,9 +169,9 @@ Adobe Experience Platform提 [!DNL Segmentation Service] 供使用者介面和RE
 
 | 功能 | 說明 |
 | -----------| ---------- |
-| 排程的區段 | 使用者現在可以透過UI和API，為所有區段啟用排程的區段評估。 啟用後，每天會評估一次所有區段。 這不會影響依需求而繼續運作的區段功能。<br/><br/>注意： 已排程的分段功能無法用於超過五個合併原則的沙盒 [!DNL XDM Individual Profile]。 |
+| 排程的區段 | 使用者現在可以透過UI和API，為所有區段啟用排程的區段評估。 啟用後，每天會評估一次所有區段。 這不會影響依需求而繼續運作的區段功能。<br/><br/>注意：已排程的分段功能無法用於超過五個合併原則的沙盒 [!DNL XDM Individual Profile]。 |
 | 串流區段 | 支援持續評估區段（串流分段），可讓大部分區段規則在資料傳入時進行評估 [!DNL Platform]。 此功能表示區段會籍將是最新的，不需要執行排程的區段工作。 有些例外適用，例如使用多實體關係或包含豐富負載的區段。 |
-| 區段做為建立區塊 | 使用「區段產生器」UI建立區段時，使用者現在可以使用先前定義的區段作為其他區段的建立區塊。 <ul><li>參考目前的觀眾會籍： 隨著受眾的移入和移出而更新。</li><li>複製邏輯： 將選取的區段定義複製到新區段。</li></ul> |
+| 區段做為建立區塊 | 使用「區段產生器」UI建立區段時，使用者現在可以使用先前定義的區段作為其他區段的建立區塊。 <ul><li>參考目前的觀眾會籍：隨著受眾的移入和移出而更新。</li><li>複製邏輯：將選取的區段定義複製到新區段。</li></ul> |
 | 依ID命名空間檢視區段成員資格 | 區段會籍現在可依ID命名空間（電子郵件、ECID和總計）來檢視。 |
 | RBAC支援 | 區段產生器現在支援基本的角色存取控制與權限。 |
 | 增強支援外部觀眾在Adobe解決方案之 [!DNL Platform] 間分享 | 使用者現在可以在觀眾數量龐大或先驗未知的情況下，引入外部(非[!DNL Experience Platform])觀眾中繼資料。 此版本包含對已布建解決 [!DNL Audience Manager] 方案連接器之客戶的中繼資料存取。 此觀眾中繼資料可用於「區段產生器」中，以建立新 [!DNL Experience Platform] 區段。 <br/><br/> 此外，在中建立的 [!DNL Experience Platform] 區段現在可用於整合的Adobe解決方案， [!DNL Audience Manager]包括 [!DNL Target]、和 [!DNL Ad Cloud]。 |
