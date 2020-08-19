@@ -5,7 +5,7 @@ title: 多實體分段
 topic: overview
 description: 多實體分段是指能夠根據產品、商店或其他非描述檔類別，以額外資料擴充描述檔資料。 連線後，其他類別的資料就會變成描述檔架構的原生資料。
 translation-type: tm+mt
-source-git-commit: 8f7ce97cdefd4fe79cb806e71e12e936caca3774
+source-git-commit: cb5df9b44486bda84f08805f1077d6097e3666e2
 workflow-type: tm+mt
 source-wordcount: '409'
 ht-degree: 0%
@@ -17,7 +17,7 @@ ht-degree: 0%
 
 多實體分段是指能夠根據產 [!DNL Profile] 品、商店或其他非描述檔類別，以額外資料擴充資料。 連線後，其他類別的資料就會變成架構的原生 [!DNL Profile] 資料。
 
-若要進一步瞭解多實體細分，請繼續閱讀檔案，並透過觀看以下影片或探索細分概觀，來補充您 [的學習](./home.md)。]
+若要進一步瞭解多實體細分，請繼續閱讀檔案，並透過觀看以下影片或探索細分概觀來補充您 [的學習](./home.md)。
 
 >[!VIDEO](https://video.tv.adobe.com/v/28947?quality=12&learn=on)
 
