@@ -1,13 +1,12 @@
 ---
-title: 身分與身分名稱空間
-seo-title: Adobe Experience Platform Identity Service
-description: 描述
-seo-description: seo說明
+keywords: identities rtcdp;rtcdp identities;real-time cdp identities
+title: 即時CDP中的身份
+description: Adobe Experience Platform Identity Service可跨裝置和系統將身分連結在一起，協助您更全面地瞭解客戶及其行為。
 translation-type: tm+mt
-source-git-commit: b96286f6a06f0583b45343a513ee64f0025d79a7
+source-git-commit: 15323134f0c626cad2c4e90b3e1c0662cf7e57dd
 workflow-type: tm+mt
-source-wordcount: '406'
-ht-degree: 1%
+source-wordcount: '424'
+ht-degree: 0%
 
 ---
 
