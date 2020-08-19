@@ -1,11 +1,11 @@
 ---
-keywords: RTCDP;rtcdp
+keywords: RTCDP;CDP;Real-time Customer Data Platform;real time customer data platform;real time cdp;cdp;rtcdp
 title: Adobe即時客戶資料平台快速入門
 seo-title: Adobe即時客戶資料平台快速入門
 description: Adobe即時客戶資料平台的範例案例
 seo-description: Adobe即時客戶資料平台的範例案例
 translation-type: tm+mt
-source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
+source-git-commit: 54df4778a025811504801306120bda78e04281c1
 workflow-type: tm+mt
 source-wordcount: '2326'
 ht-degree: 0%
@@ -97,13 +97,13 @@ Luma可將訪客的行為對應至Adobe Experience Platform上的使用者個人
 * 匿名瀏覽資料
 * 與Sarah Rose帳戶相關的現有資料
 
-這兩個識別都會合併為單一描述檔 [!DNL Experience Platform]。 Luma現在對這個消費者有了統一的看法。
+這兩個識別都會合併為單一描述檔 [!DNL Experience Platform]。 Luma現在對這個消費者有統一的看法。
 
 根據網站「男性」區段中匿名訪客的瀏覽行為，可能假設該客戶為男性。 現在她登入後，Luma就認識Sarah Rose。 Luma運用Adobe的強大功 [!DNL Real-time Customer Profile] 能來調整跨通道傳遞給她的訊息。
 
 ## 個人化使用者體驗
 
-Sarah受到歡迎，並感謝她成為銅牌會員，獲得更多有關福利以及如何提高她的地位和分數的資訊。
+Sarah受到了忠誠的歡迎，並感謝她成為銅牌會員，獲得了更多關於福利以及如何提高她的地位和分數的資訊。
 
 她點選首頁以瀏覽更多內容。
 
