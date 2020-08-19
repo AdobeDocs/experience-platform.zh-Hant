@@ -1,10 +1,11 @@
 ---
+keywords: advertising destinations;destinations;rtcdp destinations
 title: 廣告目標
 seo-title: 廣告目標
 description: 將您的即時客戶資料平台連接至協力廠商廣告平台（例如DSP、廣告網路、SSP），並與這些平台共用假受眾。
 seo-description: 將您的即時客戶資料平台連接至協力廠商廣告平台（例如DSP、廣告網路、SSP），並與這些平台共用假受眾。
 translation-type: tm+mt
-source-git-commit: 875430cdbd80025fc3f0de2664f9b55db0debe53
+source-git-commit: 54df4778a025811504801306120bda78e04281c1
 workflow-type: tm+mt
 source-wordcount: '183'
 ht-degree: 0%
