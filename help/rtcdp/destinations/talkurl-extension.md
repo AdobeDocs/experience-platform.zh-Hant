@@ -1,10 +1,11 @@
 ---
+keywords: Talk URL Inbox;talk url inbox;Talk URL inbox;talk URL inbox;talk url;Talk URL;Talk url
 title: 通話URL收件匣副檔名
 seo-title: 通話URL收件匣
 description: 「交談URL收件匣」副檔名是Adobe即時客戶資料平台中客戶目的地的聲音。 如需擴充功能的詳細資訊，請參閱Adobe Exchange的擴充功能頁面。
 seo-description: 「交談URL收件匣」副檔名是Adobe即時客戶資料平台中客戶目的地的聲音。 如需擴充功能的詳細資訊，請參閱Adobe Exchange的擴充功能頁面。
 translation-type: tm+mt
-source-git-commit: a251d843401d2f092e368a4cdac217171fa4687f
+source-git-commit: 2dfa46906374151628d46c309df724a59f8dc50e
 workflow-type: tm+mt
 source-wordcount: '568'
 ht-degree: 6%
