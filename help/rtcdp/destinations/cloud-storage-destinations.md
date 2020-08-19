@@ -1,10 +1,11 @@
 ---
+keywords: cloud storage destination;cloud storage
 title: 雲端儲存空間目標
 seo-title: 雲端儲存空間目標
 description: Adobe即時CDP可以將您的細分作為資料檔案傳遞到Amazon S3、AWS Kinesis、Azure事件集線器或SFTP雲儲存位置。
 seo-description: Adobe即時CDP可以將您的細分作為資料檔案傳遞到Amazon S3、AWS Kinesis、Azure事件集線器或SFTP雲儲存位置。
 translation-type: tm+mt
-source-git-commit: 6f680a60c88bc5fee6ce9cb5a4f314c4b9d02249
+source-git-commit: 15323134f0c626cad2c4e90b3e1c0662cf7e57dd
 workflow-type: tm+mt
 source-wordcount: '178'
 ht-degree: 0%
