@@ -1,10 +1,11 @@
 ---
+keywords: Amazon Kinesis;kinesis destination;kinesis
 title: Amazon Kinesis目標
 seo-title: Amazon Kinesis目標
 description: 建立到Amazon Kinesis儲存的即時出站連接，以便從Adobe Experience Platform流資料。
 seo-description: 建立到Amazon Kinesis儲存的即時出站連接，以便從Adobe Experience Platform流資料。
 translation-type: tm+mt
-source-git-commit: b96286f6a06f0583b45343a513ee64f0025d79a7
+source-git-commit: 15323134f0c626cad2c4e90b3e1c0662cf7e57dd
 workflow-type: tm+mt
 source-wordcount: '442'
 ht-degree: 2%
@@ -46,16 +47,16 @@ ht-degree: 2%
 
 ### 在驗證步驟中 {#authentication-step}
 
-* **[!DNL Amazon Web Services]訪問密鑰和密鑰&#x200B;**: 在中[!DNL Amazon Web Services]，生成訪問密鑰——秘密訪問密鑰對，以授予Adobe即時CDP對您帳戶的訪[!DNL Amazon Kinesis]問權。 請參閱[Amazon Web Services檔案瞭解更多](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html)。
-* **地區**: 指出要 [!DNL Amazon Web Services] 將資料串流至的區域。
+* **[!DNL Amazon Web Services]訪問密鑰和密鑰**:在中 [!DNL Amazon Web Services]，生成訪問密鑰——秘密訪問密鑰對，以授予Adobe即時CDP對您帳戶的訪 [!DNL Amazon Kinesis] 問權。 請參閱 [Amazon Web Services檔案瞭解更多](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html)。
+* **地區**:指出要 [!DNL Amazon Web Services] 將資料串流至的區域。
 
 ![帳戶步驟中的輸入欄位](/help/rtcdp/destinations/assets/aws-kinesis-account-step.png)
 
 ### 在設定步驟中 {#setup-step}
 
-* **名稱**: 提供您與 [!DNL Amazon Kinesis]
-* **說明**: 提供您與的連線說明 [!DNL Amazon Kinesis]。
-* **stream**: 提供帳戶中現有資料流的名 [!DNL Amazon Kinesis] 稱。 Adobe即時CDP會將資料匯出至此串流。
+* **名稱**:提供您與 [!DNL Amazon Kinesis]
+* **說明**:提供您與的連線說明 [!DNL Amazon Kinesis]。
+* **stream**:提供帳戶中現有資料流的名 [!DNL Amazon Kinesis] 稱。 Adobe即時CDP會將資料匯出至此串流。
 
 ![驗證步驟中的輸入欄位](/help/rtcdp/destinations/assets/aws-kinesis-setup-step.png)
 
