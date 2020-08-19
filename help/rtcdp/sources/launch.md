@@ -1,11 +1,11 @@
 ---
-keywords: Launch;launch
+keywords: launch web tags;web tags launch;website tags;web tags;launch;Launch
 title: 教學課程使用Adobe Launch實作網站標籤
 seo-title: 使用Adobe Launch實作網站標籤
 description: 使用Adobe Launch在Adobe Experience Platform中實作網站標籤
 seo-description: 使用Adobe Launch在Adobe Experience Platform中實作網站標籤
 translation-type: tm+mt
-source-git-commit: 8f7ce97cdefd4fe79cb806e71e12e936caca3774
+source-git-commit: 54df4778a025811504801306120bda78e04281c1
 workflow-type: tm+mt
 source-wordcount: '481'
 ht-degree: 9%
@@ -80,7 +80,7 @@ ht-degree: 9%
 
 ![image](assets/launch-add-changes-to-library.png)
 
-完成測試後，請透過工作流程升級程式庫，以便將它部署至生產網站。 現在，資料正從每位個別使用者流向Adobe Experience Platform。
+完成測試後，請透過工作流程升級程式庫，以便將它部署至生產網站。 現在，資料正從每位使用者流向Adobe Experience Platform。
 
 ![image](assets/launch-promote-library.png)
 
