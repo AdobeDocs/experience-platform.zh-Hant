@@ -1,10 +1,11 @@
 ---
+keywords: email;Email;e-mail;email destinations;adobe campaign;campaign
 title: Adobe Campaign
 seo-title: Adobe Campaign
 description: Adobe Campaign是一套解決方案，可協助您跨所有線上及線下通道個人化並傳遞宣傳活動。
 seo-description: Adobe Campaign是一套解決方案，可協助您跨所有線上及線下通道個人化並傳遞宣傳活動。
 translation-type: tm+mt
-source-git-commit: 570c627672439a5ee0f4215b7bf7915ec3dd2bb3
+source-git-commit: 15323134f0c626cad2c4e90b3e1c0662cf7e57dd
 workflow-type: tm+mt
 source-wordcount: '517'
 ht-degree: 1%
@@ -37,10 +38,10 @@ Adobe Campaign是一套解決方案，可協助您跨所有線上及線下通道
    ![填寫促銷活動資訊](/help/rtcdp/destinations/assets/adobe-campaign-step2.png)
 
 1. 在基 **[!UICONTROL 本資訊]**，填寫您目的地的相關資訊，如下所示：
-   * **[!UICONTROL 名稱]**: 為目的地選擇相關名稱。
-   * **[!UICONTROL 說明]**: 輸入目標的說明。
+   * **[!UICONTROL 名稱]**:為目的地選擇相關名稱。
+   * **[!UICONTROL 說明]**:輸入目標的說明。
    * **[!UICONTROL 貯體名稱]**: *適用於S3連線*。 輸入S3儲存段的位置，即時CDP將將導出資料儲存為CSV或Tab分隔檔案。
-   * **[!UICONTROL 資料夾路徑]**: 在儲存位置中提供路徑，即時CDP會將導出資料儲存為CSV或Tab分隔檔案。
+   * **[!UICONTROL 資料夾路徑]**:在儲存位置中提供路徑，即時CDP會將導出資料儲存為CSV或Tab分隔檔案。
    * **[!UICONTROL 檔案格式]**: **CSV** 或 **TAB_DELIMITED**。 選擇要導出到儲存位置的檔案格式。
 
    ![促銷活動基本資訊](/help/rtcdp/destinations/assets/adobe-campaign-basic-information.png)
