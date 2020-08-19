@@ -1,10 +1,11 @@
 ---
+keywords: Amazon S3;S3 destination;s3;amazon s3
 title: Amazon S3目的地
 seo-title: Amazon S3目的地
 description: 建立Amazon Web Services(AWS)S3儲存空間的即時對外連線，以定期將Tab分隔或CSV資料檔案從Adobe Experience Platform匯出至您自己的S3儲存區。
 seo-description: 建立Amazon Web Services(AWS)S3儲存空間的即時對外連線，以定期將Tab分隔或CSV資料檔案從Adobe Experience Platform匯出至您自己的S3儲存區。
 translation-type: tm+mt
-source-git-commit: 098dd31be4d6ee6971cd87bcbfe0f686e34918e1
+source-git-commit: 15323134f0c626cad2c4e90b3e1c0662cf7e57dd
 workflow-type: tm+mt
 source-wordcount: '202'
 ht-degree: 0%
@@ -24,7 +25,7 @@ ht-degree: 0%
 
 對於目 [!DNL Amazon S3] 標，請在建立目標工作流中輸入以下資訊：
 
-* **[!DNL Amazon S3]訪問密鑰和[!DNL Amazon S3]密鑰&#x200B;**: 在中[!DNL Amazon S3]，生成訪問密鑰——秘密訪問密鑰對，以授予Adobe即時CDP對您帳戶的訪[!DNL Amazon S3]問權。
+* **[!DNL Amazon S3]訪問密鑰和[!DNL Amazon S3]密鑰**:在中 [!DNL Amazon S3]，生成訪問密鑰——秘密訪問密鑰對，以授予Adobe即時CDP對您帳戶的訪 [!DNL Amazon S3] 問權。
 
 >[!IMPORTANT]
 >
