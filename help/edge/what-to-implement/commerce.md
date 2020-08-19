@@ -4,10 +4,10 @@ seo-title: 使用Adobe Experience Platform Web SDK的支援產品
 description: 瞭解如何使用Experience Platform Web SDK新增產品或購物車的資料
 seo-description: 瞭解如何使用Experience Platform Web SDK新增產品或購物車的資料
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 075d71353877045e12985b3914aaeeb478ed46d6
 workflow-type: tm+mt
 source-wordcount: '1314'
-ht-degree: 5%
+ht-degree: 6%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 5%
 
 如果您的網站上有產品，則這是您可能想要傳送的預設項目集，以啟用Adobe的最多功能。 雖然這是一個建議，但它從一開始就提供了一組非常強大的資料。
 
-本檔案使用「 [ExperienceEvent商務詳細資訊](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/context/experienceevent-commerce.schema.md) 」混合。 混 `commerce` 合蛋白分為兩部分： 對象 `commerce` 和數 `productListItems` 組。 該對 `commerce` 像可讓您指示陣列正在執行哪些 `productListItems` 操作。
+本檔案使用「 [ExperienceEvent商務詳細資訊](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/context/experienceevent-commerce.schema.md) 」混合。 混 `commerce` 合蛋白分為兩部分：對象 `commerce` 和數 `productListItems` 組。 該對 `commerce` 像可讓您指示陣列正在執行哪些 `productListItems` 操作。
 
 >[!Tip]
 >
@@ -28,7 +28,6 @@ ht-degree: 5%
 以下是物件中 `measures` 可用的清 `commerce` 單。
 
 >[!Tip]
->
 >
 >度量包含兩個欄位： `id` 和 `value`。 大部分時候，您只會使 `value` 用欄位(例如 `'value':1`)。 此 `id` 欄位可讓您設定唯一識別碼，用來追蹤測量的傳送時間。 請參閱XDM測量文 [件](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/data/measure.schema.md)。
 
