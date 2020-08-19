@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 存取控制概觀
 topic: overview
 translation-type: tm+mt
-source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
+source-git-commit: e66fd20eb7a153e556a3716bb255af084e52292e
 workflow-type: tm+mt
-source-wordcount: '1097'
+source-wordcount: '1103'
 ht-degree: 3%
 
 ---
@@ -22,11 +22,11 @@ ht-degree: 3%
 
 >[!NOTE]
 >
->從此開始，本檔案中任何提及「管理員」的內容，都是指產品設定檔管理員或更高版本（如上所述）。
+>從此開始，本檔案中任何提及「管理員」的內容，都是指產品設定檔管理員或以上（如上所述）。
 
 獲取和分配訪問權限的高級工作流可總結如下：
 
-- 訂閱Adobe Experience Platform後，會傳送電子郵件給註冊表單中指定的管理員。
+- 在授權Adobe Experience Platform或使用Experience Platform的應用程式／應用程式服務後，會傳送電子郵件給授權期間指定的管理員。
 - 管理員登入 [Adobe Admin Console](#adobe-admin-console) ，並從概述頁面的產品清單中選取 **** Adobe Experience Platform。
 - 管理員可以視需要檢視 [預設產品設定檔](#product-profiles) ，或建立新的客戶產品設定檔。
 - 管理員可以編輯任何現有產品設定檔的權限和使用者。
