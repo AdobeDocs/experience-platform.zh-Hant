@@ -3,11 +3,12 @@ title: 傳送資料至Adobe Analytics
 seo-title: 使用Adobe Experience Platform Web SDK將資料傳送至Adobe Analytics
 description: 瞭解如何使用Experience Platform Web SDK將資料傳送至Adobe Analytics
 seo-description: 瞭解如何使用Experience Platform Web SDK將資料傳送至Adobe Analytics
+keywords: adobe analytics;analytics;mapped data;mapped vars;
 translation-type: tm+mt
-source-git-commit: 7b07a974e29334cde2dee7027b9780a296db7b20
+source-git-commit: 8c256b010d5540ea0872fa7e660f71f2903bfb04
 workflow-type: tm+mt
 source-wordcount: '202'
-ht-degree: 0%
+ht-degree: 6%
 
 ---
 
@@ -26,7 +27,7 @@ Adobe Experience Platform會自動 [!DNL Edge Network] 映射許多XDM變數。 
 
 ## 手動映射的資料
 
-邊緣網路收集的所有資料都可透過處理規則存取。 資料會使用點記號平面化，並可用作contextData。
+邊緣網路收集的所有資料都可透過處理規則來存取。資料會使用點記號平面化，並可用作contextData。
 
 如果你有這樣的架構的話。
 
