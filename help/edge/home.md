@@ -1,11 +1,11 @@
 ---
-keywords: web sdk;SDK;web SDK;Launch;launch
 title: Adobe Experience Platform Web SDK說明
 seo-title: Adobe Experience Platform Web SDK說明
 description: 瞭解Adobe Experience Platform Web SDK是什麼，以及如何使用它。
 seo-description: 可讓Adobe Experience Cloud的客戶與Experience Cloud中的各種服務互動。
+keywords: Adobe Experience Platform Web SDK;Platform Web SDK;Web SDK;edge;Visitor.js;AppMeasurement.js;AT.js;DIL.js;
 translation-type: tm+mt
-source-git-commit: 8f7ce97cdefd4fe79cb806e71e12e936caca3774
+source-git-commit: 8c256b010d5540ea0872fa7e660f71f2903bfb04
 workflow-type: tm+mt
 source-wordcount: '702'
 ht-degree: 2%
