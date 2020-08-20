@@ -3,8 +3,9 @@ title: 傳送資料至Adobe Audience Manager
 seo-title: 使用Adobe Experience Platform Web SDK將資料傳送至Adobe Audience Manager
 description: 瞭解如何使用Experience Platform Web SDK將資料傳送至Adobe Audience Manager
 seo-description: 瞭解如何使用Experience Platform Web SDK將資料傳送至Adobe Audience Manager
+keywords: audience manager;aam;identities;sync identities;namespace;
 translation-type: tm+mt
-source-git-commit: b87b1f8a979e028c5ebf57cecf0213a075df90a6
+source-git-commit: 8c256b010d5540ea0872fa7e660f71f2903bfb04
 workflow-type: tm+mt
 source-wordcount: '256'
 ht-degree: 0%
