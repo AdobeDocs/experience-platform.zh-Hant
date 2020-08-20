@@ -3,8 +3,9 @@ title: 在Analytics中手動對應變數
 seo-title: 使用Web SDK手動對應Analytics中的變數
 description: 如何使用處理規則手動將變數映射至Analytics
 seo-description: 將變數與網頁SDK搭配使用處理規則手動對應至Analytics
+keywords: adobe analytics;analytics;variables;mapping variables;map variables;contextData;context Data;Processing rules;rules;xdm;schema;
 translation-type: tm+mt
-source-git-commit: 075d71353877045e12985b3914aaeeb478ed46d6
+source-git-commit: 8c256b010d5540ea0872fa7e660f71f2903bfb04
 workflow-type: tm+mt
 source-wordcount: '371'
 ht-degree: 47%
