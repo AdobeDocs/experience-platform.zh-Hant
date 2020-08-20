@@ -5,9 +5,9 @@ solution: Experience Platform
 title: 在UI中建立Adobe Analytics分類資料連接器
 topic: overview
 translation-type: tm+mt
-source-git-commit: abb15e3daac4aebd46012822c790b056d0b3d2c1
+source-git-commit: e0d842b3c5d3b628e117c14d47d6c114b36484dd
 workflow-type: tm+mt
-source-wordcount: '614'
+source-wordcount: '624'
 ht-degree: 2%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 2%
 
 本教學課程需要對Adobe Experience Platform的下列元件有正確的認識：
 
-* [[!DNL體驗資料模型(XDM)系統]](../../../../../xdm/home.md):Experience Platform組織客戶體驗資料的標準化架構。
+* [[!DNL Experience Data Model] (XDM)系統](../../../../../xdm/home.md):Experience Platform組織客戶體驗資料的標準化架構。
 * [[!DNL即時客戶基本資料]](../../../../../profile/home.md):根據來自多個來源的匯整資料，提供統一、即時的消費者個人檔案。
 * [[!DNL沙盒]](../../../../../sandboxes/home.md):Experience Platform提供虛擬沙盒，可將單一Platform實例分割為不同的虛擬環境，以協助開發和發展數位體驗應用程式。
 
@@ -57,7 +57,7 @@ ht-degree: 2%
 
 ![](../../../../images/tutorials/create/classifications/review.png)
 
-## 監視和刪除分類資料流
+## 監控您的分類資料流
 
 建立資料流後，您可以監視通過其獲取的資料。 從「目 **[!UICONTROL 錄]** 」螢幕中，選擇「數 **[!UICONTROL 據流]** 」以查看已建立的與帳戶關聯的流 [!DNL Classifications] 清單。
 
@@ -69,13 +69,13 @@ ht-degree: 2%
 
 ![](../../../../images/tutorials/create/classifications/list-of-dataflows.png)
 
-「數 **[!UICONTROL 據集活動]** 」頁顯示有關所選目標資料集的資訊，包括有關其批處理狀態、資料集ID和方案的詳細資訊。 選擇 **[!UICONTROL 刪除資料集]** ，以刪除。
+「數 **[!UICONTROL 據集活動]** 」頁顯示有關所選目標資料集的資訊，包括有關其批處理狀態、資料集ID和方案的詳細資訊。
 
-![](../../../../images/tutorials/create/classifications/batch-screen.png)
+>[!IMPORTANT]
+>雖然刪除資料集對於其他來源連接器是可能的，但Analytics分類資料連接器目前不支援它。 如果您確實錯誤刪除資料集，請聯絡Adobe客戶服務。
 
-出現確認刪除的對話框。 選擇「 **[!UICONTROL 刪除]** 」以完成。
+![](../../../../images/tutorials/create/classifications/dataset.png)
 
-![](../../../../images/tutorials/create/classifications/delete-confirm.png)
 
 ## 後續步驟
 
