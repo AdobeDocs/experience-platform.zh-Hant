@@ -3,8 +3,9 @@ title: 執行命令
 seo-title: 執行Adobe Experience Platform Web SDK命令
 description: 瞭解如何執行Experience Platform Web SDK命令
 seo-description: 瞭解如何執行Experience Platform Web SDK命令
+keywords: Executing commands;commandName;Promises;getLibraryInfo;response objects;consent;
 translation-type: tm+mt
-source-git-commit: bf4194e1449bddd662f2152f84dbbe90060b5d30
+source-git-commit: 8c256b010d5540ea0872fa7e660f71f2903bfb04
 workflow-type: tm+mt
 source-wordcount: '419'
 ht-degree: 2%
