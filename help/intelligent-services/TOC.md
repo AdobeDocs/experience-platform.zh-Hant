@@ -3,10 +3,10 @@ product: experience-platform
 audience: user
 user-guide-title: 智慧型服務說明
 translation-type: tm+mt
-source-git-commit: 24449d0138ab449dbc01aecbbe9f70e05c781c89
+source-git-commit: e69f4e8ddc0fe5f7be2b2b2bd89c09efdfca8e75
 workflow-type: tm+mt
-source-wordcount: '67'
-ht-degree: 2%
+source-wordcount: '88'
+ht-degree: 5%
 
 ---
 
@@ -22,6 +22,14 @@ ht-degree: 2%
    * [使用者介面指南](attribution-ai/user-guide.md)
    * [發現見解](attribution-ai/discover-insights.md)
    * [存取分數](attribution-ai/download-scores.md)
+* 內容與商務AI（測試版） {#content-commerce-ai}
+   * [概述](content-commerce-ai/overview.md)
+   * [快速入門](content-commerce-ai/getting-started.md)
+   * 內容與商務AI API{#api}
+      * [色彩擷取](content-commerce-ai/api/color-extraction.md)
+      * [關鍵字擷取](content-commerce-ai/api/keyword-extraction.md)
+      * [文字分類](content-commerce-ai/api/text-classification.md)
+      * [視覺相似性](content-commerce-ai/api/visual-similarity.md)
 * 客戶人工智慧 {#customer-ai}
    * [概述](customer-ai/overview.md)
    * [客戶AI快速入門](customer-ai/getting-started.md)
