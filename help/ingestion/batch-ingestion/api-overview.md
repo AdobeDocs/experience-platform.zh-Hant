@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Adobe Experience Platform批次擷取開發人員指南
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
+source-git-commit: 3eaef72de2999fc088b92562c08a896d1cb08e55
 workflow-type: tm+mt
-source-wordcount: '2552'
-ht-degree: 6%
+source-wordcount: '2670'
+ht-degree: 5%
 
 ---
 
@@ -26,9 +26,9 @@ ht-degree: 6%
 
 本指南需要有效瞭解Adobe Experience Platform的下列元件：
 
-- [批次擷取](./overview.md): 可讓您將資料以批次檔案的形式內嵌至Adobe Experience Platform。
-- [!DNL Experience Data Model (XDM) System](../../xdm/home.md): 組織客戶體驗資料 [!DNL Experience Platform] 的標準化架構。
-- [!DNL Sandboxes](../../sandboxes/home.md): [!DNL Experience Platform] 提供虛擬沙盒，可將單一執行個體分 [!DNL Platform] 割為不同的虛擬環境，以協助開發和發展數位體驗應用程式。
+- [批次擷取](./overview.md):可讓您將資料以批次檔案的形式內嵌至Adobe Experience Platform。
+- [[!DNL Experience Data Model] (XDM)系統](../../xdm/home.md):組織客戶體驗資料 [!DNL Experience Platform] 的標準化架構。
+- [[!DNL沙盒]](../../sandboxes/home.md): [!DNL Experience Platform] 提供虛擬沙盒，可將單一執行個體分 [!DNL Platform] 割為不同的虛擬環境，以協助開發和發展數位體驗應用程式。
 
 ### 讀取範例API呼叫
 
@@ -38,22 +38,19 @@ ht-degree: 6%
 
 若要呼叫API，您必 [!DNL Platform] 須先完成驗證教 [學課程](../../tutorials/authentication.md)。 完成驗證教學課程後，將提供所有 [!DNL Experience Platform] API呼叫中每個必要標題的值，如下所示：
 
-- 授權： 生產者 `{ACCESS_TOKEN}`
-- x-api-key: `{API_KEY}`
-- x-gw-ims-org-id: `{IMS_ORG}`
+- `Authorization: Bearer {ACCESS_TOKEN}`
+- `x-api-key: {API_KEY}`
+- `x-gw-ims-org-id: {IMS_ORG}`
 
 中的所有資 [!DNL Experience Platform] 源都與特定虛擬沙盒隔離。 對API的所 [!DNL Platform] 有請求都需要一個標題，該標題會指定要在中執行的操作的沙盒名稱：
 
-- x-sandbox-name: `{SANDBOX_NAME}`
+- `x-sandbox-name: {SANDBOX_NAME}`
 
 >[!NOTE]
 >
 >如需中沙盒的詳細資訊 [!DNL Platform]，請參閱沙 [盒概述檔案](../../sandboxes/home.md)。
 
-包含裝載(POST、PUT、PATCH)的請求可能需要額外的標 `Content-Type` 題。 在呼叫參數中提供每個呼叫的接受值。 本指南使用下列內容類型：
-
-- 內容類型： application/json
-- 內容類型： application/octet-stream
+包含裝載(POST、PUT、PATCH)的請求可能需要額外的標 `Content-Type` 題。 在呼叫參數中提供每個呼叫的接受值。
 
 ## 類型
 
@@ -85,10 +82,10 @@ ht-degree: 6%
 ## 擷取限制
 
 批次資料擷取有一些限制：
-- 每批檔案的最大數量： 1500
-- 最大批大小： 100 GB
-- 每列的屬性或欄位數上限： 10000
-- 每位使用者每分鐘的批次數上限： 138
+- 每批檔案的最大數量：1500
+- 最大批大小：100 GB
+- 每列的屬性或欄位數上限：10000
+- 每位使用者每分鐘的批次數上限：138
 
 ## 收錄JSON檔案
 
@@ -176,7 +173,7 @@ PUT /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 | --------- | ----------- |
 | `{BATCH_ID}` | 您要上傳至的批次ID。 |
 | `{DATASET_ID}` | 批次參考資料集的ID。 |
-| `{FILE_NAME}` | 您要上傳的檔案名稱。 |
+| `{FILE_NAME}` | 您要上傳的檔案名稱。 此檔案路徑是檔案將儲存在Adobe端的位置。 |
 
 **請求**
 
@@ -196,7 +193,7 @@ curl -X PUT https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/
 
 | 參數 | 說明 |
 | --------- | ----------- |
-| `{FILE_PATH_AND_NAME}` | 您嘗試上傳之檔案的完整路徑和名稱。 |
+| `{FILE_PATH_AND_NAME}` | 您嘗試上傳之檔案的完整路徑和名稱。 此檔案路徑是本地檔案路徑，如 `Users/sample-user/Downloads/sample.json`。 |
 
 **回應**
 
@@ -311,7 +308,7 @@ PUT /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 | --------- | ----------- |
 | `{BATCH_ID}` | 您要上傳至的批次ID。 |
 | `{DATASET_ID}` | 批次參考資料集的ID。 |
-| `{FILE_NAME}` | 您要上傳的檔案名稱。 |
+| `{FILE_NAME}` | 您要上傳的檔案名稱。 此檔案路徑是檔案將儲存在Adobe端的位置。 |
 
 **請求**
 
@@ -331,7 +328,7 @@ curl -X PUT https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/
 
 | 參數 | 說明 |
 | --------- | ----------- |
-| `{FILE_PATH_AND_NAME}` | 您要上傳之檔案的完整路徑和名稱。 |
+| `{FILE_PATH_AND_NAME}` | 您嘗試上傳之檔案的完整路徑和名稱。 此檔案路徑是本地檔案路徑，如 `Users/sample-user/Downloads/sample.json`。 |
 
 **回應**
 
@@ -484,7 +481,7 @@ PATCH /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 | --------- | ----------- |
 | `{BATCH_ID}` | 您要上傳至的批次ID。 |
 | `{DATASET_ID}` | 批次參考資料集的ID。 |
-| `{FILE_NAME}` | 您要上傳的檔案名稱。 |
+| `{FILE_NAME}` | 您要上傳的檔案名稱。 此檔案路徑是檔案將儲存在Adobe端的位置。 |
 
 **請求**
 
@@ -506,7 +503,7 @@ curl -X PATCH https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID
 | 參數 | 說明 |
 | --------- | ----------- |
 | `{CONTENT_RANGE}` | 在整數中，請求範圍的開始和結束。 |
-| `{FILE_PATH_AND_NAME}` | 您要上傳之檔案的完整路徑和名稱。 |
+| `{FILE_PATH_AND_NAME}` | 您嘗試上傳之檔案的完整路徑和名稱。 此檔案路徑是本地檔案路徑，如 `Users/sample-user/Downloads/sample.json`。 |
 
 
 **回應**
@@ -734,7 +731,7 @@ PUT /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 | --------- | ----------- |
 | `{BATCH_ID}` | 您要上傳至的批次ID。 |
 | `{DATASET_ID}` | 批次參考資料集的ID。 |
-| `{FILE_NAME}` | 您要上傳的檔案名稱。 |
+| `{FILE_NAME}` | 您要上傳的檔案名稱。 此檔案路徑是檔案將儲存在Adobe端的位置。 |
 
 **請求**
 
@@ -754,7 +751,7 @@ curl -X PUT https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/
 
 | 參數 | 說明 |
 | --------- | ----------- |
-| `{FILE_PATH_AND_NAME}` | 您要上傳之檔案的完整路徑和名稱。 |
+| `{FILE_PATH_AND_NAME}` | 您嘗試上傳之檔案的完整路徑和名稱。 此檔案路徑是本地檔案路徑，如 `Users/sample-user/Downloads/sample.json`。 |
 
 
 **回應**
@@ -941,7 +938,7 @@ PUT /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 | --------- | ----------- |
 | `{BATCH_ID}` | 您要上傳至的批次ID。 |
 | `{DATASET_ID}` | 批次參考資料集的ID。 |
-| `{FILE_NAME}` | 您要上傳的檔案名稱。 |
+| `{FILE_NAME}` | 您要上傳的檔案名稱。 此檔案路徑是檔案將儲存在Adobe端的位置。 |
 
 **請求**
 
@@ -961,7 +958,7 @@ curl -X PUT https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/
 
 | 參數 | 說明 |
 | --------- | ----------- |
-| `{FILE_PATH_AND_NAME}` | 您要上傳之檔案的完整路徑和名稱。 |
+| `{FILE_PATH_AND_NAME}` | 您嘗試上傳之檔案的完整路徑和名稱。 此檔案路徑是本地檔案路徑，如 `Users/sample-user/Downloads/sample.json`。 |
 
 **回應**
 
