@@ -3,8 +3,9 @@ title: 支援應用程式內瀏覽器
 seo-title: 使用Adobe Experience Platform Web SDK支援應用程式內瀏覽器
 description: 瞭解如何使用Experience Platform Web SDK支援應用程式內瀏覽器
 seo-description: 瞭解如何使用Experience Platform Web SDK支援應用程式內瀏覽器
+keywords: in-app browsers;browsers;
 translation-type: tm+mt
-source-git-commit: 7b07a974e29334cde2dee7027b9780a296db7b20
+source-git-commit: 8c256b010d5540ea0872fa7e660f71f2903bfb04
 workflow-type: tm+mt
 source-wordcount: '120'
 ht-degree: 7%
@@ -18,4 +19,4 @@ ht-degree: 7%
 >
 >Adobe Experience Platform目 [!DNL Web SDK] 前為測試版，並非所有使用者都能使用。 文件和功能可能會有所變更。
 
-在內嵌於行動應用程式中的瀏覽器中，SDK的運作方式與一般瀏覽器完全相同； 不過，您應確定訪客ID是透過URL從行動應用程式傳入網站的。 Experience SDK for Mobile的說明檔案中概述 [了此程式](https://docs.adobe.com/content/help/en/mobile-services/ios/sdk-reference-ios/hybrid-app.html)。
+在內嵌於行動應用程式中的瀏覽器中，SDK的運作方式與一般瀏覽器完全相同；不過，您應確定訪客ID是透過URL從行動應用程式傳入網站的。 Experience SDK for Mobile的說明檔案中概述 [了此程式](https://docs.adobe.com/content/help/en/mobile-services/ios/sdk-reference-ios/hybrid-app.html)。
