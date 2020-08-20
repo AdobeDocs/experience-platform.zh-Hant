@@ -3,8 +3,9 @@ title: Analytics中自動映射的變數
 seo-title: 使用Adobe Experience Platform Web SDK自動在Analytics中映射的變數
 description: 瞭解哪些變數在Analytics中使用Experience Platform Web SDK自動對應
 seo-description: 瞭解哪些變數在Analytics中使用Experience Platform Web SDK自動對應
+keywords: adobe analytics;variables;analytics;automatic map;automatically mapped;
 translation-type: tm+mt
-source-git-commit: 7b07a974e29334cde2dee7027b9780a296db7b20
+source-git-commit: 8c256b010d5540ea0872fa7e660f71f2903bfb04
 workflow-type: tm+mt
 source-wordcount: '543'
 ht-degree: 2%
