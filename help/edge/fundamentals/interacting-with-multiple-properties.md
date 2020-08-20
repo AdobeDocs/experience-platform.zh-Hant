@@ -3,8 +3,9 @@ title: 與多個屬性互動
 seo-title: Adobe Experience Platform Web SDK與多個屬性互動
 description: 瞭解如何與多個Experience Platform網頁SDK屬性互動
 seo-description: 瞭解如何與多個Experience Platform網頁SDK屬性互動
+keywords: multiple properties;configure;sendEvent;edgeConfigId;orgId;
 translation-type: tm+mt
-source-git-commit: 7b07a974e29334cde2dee7027b9780a296db7b20
+source-git-commit: 8c256b010d5540ea0872fa7e660f71f2903bfb04
 workflow-type: tm+mt
 source-wordcount: '252'
 ht-degree: 1%
