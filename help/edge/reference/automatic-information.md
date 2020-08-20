@@ -3,8 +3,9 @@ title: 自動收集的資訊
 seo-title: Adobe Experience Platform Web SDK自動收集的資訊
 description: Adobe Experience Cloud SDK自動收集的每項資訊說明
 seo-description: Adobe Experience Cloud SDK自動收集的每項資訊說明
+keywords: collect information;context;configure;device;screenHeight;screen Height;screenOrientation;screen Orientation;screenWidth;screen Width;environment;viewportHeight;viewport Height;viewportWidth;viewport Width;crowserDetails;browser details;implementationDetails;implementation Details;name;version;placeContext;localTime;local Time;localTimezoneOffset;local Timezone Offset;timestamp;web;url;webPageDetails;web Page Details;webReferrer;web Referrer;landscape;portrait;
 translation-type: tm+mt
-source-git-commit: ccd47e024f3ea53507454b7785528c031746d681
+source-git-commit: 8c256b010d5540ea0872fa7e660f71f2903bfb04
 workflow-type: tm+mt
 source-wordcount: '387'
 ht-degree: 8%
