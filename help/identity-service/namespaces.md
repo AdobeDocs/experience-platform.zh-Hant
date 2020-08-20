@@ -5,7 +5,7 @@ title: Adobe Experience Platform Identity Service
 topic: overview
 description: '身分識別命名空間是 Identity Service 的元件，用途是作為身分識別相關內容的指標。例如，他們會將"name<span>@email.com"值區分為電子郵件地址，或將"443522"區分為數值CRM ID。 '
 translation-type: tm+mt
-source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
+source-git-commit: 235f611115b89a87c924a00409a6acae4f5ac97d
 workflow-type: tm+mt
 source-wordcount: '761'
 ht-degree: 4%
@@ -23,7 +23,7 @@ Identity namespaces are a component of [!DNL Identity Service](./home.md) that s
 
 - [!DNL Real-time Customer Profile](../profile/home.md):根據來自多個來源的匯整資料，即時提供統一的客戶個人檔案。
 - [!DNL Identity Service](./home.md):跨裝置和系統橋接身分，以更全面地瞭解個別客戶及其行為。
-- [!DNL Privacy Service](../privacy-service/home.md):身分名稱空間用於遵守通用資料保護規則(GDPR)，在GDPR中，可以相對於名稱空間提出GDPR請求。
+- [!DNL Privacy Service](../privacy-service/home.md):身分名稱空間用於遵守通用資料保護規則(GDPR)，在GDPR中可以相對於名稱空間提出請求。
 
 ## 瞭解身分名稱空間
 
@@ -44,12 +44,12 @@ Identity namespaces are a component of [!DNL Identity Service](./home.md) that s
 | Cookie | 這些身份對於擴展至關重要，並且是身份圖的大部分。 然而，從本質上講，它們會迅速衰敗，並隨著時間而失去價值。 刪除Cookie會特別在識別圖中處理。 |
 | 跨裝置 | 這表明， [!DNL Identity Service] 應將此視為強大的人物識別碼，並永久保留。 例如登入ID、CRM ID、忠誠度ID等。 |
 | 裝置 | 包含IDFA、GAID和其他IOT ID。 家庭中的人可以分享。 |
-| 電子郵件 | 此類型的身分識別資訊(PII)。 這是一個靈敏地處 [!DNL Identity Service] 理這個值的指示。 |
-| 行動 | 此類型的身份包括PII。 這是一個靈敏地處 [!DNL Identity Service] 理這個值的指示。 |
+| 電子郵件 | 此類型的身分識別資訊(PII)。 這是一個靈敏 [!DNL Identity Service] 地處理值的指標。 |
+| 行動 | 此類型的身份包括PII。 這是一個靈敏 [!DNL Identity Service] 地處理值的指標。 |
 | 非人 | 用於儲存需要名稱空間但未綁定到人員群集的標識符。 然後，從標識圖中過濾這些標識符。 可能的使用案例包括與產品、組織、商店等相關的資料。 （例如產品SKU。） |
 | 電話 | 此類型的身份包括PII。 這表明該 [!DNL Identity Service] 值處理靈敏。 |
 
-### 標準名稱空間
+### 標準名稱空間 {#standard}
 
 Adobe Experience Platform提供數個可供所有組織使用的身分名稱空間。 這些名稱空間稱為標準名稱空間，可使用 [!DNL Identity Service] API或透過 [!DNL Platform] UI顯示。
 
