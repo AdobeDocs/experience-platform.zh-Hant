@@ -3,8 +3,9 @@ title: 除錯
 seo-title: Adobe Experience Platform Web SDK除錯
 description: 瞭解如何切換Experience Platform Web SDK除錯
 seo-description: 瞭解如何切換Experience Platform Web SDK除錯
+keywords: debugging web sdk;debugging;configure;configure command;debug command;edgeConfigId;setDebug;debugEnabled;debug;
 translation-type: tm+mt
-source-git-commit: 5f263a2593cdb493b5cd48bc0478379faa3e155d
+source-git-commit: 8c256b010d5540ea0872fa7e660f71f2903bfb04
 workflow-type: tm+mt
 source-wordcount: '324'
 ht-degree: 0%
