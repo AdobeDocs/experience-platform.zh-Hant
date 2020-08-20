@@ -3,8 +3,9 @@ title: 合併事件資料
 seo-title: 合併Adobe Experience Platform Web SDK事件資料
 description: 瞭解如何合併Experience Platform Web SDK事件資料
 seo-description: 瞭解如何合併Experience Platform Web SDK事件資料
+keywords: merge;event data;eventMergeId;createEventMergeId;sendEvent;mergeId;merge id;eventMergeIdPromise; Merge Id Promise;
 translation-type: tm+mt
-source-git-commit: 7b07a974e29334cde2dee7027b9780a296db7b20
+source-git-commit: 8c256b010d5540ea0872fa7e660f71f2903bfb04
 workflow-type: tm+mt
 source-wordcount: '408'
 ht-degree: 0%
