@@ -5,7 +5,7 @@ title: 架構構成基礎
 topic: overview
 description: 本檔案提供Experience Data Model(XDM)架構的簡介，以及構成Adobe Experience Platform中要使用之架構的建置區塊、原則和最佳實務。
 translation-type: tm+mt
-source-git-commit: 04efbf63741ef39bbf0b22795be74087f1f7c595
+source-git-commit: 23a69653ee773562cb0261b8e0bb67411eb4856e
 workflow-type: tm+mt
 source-wordcount: '2811'
 ht-degree: 0%
@@ -68,7 +68,7 @@ XDM模式通過嵌入對象的使用，可以直接表示複雜的資料，並�
 
 在方案規劃階段，務必考慮客戶身份，以協助確保資料匯整在一起，以建立最強穩的個人檔案。 請參閱 [Adobe Experience Platform Identity Service的概觀](../../identity-service/home.md) ，進一步瞭解身分資訊如何協助您為客戶提供數位體驗。
 
-#### xdm:identityMap
+#### xdm:identityMap {#identityMap}
 
 `xdm:identityMap` 是映射類型欄位，它描述單個的各種標識值及其關聯的名稱空間。 此欄位可用於為方案提供身份資訊，而不是在方案本身的結構中定義身份值。
 
