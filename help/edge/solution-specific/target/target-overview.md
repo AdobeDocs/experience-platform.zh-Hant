@@ -3,8 +3,9 @@ title: 'Adobe Target和Adobe Experience Platform Web SDK。 '
 seo-title: Adobe Experience Platform Web SDK與使用Adobe Target
 description: 瞭解如何使用Adobe Target使用Experience Platform Web SDK來呈現個人化內容
 seo-description: 瞭解如何使用Adobe Target使用Experience Platform Web SDK來呈現個人化內容
+keywords: target;adobe target;activity.id;experience.id;renderDecisions;decisionScopes;prehiding snippet;vec;Form-Based Experience Composer;xdm;audiences;decisions;scope;schema;
 translation-type: tm+mt
-source-git-commit: 7b07a974e29334cde2dee7027b9780a296db7b20
+source-git-commit: 8c256b010d5540ea0872fa7e660f71f2903bfb04
 workflow-type: tm+mt
 source-wordcount: '634'
 ht-degree: 3%
@@ -34,7 +35,7 @@ Adobe Experience Platform可以 [!DNL Web SDK] 將Adobe Target管理的個人化
 
 ## 使用Adobe Target VEC
 
-在SDK中，您可以正常使用VEC，但有一個例外： 您需要安裝 [目標VEC Helper Extension](https://docs.adobe.com/content/help/en/target/using/experiences/vec/troubleshoot-composer/vec-helper-browser-extension.html) 並啟用。
+在SDK中，您可以正常使用VEC，但有一個例外：您需要安裝 [目標VEC Helper Extension](https://docs.adobe.com/content/help/en/target/using/experiences/vec/troubleshoot-composer/vec-helper-browser-extension.html) 並啟用。
 
 ## 自動演算VEC活動
 
