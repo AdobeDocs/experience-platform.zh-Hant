@@ -3,8 +3,9 @@ title: 管理Flicker以提供個人化體驗
 seo-title: Adobe Experience Platform Web SDK管理Flicker
 description: 瞭解如何管理使用者體驗的閃爍
 seo-description: 瞭解如何使用Experience Platform Web SDK屬性來管理Flicker
+keywords: target;flicker;prehidingStyle;asynchronously;asynchronous;
 translation-type: tm+mt
-source-git-commit: 4bea14d18ce119bdec0d428f885d240f92244cfc
+source-git-commit: 8c256b010d5540ea0872fa7e660f71f2903bfb04
 workflow-type: tm+mt
 source-wordcount: '491'
 ht-degree: 0%
