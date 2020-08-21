@@ -4,10 +4,10 @@ solution: Experience Platform
 title: 透過來源連接器和API收集付款資料
 topic: overview
 translation-type: tm+mt
-source-git-commit: 773823333fe0553515ebf169b4fd956b8737a9c3
+source-git-commit: c26b2b4256d8d1d23a285efbacd8b6c9e255cd18
 workflow-type: tm+mt
-source-wordcount: '1696'
-ht-degree: 1%
+source-wordcount: '1702'
+ht-degree: 2%
 
 ---
 
@@ -136,7 +136,7 @@ curl -X POST \
 
 在之前的步驟中，會建立臨機XDM架構來結構來源資料。 為了使用源資料，還必須創 [!DNL Platform]建目標模式，以根據您的需要構建源資料。 然後，目標模式用於建立包含 [!DNL Platform] 源資料的資料集。 此目標XDM模式還擴展了XDM [!DNL Individual Profile] 類。
 
-通過對方案註冊表API執行POST請求，可以建立目標XDM [方案](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml)。 如果希望在中使用用戶介面 [!DNL Experience Platform], [](https://docs.adobe.com/content/help/en/experience-platform/xdm/tutorials/create-schema-ui.html) Schema Editor教程將提供在Schema Editor中執行類似操作的逐步說明。
+通過對方案註冊表API執行POST請求，可以建立目標XDM [方案](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml)。 如果希望在中使用用戶介面 [!DNL Experience Platform], [](https://docs.adobe.com/content/help/zh-Hant/experience-platform/xdm/tutorials/create-schema-ui.html) Schema Editor教程將提供在Schema Editor中執行類似操作的逐步說明。
 
 **API格式**
 
@@ -647,7 +647,7 @@ curl -X POST \
 | `sourceConnectionIds` | 在先 [前步驟中擷取的來源連線ID](#source) 。 |
 | `targetConnectionIds` | 在先 [前步驟中擷取的目標連線ID](#target-connection) 。 |
 | `transformations.params.mappingId` | 在先 [前步驟中擷取](#mapping) 的對應ID。 |
-| `transformations.params.deltaColum` | 用於區分新資料和現有資料的指定欄。 增量資料將根據選取欄的時間戳記進行擷取。 |
+| `transformations.params.deltaColum` | 用於區分新資料和現有資料的指定欄。 增量資料將根據選取欄的時間戳記進行擷取。 支援的日期格 `deltaColumn` 式 `yyyy-MM-dd HH:mm:ss`為。 |
 | `transformations.params.mappingId` | 與資料庫關聯的映射ID。 |
 | `scheduleParams.startTime` | 資料流在時代時間中的開始時間。 |
 | `scheduleParams.frequency` | 資料流收集資料的頻率。 可接受的值包括： `once`、 `minute`、 `hour`、 `day`或 `week`。 |
