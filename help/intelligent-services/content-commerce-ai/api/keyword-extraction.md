@@ -5,9 +5,9 @@ title: 色彩擷取
 topic: Developer guide
 description: 當給定文字檔案時，關鍵字擷取服務會自動擷取最能說明檔案主題的關鍵字或關鍵片語。 為了提取關鍵字，採用了命名實體識別(NER)和無監督關鍵字提取算法的組合。
 translation-type: tm+mt
-source-git-commit: e69f4e8ddc0fe5f7be2b2b2bd89c09efdfca8e75
+source-git-commit: 4f7b5ca50171f4948726c44dbf31025011adf35f
 workflow-type: tm+mt
-source-wordcount: '718'
+source-wordcount: '742'
 ht-degree: 3%
 
 ---
@@ -84,7 +84,7 @@ POST /services/v1/predict
 
 >[!CAUTION]
 >
->`analyzer_id` 決定使 [!DNL Sensei Content Framework] 用的項目。 在提出要求前，請先檢查 `analyzer_id` 您是否有適當。
+>`analyzer_id` 決定使 [!DNL Sensei Content Framework] 用的項目。 在提出要求前，請先檢查 `analyzer_id` 您是否有適當。 對於關鍵字擷取服務， `analyzer_id` ID為： `Feature:cintel-ner:Service-1a35aefb0f0f4dc0a3b5262370ebc709`
 
 ```SHELL
 curl -w'\n' -i -X POST https://sensei.adobe.io/services/v1/predict \
@@ -119,7 +119,7 @@ curl -w'\n' -i -X POST https://sensei.adobe.io/services/v1/predict \
 
 | 屬性 | 說明 | 必要 |
 | --- | --- | --- |
-| `analyzer_id` | 您 [!DNL Sensei] 的請求所部署的服務ID。 此ID決定使用哪 [!DNL Sensei Content Frameworks] 個。 | 是 |
+| `analyzer_id` | 您 [!DNL Sensei] 的請求所部署的服務ID。 此ID決定使用哪 [!DNL Sensei Content Frameworks] 個。 如需自訂服務，請聯絡「內容與商務AI」團隊以設定自訂ID。 | 是 |
 | `application-id` | 已建立應用程式的ID。 | 是 |
 | `data` | 包含JSON物件的陣列，其中每個物件都代表檔案。 作為此陣列的一部分傳遞的任何參數都將覆蓋在陣列外部指定的全 `data` 局參數。 下表中概述的任何其他屬性都可從中覆蓋 `data`。 | 是 |
 | `language` | 輸入文字的語言。 預設值為 `en`。 | 無 |
