@@ -5,9 +5,9 @@ title: 串流區段
 topic: ui guide
 description: Adobe Experience Platform上的串流細分可讓您近乎即時地進行細分，同時專注於資料的豐富性。 透過串流分段，區段資格現在會在資料進入平台時進行，以減輕排程和執行分段工作的需求。 有了這項功能，大部份的區段規則現在都可以在資料傳入平台時進行評估，這表示區段成員資格將會保持最新，而不會執行排程的區段工作。
 translation-type: tm+mt
-source-git-commit: 23516c66a67ae5663dcf90a40ccba98bfd266ab0
+source-git-commit: d0323fd2e769f97fa738ea55e7aba1d7ae821051
 workflow-type: tm+mt
-source-wordcount: '737'
+source-wordcount: '767'
 ht-degree: 0%
 
 ---
@@ -60,7 +60,9 @@ ht-degree: 0%
 
 ![](../images/ui/streaming-segmentation/monitoring-streaming-segment.png)
 
-具體而言，會顯示 **[!UICONTROL 合格觀眾總數的詳細資]** 訊。 如果作業在過去24小時內執行，則除了新增對象的折線圖外，還會顯示作業的 **[!UICONTROL Total合格對象大小]** 。 否則，除了 **[!UICONTROL 視覺化趨勢線外]** ，還會顯示預計的觀眾總大小。
+具體而言，會顯示 **[!UICONTROL 合格觀眾總數的詳細資]** 訊。 「合 **[!UICONTROL 格對象大小總計]** 」會顯示上次完成區段工作執行中合格對象的總數。 如果區段工作在過去24小時內未完成，則會改用估計的受眾數。
+
+下面是折線圖，顯示過去24小時內合格和不合格的區段數。 下拉式清單可調整為顯示最近24小時、上週或最近30天。
 
 ![](../images/ui/streaming-segmentation/monitoring-streaming-segment-graph.png)
 
