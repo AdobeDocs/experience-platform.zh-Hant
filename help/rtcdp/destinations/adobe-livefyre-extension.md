@@ -3,11 +3,11 @@ keywords: livefyre;livefyre extension
 title: Adobe Livefyre擴充功能
 seo-title: Adobe Livefyre擴充功能
 description: Adobe Livefyre擴充功能是Adobe即時客戶資料平台中的社交目的地。 如需擴充功能的詳細資訊，請參閱Adobe Exchange的擴充功能頁面。
-seo-description: null
+seo-description: Adobe Livefyre擴充功能是Adobe即時客戶資料平台中的社交目的地。 如需擴充功能的詳細資訊，請參閱Adobe Exchange的擴充功能頁面。
 translation-type: tm+mt
-source-git-commit: 2dfa46906374151628d46c309df724a59f8dc50e
+source-git-commit: 164c51e543d5eba11e4756723f3fecd84ec48f59
 workflow-type: tm+mt
-source-wordcount: '513'
+source-wordcount: '541'
 ht-degree: 6%
 
 ---
