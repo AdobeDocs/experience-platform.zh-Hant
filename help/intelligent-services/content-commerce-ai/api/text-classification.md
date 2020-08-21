@@ -5,9 +5,9 @@ title: 文字分類API端點
 topic: Developer guide
 description: 文字分類服務在給定文字片段時，可將其分類為一或多個標籤。 分類可以是單一標籤、多標籤或階層式。
 translation-type: tm+mt
-source-git-commit: e69f4e8ddc0fe5f7be2b2b2bd89c09efdfca8e75
+source-git-commit: 4f7b5ca50171f4948726c44dbf31025011adf35f
 workflow-type: tm+mt
-source-wordcount: '416'
+source-wordcount: '447'
 ht-degree: 4%
 
 ---
@@ -35,7 +35,7 @@ POST /services/v1/predict
 
 >[!CAUTION]
 >
->`analyzer_id` 決定使 [!DNL Sensei Content Framework] 用的項目。 在提出要求前，請先檢查 `analyzer_id` 您是否有適當。
+>`analyzer_id` 決定使 [!DNL Sensei Content Framework] 用的項目。 在提出要求前，請先檢查 `analyzer_id` 您是否有適當。 請連絡內容與商務AI測試版團隊，以取得您 `analyzer_id` 的這項服務。
 
 ```SHELL
 curl -w'\n' -i -X POST https://sensei.adobe.io/services/v1/predict \
@@ -64,7 +64,7 @@ curl -w'\n' -i -X POST https://sensei.adobe.io/services/v1/predict \
 
 | 屬性 | 說明 | 必要 |
 | --- | --- | --- |
-| `analyzer_id` | 您 [!DNL Sensei] 的請求所部署的服務ID。 此ID決定使用哪 [!DNL Sensei Content Frameworks] 個。 | 是 |
+| `analyzer_id` | 您 [!DNL Sensei] 的請求所部署的服務ID。 此ID決定使用哪 [!DNL Sensei Content Frameworks] 個。 如需自訂服務，請聯絡「內容與商務AI」團隊以設定自訂ID。 | 是 |
 | `application-id` | 已建立應用程式的ID。 | 是 |
 | `data` | 包含JSON物件的陣列，其中每個物件都代表檔案。 作為此陣列的一部分傳遞的任何參數都將覆蓋在陣列外部指定的全 `data` 局參數。 下表中概述的任何其他屬性都可從中覆蓋 `data`。 | 是 |
 | `language` | 輸入文字的語言。 預設值為 `en`。 | 無 |
