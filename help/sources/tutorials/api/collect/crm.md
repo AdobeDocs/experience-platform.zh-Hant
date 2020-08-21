@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 透過來源連接器和API收集CRM資料
 topic: overview
 translation-type: tm+mt
-source-git-commit: 773823333fe0553515ebf169b4fd956b8737a9c3
+source-git-commit: 744f7f1c5203f3537e979c50d7f8e20c1e8c50a5
 workflow-type: tm+mt
-source-wordcount: '1662'
+source-wordcount: '1678'
 ht-degree: 1%
 
 ---
@@ -651,6 +651,16 @@ curl -X POST \
         ],
         "transformations": [
             {
+                "name": "Copy",
+                "params": {
+                    "deltaColumn": {
+                        "name": "updatedAt",
+                        "dateFormat": "YYYY-MM-DD",
+                        "timezone": "UTC"
+                    }
+                }
+            },
+            {
                 "name": "Mapping",
                 "params": {
                     "mappingId": "ab91c736-1f3d-4b09-8424-311d3d3e3cea"
@@ -671,7 +681,7 @@ curl -X POST \
 | `sourceConnectionIds` | 在先 [前步驟中擷取的來源連線ID](#source) 。 |
 | `targetConnectionIds` | 在先 [前步驟中擷取的目標連線ID](#target-connection) 。 |
 | `transformations.params.mappingId` | 在先 [前步驟中擷取](#mapping) 的對應ID。 |
-| `transformations.params.deltaColum` | 用於區分新資料和現有資料的指定欄。 增量資料將根據選取欄的時間戳記進行擷取。 |
+| `transformations.params.deltaColum` | 用於區分新資料和現有資料的指定欄。 增量資料將根據選取欄的時間戳記進行擷取。 支援的格 `deltaColumn` 式 `yyyy-MM-dd HH:mm:ss`為。 如果您使用Microsoft Dynamics，則支援的格 `deltaColumn` 式為 `yyyy-MM-ddTHH:mm:ssZ`。 |
 | `transformations.params.mappingId` | 與資料庫關聯的映射ID。 |
 | `scheduleParams.startTime` | 資料流在時代時間中的開始時間。 |
 | `scheduleParams.frequency` | 資料流收集資料的頻率。 可接受的值包括： `once`、 `minute`、 `hour`、 `day`或 `week`。 |
