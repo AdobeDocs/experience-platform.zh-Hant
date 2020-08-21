@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 透過來源連接器和API，從協力廠商資料庫收集資料
 topic: overview
 translation-type: tm+mt
-source-git-commit: 773823333fe0553515ebf169b4fd956b8737a9c3
+source-git-commit: 744f7f1c5203f3537e979c50d7f8e20c1e8c50a5
 workflow-type: tm+mt
-source-wordcount: '1715'
+source-wordcount: '1733'
 ht-degree: 1%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 1%
 
 [!DNL Flow Service](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) 用於收集和集中Adobe Experience Platform內不同來源的客戶資料。 該服務提供用戶介面和REST風格的API，所有支援的源都可從中連接。
 
-本教學課程涵蓋從協力廠商資料庫擷取資料，並透過來源連接器和API將其 [!DNL Platform] 吸收到其中的步驟。
+本教學課程涵蓋從協力廠商資料庫擷取資料，並透過來源連接器和API將其 [!DNL Platform] 內嵌至其中的步驟。
 
 ## 快速入門
 
@@ -601,7 +601,11 @@ curl -X POST \
             {
                 "name": "Copy",
                 "params": {
-                    "deltaColumn": "date-time"
+                    "deltaColumn": {
+                        "name": "updatedAt",
+                        "dateFormat": "YYYY-MM-DD",
+                        "timezone": "UTC"
+                    }
                 }
             },
             {
@@ -627,7 +631,7 @@ curl -X POST \
 | `sourceConnectionIds` | 在先 [前步驟中擷取的來源連線ID](#source) 。 |
 | `targetConnectionIds` | 在先 [前步驟中擷取的目標連線ID](#target-connection) 。 |
 | `transformations.params.mappingId` | 在先 [前步驟中擷取](#mapping) 的對應ID。 |
-| `transformations.params.deltaColum` | 用於區分新資料和現有資料的指定欄。 增量資料將根據選取欄的時間戳記進行擷取。 |
+| `transformations.params.deltaColum` | 用於區分新資料和現有資料的指定欄。 增量資料將根據選取欄的時間戳記進行擷取。 支援的日期格 `deltaColumn` 式 `yyyy-MM-dd HH:mm:ss`為。 如果您使用Azure表格儲存，則支援的格 `deltaColumn` 式為 `yyyy-MM-ddTHH:mm:ssZ`。 |
 | `transformations.params.mappingId` | 與資料庫關聯的映射ID。 |
 | `scheduleParams.startTime` | 資料流在時代時間中的開始時間。 |
 | `scheduleParams.frequency` | 資料流收集資料的頻率。 可接受的值包括： `once`、 `minute`、 `hour`、 `day`或 `week`。 |
