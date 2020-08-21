@@ -75,7 +75,7 @@ API目前支援兩個地 [!DNL Identity Service] 區： VA7和NLD2。
 
 複合身份是包括ID值和命名空間的構造。 使用複合身份時，名稱空間可以由名稱(`namespace.code`)或ID(`namespace.id`)提供。
 
-當身分持續存在時， [!DNL Identity Service] 會產生並指派ID給該身分，稱為原生ID或XID。 所有群集和映射API的變體在其請求和響應中都支援組合身份和XID。 其中一個參數是必要的- `xid` 或組合或 [`ns``nsid`] 與使 `id` 用這些API。
+當身分持續存在時， [!DNL Identity Service] 會產生並指派ID給該身分，稱為原生ID或XID。 所有群集和映射API的變體在其請求和響應中都支援組合身份和XID。 其中一個參數是必要的- `xid` 或組合或 [`ns`&#x200B;`nsid`] 與使 `id` 用這些API。
 
 為了限制回應中的負載，API會根據使用的身分建構類型來調整其回應。 也就是說，如果您傳遞XID，您的回應會有XID，如果您傳遞複合身分，則回應會遵循請求中使用的結構。
 
