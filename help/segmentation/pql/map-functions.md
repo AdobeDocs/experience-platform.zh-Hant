@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 地圖函式
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 6a0a9b020b0dc89a829c557bdf29b66508a10333
+source-git-commit: 84a5b992639c1cabfdeaec5262964c9873826592
 workflow-type: tm+mt
-source-wordcount: '146'
+source-wordcount: '143'
 ht-degree: 6%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 6%
 
 # 地圖函式
 
-[!DNL Profile Query Language] (PQL)提供函式，讓與地圖的互動更輕鬆。 有關其他PQL函式的詳細資訊，請參閱「配置檔案查 [詢語言」概述](./overview.md)。
+[!DNL Profile Query Language] (PQL)提供函式，讓與地圖的互動更輕鬆。 有關其他PQL函式的詳細資訊，請參閱 [[!DNL Profile Query Language] 概述](./overview.md)。
 
 ## 取得
 
