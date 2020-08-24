@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 濾鏡函式
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 6a0a9b020b0dc89a829c557bdf29b66508a10333
+source-git-commit: 84a5b992639c1cabfdeaec5262964c9873826592
 workflow-type: tm+mt
-source-wordcount: '191'
+source-wordcount: '188'
 ht-degree: 4%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 4%
 
 # 濾鏡函式
 
-篩選函式用於篩選(PQL)中數 [!DNL Profile Query Language] 組內的資料。 有關其他PQL函式的詳細資訊，請參閱「配置檔案查 [詢語言」概述](./overview.md)。
+篩選函式用於篩選(PQL)中數 [!DNL Profile Query Language] 組內的資料。 有關其他PQL函式的詳細資訊，請參閱 [[!DNL Profile Query Language] 概述](./overview.md)。
 
 ## 篩選器
 
