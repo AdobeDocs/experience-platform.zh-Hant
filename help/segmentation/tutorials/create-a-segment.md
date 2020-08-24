@@ -5,9 +5,9 @@ title: 建立區段
 topic: tutorial
 description: 本檔案提供使用Adobe Experience Platform Segmentation Service API來開發、測試、預覽和儲存區段定義的教學課程。
 translation-type: tm+mt
-source-git-commit: 23516c66a67ae5663dcf90a40ccba98bfd266ab0
+source-git-commit: a93b3a1980ca0f1d3a32257a923eb7ffc8896fd5
 workflow-type: tm+mt
-source-wordcount: '901'
+source-wordcount: '894'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 # 建立區段
 
-本檔案提供使用 [DNL Adobe Experience Platform Segmentation Service API開發、測試、預覽和儲存區段定義的教學課程](../api/getting-started.md)。
+本檔案提供教學課程，以開發、測試、預覽和儲存使用的區段定義 [!DNL Adobe Experience Platform Segmentation Service API](../api/getting-started.md)。
 
 如需如何使用使用者介面建立區段的詳細資訊，請參閱「區段產 [生器指南」](../ui/overview.md)。
 
@@ -94,7 +94,7 @@ ht-degree: 0%
 
 ### 檢視估計或預覽
 
-由於不同的查詢可能需要不同的時間才能完成，因此會以非同步方式執行估計和預覽程式。 一旦查詢啟動後，您就可以使用API呼叫來擷取(GET)估計或預覽的目前狀態。
+由於不同的查詢可能需要不同的時間才能完成，因此估計和預覽進程會非同步運行。 一旦查詢啟動後，您就可以使用API呼叫來擷取(GET)估計或預覽的目前狀態。
 
 使用 [!DNL Segmentation Service] API，您可以透過預覽工作的ID來尋找其目前狀態。 如果狀態為&quot;RESULT_READY&quot;，則可以查看結果。 若要查看預覽作業的當前狀態，請閱讀預覽和估計端 [點指南中有關檢索預覽作業部分](../api/previews-and-estimates.md#get-preview) 的章節。 要查找估計作業的當前狀態，請閱讀預覽和估計端 [點指南中有關檢索估計作業](../api/previews-and-estimates.md#get-estimate) 的部分。
 
