@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 導出作業端點
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: b3e6a6f1671a456b2ffa61139247c5799c495d92
+source-git-commit: 6ddb420ad3c4df3096dac456c58afc7a4916ce51
 workflow-type: tm+mt
-source-wordcount: '1497'
+source-wordcount: '1521'
 ht-degree: 2%
 
 ---
@@ -30,7 +30,7 @@ ht-degree: 2%
 
 **API格式**
 
-端點 `/export/jobs` 支援數個查詢參數，以協助篩選結果。 雖然這些參數是可選的，但強烈建議使用這些參數以幫助降低昂貴的開銷。 在沒有參數的情況下呼叫此端點將會擷取組織所有可用的匯出工作。 可包含多個參數，由&amp;符號(`&`)分隔。
+端點 `/export/jobs` 支援數個查詢參數，以協助篩選結果。 雖然這些參數是可選的，但強烈建議使用它們，以幫助降低昂貴的開銷。 在沒有參數的情況下呼叫此端點將會擷取組織所有可用的匯出工作。 可包含多個參數，由&amp;符號(`&`)分隔。
 
 ```http
 GET /export/jobs
@@ -198,10 +198,10 @@ curl -X GET https://platform.adobe.io/data/core/ups/export/jobs?limit=2 \
 
 | 屬性 | 說明 |
 | -------- | ----------- |
-| `destination` | 匯出資料的目標資訊：<ul><li>`datasetId`: 匯出資料的資料集的ID。</li><li>`segmentPerBatch`: 顯示區段ID是否整合的布林值。 值「false」表示所有區段ID都會匯出為單一批次ID。 值&quot;true&quot;表示將一個區段ID匯出為一個批次ID。 **注意：** 將值設為true可能會影響批次匯出效能。</li></ul> |
+| `destination` | 匯出資料的目標資訊：<ul><li>`datasetId`:匯出資料的資料集的ID。</li><li>`segmentPerBatch`:顯示區段ID是否整合的布林值。 值「false」表示所有區段ID都會匯出為單一批次ID。 值&quot;true&quot;表示將一個區段ID匯出為一個批次ID。 **注意：** 將值設為true可能會影響批次匯出效能。</li></ul> |
 | `fields` | 匯出欄位的清單，以逗號分隔。 |
 | `schema.name` | 與要導出資料的資料集關聯的方案的名稱。 |
-| `filter.segments` | 匯出的區段。 包含下列欄位：<ul><li>`segmentId`: 將描述檔匯出至的區段ID。</li><li>`segmentNs`: 指定的區段名稱空間 `segmentID`。</li><li>`status`: 為提供狀態過濾器的字串陣列 `segmentID`。 依預設， `status` 將會有值， `["realized", "existing"]` 代表目前時段屬於區段的所有描述檔。 可能的值包括： 「已實現」、「現有」和「已退出」。</li></ul> |
+| `filter.segments` | 匯出的區段。 包含下列欄位：<ul><li>`segmentId`:將描述檔匯出至的區段ID。</li><li>`segmentNs`:指定的區段名稱空間 `segmentID`。</li><li>`status`:為提供狀態過濾器的字串陣列 `segmentID`。 依預設， `status` 將會有值， `["realized", "existing"]` 代表目前時段屬於區段的所有描述檔。 可能的值包括：「已實現」、「現有」和「已退出」。</li></ul> |
 | `mergePolicy` | 合併已導出資料的策略資訊。 |
 | `metrics.totalTime` | 一個欄位，指示導出作業所用的總時間。 |
 | `metrics.profileExportTime` | 一個欄位，指示導出配置檔案所花費的時間。 |
@@ -268,6 +268,9 @@ curl -X POST https://platform.adobe.io/data/core/ups/export/jobs \
     },
     "schema":{
         "name": "_xdm.context.profile"
+    },
+    "evaluationInfo": {
+        "segmentation": true
     }
 }'
 ```
@@ -277,15 +280,16 @@ curl -X POST https://platform.adobe.io/data/core/ups/export/jobs \
 | `fields` | 匯出欄位的清單，以逗號分隔。 如果保留為空白，則將導出所有欄位。 |
 | `mergePolicy` | 指定用於管理導出資料的合併策略。 當有多個區段要匯出時，請加入此參數。 如果未提供，則匯出會採用與指定區段相同的合併政策。 |
 | `filter` | 指定將依ID、資格時間或收錄時間納入匯出工作的區段的物件，視下列子屬性而定。 如果保留為空白，則將導出所有資料。 |
-| `filter.segments` | 指定要匯出的區段。 省略此值將導致導出所有配置檔案中的所有資料。 接受區段物件的陣列，每個物件都包含下列欄位：<ul><li>`segmentId`: **（若使用）`segments`** 「區段ID」，則需要匯出描述檔。</li><li>`segmentNs` *（可選）* ，指定的區段名稱空間 `segmentID`。</li><li>`status` *（可選）* ，提供狀態篩選的字串陣列 `segmentID`。 依預設， `status` 將會有值， `["realized", "existing"]` 代表目前時段屬於區段的所有描述檔。 可能的值包括： `"realized"`、 `"existing"`和 `"exited"`。</li></ul> |
+| `filter.segments` | 指定要匯出的區段。 省略此值將導致導出所有配置檔案中的所有資料。 接受區段物件的陣列，每個物件都包含下列欄位：<ul><li>`segmentId`: **（若使用）`segments`** 「區段ID」，則需要匯出描述檔。</li><li>`segmentNs` *（可選）* ，指定的區段名稱空間 `segmentID`。</li><li>`status` *（可選）* ，提供狀態篩選的字串陣列 `segmentID`。 依預設， `status` 將會有值， `["realized", "existing"]` 代表目前時段屬於區段的所有描述檔。 Possible values include: `"realized"`, `"existing"`, and `"exited"`.</li></ul> |
 | `filter.segmentQualificationTime` | 根據區段限定時間進行篩選。 可以提供開始時間和／或結束時間。 |
 | `filter.segmentQualificationTime.startTime` | 指定狀態之區段ID的區段資格開始時間。 未提供，區段ID資格的開始時間將不會有篩選。 時間戳必須以 [RFC 3339格式提供](https://tools.ietf.org/html/rfc3339) 。 |
 | `filter.segmentQualificationTime.endTime` | 指定狀態之區段ID的區段資格結束時間。 未提供，區段ID資格的結束時間將不會有篩選。 時間戳必須以 [RFC 3339格式提供](https://tools.ietf.org/html/rfc3339) 。 |
-| `filter.fromIngestTimestamp ` | 限制匯出的描述檔僅包含在此時間戳記後更新的描述檔。 時間戳必須以 [RFC 3339格式提供](https://tools.ietf.org/html/rfc3339) 。 <ul><li>`fromIngestTimestamp` 如果 **提供**，則適用於描述檔： 包含所有合併的描述檔，其中合併的更新時間戳記大於指定的時間戳記。 支援操 `greater_than` 作數。</li><li>`fromIngestTimestamp` 對於 **事件**: 在此時間戳記之後收錄的所有事件都會匯出，以對應於產生的描述檔結果。 這不是事件時間本身，而是事件的擷取時間。</li> |
+| `filter.fromIngestTimestamp ` | 限制匯出的描述檔僅包含在此時間戳記後更新的描述檔。 時間戳必須以 [RFC 3339格式提供](https://tools.ietf.org/html/rfc3339) 。 <ul><li>`fromIngestTimestamp` 如果 **提供**，則適用於描述檔：包含所有合併的描述檔，其中合併的更新時間戳記大於指定的時間戳記。 支援操 `greater_than` 作數。</li><li>`fromIngestTimestamp` 對於 **事件**:在此時間戳記之後收錄的所有事件都會匯出，以對應於產生的描述檔結果。 這不是事件時間本身，而是事件的擷取時間。</li> |
 | `filter.emptyProfiles` | 指示是否篩選空配置檔案的布爾值。 設定檔可以包含設定檔記錄、ExperienceEvent記錄或兩者。 沒有設定檔記錄且只有ExperienceEvent記錄的設定檔稱為「emptyProfiles」。 要導出配置檔案儲存中的所有配置檔案，包括「emptyProfiles」，請將值設 `emptyProfiles` 置為 `true`。 如果 `emptyProfiles` 設定為 `false`，則只導出儲存中具有配置檔案記錄的配置檔案。 預設情況下，如果不 `emptyProfiles` 包括屬性，則僅導出包含配置檔案記錄的配置檔案。 |
-| `additionalFields.eventList` | 通過提供以下一個或多個設定，控制為子對象或關聯對象導出的時間系列事件欄位：<ul><li>`fields`: 控制要匯出的欄位。</li><li>`filter`: 指定限制關聯對象所包含結果的標準。 預期匯出所需的最低值，通常為日期。</li><li>`filter.fromIngestTimestamp`: 將時間序列事件篩選為在提供的時間戳記後所擷取的事件。 這不是事件時間本身，而是事件的擷取時間。</li><li>`filter.toIngestTimestamp`: 將時間戳記篩選為在提供時間戳記之前已收錄的時間戳記。 這不是事件時間本身，而是事件的擷取時間。</li></ul> |
+| `additionalFields.eventList` | 通過提供以下一個或多個設定，控制為子對象或關聯對象導出的時間系列事件欄位：<ul><li>`fields`:控制要匯出的欄位。</li><li>`filter`:指定限制關聯對象所包含結果的標準。 預期匯出所需的最低值，通常為日期。</li><li>`filter.fromIngestTimestamp`:將時間序列事件篩選為在提供的時間戳記後所擷取的事件。 這不是事件時間本身，而是事件的擷取時間。</li><li>`filter.toIngestTimestamp`:將時間戳記篩選為在提供時間戳記之前已收錄的時間戳記。 這不是事件時間本身，而是事件的擷取時間。</li></ul> |
 | `destination` | **（必要）** ，匯出資料的相關資訊：<ul><li>`datasetId`: **（必要）** ，要匯出資料的資料集ID。</li><li>`segmentPerBatch`: *（選用）* ，若未提供，則預設為&quot;false&quot;的布林值。 值「false」會將所有區段ID匯出為單一批次ID。 值&quot;true&quot;會將一個區段ID匯出為一個批次ID。 請注意，將值設為&quot;true&quot;可能會影響批次匯出效能。</li></ul> |
 | `schema.name` | **（必要）** ，與要匯出資料的資料集關聯的架構名稱。 |
+| `evaluationInfo.segmentation` | *（選用）* ，若未提供，則預設為布林值 `false`。 值表示 `true` 需要在匯出工作上執行分段。 |
 
 **回應**
 
@@ -464,10 +468,10 @@ curl -X GET https://platform.adobe.io/data/core/ups/export/jobs/11037 \
 
 | 屬性 | 說明 |
 | -------- | ----------- |
-| `destination` | 匯出資料的目標資訊：<ul><li>`datasetId`: 匯出資料的資料集ID。</li><li>`segmentPerBatch`: 顯示區段ID是否整合的布林值。 值表示 `false` 所有區段ID都已整合為單一批次ID。 值表示 `true` 一個區段ID會匯出為一個批次ID。</li></ul> |
+| `destination` | 匯出資料的目標資訊：<ul><li>`datasetId`:匯出資料的資料集ID。</li><li>`segmentPerBatch`:顯示區段ID是否整合的布林值。 值表示 `false` 所有區段ID都已整合為單一批次ID。 值表示 `true` 一個區段ID會匯出為一個批次ID。</li></ul> |
 | `fields` | 匯出欄位的清單，以逗號分隔。 |
 | `schema.name` | 與要導出資料的資料集關聯的方案的名稱。 |
-| `filter.segments` | 匯出的區段。 包含下列欄位：<ul><li>`segmentId`: 要匯出描述檔的區段ID。</li><li>`segmentNs`: 指定的區段名稱空間 `segmentID`。</li><li>`status`: 為提供狀態過濾器的字串陣列 `segmentID`。 依預設， `status` 將會有值， `["realized", "existing"]` 代表目前時段屬於區段的所有描述檔。 可能的值包括： 「已實現」、「現有」和「已退出」。</li></ul> |
+| `filter.segments` | 匯出的區段。 包含下列欄位：<ul><li>`segmentId`:要匯出描述檔的區段ID。</li><li>`segmentNs`:指定的區段名稱空間 `segmentID`。</li><li>`status`:為提供狀態過濾器的字串陣列 `segmentID`。 依預設， `status` 將會有值， `["realized", "existing"]` 代表目前時段屬於區段的所有描述檔。 可能的值包括：「已實現」、「現有」和「已退出」。</li></ul> |
 | `mergePolicy` | 合併已導出資料的策略資訊。 |
 | `metrics.totalTime` | 一個欄位，指示導出作業所用的總時間。 |
 | `metrics.profileExportTime` | 一個欄位，指示導出配置檔案所花費的時間。 |
