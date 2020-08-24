@@ -5,7 +5,7 @@ title: 支援退出
 topic: overview
 description: 'Experience Platform可讓您的客戶在即時客戶個人檔案中，針對資料的使用和儲存，傳送選擇退出要求。 這些選擇退出要求是加州消費者隱私法(CCPA)的一部分，該法案賦予加州居民存取和刪除個人資料的權利，並可得知他們的個人資料是否被出售或披露（以及向誰）。 '
 translation-type: tm+mt
-source-git-commit: 8f7ce97cdefd4fe79cb806e71e12e936caca3774
+source-git-commit: 0fc356b67af4d34e35cd9329385ec284d9336953
 workflow-type: tm+mt
 source-wordcount: '1006'
 ht-degree: 0%
@@ -45,7 +45,7 @@ ht-degree: 0%
 
 以下各節將詳細說明每個混音的結構，以及它們對架構所貢獻的欄位說明。
 
-### [!DNL Profile Privacy]
+### [!DNL Profile Privacy] {#profile-privacy}
 
 混 [!DNL Profile Privacy] 音可讓您擷取客戶的兩種CCPA退出要求：
 
@@ -67,9 +67,9 @@ ht-degree: 0%
    - 選擇加入(`in`):客戶已選擇加入。
 - 退出時間戳記(`timestamp`):接收的選擇退出信號的時間戳。
 
-若要檢視混音的完整結 [!DNL Profile Privacy] 構，請參閱 [XDM公用GitHub存放庫](https://github.com/adobe/xdm/blob/master/schemas/context/profile-privacy.schema.json) ，或使用Platform UI預覽混音。
+若要檢視混音的完整 [!DNL Profile Privacy] 結構，請參閱 [XDM公用GitHub存放庫](https://github.com/adobe/xdm/blob/master/schemas/context/profile-privacy.schema.json) ，或使用Platform UI預覽混音。
 
-### [!DNL Profile Preferences Details]
+### [!DNL Profile Preferences Details] {#profile-preferences-details}
 
 混 [!DNL Profile Preferences Details] 音提供數個欄位，代表客戶個人檔案的偏好設定（例如電子郵件格式、偏好語言和時區）。 此混音中包含的其中一個欄位OptInOut(`optInOut`)可讓個別頻道設定選擇退出值。
 
@@ -114,13 +114,13 @@ ht-degree: 0%
 
 [!DNL Segmentation] 自動接受包含「一般退出[!UICONTROL 」標幟的所有設定檔]，這表示這些設定檔預設不會包含在觀眾或匯出中。 但是，最佳做法是新增適當欄位，以確保觀眾和行銷活動中不包含選擇退出的設定檔。
 
-這可以透過新增隱私權退出屬性， **[!UICONTROL 使用使用者介面來完成]** 。 在此例中，區段設為僅包含已選擇加入的群體（這表示他們的描述檔上沒有一般的選擇退出標幟）。 這是透過宣告「退出類型[!UICONTROL 」等於「]General Opt-Out[!UICONTROL 」，而「]Opt-Out Value[!UICONTROL 」等於「Opt-inPot-Opt-Ot-Ont]」來完成的。
+這可以透過新增隱私權退出屬性， **[!UICONTROL 使用使用者介面來完成]** 。 在此例中，區段設為僅包含已選擇加入的群體（這表示他們的描述檔上沒有一般的選擇退出標幟）。 這是透過宣告「退出類型[!UICONTROL 」等於「]General Opt-Out[!UICONTROL 」，而「]Opt-Out Value」等於「Opt-inPot-Opt-Ont-Ot-Out」來完成的。
 
 ![](images/opt-outs/segment-general-opt-out.png)
 
 ### 銷售／分享選擇退出
 
-如果使用者的描述檔已設定銷售／分享選擇退出標幟，此描述檔不應再用於任何區段建立或行銷活動。 為確保符合此標幟，「選擇退出類型[!UICONTROL 」必須等於「]Sales Sharing Opt-Out[!UICONTROL 」，而「]Opt-Out Value[!UICONTROL 」必須等於「Opt-In Opt-Opt]」。
+如果使用者的描述檔已設定銷售／分享選擇退出標幟，此描述檔不應再用於任何區段建立或行銷活動。 為確保符合此標幟，「選擇退出類型[!UICONTROL 」必須等於「]Sales Sharing Opt-Out[!UICONTROL 」，而「]Opt-Out Value[!UICONTROL 」必須等於「Opt-In Opt-In]Phost」。
 
 ![](images/opt-outs/segment-sales-sharing-opt-out.png)
 
