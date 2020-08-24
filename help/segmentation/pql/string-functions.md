@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 字串函式
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 6a0a9b020b0dc89a829c557bdf29b66508a10333
+source-git-commit: 84a5b992639c1cabfdeaec5262964c9873826592
 workflow-type: tm+mt
-source-wordcount: '757'
+source-wordcount: '754'
 ht-degree: 6%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 6%
 
 # 字串函式
 
-[!DNL Profile Query Language] (PQL)提供函式，讓字串互動更簡單。 有關其他PQL函式的詳細資訊，請參閱「配置檔案查 [詢語言」概述](./overview.md)。
+[!DNL Profile Query Language] (PQL)提供函式，讓字串互動更簡單。 有關其他PQL函式的詳細資訊，請參閱 [[!DNL Profile Query Language] 概述](./overview.md)。
 
 ## 贊
 
@@ -53,7 +53,7 @@ city like "%es%"
 | --------- | ----------- |
 | `{STRING_1}` | 要執行檢查的字串。 |
 | `{STRING_2}` | 要在第一個字串內搜索的字串。 |
-| `{BOOLEAN}` | 可選參數，用以判斷檢查是否區分大小寫。 依預設，此值會設為true。 |
+| `{BOOLEAN}` | 可選參數，用於確定檢查是否區分大小寫。 依預設，此值會設為true。 |
 
 **範例**
 
@@ -77,11 +77,11 @@ person.name.startsWith("Joe")
 | --------- | ----------- |
 | `{STRING_1}` | 要執行檢查的字串。 |
 | `{STRING_2}` | 要在第一個字串內搜索的字串。 |
-| `{BOOLEAN}` | 可選參數，用以判斷檢查是否區分大小寫。 依預設，此值會設為true。 |
+| `{BOOLEAN}` | 可選參數，用於確定檢查是否區分大小寫。 依預設，此值會設為true。 |
 
 **範例**
 
-以下PQL查詢會區分大小寫，確定人員名稱不以&quot;Joe&quot;開頭。
+以下PQL查詢會區分大小寫確定人員的姓名不是以&quot;Joe&quot;開頭。
 
 ```sql
 person.name.doesNotStartWith("Joe")
@@ -101,7 +101,7 @@ person.name.doesNotStartWith("Joe")
 | --------- | ----------- |
 | `{STRING_1}` | 要執行檢查的字串。 |
 | `{STRING_2}` | 要在第一個字串內搜索的字串。 |
-| `{BOOLEAN}` | 可選參數，用以判斷檢查是否區分大小寫。 依預設，此值會設為true。 |
+| `{BOOLEAN}` | 可選參數，用於確定檢查是否區分大小寫。 依預設，此值會設為true。 |
 
 **範例**
 
@@ -125,7 +125,7 @@ person.emailAddress.endsWith(".com")
 | --------- | ----------- |
 | `{STRING_1}` | 要執行檢查的字串。 |
 | `{STRING_2}` | 要在第一個字串內搜索的字串。 |
-| `{BOOLEAN}` | 可選參數，用以判斷檢查是否區分大小寫。 依預設，此值會設為true。 |
+| `{BOOLEAN}` | 可選參數，用於確定檢查是否區分大小寫。 依預設，此值會設為true。 |
 
 **範例**
 
@@ -149,7 +149,7 @@ person.emailAddress.doesNotEndWith(".com")
 | --------- | ----------- |
 | `{STRING_1}` | 要執行檢查的字串。 |
 | `{STRING_2}` | 要在第一個字串內搜索的字串。 |
-| `{BOOLEAN}` | 可選參數，用以判斷檢查是否區分大小寫。 依預設，此值會設為true。 |
+| `{BOOLEAN}` | 可選參數，用於確定檢查是否區分大小寫。 依預設，此值會設為true。 |
 
 **範例**
 
@@ -173,7 +173,7 @@ person.emailAddress.contains("2010@gm")
 | --------- | ----------- |
 | `{STRING_1}` | 要執行檢查的字串。 |
 | `{STRING_2}` | 要在第一個字串內搜索的字串。 |
-| `{BOOLEAN}` | 可選參數，用以判斷檢查是否區分大小寫。 依預設，此值會設為true。 |
+| `{BOOLEAN}` | 可選參數，用於確定檢查是否區分大小寫。 依預設，此值會設為true。 |
 
 **範例**
 
