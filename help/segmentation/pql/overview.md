@@ -5,9 +5,9 @@ title: 配置檔案查詢語言(PQL)概述
 topic: developer guide
 description: 本指南提供PQL的一般概述，涵蓋格式准則並提供PQL表達式示例。
 translation-type: tm+mt
-source-git-commit: 691af873e0753217b9e7566042c508d9d9b8d8d5
+source-git-commit: 5a10a31f4be5173af8b459b9ab8a53096348be1d
 workflow-type: tm+mt
-source-wordcount: '686'
+source-wordcount: '705'
 ht-degree: 2%
 
 ---
@@ -81,6 +81,7 @@ PQL支援以下常值類型：
 | 陣列、清單和設定 | 用於與陣列、清單和集交互。 有關這些函式的詳細資訊，請參 [閱陣列、清單和設定函式文檔](./array-functions.md)。 |
 | 地圖 | 用來與地圖互動。 有關這些函式的詳細資訊，請參閱地圖函 [數檔案](./map-functions.md)。 |
 | 字串 | 用來與字串互動。 有關這些函式的詳細資訊，請參閱字 [串函式檔案](./string-functions.md)。 |
+| 物件 | 用於與物件互動。 有關這些函式的詳細資訊，請參見對 [像函式文檔](./object-functions.md)。 |
 | 算術 | 用於對PQL元素執行基本算術。 有關這些函式的更多資訊，請參閱算術函 [數檔案](./arithmetic-functions.md) |
 | 彙總 | 用於將陣列的結果組合為單一結果。 有關聚合函式的詳細資訊，請參見聚合函 [數文檔](./aggregation-functions.md)。 |
 | 日期和時間 | 與日期、時間和日期時間對象一起使用。 有關這些函式的更多資訊，請參閱日 [期／時間函式檔案](./datetime-functions.md)。 |
