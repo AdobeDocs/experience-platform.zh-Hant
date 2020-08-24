@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Analytics資料連接器
 topic: overview
 translation-type: tm+mt
-source-git-commit: 662ca170b7416dfb55cfb6b8cbaef640c1f83d31
+source-git-commit: a93b3a1980ca0f1d3a32257a923eb7ffc8896fd5
 workflow-type: tm+mt
 source-wordcount: '471'
 ht-degree: 3%
@@ -51,7 +51,9 @@ XDM是公開記載的規格，為應用程式提供通用結構和定義，以�
 | 資料湖的新資料 | &lt; 45 分鐘 |
 | 回填資料（13個月的資料或100億個事件，以較低者為準） | &lt; 4 週 |
 
->[!NOTE] 延遲會視客戶配置、資料量和消費性應用程式而有所不同。 例如，如果Analytics實作設定了「管 `A4T` 線」的延遲，則會增加至5-10分鐘。
+>[!NOTE]
+>
+>延遲會視客戶配置、資料量和消費性應用程式而有所不同。 例如，如果Analytics實作設定了「管 `A4T` 線」的延遲，則會增加至5-10分鐘。
 
 ## Analytics資料中的主要識別碼
 
