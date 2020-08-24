@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 訂閱資料擷取事件
 topic: overview
 translation-type: tm+mt
-source-git-commit: bfbf2074a9dcadd809de043d62f7d2ddaa7c7b31
+source-git-commit: 5a10a31f4be5173af8b459b9ab8a53096348be1d
 workflow-type: tm+mt
-source-wordcount: '832'
+source-wordcount: '831'
 ht-degree: 1%
 
 ---
@@ -39,7 +39,7 @@ ht-degree: 1%
 
 ## 通知裝載方案
 
-資料擷取通知事件模式是 [!DNL Experience Data Model] (XDM)模式，包含欄位和值，提供有關所擷取資料狀態的詳細資訊。 請造訪公開的XDM [!DNL GitHub] repo，以檢視最新的通知 [裝載架構](https://github.com/adobe/xdm/blob/master/schemas/common/notifications/ingestion.schema.json)。
+資料擷取通知事件模式是 [!DNL Experience Data Model] (XDM)模式，包含欄位和值，提供有關所擷取資料狀態的詳細資訊。 請造訪公開的XDM [!DNL GitHub] repo，以檢視最新的通知 [裝載架構](https://github.com/adobe/xdm/blob/master/schemas/notifications/ingestion.schema.json)。
 
 ## 訂閱資料擷取狀態通知
 
@@ -55,7 +55,7 @@ ht-degree: 1%
 
 ![](../images/quality/subscribe-events/add-event-button.png)
 
-此時將 _[!UICONTROL 顯示「添加事件]_」對話框。 按一**[!UICONTROL &#x200B;下「Experience Platform ]**」(體驗平台**[!UICONTROL )以篩選可用選項清單，然後按一下「]**Platform notifications**[!UICONTROL 」（平台通知），再按「]**下一步」。
+此時將 _[!UICONTROL 顯示「添加事件]_ 」對話框。 按一 **[!UICONTROL 下「Experience Platform]** 」(體驗平台 **[!UICONTROL )以篩選可用選項清單，然後按一下「]** Platform notifications **[!UICONTROL 」（平台通知），再按「]**&#x200B;下一步」。
 
 ![](../images/quality/subscribe-events/select-platform-events.png)
 
@@ -81,7 +81,7 @@ ht-degree: 1%
 
 在同一螢幕的下方，您可選擇設定如何接收事件。 **[!UICONTROL Webhook]** 可讓您提供自訂的Webhook位址以接收事件，而 **[!UICONTROL Runtime動作則可讓您使用]** Adobe I/O Runtime進行相同動作 [](https://www.adobe.io/apis/experienceplatform/runtime/docs.html)。
 
-本教學課程會跳過此選用的設定步驟。 完成後，按一下「儲 **[!UICONTROL 存設定的事件]** 」以完成事件註冊。
+本教學課程會略過此選用的設定步驟。 完成後，按一下「儲 **[!UICONTROL 存設定的事件]** 」以完成事件註冊。
 
 ![](../images/quality/subscribe-events/receive-events.png)
 
