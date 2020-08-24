@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 物件函式
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 6a0a9b020b0dc89a829c557bdf29b66508a10333
+source-git-commit: 84a5b992639c1cabfdeaec5262964c9873826592
 workflow-type: tm+mt
-source-wordcount: '111'
+source-wordcount: '108'
 ht-degree: 5%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 5%
 
 # 物件函式
 
-[!DNL Profile Query Language] (PQL)提供的功能可簡化與物件的互動。 有關其他PQL函式的詳細資訊，請參閱「配置檔案查 [詢語言」概述](./overview.md)。
+[!DNL Profile Query Language] (PQL)提供的功能可簡化與物件的互動。 有關其他PQL函式的詳細資訊，請參閱 [[!DNL Profile Query Language] 概述](./overview.md)。
 
 ## 為空
 
