@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 陣列、清單和設定函式
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 6a0a9b020b0dc89a829c557bdf29b66508a10333
+source-git-commit: 0fc356b67af4d34e35cd9329385ec284d9336953
 workflow-type: tm+mt
-source-wordcount: '737'
+source-wordcount: '734'
 ht-degree: 5%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 5%
 
 # 陣列、清單和設定函式
 
-[!DNL Profile Query Language] (PQL)提供的功能可讓與陣列、清單和字串的交互更輕鬆。 有關其他PQL函式的詳細資訊，請參閱「配置檔案查 [詢語言」概述](./overview.md)。
+[!DNL Profile Query Language] (PQL)提供的功能可讓與陣列、清單和字串的交互更輕鬆。 有關其他PQL函式的詳細資訊，請參閱 [[!DNL Profile Query Language] 概述](./overview.md)。
 
 ## 在
 
@@ -228,7 +228,7 @@ array.map(expression)
 numbers.map(square)
 ```
 
-## 陣列 `n` 中的第一個
+## 陣列 `n` 中的第一個 {#first-n}
 
 當根 `topN` 據給定的數值表達式按升 `N` 序排序時，該函式用於返回陣列中的第一個項。
 
@@ -288,7 +288,7 @@ orders.bottomN(price, 5)
 
 **範例**
 
-以下PQL查詢返回價格最高的前5個訂單中的第一個。 有關函式的 `topN` 詳細資訊，請參 [閱 `n` array一節](#first-n-in-array) 。
+以下PQL查詢返回價格最高的前5個訂單中的第一個。 有關函式的 `topN` 詳細資訊，請參 [閱 `n` array一節](#first-n) 。
 
 ```sql
 orders.topN(price, 5).head()
