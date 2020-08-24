@@ -4,9 +4,9 @@ solution: Adobe Experience Platform
 title: 合併政策——即時客戶個人檔案API
 topic: guide
 translation-type: tm+mt
-source-git-commit: 0309a2d6da888a2a88af161977310f213c36a85d
+source-git-commit: 2c83e282a7674ed6f36c8608035ddf19d88f0433
 workflow-type: tm+mt
-source-wordcount: '2381'
+source-wordcount: '2392'
 ht-degree: 1%
 
 ---
@@ -22,7 +22,7 @@ Adobe Experience Platform可讓您從多個來源匯整資料並加以匯整，�
 
 ## 合併策略的元件 {#components-of-merge-policies}
 
-合併原則是IMS組織專用的，可讓您建立不同的原則，以所需的特定方式合併結構。 任何存取資 [!DNL Profile] 料的API都需要合併原則，但若未明確提供，則會使用預設原則。 [!DNL Platform] 提供預設合併策略，或者，您可以為特定方案建立合併策略，並將其標籤為組織的預設策略。 每個組織可能每個方案有多個合併策略，但每個方案只能有一個預設的合併策略。 在提供方案名稱且需要但未提供合併策略的情況下，將使用任何設定為預設的合併策略集。 當您將合併策略設定為預設值時，任何先前設定為預設值的現有合併策略都將自動更新為不再用作預設值。
+合併原則是IMS組織專用的，可讓您建立不同的原則，以所需的特定方式合併結構。 任何存取資 [!DNL Profile] 料的API都需要合併原則，但若未明確提供，則會使用預設原則。 [!DNL Platform] 提供預設合併策略，或者，您可以為特定方案建立合併策略，並將其標籤為組織的預設策略。 每個組織可能每個方案有多個合併策略，但每個方案只能有一個預設的合併策略。 在提供方案名稱且需要但未提供合併策略的情況下，將使用任何設定為預設值的合併策略。 當您將合併策略設定為預設值時，任何先前設定為預設值的現有合併策略都將自動更新為不再用作預設值。
 
 ### 完整合併策略對象
 
@@ -99,7 +99,7 @@ Adobe Experience Platform可讓您從多個來源匯整資料並加以匯整，�
 其中 `{IDENTITY_GRAPH_TYPE}` 是下列其中一項：
 
 * **「無」:** 不執行身份聯繫。
-* **「pdg」:** 根據您的私人身分圖表執行身分識別接合。
+* **「pdg」:** 根據您的個人身分圖表執行身分識別接合。
 
 **範例`identityGraph`**
 
@@ -729,6 +729,8 @@ curl -X DELETE \
 現在您知道如何為IMS組織建立和設定合併原則，您可以使用這些原則從您的資料建立受眾 [!DNL Real-time Customer Profile] 區段。 請參閱 [Adobe Experience Platform細分服務檔案](../../segmentation/home.md) ，開始定義和使用細分。
 
 ## 附錄
+
+本節提供與使用合併策略有關的補充資訊。
 
 ### 使用自訂時間戳記 {#custom-timestamps}
 
