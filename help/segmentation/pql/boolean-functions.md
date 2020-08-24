@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 布爾函式
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 6a0a9b020b0dc89a829c557bdf29b66508a10333
+source-git-commit: 84a5b992639c1cabfdeaec5262964c9873826592
 workflow-type: tm+mt
-source-wordcount: '223'
+source-wordcount: '220'
 ht-degree: 6%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 6%
 
 # 布爾函式
 
-布爾函式用於對(PQL)中的不同元素執行 [!DNL Profile Query Language] 布爾邏輯。  有關其他PQL函式的詳細資訊，請參閱「配置檔案查 [詢語言」概述](./overview.md)。
+布爾函式用於對(PQL)中的不同元素執行 [!DNL Profile Query Language] 布爾邏輯。  有關其他PQL函式的詳細資訊，請參閱 [[!DNL Profile Query Language] 概述](./overview.md)。
 
 ## 和
 
