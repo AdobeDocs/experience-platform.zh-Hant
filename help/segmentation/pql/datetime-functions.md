@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 日期和時間函式
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 6a0a9b020b0dc89a829c557bdf29b66508a10333
+source-git-commit: 84a5b992639c1cabfdeaec5262964c9873826592
 workflow-type: tm+mt
-source-wordcount: '468'
+source-wordcount: '465'
 ht-degree: 4%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 4%
 
 # 日期和時間函式
 
-日期和時間函式用於對(PQL)中的值執行日期和時間 [!DNL Profile Query Language] 操作。 有關其他PQL函式的詳細資訊，請參閱「配置檔案查 [詢語言」概述](./overview.md)。
+日期和時間函式用於對(PQL)中的值執行日期和時間 [!DNL Profile Query Language] 操作。 有關其他PQL函式的詳細資訊，請參閱 [[!DNL Profile Query Language] 概述](./overview.md)。
 
 ## 當月
 
@@ -126,7 +126,7 @@ product.sale.getDayOfMonth() <= 15
 
 ## 發生
 
-該函 `occurs` 數將給定時間戳函式與固定時間段進行比較。
+該 `occurs` 函式將給定時間戳函式與固定時段進行比較。
 
 **Format**
 
