@@ -3,9 +3,9 @@ product: experience-platform
 audience: user
 user-guide-title: Adobe Experience Platform細分服務說明
 translation-type: tm+mt
-source-git-commit: e351a2d489730c1f1bd5f87be8d85612090bc009
+source-git-commit: 5a10a31f4be5173af8b459b9ab8a53096348be1d
 workflow-type: tm+mt
-source-wordcount: '116'
+source-wordcount: '118'
 ht-degree: 9%
 
 ---
@@ -38,6 +38,7 @@ ht-degree: 9%
    - [陣列、清單和設定函式](pql/array-functions.md)
    - [地圖函式](pql/map-functions.md)
    - [字串函式](pql/string-functions.md)
+   - [物件函式](pql/object-functions.md)
    - [算術函式](pql/arithmetic-functions.md)
    - [聚集函式](pql/aggregation-functions.md)
    - [日期和時間函式](pql/datetime-functions.md)
