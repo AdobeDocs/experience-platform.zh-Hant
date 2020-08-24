@@ -5,9 +5,9 @@ solution: Experience Platform
 title: 監視帳戶和資料流
 topic: overview
 translation-type: tm+mt
-source-git-commit: c15f582eeaa895f03441b2f488686a9a48942f3d
+source-git-commit: a93b3a1980ca0f1d3a32257a923eb7ffc8896fd5
 workflow-type: tm+mt
-source-wordcount: '891'
+source-wordcount: '890'
 ht-degree: 0%
 
 ---
@@ -50,11 +50,11 @@ Adobe Experience Platform中的來源連接器可讓您依計畫吸收外部來�
 
 ## 監視資料流
 
-可以直接從「目錄」頁訪問數 **[!UICONTROL 據流]** ，而不查看 **[!UICONTROL 帳戶]**。 從頂 **[!UICONTROL 部標題中]** ，選擇資料流以查看現有資料流清單。
+資料流可以直接從目錄頁 **[!UICONTROL 訪問]** ，無需查看 **[!UICONTROL 帳戶]**。 從頂 **[!UICONTROL 部標題中]** ，選擇資料流以查看現有資料流清單。
 
 ![目錄資料流](../../images/tutorials/monitor/catalog-dataflows.png)
 
-此時將顯示現有資料流清單。 本頁列出了可查看的資料流，包括有關其源、用戶名、資料流數和狀態的資訊。 選擇左上角的漏斗圖示進行排序。
+將顯示現有資料流清單。 本頁列出了可查看的資料流，包括有關其源、用戶名、資料流數和狀態的資訊。 選擇左上角的漏斗圖示進行排序。
 
 ![dataflows-list](../../images/tutorials/monitor/dataflows-list.png)
 
@@ -106,7 +106,7 @@ Adobe Experience Platform中的來源連接器可讓您依計畫吸收外部來�
 
 ![預覽——錯誤——診斷](../../images/tutorials/monitor/preview-error-diagnostics.png)
 
-在預覽錯誤後，您可以從 **[!UICONTROL UICONTROL資料流運行概述面板中選擇]** Download **[]** （下載），以訪問完整錯誤診斷並下載檔案清單。 如需詳細資訊，請參 [閱錯誤診斷](../../../ingestion/batch-ingestion/partial.md#retrieve-errors)[和下載中繼資料](../../../ingestion/batch-ingestion/partial.md#download-metadata) 。
+在預覽錯誤後，您可以從 **[!UICONTROL dataflow runs overview]** panel中選擇Download **** ，以存取完整的錯誤診斷並下載檔案資訊清單。 如需詳細資訊，請參 [閱錯誤診斷](../../../ingestion/batch-ingestion/partial.md#retrieve-errors)[和下載中繼資料](../../../ingestion/batch-ingestion/partial.md#download-metadata) 。
 
 ![預覽——錯誤——診斷](../../images/tutorials/monitor/download.png)
 
