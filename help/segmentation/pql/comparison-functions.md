@@ -4,17 +4,17 @@ solution: Experience Platform
 title: 比較函式
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 92f92f480f29f7d6440f4e90af3225f9a1fcc3d0
+source-git-commit: 84a5b992639c1cabfdeaec5262964c9873826592
 workflow-type: tm+mt
-source-wordcount: '295'
-ht-degree: 5%
+source-wordcount: '292'
+ht-degree: 10%
 
 ---
 
 
 # 比較函式
 
-比較函式可用來比較不同的運算式和值，並傳回 `true` 或相 `false` 應。 有關其他PQL函式的詳細資訊，請參閱「配置檔案查 [詢語言」概述](./overview.md)。
+比較函式可用來比較不同的運算式和值，並傳回 `true` 或相 `false` 應。 有關其他PQL函式的詳細資訊，請參閱 [[!DNL Profile Query Language] 概述](./overview.md)。
 
 ## 等於
 
@@ -52,7 +52,7 @@ homeAddress.countryISO = "CA"
 homeAddress.countryISO != "CA"
 ```
 
-## 大於
+## Greater than
 
 ( `>` 大於)函式用於檢查第一值是否大於第二值。
 
@@ -70,7 +70,7 @@ homeAddress.countryISO != "CA"
 person.birthMonth > 2
 ```
 
-## 大於或等於
+## Greater than or equal to
 
 使 `>=` 用（大於或等於）函式來檢查第一值是否大於或等於第二值。
 
@@ -88,7 +88,7 @@ person.birthMonth > 2
 person.birthMonth >= 3
 ```
 
-## 小於
+## Less than
 
 該 `<` （小於）比較函式用於檢查第一值是否小於第二值。
 
@@ -106,7 +106,7 @@ person.birthMonth >= 3
 person.birthMonth < 2
 ```
 
-## 小於或等於
+## Less than or equal to
 
 比 `<=` 較函式（小於或等於）用於檢查第一值是否小於或等於第二值。
 
