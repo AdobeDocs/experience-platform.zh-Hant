@@ -4,7 +4,7 @@ solution: Adobe Experience Platform
 title: Edge預測——即時客戶個人檔案API
 topic: guide
 translation-type: tm+mt
-source-git-commit: f910351d49de9c4a18a444b99b7f102f4ce3ed5b
+source-git-commit: 38cb8eeae3ac0a1852c59e433d1cacae82b1c6c0
 workflow-type: tm+mt
 source-wordcount: '1900'
 ht-degree: 2%
@@ -145,9 +145,9 @@ curl -X POST \
 | 屬性 | 說明 |
 |---|---|
 | `type` **(必填)** | 要建立的目標類型。 唯一接受的值&quot;EDGE&quot;會建立邊緣目的地。 |
-| `dataCenters` **(必填)** | 一個字串陣列，它列出要向其佈線投影的邊緣。 可包含下列一或多個值： 「OR1」 —— 美國西部，「VA5」 —— 美國東部，「NLD1」 - EMEA。 |
-| `ttl` **(必填)** | 指定投影有效期。 接受的值範圍： 600至604800。 預設值： 3600。 |
-| `replicationPolicy` **(必填)** | 定義從集線器到邊緣的資料複製行為。  支援的值： 主動、被動。 預設值： 反應。 |
+| `dataCenters` **(必填)** | 一個字串陣列，它列出要向其佈線投影的邊緣。 可包含下列一或多個值：「OR1」 —— 美國西部，「VA5」 —— 美國東部，「NLD1」 - EMEA。 |
+| `ttl` **(必填)** | 指定投影有效期。 接受的值範圍：600至604800。 預設值：3600。 |
+| `replicationPolicy` **(必填)** | 定義從集線器到邊緣的資料複製行為。  支援的值：主動、被動。 預設值：反應。 |
 
 **回應**
 
@@ -224,14 +224,14 @@ curl -X GET \
 
 ### 更新目標
 
-通過向端點發出PUT請求並在請求路 `/config/destinations` 徑中包括要更新的目標的ID，可以更新現有目標。 此操作實質上是 _重寫目標_ ，因此，在建立新目標時，必須在請求主體中提供與建立新目標相同的屬性。
+通過向端點發出PUT請求並在請求路 `/config/destinations` 徑中包括要更新的目標的ID，可以更新現有目標。 此操作實質上 _是重寫目標_ ，因此，在建立新目標時，必須在請求主體中提供與建立新目標相同的屬性。
 
 >[!CAUTION]
 >API對更新請求的回應是立即的，不過，對預測的變更會以非同步方式套用。 換言之，對目標的定義進行更新和應用更新之間存在時間差。
 
 **API格式**
 
-```
+```http
 PUT /config/destinations/{DESTINATION_ID}
 ```
 
@@ -299,7 +299,7 @@ curl -X PUT \
 
 **API格式**
 
-```
+```http
 DELETE /config/destinations/{DESTINATION_ID}
 ```
 
