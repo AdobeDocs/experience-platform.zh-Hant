@@ -5,7 +5,7 @@ seo-title: Adobe即時客戶資料平台快速入門
 description: Adobe即時客戶資料平台的範例案例
 seo-description: Adobe即時客戶資料平台的範例案例
 translation-type: tm+mt
-source-git-commit: 54df4778a025811504801306120bda78e04281c1
+source-git-commit: 38cb8eeae3ac0a1852c59e433d1cacae82b1c6c0
 workflow-type: tm+mt
 source-wordcount: '2326'
 ht-degree: 0%
@@ -129,7 +129,7 @@ Adobe Real-time Customer Data Platform採用Adobe Experience Platform，專為�
 
 ## 使用多個資料來源
 
-Luma團隊在單一位置擁有所有的行為和客戶資料。
+Luma團隊在單一位置擁有所有行為和客戶資料。
 
 ![image](assets/luma-dash.png)
 
@@ -177,7 +177,7 @@ Luma團隊在單一位置擁有所有的行為和客戶資料。
 
 ### 為使用策略的收錄資料加標籤
 
-Luma有許多內部政策限制使用特定種類收集到的資訊，而且還必須遵守與資料使用相關的法律和隱私權相關的顧慮。 使用Adobe Experience Platform，可 [!DNL Data Governance]將預先定義的資料使用標籤套用至資料集（以及這些資料集中的特定欄位），讓Luma根據特定的使用限制來分類其資料。
+Luma有許多內部政策限制使用特定種類收集到的資訊，而且還必須遵守與資料使用相關的法律和隱私權相關的顧慮。 使用Adobe Experience Platform，可 [!DNL Data Governance]將預先定義的資料使用標籤套用至資料集（以及這些資料集內的特定欄位），讓Luma根據特定的使用限制來分類其資料。
 
 ![](assets/governance-labels.png)
 
@@ -216,7 +216,7 @@ Luma資料科學團隊已經建立了關於購買傾向的模型。 一個模型
 
 修改或建立區段，以代表購物車放棄者，而放棄者似乎正在購買禮品：
 
-```
+```sql
 Profile: Category != Preferred Category 
 AND 
 Product Size != Preferred Size 
