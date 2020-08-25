@@ -5,7 +5,7 @@ seo-title: 將描述檔和區段啟用至目標
 description: 將區段對應至目標，以啟用您在Adobe即時客戶資料平台中擁有的資料。 若要完成此作業，請遵循下列步驟。
 seo-description: 將區段對應至目標，以啟用您在Adobe即時客戶資料平台中擁有的資料。 若要完成此作業，請遵循下列步驟。
 translation-type: tm+mt
-source-git-commit: 54df4778a025811504801306120bda78e04281c1
+source-git-commit: 38cb8eeae3ac0a1852c59e433d1cacae82b1c6c0
 workflow-type: tm+mt
 source-wordcount: '1552'
 ht-degree: 0%
@@ -164,7 +164,7 @@ ht-degree: 0%
 
 <br> 
 
-### **[!UICONTROL 審閱步]** 驟 {#review}
+### **[!UICONTROL 審核步驟]** (Review step) {#review}
 
 適用於：所有目標
 
@@ -178,7 +178,7 @@ ht-degree: 0%
 
 ![資料策略違規](assets/data-policy-violation.png)
 
-如果未檢測到任何違反策略的情況，請選擇 **[!UICONTROL 完成]** ，確認您的選擇並開始向目標發送資料。
+如果未檢測到任何違反策略的情況，請選擇「完 **[!UICONTROL 成]** 」以確認您的選擇並開始向目標發送資料。
 
 ![確認選擇](assets/confirm-selection.png)
 
@@ -201,7 +201,7 @@ ht-degree: 0%
 
 使用預設檔案格式，您在連續三天收到的檔案可能如下所示：
 
-```
+```console
 Salesforce_Marketing_Cloud_segment12341e18-abcd-49c2-836d-123c88e76c39_20200408061804.csv
 Salesforce_Marketing_Cloud_segment12341e18-abcd-49c2-836d-123c88e76c39_20200409052200.csv
 Salesforce_Marketing_Cloud_segment12341e18-abcd-49c2-836d-123c88e76c39_20200410061130.csv
