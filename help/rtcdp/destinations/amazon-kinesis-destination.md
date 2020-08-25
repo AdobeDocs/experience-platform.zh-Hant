@@ -5,7 +5,7 @@ seo-title: Amazon Kinesis目標
 description: 建立到Amazon Kinesis儲存的即時出站連接，以便從Adobe Experience Platform流資料。
 seo-description: 建立到Amazon Kinesis儲存的即時出站連接，以便從Adobe Experience Platform流資料。
 translation-type: tm+mt
-source-git-commit: 15323134f0c626cad2c4e90b3e1c0662cf7e57dd
+source-git-commit: 38cb8eeae3ac0a1852c59e433d1cacae82b1c6c0
 workflow-type: tm+mt
 source-wordcount: '442'
 ht-degree: 2%
@@ -76,7 +76,7 @@ ht-degree: 2%
 
 您匯出的 [!DNL Experience Platform] 資料會以JSON [!DNL Amazon Kinesis] 格式著陸。 例如，以下事件包含符合特定區段資格並退出其他區段之對象的電子郵件地址設定檔屬性。 此潛在客戶的身分是ECID和電子郵件。
 
-```
+```json
 {
   "person": {
     "email": "yourstruly@adobe.con"
