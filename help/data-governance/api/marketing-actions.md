@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 行銷動作
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: cb3a17aa08c67c66101cbf3842bf306ebcca0305
+source-git-commit: 12c53122d84e145a699a2a86631dc37ee0073578
 workflow-type: tm+mt
 source-wordcount: '681'
 ht-degree: 2%
@@ -37,7 +37,7 @@ GET /marketingActions/custom
 
 下列請求會擷取您組織維護的自訂行銷動作清單。
 
-```sh
+```shell
 curl -X GET \
   https://platform.adobe.io/data/foundation/dulepolicy/marketingActions/custom \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -124,7 +124,7 @@ GET /marketingActions/custom/{MARKETING_ACTION_NAME}
 
 下列請求會擷取名為的自訂行銷動作 `combineData`。
 
-```sh
+```shell
 curl -X GET \
   https://platform.adobe.io/data/foundation/dulepolicy/marketingActions/custom/combineData \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -174,7 +174,7 @@ PUT /marketingActions/custom/{MARKETING_ACTION_NAME}
 
 下列請求會建立名為的新行銷動作 `crossSiteTargeting`，但系統中尚不存在同名的行銷動作。 如果行 `crossSiteTargeting` 銷動作確實存在，此呼叫會根據裝載中提供的屬性更新該行銷動作。
 
-```sh
+```shell
 curl -X PUT \
   https://platform.adobe.io/data/foundation/dulepolicy/marketingActions/custom/crossSiteTargeting \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -190,7 +190,7 @@ curl -X PUT \
 
 | 屬性 | 說明 |
 | --- | --- |
-| `name` | 要建立或更新之行銷動作的名稱。 <br><br>**重要&#x200B;**:此屬性必須符`{MARKETING_ACTION_NAME}`合路徑中的，否則會發生HTTP 400（錯誤請求）錯誤。 換言之，一旦建立了行銷動作，就無法變`name`更其屬性。 |
+| `name` | 要建立或更新之行銷動作的名稱。 <br><br>**重要**:此屬性必須符 `{MARKETING_ACTION_NAME}` 合路徑中的，否則會發生HTTP 400（錯誤請求）錯誤。 換言之，一旦建立了行銷動作，就無法變 `name` 更其屬性。 |
 | `description` | 可選說明，提供行銷動作的進一步內容。 |
 
 **回應**
@@ -236,7 +236,7 @@ DELETE /marketingActions/custom/{MARKETING_ACTION_NAME}
 
 **請求**
 
-```sh
+```shell
 curl -X DELETE \
   https://platform.adobe.io/data/foundation/dulepolicy/marketingActions/custom/crossSiteTargeting \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
