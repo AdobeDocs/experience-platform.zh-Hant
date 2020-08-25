@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 範例查詢
 topic: queries
 translation-type: tm+mt
-source-git-commit: bfbf2074a9dcadd809de043d62f7d2ddaa7c7b31
+source-git-commit: 38cb8eeae3ac0a1852c59e433d1cacae82b1c6c0
 workflow-type: tm+mt
 source-wordcount: '862'
 ht-degree: 1%
@@ -18,7 +18,7 @@ ht-degree: 1%
 
 ## 快速入門
 
-本文檔中的SQL示例要求您編輯SQL，並根據您想要評估的資料集、eVar、事件或時間範圍填充查詢的預期參數。 在後面的SQL示例中， `{ }` 隨處提供參數。
+本文檔中的SQL示例要求您編輯SQL，並根據要評估的資料集、eVar、事件或時間範圍填充查詢的預期參數。 在後面的SQL示例中， `{ }` 隨處提供參數。
 
 ## 常用的SQL示例
 
@@ -135,7 +135,7 @@ ORDER BY Hour;
 
 ### eVar
 
-```
+```console
 productListItems[#]._experience.analytics.customDimensions.evars.evar#
 ```
 
@@ -143,7 +143,7 @@ productListItems[#]._experience.analytics.customDimensions.evars.evar#
 
 ### 自訂事件
 
-```
+```console
 productListItems[#]._experience.analytics.event1to100.event#.value
 ```
 
@@ -165,7 +165,7 @@ WHERE _ACP_YEAR=2019 AND _ACP_MONTH=7 AND _ACP_DAY=23
 LIMIT 10
 ```
 
-下一個查詢會「分解」每個 `productListItems` 產品並傳回每個銷售eVar和事件。 此 `_id` 欄位會包含，以顯示與原始點擊的關係。 值 `_id` 是資料集中唯一的主鍵 [!DNL ExperienceEvent] 值。
+下一個查詢會「分解」每個 `productListItems` 產品並傳回每個銷售eVar和事件。 此欄 `_id` 位會包含在內，以顯示與原始點擊的關係。 值 `_id` 是資料集中唯一的主鍵 [!DNL ExperienceEvent] 值。
 
 ```sql
 SELECT
@@ -189,7 +189,7 @@ LIMIT 20
 
 當您嘗試擷取目前資料集中不存在的欄位時，會遇到「沒有此類結構欄位」錯誤。 評估錯誤訊息中傳回的原因，以識別可用欄位，然後更新查詢並重新執行。
 
-```
+```console
 ERROR: ErrorCode: 08P01 sessionId: XXXX queryId: XXXX Unknown error encountered. Reason: [No such struct field evar1 in eVar10, eVar13, eVar62, eVar88, eVar2;]
 ```
 
@@ -199,13 +199,13 @@ Adobe Analytics中另一種銷售變數類型是轉換語法。 使用「產品�
 
 1. 使用者會執行和內部搜尋「冬季帽」，將啟用「轉換語法」的銷售eVar6設為「內部搜尋：冬季帽」
 2. 使用者按一下「華夫餅」並進入產品詳細資訊頁面。\
-   a. 在這裡登陸， `Product View` 以12.99美元的價格引發「華夫餅」活動。\
-   b. 由 `Product View` 於產品設定為系結事件，因此「華夫餅」現在會系結至「內部搜尋：冬季帽」的eVar6值。 每當收集「華夫餅」產品時，它都會與「內部搜尋：冬季帽子」相關聯，直到(1)到期設定或(2)設定新的eVar6值，並再次與該產品發生系結事件為止。
+   a.在這裡登陸， `Product View` 以12.99美元的價格引發「華夫餅」活動。\
+   b.由 `Product View` 於產品設定為系結事件，因此「華夫餅」現在會系結至「內部搜尋：冬季帽」的eVar6值。 每當收集「華夫餅」產品時，它都會與「內部搜尋：冬季帽子」相關聯，直到(1)到期設定或(2)設定新的eVar6值，並再次與該產品發生系結事件為止。
 3. 使用者將產品新增至購物車，並引發 `Cart Add` 事件。
 4. 使用者對「夏季襯衫」執行另一個內部搜尋，其中將啟用「轉換語法」的銷售eVar6設定為「內部搜尋：夏季襯衫」
 5. 使用者按一下「sporty t-shirt」並進入產品詳情頁面。\
-   a. Landing Here引發 `Product View` 了「運動T恤19.99美元」的活動。\
-   b. 該 `Product View` 活動仍是我們的綁定事件，因此現在，產品「sporty t-shirt」已系結至「internal search:summer shirt」的eVar6值，而先前產品「華夫餅」仍系結至「internal search:waffle beanie」的eVar6值。
+   a.Landing Here引發 `Product View` 了「運動T恤19.99美元」的活動。\
+   b.該 `Product View` 活動仍是我們的綁定事件，因此現在，產品「sporty t-shirt」已系結至「internal search:summer shirt」的eVar6值，而先前產品「華夫餅」仍系結至「internal search:waffle beanie」的eVar6值。
 6. 使用者將產品新增至購物車，並引發 `Cart Add` 事件。
 7. 使用者會簽出這兩個產品。
 
@@ -220,7 +220,7 @@ Adobe Analytics中另一種銷售變數類型是轉換語法。 使用「產品�
 
 ### eVar
 
-```
+```console
 _experience.analytics.customDimensions.evars.evar#
 ```
 
@@ -228,7 +228,7 @@ _experience.analytics.customDimensions.evars.evar#
 
 ### 產品
 
-```
+```console
 productListItems[#].sku
 ```
 
