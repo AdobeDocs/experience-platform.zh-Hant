@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Adobe Experience Platform部分批次擷取概觀
 topic: overview
 translation-type: tm+mt
-source-git-commit: ac75b1858b6a731915bbc698107f0be6043267d8
+source-git-commit: 38cb8eeae3ac0a1852c59e433d1cacae82b1c6c0
 workflow-type: tm+mt
 source-wordcount: '1446'
 ht-degree: 1%
@@ -341,6 +341,7 @@ curl -X GET https://platform.adobe.io/data/foundation/catalog/batches/{BATCH_ID}
 >[!NOTE]
 >
 >如果錯誤診斷不可用，則會出現以下錯誤消息：
+>
 > 
 ```json
 > {
@@ -373,7 +374,7 @@ curl -X GET https://platform.adobe.io/data/foundation/catalog/batches/{BATCH_ID}
 
 ### 不可分的行 {#unparsable}
 
-如果所吸收的批具有不可分解的行，則可以使用以下端點查看包含錯誤的檔案清單。
+如果所吸收的批具有不可分割的行，則可以使用以下端點查看包含錯誤的檔案清單。
 
 **API格式**
 
