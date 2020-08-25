@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 連線至串流目的地並啟動資料
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: dce9a7040ad25d5bb08de95fce7655f1fec7c226
+source-git-commit: 38cb8eeae3ac0a1852c59e433d1cacae82b1c6c0
 workflow-type: tm+mt
 source-wordcount: '1809'
 ht-degree: 2%
@@ -55,7 +55,7 @@ ht-degree: 2%
 * x-api-key: `{API_KEY}`
 * x-gw-ims-org-id: `{IMS_ORG}`
 
-Experience Platform中的資源可以隔離至特定虛擬沙盒。 在對平台API的請求中，您可以指定要進行操作的沙盒的名稱和ID。 這些是可選參數。
+Experience Platform中的資源可以隔離至特定的虛擬沙盒。 在對平台API的請求中，您可以指定要進行操作的沙盒的名稱和ID。 這些是可選參數。
 
 * x-sandbox-name: `{SANDBOX_NAME}`
 
@@ -85,7 +85,7 @@ GET /connectionSpecs
 
 **請求**
 
-```
+```shell
 curl --location --request GET 'https://platform.adobe.io/data/foundation/flowservice/connectionSpecs' \
 --header 'accept: application/json' \
 --header 'x-gw-ims-org-id: {IMS_ORG}' \
@@ -135,7 +135,7 @@ POST /connections
 
 **請求**
 
-```
+```shell
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/connections' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
 --header 'x-api-key: {API_KEY}' \
@@ -175,7 +175,7 @@ POST /sourceConnections
 
 **請求**
 
-```
+```shell
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/sourceConnections' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
 --header 'x-api-key: {API_KEY}' \
@@ -230,7 +230,7 @@ POST /connections
 
 **請求**
 
-```
+```shell
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/connections' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
 --header 'x-api-key: {API_KEY}' \
@@ -289,7 +289,7 @@ POST /targetConnections
 
 **請求**
 
-```
+```shell
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/targetConnections' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
 --header 'x-api-key: {API_KEY}' \
@@ -407,7 +407,7 @@ PATCH /flows
 
 **請求**
 
-```
+```shell
 curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flowservice/flows/{DATAFLOW_ID}' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
 --header 'x-api-key: {API_KEY}' \
@@ -468,7 +468,7 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 
 * `{DATAFLOW_ID}`:使用您在上一步驟中取得的資料流。
 * `{ETAG}`:使用您在上一步驟中取得的標籤。
-* `{SEGMENT_ID}`:提供您要匯出至此目的地的區段ID。 若要擷取您要啟用之區段的區段ID，請前往https://www.adobe.io/apis/experienceplatform/home/api-reference.html#/，在左側導覽功能表中選取 **[!UICONTROL Segmentation Service API]** ，並尋找該操 `GET /segment/jobs` 作。
+* `{SEGMENT_ID}`:提供您要匯出至此目的地的區段ID。 若要擷取您要啟用之區段的區段ID，請前往https://www.adobe.io/apis/experienceplatform/home/api-reference.html#/，在左側導覽功能表中選取 **[!UICONTROL Segmentation Service API]** ，然後尋找該操 `GET /segment/jobs` 作。
 * `{PROFILE_ATTRIBUTE}`:例如， `personalEmail.address` 或 `person.lastName`
 
 **回應**
@@ -491,7 +491,7 @@ GET /flows
 
 **請求**
 
-```
+```shell
 curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flowservice/flows/{DATAFLOW_ID}' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
 --header 'x-api-key: {API_KEY}' \
@@ -508,7 +508,7 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 
 傳回的回應應包含在參 `transformations` 數中您在上一步驟中提交的區段和描述檔屬性。 回應中 `transformations` 的範例參數可能如下所示：
 
-```
+```json
 "transformations": [
     {
         "name": "GeneralTransform",
@@ -554,7 +554,7 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 >
 > 除了設定檔屬性和步驟「啟用資料至新目的地」中的區段外 [，和中的匯出資](#activate-data)料也 [!DNL AWS Kinesis][!DNL Azure Event Hubs] 會包含有關識別地圖的資訊。 這代表匯出的設定檔身分(例如 [ECID](https://docs.adobe.com/content/help/zh-Hant/id-service/using/intro/id-request.html)、行動ID、Google ID、電子郵件地址等)。 請參閱以下範例。
 
-```
+```json
 {
   "person": {
     "email": "yourstruly@adobe.con"
