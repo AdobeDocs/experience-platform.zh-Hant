@@ -20,10 +20,10 @@ ht-degree: 0%
 
 使用區段定義需要瞭解區段所涉 [!DNL Experience Platform] 及的各種服務。 閱讀本使用指南之前，請先閱讀下列服務的說明檔案：
 
-- [[!DNL分段服務]](../home.md): [!DNL Segmentation Service] 可讓您將儲存在與個人( [!DNL Experience Platform] 如客戶、潛在客戶、使用者或組織)相關的資料分割為較小的群組。
-- [[!DNL即時客戶基本資料]](../../profile/home.md): 根據來自多個來源的匯整資料，提供統一、即時的消費者個人檔案。
+- [[!DNL 分段服務]](../home.md): [!DNL Segmentation Service] 可讓您將儲存在與個人( [!DNL Experience Platform] 如客戶、潛在客戶、使用者或組織)相關的資料分割為較小的群組。
+- [[!DNL 即時客戶基本資料]](../../profile/home.md): 根據來自多個來源的匯整資料，提供統一、即時的消費者個人檔案。
 - [[!DNL Adobe Experience Platform Identity Service]](../../identity-service/home.md): 借由將不同資料來源的身分整合到其中，以建立客戶個人檔案 [!DNL Platform]。
-- [[!DNL體驗資料模型(XDM)]](../../xdm/home.md): 組織客戶體驗資料 [!DNL Platform] 的標準化架構。
+- [[!DNL 體驗資料模型(XDM)]](../../xdm/home.md): 組織客戶體驗資料 [!DNL Platform] 的標準化架構。
 
 此外，務必瞭解本檔案使用的兩個關鍵詞，並瞭解它們之間的差異：
 - **區段定義**: 用於描述目標對象的關鍵特性或行為的規則集。

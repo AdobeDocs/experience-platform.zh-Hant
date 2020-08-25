@@ -28,7 +28,7 @@ ht-degree: 5%
 
 - [批次擷取](./overview.md):可讓您將資料以批次檔案的形式內嵌至Adobe Experience Platform。
 - [[!DNL Experience Data Model] (XDM)系統](../../xdm/home.md):組織客戶體驗資料 [!DNL Experience Platform] 的標準化架構。
-- [[!DNL沙盒]](../../sandboxes/home.md): [!DNL Experience Platform] 提供虛擬沙盒，可將單一執行個體分 [!DNL Platform] 割為不同的虛擬環境，以協助開發和發展數位體驗應用程式。
+- [[!DNL 沙盒]](../../sandboxes/home.md): [!DNL Experience Platform] 提供虛擬沙盒，可將單一執行個體分 [!DNL Platform] 割為不同的虛擬環境，以協助開發和發展數位體驗應用程式。
 
 ### 讀取範例API呼叫
 

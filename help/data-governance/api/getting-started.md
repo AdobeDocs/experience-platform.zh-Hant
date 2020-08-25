@@ -21,9 +21,9 @@ API [!DNL Policy Service] 可讓您建立和管理與Adobe Experience Platform�
 
 使用開發人員指南需要瞭解使用「資料管理」 [!DNL Experience Platform] 功能時涉及的各種服務。 在開始使用之前，請先 [!DNL Policy Service API]檢閱下列服務的檔案：
 
-* [[!DNL資料治理]](../home.md):強制執行資料使用 [!DNL Experience Platform] 合規性的框架。
-* [[!DNL體驗資料模型(XDM)系統]](../../xdm/home.md):組織客戶體驗資料 [!DNL Experience Platform] 的標準化架構。
-* [[!DNL即時客戶基本資料]](../../profile/home.md):根據來自多個來源的匯整資料，提供統一、即時的消費者個人檔案。
+* [[!DNL 資料治理]](../home.md):強制執行資料使用 [!DNL Experience Platform] 合規性的框架。
+* [[!DNL 體驗資料模型(XDM)系統]](../../xdm/home.md):組織客戶體驗資料 [!DNL Experience Platform] 的標準化架構。
+* [[!DNL 即時客戶基本資料]](../../profile/home.md):根據來自多個來源的匯整資料，提供統一、即時的消費者個人檔案。
 * [沙盒](../../sandboxes/home.md): [!DNL Experience Platform] 提供虛擬沙盒，可將單一執行個體分 [!DNL Platform] 割為不同的虛擬環境，以協助開發和發展數位體驗應用程式。
 
 ## 讀取範例API呼叫

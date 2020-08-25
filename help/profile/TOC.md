@@ -19,10 +19,10 @@ ht-degree: 20%
    * [快速入門](api/getting-started.md)
    * [(Alpha)計算屬性](api/computed-attributes.md)
    * [邊緣投影](api/edge-projections.md)
-   * [實體（[!DNL配置檔案]訪問）](api/entities.md)
-   * [導出作業（[!DNL配置檔案]導出）](api/export-jobs.md)
+   * [實體（[!DNL 配置檔案]訪問）](api/entities.md)
+   * [導出作業（[!DNL 配置檔案]導出）](api/export-jobs.md)
    * [合併原則](api/merge-policies.md)
-   * [預覽範例狀態（[!DNL描述檔]預覽）](api/preview-sample-status.md)
+   * [預覽範例狀態（[!DNL 描述檔]預覽）](api/preview-sample-status.md)
    * [[!DNL Profile] 系統作業（刪除請求）](api/profile-system-jobs.md)
 * UI指南 {#ui}
    * [[!DNL Profile] 使用者指南](ui/user-guide.md)

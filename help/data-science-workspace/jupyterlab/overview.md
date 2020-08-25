@@ -172,7 +172,7 @@ Experience Platform的JupyterLab整合隨附架構變更、設計考量、自訂
         <th><strong>入門者</strong></th>
         <th><strong>零售銷售</strong></th>
         <th><strong>方式產生器</strong></th>
-        <th><strong>[!DNL查詢服務]</strong></th>
+        <th><strong>[!DNL 查詢服務]</strong></th>
         <th><strong>XDM事件</strong></th>
         <th><strong>XDM查詢</strong></th>
         <th><strong>彙總</strong></th>

@@ -19,9 +19,9 @@ ht-degree: 6%
 
 Adobe Experience Platform現有功能的更新：
 
-- [[!DNL資料科學工作區]](#dsw)
+- [[!DNL 資料科學工作區]](#dsw)
 - [!DNL Destinations](#destinations)
-- [[!DNL源]](#sources)
+- [[!DNL 源]](#sources)
 
 ## [!DNL Data Science Workspace] {#dsw}
 

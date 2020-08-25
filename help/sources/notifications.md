@@ -27,8 +27,8 @@ Adobe Experience Platform可讓您從外部來源擷取資料，同時提供您�
 
 本檔案需要對Adobe Experience Platform的下列元件有正確的認識：
 
-* [[!DNL體驗資料模型(XDM)系統]](../xdm/home.md):組織客戶體驗資料 [!DNL Experience Platform] 的標準化架構。
-* [[!DNL即時客戶基本資料]](../profile/home.md):根據來自多個來源的匯整資料，提供統一、即時的消費者個人檔案。
+* [[!DNL 體驗資料模型(XDM)系統]](../xdm/home.md):組織客戶體驗資料 [!DNL Experience Platform] 的標準化架構。
+* [[!DNL 即時客戶基本資料]](../profile/home.md):根據來自多個來源的匯整資料，提供統一、即時的消費者個人檔案。
 * [[!DNL Adobe Experience Platform資料擷取]](../ingestion/home.md): [!DNL Data Ingestion] 表示從這些來源 [!DNL Platform] 擷取資料的多種方法，以及該資料在下游服務中 [!DNL Data Lake] 的保存方 [!DNL Platform] 式。
 
 本檔案也要求您瞭解網頁勾點，以及如何將網頁勾點從一個應用程式連接至另一個應用程式。 如需網頁勾 [選的詳細資訊](https://requestbin.com/blog/working-with-webhooks/) ，請參閱下列檔案。

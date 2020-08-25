@@ -23,7 +23,7 @@ ht-degree: 0%
 - [[!DNL Experience Data Model] (XDM)系統](../../../../xdm/home.md):組織客戶體驗資料 [!DNL Experience Platform] 的標準化架構。
    - [架構構成基礎](../../../../xdm/schema/composition.md):瞭解XDM架構的基本建置區塊，包括架構組合的主要原則和最佳實務。
    - [架構編輯器教程](../../../../xdm/tutorials/create-schema-ui.md):瞭解如何使用架構編輯器UI建立自訂架構。
-- [[!DNL即時客戶基本資料]](../../../../profile/home.md):根據來自多個來源的匯整資料，提供統一、即時的消費者個人檔案。
+- [[!DNL 即時客戶基本資料]](../../../../profile/home.md):根據來自多個來源的匯整資料，提供統一、即時的消費者個人檔案。
 
 此外，本教學課程要求您已建立通訊協定帳戶。 如需在UI中建立不同通訊協定連接器的教學課程清單，請參閱來源連 [接器概觀](../../../home.md)。
 
