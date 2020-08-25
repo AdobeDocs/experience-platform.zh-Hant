@@ -5,7 +5,7 @@ title: JupyterLab使用指南
 topic: Overview
 description: JupyterLab是Project Jupyter的網路使用者介面，並與Adobe Experience Platform緊密整合。 它為資料科學家提供互動式開發環境，以便與Jupyter筆記型電腦、程式碼和資料搭配使用。
 translation-type: tm+mt
-source-git-commit: 8f7ce97cdefd4fe79cb806e71e12e936caca3774
+source-git-commit: 38cb8eeae3ac0a1852c59e433d1cacae82b1c6c0
 workflow-type: tm+mt
 source-wordcount: '3684'
 ht-degree: 11%
@@ -29,7 +29,7 @@ Experience Platform的JupyterLab整合隨附架構變更、設計考量、自訂
 | --- | --- |
 | **內核** | 內核提供筆記型電腦和 [!DNL JupyterLab] 其他前端，能夠以不同的寫程式語言執行和查看代碼。 [!DNL Experience Platform] 提供額外的內核，以支 [!DNL Python]援R、PySpark和的開發 [!DNL Spark]。 有關詳細 [資訊](#kernels) ，請參閱內核部分。 |
 | **資料存取** | 直接從內部存取現有資料集， [!DNL JupyterLab] 並具備完整的讀取和寫入功能支援。 |
-| **[!DNL Platform]服務整合** | 內建整合可讓您直接從內部運用 [!DNL Platform] 其他服務 [!DNL JupyterLab]。 「與其他平台服務整合」一節提供支援整合的 [完整清單](#service-integration)。 |
+| **[!DNL Platform]服務整合** | 內建整合可讓您直接從內部運用 [!DNL Platform] 其他服務 [!DNL JupyterLab]。 「與其他平台服務整合」一節提供支援整合 [的完整清單](#service-integration)。 |
 | **驗證** | 除了 <a href="https://jupyter-notebook.readthedocs.io/en/latest/security.html" target="_blank">JupyterLab的內建安全性模型外</a>，您的應用程式與Experience Platform（包括平台服務對服務通訊）之間的每次互動都會透過 <a href="https://www.adobe.io/authentication/auth-methods.html" target="_blank">[!DNL Adobe Identity Management System] (IMS)加密和驗證</a>。 |
 | **開發程式庫** | 在中 [!DNL Experience Platform], [!DNL JupyterLab] 提供預先安裝的 [!DNL Python]、R和PySpark程式庫。 如需支援 [的程式庫](#supported-libraries) ，請參閱附錄。 |
 | **程式庫控制器** | 當預先安裝的程式庫不符合您的需求時，可為Python和R安裝其他程式庫，並暫時儲存在隔離的容器中，以維持資料的完整性並保 [!DNL Platform] 持資料的安全。 有關詳細 [資訊](#kernels) ，請參閱內核部分。 |
@@ -94,7 +94,7 @@ Experience Platform的JupyterLab整合隨附架構變更、設計考量、自訂
 * **資料總管：** 瀏覽、存取和探索資料集和結構
 * **運行內核和終端：** 具有終止能力的活動內核和終端會話清單
 * **命令：** 有用命令的清單
-* **儲存格偵測器：** 一種單元格編輯器，它提供對工具和元資料的訪問，這些工具和元資料對於設定用於呈現目的的筆記型電腦非常有用
+* **儲存格偵測器：** 一種單元格編輯器，它提供對工具和元資料的訪問，這些工具和元資料對於設定用於演示的筆記本有用
 * **頁籤：** 開啟的標籤清單
 
 按一下標籤以顯示其功能，或按一下展開的標籤以收合左側邊欄，如下所示：
@@ -172,7 +172,7 @@ Experience Platform的JupyterLab整合隨附架構變更、設計考量、自訂
         <th><strong>入門者</strong></th>
         <th><strong>零售銷售</strong></th>
         <th><strong>方式產生器</strong></th>
-        <th><strong>[!DNL 查詢服務]</strong></th>
+        <th><strong>[!DNL查詢服務]</strong></th>
         <th><strong>XDM事件</strong></th>
         <th><strong>XDM查詢</strong></th>
         <th><strong>彙總</strong></th>
@@ -313,7 +313,7 @@ Experience Platform的JupyterLab整合隨附架構變更、設計考量、自訂
 | SDK互動模式（以秒為單位） | 37.9s | 22.7s | 45.6s | 231.7s | 444.7s | 660.6s | 1100s | - | - | - | - |
 | SDK批次模式（以秒為單位） | 374.4s | 398.5s | 527s | 487.9s | 588.9s | 829s | 939.1s | 1441s | 5473.2s | 10118.8 | 49207.6 |
 
-**臨機架構：** 在交互模式下，您最多需要不到3分鐘的時間才能讀取10億行（磁碟上約1.05TB資料）的非XDM資料。 在批處理模式下，您應能在大約16分鐘內讀取非XDM資料的10億行（磁碟上約1.05TB資料）。
+**臨機架構：** 在互動模式下，您最多可在3分鐘內讀取10億行（磁碟上約1.05TB資料）的非XDM資料。 在批處理模式下，您應能在大約16分鐘內讀取非XDM資料的10億行（磁碟上約1.05TB資料）。
 
 | 行數 | 1K | 10K | 100K | 1M | 2M | 3M | 5M | 10M | 50M | 100M | 500M | 1B |
 |--------------|--------|---------|---------|-------|-------|-------|---------|---------|---------|--------|---------|-------|
@@ -389,7 +389,7 @@ df <- dataset_reader$limit(100L)$offset(10L)$read()
 
 ### 從PySpark/[!DNL Spark]/Scala的資料集讀取
 
-在開啟作用中的PySpark或Scala筆記型電腦時，從左側邊欄展開 **Data Explorer** （資料總管）標籤，然後按兩下 **Datasets** （資料集）以檢視可用資料集清單。 按一下右鍵要訪問的資料集清單，然後按一下「 **Explore Data in Notebook(在筆記本中瀏覽資料**)」。 產生下列程式碼儲存格：
+在開啟作用中的PySpark或Scala筆記型電腦後，從左側邊欄展開 **Data Explorer** （資料總管）標籤，然後按兩下 **Datasets** （資料集）以檢視可用資料集清單。 按一下右鍵要訪問的資料集清單，然後按一下「 **Explore Data in Notebook(在筆記本中瀏覽資料**)」。 產生下列程式碼儲存格：
 
 #### PySpark([!DNL Spark] 2.4) {#pyspark2.4}
 
@@ -537,7 +537,7 @@ df <- dataset_reader$
 
 ### 在PySpark/中篩選ExperienceEvent資料[!DNL Spark]
 
-在PySpark或Scala筆記型電腦中存取和篩選ExperienceEvent資料集時，您必須提供資料集識別(`{DATASET_ID}`)、組織的IMS識別，以及定義特定時間範圍的篩選規則。 篩選時間範圍是使用函式來定義的， `spark.sql()`其中函式參數是SQL查詢字串。
+在PySpark或Scala筆記型電腦中存取和篩選ExperienceEvent資料集時，您必須提供資料集識別(`{DATASET_ID}`)、組織的IMS識別，以及定義特定時間範圍的篩選規則。 篩選時間範圍是使用函式定義的，其 `spark.sql()`中函式參數是SQL查詢字串。
 
 以下儲存格會將ExperienceEvent資料集篩選為2019年1月1日至2019年12月31日止期間僅存在的資料。
 
@@ -606,6 +606,7 @@ timedf.show()
 >
 >
 >在Scala中，可以使 `sys.env()` 用在中聲明和返回值 `option`。 如此，若您知道變數只會在單次使用，就不需要定義變數。 以下示例從 `val userToken` 上述示例中取得，並聲明它為 `option` 替代項：
+>
 > 
 ```scala
 > .option("user-token", sys.env("PYDASDK_IMS_USER_TOKEN"))
@@ -727,9 +728,9 @@ timedf.show()
 | 接骨 | 0.19.1 |
 | 發癢 | 1.3.3 |
 | statmodels | 0.8.0 |
-| 彈性 | 4.0.30.44 |
+| kit | 4.0.30.44 |
 | py-xgboost | 0.60 |
-| opencv | 3.1.0 |
+| 彈性 | 3.1.0 |
 | pyarrow | 0.8.0 |
 | boto3 | 1.5.18 |
 | azure-storage-blob | 1.4.0 |
