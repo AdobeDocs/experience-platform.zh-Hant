@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 最佳化模型
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 38cb8eeae3ac0a1852c59e433d1cacae82b1c6c0
 workflow-type: tm+mt
 source-wordcount: '1219'
 ht-degree: 0%
@@ -31,7 +31,7 @@ ht-degree: 0%
 - [!DNL Python/Tensorflow](#pythontensorflow)
 - [R](#r)
 
-配方的范常式式碼可在 [experience-platform-dsw-reference儲存庫](https://github.com/adobe/experience-platform-dsw-reference) ，位於 `recipes`。 本教程將引用此儲存庫中的特定檔案。
+配方的范常式式碼可在 [experience-platform-dsw-reference儲存庫的下方找到](https://github.com/adobe/experience-platform-dsw-reference)`recipes`。 本教程將引用此儲存庫中的特定檔案。
 
 ### 斯卡拉 {#scala}
 
@@ -83,7 +83,7 @@ evaluation.metrics=com.adobe.platform.ml.impl.Constants.FSCORE
 
 #### Scala的自訂評估量度
 
-自訂求值器可延伸檔案中的介 `MLEvaluator.scala` 面來 `Evaluator.scala` 提供。 在範例 [Evaluator.scala](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/scala/src/main/scala/com/adobe/platform/ml/Evaluator.scala) 檔案中，我們定義自訂 `split()` 和函 `evaluate()` 數。 我們 `split()` 的函式會以8:2的比率隨機分割資料，而我們的函式會 `evaluate()` 定義並傳回3個量度： MAPE、MAE和RMSE。
+自訂求值器可延伸檔案中的介 `MLEvaluator.scala` 面來 `Evaluator.scala` 提供。 在範例 [Evaluator.scala](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/scala/src/main/scala/com/adobe/platform/ml/Evaluator.scala) 檔案中，我們定義自訂 `split()` 和函 `evaluate()` 數。 我們 `split()` 的函式會以8:2的比率隨機分割資料，而我們的函式會 `evaluate()` 定義並傳回3個量度：MAPE、MAE和RMSE。
 
 >[!IMPORTANT]
 >
@@ -95,7 +95,7 @@ evaluation.metrics=com.adobe.platform.ml.impl.Constants.FSCORE
 
 在配方中定義後，下一步就是在配方中啟用配方。 這是在專案資 [料夾中的application.properties](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/scala/src/main/resources/application.properties) 檔案中 `resources` 完成。 此處 `evaluation.class` 將設定為 `Evaluator` 中定義的類 `Evaluator.scala`
 
-```properties
+```scala
 evaluation.class=com.adobe.platform.ml.Evaluator
 ```
 
@@ -141,7 +141,7 @@ class Evaluator(AbstractEvaluator):
 
 ### R {#r}
 
-目前，R沒有預設的評估量度。 因此，若要取得R的評量度，您必須將類別定 `applicationEvaluator` 義為方式的一部分。
+目前，R沒有預設的評估量度。因此，若要取得R的評量度，您必須將類別定 `applicationEvaluator` 義為方式的一部分。
 
 #### R的自訂評估量度
 
