@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 策略
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 7bc7050d64727f09d3a13d803d532a9a3ba5d1a7
+source-git-commit: 12c53122d84e145a699a2a86631dc37ee0073578
 workflow-type: tm+mt
 source-wordcount: '1756'
 ht-degree: 2%
@@ -35,7 +35,7 @@ GET /policies/custom
 
 下列請求會擷取您組織所定義的自訂原則清單。
 
-```sh
+```shell
 curl -X GET \
   https://platform.adobe.io/data/foundation/dulepolicy/policies/custom \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -159,11 +159,11 @@ GET /policies/custom/{POLICY_ID}
 
 | 參數 | 說明 |
 | --- | --- |
-| `{POLICY_ID}` | 你 `id` 想查的政策。 |
+| `{POLICY_ID}` | 你 `id` 要查的政策。 |
 
 **請求**
 
-```sh
+```shell
 curl -X GET \
   https://platform.adobe.io/data/foundation/dulepolicy/policies/custom/5c6dacdf685a4913dc48937c \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -236,7 +236,7 @@ curl -X GET \
 
 為滿足後一個要求，策略定義必須包含關於資料使用標籤存在的布爾表達式。 此表達式稱為策 **略表達式**。
 
-在每個策略定義中以屬性的形式 `deny` 提供策略表達式。 僅檢查單一標 `deny` 簽是否存在的簡單對象示例如下所示：
+在每個策略定義中以屬性的形 `deny` 式提供策略表達式。 僅檢查單一標 `deny` 簽是否存在的簡單對象示例如下所示：
 
 ```json
 "deny": {
@@ -282,7 +282,7 @@ POST /policies/custom
 
 下列請求會建立新原則，限制對包含標籤的 `exportToThirdParty` 資料執行行銷動作 `C1 OR (C3 AND C7)`。
 
-```sh
+```shell
 curl -X POST \
   https://platform.adobe.io/data/foundation/dulepolicy/policies/custom \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -396,7 +396,7 @@ PUT /policies/custom/{POLICY_ID}
 
 以下請求會更新現有策略以包含新策略表達式。 請注意，由於此請求實際上會重寫原則，因此所有欄位都必須包含在裝載中，即使部分欄位值未更新亦然。
 
-```sh
+```shell
 curl -X PUT \
   https://platform.adobe.io/data/foundation/dulepolicy/policies/custom/5c6dacdf685a4913dc48937c \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -590,7 +590,7 @@ DELETE /policies/custom/{POLICY_ID}
 
 **請求**
 
-```sh
+```shell
 curl -X DELETE \
   https://platform.adobe.io/data/foundation/dulepolicy/policies/custom/5c6ddb56eb60ca13dbf8b9a8 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -617,7 +617,7 @@ GET /enabledCorePolicies
 
 **請求**
 
-```sh
+```shell
 curl -X GET \
   https://platform.adobe.io/data/foundation/dulepolicy/enabledCorePolicies \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -659,7 +659,7 @@ curl -X GET \
 
 ## 更新已啟用核心原則的清單 {#update-enabled-core}
 
-依預設，只有啟用的資料使用政策才會參與評估。 通過向端點發出PUT請 `/enabledCorePolicies` 求，您可以使用單次呼叫更新組織的已啟用核心策略清單。
+依預設，只有啟用的資料使用政策才會參與評估。 通過向端點發出PUT請 `/enabledCorePolicies` 求，您可以使用單次調用更新組織的已啟用核心策略清單。
 
 >[!NOTE]
 >
@@ -675,7 +675,7 @@ PUT /enabledCorePolicies
 
 下列請求會根據裝載中提供的ID更新已啟用核心原則的清單。
 
-```sh
+```shell
 curl -X GET \
   https://platform.adobe.io/data/foundation/dulepolicy/enabledCorePolicies \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
