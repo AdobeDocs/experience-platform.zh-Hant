@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Adobe定義的函式
 topic: functions
 translation-type: tm+mt
-source-git-commit: 3b710e7a20975880376f7e434ea4d79c01fa0ce5
+source-git-commit: 38cb8eeae3ac0a1852c59e433d1cacae82b1c6c0
 workflow-type: tm+mt
 source-wordcount: '2156'
 ht-degree: 3%
@@ -74,7 +74,7 @@ LIMIT 10
 
 #### 結果
 
-```
+```console
                 id                |       timestamp       |      session       
 ----------------------------------+-----------------------+--------------------
  100080F22A45CB40-3A2B7A8E11096B6 | 2018-01-18 06:55:53.0 | (0,1,true,1)
@@ -136,7 +136,7 @@ LIMIT 10
 
 #### 結果
 
-```
+```console
                 id                 |       timestamp       | trackingCode |                   first_touch                    
 -----------------------------------+-----------------------+--------------+--------------------------------------------------
  5D9D1DFBCEEBADF6-4097750903CE64DB | 2018-12-18 07:06:12.0 | em:946426    | (Paid First,em:946426,2018-12-18 07:06:12.0,1.0)
@@ -191,7 +191,7 @@ ORDER BY endUserIds._experience.mcid.id, timestamp ASC
 
 #### 結果
 
-```
+```console
                 id                 |       timestamp       | trackingcode |                   last_touch                   
 -----------------------------------+-----------------------+--------------+-------------------------------------------------
  5D9D1DFBCEEBADF6-4097750903CE64DB | 2017-12-18 07:06:12.0 | em:946426    | (Paid Last,em:946426,2017-12-18 07:06:12.0,1.0)
@@ -247,7 +247,7 @@ ORDER BY endUserIds._experience.mcid.id, timestamp ASC
 
 #### 結果
 
-```
+```console
                 id                 |       timestamp       | trackingCode |                   first_touch                    
 -----------------------------------+-----------------------+--------------+--------------------------------------------------
  7J82HGSSBNELKLD4-4107750913DE65DA | 2019-07-15 06:04:10.0 | em:1024841   | (Paid First,em:1024841,2019-07-15 06:04:10.0,1.0)
@@ -300,7 +300,7 @@ ORDER BY endUserIds._experience.mcid.id, timestamp ASC
 
 #### 結果
 
-```
+```console
                 id                 |       timestamp       | trackingCode |                   first_touch                    
 -----------------------------------+-----------------------+--------------+--------------------------------------------------
  7J82HGSSBNELKLD4-4107750913DE65DA | 2019-07-15 06:04:10.0 | em:1024841   | (Paid First,em:1024841,2019-07-15 06:04:10.0,1.0)
@@ -318,7 +318,7 @@ ORDER BY endUserIds._experience.mcid.id, timestamp ASC
 
 ### 具有過期條件的上次接觸歸因
 
-傳回目標資料集中單一頻道的上次接觸歸因值和詳細資訊， [!DNL ExperienceEvent] 在條件之後或之前過期。 查詢會傳回具 `struct` 有上次接觸值、時間戳記和屬性的物件，這些物件會針對所選渠道傳回的每一列。 如果您想在資料集的一部分中查看一系列客戶動作中由您選擇的條件所決定的最後一個互動， [!DNL ExperienceEvent] 此查詢會很有用。 在下列範例中，購買會(`commerce.purchases.value IS NOT NULL`)記錄在結果（7月15日、21日、23日和29日）顯示的四天中的每一天，而每天的最後一個追蹤代碼會歸因為客戶活動的100%(`1.0`)責任。
+傳回目標資料集中單一頻道的上次接觸歸因值和詳細資訊， [!DNL ExperienceEvent] 在條件之後或之前過期。 查詢會傳回具 `struct` 有上次接觸值、時間戳記和屬性的物件，這些物件會針對所選渠道傳回的每一列。 如果您想在資料集的一部分中查看一系列客戶動作中由您選擇的條件所決定的最後一個互動， [!DNL ExperienceEvent] 此查詢會很有用。 在下列範例中，購買會(`commerce.purchases.value IS NOT NULL`)記錄在結果（7月15日、21日、23日和29日）中顯示的四天中的每一天，而每天的最後一個追蹤代碼會歸因為客戶活動的100%(`1.0`)責任。
 
 #### 規格
 
@@ -354,7 +354,7 @@ ORDER BY endUserIds._experience.mcid.id, timestamp ASC
 
 #### 結果
 
-```
+```console
                 id                 |       timestamp       | trackingcode |                   last_touch                   
 -----------------------------------+-----------------------+--------------+-------------------------------------------------
  7J82HGSSBNELKLD4-4107750913DE65DA | 2019-07-15 06:04:10.0 | em:1024841   | (Paid Last,em:550984,2019-07-15 06:08:30.0,1.0)
@@ -407,7 +407,7 @@ ORDER BY endUserIds._experience.mcid.id, timestamp ASC
 
 #### 結果
 
-```
+```console
                 id                 |       timestamp       | trackingcode |                   last_touch                   
 -----------------------------------+-----------------------+--------------+-------------------------------------------------
  7J82HGSSBNELKLD4-4107750913DE65DA | 2019-07-15 06:04:10.0 | em:1024841   | (Paid Last,em:483339,2019-07-21 18:56:56.0,1.0)
@@ -444,7 +444,7 @@ ORDER BY endUserIds._experience.mcid.id, timestamp ASC
 
 | 傳回的物件參數 | 說明 |
 | ---------------------- | ------------- |
-| `value` | 基於ADF中 `key` 的值 |
+| `value` | 基於ADF的 `key` 數值 |
 
 #### 範例查詢
 
@@ -461,7 +461,7 @@ ORDER BY endUserIds._experience.mcid.id, _experience.analytics.session.num, time
 
 #### 結果
 
-```
+```console
                 id                 |       timestamp       |                 name                |                    previous_page                    
 -----------------------------------+-----------------------+-------------------------------------+-----------------------------------------------------
  457C3510571E5930-69AA721C4CBF9339 | 2017-11-08 17:15:28.0 |                                     | 
@@ -494,7 +494,7 @@ ORDER BY endUserIds._experience.mcid.id, _experience.analytics.session.num, time
 
 | 傳回的物件參數 | 說明 |
 | ---------------------- | ------------- |
-| `value` | 基於ADF中 `key` 的值 |
+| `value` | 基於ADF的 `key` 數值 |
 
 #### 範例查詢
 
@@ -512,7 +512,7 @@ LIMIT 10
 
 #### 結果
 
-```
+```console
                 id                 |       timestamp       |                name                 |             previous_page             
 -----------------------------------+-----------------------+-------------------------------------+---------------------------------------
  457C3510571E5930-69AA721C4CBF9339 | 2017-11-08 17:15:28.0 |                                     | (Home)
@@ -544,9 +544,9 @@ LIMIT 10
 | --- | --- |
 | `timestamp` | 在所有事件上填入的資料集中找到時間戳記欄位。 |
 | `eventDefintion` | 運算式以限定上一個事件。 |
-| `timeUnit` | 輸出單位： 日、小時、分和秒。 預設值為秒。 |
+| `timeUnit` | 輸出單位：日、小時、分和秒。 預設值為秒。 |
 
-輸出： 傳回代表上次顯示相符事件以來的時間單位的數字，若未找到相符事件，則仍為null。
+輸出：傳回代表上次顯示相符事件以來的時間單位的數字，若未找到相符事件，則仍為null。
 
 #### 範例查詢
 
@@ -574,7 +574,7 @@ LIMIT 10
 
 #### 結果
 
-```
+```console
              page_name             | average_minutes_since_registration 
 -----------------------------------+------------------------------------
                                    |                                   
@@ -602,13 +602,13 @@ LIMIT 10
 | --- | --- |
 | `timestamp` | 在所有事件上填入的資料集中找到時間戳記欄位。 |
 | `eventDefintion` | 運算式以限定下一個事件。 |
-| `timeUnit` | 輸出單位： 日、小時、分和秒。 預設值為秒。 |
+| `timeUnit` | 輸出單位：日、小時、分和秒。 預設值為秒。 |
 
-輸出： 傳回表示下一個匹配事件後的時間單位的負數，如果找不到匹配事件，則仍為null。
+輸出：傳回表示下一個匹配事件後的時間單位的負數，如果找不到匹配事件，則仍為null。
 
 #### 範例查詢
 
-```
+```sql
 SELECT 
   page_name,
   SUM (time_between_next_match) / COUNT(page_name) as average_minutes_until_order_confirmation
@@ -632,7 +632,7 @@ LIMIT 10
 
 #### 結果
 
-```
+```console
              page_name             | average_minutes_until_order_confirmation 
 -----------------------------------+------------------------------------------
  Shopping Cart|Order Confirmation  |                                      0.0
