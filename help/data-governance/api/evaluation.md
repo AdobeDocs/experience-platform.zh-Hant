@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 策略
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: cb3a17aa08c67c66101cbf3842bf306ebcca0305
+source-git-commit: 12c53122d84e145a699a2a86631dc37ee0073578
 workflow-type: tm+mt
 source-wordcount: '1472'
 ht-degree: 1%
@@ -52,7 +52,7 @@ GET /marketingActions/custom/{MARKETING_ACTION_NAME}/constraints?duleLabels={LAB
 >
 >請注意您的原則運 `AND` 算式 `OR` 中的和運算子。 在下列範例中，如果請求中單獨顯`C1` 示了標籤( `C3`或)，行銷動作將不會違反此政策。 要傳回違反的原則，`C1` 需要 `C3`標籤（和）兩者。 請確定您正在仔細評估政策，並同時定義政策陳述式。
 
-```sh
+```shell
 curl -X GET \
   'https://platform.adobe.io/data/foundation/dulepolicy/marketingActions/custom/sampleMarketingAction/constraints?duleLabels=C1,C3' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -140,7 +140,7 @@ POST /marketingActions/custom/{MARKETING_ACTION_NAME}/constraints
 
 下列請求會針對一組 `crossSiteTargeting` 三個資料集執行行銷動作，以評估是否有任何違反原則的情況。
 
-```sh
+```shell
 curl -X POST \
   https://platform.adobe.io/data/foundation/dulepolicy/marketingActions/custom/crossSiteTargeting/constraints \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -354,7 +354,7 @@ curl -X POST \
 使用資料集欄位評估原則時，請牢記下列事項：
 
 * **欄位名稱區分大小寫**:提供欄位時，必須如實地寫入欄位，如資料集中的欄位( `firstName` vs `firstname`)。
-* **資料集標籤繼承**:資料集中的個別欄位會繼承在資料集層級套用的任何標籤。 如果您的原則評估未如預期般傳回，請務必檢查除了欄位層級套用的標籤外，資料集層級下是否繼承至欄位的標籤。
+* **資料集標籤繼承**:資料集中的個別欄位會繼承在資料集層級套用的任何標籤。 如果您的原則評估未如預期般傳回，請務必檢查除了欄位層級套用的標籤外，資料集層級下層可能繼承到欄位的標籤。
 
 **API格式**
 
@@ -371,7 +371,7 @@ POST /marketingActions/custom/{MARKETING_ACTION_NAME}/constraints
 
 下列請求會測試屬於三個資 `crossSiteTargeting` 料集的特定欄位集的行銷動作。 裝載類似於僅包含資料集 [的評估請求](#datasets)，新增每個資料集的特定欄位以收集標籤。
 
-```sh
+```shell
 curl -X POST \
   https://platform.adobe.io/data/foundation/dulepolicy/marketingActions/custom/crossSiteTargeting/constraints \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -540,7 +540,7 @@ POST /bulk-eval
 >
 >如果列出的任何評估作業同時包 `entityList` 含陣列 `labels` 和陣列，則會產生錯誤。 如果您想要根據資料集和標籤來評估相同的行銷動作，則必須針對該行銷動作包含個別的評估工作。
 
-```sh
+```shell
 curl -X POST \
   https://platform.adobe.io/data/foundation/dulepolicy/bulk-eval \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -580,8 +580,8 @@ curl -X POST \
 | --- | --- |
 | `evalRef` | 針對違反原則的標籤或資料集測試行銷動作的URI。 |
 | `includeDraft` | 預設情況下，只有啟用的策略參與評估。 如果 `includeDraft` 設定為 `true`，則處於狀態的 `DRAFT` 策略也將參與。 |
-| `labels` | 一系列資料使用標籤，用以測試行銷動作。<br><br>**重要&#x200B;**:使用此屬性時，`entityList`不得在同一對象中包含屬性。 若要使用資料集和／或欄位評估相同的行銷動作，您必須在包含陣列的請求裝載中包含個別的物`entityList`件。 |
-| `entityList` | 這些資料集內的資料集陣列和（可選）特定欄位，以測試行銷動作。<br><br>**重要&#x200B;**:使用此屬性時，`labels`不能在同一對象中包含屬性。 若要使用特定資料使用標籤來評估相同的行銷動作，您必須在包含陣列的請求裝載中包含個別的物`labels`件。 |
+| `labels` | 一系列資料使用標籤，用以測試行銷動作。<br><br>**重要**:使用此屬性時， `entityList` 不得在同一對象中包含屬性。 若要使用資料集和／或欄位評估相同的行銷動作，您必須在包含陣列的請求裝載中包含個別的物 `entityList` 件。 |
+| `entityList` | 這些資料集內的資料集陣列和（可選）特定欄位，以測試行銷動作。<br><br>**重要**:使用此屬性時， `labels` 不能在同一對象中包含屬性。 若要使用特定資料使用標籤來評估相同的行銷動作，您必須在包含陣列的請求裝載中包含個別的物 `labels` 件。 |
 | `entityType` | 要測試其行銷動作的實體類型。 目前僅支 `dataSet` 援。 |
 | `entityId` | 測試行銷動作的資料集ID。 |
 | `entityMeta.fields` | （選用）資料集內用來測試行銷動作的特定欄位清單。 |
