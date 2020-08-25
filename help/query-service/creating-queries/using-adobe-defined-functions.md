@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Adobe定義的函式
 topic: queries
 translation-type: tm+mt
-source-git-commit: 3b710e7a20975880376f7e434ea4d79c01fa0ce5
+source-git-commit: 38cb8eeae3ac0a1852c59e433d1cacae82b1c6c0
 workflow-type: tm+mt
 source-wordcount: '287'
 ht-degree: 6%
@@ -29,11 +29,11 @@ Adobe的主要競爭優勢之一，就是瞭解體驗資料以及客戶需要如
 
 `SESS_TIMEOUT(timestamp, timeout_in_seconds) OVER ([partition] [order] [frame])`
 
-**傳回:**
+**傳回：**
 
 具有欄位的結構 `(timestamp_diff, num, is_new, depth)`
 
-### 探索列層級和 `SESS_TIMEOUT()` 輸出
+### 探索列層級與 `SESS_TIMEOUT()` 輸出
 
 ```sql
 SELECT analyticsVisitor,
@@ -103,7 +103,7 @@ LIMIT 31;
 
 `ATTRIBUTION_LAST_TOUCH(timestamp, [channel_name], column) OVER ([partition] [order] [frame])`
 
-**傳回:**
+**傳回：**
 
 具有場的結構 `(value)`
 
@@ -152,16 +152,16 @@ LIMIT 25;
 
 ## 路徑分析
 
-路徑分析有助於瞭解客戶如何瀏覽您的網站。 ADF `NEXT()` 和 `PREVIOUS()` ADF使這成為可能。
+路徑分析有助於瞭解客戶如何瀏覽您的網站。 這種 `NEXT()` 方式 `PREVIOUS()` 和ADF都可以實現。
 
 **語法：**
 
-```
+```sql
 NEXT(key, [shift, [ignoreNulls]]) OVER ([partition] [order] [frame])
 PREVIOUS(key, [shift, [ignoreNulls]]) OVER ([partition] [order] [frame])
 ```
 
-**傳回:**
+**傳回：**
 
 具有場的結構 `(value)`
 
