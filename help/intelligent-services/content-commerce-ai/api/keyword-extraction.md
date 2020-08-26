@@ -5,7 +5,7 @@ title: 色彩擷取
 topic: Developer guide
 description: 當給定文字檔案時，關鍵字擷取服務會自動擷取最能說明檔案主題的關鍵字或關鍵片語。 為了提取關鍵字，採用了命名實體識別(NER)和無監督關鍵字提取算法的組合。
 translation-type: tm+mt
-source-git-commit: 4f7b5ca50171f4948726c44dbf31025011adf35f
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '742'
 ht-degree: 3%
@@ -37,7 +37,7 @@ ht-degree: 3%
 | NORP | 民族或宗教或政治團體。 |
 | GPE | 國家、城市和州。 |
 | LOC | 非全球水體運動地點、山脈和水體。 |
-| FAC | 建築物、機場、公路、橋梁等 |
+| FAC | 建築、機場、公路、橋梁等 |
 | 組織 | 公司、代理商、機構等 |
 | 產品 | 物品、車輛、食品等 （非服務。） |
 | 事件 | 指名的颶風、戰鬥、戰爭、體育活動等。 |
@@ -84,7 +84,8 @@ POST /services/v1/predict
 
 >[!CAUTION]
 >
->`analyzer_id` 決定使 [!DNL Sensei Content Framework] 用的項目。 在提出要求前，請先檢查 `analyzer_id` 您是否有適當。 對於關鍵字擷取服務， `analyzer_id` ID為： `Feature:cintel-ner:Service-1a35aefb0f0f4dc0a3b5262370ebc709`
+>`analyzer_id` 決定使 [!DNL Sensei Content Framework] 用的項目。 在提出要求前，請先檢查 `analyzer_id` 您是否有適當。 對於關鍵字擷取服務， `analyzer_id` ID為：
+>`Feature:cintel-ner:Service-1a35aefb0f0f4dc0a3b5262370ebc709`
 
 ```SHELL
 curl -w'\n' -i -X POST https://sensei.adobe.io/services/v1/predict \
