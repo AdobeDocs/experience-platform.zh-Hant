@@ -5,7 +5,7 @@ title: 色彩擷取
 topic: Developer guide
 description: 當給定影像時，顏色提取服務可以計算像素顏色的直方圖，並按主色排序到桶中。
 translation-type: tm+mt
-source-git-commit: 4f7b5ca50171f4948726c44dbf31025011adf35f
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '689'
 ht-degree: 2%
@@ -47,7 +47,8 @@ POST /services/v1/predict
 
 >[!CAUTION]
 >
->`analyzer_id` 決定使 [!DNL Sensei Content Framework] 用的項目。 在提出要求前，請先檢查 `analyzer_id` 您是否有適當。 對於色彩擷取服務， `analyzer_id` ID為： `Feature:image-color-histogram:Service-6fe52999293e483b8e4ae9a95f1b81a7`
+>`analyzer_id` 決定使 [!DNL Sensei Content Framework] 用的項目。 在提出要求前，請先檢查 `analyzer_id` 您是否有適當。 對於色彩擷取服務， `analyzer_id` ID為：
+>`Feature:image-color-histogram:Service-6fe52999293e483b8e4ae9a95f1b81a7`
 
 ```SHELL
 curl -i -X POST https://sensei.adobe.io/services/v1/predict \
@@ -106,7 +107,7 @@ curl -i -X POST https://sensei.adobe.io/services/v1/predict \
 - 此顏色相對於影像顯示的百分比
 - 顏色的RGB值
 
-在下面的第一個範例物 `feature_value` 件中， `White,0.59,251,251,243` 表示所找到的顏色是白色，在影像的59%中是白色，而且RGB值為251,251,243。
+在下面的第一個範例物 `feature_value` 件中， `White,0.59,251,251,243` 表示所找到的顏色是白色，在影像的59%中是白色，RGB值為251,251,243。
 
 ```json
 {
