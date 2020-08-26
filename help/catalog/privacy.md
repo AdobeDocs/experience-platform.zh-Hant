@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 資料湖中的隱私權要求處理
 topic: overview
 translation-type: tm+mt
-source-git-commit: bfbf2074a9dcadd809de043d62f7d2ddaa7c7b31
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
-source-wordcount: '1187'
+source-wordcount: '1189'
 ht-degree: 0%
 
 ---
@@ -20,18 +20,18 @@ Adobe Experience Platform會 [!DNL Privacy Service] 處理客戶存取、選擇�
 
 ## 快速入門
 
-建議您在閱讀本指南之前，先瞭解 [!DNL Experience Platform] 下列服務：
+建議您在閱讀本指南之前，先瞭解下 [!DNL Experience Platform] 列服務：
 
-* [!DNL Privacy Service](../privacy-service/home.md): 管理客戶在Adobe Experience Cloud應用程式中存取、選擇退出銷售或刪除其個人資料的要求。
-* [!DNL Catalog Service](home.md): 資料位置和世系的記錄系統 [!DNL Experience Platform]。 提供可用來更新資料集中繼資料的API。
-* [!DNL Experience Data Model (XDM) System](../xdm/home.md): 組織客戶體驗資料 [!DNL Experience Platform] 的標準化架構。
-* [!DNL Identity Service](../identity-service/home.md): 透過跨裝置和系統橋接身分，解決客戶體驗資料分散所帶來的根本挑戰。
+* [!DNL Privacy Service](../privacy-service/home.md):管理客戶在Adobe Experience Cloud應用程式中存取、選擇退出銷售或刪除其個人資料的要求。
+* [!DNL Catalog Service](home.md):資料位置和世系的記錄系統 [!DNL Experience Platform]。 提供可用來更新資料集中繼資料的API。
+* [!DNL Experience Data Model (XDM) System](../xdm/home.md):組織客戶體驗資料 [!DNL Experience Platform] 的標準化架構。
+* [!DNL Identity Service](../identity-service/home.md):透過跨裝置和系統橋接身分，解決客戶體驗資料分散所帶來的根本挑戰。
 
 ## 瞭解身分名稱空間 {#namespaces}
 
 Adobe Experience Platform跨 [!DNL Identity Service] 系統和裝置橋接客戶身分資料。 [!DNL Identity Service] 使用 **[!UICONTROL 身分名稱空間]** ，將身分值與其來源系統關聯，以提供其上下文。 命名空間可以代表一般概念，例如電子郵件地址（「電子郵件」），或將身分識別與特定應用程式(例如Adobe Advertising Cloud ID(「AdCloud」)或Adobe Target ID(「TNTID」))建立關聯。
 
-[!DNL Identity Service] 維護全局定義（標準）和用戶定義（自定義）標識名稱空間的儲存。 標準名稱空間適用於所有組織（例如「電子郵件」和「ECID」），而您的組織也可以建立自訂名稱空間，以符合其特定需求。
+[!DNL Identity Service] 維護全局定義（標準）和用戶定義（自定義）標識名稱空間的儲存。 標準名稱空間適用於所有組織（例如「電子郵件」和「ECID」），而您的組織也可以建立自訂名稱空間以符合其特定需求。
 
 有關中身份名稱空間的詳細信 [!DNL Experience Platform]息，請參閱身份 [名稱空間概述](../identity-service/namespaces.md)。
 
@@ -56,7 +56,7 @@ Adobe Experience Platform跨 [!DNL Identity Service] 系統和裝置橋接客戶
 
 ### 使用UI {#identity-ui}
 
-在用戶 [!DNL Experience Platform ]介面中，「 _[!UICONTROL 架構]_」工作區允許您編輯現有的XDM架構。 要將身份描述符添加到模式，請從清單中選擇模式，並遵循教程中[將模式欄位設定為身份欄位的步](../xdm/tutorials/create-schema-ui.md#identity-field)[!DNL Schema Editor]驟。
+在用戶 [!DNL Experience Platform ]介面中，「 _[!UICONTROL 架構]_ 」工作區允許您編輯現有的XDM架構。 要將身份描述符添加到模式，請從清單中選擇模式，並遵循教程中 [將模式欄位設定為身份欄位的步](../xdm/tutorials/create-schema-ui.md#identity-field)[!DNL Schema Editor] 驟。
 
 在您將架構中的適當欄位設定為身分欄位後，您就可以繼續下一節的隱私權 [要求](#submit)。
 
@@ -132,13 +132,13 @@ curl -X POST \
 
 >[!NOTE]
 >
->本節說明如何格式化的隱私權要求 [!DNL Data Lake]。 強烈建議您檢閱或檔案，以取得如 [!DNL Privacy Service UI](../privacy-service/ui/overview.md) 何提交隱私權工 [!DNL Privacy Service API](../privacy-service/api/getting-started.md) 作的完整步驟，包括如何在請求負載中正確格式化已提交的使用者身分資料。
+>本節說明如何格式化的隱私權要求 [!DNL Data Lake]。 強烈建議您檢閱 [[!DNL Privacy Service] UI](../privacy-service/ui/overview.md) 或 [[!DNL Privacy Service] ](../privacy-service/api/getting-started.md) API檔案，以取得如何提交隱私權工作的完整步驟，包括如何在請求負載中正確格式化已提交的使用者身分資料。
 
 下節將說明如何使用UI或API [!DNL Data Lake] 提出 [!DNL Privacy Service] 隱私權要求。
 
 ### 使用UI
 
-在UI中建立工作請求時，請務必在 **[!UICONTROL Products下選擇]** AEP Data Lake **[!UICONTROL 和／或]** Profile __Products下，以分別處理儲存在或[!DNL Data Lake][!DNL Real-time Customer Profile]Products中的資料。
+在UI中建立工作請求時，請務必在 **[!UICONTROL Products下選擇]** AEP Data Lake **[!UICONTROL 和／或]** Profile __ Products下，以分別處理儲存在或 [!DNL Data Lake][!DNL Real-time Customer Profile]Products中的資料。
 
 <img src="images/privacy/product-value.png" width="450"><br>
 
