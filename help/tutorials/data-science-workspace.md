@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 資料科學工作區教學課程
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 5c5f6c4868e195aef76bacc0a1e5df3857647bde
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '1171'
 ht-degree: 0%
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # [!DNL Data Science Workspace] 教學課程
 
-Adobe Experience Platform運用 [!DNL Data Science Workspace] 機器學習和人工智慧，從您的資料建立見解。 與Adobe Experience Platform整合，可協 [!DNL Data Science Workspace] 助您使用Adobe解決方案的內容和資料資產進行預測。 所有技能等級的資料科學家都擁有複雜、簡單易用的工具，可支援快速開發、訓練和調整機器學習方式- AI技術的所有優點，而不需複雜。
+Adobe Experience Platform使用 [!DNL Data Science Workspace] 機器學習和人工智慧，從您的資料建立見解。 與Adobe Experience Platform整合，可協 [!DNL Data Science Workspace] 助您使用Adobe解決方案的內容和資料資產進行預測。 所有技能等級的資料科學家都擁有複雜、簡單易用的工具，可支援快速開發、訓練和調整機器學習方式- AI技術的所有優點，而不需複雜。
 
 若要進一步瞭解，請先閱讀資料科學工 [作區概觀](../data-science-workspace/home.md)。
 
@@ -53,14 +53,13 @@ API [!DNL Sensei Machine Learning] 為資料科學家提供機制來組織和管
 - 下載建立方式的必要先決條件。
 - 瞭解以 [!DNL Docker] 模型為基礎的製作。
 - 建立適 [!DNL Docker] 用於 [!DNL Python]、R、PySpark或Scala([!DNL Spark])的影像。
-- 取得 [!DNL Docker] 來源檔案URL。
+- 取得來 [!DNL Docker] 源檔案URL。
 
 若要進一步瞭解，請依照套件 [來源檔案，進入配方教學課程](../data-science-workspace/models-recipes/package-source-files-recipe.md)。
 
 ## 匯入方式
 
 >[!NOTE]
->
 >
 >本教學課程要求您具 [!DNL Docker] 有來源檔案URL。 如果您 [沒有來源檔案URL](../data-science-workspace/models-recipes/package-source-files-recipe.md) ，請造訪套件來源檔 [!DNL Docker] 案至配方教學課程。
 
@@ -85,7 +84,7 @@ API [!DNL Sensei Machine Learning] 為資料科學家提供機制來組織和管
 
 ## 使用Model Insights框架優化模型
 
-Model Insights Framework為資料科學家提供Adobe Experience Platform中的工具，讓他們快速且知情地選擇以實驗為基礎的最佳機器學習模型。 [!DNL Data Science Workspace] 該框架將提高機器學習工作流程的速度和效率，並改善資料科學家的使用便利性。 這是透過為每個機器學習演算法類型提供預設範本來協助模型調整來完成。 最終結果使資料科學家和公民資料科學家能夠為其最終客戶做出更好的模型優化決策。
+模型洞察框架為資料科學家提供Adobe Experience Platform中的工具，讓他們快速且知情地選擇以實驗為基礎的 [!DNL Data Science Workspace] 最佳機器學習模型。 該框架將提高機器學習工作流程的速度和效率，並改善資料科學家的使用便利性。 這是透過為每個機器學習演算法類型提供預設範本來協助模型調整來完成。 最終結果使資料科學家和公民資料科學家能夠為其最終客戶做出更好的模型優化決策。
 
 **本教學課程將協助您：**
 - 設定方式代碼。
@@ -127,6 +126,7 @@ Adobe Experience Platform可 [!DNL Data Science Workspace] 讓您在機器學習
 ## 建立特徵管線
 
 >[!NOTE]
+>
 >目前，功能管道僅能透過API使用。
 
 Adobe Experience Platform可讓您建立和建立自訂的功能管道，以大規模執行功能工程 [!DNL Sensei Machine Learning Framework Runtime]。
