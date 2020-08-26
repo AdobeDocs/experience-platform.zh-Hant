@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 即時機器學習節點參考指南
 topic: Nodes reference
 translation-type: tm+mt
-source-git-commit: 1e5526b54f3c52b669f9f6a792eda0abfc711fdd
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '594'
 ht-degree: 0%
@@ -15,6 +15,7 @@ ht-degree: 0%
 # 即時機器學習節點參考指南(Alpha)
 
 >[!IMPORTANT]
+>
 >目前尚未針對所有使用者提供即時機器學習。 此功能是alpha版，仍在測試中。 本檔案可能會有所變更。
 
 節點是圖形形成的基礎單元。 每個節點都執行特定任務，並且可以使用連結將它們連結在一起，以形成表示ML管線的圖形。 由節點執行的任務表示對輸入資料的操作，如資料或模式的轉換或機器學習推理。 節點將變換或推斷的值輸出到下一個節點。
@@ -72,6 +73,7 @@ model_id = msg_model.model['model_id']
 ONNXode是內部Adobe節點，會使用模型ID來提取預先訓練的ONNX模型，並使用它來對傳入的資料進行分數。
 
 >[!TIP]
+>
 >以您希望將資料傳送至ONNX模型以分數的相同順序指定欄。
 
 ```python
@@ -80,7 +82,7 @@ node_model_score = ONNXNode(params={"features": ['browser', 'device', 'login_pag
 
 ### 熊貓 {#pandas}
 
-下面的熊貓節點，可以匯入任何方 `pd.DataFrame` 法或一般熊貓的頂層功能。 要進一步瞭解熊貓方法，請訪問熊貓方 [法文檔](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html)。 有關頂級功能的更多資訊，請訪問 [Apacties API參考指南以瞭解一般功能](https://pandas.pydata.org/pandas-docs/stable/reference/general_functions.html)。
+下面的熊貓節點，可以匯入任何方 `pd.DataFrame` 法或一般熊貓的頂層功能。 要進一步瞭解熊貓方法，請訪問熊貓方 [法文檔](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html)。 有關頂級功能的更多資訊，請訪問 [Apcites API參考指南以瞭解一般功能](https://pandas.pydata.org/pandas-docs/stable/reference/general_functions.html)。
 
 以下節點使 `"import": "map"` 用在參數中將方法名稱作為字串導入，然後將參數作為映射函式輸入。 以下範例使用執行此動作 `{"arg": {"Desktop": 1, "Mobile": 0}, "na_action": 0}`。 在對應到位後，您可以選擇設 `inplace` 為 `True` 或 `False`。 設 `inplace` 置為 `True` 或 `False` 基於是否要就地應用轉換。 預設情 `"inplace": False` 況下，建立新列。 對提供新欄名稱的支援已設定為在後續版本中新增。 最後一行 `cols` 可以是單欄名稱或欄清單。 指定要應用轉換的列。 在此示例中 `device` 指定。
 
