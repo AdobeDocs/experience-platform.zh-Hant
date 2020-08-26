@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 將來源檔案封裝至配方
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 41fe3e5b2a830c3182b46b3e0873b1672a1f1b03
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '1097'
 ht-degree: 0%
@@ -49,9 +49,11 @@ Docker映像允許開發人員將應用程式與其所需的所有部件（如�
 選取適當的 *執行階段*，然後選擇類 **[!UICONTROL 型的]** 「分 *類」*。 您的Azure容器註冊表認證會在完成後產生。
 
 >[!NOTE]
->*Type *是機器學習問題的類，它是為機器學習問題而設計的，在訓練後用於幫助定制評估訓練運行。
+>
+>*Type* 是機器學習問題的類，它是為機器學習問題而設計的，在訓練後用於幫助定制評估訓練運行。
 
 >[!TIP]
+>
 >- 對於方 [!DNL Python] 式，請選取 **[!UICONTROL Python]** 執行階段。
 >- 對於R方式，請選擇 **[!UICONTROL R]** Runtime。
 >- 對於PySpark配方，請選取 **[!UICONTROL PySpark執行時]** 期。 對象類型自動填充。
@@ -63,6 +65,7 @@ Docker映像允許開發人員將應用程式與其所需的所有部件（如�
 請注意Docker主 *機*、 *Username*&#x200B;和 *Password的值*。 這些功能可用來在下列工作流程中 [!DNL Docker] 建立和推播您的影像。
 
 >[!NOTE]
+>
 >完成下列步驟後，即會提供來源URL。 後續的教學課程會說明設定檔案，這些教學課程可在後續 [步驟中找到](#next-steps)。
 
 ### 封裝來源檔案
@@ -180,6 +183,7 @@ git clone https://github.com/adobe/experience-platform-dsw-reference.git
 ```
 
 >[!TIP]
+>
 >如果您在嘗試使用指令碼登錄Docker時收到權限錯誤，請 `login.sh` 嘗試使用命令 `bash login.sh`。
 
 執行登錄指令碼時，需要提供Docker主機、用戶名和密碼。 建立時，您必須提供Docker主機和版本標籤以用於建立。
