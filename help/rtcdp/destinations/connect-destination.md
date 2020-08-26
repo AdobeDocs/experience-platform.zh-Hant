@@ -4,7 +4,7 @@ title: 連線至Adobe即時客戶資料平台中的目的地
 seo-title: 連線至Adobe即時客戶資料平台中的目的地
 description: 本教學課程列出在Adobe即時客戶資料平台中連線目標的步驟
 translation-type: tm+mt
-source-git-commit: 15323134f0c626cad2c4e90b3e1c0662cf7e57dd
+source-git-commit: 4c45da353b1deeb66b0dedb37450158f4bdc2a7c
 workflow-type: tm+mt
 source-wordcount: '126'
 ht-degree: 0%
@@ -17,7 +17,7 @@ ht-degree: 0%
 請依照下列步驟，連線至Adobe即時客戶資料平台中的目的地：
 
 1. 從左側導 **[!UICONTROL 覽列導覽]** 至「目標」。
-2. 在「目 [!UICONTROL 錄](/help/rtcdp/destinations/destinations-workspace.md#catalog) 」頁籤中，選擇要連接的目標。
+2. 在「目 [[!UICONTROL 錄]](/help/rtcdp/destinations/destinations-workspace.md#catalog) 」頁籤中，選擇要連接的目標。
 3. 按 **[!UICONTROL Connect destination]** （連接目標）啟動連接目標嚮導。
 4. 有關如何連接到特定目標的逐步說明，請參閱目標頁。 請參 [閱雲端儲存目標](/help/rtcdp/destinations/cloud-storage-destinations-workflow.md)、電子郵件 [行銷目標](/help/rtcdp/destinations/email-marketing-destinations.md)，以及 [廣告目標](/help/rtcdp/destinations/advertising-destinations.md)。
 
