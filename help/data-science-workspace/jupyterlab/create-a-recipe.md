@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 使用Jupyter筆記型電腦建立配方
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '2292'
 ht-degree: 0%
@@ -30,7 +30,6 @@ ht-degree: 0%
 Recipe Builder  筆記型電腦可讓您在筆記型電腦中執行訓練和計分。 這可讓您在針對訓練和計分資料執行 `train()` 實驗 `score()` 時，靈活地變更其和方法。 一旦您對訓練和計分的輸出感到滿意，就可以建立配方，以便使用筆記型電腦， [!DNL Data Science Workspace] 將配方功能內建在Recipe Builder筆記型電腦上。
 
 >[!NOTE]
->
 >
 >Recipe Builder筆記型電腦支援使用所有檔案格式，但目前「建立方式」功能僅支援 [!DNL Python]。
 
@@ -66,7 +65,7 @@ Recipe Builder  筆記型電腦可讓您在筆記型電腦中執行訓練和計�
 
 ### 需求檔案 {#requirements-file}
 
-需求檔案可用來宣告您想要在配方中使用的其他程式庫。 如果存在相依性，可以指定版本號。 若要尋找其他資料庫，請造訪https://anaconda.org。 已在使用的主要程式庫清單包括：
+需求檔案可用來宣告您想要在配方中使用的其他程式庫。 如果存在相依性，可以指定版本號。 若要尋找其他資料庫，請造訪https://anaconda.org。 已使用的主要程式庫清單包括：
 
 ```JSON
 python=3.5.2
@@ -77,7 +76,6 @@ data_access_sdk_python
 ```
 
 >[!NOTE]
->
 >
 >您新增的程式庫或特定版本可能與上述程式庫不相容。
 
@@ -96,7 +94,7 @@ data_access_sdk_python
 
 ![](../images/jupyterlab/create-recipe/datasets.png)
 
-在 [Adobe Experience Platform的「架構」和「資料集](https://platform.adobe.com/) 」標籤下 **[，可找到相](https://platform.adobe.com/schema)**同的資訊**[](https://platform.adobe.com/dataset/overview)** 。
+在 [Adobe Experience Platform的「架構」和「資料集](https://platform.adobe.com/) 」標籤下 **[，可找到相](https://platform.adobe.com/schema)** 同的資訊 **[](https://platform.adobe.com/dataset/overview)** 。
 
 預設情況下，在訪問資料時會為您設定以下配置參數：
 
@@ -121,7 +119,6 @@ data_access_sdk_python
 - [外部來源](#external-sources)
 
 >[!NOTE]
->
 >
 >在Recipe Builder筆記型電腦中，資料會透過資料載入器 `platform_sdk` 載入。
 
@@ -153,7 +150,6 @@ df = pd.read_json(data)
 
 >[!CAUTION]
 >
->
 > `data_access_sdk_python` 不再建議使用，請參閱「將 [資料存取程式碼轉換為平台SDK](../authoring/platform-sdk.md) 」，以取得有關使用資料載入器 `platform_sdk` 的指南。
 
 使用者可使用資料存取SDK載入資料。 您可加入下列行，將程式庫匯入頁面頂端：
@@ -172,7 +168,6 @@ df = prodreader.load(data_set_id=configProperties['trainingDataSetId'],
 ```
 
 >[!NOTE]
->
 >
 >如「配置文 [件」部分中所述](#configuration-files)，在從中訪問資料時為您設定以下配置參數 [!DNL Experience Platform]:
 > - `ML_FRAMEWORK_IMS_USER_CLIENT_ID`
@@ -213,7 +208,7 @@ dataframe.drop('date', axis=1, inplace=True)
 - 轉換 `storeType` 為指示符變數
 - 轉換 `isHoliday` 為數值變數
 - 抵銷 `weeklySales` 以獲得未來和過去的銷售價值
-- 依日期分割資料至 `train` 資料 `val` 集
+- 依日期分割資料至 `train` 和資 `val` 料
 
 首先， `week` 建立 `year` 列和列，並將原始列 `date` 轉換為日期時 [!DNL Python] 間 [](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.to_datetime.html)。 周值和年值從日期時間對象中提取。
 
@@ -304,11 +299,10 @@ df.dropna(0, inplace=True)
 訓練的目的是使用訓練資料集中的功能和標籤來建立模型。
 
 >[!NOTE]
->
 > 
 >_功能_ ，是指機器學習模型用來預測標籤的輸入變 _數_。
 
-功能 `train()` 應包括訓練模型和返回訓練模型。 scikit-learn使用指南檔案中提供 [了一些不同型號的示例](https://scikit-learn.org/stable/user_guide.html)。
+功能 `train()` 應包括訓練模型和返回訓練模型。 scikit-learn使用指南文檔中提供 [了一些不同型號的示例](https://scikit-learn.org/stable/user_guide.html)。
 
 在選擇您的訓練模型後，您會將x和y訓練資料集符合模型，而函式會傳回已訓練的模型。 顯示此情況的範例如下：
 
