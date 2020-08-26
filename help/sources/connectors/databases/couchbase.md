@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Couchbase連接器
 topic: overview
 translation-type: tm+mt
-source-git-commit: 3b5e76afea5689dbd59f64f6192e6ef2a6acb7d3
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '179'
 ht-degree: 0%
@@ -15,6 +15,7 @@ ht-degree: 0%
 # （測試版）連 [!DNL Couchbase] 接器
 
 >[!NOTE]
+>
 >連接 [!DNL Couchbase] 器為測試版。 如需使用 [測試版標籤連接器的詳細資訊](../../home.md#terms-and-conditions) ，請參閱來源概觀。
 
 Adobe Experience Platform為資料庫提供者(例如MySQL [!DNL Microsoft]和 [!DNL Azure])提供原生連接功能，讓您從這些系統取得資料。 支援不同類型的第三方資料庫，包括關聯式、NoSQL或資料倉庫。 支援資料庫提供者包括 [!DNL Couchbase]。
