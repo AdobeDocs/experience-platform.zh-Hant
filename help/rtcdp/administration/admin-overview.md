@@ -5,7 +5,7 @@ seo-title: 即時CDP管理概述
 description: '本檔案概述由Adobe Experience Platform提供支援的即時客戶資料平台的管理功能。 '
 seo-description: seo說明
 translation-type: tm+mt
-source-git-commit: 15323134f0c626cad2c4e90b3e1c0662cf7e57dd
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '277'
 ht-degree: 0%
@@ -28,6 +28,7 @@ ht-degree: 0%
 若要進一步瞭解存取控制，請參 [閱檔案中的存取控制](../../access-control/home.md)[!DNL Experience Platform] 概觀。
 
 >[!IMPORTANT]
+>
 >有關授予對即時CDP功能的訪問權限（包括啟用UI中的可見性）的詳細指南，請遵循 [access control user guide](../../access-control/ui/overview.md)，尤其是那些用於管理產品配置檔案的詳細資訊和附加服務的步驟。
 
 ## 沙盒
