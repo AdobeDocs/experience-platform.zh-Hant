@@ -4,7 +4,7 @@ solution: Adobe Experience Platform
 title: 描述檔系統工作——即時客戶描述檔API
 topic: guide
 translation-type: tm+mt
-source-git-commit: 73f2c05a0e63f376f7a2f5644133e773980d0b26
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '1420'
 ht-degree: 2%
@@ -17,6 +17,7 @@ ht-degree: 2%
 Adobe Experience Platform可讓您從多個來源擷取資料，並為個別客戶建立強穩的個人檔案。 所吸收的 [!DNL Platform] 資料被儲存在 [!DNL Data Lake] 資料儲存 [!DNL Real-time Customer Profile] 器中。 有時可能需要從描述檔商店刪除資料集或批次，以移除不再需要或錯誤新增的資料。 這需要使 [!DNL Real-time Customer Profile] 用API來建立 [!DNL Profile] 系統工作(也稱為「[!DNL delete request]」)，如有需要，也可加以修改、監視或移除。
 
 >[!NOTE]
+>
 >如果您嘗試從中刪除資料集或批處理 [!DNL Data Lake]，請訪問目錄 [服務概述](../../catalog/home.md) ，以獲得說明。
 
 ## 快速入門
@@ -106,6 +107,7 @@ curl -X GET \
 若要刪除資料集，資料集ID必須包含在POST請求的正文中。 此動作會刪除指定資料集的ALL資料。 [!DNL Experience Platform] 允許您根據記錄和時間序列模式刪除資料集。
 
 >[!CAUTION]
+>
 > 嘗試使用 [!DNL Profile][!DNL Experience Platform] UI刪除已啟用的資料集時，資料集會因擷取而停用，但在使用API建立刪除要求之前，資料集不會刪除。 如需詳細資訊，請參 [閱本文](#appendix) 件附錄。
 
 **API格式**
@@ -159,6 +161,7 @@ curl -X POST \
 若要刪除批，批ID必須包含在POST請求的正文中。 請注意，不能根據記錄結構描述刪除資料集的批處理。 只能刪除基於時間系列方案的資料集的批處理。
 
 >[!NOTE]
+>
 > 無法根據記錄結構描述刪除資料集的批的原因是，記錄類型資料集批會覆蓋以前的記錄，因此無法「撤消」或刪除。 要根據記錄方案消除資料集錯誤批處理的影響，唯一的方法是使用正確的資料重新收錄批，以覆蓋錯誤的記錄。
 
 有關記錄和時間序列行為的更多資訊，請參閱 [概述中有關XDM資料行為](../../xdm/home.md#data-behaviors) 的一 [!DNL XDM System] 節。
@@ -273,7 +276,7 @@ curl -X POST \
 | `status` | 刪除請求的狀態。 Possible values: `"NEW"`, `"PROCESSING"`, `"COMPLETED"`, `"ERROR"`. |
 | `metrics` | 一個陣列，包含已處理的記錄數(`"recordsProcessed"`)和請求已處理的時間（秒），或請求完成所需的時間(`"timeTakenInSec"`)。 |
 
-刪除請求狀態一旦生效， `"COMPLETED"` 您就可以嘗試使用「資料存取API」存取已刪除的資料，以確認資料已被刪除。 有關如何使用Data Access API存取資料集和批次的指示，請參閱 [Data Access檔案](../../data-access/home.md)。
+刪除請求狀態一旦生效， `"COMPLETED"` 您就可以嘗試使用資料存取API存取已刪除的資料，以確認資料已被刪除。 有關如何使用Data Access API存取資料集和批次的指示，請參閱 [Data Access檔案](../../data-access/home.md)。
 
 ## 刪除刪除請求
 
