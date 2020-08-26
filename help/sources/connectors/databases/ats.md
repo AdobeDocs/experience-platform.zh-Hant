@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Azure表格儲存連接器
 topic: overview
 translation-type: tm+mt
-source-git-commit: 3b5e76afea5689dbd59f64f6192e6ef2a6acb7d3
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '219'
 ht-degree: 0%
@@ -15,6 +15,7 @@ ht-degree: 0%
 # （測試版）連 [!DNL Azure Table Storage] 接器
 
 >[!NOTE]
+>
 >連接 [!DNL Azure Table Storage] 器為測試版。 如需使用 [測試版標籤連接器的詳細資訊](../../home.md#terms-and-conditions) ，請參閱來源概觀。
 
 Adobe Experience Platform可讓您從外部來源擷取資料，同時提供您使用服務建構、標示及增強傳入資料的 [!DNL Platform] 能力。 您可以從多種來源（例如Adobe應用程式、雲端儲存空間、資料庫等）擷取資料。
