@@ -4,7 +4,7 @@ solution: Adobe Experience Platform
 title: Edge預測——即時客戶個人檔案API
 topic: guide
 translation-type: tm+mt
-source-git-commit: 38cb8eeae3ac0a1852c59e433d1cacae82b1c6c0
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '1900'
 ht-degree: 2%
@@ -21,6 +21,7 @@ ht-degree: 2%
 本指南中使用的API端點是的一部分 [!DNL Real-time Customer Profile API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml)。 在繼續之前，請先閱讀快速入門 [指南](getting-started.md) ，以取得相關檔案的連結、閱讀本檔案中範例API呼叫的指南，以及成功呼叫任何 [!DNL Experience Platform] API所需之必要標題的重要資訊。
 
 >[!NOTE]
+>
 >包含裝載(POST、PUT、PATCH)的請求需要標 `Content-Type` 頭。 本文檔中 `Content-Type` 使用了多個。 請特別注意範例呼叫中的標題，以確保您對每個請求都使 `Content-Type` 用正確。
 
 ## 投影目的地
@@ -53,6 +54,7 @@ curl -X GET \
 響應包括一個陣 `projectionDestinations` 列，每個目標的詳細資訊顯示為陣列內的單個對象。 如果尚未配置任何投影，則陣 `projectionDestinations` 列返回空。
 
 >[!NOTE]
+>
 >此回應已縮短，僅顯示兩個目標。
 
 ```json
@@ -122,6 +124,7 @@ POST /config/destinations
 下列請求會建立新的邊緣目的地。
 
 >[!NOTE]
+>
 >建立目的地的POST要求需要特定的標 `Content-Type` 題，如下所示。 使用錯誤 `Content-Type` 的標題會導致HTTP狀態415（不支援的媒體類型）錯誤。
 
 ```shell
@@ -227,6 +230,7 @@ curl -X GET \
 通過向端點發出PUT請求並在請求路 `/config/destinations` 徑中包括要更新的目標的ID，可以更新現有目標。 此操作實質上 _是重寫目標_ ，因此，在建立新目標時，必須在請求主體中提供與建立新目標相同的屬性。
 
 >[!CAUTION]
+>
 >API對更新請求的回應是立即的，不過，對預測的變更會以非同步方式套用。 換言之，對目標的定義進行更新和應用更新之間存在時間差。
 
 **API格式**
@@ -244,6 +248,7 @@ PUT /config/destinations/{DESTINATION_ID}
 下列請求會更新現有目的地以包含第二位置(`dataCenters`)。
 
 >[!IMPORTANT]
+>
 >PUT請求需要特定的標 `Content-Type` 題，如下所示。 使用錯誤 `Content-Type` 的標題會導致HTTP狀態415（不支援的媒體類型）錯誤。
 
 ```shell
@@ -295,6 +300,7 @@ curl -X PUT \
 如果您的組織不再需要投影目的地，則可透過向端點提出DELETE請求並在請求路徑中包含您要刪除之目的地的 `/config/destinations` ID來刪除它。
 
 >[!CAUTION]
+>
 >刪除請求的API回應是立即回應，但是邊緣上資料的實際變更會非同步進行。 換言之，描述檔資料將從所有邊緣(在投影目的 `dataCenters` 地中指定)中移除，但處理將需要時間完成。
 
 **API格式**
@@ -345,6 +351,7 @@ GET /config/projections?schemaName={SCHEMA_NAME}&name={PROJECTION_NAME}
 | `{PROJECTION_NAME}` | 要訪問的投影配置的名稱。 |
 
 >[!NOTE]
+>
 >`schemaName` 是使用參數時的必 `name` 要值，因為投影配置名稱在模式類的上下文中是唯一的。
 
 **請求**
@@ -429,6 +436,7 @@ POST /config/projections?schemaName={SCHEMA_NAME}
 **請求**
 
 >[!NOTE]
+>
 >建立設定的POST要求需要特定的標 `Content-Type` 題，如下所示。 使用錯誤 `Content-Type` 的標題會導致HTTP狀態415（不支援的媒體類型）錯誤。
 
 ```shell
@@ -506,6 +514,7 @@ curl -X POST \
    * 上述範例等同於 `addresses.type,addresses.city.country`。
 
 >[!NOTE]
+>
 >支援點記號和括弧記號來引用子欄位。 但是，使用點標籤法是最佳做法，因為它更簡明，並提供欄位階層的更佳圖示。
 
 * 選取器中的每個欄位都會指定為回應的根。
@@ -610,6 +619,7 @@ curl -X POST \
 ```
 
 >[!NOTE]
+>
 >每當傳回巢狀欄位時，投影就會包含封閉的父物件。 除非已明確選取父欄位，否則父欄位不包括任何其他子欄位。
 
 **地址（類型，城市）**
