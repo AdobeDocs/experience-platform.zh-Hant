@@ -4,15 +4,15 @@ seo-title: Adobe Experience Platform網頁SDK常見問答集
 description: 有關Adobe Experience Platform Web SDK的常見問題
 seo-description: 有關Adobe Experience Platform Web SDK的常見問題
 translation-type: tm+mt
-source-git-commit: 8cd9c52acd981c92d3959e12d91ebb65b2c3cec8
+source-git-commit: f51513e66945c41d06f12f4ac8f05ddad0d32898
 workflow-type: tm+mt
-source-wordcount: '1684'
+source-wordcount: '1679'
 ht-degree: 2%
 
 ---
 
 
-# Adobe Experience Platform Web SDK常見問題
+# 常見問題集
 
 本常見問答集包含Adobe Web SDK/
 
