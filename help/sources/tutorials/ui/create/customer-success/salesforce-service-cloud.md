@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 在UI中建立Salesforce Service Cloud來源連接器
 topic: overview
 translation-type: tm+mt
-source-git-commit: 6bd5dc5a68fb2814ab99d43b34f90aa7e50aa463
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '476'
 ht-degree: 1%
@@ -15,9 +15,10 @@ ht-degree: 1%
 # 在UI中 [!DNL Salesforce Service Cloud] 建立來源連接器
 
 >[!NOTE]
+>
 >連接 [!DNL Salesforce Service Cloud] 器為測試版。 如需使用 [測試版標籤連接器的詳細資訊](../../../../home.md#terms-and-conditions) ，請參閱來源概觀。
 
-Adobe Experience Platform中的來源連接器可讓您依計畫吸收外部來源的資料。 本教程提供使用用戶 [!DNL Salesforce Service Cloud] 介面建立源連接器（下稱「SSC」）的 [!DNL Platform] 步驟。
+Adobe Experience Platform中的來源連接器可讓您依計畫吸收外部來源的資料。 本教程提供使用用戶 [!DNL Salesforce Service Cloud] 介面建立源連接器（以下稱為「SSC」）的 [!DNL Platform] 步驟。
 
 ## 快速入門
 
@@ -26,7 +27,7 @@ Adobe Experience Platform中的來源連接器可讓您依計畫吸收外部來�
 * [[!DNL Experience Data Model] (XDM)系統](../../../../../xdm/home.md):組織客戶體驗資料 [!DNL Experience Platform] 的標準化架構。
    * [架構構成基礎](../../../../../xdm/schema/composition.md):瞭解XDM架構的基本建置區塊，包括架構組合的主要原則和最佳實務。
    * [架構編輯器教程](../../../../../xdm/tutorials/create-schema-ui.md):瞭解如何使用架構編輯器UI建立自訂架構。
-* [[!DNL 即時客戶基本資料]](../../../../../profile/home.md):根據來自多個來源的匯整資料，提供統一、即時的消費者個人檔案。
+* [[!DNL即時客戶基本資料]](../../../../../profile/home.md):根據來自多個來源的匯整資料，提供統一、即時的消費者個人檔案。
 
 如果您已經有有效的SSC連接，則可以跳過本文檔的其餘部分並繼續有關配置資料 [流的教程](../../dataflow/customer-success.md)
 
