@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 使用Flow Service API建立Phoenix連接器
 topic: overview
 translation-type: tm+mt
-source-git-commit: fc5cdaa661c47e14ed5412868f3a54fd7bd2b451
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '625'
 ht-degree: 1%
@@ -15,6 +15,7 @@ ht-degree: 1%
 # 使用 [!DNL Phoenix] API建立連 [!DNL Flow Service] 接器
 
 >[!NOTE]
+>
 >連接 [!DNL Phoenix] 器為測試版。 如需使用 [測試版標籤連接器的詳細資訊](../../../../home.md#terms-and-conditions) ，請參閱來源概觀。
 
 [!DNL Flow Service] 用於收集和集中Adobe Experience Platform內不同來源的客戶資料。 該服務提供用戶介面和REST風格的API，所有支援的源都可從中連接。
@@ -54,7 +55,7 @@ ht-degree: 1%
 
 若要呼叫API，您必 [!DNL Platform] 須先完成驗證教 [學課程](../../../../../tutorials/authentication.md)。 完成驗證教學課程後，將提供所有 [!DNL Experience Platform] API呼叫中每個必要標題的值，如下所示：
 
-* 授權： 生產者 `{ACCESS_TOKEN}`
+* 授權：生產者 `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
 * x-gw-ims-org-id: `{IMS_ORG}`
 
@@ -111,7 +112,7 @@ curl -X POST \
 
 | 屬性 | 說明 |
 | --------- | ----------- |
-| `auth.params.host` | 伺服器的主 [!DNL Phoenix] 機。 |
+| `auth.params.host` | The host of the [!DNL Phoenix] server. |
 | `auth.params.username` | 與您的連線相關聯的使用 [!DNL Phoenix] 者名稱。 |
 | `auth.params.password` | 與您的連線相關聯的 [!DNL Phoenix] 密碼。 |
 | `auth.params.port` | 連接的TCP端 [!DNL Phoenix] 口。 |
