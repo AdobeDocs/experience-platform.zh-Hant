@@ -5,7 +5,7 @@ solution: Experience Platform
 title: 流量執行通知
 topic: overview
 translation-type: tm+mt
-source-git-commit: b5b785d8415c15e3acb9e1155811a66c51477717
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '871'
 ht-degree: 1%
@@ -27,8 +27,8 @@ Adobe Experience Platform可讓您從外部來源擷取資料，同時提供您�
 
 本檔案需要對Adobe Experience Platform的下列元件有正確的認識：
 
-* [[!DNL 體驗資料模型(XDM)系統]](../xdm/home.md):組織客戶體驗資料 [!DNL Experience Platform] 的標準化架構。
-* [[!DNL 即時客戶基本資料]](../profile/home.md):根據來自多個來源的匯整資料，提供統一、即時的消費者個人檔案。
+* [[!DNL體驗資料模型(XDM)系統]](../xdm/home.md):組織客戶體驗資料 [!DNL Experience Platform] 的標準化架構。
+* [[!DNL即時客戶基本資料]](../profile/home.md):根據來自多個來源的匯整資料，提供統一、即時的消費者個人檔案。
 * [[!DNL Adobe Experience Platform資料擷取]](../ingestion/home.md): [!DNL Data Ingestion] 表示從這些來源 [!DNL Platform] 擷取資料的多種方法，以及該資料在下游服務中 [!DNL Data Lake] 的保存方 [!DNL Platform] 式。
 
 本檔案也要求您瞭解網頁勾點，以及如何將網頁勾點從一個應用程式連接至另一個應用程式。 如需網頁勾 [選的詳細資訊](https://requestbin.com/blog/working-with-webhooks/) ，請參閱下列檔案。
@@ -44,6 +44,7 @@ Adobe Experience Platform可讓您從外部來源擷取資料，同時提供您�
 取得唯一的網頁掛接URL後，請前往 [Adobe I/O Events](https://www.adobe.io/apis/experienceplatform/events.html) ，並依照資料擷取通知檔案中 [](../ingestion/quality/subscribe-events.md) 概述的步驟開始訂閱事件。
 
 >[!IMPORTANT]
+>
 >在訂閱程式中，請確定您選擇 [!DNL Platform] 通知作為事件提供者，並選取下列事件訂閱：
 >
 >* **[!UICONTROL Experience Platform來源的流程運行成功]**
@@ -55,11 +56,12 @@ Adobe Experience Platform可讓您從外部來源擷取資料，同時提供您�
 
 ## 接收流量執行通知
 
-連接網頁掛接並完成事件訂閱後，您就可以透過網頁掛接控制面板開始接收流量執行通知。
+連線網頁掛接並完成事件訂閱後，您就可以開始透過網頁掛接控制面板接收流量執行通知。
 
 通知會傳回執行的擷取工作數、檔案大小和錯誤等資訊。 通知也會傳回與您以JSON格式執行的流程相關聯的裝載。 響應有效負載可分類為 `sources_flow_run_success` 或 `sources_flow_run_failure`。
 
 >[!IMPORTANT]
+>
 >如果在流建立過程中啟用了部分提取，則僅當錯誤數低於在流建立過程中設定的錯誤閾值百分比時， `sources_flow_run_success` 包含成功和失敗提取的流才會被標籤為。 如果成功的流運行包含錯誤，這些錯誤仍將作為返回裝載的一部分被包括在內。
 
 ### 成功
@@ -322,6 +324,7 @@ Adobe Experience Platform可讓您從外部來源擷取資料，同時提供您�
 | `fileInfo` | URL，可導致成功和未成功收錄檔案的概述。 |
 
 >[!NOTE]
+>
 >有關錯誤 [消息的詳細資訊](#errors) ，請參見附錄。
 
 ## 後續步驟
