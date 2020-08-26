@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 使用Flow Service API建立SFTP連接器
 topic: overview
 translation-type: tm+mt
-source-git-commit: 11431ffcfc2204931fe3e863bfadc7878a40b49c
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '543'
 ht-degree: 2%
@@ -15,6 +15,7 @@ ht-degree: 2%
 # 使用 [!DNL Flow Service] API建立SFTP連接器
 
 >[!NOTE]
+>
 >SFTP連接器為測試版。 功能和檔案可能會有所變更。 如需使用 [測試版標籤連接器的詳細資訊](../../../../home.md#terms-and-conditions) ，請參閱來源概觀。
 
 [!DNL Flow Service] 用於收集和集中Adobe Experience Platform內不同來源的客戶資料。 該服務提供用戶介面和REST風格的API，所有支援的源都可從中連接。
@@ -50,7 +51,7 @@ ht-degree: 2%
 
 若要呼叫API，您必 [!DNL Platform] 須先完成驗證教 [學課程](../../../../../tutorials/authentication.md)。 完成驗證教學課程後，將提供所有 [!DNL Experience Platform] API呼叫中每個必要標題的值，如下所示：
 
-* 授權： 生產者 `{ACCESS_TOKEN}`
+* 授權：生產者 `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
 * x-gw-ims-org-id: `{IMS_ORG}`
 
@@ -106,7 +107,7 @@ curl -X POST \
 
 **回應**
 
-成功的響應返回新建立的連`id`接的唯一標識符()。 在下一個教學課程中，瀏覽您的SFTP伺服器時需要此ID。
+成功的響應返回新建立的連接的`id`唯一標識符()。 在下一個教學課程中，瀏覽您的SFTP伺服器時需要此ID。
 
 ```json
 {
