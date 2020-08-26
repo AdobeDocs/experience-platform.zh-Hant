@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 即時機器學習概觀
 topic: Overview
 translation-type: tm+mt
-source-git-commit: 1e5526b54f3c52b669f9f6a792eda0abfc711fdd
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '504'
 ht-degree: 1%
@@ -15,6 +15,7 @@ ht-degree: 1%
 # 即時機器學習概觀(Alpha)
 
 >[!IMPORTANT]
+>
 >目前尚未針對所有使用者提供即時機器學習。 此功能是alpha版，仍在測試中。 本檔案可能會有所變更。
 
 即時機器學習功能可大幅提升數位體驗內容對使用者的相關性。 這可透過在上運用即時參考和持續學習來實現 [!DNL Experience Edge]。
@@ -58,6 +59,7 @@ ht-degree: 1%
 即時機器學習目前採用alpha版。 以下概述的功能可能會隨著更多功能和節點的提供而改變。
 
 >[!NOTE]
+>
 > Alpha限制：
 > - 目前僅支援基於ONNX的型號。
 > - 節點中使用的函式無法序列化。 例如，Apcots節點中使用的lambda函式。
