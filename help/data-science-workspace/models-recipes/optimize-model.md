@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 最佳化模型
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 38cb8eeae3ac0a1852c59e433d1cacae82b1c6c0
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
-source-wordcount: '1219'
+source-wordcount: '1221'
 ht-degree: 0%
 
 ---
@@ -28,7 +28,7 @@ ht-degree: 0%
 
 目前，Model Insights Framework支援下列執行時期：
 - [斯卡拉](#scala)
-- [!DNL Python/Tensorflow](#pythontensorflow)
+- [Python/Tensorflow](#pythontensorflow)
 - [R](#r)
 
 配方的范常式式碼可在 [experience-platform-dsw-reference儲存庫的下方找到](https://github.com/adobe/experience-platform-dsw-reference)`recipes`。 本教程將引用此儲存庫中的特定檔案。
