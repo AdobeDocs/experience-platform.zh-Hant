@@ -5,7 +5,7 @@ description: 使用Experience Platform Web SDK收集資料的快速入門手冊
 seo-description: 使用Experience Platform Web SDK收集資料的快速入門手冊
 keywords: 1st-party domain;CNAME;schema;create schema;configuration id;configuration tool;data element;create data element;XDM Object;sendEvent;send Event;install sdk;install web sdk;configure;configure web sdk;
 translation-type: tm+mt
-source-git-commit: 8c256b010d5540ea0872fa7e660f71f2903bfb04
+source-git-commit: 7aa0e654300f10db774794d66ece9d0d040cb2ba
 workflow-type: tm+mt
 source-wordcount: '517'
 ht-degree: 5%
@@ -51,7 +51,7 @@ ht-degree: 5%
   function(i,l){n[o].q.push([i,l,u])})},n[o].q=[])})}
   (window,["alloy"]);
 </script>
-<script src="https://cdn1.adoberesources.net/alloy/1.0.0/alloy.min.js" async></script>
+<script src="https://cdn1.adoberesources.net/alloy/2.1.0/alloy.min.js" async></script>
 ```
 
 如需執行此動作之不同選項的詳細資訊，請參 [閱安裝SDK](../fundamentals/installing-the-sdk.md)。
