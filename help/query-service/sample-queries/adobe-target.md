@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 範例查詢
 topic: queries
 translation-type: tm+mt
-source-git-commit: 7b07a974e29334cde2dee7027b9780a296db7b20
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '227'
 ht-degree: 2%
@@ -17,6 +17,7 @@ ht-degree: 2%
 來自Adobe Target的資料會轉換為Experience Event XDM架構，並作為資料集 [!DNL Experience Platform] 加入您。 此資料有許多使用 [!DNL Query Service] 案例，下列範例查詢應適用於您的Adobe Target資料集。
 
 >[!NOTE]
+>
 >在以下範例中，您需要編輯SQL，以根據您想要評估的資料集、變數或時間範圍，填寫您查詢的預期參數。 在SQL中查看的任何位 `{ }` 置都提供參數。
 
 ## Target資料來源的標準資料集名稱，位於 [!DNL Platform]:
