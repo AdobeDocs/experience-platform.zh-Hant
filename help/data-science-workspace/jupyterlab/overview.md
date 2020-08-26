@@ -5,7 +5,7 @@ title: JupyterLab使用指南
 topic: Overview
 description: JupyterLab是Project Jupyter的網路使用者介面，並與Adobe Experience Platform緊密整合。 它為資料科學家提供互動式開發環境，以便與Jupyter筆記型電腦、程式碼和資料搭配使用。
 translation-type: tm+mt
-source-git-commit: 38cb8eeae3ac0a1852c59e433d1cacae82b1c6c0
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '3684'
 ht-degree: 11%
@@ -49,7 +49,7 @@ Experience Platform的JupyterLab整合隨附架構變更、設計考量、自訂
 
 >[!NOTE]
 >
->上的 [!DNL Platform] 某些服務整合 [!DNL JupyterLab] 僅限於特定內核。 有關詳細資訊，請參 [閱](#kernels) 「內核」部分。
+>上的 [!DNL Platform] 某些服務整合 [!DNL JupyterLab] 僅限於特定內核。 有關詳細資訊，請參 [閱](#kernels) 「內核」一節。
 
 ## 主要功能與常用作業
 
@@ -237,6 +237,7 @@ Experience Platform的JupyterLab整合隨附架構變更、設計考量、自訂
 在 [!DNL JupyterLab] 中，選擇右上角的齒輪表徵圖以開啟「筆記本」( *Notebook)伺服器配置*。 您可以使用滑桿來切換GPU並分配所需的記憶體量。 可分配的記憶體量取決於您的組織已布建的記憶體量。 選擇 **[!UICONTROL 更新要保存]** 的配置。
 
 >[!NOTE]
+>
 >每個組織只為筆記型電腦配置一個GPU。 如果GPU正在使用中，您需要等待目前已保留GPU的使用者釋放它。 若要這麼做，請登出或讓GPU處於閒置狀態達4小時以上。
 
 ![](../images/jupyterlab/user-guide/notebook-gpu-config.png)
@@ -425,6 +426,7 @@ dataFrame.show()
 ```
 
 >[!TIP]
+>
 >在Scala中，可以使 `sys.env()` 用在中聲明和返回值 `option`。
 
 ### 在PySpark 3([!DNL Spark] 2.4)筆記型電腦中使用%dataset魔術 {#magic}
@@ -604,9 +606,7 @@ timedf.show()
 
 >[!TIP]
 >
->
 >在Scala中，可以使 `sys.env()` 用在中聲明和返回值 `option`。 如此，若您知道變數只會在單次使用，就不需要定義變數。 以下示例從 `val userToken` 上述示例中取得，並聲明它為 `option` 替代項：
->
 > 
 ```scala
 > .option("user-token", sys.env("PYDASDK_IMS_USER_TOKEN"))
@@ -728,9 +728,9 @@ timedf.show()
 | 接骨 | 0.19.1 |
 | 發癢 | 1.3.3 |
 | statmodels | 0.8.0 |
-| kit | 4.0.30.44 |
+| 彈性 | 4.0.30.44 |
 | py-xgboost | 0.60 |
-| 彈性 | 3.1.0 |
+| opencv | 3.1.0 |
 | pyarrow | 0.8.0 |
 | boto3 | 1.5.18 |
 | azure-storage-blob | 1.4.0 |
