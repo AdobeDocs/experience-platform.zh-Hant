@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 即時機器學習筆記型電腦使用指南
 topic: Training and scoring a ML model
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '1637'
 ht-degree: 0%
@@ -15,6 +15,7 @@ ht-degree: 0%
 # 即時機器學習筆記型電腦使用指南(Alpha)
 
 >[!IMPORTANT]
+>
 >目前尚未針對所有使用者提供即時機器學習。 此功能是alpha版，仍在測試中。 本檔案可能會有所變更。
 
 以下指南概述建立即時機器學習應用程式所需的步驟。 本指南使用Adobe提供的 **[!UICONTROL Real-time ML]** Python筆記型電腦範本，涵蓋模型訓練、建立DSL、將DSL發佈至Edge，以及計分要求。 當您透過實作即時機器學習模型進行時，您應根據資料集的需求修改範本。
@@ -34,6 +35,7 @@ ht-degree: 0%
 首先，導入模型的所有必需包。 請務必匯入您計畫用於節點編寫的任何套件。
 
 >[!NOTE]
+>
 >您的匯入清單可能會因您想要建立的模型而異。 隨著新節點的不斷添加，此清單將會發生變化。 請參閱節點參 [考指南](./node-reference.md) ，以取得可用節點的完整清單。
 
 ```python
@@ -80,6 +82,7 @@ pprint(nf.discover_nodes())
 首先，載入您的訓練資料。
 
 >[!NOTE]
+>
 >在「即 **時ML** 」範本中， [會從中擷取汽車保險CSV資料集](https://github.com/adobe/experience-platform-dsw-reference/tree/master/datasets/insurance)[!DNL Github]。
 
 ![載入傳輸資料](../images/rtml/load_training.png)
@@ -116,6 +119,7 @@ config_properties = {
 需 *[!UICONTROL 要修改即時ML]* 范 ** 本資料轉換儲存格，才能搭配您自己的資料集運作。 這通常涉及重新命名欄、資料統計以及資料準備／功能工程。
 
 >[!NOTE]
+>
 >以下範例已經過壓縮，以利於可讀性 `[ ... ]`。 請檢視並展開完整 *程式碼儲存格的即時ML* 範本資料轉換區段。
 
 ```python
@@ -240,6 +244,7 @@ model.generate_onnx_resources()
 ```
 
 >[!NOTE]
+>
 >更改 `model_path` 字串值(`model.onnx`)以更改模型的名稱。
 
 ```python
@@ -247,6 +252,7 @@ model_path = "model.onnx"
 ```
 
 >[!NOTE]
+>
 >以下儲存格不可編輯或刪除，您的即時機器學習應用程式必須有此儲存格才能運作。
 
 ```python
@@ -275,12 +281,12 @@ print("Model ID : ", model_id)
 
 >[!IMPORTANT]
 >
->
 >必須使用ONNX節點。 如果沒有ONNX節點，應用程式將不成功。
 
 ### 節點製作
 
 >[!NOTE]
+>
 > 您可能會根據使用的資料類型擁有多個節點。 以下示例僅概述即時ML模 *板中的單個節點* 。 請檢視完整 *程式碼儲存格的「即時ML* 范 *本節點製作* 」區段。
 
 下面的Apcotis節點 `"import": "map"` 將方法名稱作為字串輸入到參數中，然後輸入參數作為映射函式。 以下範例使用執行此動作 `{'arg': {'dataLayerNull': 'notgiven', 'no': 'no', 'yes': 'yes', 'notgiven': 'notgiven'}}`。 在對應到位後，您可以選擇設 `inplace` 為 `True` 或 `False`。 設 `inplace` 置為 `True` 或 `False` 基於是否要就地應用轉換。 預設情 `"inplace": False` 況下，建立新列。 對提供新欄名稱的支援已設定為在後續版本中新增。 最後一行 `cols` 可以是單欄名稱或欄清單。 指定要應用轉換的列。 在此示例中 `leasing` 指定。 有關可用節點以及如何使用這些節點的詳細資訊，請訪問節 [點參考指南](./node-reference.md)。
@@ -326,6 +332,7 @@ nodes = [json_df_node,
 接著，將節點與邊連接。 每個元組都是一 [!DNL Edge] 個連接。
 
 >[!TIP]
+>
 > 由於節點彼此線性相依（每個節點都取決於前一個節點的輸出），因此您可以使用簡單的Python清單理解來建立連結。 如果節點依賴多個輸入，請添加您自己的連接。
 
 ```python
@@ -346,11 +353,13 @@ pprint(json.loads(dsl))
 ## 發佈至Edge(Hub)
 
 >[!NOTE]
+>
 >即時機器學習會暫時部署至Adobe Experience Platform Hub並由其管理。 如需其他詳細資訊，請造訪「即時機器學 [習」架構的概觀章節](./home.md#architecture)。
 
 現在您已建立DSL圖形，您可將圖形部署至 [!DNL Edge]。
 
 >[!IMPORTANT]
+>
 >不要經常發佈， [!DNL Edge] 這可能會使節點過載 [!DNL Edge] 。 不建議多次發佈相同模型。
 
 ```python
@@ -365,6 +374,7 @@ print(f'Service ID: {service_id}')
 如果您不需要更新DSL，可跳至計 [分](#scoring)。
 
 >[!NOTE]
+>
 >只有當您想要更新已發佈至Edge的現有DSL時，才需要下列儲存格。
 
 您的模型可能會持續發展。 與其建立全新服務，您不如使用新模型更新現有服務。 您可以定義要更新的節點、為其指派新ID，然後將新DSL重新上傳到 [!DNL Edge]。
@@ -402,6 +412,7 @@ print(f'Updated dsl: {updated_dsl}')
 發佈至後， [!DNL Edge]計分會由用戶端的POST要求來完成。 通常，這可以從需要ML分數的用戶端應用程式完成。 您也可以從郵遞員處完成。 即 *[!UICONTROL 時ML範本使用EdgeUtils]* 來示範此程式。
 
 >[!NOTE]
+>
 >在開始計分之前，需要較短的處理時間。
 
 ```python
@@ -448,6 +459,7 @@ print(services)
 ## 從（可選）刪除已部署的應用程 [!DNL Edge] 式或服務ID
 
 >[!CAUTION]
+>
 >此儲存格用於刪除已部署的Edge應用程式。 請勿使用下列儲存格，除非您需要刪除已部署的應用程 [!DNL Edge] 式。
 
 ```python
