@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Azure檔案儲存連接器
 topic: overview
 translation-type: tm+mt
-source-git-commit: 340f5d0611e9e9eb4676018ee10c8a8aa08dbb2d
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '223'
 ht-degree: 0%
@@ -15,6 +15,7 @@ ht-degree: 0%
 # （測試版）Azure檔案儲存連接器
 
 >[!NOTE]
+>
 >Azure檔案儲存連接器正在測試中。 如需使用 [測試版標籤連接器的詳細資訊](../../home.md#terms-and-conditions) ，請參閱來源概觀。
 
 Adobe Experience Platform為AWS等雲端提供商提供原生連接 [!DNL Google Cloud Platform]功能 [!DNL Azure]，讓您能夠從這些系統中取得資料。
