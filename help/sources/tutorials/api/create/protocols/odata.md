@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 使用Flow Service API建立通用OData連接器
 topic: overview
 translation-type: tm+mt
-source-git-commit: fc5cdaa661c47e14ed5412868f3a54fd7bd2b451
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '525'
 ht-degree: 2%
@@ -15,6 +15,7 @@ ht-degree: 2%
 # 使用 [!DNL Generic OData] API建立連 [!DNL Flow Service] 接器
 
 >[!NOTE]
+>
 >連接 [!DNL Generic OData] 器為測試版。 如需使用 [測試版標籤連接器的詳細資訊](../../../../home.md#terms-and-conditions) ，請參閱來源概觀。
 
 [!DNL Flow Service] 用於收集和集中Adobe Experience Platform內不同來源的客戶資料。 該服務提供用戶介面和REST風格的API，所有支援的源都可從中連接。
@@ -49,7 +50,7 @@ ht-degree: 2%
 
 若要呼叫API，您必 [!DNL Platform] 須先完成驗證教 [學課程](../../../../../tutorials/authentication.md)。 完成驗證教學課程後，將提供所有 [!DNL Experience Platform] API呼叫中每個必要標題的值，如下所示：
 
-* 授權： 生產者 `{ACCESS_TOKEN}`
+* 授權：生產者 `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
 * x-gw-ims-org-id: `{IMS_ORG}`
 
@@ -101,7 +102,7 @@ curl -X POST \
 
 | 屬性 | 說明 |
 | --------- | ----------- |
-| `auth.params.url` | 伺服器的主 [!DNL OData] 機。 |
+| `auth.params.url` | The host of the [!DNL OData] server. |
 | `connectionSpec.id` | 連 [!DNL OData] 接規範ID: `8e6b41a8-d998-4545-ad7d-c6a9fff406c3`. |
 
 **回應**
