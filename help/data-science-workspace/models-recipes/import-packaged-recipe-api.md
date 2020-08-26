@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 匯入封裝的方式(API)
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 4b0f0dda97f044590f55eaf75a220f631f3313ee
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '955'
 ht-degree: 2%
@@ -33,13 +33,13 @@ ht-degree: 2%
 
 本教學課程需要以Docker URL格式封裝的配方檔案。 請依照「 [封裝來源檔案」教學課程](./package-source-files-recipe.md) ，建立封裝的「配方」檔案或提供您自己的「配方」檔案。
 
-- `{DOCKER_URL}`: 智慧服務的Docker影像的URL位址。
+- `{DOCKER_URL}`:智慧服務的Docker影像的URL位址。
 
 本教學課程要求您完成「 [Adobe Experience Platform驗證」教學課程](../../tutorials/authentication.md) ，才能成功呼叫 [!DNL Platform] API。 完成驗證教學課程後，將提供所有 [!DNL Experience Platform] API呼叫中每個必要標題的值，如下所示：
 
-- `{ACCESS_TOKEN}`: 驗證後提供的您特定的載體Token值。
-- `{IMS_ORG}`: 您的IMS組織認證可在您獨特的Adobe Experience Platform整合中找到。
-- `{API_KEY}`: 您獨特的Adobe Experience Platform整合中提供您的特定API金鑰價值。
+- `{ACCESS_TOKEN}`:驗證後提供的您特定的載體Token值。
+- `{IMS_ORG}`:您的IMS組織認證可在您獨特的Adobe Experience Platform整合中找到。
+- `{API_KEY}`:您獨特的Adobe Experience Platform整合中提供您的特定API金鑰價值。
 
 ## 建立引擎
 
@@ -50,6 +50,7 @@ ht-degree: 2%
 若要建立具有儲存在Docker容器中之封裝配方檔案的引擎，您必須為封裝配方檔案提供Docker URL。
 
 >[!CAUTION]
+>
 > 如果您使用或 [!DNL Python] R使用下列請求。 如果您使用PySpark或Scala，請使用位於Python/R範例下方的PySpark/Scala請求範例。
 
 **API格式**
@@ -126,7 +127,7 @@ curl -X POST \
 | `name` | 引擎的所需名稱。 與此引擎對應的配方將繼承此值，並以配方名稱顯示在UI中。 |
 | `description` | 引擎的選用說明。 與此引擎對應的方式將繼承此值，並以方式說明的形式顯示在UI中。 此為必要屬性。如果您不想提供說明，請將其值設為空字串。 |
 | `type` | 引擎的執行類型。 此值對應於Docker影像建立在&quot;PySpark&quot;上的語言。 |
-| `mlLibrary` | 建立PySpark和Scala配方的引擎時所需的欄位。 |
+| `mlLibrary` | 建立PySpark和Scala配方引擎時所需的欄位。 |
 | `artifacts.default.image.location` | 由Docker URL連結到的Docker映像的位置。 |
 | `artifacts.default.image.executionType` | 引擎的執行類型。 此值與Docker影像建立在&quot;Spark&quot;上的語言相對應。 |
 
@@ -163,7 +164,7 @@ curl -X POST \
 | `name` | 引擎的所需名稱。 與此引擎對應的配方將繼承此值，並以配方名稱顯示在UI中。 |
 | `description` | 引擎的選用說明。 與此引擎對應的方式將繼承此值，並以方式說明的形式顯示在UI中。 此為必要屬性。如果您不想提供說明，請將其值設為空字串。 |
 | `type` | 引擎的執行類型。 此值與Docker影像建立在&quot;Spark&quot;上的語言相對應。 |
-| `mlLibrary` | 建立PySpark和Scala配方的引擎時所需的欄位。 |
+| `mlLibrary` | 建立PySpark和Scala配方引擎時所需的欄位。 |
 | `artifacts.default.image.location` | 由Docker URL連結到的Docker映像的位置。 |
 | `artifacts.default.image.executionType` | 引擎的執行類型。 此值與Docker影像建立在&quot;Spark&quot;上的語言相對應。 |
 
