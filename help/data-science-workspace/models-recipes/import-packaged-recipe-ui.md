@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 匯入封裝的方式(UI)
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '1760'
 ht-degree: 0%
@@ -131,12 +131,14 @@ ht-degree: 0%
 ![配置工作流](../images/models-recipes/import-package-ui/configure-workflow.png)
 
 >[!NOTE]
+>
 > 在「將 [來源檔案封裝為配方」教學課程中](./package-source-files-recipe.md) ，使用Python來源檔案建立零售銷售配方時，會提供Docker URL。
 
-在「選擇來源 *」頁上，將與使用來源檔案建立的封裝方式對應的Docker URL貼到「來源URL」欄位中，* 即可貼到「 [!DNL Python] 來源URL **** 」欄位中。 接著，透過拖放方式匯入提供的設定檔案，或使用檔案系統瀏 **覽器**。 可在中找到提供的配置檔案 `experience-platform-dsw-reference/recipes/python/retail/retail.config.json`。 在「 **[!UICONTROL Runtime]** 」下拉式清單中選取「 *Python* 」，並在「 **[!UICONTROL Type]** ** Drop」中選取「Classification」。 一切填妥後，按一下右 **[!UICONTROL 上角的]** 「下一步」，繼續 *管理結構*。
+在「選擇來源 *」頁上，將與使用來源檔案建立的封裝方式對應的Docker URL貼到「來源URL」欄位中，* 即可貼到「 [!DNL Python] 來源URL **** 」欄位中。 接著，透過拖放方式匯入提供的設定檔案，或使用檔案系統瀏 **覽器**。 可在中找到提供的配置檔案 `experience-platform-dsw-reference/recipes/python/retail/retail.config.json`。 在「 **[!UICONTROL Runtime]** 」下拉式清單中選取「 *Python* 」，並在「 **[!UICONTROL Type]** ** Drop」中選取「分類」。 一切填妥後，按一下右 **[!UICONTROL 上角的]** 「下一步」，繼續 *管理結構*。
 
 >[!NOTE]
-> *類型&#x200B;*支援&#x200B;**[!UICONTROL 分類]**和&#x200B;**[!UICONTROL 回歸]**。 如果模型未落在其中一種類型下，請選擇「自&#x200B;**[!UICONTROL 訂」]**。
+>
+> *類型* 支援 **[!UICONTROL 分類]** 和 **[!UICONTROL 回歸]**。 如果模型未落在其中一種類型下，請選擇「自 **[!UICONTROL 訂」]**。
 
 ![](../images/models-recipes/import-package-ui/recipe_source_python.png)
 
@@ -163,12 +165,14 @@ ht-degree: 0%
 ![配置工作流](../images/models-recipes/import-package-ui/configure-workflow.png)
 
 >[!NOTE]
+>
 > 在將來 [源檔案打包到配方教程中](./package-source-files-recipe.md) ，在使用R源檔案構建零售銷售配方的結束處提供了Docker URL。
 
 在「選擇源 *」頁上，將與使用R源檔案構建的打包方式對應的Docker URL貼上到「源URL」* 欄位中 **** 。 接著，透過拖放方式匯入提供的設定檔案，或使用檔案系統瀏 **覽器**。 可在中找到提供的配置檔案 `experience-platform-dsw-reference/recipes/R/Retail\ -\ GradientBoosting/retail.config.json`。 在「 **[!UICONTROL Runtime]** 」下拉式清單中選取「R *」，在「Type* **[!UICONTROL drop」中選取「Classification]**** 」。 一切填妥後，按一下右 **[!UICONTROL 上角的]** 「下一步」，繼續 *管理結構*。
 
 >[!NOTE]
-> *類型&#x200B;*支援&#x200B;**[!UICONTROL 分類]**和&#x200B;**[!UICONTROL 回歸]**。 如果模型未落在其中一種類型下，請選擇「自&#x200B;**[!UICONTROL 訂」]**。
+>
+> *類型* 支援 **[!UICONTROL 分類]** 和 **[!UICONTROL 回歸]**。 如果模型未落在其中一種類型下，請選擇「自 **[!UICONTROL 訂」]**。
 
 ![](../images/models-recipes/import-package-ui/recipe_source_R.png)
 
@@ -195,12 +199,14 @@ ht-degree: 0%
 ![配置工作流](../images/models-recipes/import-package-ui/configure-workflow.png)
 
 >[!NOTE]
+>
 > 在將來 [源檔案封裝至配方教學課程中](./package-source-files-recipe.md) ，使用PySpark來源檔案建立零售銷售配方時，會提供Docker URL。
 
 在「選取來源 *」頁面上，將對應於使用PySpark來源檔案建立之封裝方式的Docker URL貼入「來源URL」欄* 位中 **** 。 接著，透過拖放方式匯入提供的設定檔案，或使用檔案系統瀏 **覽器**。 可在中找到提供的配置檔案 `experience-platform-dsw-reference/recipes/pyspark/retail/pipeline.json`。 在「 **[!UICONTROL 執行階段]** 」下拉式清單中選 *取PySpark* 。 在選取PySpark執行時期後，預設對象會自動填入 **[!UICONTROL Docker]**。 接著，在「 **[!UICONTROL 類型]** 」下拉式清 *單中選* 取「分類」。 一切填妥後，按一下右 **[!UICONTROL 上角的]** 「下一步」，繼續 *管理結構*。
 
 >[!NOTE]
-> *類型&#x200B;*支援&#x200B;**[!UICONTROL 分類]**和&#x200B;**[!UICONTROL 回歸]**。 如果模型未落在其中一種類型下，請選擇「自&#x200B;**[!UICONTROL 訂」]**。
+>
+> *類型* 支援 **[!UICONTROL 分類]** 和 **[!UICONTROL 回歸]**。 如果模型未落在其中一種類型下，請選擇「自 **[!UICONTROL 訂」]**。
 
 ![](../images/models-recipes/import-package-ui/pyspark-databricks.png)
 
@@ -227,12 +233,14 @@ ht-degree: 0%
 ![配置工作流](../images/models-recipes/import-package-ui/configure-workflow.png)
 
 >[!NOTE]
+>
 > 在將來 [源檔案封裝成配方教學課程中](./package-source-files-recipe.md) ，使用Scala([!DNL Spark])來源檔案建立零售銷售配方時，會提供Docker URL。
 
 在「選擇源 *」頁上，將與使用「源URL」欄位中的Scala源檔案構建的打包方式對應的Docker URL* 貼上到 ** 。 接著，透過拖放方式匯入提供的設定檔案，或使用檔案系統瀏 **覽器**。 可在中找到提供的配置檔案 `experience-platform-dsw-reference/recipes/scala/retail/pipelineservice.json`。 在「 **[!UICONTROL Runtime]** 」下拉式清 *單中選* 取Spark。 一旦選 [!DNL Spark] 取執行階段，預設對象會自動填入 **[!UICONTROL Docker]**。 接著，從「 **[!UICONTROL 類型]** 」下拉式選 *取「回歸* 」。 一切填妥後，按一下右 **[!UICONTROL 上角的]** 「下一步」，繼續 *管理結構*。
 
 >[!NOTE]
-> *類型&#x200B;*支援&#x200B;**[!UICONTROL 分類]**和&#x200B;**[!UICONTROL 回歸]**。 如果模型未落在其中一種類型下，請選擇「自&#x200B;**[!UICONTROL 訂」]**。
+>
+> *類型* 支援 **[!UICONTROL 分類]** 和 **[!UICONTROL 回歸]**。 如果模型未落在其中一種類型下，請選擇「自 **[!UICONTROL 訂」]**。
 
 ![](../images/models-recipes/import-package-ui/scala-databricks.png)
 
