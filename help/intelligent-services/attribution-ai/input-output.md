@@ -5,7 +5,7 @@ title: 歸因人工智慧輸入與輸出
 topic: Input and Output data for Attribution AI
 description: 以下檔案概述Attribution AI中使用的不同輸入和輸出。
 translation-type: tm+mt
-source-git-commit: 2b51569a4c3dd9863edb6831bd182a7fa9d1d891
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '2075'
 ht-degree: 3%
@@ -69,6 +69,7 @@ Attribution AI需要歷史資料作為模型訓練的輸入。 所需的資料�
 所需資料的最小長度=訓練視窗+回顧視窗
 
 >[!TIP]
+>
 > 具有預設組態的應用程式所需的資料最小長度為：2個季度（180天）+ 56天= 236天。
 
 範例：
@@ -106,7 +107,7 @@ Attribution AI輸出如下：
 | eventType（字串） | True | 此時間系列記錄的主要事件類型。 <br> **範例：** 「訂購」、「購買」、「瀏覽」 |
 | eventMergeId（字串） | True | ID，可關聯或合併多 [!DNL Experience Events] 個本質上相同或應合併的事件。 這將由資料產生器在擷取之前填入。 <br> **範例：** 575525617716-0-edc2ed37-1ab-4750-a820-1c2b3844b8c4 |
 | _id（字串） | False | 時間序列事件的唯一識別碼。 <br> **範例：** 4461-edc2ed37-1aab-4750-a820-1c2b3844b8c4 |
-| _tenantId（物件） | False | 與您的Tentant ID相關聯的頂層物件容器。 <br> **範例：** _atsdsnrmmsv2 |
+| _tenantId（物件） | False | 與您的保留ID對應的頂層物件容器。 <br> **範例：** _atsdsnrmmsv2 |
 | your_schema_name（對象） | False | 使用轉換事件對所有與其關聯的觸點事件及其元資料進行分數。 <br> **範例：** 歸因AI分數——型號名稱__2020 |
 | 區段（字串） | True | 轉換區段，例如模型所依據的地域劃分。 若沒有區段，則區段與conversionName相同。 <br> **範例：** ORDER_US |
 | conversionName（字串） | True | 設定期間設定的轉換名稱。 <br> **範例：** 訂購、潛在客戶、瀏覽 |
@@ -124,7 +125,7 @@ Attribution AI輸出如下：
 | 時間戳記(DateTime) | True | 轉換的時間戳記。 <br> **範例：** 2020-06-09T00:01:51.000Z |
 | passThrough（物件） | True | 設定模型時，使用者指定的其他分數資料集欄。 |
 | commerce_order_purchaseCity（字串） | True | 其他分數資料集欄。 <br> **範例：** 城市：聖荷西 |
-| customerProfile（對象） | False | 用於建立模型之使用者的身分詳細資訊。 |
+| customerProfile（對象） | False | 用於建立模型之使用者的身分詳細資料。 |
 | identity（物件） | False | 包含用於建立模型的使用者的詳細資料，例如 `id` 和 `namespace`。 |
 | id（字串） | True | 使用者的身分識別碼，例如Cookie ID、AAID或MCID等。 <br> **範例：** 17348762725408665634688320891369597404 |
 | namespace（字串） | True | 用於建立路徑的身分名稱空間，進而建立模型。 <br> **範例：** aid |
@@ -150,7 +151,7 @@ Attribution AI輸出如下：
 
 歸因AI支援兩類歸因分數：演算法和規則型分數。
 
-歸因人工智慧產生兩種不同的演算法分數，遞增和影響。 受影響的分數是每個行銷觸點所負責的轉換率的一部分。 遞增分數是行銷觸點直接造成的邊際影響量。 遞增分數與受影響的分數之間的主要差異在於，遞增分數會考慮基線效果。 不會假設轉換純粹是由先前的行銷觸點所造成。
+歸因人工智慧產生兩種不同的演算法分數，遞增和影響。 受影響的分數是每個行銷觸點所負責的轉換率的一部分。 遞增分數是行銷觸點直接造成的邊際影響量。 遞增分數與受影響分數的主要差異在於遞增分數會考慮基準效果。 不會假設轉換純粹是由先前的行銷觸點所造成。
 
 以下是Adobe Experience Platform UI的Attribution AI架構輸出範例：
 
@@ -160,7 +161,7 @@ Attribution AI輸出如下：
 
 | 歸因分數 | 說明 |
 | ----- | ----------- |
-| 影響（演算法） | 受影響的分數是每個行銷觸點所負責的轉換的一部分。 |
+| 影響（演算法） | 受影響的分數是每個行銷觸點所負責的轉換片段。 |
 | 增量（演算法） | 遞增分數是行銷觸點直接造成的邊際影響量。 |
 | 首次接觸 | 規則型歸因分數，可將所有評分指派給轉換路徑上的初始觸點。 |
 | 上次接觸 | 以規則為基礎的歸因分數，可將所有評分指派給最接近轉換的觸點。 |
