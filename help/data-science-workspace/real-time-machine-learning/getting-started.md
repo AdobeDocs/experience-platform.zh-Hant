@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 即時機器學習快速入門
 topic: Getting started
 translation-type: tm+mt
-source-git-commit: 1e5526b54f3c52b669f9f6a792eda0abfc711fdd
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '405'
 ht-degree: 0%
@@ -15,6 +15,7 @@ ht-degree: 0%
 # 即時機器學習快速入門(Alpha)
 
 >[!IMPORTANT]
+>
 >目前尚未針對所有使用者提供即時機器學習。 此功能是alpha版，仍在測試中。 本檔案可能會有所變更。
 
 為了運用即時機器學習，您必須擁有Adobe Experience Platform和布建的組織的存取權 [!DNL Data Science Workspace]。 此外，您需要有完整的資料集，才能用於訓練和計分。
@@ -33,6 +34,7 @@ ht-degree: 0%
 若要開始使用即時機器學習，您必須擁有資料集的存取權。 您可以選擇使用外部資料集並將其上傳至您的環 [!DNL JupyterLab] 境，或在平台中建立新資料集（如果您尚未這麼做）。
 
 >[!NOTE]
+>
 >如果您已有想要使用的資料集，可跳至「下 [一步」](#next-steps)。
 
 ### 使用外部資料集
