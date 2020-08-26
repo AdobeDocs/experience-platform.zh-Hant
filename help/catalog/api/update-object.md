@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 更新物件
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '313'
 ht-degree: 3%
@@ -21,7 +21,7 @@ ht-degree: 3%
 
 >[!NOTE]
 >
->對對象的PATCH操作不能修改其可展開欄位，這些欄位表示相互關聯的對象。  必須直接對相關對象進行修改。
+>對對象的PATCH操作不能修改其可展開欄位，這些欄位表示相互關聯的對象。 必須直接對相關對象進行修改。
 
 ## 使用欄位更新
 
