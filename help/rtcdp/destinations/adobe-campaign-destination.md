@@ -5,9 +5,9 @@ seo-title: Adobe Campaign
 description: Adobe Campaign是一套解決方案，可協助您跨所有線上及線下通道個人化並傳遞宣傳活動。
 seo-description: Adobe Campaign是一套解決方案，可協助您跨所有線上及線下通道個人化並傳遞宣傳活動。
 translation-type: tm+mt
-source-git-commit: 15323134f0c626cad2c4e90b3e1c0662cf7e57dd
+source-git-commit: e5a3539c8be8b7424f4965c7ab43d4260e39b380
 workflow-type: tm+mt
-source-wordcount: '517'
+source-wordcount: '580'
 ht-degree: 1%
 
 ---
@@ -54,7 +54,7 @@ Adobe Campaign是一套解決方案，可協助您跨所有線上及線下通道
 
 ## 目標屬性 {#destination-attributes}
 
-在啟 [用區段](/help/rtcdp/destinations/activate-destinations.md) 至Adobe Campaign目的地時，我們建議您從聯合架構中選取唯一 [識別碼](../../profile/home.md#profile-fragments-and-union-schemas)。 選擇唯一標識符以及要導出到目標的任何其它XDM欄位。 如需詳細資訊，請參 [閱「電子郵件行銷目標」中，選取要在匯出檔案中當做目標屬性使用的架構欄位](/help/rtcdp/destinations/email-marketing-destinations.md#destination-attributes) 。
+在啟 [用區段](/help/rtcdp/destinations/activate-destinations.md) 至Adobe Campaign目的地時，我們建議您從聯合架構中選取唯一 [識別碼](../../profile/home.md#profile-fragments-and-union-schemas)。 選擇要導出到目標的唯一標識符和任何其他XDM欄位。 如需詳細資訊，請參 [閱「電子郵件行銷目標」中，選取要在匯出檔案中當做目標屬性使用的架構欄位](/help/rtcdp/destinations/email-marketing-destinations.md#destination-attributes) 。
 
 ## 匯出的資料 {#exported-data}
 
@@ -78,4 +78,11 @@ The presence of these files in your storage location is confirmation of successf
 
 ## 設定資料匯入至Adobe Campaign {#import-data-into-campaign}
 
-在將即時CDP連線至您或SFTP [!DNL Amazon S3] 儲存後，您必須設定從儲存位置匯入資料至Adobe Campaign的資料。 如要瞭解如何完成此作業，請參 [閱Adobe Campaign說明檔案](https://docs.adobe.com/content/help/en/campaign-classic/using/automating-with-workflows/general-operation/importing-data.html) 中的匯入資料。
+>[!IMPORTANT]
+>
+>* 執行此項整合時，請記住SFTP儲存限制、資料庫儲存限制和作用中的設定檔限制。
+>* 您必須使用工作流程，在Adobe Campaign中排程、匯入和對應匯出的區 [!DNL Campaign] 段。 請參閱 [在Adobe Campaign檔案中設定循環](https://docs.adobe.com/content/help/en/campaign-classic/using/automating-with-workflows/general-operation/importing-data.html#setting-up-a-recurring-import) 式匯入。
+
+
+
+在將即時CDP連線至您或SFTP [!DNL Amazon S3] 儲存後，您必須設定從儲存位置匯入資料至Adobe Campaign的資料。 如要瞭解如何完成此作業，請參 [閱Adobe Campaign檔案](https://docs.adobe.com/content/help/en/campaign-classic/using/automating-with-workflows/general-operation/importing-data.html) 中的匯入資料。
