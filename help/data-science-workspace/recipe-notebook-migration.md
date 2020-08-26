@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 配方和筆記本移轉指南
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 38cb8eeae3ac0a1852c59e433d1cacae82b1c6c0
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '3311'
 ht-degree: 0%
@@ -769,11 +769,7 @@ Scala([!DNL Spark] 2.4)筆記型電腦使用Scala內核，當設定時，該內�
 >[!TIP]
 >
 >在Scala中，可以使 `sys.env()` 用在中聲明和返回值 `option`。 如此，若您知道變數只會在單次使用，就不需要定義變數。 以下示例在 `val userToken` 上述示例中進行了說明，並在中聲明 `option`:
->
-> 
-```scala
-> .option("user-token", sys.env("PYDASDK_IMS_USER_TOKEN"))
-> ```
+> `.option("user-token", sys.env("PYDASDK_IMS_USER_TOKEN"))`
 
 ## 寫入資料集
 
