@@ -2,8 +2,9 @@
 product: experience-platform
 audience: user
 user-guide-title: 即時客戶個人檔案說明
+user-guide-description: Real-time Customer Profile provides a holistic view of each individual customer by combining data from multiple channels, including online, offline, CRM, and third-party data. Profile allows you to consolidate your disparate customer data into a unified view offering an actionable, timestamped account of every customer interaction.
 translation-type: tm+mt
-source-git-commit: 84789a8e6e8c1f0fc91d0b54ba29d449963c3117
+source-git-commit: bd3c31e7d39f7f66d755356a3dbb754e97c196fb
 workflow-type: tm+mt
 source-wordcount: '84'
 ht-degree: 20%
@@ -19,10 +20,10 @@ ht-degree: 20%
    * [快速入門](api/getting-started.md)
    * [(Alpha)計算屬性](api/computed-attributes.md)
    * [邊緣投影](api/edge-projections.md)
-   * [實體（[!DNL 配置檔案]訪問）](api/entities.md)
-   * [導出作業（[!DNL 配置檔案]導出）](api/export-jobs.md)
+   * [實體（[!DNL配置檔案]訪問）](api/entities.md)
+   * [導出作業（[!DNL配置檔案]導出）](api/export-jobs.md)
    * [合併原則](api/merge-policies.md)
-   * [預覽範例狀態（[!DNL 描述檔]預覽）](api/preview-sample-status.md)
+   * [預覽範例狀態（[!DNL描述檔]預覽）](api/preview-sample-status.md)
    * [[!DNL Profile] 系統作業（刪除請求）](api/profile-system-jobs.md)
 * UI指南 {#ui}
    * [[!DNL Profile] 使用者指南](ui/user-guide.md)
