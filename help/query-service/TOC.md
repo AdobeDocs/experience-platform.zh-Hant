@@ -2,11 +2,12 @@
 product: experience-platform
 audience: user
 user-guide-title: Adobe Experience Platform查詢服務說明
+user-guide-description: Adobe Experience Platform Query Service allows you to use standard SQL to query data in Experience Platform. Using Query Service, you can join any dataset in the Data Lake and capture the query results as a new dataset for use in reporting, machine learning, or for ingestion into Real-time Customer Profile.
 translation-type: tm+mt
-source-git-commit: c60f374fddb7c2d0ae35c5a5e085ddc0e2f7b78f
+source-git-commit: bd3c31e7d39f7f66d755356a3dbb754e97c196fb
 workflow-type: tm+mt
 source-wordcount: '134'
-ht-degree: 5%
+ht-degree: 7%
 
 ---
 
@@ -25,7 +26,7 @@ ht-degree: 5%
 - 查詢服務UI {#ui}
    - [UI概觀](ui/overview.md)
    - [查詢編輯器使用手冊](ui/user-guide.md)
-- 建立查詢 {#creating-queries}
+- 建立查詢{#creating-queries}
    - [Adobe定義的函式](creating-queries/using-adobe-defined-functions.md)
    - [建立查詢概觀](creating-queries/creating-queries.md)
    - [資料集與表和方案](creating-queries/datasets-and-tables.md)
