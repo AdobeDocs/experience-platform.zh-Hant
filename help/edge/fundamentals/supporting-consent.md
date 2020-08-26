@@ -5,7 +5,7 @@ description: 瞭解如何使用Experience Platform Web SDK支援同意偏好設�
 seo-description: 瞭解如何使用Experience Platform Web SDK支援同意偏好設定
 keywords: consent;defaultConsent;default consent;setConsent;Profile Privacy Mixin;Experience Event Privacy Mixin;Privacy Mixin;
 translation-type: tm+mt
-source-git-commit: 8c256b010d5540ea0872fa7e660f71f2903bfb04
+source-git-commit: fe53ecbf6adff4f1e09979cd170a88ac0bd3cb75
 workflow-type: tm+mt
 source-wordcount: '756'
 ht-degree: 0%
@@ -26,13 +26,13 @@ ht-degree: 0%
 
 ## 設定同意
 
-依預設，使用者會選擇加入所有用途。 若要防止SDK在使用者登入之前執行上述工作，請在SDK設定 `"defaultConsent": { "general": "pending" }` 期間傳遞如下：
+依預設，使用者會選擇加入所有用途。 若要防止SDK在使用者登入之前執行上述工作，請在SDK設定 `"defaultConsent": "pending"` 期間傳遞如下：
 
 ```javascript
 alloy("configure", {
   "edgeConfigId": "ebebf826-a01f-4458-8cec-ef61de241c93",
   "imsOrgId": "ADB3LETTERSANDNUMBERS@AdobeOrg",
-  "defaultConsent": { "general": "pending" }
+  "defaultConsent": "pending"
 });
 ```
 
@@ -42,7 +42,7 @@ alloy("configure", {
 
 ## 透過Adobe Standard傳達同意偏好
 
-如果用戶選擇，請執行 `setConsent` 將選項設定 `general` 為如 `in` 下的命令：
+如果用戶選擇，請執行 `setConsent` 將選項設定 `general` 為 `in` 如下的命令：
 
 ```javascript
 alloy("setConsent", {
@@ -122,7 +122,7 @@ alloy("setConsent", {
 
 ## 持續使用許可偏好
 
-在您使用命令將使用者偏好設定傳達至SDK `setConsent` 後，SDK會將使用者偏好設定保留至Cookie。 下次使用者將您的網站載入瀏覽器時，SDK將會擷取並使用這些持續的偏好設定來判斷事件是否可傳送至Adobe。 您不需要再次執行該 `setConsent` 命令，只需要通知用戶首選項的更改，您隨時都可以這樣做。
+在您使用命令將使用者偏好設定傳達至SDK `setConsent` 後，SDK會將使用者偏好設定保留至Cookie。 下次使用者將您的網站載入瀏覽器時，SDK將會擷取並使用這些持續的偏好設定，以決定事件是否可傳送至Adobe。 您不需要再次執行該 `setConsent` 命令，只需要通知用戶首選項的更改，您隨時都可以這樣做。
 
 ## 在設定許可時同步身份
 
