@@ -4,7 +4,7 @@ solution: Adobe Experience Platform Data Science Workspace
 title: 建立特徵管線
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: c48079ba997a7b4c082253a0b2867df76927aa6d
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '1367'
 ht-degree: 0%
@@ -15,6 +15,7 @@ ht-degree: 0%
 # 建立特徵管線
 
 >[!IMPORTANT]
+>
 > 功能管道目前僅透過API提供。
 
 Adobe Experience Platform可讓您透過Sensei機器學習架構執行階段（以下稱為「執行階段」），建立並建立自訂功能管道，以大規模執行功能工程。
@@ -390,6 +391,7 @@ scoring.dataSaver: MyDatasetSaver
 現在，您已經編寫了功能管道，所以需要建立Docker影像，以呼叫 [!DNL Sensei Machine Learning] API中的功能管道端點。 您需要Docker影像URL，才能呼叫功能管線端點。
 
 >[!TIP]
+>
 >如果您沒有Docker URL，請造訪 [Package source files into a recipe](../models-recipes/package-source-files-recipe.md) tutorial，以取得建立Docker主機URL的逐步逐步說明。
 
 或者，您也可以使用下列Postman系列來協助完成功能管道API工作流程：
@@ -423,6 +425,7 @@ https://www.getpostman.com/collections/c5fc0d1d5805a5ddd41a
 ### 指定「實驗」執行計分任務 {#scoring}
 
 >[!NOTE]
+>
 > 要完成此步驟，您至少需要有一個成功的訓練執行與您的實驗相關聯。
 
 成功的訓練執行後，您需要指 [定計分執行任務](../api/experiments.md#experiment-training-scoring)。 將POST設為 `experiments/{EXPERIMENT_ID}/runs` 內文，並在內文中將屬 `mode` 性設為「分數」。 這會啟動您的計分實驗執行。
