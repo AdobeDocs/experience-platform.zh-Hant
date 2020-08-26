@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Amazon Kinesis連接器
 topic: overview
 translation-type: tm+mt
-source-git-commit: 340f5d0611e9e9eb4676018ee10c8a8aa08dbb2d
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '214'
 ht-degree: 0%
@@ -15,6 +15,7 @@ ht-degree: 0%
 # （測試版）連 [!DNL Amazon Kinesis] 接器
 
 >[!NOTE]
+>
 >連接 [!DNL Amazon Kinesis] 器為測試版。 如需使用 [測試版標籤連接器的詳細資訊](../../home.md#terms-and-conditions) ，請參閱來源概觀。
 
 Adobe Experience Platform為AWS和AWS等雲提供商提供 [!DNL Google Cloud Platform]原生連接 [!DNL Azure]。 您可以將這些系統的資料匯入其中 [!DNL Platform]。
