@@ -4,7 +4,7 @@ solution: Adobe Experience Platform
 title: 計算屬性——即時客戶配置檔案API
 topic: guide
 translation-type: tm+mt
-source-git-commit: fa439ebb9d02d4a08c8ed92b18f2db819d089174
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '2403'
 ht-degree: 1%
@@ -15,6 +15,7 @@ ht-degree: 1%
 # (Alpha)計算屬性端點
 
 >[!IMPORTANT]
+>
 >本文中概述的計算屬性功能目前為alpha格式，並非所有使用者都能使用。 文件和功能可能會有所變更。
 
 計算屬性可讓您根據其他值、計算和運算式自動計算欄位的值。 計算屬性在描述檔層級上運作，這表示您可以匯總所有記錄和事件的值。
@@ -48,6 +49,7 @@ Adobe Experience Platform可讓您輕鬆匯入和合併多個來源的資料，�
 為了配置計算屬性，首先需要標識將保存計算屬性值的欄位。 可以使用混音建立此欄位，以將欄位添加到現有方案，或者選擇已在方案中定義的欄位。
 
 >[!NOTE]
+>
 >計算屬性無法新增至Adobe定義混音中的欄位。 欄位必須位於命名空 `tenant` 間內，這表示欄位必須是您定義並新增至架構的欄位。
 
 為了成功定義計算屬性欄位，必須為模式啟用，並 [!DNL Profile] 作為模式所基於類的聯合模式的一部分顯示。 有關啟用的 [!DNL Profile]架構和聯合的詳細資訊，請查看開發人員指南中有關為「配置檔案」啟用 [!DNL Schema Registry] 架構和查 [看聯合架構的章節](../../xdm/api/getting-started.md)。 還建議在方案構成基 [礎文檔中](../../xdm/schema/composition.md) ，查看關於聯合的部分。
@@ -89,9 +91,10 @@ Adobe Experience Platform可讓您輕鬆匯入和合併多個來源的資料，�
 使用編 *[!UICONTROL 輯器右側的]* 「欄位屬性」區段，提供新欄位的必要資訊，包括欄位名稱、顯示名稱和類型。
 
 >[!NOTE]
+>
 >欄位的類型必須與計算的屬性值相同。 例如，如果計算的屬性值是字串，則方案中定義的欄位必須是字串。
 
-完成後，按一下「應 **[!UICONTROL 用]** 」(Apply *[!UICONTROL )，欄位的名稱及其類型將出現在編輯器的「結構]* 」(Structure)部分中。
+完成後，按一下「應 **[!UICONTROL 用]** 」(Apply)，欄位的名稱及其類型將出現在編輯器的「結構 *[!UICONTROL 」(Structure]* )部分中。
 
 ![](../images/computed-attributes/Apply.png)
 
@@ -100,6 +103,7 @@ Adobe Experience Platform可讓您輕鬆匯入和合併多個來源的資料，�
 繼續之前，請確定已為啟用模式 [!DNL Profile]。 按一下編輯器的「結構 ** 」部分中的架構名稱，以顯示 *[!UICONTROL 「架構屬性]* 」頁籤。 如果「描 **[!UICONTROL 述檔]** 」滑桿為藍色，表示已啟用架構 [!DNL Profile]。
 
 >[!NOTE]
+>
 >為其啟用 [!DNL Profile] 模式無法撤消，因此，如果在啟用滑塊後按一下該滑塊，則無需冒險禁用它。
 
 ![](../images/computed-attributes/Profile.png)
