@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 串流時間系列資料
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 80392190c7fcae9b6e73cc1e507559f834853390
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
-source-wordcount: '1130'
+source-wordcount: '1126'
 ht-degree: 2%
 
 ---
@@ -20,9 +20,9 @@ ht-degree: 2%
 
 本教學課程需要具備各種Adobe Experience Platform服務的相關知識。 在開始本教學課程之前，請先閱讀下列服務的檔案：
 
-- [!DNL Experience Data Model (XDM)](../../xdm/home.md): 組織體驗資料的 [!DNL Platform] 標準化架構。
-- [!DNL Real-time Customer Profile](../../profile/home.md): 根據來自多個來源的匯整資料，即時提供統一的消費者個人檔案。
-- [架構註冊開發人員指南](../../xdm/api/getting-started.md): 完整的指南，涵蓋 [!DNL Schema Registry] API的每個可用端點，以及如何呼叫這些端點。 這包括瞭解您 `{TENANT_ID}`的資料集（在本教學課程的呼叫中顯示），以及瞭解如何建立結構描述（用於建立資料集以擷取）。
+- [!DNL Experience Data Model (XDM)](../../xdm/home.md):組織體驗資料的 [!DNL Platform] 標準化架構。
+- [!DNL Real-time Customer Profile](../../profile/home.md):根據來自多個來源的匯整資料，即時提供統一的消費者個人檔案。
+- [架構註冊開發人員指南](../../xdm/api/getting-started.md):完整的指南，涵蓋 [!DNL Schema Registry] API的每個可用端點，以及如何呼叫這些端點。 這包括瞭解您 `{TENANT_ID}`的資料集（在本教學課程的呼叫中顯示），以及瞭解如何建立結構描述（用於建立資料集以擷取）。
 
 此外，本教學課程要求您已建立串流連線。 如需建立串流連線的詳細資訊，請閱讀建立串 [流連線教學課程](./create-streaming-connection.md)。
 
@@ -36,7 +36,7 @@ ht-degree: 2%
 
 若要呼叫API，您必 [!DNL Platform] 須先完成驗證教 [學課程](../../tutorials/authentication.md)。 完成驗證教學課程後，將提供所有 [!DNL Experience Platform] API呼叫中每個必要標題的值，如下所示：
 
-- 授權： 生產者 `{ACCESS_TOKEN}`
+- 授權：生產者 `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
@@ -50,7 +50,7 @@ ht-degree: 2%
 
 所有包含裝載(POST、PUT、PATCH)的請求都需要額外的標題：
 
-- 內容類型： application/json
+- 內容類型：application/json
 
 ## 基於XDM ExperienceEvent類合成模式
 
@@ -396,7 +396,7 @@ curl -X POST https://dcs.adobedc.net/collection/{CONNECTION_ID}?synchronousValid
 | -------- | ----------- |
 | `{CONNECTION_ID}` | 先前建立之串流連線的ID。 |
 | `xactionId` | 唯一識別碼是您剛傳送之記錄的伺服器端產生。 此ID可協助Adobe透過各種系統及除錯來追蹤此記錄的生命週期。 |
-| `receivedTimeMs`: 時間戳記（以毫秒為單位），顯示收到請求的時間。 |
+| `receivedTimeMs`:時間戳記（以毫秒為單位），顯示收到請求的時間。 |
 | `synchronousValidation.status` | 由於已新增查 `synchronousValidation=true` 詢參數，因此會顯示此值。 如果驗證成功，則狀態為 `pass`。 |
 
 ## 擷取新擷取的時間序列資料
@@ -405,7 +405,7 @@ curl -X POST https://dcs.adobedc.net/collection/{CONNECTION_ID}?synchronousValid
 
 >[!NOTE]
 >
->如果未定義合併策略ID和架構。</span>name或relatedSchema</span>.name為 `_xdm.context.profile`, [!DNL Profile Access] 將讀取 **所有相關身份** 。
+>如果未定義合併策略ID且 `schema.name` 或 `relatedSchema.name``_xdm.context.profile`為， [!DNL Profile Access] 將獲 **取所有** 相關身份。
 
 **API格式**
 
