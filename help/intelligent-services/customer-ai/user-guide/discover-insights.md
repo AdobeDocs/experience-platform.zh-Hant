@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 透過客戶人工智慧發掘見解
 topic: Discovering insights
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '1059'
 ht-degree: 0%
@@ -79,15 +79,15 @@ ht-degree: 0%
 
 「更 **[!UICONTROL 多動作]** 」按鈕位於「編輯」旁的右上導 **[!UICONTROL 覽中]**。 按一 **[!UICONTROL 下「更多動作]** 」會開啟下拉式清單，供您選取下列其中一個作業：
 
-- **[!UICONTROL 刪除]**: 刪除實例。
-- **[!UICONTROL 存取分數]**: 按一 *下「存取分數* 」會開啟對話方塊，提供客戶AI [](./download-scores.md) 教學課程下載分數的連結，此對話方塊也提供進行API呼叫所需的資料集ID。
-- **[!UICONTROL 檢視執行記錄]**: 此時將顯示一個對話框，其中包含與服務實例關聯的所有計分運行的清單。
+- **[!UICONTROL 刪除]**:刪除實例。
+- **[!UICONTROL 存取分數]**:按一 *下「存取分數* 」會開啟對話方塊，提供客戶AI [](./download-scores.md) 教學課程下載分數的連結，此對話方塊也提供進行API呼叫所需的資料集ID。
+- **[!UICONTROL 檢視執行記錄]**:此時將顯示一個對話框，其中包含與服務實例關聯的所有計分運行的清單。
 
 ![更多動作](../images/insights/more-actions.png)
 
 ## 計分摘要 {#scoring-summary}
 
-計分摘要會顯示計分的描述檔總數，並將其分類至包含高、中和低傾向的時段。 傾向區間是根據得分範圍而決定，低於24，中度為25至74，高於74。 每個桶都有對應於圖例的顏色。
+計分摘要會顯示計分的設定檔總數，並將其分類至包含高、中和低傾向的區間。 傾向區間是根據得分範圍而決定，低於24，中度為25至74，高於74。 每個桶都有對應於圖例的顏色。
 
 >[!NOTE]
 >
@@ -112,6 +112,7 @@ ht-degree: 0%
 按一 **[!UICONTROL 下「低]** 」、「中」和「高傾向」任何區段中的「建立區段」按鈕，會將您重新導向至區段產生器。
 
 >[!NOTE]
+>
 >只 **[!UICONTROL 有在資料集啟用即時客戶描述檔時]** ,「建立區段」按鈕才可用。 如需如何啟用即時客戶個人檔案的詳細資訊，請造 [訪即時客戶個人檔案總覽](../../../rtcdp/overview.md)。
 
 ![按一下建立區段](../images/insights/influential-factors-create-segment.png)
