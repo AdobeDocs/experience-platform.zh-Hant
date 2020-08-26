@@ -5,7 +5,7 @@ seo-title: Facebook目標
 description: 根據雜湊的電子郵件，啟用您Facebook宣傳的個人檔案，以鎖定受眾、個人化和抑制受眾。
 seo-description: 根據雜湊的電子郵件，啟用您Facebook宣傳的個人檔案，以鎖定受眾、個人化和抑制受眾。
 translation-type: tm+mt
-source-git-commit: 15323134f0c626cad2c4e90b3e1c0662cf7e57dd
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '722'
 ht-degree: 2%
@@ -60,6 +60,7 @@ ht-degree: 2%
 1. 您 [!DNL Facebook] 的使用者帳戶必須為您 **[!DNL Manage campaigns]** 計畫使用的廣告帳戶啟用權限。
 2. Add the **Adobe Experience Cloud** business account as an advertising partner in your [!DNL Facebook Ad Account]. 使用 `business ID=206617933627973`。如需詳 [細資訊，請參閱Facebook檔案中的](https://www.facebook.com/business/help/1717412048538897) 「將合作夥伴新增至您的業務經理」。
    >[!IMPORTANT]
+   >
    > When configuring the permissions for Adobe Experience Cloud, you must enable the **Manage campaigns** permission. 這是進行 [!DNL Adobe Real-time CDP] 整合的必要權限。
 3. 閱讀並簽署 [!DNL Facebook Custom Audiences] 服務條款。 若要完成此操作，請前往 `https://business.facebook.com/ads/manage/customaudiences/tos/?act=[accountID]`，其中 `accountID` 是您的 [!DNL Facebook Ad Account ID]。
 
