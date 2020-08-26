@@ -4,7 +4,7 @@ solution: Adobe Experience Platform
 title: 實體——即時客戶個人檔案API
 topic: guide
 translation-type: tm+mt
-source-git-commit: f910351d49de9c4a18a444b99b7f102f4ce3ed5b
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '1671'
 ht-degree: 1%
@@ -115,6 +115,7 @@ curl -X GET \
 ```
 
 >[!NOTE]
+>
 >如果相關圖形連結超過50個身分，此服務會傳回HTTP狀態422，並傳回訊息「太多相關身分」。 如果您收到此錯誤，請考慮新增更多查詢參數以縮小搜尋範圍。
 
 ## 依身分清單存取個人檔案資料
@@ -187,9 +188,9 @@ curl -X POST \
 | `identities.entityIdNS.code` | 您要存取的實體ID的命名空間。 |
 | `timeFilter.startTime` | 包含時間範圍篩選器的開始時間。 應以毫秒為精細度。 如果未指定，則預設值是可用時間的開始。 |
 | `timeFilter.endTime` | 排除的時間範圍篩選的結束時間。 應以毫秒為精細度。 如果未指定，則預設為可用時間的結束。 |
-| `limit` | 要返回的記錄數。 僅適用於傳回的體驗事件數。 預設值： 1000。 |
+| `limit` | 要返回的記錄數。 僅適用於傳回的體驗事件數。 預設值：1000。 |
 | `orderby` | 依時間戳記（以預設值寫入）擷取的體驗事 `(+/-)timestamp` 件排序順序 `+timestamp`。 |
-| `withCA` | 用於啟用計算屬性以進行查找的功能標籤。 預設值： false。 |
+| `withCA` | 用於啟用計算屬性以進行查找的功能標籤。 預設值：false。 |
 
 **Response**&#x200B;成功的回應會傳回請求主體中指定的實體的請求欄位。
 
@@ -360,6 +361,7 @@ curl -X GET \
 成功的回應會傳回在請求查詢參數中指定之時間序列事件和相關欄位的編頁清單。
 
 >[!NOTE]
+>
 >請求指定限制為一(`limit=1`)，因此下 `count` 列回應中的為1，且只傳回一個實體。
 
 ```json
@@ -414,6 +416,7 @@ curl -X GET \
 在檢索時間系列事件時對結果進行編頁。 如果有後續的結果頁面， `_page.next` 屬性將包含ID。 此外，該屬 `_links.next.href` 性還提供檢索下一頁的請求URI。 要檢索結果，請向端點發出另 `/access/entities` 一個GET請求，但必須確 `/entities` 保用提供的URI值替換。
 
 >[!NOTE]
+>
 >請確定您不會意外重複 `/entities/` 在請求路徑中。 它應該只出現一次， `/access/entities?start=...`
 
 **API格式**
@@ -545,14 +548,14 @@ curl -X POST \
 |---|---|
 | `schema.name` | **（必要）** ，要擷取之實體的XDM架構 |
 | `relatedSchema.name` | 如果 `schema.name` 為 `_xdm.context.experienceevent` 此值，則必須指定與時間系列事件相關的配置檔案實體的方案。 |
-| `identities` | **（必要）** ，從中檢索關聯時間系列事件的配置檔案的陣列清單。 陣列中的每個條目以兩種方式之一進行設定： 1)使用由ID值和命名空間組成的完全限定身份，或2)提供XID。 |
-| `fields` | 將傳回的資料隔離至指定的欄位集。 使用此選項可篩選擷取的資料中包含哪些架構欄位。 範例： personalEmail,person.name,person.geder |
+| `identities` | **（必要）** ，從中檢索關聯時間系列事件的配置檔案的陣列清單。 陣列中的每個條目以兩種方式之一進行設定：1)使用由ID值和命名空間組成的完全限定身份，或2)提供XID。 |
+| `fields` | 將傳回的資料隔離至指定的欄位集。 使用此選項可篩選擷取的資料中包含哪些架構欄位。 範例：personalEmail,person.name,person.geder |
 | `mergePolicyId` | 標識用於管理返回資料的合併策略。 如果未在服務呼叫中指定此方案，則會使用您組織對該方案的預設值。 如果尚未設定預設的「合併原則」，則預設為無描述檔合併，也無身分聯繫。 |
 | `orderby` | 依時間戳記（以預設值寫入）擷取的體驗事 `(+/-)timestamp` 件排序順序 `+timestamp`。 |
 | `timeFilter.startTime` | 指定篩選時間系列物件的開始時間（以毫秒為單位）。 |
 | `timeFilter.endTime` | 指定篩選時間系列物件的結束時間（以毫秒為單位）。 |
-| `limit` | 指定要返回的最大對象數的數值。 預設值： 1000 |
-| `withCA` | 用於啟用計算屬性以進行查找的功能標籤。 預設值： false |
+| `limit` | 指定要返回的最大對象數的數值。 預設值：1000 |
+| `withCA` | 用於啟用計算屬性以進行查找的功能標籤。 預設值：false |
 
 **回應**
 
@@ -907,5 +910,5 @@ GET請求到端點的路徑中使用以下參 `/access/entities` 數。 它們�
 | `orderBy` | 依時間戳記（以預設值寫入）擷取的體驗事 `(+/-)timestamp` 件排序順序 `+timestamp`。 | `orderby=-timestamp` |
 | `startTime` | 指定篩選時間系列物件的開始時間（以毫秒為單位）。 | `startTime=1539838505` |
 | `endTime` | 指定篩選時間系列物件的結束時間（以毫秒為單位）。 | `endTime=1539838510` |
-| `limit` | 指定要返回的最大對象數的數值。 預設值： 1000 | `limit=100` |
-| `withCA` | 用於啟用計算屬性以進行查找的功能標籤。 預設值： false | `withCA=true` |
+| `limit` | 指定要返回的最大對象數的數值。 預設值：1000 | `limit=100` |
+| `withCA` | 用於啟用計算屬性以進行查找的功能標籤。 預設值：false | `withCA=true` |
