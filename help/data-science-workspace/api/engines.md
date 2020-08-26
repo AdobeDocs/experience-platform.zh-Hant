@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 引擎
 topic: Developer guide
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '1118'
 ht-degree: 3%
@@ -21,7 +21,7 @@ ht-degree: 3%
 >[!TIP]
 >如果您沒有Docker URL，請造訪 [Package source files into a recipe](../models-recipes/package-source-files-recipe.md) tutorial，以取得建立Docker主機URL的逐步逐步說明。
 
-您的Docker註冊表憑證是上傳封裝的Recipe檔案（包括您的Docker主機URL、使用者名稱和密碼）所必需的。 您可以執行下列GET請求來查閱此資訊：
+您的Docker註冊表憑證是上傳封裝的Recipe檔案（包括您的Docker主機URL、使用者名稱和密碼）的必要條件。 您可以執行下列GET請求來查閱此資訊：
 
 **API格式**
 
@@ -44,7 +44,6 @@ curl -X GET https://platform.adobe.io/data/sensei/engines/dockerRegistry \
 成功的響應返回包含Docker註冊表詳細資訊的裝載，包括Docker URL(`host`)、用戶名(`username`)和密碼(`password`)。
 
 >[!NOTE]
->
 >
 >每當您的Docker密碼更新時， `{ACCESS_TOKEN}` 密碼就會變更。
 
@@ -137,7 +136,7 @@ curl -X POST \
 | `name` | 引擎的所需名稱。 與此引擎對應的配方將繼承此值，並以配方名稱顯示在UI中。 |
 | `description` | 引擎的選用說明。 與此引擎對應的方式將繼承此值，並以方式說明的形式顯示在UI中。 此為必要屬性。如果您不想提供說明，請將其值設為空字串。 |
 | `type` | 引擎的執行類型。 此值與Docker映像所基於的語言相對應。 此值可設為Spark或PySpark。 |
-| `mlLibrary` | 建立PySpark和Scala配方的引擎時所需的欄位。 此欄位必須設定為 `databricks-spark`。 |
+| `mlLibrary` | 建立PySpark和Scala配方引擎時所需的欄位。 此欄位必須設定為 `databricks-spark`。 |
 | `artifacts.default.image.location` | Docker映像的位置。 僅支援Azure ACR或Public（未驗證）Dockerhub。 |
 | `artifacts.default.image.executionType` | 引擎的執行類型。 此值與Docker映像所基於的語言相對應。 這可以是「Spark」或「PySpark」。 |
 
@@ -217,7 +216,7 @@ curl -X POST \
 | `algorithm` | 使用的演算法，請將此值設 `fp` 為（特徵管線）。 |
 | `name` | 特徵管線引擎的所需名稱。 與此引擎對應的配方將繼承此值，並以配方名稱顯示在UI中。 |
 | `description` | 引擎的選用說明。 與此引擎對應的方式將繼承此值，並以方式說明的形式顯示在UI中。 此為必要屬性。如果您不想提供說明，請將其值設為空字串。 |
-| `mlLibrary` | 建立PySpark和Scala配方的引擎時所需的欄位。 此欄位必須設定為 `databricks-spark`。 |
+| `mlLibrary` | 建立PySpark和Scala配方引擎時所需的欄位。 此欄位必須設定為 `databricks-spark`。 |
 | `artifacts.default.image.location` | Docker映像的位置。 僅支援Azure ACR或Public（未驗證）Dockerhub。 |
 | `artifacts.default.image.executionType` | 引擎的執行類型。 此值與Docker映像所基於的語言相對應。 這可以是「Spark」或「PySpark」。 |
 | `artifacts.default.image.packagingType` | 引擎的封裝類型。 此值應設為 `docker`。 |
@@ -387,7 +386,7 @@ curl -X GET \
 
 >[!NOTE]
 >
->為確保此PUT請求成功，建議您先執行GET請求，以依ID [擷取引擎](#retrieve-specific)。 然後，修改並更新傳回的JSON物件，並套用已修改的JSON物件作為PUT要求的裝載。
+>為確保此PUT請求成功，建議您先執行GET請求，以依ID [擷取引擎](#retrieve-specific)。 然後，修改並更新傳回的JSON物件，並套用已修改的JSON物件的完整內容作為PUT要求的裝載。
 
 下列範例API呼叫會在最初具有這些屬性時更新引擎的名稱和說明：
 
