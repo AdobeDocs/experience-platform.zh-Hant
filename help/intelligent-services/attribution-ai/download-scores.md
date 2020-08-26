@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 在Attribution AI中存取分數
 topic: Accessing scores
 translation-type: tm+mt
-source-git-commit: 24449d0138ab449dbc01aecbbe9f70e05c781c89
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '1028'
 ht-degree: 2%
@@ -61,7 +61,8 @@ curl -X GET 'https://platform.adobe.io/data/foundation/catalog/batches?&dataSet=
 成功的回應會傳回包含批次ID物件的裝載。 在此示例中，返回對象的鍵值是批處理ID `01E5QSWCAASFQ054FNBKYV6TIQ`。 複製您的批次ID以用於下一個API呼叫。
 
 >[!NOTE]
-> 以下回應已對物件進行 `tags` 重新格式化，以利閱讀。
+>
+> 以下回應已對物件進行重 `tags` 新格式化，以方便閱讀。
 
 ```json
 {
@@ -283,7 +284,7 @@ curl -X GET 'https://platform.adobe.io:443/data/foundation/export/files/01E5QSWC
 >
 >Reader帳戶是使用支援JDBC連接器的SQL客戶端、工作表和BI解決方案查詢資料。
 
-取得認證和URL後，您就可以查詢模型表格、依觸點日期或轉換日期進行匯總。
+一旦擁有認證和URL，您就可以查詢模型表格、依觸點日期或轉換日期進行匯總。
 
 ### 在雪花中尋找您的圖式
 
