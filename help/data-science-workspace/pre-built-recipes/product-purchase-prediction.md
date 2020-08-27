@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;product purchase recipe;Data Science Workspace;popular topics
+keywords: Experience Platform;product purchase recipe;Data Science Workspace;popular topics;recipes;pre build recipe
 solution: Experience Platform
 title: 產品購買方式
 topic: overview
+description: 「產品購買預測」方式可讓您預測特定類型客戶購買事件的可能性，例如產品購買。
 translation-type: tm+mt
-source-git-commit: e08460bc76d79920bbc12c7665a1416d69993f34
+source-git-commit: 7615476c4b728b451638f51cfaa8e8f3b432d659
 workflow-type: tm+mt
-source-wordcount: '358'
+source-wordcount: '382'
 ht-degree: 6%
 
 ---
@@ -42,7 +43,7 @@ ht-degree: 6%
 | gederRatio | 數字 |
 | ageY | 數字 |
 | ageM | 數字 |
-| OptinEmail | Boolean |
+| OptinEmail | 布林值 |
 | optinMobile | 布林值 |
 | optinAddress | 布林值 |
 | 已建立 | 整數 |
