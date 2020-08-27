@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Policy enforcement;API-based enforcement;data governance
 solution: Experience Platform
 title: 策略
 topic: developer guide
+description: 資料使用原則是貴組織採用的規則，可說明您在Experience Platform內對資料執行的行銷動作類型，或受其限制。 /policys端點用於與查看、建立、更新或刪除資料使用策略相關的所有API調用。
 translation-type: tm+mt
-source-git-commit: 12c53122d84e145a699a2a86631dc37ee0073578
+source-git-commit: cddc559dfb65ada888bb367d6265863091a9b2a1
 workflow-type: tm+mt
-source-wordcount: '1756'
+source-wordcount: '1804'
 ht-degree: 2%
 
 ---
