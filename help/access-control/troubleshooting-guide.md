@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;troubleshooting;access control
 solution: Experience Platform
 title: 存取控制疑難排解指南
 topic: troubleshooting guide
+description: 本檔案提供有關Adobe Experience Platform中存取控制常見問題的解答。
 translation-type: tm+mt
-source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
+source-git-commit: 14f99c23cd82894fee5eb5c4093b3c50b95c52e8
 workflow-type: tm+mt
-source-wordcount: '298'
+source-wordcount: '313'
 ht-degree: 0%
 
 ---
@@ -22,7 +23,7 @@ ht-degree: 0%
 
 如果您是IMS組織的系統管理員、產品管理員或產品描述檔管理員，您可以在Adobe Admin Console中檢視您指派的產品描述檔及其提供的權限。 如需如 [何導覽以檢視產品設定檔權限的](./ui/overview.md)[!DNL Admin Console] 指示，請參閱存取控制使用指南。
 
-如果您不是管理員，您仍可以透過傳送要求至「存取控制API」中的端點，來檢 `/acl/effective-policies` 視目前的存取權限。 如需詳細資訊，請參閱存取控制開發人 [員指南中的](./api/effective-policies.md) 「檢視有效政策」一節。
+如果您不是管理員，您仍可以透過傳送要求至「存取控制API」中的端點，來檢 `/acl/effective-policies` 視目前的存取權限。 如需詳細資訊，請參閱存取控制開發 [人員指南中的](./api/effective-policies.md) 「檢視有效政策」一節。
 
 ## UI中的某些功 [!DNL Platform] 能無法使用。 這些功能的存取權如何由權限控制？
 
