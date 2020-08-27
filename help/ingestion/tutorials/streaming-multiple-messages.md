@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 在單一HTTP要求中串流多個訊息
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 80392190c7fcae9b6e73cc1e507559f834853390
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '1459'
+source-wordcount: '1466'
 ht-degree: 1%
 
 ---
@@ -22,16 +22,16 @@ ht-degree: 1%
 
 本教學課程需要對Adobe Experience Platform有充份的瞭解 [!DNL Data Ingestion]。 在開始本教學課程之前，請先閱讀下列檔案：
 
-- [資料擷取概觀](../home.md): 涵蓋核心概念， [!DNL Experience Platform Data Ingestion]包括擷取方法和資料連接器。
-- [串流擷取概觀](../streaming-ingestion/overview.md): 串流擷取的工作流程和建立區塊，例如串流連線、資料集 [!DNL XDM Individual Profile]和 [!DNL XDM ExperienceEvent]。
+- [資料擷取概觀](../home.md):涵蓋核心概念， [!DNL Experience Platform Data Ingestion]包括擷取方法和資料連接器。
+- [串流擷取概觀](../streaming-ingestion/overview.md):串流擷取的工作流程和建立區塊，例如串流連線、資料集 [!DNL XDM Individual Profile]和 [!DNL XDM ExperienceEvent]。
 
 本教學課程也要求您完成 [Adobe Experience Platform](../../tutorials/authentication.md) (Authentication to Adobe Experience Platform [!DNL Platform] )教學課程，才能成功呼叫API。 完成驗證教學課程時，提供本教學課程中所有API呼叫所需之「授權」標題的值。 標題在範例呼叫中顯示如下：
 
-- 授權： 生產者 `{ACCESS_TOKEN}`
+- 授權：生產者 `{ACCESS_TOKEN}`
 
 所有POST要求都需要額外的標題：
 
-- 內容類型： application/json
+- 內容類型：application/json
 
 ## 建立串流連線
 
@@ -210,7 +210,7 @@ curl -X POST https://dcs.adobedc.net/collection/batch/{CONNECTION_ID} \
 
 ## 標識失敗消息
 
-與使用單一訊息傳送請求相比，當傳送含有多則訊息的HTTP請求時，需考慮其他因素，例如： 如何識別資料何時無法傳送、哪些特定訊息無法傳送、如何擷取，以及當相同請求中的其他訊息失敗時，成功的資料會發生什麼情況。
+與使用單一訊息傳送請求相比，當傳送含有多則訊息的HTTP請求時，需考慮其他因素，例如：如何識別資料何時無法傳送、哪些特定訊息無法傳送、如何擷取，以及當相同請求中的其他訊息失敗時，成功的資料會發生什麼情況。
 
 繼續本教程之前，建議先閱讀檢索失敗 [批次的指南](../quality/retrieve-failed-batches.md) 。
 
@@ -508,7 +508,7 @@ curl -X POST https://dcs.adobedc.net/collection/batch/{CONNECTION_ID} \
     },
 ```
 
-第三則訊息因標題中使用的IMS組織ID無效而失敗。 IMS組織必須符合您嘗試張貼至的{CONNECTION_ID}。 若要判斷哪個IMS組織ID符合您使用的串流連線，您可以使用 `GET inlet` 執行請求 [!DNL Data Ingestion API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml)。 如需 [如何擷取先前建立之串流連線的範例](./create-streaming-connection.md#get-data-collection-url) ，請參閱擷取串流連線。
+第三則訊息因標題中使用的IMS組織ID無效而失敗。 IMS組織必須符合您嘗試張貼至的{CONNECTION_ID}。 若要判斷哪個IMS組織ID符合您使用的串流連線，您可 `GET inlet` 以使用 [[!DNL資料擷取API]執行請求](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml)。 如需 [如何擷取先前建立之串流連線的範例](./create-streaming-connection.md#get-data-collection-url) ，請參閱擷取串流連線。
 
 第四條消息失敗，因為它未遵循預期的XDM模式。 請 `xdmSchema` 求的標頭和正文中包含的與的XDM模式不匹配 `{DATASET_ID}`。 修正訊息標題和內文中的架構，可讓它傳遞DCCS驗證並成功傳送至 [!DNL Platform]。 還必須更新消息主體，使其與的XDM模式匹配， `{DATASET_ID}` 以便在上通過流驗證 [!DNL Platform]。 如需成功串流至平台之訊息的詳細資訊，請參閱本教 [學課程的確認訊息](#confirm-messages-ingested) 。
 
@@ -529,7 +529,7 @@ curl -X POST https://dcs.adobedc.net/collection/batch/{CONNECTION_ID} \
 
 ## 後續步驟
 
-現在，您知道如何在單一請求中傳送多則訊息，並驗證訊息是否已成功傳入目標資料集，因此可以開始將您自己的資料串流至 [!DNL Platform]。 如需如何從中查詢和擷取收錄資料的概 [!DNL Platform]述，請參閱 [!DNL Data Access](../../data-access/tutorials/dataset-data.md) 指南。
+現在，您知道如何在單一請求中傳送多則訊息，並驗證訊息是否已成功傳入目標資料集，因此可以開始將您自己的資料串流至 [!DNL Platform]。 有關如何從中查詢和檢索收錄資料的概 [!DNL Platform]述，請參 [閱[!DNL資料存取]指南](../../data-access/tutorials/dataset-data.md) 。
 
 ## 附錄
 
@@ -543,8 +543,8 @@ curl -X POST https://dcs.adobedc.net/collection/batch/{CONNECTION_ID} \
 | :---: | --- |
 | 207 | 儘管「207」用作整體響應狀態代碼，但接收方需要查閱多狀態響應主體的內容，以瞭解有關方法執行的成功或失敗的進一步資訊。 回應程式碼用於成功、部分成功以及失敗情況。 |
 | 400 | 請求有問題。 請參閱回應內文以取得更具體的錯誤訊息（例如，「訊息裝載遺失必要欄位，或「訊息」為未知xdm格式）。 |
-| 401 | 未授權： 請求缺少有效的授權標題。 僅對啟用了身份驗證的入口返回。 |
-| 403 | 未授權：  提供的授權Token無效或已過期。 僅對啟用了身份驗證的入口返回。 |
+| 401 | 未授權：請求缺少有效的授權標題。 僅對啟用了身份驗證的入口返回。 |
+| 403 | 未授權： 提供的授權Token無效或已過期。 僅對啟用了身份驗證的入口返回。 |
 | 413 | 裝載過大——當總裝載要求大於1MB時拋出。 |
 | 429 | 指定時段內的請求過多。 |
 | 500 | 處理負載時出錯。 有關更具體的錯誤消息，請參見響應主體(例如，未指定消息裝載模式，或不符合中的XDM定 [!DNL Platform]義)。 |
