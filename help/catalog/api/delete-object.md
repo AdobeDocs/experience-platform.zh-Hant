@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;delete an object;catalog service;api
 solution: Experience Platform
 title: 刪除對象
 topic: developer guide
+description: 可以通過在DELETE請求的路徑中提供目錄對象的ID來刪除目錄對象。
 translation-type: tm+mt
-source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
+source-git-commit: 14f99c23cd82894fee5eb5c4093b3c50b95c52e8
 workflow-type: tm+mt
-source-wordcount: '173'
+source-wordcount: '190'
 ht-degree: 2%
 
 ---
