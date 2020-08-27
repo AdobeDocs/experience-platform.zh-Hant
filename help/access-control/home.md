@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;access control;adobe admin console
 solution: Experience Platform
-title: 存取控制概觀
 topic: overview
+title: 存取控制概觀
+description: Adobe Experience Platform的存取控制權是透過Adobe Admin Console提供。 此功能運用Admin Console中的產品設定檔，可連結使用者與權限和沙盒。
 translation-type: tm+mt
-source-git-commit: e66fd20eb7a153e556a3716bb255af084e52292e
+source-git-commit: cddc559dfb65ada888bb367d6265863091a9b2a1
 workflow-type: tm+mt
-source-wordcount: '1103'
+source-wordcount: '1131'
 ht-degree: 3%
 
 ---
@@ -18,7 +19,7 @@ ht-degree: 3%
 
 ## 存取控制階層和工作流程
 
-要配置對的訪問控制， [!DNL Experience Platform]您必須對具有產品整合的組織具有管 [!DNL Experience Platform] 理員權限。 授予或撤消權限的最低角色是產品 **[!UICONTROL 配置檔案管理員]**。 其他可管理權限的管理員角色 **[!UICONTROL 包括產品管理員]** （可管理產品內的所有設定檔）和 **[!UICONTROL 系統管理員]** （無限制）。 如需詳細資訊，請參閱Adobe說明中 [心有關管理](https://helpx.adobe.com/enterprise/using/admin-roles.html) 角色的文章。
+為了配置對的訪問控制 [!DNL Experience Platform]，您必須對具有產品整合的組織具有管 [!DNL Experience Platform] 理員權限。 授予或撤消權限的最低角色是產品 **[!UICONTROL 配置檔案管理員]**。 其他可管理權限的管理員角色 **[!UICONTROL 包括產品管理員]** （可管理產品內的所有設定檔）和 **[!UICONTROL 系統管理員]** （無限制）。 如需詳細資訊，請參閱Adobe說明中 [心有關管理](https://helpx.adobe.com/enterprise/using/admin-roles.html) 角色的文章。
 
 >[!NOTE]
 >
@@ -31,7 +32,7 @@ ht-degree: 3%
 - 管理員可以視需要檢視 [預設產品設定檔](#product-profiles) ，或建立新的客戶產品設定檔。
 - 管理員可以編輯任何現有產品設定檔的權限和使用者。
 - 在建立或編輯產品配置檔案時，管理員使用 **[!UICONTROL users]** 頁籤將用戶添加到配置檔案中，並通過訪問[!UICONTROL permissionsTab來授予這些用戶(如「]Read Datasets[!UICONTROL 」或「]Manage Schemas **** 」)的權限。 同樣地，管理員也可以使用相同的權限標籤來指派沙盒的存取權。
-- 當使用者登入使 [!DNL Experience Platform] 用者介面時，其權 [!DNL Platform] 能存取權是由步驟2授與的權限所驅動。 例如，如果用戶沒有「[!UICONTROL View Datasets]」權限，則側面菜單中的 *[!UICONTROL Datasets]* 頁籤對該用戶將不可見。
+- 當使用者登入使 [!DNL Experience Platform] 用者介面時，其權 [!DNL Platform] 能存取權是由步驟2授與的權限所驅動。 例如，如果用戶沒有「[!UICONTROL View Datasets]」權限，則側面菜單中的 *[!UICONTROL Datasets]* 頁籤對該用戶不可見。
 
 有關如何在中管理訪問控制的詳細步驟 [!DNL Experience Platform]，請參 [閱訪問控制使用手冊](./ui/overview.md)。
 
@@ -70,7 +71,7 @@ Adobe Admin Console提供一個集中位置，可讓您管理Adobe產品權益�
 
 ### 權限
 
-產品 **描述檔中的** 「權限」標籤會顯示該描述檔中作用中的沙盒和權限：
+產品 **描述檔中** ,「權限」標籤會顯示該描述檔中作用中的沙盒和權限：
 
 ![](./images/permissions-overview.png)
 
