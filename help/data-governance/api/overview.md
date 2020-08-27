@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 政策服務API開發人員指南
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: cb3a17aa08c67c66101cbf3842bf306ebcca0305
+source-git-commit: 71678b10c9e137016ea404305b272508b9c8cabe
 workflow-type: tm+mt
-source-wordcount: '474'
+source-wordcount: '472'
 ht-degree: 0%
 
 ---
@@ -18,7 +18,7 @@ Adobe Experience Platform可 [!DNL Data Governance] 讓您管理客戶資料，�
 
 API提 [!DNL Policy Service] 供數個端點，可讓您以程式設計方式管理資料使用標籤和原則，以及評估違反原則的行銷動作。 這些端點如下所示。 如需詳細資訊，請造訪個別端點指南，並參 [閱快速入門手冊](./getting-started.md) ，以取得必要標題、讀取範例API呼叫等重要資訊。
 
-若要檢視所有可用的端點和CRUD作業，請造 [訪Policy Service API Swagger](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml)。
+若要檢視所有可用的端點和CRUD作業，請造訪 [[!DNL Policy Service] API Swagger](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml)。
 
 ## 標籤
 
