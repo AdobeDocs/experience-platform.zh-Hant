@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;JupyterLab;notebooks;Data Science Workspace;popular topics
+keywords: Experience Platform;JupyterLab;notebooks;Data Science Workspace;popular topics;query service
 solution: Experience Platform
 title: Jupyter筆記本中的查詢服務
 topic: Tutorial
+description: Adobe Experience Platform可讓您將查詢服務整合到JupyterLab中，做為標準功能，在資料科學工作區中使用結構化查詢語言(SQL)。 本教學課程示範常見使用案例的SQL查詢範例，以探索、轉換和分析Adobe Analytics資料。
 translation-type: tm+mt
-source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
+source-git-commit: 43d568a401732a753553847dee1b4a924fcc24fd
 workflow-type: tm+mt
-source-wordcount: '783'
+source-wordcount: '826'
 ht-degree: 1%
 
 ---
