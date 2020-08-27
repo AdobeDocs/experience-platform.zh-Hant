@@ -3,10 +3,11 @@ keywords: Experience Platform;getting started;attribution ai;popular topics
 solution: Experience Platform
 title: Attribution AI快速入門
 topic: Getting started
+description: 以下指南需要瞭解使用Attribution AI時涉及的各種Adobe Experience Platform服務。 在開始教學課程之前，請先閱讀下列檔案。
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: c30bbaead775e68f869b080e24e18d4a23cda973
 workflow-type: tm+mt
-source-wordcount: '499'
+source-wordcount: '526'
 ht-degree: 0%
 
 ---
@@ -16,9 +17,9 @@ ht-degree: 0%
 
 以下指南需要瞭解使用Attribution AI [!DNL Adobe Experience Platform] 時涉及的各種服務。 在開始教學課程之前，請先檢閱下列檔案：
 
-- [體驗資料模型(XDM)系統概觀](../../xdm/home.md): XDM是基礎架構，可讓 [!DNL Adobe Experience Cloud]Experience Platform提供支援，讓您在適當的時間，透過適當的通道，向適當的人傳遞適當的訊息。 Experience Platform的建立方法XDM System可操作Experience Data Model架構，供Platform服務使用。
-- [架構構成基礎](../../xdm/schema/composition.md): 本檔案提供Experience Data Model(XDM)架構的簡介，以及用於合成架構的建立區塊、原則和最佳實務 [!DNL Adobe Experience Platform]。
-- [建立結構](../../xdm/tutorials/create-schema-ui.md): 本教學課程涵蓋使用Experience Platform中的架構編輯器建立架構的步驟。
+- [體驗資料模型(XDM)系統概觀](../../xdm/home.md):XDM是基礎架構，可讓 [!DNL Adobe Experience Cloud]Experience Platform提供支援，讓您在適當的時間，透過適當的通道，向適當的人傳遞適當的訊息。 Experience Platform的建立方法XDM System可操作Experience Data Model架構，供Platform服務使用。
+- [架構構成基礎](../../xdm/schema/composition.md):本檔案提供Experience Data Model(XDM)架構的簡介，以及用於合成架構的建立區塊、原則和最佳實務 [!DNL Adobe Experience Platform]。
+- [建立結構](../../xdm/tutorials/create-schema-ui.md):本教學課程涵蓋使用Experience Platform中的架構編輯器建立架構的步驟。
 
 歸因AI需要資料集符合消費者體驗事件(CEE)架構，此架構是 [Experience Data Model](../../xdm/home.md) (XDM)中的混合項。 若要實作或變更此資料，請在attributionai-support@adobe.com與Adobe支援聯絡。 如果媒體支出資料已經存在，您可以做進一步分析，例如增加收入和投資報酬率。 如果客戶配置檔案資料可用，您可以進一步將信用歸因於客戶配置檔案層。
 
@@ -36,7 +37,7 @@ ht-degree: 0%
 
 下載Attribution AI分數是透過API呼叫的組合來完成。 若要呼叫平台API，您必須先完成驗證教 [學課程](../../tutorials/authentication.md)。 完成驗證教學課程後，所有Experience Platform API呼叫中每個必要標題的值都會顯示在下方：
 
-- 授權： 生產者 `{ACCESS_TOKEN}`
+- 授權：生產者 `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
