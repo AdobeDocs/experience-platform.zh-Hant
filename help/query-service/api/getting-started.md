@@ -5,9 +5,9 @@ title: 查詢服務開發人員指南
 topic: query templates
 description: 本開發人員指南提供在Adobe Experience Platform Query Service API中執行各種作業的步驟。
 translation-type: tm+mt
-source-git-commit: 23516c66a67ae5663dcf90a40ccba98bfd266ab0
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '369'
+source-wordcount: '380'
 ht-degree: 1%
 
 ---
@@ -21,9 +21,9 @@ ht-degree: 1%
 
 本指南需要有效瞭解與使用相關的各種Adobe Experience Platform服務 [!DNL Query Service]。
 
-- [!DNL Query Service](../home.md):提供查詢資料集並將生成的查詢捕獲為中的新資料集的能力 [!DNL Experience Platform]。
-- [!DNL Experience Data Model (XDM) System](../../xdm/home.md):組織客戶體驗資料 [!DNL Experience Platform] 的標準化架構。
-- [!DNL Sandboxes](../../sandboxes/home.md): [!DNL Experience Platform] 提供虛擬沙盒，可將單一執行個體分 [!DNL Platform] 割為不同的虛擬環境，以協助開發和發展數位體驗應用程式。
+- [[!DNL查詢服務]](../home.md):提供查詢資料集並將生成的查詢捕獲為中的新資料集的能力 [!DNL Experience Platform]。
+- [[!DNL體驗資料模型(XDM)系統]](../../xdm/home.md):組織客戶體驗資料 [!DNL Experience Platform] 的標準化架構。
+- [[!DNL沙盒]](../../sandboxes/home.md): [!DNL Experience Platform] 提供虛擬沙盒，可將單一執行個體分 [!DNL Platform] 割為不同的虛擬環境，以協助開發和發展數位體驗應用程式。
 
 以下各節提供您必須知道的其他資訊，以便成功使 [!DNL Query Service] 用API。
 
