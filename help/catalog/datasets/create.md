@@ -5,9 +5,9 @@ title: 使用API建立資料集
 topic: datasets
 description: 本檔案提供使用Adobe Experience Platform API建立資料集，以及使用檔案填入資料集的一般步驟。
 translation-type: tm+mt
-source-git-commit: 23516c66a67ae5663dcf90a40ccba98bfd266ab0
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '1251'
+source-wordcount: '1259'
 ht-degree: 1%
 
 ---
@@ -22,8 +22,8 @@ ht-degree: 1%
 本指南需要有效瞭解Adobe Experience Platform的下列元件：
 
 * [批次擷取](../../ingestion/batch-ingestion/overview.md): [!DNL Experience Platform] 可讓您將資料內嵌為批次檔案。
-* [!DNL Experience Data Model (XDM) System](../../xdm/home.md):組織客戶體驗資料 [!DNL Experience Platform] 的標準化架構。
-* [!DNL Sandboxes](../../sandboxes/home.md): [!DNL Experience Platform] 提供虛擬沙盒，可將單一執行個體分 [!DNL Platform] 割為不同的虛擬環境，以協助開發和發展數位體驗應用程式。
+* [[!DNL體驗資料模型(XDM)系統]](../../xdm/home.md):組織客戶體驗資料 [!DNL Experience Platform] 的標準化架構。
+* [[!DNL沙盒]](../../sandboxes/home.md): [!DNL Experience Platform] 提供虛擬沙盒，可將單一執行個體分 [!DNL Platform] 割為不同的虛擬環境，以協助開發和發展數位體驗應用程式。
 
 以下章節提供您必須知道的其他資訊，才能成功呼叫 [!DNL Platform] API。
 
@@ -474,6 +474,6 @@ curl -X GET \
 
 如需更新結構的詳細資訊，請參 [閱結構註冊表API開發人員指南](../../xdm/api/getting-started.md)。
 
-更新架構後，您可以重新遵循本教學課程中的步驟，以擷取符合修訂架構的新資料。
+更新架構後，您可以重新遵循本教學課程中的步驟，以便新增符合修訂架構的資料。
 
 請務必記住，模式演化純粹是可加性的，這表示一旦將模式保存到註冊表並用於資料提取，您就不能對模式引入中斷更改。 若要進一步瞭解合成架構以搭配Adobe Experience Platform使用的最佳範例，請參閱架構構 [成基礎指南](../../xdm/schema/composition.md)。
