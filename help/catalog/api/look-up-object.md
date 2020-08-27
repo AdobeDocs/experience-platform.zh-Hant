@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;catalog;object lookup;api
 solution: Experience Platform
 title: 查找對象
 topic: developer guide
+description: '如果您知道特定目錄物件的唯一識別碼，則可執行GET要求以檢視該物件的詳細資訊。 '
 translation-type: tm+mt
-source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
+source-git-commit: dd1f508b93e8eac14e3c41fac9d8f49769d08f46
 workflow-type: tm+mt
-source-wordcount: '132'
-ht-degree: 3%
+source-wordcount: '154'
+ht-degree: 2%
 
 ---
 
