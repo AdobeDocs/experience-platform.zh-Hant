@@ -5,7 +5,7 @@ title: JupyterLab使用指南
 topic: Overview
 description: JupyterLab是Project Jupyter的網路使用者介面，並與Adobe Experience Platform緊密整合。 它為資料科學家提供互動式開發環境，以便與Jupyter筆記型電腦、程式碼和資料搭配使用。 本文檔概述了JupyterLab及其功能，以及執行常見操作的說明。
 translation-type: tm+mt
-source-git-commit: 9ba229195892245d29fb4f17b9f2e5cd6c6ea567
+source-git-commit: 78f080fd7598799825c59a4fdfdcaf7d294560a3
 workflow-type: tm+mt
 source-wordcount: '3702'
 ht-degree: 11%
@@ -155,8 +155,8 @@ Experience Platform的JupyterLab整合隨附架構變更、設計考量、自訂
 | --- | --- |
 | 空白 | 空的筆記本檔案。 |
 | 入門者 | 預填充的筆記型電腦演示使用樣本資料進行資料探索。 |
-| 零售銷售 | 預先填入的筆記型電腦，使用 <a href="https://adobe.ly/2wOgO3L" target="_blank">範例資料</a> ，提供零售銷售方式。 |
-| 方式產生器 | 在中建立配方的筆記本模板 [!DNL JupyterLab]。 它預先填入程式碼和評註，以示範並說明方式建立程式。 請參閱筆記 <a href="https://www.adobe.com/go/data-science-create-recipe-notebook-tutorial-en" target="_blank">本至配方教學課程</a> ，以取得詳細的逐步說明。 |
+| 零售銷售 | 預裝的筆記型電腦採用 [樣本資料](https://adobe.ly/2wOgO3L) ，提供零售配方。 |
+| 方式產生器 | 在中建立配方的筆記本模板 [!DNL JupyterLab]。 它預先填入程式碼和評註，以示範並說明方式建立程式。 請參閱筆記 [本至配方教學課程](https://www.adobe.com/go/data-science-create-recipe-notebook-tutorial-en) ，以取得詳細的逐步說明。 |
 | [!DNL Query Service] | 預先填入的筆記型電腦，可直接在提供的范 [!DNL Query Service] 例工作流程 [!DNL JupyterLab] 中展示其使用方式，可進行大規模資料分析。 |
 | XDM事件 | 預先填入的筆記型電腦，展示後值Experience Event資料的資料探索，著重於資料結構中常見的功能。 |
 | XDM查詢 | 預先填入的筆記型電腦，展示Experience Event資料的範例商業查詢。 |
@@ -455,9 +455,9 @@ dataFrame.show()
 
 ### 查詢資料使 [!DNL Query Service] 用 [!DNL Python]
 
-[!DNL JupyterLab] on可 [!DNL Platform] 讓您在筆記型電腦中使 [!DNL Python] 用SQL透過 <a href="https://www.adobe.com/go/query-service-home-en" target="_blank">Adobe Experience Platform Query Service存取資料</a>。 由於資料的運 [!DNL Query Service] 行時間優越，通過訪問資料對處理大型資料集非常有用。 請注意，使用查詢 [!DNL Query Service] 資料的處理時間限制為10分鐘。
+[!DNL JupyterLab] on可 [!DNL Platform] 讓您在筆記型電腦中使 [!DNL Python] 用SQL透過 [Adobe Experience Platform Query Service存取資料](https://www.adobe.com/go/query-service-home-en)。 由於資料的運 [!DNL Query Service] 行時間優越，通過訪問資料對處理大型資料集非常有用。 請注意，使用查詢 [!DNL Query Service] 資料的處理時間限制為10分鐘。
 
-在中使 [!DNL Query Service] 用 [!DNL JupyterLab]之前，請確定您對 <a href="https://www.adobe.com/go/query-service-sql-syntax-en" target="_blank">[!DNL Query Service] SQL語法有正確的理解</a>。
+在中使 [!DNL Query Service] 用 [!DNL JupyterLab]之前，請確定您對 [[!DNL Query Service] SQL語法有正確的瞭解](https://www.adobe.com/go/query-service-sql-syntax-en)。
 
 使用查詢 [!DNL Query Service] 資料需要提供目標資料集的名稱。 您可以使用「資料總管」來尋找所需的資料集，以產生必要的 **程式碼儲存格**。 按一下右鍵資料集清單，然後按一下「 **Notebook（筆記本）」中的** 「Query Data（查詢資料）」 ，在筆記本中生成以下兩個代碼單元格：
 
@@ -641,7 +641,7 @@ timedf.show()
 | kit | 5.1.0.17 |
 | gplot | 0.11.5 |
 | py-xgboost | 0.90 |
-| 彈性 | 3.4.1 |
+| opencv | 3.4.1 |
 | 皮什帕克 | 2.4.3 |
 | 火炬 | 1.0.1 |
 | wxpython | 4.0.6 |
