@@ -3,10 +3,11 @@ keywords: Experience Platform;troubleshooting;Data Science Workspace;popular top
 solution: Experience Platform
 title: Data Science Workspace疑難排解指南
 topic: Troubleshooting
+description: 本檔案提供有關Adobe Experience Platform Data Science Workspace常見問題的解答。
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 194a29124949571638315efe00ff0b04bff19303
 workflow-type: tm+mt
-source-wordcount: '665'
+source-wordcount: '680'
 ht-degree: 0%
 
 ---
@@ -26,7 +27,7 @@ ht-degree: 0%
 
 要解決此問題，請使用以下步驟：
 
-在您的 [!DNL Chrome] 瀏覽器中，導覽至右上角並選取「設定」 **** (或者，您也可以複製並貼上位址列中的「chrome://settings/」)。 接著，捲動至頁面底部，然後按一下「進階 **」下拉** 式清單。
+在您的 [!DNL Chrome] 瀏覽器中，導覽至右上角並選取「設定」( **Settings** )(或者，您也可以在位址列中複製並貼上「chrome://settings/」)。 接著，捲動至頁面底部，然後按一下「進階 **」下拉** 式清單。
 
 ![chrome進階](./images/faq/chrome-advanced.png)
 
@@ -78,7 +79,7 @@ Safari預設會在Safari &lt; 12中停用協力廠商Cookie。 由於您 [!DNL J
 
 ## 如何安裝自訂程 [!DNL Python] 式庫？
 
-內核 [!DNL Python] 已預先安裝許多常用的機器學習程式庫。 不過，您可以在程式碼儲存格中執行下列命令，以安裝其他自訂程式庫：
+內 [!DNL Python] 核已預先安裝許多常用的機器學習庫。 不過，您可以在程式碼儲存格中執行下列命令，以安裝其他自訂程式庫：
 
 ```shell
 !pip install {LIBRARY_NAME}
