@@ -5,9 +5,9 @@ title: Adobe Experience Platform Identity Service
 topic: overview
 description: Adobe Experience Platform Identity Service可跨裝置和系統橋接身分，協助您更全面地瞭解客戶及其行為，讓您即時提供具影響力的個人化數位體驗。
 translation-type: tm+mt
-source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '1707'
+source-wordcount: '1711'
 ht-degree: 0%
 
 ---
@@ -31,7 +31,7 @@ Mary在您的電子商務網站上有一個帳戶，她過去在那裡完成了�
 
 在她的平板電腦上按一下，您的定位內容可以反映瑪麗的完整個人檔案和歷史，而不只是未知顧客使用的平板電腦。
 
-定義並維護的 [!DNL Identity Service] 身分關係可借由 [!DNL Real-time Customer Profile] 建立客戶及其與品牌互動的完整圖景。 如需詳細資訊，請參 [閱即時客戶個人檔案總覽](../profile/home.md)。
+定義和維護的 [!DNL Identity Service] 身分關係可運用來 [!DNL Real-time Customer Profile] 建立客戶及其與品牌互動的完整圖景。 如需詳細資訊，請參 [閱即時客戶個人檔案總覽](../profile/home.md)。
 
 ### 身份
 
@@ -109,7 +109,7 @@ PII（例如電子郵件地址和電話號碼）可直接識別客戶。 因此�
 
 ### 在(XDM)中包 [!DNL Experience Data Model] 含身分資料
 
-作為組織客戶資料的 [!DNL Platform] 標準化框架， [!DNL Experience Data Model] (XDM)讓資料能夠在與其他服務互動時 [!DNL Experience Platform] 共用和理解 [!DNL Platform]。 如需詳細資訊，請參閱 [XDM系統概觀](../xdm/home.md)。
+作為組織客戶資料的 [!DNL Platform] 標準化框架， [!DNL Experience Data Model] (XDM)允許在與其他服務互動時，共 [!DNL Experience Platform] 用和瞭解資料 [!DNL Platform]。 如需詳細資訊，請參閱 [XDM系統概觀](../xdm/home.md)。
 
 記錄和時間序列模式都提供了包含身份資料的方法。 當擷取資料時，如果發現不同名稱空間的資料片段共用共同身分資料，則識別圖會在它們之間建立新的關係。
 
@@ -146,4 +146,4 @@ Adobe Experience Platform是以隱私權為考量而建立，並包含資料治�
 
 ## 後續步驟
 
-現在，您已瞭解其關鍵概 [!DNL Identity Service] 念及其在其中的角色 [!DNL Experience Platform]，可以開始學習如何使用您的識別圖表 [!DNL Identity Service API](./api/getting-started.md)。
+現在，您已瞭解其中的 [!DNL Identity Service] 主要概念及其角色 [!DNL Experience Platform]，可以開始學習如何使用 [[!DNL Identity Service API]使用身分圖表](./api/getting-started.md)。
