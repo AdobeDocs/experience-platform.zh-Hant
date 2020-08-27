@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 連線至串流目的地並啟動資料
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 38cb8eeae3ac0a1852c59e433d1cacae82b1c6c0
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '1809'
+source-wordcount: '1818'
 ht-degree: 2%
 
 ---
@@ -30,8 +30,8 @@ ht-degree: 2%
 
 本指南需要有效瞭解Adobe Experience Platform的下列元件：
 
-* [!DNL Experience Data Model (XDM) System](../../xdm/home.md):Experience Platform組織客戶體驗資料的標準化架構。
-* [!DNL Catalog Service](../../catalog/home.md): [!DNL Catalog] 是Experience Platform中資料位置和世系的記錄系統。
+* [[!DNL體驗資料模型(XDM)系統]](../../xdm/home.md):Experience Platform組織客戶體驗資料的標準化架構。
+* [[!DNL目錄服務]](../../catalog/home.md): [!DNL Catalog] 是Experience Platform中資料位置和世系的記錄系統。
 * [沙盒](../../sandboxes/home.md):Experience Platform提供虛擬沙盒，可將單一Platform實例分割為不同的虛擬環境，以協助開發和發展數位體驗應用程式。
 
 以下各節提供您需要瞭解的其他資訊，以便在Adobe即時CDP中將資料啟動至串流目的地。
