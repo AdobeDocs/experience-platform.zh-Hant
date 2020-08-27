@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;Score a model;Data Science Workspace;popular topics
+keywords: Experience Platform;Score a model;Data Science Workspace;popular topics;sensei machine learning api
 solution: Experience Platform
 title: 對模型(API)評分
 topic: Tutorial
+description: 本教學課程將示範如何運用Sensei機器學習API來建立實驗和實驗執行。
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 7615476c4b728b451638f51cfaa8e8f3b432d659
 workflow-type: tm+mt
-source-wordcount: '508'
+source-wordcount: '529'
 ht-degree: 1%
 
 ---
@@ -34,10 +35,10 @@ curl -X POST \
   -d '{JSON_PAYLOAD}'
 ```
 
-`{IMS_ORG}`: 您的IMS組織認證可在您獨特的Adobe Experience Platform整合中找到。\
-`{ACCESS_TOKEN}`: 驗證後提供的您特定的載體Token值。\
-`{API_KEY}`: 您獨特的Adobe Experience Platform整合中提供您的特定API金鑰價值。\
-`{JSON_PAYLOAD}`: 要傳送的Enperity Run物件。 我們在教學課程中使用的範例如下所示：
+`{IMS_ORG}`:您的IMS組織認證可在您獨特的Adobe Experience Platform整合中找到。\
+`{ACCESS_TOKEN}`:驗證後提供的您特定的載體Token值。\
+`{API_KEY}`:您獨特的Adobe Experience Platform整合中提供您的特定API金鑰價值。\
+`{JSON_PAYLOAD}`:要傳送的Enperity Run物件。 我們在教學課程中使用的範例如下所示：
 
 ```JSON
 {
@@ -67,8 +68,8 @@ curl -X POST \
 }
 ```
 
-`{INSTANCE_ID}`: 代表MLInstance的ID。\
-`{MODEL_ID}`: 表示已訓練模型的ID。
+`{INSTANCE_ID}`:代表MLInstance的ID。\
+`{MODEL_ID}`:表示已訓練模型的ID。
 
 以下是建立排程實驗後的回應。
 
@@ -102,8 +103,8 @@ curl -X POST \
 }
 ```
 
-`{EXPERIMENT_ID}`: 代表實驗的ID。\
-`{INSTANCE_ID}`: 代表MLInstance的ID。
+`{EXPERIMENT_ID}`:代表實驗的ID。\
+`{INSTANCE_ID}`:代表MLInstance的ID。
 
 
 ### 建立實驗執行以進行計分
@@ -122,11 +123,11 @@ curl -X POST \
   -d '{JSON_PAYLOAD}'
 ```
 
-`{IMS_ORG}`: 您的IMS組織認證可在您獨特的Adobe Experience Platform整合中找到。\
-`{ACCESS_TOKEN}`: 驗證後提供的您特定的載體Token值。\
-`{API_KEY}`: 您獨特的Adobe Experience Platform整合中提供您的特定API金鑰價值。\
-`{EXPERIMENT_ID}`: 與您要定位的「實驗」對應的ID。 這可在建立實驗時的回應中找到。\
-`{JSON_PAYLOAD}`: 要張貼的資料。 我們在教學課程中使用的範例如下：
+`{IMS_ORG}`:您的IMS組織認證可在您獨特的Adobe Experience Platform整合中找到。\
+`{ACCESS_TOKEN}`:驗證後提供的您特定的載體Token值。\
+`{API_KEY}`:您獨特的Adobe Experience Platform整合中提供您的特定API金鑰價值。\
+`{EXPERIMENT_ID}`:與您要定位的「實驗」對應的ID。 這可在建立實驗時的回應中找到。\
+`{JSON_PAYLOAD}`:要張貼的資料。 我們在教學課程中使用的範例如下：
 
 ```JSON
 {
@@ -145,7 +146,7 @@ curl -X POST \
 }
 ```
 
-`{MODEL_ID}`: 與「模型」(Model)對應的ID。
+`{MODEL_ID}`:與「模型」(Model)對應的ID。
 
 建立「實驗運行」(Enperity Run)時的響應如下所示：
 
@@ -168,8 +169,8 @@ curl -X POST \
 }
 ```
 
-`{EXPERIMENT_ID}`:  與「運行」(Experity the Run)所在的「實驗」(Experity)對應的ID。\
-`{EXPERIMENT_RUN_ID}`: 與您剛建立的「實驗執行」對應的ID。
+`{EXPERIMENT_ID}`: 與「運行」(Experity the Run)所在的「實驗」(Experity)對應的ID。\
+`{EXPERIMENT_RUN_ID}`:與您剛建立的「實驗執行」對應的ID。
 
 
 ### 擷取排程實驗執行的實驗執行狀態
@@ -185,9 +186,9 @@ curl -X GET \
   -H 'x-gw-ims-org-id: {IMS_ORG}'
 ```
 
-`{EXPERIMENT_ID}`:  與「運行」(Experity the Run)所在的「實驗」(Experity)對應的ID。\
-`{ACCESS_TOKEN}`: 驗證後提供的您特定的載體Token值。\
-`{IMS_ORG}`: 您的IMS組織認證可在您獨特的Adobe Experience Platform整合中找到。
+`{EXPERIMENT_ID}`: 與「運行」(Experity the Run)所在的「實驗」(Experity)對應的ID。\
+`{ACCESS_TOKEN}`:驗證後提供的您特定的載體Token值。\
+`{IMS_ORG}`:您的IMS組織認證可在您獨特的Adobe Experience Platform整合中找到。
 
 由於特定實驗有多個「實驗執行」，所以傳回的回應會有一組「執行ID」。
 
@@ -212,8 +213,8 @@ curl -X GET \
 }
 ```
 
-`{EXPERIMENT_RUN_ID}`: 與「實驗執行」對應的ID。\
-`{EXPERIMENT_ID}`:  與「運行」(Experity the Run)所在的「實驗」(Experity)對應的ID。
+`{EXPERIMENT_RUN_ID}`:與「實驗執行」對應的ID。\
+`{EXPERIMENT_ID}`: 與「運行」(Experity the Run)所在的「實驗」(Experity)對應的ID。
 
 ### 停止和刪除排程的實驗
 
@@ -228,9 +229,9 @@ curl -X DELETE \
   -H 'x-gw-ims-org-id: {IMS_ORG}'
 ```
 
-`{EXPERIMENT_ID}`:  與實驗對應的ID。\
-`{ACCESS_TOKEN}`: 驗證後提供的您特定的載體Token值。\
-`{IMS_ORG}`: 您的IMS組織認證可在您獨特的Adobe Experience Platform整合中找到。
+`{EXPERIMENT_ID}`: 與實驗對應的ID。\
+`{ACCESS_TOKEN}`:驗證後提供的您特定的載體Token值。\
+`{IMS_ORG}`:您的IMS組織認證可在您獨特的Adobe Experience Platform整合中找到。
 
 >[!NOTE]
 >
