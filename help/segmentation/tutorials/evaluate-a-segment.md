@@ -5,9 +5,9 @@ title: 評估區段
 topic: tutorial
 description: 本檔案提供使用區段API評估區段及存取區段結果的教學課程。
 translation-type: tm+mt
-source-git-commit: 23516c66a67ae5663dcf90a40ccba98bfd266ab0
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '1535'
+source-wordcount: '1560'
 ht-degree: 0%
 
 ---
@@ -15,15 +15,15 @@ ht-degree: 0%
 
 # 評估並存取區段結果
 
-本檔案提供使用評估區段和存取區段結果的教學課程 [!DNL Segmentation API](../api/getting-started.md)。
+本檔案提供使用 [[!DNL區段API]評估區段及存取區段結果的教學課程](../api/getting-started.md)。
 
 ## 快速入門
 
 本教學課程需要對建立觀眾區隔時 [!DNL Adobe Experience Platform] 涉及的各種服務有充份的瞭解。 在開始本教學課程之前，請先閱讀下列服務的檔案：
 
-- [!DNL Real-time Customer Profile](../../profile/home.md):根據來自多個來源的匯整資料，即時提供統一的客戶個人檔案。
-- [!DNL Adobe Experience Platform Segmentation Service](../home.md):可讓您從資料建立受眾 [!DNL Real-time Customer Profile] 區段。
-- [!DNL Experience Data Model (XDM)](../../xdm/home.md):平台組織客戶體驗資料的標準化架構。
+- [[!DNL即時客戶基本資料]](../../profile/home.md):根據來自多個來源的匯整資料，即時提供統一的客戶個人檔案。
+- [[!DNL Adobe Experience Platform分段服務]](../home.md):可讓您從資料建立受眾 [!DNL Real-time Customer Profile] 區段。
+- [[!DNL體驗資料模型(XDM)]](../../xdm/home.md):平台組織客戶體驗資料的標準化架構。
 - [沙盒](../../sandboxes/home.md): [!DNL Experience Platform] 提供虛擬沙盒，可將單一執行個體分 [!DNL Platform] 割為不同的虛擬環境，以協助開發和發展數位體驗應用程式。
 
 ### 必要的標題
@@ -229,10 +229,10 @@ curl -X POST \
 
 ## 後續步驟
 
-成功完成導出後，您的資料即可在中 [!DNL Data Lake] 使用 [!DNL Experience Platform]。 然後，您可以使用 [!DNL Data Access API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-access-api.yaml) 與導出相關聯的 `batchId` 訪問資料。 視區段大小而定，資料可能以區塊為單位，而批次可能由數個檔案組成。
+成功完成導出後，您的資料即可在中 [!DNL Data Lake] 使用 [!DNL Experience Platform]。 然後，您可以使用 [[!DNL Data Access API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-access-api.yaml) ，使用與導出關聯的 `batchId` 訪問資料。 視區段大小而定，資料可能以區塊為單位，而批次可能由數個檔案組成。
 
 如需如何使用 [!DNL Data Access] API存取和下載批次檔案的逐步指示，請遵循資料存取 [教學課程](../../data-access/tutorials/dataset-data.md)。
 
 您也可以使用存取成功匯出的區段資料 [!DNL Adobe Experience Platform Query Service]。 使用UI或RESTful API, [!DNL Query Service] 可讓您編寫、驗證及執行查詢中的資料 [!DNL Data Lake]。
 
-有關如何查詢受眾資料的更多資訊，請參閱上的檔案 [!DNL Query Service](../../query-service/home.md)。
+有關如何查詢觀眾資料的更多資訊，請參閱 [[!DNL查詢服務]的檔案](../../query-service/home.md)。
