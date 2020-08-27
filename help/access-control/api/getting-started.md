@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;access control;api;getting started
 solution: Experience Platform
 title: 存取控制開發人員指南
 topic: developer guide
+description: Adobe Experience Platform中的存取控制功能可讓您使用Adobe Admin Console管理各種平台功能的角色和權限。 以下各節提供您必須知道的其他資訊，才能成功呼叫架構註冊表API。
 translation-type: tm+mt
-source-git-commit: d059f48a2a3ba6398418fd3d5b0b3fd837ff69a2
+source-git-commit: 43d568a401732a753553847dee1b4a924fcc24fd
 workflow-type: tm+mt
-source-wordcount: '333'
+source-wordcount: '379'
 ht-degree: 1%
 
 ---
@@ -23,7 +24,7 @@ ht-degree: 1%
 
 ## 快速入門
 
-以下章節提供您成功呼叫 [!DNL Schema Registry] API時需要知道的其他資訊。
+以下章節提供您必須知道的其他資訊，才能成功呼叫 [!DNL Schema Registry] API。
 
 ### 讀取範例API呼叫
 
