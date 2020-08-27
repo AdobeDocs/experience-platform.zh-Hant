@@ -5,9 +5,9 @@ title: 架構構成基礎
 topic: overview
 description: 本檔案提供Experience Data Model(XDM)架構的簡介，以及構成Adobe Experience Platform中要使用之架構的建置區塊、原則和最佳實務。
 translation-type: tm+mt
-source-git-commit: 23a69653ee773562cb0261b8e0bb67411eb4856e
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '2811'
+source-wordcount: '2839'
 ht-degree: 0%
 
 ---
@@ -62,9 +62,9 @@ XDM模式通過嵌入對象的使用，可以直接表示複雜的資料，並�
 
 結構描述用於將資料吸收到中 [!DNL Experience Platform]。 此資料可跨多個服務使用，以建立個別實體的單一統一檢視。 因此，在考慮結構時，請務必考慮客戶身分，以及哪些欄位可用來識別主題，而不論資料來自何處。
 
-為了協助此程式，您的架構中的關鍵欄位可標示為身分。 資料擷取時，這些欄位中的資料會插入該個人的「[!UICONTROL 身分圖表]」中。 圖形資料隨後可由和其他服 [!DNL Real-time Customer Profile](../../profile/home.md) 務訪問， [!DNL Experience Platform] 以提供每個客戶的拼接視圖。
+為了協助此程式，您的架構中的關鍵欄位可標示為身分。 資料擷取時，這些欄位中的資料會插入該個人的「[!UICONTROL 身分圖表]」中。 然後，圖表資料可由 [[!DNL即時客戶資料]](../../profile/home.md)[!DNL Experience Platform] 和其他服務存取，以提供每個個別客戶的銜接檢視。
 
-通常標示為「[!UICONTROL Identity]」的欄位包括：電子郵件地址、電話號碼、 [!DNL Experience Cloud ID (ECID)](https://docs.adobe.com/content/help/zh-Hant/id-service/using/home.html)CRM ID或其他唯一ID欄位。 您也應考慮組織專屬的任何唯一識別碼，因為這些識別碼可能也是[!UICONTROL 好的「Identity]」欄位。
+通常標示為「[!UICONTROL Identity]」的欄位包括：電子郵件地址、電 [話號碼、[!DNL Experience Cloud ID(ECID)]](https://docs.adobe.com/content/help/zh-Hant/id-service/using/home.html)、CRM ID或其他唯一ID欄位。 您也應考慮組織專屬的任何唯一識別碼，因為這些識別碼可能也是[!UICONTROL 好的「Identity]」欄位。
 
 在方案規劃階段，務必考慮客戶身份，以協助確保資料匯整在一起，以建立最強穩的個人檔案。 請參閱 [Adobe Experience Platform Identity Service的概觀](../../identity-service/home.md) ，進一步瞭解身分資訊如何協助您為客戶提供數位體驗。
 
@@ -119,11 +119,11 @@ XDM模式通過嵌入對象的使用，可以直接表示複雜的資料，並�
 
 >[!NOTE]
 >
->如果尚未使用架構將資料嵌入，則 [!DNL Experience Platform]可能會對該架構引入斷開更改。 但是，一旦在中使用了架構， [!DNL Platform]它就必須遵循附加的版本控制策略。
+>如果尚未使用架構將資料嵌入，則 [!DNL Experience Platform]可能會對該架構引入中斷更改。 但是，一旦在中使用了架構， [!DNL Platform]它就必須遵循附加的版本控制策略。
 
 ### 結構描述與資料擷取
 
-為了將資料內嵌至 [!DNL Experience Platform]中，必須先建立資料集。 資料集是資料轉換和追蹤的建置區塊， [!DNL Catalog Service](../../catalog/home.md)通常代表包含收錄資料的表格或檔案。 所有資料集都基於現有的XDM模式，這為所提取的資料應包含的內容以及其結構提供了約束。 如需詳細資訊，請 [參閱Adobe Experience Platform資料擷取概觀](../../ingestion/home.md) 。
+為了將資料內嵌至 [!DNL Experience Platform]中，必須先建立資料集。 資料集是用於 [[!DNL目錄服務]](../../catalog/home.md)，通常表示包含收錄資料的表或檔案的資料轉換和跟蹤的構建塊。 所有資料集都基於現有的XDM模式，這為所提取的資料應包含的內容以及其結構提供了約束。 如需詳細資訊，請 [參閱Adobe Experience Platform資料擷取概觀](../../ingestion/home.md) 。
 
 ## 架構的構建塊
 
@@ -194,17 +194,17 @@ Mixin的範圍和定義與類相同：有由個別組織使用定義的產業混
 
 下游服務和應用程式使用的某些資料操作對特定欄位類型強制執行限制。 受影響的服務包括但不限於：
 
-* [!DNL Real-time Customer Profile](../../profile/home.md)
-* [!DNL Identity Service](../../identity-service/home.md)
-* [!DNL Segmentation](../../segmentation/home.md)
-* [!DNL Query Service](../../query-service/home.md)
-* [!DNL Data Science Workspace](../../data-science-workspace/home.md)
+* [[!DNL即時客戶基本資料]](../../profile/home.md)
+* [[!DNL Identity Service]](../../identity-service/home.md)
+* [[!DNL分段]](../../segmentation/home.md)
+* [[!DNL查詢服務]](../../query-service/home.md)
+* [[!DNL資料科學工作區]](../../data-science-workspace/home.md)
 
 在建立用於下游服務的架構之前，請先閱讀這些服務的適當檔案，以便更好地瞭解該架構用於資料操作的現場要求和限制。
 
 ### XDM欄位
 
-除了基本欄位和定義您自己的資料類型的能力外，XDM還提供一套標準的欄位和資料類型，這些欄位和資料類型會由服務隱含地理解，並在跨元件使用時提供 [!DNL Experience Platform] 更一致 [!DNL Platform] 性。
+除了基本欄位和定義您自己的資料類型的能力外，XDM還提供一套標準的欄位和資料類型集，這些欄位和資料類型會由服務隱含地理解，並在跨元件使用時提供 [!DNL Experience Platform] 更一致 [!DNL Platform] 性。
 
 這些欄位（例如「名字」和「電子郵件地址」）除了基本標量欄位類型之外，還包含其他附加含義，告訴 [!DNL Platform] 任何共用相同XDM資料類型的欄位將以相同的方式運作。 無論資料來自何處，或資料使用於何種服務，都可信 [!DNL Platform] 任此行為一致。
 
@@ -240,7 +240,7 @@ Mixin的範圍和定義與類相同：有由個別組織使用定義的產業混
 
 現在，您瞭解了架構構成的基本知識，可以開始使用構建架構 [!DNL Schema Registry]。
 
-此 [!DNL Schema Registry] 程式可用來存取Adobe Experience Platform中 [!DNL Schema Library] 的，並提供使用者介面和RESTful API，讓您存取所有可用的程式庫資源。 本 [!DNL Schema Library] 軟體包含由Adobe定義的產業資源、由合作夥伴定義的廠商資 [!DNL Experience Platform] 源，以及由您組織成員組成的類別、混合、資料類型和結構。
+此 [!DNL Schema Registry] 程式可用來存取Adobe Experience Platform中 [!DNL Schema Library] 的，並提供使用者介面和RESTful API，讓您存取所有可用的程式庫資源。 包 [!DNL Schema Library] 含由Adobe定義的產業資源、由合作夥伴定義的廠商資 [!DNL Experience Platform] 源，以及由您組織成員組成的類別、混合、資料類型和結構。
 
 若要開始使用UI編寫架構，請遵循「架構編輯器」教學課程 [](../tutorials/create-schema-ui.md) ，以建立本檔案中提及的「忠誠成員」架構。
 
