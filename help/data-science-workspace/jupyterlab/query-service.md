@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Jupyter筆記本中的查詢服務
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 86ded28b1830d3607c8b5214c8d31dfcbf446252
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '764'
+source-wordcount: '783'
 ht-degree: 1%
 
 ---
@@ -27,14 +27,14 @@ ht-degree: 1%
 - 資料 [!DNL Adobe Analytics] 集
 
 - 對本教學課程中使用的下列主要概念有正確認識：
-   - [!DNL Experience Data Model (XDM) and XDM System](../../xdm/home.md)
-   - [!DNL Query Service](../../query-service/home.md)
-   - [!DNL Query Service SQL Syntax](../../query-service/sql/overview.md)
+   - [[!DNL體驗資料模型(XDM)和XDM系統]](../../xdm/home.md)
+   - [[!DNL查詢服務]](../../query-service/home.md)
+   - [[!DNL查詢服務SQL語法]](../../query-service/sql/overview.md)
    - [Adobe Analytics]
 
 ## 存取 [!DNL JupyterLab] 和 [!DNL Query Service] {#access-jupyterlab-and-query-service}
 
-1. 在中 [!DNL Experience Platform](https://platform.adobe.com)，從左側導 **[!UICONTROL 航列導航到Notebooks]** 。 請讓JupyterLab載入。
+1. 在 [[!DNL Experience Platform]](https://platform.adobe.com)，從左側導覽欄 **[!UICONTROL 瀏覽至Notebooks]** 。 請讓JupyterLab載入。
 
    ![](../images/jupyterlab/query/jupyterlab_launcher.png)
 
@@ -85,10 +85,10 @@ ht-degree: 1%
    target_day = "01"
    ```
 
-   - `target_table` : 資料集的 [!DNL Adobe Analytics] 名稱。
-   - `target_year` : 目標資料的特定年份。
-   - `target_month` : 目標所在的特定月份。
-   - `target_day` : 目標資料的特定來源日。
+   - `target_table` :資料集的 [!DNL Adobe Analytics] 名稱。
+   - `target_year` :目標資料的特定年份。
+   - `target_month` :目標所在的特定月份。
+   - `target_day` :目標資料的特定來源日。
 
    >[!NOTE]
    >
