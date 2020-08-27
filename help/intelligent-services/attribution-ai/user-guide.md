@@ -3,10 +3,11 @@ keywords: Experience Platform;user guide;attribution ai;popular topics
 solution: Experience Platform
 title: Attribution AI使用指南
 topic: User guide
+description: 本檔案可做為在智慧型服務使用者介面中與Attribution AI互動的指南。
 translation-type: tm+mt
-source-git-commit: 15f9f90e5a1439e071eeb46ad655eee10954c2ac
+source-git-commit: c30bbaead775e68f869b080e24e18d4a23cda973
 workflow-type: tm+mt
-source-wordcount: '1432'
+source-wordcount: '1449'
 ht-degree: 0%
 
 ---
@@ -188,7 +189,7 @@ Attribution AI中的最後一頁是 *Advanced* page，用於設定訓練和計�
 
 ## 後續步驟
 
-遵循本教學課程，您已成功在Attribution AI中建立服務例項。 當例項完成計分（最多允許24小時）後，您就可以發現Attribution AI [見解](./discover-insights.md)。 此外，如果您想要下載計分結果，請造訪下載原始 [分數檔案](./download-scores.md) 。
+遵循本教學課程，您已成功在Attribution AI中建立服務例項。 當例項完成計分（最多可允許24小時）後，您就可以發現Attribution AI [見解](./discover-insights.md)。 此外，如果您想要下載計分結果，請造訪下載原始 [分數檔案](./download-scores.md) 。
 
 ## 其他資源
 
