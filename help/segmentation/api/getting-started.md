@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 區段服務開發人員指南
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: bfbf2074a9dcadd809de043d62f7d2ddaa7c7b31
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '288'
+source-wordcount: '300'
 ht-degree: 0%
 
 ---
@@ -18,12 +18,12 @@ Adobe Experience Platform可 [!DNL Segmentation Service] 讓您在Adobe Experien
 
 開發人員指南需要對使用中涉及的各 [!DNL Experience Platform] 種服務有良好的認識 [!DNL Segmentation Service]。
 
-- [!DNL Segmentation](../home.md): 可讓您從資料建立受眾 [!DNL Real-time Customer Profile] 區段。
-- [!DNL Experience Data Model (XDM) System](../../xdm/home.md): 組織客戶體驗資料 [!DNL Experience Platform] 的標準化架構。
-- [!DNL Real-time Customer Profile](../../profile/home.md): 根據來自多個來源的匯整資料，提供統一、即時的消費者個人檔案。
+- [[!DNL分段]](../home.md):可讓您從資料建立受眾 [!DNL Real-time Customer Profile] 區段。
+- [[!DNL體驗資料模型(XDM)系統]](../../xdm/home.md):組織客戶體驗資料 [!DNL Experience Platform] 的標準化架構。
+- [[!DNL即時客戶基本資料]](../../profile/home.md):根據來自多個來源的匯整資料，提供統一、即時的消費者個人檔案。
 - [沙盒](../../sandboxes/home.md): [!DNL Experience Platform] 提供虛擬沙盒，可將單一執行個體分 [!DNL Platform] 割為不同的虛擬環境，以協助開發和發展數位體驗應用程式。
 
-以下各節提供您成功使用 [!DNL Segmentation] API時需要瞭解的其他資訊。
+以下各節提供您成功使用 [!DNL Segmentation] API時需要知道的其他資訊。
 
 ## 讀取範例API呼叫
 
