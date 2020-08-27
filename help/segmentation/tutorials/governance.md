@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 對受眾細分強制執行資料使用規範
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 6a0a9b020b0dc89a829c557bdf29b66508a10333
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '1323'
+source-wordcount: '1335'
 ht-degree: 1%
 
 ---
@@ -20,13 +20,13 @@ ht-degree: 1%
 
 本教學課程需要有效瞭解下列元件 [!DNL Adobe Experience Platform]:
 
-- [!DNL Real-time Customer Profile](../../profile/home.md): [!DNL Real-time Customer Profile] 是一般查閱實體儲存區，用來管理 [!DNL Experience Data Model] (XDM)內的資料 [!DNL Platform]。 描述檔會合併各種企業資料資產的資料，並以統一的簡報來存取該資料。
-   - [合併策略](../../profile/api/merge-policies.md): 用於確定在 [!DNL Real-time Customer Profile] 特定條件下哪些資料可以合併到統一視圖中的規則。 可以配置合併策略以 [!DNL Data Governance] 用於目的。
-- [!DNL Segmentation](../home.md): 如 [!DNL Real-time Customer Profile] 何將描述檔商店中的龐大個人群組分割為具有類似特性且回應類似行銷策略的較小群組。
-- [!DNL Data Governance](../../data-governance/home.md): [!DNL Data Governance] 使用以下元件為資料使用標籤和強制實施(DULE)提供基礎架構：
-   - [資料使用標籤](../../data-governance/labels/user-guide.md): 標籤用來說明資料集和欄位，以處理其個別資料的敏感度等級為準。
-   - [資料使用原則](../../data-governance/policies/overview.md): 指示允許針對依特定資料使用標籤分類之資料執行哪些行銷動作的設定。
-   - [政策實施](../../data-governance/enforcement/overview.md): 允許您強制實施資料使用策略並防止構成違反策略的資料操作。
+- [[!DNL即時客戶基本資料]](../../profile/home.md): [!DNL Real-time Customer Profile] 是一般查閱實體儲存區，用來管理 [!DNL Experience Data Model] (XDM)內的資料 [!DNL Platform]。 描述檔會合併各種企業資料資產的資料，並以統一的簡報來存取該資料。
+   - [合併策略](../../profile/api/merge-policies.md):用於確定在 [!DNL Real-time Customer Profile] 特定條件下哪些資料可以合併到統一視圖中的規則。 可以配置合併策略以 [!DNL Data Governance] 用於目的。
+- [[!DNL分段]](../home.md):如 [!DNL Real-time Customer Profile] 何將描述檔商店中的龐大個人群組分割為具有類似特性且回應類似行銷策略的較小群組。
+- [[!DNL資料治理]](../../data-governance/home.md): [!DNL Data Governance] 使用以下元件為資料使用標籤和強制實施(DULE)提供基礎架構：
+   - [資料使用標籤](../../data-governance/labels/user-guide.md):標籤用來描述資料集和欄位，以處理其個別資料的敏感度等級為準。
+   - [資料使用原則](../../data-governance/policies/overview.md):指示允許針對依特定資料使用標籤分類之資料執行哪些行銷動作的設定。
+   - [政策實施](../../data-governance/enforcement/overview.md):允許您強制實施資料使用策略並防止構成違反策略的資料操作。
 - [沙盒](../../sandboxes/home.md): [!DNL Experience Platform] 提供虛擬沙盒，可將單一執行個體分 [!DNL Platform] 割為不同的虛擬環境，以協助開發和發展數位體驗應用程式。
 
 以下章節提供您必須知道的其他資訊，才能成功呼叫 [!DNL Platform] API。
@@ -39,7 +39,7 @@ ht-degree: 1%
 
 若要呼叫API，您必 [!DNL Platform] 須先完成驗證教 [學課程](../../tutorials/authentication.md)。 完成驗證教學課程後，將提供所有 [!DNL Experience Platform] API呼叫中每個必要標題的值，如下所示：
 
-- 授權： 生產者 `{ACCESS_TOKEN}`
+- 授權：生產者 `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
@@ -53,7 +53,7 @@ ht-degree: 1%
 
 所有包含裝載(POST、PUT、PATCH)的請求都需要額外的標題：
 
-- 內容類型： application/json
+- 內容類型：application/json
 
 ## 尋找區段定義的合併原則 {#merge-policy}
 
@@ -179,7 +179,7 @@ curl -X GET \
 | -------- | ----------- |
 | `schema.name` | 與合併策略關聯的架構的名稱。 |
 | `attributeMerge.type` | 合併策略的資料優先順序配置類型。 如果值為，則 `dataSetPrecedence`與此合併策略關聯的資料集列在下面 `attributeMerge > data > order`。 如果值為，則 `timestampOrdered`合併策略將使用與中引用的模式 `schema.name` 關聯的所有資料集。 |
-| `attributeMerge.data.order` | 如果 `attributeMerge.type` 為， `dataSetPrecedence`則此屬性將是包含此合併策略所使用資料集的ID的陣列。 這些ID會用於下一步驟。 |
+| `attributeMerge.data.order` | 如果 `attributeMerge.type` 為， `dataSetPrecedence`此屬性將是包含此合併策略所使用資料集的ID的陣列。 這些ID會用於下一步驟。 |
 
 ## 評估資料集中的策略違規情況
 
@@ -383,4 +383,4 @@ curl -X POST \
 
 ## 後續步驟
 
-透過本教學課程，您已查找與觀眾區隔相關的資料使用標籤，並測試它們是否違反特定行銷動作的政策。 有關中的詳 [!DNL Data Governance] 細信 [!DNL Experience Platform]息，請閱讀的概述 [!DNL Data Governance](../../data-governance/home.md)。
+透過本教學課程，您已查找與觀眾區隔相關的資料使用標籤，並測試它們是否違反特定行銷動作的政策。 有關中的詳 [!DNL Data Governance] 細信 [!DNL Experience Platform]息，請閱讀 [[!DNL資料治理]的概述](../../data-governance/home.md)。
