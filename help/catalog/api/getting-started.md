@@ -5,9 +5,9 @@ title: 目錄服務開發人員指南
 topic: developer guide
 description: 本開發人員指南提供協助您開始使用目錄API的步驟。 然後，本指南提供使用目錄執行關鍵操作的範例API調用。
 translation-type: tm+mt
-source-git-commit: c081a7521be9715ca32d35504922a70767924fd7
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '584'
+source-wordcount: '589'
 ht-degree: 0%
 
 ---
@@ -23,7 +23,7 @@ ht-degree: 0%
 
 [!DNL Catalog] 跟蹤中數種資源和操作的元資料 [!DNL Experience Platform]。 本開發人員指南需要對建立和管理這些資 [!DNL Experience Platform] 源所涉及的各種服務有良好的認識：
 
-* [!DNL Experience Data Model (XDM)](../../xdm/home.md):組織客戶體驗資料 [!DNL Platform] 的標準化架構。
+* [[!DNL體驗資料模型(XDM)]](../../xdm/home.md):組織客戶體驗資料 [!DNL Platform] 的標準化架構。
 * [批次擷取](../../ingestion/batch-ingestion/overview.md):如何 [!DNL Experience Platform] 從資料檔案（例如CSV和Parpec）中擷取和儲存資料。
 * [串流擷取](../../ingestion/streaming-ingestion/overview.md):如 [!DNL Experience Platform] 何即時從用戶端和伺服器端裝置擷取和儲存資料。
 
