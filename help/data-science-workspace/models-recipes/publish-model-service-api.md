@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 將模型發佈為服務(API)
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '1478'
+source-wordcount: '1483'
 ht-degree: 1%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 1%
 
 # 將模型發佈為服務(API)
 
-本教學課程涵蓋使用發佈模型為服務的程式 [!DNL Sensei Machine Learning API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml)。
+本教學課程涵蓋使用 [[!DNL Sensei機器學習API]將模型發佈為服務的程式](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml)。
 
 ## 快速入門
 
@@ -30,7 +30,7 @@ ht-degree: 1%
 
 所有POST、PUT和PATCH請求都需要附加標題：
 
-- 內容類型： application/json
+- 內容類型：application/json
 
 ### 主要條款
 
