@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 運用機器學習見解豐富即時客戶個人檔案
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 4b0f0dda97f044590f55eaf75a220f631f3313ee
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '1179'
+source-wordcount: '1191'
 ht-degree: 0%
 
 ---
@@ -26,14 +26,14 @@ ht-degree: 0%
 
 本教學課程需要對吸收資料和建立區段 [!DNL Adobe Experience Platform] 所涉及的各 [!DNL Profile] 個方面有深入瞭解。 在開始本教學課程之前，請先閱讀下列服務的檔案：
 
-* [!DNL Real-time Customer Profile](../../rtcdp/overview.md): 根據來自多個來源的匯整資料，提供統一、即時的消費者個人檔案。
-* [!DNL Identity Service](../../identity-service/home.md): 可借 [!DNL Real-time Customer Profile] 由橋接來自不同資料來源的身分識別，並將其收錄至平台。
-* [!DNL Experience Data Model (XDM)](../../xdm/home.md): 平台組織客戶體驗資料的標準化架構。
+* [[!DNL即時客戶基本資料]](../../rtcdp/overview.md):根據來自多個來源的匯整資料，提供統一、即時的消費者個人檔案。
+* [[!DNL Identity Service]](../../identity-service/home.md):可借 [!DNL Real-time Customer Profile] 由橋接來自不同資料來源的身分識別，並將其收錄至平台。
+* [[!DNL體驗資料模型(XDM)]](../../xdm/home.md):平台組織客戶體驗資料的標準化架構。
 
 除了上述文檔，強烈建議您還查看以下方案指南和方案編輯器：
 
-* [架構構成基礎](../../xdm/schema/composition.md): 介紹XDM架構、構建塊、原則和最佳做法，以合成要用於的架構 [!DNL Experience Platform]。
-* [架構編輯器教程](../../xdm/tutorials/create-schema-ui.md): 提供使用中的方案編輯器建立方案的詳細說明 [!DNL Experience Platform]。
+* [架構構成基礎](../../xdm/schema/composition.md):介紹XDM架構、構建塊、原則和最佳做法，以合成要用於的架構 [!DNL Experience Platform]。
+* [架構編輯器教程](../../xdm/tutorials/create-schema-ui.md):提供使用中的方案編輯器建立方案的詳細說明 [!DNL Experience Platform]。
 
 ## 建立輸出模式和資料集 {#create-an-output-schema-and-dataset}
 
@@ -60,7 +60,7 @@ ht-degree: 0%
    * 若要建立新混音，請按一 **[!UICONTROL 下瀏覽器視窗中央頂端附近的「建立新混音]** 」。 提供混音的名稱和說明，然後在完成後按 **[!UICONTROL 一下「指定混音]** 」。
       ![](../images/models-recipes/enrich-rtcdp/create_new_mixin.png)
 
-   * 若要新增mixin欄位，請在「合成」視窗中按一下混 *合名* 稱。 接著，您將可以按一下「結構」視窗中的「新增欄位」，以 **[!UICONTROL 便新增混音欄位]***的選項* 。 請確定相應地提供混合屬性。
+   * 若要新增mixin欄位，請在「合成」視窗中按一下混 *合名* 稱。 接著，您將可以按一下「結構」視窗中的「新增欄位」, **[!UICONTROL 以選擇新增混音欄位]***的選項* 。 請確定相應地提供混合屬性。
       ![](../images/models-recipes/enrich-rtcdp/mixin_properties.png)
 
 4. 構建方案後，按一下「結構」( *Structure* )窗口中方案的頂級欄位，在右側屬性窗口中顯示方案的屬性。 提供名稱和說明，然後按一下「 **[!UICONTROL 保存]** 」建立架構。
@@ -108,7 +108,7 @@ ht-degree: 0%
 1. 在Adobe Experience Platform上，按一下「區 **[!UICONTROL 段]** 」標籤， **[!UICONTROL 接著「建立區段]** 」以存取「區段產生器」。
    ![](../images/models-recipes/enrich-rtcdp/segments_overview.png)
 
-2. 在「區段產生器」中，左側導軌可讓您存取區段的核心建置區塊： 屬性、事件和現有區段。 每個構造塊都顯示在其各自的頁籤中。 選取您啟用的架構 [!DNL Profile]所延伸的類別，然後瀏覽並尋找區段的建立區塊。
+2. 在「區段產生器」中，左側導軌可讓您存取區段的核心建置區塊：屬性、事件和現有區段。 每個構造塊都顯示在其各自的頁籤中。 選取您啟用的架構 [!DNL Profile]所延伸的類別，然後瀏覽並尋找區段的建立區塊。
    ![](../images/models-recipes/enrich-rtcdp/segment_builder.png)
 
 3. 將建立區塊拖放至規則產生器畫布上，提供比較陳述式以完成這些區塊。
