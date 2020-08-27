@@ -5,9 +5,9 @@ title: 使用API搭配決策服務執行階段
 topic: tutorial
 description: '本檔案提供使用Adobe Experience Platform API使用決策服務執行時期服務的教學課程。 '
 translation-type: tm+mt
-source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '2004'
+source-wordcount: '2017'
 ht-degree: 0%
 
 ---
@@ -21,9 +21,9 @@ ht-degree: 0%
 
 本教學課程需要對決策中涉及的 [!DNL Experience Platform] 服務有深入的瞭解，並決定在客戶體驗期間要呈現的下一個最佳方案。 在開始本教學課程之前，請先閱讀以下檔案：
 
-- [!DNL Decisioning Service](./../home.md):提供新增和移除選件的架構，以及建立演算法，以在客戶體驗期間選擇最佳呈現。
-- [!DNL Experience Data Model (XDM)](../../xdm/home.md):平台組織客戶體驗資料的標準化架構。
-- [!DNL Profile Query Language (PQL)](../../segmentation/pql/overview.md):PQL用於定義規則和篩選器。
+- [[!DNL決策服務]](./../home.md):提供新增和移除選件的架構，以及建立演算法，以在客戶體驗期間選擇最佳呈現。
+- [[!DNL體驗資料模型(XDM)]](../../xdm/home.md):平台組織客戶體驗資料的標準化架構。
+- [[!DNL配置檔案查詢語言(PQL)]](../../segmentation/pql/overview.md):PQL用於定義規則和篩選器。
 - [使用API管理決策物件和規則](./entities.md):在使用「決策服務」執行階段之前，您必須設定相關實體。
 
 以下章節提供您必須知道的其他資訊，才能成功呼叫 [!DNL Platform] API。
@@ -234,7 +234,7 @@ curl -X POST {DECISION_SERVICE_ENDPOINT_PATH}/{CONTAINER_ID}/decisions \
    - **`xdm:offerActivity`** -活動的唯一標識符(URI)。 這是選件活動 `@id` 的屬性值。
 - **`xdm:identityMap`** -包含符合XDM架構之JSON物件的必要屬性 `https://ns.adobe.com/xdm/context/identitymap`。 該屬性定義映射，其中鍵是標識命名空間代碼，該值是給定命名空間中最終用戶標識符的清單。 如果是。
 - **`xdm:contextData`** -可選屬性，包含對其架構的引用所描述的項目。 陣列中的每個上下文資料項都必須具有以下屬性：
-   - **`@type`** -引用此項目中對象的XDM模式的必需屬性。
+   - **`@type`** -引用此項中對象的XDM模式的必需屬性。
    - **`xdm:data`** -一個強制屬性，包含屬性中指定的每個XDM架構的對象 `@type` 屬性。
 
 ## 決策請求中的動態上下文資料
