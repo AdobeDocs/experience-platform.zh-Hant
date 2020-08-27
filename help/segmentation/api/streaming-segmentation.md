@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 串流區段
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 2adadad855edd01436a6961cc9be3e58e6483732
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '1377'
+source-wordcount: '1388'
 ht-degree: 1%
 
 ---
@@ -26,9 +26,9 @@ ht-degree: 1%
 
 本開發人員指南需要對串流細分相關的 [!DNL Adobe Experience Platform] 各種服務有良好的認識。 在開始本教學課程之前，請先閱讀下列服務的檔案：
 
-- [!DNL Real-time Customer Profile](../../profile/home.md):根據來自多個來源的匯總資料，即時提供統一的消費者個人檔案。
-- [!DNL Segmentation](../home.md):提供從資料建立區段和觀眾的 [!DNL Real-time Customer Profile] 能力。
-- [!DNL Experience Data Model (XDM)](../../xdm/home.md):組織客戶體驗資料 [!DNL Platform] 的標準化架構。
+- [[!DNL即時客戶基本資料]](../../profile/home.md):根據來自多個來源的匯總資料，即時提供統一的消費者個人檔案。
+- [[!DNL分段]](../home.md):提供從資料建立區段和觀眾的 [!DNL Real-time Customer Profile] 能力。
+- [[!DNL體驗資料模型(XDM)]](../../xdm/home.md):組織客戶體驗資料 [!DNL Platform] 的標準化架構。
 
 以下章節提供您成功呼叫API所需的其他資訊 [!DNL Platform] 。
 
@@ -56,7 +56,7 @@ ht-degree: 1%
 
 - 內容類型：application/json
 
-完成特定要求可能需要其他標題。 本檔案的每個範例都會顯示正確的標題。 請特別注意範例要求，以確保包含所有必要的標題。
+完成特定要求可能需要額外的標題。 本檔案的每個範例都會顯示正確的標題。 請特別注意範例要求，以確保包含所有必要的標題。
 
 ### 啟用串流分段的查詢類型 {#streaming-segmentation-query-types}
 
@@ -365,7 +365,7 @@ curl -X POST \
 
 ### 啟用排程
 
-預設情況下，建立計畫時不活動，除非 `state` 在建立(POST)請 `active` 求主體中將屬性設定為。 通過向端點發出PATCH請求並在路徑中包 `state``active``/config/schedules` 括調度的ID，可以啟用調度（將設定為）。
+預設情況下，建立計畫時，除非將屬 `state` 性設定為建立(POST) `active` 請求主體中，否則該計畫處於非活動狀態。 通過向端點發出PATCH請求並在路徑中包 `state``active``/config/schedules` 括調度的ID，可以啟用調度（將設定為）。
 
 **API格式**
 
