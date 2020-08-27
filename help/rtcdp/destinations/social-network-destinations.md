@@ -5,9 +5,9 @@ seo-title: 社交網路目的地
 description: 透過社交網路目的地，您可以根據雜湊電子郵件啟用宣傳的個人檔案，以鎖定受眾、個人化和抑制受眾。
 seo-description: 透過社交網路目的地，您可以根據雜湊電子郵件啟用宣傳的個人檔案，以鎖定受眾、個人化和抑制受眾。
 translation-type: tm+mt
-source-git-commit: cbd748c1881c61f5e636567d94b68f2cf7302fa5
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '87'
+source-wordcount: '89'
 ht-degree: 0%
 
 ---
@@ -20,4 +20,4 @@ ht-degree: 0%
 Adobe即時客戶資料平台目前支援下列社交網路目的地：
 
 * [Adobe Livefyre擴充功能](/help/rtcdp/destinations/adobe-livefyre-extension.md)
-* [!DNL Facebook](/help/rtcdp/destinations/facebook-destination.md)
+* [[!DNL Facebook]](/help/rtcdp/destinations/facebook-destination.md)
