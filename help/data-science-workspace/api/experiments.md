@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;developer guide;endpoint;Data Science Workspace;popular topics
+keywords: Experience Platform;developer guide;endpoint;Data Science Workspace;popular topics;experiments;sensei machine learning api
 solution: Experience Platform
 title: 實驗
 topic: Developer guide
+description: 模型開發與訓練是在實驗層級進行，其中實驗由MLInstance、訓練執行和計分執行組成。
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 194a29124949571638315efe00ff0b04bff19303
 workflow-type: tm+mt
-source-wordcount: '744'
+source-wordcount: '765'
 ht-degree: 4%
 
 ---
@@ -307,7 +308,7 @@ curl -X GET \
 
 >[!TIP]
 >
->為確保此PUT請求成功，建議您先執行GET請求，以依ID [擷取實驗](#retrieve-specific)。 然後，修改並更新傳回的JSON物件，並套用已修改的JSON物件作為PUT要求的裝載。
+>為確保此PUT請求成功，建議您先執行GET請求，以依ID [擷取實驗](#retrieve-specific)。 然後，修改並更新傳回的JSON物件，並套用已修改的JSON物件的完整內容作為PUT要求的裝載。
 
 下列範例API呼叫會在最初具有這些屬性時更新實驗的名稱：
 
