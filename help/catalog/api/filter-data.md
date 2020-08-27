@@ -5,9 +5,9 @@ title: 使用查詢參數篩選目錄資料
 topic: developer guide
 description: 目錄服務API允許透過使用請求查詢參數來篩選回應資料。 目錄的最佳實務是在所有API呼叫中使用篩選器，因為這些篩選器可減輕API的負載，並有助於改善整體效能。
 translation-type: tm+mt
-source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
+source-git-commit: 71678b10c9e137016ea404305b272508b9c8cabe
 workflow-type: tm+mt
-source-wordcount: '2085'
+source-wordcount: '2084'
 ht-degree: 1%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 1%
 
 API [!DNL Catalog Service] 允許透過使用請求查詢參數來篩選回應資料。 最佳實務的一 [!DNL Catalog] 部分是在所有API呼叫中使用篩選器，因為這些篩選器可減少API的負載並協助改善整體效能。
 
-本檔案概述API中篩選物件 [!DNL Catalog] 最常用的方法。 建議您在閱讀 [Catalog開發人員指南時參考本檔案](getting-started.md) ，以進一步瞭解如何與 [!DNL Catalog] API互動。 有關的更多一般信 [!DNL Catalog Service]息，請參閱 [目錄概述](../home.md)。
+本檔案概述API中篩選物件 [!DNL Catalog] 最常用的方法。 建議您在閱讀 [Catalog開發人員指南時參考本檔案](getting-started.md) ，以進一步瞭解如何與 [!DNL Catalog] API互動。 有關的更多一般 [!DNL Catalog Service]資訊，請參 [[!DNL Catalog] 閱概述](../home.md)。
 
 ## 限制返回的對象
 
