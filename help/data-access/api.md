@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;data access;python sdk;spark sdk;data access api
 solution: Experience Platform
 title: 資料存取開發人員指南
 topic: developer guide
+description: Data Access API支援Adobe Experience Platform，為使用者提供REST風格的介面，著重於在Experience Platform中發現和存取已收錄資料集。
 translation-type: tm+mt
-source-git-commit: 38cb8eeae3ac0a1852c59e433d1cacae82b1c6c0
+source-git-commit: cddc559dfb65ada888bb367d6265863091a9b2a1
 workflow-type: tm+mt
-source-wordcount: '485'
+source-wordcount: '512'
 ht-degree: 4%
 
 ---
