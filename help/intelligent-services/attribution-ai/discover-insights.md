@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;insights;attribution ai;popular topics
+keywords: Experience Platform;insights;attribution ai;popular topics;attribution ai insights
 solution: Experience Platform
 title: 在歸因AI中發現見解
 topic: Attribution AI insights
+description: 本檔案可做為在Adobe Intelligent Services使用者介面中與服務例項深入資訊互動的指南。
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: c30bbaead775e68f869b080e24e18d4a23cda973
 workflow-type: tm+mt
-source-wordcount: '1164'
+source-wordcount: '1183'
 ht-degree: 1%
 
 ---
@@ -63,10 +64,10 @@ ht-degree: 1%
 
 「更 *多動作* 」按鈕位於「編輯」旁的右上導 *覽中*。 按一 **下「更多動作** 」會開啟下拉式清單，供您選取下列其中一個作業：
 
-- **刪除**: 刪除實例。
-- **下載摘要資料**: 下載包含摘要資料的CSV檔案。
-- **存取分數**: 按一 *下「存取分數* 」會將您重新導向至 [「歸因AI」教學課程的存取分數](./download-scores.md)。
-- **檢視執行記錄**: 此時會出現一個快顯視窗，其中包含與服務例項相關聯的所有計分執行的清單。
+- **刪除**:刪除實例。
+- **下載摘要資料**:下載包含摘要資料的CSV檔案。
+- **存取分數**:按一 *下「存取分數* 」會將您重新導向至 [「歸因AI」教學課程的存取分數](./download-scores.md)。
+- **檢視執行記錄**:此時會出現一個快顯視窗，其中包含與服務例項相關聯的所有計分執行的清單。
 
 ![更多動作](./images/insights/more-actions.png)
 
