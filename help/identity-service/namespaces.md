@@ -5,9 +5,9 @@ title: Adobe Experience Platform Identity Service
 topic: overview
 description: '身分識別命名空間是 Identity Service 的元件，用途是作為身分識別相關內容的指標。例如，他們會將"name<span>@email.com"值區分為電子郵件地址，或將"443522"區分為數值CRM ID。 '
 translation-type: tm+mt
-source-git-commit: 235f611115b89a87c924a00409a6acae4f5ac97d
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '761'
+source-wordcount: '774'
 ht-degree: 4%
 
 ---
@@ -15,15 +15,15 @@ ht-degree: 4%
 
 # 身分命名空間概觀
 
-Identity namespaces are a component of [!DNL Identity Service](./home.md) that serve as indicators of the context to which an identity relates. 例如，他們會將&quot;name<span>@email.com&quot;值區分為電子郵件地址，或將&quot;443522&quot;區分為數值CRM ID。
+Identity namespaces are a component of [[!DNL Identity Service]](./home.md) that serve as indicators of the context to which an identity relates. 例如，他們會將&quot;name<span>@email.com&quot;值區分為電子郵件地址，或將&quot;443522&quot;區分為數值CRM ID。
 
 ## 快速入門
 
 使用身分名稱空間需要瞭解所涉及的各種Adobe Experience Platform服務。 開始使用名稱空間之前，請先閱讀下列服務的檔案：
 
-- [!DNL Real-time Customer Profile](../profile/home.md):根據來自多個來源的匯整資料，即時提供統一的客戶個人檔案。
-- [!DNL Identity Service](./home.md):跨裝置和系統橋接身分，以更全面地瞭解個別客戶及其行為。
-- [!DNL Privacy Service](../privacy-service/home.md):身分名稱空間用於遵守通用資料保護規則(GDPR)，在GDPR中可以相對於名稱空間提出請求。
+- [[!DNL即時客戶基本資料]](../profile/home.md):根據來自多個來源的匯整資料，即時提供統一的客戶個人檔案。
+- [[!DNL Identity Service]](./home.md):跨裝置和系統橋接身分，以更全面地瞭解個別客戶及其行為。
+- [[!DNL隱私服務]](../privacy-service/home.md):身分名稱空間用於遵守通用資料保護規則(GDPR)，在GDPR中可以相對於名稱空間提出請求。
 
 ## 瞭解身分名稱空間
 
