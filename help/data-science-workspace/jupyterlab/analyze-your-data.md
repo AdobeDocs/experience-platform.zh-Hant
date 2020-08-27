@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 使用筆記型電腦分析資料
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '1702'
+source-wordcount: '1710'
 ht-degree: 0%
 
 ---
@@ -18,9 +18,9 @@ ht-degree: 0%
 
 以下概念介紹：
 
-- **[!DNL JupyterLab]:**[!DNL JupyterLab](https://blog.jupyter.org/jupyterlab-is-ready-for-users-5a6f039b8906)是Project Jupyter的新一代Web介面，並緊密整合在其中[!DNL Adobe Experience Platform]。
+- **[!DNL JupyterLab]:**[[!DNL JupyterLab]](https://blog.jupyter.org/jupyterlab-is-ready-for-users-5a6f039b8906) 是Project Jupyter的新一代基於Web的介面，並與之緊密整合 [!DNL Adobe Experience Platform]。
 - **批：** 資料集由批處理組成。 批是一組在一段時間內收集並作為單個單位一起處理的資料。 新增資料至資料集時，會建立新的批次。
-- **資料存取SDK（已過時）:** 「資料存取SDK」現已停用。 請使用指 [!DNL Platform SDK](../authoring/platform-sdk.md) 南。
+- **資料存取SDK（已過時）:** 「資料存取SDK」現已停用。 請使用 [[!DNL平台SDK]指南](../authoring/platform-sdk.md) 。
 
 ## 在Data Science Workspace中探索筆記型電腦
 
@@ -90,7 +90,7 @@ Data Science Workspace可讓使用者透過平 [!DNL Jupyter Notebooks] 台進�
 
 >[!TIP]
 >
->請參閱指 [!DNL Platform SDK](../authoring/platform-sdk.md) 南以轉換程式碼。
+>請參閱 [[!DNL平台SDK]](../authoring/platform-sdk.md) 指南以轉換程式碼。
 
 ```PYTHON
 from data_access_sdk_python.reader import DataSetReader
@@ -102,7 +102,7 @@ df.head()
 
 如果您正在處理除外的其他內核 [!DNL Python]，請參閱 [本頁](https://github.com/adobe/acp-data-services-dsw-reference/wiki/Accessing-Data-on-the-Platform) ，以訪問上的資料 [!DNL Adobe Experience Platform]。
 
-選擇可執行單元格，然後按工具欄中的播放按鈕將運行可執行代碼。 的輸出 `head()` 將是表，其中資料集的索引鍵為欄，而資料集中的前n列為欄。 `head()` 接受整數參數，以指定要輸出的行數。 預設為5。
+選擇可執行單元格，然後按工具欄中的播放按鈕將運行可執行代碼。 的輸出 `head()` 將是表，其中資料集的索引鍵為欄，而資料集中的前n列為欄。 `head()` 接受整數引數，以指定要輸出的行數。 預設為5。
 
 ![](../images/jupyterlab/analyze-data/datasetreader_head.png)
 
@@ -144,7 +144,7 @@ df.describe()
 
 ![](../images/jupyterlab/analyze-data/df_describe.png)
 
-這樣，我們可以看到每個特徵有6435個實例。 給出了平均、標準差(std)、最小、最大和四分位數等統計資訊。 這會提供資料的偏差資訊。 在下一節，我們將檢視視覺化，並搭配這些資訊，讓我們更瞭解我們的資料。
+這樣，我們可以看到每個特徵有6435個實例。 同時，給出了平均、標準差(std)、最小、最大和四分位數等統計資訊。 這會提供資料的偏差資訊。 在下一節，我們將檢視視覺化，並搭配這些資訊，讓我們更瞭解我們的資料。
 
 從最小值和最大值看， `store`我們可以看到資料所代表的儲存區有45個。 此外，還有 `storeTypes` 哪些功能讓商店與眾不同。 通過執行下列操作，我們可 `storeTypes` 以看到的分佈：
 
@@ -168,7 +168,7 @@ df.describe()
 
 [seaborn](https://seaborn.pydata.org/) 是以matplotlib為基礎的套件。 其主要目標是讓預設圖形更具視覺吸引力，並簡化複雜圖形的建立。
 
-[ggplot](https://ggplot2.tidyverse.org/) 是也建立在matplotlib之上的套件。 但主要區別在於，該工具是R的ggplot2埠。 與西博恩類似，其目標是改進matplotlib。 熟悉gplot2 for R的使用者應考慮此程式庫。
+[ggplot](https://ggplot2.tidyverse.org/) 是也建立在matplotlib之上的套件。 但主要區別在於，該工具是R的ggplot2埠。與西博恩類似，其目標是改進matplotlib。 熟悉gplot2 for R的使用者應考慮此程式庫。
 
 
 ##### 一元圖
