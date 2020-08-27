@@ -5,9 +5,9 @@ title: Adobe Experience Platform批次擷取概觀
 topic: overview
 description: 批次擷取API可讓您將資料以批次檔案的形式內嵌至Adobe Experience Platform。 所吸收的資料可以是CRM系統中平面檔案（例如鑲木地板檔案）的描述檔資料，或是符合Experience Data Model(XDM)註冊表中已知架構的資料。
 translation-type: tm+mt
-source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '1196'
+source-wordcount: '1199'
 ht-degree: 2%
 
 ---
@@ -35,7 +35,7 @@ API [!DNL Data Ingestion] 可讓您將資料以批次形式（由一或多個要
 ### [!DNL Data Ingestion] 先決條件
 
 - 要上傳的資料必須採用Parce或JSON格式。
-- 在中建立的資料集 [!DNL Catalog services](../../catalog/home.md)。
+- 在 [[!DNL目錄服務]中建立的資料集](../../catalog/home.md)。
 - 拼字檔案的內容必須符合上傳資料集之模式的子集。
 - 在驗證後取得您唯一的存取Token。
 
