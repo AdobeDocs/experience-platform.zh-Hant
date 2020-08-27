@@ -5,10 +5,10 @@ doc-type: release notes
 last-update: January 15, 2020
 author: crhoades, ens28527
 translation-type: tm+mt
-source-git-commit: f881c1365684b1ca9e6bf9a8ce866d234dc54128
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '881'
-ht-degree: 6%
+source-wordcount: '894'
+ht-degree: 5%
 
 ---
 
@@ -19,10 +19,10 @@ ht-degree: 6%
 
 Adobe Experience Platform現有功能的更新：
 
-* [!DNL Experience Data Model (XDM) System](#xdm)
-* [!DNL Privacy Service](#privacy)
-* [!DNL Sources](#sources)
-* [!DNL Destinations](#destinations)
+* [[!DNL Experience Data Model(XDM)System]](#xdm)
+* [[!DNL隱私服務]](#privacy)
+* [[!DNL源]](#sources)
+* [[!DNL目標]](#destinations)
 
 ## [!DNL Experience Data Model] (XDM)系統 {#xdm}
 
@@ -45,7 +45,7 @@ XDM是公開記載的規格，旨在改善數位體驗的強大功能。 它提�
 
 ## [!DNL Privacy Service] {#privacy}
 
-新的法律和組織法規讓使用者有權應要求從資料存放區存取或刪除其個人資料。 Adobe Experience Platform提 [!DNL Privacy Service] 供REST風格的API和使用者介面，可協助您管理客戶的這些資料要求。 您可 [!DNL Privacy Service]以提交從Adobe Experience Cloud應用程式存取和刪除私人或個人客戶資料的要求，以利自動符合法律和組織的隱私權法規。
+新的法律和組織法規讓使用者有權應要求從資料存放區存取或刪除其個人資料。 Adobe Experience Platform提 [!DNL Privacy Service] 供REST風格的API和使用者介面，可協助您管理客戶的這些資料要求。 您可 [!DNL Privacy Service]以提交要求，以便從Adobe Experience Cloud應用程式存取和刪除私人或個人客戶資料，以利自動符合法律和組織的隱私權法規。
 
 **新功能**
 
@@ -105,7 +105,7 @@ Adobe Experience Platform可以從外部來源擷取資料，同時讓您使用�
 | 類別 | 權限 | 說明 |
 |--- | --- | ---|
 | 目的地 | 管理目標 | 存取讀取、建立、編輯和停用目標。 |
-| 目的地 | 查看目標 | 對「目錄」標籤中可用目標和「瀏覽」 [!UICONTROL _標籤中已驗證目標&#x200B;_]，進行唯讀_&#x200B;存取&#x200B;_。 |
+| 目的地 | 查看目標 | 對「目錄」標籤中可用目標和「瀏覽」 [!UICONTROL _標籤中已驗證目標_] ，進行唯讀 _存取_ 。 |
 | 目的地 | 啟動目標 | 能夠將資料啟動至目標。 此權限要求將「管理目標」或「檢視目標」新增至產品設定檔。 |
 
 **已知問題**
