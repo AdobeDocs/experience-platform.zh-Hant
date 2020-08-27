@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 串流擷取疑難排解
 topic: troubleshooting
 translation-type: tm+mt
-source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '993'
+source-wordcount: '997'
 ht-degree: 0%
 
 ---
@@ -42,7 +42,7 @@ Adobe Experience Platform提 [!DNL Data Ingestion] 供REST風格的API，您可�
 
 當請求的位置不支援同步驗證時，會傳回501錯誤回應。 如需同步驗證 [的詳細資訊](../quality/streaming-validation.md) ，請參閱串流驗證總覽。
 
-### 如何確保僅從受信任來源收集資料？
+### 如何確保僅從受信任的來源收集資料？
 
 [!DNL Experience Platform] 支援安全的資料收集。 啟用驗證資料收集後，用戶端必須傳送JSON Web Token(JWT)及其IMS組織ID作為請求標題。 如需如何傳送已驗證資料給的詳細資訊， [!DNL Platform]請參閱已驗證資料收 [集指南](../tutorials/create-authenticated-streaming-connection.md)。
 
@@ -100,4 +100,4 @@ Adobe Experience Platform提 [!DNL Data Ingestion] 供REST風格的API，您可�
 
 身份名稱空間有兩種類型：預設值和自訂值。 使用自訂名稱空間時，請確定名稱空間已在中註冊 [!DNL Identity Service]。 如需使用預 [設和自訂名稱空間的詳細資訊](../../identity-service/namespaces.md) ，請參閱身分名稱空間概觀。
 
-您可以使用來查 [!DNL Experience Platform UI](https://platform.adobe.com) 看有關消息未能獲取原因的詳細資訊。 按一 **[!UICONTROL 下左側導覽中的]** 「監控」，然後檢視「串流端對端 __」標籤，以查看在選取時段內串流的訊息批次。
+您可以使用 [[!DNL Experience Platform UI]](https://platform.adobe.com) ，查看訊息擷取失敗原因的詳細資訊。 按一 **[!UICONTROL 下左側導覽中的]** 「監控」，然後檢視「串流端對端 __ 」標籤，以查看在選取時段內串流的訊息批次。
