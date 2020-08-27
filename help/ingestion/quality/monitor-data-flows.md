@@ -5,9 +5,9 @@ title: 監控資料擷取
 topic: overview
 description: 本使用指南提供如何在Adobe Experience Platform使用者介面中監控資料的步驟。 本指南要求您必須擁有Adobe ID和Adobe Experience Platform的存取權。
 translation-type: tm+mt
-source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '552'
+source-wordcount: '560'
 ht-degree: 0%
 
 ---
@@ -25,7 +25,7 @@ ht-degree: 0%
 
 ![](../images/quality/monitor-data-flows/click-streaming-end-to-end.png)
 
-此時 *[!UICONTROL 會顯示「串流端對端監控]* 」頁面。 此工作區提供顯示接收的串流事件比率的圖表、顯示成功處理的串流事件比率的圖表 [!DNL Platform][!DNL Real-time Customer Profile](../../profile/home.md)，以及傳入資料的詳細清單。
+此時 *[!UICONTROL 會顯示「串流端對端監控]* 」頁面。 此工作區提供一個圖表，顯示接收的串流事件的速率 [!DNL Platform]，一個圖表，顯示 [[!DNL即時客戶配置檔案]成功處理的串流事件的速率](../../profile/home.md)，以及詳細的傳入資料清單。
 
 ![](../images/quality/monitor-data-flows/list-streams.png)
 
@@ -61,7 +61,7 @@ ht-degree: 0%
 
 ## 監控批次端對端資料擷取
 
-在中， [!DNL Experience Platform UI](https://platform.adobe.com)按一下左 **[!UICONTROL 側導覽功能表上的]** 「監視」。
+在 [[!DNL Experience Platform UI]](https://platform.adobe.com)，按一下左側導 **[!UICONTROL 覽功能表上的「監控]** 」。
 
 ![](../images/quality/monitor-data-flows/click-monitoring.png)
 
