@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;insights; customer ai;popular topics
+keywords: Experience Platform;insights;customer ai;popular topics
 solution: Experience Platform
 title: 透過客戶人工智慧發掘見解
 topic: Discovering insights
+description: 客戶人工智慧(Customer AI)是智慧型服務的一部分，可讓行銷人員運用Adobe Sensei來預測客戶的下一步行動。 客戶人工智慧可用來產生自訂傾向分數，例如大規模個別個人檔案的流失和轉換。 完成此項作業時，不需將業務需求轉換為機器學習問題、選擇演算法、訓練或部署。
 translation-type: tm+mt
-source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
+source-git-commit: c30bbaead775e68f869b080e24e18d4a23cda973
 workflow-type: tm+mt
-source-wordcount: '1059'
+source-wordcount: '1125'
 ht-degree: 0%
 
 ---
