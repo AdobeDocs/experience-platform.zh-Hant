@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;developer guide;endpoint;Data Science Workspace;popular topics
+keywords: Experience Platform;developer guide;endpoint;Data Science Workspace;popular topics;insights;sensei machine learning api
 solution: Experience Platform
 title: 見解
 topic: Developer guide
+description: 前瞻分析包含度量，可讓資料科學家透過顯示相關評估度量來評估和選擇最佳ML模型。
 translation-type: tm+mt
-source-git-commit: 7bd6807e620febe134f8c75e67c0f723850e49c1
+source-git-commit: 194a29124949571638315efe00ff0b04bff19303
 workflow-type: tm+mt
-source-wordcount: '474'
+source-wordcount: '497'
 ht-degree: 3%
 
 ---
@@ -39,7 +40,7 @@ curl -X GET \
 
 **回應**
 
-成功的回應會傳回包含深入解析清單的裝載，而每個深入解析都有唯一的識別碼( `id` )。 此外，您會收到其中 `context` 包含與前瞻分析事件和度量資料之後的特定前瞻分析相關聯的唯一識別碼。
+成功的回應會傳回包含深入解析清單的裝載，且每個前瞻分析都有唯一識別碼( `id` )。 此外，您會收到其中 `context` 包含與前瞻分析事件和度量資料之後的特定前瞻分析相關聯的唯一識別碼。
 
 ```json
 {
@@ -171,7 +172,7 @@ curl -X GET \
 
 ## 新增模型分析
 
-您可以執行POST請求和裝載，為新模型分析提供上下文、事件和度量，以建立新模型分析。 建立新模型分析時，不需要使用內容欄位來附加現有服務，但您可以提供一或多個對應的ID，選擇使用現有服務建立新模型分析：
+您可以執行POST請求和裝載，為新模型分析提供上下文、事件和度量，以建立新的模型分析。 建立新模型分析時，不需要使用內容欄位來附加現有服務，但您可以提供一或多個對應的ID，選擇使用現有服務建立新模型分析：
 
 ```json
 "context": {
