@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 描述符
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: b021b6813af18e29f544dc55541f23dd7dd57d47
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '1477'
+source-wordcount: '1481'
 ht-degree: 1%
 
 ---
@@ -133,7 +133,7 @@ curl -X GET \
 
 ## 建立描述符
 
-允許 [!DNL Schema Registry] 您定義幾種不同的描述符類型。 每個描述符類型都需要在POST請求中發送其自己的特定欄位。 定義描述符的附錄部分提供了描述符的完整清單以及定義它們所需 [的欄位](#defining-descriptors)。
+允許 [!DNL Schema Registry] 您定義幾種不同的描述符類型。 每個描述符類型都要求在POST請求中發送自己的特定欄位。 定義描述符的附錄部分提供了描述符的完整清單以及定義它們所需 [的欄位](#defining-descriptors)。
 
 **API格式**
 
@@ -300,7 +300,7 @@ curl -X DELETE \
 | `xdm:sourceSchema` | 定義 `$id` 描述符的方案的URI。 |
 | `xdm:sourceVersion` | 源架構的主要版本。 |
 | `xdm:sourceProperty` | 將作為身份的特定屬性的路徑。 路徑應以&quot;/&quot;開頭，而不以&quot;/&quot;結束。 路徑中不包含「屬性」（例如，使用「/personalEmail/address」而非「/properties/personalEmail/properties/address」） |
-| `xdm:namespace` | 身 `id` 分名 `code` 稱空間的或值。 使用可找到名稱空間清單 [!DNL Identity Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/id-service-api.yaml)。 |
+| `xdm:namespace` | 身 `id` 分名 `code` 稱空間的或值。 使用 [[!DNL Identity Service API]可找到名稱空間清單](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/id-service-api.yaml)。 |
 | `xdm:property` | 或 `xdm:id` , `xdm:code`視使用者 `xdm:namespace` 而定。 |
 | `xdm:isPrimary` | 選用的布林值。 若為true，則將欄位指示為主要身分。 結構只能包含一個主要標識。 |
 
