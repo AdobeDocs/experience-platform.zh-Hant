@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;retail sales recipe;Data Science Workspace;popular topics
+keywords: Experience Platform;retail sales recipe;Data Science Workspace;popular topics;recipes;pre build recipe
 solution: Experience Platform
 title: 零售銷售方式
 topic: overview
+description: 「零售銷售」方式使您能夠預測特定時段內所有系統初始商店的銷售預測。 透過精確的預測模型，零售商將能夠找出需求與定價政策之間的關係，並做出最佳化定價決策，以最大化銷售與收入。
 translation-type: tm+mt
-source-git-commit: e08460bc76d79920bbc12c7665a1416d69993f34
+source-git-commit: 7615476c4b728b451638f51cfaa8e8f3b432d659
 workflow-type: tm+mt
-source-wordcount: '523'
+source-wordcount: '571'
 ht-degree: 2%
 
 ---
@@ -58,7 +59,7 @@ ht-degree: 2%
 
 首先，載入 *DSWRetailSales模式中的訓練資* 料集。 在此基礎上，利用梯度推進回歸算法 [對模型進行訓練](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.GradientBoostingRegressor.html)。 漸層強化採用弱學員（至少略好於隨機機會的學員）可形成一連串的學員，專注於改善先前學員的弱點。 搭配使用，可用來建立強大的預測模型。
 
-此程式包括三個要素： 損失函式、弱學習者和加性模型。
+此程式包括三個要素：損失函式、弱學習者和加性模型。
 
 損失函式是指預測模型在預測預期結果方面表現如何的度量——最小二乘回歸法用於此配方。
 
