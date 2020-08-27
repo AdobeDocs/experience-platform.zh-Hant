@@ -3,10 +3,11 @@ keywords: Experience Platform;download scores;customer ai;popular topics
 solution: Experience Platform
 title: 在客戶人工智慧中下載分數
 topic: Downloading scores
+description: 客戶AI可讓您以鑲木地板檔案格式下載分數。
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: c30bbaead775e68f869b080e24e18d4a23cda973
 workflow-type: tm+mt
-source-wordcount: '933'
+source-wordcount: '945'
 ht-degree: 2%
 
 ---
@@ -281,7 +282,7 @@ curl -X GET 'https://platform.adobe.io:443/data/foundation/export/files/035e2520
 
 ## 下載使用客戶AI設定的區段 {#segment}
 
-另一種下載分數資料的方式是將讀者匯出至資料集。 分段工作成功完成(屬性的值為 `status` 「成功」)後，您可以將對象匯出至資料集，供您存取並執行操作。 若要進一步瞭解區段，請造訪區 [段總覽](../../../segmentation/home.md)。
+另一種下載分數資料的方式是將讀者匯出至資料集。 分段工作成功完成(屬性的值為 `status` 「成功」)後，您可將對象匯出至資料集，供您存取及操作。 若要進一步瞭解區段，請造訪區 [段總覽](../../../segmentation/home.md)。
 
 >[!IMPORTANT]
 >
