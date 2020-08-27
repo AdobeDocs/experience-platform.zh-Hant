@@ -4,9 +4,9 @@ solution: Adobe Experience Platform
 title: 即時客戶個人檔案API快速入門
 topic: guide
 translation-type: tm+mt
-source-git-commit: 6df3e6579139f01d9877c1f033ea7721ca78118c
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '359'
+source-wordcount: '382'
 ht-degree: 0%
 
 ---
@@ -16,13 +16,13 @@ ht-degree: 0%
 
 使用 [!DNL Real-time Customer Profile] API，您可以對配置檔案資源執行基本的CRUD操作，例如配置計算屬性、訪問實體、導出配置檔案資料以及刪除不需要的資料集或批。
 
-使用開發人員指南需要對使用資料時涉及的各種Adobe Experience Platform服務有正確的 [!DNL Profile] 瞭解。 在開始使用 [!DNL Real-time Customer Profile] API之前，請先閱讀下列服務的檔案：
+使用開發人員指南需要對使用資料時涉及的各種Adobe Experience Platform服務有良好的 [!DNL Profile] 瞭解。 在開始使用 [!DNL Real-time Customer Profile] API之前，請先閱讀下列服務的檔案：
 
-* [!DNL Real-time Customer Profile](../home.md):根據來自多個來源的匯整資料，即時提供統一的客戶個人檔案。
-* [!DNL Adobe Experience Platform Identity Service](../../identity-service/home.md):跨裝置和系統橋接身分，以更全面地瞭解客戶及其行為。
-* [!DNL Adobe Experience Platform Segmentation Service](../../segmentation/home.md):可讓您從即時客戶個人檔案資料建立受眾細分。
-* [!DNL Experience Data Model (XDM)](../../xdm/home.md):平台組織客戶體驗資料的標準化架構。
-* [!DNL Sandboxes](../../sandboxes/home.md): [!DNL Experience Platform] 提供虛擬沙盒，可將單一執行個體分 [!DNL Platform] 割為不同的虛擬環境，以協助開發和發展數位體驗應用程式。
+* [[!DNL即時客戶基本資料]](../home.md):根據來自多個來源的匯整資料，即時提供統一的客戶個人檔案。
+* [[!DNL Adobe Experience Platform Identity Service]](../../identity-service/home.md):跨裝置和系統橋接身分，以更全面地瞭解客戶及其行為。
+* [[!DNL Adobe Experience Platform分段服務]](../../segmentation/home.md):可讓您從即時客戶個人檔案資料建立受眾細分。
+* [[!DNL體驗資料模型(XDM)]](../../xdm/home.md):平台組織客戶體驗資料的標準化架構。
+* [[!DNL沙盒]](../../sandboxes/home.md): [!DNL Experience Platform] 提供虛擬沙盒，可將單一執行個體分 [!DNL Platform] 割為不同的虛擬環境，以協助開發和發展數位體驗應用程式。
 
 以下各節提供您必須知道的額外資訊，才能成功呼叫 [!DNL Profile] API端點。
 
