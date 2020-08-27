@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Experience Data Model(XDM)系統疑難排解指南
 topic: troubleshooting
 translation-type: tm+mt
-source-git-commit: d04bf35e49488ab7d5e07de91eb77d0d9921b6fa
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '1826'
+source-wordcount: '1839'
 ht-degree: 0%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 0%
 
 本檔案提供有關 [!DNL Experience Data Model] (XDM)系統的常見問題解答，以及常見錯誤的疑難排解指南。 如需Adobe Experience Platform中其他服務的相關問題和疑難排解，請參閱 [Experience Platform疑難排解指南](../landing/troubleshooting.md)。
 
-**[!DNL Experience Data Model](XDM)**，是一種開放原始碼規格，可定義客戶體驗管理的標準結構。 構建的方[!DNL Experience Platform]法—**XDM System **—操作模式[!DNL Experience Data Model]供服務[!DNL Platform]使用。 提供&#x200B;**[!DNL Schema Registry]**了一個用戶介面和一個REST風格的API以訪問&#x200B;**[!DNL Schema Library]**中[!DNL Experience Platform]。 See the[XDM documentation](home.md)for more information.
+**[!DNL Experience Data Model](XDM)** ，是一種開放原始碼規格，可定義客戶體驗管理的標準結構。 構建的方 [!DNL Experience Platform] 法— **XDM System**—操作模式 [!DNL Experience Data Model] 供服務 [!DNL Platform] 使用。 提供 **[!DNL Schema Registry]** 了一個用戶介面和一個REST風格的API以訪問 **[!DNL Schema Library]** 中 [!DNL Experience Platform]。 See the [XDM documentation](home.md) for more information.
 
 ## 常見問題集
 
@@ -42,7 +42,7 @@ ht-degree: 0%
 
 ### 架構何時開始防止中斷更改？
 
-只要在建立資料集時從未使用過或在中啟用過，就可對架構進行中斷變更 [!DNL Real-time Customer Profile](../profile/home.md)。 一旦在資料集建立中使用模式或啟用與一起使 [!DNL Real-time Customer Profile]用模式後， [](schema/composition.md#evolution) 系統將嚴格執行模式演化規則。
+只要在建立資料集時從未使用過或在 [[!DNL即時客戶配置檔案]中啟用過，就可以對模式進行中斷更改](../profile/home.md)。 一旦在資料集建立中使用模式或啟用與一起使 [!DNL Real-time Customer Profile]用模式後， [](schema/composition.md#evolution) 系統將嚴格執行模式演化規則。
 
 ### 長欄位類型的最大大小是多少？
 
@@ -52,7 +52,7 @@ ht-degree: 0%
 
 ### 如何定義我的架構的身分？
 
-在 [!DNL Experience Platform]中，身分用於識別主體（通常是個人），而不管被解釋的資料源。 它們是在結構中定義的，方法是將鍵欄位標籤為「標識」。 常用的身分識別欄位包括電子郵件地址、電話號碼、 [!DNL Experience Cloud ID (ECID)](https://docs.adobe.com/content/help/zh-Hant/id-service/using/home.html)CRM ID和其他唯一ID欄位。
+在 [!DNL Experience Platform]中，身分用於識別主體（通常是個人），而不管被解釋的資料源。 它們是在結構中定義的，方法是將鍵欄位標籤為「標識」。 常用的身分識別欄位包括電子郵件地址、 [電話號碼、[!DNL Experience Cloud ID(ECID)]](https://docs.adobe.com/content/help/zh-Hant/id-service/using/home.html)、CRM ID和其他唯一ID欄位。
 
 欄位可使用API或使用者介面標示為身分。
 
@@ -76,7 +76,7 @@ ht-degree: 0%
 
 ### 如何啟用模式以用於 [!DNL Real-time Customer Profile]?
 
-方案可通過添加位 [!DNL Real-time Customer Profile](../profile/home.md) 於方案屬性中的&quot;union&quot;標籤來 `meta:immutableTags` 使用。 可使用API或使 [!DNL Profile] 用者介面來啟用結構。
+通過在方案的屬性中添加&quot;union&quot;標籤，可在 [[!DNL即時客戶配置檔案]](../profile/home.md)`meta:immutableTags` 中使用方案。 可使用API或使 [!DNL Profile] 用者介面來啟用結構。
 
 #### 啟用現有結構以 [!DNL Profile] 使用API
 
@@ -117,7 +117,7 @@ ht-degree: 0%
 }
 ```
 
-當系統找不到特定資源時，將顯示此錯誤。 資源可能已刪除，或API呼叫中的路徑無效。 請確定您已輸入API呼叫的有效路徑，然後再次嘗試。 您可能想要檢查是否已為資源輸入正確的ID，以及路徑是否與適當的容器（全域或租用戶）正確命名。
+當系統找不到特定資源時，將顯示此錯誤。 資源可能已刪除，或API呼叫中的路徑無效。 請確定您已輸入API呼叫的有效路徑，然後再次嘗試。 您可能想檢查是否已為資源輸入正確的ID，以及路徑是否與適當的容器（全域或租用戶）正確命名。
 
 如需在API中建構查閱路徑的詳細資訊，請參閱開發 [人員指南](./api/getting-started.md#container)[中的容器](api/getting-started.md#schema-identification)[!DNL Schema Registry] 與架構識別區段。
 
