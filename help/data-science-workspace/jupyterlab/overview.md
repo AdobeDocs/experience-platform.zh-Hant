@@ -3,11 +3,11 @@ keywords: Experience Platform;JupyterLab;notebooks;Data Science Workspace;popula
 solution: Experience Platform
 title: JupyterLab使用指南
 topic: Overview
-description: JupyterLab是Project Jupyter的網路使用者介面，並與Adobe Experience Platform緊密整合。 它為資料科學家提供互動式開發環境，以便與Jupyter筆記型電腦、程式碼和資料搭配使用。
+description: JupyterLab是Project Jupyter的網路使用者介面，並與Adobe Experience Platform緊密整合。 它為資料科學家提供互動式開發環境，以便與Jupyter筆記型電腦、程式碼和資料搭配使用。 本文檔概述了JupyterLab及其功能，以及執行常見操作的說明。
 translation-type: tm+mt
-source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
+source-git-commit: 9ba229195892245d29fb4f17b9f2e5cd6c6ea567
 workflow-type: tm+mt
-source-wordcount: '3684'
+source-wordcount: '3702'
 ht-degree: 11%
 
 ---
@@ -49,7 +49,7 @@ Experience Platform的JupyterLab整合隨附架構變更、設計考量、自訂
 
 >[!NOTE]
 >
->上的 [!DNL Platform] 某些服務整合 [!DNL JupyterLab] 僅限於特定內核。 有關詳細資訊，請參 [閱](#kernels) 「內核」一節。
+>上的 [!DNL Platform] 某些服務整合 [!DNL JupyterLab] 僅限於特定內核。 有關詳細資訊，請參 [閱](#kernels) 「內核」部分。
 
 ## 主要功能與常用作業
 
@@ -638,10 +638,10 @@ timedf.show()
 | 發癢 | 1.3.0 |
 | 西伯恩 | 0.9.0 |
 | statmodels | 0.10.1 |
-| 彈性 | 5.1.0.17 |
+| kit | 5.1.0.17 |
 | gplot | 0.11.5 |
 | py-xgboost | 0.90 |
-| opencv | 3.4.1 |
+| 彈性 | 3.4.1 |
 | 皮什帕克 | 2.4.3 |
 | 火炬 | 1.0.1 |
 | wxpython | 4.0.6 |
