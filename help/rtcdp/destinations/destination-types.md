@@ -5,9 +5,9 @@ seo-title: 目標類型和類別
 description: '在Adobe即時客戶資料平台中，描述檔／區段匯出目的地會擷取事件資料，並與其他資料來源結合，套用區段，以及將區段和合格的描述檔匯出至目的地。 啟動擴充功能會將原始事件資料轉送至數種目的地。 '
 seo-description: 在Adobe即時客戶資料平台中，描述檔／區段匯出目的地會擷取事件資料，並與其他資料來源結合，套用區段，以及將區段和合格的描述檔匯出至目的地。 啟動擴充功能會將原始事件資料轉送至數種目的地。
 translation-type: tm+mt
-source-git-commit: 15323134f0c626cad2c4e90b3e1c0662cf7e57dd
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '580'
+source-wordcount: '587'
 ht-degree: 0%
 
 ---
@@ -37,7 +37,7 @@ ht-degree: 0%
 
 #### 區段匯出目標
 
-區段匯出目的地會將其符合資格的設定檔和區段傳送至目標平台。 這些目標使用區段ID或使用者ID。 例如或等廣告 [!DNL Google Display & Video 360](/help/rtcdp/destinations/google-dv360-destination.md) 目的 [!DNL Google Ads](/help/rtcdp/destinations/google-ads-destination.md) 地是這類目的地的範例。
+區段匯出目的地會將其符合資格的設定檔和區段傳送至目標平台。 這些目標使用區段ID或使用者ID。 廣告目的地 [(例如[!DNL Google Display &amp; Video 360]](/help/rtcdp/destinations/google-dv360-destination.md)[或[!DNL Google Ads]](/help/rtcdp/destinations/google-ads-destination.md) )就是這些目標類型的範例。
 
 #### 描述檔匯出和區段匯出目的地——影片總覽
 
@@ -73,7 +73,7 @@ Adobe Real-time CDP運用Experience Platform Launch的強大功能與彈性，�
 
 ## 目標類別
 
-目標目錄中的連接和擴展 [](https://platform.adobe.com/destination/catalog) ，依據目標類別(**Advertising**、 **Cloud Storage**********、調查平台、電子郵件營銷等)分組，具體取決於它們幫助您實現的行銷使用案例。 如需每個類別以及每個類別所包含的目的地的詳細資訊，請參閱「目標」目 [錄檔案](/help/rtcdp/destinations/destinations-catalog.md)。
+目標目錄中的連接和擴展 [](https://platform.adobe.com/destination/catalog) ，依據目標類別(**Advertising**、 **Cloud Storage**、Survey Platforms、Email Marketing ********&#x200B;等調查平台)分組，具體取決於它們幫助您實現的行銷使用案例。 如需每個類別以及每個類別所包含的目的地的詳細資訊，請參閱「目標」目 [錄檔案](/help/rtcdp/destinations/destinations-catalog.md)。
 
 ![目標類別](/help/rtcdp/destinations/assets/destination-categories-menu.png)
 
