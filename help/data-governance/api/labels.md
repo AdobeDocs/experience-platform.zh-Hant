@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 標籤端點
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 80526bc0fea9e1854174a2edf9389ff0c4e98f71
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '489'
+source-wordcount: '493'
 ht-degree: 3%
 
 ---
@@ -22,7 +22,7 @@ ht-degree: 3%
 
 ## 快速入門
 
-本指南中使用的API端點是的一部分 [!DNL Policy Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml)。 在繼續之前，請先閱讀快速入門 [指南](getting-started.md) ，以取得相關檔案的連結、閱讀本檔案中範例API呼叫的指南，以及成功呼叫任何 [!DNL Experience Platform] API所需之必要標題的重要資訊。
+本指南中使用的API端點是 [[!DNL策略服務API]的一部分](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml)。 在繼續之前，請先閱讀快速入門 [指南](getting-started.md) ，以取得相關檔案的連結、閱讀本檔案中範例API呼叫的指南，以及成功呼叫任何 [!DNL Experience Platform] API所需之必要標題的重要資訊。
 
 ## 擷取標籤清單 {#list}
 
@@ -108,7 +108,7 @@ curl -X GET \
 
 ## 查找標籤 {#look-up}
 
-您可以在GET請求到API的路徑中加入該標 `name` 簽的屬性，以尋找特定的標 [!DNL Policy Service] 簽。
+您可以在GET請求到 `name` API [!DNL Policy Service] 的路徑中加入該標籤的屬性，以尋找特定標籤。
 
 **API格式**
 
