@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;insights; customer ai;popular topics
+keywords: Experience Platform;insights;customer ai;popular topics
 solution: Experience Platform
 title: 建立具有預測分數的客戶細分
 topic: Create a segment
+description: 當預測執行完成時，「設定檔」會自動使用預測傾向分數。 利用客戶人工智慧豐富個人檔案分數可建立客戶細分，以根據其傾向分數尋找受眾。 本節提供使用區段產生器建立區段的步驟。
 translation-type: tm+mt
-source-git-commit: e351a2d489730c1f1bd5f87be8d85612090bc009
+source-git-commit: c30bbaead775e68f869b080e24e18d4a23cda973
 workflow-type: tm+mt
-source-wordcount: '272'
+source-wordcount: '317'
 ht-degree: 0%
 
 ---
