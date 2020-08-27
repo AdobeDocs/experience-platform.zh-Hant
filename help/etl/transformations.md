@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;etl;ETL;etl transformations;ETL transformations
 solution: Experience Platform
 title: 範例ETL轉換
 topic: overview
+description: 本文將示範擷取、轉換、載入(ETL)開發人員可能遇到的下列範例轉換。
 translation-type: tm+mt
-source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
+source-git-commit: f4a4e65a087313dc4e2414f999e021e3f6e17137
 workflow-type: tm+mt
-source-wordcount: '466'
+source-wordcount: '482'
 ht-degree: 1%
 
 ---
@@ -53,10 +54,10 @@ Dr  Cammi   Haslen  F   1973-12-17  chaslenqv@ehow.com  56059cd5-5006-ce5f-2f5f-
 | F_NAME | person.name.firstName | 複製為字串 |
 | L_NAME | person.name.lastName | 複製為字串 |
 | 性別 | person.gender | 將性別轉換為對應人。性別列舉值 |
-| DOB | person.byrthDayAndMonth: &quot;MM-DD&quot;<br/>person.birthDate: &quot;YYYY-MM-DD&quot;<br/>person.birthYear: YYYY | 將brithDayAndMonth轉換為字<br/>串將birthDate轉換<br/>為字串將birthYear轉換為short int |
+| DOB | person.byrthDayAndMonth:&quot;MM-DD&quot;<br/>person.birthDate:&quot;YYYY-MM-DD&quot;<br/>person.birthYear:YYYY | 將brithDayAndMonth轉換為字<br/>串將birthDate轉換<br/>為字串將birthYear轉換為short int |
 | 電子郵件 | personalEmail.address | 複製為字串 |
 | CRMID | identityMap.CRMID[{&quot;id&quot;:x, primary:false}] | 複製為字串至identityMap中的CRMID陣列，並將Primary設為false |
-| ECID | identityMap.ECID[{&quot;id&quot;:x,primary: false}] | 複製為字串至identityMap中ECID陣列中的第一個項目，並將Primary設為false |
+| ECID | identityMap.ECID[{&quot;id&quot;:x,primary:false}] | 複製為字串至identityMap中ECID陣列中的第一個項目，並將Primary設為false |
 | Loyaltyid | identityMap.LOYALTYID[{&quot;id&quot;:x, primary:true}] | 複製為字串至identityMap中的LOYALTYID陣列，並將Primary設為true |
 | ECID2 | identityMap.ECID[{&quot;id&quot;:x, primary:false}] | 複製為字串至identityMap中ECID陣列中的第二個項目，並將Primary設為false |
 | 電話 | homePhone.number | 複製為字串 |
