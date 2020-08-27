@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;publish a model;Data Science Workspace;popular topics
+keywords: Experience Platform;publish a model;Data Science Workspace;popular topics;score a service
 solution: Experience Platform
 title: 以服務形式發佈模型(UI)
 topic: Tutorial
+description: Adobe Experience Platform Data Science Workspace可讓您將經過訓練和評估的模型發佈為服務，讓IMS組織內的使用者可對資料評分，而不需建立自己的模型。
 translation-type: tm+mt
-source-git-commit: 4b0f0dda97f044590f55eaf75a220f631f3313ee
+source-git-commit: 7615476c4b728b451638f51cfaa8e8f3b432d659
 workflow-type: tm+mt
-source-wordcount: '418'
+source-wordcount: '453'
 ht-degree: 0%
 
 ---
@@ -20,11 +21,11 @@ Adobe Experience Platform Data Science Workspace可讓您將經過訓練和評�
 
 若要完成本教學課程，您必須擁有存取權 [!DNL Experience Platform]。 如果您無權存取中的IMS組織，請先與您的系 [!DNL Experience Platform]統管理員聯絡，然後再繼續。
 
-This tutorial requires an existing Model with a successful training run. If you do not have a publishable Model, follow the [Train and evaluate a Model in the UI](./train-evaluate-model-ui.md) tutorial before continuing.
+本教學課程需要具備成功訓練執行的現有模型。 如果您沒有可發佈的模型，請依照UI教學課程中 [的「訓練」並評估模型](./train-evaluate-model-ui.md) ，然後再繼續。
 
-If you prefer to publish a Model by using Sensei Machine Learning APIs, refer to the [API tutorial](./publish-model-service-api.md).
+如果您偏好使用Sensei機器學習API來發佈模型，請參閱 [API教學課程](./publish-model-service-api.md)。
 
-## Publish a Model {#publish-a-model}
+## 發佈模型 {#publish-a-model}
 
 1. 在Adobe Experience Platform中，按一下左側導 **[!UICONTROL 覽欄中的]** 「模型」連結，以列出所有現有的模型。 查找並按一下要作為服務發佈的模型的名稱。
    ![](../images/models-recipes/publish-model/1_browse_model.png)
