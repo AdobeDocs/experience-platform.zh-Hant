@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 驗證及存取Experience Platform API
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 5c5f6c4868e195aef76bacc0a1e5df3857647bde
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '850'
+source-wordcount: '853'
 ht-degree: 1%
 
 ---
@@ -47,7 +47,7 @@ ht-degree: 1%
 
 **取得開發人員存取權**
 
-請連絡 [!DNL Admin Console] 您組織中的管理員，以使用新增您為組織產品之一的開發人員 [!DNL Admin Console](https://adminconsole.adobe.com/)。
+請連絡 [!DNL Admin Console] 您組織中的管理員，以便使用「 [[!DNL管理控制台」將您新增為組織產品的開發人員](https://adminconsole.adobe.com/)。
 
 ![](images/authentication/assign-developer.png)
 
