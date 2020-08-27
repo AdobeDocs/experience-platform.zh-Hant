@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 預覽和估計端點
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 86ded28b1830d3607c8b5214c8d31dfcbf446252
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '742'
+source-wordcount: '746'
 ht-degree: 2%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 2%
 
 # 預覽和估計端點
 
-當您開發區段定義時，可以使用中的估計和預覽工具來檢 [!DNL Adobe Experience Platform] 視摘要層級的資訊，以協助您隔離預期的觀眾。 **預覽** 提供區段定義之合格描述檔的分頁清單，讓您比較結果與預期結果。 **估計** 提供區段定義的統計資訊，例如預測受眾大小、信賴區間和錯誤標準差。
+當您開發區段定義時，可以使用中的估計和預覽工具來檢 [!DNL Adobe Experience Platform] 視摘要層級的資訊，以協助您隔離預期的觀眾。 **預覽** 提供區段定義之合格描述檔的分頁清單，讓您比較結果與預期。 **估計** 提供區段定義的統計資訊，例如預測受眾大小、信賴區間和錯誤標準差。
 
 ## 快速入門
 
@@ -171,7 +171,7 @@ curl -X GET https://platform.adobe.io/data/core/ups/preview/MDphcHAtMzJiZTAzMjgt
 
 | 屬性 | 說明 |
 | -------- | ----------- |
-| `results` | 實體ID的清單，以及其相關身分。 提供的連結可用於查找指定的實體，使用 [!DNL Profile Access API](../../profile/api/entities.md)。 |
+| `results` | 實體ID的清單，以及其相關身分。 提供的連結可用於使用 [[!DNL Profile Access API]查找指定實體](../../profile/api/entities.md)。 |
 
 ## 檢索特定估計作業的結果 {#get-estimate}
 
@@ -185,7 +185,7 @@ GET /estimate/{PREVIEW_ID}
 
 | 參數 | 說明 |
 | --------- | ----------- |
-| `{PREVIEW_ID}` | 只有在建立預覽工作且兩個工作共用相同的ID值以進行查閱時，才會觸發估計工作。 具體而言，這是建 `previewId` 立預覽工作時傳回的值。 |
+| `{PREVIEW_ID}` | 只有在建立預覽工作且兩個工作共用相同的ID值以供查閱時，才會觸發估計工作。 具體而言，這是建 `previewId` 立預覽工作時傳回的值。 |
 
 **請求**
 
