@@ -5,9 +5,9 @@ doc-type: release notes
 last-update: November 18, 2019
 author: crhoades, ens28527
 translation-type: tm+mt
-source-git-commit: cb5df9b44486bda84f08805f1077d6097e3666e2
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '1882'
+source-wordcount: '1908'
 ht-degree: 2%
 
 ---
@@ -18,15 +18,15 @@ ht-degree: 2%
 **發行日期：2019 年 11 月 18 日**
 
 Adobe Experience Platform的新功能：
-* [!DNL Real-time Customer Data Platform](#rtcdp)
-* [!DNL Destinations](#destinations)
-* [!DNL Sources](#sources)
+* [[!DNL即時客戶資料平台]](#rtcdp)
+* [[!DNL目標]](#destinations)
+* [[!DNL源]](#sources)
 
 更新現有功能：
-* [!DNL Data Science Workspace](#dsw)
-* [!DNL Experience Data Model (XDM) System](#xdm)
-* [!DNL Real-time Customer Profile](#profile)
-* [!DNL Segmentation Service](#segmentation)
+* [[!DNL資料科學工作區]](#dsw)
+* [[!DNL Experience Data Model(XDM)System]](#xdm)
+* [[!DNL即時客戶基本資料]](#profile)
+* [[!DNL分段服務]](#segmentation)
 
 ## [!DNL Real-time Customer Data Platform] {#rtcdp}
 
