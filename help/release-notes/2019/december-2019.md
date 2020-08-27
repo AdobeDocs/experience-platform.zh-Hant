@@ -5,9 +5,9 @@ doc-type: release notes
 last-update: December 12, 2019
 author: ens71067
 translation-type: tm+mt
-source-git-commit: bfbf2074a9dcadd809de043d62f7d2ddaa7c7b31
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '668'
+source-wordcount: '682'
 ht-degree: 5%
 
 ---
@@ -15,14 +15,14 @@ ht-degree: 5%
 
 # Adobe Experience Platform 發行說明
 
-**發行日期： 2019年12月11日**
+**發行日期：2019年12月11日**
 
 Adobe Experience Platform現有功能的更新：
 
-* [!DNL Segmentation Service](#segmentation)
-* [!DNL Decisioning Service](#decisioning)
-* [!DNL Sources](#sources)
-* [!DNL Experience Data Model (XDM) System](#xdm)
+* [[!DNL分段服務]](#segmentation)
+* [[!DNL決策服務]](#decisioning)
+* [[!DNL源]](#sources)
+* [[!DNL Experience Data Model(XDM)System]](#xdm)
 
 ## [!DNL Segmentation Service] {#segmentation}
 
@@ -34,8 +34,8 @@ Adobe Experience Platform Segmentation Service提供使用者介面和REST風格
 
 | 功能 | 說明 |
 |--- | ---|
-| 「合併的對象」索引標籤 [!DNL Segment Builder] | 區 [!UICONTROL _段和&#x200B;_]「對象[!UICONTROL _」標籤_] 已合併為單一「對 [!DNL Segment Builder] 像 [!UICONTROL __]」標籤。 此標籤可讓您瀏覽並搜尋現有的對象，然後拖放至規則產生器畫布以建立新的區段定義。 參考對象可將下列規則集邏輯新增至新區段定義： 作為規則的對象會籍，是定義參考對象的完整規則邏輯集。 |
-| 合併策略選擇器的新位置 | 合併策略選擇器在中的位置已 [!DNL Segment Builder] 經更改。 要為段定義選擇合併策略，請按一下「 [!UICONTROL _Fields _]」（欄位）頁籤上的齒輪表徵圖，然後使用「_[!UICONTROL  Merge Policy]_ 」（合併策略）下拉菜單選擇要使用的合併策略。 |
+| 「合併的對象」索引標籤 [!DNL Segment Builder] | 區 [!UICONTROL _段和_] 「對象 [!UICONTROL _」標籤_] 已合併為單一「對 [!DNL Segment Builder] 像 [!UICONTROL __] 」標籤。 此標籤可讓您瀏覽並搜尋現有的對象，然後拖放至規則產生器畫布以建立新的區段定義。 參考對象可將下列規則集邏輯新增至新區段定義：作為規則的對象會籍，是定義參考對象的完整規則邏輯集。 |
+| 合併策略選擇器的新位置 | 合併策略選擇器在中的位置已 [!DNL Segment Builder] 經更改。 要為段定義選擇合併策略，請按一下「 [!UICONTROL _Fields_] 」（欄位）頁籤上的齒輪表徵圖，然後使用「 _[!UICONTROL Merge Policy]_ 」（合併策略）下拉菜單選擇要使用的合併策略。 |
 
 **已知問題**
 
