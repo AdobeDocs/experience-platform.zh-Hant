@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Access control;Adobe admin console
 solution: Experience Platform
 title: 存取控制使用指南
 topic: user guide
+description: Adobe Experience Platform中的存取控制功能可讓您使用Adobe Admin Console管理各種平台功能的角色和權限。 本檔案是如何導覽Admin Console以管理平台存取控制的指南。
 translation-type: tm+mt
-source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
+source-git-commit: 14f99c23cd82894fee5eb5c4093b3c50b95c52e8
 workflow-type: tm+mt
-source-wordcount: '142'
+source-wordcount: '184'
 ht-degree: 1%
 
 ---
@@ -24,4 +25,4 @@ Adobe Experience Platform中的存取控制功能可讓您使用 [!DNL Platform]
 - [管理產品設定檔的詳細資訊和其他服務](./details-and-services.md)
 - [管理產品設定檔的使用者](./users.md)
 
-重複上述步驟，以視需要繼續新增使用者。 現在您已經學會如何透過 [!DNL Platform] 控制功能的存取 [!DNL Admin Console]，請參閱存取控制概述中的附錄章節 [，以進一步瞭解其存取權限](../home.md)[!DNL Platform] 及其授與的功能。
+重複上述步驟，以視需要繼續新增使用者。 現在您已經學會如何透過 [!DNL Platform] 控制功能的存取 [!DNL Admin Console]，請參閱存取控制概觀中的附錄章節 [，以進一步瞭解其存取權](../home.md)[!DNL Platform] 限和功能。
