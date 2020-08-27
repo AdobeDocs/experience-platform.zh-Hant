@@ -5,9 +5,9 @@ title: 資料集總覽
 topic: datasets
 description: 本檔案提供Experience Platform中資料集的高階概述。
 translation-type: tm+mt
-source-git-commit: 23516c66a67ae5663dcf90a40ccba98bfd266ab0
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '723'
+source-wordcount: '731'
 ht-degree: 2%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 2%
 
 ## 建立資料集和追蹤中繼資料
 
-[!DNL Catalog Service] 是資料位置和世系的記錄系統， [!DNL Experience Platform]用於建立和管理資料集。 [!DNL Catalog] 追蹤每個資料集的中繼資料，包括對資料集符合的 [!DNL Experience Data Model] (XDM)模式的參考（在下一節中說明），以及該資料集所吸收的記錄數。
+[!DNL Catalog Service] 是資料位置和世系的記錄系統， [!DNL Experience Platform]用於建立和管理資料集。 [!DNL Catalog] 追蹤每個資料集的中繼資料，包括對資料集符合的 [!DNL Experience Data Model] (XDM)模式的參考（在下一節中說明）以及該資料集所吸收的記錄數。
 
 如需詳細 [資訊，請參閱目錄服務](../home.md) 。
 
@@ -56,9 +56,9 @@ Adobe Experience Platform可 [!DNL Data Governance] 讓您管理客戶資料，�
 
 以下是使用資料集進行各種操作的下游服務的清單。 請檢視每項服務的檔案，以取得更多資訊。
 
-* [!DNL Data Access API](../../data-access/home.md):允許您訪問和下載儲存在資料集中的檔案的內容。
+* [[!DNL資料存取API]](../../data-access/home.md):允許您訪問和下載儲存在資料集中的檔案的內容。
 * [Adobe Experience Platform Identity Service](../../identity-service/home.md):跨裝置和系統橋接身分識別，並根據資料集符合的XDM架構所定義的身分欄位，將資料集連結在一起。
-* [!DNL Real-time Customer Profile](../../profile/home.md):利用 [!DNL Identity Service] 資料集即時建立詳細的客戶個人檔案。 [!DNL Real-time Customer Profile] 從資料中提取資 [!DNL Data Lake] 料，並將客戶個人檔案保留在其個別的資料儲存中。
+* [[!DNL即時客戶基本資料]](../../profile/home.md):利用 [!DNL Identity Service] 資料集即時建立詳細的客戶個人檔案。 [!DNL Real-time Customer Profile] 從資料中提取資 [!DNL Data Lake] 料，並將客戶個人檔案保留在其個別的資料儲存中。
 * [Adobe Experience Platform細分服務](../../segmentation/home.md):可讓您建立區段並從資料產生受 [!DNL Real-time Customer Profile] 眾。 然後，這些對象可匯出至其中的專屬資料集 [!DNL Data Lake]。
 * [Adobe Experience Platform資料科學工作區](../../data-science-workspace/home.md):使用機器學習和人工智慧發掘大型資料集的見解。
 * [Adobe Experience Platform查詢服務](../../query-service/home.md):允許您使用標準SQL來查詢中的資料、 [!DNL Experience Platform]連接中的任何資料集 [!DNL Data Lake] ，以及將查詢結果捕獲為新資料集以用於報告、 [!DNL Data Science Workspace]或中 [!DNL Real-time Customer Profile]。
