@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 資料湖中的隱私權要求處理
 topic: overview
 translation-type: tm+mt
-source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '1189'
+source-wordcount: '1204'
 ht-degree: 0%
 
 ---
@@ -20,12 +20,12 @@ Adobe Experience Platform會 [!DNL Privacy Service] 處理客戶存取、選擇�
 
 ## 快速入門
 
-建議您在閱讀本指南之前，先瞭解下 [!DNL Experience Platform] 列服務：
+建議您在閱讀本指南之前，先瞭解 [!DNL Experience Platform] 下列服務：
 
-* [!DNL Privacy Service](../privacy-service/home.md):管理客戶在Adobe Experience Cloud應用程式中存取、選擇退出銷售或刪除其個人資料的要求。
-* [!DNL Catalog Service](home.md):資料位置和世系的記錄系統 [!DNL Experience Platform]。 提供可用來更新資料集中繼資料的API。
-* [!DNL Experience Data Model (XDM) System](../xdm/home.md):組織客戶體驗資料 [!DNL Experience Platform] 的標準化架構。
-* [!DNL Identity Service](../identity-service/home.md):透過跨裝置和系統橋接身分，解決客戶體驗資料分散所帶來的根本挑戰。
+* [[!DNL隱私服務]](../privacy-service/home.md):管理客戶在Adobe Experience Cloud應用程式中存取、選擇退出銷售或刪除其個人資料的要求。
+* [[!DNL目錄服務]](home.md):資料位置和世系的記錄系統 [!DNL Experience Platform]。 提供可用來更新資料集中繼資料的API。
+* [[!DNL體驗資料模型(XDM)系統]](../xdm/home.md):組織客戶體驗資料 [!DNL Experience Platform] 的標準化架構。
+* [[!DNL Identity Service]](../identity-service/home.md):透過跨裝置和系統橋接身分，解決客戶體驗資料分散所帶來的根本挑戰。
 
 ## 瞭解身分名稱空間 {#namespaces}
 
