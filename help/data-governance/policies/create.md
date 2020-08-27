@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 建立資料使用原則
 topic: policies
 translation-type: tm+mt
-source-git-commit: 0534fe8dcc11741ddc74749d231e732163adf5b0
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '1186'
+source-wordcount: '1194'
 ht-degree: 2%
 
 ---
@@ -22,9 +22,9 @@ ht-degree: 2%
 
 本教程需要對建立和評估DULE策略時涉及的以下關鍵概念有充分的瞭解：
 
-* [!DNL Data Governance](../home.md): 強制執行資料使用 [!DNL Platform] 合規性的框架。
-* [資料使用標籤](../labels/overview.md): 資料使用標籤會套用至XDM資料欄位，指定資料存取限制。
-* [!DNL Experience Data Model (XDM)](../../xdm/home.md): 組織客戶體驗資料 [!DNL Platform] 的標準化架構。
+* [[!DNL資料治理]](../home.md):強制執行資料使用 [!DNL Platform] 合規性的框架。
+* [資料使用標籤](../labels/overview.md):資料使用標籤會套用至XDM資料欄位，指定資料存取限制。
+* [[!DNL體驗資料模型(XDM)]](../../xdm/home.md):組織客戶體驗資料 [!DNL Platform] 的標準化架構。
 * [沙盒](../../sandboxes/home.md): [!DNL Experience Platform] 提供虛擬沙盒，可將單一執行個體分 [!DNL Platform] 割為不同的虛擬環境，以協助開發和發展數位體驗應用程式。
 
 在開始本教學課程之前，請先閱讀開發人員指南 [，以取得成功呼叫DULE](../api/getting-started.md)[!DNL Policy Service] API所需的重要資訊，包括必要的標題以及如何讀取範例API呼叫。
@@ -123,7 +123,7 @@ curl -X GET \
 
 當您找到要使用的行銷動作時，請記錄其屬性的 `href` 值。 在建立DULE策略的下一步 [中使用此值](#create-policy)。
 
-### 建立新的行銷動作 {#create-new}
+### Create a new marketing action {#create-new}
 
 您可以透過向端點提出PUT請求，並在請求路徑的 `/marketingActions/custom/` 末尾提供行銷動作的名稱，來建立新的行銷動作。
 
