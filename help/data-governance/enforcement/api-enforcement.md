@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 使用原則服務API強制執行資料使用原則
 topic: enforcement
 translation-type: tm+mt
-source-git-commit: 0534fe8dcc11741ddc74749d231e732163adf5b0
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '869'
+source-wordcount: '874'
 ht-degree: 2%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 2%
 
 # 使用 [!DNL Policy Service] API強制執行資料使用原則
 
-一旦您為資料建立了資料使用標籤，並針對這些標籤建立了行銷動作的使用原則，您就可以使用 [!DNL DULE Policy Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) ，評估在資料集或任意標籤群組上執行的行銷動作是否構成原則違規。 然後，您可以設定自己的內部通訊協定，以根據API回應來處理原則違規。
+為您的資料建立資料使用標籤並針對這些標籤建立行銷動作的使用原則後，您就可以使用 [[!DNL DULE Policy Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) ，評估在資料集或任意標籤群組上執行的行銷動作是否構成原則違規。 然後，您可以設定自己的內部通訊協定，以根據API回應來處理原則違規。
 
 >[!NOTE]
 >
@@ -26,9 +26,9 @@ ht-degree: 2%
 
 本教程需要對執行DULE策略時涉及的以下關鍵概念有充分的瞭解：
 
-* [資料治理](../home.md): 強制執行資料使用 [!DNL Platform] 合規性的框架。
-   * [資料使用標籤](../labels/overview.md): 資料使用標籤會套用至資料集（和／或這些資料集內的個別欄位），並指定資料的使用限制。
-   * [資料使用原則](../policies/overview.md): 資料使用原則是描述特定DULE標籤集所允許或限制之行銷動作類型的規則。
+* [資料治理](../home.md):強制執行資料使用 [!DNL Platform] 合規性的框架。
+   * [資料使用標籤](../labels/overview.md):資料使用標籤會套用至資料集（和／或這些資料集內的個別欄位），並指定資料的使用限制。
+   * [資料使用原則](../policies/overview.md):資料使用原則是描述特定DULE標籤集所允許或限制之行銷動作類型的規則。
 * [沙盒](../../sandboxes/home.md): [!DNL Experience Platform] 提供虛擬沙盒，可將單一執行個體分 [!DNL Platform] 割為不同的虛擬環境，以協助開發和發展數位體驗應用程式。
 
 在開始本教學課程之前，請先閱讀開發人員指南 [，以取得成功呼叫DULE](../api/getting-started.md)[!DNL Policy Service] API所需的重要資訊，包括必要的標題以及如何讀取範例API呼叫。
