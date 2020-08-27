@@ -5,9 +5,9 @@ doc-type: release notes
 last-update: September 13, 2019
 author: ens28527
 translation-type: tm+mt
-source-git-commit: bfbf2074a9dcadd809de043d62f7d2ddaa7c7b31
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '532'
+source-wordcount: '542'
 ht-degree: 5%
 
 ---
@@ -19,9 +19,9 @@ ht-degree: 5%
 
 Adobe Experience Platform現有功能的更新：
 
-* [!DNL Data Ingestion](#ingestion)
-* [!DNL Data Science Workspace](#dsw)
-* [!DNL Query Service](#query)
+* [[!DNL資料提取]](#ingestion)
+* [[!DNL資料科學工作區]](#dsw)
+* [[!DNL查詢服務]](#query)
 
 ## [!DNL Data Ingestion] {#ingestion}
 
@@ -51,7 +51,7 @@ Adobe Experience Platform是一 [!DNL Data Science Workspace] 項全面管理的
 
 * 刪除現有服務目前沒有 [!DNL Service Gallery] 可存取的方式。 同時，請參閱 [Sensei Machine Learning API參考](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml) ，透過API呼叫刪除現有服務。
 * 不 [!DNL Service Gallery] 支援分頁以篩選服務的訓練和計分執行。
-* 在設定已排程的訓練或計分執行時， [!DNL Service Gallery]將頻率設定為每小時，以防止套用排程。
+* 在設定已排程的訓練或計分時， [!DNL Service Gallery]將頻率設為每小時，以防止套用排程。
 
 如需詳細資訊，請造訪資 [料科學工作區概觀](../../data-science-workspace/home.md)。
 
