@@ -5,9 +5,9 @@ title: 目錄服務開發人員指南
 topic: developer guide
 description: 本開發人員指南提供協助您開始使用目錄API的步驟。 然後，本指南提供使用目錄執行關鍵操作的範例API調用。
 translation-type: tm+mt
-source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
+source-git-commit: c8e53a25c5b22e8d840658fe26ff47875947a6d0
 workflow-type: tm+mt
-source-wordcount: '589'
+source-wordcount: '588'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 # [!DNL Catalog Service] 開發人員指南
 
-[!DNL Catalog Service] 是Adobe Experience Platform中資料位置和世系的記錄系統。 [!DNL Catalog] 可當成中繼資料存放區或「目錄」，讓您在其中找到有關資料的資訊 [!DNL Experience Platform]，而不需存取資料本身。 如需詳細 [資訊，請參閱](../home.md) 「目錄」總覽。
+[!DNL Catalog Service] 是Adobe Experience Platform中資料位置和世系的記錄系統。 [!DNL Catalog] 可當成中繼資料存放區或「目錄」，讓您在其中找到有關資料的資訊 [!DNL Experience Platform]，而不需存取資料本身。 如需詳細 [[!DNL Catalog] 資訊](../home.md) ，請參閱總覽。
 
 本開發人員指南提供協助您開始使用 [!DNL Catalog] API的步驟。 然後，本指南提供使用執行關鍵操作的範例API調用 [!DNL Catalog]。
 
