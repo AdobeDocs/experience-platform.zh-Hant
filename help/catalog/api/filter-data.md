@@ -5,9 +5,9 @@ title: 使用查詢參數篩選目錄資料
 topic: developer guide
 description: 目錄服務API允許透過使用請求查詢參數來篩選回應資料。 目錄的最佳實務是在所有API呼叫中使用篩選器，因為這些篩選器可減輕API的負載，並有助於改善整體效能。
 translation-type: tm+mt
-source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '2078'
+source-wordcount: '2085'
 ht-degree: 1%
 
 ---
@@ -207,8 +207,8 @@ curl -X GET \
 * 標籤名稱是IMS組織唯一的。
 * Adobe程式可能會針對某些行為使用標籤。 這些標籤的名稱會以&quot;adobe&quot;為前置詞作為標準。 因此，在聲明標籤名稱時，應避免此慣例。
 * 下列標籤名稱會保留供跨組織使 [!DNL Experience Platform]用，因此無法宣告為您組織的標籤名稱：
-   * `unifiedProfile`:此標籤名稱保留給要被收錄的資料集 [!DNL Real-time Customer Profile](../../profile/home.md)。
-   * `unifiedIdentity`:此標籤名稱保留給要被收錄的資料集 [!DNL Identity Service](../../identity-service/home.md)。
+   * `unifiedProfile`:此標籤名稱保留給要由 [[!DNL即時客戶配置檔案]提取的資料集](../../profile/home.md)。
+   * `unifiedIdentity`:此標籤名稱保留給要由 [[!DNL Identity Service]接收的資料集](../../identity-service/home.md)。
 
 以下是包含屬性的資料集范 `tags` 例。 該屬性中的標籤採用鍵值配對的形式，每個標籤值顯示為包含單一字串的陣列：
 
@@ -251,7 +251,7 @@ curl -X GET \
 
 參數的 `tags` 值採用鍵值對的形式，使用格式 `{TAG_NAME}:{TAG_VALUE}`。 可以以逗號分隔的清單形式提供多個鍵值對。 當提供多個標籤時，會假設AND關係。
 
-此參數支援標籤值`*`的萬用字元()。 例如，搜尋字串會傳 `test*` 回標籤值以&quot;test&quot;開頭的任何物件。 僅由通配符組成的搜索字串可用於根據對象是否包含特定標籤（無論其值如何）來過濾對象。
+此參數支援標籤值`*`的萬用字元()。 例如，搜尋字串會傳 `test*` 回任何標籤值以&quot;test&quot;開頭的物件。 僅由通配符組成的搜索字串可用於根據對象是否包含特定標籤（無論其值如何）來過濾對象。
 
 ```http
 GET /{OBJECT_TYPE}?tags={TAG_NAME}:{TAG_VALUE}
