@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 使用API管理決策服務實體
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 38cb8eeae3ac0a1852c59e433d1cacae82b1c6c0
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '7207'
+source-wordcount: '7220'
 ht-degree: 0%
 
 ---
@@ -26,9 +26,9 @@ ht-degree: 0%
 
 本教學課程需要有效瞭解服 [!DNL Experience Platform] 務和API慣例。 儲存 [!DNL Platform] 庫是由若干其他服務使用的服務， [!DNL Platform] 用於儲存業務對象和各種類型的元資料。 它提供安全而有彈性的方式來管理和查詢這些物件，以供數種執行時期服務使用。 就 [!DNL Decisioning Service] 是其中之一。 在開始本教學課程之前，請先閱讀以下檔案：
 
-- [!DNL Experience Data Model (XDM)](../../xdm/home.md):平台組織客戶體驗資料的標準化架構。
-- [!DNL Decisioning Service](./../home.md):說明「體驗決策」的概念和元件，尤其是「選件」決策。 說明在客戶體驗期間，選擇最佳呈現選項的策略。
-- [!DNL Profile Query Language (PQL)](../../segmentation/pql/overview.md):PQL是一種功能強大的語言，可編寫XDM實例的表達式。 PQL用於定義決策規則。
+- [[!DNL體驗資料模型(XDM)]](../../xdm/home.md):平台組織客戶體驗資料的標準化架構。
+- [[!DNL決策服務]](./../home.md):說明「體驗決策」的概念和元件，尤其是「選件」決策。 說明在客戶體驗期間，選擇最佳呈現選項的策略。
+- [[!DNL配置檔案查詢語言(PQL)]](../../segmentation/pql/overview.md):PQL是一種功能強大的語言，可編寫XDM實例的表達式。 PQL用於定義決策規則。
 
 以下章節提供您必須知道的其他資訊，才能成功呼叫 [!DNL Platform] API。
 
