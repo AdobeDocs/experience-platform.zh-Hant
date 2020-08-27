@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 架構註冊API開發人員指南
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: d04bf35e49488ab7d5e07de91eb77d0d9921b6fa
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '1195'
+source-wordcount: '1207'
 ht-degree: 0%
 
 ---
@@ -24,12 +24,12 @@ ht-degree: 0%
 
 本指南需要有效瞭解Adobe Experience Platform的下列元件：
 
-* [!DNL Experience Data Model (XDM) System](../home.md): 組織客戶體驗資料 [!DNL Experience Platform] 的標準化架構。
-   * [架構構成基礎](../schema/composition.md): 瞭解XDM架構的基本建置區塊。
-* [!DNL Real-time Customer Profile](../../profile/home.md): 根據來自多個來源的匯整資料，提供統一、即時的消費者個人檔案。
-* [!DNL Sandboxes](../../sandboxes/home.md): [!DNL Experience Platform] 提供虛擬沙盒，可將單一執行個體分 [!DNL Platform] 割為不同的虛擬環境，以協助開發和發展數位體驗應用程式。
+* [[!DNL體驗資料模型(XDM)系統]](../home.md):組織客戶體驗資料 [!DNL Experience Platform] 的標準化架構。
+   * [架構構成基礎](../schema/composition.md):瞭解XDM架構的基本建置區塊。
+* [[!DNL即時客戶基本資料]](../../profile/home.md):根據來自多個來源的匯整資料，提供統一、即時的消費者個人檔案。
+* [[!DNL沙盒]](../../sandboxes/home.md): [!DNL Experience Platform] 提供虛擬沙盒，可將單一執行個體分 [!DNL Platform] 割為不同的虛擬環境，以協助開發和發展數位體驗應用程式。
 
-以下章節提供您成功呼叫 [!DNL Schema Registry] API時需要知道的其他資訊。
+以下章節提供您必須知道的其他資訊，才能成功呼叫 [!DNL Schema Registry] API。
 
 ## 讀取範例API呼叫
 
@@ -39,7 +39,7 @@ ht-degree: 0%
 
 若要呼叫API，您必 [!DNL Platform] 須先完成驗證教 [學課程](../../tutorials/authentication.md)。 完成驗證教學課程後，將提供所有 [!DNL Experience Platform] API呼叫中每個必要標題的值，如下所示：
 
-* 授權： 生產者 `{ACCESS_TOKEN}`
+* 授權：生產者 `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
 * x-gw-ims-org-id: `{IMS_ORG}`
 
@@ -55,7 +55,7 @@ ht-degree: 0%
 
 所有包含裝載(POST、PUT、PATCH)的請求都需要額外的標題：
 
-* 內容類型： application/json
+* 內容類型：application/json
 
 ## 瞭解您的TENANT_ID {#know-your-tenant_id}
 
@@ -157,11 +157,11 @@ curl -X GET \
  }
 ```
 
-* `tenantId`: IMS `TENANT_ID` 組織的值。
+* `tenantId`:IMS `TENANT_ID` 組織的值。
 
 ## 瞭解 `CONTAINER_ID` {#container}
 
-對 [!DNL Schema Registry] API的呼叫需要使用 `CONTAINER_ID`。 有兩個容器可對其進行API呼叫： 全 **域容器** ，租 **戶容器**。
+對 [!DNL Schema Registry] API的呼叫需要使用 `CONTAINER_ID`。 有兩個容器可對其進行API呼叫：全 **域容器** ，租 **戶容器**。
 
 ### 全域容器
 
@@ -205,7 +205,7 @@ curl -X GET \
 
 >[!NOTE]
 >
->如果僅提 `major` 供版本（例如1、2、3），則註冊表將返回最新 `minor` 版本(例如 .1、.2、.3)。
+>如果僅提 `major` 供版本（例如1、2、3），則註冊表將返回最新 `minor` 版本(例如.1、.2、.3)。
 
 ## XDM現場限制和最佳做法
 
@@ -228,7 +228,7 @@ curl -X GET \
 ```
 
 * 欄位物件的名稱可能包含英數字元、破折號或底線字元，但 **不得以底線** 開頭。
-   * **正確：** `fieldName`, `field_name2`, `Field-Name`, `field-name_3`
+   * **正確：**`fieldName`, `field_name2`, `Field-Name`, `field-name_3`
    * **錯誤：** `_fieldName`
 * camelCase是欄位對象名稱的首選參數。 範例: `fieldName`
 * 欄位應包含在「 `title`標題大小寫」中寫入的。 範例: `Field Name`
@@ -236,10 +236,10 @@ curl -X GET \
    * 定義某些類型可能需要選擇 `format`。
    * 當需要特定格式化資料時， `examples` 可新增為陣列。
    * 也可以使用註冊表中的任何資料類型定義欄位類型。 如需詳細資訊， [請參閱本指南中](create-data-type.md) 「建立資料類型」一節。
-* 說明 `description` 了有關現場資料的現場和相關資訊。 它應以完整的句子編寫，使用清楚的語言，讓任何存取架構的人都能瞭解該欄位的用意。
+* 說明 `description` 了有關現場資料的現場和相關資訊。 它應以完整的句子編寫，使用清楚的語言，讓任何存取架構的人都能瞭解欄位的意圖。
 
 如需如 [何定義API中欄位類型的詳細資訊，請參閱附錄](appendix.md) 。
 
 ## 後續步驟
 
-本檔案涵蓋對 [!DNL Schema Registry] API進行呼叫所需的先決條件知識，包括必要的驗證認證。 您現在可以繼續閱讀本開發人員指南中提供的範例呼叫，並依照其指示進行。 有關如何在API中建立架構的完整逐步說明，請參閱下列教 [學課程](../tutorials/create-schema-api.md)。
+本檔案涵蓋對 [!DNL Schema Registry] API進行呼叫所需的先決條件知識，包括必要的驗證憑證。 您現在可以繼續閱讀本開發人員指南中提供的範例呼叫，並依照其指示進行。 有關如何在API中建立架構的完整逐步說明，請參閱下列教 [學課程](../tutorials/create-schema-api.md)。
