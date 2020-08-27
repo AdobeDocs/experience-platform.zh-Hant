@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 建立ETL整合
 topic: overview
 translation-type: tm+mt
-source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
+source-git-commit: 8b1b61b6446b28f92d6cf221003674fa09716c53
 workflow-type: tm+mt
-source-wordcount: '4158'
+source-wordcount: '4153'
 ht-degree: 0%
 
 ---
@@ -522,7 +522,7 @@ curl -X GET "https://platform.adobe.io/data/foundation/catalog/batches?dataSet=D
 
 ### 從批次中取出檔案
 
-在您擁有所尋找(`{BATCH_ID}`)批的ID後，就可以透過 [[!DNL資料存取API]擷取屬於特定批的檔案清單](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-access-api.yaml)。  「資料存取」教學課程中提供了相關 [的詳細資訊](../data-access/tutorials/dataset-data.md)。
+在您擁有所尋找(`{BATCH_ID}`)批的ID後，就可以透過 [[!DNL資料存取API]擷取屬於特定批的檔案清單](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-access-api.yaml)。  教學課程中提供相關的詳細 [[!DNL Data Access] 資訊](../data-access/tutorials/dataset-data.md)。
 
 **請求**
 
@@ -548,7 +548,7 @@ curl -X GET "https://platform.adobe.io/data/foundation/export/files/{FILE_ID}" \
   -H "x-api-key : {API_KEY}"
 ```
 
-響應可指向單個檔案或目錄。 有關每項資訊的詳細資訊，請參閱「資 [料存取」教學課程](../data-access/tutorials/dataset-data.md)。
+響應可指向單個檔案或目錄。 有關每項資訊的詳細資訊，請參閱教 [[!DNL Data Access] 學課程](../data-access/tutorials/dataset-data.md)。
 
 ### 存取檔案內容
 
@@ -568,7 +568,7 @@ curl -X GET "https://platform.adobe.io/data/foundation/export/files/{DATASET_FIL
 
 ### 驗證方案符合性記錄
 
-在寫入資料時，使用者可以根據XDM架構中定義的驗證規則來驗證資料。 有關模式驗證的詳細資訊，請參閱GitHub上的 [ETL生態系統整合參考程式碼](https://github.com/adobe/experience-platform-etl-reference/blob/fd08dd9f74ae45b849d5482f645f859f330c1951/README.md#validation)。
+在寫入資料時，使用者可以根據XDM架構中定義的驗證規則來驗證資料。 有關模式驗證的詳細資訊，請參閱 [ETL生態系統整合參考程式碼 [!DNL GitHub]](https://github.com/adobe/experience-platform-etl-reference/blob/fd08dd9f74ae45b849d5482f645f859f330c1951/README.md#validation)。
 
 如果您使用在 [[!DNL GitHub]上找到的參考實作](https://github.com/adobe/experience-platform-etl-reference/blob/fd08dd9f74ae45b849d5482f645f859f330c1951/README.md)，則可使用系統屬性在此實作中開啟架構驗證 `-DenableSchemaValidation=true`。
 
