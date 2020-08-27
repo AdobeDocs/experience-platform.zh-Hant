@@ -3,11 +3,12 @@ keywords: Experience Platform;home;popular topics
 solution: Experience Platform
 title: 瀏覽存取控制工作區
 topic: user guide
+description: 本文檔介紹瀏覽訪問控制工作區所需的必要步驟。 若要透過Adobe Admin Console設定Experience Platform的存取控制，您必須是訂閱Experience Platform的IMS組織的管理員。
 translation-type: tm+mt
-source-git-commit: 6f599c0c6d8b349ebfb8cc0523543904fd628f8d
+source-git-commit: 14f99c23cd82894fee5eb5c4093b3c50b95c52e8
 workflow-type: tm+mt
-source-wordcount: '258'
-ht-degree: 3%
+source-wordcount: '301'
+ht-degree: 2%
 
 ---
 
