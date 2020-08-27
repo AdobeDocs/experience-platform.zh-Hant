@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 資料集使用指南
 topic: datasets
 translation-type: tm+mt
-source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '1135'
+source-wordcount: '1148'
 ht-degree: 0%
 
 ---
@@ -21,15 +21,15 @@ ht-degree: 0%
 本使用指南需要有效瞭解Adobe Experience Platform的下列元件：
 
 * [資料集](overview.md):中用於資料持久性的儲存和管理結構 [!DNL Experience Platform]。
-* [!DNL Experience Data Model (XDM) System](../../xdm/home.md):組織客戶體驗資料 [!DNL Experience Platform] 的標準化架構。
+* [[!DNL體驗資料模型(XDM)系統]](../../xdm/home.md):組織客戶體驗資料 [!DNL Experience Platform] 的標準化架構。
    * [架構構成基礎](../../xdm/schema/composition.md):瞭解XDM架構的基本建置區塊，包括架構組合的主要原則和最佳實務。
    * [架構編輯器](../../xdm/tutorials/create-schema-ui.md):瞭解如何使用使用者介面建立您自己 [!DNL Schema Editor] 的自訂 [!DNL Platform] XDM架構。
-* [!DNL Real-time Customer Profile](../../profile/home.md):根據來自多個來源的匯整資料，提供統一、即時的消費者個人檔案。
-* [!DNL Data Governance](../../data-governance/home.md):確保遵守有關客戶資料使用的法規、限制和政策。
+* [[!DNL即時客戶基本資料]](../../profile/home.md):根據來自多個來源的匯整資料，提供統一、即時的消費者個人檔案。
+* [[!DNL資料治理]](../../data-governance/home.md):確保遵守有關客戶資料使用的法規、限制和政策。
 
 ## 檢視資料集
 
-在UI中 [!DNL Experience Platform] ，按一下左 **[!UICONTROL 側導覽中的「資料集]** 」，以開啟「資料集 ** 」控制面板。 控制面板會列出您組織的所有可用資料集。 系統會針對每個列出的資料集顯示詳細資訊，包括其名稱、資料集所遵守的架構，以及最近擷取執行的狀態。
+在UI中 [!DNL Experience Platform] ，按一下左 **[!UICONTROL 側導覽中的「資料集]** 」，以開啟「資料集 ** 」控制面板。 控制面板會列出您組織的所有可用資料集。 會針對每個列出的資料集顯示詳細資訊，包括其名稱、資料集所遵守的架構，以及最近擷取執行的狀態。
 
 ![](../images/datasets/user-guide/browse_datasets.png)
 
@@ -105,7 +105,7 @@ ht-degree: 0%
 
 有關為啟用方案的詳細資訊，請 [!DNL Profile]參閱方案編 [輯器使用手冊](../../xdm/tutorials/create-schema-ui.md)。
 
-若要啟用描述檔的資料集，請存取其「 *[!UICONTROL Dataset]* 」活動畫面，然後按一下「屬性」欄內的「描述檔 **[!UICONTROL 」切換]** 功能 ** 。 啟用後，資料集中的資料也會用來填入客戶個人檔案。
+若要啟用描述檔的資料集，請存取其 *[!UICONTROL Dataset活動畫面]* ，然後按一下「屬性」欄內的「描述檔 **[!UICONTROL 」切換]** 功能 ** 。 啟用後，資料集中的資料也會用來填入客戶個人檔案。
 
 ![](../images/datasets/user-guide/enable_dataset_profiles.png)
 
