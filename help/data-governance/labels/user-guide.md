@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;data governance;data usage label;policy service;data usage labels user guide
 solution: Experience Platform
 title: 資料使用標籤使用指南
 topic: labels
+description: 本使用指南涵蓋在Adobe Experience Platform使用者介面中使用資料使用標籤（也稱為DULE標籤）的步驟。
 translation-type: tm+mt
-source-git-commit: 0534fe8dcc11741ddc74749d231e732163adf5b0
+source-git-commit: 2fdab7d984a7368df77110f8ba0e0ba687e96d7e
 workflow-type: tm+mt
-source-wordcount: '1109'
+source-wordcount: '1132'
 ht-degree: 0%
 
 ---
@@ -14,7 +15,7 @@ ht-degree: 0%
 
 # 資料使用標籤使用指南
 
-本使用指南涵蓋在使用者介面中使用資料使用標籤（也稱為DULE標籤）的 [!DNL Experience Platform] 步驟。 在使用指南之前，請參閱 [Data Governance概觀](../home.md) ，以取得DULE架構的更強穩簡介。
+本使用指南涵蓋在使用者介面中使用資料使用標籤（也稱為DULE標籤）的 [!DNL Experience Platform] 步驟。 在使用指南之前，請參 [閱資料治理概觀](../home.md) ，以取得DULE架構更強穩的簡介。
 
 ## 在資料集層級管理資料使用標籤
 
@@ -30,15 +31,15 @@ ht-degree: 0%
 >
 >在此範例中，使用預先設定(XDM)的架構來 [!DNL Experience Data Model] 建立資料集。 有關XDM架構的詳細資訊，請參見 [XDM系統概述](../../xdm/home.md)[和架構構成基礎](../../xdm/schema/composition.md)。
 
-若要建立新資料集，請按一 **[!UICONTROL 下「資料集]** 」工作區右上角的「建立資 _[!UICONTROL 料集]_」。
+若要建立新資料集，請按一 **[!UICONTROL 下「資料集]** 」工作區右上角的「建立資 _[!UICONTROL 料集]_ 」。
 
 ![](../images/labels/create_dataset.png)
 
-此時會 _[!UICONTROL 顯示「建立資料集]_」畫面。 在這裡，按一下「從**[!UICONTROL &#x200B;結構描述建立資料集」]**。
+此時會 _[!UICONTROL 顯示「建立資料集]_ 」畫面。 在這裡，按一下「從 **[!UICONTROL 結構描述建立資料集」]**。
 
 ![從架構建立資料集](../images/labels/dataset_create.png)
 
-將 _[!UICONTROL 出現「選擇方案]_」螢幕，其中列出了可用於建立資料集的所有可用方案。 按一下方案旁邊的單選按鈕以選擇它。 右側_[!UICONTROL &#x200B;的]_ 「方案」部分顯示有關所選方案的其他詳細資訊。 選擇結構後，按一下「下 **[!UICONTROL 一步]**」。
+將 _[!UICONTROL 出現「選擇方案]_ 」螢幕，其中列出了可用於建立資料集的所有可用方案。 按一下方案旁邊的單選按鈕以選擇它。 右側 _[!UICONTROL 的]_ 「方案」部分顯示有關所選方案的其他詳細資訊。 選擇結構後，按一下「下 **[!UICONTROL 一步]**」。
 
 ![選擇資料集模式](../images/labels/dataset_schema.png)
 
@@ -46,13 +47,13 @@ ht-degree: 0%
 
 ![使用名稱和說明配置資料集](../images/labels/dataset_configure.png)
 
-此時將 _[!UICONTROL 顯示「資料集活動]_」頁，顯示有關新建立的資料集的資訊。 在此範例中，資料集名為「忠誠成員」，因此，頂端導覽會顯示「資_&#x200B;料集>忠誠成員」_。
+此時將 _[!UICONTROL 顯示「資料集活動]_ 」頁，顯示有關新建立的資料集的資訊。 在此範例中，資料集名為「忠誠成員」，因此，頂端導覽會顯示「資 _料集>忠誠成員」_。
 
 ![「資料集活動」頁](../images/labels/dataset_activity.png)
 
 ### 新增資料使用標籤至資料集 {#add-labels}
 
-在建立新資料集或從資料集工作區的清單中選取現有資料集後 _[!UICONTROL ，按一下「資料控管]_」以開啟「資料**[!UICONTROL &#x200B;控管&#x200B;]**__ 」工作區。 工作區可讓您在資料集層級和欄位層級管理資料使用標籤。
+在建立新資料集或從資料集工作區的清單中選取現有資料集後 _[!UICONTROL ，按一下「資料控管]_ 」以開啟「資料 **[!UICONTROL 控管]**__ 」工作區。 工作區可讓您在資料集層級和欄位層級管理資料使用標籤。
 
 ![資料集資料控管標籤](../images/labels/dataset_data_governance.png)
 
@@ -60,11 +61,11 @@ ht-degree: 0%
 
 ![編輯資料集層級標籤](../images/labels/dataset_labels_edit_button.png)
 
-將打 _[!UICONTROL 開「編輯管理標籤]_」對話框。 在對話方塊中，勾選您要套用至資料集之標籤旁的方塊。 請記住，資料集內的所有欄位都會繼承這些標籤。 「套_[!UICONTROL &#x200B;用的標籤]_ 」標題會隨著您勾選每個方塊而更新，顯示您選擇的標籤。 在您選取所要的標籤後，按一下「儲 **[!UICONTROL 存變更」]**。
+將打 _[!UICONTROL 開「編輯管理標籤]_ 」對話框。 在對話方塊中，勾選您要套用至資料集之標籤旁的方塊。 請記住，資料集內的所有欄位都會繼承這些標籤。 「套 _[!UICONTROL 用的標籤]_ 」標題會隨著您勾選每個方塊而更新，顯示您選擇的標籤。 在您選取所要的標籤後，按一下「儲 **[!UICONTROL 存變更」]**。
 
 <img alt="在資料集層級套用治理標籤" src="../images/labels/apply-labels-dataset.png" width="700"><br>
 
-「資 _[!UICONTROL 料管理]_」工作區會重新出現，顯示您在資料集層級套用的標籤。 您也可以看到標籤會繼承至資料集內的每個欄位。
+「資 _[!UICONTROL 料管理]_ 」工作區會重新出現，顯示您在資料集層級套用的標籤。 您也可以看到標籤會繼承至資料集內的每個欄位。
 
 ![欄位繼承的資料集標籤](../images/labels/dataset_inherited_labels.png)
 
@@ -76,21 +77,21 @@ ht-degree: 0%
 
 ## 在資料集欄位層級管理資料使用標籤
 
-在資料集層級 [繼續新增和編輯資料使用標籤的工作流程](#add-labels)，您也可以在該資料集的「資料控管 __」工作區中管理欄位層級標籤。
+在資料集層級 [繼續新增和編輯資料使用標籤的工作流程](#add-labels)，您也可以在該資料集的「資料控管 __ 」工作區中管理欄位層級標籤。
 
 若要將資料使用標籤套用至個別欄位，請選取欄位名稱旁的核取方塊，然後按一下「編 **[!UICONTROL 輯控管標籤」]**。
 
 ![編輯欄位標籤](../images/labels/fields_single_field.png)
 
-此時將 _[!UICONTROL 顯示「編輯管理標籤]_」對話框。 對話方塊會顯示標題，其中顯示選取的欄位、套用的標籤和繼承的標籤。 請注意，繼承的標籤（C2和C5）在對話方塊中會變灰。 這些標籤是繼承自資料集層級的唯讀標籤，因此僅能在資料集層級編輯。
+此時將 _[!UICONTROL 顯示「編輯管理標籤]_ 」對話框。 對話方塊會顯示標題，其中顯示選取的欄位、套用的標籤和繼承的標籤。 請注意，繼承的標籤（C2和C5）在對話方塊中會變灰。 這些標籤是繼承自資料集層級的唯讀標籤，因此僅能在資料集層級編輯。
 
 <img alt="編輯個別欄位的治理標籤" src="../images/labels/field-label-inheritance.png" width="700"><br>
 
-按一下您要使用之每個標籤旁的核取方塊，以選取欄位層級標籤。 在您選擇標籤時，「已套用 _[!UICONTROL 的標籤]_」標題會更新，以顯示已套用至「選取欄位」標題中所_[!UICONTROL &#x200B;示欄位的標籤]_ 。 在您選取欄位層級標籤後，按一下「儲存 **[!UICONTROL 變更」]**。
+按一下您要使用之每個標籤旁的核取方塊，以選取欄位層級標籤。 在您選擇標籤時，「已套用 _[!UICONTROL 的標籤]_ 」標題會更新，以顯示已套用至「選取欄位」標題中所 _[!UICONTROL 示欄位的標籤]_ 。 在您選取欄位層級標籤後，按一下「儲存 **[!UICONTROL 變更」]**。
 
 <img alt="套用欄位層級標籤" src="../images/labels/apply-labels-field.png" width="700"><br>
 
-「資 _[!UICONTROL 料管理]_」工作區會重新顯示，現在欄位名稱旁的列會顯示選取的欄位層級標籤。 請注意，欄位層級標籤旁有&quot;x&quot;，讓您移除標籤。
+「資 _[!UICONTROL 料管理]_ 」工作區會重新顯示，現在欄位名稱旁的列會顯示選取的欄位層級標籤。 請注意，欄位層級標籤旁有&quot;x&quot;，讓您移除標籤。
 
 ![顯示欄位層級標籤的欄位](../images/labels/fields_show_field_level_labels.png)
 
@@ -108,11 +109,11 @@ ht-degree: 0%
 
 此時將 *[!UICONTROL 顯示「建立標籤]* 」對話框。 從這裡，為新標籤提供以下資訊：
 
-* **[!UICONTROL 識別碼]**: 標籤的唯一識別碼。 此值用於查閱，因此應簡短且簡明。
-* **[!UICONTROL 名稱]**: 標籤的好記顯示名稱。
-* **[!UICONTROL 說明]**: （可選）標籤的說明，以提供進一步的內容。
+* **[!UICONTROL 識別碼]**:標籤的唯一識別碼。 此值用於查閱，因此應簡短且簡明。
+* **[!UICONTROL 名稱]**:標籤的好記顯示名稱。
+* **[!UICONTROL 說明]**:（可選）標籤的說明，以提供進一步的內容。
 
-完成後，按一下「 **[!UICONTROL 建立]**」。
+When finished, click **[!UICONTROL Create]**.
 
 ![](../images/labels/create-label.png)
 
