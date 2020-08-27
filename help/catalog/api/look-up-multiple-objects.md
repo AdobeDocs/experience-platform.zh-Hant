@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;catalog;multiple object lookup;api
 solution: Experience Platform
 title: 查找多個對象
 topic: developer guide
+description: 如果您想要檢視數個特定物件，而不是每個物件提出一個要求，「目錄」會提供簡單的捷徑，讓您要求同一類型的多個物件。 您可以使用單一GET請求來傳回多個特定物件，方法是加入以逗號分隔的ID清單。
 translation-type: tm+mt
-source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
+source-git-commit: dd1f508b93e8eac14e3c41fac9d8f49769d08f46
 workflow-type: tm+mt
-source-wordcount: '176'
-ht-degree: 1%
+source-wordcount: '223'
+ht-degree: 0%
 
 ---
 
@@ -18,7 +19,7 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->即使在請求特定 [!DNL Catalog] 物件時，查詢參數僅傳 `properties` 回所需的屬性仍是最佳實務。
+>即使在請求特 [!DNL Catalog] 定物件時，查詢參數仍 `properties` 是最佳實務，只傳回您所需的屬性。
 
 **API格式**
 
