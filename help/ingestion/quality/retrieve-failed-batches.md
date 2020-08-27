@@ -4,10 +4,10 @@ solution: Experience Platform
 title: 檢索失敗的批
 topic: overview
 translation-type: tm+mt
-source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '598'
-ht-degree: 2%
+source-wordcount: '607'
+ht-degree: 1%
 
 ---
 
@@ -22,8 +22,8 @@ Adobe Experience Platform提供兩種上傳和接收資料的方法。 您可以
 
 本指南需要有效瞭解Adobe Experience Platform的下列元件：
 
-- [!DNL Experience Data Model (XDM) System](../../xdm/home.md): 組織客戶體驗資料 [!DNL Experience Platform] 的標準化架構。
-- [!DNL Data Ingestion](../home.md): 可傳送資料的方法 [!DNL Experience Platform]。
+- [[!DNL體驗資料模型(XDM)系統]](../../xdm/home.md):組織客戶體驗資料 [!DNL Experience Platform] 的標準化架構。
+- [[!DNL資料提取]](../home.md):可傳送資料的方法 [!DNL Experience Platform]。
 
 ### 讀取範例API呼叫
 
@@ -33,7 +33,7 @@ Adobe Experience Platform提供兩種上傳和接收資料的方法。 您可以
 
 若要呼叫API，您必 [!DNL Platform] 須先完成驗證教 [學課程](../../tutorials/authentication.md)。 完成驗證教學課程後，將提供所有 [!DNL Experience Platform] API呼叫中每個必要標題的值，如下所示：
 
-- 授權： 生產者 `{ACCESS_TOKEN}`
+- 授權：生產者 `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
