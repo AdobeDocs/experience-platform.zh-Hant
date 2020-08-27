@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 建立和發佈機器學習模型逐步說明
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 86ded28b1830d3607c8b5214c8d31dfcbf446252
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '1542'
+source-wordcount: '1548'
 ht-degree: 0%
 
 ---
@@ -45,10 +45,10 @@ ht-degree: 0%
 * 從 [!DNL Jupyter Notebook] Adobe公用儲存 <a href="https://github.com/adobe/experience-platform-dsw-reference/tree/master/Summit/2019/resources/Notebooks-Thurs" target="_blank">庫下載三個必要的檔 [!DNL Git] 案</a>，這些檔案將用來示範 [!DNL JupyterLab] 中的工作流程 [!DNL Data Science Workspace]。
 
 * 對本教學課程中使用的下列主要概念有正確認識：
-   * [!DNL Experience Data Model](../../xdm/home.md): 由Adobe領導的標準化工作，為客戶體驗管理定義標 [!DNL Profile] 準架構，例如和ExperienceEvent。
-   * 資料集： 實際資料的儲存和管理結構。 XDM架構的物理實例 [化實例](../../xdm/schema/field-dictionary.md)。
-   * 批： 資料集由批處理組成。 批是一組在一段時間內收集並作為單個單位一起處理的資料。
-   * [!DNL JupyterLab]: [!DNL JupyterLab](https://blog.jupyter.org/jupyterlab-is-ready-for-users-5a6f039b8906) 是專案的開放原始碼Web介面， [!DNL Jupyter] 並緊密整合在 [!DNL Experience Platform]中。
+   * [[!DNL體驗資料模型]](../../xdm/home.md):由Adobe領導的標準化工作，為客戶體驗管理定義標 [!DNL Profile] 準架構，例如和ExperienceEvent。
+   * 資料集：實際資料的儲存和管理結構。 XDM架構的物理實例 [化實例](../../xdm/schema/field-dictionary.md)。
+   * 批：資料集由批處理組成。 批是一組在一段時間內收集並作為單個單位一起處理的資料。
+   * [!DNL JupyterLab]: [[!DNL JupyterLab]](https://blog.jupyter.org/jupyterlab-is-ready-for-users-5a6f039b8906) 是Project的開放原始碼Web介面， [!DNL Jupyter] 並與之緊密整合 [!DNL Experience Platform]。
 
 ## 準備資料 {#prepare-your-data}
 
