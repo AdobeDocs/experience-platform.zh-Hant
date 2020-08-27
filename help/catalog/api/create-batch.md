@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;create batch;catalog service;api
 solution: Experience Platform
 title: 建立資料集
 topic: developer guide
+description: 為了讓資料集收錄資料，資料集必須有與其關聯的批次。 使用現有資料集的id值，您可以透過對目錄API中的/batches端點提出POST請求來建立批次。
 translation-type: tm+mt
-source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
+source-git-commit: 14f99c23cd82894fee5eb5c4093b3c50b95c52e8
 workflow-type: tm+mt
-source-wordcount: '86'
-ht-degree: 4%
+source-wordcount: '128'
+ht-degree: 3%
 
 ---
 
