@@ -5,9 +5,9 @@ title: '使用API管理資料使用標籤 '
 topic: developer guide
 description: 資料集服務API可讓您套用和編輯資料集的使用標籤。 它是Adobe Experience Platform資料目錄功能的一部分，但與管理資料集中繼資料的Catalog Service API不同。
 translation-type: tm+mt
-source-git-commit: 2fdab7d984a7368df77110f8ba0e0ba687e96d7e
+source-git-commit: 4096a7c1ec2b3640886d3a8c69b578987fe96dd4
 workflow-type: tm+mt
-source-wordcount: '1003'
+source-wordcount: '1007'
 ht-degree: 3%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 3%
 
 本檔案提供如何使用 [!DNL Policy Service] API和 [!DNL Dataset Service] API管理資料使用標籤的步驟。
 
-它提 [!DNL Policy Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) 供數個端點，可讓您為組織建立和管理資料使用標籤。
+[! [DNL策略服務API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) 提供了幾個端點，允許您為組織建立和管理資料使用標籤。
 
 API可 [!DNL Dataset Service] 讓您套用和編輯資料集的使用標籤。 它是Adobe Experience Platform資料目錄功能的一部分，但與管理資料集中繼資料的 [!DNL Catalog Service] API不同。
 
