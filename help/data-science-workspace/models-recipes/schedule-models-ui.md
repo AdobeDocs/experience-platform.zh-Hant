@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;schedule a model;Data Science Workspace;popular topics
+keywords: Experience Platform;schedule a model;Data Science Workspace;popular topics;schedule scoring;schedule training
 solution: Experience Platform
 title: 排程模型(UI)
 topic: Tutorial
+description: Adobe Experience Platform Data Science Workspace可讓您在機器學習服務上設定排程的分數和訓練執行。 自動化培訓和計分程式有助於透過追蹤資料中的模式，持續維持和改善服務的效率。
 translation-type: tm+mt
-source-git-commit: 4b0f0dda97f044590f55eaf75a220f631f3313ee
+source-git-commit: 7615476c4b728b451638f51cfaa8e8f3b432d659
 workflow-type: tm+mt
-source-wordcount: '488'
+source-wordcount: '533'
 ht-degree: 0%
 
 ---
@@ -34,7 +35,7 @@ Adobe Experience Platform可 [!DNL Data Science Workspace] 讓您在機器學習
 1. 在Adobe Experience Platform中，按一下左 **[!UICONTROL 側導覽欄]** 中的「服務」標籤以存取 *[!DNL Service Gallery]*。 尋找您要排程計分的服務，然後按一下「開 **[!UICONTROL 啟]** 」以檢視其 *概述頁面* 。
    ![](../images/models-recipes/schedule/click_to_open.png)
 
-2. 「概述」頁面會顯示服務的計分資訊。 按一下「 **[!UICONTROL 更新排程]** 」連結以設定計分排程。
+2. 「概述」頁面會顯示服務的計分資訊。 按一下「 **[!UICONTROL 更新排程]** 」連結，以設定計分排程。
    ![](../images/models-recipes/schedule/service_overview_score.png)
 
 3. 為計分排程設定頻率、開始日期、結束日期、輸入資料集和輸出資料集。 一旦您對設定滿意後，按一下「 **[!UICONTROL 建立]** 」以更新服務的計分排程。
