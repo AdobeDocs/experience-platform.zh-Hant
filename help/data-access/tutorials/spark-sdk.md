@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;data access;spark sdk;data access api
 solution: Experience Platform
 title: 安全的Spark資料存取SDK
 topic: tutorial
+description: Secure Spark Data Access SDK是軟體開發套件，可讓您從Adobe Experience Platform讀取和寫入資料集。
 translation-type: tm+mt
-source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
+source-git-commit: 2fdab7d984a7368df77110f8ba0e0ba687e96d7e
 workflow-type: tm+mt
-source-wordcount: '516'
+source-wordcount: '538'
 ht-degree: 1%
 
 ---
@@ -81,7 +82,7 @@ spark.sql.extensions = com.adobe.platform.query.QSSparkSessionExtensions
 
 ## 讀取資料集
 
-SDK [!DNL Spark] 支援兩種閱讀模式： 互動式和批次處理。
+SDK [!DNL Spark] 支援兩種閱讀模式：互動式和批次處理。
 
 交互模式建立Java資料庫連接(JDBC)連接， [!DNL Query Service] 並通過自動轉換為的常規JDBC `ResultSet` 獲取結果 `DataFrame`。 此模式的運作方式與內建方 [!DNL Spark] 法類似 `spark.read.jdbc()`。 此模式僅適用於小型資料集，且僅需要使用者Token才能進行驗證。
 
@@ -136,7 +137,7 @@ df = df.select("column-a", "column-b").distinct().show()
 
 ### WHERE子句
 
-SDK [!DNL Spark] 允許兩種篩選方法： 使用SQL表達式或通過篩選條件。
+SDK [!DNL Spark] 允許兩種篩選方法：使用SQL表達式或通過篩選條件。
 
 以下是使用這些篩選函式的範例：
 
