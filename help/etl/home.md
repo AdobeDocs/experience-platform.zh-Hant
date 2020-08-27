@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;ETL;etl;etl integrations;ETL integrations
 solution: Experience Platform
 title: 建立ETL整合
 topic: overview
+description: ETL整合指南概述建立Experience Platform的高效能、安全連接器以及將資料匯入Platform的一般步驟。
 translation-type: tm+mt
-source-git-commit: 8b1b61b6446b28f92d6cf221003674fa09716c53
+source-git-commit: f4a4e65a087313dc4e2414f999e021e3f6e17137
 workflow-type: tm+mt
-source-wordcount: '4153'
+source-wordcount: '4173'
 ht-degree: 0%
 
 ---
@@ -14,7 +15,7 @@ ht-degree: 0%
 
 # 開發Adobe Experience Platform的ETL整合
 
-ETL整合指南概述建立高效能、安全的連接器，以便將資料 [!DNL Experience Platform] 匯入的一般步驟 [!DNL Platform]。
+ETL整合指南概述建立高效能、安全的連接器，以便將資料 [!DNL Experience Platform] 收入的一般步驟 [!DNL Platform]。
 
 
 - [[!DNL目錄]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml)
@@ -217,7 +218,7 @@ curl -X GET \
 
 ### 資料集「架構」屬性（已過時- EOL 2019-05-30）
 
-資料集可能包含「架構」屬性，該屬性現在已過時，並且暫時可用以向後相容。 例如，與先前所做的清單(GET)請求類似，其中查詢參數中的&quot;schema&quot;被取代為&quot;schemaRef&quot;，可 `properties` 能會傳回下列內容：
+資料集可能包含「架構」屬性，該屬性現在已過時，並且暫時可用以向後相容。 例如，與先前所做的清單(GET)請求類似，其中查詢參數中的&quot;schema&quot;被取代為&quot;schemaRef&quot;，可能會傳 `properties` 回下列內容：
 
 ```json
 {
