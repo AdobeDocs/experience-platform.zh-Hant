@@ -3,18 +3,19 @@ keywords: Experience Platform;developer guide;SDK;Data Access SDK;Data Science W
 solution: Experience Platform
 title: 平台SDK指南
 topic: SDK authoring
+description: 本教學課程提供有關在Python和R中將data_access_sdk_python轉換為新Python平台_sdk的資訊。
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 7615476c4b728b451638f51cfaa8e8f3b432d659
 workflow-type: tm+mt
-source-wordcount: '447'
-ht-degree: 1%
+source-wordcount: '470'
+ht-degree: 5%
 
 ---
 
 
 # [!DNL Platform] SDK指南
 
-本教學課程提供有關在Python和R `data_access_sdk_python` 中轉換為 `platform_sdk` 新Python的資訊。 本教學課程提供下列操作的相關資訊：
+本教學課程提供有關在Python和R `data_access_sdk_python` 中轉換為 `platform_sdk` 新Python的資訊。本教學課程提供下列操作的相關資訊：
 
 - [建立驗證](#build-authentication)
 - [資料的基本讀取](#basic-reading-of-data)
