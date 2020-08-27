@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 匯入封裝的方式(API)
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '955'
+source-wordcount: '960'
 ht-degree: 2%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 2%
 
 # 匯入封裝的方式(API)
 
-本教學課程 [!DNL Sensei Machine Learning API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml) 使用建立 [引擎](../api/engines.md)，在使用者介面中也稱為「方式」。
+本教學課程 [使用[!DNL Sensei Machine Learning API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml)[](../api/engines.md)來建立引擎，在使用者介面中也稱為「配方」。
 
 在開始使用之前，請務必注意，Adobe Experience Platform使用不 [!DNL Data Science Workspace] 同的術語來參照API和UI中的類似元素。 本教學課程中使用API詞語，下表概述相關詞語：
 
