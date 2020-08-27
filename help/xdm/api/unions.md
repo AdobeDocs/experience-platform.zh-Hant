@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 工會
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: d04bf35e49488ab7d5e07de91eb77d0d9921b6fa
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '788'
+source-wordcount: '792'
 ht-degree: 1%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 1%
 
 # 工會
 
-聯合（或聯合視圖）是系統生成的只讀模式，用於聚合所有共用相同類(或[!DNL XDM ExperienceEvent][!DNL XDM Individual Profile])並啟用的方案的欄位 [!DNL Real-time Customer Profile](../../profile/home.md)。
+聯合（或聯合視圖）是系統生成的只讀方案，可匯總共用同一類(或[!DNL XDM ExperienceEvent] )並為 [!DNL XDM Individual Profile][!DNL即時客戶概要檔案]啟用的所有方案的欄位 [](../../profile/home.md)。
 
 本文檔介紹在方案註冊表API中與工會合作的基本概念，包括各種操作的示例調用。 有關XDM中的聯合的更多一般資訊，請參見架構構成基 [礎中的聯合部分](../schema/composition.md#union)。
 
@@ -199,8 +199,8 @@ Union查閱要求必須 `version` 包含在Accept標題中。
 
 | 接受 | 說明 |
 | -------|------------ |
-| application/vnd.adobe.xed+json; version={MAJOR_VERSION} | Raw搭配 `$ref` 和 `allOf`。 包含標題和說明。 |
-| application/vnd.adobe.xed-full+json; version={MAJOR_VERSION} | `$ref` 屬性和已解 `allOf` 決。 包含標題和說明。 |
+| application/vnd.adobe.xed+json;version={MAJOR_VERSION} | Raw搭配 `$ref` 和 `allOf`。 包含標題和說明。 |
+| application/vnd.adobe.xed-full+json;version={MAJOR_VERSION} | `$ref` 屬性和已解 `allOf` 決。 包含標題和說明。 |
 
 **回應**
 
