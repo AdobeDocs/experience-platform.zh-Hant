@@ -5,9 +5,9 @@ title: 目錄服務概述
 topic: overview
 description: 目錄服務是Adobe Experience Platform中資料位置和世系的記錄系統。 雖然所有收錄到Experience Platform的資料都會以檔案和目錄的形式儲存在資料湖中，但目錄會保留這些檔案和目錄的中繼資料和說明，以供查閱和監控之用。
 translation-type: tm+mt
-source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
+source-git-commit: 71678b10c9e137016ea404305b272508b9c8cabe
 workflow-type: tm+mt
-source-wordcount: '783'
+source-wordcount: '782'
 ht-degree: 5%
 
 ---
@@ -64,4 +64,4 @@ ht-degree: 5%
 
 ## 後續步驟
 
-本檔案介紹了它在 [!DNL Catalog Service] 更大範圍內的作用及其運作方式 [!DNL Experience Platform]。 如需與 [該API不同端點互動的步驟](api/getting-started.md) ，請參閱目錄開發人員 [!DNL Catalog] 指南。 建議您也參閱「目錄」資料篩 [選指南](api/filter-data.md) ，以遵循限制API回應中傳回資料的最佳實務。
+本檔案介紹了它在 [!DNL Catalog Service] 更大範圍內的作用及其運作方式 [!DNL Experience Platform]。 如需與 [[!DNL Catalog] 該](api/getting-started.md) API不同端點互動的步驟，請參閱開發 [!DNL Catalog] 人員指南。 建議您也參閱「目錄」資料篩 [選指南](api/filter-data.md) ，以遵循限制API回應中傳回資料的最佳實務。
