@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;attribution ai;overview;popular topics
+keywords: Experience Platform;attribution ai overview;popular topics;attribution ai;Attribution ai
 solution: Experience Platform
 title: Attribution AI概觀
 topic: Attribution AI
+description: 歸因人工智慧可用來將點數歸因至導致轉換事件的觸點。 行銷人員可使用此工具，協助量化客戶歷程中每個個別行銷觸點的行銷影響。 觸點範例包括顯示廣告印象、電子郵件傳送、電子郵件開啟和付費搜尋點按。
 translation-type: tm+mt
-source-git-commit: 7fc121d310509739c7ee81f7d6657ea8f3963b69
+source-git-commit: c30bbaead775e68f869b080e24e18d4a23cda973
 workflow-type: tm+mt
-source-wordcount: '407'
+source-wordcount: '455'
 ht-degree: 0%
 
 ---
@@ -34,11 +35,11 @@ Attribution AI支援兩種分數類別：演算法和規則型。 演算法分�
 
 Attribution AI可用來協助下列範例使用案例：
 
-- **行政報告**: 可讓主管瞭解行銷的實際增量影響，包括整體行銷，以及通路、地區、SKU等。
-- **預算分配**: 跨行銷通道制定預算分配決策。
-- **促銷活動最佳化**: 在每個通道中，瞭解哪些促銷活動、創意和關鍵字對哪些SKU或Geos的效果更好。 這可讓您檢視每個通道，讓行銷團隊最佳化其策略。
-- **完整漏斗歸因**: 瞭解整個客戶歷程中行銷的影響。 例如，免費帳戶註冊為付費轉換等。
-- **合作夥伴評估**: 根據歸因結果，評估機構和合作夥伴的成效。
+- **行政報告**:可讓主管瞭解行銷的實際增量影響，包括整體行銷，以及通路、地區、SKU等。
+- **預算分配**:跨行銷通道制定預算分配決策。
+- **促銷活動最佳化**:在每個通道中，瞭解哪些促銷活動、創意和關鍵字對哪些SKU或Geos的效果更好。 這可讓您檢視每個通道，讓行銷團隊最佳化其策略。
+- **完整漏斗歸因**:瞭解整個客戶歷程中行銷的影響。 例如，免費帳戶註冊為付費轉換等。
+- **合作夥伴評估**:根據歸因結果，評估機構和合作夥伴的成效。
 
 ### 其他功能
 
