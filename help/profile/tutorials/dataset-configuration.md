@@ -4,9 +4,9 @@ solution: Adobe Experience Platform
 title: 使用API為Profile and Identity Service設定資料集
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '1020'
+source-wordcount: '1035'
 ht-degree: 1%
 
 ---
@@ -27,10 +27,10 @@ ht-degree: 1%
 
 本教學課程需要有效瞭解管理啟用資料集時涉及的各種Adobe Experience Platform [!DNL Profile]服務。 在開始本教學課程之前，請先閱讀這些相關服務的 [!DNL Platform] 檔案：
 
-- [!DNL Real-time Customer Profile](../home.md):根據來自多個來源的匯整資料，提供統一、即時的消費者個人檔案。
-- [!DNL Identity Service](../../identity-service/home.md):可借 [!DNL Real-time Customer Profile] 由橋接來自不同資料來源的身分識別，並將之收錄在 [!DNL Platform]中。
-- [!DNL Catalog Service](../../catalog/home.md):REST風格的API，可讓您建立資料集，並設定資料集 [!DNL Real-time Customer Profile] 和 [!DNL Identity Service]。
-- [!DNL Experience Data Model (XDM)](../../xdm/home.md):組織客戶體驗資料 [!DNL Platform] 的標準化架構。
+- [[!DNL即時客戶基本資料]](../home.md):根據來自多個來源的匯整資料，提供統一、即時的消費者個人檔案。
+- [[!DNL Identity Service]](../../identity-service/home.md):可借 [!DNL Real-time Customer Profile] 由橋接來自不同資料來源的身分識別，並將之收錄在 [!DNL Platform]中。
+- [[!DNL目錄服務]](../../catalog/home.md):REST風格的API，可讓您建立資料集，並設定資料集 [!DNL Real-time Customer Profile] 和 [!DNL Identity Service]。
+- [[!DNL體驗資料模型(XDM)]](../../xdm/home.md):組織客戶體驗資料 [!DNL Platform] 的標準化架構。
 
 以下章節提供您必須知道的其他資訊，才能成功呼叫平台API。
 
