@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 將CSV檔案對應至XDM架構
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 7876e6d52815968802bd73bb5e340c99ea3387a8
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '1354'
+source-wordcount: '1371'
 ht-degree: 2%
 
 ---
@@ -16,20 +16,20 @@ ht-degree: 2%
 
 為了將CSV資料內嵌 [!DNL Adobe Experience Platform]至中，資料必須對應至 [!DNL Experience Data Model] (XDM)架構。 本教學課程介紹如何使用使用者介面將CSV檔案對應至XDM [!DNL Platform] 架構。
 
-此外，本教學課程的附錄還提供有關使用映射功能的進 [一步資訊](#mapping-functions)。
+此外，本教學課程的附錄還提供有關使用映射功能的 [詳細資訊](#mapping-functions)。
 
 ## 快速入門
 
 本教學課程需要有效瞭解下列元件 [!DNL Platform]:
 
-- [!DNL Experience Data Model (XDM System)](../../xdm/home.md): 組織客戶體驗資料 [!DNL Platform] 的標準化架構。
-- [!DNL Batch ingestion](../batch-ingestion/overview.md): 從用戶提供的數 [!DNL Platform] 據檔案中提取資料的方法。
+- [[!DNL體驗資料模型（XDM系統）]](../../xdm/home.md):組織客戶體驗資料 [!DNL Platform] 的標準化架構。
+- [[!DNL批處理提取]](../batch-ingestion/overview.md):從用戶提供的數 [!DNL Platform] 據檔案中提取資料的方法。
 
 本教學課程也要求您已建立資料集，以將CSV資料收錄至。 如需在UI中建立資料集的步驟，請參閱資料 [收錄教學課程](./ingest-batch-data.md)。
 
 ## 選擇目標
 
-登入，然 [!DNL Adobe Experience Platform](https://platform.adobe.com) 後從左側導 **[!UICONTROL 覽列選取「工作流程]** 」以存取「工作 *[!UICONTROL 流程]* 」工作區。
+登入 [[!DNL Adobe Experience Platform]](https://platform.adobe.com) ，然後從左側導覽列選取「工作流程 **[!UICONTROL 」以存取「工]** 作流程 ** 」工作區。
 
 在「工 **[!UICONTROL 作流程]** 」螢幕中，選擇 **[!UICONTROL 「]** Data ingestion **[!UICONTROL 」部分下的「將CSV映射到XDM模式」，然後選]******&#x200B;擇LaunchChec。
 
@@ -117,7 +117,7 @@ ht-degree: 2%
 
 ## 後續步驟
 
-在本教學課程中，您已成功將平面CSV檔案對應至XDM架構，並將它加入其中 [!DNL Platform]。 此資料現在可供下游服務 [!DNL Platform] 使用，例如 [!DNL Real-time Customer Profile]。 如需詳細資訊， [!DNL Real-time Customer Profile](../../profile/home.md) 請參閱總覽。
+在本教學課程中，您已成功將平面CSV檔案對應至XDM架構，並將它加入其中 [!DNL Platform]。 此資料現在可供下游服務 [!DNL Platform] 使用，例如 [!DNL Real-time Customer Profile]。 如需詳細資 [訊，請參閱[!DNL即時客戶個人檔案]](../../profile/home.md) 的概觀。
 
 ## 附錄
 
@@ -158,7 +158,7 @@ ht-degree: 2%
 | dformat | 根據指定的格式將時間戳轉換為日期字串。 | dformat(1571829875, &quot;dd-MMM-yyyy hh:mm&quot;) | 「2019年10月23日11:24」 |
 | 日期 | 將日期字串轉換為ZonedDateTime物件（ISO 8601格式）。 | date（&quot;2019年10月23日11:24&quot;） | &quot;2019-10-23T11:24:00+00:00&quot; |
 | date_part | 擷取日期的部分。 支援下列元件值： <br><br>「y」d<br>「d&#39;d&#39;<br>&#39;d&#39;「d&#39;d&#39;<br><br>&#39;d&#39;&#39;「d&#39;&#39;ww」「<br>」「<br>d」「<br><br>d」「<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>w」平日&quot;2h&quot;第二，&quot;第一，&quot;第二，&quot;第二，&quot;第二，&quot;第二，&quot;第二，&quot;第二，&quot;第二，&quot;第二，&quot;第二，&quot;第二，&quot;第二，&quot;第二，&quot;第二，&quot;第二，&quot;第二，&quot;第二，&quot;第二，&quot;第二，&quot;第二，&quot;。&quot;。&quot;。....................................................................................................................。 | date_part(date(&quot;2019-10-17 11:55:12&quot;), &quot;MM&quot;) | 10 |
-| set_date_part | 在指定日期中替換元件。 接受下列元件： <br><br>&quot;year&quot;<br>&quot;yyy&quot;月&quot;<br>&quot;<br><br>yy&quot;yyy&quot;月<br>&quot;mm&quot;<br>mm&quot;ddd&quot;ydd&quot;<br><br>dd&quot;hour&quot;<br>&quot;hh&quot;mi&quot;&quot;&quot;n&quot;sond&quot;yyyy&quot;yyy&quot;yyy&quot;yyy&quot;yyyyy&quot;yyyy&quot;yym&quot;ym&quot;yd&quot;yd&quot;yd&quot;yd&quot;ddd&quot;d&quot;d&quot;yd&quot;yd&quot;d&quot;d&quot;d&quot;yd&quot;yd&quot;d&quot;h&quot;h&quot;h&quot;h&quot;<br><br><br><br><br><br><br><br><br><br><br><br>d&quot;h&quot; | set_date_part(&quot;m&quot;, 4, date(&quot;2016-11-09T11:44:44.797&quot;) | &quot;2016-04-09T11:44:44.797&quot; |
+| set_date_part | 在指定日期中替換元件。 接受下列元件： <br><br>&quot;year&quot;<br>&quot;yyy&quot;月&quot;<br>&quot;<br><br>yy&quot;yyy&quot;月<br>&quot;mm&quot;<br>mm&quot;ddd&quot;ddd&quot;yd&quot;<br><br>dd&quot;hour&quot;<br>&quot;hh&quot;mi&quot;mi&quot;&quot;&quot;&quot;&quot;n&quot;sond&quot;yyy&quot;yyy&quot;yyyy&quot;yyyy&quot;yyyy&quot;yyyyy&quot;月<br>&quot;<br><br><br><br><br><br><br><br><br><br><br>&quot;mmm&quot;mmmmm&quot;m&quot;m&quot;dddddd&quot;d&quot;dd&quot;d&quot;d&quot;d&quot;d&quot;d&quot;d&quot;d&quot;d&quot;d&quot;d&quot;d&quot;d&quot;d&quot;d&quot;d&quot;d&quot;d&quot;d&quot;d&quot;d&quot;d&quot;d&quot;d&quot;d&quot;d&quot;d&quot;d&quot;d&quot;d&quot;d&quot;d&quot;y&quot;h&quot;h&quot;h&quot;h&quot;h&quot;h&quot;h&quot;h&quot;h&quot; | set_date_part(&quot;m&quot;, 4, date(&quot;2016-11-09T11:44:44.797&quot;) | &quot;2016-04-09T11:44:44.797&quot; |
 | make_date_time /<br>make_timestamp | 從零件建立日期。 | make_date_time(2019、10、17、11、55、12、999、「America/Los_Angeles」) | `2019-10-17T11:55:12.0&#x200B;00000999-07:00[America/Los_Angeles]` |
 | current_timestamp | 傳回目前的時間戳記。 | current_timestamp() | 1571850624571 |
 | current_date | 傳回不含時間元件的目前日期。 | current_date() | 《2019年11月18日》 |
