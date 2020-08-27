@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;product profile
 solution: Experience Platform
 title: 管理產品設定檔的使用者
 topic: user guide
+description: 本檔案說明如何在Adobe Experience Platform的UI中管理產品設定檔的使用者。
 translation-type: tm+mt
-source-git-commit: bfbf2074a9dcadd809de043d62f7d2ddaa7c7b31
+source-git-commit: 14f99c23cd82894fee5eb5c4093b3c50b95c52e8
 workflow-type: tm+mt
-source-wordcount: '180'
+source-wordcount: '199'
 ht-degree: 1%
 
 ---
@@ -36,4 +37,4 @@ ht-degree: 1%
 
 ## 後續步驟
 
-現在您已經學會如何透過 [!DNL Platform] 控制功能的存取 [!DNL Admin Console]，請參閱存取控制概述中的附錄章節 [，以進一步瞭解其存取權限](../home.md)[!DNL Platform] 及其授與的功能。
+現在您已經學會如何透過 [!DNL Platform] 控制功能的存取 [!DNL Admin Console]，請參閱存取控制概觀中的附錄章節 [，以進一步瞭解其存取權](../home.md)[!DNL Platform] 限和功能。
