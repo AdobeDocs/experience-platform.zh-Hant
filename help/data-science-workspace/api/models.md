@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;developer guide;endpoint;Data Science Workspace;popular topics
+keywords: Experience Platform;developer guide;endpoint;Data Science Workspace;popular topics;models;sensei machine learning api
 solution: Experience Platform
 title: 模型
 topic: Developer guide
+description: 模型是機器學習方式的實例，使用歷史資料和配置進行訓練，以針對業務使用案例進行解決。
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 194a29124949571638315efe00ff0b04bff19303
 workflow-type: tm+mt
-source-wordcount: '821'
+source-wordcount: '846'
 ht-degree: 4%
 
 ---
@@ -222,7 +223,7 @@ curl -X POST \
 
 >[!TIP]
 >
->為確保此PUT請求成功，建議您首先執行GET請求以按ID檢索模型。 然後，修改並更新傳回的JSON物件，並套用已修改的JSON物件作為PUT要求的裝載。
+>為確保此PUT請求成功，建議您首先執行GET請求以按ID檢索模型。 然後，修改並更新傳回的JSON物件，並套用已修改的JSON物件的完整內容作為PUT要求的裝載。
 
 **API格式**
 
