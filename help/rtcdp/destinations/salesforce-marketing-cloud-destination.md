@@ -5,9 +5,9 @@ seo-title: Salesforce Marketing Cloud
 description: Salesforce Marketing Cloud是數位行銷套裝，先前稱為ExactTarget，可讓您為訪客和客戶建構並自訂歷程，以個人化其體驗。
 seo-description: Salesforce Marketing Cloud是數位行銷套裝，先前稱為ExactTarget，可讓您為訪客和客戶建構並自訂歷程，以個人化其體驗。
 translation-type: tm+mt
-source-git-commit: 15323134f0c626cad2c4e90b3e1c0662cf7e57dd
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '503'
+source-wordcount: '507'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 0%
 
 ## 概述
 
-[!DNL Salesforce Marketing Cloud](https://www.salesforce.com/products/marketing-cloud/email-marketing/) 是數位行銷套裝，先前稱為ExactTarget，可讓您為訪客和客戶建立和自訂歷程，以個人化其體驗。
+[[!DNL Salesforce Marketing Cloud]](https://www.salesforce.com/products/marketing-cloud/email-marketing/) 是舊稱ExactTarget的數位行銷套件，可讓您為訪客和客戶建立並自訂歷程，以個人化其體驗。
 
 若要傳送區段資 [!DNL Salesforce Marketing Cloud]料至，您必須先 [在Adobe Real](#connect-destination) -time CDP中連線目的地，然後 [從儲存位置設定資料匯入](#import-data-into-salesforce)[!DNL Salesforce Marketing Cloud]。
 
@@ -50,7 +50,7 @@ ht-degree: 0%
 
 ## 目標屬性 {#destination-attributes}
 
-在啟 [用區段](/help/rtcdp/destinations/activate-destinations.md) ，到目 [!DNL Salesforce Marketing Cloud] 的地時，建議您從聯合架構中選取唯一 [識別碼](../../profile/home.md#profile-fragments-and-union-schemas)。 選擇唯一標識符和要導出到目標的任何其他XDM欄位。 如需詳細資訊，請參 [閱「電子郵件行銷目標」中，選取要在匯出檔案中當做目標屬性使用的架構欄位](/help/rtcdp/destinations/email-marketing-destinations.md#destination-attributes) 。
+在啟 [用區段](/help/rtcdp/destinations/activate-destinations.md) ，到目 [!DNL Salesforce Marketing Cloud] 的地時，建議您從聯合架構中選取唯一 [識別碼](../../profile/home.md#profile-fragments-and-union-schemas)。 選擇要導出到目標的唯一標識符和任何其他XDM欄位。 如需詳細資訊，請參 [閱「電子郵件行銷目標」中，選取要在匯出檔案中當做目標屬性使用的架構欄位](/help/rtcdp/destinations/email-marketing-destinations.md#destination-attributes) 。
 
 ## 匯出的資料 {#exported-data}
 
