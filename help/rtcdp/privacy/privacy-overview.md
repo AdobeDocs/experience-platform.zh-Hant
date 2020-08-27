@@ -5,9 +5,9 @@ seo-title: 即時客戶資料設定檔中的隱私權
 description: 即時客戶資料設定檔可讓您簡化維持資料作業符合隱私權規範的程式。
 seo-description: 即時客戶資料設定檔可讓您簡化維持資料作業符合隱私權規範的程式。
 translation-type: tm+mt
-source-git-commit: 15323134f0c626cad2c4e90b3e1c0662cf7e57dd
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '304'
+source-wordcount: '312'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 0%
 
 [!DNL Real-time Customer Data Platform] （即時CDP）可協助行銷人員將來自多個企業系統的資料整合在一起，讓他們能夠更好地識別、瞭解並吸引客戶。 Adobe將消費者資料隱私視為基本的設計原則，並提供各種控制項以協助行銷人員管理其客戶的資料隱私。
 
-大部分的即時CDP功能都由Adobe Experience Platform提供支援。 本檔案提供有關Real-time CDP支援的各種隱私權增強技術的資訊，以及檔案的連結，以取得 [!DNL Experience Platform] 更多資訊。
+大部分的即時CDP功能都由Adobe Experience Platform提供支援。 本檔案提供有關Real-time CDP支援的各種隱私權增強技術的資訊，並提供檔案連結，以取 [!DNL Experience Platform] 得更多資訊。
 
 ## [!DNL Privacy Service]
 
@@ -25,8 +25,8 @@ Adobe Experience Platform可 [!DNL Privacy Service] 讓您簡化維持資料作�
 
 提交個別GDPR和CCPA資料主體要求存取和刪除客戶資料的方法有兩種：
 
-* 使用可 [!DNL Privacy Service UI](https://gdprui.cloud.adobe.io/) 視工作區建立和監控存取和刪除請求。 請參閱 [隱私服務UI教學課程](../../privacy-service/ui/overview.md) ，以取得逐步指示。
-* 使用 [!DNL Privacy Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/privacy-service.yaml) 以REST風格的API呼叫管理存取和刪除請求。 如需逐步 [指示，請參閱Privacy Service API教學課程](../../privacy-service/api/getting-started.md) 。
+* 使用 [[!DNL隱私服務UI]](https://gdprui.cloud.adobe.io/) ，在視覺化工作區中建立和監控存取和刪除要求。 請參閱 [隱私服務UI教學課程](../../privacy-service/ui/overview.md) ，以取得逐步指示。
+* 使用 [[!DNL隱私服務API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/privacy-service.yaml) ，透過REST風格的API呼叫來管理存取和刪除請求。 如需逐步 [指示，請參閱Privacy Service API教學課程](../../privacy-service/api/getting-started.md) 。
 
 <!-- (Capability will not be available for November GA) 
 ## Opt-out capabilities
