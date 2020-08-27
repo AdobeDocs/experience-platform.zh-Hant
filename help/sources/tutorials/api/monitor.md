@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 監視流和運行
 topic: overview
 translation-type: tm+mt
-source-git-commit: 9bdc45f6e51f1a140da503ac36355619300cedd2
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '593'
+source-wordcount: '597'
 ht-degree: 1%
 
 ---
@@ -18,7 +18,7 @@ Adobe Experience Platform可讓您從外部來源擷取資料，同時提供您�
 
 [!DNL Flow Service] 用於收集和集中Adobe Experience Platform內不同來源的客戶資料。 該服務提供用戶介面和REST風格的API，所有支援的源都可從中連接。
 
-本教學課程涵蓋使用監控流程執行資料的完整性、錯誤和度量的步驟 [!DNL Flow Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml)。
+本教學課程涵蓋使用 [[!DNL Flow Service API]監控流程執行資料的完整性、錯誤和量度的步驟](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml)。
 
 ## 快速入門
 
@@ -255,4 +255,4 @@ curl -X GET \
 
 ## 後續步驟
 
-在本教學課程之後，您已使用 [!DNL Flow Service] API檢索了資料流的度量和錯誤資訊。 您現在可以根據您的接收計畫繼續監視資料流，以跟蹤其狀態和接收速率。 有關如何使用用戶介面執行相同任務的資訊，請參見有關使用用戶介面監 [視資料流的教程](../ui/monitor.md)
+在本教學課程之後，您已使用 [!DNL Flow Service] API檢索了資料流的度量和錯誤資訊。 您現在可以根據您的接收計畫繼續監視資料流，以跟蹤其狀態和接收速率。 有關如何使用用戶介面執行相同任務的資訊，請參見有關使用用戶介面監 [控資料流的教程](../ui/monitor.md)
