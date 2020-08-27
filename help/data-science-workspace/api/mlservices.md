@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;developer guide;endpoint;Data Science Workspace;popular topics
+keywords: Experience Platform;developer guide;endpoint;Data Science Workspace;popular topics;mlservices;sensei machine learning api
 solution: Experience Platform
 title: 服務
 topic: Developer guide
+description: MLService是已發佈的訓練模型，可讓您的組織存取和重複使用先前開發的模型。 MLServices的主要功能是能夠依計畫自動化培訓與計分。 排程的訓練執行可協助維持模型的效率和正確性，而排程的計分執行則可確保產生一致的新見解。
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 194a29124949571638315efe00ff0b04bff19303
 workflow-type: tm+mt
-source-wordcount: '811'
+source-wordcount: '872'
 ht-degree: 2%
 
 ---
@@ -175,7 +176,7 @@ curl -X GET \
 GET /mlServices/{MLSERVICE_ID}
 ```
 
-* `{MLSERVICE_ID}`: 有效的MLService ID。
+* `{MLSERVICE_ID}`:有效的MLService ID。
 
 **請求**
 
@@ -215,7 +216,7 @@ curl -X GET \
 
 >[!TIP]
 >
->為確保此PUT請求成功，建議您先執行GET請求，以依ID [擷取MLService](#retrieve-a-specific-mlservice)。 然後，修改並更新傳回的JSON物件，並套用已修改的JSON物件作為PUT要求的裝載。
+>為確保此PUT請求成功，建議您先執行GET請求，以依ID [擷取MLService](#retrieve-a-specific-mlservice)。 然後，修改並更新傳回的JSON物件，並套用已修改的JSON物件的完整內容作為PUT要求的裝載。
 
 **API格式**
 
@@ -223,7 +224,7 @@ curl -X GET \
 PUT /mlServices/{MLSERVICE_ID}
 ```
 
-* `{MLSERVICE_ID}`: 有效的MLService ID。
+* `{MLSERVICE_ID}`:有效的MLService ID。
 
 **請求**
 
