@@ -5,9 +5,9 @@ title: 即時客戶基本資料使用指南
 topic: guide
 description: 即時客戶個人檔案可讓您對個別客戶建立全方位的檢視，並結合來自多個通道的資料，包括線上、離線、CRM和協力廠商資料。 本檔案可做為在Adobe Experience Platform使用者介面中與即時客戶個人檔案互動的指南。
 translation-type: tm+mt
-source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '1191'
+source-wordcount: '1207'
 ht-degree: 0%
 
 ---
@@ -23,13 +23,13 @@ ht-degree: 0%
 
 本使用指南需要瞭解與管理相關 [!DNL Experience Platform] 的各種服務 [!DNL Real-time Customer Profiles]。 閱讀本使用指南之前，請先閱讀下列服務的說明檔案：
 
-* [!DNL Real-time Customer Profile](../home.md):根據來自多個來源的匯整資料，提供統一、即時的消費者個人檔案。
-* [!DNL Identity Service](../../identity-service/home.md):可在 [!DNL Real-time Customer Profile] 不同資料來源中吸收身分時，橋接身分 [!DNL Platform]。
-* [!DNL Experience Data Model (XDM)](../../xdm/home.md):組織客戶體驗資料 [!DNL Platform] 的標準化架構。
+* [[!DNL即時客戶基本資料]](../home.md):根據來自多個來源的匯整資料，提供統一、即時的消費者個人檔案。
+* [[!DNL Identity Service]](../../identity-service/home.md):可在 [!DNL Real-time Customer Profile] 不同資料來源中吸收身分時，橋接身分 [!DNL Platform]。
+* [[!DNL體驗資料模型(XDM)]](../../xdm/home.md):組織客戶體驗資料 [!DNL Platform] 的標準化架構。
 
 ## 概述
 
-在中， [!DNL Experience Platform UI](http://platform.adobe.com)按一下左 **[!UICONTROL 側導覽中的「描述檔]** 」，以開啟「 _[!UICONTROL 概述」標籤]_。 此標籤提供檔案和影片的連結，以協助您瞭解並開始使用描述檔。
+在 [[!DNL Experience Platform UI]](http://platform.adobe.com)，按一下左側導覽中的 **[!UICONTROL Profiles]** ，以開啟「 _[!UICONTROL Overview]_ 」標籤。 此標籤提供檔案和影片的連結，以協助您瞭解並開始使用描述檔。
 
 ![](../images/user-guide/profiles-overview.png)
 
@@ -51,7 +51,7 @@ ht-degree: 0%
 
 ### 描述檔計數 {#profile-count}
 
-在組織的預設合併政策將描述檔片段合併為每個個別客戶後，描述檔計數會顯示您組織擁有的描述檔總數。 [!DNL Experience Platform]換言之，您的組織可能有多個與跨不同通道與品牌互動的單一客戶相關的描述檔片段，但這些片段會合併在一起（根據預設合併政策），並會傳回「1」個描述檔計數，因為這些片段都與同一個人相關。
+在組織的預設合併政策將描述檔片段合併為每個個別客戶後，描述檔計數會顯示您組織擁有的描述檔總數。 [!DNL Experience Platform]換言之，您的組織可能有多個與跨不同通道與品牌互動的單一客戶相關的描述檔片段，但這些片段會合併（根據預設合併政策），並傳回「1」個描述檔計數，因為這些片段都與同一個人相關。
 
 描述檔計數也包含具有屬性（記錄資料）的描述檔，以及僅包含時間系列（事件）資料的描述檔，例如Adobe Analytics描述檔。 設定檔計數會定期重新整理，以提供平台內設定檔的最新總數。
 
@@ -91,7 +91,7 @@ ht-degree: 0%
 
 ### 描述檔詳細資料 {#profile-detail}
 
-在選擇「配置 **[!UICONTROL 式ID]**」後， _[!UICONTROL 將開啟]_「詳細資訊」頁籤。 此頁顯示有關所選配置檔案的資訊，包括基本屬性、連結身份和可用聯繫渠道。 顯示的描述檔資訊已從多個描述檔片段合併在一起，以形成個別客戶的單一檢視。
+在選擇「配置 **[!UICONTROL 式ID]**」後， _[!UICONTROL 將開啟]_ 「詳細資訊」頁籤。 此頁顯示有關所選配置檔案的資訊，包括基本屬性、連結身份和可用聯繫渠道。 顯示的描述檔資訊已從多個描述檔片段合併在一起，以形成個別客戶的單一檢視。
 
 ![](../images/user-guide/profiles-profile-detail.png)
 
