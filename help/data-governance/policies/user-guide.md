@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 資料使用原則使用指南
 topic: policies
 translation-type: tm+mt
-source-git-commit: 0534fe8dcc11741ddc74749d231e732163adf5b0
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '725'
+source-wordcount: '728'
 ht-degree: 0%
 
 ---
@@ -24,7 +24,7 @@ Adobe Experience Platform提 [!DNL Data Governance] 供使用者介面，可讓�
 
 本指南需要對下列概念有充分的 [!DNL Experience Platform] 瞭解：
 
-- [!DNL Data Governance](../home.md)
+- [[!DNL資料治理]](../home.md)
 - [資料使用原則](./overview.md)
 
 ## 檢視資料使用原則 {#view-policies}
