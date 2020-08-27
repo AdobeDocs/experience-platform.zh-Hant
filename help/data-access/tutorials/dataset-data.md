@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;data access;data access api;query data access
 solution: Experience Platform
 title: 資料存取概述
 topic: tutorial
+description: 本檔案提供逐步教學課程，其中涵蓋如何使用Adobe Experience Platform中的資料存取API來尋找、存取及下載儲存在資料集中的資料。 您也將會瞭解資料存取API的一些獨特功能，例如分頁和部分下載。
 translation-type: tm+mt
-source-git-commit: cb5df9b44486bda84f08805f1077d6097e3666e2
+source-git-commit: cddc559dfb65ada888bb367d6265863091a9b2a1
 workflow-type: tm+mt
-source-wordcount: '1332'
-ht-degree: 3%
+source-wordcount: '1384'
+ht-degree: 2%
 
 ---
 
@@ -18,7 +19,7 @@ ht-degree: 3%
 
 ## 快速入門
 
-本教學課程旨在瞭解如何建立和填入資料集。 如需詳細 [資訊，請參閱資料集建立教學課程](../../catalog/datasets/create.md) 。
+本教學課程需要瞭解如何建立和填入資料集。 如需詳細 [資訊，請參閱資料集建立教學課程](../../catalog/datasets/create.md) 。
 
 以下章節提供您必須知道的其他資訊，才能成功呼叫平台API。
 
@@ -84,7 +85,7 @@ curl -X GET 'https://platform.adobe.io/data/foundation/catalog/batches/' \
 
 **回應**
 
-響應包括一個對象，該對象列出與IMS組織相關的所有批，每個頂層值代表一個批。 個別批對象包含該特定批的詳細資訊。 以下響應已最小化。
+響應包括一個對象，該對象列出與IMS組織相關的所有批，每個頂層值代表一個批。 各個批對象包含該特定批的詳細資訊。 以下響應已最小化。
 
 ```json
 {
