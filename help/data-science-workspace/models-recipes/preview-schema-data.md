@@ -3,10 +3,11 @@ keywords: Experience Platform;preview schema data;Data Science Workspace;popular
 solution: Experience Platform
 title: 預覽結構描述和資料集
 topic: Tutorial
+description: 以下檔案概述在Adobe Experience Platform上預覽架構和資料集。
 translation-type: tm+mt
-source-git-commit: 4b0f0dda97f044590f55eaf75a220f631f3313ee
+source-git-commit: 7615476c4b728b451638f51cfaa8e8f3b432d659
 workflow-type: tm+mt
-source-wordcount: '215'
+source-wordcount: '227'
 ht-degree: 0%
 
 ---
