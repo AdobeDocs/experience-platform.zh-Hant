@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;access control permissions;access control resource types;access control api
 solution: Experience Platform
 title: 權限和資源類型的清單名稱
 topic: developer guide
+description: Adobe Experience Platform中的存取控制功能可讓您使用Adobe Admin Console管理各種平台功能的角色和權限。 通過向/acl/reference端點發出GET請求，可以列出所有權限和資源類型的名稱。 然後，這些名稱可用於API呼叫，以檢視目前使用者的有效原則。
 translation-type: tm+mt
-source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
+source-git-commit: 14f99c23cd82894fee5eb5c4093b3c50b95c52e8
 workflow-type: tm+mt
-source-wordcount: '123'
+source-wordcount: '184'
 ht-degree: 1%
 
 ---
