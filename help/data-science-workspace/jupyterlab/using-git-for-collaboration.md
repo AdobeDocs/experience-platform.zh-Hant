@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 使用Git在JupyterLab中協作
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '248'
+source-wordcount: '255'
 ht-degree: 1%
 
 ---
@@ -26,7 +26,7 @@ ht-degree: 1%
 
 ## 連接 [!DNL Git] 到環 [!DNL Data Science Workspace JupyterLab Notebooks] 境
 
-首先，啟動 [!DNL Adobe Experience Platform] 並導覽至環 [!DNL JupyterLabs Notebooks](https://platform.adobe.com/notebooks/jupyterLab) 境。
+首先，啟 [!DNL Adobe Experience Platform] 動並導航 [到[!DNL JupyterLabs Notebooks]環境](https://platform.adobe.com/notebooks/jupyterLab) 。
 
 在中 [!DNL JupyterLab]，選擇「 **[!UICONTROL File]** （檔案）」 ，然後將滑鼠暫留在「 **[!UICONTROL New（新建）]**」上。 從出現的下拉式清單中，選取「 **[!UICONTROL 終端機]**」。
 
@@ -58,4 +58,4 @@ ht-degree: 1%
 
 ## 後續步驟
 
-克隆完儲存庫後，您可以像在本地電腦上一樣使用Git，以便與其他人在筆記本上協作。 有關您可在其中執行的操作的詳細 [!DNL JupyterLab]資訊，請參見 [!DNL JupyterLab user guide](./overview.md)。
+克隆完儲存庫後，您可以像在本地電腦上一樣使用Git，以便與其他人在筆記本上協作。 有關可在中執行的操作的詳細 [!DNL JupyterLab]資訊，請參 [閱[!DNL JupyterLab使用手冊]](./overview.md)。
