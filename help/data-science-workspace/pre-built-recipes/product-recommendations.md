@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform;product recommendation recipe;Data Science Workspace;popular topics
+keywords: Experience Platform;product recommendation recipe;Data Science Workspace;popular topics;recipes;pre build recipe
 solution: Experience Platform
 title: 產品建議方式
 topic: overview
+description: 「產品建議」方式可讓您提供符合客戶需求和興趣的個人化產品建議。 透過精確的預測模型，客戶的購買記錄可讓您深入瞭解他們可能感興趣的產品。
 translation-type: tm+mt
-source-git-commit: 1e5526b54f3c52b669f9f6a792eda0abfc711fdd
+source-git-commit: 7615476c4b728b451638f51cfaa8e8f3b432d659
 workflow-type: tm+mt
-source-wordcount: '421'
-ht-degree: 3%
+source-wordcount: '463'
+ht-degree: 2%
 
 ---
 
@@ -28,7 +29,7 @@ ht-degree: 3%
 
 您可依照Adobe Experience Platform Lab教學課程（請參閱下面的Lab連結）開始使用。 本教學課程將示範如何在Jupyter筆記型電腦中建立「產品建議」配方，方法是依 [照筆記型電腦的配方工作流程](../jupyterlab/create-a-recipe.md) ，並在中實作配方 [!DNL Experience Platform][!DNL Data Science Workspace]。
 
-* [實驗： 使用資料科學工作區預測未來](https://expleague.azureedge.net/labs/L777/index.html)
+* [實驗：使用資料科學工作區預測未來](https://expleague.azureedge.net/labs/L777/index.html)
 * [實驗室資源](https://github.com/adobe/experience-platform-dsw-reference/tree/master/Summit/2019/resources)
 
 ## 資料架構
