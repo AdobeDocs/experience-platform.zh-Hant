@@ -6,9 +6,9 @@ last-update: March 10, 2020
 author: ens71067
 keywords: release notes;
 translation-type: tm+mt
-source-git-commit: f881c1365684b1ca9e6bf9a8ce866d234dc54128
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '848'
+source-wordcount: '861'
 ht-degree: 5%
 
 ---
@@ -20,11 +20,11 @@ ht-degree: 5%
 
 Adobe Experience Platform現有功能的更新：
 
-* [!DNL Data Governance](#governance)
-* [!DNL Data Ingestion](#ingestion)
-* [!DNL Destinations](#destinations)
-* [!DNL Identity Service](#identity)
-* [!DNL Sources](#sources)
+* [[!DNL資料治理]](#governance)
+* [[!DNL資料提取]](#ingestion)
+* [[!DNL目標]](#destinations)
+* [[!DNL Identity Service]](#identity)
+* [[!DNL源]](#sources)
 
 ## [!DNL Data Governance] {#governance}
 
@@ -92,7 +92,7 @@ Adobe Experience Platform可 [!DNL Identity Service] 協助您跨裝置和系統
 
 | 功能 | 說明 |
 | ------- | ----------- |
-| 增強的私用圖表 | 專用圖表功能已增強，可減少從每週批次處理到每日重新整理的圖表產生延遲，讓客 [!DNL Identity Service] 戶存取更新的身分圖表和連結。 |
+| 增強的私用圖表 | 專用圖形功能已增強，可減少從每週批次處理到每日重新整理的圖形產生延遲，讓客 [!DNL Identity Service] 戶存取更新的識別圖形和連結。 |
 
 **已知問題**
 
