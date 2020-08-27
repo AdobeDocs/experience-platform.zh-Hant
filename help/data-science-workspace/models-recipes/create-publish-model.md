@@ -5,7 +5,7 @@ title: 建立和發佈機器學習模型逐步說明
 topic: Tutorial
 description: Adobe Experience Platform Data Science Workspace提供使用預先建立的產品建議方式達成目標的方式。 請依照本教學課程，瞭解如何存取和瞭解您的零售資料、建立和最佳化機器學習模型，以及在資料科學工作區中產生見解。
 translation-type: tm+mt
-source-git-commit: 43d568a401732a753553847dee1b4a924fcc24fd
+source-git-commit: 78f080fd7598799825c59a4fdfdcaf7d294560a3
 workflow-type: tm+mt
 source-wordcount: '1595'
 ht-degree: 0%
@@ -43,7 +43,7 @@ ht-degree: 0%
    * Golden Data Set postValues
    * 金色資料集架構
 
-* 從 [!DNL Jupyter Notebook] Adobe公用儲存 <a href="https://github.com/adobe/experience-platform-dsw-reference/tree/master/Summit/2019/resources/Notebooks-Thurs" target="_blank">庫下載三個必要的檔 [!DNL Git] 案</a>，這些檔案將用來示範 [!DNL JupyterLab] 中的工作流程 [!DNL Data Science Workspace]。
+* 從 [!DNL Jupyter Notebook] Adobe [publicrepository下載三個必要的檔案 [!DNL Git] ，這些檔案將用來展示](https://github.com/adobe/experience-platform-dsw-reference/tree/master/Summit/2019/resources/Notebooks-Thurs)中的工作流程 [!DNL JupyterLab][!DNL Data Science Workspace]。
 
 * 對本教學課程中使用的下列主要概念有正確認識：
    * [[!DNL體驗資料模型]](../../xdm/home.md):由Adobe領導的標準化工作，為客戶體驗管理定義標 [!DNL Profile] 準架構，例如和ExperienceEvent。
