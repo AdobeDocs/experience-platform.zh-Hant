@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 建立驗證的串流連線
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '624'
+source-wordcount: '633'
 ht-degree: 2%
 
 ---
@@ -24,8 +24,8 @@ ht-degree: 2%
 
 本教學課程也需要具備各種Adobe Experience Platform服務的相關知識。 在開始本教學課程之前，請先閱讀下列服務的檔案：
 
-- [!DNL Experience Data Model (XDM)](../../xdm/home.md): 組織體驗資料的 [!DNL Platform] 標準化架構。
-- [!DNL Real-time Customer Profile](../../profile/home.md): 根據來自多個來源的匯整資料，即時提供統一的消費者個人檔案。
+- [[!DNL體驗資料模型(XDM)]](../../xdm/home.md):組織體驗資料的 [!DNL Platform] 標準化架構。
+- [[!DNL即時客戶基本資料]](../../profile/home.md):根據來自多個來源的匯整資料，即時提供統一的消費者個人檔案。
 
 以下章節提供您需要知道的其他資訊，以便成功呼叫串流擷取API。
 
@@ -37,7 +37,7 @@ ht-degree: 2%
 
 若要呼叫API，您必 [!DNL Platform] 須先完成驗證教 [學課程](../../tutorials/authentication.md)。 完成驗證教學課程後，將提供所有 [!DNL Experience Platform] API呼叫中每個必要標題的值，如下所示：
 
-- 授權： 生產者 `{ACCESS_TOKEN}`
+- 授權：生產者 `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
@@ -51,7 +51,7 @@ ht-degree: 2%
 
 所有包含裝載(POST、PUT、PATCH)的請求都需要額外的標題：
 
-- 內容類型： application/json
+- 內容類型：application/json
 
 ## 建立連線
 
@@ -109,7 +109,7 @@ curl -X POST https://platform.adobe.io/data/foundation/flowservice/connections \
 
 | 屬性 | 說明 |
 | -------- | ----------- |
-| `id` | 您新 `id` 建立的連線。 這在這裡稱為 `{CONNECTION_ID}`。 |
+| `id` | 新建 `id` 的連線的名稱。 這在這裡稱為 `{CONNECTION_ID}`。 |
 | `etag` | 指派給連接的標識符，指定連接的修訂版本。 |
 
 ## 取得資料收集URL
