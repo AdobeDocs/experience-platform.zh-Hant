@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform;train and evaluate;Data Science Workspace;popular topics
+keywords: Experience Platform;train and evaluate;Data Science Workspace;popular topics;create a model;create a training run
 solution: Experience Platform
 title: 訓練和評估模型(UI)
 topic: Tutorial
+description: 在Adobe Experience Platform Data Science Workspace中，機器學習模型是透過整合符合模型意圖的現有配方來建立的。 然後，對模型進行訓練和評估，通過微調其相關的超參數來優化其操作效率和效能。 方式可重複使用，這表示您可以使用單一方式，針對特定目的建立並量身打造多個模型。
 translation-type: tm+mt
-source-git-commit: 1214728063c5835510fda1a16bf1fdcca4abee48
+source-git-commit: cddc559dfb65ada888bb367d6265863091a9b2a1
 workflow-type: tm+mt
-source-wordcount: '975'
-ht-degree: 2%
+source-wordcount: '1038'
+ht-degree: 1%
 
 ---
 
@@ -98,7 +99,7 @@ ht-degree: 2%
 --- | --- | ---
 | learning_rate | 學習率會透過learning_rate縮減每棵樹的貢獻。 learning_rate和n_meativers之間存在取捨。 | 0.1 | [2 - 10] /估計數 |
 | n_mediators | 要執行的升級階段數。 漸層增強功能對過度調整相當穩健，因此，大量的漸層增強功能通常能產生較佳的效能。 | 100 | 100 - 1000 |
-| max_depth | 個別回歸估計的最大深度。 最大深度限制樹中的節點數。 調整此參數以獲得最佳效能； 最佳值取決於輸入變數的互動。 | 3 | 4 - 10 |
+| max_depth | 個別回歸估計的最大深度。 最大深度限制樹中的節點數。 調整此參數以獲得最佳效能；最佳值取決於輸入變數的互動。 | 3 | 4 - 10 |
 
 其他參數確定模型的技術屬性：
 
