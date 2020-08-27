@@ -3,10 +3,11 @@ keywords: Experience Platform;walkthrough;Data Science Workspace;popular topics
 solution: Experience Platform
 title: Data Science Workspace逐步說明
 topic: Walkthrough
+description: 本檔案提供Adobe Experience Platform Data Science Workspace的逐步說明。 尤其是資料科學家將透過的一般工作流程，來解決使用機器學習的問題。
 translation-type: tm+mt
-source-git-commit: 1e5526b54f3c52b669f9f6a792eda0abfc711fdd
+source-git-commit: 194a29124949571638315efe00ff0b04bff19303
 workflow-type: tm+mt
-source-wordcount: '1638'
+source-wordcount: '1667'
 ht-degree: 0%
 
 ---
@@ -14,7 +15,7 @@ ht-degree: 0%
 
 # [!DNL Data Science Workspace] 漫步
 
-本檔案提供Adobe Experience Platform的逐步說明 [!DNL Data Science Workspace]。 具體來說，我們將回顧資料科學家所經歷的一般工作流程，以解決使用機器學習的問題。
+本檔案提供Adobe Experience Platform的逐步說明 [!DNL Data Science Workspace]。 具體來說，我們將回顧資料科學家將會經歷的一般工作流程，來解決使用機器學習的問題。
 
 ## 必要條件
 
@@ -51,7 +52,7 @@ ht-degree: 0%
 ### 設定 {#setup}
 
 當零售銷售筆記型電腦開啟時，我們首先要載入工作流程所需的程式庫。 下列清單將簡短說明每個清單的用途：
-- **numpy** —— 新增對大型、多維陣列和矩陣的支援的科學計算庫
+- **numpy** —— 新增支援大型、多維陣列和矩陣的科學運算庫
 - **熊貓** -提供資料結構和操作以用於資料操作和分析的圖書館
 - **matplotlib.pyplot** —— 繪圖庫，在繪圖時提供類似MATLAB的體驗
 - **seaborn** —— 基於matplotlib的高級介面資料可視化庫
@@ -204,7 +205,7 @@ df.describe()
 
 ![](./images/walkthrough/training_scoring.png)
 
-對於計分，我們採用預測值與資料中實際值之 `weeklySalesAhead` 間的平均百分比差 `y_test` 異。 由於我們希望將預測與實際值的差異最小化，因此梯度推進回歸模型是效能最佳的模型。
+對於計分，我們採用預測值與資料中實際值之 `weeklySalesAhead` 間的平均百分比差 `y_test` 異。 由於我們希望將預測與實際值的差值最小化，因此梯度推進回歸模型是效能最佳的模型。
 
 #### 視覺化預測
 
