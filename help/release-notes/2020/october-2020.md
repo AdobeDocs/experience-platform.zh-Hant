@@ -5,9 +5,9 @@ doc-type: release notes
 last-update: October, 2020
 author: crhoades, ens28527
 translation-type: tm+mt
-source-git-commit: e9d7a045a88e0126549adcfa6136684e7b933b71
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '302'
+source-wordcount: '307'
 ht-degree: 6%
 
 ---
@@ -19,8 +19,8 @@ ht-degree: 6%
 
 Adobe Experience Platform的新功能：
 
-- [!DNL Access control](#access-control)
-- [!DNL Sandboxes](#sandboxes)
+- [[!DNL訪問控制]](#access-control)
+- [[!DNL沙盒]](#sandboxes)
 
 ## [!DNL Access control] {#access-control}
 
@@ -31,7 +31,7 @@ Adobe Experience Platform的新功能：
 | 功能 | 說明 |
 |--- | ---|
 | 權限 | 在中， [!DNL Admin Console]產品配置檔案中的選 [!DNL Platform] 項卡允許您自定義附加到該 [!DNL Platform] 配置檔案的用戶可以使用哪些功能。 可用權限類別包括： [!UICONTROL 資料建模], [!UICONTROL 資料管理], [!UICONTROL 管理]，概要資訊監控， 資料管理，沙箱管理，沙箱目標，源標識。 |
-| 存取沙盒 | 產品 [!UICONTROL _設定檔中的&#x200B;_]「權限」[!DNL Platform]標籤可授予使用者特定沙盒的存取權。 如需詳細資訊，請參[閱下方](#sandboxes)「沙盒」一節。 |
+| 存取沙盒 | 產品 [!UICONTROL _設定檔中的_] 「權限」 [!DNL Platform] 標籤可授予使用者特定沙盒的存取權。 如需詳細資訊，請參 [閱下方](#sandboxes) 「沙盒」一節。 |
 
 如需詳細資訊，請參閱存 [取控制概觀](../../access-control/home.md)。
 
