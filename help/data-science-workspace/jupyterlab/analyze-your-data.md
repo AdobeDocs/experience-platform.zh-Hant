@@ -5,7 +5,7 @@ title: 使用筆記型電腦分析資料
 topic: Tutorial
 description: 本教學課程著重於如何使用Jupyter筆記型電腦（建立在資料科學工作區中）來存取、探索和視覺化您的資料。
 translation-type: tm+mt
-source-git-commit: 43d568a401732a753553847dee1b4a924fcc24fd
+source-git-commit: 33b14fed0d52792de0486897c11dd86c1ea2dd45
 workflow-type: tm+mt
 source-wordcount: '1731'
 ht-degree: 0%
@@ -91,7 +91,7 @@ Data Science Workspace可讓使用者透過平 [!DNL Jupyter Notebooks] 台進�
 
 >[!TIP]
 >
->請參閱 [[!DNL平台SDK]](../authoring/platform-sdk.md) 指南以轉換程式碼。
+>請參閱 [[!DNL平台SDK]指南](../authoring/platform-sdk.md) ，以轉換您的程式碼。
 
 ```PYTHON
 from data_access_sdk_python.reader import DataSetReader
