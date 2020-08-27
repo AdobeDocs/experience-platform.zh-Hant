@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;Data Science Workspace;popular topics
+keywords: Experience Platform;Data Science Workspace;popular topics;Recipe migration guides;Notebook migration guide
 solution: Experience Platform
 title: 配方和筆記本移轉指南
 topic: Tutorial
+description: 以下指南概述在Data Science Workspace中移轉現有配方和筆記型電腦所需的步驟和資訊。
 translation-type: tm+mt
-source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
+source-git-commit: 9ba229195892245d29fb4f17b9f2e5cd6c6ea567
 workflow-type: tm+mt
-source-wordcount: '3311'
+source-wordcount: '3330'
 ht-degree: 0%
 
 ---
