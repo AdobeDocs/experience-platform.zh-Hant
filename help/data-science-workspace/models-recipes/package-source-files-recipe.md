@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;package source files;Data Science Workspace;popular topics
+keywords: Experience Platform;package source files;Data Science Workspace;popular topics;Docker;docker image
 solution: Experience Platform
 title: 將來源檔案封裝至配方
 topic: Tutorial
+description: 本教學課程提供如何將提供的零售銷售範例來源檔案封裝成封存檔案的指示，此檔案可依循UI或API中的方式匯入工作流程，用來在Adobe Experience Platform Data Science Workspace中建立方式。
 translation-type: tm+mt
-source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
+source-git-commit: 43d568a401732a753553847dee1b4a924fcc24fd
 workflow-type: tm+mt
-source-wordcount: '1107'
+source-wordcount: '1156'
 ht-degree: 0%
 
 ---
