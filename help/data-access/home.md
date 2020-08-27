@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;data access;python sdk;spark sdk;data access api
 solution: Experience Platform
 title: 資料存取概述
 topic: overview
+description: Data Access支援Adobe Experience Platform，它提供使用者工具，主要針對Experience Platform內所擷取資料集的可探索性和可存取性。
 translation-type: tm+mt
-source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
+source-git-commit: 75e1d3c9912e54e925032bbc2ae4e984948a30eb
 workflow-type: tm+mt
-source-wordcount: '188'
-ht-degree: 2%
+source-wordcount: '210'
+ht-degree: 1%
 
 ---
 
