@@ -5,9 +5,9 @@ title: 支援退出
 topic: overview
 description: 'Experience Platform可讓您的客戶在即時客戶個人檔案中，針對資料的使用和儲存，傳送選擇退出要求。 這些選擇退出要求是加州消費者隱私法(CCPA)的一部分，該法案賦予加州居民存取和刪除個人資料的權利，並可得知他們的個人資料是否被出售或披露（以及向誰）。 '
 translation-type: tm+mt
-source-git-commit: 0fc356b67af4d34e35cd9329385ec284d9336953
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '1006'
+source-wordcount: '1030'
 ht-degree: 0%
 
 ---
@@ -23,10 +23,10 @@ ht-degree: 0%
 
 履行退出要求需要瞭解所涉及的各 [!DNL Adobe Experience Platform] 種服務。 在處理選擇退出請求之前，請先檢閱下列服務的檔案：
 
-- [!DNL Real-time Customer Profile](../profile/home.md):根據來自多個來源的匯整資料，即時提供統一的客戶個人檔案。
-- [!DNL Adobe Experience Platform Segmentation Service](./home.md):可讓您從資料建立受眾 [!DNL Real-time Customer Profile] 區段。
-- [!DNL Experience Data Model (XDM)](../xdm/home.md):平台組織客戶體驗資料的標準化架構。
-- [!DNL Adobe Experience Platform Privacy Service](../privacy-service/home.md):協助組織自動遵守與客戶資料相關的資料隱私權法規 [!DNL Platform]。
+- [[!DNL即時客戶基本資料]](../profile/home.md):根據來自多個來源的匯整資料，即時提供統一的客戶個人檔案。
+- [[!DNL Adobe Experience Platform分段服務]](./home.md):可讓您從資料建立受眾 [!DNL Real-time Customer Profile] 區段。
+- [[!DNL體驗資料模型(XDM)]](../xdm/home.md):平台組織客戶體驗資料的標準化架構。
+- [[!DNL Adobe Experience Platform隱私權服務]](../privacy-service/home.md):協助組織自動遵守與客戶資料相關的資料隱私權法規 [!DNL Platform]。
 
 ## 選擇退出混音
 
@@ -114,7 +114,7 @@ ht-degree: 0%
 
 [!DNL Segmentation] 自動接受包含「一般退出[!UICONTROL 」標幟的所有設定檔]，這表示這些設定檔預設不會包含在觀眾或匯出中。 但是，最佳做法是新增適當欄位，以確保觀眾和行銷活動中不包含選擇退出的設定檔。
 
-這可以透過新增隱私權退出屬性， **[!UICONTROL 使用使用者介面來完成]** 。 在此例中，區段設為僅包含已選擇加入的群體（這表示他們的描述檔上沒有一般的選擇退出標幟）。 這是透過宣告「退出類型[!UICONTROL 」等於「]General Opt-Out[!UICONTROL 」，而「]Opt-Out Value」等於「Opt-inPot-Opt-Ont-Ot-Out」來完成的。
+這可以透過新增隱私權退出屬性， **[!UICONTROL 使用使用者介面來完成]** 。 在此例中，區段設為僅包含已選擇加入的群體（這表示他們的描述檔上沒有一般的選擇退出標幟）。 這是透過宣告「退出類型[!UICONTROL 」等於「]General Opt-Out[!UICONTROL 」，而「]Opt-Out Value[!UICONTROL 」等於「Opt-inPot-Opt-Ot-Ont]」來完成的。
 
 ![](images/opt-outs/segment-general-opt-out.png)
 
@@ -132,4 +132,4 @@ In some instances, such as building a segment of people who have opted out, it m
 
 如需細分的詳細資訊，包括透過API和使用者介面使用細分定義和觀眾，請先閱讀細分概 [述](./home.md)。
 
-若要進一步瞭解內部的資料 [!DNL Platform]隱私，包括如 [!DNL Privacy Service] 何協助協助自動符合法律和組織隱私權規定，請參閱相關檔案 [!DNL Privacy Service](../privacy-service/home.md)。
+若要進一步瞭解內部的資 [!DNL Platform]料隱私，包括如何協助 [!DNL Privacy Service] 協助自動遵循法律和組織的隱私權規定，請參閱 [[!DNL隱私權服務]上的檔案](../privacy-service/home.md)。
