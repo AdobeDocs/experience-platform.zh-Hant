@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;data lake privacy;identity namespaces;privacy;data lake
 solution: Experience Platform
 title: 資料湖中的隱私權要求處理
 topic: overview
+description: Adobe Experience Platform隱私權服務會處理客戶存取、選擇退出銷售或刪除其個人資料的要求，並符合法律和組織的隱私權法規。 本檔案涵蓋處理儲存在資料湖中之客戶資料之隱私權要求的相關基本概念。
 translation-type: tm+mt
-source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
+source-git-commit: 43d568a401732a753553847dee1b4a924fcc24fd
 workflow-type: tm+mt
-source-wordcount: '1204'
+source-wordcount: '1249'
 ht-degree: 0%
 
 ---
@@ -20,7 +21,7 @@ Adobe Experience Platform會 [!DNL Privacy Service] 處理客戶存取、選擇�
 
 ## 快速入門
 
-建議您在閱讀本指南之前，先瞭解 [!DNL Experience Platform] 下列服務：
+建議您在閱讀本指南之前，先瞭解下 [!DNL Experience Platform] 列服務：
 
 * [[!DNL隱私服務]](../privacy-service/home.md):管理客戶在Adobe Experience Cloud應用程式中存取、選擇退出銷售或刪除其個人資料的要求。
 * [[!DNL目錄服務]](home.md):資料位置和世系的記錄系統 [!DNL Experience Platform]。 提供可用來更新資料集中繼資料的API。
