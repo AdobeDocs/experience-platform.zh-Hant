@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Catalog service;catalog api;appendix
 solution: Experience Platform
 title: 目錄服務開發人員指南附錄
 topic: developer guide
+description: 本檔案包含其他資訊，可協助您使用Adobe Experience Platform中的目錄API。
 translation-type: tm+mt
-source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
+source-git-commit: 14f99c23cd82894fee5eb5c4093b3c50b95c52e8
 workflow-type: tm+mt
-source-wordcount: '893'
+source-wordcount: '910'
 ht-degree: 0%
 
 ---
@@ -110,7 +111,7 @@ POST /
 
 >[!NOTE]
 >
->當執行的子請求只傳回物件的參考（在目錄API中，大部分POST和PUT請求的預設值）時，此參考會設為值 `id` 別名，可當做 `<<{OBJECT_ID}.id>>`。
+>當執行的子請求僅傳回物件的參考（在目錄API中，大部分POST和PUT請求的預設值）時，此參考會設為值 `id` 別名，可當做 `<<{OBJECT_ID}.id>>`。
 
 ```shell
 curl -X POST \
