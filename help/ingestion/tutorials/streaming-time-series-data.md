@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 串流時間系列資料
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '1126'
+source-wordcount: '1143'
 ht-degree: 2%
 
 ---
@@ -20,8 +20,8 @@ ht-degree: 2%
 
 本教學課程需要具備各種Adobe Experience Platform服務的相關知識。 在開始本教學課程之前，請先閱讀下列服務的檔案：
 
-- [!DNL Experience Data Model (XDM)](../../xdm/home.md):組織體驗資料的 [!DNL Platform] 標準化架構。
-- [!DNL Real-time Customer Profile](../../profile/home.md):根據來自多個來源的匯整資料，即時提供統一的消費者個人檔案。
+- [[!DNL體驗資料模型(XDM)]](../../xdm/home.md):組織體驗資料的 [!DNL Platform] 標準化架構。
+- [[!DNL即時客戶基本資料]](../../profile/home.md):根據來自多個來源的匯整資料，即時提供統一的消費者個人檔案。
 - [架構註冊開發人員指南](../../xdm/api/getting-started.md):完整的指南，涵蓋 [!DNL Schema Registry] API的每個可用端點，以及如何呼叫這些端點。 這包括瞭解您 `{TENANT_ID}`的資料集（在本教學課程的呼叫中顯示），以及瞭解如何建立結構描述（用於建立資料集以擷取）。
 
 此外，本教學課程要求您已建立串流連線。 如需建立串流連線的詳細資訊，請閱讀建立串 [流連線教學課程](./create-streaming-connection.md)。
@@ -99,7 +99,7 @@ curl -X POST https://platform.adobe.io/data/foundation/schemaregistry/tenant/sch
 | -------- | ----------- |
 | `title` | 您要用於架構的名稱。 此名稱必須是唯一的。 |
 | `description` | 正在建立的方案的有意義說明。 |
-| `meta:immutableTags` | 在此範例中，標 `union` 記會用來保存您的資料 [!DNL Real-time Customer Profile](../../profile/home.md)。 |
+| `meta:immutableTags` | 在此範例中，標 `union` 記用於將您的資料保存 [到[!DNL即時客戶資料]](../../profile/home.md)。 |
 
 **回應**
 
@@ -401,7 +401,7 @@ curl -X POST https://dcs.adobedc.net/collection/{CONNECTION_ID}?synchronousValid
 
 ## 擷取新擷取的時間序列資料
 
-要驗證先前提取的記錄，可以使 [!DNL Profile Access API](../../profile/api/entities.md) 用檢索時間序列資料。 這可以使用對端點的GET請求和 `/access/entities` 可選查詢參數來完成。 可以使用多個參數，由&amp;符號(&amp;)分隔。&quot;
+要驗證先前提取的記錄，可以使用 [[!DNL配置檔案訪問API]](../../profile/api/entities.md) 來檢索時間系列資料。 這可以使用對端點的GET請求和 `/access/entities` 可選查詢參數來完成。 可以使用多個參數，由&amp;符號(&amp;)分隔。&quot;
 
 >[!NOTE]
 >
