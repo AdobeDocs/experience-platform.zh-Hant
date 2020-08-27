@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;data usage labels;catalog service
 solution: Experience Platform
 title: 資料使用標籤
 topic: developer guide
+description: 目錄服務API提供端點來管理資料集的資料使用標籤。
 translation-type: tm+mt
-source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
+source-git-commit: dd1f508b93e8eac14e3c41fac9d8f49769d08f46
 workflow-type: tm+mt
-source-wordcount: '46'
+source-wordcount: '59'
 ht-degree: 0%
 
 ---
