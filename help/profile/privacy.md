@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 即時客戶個人檔案中的隱私權要求處理
 topic: overview
 translation-type: tm+mt
-source-git-commit: f910351d49de9c4a18a444b99b7f102f4ce3ed5b
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '593'
+source-wordcount: '603'
 ht-degree: 0%
 
 ---
@@ -20,17 +20,17 @@ Adobe Experience Platform會 [!DNL Privacy Service] 處理客戶存取、選擇�
 
 ## 快速入門
 
-建議您在閱讀本指南之前，先瞭解 [!DNL Experience Platform] 下列服務：
+建議您在閱讀本指南之前，先瞭解下 [!DNL Experience Platform] 列服務：
 
-* [!DNL Privacy Service](home.md): 管理客戶在Adobe Experience Cloud應用程式中存取、選擇退出銷售或刪除其個人資料的要求。
-* [!DNL Identity Service](../identity-service/home.md): 透過跨裝置和系統橋接身分，解決客戶體驗資料分散所帶來的根本挑戰。
-* [!DNL Real-time Customer Profile](../profile/home.md): 根據來自多個來源的匯整資料，提供統一、即時的消費者個人檔案。
+* [[!DNL隱私服務]](home.md):管理客戶在Adobe Experience Cloud應用程式中存取、選擇退出銷售或刪除其個人資料的要求。
+* [[!DNL Identity Service]](../identity-service/home.md):透過跨裝置和系統橋接身分，解決客戶體驗資料分散所帶來的根本挑戰。
+* [[!DNL即時客戶基本資料]](../profile/home.md):根據來自多個來源的匯整資料，提供統一、即時的消費者個人檔案。
 
 ## 瞭解身分名稱空間 {#namespaces}
 
 Adobe Experience Platform跨 [!DNL Identity Service] 系統和裝置橋接客戶身分資料。 [!DNL Identity Service] 使用 **身分名稱空間** ，將身分值與其來源系統關聯，以提供其上下文。 命名空間可以代表一般概念，例如電子郵件地址（「電子郵件」），或將身分識別與特定應用程式(例如Adobe Advertising Cloud ID(「AdCloud」)或Adobe Target ID(「TNTID」))建立關聯。
 
-Identity Service會維護全域定義（標準）和使用者定義（自訂）身分名稱空間的儲存。 標準名稱空間適用於所有組織（例如「電子郵件」和「ECID」），而您的組織也可以建立自訂名稱空間，以符合其特定需求。
+Identity Service會維護全域定義（標準）和使用者定義（自訂）身分名稱空間的儲存。 標準名稱空間適用於所有組織（例如「電子郵件」和「ECID」），而您的組織也可以建立自訂名稱空間以符合其特定需求。
 
 有關中身份名稱空間的詳細信 [!DNL Experience Platform]息，請參閱身份 [名稱空間概述](../identity-service/namespaces.md)。
 
@@ -93,7 +93,7 @@ curl -X POST \
 
 ### 使用UI
 
-在UI中建立工作請求時，請務必在 **[!UICONTROL Products下選擇]** AEP Data Lake **[!UICONTROL 和／或]** Profile __Products下，以分別處理儲存在或[!DNL Data Lake][!DNL Real-time Customer Profile]Products中的資料。
+在UI中建立工作請求時，請務必在 **[!UICONTROL Products下選擇]** AEP Data Lake **[!UICONTROL 和／或]** Profile __ Products下，以分別處理儲存在或 [!DNL Data Lake][!DNL Real-time Customer Profile]Products中的資料。
 
 <img src="images/privacy/product-value.png" width="450"><br>
 
