@@ -5,9 +5,9 @@ title: 使用結構編輯器建立架構
 topic: tutorials
 description: 本教學課程涵蓋使用Experience Platform中的架構編輯器建立架構的步驟。
 translation-type: tm+mt
-source-git-commit: ed100e2acfcfc3dfabef6ccfbe88e98489193567
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '3512'
+source-wordcount: '3528'
 ht-degree: 0%
 
 ---
@@ -27,9 +27,9 @@ Adobe Experience Platform使用者介面可讓您在稱為的互動式 [!DNL Exp
 
 本教學課程需要對架構建立中涉及的Adobe Experience Platform各個方面有深入的瞭解。 在開始本教學課程之前，請先閱讀說明檔案，瞭解下列概念：
 
-* [!DNL Experience Data Model (XDM)](../home.md):組織客戶體驗資料 [!DNL Platform] 的標準化架構。
+* [[!DNL體驗資料模型(XDM)]](../home.md):組織客戶體驗資料 [!DNL Platform] 的標準化架構。
    * [架構構成基礎](../schema/composition.md):概述XDM結構描述及其構建塊，包括類、混合、資料類型和欄位。
-* [!DNL Real-time Customer Profile](../../profile/home.md):根據來自多個來源的匯整資料，提供統一、即時的消費者個人檔案。
+* [[!DNL即時客戶基本資料]](../../profile/home.md):根據來自多個來源的匯整資料，提供統一、即時的消費者個人檔案。
 
 ## 瀏覽結構工作區中的現 [!UICONTROL 有結構] {#browse}
 
@@ -171,13 +171,13 @@ UI中 [!UICONTROL 的] 「結構描述」工作區 [!DNL Platform] 提供了結�
 
 每個欄位都會新增，方 **[!UICONTROL 法是在忠誠度物件上選取「新增欄位]** 」並填入必要的資訊。
 
-完成後，「忠誠度」物件將包含忠誠度ID、點數和成員自由度的欄位。
+完成後，「忠誠度」物件將包含忠誠度ID、點數和成員間隔的欄位。
 
 ![](../images/tutorials/create-schema/loyalty_object_fields.png)
 
 ## 新增列舉欄位至混音 {#enum}
 
-在中定義欄位時 [!DNL Schema Editor]，有一些附加選項可以應用於基本欄位類型，以便對欄位可包含的資料提供進一步的約束。 下表說明了這些約束的使用案例：
+在中定義欄位時 [!DNL Schema Editor]，有一些附加選項可以應用於基本欄位類型，以便對欄位可以包含的資料提供進一步的約束。 下表說明了這些約束的使用案例：
 
 | 約束 | 說明 |
 | --- | --- |
@@ -201,7 +201,7 @@ UI中 [!UICONTROL 的] 「結構描述」工作區 [!DNL Platform] 提供了結�
 
 ## 將多欄位物件轉換為資料類型 {#datatype}
 
-「[!DNL loyalty]」物件現在包含數個忠誠度特定欄位，並代表通用資料結構，可在其他結構中派上用場。 它 [!DNL Schema Editor] 可讓您將可重複使用的多欄位物件轉換為資料類型，以輕鬆套用這些物件。
+「[!DNL loyalty]」物件現在包含數個忠誠度特定欄位，並代表通用資料結構，可用於其他結構。 可 [!DNL Schema Editor] 讓您將這些物件的結構轉換為資料類型，以輕鬆套用可重複使用的多欄位物件。
 
 資料類型允許一致地使用多欄位結構，並提供比混音更大的靈活性，因為它們可以在架構中的任意位置使用。 若要這麼做，請將欄位的「類 **[!UICONTROL 型]** 」值設為中定義之任何資料類型的值 [!DNL Schema Registry]。
 
@@ -245,11 +245,11 @@ UI中 [!UICONTROL 的] 「結構描述」工作區 [!DNL Platform] 提供了結�
 >
 >一旦將架構欄位設定為主標識，如果您稍後嘗試將架構中的另一個欄位設定為主標識，將會收到錯誤消息。 每個架構只能包含一個主標識欄位。
 
-若要進一步瞭解如何在中使用身 [!DNL Experience Platform]分，請參閱文 [!DNL Identity Service](../../identity-service/home.md) 件。
+若要進一步瞭解在中使用身 [!DNL Experience Platform]份，請檢閱 [[!DNL Identity Service]檔案](../../identity-service/home.md) 。
 
 ## 啟用模式以用於 [!DNL Real-time Customer Profile] {#profile}
 
-[!DNL Real-time Customer Profile](../../profile/home.md) 運用身分資料， [!DNL Experience Platform] 提供每位客戶的全貌。 此服務可建立強穩、360°的客戶屬性描述檔，以及客戶在與之整合的任何系統上，所有互動的時間戳記帳戶 [!DNL Experience Platform]。
+[[!DNL即時客戶個人檔案]](../../profile/home.md) 利用身分資料， [!DNL Experience Platform] 提供每位客戶的全貌。 此服務可建立強穩、360°的客戶屬性描述檔，以及客戶在與之整合的任何系統上，所有互動的時間戳記帳戶 [!DNL Experience Platform]。
 
 要啟用與一起使用的模式， [!DNL Real-time Customer Profile]它必須定義主標識。 如果您嘗試啟用方案而未先定義主要身分，則會收到錯誤訊息。
 
@@ -329,7 +329,7 @@ UI中 [!UICONTROL 的] 「結構描述」工作區 [!DNL Platform] 提供了結�
 
 此時會出現一個對話框，其中顯示所有可用類的清單，包括您的組織定義的任何類(所有者是「[!UICONTROL Customer]」)以及Adobe定義的標準類。
 
-從清單中選擇一個類，在對話框的右側顯示其說明。 您也可以選取「預 **[!UICONTROL 覽類別結構」]** ，以查看與類別相關聯的欄位和中繼資料。 選擇 **[!UICONTROL 分配類]** ，繼續。
+從清單中選擇一個類，在對話框的右側顯示其說明。 您也可以選取「預 **[!UICONTROL 覽類別結構]** 」，以查看與類別相關聯的欄位和中繼資料。 選擇 **[!UICONTROL 分配類]** ，繼續。
 
 ![](../images/tutorials/create-schema/assign_class.png)
 
