@@ -4,9 +4,9 @@ solution: Experience Platform
 title: '使用API管理資料集的資料使用標籤 '
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 3b6f46c5a81e1b6e8148bf4b78ae2560723f9d20
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '912'
+source-wordcount: '916'
 ht-degree: 2%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 2%
 
 # 使用API管理資料集的資料使用標籤
 
-允許您 [!DNL Dataset Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dataset-service.yaml) 應用和編輯資料集的使用標籤。 它是Adobe Experience Platform資料目錄功能的一部分，但與管理資料集中繼資料的 [!DNL Catalog Service] API不同。
+使用 [[!DNL資料集服務API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dataset-service.yaml) ，可以應用和編輯資料集的使用標籤。 它是Adobe Experience Platform資料目錄功能的一部分，但與管理資料集中繼資料的 [!DNL Catalog Service] API不同。
 
 本文檔介紹如何使用管理資料集和欄位的標籤 [!DNL Dataset Service API]。 如需如何使用API呼叫自行管理資料使用標籤的步驟，請參 [閱標籤端點指南](../api/labels.md)[!DNL Policy Service API]。
 
@@ -127,7 +127,7 @@ curl -X PUT \
 | 屬性 | 說明 |
 | --- | --- |
 | `labels` | 您要新增至資料集的資料使用標籤清單。 |
-| `optionalLabels` | 資料集中您想新增標籤的任何個別欄位清單。 此陣列中的每個項目都必須具有以下屬性： <br/><br/>`option`: 包含欄位 [!DNL Experience Data Model] (XDM)屬性的對象。 需要下列三個屬性：<ul><li>id</code>: 與欄位關聯的架構的URI</code> $id值。</li><li>contentType</code>: 架構的內容類型和版本號。 這應採用XDM查閱請求的有效「接 <a href="../../xdm/api/look-up-resource.md">受」標題</a> 之一的形式。</li><li>schemaPath</code>: 資料集結構中欄位的路徑。</li></ul>`labels`: 您要新增至欄位的資料使用標籤清單。 |
+| `optionalLabels` | 資料集中您想新增標籤的任何個別欄位清單。 此陣列中的每個項目都必須具有以下屬性： <br/><br/>`option`:包含欄位 [!DNL Experience Data Model] (XDM)屬性的對象。 需要下列三個屬性：<ul><li>id</code>:與欄位關聯的架構的URI</code> $id值。</li><li>contentType</code>:架構的內容類型和版本號。 這應採用XDM查閱請求的有效「接 <a href="../../xdm/api/look-up-resource.md">受」標題</a> 之一的形式。</li><li>schemaPath</code>:資料集結構中欄位的路徑。</li></ul>`labels`:您要新增至欄位的資料使用標籤清單。 |
 
 **回應**
 
@@ -201,10 +201,10 @@ curl -X DELETE \
 
 ### [!DNL If-Match] 標題 {#if-match}
 
-在進行更新資料集（PUT和DELETE）現有標籤的API呼叫時，必須包含 `If-Match` 標題，指出資料集服務中資料集標籤實體的目前版本。 為避免資料衝突，只有當包含的字串符合系統為該資料集產生的最新版本標籤時， `If-Match` 服務才會更新資料集實體。
+在進行更新資料集（PUT和DELETE）現有標籤的API呼叫時，必須包含 `If-Match` 標題，指出資料集服務中資料集標籤實體的目前版本。 為避免資料衝突，只有當包含的字串與系統為該資料集產生的最新版本標籤相符時，服務才會更新資料集 `If-Match` 實體。
 
 >[!NOTE]
 >
->如果目前沒有相關資料集的標籤，則只能透過POST要求新增新標籤，而不需要標 `If-Match` 題。 將標籤新增至資料集後，會指 `etag` 派一個值，供稍後用來更新或移除標籤。
+>如果相關資料集目前沒有標籤，則新標籤只能透過POST請求新增，而不需要標 `If-Match` 題。 將標籤新增至資料集後，會指 `etag` 派一個值，供稍後用來更新或移除標籤。
 
 若要擷取最新版本的dataset-label實體，請向端點 [提出GET](#look-up)`/datasets/{DATASET_ID}/labels` 請求。 在回應中的標題下傳回目前 `etag` 值。 在更新現有資料集標籤時，最佳實務是先對資料集執行查閱請求，以便在後續PUT或DELETE請求的標題中使用該值之前，先擷取其最 `etag` 新 `If-Match` 值。
