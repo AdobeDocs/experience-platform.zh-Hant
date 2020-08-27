@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;catalog;data protection;encryption data lake
 solution: Experience Platform
 title: Adobe Experience Platform中的資料保護
 topic: data protection
+description: 所有保留在資料湖中的資料都會在您組織專屬的隔離Microsoft Azure資料湖儲存帳戶中加密、儲存及管理。 下列流程圖說明Experience Platform如何吸收、處理、加密和保存資料。
 translation-type: tm+mt
-source-git-commit: bfbf2074a9dcadd809de043d62f7d2ddaa7c7b31
+source-git-commit: 14f99c23cd82894fee5eb5c4093b3c50b95c52e8
 workflow-type: tm+mt
-source-wordcount: '132'
+source-wordcount: '176'
 ht-degree: 0%
 
 ---
