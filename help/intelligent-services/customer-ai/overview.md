@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;overview;customer ai;popular topics
+keywords: Experience Platform;overview;customer ai;popular topics;customer ai overview
 solution: Experience Platform
 title: 客戶人工智慧概觀
 topic: Customer AI overview
+description: 客戶人工智慧可用來產生自訂傾向分數，例如大規模個別個人檔案的流失和轉換。 完成此項作業時，不需將業務需求轉換為機器學習問題、挑選演算法、進行訓練或部署。
 translation-type: tm+mt
-source-git-commit: 83e74ad93bdef056c8aef07c9d56313af6f4ddfd
+source-git-commit: c30bbaead775e68f869b080e24e18d4a23cda973
 workflow-type: tm+mt
-source-wordcount: '487'
+source-wordcount: '526'
 ht-degree: 0%
 
 ---
@@ -49,4 +50,4 @@ ht-degree: 0%
 
 ## 後續步驟
 
-您可依照快速入 [門指南](./getting-started.md) 。 本指南會逐步帶您設定客戶AI的所有必要先決條件。 如果您已準備好所有認證和資料，請造 [訪設定Customer AI例項](./user-guide/configure.md)。 它提供使用客戶AI的步驟。
+您可依照快速入 [門指南](./getting-started.md) 。 本指南會逐步引導您設定客戶人工智慧的所有必要先決條件。 如果您已準備好所有認證和資料，請造 [訪設定Customer AI例項](./user-guide/configure.md)。 它提供使用客戶AI的步驟。
