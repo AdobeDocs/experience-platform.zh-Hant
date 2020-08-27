@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Adobe Experience Platform隱私權服務
 topic: overview
 translation-type: tm+mt
-source-git-commit: cc81d590f308c7e2677cec000c27e8aca42437f5
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '1498'
+source-wordcount: '1502'
 ht-degree: 2%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 2%
 
 為了提供更好的客戶體驗，您需要收集和儲存客戶的個人資料。 使用這些資料時，請務必瞭解並尊重客戶的隱私權。 新的法律和組織法規讓使用者有權應要求從資料存放區存取或刪除其個人資料。
 
-Adobe Experience Platform是為 [!DNL Privacy Service] 因應企業管理客戶個人資料的方式發生根本性轉變而開發的。 其核心目的是 [!DNL Privacy Service] 自動遵守資料隱私權法規，一旦違反這些法規，可能會導致企業遭受重大罰款並中斷資料運作。
+Adobe Experience Platform是為 [!DNL Privacy Service] 因應企業管理客戶個人資料的方式發生根本性轉變而開發的。 其核心目的是 [!DNL Privacy Service] 自動遵守資料隱私權法規，一旦違反這些法規，可能會導致重大罰款並中斷您企業的資料運作。
 
 [!DNL Privacy Service] 提供REST風格的API和使用者介面，協助您管理客戶資料要求。 您可 [!DNL Privacy Service]以提交從Adobe Experience Cloud應用程式存取和刪除個人客戶資料的要求，以協助自動符合法律和組織的隱私權法規。
 
@@ -31,7 +31,7 @@ Adobe Experience Platform是為 [!DNL Privacy Service] 因應企業管理客戶�
 1. **我是否已正確標示資料？**
    * 必須正確標示資料，服務才能決定在隱私權工作期間要存取或刪除哪些欄位。 如需詳細資訊，請 [參閱標籤](#label) 資料一節。
 1. **我知道要傳送哪些ID嗎[!DNL Privacy Service]?**
-   * 傳送隱私權要求時，必須提供特定Adobe應用程式專屬的個別客戶ID。 如需詳細資訊，請 [參閱提供身分資](#identity)[料](#requests) 及提出隱私權要求的相關章節。
+   * 傳送隱私權要求時，必須提供特定Adobe應用程式專屬的個別客戶ID。 如需詳細資訊，請 [參閱提供身分資](#identity)[料](#requests) 和提出隱私權要求的相關章節。
 1. **我要如何追蹤我的隱私權工作？**
    * 在您提出隱私權要求後，有幾個選項可用來追蹤其狀態和結果。 如需詳細資訊，請 [參閱監控隱私](#monitor) 工作一節。
 
@@ -63,7 +63,7 @@ Adobe Experience Platform是為 [!DNL Privacy Service] 因應企業管理客戶�
 
 根據您的 [!DNL Experience Cloud] CRM系統所使用的應用程式，您必須為每個客戶提供的識別值類型和數量會有所不同。 有些應用程式會運用其專屬的內部客戶ID值（例如Adobe Target ID），而其他解決方案則依賴Adobe [!DNL Experience Cloud Identity Service] (ECID)的全域識別碼，以追蹤所有應用程式的客戶活 [!DNL Experience Cloud] 動。 此外，電子郵件地址或電話號碼等一般個人資訊也可當成有效的身分資料。
 
-隱私權要 [求的身分資料檔案](./identity-data.md) ，提供接受身分資訊類型的詳細資訊 [!DNL Privacy Service]。 本檔案也提供如何運用Adobe技術，在客戶與您的網站互動時，有效地從他們擷取適當的身分資訊，並在API要求中傳送該資 [!DNL Privacy Service] 料的指引。
+隱私權要 [求的身分資料檔案](./identity-data.md) ，提供更詳細的身分資訊類型資訊，供您參考 [!DNL Privacy Service]。 本檔案也提供如何運用Adobe技術，在客戶與您的網站互動時，有效地從他們擷取適當的身分資訊，並在API要求中傳送該資 [!DNL Privacy Service] 料的指引。
 
 ### 開始提出隱私權要求 {#requests}
 
@@ -77,7 +77,7 @@ Adobe Experience Platform是為 [!DNL Privacy Service] 因應企業管理客戶�
 
 #### 使用API
 
-本 [!DNL Privacy Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/privacy-service.yaml) 軟體提供數個端點，可讓您使用REST風格的API呼叫來建立和管理隱私權工作，讓您以程式設計方式處理應用程式的隱私權規範 [!DNL Experience Cloud] 規範。 如需如何使用API的詳細步驟，請參閱「隱私 [服務API開發人員指南」](api/getting-started.md)。
+[! [DNL隱私服務API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/privacy-service.yaml) 提供數個端點，用於使用REST風格的API呼叫來建立和管理隱私權工作，讓您以程式設計方式處理應用程式的隱私權規範 [!DNL Experience Cloud] 規範。 如需如何使用API的詳細步驟，請參閱「隱私 [服務API開發人員指南」](api/getting-started.md)。
 
 #### 使用UI
 
@@ -85,7 +85,7 @@ Adobe Experience Platform是為 [!DNL Privacy Service] 因應企業管理客戶�
 >
 >UI [!DNL Privacy Service] 目前僅支援存取和刪除請求。 所有選擇退出要求必須改為透過API提出。
 
-UI [!DNL Privacy Service] 允許您使用圖形介面建立和監視隱私作業。 UI包含狀態報 **[!UICONTROL 告介面工具集]** ，可以視覺化呈現所有作用中請求的狀態，並可讓您使用內建的 **[!UICONTROL Request Builder]** 或上傳JSON檔案來建立新請求。 如需使用UI的詳細資訊，請參閱「隱私 [服務」使用指南](ui/overview.md)。
+UI [!DNL Privacy Service] 允許您使用圖形介面建立和監視隱私作業。 UI包含狀態報 **[!UICONTROL 表介面工具集]** ，可以視覺化呈現所有作用中請求的狀態，並可讓您使用內建的 **[!UICONTROL Request Builder]** 或上傳JSON檔案來建立新請求。 如需使用UI的詳細資訊，請參閱「隱私 [服務」使用指南](ui/overview.md)。
 
 ### 監控隱私權工作 {#monitor}
 
@@ -94,7 +94,7 @@ UI [!DNL Privacy Service] 允許您使用圖形介面建立和監視隱私作業
 | 監控方法 | 說明 |
 | --- | --- |
 | [!DNL Privacy Service] UI | UI [!DNL Privacy Service] 提供監控控制面板，可讓您檢視所有作用中請求狀態的視覺化表示。 如需詳細 [資訊，請參閱Privacy Service使用指南](ui/overview.md) 。 |
-| [!DNL Privacy Service] API | 您可以使用API提供的查閱端點，以程式設計方式監控隱私權工作的 [!DNL Privacy Service] 狀態。 如需如何 [使用API的詳細步驟](./api/getting-started.md) ，請參閱隱私權服務開發人員指南。 |
+| [!DNL Privacy Service] API | 您可以使用API提供的查閱端點，以程式設計方式監控隱私權工作的 [!DNL Privacy Service] 狀態。 請參閱隱 [私權服務開發人員指南](./api/getting-started.md) ，以取得如何使用API的詳細步驟。 |
 | [!DNL Privacy Events] | [!DNL Privacy Events] 運用傳送至已設定網頁掛接的Adobe I/O事件，以協助有效率的工作要求自動化。 它們可降低或免除輪詢 [!DNL Privacy Service] API的需求，以檢查工作是否完成或工作流程中是否達到特定里程碑。 如需詳細資訊，請 [參閱訂閱隱私權事件](./privacy-events.md) 的教學課程。 |
 
 ## 後續步驟
