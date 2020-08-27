@@ -6,9 +6,9 @@ last-update: April 13, 2020
 author: ens71067
 keywords: release notes;
 translation-type: tm+mt
-source-git-commit: f881c1365684b1ca9e6bf9a8ce866d234dc54128
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '975'
+source-wordcount: '993'
 ht-degree: 5%
 
 ---
@@ -19,14 +19,14 @@ ht-degree: 5%
 **發行日期：2020 年 4 月 8 日**
 
 Adobe Experience Platform的新功能：
-* [!DNL Intelligent Services](#intelligent)
+* [[!DNL Intelligent Services]](#intelligent)
 
 更新現有功能：
-* [!DNL Experience Data Model (XDM)](#xdm)
-* [!DNL Data Governance](#governance)
-* [!DNL Destinations](#destinations)
-* [!DNL Privacy Service](#privacy)
-* [!DNL Sources](#sources)
+* [[!DNL體驗資料模型(XDM)]](#xdm)
+* [[!DNL資料治理]](#governance)
+* [[!DNL目標]](#destinations)
+* [[!DNL隱私服務]](#privacy)
+* [[!DNL源]](#sources)
 
 ## [!DNL Intelligent Services] {#intelligent}
 
@@ -105,7 +105,7 @@ Adobe Real-time CDP現在支援將資料啟動至超過50種擴充功能 [!DNL E
 
 ## [!DNL Privacy Service] {#privacy}
 
-新的法律和組織法規讓使用者有權應要求從資料存放區存取或刪除其個人資料。 Adobe Experience Platform提 [!DNL Privacy Service] 供REST風格的API和使用者介面，可協助您管理客戶的這些資料要求。 您可 [!DNL Privacy Service]以提交從Adobe Experience Cloud應用程式存取和刪除私人或個人客戶資料的要求，以利自動符合法律和組織的隱私權法規。
+新的法律和組織法規讓使用者有權應要求從資料存放區存取或刪除其個人資料。 Adobe Experience Platform提 [!DNL Privacy Service] 供REST風格的API和使用者介面，可協助您管理客戶的這些資料要求。 您可 [!DNL Privacy Service]以提交要求，以便從Adobe Experience Cloud應用程式存取和刪除私人或個人客戶資料，以利自動符合法律和組織的隱私權法規。
 
 **新功能**
 
