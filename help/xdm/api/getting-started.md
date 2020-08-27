@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 架構註冊API開發人員指南
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
+source-git-commit: f7fe8f9ac8d6f0e2eaec53d96f2ced0904061c89
 workflow-type: tm+mt
-source-wordcount: '1207'
+source-wordcount: '1237'
 ht-degree: 0%
 
 ---
@@ -29,7 +29,7 @@ ht-degree: 0%
 * [[!DNL即時客戶基本資料]](../../profile/home.md):根據來自多個來源的匯整資料，提供統一、即時的消費者個人檔案。
 * [[!DNL沙盒]](../../sandboxes/home.md): [!DNL Experience Platform] 提供虛擬沙盒，可將單一執行個體分 [!DNL Platform] 割為不同的虛擬環境，以協助開發和發展數位體驗應用程式。
 
-以下章節提供您必須知道的其他資訊，才能成功呼叫 [!DNL Schema Registry] API。
+以下章節提供您成功呼叫 [!DNL Schema Registry] API時需要知道的其他資訊。
 
 ## 讀取範例API呼叫
 
@@ -167,9 +167,21 @@ curl -X GET \
 
 全域容器包含所有標準Adobe及 [!DNL Experience Platform] 合作夥伴提供的類別、混合、資料類型和結構。 您只能對全域容器執行清單和查閱(GET)請求。
 
+使用全域容器的呼叫範例如下：
+
+```http
+GET /global/classes
+```
+
 ### 租用戶容器
 
 不要與您的獨特性混淆，租 `TENANT_ID`用戶容器包含由IMS組織定義的所有類別、混合、資料類型、結構和描述子。 這是每個組織所獨有的，也就是說，其他IMS組織無法看到或管理。 您可以針對您在租用戶容器中建立的資源，執行所有CRUD作業(GET、POST、PUT、PATCH、DELETE)。
+
+使用租用戶容器的呼叫範例如下：
+
+```http
+POST /tenant/mixins
+```
 
 當您在租用戶容器中建立類別、混合、結構或資料類型時，會將其儲存至並指 [!DNL Schema Registry] 派包含您 `$id` 的URI `TENANT_ID`。 這 `$id` 會在整個API中用來參考特定資源。 值的范 `$id` 例會在下一節中提供。
 
