@@ -5,7 +5,7 @@ seo-title: 將描述檔和區段啟用至目標
 description: 將區段對應至目標，以啟用您在Adobe即時客戶資料平台中擁有的資料。 若要完成此作業，請遵循下列步驟。
 seo-description: 將區段對應至目標，以啟用您在Adobe即時客戶資料平台中擁有的資料。 若要完成此作業，請遵循下列步驟。
 translation-type: tm+mt
-source-git-commit: 38cb8eeae3ac0a1852c59e433d1cacae82b1c6c0
+source-git-commit: 22bca041673cec5eee54ed4234aba19eca470441
 workflow-type: tm+mt
 source-wordcount: '1552'
 ht-degree: 0%
@@ -51,9 +51,9 @@ ht-degree: 0%
 
 ### **[!UICONTROL 身份映射]** 步驟 {#identity-mapping}
 
-![身份映射步驟](/help/rtcdp/destinations/assets/identity-mapping-icon.png)
-
 適用於：社交目的地與Google客戶符合廣告目的地
+
+![身份映射步驟](/help/rtcdp/destinations/assets/identity-mapping-icon.png)
 
 對於 *社交目標*，在「身分對 **[!UICONTROL 應」步驟中]** ，您可以選取來源屬性，將其映射為目標身分。 此步驟為可選或必選步驟，具體取決於您在架構中使用的主要身份。 <br> 
 
