@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 在UI中建立Azure事件集線器來源連接器
 topic: overview
 translation-type: tm+mt
-source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
+source-git-commit: a664a0420189d6a2dda9f33b3aa58cb4883e252f
 workflow-type: tm+mt
 source-wordcount: '472'
 ht-degree: 1%
@@ -29,7 +29,7 @@ Adobe Experience Platform中的來源連接器可讓您依計畫吸收外部來�
    - [架構編輯器教程](../../../../../xdm/tutorials/create-schema-ui.md):瞭解如何使用架構編輯器UI建立自訂架構。
 - [[!DNL即時客戶基本資料]](../../../../../profile/home.md):根據來自多個來源的匯整資料，提供統一、即時的消費者個人檔案。
 
-如果您已經有有效的 [!DNL Event Hubs] 連接，則可以跳過本文檔的其餘部分，並繼續有關配置資料 [流的教程](../../dataflow/streaming/cloud-storage.md)。
+如果您已經有有效的 [!DNL Event Hubs] 連接，則可以跳過本文檔的其餘部分，並繼續有關配置資料 [流的教程](../../dataflow/streaming/cloud-storage-streaming.md)。
 
 ### 收集必要的認證
 
@@ -71,4 +71,4 @@ Adobe Experience Platform中的來源連接器可讓您依計畫吸收外部來�
 
 ## 後續步驟
 
-透過本教學課程，您已將帳戶 [!DNL Event Hubs] 連線至 [!DNL Platform]。 您現在可以繼續下一個教學課程，並 [設定資料流，將雲端儲存空間的資料匯入 [!DNL Platform]](../../dataflow/streaming/cloud-storage.md)。
+透過本教學課程，您已將帳戶 [!DNL Event Hubs] 連線至 [!DNL Platform]。 您現在可以繼續下一個教學課程，並 [設定資料流，將雲端儲存空間的資料匯入 [!DNL Platform]](../../dataflow/streaming/cloud-storage-streaming.md)。
