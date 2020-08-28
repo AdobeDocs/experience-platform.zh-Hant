@@ -5,7 +5,7 @@ title: 使用Jupyter筆記型電腦建立配方
 topic: Tutorial
 description: 本教學課程將涵蓋兩個主要部分。 首先，您將使用JupyterLab Notebook中的範本建立機器學習模型。 接下來，您將在JupyterLab中練習筆記本至配方工作流程，以便在Data Science Workspace中建立配方。
 translation-type: tm+mt
-source-git-commit: 43d568a401732a753553847dee1b4a924fcc24fd
+source-git-commit: 6e4a3ebe84c82790f58f8ec54e6f72c2aca0b7da
 workflow-type: tm+mt
 source-wordcount: '2336'
 ht-degree: 0%
@@ -475,6 +475,7 @@ def save(configProperties, prediction):
 ![](../images/jupyterlab/create-recipe/recipe_details.png)
 
 >[!CAUTION]
+>
 > - 不要刪除任何檔案單元格
 > - 不要編輯 `%%writefile` 檔案儲存格頂端的行
 > - 不要同時在不同的筆記本中建立配方
