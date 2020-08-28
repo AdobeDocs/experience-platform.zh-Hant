@@ -4,7 +4,7 @@ audience: user
 user-guide-title: Adobe Experience Platform來源連接器說明
 user-guide-description: Adobe Experience Platform allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using Platform services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, databases, and many others.
 translation-type: tm+mt
-source-git-commit: bd3c31e7d39f7f66d755356a3dbb754e97c196fb
+source-git-commit: e628621903dbc0ec7381dfeae99902f503b34869
 workflow-type: tm+mt
 source-wordcount: '619'
 ht-degree: 0%
@@ -184,7 +184,7 @@ ht-degree: 0%
    - 配置資料流 {#dataflow}
       - [為廣告連接器配置資料流](tutorials/ui/dataflow/advertising.md)
       - [為批處理雲儲存連接器配置資料流](tutorials/ui/dataflow/batch/cloud-storage.md)
-      - [為流雲儲存連接器配置資料流](tutorials/ui/dataflow/streaming/cloud-storage.md)
+      - [為流雲儲存連接器配置資料流](tutorials/ui/dataflow/streaming/cloud-storage-streaming.md)
       - [為資料庫連接器配置資料流](tutorials/ui/dataflow/databases.md)
       - [為CRM連接器配置資料流](tutorials/ui/dataflow/crm.md)
       - [為客戶成功連接器配置資料流](tutorials/ui/dataflow/customer-success.md)
