@@ -5,7 +5,7 @@ title: Adobe Experience Platform Identity Service
 topic: overview
 description: Adobe Experience Platform Identity Service可跨裝置和系統橋接身分，協助您更全面地瞭解客戶及其行為，讓您即時提供具影響力的個人化數位體驗。
 translation-type: tm+mt
-source-git-commit: 8b1b61b6446b28f92d6cf221003674fa09716c53
+source-git-commit: 6e4a3ebe84c82790f58f8ec54e6f72c2aca0b7da
 workflow-type: tm+mt
 source-wordcount: '1711'
 ht-degree: 0%
@@ -136,7 +136,7 @@ PII（例如電子郵件地址和電話號碼）可直接識別客戶。 因此�
 
 >[!WARNING]
 >
-> 下 [!DNL Platform] 列視訊中顯示的UI已過時。 請參閱檔案以取得最新的UI螢幕擷取和功能。
+>下 [!DNL Platform] 列視訊中顯示的UI已過時。 請參閱檔案以取得最新的UI螢幕擷取和功能。
 
 >[!VIDEO](https://video.tv.adobe.com/v/28167?quality=12&learn=on)
 
