@@ -5,10 +5,10 @@ title: 查找多個對象
 topic: developer guide
 description: 如果您想要檢視數個特定物件，而不是每個物件提出一個要求，「目錄」會提供簡單的捷徑，讓您要求同一類型的多個物件。 您可以使用單一GET請求來傳回多個特定物件，方法是加入以逗號分隔的ID清單。
 translation-type: tm+mt
-source-git-commit: dd1f508b93e8eac14e3c41fac9d8f49769d08f46
+source-git-commit: b791e9e060d7686e8fc264c445bbfd1e01ff5987
 workflow-type: tm+mt
-source-wordcount: '223'
-ht-degree: 0%
+source-wordcount: '225'
+ht-degree: 1%
 
 ---
 
@@ -28,8 +28,10 @@ GET /{OBJECT_TYPE}/{ID_1},{ID_2},{ID_3},{ID_4}
 GET /{OBJECT_TYPE}/{ID_1},{ID_2},{ID_3},{ID_4}?properties={PROPERTY_1},{PROPERTY_2},{PROPERTY_3}
 ```
 
-| `{OBJECT_TYPE}` |要檢索的 [!DNL Catalog] 對象類型。 有效對象包括： <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
-| `{ID}` |您要擷取之特定物件的識別碼。 |
+| 參數 | 說明 |
+| -------- | ----------- |
+| `{OBJECT_TYPE}` | 要檢索 [!DNL Catalog] 的對象類型。 有效對象包括： <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{ID}` | 您要擷取之特定物件之一的識別碼。 |
 
 **請求**
 
