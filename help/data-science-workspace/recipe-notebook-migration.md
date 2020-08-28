@@ -5,7 +5,7 @@ title: 配方和筆記本移轉指南
 topic: Tutorial
 description: 以下指南概述在Data Science Workspace中移轉現有配方和筆記型電腦所需的步驟和資訊。
 translation-type: tm+mt
-source-git-commit: 9ba229195892245d29fb4f17b9f2e5cd6c6ea567
+source-git-commit: 6e4a3ebe84c82790f58f8ec54e6f72c2aca0b7da
 workflow-type: tm+mt
 source-wordcount: '3330'
 ht-degree: 0%
@@ -16,6 +16,7 @@ ht-degree: 0%
 # 配方和筆記本移轉指南
 
 >[!NOTE]
+>
 >使用 [!DNL Python]/R的筆記型電腦和配方保持不變。 遷移僅適用於PySpark/[!DNL Spark] (2.3)配方和筆記型電腦。
 
 以下指南概述了遷移現有配方和筆記型電腦所需的步驟和資訊。
@@ -85,6 +86,7 @@ var df = sparkSession.read.format("com.adobe.platform.query")
 ```
 
 >[!TIP]
+>
 > 如果查詢運行時間超過10分鐘，則交互模式超時。 如果您要接收超過幾GB的資料，建議您切換至「批次」模式。 批次模式啟動需要較長時間，但可處理較大的資料集。
 
 #### 寫入資料集
@@ -138,6 +140,7 @@ Scala配方位於以下目錄中 `experience-platform-dsw-reference/recipes/scal
 配方檔案夾中需要有新檔案，才能使用以Docker為基礎的工作流程。 從位於的配方資料夾複製並貼上Dockerfile `experience-platform-dsw-reference/recipes/scala/Dockerfile`。 或者，您也可以將下方的程式碼複製並貼至名為的新檔案 `Dockerfile`。
 
 >[!IMPORTANT]
+>
 > 下面顯示的示例 `ml-retail-sample-spark-*-jar-with-dependencies.jar` jar檔案應替換為配方的jar檔案的名稱。
 
 ```scala
@@ -222,6 +225,7 @@ pd = sparkSession.read.format("com.adobe.platform.query")
 ```
 
 >[!TIP]
+>
 > 如果查詢運行時間超過10分鐘，則交互模式超時。 如果您要接收超過幾GB的資料，建議您切換至「批次」模式。 批次模式啟動需要較長時間，但可處理較大的資料集。
 
 #### 寫入資料集
@@ -275,6 +279,7 @@ PySpark配方位於以下目錄 `experience-platform-dsw-reference/recipes/pyspa
 配方檔案夾中需要有新檔案，才能使用以Docker為基礎的工作流程。 從位於的配方資料夾複製並貼上Dockerfile `experience-platform-dsw-reference/recipes/pyspark/Dockerfile`。 或者，您也可以複製並貼上下方的程式碼，並建立名為的新檔案 `Dockerfile`。
 
 >[!IMPORTANT]
+>
 > 下列顯示的範例 `pysparkretailapp-*.egg` egg檔案應以配方的egg檔案名稱取代。
 
 ```scala
