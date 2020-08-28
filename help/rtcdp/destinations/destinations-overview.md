@@ -5,9 +5,9 @@ seo-title: 目的地概述
 description: 目標是與目標平台預先建立的整合，可讓即時客戶資料平台順暢地啟動資料。 您可以使用Adobe即時客戶資料平台中的「目標」來啟用您已知和未知的跨通道行銷宣傳、電子郵件宣傳、目標廣告及許多其他使用案例資料。
 seo-description: 目標是與目標平台預先建立的整合，可讓即時客戶資料平台順暢地啟動資料。 您可以使用Adobe即時客戶資料平台中的「目標」來啟用您已知和未知的跨通道行銷宣傳、電子郵件宣傳、目標廣告及許多其他使用案例資料。
 translation-type: tm+mt
-source-git-commit: 54df4778a025811504801306120bda78e04281c1
+source-git-commit: 22bca041673cec5eee54ed4234aba19eca470441
 workflow-type: tm+mt
-source-wordcount: '526'
+source-wordcount: '528'
 ht-degree: 0%
 
 ---
@@ -67,4 +67,4 @@ ht-degree: 0%
 * [電子郵件行銷目標](/help/rtcdp/destinations/email-marketing-destinations.md)
 * [社交網路目的地](/help/rtcdp/destinations/social-network-destinations-workflow.md)
 
-如需區段啟動工作流程中違反資料原則的詳細資訊，請參閱「啟用設定檔和區段至 [目的地」中的步驟7](/help/rtcdp/destinations/activate-destinations.md)。
+如需區段啟動工作流程中違反資料原則的詳細資訊，請參閱「啟用設定檔和區段 [至目的地」中的「檢閱」步驟](/help/rtcdp/destinations/activate-destinations.md#review)。
