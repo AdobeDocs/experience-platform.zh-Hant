@@ -5,7 +5,7 @@ seo-title: 即時客戶資料平台首頁和資料板
 description: Adobe Experience Platform的儀表板、首頁和首次使用者體驗
 seo-description: Adobe Experience Platform的儀表板、首頁和首次使用者體驗
 translation-type: tm+mt
-source-git-commit: 15323134f0c626cad2c4e90b3e1c0662cf7e57dd
+source-git-commit: 98d3792f50f2ab95b86d162c51af9445f06343b5
 workflow-type: tm+mt
 source-wordcount: '634'
 ht-degree: 1%
@@ -19,7 +19,7 @@ ht-degree: 1%
 
 首頁只是顯示量度卡片的位置之一。 即時CDP在您的整個體驗中提供度量卡。 這些量度會通知您系統中的資料、設定檔和區段對象。
 
-![image](assets/home2.jpg)
+![image](assets/home.png)
 
 如果登錄到即時CDP時系統中沒有資料，則首頁上的儀表板不會顯示。 在這種情況下，首頁會提供首次使用者體驗的學習教材。 當資料收集時(換言之，當資料集、描述檔、區段 <!--sources-->和目的地建立並將資料流入系統時)，控制面板會自動更新以顯示該資料的相關資訊<!-- in metric cards-->。
 
@@ -31,14 +31,14 @@ ht-degree: 1%
 
 * **排行榜** (leaderboard)位於儀表板的頂端。 排行榜會顯示系統中的資料集、設定檔、區段和目標數目。
 
-   ![image](assets/home-leaderboard2.jpg)
+   ![image](assets/leaderboard.png)
 
 <!-- * **Metric cards** display beneath the leaderboard. Metric cards show additional information, such as percentages or trends. Metric cards appear as data is collected.
     ![image](assets/home-metrics.jpg)
 Some information is shown in different ways on both the leaderboard and metric cards. -->
 * **最近的項目** (Recent items)列出系統中新增的5個最近的資料集、來源、區段和目標。
 
-   ![image](assets/home-recent.jpg)
+   ![image](assets/recent.png)
 
 其他度量（例如描述檔和細分）可在即時客戶資料平台的其他部分取得。
 
