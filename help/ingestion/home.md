@@ -5,7 +5,7 @@ title: Adobe Experience Platform資料擷取概觀
 topic: overview
 description: 本檔案介紹將資料收錄至Platform的三種主要方式，以及各自概述檔案的連結，以取得更詳細的資訊。
 translation-type: tm+mt
-source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
+source-git-commit: 6e4a3ebe84c82790f58f8ec54e6f72c2aca0b7da
 workflow-type: tm+mt
 source-wordcount: '442'
 ht-degree: 9%
@@ -47,6 +47,6 @@ Adobe Experience Platform將來自多個來源的資料匯集在一起，以協�
 
 >[!WARNING]
 >
-> 下列視訊中使用的術語「統一描述檔」已過期。 條款 [!DNL "Profile"] 或 [!DNL "Real-time Customer Profile"] 是說明檔案中使用的正確 [!DNL Experience Platform] 詞語。 如需最新功能，請參閱檔案。
+>下列視訊中使用的術語「統一描述檔」已過期。 條款 [!DNL "Profile"] 或 [!DNL "Real-time Customer Profile"] 是說明檔案中使用的正確 [!DNL Experience Platform] 詞語。 如需最新功能，請參閱檔案。
 
 >[!VIDEO](https://video.tv.adobe.com/v/27106?quality=12&learn=on)
