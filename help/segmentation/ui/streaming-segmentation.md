@@ -5,9 +5,9 @@ title: 串流區段
 topic: ui guide
 description: Adobe Experience Platform上的串流細分可讓您近乎即時地進行細分，同時專注於資料的豐富性。 透過串流分段，區段資格現在會在資料進入平台時進行，以減輕排程和執行分段工作的需求。 有了這項功能，大部份的區段規則現在都可以在資料傳入平台時進行評估，這表示區段成員資格將會保持最新，而不會執行排程的區段工作。
 translation-type: tm+mt
-source-git-commit: d0323fd2e769f97fa738ea55e7aba1d7ae821051
+source-git-commit: d35d598b2ae8b46f53a20d41770b21ceeeafcce8
 workflow-type: tm+mt
-source-wordcount: '767'
+source-wordcount: '805'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,11 @@ ht-degree: 0%
 >
 >下列檔案說明如何使用UI使用串流分段。 如需使用API的串流分段的詳細資訊，請閱讀串 [流分段API指南](../api/streaming-segmentation.md)。
 
-透過串流分 [!DNL Adobe Experience Platform] 段功能，客戶可以近乎即時地進行分段，同時專注於資料的豐富性。 透過串流分段，區段資格現在會在資料進入時進行 [!DNL Platform]，減輕排程和執行分段工作的需求。 有了這項功能，大部份的區段規則現在都可以在資料傳入時進行評估 [!DNL Platform]，這表示區段成員資格將會保持最新，而不會執行排程的區段工作。
+透過串流分 [!DNL Adobe Experience Platform] 段功能，客戶可以近乎即時地進行分段，同時專注於資料的豐富性。 透過串流分段，現在當串流資料進入時，會進行分段資格 [!DNL Platform]設定，以減輕排程和執行分段工作的需求。 有了這項功能，大部份的區段規則現在都可以在資料傳入時進行評估 [!DNL Platform]，這表示區段成員資格將會保持最新，而不會執行排程的區段工作。
+
+>[!NOTE]
+>
+>串流區段只能用來評估串流至平台的資料。 換言之，透過批次擷取所擷取的資料不會透過串流分段來評估，而需要觸發批次評估。
 
 ## 串流分段查詢類型
 
