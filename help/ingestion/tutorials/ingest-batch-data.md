@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 將資料內嵌至Adobe Experience Platform
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
+source-git-commit: 6e4a3ebe84c82790f58f8ec54e6f72c2aca0b7da
 workflow-type: tm+mt
 source-wordcount: '1278'
 ht-degree: 0%
@@ -148,6 +148,6 @@ Datasets工作區 [!DNL Experience Platform] 可讓您檢視和管理IMS組織�
 
 >[!WARNING]
 >
-> 下 [!DNL Platform] 列視訊中顯示的UI已過時。 請參閱上述檔案以取得最新的UI螢幕擷取和功能。
+>下 [!DNL Platform] 列視訊中顯示的UI已過時。 請參閱上述檔案以取得最新的UI螢幕擷取和功能。
 
 >[!VIDEO](https://video.tv.adobe.com/v/27269?quality=12&learn=on)
