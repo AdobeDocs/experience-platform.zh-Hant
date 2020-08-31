@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 隱私權服務使用指南
 topic: UI guide
 translation-type: tm+mt
-source-git-commit: 5b32c1955fac4f137ba44e8189376c81cdbbfc40
+source-git-commit: c8446f6040ac9ef1f4196d9057b531011e243258
 workflow-type: tm+mt
 source-wordcount: '1056'
 ht-degree: 0%
@@ -113,7 +113,7 @@ UI提 [!DNL Privacy Service] 供兩種方法來建立新的工作請求：
 
 <img src="../images/user-guide/namespace-type.png" width="500" /><br/>
 
-使用標準 _命名空間類型_ ，從下拉式選單（電子郵件、ECID或AAID）中選取命名空間，然後在文字方塊中的右側鍵入ID值，針對每個ID按 **\&lt;enter>** ，將它新增至清單。
+使用標準 _命名空間類型_ ，從下拉式選單（電子郵件、ECID或AAID）中選取命名空間，然後在文字方塊中的右側鍵入ID值，為每個ID按 **\&lt;enter>** ，將它新增至清單。
 
 <img src="../images/user-guide/standard-namespace.png" width="500" /><br/>
 
@@ -121,7 +121,7 @@ UI提 [!DNL Privacy Service] 供兩種方法來建立新的工作請求：
 
 <img src="../images/user-guide/custom-namespace.png" width="500" /><br/>
 
-完成後，按一下「 **[!UICONTROL 建立]**」。
+When finished, click **[!UICONTROL Create]**.
 
 <img src="../images/user-guide/request-builder-create.png" width="500" /><br/>
 
@@ -147,7 +147,7 @@ UI提 [!DNL Privacy Service] 供兩種方法來建立新的工作請求：
 
 在您的電腦上找到JSON檔案，並將它拖曳至對話方塊視窗。 如果上載成功，則檔案名將出現在對話框中。 您可以視需要將更多JSON檔案拖放至對話方塊中，以繼續新增。
 
-完成後，按一下「 **[!UICONTROL 建立]**」。 對話方塊消失，新工作（或工作）會列在「工作請求」介面工具集中， _以及其目前的處理狀態_ 。
+When finished, click **[!UICONTROL Create]**. 對話方塊消失，新工作（或工作）會列在「工作請求」介面工具集中， _以及其目前的處理狀態_ 。
 
 ### 後續步驟
 
