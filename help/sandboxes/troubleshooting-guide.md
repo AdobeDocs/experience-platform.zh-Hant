@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 沙盒疑難排解指南
 topic: troubleshooting guide
 translation-type: tm+mt
-source-git-commit: f15049ca917818d325b5783c70faaa53ba669aba
+source-git-commit: d4ae318f43904dd73756985512c303fa7149b678
 workflow-type: tm+mt
-source-wordcount: '487'
+source-wordcount: '530'
 ht-degree: 0%
 
 ---
@@ -31,7 +31,7 @@ Experience Platform中提供兩種沙盒類型：
 
 Experience Platform提供單一生 **產沙盒**，無法刪除或重設。 單一平台例項只能有一個生產沙盒。
 
-相反地，沙盒管 **理員可針對單一平台例項** ，建立多個非生產沙盒。 非生產沙盒可讓您測試功能、執行實驗並建立自訂組態，而不會影響生產沙盒。 此外，非生產沙盒具有重設功能，可從沙盒移除所有客戶建立的資源。 非生產沙盒無法轉換為生產沙盒。
+相反地，沙盒管 **理員可針對單一平台例項** ，建立多個非生產沙盒。 非生產沙盒可讓您測試功能、執行實驗並建立自訂組態，而不會影響生產沙盒。 此外，非生產沙盒具有重設功能，可從沙盒移除所有客戶建立的資源。 非生產沙盒無法轉換為生產沙盒。 預設的Experience Platform授權會授與您5個沙盒（1個製作和4個非製作）。 您可新增10個非生產沙盒，最多可新增75個沙盒。 如需詳細資訊，請連絡您的IMS組織管理員或Adobe銷售代表。
 
 如需詳細 [資訊，請參閱](./home.md) 「沙盒總覽」。
 
