@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 建立電子郵件行銷目標
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
+source-git-commit: 3cfbee08c1948b2e073547f9bbf0c8526cbfd4bc
 workflow-type: tm+mt
-source-wordcount: '1621'
+source-wordcount: '1624'
 ht-degree: 1%
 
 ---
