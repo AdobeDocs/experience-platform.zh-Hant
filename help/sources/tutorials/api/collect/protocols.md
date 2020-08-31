@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics; flow service; protocol; generic odata
 solution: Experience Platform
 title: 透過來源連接器和API收集通訊協定資料
 topic: overview
+description: 本教學課程涵蓋從協力廠商通訊協定提供者擷取資料，並透過來源連接器和Flow Service API將其匯入平台的步驟。
 translation-type: tm+mt
-source-git-commit: c26b2b4256d8d1d23a285efbacd8b6c9e255cd18
+source-git-commit: 6578fd607d6f897a403d0af65c81dafe3dc12578
 workflow-type: tm+mt
-source-wordcount: '1669'
+source-wordcount: '1591'
 ht-degree: 1%
 
 ---
@@ -16,20 +17,20 @@ ht-degree: 1%
 
 [!DNL Flow Service] 用於收集和集中Adobe Experience Platform內不同來源的客戶資料。 該服務提供用戶介面和REST風格的API，所有支援的源都可從中連接。
 
-本教學課程涵蓋從通訊協定應用程式擷取資料並透過來源連接器和API [!DNL Platform] 將其吸收的步驟。
+本教學課程涵蓋從協力廠商通訊協定應用程式擷取資料，並透過來源連接 [!DNL Platform] 器和 [[!DNL Flow Service]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) API將其內嵌至其中的步驟。
 
 ## 快速入門
 
 本教程要求您通過有效的基本連接和要導入的檔案（包括表的路徑和結構）來訪問協 [!DNL Platform]議系統。 如果您沒有此資訊，請先參閱教學課程，了 [解如何使用Flow Service API來探索通訊協定系統](../explore/protocols.md) ，然後再嘗試本教學課程。
 
-* [體驗資料模型(XDM)系統](../../../../xdm/home.md):組織客戶體驗資料 [!DNL Experience Platform] 的標準化架構。
+* [[!DNL體驗資料模型(XDM)系統]](../../../../xdm/home.md):Experience Platform組織客戶體驗資料的標準化架構。
    * [架構構成基礎](../../../../xdm/schema/composition.md):瞭解XDM架構的基本建置區塊，包括架構組合的主要原則和最佳實務。
    * [架構註冊開發人員指南](../../../../xdm/api/getting-started.md):包含您必須知道的重要資訊，以便成功執行對架構註冊表API的呼叫。 這包括您 `{TENANT_ID}`的「容器」概念，以及提出要求所需的標題（請特別注意「接受」標題及其可能的值）。
-* [目錄服務](../../../../catalog/home.md):目錄是記錄資料位置和世系的系統 [!DNL Experience Platform]。
-* [批次擷取](../../../../ingestion/batch-ingestion/overview.md):「批次擷取API」可讓您將資料擷取為 [!DNL Experience Platform] 批次檔案。
+* [[!DNL目錄服務]](../../../../catalog/home.md):目錄是記錄資料位置和世系的系統 [!DNL Experience Platform]。
+* [[!DNL批處理提取]](../../../../ingestion/batch-ingestion/overview.md):「批次擷取API」可讓您將資料擷取為 [!DNL Experience Platform] 批次檔案。
 * [沙盒](../../../../sandboxes/home.md): [!DNL Experience Platform] 提供虛擬沙盒，可將單一執行個體分 [!DNL Platform] 割為不同的虛擬環境，以協助開發和發展數位體驗應用程式。
 
-以下各節提供您需要知道的其他資訊，以便使用 [!DNL Flow Service] API成功連線至通訊協定應用程式。
+以下各節提供您需要瞭解的其他資訊，以便使用 [!DNL Flow Service] API成功連線至通訊協定應用程式。
 
 ### 讀取範例API呼叫
 
@@ -39,29 +40,21 @@ ht-degree: 1%
 
 若要呼叫API，您必 [!DNL Platform] 須先完成驗證教 [學課程](../../../../tutorials/authentication.md)。 完成驗證教學課程後，將提供所有 [!DNL Experience Platform] API呼叫中每個必要標題的值，如下所示：
 
-* 授權：生產者 `{ACCESS_TOKEN}`
-* x-api-key: `{API_KEY}`
-* x-gw-ims-org-id: `{IMS_ORG}`
+* `Authorization: Bearer {ACCESS_TOKEN}`
+* `x-api-key: {API_KEY}`
+* `x-gw-ims-org-id: {IMS_ORG}`
 
 中的所有資 [!DNL Experience Platform]源(包括屬於這些資源 [!DNL Flow Service])都隔離到特定的虛擬沙盒。 對API的所 [!DNL Platform] 有請求都需要一個標題，該標題會指定要在中執行的操作的沙盒名稱：
 
-* x-sandbox-name: `{SANDBOX_NAME}`
+* `x-sandbox-name: {SANDBOX_NAME}`
 
 所有包含裝載(POST、PUT、PATCH)的請求都需要額外的媒體類型標題：
 
-* 內容類型： `application/json`
-
-## 建立臨機XDM類別和架構
-
-為了透過來源連接器將 [!DNL Platform] 外部資料匯入，必須為原始來源資料建立臨機XDM類別和架構。
-
-若要建立臨機類別和架構，請依照臨機架構教學課程中 [所述的步驟進行](../../../../xdm/tutorials/ad-hoc.md)。 建立臨機類別時，來源資料中找到的所有欄位都必須在請求內文中說明。
-
-請繼續遵循開發人員指南中所述的步驟，直到您建立臨機架構為止。 取得並儲存臨機結構的唯一識別碼(`$id`)，然後繼續本教學課程的下一步。
+* `Content-Type: application/json`
 
 ## 建立源連接 {#source}
 
-現在，只要建立臨機XDM架構，就可以使用API的POST要求建立來源連 [!DNL Flow Service] 線。 源連接由連接ID、源資料檔案和描述源資料的模式的引用組成。
+您可以對 [!DNL Flow Service] API提出POST要求，以建立來源連線。 源連接由連接ID、源資料檔案的路徑和連接規範ID組成。
 
 要建立源連接，還必須為資料格式屬性定義枚舉值。
 
@@ -97,10 +90,6 @@ curl -X POST \
         "description": "Protocols source connection to ingest Orders",
         "data": {
             "format": "tabular",
-            "schema": {
-                "id": "https://ns.adobe.com/{TENANT_ID}/schemas/9e800522521c1ed7d05d3782897f6bd78ee8c2302169bc19",
-                "version": "application/vnd.adobe.xed-full-notext+json; version=1"
-            }
         },
         "params": {
             "path": "Orders"
@@ -115,7 +104,6 @@ curl -X POST \
 | 屬性 | 說明 |
 | -------- | ----------- |
 | `baseConnectionId` | 您的通訊協定應用程式的連線ID |
-| `data.schema.id` | 臨 `$id` 機XDM架構。 |
 | `params.path` | 源檔案的路徑。 |
 | `connectionSpec.id` | 您的協定應用程式的連接規範ID。 |
 
@@ -291,7 +279,7 @@ curl -X POST \
 
 目標連接表示到所收錄資料所在目的地的連接。 要建立目標連接，必須提供與資料庫關聯的固定連接規範ID。 此連接規範ID為： `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
 
-您現在擁有目標資料集的目標模式及與資料湖的連線規格ID作為唯一識別碼。 使用這些識別碼，您可以使用 [!DNL Flow Service] API建立目標連線，以指定將包含傳入來源資料的資料集。
+您現在擁有目標資料集的唯一識別碼、目標模式，以及與資料湖的連線規範ID。 使用這些識別碼，您可以使用 [!DNL Flow Service] API建立目標連線，以指定將包含傳入來源資料的資料集。
 
 **API格式**
 
