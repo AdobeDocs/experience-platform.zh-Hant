@@ -5,10 +5,10 @@ topic: overview
 title: 存取控制概觀
 description: Adobe Experience Platform的存取控制權是透過Adobe Admin Console提供。 此功能運用Admin Console中的產品設定檔，可連結使用者與權限和沙盒。
 translation-type: tm+mt
-source-git-commit: cddc559dfb65ada888bb367d6265863091a9b2a1
+source-git-commit: e22b0f64fd6153f76cff862a6e973a235257430e
 workflow-type: tm+mt
-source-wordcount: '1131'
-ht-degree: 3%
+source-wordcount: '1162'
+ht-degree: 2%
 
 ---
 
@@ -57,7 +57,7 @@ Adobe Admin Console提供一個集中位置，可讓您管理Adobe產品權益�
 
 ## 沙盒與權限
 
-[!DNL Experience Platform] 可存取一個「生產」沙盒，並可讓您建立「非生產」 **沙盒**。 非生產沙盒是資料虛擬化的一種形式，可讓您將資料與其他沙盒隔離，通常用於開發實驗、測試或試用。 產品描述檔的 **[!UICONTROL 權限]** ，可讓描述檔的使用者存取已授與 [!DNL Platform] 存取之沙盒環境中的功能。
+非生產沙盒是資料虛擬化的一種形式，可讓您將資料與其他沙盒隔離，通常用於開發實驗、測試或試用。 產品描述檔的 **[!UICONTROL 權限]** ，可讓描述檔的使用者存取已授與 [!DNL Platform] 存取之沙盒環境中的功能。 預設的Experience Platform授權會授與您5個沙盒（1個製作和4個非製作）。 您可新增10個非生產沙盒，最多可新增75個沙盒。 如需詳細資訊，請連絡您的IMS組織管理員或Adobe銷售代表。
 
 有關中的沙盒的更多 [!DNL Experience Platform]資訊，請參閱沙盒 [概觀](../sandboxes/home.md)。
 
