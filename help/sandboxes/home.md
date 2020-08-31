@@ -5,9 +5,9 @@ title: 沙盒總覽
 topic: overview
 description: 沙盒是Experience Platform單一執行個體中的虛擬分區，可讓您與數位體驗應用程式的開發流程順暢整合。
 translation-type: tm+mt
-source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
+source-git-commit: e22b0f64fd6153f76cff862a6e973a235257430e
 workflow-type: tm+mt
-source-wordcount: '706'
+source-wordcount: '750'
 ht-degree: 0%
 
 ---
@@ -25,7 +25,7 @@ In order to address this need, Experience Platform provides **sandboxes** which 
 
 沙盒是Experience Platform單一執行個體中的虛擬分區，可讓您與數位體驗應用程式的開發流程順暢整合。 Experience Platform實例支援一個生產沙盒和多個非生產沙盒，每個沙盒會維護其獨立的平台資源庫（包括結構、資料集、設定檔等）。  在沙盒中執行的所有內容和動作都僅限於該沙盒，不會影響任何其他沙盒。
 
-非生產沙盒可讓您測試功能、執行實驗並建立自訂組態，而不會影響生產沙盒。 此外，非生產沙盒具有重設功能，可從沙盒移除所有客戶建立的資源。 非生產沙盒無法轉換為生產沙盒。
+非生產沙盒可讓您測試功能、執行實驗並建立自訂組態，而不會影響生產沙盒。 此外，非生產沙盒具有重設功能，可從沙盒移除所有客戶建立的資源。 非生產沙盒無法轉換為生產沙盒。 預設的Experience Platform授權會授與您5個沙盒（1個製作和4個非製作）。 您可新增10個非生產沙盒，最多可新增75個沙盒。 如需詳細資訊，請連絡您的IMS組織管理員或Adobe銷售代表。
 
 >[!NOTE]
 >
