@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics; flow service; cloud storage
 solution: Experience Platform
 title: 透過來源連接器和API收集雲端儲存空間資料
 topic: overview
+description: 本教學課程涵蓋從協力廠商雲端儲存空間擷取資料，並透過來源連接器和Flow Service API將其匯入平台的步驟。
 translation-type: tm+mt
-source-git-commit: 773823333fe0553515ebf169b4fd956b8737a9c3
+source-git-commit: 6578fd607d6f897a403d0af65c81dafe3dc12578
 workflow-type: tm+mt
-source-wordcount: '1680'
+source-wordcount: '1583'
 ht-degree: 1%
 
 ---
@@ -16,21 +17,20 @@ ht-degree: 1%
 
 [!DNL Flow Service] 用於收集和集中Adobe Experience Platform內不同來源的客戶資料。 該服務提供用戶介面和REST風格的API，所有支援的源都可從中連接。
 
-本教學課程涵蓋從協力廠商雲端儲存空間擷取資料，並透過來源連接器和API將其匯 [!DNL Platform] 入的步驟。
+本教學課程涵蓋從協力廠商雲端儲存空間擷取資料，並透過來源連接器和 [[!DNL Flow Service] API將其匯入平台的步驟](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml)。
 
 ## 快速入門
 
-本教學課程要求您透過有效的連線存取第三方雲端儲存空間，以及您要放入之檔案的相關資訊 [!DNL Platform]，包括檔案的路徑和結構。 如果您沒有此資訊，請先參閱教學課程， [在嘗試本教學課程之前，使用Flow Service API探索協力廠商雲端儲存空間](../explore/cloud-storage.md) 。
+本教學課程要求您透過有效的連線，以及要匯入DNL平台之檔案的相關資訊（包括檔案的路徑和結構），來存取協力廠商雲端儲存空間。 如果您沒有此資訊，請先參閱教學課程， [瞭解如何使用API來 [!DNL Flow Service] 探索協力廠商雲端儲存空間](../explore/cloud-storage.md) ，然後再嘗試本教學課程。
 
 本教學課程也要求您對Adobe Experience Platform的下列元件有正確的認識：
 
-- [體驗資料模型(XDM)系統](../../../../xdm/home.md):Experience Platform組織客戶體驗資料的標準化架構。
+- [[!DNL體驗資料模型(XDM)系統]](../../../../xdm/home.md):Experience Platform組織客戶體驗資料的標準化架構。
    - [架構構成基礎](../../../../xdm/schema/composition.md):瞭解XDM架構的基本建置區塊，包括架構組合的主要原則和最佳實務。
    - [架構註冊開發人員指南](../../../../xdm/api/getting-started.md):包含您必須知道的重要資訊，以便成功執行對架構註冊表API的呼叫。 這包括您 `{TENANT_ID}`的「容器」概念，以及提出要求所需的標題（請特別注意「接受」標題及其可能的值）。
-- [目錄服務](../../../../catalog/home.md):目錄是記錄資料位置和世系的系統 [!DNL Experience Platform]。
-- [批次擷取](../../../../ingestion/batch-ingestion/overview.md):「批次擷取API」可讓您將資料擷取為 [!DNL Experience Platform] 批次檔案。
+- [[!DNL目錄服務]](../../../../catalog/home.md):目錄是記錄資料位置和世系的系統 [!DNL Experience Platform]。
+- [[!DNL批處理提取]](../../../../ingestion/batch-ingestion/overview.md):「批次擷取API」可讓您將資料擷取為 [!DNL Experience Platform] 批次檔案。
 - [沙盒](../../../../sandboxes/home.md): [!DNL Experience Platform] 提供虛擬沙盒，可將單一執行個體分 [!DNL Platform] 割為不同的虛擬環境，以協助開發和發展數位體驗應用程式。
-
 以下章節提供您必須知道的其他資訊，以便使用 [!DNL Flow Service] API成功連線至雲端儲存空間。
 
 ### 讀取範例API呼叫
@@ -41,29 +41,21 @@ ht-degree: 1%
 
 若要呼叫API，您必 [!DNL Platform] 須先完成驗證教 [學課程](../../../../tutorials/authentication.md)。 完成驗證教學課程後，將提供所有 [!DNL Experience Platform] API呼叫中每個必要標題的值，如下所示：
 
-- 授權：生產者 `{ACCESS_TOKEN}`
-- x-api-key: `{API_KEY}`
-- x-gw-ims-org-id: `{IMS_ORG}`
+- `Authorization: Bearer {ACCESS_TOKEN}`
+- `x-api-key: {API_KEY}`
+- `x-gw-ims-org-id: {IMS_ORG}`
 
 中的所有資 [!DNL Experience Platform]源(包括屬於這些資源 [!DNL Flow Service])都隔離到特定的虛擬沙盒。 對API的所 [!DNL Platform] 有請求都需要一個標題，該標題會指定要在中執行的操作的沙盒名稱：
 
-- x-sandbox-name: `{SANDBOX_NAME}`
+- `x-sandbox-name: {SANDBOX_NAME}`
 
 所有包含裝載(POST、PUT、PATCH)的請求都需要額外的媒體類型標題：
 
-- 內容類型： `application/json`
-
-## 建立臨機XDM類別和架構
-
-為了透過來源連接器將 [!DNL Platform] 外部資料匯入，必須為原始來源資料建立臨機XDM類別和架構。
-
-若要建立臨機類別和架構，請依照臨機架構教學課程中 [所述的步驟進行](../../../../xdm/tutorials/ad-hoc.md)。 建立臨機類別時，來源資料中找到的所有欄位都必須在請求內文中說明。
-
-請繼續遵循開發人員指南中所述的步驟，直到您建立臨機架構為止。 臨機架構的唯`$id`一識別碼()是繼續本教學課程的下一步驟的必要項。
+- `Content-Type: application/json`
 
 ## 建立源連接 {#source}
 
-現在，只要建立臨機XDM架構，就可以使用API的POST要求建立來源連 [!DNL Flow Service] 線。 源連接由連接ID、源資料檔案和描述源資料的模式的引用組成。
+您可以對 [!DNL Flow Service] API提出POST要求，以建立來源連線。 源連接由連接ID、源資料檔案的路徑和連接規範ID組成。
 
 要建立源連接，還必須為資料格式屬性定義枚舉值。
 
@@ -94,22 +86,18 @@ curl -X POST \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d '{
-        "name": "Test source connection for a Cloud Storage connector",
-        "baseConnectionId": "ac33bd66-1565-4915-b3bd-6615657915c4",
-        "description": "Test source connection for a Cloud Storage connector",
+        "name": "Cloud storage source connector",
+        "baseConnectionId": "9e2541a0-b143-4d23-a541-a0b143dd2301",
+        "description": "Cloud storage source connector",
         "data": {
-            "format": "delimited",
-            "schema": {
-                "id": "https://ns.adobe.com/{TENANT_ID}/schemas/22a4ab59462a64de551d42dd10ec1f19d8d7246e3f90072a",
-                "version": "application/vnd.adobe.xed-full-notext+json; version=1"
-            }
+            "format": "delimited"
         },
         "params": {
-            "path": "/backfil/data8.csv",
+            "path": "/demo/data7.csv",
             "recursive": "true"
         },
-        "connectionSpec": {
-            "id": "be5ec48c-5b78-49d5-b8fa-7c89ec4569b8",
+            "connectionSpec": {
+            "id": "4c10e202-c428-4796-9208-5f1f5732b1cf",
             "version": "1.0"
         }
     }'
@@ -118,7 +106,6 @@ curl -X POST \
 | 屬性 | 說明 |
 | --- | --- |
 | `baseConnectionId` | 您所存取之協力廠商雲端儲存系統的唯一連線ID。 |
-| `data.schema.id` | 臨機XDM架構的ID。 |
 | `params.path` | 您正在訪問的源檔案的路徑。 |
 | `connectionSpec.id` | 與特定第三方雲端儲存系統關聯的連線規格ID。 有關連 [接規範](#appendix) ID的清單，請參見附錄。 |
 
@@ -128,14 +115,14 @@ curl -X POST \
 
 ```json
 {
-    "id": "8bae595c-8548-4716-ae59-5c85480716e9",
-    "etag": "\"4a00038b-0000-0200-0000-5ebc47fd0000\""
+    "id": "26b53912-1005-49f0-b539-12100559f0e2",
+    "etag": "\"11004d97-0000-0200-0000-5f3c3b140000\""
 }
 ```
 
 ## 建立目標XDM模式 {#target-schema}
 
-在之前的步驟中，會建立臨機XDM架構來結構來源資料。 為了使用源資料，還必須創 [!DNL Platform]建目標模式，以根據您的需要構建源資料。 然後，目標模式用於建立包含 [!DNL Platform] 源資料的資料集。
+為了使用源資料，必須創 [!DNL Platform]建目標模式，以根據您的需要構建源資料。 然後，目標模式用於建立包含 [!DNL Platform] 源資料的資料集。
 
 通過對方案註冊表API執行POST請求，可以建立目標XDM [方案](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml)。
 
@@ -190,13 +177,13 @@ curl -X POST \
 
 ```json
 {
-    "$id": "https://ns.adobe.com/{TENANT_ID}/schemas/e28dd48fab732263816f8b80ae4fdf49ca7ad229ca62e5d6",
-    "meta:altId": "_{TENANT_ID}.schemas.e28dd48fab732263816f8b80ae4fdf49ca7ad229ca62e5d6",
+    "$id": "https://ns.adobe.com/{TENANT_ID}/schemas/995dabbea86d58e346ff91bd8aa741a9f36f29b1019138d4",
+    "meta:altId": "_{TENANT_ID}.schemas.995dabbea86d58e346ff91bd8aa741a9f36f29b1019138d4",
     "meta:resourceType": "schemas",
     "version": "1.0",
-    "title": "Target schema for a Cloud Storage connector",
+    "title": "Target schema cloud storage",
     "type": "object",
-    "description": "Target schema for Cloud Storage",
+    "description": "Target schema for cloud storage",
     "allOf": [
         {
             "$ref": "https://ns.adobe.com/xdm/context/profile",
@@ -205,11 +192,6 @@ curl -X POST \
         },
         {
             "$ref": "https://ns.adobe.com/xdm/context/profile-person-details",
-            "type": "object",
-            "meta:xdmType": "object"
-        },
-        {
-            "$ref": "https://ns.adobe.com/xdm/context/profile-personal-details",
             "type": "object",
             "meta:xdmType": "object"
         },
@@ -236,18 +218,18 @@ curl -X POST \
     ],
     "meta:xdmType": "object",
     "meta:registryMetadata": {
-        "repo:createdDate": 1589398474190,
-        "repo:lastModifiedDate": 1589398474190,
+        "repo:createdDate": 1597783248870,
+        "repo:lastModifiedDate": 1597783248870,
         "xdm:createdClientId": "{CREATED_CLIENT_ID}",
         "xdm:lastModifiedClientId": "{LAST_MODIFIED_CLIENT_ID}",
         "xdm:createdUserId": "{CREATED_USER_ID}",
         "xdm:lastModifiedUserId": "{LAST_MODIFIED_USER_ID}",
-        "eTag": "f07723475e933dc30ed411d97986a36f13aa20c820463dd8cf7b74e63f4e7801",
-        "meta:globalLibVersion": "1.10.1.1"
+        "eTag": "596661ec6c7a9c6ae530676e98290a4a58ca29540ed92489cf4478b2bf013a65",
+        "meta:globalLibVersion": "1.13.3"
     },
     "meta:class": "https://ns.adobe.com/xdm/context/profile",
     "meta:containerId": "tenant",
-    "meta:tenantNamespace": "_{TENANT_ID}"
+    "meta:tenantNamespace": "{TENANT_ID}"
 }
 ```
 
@@ -272,9 +254,9 @@ curl -X POST \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d '{
-        "name": "Target dataset for a Cloud Storage connector",
+        "name": "Target dataset for cloud storage",
         "schemaRef": {
-            "id": "https://ns.adobe.com/{TENANT}/schemas/e28dd48fab732263816f8b80ae4fdf49ca7ad229ca62e5d6",
+            "id": "https://ns.adobe.com/{TENANT_ID}/schemas/995dabbea86d58e346ff91bd8aa741a9f36f29b1019138d4",
             "contentType": "application/vnd.adobe.xed-full-notext+json; version=1"
         }
     }'
@@ -290,7 +272,7 @@ curl -X POST \
 
 ```json
 [
-    "@/dataSets/5ebc4be8590b1b191a8dc4ca"
+    "@/dataSets/5f3c3cedb2805c194ff0b69a"
 ]
 ```
 
@@ -298,7 +280,7 @@ curl -X POST \
 
 目標連接表示到所收錄資料所在目的地的連接。 要建立目標連接，必須提供與資料庫關聯的固定連接規範ID。 此連接規範ID為： `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
 
-您現在擁有目標資料集的目標模式及與資料湖的連線規格ID作為唯一識別碼。 使用這些識別碼，您可以使用 [!DNL Flow Service] API建立目標連線，以指定將包含傳入來源資料的資料集。
+您現在擁有目標資料集的唯一識別碼、目標模式，以及與資料湖的連線規範ID。 使用這些識別碼，您可以使用 [!DNL Flow Service] API建立目標連線，以指定將包含傳入來源資料的資料集。
 
 **API格式**
 
@@ -321,12 +303,12 @@ curl -X POST \
         "description": "Target Connection for a Cloud Storage connector",
         "data": {
             "schema": {
-                "id": "https://ns.adobe.com/{TENANT_ID}/schemas/e28dd48fab732263816f8b80ae4fdf49ca7ad229ca62e5d6",
+                "id": "https://ns.adobe.com/{TENANT_ID}/schemas/995dabbea86d58e346ff91bd8aa741a9f36f29b1019138d4",
                 "version": "application/vnd.adobe.xed-full+json;version=1.0"
             }
         },
         "params": {
-            "dataSetId": "5ebc4be8590b1b191a8dc4ca"
+            "dataSetId": "5f3c3cedb2805c194ff0b69a"
         },
             "connectionSpec": {
             "id": "c604ff05-7f1a-43c0-8e18-33bf874cb11c",
@@ -347,8 +329,8 @@ curl -X POST \
 
 ```json
 {
-    "id": "1f5af99c-f1ef-4076-9af9-9cf1ef507678",
-    "etag": "\"530013e2-0000-0200-0000-5ebc4c110000\""
+    "id": "dbc5c132-bc2a-4625-85c1-32bc2a262558",
+    "etag": "\"8e000533-0000-0200-0000-5f3c40fd0000\""
 }
 ```
 
@@ -374,13 +356,21 @@ curl -X POST \
     -H 'Content-Type: application/json' \
     -d '{
         "version": 0,
-        "xdmSchema": "https://ns.adobe.com/{TENANT_ID}/schemas/e28dd48fab732263816f8b80ae4fdf49ca7ad229ca62e5d6",
+        "xdmSchema": "https://ns.adobe.com/{TENANT_ID}/schemas/995dabbea86d58e346ff91bd8aa741a9f36f29b1019138d4",
         "xdmVersion": "1.0",
         "id": null,
         "mappings": [
             {
+                "destinationXdmPath": "_id",
+                "sourceAttribute": "Id",
+                "identity": false,
+                "identityGroup": null,
+                "namespaceCode": null,
+                "version": 0
+            },
+            {
                 "destinationXdmPath": "person.name.firstName",
-                "sourceAttribute": "first_name",
+                "sourceAttribute": "FirstName",
                 "identity": false,
                 "identityGroup": null,
                 "namespaceCode": null,
@@ -388,23 +378,7 @@ curl -X POST \
             },
             {
                 "destinationXdmPath": "person.name.lastName",
-                "sourceAttribute": "last_name",
-                "identity": false,
-                "identityGroup": null,
-                "namespaceCode": null,
-                "version": 0
-            },
-            {
-                "destinationXdmPath": "_id",
-                "sourceAttribute": "id",
-                "identity": false,
-                "identityGroup": null,
-                "namespaceCode": null,
-                "version": 0
-            },
-            {
-                "destinationXdmPath": "personalEmail.address",
-                "sourceAttribute": "email",
+                "sourceAttribute": "LastName",
                 "identity": false,
                 "identityGroup": null,
                 "namespaceCode": null,
@@ -424,10 +398,10 @@ curl -X POST \
 
 ```json
 {
-    "id": "febec6a6785e45ea9ed594422cc483d7",
+    "id": "bf5286a9c1ad4266baca76ba3adc9366",
     "version": 0,
-    "createdDate": 1589398562232,
-    "modifiedDate": 1589398562232,
+    "createdDate": 1597784069368,
+    "modifiedDate": 1597784069368,
     "createdBy": "28AF22BA5DE6B0B40A494036@AdobeID",
     "modifiedBy": "28AF22BA5DE6B0B40A494036@AdobeID"
 }
@@ -611,29 +585,29 @@ curl -X POST \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d '{
-        "name": "Cloud Storage flow to AEP",
-        "description": "Cloud Storage flow to AEP",
+        "name": "Cloud Storage flow to Platform",
+        "description": "Cloud Storage flow to Platform",
         "flowSpec": {
             "id": "9753525b-82c7-4dce-8a9b-5ccfce2b9876",
             "version": "1.0"
         },
         "sourceConnectionIds": [
-            "8bae595c-8548-4716-ae59-5c85480716e9"
+            "26b53912-1005-49f0-b539-12100559f0e2"
         ],
         "targetConnectionIds": [
-            "1f5af99c-f1ef-4076-9af9-9cf1ef507678"
+            "f7eb08fa-5f04-4e45-ab08-fa5f046e45ee"
         ],
         "transformations": [
             {
                 "name": "Mapping",
                 "params": {
-                    "mappingId": "febec6a6785e45ea9ed594422cc483d7",
+                    "mappingId": "bf5286a9c1ad4266baca76ba3adc9366",
                     "mappingVersion": "0"
                 }
             }
         ],
         "scheduleParams": {
-            "startTime": "1589398646",
+            "startTime": "1597784298",
             "frequency":"minute",
             "interval":"30"
         }
@@ -656,14 +630,14 @@ curl -X POST \
 
 ```json
 {
-    "id": "e0bd8463-0913-4ca1-bd84-6309134ca1f6",
-    "etag": "\"04004fe9-0000-0200-0000-5ebc4c8b0000\""
+    "id": "dbc5c132-bc2a-4625-85c1-32bc2a262558",
+    "etag": "\"8e000533-0000-0200-0000-5f3c40fd0000\""
 }
 ```
 
 ## 監控資料流
 
-建立資料流後，您可以監視通過其接收的資料，以查看有關流運行、完成狀態和錯誤的資訊。 有關如何監視資料流的詳細資訊，請參見API中有關監 [視資料流的教程 ](../monitor.md)
+建立資料流後，您可以監視通過其接收的資料，以查看有關流運行、完成狀態和錯誤的資訊。 有關如何監視資料流的詳細資訊，請參見API中有關監 [視資料流的教程](../monitor.md)
 
 ## 後續步驟
 
