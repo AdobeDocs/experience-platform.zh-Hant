@@ -4,15 +4,15 @@ solution: Experience Platform
 title: 連線至串流目的地並啟動資料
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
+source-git-commit: 3cfbee08c1948b2e073547f9bbf0c8526cbfd4bc
 workflow-type: tm+mt
-source-wordcount: '1818'
+source-wordcount: '1819'
 ht-degree: 2%
 
 ---
 
 
-# 使用API連線至串流目的地，並在Adobe的即時客戶資料平台中啟動資料
+# 在Adobe的即時客戶資料平台中，使用API呼叫連線至串流目的地並啟用資料
 
 >[!NOTE]
 >
