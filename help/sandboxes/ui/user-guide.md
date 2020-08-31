@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 沙盒使用指南
 topic: user guide
 translation-type: tm+mt
-source-git-commit: c52d8cdbc5a4ee6fab8c2b1b284efea5f735d424
+source-git-commit: c8446f6040ac9ef1f4196d9057b531011e243258
 workflow-type: tm+mt
 source-wordcount: '530'
 ht-degree: 0%
@@ -18,7 +18,7 @@ ht-degree: 0%
 
 ## 檢視沙盒
 
-在Experience Platform UI中，按一下左側導 **[!UICONTROL 覽中的]** 「沙盒」，以開啟「 _[!UICONTROL 沙盒]_」控制面板。 控制面板會列出您組織的所有可用沙盒，包括沙盒類型（生產或開發）和狀態（作用中、建立、刪除或失敗）。
+在Experience Platform UI中，按一下左側導 **[!UICONTROL 覽中的]** 「沙盒」，以開啟「 _[!UICONTROL 沙盒]_ 」控制面板。 控制面板會列出您組織的所有可用沙盒，包括沙盒類型（生產或開發）和狀態（作用中、建立、刪除或失敗）。
 
 ![](../images/ui/sandboxes-tab.png)
 
@@ -46,9 +46,9 @@ ht-degree: 0%
 
 ![](../images/ui/create-sandbox-button.png)
 
-此時會 _[!UICONTROL 出現「建立沙盒]_」對話方塊，提示您提供沙盒的顯示標題和名稱。 顯&#x200B;**示標題**(Display Title)應為人類可讀，且應具備足夠的描述性，以方便識別。 沙盒名**[!UICONTROL &#x200B;稱&#x200B;]**(Sandbox Name)是全小寫的識別碼，可用於API呼叫，因此應是唯一且簡明的。
+此時會 _[!UICONTROL 出現「建立沙盒]_ 」對話方塊，提示您提供沙盒的顯示標題和名稱。 顯 **示標題** (Display Title)應為人類可讀，且應具備足夠的描述性，以方便識別。 沙盒名 **[!UICONTROL 稱]** (Sandbox Name)是全小寫的識別碼，可用於API呼叫，因此應是唯一且簡明的。
 
-完成後，按一下「 **[!UICONTROL 建立]**」。
+When finished, click **[!UICONTROL Create]**.
 
 ![](../images/ui/create-sandbox-dialog.png)
 
@@ -56,7 +56,7 @@ ht-degree: 0%
 >
 >由於您僅限於建立非生產沙盒類型， **[!UICONTROL type]** （類型）選項會鎖定在「非生產」，因此無法加以控制。
 
-建立完沙盒後，請重新整理頁面，新沙盒就會出現在 _[!UICONTROL Sandboxs]_（沙盒）控制面板中，狀態為「[!UICONTROL Creating]」。 新沙盒需要約15分鐘的時間才能由系統布建，之後其狀態會變更為「[!UICONTROL Active]」。
+建立完沙盒後，請重新整理頁面，新沙盒就會出現在 _[!UICONTROL Sandboxs]_ （沙盒）控制面板中，狀態為「[!UICONTROL Creating]」。 新沙盒需要約15分鐘的時間才能由系統布建，之後其狀態會變更為「[!UICONTROL Active]」。
 
 ![](../images/ui/sandbox-created.png)
 
@@ -96,7 +96,7 @@ ht-degree: 0%
 
 <img src="../images/ui/delete-are-you-sure.png" width="350"><br>
 
-隨即出現確認訊息，沙盒會從「沙盒」工作區 _[!UICONTROL 移除]_。
+隨即出現確認訊息，沙盒會從「沙盒」工作區 _[!UICONTROL 移除]_ 。
 
 ## 後續步驟
 
