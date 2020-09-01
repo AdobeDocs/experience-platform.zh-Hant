@@ -1,18 +1,19 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Apache Cassandra;apache cassandra;cassandra;Cassandra
 solution: Experience Platform
 title: Apache Cassandra連接器
 topic: overview
+description: 以下檔案提供如何使用API將Apache Cassandra連接至平台的資訊。
 translation-type: tm+mt
-source-git-commit: 6ffdcc2143914e2ab41843a52dc92344ad51bcfb
+source-git-commit: d3ece56d10b1940a5992906a65a50ffe2f7e4346
 workflow-type: tm+mt
-source-wordcount: '122'
+source-wordcount: '137'
 ht-degree: 0%
 
 ---
 
 
-# [!DNL Apache Cassandra ]連接器
+# [!DNL Apache Cassandra] 連接器
 
 Adobe Experience Platform可讓您從外部來源擷取資料，同時提供您使用服務建構、標示及增強傳入資料的 [!DNL Platform] 能力。 您可以從多種來源（例如Adobe應用程式、雲端儲存空間、資料庫等）擷取資料。
 
