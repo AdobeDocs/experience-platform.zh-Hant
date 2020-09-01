@@ -5,7 +5,7 @@ doc-type: release notes
 last-update: December 12, 2019
 author: ens71067
 translation-type: tm+mt
-source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
+source-git-commit: f8d13b305a61f8606c4fa1ceee6d4518b5d83fda
 workflow-type: tm+mt
 source-wordcount: '682'
 ht-degree: 5%
@@ -35,11 +35,11 @@ Adobe Experience Platform Segmentation Service提供使用者介面和REST風格
 | 功能 | 說明 |
 |--- | ---|
 | 「合併的對象」索引標籤 [!DNL Segment Builder] | 區 [!UICONTROL _段和_] 「對象 [!UICONTROL _」標籤_] 已合併為單一「對 [!DNL Segment Builder] 像 [!UICONTROL __] 」標籤。 此標籤可讓您瀏覽並搜尋現有的對象，然後拖放至規則產生器畫布以建立新的區段定義。 參考對象可將下列規則集邏輯新增至新區段定義：作為規則的對象會籍，是定義參考對象的完整規則邏輯集。 |
-| 合併策略選擇器的新位置 | 合併策略選擇器在中的位置已 [!DNL Segment Builder] 經更改。 要為段定義選擇合併策略，請按一下「 [!UICONTROL _Fields_] 」（欄位）頁籤上的齒輪表徵圖，然後使用「 _[!UICONTROL Merge Policy]_ 」（合併策略）下拉菜單選擇要使用的合併策略。 |
+| 合併策略選擇器的新位置 | 合併策略選擇器在中的位置已 [!DNL Segment Builder] 經更改。 要為段定義選擇合併策略，請按一下「 **[!UICONTROL Fields]** 」（欄位）頁籤上的齒輪表徵圖，然後使用「 **[!UICONTROL Merge Policy]** 」（合併策略）下拉菜單選擇要使用的合併策略。 |
 
 **已知問題**
 
-* 無
+* None
 
 如需詳細資訊，請參閱區段 [服務概觀](../../segmentation/home.md)。
 
@@ -55,7 +55,7 @@ Adobe Experience Platform可 [!DNL Decisioning Service] 讓您以程式設計方
 
 **已知問題**
 
-* 無.
+* None.
 
 如需服 [務的完整簡介](../../decisioning-service/home.md) ，請參閱決策服務概觀。
 
@@ -74,7 +74,7 @@ Adobe Experience Platform可以從外部來源擷取資料，同時讓您使用�
 
 **已知問題**
 
-* 無.
+* None.
 
 如需來源的詳細資訊，請參閱來 [源概觀](../../sources/home.md)。
 
@@ -97,6 +97,6 @@ XDM是公開記載的規格，旨在改善數位體驗的強大功能。 它提�
 
 **已知問題**
 
-* 無
+* None
 
 若要進一步瞭解如何使用 [!DNL Schema Registry] API和使用者介 [!DNL Schema Editor] 面使用XDM，請閱讀 [XDM系統檔案](../../xdm/home.md)。
