@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 將CSV檔案對應至XDM架構
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
+source-git-commit: c6c5ada52321b11543254f80399c38365f0fb9d7
 workflow-type: tm+mt
 source-wordcount: '1371'
 ht-degree: 2%
@@ -29,13 +29,13 @@ ht-degree: 2%
 
 ## 選擇目標
 
-登入 [[!DNL Adobe Experience Platform]](https://platform.adobe.com) ，然後從左側導覽列選取「工作流程 **[!UICONTROL 」以存取「工]** 作流程 ** 」工作區。
+登入 [[!DNL Adobe Experience Platform]](https://platform.adobe.com) ，然後從左側導覽列選取「工作流程 **[!UICONTROL 」以存取「工]** 作流程 **** 」工作區。
 
 在「工 **[!UICONTROL 作流程]** 」螢幕中，選擇 **[!UICONTROL 「]** Data ingestion **[!UICONTROL 」部分下的「將CSV映射到XDM模式」，然後選]******&#x200B;擇LaunchChec。
 
 ![](../images/tutorials/map-a-csv-file/workflows.png)
 
-將 *[!UICONTROL CSV對應至XDM架構]* ，從「目標」步驟 *[!UICONTROL 開始]* 。 選擇要接收傳入資料的資料集。 您可以使用現有資料集或建立新資料集。
+將 **[!UICONTROL CSV對應至XDM架構]** ，從「目標」步驟 **[!UICONTROL 開始]** 。 選擇要接收傳入資料的資料集。 您可以使用現有資料集或建立新資料集。
 
 **使用現有資料集**
 
@@ -49,27 +49,27 @@ ht-degree: 2%
 
 ## 新增資料
 
-此時將 *[!UICONTROL 顯示「添加資料]* 」步驟。 將CSV檔案拖放至提供的空間，或選取「選 **[!UICONTROL 擇檔案]** 」以手動輸入CSV檔案。
+此時將 **[!UICONTROL 顯示「添加資料]** 」步驟。 將CSV檔案拖放至提供的空間，或選取「選 **[!UICONTROL 擇檔案]** 」以手動輸入CSV檔案。
 
 ![](../images/tutorials/map-a-csv-file/add-data.png)
 
-上 *[!UICONTROL 傳檔案後]* ,「範例資料」區段就會出現，顯示前10列資料。 確認資料已如預期上傳後，請選取「下一 **[!UICONTROL 步」]**。
+上 **[!UICONTROL 傳檔案後]** ,「範例資料」區段就會出現，顯示前10列資料。 確認資料已如預期上傳後，請選取「下一 **[!UICONTROL 步」]**。
 
 ![](../images/tutorials/map-a-csv-file/sample-data.png)
 
 ## 將CSV欄位對應至XDM結構欄位
 
-此時將 *[!UICONTROL 顯示]* 「映射」步驟。 CSV檔案的欄位列在「來源欄位」 *[!UICONTROL 下]*，其對應的XDM架構欄位列在「目標欄位」 *[!UICONTROL 下]*。 未選取的目標欄位以紅色勾勒。 您可以使用篩選欄位選項來縮小可用來源欄位的清單。
+此時將 **[!UICONTROL 顯示]** 「映射」步驟。 CSV檔案的欄位列在「來源欄位」 **[!UICONTROL 下]**，其對應的XDM架構欄位列在「目標欄位」 **[!UICONTROL 下]**。 未選取的目標欄位以紅色勾勒。 您可以使用篩選欄位選項來縮小可用來源欄位的清單。
 
 要將CSV列映射到XDM欄位，請選擇該列相應目標欄位旁的架構表徵圖。
 
 ![](../images/tutorials/map-a-csv-file/mapping.png)
 
-將出 *[!UICONTROL 現「選擇方案]* 」欄位窗口。 您可以在這裡導覽XDM架構的結構，並找出您要將CSV欄對應至的欄位。 按一下XDM欄位以選取它，然後按一下「選 **[!UICONTROL 取]**」。
+將出 **[!UICONTROL 現「選擇方案]** 」欄位窗口。 您可以在這裡導覽XDM架構的結構，並找出您要將CSV欄對應至的欄位。 按一下XDM欄位以選取它，然後按一下「選 **[!UICONTROL 取]**」。
 
 ![](../images/tutorials/map-a-csv-file/select-schema-field.png)
 
-「映 *[!UICONTROL 射]* 」畫面會重新出現，選取的XDM欄位現在會顯示在「目標 *[!UICONTROL 欄位」下]*。
+「映 **[!UICONTROL 射]** 」畫面會重新出現，選取的XDM欄位現在會顯示在「目標 **[!UICONTROL 欄位」下]**。
 
 ![](../images/tutorials/map-a-csv-file/field-mapped.png)
 
@@ -77,7 +77,7 @@ ht-degree: 2%
 
 ![](../images/tutorials/map-a-csv-file/remove-mapping.png)
 
-如果要添加新映射，請選擇「源 **[!UICONTROL 欄位」清單頂部的]** 「添加 *[!UICONTROL 新映射]* 」。
+如果要添加新映射，請選擇「源 **[!UICONTROL 欄位」清單頂部的]** 「添加 **[!UICONTROL 新映射]** 」。
 
 ![](../images/tutorials/map-a-csv-file/add-mapping.png)
 
@@ -95,7 +95,7 @@ ht-degree: 2%
 
 ![](../images/tutorials/map-a-csv-file/create-calculated-fields.png)
 
-| 定位 | 說明 |
+| 標籤 | 說明 |
 | --------- | ----------- |
 | 欄位 | 「欄位」頁籤列出了源方案中可用的欄位和屬性。 |
 | 函數 | 函式頁籤列出了可用於轉換資料的函式。 |
@@ -125,7 +125,7 @@ ht-degree: 2%
 
 ### 映射函式
 
-某些映射函式可用於根據在源欄位中輸入的內容計算和計算值。 若要使用函式，請在「來源欄位」下方輸入 *[!UICONTROL 函式]* ，並輸入適當的語法和輸入。
+某些映射函式可用於根據在源欄位中輸入的內容計算和計算值。 若要使用函式，請在「來源欄位」下方輸入 **[!UICONTROL 函式]** ，並輸入適當的語法和輸入。
 
 例如，若要串連 **城市****CSV和國家／地區** CSV欄位，並將它們指派至 **城市** XDM欄位，請將來源欄位設為 `concat(city, ", ", county)`。
 
