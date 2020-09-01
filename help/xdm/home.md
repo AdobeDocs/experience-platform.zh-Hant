@@ -1,11 +1,11 @@
 ---
-keywords: Experience Platform;home;popular topics;XDM;XDM system;XDM individual profile;XDM ExperienceEvent;XDM Experience Event;experienceEvent;experience event;Mixins;mixins;mixin;Mixin;Experience event;XDM Experience Event;XDM ExperienceEvent;experienceEvent;experienceevent;XDM Experienceevenet
+keywords: Experience Platform;home;popular topics;XDM;XDM system;XDM individual profile;XDM ExperienceEvent;XDM Experience Event;experienceEvent;experience event;Mixins;mixins;mixin;Mixin;Experience event;XDM Experience Event;XDM ExperienceEvent;experienceEvent;experienceevent;XDM Experienceevenet;experience data model;Experience data model;Experience Data Model;data model;Data Model;schema registry;Schema Registry;schema library;Schema Library;schema;record data;time series;time-series
 solution: Experience Platform
 title: 體驗資料模型(XDM)系統
 topic: overview
 description: '標準化和互操作性是Adobe Experience Platform的主要概念。 Adobe推動的Experience Data Model(XDM)旨在標準化客戶體驗資料並定義客戶體驗管理的架構。 '
 translation-type: tm+mt
-source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
+source-git-commit: ed1f2fdac0f9c977d11c867327c084353c1bcd0f
 workflow-type: tm+mt
 source-wordcount: '1638'
 ht-degree: 2%
@@ -58,7 +58,7 @@ XDM是基礎架構，可讓Adobe Experience Cloud在適當的時機，在適當�
 
 ### [!DNL XDM ExperienceEvent]
 
-XDM ExperienceEvent是以時間序列為基礎的類別，用於在發生事件（或事件集）時擷取系統狀態，包括所涉主題的時間點和身分。 「體驗事件」是所發生事件的事實記錄，因此它們是不可變的，不經匯總或解譯即代表所發生的事件。 它們對於時域分析至關重要，因為它們可用於分析特定時段內發生的變更，以及比較多個時段以追蹤趨勢。
+XDM ExperienceEvent是以時間序列為基礎的類別，用於在發生事件（或事件集）時擷取系統狀態，包括所涉主題的時間點和身分。 「體驗事件」是所發生事件的事實記錄，因此它們是不可變的，不經匯總或解譯即代表所發生的事件。 它們對於時域分析至關重要，因為它們可用於分析特定時間範圍內發生的變更，以及比較多個時間窗口以追蹤趨勢。
 
 「體驗事件」可以是明確或隱含的。 明確事件是直接觀察到的人類行為在旅程的某個時刻發生。 隱含事件是指在沒有直接人類行動的情況下引發，但仍與個人有關的事件。 隱式事件的範例包括排程傳送電子郵件電子報或電池電壓達到特定臨界值。
 
@@ -76,7 +76,7 @@ XDM ExperienceEvent是以時間序列為基礎的類別，用於在發生事件�
 
 [!DNL Catalog] 資料會儲存在高度 [!DNL Data Lake]精細的資料儲存區中，其中包含所有由管理的資料，不 [!DNL Platform]論來源或檔案格式為何。
 
-若要開始將資料收 [!DNL Experience Platform]入資料，請使用建立資料集 [!DNL Catalog Service]。 該資料集引用描述要攝取的資料的結構的XDM模式。 如果建立的資料集沒有模式， [!DNL Experience Platform] 將通過檢查所收錄資料欄位的類型和內容來導出「觀察到的模式」。 然後，資料集將被跟 [!DNL Catalog] 蹤並與其所基 [!DNL Data Lake] 於的模式和觀察到的模式一起儲存在中。
+若要開始將資料收 [!DNL Experience Platform]入資料，請使用建立資料集 [!DNL Catalog Service]。 該資料集引用描述要攝取的資料的結構的XDM模式。 如果建立的資料集沒有模式， [!DNL Experience Platform] 將通過檢查所收錄資料欄位的類型和內容來導出「觀察到的模式」。 然後，資料集將被跟 [!DNL Catalog] 蹤並與其所基 [!DNL Data Lake] 於的模式和觀察的模式一起儲存在中。
 
 如需詳細資訊， [!DNL Catalog]請參閱目錄 [服務概觀](../catalog/home.md)。 如需Adobe Experience Platform資料擷取的詳細資訊，請參閱資料擷取 [概觀](../ingestion/home.md)。
 
@@ -98,7 +98,7 @@ Adobe Experience Platform可 [!DNL Query Service] 讓您使用標準SQL來查詢
 
 當資 [!DNL XDM Individual Profile] 料被 [!DNL XDM ExperienceEvent] 擷取及管理時，會觸發 [!DNL Catalog][!DNL Real-time Customer Profile] 開始擷取已啟用其使用功能的資料。 所擷取的互動與詳細資訊越多，個別描述檔就越強穩。
 
-[!DNL XDM Individual Profile] 資料有助於透過任何通道或Adobe解決方案整合，為行動提供資訊並賦予其能力，當資料與豐富的行為與互動資料記錄搭配使用時，此資料可協助機器學習。 此 [!DNL Real-time Customer Profile] API也可用來豐富協力廠商解決方案、CRM和專屬解決方案的功能。
+[!DNL XDM Individual Profile] 資料有助於透過任何通道或Adobe解決方案整合，為行動提供資訊並賦予其能力，當資料與豐富的行為與互動資料記錄搭配使用時，這些資料將可協助機器學習。 此 [!DNL Real-time Customer Profile] API也可用來豐富協力廠商解決方案、CRM和專屬解決方案的功能。
 
 如需詳 [細資訊，請參閱即時客戶個人檔案](../profile/home.md) 。
 
