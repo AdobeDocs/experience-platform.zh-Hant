@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 隱私權服務使用指南
 topic: UI guide
 translation-type: tm+mt
-source-git-commit: c8446f6040ac9ef1f4196d9057b531011e243258
+source-git-commit: 397f08efa276f7885e099a0a8d9dc6d23fe0e8cc
 workflow-type: tm+mt
 source-wordcount: '1056'
 ht-degree: 0%
@@ -70,7 +70,7 @@ UI的控制面 [!DNL Privacy Service] 板提供兩個介面工具集，可讓您
 
 ![作業請求搜索選項](../images/user-guide/job-search.png)
 
-要查看特定作業請求的詳細資訊，請從清單中按一下該請求的作業ID以開啟「作業詳細 *[!UICONTROL 資訊]* 」頁。
+要查看特定作業請求的詳細資訊，請從清單中按一下該請求的作業ID以開啟「作業詳細 **[!UICONTROL 資訊]** 」頁。
 
 ![GDPR UI工作詳細資訊](../images/user-guide/job-details.png)
 
@@ -101,7 +101,7 @@ UI提 [!DNL Privacy Service] 供兩種方法來建立新的工作請求：
 
 ![按一下「建立請求」](../images/user-guide/create-request.png)
 
-隨即 *[!UICONTROL 開啟「建立請求]* 」對話方塊，顯示針對目前選取的規則類型提交隱私權工作請求的可用選項。
+隨即 **[!UICONTROL 開啟「建立請求]** 」對話方塊，顯示針對目前選取的規則類型提交隱私權工作請求的可用選項。
 
 <img src="../images/user-guide/request-builder.png" width="500" /><br/>
 
@@ -109,7 +109,7 @@ UI提 [!DNL Privacy Service] 供兩種方法來建立新的工作請求：
 
 <img src="../images/user-guide/type-and-products.png" width="500" /><br/>
 
-在「 *[!UICONTROL 命名空間類型]*」下，為要傳送至的客戶ID選取適當的命名空間類型 [!DNL Privacy Service]。
+在「 **[!UICONTROL 命名空間類型]**」下，為要傳送至的客戶ID選取適當的命名空間類型 [!DNL Privacy Service]。
 
 <img src="../images/user-guide/namespace-type.png" width="500" /><br/>
 
@@ -135,7 +135,7 @@ When finished, click **[!UICONTROL Create]**.
 
 ![請求建立選項](../images/user-guide/create-options.png)
 
-此時 *[!UICONTROL 會出現「上傳JSON]* 」對話方塊，提供您將JSON檔案拖放至其中的視窗。
+此時 **[!UICONTROL 會出現「上傳JSON]** 」對話方塊，提供您將JSON檔案拖放至其中的視窗。
 
 <img src="../images/user-guide/upload-json.png" width="500" /><br/>
 
