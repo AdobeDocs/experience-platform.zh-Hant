@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;;experience data model;Experience data model;Experience Data Model;data model;Data Model;schema registry;Schema Registry;list;List;get;GET
 solution: Experience Platform
 title: 列出資源
+description: 通過執行單個GET請求，可以查看容器內特定類型（類、混合、方案、資料類型或描述符）的所有模式註冊表資源的清單。
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: cb5df9b44486bda84f08805f1077d6097e3666e2
+source-git-commit: 74a4a3cc713cc068be30379e8ee11572f8bb0c63
 workflow-type: tm+mt
-source-wordcount: '508'
+source-wordcount: '538'
 ht-degree: 2%
 
 ---
@@ -107,7 +108,7 @@ curl -X GET \
 | `<=` | 依屬性是否小於或等於提供的值來篩選。 | `property=version<=5` |
 | `>=` | 依屬性大於或等於提供的值來篩選。 | `property=version>=5` |
 | `~` | 依屬性是否與提供的規則運算式相符來篩選。 | `property=title~test$` |
-| (無) | 僅聲明屬性名稱僅返回存在屬性的條目。 | `property=title` |
+| (None) | 僅聲明屬性名稱僅返回存在屬性的條目。 | `property=title` |
 
 >[!TIP]
 >
