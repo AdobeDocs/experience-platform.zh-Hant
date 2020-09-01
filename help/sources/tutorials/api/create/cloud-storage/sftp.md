@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;SFTP;sftp;Secure File Transfer Protocol;secure file transfer protocol
 solution: Experience Platform
 title: 使用Flow Service API建立SFTP連接器
 topic: overview
+description: 本教學課程使用Flow Service API來引導您完成將Experience Platform連接至SFTP（安全檔案傳輸通訊協定）伺服器的步驟。
 translation-type: tm+mt
-source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
+source-git-commit: 25f1dfab07d0b9b6c2ce5227b507fc8c8ecf9873
 workflow-type: tm+mt
-source-wordcount: '543'
+source-wordcount: '568'
 ht-degree: 2%
 
 ---
