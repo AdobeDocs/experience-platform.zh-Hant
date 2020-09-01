@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics; flow service; crm; salesforce; dynamics
+keywords: Experience Platform;home;popular topics;crm;CRM
 solution: Experience Platform
 title: 透過來源連接器和API收集CRM資料
 topic: overview
-description: 本教學課程涵蓋從協力廠商CRM擷取資料，並透過來源連接器和Flow Service API將其匯入平台的步驟。
+description: 本教學課程涵蓋從協力廠商CRM系統擷取資料，並透過來源連接器和API將其匯入平台的步驟。
 translation-type: tm+mt
-source-git-commit: 6578fd607d6f897a403d0af65c81dafe3dc12578
+source-git-commit: 6f4714561c2946a084eed4e89d3148df5b8044f5
 workflow-type: tm+mt
-source-wordcount: '1596'
+source-wordcount: '1595'
 ht-degree: 1%
 
 ---
