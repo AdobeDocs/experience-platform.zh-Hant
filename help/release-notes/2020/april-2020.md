@@ -6,9 +6,9 @@ last-update: April 13, 2020
 author: ens71067
 keywords: release notes;
 translation-type: tm+mt
-source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
+source-git-commit: 0f3a4ba6ad96d2226ae5094fa8b5073152df90f7
 workflow-type: tm+mt
-source-wordcount: '993'
+source-wordcount: '991'
 ht-degree: 5%
 
 ---
@@ -37,7 +37,7 @@ Adobe Experience Platform的新功能：
 | 功能 | 說明 |
 |---|---|
 | [!DNL Customer AI] | [!DNL Customer AI] 為行銷人員提供在個別層級產生客戶預測的能力，並提供說明。 借助有影響力的因素， [!DNL Customer AI] 您可以瞭解客戶可能做什麼以及為什麼。 此外，行銷人員可從預測和洞 [!DNL Customer AI] 見中獲益，透過提供最適當的優惠和訊息，個人化客戶體驗。 |
-| [!DNL Attribution AI] | [!DNL Attribution AI] 是一種多通道的算法歸因服務，可計算客戶互動對特定結果的影響和增量影響。 有了 [!DNL Attribution AI]，行銷人員可以透過瞭解客戶歷程各個階段的每個個別客戶互動的影響，衡量並最佳化行銷和廣告支出。 |
+| [!DNL Attribution AI] | [!DNL Attribution AI] 是一種多通道的算法歸因服務，可計算客戶互動對特定結果的影響和增量影響。 有了 [!DNL Attribution AI]，行銷人員可以透過瞭解客戶歷程各個階段中每個客戶互動的影響，來衡量並最佳化行銷和廣告支出。 |
 
 **已知問題**
 
@@ -73,7 +73,7 @@ Adobe Experience Platform是一 [!DNL Data Governance] 系列用於管理客戶�
 
 開始使用資料治理需要對適用於客戶資料的法規、合約義務和公司政策有深入的瞭解。 在此基礎上，通過應用適當的資料使用標籤對資料進行分類，並通過定義資料使用策略來控制其使用。
 
-DULE框架通過用戶介面和DULE [!DNL Experience Platform][!DNL Policy Service] API簡化了資料分類和建立資料使用策略的過程。
+此架 [!DNL Data Governance] 構透過使用者介面和 [!DNL Experience Platform] API，簡化資料分類和建立資料使用原則的 [!DNL Policy Service] 程式並簡化程式。
 
 **新功能**
 
@@ -83,7 +83,7 @@ DULE框架通過用戶介面和DULE [!DNL Experience Platform][!DNL Policy Servi
 
 **已知問題**
 
-* 無.
+* None.
 
 如需詳細資訊，請參閱資 [料管理概觀](../../data-governance/home.md)。
 
@@ -117,7 +117,7 @@ Adobe Real-time CDP現在支援將資料啟動至超過50種擴充功能 [!DNL E
 
 已知問題
 
-* 無
+* None
 
 如需詳細資訊， [!DNL Privacy Service]請先閱讀隱私權服務 [概觀](../../privacy-service/home.md)。
 
@@ -137,6 +137,6 @@ Adobe Experience Platform可以從外部來源擷取資料，同時讓您使用�
 
 **已知問題**
 
-* 無
+* None
 
 若要進一步瞭解來源，請參閱 [來源概觀](../../sources/home.md)。
