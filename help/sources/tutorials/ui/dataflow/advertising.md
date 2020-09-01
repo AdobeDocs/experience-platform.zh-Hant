@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 在UI中為廣告連接器配置資料流
 topic: overview
 translation-type: tm+mt
-source-git-commit: 6bd5dc5a68fb2814ab99d43b34f90aa7e50aa463
+source-git-commit: c6c5ada52321b11543254f80399c38365f0fb9d7
 workflow-type: tm+mt
 source-wordcount: '1272'
 ht-degree: 0%
@@ -23,13 +23,13 @@ ht-degree: 0%
 - [[!DNL Experience Data Model] (XDM)系統](../../../../xdm/home.md):組織客戶體驗資料 [!DNL Experience Platform] 的標準化架構。
    - [架構構成基礎](../../../../xdm/schema/composition.md):瞭解XDM架構的基本建置區塊，包括架構組合的主要原則和最佳實務。
    - [架構編輯器教程](../../../../xdm/tutorials/create-schema-ui.md):瞭解如何使用架構編輯器UI建立自訂架構。
-- [[!DNL 即時客戶基本資料]](../../../../profile/home.md):根據來自多個來源的匯整資料，提供統一、即時的消費者個人檔案。
+- [[!DNL即時客戶基本資料]](../../../../profile/home.md):根據來自多個來源的匯整資料，提供統一、即時的消費者個人檔案。
 
 此外，本教學課程要求您已建立廣告帳戶。 如需在UI中建立不同付款連接器的教學課程清單，請參閱來源連 [接器概觀](../../../home.md)。
 
 ## 選擇資料
 
-建立廣告帳戶後，會出現「選 *[!UICONTROL 取資料]* 」步驟，提供互動式介面供您探索檔案階層。
+建立廣告帳戶後，會出現「選 **[!UICONTROL 取資料]** 」步驟，提供互動式介面供您探索檔案階層。
 
 - 介面的左半部分是目錄瀏覽器，顯示伺服器的檔案和目錄。
 - 介面的右半部分可讓您從相容檔案中預覽最多100列資料。
@@ -40,7 +40,7 @@ ht-degree: 0%
 
 ## 將資料欄位對應至XDM架構
 
-此時 *[!UICONTROL 會顯示]* 「映射」步驟，提供互動式介面，將來源資料映射至資料 [!DNL Platform] 集。
+此時 **[!UICONTROL 會顯示]** 「映射」步驟，提供互動式介面，將來源資料映射至資料 [!DNL Platform] 集。
 
 選擇要接收傳入資料的資料集。 您可以使用現有資料集或建立新資料集。
 
@@ -50,7 +50,7 @@ ht-degree: 0%
 
 ![use-existing-dataset](../../../images/tutorials/dataflow/advertising/use-existing-target-dataset.png)
 
-將出 *[!UICONTROL 現「選擇資料集]* 」對話框。 尋找您要使用的資料集，選取它，然後按一下「繼 **[!UICONTROL 續]**」。
+將出 **[!UICONTROL 現「選擇資料集]** 」對話框。 尋找您要使用的資料集，選取它，然後按一下「繼 **[!UICONTROL 續]**」。
 
 ![select-existing-dataset](../../../images/tutorials/dataflow/advertising/select-existing-dataset.png)
 
@@ -62,11 +62,11 @@ ht-degree: 0%
 
 ![create-new-dataset](../../../images/tutorials/dataflow/all-tabular/new-target-dataset.png)
 
-將出 *[!UICONTROL 現「選擇模式]* 」對話框。 選擇要應用到新資料集的模式，然後按一下 **[!DNL Done]**。
+將出 **[!UICONTROL 現「選擇模式]** 」對話框。 選擇要應用到新資料集的模式，然後按一下 **[!DNL Done]**。
 
 ![select-schema](../../../images/tutorials/dataflow/advertising/select-existing-schema.png)
 
-您可以根據需要選擇直接映射欄位，或使用映射器函式轉換源資料以導出計算值或計算值。 有關資料映射和映射器函式的詳細資訊，請參閱將CSV資料映 [射到XDM模式欄位的教程](../../../../ingestion/tutorials/map-a-csv-file.md)。
+根據您的需求，您可以選擇直接映射欄位，或使用映射器函式轉換來源資料以衍生計算或計算值。 有關資料映射和映射器函式的詳細資訊，請參閱將CSV資料映 [射到XDM模式欄位的教程](../../../../ingestion/tutorials/map-a-csv-file.md)。
 
 映射源資料後，按一下「下 **[!UICONTROL 一步]**」。
 
@@ -74,14 +74,14 @@ ht-degree: 0%
 
 ## 排程擷取執行
 
-此時 *[!UICONTROL 會顯示「排程]* 」步驟，允許您配置提取計畫，以使用配置的映射自動提取選定的源資料。 下表概述了用於計畫的不同可配置欄位：
+此時 **[!UICONTROL 會顯示「排程]** 」步驟，允許您配置提取計畫，以使用配置的映射自動提取選定的源資料。 下表概述了用於計畫的不同可配置欄位：
 
 | 欄位 | 說明 |
 | --- | --- |
 | 頻率 | 可選頻率 `Once`包括 `Minute`、 `Hour`、 `Day`和 `Week`。 |
 | 間隔 | 一個整數，用於設定所選頻率的間隔。 |
 | 開始時間 | UTC時間戳記，指示何時設定進行第一次擷取。 |
-| 回填 | 一個布爾值，可決定最初收錄的資料。 如果 *[!UICONTROL 啟用回填]* ，則指定路徑中的所有目前檔案將在第一次排程擷取期間被擷取。 如果 *停用* 「回填」 *[!UICONTROL ，則只會收錄在首次擷取執行和開始時間之間載入的]* 檔案。 在開始時間之前載 *[!UICONTROL 入的檔案]* ，將不會收錄。 |
+| 回填 | 一個布爾值，可決定最初收錄的資料。 如果 **[!UICONTROL 啟用回填]** ，則指定路徑中的所有目前檔案將在第一次排程擷取期間被擷取。 如果 **[!UICONTROL 停用]** 「回填」 **[!UICONTROL ，則只會收錄在首次擷取執行和開始時間之間載入的]** 檔案。 在開始時間之前載 **[!UICONTROL 入的檔案]** ，將不會收錄。 |
 | 增量列 | 具有類型、日期或時間的一組已篩選源架構欄位的選項。 此欄位用於區分新資料和現有資料。 增量資料將根據選取欄的時間戳記進行擷取。 |
 
 資料流設計為在計畫基礎上自動收錄資料。 從選取擷取頻率開始。 接著，設定間隔，以指定兩個流程執行之間的期間。 間隔的值應為非零整數，且應設定為大於或等於15。
