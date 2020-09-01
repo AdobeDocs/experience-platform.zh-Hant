@@ -5,7 +5,7 @@ title: Adobe Experience Platform來源連接器概觀
 topic: overview
 description: Adobe Experience Platform可讓您從外部來源擷取資料，同時提供您使用平台服務來建構、標示及增強傳入資料的能力。 您可以從多種來源（例如Adobe應用程式、雲端儲存空間、資料庫等）擷取資料。
 translation-type: tm+mt
-source-git-commit: c8e53a25c5b22e8d840658fe26ff47875947a6d0
+source-git-commit: c6c5ada52321b11543254f80399c38365f0fb9d7
 workflow-type: tm+mt
 source-wordcount: '866'
 ht-degree: 0%
@@ -112,14 +112,14 @@ CRM系統提供的資料有助於建立客戶關係，進而建立忠誠度並�
 
 ## 資料擷取中的來源存取控制
 
-您可在Adobe Admin Console中管理資料擷取來源的權限。 您可以透過特定產品設定檔 *[!UICONTROL 的「權限]* 」索引標籤來存取權限。 從「編 **[!UICONTROL 輯權限]** 」面板，您可以透過資料擷取功能表項目存取與來 *[!UICONTROL 源相關的權]* 限。 「檢 **[!UICONTROL 視來源]** 」權限授予對「目錄 *[!UICONTROL 」頁籤中可用來源的只讀訪問權，並授予「瀏覽」頁籤中已驗證的源的只讀訪問權，而「管理來源]******* 」權限授予讀取、建立、編輯和禁用源的完全訪問權限。
+您可在Adobe Admin Console中管理資料擷取來源的權限。 您可以透過特定產品設定檔 **[!UICONTROL 的「權限]** 」索引標籤來存取權限。 從「編 **[!UICONTROL 輯權限]** 」面板，您可以透過資料擷取功能表項目存取與來 **[!UICONTROL 源相關的權]** 限。 「檢 **[!UICONTROL 視來源]** 」權限授予對「目錄 **[!UICONTROL 」頁籤中可用來源的只讀訪問權，並授予「瀏覽」頁籤中已驗證的源的只讀訪問權，而「管理來源]********** 」權限授予讀取、建立、編輯和禁用源的完全訪問權限。
 
 下表概述UI根據這些權限的不同組合而運作的方式：
 
 | 權限層級 | 說明 |
 | ---- | ----|
 | **[!UICONTROL 檢視來源]** On | 授予對 *Catalog* （目錄）頁籤中每個源類型以及 *Browse*、 *Accounts*（帳戶）和 ** DataFlow（資料流）頁籤中的源的只讀訪問權。 |
-| **[!UICONTROL 管理來源]** On | 除了 **[!UICONTROL View Sources中的函式外]**，還授與對Catalog *[!UICONTROL 中]* Connect Sources *[!UICONTROL 選項和Select Data]***** Select BrowseConnect Option中函式的訪問權。 **[!UICONTROL Manage Sources]** 也可讓您啟用或停用 *[!UICONTROL DataFlows]* ，並編輯其排程。 |
+| **[!UICONTROL 管理來源]** On | 除了 **[!UICONTROL View Sources中的函式外]**，還授與對Catalog **[!UICONTROL 中]** Connect Sources **[!UICONTROL 選項和Select Data]********** Select BrowseConnect Option中函式的訪問權。 **[!UICONTROL Manage Sources]** 也可讓您啟用或停用 **[!UICONTROL DataFlows]** ，並編輯其排程。 |
 | **[!UICONTROL 關閉Sources]** 並管 **[!UICONTROL 理Sources]** Off | 撤銷對來源的所有存取權。 |
 
 如需透過「管理控制台」授予之可用權限（包括這四個來源）的詳細資訊，請參閱存 [取控制概觀](../access-control/home.md)。
