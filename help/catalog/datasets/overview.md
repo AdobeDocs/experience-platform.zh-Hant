@@ -5,9 +5,9 @@ title: 資料集總覽
 topic: datasets
 description: 本檔案提供Experience Platform中資料集的高階概述。
 translation-type: tm+mt
-source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
+source-git-commit: 0f3a4ba6ad96d2226ae5094fa8b5073152df90f7
 workflow-type: tm+mt
-source-wordcount: '731'
+source-wordcount: '722'
 ht-degree: 2%
 
 ---
@@ -41,7 +41,7 @@ Adobe Experience Platform資料擷取代表從各種來源擷取資 [!DNL Platfo
 
 ## 將使用情況標籤套用至資料集
 
-Adobe Experience Platform可 [!DNL Data Governance] 讓您管理客戶資料，以確保符合資料使用適用的法規、限制和政策。 使用「資料使用標籤與實施」(DULE)作為其核心框架， [!DNL Data Governance] 可讓您套用使用標籤，以根據套用至該資料的使用原則來分類資料。
+Adobe Experience Platform可 [!DNL Data Governance] 讓您管理客戶資料，以確保符合資料使用適用的法規、限制和政策。 該 [!DNL Data Governance] 框架允許您應用使用標籤，根據應用於該資料的使用策略對資料進行分類。
 
 資料使用標籤可套用至整個資料集或個別資料集欄位。 在資料集層級新增的標籤會由該資料集內的所有欄位繼承。
 
