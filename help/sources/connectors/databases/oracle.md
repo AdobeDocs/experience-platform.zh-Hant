@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Oracle;oracle
 solution: Experience Platform
 title: Oracle連接器
 topic: overview
+description: 下面的文檔提供了有關如何使用API或用戶介面將Oracle連接到平台的資訊。
 translation-type: tm+mt
-source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
+source-git-commit: d3ece56d10b1940a5992906a65a50ffe2f7e4346
 workflow-type: tm+mt
-source-wordcount: '179'
+source-wordcount: '197'
 ht-degree: 0%
 
 ---
