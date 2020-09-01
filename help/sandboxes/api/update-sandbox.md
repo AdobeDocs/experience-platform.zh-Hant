@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;update sandbox
 solution: Experience Platform
 title: 更新沙盒
 topic: developer guide
+description: 您可以透過提出PATCH請求來更新沙盒中的一或多個欄位，該請求會在請求路徑中包含沙盒的名稱，並在請求裝載中包含要更新的屬性。
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 0af537e965605e6c3e02963889acd85b9d780654
 workflow-type: tm+mt
-source-wordcount: '87'
-ht-degree: 4%
+source-wordcount: '120'
+ht-degree: 3%
 
 ---
 
