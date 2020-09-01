@@ -5,7 +5,7 @@ title: 即時機器學習筆記型電腦使用指南
 topic: Training and scoring a ML model
 description: 以下指南概述在Adobe Experience Platform JupyterLab中建立即時機器學習應用程式所需的步驟。
 translation-type: tm+mt
-source-git-commit: 9ba229195892245d29fb4f17b9f2e5cd6c6ea567
+source-git-commit: c6c5ada52321b11543254f80399c38365f0fb9d7
 workflow-type: tm+mt
 source-wordcount: '1656'
 ht-degree: 0%
@@ -86,13 +86,13 @@ pprint(nf.discover_nodes())
 >
 >在「即 **時ML** 」範本中， [會從中擷取汽車保險CSV資料集](https://github.com/adobe/experience-platform-dsw-reference/tree/master/datasets/insurance)[!DNL Github]。
 
-![載入傳輸資料](../images/rtml/load_training.png)
+![載入訓練資料](../images/rtml/load_training.png)
 
 如果您想要從Adobe Experience Platform內使用資料集，請取消下方儲存格的註解。 接下來，您需要以適 `DATASET_ID` 當的值取代。
 
 ![rtml資料集](../images/rtml/rtml-dataset.png)
 
-要訪問筆記本中的數 [!DNL JupyterLab] 據集，請在的左 **側導航中選擇** 「資料」頁籤 [!DNL JupyterLab]。 此時將 *[!UICONTROL 顯示Dataset]* 和 *[!UICONTROL Schemas目錄]* 。 選擇 **[!UICONTROL 資料集]** ，然後按一下滑鼠右鍵，然後從您要使用的資料集上的下拉式選單中選取「在筆記型電腦中 **[!UICONTROL 探索資料]** 」選項。 可執行代碼條目出現在筆記本底部。 這個牢房有你的 `dataset_id`。
+要訪問筆記本中的數 [!DNL JupyterLab] 據集，請在的左 **側導航中選擇** 「資料」頁籤 [!DNL JupyterLab]。 此時將 **[!UICONTROL 顯示Dataset]** 和 **[!UICONTROL Schemas目錄]** 。 選擇 **[!UICONTROL 資料集]** ，然後按一下滑鼠右鍵，然後從您要使用的資料集上的下拉式選單中選取「在筆記型電腦中 **[!UICONTROL 探索資料]** 」選項。 可執行代碼條目出現在筆記本底部。 這個牢房有你的 `dataset_id`。
 
 ![資料集存取](../images/rtml/access-dataset.png)
 
@@ -113,11 +113,11 @@ config_properties = {
 
 ### 準備您的模型
 
-使用 *[!UICONTROL 即時ML範本]* ，您需要分析、預處理、訓練和評估ML模型。 這是透過套用資料轉換和建立訓練管道來完成的。
+使用 **[!UICONTROL 即時ML範本]** ，您需要分析、預處理、訓練和評估ML模型。 這是透過套用資料轉換和建立訓練管道來完成的。
 
 **資料轉換**
 
-需 *[!UICONTROL 要修改即時ML]* 范 ** 本資料轉換儲存格，才能搭配您自己的資料集運作。 這通常涉及重新命名欄、資料統計以及資料準備／功能工程。
+需 **[!UICONTROL 要修改即時ML]** 范 ** 本資料轉換儲存格，才能搭配您自己的資料集運作。 這通常涉及重新命名欄、資料統計以及資料準備／功能工程。
 
 >[!NOTE]
 >
@@ -410,7 +410,7 @@ print(f'Updated dsl: {updated_dsl}')
 
 ## 計分 {#scoring}
 
-發佈至後， [!DNL Edge]計分會由用戶端的POST要求來完成。 通常，這可以從需要ML分數的用戶端應用程式完成。 您也可以從郵遞員處完成。 即 *[!UICONTROL 時ML範本使用EdgeUtils]* 來示範此程式。
+發佈至後， [!DNL Edge]計分會由用戶端的POST要求來完成。 通常，這可以從需要ML分數的用戶端應用程式完成。 您也可以從郵遞員處完成。 即 **[!UICONTROL 時ML範本使用EdgeUtils]** 來示範此程式。
 
 >[!NOTE]
 >
