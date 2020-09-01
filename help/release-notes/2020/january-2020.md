@@ -5,7 +5,7 @@ doc-type: release notes
 last-update: January 15, 2020
 author: crhoades, ens28527
 translation-type: tm+mt
-source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
+source-git-commit: c6c5ada52321b11543254f80399c38365f0fb9d7
 workflow-type: tm+mt
 source-wordcount: '894'
 ht-degree: 5%
@@ -39,7 +39,7 @@ XDM是公開記載的規格，旨在改善數位體驗的強大功能。 它提�
 
 **已知問題**
 
-* 無
+* None
 
 若要進一步瞭解如何使用 [!DNL Schema Registry] API和使用者介 [!DNL Schema Editor] 面使用XDM，請閱讀 [XDM系統檔案](../../xdm/home.md)。
 
@@ -59,7 +59,7 @@ XDM是公開記載的規格，旨在改善數位體驗的強大功能。 它提�
 
 **已知問題**
 
-* 無
+* None
 
 如需詳細資訊， [!DNL Privacy Service]請先閱讀隱私權服務 [概觀](../../privacy-service/home.md)。
 
@@ -82,11 +82,11 @@ Adobe Experience Platform可以從外部來源擷取資料，同時讓您使用�
 | 類別 | 權限 | 說明 |
 |--- | --- | ---|
 | 資料擷取 | 管理來源 | 存取讀取、建立、編輯和停用來源。 |
-| 資料擷取 | 檢視來源 | 對「目錄」標籤中可用來源的唯讀存 *[!UICONTROL 取]* ，以及「瀏覽」標籤中的已驗證 *[!UICONTROL 來源]* 。 |
+| 資料擷取 | 檢視來源 | 對「目錄」標籤中可用來源的唯讀存 **[!UICONTROL 取]** ，以及「瀏覽」標籤中的已驗證 **[!UICONTROL 來源]** 。 |
 
 **已知問題**
 
-* 無
+* None
 
 如需來源的詳細資訊，請參閱來 [源概觀](../../sources/home.md)
 
@@ -110,6 +110,6 @@ Adobe Experience Platform可以從外部來源擷取資料，同時讓您使用�
 
 **已知問題**
 
-* 無
+* None
 
 如需詳細 [資訊，請參閱](../../rtcdp/destinations/destinations-overview.md) 「目標概觀」。
