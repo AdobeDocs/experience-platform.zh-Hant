@@ -5,9 +5,9 @@ title: 資料使用政策概觀
 topic: policies
 description: 為了讓資料使用標籤有效支援資料合規性，必須實作資料使用政策。 資料使用原則是描述您在Experience Platform內對資料執行的行銷動作類型或限制的規則。
 translation-type: tm+mt
-source-git-commit: c081a7521be9715ca32d35504922a70767924fd7
+source-git-commit: 0f3a4ba6ad96d2226ae5094fa8b5073152df90f7
 workflow-type: tm+mt
-source-wordcount: '1007'
+source-wordcount: '1003'
 ht-degree: 0%
 
 ---
@@ -32,13 +32,13 @@ ht-degree: 0%
 >
 >行銷動作本身並不限制資料使用。 必須將它們納入已啟用的資料使用策略中，才能針對策略違規評估這些操作。
 
-當組織的服務中發生資料使用情形時，應指出相關的行銷動作，以便識別任何違反政策的行為。 然後，您可以使 [用DULE Policy Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) ，檢查整合中是否有違反原則的情況。
+當組織的服務中發生資料使用情形時，應指出相關的行銷動作，以便識別任何違反政策的行為。 然後，您就可以使 [用Policy Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) ，檢查整合中是否有違反原則的情況。
 
 >[!NOTE]
 >
 >如果您使用 [!DNL Real-time Customer Data Platform]，您可以在目的地設定行銷使用案例，以自動執行政策。 有關詳細資訊， [請參閱即時CDP中的資料治理](../../rtcdp/privacy/data-governance-overview.md) 文檔。
 
-如需Adobe定義之可用行銷動作清單，請參 [閱本檔案附錄](#core-actions)。 您也可以使用DULE [!DNL Policy Service] API或使用者介面來定義您自己的自訂 [!DNL Experience Platform ]行銷動作。 有關使用行銷動作和政策的詳細資訊，請參閱下一節。
+如需Adobe定義之可用行銷動作清單，請參 [閱本檔案附錄](#core-actions)。 您也可以使用API或使用者介面來定義您自己 [!DNL Policy Service] 的自訂行 [!DNL Experience Platform ]銷動作。 有關使用行銷動作和政策的詳細資訊，請參閱下一節。
 
 <!-- (Add after AAM DEC mapping doc is published)
 ### Inheritance from Adobe Audience Manager Data Export Controls
@@ -50,7 +50,7 @@ For a reference on how specific Data Export Controls map to marketing actions in
 
 ## 管理資料使用原則 {#manage}
 
-在套用資料使用標籤後，資料管理員可使用DULE [!DNL Policy Service] API或 [!DNL Experience Platform] UI來管理和評估對包含資料使用標籤的資料所執行的行銷動作相關的政策。 您可以建立和更新原則、決定原則的狀態，以及使用行銷動作來評估特定動作是否違反資料使用原則。
+在套用資料使用標籤後，資料管理員就可使用 [!DNL Policy Service] API或 [!DNL Experience Platform] UI來管理和評估對包含資料使用標籤的資料所執行的行銷動作相關的政策。 您可以建立和更新原則、決定原則的狀態，以及使用行銷動作來評估特定動作是否違反資料使用原則。
 
 >[!IMPORTANT]
 >
@@ -62,7 +62,7 @@ For a reference on how specific Data Export Controls map to marketing actions in
 
 ## 後續步驟
 
-本檔案介紹了DULE框架中的資料使用策略。 您現在可以繼續閱讀本指南中連結的流程檔案，以進一步瞭解如何在API和UI中使用原則。
+本檔案介紹了框架中的資料使用 [!DNL Data Governance] 策略。 您現在可以繼續閱讀本指南中連結的流程檔案，以進一步瞭解如何在API和UI中使用原則。
 
 ## 附錄
 
