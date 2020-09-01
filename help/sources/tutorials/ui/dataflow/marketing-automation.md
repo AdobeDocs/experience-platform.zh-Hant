@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;marketing automation connector
 solution: Experience Platform
 title: 在UI中為行銷自動化連接器設定資料流
 topic: overview
+description: 資料流是從源中檢索資料並將資料收錄到資料集的計畫 [!DNL Platform] 任務。 本教學課程提供使用行銷自動化帳戶設定新資料流的步驟。
 translation-type: tm+mt
-source-git-commit: 1bb896f7629d7b71b94dd107eeda87701df99208
+source-git-commit: fb60e11b9502c31e654d3fbe5dc240ace9429332
 workflow-type: tm+mt
-source-wordcount: '1284'
+source-wordcount: '1315'
 ht-degree: 0%
 
 ---
