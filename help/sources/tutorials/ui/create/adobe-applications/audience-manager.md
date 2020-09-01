@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Audience manager source connector;Audience Manager;audience manager connector
 solution: Experience Platform
 title: 在UI中建立Adobe Audience Manager來源連接器
 topic: overview
+description: 本教學課程會逐步帶您建立Adobe Audience Manager來源連接器，以便使用使用者介面將消費者體驗事件資料匯入平台的步驟。
 translation-type: tm+mt
-source-git-commit: 41fe3e5b2a830c3182b46b3e0873b1672a1f1b03
+source-git-commit: 0da686743e8bc57d310f7eff6f1bf812a8f31238
 workflow-type: tm+mt
-source-wordcount: '269'
+source-wordcount: '298'
 ht-degree: 2%
 
 ---
@@ -40,7 +41,7 @@ ht-degree: 2%
 
 ## 後續步驟
 
-當Audience Manager資料流處於作用中時，傳入的資料會自動收錄到即時客戶個人檔案中。 您現在可以利用此傳入資料，並使用「平台區隔服務」來建立觀眾區隔。 如需詳細資訊，請參閱下列檔案：
+當Audience Manager資料流處於作用中時，傳入的資料會自動內嵌至即時客戶個人檔案。 您現在可以利用此傳入資料，並使用「平台區隔服務」來建立觀眾區隔。 如需詳細資訊，請參閱下列檔案：
 
 - [即時客戶個人檔案總覽](../../../../../profile/home.md)
 - [區段服務概觀](../../../../../segmentation/home.md)
