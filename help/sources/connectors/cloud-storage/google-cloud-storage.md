@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Google雲端儲存空間連接器
 topic: overview
 translation-type: tm+mt
-source-git-commit: 340f5d0611e9e9eb4676018ee10c8a8aa08dbb2d
+source-git-commit: 1bb896f7629d7b71b94dd107eeda87701df99208
 workflow-type: tm+mt
 source-wordcount: '370'
 ht-degree: 0%
@@ -60,7 +60,7 @@ Adobe Experience Platform為AWS等雲端提供商提供原生連接 [!DNL Google
 
 ![](../../images/tutorials/create/google-cloud-storage/project-access.png)
 
-「互 **[!UICONTROL 操作性]** 」頁包含有關驗證、訪問密鑰和與用戶帳戶關聯的預設項目的資訊。 如果尚未建立可互操作訪問的預設項目，則可在「預設項目」( *[!UICONTROL Default project)中設定一個可互操作訪問]* 。 如果已建立預設專案，則區段會顯示專案已設為預設的確認。
+「互 **[!UICONTROL 操作性]** 」頁包含有關驗證、訪問密鑰和與用戶帳戶關聯的預設項目的資訊。 如果尚未建立可互操作訪問的預設項目，則可在「預設項目」( **[!UICONTROL Default project)中設定一個可互操作訪問]** 。 如果已建立預設專案，則區段會顯示專案已設為預設的確認。
 
 若要為您的使用者帳戶產生新的存取金鑰ID和機密存取金鑰，請選取「 **[!UICONTROL 建立金鑰]**」。
 
