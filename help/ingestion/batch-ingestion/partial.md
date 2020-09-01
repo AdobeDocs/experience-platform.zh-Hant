@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Adobe Experience Platform部分批次擷取概觀
 topic: overview
 translation-type: tm+mt
-source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
+source-git-commit: 1bb896f7629d7b71b94dd107eeda87701df99208
 workflow-type: tm+mt
 source-wordcount: '1446'
 ht-degree: 1%
@@ -89,7 +89,7 @@ ht-degree: 1%
 
 「部 **[!UICONTROL 分擷取]** 」切換可讓您啟用或停用部分批次擷取的使用。
 
-僅當 **[!UICONTROL Partial Ingestion（部分攝取）關]** 閉時，才會顯示 **** Error diagnostics（錯誤診斷）切換。 此功能可 [!DNL Platform] 產生有關您所擷取批次的詳細錯誤訊息。 如果已 *[!UICONTROL 開啟「部分擷取]* 」切換，則會自動強制執行增強的錯誤診斷。
+僅當 **[!UICONTROL Partial Ingestion（部分攝取）關]** 閉時，才會顯示 **** Error diagnostics（錯誤診斷）切換。 此功能可 [!DNL Platform] 產生有關您所擷取批次的詳細錯誤訊息。 如果已 **[!UICONTROL 開啟「部分擷取]** 」切換，則會自動強制執行增強的錯誤診斷。
 
 ![](../images/batch-ingestion/partial-ingestion/configure-batch-partial-ingestion-focus.png)
 
