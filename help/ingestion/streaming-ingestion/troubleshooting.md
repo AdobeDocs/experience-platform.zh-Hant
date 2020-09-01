@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 串流擷取疑難排解
 topic: troubleshooting
 translation-type: tm+mt
-source-git-commit: c8e53a25c5b22e8d840658fe26ff47875947a6d0
+source-git-commit: 1bb896f7629d7b71b94dd107eeda87701df99208
 workflow-type: tm+mt
 source-wordcount: '997'
 ht-degree: 0%
@@ -58,7 +58,7 @@ Adobe Experience Platform提 [!DNL Data Ingestion] 供REST風格的API，您可�
 
 所有傳送至(成功或以其他方 [!DNL Platform] 式)的資料都會先儲存為批次檔案，再保存在資料集中。 批次的處理狀態會顯示在傳送至的資料集中。
 
-您可以使用 [Experience Platform使用者介面檢查資料集活動，以確認資料是否已成功](https://platform.adobe.com)擷取。 按一 **[!UICONTROL 下左側導覽]** 中的「資料集」，以顯示資料集清單。 從顯示的清單中選擇要流式處理的資料集，以開啟其「 *[!UICONTROL Dataset]* 」活動頁，顯示在選定時段內發送的所有批。 如需使用監控資料 [!DNL Experience Platform] 串流的詳細資訊，請參閱監 [控串流資料流指南](../quality/monitor-data-flows.md)。
+您可以使用 [Experience Platform使用者介面檢查資料集活動，以確認資料是否已成功](https://platform.adobe.com)擷取。 按一 **[!UICONTROL 下左側導覽]** 中的「資料集」，以顯示資料集清單。 從顯示的清單中選擇要流式處理的資料集，以開啟其「 **[!UICONTROL Dataset]** 」活動頁，顯示在選定時段內發送的所有批。 如需使用監控資料 [!DNL Experience Platform] 串流的詳細資訊，請參閱監 [控串流資料流指南](../quality/monitor-data-flows.md)。
 
 如果您的資料未能收錄，而您希望從中恢復 [!DNL Platform]，則可以通過將失敗的批次的ID發送到 [!DNL Data Access API]。 有關詳細資訊，請 [參閱檢索失敗批](../quality/retrieve-failed-batches.md) 的指南。
 
@@ -100,4 +100,4 @@ Adobe Experience Platform提 [!DNL Data Ingestion] 供REST風格的API，您可�
 
 身份名稱空間有兩種類型：預設值和自訂值。 使用自訂名稱空間時，請確定名稱空間已在中註冊 [!DNL Identity Service]。 如需使用預 [設和自訂名稱空間的詳細資訊](../../identity-service/namespaces.md) ，請參閱身分名稱空間概觀。
 
-您可以使用 [[!DNL Experience Platform UI]](https://platform.adobe.com) ，查看訊息擷取失敗原因的詳細資訊。 按一 **[!UICONTROL 下左側導覽中的]** 「監控」，然後檢視「串流端對端 __ 」標籤，以查看在選取時段內串流的訊息批次。
+您可以使用 [[!DNL Experience Platform UI]](https://platform.adobe.com) ，查看訊息擷取失敗原因的詳細資訊。 按一 **[!UICONTROL 下左側導覽中的]** 「監控」，然後檢視「串流端對端 **** 」標籤，以查看在選取時段內串流的訊息批次。
