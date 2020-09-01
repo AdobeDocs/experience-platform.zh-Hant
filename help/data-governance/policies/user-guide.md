@@ -5,7 +5,7 @@ title: 資料使用原則使用指南
 topic: policies
 description: Adobe Experience Platform Data Governance提供使用者介面，可讓您建立和管理資料使用政策。 本檔案概述您可在Experience Platform使用者介面的「原則」工作區中執行的動作。
 translation-type: tm+mt
-source-git-commit: 43d568a401732a753553847dee1b4a924fcc24fd
+source-git-commit: c6c5ada52321b11543254f80399c38365f0fb9d7
 workflow-type: tm+mt
 source-wordcount: '768'
 ht-degree: 0%
@@ -30,7 +30,7 @@ Adobe Experience Platform提 [!DNL Data Governance] 供使用者介面，可讓�
 
 ## 檢視資料使用原則 {#view-policies}
 
-在UI中 [!DNL Experience Platform] ，按一下「 **[!UICONTROL 原則]** 」以開啟「 *[!UICONTROL 原則]* 」工作區。 在「瀏 **[!UICONTROL 覽]** 」索引標籤中，您可以看到可用原則的清單，包括其相關標籤、行銷動作和狀態。
+在UI中 [!DNL Experience Platform] ，按一下「 **[!UICONTROL 原則]** 」以開啟「 **[!UICONTROL 原則]** 」工作區。 在「瀏 **[!UICONTROL 覽]** 」索引標籤中，您可以看到可用原則的清單，包括其相關標籤、行銷動作和狀態。
 
 ![](../images/policies/browse-policies.png)
 
@@ -40,11 +40,11 @@ Adobe Experience Platform提 [!DNL Data Governance] 供使用者介面，可讓�
 
 ## 建立自訂資料使用原則 {#create-policy}
 
-若要建立新的自訂資料使用原則，請按一 **[!UICONTROL 下「原則]** 」工作區中「瀏覽 **[!UICONTROL 」標籤右上角的「建立]** 原則 ** 」。
+若要建立新的自訂資料使用原則，請按一 **[!UICONTROL 下「原則]** 」工作區中「瀏覽 **[!UICONTROL 」標籤右上角的「建立]** 原則 **** 」。
 
 ![](../images/policies/create-policy-button.png)
 
-此時將 *[!UICONTROL 顯示「建立策略]* 」工作流。 首先，提供新策略的名稱和說明。
+此時將 **[!UICONTROL 顯示「建立策略]** 」工作流。 首先，提供新策略的名稱和說明。
 
 ![](../images/policies/create-policy-description.png)
 
@@ -52,7 +52,7 @@ Adobe Experience Platform提 [!DNL Data Governance] 供使用者介面，可讓�
 
 ![](../images/policies/add-labels.png)
 
-此時會 *[!UICONTROL 顯示「選擇行銷]* 」動作步驟。 從提供的清單中選擇適當的行銷動作，然後按一下「 **[!UICONTROL 下一步]** 」繼續。
+此時會 **[!UICONTROL 顯示「選擇行銷]** 」動作步驟。 從提供的清單中選擇適當的行銷動作，然後按一下「 **[!UICONTROL 下一步]** 」繼續。
 
 >[!NOTE]
 >
@@ -60,11 +60,11 @@ Adobe Experience Platform提 [!DNL Data Governance] 供使用者介面，可讓�
 
 ![](../images/policies/add-marketing-actions.png)
 
-此時 *[!UICONTROL 會出現]* 「查看」步驟，允許您在建立新策略之前查看其詳細資訊。 在您滿意後，按一下「 **[!UICONTROL 完成]** 」以建立原則。
+此時 **[!UICONTROL 會出現]** 「查看」步驟，允許您在建立新策略之前查看其詳細資訊。 在您滿意後，按一下「 **[!UICONTROL 完成]** 」以建立原則。
 
 ![](../images/policies/policy-review.png)
 
-「瀏 *[!UICONTROL 覽]* 」標籤會重新出現，現在會列出新建立的「草稿」狀態原則。 若要啟用原則，請參閱下一節。
+「瀏 **[!UICONTROL 覽]** 」標籤會重新出現，現在會列出新建立的「草稿」狀態原則。 若要啟用原則，請參閱下一節。
 
 ![](../images/policies/created-policy.png)
 
@@ -72,7 +72,7 @@ Adobe Experience Platform提 [!DNL Data Governance] 供使用者介面，可讓�
 
 預設會停用所有資料使用政策（包括Adobe提供的核心政策）。 若要考慮實施個別原則，您必須透過API或UI手動啟用該原則。
 
-您可以從「策略」工作區的「瀏 *[!UICONTROL 覽]* 」頁籤中啟用或 *[!UICONTROL 禁用策略]* 。 從清單中選取自訂原則，以在右側顯示其詳細資訊。 在「 *[!UICONTROL 狀態]*」下，選擇切換按鈕以啟用或停用原則。
+您可以從「策略」工作區的「瀏 **[!UICONTROL 覽]** 」頁籤中啟用或 **[!UICONTROL 禁用策略]** 。 從清單中選取自訂原則，以在右側顯示其詳細資訊。 在「 **[!UICONTROL 狀態]**」下，選擇切換按鈕以啟用或停用原則。
 
 ![](../images/policies/enable-policy.png)
 
@@ -84,15 +84,15 @@ Adobe Experience Platform提 [!DNL Data Governance] 供使用者介面，可讓�
 
 ## 建立行銷動作 {#create-marketing-action}
 
-若要建立新的自訂行銷動作，請按一 **[!UICONTROL 下「原則」工作區中「行銷動作]** 」標籤右上角的「建立行銷 **[!UICONTROL 動作]**** 」。
+若要建立新的自訂行銷動作，請按一 **[!UICONTROL 下「原則」工作區中「行銷動作]** 」標籤右上角的「建立行銷 **[!UICONTROL 動作]****** 」。
 
 ![](../images/policies/create-marketing-action.png)
 
-此時會 *[!UICONTROL 出現「建立行銷]* 」對話方塊。 輸入行銷動作的名稱和說明，然後按一下「建 **[!UICONTROL 立]**」。
+此時會 **[!UICONTROL 出現「建立行銷]** 」對話方塊。 輸入行銷動作的名稱和說明，然後按一下「建 **[!UICONTROL 立]**」。
 
 ![](../images/policies/create-marketing-action-details.png)
 
-新建立的動作會顯示在「行銷 *[!UICONTROL 動作」標籤]* 中。 您現在可以在建立新的資料使用 [政策時使用行銷動作](#create-policy)。
+新建立的動作會顯示在「行銷 **[!UICONTROL 動作」標籤]** 中。 您現在可以在建立新的資料使用 [政策時使用行銷動作](#create-policy)。
 
 ![](../images/policies/created-marketing-action.png)
 
