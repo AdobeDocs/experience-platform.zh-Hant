@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 訂閱隱私權事件
 topic: privacy events
 translation-type: tm+mt
-source-git-commit: 5b32c1955fac4f137ba44e8189376c81cdbbfc40
+source-git-commit: 1bb896f7629d7b71b94dd107eeda87701df99208
 workflow-type: tm+mt
 source-wordcount: '843'
 ht-degree: 0%
@@ -25,7 +25,7 @@ ht-degree: 0%
 | 產品完整 | 與此工作相關的解決方案之一已完成其工作。 |
 | 產品錯誤 | 其中一個解決方案在處理請求時報告錯誤。 |
 
-本檔案提供在Adobe I/O中設定通 [!DNL Privacy Service] 知整合的步驟。 如需隱私權服務概觀 [!DNL Privacy Service] 及其功能的詳細 [資訊](home.md)。
+本檔案提供在Adobe I/O中設定通 [!DNL Privacy Service] 知整合的步驟。如需隱私權服務概觀 [!DNL Privacy Service] 及其功能的詳細 [資訊](home.md)。
 
 ## 快速入門
 
@@ -86,7 +86,7 @@ app.listen(app.get('port'), function() {
 
 ![](./images/privacy-events/add-privacy-events.png)
 
-此時將 _顯示「配置事件_ 註冊」對話框。 選擇您要接收的事件，方法是選擇相應的複選框。 您選取的事件會顯示在左 _[!UICONTROL 欄的「訂閱事件]_」下方。 完成後，按一下「**[!UICONTROL &#x200B;下一步&#x200B;]**」。
+此時將 _顯示「配置事件_ 註冊」對話框。 選擇您要接收的事件，方法是選擇相應的複選框。 您選取的事件會顯示在左 **[!UICONTROL 欄的「訂閱事件]** 」下方。 When finished, click **[!UICONTROL Next]**.
 
 ![](./images/privacy-events/choose-subscriptions.png)
 
@@ -106,11 +106,11 @@ app.listen(app.get('port'), function() {
 
 ![](./images/privacy-events/event-details.png)
 
-在同一螢幕的下方，您會獲得兩個選項來設定如何接收事件。 選 **[!UICONTROL 取Webhook]** ，並提供您 `Forwarding` 先前在Webhook URL下建立之網頁掛接的 _[!UICONTROL URL]_。 接著，在按一下「儲存已設定的事件」以完成事件註冊之前，請選取您偏好的傳送樣式(**[!UICONTROL &#x200B;單一或批次&#x200B;]**)。
+在同一螢幕的下方，您會獲得兩個選項來設定如何接收事件。 選 **[!UICONTROL 取Webhook]** ，並提供您 `Forwarding` 先前在Webhook URL下建立之網頁掛接的 **[!UICONTROL URL]**。 接著，在按一下「儲存已設定的事件」以完成事件註冊之前，請選取您偏好的傳送樣式( **[!UICONTROL 單一或批次]** )。
 
 ![](./images/privacy-events/webhook-details.png)
 
-專案的詳細資訊頁面會重新顯示，並 [!DNL Privacy Events] 顯示在左 _[!UICONTROL 側導覽]_的「事件」下方。
+專案的詳細資訊頁面會重新顯示，並 [!DNL Privacy Events] 顯示在左 **[!UICONTROL 側導覽]** 的「事件」下方。
 
 ## 檢視事件資料
 
@@ -126,7 +126,7 @@ app.listen(app.get('port'), function() {
 
 ![](images/privacy-events/debug-tracing.png)
 
-「裝 _[!UICONTROL 載]_」區段提供選取事件的詳細資訊，包括其事件類型(`com.adobe.platform.gdpr.productcomplete`)，如上例所強調。
+「裝 **[!UICONTROL 載]** 」區段提供選取事件的詳細資訊，包括其事件類型(`com.adobe.platform.gdpr.productcomplete`)，如上例所強調。
 
 ## 後續步驟
 
