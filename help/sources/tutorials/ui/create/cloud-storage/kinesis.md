@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Amazon Kinesis;amazon kinesis;Kinesis;kinesis
 solution: Experience Platform
 title: 在UI中建立Amazon Kinesis源連接器
 topic: overview
+description: 本教程提供了使用平台用戶介面驗證Amazon Kinesis（以下稱為「Kinesis」）源連接器的步驟。
 translation-type: tm+mt
-source-git-commit: a664a0420189d6a2dda9f33b3aa58cb4883e252f
+source-git-commit: f82dfee2c75a0b8b2ec1615266780b309152ead4
 workflow-type: tm+mt
-source-wordcount: '461'
+source-wordcount: '482'
 ht-degree: 1%
 
 ---
