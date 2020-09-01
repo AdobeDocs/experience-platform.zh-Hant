@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;ui;UI;XDM;XDM system;;experience data model;Experience data model;Experience Data Model;data model;Data Model;schema editor;Schema Editor;schema;Schema;schemas;Schemas;create;relationship;Relationship;reference;Reference;
 solution: Experience Platform
 title: 使用架構架構編輯器定義兩個架構之間的關係
+description: 本檔案提供教學課程，可讓您使用Experience Platform使用者介面中的「架構編輯器」來定義兩個架構之間的關係。
 topic: tutorials
 translation-type: tm+mt
-source-git-commit: d847329f675c7ac34a4feabb9e57a9e97f7e3ed1
+source-git-commit: 74a4a3cc713cc068be30379e8ee11572f8bb0c63
 workflow-type: tm+mt
-source-wordcount: '911'
+source-wordcount: '933'
 ht-degree: 0%
 
 ---
@@ -42,7 +43,7 @@ Adobe Experience Platform的重要部分，在於能夠跨不同通道瞭解客�
 
 ### [!UICONTROL 忠誠度成員] 架構
 
-源模式&quot;[!UICONTROL Loyalty Members]&quot;是基於XDM類 [!DNL Individual Profile] 別，是在教程中為在UI中建立模式 [而構建的模式](create-schema-ui.md)。 它在其&quot;\_[!UICONTROL tenantId]&quot;命名空間下包含&quot;loyalty&quot;物件，其中包含數個忠誠度特定欄位。 其中一個欄位&quot;loyaltyId&quot;是「電子郵件」命名空間下之結構的主[!UICONTROL 要身分]。 如「架構屬 _[!UICONTROL 性」下所示]_，此架構已啟用供使用[!DNL Real-time Customer Profile]。
+源模式&quot;[!UICONTROL Loyalty Members]&quot;是基於XDM類 [!DNL Individual Profile] 別，是在教程中為在UI中建立模式 [而構建的模式](create-schema-ui.md)。 它在其&quot;\_[!UICONTROL tenantId]&quot;命名空間下包含&quot;loyalty&quot;物件，其中包含數個忠誠度特定欄位。 其中一個欄位&quot;loyaltyId&quot;是「電子郵件」命名空間下之結構的主[!UICONTROL 要身分]。 如「架構屬 _[!UICONTROL 性」下所示]_，此架構已啟用供使用 [!DNL Real-time Customer Profile]。
 
 ![](../images/tutorials/relationship/loyalty-members.png)
 
@@ -60,15 +61,15 @@ Adobe Experience Platform的重要部分，在於能夠跨不同通道瞭解客�
 
 為了定義兩個方案之間的關係，源方案必須具有專用欄位以用作目標方案的引用。 通過建立新混音，可以將此欄位添加到源模式。
 
-首先，按一 **[!UICONTROL 下]** 「Mixins」區 _[!UICONTROL 段中的「新增]_」。
+首先，按一 **[!UICONTROL 下]** 「Mixins」區 _[!UICONTROL 段中的「新增]_ 」。
 
 ![](../images/tutorials/relationship/loyalty-add-mixin.png)
 
-此時將 _[!UICONTROL 顯示「添加混音]_」對話框。 在這裡，按一下「**[!UICONTROL &#x200B;建立新Mixin」]**。 在出現的文字欄位中，輸入新混音的顯示名稱和說明。 完成後**[!UICONTROL &#x200B;按一下「新增&#x200B;]**Mixin」。
+此時將 _[!UICONTROL 顯示「添加混音]_ 」對話框。 在這裡，按一下「 **[!UICONTROL 建立新Mixin」]**。 在出現的文字欄位中，輸入新混音的顯示名稱和說明。 完成後 **[!UICONTROL 按一下「新增]** Mixin」。
 
 <img src="../images/tutorials/relationship/loyalty-create-new-mixin.png" width="750"><br>
 
-畫布會重新顯示，「[!UICONTROL 忠誠度關係]」會顯示 _[!UICONTROL 在Mixins區段中]_。 按一下混音名稱，然後按一**[!UICONTROL &#x200B;下根層級&#x200B;]**「忠誠會員」欄位旁的「新增欄位」。
+畫布會重新顯示，「[!UICONTROL 忠誠度關係]」會顯示 _[!UICONTROL 在Mixins區段中]_ 。 按一下混音名稱，然後按一 **[!UICONTROL 下根層級]** 「忠誠會員」欄位旁的「新增欄位」。
 
 ![](../images/tutorials/relationship/loyalty-add-field.png)
 
@@ -88,7 +89,7 @@ When finished, click **[!UICONTROL Apply]**.
 
 在源架構定義了專用的參考欄位後，可以將其指定為關係欄位。
 
-在畫布中選取參考欄位，然後在「欄位屬性」下方向 _[!UICONTROL 下捲動]_，直到出現**[!UICONTROL 「關係&#x200B;]**」核取方塊。 選中該複選框可顯示配置關係欄位所需的參數。
+在畫布中選取參考欄位，然後在「欄位屬性」下方向 _[!UICONTROL 下捲動]_ ，直到出現 **[!UICONTROL 「關係]** 」核取方塊。 選中該複選框可顯示配置關係欄位所需的參數。
 
 ![](../images/tutorials/relationship/relationship-checkbox.png)
 
