@@ -5,7 +5,7 @@ title: 以服務形式發佈模型(UI)
 topic: Tutorial
 description: Adobe Experience Platform Data Science Workspace可讓您將經過訓練和評估的模型發佈為服務，讓IMS組織內的使用者可對資料評分，而不需建立自己的模型。
 translation-type: tm+mt
-source-git-commit: 7615476c4b728b451638f51cfaa8e8f3b432d659
+source-git-commit: c6c5ada52321b11543254f80399c38365f0fb9d7
 workflow-type: tm+mt
 source-wordcount: '453'
 ht-degree: 0%
@@ -40,7 +40,7 @@ Adobe Experience Platform Data Science Workspace可讓您將經過訓練和評�
 
 ## 使用服務進行分數 {#access-a-service}
 
-1. 在Adobe Experience Platform中，按一下左側導 **[!UICONTROL 覽欄中的]** 「服務」標籤，以存取「服 *[!UICONTROL 務收藏館」]*。 尋找您想要使用的服務，然後按一下「分 **[!UICONTROL 數」]**。
+1. 在Adobe Experience Platform中，按一下左側導 **[!UICONTROL 覽欄中的]** 「服務」標籤，以存取「服 **[!UICONTROL 務收藏館」]**。 尋找您想要使用的服務，然後按一下「分 **[!UICONTROL 數」]**。
    ![](../images/models-recipes/publish-model/click_to_score.png)
 2. 為計分執行選取適當的輸入資料集，然後按一下「下 **[!UICONTROL 一步]**」。
    ![](../images/models-recipes/publish-model/6_scoring_input.png)
@@ -53,4 +53,4 @@ Adobe Experience Platform Data Science Workspace可讓您將經過訓練和評�
 
 ## 下一步 {#next-steps}
 
-在本教學課程中，您已成功地將模型發佈為可存取的服務，並透過服務收藏館使用新的服務計 *[!UICONTROL 分資料]*。 繼續下一個教學課程，瞭解如何安 [排在服務上執行自動化訓練和計分](./schedule-models-ui.md)。
+在本教學課程中，您已成功地將模型發佈為可存取的服務，並透過服務收藏館使用新的服務計 **[!UICONTROL 分資料]**。 繼續下一個教學課程，瞭解如何安 [排在服務上執行自動化訓練和計分](./schedule-models-ui.md)。
