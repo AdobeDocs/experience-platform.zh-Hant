@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Azure HDInsights;Apache Spark
 solution: Experience Platform
 title: 在Azure HDInsights的UI中建立Apache Spark來源連接器
 topic: overview
+description: 本教學課程提供在Azure HDInsights來源連接器上使用平台使用者介面建立Apache Spark的步驟。
 translation-type: tm+mt
-source-git-commit: ec2d0a33e0ae92a3153b7bdcad29734e487a0439
+source-git-commit: f82dfee2c75a0b8b2ec1615266780b309152ead4
 workflow-type: tm+mt
-source-wordcount: '469'
+source-wordcount: '488'
 ht-degree: 1%
 
 ---
