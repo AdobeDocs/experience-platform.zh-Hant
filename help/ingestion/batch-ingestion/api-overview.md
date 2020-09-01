@@ -1,10 +1,10 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;batch ingestion;Batch ingestion;ingestion;developer guide;api guide;upload;ingest parquet;ingest json;
 solution: Experience Platform
 title: Adobe Experience Platform批次擷取開發人員指南
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 3eaef72de2999fc088b92562c08a896d1cb08e55
+source-git-commit: c04fb056d4564e53f192e0734a700a13820f5ba7
 workflow-type: tm+mt
 source-wordcount: '2670'
 ht-degree: 5%
@@ -28,7 +28,7 @@ ht-degree: 5%
 
 - [批次擷取](./overview.md):可讓您將資料以批次檔案的形式內嵌至Adobe Experience Platform。
 - [[!DNL Experience Data Model] (XDM)系統](../../xdm/home.md):組織客戶體驗資料 [!DNL Experience Platform] 的標準化架構。
-- [[!DNL 沙盒]](../../sandboxes/home.md): [!DNL Experience Platform] 提供虛擬沙盒，可將單一執行個體分 [!DNL Platform] 割為不同的虛擬環境，以協助開發和發展數位體驗應用程式。
+- [[!DNL沙盒]](../../sandboxes/home.md): [!DNL Experience Platform] 提供虛擬沙盒，可將單一執行個體分 [!DNL Platform] 割為不同的虛擬環境，以協助開發和發展數位體驗應用程式。
 
 ### 讀取範例API呼叫
 
