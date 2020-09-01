@@ -5,7 +5,7 @@ title: 使用結構編輯器建立架構
 topic: tutorials
 description: 本教學課程涵蓋使用Experience Platform中的架構編輯器建立架構的步驟。
 translation-type: tm+mt
-source-git-commit: ed1f2fdac0f9c977d11c867327c084353c1bcd0f
+source-git-commit: d946f5014707bf73f373d712b287de259c3df5cd
 workflow-type: tm+mt
 source-wordcount: '3528'
 ht-degree: 0%
@@ -113,7 +113,7 @@ UI中 [!UICONTROL 的] 「結構描述」工作區 [!DNL Platform] 提供了結�
 
 「忠誠[!UICONTROL 會員]」架構旨在擷取與忠誠度方案成員相關的資料，因此需要某些特定的忠誠度相關欄位。 沒有可用的標準混音包含必要的欄位，因此您需要定義新的混音。
 
-此時，當您開啟「新增 *[!UICONTROL Mixin」對話方塊]* ，請選 **[!UICONTROL 取「建立新Mixin」]**。 接著會要求您提供混 **[!UICONTROL 音的顯示名]****[!UICONTROL 稱和說]** 明。
+此時，當您開啟「新增 **[!UICONTROL Mixin」對話方塊]** ，請選 **[!UICONTROL 取「建立新Mixin」]**。 接著會要求您提供混 **[!UICONTROL 音的顯示名]****[!UICONTROL 稱和說]** 明。
 
 ![](../images/tutorials/create-schema/mixin_create_new.png)
 
