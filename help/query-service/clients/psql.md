@@ -1,11 +1,11 @@
 ---
-keywords: Experience Platform;home;popular topics;PSQL;psql
+keywords: Experience Platform;home;popular topics;PSQL;psqlconnect to query service;Query service;query service;
 solution: Experience Platform
 title: 使用PSQL連接
 topic: connect
 description: 'PSQL是命令行介面，在電腦上安裝Postgres時會出現。 您可依照下列指示進行安裝。 '
 translation-type: tm+mt
-source-git-commit: 1bb896f7629d7b71b94dd107eeda87701df99208
+source-git-commit: d2f098cb9e4aaf5beaad02173a22a25a87a43756
 workflow-type: tm+mt
 source-wordcount: '192'
 ht-degree: 1%
