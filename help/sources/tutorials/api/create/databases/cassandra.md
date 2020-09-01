@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Apache Cassandra;apache cassandra;Cassandra;cassandra
 solution: Experience Platform
 title: 使用Flow Service API建立Apache Cassandra連接器
 topic: overview
+description: 本教學課程使用Flow Service API來引導您完成將Apache Cassandra（以下稱為「Cassandra」）連接至Experience Platform的步驟。
 translation-type: tm+mt
-source-git-commit: fc5cdaa661c47e14ed5412868f3a54fd7bd2b451
+source-git-commit: 25f1dfab07d0b9b6c2ce5227b507fc8c8ecf9873
 workflow-type: tm+mt
-source-wordcount: '588'
-ht-degree: 2%
+source-wordcount: '613'
+ht-degree: 1%
 
 ---
 
@@ -49,7 +50,7 @@ ht-degree: 2%
 
 若要呼叫API，您必 [!DNL Platform] 須先完成驗證教 [學課程](../../../../../tutorials/authentication.md)。 完成驗證教學課程後，將提供所有 [!DNL Experience Platform] API呼叫中每個必要標題的值，如下所示：
 
-* 授權： 生產者 `{ACCESS_TOKEN}`
+* 授權：生產者 `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
 * x-gw-ims-org-id: `{IMS_ORG}`
 
