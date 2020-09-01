@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;mysql;MySQL
 solution: Experience Platform
 title: 在UI中建立MySQL源連接器
 topic: overview
+description: 本教程提供使用Platform用戶介面建立MySQL源連接器的步驟。
 translation-type: tm+mt
-source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
+source-git-commit: f82dfee2c75a0b8b2ec1615266780b309152ead4
 workflow-type: tm+mt
-source-wordcount: '416'
+source-wordcount: '431'
 ht-degree: 1%
 
 ---
