@@ -5,9 +5,9 @@ title: 資料使用原則使用指南
 topic: policies
 description: Adobe Experience Platform Data Governance提供使用者介面，可讓您建立和管理資料使用政策。 本檔案概述您可在Experience Platform使用者介面的「原則」工作區中執行的動作。
 translation-type: tm+mt
-source-git-commit: c6c5ada52321b11543254f80399c38365f0fb9d7
+source-git-commit: 0f3a4ba6ad96d2226ae5094fa8b5073152df90f7
 workflow-type: tm+mt
-source-wordcount: '768'
+source-wordcount: '765'
 ht-degree: 0%
 
 ---
@@ -116,7 +116,7 @@ Adobe Experience Platform提 [!DNL Data Governance] 供使用者介面，可讓�
 
 ## 後續步驟
 
-本檔案概述如何在 [!DNL Experience Platform] UI中管理資料使用原則。 如需如何使用DULE Policy API管理原則的步驟，請參閱開發 [人員指南](../api/getting-started.md)。 如需如何實施資料使用原則的詳細資訊，請參閱 [原則實施概觀](../enforcement/overview.md)。
+本檔案概述如何在 [!DNL Experience Platform] UI中管理資料使用原則。 如需如何使用管理原則的步驟 [!DNL Policy Service API]，請參閱開發 [人員指南](../api/getting-started.md)。 如需如何實施資料使用原則的詳細資訊，請參閱 [原則實施概觀](../enforcement/overview.md)。
 
 以下視訊示範如何在 [!DNL Experience Platform] UI中使用使用原則：
 
