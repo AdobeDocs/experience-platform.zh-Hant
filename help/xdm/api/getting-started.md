@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;;experience data model;Experience data model;Experience Data Model;data model;Data Model;schema registry;Schema Registry;
 solution: Experience Platform
 title: 架構註冊API開發人員指南
+description: 架構註冊表用於存取Adobe Experience Platform中的架構程式庫，提供使用者介面和RESTful API，讓所有可用的程式庫資源都可從中存取。 使用「架構註冊表API」，您可以執行基本的CRUD作業，以檢視並管理Adobe Experience Platform中所有可用的架構及相關資源。
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: f7fe8f9ac8d6f0e2eaec53d96f2ced0904061c89
+source-git-commit: 74a4a3cc713cc068be30379e8ee11572f8bb0c63
 workflow-type: tm+mt
-source-wordcount: '1237'
+source-wordcount: '1295'
 ht-degree: 0%
 
 ---
@@ -29,7 +30,7 @@ ht-degree: 0%
 * [[!DNL即時客戶基本資料]](../../profile/home.md):根據來自多個來源的匯整資料，提供統一、即時的消費者個人檔案。
 * [[!DNL沙盒]](../../sandboxes/home.md): [!DNL Experience Platform] 提供虛擬沙盒，可將單一執行個體分 [!DNL Platform] 割為不同的虛擬環境，以協助開發和發展數位體驗應用程式。
 
-以下章節提供您成功呼叫 [!DNL Schema Registry] API時需要知道的其他資訊。
+以下章節提供您必須知道的其他資訊，才能成功呼叫 [!DNL Schema Registry] API。
 
 ## 讀取範例API呼叫
 
