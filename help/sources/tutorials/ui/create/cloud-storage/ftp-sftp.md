@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;SFTP;FTP;ftp;sftp
 solution: Experience Platform
 title: 在UI中建立FTP或SFTP來源連接器
 topic: overview
+description: 本教學課程提供使用平台使用者介面建立FTP或SFTP來源連接器的步驟。
 translation-type: tm+mt
-source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
+source-git-commit: 0da686743e8bc57d310f7eff6f1bf812a8f31238
 workflow-type: tm+mt
-source-wordcount: '545'
+source-wordcount: '562'
 ht-degree: 1%
 
 ---
