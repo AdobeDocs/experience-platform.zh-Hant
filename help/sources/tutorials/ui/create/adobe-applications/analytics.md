@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Analytics source connector;Analytics connector;Analytics source;analytics
 solution: Experience Platform
 title: 在UI中建立Adobe Analytics來源連接器
 topic: overview
+description: 本教學課程提供在UI中建立Adobe Analytics來源連接器以將消費者資料匯入Adobe Experience Platform的步驟。
 translation-type: tm+mt
-source-git-commit: 0479f5097b530dd97e28474d8e5eb832e5e44e5a
+source-git-commit: 0da686743e8bc57d310f7eff6f1bf812a8f31238
 workflow-type: tm+mt
-source-wordcount: '768'
+source-wordcount: '790'
 ht-degree: 1%
 
 ---
