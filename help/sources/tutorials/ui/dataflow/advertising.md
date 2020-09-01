@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;configure dataflow;advertising connector
 solution: Experience Platform
 title: 在UI中為廣告連接器配置資料流
 topic: overview
+description: 資料流是從來源擷取資料並將資料擷取至Adobe Experience Platform資料集的排程任務。 本教學課程提供使用廣告帳戶配置新資料流的步驟。
 translation-type: tm+mt
-source-git-commit: c6c5ada52321b11543254f80399c38365f0fb9d7
+source-git-commit: fb60e11b9502c31e654d3fbe5dc240ace9429332
 workflow-type: tm+mt
-source-wordcount: '1272'
+source-wordcount: '1305'
 ht-degree: 0%
 
 ---
