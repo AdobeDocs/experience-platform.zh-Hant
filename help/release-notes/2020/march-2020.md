@@ -6,9 +6,9 @@ last-update: March 10, 2020
 author: ens71067
 keywords: release notes;
 translation-type: tm+mt
-source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
+source-git-commit: 0f3a4ba6ad96d2226ae5094fa8b5073152df90f7
 workflow-type: tm+mt
-source-wordcount: '861'
+source-wordcount: '854'
 ht-degree: 5%
 
 ---
@@ -28,7 +28,7 @@ Adobe Experience Platform現有功能的更新：
 
 ## [!DNL Data Governance] {#governance}
 
-[!DNL Experience Platform] 讓公司將多個企業系統的資料整合在一起，讓行銷人員更能識別、瞭解並吸引客戶。 [!DNL Experience Platform] 包括端對端資料治理基礎架構，包括資料使用標籤與實施(DULE)，以確保在系統內和系統間共用資料時，能 [!DNL Platform] 夠正確使用資料。
+[!DNL Experience Platform] 讓公司將多個企業系統的資料整合在一起，讓行銷人員更能識別、瞭解並吸引客戶。 [!DNL Experience Platform] 包括端對端資料治理基礎架構，以確保在系統內和系統間共用資料時 [!DNL Platform] 正確使用資料。
 
 Adobe Experience Platform是一 [!DNL Data Governance] 系列用於管理客戶資料及確保符合資料使用相關法規、限制和政策的策略與技術。 它在各個層級中都扮演了關 [!DNL Experience Platform] 鍵角色，包括編目、資料傳承、資料使用標籤、資料存取政策，以及對行銷動作資料的存取控制。
 
@@ -46,7 +46,7 @@ Adobe Experience Platform是一 [!DNL Data Governance] 系列用於管理客戶�
 
 **已知問題**
 
-* 無
+* None
 
 如需詳細資訊， [!DNL Data Governance]請參閱資 [料治理概觀](../../data-governance/home.md)。
 
@@ -62,7 +62,7 @@ Adobe Experience Platform提供一組豐富的功能，可吸收任何類型的�
 
 **已知問題**
 
-* 無
+* None
 
 若要進一步瞭解將資料擷取至平台，請造訪資 [料擷取檔案](../../ingestion/home.md)。
 
@@ -96,7 +96,7 @@ Adobe Experience Platform可 [!DNL Identity Service] 協助您跨裝置和系統
 
 **已知問題**
 
-* 無
+* None
 
 如需詳細資訊 [!DNL Identity Service]，請參 [閱Identity Service總覽](../../identity-service/home.md)。
 
@@ -119,6 +119,6 @@ Adobe Experience Platform可以從外部來源擷取資料，同時讓您使用�
 
 **已知問題**
 
-* 無
+* None
 
 若要進一步瞭解來源，請參閱 [來源概觀](../../sources/home.md)。
