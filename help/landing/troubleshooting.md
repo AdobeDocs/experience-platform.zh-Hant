@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Adobe Experience Platform常見問答集與疑難排解指南
 topic: getting started
 translation-type: tm+mt
-source-git-commit: 9eeddfaf3e704d66b81f983afcdf5ef3c45c6075
+source-git-commit: 0f3a4ba6ad96d2226ae5094fa8b5073152df90f7
 workflow-type: tm+mt
-source-wordcount: '1962'
+source-wordcount: '1951'
 ht-degree: 2%
 
 ---
@@ -26,7 +26,7 @@ ht-degree: 2%
 
 ## 如何設定API要求的格式？ {#how-do-i-format-an-api-request}
 
-請求格式會視使用的 [!DNL Platform] API而異。 瞭解如何建構API呼叫的最佳方式，是依循您所使用特定服務的說明檔案中 [!DNL Platform] 提供的範例。
+請求格式會依使用的 [!DNL Platform] API而異。 瞭解如何建構API呼叫的最佳方式，是依循您所使用特定服務的說明檔案中 [!DNL Platform] 提供的範例。
 
 ### 閱讀範例API呼叫
 
@@ -36,7 +36,7 @@ ht-degree: 2%
 
 ### 範例API要求
 
-以下是範例API要求，示範您將在檔案中遇到的格式。
+以下是範例API要求，示範您在說明檔案中將會遇到的格式。
 
 **API格式**
 
@@ -88,7 +88,7 @@ curl -X GET \
 
 ## 我的IMS組織是什麼？ {#what-is-my-ims-organization}
 
-IMS組織是客戶的Adobe代表。 任何授權的Adobe解決方案皆與此客戶組織整合。 當IMS組織有權存取時，它 [!DNL Experience Platform]可指派存取權給開發人員。 IMS組織ID(`x-gw-ims-org-id`)代表應執行API呼叫的組織，因此是所有API請求中的標題。 此ID可透過 [Adobe Developer Console找到](https://www.adobe.com/go/devs_console_ui): 在「整 **合** 」標籤中，導覽至任何特定整合的「概述」區段，以在「用戶端認證」下尋找 **ID******。 如需如何驗證的逐步逐步說明，請參 [!DNL Platform]閱驗證 [教學課程](../tutorials/authentication.md)。
+IMS組織是客戶的Adobe代表。 任何授權的Adobe解決方案皆與此客戶組織整合。 當IMS組織有權存取時，它 [!DNL Experience Platform]可指派存取權給開發人員。 IMS組織ID(`x-gw-ims-org-id`)代表應執行API呼叫的組織，因此是所有API請求中的標題。 此ID可透過 [Adobe Developer Console找到](https://www.adobe.com/go/devs_console_ui):在「整 **合** 」標籤中，導覽至任何特定整合的「概述」區段，以在「用戶端認證」下尋找 **ID******。 如需如何驗證的逐步逐步說明，請參 [!DNL Platform]閱驗證教 [學課程](../tutorials/authentication.md)。
 
 ## 我可以在哪裡找到API金鑰？ {#where-can-i-find-my-api-key}
 
@@ -194,7 +194,7 @@ API中的許多PATCH [!DNL Platform] 作業都使 [](https://tools.ietf.org/html
 }
 ```
 
-當提供的API金鑰標題(`x-api-key`)的值無效時，會顯示此錯誤訊息。 請確定您已正確輸入密鑰，然後再次嘗試。 如果您不知道您的API金鑰，可在 [Adobe I/O Console中找到它](https://console.adobe.io): 在「整 **合** 」索引標籤中，導覽至特定整合的「概述」區段，以在「用戶端認證」下尋找API **金鑰******。
+當提供的API金鑰標題(`x-api-key`)的值無效時，會顯示此錯誤訊息。 請確定您已正確輸入密鑰，然後再次嘗試。 如果您不知道您的API金鑰，可在 [Adobe I/O Console中找到它](https://console.adobe.io):在「整 **合** 」索引標籤中，導覽至特定整合的「概述」區段，以在「用戶端認證」下尋找API **金鑰******。
 
 
 ### 遺失標題
@@ -217,7 +217,7 @@ API中的許多PATCH [!DNL Platform] 作業都使 [](https://tools.ietf.org/html
 }
 ```
 
-當使用者或Adobe I/O整合(由標題中的 [存取Token](#how-do-i-get-an-access-token) )無權呼叫標題中提供的 `Authorization` IMS組織的 [!DNL Experience Platform] API時，會顯示此錯誤 `x-gw-ims-org-id` 訊息。 請確定您已在頁首中為您的IMS組織提供正確的ID，然後再次嘗試。 如果您不知道您的組織ID，可在 [Adobe I/O主控台中找到它](https://console.adobe.io): 在「整 **合** 」索引標籤中，導覽至特定整合的「概述 **」區段，以在「用戶端認證」下尋找** ID ****。
+當使用者或Adobe I/O整合(由標題中的 [存取Token](#how-do-i-get-an-access-token) )無權呼叫標題中提供的 `Authorization` IMS組織的 [!DNL Experience Platform] API時，會顯示此錯誤 `x-gw-ims-org-id` 訊息。 請確定您已在頁首中為您的IMS組織提供正確的ID，然後再次嘗試。 如果您不知道您的組織ID，可在 [Adobe I/O主控台中找到它](https://console.adobe.io):在「整 **合** 」索引標籤中，導覽至特定整合的「概述 **」區段，以在「用戶端認證」下尋找** ID ****。
 
 ### 未指定有效的內容類型
 
@@ -238,16 +238,15 @@ API中的許多PATCH [!DNL Platform] 作業都使 [](https://tools.ietf.org/html
 以下是API的疑難排解指南和API參考檔案 [!DNL Experience Platform] 清單。 每個疑難排解指南都提供常見問題的解答，以及個別服務專屬問題的解決 [!DNL Platform] 方案。 API參考檔案提供每個服務所有可用端點的完整指南，並顯示您可能收到的範例要求主體、回應和錯誤碼。
 
 | 服務 | API 參考 | 疑難排解 |
---- | --- | ---
+| --- | --- | --- |
 | 存取控制 | [存取控制API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/access-control.yaml) | [存取控制疑難排解指南](../access-control/troubleshooting-guide.md) |
-| 目錄 | [目錄服務API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml) |  |
-| 資料擷取（批次） | [資料擷取API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml) | [批次擷取疑難排解指南](../ingestion/batch-ingestion/troubleshooting.md) |
-| 資料擷取（串流） | [資料擷取API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml) | [串流擷取疑難排解指南](../ingestion/streaming-ingestion/troubleshooting.md) |
-| 資料科學工作區 | [Sensei Machine Learning API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml) | [Data Science Workspace疑難排解指南](../data-science-workspace/troubleshooting-guide.md) |
-| 資料使用標籤與實施(DULE) | [DULE Policy Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) |  |
-| 體驗資料模型(XDM) | [方案註冊表API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml) | [XDM系統常見問答集和疑難排解指南](../xdm/troubleshooting-guide.md) |
-| Identity 服務 | [Identity Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/id-service-api.yaml) | [Identity Service疑難排解指南](../identity-service/troubleshooting-guide.md) |
-| 查詢服務 | [查詢服務API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/qs-api.yaml) | [查詢服務疑難排解指南](../query-service/troubleshooting-guide.md) |
-| 即時客戶個人檔案 | [即時客戶個人檔案API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml) | [描述檔疑難排解指南](../profile/troubleshooting.md) |
+| Adobe Experience Platform資料擷取 | [[!DNL資料提取API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml) | [批次擷取疑難排解](../ingestion/batch-ingestion/troubleshooting.md)<br><br>[指南串流擷取疑難排解指南](../ingestion/streaming-ingestion/troubleshooting.md) |
+| Adobe Experience Platform資料科學工作區 | [[!DNL Sensei Machine Learning API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml) | [[!DNL Data Science Workspace] 疑難排解指南](../data-science-workspace/troubleshooting-guide.md) |
+| Adobe Experience Platform資料治理 | [[!DNL策略服務API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) |  |
+| Adobe Experience Platform Identity Service | [[!DNL Identity Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/id-service-api.yaml) | [[!DNL Identity Service] 疑難排解指南](../identity-service/troubleshooting-guide.md) |
+| Adobe Experience Platform查詢服務 | [[!DNL查詢服務API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/qs-api.yaml) | [[!DNL Query Service] 疑難排解指南](../query-service/troubleshooting-guide.md) |
+| Adobe Experience Platform細分 | [[!DNL分段API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/segmentation.yaml) |
+| [!DNL Catalog Service] | [[!DNL目錄服務API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml) |  |
+| [!DNL Experience Data Model] (XDM) | [[!DNL方案註冊表API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml) | [[!DNL XDM System] 常見問答集與疑難排解指南](../xdm/troubleshooting-guide.md) |
+| [!DNL Real-time Customer Profile] | [[!DNL即時客戶個人檔案API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml) | [[!DNL Profile] 疑難排解指南](../profile/troubleshooting.md) |
 | 沙盒 | [沙盒API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sandbox-api.yaml) | [沙盒疑難排解指南](../sandboxes/troubleshooting-guide.md) |
-| 區段 | [區段API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/segmentation.yaml) |
