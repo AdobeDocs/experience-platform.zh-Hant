@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Synapse;synapse;Azure Synapse Analytics
 solution: Experience Platform
 title: 使用Flow Service API建立Azure Synapse Analytics連接器
 topic: overview
+description: 本教學課程使用Flow Service API來引導您完成將Azure Synapse Analytics（以下稱為「Synapse」）連接至Experience Platform的步驟。
 translation-type: tm+mt
-source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
+source-git-commit: 5959d4344ec1c16542de045899ce74beb39a7bc4
 workflow-type: tm+mt
-source-wordcount: '559'
+source-wordcount: '585'
 ht-degree: 2%
 
 ---
