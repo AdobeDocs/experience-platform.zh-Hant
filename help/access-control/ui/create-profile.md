@@ -5,7 +5,7 @@ title: 建立新的產品設定檔
 topic: user guide
 description: 本檔案涵蓋在Adobe Admin Console中建立新產品設定檔所需的必要步驟。 要開始建立新配置檔案，請導航至「產品配置檔案」頁籤，然後按一下「新建配置檔案」。
 translation-type: tm+mt
-source-git-commit: 14f99c23cd82894fee5eb5c4093b3c50b95c52e8
+source-git-commit: c6c5ada52321b11543254f80399c38365f0fb9d7
 workflow-type: tm+mt
 source-wordcount: '246'
 ht-degree: 0%
@@ -15,11 +15,11 @@ ht-degree: 0%
 
 # 建立新的產品設定檔
 
-要開始建立新配置檔案，請導航至「產品配置文 *[!UICONTROL 件」頁籤]* ，然後按一下「 **[!UICONTROL 新建配置檔案」]**。
+要開始建立新配置檔案，請導航至「產品配置文 **[!UICONTROL 件」頁籤]** ，然後按一下「 **[!UICONTROL 新建配置檔案」]**。
 
 ![new-profile-button](../images/new-profile-button.png)
 
-此時 _[!UICONTROL 將出現「建立新配置檔案]_ 」對話框，提示您輸入新配置檔案的「配 **[!UICONTROL 置檔案名]** 」和「 **[!UICONTROL 說明]** 」。 如果希望配置檔案的顯示名稱不同，請取消選中「與配置檔案名 **[!UICONTROL 稱相同]** 」，並在顯示的文本框中輸入顯示名稱。 在「 *[!UICONTROL 使用者通知]*」下，您可以切換當使用者從描述檔新增或移除時，是否會收到電子郵件通知。
+此時 **[!UICONTROL 將出現「建立新配置檔案]** 」對話框，提示您輸入新配置檔案的「配 **[!UICONTROL 置檔案名]** 」和「 **[!UICONTROL 說明]** 」。 如果希望配置檔案的顯示名稱不同，請取消選中「與配置檔案名 **[!UICONTROL 稱相同]** 」，並在顯示的文本框中輸入顯示名稱。 在「 **[!UICONTROL 使用者通知]**」下，您可以切換當使用者從描述檔新增或移除時，是否會收到電子郵件通知。
 
 When finished, click **[!UICONTROL Next]**.
 
