@@ -4,10 +4,10 @@ solution: Experience Platform
 title: 建立資料集以匯出觀眾區隔
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 6a0a9b020b0dc89a829c557bdf29b66508a10333
+source-git-commit: c6c5ada52321b11543254f80399c38365f0fb9d7
 workflow-type: tm+mt
 source-wordcount: '733'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
@@ -31,9 +31,9 @@ ht-degree: 0%
 
 ## 資料集工作區
 
-UI中的資料集工 [!DNL Experience Platform] 作區可讓您檢視並管理IMS組織建立的所有資料集，並建立新的資料集。
+UI中的資料集工 [!DNL Experience Platform] 作區可讓您檢視和管理IMS組織建立的所有資料集，並建立新的資料集。
 
-若要檢視資料集工作區，請按一 **[!UICONTROL 下左側導覽中的「資料集]** 」，然後按一下「 *[!UICONTROL 瀏覽]* 」標籤。 資料集工作區包含資料集清單，包括 *[!UICONTROL Name]*、Created *[!UICONTROL （日期和時間）、]* Source *[!UICONTROL （日期和時間）、]* Source Schema、 ****** Batch Last Status、Woll as the date ad time the dataset was Last Updated Jocraded 視每欄的寬度而定，您可能需要向左或向右捲動，才能查看所有欄。
+若要檢視資料集工作區，請按一 **[!UICONTROL 下左側導覽中的「資料集]** 」，然後按一下「 **[!UICONTROL 瀏覽]** 」標籤。 資料集工作區包含資料集清單，包括 **[!UICONTROL Name]**、Created **[!UICONTROL （日期和時間）、]** Source **[!UICONTROL （日期和時間）、]** Source Schema、 ************ Batch Last Status、Woll as the date ad time the dataset was Last Updated Jocraded 視每欄的寬度而定，您可能需要向左或向右捲動，才能查看所有欄。
 
 >[!NOTE]
 >
@@ -47,13 +47,13 @@ UI中的資料集工 [!DNL Experience Platform] 作區可讓您檢視並管理IM
 
 ![按一下「建立資料集」](../images/tutorials/segment-export-dataset/dataset-click-create.png)
 
-在「建 *[!UICONTROL 立資料集]* 」畫面上，按一 **[!UICONTROL 下「從架構建立資料集]** 」以繼續。
+在「建 **[!UICONTROL 立資料集]** 」畫面上，按一 **[!UICONTROL 下「從架構建立資料集]** 」以繼續。
 
 ![選擇資料來源](../images/tutorials/segment-export-dataset/create-dataset.png)
 
 ## 選擇XDM單個配置式聯合模式
 
-若要選擇 [!DNL XDM Individual Profile Union Schema] 要在資料集中使用的配置式，請在「選擇配置式」螢幕中查找類型為「[!UICONTROL Union]」的「[!UICONTROL XDM Individual Profile]** 」架構。
+若要選擇 [!DNL XDM Individual Profile Union Schema] 要在資料集中使用的配置式，請在「選擇配置式」螢幕中查找類型為「[!UICONTROL Union]」的「[!UICONTROL XDM Individual Profile]**** 」架構。
 
 已選取「 **[!UICONTROL XDM Individual Profile]**」( **[!UICONTROL XDM個人設定檔)旁的選項按鈕]** ，然後按一下右上角的「Next」（下一步）。
 
@@ -61,7 +61,7 @@ UI中的資料集工 [!DNL Experience Platform] 作區可讓您檢視並管理IM
 
 ## 設定資料集
 
-在「設 **[!UICONTROL 定資料集]** 」畫面上，您必須為資料集指定名稱 *[!UICONTROL ，並且可能也會提供資料集]* 的說明 ** 。
+在「設 **[!UICONTROL 定資料集]** 」畫面上，您必須為資料集指定名稱 **[!UICONTROL ，並且可能也會提供資料集]** 的說明 **** 。
 
 **資料集名稱的附註：**
 - 資料集名稱應簡短且具說明性，以便稍後在資料庫中輕鬆找到資料集。
@@ -74,9 +74,9 @@ UI中的資料集工 [!DNL Experience Platform] 作區可讓您檢視並管理IM
 
 ## 資料集活動
 
-現在已建立空的資料集，您已返回「資料集」工作區 *[!UICONTROL 的「資料集活動]* 」索引 [!UICONTROL 標籤] 。 您應該會在工作區的左上角看到資料集名稱，以及「未新增任何批次」通知。 由於您尚未將任何批次新增至此資料集，因此預期會出現此情況。
+現在已建立空的資料集，您已返回「資料集」工作區 **[!UICONTROL 的「資料集活動]** 」索引 [!UICONTROL 標籤] 。 您應該會在工作區的左上角看到資料集名稱，以及「未新增任何批次」通知。 由於您尚未將任何批次新增至此資料集，因此預期會出現此情況。
 
-在Datasets的右側，您會看到與新資料集相關的 **[!UICONTROL Info]***[!UICONTROL Tab，例如]* Info *[!UICONTROL ID、AdSignDesignDesignDesignDesignDesignDatases,]*********** DDDSigSiDSinasig。 「資 [!UICONTROL 訊] 」標籤也包含資料集的建立時間及其「上次修改日期」的相 *[!UICONTROL 關資]* 訊 ** 。
+在Datasets的右側，您會看到與新資料集相關的 **[!UICONTROL Info]****[!UICONTROL Tab，例如]** Info ************************ ID、AdobeChropSignSignSignSignSignSignSignSignSourd(ChrinSignSinSignSinSSinSinPSinPSinSSSiSinPSinPSinSinInSinInSinInSinInSin)資料集),SinSinSinPSinSinSinaSinSinSiSinSinSinSi 「資 [!UICONTROL 訊] 」標籤也包含資料集的建立時間及其「上次修改日期」的相 **[!UICONTROL 關資]** 訊 **** 。
 
 請記下資料集 **[!UICONTROL ID]**，因為此值是完成觀眾區段匯出工作流程的必要值。
 
