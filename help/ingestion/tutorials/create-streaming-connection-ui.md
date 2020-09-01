@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 使用UI建立串流連線
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
+source-git-commit: f8d13b305a61f8606c4fa1ceee6d4518b5d83fda
 workflow-type: tm+mt
 source-wordcount: '498'
 ht-degree: 0%
@@ -26,30 +26,30 @@ ht-degree: 0%
 
 ## 建立串流連線
 
-登入UI後，按一 [!DNL Experience Platform] 下「來源 **** 」以開啟「 *[!UICONTROL 目錄]* 」標籤。 此頁面將可用的來源類型顯示為個別卡片，每張卡片都包含泡泡，顯示從串流連線到資料集所建立的資料流數。
+登入UI後，按一 [!DNL Experience Platform] 下「來源 **** 」以開啟「 **[!UICONTROL 目錄]** 」標籤。 此頁面將可用的來源類型顯示為個別卡片，每張卡片都包含泡泡，顯示從串流連線到資料集所建立的資料流數。
 
 ![](../images/streaming-ingestion/ui/click-sources.png)
 
-在「來 *[!UICONTROL 源]* 」頁面上，按一下 **[!UICONTROL HTTP API]**，然後按一下「 **[!UICONTROL 連線來源」]**。
+在「來 **[!UICONTROL 源]** 」頁面上，按一下 **[!UICONTROL HTTP API]**，然後按 **[!UICONTROL 一下「連線來源」]**。
 
 ![](../images/streaming-ingestion/ui/click-connect-source.png)
 
-出現 *[!UICONTROL 「Connect to HTTP]* （連接到HTTP）」螢幕。 在「 *[!UICONTROL 服務詳細資]*」下，提供新串流連 **[!UICONTROL 線的名稱]****[!UICONTROL 和說明]** 。
+出現 **[!UICONTROL 「Connect to HTTP]** （連接到HTTP）」螢幕。 在「 **[!UICONTROL 服務詳細資]**」下，提供新串流連 **[!UICONTROL 線的名稱]****[!UICONTROL 和說明]** 。
 
-在「 *[!UICONTROL 帳戶驗證]*」下，為串流連線選取下列組態屬性：
+在「 **[!UICONTROL 帳戶驗證]**」下，為串流連線選取下列組態屬性：
 
-- **[!UICONTROL 驗證]:**無論串流連線是否需要驗證。 驗證可確保從受信任的來源收集資料。 如果處理個人識別資訊(PII)，建議開啟此功能。
-- **[!UICONTROL XDM模式相容性]:**此串流連線是否會傳送與XDM架構相容的事件。 依預設，此屬性會**開啟&#x200B;**。
+- **[!UICONTROL 驗證]:** 無論串流連線是否需要驗證。 驗證可確保從受信任的來源收集資料。 如果處理個人識別資訊(PII)，建議開啟此功能。
+- **[!UICONTROL XDM模式相容性]:** 此串流連線是否會傳送與XDM架構相容的事件。 依預設，此屬性會 **開啟**。
 
-選擇完配置屬性後，按一下「連 **[!UICONTROL 接」]**。 您的串流HTTP連線現在已建立，現在可在「來源」工作區的「瀏 *[!UICONTROL 覽]* 」標籤下 *[!UICONTROL 檢視]* 。
+選擇完配置屬性後，按一下「連 **[!UICONTROL 接」]**。 您的串流HTTP連線現在已建立，現在可在「來源」工作區的「瀏 **[!UICONTROL 覽]** 」標籤下 **[!UICONTROL 檢視]** 。
 
 ![](../images/streaming-ingestion/ui/http-sources-details.png)
 
-在「瀏 *[!UICONTROL 覽]* 」標籤中，您可以按一下新建立的串流HTTP連線，並檢視該連線的詳細資訊。
+在「瀏 **[!UICONTROL 覽]** 」標籤中，您可以按一下新建立的串流HTTP連線，並檢視該連線的詳細資訊。
 
 ![](../images/streaming-ingestion/ui/browse-sources.png)
 
-按一下連線名稱的超連結，您就可以透過設定所連接的資料集，來選取要顯示的資料，方法是按一下「選 *[!UICONTROL 取資料」]*。
+按一下連線名稱的超連結，您就可以透過設定所連接的資料集，來選取要顯示的資料，方法是按一下「選 **[!UICONTROL 取資料」]**。
 
 ![](../images/streaming-ingestion/ui/select-data.png)
 
