@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API
+keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API;consent;Consent;preferences;Preferences;privacyOptOuts;marketingPreferences;optOutType;basisOfProcessing;
 solution: Adobe Experience Platform
 title: 隱私權混音概觀
+description: 「隱私權／行銷偏好（同意）」混合是「體驗資料模型」(XDM)混合，其目的在於支援收集CMP和其他來自客戶來源的使用者權限和偏好。 本檔案涵蓋混合程式所提供的各種欄位的結構與用途。
 topic: guide
 translation-type: tm+mt
-source-git-commit: 02014c503dc9d4597e1129cafe3ba86f4abe37e9
+source-git-commit: 74a4a3cc713cc068be30379e8ee11572f8bb0c63
 workflow-type: tm+mt
-source-wordcount: '1778'
+source-wordcount: '1827'
 ht-degree: 1%
 
 ---
@@ -254,11 +255,11 @@ ht-degree: 1%
 
 | 值 | 說明 |
 | --- | --- |
-| `general_opt_out` | 資料無法用於任何用途。 這通常會封鎖資料收集，除非處理基礎並非「同意」。<br><br>使用此選擇退出類型時，接受的值 `in` 並取 `out` 得下列內容含義：<ul><li>`in`: 使用者 **已同意其資料** ，以便用於一般處理。</li><li>`out`: 使用者 **不同意** ，其資料用於一般處理。</li></ul>如需詳細資訊， [請參閱xdm:optOutValue的接受值表](#choice-optOutValue-values) 。 |
+| `general_opt_out` | 資料無法用於任何用途。 這通常會封鎖資料收集，除非處理基礎並非「同意」。<br><br>使用此選擇退出類型時，接受的值 `in` 並取 `out` 得下列內容含義：<ul><li>`in`:使用者 **已同意其資料** ，以便用於一般處理。</li><li>`out`:使用者 **不同意** ，其資料用於一般處理。</li></ul>如需詳細資訊， [請參閱xdm:optOutValue的接受值表](#choice-optOutValue-values) 。 |
 | `anonymous_analysis` | 資料無法用於不需要任何類型使用者ID的一般Web量度，例如特定頁面被檢視的次數。 |
 | `device_linking` | 訪客使用之某個裝置的資料無法與該訪客使用之其他裝置的資料結合。 裝置會使用常用的使用者名稱或電子郵件地址等技術進行連結，通常會透過Adobe裝置合作社或私人裝置圖表進行連結。 |
 | `pseudonymous_analysis` | 資料無法用於Adobe Analytics提供的網路量度，因為Adobe Analytics需要假名ID來識別使用者透過網站（例如流失報表）的路徑、建立工作階段，以及用于歸因。 |
-| `sales_sharing_opt_out` | 資料不能用於銷售用途或與第三方共用。<br><br>使用此選擇退出類型時，接受的值 `in` 並取 `out` 得下列內容含義：<ul><li>`in`: 使用者 **已同意其資料** ，以便用於銷售和分享用途。</li><li>`out`: 使用者 **不同意其資料** ，這些資料會用於銷售和分享用途。</li></ul>如需詳細資訊， [請參閱xdm:optOutValue的接受值表](#choice-optOutValue-values) 。 |
+| `sales_sharing_opt_out` | 資料不能用於銷售用途或與第三方共用。<br><br>使用此選擇退出類型時，接受的值 `in` 並取 `out` 得下列內容含義：<ul><li>`in`:使用者 **已同意其資料** ，以便用於銷售和分享用途。</li><li>`out`:使用者 **不同意其資料** ，這些資料會用於銷售和分享用途。</li></ul>如需詳細資訊， [請參閱xdm:optOutValue的接受值表](#choice-optOutValue-values) 。 |
 
 ### xdm:basisOfProcessing的接受值 {#basisOfProcessing-values}
 
@@ -266,7 +267,7 @@ ht-degree: 1%
 
 | 值 | 說明 |
 | --- | --- |
-| `consent` **（預設值）** | 允許針對指定目的收集資料，因為個人已提供明確權限。 如果未提供其他值， `xdm:basisOfProcessing` 則此為預設值。 <br><br>**重要&#x200B;**: 只有將`xdm:choice`和的`xdm:optOutValue`值設定為時，才`xdm:basisOfProcessing`會使用`consent`。 如果本表中列出的任何其他值都用於，`xdm:basisOfProcessing`則會忽略個人的同意選擇。 |
+| `consent` **（預設值）** | 允許針對指定目的收集資料，因為個人已提供明確權限。 如果未提供其他值， `xdm:basisOfProcessing` 則此為預設值。 <br><br>**重要**:只有將 `xdm:choice` 和的 `xdm:optOutValue` 值設定為時，才 `xdm:basisOfProcessing` 會使用 `consent`。 如果本表中列出的任何其他值都用於， `xdm:basisOfProcessing` 則會忽略個人的同意選擇。 |
 | `compliance` | 為達到特定目的而收集資料，是為了履行企業的法律義務。 |
 | `contract` | 為達到特定目的而收集資料，是為了履行與個人的合同義務。 |
 | `legitimate_interest` | 收集並處理資料以達到特定目的的正當商業利益，比其對個人的潛在傷害要大。 |
@@ -307,7 +308,7 @@ ht-degree: 1%
 | `sms` | SMS 訊息. |
 | `social_media` | 社交媒體內容。 |
 | `snail_mail` | 通過常規郵遞發送的資訊。 |
-| `third_party_content` | 網站上顯示的由不相關實體提供的內容或文章。 |
+| `third_party_content` | 您網站上顯示的由不相關實體提供的內容或文章。 |
 | `third_party_offers` | 您網站廣告服務上顯示的選件或廣告，來自不相關的實體。 |
 
 ### 完整架 [!DNL Privacy Consent] 構 {#full-schema}
