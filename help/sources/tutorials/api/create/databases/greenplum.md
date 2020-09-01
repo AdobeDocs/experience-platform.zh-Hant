@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;greenplum;Greenplum
 solution: Experience Platform
 title: 使用Flow Service API建立GreenPlum連接器
 topic: overview
+description: 本教學課程使用Flow Service API來引導您完成將GreenPlum連接至Experience Platform的步驟。
 translation-type: tm+mt
-source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
+source-git-commit: 25f1dfab07d0b9b6c2ce5227b507fc8c8ecf9873
 workflow-type: tm+mt
-source-wordcount: '528'
+source-wordcount: '547'
 ht-degree: 2%
 
 ---
