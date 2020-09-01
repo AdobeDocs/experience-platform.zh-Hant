@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 啟用傳入來源資料以填入客戶個人檔案
 topic: overview
 translation-type: tm+mt
-source-git-commit: 6bd5dc5a68fb2814ab99d43b34f90aa7e50aa463
+source-git-commit: c6c5ada52321b11543254f80399c38365f0fb9d7
 workflow-type: tm+mt
 source-wordcount: '476'
 ht-degree: 0%
@@ -23,7 +23,7 @@ ht-degree: 0%
 - [[!DNL Experience Data Model] (XDM)系統](../../../xdm/home.md):組織客戶體驗資料 [!DNL Experience Platform] 的標準化架構。
    - [架構構成基礎](../../../xdm/schema/composition.md):瞭解XDM架構的基本建置區塊，包括架構組合的主要原則和最佳實務。
    - [架構編輯器教程](../../../xdm/tutorials/create-schema-ui.md):瞭解如何使用架構編輯器UI建立自訂架構。
-- [[!DNL 即時客戶基本資料]](../../../profile/home.md):根據來自多個來源的匯整資料，提供統一、即時的消費者個人檔案。
+- [[!DNL即時客戶基本資料]](../../../profile/home.md):根據來自多個來源的匯整資料，提供統一、即時的消費者個人檔案。
 
 此外，本教學課程要求您已建立並設定來源連接器。  如需在UI中建立不同連接器的教學課程清單，請參閱來源連 [接器概觀](../../home.md)。
 
@@ -47,7 +47,7 @@ ht-degree: 0%
 
 ![](../../images/tutorials/dataflow/cloud-storage/batch/select-dataset-schema.png)
 
-此時 **[!UICONTROL 會出現]** 「架構編輯器」，在中央畫布中顯示架構的結構。 在畫布中，選取要設為主要身分的欄位。 在出現的 *[!UICONTROL 欄位屬性]* (Field properties **[!UICONTROL )標籤下，選取「]** Identity **[!UICONTROL 」核取方塊，然後選取「]** Primary identity」。 最後，選取適當的 **[!UICONTROL Identity命名空間]**，然後按一下 **[!UICONTROL 套用]**。
+此時 **[!UICONTROL 會出現]** 「架構編輯器」，在中央畫布中顯示架構的結構。 在畫布中，選取要設為主要身分的欄位。 在出現的 **[!UICONTROL 欄位屬性]** (Field properties **[!UICONTROL )標籤下，選取「]** Identity **[!UICONTROL 」核取方塊，然後選取「]** Primary identity」。 最後，選取適當的 **[!UICONTROL Identity命名空間]**，然後按一下 **[!UICONTROL 套用]**。
 
 ![](../../images/tutorials/dataflow/cloud-storage/batch/set-schema-identity.png)
 
