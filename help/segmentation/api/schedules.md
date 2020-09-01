@@ -1,10 +1,10 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;segmentation;Segmentation;Segmentation Service;schedules;schedule;api;API;
 solution: Experience Platform
 title: 計畫
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 86ded28b1830d3607c8b5214c8d31dfcbf446252
+source-git-commit: 17ef6c1c6ce58db2b65f1769edf719b98d260fc6
 workflow-type: tm+mt
 source-wordcount: '1171'
 ht-degree: 3%
@@ -26,7 +26,7 @@ ht-degree: 3%
 
 **API格式**
 
-端點 `/config/schedules` 支援數個查詢參數，以協助篩選結果。 雖然這些參數是可選的，但強烈建議使用這些參數以幫助降低昂貴的開銷。 在沒有參數的情況下呼叫此端點將檢索組織可用的所有計畫。 可包含多個參數，由&amp;符號(`&`)分隔。
+端點 `/config/schedules` 支援數個查詢參數，以協助篩選結果。 雖然這些參數是可選的，但強烈建議使用它們，以幫助降低昂貴的開銷。 在沒有參數的情況下呼叫此端點將檢索組織可用的所有計畫。 可包含多個參數，由&amp;符號(`&`)分隔。
 
 ```http
 GET /config/schedules
