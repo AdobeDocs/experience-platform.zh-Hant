@@ -5,7 +5,7 @@ title: Adobe Experience Platform查詢服務UI指南
 topic: guide
 description: Adobe Experience Platform Query Service提供使用者介面，可用來寫入和執行查詢、檢視先前執行的查詢，以及存取IMS組織內的使用者儲存的查詢。
 translation-type: tm+mt
-source-git-commit: 23516c66a67ae5663dcf90a40ccba98bfd266ab0
+source-git-commit: c6c5ada52321b11543254f80399c38365f0fb9d7
 workflow-type: tm+mt
 source-wordcount: '617'
 ht-degree: 2%
@@ -19,17 +19,17 @@ Adobe Experience Platform提 [!DNL Query Service] 供使用者介面，可用來
 
 ## [!DNL Query Editor]
 
-使用 [!DNL Query Editor] 可以無需使用外部客戶端就能編寫和執行查詢。 按一 **[!UICONTROL 下「建立查詢]** 」以開啟 [!DNL Query Editor] 並建立新查詢。 您也可以從「記錄 [!DNL Query Editor] 」或「瀏覽」標籤中選 *[!UICONTROL 擇查詢]* ，以 ** 存取。 選擇以前執行或保存的查詢將打 [!DNL Query Editor] 開並顯示所選查詢的SQL。
+使用 [!DNL Query Editor] 可以無需使用外部客戶端就能編寫和執行查詢。 按一 **[!UICONTROL 下「建立查詢]** 」以開啟 [!DNL Query Editor] 並建立新查詢。 您也可以從「記錄 [!DNL Query Editor] 」或「瀏覽」標籤中選 **[!UICONTROL 擇查詢]** ，以 **** 存取。 選擇以前執行或保存的查詢將打 [!DNL Query Editor] 開並顯示所選查詢的SQL。
 
 ![影像](../images/queries/ui-overview/overview.png)
 
-[!DNL Query Editor] 提供編輯空間，您可以在其中開始鍵入查詢。 在鍵入時，編輯器會自動完成表內的SQL保留字、表和欄位名。 完成查詢的寫入後，按一下「 **播放** 」按鈕運行查詢。 編輯 *[!UICONTROL 器下方的]* 「控制台」標籤顯示 [!DNL Query Service] 當前正在執行的操作，指示何時返回查詢。 「控 *[!UICONTROL 制台]* 」旁的「結果」標籤會顯示查詢結果。 有關使 [用的詳細資訊][query-editor] ，請參閱查詢編輯器指南 [!DNL Query Editor]。
+[!DNL Query Editor] 提供編輯空間，您可以在其中開始鍵入查詢。 在鍵入時，編輯器會自動完成表內的SQL保留字、表和欄位名。 完成查詢的寫入後，按一下「 **播放** 」按鈕運行查詢。 編輯 **[!UICONTROL 器下方的]** 「控制台」標籤顯示 [!DNL Query Service] 當前正在執行的操作，指示何時返回查詢。 「控 **[!UICONTROL 制台]** 」旁的「結果」標籤會顯示查詢結果。 有關使 [用的詳細資訊][query-editor] ，請參閱查詢編輯器指南 [!DNL Query Editor]。
 
 ![影像](../images/queries/ui-overview/query-editor.png)
 
 ## 瀏覽
 
-「瀏 *[!UICONTROL 覽]* 」(Browse)頁籤顯示由組織中的用戶保存的查詢。 將這些視為查詢項目非常有用，因為此處保存的查詢可能仍在構建中。 如果先前已執 *[!UICONTROL 行過]* ,「瀏覽」標籤上顯示的查詢也會在「記錄」標籤中顯示為執行查詢 **[!DNL Query Service]。
+「瀏 **[!UICONTROL 覽]** 」(Browse)頁籤顯示由組織中的用戶保存的查詢。 將這些視為查詢項目非常有用，因為此處保存的查詢可能仍在構建中。 如果先前已執 **[!UICONTROL 行過]** ,「瀏覽」標籤上顯示的查詢也會在「記錄」標籤中顯示為執行查詢 ****[!DNL Query Service]。
 
 ![影像](../images/queries/ui-overview/browse.png)
 
@@ -42,7 +42,7 @@ Adobe Experience Platform提 [!DNL Query Service] 供使用者介面，可用來
 
 ## 記錄檔
 
-「日 *[!UICONTROL 志]* 」頁籤提供以前已執行的查詢清單。 預設情況下，日誌會以逆時代順序列出查詢。
+「日 **[!UICONTROL 志]** 」頁籤提供以前已執行的查詢清單。 預設情況下，日誌會以逆時代順序列出查詢。
 
 ![影像](../images/queries/ui-overview/log.png)
 
@@ -58,7 +58,7 @@ Adobe Experience Platform提 [!DNL Query Service] 供使用者介面，可用來
 
 ## 認證
 
-「認 *[!UICONTROL 證]* 」頁籤顯示 [!DNL Postgres] 您的認證。 按一下任 **[!UICONTROL 何欄位旁的]** 「複製」圖示，將其內容儲存在鍵盤緩衝區中。 有關如何使用這些憑證與外部用戶端連接的詳細資訊，請閱讀「與用戶 [端連接」指南][connect-clients]。
+「認 **[!UICONTROL 證]** 」頁籤顯示 [!DNL Postgres] 您的認證。 按一下任 **[!UICONTROL 何欄位旁的]** 「複製」圖示，將其內容儲存在鍵盤緩衝區中。 有關如何使用這些憑證與外部用戶端連接的詳細資訊，請閱讀「與用戶 [端連接」指南][connect-clients]。
 
 ![影像](../images/queries/ui-overview/credentials.png)
 
