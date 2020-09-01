@@ -3,11 +3,11 @@ keywords: Experience Platform;home;popular topics;data governance;data usage pol
 solution: Experience Platform
 title: 建立資料使用原則
 topic: policies
-description: 資料使用標籤與實施(DULE)是Adobe Experience Platform資料治理的核心機制。 DULE Policy Service API可讓您建立和管理DULE原則，以決定可針對包含特定DULE標籤的資料採取哪些行銷動作。 本檔案提供使用Policy Service API建立DULE原則的逐步教學課程。
+description: 「原則服務API」可讓您建立和管理資料使用原則，以決定對包含特定資料使用標籤的資料可採取哪些行銷動作。 本檔案提供使用Policy Service API建立原則的逐步教學課程。
 translation-type: tm+mt
-source-git-commit: 43d568a401732a753553847dee1b4a924fcc24fd
+source-git-commit: 0f3a4ba6ad96d2226ae5094fa8b5073152df90f7
 workflow-type: tm+mt
-source-wordcount: '1254'
+source-wordcount: '1209'
 ht-degree: 2%
 
 ---
@@ -15,33 +15,33 @@ ht-degree: 2%
 
 # 在API中建立資料使用原則
 
-資料使用標籤與實施(DULE)是Adobe Experience Platform的核心機制 [!DNL Data Governance]。 DULE Policy Service API [](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) （DULE原則服務API）可讓您建立和管理DULE原則，以決定可針對包含特定DULE標籤的資料採取哪些行銷動作。
+「原 [則服務API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) 」可讓您建立和管理資料使用原則，以決定可針對包含特定資料使用標籤的資料採取哪些行銷動作。
 
-本檔案提供使用 [!DNL Policy Service] API建立DULE原則的逐步教學課程。 如需API中可用不同作業的更完整指南，請參閱「原則服務開 [發人員指南」](../api/getting-started.md)。
+本檔案提供使用 [!DNL Policy Service] API建立原則的逐步教學課程。 如需API中可用不同作業的更完整指南，請參閱「原則服務開 [發人員指南」](../api/getting-started.md)。
 
 ## 快速入門
 
-本教程需要對建立和評估DULE策略時涉及的以下關鍵概念有充分的瞭解：
+本教學課程需要對以下在建立和評估策略時涉及的主要概念有充分的瞭解：
 
 * [[!DNL資料治理]](../home.md):強制執行資料使用 [!DNL Platform] 合規性的框架。
 * [資料使用標籤](../labels/overview.md):資料使用標籤會套用至XDM資料欄位，指定資料存取限制。
 * [[!DNL體驗資料模型(XDM)]](../../xdm/home.md):組織客戶體驗資料 [!DNL Platform] 的標準化架構。
 * [沙盒](../../sandboxes/home.md): [!DNL Experience Platform] 提供虛擬沙盒，可將單一執行個體分 [!DNL Platform] 割為不同的虛擬環境，以協助開發和發展數位體驗應用程式。
 
-在開始本教學課程之前，請先閱讀開發人員指南 [，以取得成功呼叫DULE](../api/getting-started.md)[!DNL Policy Service] API所需的重要資訊，包括必要的標題以及如何讀取範例API呼叫。
+在開始本教學課程之前，請先閱讀開發人員指南 [，以取得成功呼叫](../api/getting-started.md)[!DNL Policy Service] API所需的重要資訊，包括必要的標題以及如何讀取範例API呼叫。
 
 ## 定義行銷動作 {#define-action}
 
 在架構 [!DNL Data Governance] 中，行銷動作是資料使用者採取的 [!DNL Experience Platform] 動作，需要檢查資料使用政策是否違規。
 
-建立DULE原則的第一步是決定該原則將評估的行銷動作。 您可以使用下列其中一個選項來完成此作業：
+建立資料使用原則的第一步是決定該原則將評估的行銷動作。 您可以使用下列其中一個選項來完成此作業：
 
 * [尋找現有的行銷動作](#look-up)
 * [建立新的行銷動作](#create-new)
 
 ### 尋找現有的行銷動作 {#look-up}
 
-您可以對其中一個端點提出GET請求，以尋找由DULE政策評估的現有行銷動 `/marketingActions` 作。
+您可以對其中一個端點提出GET請求，以尋找現有的行銷動作，由您的政策來評 `/marketingActions` 估。
 
 **API格式**
 
@@ -122,7 +122,7 @@ curl -X GET \
 | --- | --- |
 | `_links.self.href` | 陣列中的每個項 `children` 目都包含列出的行銷動作的URI ID。 |
 
-當您找到要使用的行銷動作時，請記錄其屬性的 `href` 值。 在建立DULE策略的下一步 [中使用此值](#create-policy)。
+當您找到要使用的行銷動作時，請記錄其屬性的 `href` 值。 此值用於建立策略的下 [一步](#create-policy)。
 
 ### Create a new marketing action {#create-new}
 
@@ -188,13 +188,13 @@ curl -X PUT \
 | --- | --- |
 | `_links.self.href` | 行銷動作的URI ID。 |
 
-記錄新建立之行銷動作的URI ID，因為它將用於建立DULE原則的下一個步驟。
+記錄新建立之行銷動作的URI ID，因為它將用於建立原則的下一步驟。
 
-## 建立DULE策略 {#create-policy}
+## 建立原則 {#create-policy}
 
-建立新原則時，您必須提供行銷動作的URI ID，並具有禁止該行銷動作的DULE標籤的運算式。
+建立新原則時，您必須提供行銷動作的URI ID，以及禁止該行銷動作的使用標籤的運算式。
 
-此表達式稱為策 **略表達式** ，是包含(A)DULE標籤或(B)運算子和操作數（但不同時包含兩者）的對象。 反過來，每個操作數也是策略表達式對象。 例如，如果標籤存在，則可能禁止將資料匯出至第三 `C1 OR (C3 AND C7)` 方的政策。 此表達式將指定為：
+此表達式稱為策 **略表達式** ，是包含(A)標籤或(B)運算子和操作數（但不同時包含兩者）的對象。 反過來，每個操作數也是策略表達式對象。 例如，如果標籤存在，則可能禁止將資料匯出至第三 `C1 OR (C3 AND C7)` 方的政策。 此表達式將指定為：
 
 ```json
 "deny": {
@@ -222,7 +222,7 @@ curl -X PUT \
 >
 >僅支援OR和AND運算子。
 
-配置策略表達式後，可以通過向端點發出POST請求來建立新的DULE策 `/policies/custom` 略。
+配置策略表達式後，可以通過向端點發出POST請求來建立新策 `/policies/custom` 略。
 
 **API格式**
 
@@ -232,7 +232,7 @@ POST /policies/custom
 
 **請求**
 
-下列請求會在請求裝載中提供行銷動作和原則運算式，以建立稱為「將資料匯出至第三方」的DULE原則。
+下列請求會在請求裝載中提供行銷動作和原則運算式，以建立稱為「將資料匯出至第三方」的原則。
 
 ```shell
 curl -X POST \
@@ -268,7 +268,7 @@ curl -X POST \
 | 屬性 | 說明 |
 | --- | --- |
 | `marketingActionRefs` | 一個陣列，包含 `href` 在上一步驟中獲取的行銷操作 [的值](#define-action)。 雖然上述範例僅列出一個行銷動作，但也可提供多個動作。 |
-| `deny` | 策略表達式對象。 定義會導致策略拒絕中引用的行銷操作的DULE標籤和條件 `marketingActionRefs`。 |
+| `deny` | 策略表達式對象。 定義會導致原則拒絕中參考之行銷動作的使用標籤和條件 `marketingActionRefs`。 |
 
 **回應**
 
@@ -319,17 +319,17 @@ curl -X POST \
 
 | 屬性 | 說明 |
 | --- | --- |
-| `id` | 唯讀、系統生成的值，可唯一標識DULE策略。 |
+| `id` | 唯讀、系統生成的值，可唯一標識策略。 |
 
-記錄新建立的DULE策略的URI ID，因為它用於下一步以啟用策略。
+記錄新建立策略的URI ID，因為它用於下一步以啟用策略。
 
-## 啟用DULE策略
+## 啟用原則
 
 >[!NOTE]
 >
->如果您希望將DULE策略保留為狀態，則此步驟是可選的， `DRAFT` 但請注意，預設情況下，策略必須將其狀態設定為 `ENABLED` ，才能參與評估。 有關如何對處於狀 [態的策略執行例外的資訊](../enforcement/api-enforcement.md) ，請參見有關強制執行DULE策略的 `DRAFT` 教程。
+>如果您希望將策略保留為狀態，則此步驟是可選的， `DRAFT` 但請注意，預設情況下，策略必須將其狀態設定為 `ENABLED` ，才能參與評估。 有關如何對處於狀 [態的策略進行例外](../enforcement/api-enforcement.md) ，請參見策略實施指 `DRAFT` 南。
 
-預設情況下，將其屬性設定為 `status` 的DULE策略 `DRAFT` 不參與評估。 通過向端點發出PATCH請求並在請求路徑的末尾為策略提供唯一標識符，您可以啟用 `/policies/custom/` 策略進行評估。
+預設情況下，將其屬性設 `status` 置為不參與 `DRAFT` 評估的策略。 通過向端點發出PATCH請求並在請求路徑的末尾為策略提供唯一標識符，您可以啟用 `/policies/custom/` 策略進行評估。
 
 **API格式**
 
@@ -343,7 +343,7 @@ PATCH /policies/custom/{POLICY_ID}
 
 **請求**
 
-以下請求對DULE策略的屬性執 `status` 行PATCH操作，將其值從更改為 `DRAFT``ENABLED`。
+以下請求對策略的屬性執行 `status` PATCH操作，將其值從更改為 `DRAFT``ENABLED`。
 
 ```shell
 curl -X PATCH \
