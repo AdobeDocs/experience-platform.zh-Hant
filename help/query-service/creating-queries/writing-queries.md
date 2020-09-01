@@ -1,10 +1,10 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;query service;Query service;writing queries;writing query;
 solution: Experience Platform
 title: 編寫查詢
 topic: queries
 translation-type: tm+mt
-source-git-commit: 3b710e7a20975880376f7e434ea4d79c01fa0ce5
+source-git-commit: c5d3be4706ca6d6a30e203067db6ddc894b9bfb4
 workflow-type: tm+mt
 source-wordcount: '643'
 ht-degree: 1%
@@ -20,7 +20,7 @@ ht-degree: 1%
 
 ## 查詢執行模型
 
-Adobe Experience Platform有 [!DNL Query Service] 兩種查詢執行模型： 互動式和非互動式。 交互執行用於商業智慧工具中的查詢開發和報告生成，而非交互用於作為資料處理工作流的一部分的較大作業和操作查詢。
+Adobe Experience Platform有 [!DNL Query Service] 兩種查詢執行模型：互動式和非互動式。 交互執行用於商業智慧工具中的查詢開發和報告生成，而非交互用於作為資料處理工作流的一部分的較大作業和操作查詢。
 
 ### 互動式查詢執行
 
