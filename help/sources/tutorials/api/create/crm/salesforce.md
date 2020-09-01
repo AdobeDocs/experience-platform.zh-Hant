@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Salesforce;salesforce
 solution: Experience Platform
 title: 使用Flow Service API建立Salesforce連接器
 topic: overview
+description: 本教學課程使用Flow Service API來引導您完成將平台連接至Salesforce帳戶以收集CRM資料的步驟。
 translation-type: tm+mt
-source-git-commit: 5839e4695589455bd32b6e3e33a7c377343f920d
+source-git-commit: 25f1dfab07d0b9b6c2ce5227b507fc8c8ecf9873
 workflow-type: tm+mt
-source-wordcount: '683'
+source-wordcount: '707'
 ht-degree: 1%
 
 ---
@@ -50,7 +51,7 @@ Flow Service用於收集和集中Adobe Experience Platform內不同來源的客�
 
 若要呼叫API，您必 [!DNL Platform] 須先完成驗證教 [學課程](../../../../../tutorials/authentication.md)。 完成驗證教學課程後，將提供所有 [!DNL Experience Platform] API呼叫中每個必要標題的值，如下所示：
 
-* 授權： 生產者 `{ACCESS_TOKEN}`
+* 授權：生產者 `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
 * x-gw-ims-org-id: `{IMS_ORG}`
 
