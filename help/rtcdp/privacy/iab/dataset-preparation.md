@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 即時客戶資料平台中的IAB TCF 2.0支援
 topic: privacy events
 translation-type: tm+mt
-source-git-commit: e7cbbd2e376ab109367d1d16cb9e033202866a6f
+source-git-commit: f8d13b305a61f8606c4fa1ceee6d4518b5d83fda
 workflow-type: tm+mt
 source-wordcount: '1352'
 ht-degree: 0%
@@ -71,7 +71,7 @@ TCF 2.0支援需要提供兩個XDM混合，它們提供客戶許可欄位：一�
 
 ## 建立客戶同意方案 {#create-schemas}
 
-在平台UI中，按一下左 **[!UICONTROL 側導覽中]** ，以開啟 *[!UICONTROL 結構]工作區&#x200B;*。 從這裡，請依照下列各節中的步驟建立每個必要的架構。
+在平台UI中，按一下左 **[!UICONTROL 側導覽中]** ，以開啟 *[!UICONTROL 結構]工作區*。 從這裡，請依照下列各節中的步驟建立每個必要的架構。
 
 >[!NOTE]
 >
@@ -79,11 +79,11 @@ TCF 2.0支援需要提供兩個XDM混合，它們提供客戶許可欄位：一�
 
 ### 建立記錄型同意方案 {#profile-schema}
 
-從「方 **[!UICONTROL 案]** 」工作區的「瀏 *[!UICONTROL 覽]」標籤中，根據類別建立新&#x200B;*方案**[!DNL XDM Individual Profile]**。 在「架構編輯器」中開啟架構後，按一&#x200B;**[!UICONTROL 下畫布左側]**「*[!UICONTROL Mixins]*」區段下的「新增」。
+從「方 **[!UICONTROL 案]** 」工作區的「瀏 **[!UICONTROL 覽]」標籤中，根據類別建立新**&#x200B;方案 **[!DNL XDM Individual Profile]**。 在「架構編輯器」中開啟架構後，按一 **[!UICONTROL 下畫布左側]** 「 **[!UICONTROL Mixins]** 」區段下的「新增」。
 
 ![](../assets/iab/add-mixin-profile.png)
 
-此時將 *[!UICONTROL 顯示「添加混音]* 」對話框。 從這裡，從清 **[!UICONTROL 單中選擇]** 「設定檔隱私權」。 您可選擇使用搜尋列縮小結果，以更輕鬆地找到混音。 在選取混音後，按一下「新 **[!UICONTROL 增混音」]**。
+此時將 **[!UICONTROL 顯示「添加混音]** 」對話框。 從這裡，從清 **[!UICONTROL 單中選擇]** 「設定檔隱私權」。 您可選擇使用搜尋列縮小結果，以更輕鬆地找到混音。 在選取混音後，按一下「新 **[!UICONTROL 增混音」]**。
 
 ![](../assets/iab/add-profile-privacy.png)
 
@@ -112,11 +112,11 @@ TCF 2.0支援需要提供兩個XDM混合，它們提供客戶許可欄位：一�
 >
 >有關如何為架構設定主標識欄位的步驟，請參見架構創 [建教程](../../../xdm/tutorials/create-schema-ui.md#identity-field)。
 
-要啟用架構 [!DNL Profile]，請按一下左側邊欄中的架構名稱，以開啟右側邊欄中的 *[!UICONTROL 架構屬性]* 對話框。 在這裡，按一下「描述 **[!UICONTROL 檔]** 」切換按鈕。
+要啟用架構 [!DNL Profile]，請按一下左側邊欄中的架構名稱，以開啟右側邊欄中的 **[!UICONTROL 架構屬性]** 對話框。 在這裡，按一下「描述 **[!UICONTROL 檔]** 」切換按鈕。
 
 ![](../assets/iab/profile-enable-profile.png)
 
-出現一個快顯視窗，指出遺失主要識別。 選中使用備用主要標識的複選框，因為主要標識將包含在identityMap欄位中。
+出現一個快顯視窗，指出遺失主要識別。 選中用於使用備用主要標識的複選框，因為主要標識將包含在identityMap欄位中。
 
 <img src="../assets/iab/missing-primary-identity.png" width="600" /><br>
 
@@ -126,11 +126,11 @@ TCF 2.0支援需要提供兩個XDM混合，它們提供客戶許可欄位：一�
 
 ### 建立基於時間序列的許可模式 {#event-schema}
 
-從「方 **[!UICONTROL 案]** 」工作區的「瀏 *[!UICONTROL 覽]」標籤中，根據類別建立新&#x200B;*方案**[!DNL XDM ExperienceEvent]**。 在「架構編輯器」中開啟架構後，按一&#x200B;**[!UICONTROL 下畫布左側]**「*[!UICONTROL Mixins]*」區段下的「新增」。
+從「方 **[!UICONTROL 案]** 」工作區的「瀏 **[!UICONTROL 覽]」標籤中，根據類別建立新**&#x200B;方案 **[!DNL XDM ExperienceEvent]**。 在「架構編輯器」中開啟架構後，按一 **[!UICONTROL 下畫布左側]** 「 **[!UICONTROL Mixins]** 」區段下的「新增」。
 
 ![](../assets/iab/add-mixin-event.png)
 
-此時將 *[!UICONTROL 顯示「添加混音]* 」對話框。 在此處，從清 **[!UICONTROL 單中選取「體驗事件隱私權]** 混合」。 您可選擇使用搜尋列縮小結果，以更輕鬆地找到混音。 在選取混音後，按一下「新 **[!UICONTROL 增混音」]**。
+此時將 **[!UICONTROL 顯示「添加混音]** 」對話框。 在此處，從清 **[!UICONTROL 單中選取「體驗事件隱私權]** 混合」。 您可選擇使用搜尋列縮小結果，以更輕鬆地找到混音。 在選取混音後，按一下「新 **[!UICONTROL 增混音」]**。
 
 ![](../assets/iab/add-event-privacy.png)
 
@@ -161,11 +161,11 @@ TCF 2.0支援需要提供兩個XDM混合，它們提供客戶許可欄位：一�
 
 ![](../assets/iab/dataset-create-from-schema.png)
 
-將出 _[!UICONTROL 現「從架構建立資料集]_」工作流，從「選擇_[!UICONTROL &#x200B;架構」步驟開始]_ 。 在提供的清單中，找出您先前建立的其中一個同意方案。 您可以選擇使用搜尋來縮小結果範圍，並更輕鬆地尋找結構。 按一下方案旁邊的單選按鈕以選擇它，然後按一下「下 **[!UICONTROL 一步]** 」繼續。
+將出 **[!UICONTROL 現「從架構建立資料集]** 」工作流，從「選擇 **[!UICONTROL 架構」步驟開始]** 。 在提供的清單中，找出您先前建立的其中一個同意方案。 您可以選擇使用搜尋來縮小結果範圍，並更輕鬆地尋找結構。 按一下方案旁邊的單選按鈕以選擇它，然後按一下「下 **[!UICONTROL 一步]** 」繼續。
 
 ![](../assets/iab/dataset-select-schema.png)
 
-此時會 _[!UICONTROL 顯示「設定資料集]_」步驟。 在按一下「完成」前，請為資料集提供唯一、可輕鬆識別的名稱和**[!UICONTROL &#x200B;說明&#x200B;]**。
+此時會 **[!UICONTROL 顯示「設定資料集]** 」步驟。 在按一下「完成」前，請為資料集提供唯一、可輕鬆識別的名稱和 **[!UICONTROL 說明]**。
 
 ![](../assets/iab/dataset-configure.png)
 
