@@ -3,10 +3,11 @@ keywords: Experience Platform;home;popular topics
 solution: Experience Platform
 title: 資料管理與隱私權教學課程
 topic: tutorial
+description: 資料使用標籤與實施(DULE)是Adobe Experience Platform資料治理的核心機制。 DULE功能可讓您將資料使用量標籤套用至資料集和欄位，並依據相關資料使用策略將每個標籤分類。
 translation-type: tm+mt
-source-git-commit: 5c5f6c4868e195aef76bacc0a1e5df3857647bde
+source-git-commit: d3ece56d10b1940a5992906a65a50ffe2f7e4346
 workflow-type: tm+mt
-source-wordcount: '470'
+source-wordcount: '506'
 ht-degree: 0%
 
 ---
@@ -14,7 +15,7 @@ ht-degree: 0%
 
 # [!DNL Data Governance] 和教 [!DNL Privacy] 學課程
 
-[!DNL Data Usage Labeling and Enforcement] (DULE)是Adobe Experience Platform [!DNL Data Governanc]e的核心機制。 DULE功能可讓您將資料使用量標籤套用至資料集和欄位，並依據相關資料使用策略將每個標籤分類。 在開始使用標籤之前，請參閱 [Data Governance概觀](../data-governance/home.md) ，以取得DULE架構的更強穩簡介 [!DNL Platform]。
+[!DNL Data Usage Labeling and Enforcement] (DULE)是Adobe Experience Platform的核心機制 [!DNL Data Governance]。 DULE功能可讓您將資料使用量標籤套用至資料集和欄位，並依據相關資料使用策略將每個標籤分類。 在開始使用標籤之前，請參閱 [Data Governance概觀](../data-governance/home.md) ，以取得DULE架構的更強穩簡介 [!DNL Platform]。
 
 Adobe Experience Platform提 [!DNL Privacy Service] 供REST風格的API和使用者介面，讓您協調各種解決方案的隱私權和合規性要求。 若要進一步瞭解，請先閱讀隱私權 [服務概觀](../privacy-service/home.md)。
 
