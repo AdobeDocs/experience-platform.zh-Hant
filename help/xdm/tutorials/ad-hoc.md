@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;;experience data model;Experience data model;Experience Data Model;data model;Data Model;schema registry;Schema Registry;ad-hoc;ad hoc;adhoc;Ad-hoc;Ad hoc;Adhoc;tutorial;Tutorial;create;Create;schema;Schema
 solution: Experience Platform
 title: 建立臨機結構
+description: 在特定情況下，可能需要建立Experience Data Model(XDM)架構，其中欄位的名稱僅限單一資料集使用。 這稱為「臨機」架構。 臨機結構描述用於Experience Platform的各種資料擷取工作流程，包括擷取CSV檔案並建立特定類型的來源連線。
 topic: tutorials
 translation-type: tm+mt
-source-git-commit: d04bf35e49488ab7d5e07de91eb77d0d9921b6fa
+source-git-commit: 74a4a3cc713cc068be30379e8ee11572f8bb0c63
 workflow-type: tm+mt
-source-wordcount: '724'
+source-wordcount: '782'
 ht-degree: 2%
 
 ---
@@ -22,8 +23,8 @@ ht-degree: 2%
 
 本教學課程需要對(XDM) [!DNL Experience Data Model] 系統有良好的認識。 開始本教學課程之前，請先閱讀下列XDM檔案：
 
-- [XDM系統概述](../home.md): XDM及其實施的高階概觀 [!DNL Experience Platform]。
-- [架構構成基礎](../schema/composition.md): 概述XDM架構的基本元件。
+- [XDM系統概述](../home.md):XDM及其實施的高階概觀 [!DNL Experience Platform]。
+- [架構構成基礎](../schema/composition.md):概述XDM架構的基本元件。
 
 在開始本教學課程之前，請先閱讀開 [發人員指南](../api/getting-started.md) ，以取得成功呼叫 [!DNL Schema Registry] API所需的重要資訊。 這包括您 `{TENANT_ID}`的「容器」概念，以及提出要求所需的標題（請特別注意「接受」標題及其可能的值）。
 
