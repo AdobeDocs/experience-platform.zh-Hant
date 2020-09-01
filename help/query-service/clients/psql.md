@@ -5,7 +5,7 @@ title: 使用PSQL連接
 topic: connect
 description: 'PSQL是命令行介面，在電腦上安裝Postgres時會出現。 您可依照下列指示進行安裝。 '
 translation-type: tm+mt
-source-git-commit: c081a7521be9715ca32d35504922a70767924fd7
+source-git-commit: 1bb896f7629d7b71b94dd107eeda87701df99208
 workflow-type: tm+mt
 source-wordcount: '192'
 ht-degree: 1%
@@ -63,9 +63,9 @@ psql (PostgreSQL) 9.5.14
 
 ## 連接PSQL和 [!DNL Query Service]
 
-返回「連 [!DNL Platform] 接BI工 *[!UICONTROL 具」頁上的]* UI。
+返回「連 [!DNL Platform] 接BI工 **[!UICONTROL 具」頁上的]** UI。
 
-按一下 **[!UICONTROL 「復]** 制PSQL命令」 **。
+按一下 **[!UICONTROL 「復]** 制PSQL命令」 ****。
 
 ![影像](../images/clients/psql/connect-bi.png)
 
