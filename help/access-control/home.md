@@ -5,7 +5,7 @@ topic: overview
 title: 存取控制概觀
 description: Adobe Experience Platform的存取控制權是透過Adobe Admin Console提供。 此功能運用Admin Console中的產品設定檔，可連結使用者與權限和沙盒。
 translation-type: tm+mt
-source-git-commit: e22b0f64fd6153f76cff862a6e973a235257430e
+source-git-commit: 397f08efa276f7885e099a0a8d9dc6d23fe0e8cc
 workflow-type: tm+mt
 source-wordcount: '1162'
 ht-degree: 2%
@@ -32,7 +32,7 @@ ht-degree: 2%
 - 管理員可以視需要檢視 [預設產品設定檔](#product-profiles) ，或建立新的客戶產品設定檔。
 - 管理員可以編輯任何現有產品設定檔的權限和使用者。
 - 在建立或編輯產品配置檔案時，管理員使用 **[!UICONTROL users]** 頁籤將用戶添加到配置檔案中，並通過訪問[!UICONTROL permissionsTab來授予這些用戶(如「]Read Datasets[!UICONTROL 」或「]Manage Schemas **** 」)的權限。 同樣地，管理員也可以使用相同的權限標籤來指派沙盒的存取權。
-- 當使用者登入使 [!DNL Experience Platform] 用者介面時，其權 [!DNL Platform] 能存取權是由步驟2授與的權限所驅動。 例如，如果用戶沒有「[!UICONTROL View Datasets]」權限，則側面菜單中的 *[!UICONTROL Datasets]* 頁籤對該用戶不可見。
+- 當使用者登入使 [!DNL Experience Platform] 用者介面時，其權 [!DNL Platform] 能存取權是由步驟2授與的權限所驅動。 例如，如果用戶沒有「[!UICONTROL View Datasets]」權限，則側面菜單中的 **[!UICONTROL Datasets]** 頁籤對該用戶不可見。
 
 有關如何在中管理訪問控制的詳細步驟 [!DNL Experience Platform]，請參 [閱訪問控制使用手冊](./ui/overview.md)。
 
@@ -95,10 +95,10 @@ Adobe Admin Console提供一個集中位置，可讓您管理Adobe產品權益�
 | [!DNL Sandbox Administration] | [!UICONTROL 檢視沙箱] | 屬於您組織的沙盒的唯讀存取權。 |
 | [!DNL Sandbox Administration] | [!UICONTROL 重設沙盒] | 可重設沙盒。 |
 | [!DNL Destinations] | [!UICONTROL 管理目標] | 存取讀取、建立、編輯和停用目標。* |
-| [!DNL Destinations] | [!UICONTROL 查看目標] | 對「目錄」頁籤中可用目標和「瀏覽 **** 」頁籤中已驗證目標的唯讀訪問權。* |
+| [!DNL Destinations] | [!UICONTROL 查看目標] | 對「目錄」頁籤中可用目標和「瀏覽 ******** 」頁籤中已驗證目標的唯讀訪問權。* |
 | [!DNL Destinations] | [!UICONTROL 啟動目標] | 能夠將資料啟動至已建立的作用中目標。 此權限要求將「檢視目標」或「管 [!UICONTROL 理目標] 」授予要啟用目標的使用者。* |
 | [!DNL Data Ingestion] | [!UICONTROL 管理來源] | 存取讀取、建立、編輯和停用來源。 |
-| [!DNL Data Ingestion] | [!UICONTROL 檢視來源] | 對「目錄」標籤中可用來源的唯讀存 *[!UICONTROL 取]* ，以及「瀏覽」標籤中的已驗證 *[!UICONTROL 來源]* 。 |
+| [!DNL Data Ingestion] | [!UICONTROL 檢視來源] | 對「目錄」標籤中可用來源的唯讀存 **[!UICONTROL 取]** ，以及「瀏覽」標籤中的已驗證 **[!UICONTROL 來源]** 。 |
 | [!DNL Data Science Workspace] | [!UICONTROL 管理資料科學工作區] | 在中讀取、建立、編輯和刪除的訪問權限 [!DNL Data Science Workspace]。 |
 
 _(*)本許可要求提供條[!DNL Real-time Customer Data Platform]款。 有關即時CDP的詳細資訊，請首先閱讀[即時CDP概述](https://docs.adobe.com/content/help/en/experience-platform/rtcdp/overview.html)。_
