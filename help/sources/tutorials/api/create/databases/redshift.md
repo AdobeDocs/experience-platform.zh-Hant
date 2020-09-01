@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;redshift;Redshift;Amazon Redshift;amazon redshift
 solution: Experience Platform
 title: 使用Flow Service API建立Amazon Redshift連接器
 topic: overview
+description: 本教學課程使用Flow Service API來引導您完成將Experience Platform連接到Amazon Redshift（以下稱為「Redshift」）的步驟。
 translation-type: tm+mt
-source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
+source-git-commit: 5959d4344ec1c16542de045899ce74beb39a7bc4
 workflow-type: tm+mt
-source-wordcount: '657'
+source-wordcount: '682'
 ht-degree: 1%
 
 ---
