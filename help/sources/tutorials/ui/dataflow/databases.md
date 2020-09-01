@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;database connector
 solution: Experience Platform
 title: 在UI中為資料庫連接器配置資料流
 topic: overview
+description: 資料流是從源中檢索資料並將資料帶入平台資料集的計畫任務。 本教程提供使用資料庫帳戶配置新資料流的步驟。
 translation-type: tm+mt
-source-git-commit: 6bd5dc5a68fb2814ab99d43b34f90aa7e50aa463
+source-git-commit: 14044f9af50cd4c922294cd60f7b6549828e8aca
 workflow-type: tm+mt
-source-wordcount: '1251'
+source-wordcount: '1282'
 ht-degree: 0%
 
 ---
@@ -23,7 +24,7 @@ ht-degree: 0%
 - [[!DNL Experience Data Model] (XDM)系統](../../../../xdm/home.md):Experience Platform組織客戶體驗資料的標準化架構。
    - [架構構成基礎](../../../../xdm/schema/composition.md):瞭解XDM架構的基本建置區塊，包括架構組合的主要原則和最佳實務。
    - [架構編輯器教程](../../../../xdm/tutorials/create-schema-ui.md):瞭解如何使用架構編輯器UI建立自訂架構。
-- [[!DNL 即時客戶基本資料]](../../../../profile/home.md):根據來自多個來源的匯整資料，提供統一、即時的消費者個人檔案。
+- [[!DNL即時客戶基本資料]](../../../../profile/home.md):根據來自多個來源的匯整資料，提供統一、即時的消費者個人檔案。
 
 此外，本教學課程要求您已建立資料庫帳戶。 有關在UI中建立不同資料庫連接器的教學課程清單，請參閱來源連 [接器概觀](../../../home.md)。
 
@@ -66,7 +67,7 @@ ht-degree: 0%
 
 ![](../../../images/tutorials/dataflow/databases/select-existing-schema.png)
 
-您可以根據需要選擇直接映射欄位，或使用映射器函式轉換源資料以導出計算值或計算值。 有關資料映射和映射器函式的詳細資訊，請參閱將CSV資料映 [射到XDM模式欄位的教程](../../../../ingestion/tutorials/map-a-csv-file.md)。
+根據您的需求，您可以選擇直接映射欄位，或使用映射器函式轉換來源資料以衍生計算或計算值。 有關資料映射和映射器函式的詳細資訊，請參閱將CSV資料映 [射到XDM模式欄位的教程](../../../../ingestion/tutorials/map-a-csv-file.md)。
 
 映射源資料後，按一下「下 **[!UICONTROL 一步]**」。
 
