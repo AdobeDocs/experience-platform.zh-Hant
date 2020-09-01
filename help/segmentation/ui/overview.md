@@ -1,10 +1,10 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Segmentation Service;segmentation;segmentation service;user guide;ui guide;segmentation ui guide;segment builder;Segment builder;
 solution: Experience Platform
 title: 區段服務使用指南
 topic: ui guide
 translation-type: tm+mt
-source-git-commit: e7266fba14b2dffe46ce77428ad6fe0dd92abdf5
+source-git-commit: 17ef6c1c6ce58db2b65f1769edf719b98d260fc6
 workflow-type: tm+mt
 source-wordcount: '1365'
 ht-degree: 0%
@@ -20,18 +20,18 @@ ht-degree: 0%
 
 使用區段定義需要瞭解區段所涉 [!DNL Experience Platform] 及的各種服務。 閱讀本使用指南之前，請先閱讀下列服務的說明檔案：
 
-- [[!DNL 分段服務]](../home.md): [!DNL Segmentation Service] 可讓您將儲存在與個人( [!DNL Experience Platform] 如客戶、潛在客戶、使用者或組織)相關的資料分割為較小的群組。
-- [[!DNL 即時客戶基本資料]](../../profile/home.md): 根據來自多個來源的匯整資料，提供統一、即時的消費者個人檔案。
-- [[!DNL Adobe Experience Platform Identity Service]](../../identity-service/home.md): 借由將不同資料來源的身分整合到其中，以建立客戶個人檔案 [!DNL Platform]。
-- [[!DNL 體驗資料模型(XDM)]](../../xdm/home.md): 組織客戶體驗資料 [!DNL Platform] 的標準化架構。
+- [[!DNL分段服務]](../home.md): [!DNL Segmentation Service] 可讓您將儲存在與個人( [!DNL Experience Platform] 如客戶、潛在客戶、使用者或組織)相關的資料分割為較小的群組。
+- [[!DNL即時客戶基本資料]](../../profile/home.md):根據來自多個來源的匯整資料，提供統一、即時的消費者個人檔案。
+- [[!DNL Adobe Experience Platform Identity Service]](../../identity-service/home.md):借由將不同資料來源的身分整合到其中，以建立客戶個人檔案 [!DNL Platform]。
+- [[!DNL體驗資料模型(XDM)]](../../xdm/home.md):組織客戶體驗資料 [!DNL Platform] 的標準化架構。
 
 此外，務必瞭解本檔案使用的兩個關鍵詞，並瞭解它們之間的差異：
-- **區段定義**: 用於描述目標對象的關鍵特性或行為的規則集。
-- **觀眾**: 符合區段定義條件的結果描述檔集。
+- **區段定義**:用於描述目標對象的關鍵特性或行為的規則集。
+- **觀眾**:符合區段定義條件的結果描述檔集。
 
 ## 概述
 
-在 [[!DNL Experience Platform] UI中](http://platform.adobe.com/)，選取左側導 **[!UICONTROL 覽中的「區段]** 」以開啟「 **[!UICONTROL 概述]** 」標籤。 此標籤提供檔案和影片的連結，以協助您瞭解並開始使用區段。
+在UI中 [[!DNL Experience Platform] ，選取左側導](http://platform.adobe.com/)覽中的 **[!UICONTROL 「區段」，以開啟「]** 概述 **** 」標籤。 此標籤提供檔案和影片的連結，以協助您瞭解並開始使用區段。
 
 ![](../images/ui/overview/segment-overview.png)
 
@@ -81,7 +81,7 @@ ht-degree: 0%
 
 「區 **[!UICONTROL 段中的觀眾總數]** 」區段會顯示符合區段資格的設定檔總數。
 
-估計值是使用當天樣本資料的樣本大小來產生。 如果您的描述檔儲存區中有少於100萬個實體，則會使用完整資料集； 100萬到2000萬個單位使用100萬個單位； 超過2000萬個單位，佔全部單位的5%。 有關產生區段估計的詳細資訊，請參閱區 [段建立教學課程的](../tutorials/create-a-segment.md#estimate-and-preview-an-audience) 「估計產生」區段。
+估計值是使用當天樣本資料的樣本大小產生。 如果您的描述檔儲存區中有少於100萬個實體，則會使用完整資料集；100萬到2000萬個單位使用100萬個單位；超過2000萬個單位，佔全部單位的5%。 有關產生區段估計的詳細資訊，請參閱區 [段建立教學課程的](../tutorials/create-a-segment.md#estimate-and-preview-an-audience) 「估計產生」區段。
 
 ### 已啟動的目標
 
@@ -131,7 +131,7 @@ ht-degree: 0%
 
 建立區段定義後，您就可以透過隨選或排程（持續）評估來評估區段定義。 評估意指透過 [!DNL Real-time Customer Profile] 區段定義來移動資料，以產生對應的觀眾。 建立後，觀眾會儲存並儲存，以便使用API匯出 [!DNL Experience Platform] 觀眾。
 
-隨選評估包括視需要使用API來執行評估並建立觀眾，而排程評估（也稱為「排程區段」）可讓您建立循環排程，以評估特定時間（最多每天一次）的區段定義。
+隨選評估包括視需要使用API來執行評估並建立觀眾，而排程評估（也稱為「排程區段」）可讓您建立循環性排程，以評估特定時間（最多每天一次）的區段定義。
 
 ### 啟用排程的分段 {#enable-scheduled-segmentation}
 
