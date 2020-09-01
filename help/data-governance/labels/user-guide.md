@@ -3,11 +3,11 @@ keywords: Experience Platform;home;popular topics;data governance;data usage lab
 solution: Experience Platform
 title: 資料使用標籤使用指南
 topic: labels
-description: 本使用指南涵蓋在Adobe Experience Platform使用者介面中使用資料使用標籤（也稱為DULE標籤）的步驟。
+description: 本使用指南涵蓋在Adobe Experience Platform使用者介面中使用資料使用標籤的步驟。
 translation-type: tm+mt
-source-git-commit: c6c5ada52321b11543254f80399c38365f0fb9d7
+source-git-commit: 0f3a4ba6ad96d2226ae5094fa8b5073152df90f7
 workflow-type: tm+mt
-source-wordcount: '1132'
+source-wordcount: '1119'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 # 資料使用標籤使用指南
 
-本使用指南涵蓋在使用者介面中使用資料使用標籤（也稱為DULE標籤）的 [!DNL Experience Platform] 步驟。 在使用指南之前，請參 [閱資料治理概觀](../home.md) ，以取得DULE架構更強穩的簡介。
+本使用指南涵蓋在使用者介面中使用資料使用標籤 [!DNL Experience Platform] 的步驟。 在使用指南之前，請參 [[!DNL Data Governance] 閱概述](../home.md) ，以取得更強穩的架構簡介 [!DNL Data Governance] 。
 
 ## 在資料集層級管理資料使用標籤
 
