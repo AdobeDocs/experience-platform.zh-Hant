@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Azure Data Explorer;azure data explorer;data explorer;Data Explorer
 solution: Experience Platform
 title: 在UI中建立Azure資料總管來源連接器
 topic: overview
+description: 本教學課程提供使用平台使用者介面建立Azure資料總管（以下稱為「資料總管」）來源連接器的步驟。
 translation-type: tm+mt
-source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
+source-git-commit: f82dfee2c75a0b8b2ec1615266780b309152ead4
 workflow-type: tm+mt
-source-wordcount: '486'
-ht-degree: 1%
+source-wordcount: '509'
+ht-degree: 0%
 
 ---
 
