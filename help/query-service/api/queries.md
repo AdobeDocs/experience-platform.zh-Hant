@@ -1,10 +1,10 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;query service;api guide;queries;query;Query service;
 solution: Experience Platform
 title: 查詢服務開發人員指南
 topic: queries
 translation-type: tm+mt
-source-git-commit: a98e31f57c6ff4fc49d8d8f64441a6e1e18d89da
+source-git-commit: c5d3be4706ca6d6a30e203067db6ddc894b9bfb4
 workflow-type: tm+mt
 source-wordcount: '645'
 ht-degree: 2%
@@ -29,7 +29,7 @@ GET /queries
 GET /queries?{QUERY_PARAMETERS}
 ```
 
-- `{QUERY_PARAMETERS}`: (可&#x200B;*選*)新增至請求路徑的參數，用以設定回應中傳回的結果。 可包含多個參數，由&amp;符號(`&`)分隔。 以下列出可用參數。
+- `{QUERY_PARAMETERS}`:(可&#x200B;*選*)新增至請求路徑的參數，用以設定回應中傳回的結果。 可包含多個參數，由&amp;符號(`&`)分隔。 以下列出可用參數。
 
 **查詢參數**
 
@@ -41,8 +41,8 @@ GET /queries?{QUERY_PARAMETERS}
 | `limit` | 指定頁面大小限制，以控制包含在頁面中的結果數。 (*Default value: 20*) |
 | `start` | 使用零編號來偏移響應清單。 例如，將 `start=2` 返回從第三個列出查詢開始的清單。 (*Default value: 0*) |
 | `property` | 根據欄位篩選結果。 篩選器 **必須** HTML逸出。 逗號可用來組合多組篩選器。 支援的欄位 `created`有、 `updated`、 `state`和 `id`。 受支援運算子的清 `>` 單為（大於）、 `<` （小於）、 `>=` （大於或等於）、 `<=` （小於或等於）、 `==` （等於）、 `!=` （不等於） `~` 和（包含）。 例如，將 `id==6ebd9c2d-494d-425a-aa91-24033f3abeec` 傳回所有具有指定ID的查詢。 |
-| `excludeSoftDeleted` | 指示是否應包括已軟刪除的查詢。 例如，將包 `excludeSoftDeleted=false` 含 **可變刪除** 的查詢。 (布&#x200B;*爾值，預設值： true*) |
-| `excludeHidden` | 指示是否應顯示非用戶驅動的查詢。 將此值設定為false將包 **括非用戶驅動** ，如CURSOR定義、FETCH或元資料查詢。 (布&#x200B;*爾值，預設值： true*) |
+| `excludeSoftDeleted` | 指示是否應包括已軟刪除的查詢。 例如，將包 `excludeSoftDeleted=false` 含 **可變刪除** 的查詢。 (布&#x200B;*爾值，預設值：true*) |
+| `excludeHidden` | 指示是否應顯示非用戶驅動的查詢。 將此值設定為false將包 **括非用戶驅動** ，如CURSOR定義、FETCH或元資料查詢。 (布&#x200B;*爾值，預設值：true*) |
 
 **請求**
 
