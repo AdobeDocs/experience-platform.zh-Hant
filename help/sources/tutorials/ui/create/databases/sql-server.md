@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Microsoft SQL Server;SQL Server;sql server
 solution: Experience Platform
 title: 在UI中建立Microsoft SQL Server源連接器
 topic: overview
+description: 本教程提供了使用平台用戶介面建立Microsoft SQL Server（下稱「SQL Server」）源連接器的步驟。
 translation-type: tm+mt
-source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
+source-git-commit: f82dfee2c75a0b8b2ec1615266780b309152ead4
 workflow-type: tm+mt
-source-wordcount: '454'
+source-wordcount: '477'
 ht-degree: 1%
 
 ---
