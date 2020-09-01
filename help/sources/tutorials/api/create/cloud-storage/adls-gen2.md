@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Azure Data Lake Storage Gen2;azure data lake storage;Azure
 solution: Experience Platform
 title: 使用Flow Service API建立Azure Data Lake Storage Gen2連接器
 topic: overview
+description: 本教學課程使用Flow Service API來引導您完成將Experience Platform連接至Azure Data Lake Storage Gen2（以下稱為「ADLS Gen2」）的步驟。
 translation-type: tm+mt
-source-git-commit: 11431ffcfc2204931fe3e863bfadc7878a40b49c
+source-git-commit: 25f1dfab07d0b9b6c2ce5227b507fc8c8ecf9873
 workflow-type: tm+mt
-source-wordcount: '541'
+source-wordcount: '570'
 ht-degree: 2%
 
 ---
@@ -48,7 +49,7 @@ ht-degree: 2%
 
 若要呼叫API，您必 [!DNL Platform] 須先完成驗證教 [學課程](../../../../../tutorials/authentication.md)。 完成驗證教學課程後，將提供所有 [!DNL Experience Platform] API呼叫中每個必要標題的值，如下所示：
 
-* 授權： 生產者 `{ACCESS_TOKEN}`
+* 授權：生產者 `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
 * x-gw-ims-org-id: `{IMS_ORG}`
 
@@ -62,7 +63,7 @@ ht-degree: 2%
 
 ## 建立連線
 
-連接指定源，並包含該源的憑據。 每個ADLS Gen2帳戶只需要一個連線，因為它可用於建立多個來源連接器，以匯入不同的資料。
+連接指定源，並包含該源的憑據。 每個ADLS Gen2帳戶只需要一個連線，因為它可用來建立多個來源連接器，以匯入不同的資料。
 
 **API格式**
 
