@@ -5,7 +5,7 @@ title: 區段服務區段產生器使用指南
 topic: ui guide
 description: '「區段產生器」提供豐富的工作區，可讓您與描述檔資料元素互動。 工作區提供建立和編輯規則的直覺式控制項，例如用來表示資料屬性的拖放圖格。 '
 translation-type: tm+mt
-source-git-commit: 8f7ce97cdefd4fe79cb806e71e12e936caca3774
+source-git-commit: 1bb896f7629d7b71b94dd107eeda87701df99208
 workflow-type: tm+mt
 source-wordcount: '1723'
 ht-degree: 0%
@@ -49,7 +49,7 @@ ht-degree: 0%
 
 ![](../images/ui/segment-builder/events-eventTypes.png)
 
-依預設，只會顯示資料儲存區中已填入的架構欄位。 這包括事 [!UICONTROL 件類型]。 如果事 [!UICONTROL 件類型] ，或您只能選擇「[!UICONTROL Any]」作為 [!UICONTROL 事件類型，請選擇]Fields旁的「 **[!UICONTROL ShowShowFullDear]********** XDMDowneldOradCheraDomAvailable Fields」（可用Orjad），然後選擇「可用Oralid」欄位下的Jord 再次選擇齒輪表徵圖以返回「 **[!UICONTROL Fields]** 」(欄位 [!UICONTROL )頁籤，您現在應該可以查看多個] Event Types（事件類型）和架構欄位，而不管它們是否包含資料。
+依預設，只會顯示資料儲存區中已填入的架構欄位。 這包括事 [!UICONTROL 件類型]。 如果事 [!UICONTROL 件類型] ，或您只能選擇「[!UICONTROL Any]」作為 [!UICONTROL 事件類型，請選擇]Fields旁的「 ************ ShowShow fullDear」（全部顯示）「可用OradChad」(Orad)「可用OradChad」(OrayVailable Fields)」(可用Ciable 再次選擇齒輪表徵圖以返回「 **[!UICONTROL Fields]** 」(欄位 [!UICONTROL )頁籤，您現在應該可以查看多個「] Event Types」（事件類型）和模式欄位，而不管它們是否包含資料。
 
 ![](../images/ui/segment-builder/show-populated.png)
 
@@ -107,7 +107,7 @@ ht-degree: 0%
 
 新容器會以第一個容器的子系出現，但您可以拖曳並移動容器來調整階層。 容器的預設行為是「包[!UICONTROL 含]」提供的屬性、事件或對象。 您可以選取方塊左上角的「包含」，並選取「排除」，將規則設定為符合容器條件的「排除[!UICONTROL 」描述檔]****。
 
-子容器也可以透過選取子容器上的「解除包裝容器」，以內嵌方式擷取並新增至父容器。 選取子容器右上角的省略號(...)以存取此選項。
+您也可以選取子容器上的「解除包裝容器」，將子容器擷取並內嵌至父容器。 選取子容器右上角的省略號(...)以存取此選項。
 
 ![](../images/ui/segment-builder/include-exclude.png)
 
@@ -131,7 +131,7 @@ ht-degree: 0%
 
 ## 區段屬性
 
-建立區段定義時，工作區右側的「區段屬性 ** 」區段會顯示產生區段的估計大小，讓您在建立對象本身之前，視需要調整區段定義。
+建立區段定義時，工作區右側的「區段屬性 **** 」區段會顯示產生區段的估計大小，讓您在建立對象本身之前，視需要調整區段定義。
 
 「區 **[!UICONTROL 段屬性]** 」區段也可讓您指定區段定義的重要資訊，包括 **[!UICONTROL 名稱]****[!UICONTROL 和說明]**。 區段定義名稱用於識別組織所定義的區段，因此應具有描述性、簡明扼要和獨特性。
 
