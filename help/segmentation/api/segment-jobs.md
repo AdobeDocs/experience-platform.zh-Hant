@@ -1,10 +1,10 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;segmentation;Segmentation;Segmentation Service;segment jobs;segment job;API;api;
 solution: Experience Platform
 title: 區段工作
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: b3e6a6f1671a456b2ffa61139247c5799c495d92
+source-git-commit: 17ef6c1c6ce58db2b65f1769edf719b98d260fc6
 workflow-type: tm+mt
 source-wordcount: '993'
 ht-degree: 3%
@@ -28,7 +28,7 @@ ht-degree: 3%
 
 **API格式**
 
-端點 `/segment/jobs` 支援數個查詢參數，以協助篩選結果。 雖然這些參數是可選的，但強烈建議使用這些參數以幫助降低昂貴的開銷。 在沒有參數的情況下呼叫此端點將會擷取組織所有可用的匯出工作。 可包含多個參數，由&amp;符號(`&`)分隔。
+端點 `/segment/jobs` 支援數個查詢參數，以協助篩選結果。 雖然這些參數是可選的，但強烈建議使用它們，以幫助降低昂貴的開銷。 在沒有參數的情況下呼叫此端點將會擷取組織所有可用的匯出工作。 可包含多個參數，由&amp;符號(`&`)分隔。
 
 ```http
 GET /segment/jobs
@@ -258,7 +258,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/jobs \
 
 ## 擷取特定區段工作 {#get}
 
-您可以向端點提出GET請求，並在請求路徑中提供您要檢索的區段作業的ID，以檢索有關特定區段作業的詳細資訊。 `/segment/jobs`
+您可以向端點發出GET請求，並提供您想在請求路徑中檢索的區段作業ID，以檢索有關特定區段作業的詳細資訊。 `/segment/jobs`
 
 **API格式**
 
