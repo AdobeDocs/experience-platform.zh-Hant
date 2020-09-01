@@ -1,10 +1,10 @@
 ---
-keywords: Experience Platform;home;popular topics;ingested data
+keywords: Experience Platform;home;popular topics;ingested data;troubleshooting;faq;Ingestion;Batch ingestion;batch ingestion;
 solution: Experience Platform
 title: Adobe Experience Platform批次擷取疑難排解指南
 topic: troubleshooting
 translation-type: tm+mt
-source-git-commit: 9766cadee83e81bacc2abe6b13342ac95aae19a9
+source-git-commit: c04fb056d4564e53f192e0734a700a13820f5ba7
 workflow-type: tm+mt
 source-wordcount: '1389'
 ht-degree: 1%
@@ -243,7 +243,7 @@ curl -X GET "https://platform.adobe.io/data/foundation/catalog/batches/{BATCH_ID
 不應直接從中刪除批 [!DNL Catalog]處理，應使用以下任一方法刪除批處理：
 
 1. 如果批正在進行中，則應中止該批。
-2. 如果批已成功掌握，則應還原批。
+2. 如果批已成功掌握，應還原批。
 
 ### 哪些批次層級度量可用？
 
