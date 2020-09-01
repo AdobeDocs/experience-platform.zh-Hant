@@ -5,9 +5,9 @@ seo-title: 即時客戶資料平台中的資料治理
 description: '「資料管理」可讓您管理客戶資料，並確保符合適用於資料使用的法規、限制和政策。 '
 seo-description: '「資料管理」可讓您管理客戶資料，並確保符合適用於資料使用的法規、限制和政策。 '
 translation-type: tm+mt
-source-git-commit: 1bb896f7629d7b71b94dd107eeda87701df99208
+source-git-commit: 0f3a4ba6ad96d2226ae5094fa8b5073152df90f7
 workflow-type: tm+mt
-source-wordcount: '1022'
+source-wordcount: '1021'
 ht-degree: 0%
 
 ---
@@ -58,7 +58,7 @@ Adobe Experience Platform針對常見客 **戶體驗使用案** 例提供數種�
 
 ![](assets/enforcement-flow.png)
 
-當區段首次啟動時，DULE會根 [!DNL Policy Service] 據下列因素檢查違反原則的情況：
+首次啟用區段時，會根 [!DNL Policy Service] 據下列因素檢查違反原則的情況：
 
 * 套用至區段內要啟用之欄位和資料集的資料使用標籤。
 * 目的地的行銷目的。
