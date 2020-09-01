@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 區段服務使用指南
 topic: ui guide
 translation-type: tm+mt
-source-git-commit: 17ef6c1c6ce58db2b65f1769edf719b98d260fc6
+source-git-commit: 0f3a4ba6ad96d2226ae5094fa8b5073152df90f7
 workflow-type: tm+mt
-source-wordcount: '1365'
+source-wordcount: '1359'
 ht-degree: 0%
 
 ---
@@ -155,13 +155,13 @@ ht-degree: 0%
 >
 >為了讓串流區段正常運作，您必須啟用組織的排程區段。 如需啟用排程分段的詳細資訊，請參 [閱本使用指南中的串流分段](#scheduled-segmentation)。
 
-## DULE策略違規
+## 違反策略
 
 >[!NOTE]
 >
->DULE策略違規僅在建立已分配給目標的段時適用。
+>只有當您建立已指派給目標的區段時，才會套用原則違規。
 
-建立完區段後，會依據區段進行分析，以 [!DNL Data Governance] 確保區段內沒有違反原則的情況。 有關DULE和違反策略的詳細資訊，請參閱數 [據使用標籤概述](../../data-governance/labels/overview.md)。
+建立完區段後，Adobe Experience Platform資料管理會分析區段，以確保區段內沒有違反政策的情況。 如需詳細 [[!DNL Data Governance] 資訊](../../data-governance/home.md) ，請參閱總覽。
 
 ![](../images/ui/overview/segment-dule-policy-violations.png)
 
