@@ -3,16 +3,17 @@ keywords: Experience Platform;home;popular topics
 solution: Experience Platform
 title: 資料擷取教學課程
 topic: tutorial
+description: 資料擷取包括批次擷取、串流擷取，以及使用來源連接器擷取。
 translation-type: tm+mt
-source-git-commit: 5c5f6c4868e195aef76bacc0a1e5df3857647bde
+source-git-commit: d3ece56d10b1940a5992906a65a50ffe2f7e4346
 workflow-type: tm+mt
-source-wordcount: '480'
+source-wordcount: '492'
 ht-degree: 0%
 
 ---
 
 
-# 將資料內嵌至 [!DNL Experience Platform]
+# Ingest data into [!DNL Experience Platform]
 
 Adobe Experience Platform將來自多個來源的資料匯集在一起，以協助行銷人員更好地瞭解客戶的行為。 Adobe [!DNL Experience Platform Data Ingestion] 代表從這些來源 [!DNL Platform] 擷取資料的多種方法，以及該資料如何保存在資料湖中以供下游使用 [!DNL Platform services]。 [!DNL Data Ingestion] 包括批次擷取、串流擷取，以及使用來源連接器擷取。 若要進一步瞭解，請閱讀「資 [料擷取」概觀](../ingestion/home.md) ，或直接前往 [Sources檔案](../sources/home.md)。
 
