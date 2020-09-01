@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Azure File Storage;azure file storage
 solution: Experience Platform
 title: Azure檔案儲存連接器
 topic: overview
+description: 以下檔案提供如何使用API或使用者介面將Azure檔案儲存連接至平台的資訊。
 translation-type: tm+mt
-source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
+source-git-commit: 6934bfeee84f542558894bbd4ba5759891cd17f3
 workflow-type: tm+mt
-source-wordcount: '223'
+source-wordcount: '243'
 ht-degree: 0%
 
 ---
