@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Azure Table Storage;azure table storage;ATS;ats
 solution: Experience Platform
 title: Azure表格儲存連接器
 topic: overview
+description: 以下檔案提供如何使用API或使用者介面將Azure表格儲存連接至平台的資訊。
 translation-type: tm+mt
-source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
+source-git-commit: d3ece56d10b1940a5992906a65a50ffe2f7e4346
 workflow-type: tm+mt
-source-wordcount: '219'
+source-wordcount: '239'
 ht-degree: 0%
 
 ---
