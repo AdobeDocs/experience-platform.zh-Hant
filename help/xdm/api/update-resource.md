@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;;experience data model;Experience data model;Experience Data Model;data model;Data Model;schema registry;Schema Registry;update;Update;patch;PATCH
 solution: Experience Platform
 title: 更新資源
+description: '您可以使用PATCH請求修改或更新租用戶容器中的資源。 結構註冊表支援所有標準JSON修補程式作業，包括新增、移除和取代。 '
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: d04bf35e49488ab7d5e07de91eb77d0d9921b6fa
+source-git-commit: 74a4a3cc713cc068be30379e8ee11572f8bb0c63
 workflow-type: tm+mt
-source-wordcount: '373'
-ht-degree: 2%
+source-wordcount: '401'
+ht-degree: 1%
 
 ---
 
@@ -115,7 +116,7 @@ PATCH /tenant/{RESOURCE_TYPE}/{RESOURCE_ID}
 
 **請求**
 
-請求主體包括更新混`op`合所需的操作(`path`)、位置(`value`)和資訊()。 此請求會更新「屬性詳細資料」混音，以移除「propertyCity」欄位，並新增「propertyAddress」欄位，以參考包含位址資訊的標準資料類型。 此外，還新增了「emailAddress」欄位，以引用標準資料類型與電子郵件資訊。
+請求主體包括更新混`op`合所需的操作(`path`)、位置(`value`)和資訊()。 此請求會更新「屬性詳細資料」混音，以移除「propertyCity」欄位，並新增「propertyAddress」欄位，以參考包含位址資訊的標準資料類型。 此外，還新增了「emailAddress」欄位，其中引用電子郵件資訊的標準資料類型。
 
 ```SHELL
 curl -X PATCH \
@@ -146,7 +147,7 @@ curl -X PATCH \
 
 **回應**
 
-成功的回應顯示，由於新欄位存在且已移除「propertyCity」欄位，因此作業已成功完成。
+成功的回應顯示，由於有新欄位，而且已移除&quot;propertyCity&quot;欄位，因此作業已順利完成。
 
 ```JSON
 {
