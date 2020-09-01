@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;dataset connection flow service;flow service;Flow service connection
 solution: Experience Platform
 title: 使用Flow Service API建立Experience Platform資料集基本連線
 topic: overview
+description: Flow Service用於收集和集中Adobe Experience Platform內不同來源的客戶資料。 該服務提供用戶介面和REST風格的API，所有支援的源都可從中連接。
 translation-type: tm+mt
-source-git-commit: fc5cdaa661c47e14ed5412868f3a54fd7bd2b451
+source-git-commit: 25f1dfab07d0b9b6c2ce5227b507fc8c8ecf9873
 workflow-type: tm+mt
-source-wordcount: '690'
+source-wordcount: '724'
 ht-degree: 1%
 
 ---
@@ -24,11 +25,11 @@ ht-degree: 1%
 
 本教學課程需要對Adobe Experience Platform的下列元件有正確的認識：
 
-* [體驗資料模型(XDM)系統](../../../xdm/home.md): 組織客戶體驗資料 [!DNL Experience Platform] 的標準化架構。
-   * [架構構成基礎](../../../xdm/schema/composition.md): 瞭解XDM架構的基本建置區塊，包括架構組合的主要原則和最佳實務。
-   * [架構註冊開發人員指南](../../../xdm/api/getting-started.md): 包含您必須知道的重要資訊，以便成功執行對架構註冊表API的呼叫。 這包括您 `{TENANT_ID}`的「容器」概念，以及提出要求所需的標題（請特別注意「接受」標題及其可能的值）。
-* [目錄服務](../../../catalog/home.md): 目錄是記錄資料位置和世系的系統 [!DNL Experience Platform]。
-* [批次擷取](../../../ingestion/batch-ingestion/overview.md): 批次擷取API可讓您將資料以批次檔案的形式內嵌至Experience Platform。
+* [體驗資料模型(XDM)系統](../../../xdm/home.md):組織客戶體驗資料 [!DNL Experience Platform] 的標準化架構。
+   * [架構構成基礎](../../../xdm/schema/composition.md):瞭解XDM架構的基本建置區塊，包括架構組合的主要原則和最佳實務。
+   * [架構註冊開發人員指南](../../../xdm/api/getting-started.md):包含您必須知道的重要資訊，以便成功執行對架構註冊表API的呼叫。 這包括您 `{TENANT_ID}`的「容器」概念，以及提出要求所需的標題（請特別注意「接受」標題及其可能的值）。
+* [目錄服務](../../../catalog/home.md):目錄是記錄資料位置和世系的系統 [!DNL Experience Platform]。
+* [批次擷取](../../../ingestion/batch-ingestion/overview.md):批次擷取API可讓您將資料以批次檔案的形式內嵌至Experience Platform。
 * [沙盒](../../../sandboxes/home.md): [!DNL Experience Platform] 提供虛擬沙盒，可將單一執行個體分 [!DNL Platform] 割為不同的虛擬環境，以協助開發和發展數位體驗應用程式。
 
 以下各節提供您必須知道的其他資訊，以便使用 [!DNL Flow Service] API成功連線至資料湖。
@@ -41,7 +42,7 @@ ht-degree: 1%
 
 若要呼叫API，您必 [!DNL Platform] 須先完成驗證教 [學課程](../../../tutorials/authentication.md)。 完成驗證教學課程後，將提供所有 [!DNL Experience Platform] API呼叫中每個必要標題的值，如下所示：
 
-* 授權： 生產者 `{ACCESS_TOKEN}`
+* 授權：生產者 `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
 * x-gw-ims-org-id: `{IMS_ORG}`
 
