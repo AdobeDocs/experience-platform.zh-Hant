@@ -3,10 +3,11 @@ keywords: Experience Platform;home;popular topics
 solution: Experience Platform
 title: 區段教學課程
 topic: tutorial
+description: Adobe Experience Platform Segmentation Service提供使用者介面和REST風格的API，可讓您建立細分並從即時客戶個人檔案資料產生受眾。 這些區段是在Platform上集中設定和維護的，任何Adobe解決方案都可輕鬆存取。
 translation-type: tm+mt
-source-git-commit: ae244711ed89f4c7d6f87fd38bf7f8324e9b64be
+source-git-commit: d3ece56d10b1940a5992906a65a50ffe2f7e4346
 workflow-type: tm+mt
-source-wordcount: '540'
+source-wordcount: '584'
 ht-degree: 0%
 
 ---
