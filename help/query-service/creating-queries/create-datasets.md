@@ -1,10 +1,10 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;query service;Query service;generate datasets;generate dataset;create dataset;
 solution: Experience Platform
 title: 從查詢結果生成資料集
 topic: queries
 translation-type: tm+mt
-source-git-commit: 3b710e7a20975880376f7e434ea4d79c01fa0ce5
+source-git-commit: 17ef6c1c6ce58db2b65f1769edf719b98d260fc6
 workflow-type: tm+mt
 source-wordcount: '270'
 ht-degree: 0%
@@ -21,8 +21,8 @@ ht-degree: 0%
 1. 使用連接的客戶端編寫查詢並驗證輸出。
 2. 登入 [!DNL Platform] UI並前往查詢。
 3. 在清單中尋找查詢，並將滑鼠指標暫留在列上。
-4. 按一下 **[!UICONTROL 建立資料集]**。 ![影像](../images/queries/create-datasets/click-create-dataset.png)
-5. 輸入資料集名稱，並加上您的LDAP ID(不必是唯一或SQL-safe; 系統會根據此處提供的名稱生成「表名」)。
+4. Click **[!UICONTROL Create Dataset]**. ![影像](../images/queries/create-datasets/click-create-dataset.png)
+5. 輸入資料集名稱，並加上您的LDAP ID(不必是唯一或SQL-safe;系統會根據此處提供的名稱生成「表名」)。
 6. 輸入資料集說明，然後按一下「 **[!UICONTROL 執行查詢」]**。![影像](../images/queries/create-datasets/run-query.png)
 7. 觀看查詢完成，然後前往資料集清單頁面，查看您剛建立的資料集。
 
