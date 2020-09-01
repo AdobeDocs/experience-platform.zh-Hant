@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;protocol
 solution: Experience Platform
 title: 使用流服務API探索通訊協定系統
 topic: overview
+description: 本教學課程使用Flow Service API來探索通訊協定應用程式。
 translation-type: tm+mt
-source-git-commit: fc5cdaa661c47e14ed5412868f3a54fd7bd2b451
+source-git-commit: 25f1dfab07d0b9b6c2ce5227b507fc8c8ecf9873
 workflow-type: tm+mt
-source-wordcount: '567'
+source-wordcount: '578'
 ht-degree: 1%
 
 ---
@@ -25,7 +26,7 @@ ht-degree: 1%
 * [來源](../../../home.md): [!DNL Experience Platform] 允許從各種來源接收資料，同時提供使用服務構建、標籤和增強傳入資料的 [!DNL Platform] 能力。
 * [沙盒](../../../../sandboxes/home.md): [!DNL Experience Platform] 提供虛擬沙盒，可將單一執行個體分 [!DNL Platform] 割為不同的虛擬環境，以協助開發和發展數位體驗應用程式。
 
-以下各節提供您需要知道的其他資訊，以便使用 [!DNL Flow Service] API成功連線至通訊協定應用程式。
+以下各節提供您需要瞭解的其他資訊，以便使用 [!DNL Flow Service] API成功連線至通訊協定應用程式。
 
 ### 獲得基本連接
 
@@ -41,7 +42,7 @@ ht-degree: 1%
 
 若要呼叫API，您必 [!DNL Platform] 須先完成驗證教 [學課程](../../../../tutorials/authentication.md)。 完成驗證教學課程後，將提供所有 [!DNL Experience Platform] API呼叫中每個必要標題的值，如下所示：
 
-* 授權： 生產者 `{ACCESS_TOKEN}`
+* 授權：生產者 `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
 * x-gw-ims-org-id: `{IMS_ORG}`
 
