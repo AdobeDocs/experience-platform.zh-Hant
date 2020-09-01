@@ -5,7 +5,7 @@ title: 資料科學工作區概觀
 topic: overview
 description: 本指南概述與Data Science Workspace相關的主要概念。
 translation-type: tm+mt
-source-git-commit: 8f7ce97cdefd4fe79cb806e71e12e936caca3774
+source-git-commit: f8d13b305a61f8606c4fa1ceee6d4518b5d83fda
 workflow-type: tm+mt
 source-wordcount: '2584'
 ht-degree: 0%
@@ -64,7 +64,7 @@ Adobe [!DNL Data Science Workspace]Experience Platform可讓您將以體驗為�
 
 ## 瞭解 [!DNL Data Science Workspace]
 
-有了這 [!DNL Data Science Workspace]項功能，您的資料科學家就可以簡化在大型資料集中發現見解的繁瑣程式。 以通用的機器學習架構和執行時期為基礎， [!DNL Data Science Workspace] 提供進階的工作流程管理、模型管理和可擴充性。 智慧型服務支援重複使用機器學習方式，以支援使用Adobe產品和解決方案建立的各種應用程式。
+有了這 [!DNL Data Science Workspace]項功能，您的資料科學家就可以簡化在大型資料集中發現見解的繁瑣程式。 以通用的機器學習架構和執行時期為基礎，提供 [!DNL Data Science Workspace] 進階的工作流程管理、模型管理和可擴充性。 智慧型服務支援重複使用機器學習方式，以支援使用Adobe產品和解決方案建立的各種應用程式。
 
 ### 一站式資料存取
 
@@ -132,7 +132,7 @@ Adobe [!DNL Data Science Workspace]Experience Platform可讓您將以體驗為�
 
 | 權限 | 啟用 | 停用 |
 |---|---|---|
-| [!DNL Manage Data Science Workspace] | 提供對中所有服務的訪問 [!DNL Data Science Workspace]。 | API和UI存取內的所有服務 [!DNL Data Science Workspace] 皆停用。 禁用後，將阻止路 [!DNL Data Science Workspace] 由到 *[!UICONTROL 「型號]* 」和「 *[!UICONTROL 服務]* 」頁。 |
+| [!DNL Manage Data Science Workspace] | 提供對中所有服務的訪問 [!DNL Data Science Workspace]。 | API和UI存取內的所有服務 [!DNL Data Science Workspace] 皆停用。 禁用後，將阻止路 [!DNL Data Science Workspace] 由到 **[!UICONTROL 「型號]** 」和「 **[!UICONTROL 服務]** 」頁。 |
 
 ### 安全與心安
 
@@ -200,9 +200,9 @@ Adobe Experience Platform中的所有資料都符合標準化的XDM架構，毋�
 
 ### 實施模型
 
-當您選擇最符合您業務需求的最佳訓練方式時，您就可以建立智慧型服務，毋需開發人員 [!DNL Data Science Workspace] 的協助。 只需按幾下滑鼠，不需要撰寫程式碼。 發佈的智慧型服務可供貴組織的其他成員存取，而不需重新建立模型。
+當您選擇最符合您業務需求的最佳訓練方式時，您就可以建立智慧型服務，毋需開發人員 [!DNL Data Science Workspace] 的協助。 只需按幾下滑鼠，不需要撰寫程式碼。 發佈的智慧型服務可供組織的其他成員存取，而不需重新建立模型。
 
-已發佈的智慧型服務可設定為在新資料可用時，使用新資料自動不時進行訓練。 這可確保您的服務在時間持續時仍能維持其效率和效能。
+已發佈的智慧型服務可設定為在新資料可用時，使用新資料自動不時進行培訓。 這可確保您的服務在時間持續時仍能維持其效率和效能。
 
 ## 後續步驟
 
