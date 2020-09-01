@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;cloud storage;Cloud storage
 solution: Experience Platform
 title: 使用Flow Service API探索雲端儲存系統
 topic: overview
+description: 本教學課程使用Flow Service API來探索協力廠商雲端儲存系統。
 translation-type: tm+mt
-source-git-commit: fc5cdaa661c47e14ed5412868f3a54fd7bd2b451
+source-git-commit: 25f1dfab07d0b9b6c2ce5227b507fc8c8ecf9873
 workflow-type: tm+mt
-source-wordcount: '682'
+source-wordcount: '697'
 ht-degree: 2%
 
 ---
@@ -45,7 +46,7 @@ ht-degree: 2%
 
 若要呼叫API，您必 [!DNL Platform] 須先完成驗證教 [學課程](../../../../tutorials/authentication.md)。 完成驗證教學課程後，將提供所有 [!DNL Experience Platform] API呼叫中每個必要標題的值，如下所示：
 
-* 授權： 生產者 `{ACCESS_TOKEN}`
+* 授權：生產者 `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
 * x-gw-ims-org-id: `{IMS_ORG}`
 
@@ -63,7 +64,7 @@ ht-degree: 2%
 
 | 參數 | 說明 |
 | --------- | ----------- |
-| `objectType` | 您要探索的物件類型。 將此值設定為： <ul><li>`folder`: 探索特定目錄</li><li>`root`: 探索根目錄。</li></ul> |
+| `objectType` | 您要探索的物件類型。 將此值設定為： <ul><li>`folder`:探索特定目錄</li><li>`root`:探索根目錄。</li></ul> |
 | `object` | 僅當查看特定目錄時才需要此參數。 其值表示要瀏覽的目錄的路徑。 |
 
 使用下列呼叫來尋找您要放入的檔案路徑 [!DNL Platform]:
@@ -124,7 +125,7 @@ GET /connections/{BASE_CONNECTION_ID}/explore?objectType=file&object={FILE_PATH}
 | --- | --- |
 | `{BASE_CONNECTION_ID}` | 雲端儲存空間基本連線的ID。 |
 | `{FILE_PATH}` | 檔案的路徑。 |
-| `{FILE_TYPE}` | 檔案的類型。 支援的檔案類型包括：<ul><li>分隔字元</code>: 分隔字元分隔值。 DSV檔案必須以逗號分隔。</li><li>JSON</code>: JavaScript物件符號。 JSON檔案必須符合XDM規範</li><li>PARCE</code>: 阿帕奇鑲木地板。 拼花檔案必須與XDM相容。</li></ul> |
+| `{FILE_TYPE}` | 檔案的類型。 支援的檔案類型包括：<ul><li>分隔字元</code>:分隔字元分隔值。 DSV檔案必須以逗號分隔。</li><li>JSON</code>:JavaScript物件符號。 JSON檔案必須符合XDM規範</li><li>PARCE</code>:阿帕奇鑲木地板。 拼花檔案必須與XDM相容。</li></ul> |
 
 **請求**
 
