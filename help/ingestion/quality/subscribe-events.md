@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 訂閱資料擷取事件
 topic: overview
 translation-type: tm+mt
-source-git-commit: 5a10a31f4be5173af8b459b9ab8a53096348be1d
+source-git-commit: 1bb896f7629d7b71b94dd107eeda87701df99208
 workflow-type: tm+mt
 source-wordcount: '831'
 ht-degree: 1%
@@ -55,7 +55,7 @@ ht-degree: 1%
 
 ![](../images/quality/subscribe-events/add-event-button.png)
 
-此時將 _[!UICONTROL 顯示「添加事件]_ 」對話框。 按一 **[!UICONTROL 下「Experience Platform]** 」(體驗平台 **[!UICONTROL )以篩選可用選項清單，然後按一下「]** Platform notifications **[!UICONTROL 」（平台通知），再按「]**&#x200B;下一步」。
+此時將 **[!UICONTROL 顯示「添加事件]** 」對話框。 按一 **[!UICONTROL 下「Experience Platform]** 」(體驗平台 **[!UICONTROL )以篩選可用選項清單，然後按一下「]** Platform notifications **[!UICONTROL 」（平台通知），再按「]**&#x200B;下一步」。
 
 ![](../images/quality/subscribe-events/select-platform-events.png)
 
