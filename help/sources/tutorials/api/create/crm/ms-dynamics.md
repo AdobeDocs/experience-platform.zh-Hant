@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Microsoft Dynamics;microsoft dynamics;dynamics;Dynamics
 solution: Experience Platform
 title: 使用Flow Service API建立Microsoft Dynamics連接器
 topic: overview
+description: 本教學課程使用Flow Service API來引導您完成將平台連接至Microsoft Dynamics（以下稱為「Dynamics」）帳戶以收集CRM資料的步驟。
 translation-type: tm+mt
-source-git-commit: 5839e4695589455bd32b6e3e33a7c377343f920d
+source-git-commit: 25f1dfab07d0b9b6c2ce5227b507fc8c8ecf9873
 workflow-type: tm+mt
-source-wordcount: '679'
+source-wordcount: '709'
 ht-degree: 1%
 
 ---
@@ -25,7 +26,7 @@ ht-degree: 1%
 本指南需要有效瞭解Adobe Experience Platform的下列元件：
 
 * [來源](../../../../home.md): [!DNL Experience Platform] 允許從各種來源接收資料，同時提供使用服務構建、標籤和增強傳入資料的 [!DNL Platform] 能力。
-* [沙盒](../../../../../sandboxes/home.md): E[!DNL xperience Platform] 提供虛擬沙盒，可將單一執行個體分割 [!DNL Platform] 成不同的虛擬環境，以協助開發和發展數位體驗應用程式。
+* [沙盒](../../../../../sandboxes/home.md):E[!DNL xperience Platform] 提供虛擬沙盒，可將單一執行個體分割 [!DNL Platform] 成不同的虛擬環境，以協助開發和發展數位體驗應用程式。
 
 以下各節提供您必須知道的其他資訊，以便使用 [!DNL Platform] API成功連線至Dynamics帳 [!DNL Flow Service] 戶。
 
@@ -49,7 +50,7 @@ ht-degree: 1%
 
 若要呼叫API，您必 [!DNL Platform] 須先完成驗證教 [學課程](../../../../../tutorials/authentication.md)。 完成驗證教學課程後，將提供所有 [!DNL Experience Platform] API呼叫中每個必要標題的值，如下所示：
 
-* 授權： 生產者 `{ACCESS_TOKEN}`
+* 授權：生產者 `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
 * x-gw-ims-org-id: `{IMS_ORG}`
 
