@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;sandbox overview
 solution: Experience Platform
 title: 沙盒UI總覽
 topic: user guide
+description: Adobe Experience Platform提供虛擬沙盒，可將單一平台實例分割為獨立的虛擬環境。 「沙盒」使用者介面可在Experience Platform UI中找到。
 translation-type: tm+mt
-source-git-commit: 6438c1841889ff345e1ebaedabfed0531c1f97f9
+source-git-commit: 0af537e965605e6c3e02963889acd85b9d780654
 workflow-type: tm+mt
-source-wordcount: '96'
+source-wordcount: '125'
 ht-degree: 0%
 
 ---
