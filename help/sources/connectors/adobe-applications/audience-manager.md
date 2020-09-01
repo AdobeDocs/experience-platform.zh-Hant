@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Audience Manager connector;Audience manager;audience manager
 solution: Experience Platform
 title: Audience Manager連接器
 topic: overview
+description: Adobe Audience Manager資料連接器可將在Adobe Audience Manager中收集的第一方資料串流至Adobe Experience Platform。 Audience Manager連接器可將三種資料類別擷取至平台。
 translation-type: tm+mt
-source-git-commit: a1b09f3e88e489f1b0ec0c1fcb72a2a5a4356d87
+source-git-commit: 6934bfeee84f542558894bbd4ba5759891cd17f3
 workflow-type: tm+mt
-source-wordcount: '643'
+source-wordcount: '673'
 ht-degree: 1%
 
 ---
