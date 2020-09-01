@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;;experience data model;Experience data model;Experience Data Model;data model;Data Model;schema registry;Schema Registry;compatibility;Compatibility;compatibility mode;Compatibility mode;field type;field types;
 solution: Experience Platform
 title: 架構註冊開發人員附錄
+description: 本文檔提供與使用方案註冊表API有關的補充資訊。
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: cb5df9b44486bda84f08805f1077d6097e3666e2
+source-git-commit: 74a4a3cc713cc068be30379e8ee11572f8bb0c63
 workflow-type: tm+mt
-source-wordcount: '1265'
+source-wordcount: '1278'
 ht-degree: 4%
 
 ---
@@ -20,7 +21,7 @@ ht-degree: 4%
 
 [!DNL Experience Data Model] (XDM)是公開記載的規格，由Adobe推動，以改善數位體驗的互用性、表現力和力量。 Adobe在GitHub上的開放原始碼專案中維護原始碼 [和正式的XDM定義](https://github.com/adobe/xdm/)。 這些定義是以XDM標準記法撰寫，使用JSON-LD（連結資料的JavaScript物件記法）和JSON結構描述作為定義XDM結構描述的語法。
 
-在公共資料庫中查看正式的XDM定義時，您可以看到標準XDM與您在Adobe Experience Platform中看到的不同。 您在中看到的 [!DNL Experience Platform] 是「相容性模式」，它提供了標準XDM與其使用方式之間的簡單映射 [!DNL Platform]。
+在公共資料庫中查看正式的XDM定義時，您可以看到標準XDM與您在Adobe Experience Platform中看到的不同。 您在中看到的 [!DNL Experience Platform] 內容稱為相容性模式，它提供了標準XDM和其使用方式之間的簡單映射 [!DNL Platform]。
 
 ### 相容性模式的運作方式
 
