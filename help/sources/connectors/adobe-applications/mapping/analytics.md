@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Analytics mapping fields;analytics mapping
 solution: Experience Platform
 title: Analytics對應欄位
 topic: overview
+description: Adobe Experience Platform可讓您透過Analytics資料連接器(ADC)來內嵌Adobe Analytics資料。 透過ADC擷取的部分資料可直接從Analytics欄位映射至「體驗資料模型」(XDM)欄位，而其他資料則需要轉換和特定函式才能成功映射。
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 6934bfeee84f542558894bbd4ba5759891cd17f3
 workflow-type: tm+mt
-source-wordcount: '3328'
+source-wordcount: '3378'
 ht-degree: 12%
 
 ---
@@ -171,7 +172,7 @@ Adobe Experience Platform可讓您透過Analytics資料連接器(ADC)來內嵌Ad
 | post_cust_visid | identityMap | 物件 | 客戶訪客ID。 |
 | post_cust_visid | endUserIDs。_experience.aacustomid.primary | 布林值 | 客戶訪客ID。 |
 | post_cust_visid | endUserIDs。_experience.aacustomid.namespace.code | 字串 | 客戶訪客ID。 |
-| post_visid_high + visid_low | identityMap | 物件 | 瀏覽的唯一識別碼。 |
+| post_visid_high + visid_low | identityMap | object | 瀏覽的唯一識別碼。 |
 | post_visid_high + visid_low | endUserIDs。_experience.aaid.id | 字串 | 瀏覽的唯一識別碼。 |
 | post_visid_high | endUserIDs。_experience.aaid.primary | 布林值 | 與visid_low搭配使用，以唯一識別瀏覽。 |
 | post_visid_high | endUserIDs。_experience.aaid.namespace.code | 字串 | 與visid_low搭配使用，以唯一識別瀏覽。 |
