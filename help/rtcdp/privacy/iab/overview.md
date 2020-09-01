@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 即時客戶資料平台中的IAB TCF 2.0支援
 topic: privacy events
 translation-type: tm+mt
-source-git-commit: 06eda1502d34da1caeebbe9b753dd437bbd9d6ab
+source-git-commit: 1bb896f7629d7b71b94dd107eeda87701df99208
 workflow-type: tm+mt
 source-wordcount: '2388'
 ht-degree: 1%
@@ -91,7 +91,7 @@ Adobe Audience Manager（透過來源連接器或其他方式）共用的任何�
 
 無論您使用何種方法來收集資料，其目標是根據客戶選擇的同意選項產生字串值，稱為同 **意字串**。
 
-在TCF規格中，同意字串用於根據政策和廠商所定義的特定行銷目的編碼客戶同意設定的相關詳細資訊。 [!DNL Real-time CDP] 使用這些字串來儲存每個客戶的同意設定，因此每次這些設定變更時都必須產生新的同意字串。
+在TCF規格中，同意字串用於根據政策和廠商所定義的特定行銷目的，編碼客戶同意設定的相關詳細資訊。 [!DNL Real-time CDP] 使用這些字串來儲存每個客戶的同意設定，因此每次這些設定變更時都必須產生新的同意字串。
 
 許可字串只能由在IAB TCF中註冊的CMP建立。 有關如何使用特定CMP生成許可字串的詳細資訊，請參 [閱IAB TCF GitHub repo](https://github.com/InteractiveAdvertisingBureau/GDPR-Transparency-and-Consent-Framework/blob/master/TCFv2/IAB%20Tech%20Lab%20-%20Consent%20string%20and%20vendor%20list%20formats%20v2.md) 中的許可字串格式指南。
 
@@ -121,7 +121,7 @@ Adobe Audience Manager（透過來源連接器或其他方式）共用的任何�
 
 為了讓SDK傳送資料至，您必 [!DNL Experience Platform]須先在中建立新的邊緣 [!DNL Platform] 設定 [!DNL Adobe Experience Platform Launch]。 如何建立新設定的特定步驟，請參閱 [SDK檔案](../../../edge/fundamentals/edge-configuration.md)。
 
-為設定提供唯一名稱后，請選取 *[!UICONTROL Adobe Experience Platform旁的切換按鈕]*。 接下來，請使用下列值來完成表單的其餘部分：
+為設定提供唯一名稱后，請選取 **[!UICONTROL Adobe Experience Platform旁的切換按鈕]**。 接下來，請使用下列值來完成表單的其餘部分：
 
 | Edge configuration欄位 | 值 |
 | --- | --- |
@@ -243,7 +243,7 @@ TCF 2.0還要求資料源必須在向目標發送資料之前檢查目標的供�
 
 >[!NOTE]
 >
->任何與Adobe Audience Manager共用的區段都會包含與其對應者相同的TCF 2.0同意 [!DNL Platform] 值。 由於 [!DNL Audience Manager] 與(565)共用相同的 [!DNL Real-time CDP] 廠商ID，因此需要相同的目的和廠商權限。 如需詳細資訊，請參 [閱適用於IAB TCF的Adobe Audience Manager外掛程式](https://docs.adobe.com/help/zh-Hant/audience-manager/user-guide/overview/data-privacy/consent-management/aam-iab-plugin.html) 。
+>任何與Adobe Audience Manager共用的區段都會包含與其對應者相同的TCF 2.0同意 [!DNL Platform] 值。 由於 [!DNL Audience Manager] 與(565)共用同 [!DNL Real-time CDP] 一供應商ID，因此需要相同的目的和供應商權限。 如需詳細資訊，請參 [閱適用於IAB TCF的Adobe Audience Manager外掛程式](https://docs.adobe.com/help/zh-Hant/audience-manager/user-guide/overview/data-privacy/consent-management/aam-iab-plugin.html) 。
 
 ## Test your implementation {#test-implementation}
 
