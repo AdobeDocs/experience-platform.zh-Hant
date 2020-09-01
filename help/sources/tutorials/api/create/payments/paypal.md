@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;PayPal connector;paypal;Paypal
 solution: Experience Platform
 title: 使用Flow Service API建立PayPal連接器
 topic: overview
+description: 本教學課程使用Flow Service API來引導您完成將PayPal連接至Experience Platform的步驟。
 translation-type: tm+mt
-source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
+source-git-commit: 5959d4344ec1c16542de045899ce74beb39a7bc4
 workflow-type: tm+mt
-source-wordcount: '560'
+source-wordcount: '579'
 ht-degree: 2%
 
 ---
