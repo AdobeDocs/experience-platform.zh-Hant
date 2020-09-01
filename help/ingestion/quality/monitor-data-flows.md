@@ -1,11 +1,11 @@
 ---
-keywords: Experience Platform;home;popular topics;monitoring;monitor;data flows
+keywords: Experience Platform;home;popular topics;monitoring;monitor;data flows;monitor ingestion;data ingestion;Data ingestion;view records;view batches;
 solution: Experience Platform
 title: 監控資料擷取
 topic: overview
 description: 本使用指南提供如何在Adobe Experience Platform使用者介面中監控資料的步驟。 本指南要求您必須擁有Adobe ID和Adobe Experience Platform的存取權。
 translation-type: tm+mt
-source-git-commit: 1bb896f7629d7b71b94dd107eeda87701df99208
+source-git-commit: d2f098cb9e4aaf5beaad02173a22a25a87a43756
 workflow-type: tm+mt
 source-wordcount: '560'
 ht-degree: 0%
