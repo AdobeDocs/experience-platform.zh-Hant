@@ -3,11 +3,11 @@ keywords: Experience Platform;home;popular topics
 solution: Experience Platform
 title: 資料管理與隱私權教學課程
 topic: tutorial
-description: 資料使用標籤與實施(DULE)是Adobe Experience Platform資料治理的核心機制。 DULE功能可讓您將資料使用量標籤套用至資料集和欄位，並依據相關資料使用策略將每個標籤分類。
+description: 本檔案概述與Adobe Experience Platform資料治理和Adobe Experience Platform Privacy Service相關的不同可用教學課程。
 translation-type: tm+mt
-source-git-commit: d3ece56d10b1940a5992906a65a50ffe2f7e4346
+source-git-commit: 0f3a4ba6ad96d2226ae5094fa8b5073152df90f7
 workflow-type: tm+mt
-source-wordcount: '506'
+source-wordcount: '496'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 # [!DNL Data Governance] 和教 [!DNL Privacy] 學課程
 
-[!DNL Data Usage Labeling and Enforcement] (DULE)是Adobe Experience Platform的核心機制 [!DNL Data Governance]。 DULE功能可讓您將資料使用量標籤套用至資料集和欄位，並依據相關資料使用策略將每個標籤分類。 在開始使用標籤之前，請參閱 [Data Governance概觀](../data-governance/home.md) ，以取得DULE架構的更強穩簡介 [!DNL Platform]。
+Adobe Experience Platform Data Governance可讓您將資料使用標籤套用至資料集和欄位，根據相關資料使用政策對每個資料集和欄位進行分類，並評估在這些資料集和／或欄位上執行某些動作時是否違反原則。 開始使用本檔案所列的教學課程之前，請參 [[!DNL Data Governance] 閱概觀](../data-governance/home.md) ，以取得更強穩的架構簡介。
 
 Adobe Experience Platform提 [!DNL Privacy Service] 供REST風格的API和使用者介面，讓您協調各種解決方案的隱私權和合規性要求。 若要進一步瞭解，請先閱讀隱私權 [服務概觀](../privacy-service/home.md)。
 
@@ -25,11 +25,11 @@ Adobe Experience Platform提 [!DNL Privacy Service] 供REST風格的API和使用
 
 ## 建立資料使用原則
 
-DULE [!DNL Policy Service] API可讓您建立和管理DULE原則，以決定可針對包含特定DULE標籤的資料採取哪些行銷動作。 若要開始，請閱讀資料使 [用政策概觀](../data-governance/policies/overview.md)。
+API [!DNL Policy Service] 可讓您建立和管理資料使用原則，以決定可針對包含特定使用標籤的資料採取哪些行銷動作。 若要開始，請閱讀資料使 [用政策概觀](../data-governance/policies/overview.md)。
 
 ## 強制實施資料使用原則
 
-在您為資料建立「資料使用標籤與實施」(DULE)標籤，並針對這些標籤建立行銷動作的DULE原則後，您就可以使用DULE [!DNL Policy Service] API來評估在資料集上執行的行銷動作或任意DULE標籤群組是否構成策略違規。 然後，您可以設定自己的內部通訊協定，以根據API回應來處理原則違規。 若要開始，請造訪原 [則實施概觀](../data-governance/enforcement/overview.md)。
+在您新增資料的使用標籤，並針對這些標籤建立行銷動作的原則後，您就可以使用 [!DNL Policy Service API] ，評估在資料集或任意使用標籤群組上執行行銷動作時是否構成原則違規。 然後，您可以設定自己的內部通訊協定，以根據API回應來處理原則違規。 若要開始，請造訪原 [則實施概觀](../data-governance/enforcement/overview.md)。
 
 ## 對受眾細分強制實施資料使用合規性
 
