@@ -5,7 +5,7 @@ title: 隱私權服務開發人員指南
 description: 使用REST風格的API，跨Adobe Experience Cloud應用程式管理資料主體的個人資料
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
+source-git-commit: 1bb896f7629d7b71b94dd107eeda87701df99208
 workflow-type: tm+mt
 source-wordcount: '762'
 ht-degree: 0%
@@ -61,15 +61,15 @@ Adobe Experience Platform提 [!DNL Privacy Service] 供REST風格的API和使用
 
 前往 [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui) ，使用您的Adobe ID登入。 接著，請依照教學課程中說明的步驟， [在Adobe Developer Console檔案中建立空白的專案](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/projects-empty.md) 。
 
-建立新專案後，按一下「專 **[!UICONTROL 案概述」畫面上的]**_[!UICONTROL 「新增API]_ 」。
+建立新專案後，按一下「專 **[!UICONTROL 案概述」畫面上的]****[!UICONTROL 「新增API]** 」。
 
 ![](../images/api/getting-started/add-api-button.png)
 
-出現 _[!UICONTROL 「Add an API]_ （添加API）」螢幕。 按一 **[!UICONTROL 下「下一步]** 」前，從可用API清單中選取「隱私權服務 **[!UICONTROL API」]**。
+出現 **[!UICONTROL 「Add an API]** （添加API）」螢幕。 按一 **[!UICONTROL 下「下一步]** 」前，從可用API清單中選取「隱私權服務 **[!UICONTROL API」]**。
 
 ![](../images/api/getting-started/add-privacy-service-api.png)
 
-此時 _[!UICONTROL 會顯示「設定API]_ 」畫面。 選取「產生 **[!UICONTROL 鍵對」選項]**，然後按一下右下角 **[!UICONTROL 的「產生鍵對]** 」。
+此時 **[!UICONTROL 會顯示「設定API]** 」畫面。 選取「產生 **[!UICONTROL 鍵對」選項]**，然後按一下右下角 **[!UICONTROL 的「產生鍵對]** 」。
 
 ![](../images/api/getting-started/generate-key-pair.png)
 
@@ -77,7 +77,7 @@ Adobe Experience Platform提 [!DNL Privacy Service] 供REST風格的API和使用
 
 ![](../images/api/getting-started/key-pair-generated.png)
 
-在將API新增至專案後，專案頁面會重新顯示在「隱私權服務 _API概觀」頁面_ 。 從這裡，向下捲動至「 _[!UICONTROL Service Account(JWT)]_ 」區段，該區段提供對 [!DNL Privacy Service] API的所有呼叫所需的下列存取憑證：
+在將API新增至專案後，專案頁面會重新顯示在「隱私權服務 _API概觀」頁面_ 。 從這裡，向下捲動至「 **[!UICONTROL Service Account(JWT)]** 」區段，該區段提供對 [!DNL Privacy Service] API的所有呼叫所需的下列存取憑證：
 
 * **[!UICONTROL 用戶端ID]**:必須在x-api-key標 `{API_KEY}` 題中提供用戶端ID。
 * **[!UICONTROL 組織ID]**:組織ID是必 `{IMS_ORG}` 須用在x-gw-ims-org-id標題中的值。
@@ -88,7 +88,7 @@ Adobe Experience Platform提 [!DNL Privacy Service] 供REST風格的API和使用
 
 您必須收集的最終必要憑證是您 `{ACCESS_TOKEN}`的，此憑證會用於「授權」標題。 與和的值不 `{API_KEY}` 同， `{IMS_ORG}`必須每24小時產生一個新的Token，才能繼續使用 [!DNL Platform] API。
 
-若要產生新 `{ACCESS_TOKEN}`密鑰，請開啟先前下載的私密金鑰，並將其內容貼入「產生存取Token」旁的文字方塊， _[!UICONTROL 再按一下「產]_ 生Token ****」。
+若要產生新 `{ACCESS_TOKEN}`密鑰，請開啟先前下載的私密金鑰，並將其內容貼入「產生存取Token」旁的文字方塊， **[!UICONTROL 再按一下「產]** 生Token ****」。
 
 ![](../images/api/getting-started/paste-private-key.png)
 
