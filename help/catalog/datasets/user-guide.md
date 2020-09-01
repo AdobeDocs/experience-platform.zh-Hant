@@ -5,7 +5,7 @@ title: 資料集使用指南
 topic: datasets
 description: 本資料集使用指南提供在Adobe Experience Platform使用者介面中使用資料集時執行常見動作的指示。
 translation-type: tm+mt
-source-git-commit: 43d568a401732a753553847dee1b4a924fcc24fd
+source-git-commit: c6c5ada52321b11543254f80399c38365f0fb9d7
 workflow-type: tm+mt
 source-wordcount: '1168'
 ht-degree: 0%
@@ -30,18 +30,18 @@ ht-degree: 0%
 
 ## 檢視資料集
 
-在UI中 [!DNL Experience Platform] ，按一下左 **[!UICONTROL 側導覽中的「資料集]** 」，以開啟「資料集 ** 」控制面板。 控制面板會列出您組織的所有可用資料集。 會針對每個列出的資料集顯示詳細資訊，包括其名稱、資料集所遵守的架構，以及最近擷取執行的狀態。
+在UI中 [!DNL Experience Platform] ，按一下左 **[!UICONTROL 側導覽中的「資料集]** 」，以開啟「資料集 **** 」控制面板。 控制面板會列出您組織的所有可用資料集。 會針對每個列出的資料集顯示詳細資訊，包括其名稱、資料集所遵守的架構，以及最近擷取執行的狀態。
 
 ![](../images/datasets/user-guide/browse_datasets.png)
 
-按一下資料集的名稱以存取其「資 *[!UICONTROL 料集」活動畫面]* ，並查看您選取之資料集的詳細資訊。 該活動頁籤包括圖形，該圖形可視化正在消耗的消息速率以及成功和失敗批的清單。
+按一下資料集的名稱以存取其「資 **[!UICONTROL 料集」活動畫面]** ，並查看您選取之資料集的詳細資訊。 該活動頁籤包括圖形，該圖形可視化正在消耗的消息速率以及成功和失敗批的清單。
 
 ![](../images/datasets/user-guide/dataset_activity_1.png)
 ![](../images/datasets/user-guide/dataset_activity_2.png)
 
 ## 預覽資料集
 
-在「資 *[!UICONTROL 料集]* 」活動畫面中，按一下畫面右上角的「 **[!UICONTROL Preview dataset]** 」（預覽資料集），最多可預覽100列資料。 如果資料集為空，預覽連結將會停用，而會指出「預 **[!UICONTROL 覽」不可用]**。
+在「資 **[!UICONTROL 料集]** 」活動畫面中，按一下畫面右上角的「 **[!UICONTROL Preview dataset]** 」（預覽資料集），最多可預覽100列資料。 如果資料集為空，預覽連結將會停用，而會指出「預 **[!UICONTROL 覽」不可用]**。
 
 ![](../images/datasets/user-guide/click_to_preview.png)
 
@@ -56,7 +56,7 @@ ht-degree: 0%
 
 ## 建立資料集 {#create}
 
-若要建立新資料集，請先按一下「資料集」控 **[!UICONTROL 制面板中的]** 「建立 *[!UICONTROL 資料集]* 」。
+若要建立新資料集，請先按一下「資料集」控 **[!UICONTROL 制面板中的]** 「建立 **[!UICONTROL 資料集]** 」。
 
 ![](../images/datasets/user-guide/click_to_create.png)
 
@@ -67,29 +67,29 @@ ht-degree: 0%
 
 ### 使用現有模式建立資料集
 
-在「建 *[!UICONTROL 立資料集]* 」畫面中，按一 **[!UICONTROL 下「從架構建立資料集]** 」以建立新的空資料集。
+在「建 **[!UICONTROL 立資料集]** 」畫面中，按一 **[!UICONTROL 下「從架構建立資料集]** 」以建立新的空資料集。
 
 ![](../images/datasets/user-guide/create_dataset_schema.png)
 
-將出 *[!UICONTROL 現選擇方]* 案步驟。 在按一下「下一步」之前，瀏覽模式清單並選擇資料集將遵循的 **[!UICONTROL 模式]**。
+將出 **[!UICONTROL 現選擇方]** 案步驟。 在按一下「下一步」之前，瀏覽模式清單並選擇資料集將遵循的 **[!UICONTROL 模式]**。
 
 ![](../images/datasets/user-guide/select_schema.png)
 
-此時會 *[!UICONTROL 顯示「設定資料集]* 」步驟。 提供資料集的名稱和選用說明，然後按一下「完 **[!UICONTROL 成]** 」以建立資料集。
+此時會 **[!UICONTROL 顯示「設定資料集]** 」步驟。 提供資料集的名稱和選用說明，然後按一下「完 **[!UICONTROL 成]** 」以建立資料集。
 
 ![](../images/datasets/user-guide/configure_dataset_schema.png)
 
 ### 使用CSV檔案建立資料集
 
-當使用CSV檔案建立資料集時，會建立臨機模式，以提供資料集符合所提供CSV檔案的結構。 在「建 *[!UICONTROL 立資料集]* 」畫面中，按一下「從CSV檔案 **[!UICONTROL 建立資料集」方塊]**。
+當使用CSV檔案建立資料集時，會建立臨機模式，以提供資料集符合所提供CSV檔案的結構。 在「建 **[!UICONTROL 立資料集]** 」畫面中，按一下「從CSV檔案 **[!UICONTROL 建立資料集」方塊]**。
 
 ![](../images/datasets/user-guide/create_dataset_csv.png)
 
-此時將 *[!UICONTROL 顯示]* 「配置」步驟。 提供資料集的名稱和選用說明，然後按一下「下 **[!UICONTROL 一步]**」。
+此時將 **[!UICONTROL 顯示]** 「配置」步驟。 提供資料集的名稱和選用說明，然後按一下「下 **[!UICONTROL 一步]**」。
 
 ![](../images/datasets/user-guide/configure_dataset_csv.png)
 
-此時將 *[!UICONTROL 顯示「添加資料]* 」步驟。 將CSV檔案拖放至畫面中央，或按一下「瀏覽」以瀏覽 **[!UICONTROL 您的檔案目錄]** ，即可上傳它。 該檔案最大可以有10GB的大小。 上傳CSV檔案後，按一下「 **[!UICONTROL 儲存]** 」以建立資料集。
+此時將 **[!UICONTROL 顯示「添加資料]** 」步驟。 將CSV檔案拖放至畫面中央，或按一下「瀏覽」以瀏覽 **[!UICONTROL 您的檔案目錄]** ，即可上傳它。 該檔案最大可以有10GB的大小。 上傳CSV檔案後，按一下「 **[!UICONTROL 儲存]** 」以建立資料集。
 
 >[!NOTE]
 >
@@ -106,7 +106,7 @@ ht-degree: 0%
 
 有關為啟用方案的詳細資訊，請 [!DNL Profile]參閱方案編 [輯器使用手冊](../../xdm/tutorials/create-schema-ui.md)。
 
-若要啟用描述檔的資料集，請存取其 *[!UICONTROL Dataset活動畫面]* ，然後按一下「屬性」欄內的「描述檔 **[!UICONTROL 」切換]** 功能 ** 。 啟用後，資料集中的資料也會用來填入客戶個人檔案。
+若要啟用描述檔的資料集，請存取其 **[!UICONTROL Dataset活動畫面]** ，然後按一下「屬性」欄內的「描述檔 **[!UICONTROL 」切換]** 功能 **** 。 啟用後，資料集中的資料也會用來填入客戶個人檔案。
 
 ![](../images/datasets/user-guide/enable_dataset_profiles.png)
 
@@ -118,7 +118,7 @@ Data Usage Labeling and Enforcement(DULE)是核心的資料治理機制 [!DNL Ex
 
 ## 刪除資料集
 
-您可以先存取資料集活動畫面，以刪除 *[!UICONTROL 資料集]* 。 然後，按一下 **[!UICONTROL 刪除資料集]** ，將其刪除。
+您可以先存取資料集活動畫面，以刪除 **[!UICONTROL 資料集]** 。 然後，按一下 **[!UICONTROL 刪除資料集]** ，將其刪除。
 
 >[!NOTE]
 >
@@ -136,11 +136,11 @@ Data Usage Labeling and Enforcement(DULE)是核心的資料治理機制 [!DNL Ex
 
 ## 監控資料擷取
 
-在UI中 [!DNL Experience Platform] ，按一下左 **[!UICONTROL 側導覽]** 中的「監控」。 「監 *[!UICONTROL 控]* 」控制面板可讓您檢視來自批次或串流擷取的傳入資料狀態。 若要檢視個別批次的狀態，請按一 *[!UICONTROL 下批次端對端]**[!UICONTROL 或串流端對端]*。 控制面板會列出所有批次或串流擷取執行，包括成功、失敗或仍在進行中的執行。 每個清單都會提供批次的詳細資訊，包括批次ID、目標資料集的名稱，以及所擷取的記錄數。 如果目標資料集已啟用， [!DNL Profile]則也會顯示所擷取的身分和描述檔記錄數。
+在UI中 [!DNL Experience Platform] ，按一下左 **[!UICONTROL 側導覽]** 中的「監控」。 「監 **[!UICONTROL 控]** 」控制面板可讓您檢視來自批次或串流擷取的傳入資料狀態。 若要檢視個別批次的狀態，請按一 **[!UICONTROL 下批次端對端]****[!UICONTROL 或串流端對端]**。 控制面板會列出所有批次或串流擷取執行，包括成功、失敗或仍在進行中的執行。 每個清單都會提供批次的詳細資訊，包括批次ID、目標資料集的名稱，以及所擷取的記錄數。 如果目標資料集已啟用， [!DNL Profile]則也會顯示所擷取的身分和描述檔記錄數。
 
 ![](../images/datasets/user-guide/batch_listing.png)
 
-您可以按一下個別的 **[!UICONTROL 批次ID]** ，存取「批次概述 ** 」控制面板，並查看批次的詳細資訊，包括批次無法收錄的錯誤記錄檔。
+您可以按一下個別的 **[!UICONTROL 批次ID]** ，存取「批次概述 **** 」控制面板，並查看批次的詳細資訊，包括批次無法收錄的錯誤記錄檔。
 
 ![](../images/datasets/user-guide/batch_overview.png)
 
