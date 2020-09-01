@@ -1,11 +1,11 @@
 ---
-keywords: Experience Platform;home;popular topics;segmentation;Segmentation;segment service;segments;Segments
+keywords: Experience Platform;home;popular topics;segmentation;Segmentation;segment service;segments;Segments;multi-entity;multi-entity segmentation;multi-entity segments;
 solution: Experience Platform
 title: 多實體分段
 topic: overview
 description: 多實體分段是指能夠根據產品、商店或其他非描述檔類別，以額外資料擴充描述檔資料。 連線後，其他類別的資料就會變成描述檔架構的原生資料。
 translation-type: tm+mt
-source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
+source-git-commit: 17ef6c1c6ce58db2b65f1769edf719b98d260fc6
 workflow-type: tm+mt
 source-wordcount: '418'
 ht-degree: 0%
