@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Apache HDFS;HDFS;hdfs
 solution: Experience Platform
 title: 在UI中建立Apache HDFS來源連接器
 topic: overview
+description: 本教程提供使用平台用戶介面驗證Apache Hadoop分佈式檔案系統（以下稱為「HDFS」）源連接器的步驟。
 translation-type: tm+mt
-source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
+source-git-commit: f82dfee2c75a0b8b2ec1615266780b309152ead4
 workflow-type: tm+mt
-source-wordcount: '470'
+source-wordcount: '494'
 ht-degree: 1%
 
 ---
