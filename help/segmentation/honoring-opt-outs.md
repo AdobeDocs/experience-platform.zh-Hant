@@ -1,11 +1,11 @@
 ---
-keywords: Experience Platform;home;popular topics;opt-out
+keywords: Experience Platform;home;popular topics;opt-out;Segmentation;Segmentation service;segmentation service;honor opt-outs;opt-outs;opt out;opt outs;
 solution: Experience Platform
 title: 支援退出
 topic: overview
 description: 'Experience Platform可讓您的客戶在即時客戶個人檔案中，針對資料的使用和儲存，傳送選擇退出要求。 這些選擇退出要求是加州消費者隱私法(CCPA)的一部分，該法案賦予加州居民存取和刪除個人資料的權利，並可得知他們的個人資料是否被出售或披露（以及向誰）。 '
 translation-type: tm+mt
-source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
+source-git-commit: 17ef6c1c6ce58db2b65f1769edf719b98d260fc6
 workflow-type: tm+mt
 source-wordcount: '1030'
 ht-degree: 0%
