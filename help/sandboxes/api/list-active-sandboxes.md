@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;list active sandboxes;list sandboxes
 solution: Experience Platform
 title: 列出目前使用者的作用中沙盒
 topic: developer guide
+description: 您可以向根端點發出GET請求，以列出目前使用者的作用中沙盒。
 translation-type: tm+mt
-source-git-commit: 07ff49c74ea05f84d5c7cf9a3f44e7300f0b39b8
+source-git-commit: 0af537e965605e6c3e02963889acd85b9d780654
 workflow-type: tm+mt
-source-wordcount: '220'
+source-wordcount: '241'
 ht-degree: 1%
 
 ---
@@ -18,7 +19,7 @@ ht-degree: 1%
 >
 >與沙盒API中提供的其他端點不同，此端點適用於所有使用者，包括沒有沙盒管理存取權限的使用者。
 
-您可以向根()端點發出GET請求，以列出當前用戶活動的`/`沙盒。
+您可以向根()端點發出GET請求，以列出當前用戶處於活動狀態的`/`沙盒。
 
 **API格式**
 
@@ -91,7 +92,7 @@ curl -X GET \
 | --- | --- |
 | `name` | 沙盒的名稱。 用於API呼叫中的查閱用途。 |
 | `title` | 沙盒的顯示名稱。 |
-| `state` | 沙盒的目前處理狀態。 沙盒的狀態可以是下列任一項： <ul><li>**建立**: 沙盒已建立，但系統仍在布建中。</li><li>**作用中**: 沙盒會建立並啟用。</li><li>**失敗**: 由於發生錯誤，系統無法布建沙盒並停用沙盒。</li><li>**已刪除**: 沙盒已手動停用。</li></ul> |
+| `state` | 沙盒的目前處理狀態。 沙盒的狀態可以是下列任一項： <ul><li>**建立**:沙盒已建立，但系統仍在布建中。</li><li>**作用中**:沙盒會建立並啟用。</li><li>**失敗**:由於發生錯誤，系統無法布建沙盒並停用沙盒。</li><li>**已刪除**:沙盒已手動停用。</li></ul> |
 | `type` | 沙盒類型，「開發」或「生產」。 |
 | `isDefault` | 布林屬性，指出此沙盒是否為組織的預設沙盒。 通常這是生產沙盒。 |
 | `eTag` | 沙盒特定版本的識別碼。 用於版本控制和快取效率，此值會在每次對沙盒進行變更時更新。 |
