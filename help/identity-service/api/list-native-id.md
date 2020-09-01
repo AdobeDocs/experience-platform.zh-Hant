@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;identity xid;XID
 solution: Experience Platform
 title: 取得身分的原生ID
 topic: API guide
+description: 身分資料通常在所接收的XDM資料中以ID字串值和身分命名空間的形式提供，並在提供身分以供API呼叫使用時提供。 當身分識別保存在Identity Service中時，會產生ID並指派給該身分，稱為原生XID。 需要身分資料支援的平台API，使用這個更精簡的表單來匯整ID和命名空間。 XID是base64編碼字串。
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 0af537e965605e6c3e02963889acd85b9d780654
 workflow-type: tm+mt
-source-wordcount: '151'
-ht-degree: 1%
+source-wordcount: '222'
+ht-degree: 0%
 
 ---
 
