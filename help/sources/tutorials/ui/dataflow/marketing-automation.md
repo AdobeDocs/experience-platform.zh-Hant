@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 在UI中為行銷自動化連接器設定資料流
 topic: overview
 translation-type: tm+mt
-source-git-commit: 6bd5dc5a68fb2814ab99d43b34f90aa7e50aa463
+source-git-commit: 1bb896f7629d7b71b94dd107eeda87701df99208
 workflow-type: tm+mt
 source-wordcount: '1284'
 ht-degree: 0%
@@ -23,7 +23,7 @@ ht-degree: 0%
 - [[!DNL Experience Data Model] (XDM)系統](../../../../xdm/home.md):組織客戶體驗資料 [!DNL Experience Platform] 的標準化架構。
    - [架構構成基礎](../../../../xdm/schema/composition.md):瞭解XDM架構的基本建置區塊，包括架構組合的主要原則和最佳實務。
    - [架構編輯器教程](../../../../xdm/tutorials/create-schema-ui.md):瞭解如何使用架構編輯器UI建立自訂架構。
-- [[!DNL 即時客戶基本資料]](../../../../profile/home.md):根據來自多個來源的匯整資料，提供統一、即時的消費者個人檔案。
+- [[!DNL即時客戶基本資料]](../../../../profile/home.md):根據來自多個來源的匯整資料，提供統一、即時的消費者個人檔案。
 
 此外，本教學課程要求您已建立行銷自動化帳戶。 如需在UI中建立不同行銷自動化連接器的教學課程清單，請參閱來源連 [接器概觀](../../../home.md)。
 
@@ -66,7 +66,7 @@ ht-degree: 0%
 
 ![select-schema](../../../images/tutorials/dataflow/marketing-automation/select-schema.png)
 
-您可以根據需要選擇直接映射欄位，或使用映射器函式轉換源資料以導出計算值或計算值。 有關資料映射和映射器函式的詳細資訊，請參閱將CSV資料映 [射到XDM模式欄位的教程](../../../../ingestion/tutorials/map-a-csv-file.md)。
+根據您的需求，您可以選擇直接映射欄位，或使用映射器函式轉換來源資料以衍生計算或計算值。 有關資料映射和映射器函式的詳細資訊，請參閱將CSV資料映 [射到XDM模式欄位的教程](../../../../ingestion/tutorials/map-a-csv-file.md)。
 
 映射源資料後，按一下「下 **[!UICONTROL 一步]**」。
 
@@ -108,7 +108,7 @@ ht-degree: 0%
 
 此時將顯示 **[!UICONTROL 資料流詳細資訊]** ，允許您命名新資料流並提供有關新資料流的簡要說明。
 
-在此過程中，您還可以啟用「部 **[!UICONTROL 分提取]** 」和「 **[!UICONTROL 錯誤診斷」]**。 啟用 **[!UICONTROL 部分擷取]** ，可讓您擷取包含錯誤至特定臨界值的資料。 啟用 **[!UICONTROL 部分提取]** ，請拖動「錯誤閾值% ** dial」以調整批的錯誤閾值。 或者，也可以通過選擇輸入框手動調整閾值。 如需詳細資訊，請參閱部 [分批次擷取概觀](../../../../ingestion/batch-ingestion/partial.md)。
+在此過程中，您還可以啟用「部 **[!UICONTROL 分提取]** 」和「 **[!UICONTROL 錯誤診斷」]**。 啟用 **[!UICONTROL 部分擷取]** ，可讓您擷取包含錯誤至特定臨界值的資料。 啟用 **[!UICONTROL 部分提取]** ，請拖動「錯誤閾值% **** dial」以調整批的錯誤閾值。 或者，也可以通過選擇輸入框手動調整閾值。 如需詳細資訊，請參閱部 [分批次擷取概觀](../../../../ingestion/batch-ingestion/partial.md)。
 
 為資料流提供值並選擇「下 **[!UICONTROL 一步]**」。
 
