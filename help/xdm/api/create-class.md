@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;;experience data model;Experience data model;Experience Data Model;data model;Data Model;schema registry;Schema Registry;class;Class;classes;Classes;create
 solution: Experience Platform
 title: 建立類
+description: 模式的主構建塊是類。 類包含必須定義的最小欄位集，以捕獲方案的核心資料。 例如，如果您為汽車和卡車設計一個模式，他們很可能會使用一個叫做Vehicle的類，它描述了所有車輛的基本公共屬性。
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: d04bf35e49488ab7d5e07de91eb77d0d9921b6fa
+source-git-commit: 74a4a3cc713cc068be30379e8ee11572f8bb0c63
 workflow-type: tm+mt
-source-wordcount: '477'
+source-wordcount: '539'
 ht-degree: 0%
 
 ---
@@ -16,7 +17,7 @@ ht-degree: 0%
 
 模式的主構建塊是類。 類包含必須定義的最小欄位集，以捕獲方案的核心資料。 例如，如果您為汽車和卡車設計一個模式，他們很可能會使用一個叫做Vehicle的類，它描述了所有車輛的基本公共屬性。
 
-Adobe和其他合作夥伴提供了數種標準 [!DNL Experience Platform] 類別，但您也可以定義自己的類別並將它們儲存至 [!DNL Schema Registry]。 然後，您可以合成實現所建立類的架構，並定義與新定義類相容的混合。
+Adobe和其他合作夥伴提供了數種標準類別，但您 [!DNL Experience Platform] 也可以定義自己的類別，並將它們儲存到 [!DNL Schema Registry]。 然後，您可以合成實現所建立類的架構，並定義與新定義類相容的混合。
 
 >[!NOTE]
 >
@@ -84,7 +85,7 @@ curl -X POST \
 | 屬性 | 說明 |
 | --- | --- |
 | `_{TENANT_ID}` | 組織 `TENANT_ID` 的命名空間。 您的組織建立的所有資源都必須包含此屬性，以避免與中的其他資源發生衝突 [!DNL Schema Registry]。 |
-| `allOf` | 要由新類繼承其屬性的資源清單。 陣列中 `$ref` 的一個對象定義類的行為。 在此示例中，類繼承了「記錄」行為。 |
+| `allOf` | 要由新類繼承其屬性的資源清單。 陣列中的 `$ref` 一個對象定義類的行為。 在此示例中，類繼承了「記錄」行為。 |
 
 **回應**
 
