@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Amazon Redshift;amazon redshift;Redshift;redshift
 solution: Experience Platform
 title: 在UI中建立Amazon Redshift源連接器
 topic: overview
+description: 本教程提供了使用平台用戶介面建立Amazon Redshift（以下稱為「Redshift」）源連接器的步驟。
 translation-type: tm+mt
-source-git-commit: dd036cf4df5d772206d2b73292c60f2d866ba0de
+source-git-commit: f82dfee2c75a0b8b2ec1615266780b309152ead4
 workflow-type: tm+mt
-source-wordcount: '457'
+source-wordcount: '478'
 ht-degree: 1%
 
 ---
@@ -27,7 +28,7 @@ Adobe Experience Platform中的來源連接器可讓您依計畫吸收外部來�
 - [[!DNL Experience Data Model] (XDM)系統](../../../../../xdm/home.md):組織客戶體驗資料 [!DNL Experience Platform] 的標準化架構。
    - [架構構成基礎](../../../../../xdm/schema/composition.md):瞭解XDM架構的基本建置區塊，包括架構組合的主要原則和最佳實務。
    - [架構編輯器教程](../../../../../xdm/tutorials/create-schema-ui.md):瞭解如何使用架構編輯器UI建立自訂架構。
-- [[!DNL 即時客戶基本資料]](../../../../../profile/home.md):根據來自多個來源的匯整資料，提供統一、即時的消費者個人檔案。
+- [[!DNL即時客戶基本資料]](../../../../../profile/home.md):根據來自多個來源的匯整資料，提供統一、即時的消費者個人檔案。
 
 如果您已經有有效的 [!DNL Redshift] 連接，則可以跳過本文檔的其餘部分，並繼續有關配置資料 [流的教程](../../dataflow/databases.md)。
 
