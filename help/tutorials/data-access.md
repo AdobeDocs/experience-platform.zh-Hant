@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;access data sources
 solution: Experience Platform
 title: 資料存取教學課程
 topic: tutorial
+description: Adobe Experience Platform可讓使用者使用資料存取API，在Experience Platform中探索並存取已擷取的資料集。
 translation-type: tm+mt
-source-git-commit: 5c5f6c4868e195aef76bacc0a1e5df3857647bde
+source-git-commit: d3ece56d10b1940a5992906a65a50ffe2f7e4346
 workflow-type: tm+mt
-source-wordcount: '102'
+source-wordcount: '121'
 ht-degree: 0%
 
 ---
