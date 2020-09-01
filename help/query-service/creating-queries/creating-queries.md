@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;query service;Query service;create queries;
 solution: Experience Platform
 title: 建立查詢
 topic: queries
 translation-type: tm+mt
-source-git-commit: 3b710e7a20975880376f7e434ea4d79c01fa0ce5
+source-git-commit: c5d3be4706ca6d6a30e203067db6ddc894b9bfb4
 workflow-type: tm+mt
 source-wordcount: '114'
-ht-degree: 0%
+ht-degree: 3%
 
 ---
 
