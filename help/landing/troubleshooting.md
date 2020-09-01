@@ -1,12 +1,12 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;API error codes;API error code;error code API;error codes API;API request error;API troubleshooting;API error
 solution: Experience Platform
 title: Adobe Experience Platform常見問答集與疑難排解指南
 topic: getting started
 translation-type: tm+mt
-source-git-commit: 0f3a4ba6ad96d2226ae5094fa8b5073152df90f7
+source-git-commit: 3798e687da07dee7336121c203948158523de5bd
 workflow-type: tm+mt
-source-wordcount: '1951'
+source-wordcount: '1965'
 ht-degree: 2%
 
 ---
@@ -248,5 +248,7 @@ API中的許多PATCH [!DNL Platform] 作業都使 [](https://tools.ietf.org/html
 | Adobe Experience Platform細分 | [[!DNL分段API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/segmentation.yaml) |
 | [!DNL Catalog Service] | [[!DNL目錄服務API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml) |  |
 | [!DNL Experience Data Model] (XDM) | [[!DNL方案註冊表API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml) | [[!DNL XDM System] 常見問答集與疑難排解指南](../xdm/troubleshooting-guide.md) |
+| [!DNL Flow Service] ([!DNL Sources] 和 [!DNL Destinations]) | [[!DNL流服務API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) |  |
 | [!DNL Real-time Customer Profile] | [[!DNL即時客戶個人檔案API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml) | [[!DNL Profile] 疑難排解指南](../profile/troubleshooting.md) |
 | 沙盒 | [沙盒API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sandbox-api.yaml) | [沙盒疑難排解指南](../sandboxes/troubleshooting-guide.md) |
+
