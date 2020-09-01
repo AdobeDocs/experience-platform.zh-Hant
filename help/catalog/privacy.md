@@ -5,7 +5,7 @@ title: 資料湖中的隱私權要求處理
 topic: overview
 description: Adobe Experience Platform隱私權服務會處理客戶存取、選擇退出銷售或刪除其個人資料的要求，並符合法律和組織的隱私權法規。 本檔案涵蓋處理儲存在資料湖中之客戶資料之隱私權要求的相關基本概念。
 translation-type: tm+mt
-source-git-commit: 43d568a401732a753553847dee1b4a924fcc24fd
+source-git-commit: 397f08efa276f7885e099a0a8d9dc6d23fe0e8cc
 workflow-type: tm+mt
 source-wordcount: '1249'
 ht-degree: 0%
@@ -57,7 +57,7 @@ Adobe Experience Platform跨 [!DNL Identity Service] 系統和裝置橋接客戶
 
 ### 使用UI {#identity-ui}
 
-在用戶 [!DNL Experience Platform ]介面中，「 _[!UICONTROL 架構]_ 」工作區允許您編輯現有的XDM架構。 要將身份描述符添加到模式，請從清單中選擇模式，並遵循教程中 [將模式欄位設定為身份欄位的步](../xdm/tutorials/create-schema-ui.md#identity-field)[!DNL Schema Editor] 驟。
+在用戶 [!DNL Experience Platform ]介面中，「 **[!UICONTROL 架構]** 」工作區允許您編輯現有的XDM架構。 要將身份描述符添加到模式，請從清單中選擇模式，並遵循教程中 [將模式欄位設定為身份欄位的步](../xdm/tutorials/create-schema-ui.md#identity-field)[!DNL Schema Editor] 驟。
 
 在您將架構中的適當欄位設定為身分欄位後，您就可以繼續下一節的隱私權 [要求](#submit)。
 
@@ -139,7 +139,7 @@ curl -X POST \
 
 ### 使用UI
 
-在UI中建立工作請求時，請務必在 **[!UICONTROL Products下選擇]** AEP Data Lake **[!UICONTROL 和／或]** Profile __ Products下，以分別處理儲存在或 [!DNL Data Lake][!DNL Real-time Customer Profile]Products中的資料。
+在UI中建立工作請求時，請務必在 **[!UICONTROL Products下選擇]** AEP Data Lake **[!UICONTROL 和／或]** Profile **** Products下，以分別處理儲存在或 [!DNL Data Lake][!DNL Real-time Customer Profile]Products中的資料。
 
 <img src="images/privacy/product-value.png" width="450"><br>
 
