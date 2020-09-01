@@ -3,11 +3,11 @@ keywords: Experience Platform;home;popular topics;data governance;data usage lab
 solution: Experience Platform
 title: 資料使用標籤概觀
 topic: labels
-description: 資料使用標籤與實施(DULE)是Adobe Experience Platform資料治理的核心機制。 DULE功能可讓您將資料使用量標籤套用至資料集和欄位，並依據相關資料使用策略將每個標籤分類。 本檔案提供Experience Platform中資料使用標籤（也稱為DULE標籤）的概述。
+description: Adobe Experience Platform資料治理可讓您將資料使用標籤套用至資料集和欄位，並依據相關資料使用政策對每個資料使用標籤進行分類。 本檔案概述Experience Platform中的資料使用標籤。
 translation-type: tm+mt
-source-git-commit: cddc559dfb65ada888bb367d6265863091a9b2a1
+source-git-commit: 0f3a4ba6ad96d2226ae5094fa8b5073152df90f7
 workflow-type: tm+mt
-source-wordcount: '632'
+source-wordcount: '614'
 ht-degree: 0%
 
 ---
