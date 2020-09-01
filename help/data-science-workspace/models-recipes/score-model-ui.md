@@ -5,7 +5,7 @@ title: 對模型(UI)評分
 topic: Tutorial
 description: '在Adobe Experience Platform Data Science Workspace中，將輸入資料輸入現有的訓練模型，即可獲得分數。 然後，將計分結果儲存並作為新批在指定的輸出資料集中查看。 '
 translation-type: tm+mt
-source-git-commit: 7615476c4b728b451638f51cfaa8e8f3b432d659
+source-git-commit: c6c5ada52321b11543254f80399c38365f0fb9d7
 workflow-type: tm+mt
 source-wordcount: '609'
 ht-degree: 0%
@@ -43,7 +43,7 @@ ht-degree: 0%
 5. 工作流程的最後一個步驟會提示您設定計分執行。 這些配置由模型用於計分運行。
 請注意，您將無法移除在「模型」建立過程中設定的繼承參數。 您可以編輯或還原未繼承的參數，方法是按兩下該值，或在將滑鼠懸停在條目上時按一下還原表徵圖。
    ![](../images/models-recipes/score/configuration.png)
-檢閱並確認計分設定，然後按一 **[!UICONTROL 下「完成]** 」以建立並執行計分執行。 您將被導向至「計 *分執行* 」索引標籤，而新的計分執行將顯示狀態。
+檢閱並確認計分設定，然後按一 **[!UICONTROL 下「完成]** 」以建立並執行計分執行。 您將被導向至「計 **[!UICONTROL 分執行]** 」索引標籤，而新的計分執行將顯示狀態。
    ![](../images/models-recipes/score/scoring_runs_tab.png)
 計分執行將顯示下列四種狀態之一：暫掛、完成、失敗或正在運行，並且會自動更新。 如果狀態為「已完成」或「失敗」，請繼續下一步。
 
