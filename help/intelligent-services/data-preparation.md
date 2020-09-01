@@ -5,7 +5,7 @@ title: 準備資料以用於智慧型服務
 topic: Intelligent Services
 description: '為了讓智慧型服務能夠從行銷事件資料中發掘見解，資料必須以標準結構進行語義豐富和維護。 智慧型服務運用Experience Data Model(XDM)架構來達成此目標。 具體來說，Intelligent Services中使用的所有資料集都必須符合Consumer ExperienceEvent(CEE)XDM架構。 '
 translation-type: tm+mt
-source-git-commit: 8f7ce97cdefd4fe79cb806e71e12e936caca3774
+source-git-commit: 1bb896f7629d7b71b94dd107eeda87701df99208
 workflow-type: tm+mt
 source-wordcount: '1980'
 ht-degree: 0%
@@ -272,7 +272,7 @@ CEE混合內有幾個關鍵欄位，為了產生有用的見解，應 [!DNL Inte
 * [在UI中建立資料集](../catalog/datasets/user-guide.md#create) （依照工作流程使用現有架構）
 * [在API中建立資料集](../catalog/datasets/create.md)
 
-建立資料集後，您可以在「資料集」工作區的「平台UI」中找 *[!UICONTROL 到它]* 。
+建立資料集後，您可以在「資料集」工作區的「平台UI」中找 **[!UICONTROL 到它]** 。
 
 ![](images/data-preparation/dataset-location.png)
 
