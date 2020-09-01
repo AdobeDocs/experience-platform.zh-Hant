@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 對受眾細分強制執行資料使用規範
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 17ef6c1c6ce58db2b65f1769edf719b98d260fc6
+source-git-commit: 0f3a4ba6ad96d2226ae5094fa8b5073152df90f7
 workflow-type: tm+mt
-source-wordcount: '1335'
+source-wordcount: '1333'
 ht-degree: 1%
 
 ---
@@ -23,7 +23,7 @@ ht-degree: 1%
 - [[!DNL即時客戶基本資料]](../../profile/home.md): [!DNL Real-time Customer Profile] 是一般查閱實體儲存區，用來管理 [!DNL Experience Data Model] (XDM)內的資料 [!DNL Platform]。 描述檔會合併各種企業資料資產的資料，並以統一的簡報來存取該資料。
    - [合併策略](../../profile/api/merge-policies.md):用於確定在 [!DNL Real-time Customer Profile] 特定條件下哪些資料可以合併到統一視圖中的規則。 可以配置合併策略以 [!DNL Data Governance] 用於目的。
 - [[!DNL分段]](../home.md):如 [!DNL Real-time Customer Profile] 何將描述檔商店中的龐大個人群組分割為具有類似特性且回應類似行銷策略的較小群組。
-- [[!DNL資料治理]](../../data-governance/home.md): [!DNL Data Governance] 使用以下元件為資料使用標籤和強制實施(DULE)提供基礎架構：
+- [[!DNL資料治理]](../../data-governance/home.md): [!DNL Data Governance] 使用以下元件為資料使用標籤和強制實施提供基礎架構：
    - [資料使用標籤](../../data-governance/labels/user-guide.md):標籤用來描述資料集和欄位，以處理其個別資料的敏感度等級為準。
    - [資料使用原則](../../data-governance/policies/overview.md):指示允許針對依特定資料使用標籤分類之資料執行哪些行銷動作的設定。
    - [政策實施](../../data-governance/enforcement/overview.md):允許您強制實施資料使用策略並防止構成違反策略的資料操作。
@@ -187,7 +187,7 @@ curl -X GET \
 >
 > 此步驟假設您至少有一個作用中的資料使用原則，可防止對包含特定標籤的資料執行特定行銷動作。 如果您沒有任何適用於評估資料集的使用策略，請遵循策略創 [建教程](../../data-governance/policies/create.md) ，以建立一個策略，然後繼續此步驟。
 
-在您取得合併原則來源資料集的ID後，就可以使用 [DULE Policy Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) ，針對特定行銷動作評估這些資料集，以檢查資料使用原則違規情況。
+在您取得合併原則來源資料集的ID後，就可以使用 [Policy Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) ，針對特定行銷動作評估這些資料集，以檢查資料使用原則違規。
 
 若要評估資料集，您必須在POST請求路徑中提供行銷動作的名稱，同時在請求內文中提供資料集ID，如下例所示。
 
