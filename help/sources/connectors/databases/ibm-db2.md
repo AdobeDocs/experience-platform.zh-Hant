@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;IBM DB2;ibm db2;DB2;db2
 solution: Experience Platform
 title: IBM DB2連接器
 topic: overview
+description: 以下文檔提供了如何使用API或用戶介面將IBM DB2連接到平台的資訊。
 translation-type: tm+mt
-source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
+source-git-commit: d3ece56d10b1940a5992906a65a50ffe2f7e4346
 workflow-type: tm+mt
-source-wordcount: '194'
+source-wordcount: '213'
 ht-degree: 0%
 
 ---
