@@ -5,9 +5,9 @@ title: 使用Flow Service API更新連線資訊
 topic: overview
 description: 本教學課程涵蓋使用Flow Service API更新連線資訊的步驟，包括其名稱、說明和認證。
 translation-type: tm+mt
-source-git-commit: 1292e39ea7682b839ea75dd069ce32f1591345b8
+source-git-commit: 81ce43bf705bea65b523ac612fae5961e8eeb322
 workflow-type: tm+mt
-source-wordcount: '709'
+source-wordcount: '713'
 ht-degree: 2%
 
 ---
@@ -19,7 +19,7 @@ Adobe Experience Platform可讓您從外部來源擷取資料，同時提供您�
 
 [!DNL Flow Service] 用於收集和集中Adobe Experience Platform內不同來源的客戶資料。 該服務提供用戶介面和REST風格的API，所有支援的源都可從中連接。
 
-本教學課程涵蓋使用更新連線資訊的步驟，包括名稱、說明和認證 [!DNL Flow Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml)。
+本教學課程涵蓋使用 [[!DNL Flow Service API]更新連線資訊的步驟，包括名稱、說明和認證](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml)。
 
 ## 快速入門
 
