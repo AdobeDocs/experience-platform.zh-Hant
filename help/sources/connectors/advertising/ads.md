@@ -5,9 +5,9 @@ title: Google AdWords連接器
 topic: overview
 description: 以下檔案提供如何使用API或使用者介面將Google AdWords連線至平台的資訊。
 translation-type: tm+mt
-source-git-commit: 6934bfeee84f542558894bbd4ba5759891cd17f3
+source-git-commit: ca3084a9c30cc2dd9e0ebc9cef5ae630cbe47b98
 workflow-type: tm+mt
-source-wordcount: '219'
+source-wordcount: '217'
 ht-degree: 0%
 
 ---
@@ -55,15 +55,17 @@ Adobe Experience Platform可讓您從外部來源擷取資料，同時提供您�
 - `40.79.163.80/28`
 - `40.79.171.160/28`
 
+## 連線 [!DNL Google AdWords] 至 [!DNL Platform]
+
 以下檔案提供如何連線至使用API [!DNL Google AdWords] 或使 [!DNL Platform] 用者介面的資訊：
 
-## 連線 [!DNL Google AdWords] 至使 [!DNL Platform] 用API
+### 使用API
 
 - [使用Flow Service API建立Google AdWords連接器](../../tutorials/api/create/advertising/ads.md)
 - [使用Flow Service API探索廣告系統](../../tutorials/api/explore/advertising.md)
 - [使用Flow Service API收集廣告資料](../../tutorials/api/collect/advertising.md)
 
-## 使用 [!DNL Google AdWords] UI [!DNL Platform] 連線至
+### 使用UI
 
 - [在UI中建立Google AdWords來源連接器](../../tutorials/ui/create/advertising/ads.md)
 - [在UI中為廣告連接器配置資料流](../../tutorials/ui/dataflow/advertising.md)
