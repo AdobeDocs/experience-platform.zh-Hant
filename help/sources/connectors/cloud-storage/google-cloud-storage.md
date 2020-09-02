@@ -5,9 +5,9 @@ title: Google雲端儲存空間連接器
 topic: overview
 description: 以下檔案提供如何使用API或使用者介面將Google雲端儲存空間連接至平台的資訊。
 translation-type: tm+mt
-source-git-commit: fb60e11b9502c31e654d3fbe5dc240ace9429332
+source-git-commit: d42351c194bb5a11f3175535de83fbd3b6ac58d2
 workflow-type: tm+mt
-source-wordcount: '390'
+source-wordcount: '554'
 ht-degree: 0%
 
 ---
@@ -68,6 +68,17 @@ Adobe Experience Platform為AWS等雲端提供商提供原生連接 [!DNL Google
 ![](../../images/tutorials/create/google-cloud-storage/interoperability.png)
 
 您可以使用新產生的存取金鑰ID和機密存取金鑰，將您的帳戶連 [!DNL Google Cloud Storage] 接至 [!DNL Platform]。
+
+## 檔案和目錄的命名限制
+
+以下是您在命名雲端儲存檔案或目錄時必須考慮的限制清單。
+
+- 目錄和檔案元件名稱不能超過255個字元。
+- 目錄和檔案名不能以斜線(`/`)結尾。 如果提供，則會自動移除。
+- 下列保留的URL字元必須正確逸出： `! * ' ( ) ; : @ & = + $ , / ? % # [ ]`
+- 不允許使用下列字元： `" \ / : | < > * ?`.
+- 不允許非法的URL路徑字元。 代碼點（如） `\uE000`在NTFS檔案名中有效時，是無效的Unicode字元。 此外，也不允許某些ASCII或Unicode字元，例如控制字元（0x00到0x1F、\u0081等）。 有關HTTP/1.1中管理Unicode字串的規則，請參見 [RFC 2616，第2.2節：基本規則](https://www.ietf.org/rfc/rfc2616.txt) 和 [RFC 3987](https://www.ietf.org/rfc/rfc3987.txt)。
+- 不允許使用下列檔案名稱：LPT1、LPT2、LPT3、LPT4、LPT5、LPT6、LPT7、LPT8、LPT9、COM1、COM2、COM3、COM4、COM5、COM6、COM7、COM8、COM9、prn, AUX, NUL, CON, CLOCK$，點字元(.)和兩個點字元(..)。
 
 ## 連線 [!DNL Google Cloud Storage] 至 [!DNL Platform]
 
