@@ -5,9 +5,9 @@ title: Azure事件集線器連接器
 topic: overview
 description: 以下檔案提供如何使用API或使用者介面將Azure事件中樞連接至平台的資訊。
 translation-type: tm+mt
-source-git-commit: 6934bfeee84f542558894bbd4ba5759891cd17f3
+source-git-commit: 7b92327cfeb2410baf313dd650f68cfeb6db36e6
 workflow-type: tm+mt
-source-wordcount: '243'
+source-wordcount: '241'
 ht-degree: 0%
 
 ---
@@ -55,15 +55,17 @@ Adobe Experience Platform為AWS和AWS等雲提供商提供 [!DNL Google Cloud Pl
 - `40.79.163.80/28`
 - `40.79.171.160/28`
 
+## 連線 [!DNL Azure Event Hubs] 至 [!DNL Platform]
+
 以下檔案提供如何連線至使用API [!DNL Azure Event Hubs] 或使 [!DNL Platform] 用者介面的資訊：
 
-## 連線 [!DNL Azure Event Hubs] 至使 [!DNL Platform] 用API
+### 使用API
 
 - [使用流程服務API建立Azure事件集線器連接器](../../tutorials/api/create/cloud-storage/eventhub.md)
 - [使用Flow Service API探索雲端儲存系統](../../tutorials/api/explore/cloud-storage.md)
 - [使用Flow Service API收集雲端儲存空間資料](../../tutorials/api/collect/cloud-storage.md)
 
-## 使用 [!DNL Azure Event Hubs] UI [!DNL Platform] 連線至
+### 使用UI
 
 - [在UI中建立Azure事件集線器來源連接器](../../tutorials/ui/create/cloud-storage/eventhub.md)
 - [在UI中為雲端儲存連接器設定資料流](../../tutorials/ui/dataflow/streaming/cloud-storage-streaming.md)
