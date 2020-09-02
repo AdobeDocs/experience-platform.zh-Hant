@@ -5,9 +5,9 @@ title: Amazon Kinesis連接器
 topic: overview
 description: 下面的文檔提供了如何使用API或用戶介面將Amazon Kinesis連接到平台的資訊。
 translation-type: tm+mt
-source-git-commit: d3ece56d10b1940a5992906a65a50ffe2f7e4346
+source-git-commit: 7b92327cfeb2410baf313dd650f68cfeb6db36e6
 workflow-type: tm+mt
-source-wordcount: '233'
+source-wordcount: '231'
 ht-degree: 0%
 
 ---
@@ -55,15 +55,17 @@ Adobe Experience Platform為AWS和AWS等雲提供商提供 [!DNL Google Cloud Pl
 - `40.79.163.80/28`
 - `40.79.171.160/28`
 
+## 連線 [!DNL Amazon Kinesis] 至 [!DNL Platform]
+
 以下檔案提供如何連線至使用API [!DNL Amazon Kinesis] 或使 [!DNL Platform] 用者介面的資訊：
 
-## 連線 [!DNL Amazon Kinesis] 至使 [!DNL Platform] 用API
+### 使用API
 
 - [使用流服務API建立Amazon Kinesis連接器](../../tutorials/api/create/cloud-storage/kinesis.md)
 - [使用Flow Service API探索雲端儲存系統](../../tutorials/api/explore/cloud-storage.md)
 - [使用Flow Service API收集雲端儲存空間資料](../../tutorials/api/collect/cloud-storage.md)
 
-## 使用 [!DNL Amazon Kinesis] UI [!DNL Platform] 連線至
+### 使用UI
 
 - [在UI中建立Amazon Kinesis源連接器](../../tutorials/ui/create/cloud-storage/kinesis.md)
 - [在UI中為雲端儲存連接器設定資料流](../../tutorials/ui/dataflow/streaming/cloud-storage-streaming.md)
