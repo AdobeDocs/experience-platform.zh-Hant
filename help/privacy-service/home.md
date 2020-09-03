@@ -77,7 +77,7 @@ Adobe Experience Platform是為 [!DNL Privacy Service] 因應企業管理客戶�
 
 #### 使用API
 
-[! [DNL隱私服務API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/privacy-service.yaml) 提供數個端點，用於使用REST風格的API呼叫來建立和管理隱私權工作，讓您以程式設計方式處理應用程式的隱私權規範 [!DNL Experience Cloud] 規範。 如需如何使用API的詳細步驟，請參閱「隱私 [服務API開發人員指南」](api/getting-started.md)。
+[[!DNL 隱私服務API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/privacy-service.yaml) 提供數個端點，用於使用REST風格的API呼叫來建立和管理隱私權工作，讓您以程式設計方式處理應用程式的隱私權規範 [!DNL Experience Cloud] 規範。 如需如何使用API的詳細步驟，請參閱「隱私 [服務API開發人員指南」](api/getting-started.md)。
 
 #### 使用UI
 
