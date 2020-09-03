@@ -48,7 +48,7 @@ ht-degree: 1%
 
 **取得開發人員存取權**
 
-請連絡 [!DNL Admin Console] 您組織中的管理員，以便使用「 [[!DNL管理控制台」將您新增為組織產品的開發人員](https://adminconsole.adobe.com/)。
+請連絡 [!DNL Admin Console] 您組織中的管理員，以便使用「 [[!DNL管理控制台」將您新增為組織產品的開發人員]](https://adminconsole.adobe.com/)。
 
 ![](images/authentication/assign-developer.png)
 
