@@ -27,7 +27,7 @@ ht-degree: 0%
    >
    >如果此目標已存在連接，您可以在目標卡上看到 **[!UICONTROL 「激活]** 」按鈕。 有關「激活」( **[!UICONTROL Activate]** )和「配置」( **[!UICONTROL Configure]**)之間差異的詳細資訊，請參 [閱目標工作區文檔的「目錄](/help/rtcdp/destinations/destinations-workspace.md#catalog) 」(Catalog)部分。
 
-2. 在「驗 **[!UICONTROL 證]** 」步驟中，如果您先前已設定雲端儲存空間目的地的連線，請選取「現有帳戶 **** 」並選取您現有的連線。 或者，您也可以選 **[!UICONTROL 取「新帳戶]** 」來設定雲端儲存目的地的新連線。 填寫您的帳戶驗證憑證，並選取「 **[!UICONTROL 連線至目的地」]**。 <br> 請參 [閱Amazon S3](/help/rtcdp/destinations/amazon-s3-destination.md) 、 [[!DNL Amazon Kinesis目標、](/help/rtcdp/destinations/amazon-kinesis-destination.md) !DNL Event Event Destination、以及 [](/help/rtcdp/destinations/azure-event-hubs-destination.md)[](/help/rtcdp/destinations/sftp-destination.md)**** SFTPDestination中有關輸入Amazon Authentication Kinesis步驟的憑據的憑據的詳細資訊。
+2. 在「驗 **[!UICONTROL 證]** 」步驟中，如果您先前已設定雲端儲存空間目的地的連線，請選取「現有帳戶」並選取您現有的連線。 或者，您也可以選 **[!UICONTROL 取「新帳戶]** 」來設定雲端儲存目的地的新連線。 填寫您的帳戶驗證憑證，並選取「 **[!UICONTROL 連線至目的地」]**。 <br> 請參 [閱Amazon S3](/help/rtcdp/destinations/amazon-s3-destination.md) 、 [[!DNL Amazon Kinesis]](/help/rtcdp/destinations/amazon-kinesis-destination.md) 目標、 [[!DNL Azure Event Hubs]](/help/rtcdp/destinations/azure-event-hubs-destination.md) 、以及 [SFTP](/help/rtcdp/destinations/sftp-destination.md) Destination中有關輸入Amazon Authentication Kinesis步驟的憑據的憑據的詳細資訊。
 
    >[!NOTE]
    >
