@@ -17,7 +17,7 @@ ht-degree: 3%
 
 本檔案提供如何使用 [!DNL Policy Service] API和 [!DNL Dataset Service] API管理資料使用標籤的步驟。
 
-[! [DNL策略服務API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) 提供了幾個端點，允許您為組織建立和管理資料使用標籤。
+[[!DNL 策略服務API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) 提供了幾個端點，允許您為組織建立和管理資料使用標籤。
 
 API可 [!DNL Dataset Service] 讓您套用和編輯資料集的使用標籤。 它是Adobe Experience Platform資料目錄功能的一部分，但與管理資料集中繼資料的 [!DNL Catalog Service] API不同。
 
