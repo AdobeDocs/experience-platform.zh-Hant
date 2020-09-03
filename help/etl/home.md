@@ -498,7 +498,7 @@ curl -X GET "https://platform.adobe.io/data/foundation/catalog/dataSets/59c93f3d
 
 ## 執行階段
 
-當執行開始時，連接器（如源元件中定義）將使用 [!DNL Experience Platform] [! [DNL資料存取API]讀取資料](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-access-api.yaml)。 轉換過程將讀取特定時間範圍的資料。 內部查詢源資料集的批次。 查詢時，會使用參數化（滾動時間序列資料或增量資料）的開始日期和列出這些批的資料集檔案，並開始請求這些資料集檔案的資料。
+當執行開始時，連接器（如源元件中定義）將使用 [!DNL Experience Platform] [[!DNL 資料存取API]讀取資料](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-access-api.yaml)。 轉換過程將讀取特定時間範圍的資料。 內部查詢源資料集的批次。 查詢時，會使用參數化（滾動時間序列資料或增量資料）的開始日期和列出這些批的資料集檔案，並開始請求這些資料集檔案的資料。
 
 ### 範例轉換
 
