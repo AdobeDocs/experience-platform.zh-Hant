@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;consent;Consent
 solution: Experience Platform
 title: CCPA常見問答集
 topic: troubleshooting
+description: 本檔案針對加州消費者保護法案(CCPA)及其在Adobe Experience Cloud中實作的常見問題提供解答。
 translation-type: tm+mt
-source-git-commit: 5b32c1955fac4f137ba44e8189376c81cdbbfc40
+source-git-commit: 172710c62b6f60de74e05364edb1191fbba0ff64
 workflow-type: tm+mt
-source-wordcount: '787'
+source-wordcount: '809'
 ht-degree: 0%
 
 ---
