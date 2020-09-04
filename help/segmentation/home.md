@@ -5,9 +5,9 @@ title: Adobe Experience Platform細分服務
 topic: overview
 description: 本檔案概述區段服務及其在Adobe Experience Platform中所扮演的角色。
 translation-type: tm+mt
-source-git-commit: 8f7ce97cdefd4fe79cb806e71e12e936caca3774
+source-git-commit: 5dd07bf9afe96be3a4c3f4a4d4e3b23aef4fde70
 workflow-type: tm+mt
-source-wordcount: '1991'
+source-wordcount: '1387'
 ht-degree: 0%
 
 ---
@@ -129,97 +129,11 @@ Adobe Experience Platform提 [!DNL Segmentation Service] 供使用者介面和RE
 
 ## 多實體分段 {#multi-entity}
 
-透過進階的多實體分段功能，您可以使用多個XDM類別來建立區段，從而為人員結構描述新增擴充功能。 因此，在區段定 [!DNL Segmentation Service] 義期間，可以存取其他欄位，就像這些欄位是描述檔資料儲存的原生欄位。
-
-多實體細分提供根據業務需求相關資料識別受眾所需的彈性。 此程式可以快速、輕鬆地完成，而不需要查詢資料庫的專業知識。 這可讓您將關鍵資料新增至區段，而不需對資料串流進行昂貴的變更，或等待後端資料合併。
-
-以下影片旨在支援您對多實體分段的瞭解，並概述多實體分段和分段內容（分段負載）。
-
->[!VIDEO](https://video.tv.adobe.com/v/28947?quality=12&learn=on)
-
-### 使用案例：價格驅動促銷
-
-為了說明此進階細分功能的價值，請考慮由資料架構師與行銷人員協作。
-
-在此示例中，資料架構師使用鍵將個人(由具有和作為其基本類的方案 [!DNL XDM Individual Profile][!DNL XDM ExperienceEvent] 組成)的資料連接到另一個類。 加入後，資料架構師或行銷人員可以在區段定義期間使用這些新欄位，就像這些欄位是基本類別架構的原生欄位。
-
-**問題**
-
-資料架構設計人員和行銷人員都適用於相同的服裝零售商。 這家零售商在北美地區擁有超過1,000家門店，並在產品生命週期中定期降低產品價格。 因此，行銷人員想要執行特殊促銷活動，讓購買這些商品的購物者有機會以折扣價格購買這些商品。
-
-資料架構師的資源包括存取客戶瀏覽的網頁資料，以及包含產品SKU識別碼的購物車新增資料。 此外，他們還可以存取個別的「產品」類別，儲存其他產品資訊（包括產品價格）。 他們的指引是關注在過去14天內將產品加入購物車但並未購買產品的客戶，因為此產品的價格已經下跌。
-
-**解決方案**
-
->[!NOTE]
->
->在此範例中，我們假設資料架構師已建立ID命名空間。
-
-使用API，資料架構師會將架構的金鑰 [!DNL ExperienceEvent] 與「產品」類別建立關聯。 這樣做可讓資料架構師使用「產品」類別中的其他欄位，就像這些欄位是架構的原生欄 [!DNL ExperienceEvent] 位。 作為配置工作的最後一步，資料架構師需要將適當的資料引入配置工作中 [!DNL Real-time Customer Profile]。 若要這麼做，請啟用「產品」資料集以搭配使用 [!DNL Profile]。 在設定工作完成後，資料架構人員或行銷人員都可在中建立目標區段 [!DNL Segment Builder]。
-
-請參閱 [架構構成概述](../xdm/schema/composition.md#union) ，瞭解如何定義跨XDM類的關係。
-
-<!-- ## Personalization payload
-
-Segments can now carry a payload of contextual details to enable deep personalization of Adobe Solutions as well as external non-Adobe applications. These payloads can be added while defining your target segment.
-
-With contextual data built into the segment itself, this advanced Segmentation Service feature allows you to better connect with your customer.
-
-Segment Payload helps you answer questions surrounding your customer’s frame of reference such as:
-- What: What product was purchased? What product should be recommended next?
-- When: At what time and date did the purchase occur?
-- Where: In which store or city did the customer make their purchase?
-
-While this solution does not change the binary nature of segment membership, it does add additional context to each profile through an associated segment membership object. Each segment membership object has the capacity to include three kinds of contextual data:
-
-- **Identifier**: this is the ID for the segment 
-- **Attributes**: this would include information about the segment ID such as last qualification time, XDM version, status and so on.
-- **Event data**: Specific aspects of experience events which resulted in the profile qualifying for the segment
-
-Adding this specific data to the segment itself allows execution engines to personalize the experience for the customers in their target audience. -->
-
-### 使用個案
-
-為了說明此進階分段功能的價值，請考慮三個標準使用案例，以說明在「分段裝載」增強功能之前，行銷應用程式所面臨的挑戰：
-- 電子郵件個人化
-- 電子郵件重新定位
-- 廣告重新定位
-
-**電子郵件個人化**
-
-建立電子郵件促銷活動的行銷人員可能會嘗試在過去三個月內使用最近的客戶商店購買來建立目標對象的區段。 理想情況下，此區段同時需要進行購買之商店的項目名稱和名稱。 在增強功能之前，挑戰在於從購買事件中擷取商店識別碼，並將它指派給該客戶的個人檔案。
-
-**電子郵件重新定位**
-
-針對「購物車放棄」的電子郵件促銷活動建立和限定細分通常很複雜。 在進行增強之前，由於需要的資料可供使用，所以很難知道要將哪些產品加入個人化訊息中。 放棄產品的資料與體驗事件有關，而體驗事件過去在監控及擷取資料方面十分困難。
-
-**廣告重新定位**
-
-行銷人員面臨的另一個傳統挑戰，是建立廣告以重新鎖定已放棄購物車項目的客戶。 雖然區段定義可解決此項挑戰，但在增強功能之前，並沒有正式的方法來區分購買的產品與放棄的產品。 現在，您可以在區段定義期間鎖定特定資料集。
+透過進階的多實體分段功能，您可以根據產品、商店或其他非人（亦稱為「維度」實體），以額外的資料來擴充資料。 [!DNL Real-time Customer Profile] 因此，在區段定 [!DNL Segmentation Service] 義期間，可以存取其他欄位，就像這些欄位是資料儲存 [!DNL Profile] 的原生欄位。 多實體區隔可讓您根據與您獨特業務需求相關的資料來識別受眾時，有彈性。 如需詳細資訊，包括使用案例和工作流程，請參 [閱多實體分段指南](multi-entity-segmentation.md)。
 
 ## [!DNL Segmentation Service] 資料類型
 
-[!DNL Segmentation Service] 支援多種資料類型，包括：
-
-- 字串
-- 統一資源標識符
-- Enum
-- 數字
-- 長
-- 整數
-- 簡短
-- 位元組
-- 布林值
-- 日期
-- 日期時間
-- 陣列
-- 物件
-- 地圖
-- 事件
-- 外部受眾
-- 區段
-
-有關這些支援資料類型的詳細資訊，請參閱支援的資 [料類型檔案](./data-types.md)。
+[!DNL Segmentation Service] 支援多種原始和複雜的資料類型。 如需詳細資訊，包括支援的資料類型清單，請參閱支援的資 [料類型指南](./data-types.md)。
 
 ## 後續步驟
 
