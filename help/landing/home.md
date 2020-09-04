@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics;CJA;journey analytics;customer journey analytics;campaign orchestration;orchestration;customer journey;journey
+keywords: Experience Platform;home;popular topics;CJA;journey analytics;customer journey analytics;campaign orchestration;orchestration;customer journey;journey;journey orchestration
 solution: Experience Platform
 title: Adobe Experience Platform概觀
 topic: getting started
 description: Adobe Experience Platform是市面上功能最強大、最靈活、最開放的系統，可協助您建立和管理能推動客戶體驗的完整解決方案。 Experience Platform可讓組織集中管理和標準化來自任何系統的客戶資料和內容，並套用資料科學和機器學習，大幅改善多樣化個人化體驗的設計和提供。
 translation-type: tm+mt
-source-git-commit: 4c3a947051c11860ab4f0f53b48d8f4bda8dc195
+source-git-commit: 96be9401b3d3bf28176cbce5d139c42f63707c81
 workflow-type: tm+mt
-source-wordcount: '872'
-ht-degree: 3%
+source-wordcount: '936'
+ht-degree: 4%
 
 ---
 
@@ -80,7 +80,14 @@ Adobe Experience Platform檔案提供多種語言版本。 若要變更語言，
 
 ## [!DNL Experience Platform] 檔案
 
-[!DNL Experience Platform] 說明檔案以多種格式提供，以提供各種功能和服務。 若要進一步瞭解可用的檔案類型，以及閱讀各項服務的簡短說明，請造 [!DNL Platform] 訪 [Experience Platform檔案總覽](documentation/overview.md)。 或者，若要立即開始進一步瞭解特 [!DNL Platform] 定服務，請從左側導覽器的字母順序清單中選取指南。
+[!DNL Experience Platform] 說明檔案以多種格式提供，以提供各種功能和服務。 若要進一步瞭解可用的檔案類型，以及閱讀各項服務的簡短說明，請造 [!DNL Platform] 訪 [Experience Platform檔案概觀](documentation/overview.md)。 或者，若要立即開始進一步瞭解特 [!DNL Platform] 定服務，請從左側導覽器的字母順序清單中選取指南。
+
+### 建立在 [!DNL Experience Platform]
+
+除了左側導覽中的服務外，Adobe還在Experience Platform之上建立了其他應用程式服務。 您可以在其自己的文檔儲存庫中找到這些服務的文檔，連結如下：
+
+* [[!DNL客戶歷程分析]](https://docs.adobe.com/content/help/en/analytics-platform/using/cja-landing.html)
+* [[!DNL歷程協調]](https://docs.adobe.com/content/help/zh-Hant/journeys/using/journey-orchestration-home.html)
 
 >[!NOTE]
 >
@@ -131,7 +138,7 @@ Adobe Experience Platform的主要優點之一，就是能夠與其他現有Adob
 
 >[!VIDEO](https://video.tv.adobe.com/v/32553?quality=12&learn=on)
 
-如需Adobe Experience Platform強大架構的詳細資訊，請觀看以下影片：
+如需Adobe Experience Platform架構的詳細資訊，請觀看以下影片：
 
 >[!VIDEO](https://video.tv.adobe.com/v/32456?quality=12&learn=on)
 
@@ -146,11 +153,6 @@ Adobe Experience Platform的主要優點之一，就是能夠與其他現有Adob
 **使用案例:**
 
 >[!VIDEO](https://video.tv.adobe.com/v/32806?quality=12&learn=on)
-
-
-
-
-
 
 
 
