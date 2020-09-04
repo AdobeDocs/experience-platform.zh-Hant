@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics;CJA;journey analytics;customer journey analytics;campaign orchestration;orchestration;customer journey;journey;journey orchestration
+keywords: Experience Platform;home;popular topics;CJA;journey analytics;customer journey analytics;campaign orchestration;orchestration;customer journey;journey;journey orchestration;capability;workflow
 solution: Experience Platform
 title: Adobe Experience Platform檔案
 topic: overview
+description: Adobe Experience Platform檔案提供多種格式，包括使用者介面和API的概觀、教學課程和指南。 以下是Experience Platform服務最常用的檔案類型簡介。
 translation-type: tm+mt
-source-git-commit: 96be9401b3d3bf28176cbce5d139c42f63707c81
+source-git-commit: e94278c1b64e1d940f55861518c78cca24822c1b
 workflow-type: tm+mt
-source-wordcount: '1045'
+source-wordcount: '1084'
 ht-degree: 2%
 
 ---
