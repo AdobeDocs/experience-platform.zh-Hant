@@ -1,11 +1,11 @@
 ---
-keywords: Experience Platform;home;popular topics;Policy enforcement;Automatic enforcement;API-based enforcement;data governance
+keywords: Experience Platform;home;popular topics;Policy enforcement;Automatic enforcement;API-based enforcement;data governance;testing
 solution: Experience Platform
 title: 使用原則服務API強制執行資料使用原則
 topic: enforcement
 description: 一旦您為資料建立了資料使用標籤，並針對這些標籤建立了行銷動作的使用原則，您就可以使用原則服務API來評估在資料集或任意標籤群組上執行的行銷動作是否構成原則違規。 然後，您可以設定自己的內部通訊協定，以根據API回應來處理原則違規。
 translation-type: tm+mt
-source-git-commit: 0f3a4ba6ad96d2226ae5094fa8b5073152df90f7
+source-git-commit: d99a0a9211b5384b96e959d36f414cae47ab5f4e
 workflow-type: tm+mt
 source-wordcount: '936'
 ht-degree: 1%
