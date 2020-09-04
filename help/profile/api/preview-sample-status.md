@@ -5,9 +5,9 @@ title: 描述檔預覽——即時客戶描述檔API
 description: Adobe Experience Platform可讓您從多個來源收集客戶資料，為個別客戶建立強穩的統一個人檔案。 當啟用「即時客戶描述檔」的資料被收錄到「平台」中時，該資料會儲存在「描述檔」資料儲存區中。 隨著描述檔儲存區中記錄數的增加或減少，會執行範例工作，其中包含資料儲存區中有多少描述檔片段和合併的描述檔的相關資訊。 使用描述檔API，您可以預覽最新成功的範例，以及依資料集和身分命名空間來列出描述檔散發。
 topic: guide
 translation-type: tm+mt
-source-git-commit: 75a07abd27f74bcaa2c7348fcf43820245b02334
+source-git-commit: 2edba7cba4892f5c8dd41b15219bf45597bd5219
 workflow-type: tm+mt
-source-wordcount: '1442'
+source-wordcount: '1478'
 ht-degree: 1%
 
 ---
@@ -27,7 +27,7 @@ Adobe Experience Platform可讓您從多個來源收集客戶資料，為個別�
 
 ## 查看最後一個示例狀態 {#view-last-sample-status}
 
-您可以對端點執行GET請 `/previewsamplestatus` 求，以檢視您IMS組織上次成功執行範例工作的詳細資訊。 這包括範例中的描述檔總數，以及描述檔計數量度，或您的組織在Experience Platform中擁有的描述檔總數。 描述檔計數是在合併一些描述檔片段後產生，以針對每個個別客戶形成單一描述檔。 換言之，您的組織可能有多個與跨不同通道與品牌互動的單一客戶相關的描述檔片段，但這些片段會合併在一起（根據預設合併政策），並會傳回「1」個描述檔計數，因為這些片段都與同一個人相關。
+您可以對端點執行GET請 `/previewsamplestatus` 求，以檢視您IMS組織上次成功執行範例工作的詳細資訊。 這包括範例中的描述檔總數，以及描述檔計數量度，或您的組織在Experience Platform中擁有的描述檔總數。 描述檔計數是在合併一些描述檔片段後產生，以針對每個個別客戶形成單一描述檔。 換言之，您的組織可能有多個與跨不同通道與品牌互動的單一客戶相關的描述檔片段，但這些片段會合併（根據預設合併政策），並傳回「1」個描述檔計數，因為這些片段都與同一個人相關。
 
 描述檔計數也包含具有屬性（記錄資料）的描述檔，以及僅包含時間系列（事件）資料的描述檔，例如Adobe Analytics描述檔。 當擷取描述檔資料時，系統會定期重新整理範例工作，以便提供平台內的最新描述檔總數。
 
@@ -59,6 +59,10 @@ curl -X GET \
 ```json
 {
   "numRowsToRead": "41003",
+  "sampleJobRunning": {
+    "status": true,
+    "submissionTimestamp": "2020-08-01 17:57:57.0"
+  },
   "cosmosDocCount": "\"300803\"",
   "totalFragmentCount": 47429,
   "lastSuccessfulBatchTimestamp": "\"null\"",
@@ -75,6 +79,7 @@ curl -X GET \
 | 屬性 | 說明 |
 |---|---|
 | `numRowsToRead` | 範例中合併的描述檔總數。 |
+| `sampleJobRunning` | 一個布爾值，在 `true` 進行示例作業時返回。 對實際將批次檔案新增至描述檔存放區時的延遲提供透明度。 |
 | `cosmosDocCount` | Cosmos中的檔案總計。 |
 | `totalFragmentCount` | 描述檔儲存區中的描述檔片段總數。 |
 | `lastSuccessfulBatchTimestamp` | 上次成功的批次擷取時間戳記。 |
@@ -206,7 +211,7 @@ GET /previewsamplestatus/report/namespace?{QUERY_PARAMETERS}
 
 ```shell
 curl -X GET \
-  https://platform.adobe.io/data/core/ups/previewsamplestatus/report/dataset \
+  https://platform.adobe.io/data/core/ups/previewsamplestatus/report/namespace \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
@@ -274,7 +279,7 @@ curl -X GET \
 | `fullIDsCount` | 命名空間中合併的描述檔總數。 |
 | `fullIDsPercentage` | 以 `fullIDsCount` 小數格式表示的合併描述檔總數( `totalRows` 上個範例狀態 [中傳回的值](#view-last-sample-status))的百分比。 |
 | `code` | namespace `code` 的名稱空間。 使用 [Adobe Experience Platform Identity Service API使用名稱空間時可找到此點](../../identity-service/api/list-namespaces.md) ，也稱為Experience Platform UI中的  Identity符號。 若要進一步瞭解，請造訪 [身分命名空間概觀](../../identity-service/namespaces.md)。 |
-| `value` | 命名 `id` 空間的值。 使用 [Identity Service API使用名稱空間時，可找到此點](../../identity-service/api/list-namespaces.md)。 |
+| `value` | namespace `id` 的值。 使用 [Identity Service API使用名稱空間時，可找到此點](../../identity-service/api/list-namespaces.md)。 |
 
 ## 後續步驟
 
