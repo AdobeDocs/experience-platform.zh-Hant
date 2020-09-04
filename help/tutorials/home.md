@@ -1,11 +1,11 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;workflow
 solution: Experience Platform
 title: Adobe Experience Platform查詢服務
 topic: overview
 description: 這些教學課程是為了補充Experience Platform檔案中的資訊而設計，因此為獲得最佳效果，在完成教學課程時，可保持檔案的現有狀態。
 translation-type: tm+mt
-source-git-commit: d3ece56d10b1940a5992906a65a50ffe2f7e4346
+source-git-commit: 2a528c705a7aa610f57047be39be1ce9886ce44c
 workflow-type: tm+mt
 source-wordcount: '175'
 ht-degree: 0%
