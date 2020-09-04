@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;CJA;journey analytics;customer journey analytics;campaign orchestration;orchestration;customer journey;journey;journey orchestration
 solution: Experience Platform
 title: Adobe Experience Platform檔案
 topic: overview
 translation-type: tm+mt
-source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
+source-git-commit: 96be9401b3d3bf28176cbce5d139c42f63707c81
 workflow-type: tm+mt
-source-wordcount: '984'
-ht-degree: 1%
+source-wordcount: '1045'
+ht-degree: 2%
 
 ---
 
@@ -57,3 +57,10 @@ Adobe Experience Platform服務和下列功能目前提供說明檔案。 您可
 * **[!DNL Segmentation]:** 根據即時客戶個人檔案資料建立細分，以產生受眾並強化消費者體驗。
 * **[!DNL Sources]（連線）:**{#sources} 從多種來源（例如Adobe應用程式、雲端儲存空間、資料庫等）將資料匯入Adobe Experience Platform。
 * **XDM（體驗資料模型）**:XDM在Adobe的推動下，致力於標準化客戶體驗資料，並定義客戶體驗管理的架構。 XDM架構，以支援各元件間資料的互 [!DNL Experience Platform] 操作性。
+
+## 以應用程式服務為基礎 [!DNL Experience Platform]
+
+除了左側導覽中的服務外，Adobe還在Experience Platform之上建立了其他應用程式服務。 您可以在其自己的文檔儲存庫中找到這些服務的文檔，連結如下：
+
+* [[!DNL客戶歷程分析]](https://docs.adobe.com/content/help/en/analytics-platform/using/cja-landing.html)
+* [[!DNL歷程協調]](https://docs.adobe.com/content/help/zh-Hant/journeys/using/journey-orchestration-home.html)
