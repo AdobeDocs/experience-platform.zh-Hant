@@ -5,9 +5,9 @@ title: 多實體分段
 topic: overview
 description: 多實體分段是指能夠根據產品、商店或其他非描述檔類別，以額外資料擴充描述檔資料。 連線後，其他類別的資料就會變成描述檔架構的原生資料。
 translation-type: tm+mt
-source-git-commit: 5dd07bf9afe96be3a4c3f4a4d4e3b23aef4fde70
+source-git-commit: 8568c55003127a295acff9cfbbc3bbf6005e7a51
 workflow-type: tm+mt
-source-wordcount: '605'
+source-wordcount: '620'
 ht-degree: 0%
 
 ---
@@ -21,10 +21,10 @@ ht-degree: 0%
 
 多實體細分需要對細分中涉及的各種Adobe Experience Platform服務有良好的瞭解。 繼續使用本指南之前，請先閱讀下列檔案：
 
-* [!DNL Real-time Customer Profile](../profile/home.md):根據來自多個來源的匯總資料，即時提供統一的消費者個人檔案。
+* [[!DNL即時客戶基本資料]](../profile/home.md):根據來自多個來源的匯總資料，即時提供統一的消費者個人檔案。
    * [描述檔護欄](../profile/guardrails.md):建立受支援資料模型的最佳實務 [!DNL Profile]。
-* [!DNL Adobe Experience Platform Segmentation Service](./home.md):可讓您從資料建立 [!DNL Real-time Customer Profile] 區段。
-* [!DNL Experience Data Model (XDM)](../xdm/home.md):Experience Platform組織客戶體驗資料的標準化架構。
+* [[!DNL Adobe Experience Platform分段服務]](./home.md):可讓您從資料建立 [!DNL Real-time Customer Profile] 區段。
+* [[!DNL體驗資料模型(XDM)]](../xdm/home.md):Experience Platform組織客戶體驗資料的標準化架構。
    * [架構構成基礎](../xdm/schema/composition.md#union):瞭解在Experience Platform中用於構成結構描述的最佳範例。
 
 ## 使用個案
