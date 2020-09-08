@@ -5,9 +5,9 @@ title: 即時客戶個人檔案總覽
 topic: guide
 description: 即時客戶描述檔是一般查閱實體儲存，可合併來自各種企業資料資產的資料，然後以個別客戶描述檔和相關時間系列事件的形式提供對該資料的存取。 此功能可讓行銷人員跨多個通道，推動與受眾之間協調、一致且相關的體驗。
 translation-type: tm+mt
-source-git-commit: 5dd07bf9afe96be3a4c3f4a4d4e3b23aef4fde70
+source-git-commit: cef27082fec97530031061476b46f60859717825
 workflow-type: tm+mt
-source-wordcount: '1649'
+source-wordcount: '1650'
 ht-degree: 1%
 
 ---
@@ -90,7 +90,7 @@ Adobe Experience Platform可 [!DNL Segmentation Service] 為個別客戶提供�
 
 ### [!DNL Profile] 擷取量度
 
-可觀性洞察可讓您在Adobe Experience Platform中公開關鍵指標。 除了各種功 [!DNL Platform] 能的使用統計資料和效能指標 [!DNL Platform][!DNL Profile]，還有特定的相關量度可讓您深入瞭解傳入請求率、成功擷取率、收錄的記錄大小等。 若要進一步瞭解，請先閱讀「可觀 [性洞察」概觀](../observability/home.md)，並取得完整的量度清單， [!DNL Profile] 請參閱可用量度 [的檔案](../observability/metrics.md)。
+可觀性洞察可讓您在Adobe Experience Platform中公開關鍵指標。 除了各種功 [!DNL Platform] 能的使用統計資料和效能指標 [!DNL Platform][!DNL Profile]，還有特定的相關量度可讓您深入瞭解傳入請求率、成功擷取率、收錄的記錄大小等。 若要進一步瞭解，請先閱讀 [Oncerbility Insights API概觀](../observability/api/overview.md)，如需完整的量度清單， [!DNL Profile] 請參閱可用量度 [的檔案](../observability/api/metrics.md#available-metrics)。
 
 ## [!DNL Data governance] 和 [!DNL Privacy]
 
