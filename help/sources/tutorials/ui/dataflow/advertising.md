@@ -5,9 +5,9 @@ title: 在UI中為廣告連接器配置資料流
 topic: overview
 description: 資料流是從來源擷取資料並將資料擷取至Adobe Experience Platform資料集的排程任務。 本教學課程提供使用廣告帳戶配置新資料流的步驟。
 translation-type: tm+mt
-source-git-commit: fb60e11b9502c31e654d3fbe5dc240ace9429332
+source-git-commit: 5d4aa8eebc1837a5d8b275fa631f4af73c38158e
 workflow-type: tm+mt
-source-wordcount: '1305'
+source-wordcount: '1350'
 ht-degree: 0%
 
 ---
@@ -35,9 +35,16 @@ ht-degree: 0%
 - 介面的左半部分是目錄瀏覽器，顯示伺服器的檔案和目錄。
 - 介面的右半部分可讓您從相容檔案中預覽最多100列資料。
 
-選擇要使用的目錄，然後選擇「下 **[!UICONTROL 一步]**」。
+您可以使 **[!UICONTROL 用頁面頂端的]** 「搜尋」選項，快速識別您要使用的來源資料。
 
-![添加資料](../../../images/tutorials/dataflow/advertising/add-data.png)
+>[!NOTE]
+>
+>搜索源資料選項可用於所有基於表格的源連接器，但Analytics、分類、事件集線器和Kinesis連接器除外。
+
+找到源資料後，選擇目錄，然後按一下「下 **[!UICONTROL 一步]**」。
+
+![select-data](../../../images/tutorials/dataflow/all-tabular/select-data.png)
+
 
 ## 將資料欄位對應至XDM架構
 
