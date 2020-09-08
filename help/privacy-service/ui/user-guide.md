@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 隱私權服務使用指南
 topic: UI guide
 translation-type: tm+mt
-source-git-commit: 172710c62b6f60de74e05364edb1191fbba0ff64
+source-git-commit: a09d80f4bacd5d4be77443d75aad278ad89259ef
 workflow-type: tm+mt
-source-wordcount: '1056'
+source-wordcount: '1059'
 ht-degree: 0%
 
 ---
@@ -24,11 +24,12 @@ UI的控制面 [!DNL Privacy Service] 板提供兩個介面工具集，可讓您
 
 ### 規則類型
 
-[!DNL Privacy Service] 支援三種法規類型的工作請求：
+[!DNL Privacy Service] 支援四種法規類型的工作請求：
 
-* 歐盟的 [!DNL General Data Protection Regulation] (GDPR)
-* ( [!DNL California Consumer Privacy Act] CCPA)
-* 泰國( [!DNL Personal Data Protection Act] PDPA_THA)
+* 歐盟的 [!DNL General Data Protection Regulation] ([!UICONTROL GDPR])
+* ( [!DNL California Consumer Privacy Act][!UICONTROL CCPA])
+* 巴西的 [!DNL Lei Geral de Proteção de Dados] ([!UICONTROL LGPD_BRA])
+* 泰國( [!DNL Personal Data Protection Act][!UICONTROL PDPA_THA])
 
 每個規則類型的工作會個別追蹤。 要在規則類型之間切換，請按一下「規 **[!UICONTROL 則類型]** 」下拉菜單並從清單中選擇所需的規則。
 
@@ -56,7 +57,7 @@ UI的控制面 [!DNL Privacy Service] 板提供兩個介面工具集，可讓您
 
 >[!NOTE]
 >
->當篩選器已套用至「工作請求」介面工具集時，您可以按一下篩選藥丸上的 **[!UICONTROL X]** ，以移除篩選。 然後，工作請求會返回預設追蹤清單。
+>當篩選器已套用至「工作請求」介面工具集時，您可以按一下篩選藥丸上的 **X** ，以移除篩選。 然後，工作請求會返回預設追蹤清單。
 
 ### 工作請求
 
