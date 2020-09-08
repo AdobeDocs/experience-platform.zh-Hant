@@ -5,9 +5,9 @@ title: 在UI中為資料庫連接器配置資料流
 topic: overview
 description: 資料流是從源中檢索資料並將資料帶入平台資料集的計畫任務。 本教程提供使用資料庫帳戶配置新資料流的步驟。
 translation-type: tm+mt
-source-git-commit: 14044f9af50cd4c922294cd60f7b6549828e8aca
+source-git-commit: 5d4aa8eebc1837a5d8b275fa631f4af73c38158e
 workflow-type: tm+mt
-source-wordcount: '1282'
+source-wordcount: '1328'
 ht-degree: 0%
 
 ---
@@ -35,9 +35,16 @@ ht-degree: 0%
 - 介面的左半部是瀏覽器，顯示您帳戶的資料庫清單。
 - 介面的右半部分可讓您預覽最多100列資料。
 
-選擇要使用的資料庫，然後按一下「下 **[!UICONTROL 一步]**」。
+您可以使 **[!UICONTROL 用頁面頂端的]** 「搜尋」選項，快速識別您要使用的來源資料。
 
-![](../../../images/tutorials/dataflow/databases/add-data.png)
+>[!NOTE]
+>
+>搜索源資料選項可用於所有基於表格的源連接器，但Analytics、分類、事件集線器和Kinesis連接器除外。
+
+找到源資料後，選擇目錄，然後按一下「下 **[!UICONTROL 一步]**」。
+
+![select-data](../../../images/tutorials/dataflow/databases/select-data.png)
+
 
 ## 將資料欄位對應至XDM架構
 
