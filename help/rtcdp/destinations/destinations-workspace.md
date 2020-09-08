@@ -5,9 +5,9 @@ seo-title: 目標工作區
 description: 「目標」工作區包含4個部分：目錄、瀏覽、帳戶和系統視圖，這些部分在以下各節中介紹。
 seo-description: 在Adobe即時客戶資料平台中，從左側導覽列選取「目標」以存取目標工作區。
 translation-type: tm+mt
-source-git-commit: 2dfa46906374151628d46c309df724a59f8dc50e
+source-git-commit: 59ac673c35954696fbb37417510035bdebff6f62
 workflow-type: tm+mt
-source-wordcount: '809'
+source-wordcount: '825'
 ht-degree: 2%
 
 ---
@@ -52,9 +52,31 @@ Adobe即時CDP使用者介面在目標目錄頁面上提供許多搜尋和篩選
 
 有關目標類別和每個目標資訊的詳細資訊，請參 [閱目標目錄](/help/rtcdp/destinations/destinations-catalog.md)[和目標類型和類別](/help/rtcdp/destinations/destination-types.md)。
 
+## [!UICONTROL 帳戶] {#accounts}
+
+在「帳 **[!UICONTROL 戶]** 」標籤中，您可以進一步瞭解您與各種目的地建立的連線。 請參閱下表，以取得有關每個目標的所有資訊：
+
+>[!TIP]
+>
+>使用「 ![平台」欄中的](/help/rtcdp/destinations/assets/add-data-symbol.png) 「新增資料」按鈕 **** ，為該帳戶建立新的目標連線。
+
+![「帳戶」頁籤](/help/rtcdp/destinations/assets/accounts-tab.png)
+
+| 元素 | 說明 |
+---------|----------
+| [!UICONTROL 平台] | 您已設定連接的目標。 |
+| [!UICONTROL 連線類型] | 表示與儲存桶或目標的連接類型。 <ul><li>對於電子郵件行銷目標：可以是S3或FTP。</li><li>針對即時廣告目的地：伺服器對伺服器</li><li>對於Amazon S3雲端儲存空間目標：存取金鑰 </li><li>對於SFTP雲端儲存空間目標：SFTP的基本驗證</li></ul> |
+| [!UICONTROL 使用者名稱] | 在連接目標嚮導中選 [擇的用戶名](/help/rtcdp/destinations/email-marketing-destinations.md#connect-destination)。 |
+| [!UICONTROL 目的地] | 表示與為目標建立的基本資訊連接的唯一成功目標流的數量。 |
+| [!UICONTROL 已驗證] | 授權此目的地的連線的日期。 |
+
 ## [!UICONTROL 瀏覽] {#browse}
 
-「瀏 **[!UICONTROL 覽]** 」頁籤顯示已建立連接的目標。 啟用切換 **[!UICONTROL 功能的]** 「目標」會將目標設為「活動」，反之亦然。 您也可以選取「區段」>「瀏覽」，並選取要檢 **[!UICONTROL 查的區段，以檢]****** 視資料流動的目的地。 有關「瀏覽」頁籤中為每個目標提供的所有資訊，請參見下表：
+「瀏 **[!UICONTROL 覽]** 」頁籤顯示已建立連接的目標。 啟用切換 **[!UICONTROL 功能的目標]** ，會將目標設為作用中，反之亦然。 您也可以選取「區段」>「瀏覽」，並選取要檢查的區段， **[!UICONTROL 以檢視您有資料流]** 動的目的地 **** 。 有關「瀏覽」頁籤中為每個目標提供的所有資訊，請參見下表：
+
+>[!TIP]
+>
+>使用「 ![名稱」欄的](/help/rtcdp/destinations/assets/add-data-symbol.png) 「新增資料」按鈕 **** ，將其他區段啟用至該目標。
 
 ![瀏覽標籤](/help/rtcdp/destinations/assets/browse-tab.png)
 
@@ -73,21 +95,6 @@ Adobe即時CDP使用者介面在目標目錄頁面上提供許多搜尋和篩選
 ![按一下目標行](/help/rtcdp/destinations/assets/click-destination-row.png)
 
 選取目標名稱，以查看啟動至此目標之區段的相關資訊。 按一 **[!UICONTROL 下「編輯啟動]** 」，修改或新增至傳送至此目的地的區段。
-
-## [!UICONTROL 帳戶] {#accounts}
-
-在「帳 **[!UICONTROL 戶]** 」標籤中，您可以進一步瞭解您與各種目的地建立的連線。 請參閱下表，以取得有關每個目標的所有資訊：
-
-![「帳戶」頁籤](/help/rtcdp/destinations/assets/accounts-tab.png)
-
-| 元素 | 說明 |
----------|----------
-| [!UICONTROL 平台] | 您已設定連接的目標。 |
-| [!UICONTROL 連線類型] | 表示與儲存桶或目標的連接類型。 <ul><li>對於電子郵件行銷目標：可以是S3或FTP。</li><li>針對即時廣告目的地：伺服器對伺服器</li><li>對於Amazon S3雲端儲存空間目標：存取金鑰 </li><li>對於SFTP雲端儲存空間目標：SFTP的基本驗證</li></ul> |
-| [!UICONTROL 使用者名稱] | 在連接目標嚮導中選 [擇的用戶名](/help/rtcdp/destinations/email-marketing-destinations.md#connect-destination)。 |
-| [!UICONTROL 資料流] | 表示與為目標建立的基本資訊連接的唯一成功目標流的數量。 |
-| [!UICONTROL 已驗證] | 授權此目的地的連線的日期。 |
-| [!UICONTROL 狀態] | `Active` 或 `Inactive`. 指出資料目前是否正在啟動至此目標。 若要編輯狀態，請參閱停 [用啟動](/help/rtcdp/destinations/activate-destinations.md#disable-activation)。 |
 
 ## [!UICONTROL 系統視圖] {#system-view}
 
