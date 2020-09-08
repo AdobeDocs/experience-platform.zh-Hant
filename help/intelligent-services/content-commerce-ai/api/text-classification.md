@@ -5,9 +5,9 @@ title: 文字分類API端點
 topic: Developer guide
 description: 文字分類服務在給定文字片段時，可將其分類為一或多個標籤。 分類可以是單一標籤、多標籤或階層式。
 translation-type: tm+mt
-source-git-commit: 4f7b5ca50171f4948726c44dbf31025011adf35f
+source-git-commit: 31e4f1441676daa79f064c567ddc47e9198d0a0b
 workflow-type: tm+mt
-source-wordcount: '447'
+source-wordcount: '431'
 ht-degree: 4%
 
 ---
@@ -20,8 +20,6 @@ ht-degree: 4%
 >內容與商務AI為測試版。 說明檔案可能會有所變更。
 
 文字分類服務在給定文字片段時，可將其分類為一或多個標籤。 分類可以是單一標籤、多標籤或階層式。
-
-文字分類使用 [FastText](https://fasttext.cc/) ，其模型已使用自訂資料進行訓練。
 
 **API格式**
 
