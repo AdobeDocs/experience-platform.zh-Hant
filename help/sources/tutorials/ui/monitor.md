@@ -5,9 +5,9 @@ solution: Experience Platform
 title: 監視帳戶和資料流
 topic: overview
 translation-type: tm+mt
-source-git-commit: b900ea05cc046cf19d415543c581d0bcdc4296ba
+source-git-commit: e5898da7d25a708f3431b251f1cfa620b943e9a5
 workflow-type: tm+mt
-source-wordcount: '971'
+source-wordcount: '890'
 ht-degree: 0%
 
 ---
@@ -42,25 +42,15 @@ Adobe Experience Platform中的來源連接器可讓您依計畫吸收外部來�
 
 排序面板允許您從特定源訪問帳戶。 選擇要使用的源，然後從右邊的清單中選擇帳戶。
 
->[!TIP]
->
-> 使用「 ![名稱](../../images/tutorials/monitor/spectrum-control.png)**** 」列中的「頻譜控制」按鈕，為選定帳戶建立新源資料流。
-
 ![accounts-select](../../images/tutorials/monitor/accounts-sort.png)
 
-在「帳 **[!UICONTROL 戶]** 」頁中，可以查看與您訪問的帳戶相關聯的現有資料流或目標資料集的清單。選擇輔助控制項可為所選資料流啟用更多可用選項。 以下將進一步說明這些選項：
-
-| 控制 | 說明 |
-| ------- | ----------- |
-| [!UICONTROL 編輯排程] | 允許您編輯資料流的接收調度。 |
-| [!UICONTROL 禁用資料流] | 允許您禁用所選資料流的資料提取。 |
-| [!UICONTROL 刪除] | 允許您刪除選定的資料流。 |
+在「帳 **[!UICONTROL 戶]** 」頁中，可以查看與您訪問的帳戶相關聯的現有資料流或目標資料集的清單。
 
 ![資料流](../../images/tutorials/monitor/dataflows.png)
 
 ## 監視資料流
 
-資料流可以直接從目錄頁 **[!UICONTROL 訪問]** ，無需查看 **[!UICONTROL 帳戶]**。 從頂 **[!UICONTROL 部標題]** 中選擇資料流以查看資料流清單。
+資料流可以直接從目錄頁 **[!UICONTROL 訪問]** ，無需查看 **[!UICONTROL 帳戶]**。 從頂 **[!UICONTROL 部標題中]** ，選擇資料流以查看現有資料流清單。
 
 ![目錄資料流](../../images/tutorials/monitor/catalog-dataflows.png)
 
@@ -68,7 +58,7 @@ Adobe Experience Platform中的來源連接器可讓您依計畫吸收外部來�
 
 ![dataflows-list](../../images/tutorials/monitor/dataflows-list.png)
 
-出現排序面板。 從滾動菜單中選擇要訪問的源，然後從右側的清單中選擇資料流。 您也可以選擇輔助控制項，為所選資料流啟用更多可用選項。
+出現排序面板。 從滾動菜單中選擇要訪問的源，然後從右側的清單中選擇資料流。
 
 ![sort-dataflows](../../images/tutorials/monitor/dataflows-sort.png)
 
@@ -92,10 +82,11 @@ Adobe Experience Platform中的來源連接器可讓您依計畫吸收外部來�
 
 有關「錯誤」摘要中可見的錯誤代碼，請參 **[!UICONTROL 閱下表]**。
 
-| 錯誤 | 說明 |
+| 錯誤代碼 | 錯誤訊息 |
 | ---------- | ----------- |
-| `CONNECTOR-1001-500` | 從源複製資料時出錯。 |
-| `CONNECTOR-2001-500` | 將複製的資料處理到時出錯 [!DNL Platform]。 此錯誤可能與剖析、驗證或轉換有關。 |
+| `CONNECTOR-1001-500` | &quot;複製活動發生問題。&quot; |
+| `CONNECTOR-2001-500` | 「從Experience Platform來源複製至資料集時發生問題。」 |
+| `CONNECTOR-3001-500` | &quot;使用批量收錄API建立批次時流提供程式出現問題。&quot; |
 
 螢幕的下半部分包含有關 **[!UICONTROL Dataflow運行錯誤的資訊]**。 您也可以從這裡檢視所擷取的檔案、預覽和下載錯誤診斷程式，或下載檔案資訊清單。
 
