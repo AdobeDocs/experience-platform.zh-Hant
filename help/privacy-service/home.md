@@ -1,12 +1,12 @@
 ---
-keywords: Experience Platform;home;popular topics;GDPR;gdpr;ccpa:CCPA
+keywords: Experience Platform;home;popular topics;GDPR;gdpr;ccpa:CCPA;pdpa;PDPA;pdpa_that;PDPA_THA;lgpd;LGPD;lgpd_bra;LGPD_BRA;
 solution: Experience Platform
 title: Adobe Experience Platform隱私權服務
 topic: overview
 translation-type: tm+mt
-source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
+source-git-commit: 5d88aca08b7cf1d55e1eed989de6aa514f82e113
 workflow-type: tm+mt
-source-wordcount: '1502'
+source-wordcount: '1565'
 ht-degree: 2%
 
 ---
@@ -47,7 +47,8 @@ Adobe Experience Platform是為 [!DNL Privacy Service] 因應企業管理客戶�
 | --- | --- |
 | CCPA（加州） | The [!DNL California Consumer Privacy Act] (CCPA) enhances privacy rights and consumer protection for residents of California, United States. CCPA為加州居民提供新的資料隱私權，包括存取和刪除其個人資料的權利，以得知其個人資料是賣給或披露（以及向誰），以及選擇不將其資料賣給第三方的權利。<br/><br/>進一步說明檔案的連結： <ul><li>[法律概觀](https://oag.ca.gov/privacy/ccpa)</li><li>[CCPA常見問答集](ccpa/faq.md)</li></ul> |
 | GDPR（歐盟） | The [!DNL General Data Protection Regulation] (GDPR) introduced several new data privacy rights for members of the European Union, including the **Right to Access** and the **Right to be Forgotten**. 這表示貴公司已收集其個人資料的任何歐盟公民，都有權隨時請求存取或刪除其資料。<br/><br/>進一步說明檔案的連結： <ul><li>[法律概觀](https://gdpr-info.eu/)</li><li>[GDPR 常見問題集](gdpr/faq.md)</li><li>[GDPR 術語](gdpr/terminology.md)</li></ul> |
-| PDPA_THA（泰國） | 泰國的個人資料保護法(PDPA)是為保護泰國資料擁有者不被非法收集、使用或揭露其個人資料而制定的。 受歐盟GDPR的啟發，該規定授予泰國公民要求訪問或刪除其儲存的個人資料的權利。<br/><br/>進一步說明檔案的連結： <ul><li>[法律概觀](https://www.dataprotectionreport.com/2020/02/thailand-personal-data-protection-law/)</li><li>[PDPA_THA常見問答集](pdpa-tha/faq.md)</li><li>[PDPA_THA術語](pdpa-tha/terminology.md)</li></ul> |
+| LGPD（巴西） | ( [!DNL Lei Geral de Proteção de Dados] LGPD)旨在規範巴西所有個人或自然人個人資料的處理。 LGPD賦予巴西公民存取和刪除個人資料、瞭解個人資料是否被出售或披露（以及向誰）的權利，以及選擇不將其資料出售給第三方的權利。<br/><br/>進一步說明檔案的連結： <ul><li>[法律概觀](https://gdpr.eu/gdpr-vs-lgpd/)</li></ul> |
+| PDPA（泰國） | 泰 [!DNL Personal Data Protection Act] 國(PDPA)的引入是為了保護泰國資料擁有者免受非法收集、使用或披露其個人資料的侵害。 受歐盟GDPR的啟發，該規定授予泰國公民要求訪問或刪除其儲存的個人資料的權利。<br/><br/>進一步說明檔案的連結： <ul><li>[法律概觀](https://www.dataprotectionreport.com/2020/02/thailand-personal-data-protection-law/)</li><li>[PDPA常見問答集](pdpa-tha/faq.md)</li><li>[PDPA術語](pdpa-tha/terminology.md)</li></ul> |
 
 如果您的資料作業屬於上述任何法規的權限，請檢閱其檔案，以取得重要資訊，例如客戶所享有的特定隱私權，以及遵守隱私權要求的遵循窗口。 在決定如何整合至您的CRM系統時，應考 [!DNL Privacy Service] 慮這些資訊，以及客戶應如何與您的網站互動，以提出隱私權要求。
 
@@ -77,7 +78,7 @@ Adobe Experience Platform是為 [!DNL Privacy Service] 因應企業管理客戶�
 
 #### 使用API
 
-[[!DNL 隱私服務API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/privacy-service.yaml) 提供數個端點，用於使用REST風格的API呼叫來建立和管理隱私權工作，讓您以程式設計方式處理應用程式的隱私權規範 [!DNL Experience Cloud] 規範。 如需如何使用API的詳細步驟，請參閱「隱私 [服務API開發人員指南」](api/getting-started.md)。
+[! [DNL隱私服務API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/privacy-service.yaml) 提供數個端點，用於使用REST風格的API呼叫來建立和管理隱私權工作，讓您以程式設計方式處理應用程式的隱私權規範 [!DNL Experience Cloud] 規範。 如需如何使用API的詳細步驟，請參閱「隱私 [服務API開發人員指南」](api/getting-started.md)。
 
 #### 使用UI
 
