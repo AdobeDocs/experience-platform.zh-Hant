@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 訂閱資料擷取事件
 topic: overview
 translation-type: tm+mt
-source-git-commit: d2f098cb9e4aaf5beaad02173a22a25a87a43756
+source-git-commit: 80a1694f11cd2f38347989731ab7c56c2c198090
 workflow-type: tm+mt
-source-wordcount: '831'
+source-wordcount: '621'
 ht-degree: 1%
 
 ---
@@ -20,75 +20,77 @@ ht-degree: 1%
 
 為協助監控擷取程式， [!DNL Experience Platform] 可訂閱由程式每個步驟所發佈的一組事件，並通知您所擷取資料的狀態和任何可能的失敗。
 
-## 可用狀態通知事件
+## 註冊網頁掛接以取得資料擷取通知
 
-以下是可供訂閱的可用資料擷取狀態通知清單。
+若要接收資料擷取通知，您必須使用 [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui) ，註冊Experience Platform整合的網頁掛接。
+
+請依照訂閱通知 [的教 [!DNL Adobe I/O Event] 學課程](../../observability/notifications/subscribe.md) ，取得如何完成此作業的詳細步驟。
+
+>[!IMPORTANT]
+>
+>在訂閱程式中，請確定您選擇 **[!UICONTROL Platform notifications]** 作為事件提供者，並在出現提示時選 **[!UICONTROL 擇Data ingestion notification]** event subscription。
+
+## 接收資料擷取通知
+
+在您成功註冊網頁掛接且已收錄新資料後，您就可以開始接收事件通知。 這些事件可使用網頁掛接本身來檢視，或在Adobe Developer Console中選取專案的事件註冊概觀中的 **[!UICONTROL Debug Tracing]** 標籤來檢視。
+
+下列JSON是通知裝載的範例，在批次擷取事件失敗時，會傳送至您的網頁掛接：
+
+```json
+{
+  "event_id": "93a5b11a-b0e6-4b29-ad82-81b1499cb4f2",
+  "event": {
+    "xdm:ingestionId": "01EGK8H8HF9JGFKNDCABHGA24G",
+    "xdm:customerIngestionId": "01EGK8H8HF9JGFKNDCABHGA24G",
+    "xdm:imsOrg": "{IMS_ORG}",
+    "xdm:completed": 1598374341560,
+    "xdm:datasetId": "5e55b556c2ae4418a8446037",
+    "xdm:eventCode": "ing_load_failure",
+    "xdm:sandboxName": "prod",
+    "sentTime": "1598374341595",
+    "processStartTime": 1598374342614,
+    "transformedTime": 1598374342621,
+    "header": {
+      "_adobeio": {
+        "imsOrgId": "{IMS_ORG}",
+        "providerMetadata": "aep_observability_catalog_events",
+        "eventCode": "platform_event"
+      }
+    }
+  }
+}
+```
+
+| 屬性 | 說明 |
+| --- | --- |
+| `event_id` | 通知的唯一系統產生ID。 |
+| `event` | 包含觸發通知之事件的詳細資料的物件。 |
+| `event.xdm:datasetId` | 擷取事件套用至的資料集ID。 |
+| `event.xdm:eventCode` | 狀態代碼，指出為資料集觸發的事件類型。 請參閱 [附錄](#event-codes) ，瞭解特定值及其定義。 |
+
+要查看事件通知的完整模式，請參閱公 [用GitHub儲存庫](https://github.com/adobe/xdm/blob/master/schemas/notifications/ingestion.schema.json)。
+
+## 後續步驟
+
+在您將通知注 [!DNL Platform] 冊到專案後，您就可以從「專案」概觀中檢視收到 [!UICONTROL 的事件]。 如需如何追蹤 [事件的詳細指示](https://www.adobe.io/apis/experienceplatform/events/docs.html#!adobedocs/adobeio-events/master/support/tracing.md) ，請參閱追蹤Adobe I/O事件指南。
+
+## 附錄
+
+下節包含解釋資料擷取通知負載的其他資訊。
+
+### 可用狀態通知事件 {#event-codes}
+
+下表列出您可訂閱的可用資料擷取狀態通知。
+
+| 事件代碼 | 平台服務 | 狀態 | 事件說明 |
+| --- | ---------------- | ------ | ----------------- |
+| `ing_load_success` | [!DNL Data Ingestion] | success | 批次已成功吸收至中的資料集 [!DNL Data Lake]。 |
+| `ing_load_failure` | [!DNL Data Ingestion] | 失敗 | 無法將批次吸收到中的資料集中 [!DNL Data Lake]。 |
+| `ps_load_success` | [!DNL Real-time Customer Profile] | success | 已成功將批次吸收至資料 [!DNL Profile] 儲存區。 |
+| `ps_load_failure` | [!DNL Real-time Customer Profile] | 失敗 | 無法將批次吸收到資料 [!DNL Profile] 儲存中。 |
+| `ig_load_success` | [!DNL Identity Service] | success | 資料已成功載入識別圖。 |
+| `ig_load_failure` | [!DNL Identity Service] | 失敗 | 無法將資料載入識別圖。 |
 
 >[!NOTE]
 >
 >所有資料擷取通知只提供一個事件主題。 為了區分不同的狀態，可以使用事件代碼。
-
-| 平台服務 | 狀態 | 事件說明 | 事件代碼 |
-| ---------------- | ------ | ----------------- | ---------- |
-| 資料著陸 | success | 擷取——批次成功 | ing_load_success |
-| 資料著陸 | 失敗 | 擷取——批次失敗 | ing_load_failure |
-| 即時客戶個人檔案 | success | 配置檔案服務——資料載入批成功 | ps_load_success |
-| 即時客戶個人檔案 | 失敗 | 配置檔案服務——資料載入批失敗 | ps_load_failure |
-| 身分圖 | success | 身份圖——資料載入批成功 | ig_load_success |
-| 身分圖 | 失敗 | 身份圖——資料載入批失敗 | ig_load_failure |
-
-## 通知裝載方案
-
-資料擷取通知事件模式是 [!DNL Experience Data Model] (XDM)模式，包含欄位和值，提供有關所擷取資料狀態的詳細資訊。 請造訪公開的XDM [!DNL GitHub] repo，以檢視最新的通知 [裝載架構](https://github.com/adobe/xdm/blob/master/schemas/notifications/ingestion.schema.json)。
-
-## 訂閱資料擷取狀態通知
-
-透過 [Adobe I/O Events](https://www.adobe.io/apis/experienceplatform/events.html)，您可以使用Webhook訂閱多種通知類型。 以下各節將說明使用Adobe Developer Console訂閱 [!DNL Platform] 資料擷取事件通知的步驟。
-
-### 在Adobe Developer Console中建立新專案
-
-前往 [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui) ，使用您的Adobe ID登入。 接著，請依照教學課程中說明的步驟， [在Adobe Developer Console檔案中建立空白的專案](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/projects-empty.md) 。
-
-### 新增 [!DNL Experience Platform] 事件至專案
-
-建立新專案後，請導覽至該專案的概述畫面。 在這裡，按一下「 **[!UICONTROL 新增事件」]**。
-
-![](../images/quality/subscribe-events/add-event-button.png)
-
-此時將 **[!UICONTROL 顯示「添加事件]** 」對話框。 按一 **[!UICONTROL 下「Experience Platform]** 」(體驗平台 **[!UICONTROL )以篩選可用選項清單，然後按一下「]** Platform notifications **[!UICONTROL 」（平台通知），再按「]**&#x200B;下一步」。
-
-![](../images/quality/subscribe-events/select-platform-events.png)
-
-下一個畫面會顯示要訂閱的事件類型清單。 選取「 **[!UICONTROL 資料擷取通知]**」，然後按一 **[!UICONTROL 下「下一步]**」。
-
-![](../images/quality/subscribe-events/choose-event-subscriptions.png)
-
-下一個畫面會提示您建立JSON網頁Token(JWT)。 您可以選擇自動產生金鑰對，或上傳您在終端機中產生的公開金鑰。
-
-在本教學課程中，會遵循第一個選項。 按一下「Generate a key pair **[!UICONTROL (生成密鑰對]**)」選項框 **[!UICONTROL ，然後按一下右下角的「]** Generate keypair（生成密鑰對）」按鈕。
-
-![](../images/quality/subscribe-events/generate-keypair.png)
-
-當鍵對產生時，瀏覽器會自動下載它。 您必須自行儲存此檔案，因為它不會保存在Developer Console中。
-
-下一個畫面可讓您檢視新產生的金鑰對的詳細資訊。 按一 **[!UICONTROL 下]** 「下一步」繼續。
-
-![](../images/quality/subscribe-events/keypair-generated.png)
-
-在下一個畫面中，提供事件註冊的名稱和說明。 最佳實務是建立獨特、可輕鬆辨識的名稱，以協助區隔此活動註冊與同一專案中的其他活動。
-
-![](../images/quality/subscribe-events/registration-details.png)
-
-在同一螢幕的下方，您可選擇設定如何接收事件。 **[!UICONTROL Webhook]** 可讓您提供自訂的Webhook位址以接收事件，而 **[!UICONTROL Runtime動作則可讓您使用]** Adobe I/O Runtime進行相同動作 [](https://www.adobe.io/apis/experienceplatform/runtime/docs.html)。
-
-本教學課程會略過此選用的設定步驟。 完成後，按一下「儲 **[!UICONTROL 存設定的事件]** 」以完成事件註冊。
-
-![](../images/quality/subscribe-events/receive-events.png)
-
-此時會顯示新建立事件註冊的詳細資訊頁面，您可在此處檢視已接收的事件、執行除錯追蹤及編輯其設定。
-
-![](../images/quality/subscribe-events/registration-complete.png)
-
-## 後續步驟
-
-在您將通知注 [!DNL Platform] 冊到專案後，您就可以從專案儀表板檢視收到的事件。 如需如何追 [蹤事件的詳細指示，請參閱「追蹤Adobe I/O事件](https://www.adobe.io/apis/experienceplatform/events/docs.html#!adobedocs/adobeio-events/master/support/tracing.md) 」指南。
