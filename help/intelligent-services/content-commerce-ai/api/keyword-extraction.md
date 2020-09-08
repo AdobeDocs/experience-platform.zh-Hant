@@ -5,10 +5,10 @@ title: 色彩擷取
 topic: Developer guide
 description: 當給定文字檔案時，關鍵字擷取服務會自動擷取最能說明檔案主題的關鍵字或關鍵片語。 為了提取關鍵字，採用了命名實體識別(NER)和無監督關鍵字提取算法的組合。
 translation-type: tm+mt
-source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
+source-git-commit: 31e4f1441676daa79f064c567ddc47e9198d0a0b
 workflow-type: tm+mt
-source-wordcount: '742'
-ht-degree: 3%
+source-wordcount: '625'
+ht-degree: 4%
 
 ---
 
@@ -20,14 +20,6 @@ ht-degree: 3%
 >[!DNL Content and Commerce AI] 是測試版。 說明檔案可能會有所變更。
 
 當給定文字檔案時，關鍵字擷取服務會自動擷取最能說明檔案主題的關鍵字或關鍵片語。 為了提取關鍵字，採用了命名實體識別(NER)和無監督關鍵字提取算法的組合。
-
-**無監督關鍵字擷取**
-
-對於無監督的關鍵字 [提取，使用[!DNL YAKE]](http://yake.inesctec.pt/) 。 [!DNL YAKE] 是一種快速準確的無監督自動關鍵字提取方法，用於從文檔中選擇最重要的關鍵字。 然後過濾 [!DNL YAKE] 關鍵字提取以僅選擇名詞短語。
-
-**命名實體識別**
-
-對於命名實體識 [別，使用[!DNL spaCy]](https://spacy.io/)&#39;s OnNotes模型。 此模型會指派內容特定的代號向量、語音部分(POS)標籤、相依性剖析和命名實體。 OntoNotes模型是核心模型之 [!DNL spaCy] 一。 有關OntoNotes模型的更多資訊，請參 [閱](https://spacy.io/models/en)。
 
 下表列出了所識 [!DNL Content and Commerce AI] 別的命名實體：
 
@@ -44,8 +36,6 @@ ht-degree: 3%
 | WORK_OF_ART | 書籍、歌曲等標題 |
 | LAW | 將檔案命名為法律。 |
 | 語言 | 任何指名的語言。 |
-
-結果與 [!DNL OntoNotes] 關鍵字組合，並 [!DNL YAKE]根據其重要性按排名順序返回。
 
 **API格式**
 
