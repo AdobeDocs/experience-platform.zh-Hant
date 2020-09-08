@@ -5,10 +5,10 @@ doc-type: release notes
 last-update: August 10, 2020
 author: crhoades, ens28527
 translation-type: tm+mt
-source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
+source-git-commit: b4ce4c2e5ff5083f663c2daf23c32a1cec32124c
 workflow-type: tm+mt
-source-wordcount: '454'
-ht-degree: 6%
+source-wordcount: '597'
+ht-degree: 5%
 
 ---
 
@@ -21,6 +21,7 @@ Adobe Experience Platform現有功能的更新：
 
 - [[!DNL資料科學工作區]](#dsw)
 - [[!DNL目標]](#destinations)
+- [[!DNL即時客戶資料平台]](#rtcdp)
 - [[!DNL源]](#sources)
 
 ## [!DNL Data Science Workspace] {#dsw}
@@ -53,6 +54,18 @@ Adobe Experience Platform現有功能的更新：
 |------- | -----------|
 | 自訂檔案名稱編輯器 | 更新至電子郵件行銷目的地和雲端儲存空間目的地的資料啟動工作流程，讓您編輯匯出檔案的名稱。 如需詳細資訊，請參閱啟 [ 動工作流程中的](/help/rtcdp/destinations/activate-destinations.md#configure) 「設定」步驟。 |
 | 建議的屬性 | 更新至電子郵件行銷目的地和雲端儲存空間目的地的資料啟動工作流程，以顯示您要新增至匯出檔案的建議屬性。 如需詳細資訊，請參閱啟 [動工作流程中的](/help/rtcdp/destinations/activate-destinations.md#select-attributes) 「選取屬性」步驟。 |
+
+## [!DNL Real-time Customer Data Platform] {#rtcdp}
+
+Adobe即時客戶資料平台([!DNL Real-time CDP])以Experience Platform為基礎，可協助公司將已知和未知的資料匯整在一起，在整個客戶歷程中運用智慧決策來啟動客戶個人檔案。 [!DNL Real-time CDP] 結合多個企業資料來源，即時建立客戶個人檔案。 然後，從這些個人檔案建立的細分可以傳送至下游目的地，以便在所有通道和裝置上提供一對一的個人化客戶體驗。
+
+**新功能**
+
+| 功能 | 說明 |
+| ------- | ----------- |
+| IAB TCF 2.0支援 | [!DNL Real-time CDP] 如(IAB)所述，現在是2.0版 [!DNL Transparency & Consent Framework] (TCF)的註冊 [!DNL Interactive Advertising Bureau] 廠商。 您可以配置資料操作和概要檔案結構以接受由CMP生成的客戶許可資料，並在激活到下游目標的細分時強制執行客戶的許可偏好。 如需詳細資訊，請參 [閱即時CDP中的IAB TCF 2.0支援](../../rtcdp/privacy/iab/overview.md) 。 |
+
+如需詳細資訊， [!DNL Real-time CDP]請參閱 [[!DNL Real-time CDP] 總覽](../../rtcdp/overview.md)。
 
 ## 來源 {#sources}
 
