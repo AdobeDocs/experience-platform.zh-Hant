@@ -5,9 +5,9 @@ solution: Experience Platform
 title: 流量執行通知
 topic: overview
 translation-type: tm+mt
-source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
+source-git-commit: c5455dc0812b251483170ac19506d7c60ad4ecaa
 workflow-type: tm+mt
-source-wordcount: '871'
+source-wordcount: '787'
 ht-degree: 1%
 
 ---
@@ -25,34 +25,23 @@ Adobe Experience Platform可讓您從外部來源擷取資料，同時提供您�
 
 ## 快速入門
 
-本檔案需要對Adobe Experience Platform的下列元件有正確的認識：
+本教學課程假設您至少已建立了一個源連接，其流運行要監視。 如果您尚未設定來源連線，請先造訪 [來源概觀](./home.md) ，以設定您選擇的來源，然後再返回本指南。
 
-* [[!DNL體驗資料模型(XDM)系統]](../xdm/home.md):組織客戶體驗資料 [!DNL Experience Platform] 的標準化架構。
-* [[!DNL即時客戶基本資料]](../profile/home.md):根據來自多個來源的匯整資料，提供統一、即時的消費者個人檔案。
-* [[!DNL Adobe Experience Platform資料擷取]](../ingestion/home.md): [!DNL Data Ingestion] 表示從這些來源 [!DNL Platform] 擷取資料的多種方法，以及該資料在下游服務中 [!DNL Data Lake] 的保存方 [!DNL Platform] 式。
+本檔案也要求您瞭解網頁勾點，以及如何將網頁勾點從一個應用程式連接至另一個應用程式。 請參閱文 [[!DNL I/O Events] 件](https://www.adobe.io/apis/experienceplatform/events/docs.html#!adobedocs/adobeio-events/master/intro/webhook_docs_intro.md) ，以取得網頁勾點簡介。
 
-本檔案也要求您瞭解網頁勾點，以及如何將網頁勾點從一個應用程式連接至另一個應用程式。 如需網頁勾 [選的詳細資訊](https://requestbin.com/blog/working-with-webhooks/) ，請參閱下列檔案。
+## 註冊網路掛接以取得流程執行通知
 
-## 註冊您的網頁掛接
+若要接收流程執行通知，您必須使用Adobe Developer Console註冊網頁掛接至您的整 [!DNL Experience Platform] 合。
 
-若要接收有關流程執行狀態的通知，您必須透過指定唯一的網頁掛接URL作為事件註冊詳細資訊的一部分來註冊網頁掛接。 若要將Webhook連線至您的 [!DNL I/O Events] 訂閱，請造訪 [Webhook服務](https://webhook.site/) ，並複製所提供的唯一URL。
-
-![webhook](./images/notifications/webhook-url.png)
-
-## 訂閱事件
-
-取得唯一的網頁掛接URL後，請前往 [Adobe I/O Events](https://www.adobe.io/apis/experienceplatform/events.html) ，並依照資料擷取通知檔案中 [](../ingestion/quality/subscribe-events.md) 概述的步驟開始訂閱事件。
+請依照訂閱通知 [的教 [!DNL I/O Event] 學課程](../observability/notifications/subscribe.md) ，取得如何完成此作業的詳細步驟。
 
 >[!IMPORTANT]
 >
->在訂閱程式中，請確定您選擇 [!DNL Platform] 通知作為事件提供者，並選取下列事件訂閱：
+>在訂閱程式中，請確定您選取「 **[!UICONTROL 平台通知]** 」作為事件提供者，並選取下列事件訂閱：
 >
 >* **[!UICONTROL Experience Platform來源的流程運行成功]**
 >* **[!UICONTROL Experience Platform來源的流運行失敗]**
 
->
->
-當系統提示您提供網頁掛接位址時，請使用您先前取得的網頁掛接URL。
 
 ## 接收流量執行通知
 
