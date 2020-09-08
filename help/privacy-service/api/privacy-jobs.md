@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 工作
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 5b32c1955fac4f137ba44e8189376c81cdbbfc40
+source-git-commit: e7bb3e8a418631e9220865e49a1651e4dc065daf
 workflow-type: tm+mt
-source-wordcount: '1795'
+source-wordcount: '1782'
 ht-degree: 2%
 
 ---
@@ -33,7 +33,7 @@ GET /jobs?regulation={REGULATION}&page={PAGE}&size={SIZE}
 
 | 參數 | 說明 |
 | --- | --- |
-| `{REGULATION}` | 要查詢的規則類型。 接受的 `gdpr`值 `ccpa`為和 `pdpa_tha`。 |
+| `{REGULATION}` | 要查詢的規則類型。 接受的值 `gdpr`為、 `ccpa`、 `lgpd_bra`和 `pdpa_tha`。 |
 | `{PAGE}` | 要顯示的資料頁，使用基於0的編號。 預設值為 `0`。 |
 | `{SIZE}` | 每個頁面上要顯示的結果數。 預設值 `1` 為，最大值為 `100`。 超過最大值會導致API傳回400碼錯誤。 |
 
@@ -67,8 +67,8 @@ curl -X GET \
 
 API [!DNL Privacy Service] 支援兩種個人資料的工作要求：
 
-* [存取和／或刪除](#access-delete): 存取（讀取）或刪除個人資料。
-* [選擇退出銷售](#opt-out): 將個人資料標示為不銷售。
+* [存取和／或刪除](#access-delete):存取（讀取）或刪除個人資料。
+* [選擇退出銷售](#opt-out):將個人資料標示為不銷售。
 
 >[!IMPORTANT]
 >
@@ -147,13 +147,13 @@ curl -X POST \
 
 | 屬性 | 說明 |
 | --- | --- |
-| `companyContexts` **(必填)** | 包含貴組織驗證資訊的陣列。 每個列出的識別碼都包含下列屬性： <ul><li>`namespace`: 識別碼的名稱空間。</li><li>`value`: 識別碼的值。</li></ul>必須 **有一個識別碼** 用作識別 `imsOrgId` 碼，其中包含 `namespace``value` IMS組織的唯一ID。 <br/><br/>其他識別碼可以是產品特定的公司限定詞(例如 `Campaign`)，可識別與您組織所屬的Adobe應用程式整合。 潛在值包括帳戶名稱、用戶端代碼、租用戶ID或其他應用程式識別碼。 |
-| `users` **(必填)** | 包含至少一個用戶集合的陣列，您希望訪問或刪除其資訊。 在單一請求中最多可提供1000個使用者ID。 每個用戶對象都包含以下資訊： <ul><li>`key`: 用於用戶的標識符，用於限定響應資料中的單獨作業ID。 為此值選擇唯一、可輕鬆識別的字串是最佳實務，以便日後輕鬆參考或查閱。</li><li>`action`: 列出對用戶資料採取所需操作的陣列。 根據您要執行的操作，此陣列必須包括、 `access`或 `delete`兩者。</li><li>`userIDs`: 使用者身分的集合。 單一使用者可擁有的身分數目限制為9。 每個身分都由 `namespace`、 `value`和namespace限定詞(`type`)組成。 如需這些 [必要屬性](appendix.md) ，請參閱附錄。</li></ul> 有關和的更詳細說 `users` 明 `userIDs`，請參 [閱疑難解答指南](../troubleshooting-guide.md#user-ids)。 |
+| `companyContexts` **(必填)** | 包含貴組織驗證資訊的陣列。 每個列出的識別碼都包含下列屬性： <ul><li>`namespace`:識別碼的名稱空間。</li><li>`value`:識別碼的值。</li></ul>必須 **有一個識別碼** 用作識別 `imsOrgId` 碼，其中包含 `namespace``value` IMS組織的唯一ID。 <br/><br/>其他識別碼可以是產品特定的公司限定詞(例如 `Campaign`)，可識別與您組織所屬的Adobe應用程式整合。 潛在值包括帳戶名稱、用戶端代碼、租用戶ID或其他應用程式識別碼。 |
+| `users` **(必填)** | 包含至少一個用戶集合的陣列，您希望訪問或刪除其資訊。 在單一請求中最多可提供1000個使用者ID。 每個用戶對象都包含以下資訊： <ul><li>`key`:用於用戶的標識符，用於限定響應資料中的單獨作業ID。 為此值選擇唯一、可輕鬆識別的字串是最佳實務，以便日後輕鬆參考或查閱。</li><li>`action`:列出對用戶資料採取所需操作的陣列。 根據您要執行的操作，此陣列必須包括、 `access`或 `delete`兩者。</li><li>`userIDs`:使用者身分的集合。 單一使用者可擁有的身分數目限制為9。 每個身分都由 `namespace`、 `value`和namespace限定詞(`type`)組成。 如需這些 [必要屬性](appendix.md) ，請參閱附錄。</li></ul> 有關和的更詳細說 `users` 明 `userIDs`，請參 [閱疑難解答指南](../troubleshooting-guide.md#user-ids)。 |
 | `include` **(必填)** | 要納入您處理中的Adobe產品陣列。 如果此值遺失或空白，則會拒絕請求。 僅包含貴組織已整合的產品。 如需詳細資訊，請 [參閱附錄中](appendix.md) 「接受的產品值」一節。 |
 | `expandIDs` | 可選屬性，若設為 `true`，代表處理應用程式中ID的最佳化(目前僅支援 [!DNL Analytics])。 If omitted, this value defaults to `false`. |
 | `priority` | Adobe Analytics使用的可選屬性，可設定處理請求的優先順序。 接受的值是 `normal` 和 `low`。 如果 `priority` 省略，則預設行為為 `normal`。 |
-| `analyticsDeleteMethod` | 可選屬性，指定Adobe Analytics如何處理個人資料。 此屬性接受兩個可能的值： <ul><li>`anonymize`: 指定使用者ID集合所參考的所有資料都會設為匿名。 如果 `analyticsDeleteMethod` 省略，則此為預設行為。</li><li>`purge`: 所有資料都會完全移除。</li></ul> |
-| `regulation` **(必填)** | 要求的規定。 必須是下列三個值之一： <ul><li>gdpr</li><li>ccpa</li><li>pdpa_tha</li></ul> |
+| `analyticsDeleteMethod` | 可選屬性，指定Adobe Analytics如何處理個人資料。 此屬性接受兩個可能的值： <ul><li>`anonymize`:指定使用者ID集合所參考的所有資料都會設為匿名。 如果 `analyticsDeleteMethod` 省略，則此為預設行為。</li><li>`purge`:所有資料都會完全移除。</li></ul> |
+| `regulation` **(必填)** | 要求的規定。 必須是下列四個值之一： <ul><li>`gdpr`</li><li>`ccpa`</li><li>`lgpd_bra`</li><li>`pdpa_tha`</li></ul> |
 
 **回應**
 
@@ -280,13 +280,13 @@ curl -X POST \
 
 | 屬性 | 說明 |
 | --- | --- |
-| `companyContexts` **(必填)** | 包含貴組織驗證資訊的陣列。 每個列出的識別碼都包含下列屬性： <ul><li>`namespace`: 識別碼的名稱空間。</li><li>`value`: 識別碼的值。</li></ul>必須 **有一個識別碼** 用作識別 `imsOrgId` 碼，其中包含 `namespace``value` IMS組織的唯一ID。 <br/><br/>其他識別碼可以是產品特定的公司限定詞(例如 `Campaign`)，可識別與您組織所屬的Adobe應用程式整合。 潛在值包括帳戶名稱、用戶端代碼、租用戶ID或其他應用程式識別碼。 |
-| `users` **(必填)** | 包含至少一個用戶集合的陣列，您希望訪問或刪除其資訊。 在單一請求中最多可提供1000個使用者ID。 每個用戶對象都包含以下資訊： <ul><li>`key`: 用於用戶的標識符，用於限定響應資料中的單獨作業ID。 為此值選擇唯一、可輕鬆識別的字串是最佳實務，以便日後輕鬆參考或查閱。</li><li>`action`: 列出要對資料執行的所需操作的陣列。 對於退出銷售請求，陣列只能包含值 `opt-out-of-sale`。</li><li>`userIDs`: 使用者身分的集合。 單一使用者可擁有的身分數目限制為9。 每個身分都由 `namespace`、 `value`和namespace限定詞(`type`)組成。 如需這些 [必要屬性](appendix.md) ，請參閱附錄。</li></ul> 有關和的更詳細說 `users` 明 `userIDs`，請參 [閱疑難解答指南](../troubleshooting-guide.md#user-ids)。 |
+| `companyContexts` **(必填)** | 包含貴組織驗證資訊的陣列。 每個列出的識別碼都包含下列屬性： <ul><li>`namespace`:識別碼的名稱空間。</li><li>`value`:識別碼的值。</li></ul>必須 **有一個識別碼** 用作識別 `imsOrgId` 碼，其中包含 `namespace``value` IMS組織的唯一ID。 <br/><br/>其他識別碼可以是產品特定的公司限定詞(例如 `Campaign`)，可識別與您組織所屬的Adobe應用程式整合。 潛在值包括帳戶名稱、用戶端代碼、租用戶ID或其他應用程式識別碼。 |
+| `users` **(必填)** | 包含至少一個用戶集合的陣列，您希望訪問或刪除其資訊。 在單一請求中最多可提供1000個使用者ID。 每個用戶對象都包含以下資訊： <ul><li>`key`:用於用戶的標識符，用於限定響應資料中的單獨作業ID。 為此值選擇唯一、可輕鬆識別的字串是最佳實務，以便日後輕鬆參考或查閱。</li><li>`action`:列出要對資料執行的所需操作的陣列。 對於退出銷售請求，陣列只能包含值 `opt-out-of-sale`。</li><li>`userIDs`:使用者身分的集合。 單一使用者可擁有的身分數目限制為9。 每個身分都由 `namespace`、 `value`和namespace限定詞(`type`)組成。 如需這些 [必要屬性](appendix.md) ，請參閱附錄。</li></ul> 有關和的更詳細說 `users` 明 `userIDs`，請參 [閱疑難解答指南](../troubleshooting-guide.md#user-ids)。 |
 | `include` **(必填)** | 要納入您處理中的Adobe產品陣列。 如果此值遺失或空白，則會拒絕請求。 僅包含貴組織已整合的產品。 如需詳細資訊，請 [參閱附錄中](appendix.md) 「接受的產品值」一節。 |
 | `expandIDs` | 可選屬性，若設為 `true`，代表處理應用程式中ID的最佳化(目前僅支援 [!DNL Analytics])。 If omitted, this value defaults to `false`. |
 | `priority` | Adobe Analytics使用的可選屬性，可設定處理請求的優先順序。 接受的值是 `normal` 和 `low`。 如果 `priority` 省略，則預設行為為 `normal`。 |
-| `analyticsDeleteMethod` | 可選屬性，指定Adobe Analytics如何處理個人資料。 此屬性接受兩個可能的值： <ul><li>`anonymize`: 指定使用者ID集合所參考的所有資料都會設為匿名。 如果 `analyticsDeleteMethod` 省略，則此為預設行為。</li><li>`purge`: 所有資料都會完全移除。</li></ul> |
-| `regulation` **(必填)** | 要求的規定。 必須是下列三個值之一： <ul><li>gdpr</li><li>ccpa</li><li>pdpa_tha</li></ul> |
+| `analyticsDeleteMethod` | 可選屬性，指定Adobe Analytics如何處理個人資料。 此屬性接受兩個可能的值： <ul><li>`anonymize`:指定使用者ID集合所參考的所有資料都會設為匿名。 如果 `analyticsDeleteMethod` 省略，則此為預設行為。</li><li>`purge`:所有資料都會完全移除。</li></ul> |
+| `regulation` **(必填)** | 要求的規定。 必須是下列四個值之一： <ul><li>`gdpr`</li><li>`ccpa`</li><li>`lgpd_bra`</li><li>`pdpa_tha`</li></ul> |
 
 **回應**
 
@@ -449,15 +449,15 @@ curl -X GET \
 
 | 狀態類別 | 意義 |
 | -------------- | -------- |
-| 完成 | 工作已完成，而且（如果需要）檔案會從每個應用程式上傳。 |
-| 正在處理 | 應用程式已確認作業，並且正在處理。 |
-| 已提交 | 工作會提交至每個適用的應用程式。 |
-| 錯誤 | 處理作業時發生故障——檢索單個作業詳細資訊可以獲得更具體的資訊。 |
+| `complete` | 工作已完成，而且（如果需要）檔案會從每個應用程式上傳。 |
+| `processing` | 應用程式已確認作業，並且正在處理。 |
+| `submitted` | 工作會提交至每個適用的應用程式。 |
+| `error` | 處理作業時發生故障——檢索單個作業詳細資訊可以獲得更具體的資訊。 |
 
 >[!NOTE]
 >
->如果提交的作業具有仍在處理的從屬子作業，則該作業可能仍處於處理狀態。
+>如果提交的作業具有仍在處理 `processing` 的從屬子作業，則該作業可能仍處於狀態。
 
 ## 後續步驟
 
-您現在知道如何使用 [!DNL Privacy Service] API建立和監控隱私權工作。 如需如何使用使用者介面執行相同工作的詳細資訊，請參 [閱隱私服務UI概觀](../ui/overview.md)。
+您現在知道如何使用 [!DNL Privacy Service] API建立和監控隱私權工作。 如需如何使用使用者介面執行相同工作的詳細資訊，請參 [閱隱私權服務UI概觀](../ui/overview.md)。
