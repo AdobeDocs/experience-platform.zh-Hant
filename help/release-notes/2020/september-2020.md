@@ -5,9 +5,9 @@ doc-type: release notes
 last-update: September 8, 2020
 author: crhoades, ens25212
 translation-type: tm+mt
-source-git-commit: 9a9b1294507986723c1e4d1230a854630131be3a
+source-git-commit: 9436779e91bf82382056acd526671b30b55e11d4
 workflow-type: tm+mt
-source-wordcount: '805'
+source-wordcount: '883'
 ht-degree: 4%
 
 ---
@@ -21,6 +21,7 @@ Adobe Experience Platform現有功能的更新：
 
 - [[!DNL資料治理]](#governance)
 - [[!DNL目標]](#destinations)
+- [[!DNL可觀測性見解]](#observability)
 - [[!DNL隱私服務]](#privacy)
 - [[!DNL即時客戶基本資料]](#profile)
 - [[!DNL分段服務]](#segmentation)
@@ -50,6 +51,30 @@ Adobe Experience Platform資料治理是一系列策略和技術，用於管理�
 
 若要進一步瞭解，請造訪目 [標總覽](../../rtcdp/destinations/destinations-overview.md)
 
+## [!DNL Observability Insights] {#observability}
+
+[!DNL Observability Insights] 可讓您透過使用統計量度和事件通知，監控Adobe Experience Platform上的活動。
+
+**新特性**
+
+| 功能 | 說明 |
+| --- | --- |
+| Adobe I/O活動通知 | [!DNL Observability Insights] 運用Adobe I/O Events為數種Experience Platform服務建立事件通知。 通知負載會傳送至已設定的網頁掛接，然後您便可使用此網頁掛接來自動化下遊程式。 如需詳細 [資訊，請參閱](../../observability/notifications/overview.md) 「通知概觀」。 |
+
+如需服務 [[!DNL Observability Insights] 的詳細資訊](../../observability/home.md) ，請參閱總覽。
+
+## [!DNL Privacy Service] {#privacy}
+
+數項法律和組織法規授予使用者在要求時從資料存放區存取或刪除其個人資料的權利。 Adobe Experience Platform提 [!DNL Privacy Service] 供REST風格的API和使用者介面，可協助您管理客戶的這些資料要求。 您可 [!DNL Privacy Service]以提交要求，以便從Adobe Experience Cloud應用程式存取和刪除私人或個人客戶資料，以利自動符合法律和組織的隱私權法規。
+
+**新功能**
+
+| 功能 | 說明 |
+| ------- | ----------- |
+| 支援LGPD（巴西） | 現在，可以根據巴西的(LGPD)法規創 [!DNL Lei Geral de Proteção de Dados] 造隱私崗位。 這些工作是根據法規代碼進行跟蹤的 `lgpd_bra`。 |
+
+如需服務 [的詳細資訊](../../privacy-service/home.md) ，請參閱隱私權服務概觀。
+
 ## 即時客戶個人檔案 {#profile}
 
 Adobe Experience Platform可讓您為客戶推動協調、一致且相關的體驗，不論客戶在何處或何時與您的品牌互動。 透過 [!DNL Real-time Customer Profile]此功能，您可以全面瞭解每個客戶，並結合來自多個通道的資料，包括線上、離線、CRM和第三方資料。 [!DNL Profile] 可讓您將分散的客戶資料整合為統一的檢視，提供每個客戶互動的可操作、時間戳記帳戶。
@@ -74,18 +99,6 @@ Adobe Experience Platform Segmentation Service提供使用者介面和REST風格
 | 合併原則 | 單一批次分段工作可包含多個合併原則。 |
 
 如需詳細資訊， [!DNL Segmentation Service]請參閱區 [段概觀](../../segmentation/home.md)
-
-## [!DNL Privacy Service] {#privacy}
-
-數項法律和組織法規授予使用者在要求時從資料存放區存取或刪除其個人資料的權利。 Adobe Experience Platform提 [!DNL Privacy Service] 供REST風格的API和使用者介面，可協助您管理客戶的這些資料要求。 您可 [!DNL Privacy Service]以提交要求，以便從Adobe Experience Cloud應用程式存取和刪除私人或個人客戶資料，以利自動符合法律和組織的隱私權法規。
-
-**新功能**
-
-| 功能 | 說明 |
-| ------- | ----------- |
-| 支援LGPD（巴西） | 現在，可以根據巴西的(LGPD)法規創 [!DNL Lei Geral de Proteção de Dados] 造隱私崗位。 這些工作是根據法規代碼進行跟蹤的 `lgpd_bra`。 |
-
-如需服務 [的詳細資訊](../../privacy-service/home.md) ，請參閱隱私權服務概觀。
 
 ## 來源 {#sources}
 
