@@ -3,12 +3,12 @@ title: Adobe Experience Platform 發行說明
 description: Experience Platform發行說明2020年9月9日
 doc-type: release notes
 last-update: September 8, 2020
-author: crhoades, ens28527
+author: crhoades, ens25212
 translation-type: tm+mt
-source-git-commit: 23c7a0d82cb849568d6411c1a09c7a16b86d4954
+source-git-commit: 9a9b1294507986723c1e4d1230a854630131be3a
 workflow-type: tm+mt
-source-wordcount: '507'
-ht-degree: 5%
+source-wordcount: '805'
+ht-degree: 4%
 
 ---
 
@@ -19,10 +19,12 @@ ht-degree: 5%
 
 Adobe Experience Platform現有功能的更新：
 
-* [[!DNL資料治理]](#governance)
-* [[!DNL目標]](#destinations)
-* [[!DNL隱私服務]](#privacy)
-* [[!DNL源]](#sources)
+- [[!DNL資料治理]](#governance)
+- [[!DNL目標]](#destinations)
+- [[!DNL隱私服務]](#privacy)
+- [[!DNL即時客戶基本資料]](#profile)
+- [[!DNL分段服務]](#segmentation)
+- [[!DNL源]](#sources)
 
 ## [!DNL Data Governance] {#governance}
 
@@ -31,7 +33,7 @@ Adobe Experience Platform資料治理是一系列策略和技術，用於管理�
 **新功能**
 
 | 功能 | 說明 |
-| --- | --- |
+| ------- | ----------- |
 | 資料集標籤UI增強功能 | 為了讓處理大型結構描述更輕鬆，在資料集標籤UI時新增了數種排序和篩選控制項： <ul><li>根據完整方案路徑，依字母順序排序欄位。</li><li>對欄位路徑名執行部分搜索。</li><li>篩選沒有標籤的欄位、選取的標籤或標籤類別。</li></ul> |
 
 如需服務 [的詳細資訊](../../data-governance/home.md) ，請參閱資料管理概觀。
@@ -48,6 +50,31 @@ Adobe Experience Platform資料治理是一系列策略和技術，用於管理�
 
 若要進一步瞭解，請造訪目 [標總覽](../../rtcdp/destinations/destinations-overview.md)
 
+## 即時客戶個人檔案 {#profile}
+
+Adobe Experience Platform可讓您為客戶推動協調、一致且相關的體驗，不論客戶在何處或何時與您的品牌互動。 透過 [!DNL Real-time Customer Profile]此功能，您可以全面瞭解每個客戶，並結合來自多個通道的資料，包括線上、離線、CRM和第三方資料。 [!DNL Profile] 可讓您將分散的客戶資料整合為統一的檢視，提供每個客戶互動的可操作、時間戳記帳戶。
+
+| 功能 | 說明 |
+| ------- | ----------- |
+| 設定檔檢視器 | 在「平台UI」中，描述檔檢視器已更新為具有完整自訂功能的控制面板。 使用者現在可以選擇執行下列工作： <ul><li>在基本資訊介面工具集中更新選取的標準屬性和自訂屬性。</li><li>建立、編輯和移除自訂Widget</li><li>調整Widget大小並重新排列</li></ul> |
+
+有關使用資 [!DNL Real-time Customer Profile]料的更多資訊，包括教學課程和最佳實務，請 [!DNL Profile] 閱讀即時客 [戶資料概觀](../../profile/home.md)。
+
+## 區段服務 {#segmentation}
+
+Adobe Experience Platform Segmentation Service提供使用者介面和REST風格的API，可讓您建立細分並從資料中產生受 [!DNL Real-time Customer Profile] 眾。 這些區段是集中設定並維護的， [!DNL Platform]讓任何Adobe應用程式都可輕鬆存取。
+
+[!DNL Segmentation Service] 定義個人檔案的特定子集，方法是描述區分客戶群中有價人群的標準。 區段可以根據記錄資料（例如人口統計資訊）或代表客戶與品牌互動的時間系列事件來劃分。
+
+**新功能**
+
+| 功能 | 說明 |
+| ------- | ----------- |
+| 匯出工作 | 已新增旗標，以允許評估區段為匯出工作的一部分。 因此，使用者可以在單一工作中執行區段和匯出。 |
+| 合併原則 | 單一批次分段工作可包含多個合併原則。 |
+
+如需詳細資訊， [!DNL Segmentation Service]請參閱區 [段概觀](../../segmentation/home.md)
+
 ## [!DNL Privacy Service] {#privacy}
 
 數項法律和組織法規授予使用者在要求時從資料存放區存取或刪除其個人資料的權利。 Adobe Experience Platform提 [!DNL Privacy Service] 供REST風格的API和使用者介面，可協助您管理客戶的這些資料要求。 您可 [!DNL Privacy Service]以提交要求，以便從Adobe Experience Cloud應用程式存取和刪除私人或個人客戶資料，以利自動符合法律和組織的隱私權法規。
@@ -55,7 +82,7 @@ Adobe Experience Platform資料治理是一系列策略和技術，用於管理�
 **新功能**
 
 | 功能 | 說明 |
-| --- | --- |
+| ------- | ----------- |
 | 支援LGPD（巴西） | 現在，可以根據巴西的(LGPD)法規創 [!DNL Lei Geral de Proteção de Dados] 造隱私崗位。 這些工作是根據法規代碼進行跟蹤的 `lgpd_bra`。 |
 
 如需服務 [的詳細資訊](../../privacy-service/home.md) ，請參閱隱私權服務概觀。
