@@ -5,7 +5,7 @@ title: 架構構成基礎
 topic: overview
 description: 本檔案提供Experience Data Model(XDM)架構的簡介，以及構成Adobe Experience Platform中要使用之架構的建置區塊、原則和最佳實務。
 translation-type: tm+mt
-source-git-commit: 4251dc292ead3ce4dc8aef68ff04bb774047160d
+source-git-commit: 4a76101cb8a7afb947bdce263a73f79d931db154
 workflow-type: tm+mt
 source-wordcount: '2839'
 ht-degree: 0%
@@ -173,7 +173,7 @@ Mixin的範圍和定義與類相同：有由個別組織使用定義的產業混
 
 * 字串
 * 整數
-* 數字
+* 雙倍
 * 布林值
 * 陣列
 * 物件
