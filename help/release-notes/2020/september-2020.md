@@ -5,10 +5,10 @@ doc-type: release notes
 last-update: September 8, 2020
 author: crhoades, ens28527
 translation-type: tm+mt
-source-git-commit: 64b6b59923d549cdcbf35d2e375529aec8cf81b8
+source-git-commit: 23c7a0d82cb849568d6411c1a09c7a16b86d4954
 workflow-type: tm+mt
-source-wordcount: '397'
-ht-degree: 6%
+source-wordcount: '507'
+ht-degree: 5%
 
 ---
 
@@ -21,6 +21,7 @@ Adobe Experience Platform現有功能的更新：
 
 * [[!DNL資料治理]](#governance)
 * [[!DNL目標]](#destinations)
+* [[!DNL隱私服務]](#privacy)
 * [[!DNL源]](#sources)
 
 ## [!DNL Data Governance] {#governance}
@@ -46,6 +47,18 @@ Adobe Experience Platform資料治理是一系列策略和技術，用於管理�
 | UX改進 | 使用者可存取內嵌表格動作，以更輕鬆地存取主要動作，例如新增資料、編輯排程和新增區段。 如需詳細 [資訊，請參閱目標工作區](../../rtcdp/destinations/destinations-workspace.md) 檔案。 |
 
 若要進一步瞭解，請造訪目 [標總覽](../../rtcdp/destinations/destinations-overview.md)
+
+## [!DNL Privacy Service] {#privacy}
+
+數項法律和組織法規授予使用者在要求時從資料存放區存取或刪除其個人資料的權利。 Adobe Experience Platform提 [!DNL Privacy Service] 供REST風格的API和使用者介面，可協助您管理客戶的這些資料要求。 您可 [!DNL Privacy Service]以提交要求，以便從Adobe Experience Cloud應用程式存取和刪除私人或個人客戶資料，以利自動符合法律和組織的隱私權法規。
+
+**新功能**
+
+| 功能 | 說明 |
+| --- | --- |
+| 支援LGPD（巴西） | 現在，可以根據巴西的(LGPD)法規創 [!DNL Lei Geral de Proteção de Dados] 造隱私崗位。 這些工作是根據法規代碼進行跟蹤的 `lgpd_bra`。 |
+
+如需服務 [的詳細資訊](../../privacy-service/home.md) ，請參閱隱私權服務概觀。
 
 ## 來源 {#sources}
 
