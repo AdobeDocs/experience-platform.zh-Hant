@@ -1,71 +1,104 @@
 ---
 title: Adobe Experience Platform 發行說明
-description: Experience Platform發行說明2020年8月10日
+description: Experience Platform發行說明2020年9月9日
 doc-type: release notes
-last-update: August 10, 2020
-author: crhoades, ens28527
+last-update: September 8, 2020
+author: crhoades, ens25212
 translation-type: tm+mt
-source-git-commit: b4ce4c2e5ff5083f663c2daf23c32a1cec32124c
+source-git-commit: 312794af2cdb111fb81c0aa226dec68db2cbc374
 workflow-type: tm+mt
-source-wordcount: '597'
-ht-degree: 5%
+source-wordcount: '883'
+ht-degree: 4%
 
 ---
 
 
 # Adobe Experience Platform 發行說明
 
-**發行日期：2020 年 8 月 12 日**
+**發行日期: 2020 年 9 月 9 日**
 
 Adobe Experience Platform現有功能的更新：
 
-- [[!DNL資料科學工作區]](#dsw)
+- [[!DNL資料治理]](#governance)
 - [[!DNL目標]](#destinations)
-- [[!DNL即時客戶資料平台]](#rtcdp)
+- [[!DNL可觀測性見解]](#observability)
+- [[!DNL隱私服務]](#privacy)
+- [[!DNL即時客戶基本資料]](#profile)
+- [[!DNL分段服務]](#segmentation)
 - [[!DNL源]](#sources)
 
-## [!DNL Data Science Workspace] {#dsw}
+## [!DNL Data Governance] {#governance}
 
-[!DNL Data Science Workspace] 運用機器學習和人工智慧，從資料中釋放見解。 與Adobe Experience Platform整合，可協 [!DNL Data Science Workspace] 助您使用Adobe解決方案的內容和資料資產進行預測。
+Adobe Experience Platform資料治理是一系列策略和技術，用於管理客戶資料並確保符合適用於資料使用的法規、限制和政策。 它在各個層級中都扮演了關 [!DNL Experience Platform] 鍵角色，包括編目、資料傳承、資料使用標籤、資料存取政策，以及對行銷動作資料的存取控制。
 
 **新功能**
 
 | 功能 | 說明 |
 | ------- | ----------- |
-| 虛擬機在 [!DNL JupyterLab] | 已改善長期運行虛擬機的 [!DNL JupyterLab notebook] 穩定性。 |
+| 資料集標籤UI增強功能 | 為了讓處理大型結構描述更輕鬆，在資料集標籤UI時新增了數種排序和篩選控制項： <ul><li>根據完整方案路徑，依字母順序排序欄位。</li><li>對欄位路徑名執行部分搜索。</li><li>篩選沒有標籤的欄位、選取的標籤或標籤類別。</li></ul> |
 
-如需詳細資訊 [!DNL JupyterLab]，請參閱使 [[!DNL JupyterLab] 用指南](../../data-science-workspace/jupyterlab/overview.md)。
+如需服務 [的詳細資訊](../../data-governance/home.md) ，請參閱資料管理概觀。
 
 ## 目的地 {#destinations}
 
 在 [Adobe即時客戶資料平台中](../../rtcdp/overview.md)，目標是與目標平台預先建立的整合，以順暢的方式將資料啟動給這些合作夥伴。
 
-**新目標**
-
-您可以在新目的地啟用Adobe Experience Platform資料。 如需詳細資訊，請參閱以下：
-
-| 目的地 | 說明 |
-|--- | ---|
-| [!DNL Google Customer Match] | Google Customer Match可讓您使用您的線上和離線資料，透過Google擁有和營運的資產觸及並重新與客戶互動，例如： [!DNL Search]、 [!DNL Shopping]Gmail和YouTube。 <br><br> 請造訪 [!DNL Google Customer Match] 目 [的地目錄中的頁面](/help/rtcdp/destinations/google-customer-match-destination.md) ，以取得有關目的地以及如何在Adobe即時CDP中設定目標的詳細資訊。 |
-
 **新功能**
 
 | 功能 | 說明 |
-|------- | -----------|
-| 自訂檔案名稱編輯器 | 更新至電子郵件行銷目的地和雲端儲存空間目的地的資料啟動工作流程，讓您編輯匯出檔案的名稱。 如需詳細資訊，請參閱啟 [ 動工作流程中的](/help/rtcdp/destinations/activate-destinations.md#configure) 「設定」步驟。 |
-| 建議的屬性 | 更新至電子郵件行銷目的地和雲端儲存空間目的地的資料啟動工作流程，以顯示您要新增至匯出檔案的建議屬性。 如需詳細資訊，請參閱啟 [動工作流程中的](/help/rtcdp/destinations/activate-destinations.md#select-attributes) 「選取屬性」步驟。 |
+| ------- | ----------- |
+| UX改進 | 使用者可存取內嵌表格動作，以更輕鬆地存取主要動作，例如新增資料、編輯排程和新增區段。 如需詳細 [資訊，請參閱目標工作區](../../rtcdp/destinations/destinations-workspace.md) 檔案。 |
 
-## [!DNL Real-time Customer Data Platform] {#rtcdp}
+若要進一步瞭解，請造訪目 [標總覽](../../rtcdp/destinations/destinations-overview.md)
 
-Adobe即時客戶資料平台([!DNL Real-time CDP])以Experience Platform為基礎，可協助公司將已知和未知的資料匯整在一起，在整個客戶歷程中運用智慧決策來啟動客戶個人檔案。 [!DNL Real-time CDP] 結合多個企業資料來源，即時建立客戶個人檔案。 然後，從這些個人檔案建立的細分可以傳送至下游目的地，以便在所有通道和裝置上提供一對一的個人化客戶體驗。
+## [!DNL Observability Insights] {#observability}
+
+[!DNL Observability Insights] 可讓您透過使用統計量度和事件通知，監控Adobe Experience Platform上的活動。
+
+**新特性**
+
+| 功能 | 說明 |
+| --- | --- |
+| Adobe I/O活動通知 | [!DNL Observability Insights] 運用Adobe I/O Events為數種Experience Platform服務建立事件通知。 通知負載會傳送至已設定的網頁掛接，然後您便可使用此網頁掛接來自動化下遊程式。 如需詳細 [資訊，請參閱](../../observability/notifications/overview.md) 「通知概觀」。 |
+
+如需服務 [[!DNL Observability Insights] 的詳細資訊](../../observability/home.md) ，請參閱總覽。
+
+## [!DNL Privacy Service] {#privacy}
+
+數項法律和組織法規授予使用者在要求時從資料存放區存取或刪除其個人資料的權利。 Adobe Experience Platform提 [!DNL Privacy Service] 供REST風格的API和使用者介面，可協助您管理客戶的這些資料要求。 您可 [!DNL Privacy Service]以提交要求，以便從Adobe Experience Cloud應用程式存取和刪除私人或個人客戶資料，以利自動符合法律和組織的隱私權法規。
 
 **新功能**
 
 | 功能 | 說明 |
 | ------- | ----------- |
-| IAB TCF 2.0支援 | [!DNL Real-time CDP] 如(IAB)所述，現在是2.0版 [!DNL Transparency & Consent Framework] (TCF)的註冊 [!DNL Interactive Advertising Bureau] 廠商。 您可以配置資料操作和概要檔案結構以接受由CMP生成的客戶許可資料，並在激活到下游目標的細分時強制執行客戶的許可偏好。 如需詳細資訊，請參 [閱即時CDP中的IAB TCF 2.0支援](../../rtcdp/privacy/iab/overview.md) 。 |
+| 支援LGPD（巴西） | 現在，可以根據巴西的(LGPD)法規創 [!DNL Lei Geral de Proteção de Dados] 造隱私崗位。 這些工作是根據法規代碼進行跟蹤的 `lgpd_bra`。 |
 
-如需詳細資訊， [!DNL Real-time CDP]請參閱 [[!DNL Real-time CDP] 總覽](../../rtcdp/overview.md)。
+如需服務 [的詳細資訊](../../privacy-service/home.md) ，請參閱隱私權服務概觀。
+
+## 即時客戶個人檔案 {#profile}
+
+Adobe Experience Platform可讓您為客戶推動協調、一致且相關的體驗，不論客戶在何處或何時與您的品牌互動。 透過 [!DNL Real-time Customer Profile]此功能，您可以全面瞭解每個客戶，並結合來自多個通道的資料，包括線上、離線、CRM和第三方資料。 [!DNL Profile] 可讓您將分散的客戶資料整合為統一的檢視，提供每個客戶互動的可操作、時間戳記帳戶。
+
+| 功能 | 說明 |
+| ------- | ----------- |
+| 設定檔檢視器 | 在「平台UI」中，描述檔檢視器已更新為具有完整自訂功能的控制面板。 使用者現在可以選擇執行下列工作： <ul><li>在基本資訊介面工具集中更新選取的標準屬性和自訂屬性。</li><li>建立、編輯和移除自訂Widget</li><li>調整Widget大小並重新排列</li></ul> |
+
+有關使用資 [!DNL Real-time Customer Profile]料的更多資訊，包括教學課程和最佳實務，請 [!DNL Profile] 閱讀即時客 [戶資料概觀](../../profile/home.md)。
+
+## 區段服務 {#segmentation}
+
+Adobe Experience Platform Segmentation Service提供使用者介面和REST風格的API，可讓您建立細分並從資料中產生受 [!DNL Real-time Customer Profile] 眾。 這些區段是集中設定並維護的， [!DNL Platform]讓任何Adobe應用程式都可輕鬆存取。
+
+[!DNL Segmentation Service] 定義個人檔案的特定子集，方法是描述區分客戶群中有價人群的標準。 區段可以根據記錄資料（例如人口統計資訊）或代表客戶與品牌互動的時間系列事件來劃分。
+
+**新功能**
+
+| 功能 | 說明 |
+| ------- | ----------- |
+| 匯出工作 | 已新增旗標，以允許評估區段為匯出工作的一部分。 因此，使用者可以在單一工作中執行區段和匯出。 |
+| 合併原則 | 單一批次分段工作可包含多個合併原則。 |
+
+如需詳細資訊， [!DNL Segmentation Service]請參閱區 [段概觀](../../segmentation/home.md)
 
 ## 來源 {#sources}
 
@@ -77,8 +110,7 @@ Adobe Experience Platform可以從外部來源擷取資料，同時讓您使用�
 
 | 功能 | 說明 |
 | ------- | ----------- |
-| 流運行監控 | 使用者可監控所有流程執行，並檢視每個執行的詳細檢視，包括完成狀態、執行持續時間、已處理檔案清單、錯誤和度量。 有關詳細信 [息，請參見](../../sources/tutorials/ui/monitor.md) 「監視資料流」文檔。 |
-| 流量執行通知 | 使用者可訂閱事件並註冊網頁勾點，以接收有關流量執行的狀態、量度和錯誤的即時通知。 |
-| UI目錄改良 | 更新來源目錄畫面，讓您更輕鬆地存取選取物件的主要動作。 |
+| 自動對應 | [!DNL Platform] 根據使用者選擇的目標架構或資料集，提供在資料擷取工作流程期間自動對應的智慧建議。 您可以手動調整有彈性的自動對應規則，以符合您的使用案例。 |
+| UX改進 | 使用者可存取內嵌表格動作，以更輕鬆地存取主要動作，例如新增資料、編輯排程和新增區段。 有關詳細信 [息，請參見](../../sources/tutorials/ui/monitor.md) 「監視資料流」文檔。 |
 
 若要進一步瞭解來源，請參閱 [來源概觀](../../sources/home.md)。
