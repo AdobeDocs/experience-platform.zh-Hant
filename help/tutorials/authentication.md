@@ -5,7 +5,7 @@ title: 驗證及存取Experience Platform API
 topic: tutorial
 description: '本檔案提供逐步教學課程，以存取Adobe Experience Platform開發人員帳戶，以呼叫Experience Platform API。 '
 translation-type: tm+mt
-source-git-commit: d3ece56d10b1940a5992906a65a50ffe2f7e4346
+source-git-commit: 76e6e1a5484dce0a4640c2ce1f43cf7d84e049bf
 workflow-type: tm+mt
 source-wordcount: '878'
 ht-degree: 1%
@@ -48,7 +48,7 @@ ht-degree: 1%
 
 **取得開發人員存取權**
 
-請連絡 [!DNL Admin Console] 您組織中的管理員，以便使用「 [[!DNL管理控制台」將您新增為組織產品的開發人員]](https://adminconsole.adobe.com/)。
+請連絡 [!DNL Admin Console] 您組織中的管理員，以便使用「 [[!DNL管理控制台」將您新增為組織產品的開發人員](https://adminconsole.adobe.com/)。
 
 ![](images/authentication/assign-developer.png)
 
@@ -156,7 +156,7 @@ curl -X GET https://platform.adobe.io/data/foundation/schemaregistry/global/clas
 
 ## 使用Postman進行JWT驗證和API呼叫
 
-[Postman](https://www.getpostman.com/) 是使用REST風格API的常用工具。 此 [中篇貼文](https://medium.com/adobetech/using-postman-for-jwt-authentication-on-adobe-i-o-7573428ffe7f) ，說明如何設定郵遞員以自動執行JWT驗證，並使用它來使用Adobe Experience Platform API。
+[Postman](https://www.postman.com/) 是使用REST風格API的常用工具。 此 [中篇貼文](https://medium.com/adobetech/using-postman-for-jwt-authentication-on-adobe-i-o-7573428ffe7f) ，說明如何設定郵遞員以自動執行JWT驗證，並使用它來使用Adobe Experience Platform API。
 
 ## 後續步驟
 
