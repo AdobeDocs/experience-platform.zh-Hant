@@ -4,10 +4,10 @@ solution: Experience Platform
 title: 隱私權服務發行說明
 topic: release notes
 translation-type: tm+mt
-source-git-commit: 4cfa64e3371496e2408fe8fee64d49883334917c
+source-git-commit: 6eee7e903d36ed641c9f8e6120f549c02cb4bce4
 workflow-type: tm+mt
-source-wordcount: '511'
-ht-degree: 5%
+source-wordcount: '538'
+ht-degree: 6%
 
 ---
 
@@ -19,6 +19,14 @@ ht-degree: 5%
 >[!NOTE]
 >
 >如需其他服務的最 [!DNL Experience Platform] 新發行說明，請 [參閱](../release-notes/latest/latest.md)。
+
+## 2020年9月9日
+
+### 新功能
+
+| 功能 | 說明 |
+| --- | --- |
+| 支援LGPD（巴西） | 現在，可以根據巴西的(LGPD)法規創 [!DNL Lei Geral de Proteção de Dados] 造隱私崗位。 這些工作是根據法規代碼進行跟蹤的 `lgpd_bra`。 |
 
 ## 2020 年 4 月 8 日
 
