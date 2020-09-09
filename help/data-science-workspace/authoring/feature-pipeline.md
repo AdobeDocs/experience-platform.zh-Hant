@@ -5,7 +5,7 @@ title: 建立特徵管線
 topic: Tutorial
 description: Adobe Experience Platform可讓您透過Sensei機器學習架構執行階段，建立並建立自訂功能管道，以大規模執行功能工程。 本檔案說明在功能管道中找到的各種類別，並提供使用PySpark中的「模型編寫SDK」建立自訂功能管道的逐步教學課程。
 translation-type: tm+mt
-source-git-commit: 78f080fd7598799825c59a4fdfdcaf7d294560a3
+source-git-commit: 76e6e1a5484dce0a4640c2ce1f43cf7d84e049bf
 workflow-type: tm+mt
 source-wordcount: '1426'
 ht-degree: 0%
@@ -397,7 +397,7 @@ scoring.dataSaver: MyDatasetSaver
 
 或者，您也可以使用下列Postman系列來協助完成功能管道API工作流程：
 
-https://www.getpostman.com/collections/c5fc0d1d5805a5ddd41a
+https://www.postman.com/collections/c5fc0d1d5805a5ddd41a
 
 ### 建立特徵管線引擎 {#create-engine-api}
 
