@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 將資料內嵌至Adobe Experience Platform
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: d2f098cb9e4aaf5beaad02173a22a25a87a43756
+source-git-commit: 0816781620ca73a0511290d8d04b8f1a96db8a11
 workflow-type: tm+mt
-source-wordcount: '1278'
+source-wordcount: '1279'
 ht-degree: 0%
 
 ---
@@ -32,17 +32,19 @@ Datasets工作區 [!DNL Experience Platform] 可讓您檢視和管理IMS組織�
 >
 >按一下搜尋列旁的篩選圖示，使用篩選功能僅檢視已啟用的資料集 [!DNL Profile]。
 
-![查看所有資料集](../images/tutorials/ingest-batch-data/datasets_workspace.png)
+![查看所有資料集](../images/tutorials/ingest-batch-data/datasets-overview.png)
 
 ## 建立資料集
 
 若要建立資料集，請按一 **[!UICONTROL 下「資料集]** 」工作區右上角的「建立資料集」。
 
+![](../images/tutorials/ingest-batch-data/click-create-datasets.png)
+
 在「建 **[!UICONTROL 立資料集]** 」畫面上，選取您要「從架構建立資料集[!UICONTROL 」還是「從CSV檔案]建立資料集」。
 
 在本教學課程中，將使用模式來建立資料集。 按一 **[!UICONTROL 下「從架構建立資料集]** 」以繼續。
 
-![選擇資料來源](../images/tutorials/ingest-batch-data/create_dataset.png)
+![選擇資料來源](../images/tutorials/ingest-batch-data/create-dataset.png)
 
 ## 選擇資料集模式
 
@@ -50,7 +52,7 @@ Datasets工作區 [!DNL Experience Platform] 可讓您檢視和管理IMS組織�
 
 在選擇了要使用的方案旁邊的單選按鈕後，按一下「下 **[!UICONTROL 一步]**」。
 
-![選擇方案](../images/tutorials/ingest-batch-data/select_schema.png)
+![選擇方案](../images/tutorials/ingest-batch-data/select-schema.png)
 
 ## 設定資料集
 
@@ -64,7 +66,7 @@ Datasets工作區 [!DNL Experience Platform] 可讓您檢視和管理IMS組織�
 
 資料集有名稱和說明後，按一下「完 **[!UICONTROL 成]**」。
 
-![設定資料集](../images/tutorials/ingest-batch-data/configure_dataset.png)
+![設定資料集](../images/tutorials/ingest-batch-data/configure-dataset.png)
 
 ## 資料集活動
 
@@ -74,7 +76,7 @@ Datasets工作區 [!DNL Experience Platform] 可讓您檢視和管理IMS組織�
 
 另外，在「資訊」索引標籤中 **[!UICONTROL 也有「設定檔]** 」切換，用於啟用您的資料集以搭配使用 [!DNL Real-time Customer Profile]。 此切換的使用， [!DNL Real-time Customer Profile]以及，將在後面的章節中詳細說明。
 
-![資料集活動](../images/tutorials/ingest-batch-data/dataset_activity.png)
+![資料集活動](../images/tutorials/ingest-batch-data/sample-dataset.png)
 
 ## 啟用資料集 [!DNL Real-time Customer Profile]
 
@@ -86,15 +88,15 @@ Datasets工作區 [!DNL Experience Platform] 可讓您檢視和管理IMS組織�
 
 若要啟用資料集 [!DNL Real-time Customer Profile]，請按一下「資 **[!UICONTROL 訊]** 」標籤中的「設定 **[!UICONTROL 檔]** 」切換。
 
-![描述檔切換](../images/tutorials/ingest-batch-data/enable_dataset_unified_profile.png)
+![描述檔切換](../images/tutorials/ingest-batch-data/dataset-profile-toggle.png)
 
 將出現一個對話框，要求您確認要為啟用資料集 [!DNL Real-time Customer Profile]。
 
-![「啟用配置檔案」對話框](../images/tutorials/ingest-batch-data/confirm_dataset_enable.png)
+![「啟用配置檔案」對話框](../images/tutorials/ingest-batch-data/enable-dataset-for-profile.png)
 
 按一 **[!UICONTROL 下「啟用]** 」，切換將會變成藍色，表示已開啟。
 
-![啟用設定檔](../images/tutorials/ingest-batch-data/dataset_enabled.png)
+![啟用設定檔](../images/tutorials/ingest-batch-data/profile-enabled-dataset.png)
 
 ## 新增資料至資料集
 
@@ -106,13 +108,13 @@ Datasets工作區 [!DNL Experience Platform] 可讓您檢視和管理IMS組織�
 >
 >平台支援兩種檔案類型以擷取資料，分為鑲木地板或JSON。 一次最多可以添加五個檔案，每個檔案的最大檔案大小為10 GB。
 
-![「添加資料」頁籤](../images/tutorials/ingest-batch-data/add_data.png)
+![「添加資料」頁籤](../images/tutorials/ingest-batch-data/drag-and-drop.png)
 
 ## 上傳檔案
 
 在您拖放（或瀏覽並選取）想要上傳的鑲木地板或JSON檔案後，就會立即開始處理檔案，而「新增資料 [!DNL Platform]******** 」索引標籤上會出現「上傳」對話方塊，顯示檔案上傳的進度。
 
-![上傳對話方塊](../images/tutorials/ingest-batch-data/uploading.png)
+![上傳對話方塊](../images/tutorials/ingest-batch-data/uploading-file.png)
 
 ## 資料集度量
 
@@ -120,7 +122,7 @@ Datasets工作區 [!DNL Experience Platform] 可讓您檢視和管理IMS組織�
 
 在標籤的底部有一個清單，其中顯示剛透過「新增資料至資料集」程式所擷取之 **[!UICONTROL 資料的批次ID]**[](#add-data-to-dataset) 。 另外還包括與批相關的資訊，包括「 **[!UICONTROL 吸收日期]** 」、「吸收 **[!UICONTROL 記錄數]**」和當前批狀 **[!UICONTROL 態]**。
 
-![資料集度量](../images/tutorials/ingest-batch-data/batch_loading.png)
+![資料集度量](../images/tutorials/ingest-batch-data/batch-id.png)
 
 ## 批次詳細資訊
 
@@ -130,7 +132,7 @@ Datasets工作區 [!DNL Experience Platform] 可讓您檢視和管理IMS組織�
 
 若要返回「資 **[!UICONTROL 料集活動]** 」畫面，請按一下網站導覽路徑標示中的資料集名稱(**[!UICONTROL Loyalty Details]**)。
 
-![批次概述](../images/tutorials/ingest-batch-data/batch_overview.png)
+![批次概述](../images/tutorials/ingest-batch-data/batch-details.png)
 
 ## 預覽資料集
 
@@ -138,7 +140,7 @@ Datasets工作區 [!DNL Experience Platform] 可讓您檢視和管理IMS組織�
 
 按一 **[!UICONTROL 下「預覽資料集]** 」以開啟對話方塊，顯示資料集內的範例資料。 如果使用模式建立資料集，則資料集模式的詳細資料會顯示在預覽的左側。 可以使用箭頭展開模式以查看模式結構。 預覽資料中的每個欄標題代表資料集中的欄位。
 
-![資料集詳細資訊](../images/tutorials/ingest-batch-data/dataset_details.png)
+![資料集詳細資訊](../images/tutorials/ingest-batch-data/dataset-preview.png)
 
 ## 後續步驟和其他資源
 
@@ -151,3 +153,4 @@ Datasets工作區 [!DNL Experience Platform] 可讓您檢視和管理IMS組織�
 >下 [!DNL Platform] 列視訊中顯示的UI已過時。 請參閱上述檔案以取得最新的UI螢幕擷取和功能。
 
 >[!VIDEO](https://video.tv.adobe.com/v/27269?quality=12&learn=on)
+拖曳
