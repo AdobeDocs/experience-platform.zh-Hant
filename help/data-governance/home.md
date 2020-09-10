@@ -5,9 +5,9 @@ title: Adobe Experience Platform資料治理
 topic: overview
 description: Adobe Experience Platform資料管理可讓您管理客戶資料，並確保符合資料使用適用的法規、限制和政策。 它在Experience Platform的不同層次發揮關鍵作用，包括編目、資料傳承、資料使用標籤、資料使用政策，以及控制資料在行銷動作中的使用
 translation-type: tm+mt
-source-git-commit: 0f3a4ba6ad96d2226ae5094fa8b5073152df90f7
+source-git-commit: fb21acc63448ec837b2f3bcbf6eb4da83fcddc63
 workflow-type: tm+mt
-source-wordcount: '1326'
+source-wordcount: '1338'
 ht-degree: 0%
 
 ---
@@ -120,3 +120,7 @@ Adobe Experience Platform可 [!DNL Data Governance] 讓您管理客戶資料，�
 以下影片旨在協助您瞭解架構 [!DNL Data Governance] 。
 
 >[!VIDEO](https://video.tv.adobe.com/v/29708?quality=12&enable10seconds=on&speedcontrol=on)
+
+以下視訊介紹Experience Platform中的 [!DNL Data Governance] 各種功能。
+
+>[!VIDEO](https://video.tv.adobe.com/v/36653?quality=12&enable10seconds=on&speedcontrol=on)
