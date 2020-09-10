@@ -4,10 +4,10 @@ solution: Experience Platform
 title: 工作
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: e7bb3e8a418631e9220865e49a1651e4dc065daf
+source-git-commit: 5d06932cbfe8a04589d33590c363412c054fc9fd
 workflow-type: tm+mt
-source-wordcount: '1782'
-ht-degree: 2%
+source-wordcount: '1309'
+ht-degree: 1%
 
 ---
 
@@ -15,6 +15,10 @@ ht-degree: 2%
 # 隱私權工作
 
 本檔案涵蓋如何使用API呼叫的隱私權工作。 具體來說，它涵蓋 `/job`[!DNL Privacy Service] API中端點的使用。 在閱讀本指南之前，請參閱快速入門 [章節](./getting-started.md#getting-started) ，以取得成功呼叫API所需的重要資訊，包括必要的標題和如何讀取範例API呼叫。
+
+>[!NOTE]
+>
+>如果您嘗試管理客戶的同意或選擇退出要求，請參閱同意端 [點指南](./consent.md)。
 
 ## 列出所有作業 {#list}
 
@@ -206,128 +210,6 @@ curl -X POST \
 | `jobId` | 作業的唯讀唯一系統產生的ID。 此值用於查找特定作業的下一步。 |
 
 成功提交作業請求後，您可以繼續下一步， [檢查作業狀態](#check-status)。
-
-### 建立退出銷售的工作 {#opt-out}
-
-本節將示範如何使用API提出選擇退出銷售的工作要求。
-
-**API格式**
-
-```http
-POST /jobs
-```
-
-**請求**
-
-下列請求會建立新的工作請求，由裝載中提供的屬性設定，如下所述。
-
-```shell
-curl -X POST \
-  https://platform.adobe.io/data/privacy/gdpr/ \
-  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'Content-Type: application/json' \
-  -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
-  -d '{
-    "companyContexts": [
-      {
-        "namespace": "imsOrgID",
-        "value": "{IMS_ORG}"
-      }
-    ],
-    "users": [
-      {
-        "key": "DavidSmith",
-        "action": ["opt-out-of-sale"],
-        "userIDs": [
-          {
-            "namespace": "email",
-            "value": "dsmith@acme.com",
-            "type": "standard"
-          },
-          {
-            "namespace": "ECID",
-            "type": "standard",
-            "value":  "443636576799758681021090721276",
-            "isDeletedClientSide": false
-          }
-        ]
-      },
-      {
-        "key": "user12345",
-        "action": ["opt-out-of-sale"],
-        "userIDs": [
-          {
-            "namespace": "email",
-            "value": "ajones@acme.com",
-            "type": "standard"
-          },
-          {
-            "namespace": "loyaltyAccount",
-            "value": "12AD45FE30R29",
-            "type": "integrationCode"
-          }
-        ]
-      }
-    ],
-    "include": ["Analytics", "AudienceManager"],
-    "expandIds": false,
-    "priority": "normal",
-    "analyticsDeleteMethod": "anonymize",
-    "regulation": "ccpa"
-}'
-```
-
-| 屬性 | 說明 |
-| --- | --- |
-| `companyContexts` **(必填)** | 包含貴組織驗證資訊的陣列。 每個列出的識別碼都包含下列屬性： <ul><li>`namespace`:識別碼的名稱空間。</li><li>`value`:識別碼的值。</li></ul>必須 **有一個識別碼** 用作識別 `imsOrgId` 碼，其中包含 `namespace``value` IMS組織的唯一ID。 <br/><br/>其他識別碼可以是產品特定的公司限定詞(例如 `Campaign`)，可識別與您組織所屬的Adobe應用程式整合。 潛在值包括帳戶名稱、用戶端代碼、租用戶ID或其他應用程式識別碼。 |
-| `users` **(必填)** | 包含至少一個用戶集合的陣列，您希望訪問或刪除其資訊。 在單一請求中最多可提供1000個使用者ID。 每個用戶對象都包含以下資訊： <ul><li>`key`:用於用戶的標識符，用於限定響應資料中的單獨作業ID。 為此值選擇唯一、可輕鬆識別的字串是最佳實務，以便日後輕鬆參考或查閱。</li><li>`action`:列出要對資料執行的所需操作的陣列。 對於退出銷售請求，陣列只能包含值 `opt-out-of-sale`。</li><li>`userIDs`:使用者身分的集合。 單一使用者可擁有的身分數目限制為9。 每個身分都由 `namespace`、 `value`和namespace限定詞(`type`)組成。 如需這些 [必要屬性](appendix.md) ，請參閱附錄。</li></ul> 有關和的更詳細說 `users` 明 `userIDs`，請參 [閱疑難解答指南](../troubleshooting-guide.md#user-ids)。 |
-| `include` **(必填)** | 要納入您處理中的Adobe產品陣列。 如果此值遺失或空白，則會拒絕請求。 僅包含貴組織已整合的產品。 如需詳細資訊，請 [參閱附錄中](appendix.md) 「接受的產品值」一節。 |
-| `expandIDs` | 可選屬性，若設為 `true`，代表處理應用程式中ID的最佳化(目前僅支援 [!DNL Analytics])。 If omitted, this value defaults to `false`. |
-| `priority` | Adobe Analytics使用的可選屬性，可設定處理請求的優先順序。 接受的值是 `normal` 和 `low`。 如果 `priority` 省略，則預設行為為 `normal`。 |
-| `analyticsDeleteMethod` | 可選屬性，指定Adobe Analytics如何處理個人資料。 此屬性接受兩個可能的值： <ul><li>`anonymize`:指定使用者ID集合所參考的所有資料都會設為匿名。 如果 `analyticsDeleteMethod` 省略，則此為預設行為。</li><li>`purge`:所有資料都會完全移除。</li></ul> |
-| `regulation` **(必填)** | 要求的規定。 必須是下列四個值之一： <ul><li>`gdpr`</li><li>`ccpa`</li><li>`lgpd_bra`</li><li>`pdpa_tha`</li></ul> |
-
-**回應**
-
-成功的回應會傳回新建立之工作的詳細資料。
-
-```json
-{
-    "jobs": [
-        {
-            "jobId": "6fc09b53-c24f-4a6c-9ca2-c6076bd9vjs0",
-            "customer": {
-                "user": {
-                    "key": "DavidSmith",
-                    "action": [
-                        "opt-out-of-sale"
-                    ]
-                }
-            }
-        },
-        {
-            "jobId": "6fc09b53-c24f-4a6c-9ca2-c6076bes0ewj2",
-            "customer": {
-                "user": {
-                    "key": "user12345",
-                    "action": [
-                        "opt-out-of-sale"
-                    ]
-                }
-            }
-        }
-    ],
-    "requestStatus": 1,
-    "totalRecords": 2
-}
-```
-
-| 屬性 | 說明 |
-| --- | --- |
-| `jobId` | 作業的唯讀唯一系統產生的ID。 此值用於查找下一步中的特定作業。 |
-
-成功提交作業請求後，您可以繼續下一步檢查作業狀態。
 
 ## 檢查作業的狀態 {#check-status}
 
