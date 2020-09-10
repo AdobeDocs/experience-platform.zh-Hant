@@ -5,38 +5,36 @@ seo-title: 即時客戶資料設定檔中的隱私權
 description: 即時客戶資料設定檔可讓您簡化維持資料作業符合隱私權規範的程式。
 seo-description: 即時客戶資料設定檔可讓您簡化維持資料作業符合隱私權規範的程式。
 translation-type: tm+mt
-source-git-commit: f9b21ee51d6246dbdae4500aad050b200539ff88
+source-git-commit: 1eaadb1877cc5221bf6b0b8eed042287e59155bf
 workflow-type: tm+mt
-source-wordcount: '312'
-ht-degree: 1%
+source-wordcount: '361'
+ht-degree: 0%
 
 ---
 
 
-# 即時CDP中的隱私權
+# 隱私權 [!DNL Real-time CDP]
 
-[!DNL Real-time Customer Data Platform] （即時CDP）可協助行銷人員將來自多個企業系統的資料整合在一起，讓他們能夠更好地識別、瞭解並吸引客戶。 Adobe將消費者資料隱私視為基本的設計原則，並提供各種控制項以協助行銷人員管理其客戶的資料隱私。
+[!DNL Real-time Customer Data Platform] ([!DNL Real-time CDP])協助行銷人員將來自多個企業系統的資料整合在一起，讓他們能夠更好地識別、瞭解並吸引客戶。 Adobe將消費者資料隱私視為基本的設計原則，並提供各種控制項以協助行銷人員管理其客戶的資料隱私。
 
-大部分的即時CDP功能都由Adobe Experience Platform提供支援。 本檔案提供有關Real-time CDP支援的各種隱私權增強技術的資訊，並提供檔案連結，以取 [!DNL Experience Platform] 得更多資訊。
+大部分功 [!DNL Real-time CDP] 能都由Adobe Experience Platform提供支援。 本檔案提供各種隱私權增強技術的相關資訊， [!DNL Real-time CDP]以及檔案的連結， [!DNL Experience Platform] 以取得詳細資訊。
 
-## [!DNL Privacy Service]
+## 允許客戶存取和刪除請求
 
-Adobe Experience Platform可 [!DNL Privacy Service] 讓您簡化維持資料作業符合隱私權規範(例如 [!DNL General Data Protection Regulation] (GDPR)和(CCPA)的 [!DNL California Consumer Privacy Act] 程式。 由於即時CDP利用了數 [!DNL Experience Platform] 據收集和儲存功能，因此應在中管理對GDPR和CCPA的訪問和刪除請求 [!DNL Platform]。 如需服務 [的詳細簡介](../../privacy-service/home.md) ，請參閱隱私權服務概觀檔案。
+法律隱私權法規( [!DNL General Data Protection Regulation] GDPR)和 [!DNL California Consumer Privacy Act] (CCPA)賦予客戶權利要求存取或刪除您從他們收集到的個人資料。 由於 [!DNL Real-time CDP] 利用 [!DNL Experience Platform] 了資料收集和儲存功能，因此客戶訪問和刪除其個人資料的請求應在中進行管理 [!DNL Platform]。 如需詳細資訊，請 [參閱Adobe Experience Platform Privacy Service](../../privacy-service/home.md) 的概觀。
 
-提交個別GDPR和CCPA資料主體要求存取和刪除客戶資料的方法有兩種：
+## 退出功能
 
-* 使用 [[!DNL隱私服務UI]](https://privacyui.cloud.adobe.io/) ，在視覺化工作區中建立和監控存取和刪除要求。 如需逐 [步指示，請參閱](../../privacy-service/ui/overview.md) 「隱私服務」使用指南。
-* 使用 [[!DNL隱私服務API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/privacy-service.yaml) ，透過REST風格的API呼叫來管理存取和刪除請求。 如需逐步 [指示，請參閱Privacy Service API教學課程](../../privacy-service/api/getting-started.md) 。
+[!DNL Real-time CDP] 允許客戶選擇不將個人資料納入區段使用案例。 客戶的退出偏好設定由擷取並儲存 [!DNL Real-time Customer Profile]，而且可透過區段謂語中使用布林邏輯(「AND NOT」)排除已退出區段的使用者來強制執行。
 
-<!-- (Capability will not be available for November GA) 
-## Opt-out capabilities
+如需詳細資訊， [請參閱](../../segmentation/honoring-opt-outs.md) Adobe Experience Platform細分服務檔案中的檔案，說明如何接受退出要求。
 
-Real-time CDP provides two types of consumer opt-out capabilities:
+## IAB TCF 2.0支援
 
-1. **General opt-out**: (Waiting on info)
-1. **Segment-level opt-out of sale**: Opt-out of sale requests are captured using the Profile Privacy mixin (see the section on "Handling opt-out requests" in the [Real-time Customer Profile overview](../../profile/home.md) for more information). Using this, you can exclude users who have opted out from a segment using boolean logic ("AND NOT") in the segment predicate.
--->
+[!DNL Real-time CDP] 是(IAB)中所 [述](https://iabeurope.eu/vendor-list-tcf-v2-0/)[!DNL Transparency & Consent Framework] (TCF)的註冊廠商清單 [!DNL Interactive Advertising Bureau] 的一部分。 符合TCF 2.0要求，您可 [!DNL Real-time CDP] 以收集詳細的客戶同意資料，並將其整合在儲存的客戶個人檔案中。 然後，可根據特定個人檔案的使用案例，將此同意資料納入匯出的受眾細分。
+
+如需詳細資訊， [請參閱中的IAB TCF 2.0支援 [!DNL Real-time CDP]](./iab/overview.md) 。
 
 ## 後續步驟
 
-本文檔簡要介紹了即時CDP的隱私權功能。 如需提交存取／刪除要求之最佳實務和步驟的詳細資訊，請參閱隱私權服 [務檔案](../../privacy-service/home.md)。
+本檔案簡要介紹了的隱私權功能 [!DNL Real-time CDP]。 請參閱本指南中連結的檔案，以取得各項功能的詳細資訊。
