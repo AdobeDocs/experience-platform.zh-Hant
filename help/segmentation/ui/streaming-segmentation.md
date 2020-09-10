@@ -5,9 +5,9 @@ title: 串流區段
 topic: ui guide
 description: Adobe Experience Platform上的串流細分可讓您近乎即時地進行細分，同時專注於資料的豐富性。 透過串流分段，區段資格現在會在資料進入平台時進行，以減輕排程和執行分段工作的需求。 有了這項功能，大部份的區段規則現在都可以在資料傳入平台時進行評估，這表示區段成員資格將會保持最新，而不會執行排程的區段工作。
 translation-type: tm+mt
-source-git-commit: 17ef6c1c6ce58db2b65f1769edf719b98d260fc6
+source-git-commit: c7e8cf31f4c03eec9b24064c6888e09a7070aaa5
 workflow-type: tm+mt
-source-wordcount: '805'
+source-wordcount: '831'
 ht-degree: 0%
 
 ---
@@ -57,6 +57,8 @@ ht-degree: 0%
 | ---------- | -------- |
 | 單一事件查詢 | 回顧視窗限制為 **七天**。 |
 | 具有事件歷史記錄的查詢 | <ul><li>回顧視窗限於一 **天**。</li><li>事件之間必須存 **在嚴格** 的時間順序條件。</li><li>僅允許事件之間的簡單時間順序（前後）。</li><li>無法否 **認個** 別事件。 不過，整個查詢 **可以** 否定。</li></ul> |
+
+如果修改了區段定義，使其不再符合串流區段的條件，區段定義會自動從「串流」切換為「批次」。
 
 ## 串流區段細分詳細資料
 
