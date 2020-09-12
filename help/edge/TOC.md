@@ -2,9 +2,10 @@
 product: experience-platform
 audience: user
 user-guide-title: Adobe Experience Platform網頁SDK說明
+breadcrumb-title: Web SDK Guide
 user-guide-description: The Adobe Experience Platform Web SDK is a client-side JavaScript library that allows you to interact with various Adobe Experience Cloud services through the Adobe Experience Platform Edge Network.
 translation-type: tm+mt
-source-git-commit: 57530cab231873b971394e90b6c759d806c3c6a6
+source-git-commit: 1565c19fdd07935e503e9faa2d9f748331d7f933
 workflow-type: tm+mt
 source-wordcount: '104'
 ht-degree: 18%
@@ -25,7 +26,7 @@ ht-degree: 18%
    * [設定SDK](fundamentals/configuring-the-sdk.md)
    * [追蹤事件](fundamentals/tracking-events.md)
    * [合併事件資料](fundamentals/merging-event-data.md)
-   * [除錯](fundamentals/debugging.md)
+   * [為 ](fundamentals/debugging.md) 除錯
    * [與多個屬性互動](fundamentals/interacting-with-multiple-properties.md)
    * [呈現個人化內容](fundamentals/rendering-personalization-content.md)
    * [支援許可](fundamentals/supporting-consent.md)
