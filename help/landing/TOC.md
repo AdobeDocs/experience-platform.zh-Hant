@@ -2,12 +2,13 @@
 product: experience-platform
 audience: user
 user-guide-title: Adobe Experience Platform說明
+breadcrumb-title: Experience Platform Guide
 user-guide-description: Adobe Experience Platform is the most powerful, flexible, and open system on the market for building and managing complete solutions that drive customer experience. Experience Platform enables organizations to centralize and standardize customer data and content from any system and apply data science and machine learning to dramatically improve the design and delivery of rich, personalized experiences.
 translation-type: tm+mt
-source-git-commit: bd3c31e7d39f7f66d755356a3dbb754e97c196fb
+source-git-commit: 1565c19fdd07935e503e9faa2d9f748331d7f933
 workflow-type: tm+mt
 source-wordcount: '306'
-ht-degree: 45%
+ht-degree: 52%
 
 ---
 
@@ -38,10 +39,10 @@ ht-degree: 45%
    * [個人檔案（即時客戶個人檔案）](https://docs.adobe.com/content/help/zh-Hant/experience-platform/profile/home.html)
    * [查詢服務](https://docs.adobe.com/content/help/en/experience-platform/query/home.html)
    * [即時客戶資料平台](https://docs.adobe.com/content/help/en/experience-platform/rtcdp/overview.html)
-   * [沙盒](https://docs.adobe.com/content/help/zh-Hant/experience-platform/sandbox/home.html)
+   * [沙箱](https://docs.adobe.com/content/help/zh-Hant/experience-platform/sandbox/home.html)
    * [區段](https://docs.adobe.com/content/help/en/experience-platform/segmentation/home.html)
    * [來源（連接器）](https://docs.adobe.com/content/help/en/experience-platform/sources/home.html)
-   * [網頁SDK](https://docs.adobe.com/content/help/zh-Hant/experience-platform/edge/home.html)
+   * [Web SDK](https://docs.adobe.com/content/help/zh-Hant/experience-platform/edge/home.html)
    * [XDM（體驗資料模型）](https://docs.adobe.com/content/help/zh-Hant/experience-platform/xdm/home.html)
 * [體驗平台教學課程](https://docs.adobe.com/content/help/zh-Hant/experience-platform/tutorials/home.html)
 * [發行說明](https://docs.adobe.com/content/help/zh-Hant/experience-platform/release-notes/latest.html)
