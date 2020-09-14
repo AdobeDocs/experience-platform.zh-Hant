@@ -5,9 +5,9 @@ title: 設定檔詳細資訊自訂
 description: '本指南提供逐步指示，以自訂在Adobe Experience Platform UI中顯示即時客戶個人檔案資料的方式。 '
 topic: guide
 translation-type: tm+mt
-source-git-commit: b08644102e6455d4c4c8b03e747411d3c05c7deb
+source-git-commit: 52cccd7436e203725a9fb4be8406332d8f23a71d
 workflow-type: tm+mt
-source-wordcount: '1224'
+source-wordcount: '1167'
 ht-degree: 0%
 
 ---
@@ -103,11 +103,7 @@ ht-degree: 0%
 
 ## 還原預設卡片
 
-如果您決定要移除您的編輯並返回預設檢視，則可以快速輕鬆地還原所有預設卡片和屬性。 若要這麼做，請選取「修 **[!UICONTROL 改控制面板]**」，然後選 **[!UICONTROL 取「還原預設卡片」]**。 這會移除您進行的所有自訂（包括重新調整大小）。 然後，您可以選 **[!UICONTROL 取「儲存]****** 」以儲存變更，或如果您不想復原預設值，請選取「取消」以保留您所做的編輯。
-
->[!NOTE]
->
->在還原預設卡片和屬性時請格外小心。 在還原並儲存預設值後，返回檢視自訂項目的唯一方式，就是使用本檔案中概述的步驟，重新建立自訂項目。
+如果您決定要復原已移除的預設卡片，則可快速輕鬆地完成。 首先，選擇「修 **[!UICONTROL 改控制面板]**」，然後選 **[!UICONTROL 擇「恢復預設卡片」]**。 在顯示預設卡片後，您可以選取「 **[!UICONTROL Save]** 」（儲存）以儲存變更，或選取「 **[!UICONTROL Cancel]** 」（取消）。
 
 ![](../images/profile-customization/profiles-restore-default.png)
 
