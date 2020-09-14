@@ -4,9 +4,9 @@ solution: Adobe Experience Platform
 title: 體驗平台方針
 topic: guide
 translation-type: tm+mt
-source-git-commit: d9e4812e3506de3082670a8afde5480cd8f865d6
+source-git-commit: 51111b2e831a37949150b107eb76711e2470523c
 workflow-type: tm+mt
-source-wordcount: '1200'
+source-wordcount: '1201'
 ht-degree: 1%
 
 ---
@@ -96,5 +96,5 @@ Adobe Experience Platform提供一系列的防護措施，幫助您避免建立�
 
 | 瓜德賴爾 | 限制 | 限制類型 | 說明 |
 | --- | --- | --- | --- |
-| 每維實體的最大總大小 | 1 GB   | Soft | **維度實體的建議最大總大小為1GB。** 引入大維實體將導致系統效能降低。 例如，不建議嘗試將10GB產品目錄載入為維度實體。 |
+| 所有維圖元的最大總大小 | 5 GB   | Soft | **所有維實體的建議最大總大小為5GB。** 引入大維實體將導致系統效能降低。 例如，不建議嘗試將10GB產品目錄載入為維度實體。 |
 | 每維實體模式的資料集 | 5 | Soft | **建議最多5個與每個維實體模式關聯的資料集。** 例如，如果您為「產品」建立模式並新增5個貢獻資料集，則不應建立與產品模式連結的第6個資料集。 |
