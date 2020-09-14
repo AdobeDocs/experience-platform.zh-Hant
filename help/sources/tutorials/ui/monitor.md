@@ -5,9 +5,9 @@ solution: Experience Platform
 title: 監視帳戶和資料流
 topic: overview
 translation-type: tm+mt
-source-git-commit: 737ee0bd55dbf178505c9be0875b2a0b75d3217a
+source-git-commit: 20c3037295b49cba45fcc5901803107dea26b3b2
 workflow-type: tm+mt
-source-wordcount: '971'
+source-wordcount: '1014'
 ht-degree: 0%
 
 ---
@@ -47,6 +47,14 @@ Adobe Experience Platform中的來源連接器可讓您依計畫吸收外部來�
 > 使用「 ![名稱](../../images/tutorials/monitor/spectrum-control.png)**** 」列中的「頻譜控制」按鈕，為選定帳戶建立新源資料流。
 
 ![accounts-select](../../images/tutorials/monitor/accounts-sort.png)
+
+此外，您還可以編輯現有帳戶資訊並更新帳戶認證。 為您要編輯的帳戶資訊選取鉛筆圖示。
+
+![](../../images/tutorials/monitor/click-edit.png)
+
+此時會 **[!UICONTROL 顯示「編輯帳戶]** 」詳細資訊模式。 從本頁，您可以更新現有帳戶詳細資訊和驗證憑證。
+
+![](../../images/tutorials/monitor/edit-account.png)
 
 在「帳 **[!UICONTROL 戶]** 」頁中，可以查看與您訪問的帳戶相關聯的現有資料流或目標資料集的清單。 選擇省略號(`...`)按鈕，為所選資料流啟用更多可用選項。 以下將進一步說明這些選項：
 
