@@ -5,9 +5,9 @@ user-guide-title: Adobe Experience Platform資料擷取說明
 breadcrumb-title: Data Ingestion Guide
 user-guide-description: Adobe Experience Platform brings data from multiple sources together in order to help marketers better understand the behavior of their customers. Adobe Experience Platform Data Ingestion represents the multiple methods by which Platform ingests data from these sources, as well as how that data is persisted within the Data Lake for use by downstream Platform services.
 translation-type: tm+mt
-source-git-commit: 1565c19fdd07935e503e9faa2d9f748331d7f933
+source-git-commit: 2a5d6a9462950007d00f321ca9f3a3c457a3243e
 workflow-type: tm+mt
-source-wordcount: '108'
+source-wordcount: '111'
 ht-degree: 7%
 
 ---
@@ -37,6 +37,7 @@ ht-degree: 7%
 - 資料擷取品質與監控{#quality}
    - [概述](quality/overview.md)
    - [監視資料流](quality/monitor-data-flows.md)
+   - [檢索錯誤診斷](quality/error-diagnostics.md)
    - [檢索失敗的批](quality/retrieve-failed-batches.md)
    - [串流擷取驗證](quality/streaming-validation.md)
    - [訂閱資料擷取事件](quality/subscribe-events.md)
