@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 建立電子郵件行銷目標
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 3cfbee08c1948b2e073547f9bbf0c8526cbfd4bc
+source-git-commit: f31b03f027d8b44f761917f4edf19a0b5eedd76c
 workflow-type: tm+mt
-source-wordcount: '1624'
+source-wordcount: '1636'
 ht-degree: 1%
 
 ---
@@ -599,7 +599,7 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 
 * `{DATAFLOW_ID}`:使用您在上一步驟中取得的資料流。
 * `{ETAG}`:使用您在上一步驟中取得的標籤。
-* `{SEGMENT_ID}`:提供您要匯出至此目的地的區段ID。 若要擷取您要啟用之區段的區段ID，請前往https://www.adobe.io/apis/experienceplatform/home/api-reference.html#/並尋找作 `GET /segment/jobs` 業。
+* `{SEGMENT_ID}`:提供您要匯出至此目的地的區段ID。 若要擷取您要啟用之區段的區段ID，請前往 **https://www.adobe.io/apis/experienceplatform/home/api-reference.html#/**，在左側導覽功能表中選取「區段服務API **[!UICONTROL 」，然後在「區段定義」]** 中尋找 `GET /segment/definitions` 操作 ****。
 * `{PROFILE_ATTRIBUTE}`: 例如, `"person.lastName"`
 
 **回應**
