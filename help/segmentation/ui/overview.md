@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 區段服務使用指南
 topic: ui guide
 translation-type: tm+mt
-source-git-commit: 0f3a4ba6ad96d2226ae5094fa8b5073152df90f7
+source-git-commit: c9ff4d26accd880d5169526f84be607fc722883b
 workflow-type: tm+mt
-source-wordcount: '1359'
+source-wordcount: '1452'
 ht-degree: 0%
 
 ---
@@ -41,7 +41,19 @@ ht-degree: 0%
 
 ![](../images/ui/overview/segment-browse-all.png)
 
-此檢視會列出區段定義的相關資訊，包括評估方法、建立日期和上次修改日期。
+此檢視會列出區段定義的相關資訊，包括劃分、流失、描述檔計數、評估方法、建立日期和上次修改日期。
+
+劃分會顯示橫條圖，概述屬於下列各種狀態的描述檔百分比： [!UICONTROL 已輸入]、 [!UICONTROL 已實現]，以及 [!UICONTROL 已退出]。
+
+![](../images/ui/overview/segment-browse-breakdown.png)
+
+| 狀態 | 說明 |
+| ------ | ----------- |
+| 已輸入 | 區段中的新描述檔。 |
+| 已實現 | 保留在區段中的現有描述檔。 |
+| 退出 | 離開區段的現有描述檔。 |
+
+流失率代表在區段定義中變更的設定檔與上次執行區段作業時的百分比，而設定檔計數則代表符合區段資格的設定檔總數。
 
 評估方法可以是流式或批式。 當資料進入系統時，會持續評估串流區段。 批次區段會根據設定的排程進行評估。
 
