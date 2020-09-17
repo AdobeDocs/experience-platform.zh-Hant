@@ -5,9 +5,9 @@ title: 在UI中為CRM連接器配置資料流
 topic: overview
 description: 資料流是從源中檢索資料並將資料帶入平台資料集的計畫任務。 本教學課程提供使用CRM帳戶設定新資料流的步驟。
 translation-type: tm+mt
-source-git-commit: 5d4aa8eebc1837a5d8b275fa631f4af73c38158e
+source-git-commit: 785bc95ff3460ebbb1a126ac5fec85ad165ca973
 workflow-type: tm+mt
-source-wordcount: '1398'
+source-wordcount: '1425'
 ht-degree: 0%
 
 ---
@@ -75,9 +75,13 @@ ht-degree: 0%
 
 根據您的需求，您可以選擇直接映射欄位，或使用映射器函式轉換來源資料以衍生計算或計算值。 有關資料映射和映射器函式的詳細資訊，請參閱將CSV資料映 [射到XDM模式欄位的教程](../../../../ingestion/tutorials/map-a-csv-file.md)。
 
-映射源資料後，按一下「下 **[!UICONTROL 一步]**」。
+>[!TIP]
+>
+>[!DNL Platform] 根據您選取的目標架構或資料集，為自動映射欄位提供智慧建議。 您可以手動調整對應規則，以符合您的使用案例。
 
-![](../../../images/tutorials/dataflow/all-tabular/mapping-updated.png)
+映射源資料後，選擇「下 **[!UICONTROL 一步]**」。
+
+![](../../../images/tutorials/dataflow/all-tabular/mapping.png)
 
 ## 排程擷取執行
 
