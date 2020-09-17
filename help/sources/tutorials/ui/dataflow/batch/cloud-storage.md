@@ -5,9 +5,9 @@ title: 在UI中為雲儲存批處理連接器配置資料流
 topic: overview
 description: 資料流是從源中檢索資料並將資料帶入平台資料集的計畫任務。 本教學課程提供使用雲端儲存帳戶設定新資料流的步驟。
 translation-type: tm+mt
-source-git-commit: 785bc95ff3460ebbb1a126ac5fec85ad165ca973
+source-git-commit: a4fd95904159a7b3e9c420f720a315641fd6706f
 workflow-type: tm+mt
-source-wordcount: '1584'
+source-wordcount: '1625'
 ht-degree: 0%
 
 ---
@@ -93,9 +93,15 @@ ht-degree: 0%
 >
 >[!DNL Platform] 根據您選取的目標架構或資料集，為自動映射欄位提供智慧建議。 您可以手動調整對應規則，以符合您的使用案例。
 
-映射源資料後，選擇「下 **[!UICONTROL 一步]**」。
-
 ![](../../../../images/tutorials/dataflow/cloud-storage/batch/mapping.png)
+
+選 **[!UICONTROL 取預覽資料]** ，查看從選取資料集中最多100列範例資料的對應結果。
+
+在預覽期間，身分欄會優先化為第一個欄位，因為這是驗證映射結果時所需的關鍵資訊。
+
+![](../../../../images/tutorials/dataflow/cloud-storage/batch/mapping-preview.png)
+
+映射源資料後，選擇「關 **[!UICONTROL 閉」]**。
 
 ## 排程擷取執行
 
