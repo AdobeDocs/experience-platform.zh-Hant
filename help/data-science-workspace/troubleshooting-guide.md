@@ -5,9 +5,9 @@ title: Data Science Workspace疑難排解指南
 topic: Troubleshooting
 description: 本檔案提供有關Adobe Experience Platform Data Science Workspace常見問題的解答。
 translation-type: tm+mt
-source-git-commit: 194a29124949571638315efe00ff0b04bff19303
+source-git-commit: 76e598c743df320e4b3cb821e118749fe7304d9c
 workflow-type: tm+mt
-source-wordcount: '680'
+source-wordcount: '750'
 ht-degree: 0%
 
 ---
@@ -112,3 +112,7 @@ Safari預設會在Safari &lt; 12中停用協力廠商Cookie。 由於您 [!DNL J
 ```
 
 有關群集資源配 [!DNL Spark] 置的詳細資訊，包括可配置屬性的完整清單，請參 [見JupyterLab User Guide](./jupyterlab/overview.md#kernels)。
+
+## 為什麼在嘗試執行大型資料集的特定工作時收到錯誤訊息？
+
+如果您接收到錯誤，並且原因如 `Reason: Remote RPC client disassociated. Likely due to containers exceeding thresholds, or network issues.` This通常表示驅動程式或執行器記憶體不足。 有關資料限制以及如何在 [大資料集上執行任務的詳細資訊](./jupyterlab/access-notebook-data.md) ，請參見JupyterLab Notebooks資料存取文檔。 通常，此錯誤可以通過將從更改為 `mode` 來 `interactive` 解決 `batch`。
