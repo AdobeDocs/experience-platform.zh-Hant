@@ -5,9 +5,9 @@ title: 在UI中為CRM連接器配置資料流
 topic: overview
 description: 資料流是從源中檢索資料並將資料帶入平台資料集的計畫任務。 本教學課程提供使用CRM帳戶設定新資料流的步驟。
 translation-type: tm+mt
-source-git-commit: 785bc95ff3460ebbb1a126ac5fec85ad165ca973
+source-git-commit: ad9b52e46d3eb4f6ed7774e4cbcb031a52801b49
 workflow-type: tm+mt
-source-wordcount: '1425'
+source-wordcount: '1466'
 ht-degree: 0%
 
 ---
@@ -79,9 +79,15 @@ ht-degree: 0%
 >
 >[!DNL Platform] 根據您選取的目標架構或資料集，為自動映射欄位提供智慧建議。 您可以手動調整對應規則，以符合您的使用案例。
 
-映射源資料後，選擇「下 **[!UICONTROL 一步]**」。
-
 ![](../../../images/tutorials/dataflow/all-tabular/mapping.png)
+
+選 **[!UICONTROL 取預覽資料]** ，查看從選取資料集中最多100列範例資料的對應結果。
+
+在預覽期間，身分欄會優先化為第一個欄位，因為這是驗證映射結果時所需的關鍵資訊。
+
+![](../../../images/tutorials/dataflow/all-tabular/mapping-preview.png)
+
+映射源資料後，選擇「關 **[!UICONTROL 閉」]**。
 
 ## 排程擷取執行
 
@@ -92,7 +98,7 @@ ht-degree: 0%
 | 頻率 | 可選頻率 `Once`包括 `Minute`、 `Hour`、 `Day`和 `Week`。 |
 | 間隔 | 一個整數，用於設定所選頻率的間隔。 |
 | 開始時間 | UTC時間戳記，指示何時設定進行第一次擷取。 |
-| 回填 | 一個布爾值，可決定最初收錄的資料。 如果 **[!UICONTROL 啟用回填&#x200B;]*，則指定路徑中的所有目前檔案將在第一次排程擷取期間被擷取。 如果*停用&#x200B;*「回填」*[!UICONTROL ，則只會收錄在首次擷取執行和開始時間之間載入的&#x200B;]*檔案。 在開始時間之前載*[!UICONTROL 入的檔案]** ，將不會收錄。 |
+| 回填 | 一個布爾值，可決定最初收錄的資料。 如果 **[!UICONTROL 啟用回填]** ，則指定路徑中的所有目前檔案將在第一次排程擷取期間被擷取。 如果 **[!UICONTROL 停用]** 「回填」 **[!UICONTROL ，則只會收錄在首次擷取執行和開始時間之間載入的]** 檔案。 在開始時間之前載 **[!UICONTROL 入的檔案]** ，將不會收錄。 |
 | 增量列 | 具有類型、日期或時間的一組已篩選源架構欄位的選項。 此欄位用於區分新資料和現有資料。 增量資料將根據選取欄的時間戳記進行擷取。 |
 
 資料流設計為在計畫基礎上自動收錄資料。 從選取擷取頻率開始。 接著，設定間隔，以指定兩個流程執行之間的期間。 間隔的值應為非零整數，且應設定為大於或等於15。
