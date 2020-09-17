@@ -5,7 +5,7 @@ title: 使用筆記型電腦分析資料
 topic: Tutorial
 description: 本教學課程著重於如何使用Jupyter筆記型電腦（建立在資料科學工作區中）來存取、探索和視覺化您的資料。
 translation-type: tm+mt
-source-git-commit: 33b14fed0d52792de0486897c11dd86c1ea2dd45
+source-git-commit: 3876c33a2d20481f45bd12eda3921898e9e65654
 workflow-type: tm+mt
 source-wordcount: '1731'
 ht-degree: 0%
@@ -41,7 +41,7 @@ Data Science Workspace可讓使用者透過平 [!DNL Jupyter Notebooks] 台進�
 
 在UI中， [!DNL Adobe Experience Platform] 按一下頂端功能表中的「資料科學」標籤，將您帶往「資料科學工作區」。 在此頁中，按一下將打 [!DNL JupyterLab] 開啟動程式的選 [!DNL JupyterLab] 項卡。 您應該會看到類似此的頁面。
 
-![](../images/jupyterlab/analyze-data/jupyterlab_launcher.png)
+![](../images/jupyterlab/analyze-data/jupyterlab-launcher.png)
 
 在我們的教學課程中，我們將使用 [!DNL Python] Jupyter筆記型電腦中的3來展示如何存取和探索資料。 在「啟動器」頁中，提供了示例筆記本。 我們將使用零售銷售方 [!DNL Python] 式3。
 
