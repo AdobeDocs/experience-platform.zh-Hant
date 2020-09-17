@@ -5,9 +5,9 @@ title: 在UI中為廣告連接器配置資料流
 topic: overview
 description: 資料流是從來源擷取資料並將資料擷取至Adobe Experience Platform資料集的排程任務。 本教學課程提供使用廣告帳戶配置新資料流的步驟。
 translation-type: tm+mt
-source-git-commit: 785bc95ff3460ebbb1a126ac5fec85ad165ca973
+source-git-commit: 33b0f69c1552957984c131c72a13e88167211295
 workflow-type: tm+mt
-source-wordcount: '1377'
+source-wordcount: '1418'
 ht-degree: 0%
 
 ---
@@ -80,9 +80,15 @@ ht-degree: 0%
 >
 >[!DNL Platform] 根據您選取的目標架構或資料集，為自動映射欄位提供智慧建議。 您可以手動調整對應規則，以符合您的使用案例。
 
-映射源資料後，選擇「下 **[!UICONTROL 一步]**」。
-
 ![](../../../images/tutorials/dataflow/all-tabular/mapping.png)
+
+選 **[!UICONTROL 取預覽資料]** ，查看從選取資料集中最多100列範例資料的對應結果。
+
+在預覽期間，身分欄會優先化為第一個欄位，因為這是驗證映射結果時所需的關鍵資訊。
+
+![](../../../images/tutorials/dataflow/all-tabular/mapping-preview.png)
+
+映射源資料後，選擇「關 **[!UICONTROL 閉」]**。
 
 ## 排程擷取執行
 
