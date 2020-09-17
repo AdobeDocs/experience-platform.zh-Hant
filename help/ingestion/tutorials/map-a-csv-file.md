@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 將CSV檔案對應至XDM架構
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: d2f098cb9e4aaf5beaad02173a22a25a87a43756
+source-git-commit: 785bc95ff3460ebbb1a126ac5fec85ad165ca973
 workflow-type: tm+mt
-source-wordcount: '1371'
+source-wordcount: '1350'
 ht-degree: 2%
 
 ---
@@ -61,6 +61,10 @@ ht-degree: 2%
 
 此時將 **[!UICONTROL 顯示]** 「映射」步驟。 CSV檔案的欄位列在「來源欄位」 **[!UICONTROL 下]**，其對應的XDM架構欄位列在「目標欄位」 **[!UICONTROL 下]**。 未選取的目標欄位以紅色勾勒。 您可以使用篩選欄位選項來縮小可用來源欄位的清單。
 
+>[!TIP]
+>
+>[!DNL Platform] 根據您選取的目標架構或資料集，為自動映射欄位提供智慧建議。 您可以手動調整對應規則，以符合您的使用案例。
+
 要將CSV列映射到XDM欄位，請選擇該列相應目標欄位旁的架構表徵圖。
 
 ![](../images/tutorials/map-a-csv-file/mapping.png)
@@ -69,17 +73,9 @@ ht-degree: 2%
 
 ![](../images/tutorials/map-a-csv-file/select-schema-field.png)
 
-「映 **[!UICONTROL 射]** 」畫面會重新出現，選取的XDM欄位現在會顯示在「目標 **[!UICONTROL 欄位」下]**。
+完成其餘未映射源欄位的步驟後，「 **[!UICONTROL Mapping]** 」螢幕將重新顯示，「Target」（目標）欄位下現在將顯示選定的XDM **[!UICONTROL 欄位]**。
 
 ![](../images/tutorials/map-a-csv-file/field-mapped.png)
-
-如果您不想映射特定CSV欄，可以按一下目標欄位旁的「移 **除** 」圖示來移除映射。 您也可以通過選擇清除所有映射按鈕來 **[!UICONTROL 刪除所有映射]**。
-
-![](../images/tutorials/map-a-csv-file/remove-mapping.png)
-
-如果要添加新映射，請選擇「源 **[!UICONTROL 欄位」清單頂部的]** 「添加 **[!UICONTROL 新映射]** 」。
-
-![](../images/tutorials/map-a-csv-file/add-mapping.png)
 
 在映射欄位時，您還可以包括函式，以便根據輸入源欄位計算值。 如需詳 [細資訊](#mapping-functions) ，請參閱附錄中的對應函式一節。
 
@@ -89,7 +85,7 @@ ht-degree: 2%
 
 選擇「添 **[!UICONTROL 加計算欄位]** 」按鈕以繼續。
 
-![](../images/tutorials/map-a-csv-file/add-calculated-field.png)
+![](../images/tutorials/map-a-csv-file/add-calculate-field.png)
 
 此時將 **[!UICONTROL 出現「建立計算欄位]** 」面板。 左側對話方塊包含計算欄位中支援的欄位、函式和運算子。 選擇一個頁籤，開始向表達式編輯器添加函式、欄位或運算子。
 
