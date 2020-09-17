@@ -5,7 +5,7 @@ title: Jupyter筆記本中的查詢服務
 topic: Tutorial
 description: Adobe Experience Platform可讓您將查詢服務整合到JupyterLab中，做為標準功能，在資料科學工作區中使用結構化查詢語言(SQL)。 本教學課程示範常見使用案例的SQL查詢範例，以探索、轉換和分析Adobe Analytics資料。
 translation-type: tm+mt
-source-git-commit: 43d568a401732a753553847dee1b4a924fcc24fd
+source-git-commit: 3876c33a2d20481f45bd12eda3921898e9e65654
 workflow-type: tm+mt
 source-wordcount: '826'
 ht-degree: 1%
@@ -37,7 +37,7 @@ ht-degree: 1%
 
 1. 在 [[!DNL Experience Platform]](https://platform.adobe.com)，從左側導覽欄 **[!UICONTROL 瀏覽至Notebooks]** 。 請讓JupyterLab載入。
 
-   ![](../images/jupyterlab/query/jupyterlab_launcher.png)
+   ![](../images/jupyterlab/query/jupyterlab-launcher.png)
 
    >[!NOTE]
    >
@@ -289,6 +289,6 @@ ORDER  BY Count DESC
 LIMIT  10;
 ```
 
-## 下一步 <!-- omit in toc -->
+## 後續步驟
 
 本教程演示了在筆記型電腦中使用的一些 [!DNL Query Service] 示例使 [!DNL Jupyter] 用案例。 請依循「 [使用Jupyter Notebooks](./analyze-your-data.md) 」教學課程分析資料，以瞭解如何使用資料存取SDK執行類似作業。
