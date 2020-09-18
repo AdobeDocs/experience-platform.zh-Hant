@@ -5,7 +5,7 @@ title: Jupyter筆記本中的查詢服務
 topic: Tutorial
 description: Adobe Experience Platform可讓您將查詢服務整合到JupyterLab中，做為標準功能，在資料科學工作區中使用結構化查詢語言(SQL)。 本教學課程示範常見使用案例的SQL查詢範例，以探索、轉換和分析Adobe Analytics資料。
 translation-type: tm+mt
-source-git-commit: 69c466658e1cb41f4da957148e63b962ad975a21
+source-git-commit: f1af460ca139d6105e8e6bbbf62809d72ef730ee
 workflow-type: tm+mt
 source-wordcount: '826'
 ht-degree: 1%
@@ -31,7 +31,7 @@ ht-degree: 1%
    - [[!DNL體驗資料模型(XDM)和XDM系統]](../../xdm/home.md)
    - [[!DNL查詢服務]](../../query-service/home.md)
    - [[!DNL查詢服務SQL語法]](../../query-service/sql/overview.md)
-   - [Adobe Analytics]
+   - Adobe Analytics
 
 ## 存取 [!DNL JupyterLab] 和 [!DNL Query Service] {#access-jupyterlab-and-query-service}
 
