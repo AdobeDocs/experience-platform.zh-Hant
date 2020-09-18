@@ -5,9 +5,9 @@ title: 準備資料以用於智慧型服務
 topic: Intelligent Services
 description: '為了讓智慧型服務能夠從行銷事件資料中發掘見解，資料必須以標準結構進行語義豐富和維護。 智慧型服務運用Experience Data Model(XDM)架構來達成此目標。 具體來說，Intelligent Services中使用的所有資料集都必須符合Consumer ExperienceEvent(CEE)XDM架構。 '
 translation-type: tm+mt
-source-git-commit: 1bb896f7629d7b71b94dd107eeda87701df99208
+source-git-commit: d9bf87e41fe002ac1d70a241b48c7b9fd1139d6c
 workflow-type: tm+mt
-source-wordcount: '1980'
+source-wordcount: '1979'
 ht-degree: 0%
 
 ---
@@ -238,7 +238,7 @@ CEE混合內有幾個關鍵欄位，為了產生有用的見解，應 [!DNL Inte
 
 有關每個必填子欄位的完整資訊，請 `xdm:productListItems`參閱行銷 [說明](https://github.com/adobe/xdm/blob/797cf4930d5a80799a095256302675b1362c9a15/docs/reference/context/marketing.schema.md) 。
 
-## 對應和收錄資料(#mapping)
+## 對應和收錄資料 {#mapping}
 
 一旦您決定行銷事件資料是否可映射至CEE結構，下一步就是決定要放入哪些資料 [!DNL Intelligent Services]。 所有使用的歷 [!DNL Intelligent Services] 史資料都必須落在資料四個月的最短時段內，加上預期做為回顧時段的天數。
 
