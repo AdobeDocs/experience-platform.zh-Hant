@@ -5,7 +5,7 @@ title: 使用Jupyter筆記型電腦建立配方
 topic: Tutorial
 description: 本教學課程將涵蓋兩個主要部分。 首先，您將使用JupyterLab Notebook中的範本建立機器學習模型。 接下來，您將在JupyterLab中練習筆記本至配方工作流程，以便在Data Science Workspace中建立配方。
 translation-type: tm+mt
-source-git-commit: 3876c33a2d20481f45bd12eda3921898e9e65654
+source-git-commit: d9bf87e41fe002ac1d70a241b48c7b9fd1139d6c
 workflow-type: tm+mt
 source-wordcount: '2335'
 ht-degree: 0%
@@ -38,7 +38,7 @@ Recipe Builder  筆記型電腦可讓您在筆記型電腦中執行訓練和計�
 
 當您從啟動器按一下Recipe Builder筆記型電腦時，就會在標籤中開啟筆記型電腦。 筆記本中使用的模板是Python Retail Sales Forecasting Recipe，也可以在此公共儲存庫 [中找到](https://github.com/adobe/experience-platform-dsw-reference/tree/master/recipes/python/retail/)
 
-您會注意到，在工具列中有三個額外的動作，即 **[!UICONTROL 訓練]**、 **[!UICONTROL 分數]****[!UICONTROL 和建立方式]**。 這些圖示只會出現在 [!UICONTROL Recipe Builder筆記本中] 。 在筆記型電腦中建立配方後，有關這 [些動作的詳細資訊，請參閱訓練與計分區](#training-and-scoring) 。
+您會注意到，在工具列中有三個額外的動作，即 **[!UICONTROL 訓練]**、 **[!UICONTROL 分數]**&#x200B;和 **[!UICONTROL 建立方式]**。 這些圖示只會出現在 [!UICONTROL Recipe Builder筆記本中] 。 在筆記型電腦中建立配方後，有關這 [些動作的詳細資訊，請參閱訓練與計分區](#training-and-scoring) 。
 
 ![](../images/jupyterlab/create-recipe/toolbar_actions.png)
 
@@ -303,7 +303,7 @@ df.dropna(0, inplace=True)
 > 
 >_功能_ ，是指機器學習模型用來預測標籤的輸入變 _數_。
 
-功能 `train()` 應包括訓練模型和返回訓練模型。 scikit-learn使用指南文檔中提供 [了一些不同型號的示例](https://scikit-learn.org/stable/user_guide.html)。
+功能 `train()` 應包括訓練模型和返回訓練模型。 scikit-learn使用指南檔案中提供 [了一些不同型號的示例](https://scikit-learn.org/stable/user_guide.html)。
 
 在選擇您的訓練模型後，您會將x和y訓練資料集符合模型，而函式會傳回已訓練的模型。 顯示此情況的範例如下：
 
