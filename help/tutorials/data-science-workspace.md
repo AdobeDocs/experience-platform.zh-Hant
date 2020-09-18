@@ -5,9 +5,9 @@ title: 資料科學工作區教學課程
 topic: tutorial
 description: Adobe Experience Platform Data Science Workspace運用機器學習和人工智慧，從您的資料建立見解。 Data Science Workspace整合至Adobe Experience Platform，可協助您透過Adobe解決方案使用內容和資料資產進行預測。
 translation-type: tm+mt
-source-git-commit: d3ece56d10b1940a5992906a65a50ffe2f7e4346
+source-git-commit: 10c9ce66b0fb3b5d1be931f37d95d283673bef15
 workflow-type: tm+mt
-source-wordcount: '1210'
+source-wordcount: '1297'
 ht-degree: 0%
 
 ---
@@ -41,10 +41,18 @@ API [!DNL Sensei Machine Learning] 為資料科學家提供機制來組織和管
 - 存取並瞭解介 [!DNL JupyterLab] 面。
 - 瞭解程式碼儲存格和內部的可用內核 [!DNL JupyterLab]。
 - 瞭解 [!DNL Python]/R中的GPU和記憶體伺服器組態。
-- 使用筆記型電 [!DNL Platform] 腦讀取和查詢資料。
-- 瞭解筆記型電腦的資料限制。
 
 若要進一步瞭解，請造訪 [JupyterLab使用指南](../data-science-workspace/jupyterlab/overview.md)。
+
+## JupyterLab筆記型電腦中的資料存取
+
+Data Science Workspace的JupyterLab目前支援R、PySpark和Scala [!DNL Python]的筆記型電腦。 每個支援的內核都提供內置功能，允許您從筆記本內的資料集中讀取平台資料。 但是，對分頁資料的支援僅限於 [!DNL Python] 和R筆記本。 本指南重點介紹如何使用JupyterLab筆記型電腦訪問資料。
+
+**本指南將幫助您：**
+- 使用Python、R、PySpark或Scala筆記型電腦讀取、寫入和查詢平台資料。
+- 瞭解每種筆記本類型的讀取限制。
+
+若要進一步瞭解，請造訪 [JupyterLab筆記型電腦資料存取開發人員指南](../data-science-workspace/jupyterlab/access-notebook-data.md)
 
 ## 封裝製作配方的 [!DNL Docker] 來源檔案
 
