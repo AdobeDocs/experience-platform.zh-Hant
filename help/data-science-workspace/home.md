@@ -5,9 +5,9 @@ title: 資料科學工作區概觀
 topic: overview
 description: 本指南概述與Data Science Workspace相關的主要概念。
 translation-type: tm+mt
-source-git-commit: f8d13b305a61f8606c4fa1ceee6d4518b5d83fda
+source-git-commit: 581d11bdb934f46c53a6703829b4dc470076e195
 workflow-type: tm+mt
-source-wordcount: '2584'
+source-wordcount: '2578'
 ht-degree: 0%
 
 ---
@@ -188,7 +188,7 @@ Adobe Experience Platform中的所有資料都符合標準化的XDM架構，毋�
 
 ### 試用配方
 
-透過整合核心機器學習演算法的配方，許多配方例項可以使用單一配方來建立。 這些方式例項稱為模型。 模型需要訓練和評估以優化其運行效率和效能，這一過程通常由試驗和錯誤組成。
+有了整合核心機器學習演算法的配方，許多配方例項都可以使用單一配方來建立。 這些方式例項稱為模型。 模型需要訓練和評估以優化其運行效率和效能，這一過程通常由試驗和錯誤組成。
 
 ![](./images/home/recipe_hiearchy_ui.png)
 
@@ -196,7 +196,7 @@ Adobe Experience Platform中的所有資料都符合標準化的XDM架構，毋�
 
 ![](./images/home/evaluation_metrics.png)
 
-請造 [訪本節](https://www.adobe.io/apis/experienceplatform/home/tutorials/data-science-workspace/dsw-tutorials/trainmodel.html) ，以取得如何在中訓練和評估模型的教學課程 [!DNL Data Science Workspace]。
+請造訪 [API](./models-recipes/train-evaluate-model-api.md) 或 [UI教學課程，以瞭解如何在中訓練和評估模型](./models-recipes/train-evaluate-model-ui.md)[!DNL Data Science Workspace]。
 
 ### 實施模型
 
@@ -206,7 +206,7 @@ Adobe Experience Platform中的所有資料都符合標準化的XDM架構，毋�
 
 ## 後續步驟
 
-[!DNL Data Science Workspace] 有助於簡化資料科學工作流程，從資料收集到演算法，到智慧服務，讓所有技能等級的資料科學家都能使用。 使用精巧的工 [!DNL Data Science Workspace] 具，您可以大幅縮短從資料到深入見解的時間。
+[!DNL Data Science Workspace] 有助於簡化和簡化資料科學工作流程，從資料收集到演算法，到智慧服務，讓所有技能等級的資料科學家都能使用。 使用精巧的工 [!DNL Data Science Workspace] 具，您可以大幅縮短從資料到深入見解的時間。
 
 更重要的 [!DNL Data Science Workspace] 是，將Adobe領先行銷平台的資料科學與演算法最佳化功能交由企業資料科學家負責。 企業首次將專屬的演算法帶入平台，運用Adobe強大的機器學習和人工智慧功能，大規模地提供高度個人化的客戶體驗。
 
