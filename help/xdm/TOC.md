@@ -5,9 +5,9 @@ user-guide-title: 體驗資料模型(XDM)系統說明
 breadcrumb-title: Data Model (XDM) Guide
 user-guide-description: Use standard classes and mixins to build a robust schema-based data model, standardizing your experience data into a common representation for use in all downstream Platform services.
 translation-type: tm+mt
-source-git-commit: c7a614dd0e51b13bb9df725ec811c4bc860116eb
+source-git-commit: dde48bb5d8c77757e726abb62d0c74e96955c5a7
 workflow-type: tm+mt
-source-wordcount: '115'
+source-wordcount: '119'
 ht-degree: 6%
 
 ---
@@ -18,6 +18,7 @@ ht-degree: 6%
 * [XDM系統概述](home.md)
 * XDM架構 {#schema}
    * [架構構成基礎](schema/composition.md)
+   * [XDM欄位類型約束](schema/field-constraints.md)
    * [XDM欄位字典](schema/field-dictionary.md)
    * 架構使用案例 {#use-cases}
       * [隱私權許可混合](schema/privacy-consent.md)
