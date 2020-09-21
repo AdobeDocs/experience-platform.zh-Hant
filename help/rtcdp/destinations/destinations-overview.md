@@ -2,12 +2,12 @@
 keywords: RTCDP;CDP;Real-time Customer Data Platform;real time customer data platform;real time cdp;cdp;destinations;destination;rtcdp
 title: 目的地概述
 seo-title: 目的地概述
-description: 目標是與目標平台預先建立的整合，可讓即時客戶資料平台順暢地啟動資料。 您可以使用Adobe即時客戶資料平台中的「目標」來啟用您已知和未知的跨通道行銷宣傳、電子郵件宣傳、目標廣告及許多其他使用案例資料。
+description: 使用Adobe Experience Platform中的目標，針對跨通道行銷宣傳、電子郵件宣傳、目標廣告和許多其他使用案例，啟用您已知和未知的資料。
 seo-description: 目標是與目標平台預先建立的整合，可讓即時客戶資料平台順暢地啟動資料。 您可以使用Adobe即時客戶資料平台中的「目標」來啟用您已知和未知的跨通道行銷宣傳、電子郵件宣傳、目標廣告及許多其他使用案例資料。
 translation-type: tm+mt
-source-git-commit: 22bca041673cec5eee54ed4234aba19eca470441
+source-git-commit: 5c3016e822ea23407af5de525c27785df8e2f795
 workflow-type: tm+mt
-source-wordcount: '528'
+source-wordcount: '504'
 ht-degree: 0%
 
 ---
