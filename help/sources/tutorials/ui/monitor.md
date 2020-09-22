@@ -5,10 +5,10 @@ solution: Experience Platform
 title: 監視帳戶和資料流
 topic: overview
 translation-type: tm+mt
-source-git-commit: 20c3037295b49cba45fcc5901803107dea26b3b2
+source-git-commit: 8f752d6a08496f9583627781d9143ee7f9159bf0
 workflow-type: tm+mt
-source-wordcount: '1014'
-ht-degree: 0%
+source-wordcount: '1097'
+ht-degree: 1%
 
 ---
 
@@ -72,7 +72,18 @@ Adobe Experience Platform中的來源連接器可讓您依計畫吸收外部來�
 
 ![目錄資料流](../../images/tutorials/monitor/catalog-dataflows.png)
 
-將顯示現有資料流清單。 本頁列出了可查看的資料流，包括有關其源、用戶名、資料流數和狀態的資訊。 選擇左上角的漏斗圖示進行排序。
+將顯示現有資料流清單。 本頁列出了可查看的資料流，包括有關其源、用戶名、資料流數和狀態的資訊。
+
+如需狀態的詳細資訊，請參閱下表：
+
+| 狀態 | 說明 |
+| ------ | ----------- |
+| 啟用 | 狀 `Enabled` 態表示資料流處於活動狀態，並正在根據提供的時間表接收資料。 |
+| 停用 | 狀 `Disabled` 態表示資料流處於非活動狀態且未吸收任何資料。 |
+| 正在處理 | 狀 `Processing` 態表示資料流尚未激活。 建立新資料流後，通常會立即出現此狀態。 |
+| 錯誤 | 狀態 `Error` 表示資料流的激活過程已中斷。 |
+
+選擇左上角的漏斗圖示進行排序。
 
 ![dataflows-list](../../images/tutorials/monitor/dataflows-list.png)
 
