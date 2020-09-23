@@ -1,11 +1,10 @@
 ---
 keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API
-solution: Adobe Experience Platform
 title: 設定檔詳細資訊自訂
 description: '本指南提供逐步指示，以自訂在Adobe Experience Platform UI中顯示即時客戶個人檔案資料的方式。 '
 topic: guide
 translation-type: tm+mt
-source-git-commit: 52cccd7436e203725a9fb4be8406332d8f23a71d
+source-git-commit: 59cf089a8bf7ce44e7a08b0bb1d4562f5d5104db
 workflow-type: tm+mt
 source-wordcount: '1167'
 ht-degree: 0%
@@ -91,7 +90,7 @@ ht-degree: 0%
 
 ![](../images/profile-customization/profiles-add-fields-new-widget.png)
 
-當您返回「編輯介 [!UICONTROL 面工具集] 」畫面時，卡片上的屬性清單應反映您在上一個畫面中的選擇。 您也可以視需要重新排序及移除卡片屬性。
+當您返回「編輯 [!UICONTROL 介面工具集] 」畫面時，卡片上的屬性清單應反映您在上一個畫面中的選擇。 您也可以視需要重新排序及移除卡片屬性。
 
 若要儲存新卡片 **[!UICONTROL ，您必須先提供卡片標題]**，然後才能選取「 **[!UICONTROL Save]** 」（儲存）並完成卡片建立程式。
 
