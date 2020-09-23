@@ -5,9 +5,9 @@ title: 在UI中為客戶成功連接器配置資料流
 topic: overview
 description: 資料流是從源中檢索資料並將資料收錄到資料集的計畫 [!DNL Platform] 任務。 本教程提供使用客戶成功帳戶配置新資料流的步驟。
 translation-type: tm+mt
-source-git-commit: ad9b52e46d3eb4f6ed7774e4cbcb031a52801b49
+source-git-commit: 63eb8407617cda64f3f3b0cefd6bf427314e0216
 workflow-type: tm+mt
-source-wordcount: '1434'
+source-wordcount: '1483'
 ht-degree: 0%
 
 ---
@@ -67,7 +67,11 @@ ht-degree: 0%
 
 通過在「選擇方案」搜索欄中輸入方案名稱，可以附加 **[!UICONTROL 方案]** 欄位。 您也可以選擇下拉式圖示，查看現有結構的清單。 或者，您也可以選擇「 **[!UICONTROL 進階搜尋]** 」來存取現有結構的畫面，包括其各自的詳細資料。
 
-![create-new-dataset](../../../images/tutorials/dataflow/all-tabular/new-target-dataset.png)
+在此步驟中，您可以啟用資料集， [!DNL Real-time Customer Profile] 並建立實體屬性和行為的整體檢視。 所有啟用資料集的資料都將包含在中，並 [!DNL Profile] 在保存資料流時應用更改。
+
+切換描 **[!UICONTROL 述檔資料集]** 按鈕，以啟用您的目標資料集 [!DNL Profile]。
+
+![create-new-dataset](../../../images/tutorials/dataflow/crm/new-dataset.png)
 
 將出 **[!UICONTROL 現「選擇模式]** 」對話框。 選擇要應用於新資料集的模式，然後按一下「完 **[!UICONTROL 成」]**。
 
