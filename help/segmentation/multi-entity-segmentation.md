@@ -5,9 +5,9 @@ title: 多實體分段
 topic: overview
 description: 多實體分段是指能夠根據產品、商店或其他非描述檔類別，以額外資料擴充描述檔資料。 連線後，其他類別的資料就會變成描述檔架構的原生資料。
 translation-type: tm+mt
-source-git-commit: 8568c55003127a295acff9cfbbc3bbf6005e7a51
+source-git-commit: 4dd5a91146b116953ba180e3f39d24b4e1ec289e
 workflow-type: tm+mt
-source-wordcount: '620'
+source-wordcount: '671'
 ht-degree: 0%
 
 ---
@@ -45,14 +45,16 @@ ht-degree: 0%
 
 ### 定義關係
 
-在體驗資料模型(XDM)架構的結構中定義關係是建立多實體區段的不可或缺部分。 此過程可以使用方案註冊表API或方案編輯器完成。 如需說明如何定義兩個結構之間的關係的詳細步驟，請從下列教學課程中選擇：
+在體驗資料模型(XDM)架構的結構中定義關係是建立多實體區段的不可或缺部分。 對於關係，目標中的欄位需要標籤為該方案的主標識。 標識只能標籤在字串上，不能標籤在陣列上。 此外，關係不一定需要一對一，因為您可以將個人檔案和體驗事件連接至多個目標。
+
+可使用方案註冊表API或方案編輯器來定義關係。 如需說明如何定義兩個結構之間的關係的詳細步驟，請從下列教學課程中選擇：
 
 * [使用API定義兩個結構之間的關係](../xdm/tutorials/relationship-api.md)
 * [使用架構編輯器UI定義兩個架構之間的關係](../xdm/tutorials/relationship-ui.md)
 
 ### 建立多實體區段
 
-定義了必要的XDM關係後，就可以開始構建多實體段。 此程式可使用區段API或區段產生器UI來完成。 如需詳細資訊，請從下列指南中選擇：
+定義了必要的XDM關係後，就可以開始構建多實體段。 這可以使用區段API或區段產生器UI來完成。 如需詳細資訊，請從下列指南中選擇：
 
 * [使用區段API建立區段](./tutorials/create-a-segment.md)
 * [使用區段產生器UI建立區段](./ui/overview.md)
