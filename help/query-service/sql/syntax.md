@@ -5,9 +5,9 @@ title: SQL語法
 topic: syntax
 description: 本文檔顯示查詢服務支援的SQL語法。
 translation-type: tm+mt
-source-git-commit: 041165f501d35b811202362b524523b103d18113
+source-git-commit: 2672d0bdf1f34deb715415e7b660a35076edb06b
 workflow-type: tm+mt
-source-wordcount: '1982'
+source-wordcount: '2004'
 ht-degree: 1%
 
 ---
@@ -115,10 +115,10 @@ SELECT statement 2
 下列語法定義 `CREATE TABLE AS SELECT` (CTAS)查詢，支援 [!DNL Query Service]:
 
 ```sql
-CREATE TABLE table_name [ WITH (schema='target_schema_title') ] AS (select_query)
+CREATE TABLE table_name [ WITH (schema='target_schema_title', rowvalidation='false') ] AS (select_query)
 ```
 
-其中 `target_schema_title` 是XDM架構的標題。 僅當希望對由CTAS查詢建立的新資料集使用現有XDM模式時，才使用此子句。
+其中`target_schema_title` ，是XDM架構的標題。 僅當希望對由CTAS查詢建立的新資料集使用現有XDM模式時，才使用此子句`rowvalidation` ，指定用戶是否希望對為建立的新資料集所提取的每個新批進行行級別驗證。 預設值為&#39;false&#39;
 
 和 `select_query` 是 `SELECT` 一個語句，其語法在本文中定義。
 
