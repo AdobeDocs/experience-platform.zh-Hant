@@ -1,10 +1,9 @@
 ---
 keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API
-solution: Adobe Experience Platform
 title: 即時客戶個人檔案疑難排解指南
 topic: guide
 translation-type: tm+mt
-source-git-commit: 94fd6ee324b35acb7ef1185f7851d76d76f3e91c
+source-git-commit: 59cf089a8bf7ce44e7a08b0bb1d4562f5d5104db
 workflow-type: tm+mt
 source-wordcount: '983'
 ht-degree: 0%
@@ -36,7 +35,7 @@ ht-degree: 0%
 
 ### 如果我已將資料擷取到Platform中，我是否可將它提供至Profile商店？
 
-如果資料已收錄至非描述檔資料集，您必須將該資料重新收錄至啟用描述檔的資料集，才能在描述檔儲存中使用。 可以為描述檔啟用現有資料集，但是在該設定之前所擷取的任何資料仍不會出現在描述檔儲存中。
+如果資料已收錄至非描述檔資料集，您必須將該資料重新收錄至啟用描述檔的資料集，才能在描述檔儲存中使用。 雖然可以啟用現有資料集的描述檔，但是在設定之前所擷取的任何資料仍不會出現在描述檔儲存中。
 
 如果您想要將先前擷取的資料新增至描述檔存放區，請依照資料集設定教學課程 [](./tutorials/dataset-configuration.md) ，建立新的資料集或轉換要啟用描述檔的現有資料集，然後將所需的資料重新收錄至該資料集。
 
@@ -152,5 +151,5 @@ ht-degree: 0%
 
 | 端點 | 內容類型 |
 | --- | --- |
-| `/config/projections` | application/vnd.adobe.platform.projectionConfig+json; version=1 |
-| `/config/destinations` | application/vnd.adobe.platform.projectionDestination+json; version=1 |
+| `/config/projections` | application/vnd.adobe.platform.projectionConfig+json;version=1 |
+| `/config/destinations` | application/vnd.adobe.platform.projectionDestination+json;version=1 |
