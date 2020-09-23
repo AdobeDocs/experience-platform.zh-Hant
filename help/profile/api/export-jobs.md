@@ -1,10 +1,9 @@
 ---
 keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API
-solution: Adobe Experience Platform
 title: 匯出工作——即時客戶個人檔案API
 topic: guide
 translation-type: tm+mt
-source-git-commit: 86ded28b1830d3607c8b5214c8d31dfcbf446252
+source-git-commit: 59cf089a8bf7ce44e7a08b0bb1d4562f5d5104db
 workflow-type: tm+mt
 source-wordcount: '1494'
 ht-degree: 2%
@@ -142,7 +141,7 @@ curl -X POST \
 | `mergePolicy` | *（可選）* 指定用於管理導出資料的合併策略。 當有多個區段要匯出時，請加入此參數。 |
 | `mergePolicy.id` | 合併策略的ID。 |
 | `mergePolicy.version` | 要使用的合併策略的特定版本。 省略此值將預設為最新版本。 |
-| `additionalFields.eventList` | *（可選）* ，提供下列一或多個設定，以控制為子對象或關聯對象導出的時間系列事件欄位：<ul><li>`eventList.fields`: 控制要匯出的欄位。</li><li>`eventList.filter`: 指定限制關聯對象所包含結果的標準。 預期匯出所需的最低值，通常為日期。</li><li>`eventList.filter.fromIngestTimestamp`: 將時間序列事件篩選為在提供的時間戳記後所擷取的事件。 這不是事件時間本身，而是事件的擷取時間。</li></ul> |
+| `additionalFields.eventList` | *（可選）* ，提供下列一或多個設定，以控制為子對象或關聯對象導出的時間系列事件欄位：<ul><li>`eventList.fields`:控制要匯出的欄位。</li><li>`eventList.filter`:指定限制關聯對象所包含結果的標準。 預期匯出所需的最低值，通常為日期。</li><li>`eventList.filter.fromIngestTimestamp`:將時間序列事件篩選為在提供的時間戳記後所擷取的事件。 這不是事件時間本身，而是事件的擷取時間。</li></ul> |
 | `destination` | **（必要）** ，匯出資料的目標資訊：<ul><li>`destination.datasetId`: **（必要）** ，要匯出資料的資料集ID。</li><li>`destination.segmentPerBatch`: *（可選）* ，一個布爾值，如果未提供，則預設為 `false`。 值將所有 `false` 區段ID匯出為單一批次ID。 值將一個 `true` 區段ID匯出為一個批次ID。 請注意，將值設定為可能 `true` 會影響批導出效能。</li></ul> |
 | `schema.name` | **（必要）** ，與要匯出資料的資料集關聯的架構名稱。 |
 
@@ -443,7 +442,7 @@ curl -X POST \
 
 如需如何使用資料存取API存取和下載批次檔案的逐步指示，請依照資料存取教 [學課程](../../data-access/tutorials/dataset-data.md)。
 
-您也可以使用Adobe Experience Platform Query Service，存取成功匯出的即時客戶個人檔案資料。 使用UI或REST風格的API，查詢服務可讓您在資料湖中寫入、驗證及執行資料查詢。
+您也可以使用Adobe Experience Platform Query Service，存取成功匯出的即時客戶個人檔案資料。 使用UI或REST風格的API，查詢服務可讓您編寫、驗證及執行資料湖中資料的查詢。
 
 如需如何查詢觀眾資料的詳細資訊，請參閱查詢服 [務檔案](../../query-service/home.md)。
 
