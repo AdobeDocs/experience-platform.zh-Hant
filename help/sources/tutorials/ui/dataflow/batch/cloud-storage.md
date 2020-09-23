@@ -5,9 +5,9 @@ title: 在UI中為雲儲存批處理連接器配置資料流
 topic: overview
 description: 資料流是從源中檢索資料並將資料帶入平台資料集的計畫任務。 本教學課程提供使用雲端儲存帳戶設定新資料流的步驟。
 translation-type: tm+mt
-source-git-commit: a4fd95904159a7b3e9c420f720a315641fd6706f
+source-git-commit: 63eb8407617cda64f3f3b0cefd6bf427314e0216
 workflow-type: tm+mt
-source-wordcount: '1625'
+source-wordcount: '1674'
 ht-degree: 0%
 
 ---
@@ -81,7 +81,11 @@ ht-degree: 0%
 
 若要將資料新增至新資料集，請選取「 **[!UICONTROL 新資料集]** 」，並在提供的欄位中輸入資料集的名稱和說明。 要添加方案，可以在「選擇方案」對話框中輸入現 **[!UICONTROL 有方案]** 名稱。 或者，您也可以選擇「方 **[!UICONTROL 案」高級搜索]** ，以搜索適當的方案。
 
-![](../../../../images/tutorials/dataflow/cloud-storage/batch/use-new-dataset.png)
+在此步驟中，您可以啟用資料集， [!DNL Real-time Customer Profile] 並建立實體屬性和行為的整體檢視。 所有啟用資料集的資料都將包含在中，並 [!DNL Profile] 在保存資料流時應用更改。
+
+切換描 **[!UICONTROL 述檔資料集]** 按鈕，以啟用您的目標資料集 [!DNL Profile]。
+
+![](../../../../images/tutorials/dataflow/cloud-storage/batch/new-dataset.png)
 
 將出 **[!UICONTROL 現「選擇模式]** 」對話框。 選擇要應用於新資料集的模式，然後選擇「完 **[!UICONTROL 成」]**。
 
