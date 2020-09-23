@@ -1,11 +1,10 @@
 ---
 keywords: Experience Platform;segmentation;segmentation service;troubleshooting;API;seg;segment;Segment;search;segment search;
-solution: Adobe Experience Platform
 title: 區段搜尋端點
 topic: guide
 description: 「區段搜尋」可用來搜尋各種資料來源所包含的欄位，並幾乎即時傳回這些欄位。 本指南提供相關資訊，以協助您進一步瞭解區段搜尋，並包含使用API執行基本動作的範例API呼叫。
 translation-type: tm+mt
-source-git-commit: 17ef6c1c6ce58db2b65f1769edf719b98d260fc6
+source-git-commit: 59cf089a8bf7ce44e7a08b0bb1d4562f5d5104db
 workflow-type: tm+mt
 source-wordcount: '1179'
 ht-degree: 2%
@@ -173,7 +172,7 @@ GET /search/taxonomy?schema.name={SCHEMA}&namespace={NAMESPACE}&entityId={ENTITY
 | ---------- | ----------- | 
 | `schema.name={SCHEMA}` | **（必要）** ，其中{SCHEMA}包含與搜索對象關聯的方案類值。 目前僅支 `_xdm.context.segmentdefinition` 援。 |
 | `namespace={NAMESPACE}` | **（必要）** ，其中{NAMESPACE}包含您要在其中搜尋的命名空間。 |
-| `entityId={ENTITY_ID}` | **（必要）** ，您要取得相關結構資訊的搜尋物件ID，以{ENTITY_ID}指定。 |
+| `entityId={ENTITY_ID}` | **（必要）** ，您要取得相關結構資訊的搜尋物件ID，使用{ENTITY_ID}指定。 |
 
 **請求**
 
