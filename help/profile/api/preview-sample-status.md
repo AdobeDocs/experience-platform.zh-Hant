@@ -1,11 +1,10 @@
 ---
 keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API;preview;sample
-solution: Adobe Experience Platform
 title: 描述檔預覽——即時客戶描述檔API
 description: Adobe Experience Platform可讓您從多個來源收集客戶資料，為個別客戶建立強穩的統一個人檔案。 當啟用「即時客戶描述檔」的資料被收錄到「平台」中時，該資料會儲存在「描述檔」資料儲存區中。 隨著描述檔儲存區中記錄數的增加或減少，會執行範例工作，其中包含資料儲存區中有多少描述檔片段和合併的描述檔的相關資訊。 使用描述檔API，您可以預覽最新成功的範例，以及依資料集和身分命名空間來列出描述檔散發。
 topic: guide
 translation-type: tm+mt
-source-git-commit: 2edba7cba4892f5c8dd41b15219bf45597bd5219
+source-git-commit: 59cf089a8bf7ce44e7a08b0bb1d4562f5d5104db
 workflow-type: tm+mt
 source-wordcount: '1478'
 ht-degree: 1%
@@ -27,7 +26,7 @@ Adobe Experience Platform可讓您從多個來源收集客戶資料，為個別�
 
 ## 查看最後一個示例狀態 {#view-last-sample-status}
 
-您可以對端點執行GET請 `/previewsamplestatus` 求，以檢視您IMS組織上次成功執行範例工作的詳細資訊。 這包括範例中的描述檔總數，以及描述檔計數量度，或您的組織在Experience Platform中擁有的描述檔總數。 描述檔計數是在合併一些描述檔片段後產生，以針對每個個別客戶形成單一描述檔。 換言之，您的組織可能有多個與跨不同通道與品牌互動的單一客戶相關的描述檔片段，但這些片段會合併（根據預設合併政策），並傳回「1」個描述檔計數，因為這些片段都與同一個人相關。
+您可以對端點執行GET請 `/previewsamplestatus` 求，以檢視您IMS組織上次成功執行範例工作的詳細資料。 這包括範例中的描述檔總數，以及描述檔計數量度，或您的組織在Experience Platform中擁有的描述檔總數。 描述檔計數是在合併一些描述檔片段後產生，以針對每個個別客戶形成單一描述檔。 換言之，您的組織可能有多個與跨不同通道與品牌互動的單一客戶相關的描述檔片段，但這些片段會合併（根據預設合併政策），並傳回「1」個描述檔計數，因為這些片段都與同一個人相關。
 
 描述檔計數也包含具有屬性（記錄資料）的描述檔，以及僅包含時間系列（事件）資料的描述檔，例如Adobe Analytics描述檔。 當擷取描述檔資料時，系統會定期重新整理範例工作，以便提供平台內的最新描述檔總數。
 
