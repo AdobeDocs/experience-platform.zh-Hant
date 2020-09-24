@@ -2,10 +2,11 @@
 keywords: Experience Platform;package source files;Data Science Workspace;popular topics;Docker;docker image
 solution: Experience Platform
 title: 將來源檔案封裝至配方
-topic: Tutorial
+topic: tutorial
+type: Tutorial
 description: 本教學課程提供如何將提供的零售銷售範例來源檔案封裝成封存檔案的指示，此檔案可依循UI或API中的方式匯入工作流程，用來在Adobe Experience Platform Data Science Workspace中建立方式。
 translation-type: tm+mt
-source-git-commit: 43d568a401732a753553847dee1b4a924fcc24fd
+source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
 source-wordcount: '1156'
 ht-degree: 0%
@@ -43,7 +44,7 @@ Docker映像允許開發人員將應用程式與其所需的所有部件（如�
 
 ![](../images/models-recipes/package-source-files/import.png)
 
-「設 *定* 」頁面隨即開啟。 提供適當的 *配方名稱*，例如「零售銷售配方」，並選擇性地提供說明或檔案URL。 完成後，按一下「 **[!UICONTROL Next（下一步）]**」。
+「設 *定* 」頁面隨即開啟。 提供適當的 *配方名稱*，例如「零售銷售配方」，並選擇性地提供說明或檔案URL。 完成後，按一下「 **[!UICONTROL Next」（下一步）]**。
 
 ![](../images/models-recipes/package-source-files/configure.png)
 
