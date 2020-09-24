@@ -3,9 +3,10 @@ keywords: Experience Platform;home;popular topics;segment evaluation;Segmentatio
 solution: Experience Platform
 title: 評估區段
 topic: tutorial
+type: Tutorial
 description: 本檔案提供使用區段API評估區段及存取區段結果的教學課程。
 translation-type: tm+mt
-source-git-commit: 17ef6c1c6ce58db2b65f1769edf719b98d260fc6
+source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
 source-wordcount: '1560'
 ht-degree: 0%
