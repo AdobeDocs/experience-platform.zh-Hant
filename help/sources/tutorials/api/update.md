@@ -3,9 +3,10 @@ keywords: Experience Platform;home;popular topics; flow service; update connecti
 solution: Experience Platform
 title: 使用Flow Service API更新連線資訊
 topic: overview
+type: Tutorial
 description: 本教學課程涵蓋使用Flow Service API更新連線資訊的步驟，包括其名稱、說明和認證。
 translation-type: tm+mt
-source-git-commit: 81ce43bf705bea65b523ac612fae5961e8eeb322
+source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
 source-wordcount: '713'
 ht-degree: 2%
