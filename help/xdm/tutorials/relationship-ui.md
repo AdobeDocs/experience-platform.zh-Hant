@@ -3,9 +3,10 @@ keywords: Experience Platform;home;popular topics;ui;UI;XDM;XDM system;;experien
 solution: Experience Platform
 title: 使用架構架構編輯器定義兩個架構之間的關係
 description: 本檔案提供教學課程，可讓您使用Experience Platform使用者介面中的「架構編輯器」來定義兩個架構之間的關係。
-topic: tutorials
+topic: tutorial
+type: Tutorials
 translation-type: tm+mt
-source-git-commit: 348ac63c0b13ddf87bf786a42688962b0b220ded
+source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
 source-wordcount: '910'
 ht-degree: 0%
