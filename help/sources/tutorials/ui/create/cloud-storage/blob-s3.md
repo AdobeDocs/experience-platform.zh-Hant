@@ -3,9 +3,10 @@ keywords: Experience Platform;home;popular topics;Amazon S3;Azure Blob
 solution: Experience Platform
 title: 在UI中建立Azure Blob或Amazon S3來源連接器
 topic: overview
+type: Tutorial
 description: 'Adobe Experience Platform中的來源連接器可讓您依計畫吸收外部來源的資料。 '
 translation-type: tm+mt
-source-git-commit: 0da686743e8bc57d310f7eff6f1bf812a8f31238
+source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
 source-wordcount: '135'
 ht-degree: 0%
