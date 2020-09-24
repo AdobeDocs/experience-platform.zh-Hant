@@ -3,9 +3,10 @@ keywords: Experience Platform;home;popular topics;Google Cloud Storage;google cl
 solution: Experience Platform
 title: 使用Flow Service API建立Google雲端儲存連接器
 topic: overview
+type: Tutorial
 description: 本教學課程使用Flow Service API來引導您完成將Experience Platform連接至Google雲端儲存帳戶的步驟。
 translation-type: tm+mt
-source-git-commit: 25f1dfab07d0b9b6c2ce5227b507fc8c8ecf9873
+source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
 source-wordcount: '520'
 ht-degree: 2%
