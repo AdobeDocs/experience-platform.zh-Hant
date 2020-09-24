@@ -3,9 +3,10 @@ keywords: Experience Platform;home;popular topics;Azure Event Hubs;Event Hubs;az
 solution: Experience Platform
 title: 在UI中建立Azure事件集線器來源連接器
 topic: overview
+type: Tutorial
 description: 本教學課程提供使用平台使用者介面驗證Azure事件集線器（以下稱為「事件集線器」）來源連接器的步驟。
 translation-type: tm+mt
-source-git-commit: 0da686743e8bc57d310f7eff6f1bf812a8f31238
+source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
 source-wordcount: '495'
 ht-degree: 1%
