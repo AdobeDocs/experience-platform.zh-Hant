@@ -2,10 +2,11 @@
 keywords: Experience Platform;optimize;model;Data Science Workspace;popular topics;model insights
 solution: Experience Platform
 title: 最佳化模型
-topic: Tutorial
+topic: tutorial
+type: Tutorial
 description: 模型洞察框架為資料科學家提供資料科學工作區中的工具，讓他們快速且知情地選擇以實驗為基礎的最佳機器學習模型。
 translation-type: tm+mt
-source-git-commit: 9ba229195892245d29fb4f17b9f2e5cd6c6ea567
+source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
 source-wordcount: '1249'
 ht-degree: 0%
@@ -166,6 +167,6 @@ class Evaluator(AbstractEvaluator):
 | 多類別分類 | -混淆矩 <br>陣——對於每個類： <br>-精確召回準 <br>確性- F-score（具體是F1、F2） | ROC曲線與混淆矩陣 |
 | 叢集（含地面真值） | - NMI（標準化互資訊得分）、AMI（調整後互資訊得分）<br>- RI（Rand指數）、ARI（調整後蘭德指數）<br>-同質性得分、完整性得分和V-measure<br>- FMI（Fowlkes-Mallows指數）<br>- Preprity<br>- Jacard指數 | 具有相對簇大小的簇和中心的簇圖反映了簇內的資料點 |
 | 群集（無地面真值） | -慣性<br>-剪影系數<br>- CHI（Calinski-Harabaz指數）<br>- DBI（Davies-Bouldin指數）<br>- Dunn指數 | 具有相對簇大小的簇和中心的簇圖反映了簇內的資料點 |
-| 建議 | -平均平均精度(MAP) <br>-標準化累積增益 <br>-平均倒數排名 <br>-度量K | 待定 |
+| 建議 | -平均平均精度(MAP) <br>-標準化累積增益 <br>-平均倒數排名 <br>-度量K | TBD |
 | TensorFlow使用案例 | 張量流模型分析(TFMA) | 深度比較神經網路模型比較／可視化 |
 | 其他／錯誤擷取機制 | 模型作者定義的自訂量度邏輯（及對應的評估圖表）。 範本不相符時的流暢錯誤處理 | 具有評估度量關鍵值配對的表格 |
