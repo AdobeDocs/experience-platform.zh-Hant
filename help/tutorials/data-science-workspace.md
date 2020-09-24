@@ -3,9 +3,10 @@ keywords: Experience Platform;home;popular topics;dsw;DSW
 solution: Experience Platform
 title: 資料科學工作區教學課程
 topic: tutorial
+type: Tutorial
 description: Adobe Experience Platform Data Science Workspace運用機器學習和人工智慧，從您的資料建立見解。 Data Science Workspace整合至Adobe Experience Platform，可協助您透過Adobe解決方案使用內容和資料資產進行預測。
 translation-type: tm+mt
-source-git-commit: 10c9ce66b0fb3b5d1be931f37d95d283673bef15
+source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
 source-wordcount: '1297'
 ht-degree: 0%
