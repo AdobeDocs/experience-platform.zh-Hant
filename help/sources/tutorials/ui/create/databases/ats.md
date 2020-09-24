@@ -3,9 +3,10 @@ keywords: Experience Platform;home;popular topics;Azure Table Storage;azure tabl
 solution: Experience Platform
 title: 在UI中建立Azure表格儲存來源連接器
 topic: overview
+type: Tutorial
 description: 本教學課程提供使用平台使用者介面建立Azure表格儲存（以下稱為「ATS」）來源連接器的步驟。
 translation-type: tm+mt
-source-git-commit: f82dfee2c75a0b8b2ec1615266780b309152ead4
+source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
 source-wordcount: '494'
 ht-degree: 1%
