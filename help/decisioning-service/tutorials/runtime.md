@@ -3,9 +3,10 @@ keywords: Experience Platform;home;popular topics;decision events;decision event
 solution: Experience Platform
 title: 使用API搭配決策服務執行階段
 topic: tutorial
+type: Tutorial
 description: '本檔案提供使用Adobe Experience Platform API使用決策服務執行時期服務的教學課程。 '
 translation-type: tm+mt
-source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
+source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
 source-wordcount: '2017'
 ht-degree: 0%
