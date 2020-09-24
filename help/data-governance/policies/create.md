@@ -3,9 +3,10 @@ keywords: Experience Platform;home;popular topics;data governance;data usage pol
 solution: Experience Platform
 title: 建立資料使用原則
 topic: policies
+type: Tutorial
 description: 「原則服務API」可讓您建立和管理資料使用原則，以決定對包含特定資料使用標籤的資料可採取哪些行銷動作。 本檔案提供使用Policy Service API建立原則的逐步教學課程。
 translation-type: tm+mt
-source-git-commit: 0f3a4ba6ad96d2226ae5094fa8b5073152df90f7
+source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
 source-wordcount: '1209'
 ht-degree: 2%
