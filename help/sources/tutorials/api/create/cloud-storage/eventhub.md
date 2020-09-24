@@ -3,9 +3,10 @@ keywords: Experience Platform;home;popular topics;event hub;Azure event hub;Even
 solution: Experience Platform
 title: 使用流程服務API建立Azure事件集線器連接器
 topic: overview
+type: Tutorial
 description: 本教學課程使用Flow Service API來引導您完成將Experience Platform連接至Azure事件中樞帳戶的步驟。
 translation-type: tm+mt
-source-git-commit: 25f1dfab07d0b9b6c2ce5227b507fc8c8ecf9873
+source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
 source-wordcount: '559'
 ht-degree: 2%
