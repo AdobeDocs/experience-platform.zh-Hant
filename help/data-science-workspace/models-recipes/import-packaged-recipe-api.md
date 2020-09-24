@@ -2,10 +2,11 @@
 keywords: Experience Platform;import packaged recipe;Data Science Workspace;popular topics;recipes;api;sensei machine learning;create engine
 solution: Experience Platform
 title: 匯入封裝的方式(API)
-topic: Tutorial
+topic: tutorial
+type: Tutorial
 description: '本教學課程使用Sensei Machine Learning API來建立引擎，在使用者介面中也稱為「配方」。 '
 translation-type: tm+mt
-source-git-commit: 43d568a401732a753553847dee1b4a924fcc24fd
+source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
 source-wordcount: '981'
 ht-degree: 2%
