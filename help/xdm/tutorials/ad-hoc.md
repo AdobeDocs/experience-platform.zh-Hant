@@ -3,9 +3,10 @@ keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;;experi
 solution: Experience Platform
 title: 建立臨機結構
 description: 在特定情況下，可能需要建立Experience Data Model(XDM)架構，其中欄位的名稱僅限單一資料集使用。 這稱為「臨機」架構。 臨機結構描述用於Experience Platform的各種資料擷取工作流程，包括擷取CSV檔案並建立特定類型的來源連線。
-topic: tutorials
+topic: tutorial
+type: Tutorials
 translation-type: tm+mt
-source-git-commit: 74a4a3cc713cc068be30379e8ee11572f8bb0c63
+source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
 source-wordcount: '782'
 ht-degree: 2%
