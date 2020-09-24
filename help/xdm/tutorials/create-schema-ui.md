@@ -5,9 +5,9 @@ title: 使用結構編輯器建立架構
 topic: tutorials
 description: 本教學課程涵蓋使用Experience Platform中的架構編輯器建立架構的步驟。
 translation-type: tm+mt
-source-git-commit: 58e0ee234492731d5f875ab845fca11fcda3539b
+source-git-commit: f0d3aad649fa550443db0fc5168c848ae85fb459
 workflow-type: tm+mt
-source-wordcount: '3797'
+source-wordcount: '3835'
 ht-degree: 0%
 
 ---
@@ -143,7 +143,7 @@ UI中 [!UICONTROL 的] 「結構描述」工作區 [!DNL Platform] 提供了結�
 
 ![](../images/tutorials/create-schema/loyalty_details_structure.png)
 
-選 **[!UICONTROL 擇「]** 」旁的「添加」欄位[!DNL Loyalty Members]，在結構中建立新節點。 此節點（在此範例中稱為&quot;_tenantId&quot;）代表您IMS組織的租用戶ID，前面加上底線。 租用戶ID的存在表示您新增的欄位包含在您組織的命名空間中。
+選 **[!UICONTROL 擇「]** 」旁的「添加」欄位[!DNL Loyalty Members]，在結構中建立新節點。 此節點(在此 `_tenantId` 範例中呼叫)代表您IMS組織的租用戶ID，前面有底線。 租用戶ID的存在表示您新增的欄位包含在您組織的命名空間中。
 
 換言之，您新增的欄位對您的組織而言是獨一無二的，而且會儲存在您 [!DNL Schema Registry] 組織只能存取的特定區域。 您定義的欄位必須一律新增至您的租用戶名稱空間，以避免與其他標準類別、混合、資料類型和欄位的名稱產生衝突。
 
@@ -236,6 +236,10 @@ UI中 [!UICONTROL 的] 「結構描述」工作區 [!DNL Platform] 提供了結�
 如果您在架構中尋找特定欄位，也可以使用搜尋列來依名稱篩選顯示的欄位，而不論其下提供何種混音。
 
 ![](../images/tutorials/create-schema/search.png)
+
+>[!IMPORTANT]
+>
+>當顯示相符欄位時，搜尋函式會將任何選取的混合篩選納入考量。 如果搜尋查詢未顯示您預期的結果，您可能需要再次檢查您是否未篩選出任何相關混音。
 
 ## 將架構欄位設定為身份欄位 {#identity-field}
 
