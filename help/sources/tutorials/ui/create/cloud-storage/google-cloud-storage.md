@@ -3,9 +3,10 @@ keywords: Experience Platform;home;popular topics;Google Cloud Storage;google cl
 solution: Experience Platform
 title: Google Cloud儲存空間來源連接器(UI)
 topic: overview
+type: Tutorial
 description: 本教學課程提供使用平台使用者介面建立Google雲端儲存空間（以下稱為「GCS」）來源連接器的步驟。
 translation-type: tm+mt
-source-git-commit: 0da686743e8bc57d310f7eff6f1bf812a8f31238
+source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
 source-wordcount: '555'
 ht-degree: 1%
