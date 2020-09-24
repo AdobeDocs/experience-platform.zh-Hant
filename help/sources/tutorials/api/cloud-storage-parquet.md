@@ -3,11 +3,12 @@ keywords: Experience Platform;home;popular topics;data source connection
 solution: Experience Platform
 title: 使用Flow Service API從第三方雲端儲存系統內嵌鑲木地板資料
 topic: overview
+type: Tutorial
 description: 本教學課程使用Flow Service API來引導您逐步從協力廠商雲端儲存系統擷取鑲木地板資料。
 translation-type: tm+mt
-source-git-commit: 8f7ce97cdefd4fe79cb806e71e12e936caca3774
+source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
-source-wordcount: '1092'
+source-wordcount: '1088'
 ht-degree: 2%
 
 ---
@@ -36,17 +37,17 @@ ht-degree: 2%
 
 若要呼叫API，您必 [!DNL Platform] 須先完成驗證教 [學課程](../../../tutorials/authentication.md)。 完成驗證教學課程後，將提供所有 [!DNL Experience Platform] API呼叫中每個必要標題的值，如下所示：
 
-- 授權：生產者 `{ACCESS_TOKEN}`
-- x-api-key: `{API_KEY}`
-- x-gw-ims-org-id: `{IMS_ORG}`
+- `Authorization: Bearer {ACCESS_TOKEN}`
+- `x-api-key: {API_KEY}`
+- `x-gw-ims-org-id: {IMS_ORG}`
 
 中的所有資 [!DNL Experience Platform]源(包括屬於這些資源 [!DNL Flow Service])都隔離到特定的虛擬沙盒。 對API的所 [!DNL Platform] 有請求都需要一個標題，該標題會指定要在中執行的操作的沙盒名稱：
 
-- x-sandbox-name: `{SANDBOX_NAME}`
+- `x-sandbox-name: `{SANDBOX_NAME}`
 
 所有包含裝載(POST、PUT、PATCH)的請求都需要額外的媒體類型標題：
 
-- 內容類型： `application/json`
+- `Content-Type: application/json`
 
 ## 建立連線
 
