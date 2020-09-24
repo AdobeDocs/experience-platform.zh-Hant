@@ -3,9 +3,10 @@ keywords: Experience Platform;home;popular topics;DB2;db2;IBM DB2;ibm db2
 solution: Experience Platform
 title: 在UI中建立IBM DB2源連接器
 topic: overview
+type: Tutorial
 description: 本教程提供使用平台用戶介面建立IBM DB2（以下稱為「DB2」）源連接器的步驟。
 translation-type: tm+mt
-source-git-commit: f82dfee2c75a0b8b2ec1615266780b309152ead4
+source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
 source-wordcount: '536'
 ht-degree: 0%
