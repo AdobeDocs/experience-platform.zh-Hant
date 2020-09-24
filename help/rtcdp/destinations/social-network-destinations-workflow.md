@@ -1,11 +1,12 @@
 ---
 keywords: Facebook;facebook;Social network;Social Network;social network authentication;Social network authentication
 title: 社交網路目標工作流程
+type: Tutorial
 seo-title: 社交網路目標工作流程
 description: 連線至您的社交網路和帳戶的指示
 seo-description: 連線至您的社交網路和帳戶的指示
 translation-type: tm+mt
-source-git-commit: 2dfa46906374151628d46c309df724a59f8dc50e
+source-git-commit: 120ba866cf6e6509c51a29cb07e73550006fe5eb
 workflow-type: tm+mt
 source-wordcount: '501'
 ht-degree: 0%
