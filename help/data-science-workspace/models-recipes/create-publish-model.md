@@ -2,10 +2,11 @@
 keywords: Experience Platform;machine learning model;Data Science Workspace;popular topics;create and publish a model
 solution: Experience Platform
 title: 建立和發佈機器學習模型逐步說明
-topic: Tutorial
+topic: tutorial
+type: Tutorial
 description: Adobe Experience Platform Data Science Workspace提供使用預先建立的產品建議方式達成目標的方式。 請依照本教學課程，瞭解如何存取和瞭解您的零售資料、建立和最佳化機器學習模型，以及在資料科學工作區中產生見解。
 translation-type: tm+mt
-source-git-commit: 78f080fd7598799825c59a4fdfdcaf7d294560a3
+source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
 source-wordcount: '1595'
 ht-degree: 0%
