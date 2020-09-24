@@ -3,9 +3,10 @@ keywords: Experience Platform;home;popular topics;Azure Data Lake Storage Gen2;A
 solution: Experience Platform
 title: 在UI中建立Azure資料湖儲存Gen2來源連接器
 topic: overview
+type: Tutorial
 description: 本教學課程提供使用平台使用者介面驗證Azure Data Lake Storage Gen2（以下稱為「ADLS Gen2」）來源連接器的步驟。
 translation-type: tm+mt
-source-git-commit: 0da686743e8bc57d310f7eff6f1bf812a8f31238
+source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
 source-wordcount: '480'
 ht-degree: 1%
