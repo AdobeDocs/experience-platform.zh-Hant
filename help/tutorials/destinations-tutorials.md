@@ -3,9 +3,10 @@ keywords: Experience Platform;home;popular topics;destinations tutorial
 solution: Experience Platform
 title: 使用API建立目標並啟用資料
 topic: tutorial
+type: Tutorial
 description: 瞭解如何建立不同的目的地類型並啟用資料。
 translation-type: tm+mt
-source-git-commit: d3ece56d10b1940a5992906a65a50ffe2f7e4346
+source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
 source-wordcount: '78'
 ht-degree: 10%
