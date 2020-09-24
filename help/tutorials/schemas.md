@@ -3,9 +3,10 @@ keywords: Experience Platform;home;popular topics
 solution: Experience Platform
 title: XDM模式和描述符
 topic: tutorial
+type: Tutorial
 description: 標準化和互操作性是Adobe Experience Platform的主要概念。 Adobe推動的Experience Data Model(XDM)旨在標準化客戶體驗資料並定義客戶體驗管理的架構。 結構描述是Experience Platform中描述資料的標準方式，可讓符合結構的所有資料重複使用，而不會在組織間產生衝突，甚至可在多個組織間共用。
 translation-type: tm+mt
-source-git-commit: d3ece56d10b1940a5992906a65a50ffe2f7e4346
+source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
 source-wordcount: '473'
 ht-degree: 0%
