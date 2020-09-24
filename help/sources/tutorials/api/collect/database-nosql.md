@@ -3,9 +3,10 @@ keywords: Experience Platform;home;popular topics;third-party database;third par
 solution: Experience Platform
 title: 透過來源連接器和API，從協力廠商資料庫收集資料
 topic: overview
+type: Tutorial
 description: 本教學課程涵蓋從協力廠商資料庫擷取資料，並透過來源連接器和API將其匯入平台的步驟。
 translation-type: tm+mt
-source-git-commit: 6f4714561c2946a084eed4e89d3148df5b8044f5
+source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
 source-wordcount: '1650'
 ht-degree: 1%
