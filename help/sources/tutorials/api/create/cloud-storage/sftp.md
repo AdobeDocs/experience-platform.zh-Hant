@@ -6,9 +6,9 @@ topic: overview
 type: Tutorial
 description: 本教學課程使用Flow Service API來引導您完成將Experience Platform連接至SFTP（安全檔案傳輸通訊協定）伺服器的步驟。
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 781a26486a42f304308f567284cef53d591aa124
 workflow-type: tm+mt
-source-wordcount: '568'
+source-wordcount: '793'
 ht-degree: 2%
 
 ---
@@ -44,6 +44,8 @@ ht-degree: 2%
 | `host` | 與您的SFTP伺服器相關聯的名稱或IP位址。 |
 | `username` | 可存取您SFTP伺服器的使用者名稱。 |
 | `password` | SFTP伺服器的密碼。 |
+| `privateKeyContent` | Base64編碼的SSH私鑰內容。 SSH私鑰OpenSSH(RSA/DSA)格式。 |
+| `passPhrase` | 如果密鑰檔案或密鑰內容受密碼片語保護，則解密密鑰的密碼或密碼。 如果PrivateKeyContent受到密碼保護，則此參數必須與PrivateKeyContent的密碼短語一起使用，作為值。 |
 
 ### 讀取範例API呼叫
 
@@ -68,6 +70,10 @@ ht-degree: 2%
 ## 建立連線
 
 連接指定源，並包含該源的憑據。 每個SFTP帳戶只需要一個連線，因為它可用來建立多個來源連接器以匯入不同的資料。
+
+### 使用基本驗證建立SFTP連線
+
+若要使用基本驗證建立SFTP連線，請向 [!DNL Flow Service] API提出POST要求，同時提供您連線的 `host`、 `userName`和值 `password`。
 
 **API格式**
 
@@ -105,7 +111,62 @@ curl -X POST \
 | `auth.params.host` | SFTP伺服器的主機名稱。 |
 | `auth.params.username` | 與您的SFTP伺服器相關聯的使用者名稱。 |
 | `auth.params.password` | 與您的SFTP伺服器相關聯的密碼。 |
-| `connectionSpec.id` | STFP伺服器連接規範ID: `b7bf2577-4520-42c9-bae9-cad01560f7bc` |
+| `connectionSpec.id` | SFTP伺服器連接規範ID: `b7bf2577-4520-42c9-bae9-cad01560f7bc` |
+
+**回應**
+
+成功的響應返回新建立的連接的`id`唯一標識符()。 在下一個教學課程中，瀏覽您的SFTP伺服器時需要此ID。
+
+```json
+{
+    "id": "bf367b0d-3d9b-4060-b67b-0d3d9bd06094",
+    "etag": "\"1700cc7b-0000-0200-0000-5e3b3fba0000\""
+}
+```
+
+### 使用SSH公鑰驗證建立SFTP連接
+
+若要使用SSH公開金鑰驗證建立SFTP連線，請向 [!DNL Flow Service] API提出POST要求，同時提供您連線的 `host`、 `userName`、 `privateKeyContent`和值 `passPhrase`。
+
+**API格式**
+
+```http
+POST /connections
+```
+
+**請求**
+
+```shell
+curl -X POST \
+    'http://platform.adobe.io/data/foundation/flowservice/connections' \
+    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+    -H 'x-api-key: {API_KEY}' \
+    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-sandbox-name: {SANDBOX_NAME}' \
+    -H 'Content-Type: application/json' \
+    -d  "auth": {
+        "specName": "SSH PublicKey Authentication for sftp",
+        "params": {
+            "host": "{HOST_NAME}",
+            "userName": "{USER_NAME}",
+            "privateKeyContent": "{PRIVATE_KEY_CONTENT}",
+            "passPhrase": "{PASS_PHRASE}"
+        }
+    },
+    "connectionSpec": {
+        "id": "b7bf2577-4520-42c9-bae9-cad01560f7bc",
+        "version": "1.0"
+    }
+}
+```
+
+| 屬性 | 說明 |
+| -------- | ----------- |
+| `auth.params.host` | SFTP伺服器的主機名稱。 |
+| `auth.params.username` | 與您的SFTP伺服器相關聯的使用者名稱。 |
+| `auth.params.privateKeyContent` | base64編碼的SSH私鑰內容。 SSH私鑰OpenSSH(RSA/DSA)格式。 |
+| `auth.params.passPhrase` | 如果密鑰檔案或密鑰內容受密碼片語保護，則解密密鑰的密碼或密碼。 如果PrivateKeyContent受到密碼保護，則此參數必須與PrivateKeyContent的密碼短語一起使用，作為值。 |
+| `connectionSpec.id` | SFTP伺服器連接規範ID: `b7bf2577-4520-42c9-bae9-cad01560f7bc` |
 
 **回應**
 
