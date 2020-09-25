@@ -1,25 +1,28 @@
 ---
-keywords: facebook extensions;facebook extension;facebook destinations;facebook
+keywords: facebook extensions;facebook extension;facebook destinations;facebook;instagram;messenger;facebook messenger
 title: Facebook目標
 seo-title: Facebook目標
 description: 根據雜湊的電子郵件，啟用您Facebook宣傳的個人檔案，以鎖定受眾、個人化和抑制受眾。
 seo-description: 根據雜湊的電子郵件，啟用您Facebook宣傳的個人檔案，以鎖定受眾、個人化和抑制受眾。
 translation-type: tm+mt
-source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
+source-git-commit: 72ceb747bd4b278afc51dfb5ab6d6386d7b05c82
 workflow-type: tm+mt
-source-wordcount: '722'
-ht-degree: 2%
+source-wordcount: '758'
+ht-degree: 4%
 
 ---
 
 
-# [!DNL Facebook] 目的地
+# [!DNL Facebook] 目標
 
 ## 概述 {#overview}
 
 根據雜湊的電子郵件， [!DNL Facebook] 啟用您宣傳的個人檔案，以便鎖定受眾、個人化和抑制受眾。
 
+您可以使用此目標，針對各種應用程 [!DNL Facebook’s] 式系列（包括、和）所支 [!DNL Custom Audiences]援的受 [!DNL Facebook]眾進行定 [!DNL Instagram]位 [!DNL Audience Network][!DNL Messenger]。 在 [!DNL Facebook Ads Manager] 中的廣告版位層級會指出您選擇針對哪個應用程式執行行銷活動。
+
 ![即時CDP UI中的Facebook目標](/help/rtcdp/destinations/assets/facebook-destination.png)
+
 
 ## 使用案例
 
