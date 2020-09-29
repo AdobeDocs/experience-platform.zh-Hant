@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Adobe Experience Platform部分批次擷取概觀
 topic: overview
 translation-type: tm+mt
-source-git-commit: 01b1d9a0d0af82f5380bbc204e65b682d4a50ac1
+source-git-commit: 4652722b17a290c9ef53244498257eb4cb97ac6d
 workflow-type: tm+mt
-source-wordcount: '871'
+source-wordcount: '881'
 ht-degree: 2%
 
 ---
@@ -292,7 +292,15 @@ curl -X GET https://platform.adobe.io/data/foundation/catalog/batches/af838510-2
 >}
 >```
 
-## 部分批次擷取錯誤類型 {#appendix}
+## 下一步 {#next-steps}
+
+本教學課程說明如何監控部分批次擷取錯誤。 如需批次擷取的詳細資訊，請閱讀批次擷取開 [發人員指南](../batch-ingestion/api-overview.md)。
+
+## 附錄 {#appendix}
+
+本節提供有關擷取錯誤類型的補充資訊。
+
+### 部分批次擷取錯誤類型 {#partial-ingestion-types}
 
 部分批次擷取在擷取資料時有三種不同的錯誤類型：
 
@@ -379,7 +387,3 @@ curl -X GET https://platform.adobe.io/data/foundation/export/batches/01EFZ7W203P
     "_filename": "parsing_errors_0.json"
 }
 ```
-
-## 下一步 {#next-steps}
-
-本教學課程說明如何監控部分批次擷取錯誤。 如需批次擷取的詳細資訊，請閱讀批次擷取開 [發人員指南](../batch-ingestion/api-overview.md)。
