@@ -3,9 +3,9 @@ product: experience-platform
 audience: user
 user-guide-title: Adobe Experience Platform資料治理說明
 breadcrumb-title: Data Governance Guide
-user-guide-description: Enforce data usage restrictions in your Platform operations through the use of labels, marketing actions, and policies.
+user-guide-description: Enforce data usage restrictions through the use of labels, marketing actions, and policies.
 translation-type: tm+mt
-source-git-commit: 72b2172bbcc8613a2030b4784270321c3933f6aa
+source-git-commit: 4e358fda1c8f7aebe57a009a146b8b73cf88e169
 workflow-type: tm+mt
 source-wordcount: '107'
 ht-degree: 6%
@@ -13,7 +13,7 @@ ht-degree: 6%
 ---
 
 
-# Adobe Experience Platform Data Governance {#data-governance}
+# Adobe Experience Platform資料治理 {#data-governance}
 
 * [資料治理概觀](home.md)
 * 資料使用標籤 {#labels}
