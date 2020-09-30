@@ -4,11 +4,12 @@ solution: Experience Platform
 title: 加入資料集
 topic: queries
 type: Tutorial
+description: 加入資料集可讓您將其他資料集的資料納入查詢中。 此範例使用自訂作業系統資料集，將作業系統ID對應至作業系統值。
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 37356db1666b0c800119b1e254940ad72550848a
 workflow-type: tm+mt
-source-wordcount: '53'
-ht-degree: 3%
+source-wordcount: '82'
+ht-degree: 2%
 
 ---
 
