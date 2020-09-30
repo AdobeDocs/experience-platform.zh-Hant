@@ -4,10 +4,11 @@ solution: Experience Platform
 title: 從查詢結果生成資料集
 topic: queries
 type: Tutorial
+description: '查詢服務允許從UI建立資料集。 建立資料集後，可像Data Lake中的任何其他資料集一樣加以存取，並用於多種使用案例。 '
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
 workflow-type: tm+mt
-source-wordcount: '270'
+source-wordcount: '305'
 ht-degree: 0%
 
 ---
