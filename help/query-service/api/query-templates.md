@@ -3,10 +3,11 @@ keywords: Experience Platform;home;popular topics;query service;query templates;
 solution: Experience Platform
 title: 查詢服務開發人員指南
 topic: query templates
+description: 以下檔案將逐步介紹您可以使用查詢服務API的查詢範本進行的各種API呼叫。
 translation-type: tm+mt
-source-git-commit: c5d3be4706ca6d6a30e203067db6ddc894b9bfb4
+source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
 workflow-type: tm+mt
-source-wordcount: '639'
+source-wordcount: '659'
 ht-degree: 3%
 
 ---
