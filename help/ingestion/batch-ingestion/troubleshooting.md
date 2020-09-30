@@ -1,12 +1,13 @@
 ---
 keywords: Experience Platform;home;popular topics;ingested data;troubleshooting;faq;Ingestion;Batch ingestion;batch ingestion;
 solution: Experience Platform
-title: Adobe Experience Platform批次擷取疑難排解指南
+title: 批次擷取疑難排解指南
 topic: troubleshooting
+description: '本檔案將協助解答有關Adobe Experience Platform批次資料擷取API的常見問題。 '
 translation-type: tm+mt
-source-git-commit: c04fb056d4564e53f192e0734a700a13820f5ba7
+source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
 workflow-type: tm+mt
-source-wordcount: '1389'
+source-wordcount: '1402'
 ht-degree: 1%
 
 ---
