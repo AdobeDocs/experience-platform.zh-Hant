@@ -4,10 +4,11 @@ solution: Experience Platform
 title: ExperienceEvent查詢
 topic: queries
 type: Tutorial
+description: 以下檔案提供與ExperienceEvents相關的查詢範例。
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
 workflow-type: tm+mt
-source-wordcount: '275'
+source-wordcount: '284'
 ht-degree: 0%
 
 ---
