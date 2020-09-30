@@ -3,10 +3,11 @@ keywords: Experience Platform;home;popular topics;batch ingestion;Batch ingestio
 solution: Experience Platform
 title: Adobe Experience Platform部分批次擷取概觀
 topic: overview
+description: 本文檔提供有關監控批處理提取、管理部分批處理提取錯誤的資訊，以及有關部分批處理提取類型的參考。
 translation-type: tm+mt
-source-git-commit: 4652722b17a290c9ef53244498257eb4cb97ac6d
+source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
 workflow-type: tm+mt
-source-wordcount: '881'
+source-wordcount: '904'
 ht-degree: 2%
 
 ---
