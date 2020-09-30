@@ -3,10 +3,11 @@ keywords: Experience Platform;home;popular topics;segmentation;Segmentation;Segm
 solution: Experience Platform
 title: 區段工作
 topic: developer guide
+description: 本指南提供相關資訊，以協助您進一步瞭解區段工作，並包含使用API執行基本動作的範例API呼叫。
 translation-type: tm+mt
-source-git-commit: 3926c989a05ee97f2a09c0ab38d6a444674563cb
+source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
 workflow-type: tm+mt
-source-wordcount: '1002'
+source-wordcount: '1025'
 ht-degree: 3%
 
 ---
