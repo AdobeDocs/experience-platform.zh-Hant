@@ -3,10 +3,11 @@ keywords: Experience Platform;home;popular topics;segmentation;Segmentation;Segm
 solution: Experience Platform
 title: 導出作業端點
 topic: developer guide
+description: 匯出工作是非同步程式，用來將讀者區段成員持續存留至資料集。 您可以使用Adobe Experience Platform Segmentation API中的/export/jobs端點，此端點可讓您以程式設計方式擷取、建立和取消匯出工作。
 translation-type: tm+mt
-source-git-commit: 17ef6c1c6ce58db2b65f1769edf719b98d260fc6
+source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
 workflow-type: tm+mt
-source-wordcount: '1521'
+source-wordcount: '1561'
 ht-degree: 2%
 
 ---
