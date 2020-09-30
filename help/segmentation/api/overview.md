@@ -2,10 +2,11 @@
 keywords: Experience Platform;home;popular topics;segmentation;Segmentation;Segmentation Service;API;api;
 title: Adobe Experience Platform細分服務開發人員指南
 topic: guide
+description: 本概述檔案提供每個分段服務API端點的高階介紹，以及相關端點指南的連結，以取得詳細資訊。
 translation-type: tm+mt
-source-git-commit: 59cf089a8bf7ce44e7a08b0bb1d4562f5d5104db
+source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
 workflow-type: tm+mt
-source-wordcount: '467'
+source-wordcount: '490'
 ht-degree: 0%
 
 ---
