@@ -3,10 +3,11 @@ keywords: Experience Platform;home;popular topics;segmentation;Segmentation;Segm
 solution: Experience Platform
 title: 邏輯量詞
 topic: developer guide
+description: 邏輯量詞可用於在配置檔案查詢語言(PQL)中用陣列來斷言條件。
 translation-type: tm+mt
-source-git-commit: 17ef6c1c6ce58db2b65f1769edf719b98d260fc6
+source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
 workflow-type: tm+mt
-source-wordcount: '185'
+source-wordcount: '200'
 ht-degree: 5%
 
 ---
