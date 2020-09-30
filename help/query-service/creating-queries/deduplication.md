@@ -4,10 +4,11 @@ solution: Experience Platform
 title: 重複資料消除
 topic: queries
 type: Tutorial
+description: 本檔案概述了用於消除重複的三個常見使用案例ExperienceEvents、購買和度量的子選取和完整範例查詢範例。
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
 workflow-type: tm+mt
-source-wordcount: '405'
+source-wordcount: '424'
 ht-degree: 1%
 
 ---
