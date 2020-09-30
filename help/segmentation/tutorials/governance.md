@@ -4,10 +4,11 @@ solution: Experience Platform
 title: 對受眾細分強制執行資料使用規範
 topic: tutorial
 type: Tutorial
+description: 本教學課程涵蓋使用API強制「即時客戶個人檔案」受眾細分資料使用合規性的步驟。
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
 workflow-type: tm+mt
-source-wordcount: '1333'
+source-wordcount: '1351'
 ht-degree: 1%
 
 ---
