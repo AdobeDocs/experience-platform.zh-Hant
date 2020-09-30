@@ -3,10 +3,11 @@ keywords: Experience Platform;home;popular topics;data ingestion notifications;n
 solution: Experience Platform
 title: 訂閱資料擷取事件
 topic: overview
+description: 為協助監控擷取程式，Adobe Experience Platform可讓您訂閱流程每個步驟所發佈的一組事件，並通知您所擷取資料的狀態和任何可能的失敗。
 translation-type: tm+mt
-source-git-commit: 80a1694f11cd2f38347989731ab7c56c2c198090
+source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
 workflow-type: tm+mt
-source-wordcount: '621'
+source-wordcount: '663'
 ht-degree: 1%
 
 ---
