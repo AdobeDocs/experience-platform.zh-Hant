@@ -3,10 +3,11 @@ keywords: Experience Platform;home;popular topics;segmentation;Segmentation;Segm
 solution: Experience Platform
 title: 區段服務開發人員指南
 topic: developer guide
+description: 以下檔案提供您需要知道的其他資訊，以便成功使用區段API。
 translation-type: tm+mt
-source-git-commit: 17ef6c1c6ce58db2b65f1769edf719b98d260fc6
+source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
 workflow-type: tm+mt
-source-wordcount: '300'
+source-wordcount: '320'
 ht-degree: 0%
 
 ---
