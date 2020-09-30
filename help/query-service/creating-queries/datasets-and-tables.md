@@ -4,10 +4,11 @@ solution: Experience Platform
 title: 資料集與表和方案
 topic: queries
 type: Tutorial
+description: 本文檔包含有關在資料集模式結構中查看資料集和使用PostgreSQL命令的資訊。
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
 workflow-type: tm+mt
-source-wordcount: '181'
+source-wordcount: '198'
 ht-degree: 1%
 
 ---
