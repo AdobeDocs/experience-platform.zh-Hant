@@ -4,10 +4,11 @@ solution: Experience Platform
 title: 將資料內嵌至Adobe Experience Platform
 topic: tutorial
 type: Tutorial
+description: Adobe Experience Platform可讓您輕鬆將資料匯入為符合已知Experience Data Model(XDM)架構的鑲木地板檔案或資料的批次檔案。
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
 workflow-type: tm+mt
-source-wordcount: '1278'
+source-wordcount: '1308'
 ht-degree: 0%
 
 ---
