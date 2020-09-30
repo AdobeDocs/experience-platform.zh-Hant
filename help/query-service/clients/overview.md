@@ -3,10 +3,11 @@ keywords: Experience Platform;home;popular topics;Query service;query service;co
 solution: Experience Platform
 title: 將客戶端連接到查詢服務
 topic: connect
+description: 本檔案說明如何從各種案頭用戶端應用程式連接至查詢服務，以及如何驗證這些連線。
 translation-type: tm+mt
-source-git-commit: c5d3be4706ca6d6a30e203067db6ddc894b9bfb4
+source-git-commit: 37356db1666b0c800119b1e254940ad72550848a
 workflow-type: tm+mt
-source-wordcount: '75'
+source-wordcount: '97'
 ht-degree: 0%
 
 ---
@@ -14,7 +15,7 @@ ht-degree: 0%
 
 # 將客戶端連接到 [!DNL Query Service]
 
-本節說明如何從各種案頭客 [!DNL Query Service] 戶端應用程式連接至，以及如何驗證這些連線。 [!DNL Query Service] 使用協 [!DNL Postgres] 議，因此本節中的說明說明如何使用工 [!DNL Postgres] 具和驅動程式來連接和寫入查詢。
+本節說明如何從各種案頭客 [!DNL Query Service] 戶端應用程式連線至，以及如何驗證這些連線。 [!DNL Query Service] 使用協 [!DNL Postgres] 議，因此本節中的說明說明如何使用工 [!DNL Postgres] 具和驅動程式來連接和寫入查詢。
 
 為下列客戶提供說明：
 
