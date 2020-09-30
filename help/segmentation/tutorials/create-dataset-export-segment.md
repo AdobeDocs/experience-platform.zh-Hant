@@ -4,10 +4,11 @@ solution: Experience Platform
 title: 建立資料集以匯出觀眾區隔
 topic: tutorial
 type: Tutorial
+description: 本教學課程將逐步說明建立資料集所需的步驟，以便使用Experience Platform UI匯出觀眾區隔。
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
 workflow-type: tm+mt
-source-wordcount: '733'
+source-wordcount: '758'
 ht-degree: 1%
 
 ---
