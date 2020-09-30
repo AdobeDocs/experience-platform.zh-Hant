@@ -3,10 +3,11 @@ keywords: Experience Platform;home;popular topics
 solution: Experience Platform
 title: Adobe Experience Platform Source Connectors
 topic: overview
+description: 源連接使您能夠驗證儲存系統和CRM服務、設定提取運行的時間，以及管理資料提取吞吐量。
 translation-type: tm+mt
-source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
+source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
 workflow-type: tm+mt
-source-wordcount: '111'
+source-wordcount: '133'
 ht-degree: 0%
 
 ---
