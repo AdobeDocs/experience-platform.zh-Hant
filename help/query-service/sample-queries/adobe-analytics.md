@@ -3,10 +3,11 @@ keywords: Experience Platform;home;popular topics;query service;Query service;sa
 solution: Experience Platform
 title: 範例查詢
 topic: queries
+description: 從選取的Adobe Analytics報表套裝中取得的資料會轉換成XDM ExperienceEvents，並以資料集的形式匯入Adobe Experience Platform。 本檔案概述Adobe Experience Platform Query Service運用此資料的多種使用案例，其中所包含的範例查詢應與您的Adobe Analytics資料集搭配使用。
 translation-type: tm+mt
-source-git-commit: f9749dbc5f2e3ac15be50cc5317ad60586b2c07e
+source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
 workflow-type: tm+mt
-source-wordcount: '862'
+source-wordcount: '915'
 ht-degree: 1%
 
 ---
@@ -196,7 +197,7 @@ Adobe Analytics中另一種銷售變數類型是轉換語法。 使用「產品�
 6. 使用者將產品新增至購物車，並引發 `Cart Add` 事件。
 7. 使用者會簽出這兩個產品。
 
-在報告中，訂單、收入、產品檢視和購物車新增將會針對eVar6進行報告，並與綁定產品的活動一致。
+在報告中，訂單、收入、產品檢視和購物車新增將針對eVar6進行報告，並與綁定產品的活動一致。
 
 | eVar6（產品尋找方法） | 收入 | 訂單 | 產品檢視 | 購物車新增 |
 |---|---|---|---|---|
