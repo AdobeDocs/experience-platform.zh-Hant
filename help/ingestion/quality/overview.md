@@ -3,11 +3,12 @@ keywords: Experience Platform;home;popular topics;Data quality;quality;Quality;S
 solution: Experience Platform
 title: 資料擷取品質
 topic: overview
+description: 以下檔案提供Adobe Experience Platform中批次和串流擷取支援的檢查與驗證行為摘要。
 translation-type: tm+mt
-source-git-commit: c04fb056d4564e53f192e0734a700a13820f5ba7
+source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
 workflow-type: tm+mt
-source-wordcount: '282'
-ht-degree: 6%
+source-wordcount: '304'
+ht-degree: 5%
 
 ---
 
