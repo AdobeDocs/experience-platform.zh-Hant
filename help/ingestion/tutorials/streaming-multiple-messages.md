@@ -4,10 +4,11 @@ solution: Experience Platform
 title: 在單一HTTP要求中串流多個訊息
 topic: tutorial
 type: Tutorial
+description: 本檔案提供教學課程，可讓您使用串流擷取功能，在單一HTTP要求內傳送多則訊息至Adobe Experience Platform。
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
 workflow-type: tm+mt
-source-wordcount: '1466'
+source-wordcount: '1487'
 ht-degree: 1%
 
 ---
