@@ -4,10 +4,11 @@ solution: Experience Platform
 title: 編寫查詢
 topic: queries
 type: Tutorial
+description: 本檔案詳細說明在Adobe Experience Platform Query Service中撰寫查詢時要知道的重要詳細資訊。
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
 workflow-type: tm+mt
-source-wordcount: '643'
+source-wordcount: '659'
 ht-degree: 1%
 
 ---
