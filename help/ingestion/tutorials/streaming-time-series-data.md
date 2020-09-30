@@ -4,10 +4,11 @@ solution: Experience Platform
 title: 串流時間系列資料
 topic: tutorial
 type: Tutorial
+description: 本教學課程將協助您開始使用串流擷取API，這是Adobe Experience Platform Data Ingestion Service API的一部分。
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
 workflow-type: tm+mt
-source-wordcount: '1143'
+source-wordcount: '1163'
 ht-degree: 2%
 
 ---
