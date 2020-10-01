@@ -5,15 +5,20 @@ description: Adobe Experience Platform Web SDK發行說明。
 seo-description: Adobe Experience Platform Web SDK發行說明。
 keywords: Adobe Experience Platform Web SDK;Platform Web SDK;Web SDK;release notes;
 translation-type: tm+mt
-source-git-commit: 8c256b010d5540ea0872fa7e660f71f2903bfb04
+source-git-commit: 738dfe782ee7d6bef06d14910e0c26540b0ec734
 workflow-type: tm+mt
-source-wordcount: '77'
+source-wordcount: '108'
 ht-degree: 3%
 
 ---
 
 
 # 發行說明
+
+## 2.2.0 版
+
+* 錯誤修正：Opt-in物件會阻止Alloy在有時進行呼 `idMigrationEnabled` 叫 `true`。
+* 錯誤修正：讓Alloy知道應該傳回個人化優惠的要求，以避免閃爍的問題。
 
 ## 2.1.0 版
 
