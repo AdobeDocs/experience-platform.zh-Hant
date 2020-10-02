@@ -5,15 +5,15 @@ seo-title: Google Display & Video 360 Destination
 description: Display & Video 360（先前稱為DoubleClick競標管理器）是一種工具，用於在顯示、視訊和行動庫存來源中執行重新鎖定目標及受眾目標數位促銷活動。
 seo-description: 'Display & Video 360（先前稱為DoubleClick競標管理器）是一種工具，用於在顯示、視訊和行動庫存來源中執行重新鎖定目標及受眾目標數位促銷活動。 '
 translation-type: tm+mt
-source-git-commit: 2dfa46906374151628d46c309df724a59f8dc50e
+source-git-commit: c66fb4cf0a414e02ceb58becc9d9b59db3fe987b
 workflow-type: tm+mt
-source-wordcount: '696'
+source-wordcount: '713'
 ht-degree: 0%
 
 ---
 
 
-# [!DNL Google Display & Video 360] 目的地
+# [!DNL Google Display & Video 360] 目標
 
 ## 概述
 
@@ -25,11 +25,15 @@ ht-degree: 0%
 
 * 您可以傳送下列身 [分](../../identity-service/namespaces.md) ，到 [!DNL Google Display & Video 360] 目的地： **Google Cookie ID、IDFA、GAID、Roku ID、Microsoft ID、Amazon Fire TV ID**。
 * 在Google平台中以程式設計方式建立已啟用的觀眾。
-* Adobe即時CDP目前不包含測量量度，以驗證啟動是否成功。 請參閱Google中的觀眾計數，以驗證整合併瞭解觀眾鎖定規模。
+* Adobe即時CDP目前不包含用於驗證成功啟動的測量量度。 請參閱Google中的觀眾計數，以驗證整合併瞭解觀眾鎖定規模。
 
 >[!IMPORTANT]
 >
 >如果您想要使用Google Display &amp; Video 360建立您的第一個目的地，而且過去（使用Adobe Audience Manager或其他應用程式）未啟用 [Experience Cloud ID服務中的](https://docs.adobe.com/content/help/en/id-service/using/id-service-api/methods/idsync.html) ID同步功能，請聯絡Adobe Consulting或客戶服務以啟用ID同步。 如果您先前已在Audience Manager中設定Google整合，您設定的ID同步化會轉存至Adobe即時CDP。
+
+### 匯出類型 {#export-type}
+
+**區段匯出** -您正將區段（對象）的所有成員匯出至Google目標。
 
 ## 必要條件
 
@@ -60,7 +64,7 @@ ht-degree: 0%
 * **[!UICONTROL 名稱]**:填寫此目標的首選名稱。
 * **[!UICONTROL 說明]**:可選。 例如，您可以提及您使用此目的地的促銷活動。
 * **[!UICONTROL 帳戶類型]**:根據您使用Google的帳戶，選取一個選項：
-   * 使用 `Invite Advertiser` 可讓觀眾僅分享至您「顯示與視訊360」帳戶中的特定品牌。
+   * 使用 `Invite Advertiser` 可讓觀眾僅分享到您「顯示與視訊360」帳戶中的特定品牌。
    * 使用 `Invite Partner` 可讓觀眾分享至您「顯示與視訊360」帳戶中的所有品牌。
 * **[!UICONTROL 帳戶ID]**:使用Google填 **[!DNL Invite partner]** 寫您 **[!DNL Invite advertiser]** 或帳戶ID。 通常為6或7位數的ID。
 * **[!UICONTROL 行銷使用案例]**:行銷使用案例會指出將資料匯出至目的地的方式。 您可以從Adobe定義的行銷使用案例中選擇，也可以建立自己的行銷使用案例。 有關行銷使用案例的詳細資訊，請參 [閱即時CDP中的資料治理頁](/help/rtcdp/privacy/data-governance-overview.md#destinations) 。 如需個別Adobe定義之行銷使用案例的詳細資訊，請參閱「資 [料使用政策」概觀](/help/data-governance/policies/overview.md#core-actions)。
