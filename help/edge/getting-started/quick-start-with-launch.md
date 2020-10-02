@@ -5,17 +5,17 @@ description: 使用Experience Platform Web SDK擴充功能收集資料的快速�
 seo-description: 使用Experience Platform Web SDK擴充功能收集資料的快速入門手冊
 keywords: 1st-party domain;CNAME;schema;create schema;launch;aep web sdk extension;extension;configuration id;configuration tool;data element;create data element;XDM Object;sendEvent;send Event;
 translation-type: tm+mt
-source-git-commit: 8c256b010d5540ea0872fa7e660f71f2903bfb04
+source-git-commit: a9c45aed92dc7c7148db7c9383060bbeab763447
 workflow-type: tm+mt
-source-wordcount: '538'
-ht-degree: 5%
+source-wordcount: '566'
+ht-degree: 4%
 
 ---
 
 
-# 歡迎
+# Adobe Experience Platform Web SDK啟動快速入門手冊
 
-本指南會引導您以不同的方式在Launch中設定Adobe Experience Platform Web SDK。 若要使用此功能，您必須列入白名單。 如果您想要加入等候清單，請聯絡您的CSM。
+本指南會引導您以不同的方式在Launch中設定Adobe Experience Platform Web SDK。 要使用此功能，您必須位於allowlist中。 如果您想要進入等候清單，請聯絡您的認證軟體管理員(CSM)。
 
 - 啟用 [第一方網域(CNAME)](https://docs.adobe.com/content/help/zh-Hant/core-services/interface/ec-cookies/cookies-first-party.html) 。 如果您已有Analytics的CNAME，則應使用該CNAME。 在開發中進行測試沒有CNAME，但您在投入生產前需要CNAME。
 - 取得Adobe Experience Platform的權益。 如果您尚未購買Platform,Adobe將提供您Experience Platform Data Services Foundation，讓您以有限方式與SDK搭配使用，不需額外付費。
@@ -23,7 +23,7 @@ ht-degree: 5%
 
 ## 準備架構
 
-Experience Platform Edge Network將資料視為XDM。 XDM是一種資料格式，可讓您定義結構描述。 此架構定義邊緣網路預期資料格式化的方式。 若要傳送資料，您必須定義您的結構。
+Experience Platform Edge Network使用Experience Data Model(XDM)。 XDM是一種資料格式，可讓您定義結構描述。 此架構定義邊緣網路預期資料格式化的方式。 若要傳送資料，您必須定義您的結構。
 
 1. [建立架構](../../xdm/tutorials/create-schema-ui.md)
 2. 將AEP [!DNL Web SDK ExperienceEvent] Mixin新增至您建立的架構。
@@ -45,7 +45,7 @@ Experience Platform Edge Network將資料視為XDM。 XDM是一種資料格式�
 
 >[!NOTE]
 >
->您的組織必須列入此功能的白名單。 請連絡您的CSM以取得最終白名單。
+>您的組織必須位於此功能的允許清單中。 請連絡您的認證軟體管理員(CSM)，以加入允許清單。
 
 ## 根據您的架構建立資料元素
 
@@ -66,6 +66,7 @@ Experience Platform Edge Network將資料視為XDM。 XDM是一種資料格式�
 - [建立您的架構](https://docs.adobe.com/content/help/zh-Hant/experience-platform/xdm/schema/composition.html)
 - [瞭解除錯](../fundamentals/debugging.md)
 - 瞭解如何個 [人化體驗](../fundamentals/rendering-personalization-content.md)
+- 將 [IAB透明與同意框架2.0整合到Adobe Experience Platform Launch中](../solution-specific/iab-tcf/with-launch.md) 。
 - 瞭解如何將資料傳送至多個解決方案
    - [Adobe Analytics](../solution-specific/analytics/analytics-overview.md)
    - [Adobe Audience Manager](../solution-specific/audience-manager/audience-manager-overview.md)
