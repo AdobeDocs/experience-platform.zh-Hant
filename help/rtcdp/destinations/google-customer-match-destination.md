@@ -5,7 +5,7 @@ seo-title: Google客戶符合目的地
 description: Google Customer Match可讓您使用您的線上和離線資料，透過Google的自有和營運資產（例如搜尋、購物、Gmail和YouTube）觸及客戶並與其重新互動。
 seo-description: Google Customer Match可讓您使用您的線上和離線資料，透過Google的自有和營運資產（例如搜尋、購物、Gmail和YouTube）觸及客戶並與其重新互動。
 translation-type: tm+mt
-source-git-commit: 2dfa46906374151628d46c309df724a59f8dc50e
+source-git-commit: c66fb4cf0a414e02ceb58becc9d9b59db3fe987b
 workflow-type: tm+mt
 source-wordcount: '1555'
 ht-degree: 0%
@@ -40,7 +40,7 @@ ht-degree: 0%
 
 Adobe即時CDP中的目標可能具有傳送至目標平台或從目標平台接收資料的特定規則和義務。 您有責任瞭解資料的限制和義務，以及您在Adobe Experience Platform和目標平台中如何使用該資料。 Adobe Experience Platform提供資料治理工具，可協助您管理部分資料使用義務。 [進一步瞭解](/help/data-governance/labels/overview.md) 資料治理工具和政策。
 
-## 啟動類型與身分 {#activation-type}
+## 匯出類型與身分 {#export-type}
 
 **區段匯出** -您正匯出區段（對象）的所有成員，並包含識別碼（名稱、電話號碼等） 用於目的 [!DNL Google Customer Match] 地。
 
@@ -157,7 +157,7 @@ Links to be added when activation based on phone number and device IDs becomes a
 
 ![確認選擇](/help/rtcdp/destinations/assets/data-policy-violation.png)
 
-如果未檢測到任何違反策略的情況，請選擇 **[!UICONTROL 完成]** ，確認您的選擇並開始向目標發送資料。
+如果未檢測到任何違反策略的情況，請選擇「完 **[!UICONTROL 成]** 」以確認您的選擇並開始向目標發送資料。
 
 ![確認選擇](/help/rtcdp/destinations/assets/gcm-review.png)
 
