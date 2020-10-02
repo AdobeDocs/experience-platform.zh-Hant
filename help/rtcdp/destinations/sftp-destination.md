@@ -5,9 +5,9 @@ seo-title: SFTP目的地
 description: 建立與SFTP伺服器的即時對外連線，以定期從Experience Platform匯出分隔資料檔案。
 seo-description: 建立與SFTP伺服器的即時對外連線，以定期從Experience Platform匯出分隔資料檔案。
 translation-type: tm+mt
-source-git-commit: cbd748c1881c61f5e636567d94b68f2cf7302fa5
+source-git-commit: d0a04c61bfe4024a2bb45ea7babab9073fcd6c22
 workflow-type: tm+mt
-source-wordcount: '171'
+source-wordcount: '206'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,11 @@ ht-degree: 0%
 
 建立與SFTP伺服器的即時對外連線，以定期從Experience Platform匯出分隔資料檔案。
 
-若要匯出資料，請完成下列步驟：
+## 匯出類型 {#export-type}
+
+**描述檔匯出** -您要匯出區段的所有成員，以及所要的架構欄位(例如：電子郵件地址、電話號碼、姓氏)，這是從目標啟動工作流程的「選取屬性」畫面 [中選擇的](/help/rtcdp/destinations/activate-destinations.md#select-attributes)。
+
+![SFTP描述檔匯出類型](/help/rtcdp/destinations/assets/sftp-export-type.png)
 
 ## 連接目標 {#connect-destination}
 
