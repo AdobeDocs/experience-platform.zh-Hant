@@ -5,9 +5,9 @@ seo-title: Amazon Kinesis目標
 description: 建立到Amazon Kinesis儲存的即時出站連接，以便從Adobe Experience Platform流資料。
 seo-description: 建立到Amazon Kinesis儲存的即時出站連接，以便從Adobe Experience Platform流資料。
 translation-type: tm+mt
-source-git-commit: 4c45da353b1deeb66b0dedb37450158f4bdc2a7c
+source-git-commit: d0a04c61bfe4024a2bb45ea7babab9073fcd6c22
 workflow-type: tm+mt
-source-wordcount: '437'
+source-wordcount: '475'
 ht-degree: 2%
 
 ---
@@ -38,6 +38,10 @@ ht-degree: 2%
 透過使用串流目的地(例如 [!DNL Amazon Kinesis])，您可以輕鬆將高價值分段事件和相關的描述檔屬性饋送到您選擇的系統中。
 
 例如，潛在客戶下載了白皮書，使其符合「高轉換傾向」區段的資格。 將潛在客戶所處的區段對應至目標， [!DNL Amazon Kinesis] 您就會收到此事件 [!DNL Amazon Kinesis]。 在這裡，您可以採用自行動手的方法，並在活動之上描述業務邏輯，因為您認為最適合企業IT系統。
+
+## 匯出類型 {#export-type}
+
+**描述檔匯出** -您要匯出區段的所有成員，以及所要的架構欄位(例如：電子郵件地址、電話號碼、姓氏)，這是從目標啟動工作流程的「選取屬性」畫面 [中選擇的](/help/rtcdp/destinations/activate-destinations.md#select-attributes)。
 
 ## 連接目標 {#connect-destination}
 
