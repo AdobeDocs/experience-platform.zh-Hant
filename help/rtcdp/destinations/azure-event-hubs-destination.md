@@ -5,9 +5,9 @@ seo-title: （測試版）Azure事件集線器目標
 description: 建立Azure事件中樞儲存空間的即時出站連線，以從Experience Platform串流資料。
 seo-description: 建立Azure事件中樞儲存空間的即時出站連線，以從Experience Platform串流資料。
 translation-type: tm+mt
-source-git-commit: 38cb8eeae3ac0a1852c59e433d1cacae82b1c6c0
+source-git-commit: d0a04c61bfe4024a2bb45ea7babab9073fcd6c22
 workflow-type: tm+mt
-source-wordcount: '467'
+source-wordcount: '505'
 ht-degree: 2%
 
 ---
@@ -36,6 +36,10 @@ ht-degree: 2%
 透過使用串流目的地(例如 [!DNL Azure Event Hubs])，您可以輕鬆將高價值分段事件和相關的描述檔屬性饋送到您選擇的系統中。
 
 例如，潛在客戶下載了白皮書，使其符合「高轉換傾向」區段的資格。 將潛在客戶所處的區段對應至目標， [!DNL Azure Event Hubs] 您就會收到此事件 [!DNL Azure Event Hubs]。 在這裡，您可以採用自行動手的方法，並在活動之上描述業務邏輯，因為您認為最適合企業IT系統。
+
+## 匯出類型 {#export-type}
+
+**描述檔匯出** -您要匯出區段的所有成員，以及所要的架構欄位(例如：電子郵件地址、電話號碼、姓氏)，這是從目標啟動工作流程的「選 [擇屬性」畫面中選擇](/help/rtcdp/destinations/activate-destinations.md#select-attributes)。\
 
 ## 連接目標 {#connect-destination}
 
