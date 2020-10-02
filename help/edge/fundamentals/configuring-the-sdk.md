@@ -5,10 +5,10 @@ description: 瞭解如何設定Experience Platform Web SDK
 seo-description: 瞭解如何設定Experience Platform Web SDK
 keywords: configuring;configuration;SDK;edge;Web SDK;configure;edgeConfigId;context;web;device;environment;placeContext;debugEnabled;edgeDomain;orgId;clickCollectionEnabled;onBeforeEventSend;defaultConsent;web sdk settings;prehidingStyle;opacity;cookieDestinationsEnabled;urlDestinationsEnabled;idMigrationEnabled;thirdPartyCookiesEnabled;
 translation-type: tm+mt
-source-git-commit: fe53ecbf6adff4f1e09979cd170a88ac0bd3cb75
+source-git-commit: d036595dc96af98fd53c7eb40162585bac48f05c
 workflow-type: tm+mt
 source-wordcount: '749'
-ht-degree: 10%
+ht-degree: 11%
 
 ---
 
@@ -36,7 +36,7 @@ alloy("configure", {
 
 | **類型** | **必填** | **預設值** |
 | -------- | ------------ | ----------------- |
-| 字串 | 是 | nown |
+| 字串 | 是 | 無 |
 
 您指派的設定ID，會將SDK連結至適當的帳戶和設定。  在單一頁面中設定多個例項時，您必須為每個例項設 `edgeConfigId` 定不同的例項。
 
@@ -73,7 +73,7 @@ alloy("configure", {
 
 | **類型** | **必填** | **預設值** |
 | -------- | ------------ | ----------------- |
-| 字串 | 是 | nown |
+| 字串 | 是 | 無 |
 
 Your assigned [!DNL Experience Cloud] organization ID.  在頁面內設定多個例項時，您必須為每個例項設 `orgId` 定不同的例項。
 
@@ -103,7 +103,7 @@ Your assigned [!DNL Experience Cloud] organization ID.  在頁面內設定多個
 
 ## 隱私權選項
 
-### `defaultConsent`
+### `defaultConsent` {#default-consent}
 
 | **類型** | **必填** | **預設值** |
 | -------- | ------------ | ----------------- |
@@ -117,7 +117,7 @@ Your assigned [!DNL Experience Cloud] organization ID.  在頁面內設定多個
 
 | **類型** | **必填** | **預設值** |
 | -------- | ------------ | ----------------- |
-| 字串 | 無 | nown |
+| 字串 | 無 | 無 |
 
 用來建立CSS樣式定義，當從伺服器載入個人化內容時，會隱藏網頁的內容區域。 如果未提供此選項，SDK在載入個人化內容時不會嘗試隱藏任何內容區域，可能會導致「閃爍」。
 
