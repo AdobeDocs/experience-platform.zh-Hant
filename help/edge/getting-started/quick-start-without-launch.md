@@ -5,17 +5,17 @@ description: 使用Experience Platform Web SDK收集資料的快速入門手冊
 seo-description: 使用Experience Platform Web SDK收集資料的快速入門手冊
 keywords: 1st-party domain;CNAME;schema;create schema;configuration id;configuration tool;data element;create data element;XDM Object;sendEvent;send Event;install sdk;install web sdk;configure;configure web sdk;
 translation-type: tm+mt
-source-git-commit: 7aa0e654300f10db774794d66ece9d0d040cb2ba
+source-git-commit: f178da80d0902f76868986426600f3da426cf24d
 workflow-type: tm+mt
-source-wordcount: '517'
+source-wordcount: '530'
 ht-degree: 5%
 
 ---
 
 
-# 歡迎
+# Adobe Experience Platform Web SDK JavaScript快速入門手冊
 
-本指南會引導您以不同的方式來設定Adobe Experience Platform Web SDK。 若要使用此功能，您必須加入白名單。 如果您想要加入等候清單，請聯絡您的CSM。
+本指南會引導您以不同的方式來設定Adobe Experience Platform Web SDK。 要使用此功能，您必須位於allowlist中。 如果您想要進入等候清單，請聯絡您的認證軟體管理員(CSM)。
 
 - 啟用 [第一方網域(CNAME)](https://docs.adobe.com/content/help/zh-Hant/core-services/interface/ec-cookies/cookies-first-party.html) 。 如果您已有Analytics的CNAME，則應使用該CNAME。 在開發中進行測試沒有CNAME，但您在開始生產之前需要CNAME。
 - 取得Adobe Experience Platform的權益。  如果您尚未購買Platform,Adobe將提供您Experience Platform Data Services Foundation，讓您以有限方式與SDK搭配使用，不需額外付費。
