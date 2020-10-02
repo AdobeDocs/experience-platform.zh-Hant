@@ -1,21 +1,21 @@
 ---
 keywords: Experience Platform;home;popular topics;map csv;map csv file;map csv file to xdm;map csv to xdm;ui guide;mapper;mapping;mapping fields;mapping functions;
 solution: Experience Platform
-title: 映射函式
+title: 資料準備功能
 topic: overview
 description: 本文檔介紹與「資料準備」一起使用的映射功能。
 translation-type: tm+mt
-source-git-commit: db38f0666f5c945461043ad08939ebda52c21855
+source-git-commit: d47410106a6d3955cc9af78e605c893f08185ffa
 workflow-type: tm+mt
-source-wordcount: '3288'
-ht-degree: 5%
+source-wordcount: '3432'
+ht-degree: 3%
 
 ---
 
 
-# 映射函式
+# 資料準備功能
 
-映射函式可用於根據在源欄位中輸入的內容計算和計算值。
+「資料準備」功能可用來根據在來源欄位中輸入的內容來計算和計算值。
 
 ## 欄位
 
@@ -37,6 +37,10 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 
 ### 字串函式
 
+>[!NOTE]
+>
+>請向左／向右滾動以查看表的完整內容。
+
 | 函數 | 說明 | 參數 | 語法 | 運算式 | 範例輸出 |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | concat | 串連指定的字串。 | <ul><li>字串：將串連的字串。</li></ul> | concat(STRING_1, STRING_2) | concat(&quot;Hi, &quot;, &quot;there&quot;, &quot;!&quot;) | `"Hi, there!"` |
@@ -47,7 +51,7 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 | lower /<br>lcase | 將字串轉換為小寫。 | <ul><li>輸入： **必要** ：將轉換為小寫的字串。</li></ul> | lower(INPUT) | lower(&quot;HeLLo&quot;)<br>lcase(&quot;HeLLo&quot;) | &quot;hello&quot; |
 | upper /<br>ucase | 將字串轉換為大寫。 | <ul><li>輸入： **必要** ：將轉換為大寫的字串。</li></ul> | upper(INPUT) | upper(&quot;HeLLo&quot;)<br>ucase(&quot;HeLLo&quot;) | &quot;HELLO&quot; |
 | split | 在分隔符上拆分輸入字串。 | <ul><li>輸入： **必要** ：將要拆分的輸入字串。</li><li>分隔符號： **必要** ：用於分割輸入的字串。</li></ul> | split(INPUT, SEPARATOR) | split(&quot;Hello world&quot;, &quot; &quot;) | `["Hello", "world"]` |
-| 加入 | 使用分隔符連接對象清單。 | <ul><li>分隔符號： **必要** ：將用於連接對象的字串。</li><li>對象： **必要** ：要連接的字串陣列。</li></ul> | join(SEPARATOR, [OBJECTS]) | `join(" ", ["Hello", "world"])` | &quot;Hello world&quot; |
+| 加入 | 使用分隔符連接對象清單。 | <ul><li>分隔符號： **必要** ：將用於連接對象的字串。</li><li>對象： **必要** ：要連接的字串陣列。</li></ul> | `join(SEPARATOR, [OBJECTS])` | `join(" ", ["Hello", "world"])` | &quot;Hello world&quot; |
 | lpad | 將字串的左側與另一個指定字串相貼。 | <ul><li>輸入： **必要** ：要填補的字串。 此字串可以是null。</li><li>計數： **必需** ：要填補的字串大小。</li><li>填充： **必要** ：用於填充輸入的字串。 如果為null或空白，則會視為單一空格。</li></ul> | lpad（輸入、計數、填充） | lpad(&quot;bat&quot;, 8, &quot;yz&quot;) | &quot;yzybat&quot; |
 | rpad | 將字串的右側與另一個指定字串貼齊。 | <ul><li>輸入： **必要** ：要填補的字串。 此字串可以是null。</li><li>計數： **必需** ：要填補的字串大小。</li><li>填充： **必要** ：用於填充輸入的字串。 如果為null或空白，則會視為單一空格。</li></ul> | rpad（輸入、計數、填充） | rpad(&quot;bat&quot;, 8, &quot;yz&quot;) | &quot;batyzyzy&quot; |
 | left | 取得指定字串的第一個&quot;n&quot;字元。 | <ul><li>字串： **必要** ：您要取得的第一個&quot;n&quot;字元的字串。</li><li>計數： **必**&#x200B;要字串中要取得的&quot;n&quot;字元。</li></ul> | left（字串，計數） | left(&quot;abcde&quot;, 2) | &quot;ab&quot; |
@@ -60,15 +64,23 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 
 ### 散列函式
 
+>[!NOTE]
+>
+>請向左／向右滾動以查看表的完整內容。
+
 | 函數 | 說明 | 參數 | 語法 | 運算式 | 範例輸出 |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
-| sha1 | 使用安全雜湊算法1(SHA-1)輸入並產生雜湊值。 | <ul><li>輸入： **需要** ：要雜湊的純文字檔案。</li><li>字元集： *可選* ：字元集的名稱。 可能的值包括UTF-8、UTF-16、ISO-8859-1和US-ASCII。</li></ul> | sha1(INPUT, CHARSET) | sha1(&quot;my text&quot;, &quot;UTF-8&quot;) | c3599c11e47719df18a2448690840c5dfcce3c80 |
-| sha256 | 使用安全雜湊演算法256(SHA-256)輸入並產生雜湊值。 | <ul><li>輸入： **需要** ：要雜湊的純文字檔案。</li><li>字元集： *可選* ：字元集的名稱。 可能的值包括UTF-8、UTF-16、ISO-8859-1和US-ASCII。</li></ul> | sha256(INPUT, CHARSET) | sha256(&quot;my text&quot;, &quot;UTF-8&quot;) | 7330d2b39ca35eaf4cb95fc846c21ee6a39af698154a83a586ee270a0d372104 |
-| sha512 | 使用安全雜湊演算法512(SHA-512)輸入並產生雜湊值。 | <ul><li>輸入： **需要** ：要雜湊的純文字檔案。</li><li>字元集： *可選* ：字元集的名稱。 可能的值包括UTF-8、UTF-16、ISO-8859-1和US-ASCII。</li></ul> | sha512(INPUT, CHARSET) | sha512(&quot;my text&quot;, &quot;UTF-8&quot;) | a3d7e45a0d9be5fd4e4b9a3b8c9c2163c21ef708bf11b4232bb21d2a8704ada2cdcd7b367dd0788a89a5c908cfe377aceb1072a7b386b7d4fd2ff68a8fd24d16 |
-| md5 | 使用MD5輸入並產生雜湊值。 | <ul><li>輸入： **需要** ：要雜湊的純文字檔案。</li><li>字元集： *可選* ：字元集的名稱。 可能的值包括UTF-8、UTF-16、ISO-8859-1和US-ASCII。 </li></ul> | md5(INPUT, CHARSET) | md5(&quot;my text&quot;, &quot;UTF-8&quot;) | d3b96ce8c9fb4e9bd0198d03ba6852c7 |
+| sha1 | 使用安全雜湊算法1(SHA-1)輸入並產生雜湊值。 | <ul><li>輸入： **需要** ：要雜湊的純文字檔案。</li><li>字元集： *可選* ：字元集的名稱。 可能的值包括UTF-8、UTF-16、ISO-8859-1和US-ASCII。</li></ul> | sha1(INPUT, CHARSET) | sha1(&quot;my text&quot;, &quot;UTF-8&quot;) | c3599c11e47719df18a24 &#x200B; 48690840c5dfcce3c80 |
+| sha256 | 使用安全雜湊演算法256(SHA-256)輸入並產生雜湊值。 | <ul><li>輸入： **需要** ：要雜湊的純文字檔案。</li><li>字元集： *可選* ：字元集的名稱。 可能的值包括UTF-8、UTF-16、ISO-8859-1和US-ASCII。</li></ul> | sha256(INPUT, CHARSET) | sha256(&quot;my text&quot;, &quot;UTF-8&quot;) | 7330d2b39ca35eaf4cb95fc846c21&#x200B; e6a39af698154a83a586ee270a0d372104 |
+| sha512 | 使用安全雜湊演算法512(SHA-512)輸入並產生雜湊值。 | <ul><li>輸入： **需要** ：要雜湊的純文字檔案。</li><li>字元集： *可選* ：字元集的名稱。 可能的值包括UTF-8、UTF-16、ISO-8859-1和US-ASCII。</li></ul> | sha512(INPUT, CHARSET) | sha512(&quot;my text&quot;, &quot;UTF-8&quot;) | a3d7e45a0d9be5fd4e4b9a3b8c9c2163c21ef &#x200B; 708bf11b4232b21d2a8704ada2cdcd7b367dd078a89 &#x200B; a5c908cfe377aceb1072a7b386b7d4fd2ff68a8fd24d16 |
+| md5 | 使用MD5輸入並產生雜湊值。 | <ul><li>輸入： **需要** ：要雜湊的純文字檔案。</li><li>字元集： *可選* ：字元集的名稱。 可能的值包括UTF-8、UTF-16、ISO-8859-1和US-ASCII。 </li></ul> | md5(INPUT, CHARSET) | md5(&quot;my text&quot;, &quot;UTF-8&quot;) | d3b96ce8c9fb4 &#x200B; e9bd0198d03ba6852c7 |
 | crc32 | 輸入使用循環冗餘校驗(CRC)算法產生32位循環碼。 | <ul><li>輸入： **需要** ：要雜湊的純文字檔案。</li><li>字元集： *可選* ：字元集的名稱。 可能的值包括UTF-8、UTF-16、ISO-8859-1和US-ASCII。</li></ul> | crc32(INPUT, CHARSET) | crc32(&quot;my text&quot;, &quot;UTF-8&quot;) | 8df92e80 |
 
 ### URL函式
+
+>[!NOTE]
+>
+>請向左／向右滾動以查看表的完整內容。
 
 | 函數 | 說明 | 參數 | 語法 | 運算式 | 範例輸出 |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
@@ -79,6 +91,10 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 | get_url_query_str | 傳回指定URL的查詢字串。 | <ul><li>URL: **必要** ：您嘗試從中取得查詢字串的URL。</li><li>錨點： **必要** ：決定將如何使用查詢字串中的錨點。 可以是三個值之一：&quot;retain&quot;、&quot;remove&quot;或&quot;append&quot;。<br><br>如果值為&quot;retain&quot;，則錨點會附加至傳回的值。<br>如果值為&quot;remove&quot;，則錨點將從傳回的值中移除。<br>如果值是「附加」，則錨點會傳回為個別值。</li></ul> | get_url_query_str(URL, ANCHOR) | get_url_query_str(&quot;foo://example.com:8042/over/there?name=ferret#nose&quot;, &quot;retain&quot;)<br>get_url_query_str(&quot;foo://example.com:8042/over/there?name=ferret#nose&quot;, &quot;remove&quot;)<br>get_url_query_str(&quot;foo://example.com:8042/over/there?name=ferret#nose&quot;, &quot;append&quot;) | `{"name": "ferret#nose"}`<br>`{"name": "ferret"}`<br>`{"name": "ferret", "_anchor_": "nose"}` |
 
 ### 日期和時間函式
+
+>[!NOTE]
+>
+>請向左／向右滾動以查看表的完整內容。
 
 | 函數 | 說明 | 參數 | 語法 | 運算式 | 範例輸出 |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
@@ -97,6 +113,10 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 
 ### 階層——物件
 
+>[!NOTE]
+>
+>請向左／向右滾動以查看表的完整內容。
+
 | 函數 | 說明 | 參數 | 語法 | 運算式 | 範例輸出 |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | size_of | 傳回輸入的大小。 | <ul><li>輸入： **必要** ：您要尋找大小的物件。</li></ul> | size_of(INPUT) | `size_of([1, 2, 3, 4])` | 4 |
@@ -108,6 +128,10 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 
 ### 階層——陣列
 
+>[!NOTE]
+>
+>請向左／向右滾動以查看表的完整內容。
+
 | 函數 | 說明 | 參數 | 語法 | 運算式 | 範例輸出 |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | 聚結 | 返回給定陣列中的第一個非空對象。 | <ul><li>輸入： **必需** ：要查找的第一個非空對象的陣列。</li></ul> | 合併（輸入） | coalesce(null, null, null, &quot;first&quot;, null, &quot;second&quot;) | &quot;first&quot; |
@@ -117,6 +141,10 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 
 ### 邏輯運算子
 
+>[!NOTE]
+>
+>請向左／向右滾動以查看表的完整內容。
+
 | 函數 | 說明 | 參數 | 語法 | 運算式 | 範例輸出 |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | 解碼 | 給定一個鍵和一個作為陣列平面化的鍵值對清單，如果找到鍵，該函式將返回該值，如果在陣列中存在，則返回預設值。 | <ul><li>索引鍵： **必要** ：要匹配的密鑰。</li><li>選項： **必要** ：索引鍵／值對的平面化陣列。 （可選）預設值可以放在結尾。</li></ul> | decode(KEY, OPTIONS) | decode(stateCode, &quot;ca&quot;, &quot;California&quot;, &quot;pa&quot;, &quot;Pennylvania&quot;, &quot;N/A&quot;) | 如果stateCode是&quot;ca&quot;，則為&quot;California&quot;。<br>如果給定的stateCode是&quot;pa&quot;，則為&quot;Pennylvania&quot;。<br>如果stateCode不符合下列項目，則為&quot;N/A&quot;。 |
@@ -124,12 +152,20 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 
 ### 彙總
 
+>[!NOTE]
+>
+>請向左／向右滾動以查看表的完整內容。
+
 | 函數 | 說明 | 參數 | 語法 | 運算式 | 範例輸出 |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | min | 返回給定參數的最小值。 使用自然排序。 | <ul><li>選項： **需要** ：可以相互比較的一個或多個對象。</li></ul> | min(OPTIONS) | min(3, 1, 4) | 1 |
 | max | 返回給定參數的最大值。 使用自然排序。 | <ul><li>選項： **需要** ：可以相互比較的一個或多個對象。</li></ul> | max(OPTIONS) | max(3, 1, 4) | 4 |
 
 ### 文字轉換
+
+>[!NOTE]
+>
+>請向左／向右滾動以查看表的完整內容。
 
 | 函數 | 說明 | 參數 | 語法 | 運算式 | 範例輸出 |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
@@ -140,17 +176,29 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 
 ### JSON函式
 
+>[!NOTE]
+>
+>請向左／向右滾動以查看表的完整內容。
+
 | 函數 | 說明 | 參數 | 語法 | 運算式 | 範例輸出 |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | json_to_object | 從指定字串反序列化JSON內容。 | <ul><li>字串： **需要** JSON字串要取消序列化。</li></ul> | json_to_object(STRING) | json_to_object({&quot;info&quot;:{&quot;firstName&quot;:&quot;John&quot;,&quot;lastName&quot; :&quot;Doe&quot;}) | 表示JSON的物件。 |
 
 ### 特殊行動
 
+>[!NOTE]
+>
+>請向左／向右滾動以查看表的完整內容。
+
 | 函數 | 說明 | 參數 | 語法 | 運算式 | 範例輸出 |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | uuid /<br>guid | 產生偽隨機ID。 |  | uuid()<br>guid() | uuid()<br>guid() | 7c0267d2-bb74-4e1a-9275-3bf4fccda5f4<br>c7016dc7-3163-43f7-afc7-2e1c9c206333 |
 
 ### 用戶代理函式
+
+>[!NOTE]
+>
+>請向左／向右滾動以查看表的完整內容。
 
 | 函數 | 說明 | 參數 | 語法 | 運算式 | 範例輸出 |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
