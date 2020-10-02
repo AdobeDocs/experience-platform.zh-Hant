@@ -5,7 +5,7 @@ seo-title: Facebook目標
 description: 根據雜湊的電子郵件，啟用您Facebook宣傳的個人檔案，以鎖定受眾、個人化和抑制受眾。
 seo-description: 根據雜湊的電子郵件，啟用您Facebook宣傳的個人檔案，以鎖定受眾、個人化和抑制受眾。
 translation-type: tm+mt
-source-git-commit: 72ceb747bd4b278afc51dfb5ab6d6386d7b05c82
+source-git-commit: c66fb4cf0a414e02ceb58becc9d9b59db3fe987b
 workflow-type: tm+mt
 source-wordcount: '758'
 ht-degree: 4%
@@ -52,7 +52,7 @@ ht-degree: 4%
 >
 >傳送至的資料 [!DNL Facebook] 不應包含銜接身分。 您有責任履行此義務，並可確保選定進行啟動的區段不會在其合併政策中使用拼接選項來履行此義務。 進一步瞭解合 [並原則](/help/profile/ui/merge-policies.md)。
 
-### 啟動類型 {#activation-type}
+### 匯出類型 {#export-type}
 
 **區段匯出** -您正匯出區段（對象）的所有成員，並包含識別碼（名稱、電話號碼等） 用於Facebook目的地。
 
