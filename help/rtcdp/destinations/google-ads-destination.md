@@ -5,15 +5,15 @@ seo-title: Google廣告目的地
 description: Google Ads（先前稱為Google AdWords）是線上廣告服務，可讓企業透過文字搜尋、圖形顯示、YouTube視訊和應用程式內行動顯示，按點擊付費廣告。
 seo-description: Google Ads（先前稱為Google AdWords）是線上廣告服務，可讓企業透過文字搜尋、圖形顯示、YouTube視訊和應用程式內行動顯示，按點擊付費廣告。
 translation-type: tm+mt
-source-git-commit: 2dfa46906374151628d46c309df724a59f8dc50e
+source-git-commit: c66fb4cf0a414e02ceb58becc9d9b59db3fe987b
 workflow-type: tm+mt
-source-wordcount: '635'
+source-wordcount: '652'
 ht-degree: 0%
 
 ---
 
 
-# [!DNL Google Ads] 目的地
+# [!DNL Google Ads] 目標
 
 ## 概述
 
@@ -25,11 +25,15 @@ ht-degree: 0%
 
 * 您可以傳送下列身 [分](../../identity-service/namespaces.md) ，到 [!DNL Google Ads] 目的地： **Google Cookie ID、IDFA、GAID、Roku ID、Microsoft ID、Amazon Fire TV ID**。
 * 在平台中以程式設計方式建立啟用的 [!DNL Google] 觀眾。
-* Adobe即時CDP目前不包含測量量度，以驗證啟動是否成功。 請參閱Google中的觀眾計數，以驗證整合併瞭解觀眾鎖定規模。
+* Adobe即時CDP目前不包含用於驗證成功啟動的測量量度。 請參閱Google中的觀眾計數，以驗證整合併瞭解觀眾鎖定規模。
 
 >[!IMPORTANT]
 >
 >如果您想要建立第一個目標，但 [!DNL Google Ads] Experience Cloud ID服務過去（使用Audience Manager或其他應用程式）未啟用 [](https://docs.adobe.com/content/help/en/id-service/using/id-service-api/methods/idsync.html) ID同步功能，請聯絡Adobe諮詢或客戶服務以啟用ID同步。 如果您先前已在Audience Manager中設定Google整合，您設定的ID同步化會轉存至Adobe即時CDP。
+
+### 匯出類型 {#export-type}
+
+**區段匯出** -您正將區段（對象）的所有成員匯出至Google目標。
 
 ## 必要條件
 
