@@ -5,7 +5,7 @@ description: 瞭解如何使用Experience Platform Web SDK支援同意偏好設�
 seo-description: 瞭解如何使用Experience Platform Web SDK支援同意偏好設定
 keywords: consent;defaultConsent;default consent;setConsent;Profile Privacy Mixin;Experience Event Privacy Mixin;Privacy Mixin;
 translation-type: tm+mt
-source-git-commit: fe53ecbf6adff4f1e09979cd170a88ac0bd3cb75
+source-git-commit: f178da80d0902f76868986426600f3da426cf24d
 workflow-type: tm+mt
 source-wordcount: '756'
 ht-degree: 0%
@@ -97,7 +97,7 @@ alloy("setConsent", {
 });
 ```
 
-以此方式設定同意書時，會以同意資訊更新「統一描述檔」。 為了達到此目的，配置式XDM架構需要包含配置式 [隱私混合](https://github.com/adobe/xdm/blob/master/docs/reference/context/profile-privacy.schema.md)。 在傳送事件時，需要手動將IAB同意資訊新增至事件xdm物件。 SDK不會自動在事件中包含同意資訊。 若要在事件中傳送同意資訊， [Experience Event Privacy Mixin](https://github.com/adobe/xdm/blob/master/docs/reference/context/experienceevent-privacy.schema.md) 必須新增至體驗事件架構。
+以此方式設定同意書時，即時客戶個人檔案會以同意書資訊進行更新。 為了達到此目的，配置式XDM架構需要包含配置式 [隱私混合](https://github.com/adobe/xdm/blob/master/docs/reference/context/profile-privacy.schema.md)。 在發送事件時，需要手動將IAB許可資訊添加到事件XDM對象。 SDK不會自動在事件中包含同意資訊。 若要在事件中傳送同意資訊， [Experience Event Privacy Mixin](https://github.com/adobe/xdm/blob/master/docs/reference/context/experienceevent-privacy.schema.md) 必須新增至「Experience Event」（體驗事件）架構。
 
 ## 在單一請求中傳送兩個標準
 
