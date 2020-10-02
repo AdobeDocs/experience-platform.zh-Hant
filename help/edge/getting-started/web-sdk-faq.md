@@ -4,9 +4,9 @@ seo-title: Adobe Experience Platform網頁SDK常見問答集
 description: 有關Adobe Experience Platform Web SDK的常見問題
 seo-description: 有關Adobe Experience Platform Web SDK的常見問題
 translation-type: tm+mt
-source-git-commit: f51513e66945c41d06f12f4ac8f05ddad0d32898
+source-git-commit: f178da80d0902f76868986426600f3da426cf24d
 workflow-type: tm+mt
-source-wordcount: '1679'
+source-wordcount: '1683'
 ht-degree: 2%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 2%
 
 # 常見問題集
 
-本常見問答集包含Adobe Web SDK/
+本常見問答集包含常問有關Adobe Web SDK的問題。
 
 ## 什麼是Adobe Experience Platform Web SDK?
 
@@ -105,7 +105,7 @@ Adobe Experience Platform Web SDK是專為下列人員所開發：
 
 ## 我要如何取得開始使用Adobe Experience Platform Web SDK的存取權？
 
-Web SDK目前可供一般大眾使用，可用來傳送資料至Adobe Experience Cloud產品。 將資料傳送至協力廠商解決方案的能力即將推出。 如果您想要取得Web SDK的存取權，請連絡您的CSM以開始申請程式。
+Web SDK目前可供一般大眾使用，可用來傳送資料至Adobe Experience Cloud產品。 將資料傳送至協力廠商解決方案的能力即將推出。 如果您想要取得Web SDK的存取權，請連絡您的認證軟體管理員(CSM)以開始申請程式。
 
 ## 網頁SDK目前支援哪些使用案例？
 
