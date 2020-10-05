@@ -5,9 +5,9 @@ description: 瞭解如何使用Experience Platform Web SDK將連結資料傳送�
 seo-description: 瞭解如何使用Experience Platform Web SDK將連結資料傳送至Adobe Analytics
 keywords: adobe analytics;analytics;sendEvent;s.t();s.tl();webPageDetails;pageViews;webInteraction;web Interaction;page views;link tracking;links;track links;clickCollection;click collection;
 translation-type: tm+mt
-source-git-commit: c6b572f8757e46ccb22ccea326a7537747f81893
+source-git-commit: 8840e00ec3aa28d43c371b793da4a4b9bfc8d259
 workflow-type: tm+mt
-source-wordcount: '361'
+source-wordcount: '362'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 # 傳送資料至Adobe Analytics
 
-過去在頁面檢視和連結之間有不同的函式可區分(例如 `s.t(), s.tl()`)，而在Web SDK中只有指令 `sendEvent` 。 您隨事件傳送的資料會決定事件應是頁面檢視或連結。
+過去有不同的函式可區分頁面檢視和連結(例如 `s.t(), s.tl()`)，而在Web SDK中只有指令 `sendEvent` 。 您隨事件傳送的資料會決定事件應是頁面檢視或連結。
 
 ## 傳送頁面檢視
 
@@ -35,7 +35,7 @@ alloy("sendEvent", {
 });
 ```
 
-雖然分析在技術上記錄頁面檢視，即使未設定此變數，但是最好在您想要記錄頁面檢視在資料中明確顯示且未來可證明您實施時，設定此變數。
+雖然分析在技術上記錄頁面檢視，即使未設定此變數，但在您想要記錄頁面檢視在資料中明確顯示以及未來證明實施時，最好設定此變數。
 
 ## 追蹤連結
 
