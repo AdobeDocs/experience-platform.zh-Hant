@@ -5,10 +5,10 @@ title: 色彩擷取
 topic: Developer guide
 description: 當給定文字檔案時，關鍵字擷取服務會自動擷取最能說明檔案主題的關鍵字或關鍵片語。 為了提取關鍵字，採用了命名實體識別(NER)和無監督關鍵字提取算法的組合。
 translation-type: tm+mt
-source-git-commit: 31e4f1441676daa79f064c567ddc47e9198d0a0b
+source-git-commit: eb92a7d57b1ef0ca19bc2d175ad1b2014ac1a8b0
 workflow-type: tm+mt
-source-wordcount: '625'
-ht-degree: 4%
+source-wordcount: '1059'
+ht-degree: 3%
 
 ---
 
@@ -36,6 +36,10 @@ ht-degree: 4%
 | WORK_OF_ART | 書籍、歌曲等標題 |
 | LAW | 將檔案命名為法律。 |
 | 語言 | 任何指名的語言。 |
+
+>[!NOTE]
+>
+>如果您打算處理PDF，請跳至本檔案中 [PDF關鍵字擷取的指示](#pdf-extraction) 。 此外，還設定支援其他檔案類型，例如docx、ppt、amd xml等，以供日後發行。
 
 **API格式**
 
@@ -223,6 +227,139 @@ curl -w'\n' -i -X POST https://sensei.adobe.io/services/v1/predict \
   "error": []
 }
 ```
+
+## PDF關鍵字擷取 {#pdf-extraction}
+
+關鍵字擷取服務支援PDF，但您需要針對PDF檔案使用新的AnalyzerID，並將檔案類型變更為PDF。 如需詳細資訊，請參閱以下範例。
+
+**API格式**
+
+```http
+POST /services/v1/predict
+```
+
+**請求**
+
+下列請求會根據裝載中提供的輸入參數，從PDF檔案擷取關鍵字。
+
+>[!CAUTION]
+>
+>`analyzer_id` 決定使 [!DNL Sensei Content Framework] 用的項目。 在提出要求前，請先檢查 `analyzer_id` 您是否有適當。 對於PDF關鍵字擷取， `analyzer_id` ID為：
+>`Feature:cintel-ner:Service-7a87cb57461345c280b62470920bcdc5`
+
+```SHELL
+curl -w'\n' -i -X POST https://sensei.adobe.io/services/v1/predict \
+  -H "Authorization: Bearer {ACCESS_TOKEN}" \
+  -H "Content-Type: multipart/form-data" \
+  -H "cache-control: no-cache,no-cache" \
+  -H "x-api-key: {API_KEY}" \
+  -F file=@TestPDF.pdf \
+  -F 'contentAnalyzerRequests={
+    "enable_diagnostics":"true",
+    "requests":[{
+    "analyzer_id": "Feature:cintel-ner:Service-7a87cb57461345c280b62470920bcdc5",
+    "parameters": {
+      "application-id": "1234",
+      "content-type": "file",
+      "encoding": "pdf",
+      "threshold": "0.01",
+      "top-N": "0",
+      "custom": {},
+      "data": [{
+        "content-id": "abc123",
+        "content": "file",
+        }]
+      }
+    }]
+  }'
+```
+
+| 屬性 | 說明 | 必要 |
+| --- | --- | --- |
+| `analyzer_id` | 您 [!DNL Sensei] 的請求所部署的服務ID。 此ID決定使用哪 [!DNL Sensei Content Frameworks] 個。 如需自訂服務，請聯絡「內容與商務AI」團隊以設定自訂ID。 | 是 |
+| `application-id` | 已建立應用程式的ID。 | 是 |
+| `data` | 包含JSON物件的陣列，其中每個物件都代表檔案。 作為此陣列的一部分傳遞的任何參數都將覆蓋在陣列外部指定的全 `data` 局參數。 下表中概述的任何其他屬性都可從中覆蓋 `data`。 | 是 |
+| `language` | 輸入語言。 The default value is `en` (english). | 無 |
+| `content-type` | 用於指示輸入內容類型。 此值應設定為 `file`。 | 是 |
+| `encoding` | 輸入的編碼格式。 此值應設定為 `pdf`。 更多的編碼類型設定為稍後支援。 | 是 |
+| `threshold` | 需要傳回結果的分數臨界值（0到1）。 使用值可 `0` 傳回所有結果。 此屬性的預設值為 `0`。 | 無 |
+| `top-N` | 要傳回的結果數（不能是負整數）。 使用值可 `0` 傳回所有結果。 當與搭配使用時， `threshold`傳回的結果數量會是任一限制集的較小者。 此屬性的預設值為 `0`。 | 無 |
+| `custom` | 要傳遞的任何自訂參數。 此屬性需要有效的JSON物件才能運作。 如需自訂 [參數的詳細資訊](#appendix) ，請參閱附錄。 | 無 |
+| `content-id` | 回應中傳回之資料元素的唯一ID。 如果未傳遞此資訊，則會指派自動產生的ID。 | 無 |
+| `content` | 此值應設定為 `file`。 | 是 |
+
+**回應**
+
+成功的回應會傳回JSON物件，其中包含陣列中擷取的關 `response` 鍵字。
+
+```json
+{
+  "statusCode": 200,
+  "body": {
+    "type": "JSON",
+    "matchType": "strict",
+    "json": {
+      "status": 200,
+      "content_id": "161hw2.pdf",
+      "cas_responses": [
+        {
+          "status": 200,
+          "analyzer_id": "Feature:cintel-ner:Service-7a87cb57461345c280b62470920bcdc5",
+          "content_id": "161hw2.pdf",
+          "result": {
+            "response_type": "feature",
+            "response": [
+              {
+                "feature_value": [
+                  {
+                    "feature_name": "status",
+                    "feature_value": "success"
+                  },
+                  {
+                    "feature_value": [
+                      {
+                        "feature_name": "delbick",
+                        "feature_value": [
+                          {
+                            "feature_name": "score",
+                            "feature_value": 0.03673855028832046
+                          },
+                          {
+                            "feature_name": "type",
+                            "feature_value": "KEYWORD"
+                          }
+                        ]
+                      },
+                      {
+                        "feature_name": "Ci",
+                        "feature_value": [
+                          {
+                            "feature_name": "score",
+                            "feature_value": 0
+                          },
+                          {
+                            "feature_name": "type",
+                            "feature_value": "PERSON"
+                          }
+                        ]
+                      }
+                    ],
+                    "feature_name": "labels"
+                  }
+                ],
+                "feature_name": "abc123"
+              }
+            ]
+          }
+        }
+      ],
+      "error": []
+    }
+  }
+}
+```
+
+如需詳細資訊，以及使用PDF擷取的範例，其中包含如何設定、部署及與AEM雲端服務整合的指示。 請造訪 [CCAI PDF擷取工作者github儲存庫](https://github.com/adobe/asset-compute-example-workers/tree/master/projects/worker-ccai-pdfextract)。
 
 ## 附錄 {#appendix}
 
