@@ -5,9 +5,9 @@ title: 文字分類API端點
 topic: Developer guide
 description: 文字分類服務在給定文字片段時，可將其分類為一或多個標籤。 分類可以是單一標籤、多標籤或階層式。
 translation-type: tm+mt
-source-git-commit: 31e4f1441676daa79f064c567ddc47e9198d0a0b
+source-git-commit: 09200be6eb078ecbefc91c6449373f811b602797
 workflow-type: tm+mt
-source-wordcount: '431'
+source-wordcount: '432'
 ht-degree: 4%
 
 ---
