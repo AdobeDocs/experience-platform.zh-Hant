@@ -5,9 +5,9 @@ seo-title: （測試版）Azure事件集線器目標
 description: 建立Azure事件中樞儲存空間的即時出站連線，以從Experience Platform串流資料。
 seo-description: 建立Azure事件中樞儲存空間的即時出站連線，以從Experience Platform串流資料。
 translation-type: tm+mt
-source-git-commit: d0a04c61bfe4024a2bb45ea7babab9073fcd6c22
+source-git-commit: 67a353c950bef11ccbaa52c49d213f08449baa96
 workflow-type: tm+mt
-source-wordcount: '505'
+source-wordcount: '504'
 ht-degree: 2%
 
 ---
@@ -39,7 +39,7 @@ ht-degree: 2%
 
 ## 匯出類型 {#export-type}
 
-**描述檔匯出** -您要匯出區段的所有成員，以及所要的架構欄位(例如：電子郵件地址、電話號碼、姓氏)，這是從目標啟動工作流程的「選 [擇屬性」畫面中選擇](/help/rtcdp/destinations/activate-destinations.md#select-attributes)。\
+**基於配置檔案** -您正在導出段的所有成員，以及所需的架構欄位(例如：電子郵件地址、電話號碼、姓氏)，這是從目標啟動工作流程的「選 [擇屬性」畫面中選擇](/help/rtcdp/destinations/activate-destinations.md#select-attributes)。\
 
 ## 連接目標 {#connect-destination}
 
