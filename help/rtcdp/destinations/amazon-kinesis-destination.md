@@ -5,9 +5,9 @@ seo-title: Amazon Kinesis目標
 description: 建立到Amazon Kinesis儲存的即時出站連接，以便從Adobe Experience Platform流資料。
 seo-description: 建立到Amazon Kinesis儲存的即時出站連接，以便從Adobe Experience Platform流資料。
 translation-type: tm+mt
-source-git-commit: d0a04c61bfe4024a2bb45ea7babab9073fcd6c22
+source-git-commit: 67a353c950bef11ccbaa52c49d213f08449baa96
 workflow-type: tm+mt
-source-wordcount: '475'
+source-wordcount: '474'
 ht-degree: 2%
 
 ---
@@ -41,7 +41,7 @@ ht-degree: 2%
 
 ## 匯出類型 {#export-type}
 
-**描述檔匯出** -您要匯出區段的所有成員，以及所要的架構欄位(例如：電子郵件地址、電話號碼、姓氏)，這是從目標啟動工作流程的「選取屬性」畫面 [中選擇的](/help/rtcdp/destinations/activate-destinations.md#select-attributes)。
+**基於配置檔案** -您正在導出段的所有成員，以及所需的架構欄位(例如：電子郵件地址、電話號碼、姓氏)，這是從目標啟動工作流程的「選取屬性」畫面 [中選擇的](/help/rtcdp/destinations/activate-destinations.md#select-attributes)。
 
 ## 連接目標 {#connect-destination}
 
