@@ -5,7 +5,7 @@ title: 架構構成基礎
 topic: overview
 description: 本檔案提供Experience Data Model(XDM)架構的簡介，以及構成Adobe Experience Platform中要使用之架構的建置區塊、原則和最佳實務。
 translation-type: tm+mt
-source-git-commit: 4a76101cb8a7afb947bdce263a73f79d931db154
+source-git-commit: f7abccb677294e1595fb35c27e03c30eb968082a
 workflow-type: tm+mt
 source-wordcount: '2839'
 ht-degree: 0%
@@ -58,7 +58,7 @@ XDM模式通過嵌入對象的使用，可以直接表示複雜的資料，並�
 
 記錄和時間序列模式都包含身份映射(`xdm:identityMap`)。 此欄位包含主題的身分表示法，其取自標示為「身分」的欄位，如下一節所述。
 
-### [!UICONTROL 身份]
+### [!UICONTROL 身份] {#identity}
 
 結構描述用於將資料吸收到中 [!DNL Experience Platform]。 此資料可跨多個服務使用，以建立個別實體的單一統一檢視。 因此，在考慮結構時，請務必考慮客戶身分，以及哪些欄位可用來識別主題，而不論資料來自何處。
 
