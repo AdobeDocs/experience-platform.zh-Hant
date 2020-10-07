@@ -6,7 +6,7 @@ topic: tutorial
 type: Tutorial
 description: '在Adobe Experience Platform Data Science Workspace中，將輸入資料輸入現有的訓練模型，即可獲得分數。 然後，將計分結果儲存並作為新批在指定的輸出資料集中查看。 '
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '609'
 ht-degree: 0%
@@ -32,7 +32,7 @@ ht-degree: 0%
 
 1. 尋找最佳的訓練執行，以使用其設定進行計分。 按一下所要的「訓練」執行名稱，以開啟它。
 
-2. 在「訓練執行 **[!UICONTROL 評估]** 」標籤中，按一 **[!UICONTROL 下畫面右上方的「分數]** 」按鈕。 這將啟動新的「執行計 *分」工作* 流程。
+2. 在「訓練執行 **[!UICONTROL 評估]** 」標籤中，按一 **[!UICONTROL 下畫面右上方的「分數]** 」按鈕。 這將啟動新的「執行計 **分」工作** 流程。
    ![](../images/models-recipes/score/training_run_overview.png)
 
 3. 選取輸入計分資料集，然後按一下「 **[!UICONTROL 下一步]**」。
