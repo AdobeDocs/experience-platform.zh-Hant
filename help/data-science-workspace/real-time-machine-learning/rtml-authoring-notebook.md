@@ -5,7 +5,7 @@ title: 即時機器學習筆記型電腦使用指南
 topic: Training and scoring a ML model
 description: 以下指南概述在Adobe Experience Platform JupyterLab中建立即時機器學習應用程式所需的步驟。
 translation-type: tm+mt
-source-git-commit: c6c5ada52321b11543254f80399c38365f0fb9d7
+source-git-commit: 28b733a16b067f951a885c299d59e079f0074df8
 workflow-type: tm+mt
 source-wordcount: '1656'
 ht-degree: 0%
@@ -23,7 +23,7 @@ ht-degree: 0%
 
 ## 建立即時機器學習筆記型電腦
 
-在Adobe Experience Platform UI中，從Data Science中選 **[!UICONTROL 擇]***Notebooks*。 接著，選 **[!UICONTROL 擇JupyterLab]** ，並為環境載入留出一些時間。
+在Adobe Experience Platform UI中，從Data Science中選 **[!UICONTROL 擇]****Notebooks**。 接著，選 **[!UICONTROL 擇JupyterLab]** ，並為環境載入留出一些時間。
 
 ![open JupyterLab](../images/rtml/open-jupyterlab.png)
 
@@ -117,7 +117,7 @@ config_properties = {
 
 **資料轉換**
 
-需 **[!UICONTROL 要修改即時ML]** 范 ** 本資料轉換儲存格，才能搭配您自己的資料集運作。 這通常涉及重新命名欄、資料統計以及資料準備／功能工程。
+需 **[!UICONTROL 要修改即時ML]** 范 **** 本資料轉換儲存格，才能搭配您自己的資料集運作。 這通常涉及重新命名欄、資料統計以及資料準備／功能工程。
 
 >[!NOTE]
 >
