@@ -5,7 +5,7 @@ title: 快速入門
 topic: API guide
 description: 'Adobe Experience Platform Identity Service可管理Adobe Experience Platform內稱為身份圖的跨裝置、跨通道和近乎即時的客戶身分識別。 '
 translation-type: tm+mt
-source-git-commit: 2a528c705a7aa610f57047be39be1ce9886ce44c
+source-git-commit: fa667d86c089c692f22cfd1b46f3f11b6e9a68d7
 workflow-type: tm+mt
 source-wordcount: '754'
 ht-degree: 1%
@@ -88,4 +88,4 @@ API目前支援兩個地 [!DNL Identity Service] 區：VA7和NLD2。
 
 ## 後續步驟
 
-現在您已收集到必要的認證，您可以繼續閱讀其餘的開發人員指南。 每個區段都提供其端點的重要資訊，並示範執行CRUD作業的範例API呼叫。 每個呼叫都包含一般 **API格式**、顯示必要標題 **和正確格式化負載的範例請求，以及成功呼叫** 的範例回應 **** 。
+現在您已收集到必要的認證，您可以繼續閱讀其餘的開發人員指南。 每個區段都提供其端點的重要資訊，並示範執行CRUD作業的範例API呼叫。 每個呼叫都包含一般API格式、顯示必要標題和正確格式化負載的範例要求，以及成功呼叫的範例回應。
