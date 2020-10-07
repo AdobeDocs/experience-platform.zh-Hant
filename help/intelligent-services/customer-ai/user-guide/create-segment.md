@@ -5,7 +5,7 @@ title: 建立具有預測分數的客戶細分
 topic: Create a segment
 description: 當預測執行完成時，「設定檔」會自動使用預測傾向分數。 利用客戶人工智慧豐富個人檔案分數可建立客戶細分，以根據其傾向分數尋找受眾。 本節提供使用區段產生器建立區段的步驟。
 translation-type: tm+mt
-source-git-commit: c30bbaead775e68f869b080e24e18d4a23cda973
+source-git-commit: c5e2ea5daf813bf580a11f0182361197e55c6fe8
 workflow-type: tm+mt
 source-wordcount: '317'
 ht-degree: 0%
@@ -25,7 +25,7 @@ ht-degree: 0%
 
 ![](../images/user-guide/segments.png)
 
-此時會 *顯示「區段產生* 器」。 在左側的 *欄位* ，在「屬性」標籤下，按一下名為「 *XDM Individual Profile***** 」的檔案夾，然後按一下具有您組織名稱空間的檔案夾。 名為 **[!UICONTROL Customer AI]** 的資料夾包含預測執行的結果，並以分數所屬的例項命名。 按一下例項資料夾，以存取所需例項的結果。
+此時會 **顯示「區段產生** 器」。 在左側的 **[!UICONTROL 欄位]** ，在「屬性」標籤下，按一下名為「 **[!UICONTROL XDM Individual Profile]****** 」的檔案夾，然後按一下具有您組織名稱空間的檔案夾。 名為 **[!UICONTROL Customer AI]** 的資料夾包含預測執行的結果，並以分數所屬的例項命名。 按一下例項資料夾，以存取所需例項的結果。
 
 ![](../images/user-guide/results.png)
 
