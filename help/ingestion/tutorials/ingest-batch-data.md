@@ -6,7 +6,7 @@ topic: tutorial
 type: Tutorial
 description: Adobe Experience Platform可讓您輕鬆將資料匯入為符合已知Experience Data Model(XDM)架構的鑲木地板檔案或資料的批次檔案。
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '1308'
 ht-degree: 0%
@@ -28,7 +28,7 @@ Adobe Experience Platform可讓您輕鬆將資料匯入成批 [!DNL Platform] �
 
 Datasets工作區 [!DNL Experience Platform] 可讓您檢視和管理IMS組織建立的所有資料集，並建立新的資料集。
 
-按一下左側導覽中的「資 **[!UICONTROL 料集]** 」，檢視「資料集」工作區。 「資料集」清單包含 **[!UICONTROL Name]**、Created **[!UICONTROL （日期和時間）、Created]** (Source Date and Time)、 **************** Source Chema Last Batch Status、As as the Date and time the date ad Last Jodat Jadepated Last Plast.
+按一下左側導覽中的「資 **[!UICONTROL 料集]** 」，檢視「資料集」工作區。 「資料集」工作區包含資料集清單，包括顯示名稱、建立（日期和時間）、源、模式和上次批處理狀態的列，以及上次更新資料集的日期和時間。
 
 >[!NOTE]
 >
@@ -58,7 +58,7 @@ Datasets工作區 [!DNL Experience Platform] 可讓您檢視和管理IMS組織�
 
 ## 設定資料集
 
-在「設 **[!UICONTROL 定資料集]** 」畫面上，您必須為資料集指定名稱 **[!UICONTROL ，並且可能也會提供資料集]** 的說明 **** 。
+在「設 **[!UICONTROL 定資料集]** 」畫面上，您必須為資料集指定名稱，而且可能也會提供資料集的說明。
 
 **資料集名稱的附註：**
 
@@ -74,7 +74,7 @@ Datasets工作區 [!DNL Experience Platform] 可讓您檢視和管理IMS組織�
 
 現在已建立空的資料集，您已返回「資料集」工作區 **[!UICONTROL 的「資料集活動]** 」標籤。 您應該會在工作區的左上角看到資料集名稱，以及「未新增任何批次」通知。 由於您尚未將任何批次新增至此資料集，因此預期會出現此情況。
 
-在Datasets的右側，您會看到與新資料集相關的 **[!UICONTROL Info]****[!UICONTROL Tab，例如]** Info ************************ ID、AdobeChropSignSignSignSignSignSignSignSignSourd(ChrinSignSinSignSinSSinSinPSinPSinSSSiSinPSinPSinSinInSinInSinInSinInSin)資料集),SinSinSinPSinSinSinaSinSinSiSinSinSinSi 「資訊」標籤也包含資料集何時建立及其「上 **[!UICONTROL 次修改]** 」日 **[!UICONTROL 期的相關資訊]** 。
+在「資料集」工作區的右側，您會看到「 **[!UICONTROL Info]** 」標籤，其中包含與新資料集相關的資訊，例如資料集ID、名稱、說明、表格名稱、架構、串流和來源。 「資訊」標籤也包含資料集建立時間及其上次修改日期的相關資訊。
 
 另外，在「資訊」索引標籤中 **[!UICONTROL 也有「設定檔]** 」切換，用於啟用您的資料集以搭配使用 [!DNL Real-time Customer Profile]。 此切換的使用， [!DNL Real-time Customer Profile]以及，將在後面的章節中詳細說明。
 
@@ -122,13 +122,13 @@ Datasets工作區 [!DNL Experience Platform] 可讓您檢視和管理IMS組織�
 
 檔案上傳完成後，「資料集活 **[!UICONTROL 動]** 」標籤不會再顯示「未新增任何批次」。 現在，「資料集 **[!UICONTROL 活動」標籤]** ，會顯示資料集度量。 由於批次尚未載入，所有量度在此階段會顯示「0」。
 
-在標籤的底部有一個清單，其中顯示剛透過「新增資料至資料集」程式所擷取之 **[!UICONTROL 資料的批次ID]**[](#add-data-to-dataset) 。 另外還包括與批相關的資訊，包括「 **[!UICONTROL 吸收日期]** 」、「吸收 **[!UICONTROL 記錄數]**」和當前批狀 **[!UICONTROL 態]**。
+在標籤的底部有一個清單，其中顯示剛透過「新增資料至資料集」程式所擷取之 **[!UICONTROL 資料的批次ID]**[](#add-data-to-dataset) 。 另外還包括與批相關的資訊，包括提取日期、提取的記錄數和當前批狀態。
 
 ![資料集度量](../images/tutorials/ingest-batch-data/batch-id.png)
 
 ## 批次詳細資訊
 
-按一下「批 **[!UICONTROL 次ID]** 」以檢視「批 **[!UICONTROL 次概述」]**，顯示有關批次的其他詳細資訊。 在批次完成載入後，有關批次的資訊將會更新，以顯示「已收錄的記 **[!UICONTROL 錄數]** 」和「檔 **[!UICONTROL 案大小」]**。 「狀 **[!UICONTROL 態]** 」也會變更為「成功」或「失敗」。 如果批處理失敗，「錯 **[!UICONTROL 誤代碼]** 」部分將包含有關接收過程中任何錯誤的詳細資訊。
+按一下「批 **[!UICONTROL 次ID]** 」以檢視「批 **[!UICONTROL 次概述」]**，顯示有關批次的其他詳細資訊。 在批次完成載入後，有關批次的資訊將會更新，以顯示所擷取的記錄數和檔案大小。 狀態也會變更為「成功」或「失敗」。 如果批處理失敗，「錯 **[!UICONTROL 誤代碼]** 」部分將包含有關接收過程中任何錯誤的詳細資訊。
 
 如需有關批次擷取的詳細資訊和常見問題，請參閱批次擷取 [疑難排解指南](../batch-ingestion/troubleshooting.md)。
 
