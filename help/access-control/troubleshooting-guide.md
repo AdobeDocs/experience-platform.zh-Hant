@@ -5,7 +5,7 @@ title: 存取控制疑難排解指南
 topic: troubleshooting guide
 description: 本檔案提供有關Adobe Experience Platform中存取控制常見問題的解答。
 translation-type: tm+mt
-source-git-commit: 14f99c23cd82894fee5eb5c4093b3c50b95c52e8
+source-git-commit: 28b733a16b067f951a885c299d59e079f0074df8
 workflow-type: tm+mt
 source-wordcount: '313'
 ht-degree: 0%
@@ -17,7 +17,7 @@ ht-degree: 0%
 
 本檔案提供有關Adobe Experience Platform中存取控制常見問題的解答。 有關其他服務的問題和疑難排 [!DNL Platform] 解，請參閱「 [Experience Platform疑難排解指南」](../landing/troubleshooting.md)。
 
-[!DNL Experience Platform] 運用 [Adobe Admin Console中的產品設定檔](http://adminconsole.adobe.com) ，提供以角色為基礎的存 **取控制**，將使用者與權限和沙盒連結。  如需詳細 [資訊，請參閱存取控制概觀](home.md) 。
+[!DNL Experience Platform] 運用 [Adobe Admin Console中的產品設定檔](http://adminconsole.adobe.com) ，提供以角色為基礎的存取控制，將使用者與權限和沙盒連結。  如需詳細 [資訊，請參閱存取控制概觀](home.md) 。
 
 ## 我可以在哪裡找到目前的存取權限？
 
