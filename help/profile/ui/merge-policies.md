@@ -3,7 +3,7 @@ keywords: Experience Platform;profile;real-time customer profile;troubleshooting
 title: 合併策略使用手冊
 topic: guide
 translation-type: tm+mt
-source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
+source-git-commit: fcced39c0a78457ebb108b7378e32f1b2f75808b
 workflow-type: tm+mt
 source-wordcount: '1441'
 ht-degree: 0%
@@ -61,7 +61,7 @@ Adobe Experience Platform可讓您從多個來源匯整資料並加以匯整，�
 
 ### 排序時間戳記 {#timestamp-ordered}
 
-當描述檔記錄被收錄到Experience Platform中時，系統會在擷取時取得系統時間戳記並新增至記錄。 當 **[!UICONTROL Timestamp ordered]** is selected as &quot;[!UICONTROL Attribute merge]&quot; type for a merge policy, profiles are bend on the system timestamp. 換言之，合併是根據記錄被收錄到平台的時間戳記進行。
+當描述檔記錄被收錄到Experience Platform中時，系統會在擷取時取得系統時間戳記並新增至記錄。 當選 **[!UICONTROL 擇Timestamp ordered]** (有序時間戳 **[!UICONTROL )作為合併策略的Attribute merge]** type（屬性合併類型）時，將根據系統時間戳合併配置檔案。 換言之，合併是根據記錄被收錄到平台的時間戳記進行。
 
 有時，有時需要提供自訂時間戳記，並讓合併原則遵循自訂時間戳記，而非系統時間戳記的使用情形。 例如，回填資料或在記錄未依順序收錄時，確保事件順序正確。
 
@@ -119,7 +119,7 @@ Adobe Experience Platform可讓您從多個來源匯整資料並加以匯整，�
 
 建立或更新合併策略時，會執行檢查以確定合併策略是否違反您組織定義的任何資料使用策略。 資料使用政策是Adobe Experience Platform的一部分， [!DNL Data Governance] 是描述您可對特定資料執行或受限制之行銷動作類型的規 [!DNL Platform] 則。 例如，如果合併策略用於建立激活到第三方目標的段，而您的組織有阻止將特定資料導出到第三方的資料使用策略，則在嘗試保存合併策略時，您會收到「檢測到[!UICONTROL Data governance policy violation]」通知。
 
-此通知包括已違反的資料使用策略清單，允許您通過從清單中選擇策略來查看違規的詳細資訊。 在選擇違反的策略時，「資料世系 **** 」頁籤提供了違規原因和受影響的激活]，每個頁籤提供了有關違反資料使用策略的詳細資訊。
+此通知包括已違反的資料使用策略清單，允許您通過從清單中選擇策略來查看違規的詳細資訊。 在選擇違反的策略時，「資料世系 **** 」頁籤提供了違規的原因和受影響的激活，每個頁籤提供了有關違反資料使用策略的詳細資訊。
 
 若要進一步瞭解如何在Adobe Experience Platform中執行資料治理，請先閱讀資料治 [理概觀](../../data-governance/home.md)。
 
