@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Adobe Experience Platform產品檔案
 topic: getting started
 translation-type: tm+mt
-source-git-commit: 0f3a4ba6ad96d2226ae5094fa8b5073152df90f7
+source-git-commit: 34cfcaac276bf2645a0365a0dfa71c4ead6e2ecb
 workflow-type: tm+mt
 source-wordcount: '7145'
 ht-degree: 0%
@@ -214,7 +214,7 @@ ht-degree: 0%
 
 **目標目錄：** 目標目錄是中可用目標的清單 [!DNL Real-time Customer Data Platform]。
 
-**直接呼叫規則：** 在中 [!DNL Experience Platform Launch]，您可以設定直接 [!UICONTROL 呼叫規則] ，在從頁面  直接呼叫該規則時執行。 如果您的頁面載入或網站上的動作非常簡單，或是它是唯一的，而且每次都可以執行一組特定指示(設為 [!DNL eVar4] X並每次觸發 [!DNL event2] )，則可以使用直接呼叫 [!UICONTROL 規] 則 。 請參 [!DNL Launch] 閱有關建立直接 [!UICONTROL 呼叫規] 則的檔案 。
+**直接呼叫規則：** 在中 [!DNL Experience Platform Launch]，您可以設定直接呼叫規則，該規則在直接從頁面呼叫時執行。 如果您的頁面載入或網站上的動作非常簡單，或是它是唯一的，而且每次都能執行一組特定指示(設為 [!DNL eVar4] X並每次都觸發 [!DNL event2] )，則可使用直接呼叫規則。 請參 [!DNL Launch] 閱有關建立直接呼叫規則的檔案。
 
 **顯示名稱：** 顯示名稱是UI中顯示之欄位的易用名稱。
 
