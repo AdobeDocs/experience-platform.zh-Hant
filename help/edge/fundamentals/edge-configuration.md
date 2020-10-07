@@ -5,7 +5,7 @@ description: '瞭解如何設定Experience Platform Edge Network。 '
 seo-description: '瞭解如何設定Experience Platform Edge Network。 '
 keywords: configuration;edge;edge configuration id;Environment Settings;edgeConfigId;identity;id sync enabled;ID Sync Container ID;Sandbox;Streaming Inlet;Event Dataset;target;client code;Property Token;Target Environment ID;Cookie Destinations;url Destinations;Analytics Settings Blockreport suite id;
 translation-type: tm+mt
-source-git-commit: 8c256b010d5540ea0872fa7e660f71f2903bfb04
+source-git-commit: 34cfcaac276bf2645a0365a0dfa71c4ead6e2ecb
 workflow-type: tm+mt
 source-wordcount: '870'
 ht-degree: 2%
@@ -41,7 +41,7 @@ SDK中使用的ID是指 `edgeConfigId` 定配置和環境的複合ID。 如果�
 
 #### [!UICONTROL 身份]
 
-身分區段是唯一永遠開啟的區段。 它有兩個可用的設定： [!UICONTROL ID同步] , [!UICONTROL ID同步容器ID]。
+身分區段是唯一永遠開啟的區段。 它有兩個可用的設定：「[!UICONTROL ID Sync Enabled]」和「[!UICONTROL ID Sync Container ID]」。
 
 ![配置UI的標識部分](../../assets/edge_configuration_identity.png)
 
@@ -65,7 +65,7 @@ ID同步可分組至容器，以允許在不同時間執行不同的ID同步。 
 
 ##### [!UICONTROL 串流入口]
 
-串流入口是Adobe Experience Platform中的HTTP來源。 這些是在Adobe Experience Platform的 [!UICONTROL Sources] 標籤下建立為HTTP API。
+串流入口是Adobe Experience Platform中的HTTP來源。 這些是在Adobe Experience Platform的「[!UICONTROL Sources]」標籤下以HTTP API建立。
 
 ##### [!UICONTROL 事件資料集]
 
@@ -83,7 +83,7 @@ ID同步可分組至容器，以允許在不同時間執行不同的ID同步。 
 
 ##### [!UICONTROL 用戶端代碼]
 
-目標帳戶的唯一ID。 若要找到此項目，您可導覽至 [!UICONTROL Adobe Target] > [!UICONTROL Setup][!UICONTROL Implementation] >下一個要下載Button的Adobe Target. [!UICONTROL Js或Mbox.js的Adobe Target.Js.js的Adobe Button，以進行下載。]
+目標帳戶的唯一ID。 若要找到此項目，您可導覽至 [!UICONTROL Adobe Target] > [!UICONTROL Setup][!UICONTROL Implementation] >下一個要下載Adobe Button的Adobe Target. [!UICONTROL >SetupDeplementionButton，以取得Js.js或Mbox.js的Js。]
 
 ##### [!UICONTROL 屬性Token]
 
@@ -95,7 +95,7 @@ ID同步可分組至容器，以允許在不同時間執行不同的ID同步。 
 
 [Adobe](https://docs.adobe.com/content/help/en/target/using/administer/hosts.html) Target中的環境可協助您管理所有開發階段的實作。 此設定指定要與每個環境一起使用的環境。
 
-Adobe建議您對每個、和邊緣組態環境 `dev`設定 `stage`此 `prod` 項，以保持簡單。 不過，如果您已定義 [!UICONTROL Adobe Target環境] ，則可使用這些環境。
+Adobe建議您對每個、和邊緣組態環境 `dev`設定 `stage`此 `prod` 項，以保持簡單。 不過，如果您已定義Adobe Target環境，則可使用這些環境。
 
 #### Adobe Audience Manager
 
