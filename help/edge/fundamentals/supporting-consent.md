@@ -5,7 +5,7 @@ description: 瞭解如何使用Experience Platform Web SDK支援同意偏好設�
 seo-description: 瞭解如何使用Experience Platform Web SDK支援同意偏好設定
 keywords: consent;defaultConsent;default consent;setConsent;Profile Privacy Mixin;Experience Event Privacy Mixin;Privacy Mixin;
 translation-type: tm+mt
-source-git-commit: f178da80d0902f76868986426600f3da426cf24d
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '756'
 ht-degree: 0%
@@ -56,7 +56,7 @@ alloy("setConsent", {
 });
 ```
 
-由於使用者現在已選擇加入，SDK會執行所有先前佇列的命令。 未來依賴使用者選擇加入的命令 _不會排_ 隊，而會立即執行。
+由於使用者現在已選擇加入，SDK會執行所有先前佇列的命令。 未來依賴使用者選擇加入的命令不會排入佇列，而會立即執行。
 
 如果用戶選擇退出，請執行該 `setConsent` 命令並將 `general` 選項設定為 `out` 如下：
 
