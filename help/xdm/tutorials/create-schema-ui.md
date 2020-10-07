@@ -6,7 +6,7 @@ topic: tutorial
 type: Tutorials
 description: 本教學課程涵蓋使用Experience Platform中的架構編輯器建立架構的步驟。
 translation-type: tm+mt
-source-git-commit: eb6505bdcad9eee6d7e9674504223ca919f19c34
+source-git-commit: 9c7119ad836007af3437dc2e938b68aff3ca0f56
 workflow-type: tm+mt
 source-wordcount: '3835'
 ht-degree: 0%
@@ -126,7 +126,7 @@ UI中 [!UICONTROL 的] 「結構描述」工作區 [!DNL Platform] 提供了結�
 
 「忠誠[!UICONTROL 會員]」架構旨在擷取與忠誠度方案成員相關的資料，因此需要某些特定的忠誠度相關欄位。 沒有可用的標準混音包含必要的欄位，因此您需要定義新的混音。
 
-此時，當您開啟「新增 **[!UICONTROL Mixin」對話方塊]** ，請選 **[!UICONTROL 取「建立新Mixin」]**。 接著會要求您提供混 **[!UICONTROL 音的顯示名]****[!UICONTROL 稱和說]** 明。
+此時，當您開啟「新增 **[!UICONTROL Mixin」對話方塊]** ，請選 **[!UICONTROL 取「建立新Mixin」]**。 接著會要求您提供混合的顯示名稱和說明。
 
 ![](../images/tutorials/create-schema/mixin_create_new.png)
 
@@ -167,7 +167,7 @@ UI中 [!UICONTROL 的] 「結構描述」工作區 [!DNL Platform] 提供了結�
 * **[!UICONTROL 類型]:** 欄位的資料類型。 這包括基本標量類型和中定義的任何資料類型 [!DNL Schema Registry]。 範例： [!UICONTROL 字串]Integer [!UICONTROL NeterBoolean][!UICONTROL , Person], Person Address, Phone number，等等。
 * **[!UICONTROL 說明]:** 該欄位的可選說明應包括在句子中，最多200個字元。
 
-對象的第一個 `Loyalty` 欄位將是名為的字串 `loyaltyId`。 將新欄位的類型設定為&quot;[!UICONTROL String]&quot;時， **[!UICONTROL Field]****[!UICONTROL &quot;部分會填入幾個用於應用約束的選項，包括]** Default value **[!UICONTROL 、]****** Format Gramixt、Maximum lengthContributes。
+對象的第一個 `Loyalty` 欄位將是名為的字串 `loyaltyId`。 將新欄位的類型設定為「[!UICONTROL String]」時，「 **[!UICONTROL Field properties]** 」（欄位屬性）部分會填入幾個用於應用約束的選項，包括預設值、格式和最大長度。
 
 ![](../images/tutorials/create-schema/string_constraints.png)
 
@@ -226,7 +226,7 @@ UI中 [!UICONTROL 的] 「結構描述」工作區 [!DNL Platform] 提供了結�
 
 ![](../images/tutorials/create-schema/loyalty_data_type.png)
 
-在未來的架構中，您現在可以指派 **[!UICONTROL Type]** &quot;[!DNL Loyalty]&quot;欄位，並自動包含ID、忠誠度等級、成員自由和點數的欄位。
+在未來的架構中，您現在可以將欄位指派為「[!DNL Loyalty]」類型，並自動包含ID、忠誠度等級、成員自由和點數的欄位。
 
 ## 搜尋和篩選結構欄位
 
@@ -336,7 +336,7 @@ UI中 [!UICONTROL 的] 「結構描述」工作區 [!DNL Platform] 提供了結�
 
 ![](../images/tutorials/create-schema/browse-classes.png)
 
-此時將出現一個對話框，允許您從可用類清單中進行選擇。 在對話框頂部，選擇「創 **[!UICONTROL 建新類」]**。 然後，您可以為新類指定顯示名稱 **[!UICONTROL （類的簡短、描述性、唯一且用戶友好的名稱）、]** Description **[!UICONTROL 、和]** Behavior **[!UICONTROL (「]**HoperRecord」或「Time Series」)，用於方案將定義的資料。
+此時將出現一個對話框，允許您從可用類清單中進行選擇。 在對話框頂部，選擇「創 **[!UICONTROL 建新類」]**。 然後，您可以為新類提供結構將定義的資料的顯示名稱（類的簡短、描述性、唯一和用戶友好名稱）、說明和行為(「[!UICONTROL Record]」或「[!UICONTROL Time Series]」)。
 
 ![](../images/tutorials/create-schema/create_new_class.png)
 
