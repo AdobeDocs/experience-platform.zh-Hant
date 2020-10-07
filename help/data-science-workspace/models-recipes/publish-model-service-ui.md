@@ -6,9 +6,9 @@ topic: tutorial
 type: Tutorial
 description: Adobe Experience Platform Data Science Workspace可讓您將經過訓練和評估的模型發佈為服務，讓IMS組織內的使用者可對資料評分，而不需建立自己的模型。
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
-source-wordcount: '453'
+source-wordcount: '456'
 ht-degree: 0%
 
 ---
@@ -49,9 +49,9 @@ Adobe Experience Platform Data Science Workspace可讓您將經過訓練和評�
    ![](../images/models-recipes/publish-model/7_scoring_output.png)
 4. 建立服務時，它會繼承預設計分配置。 您可以檢閱這些設定，並視需要按兩下值以調整這些設定。 對配置滿意後，按一下「完 **[!UICONTROL 成]** 」開始計分運行。
    ![](../images/models-recipes/publish-model/8_scoring_configure.png)
-5. 在「服務」的「 *概述* 」頁面上，會顯示新計分工作及其進度的詳細資料。 作業完成後，「最 **[!UICONTROL 近]** 」計分作業將會更新。
+5. 在「服務」的「 **概述** 」頁面上，會顯示新計分工作及其進度的詳細資料。 作業完成後，「計分」 **[!UICONTROL 容器中]** 「最近」 **** 標題將會更新。
    ![](../images/models-recipes/publish-model/score_pending.png)
 
 ## 下一步 {#next-steps}
 
-在本教學課程中，您已成功地將模型發佈為可存取的服務，並透過服務收藏館使用新的服務計 **[!UICONTROL 分資料]**。 繼續下一個教學課程，瞭解如何安 [排在服務上執行自動化訓練和計分](./schedule-models-ui.md)。
+在本教學課程中，您已成功地將模型發佈為可存取的服務，並透過服務收藏館使用新的服務計 [!UICONTROL 分資料]。 繼續下一個教學課程，瞭解如何安 [排在服務上執行自動化訓練和計分](./schedule-models-ui.md)。
