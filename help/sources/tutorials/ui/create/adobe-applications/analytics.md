@@ -6,7 +6,7 @@ topic: overview
 type: Tutorial
 description: 本教學課程提供在UI中建立Adobe Analytics來源連接器以將消費者資料匯入Adobe Experience Platform的步驟。
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '790'
 ht-degree: 1%
@@ -28,7 +28,7 @@ ht-degree: 1%
 
 ## 使用Adobe Analytics建立來源連線
 
-登入 [Adobe Experience Platform](https://platform.adobe.com) ，然後從左側導覽列選 **[!UICONTROL 取Sources]** ，以存取來源工作區。 「目 *錄* 」螢幕顯示可用的源以建立入站連接，每個源顯示與其關聯的現有帳戶和資料集流的數量。
+登入 [Adobe Experience Platform](https://platform.adobe.com) ，然後從左側導覽列選 **[!UICONTROL 取Sources]** ，以存取來源工作區。 「目 **錄** 」螢幕顯示可用的源以建立入站連接，每個源顯示與其關聯的現有帳戶和資料集流的數量。
 
 您可以從畫面左側的目錄中選取適當的類別。 或者，您也可以使用搜尋選項找到您要使用的特定來源。
 
@@ -73,7 +73,7 @@ ht-degree: 1%
 
 ![](../../../../images/tutorials/create/analytics/catalog-dataset-flows.png)
 
-出現 *資料集流* 畫面。 此頁面上是一對資料集流，包括其名稱、來源資料、建立時間和狀態的資訊。
+出現 **資料集流** 畫面。 此頁面上是一對資料集流，包括其名稱、來源資料、建立時間和狀態的資訊。
 
 連接器實例化兩個資料集流。 一個流代表回填資料，另一個流代表即時資料。 回填資料未設定為描述檔，但會傳送至資料湖，以用於分析和資料科學使用案例。
 
@@ -83,7 +83,7 @@ ht-degree: 1%
 
 ![](../../../../images/tutorials/create/analytics/backfill.png)
 
-此時將 *顯示「資料集* 」活動頁。 此頁面以圖形形式顯示消費訊息的比率。 從上 *方標題選取* 「資料控管」，以存取標籤欄位。
+此時將 **顯示「資料集** 」活動頁。 此頁面以圖形形式顯示消費訊息的比率。 從上 *方標題選取* 「資料控管」，以存取標籤欄位。
 
 ![](../../../../images/tutorials/create/analytics/batches.png)
 
@@ -91,7 +91,7 @@ ht-degree: 1%
 
 ![](../../../../images/tutorials/create/analytics/data-gov.png)
 
-此時將 *顯示「編輯控管標籤* 」面板。 此螢幕可讓您存取和編輯資料集流程的合約、身分和敏感標籤。
+此時將 **顯示「編輯控管標籤** 」面板。 此螢幕可讓您存取和編輯資料集流程的合約、身分和敏感標籤。
 
 如需如何為來自Analytics的資料加上標籤的詳細資訊，請造訪資 [料使用標籤指南](../../../../../data-governance/labels/user-guide.md)。
 
