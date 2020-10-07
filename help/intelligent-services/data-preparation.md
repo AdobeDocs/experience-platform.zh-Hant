@@ -5,7 +5,7 @@ title: 準備資料以用於智慧型服務
 topic: Intelligent Services
 description: '為了讓智慧型服務能夠從行銷事件資料中發掘見解，資料必須以標準結構進行語義豐富和維護。 智慧型服務運用Experience Data Model(XDM)架構來達成此目標。 具體來說，Intelligent Services中使用的所有資料集都必須符合Consumer ExperienceEvent(CEE)XDM架構。 '
 translation-type: tm+mt
-source-git-commit: d9bf87e41fe002ac1d70a241b48c7b9fd1139d6c
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '1979'
 ht-degree: 0%
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 # 準備要用於 [!DNL Intelligent Services]
 
-為了從行 [!DNL Intelligent Services] 銷事件資料中發掘見解，資料必須語義豐富並維護在標準結構中。 [!DNL Intelligent Services] 運 [!DNL Experience Data Model] 用(XDM)架構來達成此目的。 具體來說，所有使用的資料集 [!DNL Intelligent Services] 都必須符合 **Consumer ExperienceEvent(CEE)** XDM架構。
+為了從行 [!DNL Intelligent Services] 銷事件資料中發掘見解，資料必須語義豐富並維護在標準結構中。 [!DNL Intelligent Services] 運 [!DNL Experience Data Model] 用(XDM)架構來達成此目的。 具體來說，所有使用的資料集 [!DNL Intelligent Services] 都必須符合Consumer ExperienceEvent(CEE)XDM架構。
 
 本檔案提供將行銷事件資料從多個管道對應至此架構的一般指引，概述有關架構中重要欄位的資訊，以協助您判斷如何有效地將資料對應至其架構。
 
