@@ -5,7 +5,7 @@ title: 沙盒API開發人員指南
 topic: developer guide
 description: 此開發人員指南提供步驟，協助您使用沙盒API來管理Experience Platform中的沙盒，並包含執行各種作業的範例API呼叫。
 translation-type: tm+mt
-source-git-commit: 0af537e965605e6c3e02963889acd85b9d780654
+source-git-commit: 9bd893820c7ab60bf234456fdd110fb2fbe6697c
 workflow-type: tm+mt
 source-wordcount: '364'
 ht-degree: 0%
@@ -45,4 +45,4 @@ Adobe Experience Platform中的沙盒可提供獨立的開發環境，讓您測�
 
 ## 後續步驟
 
-現在您已收集到必要的認證，您可以繼續閱讀其餘的開發人員指南。 每個區段都提供其端點的重要資訊，並示範執行CRUD作業的範例API呼叫。 每個呼叫都包含一般 **API格式**、顯示必要標題 **和正確格式化負載的範例請求，以及成功呼叫** 的範例回應 **** 。
+現在您已收集到必要的認證，您可以繼續閱讀其餘的開發人員指南。 每個區段都提供其端點的重要資訊，並示範執行CRUD作業的範例API呼叫。 每個呼叫都包含一般API格式、顯示必要標題和正確格式化負載的範例要求，以及成功呼叫的範例回應。
