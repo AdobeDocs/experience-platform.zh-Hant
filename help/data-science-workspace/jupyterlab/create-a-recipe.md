@@ -6,7 +6,7 @@ topic: tutorial
 type: Tutorial
 description: 本教學課程將涵蓋兩個主要部分。 首先，您將使用JupyterLab Notebook中的範本建立機器學習模型。 接下來，您將在JupyterLab中練習筆記本至配方工作流程，以便在Data Science Workspace中建立配方。
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '2335'
 ht-degree: 0%
@@ -302,9 +302,9 @@ df.dropna(0, inplace=True)
 
 >[!NOTE]
 > 
->_功能_ ，是指機器學習模型用來預測標籤的輸入變 _數_。
+>功能是指機器學習模型用來預測標籤的輸入變數。
 
-功能 `train()` 應包括訓練模型和返回訓練模型。 scikit-learn使用指南檔案中提供 [了一些不同型號的示例](https://scikit-learn.org/stable/user_guide.html)。
+功能 `train()` 應包括訓練模型和返回訓練模型。 scikit-learn使用指南文檔中提供 [了一些不同型號的示例](https://scikit-learn.org/stable/user_guide.html)。
 
 在選擇您的訓練模型後，您會將x和y訓練資料集符合模型，而函式會傳回已訓練的模型。 顯示此情況的範例如下：
 
