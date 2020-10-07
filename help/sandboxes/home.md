@@ -5,7 +5,7 @@ title: 沙盒總覽
 topic: overview
 description: 沙盒是Experience Platform單一執行個體中的虛擬分區，可讓您與數位體驗應用程式的開發流程順暢整合。
 translation-type: tm+mt
-source-git-commit: 172710c62b6f60de74e05364edb1191fbba0ff64
+source-git-commit: fa667d86c089c692f22cfd1b46f3f11b6e9a68d7
 workflow-type: tm+mt
 source-wordcount: '750'
 ht-degree: 0%
@@ -17,7 +17,7 @@ ht-degree: 0%
 
 Adobe Experience Platform旨在讓全球數位體驗應用程式更加豐富。 公司通常並行執行多種數位體驗應用程式，並需要滿足這些應用程式的開發、測試和部署需求，同時確保運作符合規範。
 
-In order to address this need, Experience Platform provides **sandboxes** which partition a single Platform instance into separate virtual environments to help develop and evolve digital experience applications.
+為瞭解決此需求，Experience Platform提供沙盒，可將單一平台實例分割為不同的虛擬環境，以協助開發和發展數位體驗應用程式。
 
 本檔案提供Experience Platform中沙盒的高階概觀。
 
