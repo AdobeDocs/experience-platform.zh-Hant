@@ -5,7 +5,7 @@ seo-title: 「目標詳細資料」頁
 description: '個別目的地的詳細資訊頁面提供目的地詳細資訊的概述，例如目的地名稱、ID、對應至目的地的區段，以及編輯啟動和啟用和停用資料流的控制項。 '
 seo-description: '個別目的地的詳細資訊頁面提供目的地詳細資訊的概述，例如目的地名稱、ID、對應至目的地的區段，以及編輯啟動和啟用和停用資料流的控制項。 '
 translation-type: tm+mt
-source-git-commit: 15323134f0c626cad2c4e90b3e1c0662cf7e57dd
+source-git-commit: 9bd893820c7ab60bf234456fdd110fb2fbe6697c
 workflow-type: tm+mt
 source-wordcount: '505'
 ht-degree: 1%
@@ -40,7 +40,7 @@ ht-degree: 1%
 ---------|----------|
 | 區段名稱 | 區段的名稱。 |
 | 區段說明 | 區段的說明。 |
-| 開始日期 | 將這些區段啟動至目的地的日期。 |
+| 開始日期 | 這些區段啟動至目的地的日期。 |
 | 結束日期 | 這些區段將停止啟動至目的地的日期。 |
 | 對應ID | *電子郵件行銷目的地不適用*。 指出目標平台中區段已知的ID。 |
 
@@ -53,8 +53,8 @@ ht-degree: 1%
 | 平台 | 代表對象被傳送至的目標平台。 如需詳 [細資訊，請參閱目](/help/rtcdp/destinations/destinations-catalog.md) 標目錄。 |
 | 說明 | 您可以編輯目標流的說明。 |
 | 類別 | 指示目標類型。 如需詳 [細資訊，請參閱目](/help/rtcdp/destinations/destinations-catalog.md) 標目錄。 |
-| 連線類型 | 指出您的觀眾是以何種形式傳送至目的地。 可以是 **[!UICONTROL Cookie]****[!UICONTROL 或描述檔]**。 |
-| 頻率 | 指出觀眾被傳送至目的地的頻率。 可以是 **[!UICONTROL 串流]** 或 **[!UICONTROL 批次]**。 |
+| 連線類型 | 指出您的觀眾是以何種形式傳送至目的地。 可以是 [!UICONTROL Cookie][!UICONTROL 或描述檔]。 |
+| 頻率 | 指出觀眾被傳送至目的地的頻率。 可以是 [!UICONTROL 串流] 或 [!UICONTROL 批次]。 |
 | 身份 | 代表目標所接受的身分名稱空間。 例如，「身分識別」欄位可以是GAID、IDFA、電子郵件。 如需所有接受的身分名稱空間，請參閱「身分名稱空間概 [觀」中的標準名稱空間](../../identity-service/namespaces.md)。 |
 | 建立者 | 表示建立此目標流的用戶。 |
 | 已建立 | 表示建立此目標流的UTC日期和時間。 |
