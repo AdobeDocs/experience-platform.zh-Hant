@@ -6,7 +6,7 @@ topic: tutorial
 type: Tutorial
 description: Adobe Experience Platform可讓您將查詢服務整合到JupyterLab中，做為標準功能，在資料科學工作區中使用結構化查詢語言(SQL)。 本教學課程示範常見使用案例的SQL查詢範例，以探索、轉換和分析Adobe Analytics資料。
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '826'
 ht-degree: 1%
@@ -104,7 +104,7 @@ ht-degree: 1%
 
 ![](../images/jupyterlab/query/restart_button.png)
 
-筆記本內核將重置，但單元格將保留，重 **[!UICONTROL 新運行]** 所有單元格以繼續您離開的位置。
+筆記本內核將重置，但單元格將保留，重 **新運行** 所有單元格以繼續您離開的位置。
 
 ### 每小時訪客計數 {#hourly-visitor-count}
 
