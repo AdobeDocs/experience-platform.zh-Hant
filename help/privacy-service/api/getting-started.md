@@ -5,7 +5,7 @@ title: 隱私權服務開發人員指南
 description: 使用REST風格的API，跨Adobe Experience Cloud應用程式管理資料主體的個人資料
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 1bb896f7629d7b71b94dd107eeda87701df99208
+source-git-commit: 28b733a16b067f951a885c299d59e079f0074df8
 workflow-type: tm+mt
 source-wordcount: '762'
 ht-degree: 0%
@@ -77,7 +77,7 @@ Adobe Experience Platform提 [!DNL Privacy Service] 供REST風格的API和使用
 
 ![](../images/api/getting-started/key-pair-generated.png)
 
-在將API新增至專案後，專案頁面會重新顯示在「隱私權服務 _API概觀」頁面_ 。 從這裡，向下捲動至「 **[!UICONTROL Service Account(JWT)]** 」區段，該區段提供對 [!DNL Privacy Service] API的所有呼叫所需的下列存取憑證：
+在將API新增至專案後，專案頁面會重新顯示在「隱私權服務 **API概觀」頁面** 。 從這裡，向下捲動至「 **[!UICONTROL Service Account(JWT)]** 」區段，該區段提供對 [!DNL Privacy Service] API的所有呼叫所需的下列存取憑證：
 
 * **[!UICONTROL 用戶端ID]**:必須在x-api-key標 `{API_KEY}` 題中提供用戶端ID。
 * **[!UICONTROL 組織ID]**:組織ID是必 `{IMS_ORG}` 須用在x-gw-ims-org-id標題中的值。
