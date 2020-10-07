@@ -5,7 +5,7 @@ title: 在客戶人工智慧中下載分數
 topic: Downloading scores
 description: 客戶AI可讓您以鑲木地板檔案格式下載分數。
 translation-type: tm+mt
-source-git-commit: 172710c62b6f60de74e05364edb1191fbba0ff64
+source-git-commit: fa667d86c089c692f22cfd1b46f3f11b6e9a68d7
 workflow-type: tm+mt
 source-wordcount: '945'
 ht-degree: 2%
