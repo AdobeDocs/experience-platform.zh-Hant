@@ -5,7 +5,7 @@ title: Data Science Workspace疑難排解指南
 topic: Troubleshooting
 description: 本檔案提供有關Adobe Experience Platform Data Science Workspace常見問題的解答。
 translation-type: tm+mt
-source-git-commit: 76e598c743df320e4b3cb821e118749fe7304d9c
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '750'
 ht-degree: 0%
@@ -31,7 +31,7 @@ ht-degree: 0%
 
 ![chrome進階](./images/faq/chrome-advanced.png)
 
-此時會 *顯示「隱私與安全* 」區段。 接著，按一下「 **網站設定** 」，接 **著按Cookie和網站資料**。
+此時會 **顯示「隱私與安全** 」區段。 接著，按一下「 **網站設定** 」，接 **著按Cookie和網站資料**。
 
 ![chrome進階](./images/faq/privacy-security.png)
 
@@ -63,7 +63,7 @@ Safari預設會在Safari &lt; 12中停用協力廠商Cookie。 由於您 [!DNL J
 
 ![Safari進階功能](./images/faq/advanced.png)
 
-接著，從頂端導覽列選取「開 **發** 」功能表。 從「開發」下 *拉式清單* ，將滑鼠指標暫留在「使 *用者代理」上*。 您可以選擇 **[!DNL Chrome]** 要使用的 **[!DNL Firefox]** 或用戶代理字串。
+接著，從頂端導覽列選取「開 **發** 」功能表。 從「開發」下 **拉式清單** ，將滑鼠指標暫留在「使 **用者代理」上**。 您可以選擇 **[!DNL Chrome]** 要使用的 **[!DNL Firefox]** 或用戶代理字串。
 
 ![開發功能表](./images/faq/user-agent.png)
 
