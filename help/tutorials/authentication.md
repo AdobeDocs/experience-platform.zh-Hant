@@ -6,7 +6,7 @@ topic: tutorial
 type: Tutorial
 description: '本檔案提供逐步教學課程，以存取Adobe Experience Platform開發人員帳戶，以呼叫Experience Platform API。 '
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '878'
 ht-degree: 1%
@@ -89,17 +89,17 @@ ht-degree: 1%
 
 前往 [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui) ，使用您的Adobe ID登入。 接著，請依照教學課程中說明的步驟， [在Adobe Developer Console檔案中建立空白的專案](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/projects-empty.md) 。
 
-建立新專案後，按一下「專 **[!UICONTROL 案概述」畫面上的]**_「新增API_ 」。
+建立新專案後，按一下「專 **[!UICONTROL 案概述」畫面上的]****「新增API** 」。
 
 ![](images/authentication/add-api-button.png)
 
-出現 _「Add an API_ （添加API）」螢幕。 按一下Adobe Experience Platform的產品圖示，然後選取「 **[!UICONTROL Experience Platform API]** 」，再按 **[!UICONTROL 「Next」]**。
+出現 **「Add an API** （添加API）」螢幕。 按一下Adobe Experience Platform的產品圖示，然後選取「 **[!UICONTROL Experience Platform API]** 」，再按 **[!UICONTROL 「Next」]**。
 
 ![](images/authentication/add-platform-api.png)
 
 在您選取要新 [!DNL Experience Platform] 增至專案的API後，請依照教學課程中所述的步驟，使用服務帳戶( [JWT)](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/services-add-api-jwt.md) （從「設定API」步驟開始）將API新增至專案，以完成程式。
 
-將API新增至專案後，「專案概述 _」頁面會顯示所有對API的呼叫所需的_[!DNL Experience Platform] 下列憑證：
+將API新增至專案後，「專案概述 **」頁面會顯示所有對API的呼叫所需的**[!DNL Experience Platform] 下列憑證：
 
 * `{API_KEY}` （用戶端ID）
 * `{IMS_ORG}` (組織 ID)
