@@ -5,7 +5,7 @@ title: 架構註冊API開發人員指南
 description: 架構註冊表用於存取Adobe Experience Platform中的架構程式庫，提供使用者介面和RESTful API，讓所有可用的程式庫資源都可從中存取。 使用「架構註冊表API」，您可以執行基本的CRUD作業，以檢視並管理Adobe Experience Platform中所有可用的架構及相關資源。
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 74a4a3cc713cc068be30379e8ee11572f8bb0c63
+source-git-commit: 9bd893820c7ab60bf234456fdd110fb2fbe6697c
 workflow-type: tm+mt
 source-wordcount: '1295'
 ht-degree: 0%
@@ -162,7 +162,7 @@ curl -X GET \
 
 ## 瞭解 `CONTAINER_ID` {#container}
 
-對 [!DNL Schema Registry] API的呼叫需要使用 `CONTAINER_ID`。 有兩個容器可對其進行API呼叫：全 **域容器** ，租 **戶容器**。
+對 [!DNL Schema Registry] API的呼叫需要使用 `CONTAINER_ID`。 有兩個容器可對其進行API呼叫：全域容器和租用戶容器。
 
 ### 全域容器
 
