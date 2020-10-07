@@ -5,7 +5,7 @@ title: Attribution AI使用指南
 topic: User guide
 description: 本檔案可做為在智慧型服務使用者介面中與Attribution AI互動的指南。
 translation-type: tm+mt
-source-git-commit: 2a528c705a7aa610f57047be39be1ce9886ce44c
+source-git-commit: c5e2ea5daf813bf580a11f0182361197e55c6fe8
 workflow-type: tm+mt
 source-wordcount: '1449'
 ht-degree: 0%
@@ -21,7 +21,7 @@ ht-degree: 0%
 
 ## 建立例項
 
-在UI中 [!DNL Adobe Experience Platform] ，按一下左 **側導覽** 中的「服務」。 「服 *務* 」瀏覽器隨即出現，並顯示可用的Adobe智慧服務。 在「歸因AI」的容器中，按一下「 **開啟**」。
+在UI中 [!DNL Adobe Experience Platform] ，按一下左 **[!UICONTROL 側導覽]** 中的「服務」。 「服 **[!UICONTROL 務]** 」瀏覽器隨即出現，並顯示可用的Adobe智慧服務。 在「歸因AI」的容器中，按一下「 **[!UICONTROL 開啟]**」。
 
 ![存取您的例項](./images/user-guide/open_Attribution_ai.png)
 
@@ -35,7 +35,7 @@ ht-degree: 0%
 
 ### 命名例項
 
-在「基 *本資訊*」下，為服務實例提供名稱和可選說明。
+在「基 **[!UICONTROL 本資訊]**」下，為服務實例提供名稱和可選說明。
 
 ![命名實例](./images/user-guide/naming_instance.png)
 
@@ -67,15 +67,15 @@ ht-degree: 0%
 
 ![無下拉式清單](./images/user-guide/conversion_event_1.png)
 
-「新 *增事件* 」和「新 ** 增群組」按鈕可用來進一步定義轉換。 視您所定義的轉換而定，您可能需要使用「新增事 *件* 」和「新 ** 增群組」按鈕來提供更多內容。
+「新 **[!UICONTROL 增事件]** 」和「新 **** 增群組」按鈕可用來進一步定義轉換。 視您所定義的轉換而定，您可能需要使用「新增事 **[!UICONTROL 件]** 」和「新 **** 增群組」按鈕來提供更多內容。
 
 ![新增事件](./images/user-guide/add_event.png)
 
-按一 **下「新增事件** 」會建立其他欄位，這些欄位可使用與上述相同的方法填入。 這樣做會在轉 *換名稱下方的字串定義中新增* AND **&#x200B;陳述式。 按一下 **x** ，移除已新增的事件。
+按一 **[!UICONTROL 下「新增事件]** 」會建立其他欄位，這些欄位可使用與上述相同的方法填入。 這樣做會將AND陳述式新增至轉換名稱下方的字串定義。 按一下 **x** ，移除已新增的事件。
 
 ![新增事件功能表](./images/user-guide/add_event_result.png)
 
-按一 **下「新增群組** 」(Add Group)，提供建立與原始欄位不同之其他欄位的選項。 新增群組後，會顯示藍 *色的* 「And」按鈕。 按一 **下** 「And」（和）提供選項，將參數變更為包含「Or」。 「Or」用於定義多個成功的轉換路徑。 「And」延伸轉換路徑，加入其他條件。
+按一 **[!UICONTROL 下「新增群組]** 」(Add Group)，提供建立與原始欄位不同之其他欄位的選項。 新增群組後，會顯示藍 *色的* 「And」按鈕。 按一 **下** 「And」（和）提供選項，將參數變更為包含「Or」。 「Or」用於定義多個成功的轉換路徑。 「And」延伸轉換路徑，加入其他條件。
 
 ![使用和或](./images/user-guide/and_or.png)
 
@@ -157,7 +157,7 @@ Attribution AI中的最後一頁是 *Advanced* page，用於設定訓練和計�
 
 您客戶的行為可能會因國家／地區和地理區域而大不相同。 對於全球企業而言，使用以國家或地區為基礎的模型可以提高歸因準確度。 每個新增的區域都會建立包含該區域資料的新模型。
 
-要定義新區域，請首先按一下「添加 **區域」**。 在出現的容器中，提供地區名稱。 從「輸入欄位名稱」下拉式清單中只填入一個值(&quot;placeContext.geo.countryCode&quot;) ** 。 選取此值。
+要定義新區域，請首先按一下「添加 **[!UICONTROL 區域」]**。 在出現的容器中，提供地區名稱。 從「輸入欄位名稱」下拉式清單中只填入一個值(&quot;placeContext.geo.countryCode&quot;) **** 。 選取此值。
 
 ![選取地區](./images/user-guide/select_region_att.png)
 
@@ -165,7 +165,7 @@ Attribution AI中的最後一頁是 *Advanced* page，用於設定訓練和計�
 
 ![區域算子](./images/user-guide/region_operators.png)
 
-最後，在「輸入欄位值」下拉式清單中 *輸入國家代碼* 。
+最後，在「輸入欄位值」下拉式清單中 **[!UICONTROL 輸入國家代碼]** 。
 
 >[!NOTE]
 >
@@ -183,7 +183,7 @@ Attribution AI中的最後一頁是 *Advanced* page，用於設定訓練和計�
 
 ![訓練窗口](./images/user-guide/training_window.png)
 
-選擇培訓窗口後，按一下右 **上角的** 「完成」。 為資料處理留出一些時間。 完成後，將出現一個快顯對話框，確認實例設定已完成。 單 **擊「確定** 」可重定向到「服務實例 ** 」頁，您可以在該頁看到服務實例。
+選擇培訓窗口後，按一下右 **[!UICONTROL 上角的]** 「完成」。 為資料處理留出一些時間。 完成後，將出現一個快顯對話框，確認實例設定已完成。 單 **[!UICONTROL 擊「確定]** 」可重定向到「服務實例 **** 」頁，您可以在該頁看到服務實例。
 
 ![設定完成](./images/user-guide/instance_setup_complete.png)
 
