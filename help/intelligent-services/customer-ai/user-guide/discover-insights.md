@@ -5,7 +5,7 @@ title: 透過客戶人工智慧發掘見解
 topic: Discovering insights
 description: 客戶人工智慧(Customer AI)是智慧型服務的一部分，可讓行銷人員運用Adobe Sensei來預測客戶的下一步行動。 客戶人工智慧可用來產生自訂傾向分數，例如大規模個別個人檔案的流失和轉換。 完成此項作業時，不需將業務需求轉換為機器學習問題、選擇演算法、訓練或部署。
 translation-type: tm+mt
-source-git-commit: 6e4a3ebe84c82790f58f8ec54e6f72c2aca0b7da
+source-git-commit: c5e2ea5daf813bf580a11f0182361197e55c6fe8
 workflow-type: tm+mt
 source-wordcount: '1125'
 ht-degree: 0%
@@ -98,7 +98,7 @@ ht-degree: 0%
 
 ## 分數分佈
 
-「 *分數分佈* 」卡會根據分數提供人口的視覺化摘要。 您在「分數分佈」卡 *中看到的顏色* ，代表產生的傾向分數類型。
+「 **[!UICONTROL 分數分佈]** 」卡會根據分數提供人口的視覺化摘要。 您在「分數分佈」卡 *中看到的顏色* ，代表產生的傾向分數類型。
 
 ![分數分佈](../images/insights/distribution-of-scores.png)
 
@@ -128,7 +128,7 @@ ht-degree: 0%
 
 ![區段填入](../images/insights/segment-saving.png)
 
-若要在平台UI中檢視新區段，請按一下左 **[!UICONTROL 側導覽]** 中的區段。 「瀏 *覽* 」頁面隨即出現，並顯示所有可用區段。
+若要在平台UI中檢視新區段，請按一下左 **[!UICONTROL 側導覽]** 中的區段。 「瀏 **[!UICONTROL 覽]** 」頁面隨即出現，並顯示所有可用區段。
 
 ![您的所有區段](../images/insights/Segments-dashboard.png)
 
