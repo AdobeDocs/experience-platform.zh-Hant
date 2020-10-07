@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 隱私權服務發行說明
 topic: release notes
 translation-type: tm+mt
-source-git-commit: 6eee7e903d36ed641c9f8e6120f549c02cb4bce4
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '538'
 ht-degree: 6%
@@ -20,7 +20,7 @@ ht-degree: 6%
 >
 >如需其他服務的最 [!DNL Experience Platform] 新發行說明，請 [參閱](../release-notes/latest/latest.md)。
 
-## 2020年9月9日
+## 2020 年 9 月 9 日
 
 ### 新功能
 
@@ -53,7 +53,7 @@ ht-degree: 6%
 
 * [!DNL Privacy Service] UI增強功能：
    * 針對GDPR和CCPA法規分開工作追蹤頁面。
-   * 新的 _規則類型下拉式清單_ ，可在GDPR和CCPA的追蹤資料之間切換。
+   * 新的 *規則類型下拉式清單* ，可在GDPR和CCPA的追蹤資料之間切換。
 
 ## 2019 年 7 月 25 日
 
