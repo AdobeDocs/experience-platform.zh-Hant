@@ -5,7 +5,7 @@ title: Adobe Experience Platform來源連接器概觀
 topic: overview
 description: Adobe Experience Platform可讓您從外部來源擷取資料，同時提供您使用平台服務來建構、標示及增強傳入資料的能力。 您可以從多種來源（例如Adobe應用程式、雲端儲存空間、資料庫等）擷取資料。
 translation-type: tm+mt
-source-git-commit: c6c5ada52321b11543254f80399c38365f0fb9d7
+source-git-commit: 9bd893820c7ab60bf234456fdd110fb2fbe6697c
 workflow-type: tm+mt
 source-wordcount: '866'
 ht-degree: 0%
@@ -118,7 +118,7 @@ CRM系統提供的資料有助於建立客戶關係，進而建立忠誠度並�
 
 | 權限層級 | 說明 |
 | ---- | ----|
-| **[!UICONTROL 檢視來源]** On | 授予對 *Catalog* （目錄）頁籤中每個源類型以及 *Browse*、 *Accounts*（帳戶）和 ** DataFlow（資料流）頁籤中的源的只讀訪問權。 |
+| **[!UICONTROL 檢視來源]** On | 授予對「目錄」頁籤中每個源類型以及「瀏覽」、「帳戶」和「資料流」頁籤中源的只讀訪問權。 |
 | **[!UICONTROL 管理來源]** On | 除了 **[!UICONTROL View Sources中的函式外]**，還授與對Catalog **[!UICONTROL 中]** Connect Sources **[!UICONTROL 選項和Select Data]********** Select BrowseConnect Option中函式的訪問權。 **[!UICONTROL Manage Sources]** 也可讓您啟用或停用 **[!UICONTROL DataFlows]** ，並編輯其排程。 |
 | **[!UICONTROL 關閉Sources]** 並管 **[!UICONTROL 理Sources]** Off | 撤銷對來源的所有存取權。 |
 
