@@ -5,7 +5,7 @@ title: Adobe Experience Platform Identity Service
 topic: overview
 description: Adobe Experience Platform Identity Service可跨裝置和系統橋接身分，協助您更全面地瞭解客戶及其行為，讓您即時提供具影響力的個人化數位體驗。
 translation-type: tm+mt
-source-git-commit: 6e4a3ebe84c82790f58f8ec54e6f72c2aca0b7da
+source-git-commit: 28b733a16b067f951a885c299d59e079f0074df8
 workflow-type: tm+mt
 source-wordcount: '1711'
 ht-degree: 0%
@@ -35,11 +35,11 @@ Mary在您的電子商務網站上有一個帳戶，她過去在那裡完成了�
 
 ### 身份
 
-身分是實體（通常是個人）專屬的資料。 登入ID、ECID或忠誠度ID等身分稱為已知 **身分**。
+身分是實體（通常是個人）專屬的資料。 登入ID、ECID或忠誠度ID等身分稱為已知身分。
 
 PII（例如電子郵件地址和電話號碼）可直接識別客戶。 因此，PII可用於跨系統比對客戶的多個身分。
 
-**未知或匿名身份** ，會挑出裝置，而不會識別實際使用者。 此類別包含訪客的IP位址和Cookie ID等資訊。 雖然可以使用未知身分從裝置收集行為資料，但在客戶在歷程中提供個人識別資訊之前，將這些身分資料關聯到不同裝置或媒體上是有限的。
+未知或匿名身份會選出裝置，而不會識別使用該裝置的實際人員。 此類別包含訪客的IP位址和Cookie ID等資訊。 雖然可以使用未知身分從裝置收集行為資料，但在客戶在歷程中提供個人識別資訊之前，將這些身分資料關聯到不同裝置或媒體上是有限的。
 
 如下圖所示，已知和匿名身份都是身份圖的重 [要元件](#identity-graphs)，本文檔稍後將討論。
 
