@@ -6,7 +6,7 @@ topic: tutorial
 type: Tutorial
 description: 本UI指南將協助您使用Adobe Experience Platform建立串流連線。
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '512'
 ht-degree: 0%
@@ -36,7 +36,7 @@ ht-degree: 0%
 
 ![](../images/streaming-ingestion/ui/click-connect-source.png)
 
-出現 **[!UICONTROL 「Connect to HTTP]** （連接到HTTP）」螢幕。 在「 **[!UICONTROL 服務詳細資]**」下，提供新串流連 **[!UICONTROL 線的名稱]****[!UICONTROL 和說明]** 。
+出現 **[!UICONTROL 「Connect to HTTP]** （連接到HTTP）」螢幕。 在「 **[!UICONTROL 服務詳細資訊]**」下，提供新串流連線的名稱和說明。
 
 在「 **[!UICONTROL 帳戶驗證]**」下，為串流連線選取下列組態屬性：
 
@@ -59,7 +59,7 @@ ht-degree: 0%
 
 ### 建立新資料集
 
-若要建立新資料集，請提 **[!UICONTROL 供資料集的]** Name **[!UICONTROL 、Description]**，以及 **[!UICONTROL 目標Schema]** 。
+若要建立新資料集，請提供資料集的名稱、說明以及目標模式。
 
 ![](../images/streaming-ingestion/ui/create-new-dataset.png)
 
