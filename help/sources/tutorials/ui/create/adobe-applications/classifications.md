@@ -6,7 +6,7 @@ title: 在UI中建立Adobe Analytics分類資料連接器
 topic: overview
 type: Tutorial
 translation-type: tm+mt
-source-git-commit: 1a49cccfbf8d565c8154329cf1f94382911b2f85
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '661'
 ht-degree: 2%
@@ -38,7 +38,7 @@ Analytics分類資料連接器要求您的資料在使用前必須移 [!DNL Clas
 
 ![](../../../../images/tutorials/create/classifications/catalog.png)
 
-此時 **[!UICONTROL 會顯示Analytics來源新增資料]** 步驟。 從最 **[!UICONTROL 上方的頁首]** ，選取「分類」以查看資料集 [!DNL Classifications] 清單，包括有關其 **[!UICONTROL 維度ID、報表套裝名稱、]** Johnit Report Suite和 ******** Johnit Report Suite的資訊。
+此時 **[!UICONTROL 會顯示Analytics來源新增資料]** 步驟。 從上 **[!UICONTROL 方標題]** ，選取「分類」以查看資料集清單，包括 [!DNL Classifications] 其維度ID、報表套裝名稱和報表套裝ID的相關資訊。
 
 每個頁面最多會顯示十個您可 [!DNL Classifications] 以選擇的不同資料集。 選 **[!UICONTROL 取頁面底]** 部的「下一步」，以瀏覽更多選項。 右邊的面板顯示您選取的 [!DNL Classifications] 資料集總數及其名稱。 此面板還允許您通過一個操 [!DNL Classifications] 作來刪除可能錯誤選擇的任何資料集或清除所有選擇。
 
