@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 即時客戶資料平台中的IAB TCF 2.0支援
 topic: privacy events
 translation-type: tm+mt
-source-git-commit: 172710c62b6f60de74e05364edb1191fbba0ff64
+source-git-commit: fa667d86c089c692f22cfd1b46f3f11b6e9a68d7
 workflow-type: tm+mt
 source-wordcount: '2388'
 ht-degree: 1%
@@ -89,7 +89,7 @@ Adobe Audience Manager（透過來源連接器或其他方式）共用的任何�
 
 ### 許可條件 {#consent-strings}
 
-無論您使用何種方法來收集資料，其目標是根據客戶選擇的同意選項產生字串值，稱為同 **意字串**。
+無論您使用何種方法來收集資料，其目標是根據客戶選擇的同意選項產生字串值，稱為同意字串。
 
 在TCF規格中，同意字串用於根據政策和廠商所定義的特定行銷目的，編碼客戶同意設定的相關詳細資訊。 [!DNL Real-time CDP] 使用這些字串來儲存每個客戶的同意設定，因此每次這些設定變更時都必須產生新的同意字串。
 
