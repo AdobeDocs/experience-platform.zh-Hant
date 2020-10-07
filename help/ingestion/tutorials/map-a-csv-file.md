@@ -6,7 +6,7 @@ topic: tutorial
 type: Tutorial
 description: 本教學課程涵蓋如何使用Adobe Experience Platform使用者介面，將CSV檔案對應至XDM架構。
 translation-type: tm+mt
-source-git-commit: 7adf18e4251f377fee586c8a0f23b89acd75afca
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '886'
 ht-degree: 1%
@@ -117,7 +117,7 @@ ht-degree: 1%
 
 若要使用函式，請在「來源欄位」下方輸入 **[!UICONTROL 函式]** ，並輸入適當的語法和輸入。
 
-例如，若要串連 **城市****CSV和國家／地區** CSV欄位，並將它們指派至 **城市** XDM欄位，請將來源欄位設為 `concat(city, ", ", county)`。
+例如，若要串連城市和國家／地區CSV欄位，並將其指派給城市XDM欄位，請將來源欄位設為 `concat(city, ", ", county)`。
 
 ![](../images/tutorials/map-a-csv-file/mapping-function.png)
 
