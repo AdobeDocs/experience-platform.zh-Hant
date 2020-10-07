@@ -6,7 +6,7 @@ topic: policies
 type: Tutorial
 description: 「原則服務API」可讓您建立和管理資料使用原則，以決定對包含特定資料使用標籤的資料可採取哪些行銷動作。 本檔案提供使用Policy Service API建立原則的逐步教學課程。
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '1209'
 ht-degree: 2%
@@ -195,7 +195,7 @@ curl -X PUT \
 
 建立新原則時，您必須提供行銷動作的URI ID，以及禁止該行銷動作的使用標籤的運算式。
 
-此表達式稱為策 **略表達式** ，是包含(A)標籤或(B)運算子和操作數（但不同時包含兩者）的對象。 反過來，每個操作數也是策略表達式對象。 例如，如果標籤存在，則可能禁止將資料匯出至第三 `C1 OR (C3 AND C7)` 方的政策。 此表達式將指定為：
+此表達式稱為策略表達式，是包含(A)標籤或(B)運算子和操作數（但不同時包含兩者）的對象。 反過來，每個操作數也是策略表達式對象。 例如，如果標籤存在，則可能禁止將資料匯出至第三 `C1 OR (C3 AND C7)` 方的政策。 此表達式將指定為：
 
 ```json
 "deny": {
