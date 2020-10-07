@@ -5,7 +5,7 @@ title: Adobe Experience Platform Identity Service疑難排解指南
 topic: troubleshooting
 description: 本檔案提供有關Adobe Experience Platform Identity Service常見問題的解答，以及常見錯誤的疑難排解指南。
 translation-type: tm+mt
-source-git-commit: 04efbf63741ef39bbf0b22795be74087f1f7c595
+source-git-commit: 28b733a16b067f951a885c299d59e079f0074df8
 workflow-type: tm+mt
 source-wordcount: '2248'
 ht-degree: 1%
@@ -63,7 +63,7 @@ ht-degree: 1%
 
 身分名稱空間提供識別欄位與客戶身份相關的上下文。 例如，「電子郵件」名稱空間下的身分欄位應符合標準電子郵件格式(名稱<span>@emailprovider.com)，而使用「Phone」名稱空間的欄位應符合標準電話號碼（例如北美地區的987-555-1234）。
 
-名稱空間可區分不同CRM系統之間的相似身分值。 例如，假設描述檔包含與公司獎勵方案相關聯的數值忠誠度ID。 「忠誠度」的命名空間會將此值與電子商務系統的類似數值ID（也會顯示在相同的描述檔中）區隔。
+名稱空間可區分不同CRM系統之間的相似身分值。 例如，假設描述檔包含與公司獎勵方案相關聯的數值「忠誠度ID」。 「忠誠度」的命名空間會將此值與電子商務系統的類似數值ID（也會顯示在相同的描述檔中）區隔。
 
 如需詳細 [資訊，請參閱身分命名空間](./home.md) 概觀。
 
@@ -92,7 +92,7 @@ Experience Platform內的所有組織都可使用下列標準名稱空間：
 
 ## 我可以在哪裡找到組織可用的身份名稱空間清單？
 
-使用 [Identity Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/id-service-api.yaml)，您可以向端點提出GET請求，以列出組織的所有可用身分名稱 `/idnamespace/identities` 空間。 如需詳細資訊，請 [參閱Identity Service API總覽中](./api/list-namespaces.md) ，列出可用名稱空間一節。
+使用 [Identity Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/id-service-api.yaml)，您可以向端點提出GET請求，以列出組織的所有可用身分名稱 `/idnamespace/identities` 空間。 如需詳細資訊，請 [參閱Identity Service API概觀中](./api/list-namespaces.md) ，列出可用名稱空間一節。
 
 ## 如何為組織建立自訂命名空間？
 
@@ -100,7 +100,7 @@ Experience Platform內的所有組織都可使用下列標準名稱空間：
 
 ## 什麼是複合身份和XID?
 
-身分識別在API呼叫中會由其複合身分識別或XID參考。 復 **合身份** ，是包含ID值和命名空間的身份的表示。 XID **** 是單值識別碼，代表與複合身分識別（ID和命名空間）相同的構造，並在Identity Service保存時自動指派給新身分。 如需詳細 [資訊，請參閱Identity Service API](./home.md) 總覽。
+身分識別在API呼叫中會由其複合身分識別或XID參考。 複合身分代表包含ID值和命名空間的身分。 XID是單值識別碼，代表與複合身分識別（ID和命名空間）相同的構造，當Identity Service持續存在時，會自動指派給新身分識別。 如需詳細 [資訊，請參閱Identity Service API](./home.md) 總覽。
 
 ## Identity Service如何處理個人識別資訊(PII)?
 
