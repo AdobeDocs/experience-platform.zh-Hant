@@ -6,7 +6,7 @@ topic: tutorial
 type: Tutorial
 description: 本檔案提供逐步教學課程，讓「即時客戶個人檔案」更豐富機器學習見解，其中分為以下幾節、建立輸出結構描述／資料集、設定輸出結構描述／資料集，以及使用「區段產生器」建立區段。
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '1230'
 ht-degree: 0%
@@ -43,10 +43,10 @@ ht-degree: 0%
 
 構成模式的開始方法是分配類。 類定義模式將包含的資料的行為方面（記錄或時間序列）。 本節提供使用架構生成器建立架構的基本說明。 有關更深入的教程，請參閱有關使用「架構編 [輯器」建立架構的教程](../../xdm/tutorials/create-schema-ui.md)。
 
-1. 在Adobe Experience Platform上，按一下「 **[!UICONTROL 架構]** 」標籤以存取架構瀏覽器。 按一下 **[!UICONTROL 建立架構]** ，訪問 *架構編輯器*，您可以在其中交互構建和建立架構。
+1. 在Adobe Experience Platform上，按一下「 **[!UICONTROL 架構]** 」標籤以存取架構瀏覽器。 按一下 **[!UICONTROL 建立架構]** ，訪問 **架構編輯器**，您可以在其中交互構建和建立架構。
    ![](../images/models-recipes/enrich-rtcdp/schema_browser.png)
 
-2. 在「合成 *」窗口* ，按一下「 **[!UICONTROL 分配]** 」以瀏覽可用類。
+2. 在「合成 **」窗口** ，按一下「 **[!UICONTROL 分配]** 」以瀏覽可用類。
    * 若要指派現有類別，請按一下並反白標示所要的類別，然後按一下「指 **[!UICONTROL 派類別」]**。
       ![](../images/models-recipes/enrich-rtcdp/existing_class.png)
 
@@ -55,7 +55,7 @@ ht-degree: 0%
 
    此時，架構的結構應包含一些類欄位，並且您已準備好指定混音。 混音是描述特定概念的一或多個欄位的組。
 
-3. 在「合 *成* 」視窗中，按一 **[!UICONTROL 下]** Mixins子區段中的「新增 ** 」。
+3. 在「合 **成** 」視窗中，按一 **[!UICONTROL 下]** Mixins子區段中的「新增 **** 」。
    * 若要指定現有的混音，請按一下並反白標示所要的混音，然後按一下「 **[!UICONTROL 新增混音」]**。 與類不同，只要適合，多個混合可以指派給單一模式。
       ![](../images/models-recipes/enrich-rtcdp/existing_mixin.png)
 
