@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 隱私權服務使用指南
 topic: UI guide
 translation-type: tm+mt
-source-git-commit: a09d80f4bacd5d4be77443d75aad278ad89259ef
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '1059'
 ht-degree: 0%
@@ -18,7 +18,7 @@ ht-degree: 0%
 
 ## 瀏覽 [!DNL Privacy Service] UI儀表板
 
-UI的控制面 [!DNL Privacy Service] 板提供兩個介面工具集，可讓您檢視隱私權工作的狀態： **[!UICONTROL 狀態報表]** 和 **[!UICONTROL 工作請求]**。 控制面板還顯示所顯示作業的當前選定規則。
+UI的控制面 [!DNL Privacy Service] 板提供兩個介面工具集，可讓您檢視隱私權工作的狀態：「狀[!UICONTROL 態報表]」和「[!UICONTROL 工作請求]」。 控制面板還顯示所顯示作業的當前選定規則。
 
 ![UI儀表板](../images/user-guide/dashboard.png)
 
@@ -106,7 +106,7 @@ UI提 [!DNL Privacy Service] 供兩種方法來建立新的工作請求：
 
 <img src="../images/user-guide/request-builder.png" width="500" /><br/>
 
-選擇請 **[!UICONTROL 求的作業類型]** （「刪除」或「存取」），並從清單中選取一或多個可 **[!UICONTROL 用產品]** 。
+從清 **[!UICONTROL 單中選擇請求的作業類型]** （「刪除」或「存取」）以及一或多個可用產品。
 
 <img src="../images/user-guide/type-and-products.png" width="500" /><br/>
 
@@ -114,11 +114,11 @@ UI提 [!DNL Privacy Service] 供兩種方法來建立新的工作請求：
 
 <img src="../images/user-guide/namespace-type.png" width="500" /><br/>
 
-使用標準 _命名空間類型_ ，從下拉式選單（電子郵件、ECID或AAID）中選取命名空間，然後在文字方塊中的右側鍵入ID值，為每個ID按 **\&lt;enter>** ，將它新增至清單。
+使用標準命名空間類型時，從下拉式選單（電子郵件、ECID或AAID）中選取命名空間，然後在文字方塊中的右邊鍵入ID值，為每個ID按 **\&lt;enter>** ，將它新增至清單。
 
 <img src="../images/user-guide/standard-namespace.png" width="500" /><br/>
 
-使用自訂命 _名空間類型_ 時，您必須先手動輸入命名空間，才能提供下面的ID值。
+使用自訂命名空間類型時，您必須先在命名空間中手動輸入，才能提供下面的ID值。
 
 <img src="../images/user-guide/custom-namespace.png" width="500" /><br/>
 
@@ -148,7 +148,7 @@ When finished, click **[!UICONTROL Create]**.
 
 在您的電腦上找到JSON檔案，並將它拖曳至對話方塊視窗。 如果上載成功，則檔案名將出現在對話框中。 您可以視需要將更多JSON檔案拖放至對話方塊中，以繼續新增。
 
-When finished, click **[!UICONTROL Create]**. 對話方塊消失，新工作（或工作）會列在「工作請求」介面工具集中， _以及其目前的處理狀態_ 。
+When finished, click **[!UICONTROL Create]**. 對話方塊消失，新工作（或工作）會列在「工作請求」介面工具集中，以及其目前的處理狀態。
 
 ### 後續步驟
 
