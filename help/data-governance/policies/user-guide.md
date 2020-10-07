@@ -5,7 +5,7 @@ title: 資料使用原則使用指南
 topic: policies
 description: Adobe Experience Platform Data Governance提供使用者介面，可讓您建立和管理資料使用政策。 本檔案概述您可在Experience Platform使用者介面的「原則」工作區中執行的動作。
 translation-type: tm+mt
-source-git-commit: 0f3a4ba6ad96d2226ae5094fa8b5073152df90f7
+source-git-commit: a362b67cec1e760687abb0c22dc8c46f47e766b7
 workflow-type: tm+mt
 source-wordcount: '765'
 ht-degree: 0%
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 # 資料使用原則使用指南
 
-Adobe Experience Platform提 [!DNL Data Governance] 供使用者介面，可讓您建立和管理資料使用政策。 本文檔概述了在用戶介面的「策略」( _Policys_ )工作區中可執 [!DNL Experience Platform] 行的操作。
+Adobe Experience Platform提 [!DNL Data Governance] 供使用者介面，可讓您建立和管理資料使用政策。 本文檔概述了在用戶介面的「策略」( **Policys** )工作區中可執 [!DNL Experience Platform] 行的操作。
 
 >[!IMPORTANT]
 >
@@ -56,7 +56,7 @@ Adobe Experience Platform提 [!DNL Data Governance] 供使用者介面，可讓�
 
 >[!NOTE]
 >
->選取多個行銷動作時，原則會將其解譯為「OR」規則。 換言之，如果執行任何選 _定的行銷_ ，則套用原則。
+>選取多個行銷動作時，原則會將其解譯為「OR」規則。 換言之，如果執行任何選 **定的行銷** ，則套用原則。
 
 ![](../images/policies/add-marketing-actions.png)
 
