@@ -6,9 +6,9 @@ topic: overview
 type: Tutorial
 description: 本教學課程提供使用平台使用者介面建立FTP或SFTP來源連接器的步驟。
 translation-type: tm+mt
-source-git-commit: c3352c090ce9e5a89d9285aabdc4851632d4d437
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
-source-wordcount: '702'
+source-wordcount: '701'
 ht-degree: 1%
 
 ---
@@ -43,7 +43,7 @@ Adobe Experience Platform中的來源連接器可讓您依計畫吸收外部來�
 
 ### 收集必要的認證
 
-若要在上存取您的FTP或SFTP伺服器 [!DNL Platform]，您必須提供伺服器的 **主機名**、使 **用者名**&#x200B;稱和密 **碼**。
+若要在上存取您的FTP或SFTP伺服 [!DNL Platform]器，您必須提供伺服器的主機名稱、使用者名稱和密碼。
 
 ## 連線至您的FTP或SFTP伺服器
 
