@@ -5,7 +5,7 @@ description: 瞭解如何使用Adobe Target使用Experience Platform Web SDK來�
 seo-description: 瞭解如何使用Adobe Target使用Experience Platform Web SDK來呈現個人化內容
 keywords: target;adobe target;activity.id;experience.id;renderDecisions;decisionScopes;prehiding snippet;vec;Form-Based Experience Composer;xdm;audiences;decisions;scope;schema;
 translation-type: tm+mt
-source-git-commit: 8c256b010d5540ea0872fa7e660f71f2903bfb04
+source-git-commit: 43a2074d4d1b9f642c3cbfb0c29217eb2fb112c3
 workflow-type: tm+mt
 source-wordcount: '634'
 ht-degree: 3%
@@ -87,7 +87,7 @@ alloy
 
 `decisionScopes` 定義您要呈現個人化體驗的頁面區域、位置或部分。 這些 `decisionScopes` 功能可自訂並由使用者定義。 目前 [!DNL Target] 客戶 `decisionScopes` 也稱為「mbox」。 在 [!DNL Target] UI中， `decisionScopes` 顯示為「位置」。
 
-## __視圖範圍__
+## 范 `__view__` 圍
 
 AEP [!DNL Web SDK] 提供功能，可讓您擷取VEC動作，而不需仰賴AEP [!DNL Web SDK] 來演算VEC動作。 傳送定義 `__view__` 為的事件 `decisionScopes`。
 
@@ -127,10 +127,10 @@ alloy("sendEvent", {
 
 ## 術語
 
-__決策__ -在中 [!DNL Target]，這些決策會關聯至從活動中選取的體驗。
+**決策** -在中 [!DNL Target]，這些決策會關聯至從活動中選取的體驗。
 
-__範圍__ -決定範圍。 這 [!DNL Target]是mBox。 全域mBox是范 `__view__` 圍。
+**範圍** -決定範圍。 這 [!DNL Target]是mBox。 全域mBox是范 `__view__` 圍。
 
-__方案__ -決策的方案是中的選件類型 [!DNL Target]。
+**方案** -決策的方案是中的選件類型 [!DNL Target]。
 
-__XDM__ —— 將XDM序列化為點符號，然後以mBox參 [!DNL Target] 數的形式輸入。
+**XDM** —— 將XDM序列化為點符號，然後以mBox參 [!DNL Target] 數的形式輸入。
