@@ -6,9 +6,9 @@ type: Tutorial
 description: 電子郵件服務供應商(ESP)可讓您管理電子郵件行銷活動，例如傳送促銷電子郵件促銷活動。
 seo-description: 電子郵件服務供應商(ESP)可讓您管理電子郵件行銷活動，例如傳送促銷電子郵件促銷活動。
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
-source-wordcount: '799'
+source-wordcount: '800'
 ht-degree: 1%
 
 ---
@@ -30,7 +30,7 @@ ht-degree: 1%
 
    ![連接到目標](/help/rtcdp/destinations/assets/connect-email-marketing.png)
 
-2. 在「驗 **[!UICONTROL 證]** 」步驟中，如果您先前已設定電子郵件行銷目的地的連線，請選取「現有帳戶 **** 」並選取您現有的連線。 或者，您可以選 **[!UICONTROL 取「新帳戶]** 」來設定與電子郵件行銷目的地的新連線。 在「連 **[!UICONTROL 接類型]** 」選擇器中 **，您可以選擇** Amazon S3 **、** SFTP with Password **、** SFTP with SSH Key。 根據您的連線類型，填入下列資訊，然後選取「連 **[!UICONTROL 線」]**。
+2. 在「驗 **[!UICONTROL 證]** 」步驟中，如果您先前已設定電子郵件行銷目的地的連線，請選取「現有帳戶 **** 」並選取您現有的連線。 或者，您可以選 **[!UICONTROL 取「新帳戶]** 」來設定與電子郵件行銷目的地的新連線。 在「連 **[!UICONTROL 接類型]** 」選擇器中，您可以選擇Amazon S3、SFTP含密碼或SSH金鑰的SFTP。 根據您的連線類型，填入下列資訊，然後選取「連 **[!UICONTROL 線」]**。
 
    對於 **S3連接**，您必須提供您的Amazon存取金鑰ID和密碼存取金鑰。
 
@@ -38,9 +38,9 @@ ht-degree: 1%
 
    對於 **具有SSH密鑰連接的SFTP** ，必須為SFTP伺服器提供域、埠、用戶名和SSH密鑰。
 
-3. 在「設 **[!UICONTROL 置]** 」步驟中，為新目標輸入「名稱」( **[!UICONTROL Name]** )和「說明 **[!UICONTROL 」(Description]** )，以及導出檔案的 **** 「檔案格式」(File format)。 <br>
-如果您在上一步驟中選擇Amazon S3作為儲存選項，請在將要傳送檔案的雲端儲存目的地中，插入 **[!UICONTROL Bucket name]** （儲存貯體名稱）和 **** Folder路徑。 對於SFTP儲存選項，插入 **[!UICONTROL 資料夾路徑]** （資料夾路徑）。 <br>
-此外，您也可以在此步驟中，選取 **[!UICONTROL 任何應套用至此目的地的Marketing]** 使用案例。 行銷使用案例會指出將資料匯出至目的地的方式。 您可以從Adobe定義的行銷使用案例中選擇，也可以建立自己的行銷使用案例。 有關行銷使用案例的詳細資訊，請參 [閱即時CDP中的資料治理頁](/help/rtcdp/privacy/data-governance-overview.md#destinations) 。 如需個別Adobe定義之行銷使用案例的詳細資訊，請參閱「資 [料使用政策」概觀](/help/data-governance/policies/overview.md#core-actions)。 <br>
+3. 在「設 **[!UICONTROL 置]** 」步驟中，為新目標輸入「名稱」( [!UICONTROL Name] )和「說明 [!UICONTROL 」(Description] )，以及導出檔案的  「檔案格式」(File format)。 <br>
+如果您在上一步驟中選擇Amazon S3作為儲存選項，請在將要傳送檔案的雲端儲存目的地中，插入 [!UICONTROL Bucket name] （儲存貯體名稱）和  Folder路徑。 對於SFTP儲存選項，插入 [!UICONTROL 資料夾路徑] （資料夾路徑）。 <br>
+此外，您也可以在此步驟中，選取 [!UICONTROL 任何應套用至此目的地的Marketing] 使用案例。 行銷使用案例會指出將資料匯出至目的地的方式。 您可以從Adobe定義的行銷使用案例中選擇，也可以建立自己的行銷使用案例。 有關行銷使用案例的詳細資訊，請參 [閱即時CDP中的資料治理頁](/help/rtcdp/privacy/data-governance-overview.md#destinations) 。 如需個別Adobe定義之行銷使用案例的詳細資訊，請參閱「資 [料使用政策」概觀](/help/data-governance/policies/overview.md#core-actions)。 <br>
    ![電子郵件設定步驟](/help/rtcdp/destinations/assets/email-setup-step.png)
 
 ## 步驟2 —— 選擇要包含在目標導出中的段成員 {#select-segments}
