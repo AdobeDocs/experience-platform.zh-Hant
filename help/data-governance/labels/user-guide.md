@@ -5,7 +5,7 @@ title: 資料使用標籤使用指南
 topic: labels
 description: 本使用指南涵蓋在Adobe Experience Platform使用者介面中使用資料使用標籤的步驟。
 translation-type: tm+mt
-source-git-commit: 0f3a4ba6ad96d2226ae5094fa8b5073152df90f7
+source-git-commit: 259c26a9d3b6ef397acd552e255f68ecb25b2dd1
 workflow-type: tm+mt
 source-wordcount: '1119'
 ht-degree: 0%
@@ -19,7 +19,7 @@ ht-degree: 0%
 
 ## 在資料集層級管理資料使用標籤
 
-若要在資料集層級管理資料使用標籤，您必須選取現有的資料集或建立新的資料集。 登入Adobe Experience Platform後，在左側導覽中選 **[!UICONTROL 取「資料集]** 」以開啟「資料集 __ 」工作區。 此頁列出屬於您組織的所有已建立資料集，以及與每個資料集相關的有用詳細資訊。
+若要在資料集層級管理資料使用標籤，您必須選取現有的資料集或建立新的資料集。 登入Adobe Experience Platform後，在左側導覽中選 **[!UICONTROL 取「資料集]** 」以開啟「資料集 **** 」工作區。 此頁列出屬於您組織的所有已建立資料集，以及與每個資料集相關的有用詳細資訊。
 
 ![資料工作區中的資料集標籤](../images/labels/datasets.png)
 
@@ -43,7 +43,7 @@ ht-degree: 0%
 
 ![選擇資料集模式](../images/labels/dataset_schema.png)
 
-此時會 **[!UICONTROL 顯示「設定資料集]** 」畫面。 為新資 **料集提供** （必要） **名稱和說明** （可選，但建議使用），然後按一下「 **[!UICONTROL 完成」]**。
+此時會 **[!UICONTROL 顯示「設定資料集]** 」畫面。 為新資料集提供名稱（必要）和說明（可選，但建議使用），然後按一下「完 **[!UICONTROL 成]**」。
 
 ![使用名稱和說明配置資料集](../images/labels/dataset_configure.png)
 
