@@ -5,7 +5,7 @@ title: 區段服務區段產生器使用指南
 topic: ui guide
 description: '「區段產生器」提供豐富的工作區，可讓您與描述檔資料元素互動。 工作區提供建立和編輯規則的直覺式控制項，例如用來表示資料屬性的拖放圖格。 '
 translation-type: tm+mt
-source-git-commit: d2f098cb9e4aaf5beaad02173a22a25a87a43756
+source-git-commit: 34cfcaac276bf2645a0365a0dfa71c4ead6e2ecb
 workflow-type: tm+mt
 source-wordcount: '1723'
 ht-degree: 0%
@@ -21,9 +21,9 @@ ht-degree: 0%
 
 ## 區段定義構建區塊
 
-區段定義的基本建置區塊是「屬 **[!UICONTROL 性]** 」和 **[!UICONTROL 「事件」]**。 此外，現有「觀眾」中包含的屬性和 **[!UICONTROL 事件]** ，也可當成新定義的元件。
+區段定義的基本建置區塊是屬性和事件。 此外，現有觀眾中所包含的屬性和事件也可以當做新定義的元件使用。
 
-您可以在工作區左側的「欄 **[!UICONTROL 位]** 」區段中看到這些構 [!DNL Segment Builder] 建區塊。 **[!UICONTROL 欄位]** (Fields)包含每個主要建置區塊的標籤： **[!UICONTROL 屬性]**、 **[!UICONTROL 事件]**&#x200B;和 **[!UICONTROL 觀眾]**。
+您可以在工作區左側的「欄 **[!UICONTROL 位]** 」區段中看到這些構 [!DNL Segment Builder] 建區塊。 **[!UICONTROL 欄位]** (Fields)包含每個主要建置區塊的標籤：「[!UICONTROL 屬性]」、「事[!UICONTROL 件]」和「觀[!UICONTROL 眾]」。
 
 ![](../images/ui/segment-builder/segment-fields.png)
 
@@ -45,11 +45,11 @@ ht-degree: 0%
 >
 >您的組織定義的自訂結構欄位可能需要24小時才能顯示，並可用於建立規則。
 
-然後，您可以輕鬆將「事 [!DNL ExperienceEvents] 件類 [!UICONTROL 型] 」拖放至區段定義。
+然後，您可以輕鬆將「事 [!DNL ExperienceEvents] 件類[!UICONTROL 型]」拖放至區段定義中。
 
 ![](../images/ui/segment-builder/events-eventTypes.png)
 
-依預設，只會顯示資料儲存區中已填入的架構欄位。 這包括事 [!UICONTROL 件類型]。 如果事 [!UICONTROL 件類型] ，或您只能選擇「[!UICONTROL Any]」作為 [!UICONTROL 事件類型，請選擇]Fields旁的「 ************ ShowShow fullDear」（全部顯示）「可用OradChad」(Orad)「可用OradChad」(OrayVailable Fields)」(可用Ciable 再次選擇齒輪表徵圖以返回「 **[!UICONTROL Fields]** 」(欄位 [!UICONTROL )頁籤，您現在應該可以查看多個「] Event Types」（事件類型）和模式欄位，而不管它們是否包含資料。
+依預設，只會顯示資料儲存區中已填入的架構欄位。 這包括「[!UICONTROL 事件類型]」。 如果「[!UICONTROL 事件類型]」清單不可見，或您只能以「[!UICONTROL Any]」的形式「AnyType[!UICONTROL 」，請選取GearNext toJear欄位，然後選擇]**************** JearNext，然後選擇ChadingDhow Full XDM SchemaUndor Available Icon欄位，選擇Ed。 再次選 **擇齒輪表徵圖** ，返回「欄位」( **[!UICONTROL Fields]** )頁籤，您現在應該可以查看多個「[!UICONTROL Event Types]」（事件類型）和模式欄位，而不管它們是否包含資料。
 
 ![](../images/ui/segment-builder/show-populated.png)
 
@@ -63,13 +63,13 @@ ht-degree: 0%
 
 ![](../images/ui/segment-builder/audience-folder-structure.png)
 
-您也可以使用搜 [!UICONTROL 尋列] (使用 [Lucene的搜尋語法)來搜尋「](https://docs.microsoft.com/en-us/azure/search/query-lucene-syntax)觀眾」。 在「對 **[!UICONTROL 像]** 」索引標籤中，選取頂層檔案夾會顯示搜尋列，讓您在該檔案夾內進行搜尋。 只有輸入完整字詞後，搜尋結果才會開始填入。 例如，若要尋找名為 [!UICONTROL 的對象] ，請 `Online Shoppers`開始在搜尋列中輸入「線上」。 在完整輸入&quot;Online&quot;後，會顯示包含&quot;Online&quot;的搜尋結果。
+您也可以使用搜尋列來搜尋對象，搜尋列採用 [Lucene的搜尋語法](https://docs.microsoft.com/en-us/azure/search/query-lucene-syntax)。 在「對 **[!UICONTROL 像]** 」索引標籤中，選取頂層檔案夾會顯示搜尋列，讓您在該檔案夾內進行搜尋。 只有輸入完整字詞後，搜尋結果才會開始填入。 例如，若要尋找名為的對象， `Online Shoppers`請開始在搜尋列中輸入「線上」。 在完整輸入&quot;Online&quot;後，會顯示包含&quot;Online&quot;的搜尋結果。
 
 ## 規則產生器畫布 {#rule-builder-canvas}
 
 區段定義是用於描述目標對象之主要特性或行為的規則集合。 這些規則是使用位於中心的規則產生器畫布來建立的 [!DNL Segment Builder]。
 
-若要將新規則新增至區段定義，請從「欄位」標籤拖曳圖格 **** ，並將其拖曳至規則產生器畫布。 然後，您會根據所新增資料的類型，看到內容特定的選項。 可用的資料類型包括：字串、日期、 [!DNL ExperienceEvents]事件 [!UICONTROL 類型]和 [!UICONTROL 觀眾]。
+若要將新規則新增至區段定義，請從「欄位」標籤拖曳圖格 **** ，並將其拖曳至規則產生器畫布。 然後，您會根據所新增資料的類型，看到內容特定的選項。 可用的資料類型包括：字串、日期 [!DNL ExperienceEvents]、「事[!UICONTROL 件類型]」和觀眾。
 
 ![](../images/ui/segment-builder/rule-builder-canvas.png)
 
@@ -133,7 +133,7 @@ ht-degree: 0%
 
 建立區段定義時，工作區右側的「區段屬性 **** 」區段會顯示產生區段的估計大小，讓您在建立對象本身之前，視需要調整區段定義。
 
-「區 **[!UICONTROL 段屬性]** 」區段也可讓您指定區段定義的重要資訊，包括 **[!UICONTROL 名稱]****[!UICONTROL 和說明]**。 區段定義名稱用於識別組織所定義的區段，因此應具有描述性、簡明扼要和獨特性。
+「區 **[!UICONTROL 段屬性]** 」區段也可讓您指定區段定義的重要資訊，包括其名稱和說明。 區段定義名稱用於識別組織所定義的區段，因此應具有描述性、簡明扼要和獨特性。
 
 當您繼續建立區段定義時，您可以選取「檢視設定檔」來檢視對象的編頁 **[!UICONTROL 預覽]**。
 
