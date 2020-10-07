@@ -5,7 +5,7 @@ seo-title: 即時客戶資料平台中的資料治理
 description: '「資料管理」可讓您管理客戶資料，並確保符合適用於資料使用的法規、限制和政策。 '
 seo-description: '「資料管理」可讓您管理客戶資料，並確保符合適用於資料使用的法規、限制和政策。 '
 translation-type: tm+mt
-source-git-commit: 0f3a4ba6ad96d2226ae5094fa8b5073152df90f7
+source-git-commit: 259c26a9d3b6ef397acd552e255f68ecb25b2dd1
 workflow-type: tm+mt
 source-wordcount: '1021'
 ht-degree: 0%
@@ -48,7 +48,7 @@ Adobe Experience Platform可 [!DNL Data Governance] 讓您管理客戶資料，�
 
 為了讓資料使用標籤有效支援資料遵循，必須定義並啟用資料使用原則。 資料使用原則是描述您允許或限制在即時CDP中對資料執行的行銷動作類型的規則。 如需詳細資訊，請參閱資料管理概 [!DNL Experience Platform] 述中 [的「資料使用政策](../../data-governance/home.md) 」一節。
 
-Adobe Experience Platform針對常見客 **戶體驗使用案** 例提供數種核心政策。 瀏覽至「原則」工作區並選取「瀏覽」標籤，即可在UI中 **[!UICONTROL 檢視]** 這些 **[!UICONTROL 原則]** 。 請參 [閱說明檔案中的原則](../../data-governance/policies/user-guide.md) ，以 [!DNL Experience Platform] 取得在UI中使用原則的詳細步驟，包括如何制定您自己的自訂原則。
+Adobe Experience Platform針對常見客戶體驗使用案例提供數個核心政策。 瀏覽至「原則」工作區並選取「瀏覽」標籤，即可在UI中 **[!UICONTROL 檢視]** 這些 **[!UICONTROL 原則]** 。 請參 [閱說明檔案中的原則](../../data-governance/policies/user-guide.md) ，以 [!DNL Experience Platform] 取得在UI中使用原則的詳細步驟，包括如何制定您自己的自訂原則。
 
 ## 強制符合資料使用規範 {#enforce-data-usage-compliance}
 
