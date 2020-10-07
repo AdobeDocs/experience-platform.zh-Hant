@@ -5,7 +5,7 @@ title: 資料使用政策概觀
 topic: policies
 description: 為了讓資料使用標籤有效支援資料合規性，必須實作資料使用政策。 資料使用原則是描述您在Experience Platform內對資料執行的行銷動作類型或限制的規則。
 translation-type: tm+mt
-source-git-commit: 0f3a4ba6ad96d2226ae5094fa8b5073152df90f7
+source-git-commit: 259c26a9d3b6ef397acd552e255f68ecb25b2dd1
 workflow-type: tm+mt
 source-wordcount: '1003'
 ht-degree: 0%
@@ -21,7 +21,7 @@ ht-degree: 0%
 
 ## 行銷動作 {#marketing-actions}
 
-**資料管理架構中的行銷動作**(也稱為行銷使用案例 ****[!DNL Experience Platform] )，是資料消費者可以採取的動作，您的組織想要針對這些動作限制資料使用。 因此，資料使用原則由下列項目定義：
+資料管理架構中的行銷動作（也稱為行銷使用案例）是資料消費者可以採取的動作，而您的組織想要限制資料使用。 [!DNL Experience Platform] 因此，資料使用原則由下列項目定義：
 
 1. 特定行銷動作
 2. 限制動作的資料使用標籤
