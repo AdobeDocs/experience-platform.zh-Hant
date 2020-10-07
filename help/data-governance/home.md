@@ -5,7 +5,7 @@ title: Adobe Experience Platform資料治理
 topic: overview
 description: Adobe Experience Platform資料管理可讓您管理客戶資料，並確保符合資料使用適用的法規、限制和政策。 它在Experience Platform的不同層次發揮關鍵作用，包括編目、資料傳承、資料使用標籤、資料使用政策，以及控制資料在行銷動作中的使用
 translation-type: tm+mt
-source-git-commit: fb21acc63448ec837b2f3bcbf6eb4da83fcddc63
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '1338'
 ht-degree: 0%
@@ -21,7 +21,7 @@ Adobe Experience Platform可 [!DNL Data Governance] 讓您管理客戶資料，�
 
 ## 資料治理角色
 
-作為一個概念，資料治理既不是自動的，也不是在真空中實現的。 資料治理生態系統的擴展使最初作為個人角色的角色——通常被認 **為是資料管理員**—有了顯著增長。 如今，資料治理需要持續的管理和監控才能成功，並依賴資料管理員提供工具，使資料能夠正確標籤、建立使用策略，並且能夠強制遵守這些策略。
+作為一個概念，資料治理既不是自動的，也不是在真空中實現的。 資料治理生態系統的擴張，使原本作為個人角色的角色——通常被認為是資料管理員——大幅增長。 如今，資料治理需要持續的管理和監控才能成功，並依賴資料管理員提供工具，使資料能夠正確標籤、建立使用策略，並且能夠強制遵守這些策略。
 
 雖然資料治理應該由組織中的每個人負責，但以下是資料治理週期中的一些關鍵角色：
 
