@@ -6,7 +6,7 @@ description: 本檔案提供教學課程，可讓您使用Experience Platform使
 topic: tutorial
 type: Tutorials
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '910'
 ht-degree: 0%
@@ -18,7 +18,7 @@ ht-degree: 0%
 
 Adobe Experience Platform的重要部分，在於能夠跨不同通道瞭解客戶之間的關係以及客戶與品牌之間的互動。 在(XDM)結構中定義這 [!DNL Experience Data Model] 些關係，可讓您獲得客戶資料的複雜見解。
 
-雖然方案關係可以通過使用union方案和來推斷 [!DNL Real-time Customer Profile]，但這僅適用於共用相同類的方案。 要在屬於不同類的兩個方案之間建立關係，必須將專用的關 **系欄位添加到源方案** ，該源方案引用目標方案的標識。
+雖然方案關係可以通過使用union方案和來推斷 [!DNL Real-time Customer Profile]，但這僅適用於共用相同類的方案。 要在屬於不同類的兩個方案之間建立關係，必須將專用的關係欄位添加到源方案中，該源方案引用目標方案的標識。
 
 本文檔提供了一個教程，用於使用用戶介面中的方案編輯器定義兩個方案之 [!DNL Experience Platform] 間的關係。 有關使用API定義方案關係的步驟，請參閱使用方案注 [冊表API定義關係的教程](relationship-api.md)。
 
