@@ -5,7 +5,7 @@ title: 建立ETL整合
 topic: overview
 description: ETL整合指南概述建立Experience Platform的高效能、安全連接器以及將資料匯入Platform的一般步驟。
 translation-type: tm+mt
-source-git-commit: f4a4e65a087313dc4e2414f999e021e3f6e17137
+source-git-commit: a362b67cec1e760687abb0c22dc8c46f47e766b7
 workflow-type: tm+mt
 source-wordcount: '4173'
 ht-degree: 0%
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 # 開發Adobe Experience Platform的ETL整合
 
-ETL整合指南概述建立高效能、安全的連接器，以便將資料 [!DNL Experience Platform] 收入的一般步驟 [!DNL Platform]。
+ETL整合指南概述建立高效能、安全的連接器，以便將資料 [!DNL Experience Platform] 匯入的一般步驟 [!DNL Platform]。
 
 
 - [[!DNL目錄]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml)
@@ -95,7 +95,7 @@ ETL工作流程中已提供範例ETL工具和工作流程的 [模型](./workflow
 
 您可以發出單一API要求來檢視所有可用的資料集(例如 `GET /dataSets`)，最佳實務是包含限制回應大小的查詢參數。
 
-在要求完整 _資料集資訊_ 時，回應負載可能會達到超過3GB的大小，進而降低整體效能。 因此，只使用查詢參數來過濾所需的資訊將使查詢 [!DNL Catalog] 更加有效。
+在要求完整資料集資訊的情況下，回應裝載的大小可能會超過3GB，進而降低整體效能。 因此，只使用查詢參數來過濾所需的資訊將使查詢 [!DNL Catalog] 更加有效。
 
 #### 清單篩選
 
@@ -165,7 +165,7 @@ curl -X GET "https://platform.adobe.io/data/foundation/catalog/dataSets?limit=3&
 
 ### 檢視資料集架構
 
-資料集的&quot;schemaRef&quot;屬性包含引用資料集所基於的XDM模式的URI。 XDM架構(&quot;schemaRef&quot;)代表資料集可使用的所有潛在 _欄位_ ，而不一定是使用 _的欄位(請參閱下面的_ &quot;veocableSchema&quot;)。
+資料集的&quot;schemaRef&quot;屬性包含引用資料集所基於的XDM模式的URI。 XDM架構(&quot;schemaRef&quot;)表示資料集可以使用的所有潛在欄位，而不一定是使用的欄位（請參閱下方的「可觀察的架構」）。
 
 XDM架構是您在需要向用戶顯示可寫入的所有可用欄位的清單時所使用的架構。
 
@@ -498,7 +498,7 @@ curl -X GET "https://platform.adobe.io/data/foundation/catalog/dataSets/59c93f3d
 
 ## 執行階段
 
-當執行開始時，連接器（如源元件中定義）將使用 [!DNL Experience Platform] [[!DNL 資料存取API]讀取資料](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-access-api.yaml)。 轉換過程將讀取特定時間範圍的資料。 內部查詢源資料集的批次。 查詢時，會使用參數化（滾動時間序列資料或增量資料）的開始日期和列出這些批的資料集檔案，並開始請求這些資料集檔案的資料。
+當執行開始時，連接器（如源元件中定義）將使用 [!DNL Experience Platform] [! [DNL資料存取API]讀取資料](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-access-api.yaml)。 轉換過程將讀取特定時間範圍的資料。 內部查詢源資料集的批次。 查詢時，會使用參數化（滾動時間序列資料或增量資料）的開始日期和列出這些批的資料集檔案，並開始請求這些資料集檔案的資料。
 
 ### 範例轉換
 
@@ -601,7 +601,7 @@ curl -X POST "https://platform.adobe.io/data/foundation/import/batches" \
 
 ### 寫入資料集
 
-成功建立新批次後，檔案就可以上傳到特定資料集。 多個檔案可以在批次中張貼，直到升級為止。 檔案可以使用小型檔案 _上傳API上傳_;不過，如果您的檔案過大且已超出閘道限制，則可使用「大 _型檔案上傳API」_。 如需使用「大型和小型檔案上傳」的詳細資訊，請參閱「批次擷 [取」概觀](../ingestion/batch-ingestion/overview.md)。
+成功建立新批次後，檔案就可以上傳到特定資料集。 多個檔案可以在批次中張貼，直到升級為止。 檔案可以使用小型檔案上傳API上傳；不過，如果您的檔案過大且已超出閘道限制，則可使用「大型檔案上傳API」。 如需使用「大型和小型檔案上傳」的詳細資訊，請參閱「批次擷 [取」概觀](../ingestion/batch-ingestion/overview.md)。
 
 **請求**
 
