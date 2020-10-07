@@ -6,7 +6,7 @@ topic: overview
 type: Tutorial
 description: 本教學課程會逐步帶您建立Adobe Audience Manager來源連接器，以便使用使用者介面將消費者體驗事件資料匯入平台的步驟。
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '298'
 ht-degree: 2%
@@ -20,9 +20,9 @@ ht-degree: 2%
 
 ## 使用Adobe Audience Manager建立來源連線
 
-登入 [Adobe Experience Platform](https://platform.adobe.com) ，然後從左側導覽列選 **取Sources** ，以存取來源工作區。 「目 *錄* 」螢幕顯示各種源，您可以為其建立源連接，每個源顯示與其關聯的現有連接數。
+登入 [Adobe Experience Platform](https://platform.adobe.com) ，然後從左側導覽列選 **取Sources** ，以存取來源工作區。 「目 **錄** 」螢幕顯示各種源，您可以為其建立源連接，每個源顯示與其關聯的現有連接數。
 
-在「 *Adobe應用程式* 」類別下，選取「 **Adobe Audience Manager** 」，以在螢幕右側顯示資訊列。 資訊列提供所選來源的簡短說明，以及檢視其檔案或連線來源的選項。
+在「 **Adobe應用程式** 」類別下，選取「 **Adobe Audience Manager** 」，以在螢幕右側顯示資訊列。 資訊列提供所選來源的簡短說明，以及檢視其檔案或連線來源的選項。
 
 若要建立Adobe Audience Manager的新來源連接器，請按一下「新增 **資料」**。
 
@@ -32,7 +32,7 @@ ht-degree: 2%
 
 ![](../../../../images/tutorials/create/aam/connect_full.png)
 
-如果已建立與Adobe Audience Manager的來源連線，則會顯 *示Audience Manager連接器的「來源* 」活動頁面。
+如果已建立與Adobe Audience Manager的來源連線，則會顯 **示Audience Manager連接器的「來源** 」活動頁面。
 
 ![](../../../../images/tutorials/create/aam/flow.png)
 
