@@ -6,7 +6,7 @@ last-update: April 13, 2020
 author: ens71067
 keywords: release notes;
 translation-type: tm+mt
-source-git-commit: 0f3a4ba6ad96d2226ae5094fa8b5073152df90f7
+source-git-commit: a362b67cec1e760687abb0c22dc8c46f47e766b7
 workflow-type: tm+mt
 source-wordcount: '991'
 ht-degree: 5%
@@ -37,7 +37,7 @@ Adobe Experience Platform的新功能：
 | 功能 | 說明 |
 |---|---|
 | [!DNL Customer AI] | [!DNL Customer AI] 為行銷人員提供在個別層級產生客戶預測的能力，並提供說明。 借助有影響力的因素， [!DNL Customer AI] 您可以瞭解客戶可能做什麼以及為什麼。 此外，行銷人員可從預測和洞 [!DNL Customer AI] 見中獲益，透過提供最適當的優惠和訊息，個人化客戶體驗。 |
-| [!DNL Attribution AI] | [!DNL Attribution AI] 是一種多通道的算法歸因服務，可計算客戶互動對特定結果的影響和增量影響。 有了 [!DNL Attribution AI]，行銷人員可以透過瞭解客戶歷程各個階段中每個客戶互動的影響，來衡量並最佳化行銷和廣告支出。 |
+| [!DNL Attribution AI] | [!DNL Attribution AI] 是一種多通道的算法歸因服務，可計算客戶互動對特定結果的影響和增量影響。 有了 [!DNL Attribution AI]，行銷人員可以透過瞭解客戶歷程各個階段的每個個別客戶互動的影響，衡量並最佳化行銷和廣告支出。 |
 
 **已知問題**
 
@@ -79,7 +79,7 @@ Adobe Experience Platform是一 [!DNL Data Governance] 系列用於管理客戶�
 
 | 功能 | 說明 |
 | -----------| ---------- |
-| 在UI中管理資料使用原則 | 資料使用原則現在可以在 _UI_ 的 [!DNL Experience Platform] 「原則」工作區中管理。 如需詳細 [資訊，請參閱原則使用指南](../../data-governance/policies/user-guide.md) 。 |
+| 在UI中管理資料使用原則 | 資料使用原則現在可以在 **UI** 的 [!DNL Experience Platform] 「原則」工作區中管理。 如需詳細 [資訊，請參閱原則使用指南](../../data-governance/policies/user-guide.md) 。 |
 
 **已知問題**
 
