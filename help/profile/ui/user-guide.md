@@ -4,7 +4,7 @@ title: 即時客戶基本資料使用指南
 topic: guide
 description: 即時客戶個人檔案可讓您對個別客戶建立全方位的檢視，並結合來自多個通道的資料，包括線上、離線、CRM和協力廠商資料。 本檔案可做為在Adobe Experience Platform使用者介面中與即時客戶個人檔案互動的指南。
 translation-type: tm+mt
-source-git-commit: 59cf089a8bf7ce44e7a08b0bb1d4562f5d5104db
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '1292'
 ht-degree: 0%
@@ -40,11 +40,11 @@ ht-degree: 0%
 
 ### 描述檔度量 {#profile-metrics}
 
-在「瀏覽」標籤的右側是幾個與您的描述檔資料相關的重要度量，包括您的 [!UICONTROL 描述檔總數] ，以及依命名空間 [的描述檔清單](#profile-count)[](#profiles-by-namespace)。
+在「瀏覽」標籤的右側是幾個與您的描述檔資料相關的重要度量，包括您的 **[!UICONTROL 描述檔總數]** ，以及依命名空間 [的描述檔清單](#profile-count)[](#profiles-by-namespace)。
 
 這些描述檔度量會使用您組織的預設合併原則來評估。 有關使用合併策略的詳細資訊，包括如何定義預設合併策略，請參閱合 [並策略使用手冊](merge-policies.md)。
 
-除了這些量度外，描述檔量度區段也提供「上次更新 [!UICONTROL 的日期] 」和時間，顯示上次評估量度的時間。
+除了這些量度外，描述檔量度區段還提供上次更新的日期和時間，顯示上次評估量度的時間。
 
 ![](../images/user-guide/profiles-profile-metrics.png)
 
@@ -80,7 +80,7 @@ ht-degree: 0%
 
 ### 身分值
 
-在選取 [!UICONTROL Identity命名空間]，您會返回「 [!UICONTROL Browse] 」（瀏覽）標籤，您可在其中輸入 **[!UICONTROL Identity值]**。 此值是個別客戶個人檔案專屬的值，必須是提供之命名空間的有效項目。 例如，選取 [!UICONTROL Identity namespace] &quot;Email&quot;需要 [!UICONTROL Identity值] ，以有效電子郵件地址的形式。
+在選取身分命名空間後，您會返回「瀏 **[!UICONTROL 覽]** 」索引標籤，您可在其中輸入 **[!UICONTROL 身分值]**。 此值是個別客戶個人檔案專屬的值，必須是提供之命名空間的有效項目。 例如，選取「電子郵件」的身分名稱空間時，將需要有效電子郵件地址形式的身分值。
 
 ![](../images/user-guide/profiles-show-profile.png)
 
@@ -90,17 +90,17 @@ ht-degree: 0%
 
 ### 描述檔詳細資料 {#profile-detail}
 
-在選擇「配置 [!UICONTROL 式ID]」後， **[!UICONTROL 將開啟]** 「詳細資訊」頁籤。 顯示在「詳細資訊  」標籤上的描述檔資訊已從多個描述檔片段合併在一起，以形成個別客戶的單一檢視。 這包括客戶詳細資訊，例如基本屬性、連結的身分和通路偏好設定。 您也可以在組織層級變更顯示的預設欄位，以顯示偏好的描述檔屬性。 若要進一步瞭解自訂這些欄位，包括新增和移除屬性以及調整控制面板大小的逐步指示，請閱讀描述檔詳細 [資料自訂指南](profile-customization.md)。
+在選擇「配置 **[!UICONTROL 式ID]**」後， **[!UICONTROL 將開啟]** 「詳細資訊」頁籤。 顯示在「詳細資訊 **** 」標籤上的描述檔資訊已從多個描述檔片段合併在一起，以形成個別客戶的單一檢視。 這包括客戶詳細資訊，例如基本屬性、連結的身分和通路偏好設定。 您也可以在組織層級變更顯示的預設欄位，以顯示偏好的描述檔屬性。 若要進一步瞭解自訂這些欄位，包括新增和移除屬性以及調整控制面板大小的逐步指示，請閱讀描述檔詳細 [資料自訂指南](profile-customization.md)。
 
 ![](../images/user-guide/profiles-profile-detail.png)
 
-您可以選取其他可用標籤，以檢視與個別描述檔相關的其他資訊。 這些標籤包括屬 [!UICONTROL 性]、事件 [!UICONTROL 、]區段成員資格 [!UICONTROL ，顯示] 描述檔目前合格的區段。
+您可以選取其他可用標籤，以檢視與個別描述檔相關的其他資訊。 這些標籤包括屬性、事件和區段成員資格，這些屬性、事件和區段成員資格顯示配置檔案當前限定的區段。
 
 ![](../images/user-guide/profiles-attributes-events-segments.png)
 
 ## 合併原則
 
-從主「配置 [!UICONTROL 檔案] 」菜單中，選擇「合併策略 **** 」頁籤以查看屬於您組織的合併策略清單。 每個列出的策略都顯示其名稱，無論它是否是預設合併策略，以及它所應用的方案。
+從主「配置 **[!UICONTROL 檔案]** 」菜單中，選擇「合併策略 **** 」頁籤以查看屬於您組織的合併策略清單。 每個列出的策略都顯示其名稱，無論它是否是預設合併策略，以及它所應用的方案。
 
 有關合併策略的詳細資訊，請參 [閱合併策略使用手冊](merge-policies.md)。
 
@@ -108,9 +108,9 @@ ht-degree: 0%
 
 ## 聯合模式 {#union-schema}
 
-從主「配置 [!UICONTROL 式] 」菜單中，選擇「聯 **** 合結構式」頁籤以查看配置檔案資料的聯合結構式。 聯合模式是同一類下的所 [!DNL Experience Data Model] 有(XDM)欄位的合併，其模式已在中啟用 [!DNL Real-time Customer Profile]。 從左側的「類 [!UICONTROL 別] 」清單中選取類別，即可在畫布中檢視其架構的結構。 例如，選擇「[!DNL XDM Profile]」會顯示類的聯合方 [!DNL XDM Individual Profile] 案。
+從主「配置 **[!UICONTROL 式]** 」菜單中，選擇「聯 **** 合結構式」頁籤以查看配置檔案資料的聯合結構式。 聯合模式是同一類下的所 [!DNL Experience Data Model] 有(XDM)欄位的合併，其模式已在中啟用 [!DNL Real-time Customer Profile]。 從左側的「[!UICONTROL Class]」清單中選取類別，即可在畫布中檢視其架構的結構。 例如，選擇「[!DNL XDM Profile]」會顯示類的聯合方 [!DNL XDM Individual Profile] 案。
 
-如需Adobe Experience Platform中聯合架構及其角色的詳細資訊，請參閱架構構成指南中有關聯合架構 [的章節](../../xdm/schema/composition.md)。
+如需Adobe Experience Platform中聯合架構及其角色的詳細資訊，請參閱架構構成指南中的聯合架構 [一節](../../xdm/schema/composition.md)。
 
 ![](../images/user-guide/profiles-union-schema.png)
 
