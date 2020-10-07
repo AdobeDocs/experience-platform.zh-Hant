@@ -5,10 +5,10 @@ doc-type: release notes
 last-update: January 15, 2020
 author: crhoades, ens28527
 translation-type: tm+mt
-source-git-commit: c6c5ada52321b11543254f80399c38365f0fb9d7
+source-git-commit: a362b67cec1e760687abb0c22dc8c46f47e766b7
 workflow-type: tm+mt
 source-wordcount: '894'
-ht-degree: 5%
+ht-degree: 7%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 5%
 
 **發行日期：2020 年 1 月 15 日**
 
-Adobe Experience Platform現有功能的更新：
+Adobe Experience Platform 現有功能更新：
 
 * [[!DNL Experience Data Model(XDM)System]](#xdm)
 * [[!DNL隱私服務]](#privacy)
@@ -55,7 +55,7 @@ XDM是公開記載的規格，旨在改善數位體驗的強大功能。 它提�
 | 新的API端點 | API的基本路 [!DNL Privacy Service] 徑已從更新 `/data/privacy/gdpr` 為 `/data/core/privacy/jobs`。 |
 | 新的必要 `regulation` 屬性 | 在 [!DNL Privacy Service] API中建立新工作時，請求裝載中必 `regulation` 須提供屬性，以指出要追蹤工作的規則。 接受的值是 `gdpr` 和 `ccpa`。 |
 | 支援 [!DNL Adobe Primetime Authentication] | [!DNL Privacy Service] 現在可接受Adobe的存取／刪 [!DNL Primetime Authentication]除請求， `primetimeAuthentication` 並視其產品值而定。 |
-| 隱私權服務UI增強功能 | 針對GDPR和CCPA法規分開工作追蹤頁面。 新的 _規則類型下拉式清單_ ，可在GDPR和CCPA的追蹤資料之間切換。 |
+| 隱私權服務UI增強功能 | 針對GDPR和CCPA法規分開工作追蹤頁面。 新**規則類型**下拉式清單，可在GDPR和CCPA的追蹤資料之間切換。 |
 
 **已知問題**
 
@@ -105,7 +105,7 @@ Adobe Experience Platform可以從外部來源擷取資料，同時讓您使用�
 | 類別 | 權限 | 說明 |
 |--- | --- | ---|
 | 目的地 | 管理目標 | 存取讀取、建立、編輯和停用目標。 |
-| 目的地 | 查看目標 | 對「目錄」標籤中可用目標和「瀏覽」 [!UICONTROL _標籤中已驗證目標_] ，進行唯讀 _存取_ 。 |
+| 目的地 | 查看目標 | 對「目錄」標籤中可用目標和「瀏覽」 **[!UICONTROL 標籤中已驗證目標]** ，進行唯讀 **存取** 。 |
 | 目的地 | 啟動目標 | 能夠將資料啟動至目標。 此權限要求將「管理目標」或「檢視目標」新增至產品設定檔。 |
 
 **已知問題**
