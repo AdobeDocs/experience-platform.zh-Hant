@@ -5,7 +5,7 @@ description: 瞭解如何取得Adobe Experience Cloud Id。
 seo-description: 瞭解如何取得Adobe Experience Cloud Id。
 keywords: Identity;First Party Identity;Identity Service;3rd Party Identity;ID Migration;Visitor ID;third party identity;thirdPartyCookiesEnabled;idMigrationEnabled;getIdentity;Syncing Identities;syncIdentity;sendEvent;identityMap;primary;ecid;Identity Namespace;namespace id;authenticationState;hashEnabled;
 translation-type: tm+mt
-source-git-commit: 8c256b010d5540ea0872fa7e660f71f2903bfb04
+source-git-commit: 34cfcaac276bf2645a0365a0dfa71c4ead6e2ecb
 workflow-type: tm+mt
 source-wordcount: '730'
 ht-degree: 5%
@@ -17,7 +17,7 @@ ht-degree: 5%
 
 Adobe Experience Platform運用 [!DNL Web SDK] 了 [Adobe Identity Service](../../identity-service/ecid.md)。 這可確保每個裝置都有一個唯一識別碼，該識別碼會保存在裝置上，以便將頁面之間的活動系結在一起。
 
-## 第一方身分
+## 第一方身份
 
 該 [!DNL Identity Service] 識別碼儲存在第一方網域的Cookie中。 嘗 [!DNL Identity Service] 試使用網域上的HTTP標題來設定Cookie。 如果失敗，則 [!DNL Identity Service] 會回到透過Javascript設定Cookie。 Adobe建議您設定CNAME，以確保您的Cookie不受用戶端ITP限制。
 
@@ -89,15 +89,15 @@ alloy("sendEvent", {
 
 | **類型** | **必填** | **預設值** |
 | -------- | ------------ | ----------------- |
-| 字串 | 是 | nown |
+| 字串 | 是 | 無 |
 
-物件的索引鍵是 [Identity Namespace](../../identity-service/namespaces.md) Symbol。 您可在「身分識別」下方的Adobe Experience Platform使用者介面中找到此 [!UICONTROL 項目]。
+物件的索引鍵是 [Identity Namespace](../../identity-service/namespaces.md) Symbol。 您可在「身分識別」下方的Adobe Experience Platform使用者介面中找[!UICONTROL 到]。
 
 #### `id`
 
 | **類型** | **必填** | **預設值** |
 | -------- | ------------ | ----------------- |
-| 字串 | 是 | nown |
+| 字串 | 是 | 無 |
 
 這是您要針對指定命名空間同步的ID。
 
