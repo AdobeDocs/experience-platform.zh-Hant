@@ -6,7 +6,7 @@ topic: tutorial
 type: Tutorial
 description: 本檔案提供教學課程，可讓您使用串流擷取功能，在單一HTTP要求內傳送多則訊息至Adobe Experience Platform。
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '1487'
 ht-degree: 1%
@@ -31,7 +31,7 @@ ht-degree: 1%
 
 - 授權：生產者 `{ACCESS_TOKEN}`
 
-所有POST請求都需要額外的標題：
+所有POST要求都需要額外的標題：
 
 - 內容類型：application/json
 
@@ -45,7 +45,7 @@ ht-degree: 1%
 
 下列範例說明如何在單一HTTP請求中傳送多則訊息至特定資料集。 將資料集ID插入訊息標題中，讓該訊息直接被收錄進來。
 
-您可以使用UI或使用API中的清單 [!DNL Platform] 作業，取得現有資料集的ID。 前往 [Experience Platform](https://platform.adobe.com) **[!UICONTROL Tab]** ，按一下您要取得ID的資料集，然後從InfoAdobest字串的 **[!UICONTROL Dataset ID]** 欄位複製資料集ID，即可在 **** Experience Platform上找到資料集ID。 如需如何 [使用API擷取資料集的詳細資訊](../../catalog/home.md) ，請參閱目錄服務概觀。
+您可以使用UI或使用API中的清單 [!DNL Platform] 作業，取得現有資料集的ID。 您可以在 [Experience Platform](https://platform.adobe.com)******** 上找到資料集ID，方法是前往「資料集」標籤，按一下您要取得ID的資料集，然後從「資訊」標籤上的資料集ID欄位複製字串。 如需如何 [使用API擷取資料集的詳細資訊](../../catalog/home.md) ，請參閱目錄服務概觀。
 
 您可以建立新資料集，而不是使用現有資料集。 請閱讀使用 [API建立資料集教學課程](../../catalog/api/create-dataset.md) ，以取得有關使用API建立資料集的詳細資訊。
 
@@ -543,7 +543,7 @@ curl -X POST https://dcs.adobedc.net/collection/batch/{CONNECTION_ID} \
 
 | 狀態代碼 | 說明 |
 | :---: | --- |
-| 207 | 儘管「207」用作整體響應狀態代碼，但接收方需要查閱多狀態響應主體的內容，以瞭解有關方法執行的成功或失敗的進一步資訊。 回應程式碼用於成功、部分成功以及失敗情況。 |
+| 207 | 雖然「207」用作整體響應狀態代碼，但接收方需要查閱多狀態響應主體的內容，以瞭解有關方法執行的成功或失敗的進一步資訊。 回應程式碼用於成功、部分成功以及失敗情況。 |
 | 400 | 請求有問題。 請參閱回應內文以取得更具體的錯誤訊息（例如，「訊息裝載遺失必要欄位，或「訊息」為未知xdm格式）。 |
 | 401 | 未授權：請求缺少有效的授權標題。 僅對啟用了身份驗證的入口返回。 |
 | 403 | 未授權： 提供的授權Token無效或已過期。 僅對啟用了身份驗證的入口返回。 |
