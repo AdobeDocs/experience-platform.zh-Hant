@@ -6,7 +6,7 @@ topic: overview
 type: Tutorial
 description: 本教學課程提供在UI中建立來源連接器的步驟，以便將客戶屬性描述檔資料收集到Adobe Experience Platform。
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '374'
 ht-degree: 8%
@@ -28,7 +28,7 @@ ht-degree: 8%
 
 ![](../../../../images/tutorials/create/customer-attributes/catalog.png)
 
-「源 *活動* 」螢幕列出客戶屬性配置檔案資料的所有先前建立的連接，您可以通過按一下「選擇資料」來建立 **新連接**。
+「源 **活動** 」螢幕列出客戶屬性配置檔案資料的所有先前建立的連接，您可以通過按一下「選擇資料」來建立 **新連接**。
 
 >[!NOTE]
 >
@@ -44,10 +44,10 @@ ht-degree: 8%
 
 ![](../../../../images/tutorials/create/customer-attributes/select_data.png)
 
-此時 *會出現* 「查看」步驟，允許您在建立新入站連接之前查看該連接。 連接的詳細資訊按類別分組，包括：
+此時 **會出現** 「查看」步驟，允許您在建立新入站連接之前查看該連接。 連接的詳細資訊按類別分組，包括：
 
-* *來源詳細資訊*:顯示源連接的類型和選定的源資料。
-* *目標詳細資訊*:建立其他來源連接器時，此容器會顯示來源資料所吸收的資料集，包括資料集所遵守的架構。 客戶屬性描述檔資料會自動對應並收錄至即時客戶描述檔。
+* **來源詳細資訊**:顯示源連接的類型和選定的源資料。
+* **目標詳細資訊**:建立其他來源連接器時，此容器會顯示來源資料所吸收的資料集，包括資料集所遵守的架構。 客戶屬性描述檔資料會自動對應並收錄至即時客戶描述檔。
 
 ![](../../../../images/tutorials/create/customer-attributes/review.png)
 
