@@ -5,7 +5,7 @@ title: 權限和資源類型的清單名稱
 topic: developer guide
 description: Adobe Experience Platform中的存取控制功能可讓您使用Adobe Admin Console管理各種平台功能的角色和權限。 通過向/acl/reference端點發出GET請求，可以列出所有權限和資源類型的名稱。 然後，這些名稱可用於API呼叫，以檢視目前使用者的有效原則。
 translation-type: tm+mt
-source-git-commit: 14f99c23cd82894fee5eb5c4093b3c50b95c52e8
+source-git-commit: 28b733a16b067f951a885c299d59e079f0074df8
 workflow-type: tm+mt
 source-wordcount: '184'
 ht-degree: 1%
@@ -17,7 +17,7 @@ ht-degree: 1%
 
 通過向端點發出GET請求，可以列出所有權限和資源類型的 `/acl/reference` 名稱。 然後，這些名稱可用於API呼叫中，以 [檢視目前使用者的](./effective-policies.md) 有效原則。
 
-權 **限** 是透過Adobe Admin Console管理的原則，並對應至零或多個資源類型原則。 資 **源類型** ，是一種策略，可為特定資源類型（如資料集或方案）啟用讀、寫和/ [!DNL Platform] 或刪除功能。
+權限是透過Adobe Admin Console管理的原則，並對應至零或多個資源類型原則。 資源類型是一種策略，可為特定資源類型（如資料集或方案）啟用讀、寫和/ [!DNL Platform] 或刪除功能。
 
 **API格式**
 
