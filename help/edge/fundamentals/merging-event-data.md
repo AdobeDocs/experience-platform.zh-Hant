@@ -5,7 +5,7 @@ description: 瞭解如何合併Experience Platform Web SDK事件資料
 seo-description: 瞭解如何合併Experience Platform Web SDK事件資料
 keywords: merge;event data;eventMergeId;createEventMergeId;sendEvent;mergeId;merge id;eventMergeIdPromise; Merge Id Promise;
 translation-type: tm+mt
-source-git-commit: 8c256b010d5540ea0872fa7e660f71f2903bfb04
+source-git-commit: a362b67cec1e760687abb0c22dc8c46f47e766b7
 workflow-type: tm+mt
 source-wordcount: '408'
 ht-degree: 0%
@@ -19,7 +19,7 @@ ht-degree: 0%
 >
 >此功能仍在開發中。 並非所有解決方案都能如本頁所述合併事件資料。
 
-有時候，並非所有資料都可在事件發生時使用。 您可能想要擷取您所擁 _有的資料_ ，如此當使用者關閉瀏覽器時，就不會遺失資料。 另一方面，您也可能會包含任何日後可用的資料。
+有時候，並非所有資料都可在事件發生時使用。 您可能想要擷取您擁有的資料，因此當使用者關閉瀏覽器時，不會遺失資料。 另一方面，您也可能會包含任何日後可用的資料。
 
 在這種情況下，您可以將資料與先前事件合併，方 `eventMergeId` 法是將選項傳遞 `event` 至命令，如下所示：
 
