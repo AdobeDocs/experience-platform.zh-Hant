@@ -5,7 +5,7 @@ title: 架構構成基礎
 topic: overview
 description: 本檔案提供Experience Data Model(XDM)架構的簡介，以及構成Adobe Experience Platform中要使用之架構的建置區塊、原則和最佳實務。
 translation-type: tm+mt
-source-git-commit: f7abccb677294e1595fb35c27e03c30eb968082a
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '2839'
 ht-degree: 0%
@@ -54,7 +54,7 @@ XDM模式通過嵌入對象的使用，可以直接表示複雜的資料，並�
 * **記錄資料**:提供主題屬性的相關資訊。 主題可以是組織或個人。
 * **時間系列資料**:提供記錄主體直接或間接採取操作時系統的快照。
 
-所有XDM結構描述的資料可以分類為記錄或時間序列。 方案的資料行為由方案的類定 **義**，該類在首次建立方案時被分配給方案。 本文稍後將對XDM類作進一步的詳細說明。
+所有XDM結構描述的資料可以分類為記錄或時間序列。 架構的資料行為由架構的類定義，該類在初次建立時被分配給架構。 本文稍後將對XDM類作進一步的詳細說明。
 
 記錄和時間序列模式都包含身份映射(`xdm:identityMap`)。 此欄位包含主題的身分表示法，其取自標示為「身分」的欄位，如下一節所述。
 
@@ -133,7 +133,7 @@ XDM模式通過嵌入對象的使用，可以直接表示複雜的資料，並�
 
 **類+ Mixin&amp;ast;= XDM方案**
 
-&amp;ast；模式由類和零個或多個 _混合組成_ 。 這表示您完全不需使用mixin就可以合成資料集架構。
+&amp;ast；模式由類和零個或多個混合組成。 這表示您完全不需使用mixin就可以合成資料集架構。
 
 ### 類別
 
