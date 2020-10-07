@@ -5,7 +5,7 @@ topic: tutorial
 type: Tutorial
 description: Adobe Experience Platform可讓您透過Sensei機器學習架構執行階段，建立並建立自訂功能管道，以大規模執行功能工程。 本檔案說明在功能管道中找到的各種類別，並提供使用PySpark中的「模型編寫SDK」建立自訂功能管道的逐步教學課程。
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '1426'
 ht-degree: 0%
