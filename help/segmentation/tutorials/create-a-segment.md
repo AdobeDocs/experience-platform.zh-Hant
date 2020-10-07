@@ -6,7 +6,7 @@ topic: tutorial
 type: Tutorial
 description: 本檔案提供使用Adobe Experience Platform Segmentation Service API來開發、測試、預覽和儲存區段定義的教學課程。
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '916'
 ht-degree: 0%
@@ -56,7 +56,7 @@ ht-degree: 0%
 
 ## 開發區段定義
 
-分段的第一步是定義分段，在稱為分段定義的構造中 **表示**。 段定義是一個對象，它封裝了寫入( [!DNL Profile Query Language] PQL)的查詢。 此對象也稱為 **PQL謂詞**。 PQL謂語根據與您提供給的任何記錄或時間序列資料相關的條件定義段規則 [!DNL Real-time Customer Profile]。 有關編寫 [PQL查詢的詳細資訊](../pql/overview.md) ，請參見PQL指南。
+分段的第一步是定義分段，在稱為分段定義的構造中表示。 段定義是一個對象，它封裝了寫入( [!DNL Profile Query Language] PQL)的查詢。 此對象也稱為PQL謂語。 PQL謂語根據與您提供給的任何記錄或時間序列資料相關的條件定義段規則 [!DNL Real-time Customer Profile]。 有關編寫 [PQL查詢的詳細資訊](../pql/overview.md) ，請參見PQL指南。
 
 您可以透過對API中的端點提出POST請求，來建 `/segment/definitions` 立新的區段 [!DNL Segmentation] 定義。 下列範例概述如何設定定義請求的格式，包括成功定義區段所需的資訊。
 
