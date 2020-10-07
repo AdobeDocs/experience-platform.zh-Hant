@@ -5,7 +5,7 @@ title: 連接Power BI
 topic: connect
 description: 本檔案將逐步說明如何將Power BI與Adobe Experience Platform Query Service連接。
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '349'
 ht-degree: 0%
@@ -61,7 +61,7 @@ ORDER BY SUM(web.webPageDetails.pageviews.value) DESC
 LIMIT 10
 ```
 
-- 選擇 **[!UICONTROL DirectQuery]** 或 **[!UICONTROL Import模式]** 。 在「 **[!UICONTROL 匯入]** 」模式中，資料將匯入 [!DNL Power BI]。 在 **[!UICONTROL DirectQuery模式中]** ，所有查詢都會傳送至 [!DNL Query Service] 執行。
+- 選擇「[!UICONTROL DirectQuery]」或「[!UICONTROL Import]」模式。 在 [!UICONTROL DirectQuery模式中] ，所有查詢都會傳送至 [!DNL Query Service] 執行。 在「 [!UICONTROL 匯入] 」模式中，資料將匯入 [!DNL Power BI]。
 
 - 按一下&#x200B;**[!UICONTROL 「確定」]**。現在， [!DNL Power BI] 連線至並 [!DNL Query Service] 產生預覽（如果沒有錯誤）。 「預覽」轉換數值欄有已知問題。 繼續下一步。
 
