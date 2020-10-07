@@ -6,7 +6,7 @@ topic: tutorial
 type: Tutorial
 description: 本教學課程將示範如何使用Sensei Machine Learning API呼叫建立、訓練和評估模型。
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '1210'
 ht-degree: 1%
@@ -35,7 +35,7 @@ ht-degree: 1%
 
 ## API工作流程
 
-我們將使用API來建立實驗執行以進行訓練。 在本教學課程中，我們將著重討論 **引擎**、 **MLInstances**&#x200B;和 **Experies** 端點。 下圖概述這三者之間的關係，並介紹「執行」(Run)和「模型」(Model)的概念。
+我們將使用API來建立實驗執行以進行訓練。 在本教學課程中，我們將重點討論引擎、MLInstances和實驗端點。 下圖概述這三者之間的關係，並介紹「執行」(Run)和「模型」(Model)的概念。
 
 ![](../images/models-recipes/train-evaluate-api/engine_hierarchy_api.png)
 
