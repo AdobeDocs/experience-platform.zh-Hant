@@ -5,7 +5,7 @@ title: 隱私權要求的身分資料
 topic: overview
 description: 本檔案提供如何設定資料作業的一般指引，並運用Adobe技術，以有效擷取適當的客戶隱私權要求識別資訊。
 translation-type: tm+mt
-source-git-commit: 4c3a947051c11860ab4f0f53b48d8f4bda8dc195
+source-git-commit: 28b733a16b067f951a885c299d59e079f0074df8
 workflow-type: tm+mt
 source-wordcount: '643'
 ht-degree: 3%
@@ -25,7 +25,7 @@ ht-degree: 3%
 
 例如，在中處理客戶資料請求時 [!DNL Privacy Service]，身分可代表在Adobe控制網域下設定的Cookie值、在協力廠商網域下並與Adobe共用的Cookie值，或您在IMS組織內明確定義的自訂識別碼。
 
-因此，每個傳送到的身分都必須 [!DNL Privacy Service] 附帶命名空間 **** ，該名稱空間將身分值與其來源系統關聯，以提供上下文。 命名空間可以代表一般概念，例如電子郵件地址（「電子郵件」），或將身分識別與特定應用程式(例如Adobe Advertising Cloud ID(「AdCloud」)或Adobe Target ID(「TNTID」))建立關聯。
+因此，每個傳送至的身分都必須 [!DNL Privacy Service] 附有命名空間，其中提供上下文，將身分值與其來源系統相關。 命名空間可以代表一般概念，例如電子郵件地址（「電子郵件」），或將身分識別與特定應用程式(例如Adobe Advertising Cloud ID(「AdCloud」)或Adobe Target ID(「TNTID」))建立關聯。
 
 Adobe Experience Platform Identity Service會維護全域定義與使用者定義之識別名稱空間的存放區。 如需名稱空間的詳細資訊，請參閱 [身分名稱空間概觀](../identity-service/namespaces.md)。 如需常用於的標準名稱空間和名稱空間限定詞的清單 [!DNL Privacy Service]，請參閱開發 [人員指南的附](api/appendix.md) 錄。
 
