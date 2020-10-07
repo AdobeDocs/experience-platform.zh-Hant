@@ -5,7 +5,7 @@ title: 菲尼克斯連接器
 topic: overview
 description: 以下檔案提供如何使用API或使用者介面將Phoenix連接至平台的資訊。
 translation-type: tm+mt
-source-git-commit: d3ece56d10b1940a5992906a65a50ffe2f7e4346
+source-git-commit: 34cfcaac276bf2645a0365a0dfa71c4ead6e2ecb
 workflow-type: tm+mt
 source-wordcount: '232'
 ht-degree: 0%
@@ -19,7 +19,7 @@ ht-degree: 0%
 >
 >連接 [!DNL Phoenix] 器為測試版。 如需使用 [測試版標籤連接器的詳細資訊](../../home.md#terms-and-conditions) ，請參閱來源概觀。
 
-Adobe Experience Platform可讓您從外部來源擷取資料，同時讓您能夠使用 [!UICONTROL Platform] Services來建構、標示和增強傳入資料。 您可以從多種來源（例如Adobe應用程式、雲端儲存空間、資料庫等）擷取資料。
+Adobe Experience Platform可讓您從外部來源擷取資料，同時提供您使用平台服務來建構、標示及增強傳入資料的能力。 您可以從多種來源（例如Adobe應用程式、雲端儲存空間、資料庫等）擷取資料。
 
 [!DNL Experience Platform] 提供從第三方資料庫擷取資料的支援。 [!DNL Platform] 可以連接到不同類型的資料庫，如關係型、 NoSQL或資料倉庫。 支援資料庫提供者包括 [!DNL Phoenix]。
 
