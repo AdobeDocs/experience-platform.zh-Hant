@@ -5,7 +5,7 @@ title: 管理產品設定檔的詳細資訊和其他服務
 topic: user guide
 description: 本檔案涵蓋在Adobe Admin Console中管理產品設定檔的詳細資訊和其他服務所需的必要步驟。 您可以從「描述檔設定」功能表設定描述檔的詳細資訊並存取其他服務。
 translation-type: tm+mt
-source-git-commit: c6c5ada52321b11543254f80399c38365f0fb9d7
+source-git-commit: 34cfcaac276bf2645a0365a0dfa71c4ead6e2ecb
 workflow-type: tm+mt
 source-wordcount: '206'
 ht-degree: 1%
@@ -19,7 +19,7 @@ ht-degree: 1%
 
 ![profile-settings](../images/profile-settings.png)
 
-此時 **[!UICONTROL 會出現]** 「描述檔設定」功能表，從「詳細資 **[!UICONTROL 訊]** 」標籤開始。 此頁籤允許您輸入和編輯配置式 **[!UICONTROL 名稱]** 和 **[!UICONTROL 說明]**。 您也可以修改您 **[!UICONTROL 帳戶的「顯示名稱]** 」以及電子郵件通知設定。
+此時 **[!UICONTROL 會出現]** 「描述檔設定」功能表，從「詳細資 **[!UICONTROL 訊]** 」標籤開始。 此標籤可讓您輸入和編輯您的描述檔名稱和說明。 您也可以修改您帳戶的顯示名稱以及電子郵件通知設定。
 
 ![edit-details-settings](../images/edit-details-settings.png)
 
