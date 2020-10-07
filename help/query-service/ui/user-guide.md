@@ -5,7 +5,7 @@ title: 查詢編輯器使用手冊
 topic: query editor
 description: Query Editor是Adobe Experience Platform Query Service提供的互動式工具，可讓您在Experience Platform使用者介面中編寫、驗證及執行客戶體驗資料查詢。 Query Editor支援開發分析和資料探索的查詢，並可讓您執行互動式查詢以用於開發，以及非互動式查詢以填入Experience Platform中的資料集。
 translation-type: tm+mt
-source-git-commit: d2f098cb9e4aaf5beaad02173a22a25a87a43756
+source-git-commit: 9bd893820c7ab60bf234456fdd110fb2fbe6697c
 workflow-type: tm+mt
 source-wordcount: '1086'
 ht-degree: 1%
@@ -99,7 +99,7 @@ ht-degree: 1%
 
 ## 使用查詢編輯器執行查詢
 
-要在中運行查 [!DNL Query Editor]詢，可以在編輯器中輸入SQL，或從「日誌」或「瀏覽」頁籤載入 ** 上一個查詢，然後按一下「 **[!UICONTROL 播放」]******。 查詢執行狀態顯示在下面的「控 **[!UICONTROL 制台]** 」頁籤中，輸出資料顯示在「結果 **** 」頁籤中。
+要在中運行查 [!DNL Query Editor]詢，可以在編輯器中輸入SQL，或從「日誌」或「瀏覽」頁籤載入 **** 上一個查詢，然後按一下「 **[!UICONTROL 播放」]******。 查詢執行狀態顯示在下面的「控 **[!UICONTROL 制台]** 」頁籤中，輸出資料顯示在「結果 **** 」頁籤中。
 
 ### 控制台
 
