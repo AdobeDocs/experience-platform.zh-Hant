@@ -5,7 +5,7 @@ title: 配置檔案查詢語言(PQL)概述
 topic: developer guide
 description: 本指南提供PQL的一般概述，涵蓋格式准則並提供PQL表達式示例。
 translation-type: tm+mt
-source-git-commit: 5a10a31f4be5173af8b459b9ab8a53096348be1d
+source-git-commit: 9bd893820c7ab60bf234456fdd110fb2fbe6697c
 workflow-type: tm+mt
 source-wordcount: '705'
 ht-degree: 2%
@@ -29,7 +29,7 @@ PQL查詢具有以下特徵碼：
 
 輸入參數可以是簡單的基元，例如布林值或字串，或是更複雜的類型，例如物件、陣列或地圖。
 
-PQL運 **算式內** ，有三種不同的參照輸入參數的方式：
+PQL表達式內文中有三種不同的輸入參數引用方法：
 
 ### 第一個參數的隱式引用
 
