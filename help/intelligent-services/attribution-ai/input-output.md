@@ -5,7 +5,7 @@ title: 歸因人工智慧輸入與輸出
 topic: Input and Output data for Attribution AI
 description: 以下檔案概述Attribution AI中使用的不同輸入和輸出。
 translation-type: tm+mt
-source-git-commit: c6c5ada52321b11543254f80399c38365f0fb9d7
+source-git-commit: 34cfcaac276bf2645a0365a0dfa71c4ead6e2ecb
 workflow-type: tm+mt
 source-wordcount: '2075'
 ht-degree: 3%
@@ -140,7 +140,7 @@ Attribution AI輸出如下：
 
 ![選擇您的架構](./images/input-output/schemas_browse.png)
 
-接著，在UI的「結構」視 **[!UICONTROL 窗中選取欄位]** ,「欄位屬 **[!UICONTROL 性」標籤隨即開啟]** 。 在欄 **[!UICONTROL 位內]** ，屬性 **** 是對應至原始分數的路徑欄位。
+接著，在UI的「結構」視 **[!UICONTROL 窗中選取欄位]** ,「欄位屬 **[!UICONTROL 性」標籤隨即開啟]** 。 在欄 **[!UICONTROL 位內]** ，屬性是對應至原始分數的路徑欄位。
 
 ![挑選結構](./images/input-output/field_properties.png)
 
