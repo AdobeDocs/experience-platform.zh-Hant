@@ -5,9 +5,9 @@ user-guide-title: 智慧型服務說明
 breadcrumb-title: Intelligent Services Guide
 user-guide-description: Utilize intelligent AI services to generate scores, discover insights, and create segments from your marketing events data.
 translation-type: tm+mt
-source-git-commit: 0c5842b843f5a2c3c1209178237a0d7ba0441c4f
+source-git-commit: ada5a34ffa3ea9c90ff578ab27f425b82f7ed18c
 workflow-type: tm+mt
-source-wordcount: '88'
+source-wordcount: '94'
 ht-degree: 5%
 
 ---
@@ -32,6 +32,7 @@ ht-degree: 5%
       * [關鍵字擷取](content-commerce-ai/api/keyword-extraction.md)
       * [文字分類](content-commerce-ai/api/text-classification.md)
       * [視覺相似性](content-commerce-ai/api/visual-similarity.md)
+      * [文字存在與光學字元識別](content-commerce-ai/api/optical-character-recognition.md)
 * 客戶人工智慧 {#customer-ai}
    * [概述](customer-ai/overview.md)
    * [客戶AI快速入門](customer-ai/getting-started.md)
