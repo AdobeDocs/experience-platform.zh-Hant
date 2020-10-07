@@ -5,7 +5,7 @@ title: 描述符
 description: '結構定義資料實體的靜態視圖，但不提供基於這些結構的資料（例如資料集）如何彼此關聯的具體詳細資訊。 Adobe Experience Platform可讓您使用描述子來描述這些關係以及關於架構的其他解釋性中繼資料。 '
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 74a4a3cc713cc068be30379e8ee11572f8bb0c63
+source-git-commit: a362b67cec1e760687abb0c22dc8c46f47e766b7
 workflow-type: tm+mt
 source-wordcount: '1528'
 ht-degree: 1%
@@ -200,7 +200,7 @@ PUT /tenant/descriptors/{DESCRIPTOR_ID}
 
 **請求**
 
-此請求基 _本上重寫描述符_ ，因此請求主體必須包含定義該類型描述符所需的所有欄位。 換言之，要更新(PUT)描述符的請求裝載與要建立(POST)相同類型描述符的裝載相同。
+此請求實際上重寫描述符，因此請求主體必須包含定義該類型描述符所需的所有欄位。 換言之，要更新(PUT)描述符的請求裝載與要建立(POST)相同類型描述符的裝載相同。
 
 在此範例中，身分描述子正在更新，以參考不 `xdm:sourceProperty` 同（「行動電話」），並將 `xdm:namespace` 變更為「Phone」。
 
