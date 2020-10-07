@@ -6,7 +6,7 @@ topic: tutorial
 type: Tutorial
 description: Adobe Experience Platform Data Science Workspace提供使用預先建立的產品建議方式達成目標的方式。 請依照本教學課程，瞭解如何存取和瞭解您的零售資料、建立和最佳化機器學習模型，以及在資料科學工作區中產生見解。
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '1595'
 ht-degree: 0%
@@ -85,7 +85,7 @@ ht-degree: 0%
    ![](../images/models-recipes/model-walkthrough/browse_recipes.png)
 2. 按一下提供的 **[!UICONTROL Recommendations方式]** ，尋找並開啟其名稱。
    ![](../images/models-recipes/model-walkthrough/recommendations_recipe_110.png)
-3. 在右側邊欄中，按一下「 **[!UICONTROL Recommendations輸入結構」]** ，以檢視支援方式的結構。 結構欄位 **[!UICONTROL itemId]****[!UICONTROL 和userId]** 對應於該客戶在特定時間(timestampInteraction)購買的產品(**[!UICONTROL Type]******)。 請依照相同的步驟，檢閱 **[!UICONTROL Recommendations輸出結構的欄位]**。
+3. 在右側邊欄中，按一下「 **[!UICONTROL Recommendations輸入結構」]** ，以檢視支援方式的結構。 結構欄位&quot;[!UICONTROL itemId]&quot;和&quot;[!UICONTROL userId]&quot;對應至該客戶在特定時間(timestampAcchod)購買的產品([!UICONTROL interactionType])。 請依照相同的步驟，檢閱 **[!UICONTROL Recommendations輸出結構的欄位]**。
    ![](../images/models-recipes/model-walkthrough/preview_schemas.png)
 
 您現在已檢視「產品建議方式」所需的輸入和輸出結構。 您現在可以繼續下一節，瞭解如何建立、訓練和評估產品建議模型。
@@ -113,9 +113,9 @@ ht-degree: 0%
 
 ### 使用自訂超參數訓練模型
 
-1. 在「模 *型概述* 」頁面上，按一 **[!UICONTROL 下右上角的「]** Train」（培訓）以建立新的培訓執行。 選取建立模型時使用的相同輸入資料集，然後按一下「下 **[!UICONTROL 一步]**」。
+1. 在「模 **型概述** 」頁面上，按一 **[!UICONTROL 下右上角的「]** Train」（培訓）以建立新的培訓執行。 選取建立模型時使用的相同輸入資料集，然後按一下「下 **[!UICONTROL 一步]**」。
    ![](../images/models-recipes/model-walkthrough/training_select_dataset.png)
-2. 此時將 *顯示* 「配置」頁。 您可以在這裡設定訓練執行的 **[!UICONTROL num_recommendations值]** ，也稱為Hyperparameter。 訓練和優化的模型將根據訓練運行的結果利用效能最佳的超參數。
+2. 此時將 **顯示** 「配置」頁。 您可以在這裡設定訓練執行的「[!UICONTROL num_recommendations]」值，也稱為「Hyperparameter」。 訓練和優化的模型將根據訓練運行的結果利用效能最佳的超參數。
 
    無法學習超參數，因此必須在訓練執行之前先指派超參數。 調整超參數可能會改變訓練模型的精度。 由於模型最佳化是一個反覆的程式，因此在達到滿意的評估之前可能需要執行多次培訓。
 
@@ -159,7 +159,7 @@ Data Science工作流程的最後一步是將您的模型實際運作，以便�
 
 1. 在計分執行頁面上，按一下已完成的計分執行，然後按一下右 **[!UICONTROL 邊欄上的「預覽計分結果資料集]** 」。
    ![](../images/models-recipes/model-walkthrough/score_complete.png)
-2. 在預覽表格中，每一列都包含特定客戶的產品建議，分別標示為 **[!UICONTROL Recommendations]****[!UICONTROL 和userId]** 。 由於范 **[!UICONTROL 例螢幕擷取畫面中的]** num_recommendations Hyperparameter已設為10，因此每列建議最多可包含10個產品識別碼，由數字元號(#)分隔。
+2. 在預覽表格中，每一列都包含特定客戶的產品建議，分別標示為 [!UICONTROL Recommendations][!UICONTROL 和userId] 。 由於范 [!UICONTROL 例螢幕擷取畫面中的] num_recommendations Hyperparameter已設為10，因此每列建議最多可包含10個產品識別碼，由數字元號(#)分隔。
    ![](../images/models-recipes/model-walkthrough/preview_score_results.png)
 
 ## 下一步 {#next-steps}
