@@ -3,7 +3,7 @@ keywords: Experience Platform;profile;real-time customer profile;troubleshooting
 title: 計算屬性——即時客戶配置檔案API
 topic: guide
 translation-type: tm+mt
-source-git-commit: 59cf089a8bf7ce44e7a08b0bb1d4562f5d5104db
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '2403'
 ht-degree: 1%
@@ -31,7 +31,7 @@ ht-degree: 1%
 
 Adobe Experience Platform可讓您輕鬆匯入和合併多個來源的資料，以便產生內容 [!DNL Real-time Customer Profiles]。 每個描述檔都包含與個人相關的重要資訊，例如其聯絡資訊、偏好設定和購買記錄，提供360度全方位的客戶檢視。
 
-直接讀取資料欄位時（例如「名字」），容易瞭解描述檔中收集的部分資訊，而其他資料則需要執行多項計算，或依賴其他欄位和值，以產生資訊（例如「期限購買總計」）。 為了讓資料一目瞭然，您可 [!DNL Platform] 以建立計算 **[!UICONTROL 屬性]** ，自動執行這些參照和計算，並在適當欄位中傳回值。
+直接讀取資料欄位時（例如「名字」），容易瞭解描述檔中收集的部分資訊，而其他資料則需要執行多項計算，或依賴其他欄位和值，以產生資訊（例如「期限購買總計」）。 為了讓資料一目瞭然，您可 [!DNL Platform] 以建立計算屬性，自動執行這些參照和計算，並在適當欄位中傳回值。
 
 計算屬性包括建立對傳入資料進行操作的表達式（即「規則」），並將結果值儲存在配置檔案屬性或事件中。 運算式可以以多種不同方式定義，可讓您指定規則僅評估傳入事件、傳入事件和描述檔資料，或傳入事件、描述檔資料和歷史事件。
 
@@ -69,7 +69,7 @@ Adobe Experience Platform可讓您輕鬆匯入和合併多個來源的資料，�
 
 ### 建立混音
 
-若要建立新混音，請按一 **[!UICONTROL 下編輯器左側]** 「構圖 *」區段中，「Mixins***** 」旁的「新增」。 這會開啟「新 **[!UICONTROL 增混音]** 」對話方塊，您可在其中看到現有的混音。 按一下「建立新混音 **[!UICONTROL 」的選項按鈕]** ，以定義您的新混音。
+若要建立新混音，請按一 **[!UICONTROL 下編輯器左側]** 「構圖 **[!UICONTROL 」區段中，「Mixins]****** 」旁的「新增」。 這會開啟「新 **[!UICONTROL 增混音]** 」對話方塊，您可在其中看到現有的混音。 按一下「建立新混音 **[!UICONTROL 」的選項按鈕]** ，以定義您的新混音。
 
 為混音指定名稱和說明，然後在完成時按 **[!UICONTROL 一下「新增混音]** 」。
 
@@ -77,7 +77,7 @@ Adobe Experience Platform可讓您輕鬆匯入和合併多個來源的資料，�
 
 ### 將計算屬性欄位添加到方案
 
-您的新混音現在應會出現在「合成」 **[!UICONTROL 下的]** 「混音 **[!UICONTROL 」區段]**。 按一下mixin的名稱，多個「新增」欄 **[!UICONTROL 位按鈕]** ，就會出現在編輯器的「 *[!UICONTROL Structure]**」區段中。
+您的新混音現在應會出現在「[!UICONTROL Composition]」下方的「[!UICONTROL Mixins]」區段。 按一下mixin的名稱，多個「新增」欄 **[!UICONTROL 位按鈕]** ，就會出現在編輯器的「 **[!UICONTROL 結構]** 」區段中。
 
 選擇 **[!UICONTROL 方案名稱旁邊的添加欄位]** ，以添加頂層欄位，或者可以選擇將該欄位添加到方案內任意位置。
 
