@@ -5,7 +5,7 @@ title: 使用Aqua Data Studio連接
 topic: connect
 description: 本檔案將逐步說明如何將Aqua Data Studio與Adobe Experience Platform Query Service連結。
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '262'
 ht-degree: 0%
@@ -38,7 +38,7 @@ Select the **[!UICONTROL Driver]** tab. 在「參 **[!UICONTROL 數]**」(Parame
 
 ![](../images/clients/aqua-data-studio/register-server-driver-tab.png)
 
-在輸入連線詳細資訊後，按一下「 **[!UICONTROL 測試連線]** 」以確保憑證正常運作。 如果連線成功，請按一下「 **[!UICONTROL 儲存]** 」以註冊您的伺服器。 成功註冊後，連線會出 *現在「儀表板* 」上，確認您現在可以連線至伺服器並檢視其架構物件。
+在輸入連線詳細資訊後，按一下「 **[!UICONTROL 測試連線]** 」以確保憑證正常運作。 如果連線成功，請按一下「 **[!UICONTROL 儲存]** 」以註冊您的伺服器。 成功註冊後，連線會出 **現在「儀表板** 」上，確認您現在可以連線至伺服器並檢視其架構物件。
 
 ## 後續步驟
 
