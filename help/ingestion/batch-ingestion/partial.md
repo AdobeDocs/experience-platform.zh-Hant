@@ -5,9 +5,9 @@ title: 部分批次擷取概觀
 topic: overview
 description: 本檔案提供管理部分批次擷取的教學課程。
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
-source-wordcount: '917'
+source-wordcount: '916'
 ht-degree: 0%
 
 ---
@@ -121,7 +121,7 @@ ht-degree: 0%
 
 ![](../images/batch-ingestion/partial-ingestion/xdm-csv-workflow-partial-ingestion-focus.png)
 
-「錯 **[!UICONTROL 誤閾值]** 」(Error threshold)允許您在整個批失敗之前設定可接受錯誤的百分比。 依預設，此值會設為5%。
+**[!UICONTROL 錯誤閾值]** ，允許您在整個批失敗之前設定可接受錯誤的百分比。 依預設，此值會設為5%。
 
 ## 下一步 {#next-steps}
 
