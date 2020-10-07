@@ -6,7 +6,7 @@ topic: tutorial
 type: Tutorial
 description: 本教學課程提供如何將提供的零售銷售範例來源檔案封裝成封存檔案的指示，此檔案可依循UI或API中的方式匯入工作流程，用來在Adobe Experience Platform Data Science Workspace中建立方式。
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '1156'
 ht-degree: 0%
@@ -44,7 +44,7 @@ Docker映像允許開發人員將應用程式與其所需的所有部件（如�
 
 ![](../images/models-recipes/package-source-files/import.png)
 
-「設 *定* 」頁面隨即開啟。 提供適當的 *配方名稱*，例如「零售銷售配方」，並選擇性地提供說明或檔案URL。 完成後，按一下「 **[!UICONTROL Next」（下一步）]**。
+「設 **[!UICONTROL 定]** 」頁面隨即開啟。 提供適當的 **[!UICONTROL 配方名稱]**，例如「零售銷售配方」，並選擇性地提供說明或檔案URL。 完成後，按一下「 **[!UICONTROL Next（下一步）]**」。
 
 ![](../images/models-recipes/package-source-files/configure.png)
 
@@ -64,7 +64,7 @@ Docker映像允許開發人員將應用程式與其所需的所有部件（如�
 
 ![](../images/models-recipes/package-source-files/docker-creds.png)
 
-請注意Docker主 *機*、 *Username*&#x200B;和 *Password的值*。 這些功能可用來在下列工作流程中 [!DNL Docker] 建立和推播您的影像。
+請注意Docker主機、用戶名和密碼的值。 這些功能可用來在下列工作流程中 [!DNL Docker] 建立和推播您的影像。
 
 >[!NOTE]
 >
