@@ -5,7 +5,7 @@ title: 目錄服務概述
 topic: overview
 description: 目錄服務是Adobe Experience Platform中資料位置和世系的記錄系統。 雖然所有收錄到Experience Platform的資料都會以檔案和目錄的形式儲存在資料湖中，但目錄會保留這些檔案和目錄的中繼資料和說明，以供查閱和監控之用。
 translation-type: tm+mt
-source-git-commit: 71678b10c9e137016ea404305b272508b9c8cabe
+source-git-commit: 34cfcaac276bf2645a0365a0dfa71c4ead6e2ecb
 workflow-type: tm+mt
 source-wordcount: '782'
 ht-degree: 5%
@@ -17,7 +17,7 @@ ht-degree: 5%
 
 [!DNL Catalog Service] 是Adobe Experience Platform中資料位置和世系的記錄系統。 雖然所有收錄到中的資 [!DNL Experience Platform] 料都會以檔案和目錄 [!DNL Data Lake] 的形式儲存在中， [!DNL Catalog] 但會保留這些檔案和目錄的中繼資料和說明，以供查閱和監控之用。
 
-簡單地說， [!DNL Catalog] 您可以當做中繼資料存放區或「[!UICONTROL 目錄]」，在其中找到有關資料的資訊 [!DNL Experience Platform]。 您可以使 [!DNL Catalog] 用來回答下列問題：
+簡單地說， [!DNL Catalog] 您可以當做中繼資料存放區或「目錄」，在其中找到有關資料的資訊 [!DNL Experience Platform]。 您可以使 [!DNL Catalog] 用來回答下列問題：
 
 * 我的資料位於何處？
 * 這些資料處理的階段是什麼？
@@ -35,7 +35,7 @@ ht-degree: 5%
 
 [!DNL Experience Data Model] (XDM)系統是組織客戶體驗資料的 [!DNL Platform] 標準化架構。 [!DNL Experience Platform] 利用XDM架構，以一致且可重複使用的方式來描述資料結構。
 
-當資料被擷取 [!DNL Platform]時，該資料的結構會映射至XDM架構，並儲存在資料集 [!DNL Data Lake] 的一部 **分**。 每個資料集的元資料由跟蹤 [!DNL Catalog Service]，該元資料包括對資料集所符合的XDM模式的引用。
+當資料被收錄到 [!DNL Platform]資料中時，該資料的結構會映射至XDM架構，並儲存在資料集 [!DNL Data Lake] 的一部分中。 每個資料集的元資料由跟蹤 [!DNL Catalog Service]，該元資料包括對資料集所符合的XDM模式的引用。
 
 有關XDM系統的更多一般資訊，請參閱 [XDM系統概述](../xdm/home.md)。
 
@@ -43,7 +43,7 @@ ht-degree: 5%
 
 [!DNL Experience Platform] 從多個來源擷取資料，並將記錄保留為資料集 [!DNL Data Lake]。 [!DNL Catalog] 追蹤這些資料集的中繼資料，不論其來源或擷取方法為何。
 
-使用批次擷取方法時，也 [!DNL Catalog] 會追蹤批次檔案的其 **他中繼** 資料。 批次是多個資料單位，由一或多個要作為一個單位進行內嵌的檔案所組成。[!DNL Catalog] 追蹤這些批次檔案的中繼資料，以及擷取後保留的資料集。 批次中繼資料包含成功擷取記錄的數目相關資訊，以及任何失敗記錄和相關的錯誤訊息。
+使用批次擷取方法時，也 [!DNL Catalog] 會追蹤批次檔案的其他中繼資料。 批次是多個資料單位，由一或多個要作為一個單位進行內嵌的檔案所組成。[!DNL Catalog] 追蹤這些批次檔案的中繼資料，以及擷取後保留的資料集。 批次中繼資料包含成功擷取記錄的數目相關資訊，以及任何失敗記錄和相關的錯誤訊息。
 
 如需詳細 [資訊，請參閱資料擷取](../ingestion/home.md) 概觀。
 
