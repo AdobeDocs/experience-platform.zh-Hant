@@ -5,9 +5,9 @@ seo-title: Google Display & Video 360 Destination
 description: Display & Video 360（先前稱為DoubleClick競標管理器）是一種工具，用於在顯示、視訊和行動庫存來源中執行重新鎖定目標及受眾目標數位促銷活動。
 seo-description: 'Display & Video 360（先前稱為DoubleClick競標管理器）是一種工具，用於在顯示、視訊和行動庫存來源中執行重新鎖定目標及受眾目標數位促銷活動。 '
 translation-type: tm+mt
-source-git-commit: c66fb4cf0a414e02ceb58becc9d9b59db3fe987b
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
-source-wordcount: '713'
+source-wordcount: '714'
 ht-degree: 0%
 
 ---
@@ -23,7 +23,7 @@ ht-degree: 0%
 
 請注意以下特定於目標的詳細 [!DNL Google Display & Video 360] 資訊：
 
-* 您可以傳送下列身 [分](../../identity-service/namespaces.md) ，到 [!DNL Google Display & Video 360] 目的地： **Google Cookie ID、IDFA、GAID、Roku ID、Microsoft ID、Amazon Fire TV ID**。
+* 您可以傳送下列身 [分](../../identity-service/namespaces.md) ，到 [!DNL Google Display & Video 360] 目的地：Google Cookie ID、IDFA、GAID、Roku ID、Microsoft ID和Amazon Fire TV ID。
 * 在Google平台中以程式設計方式建立已啟用的觀眾。
 * Adobe即時CDP目前不包含用於驗證成功啟動的測量量度。 請參閱Google中的觀眾計數，以驗證整合併瞭解觀眾鎖定規模。
 
@@ -56,7 +56,7 @@ ht-degree: 0%
 
    >[!NOTE]
    >
-   >如果此目標已存在連接，您可以在目標卡上看到 **[!UICONTROL 「激活]** 」按鈕。 有關「激活」( **[!UICONTROL Activate]** )和「配置」( **[!UICONTROL Configure]**)之間差異的詳細資訊，請參 [閱目標工作區文檔的「目錄](/help/rtcdp/destinations/destinations-workspace.md#catalog) 」(Catalog)部分。
+   >如果此目標已存在連接，您可以在目標卡上看到 **[!UICONTROL 「激活]** 」按鈕。 有關「激活」( [!UICONTROL Activate] )和「配置」( [!UICONTROL Configure])之間差異的詳細資訊，請參 [閱目標工作區文檔的「目錄](/help/rtcdp/destinations/destinations-workspace.md#catalog) 」(Catalog)部分。
 
 2. 在建 **立目標工作流程的** 「設定」步驟中，填寫目標的「基本資訊  」，以及應套用至此目標的行銷使用案例。 <br>
 
