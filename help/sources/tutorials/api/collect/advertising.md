@@ -6,7 +6,7 @@ topic: overview
 type: Tutorial
 description: 本教學課程涵蓋從協力廠商廣告應用程式擷取資料，並透過來源連接器和Flow Service API將其匯入平台的步驟。
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '1561'
 ht-degree: 1%
@@ -61,7 +61,7 @@ ht-degree: 1%
 
 要建立源連接，還必須為資料格式屬性定義枚舉值。
 
-對基於檔案的連接器使 **用下列枚舉值**:
+對基於檔案的連接器使用以下枚舉值：
 
 | Data.format | 列舉值 |
 | ----------- | ---------- |
@@ -69,7 +69,7 @@ ht-degree: 1%
 | JSON檔案 | `json` |
 | 拼花檔案 | `parquet` |
 
-對於所 **有基於表的連接器** ，請使用枚舉值： `tabular`.
+對於所有基於表的連接器，請使用列舉值： `tabular`.
 
 **API格式**
 
