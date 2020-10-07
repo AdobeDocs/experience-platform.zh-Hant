@@ -5,7 +5,7 @@ description: 瞭解如何設定Experience Platform Web SDK
 seo-description: 瞭解如何設定Experience Platform Web SDK
 keywords: configuring;configuration;SDK;edge;Web SDK;configure;edgeConfigId;context;web;device;environment;placeContext;debugEnabled;edgeDomain;orgId;clickCollectionEnabled;onBeforeEventSend;defaultConsent;web sdk settings;prehidingStyle;opacity;cookieDestinationsEnabled;urlDestinationsEnabled;idMigrationEnabled;thirdPartyCookiesEnabled;
 translation-type: tm+mt
-source-git-commit: d036595dc96af98fd53c7eb40162585bac48f05c
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '749'
 ht-degree: 11%
@@ -135,7 +135,7 @@ Your assigned [!DNL Experience Cloud] organization ID.  在頁面內設定多個
 | -------- | ------------ | ----------------- |
 | 布林值 | 無 | `true` |
 
-啟用 [!DNL Audience Manager] Cookie [!UICONTROL 目標]，允許根據區段限定設定Cookie。
+啟用 [!DNL Audience Manager] Cookie目標，允許根據區段限定來設定Cookie。
 
 ### `urlDestinationsEnabled`
 
@@ -143,7 +143,7 @@ Your assigned [!DNL Experience Cloud] organization ID.  在頁面內設定多個
 | -------- | ------------ | ----------------- |
 | 布林值 | 無 | `true` |
 
-啟用 [!DNL Audience Manager] URL目的地 ，這可允許根據區段限定引發URL。
+啟用 [!DNL Audience Manager] URL目標，這可允許根據區段限定引發URL。
 
 ## 身分選項
 
