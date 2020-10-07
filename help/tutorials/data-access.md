@@ -6,9 +6,9 @@ topic: tutorial
 type: Tutorial
 description: Adobe Experience Platform可讓使用者使用資料存取API，在Experience Platform中探索並存取已擷取的資料集。
 translation-type: tm+mt
-source-git-commit: 0ec93ef44facc725e22547d002de677d93f3bd1f
+source-git-commit: bececfde1df15fd8648d75b937da5e264d60b9a4
 workflow-type: tm+mt
-source-wordcount: '274'
+source-wordcount: '140'
 ht-degree: 0%
 
 ---
@@ -33,26 +33,3 @@ Data Access API支援Adobe Experience Platform，為使用者提供REST風格的
 - 設定API回應分頁。
 
 若要開始，請依照「資 [料存取API」教學課程](../data-access/tutorials/dataset-data.md)。
-
-## 使用Secure Python SDK存取資料
-
-Secure Python Data Access SDK是軟體開發套件，可讓您使用Python從Experience Platform讀取和寫入資料集。
-
-**本指南將幫助您：**
-- 設定環境並安裝正確的軟體包。
-- 從資料集讀取。
-- 寫入資料集。
-- 讀取和寫入用戶空間目錄。
-
-若要開始，請檢視 [Python資料存取SDK檔案](../data-access/tutorials/python-sdk.md)。
-
-## 使用安全的Spark SDK存取資料
-
-Secure Spark Data Access SDK是軟體開發套件，可讓您使用Spark從Adobe Experience Platform讀取和寫入資料集。
-
-**本指南將幫助您：**
-- 設定環境並安裝正確的軟體包。
-- 從資料集讀取。
-- 寫入資料集。
-
-若要開始，請檢視 [Spark Data Access SDK檔案](../data-access/tutorials/spark-sdk.md)。
