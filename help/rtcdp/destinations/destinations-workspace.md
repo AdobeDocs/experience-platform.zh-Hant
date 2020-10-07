@@ -5,7 +5,7 @@ seo-title: 目標工作區
 description: 「目標」工作區包含4個部分：目錄、瀏覽、帳戶和系統視圖，這些部分在以下各節中介紹。
 seo-description: 在Adobe即時客戶資料平台中，從左側導覽列選取「目標」以存取目標工作區。
 translation-type: tm+mt
-source-git-commit: 59ac673c35954696fbb37417510035bdebff6f62
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '825'
 ht-degree: 2%
@@ -17,7 +17,7 @@ ht-degree: 2%
 
 在Adobe即時客戶資料平台中，從左側導覽列選 **[!UICONTROL 取]** 「目標」以存取「 [!UICONTROL 目標] 」工作區。
 
-工 [!UICONTROL 作區] 由四個目標部分組成：目錄 **[!UICONTROL 、瀏]**&#x200B;覽 **[!UICONTROL 、]** BrowseAccounts、 ******** ContralSystem View，這些部分在下面幾節中介紹。
+工 [!UICONTROL 作區] 由四個目標部分組成：目錄 [!UICONTROL 、瀏]覽 [!UICONTROL 、]BrowseAccounts、 ContralSystem View，這些部分在下面幾節中介紹。
 
 ![目標——概觀](/help/rtcdp/destinations/assets/destinations-overview.png)
 
@@ -28,8 +28,8 @@ ht-degree: 2%
 Adobe即時CDP使用者介面在目標目錄頁面上提供許多搜尋和篩選選項：
 
 * 使用頁面上的搜尋功能來尋找特定目標。
-* 使用「類別」控制項 **[!UICONTROL 篩選目]** 標。
-* 在「所有目 **[!UICONTROL 標」和「我]** 」目 **[!UICONTROL 標之間切換]**。 選取 **[!UICONTROL 所有目標]** ，會顯示所有可用的Adobe即時CDP目標。 選 **[!UICONTROL 取「我的目標]** 」時，您只能看到您已建立連線的目標。
+* 使用「類別」控制項 [!UICONTROL 篩選目] 標。
+* 在「所有目 [!UICONTROL 標」和「我] 」目 [!UICONTROL 標之間切換]。 選取 **[!UICONTROL 所有目標]** ，會顯示所有可用的Adobe即時CDP目標。 選 **[!UICONTROL 取「我的目標]** 」時，您只能看到您已建立連線的目標。
 * 選擇以查看 **[!UICONTROL 連接]** 和／或擴 **[!UICONTROL 展]**。 要瞭解兩個類別之間的差異，請參閱目 [標類型和類別](/help/rtcdp/destinations/destination-types.md)。
 
 ![目標篩選和搜尋示範](/help/rtcdp/destinations/assets/destinations-search-and-filter.gif)
