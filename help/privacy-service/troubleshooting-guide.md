@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 隱私權服務常見問答集
 topic: troubleshooting
 translation-type: tm+mt
-source-git-commit: 5b32c1955fac4f137ba44e8189376c81cdbbfc40
+source-git-commit: 28b733a16b067f951a885c299d59e079f0074df8
 workflow-type: tm+mt
 source-wordcount: '856'
 ht-degree: 0%
@@ -94,7 +94,7 @@ API [!DNL Privacy Service] 和使用者介面都提供以ZIP格式下載完成�
 
 ### 使用UI
 
-在UI控 [!DNL Privacy Service] 制面板上，從「工作請求」介面工具集中尋找您要下 **載的工作** 。 按一下作業的ID以開啟「作業詳細 _資訊_ 」頁。 在這裡，按 **一下右上角** 「下載」，下載ZIP檔案。 如需詳細 [步驟，請參閱隱私服務](ui/user-guide.md) 使用指南。
+在UI控 [!DNL Privacy Service] 制面板上，從「工作請求」介面工具集中尋找您要下 **載的工作** 。 按一下作業的ID以開啟「作業詳細資訊」頁。 在這裡，按 **一下右上角** 「下載」，下載ZIP檔案。 如需詳細 [步驟，請參閱隱私服務](ui/user-guide.md) 使用指南。
 
 ## 常見錯誤訊息
 
