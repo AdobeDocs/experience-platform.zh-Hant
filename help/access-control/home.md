@@ -5,10 +5,10 @@ topic: overview
 title: 存取控制概觀
 description: Adobe Experience Platform的存取控制權是透過Adobe Admin Console提供。 此功能運用Admin Console中的產品設定檔，可連結使用者與權限和沙盒。
 translation-type: tm+mt
-source-git-commit: 397f08efa276f7885e099a0a8d9dc6d23fe0e8cc
+source-git-commit: 34cfcaac276bf2645a0365a0dfa71c4ead6e2ecb
 workflow-type: tm+mt
 source-wordcount: '1162'
-ht-degree: 2%
+ht-degree: 3%
 
 ---
 
@@ -19,7 +19,7 @@ ht-degree: 2%
 
 ## 存取控制階層和工作流程
 
-為了配置對的訪問控制 [!DNL Experience Platform]，您必須對具有產品整合的組織具有管 [!DNL Experience Platform] 理員權限。 授予或撤消權限的最低角色是產品 **[!UICONTROL 配置檔案管理員]**。 其他可管理權限的管理員角色 **[!UICONTROL 包括產品管理員]** （可管理產品內的所有設定檔）和 **[!UICONTROL 系統管理員]** （無限制）。 如需詳細資訊，請參閱Adobe說明中 [心有關管理](https://helpx.adobe.com/enterprise/using/admin-roles.html) 角色的文章。
+為了配置對的訪問控制 [!DNL Experience Platform]，您必須對具有產品整合的組織具有管 [!DNL Experience Platform] 理員權限。 授予或撤消權限的最低角色是產品配置檔案管理員。 其他可管理權限的管理員角色包括產品管理員（可管理產品內的所有設定檔）和系統管理員（無限制）。 如需詳細資訊，請參閱Adobe說明中 [心有關管理](https://helpx.adobe.com/enterprise/using/admin-roles.html) 角色的文章。
 
 >[!NOTE]
 >
@@ -44,7 +44,7 @@ Adobe Admin Console提供一個集中位置，可讓您管理Adobe產品權益�
 
 ### 產品設定檔
 
-在中， [!DNL Admin Console]會透過使用產品設定檔，將權限指派給 **[!UICONTROL 使用者]**。 產品設定檔可讓您授予一或多個使用者權限，並包含他們透過產品設定檔指派給他們的沙盒範圍的存取權。 使用者可以指派給屬於您組織的一或多個產品設定檔。
+在中， [!DNL Admin Console]會透過使用產品設定檔，將權限指派給使用者。 產品設定檔可讓您授予一或多個使用者權限，並包含他們透過產品設定檔指派給他們的沙盒範圍的存取權。 使用者可以指派給屬於您組織的一或多個產品設定檔。
 
 ### 預設產品設定檔
 
@@ -57,7 +57,7 @@ Adobe Admin Console提供一個集中位置，可讓您管理Adobe產品權益�
 
 ## 沙盒與權限
 
-非生產沙盒是資料虛擬化的一種形式，可讓您將資料與其他沙盒隔離，通常用於開發實驗、測試或試用。 產品描述檔的 **[!UICONTROL 權限]** ，可讓描述檔的使用者存取已授與 [!DNL Platform] 存取之沙盒環境中的功能。 預設的Experience Platform授權會授與您5個沙盒（1個製作和4個非製作）。 您可新增10個非生產沙盒，最多可新增75個沙盒。 如需詳細資訊，請連絡您的IMS組織管理員或Adobe銷售代表。
+非生產沙盒是資料虛擬化的一種形式，可讓您將資料與其他沙盒隔離，通常用於開發實驗、測試或試用。 產品描述檔的權限可讓描述檔的使用者存取 [!DNL Platform] 他們已獲授權存取的沙盒環境中的功能。 預設的Experience Platform授權會授與您5個沙盒（1個製作和4個非製作）。 您可新增10個非生產沙盒，最多可新增75個沙盒。 如需詳細資訊，請連絡您的IMS組織管理員或Adobe銷售代表。
 
 有關中的沙盒的更多 [!DNL Experience Platform]資訊，請參閱沙盒 [概觀](../sandboxes/home.md)。
 
@@ -71,7 +71,7 @@ Adobe Admin Console提供一個集中位置，可讓您管理Adobe產品權益�
 
 ### 權限
 
-產品 **描述檔中** ,「權限」標籤會顯示該描述檔中作用中的沙盒和權限：
+產品描述檔中的權限標籤會顯示該描述檔的作用中沙盒和權限：
 
 ![](./images/permissions-overview.png)
 
@@ -90,7 +90,7 @@ Adobe Admin Console提供一個集中位置，可讓您管理Adobe產品權益�
 | [!DNL Profile Management] | [!UICONTROL 檢視設定檔] | 可用設定檔的唯讀存取權。 |
 | [!DNL Profile Management] | [!UICONTROL 匯出區段的對象] | 能夠將評估的觀眾區隔匯出至資料集。 |
 | [!DNL Identities] | [!UICONTROL 管理身分識別命名空間] | 存取讀取、建立、編輯和刪除身分名稱空間。 |
-| [!DNL Identities] | [!UICONTROL 檢視身分名稱空間] | 身分名稱空間的唯讀存取。 |
+| [!DNL Identities] | [!UICONTROL 檢視身分識別命名空間] | 身分名稱空間的唯讀存取。 |
 | [!DNL Sandbox Administration] | [!UICONTROL 管理沙盒] | 存取讀取、建立、編輯和刪除沙盒。 |
 | [!DNL Sandbox Administration] | [!UICONTROL 檢視沙箱] | 屬於您組織的沙盒的唯讀存取權。 |
 | [!DNL Sandbox Administration] | [!UICONTROL 重設沙盒] | 可重設沙盒。 |
