@@ -5,7 +5,7 @@ title: 瀏覽存取控制工作區
 topic: user guide
 description: 本文檔介紹瀏覽訪問控制工作區所需的必要步驟。 若要透過Adobe Admin Console設定Experience Platform的存取控制，您必須是訂閱Experience Platform的IMS組織的管理員。
 translation-type: tm+mt
-source-git-commit: c6c5ada52321b11543254f80399c38365f0fb9d7
+source-git-commit: 34cfcaac276bf2645a0365a0dfa71c4ead6e2ecb
 workflow-type: tm+mt
 source-wordcount: '301'
 ht-degree: 2%
@@ -15,7 +15,7 @@ ht-degree: 2%
 
 # 瀏覽存取控制工作區
 
-若要透過Adobe Admin Console設定 [!DNL Experience Platform] 存取控制，您必須是訂閱IMS組織的管理員 [!DNL Experience Platform]。 雖然Adobe支援IMS組織的彈性管理員階層，但您必須擁有系統管 **[!UICONTROL 理員]**、產品管理員 **[!UICONTROL ，或產品設]****** 定檔管理員權限才能設定存取控制。 如需詳細資訊，請參閱Adobe說明中 [心有關管理](https://helpx.adobe.com/enterprise/using/admin-roles.html) 角色的文章。
+若要透過Adobe Admin Console設定 [!DNL Experience Platform] 存取控制，您必須是訂閱IMS組織的管理員 [!DNL Experience Platform]。 雖然Adobe支援IMS組織的彈性管理員階層，但您必須擁有系統管理員、產品管理員或產品設定檔管理員權限，才能設定存取控制。 如需詳細資訊，請參閱Adobe說明中 [心有關管理](https://helpx.adobe.com/enterprise/using/admin-roles.html) 角色的文章。
 
 如果您沒有管理員權限，請連絡您的系統管理員以取得存取權。
 
