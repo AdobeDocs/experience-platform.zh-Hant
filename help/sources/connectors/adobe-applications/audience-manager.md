@@ -5,7 +5,7 @@ title: Audience Manager連接器
 topic: overview
 description: Adobe Audience Manager資料連接器可將在Adobe Audience Manager中收集的第一方資料串流至Adobe Experience Platform。 Audience Manager連接器可將三種資料類別擷取至平台。
 translation-type: tm+mt
-source-git-commit: 6934bfeee84f542558894bbd4ba5759891cd17f3
+source-git-commit: 9bd893820c7ab60bf234456fdd110fb2fbe6697c
 workflow-type: tm+mt
 source-wordcount: '673'
 ht-degree: 1%
@@ -67,7 +67,7 @@ Audience Manager資料集依預設會停用至「設定檔」，而且使用者�
 
 ### 連線
 
-Adobe Audience Manager在目錄中建立一個連線： **Audience Manager Connection**。 目錄是Adobe Experience Platform中資料位置和世系記錄的系統。 連線是Catalog物件，是Connectors的客戶專屬例項。 如需目錄、連 [線和連接器的詳細資訊](../../../catalog/home.md) ，請參閱目錄服務概觀。
+Adobe Audience Manager在目錄中建立一個連線：Audience Manager連線。 目錄是Adobe Experience Platform中資料位置和世系記錄的系統。 連線是Catalog物件，是Connectors的客戶專屬例項。 如需目錄、連 [線和連接器的詳細資訊](../../../catalog/home.md) ，請參閱目錄服務概觀。
 
 ## 平台上的Audience Manager資料預期延遲為何？
 
