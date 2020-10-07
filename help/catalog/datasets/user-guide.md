@@ -5,9 +5,9 @@ title: 資料集使用指南
 topic: datasets
 description: 本資料集使用指南提供在Adobe Experience Platform使用者介面中使用資料集時執行常見動作的指示。
 translation-type: tm+mt
-source-git-commit: 0f3a4ba6ad96d2226ae5094fa8b5073152df90f7
+source-git-commit: eaff457140ba4ac7c25a0f3a3e5aef47d1b99773
 workflow-type: tm+mt
-source-wordcount: '1159'
+source-wordcount: '1162'
 ht-degree: 0%
 
 ---
@@ -41,7 +41,7 @@ ht-degree: 0%
 
 ## 預覽資料集
 
-在「資 **[!UICONTROL 料集]** 」活動畫面中，按一下畫面右上角的「 **[!UICONTROL Preview dataset]** 」（預覽資料集），最多可預覽100列資料。 如果資料集為空，預覽連結將會停用，而會指出「預 **[!UICONTROL 覽」不可用]**。
+在「資 **[!UICONTROL 料集]** 」活動畫面中，按一下畫面右上角的「 **[!UICONTROL Preview dataset]** 」（預覽資料集），最多可預覽100列資料。 如果資料集為空，預覽連結將會停用，而會指出預覽不可用。
 
 ![](../images/datasets/user-guide/click_to_preview.png)
 
