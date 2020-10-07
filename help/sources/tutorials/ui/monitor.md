@@ -6,7 +6,7 @@ title: 監視帳戶和資料流
 topic: overview
 type: Tutorial
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '1097'
 ht-degree: 1%
@@ -96,7 +96,7 @@ Adobe Experience Platform中的來源連接器可讓您依計畫吸收外部來�
 
 ![dataflow-activity](../../images/tutorials/monitor/dataflow-activity.png)
 
-日曆可讓您檢視所收錄記錄的不同時段。 您可以選擇選擇「最近7天」或「最近30天」這兩 **[!UICONTROL 個預設選項]****[!UICONTROL 之一]**。 或者，您也可以使用日曆來設定自訂時間範圍。 選擇您選擇的時間範圍，然後選擇「 **[!UICONTROL 應用]** 」繼續。
+日曆可讓您檢視所收錄記錄的不同時段。 您可以選擇選擇「最近7天」或「最近30天」這兩個預[!UICONTROL 設選項]，以[!UICONTROL 選擇其中一個]。 或者，您也可以使用日曆來設定自訂時間範圍。 選擇您選擇的時間範圍，然後選擇「 **[!UICONTROL 應用]** 」繼續。
 
 ![流日曆](../../images/tutorials/monitor/flow-calendar.png)
 
@@ -106,7 +106,7 @@ Adobe Experience Platform中的來源連接器可讓您依計畫吸收外部來�
 
 ![runs](../../images/tutorials/monitor/run-metadata.png)
 
-「數 **[!UICONTROL 據流運行概述]** 」顯示有關資料流的資訊，包括其元資料、 **[!UICONTROL 部分提取狀態]** ，以及分配的 **[!UICONTROL 錯誤閾值]**。 上方標題也包含「錯 **[!UICONTROL 誤」摘要]**。 「錯 **[!UICONTROL 誤]** 」摘要包含特定的頂層錯誤，顯示擷取程式在哪個步驟發生錯誤。
+「數 **[!UICONTROL 據流運行概述]** 」顯示有關資料流的資訊，包括其元資料、部分接收狀態和分配的錯誤閾值。 上方標題也包含錯誤摘要。 「錯 **[!UICONTROL 誤]** 」摘要包含特定的頂層錯誤，顯示擷取程式在哪個步驟發生錯誤。
 
 ![dataflow-run-overview](../../images/tutorials/monitor/dataflow-run-overview.png)
 
@@ -119,13 +119,13 @@ Adobe Experience Platform中的來源連接器可讓您依計畫吸收外部來�
 
 螢幕的下半部分包含有關 **[!UICONTROL Dataflow運行錯誤的資訊]**。 您也可以從這裡檢視所擷取的檔案、預覽和下載錯誤診斷程式，或下載檔案資訊清單。
 
-「數 **[!UICONTROL 據流運行錯誤]** 」部分顯示 **[!UICONTROL 錯誤代碼]**，記錄失敗的數量，以及說明錯誤的資訊。
+「數 **[!UICONTROL 據流運行錯誤]** 」部分顯示錯誤代碼、失敗記錄數以及說明錯誤的資訊。
 
 選擇 **[!UICONTROL 預覽錯誤診斷]** ，查看有關提取錯誤的詳細資訊。
 
 ![資料流——運行——錯誤](../../images/tutorials/monitor/dataflow-run-errors.png)
 
-出現 **[!UICONTROL 「Error diagnostics preview]** （錯誤診斷預覽）」面板。 此畫面會顯示擷取失敗的特定資訊，包括 **[!UICONTROL File name]**、 **[!UICONTROL Error code]**、發生錯誤的欄名稱，以及錯誤的說明。
+出現 **[!UICONTROL 「Error diagnostics preview]** （錯誤診斷預覽）」面板。 此畫面會顯示擷取失敗的特定資訊，包括檔案名稱、錯誤碼、發生錯誤的欄名稱，以及錯誤的說明。
 
 本節也包含包含錯誤的欄預覽。
 
