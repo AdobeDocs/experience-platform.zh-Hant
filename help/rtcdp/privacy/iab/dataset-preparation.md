@@ -5,7 +5,7 @@ title: 即時客戶資料平台中的IAB TCF 2.0支援
 topic: privacy events
 description: 本文檔提供了設定兩個收集IAB TCF 2.0許可資料所需資料集的步驟。
 translation-type: tm+mt
-source-git-commit: 172710c62b6f60de74e05364edb1191fbba0ff64
+source-git-commit: fa667d86c089c692f22cfd1b46f3f11b6e9a68d7
 workflow-type: tm+mt
 source-wordcount: '1369'
 ht-degree: 0%
@@ -72,7 +72,7 @@ TCF 2.0支援需要提供兩個XDM混合，它們提供客戶許可欄位：一�
 
 ## 建立客戶同意方案 {#create-schemas}
 
-在平台UI中，按一下左 **[!UICONTROL 側導覽中]** ，以開啟 *[!UICONTROL 結構]工作區*。 從這裡，請依照下列各節中的步驟建立每個必要的架構。
+在平台UI中，按一下左 **[!UICONTROL 側導覽中]** 「結構描述」，以開啟「結 **[!UICONTROL 構]** 」工作區。 從這裡，請依照下列各節中的步驟建立每個必要的架構。
 
 >[!NOTE]
 >
@@ -80,7 +80,7 @@ TCF 2.0支援需要提供兩個XDM混合，它們提供客戶許可欄位：一�
 
 ### 建立記錄型同意方案 {#profile-schema}
 
-從「方 **[!UICONTROL 案]** 」工作區的「瀏 **[!UICONTROL 覽]」標籤中，根據類別建立新**&#x200B;方案 **[!DNL XDM Individual Profile]**。 在「架構編輯器」中開啟架構後，按一 **[!UICONTROL 下畫布左側]** 「 **[!UICONTROL Mixins]** 」區段下的「新增」。
+從「方 **[!UICONTROL 案]** 」工作區的「瀏 **[!UICONTROL 覽]」標籤中**，根據類別建立新的 [!DNL XDM Individual Profile] 方案。 在「架構編輯器」中開啟架構後，按一 **[!UICONTROL 下畫布左側]** 「 **[!UICONTROL Mixins]** 」區段下的「新增」。
 
 ![](../assets/iab/add-mixin-profile.png)
 
@@ -127,7 +127,7 @@ TCF 2.0支援需要提供兩個XDM混合，它們提供客戶許可欄位：一�
 
 ### 建立基於時間序列的許可模式 {#event-schema}
 
-從「方 **[!UICONTROL 案]** 」工作區的「瀏 **[!UICONTROL 覽]」標籤中，根據類別建立新**&#x200B;方案 **[!DNL XDM ExperienceEvent]**。 在「架構編輯器」中開啟架構後，按一 **[!UICONTROL 下畫布左側]** 「 **[!UICONTROL Mixins]** 」區段下的「新增」。
+從「方 **[!UICONTROL 案]** 」工作區的「瀏覽 **[!UICONTROL 」標籤中]** ，根據類別建立新的 [!DNL XDM ExperienceEvent] 方案。 在「架構編輯器」中開啟架構後，按一 **[!UICONTROL 下畫布左側]** 「 **[!UICONTROL Mixins]** 」區段下的「新增」。
 
 ![](../assets/iab/add-mixin-event.png)
 
