@@ -6,7 +6,7 @@ topic: tutorial
 type: Tutorial
 description: 本教學課程將協助您開始使用串流擷取API，這是Adobe Experience Platform Data Ingestion Service API的一部分。
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: fce215edb99cccc8be0109f8743c9e56cace2be0
 workflow-type: tm+mt
 source-wordcount: '1163'
 ht-degree: 2%
@@ -217,11 +217,12 @@ curl -X POST https://platform.adobe.io/data/foundation/schemaregistry/tenant/des
 
 >[!NOTE]
 >
->識&#x200B;&#x200B;別名稱空間代碼&#x200B;****
+>識&#x200B;別名稱空間代碼&#x200B;****
 >
 > 請確定代碼有效——上述範例使用「電子郵件」，此為標準身分命名空間。 其他常用的標準身分名稱空間可在 [Identity Service常見問答集中找到](../../identity-service/troubleshooting-guide.md#what-are-the-standard-identity-namespaces-provided-by-experience-platform)。
 >
 > 如果您想要建立自訂命名空間，請依照識別命名空間概述中 [的步驟](../../identity-service/home.md)。
+
 **回應**
 
 成功的回應會傳回HTTP狀態201，其中包含新建立之架構主要身分名稱空間的相關資訊。
