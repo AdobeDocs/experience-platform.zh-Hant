@@ -6,7 +6,7 @@ topic: tutorial
 type: Tutorial
 description: 本教學課程將逐步說明建立資料集所需的步驟，以便使用Experience Platform UI匯出觀眾區隔。
 translation-type: tm+mt
-source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
+source-git-commit: fce215edb99cccc8be0109f8743c9e56cace2be0
 workflow-type: tm+mt
 source-wordcount: '756'
 ht-degree: 1%
@@ -78,7 +78,7 @@ UI中的資料集工 [!DNL Experience Platform] 作區可讓您檢視和管理IM
 
 現在已建立空的資料集，您已返回「資料集」工作區 **[!UICONTROL 的「資料集活動]** 」索引 **[!UICONTROL 標籤]** 。 您應該會在工作區的左上角看到資料集名稱，以及「未新增任何批次」通知。 由於您尚未將任何批次新增至此資料集，因此預期會出現此情況。
 
-在「資料集」工作區的右側，您會看到「 **[!UICONTROL Info]** 」標籤，其中包含與新資料集相關的資訊，例如資料集ID、名稱、說明、表格名稱、架構]、串流和來源。 「資 **[!UICONTROL 訊]** 」標籤也包含建立資料集的時間及其上次修改日期的相關資訊。
+在「資料集」工作區的右側，您會看到「 **[!UICONTROL Info]** 」標籤，其中包含與新資料集相關的資訊，例如資料集ID、名稱、說明、表格名稱、架構、串流和來源。 「資 **[!UICONTROL 訊]** 」標籤也包含建立資料集的時間及其上次修改日期的相關資訊。
 
 請記下資料集 **[!UICONTROL ID]**，因為此值是完成觀眾區段匯出工作流程的必要值。
 
