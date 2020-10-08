@@ -3,9 +3,9 @@ keywords: Experience Platform;profile;real-time customer profile;troubleshooting
 title: 合併策略使用手冊
 topic: guide
 translation-type: tm+mt
-source-git-commit: fcced39c0a78457ebb108b7378e32f1b2f75808b
+source-git-commit: 45f42bae4060e107e6c131659cea5d10457c34f8
 workflow-type: tm+mt
-source-wordcount: '1441'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -61,7 +61,7 @@ Adobe Experience Platform可讓您從多個來源匯整資料並加以匯整，�
 
 ### 排序時間戳記 {#timestamp-ordered}
 
-當描述檔記錄被收錄到Experience Platform中時，系統會在擷取時取得系統時間戳記並新增至記錄。 當 **[!UICONTROL Timestamp ordered]** is selected as &quot;[!UICONTROL Attribute merge]&quot; type for a merge policy, profiles are bend on the system timestamp. 換言之，合併是根據記錄被收錄到平台的時間戳記進行。
+當描述檔記錄被收錄到Experience Platform中時，系統會在擷取時取得系統時間戳記並新增至記錄。 當選 **[!UICONTROL 擇Timestamp ordered]** (有序時間戳 **[!UICONTROL )作為合併策略的Attribute merge]** type（屬性合併類型）時，將根據系統時間戳合併配置檔案。 換言之，合併是根據記錄被收錄到平台的時間戳記進行。
 
 有時，有時需要提供自訂時間戳記，並讓合併原則遵循自訂時間戳記，而非系統時間戳記的使用情形。 例如，回填資料或在記錄未依順序收錄時，確保事件順序正確。
 
@@ -91,7 +91,7 @@ Adobe Experience Platform可讓您從多個來源匯整資料並加以匯整，�
 
 例如，如果貴組織在一個資料集中顯示的資訊比另一個資料集中的資料更偏好或受信任，則使用案例會是範例。
 
-選擇數 **[!UICONTROL 據集優先順序]**，將開啟一個單獨的面板，要求您從可用資料集中選擇將包含哪些資料集 **** （或使用複選框選擇所有資料集）。 然後，您可以將這些資料集拖放到 [**!UICONTROL選定資料集]**面板中，並將它們拖放到正確的優先順序順序中。 優先順序最高的資料集、次優的資料集等。
+選擇數 **[!UICONTROL 據集優先順序]**，將開啟一個單獨的面板，要求您從可用資料集中選擇將包含哪些資料集 **** （或使用複選框選擇所有資料集）。 然後，您可以將這些資料集拖放到「選定的 **[!UICONTROL 資料集]** 」面板中，並將它們拖放到正確的優先順序順序中。 優先順序最高的資料集、次優的資料集等。
 
 ![](../images/merge-policies/dataset-precedence.png)
 
