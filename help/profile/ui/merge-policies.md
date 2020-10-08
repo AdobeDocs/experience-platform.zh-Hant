@@ -61,7 +61,7 @@ Adobe Experience Platform可讓您從多個來源匯整資料並加以匯整，�
 
 ### 排序時間戳記 {#timestamp-ordered}
 
-當描述檔記錄被收錄到Experience Platform中時，系統會在擷取時取得系統時間戳記並新增至記錄。 當選 **[!UICONTROL 擇Timestamp ordered]** (有序時間戳 **[!UICONTROL )作為合併策略的Attribute merge]** type（屬性合併類型）時，將根據系統時間戳合併配置檔案。 換言之，合併是根據記錄被收錄到平台的時間戳記進行。
+當描述檔記錄被收錄到Experience Platform中時，系統會在擷取時取得系統時間戳記並新增至記錄。 當 **[!UICONTROL Timestamp ordered]** is selected as &quot;[!UICONTROL Attribute merge]&quot; type for a merge policy, profiles are bend on the system timestamp. 換言之，合併是根據記錄被收錄到平台的時間戳記進行。
 
 有時，有時需要提供自訂時間戳記，並讓合併原則遵循自訂時間戳記，而非系統時間戳記的使用情形。 例如，回填資料或在記錄未依順序收錄時，確保事件順序正確。
 
