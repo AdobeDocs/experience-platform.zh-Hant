@@ -5,9 +5,9 @@ title: 區段服務區段產生器使用指南
 topic: ui guide
 description: '「區段產生器」提供豐富的工作區，可讓您與描述檔資料元素互動。 工作區提供建立和編輯規則的直覺式控制項，例如用來表示資料屬性的拖放圖格。 '
 translation-type: tm+mt
-source-git-commit: 34cfcaac276bf2645a0365a0dfa71c4ead6e2ecb
+source-git-commit: beacce03136e1620ff57fb549f335d2199bb6001
 workflow-type: tm+mt
-source-wordcount: '1723'
+source-wordcount: '1774'
 ht-degree: 0%
 
 ---
@@ -72,6 +72,10 @@ ht-degree: 0%
 若要將新規則新增至區段定義，請從「欄位」標籤拖曳圖格 **** ，並將其拖曳至規則產生器畫布。 然後，您會根據所新增資料的類型，看到內容特定的選項。 可用的資料類型包括：字串、日期 [!DNL ExperienceEvents]、「事[!UICONTROL 件類型]」和觀眾。
 
 ![](../images/ui/segment-builder/rule-builder-canvas.png)
+
+>[!IMPORTANT]
+>
+>Adobe Experience Platform的最新變更已更新事件之間邏輯運 `OR` 算子 `AND` 的使用方式。 這些更新不會影響現有區段。 不過，現有區段和建立新區段的所有後續更新都會受到這些變更的影響。 請閱讀時間 [常數更新](./segment-refactoring.md) ，以取得詳細資訊。
 
 ### 新增觀眾
 
