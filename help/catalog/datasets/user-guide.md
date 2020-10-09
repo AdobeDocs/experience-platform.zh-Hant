@@ -5,7 +5,7 @@ title: 資料集使用指南
 topic: datasets
 description: 本資料集使用指南提供在Adobe Experience Platform使用者介面中使用資料集時執行常見動作的指示。
 translation-type: tm+mt
-source-git-commit: eaff457140ba4ac7c25a0f3a3e5aef47d1b99773
+source-git-commit: 79dca07d3e6ecf998a6278fa49178a7fa8cc0e8c
 workflow-type: tm+mt
 source-wordcount: '1162'
 ht-degree: 0%
@@ -62,10 +62,10 @@ ht-degree: 0%
 
 在下一個畫面中，您會看到下列兩個建立新資料集的選項：
 
-* [從架構建立資料集](#create-a-dataset-with-an-existing-schema)
-* [從CSV檔案建立資料集](#create-a-dataset-with-a-csv-file)
+* [從架構建立資料集](#schema)
+* [從CSV檔案建立資料集](#csv)
 
-### 使用現有模式建立資料集
+### 使用現有模式建立資料集 {#schema}
 
 在「建 **[!UICONTROL 立資料集]** 」畫面中，按一 **[!UICONTROL 下「從架構建立資料集]** 」以建立新的空資料集。
 
@@ -79,7 +79,7 @@ ht-degree: 0%
 
 ![](../images/datasets/user-guide/configure_dataset_schema.png)
 
-### 使用CSV檔案建立資料集
+### 使用CSV檔案建立資料集 {#csv}
 
 當使用CSV檔案建立資料集時，會建立臨機模式，以提供資料集符合所提供CSV檔案的結構。 在「建 **[!UICONTROL 立資料集]** 」畫面中，按一下「從CSV檔案 **[!UICONTROL 建立資料集」方塊]**。
 
