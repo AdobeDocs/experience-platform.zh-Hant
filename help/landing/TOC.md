@@ -1,14 +1,14 @@
 ---
 product: experience-platform
 audience: user
-user-guide-title: Adobe Experience Platform說明
+user-guide-title: Adobe Experience Platform 說明
 breadcrumb-title: Experience Platform Guide
 user-guide-description: Learn how Experience Platform makes it possible to deliver personalized experiences to your customers in real-time.
 translation-type: tm+mt
-source-git-commit: c9daf77f4b7db113b972ee268681999bc7f7fa8d
+source-git-commit: 84f1f840e15cb4487807c13131d0787772fa063a
 workflow-type: tm+mt
-source-wordcount: '319'
-ht-degree: 51%
+source-wordcount: '323'
+ht-degree: 52%
 
 ---
 
@@ -17,6 +17,7 @@ ht-degree: 51%
 
 * [體驗平台概觀](home.md)
 * [快速入門](get-started.md)
+* [Experience Platform 使用手冊](./ui-guide.md)
 * Experience Platform 文件 {#documentation}
    * [檔案總覽](documentation/overview.md)
    * [存取控制](https://docs.adobe.com/content/help/zh-Hant/experience-platform/access-control/home.html)
