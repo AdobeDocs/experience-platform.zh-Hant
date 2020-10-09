@@ -5,7 +5,7 @@ title: Adobe Experience Platform概觀
 topic: getting started
 description: Adobe Experience Platform是市面上功能最強大、最靈活、最開放的系統，可協助您建立和管理能推動客戶體驗的完整解決方案。  Experience Platform 可讓組織集中和標準化來自任何系統的客戶資料與內容，並運用資料科學和機器學習技術大幅改善豐富個人化體驗的設計和傳遞。
 translation-type: tm+mt
-source-git-commit: fa667d86c089c692f22cfd1b46f3f11b6e9a68d7
+source-git-commit: 79dca07d3e6ecf998a6278fa49178a7fa8cc0e8c
 workflow-type: tm+mt
 source-wordcount: '936'
 ht-degree: 11%
@@ -76,7 +76,7 @@ Adobe Experience Platform使用者介面目前提供下列語言版本：
 
 Adobe Experience Platform檔案提供多種語言版本。 若要變更語言，請按一下語言下拉式清單並選取所要的語言。
 
-![image](assets/lang.jpg)
+![image](images/overview/lang.jpg)
 
 ## [!DNL Experience Platform] 檔案
 
