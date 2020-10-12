@@ -5,7 +5,7 @@ seo-title: HTTP目的地是Adobe即時客戶資料平台目的地，可協助您
 description: HTTP目的地是Adobe即時客戶資料平台目的地，可協助您將描述檔資料傳送至協力廠商HTTP端點。
 seo-description: HTTP目的地是Adobe即時客戶資料平台目的地，可協助您將描述檔資料傳送至協力廠商HTTP端點。
 translation-type: tm+mt
-source-git-commit: cf100e8df225a665eade5ee6ddab071707e93f8b
+source-git-commit: 5a5cbc31c6445f141d41fca5082b666ec3b26510
 workflow-type: tm+mt
 source-wordcount: '572'
 ht-degree: 2%
@@ -23,7 +23,7 @@ ht-degree: 2%
 
 目 [!DNL HTTP] 標是串流目 [!DNL Adobe Real-Time Customer Data Platform] 標，可協助您將描述檔資料傳送至協力廠商端 [!DNL HTTP] 點。
 
-若要傳送描述檔資 [!DNL HTTP] 料至端點，您必須先連線至中的目標 [!DNL Adobe Real-Time Customer Data Platform](#connect-destination)。
+若要傳送描述檔資 [!DNL HTTP] 料至端點，您必須先連線至中的目標 [[!DNL Adobe Real-Time Customer Data Platform]](#connect-destination)。
 
 ## 使用案例 {#use-cases}
 
@@ -33,14 +33,15 @@ ht-degree: 2%
 
 ## 連接到目標 {#connect-destination}
 
-1. 在「連 **[!UICONTROL 接]** >目 **[!UICONTROL 標]**」中，選 [!DNL  HTTP API]擇並選 **[!UICONTROL 擇配置]**。
+1. 在「連 **[!UICONTROL 接]** >目 **[!UICONTROL 標]**」中，選 [!DNL HTTP API]擇並選 **[!UICONTROL 擇配置]**。
 
    ![啟動HTTP目標](assets/activate-http-destination.png)
 
    >[!NOTE]
    >
    >如果此目標已存在連接，您可以在目標卡上看到 **[!UICONTROL 「激活]** 」按鈕。 有關「激活」( **[!UICONTROL Activate]** )和「配置」( **[!UICONTROL Configure]**)之間差異的詳細資訊，請參 [閱目標工作區文檔的「目錄](../destinations/destinations-workspace.md#catalog) 」(Catalog)部分。
-   ![啟動HTTP目標](assets/connect-http-destination.png)
+   >
+   >![啟動HTTP目標](assets/connect-http-destination.png)
 
 2. 在「帳 [!UICONTROL 戶] 」步驟中，您需要定義HTTP端點連線詳細資訊。 選 **[!UICONTROL 擇新帳戶]** ，然後輸入要連接的HTTP端點的連接詳細資訊。
    * **[!UICONTROL httpEndpoint]**:您要 [!DNL URL] 將描述檔資料傳送至的HTTP端點的完整。
