@@ -4,10 +4,10 @@ audience: user
 user-guide-title: 即時客戶資料平台指南
 user-guide-description: 將來自多個企業來源的已知和匿名資料放在一起，以建立客戶設定檔，從這些設定檔建立對象區段，並對協力廠商目的地啟動這些區段。
 translation-type: tm+mt
-source-git-commit: ac114a7d0313582c6adf05404e0626c618a13253
+source-git-commit: 797aff558f0f8b818609631792e96be3f6277b62
 workflow-type: tm+mt
-source-wordcount: '489'
-ht-degree: 17%
+source-wordcount: '490'
+ht-degree: 18%
 
 ---
 
@@ -31,7 +31,7 @@ ht-degree: 17%
       * [目標詳細資訊頁](destinations/destination-details-page.md)
    * 目標目錄 {#destinations-cat}
       * [目標目錄概述](destinations/destinations-catalog.md)
-      * [HTTP目的地](/help/rtcdp/destinations/http-destination.md)
+      * [ (Alpha)HTTP目的地](/help/rtcdp/destinations/http-destination.md)
       * Adobe destinations{#adobe-destinations}
          * [Adobe目標概觀](destinations/adobe-destinations.md)
          * [Adobe Campaign](destinations/adobe-campaign-destination.md)
@@ -149,4 +149,4 @@ ht-degree: 17%
    * [來源概觀](sources/sources-overview.md)
    * [使用Adobe Launch實作網站標籤](sources/launch.md)
 * [Experience Platform發行說明](https://www.adobe.com/go/platform-release-notes-en)
-* [體驗平台辭彙表](https://www.adobe.com/go/platform-glossary-en)
+* [Experience Platform 詞彙表](https://www.adobe.com/go/platform-glossary-en)
