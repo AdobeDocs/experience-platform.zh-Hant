@@ -4,10 +4,10 @@ audience: user
 user-guide-title: 即時客戶資料平台指南
 user-guide-description: 將來自多個企業來源的已知和匿名資料放在一起，以建立客戶設定檔，從這些設定檔建立對象區段，並對協力廠商目的地啟動這些區段。
 translation-type: tm+mt
-source-git-commit: 797aff558f0f8b818609631792e96be3f6277b62
+source-git-commit: d9e9440bb8a7735aa8a5d24285c1fb56f32733cb
 workflow-type: tm+mt
-source-wordcount: '490'
-ht-degree: 18%
+source-wordcount: '507'
+ht-degree: 17%
 
 ---
 
@@ -35,6 +35,7 @@ ht-degree: 18%
       * Adobe destinations{#adobe-destinations}
          * [Adobe目標概觀](destinations/adobe-destinations.md)
          * [Adobe Campaign](destinations/adobe-campaign-destination.md)
+         * [Experience Platform區段共用（開啟Audience Manager檔案）](https://docs.adobe.com/help/en/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html)
       * 廣告目的地{#advertising-destinations}
          * [廣告目標概觀](destinations/advertising-destinations.md)
          * [Adobe Advertising Cloud擴充功能](/help/rtcdp/destinations/adobe-advertising-cloud-extension.md)
