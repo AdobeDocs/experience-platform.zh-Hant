@@ -5,10 +5,10 @@ seo-title: 廣告目標
 description: 將您的即時客戶資料平台連接至協力廠商廣告平台（例如DSP、廣告網路、SSP），並與這些平台共用假受眾。
 seo-description: 將您的即時客戶資料平台連接至協力廠商廣告平台（例如DSP、廣告網路、SSP），並與這些平台共用假受眾。
 translation-type: tm+mt
-source-git-commit: 54df4778a025811504801306120bda78e04281c1
+source-git-commit: b510f715133cc3fed98861f977b3ce9a857a5ced
 workflow-type: tm+mt
-source-wordcount: '183'
-ht-degree: 0%
+source-wordcount: '219'
+ht-degree: 2%
 
 ---
 
@@ -21,6 +21,21 @@ ht-degree: 0%
 
 目前，即時CDP支援下面列出的廣告目標。 如需如何連線至這些目的地的詳細資訊，請參閱個別連結：
 
+## 連線
+
+要瞭解連接和擴展之間的差異，請參 [閱「目標類型](/help/rtcdp/destinations/destination-types.md#connections) 」和「類別」頁中的「連接」。
+
+
+* [Google Display &amp; Video 360](/help/rtcdp/destinations/google-dv360-destination.md)
+* [Google廣告](/help/rtcdp/destinations/google-ads-destination.md)
+* [Google廣告管理員](/help/rtcdp/destinations/google-ad-manager-destination.md)
+* [Google Customer Match](/help/rtcdp/destinations/google-customer-match-destination.md)
+
+
+## 擴充功能
+
+要瞭解連接和擴展之間的差異，請參 [閱「目標類型](/help/rtcdp/destinations/destination-types.md#extensions) 」和「類別」頁中的擴展。
+
 * [Adobe Advertising Cloud擴充功能](/help/rtcdp/destinations/adobe-advertising-cloud-extension.md)
 * [Awin廣告轉換標籤擴充功能](/help/rtcdp/destinations/awin-conversiontag-extension.md)
 * [Awin Advertising Mastertag擴充功能](/help/rtcdp/destinations/awin-mastertag-extension.md)
@@ -30,13 +45,8 @@ ht-degree: 0%
 * [DoubleClick Floodlight擴充功能](/help/rtcdp/destinations/doubleclick-floodlight-extension.md)
 * [Facebook Pixel擴充功能](/help/rtcdp/destinations/facebook-pixel-extension.md)
 * [Flashtalking OneTag擴充功能](/help/rtcdp/destinations/flashtalking-extension.md)
-* [Google Display &amp; Video 360](/help/rtcdp/destinations/google-dv360-destination.md)
-* [Google廣告](/help/rtcdp/destinations/google-ads-destination.md)
 * [Google Ads擴充功能](/help/rtcdp/destinations/google-ads-extension.md)
-* [Google廣告管理員](/help/rtcdp/destinations/google-ad-manager-destination.md)
-* [Google客戶符合](/help/rtcdp/destinations/google-customer-match-destination.md)
 * [Google gtag擴充功能](/help/rtcdp/destinations/gtag-advertising-extension.md)
 * [LinkedIn In Insight標籤擴充功能](linkedin-extension.md)
 * [Pinterest轉換追蹤擴充功能](pinterest-extension.md)
 * [Twitter通用網站標籤擴充功能](twitter-uwt-extension.md)
-
