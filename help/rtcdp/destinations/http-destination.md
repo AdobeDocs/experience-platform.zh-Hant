@@ -5,7 +5,7 @@ seo-title: HTTP目的地是Adobe即時客戶資料平台目的地，可協助您
 description: HTTP目的地是Adobe即時客戶資料平台目的地，可協助您將描述檔資料傳送至協力廠商HTTP端點。
 seo-description: HTTP目的地是Adobe即時客戶資料平台目的地，可協助您將描述檔資料傳送至協力廠商HTTP端點。
 translation-type: tm+mt
-source-git-commit: 5a5cbc31c6445f141d41fca5082b666ec3b26510
+source-git-commit: f4840f028bb855e79c0f2ae5c82bc38906a7aaec
 workflow-type: tm+mt
 source-wordcount: '572'
 ht-degree: 2%
