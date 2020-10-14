@@ -6,9 +6,9 @@ topic: overview
 type: Tutorial
 description: 本教學課程使用Flow Service API來引導您完成將平台連接至Microsoft Dynamics（以下稱為「Dynamics」）帳戶以收集CRM資料的步驟。
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: d332226541685108b58d88096146ed6048606774
 workflow-type: tm+mt
-source-wordcount: '709'
+source-wordcount: '703'
 ht-degree: 1%
 
 ---
@@ -142,11 +142,9 @@ curl -X GET \
 }
 ```
 
-## 建立基本連接
+## 建立API的連線
 
-基本連接指定源，並包含該源的憑據。 每個帳戶只需要一個基本連 [!DNL Dynamics] 接，因為它可用於建立多個源連接器以導入不同的資料。
-
-執行以下POST請求以建立基本連接。
+API的連線會指定來源，並包含該來源的認證。 每個帳戶只需要一個API連線， [!DNL Dynamics] 因為它可用於建立多個來源連接器，以匯入不同的資料。
 
 **API格式**
 
@@ -158,7 +156,7 @@ POST /connections
 
 ```shell
 curl -X POST \
-    'http://platform.adobe.io/data/foundation/flowservice/connections' \
+    'https://platform.adobe.io/data/foundation/flowservice/connections' \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
     -H 'x-gw-ims-org-id: {IMS_ORG}' \
@@ -202,4 +200,4 @@ curl -X POST \
 
 ## 後續步驟
 
-在本教學課程中，您已使用API為您的帳戶建立基 [!DNL Dynamics] 本連線，而且已取得唯一ID作為回應內文的一部分。 在下一個教學課程中，您可以使用此基本連線ID，同時學習如 [何使用Flow Service API來探索CRM系統](../../explore/crm.md)。
+在本教學課程中，您已使用API建立您 [!DNL Dynamics] 帳戶的連線，並且已取得唯一ID作為回應內文的一部分。 在下一個教學課程中，您可以使用此連線ID，學習如 [何使用Flow Service API來探索CRM系統](../../explore/crm.md)。
