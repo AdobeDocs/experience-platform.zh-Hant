@@ -6,7 +6,7 @@ topic: overview
 type: Tutorial
 description: 本教學課程使用Flow Service API來引導您完成將Azure檔案儲存空間連接至Experience Platform的步驟。
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: d332226541685108b58d88096146ed6048606774
 workflow-type: tm+mt
 source-wordcount: '573'
 ht-degree: 2%
@@ -79,7 +79,6 @@ POST /connections
 **請求**
 
 下列請求會建立新 [!DNL Azure File Storage] 的連線，由裝載中提供的屬性設定：
-
 
 ```shell
 curl -X POST \
