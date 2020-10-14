@@ -5,9 +5,9 @@ title: 日期函式
 topic: overview
 description: 本檔案介紹資料準備使用的日期功能。
 translation-type: tm+mt
-source-git-commit: db38f0666f5c945461043ad08939ebda52c21855
+source-git-commit: 1f9833c06a3423c334edb8aa7e441adfd74be0f2
 workflow-type: tm+mt
-source-wordcount: '389'
+source-wordcount: '384'
 ht-degree: 17%
 
 ---
@@ -80,4 +80,4 @@ ht-degree: 17%
 
 **範例**
 
-運算 `date(orderDate, 'yyyy-MM-dd')` 式會將orderDate（若其值為&quot;2020年12月31日&quot;）轉換為值&quot;2020-12-31&quot;的日期時間。
+表達 `date(orderDate, 'yyyy-MM-dd')` 式將&quot;Decer 31st, 2020&quot; `orderDate` 值轉換為日期時間值&quot;2020-12-31&quot;。
