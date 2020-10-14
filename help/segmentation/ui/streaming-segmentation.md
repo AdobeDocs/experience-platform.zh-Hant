@@ -5,9 +5,9 @@ title: 串流區段
 topic: ui guide
 description: Adobe Experience Platform上的串流細分可讓您近乎即時地進行細分，同時專注於資料的豐富性。 透過串流分段，區段資格現在會在資料進入平台時進行，以減輕排程和執行分段工作的需求。 有了這項功能，大部份的區段規則現在都可以在資料傳入平台時進行評估，這表示區段成員資格將會保持最新，而不會執行排程的區段工作。
 translation-type: tm+mt
-source-git-commit: c7e8cf31f4c03eec9b24064c6888e09a7070aaa5
+source-git-commit: 578579438ca1d6a7a8c0a023efe2abd616a6dff2
 workflow-type: tm+mt
-source-wordcount: '831'
+source-wordcount: '759'
 ht-degree: 0%
 
 ---
@@ -23,7 +23,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->串流區段只能用來評估串流至平台的資料。 換言之，透過批次擷取所擷取的資料不會透過串流分段來評估，而需要觸發批次評估。
+>串流區段只能用來評估串流至平台的資料。 換言之，透過批次擷取所擷取的資料不會透過串流分段來評估，而且會與每夜排程的分段工作一起評估。
 
 ## 串流分段查詢類型
 
@@ -36,26 +36,25 @@ ht-degree: 0%
 | 查詢類型 | 詳細資料 | 範例 |
 | ---------- | ------- | ------- |
 | 傳入點擊 | 任何區段定義，是指沒有時間限制的單一傳入事件。 | ![](../images/ui/streaming-segmentation/incoming-hit.png) |
-| 在相對時間視窗內傳入點擊 | 任何區段定義，是指過去七天內 **的單一傳入事件**。 | ![](../images/ui/streaming-segmentation/relative-hit-success.png) |
+| 在相對時間視窗內傳入點擊 | 任何參照單一傳入事件的區段定義。 | ![](../images/ui/streaming-segmentation/relative-hit-success.png) |
 | 僅限描述檔 | 任何僅指描述檔屬性的區段定義。 |  |
 | 參照描述檔的傳入點擊 | 任何區段定義，是指單一傳入事件（無時間限制）以及一或多個描述檔屬性。 | ![](../images/ui/streaming-segmentation/profile-hit.png) |
-| 在相對時間視窗內參照描述檔的傳入點擊 | 任何區段定義，是指過去七天內傳入的單一事件和一或多個描述 **檔屬性**。 | ![](../images/ui/streaming-segmentation/profile-relative-success.png) |
+| 在相對時間視窗內參照描述檔的傳入點擊 | 任何區段定義，指單一傳入事件和一或多個描述檔屬性。 | ![](../images/ui/streaming-segmentation/profile-relative-success.png) |
 | 參考描述檔的多個事件 | 任何區段定義是指過去24小時內 **的多個事件** ，且（可選）具有一或多個描述檔屬性。 | ![](../images/ui/streaming-segmentation/event-history-success.png) |
 
 下節列出區段定義範例，這些範例 **將無法** 針對串流區段啟用。
 
-| 查詢類型 | 詳細資料 | 範例 |
-| ---------- | ------- | ------- |
-| 在相對時間視窗內傳入點擊 | 如果區段定義是指非在最 **近** 7天 **時段內的傳入事件**。 例如，在過去 **兩週內**。 | ![](../images/ui/streaming-segmentation/relative-hit-failure.png) |
-| 參照相對視窗中描述檔的傳入點擊 | 下列選項將不 **支援串流** 區段：<ul><li>非在最 **近** 7天 **時段內傳入的事件**。</li><li>包含區段或特徵 [!DNL Adobe Audience Manager (AAM)] 的區段定義。</li></ul> | ![](../images/ui/streaming-segmentation/profile-relative-failure.png) |
-| 參考描述檔的多個事件 | 下列選項將不 **支援串流** 區段：<ul><li>在過去24小 **時內** 未發 **生的事件**。</li><li>包含Adobe Audience Manager(AAM)區段或特徵的區段定義。</li></ul> | ![](../images/ui/streaming-segmentation/event-history-failure.png) |
-| 多實體查詢 | 整體而言，串流分段不支 **援多** 實體查詢。 |  |
+| 查詢類型 | 詳細資料 |
+| ---------- | ------- |
+| 參照相對視窗中描述檔的傳入點擊 | 包含區段或特徵 [!DNL Adobe Audience Manager (AAM)] 的區段定義。 |
+| 參考描述檔的多個事件 | 包含Adobe Audience Manager(AAM)區段或特徵的區段定義。 |
+| 多實體查詢 | 整體而言，串流分段不支 **援多** 實體查詢。 |
 
 此外，執行串流區段時，也會套用一些准則：
 
 | 查詢類型 | 准則 |
 | ---------- | -------- |
-| 單一事件查詢 | 回顧視窗限制為 **七天**。 |
+| 單一事件查詢 | 回顧視窗沒有限制。 |
 | 具有事件歷史記錄的查詢 | <ul><li>回顧視窗限於一 **天**。</li><li>事件之間必須存 **在嚴格** 的時間順序條件。</li><li>僅允許事件之間的簡單時間順序（前後）。</li><li>無法否 **認個** 別事件。 不過，整個查詢 **可以** 否定。</li></ul> |
 
 如果修改了區段定義，使其不再符合串流區段的條件，區段定義會自動從「串流」切換為「批次」。
