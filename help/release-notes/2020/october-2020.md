@@ -5,10 +5,10 @@ doc-type: release notes
 last-update: October, 2020
 author: crhoades, ens28527
 translation-type: tm+mt
-source-git-commit: ab87cac94ae69acde3be75ae95b11cf003a274e9
+source-git-commit: bf4271cec6126de3b5d9f98df280afdcc798589d
 workflow-type: tm+mt
-source-wordcount: '281'
-ht-degree: 7%
+source-wordcount: '478'
+ht-degree: 6%
 
 ---
 
@@ -18,6 +18,7 @@ ht-degree: 7%
 **發行日期：2020年10月**
 
 - [資料準備](#data-prep)
+- [即時客戶個人檔案](#profile)
 - [來源](#sources)
 
 ## 資料準備 {#data-prep}
@@ -32,6 +33,17 @@ ht-degree: 7%
 | `get_values` 函數 | 此函 `get_values` 數可讓您從輸入映射取得任何指定鍵的值。 |
 
 如需詳細資訊，請閱讀資料準 [備概觀](../../data-prep/home.md)。
+
+## 即時客戶個人檔案 {#profile}
+
+Adobe Experience Platform可讓您為客戶推動協調、一致且相關的體驗，不論客戶在何處或何時與您的品牌互動。 透過 [!DNL Real-time Customer Profile]此功能，您可以全面瞭解每個客戶，並結合來自多個通道的資料，包括線上、離線、CRM和第三方資料。 [!DNL Profile] 可讓您將分散的客戶資料整合為統一的檢視，提供每個客戶互動的可操作、時間戳記帳戶。
+
+| 功能 | 說明 |
+| ------- | ----------- |
+| 描述檔預覽API新增功能 | 描述檔預覽API(`/previewsamplestatus`)現在包含在IMS組織中檢視描述檔片段總數的劃分，以及在身分名稱空間中檢視描述檔片段的分佈。 |
+| 聯合架構視圖更新 | 在Experience Platform UI中，使用者可以更輕鬆地找到有關所有結構描述和資料集的資訊，以及表面金鑰屬性，例如身分和關係欄位。 這些更新可改善疑難排解和驗證描述檔已正確設定、身分識別已正確銜接，以及資料已成功擷取的能力。 |
+
+有關使用資 [!DNL Real-time Customer Profile]料的更多資訊，包括教學課程和最佳實務，請 [!DNL Profile] 閱讀即時客 [戶資料概觀](../../profile/home.md)。
 
 ## 來源 {#sources}
 
