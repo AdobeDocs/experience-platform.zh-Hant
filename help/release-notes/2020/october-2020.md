@@ -5,7 +5,7 @@ doc-type: release notes
 last-update: October, 2020
 author: crhoades, ens28527
 translation-type: tm+mt
-source-git-commit: bf4271cec6126de3b5d9f98df280afdcc798589d
+source-git-commit: 43ceda3d95511c3972fd0588f472c6c412dd95bf
 workflow-type: tm+mt
 source-wordcount: '478'
 ht-degree: 6%
@@ -15,7 +15,7 @@ ht-degree: 6%
 
 # Adobe Experience Platform 發行說明
 
-**發行日期：2020年10月**
+**發行日期：2020 年 10 月 14 日**
 
 - [資料準備](#data-prep)
 - [即時客戶個人檔案](#profile)
