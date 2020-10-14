@@ -5,9 +5,9 @@ doc-type: release notes
 last-update: October, 2020
 author: crhoades, ens28527
 translation-type: tm+mt
-source-git-commit: 43ceda3d95511c3972fd0588f472c6c412dd95bf
+source-git-commit: fc1174c8435c1afc3c58dd748daf89f387a19980
 workflow-type: tm+mt
-source-wordcount: '478'
+source-wordcount: '591'
 ht-degree: 6%
 
 ---
@@ -19,6 +19,7 @@ ht-degree: 6%
 
 - [資料準備](#data-prep)
 - [即時客戶個人檔案](#profile)
+- [劃分服務](#segmentation)
 - [來源](#sources)
 
 ## 資料準備 {#data-prep}
@@ -44,6 +45,20 @@ Adobe Experience Platform可讓您為客戶推動協調、一致且相關的體�
 | 聯合架構視圖更新 | 在Experience Platform UI中，使用者可以更輕鬆地找到有關所有結構描述和資料集的資訊，以及表面金鑰屬性，例如身分和關係欄位。 這些更新可改善疑難排解和驗證描述檔已正確設定、身分識別已正確銜接，以及資料已成功擷取的能力。 |
 
 有關使用資 [!DNL Real-time Customer Profile]料的更多資訊，包括教學課程和最佳實務，請 [!DNL Profile] 閱讀即時客 [戶資料概觀](../../profile/home.md)。
+
+## 劃分服務 {#segmentation}
+
+Adobe Experience Platform Segmentation Service提供使用者介面和REST風格的API，可讓您建立細分並從資料中產生受 [!DNL Real-time Customer Profile] 眾。 這些區段是集中設定並維護的， [!DNL Platform]讓任何Adobe應用程式都可輕鬆存取。
+
+[!DNL Segmentation Service] 定義個人檔案的特定子集，方法是描述區分客戶群中有價人群的標準。 區段可以根據記錄資料（例如人口統計資訊）或代表客戶與品牌互動的時間系列事件來劃分。
+
+**新功能**
+
+| 功能 | 說明 |
+| ------- | ----------- |
+| 移除串流區段限制 | 回顧時段的七天限制已移除。 |
+
+如需詳細資訊， [!DNL Segmentation Service]請參閱區 [段概觀](../../segmentation/home.md)
 
 ## 來源 {#sources}
 
