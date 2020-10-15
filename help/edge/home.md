@@ -5,9 +5,9 @@ description: 瞭解Adobe Experience Platform Web SDK是什麼，以及如何使�
 seo-description: 可讓Adobe Experience Cloud的客戶與Experience Cloud中的各種服務互動。
 keywords: Adobe Experience Platform Web SDK;Platform Web SDK;Web SDK;edge;Visitor.js;AppMeasurement.js;AT.js;DIL.js;web sdk;SDK;web SDK;Launch;launch
 translation-type: tm+mt
-source-git-commit: 59cf089a8bf7ce44e7a08b0bb1d4562f5d5104db
+source-git-commit: db742119d8f169817080f1fd4e0dc08a0f0faa47
 workflow-type: tm+mt
-source-wordcount: '702'
+source-wordcount: '708'
 ht-degree: 2%
 
 ---
@@ -15,13 +15,13 @@ ht-degree: 2%
 
 # 什麼是Adobe Experience Platform Web SDK
 
-Adobe Experience Platform Web SDK是用戶端JavaScript程式庫，可讓Adobe Experience Cloud的客戶透過Adobe與各種服務 [!DNL Experience Cloud] 互動 [!DNL Experience Platform Edge Network]。 除了JavaScript程式庫外，還有 [Launch擴充功能](https://docs.adobe.com/content/help/zh-Hant/launch/using/extensions-ref/adobe-extension/aep-extension/overview.html) ，可協助您進行Web SDK設定。
+Adobe Experience Platform Web SDK是用戶端JavaScript程式庫，可讓Adobe Experience Cloud的客戶透過Adobe與各種服務 [!DNL Experience Cloud] 互動 [!DNL Experience Platform Edge Network]。 除了JavaScript程式庫外，還有 [Experience Platform Launch擴充功能](https://docs.adobe.com/content/help/zh-Hant/launch/using/extensions-ref/adobe-extension/aep-extension/overview.html) ，可協助您進行Web SDK設定。
 
 ## Experience Edge
 
 [!DNL Adobe Experience Platform Web SDK] 是組成Experience Edge的系列的一部分。 Experience Edge包含三種技術：
 
-* **[!DNL Adobe Experience Platform Web SDK]:** JavaScript SDK和擴充功能可 [!DNL Launch] 大幅簡化部署技術的作 [!DNL Adobe] 業
+* **[!DNL Adobe Experience Platform Web SDK]:** JavaScript SDK和擴充功能可 [!DNL Experience Platform Launch] 大幅簡化部署技術的作 [!DNL Adobe] 業
 * **Adobe Experience Platform Mobile SDK:** v5行動SDK的擴充功能，可讓客戶使用新的部署方法
 * **[!DNL Adobe Experience Platform Edge Network]:** 全球分散式伺服器網路，提供新的產品部署方 [!DNL Adobe] 法
 
@@ -65,7 +65,7 @@ Adobe Experience Platform Web SDK取代下列SDK:
 
 ## 快速入門
 
-我們強烈建議您 [參閱我們的快速入門手冊](getting-started/quick-start-with-launch.md) ，以取得如何開始使用Adobe Launch的快速教學課程。
+強烈建議您參閱快 [速入門指南](consent/iab-tcf/with-launch.md) ，以取得如何開始使用Adobe Experience Platform Launch的快速教學課程。
 
 本產品不斷發展，不斷成長，以支援越來越多的使用案例。 為跟上最新的腳步，請查看我們支援 [的使用案例展示板](https://github.com/adobe/alloy/projects/5)。 我們會隨時更新目前支援的使用案例，以及我們正在進行的使用案例，讓您做出最佳決策。
 
