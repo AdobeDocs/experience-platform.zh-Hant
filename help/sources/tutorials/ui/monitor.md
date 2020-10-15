@@ -6,9 +6,9 @@ title: 監視帳戶和資料流
 topic: overview
 type: Tutorial
 translation-type: tm+mt
-source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
+source-git-commit: 2514c282d16a1b6ddb2232e46e6283ab2ab3d356
 workflow-type: tm+mt
-source-wordcount: '1097'
+source-wordcount: '1103'
 ht-degree: 1%
 
 ---
@@ -25,7 +25,7 @@ Adobe Experience Platform中的來源連接器可讓您依計畫吸收外部來�
 - [[!DNL Experience Data Model] (XDM)系統](../../../xdm/home.md):組織客戶體驗資料 [!DNL Experience Platform] 的標準化架構。
    - [架構構成基礎](../../../xdm/schema/composition.md):瞭解XDM架構的基本建置區塊，包括架構組合的主要原則和最佳實務。
    - [架構編輯器教程](../../../xdm/tutorials/create-schema-ui.md):瞭解如何使用架構編輯器UI建立自訂架構。
-- [[!DNL即時客戶基本資料]](../../../profile/home.md):根據來自多個來源的匯整資料，提供統一、即時的消費者個人檔案。
+- [[!DNL Real-time Customer Profile]](../../../profile/home.md):根據來自多個來源的匯整資料，提供統一、即時的消費者個人檔案。
 
 ## 監控帳戶
 
@@ -54,6 +54,10 @@ Adobe Experience Platform中的來源連接器可讓您依計畫吸收外部來�
 ![](../../images/tutorials/monitor/click-edit.png)
 
 此時會 **[!UICONTROL 顯示「編輯帳戶]** 」詳細資訊模式。 從本頁，您可以更新現有帳戶詳細資訊和驗證憑證。
+
+>[!NOTE]
+>
+> 編輯帳戶詳細資訊適用於所有批次來源連接器。
 
 ![](../../images/tutorials/monitor/edit-account.png)
 
