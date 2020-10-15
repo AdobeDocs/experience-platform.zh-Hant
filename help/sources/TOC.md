@@ -1,14 +1,14 @@
 ---
 product: experience-platform
 audience: user
-user-guide-title: Adobe Experience Platform來源連接器說明
-breadcrumb-title: Source Connectors Guide
-user-guide-description: Ingest data from a variety of sources or structure, label, and enhance already ingested data.
+user-guide-title: Adobe Experience Platform 來源連接器說明
+breadcrumb-title: Source Connectors 指南
+user-guide-description: 從多種來源或結構擷取資料、加標籤，以及增強已擷取的資料。
 translation-type: tm+mt
 source-git-commit: da0c65b5afc19e2497816c4b84270f5f5c4617f2
 workflow-type: tm+mt
-source-wordcount: '627'
-ht-degree: 0%
+source-wordcount: '645'
+ht-degree: 4%
 
 ---
 
