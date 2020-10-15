@@ -2,13 +2,13 @@
 product: experience-platform
 audience: user
 user-guide-title: Adobe Experience Platform決策服務
-breadcrumb-title: Decisioning Service Guide
-user-guide-description: Create personalized, optimized, and orchestrated experiences in Adobe applications by determining the best option from a set of available choices.
+breadcrumb-title: 決策服務指南
+user-guide-description: 從一組可用選項中決定最佳選項，在Adobe應用程式中建立個人化、最佳化和協調的體驗。
 translation-type: tm+mt
 source-git-commit: ee0272c36259d5d6fcf7896e1cff166ebd404acd
 workflow-type: tm+mt
-source-wordcount: '53'
-ht-degree: 5%
+source-wordcount: '76'
+ht-degree: 3%
 
 ---
 
