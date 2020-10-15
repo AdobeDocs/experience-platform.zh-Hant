@@ -1,19 +1,19 @@
 ---
-title: 除錯
+title: 為  除錯
 seo-title: Adobe Experience Platform Web SDK除錯
 description: 瞭解如何切換Experience Platform Web SDK除錯
 seo-description: 瞭解如何切換Experience Platform Web SDK除錯
 keywords: debugging web sdk;debugging;configure;configure command;debug command;edgeConfigId;setDebug;debugEnabled;debug;
 translation-type: tm+mt
-source-git-commit: 8c256b010d5540ea0872fa7e660f71f2903bfb04
+source-git-commit: e21374eb51ec1d572f6a4973d33cadf9ae17969b
 workflow-type: tm+mt
-source-wordcount: '324'
+source-wordcount: '384'
 ht-degree: 0%
 
 ---
 
 
-# 除錯
+# 為  除錯
 
 啟用除錯時，SDK會將訊息輸出至瀏覽器主控台，以協助除錯您的實作並瞭解SDK的運作方式。 除錯也會針對您所設定的架構，產生伺服器端同步驗證所收集的資料。
 
@@ -68,3 +68,17 @@ http://example.com/?alloy_debug=true
 * 課程結束
 * 運行命 `debug` 令
 * 您再次設定查詢字串參數
+
+## 檢索庫資訊
+
+存取您載入網站之資料庫後的部分詳細資訊通常很實用。 要執行此操作，請按如 `getLibraryInfo` 下方式執行命令：
+
+```js
+alloy("getLibraryInfo").then(function(libraryInfo) {
+  console.log(libraryInfo.version);
+});
+```
+
+目前，提供的 `libraryInfo` 物件包含下列屬性：
+
+* `version` 這是載入的程式庫版本。 例如，如果要載入的程式庫版本為1.0.0，則值會是 `1.0.0`。
