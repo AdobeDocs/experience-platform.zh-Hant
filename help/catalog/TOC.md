@@ -1,13 +1,13 @@
 ---
 product: experience-platform
 audience: user
-user-guide-title: 目錄和資料集指南
-user-guide-description: Explore data lineage, metadata, file descriptions, directories, and datasets within the Data Lake.
+user-guide-title: Catalog and Datasets 指南
+user-guide-description: 在 Data Lake 中探索資料處理歷程、中繼資料、檔案說明、目錄和資料集。
 translation-type: tm+mt
 source-git-commit: 4e358fda1c8f7aebe57a009a146b8b73cf88e169
 workflow-type: tm+mt
-source-wordcount: '93'
-ht-degree: 5%
+source-wordcount: '106'
+ht-degree: 20%
 
 ---
 
