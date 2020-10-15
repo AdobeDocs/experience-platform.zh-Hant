@@ -5,9 +5,9 @@ description: '瞭解如何設定Experience Platform Edge Network。 '
 seo-description: '瞭解如何設定Experience Platform Edge Network。 '
 keywords: configuration;edge;edge configuration id;Environment Settings;edgeConfigId;identity;id sync enabled;ID Sync Container ID;Sandbox;Streaming Inlet;Event Dataset;target;client code;Property Token;Target Environment ID;Cookie Destinations;url Destinations;Analytics Settings Blockreport suite id;
 translation-type: tm+mt
-source-git-commit: 34cfcaac276bf2645a0365a0dfa71c4ead6e2ecb
+source-git-commit: d069b3007265406367ca9de2b85540b2a070cf36
 workflow-type: tm+mt
-source-wordcount: '870'
+source-wordcount: '891'
 ht-degree: 2%
 
 ---
@@ -17,21 +17,23 @@ ht-degree: 2%
 
 Adobe Experience Platform的設定分 [!DNL Web SDK] 為兩個位置。 SDK [中的configure命令](configuring-the-sdk.md) ，可控制用戶端上必須處理的事項，例如 `edgeDomain`。 邊緣設定可處理SDK的所有其他設定。 當請求傳送至Adobe Experience Platform時， [!DNL Edge Network]會 `edgeConfigId` 用來參考伺服器端組態。 這可讓您更新設定，而不需在網站上變更程式碼。
 
+您的組織必須已布建此功能。 請連絡您的認證軟體管理員(CSM)，以加入允許清單。
+
 ## 建立邊配置ID
 
-Edge組態ID可在Adobe中使 [!DNL Launch] 用Edge組態工具建立。 此工具可讓您同時建立邊緣組態以及這些組態中的環境。
+Edge組態ID可在Adobe中使 [!DNL Experience Platform Launch] 用Edge組態工具建立。 此工具可讓您同時建立邊緣組態以及這些組態中的環境。
 
 ![邊緣配置工具導航](../../assets/edge_configuration_nav.png)
 
 >[!NOTE]
 >
->無論客戶是否使用標籤管理器，允許清單上的邊緣設定工具 [!DNL Launch] 都可供客戶使用。 此外，使用者需要中的「開發」權限 [!DNL Launch]。 如需詳細 [資訊，請參閱](https://docs.adobe.com/content/help/zh-Hant/launch/using/reference/admin/user-permissions.html) 「使用者 [!DNL Launch] 權限」文章。
+>無論客戶是否使用標籤管理器，允許清單上的邊緣設定工具 [!DNL Experience Platform Launch] 都可供客戶使用。 此外，使用者需要中的「開發」權限 [!DNL Experience Platform Launch]。 如需詳細 [資訊，請參閱](https://docs.adobe.com/content/help/zh-Hant/launch/using/reference/admin/user-permissions.html) 「使用者 [!DNL Experience Platform Launch] 權限」文章。
 
 您可以按一下畫面右上方區域 **[!UICONTROL 的「新增邊緣設定」]** ，建立邊緣設定。 在您提供名稱和說明後，系統會要求您針對每個環境提供預設設定。
 
 ### 預設環境設定
 
-這些預設設定可用來建立前三個設定相同的環境。 這三種環境 *包括* dev、 *stage*&#x200B;和 *prod*。 它們與中的三個預設環境相匹配 [!DNL Launch]。 當您建立程式庫 [!DNL Launch] 至開發環境時，程式庫會自動使用您設定中的開發環境。 您可以視需要編輯個別環境中的設定。
+這些預設設定可用來建立前三個設定相同的環境。 這三種環境 *包括* dev、 *stage*&#x200B;和 *prod*。 它們與中的三個預設環境相匹配 [!DNL Experience Platform Launch]。 當您建立程式庫 [!DNL Experience Platform Launch] 至開發環境時，程式庫會自動使用您設定中的開發環境。 您可以視需要編輯個別環境中的設定。
 
 SDK中使用的ID是指 `edgeConfigId` 定配置和環境的複合ID。 如果沒有環境，則使用生產環境。
 
@@ -113,7 +115,7 @@ Adobe建議您對每個、和邊緣組態環境 `dev`設定 `stage`此 `prod` �
 
 #### Adobe Analytics
 
-控制資料是否傳送至Adobe Analytics。 其他詳細資訊請參閱 [Analytics概述](../solution-specific/analytics/analytics-overview.md)。
+控制資料是否傳送至Adobe Analytics。 其他詳細資訊請參閱 [Analytics概述](../data-collection/adobe-analytics/analytics-overview.md)。
 
 ![Adobe Analytics設定區塊](../../assets/edge_configuration_aa.png)
 
