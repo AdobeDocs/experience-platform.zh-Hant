@@ -5,10 +5,10 @@ user-guide-title: Adobe Experience Platform 網頁 SDK 說明
 breadcrumb-title: Web SDK 指南
 user-guide-description: 透過 Edge 網路與 Experience Cloud 服務互動。
 translation-type: tm+mt
-source-git-commit: 67928b35416928947a4b288d9aea92a065f080f6
+source-git-commit: 233bbd33e3d1e89ff67a9daa00372732934ac573
 workflow-type: tm+mt
-source-wordcount: '128'
-ht-degree: 29%
+source-wordcount: '117'
+ht-degree: 32%
 
 ---
 
@@ -16,41 +16,37 @@ ht-degree: 29%
 # Adobe Experience Platform Web SDK {#edge}
 
 * [網頁SDK概觀](home.md)
-* 快速入門 {#get-started}
-   * [Launch快速入門](getting-started/quick-start-with-launch.md)
-   * [不需Launch即可快速入門](getting-started/quick-start-without-launch.md)
 * 基礎 {#fundamentals}
-   * [安裝SDK](fundamentals/installing-the-sdk.md)
-   * [執行命令](fundamentals/executing-commands.md)
+   * [先決條件](fundamentals/prerequisite.md)
    * [設定Edge](fundamentals/edge-configuration.md)
+   * [安裝SDK](fundamentals/installing-the-sdk.md)
    * [設定SDK](fundamentals/configuring-the-sdk.md)
+   * [執行命令](fundamentals/executing-commands.md)
    * [追蹤事件](fundamentals/tracking-events.md)
-   * [合併事件資料](fundamentals/merging-event-data.md)
    * [為 ](fundamentals/debugging.md) 除錯
+   * [合併事件資料](fundamentals/merging-event-data.md)
    * [與多個屬性互動](fundamentals/interacting-with-multiple-properties.md)
-   * [呈現個人化內容](fundamentals/rendering-personalization-content.md)
-   * [支援許可](fundamentals/supporting-consent.md)
-   * [身份](fundamentals/identity.md)
-* 實作內容 {#implement}
-   * [產品](what-to-implement/commerce.md)
-* 解決方案特定考量事項 {#solutions}
-   * Analytics {#analytics}
-      * [Analytics概觀](solution-specific/analytics/analytics-overview.md)
-      * [在Analytics中手動對應變數](solution-specific/analytics/manually-mapping-variables.md)
-      * [自動映射的變數](solution-specific/analytics/automatically-mapped-vars.md)
-      * [傳送資料至Adobe Analytics](solution-specific/analytics/link-tracking.md)
-   * Audience Manager {#aam}
-      * [Audience Manager 概述](solution-specific/audience-manager/audience-manager-overview.md)
+* 身份 {#identity}
+   * [概述](identity/overview.md)
+* 資料彙集 {#data-collection}
+   * [自動收集的資訊](data-collection/automatic-information.md)
+   * [追蹤連結](data-collection/track-links.md)
+   * [收集商務和產品資料](data-collection/collect-commerce-data.md)
+   * Adobe Analytics {#adobe-analytics}
+      * [Analytics 概述](data-collection/adobe-analytics/analytics-overview.md)
+      * [在Adobe Analytics中手動對應變數](data-collection/adobe-analytics/manually-mapping-variables.md)
+      * [自動映射的變數](data-collection/adobe-analytics/automatically-mapped-vars.md)
+      * [傳送資料至Adobe Analytics](data-collection/adobe-analytics/sending-data-to-analytics.md)
+* 個性化 {#personalization}
+   * [呈現個人化內容](personalization/rendering-personalization-content.md)
+   * [管理閃爍](personalization/manage-flicker.md)
+   * Adobe Target {#adobe-target}
+      * [Target 概述](personalization/adobe-target/target-overview.md)
+* 同意 {#consent}
+   * [支援許可](consent/supporting-consent.md)
    * IAB透明與同意框架2.0 {#iab-tcf}
-      * [概述](solution-specific/iab-tcf/overview.md)
-      * [與Launch整合](solution-specific/iab-tcf/with-launch.md)
-      * [不需Launch就能整合](solution-specific/iab-tcf/without-launch.md)
-   * Target {#target}
-      * [Target 概述](solution-specific/target/target-overview.md)
-      * [閃爍管理](solution-specific/target/flicker-management.md)
-* 參考 {#ref}
-   * [自動收集的資訊](reference/automatic-information.md)
-   * [檢索庫資訊](reference/retrieving-library-information.md)
+      * [概述](consent/iab-tcf/overview.md)
+      * [與Adobe Experience Platform Launch整合](consent/iab-tcf/with-launch.md)
+      * [不需Adobe Experience Platform Launch即可整合](consent/iab-tcf/without-launch.md)
 * [發行說明](release-notes.md)
-* [平台版本注意事項](https://www.adobe.com/go/platform-release-notes-en)
-* [常見問題集](getting-started/web-sdk-faq.md)
+* [常問的問題](web-sdk-faq.md)
