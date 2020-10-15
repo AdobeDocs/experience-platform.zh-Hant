@@ -5,9 +5,9 @@ description: 瞭解如何追蹤Experience Platform Web SDK活動
 seo-description: 瞭解如何追蹤Experience Platform Web SDK活動
 keywords: sendEvent;xdm;eventType;datasetId;sendBeacon;send Beacon;documentUnloading;document Unloading;onBeforeEventSend;
 translation-type: tm+mt
-source-git-commit: 69ddfca041624123b03eb01d0f10a5bdb36cd119
+source-git-commit: db742119d8f169817080f1fd4e0dc08a0f0faa47
 workflow-type: tm+mt
-source-wordcount: '1116'
+source-wordcount: '1139'
 ht-degree: 0%
 
 ---
@@ -54,7 +54,7 @@ alloy("sendEvent", {
 
 ### 設定 `eventType`
 
-在XDM體驗事件中，有一個選填欄 `eventType` 位。 這保存記錄的主要事件類型。 設定事件類型可協助您區分要傳入的不同事件。 XDM提供幾種預先定義的事件類型，您可以使用這些類型，或隨時為您的使用案例建立您自己的自訂事件類型。 以下是XDM提供的所有預先定義事件類型的清單。
+在XDM體驗事件中，有一個選填欄 `eventType` 位。 這保存記錄的主要事件類型。 設定事件類型可協助您區分要傳入的不同事件。 XDM提供幾種預先定義的事件類型，您可以使用這些類型，或隨時為您的使用案例建立您自己的自訂事件類型。 以下是XDM提供的所有預先定義事件類型的清單。 [閱讀XDM公開回購的更多資訊](https://github.com/adobe/xdm/blob/master/docs/reference/behaviors/time-series.schema.md#xdmeventtype-known-values)
 
 
 | **事件類型:** | **定義:** |
@@ -83,7 +83,7 @@ alloy("sendEvent", {
 | delivery.feedback | 提供意見回應事件。 電子郵件傳送的範例意見回應事件 |
 
 
-如果使用Launch擴充功能，這些事件類型會顯示在下拉式清單中，或者您隨時都可以在沒有Launch的情況下傳遞。 這些項目可作為選項的一部分 `xdm` 傳入。
+如果使用Adobe Experience Platform Launch擴充功能，或者您隨時都可以在沒有Experience Platform Launch的情況下傳遞這些事件類型，這些事件類型會顯示在下拉式清單中。 這些項目可作為選項的一部分 `xdm` 傳入。
 
 
 ```javascript
@@ -131,7 +131,7 @@ alloy("sendEvent", {
 
 ### 添加身份資訊
 
-自訂身分資訊也可以新增至事件。 請參 [閱擷取Experience Cloud ID](./identity.md)
+自訂身分資訊也可以新增至事件。 請參 [閱擷取Experience Cloud ID](../identity/overview.md)
 
 ## 使用sendBeacon API
 
@@ -205,7 +205,7 @@ alloy("configure", {
 `xdm` 欄位依此順序設定：
 
 1. 作為選項傳入事件命令的值 `alloy("sendEvent", { xdm: ... });`
-2. 自動收集的值。  (請參閱 [自動資訊](../reference/automatic-information.md)。)
+2. 自動收集的值。  (請參閱 [自動資訊](../data-collection/automatic-information.md)。)
 3. 回呼中所做的 `onBeforeEventSend` 變更。
 
 如果回 `onBeforeEventSend` 呼引發例外，事件仍會傳送；不過，回呼中所做的變更不會套用至最終事件。
