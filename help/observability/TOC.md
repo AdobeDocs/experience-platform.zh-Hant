@@ -1,18 +1,18 @@
 ---
 product: experience-platform
 audience: user
-user-guide-title: 可觀性分析指南
-user-guide-description: Monitor Platform activities through the use of statistical metrics and event notifications.
+user-guide-title: Observability Insights 指南
+user-guide-description: 透過使用統計量度和事件通知來監控 Platform 活動。
 translation-type: tm+mt
 source-git-commit: 72b2172bbcc8613a2030b4784270321c3933f6aa
 workflow-type: tm+mt
-source-wordcount: '43'
-ht-degree: 18%
+source-wordcount: '55'
+ht-degree: 45%
 
 ---
 
 
-# 可觀性見解 {#observability}
+# 可觀察性深入分析 {#observability}
 
 * [可觀性見解概觀](home.md)
 * 可觀性分析API開發人員指南 {#api}
