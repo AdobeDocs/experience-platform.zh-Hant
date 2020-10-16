@@ -5,7 +5,7 @@ title: Adobe Experience Platform檔案總覽
 topic: overview
 description: Adobe Experience Platform檔案提供多種格式，包括使用者介面和API的概觀、教學課程和指南。 以下是Experience Platform服務最常用的檔案類型簡介。
 translation-type: tm+mt
-source-git-commit: 13aa49c28db0818df5d47560ae7a220d0790610f
+source-git-commit: 36707e95a63b6be60d1d7badbe1cdc9d0bc3548c
 workflow-type: tm+mt
 source-wordcount: '1035'
 ht-degree: 1%
@@ -31,7 +31,7 @@ Adobe Experience Platform檔案提供多種格式，包括使用者介面和API�
 
 * **教學課程：** 教學課程是UI、API或兩者混合的逐步指南，可產生特定結果。 與開發人員指南不同，API教學課程只能針對一或兩個端點，而非完整的API資源。 同樣地，UI教學課程可能只針對特定步驟，而非該服務提供的完整使用者介面。 教學課程通常是大型工作流程的一部分，並提供「後續步驟」功能，說明您接下來要嘗試哪些教學課程。
 
-* **使用指南：** 使用者指南概述特定服務 [!DNL Platform] UI中可用的動作。 這些檔案包含螢幕擷取畫面和透過使用者介面與平台互動的步驟。 與開發人員指南類似，使用者指南概述所有可用的動作和選項，包括要避免的「疑問」。 這是使用UI時最詳細的資源。
+* **UI指南：** UI指南概述特定服務的使 [!DNL Platform] 用者介面中可用的動作。 這些檔案包含螢幕擷取畫面和透過UI與平台互動的步驟。 與開發人員指南類似，UI指南會概述所有可用動作和選項，包括要避免的「疑問」。 這是使用UI時最詳細的資源。
 
 ## 檔案語言支援
 
@@ -63,6 +63,6 @@ Adobe Experience Platform服務和下列功能目前提供說明檔案。 您可
 * **[!DNL Query Service]:** 使用SQL查詢從Adobe Experience Platform擷取資料，例如Adobe解決方案資料、客戶第一方資料或任何其他平台資料。
 * **[!DNL Real-time Customer Data Platform]:** 即時CDP結合了多個企業資料源，以即時建立統一的配置檔案，可用於跨所有通道和設備提供一對一的個性化客戶體驗。
 * **[!DNL Sandboxes]:** 沙盒將單一執行個體 [!DNL Platform] 分割為不同的虛擬環境，以協助開發和發展數位體驗應用程式。
+* **結構**:在Adobe的推動下，Experience Data Model(XDM)致力於標準化客戶體驗資料並定義客戶體驗管理的架構。 XDM架構支援跨元件的資料互 [!DNL Experience Platform] 操作性。
 * **[!DNL Segmentation]:** 根據即時客戶個人檔案資料建立細分，以產生受眾並強化消費者體驗。
 * **[!DNL Sources]（連線）:**{#sources} 從多種來源（例如Adobe應用程式、雲端儲存空間、資料庫等）將資料匯入Adobe Experience Platform。
-* **結構**:在Adobe的推動下，Experience Data Model(XDM)致力於標準化客戶體驗資料並定義客戶體驗管理的架構。 XDM架構支援跨元件的資料互 [!DNL Experience Platform] 操作性。
