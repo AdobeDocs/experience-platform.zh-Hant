@@ -9,9 +9,9 @@ doc-type: video
 activity: understand
 thumbnail: 32792.jpg
 translation-type: tm+mt
-source-git-commit: 13aa49c28db0818df5d47560ae7a220d0790610f
+source-git-commit: 86d6476877eb7a0413658e476802a1cd8905dcc3
 workflow-type: tm+mt
-source-wordcount: '87'
+source-wordcount: '105'
 ht-degree: 0%
 
 ---
@@ -20,5 +20,10 @@ ht-degree: 0%
 # Experience Platform UI指南
 
 此影片提供Adobe Experience Platform使用者介面(UI)的快速導覽，包括示範如何從Experience Cloud導覽至Experience Platform、與首頁互動、切換沙盒，以及如何使用UI中的各種導覽元素。
+
+>[!NOTE]
+>
+>Experience Platform使用者介面經常更新，自錄制此視訊後可能已變更。
+
 
 >[!VIDEO](https://video.tv.adobe.com/v/32792?quality=12&learn=on)
