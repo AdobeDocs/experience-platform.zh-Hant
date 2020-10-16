@@ -5,9 +5,9 @@ title: Adobe Experience Platform UI指南
 topic: ui guide
 description: 'Adobe Experience Platform '
 translation-type: tm+mt
-source-git-commit: 84f1f840e15cb4487807c13131d0787772fa063a
+source-git-commit: bde9763aafb4ba32877f7ec14873eeae99760a45
 workflow-type: tm+mt
-source-wordcount: '1586'
+source-wordcount: '1597'
 ht-degree: 0%
 
 ---
@@ -111,7 +111,7 @@ ht-degree: 0%
 
 「首 **[!UICONTROL 頁]** 」區段可讓您返回平台UI首頁。
 
-「工 **[!UICONTROL 作流程]** 」區段顯示在「平台」中執行操作的多步驟工作流程清單。
+「工 **[!UICONTROL 作流程]** 」區段顯示在「平台」中執行操作的多步驟工作流程清單。 有關工作流程的詳細資訊，請參閱工作 [流程概觀](./workflows.md)。
 
 ### [!UICONTROL 連線]
 
@@ -127,7 +127,7 @@ ht-degree: 0%
 
 「身 **[!UICONTROL 分識別]** 」區段可讓您建立和管理身分識別名稱空間。 如需有關「身分 [!UICONTROL 識別] 」區段的詳細資訊，包括有關身分識別名稱空間以及如何在平台UI中使用身分識別的資訊，請參閱 [身分識別名稱空間總覽](../identity-service/namespaces.md)。
 
-### [!UICONTROL 隱私]
+### [!UICONTROL 隱私權]
 
 「原 **[!UICONTROL 則]** 」區段可讓您建立和管理資料使用原則。 若要進一步瞭解如何使用「原則」區段，請閱讀資 [料使用原則使用指南](../data-governance/policies/user-guide.md)。 有關資料使用原則的詳細資訊，請參閱資 [料使用原則概觀](../data-governance/policies/overview.md)。
 
