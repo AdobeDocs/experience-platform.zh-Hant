@@ -1,0 +1,31 @@
+---
+keywords: Experience Platform;home;popular topics;schema;Schema;XDM;ExperienceEvent;fields;schemas;Schemas;Schema design;mixin;mixin;environment;environment details;
+solution: Experience Platform
+title: ExperienceEvent環境詳細資訊混合
+topic: overview
+description: 本檔案提供ExperienceEvent環境詳細資訊混合的概觀。
+translation-type: tm+mt
+source-git-commit: f5bddb39c16eb25e85297f56e331d3aa51510eb9
+workflow-type: tm+mt
+source-wordcount: '165'
+ht-degree: 2%
+
+---
+
+
+# [!UICONTROL ExperienceEvent環境詳細資訊] mixin
+
+[!UICONTROL ExperienceEvent環境詳細資訊][[!DNL XDM ExperienceEvent] ](../../classes/individual-profile.md) ，是用於擷取與「體驗事件」相關之環境詳細資訊（例如裝置詳細資訊、瀏覽器資訊、當地時間和其他地理資訊）的類別的標準組合。
+
+<img src="../../images/mixins/environment-details.png" width="500" /><br />
+
+| 屬性 | 資料類型 | 說明 |
+| --- | --- | --- |
+| `device` | [裝置](../../data-types/device.md) | 說明已識別的裝置、應用程式或裝置瀏覽器例項，可跨作業追蹤，通常由Cookie追蹤。 |
+| `environment` | [環境](../../data-types/environment.md) | 說明事件觀察的情境相關資訊，尤其詳細說明網路或軟體版本等暫存性資訊。 |
+| `placeContext` | [置入內容](../../data-types/place-context.md) | 說明與事件觀察相關的暫時情況。 例如，地區特定資訊，例如天氣、當地時間、流量、一週中的某天、工作日與假日，以及工作時數。 |
+
+有關混音的詳細資訊，請參閱公用XDM存放庫：
+
+* [填入的範例](https://github.com/adobe/xdm/blob/master/components/mixins/experience-event/experienceevent-environment-details.example.1.json)
+* [完整架構](https://github.com/adobe/xdm/blob/master/components/mixins/experience-event/experienceevent-environment-details.schema.json)
