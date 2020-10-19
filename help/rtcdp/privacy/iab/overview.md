@@ -220,7 +220,7 @@ alloy("sendEvent", {
 | `consentStringValue` | 由CMP生成的基本-64編碼的許可字串。 |
 | `gdprApplies` | 一個布爾值，它指示GDPR是否適用於當前登錄的客戶。 要為此客戶強制執行TCF 2.0，必須將值設定為&quot;true&quot;。 |
 
-### 處理SDK回應
+### 處理SDK回應 {#sdk-1}
 
 所有 [!DNL Platform SDK] 命令都返回表明呼叫是成功還是失敗的承諾。 然後，您可以將這些回應用於其他邏輯，例如向客戶顯示確認訊息。 如需特定範例， [請參閱執行SDK指令之指南](../../../edge/fundamentals/executing-commands.md#handling-success-or-failure) 中有關處理成功或失敗的章節。
 

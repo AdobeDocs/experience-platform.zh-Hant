@@ -39,7 +39,7 @@ ht-degree: 0%
 
 有兩種方式可將量度引入方式。 一種是使用SDK提供的預設評估量度，另一種是編寫自訂評估量度。
 
-#### Scala的預設評估量度
+#### Scala的預設評估量度 {#scala-1}
 
 預設評估會計算為分類演算法的一部分。 以下是目前實作的評估工具的一些預設值：
 
@@ -83,7 +83,7 @@ evaluation.metrics=com.adobe.platform.ml.impl.Constants.FSCORE
 | `RecommendationsEvaluator` | -平均平均精度(MAP) <br>-標準化累積增益 <br>-平均倒數排名 <br>-度量K | -`MEAN_AVERAGE_PRECISION` <br>-`NDCG` <br>-`MRR` <br>-`METRIC_K` |
 
 
-#### Scala的自訂評估量度
+#### Scala的自訂評估量度 {#scala-1-1}
 
 自訂求值器可延伸檔案中的介 `MLEvaluator.scala` 面來 `Evaluator.scala` 提供。 在範例 [Evaluator.scala](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/scala/src/main/scala/com/adobe/platform/ml/Evaluator.scala) 檔案中，我們定義自訂 `split()` 和函 `evaluate()` 數。 我們 `split()` 的函式會以8:2的比率隨機分割資料，而我們的函式會 `evaluate()` 定義並傳回3個量度：MAPE、MAE和RMSE。
 
@@ -145,7 +145,7 @@ class Evaluator(AbstractEvaluator):
 
 目前，R沒有預設的評估量度。因此，若要取得R的評量度，您必須將類別定 `applicationEvaluator` 義為方式的一部分。
 
-#### R的自訂評估量度
+#### R的自訂評估量度 {#r-1}
 
 其主要用途 `applicationEvaluator` 是傳回包含量度鍵值配對的JSON物件。
 
