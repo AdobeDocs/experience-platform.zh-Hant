@@ -5,7 +5,7 @@ title: 興趣點互動資料類型
 topic: overview
 description: 本檔案提供興趣點互動XDM資料類型的概觀。
 translation-type: tm+mt
-source-git-commit: f5bddb39c16eb25e85297f56e331d3aa51510eb9
+source-git-commit: 032adc72db7f094b268f14e8f7d48810830a84e4
 workflow-type: tm+mt
 source-wordcount: '162'
 ht-degree: 2%
@@ -21,7 +21,7 @@ ht-degree: 2%
 
 | 屬性 | 資料類型 | 說明 |
 | --- | --- | --- |
-| `poiDetail` | [!UICONTROL 興趣點詳細資訊](./poi-details.md) | 說明導致事件的POI的詳細資訊。 |
+| `poiDetail` | [[!UICONTROL 興趣點詳細資訊]](./poi-details.md) | 說明導致事件的POI的詳細資訊。 |
 | `poiEntries` | 物件 | 說明人員輸入POI的次數。 包含兩個屬性： <ul><li>`id`:度量的唯一標識符。</li><li>`value`:度量的可量化值。</li></ul> |
 | `poiExits` | 物件 | 說明人員退出POI的次數。 包含兩個屬性： <ul><li>`id`:度量的唯一標識符。</li><li>`value`:度量的可量化值。</li></ul> |
 
