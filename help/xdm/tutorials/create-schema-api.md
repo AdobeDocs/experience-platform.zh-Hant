@@ -6,9 +6,9 @@ topic: tutorial
 type: Tutorials
 description: 本教程使用方案註冊表API來引導您完成使用標準類合成方案的步驟。
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: de3d3a12e5e362bfa5d3149481a0eb7a6b278b70
 workflow-type: tm+mt
-source-wordcount: '2368'
+source-wordcount: '2343'
 ht-degree: 1%
 
 ---
@@ -24,10 +24,10 @@ ht-degree: 1%
 
 本指南需要有效瞭解Adobe Experience Platform的下列元件：
 
-* [[!DNL體驗資料模型(XDM)系統]](../home.md):組織客戶體驗資料 [!DNL Experience Platform] 的標準化架構。
+* [[!DNL Experience Data Model (XDM) System]](../home.md):組織客戶體驗資料 [!DNL Experience Platform] 的標準化架構。
    * [架構構成基礎](../schema/composition.md):瞭解XDM架構的基本建置區塊，包括架構組合的主要原則和最佳實務。
-* [[!DNL即時客戶基本資料]](../../profile/home.md):根據來自多個來源的匯整資料，提供統一、即時的消費者個人檔案。
-* [[!DNL沙盒]](../../sandboxes/home.md): [!DNL Experience Platform] 提供虛擬沙盒，可將單一執行個體分 [!DNL Platform] 割為不同的虛擬環境，以協助開發和發展數位體驗應用程式。
+* [[!DNL Real-time Customer Profile]](../../profile/home.md):根據來自多個來源的匯整資料，提供統一、即時的消費者個人檔案。
+* [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform] 提供虛擬沙盒，可將單一執行個體分 [!DNL Platform] 割為不同的虛擬環境，以協助開發和發展數位體驗應用程式。
 
 在開始本教學課程之前，請先閱讀開 [發人員指南](../api/getting-started.md) ，以取得成功呼叫 [!DNL Schema Registry] API所需的重要資訊。 這包括您 `{TENANT_ID}`的「容器」概念，以及提出要求所需的標題（請特別注意「接受」標題及其可能的值）。
 
@@ -956,9 +956,9 @@ curl -X PATCH \
 
 ### 定義身份描述符
 
-結構描述用於將資料吸收到中 [!DNL Experience Platform]。 這些資料最終會用於多個服務，以建立個人的單一統一檢視。 為協助處理此程式，關鍵欄位可標示為「身分」，而且在擷取資料時，這些欄位中的資料會插入該個人的「身分圖表」中。 然後，圖表資料可由 [[!DNL即時客戶資料]](../../profile/home.md)[!DNL Experience Platform] 和其他服務存取，以提供每個個別客戶的銜接檢視。
+結構描述用於將資料吸收到中 [!DNL Experience Platform]。 這些資料最終會用於多個服務，以建立個人的單一統一檢視。 為協助處理此程式，關鍵欄位可標示為「身分」，而且在擷取資料時，這些欄位中的資料會插入該個人的「身分圖表」中。 圖形資料隨後可由和其他服 [[!DNL Real-time Customer Profile]](../../profile/home.md) 務訪問， [!DNL Experience Platform] 以提供每個客戶的拼接視圖。
 
-通常標示為「身分」的欄位包括：電子郵件地址、電 [話號碼、[!DNL Experience Cloud ID(ECID)]](https://docs.adobe.com/content/help/zh-Hant/id-service/using/home.html)、CRM ID或其他唯一ID欄位。
+通常標示為「身分」的欄位包括：電子郵件地址、電話號碼、 [[!DNL Experience Cloud ID (ECID)]](https://docs.adobe.com/content/help/zh-Hant/id-service/using/home.html)CRM ID或其他唯一ID欄位。
 
 請考慮您組織專屬的任何唯一識別碼，因為這些識別碼可能也是好的識別碼欄位。
 
@@ -997,7 +997,7 @@ curl -X POST \
 
 >[!NOTE]
 >
->您可以使用 [[!DNL Identity Service API]列出可用的&quot;xdm:namespace&quot;值，或建立新值](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/id-service-api.yaml)。 「xdm:property」的值可以是&quot;xdm:code&quot;或&quot;xdm:id&quot;，視使用的&quot;xdm:namespace&quot;而定。
+>您可以列出可用的&quot;xdm:namespace&quot;值，或使用建立新值 [[!DNL Identity Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/id-service-api.yaml)。 「xdm:property」的值可以是&quot;xdm:code&quot;或&quot;xdm:id&quot;，視使用的&quot;xdm:namespace&quot;而定。
 
 **回應**
 
@@ -1614,7 +1614,7 @@ curl -X GET \
                 "stateProvince": {
                     "title": "State or province",
                     "type": "string",
-                    "description": "The state, or province portion of the observation. The format follows the [ISO 3166-2 (country and subdivision)][http://www.unece.org/cefact/locode/subdivisions.html] standard.",
+                    "description": "The state, or province portion of the observation. The format follows the ISO 3166-2 (country and subdivision) standard.",
                     "examples": [
                         "US-CA",
                         "DE-BB",
