@@ -5,9 +5,9 @@ title: 導出作業端點
 topic: developer guide
 description: 匯出工作是非同步程式，用來將讀者區段成員持續存留至資料集。 您可以使用Adobe Experience Platform Segmentation API中的/export/jobs端點，此端點可讓您以程式設計方式擷取、建立和取消匯出工作。
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: 783fa7ff0c22143a21c4f666c956c8b4d956189e
 workflow-type: tm+mt
-source-wordcount: '1561'
+source-wordcount: '1666'
 ht-degree: 2%
 
 ---
@@ -202,7 +202,7 @@ curl -X GET https://platform.adobe.io/data/core/ups/export/jobs?limit=2 \
 | `destination` | 匯出資料的目標資訊：<ul><li>`datasetId`:匯出資料的資料集的ID。</li><li>`segmentPerBatch`:顯示區段ID是否整合的布林值。 值「false」表示所有區段ID都會匯出為單一批次ID。 值&quot;true&quot;表示將一個區段ID匯出為一個批次ID。 **注意：** 將值設為true可能會影響批次匯出效能。</li></ul> |
 | `fields` | 匯出欄位的清單，以逗號分隔。 |
 | `schema.name` | 與要導出資料的資料集關聯的方案的名稱。 |
-| `filter.segments` | 匯出的區段。 包含下列欄位：<ul><li>`segmentId`:將描述檔匯出至的區段ID。</li><li>`segmentNs`:指定的區段名稱空間 `segmentID`。</li><li>`status`:為提供狀態過濾器的字串陣列 `segmentID`。 依預設， `status` 將會有值， `["realized", "existing"]` 代表目前時段屬於區段的所有描述檔。 可能的值包括：「已實現」、「現有」和「已退出」。</li></ul> |
+| `filter.segments` | 匯出的區段。 包含下列欄位：<ul><li>`segmentId`:將描述檔匯出至的區段ID。</li><li>`segmentNs`:指定的區段名稱空間 `segmentID`。</li><li>`status`:為提供狀態過濾器的字串陣列 `segmentID`。 依預設， `status` 將會有值， `["realized", "existing"]` 代表目前時段屬於區段的所有描述檔。 可能的值包括：「已實現」、「現有」和「已退出」。 值「已實現」表示描述檔正在進入區段。 值「現有」表示描述檔仍繼續在區段中。 值「退出」表示描述檔正在退出區段。</li></ul> |
 | `mergePolicy` | 合併已導出資料的策略資訊。 |
 | `metrics.totalTime` | 一個欄位，指示導出作業所用的總時間。 |
 | `metrics.profileExportTime` | 一個欄位，指示導出配置檔案所花費的時間。 |
@@ -281,7 +281,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/export/jobs \
 | `fields` | 匯出欄位的清單，以逗號分隔。 如果保留為空白，則將導出所有欄位。 |
 | `mergePolicy` | 指定用於管理導出資料的合併策略。 當有多個區段要匯出時，請加入此參數。 如果未提供，則匯出會採用與指定區段相同的合併政策。 |
 | `filter` | 指定將依ID、資格時間或收錄時間納入匯出工作的區段的物件，視下列子屬性而定。 如果保留為空白，則將導出所有資料。 |
-| `filter.segments` | 指定要匯出的區段。 省略此值將導致導出所有配置檔案中的所有資料。 接受區段物件的陣列，每個物件都包含下列欄位：<ul><li>`segmentId`: **（若使用）`segments`** 「區段ID」，則需要匯出描述檔。</li><li>`segmentNs` *（可選）* ，指定的區段名稱空間 `segmentID`。</li><li>`status` *（可選）* ，提供狀態篩選的字串陣列 `segmentID`。 依預設， `status` 將會有值， `["realized", "existing"]` 代表目前時段屬於區段的所有描述檔。 Possible values include: `"realized"`, `"existing"`, and `"exited"`.</li></ul> |
+| `filter.segments` | 指定要匯出的區段。 省略此值將導致導出所有配置檔案中的所有資料。 接受區段物件的陣列，每個物件都包含下列欄位：<ul><li>`segmentId`: **（若使用） `segments`** 「區段ID」，則需要匯出描述檔。</li><li>`segmentNs` *（可選）* ，指定的區段名稱空間 `segmentID`。</li><li>`status` *（可選）* ，提供狀態篩選的字串陣列 `segmentID`。 依預設， `status` 將會有值， `["realized", "existing"]` 代表目前時段屬於區段的所有描述檔。 Possible values include: `"realized"`, `"existing"`, and `"exited"`.  值「已實現」表示描述檔正在進入區段。 值「現有」表示描述檔仍繼續在區段中。 值「退出」表示描述檔正在退出區段。</li></ul> |
 | `filter.segmentQualificationTime` | 根據區段限定時間進行篩選。 可以提供開始時間和／或結束時間。 |
 | `filter.segmentQualificationTime.startTime` | 指定狀態之區段ID的區段資格開始時間。 未提供，區段ID資格的開始時間將不會有篩選。 時間戳必須以 [RFC 3339格式提供](https://tools.ietf.org/html/rfc3339) 。 |
 | `filter.segmentQualificationTime.endTime` | 指定狀態之區段ID的區段資格結束時間。 未提供，區段ID資格的結束時間將不會有篩選。 時間戳必須以 [RFC 3339格式提供](https://tools.ietf.org/html/rfc3339) 。 |
@@ -472,7 +472,7 @@ curl -X GET https://platform.adobe.io/data/core/ups/export/jobs/11037 \
 | `destination` | 匯出資料的目標資訊：<ul><li>`datasetId`:匯出資料的資料集ID。</li><li>`segmentPerBatch`:顯示區段ID是否整合的布林值。 值表示 `false` 所有區段ID都已整合為單一批次ID。 值表示 `true` 一個區段ID會匯出為一個批次ID。</li></ul> |
 | `fields` | 匯出欄位的清單，以逗號分隔。 |
 | `schema.name` | 與要導出資料的資料集關聯的方案的名稱。 |
-| `filter.segments` | 匯出的區段。 包含下列欄位：<ul><li>`segmentId`:要匯出描述檔的區段ID。</li><li>`segmentNs`:指定的區段名稱空間 `segmentID`。</li><li>`status`:為提供狀態過濾器的字串陣列 `segmentID`。 依預設， `status` 將會有值， `["realized", "existing"]` 代表目前時段屬於區段的所有描述檔。 可能的值包括：「已實現」、「現有」和「已退出」。</li></ul> |
+| `filter.segments` | 匯出的區段。 包含下列欄位：<ul><li>`segmentId`:要匯出描述檔的區段ID。</li><li>`segmentNs`:指定的區段名稱空間 `segmentID`。</li><li>`status`:為提供狀態過濾器的字串陣列 `segmentID`。 依預設， `status` 將會有值， `["realized", "existing"]` 代表目前時段屬於區段的所有描述檔。 可能的值包括：「已實現」、「現有」和「已退出」。  值「已實現」表示描述檔正在進入區段。 值「現有」表示描述檔仍繼續在區段中。 值「退出」表示描述檔正在退出區段。</li></ul> |
 | `mergePolicy` | 合併已導出資料的策略資訊。 |
 | `metrics.totalTime` | 一個欄位，指示導出作業所用的總時間。 |
 | `metrics.profileExportTime` | 一個欄位，指示導出配置檔案所花費的時間。 |
