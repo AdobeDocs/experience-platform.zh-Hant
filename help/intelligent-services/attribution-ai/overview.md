@@ -8,14 +8,14 @@ translation-type: tm+mt
 source-git-commit: c30bbaead775e68f869b080e24e18d4a23cda973
 workflow-type: tm+mt
 source-wordcount: '455'
-ht-degree: 0%
+ht-degree: 6%
 
 ---
 
 
 # Attribution AI概觀
 
-歸因人工智慧(Attribution AI)是智慧服務的一部分，是多通道的演算法歸因服務，可計算客戶互動對特定結果的影響和增量影響。 借助Attribution AI，行銷人員可以透過瞭解客戶歷程各個階段的每個個別客戶互動的影響，衡量並最佳化行銷和廣告支出。
+歸因人工智慧(Attribution AI)是智慧服務的一部分，是多通道的演算法歸因服務，可計算客戶互動對特定結果的影響和增量影響。 透過 Attribution AI，行銷人員可經由瞭解每個客戶在客戶歷程各個階段的互動所產生的影響，來衡量行銷和廣告支出並予以最佳化。
 
 ## 瞭解歸因AI
 
