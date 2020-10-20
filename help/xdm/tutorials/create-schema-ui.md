@@ -8,7 +8,7 @@ description: 本教學課程涵蓋使用Experience Platform中的架構編輯器
 translation-type: tm+mt
 source-git-commit: 9c7119ad836007af3437dc2e938b68aff3ca0f56
 workflow-type: tm+mt
-source-wordcount: '3835'
+source-wordcount: '3819'
 ht-degree: 0%
 
 ---
@@ -28,9 +28,9 @@ Adobe Experience Platform使用者介面可讓您在稱為的互動式 [!DNL Exp
 
 本教學課程需要對架構建立中涉及的Adobe Experience Platform各個方面有深入的瞭解。 在開始本教學課程之前，請先閱讀說明檔案，瞭解下列概念：
 
-* [[!DNL體驗資料模型(XDM)]](../home.md):組織客戶體驗資料 [!DNL Platform] 的標準化架構。
+* [[!DNL Experience Data Model (XDM)]](../home.md):組織客戶體驗資料 [!DNL Platform] 的標準化架構。
    * [架構構成基礎](../schema/composition.md):概述XDM結構描述及其構建塊，包括類、混合、資料類型和欄位。
-* [[!DNL即時客戶基本資料]](../../profile/home.md):根據來自多個來源的匯整資料，提供統一、即時的消費者個人檔案。
+* [[!DNL Real-time Customer Profile]](../../profile/home.md):根據來自多個來源的匯整資料，提供統一、即時的消費者個人檔案。
 
 ## 瀏覽結構工作區中的現 [!UICONTROL 有結構] {#browse}
 
@@ -274,11 +274,11 @@ UI中 [!UICONTROL 的] 「結構描述」工作區 [!DNL Platform] 提供了結�
 
 ![](../images/tutorials/create-schema/identity-applied.png)
 
-現在，所有包含在欄位 `loyaltyId` 中的資料都將用來協助識別該個人，並將該客戶的單一檢視結合在一起。 若要進一步瞭解在中使用身 [!DNL Experience Platform]份，請檢閱 [[!DNL Identity Service]檔案](../../identity-service/home.md) 。
+現在，所有包含在欄位 `loyaltyId` 中的資料都將用來協助識別該個人，並將該客戶的單一檢視結合在一起。 若要進一步瞭解如何在中使用身 [!DNL Experience Platform]分，請參閱文 [[!DNL Identity Service]](../../identity-service/home.md) 件。
 
 ## 啟用模式以用於 [!DNL Real-time Customer Profile] {#profile}
 
-[[!DNL即時客戶個人檔案]](../../profile/home.md) 利用身分資料， [!DNL Experience Platform] 提供每位客戶的全貌。 此服務可建立強穩、360°的客戶屬性描述檔，以及客戶在與之整合的任何系統上，所有互動的時間戳記帳戶 [!DNL Experience Platform]。
+[[!DNL Real-time Customer Profile]](../../profile/home.md) 運用身分資料， [!DNL Experience Platform] 提供每位客戶的全貌。 此服務可建立強穩、360°的客戶屬性描述檔，以及客戶在與之整合的任何系統上，所有互動的時間戳記帳戶 [!DNL Experience Platform]。
 
 要啟用與一起使用的模式， [!DNL Real-time Customer Profile]它必須定義主標識。 如果您嘗試啟用方案而未先定義主要身分，則會收到錯誤訊息。
 
