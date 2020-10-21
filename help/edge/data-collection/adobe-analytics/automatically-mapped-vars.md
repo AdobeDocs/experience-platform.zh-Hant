@@ -5,7 +5,7 @@ description: 瞭解哪些變數在Adobe Analytics中使用Experience Platform We
 seo-description: 瞭解哪些變數在Adobe Analytics中使用Experience Platform Web SDK自動對應
 keywords: adobe analytics;variables;analytics;automatic map;automatically mapped;
 translation-type: tm+mt
-source-git-commit: 5ef902ef7f7717121744f7f0074c0aa17e5a9e9a
+source-git-commit: 2e28fda40a135330054c749d73439448a55db52c
 workflow-type: tm+mt
 source-wordcount: '547'
 ht-degree: 2%
@@ -18,7 +18,7 @@ ht-degree: 2%
 以下是Adobe Experience Platform自動對應至的變 [!DNL Edge Network] 數清單 [!DNL Analytics]。
 
 | XDM欄位路徑 | [!DNL Analytics Query String] / HTTP 標題 | 說明 |
-| ---------- | ------------------------- | -------- |
+| ---------- | ------------------------- | ----------------------------------------- |
 | `commerce.order.purchaseID` | `pi` | AppMeasurement查詢參數PURCHASEID映射。 |
 | `commerce.order.currencyCode` | `cc` | AppMeasurement查詢參數CURRENCY映射。 |
 | `commerce.purchases.value` | `events` | AppMeasurement查詢參數EVENT_LIST_FULL與轉換COMMERCE_PURCHASE對應，使用分隔字元 `,`。 |
