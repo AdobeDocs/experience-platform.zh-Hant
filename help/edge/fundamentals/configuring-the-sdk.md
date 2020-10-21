@@ -5,7 +5,7 @@ description: 瞭解如何設定Experience Platform Web SDK
 seo-description: 瞭解如何設定Experience Platform Web SDK
 keywords: configuring;configuration;SDK;edge;Web SDK;configure;edgeConfigId;context;web;device;environment;placeContext;debugEnabled;edgeDomain;orgId;clickCollectionEnabled;onBeforeEventSend;defaultConsent;web sdk settings;prehidingStyle;opacity;cookieDestinationsEnabled;urlDestinationsEnabled;idMigrationEnabled;thirdPartyCookiesEnabled;
 translation-type: tm+mt
-source-git-commit: 233bbd33e3d1e89ff67a9daa00372732934ac573
+source-git-commit: 2e28fda40a135330054c749d73439448a55db52c
 workflow-type: tm+mt
 source-wordcount: '749'
 ht-degree: 11%
@@ -85,7 +85,7 @@ Your assigned [!DNL Experience Cloud] organization ID.  在頁面內設定多個
 | -------- | ------------ | ----------------- |
 | 布林值 | 無 | `true` |
 
-指出是否應自動收集與連結點按次數關聯的資料。 對於符合連結點按資格的點按，會收 [集下列Web Interaction](https://github.com/adobe/xdm/blob/master/docs/reference/context/webinteraction.schema.md) 資料：
+指出是否應自動收集與連結點按次數關聯的資料。 對於符合連結點按資格的點按，會收 [集下列Web Interaction](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/webinteraction.schema.md) 資料：
 
 | **屬性** | **說明** |
 | ------------ | ----------------------------------- |
