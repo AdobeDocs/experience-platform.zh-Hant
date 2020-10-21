@@ -5,7 +5,7 @@ description: 瞭解如何追蹤Experience Platform Web SDK活動
 seo-description: 瞭解如何追蹤Experience Platform Web SDK活動
 keywords: sendEvent;xdm;eventType;datasetId;sendBeacon;send Beacon;documentUnloading;document Unloading;onBeforeEventSend;
 translation-type: tm+mt
-source-git-commit: db742119d8f169817080f1fd4e0dc08a0f0faa47
+source-git-commit: 14b10aeeb382e9d638cf9fdf62deddbee3e72600
 workflow-type: tm+mt
 source-wordcount: '1139'
 ht-degree: 0%
@@ -54,7 +54,7 @@ alloy("sendEvent", {
 
 ### 設定 `eventType`
 
-在XDM體驗事件中，有一個選填欄 `eventType` 位。 這保存記錄的主要事件類型。 設定事件類型可協助您區分要傳入的不同事件。 XDM提供幾種預先定義的事件類型，您可以使用這些類型，或隨時為您的使用案例建立您自己的自訂事件類型。 以下是XDM提供的所有預先定義事件類型的清單。 [閱讀XDM公開回購的更多資訊](https://github.com/adobe/xdm/blob/master/docs/reference/behaviors/time-series.schema.md#xdmeventtype-known-values)
+在XDM體驗事件中，有一個選填欄 `eventType` 位。 這保存記錄的主要事件類型。 設定事件類型可協助您區分要傳入的不同事件。 XDM提供幾種預先定義的事件類型，您可以使用這些類型，或隨時為您的使用案例建立您自己的自訂事件類型。 以下是XDM提供的所有預先定義事件類型的清單。 [閱讀XDM public repo](https://github.com/adobe/xdm/blob/master/docs/reference/behaviors/time-series.schema.md#xdmeventtype-known-values)。
 
 
 | **事件類型:** | **定義:** |
@@ -131,7 +131,7 @@ alloy("sendEvent", {
 
 ### 添加身份資訊
 
-自訂身分資訊也可以新增至事件。 請參 [閱擷取Experience Cloud ID](../identity/overview.md)
+自訂身分資訊也可以新增至事件。 請參 [閱擷取Experience Cloud ID](../identity/overview.md)。
 
 ## 使用sendBeacon API
 
