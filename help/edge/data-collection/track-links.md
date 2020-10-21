@@ -5,7 +5,7 @@ description: 瞭解如何使用Experience Platform Web SDK將連結資料傳送�
 seo-description: 瞭解如何使用Experience Platform Web SDK將連結資料傳送至Adobe Analytics
 keywords: adobe analytics;analytics;sendEvent;s.t();s.tl();webPageDetails;pageViews;webInteraction;web Interaction;page views;link tracking;links;track links;clickCollection;click collection;
 translation-type: tm+mt
-source-git-commit: ab1618a9d8c6cc60407d301dad03983ce432bbbe
+source-git-commit: 2e28fda40a135330054c749d73439448a55db52c
 workflow-type: tm+mt
 source-wordcount: '250'
 ht-degree: 0%
@@ -46,7 +46,7 @@ alloy("sendEvent", {
 
 ## 自動連結追蹤 {#automaticLinkTracking}
 
-依預設，Web SDK會擷取、標 [簽](#labelingLinks)，並記 [錄點按符](https://github.com/adobe/xdm/blob/master/docs/reference/context/webinteraction.schema.md) 合資格 [的連結標](#qualifyingLinks) 簽。 點按次數是使用附 [加至文](https://www.w3.org/TR/uievents/#capture-phase) 件的capture click事件接聽程式來擷取。
+依預設，Web SDK會擷取、標 [簽](#labelingLinks)，並記 [錄點按符](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/webinteraction.schema.md) 合資格 [的連結標](#qualifyingLinks) 簽。 點按次數是使用附 [加至文](https://www.w3.org/TR/uievents/#capture-phase) 件的capture click事件接聽程式來擷取。
 
 若要停用自動連結追蹤，請 [設定](../fundamentals/configuring-the-sdk.md#clickCollectionEnabled) Web SDK。
 
