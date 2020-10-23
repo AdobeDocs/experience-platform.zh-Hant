@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Adobe Experience Platform API基礎知識
 topic: getting started
 translation-type: tm+mt
-source-git-commit: fa439ebb9d02d4a08c8ed92b18f2db819d089174
+source-git-commit: fac4b3d02a6e58a9d2c298f9b849fa7345e4fa93
 workflow-type: tm+mt
-source-wordcount: '422'
+source-wordcount: '483'
 ht-degree: 2%
 
 ---
@@ -22,63 +22,74 @@ JSON指標是用於識別JSON檔案內特定值的標準字[串語法(RFC 6901](
 
 ### 範例JSON結構描述物件
 
+下列JSON代表簡化的XDM結構描述，其欄位可使用JSON指針字串加以參考。 請注意，使用自訂混音新增的所有欄位(例如 `loyaltyLevel`)都是在物件下命名的，而使用核心混音新增的欄位(例如 `_{TENANT_ID}``fullName`)則不是。
+
 ```json
 {
-    "type": "object",
-    "title": "Loyalty Member Details",
-    "meta:intendedToExtend": [
-        "https://ns.adobe.com/xdm/context/profile"
-    ],
-    "description": "Loyalty Program Mixin.",
-    "definitions": {
-        "loyalty": {
-            "properties": {
-                "_{TENANT_ID}": {
-                    "type": "object",
-                    "properties": {
-                        "loyaltyId": {
-                            "title": "Loyalty Identifier",
-                            "type": "string",
-                            "description": "Loyalty Identifier.",
-                            "meta:xdmType": "string"
-                        },
-                        "loyaltyLevel": {
-                            "title": "Loyalty Level",
-                            "description": "The current loyalty program level to which the individual member belongs.",
-                            "type": "string",
-                            "enum": [
-                                "platinum",
-                                "gold",
-                                "silver",
-                                "bronze"
-                            ],
-                            "meta:enum": {
-                                "platinum": "Platinum",
-                                "gold": "Gold",
-                                "silver": "Silver",
-                                "bronze": "Bronze"
-                            },
-                            "meta:xdmType": "string"
-                        }
-                    },
-                    "meta:xdmType": "object"
-                }
-            },
-            "type": "object",
-            "meta:xdmType": "object"
+  "$id": "https://ns.adobe.com/{TENANT_ID}/schemas/85a4bdaa168b01bf44384e049fbd3d2e9b2ffaca440d35b9",
+  "meta:altId": "_{TENANT_ID}.schemas.85a4bdaa168b01bf44384e049fbd3d2e9b2ffaca440d35b9",
+  "meta:resourceType": "schemas",
+  "version": "1.0",
+  "title": "Example schema",
+  "type": "object",
+  "description": "This is an example schema.",
+  "properties": {
+    "_{TENANT_ID}": {
+      "type": "object",
+      "properties": {
+        "loyaltyLevel": {
+          "title": "Loyalty Level",
+          "description": "",
+          "type": "string",
+          "isRequired": false,
+          "enum": [
+            "platinum",
+            "gold",
+            "silver",
+            "bronze"
+          ]
         }
+      }
+    },
+    "person": {
+      "title": "Person",
+      "description": "An individual actor, contact, or owner.",
+      "type": "object",
+      "properties": {
+        "name": {
+          "title": "Full name",
+          "description": "The person's full name.",
+          "type": "object",
+          "properties": {
+            "fullName": {
+              "title": "Full name",
+              "type": "string",
+              "description": "The full name of the person, in writing order most commonly accepted in the language of the name.",
+            },
+            "suffix": {
+              "title": "Suffix",
+              "type": "string",
+              "description": "A group of letters provided after a person's name to provide additional information. The `suffix` is used at the end of someones name. For example Jr., Sr., M.D., PhD, I, II, III, etc.",
+            }
+          },
+          "meta:referencedFrom": "https://ns.adobe.com/xdm/context/person-name",
+          "meta:xdmField": "xdm:name"
+        }
+      }
     }
+  }
 }
 ```
 
 ### 基於架構物件的JSON指針範例
 
 | JSON指標 | 解析為 |
-|--- | ---|
-| `"/title"` | &quot;忠誠會員詳細資料&quot; |
-| `"/definitions/loyalty"` | (返回對象的內 `loyalty` 容) |
-| `"/definitions/loyalty/properties/_{TENANT_ID}/properties/loyaltyLevel/enum"` | `["platinum", "gold", "silver", "bronze"]` |
-| `"/definitions/loyalty/properties/_{TENANT_ID}/properties/loyaltyLevel/enum/0"` | `"platinum"` |
+| --- | --- |
+| `"/title"` | `"Example schema"` |
+| `"/properties/person/properties/name/properties/fullName"` | (傳回由核心混 `fullName` 音提供之欄位的參考)。 |
+| `"/properties/_{TENANT_ID}/properties/loyaltyLevel"` | (傳回自訂混音 `loyaltyLevel` 所提供之欄位參考)。 |
+| `"/properties/_{TENANT_ID}/properties/loyaltyLevel/enum"` | `["platinum", "gold", "silver", "bronze"]` |
+| `"/properties/_{TENANT_ID}/properties/loyaltyLevel/enum/0"` | `"platinum"` |
 
 >[!NOTE]
 >
