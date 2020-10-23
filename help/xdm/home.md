@@ -5,9 +5,9 @@ title: 體驗資料模型(XDM)系統
 topic: overview
 description: '標準化和互操作性是Adobe Experience Platform的主要概念。 Adobe推動的Experience Data Model(XDM)旨在標準化客戶體驗資料並定義客戶體驗管理的架構。 '
 translation-type: tm+mt
-source-git-commit: b7b57c0b70b1af3a833f0386bc809bb92c9b50f8
+source-git-commit: 1aceddc02a5120b0bf7413db33c2c03d0ab2948c
 workflow-type: tm+mt
-source-wordcount: '1639'
+source-wordcount: '1638'
 ht-degree: 2%
 
 ---
@@ -48,7 +48,7 @@ XDM是基礎架構，可讓Adobe Experience Cloud在適當的時機，在適當�
 
 雖然您可以在中定義自己的類 [!DNL Schema Registry]，但建議您分別使用首選類 **[!DNL XDM Individual Profile]****[!DNL XDM ExperienceEvent]** 和記錄和時間序列資料。 下面將詳細說明這些類別。
 
-### [!DNL XDM Individual Profile] (#xdm-individual-profile)
+### [!DNL XDM Individual Profile] {#xdm-individual-profile}
 
 [!DNL XDM Individual Profile] 是基於記錄的類，它對已識別和部分已識別的主題的屬性形成奇異表示。 高度識別的個人檔案可用於個人通訊或目標互動，且可包含詳細的個人資訊，例如姓名、性別、出生日期、地點和聯絡資訊，包括電話號碼和電子郵件地址。
 
@@ -58,7 +58,7 @@ XDM是基礎架構，可讓Adobe Experience Cloud在適當的時機，在適當�
 
 ### [!DNL XDM ExperienceEvent] {#xdm-experience-event}
 
-XDM ExperienceEvent是以時間序列為基礎的類別，用於在發生事件（或事件集）時擷取系統狀態，包括所涉主題的時間點和身分。 「體驗事件」是所發生事件的事實記錄，因此它們是不可變的，不經匯總或解譯即代表所發生的事件。 它們對於時域分析至關重要，因為它們可用於分析特定時段內發生的變更，以及比較多個時段以追蹤趨勢。
+XDM ExperienceEvent是以時間序列為基礎的類別，用於在發生事件（或事件集）時擷取系統狀態，包括所涉主題的時間點和身分。 「體驗事件」是所發生事件的事實記錄，因此它們是不可變的，不經匯總或解譯即代表所發生的事件。 它們對於時域分析至關重要，因為它們可用於分析特定時間範圍內發生的變更，以及比較多個時間窗口以追蹤趨勢。
 
 「體驗事件」可以是明確或隱含的。 明確事件是直接觀察到的人類行為在旅程的某個時刻發生。 隱含事件是指在沒有直接人類行動的情況下引發，但仍與個人有關的事件。 隱式事件的範例包括排程傳送電子郵件電子報或電池電壓達到特定臨界值。
 
