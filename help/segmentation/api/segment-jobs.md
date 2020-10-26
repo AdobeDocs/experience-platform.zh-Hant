@@ -5,10 +5,10 @@ title: 區段工作
 topic: developer guide
 description: 本指南提供相關資訊，以協助您進一步瞭解區段工作，並包含使用API執行基本動作的範例API呼叫。
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: 8c5c3aed4d46c8b3873009ab9f17ff9bca93302c
 workflow-type: tm+mt
-source-wordcount: '1025'
-ht-degree: 3%
+source-wordcount: '1153'
+ht-degree: 2%
 
 ---
 
@@ -96,9 +96,9 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/jobs?status=SUCCEEDE
                             "format": "pql/json",
                             "value": "{PQL_EXPRESSION}"
                         },
-                        "mergePolicyId": "b83185bb-0bc6-489c-9363-0075eb30b4c8",
+                        "mergePolicyId": "25c548a0-ca7f-4dcd-81d5-997642f178b9",
                         "mergePolicy": {
-                            "id": "b83185bb-0bc6-489c-9363-0075eb30b4c8",
+                            "id": "25c548a0-ca7f-4dcd-81d5-997642f178b9",
                             "version": 1
                         }
                     }
@@ -115,14 +115,25 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/jobs?status=SUCCEEDE
                     "endTimeInMs": 1573204395655,
                     "totalTimeInMs": 128928
                 },
-                "totalProfiles": 0,
-                "segmentedProfileCounter": {
-                    "30230300-ccf1-48ad-8012-c5563a007069": 0,
-                    "ca763983-5572-4ea4-809c-b7dff7e0d79b": 0
+                "totalProfiles":13146432,
+                "segmentedProfileCounter":{
+                    "94509dba-7387-452f-addc-5d8d979f6ae8":1033
                 },
-                "segmentedProfileByNamespaceCounter": {
-                    "30230300-ccf1-48ad-8012-c5563a007069": {},
-                    "ca763983-5572-4ea4-809c-b7dff7e0d79b": {}
+                "segmentedProfileByNamespaceCounter":{
+                    "94509dba-7387-452f-addc-5d8d979f6ae8":{
+                        "tenantiduserobjid":1033,
+                        "campaign_profile_mscom_mkt_prod2":1033
+                    }
+                },
+                "segmentedProfileByStatusCounter":{
+                    "94509dba-7387-452f-addc-5d8d979f6ae8":{
+                        "exited":144646,
+                        "existing":10,
+                        "realized":2056
+                    }
+                },
+                "totalProfilesByMergePolicy":{
+                    "25c548a0-ca7f-4dcd-81d5-997642f178b9":13146432
                 }
             },
             "requestId": "4e538382-dbd8-449e-988a-4ac639ebe72b-1573203600264",
@@ -162,6 +173,12 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/jobs?status=SUCCEEDE
 | `segments.segment.id` | 區段定義的ID。 |
 | `segments.segment.expression` | 包含有關段定義表達式的資訊的對象，用PQL編寫。 |
 | `metrics` | 包含區段作業診斷資訊的物件。 |
+| `metrics.totalTime` | 包含分段工作開始和結束時間以及所花費總時間的資訊的物件。 |
+| `metrics.profileSegmentationTime` | 包含分段評估開始和結束時間以及所花費總時間的資訊的物件。 |
+| `metrics.segmentProfileCounter` | 每個區段限定的設定檔數。 |
+| `metrics.segmentedProfileByNamespaceCounter` | 每個區段上每個身分名稱空間限定的描述檔數。 |
+| `metrics.segmentProfileByStatusCounter` | 每個狀態 **的描述檔片段** 計數。 支援下列三種狀態： <ul><li>「已實現」-進入區段的新設定檔數。</li><li>&quot;existing&quot; —— 區段中繼續存在的設定檔數。</li><li>「退出」-區段中不再存在的描述檔區段數。</li></ul> |
+| `metrics.totalProfilesByMergePolicy` | 每個合併策略的合併配置檔案總數。 |
 
 ## 建立新區段工作 {#create}
 
