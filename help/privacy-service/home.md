@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Adobe Experience Platform隱私權服務
 topic: overview
 translation-type: tm+mt
-source-git-commit: 5d88aca08b7cf1d55e1eed989de6aa514f82e113
+source-git-commit: f3872d433949e6c14c28c6833b8498d4d01b8de3
 workflow-type: tm+mt
-source-wordcount: '1565'
+source-wordcount: '1627'
 ht-degree: 2%
 
 ---
@@ -30,7 +30,7 @@ Adobe Experience Platform是為 [!DNL Privacy Service] 因應企業管理客戶�
    * 為了充份運用資 [!DNL Privacy Service]訊，您必須詳細瞭解您從客戶收集的資料類型，以及其中哪些資料受隱私權法規的規範。 如需詳細資訊，請 [參閱決定隱私權](#requirements) 要求一節。
 1. **我是否已正確標示資料？**
    * 必須正確標示資料，服務才能決定在隱私權工作期間要存取或刪除哪些欄位。 如需詳細資訊，請 [參閱標籤](#label) 資料一節。
-1. **我知道要傳送哪些ID嗎[!DNL Privacy Service]?**
+1. **我知道要傳送哪些ID嗎 [!DNL Privacy Service]?**
    * 傳送隱私權要求時，必須提供特定Adobe應用程式專屬的個別客戶ID。 如需詳細資訊，請 [參閱提供身分資](#identity)[料](#requests) 和提出隱私權要求的相關章節。
 1. **我要如何追蹤我的隱私權工作？**
    * 在您提出隱私權要求後，有幾個選項可用來追蹤其狀態和結果。 如需詳細資訊，請 [參閱監控隱私](#monitor) 工作一節。
@@ -75,10 +75,12 @@ Adobe Experience Platform是為 [!DNL Privacy Service] 因應企業管理客戶�
 >以下各節提供說明如何在API或UI中提出一般隱私權要求的檔案連結。 不過，視您使用 [!DNL Experience Cloud] 的應用程式而定，您必須在請求裝載中傳送的欄位可能與這些指南中顯示的範例不同。
 >
 >在遵循API或UI指南時，請參閱 [Privacy Service和Experience Cloud應用程式上的檔案，以取得有關如何設定特定應用程式的隱私權要求格式的](./experience-cloud-apps.md)[!DNL Experience Cloud] 詳細檔案。
+>
+>此外，請務必注意，隱私權要求會在Experience Cloud應用程式間非同步處理。 在隱私權服務收到要求後，每個應用程式都可能需要幾分鐘到數週的時間才能完成要求。 完成每個請求所需的時間取決於您使用的應用程式，以及需要處理的資料量。
 
 #### 使用API
 
-[[!DNL Privacy Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/privacy-service.yaml) 提供數個端點，用於使用REST風格的API呼叫來建立和管理隱私權工作，讓您以程式設計方式處理應用程式的隱私權規範 [!DNL Experience Cloud] 規範。 如需如何使用API的詳細步驟，請參閱「隱私 [服務API開發人員指南」](api/getting-started.md)。
+本 [[!DNL Privacy Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/privacy-service.yaml) 軟體提供數個端點，可讓您使用REST風格的API呼叫來建立和管理隱私權工作，讓您以程式設計方式處理應用程式的隱私權規範 [!DNL Experience Cloud] 規範。 如需如何使用API的詳細步驟，請參閱「隱私 [服務API開發人員指南」](api/getting-started.md)。
 
 #### 使用UI
 
