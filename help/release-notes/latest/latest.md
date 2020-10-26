@@ -5,9 +5,9 @@ doc-type: release notes
 last-update: October 13, 2020
 author: crhoades, ens25212
 translation-type: tm+mt
-source-git-commit: 133aa5ace2567e9380eb970b5737d7327d0c99b2
+source-git-commit: 8f646c26ce73671ef4e427d8cba51091a8884795
 workflow-type: tm+mt
-source-wordcount: '1025'
+source-wordcount: '1028'
 ht-degree: 4%
 
 ---
@@ -21,6 +21,7 @@ ht-degree: 4%
 - [即時客戶個人檔案](#profile)
 - [劃分服務](#segmentation)
 - [來源](#sources)
+- [價值時間](#time-to-value)
 
 ## 資料準備 {#data-prep}
 
@@ -76,7 +77,7 @@ Adobe Experience Platform可以從外部來源擷取資料，同時讓您使用�
 
 若要進一步瞭解來源，請參閱 [來源概觀](../../sources/home.md)。
 
-## 價值時間
+## 價值時間 {#time-to-value}
 
 Adobe Experience Platform完全讓行銷營運團隊能夠全方位瞭解客戶，而不需具備廣泛的資料工程專業知識。 其目標是透過資料速度加速團隊並發揮價值。
 
