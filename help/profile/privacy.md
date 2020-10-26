@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 即時客戶個人檔案中的隱私權要求處理
 topic: overview
 translation-type: tm+mt
-source-git-commit: f7abccb677294e1595fb35c27e03c30eb968082a
+source-git-commit: 066337419431db24bde0a8d0d30b85132d08f43c
 workflow-type: tm+mt
-source-wordcount: '1024'
+source-wordcount: '1058'
 ht-degree: 0%
 
 ---
@@ -22,9 +22,9 @@ Adobe Experience Platform會 [!DNL Privacy Service] 處理客戶存取、選擇�
 
 建議您在閱讀本指南之前，先瞭解 [!DNL Experience Platform] 下列服務：
 
-* [[!DNL隱私服務]](home.md):管理客戶在Adobe Experience Cloud應用程式中存取、選擇退出銷售或刪除其個人資料的要求。
+* [[!DNL Privacy Service]](home.md):管理客戶在Adobe Experience Cloud應用程式中存取、選擇退出銷售或刪除其個人資料的要求。
 * [[!DNL Identity Service]](../identity-service/home.md):透過跨裝置和系統橋接身分，解決客戶體驗資料分散所帶來的根本挑戰。
-* [[!DNL即時客戶基本資料]](../profile/home.md):根據來自多個來源的匯整資料，提供統一、即時的消費者個人檔案。
+* [[!DNL Real-time Customer Profile]](../profile/home.md):根據來自多個來源的匯整資料，提供統一、即時的消費者個人檔案。
 
 ## 瞭解身分名稱空間 {#namespaces}
 
@@ -43,6 +43,8 @@ Identity Service會維護全域定義（標準）和使用者定義（自訂）�
 >隱私服務只能使用不執行 [!DNL Profile] 身分聯繫的合併原則處理資料。 如果您使用UI來確認是否正在處理您的隱私權要求，請確定您使用的原則是「[!DNL None]」作為 [!UICONTROL ID連結類型] 。 換言之，您無法使用將 [!UICONTROL ID接合設為] 「私用[!UICONTROL 圖形]」的合併原則。
 >
 >![](./images/privacy/no-id-stitch.png)
+>
+>此外，請務必注意，無法保證隱私權要求完成所需的時間。 如果在請求仍在處 [!DNL Profile] 理時，您的資料中發生變更，則無法保證這些記錄是否已處理。
 
 ### 使用API
 
