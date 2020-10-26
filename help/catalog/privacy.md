@@ -5,9 +5,9 @@ title: 資料湖中的隱私權要求處理
 topic: overview
 description: Adobe Experience Platform隱私權服務會處理客戶存取、選擇退出銷售或刪除其個人資料的要求，並符合法律和組織的隱私權法規。 本檔案涵蓋處理儲存在資料湖中之客戶資料之隱私權要求的相關基本概念。
 translation-type: tm+mt
-source-git-commit: 34cfcaac276bf2645a0365a0dfa71c4ead6e2ecb
+source-git-commit: 066337419431db24bde0a8d0d30b85132d08f43c
 workflow-type: tm+mt
-source-wordcount: '1249'
+source-wordcount: '1272'
 ht-degree: 0%
 
 ---
@@ -23,9 +23,9 @@ Adobe Experience Platform會 [!DNL Privacy Service] 處理客戶存取、選擇�
 
 建議您在閱讀本指南之前，先瞭解 [!DNL Experience Platform] 下列服務：
 
-* [[!DNL隱私服務]](../privacy-service/home.md):管理客戶在Adobe Experience Cloud應用程式中存取、選擇退出銷售或刪除其個人資料的要求。
-* [[!DNL目錄服務]](home.md):資料位置和世系的記錄系統 [!DNL Experience Platform]。 提供可用來更新資料集中繼資料的API。
-* [[!DNL體驗資料模型(XDM)系統]](../xdm/home.md):組織客戶體驗資料 [!DNL Experience Platform] 的標準化架構。
+* [[!DNL Privacy Service]](../privacy-service/home.md):管理客戶在Adobe Experience Cloud應用程式中存取、選擇退出銷售或刪除其個人資料的要求。
+* [[!DNL Catalog Service]](home.md):資料位置和世系的記錄系統 [!DNL Experience Platform]。 提供可用來更新資料集中繼資料的API。
+* [[!DNL Experience Data Model (XDM) System]](../xdm/home.md):組織客戶體驗資料 [!DNL Experience Platform] 的標準化架構。
 * [[!DNL Identity Service]](../identity-service/home.md):透過跨裝置和系統橋接身分，解決客戶體驗資料分散所帶來的根本挑戰。
 
 ## 瞭解身分名稱空間 {#namespaces}
@@ -136,6 +136,10 @@ curl -X POST \
 >本節說明如何格式化的隱私權要求 [!DNL Data Lake]。 強烈建議您檢閱 [[!DNL Privacy Service] UI](../privacy-service/ui/overview.md) 或 [[!DNL Privacy Service] ](../privacy-service/api/getting-started.md) API檔案，以取得如何提交隱私權工作的完整步驟，包括如何在請求負載中正確格式化已提交的使用者身分資料。
 
 下節將說明如何使用UI或API [!DNL Data Lake] 提出 [!DNL Privacy Service] 隱私權要求。
+
+>[!IMPORTANT]
+>
+>無法保證隱私權要求完成所需的時間。 如果在請求仍在處理時在資料湖中發生變更，則無法保證是否處理這些記錄。
 
 ### 使用UI
 
