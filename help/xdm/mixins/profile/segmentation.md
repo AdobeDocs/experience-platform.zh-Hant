@@ -1,21 +1,25 @@
 ---
 keywords: Experience Platform;home;popular topics;schema;Schema;XDM;individual profile;fields;schemas;Schemas;segment;segmentMembership;segment membership;Schema design;map;Map;
 solution: Experience Platform
-title: 描述檔分段混合
+title: 混合的區段成員資格詳細資訊
 topic: overview
-description: 本文檔概述了XDM Individual Profile類。
+description: 本檔案提供「區段成員資格詳細資料」混合檔的概觀。
 translation-type: tm+mt
-source-git-commit: 53575488c08f73a65a7f1cc5f803f9ead707ae48
+source-git-commit: f9d8021643e72e3fbb5315b54a19815dcdaaa702
 workflow-type: tm+mt
-source-wordcount: '365'
+source-wordcount: '385'
 ht-degree: 1%
 
 ---
 
 
-# [!UICONTROL 描述檔分段] mixin
+# [!UICONTROL 混合的區段會籍詳細資訊] （英文）
 
-[!UICONTROL 描述檔分段] 是類別的標準混合 [[!DNL XDM Individual Profile] 檔](../../classes/individual-profile.md)。 混音提供單一地圖欄位，擷取關於區段成員資格的資訊，包括個人所屬的區段、最後的資格時間，以及會籍有效到的時間。
+>[!NOTE]
+>
+>幾個混音的名字已經改變。 如需詳細資訊，請 [參閱混合名稱更新](../name-updates.md) 的檔案。
+
+[!UICONTROL 區段成員資格] 詳細資訊是該類別的標準 [[!DNL XDM Individual Profile] 組合](../../classes/individual-profile.md)。 混音提供單一地圖欄位，擷取關於區段成員資格的資訊，包括個人所屬的區段、最後的資格時間，以及會籍有效到的時間。
 
 >[!WARNING]
 >
