@@ -3,10 +3,10 @@ keywords: Experience Platform;home;popular topics;ui;UI;XDM;XDM system;;experien
 solution: Experience Platform
 title: 使用結構編輯器建立架構
 topic: tutorial
-type: Tutorials
-description: 本教學課程涵蓋使用Experience Platform中的架構編輯器建立架構的步驟。
+type: Tutorial
+description: 本教學課程涵蓋以 Experience Platform 結構編輯器建立結構的相關步驟。
 translation-type: tm+mt
-source-git-commit: 9c7119ad836007af3437dc2e938b68aff3ca0f56
+source-git-commit: 097fe219e0d64090de758f388ba98e6024db2201
 workflow-type: tm+mt
 source-wordcount: '3819'
 ht-degree: 0%
