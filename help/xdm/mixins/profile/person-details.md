@@ -1,21 +1,25 @@
 ---
 keywords: Experience Platform;home;popular topics;schema;Schema;XDM;individual profile;fields;schemas;Schemas;Schema design;mixin;mixin;person;person details;profile person details;person;
 solution: Experience Platform
-title: 混合在
+title: 人口統計詳細資料混合
 topic: overview
-description: 本文檔概述了XDM Individual Profile類。
+description: 本檔案提供「人口統計詳細資料」混合檔的概觀。
 translation-type: tm+mt
-source-git-commit: 27ce9b6e8608bbfccac25387ba96f998272273c1
+source-git-commit: f9d8021643e72e3fbb5315b54a19815dcdaaa702
 workflow-type: tm+mt
-source-wordcount: '227'
+source-wordcount: '241'
 ht-degree: 3%
 
 ---
 
 
-# [!UICONTROL 混合個人資料] -詳細資訊
+# [!UICONTROL 人口統計詳細資料] 混合
 
-[!UICONTROL Profile person details] （個人資料詳細資訊）是該課程的標準 [[!DNL XDM Individual Profile] 組合](../../classes/individual-profile.md)。 混音提供根級對象，其子 `person` 欄位描述關於個人的資訊。
+>[!NOTE]
+>
+>幾個混音的名字已經改變。 如需詳細資訊，請 [參閱混合名稱更新](../name-updates.md) 的檔案。
+
+[!UICONTROL 「人口統計詳細資訊] 」是該類別的標準混 [[!DNL XDM Individual Profile] 合項目](../../classes/individual-profile.md)。 混音提供根級對象，其子 `person` 欄位描述關於個人的資訊。
 
 <img src="../../images/mixins/profile-person-details.png" width="600" /><br />
 
@@ -33,4 +37,4 @@ ht-degree: 3%
 有關混音的詳細資訊，請參閱公用XDM存放庫：
 
 * [填入的範例](https://github.com/adobe/xdm/blob/master/components/mixins/profile/profile-person-details.example.1.json)
-* [完整架構](https://github.com/adobe/xdm/blob/master/components/mixins/profile/profile-person-details.schema.json)
+* [完整架構](https://github.com/adobe/xdm/blob/master/components/mixins/profile/profile-person-details.schema.json)å
