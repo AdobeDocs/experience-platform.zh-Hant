@@ -5,9 +5,9 @@ title: XDM ExperienceEvent類別
 topic: overview
 description: 本檔案提供XDM ExperienceEvent類別的概觀。
 translation-type: tm+mt
-source-git-commit: b7b57c0b70b1af3a833f0386bc809bb92c9b50f8
+source-git-commit: f9d8021643e72e3fbb5315b54a19815dcdaaa702
 workflow-type: tm+mt
-source-wordcount: '766'
+source-wordcount: '784'
 ht-degree: 0%
 
 ---
@@ -33,10 +33,14 @@ ht-degree: 0%
 
 ## 相容混音 {#mixins}
 
+>[!NOTE]
+>
+>幾個混音的名字已經改變。 如需詳細資訊，請 [參閱混合名稱更新](../mixins/name-updates.md) 的檔案。
+
 Adobe提供數種標準混音，以搭配該類 [!DNL XDM ExperienceEvent] 使用。 以下是類別中常用混合詞的清單：
 
-* [[!UICONTROL ExperienceEvent EndUserIDs]](../mixins/event/enduserids.md)
-* [[!UICONTROL ExperienceEvent環境詳細資訊]](../mixins/event/environment-details.md)
+* [[!UICONTROL 用戶ID詳細資訊]](../mixins/event/enduserids.md)
+* [[!UICONTROL 環境詳細資訊]](../mixins/event/environment-details.md)
 
 ## 附錄
 
