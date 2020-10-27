@@ -1,11 +1,12 @@
 ---
 product: experience-platform
+solution: Experience Platform, Data Collection
 audience: user
 user-guide-title: Adobe Experience Platform 網頁 SDK 說明
 breadcrumb-title: Web SDK 指南
 user-guide-description: 透過 Edge 網路與 Experience Cloud 服務互動。
 translation-type: tm+mt
-source-git-commit: 2e28fda40a135330054c749d73439448a55db52c
+source-git-commit: 7f3d4f0266b58b1327d2b8743538c7fc9b67669b
 workflow-type: tm+mt
 source-wordcount: '119'
 ht-degree: 31%
@@ -49,5 +50,5 @@ ht-degree: 31%
       * [與Adobe Experience Platform Launch整合](consent/iab-tcf/with-launch.md)
       * [不需Adobe Experience Platform Launch即可整合](consent/iab-tcf/without-launch.md)
 * [發行說明](release-notes.md)
-* [常問的問題](web-sdk-faq.md)
+* [常見問題](web-sdk-faq.md)
 * [部落格文章](blog-posts.md)
