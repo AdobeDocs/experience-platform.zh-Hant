@@ -1,21 +1,25 @@
 ---
 keywords: Experience Platform;home;popular topics;schema;Schema;XDM;ExperienceEvent;fields;schemas;Schemas;Schema design;mixin;mixin;enduserids;end-user;end user;ids;
 solution: Experience Platform
-title: ExperienceEvent EndUserIDmixin
+title: 混合使用者ID詳細資料
 topic: overview
-description: 本檔案提供ExperienceEvent EndUserID混合的概觀。
+description: 本檔案提供「使用者ID詳細資料」混合檔的概觀。
 translation-type: tm+mt
-source-git-commit: f5bddb39c16eb25e85297f56e331d3aa51510eb9
+source-git-commit: f9d8021643e72e3fbb5315b54a19815dcdaaa702
 workflow-type: tm+mt
-source-wordcount: '150'
+source-wordcount: '175'
 ht-degree: 1%
 
 ---
 
 
-# [!UICONTROL ExperienceEvent EndUserIDs] mixin
+# [!UICONTROL 混合使用者ID詳細資訊] (End User ID Details)
 
-[!UICONTROL ExperienceEvent EndUserIDs] 是類別的標準混合 [[!DNL XDM ExperienceEvent] 檔](../../classes/individual-profile.md)，用來描述個人在數個Adobe應用程式中的身分資訊。 混音提供根層級物 `endUserIDs` 件，其本身包含唯讀欄 `_experience` 位，其值會隨著資料擷取而自動更新。
+>[!NOTE]
+>
+>幾個混音的名字已經改變。 如需詳細資訊，請 [參閱混合名稱更新](../name-updates.md) 的檔案。
+
+[!UICONTROL 「使用者ID詳細資訊] 」是類別的標準混合 [[!DNL XDM ExperienceEvent] 檔](../../classes/individual-profile.md)，用來說明個人在數個Adobe應用程式中的身分資訊。 混音提供根層級物 `endUserIDs` 件，其本身包含唯讀欄 `_experience` 位，其值會隨著資料擷取而自動更新。
 
 <img src="../../images/mixins/enduserids.png" width="700" /><br />
 
