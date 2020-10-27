@@ -6,17 +6,17 @@ title: 刪除資料流
 topic: overview
 type: Tutorial
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: cbd9b3ed0cf43d582d734098b9ce58fc074fb375
 workflow-type: tm+mt
-source-wordcount: '449'
-ht-degree: 1%
+source-wordcount: '448'
+ht-degree: 0%
 
 ---
 
 
 # 刪除資料流
 
-Adobe Experience Platform中的來源連接器可讓您依計畫吸收外部來源的資料。 本教學課程提供從 [!UICONTROL Sources工作區刪除資料流] 的步驟。
+Adobe Experience Platform中的來源連接器可讓您依計畫吸收外部來源的資料。 本教學課程提供從 **[!UICONTROL Sources工作區刪除資料流]** 的步驟。
 
 ## 快速入門
 
@@ -25,7 +25,7 @@ Adobe Experience Platform中的來源連接器可讓您依計畫吸收外部來�
 - [[!DNL Experience Data Model] (XDM)系統](../../../xdm/home.md):組織客戶體驗資料 [!DNL Experience Platform] 的標準化架構。
    - [架構構成基礎](../../../xdm/schema/composition.md):瞭解XDM架構的基本建置區塊，包括架構組合的主要原則和最佳實務。
    - [架構編輯器教程](../../../xdm/tutorials/create-schema-ui.md):瞭解如何使用架構編輯器UI建立自訂架構。
-- [[!DNL即時客戶基本資料]](../../../profile/home.md):根據來自多個來源的匯整資料，提供統一、即時的消費者個人檔案。
+- [[!DNL Real-time Customer Profile]](../../../profile/home.md):根據來自多個來源的匯整資料，提供統一、即時的消費者個人檔案。
 
 ## 使用UI刪除資料流
 
@@ -64,7 +64,6 @@ Adobe Experience Platform中的來源連接器可讓您依計畫吸收外部來�
 
 ## 後續步驟
 
-遵循本教學課程，您已成功存取 **[!UICONTROL Sources工作區的現有帳戶和]** 資料流。 現在，下游服務（例如和）可 [!DNL Platform] 以使用傳入 [!DNL Real-time Customer Profile] 的資料 [!DNL Data Science Workspace]。 如需詳細資訊，請參閱下列檔案：
+按照本教程，您已成功使用 **[!UICONTROL Sources工作區刪除現有]** 資料流。
 
-- [[!DNL Real-time Customer Profile] 概述](../../../profile/home.md)
-- [[!DNL Data Science Workspace] 概述](../../../data-science-workspace/home.md)
+有關如何使用 [!DNL Flow Service] API以程式設計方式執行這些作業的步驟，請參閱使用Flow Service API [刪除連線的教學課程](../../tutorials/api/delete.md)
