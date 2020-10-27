@@ -4,9 +4,9 @@ audience: user
 user-guide-title: Adobe Experience Platform 教學課程
 breadcrumb-title: Platform 教學課程
 user-guide-description: 透過逐步教學課程快速輕鬆地開始使用Platform，涵蓋從準備擷取資料到使用進階機器學習演算法等所有內容。
-type: Tutorials
+type: Tutorial
 translation-type: tm+mt
-source-git-commit: 516f5af13df0b96e7995a3079cf2a2ce2146676a
+source-git-commit: 097fe219e0d64090de758f388ba98e6024db2201
 workflow-type: tm+mt
 source-wordcount: '70'
 ht-degree: 14%
