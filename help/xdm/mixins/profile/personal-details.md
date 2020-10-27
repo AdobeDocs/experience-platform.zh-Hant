@@ -1,21 +1,25 @@
 ---
 keywords: Experience Platform;home;popular topics;schema;Schema;XDM;individual profile;fields;schemas;Schemas;personal details;Schema design;mixin;Mixin;
 solution: Experience Platform
-title: 混合了個人資料
+title: 混合個人聯絡人詳細資訊
 topic: overview
-description: 本文檔概述了XDM Individual Profile類。
+description: 本文檔提供個人聯繫人詳細資訊混合的概述。
 translation-type: tm+mt
-source-git-commit: e58c669b5542453b7fbf6d90deedcd2cf349c0b6
+source-git-commit: f9d8021643e72e3fbb5315b54a19815dcdaaa702
 workflow-type: tm+mt
-source-wordcount: '122'
-ht-degree: 8%
+source-wordcount: '133'
+ht-degree: 7%
 
 ---
 
 
-# [!UICONTROL 混合個人詳細資訊] (Profile personal details mixin)
+# [!UICONTROL 混合的個人聯絡人詳細資訊]
 
-[!UICONTROL 個人設定檔] ，是該課程的標準組合 [[!DNL XDM Individual Profile] 檔](../../classes/individual-profile.md)。 混音提供根級對象，其子 `person` 欄位描述關於個人的聯繫資訊。
+>[!NOTE]
+>
+>幾個混音的名字已經改變。 如需詳細資訊，請 [參閱混合名稱更新](../name-updates.md) 的檔案。
+
+[!UICONTROL 個人聯繫人詳細資訊] (Personal Contact Details [[!DNL XDM Individual Profile] )是類別的標準組合，](../../classes/individual-profile.md) 它描述了個人的聯繫資訊。
 
 <img src="../../images/mixins/profile-personal-details.png" width="700" /><br />
 
