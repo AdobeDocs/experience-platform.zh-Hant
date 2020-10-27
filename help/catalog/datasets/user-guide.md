@@ -5,9 +5,9 @@ title: 資料集使用指南
 topic: datasets
 description: 本資料集使用指南提供在Adobe Experience Platform使用者介面中使用資料集時執行常見動作的指示。
 translation-type: tm+mt
-source-git-commit: 79dca07d3e6ecf998a6278fa49178a7fa8cc0e8c
+source-git-commit: 1c00456ee06c1fc09c8e4ce070c90255f51811e1
 workflow-type: tm+mt
-source-wordcount: '1162'
+source-wordcount: '1146'
 ht-degree: 0%
 
 ---
@@ -22,11 +22,11 @@ ht-degree: 0%
 本使用指南需要有效瞭解Adobe Experience Platform的下列元件：
 
 * [資料集](overview.md):中用於資料持久性的儲存和管理結構 [!DNL Experience Platform]。
-* [[!DNL體驗資料模型(XDM)系統]](../../xdm/home.md):組織客戶體驗資料 [!DNL Experience Platform] 的標準化架構。
+* [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md):組織客戶體驗資料 [!DNL Experience Platform] 的標準化架構。
    * [架構構成基礎](../../xdm/schema/composition.md):瞭解XDM架構的基本建置區塊，包括架構組合的主要原則和最佳實務。
    * [架構編輯器](../../xdm/tutorials/create-schema-ui.md):瞭解如何使用使用者介面建立您自己 [!DNL Schema Editor] 的自訂 [!DNL Platform] XDM架構。
-* [[!DNL即時客戶基本資料]](../../profile/home.md):根據來自多個來源的匯整資料，提供統一、即時的消費者個人檔案。
-* [[!DNL Adobe Experience Platform資料治理]](../../data-governance/home.md):確保遵守有關客戶資料使用的法規、限制和政策。
+* [[!DNL Real-time Customer Profile]](../../profile/home.md):根據來自多個來源的匯整資料，提供統一、即時的消費者個人檔案。
+* [[!DNL Adobe Experience Platform Data Governance]](../../data-governance/home.md):確保遵守有關客戶資料使用的法規、限制和政策。
 
 ## 檢視資料集
 
@@ -122,7 +122,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Adobe應用程式和服務(例如Adobe Analytics、Adobe Audience Manager或 [!DNL Decisioning Service])所建立和使用的資料集無法刪除。
+>Adobe應用程式和服務(例如Adobe Analytics、Adobe Audience Manager或 [!DNL Offer Decisioning])所建立和使用的資料集無法刪除。
 
 ![](../images/datasets/user-guide/delete_dataset.png)
 
