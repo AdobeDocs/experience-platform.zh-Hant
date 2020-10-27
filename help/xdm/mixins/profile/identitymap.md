@@ -5,15 +5,19 @@ title: IdentityMap混音
 topic: overview
 description: 本文檔概述了XDM Individual Profile類。
 translation-type: tm+mt
-source-git-commit: fd5bd4134bd35d5d87c79bf1e75bc88c67511b2b
+source-git-commit: f9d8021643e72e3fbb5315b54a19815dcdaaa702
 workflow-type: tm+mt
-source-wordcount: '96'
+source-wordcount: '113'
 ht-degree: 0%
 
 ---
 
 
 # [!UICONTROL IdentityMap] mixin
+
+>[!NOTE]
+>
+>幾個混音的名字已經改變。 如需詳細資訊，請 [參閱混合名稱更新](../name-updates.md) 的檔案。
 
 [!UICONTROL IdentityMap] 是類別的標準混 [[!DNL XDM Individual Profile] 合檔](../../classes/individual-profile.md)。 mixin提供單一映射欄位，其中包含由namespace鍵入的一組使用者身分識別。
 
