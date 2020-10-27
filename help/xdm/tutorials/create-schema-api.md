@@ -3,10 +3,10 @@ keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;;experi
 solution: Experience Platform
 title: 使用方案註冊表API建立方案
 topic: tutorial
-type: Tutorials
+type: Tutorial
 description: 本教程使用方案註冊表API來引導您完成使用標準類合成方案的步驟。
 translation-type: tm+mt
-source-git-commit: de3d3a12e5e362bfa5d3149481a0eb7a6b278b70
+source-git-commit: 097fe219e0d64090de758f388ba98e6024db2201
 workflow-type: tm+mt
 source-wordcount: '2343'
 ht-degree: 1%
