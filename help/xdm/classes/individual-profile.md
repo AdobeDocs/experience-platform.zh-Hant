@@ -5,9 +5,9 @@ title: XDM個別配置檔案類
 topic: overview
 description: 本文檔概述了XDM Individual Profile類。
 translation-type: tm+mt
-source-git-commit: b7b57c0b70b1af3a833f0386bc809bb92c9b50f8
+source-git-commit: f9d8021643e72e3fbb5315b54a19815dcdaaa702
 workflow-type: tm+mt
-source-wordcount: '346'
+source-wordcount: '363'
 ht-degree: 0%
 
 ---
@@ -34,10 +34,14 @@ ht-degree: 0%
 
 ## 相容混音 {#mixins}
 
+>[!NOTE]
+>
+>幾個混音的名字已經改變。 如需詳細資訊，請 [參閱混合名稱更新](../mixins/name-updates.md) 的檔案。
+
 Adobe提供數種標準混音，以搭配該類 [!DNL XDM Individual Profile] 使用。 以下是該類別最常使用的混音清單：
 
 * [[!UICONTROL IdentityMap]](../mixins/profile/identitymap.md)
-* [[!UICONTROL 個人資料詳細資訊]](../mixins/profile/person-details.md)
-* [[!UICONTROL 個人資料詳細資訊]](../mixins/profile/personal-details.md)
-* [[!UICONTROL 概要檔案工作詳細資訊]](../mixins/profile/work-details.md)
-* [[!UICONTROL 描述檔區段]](../mixins/profile/segmentation.md)
+* [[!UICONTROL 人口統計詳細資訊]](../mixins/profile/person-details.md)
+* [[!UICONTROL 個人聯絡資訊]](../mixins/profile/personal-details.md)
+* [[!UICONTROL 工作聯繫人詳細資訊]](../mixins/profile/work-details.md)
+* [[!UICONTROL 區段會籍詳細資訊]](../mixins/profile/segmentation.md)
