@@ -2,12 +2,12 @@
 product: experience-platform
 audience: user
 user-guide-title: Adobe Experience Platform 來源連接器說明
-breadcrumb-title: Source Connectors 指南
+breadcrumb-title: 來源連接器指南
 user-guide-description: 從多種來源或結構擷取資料、加標籤，以及增強已擷取的資料。
 translation-type: tm+mt
-source-git-commit: da0c65b5afc19e2497816c4b84270f5f5c4617f2
+source-git-commit: 26d117726a59dea0c08cf6ca5a13bf54951f7f44
 workflow-type: tm+mt
-source-wordcount: '645'
+source-wordcount: '654'
 ht-degree: 4%
 
 ---
@@ -134,6 +134,7 @@ ht-degree: 4%
    - [使用Flow Service API建立資料集基本連線](tutorials/api/create-dataset-base-connection.md)
    - [使用流服務API監視資料流](tutorials/api/monitor.md)
    - [使用Flow Service API更新連線資訊](tutorials/api/update.md)
+   - [使用Flow Service API刪除連線](tutorials/api/delete.md)
 - UI教學課程 {#ui-tutorials}
    - 建立源連接器 {#create}
       - Adobe應用程式 {#adobe-applications}
@@ -195,6 +196,7 @@ ht-degree: 4%
       - [為協定連接器配置資料流](tutorials/ui/dataflow/protocols.md)
    - [啟用傳入資料以填入客戶個人檔案](tutorials/ui/profile.md)
    - [監視帳戶和資料流](tutorials/ui/monitor.md)
+   - [刪除帳戶](tutorials/ui/delete-accounts.md)
    - [刪除資料流](tutorials/ui/delete.md)
 - [流量執行通知](notifications.md)
 - [平台版本注意事項](https://www.adobe.com/go/platform-release-notes-en)
