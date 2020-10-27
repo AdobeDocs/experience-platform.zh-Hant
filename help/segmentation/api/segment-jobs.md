@@ -5,9 +5,9 @@ title: 區段工作
 topic: developer guide
 description: 本指南提供相關資訊，以協助您進一步瞭解區段工作，並包含使用API執行基本動作的範例API呼叫。
 translation-type: tm+mt
-source-git-commit: 8c5c3aed4d46c8b3873009ab9f17ff9bca93302c
+source-git-commit: 521b760da850144d7a8e75126453c2aae5c2ce72
 workflow-type: tm+mt
-source-wordcount: '1153'
+source-wordcount: '1152'
 ht-degree: 2%
 
 ---
@@ -177,7 +177,7 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/jobs?status=SUCCEEDE
 | `metrics.profileSegmentationTime` | 包含分段評估開始和結束時間以及所花費總時間的資訊的物件。 |
 | `metrics.segmentProfileCounter` | 每個區段限定的設定檔數。 |
 | `metrics.segmentedProfileByNamespaceCounter` | 每個區段上每個身分名稱空間限定的描述檔數。 |
-| `metrics.segmentProfileByStatusCounter` | 每個狀態 **的描述檔片段** 計數。 支援下列三種狀態： <ul><li>「已實現」-進入區段的新設定檔數。</li><li>&quot;existing&quot; —— 區段中繼續存在的設定檔數。</li><li>「退出」-區段中不再存在的描述檔區段數。</li></ul> |
+| `metrics.segmentProfileByStatusCounter` | 每個狀態的描述檔計數。 支援下列三種狀態： <ul><li>「已實現」-進入區段的新設定檔數。</li><li>&quot;existing&quot; —— 區段中繼續存在的設定檔數。</li><li>「退出」-區段中不再存在的描述檔區段數。</li></ul> |
 | `metrics.totalProfilesByMergePolicy` | 每個合併策略的合併配置檔案總數。 |
 
 ## 建立新區段工作 {#create}
