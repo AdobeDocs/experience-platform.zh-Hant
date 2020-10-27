@@ -5,9 +5,9 @@ doc-type: release notes
 last-update: December 12, 2019
 author: ens71067
 translation-type: tm+mt
-source-git-commit: 9bd893820c7ab60bf234456fdd110fb2fbe6697c
+source-git-commit: 801da8a705360688f230eae5772a8bed9a1e856e
 workflow-type: tm+mt
-source-wordcount: '682'
+source-wordcount: '656'
 ht-degree: 7%
 
 ---
@@ -19,10 +19,10 @@ ht-degree: 7%
 
 Adobe Experience Platform 現有功能更新：
 
-* [[!DNL分段服務]](#segmentation)
-* [[!DNL決策服務]](#decisioning)
-* [[!DNL源]](#sources)
-* [[!DNL Experience Data Model(XDM)System]](#xdm)
+* [[!DNL Segmentation Service]](#segmentation)
+* [[!DNL Decisioning Service]](#decisioning)
+* [[!DNL Sources]](#sources)
+* [[!DNL Experience Data Model (XDM) System]](#xdm)
 
 ## [!DNL Segmentation Service] {#segmentation}
 
@@ -56,8 +56,6 @@ Adobe Experience Platform可 [!DNL Decisioning Service] 讓您以程式設計方
 **已知問題**
 
 * None.
-
-如需服 [務的完整簡介](../../decisioning-service/home.md) ，請參閱決策服務概觀。
 
 ## [!DNL Sources] {#sources}
 
