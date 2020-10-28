@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics;schema;Schema;XDM;ExperienceEvent;fields;schemas;Schemas;Schema design;mixin;mixin;enduserids;end-user;end user;ids;
+keywords: Experience Platform;home;popular topics;schema;Schema;XDM;ExperienceEvent;fields;schemas;Schemas;Schema design;mixin;mixin;enduserids;end-user;end user;ids;updates;
 solution: Experience Platform
 title: Mixin名稱更新
 topic: overview
 description: 最近XDM混音名稱變更的清單。
 translation-type: tm+mt
-source-git-commit: 0f36cf30e94c53aad8cdd11174a3656fda32d961
+source-git-commit: 4f50926a9c5bc02255bd62c51cca13fc9094a9e8
 workflow-type: tm+mt
-source-wordcount: '256'
+source-wordcount: '251'
 ht-degree: 0%
 
 ---
@@ -21,7 +21,6 @@ ht-degree: 0%
 
 | 舊名 | 更新名稱 |
 | --- | --- |
-| [!UICONTROL 消費者體驗事件混合] | [!UICONTROL 內容使用詳細資訊] |
 | [!UICONTROL 體驗事件隱私權混合] | [!UICONTROL 隱私權詳細資訊] |
 | [!UICONTROL ExperienceEvent應用程式詳細資訊] | [!UICONTROL 應用程式詳細資訊] |
 | [!UICONTROL ExperienceEvent頻道詳細資訊] | [!UICONTROL 頻道詳細資訊] |
@@ -44,7 +43,7 @@ ht-degree: 0%
 | [!UICONTROL 個人檔案手機] | [!UICONTROL 電話號碼詳細資料] |
 | [!UICONTROL 描述檔偏好設定詳細資訊] | [!UICONTROL 首選項詳細資訊] |
 | [!UICONTROL 設定檔隱私權] | [!UICONTROL 隱私權詳細資訊] |
-| [!UICONTROL 描述檔推播詳細資訊] | [!UICONTROL 推播通知詳細資訊] |
+| [!UICONTROL 描述檔推播詳細資訊] | [!UICONTROL 推播通知Token詳細資訊] |
 | [!UICONTROL 描述檔區段] | [!UICONTROL 區段會籍詳細資訊] |
 | [!UICONTROL 描述檔訂閱] | [!UICONTROL 訂閱詳細資訊] |
 | [!UICONTROL 概要檔案工作詳細資訊] | [!UICONTROL 工作聯繫人詳細資訊] |
