@@ -2,12 +2,12 @@
 keywords: destinations;destination;destination types
 title: 目標類型和類別
 seo-title: 目標類型和類別
-description: '在Adobe即時客戶資料平台中，描述檔／區段匯出目的地會擷取事件資料，並與其他資料來源結合，套用區段，以及將區段和合格的描述檔匯出至目的地。 啟動擴充功能會將原始事件資料轉送至數種目的地。 '
-seo-description: 在Adobe即時客戶資料平台中，描述檔／區段匯出目的地會擷取事件資料，並與其他資料來源結合，套用區段，以及將區段和合格的描述檔匯出至目的地。 啟動擴充功能會將原始事件資料轉送至數種目的地。
+description: '在Adobe即時客戶資料平台中，描述檔／區段匯出目的地會擷取事件資料，並與其他資料來源結合，套用區段，以及將區段和合格的描述檔匯出至目的地。 Experience Platform Launch擴充功能可將原始事件資料轉送至數種目的地。 '
+seo-description: 在Adobe即時客戶資料平台中，描述檔／區段匯出目的地會擷取事件資料，並與其他資料來源結合，套用區段，以及將區段和合格的描述檔匯出至目的地。 Experience Platform Launch擴充功能可將原始事件資料轉送至數種目的地。
 translation-type: tm+mt
-source-git-commit: b510f715133cc3fed98861f977b3ce9a857a5ced
+source-git-commit: e6276eac05f0a20a668051034e83831002a464f0
 workflow-type: tm+mt
-source-wordcount: '580'
+source-wordcount: '591'
 ht-degree: 0%
 
 ---
@@ -49,13 +49,13 @@ ht-degree: 0%
 
 ### 擴充功能 {#extensions}
 
-Adobe Real-time CDP運用Experience Platform Launch的強大功能與彈性，將Launch擴充功能加入Adobe Real-time CDP介面中。
+Adobe Real-time CDP運用Adobe Experience Platform Launch的強大功能與彈性，將Platform Launch擴充功能加入Adobe Real-time CDP介面。
 
 >[!TIP]
 >
->如需Experience Platform Launch擴充功能的詳細資訊，包括使用案例以及如何在介面中尋找這些擴充功能，請參閱 [Launch擴充功能概觀](/help/rtcdp/destinations/experience-platform-launch-extensions.md)。
+>如需Adobe Experience Platform Launch擴充功能的詳細資訊，包括使用案例以及如何在介面中尋找這些擴充功能，請參閱 [Adobe Experience Platform Launch擴充功能概觀](/help/rtcdp/destinations/experience-platform-launch-extensions.md)。
 
-啟動擴充功能會將原始事件資料轉送至數種目的地。 將擴充功能設想為 **「事件轉發** 」類型的目標。 這是與目標平台整合的更簡單類型，目標平台只會轉送原始事件資料。 例如Gainsight個人化 [擴充功能](/help/rtcdp/destinations/gainsight-extension.md) , [或客戶擴充功能的確認聲音](/help/rtcdp/destinations/confirmit-digital-feedback-extension.md)。
+Platform Launch擴充功能可將原始事件資料轉送至數種目的地。 將擴充功能設想為 **「事件轉發** 」類型的目標。 這是與目標平台整合的更簡單類型，目標平台只會轉送原始事件資料。 例如Gainsight個人化 [擴充功能](/help/rtcdp/destinations/gainsight-extension.md) , [或客戶擴充功能的確認聲音](/help/rtcdp/destinations/confirmit-digital-feedback-extension.md)。
 
 ![Experience Platform Launch擴充功能與其他目的地的比較](/help/rtcdp/destinations/assets/launch-and-other-destinations.png)
 
