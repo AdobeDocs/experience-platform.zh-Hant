@@ -5,9 +5,9 @@ title: 準備資料以用於智慧型服務
 topic: Intelligent Services
 description: '為了讓智慧型服務能夠從行銷事件資料中發掘見解，資料必須以標準結構進行語義豐富和維護。 智慧型服務運用Experience Data Model(XDM)架構來達成此目標。 具體來說，Intelligent Services中使用的所有資料集都必須符合Consumer ExperienceEvent(CEE)XDM架構。 '
 translation-type: tm+mt
-source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
+source-git-commit: 3083c50b31746bfd32634278cb55b926bd477b2b
 workflow-type: tm+mt
-source-wordcount: '1979'
+source-wordcount: '1882'
 ht-degree: 0%
 
 ---
@@ -276,81 +276,15 @@ CEE混合內有幾個關鍵欄位，為了產生有用的見解，應 [!DNL Inte
 
 ![](images/data-preparation/dataset-location.png)
 
-#### 新增主要身分命名空間標籤至資料集
+#### 將身分欄位新增至資料集
 
 >[!NOTE]
 >
 >未來的版 [!DNL Intelligent Services] 本將整 [合Adobe Experience Platform Identity Service](../identity-service/home.md) ，使其客戶識別功能。 因此，下列步驟可能會有所變更。
 
-如果您要從、或其他外 [!DNL Adobe Audience Manager]部來源 [!DNL Adobe Analytics]匯入資料，則必須新增標 `primaryIdentityNameSpace` 記至資料集。 這可以通過向目錄服務API發出PATCH請求來完成。
+如果要從、或其他外部 [!DNL Adobe Audience Manager]源導入 [!DNL Adobe Analytics]資料，則可以選擇將模式欄位設定為身份欄位。 要將方案欄位設定為身份欄位，請在 [UI教程中查看有關設定身份欄位的部分，該教程用於使用方案編輯器或](../xdm/tutorials/create-schema-ui.md#identity-field) API教程建立方案 [](../xdm/tutorials/create-schema-api.md#define-an-identity-descriptor)。
 
 如果您從本機CSV檔案擷取資料，可跳至下一節的對應與 [擷取資料](#ingest)。
-
-在遵循下列範例API呼叫之前，請參閱目錄開 [發人員指南中的](../catalog/api/getting-started.md) 「快速入門」一節，以取得有關必要標題的重要資訊。
-
-**API格式**
-
-```http
-PATCH /dataSets/{DATASET_ID}
-```
-
-| 參數 | 說明 |
-| --- | --- |
-| `{DATASET_ID}` | 您先前建立之資料集的ID。 |
-
-**請求**
-
-您必須在請求裝載中提供適當的值和標 `primaryIdentityNamespace` 記值， `sourceConnectorId` 視您要從哪個來源擷取資料。
-
-下列請求會為Audience Manager新增適當的標籤值：
-
-```shell
-curl -X PATCH \
-  https://platform.adobe.io/data/foundation/catalog/dataSets/5ba9452f7de80400007fc52a \
-  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME}' \
-  -H 'Content-Type: application/json' \
-  -d '{
-        "tags": {
-          "primaryIdentityNameSpace": ["mcid"],
-          "sourceConnectorId": ["audiencemanager"],
-        }
-      }'
-```
-
-下列請求會為Analytics新增適當的標籤值：
-
-```shell
-curl -X PATCH \
-  https://platform.adobe.io/data/foundation/catalog/dataSets/5ba9452f7de80400007fc52a \
-  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME}' \
-  -H 'Content-Type: application/json' \
-  -d '{
-        "tags": {
-          "primaryIdentityNameSpace": ["aaid"],
-          "sourceConnectorId": ["analytics"],
-        }
-      }'
-```
-
->[!NOTE]
->
->如需在Platform中使用身分名稱空間的詳細資訊，請參閱身分名稱 [空間概觀](../identity-service/namespaces.md)。
-
-**回應**
-
-成功的回應會傳回包含已更新資料集ID的陣列。 此ID應與PATCH請求中發送的ID匹配。
-
-```json
-[
-    "@/dataSets/5ba9452f7de80400007fc52a"
-]
-```
 
 #### 映射和收錄資料 {#ingest}
 
@@ -366,5 +300,5 @@ curl -X PATCH \
 
 在您成功將客戶體驗資料填入資料集後，您就可用來產 [!DNL Intelligent Services] 生見解。 請參閱下列檔案以開始使用：
 
-* [Attribution AI概觀](./attribution-ai/overview.md)
-* [客戶人工智慧概觀](./customer-ai/overview.md)
+* [Attribution AI 概述](./attribution-ai/overview.md)
+* [Customer AI 概述](./customer-ai/overview.md)
