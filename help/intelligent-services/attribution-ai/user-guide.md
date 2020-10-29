@@ -5,17 +5,17 @@ title: Attribution AI使用指南
 topic: User guide
 description: 本檔案可做為在智慧型服務使用者介面中與Attribution AI互動的指南。
 translation-type: tm+mt
-source-git-commit: c5e2ea5daf813bf580a11f0182361197e55c6fe8
+source-git-commit: 4c1aa1fc5ca1f335dedba47623709d5d2ce12c6e
 workflow-type: tm+mt
-source-wordcount: '1449'
-ht-degree: 0%
+source-wordcount: '1746'
+ht-degree: 1%
 
 ---
 
 
 # Attribution AI使用指南
 
-歸因人工智慧(Attribution AI)是智慧服務的一部分，是多通道的演算法歸因服務，可計算客戶互動對特定結果的影響和增量影響。 借助Attribution AI，行銷人員可以透過瞭解客戶歷程各個階段的每個個別客戶互動的影響，衡量並最佳化行銷和廣告支出。
+歸因人工智慧(Attribution AI)是智慧服務的一部分，是多通道的演算法歸因服務，可計算客戶互動對特定結果的影響和增量影響。 透過 Attribution AI，行銷人員可經由了解每個客戶在客戶歷程各個階段的互動所產生的影響，來衡量行銷和廣告支出並予以最佳化。
 
 本檔案可做為在智慧型服務使用者介面中與Attribution AI互動的指南。
 
@@ -25,7 +25,29 @@ ht-degree: 0%
 
 ![存取您的例項](./images/user-guide/open_Attribution_ai.png)
 
-此時會顯示「歸因AI」服務頁面。 本頁列出Attribution AI的服務例項，並顯示其相關資訊，包括例項名稱、轉換事件、執行例項的頻率，以及上次更新的狀態。 按一 **下「建立例項** 」以開始。
+此時會顯示「歸因AI」服務頁面。 本頁列出Attribution AI的服務例項，並顯示其相關資訊，包括例項名稱、轉換事件、執行例項的頻率，以及上次更新的狀態。
+
+您可以在「建 **[!UICONTROL 立例項]** 」容器右下方找到「轉換事件總計計分」 **[!UICONTROL 量度]** 。 此度量會追蹤Attribution AI在目前日曆年度（包括所有沙盒環境和任何已刪除的服務例項）計分的轉換事件總數。
+
+![](./images/user-guide/total_conversions.png)
+
+使用UI右側的控制項，即可編輯、複製和刪除服務例項。 若要顯示這些控制項，請從現有的服務例項中選 **[!UICONTROL 取例項]**。 控制項包含下列資訊：
+
+- **[!UICONTROL 編輯]**:選擇「 **[!UICONTROL 編輯]** 」(Edit)允許您修改現有服務實例。 您可以編輯實例的名稱、說明、狀態和計分頻率。
+- **[!UICONTROL 克隆]**:選擇 **[!UICONTROL 克隆]** ，將複製所選服務實例。 然後，您可以修改工作流程，進行微調，並將其重新命名為新例項。
+- **[!UICONTROL 刪除]**:您可以刪除包含任何歷史執行的服務例項。
+- **[!UICONTROL 資料來源]**:此實例所使用之資料集的連結。
+- **[!UICONTROL 上次執行詳細資訊]**:只有當執行失敗時，才會顯示此項。 此處會顯示執行失敗的原因，例如錯誤代碼。
+
+![](./images/user-guide/side_panel.png)
+
+- **[!UICONTROL 轉換事件]**:此例項所設定之轉換事件的快速概述。
+- **[!UICONTROL 回顧視窗]**:您定義的時間範圍，指出包含轉換事件接觸點前的天數。
+- **[!UICONTROL 觸點]**:建立此例項時所定義之所有接觸點的清單。
+
+![](./images/user-guide/side_panel_2.png)
+
+選擇「 **[!UICONTROL 建立實例]** 」(Create instance to begin)。
 
 ![建立例項](./images/user-guide/landing_page.png)
 
@@ -133,7 +155,7 @@ ht-degree: 0%
 
 ## 進階訓練與計分設定
 
-Attribution AI中的最後一頁是 *Advanced* page，用於設定訓練和計分。
+Attribution AI中的最後一頁是 **[!UICONTROL Advanced]** page，用於設定訓練和計分。
 
 ![新增頁面進階](./images/user-guide/advanced_settings.png)
 
@@ -152,6 +174,12 @@ Attribution AI中的最後一頁是 *Advanced* page，用於設定訓練和計�
 >每個計分程式最多需要24小時才能完成。
 
 ![時鐘錶徵圖](./images/user-guide/time_of_day.png)
+
+### 其他分數資料集欄（選用）
+
+依預設，會為標準架構中的每個服務例項建立分數資料集。 您可以選擇根據轉換事件和觸點組態新增其他欄至分數資料集輸出。 首先，從輸入資料集選取欄，然後拖放欄以變更順序，方法是將滑鼠左鍵按在漢堡圖示上。
+
+![分數資料集欄加分](./images/user-guide/Add-score-dataset.png)
 
 ### 區域型模型（選用） {#region-based-modeling-optional}
 
@@ -189,7 +217,7 @@ Attribution AI中的最後一頁是 *Advanced* page，用於設定訓練和計�
 
 ## 後續步驟
 
-遵循本教學課程，您已成功在Attribution AI中建立服務例項。 當例項完成計分（最多可允許24小時）後，您就可以發現Attribution AI [見解](./discover-insights.md)。 此外，如果您想要下載計分結果，請造訪下載原始 [分數檔案](./download-scores.md) 。
+遵循本教學課程，您已成功在Attribution AI中建立服務例項。 當例項完成計分（最多可允許24小時）後，您就可以發現Attribution AI [見解](./discover-insights.md)。 此外，如果您想要下載計分結果，請造訪下載 [計分檔案](./download-scores.md) 。
 
 ## 其他資源
 
