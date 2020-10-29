@@ -5,9 +5,9 @@ title: 連線至串流目的地並啟動資料
 topic: tutorial
 type: Tutorial
 translation-type: tm+mt
-source-git-commit: 51dd255156229adcb80c2a04aa1ccd5b01208a66
+source-git-commit: 34bf1c8aba555c5c8a527f4c0162cec4535b1dcf
 workflow-type: tm+mt
-source-wordcount: '1813'
+source-wordcount: '1871'
 ht-degree: 2%
 
 ---
@@ -231,6 +231,10 @@ POST /connections
 
 **請求**
 
+>[!IMPORTANT]
+>
+>下列範例包含前置詞的程式碼註解 `//`。 這些註解會反白標示不同串流目的地必須使用不同值的位置。 請先移除注釋，再使用程式碼片段。
+
 ```shell
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/connections' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -240,7 +244,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 --header 'Content-Type: application/json' \
 --data-raw '{
     "name": "Connection for Amazon Kinesis/ Azure Event Hubs",
-    "description": "your company's holiday campaign",
+    "description": "summer advertising campaign",
     "connectionSpec": {
         "id": "{_CONNECTION_SPEC_ID}",
         "version": "1.0"
@@ -289,6 +293,10 @@ POST /targetConnections
 ```
 
 **請求**
+
+>[!IMPORTANT]
+>
+>下列範例包含前置詞的程式碼註解 `//`。 這些註解會反白標示不同串流目的地必須使用不同值的位置。 請先移除注釋，再使用程式碼片段。
 
 ```shell
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/targetConnections' \
