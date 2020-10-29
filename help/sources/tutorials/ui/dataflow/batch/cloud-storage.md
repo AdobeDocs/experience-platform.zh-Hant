@@ -6,9 +6,9 @@ topic: overview
 type: Tutorial
 description: 資料流是從源中檢索資料並將資料帶入平台資料集的計畫任務。 本教學課程提供使用雲端儲存帳戶設定新資料流的步驟。
 translation-type: tm+mt
-source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
+source-git-commit: 52129cbc597c6bef6f858e581edc0db23b06ad67
 workflow-type: tm+mt
-source-wordcount: '1674'
+source-wordcount: '1790'
 ht-degree: 0%
 
 ---
@@ -25,7 +25,7 @@ ht-degree: 0%
 * [[!DNL Experience Data Model] (XDM)系統](../../../../../xdm/home.md):組織客戶體驗資料 [!DNL Experience Platform] 的標準化架構。
    * [架構構成基礎](../../../../../xdm/schema/composition.md):瞭解XDM架構的基本建置區塊，包括架構組合的主要原則和最佳實務。
    * [架構編輯器教程](../../../../../xdm/tutorials/create-schema-ui.md):瞭解如何使用架構編輯器UI建立自訂架構。
-* [[!DNL即時客戶基本資料]](../../../../../profile/home.md):根據來自多個來源的匯整資料，提供統一、即時的消費者個人檔案。
+* [[!DNL Real-time Customer Profile]](../../../../../profile/home.md):根據來自多個來源的匯整資料，提供統一、即時的消費者個人檔案。
 
 此外，本教學課程要求您擁有已建立的雲端儲存空間帳戶。 如需在UI中建立不同雲端儲存空間帳戶的教學課程清單，請參閱來源連接 [器概觀](../../../../home.md)。
 
@@ -54,17 +54,23 @@ ht-degree: 0%
 
 ### 收錄Parce或JSON檔案
 
-雲端儲存帳戶支援的檔案格式也包含JSON和Parce。 JSON和Parce檔案必須符合XDM規範。 若要擷取JSON或Parce檔案，請從目錄瀏覽器中選取適當的檔案格式，並從正確的介面套用相容的資料格式。 選擇 **[!UICONTROL 下一步]** ，繼續。
+雲端儲存空間帳戶也支援JSON和Parce檔案。 拼花檔案必須與XDM相容，而JSON檔案則不需要與XDM相容。 若要擷取JSON或Parce檔案，請從目錄瀏覽器中選取適當的檔案格式，並從正確的介面套用相容的資料格式。
+
+如果資料格式為JSON，則會顯示預覽，顯示檔案中資料的相關資訊。 在預覽畫面上，您可以使用「XDM相容」下拉式清單來選取JSON是否與 **[!UICONTROL XDM相容]** 。
+
+選擇 **[!UICONTROL 下一步]** ，繼續。
+
+![](../../../../images/tutorials/dataflow/cloud-storage/batch/json-preview.png)
 
 >[!IMPORTANT]
 >
->與分隔的檔案類型不同，JSON和Parce格式的檔案無法用於預覽。
+>與分隔字元和JSON檔案類型不同，Parce格式化的檔案無法預覽。
 
 ![](../../../../images/tutorials/dataflow/cloud-storage/batch/select-data-parquet.png)
 
 ## 將資料欄位對應至XDM架構
 
-此時 **[!UICONTROL 會顯示]** 「映射」步驟，提供互動式介面，將來源資料映射至資料 [!DNL Platform] 集。 使用JSON或Parce格式化的來源檔案必須符合XDM標準，而且您不需要手動設定對應。 相反地，CSV檔案會要求您明確設定對應，但允許您選擇要對應的來源資料欄位。
+此時 **[!UICONTROL 會顯示]** 「映射」步驟，提供互動式介面，將來源資料映射至資料 [!DNL Platform] 集。 以Parce格式化的來源檔案必須符合XDM規範，而不需要手動設定對應，而CSV檔案則要求您明確設定對應，但可讓您選擇要對應的來源資料欄位。 JSON檔案（如果標示為XDM問題）不需要手動設定。 但是，如果它未標籤為XDM相容，則需要顯式配置映射。
 
 選擇要接收傳入資料的資料集。 您可以使用現有資料集或建立新資料集。
 
@@ -94,11 +100,19 @@ ht-degree: 0%
 
 根據您的需求，您可以選擇直接映射欄位，或使用映射器函式轉換來源資料以衍生計算或計算值。 有關資料映射和映射器函式的詳細資訊，請參閱將CSV資料映 [射到XDM模式欄位的教程](../../../../../ingestion/tutorials/map-a-csv-file.md)。
 
+![](../../../../images/tutorials/dataflow/cloud-storage/batch/mapping.png)
+
+對於JSON檔案，除了直接將欄位對應至其他欄位外，您還可將物件直接對應至其他物件和陣列至其他陣列。
+
+![](../../../../images/tutorials/dataflow/cloud-storage/batch/source-field-json.png)
+
+![](../../../../images/tutorials/dataflow/cloud-storage/batch/target-field-json.png)
+
+請注意，您無法對應不同的類型。 例如，您無法將物件對應至陣列，或欄位對應至物件。
+
 >[!TIP]
 >
 >[!DNL Platform] 根據您選取的目標架構或資料集，為自動映射欄位提供智慧建議。 您可以手動調整對應規則，以符合您的使用案例。
-
-![](../../../../images/tutorials/dataflow/cloud-storage/batch/mapping.png)
 
 選 **[!UICONTROL 取預覽資料]** ，查看從選取資料集中最多100列範例資料的對應結果。
 
