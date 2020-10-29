@@ -5,10 +5,10 @@ description: 瞭解哪些變數在Adobe Analytics中使用Experience Platform We
 seo-description: 瞭解哪些變數在Adobe Analytics中使用Experience Platform Web SDK自動對應
 keywords: adobe analytics;variables;analytics;automatic map;automatically mapped;
 translation-type: tm+mt
-source-git-commit: 2e28fda40a135330054c749d73439448a55db52c
+source-git-commit: 8e3bef77b84e40c836a6279a9a3e3901565c9920
 workflow-type: tm+mt
-source-wordcount: '547'
-ht-degree: 2%
+source-wordcount: '681'
+ht-degree: 0%
 
 ---
 
@@ -28,11 +28,12 @@ ht-degree: 2%
 | `commerce.checkouts.value` | `events` | AppMeasurement查詢參數EVENT_LIST_FULL對應，轉換為COMMERCE_SC_CHECKOUT，使用分隔字元 `,`。 |
 | `commerce.productListAdds.value` | `events` | AppMeasurement查詢參數EVENT_LIST_FULL對應，轉換為COMMERCE_SC_ADD，使用分隔字元 `,`。 |
 | `commerce.productListRemovals.value` | `events` | AppMeasurement查詢參數EVENT_LIST_FULL對應，轉換為COMMERCE_SC_REMOVE，使用分隔字元 `,`。 |
-| `commerce.productViews.id` | `events` | `prodView` 事件序列化. |
-| `commerce.productListOpens.id` | `events` | `scOpen` 事件序列化. |
-| `commerce.productListViews.id` | `events` | `scView` 事件序列化. |
-| `commerce.productListAdds.id` | `events` | `scAdd` 事件序列化. |
-| `commerce.productListRemovals.id` | `events` | `scRemove` 事件序列化. |
+| `commerce.productViews.id` | `events` | （選用）事件 `prodView` 序列化。 如果排除此欄位（亦即無序號事件），系統會產生並指派其專屬的ID值給實體。 |
+| `commerce.productListOpens.id` | `events` | （選用）事件 `scOpen` 序列化。 如果排除此欄位（亦即無序號事件），系統會產生並指派其專屬的ID值給實體。 |
+| `commerce.productListViews.id` | `events` | （選用）事件 `scView` 序列化。 如果排除此欄位（亦即無序號事件），系統會產生並指派其專屬的ID值給實體。 |
+| `commerce.productListAdds.id` | `events` | （選用）事件 `scAdd` 序列化。 如果排除此欄位（亦即無序號事件），系統會產生並指派其專屬的ID值給實體。 |
+| `commerce.productListRemovals.id` | `events` | （選用）事件 `scRemove` 序列化。 如果排除此欄位（亦即無序號事件），系統會產生並指派其專屬的ID值給實體。 |
+| `commerce.checkouts.id` | `events` | （選用）事件 `scCheckout` 序列化。 如果排除此欄位（亦即無序號事件），系統會產生並指派其專屬的ID值給實體。 |
 | `commerce.checkouts.id` | `events` | `scCheckout` 事件序列化. |
 | `device.screenHeight` | `s` | AppMeasurement查詢參數螢幕解析度對應。 |
 | `device.screenWidth` | `s` | AppMeasurement查詢參數螢幕解析度對應。 |
