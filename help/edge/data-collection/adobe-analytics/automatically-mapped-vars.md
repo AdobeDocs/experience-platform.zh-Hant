@@ -5,10 +5,10 @@ description: 瞭解哪些變數在Adobe Analytics中使用Experience Platform We
 seo-description: 瞭解哪些變數在Adobe Analytics中使用Experience Platform Web SDK自動對應
 keywords: adobe analytics;variables;analytics;automatic map;automatically mapped;
 translation-type: tm+mt
-source-git-commit: aa9789768cbcbb13a36c200ef7540c045c30a3fe
+source-git-commit: 3ed89011313006cf627945bf8c75bfd0b87a69bc
 workflow-type: tm+mt
-source-wordcount: '554'
-ht-degree: 2%
+source-wordcount: '680'
+ht-degree: 0%
 
 ---
 
@@ -21,19 +21,19 @@ ht-degree: 2%
 | ---------- | ------------------------- | ----------------------------------------- |
 | `application.id` | `c.a.appid` | AppMeasurement上下文資料 `c.a.appid` 對應。 |
 | `application.launches.value` | `c.a.launches` | AppMeasurement上下文資料 `c.a.launches` 對應。 |
-| `commerce.checkouts.id` | `events` | `scCheckout` 事件序列化. |
+| `commerce.checkouts.id` | `events` | `scCheckout` 事件序列化。 如果排除此欄位（亦即無序號事件），系統會產生並指派其專屬的ID值給實體。 |
 | `commerce.checkouts.value` | `events` | AppMeasurement查詢參數EVENT_LIST_FULL對應，轉換為COMMERCE_SC_CHECKOUT，使用分隔字元 `,`。 |
 | `commerce.order.currencyCode` | `cc` | AppMeasurement查詢參數CURRENCY映射。 |
 | `commerce.order.purchaseID` | `pi` | AppMeasurement查詢參數PURCHASEID映射。 |
-| `commerce.productListAdds.id` | `events` | `scAdd` 事件序列化. |
+| `commerce.productListAdds.id` | `events` | `scAdd` 事件序列化。 如果排除此欄位（亦即無序號事件），系統會產生並指派其專屬的ID值給實體。 |
 | `commerce.productListAdds.value` | `events` | AppMeasurement查詢參數EVENT_LIST_FULL對應，轉換為COMMERCE_SC_ADD，使用分隔字元 `,`。 |
-| `commerce.productListOpens.id` | `events` | `scOpen` 事件序列化. |
+| `commerce.productListOpens.id` | `events` | `scOpen` 事件序列化。 如果排除此欄位（亦即無序號事件），系統會產生並指派其專屬的ID值給實體。 |
 | `commerce.productListOpens.value` | `events` | AppMeasurement查詢參數EVENT_LIST_FULL對應，轉換為COMMERCE_SC_OPEN，使用分隔字元 `,`。 |
-| `commerce.productListRemovals.id` | `events` | `scRemove` 事件序列化. |
+| `commerce.productListRemovals.id` | `events` | `scRemove` 事件序列化。 如果排除此欄位（亦即無序號事件），系統會產生並指派其專屬的ID值給實體。 |
 | `commerce.productListRemovals.value` | `events` | AppMeasurement查詢參數EVENT_LIST_FULL對應，轉換為COMMERCE_SC_REMOVE，使用分隔字元 `,`。 |
-| `commerce.productListViews.id` | `events` | `scView` 事件序列化. |
+| `commerce.productListViews.id` | `events` | `scView` 事件序列化。 如果排除此欄位（亦即無序號事件），系統會產生並指派其專屬的ID值給實體。 |
 | `commerce.productListViews.value` | `events` | AppMeasurement查詢參數EVENT_LIST_FULL對應，轉換為COMMERCE_SC_VIEW，使用分隔字元 `,`。 |
-| `commerce.productViews.id` | `events` | `prodView` 事件序列化. |
+| `commerce.productViews.id` | `events` | `prodView` 事件序列化。 如果排除此欄位（亦即無序號事件），系統會產生並指派其專屬的ID值給實體。 |
 | `commerce.productViews.value` | `events` | AppMeasurement查詢參數EVENT_LIST_FULL與轉換COMMERCE_PROD_VIEW的映射，使用分隔字元 `,`。 |
 | `commerce.purchases.value` | `events` | AppMeasurement查詢參數EVENT_LIST_FULL與轉換COMMERCE_PURCHASE對應，使用分隔字元 `,`。 |
 | `device.colorDepth` | `c` | AppMeasurement查詢參數C_COLOR映射。 |
