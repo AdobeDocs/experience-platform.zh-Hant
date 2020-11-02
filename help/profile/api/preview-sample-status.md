@@ -4,9 +4,9 @@ title: 描述檔預覽——即時客戶描述檔API
 description: Adobe Experience Platform可讓您從多個來源收集客戶資料，為個別客戶建立強穩的統一個人檔案。 當啟用「即時客戶描述檔」的資料被收錄到「平台」中時，該資料會儲存在「描述檔」資料儲存區中。 隨著描述檔儲存區中記錄數的增加或減少，會執行範例工作，其中包含資料儲存區中有多少描述檔片段和合併的描述檔的相關資訊。 使用描述檔API，您可以預覽最新成功的範例，以及依資料集和身分命名空間來列出描述檔散發。
 topic: guide
 translation-type: tm+mt
-source-git-commit: 59cf089a8bf7ce44e7a08b0bb1d4562f5d5104db
+source-git-commit: 47c65ef5bdd083c2e57254189bb4a1f1d9c23ccc
 workflow-type: tm+mt
-source-wordcount: '1478'
+source-wordcount: '1608'
 ht-degree: 1%
 
 ---
@@ -23,6 +23,12 @@ Adobe Experience Platform可讓您從多個來源收集客戶資料，為個別�
 ## 快速入門
 
 本指南中使用的API端點是 [[!DNL Real-time Customer Profile] API的一部分](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml)。 在繼續之前，請先閱讀快速入門 [指南](getting-started.md) ，以取得相關檔案的連結、閱讀本檔案中範例API呼叫的指南，以及成功呼叫任何 [!DNL Experience Platform] API所需之必要標題的重要資訊。
+
+## 描述檔片段與合併的描述檔
+
+本指南同時引用「描述檔片段」和「合併的描述檔」。 請務必先瞭解這些術語之間的差異，再繼續。
+
+每個客戶個人檔案都由多個已合併的個人檔案片段組成，以形成該客戶的單一檢視。 例如，如果客戶透過多個通道與您的品牌互動，您的組織將會在多個資料集中顯示與該單一客戶相關的多個描述檔片段。 當這些片段被收錄到Platform中時，它們會合併（根據合併原則），以便為該客戶建立單一個人檔案。 因此，由於每個描述檔由多個片段組成，因此描述檔片段的總數可能永遠高於合併描述檔的總數。
 
 ## 查看最後一個示例狀態 {#view-last-sample-status}
 
