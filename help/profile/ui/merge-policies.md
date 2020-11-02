@@ -3,9 +3,9 @@ keywords: Experience Platform;profile;real-time customer profile;troubleshooting
 title: 合併策略使用手冊
 topic: guide
 translation-type: tm+mt
-source-git-commit: 45f42bae4060e107e6c131659cea5d10457c34f8
+source-git-commit: 47c65ef5bdd083c2e57254189bb4a1f1d9c23ccc
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '1516'
 ht-degree: 0%
 
 ---
@@ -13,7 +13,9 @@ ht-degree: 0%
 
 # 合併策略使用手冊
 
-Adobe Experience Platform可讓您從多個來源匯整資料並加以匯整，以全面瞭解每個客戶。 將這些資料整合在一起時，合併原則是用來決定 [!DNL Platform] 資料的優先順序以及將哪些資料合併以建立該統一檢視的規則。
+Adobe Experience Platform可讓您從多個來源匯整資料片段，並加以匯整，以全面瞭解每個客戶。 將這些資料整合在一起時，合併原則是用來決定 [!DNL Platform] 資料的優先順序以及將哪些資料合併以建立該統一檢視的規則。
+
+例如，如果客戶透過多個通道與您的品牌互動，您的組織將會在多個資料集中顯示與該單一客戶相關的多個描述檔片段。 當這些片段被收錄到Platform中時，會將它們合併在一起，以便為該客戶建立單一個人檔案。 當來自多個來源的資料發生衝突（例如，一個片段將客戶列為「單一」，而另一個片段將客戶列為「已婚」）時，合併原則會決定要包含在個人描述檔中的資訊。
 
 使用REST風格的API或用戶介面，您可以建立新的合併策略、管理現有策略，並為組織設定預設的合併策略。 本指南提供使用Adobe Experience Platform使用者介面處理合併原則的逐步指示。
 
@@ -23,9 +25,9 @@ Adobe Experience Platform可讓您從多個來源匯整資料並加以匯整，�
 
 本指南要求對合併策略所涉及的各 [!DNL Experience Platform] 種服務有充分的瞭解。 在開始本教學課程之前，請先閱讀下列服務的檔案：
 
-* [[!DNL即時客戶基本資料]](../home.md):根據來自多個來源的匯整資料，提供統一、即時的消費者個人檔案。
+* [[!DNL Real-time Customer Profile]](../home.md):根據來自多個來源的匯整資料，提供統一、即時的消費者個人檔案。
 * [[!DNL Identity Service]](../../identity-service/home.md):可借 [!DNL Real-time Customer Profile] 由橋接來自不同資料來源的身分識別，並將之收錄在 [!DNL Platform]中。
-* [[!DNL體驗資料模型(XDM)]](../../xdm/home.md):組織客戶體驗資料 [!DNL Platform] 的標準化架構。
+* [[!DNL Experience Data Model (XDM)]](../../xdm/home.md):組織客戶體驗資料 [!DNL Platform] 的標準化架構。
 
 ## 查看合併策略
 
