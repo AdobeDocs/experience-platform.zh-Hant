@@ -6,7 +6,7 @@ description: 本文檔提供了一個教程，用於定義由組織使用方案�
 topic: tutorial
 type: Tutorial
 translation-type: tm+mt
-source-git-commit: 097fe219e0d64090de758f388ba98e6024db2201
+source-git-commit: 4d9e66a55c265b60ab12070dd5e435c6567b7d0f
 workflow-type: tm+mt
 source-wordcount: '1296'
 ht-degree: 1%
@@ -117,7 +117,7 @@ curl -X GET \
 >
 >與目標模式不同，源模式不能將其主標識用作參考欄位。
 
-在本教程中，目標模式&quot;[!DNL Hotels]&quot;包含一個 `email` 欄位，該欄位用作模式的主要標識，因此也將用作其引用欄位。 但是，源模式&quot;[!DNL Loyalty Members]&quot;沒有專用欄位作為引用，必須給它一個新混音，為模式添加一個新欄位： `favoriteHotel`.
+在本教程中，目標模式&quot;[!DNL Hotels]&quot;包含一個 `hotelId` 欄位，該欄位用作模式的主要標識，因此也將用作其引用欄位。 但是，源模式&quot;[!DNL Loyalty Members]&quot;沒有專用欄位作為引用，必須給它一個新混音，為模式添加一個新欄位： `favoriteHotel`.
 
 >[!NOTE]
 >
@@ -339,7 +339,7 @@ curl -X PATCH \
 
 ## 建立引用標識描述符 {#reference-identity}
 
-如果方案欄位用作關係中其他方案的引用，則必須將引用標識描述符應用到它們。 由於 `favoriteHotel` &quot;&quot;中的字[!DNL Loyalty Members]段將引用&quot;&quot;中的欄位，因此必須 `email`[!DNL Hotels]`email` 提供引用標識描述符。
+如果方案欄位用作關係中其他方案的引用，則必須將引用標識描述符應用到它們。 由於 `favoriteHotel` &quot;&quot;中的字[!DNL Loyalty Members]段將引用&quot;&quot;中的欄位，因此必須 `hotelId`[!DNL Hotels]`favoriteHotel` 提供引用標識描述符。
 
 通過向端點發出POST請求，為目標方案建立引用描述 `/tenant/descriptors` 符。
 
@@ -351,7 +351,7 @@ POST /tenant/descriptors
 
 **請求**
 
-以下請求為目標方案&quot;&quot; `email` 中的欄位建立引用描述符[!DNL Hotels]。
+以下請求為目標方案&quot;&quot; `hotelId` 中的欄位建立引用描述符[!DNL Hotels]。
 
 ```shell
 curl -X POST \
@@ -365,8 +365,8 @@ curl -X POST \
     "@type": "xdm:descriptorReferenceIdentity",
     "xdm:sourceSchema": "https://ns.adobe.com/{TENANT_ID}/schemas/d4ad4b8463a67f6755f2aabbeb9e02c7",
     "xdm:sourceVersion": 1,
-    "xdm:sourceProperty": "/_{TENANT_ID}/email",
-    "xdm:identityNamespace": "Email"
+    "xdm:sourceProperty": "/_{TENANT_ID}/hotelId",
+    "xdm:identityNamespace": "Hotel ID"
   }'
 ```
 
@@ -387,8 +387,8 @@ curl -X POST \
     "@type": "xdm:descriptorReferenceIdentity",
     "xdm:sourceSchema": "https://ns.adobe.com/{TENANT_ID}/schemas/d4ad4b8463a67f6755f2aabbeb9e02c7",
     "xdm:sourceVersion": 1,
-    "xdm:sourceProperty": "/_{TENANT_ID}/email",
-    "xdm:identityNamespace": "Email",
+    "xdm:sourceProperty": "/_{TENANT_ID}/hotelId",
+    "xdm:identityNamespace": "Hotel ID",
     "meta:containerId": "tenant",
     "@id": "53180e9f86eed731f6bf8bf42af4f59d81949ba6"
 }
@@ -423,7 +423,7 @@ curl -X POST \
     "xdm:sourceProperty": "/_{TENANT_ID}/favoriteHotel",
     "xdm:destinationSchema": "https://ns.adobe.com/{TENANT_ID}/schemas/d4ad4b8463a67f6755f2aabbeb9e02c7",
     "xdm:destinationVersion": 1,
-    "xdm:destinationProperty": "/_{TENANT_ID}/email"
+    "xdm:destinationProperty": "/_{TENANT_ID}/hotelId"
   }'
 ```
 
