@@ -5,9 +5,9 @@ title: 資料準備功能
 topic: overview
 description: 本文檔介紹與「資料準備」一起使用的映射功能。
 translation-type: tm+mt
-source-git-commit: 16c718c7c653a0cfe4c3dcefddfc5472525e1828
+source-git-commit: 6deb8f5e11b87550601679f06c8445d90fd22709
 workflow-type: tm+mt
-source-wordcount: '3432'
+source-wordcount: '3459'
 ht-degree: 3%
 
 ---
@@ -42,7 +42,7 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 >請向左／向右滾動以查看表的完整內容。
 
 | 函數 | 說明 | 參數 | 語法 | 運算式 | 範例輸出 |
-| -------- | ----------- | ---------- | -------| ---------- | ------------- |
+-------- | ----------- | ---------- | -------| ---------- | -------------
 | concat | 串連指定的字串。 | <ul><li>字串：將串連的字串。</li></ul> | concat(STRING_1, STRING_2) | concat(&quot;Hi, &quot;, &quot;there&quot;, &quot;!&quot;) | `"Hi, there!"` |
 | 爆炸 | 根據規則運算式分割字串，並傳回部件陣列。 可選擇包含規則運算式以分割字串。 預設情況下，拆分解析為&quot;,&quot;。 | <ul><li>字串： **必要** ：需要分割的字串。</li><li>REGEX: *可選* ：可用於拆分字串的規則運算式。</li></ul> | explode(STRING, REGEX) | explode(&quot;Hi, there!&quot;, &quot;) | `["Hi,", "there"]` |
 | instr | 傳回子字串的位置／索引。 | <ul><li>輸入： **必要** ：正在搜索的字串。</li><li>子字串： **必要** ：在字串中搜尋的子字串。</li><li>START_POSITION: *可選* ：字串中要開始查找的位置。</li><li>具體值： *可選* ：從開始位置尋找的第n個出現點。 預設為1。 </li></ul> | instr（INPUT，子字串， START_POSITION, OCCURRENCE） | instr(&quot;adobe`<span>`.com&quot;, &quot;com&quot;) | 6 |
@@ -51,7 +51,7 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 | lower /<br>lcase | 將字串轉換為小寫。 | <ul><li>輸入： **必要** ：將轉換為小寫的字串。</li></ul> | lower(INPUT) | lower(&quot;HeLLo&quot;)<br>lcase(&quot;HeLLo&quot;) | &quot;hello&quot; |
 | upper /<br>ucase | 將字串轉換為大寫。 | <ul><li>輸入： **必要** ：將轉換為大寫的字串。</li></ul> | upper(INPUT) | upper(&quot;HeLLo&quot;)<br>ucase(&quot;HeLLo&quot;) | &quot;HELLO&quot; |
 | split | 在分隔符上拆分輸入字串。 | <ul><li>輸入： **必要** ：將要拆分的輸入字串。</li><li>分隔符號： **必要** ：用於分割輸入的字串。</li></ul> | split(INPUT, SEPARATOR) | split(&quot;Hello world&quot;, &quot; &quot;) | `["Hello", "world"]` |
-| 加入 | 使用分隔符連接對象清單。 | <ul><li>分隔符號： **必要** ：將用於連接對象的字串。</li><li>對象： **必要** ：要連接的字串陣列。</li></ul> | `join(SEPARATOR, [OBJECTS])` | `join(" ", ["Hello", "world"])` | &quot;Hello world&quot; |
+| 加入 | 使用分隔符連接對象清單。 | <ul><li>分隔符號： **必要** ：將用於連接對象的字串。</li><li>對象： **必要** ：要連接的字串陣列。</li></ul> | `join(SEPARATOR, [OBJECTS])` | `join(" ", to_array(true, "Hello", "world"))` | &quot;Hello world&quot; |
 | lpad | 將字串的左側與另一個指定字串相貼。 | <ul><li>輸入： **必要** ：要填補的字串。 此字串可以是null。</li><li>計數： **必需** ：要填補的字串大小。</li><li>填充： **必要** ：用於填充輸入的字串。 如果為null或空白，則會視為單一空格。</li></ul> | lpad（輸入、計數、填充） | lpad(&quot;bat&quot;, 8, &quot;yz&quot;) | &quot;yzybat&quot; |
 | rpad | 將字串的右側與另一個指定字串貼齊。 | <ul><li>輸入： **必要** ：要填補的字串。 此字串可以是null。</li><li>計數： **必需** ：要填補的字串大小。</li><li>填充： **必要** ：用於填充輸入的字串。 如果為null或空白，則會視為單一空格。</li></ul> | rpad（輸入、計數、填充） | rpad(&quot;bat&quot;, 8, &quot;yz&quot;) | &quot;batyzyzy&quot; |
 | left | 取得指定字串的第一個&quot;n&quot;字元。 | <ul><li>字串： **必要** ：您要取得的第一個&quot;n&quot;字元的字串。</li><li>計數： **必**&#x200B;要字串中要取得的&quot;n&quot;字元。</li></ul> | left（字串，計數） | left(&quot;abcde&quot;, 2) | &quot;ab&quot; |
@@ -69,7 +69,7 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 >請向左／向右滾動以查看表的完整內容。
 
 | 函數 | 說明 | 參數 | 語法 | 運算式 | 範例輸出 |
-| -------- | ----------- | ---------- | -------| ---------- | ------------- |
+-------- | ----------- | ---------- | -------| ---------- | -------------
 | sha1 | 使用安全雜湊算法1(SHA-1)輸入並產生雜湊值。 | <ul><li>輸入： **需要** ：要雜湊的純文字檔案。</li><li>字元集： *可選* ：字元集的名稱。 可能的值包括UTF-8、UTF-16、ISO-8859-1和US-ASCII。</li></ul> | sha1(INPUT, CHARSET) | sha1(&quot;my text&quot;, &quot;UTF-8&quot;) | c3599c11e47719df18a24 &#x200B; 48690840c5dfcce3c80 |
 | sha256 | 使用安全雜湊演算法256(SHA-256)輸入並產生雜湊值。 | <ul><li>輸入： **需要** ：要雜湊的純文字檔案。</li><li>字元集： *可選* ：字元集的名稱。 可能的值包括UTF-8、UTF-16、ISO-8859-1和US-ASCII。</li></ul> | sha256(INPUT, CHARSET) | sha256(&quot;my text&quot;, &quot;UTF-8&quot;) | 7330d2b39ca35eaf4cb95fc846c21&#x200B; e6a39af698154a83a586ee270a0d372104 |
 | sha512 | 使用安全雜湊演算法512(SHA-512)輸入並產生雜湊值。 | <ul><li>輸入： **需要** ：要雜湊的純文字檔案。</li><li>字元集： *可選* ：字元集的名稱。 可能的值包括UTF-8、UTF-16、ISO-8859-1和US-ASCII。</li></ul> | sha512(INPUT, CHARSET) | sha512(&quot;my text&quot;, &quot;UTF-8&quot;) | a3d7e45a0d9be5fd4e4b9a3b8c9c2163c21ef &#x200B; 708bf11b4232b21d2a8704ada2cdcd7b367dd078a89 &#x200B; a5c908cfe377aceb1072a7b386b7d4fd2ff68a8fd24d16 |
@@ -83,7 +83,7 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 >請向左／向右滾動以查看表的完整內容。
 
 | 函數 | 說明 | 參數 | 語法 | 運算式 | 範例輸出 |
-| -------- | ----------- | ---------- | -------| ---------- | ------------- |
+-------- | ----------- | ---------- | -------| ---------- | -------------
 | get_url_protocol | 從指定URL傳回通訊協定。 如果輸入無效，則返回null。 | <ul><li>URL: **必要** ：需要從中提取協定的URL。</li></ul> | get_url_protocol(URL) | get_url_protocol(&quot;https://platform.adobe.com/home&quot;) | https |
 | get_url_host | 傳回指定URL的主機。 如果輸入無效，則返回null。 | <ul><li>URL: **必要** ：需要從中提取主機的URL。</li></ul> | get_url_host(URL) | get_url_host(&quot;https://platform.adobe.com/home&quot;) | platform.adobe.com |
 | get_url_port | 傳回指定URL的連接埠。 如果輸入無效，則返回null。 | <ul><li>URL: **必要** ：需要從中提取埠的URL。</li></ul> | get_url_port(URL) | get_url_port(&quot;sftp://example.com//home/joe/employee.csv&quot;) | 22 |
@@ -97,7 +97,7 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 >請向左／向右滾動以查看表的完整內容。
 
 | 函數 | 說明 | 參數 | 語法 | 運算式 | 範例輸出 |
-| -------- | ----------- | ---------- | -------| ---------- | ------------- |
+-------- | ----------- | ---------- | -------| ---------- | -------------
 | now | 檢索當前時間。 |  | now() | now() | `2020-09-23T10:10:24.556-07:00[America/Los_Angeles]` |
 | timestamp | 檢索當前Unix時間。 |  | timestamp() | timestamp() | 1571850624571 |
 | 格式 | 根據指定的格式格式化輸入日期。 | <ul><li>日期： **必要** ：輸入日期，作為要格式化的ZonedDateTime對象。</li><li>格式： **必要** ：您希望日期變更為的格式。</li></ul> | 格式（日期，格式） | format(2019-10-23T11:24:00+00:00, &quot;yyyy-MM-dd HH:mm:ss&quot;) | &quot;2019-10-23 11:24:35&quot; |
@@ -118,13 +118,14 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 >請向左／向右滾動以查看表的完整內容。
 
 | 函數 | 說明 | 參數 | 語法 | 運算式 | 範例輸出 |
-| -------- | ----------- | ---------- | -------| ---------- | ------------- |
+-------- | ----------- | ---------- | -------| ---------- | -------------
 | size_of | 傳回輸入的大小。 | <ul><li>輸入： **必要** ：您要尋找大小的物件。</li></ul> | size_of(INPUT) | `size_of([1, 2, 3, 4])` | 4 |
 | is_empty | 檢查對象是否為空。 | <ul><li>輸入： **必要** ：您要檢查的物件是空的。</li></ul> | is_empty(INPUT) | `is_empty([1, 2, 3])` | false |
 | arrays_to_object | 建立對象清單。 | <ul><li>輸入： **需要** ：一組索引鍵和陣列對。</li></ul> | arrays_to_object(INPUT) | 需要樣本 | 需要樣本 |
 | to_object | 根據給定的平面鍵／值對建立對象。 | <ul><li>輸入： **必要** ：索引鍵／值配對的平面清單。</li></ul> | to_object(INPUT) | to_object(&quot;firstName&quot;, &quot;John&quot;, &quot;lastName&quot;, &quot;Doe&quot;) | `{"firstName": "John", "lastName": "Doe"}` |
 | str_to_object | 從輸入字串建立對象。 | <ul><li>字串： **必需** ：正在解析以建立對象的字串。</li><li>VALUE_DELIMITER: *可選* ：分隔欄位與值的分隔字元。 The default delimiter is `:`.</li><li>FIELD_DELIMITER: *可選* ：分隔欄位值對的分隔字元。 The default delimiter is `,`.</li></ul> | str_to_object(STRING, VALUE_DELIMITER, FIELD_DELIMITER) | str_to_object(&quot;firstName - John | lastName - | 電話- 123 456 7890&quot;、&quot;-&quot;、&quot; | &quot;) | `{"firstName": "John", "lastName": "Doe", "phone": "123 456 7890"}` |
 | is_set | 檢查源資料中是否存在對象。 | <ul><li>輸入： **必要** ：如果源資料中存在要檢查的路徑。</li></ul> | is_set(INPUT) | is_set(&quot;evars.evar.field1&quot;) | true |
+| 抵消 | 將屬性的值設定為 `null`。 當您不想將欄位複製到目標架構時，應使用此功能。 |  | nullify() | nullify() | `null` |
 
 ### 階層——陣列
 
@@ -133,7 +134,7 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 >請向左／向右滾動以查看表的完整內容。
 
 | 函數 | 說明 | 參數 | 語法 | 運算式 | 範例輸出 |
-| -------- | ----------- | ---------- | -------| ---------- | ------------- |
+-------- | ----------- | ---------- | -------| ---------- | -------------
 | 聚結 | 返回給定陣列中的第一個非空對象。 | <ul><li>輸入： **必需** ：要查找的第一個非空對象的陣列。</li></ul> | 合併（輸入） | coalesce(null, null, null, &quot;first&quot;, null, &quot;second&quot;) | &quot;first&quot; |
 | first | 檢索給定陣列的第一個元素。 | <ul><li>輸入： **必需** ：要查找的第一個元素的陣列。</li></ul> | first(INPUT) | first(&quot;1&quot;, &quot;2&quot;, &quot;3&quot;) | &quot;1&quot; |
 | last | 檢索給定陣列的最後一個元素。 | <ul><li>輸入： **必需** ：要查找的最後一個元素的陣列。</li></ul> | last(INPUT) | last(&quot;1&quot;, &quot;2&quot;, &quot;3&quot;) | &quot;3&quot; |
@@ -146,7 +147,7 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 >請向左／向右滾動以查看表的完整內容。
 
 | 函數 | 說明 | 參數 | 語法 | 運算式 | 範例輸出 |
-| -------- | ----------- | ---------- | -------| ---------- | ------------- |
+-------- | ----------- | ---------- | -------| ---------- | -------------
 | 解碼 | 給定一個鍵和一個作為陣列平面化的鍵值對清單，如果找到鍵，該函式將返回該值，如果在陣列中存在，則返回預設值。 | <ul><li>索引鍵： **必要** ：要匹配的密鑰。</li><li>選項： **必要** ：索引鍵／值對的平面化陣列。 （可選）預設值可以放在結尾。</li></ul> | decode(KEY, OPTIONS) | decode(stateCode, &quot;ca&quot;, &quot;California&quot;, &quot;pa&quot;, &quot;Pennylvania&quot;, &quot;N/A&quot;) | 如果stateCode是&quot;ca&quot;，則為&quot;California&quot;。<br>如果給定的stateCode是&quot;pa&quot;，則為&quot;Pennylvania&quot;。<br>如果stateCode不符合下列項目，則為&quot;N/A&quot;。 |
 | if | 評估給定的布爾表達式，並根據結果返回指定的值。 | <ul><li>BOOLEAN_EXPRESSION: **必要** ：正在評估的布林運算式。</li><li>TRUE_VALUE: **必要** ：運算式評估為true時傳回的值。</li><li>FALSE_VALUE: **必要** ：運算式評估為false時傳回的值。</li></ul> | if(BOOLEAN_EXPRESSION、TRUE_VALUE、FALSE_VALUE) | if(&quot;s&quot;。equalsIgnoreCase(&quot;S&quot;), &quot;True&quot;, &quot;False&quot;) | &quot;True&quot; |
 
@@ -157,7 +158,7 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 >請向左／向右滾動以查看表的完整內容。
 
 | 函數 | 說明 | 參數 | 語法 | 運算式 | 範例輸出 |
-| -------- | ----------- | ---------- | -------| ---------- | ------------- |
+-------- | ----------- | ---------- | -------| ---------- | -------------
 | min | 返回給定參數的最小值。 使用自然排序。 | <ul><li>選項： **需要** ：可以相互比較的一個或多個對象。</li></ul> | min(OPTIONS) | min(3, 1, 4) | 1 |
 | max | 返回給定參數的最大值。 使用自然排序。 | <ul><li>選項： **需要** ：可以相互比較的一個或多個對象。</li></ul> | max(OPTIONS) | max(3, 1, 4) | 4 |
 
@@ -168,7 +169,7 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 >請向左／向右滾動以查看表的完整內容。
 
 | 函數 | 說明 | 參數 | 語法 | 運算式 | 範例輸出 |
-| -------- | ----------- | ---------- | -------| ---------- | ------------- |
+-------- | ----------- | ---------- | -------| ---------- | -------------
 | to_bigint | 將字串轉換為BigInteger。 | <ul><li>字串： **必要** ：要轉換為BigInteger的字串。</li></ul> | to_bigint(STRING) | to_bigint(&quot;100000.34&quot;) | 1000000.34 |
 | to_decimal | 將字串轉換為Double。 | <ul><li>字串： **必要** ：要轉換為Double的字串。</li></ul> | to_decimal(STRING) | to_decimal(&quot;20.5&quot;) | 20.5 |
 | to_float | 將字串轉換為浮點數。 | <ul><li>字串： **必要** ：要轉換為浮點數的字串。</li></ul> | to_float(STRING) | to_float(&quot;12.3456&quot;) | 12.34566 |
@@ -181,7 +182,7 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 >請向左／向右滾動以查看表的完整內容。
 
 | 函數 | 說明 | 參數 | 語法 | 運算式 | 範例輸出 |
-| -------- | ----------- | ---------- | -------| ---------- | ------------- |
+-------- | ----------- | ---------- | -------| ---------- | -------------
 | json_to_object | 從指定字串反序列化JSON內容。 | <ul><li>字串： **需要** JSON字串要取消序列化。</li></ul> | json_to_object(STRING) | json_to_object({&quot;info&quot;:{&quot;firstName&quot;:&quot;John&quot;,&quot;lastName&quot; :&quot;Doe&quot;}) | 表示JSON的物件。 |
 
 ### 特殊行動
@@ -191,7 +192,7 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 >請向左／向右滾動以查看表的完整內容。
 
 | 函數 | 說明 | 參數 | 語法 | 運算式 | 範例輸出 |
-| -------- | ----------- | ---------- | -------| ---------- | ------------- |
+-------- | ----------- | ---------- | -------| ---------- | -------------
 | uuid /<br>guid | 產生偽隨機ID。 |  | uuid()<br>guid() | uuid()<br>guid() | 7c0267d2-bb74-4e1a-9275-3bf4fccda5f4<br>c7016dc7-3163-43f7-afc7-2e1c9c206333 |
 
 ### 用戶代理函式
@@ -201,7 +202,7 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 >請向左／向右滾動以查看表的完整內容。
 
 | 函數 | 說明 | 參數 | 語法 | 運算式 | 範例輸出 |
-| -------- | ----------- | ---------- | -------| ---------- | ------------- |
+-------- | ----------- | ---------- | -------| ---------- | -------------
 | ua_os_name | 從用戶代理字串中提取作業系統名稱。 | <ul><li>USER_AGENT: **必要** ：使用者代理字串。</li></ul> | ua_os_name(USER_AGENT) | ua_os_name(&quot;Mozilla/5.0(iPhone;CPU iPhone OS 5_1_1（如Mac OS X）AppleWebKit/534.46（KHTML如Gecko）Version/5.1 Mobile/9B206 Safari/7534.48.3英吋) | iOS |
 | ua_os_version_major | 從用戶代理字串中提取作業系統的主要版本。 | <ul><li>USER_AGENT: **必要** ：使用者代理字串。</li></ul> | ua_os_version_major(USER_AGENT) | ua_os_version_major(&quot;Mozilla/5.0(iPhone;CPU iPhone OS 5_1_1（如Mac OS X）AppleWebKit/534.46（KHTML如Gecko）Version/5.1 Mobile/9B206 Safari/7534.48.3英吋) | iOS 5 |
 | ua_os_version | 從用戶代理字串中提取作業系統的版本。 | <ul><li>USER_AGENT: **必要** ：使用者代理字串。</li></ul> | ua_os_version(USER_AGENT) | ua_os_version(&quot;Mozilla/5.0(iPhone;CPU iPhone OS 5_1_1（如Mac OS X）AppleWebKit/534.46（KHTML如Gecko）Version/5.1 Mobile/9B206 Safari/7534.48.3英吋) | 5.1.1 |
