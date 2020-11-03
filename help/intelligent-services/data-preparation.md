@@ -5,9 +5,9 @@ title: 準備資料以用於智慧型服務
 topic: Intelligent Services
 description: '為了讓智慧型服務能夠從行銷事件資料中發掘見解，資料必須以標準結構進行語義豐富和維護。 智慧型服務運用Experience Data Model(XDM)架構來達成此目標。 具體來說，Intelligent Services中使用的所有資料集都必須符合Consumer ExperienceEvent(CEE)XDM架構。 '
 translation-type: tm+mt
-source-git-commit: 3083c50b31746bfd32634278cb55b926bd477b2b
+source-git-commit: 630f3bd0249dc3d0e73ace52c534d5f20ec0f87a
 workflow-type: tm+mt
-source-wordcount: '1882'
+source-wordcount: '1851'
 ht-degree: 0%
 
 ---
@@ -278,11 +278,7 @@ CEE混合內有幾個關鍵欄位，為了產生有用的見解，應 [!DNL Inte
 
 #### 將身分欄位新增至資料集
 
->[!NOTE]
->
->未來的版 [!DNL Intelligent Services] 本將整 [合Adobe Experience Platform Identity Service](../identity-service/home.md) ，使其客戶識別功能。 因此，下列步驟可能會有所變更。
-
-如果要從、或其他外部 [!DNL Adobe Audience Manager]源導入 [!DNL Adobe Analytics]資料，則可以選擇將模式欄位設定為身份欄位。 要將方案欄位設定為身份欄位，請在 [UI教程中查看有關設定身份欄位的部分，該教程用於使用方案編輯器或](../xdm/tutorials/create-schema-ui.md#identity-field) API教程建立方案 [](../xdm/tutorials/create-schema-api.md#define-an-identity-descriptor)。
+如果要從、或其他外部 [!DNL Adobe Audience Manager]源導入 [!DNL Adobe Analytics]資料，則可以選擇將模式欄位設定為身份欄位。 若要將結構欄位設定為結構欄位，請檢視在 [UI教學課程或](../xdm/tutorials/create-schema-ui.md#identity-field) API教學課程中設定結構欄位的章節 [](../xdm/tutorials/create-schema-api.md#define-an-identity-descriptor) 。
 
 如果您從本機CSV檔案擷取資料，可跳至下一節的對應與 [擷取資料](#ingest)。
 
