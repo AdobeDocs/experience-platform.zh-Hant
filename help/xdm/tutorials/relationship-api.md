@@ -6,7 +6,7 @@ description: 本文檔提供了一個教程，用於定義由組織使用方案�
 topic: tutorial
 type: Tutorial
 translation-type: tm+mt
-source-git-commit: 4d9e66a55c265b60ab12070dd5e435c6567b7d0f
+source-git-commit: ce06550e9608163e6e5819d79cc73a4b1f92e915
 workflow-type: tm+mt
 source-wordcount: '1296'
 ht-degree: 1%
@@ -339,7 +339,7 @@ curl -X PATCH \
 
 ## 建立引用標識描述符 {#reference-identity}
 
-如果方案欄位用作關係中其他方案的引用，則必須將引用標識描述符應用到它們。 由於 `favoriteHotel` &quot;&quot;中的字[!DNL Loyalty Members]段將引用&quot;&quot;中的欄位，因此必須 `hotelId`[!DNL Hotels]`favoriteHotel` 提供引用標識描述符。
+如果方案欄位用作關係中其他方案的引用，則必須將引用標識描述符應用到它們。 由於 `favoriteHotel` &quot;&quot;中的字[!DNL Loyalty Members]段將引用&quot;&quot;中的欄位，因此必須 `hotelId`[!DNL Hotels]`hotelId` 提供引用標識描述符。
 
 通過向端點發出POST請求，為目標方案建立引用描述 `/tenant/descriptors` 符。
 
