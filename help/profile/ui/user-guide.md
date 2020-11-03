@@ -1,28 +1,26 @@
 ---
 keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API;unified profile;Unified Profile;unified;Profile;rtcp;enable profile;Enable profile;Union schema;UNION PROFILE;union profile
-title: 即時客戶基本資料使用指南
+title: 即時客戶個人檔案UI指南
 topic: guide
 description: 即時客戶個人檔案可讓您對個別客戶建立全方位的檢視，並結合來自多個通道的資料，包括線上、離線、CRM和協力廠商資料。 本檔案可做為在Adobe Experience Platform使用者介面中與即時客戶個人檔案互動的指南。
 translation-type: tm+mt
-source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
+source-git-commit: 342a05e4c378732331968ab7695a3ba7b47f2956
 workflow-type: tm+mt
-source-wordcount: '1292'
+source-wordcount: '1245'
 ht-degree: 0%
 
 ---
 
 
-# [!DNL Real-time Customer Profile] 使用者指南
+# [!DNL Real-time Customer Profile] UI指南
 
-[!DNL Real-time Customer Profile] 建立個別客戶的全方位檢視，結合來自多個通道的資料，包括線上、離線、CRM和協力廠商資料。
-
-本檔案可做為在Adobe Experience Platform使用者介 [!DNL Real-time Customer Profile] 面中與資料互動的指南。
+[!DNL Real-time Customer Profile] 建立個別客戶的全方位檢視，結合來自多個通道的資料，包括線上、離線、CRM和協力廠商資料。 本檔案可做為在Adobe Experience Platform使用者介 [!DNL Real-time Customer Profile] 面(UI)中與資料互動的指南。
 
 ## 快速入門
 
-本使用指南需要瞭解與管理相關 [!DNL Experience Platform] 的各種服務 [!DNL Real-time Customer Profiles]。 閱讀本使用指南之前，請先閱讀下列服務的說明檔案：
+本UI指南需要瞭解與管理相關 [!DNL Experience Platform] 的各種服務 [!DNL Real-time Customer Profiles]。 在閱讀本指南或在UI中工作之前，請先閱讀下列服務的檔案：
 
-* [[!DNL即時客戶基本資料]](../home.md):根據來自多個來源的匯整資料，提供統一、即時的消費者個人檔案。
+* [[!DNL Real-time Customer Profile]](../home.md):根據來自多個來源的匯整資料，提供統一、即時的消費者個人檔案。
 * [[!DNL Identity Service]](../../identity-service/home.md):可在 [!DNL Real-time Customer Profile] 不同資料來源中吸收身分時，橋接身分 [!DNL Platform]。
 * [[!DNL Experience Data Model] (XDM)](../../xdm/home.md):組織客戶體驗資料 [!DNL Platform] 的標準化架構。
 
@@ -102,15 +100,15 @@ ht-degree: 0%
 
 從主「配置 **[!UICONTROL 檔案]** 」菜單中，選擇「合併策略 **** 」頁籤以查看屬於您組織的合併策略清單。 每個列出的策略都顯示其名稱，無論它是否是預設合併策略，以及它所應用的方案。
 
-有關合併策略的詳細資訊，請參 [閱合併策略使用手冊](merge-policies.md)。
+有關合併策略的詳細資訊，請參 [閱合併策略UI指南](merge-policies.md)。
 
 ![](../images/user-guide/profiles-merge-policies.png)
 
 ## 聯合模式 {#union-schema}
 
-從主「配置 **[!UICONTROL 式]** 」菜單中，選擇「聯 **** 合結構式」頁籤以查看配置檔案資料的聯合結構式。 聯合模式是同一類下的所 [!DNL Experience Data Model] 有(XDM)欄位的合併，其模式已在中啟用 [!DNL Real-time Customer Profile]。 從左側的「[!UICONTROL Class]」清單中選取類別，即可在畫布中檢視其架構的結構。 例如，選擇「[!DNL XDM Profile]」會顯示類的聯合方 [!DNL XDM Individual Profile] 案。
+從主「配置 **[!UICONTROL 式]** 」菜單中，選擇「聯 **** 合方案」頁籤以查看所接收資料的聯合方案。 聯合模式是同一類下的所 [!DNL Experience Data Model] 有(XDM)欄位的合併，其模式已在中啟用 [!DNL Real-time Customer Profile]。
 
-如需Adobe Experience Platform中聯合架構及其角色的詳細資訊，請參閱架構構成指南中的聯合架構 [一節](../../xdm/schema/composition.md)。
+有關聯合架構的詳細資訊，請參 [閱聯合架構UI指南](union-schema.md)。
 
 ![](../images/user-guide/profiles-union-schema.png)
 
