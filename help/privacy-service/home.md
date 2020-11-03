@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Adobe Experience Platform隱私權服務
 topic: overview
 translation-type: tm+mt
-source-git-commit: f3872d433949e6c14c28c6833b8498d4d01b8de3
+source-git-commit: d2f1255be48c1df04757f7e071221e0552a0b921
 workflow-type: tm+mt
-source-wordcount: '1627'
-ht-degree: 2%
+source-wordcount: '1360'
+ht-degree: 0%
 
 ---
 
@@ -41,16 +41,9 @@ Adobe Experience Platform是為 [!DNL Privacy Service] 因應企業管理客戶�
 
 根據您的業務性質及其經營所在的司法轄區，您的資料營運可能會受到法律隱私權法規的約束。 這些法規通常會賦予您的客戶要求存取您從他們收集的資料的權利，以及要求刪除該儲存資料的權利。 這些客戶對其個人資料的要求在整個檔案中稱為「隱私權要求」。
 
-下表概述管理要求的法律隱私權規 [!DNL Privacy Service] 定，包括說明檔案的連結，以取得詳細資訊：
+有關管理要求的不同法律隱私權法規 [!DNL Privacy Service] 的詳細資訊，包括常見問題的主要條款和回答，請參閱隱私權法規 [檔案](./regulations/overview.md)。
 
-| 法規 | 說明 |
-| --- | --- |
-| CCPA（加州） | The [!DNL California Consumer Privacy Act] (CCPA) enhances privacy rights and consumer protection for residents of California, United States. CCPA為加州居民提供新的資料隱私權，包括存取和刪除其個人資料的權利，以得知其個人資料是賣給或披露（以及向誰），以及選擇不將其資料賣給第三方的權利。<br/><br/>進一步說明檔案的連結： <ul><li>[法律概觀](https://oag.ca.gov/privacy/ccpa)</li><li>[CCPA常見問答集](ccpa/faq.md)</li></ul> |
-| GDPR（歐盟） | The [!DNL General Data Protection Regulation] (GDPR) introduced several new data privacy rights for members of the European Union, including the **Right to Access** and the **Right to be Forgotten**. 這表示貴公司已收集其個人資料的任何歐盟公民，都有權隨時請求存取或刪除其資料。<br/><br/>進一步說明檔案的連結： <ul><li>[法律概觀](https://gdpr-info.eu/)</li><li>[GDPR 常見問題集](gdpr/faq.md)</li><li>[GDPR 術語](gdpr/terminology.md)</li></ul> |
-| LGPD（巴西） | ( [!DNL Lei Geral de Proteção de Dados] LGPD)旨在規範巴西所有個人或自然人個人資料的處理。 LGPD賦予巴西公民存取和刪除個人資料、瞭解個人資料是否被出售或披露（以及向誰）的權利，以及選擇不將其資料出售給第三方的權利。<br/><br/>進一步說明檔案的連結： <ul><li>[法律概觀](https://gdpr.eu/gdpr-vs-lgpd/)</li></ul> |
-| PDPA（泰國） | 泰 [!DNL Personal Data Protection Act] 國(PDPA)的引入是為了保護泰國資料擁有者免受非法收集、使用或披露其個人資料的侵害。 受歐盟GDPR的啟發，該規定授予泰國公民要求訪問或刪除其儲存的個人資料的權利。<br/><br/>進一步說明檔案的連結： <ul><li>[法律概觀](https://www.dataprotectionreport.com/2020/02/thailand-personal-data-protection-law/)</li><li>[PDPA常見問答集](pdpa-tha/faq.md)</li><li>[PDPA術語](pdpa-tha/terminology.md)</li></ul> |
-
-如果您的資料作業屬於上述任何法規的權限，請檢閱其檔案，以取得重要資訊，例如客戶所享有的特定隱私權，以及遵守隱私權要求的遵循窗口。 在決定如何整合至您的CRM系統時，應考 [!DNL Privacy Service] 慮這些資訊，以及客戶應如何與您的網站互動，以提出隱私權要求。
+如果您的資料作業屬於任何受支援法規的權限，請檢閱其檔案，以取得重要資訊，例如客戶所享有的特定隱私權，以及遵守隱私權要求的遵循窗口。 在決定如何整合至您的CRM系統時，應考 [!DNL Privacy Service] 慮這些資訊，以及客戶應如何與您的網站互動，以提出隱私權要求。
 
 除了法律法規外，在做出這些決定時，您組織適用的任何組織或產業標準也應予以考慮。
 
