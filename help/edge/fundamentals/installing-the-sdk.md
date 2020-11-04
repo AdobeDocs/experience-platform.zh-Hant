@@ -5,10 +5,10 @@ description: 瞭解如何安裝Experience Platform Web SDK
 seo-description: 瞭解如何安裝Experience Platform Web SDK
 keywords: web sdk installation;installing web sdk;internet explorer;promise;
 translation-type: tm+mt
-source-git-commit: 5ef902ef7f7717121744f7f0074c0aa17e5a9e9a
+source-git-commit: d23568f7ce63df5aa98dc237a6671eeadde0c9b2
 workflow-type: tm+mt
 source-wordcount: '626'
-ht-degree: 1%
+ht-degree: 2%
 
 ---
 
@@ -23,8 +23,8 @@ URL結構：https://cdn1.adoberesources.net/alloy/[VERSION]/alloy.min.js或alloy
 
 例如：
 
-* 精簡： [https://cdn1.adoberesources.net/alloy/2.1.0/alloy.min.js](https://cdn1.adoberesources.net/alloy/2.1.0/alloy.min.js)
-* 未精簡： [https://cdn1.adoberesources.net/alloy/2.1.0/alloy.js](https://cdn1.adoberesources.net/alloy/2.1.0/alloy.js)
+* 精簡： [https://cdn1.adoberesources.net/alloy/2.3.0/alloy.min.js](https://cdn1.adoberesources.net/alloy/2.3.0/alloy.min.js)
+* 未精簡： [https://cdn1.adoberesources.net/alloy/2.3.0/alloy.js](https://cdn1.adoberesources.net/alloy/2.3.0/alloy.js)
 
 ## 新增程式碼 {#adding-the-code}
 
@@ -37,7 +37,7 @@ URL結構：https://cdn1.adoberesources.net/alloy/[VERSION]/alloy.min.js或alloy
   function(i,l){n[o].q.push([i,l,u])})},n[o].q=[])})}
   (window,["alloy"]);
 </script>
-<script src="https://cdn1.adoberesources.net/alloy/2.1.0/alloy.min.js" async></script>
+<script src="https://cdn1.adoberesources.net/alloy/2.3.0/alloy.min.js" async></script>
 ```
 
 基本代碼建立名為的全局函式 `alloy`。 使用此函式與SDK互動。 如果您想要為全域函式命名其他名稱，可以按如下方 `alloy` 式更改名稱：
@@ -49,7 +49,7 @@ URL結構：https://cdn1.adoberesources.net/alloy/[VERSION]/alloy.min.js或alloy
   function(i,l){n[o].q.push([i,l,u])})},n[o].q=[])})}
   (window,["mycustomname"]);
 </script>
-<script src="https://cdn1.adoberesources.net/alloy/2.1.0/alloy.min.js" async></script>
+<script src="https://cdn1.adoberesources.net/alloy/2.3.0/alloy.min.js" async></script>
 ```
 
 在此範例中，全域函式會重新命 `mycustomname`名，而非 `alloy`。
@@ -99,5 +99,5 @@ URL結構：https://cdn1.adoberesources.net/alloy/[VERSION]/alloy.min.js或alloy
   function(i,l){n[o].q.push([i,l,u])})},n[o].q=[])})}
   (window,["alloy"]);
 </script>
-<script src="https://cdn1.adoberesources.net/alloy/2.1.0/alloy.min.js"></script>
+<script src="https://cdn1.adoberesources.net/alloy/2.3.0/alloy.min.js"></script>
 ```
