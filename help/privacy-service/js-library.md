@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Adobe隱私權JavaScript程式庫概觀
 topic: overview
 translation-type: tm+mt
-source-git-commit: 5b32c1955fac4f137ba44e8189376c81cdbbfc40
+source-git-commit: 6d706b33573e88b2f1ea9d386928dcfdb089a9c5
 workflow-type: tm+mt
-source-wordcount: '921'
-ht-degree: 5%
+source-wordcount: '922'
+ht-degree: 6%
 
 ---
 
@@ -31,7 +31,7 @@ ht-degree: 5%
 | 函數 | 說明 |
 | --- | --- |
 | `retrieveIdentities` | 傳回從中擷取的符合身分(`validIds`)陣列，以 [!DNL Privacy Service]及找不到(`failedIds`)的身分陣列。 |
-| `removeIdentities` | 從瀏覽器移除每個相符（有效）的識別。 傳回符合身分的陣列(`validIds`)，每個身分包含一個布林值，指 `isDeleteClientSide` 出此ID是否已刪除。 |
+| `removeIdentities` | 從瀏覽器移除每個相符（有效）的識別。 傳回符合身分的陣列(`validIds`)，每個身分包含一個布林值，指 `isDeletedClientSide` 出此ID是否已刪除。 |
 | `retrieveThenRemoveIdentities` | 擷取符合身分的陣列(`validIds`)，然後從瀏覽器移除這些身分。 雖然此函式類似 `removeIdentities`，但您使用的Adobe解決方案在可能刪除之前需要存取請求時，最好使用此函式（例如在刪除請求中提供唯一識別碼之前必須先擷取此唯一識別碼）。 |
 
 >[!NOTE]
@@ -47,7 +47,7 @@ ht-degree: 5%
 
 * 運行以下命令，使用npm進行安裝： `npm install @adobe/adobe-privacy`
 * 使用名稱下的Adobe Launch Extension `AdobePrivacy`
-* 從https://github.com/Adobe-Marketing-Cloud/adobe-privacy下 [載](https://github.com/Adobe-Marketing-Cloud/adobe-privacy)
+* 從 [Experience Cloud GitHub儲存庫下載](https://github.com/Adobe-Marketing-Cloud/adobe-privacy)
 
 ## 實例化 [!DNL Privacy JS Library]
 
@@ -56,7 +56,6 @@ ht-degree: 5%
 ```js
 var adobePrivacy = new AdobePrivacy({
     imsOrgID: "{IMS_ORG}",
-    key: "{DATA_SUBJECT_ID}",
     reportSuite: "{REPORT_SUITE_ID}",
     trackingServer: "{SERVER_URL}",
     clientCode: "{TARGET_CLIENT_CODE}"
@@ -67,7 +66,7 @@ var adobePrivacy = new AdobePrivacy({
 
 ## 程式碼範例
 
-下列程式碼範例示範如何在您 [!DNL Privacy JS Library] 未使用或DTM的情況下，將它用於數種常見 [!DNL Launch] 案例。
+下列程式碼範例示範如何在您 [!DNL Privacy JS Library] 未使用或DTM的情況下，將它用於數種常見 [!DNL Launch] 的案例。
 
 ### 擷取身分
 
@@ -186,7 +185,7 @@ adobePrivacy.removeIdentities().then(handleRemovedIDs)…
 | 參數 | 說明 |
 | --- | --- |
 | `cookieDomainPeriods` | 用於Cookie追蹤的網域中的句號數（預設為2）。 |
-| `dataCenter` | Adobe資料收集資料中心。 只有在JavaScript網站信標中指定時，才應包含此項。 潛在值為： <ul><li>&quot;d1&quot;: 聖荷西資料中心。</li><li>&quot;d2&quot;: 達拉斯資料中心。</li></ul> |
+| `dataCenter` | Adobe資料收集資料中心。 只有在JavaScript網站信標中指定時，才應包含此項。 潛在值為： <ul><li>&quot;d1&quot;:聖荷西資料中心。</li><li>&quot;d2&quot;:達拉斯資料中心。</li></ul> |
 | `reportSuite` | 報表套裝ID，如JavaScript網站信標中所指定（例如「s_code.js」或「dtm」）。 |
 | `trackingServer` | 資料收集網域（非SSL）。 只有在JavaScript網站信標中指定時，才應包含此項。 |
 | `trackingServerSecure` | 資料收集網域(SSL)。 只有在JavaScript網站信標中指定時，才應包含此項。 |
