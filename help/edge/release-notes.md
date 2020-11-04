@@ -5,15 +5,25 @@ description: Adobe Experience Platform Web SDK 發行說明。
 seo-description: Adobe Experience Platform Web SDK 發行說明。
 keywords: Adobe Experience Platform Web SDK;Platform Web SDK;Web SDK;release notes;
 translation-type: tm+mt
-source-git-commit: 738dfe782ee7d6bef06d14910e0c26540b0ec734
+source-git-commit: 77c1e693668bc50a81713d02cfe4b0fabc661404
 workflow-type: tm+mt
-source-wordcount: '108'
-ht-degree: 16%
+source-wordcount: '221'
+ht-degree: 8%
 
 ---
 
 
 # 發行說明
+
+## 2.3.0 版
+
+* 新增nonce支援，以允許更嚴格的內容安全性政策。
+* 新增單頁應用程式的個人化支援。
+* 已改善與其他可能覆寫API之頁面上JavaScript程式碼的相 `window.console` 容性。
+* 錯誤修正： `sendBeacon` 設為或自動追蹤 `documentUnloading` 連結點按 `true` 時，未使用。
+* 錯誤修正：如果錨點元素包含HTML內容，則不會自動追蹤連結。
+* 錯誤修正：某些包含唯讀屬性的瀏覽器錯 `message` 誤未得到適當處理，導致不同的錯誤暴露給客戶。
+* 錯誤修正：如果在iframe中執行SDK，若iframe的HTML頁面來自父視窗的HTML頁面以外的子網域，則會產生錯誤。
 
 ## 2.2.0 版
 
