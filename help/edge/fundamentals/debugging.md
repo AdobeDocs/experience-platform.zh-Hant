@@ -5,7 +5,7 @@ description: 瞭解如何切換Experience Platform Web SDK除錯
 seo-description: 瞭解如何切換Experience Platform Web SDK除錯
 keywords: debugging web sdk;debugging;configure;configure command;debug command;edgeConfigId;setDebug;debugEnabled;debug;
 translation-type: tm+mt
-source-git-commit: e21374eb51ec1d572f6a4973d33cadf9ae17969b
+source-git-commit: f63c897dd1a8a8ad9ef7ac025bf05b22265ea95a
 workflow-type: tm+mt
 source-wordcount: '384'
 ht-degree: 0%
@@ -74,8 +74,8 @@ http://example.com/?alloy_debug=true
 存取您載入網站之資料庫後的部分詳細資訊通常很實用。 要執行此操作，請按如 `getLibraryInfo` 下方式執行命令：
 
 ```js
-alloy("getLibraryInfo").then(function(libraryInfo) {
-  console.log(libraryInfo.version);
+alloy("getLibraryInfo").then(function(result) {
+  console.log(result.libraryInfo.version);
 });
 ```
 
