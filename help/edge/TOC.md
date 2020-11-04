@@ -6,10 +6,10 @@ user-guide-title: Adobe Experience Platform 網頁 SDK 說明
 breadcrumb-title: Web SDK 指南
 user-guide-description: 透過 Edge 網路與 Experience Cloud 服務互動。
 translation-type: tm+mt
-source-git-commit: 7f3d4f0266b58b1327d2b8743538c7fc9b67669b
+source-git-commit: 502da50576dfd550598111658b41da6a62bb7e79
 workflow-type: tm+mt
-source-wordcount: '119'
-ht-degree: 31%
+source-wordcount: '123'
+ht-degree: 34%
 
 ---
 
@@ -43,6 +43,7 @@ ht-degree: 31%
    * [管理閃爍](personalization/manage-flicker.md)
    * Adobe Target {#adobe-target}
       * [Target 概述](personalization/adobe-target/target-overview.md)
+      * [實作單頁應用程式](personalization/adobe-target/spa-implementation.md)
 * 同意 {#consent}
    * [支援許可](consent/supporting-consent.md)
    * IAB透明與同意框架2.0 {#iab-tcf}
