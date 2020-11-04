@@ -5,9 +5,9 @@ description: 瞭解哪些變數在Adobe Analytics中使用Experience Platform We
 seo-description: 瞭解哪些變數在Adobe Analytics中使用Experience Platform Web SDK自動對應
 keywords: adobe analytics;variables;analytics;automatic map;automatically mapped;
 translation-type: tm+mt
-source-git-commit: 3ed89011313006cf627945bf8c75bfd0b87a69bc
+source-git-commit: b81c0c450ddee4b0c0abedfd8ca53c3a599fb3cb
 workflow-type: tm+mt
-source-wordcount: '680'
+source-wordcount: '674'
 ht-degree: 0%
 
 ---
@@ -91,9 +91,8 @@ ht-degree: 0%
 | `placeContext.geo.postalCode` | `zip` | AppMeasurement查詢參數ZIP對應。 |
 | `placeContext.geo.stateProvince` | `state` | AppMeasurement查詢參數STATE映射。 |
 | `productlistitems.[N]._[NAME_SPACE].*` | `products` | AppMeasurement查詢參數產品商品事件/Evars對應。 |
-| `productlistitems.[N].lineitemid` | `products` | AppMeasurement查詢參數產品類別對應。 |
 | `productlistitems.[N].name` | `products` | AppMeasurement查詢參數「產品名稱」對應。 |
-| `productlistitems.[N].pricetotal` | `products` | AppMeasurement查詢參數產品價格對應。 |
+| `productlistitems.[N].priceTotal` | `products` | AppMeasurement查詢參數產品價格對應。 |
 | `productlistitems.[N].quantity` | `products` | AppMeasurement查詢參數「產品數量」對應。 |
 | `web.webInteraction.URL` | `pev1` | AppMeasurement查詢參數PAGE_EVENT_VAR1映射。 |
 | `web.webInteraction.name` | `pev2` | AppMeasurement查詢參數PAGE_EVENT_VAR2映射。 |
