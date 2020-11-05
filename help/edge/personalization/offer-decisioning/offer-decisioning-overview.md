@@ -5,9 +5,9 @@ description: Adobe Experience Platform Web SDK可提供並轉譯選件決策中�
 seo-description: Adobe Experience Platform Web SDK可提供並轉譯選件決策中管理的個人化選件。 您可以使用選件決策UI或API來建立選件和其他相關物件。
 keywords: offer decisioning;decisioning;Web SDK;Platform Web SDK;personalized offers;deliver offers;offer delivery;offer personalization;
 translation-type: tm+mt
-source-git-commit: b10b930dca504b7672eb05bd88ab44d09d9e5c0a
+source-git-commit: 86d819daf26eaf1b46afe76054d475e61720dd27
 workflow-type: tm+mt
-source-wordcount: '850'
+source-wordcount: '839'
 ht-degree: 9%
 
 ---
@@ -56,9 +56,9 @@ Adobe Experience Platform可以提供 [!DNL Web SDK] 並轉譯在選件決策中
 
    ![](assets/decision-scope-copy.png)
 
-**Edge Configuration:** 如需詳細資訊，請閱讀 [edge組態檔案](../../fundamentals/edge-configuration.md) 。
+* **Edge Configuration:** 如需詳細資訊，請閱讀 [edge組態檔案](../../fundamentals/edge-configuration.md) 。
 
-**身份**:如需詳細資訊，請閱讀本檔案，說明 [Platform Web SDK如何運用Identity Service](../../identity/overview.md)。
+* **身份**:如需詳細資訊，請閱讀本檔案，說明 [Platform Web SDK如何運用Identity Service](../../identity/overview.md)。
 
 ## 啟用選件決策
 
@@ -66,7 +66,7 @@ Adobe Experience Platform可以提供 [!DNL Web SDK] 並轉譯在選件決策中
 
 1. 在邊緣設定中啟用Adobe Experience Platform [](../../fundamentals/edge-configuration.md) ，並勾選「選件決策」方塊
    ![offer-decisioning-edge-config](./assets/offer-decisioning-edge-config.png)
-2. 請依照指示 [安裝SDK](../../fundamentals/installing-the-sdk.md) (SDK可單獨安裝 [，或透過](http://launch.adobe.com/)Adobe Experience Platform Launch安裝。 以下是Launch [的快速入門手冊](https://docs.adobe.com/content/help/zh-Hant/launch/using/intro/get-started/quick-start.html))。
+2. 請依照指示 [安裝SDK](../../fundamentals/installing-the-sdk.md) (SDK可單獨安裝 [，或透過](http://launch.adobe.com/)Adobe Experience Platform Launch安裝。 以下是「平 [台啟動」的快速入門手冊](https://docs.adobe.com/content/help/zh-Hant/launch/using/intro/get-started/quick-start.html))。
 3. [設定選件決策的SDK](../../fundamentals/configuring-the-sdk.md) 。 下面提供其他優惠決策的特定步驟。
    * 獨立安裝的SDK
       1. 使用 `decisionScopes`
@@ -80,19 +80,19 @@ Adobe Experience Platform可以提供 [!DNL Web SDK] 並轉譯在選件決策中
           ]
       })
       ```
-   * 啟動已安裝的SDK
-      1. [建立啟動屬性](https://docs.adobe.com/content/help/zh-Hant/launch/using/reference/admin/companies-and-properties.html)
-      2. [新增 Launch 內嵌程式碼](https://docs.adobe.com/content/help/en/core-services-learn/implementing-in-websites-with-launch/configure-launch/launch-add-embed.html)
-      3. 從「Edge Configuration」（邊緣設定）下拉式清單中選取設定，以您剛建立的Edge Configuration（邊緣設定）來安裝和設定AEP Web SDK擴充功能。 擴充功能的實用 [檔案](https://docs.adobe.com/content/help/en/launch/using/reference/manage-resources/extensions/overview.html)。
+   * Platform Launch已安裝SDK
+      1. [建立平台啟動屬性](https://docs.adobe.com/content/help/zh-Hant/launch/using/reference/admin/companies-and-properties.html)
+      2. [新增平台啟動內嵌代碼](https://docs.adobe.com/content/help/en/core-services-learn/implementing-in-websites-with-launch/configure-launch/launch-add-embed.html)
+      3. 使用您剛建立的邊緣設定來安裝和設定Adobe Experience Platform Web SDK擴充功能，方法是從「邊緣設定」下拉式清單中選取設定。 擴充功能的實用 [檔案](https://docs.adobe.com/content/help/en/launch/using/reference/manage-resources/extensions/overview.html)。
          ![install-aep-web-sdk-extension](./assets/install-aep-web-sdk-extension.png)
 
          ![configure-aep-web-sdk-extension](./assets/configure-aep-web-sdk-extension.png)
-      4. 建立必要的 [資料元素](https://docs.adobe.com/content/help/zh-Hant/launch/using/reference/manage-resources/data-elements.html)。 您至少需要建立AEP Web SDK Identity Map和AEP Web SDK XDM物件資料元素。 （希望有更多有關AEP Web SDK資料元素的檔案，我們可在此連結）
+      4. 建立必要的 [資料元素](https://docs.adobe.com/content/help/zh-Hant/launch/using/reference/manage-resources/data-elements.html)。 至少，您需要建立平台網頁SDK識別圖和平台網頁SDK XDM物件資料元素。
          ![identity-map-data-element](./assets/identity-map-data-element.png)
 
          ![xdm-object-data-element](./assets/xdm-object-data-element.png)
       5. 建立您的 [規則](https://docs.adobe.com/content/help/zh-Hant/launch/using/reference/manage-resources/rules.html)。
-         * 新增AEP Web SDK「傳送事件」動作，並將相 `decisionScopes` 關內容新增至該動作的設定
+         * 新增平台網頁SDK傳送事件動作，並新增 `decisionScopes` 該動作的設定相關內容
             ![send-event-action-decisionScopes](./assets/send-event-action-decisionScopes.png)
       6. [建立並發佈包含](https://docs.adobe.com/content/help/zh-Hant/launch/using/reference/publish/libraries.html) 所有相關規則、資料元素和您已設定之擴充功能的程式庫
 
