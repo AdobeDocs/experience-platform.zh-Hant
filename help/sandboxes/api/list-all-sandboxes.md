@@ -5,10 +5,10 @@ title: 列出所有沙盒
 topic: developer guide
 description: 若要列出屬於您IMS組織（活動或其他）的所有沙盒，請向/sandbox端點提出GET要求。
 translation-type: tm+mt
-source-git-commit: 0af537e965605e6c3e02963889acd85b9d780654
+source-git-commit: 6326b3072737acf30ba2aee7081ce28dc9627a9a
 workflow-type: tm+mt
-source-wordcount: '205'
-ht-degree: 1%
+source-wordcount: '309'
+ht-degree: 2%
 
 ---
 
@@ -20,14 +20,18 @@ ht-degree: 1%
 **API格式**
 
 ```http
-GET /sandboxes
+GET /sandboxes?{QUERY_PARAMS}
 ```
+
+| 參數 | 說明 |
+| --------- | ----------- |
+| `{QUERY_PARAMS}` | 可選查詢參數，以篩選結果。 如需詳細資訊，請 [參閱查詢](#query) 參數一節。 |
 
 **請求**
 
 ```shell
 curl -X GET \
-  https://platform.adobe.io/data/foundation/sandbox-management/sandboxes \
+  https://platform.adobe.io/data/foundation/sandbox-management/sandboxes?&limit=4&offset=1 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
@@ -93,7 +97,25 @@ curl -X GET \
             "createdBy": "{USER_ID}",
             "modifiedBy": "{USER_ID}"
         }
-    ]
+    ],
+    "_page": {
+        "limit": 4,
+        "count": 4
+    },
+    "_links": {
+        "next": {
+            "href": "https://platform.adobe.io:443/data/foundation/sandbox-management/sandboxes/?limit={limit}&offset={offset}",
+            "templated": true
+        },
+        "prev": {
+            "href": "https://platform.adobe.io:443/data/foundation/sandbox-management/sandboxes?offset=0&limit=1",
+            "templated": null
+        },
+        "page": {
+            "href": "https://platform-int.adobe.io:443/data/foundation/sandbox-management/sandboxes?offset=1&limit=1",
+            "templated": null
+        }
+    }
 }
 ```
 
@@ -105,3 +127,16 @@ curl -X GET \
 | `type` | 沙盒類型，「開發」或「生產」。 |
 | `isDefault` | 布林屬性，指出此沙盒是否為組織的預設沙盒。 通常這是生產沙盒。 |
 | `eTag` | 沙盒特定版本的識別碼。 用於版本控制和快取效率，此值會在每次對沙盒進行變更時更新。 |
+
+## 使用查詢參數 {#query}
+
+API [[!DNL Sandbox]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sandbox-api.yaml) 支援在列出沙盒時，使用查詢參數來建立頁面並篩選結果。
+
+>[!NOTE]
+>
+>必 `limit` 須一 `offset` 起指定和查詢參數。 如果您只指定一個，API將會傳回錯誤。 如果指定無，則預設限制為50，偏移為0。
+
+| 參數 | 說明 |
+| --------- | ----------- |
+| `limit` | 響應中要返回的最大記錄數。 |
+| `offset` | 從第一個記錄開始（偏移）響應清單的實體數。 |
