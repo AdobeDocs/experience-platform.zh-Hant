@@ -5,9 +5,9 @@ topic: overview
 title: 存取控制概觀
 description: Adobe Experience Platform的存取控制權是透過Adobe Admin Console提供。 此功能運用Admin Console中的產品設定檔，可連結使用者與權限和沙盒。
 translation-type: tm+mt
-source-git-commit: 34cfcaac276bf2645a0365a0dfa71c4ead6e2ecb
+source-git-commit: ccb7286e47aa4cf6356d22f84111b0c0fb30dfa8
 workflow-type: tm+mt
-source-wordcount: '1162'
+source-wordcount: '1299'
 ht-degree: 3%
 
 ---
@@ -73,7 +73,7 @@ Adobe Admin Console提供一個集中位置，可讓您管理Adobe產品權益�
 
 產品描述檔中的權限標籤會顯示該描述檔的作用中沙盒和權限：
 
-![](./images/permissions-overview.png)
+![權限概述](./images/permissions-overview.png)
 
 透過授予的權限會依 [!DNL Admin Console] 類別排序，而某些權限會授與對數個低階功能的存取權。
 
@@ -83,12 +83,19 @@ Adobe Admin Console提供一個集中位置，可讓您管理Adobe產品權益�
 | --- | --- | --- |
 | [!DNL Data Modeling] | [!UICONTROL 管理結構] | 對讀取、建立、編輯和刪除方案和相關資源的訪問。 |
 | [!DNL Data Modeling] | [!UICONTROL 檢視結構] | 方案和相關資源的唯讀存取權。 |
+| [!DNL Data Modeling] | [!UICONTROL 管理關係] | 訪問讀取、建立、編輯和刪除架構關係。 |
+| [!DNL Data Modeling] | [!UICONTROL 管理身分中繼資料] | 存取方案的讀取、建立、編輯和刪除身分中繼資料。 |
 | [!DNL Data Management] | [!UICONTROL 管理資料集] | 存取讀取、建立、編輯和刪除資料集。 結構的只讀訪問。 |
 | [!DNL Data Management] | [!UICONTROL 檢視資料集] | 資料集和結構描述的只讀訪問。 |
 | [!DNL Data Management] | [!UICONTROL 資料監控] | 監視資料集和流的只讀訪問。 |
 | [!DNL Profile Management] | [!UICONTROL 管理設定檔] | 存取用於讀取、建立、編輯和刪除客戶個人檔案的資料集。 可用設定檔的唯讀存取權。 |
 | [!DNL Profile Management] | [!UICONTROL 檢視設定檔] | 可用設定檔的唯讀存取權。 |
+| [!DNL Profile Management] | [!UICONTROL 管理區段] | 存取讀取、建立、編輯和刪除區段。 |
+| [!DNL Profile Management] | [!UICONTROL 檢視區段] | 可用區段的唯讀存取權。 |
+| [!DNL Profile Management] | [!UICONTROL 管理合併策略] | 可存取讀取、建立、編輯和刪除合併原則。 |
+| [!DNL Profile Management] | [!UICONTROL 查看合併策略] | 可用合併策略的唯讀存取權。 |
 | [!DNL Profile Management] | [!UICONTROL 匯出區段的對象] | 能夠將評估的觀眾區隔匯出至資料集。 |
+| [!DNL Profile Management] | [!UICONTROL 評估對象的區段] | 可評估區段定義，為觀眾產生個人檔案。 |
 | [!DNL Identities] | [!UICONTROL 管理身分識別命名空間] | 存取讀取、建立、編輯和刪除身分名稱空間。 |
 | [!DNL Identities] | [!UICONTROL 檢視身分識別命名空間] | 身分名稱空間的唯讀存取。 |
 | [!DNL Sandbox Administration] | [!UICONTROL 管理沙盒] | 存取讀取、建立、編輯和刪除沙盒。 |
@@ -100,8 +107,12 @@ Adobe Admin Console提供一個集中位置，可讓您管理Adobe產品權益�
 | [!DNL Data Ingestion] | [!UICONTROL 管理來源] | 存取讀取、建立、編輯和停用來源。 |
 | [!DNL Data Ingestion] | [!UICONTROL 檢視來源] | 對「目錄」標籤中可用來源的唯讀存 **[!UICONTROL 取]** ，以及「瀏覽」標籤中的已驗證 **[!UICONTROL 來源]** 。 |
 | [!DNL Data Science Workspace] | [!UICONTROL 管理資料科學工作區] | 在中讀取、建立、編輯和刪除的訪問權限 [!DNL Data Science Workspace]。 |
+| [!DNL Data Governance] | [!UICONTROL 套用資料使用標籤] | 存取讀取、建立和刪除使用標籤。 |
+| [!DNL Data Governance] | [!UICONTROL 管理資料使用原則] | 存取讀取、建立、編輯和刪除資料使用原則。 |
+| [!DNL Data Governance] | [!UICONTROL 檢視資料使用原則] | 您組織的資料使用政策的唯讀存取權。 |
+| [!DNL Query Service] | [!UICONTROL 管理查詢] | 對平台資料的讀取、建立、編輯和刪除結構化SQL查詢的訪問。 |
 
-_(*)本許可要求提供條[!DNL Real-time Customer Data Platform]款。 有關即時CDP的詳細資訊，請首先閱讀[即時CDP概述](https://docs.adobe.com/content/help/en/experience-platform/rtcdp/overview.html)。_
+_(*)本許可要求提供條 [!DNL Real-time Customer Data Platform]款。 有關即時CDP的詳細資訊，請首先閱讀 [即時CDP概述](https://docs.adobe.com/content/help/en/experience-platform/rtcdp/overview.html)。_
 
 ## 後續步驟
 
