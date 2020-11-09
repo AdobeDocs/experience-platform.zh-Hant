@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics;schema;Schema;enum;;primary identity;primary identity;XDM individual profile;Experience event;XDM Experience Event;XDM ExperienceEvent;experienceEvent;experienceevent;XDM Experienceevenet;schema design
+keywords: Experience Platform;home;popular topics;schema;Schema;enum;;primary identity;primary identity;XDM individual profile;Experience event;XDM Experience Event;XDM ExperienceEvent;experienceEvent;experienceevent;XDM Experienceevenet;schema design;best practices
 solution: Experience Platform
 title: Adobe Experience Platform中資料建模的最佳實務
 topic: overview
 description: 本檔案提供Experience Data Model(XDM)架構的簡介，以及構成Adobe Experience Platform中要使用之架構的建置區塊、原則和最佳實務。
 translation-type: tm+mt
-source-git-commit: e15df78978c06da254319d9d394be35c4668caa9
+source-git-commit: 5fe75ab7c939c8437d675212b71229fe3fb70c01
 workflow-type: tm+mt
-source-wordcount: '2477'
+source-wordcount: '2485'
 ht-degree: 1%
 
 ---
@@ -220,7 +220,7 @@ Adobe應用程式混合會透過使用欄位自動指派預設的主要身分識
 
 * 使用自上而下的方法，在建構結構之前，先將資料表格排序為描述檔、查閱和事件類別。
 * 針對不同用途設計結構描述時，通常有多種方法和選項。
-* 您的資料模型應支援區段使用案例。
+* 您的資料模型應能支援您的業務使用案例，例如細分或客戶歷程分析。
 * 讓結構描述盡可能簡單，而且只有在需要時才新增欄位。
 
 準備好後，請參閱在UI中建立架構的教學課程 [](../tutorials/create-schema-ui.md) ，以取得如何建立架構的逐步指示、為實體指派適當的類別，以及新增欄位以將資料對應至。
