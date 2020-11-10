@@ -5,9 +5,9 @@ title: 訂閱Adobe I/O事件通知
 topic: developer guide
 description: 本檔案提供如何訂閱Adobe Experience Platform服務之Adobe I/O事件通知的步驟。 還提供了有關可用事件類型的參考資訊，以及有關如何解釋每個應用程式服務返回事件資料的進一步文檔的 [!DNL Platform] 連結。
 translation-type: tm+mt
-source-git-commit: c5455dc0812b251483170ac19506d7c60ad4ecaa
+source-git-commit: f86f7483e7e78edf106ddd34dc825389dadae26a
 workflow-type: tm+mt
-source-wordcount: '765'
+source-wordcount: '763'
 ht-degree: 1%
 
 ---
@@ -62,7 +62,7 @@ ht-degree: 1%
 >
 >* [[!DNL Privacy Service] 通知](../../privacy-service/privacy-events.md)
 >* [[!DNL Data Ingestion] 通知](../../ingestion/quality/subscribe-events.md)
->* [[!DNL Flow Service] （來源）通知](../../sources/notifications.md)
+>* [[!DNL Flow Service (sources)] 通知](../../sources/notifications.md)
 
 
 ![](../images/notifications/choose-event-subscriptions.png)
@@ -99,6 +99,6 @@ ht-degree: 1%
 
 * [[!DNL Privacy Service] 通知](../../privacy-service/privacy-events.md)
 * [[!DNL Data Ingestion] 通知](../../ingestion/quality/subscribe-events.md)
-* [[!DNL Flow Service] （來源）通知](../../sources/notifications.md)
+* [[!DNL Flow Service (sources)] 通知](../../sources/notifications.md)
 
 如需如何 [[!DNL Observability Insights] 監控和](../home.md) 「」上活動的詳細資訊，請參閱 [!DNL Experience Platform] 總覽 [!DNL Privacy Service]。
