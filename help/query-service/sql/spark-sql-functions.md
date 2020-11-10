@@ -5,7 +5,7 @@ title: Spark SQL函式
 topic: spark sql functions
 description: 本檔案包含有關Spark SQL幫手的資訊，這些幫手提供內建的Spark SQL函式以擴充SQL功能。
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: d0fa57effb45fad6934345323366ef45383bed01
 workflow-type: tm+mt
 source-wordcount: '5009'
 ht-degree: 5%
@@ -2813,7 +2813,7 @@ SQL [!DNL Spark] 幫助器提供內置的 [!DNL Spark] SQL函式以擴展SQL功�
 引數：
 - `start`:表達式。 範圍的開始。
 - `stop`:表達式。 範圍（含）結尾。
-- `step`:可選運算式。 範圍的步驟。 如果小 `step` 於或等於， `start` 則預設為1，否 `stop`則為-1。 對於時序，分別為1天和-1天。 如果 `start` 大於 `stop`，則 `step` 必須為負值，反之亦然。
+- `step`:可選運算式。 範圍的步驟。 若小 `step` 於或等於，則預 `start` 設為&#39;1&#39;，否則 `stop`為&#39;-1&#39;。 對於時序，分別為&quot;1&quot;天和&quot;-1&quot;天。 如果 `start` 大於 `stop`，則 `step` 必須為負值，反之亦然。
 
 範例：
 
@@ -2822,7 +2822,7 @@ SQL [!DNL Spark] 幫助器提供內置的 [!DNL Spark] SQL函式以擴展SQL功�
  [1,2,3,4,5]
 > SELECT sequence(5, 1);
  [5,4,3,2,1]
-> SELECT sequence(to_date('2018-01-01'), to_date('2018-03-01'), interval 1 month);
+> SELECT sequence(to_date('2018-01-01'), to_date('2018-03-01'), interval '1' month);
  [2018-01-01,2018-02-01,2018-03-01]
 ```
 
