@@ -5,9 +5,9 @@ title: 客戶AI快速入門
 topic: Getting started
 description: 本指南提供範例API呼叫，以示範如何格式化您的請求。 這些包括路徑、必要標題和正確格式化的請求負載。
 translation-type: tm+mt
-source-git-commit: c30bbaead775e68f869b080e24e18d4a23cda973
+source-git-commit: f86f7483e7e78edf106ddd34dc825389dadae26a
 workflow-type: tm+mt
-source-wordcount: '555'
+source-wordcount: '560'
 ht-degree: 0%
 
 ---
@@ -20,7 +20,7 @@ ht-degree: 0%
 - [體驗資料模型(XDM)系統概觀](../../xdm/home.md):XDM是基礎架構，可讓 [!DNL Adobe Experience Cloud]Experience Platform提供支援，讓您在適當的時間，透過適當的通道，向適當的人傳遞適當的訊息。 Experience Platform的建立方法XDM System可操作Experience Data Model架構，供Platform服務使用。
 - [架構構成基礎](../../xdm/schema/composition.md):本檔案提供Experience Data Model(XDM)架構的簡介，以及用於合成架構的建立區塊、原則和最佳實務 [!DNL Adobe Experience Platform]。
 - [建立結構](../../xdm/tutorials/create-schema-ui.md):本教學課程涵蓋使用Experience Platform中的架構編輯器建立架構的步驟。
-- [即時客戶個人檔案總覽](../../rtcdp/overview.md):建立在 [!DNL Adobe Experience Platform]( [!DNL Adobe Real-time Customer Data Platform] 即時CDP)之上，可協助公司將已知和未知的資料匯整在一起，在整個客戶歷程中運用智慧決策來啟動客戶個人檔案。 即時CDP結合了多個企業資料源，以即時建立統一的配置檔案，可用於跨所有通道和設備提供一對一的個性化客戶體驗。
+- [即時客戶個人檔案總覽](../../rtcdp/overview.md):Adobe即時 [!DNL Adobe Experience Platform]客戶資料平台（Real-time Customer Data Platform，即時CDP）以此為基礎，可協助公司將已知和未知的資料匯整在一起，在整個客戶歷程中運用智慧決策來啟動客戶個人檔案。 即時CDP結合了多個企業資料源，以即時建立統一的配置檔案，可用於跨所有通道和設備提供一對一的個性化客戶體驗。
 - [區段服務概觀](../../segmentation/home.md):區段是定義描述檔商店中描述檔子集所共用的特定屬性或行為，以區分適銷人員群組和客戶群的程式。 例如，在名為「您忘記購買運動鞋嗎？」的電子郵件促銷活動中，您可能希望擁有在過去30天內搜尋跑鞋但未完成購買的所有使用者的觀眾。 使用不同的細分，您可以專注於不同的受眾，提供更自訂的行銷體驗。
 - [區段產生器使用指南](../../segmentation/tutorials/create-a-segment.md):平台可讓您輕鬆建立和存取區段，並使用不同的建置區塊進一步描述區段。
 
