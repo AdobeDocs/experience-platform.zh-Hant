@@ -6,9 +6,9 @@ topic: overview
 type: Tutorial
 description: 資料流是從源中檢索資料並將資料收錄到資料集的計畫 [!DNL Platform] 任務。 本教學課程提供使用行銷自動化帳戶設定新資料流的步驟。
 translation-type: tm+mt
-source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
+source-git-commit: f86f7483e7e78edf106ddd34dc825389dadae26a
 workflow-type: tm+mt
-source-wordcount: '1477'
+source-wordcount: '1472'
 ht-degree: 0%
 
 ---
@@ -22,10 +22,10 @@ ht-degree: 0%
 
 本教學課程需要對Adobe Experience Platform的下列元件有正確的認識：
 
-- [[!DNL Experience Data Model] (XDM)系統](../../../../xdm/home.md):組織客戶體驗資料 [!DNL Experience Platform] 的標準化架構。
+- [[!DNL Experience Data Model (XDM)] 系統](../../../../xdm/home.md):組織客戶體驗資料 [!DNL Experience Platform] 的標準化架構。
    - [架構構成基礎](../../../../xdm/schema/composition.md):瞭解XDM架構的基本建置區塊，包括架構組合的主要原則和最佳實務。
    - [架構編輯器教程](../../../../xdm/tutorials/create-schema-ui.md):瞭解如何使用架構編輯器UI建立自訂架構。
-- [[!DNL即時客戶基本資料]](../../../../profile/home.md):根據來自多個來源的匯整資料，提供統一、即時的消費者個人檔案。
+- [[!DNL Real-time Customer Profile]](../../../../profile/home.md):根據來自多個來源的匯整資料，提供統一、即時的消費者個人檔案。
 
 此外，本教學課程要求您已建立行銷自動化帳戶。 如需在UI中建立不同行銷自動化連接器的教學課程清單，請參閱來源連 [接器概觀](../../../home.md)。
 
