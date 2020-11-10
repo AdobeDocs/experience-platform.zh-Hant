@@ -5,9 +5,9 @@ title: 資料使用標籤概觀
 topic: labels
 description: Adobe Experience Platform資料治理可讓您將資料使用標籤套用至資料集和欄位，並依據相關資料使用政策對每個資料使用標籤進行分類。 本檔案概述Experience Platform中的資料使用標籤。
 translation-type: tm+mt
-source-git-commit: 0f3a4ba6ad96d2226ae5094fa8b5073152df90f7
+source-git-commit: f86f7483e7e78edf106ddd34dc825389dadae26a
 workflow-type: tm+mt
-source-wordcount: '614'
+source-wordcount: '616'
 ht-degree: 0%
 
 ---
@@ -31,7 +31,7 @@ Adobe Experience Platform可 [!DNL Data Governance] 讓您將資料使用標籤�
 
 ## 對象區段的標籤繼承
 
-由 [Adobe Experience Platform Segmentation Service建立的所有受眾細分](../../segmentation/home.md) ，都會繼承其對應資料集的使用標籤。 這可讓建立在（例如）之上的應 [!DNL Experience Platform] 用程式，在啟用區段至目的地時 [!DNL Real-time Customer Data Platform]，提供自動資料使用原則的強制執行。
+由 [Adobe Experience Platform Segmentation Service建立的所有受眾細分](../../segmentation/home.md) ，都會繼承其對應資料集的使用標籤。 這可讓以Experience Platform（例如）為基礎的應用程式，在啟 [!DNL Real-time Customer Data Platform]用區段至目的地時，提供自動資料使用原則強制執行功能。
 
 除了繼承資料集層級標籤外，依預設，區段會繼承其關聯資料集的所有欄位層級標籤。 根據您的應用程 [!DNL Platform]式使用區段的方式，您可能會指定使用哪些欄位，從而防止區段繼承排除欄位的標籤。
 
