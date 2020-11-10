@@ -6,9 +6,9 @@ topic: tutorial
 type: Tutorial
 description: 本教學課程涵蓋使用API強制「即時客戶個人檔案」受眾細分資料使用合規性的步驟。
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: f86f7483e7e78edf106ddd34dc825389dadae26a
 workflow-type: tm+mt
-source-wordcount: '1351'
+source-wordcount: '1338'
 ht-degree: 1%
 
 ---
@@ -22,10 +22,10 @@ ht-degree: 1%
 
 本教學課程需要有效瞭解下列元件 [!DNL Adobe Experience Platform]:
 
-- [[!DNL即時客戶基本資料]](../../profile/home.md): [!DNL Real-time Customer Profile] 是一般查閱實體儲存區，用來管理 [!DNL Experience Data Model] (XDM)內的資料 [!DNL Platform]。 描述檔會合併各種企業資料資產的資料，並以統一的簡報來存取該資料。
+- [[!DNL Real-time Customer Profile]](../../profile/home.md): [!DNL Real-time Customer Profile] 是一般查閱實體儲存區，用於管理內 [!DNL Experience Data Model (XDM)] 的資料 [!DNL Platform]。 描述檔會合併各種企業資料資產的資料，並以統一的簡報來存取該資料。
    - [合併策略](../../profile/api/merge-policies.md):用於確定在 [!DNL Real-time Customer Profile] 特定條件下哪些資料可以合併到統一視圖中的規則。 可以配置合併策略以 [!DNL Data Governance] 用於目的。
-- [[!DNL分段]](../home.md):如 [!DNL Real-time Customer Profile] 何將描述檔商店中的龐大個人群組分割為具有類似特性且回應類似行銷策略的較小群組。
-- [[!DNL資料治理]](../../data-governance/home.md): [!DNL Data Governance] 使用以下元件為資料使用標籤和強制實施提供基礎架構：
+- [[!DNL Segmentation]](../home.md):如 [!DNL Real-time Customer Profile] 何將描述檔商店中的龐大個人群組分割為具有類似特性且回應類似行銷策略的較小群組。
+- [[!DNL Data Governance]](../../data-governance/home.md): [!DNL Data Governance] 使用以下元件為資料使用標籤和強制實施提供基礎架構：
    - [資料使用標籤](../../data-governance/labels/user-guide.md):標籤用來描述資料集和欄位，以處理其個別資料的敏感度等級為準。
    - [資料使用原則](../../data-governance/policies/overview.md):指示允許針對依特定資料使用標籤分類之資料執行哪些行銷動作的設定。
    - [政策實施](../../data-governance/enforcement/overview.md):允許您強制實施資料使用策略並防止構成違反策略的資料操作。
@@ -385,4 +385,4 @@ curl -X POST \
 
 ## 後續步驟
 
-透過本教學課程，您已查找與觀眾區隔相關的資料使用標籤，並測試它們是否違反特定行銷動作的政策。 有關中的詳 [!DNL Data Governance] 細信 [!DNL Experience Platform]息，請閱讀 [[!DNL資料治理]的概述](../../data-governance/home.md)。
+透過本教學課程，您已查找與觀眾區隔相關的資料使用標籤，並測試它們是否違反特定行銷動作的政策。 有關中的詳 [!DNL Data Governance] 細信 [!DNL Experience Platform]息，請閱讀的概述 [[!DNL Data Governance]](../../data-governance/home.md)。
