@@ -4,9 +4,9 @@ title: 即時客戶個人檔案UI指南
 topic: guide
 description: 即時客戶個人檔案可讓您對個別客戶建立全方位的檢視，並結合來自多個通道的資料，包括線上、離線、CRM和協力廠商資料。 本檔案可做為在Adobe Experience Platform使用者介面中與即時客戶個人檔案互動的指南。
 translation-type: tm+mt
-source-git-commit: 342a05e4c378732331968ab7695a3ba7b47f2956
+source-git-commit: f86f7483e7e78edf106ddd34dc825389dadae26a
 workflow-type: tm+mt
-source-wordcount: '1245'
+source-wordcount: '1244'
 ht-degree: 0%
 
 ---
@@ -22,7 +22,7 @@ ht-degree: 0%
 
 * [[!DNL Real-time Customer Profile]](../home.md):根據來自多個來源的匯整資料，提供統一、即時的消費者個人檔案。
 * [[!DNL Identity Service]](../../identity-service/home.md):可在 [!DNL Real-time Customer Profile] 不同資料來源中吸收身分時，橋接身分 [!DNL Platform]。
-* [[!DNL Experience Data Model] (XDM)](../../xdm/home.md):組織客戶體驗資料 [!DNL Platform] 的標準化架構。
+* [[!DNL Experience Data Model (XDM)]](../../xdm/home.md):組織客戶體驗資料 [!DNL Platform] 的標準化架構。
 
 ## 概述
 
