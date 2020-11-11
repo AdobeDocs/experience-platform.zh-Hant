@@ -4,9 +4,9 @@ title: 即時客戶個人檔案UI指南
 topic: guide
 description: 即時客戶個人檔案可讓您對個別客戶建立全方位的檢視，並結合來自多個通道的資料，包括線上、離線、CRM和協力廠商資料。 本檔案可做為在Adobe Experience Platform使用者介面中與即時客戶個人檔案互動的指南。
 translation-type: tm+mt
-source-git-commit: f86f7483e7e78edf106ddd34dc825389dadae26a
+source-git-commit: 295315ab052ff151bea9037567bf2690d705367b
 workflow-type: tm+mt
-source-wordcount: '1244'
+source-wordcount: '1245'
 ht-degree: 0%
 
 ---
@@ -62,7 +62,7 @@ ht-degree: 0%
 
 ### 合併原則
 
-「合 **[!UICONTROL 並策略]** 」選擇器會自動為您的組織選擇預設的合併策略。 如果不希望使用該合併策略，可以選擇預設合併策略旁邊的 `X` ，以開啟「選擇合併策略 **** 」對話框，您可以在其中選擇其他合併策略。 要瞭解有關合併策略及其在平台中的角色的更多資訊，請參 [閱合併策略使用手冊](merge-policies.md)。
+「合 **[!UICONTROL 並策略]** 」選擇器會自動為您的組織選擇預設的合併策略。 如果不希望使用該合併策略，可以選擇預設合併策略旁邊的 `X` ，以開啟「選擇合併策略 **** 」對話框，您可以在其中選擇其他合併策略。 若要進一步瞭解合併原則及其在平台中的角色，請參閱合 [並原則UI指南](merge-policies.md)。
 
 ![](../images/user-guide/profiles-search-merge-policy.png)
 
@@ -98,7 +98,7 @@ ht-degree: 0%
 
 ## 合併原則
 
-從主「配置 **[!UICONTROL 檔案]** 」菜單中，選擇「合併策略 **** 」頁籤以查看屬於您組織的合併策略清單。 每個列出的策略都顯示其名稱，無論它是否是預設合併策略，以及它所應用的方案。
+從主「配置 **[!UICONTROL 檔案]** 」菜單中，選擇「合併策略 **** 」頁籤以查看屬於您組織的合併策略清單。 每個列出的策略都顯示其名稱，無論它是否是預設合併策略，以及它所應用的方案類。
 
 有關合併策略的詳細資訊，請參 [閱合併策略UI指南](merge-policies.md)。
 
