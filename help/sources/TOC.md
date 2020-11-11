@@ -5,10 +5,10 @@ user-guide-title: Adobe Experience Platform 來源連接器說明
 breadcrumb-title: 來源連接器指南
 user-guide-description: 從多種來源或結構擷取資料、加標籤，以及增強已擷取的資料。
 translation-type: tm+mt
-source-git-commit: 26d117726a59dea0c08cf6ca5a13bf54951f7f44
+source-git-commit: 9e005b0b225e8a643a080fb3d4b014d981748973
 workflow-type: tm+mt
-source-wordcount: '654'
-ht-degree: 4%
+source-wordcount: '676'
+ht-degree: 3%
 
 ---
 
@@ -62,6 +62,8 @@ ht-degree: 4%
       - [Oracle連接器](connectors/databases/oracle.md)
       - [菲尼克斯連接器](connectors/databases/phoenix.md)
       - [PostgreSQL連接器](connectors/databases/postgres.md)
+   - 電子商務 {#ecommerce}
+      - [Shopify連接器](connectors/ecommerce/shopify.md)
    - 行銷自動化 {#marketing-automation}
       - [HubSpot連接器](connectors/marketing-automation/hubspot.md)
    - 付款 {#payments}
@@ -106,6 +108,8 @@ ht-degree: 4%
          - [菲尼克斯連接器](tutorials/api/create/databases/phoenix.md)
          - [PostgreSQL連接器](tutorials/api/create/databases/postgres.md)
          - [SQL Server連接器](tutorials/api/create/databases/sql-server.md)
+      - 電子商務 {#ecommerce}
+         - [Shopify連接器](tutorials/api/create/ecommerce/shopify.md)
       - 行銷自動化 {#marketing-automation}
          - [HubSpot連接器](tutorials/api/create/marketing-automation/hubspot.md)
       - 付款 {#payments}
@@ -118,6 +122,7 @@ ht-degree: 4%
       - [探索CRM資料](tutorials/api/explore/crm.md)
       - [探索客戶成功資料](tutorials/api/explore/customer-success.md)
       - [探索資料庫或NoSQL資料](tutorials/api/explore/database-nosql.md)
+      - [探索電子商務資料](tutorials/api/explore/ecommerce.md)
       - [探索行銷自動化資料](tutorials/api/explore/marketing-automation.md)
       - [探索付款資料](tutorials/api/explore/payments.md)
       - [探索通訊協定資料](tutorials/api/explore/protocols.md)
@@ -127,6 +132,7 @@ ht-degree: 4%
       - [收集CRM資料](tutorials/api/collect/crm.md)
       - [收集客戶成功資料](tutorials/api/collect/customer-success.md)
       - [收集資料庫或NoSQL資料](tutorials/api/collect/database-nosql.md)
+      - [收集電子商務資料](tutorials/api/collect/ecommerce.md)
       - [收集行銷自動化資料](tutorials/api/collect/marketing-automation.md)
       - [收集付款資料](tutorials/api/collect/payments.md)
       - [收集通訊協定資料](tutorials/api/collect/protocols.md)
@@ -178,6 +184,8 @@ ht-degree: 4%
          - [Oracle連接器](tutorials/ui/create/databases/oracle.md)
          - [菲尼克斯連接器](tutorials/ui/create/databases/phoenix.md)
          - [PostgreSQL連接器](tutorials/ui/create/databases/postgres.md)
+      - 電子商務 {#ecommerce}
+         - [Shopify連接器](tutorials/ui/create/ecommerce/shopify.md)
       - 行銷自動化 {#marketing-automation}
          - [HubSpot連接器](tutorials/ui/create/marketing-automation/hubspot.md)
       - 付款 {#payments}
@@ -188,9 +196,10 @@ ht-degree: 4%
       - [為廣告連接器配置資料流](tutorials/ui/dataflow/advertising.md)
       - [為批處理雲儲存連接器配置資料流](tutorials/ui/dataflow/batch/cloud-storage.md)
       - [為流雲儲存連接器配置資料流](tutorials/ui/dataflow/streaming/cloud-storage-streaming.md)
-      - [為資料庫連接器配置資料流](tutorials/ui/dataflow/databases.md)
       - [為CRM連接器配置資料流](tutorials/ui/dataflow/crm.md)
       - [為客戶成功連接器配置資料流](tutorials/ui/dataflow/customer-success.md)
+      - [為資料庫連接器配置資料流](tutorials/ui/dataflow/databases.md)
+      - [為電子商務連接器配置資料流](tutorials/ui/dataflow/ecommerce.md)
       - [為行銷自動化連接器配置資料流](tutorials/ui/dataflow/marketing-automation.md)
       - [為付款連接器配置資料流](tutorials/ui/dataflow/payments.md)
       - [為協定連接器配置資料流](tutorials/ui/dataflow/protocols.md)
