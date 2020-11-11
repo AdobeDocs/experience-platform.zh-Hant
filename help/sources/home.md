@@ -5,9 +5,9 @@ title: Adobe Experience Platform來源連接器概觀
 topic: overview
 description: Adobe Experience Platform可讓您從外部來源擷取資料，同時提供您使用平台服務來建構、標示及增強傳入資料的能力。 您可以從多種來源（例如Adobe應用程式、雲端儲存空間、資料庫等）擷取資料。
 translation-type: tm+mt
-source-git-commit: 9bd893820c7ab60bf234456fdd110fb2fbe6697c
+source-git-commit: d26eaf699a67a1bc7111f5f97da277368fcc4629
 workflow-type: tm+mt
-source-wordcount: '866'
+source-wordcount: '886'
 ht-degree: 0%
 
 ---
@@ -41,7 +41,7 @@ Adobe Experience Platform可讓您從外部來源擷取資料，同時提供您�
 
 [!DNL Experience Platform] 支援從協力廠商廣告系統擷取資料。 有關特定來源連接器的詳細資訊，請參閱下列相關檔案：
 
-- [[!DNL Google AdWords]連接器](connectors/advertising/ads.md)
+- [[!DNL Google AdWords]](connectors/advertising/ads.md) 連接器
 
 ### 雲端儲存空間
 
@@ -91,6 +91,12 @@ CRM系統提供的資料有助於建立客戶關係，進而建立忠誠度並�
 - [[!DNL Oracle] 連接器](connectors/databases/oracle.md)
 - [[!DNL Phoenix] 連接器](connectors/databases/phoenix.md)
 - [[!DNL PostgreSQL] 連接器](connectors/databases/postgres.md)
+
+### 電子商務
+
+[!DNL Experience Platform] 支援從協力廠商電子商務系統擷取資料。 有關特定來源連接器的詳細資訊，請參閱下列相關檔案：
+
+- [[!DNL Shopify]](connectors/ecommerce/shopify.md)
 
 ### 行銷自動化
 
