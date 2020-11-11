@@ -3,9 +3,9 @@ keywords: Experience Platform;profile;real-time customer profile;troubleshooting
 title: 合併政策——即時客戶個人檔案API
 topic: guide
 translation-type: tm+mt
-source-git-commit: 47c65ef5bdd083c2e57254189bb4a1f1d9c23ccc
+source-git-commit: 6bfc256b50542e88e28f8a0c40cec7a109a05aa6
 workflow-type: tm+mt
-source-wordcount: '2458'
+source-wordcount: '2494'
 ht-degree: 1%
 
 ---
@@ -27,7 +27,13 @@ Adobe Experience Platform可讓您從多個來源匯整資料片段，並加以�
 
 ## 合併策略的元件 {#components-of-merge-policies}
 
-合併原則是IMS組織專用的，可讓您建立不同的原則，以所需的特定方式合併結構。 任何存取資 [!DNL Profile] 料的API都需要合併原則，但若未明確提供，則會使用預設原則。 [!DNL Platform] 提供預設合併策略，或者，您可以為特定方案建立合併策略，並將其標籤為組織的預設策略。 每個組織可能每個方案有多個合併策略，但每個方案只能有一個預設的合併策略。 在提供方案名稱且需要但未提供合併策略的情況下，將使用任何設定為預設值的合併策略。 當您將合併策略設定為預設值時，任何先前設定為預設值的現有合併策略都將自動更新為不再用作預設值。
+合併原則是IMS組織專用的，可讓您建立不同的原則，以所需的特定方式合併結構。 任何存取資 [!DNL Profile] 料的API都需要合併原則，但若未明確提供，則會使用預設原則。 [!DNL Platform] 為組織提供預設的合併原則，或者您可以為特定的「體驗資料模型」(XDM)架構類別建立合併原則，並將其標籤為組織的預設。
+
+雖然每個組織每個方案類可能有多個合併策略，但每個類只能有一個預設合併策略。 在提供方案類名和需要但未提供合併策略的情況下，將使用任何預設設定的合併策略。
+
+>[!NOTE]
+>
+>當您將新合併策略設定為預設值時，先前設定為預設值的任何現有合併策略都將自動更新為不再用作預設值。
 
 ### 完整合併策略對象
 
@@ -41,7 +47,7 @@ Adobe Experience Platform可讓您從多個來源匯整資料片段，並加以�
         "name": "{NAME}",
         "imsOrgId": "{IMS_ORG}",
         "schema": {
-            "name": "{SCHEMA_NAME}"
+            "name": "{SCHEMA_CLASS_NAME}"
         },
         "version": 1,
         "identityGraph": {
@@ -62,7 +68,7 @@ Adobe Experience Platform可讓您從多個來源匯整資料片段，並加以�
 | `imsOrgId` | 此合併策略所屬的組織ID |
 | `identityGraph` | [標識圖對象](#identity-graph) ，指示將從中獲取相關標識的身份圖。 將合併所有相關身份的配置檔案片段。 |
 | `attributeMerge` | [屬性合併](#attribute-merge) 對象，指示在發生資料衝突時合併策略優先排列配置檔案屬性的方式。 |
-| `schema` | 可 [以使用](#schema) 合併策略的方案對象。 |
+| `schema.name` | 作為對象的 [`schema`](#schema) 一部分，該字 `name` 段包含與合併策略相關的XDM模式類。 有關方案和類的詳細資訊，請閱讀 [XDM文檔](../../xdm/home.md)。 |
 | `default` | 指示此合併策略是否為指定方案的預設布爾值。 |
 | `version` | [!DNL Platform] 合併策略的維護版本。 每當合併策略更新時，此唯讀值都會增加。 |
 | `updateEpoch` | 合併策略的上次更新日期。 |
@@ -132,7 +138,7 @@ Adobe Experience Platform可讓您從多個來源匯整資料片段，並加以�
 * **`dataSetPrecedence`** :根據個人資料片段的來源資料集，為描述檔片段提供優先順序。 當一個資料集中的資訊比另一個資料集的資料更偏好或受信任時，就可使用此功能。 使用此合併類型時，需 `order` 要屬性，因為它按優先順序順序列出資料集。
    * **`order`**:使用&quot;dataSetPrecense&quot;時，必須 `order` 向陣列提供資料集清單。 清單中未包含的任何資料集都不會合併。 換言之，必須明確列出資料集才能合併至描述檔。 陣 `order` 列按優先順序列出資料集的ID。
 
-**使用類型的示例attributeMerge對 `dataSetPrecedence` 像**
+#### 使用 `attributeMerge` 類型的示例對 `dataSetPrecedence` 像
 
 ```json
     "attributeMerge": {
@@ -146,7 +152,7 @@ Adobe Experience Platform可讓您從多個來源匯整資料片段，並加以�
     }
 ```
 
-**使用類型的示例attributeMerge對 `timestampOrdered` 像**
+#### 使用 `attributeMerge` 類型的示例對 `timestampOrdered` 像
 
 ```json
     "attributeMerge": {
@@ -156,7 +162,7 @@ Adobe Experience Platform可讓您從多個來源匯整資料片段，並加以�
 
 ### 結構 {#schema}
 
-架構物件會指定建立此合併原則的體驗資料模型(XDM)架構。
+架構對象指定為此合併策略建立的Experience Data Model(XDM)架構類。
 
 **`schema`物件**
 
@@ -731,7 +737,7 @@ curl -X DELETE \
 
 ## 後續步驟
 
-現在您知道如何為IMS組織建立和設定合併原則，您可以使用這些原則從您的資料建立受眾 [!DNL Real-time Customer Profile] 區段。 請參閱 [Adobe Experience Platform細分服務檔案](../../segmentation/home.md) ，開始定義和使用細分。
+現在您知道如何為組織建立和設定合併原則，您可以使用這些原則來調整平台中客戶個人檔案的檢視，並從資料中建立受眾區 [!DNL Real-time Customer Profile] 段。 請參閱 [Adobe Experience Platform細分服務檔案](../../segmentation/home.md) ，開始定義和使用細分。
 
 ## 附錄
 
