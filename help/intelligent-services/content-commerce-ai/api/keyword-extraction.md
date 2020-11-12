@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;getting started;content ai;commerce ai;content and commerce ai;keyword extraction;Keyword extraction
 solution: Experience Platform
-title: 色彩擷取
+title: 關鍵字擷取
 topic: Developer guide
 description: 當給定文字檔案時，關鍵字擷取服務會自動擷取最能說明檔案主題的關鍵字或關鍵片語。 為了提取關鍵字，採用了命名實體識別(NER)和無監督關鍵字提取算法的組合。
 translation-type: tm+mt
-source-git-commit: eb92a7d57b1ef0ca19bc2d175ad1b2014ac1a8b0
+source-git-commit: e397711baf31092402de83b826887ebef16321eb
 workflow-type: tm+mt
 source-wordcount: '1059'
 ht-degree: 3%
