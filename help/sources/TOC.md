@@ -5,9 +5,9 @@ user-guide-title: Adobe Experience Platform 來源連接器說明
 breadcrumb-title: 來源連接器指南
 user-guide-description: 從多種來源或結構擷取資料、加標籤，以及增強已擷取的資料。
 translation-type: tm+mt
-source-git-commit: 9e005b0b225e8a643a080fb3d4b014d981748973
+source-git-commit: 89a807c0adbc3c9e4396adbb96764453034c8ea3
 workflow-type: tm+mt
-source-wordcount: '676'
+source-wordcount: '680'
 ht-degree: 3%
 
 ---
@@ -208,4 +208,5 @@ ht-degree: 3%
    - [刪除帳戶](tutorials/ui/delete-accounts.md)
    - [刪除資料流](tutorials/ui/delete.md)
 - [流量執行通知](notifications.md)
+- [IP位址允許清單](ip-address-allow-list.md)
 - [平台版本注意事項](https://www.adobe.com/go/platform-release-notes-en)
