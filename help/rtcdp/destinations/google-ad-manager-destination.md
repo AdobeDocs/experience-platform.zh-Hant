@@ -5,9 +5,9 @@ seo-title: Google廣告管理員目標
 description: 'Google Ad Manager之前稱為DoubleClick for Publishers或DoubleClick AdX，是來自谷歌的廣告服務平台，可讓出版業者透過視訊和行動應用程式管理其網站上的廣告展示。 '
 seo-description: 'Google Ad Manager之前稱為DoubleClick for Publishers或DoubleClick AdX，是來自谷歌的廣告服務平台，可讓出版業者透過視訊和行動應用程式管理其網站上的廣告展示。 '
 translation-type: tm+mt
-source-git-commit: 485c4b1c3c68755396da087d4b5864c8a36e64df
+source-git-commit: d20b558a6f4518be74cd5969c50a5db310370c08
 workflow-type: tm+mt
-source-wordcount: '688'
+source-wordcount: '690'
 ht-degree: 0%
 
 ---
@@ -33,7 +33,7 @@ ht-degree: 0%
 
 ### 匯出類型 {#export-type}
 
-**[!DNL Segment Export]** -您正將區段（對象）的所有成員匯出至Google目標。
+**區段匯出** -您正將區段（對象）的所有成員匯出至Google目標。
 
 ## 必要條件
 
