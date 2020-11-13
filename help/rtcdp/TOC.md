@@ -5,9 +5,9 @@ audience: user
 user-guide-title: 即時客戶資料平台指南
 user-guide-description: 將來自多個企業來源的已知和匿名資料放在一起，以建立客戶設定檔，從這些設定檔建立對象區段，並對協力廠商目的地啟動這些區段。
 translation-type: tm+mt
-source-git-commit: 77b1ffdd20cbc4e1645688da83769277f6729091
+source-git-commit: d20b558a6f4518be74cd5969c50a5db310370c08
 workflow-type: tm+mt
-source-wordcount: '510'
+source-wordcount: '507'
 ht-degree: 17%
 
 ---
@@ -56,7 +56,6 @@ ht-degree: 17%
          * [Google gtag擴充功能](/help/rtcdp/destinations/gtag-advertising-extension.md)
          * [LinkedIn In Insight標籤擴充功能](/help/rtcdp/destinations/linkedin-extension.md)
          * [Pinterest轉換追蹤擴充功能](destinations/pinterest-extension.md)
-         * [貿易部門](/help/rtcdp/destinations/tradedesk-destination.md)
          * [Twitter通用網站標籤擴充功能](destinations/twitter-uwt-extension.md)
       * Analytics目標 {#analytics-destinations}
          * [Analytics目標概觀](destinations/analytics-destinations.md)
