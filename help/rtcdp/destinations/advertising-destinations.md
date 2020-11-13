@@ -5,9 +5,9 @@ seo-title: 廣告目標
 description: 將您的即時客戶資料平台連接至協力廠商廣告平台（例如DSP、廣告網路、SSP），並與這些平台共用假受眾。
 seo-description: 將您的即時客戶資料平台連接至協力廠商廣告平台（例如DSP、廣告網路、SSP），並與這些平台共用假受眾。
 translation-type: tm+mt
-source-git-commit: b510f715133cc3fed98861f977b3ce9a857a5ced
+source-git-commit: 77b1ffdd20cbc4e1645688da83769277f6729091
 workflow-type: tm+mt
-source-wordcount: '219'
+source-wordcount: '222'
 ht-degree: 2%
 
 ---
@@ -30,6 +30,7 @@ ht-degree: 2%
 * [Google廣告](/help/rtcdp/destinations/google-ads-destination.md)
 * [Google廣告管理員](/help/rtcdp/destinations/google-ad-manager-destination.md)
 * [Google Customer Match](/help/rtcdp/destinations/google-customer-match-destination.md)
+* [貿易部門](/help/rtcdp/destinations/tradedesk-destination.md)
 
 
 ## 擴充功能
