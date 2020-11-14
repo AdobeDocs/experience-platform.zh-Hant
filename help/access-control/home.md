@@ -5,9 +5,9 @@ topic: overview
 title: 存取控制概觀
 description: Adobe Experience Platform的存取控制權是透過Adobe Admin Console提供。 此功能運用Admin Console中的產品設定檔，可連結使用者與權限和沙盒。
 translation-type: tm+mt
-source-git-commit: ccb7286e47aa4cf6356d22f84111b0c0fb30dfa8
+source-git-commit: 205bfb5f3b3fa083f64fc0160ea6bdf7bba74c9b
 workflow-type: tm+mt
-source-wordcount: '1299'
+source-wordcount: '1298'
 ht-degree: 3%
 
 ---
@@ -52,8 +52,8 @@ Adobe Admin Console提供一個集中位置，可讓您管理Adobe產品權益�
 
 | 產品設定檔 | 沙盒存取 | 權限 |
 | --- | --- | --- |
-| 預設生產——完全訪問 | 生產 | 除「沙盒管理」權 [!DNL Experience Platform]限外，所有適用的權限。 |
-| 預設沙盒管理 | 不適用 | 僅提供「沙盒管理」權限的存取。 |
+| 預設生產完整存取權 | 生產 | 除「沙盒管理」權 [!DNL Experience Platform]限外，所有適用的權限。 |
+| 沙盒管理員 | 不適用 | 僅提供「沙盒管理」權限的存取。 |
 
 ## 沙盒與權限
 
