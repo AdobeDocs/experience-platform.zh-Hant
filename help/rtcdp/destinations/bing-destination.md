@@ -5,7 +5,7 @@ seo-title: Microsoft Bing目標可協助您將描述檔資料傳送至Microsoft 
 description: 透過Microsoft Bing目標，您可以跨Microsoft Display Advertising執行重新定位和受眾鎖定的數位宣傳。
 seo-description: 透過Microsoft Bing目標，您可以跨Microsoft Display Advertising執行重新定位和受眾鎖定的數位宣傳。
 translation-type: tm+mt
-source-git-commit: 43795e31f4e39dcabeaf6d69529e80cabe9c90c5
+source-git-commit: a64f9f1f078d8380cc25c9760eac1699512a5870
 workflow-type: tm+mt
 source-wordcount: '489'
 ht-degree: 0%
@@ -50,8 +50,8 @@ ht-degree: 0%
    >[!NOTE]
    >
    >如果此目標已存在連接，您可以在目標卡上看到 **[!UICONTROL 「激活]** 」按鈕。 有關「激活」( **[!UICONTROL Activate]** )和「配置」( **[!UICONTROL Configure]**)之間差異的詳細資訊，請參 [閱目標工作區文檔的「目錄](../destinations/destinations-workspace.md#catalog) 」(Catalog)部分。
-
-   ![啟動Microsoft Bing目標](assets/bing-destination-activate.png)
+   >
+   >![啟動Microsoft Bing目標](assets/bing-destination-activate.png)
 
 1. 在「驗 [!UICONTROL 證] 」步驟中，必須輸入目標連接詳細資訊：
 
