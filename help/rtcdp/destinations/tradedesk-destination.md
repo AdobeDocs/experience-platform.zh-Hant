@@ -5,9 +5,9 @@ seo-title: 貿易桌目的地
 description: '交易台是廣告購買者的自助服務平台，可跨展示廣告、視訊和行動庫存來源執行重新鎖定目標及受眾目標數位宣傳。 '
 seo-description: 交易台是廣告購買者的自助服務平台，可跨展示廣告、視訊和行動庫存來源執行重新鎖定目標及受眾目標數位宣傳。
 translation-type: tm+mt
-source-git-commit: c9fb63b390d4c7dddcdb35a85710ff664614ad63
+source-git-commit: 43795e31f4e39dcabeaf6d69529e80cabe9c90c5
 workflow-type: tm+mt
-source-wordcount: '575'
+source-wordcount: '577'
 ht-degree: 1%
 
 ---
@@ -46,10 +46,10 @@ ht-degree: 1%
    >[!NOTE]
    >
    >如果此目標已存在連接，您可以在目標卡上看到 **[!UICONTROL 「激活]** 」按鈕。 有關「激活」( **[!UICONTROL Activate]** )和「配置」( **[!UICONTROL Configure]**)之間差異的詳細資訊，請參 [閱目標工作區文檔的「目錄](../destinations/destinations-workspace.md#catalog) 」(Catalog)部分。
-   >
-   >![激活交易台目標](assets/tradedesk-destination-activate.png)
 
-1. 在「驗 [!UICONTROL 證] 」步驟中，您需要輸入連 [!DNL The Trade Desk] 接詳細資訊：
+       ![啟動交易台目的地](assets/tradedesk-destination-activate.png)
+   
+2. 在「驗 [!UICONTROL 證] 」步驟中，您需要輸入連 [!DNL The Trade Desk] 接詳細資訊：
 
    * **[!UICONTROL 名稱]**:您將來識別此目的地的名稱。
    * **[!UICONTROL 說明]**:將來幫助您識別此目標的說明。
@@ -67,7 +67,7 @@ ht-degree: 1%
 
    ![交易台驗證步驟](assets/tradedesk-destination-authentication.png)
 
-1. 按一 **[!UICONTROL 下建立目標]**。 您的目標現在已建立。 如果您想稍 [!UICONTROL 後啟動區段，可以按一下「儲存並退出] 」，或選取「下一步  」以繼續工作流程並選取要啟動的區段。 在這兩種情況下，請參閱下一 [節「啟用區段](#activate-segments)」，以瞭解其餘的工作流程。
+3. 按一 **[!UICONTROL 下建立目標]**。 您的目標現在已建立。 如果您想稍 [!UICONTROL 後啟動區段，可以按一下「儲存並退出] 」，或選取「下一步  」以繼續工作流程並選取要啟動的區段。 在這兩種情況下，請參閱下一 [節「啟用區段](#activate-segments)」，以瞭解其餘的工作流程。
 
 ## 啟用區段 {#activate-segments}
 
