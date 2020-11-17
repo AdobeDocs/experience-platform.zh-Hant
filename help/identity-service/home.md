@@ -5,9 +5,9 @@ title: Adobe Experience Platform Identity Service
 topic: overview
 description: Adobe Experience Platform Identity Service可跨裝置和系統橋接身分，協助您更全面地瞭解客戶及其行為，讓您即時提供具影響力的個人化數位體驗。
 translation-type: tm+mt
-source-git-commit: 28b733a16b067f951a885c299d59e079f0074df8
+source-git-commit: af7eab0599b17be55d5a4c129f7ebaeba91333bc
 workflow-type: tm+mt
-source-wordcount: '1711'
+source-wordcount: '1719'
 ht-degree: 0%
 
 ---
@@ -87,6 +87,8 @@ PII（例如電子郵件地址和電話號碼）可直接識別客戶。 因此�
 
 例如，使用電話號碼（例如「工作電話」）可能會產生比您想要在身分圖表中建立的關係，以說明提供及標示身分資料時要考慮的潛在因素類型。 您可能會發現許多員工在工作時都使用相同的號碼，而「家」和「行動」更能確保關係盡可能精確。
 
+如需詳細資訊，請參閱存取身分圖 [形檢視器的教學課程](./ui/identity-graph-viewer.md)
+
 ## 提供身分資料至 [!DNL Identity Service]
 
 本節說明在為每個客戶建立身分圖表之前，如何處理提供給Adobe Experience Platform [!DNL Identity Service] 的資料。
@@ -146,4 +148,4 @@ Adobe Experience Platform是以隱私權為考量而建立，並包含資料治�
 
 ## 後續步驟
 
-現在，您已瞭解其中的 [!DNL Identity Service] 主要概念及其角色 [!DNL Experience Platform]，可以開始學習如何使用 [[!DNL Identity Service API]使用身分圖表](./api/getting-started.md)。
+現在，您已瞭解其關鍵概 [!DNL Identity Service] 念及其在其中的角色 [!DNL Experience Platform]，可以開始學習如何使用您的識別圖表 [[!DNL Identity Service API]](./api/getting-started.md)。
