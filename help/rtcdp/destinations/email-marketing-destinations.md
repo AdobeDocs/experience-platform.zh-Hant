@@ -6,9 +6,9 @@ type: Tutorial
 description: 電子郵件服務供應商(ESP)可讓您管理電子郵件行銷活動，例如傳送促銷電子郵件促銷活動。
 seo-description: 電子郵件服務供應商(ESP)可讓您管理電子郵件行銷活動，例如傳送促銷電子郵件促銷活動。
 translation-type: tm+mt
-source-git-commit: 5238d98db0554d34c2b0bcd28b64354f544faa0f
+source-git-commit: 42b694c532f140b51913ba5ceb0aaeacc2263039
 workflow-type: tm+mt
-source-wordcount: '803'
+source-wordcount: '835'
 ht-degree: 1%
 
 ---
@@ -35,6 +35,8 @@ ht-degree: 1%
 - 對於 **S3連接**，您必須提供您的Amazon存取金鑰ID和密碼存取金鑰。
 - 對於 **具有密碼連接的SFTP** ，您必須為SFTP伺服器提供域、埠、用戶名和密碼。
 - 對於 **具有SSH密鑰連接的SFTP** ，必須為SFTP伺服器提供域、埠、用戶名和SSH密鑰。
+
+或者，您可以附加RSA格式的公開密鑰，以便在「密鑰」部分下為導出的檔案添加 **[!UICONTROL 加密]** 。 請注意，此公開金 **鑰必** 須寫入為Base64編碼字串。
 
 在「設 **[!UICONTROL 置]** 」步驟中，輸入新目標的名稱和說明，以及導出檔案的檔案格式。
 
