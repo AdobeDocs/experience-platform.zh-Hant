@@ -3,11 +3,11 @@ keywords: RTCDP;rtcdp
 title: 目標工作區
 seo-title: 目標工作區
 description: 「目標」工作區包含4個部分：目錄、瀏覽、帳戶和系統視圖，這些部分在以下各節中介紹。
-seo-description: 在Adobe即時客戶資料平台中，從左側導覽列選取「目標」以存取目標工作區。
+seo-description: 在即時客戶資料平台中，從左側導覽列選擇「目標」以存取目標工作區。
 translation-type: tm+mt
-source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
+source-git-commit: a3e35dee98b7b2758a4246a63bb0e1bde6b2f165
 workflow-type: tm+mt
-source-wordcount: '825'
+source-wordcount: '905'
 ht-degree: 2%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 2%
 
 # 目標工作區 {#destinations-workspace}
 
-在Adobe即時客戶資料平台中，從左側導覽列選 **[!UICONTROL 取]** 「目標」以存取「 [!UICONTROL 目標] 」工作區。
+在即時客戶資料平台中，從左側導覽列選 **[!UICONTROL 取]** 「目標」以存取「目 [!UICONTROL 標] 」工作區。
 
 工 [!UICONTROL 作區] 由四個目標部分組成：目錄 [!UICONTROL 、瀏]覽 [!UICONTROL 、]BrowseAccounts、 ContralSystem View，這些部分在下面幾節中介紹。
 
@@ -23,13 +23,13 @@ ht-degree: 2%
 
 ## [!UICONTROL 目錄] {#catalog}
 
-「目 **[!UICONTROL 錄]** 」標籤會顯示Adobe即時CDP中所有可傳送資料的目標清單。
+「目 **[!UICONTROL 錄]** 」頁籤顯示即時CDP中所有可用目標的清單，您可以將資料發送到這些目標。
 
-Adobe即時CDP使用者介面在目標目錄頁面上提供許多搜尋和篩選選項：
+即時CDP用戶介面在目標目錄頁上提供了許多搜索和過濾選項：
 
 * 使用頁面上的搜尋功能來尋找特定目標。
 * 使用「類別」控制項 [!UICONTROL 篩選目] 標。
-* 在「所有目 [!UICONTROL 標」和「我] 」目 [!UICONTROL 標之間切換]。 選取 **[!UICONTROL 所有目標]** ，會顯示所有可用的Adobe即時CDP目標。 選 **[!UICONTROL 取「我的目標]** 」時，您只能看到您已建立連線的目標。
+* 在「所有目 [!UICONTROL 標」和「我] 」目 [!UICONTROL 標之間切換]。 選擇 **[!UICONTROL 所有目標]** ，將顯示所有可用的即時CDP目標。 選 **[!UICONTROL 取「我的目標]** 」時，您只能看到您已建立連線的目標。
 * 選擇以查看 **[!UICONTROL 連接]** 和／或擴 **[!UICONTROL 展]**。 要瞭解兩個類別之間的差異，請參閱目 [標類型和類別](/help/rtcdp/destinations/destination-types.md)。
 
 ![目標篩選和搜尋示範](/help/rtcdp/destinations/assets/destinations-search-and-filter.gif)
@@ -60,7 +60,7 @@ Adobe即時CDP使用者介面在目標目錄頁面上提供許多搜尋和篩選
 >
 >使用「 ![平台」欄中的](/help/rtcdp/destinations/assets/add-data-symbol.png) 「新增資料」按鈕 **** ，為該帳戶建立新的目標連線。
 
-![「帳戶」頁籤](/help/rtcdp/destinations/assets/accounts-tab.png)
+![「帳戶」頁籤](./assets/workspace/edit-account-destinations.png)
 
 | 元素 | 說明 |
 ---------|----------
@@ -69,6 +69,18 @@ Adobe即時CDP使用者介面在目標目錄頁面上提供許多搜尋和篩選
 | [!UICONTROL 使用者名稱] | 在連接目標嚮導中選 [擇的用戶名](/help/rtcdp/destinations/email-marketing-destinations.md#connect-destination)。 |
 | [!UICONTROL 目的地] | 表示與為目標建立的基本資訊連接的唯一成功目標流的數量。 |
 | [!UICONTROL 已驗證] | 授權此目的地的連線的日期。 |
+
+此外，您也可以編輯或更新帳戶資訊。 在「平 ![台」欄中](./assets/workspace/pencil-icon.png) ，選擇「編 **** 輯帳戶」按鈕以編輯帳戶的資訊。
+
+對於使用連線類型 `OAuth2` 的帳戶，您可以選 **[!UICONTROL 取「重新連線OAuth]** 」以續約您的帳戶憑證。
+
+![Oauth影像](./assets/workspace/reconnect-oauth.png)
+
+對於使用或連線類 `Access Key` 型的 `ConnectionString` 帳戶，您可以編輯帳戶驗證資訊，包括存取ID、機密金鑰或連線字串等資訊。
+
+![帳戶資訊影像](./assets/workspace/edit-account-details.png)
+
+編輯完帳戶詳細資訊後，請選取「 **[!UICONTROL 儲存]** 」以完成更新。
 
 ## [!UICONTROL 瀏覽] {#browse}
 
