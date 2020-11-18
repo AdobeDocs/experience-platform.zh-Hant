@@ -5,9 +5,9 @@ title: 卡夫卡連接器
 topic: overview
 description: Adobe Experience Platform的串流連接器以Apache Kafka Connect為基礎。 此程式庫可用來將JSON事件從資料中心的Kafka主題即時串流至Experience Platform。
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: 7fc7f0e525d994904dc71b1eb7136f11c05d5672
 workflow-type: tm+mt
-source-wordcount: '181'
+source-wordcount: '177'
 ht-degree: 0%
 
 ---
@@ -22,4 +22,4 @@ Adobe Experience Platform的串流連接器以為基礎 [!DNL Apache Kafka Conne
 - 已驗證的資料收集
 - 對消息進行批次處理以減少網路呼叫並提高吞吐量
 
-有關連接器的詳 [!DNL Kafka] 細資訊，包括如何設定連接器的說明，請閱讀快速 [入門指南](https://github.com/adobe/experience-platform-streaming-connect)。 如需更詳細的工作流程，請閱讀開發 [人員指南](https://github.com/adobe/experience-platform-streaming-connect/blob/master/DEVELOPER_GUIDE.md)。
+有關連接器的詳 [!DNL Kafka] 細資訊，包括如何設定連接器的說明，請閱讀快速 [入門指南](https://github.com/adobe/experience-platform-streaming-connect)。 如需更詳細的工作流程，請閱讀開發 [人員指南](https://www.adobe.com/go/kafka-connector-developer-guide)。
