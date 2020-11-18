@@ -5,7 +5,7 @@ seo-title: 飛艇標籤目的地
 description: 順暢地將Adobe觀眾資料傳遞至Axphiry做為觀眾標籤，以便在Axphiry中定位。
 seo-description: 順暢地將Adobe觀眾資料傳遞至Axphiry做為觀眾標籤，以便在Axphiry中定位。
 translation-type: tm+mt
-source-git-commit: f08b90531455cdbeb73deb83eed05ba7a9b19df6
+source-git-commit: 4b1bf5bbce57a22529c5d025c5bae10557400d54
 workflow-type: tm+mt
 source-wordcount: '1236'
 ht-degree: 1%
@@ -63,7 +63,7 @@ Adobe Experience Platform中的區段概念類似於 [Tags](https://docs.airship
 1. 按一 **[!UICONTROL 下「建立Token]** 」，並將詳細資訊儲存為機密。
 
 
-## 使用案例
+## 使用個案
 
 為協助您更清楚瞭解您應如何及何時使用目標，以下是Adobe Experience Platform客戶可使用此目標解決的 [!DNL Airship Tags] 範例使用案例。
 
