@@ -6,9 +6,9 @@ seo-title: 將描述檔和區段啟用至目標
 description: 將區段對應至目標，以啟用您在即時客戶資料平台中擁有的資料。 若要完成此作業，請遵循下列步驟。
 seo-description: 將區段對應至目標，以啟用您在即時客戶資料平台中擁有的資料。 若要完成此作業，請遵循下列步驟。
 translation-type: tm+mt
-source-git-commit: 74f49db15028aa27fc7ee73a79ea236ee42f37e8
+source-git-commit: bb59d93e016d49a0ebba77af1f90563a8767f072
 workflow-type: tm+mt
-source-wordcount: '1583'
+source-wordcount: '1768'
 ht-degree: 0%
 
 ---
@@ -78,7 +78,19 @@ ht-degree: 0%
 
 ![設定步驟](./assets/configure-icon.png)
 
-在「設 **[!UICONTROL 定]** 」步驟中，您可以設定要匯出之每個區段的檔案名稱。 配置檔案名是可選的。
+在「設 **[!UICONTROL 定]** 」步驟中，您可以設定要匯出之每個區段的排程和檔案名稱。 配置計畫是強制的，但配置檔案名是可選的。
+
+若要新增區段的排程，請選取「建 **[!UICONTROL 立排程」]**。
+
+![](./assets/activate-destinations/configure-destination-schedule.png)
+
+此時會出現一個快顯視窗，顯示建立區段排程的選項。
+
+- **檔案匯出**:您可以選擇導出完整檔案或增量檔案。 匯出完整檔案會發佈符合該區段之所有描述檔的完整快照。 匯出增量檔案會發佈自上次匯出以來符合該區段資格的描述檔增量。
+- **頻率**:如果 **[!UICONTROL 選取「匯出完整檔案]** 」，您可以選擇「一次」或「每日 **[!UICONTROL 」匯出]******。 如果選 **[!UICONTROL 取「匯出增量檔]** 」，則您只能選擇「每日」 **[!UICONTROL 匯出]**。 導出檔案 **[!UICONTROL 一次]** 導出檔案一次。 導出檔案 **[!UICONTROL Daily]** （每日）每天從開始日期導出檔案，如果選擇了完整檔案，則從每天12:00 AM UTC（東部時間7:00 PM）到結束日期（東部時間7:00 PM）導出檔案。
+- **日期**:如果 **[!UICONTROL 選取]** 「一次」，您可以選取一次匯出的日期。 如果 **[!UICONTROL 選取]** 「每日」，您可以選取匯出的開始和結束日期。
+
+![](./assets/activate-destinations/export-full-file.png)
 
 預設檔案名稱包含目標名稱、區段ID和日期和時間指標。 例如，您可以編輯匯出的檔案名稱，以區分不同的促銷活動，或將資料匯出時間附加至檔案。
 
