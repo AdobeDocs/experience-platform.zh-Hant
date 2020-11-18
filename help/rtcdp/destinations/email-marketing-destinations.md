@@ -6,9 +6,9 @@ type: Tutorial
 description: 電子郵件服務供應商(ESP)可讓您管理電子郵件行銷活動，例如傳送促銷電子郵件促銷活動。
 seo-description: 電子郵件服務供應商(ESP)可讓您管理電子郵件行銷活動，例如傳送促銷電子郵件促銷活動。
 translation-type: tm+mt
-source-git-commit: 42b694c532f140b51913ba5ceb0aaeacc2263039
+source-git-commit: 425287d78deebf0113d6cf6350bcb516c99ee995
 workflow-type: tm+mt
-source-wordcount: '835'
+source-wordcount: '838'
 ht-degree: 1%
 
 ---
@@ -54,7 +54,7 @@ ht-degree: 1%
 
 ## 配置檔案名
 
-有關檔案名編輯選項的資訊，請參閱激活目標教 [程中](/help/rtcdp/destinations/activate-destinations.md#configure) 「配置」步驟。
+如需區段排程和檔案名稱編輯選項的詳細資訊，請參閱啟 [動目標教學課程的](/help/rtcdp/destinations/activate-destinations.md#configure) 「設定」步驟。
 
 ## 選擇屬性——選擇要在導出的檔案中用作目標屬性的架構欄位 {#destination-attributes}
 
