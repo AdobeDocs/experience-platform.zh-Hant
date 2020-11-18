@@ -5,9 +5,9 @@ seo-title: 飛艇屬性目標
 description: 順暢地將Adobe觀眾資料傳遞至Ansphiry，做為觀眾屬性，以便在Ansphiry中定位。
 seo-description: 順暢地將Adobe觀眾資料傳遞至Ansphiry，做為觀眾屬性，以便在Ansphiry中定位。
 translation-type: tm+mt
-source-git-commit: 0e065bbc0917d5009738b4cae890ffd13c0ab154
+source-git-commit: 4b1bf5bbce57a22529c5d025c5bae10557400d54
 workflow-type: tm+mt
-source-wordcount: '1245'
+source-wordcount: '1244'
 ht-degree: 1%
 
 ---
@@ -69,7 +69,7 @@ Adobe Experience Platform描述檔屬性類似於屬性， [!DNL Airship] 使用
 
 運用Adobe Experience Platform的屬性進一步豐富個人檔案， [!DNL Airship] 並將其與SDK或預測性資料 [!DNL Airship] 結合。 例如，零售商可以建立包含忠誠度狀態和位置資料（來自平台的屬性）的區段，並預計會流失資料，以傳送高針對性訊息給居住在內華達州拉斯維加斯的黃金忠誠度狀態使用者，而且攪動的可能性很高。 [!DNL Airship]
 
-## 連線至屬 [!DNL Airship] 性 {#connect-airship-attributes}
+## 連線至 [!DNL Airship Attributes] {#connect-airship-attributes}
 
 1. 在「 **[!UICONTROL 目標]** >目錄 **[!UICONTROL 」中，捲動至「]**&#x200B;行動參與 **** 」類別。 選擇 **[!DNL Airship Attributes]**，然後選擇 **[!UICONTROL 配置]**。
 
