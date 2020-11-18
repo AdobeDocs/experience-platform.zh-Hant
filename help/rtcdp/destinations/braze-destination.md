@@ -1,11 +1,11 @@
 ---
 keywords: mobile; braze; messaging;
-title: Braze Destination
-seo-title: Braze Destination
+title: Braze目的地
+seo-title: Braze目的地
 description: Braze是一個全面的客戶互動平台，為客戶和他們喜愛的品牌提供相關且值得回味的體驗。
 seo-description: Braze是一個全面的客戶互動平台，為客戶和他們喜愛的品牌提供相關且值得回味的體驗。
 translation-type: tm+mt
-source-git-commit: 9126a9b3a27aa0a0ecefb5d490475423d7840791
+source-git-commit: 4b1bf5bbce57a22529c5d025c5bae10557400d54
 workflow-type: tm+mt
 source-wordcount: '924'
 ht-degree: 1%
@@ -57,6 +57,7 @@ ht-degree: 1%
    >![啟動Braze Destination](assets/braze-destination-activate.png)
 
 1. 在「帳 [!UICONTROL 戶] 」步驟中 [!DNL Braze] ，您需要提供您的帳戶Token。 這是你的 [!DNL Braze][!DNL API] 鑰匙。 您可以在這裡找到有關如何獲得密鑰的詳 [!DNL API] 細說明： [REST API金鑰概觀](https://www.braze.com/docs/api/api_key/)。 輸入標籤，然後按一 **[!UICONTROL 下「連線至目的地」]**。
+
    ![Braze目標帳戶步驟](assets/braze-destination-account.png)
 
 1. 按&#x200B;**[!UICONTROL 「下一步」]**。
