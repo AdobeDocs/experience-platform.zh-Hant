@@ -5,9 +5,9 @@ audience: user
 user-guide-title: 即時客戶資料平台指南
 user-guide-description: 將來自多個企業來源的已知和匿名資料放在一起，以建立客戶設定檔，從這些設定檔建立對象區段，並對協力廠商目的地啟動這些區段。
 translation-type: tm+mt
-source-git-commit: 2a4d55b2d429fbeb1459a6bd095b0bc39d52917d
+source-git-commit: 8fa7642f90653ba11ad6ff90175a4bb705ae6d80
 workflow-type: tm+mt
-source-wordcount: '513'
+source-wordcount: '520'
 ht-degree: 17%
 
 ---
@@ -102,6 +102,9 @@ ht-degree: 17%
          * [Salesforce Marketing Cloud](destinations/salesforce-marketing-cloud-destination.md)
       * Experience Platform Launch extensions{#launch-extensions}
          * [Experience Platform Launch擴充功能總覽](/help/rtcdp/destinations/experience-platform-launch-extensions.md)
+      * 行動目標 {#mobile}
+         * [行動目標概觀](destinations/mobile-destinations.md)
+         * [Braze目的地](destinations/braze-destination.md)
       * 個人化目的地 {#personalization-destinations}
          * [個人化目標概觀](/help/rtcdp/destinations/personalization-destinations.md)
          * [Adobe Target 擴充功能](/help/rtcdp/destinations/adobe-target-extension.md)
