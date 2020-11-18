@@ -5,10 +5,10 @@ title: XDM ExperienceEvent類別
 topic: overview
 description: 本檔案提供XDM ExperienceEvent類別的概觀。
 translation-type: tm+mt
-source-git-commit: f9d8021643e72e3fbb5315b54a19815dcdaaa702
+source-git-commit: 4d109244e57799c7e3837ceee3e2f5d17fbf0a18
 workflow-type: tm+mt
-source-wordcount: '784'
-ht-degree: 0%
+source-wordcount: '797'
+ht-degree: 1%
 
 ---
 
@@ -29,7 +29,7 @@ ht-degree: 0%
 | `eventMergeId` | 導致記錄建立的收錄批的ID。 系統會在擷取資料時自動填入此欄位。 |
 | `eventType` | 一個字串，它指示記錄的主要事件類型。 附錄部分提供接受的值及其 [定義](#eventType)。 |
 | `identityMap` | 映射欄位，包含事件所應用的個人的一組命名空間標識。 系統會在擷取身分資料時自動更新此欄位。 為了適當利用此欄位進行 [即時客戶配置檔案](../../profile/home.md)，請勿嘗試手動更新資料操作中該欄位的內容。<br /><br />如需其使用案例的詳細資訊，請參 [閱架構構成基礎中的識別地圖](../schema/composition.md#identityMap) 。 |
-| `timestamp` | 事件或觀察發生的時間。 |
+| `timestamp` | 事件或觀察發生的時間。 所有日期時間值都必須以 [RFC 3339格式提供](https://tools.ietf.org/html/rfc3339) 。 |
 
 ## 相容混音 {#mixins}
 
