@@ -3,9 +3,9 @@ keywords: Experience Platform;profile;real-time customer profile;troubleshooting
 title: 實體——即時客戶個人檔案API
 topic: guide
 translation-type: tm+mt
-source-git-commit: 59cf089a8bf7ce44e7a08b0bb1d4562f5d5104db
+source-git-commit: 3287203be574cf95d7e201dc99f681e237d96e67
 workflow-type: tm+mt
-source-wordcount: '1676'
+source-wordcount: '1695'
 ht-degree: 1%
 
 ---
@@ -17,7 +17,7 @@ Adobe Experience Platform可讓您使用REST風格的API [!DNL Real-time Custome
 
 ## 快速入門
 
-本指南中使用的API端點是 [[!DNL即時客戶配置檔案API]的一部分](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml)。 在繼續之前，請先閱讀快速入門 [指南](getting-started.md) ，以取得相關檔案的連結、閱讀本檔案中範例API呼叫的指南，以及成功呼叫任何 [!DNL Experience Platform] API所需之必要標題的重要資訊。
+本指南中使用的API端點是的一部分 [[!DNL Real-time Customer Profile API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml)。 在繼續之前，請先閱讀快速入門 [指南](getting-started.md) ，以取得相關檔案的連結、閱讀本檔案中範例API呼叫的指南，以及成功呼叫任何 [!DNL Experience Platform] API所需之必要標題的重要資訊。
 
 ## 依身分存取個人檔案資料
 
@@ -910,4 +910,5 @@ GET請求到端點的路徑中使用以下參 `/access/entities` 數。 它們�
 | `startTime` | 指定篩選時間系列物件的開始時間（以毫秒為單位）。 | `startTime=1539838505` |
 | `endTime` | 指定篩選時間系列物件的結束時間（以毫秒為單位）。 | `endTime=1539838510` |
 | `limit` | 指定要返回的最大對象數的數值。 預設值：1000 | `limit=100` |
+| `property` | 依屬性值篩選。 支援下列評估工具：=, !=, &lt;, &lt;=, >, >=. 只能與體驗事件搭配使用，最多支援3個屬性。 | `property=webPageDetails.isHomepage=true&property=localTime<="2020-07-20"` |
 | `withCA` | 用於啟用計算屬性以進行查找的功能標籤。 預設值：false | `withCA=true` |
