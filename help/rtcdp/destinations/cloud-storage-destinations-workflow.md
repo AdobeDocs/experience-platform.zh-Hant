@@ -6,9 +6,9 @@ type: Tutorial
 description: 連線至雲端儲存空間的指示
 seo-description: 連線至雲端儲存空間的指示
 translation-type: tm+mt
-source-git-commit: d72f392bc3b47bb23ed36b3d1d218373f62b4679
+source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
 workflow-type: tm+mt
-source-wordcount: '558'
+source-wordcount: '557'
 ht-degree: 0%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 0%
 
 ## 概述
 
-本頁說明如何連線至Adobe即時客戶資料平台中的雲端儲存空間。
+本頁說明如何在即時客戶資料平台中連接雲端儲存位置。
 
 1. 在「連 **[!UICONTROL 線]** >目 **[!UICONTROL 的地]**」中，選取您偏好的雲端儲存空間目的地，然後選取「 **[!UICONTROL 設定」]**。
 
