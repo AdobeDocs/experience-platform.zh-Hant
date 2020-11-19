@@ -5,17 +5,17 @@ description: Adobe Experience Cloud SDK自動收集的每項資訊說明
 seo-description: Adobe Experience Cloud SDK自動收集的每項資訊說明
 keywords: collect information;context;configure;device;screenHeight;screen Height;screenOrientation;screen Orientation;screenWidth;screen Width;environment;viewportHeight;viewport Height;viewportWidth;viewport Width;crowserDetails;browser details;implementationDetails;implementation Details;name;version;placeContext;localTime;local Time;localTimezoneOffset;local Timezone Offset;timestamp;web;url;webPageDetails;web Page Details;webReferrer;web Referrer;landscape;portrait;
 translation-type: tm+mt
-source-git-commit: e21374eb51ec1d572f6a4973d33cadf9ae17969b
+source-git-commit: 0928dd3eb2c034fac14d14d6e53ba07cdc49a6ea
 workflow-type: tm+mt
-source-wordcount: '387'
-ht-degree: 8%
+source-wordcount: '385'
+ht-degree: 9%
 
 ---
 
 
 # 自動收集的資訊
 
-Adobe Experience Cloud SDK會自動收集多項資訊，毋需任何特殊設定。 不過，如果需要，可使用命令中的選項 `context` 禁用此信 `configure` 息。 [請參閱設定SDK](../fundamentals/configuring-the-sdk.md)。 以下是這些資訊的清單。 括弧中的名稱表示配置上下文時要使用的字串。
+Adobe Experience Platform Web SDK可自動收集許多資訊，毋需任何特殊設定。 不過，如果需要，可使用命令中的選項 `context` 禁用此信 `configure` 息。 [請參閱設定SDK](../fundamentals/configuring-the-sdk.md)。 以下是這些資訊的清單。 括弧中的名稱表示配置上下文時要使用的字串。
 
 ## 裝置 (`device`)
 
@@ -57,7 +57,7 @@ Adobe Experience Cloud SDK會自動收集多項資訊，毋需任何特殊設定
 | ------------------------------- | ------------ |
 | `events[].xdm.environment.type` | `browser` |
 
-體驗所處環境的類型。 JavaScript專用的Adobe Experience Platform SDK一律會設定 `browser`。
+體驗所透過的環境類型。 Adobe Experience Platform Web SDK一律將此設為 `browser`。
 
 ### 視區高度
 
