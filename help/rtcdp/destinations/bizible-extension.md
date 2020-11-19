@@ -2,12 +2,12 @@
 keywords: bizible;bizible extension;bizible destination
 title: Bizible extension
 seo-title: Bizible extension
-description: The Bizbile Extension是Adobe即時客戶資料平台中的電子郵件目的地。 如需擴充功能的詳細資訊，請參閱Adobe Exchange的擴充功能頁面。
-seo-description: Bizible擴充功能是Adobe即時客戶資料平台中的電子郵件目的地。 如需擴充功能的詳細資訊，請參閱Adobe Exchange的擴充功能頁面。
+description: Bizible擴充功能是即時客戶資料平台中的電子郵件目的地。 如需擴充功能的詳細資訊，請參閱Adobe Exchange的擴充功能頁面。
+seo-description: Bizible擴充功能是即時客戶資料平台中的電子郵件目的地。 如需擴充功能的詳細資訊，請參閱Adobe Exchange的擴充功能頁面。
 translation-type: tm+mt
-source-git-commit: d9bf874dbfcc00c0a6e267f1a2e96f1223054825
+source-git-commit: 6eabcd70b133051205b669253f280cb92c24412f
 workflow-type: tm+mt
-source-wordcount: '529'
+source-wordcount: '526'
 ht-degree: 5%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 5%
 
 [!DNL Bizible] 是領先業界的B2B歸因解決方案，可讓您無法並行地洞察資料，以便您做出明智的決策，以推動經濟增長。
 
-[!DNL Bizible] 是Adobe即時客戶資料平台中的電子郵件擴充功能。 如需擴充功能的詳細資訊，請參閱 [Adobe Exchange的擴充功能頁面](https://exchange.adobe.com/experiencecloud.details.101055.bizible-analytics.html)。
+[!DNL Bizible] 是即時客戶資料平台中的電子郵件擴充功能。 如需擴充功能的詳細資訊，請參閱 [Adobe Exchange的擴充功能頁面](https://exchange.adobe.com/experiencecloud.details.101055.bizible-analytics.html)。
 
 此目的地是分 [!DNL Adobe Experience Platform Launch] 機。 如需Adobe Real- [!DNL Platform Launch] time CDP擴充功能如何運作的詳細資訊，請參閱 [Experience Platform Launch擴充功能總覽](/help/rtcdp/destinations/experience-platform-launch-extensions.md)。
 
