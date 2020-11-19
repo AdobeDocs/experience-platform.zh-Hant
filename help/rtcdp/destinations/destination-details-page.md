@@ -5,9 +5,9 @@ seo-title: 「目標詳細資料」頁
 description: '個別目的地的詳細資訊頁面提供目的地詳細資訊的概述，例如目的地名稱、ID、對應至目的地的區段，以及編輯啟動和啟用和停用資料流的控制項。 '
 seo-description: '個別目的地的詳細資訊頁面提供目的地詳細資訊的概述，例如目的地名稱、ID、對應至目的地的區段，以及編輯啟動和啟用和停用資料流的控制項。 '
 translation-type: tm+mt
-source-git-commit: 0c2acd79492c474ba664ce32d1592969da71f385
+source-git-commit: ff36899f455848584ab2f5e236812795d2c81681
 workflow-type: tm+mt
-source-wordcount: '681'
+source-wordcount: '680'
 ht-degree: 1%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 1%
 >
 >目標詳細資訊頁面是平台UI中 [!UICONTROL 「目標] 」工作區的一部分。 如需詳細 [[!UICONTROL 資訊，請參閱] 「目標」工作區總覽](./destinations-workspace.md) 。
 
-在「平 **[!UICONTROL 台]** 」UI的「目標」工作區中，導覽至「瀏覽 **** 」標籤，並選取您要檢視的批次目標名稱。
+在「平 **[!UICONTROL 台]** 」UI的「目標」工作區中，導覽至「瀏覽 **** 」標籤並選取您要檢視的目標名稱。
 
 ![](./assets/details-page/select-destination.png)
 
