@@ -2,12 +2,12 @@
 keywords: PebblePost;pebblepost;PebblePost Programmatic Direct Mail;pebblepost programmatic direct mail
 title: PebblePost擴充功能
 seo-title: PebblePost擴充功能
-description: The PebblePost擴充功能是Adobe即時客戶資料平台中的電子郵件目的地。 如需擴充功能的詳細資訊，請參閱Adobe Exchange的擴充功能頁面。
-seo-description: PebblePost擴充功能是Adobe即時客戶資料平台中的電子郵件目的地。 如需擴充功能的詳細資訊，請參閱Adobe Exchange的擴充功能頁面。
+description: PebblePost擴充功能是即時客戶資料平台的電子郵件目的地。 如需擴充功能的詳細資訊，請參閱Adobe Exchange的擴充功能頁面。
+seo-description: PebblePost擴充功能是即時客戶資料平台的電子郵件目的地。 如需擴充功能的詳細資訊，請參閱Adobe Exchange的擴充功能頁面。
 translation-type: tm+mt
-source-git-commit: 511d64d1555151a70bdb9f71e4b50ec461c8a2e7
+source-git-commit: 6eabcd70b133051205b669253f280cb92c24412f
 workflow-type: tm+mt
-source-wordcount: '590'
+source-wordcount: '587'
 ht-degree: 4%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 4%
 
 [!DNL PebblePost's Programmatic Direct Mail®] 解決方案可協助數位行銷人員將線上興趣和意圖與線下、有形的媒體連結在一起，進而轉化客戶。 行銷人員可運用他們在Adobe中建立的自訂資料區段，現在以具有相關、更持久、內建媒體印象的消費者為目標。 根據回應路徑活動和現場轉換即時分析效能。
 
-[!DNL PebblePost] 是Adobe即時客戶資料平台中的電子郵件擴充功能。 如需擴充功能的詳細資訊，請參閱 [Adobe Exchange的擴充功能頁面](https://exchange.adobe.com/experiencecloud.details.100315.programmatic-direct-mail.html)。
+[!DNL PebblePost] 是即時客戶資料平台中的電子郵件擴充功能。 如需擴充功能的詳細資訊，請參閱 [Adobe Exchange的擴充功能頁面](https://exchange.adobe.com/experiencecloud.details.100315.programmatic-direct-mail.html)。
 
 此目的地是Adobe Experience Platform Launch擴充功能。 如需Platform Launch擴充功能如何在Adobe即時CDP中運作的詳細資訊，請參閱 [Adobe Experience Platform Launch擴充功能總覽](/help/rtcdp/destinations/experience-platform-launch-extensions.md)。
 
