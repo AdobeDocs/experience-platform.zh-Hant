@@ -5,9 +5,9 @@ description: 瞭解如何設定Experience Platform Web SDK
 seo-description: 瞭解如何設定Experience Platform Web SDK
 keywords: configuring;configuration;SDK;edge;Web SDK;configure;edgeConfigId;context;web;device;environment;placeContext;debugEnabled;edgeDomain;orgId;clickCollectionEnabled;onBeforeEventSend;defaultConsent;web sdk settings;prehidingStyle;opacity;cookieDestinationsEnabled;urlDestinationsEnabled;idMigrationEnabled;thirdPartyCookiesEnabled;
 translation-type: tm+mt
-source-git-commit: 2e28fda40a135330054c749d73439448a55db52c
+source-git-commit: 0928dd3eb2c034fac14d14d6e53ba07cdc49a6ea
 workflow-type: tm+mt
-source-wordcount: '749'
+source-wordcount: '710'
 ht-degree: 11%
 
 ---
@@ -85,13 +85,7 @@ Your assigned [!DNL Experience Cloud] organization ID.  在頁面內設定多個
 | -------- | ------------ | ----------------- |
 | 布林值 | 無 | `true` |
 
-指出是否應自動收集與連結點按次數關聯的資料。 對於符合連結點按資格的點按，會收 [集下列Web Interaction](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/webinteraction.schema.md) 資料：
-
-| **屬性** | **說明** |
-| ------------ | ----------------------------------- |
-| 連結名稱 | 由連結內容決定的名稱 |
-| 連結URL | 標準化URL |
-| 連結類型 | 設為下載、退出或其他 |
+指出是否應自動收集與連結點按次數關聯的資料。 如需詳 [細資訊，請參閱](../data-collection/track-links.md#automaticLinkTracking) 「自動連結追蹤」。
 
 ### `onBeforeEventSend`
 
@@ -153,7 +147,7 @@ Your assigned [!DNL Experience Cloud] organization ID.  在頁面內設定多個
 | -------- | ------------ | ----------------- |
 | 布林值 | 無 | true |
 
-如果為true,SDK將讀取並設定舊的AMCV Cookie。 這有助於轉換至使用AEP Web SDK，而網站的某些部分可能仍在使用Visitor.js。 此外，如果頁面上已定義訪客API,SDK將查詢訪客API以取得ECID。 這可讓您使用AEP Web SDK來建立雙標籤頁面，而且仍有相同的ECID。
+如果為true,SDK將讀取並設定舊的AMCV Cookie。 這有助於轉換至使用Adobe Experience Platform Web SDK，而網站的某些部分可能仍在使用Visitor.js。 此外，如果頁面上已定義訪客API,SDK將查詢訪客API以取得ECID。 這可讓您使用AEP Web SDK來建立雙標籤頁面，而且仍有相同的ECID。
 
 ### `thirdPartyCookiesEnabled`
 
