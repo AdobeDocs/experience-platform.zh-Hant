@@ -5,9 +5,9 @@ description: Adobe Experience Platform Web SDK可提供並轉譯選件決策中�
 seo-description: Adobe Experience Platform Web SDK可提供並轉譯選件決策中管理的個人化選件。 您可以使用選件決策UI或API來建立選件和其他相關物件。
 keywords: offer decisioning;decisioning;Web SDK;Platform Web SDK;personalized offers;deliver offers;offer delivery;offer personalization;
 translation-type: tm+mt
-source-git-commit: a0ede8c7d3088fe80d6ea014b4a4f9f08ee8a7aa
+source-git-commit: 5f90f238a8845cc7bf07d54b89c5c6ccff40469a
 workflow-type: tm+mt
-source-wordcount: '810'
+source-wordcount: '831'
 ht-degree: 9%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 9%
 
 Adobe Experience Platform可以提 [!DNL Web SDK] 供並轉譯在選件決策中管理的個人化選件。 您可以使用選件決策使用者介面(UI)或API來建立選件和其他相關物件。
 
-## 先決條件
+## 必要條件
 
 * IMS組織已啟用邊緣決策功能
 * 選件、建立的活動
@@ -29,7 +29,7 @@ Adobe Experience Platform可以提 [!DNL Web SDK] 供並轉譯在選件決策中
 
 ## 術語
 
-使用選件決策時，請務必瞭解下列術語。 <!--For more information and to view additional terms, please visit the [Offer Decisioning glossary](/docs/offer-decisioning/using/get-started/glossary.html)-->.
+使用選件決策時，請務必瞭解下列術語。 如需詳細資訊及檢視其他條款，請造訪選件決策 [辭彙表](https://experienceleague.adobe.com/docs/offer-decisioning/using/get-started/glossary.html)。
 
 * **容器：** 容器是隔離機制，可讓不同的顧慮分開。 容器ID是所有儲存庫API的第一個路徑元素。 所有決策物件都位於容器中。
 
