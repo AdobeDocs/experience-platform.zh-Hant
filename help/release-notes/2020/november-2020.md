@@ -5,9 +5,9 @@ doc-type: release notes
 last-update: November 10, 2020
 author: crhoades, ens25212
 translation-type: tm+mt
-source-git-commit: d6b603e2918b502635b11fb1aa693a4b4311c125
+source-git-commit: 6cf9c88f6dc751a4cc877670a89cc99d1efb1b2a
 workflow-type: tm+mt
-source-wordcount: '2126'
+source-wordcount: '2180'
 ht-degree: 3%
 
 ---
@@ -113,20 +113,18 @@ Data Science Workspace使用機器學習和人工智慧，從您的資料中建�
 
 | 目的地 | 說明 |
 | ----------- | ----------- |
+| 佈雷茲 | Braze是一個全面的客戶互動平台，為客戶和他們喜愛的品牌提供相關且值得回味的體驗。 |
 | Microsoft Bing | Microsoft Bing目標可協助您在Microsoft Display Advertising中執行重新鎖定目標及受眾鎖定的數位宣傳。 |
 | 貿易部門 | 交易台是廣告購買者的自助服務平台，可跨展示廣告、視訊和行動庫存來源執行重新鎖定目標及受眾目標數位宣傳。 |
-
-<!-- | Braze | Braze is a comprehensive customer engagement platform that power relevant and memorable experiences between customers and the brands they love. |  -->
 
 **新功能**
 
 | 功能 | 說明 |
 | ------- | ----------- |
 | 目標詳細資訊UX更新 | 即時CDP的目標工作流現在包括內嵌監視，因此您可以查看哪些批次激活成功。 此功能可讓使用者透過警報和監控控制面板，直接解決批次目的地工作流程中的問題，以追蹤處理管道中的錯誤。 |
+| 檔案加密 | 對於基於檔案的目標，用戶現在可以將加密添加到其導出的檔案中。 |
+| 檔案排程 | 對於電子郵件和雲端儲存目標，使用者都可以建立一次性匯出或建立每日快照。 |
 | 必填欄位 | 使用者可將欄位標示為必填，以確保只匯出包含必填欄位的欄位。 |
-
-<!-- | File scheduling | For both email based and cloud storage destinations, users can create a one-time export or create daily snapshots. |
-| File encryption | For file based destinations, users can now add encryption to their exported files. | -->
 
 如需詳細資訊，請參閱「目 [標」概觀](../../rtcdp/destinations/destinations-overview.md)。
 
@@ -202,9 +200,10 @@ Adobe Experience Platform可以從外部來源擷取資料，同時讓您使用�
 [!DNL Experience Platform] 提供REST風格的API和互動式UI，讓您輕鬆地為各種資料提供者設定來源連線。 這些源連接允許您驗證並連接到外部儲存系統和CRM服務、設定接收運行的時間，以及管理資料接收吞吐量。
 
 **新來源**
-|功能 |說明 |
-| — | — |
-| [!DNL Shopify] |您現在可以使 [!DNL Shopify] 用 [!DNL Experience Platform] API [!DNL Flow Service] 或UI連線至。 如需詳細 [資訊，請參閱Shopify連接器概觀](../../sources/connectors/ecommerce/shopify.md) 。 |
+
+| 功能 | 說明 |
+| ------- | ----------- |
+| [!DNL Shopify] | 您現在可以 [!DNL Shopify] 使用 [!DNL Experience Platform] API [!DNL Flow Service] 或UI連線至。 如需詳細 [資訊，請參閱Shopify連接器概觀](../../sources/connectors/ecommerce/shopify.md) 。 |
 
 **主要功能**
 
