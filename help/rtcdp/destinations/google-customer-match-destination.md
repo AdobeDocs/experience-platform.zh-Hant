@@ -5,9 +5,9 @@ seo-title: Google客戶符合目的地
 description: Google Customer Match可讓您使用您的線上和離線資料，透過Google的自有和營運資產（例如搜尋、購物、Gmail和YouTube）觸及客戶並與其重新互動。
 seo-description: Google Customer Match可讓您使用您的線上和離線資料，透過Google的自有和營運資產（例如搜尋、購物、Gmail和YouTube）觸及客戶並與其重新互動。
 translation-type: tm+mt
-source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
+source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
 workflow-type: tm+mt
-source-wordcount: '1555'
+source-wordcount: '1554'
 ht-degree: 0%
 
 ---
@@ -23,7 +23,7 @@ ht-degree: 0%
 
 ## 使用案例
 
-為協助您更清楚瞭解您應如何及何時使用目的地，以下是Adobe即時客戶資料平台客戶可運用此功能解決的範例使用案例。 [!DNL Google Customer Match]
+為協助您進一步瞭解您應如何及何時使用目標，以下是即時客戶資料平台客戶可透過使用此功能解決的範例使用案例。 [!DNL Google Customer Match]
 
 
 ### 使用案例#1
