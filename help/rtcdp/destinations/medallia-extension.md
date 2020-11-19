@@ -2,12 +2,12 @@
 keywords: Medallia;medallia
 title: Medallia擴充功能
 seo-title: Medallia擴充功能
-description: Medallia擴充功能是Adobe即時客戶資料平台中客戶目的地的聲音。 如需擴充功能的詳細資訊，請參閱Adobe Exchange的擴充功能頁面。
-seo-description: Medallia擴充功能是Adobe即時客戶資料平台中客戶目的地的聲音。 如需擴充功能的詳細資訊，請參閱Adobe Exchange的擴充功能頁面。
+description: Medallia擴充功能是即時客戶資料平台中客戶目的地的聲音。 如需擴充功能的詳細資訊，請參閱Adobe Exchange的擴充功能頁面。
+seo-description: Medallia擴充功能是即時客戶資料平台中客戶目的地的聲音。 如需擴充功能的詳細資訊，請參閱Adobe Exchange的擴充功能頁面。
 translation-type: tm+mt
-source-git-commit: 511d64d1555151a70bdb9f71e4b50ec461c8a2e7
+source-git-commit: 6eabcd70b133051205b669253f280cb92c24412f
 workflow-type: tm+mt
-source-wordcount: '589'
+source-wordcount: '586'
 ht-degree: 4%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 4%
 
 在您的 [!DNL Medallia] Web屬性上快速順暢地部署。 此擴充功能還可讓您偵測調查事件、透過資料元素即時擷取客戶意見、在規則中使用它來個人化客戶體驗，並與Adobe Analytics共用資料。
 
-[!DNL Medallia] 是Adobe即時客戶資料平台中客戶延伸功能的聲音。 如需擴充功能的詳細資訊，請參閱 [Adobe Exchange的擴充功能頁面](https://exchange.adobe.com/experiencecloud.details.103279.medallia-for-adobe-launch.html)。
+[!DNL Medallia] 是即時客戶資料平台中客戶擴充功能的聲音。 如需擴充功能的詳細資訊，請參閱 [Adobe Exchange的擴充功能頁面](https://exchange.adobe.com/experiencecloud.details.103279.medallia-for-adobe-launch.html)。
 
 此目的地是Adobe Experience Platform Launch擴充功能。 如需Platform Launch擴充功能如何在Adobe即時CDP中運作的詳細資訊，請參閱 [Adobe Experience Platform Launch擴充功能總覽](/help/rtcdp/destinations/experience-platform-launch-extensions.md)。
 
