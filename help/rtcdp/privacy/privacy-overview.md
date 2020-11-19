@@ -5,9 +5,9 @@ seo-title: 即時客戶資料設定檔中的隱私權
 description: 即時客戶資料設定檔可讓您簡化維持資料作業符合隱私權規範的程式。
 seo-description: 即時客戶資料設定檔可讓您簡化維持資料作業符合隱私權規範的程式。
 translation-type: tm+mt
-source-git-commit: f86f7483e7e78edf106ddd34dc825389dadae26a
+source-git-commit: bdd80b15258bf4e3c0dee1e260fd3469c76d5885
 workflow-type: tm+mt
-source-wordcount: '360'
+source-wordcount: '359'
 ht-degree: 0%
 
 ---
@@ -31,7 +31,7 @@ ht-degree: 0%
 
 ## IAB TCF 2.0支援
 
-[!DNL Real-time CDP] 是註冊的供 [應商清單](https://iabeurope.eu/vendor-list-tcf-v2-0/)[!DNL Transparency & Consent Framework (TCF)]的一部分 [!DNL Interactive Advertising Bureau] ，如(IAB)所述。 符合TCF 2.0要求，您可 [!DNL Real-time CDP] 以收集詳細的客戶同意資料，並將其整合在儲存的客戶個人檔案中。 然後，可根據特定個人檔案的使用案例，將此同意資料納入匯出的受眾細分。
+[!DNL Real-time CDP] 是已註冊的供 [應商清單](https://iabeurope.eu/vendor-list-tcf-v2-0/)[!DNL Transparency & Consent Framework (TCF)]的一部分，如中所述 [!DNL Interactive Advertising Bureau (IAB)]。 符合TCF 2.0要求，您可 [!DNL Real-time CDP] 以收集詳細的客戶同意資料，並將其整合在儲存的客戶個人檔案中。 然後，可根據特定個人檔案的使用案例，將此同意資料納入匯出的受眾細分。
 
 如需詳細資訊， [請參閱中的IAB TCF 2.0支援 [!DNL Real-time CDP]](./iab/overview.md) 。
 
