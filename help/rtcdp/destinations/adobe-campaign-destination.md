@@ -5,9 +5,9 @@ seo-title: Adobe Campaign
 description: Adobe Campaign是一套解決方案，可協助您跨所有線上及線下通道個人化並傳遞宣傳活動。
 seo-description: Adobe Campaign是一套解決方案，可協助您跨所有線上及線下通道個人化並傳遞宣傳活動。
 translation-type: tm+mt
-source-git-commit: 67a353c950bef11ccbaa52c49d213f08449baa96
+source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
 workflow-type: tm+mt
-source-wordcount: '618'
+source-wordcount: '617'
 ht-degree: 1%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 1%
 
 Adobe Campaign是一套解決方案，可協助您跨所有線上及線下通道個人化並傳遞宣傳活動。 如需 [詳細資訊，請參閱關於Adobe Campaign Classic](https://docs.adobe.com/content/help/en/campaign-classic/using/getting-started/starting-with-adobe-campaign/about-adobe-campaign-classic.html) 。
 
-若要傳送區段資料至Adobe Campaign，您必須先 [在Adobe即時客戶資料平台中連接目標](#connect-destination) ，然後設定從儲 [](#import-data-into-campaign) 存位置匯入資料至Adobe Campaign的資料。
+若要傳送區段資料至Adobe Campaign，您必須先在即時客戶資料平台中 [連接目標](#connect-destination) ，然後從您的儲 [](#import-data-into-campaign) 存位置設定資料匯入至Adobe Campaign。
 
 ## 匯出類型 {#export-type}
 
