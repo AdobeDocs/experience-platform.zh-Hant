@@ -5,10 +5,10 @@ doc-type: release notes
 last-update: November 18, 2019
 author: crhoades, ens28527
 translation-type: tm+mt
-source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
+source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
 workflow-type: tm+mt
-source-wordcount: '1908'
-ht-degree: 2%
+source-wordcount: '1878'
+ht-degree: 4%
 
 ---
 
@@ -18,19 +18,19 @@ ht-degree: 2%
 **發行日期：2019 年 11 月 18 日**
 
 Adobe Experience Platform的新功能：
-* [[!DNL即時客戶資料平台]](#rtcdp)
-* [[!DNL目標]](#destinations)
-* [[!DNL源]](#sources)
+* [[!DNL Real-time Customer Data Platform]](#rtcdp)
+* [[!DNL Destinations]](#destinations)
+* [[!DNL Sources]](#sources)
 
 更新現有功能：
-* [[!DNL資料科學工作區]](#dsw)
-* [[!DNL Experience Data Model(XDM)System]](#xdm)
-* [[!DNL即時客戶基本資料]](#profile)
-* [[!DNL分段服務]](#segmentation)
+* [[!DNL Data Science Workspace]](#dsw)
+* [[!DNL Experience Data Model (XDM) System]](#xdm)
+* [[!DNL Real-time Customer Profile]](#profile)
+* [[!DNL Segmentation Service]](#segmentation)
 
 ## [!DNL Real-time Customer Data Platform] {#rtcdp}
 
-Adobe即時客戶資料平台（Real-time Customer Data Platform，即時CDP）以Adobe Experience Platform為基礎，可協助公司將已知和未知的資料匯整在一起，在整個客戶歷程中運用智慧決策來啟動客戶個人檔案。 即時CDP結合了多個企業資料源，以即時建立統一的配置檔案，可用於跨所有通道和設備提供一對一的個性化客戶體驗。
+即時客戶資料平台(Real-time CDP)建立在Adobe Experience Platform之上，可協助公司將已知和未知的資料匯整在一起，在整個客戶歷程中運用智慧決策來啟動客戶個人檔案。 即時CDP結合了多個企業資料源，以即時建立統一的配置檔案，可用於跨所有通道和設備提供一對一的個性化客戶體驗。
 
 [!DNL Real-time Customer Data Platform] 包括資料管理、身分識別管理、進階細分和資料科學等工具，讓您能夠建立個人檔案並定義受眾，並獲得豐富的洞見，同時能夠執行嚴格的資料治理政策。
 
@@ -43,19 +43,19 @@ Adobe可連接到龐大的合作夥伴生態系統，更不用說與Adobe Experi
 * 運用Adobe Sensei的人工智慧和機器學習功能，為行銷人員建立可執行的見解並擴大受眾。
 * 跨所有通道和目的地即時提供個人化體驗。
 
-如需詳細資訊，請參 [閱Adobe即時客戶資料平台檔案](../../rtcdp/overview.md)。
+如需詳細資訊，請參 [閱即時客戶資料平台檔案](../../rtcdp/overview.md)。
 
 **主要功能**
 
 | 功能 | 說明 |
 |---|---|
-| 目的地 | 預先建立與Adobe支援之目標平台的整合， [!DNL Real-time Customer Data Platform] 以順暢的方式將資料匯入這些合作夥伴。 See [Destinations](#destinations) below for more information. |
-| 首頁度量控制面板 | Adobe即時客戶資料平台（即時CDP）首頁包含量度控制面板，可顯示描述檔和區段的相關資訊。 首頁也包含學習教材的連結。 請參閱下方「 [即時客戶資料平台」度量一節](#real-time-customer-data-platform-metrics) 。 |
+| 目的地 | Pre-built integrations with destination platforms supported by Adobe’s [!DNL Real-time Customer Data Platform] that activate data to those partners in a seamless way. See [Destinations](#destinations) below for more information. |
+| 首頁度量控制面板 | 即時客戶資料平台（即時CDP）首頁包含度量儀表板，可顯示個人檔案和細分的相關資訊。 首頁也包含學習教材的連結。 請參閱下方「 [即時客戶資料平台」度量一節](#real-time-customer-data-platform-metrics) 。 |
 | 來源 | 您可以從多種來源收集資料，例如Adobe解決方案、雲端儲存空間、協力廠商軟體和您的CRM。 請參閱下 [面的](#sources) 「來源」一節，瞭解更多資訊。 |
 
 **[!DNL Real-time Customer Data Platform]度量**
 
-當您登入即時CDP時，會顯示Adobe即時客戶資料平台（即時CDP）首頁，其中包含量度控制面板。
+當您登入即時CDP時，會顯示即時客戶資料平台（即時CDP）首頁，其中包含量度儀表板。
 
 首頁只是顯示量度卡片的位置之一。 即時CDP在您的整個體驗中提供度量卡。 這些量度會通知您系統中的資料、設定檔和區段對象。
 
@@ -65,7 +65,7 @@ Adobe可連接到龐大的合作夥伴生態系統，更不用說與Adobe Experi
 
 ## [!DNL Destinations] {#destinations}
 
-[!DNL Destinations] 預先建立與Adobe即時客戶資料平台所支援之目標平台的整合，以順暢的方式將資料啟動給這些合作夥伴。 如需詳細資訊，請閱讀「目 [標概觀](../../rtcdp/destinations/destinations-overview.md) 」文章。
+[!DNL Destinations] 是預先建立的整合，具有之目的地平台受到 Adobe 的 Real-time Customer Data Platform 支援，其可透過順暢的方式為這些合作夥伴啟動資料。如需詳細資訊，請閱讀「目 [標概觀](../../rtcdp/destinations/destinations-overview.md) 」文章。
 
 **可用目的地**
 
@@ -112,7 +112,7 @@ Adobe Experience Platform可讓資 [!DNL Data Science Workspace] 料科學家建
 | 功能 | 說明 |
 | -----------| ---------- |
 | 使用 [!DNL Platform] SDK存取資料 | 現在，內建的Recipes和啟動筆記型電腦 [!DNL Python] 使用 [!DNL Platform] SDK來存取資料。 |
-| 支援沙盒 | 支援即將推出的沙盒功能（目前為測試版），包括將筆記型電腦和配方隔離至開發或生產沙盒的功能。 如需詳細 [資訊，請參閱](../../sandboxes/home.md) 「沙盒總覽」。 |
+| 支援沙盒 | 支援即將推出的沙盒功能（目前為測試版），包括將筆記型電腦和配方隔離至開發或生產沙盒的功能。 See the [sandboxes overview](../../sandboxes/home.md) for more information. |
 
 如需詳細資訊，請參閱資 [料科學工作區概觀](../../data-science-workspace/home.md)。
 
@@ -135,7 +135,7 @@ XDM是公開記載的規格，旨在改善數位體驗的強大功能。 它提�
 
 **已知問題**
 
-* 無.
+* None.
 
 若要進一步瞭解如何使用 [!DNL Schema Registry] API和使用者介 [!DNL Schema Editor] 面使用XDM，請閱讀 [XDM系統檔案](../../xdm/home.md)。
 
@@ -157,7 +157,7 @@ Adobe Experience Platform可讓您為客戶推動協調、一致且相關的體�
 
 **已知問題**
 
-* 無.
+* None.
 
 有關使用資 [!DNL Real-time Customer Profile]料的更多資訊，包括教學課程和最佳實務，請 [!DNL Profile] 閱讀即時 [客戶個人檔案概觀](../../profile/home.md)。
 
@@ -186,6 +186,6 @@ Adobe Experience Platform提 [!DNL Segmentation Service] 供使用者介面和RE
 
 **已知問題**
 
-* 無.
+* None.
 
 若要進一步了 [!DNL Segmentation Service]解，請閱讀區 [段服務概觀](../../segmentation/home.md)。
