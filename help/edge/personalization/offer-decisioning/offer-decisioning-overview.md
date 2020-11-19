@@ -5,9 +5,9 @@ description: Adobe Experience Platform Web SDK可提供並轉譯選件決策中�
 seo-description: Adobe Experience Platform Web SDK可提供並轉譯選件決策中管理的個人化選件。 您可以使用選件決策UI或API來建立選件和其他相關物件。
 keywords: offer decisioning;decisioning;Web SDK;Platform Web SDK;personalized offers;deliver offers;offer delivery;offer personalization;
 translation-type: tm+mt
-source-git-commit: 86d819daf26eaf1b46afe76054d475e61720dd27
+source-git-commit: a0ede8c7d3088fe80d6ea014b4a4f9f08ee8a7aa
 workflow-type: tm+mt
-source-wordcount: '839'
+source-wordcount: '810'
 ht-degree: 9%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 9%
 >
 >Adobe Experience Platform Web SDK中的選件決策目前可供特定使用者提早存取。 並非所有IMS組織都可使用此功能。
 
-Adobe Experience Platform可以提供 [!DNL Web SDK] 並轉譯在選件決策中管理的個人化選件。 您可以使用選件決策使用者介面(UI)或API來建立選件和其他相關物件。
+Adobe Experience Platform可以提 [!DNL Web SDK] 供並轉譯在選件決策中管理的個人化選件。 您可以使用選件決策使用者介面(UI)或API來建立選件和其他相關物件。
 
 ## 先決條件
 
@@ -29,7 +29,7 @@ Adobe Experience Platform可以提供 [!DNL Web SDK] 並轉譯在選件決策中
 
 ## 術語
 
-使用選件決策時，請務必瞭解下列術語。 如需詳細資訊及檢視其他條款，請造訪選件決策 [辭彙表](https://experienceleague.adobe.com/docs/offer-decisioning/using/get-started/glossary.html?lang=en#get-started)。
+使用選件決策時，請務必瞭解下列術語。 <!--For more information and to view additional terms, please visit the [Offer Decisioning glossary](/docs/offer-decisioning/using/get-started/glossary.html)-->.
 
 * **容器：** 容器是隔離機制，可讓不同的顧慮分開。 容器ID是所有儲存庫API的第一個路徑元素。 所有決策物件都位於容器中。
 
@@ -83,7 +83,7 @@ Adobe Experience Platform可以提供 [!DNL Web SDK] 並轉譯在選件決策中
    * Platform Launch已安裝SDK
       1. [建立平台啟動屬性](https://docs.adobe.com/content/help/zh-Hant/launch/using/reference/admin/companies-and-properties.html)
       2. [新增平台啟動內嵌代碼](https://docs.adobe.com/content/help/en/core-services-learn/implementing-in-websites-with-launch/configure-launch/launch-add-embed.html)
-      3. 使用您剛建立的邊緣設定來安裝和設定Adobe Experience Platform Web SDK擴充功能，方法是從「邊緣設定」下拉式清單中選取設定。 擴充功能的實用 [檔案](https://docs.adobe.com/content/help/en/launch/using/reference/manage-resources/extensions/overview.html)。
+      3. 從「Edge Configuration」（邊緣設定）下拉式清單中選取設定，以您剛建立的Edge Configuration（邊緣設定）來安裝和設定AEP Web SDK擴充功能。 擴充功能的實用 [檔案](https://docs.adobe.com/content/help/en/launch/using/reference/manage-resources/extensions/overview.html)。
          ![install-aep-web-sdk-extension](./assets/install-aep-web-sdk-extension.png)
 
          ![configure-aep-web-sdk-extension](./assets/configure-aep-web-sdk-extension.png)
@@ -240,7 +240,7 @@ Adobe Experience Platform可以提供 [!DNL Web SDK] 並轉譯在選件決策中
                 "language": [
                   "en-US"
                 ],
-                "content": "<p style="color:red;">20% Off on shipping</p>",
+                "content": "<p style=\"color:red;\">20% Off on shipping</p>",
                 "characteristics": {
                   "foo": "bar",
                   "foo1": "bar1"
