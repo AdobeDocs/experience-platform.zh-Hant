@@ -2,12 +2,12 @@
 keywords: Parse. ly;parsely;Parsely;parse.ly;Parse.ly
 title: Parse.ly Analytics擴充功能
 seo-title: Parse.ly Analytics擴充功能
-description: The Parse.ly Analytics擴充功能是Adobe即時客戶資料平台中的分析目標。 如需擴充功能的詳細資訊，請參閱Adobe Exchange的擴充功能頁面。
-seo-description: Parse.ly Analytics擴充功能是Adobe即時客戶資料平台中的分析目標。 如需擴充功能的詳細資訊，請參閱Adobe Exchange的擴充功能頁面。
+description: Parse.ly Analytics擴充功能是即時客戶資料平台中的分析目標。 如需擴充功能的詳細資訊，請參閱Adobe Exchange的擴充功能頁面。
+seo-description: Parse.ly Analytics擴充功能是即時客戶資料平台中的分析目標。 如需擴充功能的詳細資訊，請參閱Adobe Exchange的擴充功能頁面。
 translation-type: tm+mt
-source-git-commit: 511d64d1555151a70bdb9f71e4b50ec461c8a2e7
+source-git-commit: 6eabcd70b133051205b669253f280cb92c24412f
 workflow-type: tm+mt
-source-wordcount: '544'
+source-wordcount: '541'
 ht-degree: 5%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 5%
 
 [!DNL Parse.ly Analytics] 協助2,500多家公司使用資料來瞭解其線上受眾。 此擴充功能會安裝JavaScript程式碼片段，以追蹤訪客與您網站內容的互動方式。
 
-Parse.ly是Adobe即時客戶資料平台中的分析擴充功能。 如需擴充功能的詳細資訊，請參 [閱Parse.ly Analytics](https://www.parse.ly/)。
+Parse.ly是即時客戶資料平台中的分析擴充功能。 如需擴充功能的詳細資訊，請參 [閱Parse.ly Analytics](https://www.parse.ly/)。
 
 此目的地是Adobe Experience Platform Launch擴充功能。 如需Platform Launch擴充功能如何在Adobe即時CDP中運作的詳細資訊，請參閱 [Adobe Experience Platform Launch擴充功能總覽](/help/rtcdp/destinations/experience-platform-launch-extensions.md)。
 
