@@ -2,12 +2,12 @@
 keywords: Quantum Metric Extension;Quantum Metric;quantum metric;Quantum metric
 title: 量子量度擴充功能
 seo-title: 量子量度擴充功能
-description: The Quantum Metric擴充功能是Adobe即時客戶資料平台中的分析目標。 如需擴充功能的詳細資訊，請參閱Adobe Exchange的擴充功能頁面。
-seo-description: Quantum Metric擴充功能是Adobe即時客戶資料平台中的分析目標。 如需擴充功能的詳細資訊，請參閱Adobe Exchange的擴充功能頁面。
+description: Quantum Metric擴充功能是即時客戶資料平台中的分析目的地。 如需擴充功能的詳細資訊，請參閱Adobe Exchange的擴充功能頁面。
+seo-description: Quantum Metric擴充功能是即時客戶資料平台中的分析目的地。 如需擴充功能的詳細資訊，請參閱Adobe Exchange的擴充功能頁面。
 translation-type: tm+mt
-source-git-commit: 511d64d1555151a70bdb9f71e4b50ec461c8a2e7
+source-git-commit: 6eabcd70b133051205b669253f280cb92c24412f
 workflow-type: tm+mt
-source-wordcount: '575'
+source-wordcount: '572'
 ht-degree: 4%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 4%
 
 [!DNL Quantum Metric's] 與Adobe Launch整合有助於資料收集標籤的無 [!DNL Quantum Metric's] 程式碼部署。 此外，此擴充功能還能從 [!DNL Quantum Metric] API擷取包含有用資訊的啟動資料元素。
 
-[!DNL Quantum Metric] 是Adobe即時客戶資料平台中的分析擴充功能。 如需擴充功能的詳細資訊，請參閱 [Adobe Exchange的擴充功能頁面](https://exchange.adobe.com/experiencecloud.details.101535.quantum-metric-extension-for-adobe-launch.html)。
+[!DNL Quantum Metric] 是即時客戶資料平台的分析擴充功能。 如需擴充功能的詳細資訊，請參閱 [Adobe Exchange的擴充功能頁面](https://exchange.adobe.com/experiencecloud.details.101535.quantum-metric-extension-for-adobe-launch.html)。
 
 此目的地是Adobe Experience Platform Launch擴充功能。 如需Platform Launch擴充功能如何在Adobe即時CDP中運作的詳細資訊，請參閱 [Adobe Experience Platform Launch擴充功能總覽](/help/rtcdp/destinations/experience-platform-launch-extensions.md)。
 
