@@ -5,9 +5,9 @@ description: 瞭解如何執行Experience Platform Web SDK命令
 seo-description: 瞭解如何執行Experience Platform Web SDK命令
 keywords: Executing commands;commandName;Promises;getLibraryInfo;response objects;consent;
 translation-type: tm+mt
-source-git-commit: 8c256b010d5540ea0872fa7e660f71f2903bfb04
+source-git-commit: 0928dd3eb2c034fac14d14d6e53ba07cdc49a6ea
 workflow-type: tm+mt
-source-wordcount: '419'
+source-wordcount: '420'
 ht-degree: 2%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 2%
 
 # 執行命令
 
-在您的網頁上實作基本程式碼後，您就可以開始使用SDK執行指令。 執行命令之前，您不需要等待從伺服器載入外部檔案\(`alloy.js`\)。 如果SDK尚未完成載入，SDK會盡快將命令排入佇列並處理。
+在您的網頁上實作基本程式碼後，您就可以開始使用SDK執行指令。 執行命令之前，您不需要等待外部檔案(alloy.js)從伺服器載入。 如果SDK尚未完成載入，SDK會盡快將命令排入佇列並處理。
 
 命令使用下列語法執行。
 
@@ -42,7 +42,7 @@ alloy("commandName", options)
   .catch(function(error) {
     // The command failed.
     // "error" is an error object with additional information
-  })
+  });
 ```
 
 如果知道命令何時成功對您來說並不重要，則可以刪除該 `then` 調用。
@@ -52,7 +52,7 @@ alloy("commandName", options)
   .catch(function(error) {
     // The command failed.
     // "error" is an error object with additional information
-  })
+  });
 ```
 
 同樣地，如果知道命令何時失敗對您來說並不重要，則可以刪除調 `catch` 用。
@@ -62,7 +62,7 @@ alloy("commandName", options)
   .then(function(result) {
     // The command succeeded.
     // "value" will be whatever the command returned
-  })
+  });
 ```
 
 ### 回應物件
@@ -70,9 +70,10 @@ alloy("commandName", options)
 從命令返回的所有承諾都通過對象解 `result` 決。 結果對象將包含取決於命令和用戶同意的資料。 例如，在以下命令中，庫資訊作為結果對象的屬性傳遞。
 
 ```js
-alloy("getLibraryInfo").then(function(result) {
-  console.log(results.libraryInfo.version);
-});
+alloy("getLibraryInfo")
+  .then(function(result) {
+    console.log(results.libraryInfo.version);
+  });
 ```
 
 ### 同意
