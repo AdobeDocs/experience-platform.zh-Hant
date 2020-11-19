@@ -5,9 +5,9 @@ doc-type: release notes
 last-update: November 10, 2020
 author: crhoades, ens25212
 translation-type: tm+mt
-source-git-commit: 5aa8dbcd85fa506f90515ce3e01d35993dd99c10
+source-git-commit: d6b603e2918b502635b11fb1aa693a4b4311c125
 workflow-type: tm+mt
-source-wordcount: '2077'
+source-wordcount: '2126'
 ht-degree: 3%
 
 ---
@@ -122,6 +122,7 @@ Data Science Workspace使用機器學習和人工智慧，從您的資料中建�
 
 | 功能 | 說明 |
 | ------- | ----------- |
+| 目標詳細資訊UX更新 | 即時CDP的目標工作流現在包括內嵌監視，因此您可以查看哪些批次激活成功。 此功能可讓使用者透過警報和監控控制面板，直接解決批次目的地工作流程中的問題，以追蹤處理管道中的錯誤。 |
 | 必填欄位 | 使用者可將欄位標示為必填，以確保只匯出包含必填欄位的欄位。 |
 
 <!-- | File scheduling | For both email based and cloud storage destinations, users can create a one-time export or create daily snapshots. |
