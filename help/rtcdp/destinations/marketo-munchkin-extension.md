@@ -2,12 +2,12 @@
 keywords: Marketo Munchkin;marketo munchkin;Marketo Munchkin extension;marketo munchkin extension;marketo;Marketo
 title: Marketo Munchkin 擴充功能
 seo-title: Marketo Munchkin 擴充功能
-description: Marketo Munchkin擴充功能是Adobe即時客戶資料平台中的個人化目標。 如需擴充功能的詳細資訊，請參閱Adobe Exchange的擴充功能頁面。
-seo-description: Marketo Munchkin擴充功能是Adobe即時客戶資料平台中的個人化目標。 如需擴充功能的詳細資訊，請參閱Adobe Exchange的擴充功能頁面。
+description: Marketo Munchkin擴充功能是即時客戶資料平台中的個人化目的地。 如需擴充功能的詳細資訊，請參閱Adobe Exchange的擴充功能頁面。
+seo-description: Marketo Munchkin擴充功能是即時客戶資料平台中的個人化目的地。 如需擴充功能的詳細資訊，請參閱Adobe Exchange的擴充功能頁面。
 translation-type: tm+mt
-source-git-commit: 511d64d1555151a70bdb9f71e4b50ec461c8a2e7
+source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
 workflow-type: tm+mt
-source-wordcount: '588'
+source-wordcount: '585'
 ht-degree: 9%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 9%
 
 [!DNL Marketo’s Munchkin][!DNL Marketo] JavaScript 可追蹤一般使用者頁面瀏覽次數，以及您的 登陸頁面和外部網頁的點擊次數。
 
-[!DNL Marketo Munchkin] 是Adobe即時客戶資料平台中的電子郵件擴充功能。 如需擴充功能的詳細資訊，請參閱 [Adobe Exchange的擴充功能頁面](https://exchange.adobe.com/experiencecloud.details.101054.marketo-munchkin.html)。
+[!DNL Marketo Munchkin] 是即時客戶資料平台中的電子郵件擴充功能。 如需擴充功能的詳細資訊，請參閱 [Adobe Exchange的擴充功能頁面](https://exchange.adobe.com/experiencecloud.details.101054.marketo-munchkin.html)。
 
 此目的地是Adobe Experience Platform Launch擴充功能。 如需Platform Launch擴充功能如何在Adobe即時CDP中運作的詳細資訊，請參閱 [Adobe Experience Platform Launch擴充功能總覽](/help/rtcdp/destinations/experience-platform-launch-extensions.md)。
 
