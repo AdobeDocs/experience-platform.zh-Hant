@@ -5,9 +5,9 @@ seo-title: Oracle Exolca目標
 description: Oracle Exvola是Oracle為行銷自動化提供的軟體即服務(SaaS)平台，旨在幫助B2B行銷人員和組織管理營銷活動和銷售線索生成。
 seo-description: Oracle Exvola是Oracle為行銷自動化提供的軟體即服務(SaaS)平台，旨在幫助B2B行銷人員和組織管理營銷活動和銷售線索生成。
 translation-type: tm+mt
-source-git-commit: 67a353c950bef11ccbaa52c49d213f08449baa96
+source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
 workflow-type: tm+mt
-source-wordcount: '554'
+source-wordcount: '553'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 0%
 
 [Evolca](https://www.oracle.com/marketingcloud/products/marketing-automation/) 是行銷自動化的軟體即服務(SaaS)平台， [!DNL Oracle] 旨在協助B2B行銷人員和組織管理行銷活動和銷售線索產生。
 
-若要傳送區段資 [!DNL Oracle Eloqua]料至，您必須先 [在Adobe即時客戶資料平台中連線目的地](#connect-destination) ，然後設 [定從儲存位置匯入資料的方式](#import-data-into-eloqua)[!DNL Oracle Eloqua]。
+若要傳送區段資 [!DNL Oracle Eloqua]料至，您必須先在即時 [客戶資料平台中連線目標](#connect-destination) ，然後設 [定從儲存位置匯入資料的方式](#import-data-into-eloqua)[!DNL Oracle Eloqua]。
 
 ## 匯出類型 {#export-type}
 
