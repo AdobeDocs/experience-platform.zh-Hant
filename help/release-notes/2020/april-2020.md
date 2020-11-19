@@ -6,10 +6,10 @@ last-update: April 13, 2020
 author: ens71067
 keywords: release notes;
 translation-type: tm+mt
-source-git-commit: a362b67cec1e760687abb0c22dc8c46f47e766b7
+source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
 workflow-type: tm+mt
-source-wordcount: '991'
-ht-degree: 5%
+source-wordcount: '972'
+ht-degree: 8%
 
 ---
 
@@ -22,11 +22,11 @@ Adobe Experience Platform的新功能：
 * [[!DNL Intelligent Services]](#intelligent)
 
 更新現有功能：
-* [[!DNL體驗資料模型(XDM)]](#xdm)
-* [[!DNL資料治理]](#governance)
-* [[!DNL目標]](#destinations)
-* [[!DNL隱私服務]](#privacy)
-* [[!DNL源]](#sources)
+* [[!DNL Experience Data Model (XDM)]](#xdm)
+* [[!DNL Data Governance]](#governance)
+* [[!DNL Destinations]](#destinations)
+* [[!DNL Privacy Service]](#privacy)
+* [[!DNL Sources]](#sources)
 
 ## [!DNL Intelligent Services] {#intelligent}
 
@@ -37,7 +37,7 @@ Adobe Experience Platform的新功能：
 | 功能 | 說明 |
 |---|---|
 | [!DNL Customer AI] | [!DNL Customer AI] 為行銷人員提供在個別層級產生客戶預測的能力，並提供說明。 借助有影響力的因素， [!DNL Customer AI] 您可以瞭解客戶可能做什麼以及為什麼。 此外，行銷人員可從預測和洞 [!DNL Customer AI] 見中獲益，透過提供最適當的優惠和訊息，個人化客戶體驗。 |
-| [!DNL Attribution AI] | [!DNL Attribution AI] 是一種多通道的算法歸因服務，可計算客戶互動對特定結果的影響和增量影響。 有了 [!DNL Attribution AI]，行銷人員可以透過瞭解客戶歷程各個階段的每個個別客戶互動的影響，衡量並最佳化行銷和廣告支出。 |
+| [!DNL Attribution AI] | [!DNL Attribution AI] 是一種多通道的算法歸因服務，可計算客戶互動對特定結果的影響和增量影響。 透過 [!DNL Attribution AI]，行銷人員可經由了解每個客戶在客戶歷程各個階段的互動所產生的影響，來衡量行銷和廣告支出並予以最佳化。 |
 
 **已知問題**
 
@@ -90,7 +90,7 @@ Adobe Experience Platform是一 [!DNL Data Governance] 系列用於管理客戶�
 
 ## 目的地 {#destinations}
 
-在 [Adobe即時客戶資料平台中](../../rtcdp/overview.md)，目標是與目標平台預先建立的整合，以順暢的方式將資料啟動給這些合作夥伴。
+在即 [時客戶資料平台中](../../rtcdp/overview.md)，目標是與目標平台預先建立的整合，以順暢的方式將資料啟動給這些合作夥伴。
 
 **新目標**
 
