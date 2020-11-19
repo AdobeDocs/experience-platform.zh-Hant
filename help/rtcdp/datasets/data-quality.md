@@ -1,13 +1,13 @@
 ---
 keywords: data quality;rtcdp data quality
 title: 即時客戶資料平台上的資料質量
-seo-title: Adobe即時客戶資料平台上的資料品質
+seo-title: 即時客戶資料平台上的資料質量
 description: 即時客戶資料平台上的資料質量文檔
-seo-description: 描述資料品質如何透過Adobe即時客戶資料平台上的批次和資料擷取來運作的檔案
+seo-description: 描述資料品質如何透過即時客戶資料平台上的批次和資料擷取工作的檔案
 translation-type: tm+mt
-source-git-commit: 15323134f0c626cad2c4e90b3e1c0662cf7e57dd
+source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
 workflow-type: tm+mt
-source-wordcount: '137'
+source-wordcount: '135'
 ht-degree: 0%
 
 ---
