@@ -2,12 +2,12 @@
 keywords: Marketo Web Personalization;marketo web personalization;Marketo Web Personalization extension;marketo web personalization extension;marketo;Marketo
 title: Marketo Web Personalization擴充功能
 seo-title: Marketo Web Personalization擴充功能
-description: Marketo Web Personalization擴充功能是Adobe即時客戶資料平台中的個人化目的地。 如需擴充功能的詳細資訊，請參閱Adobe Exchange的擴充功能頁面。
-seo-description: Marketo Web Personalization擴充功能是Adobe即時客戶資料平台中的個人化目的地。 如需擴充功能的詳細資訊，請參閱Adobe Exchange的擴充功能頁面。
+description: Marketo Web Personalization擴充功能是即時客戶資料平台中的個人化目的地。 如需擴充功能的詳細資訊，請參閱Adobe Exchange的擴充功能頁面。
+seo-description: Marketo Web Personalization擴充功能是即時客戶資料平台中的個人化目的地。 如需擴充功能的詳細資訊，請參閱Adobe Exchange的擴充功能頁面。
 translation-type: tm+mt
-source-git-commit: 511d64d1555151a70bdb9f71e4b50ec461c8a2e7
+source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
 workflow-type: tm+mt
-source-wordcount: '614'
+source-wordcount: '611'
 ht-degree: 4%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 4%
 
 此擴充功能會部署Web個人化 [!DNL Marketo’s] 和ContentAI應用程式的指令碼。 [!DNL Marketo] Web Personalization可獨特地識別並個人化網頁訪客特徵的內容，例如匿名訪客的圖片，以及已知訪客的 [!DNL Marketo] Engagement Platform中廣泛的行為屬性。 [!DNL Marketo] ContentAI包含針對B2B客戶獨一無二之網頁和電子郵件宣傳的AI支援建議和個人化功能。
 
-[!DNL Marketo Web Personalization] 是Adobe即時客戶資料平台中的個人化延伸。 如需擴充功能的詳細資訊，請參閱 [Adobe Exchange的擴充功能頁面](https://exchange.adobe.com/experiencecloud.details.101232.marketo-web-personalization.html)。
+[!DNL Marketo Web Personalization] 是即時客戶資料平台中的個人化延伸。 如需擴充功能的詳細資訊，請參閱 [Adobe Exchange的擴充功能頁面](https://exchange.adobe.com/experiencecloud.details.101232.marketo-web-personalization.html)。
 
 此目的地是Adobe Experience Platform Launch擴充功能。 如需Platform Launch擴充功能如何在Adobe即時CDP中運作的詳細資訊，請參閱 [Adobe Experience Platform Launch擴充功能總覽](/help/rtcdp/destinations/experience-platform-launch-extensions.md)。
 
