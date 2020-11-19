@@ -5,9 +5,9 @@ seo-title: Facebook目標
 description: 根據雜湊的電子郵件，啟用您Facebook宣傳的個人檔案，以鎖定受眾、個人化和抑制受眾。
 seo-description: 根據雜湊的電子郵件，啟用您Facebook宣傳的個人檔案，以鎖定受眾、個人化和抑制受眾。
 translation-type: tm+mt
-source-git-commit: c66fb4cf0a414e02ceb58becc9d9b59db3fe987b
+source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
 workflow-type: tm+mt
-source-wordcount: '758'
+source-wordcount: '753'
 ht-degree: 4%
 
 ---
@@ -26,7 +26,7 @@ ht-degree: 4%
 
 ## 使用案例
 
-為協助您更清楚瞭解您應如何及何時使用目標 [!DNL Facebook] ，以下是Adobe即時客戶資料平台客戶可使用此功能解決的兩個範例使用案例。
+為協助您進一步瞭解您應如何及何時使用目標，以下是兩個範例使用案例，即時客戶資料平台客戶可使用此功能來解決。 [!DNL Facebook]
 
 
 ### 使用案例#1
@@ -101,7 +101,7 @@ ht-degree: 4%
 
 ## 匯出的資料 {#exported-data}
 
-例 [!DNL Facebook]如，成功啟動表示將 [!DNL Facebook] 在 [[!DNL Facebook廣告管理員]中以程式設計方式建立自訂對象](https://www.facebook.com/adsmanager/manage/)。 當使用者符合已啟用區段的資格或被取消資格時，會新增及移除觀眾中的區段成員資格。
+例 [!DNL Facebook]如，成功啟動表示將以程 [!DNL Facebook] 式方式在中建立自訂對象 [[!DNL Facebook Ads Manager]](https://www.facebook.com/adsmanager/manage/)。 當使用者符合已啟用區段的資格或被取消資格時，會新增及移除觀眾中的區段成員資格。
 
 >[!TIP]
 >
