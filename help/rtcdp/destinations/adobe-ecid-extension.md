@@ -2,12 +2,12 @@
 Keywords: ECID;ecid
 title: Experience Cloud ID 服務擴充功能
 seo-title: Experience Cloud ID 服務擴充功能
-description: Experience Cloud ID服務擴充功能是Adobe即時客戶資料平台中的個人化目標。 如需擴充功能的詳細資訊，請參閱Adobe Exchange的擴充功能頁面。
-seo-description: Experience Cloud ID服務擴充功能是Adobe即時客戶資料平台中的個人化目標。 如需擴充功能的詳細資訊，請參閱Adobe Exchange的擴充功能頁面。
+description: Experience Cloud ID服務擴充功能是即時客戶資料平台中的個人化目的地。 如需擴充功能的詳細資訊，請參閱Adobe Exchange的擴充功能頁面。
+seo-description: Experience Cloud ID服務擴充功能是即時客戶資料平台中的個人化目的地。 如需擴充功能的詳細資訊，請參閱Adobe Exchange的擴充功能頁面。
 translation-type: tm+mt
-source-git-commit: d9bf874dbfcc00c0a6e267f1a2e96f1223054825
+source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
 workflow-type: tm+mt
-source-wordcount: '557'
+source-wordcount: '554'
 ht-degree: 10%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 10%
 
 此擴充功能會實作 [!DNL Experience Cloud] ID服務，以識別所有解決方案的訪 [!DNL Experience Cloud] 客。
 
-[!DNL Experience Cloud] ID服務是Adobe即時客戶資料平台中的個人化擴充功能。 如需擴充功能的詳細資訊，請參 [閱檔案中的Experience Cloud ID服務擴充](https://docs.adobe.com/content/help/zh-Hant/launch/using/extensions-ref/adobe-extension/id-service-extension/overview.html)[!DNL Experience Platform Launch] 頁。
+[!DNL Experience Cloud] ID服務是即時客戶資料平台中的個人化擴充功能。 如需擴充功能的詳細資訊，請參 [閱檔案中的Experience Cloud ID服務擴充](https://docs.adobe.com/content/help/zh-Hant/launch/using/extensions-ref/adobe-extension/id-service-extension/overview.html)[!DNL Experience Platform Launch] 頁。
 
 此目的地是分 [!DNL Adobe Experience Platform Launch] 機。 如需Adobe Real- [!DNL Platform Launch] time CDP擴充功能如何運作的詳細資訊，請參閱 [Experience Platform Launch擴充功能總覽](/help/rtcdp/destinations/experience-platform-launch-extensions.md)。
 
