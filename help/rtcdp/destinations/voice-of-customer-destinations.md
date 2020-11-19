@@ -5,9 +5,9 @@ seo-title: 客戶目標之聲
 description: 語音平台收集和整理來自各種來源的資料，包括語音訊息、通話資料和聊天對話。 可以篩選和分析收集的資訊，讓公司最佳化其網站，以符合其需求。
 seo-description: 語音平台收集和整理來自各種來源的資料，包括語音訊息、通話資料和聊天對話。 可以篩選和分析收集的資訊，讓公司最佳化其網站，以符合其需求。
 translation-type: tm+mt
-source-git-commit: cbd748c1881c61f5e636567d94b68f2cf7302fa5
+source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
 workflow-type: tm+mt
-source-wordcount: '164'
+source-wordcount: '163'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 0%
 
 語音平台收集和整理來自各種來源的資料，包括語音訊息、通話資料和聊天對話。 可以篩選和分析收集的資訊，讓公司最佳化其網站，以符合其需求。
 
-目前，Adobe即時客戶資料平台支援下列客戶之聲。 如需如何連線至這些目的地的詳細資訊，請參閱個別連結：
+目前，即時客戶資料平台支援下列客戶之聲目的地。 如需如何連線至這些目的地的詳細資訊，請參閱個別連結：
 
 * [確認數位回饋擴充功能](confirmit-digital-feedback-extension.md)
 * [Invoca標籤擴充功能](/help/rtcdp/destinations/invoca-extension.md)
