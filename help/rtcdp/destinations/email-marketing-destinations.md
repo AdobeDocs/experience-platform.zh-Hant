@@ -6,9 +6,9 @@ type: Tutorial
 description: 電子郵件服務供應商(ESP)可讓您管理電子郵件行銷活動，例如傳送促銷電子郵件促銷活動。
 seo-description: 電子郵件服務供應商(ESP)可讓您管理電子郵件行銷活動，例如傳送促銷電子郵件促銷活動。
 translation-type: tm+mt
-source-git-commit: 425287d78deebf0113d6cf6350bcb516c99ee995
+source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
 workflow-type: tm+mt
-source-wordcount: '838'
+source-wordcount: '837'
 ht-degree: 1%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 1%
 
 # 電子郵件行銷目標 {#email-marketing-destinations}
 
-電子郵件服務供應商(ESP)可讓您管理電子郵件行銷活動，例如傳送促銷電子郵件宣傳。 Adobe即時客戶資料平台可讓您將區段啟用至電子郵件行銷目的地，與ESP整合。
+電子郵件服務供應商(ESP)可讓您管理電子郵件行銷活動，例如傳送促銷電子郵件宣傳。 即時客戶資料平台可讓您將區段啟用至電子郵件行銷目的地，與ESP整合。
 
 若要將區段傳送至行銷活動的電子郵件目的地，Adobe即時CDP必須先連線至目的地。
 
