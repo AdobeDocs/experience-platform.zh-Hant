@@ -5,21 +5,21 @@ seo-title: 即時客戶資料平台概觀
 description: 即時客戶資料平台概觀
 seo-description: 即時客戶資料平台概觀
 translation-type: tm+mt
-source-git-commit: 15323134f0c626cad2c4e90b3e1c0662cf7e57dd
+source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
 workflow-type: tm+mt
-source-wordcount: '292'
+source-wordcount: '289'
 ht-degree: 0%
 
 ---
 
 
-# Adobe即時客戶資料平台概觀
+# 即時客戶資料平台概觀
 
-Adobe即時客戶資料平台（Real-time Customer Data Platform，即時CDP）以Adobe Experience Platform為基礎，可協助公司整合來自多個企業來源的已知和匿名資料，以建立客戶個人檔案，用於即時跨所有通道和裝置提供個人化客戶體驗。
+即時客戶資料平台(Real-time CDP)建立在Adobe Experience Platform之上，可協助公司整合來自多個企業來源的已知和匿名資料，以建立客戶個人檔案，用於即時跨所有通道和裝置提供個人化客戶體驗。
 
 即時CDP包括資料治理、身分管理、進階細分和資料科學等工具，讓您能夠建立個人檔案並定義受眾，並獲得豐富的洞見，同時能夠執行嚴格的資料治理政策。
 
-Adobe即時客戶資料平台可連接到龐大的合作夥伴生態系統，更不用說與Adobe Experience Cloud的原生整合，因此您可以透過所有通道順暢地激活這些受眾，並提供絕佳的客戶體驗，從現場或應用程式內個人化到電子郵件、付費媒體、客服中心、連線裝置等。
+即時客戶資料平台可連接到龐大的合作夥伴生態系統，更不用說與Adobe Experience Cloud的原生整合，因此您可以透過所有通道順暢地激活這些受眾，並提供絕佳的客戶體驗，從現場或應用程式內個人化到電子郵件、付費媒體、客服中心、連線裝置等。
 
 借助即時客戶資料平台，您可以：
 
