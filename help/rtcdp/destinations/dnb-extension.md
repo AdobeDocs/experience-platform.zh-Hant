@@ -2,12 +2,12 @@
 keywords: D&B Visitor Intelligence;D&B;visitor intelligence extension
 title: D&B訪客智慧擴充功能
 seo-title: D&B訪客智慧擴充功能
-description: D&B訪客智慧擴充功能是Adobe即時客戶資料平台中的個人化目的地。 如需擴充功能的詳細資訊，請參閱Adobe Exchange的擴充功能頁面。
-seo-description: D&B訪客智慧擴充功能是Adobe即時客戶資料平台中的個人化目的地。 如需擴充功能的詳細資訊，請參閱Adobe Exchange的擴充功能頁面。
+description: D&B訪客智慧擴充功能是即時客戶資料平台中的個人化目的地。 如需擴充功能的詳細資訊，請參閱Adobe Exchange的擴充功能頁面。
+seo-description: D&B訪客智慧擴充功能是即時客戶資料平台中的個人化目的地。 如需擴充功能的詳細資訊，請參閱Adobe Exchange的擴充功能頁面。
 translation-type: tm+mt
-source-git-commit: 511d64d1555151a70bdb9f71e4b50ec461c8a2e7
+source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
 workflow-type: tm+mt
-source-wordcount: '543'
+source-wordcount: '540'
 ht-degree: 5%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 5%
 
 分析未知訪客，並將其轉化為潛在客戶。
 
-[!DNL D&B Visitor Intelligence] 是Adobe即時客戶資料平台中的個人化延伸。 如需擴充功能的詳細資訊，請參 [閱D&amp;B網站](https://www.dnb.com/)。
+[!DNL D&B Visitor Intelligence] 是即時客戶資料平台中的個人化延伸。 如需擴充功能的詳細資訊，請參 [閱D&amp;B網站](https://www.dnb.com/)。
 
 此目的地是Adobe Experience Platform Launch擴充功能。 如需Platform Launch擴充功能如何在Adobe即時CDP中運作的詳細資訊，請參閱 [Adobe Experience Platform Launch擴充功能總覽](/help/rtcdp/destinations/experience-platform-launch-extensions.md)。
 
