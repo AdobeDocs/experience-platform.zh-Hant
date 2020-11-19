@@ -1,12 +1,12 @@
 ---
 keywords: segmentation; segmentation rtcdp;real time customer data platform segmentation
 title: 區段服務概觀
-seo-title: Adobe即時客戶資料平台中的細分服務
+seo-title: 即時客戶資料平台中的細分服務
 description: 即時CDP建立在Adobe Experience Platform之上，並運用許多Experience Platform服務和功能。 使用「分段服務」，您可以將客戶劃分為具有類似特徵的較小群組，以提供量身打造的行銷。
 translation-type: tm+mt
-source-git-commit: 54df4778a025811504801306120bda78e04281c1
+source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
 workflow-type: tm+mt
-source-wordcount: '275'
+source-wordcount: '274'
 ht-degree: 1%
 
 ---
