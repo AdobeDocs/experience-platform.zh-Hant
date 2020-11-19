@@ -2,12 +2,12 @@
 keywords: JW player;jw player;JW Player;jw extension;JW extension
 title: JW Player Analytics(BETA)擴充功能
 seo-title: JW Player Analytics(BETA)擴充功能
-description: JW Player Analytics(BETA)擴充功能是Adobe即時客戶資料平台的分析目標。 如需擴充功能的詳細資訊，請參閱Adobe Exchange的擴充功能頁面。
-seo-description: JW Player Analytics(BETA)擴充功能是Adobe即時客戶資料平台的分析目標。 如需擴充功能的詳細資訊，請參閱Adobe Exchange的擴充功能頁面。
+description: JW Player Analytics(BETA)擴充功能是即時客戶資料平台中的分析目標。 如需擴充功能的詳細資訊，請參閱Adobe Exchange的擴充功能頁面。
+seo-description: JW Player Analytics(BETA)擴充功能是即時客戶資料平台中的分析目標。 如需擴充功能的詳細資訊，請參閱Adobe Exchange的擴充功能頁面。
 translation-type: tm+mt
-source-git-commit: 511d64d1555151a70bdb9f71e4b50ec461c8a2e7
+source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
 workflow-type: tm+mt
-source-wordcount: '587'
+source-wordcount: '584'
 ht-degree: 4%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 4%
 
 此擴充功能會安 [!DNL JW Player] 裝適配器，以連 [!DNL JW Player] 接事件至Adobe Video Analytics。 利用Adobe Video Analytics的強大功能，獲得深入見解，以瞭解客戶的視訊觀看習慣。
 
-[!DNL JW Player Analytics] （測試版）是Adobe即時客戶資料平台中的分析擴充功能。 如需擴充功能的詳細資訊，請參閱 [Adobe Exchange的擴充功能頁面](https://exchange.adobe.com/experiencecloud.details.101523.jw-player-analytics-launch-extension.html)。
+[!DNL JW Player Analytics] （測試版）是即時客戶資料平台的分析擴充功能。 如需擴充功能的詳細資訊，請參閱 [Adobe Exchange的擴充功能頁面](https://exchange.adobe.com/experiencecloud.details.101523.jw-player-analytics-launch-extension.html)。
 
 此目的地是Adobe Experience Platform Launch擴充功能。 如需Platform Launch擴充功能如何在Adobe即時CDP中運作的詳細資訊，請參閱 [Adobe Experience Platform Launch擴充功能總覽](/help/rtcdp/destinations/experience-platform-launch-extensions.md)。
 
