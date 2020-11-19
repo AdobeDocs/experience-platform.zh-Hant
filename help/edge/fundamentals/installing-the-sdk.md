@@ -5,9 +5,9 @@ description: 瞭解如何安裝Experience Platform Web SDK
 seo-description: 瞭解如何安裝Experience Platform Web SDK
 keywords: web sdk installation;installing web sdk;internet explorer;promise;
 translation-type: tm+mt
-source-git-commit: d23568f7ce63df5aa98dc237a6671eeadde0c9b2
+source-git-commit: 1b5ee9b1f9bdc7835fa8de59020b3eebb4f59505
 workflow-type: tm+mt
-source-wordcount: '626'
+source-wordcount: '623'
 ht-degree: 2%
 
 ---
@@ -15,9 +15,9 @@ ht-degree: 2%
 
 # 安裝SDK {#installing-the-sdk}
 
-使用Adobe Experience Platform Web SDK的偏好方式是透過 [Adobe Experience Platform Launch](http://launch.adobe.com/)。 在擴充功能 `AEP Web SDK` 目錄中搜尋，然後安裝並設定擴充功能。
+使用Adobe Experience Platform Web SDK的偏好方式是透過 [Adobe Experience Platform Launch](http://launch.adobe.com/)。 在擴充功 `AEP Web SDK` 能目錄中搜尋，然後安裝並設定擴充功能。
 
-AEP網頁SDK也可在CDN上取得，供您使用。 您可以參考此檔案或下載它，並在您自己的基礎架構上代管它。 它提供微型和非微型版本。 非精簡版本有助於除錯。
+Adobe Experience Platform Web SDK也隨附於CDN，供您使用。 您可以參考此檔案或下載它，並在您自己的基礎架構上代管它。 它提供微型和非微型版本。 非精簡版本有助於除錯。
 
 URL結構：https://cdn1.adoberesources.net/alloy/[VERSION]/alloy.min.js或alloy.js，用於非精簡版。
 
@@ -28,7 +28,7 @@ URL結構：https://cdn1.adoberesources.net/alloy/[VERSION]/alloy.min.js或alloy
 
 ## 新增程式碼 {#adding-the-code}
 
-實作Adobe Experience Platform的第一步是 [!DNL Web SDK] 盡可能將下列「基本程式碼」複製並貼在HTML的 `<head>` 標籤中：
+實作Adobe Experience Platform的第一步 [!DNL Web SDK] 是盡可能將下列「基本程式碼」複製並貼在HTML的 `<head>` 標籤中：
 
 ```markup
 <script>
