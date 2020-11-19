@@ -4,10 +4,10 @@ seo-title: Adobe Experience Platform網頁SDK常見問答集
 description: 有關Adobe Experience Platform Web SDK的常見問題
 seo-description: 有關Adobe Experience Platform Web SDK的常見問題
 translation-type: tm+mt
-source-git-commit: 2e28fda40a135330054c749d73439448a55db52c
+source-git-commit: 1b5ee9b1f9bdc7835fa8de59020b3eebb4f59505
 workflow-type: tm+mt
-source-wordcount: '1631'
-ht-degree: 3%
+source-wordcount: '1629'
+ht-degree: 2%
 
 ---
 
@@ -48,7 +48,7 @@ Adobe Experience Platform Web SDK是用戶端JavaScript程式庫，可讓Adobe E
 
 ### 使用Adobe Experience Platform Web SDK
 
-新的Web SDK會將下列解決方案的資料傳送至單一目的地(AEP Edge Network)，並解決最常見的上述解決方案使用案例。
+新的Web SDK會將下列解決方案的資料傳送至單一目的地(Adobe Experience Platform Edge Network)，並解決最常見的上述解決方案使用案例。
 
 * Adobe Analytics
 * Adobe Audience Manager
@@ -67,7 +67,7 @@ Adobe Experience Platform Web SDK也可以直接將資料傳送至Adobe Experien
 **簡單：** XDM、Web SDK、Experience Platform Launch、Experience Edge、Adobe Experience Cloud解決方案與Adobe Experience Platform的結合，可建立簡單明瞭的資料收集故事。
 
 * **XDM:** 您用來傳送資料至Adobe的解決方案不可知型架構。 evar或mbox不再加上標籤。
-* **網頁SDK:** 讓您輕鬆將資料傳送及接收至Adobe Experience Platform Edge Network。
+* **Adobe Experience Platform Web SDK:** 讓您輕鬆傳送和接收資料至Adobe Experience Platform Edge Network。
 * **體驗平台發佈：** 簡化網站上Web SDK（及任何其他JavaScript標籤）的部署與設定。
 * **體驗優勢：** 輕鬆將資料以所需格式傳送至Adobe Experience Platform和解決方案。
 * **Adobe Experience Platform和Adobe解決方案：** 實現其價值主張。
@@ -78,9 +78,9 @@ Adobe Experience Platform Web SDK也可以直接將資料傳送至Adobe Experien
 
 **價值時間：** Adobe已努力（並將繼續）透過Experience Platform Launch盡可能輕鬆地部署Web SDK，並將用戶端資料對應至XDM。  完成這項工作後，所有其他Adobe解決方案和Adobe Experience Platform服務都可在伺服器端開啟或關閉。 例如，如果您將此功能用於Adobe Analytics，而您想要開啟Target或Experience Platform，您只需在Experience Edge組態上切換，並指出這些使用案例。
 
-## 什麼是 `alloy.js`?
+## 什麼是合金？
 
-`Alloy.js` 是Adobe Experience Platform Web SDK的檔案名稱。 Adobe Experience Platform Web SDK是正式名稱，但許多開發人員稱它為「合金」。
+Alloy是Adobe Experience Platform Web SDK的程式碼名稱。 它用於SDK的原始碼和檔案名稱中，但Adobe Experience Platform Web SDK是正式名稱。
 
 ## 客戶是否需要購買Adobe Experience Platform才能使用Web SDK?
 
@@ -115,7 +115,7 @@ Web SDK正在快速發展。 目前正在處理更多使用案例。 您可以�
 
 視情況而定。Adobe Experience Platform Web SDK可部署為兩種不同的樣式。 未來的移轉檔案將提供其他詳細資訊。
 
-* **只需另一個標籤：** 如果網站已針對解決方案加上標籤，而您無法重新標籤，但您想要將資料傳送至Adobe Experience Platform Edge Network for Experience Platform使用案例或即將推出的Experience Platform Launch伺服器端功能（請參閱下文），您可將標籤新增至網站，其中它標籤會「只是另一個標籤」。 `alloy.js`
+* **只需另一個標籤：** 如果網站已針對解決方案加上標籤，而您無法重新標籤，但您想要將資料傳送至Adobe Experience Platform Edge Network for Experience Platform使用案例或即將推出的Experience Platform Launch伺服器端功能（請參閱下文），您可將標籤新增至網站，其中它標籤會「只作為另一個標籤」運作。 `alloy.js`
 
 * **唯一的標籤：** 如果您想要將Web SDK用於Experience Cloud解決方案，則必須將它用於該頁 _面上_ 的所有解決方案。 例如，如果您的網站已經標籤為Adobe Analytics，而您想將它用於Target，則您必須同時用於這兩者，以及日後其他任何人。
 
@@ -139,7 +139,7 @@ Web SDK正在快速發展。 目前正在處理更多使用案例。 您可以�
 
 但是：
 
-* Adobe Experience Platform Web SDK需要稱為Experience Edge組態ID的項目，讓邊緣網路可識別串流並決定如何處理資料。 此ID是在Experience Platform Launch中建立的。 這並不表示您必須使用Experience Platform Launch來建立屬性或部署JavaScript程式碼，但您確實需要使用Experience Platform Launch來建立組態ID。
+* Adobe Experience Platform Web SDK需要稱為Experience Edge組態ID的項目，讓邊緣網路能夠識別串流並決定如何處理資料。 此ID是在Experience Platform Launch中建立的。 這並不表示您必須使用Experience Platform Launch來建立屬性或部署JavaScript程式碼，但您確實需要使用Experience Platform Launch來建立組態ID。
 
 * Adobe Experience Platform Launch不僅是最佳的標籤和SDK管理員，還讓您輕鬆部署資料並將資料 `alloy.js` 對應至XDM架構。 如果您決定不使用Experience Platform Launch，則必須先管理資料的部署、 `alloy.js`事件處理，以及將資料對應至XDM，再傳送資料。 這個程式比 _使用_ Experience Platform Launch困難得多。
 
