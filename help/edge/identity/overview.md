@@ -5,17 +5,17 @@ description: 瞭解如何取得Adobe Experience Cloud Id。
 seo-description: 瞭解如何取得Adobe Experience Cloud Id。
 keywords: Identity;First Party Identity;Identity Service;3rd Party Identity;ID Migration;Visitor ID;third party identity;thirdPartyCookiesEnabled;idMigrationEnabled;getIdentity;Syncing Identities;syncIdentity;sendEvent;identityMap;primary;ecid;Identity Namespace;namespace id;authenticationState;hashEnabled;
 translation-type: tm+mt
-source-git-commit: d069b3007265406367ca9de2b85540b2a070cf36
+source-git-commit: 1b5ee9b1f9bdc7835fa8de59020b3eebb4f59505
 workflow-type: tm+mt
-source-wordcount: '730'
-ht-degree: 5%
+source-wordcount: '731'
+ht-degree: 3%
 
 ---
 
 
 # 身分——擷取Experience Cloud ID
 
-Adobe Experience Platform運用 [!DNL Web SDK] 了 [Adobe Identity Service](../../identity-service/ecid.md)。 這可確保每個裝置都有一個唯一識別碼，該識別碼會保存在裝置上，以便將頁面之間的活動系結在一起。
+Adobe Experience Platform Web SDK運用 [Adobe Identity Service](../../identity-service/ecid.md)。 這可確保每個裝置都有一個唯一識別碼，該識別碼會保存在裝置上，以便將頁面之間的活動系結在一起。
 
 ## 第一方身分
 
@@ -27,11 +27,11 @@ Adobe Experience Platform運用 [!DNL Web SDK] 了 [Adobe Identity Service](../.
 
 ## ID移轉
 
-從使用訪客API進行移轉時，您也可以移轉現有的AMCV Cookie。 若要啟用ECID移轉，請在 `idMigrationEnabled` 設定中設定參數。 ID移轉已設定為啟用某些使用案例：
+從使用訪客API進行移轉時，您也可以移轉現有的AMCV Cookie。 若要啟用ECID移轉，請在 `idMigrationEnabled` 設定中設定參數。 ID移轉可啟用下列使用案例：
 
-* 當網域的某些頁面使用訪客API，而其他頁面使用此SDK時。 為支援此案例，SDK會讀取現有的AMCV Cookie，並使用現有的ECID寫入新Cookie。 此外，SDK會編寫AMCV Cookie，如此，如果ECID是先在使用AEP Web SDK所創作的頁面上取得，則使用訪客API所創作的後續頁面具有相同的ECID。
-* 當AEP Web SDK設定在具有訪客API的頁面上時。 為支援此案例，如果未設定AMCV Cookie,SDK會在頁面上尋找訪客API並呼叫它以取得ECID。
-* 當整個網站使用AEP Web SDK且沒有訪客API時，移轉ECID以保留回訪訪客資訊會很有用。 在SDK與部署一段 `idMigrationEnabled` 時間後，如此大部分的訪客Cookie都會移轉，就可關閉設定。
+* 當網域的某些頁面使用訪客API，而其他頁面使用此SDK時。 為支援此案例，SDK會讀取現有的AMCV Cookie，並使用現有的ECID寫入新Cookie。 此外，SDK會編寫AMCV Cookie，如此，如果ECID是先在SDK所創作的頁面上取得，則使用訪客API所創作的後續頁面具有相同的ECID。
+* 當Adobe Experience Platform Web SDK設定在同時具有訪客API的頁面上時。 為支援此案例，如果未設定AMCV Cookie,SDK會在頁面上尋找訪客API並呼叫它以取得ECID。
+* 當整個網站使用Adobe Experience Platform Web SDK且沒有訪客API時，移轉ECID以保留回訪訪客資訊會很有用。 在SDK與部署一段 `idMigrationEnabled` 時間後，如此大部分的訪客Cookie都會移轉，就可關閉設定。
 
 ## 擷取訪客ID
 
@@ -43,13 +43,14 @@ Adobe Experience Platform運用 [!DNL Web SDK] 了 [Adobe Identity Service](../.
 
 ```javascript
 alloy("getIdentity")
-  .then(function(result.identity.ECID) {
-    // This function will get called with Adobe Experience Cloud Id when the command promise is resolved
+  .then(function(result) {
+    // The command succeeded.
+    console.log(result.identity.ECID);
   })
   .catch(function(error) {
     // The command failed.
-    // "error" will be an error object with additional information
-  })
+    // "error" will be an error object with additional information.
+  });
 ```
 
 ## 同步身分
@@ -79,21 +80,14 @@ alloy("sendEvent", {
       ]
     }
   }
-})
+});
 ```
 
+內的每個屬 `identityMap` 性代表屬於特定身分命名空 [間的身分](../../identity-service/namespaces.md)。 屬性名稱應為身分名稱空間符號，您可在Adobe Experience Platform使用者介面的「身分識別」下方找[!UICONTROL 到]。 屬性值應為與該標識名稱空間相關的標識陣列。
 
-### 同步身分選項
+身份陣列中的每個身份對象的結構如下：
 
-#### 身分命名空間符號
-
-| **類型** | **必填** | **預設值** |
-| -------- | ------------ | ----------------- |
-| 字串 | 是 | 無 |
-
-物件的索引鍵是 [Identity Namespace](../../identity-service/namespaces.md) Symbol。 您可在「身分識別」下方的Adobe Experience Platform使用者介面中找[!UICONTROL 到]。
-
-#### `id`
+### `id`
 
 | **類型** | **必填** | **預設值** |
 | -------- | ------------ | ----------------- |
@@ -101,7 +95,7 @@ alloy("sendEvent", {
 
 這是您要針對指定命名空間同步的ID。
 
-#### `authenticationState`
+### `authenticationState`
 
 | **類型** | **必填** | **預設值** | **可能的值** |
 | -------- | ------------ | ----------------- | ------------------------------------ |
@@ -109,18 +103,10 @@ alloy("sendEvent", {
 
 ID的驗證狀態。
 
-#### `primary`
+### `primary`
 
 | **類型** | **必填** | **預設值** |
 | -------- | ------------ | ----------------- |
 | 布林值 | 可選 | false |
 
 確定是否應將此身份用作統一配置檔案中的主片段。 依預設，ECID會設為使用者的主要識別碼。
-
-#### `hashEnabled`
-
-| **類型** | **必填** | **預設值** |
-| -------- | ------------ | ----------------- |
-| 布林值 | 可選 | false |
-
-如果啟用，則會使用SHA256雜湊來雜湊識別。
