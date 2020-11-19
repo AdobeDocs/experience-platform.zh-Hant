@@ -5,9 +5,9 @@ seo-title: Oracle Responsys目標
 description: Responsys是Oracle針對跨通道行銷宣傳提供的企業電子郵件行銷工具，可個人化電子郵件、行動裝置、展示廣告和社交媒體之間的互動。
 seo-description: Responsys是Oracle針對跨通道行銷宣傳提供的企業電子郵件行銷工具，可個人化電子郵件、行動裝置、展示廣告和社交媒體之間的互動。
 translation-type: tm+mt
-source-git-commit: 67a353c950bef11ccbaa52c49d213f08449baa96
+source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
 workflow-type: tm+mt
-source-wordcount: '524'
+source-wordcount: '523'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 0%
 
 [Responsys](https://www.oracle.com/marketingcloud/products/cross-channel-orchestration/) 是企業電子郵件行銷工具，適用於跨通道行銷宣傳，可 [!DNL Oracle] 以個人化電子郵件、行動裝置、展示廣告和社交媒體的互動。
 
-若要傳送區段資 [!DNL Oracle Responsys]料至，您必須先 [連線至Adobe即時客戶資料平台中的目的地](#connect-destination) ，然後設 [定從您的儲存位置匯入資料](#import-data-into-responsys)[!DNL Oracle Responsys]。
+若要傳送區段資 [!DNL Oracle Responsys]料至，您必須先 [在即時客戶資料平台中連線至目的地](#connect-destination) ，然後設 [定從儲存位置匯入資料至](#import-data-into-responsys)[!DNL Oracle Responsys]。
 
 ## 匯出類型 {#export-type}
 
