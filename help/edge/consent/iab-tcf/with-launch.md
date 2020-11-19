@@ -1,12 +1,12 @@
 ---
 title: 搭配Experience Platform Launch使用IAB TCF 2.0
-seo-title: 以Adobe Experience Platform Launch和Adobe Experience Platform Web SDK設定IAB TCF 2.0同意
+seo-title: 取得Adobe Experience Platform Launch和Adobe Experience Platform Web SDK的IAB TCF 2.0同意
 description: 瞭解如何透過Adobe Experience Platform Launch和Adobe Experience Platform Web SDK設定IAB TCF 2.0同意
 seo-description: 瞭解如何透過Adobe Experience Platform Launch和Adobe Experience Platform Web SDK設定IAB TCF 2.0同意
 translation-type: tm+mt
-source-git-commit: db742119d8f169817080f1fd4e0dc08a0f0faa47
+source-git-commit: 1b5ee9b1f9bdc7835fa8de59020b3eebb4f59505
 workflow-type: tm+mt
-source-wordcount: '899'
+source-wordcount: '859'
 ht-degree: 0%
 
 ---
@@ -14,13 +14,13 @@ ht-degree: 0%
 
 # 搭配使用IAB TCF 2.0和Experience Platform Launch和AEP Web SDK擴充功能
 
-Adobe Experience Platform網頁軟體開發套件(Adobe Experience Platform Web SDK)支援互動式廣告局透明度與同意框架2.0版(IAB TCF 2.0)。 本指南說明如何設定Adobe Experience Platform Launch屬性，以便使用Experience Platform Launch的AEP Web SDK擴充功能，將IAB TCF 2.0同意資訊傳送給Adobe。
+Adobe Experience Platform Web SDK支援Interactive Advertising Bureau透明度與同意框架2.0版(IAB TCF 2.0)。 本指南說明如何設定Adobe Experience Platform Launch屬性，以便使用Experience Platform Launch的AEP Web SDK擴充功能，將IAB TCF 2.0同意資訊傳送給Adobe。
 
 如果您不想使用Experience Platform Launch，請參閱「在未使用Experience Platform Launch的情況下使用IAB TCF 2.0」 [指南](./without-launch.md)。
 
 ## 快速入門
 
-若要搭配使用IAB TCF 2.0和Experience Platform Launch和AEP Web SDK擴充功能，您需要有可用的XDM架構和資料集。 如果您尚未設定其中任一項，請先檢視本Adobe Experience Platform Web SDK啟動快速入門手冊，再繼續。
+若要搭配使用IAB TCF 2.0和Experience Platform Launch和AEP Web SDK擴充功能，您需要有可用的XDM架構和資料集。
 
 此外，本指南要求您對Adobe Experience Platform Web SDK有良好的認識。 如需快速進階，請閱讀 [Adobe Experience Platform Web SDK概觀](../../home.md) ，以及 [Frequently asked questions](../../web-sdk-faq.md) documentation。
 
@@ -122,12 +122,12 @@ addEventListener();
 
 此程式碼與先前的自訂程式碼相同，但是會同時 `useractioncomplete` 處理 `tcloaded` 和事件。 先 [前的自訂代碼](#consent-code-1) ，只會在客戶第一次選擇偏好設定時觸發。 當客戶已選擇其偏好設定時，也會觸發此程式碼。 例如，在第二頁載入時。
 
-從Adobe Experience Platform Web SDK擴充功能新增「傳送事件」動作。 在「XDM」欄位中，選擇您在上一節中建立的XDM資料元素。
+從AEP Web SDK擴充功能新增「傳送事件」動作。 在「XDM」欄位中，選擇您在上一節中建立的XDM資料元素。
 
 ## 以IAB TCF 2.0許可資訊發送其他事件
 
-當事件在初始「體驗事件」後觸發時，仍會定義兩個資料元素，並可用來傳送IAB同意資訊。 使用相同的XDM資料元素來傳送未來事件。 IAB TCF 2.0資訊包括在內。
+當事件在初始「體驗事件」後觸發時，仍會定義兩個資料元素，並可用來傳送IAB同意資訊。 使用相同的XDM資料元素來傳送未來事件。 包括IAB TCF 2.0資訊。
 
 ## 後續步驟
 
-現在您已學會如何搭配使用IAB TCF 2.0和Adobe Experience Platform Web SDK擴充功能，您也可以選擇與其他Adobe解決方案（例如Adobe Analytics或即時客戶資料平台）整合。 如需詳 [細資訊，請參閱IAB透明度與同意框架](./overview.md) 2.0概觀。
+現在您已學會如何搭配使用AEP Web SDK擴充功能的IAB TCF 2.0，您也可以選擇與其他Adobe解決方案整合，例如Adobe Analytics或即時客戶資料平台。 如需詳 [細資訊，請參閱IAB透明度與同意框架](./overview.md) 2.0概觀。
