@@ -5,9 +5,9 @@ seo-title: Experience Platform Launch 延伸功能
 description: Launch 是新一代 Adobe 標籤管理功能。Launch 可讓客戶透過簡單的方式部署及管理所有必要的分析、行銷及廣告整合功能，以便支援相關客戶體驗。
 seo-description: Launch 是新一代 Adobe 標籤管理功能。Launch 可讓客戶透過簡單的方式部署及管理所有必要的分析、行銷及廣告整合功能，以便支援相關客戶體驗。
 translation-type: tm+mt
-source-git-commit: 6bb7bbeaceac8a69641138248a1c41cf9fb3dc63
+source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
 workflow-type: tm+mt
-source-wordcount: '646'
+source-wordcount: '645'
 ht-degree: 21%
 
 ---
@@ -31,7 +31,7 @@ Adobe Experience Platform Launch是Adobe的新一代標籤管理功能。  Platf
 
 Platform Launch擴充功能可將原始事件資料轉送至數種目的地。 將擴充功能設想為 **「事件轉發** 」類型的目標。 這是與目標平台整合的更簡單類型，目標平台只會轉送原始事件資料。 例如Gainsight個人化 [擴充功能](/help/rtcdp/destinations/gainsight-extension.md) , [或客戶擴充功能的確認聲音](/help/rtcdp/destinations/confirmit-digital-feedback-extension.md)。
 
-**Adobe即時客戶資料平台** (Real-time Customer Data Platform)中的描述檔／區段匯出目標可擷取事件資料、將其與其他資料來源結合、套用區段，以及將區段和合格的描述檔匯出至目標。 例如， [Amazon S3雲端儲存空間或](/help/rtcdp/destinations/amazon-s3-destination.md) Google Display &amp; Video 360廣告目標 [](/help/rtcdp/destinations/google-dv360-destination.md)。
+**即時客戶資料平台中的描述檔** /區段匯出目標會擷取事件資料，並與其他資料來源結合，套用區段，以及將區段和合格的描述檔匯出至目標。 例如， [Amazon S3雲端儲存空間或](/help/rtcdp/destinations/amazon-s3-destination.md) Google Display &amp; Video 360廣告目標 [](/help/rtcdp/destinations/google-dv360-destination.md)。
 
 ![Experience Platform Launch擴充功能與其他目的地的比較](/help/rtcdp/destinations/assets/launch-and-other-destinations.png)
 
