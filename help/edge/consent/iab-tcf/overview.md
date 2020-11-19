@@ -5,9 +5,9 @@ description: 瞭解如何使用Experience Platform Web SDK支援IAB TCF 2.0同�
 seo-description: 瞭解如何使用Experience Platform Web SDK支援IAB TCF 2.0同意偏好設定
 keywords: consent;setConsent;Profile Privacy Mixin;Experience Event Privacy Mixin;Privacy Mixin;IAB TCF 2.0;Real-time CDP;Real-time Customer Data Profile
 translation-type: tm+mt
-source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
+source-git-commit: 3f70e7fdd5888018f3814d1446042e96d2e53304
 workflow-type: tm+mt
-source-wordcount: '937'
+source-wordcount: '936'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 # IAB透明與同意框架2.0概觀
 
-Adobe Experience Platform Web SDK(AEP Web SDK)支援Interactive Advertising Bureau透明度與同意框架2.0版(IAB TCF 2.0)。 本指南說明透過整合即時客戶資料平台、Audience Manager、Experience Events、Adobe Analytics和Experience Edge的AEP Web SDK，支援IAB TCF 2.0的需求。
+Adobe Experience Platform Web SDK支援Interactive Advertising Bureau透明度與同意框架2.0版(IAB TCF 2.0)。 本指南說明透過整合即時客戶資料平台、Audience Manager、Experience Events、Adobe Analytics和Experience Edge的Adobe Experience Platform Web SDK支援IAB TCF 2.0的需求。
 
 此外，以下指南可協助您瞭解如何將IAB TCF 2.0與Adobe Experience Platform Launch整合，而不需使用Adobe Experience Platform Launch。
 
@@ -24,13 +24,13 @@ Adobe Experience Platform Web SDK(AEP Web SDK)支援Interactive Advertising Bure
 
 ## 快速入門
 
-若要使用IAB TCF 2.0來實作AEP Web SDK，您必須對「體驗資料模型」(XDM)和「體驗事件」有正確的認識。 開始之前，請先閱讀下列檔案：
+若要使用IAB TCF 2.0來建置Web SDK，您必須對「體驗資料模型」(XDM)和「體驗事件」有正確的認識。 開始之前，請先閱讀下列檔案：
 
 - [體驗資料模型(XDM)系統概觀](../../../xdm/home.md):標準化和互操作性是Adobe Experience Platform的主要概念。 [!DNL Experience Data Model (XDM)]在Adobe的推動下，我們致力於標準化客戶體驗資料並定義客戶體驗管理的架構。
 
 ## 即時客戶資料平台整合
 
-即時客戶資料平台（即時CDP）以Adobe Experience Platform為基礎，可協助您整合來自多個企業來源的已知和匿名資料。 這可讓您建立客戶個人檔案，以便即時跨所有通道和裝置提供個人化的客戶體驗。 若要透過AEP Web SDK將同意資料傳送至即時CDP，請執行下列動作：
+即時客戶資料平台（即時CDP）以Adobe Experience Platform為基礎，可協助您整合來自多個企業來源的已知和匿名資料。 這可讓您建立客戶個人檔案，以便即時跨所有通道和裝置提供個人化的客戶體驗。 若要透過SDK將同意資料傳送至即時CDP，請執行下列動作：
 
 - 基於類的資料集， [!DNL XDM Individual Profile] 可在中使用， [!DNL Real-time Customer Profile]並帶有配置檔案隱私混合。
 - 使用即時CDP和上述配置檔案資料集設定的邊緣配置。
@@ -45,7 +45,7 @@ Adobe Audience Manager(AAM)包含對IAB TCF 2.0的支援，可讓您評估、尊
 
 >[!TIP]
 >
->若要透過AEP Web SDK與Audience Manager整合，請確定您已設定好轉送至Adobe Audience Manager的Edge組態。
+>若要透過Adobe Experience Platform Web SDK與Audience Manager整合，請確定您已設定好前往Adobe Audience Manager的邊緣組態。
 
 ## 體驗事件與Adobe Analytics整合
 
@@ -58,9 +58,9 @@ Adobe Audience Manager(AAM)包含對IAB TCF 2.0的支援，可讓您評估、尊
 
 如需如何將XDM體驗事件轉換為Analytics點擊的詳細資訊，請先閱讀 [Analytics總覽檔案](../../data-collection/adobe-analytics/analytics-overview.md) 。
 
-## AEP Web SDK整合
+## Adobe Experience Platform Web SDK整合
 
-以下各節說明IAB TCF 2.0與AEP Web SDK之間的主要整合點。
+以下各節說明IAB TCF 2.0與Adobe Experience Platform Web SDK之間的主要整合點。
 
 >[!NOTE]
 >
@@ -68,7 +68,7 @@ Adobe Audience Manager(AAM)包含對IAB TCF 2.0的支援，可讓您評估、尊
 
 ### 預設許可
 
-如果客戶沒有為其保存的許可偏好，則使用預設許可。 這表示預設同意選項可控制AEP Web SDK的行為，並根據客戶所在地區進行變更。
+如果客戶沒有為其保存的許可偏好，則使用預設許可。 這表示預設同意選項可以控制Adobe Experience Platform Web SDK的行為，並根據客戶所在地區進行變更。
 
 例如，如果您的客戶不在通用資料保護規則(GDPR)的管轄範圍內，預設同意可設為 `in`，但在GDPR的管轄範圍內，預設同意可設為 `pending`。 您的雲端管理平台(CMP)可能會偵測客戶所在地區，並為IAB TCF 2.0 `gdprApplies` 提供旗標。此標誌可用於設定預設許可。
 
@@ -76,7 +76,7 @@ Adobe Audience Manager(AAM)包含對IAB TCF 2.0的支援，可讓您評估、尊
 
 ### 在許可更改時設定許可
 
-AEP Web SDK有一個命令， `setConsent` 可讓您使用IAB TCF 2.0將客戶的同意偏好設定傳達給所有Adobe服務。如果您要與即時CDP整合，則此操作將更新客戶的概要檔案。 如果您要與Audience Manager整合，這會更新客戶的資訊。 呼叫此功能也會設定Cookie，其中包含全部或全部無的同意偏好設定，以控制是否允許傳送未來的「體驗事件」。 本動作是在同意變更時呼叫。 未來頁面載入時，將會讀取Experience Edge同意Cookie，以判斷是否可傳送「體驗事件」，以及是否可設定身分Cookie。
+Adobe Experience Platform Web SDK有一個命令， `setConsent` 可以使用IAB TCF 2.0將客戶的同意偏好與所有Adobe服務進行溝通。如果您要與即時CDP整合，則此操作將更新客戶的概要檔案。 如果您要與Audience Manager整合，這會更新客戶的資訊。 呼叫此功能也會設定Cookie，其中包含全部或全部無的同意偏好設定，以控制是否允許傳送未來的「體驗事件」。 本動作是在同意變更時呼叫。 未來頁面載入時，將會讀取Experience Edge同意Cookie，以判斷是否可傳送「體驗事件」，以及是否可設定身分Cookie。
 
 與Audience Manager的IAB TCF 2.0整合類似，當客戶明確同意下列目的時，Experience Edge會給予同意：
 
@@ -89,7 +89,7 @@ AEP Web SDK有一個命令， `setConsent` 可讓您使用IAB TCF 2.0將客戶�
 
 ### 將同意加入體驗事件
 
-AEP Web SDK有一個 `sendEvent` 收集體驗事件的命令。 如果您要與「體驗事件」或Adobe Analytics整合，並想要取得每個「體驗事件」的同意偏好設定，您應將同意資訊新增至每個 `sendEvent` 命令。
+Adobe Experience Platform Web SDK有一個可收集 `sendEvent` 「體驗事件」的命令。 如果您要與「體驗事件」或Adobe Analytics整合，並想要取得每個「體驗事件」的同意偏好設定，您應將同意資訊新增至每個 `sendEvent` 命令。
 
 如需命令的詳細 `sendEvent` 資訊，請閱讀追蹤事件 [的檔案](../../fundamentals/tracking-events.md)。
 
