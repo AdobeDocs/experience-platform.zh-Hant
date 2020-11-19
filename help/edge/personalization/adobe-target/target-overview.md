@@ -5,9 +5,9 @@ description: 瞭解如何使用Adobe Target使用Experience Platform Web SDK來�
 seo-description: 瞭解如何使用Adobe Target使用Experience Platform Web SDK來呈現個人化內容
 keywords: target;adobe target;activity.id;experience.id;renderDecisions;decisionScopes;prehiding snippet;vec;Form-Based Experience Composer;xdm;audiences;decisions;scope;schema;
 translation-type: tm+mt
-source-git-commit: f2bd8b89207901e57272a4f56d7f561ac10eb60a
+source-git-commit: 0928dd3eb2c034fac14d14d6e53ba07cdc49a6ea
 workflow-type: tm+mt
-source-wordcount: '626'
+source-wordcount: '629'
 ht-degree: 3%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 3%
 
 # [!DNL Target] 概述
 
-Adobe Experience Platform可以 [!DNL Web SDK] 將Adobe Target管理的個人化體驗提供並轉譯至網路通道。 您可以使用WYSIWYG編輯器(稱為 [Visual Experience Composer](https://docs.adobe.com/content/help/en/target/using/experiences/vec/visual-experience-composer.html) (VEC))或非視覺化介面( [Form-based Experience Composer](https://docs.adobe.com/content/help/en/target/using/experiences/form-experience-composer.html))來建立、啟動和傳遞您的活動和個人化體驗。
+Adobe Experience Platform可 [!DNL Web SDK] 以將Adobe Target管理的個人化體驗提供並轉譯至網路通道。 您可以使用WYSIWYG編輯器(稱為 [Visual Experience Composer](https://docs.adobe.com/content/help/en/target/using/experiences/vec/visual-experience-composer.html) (VEC))或非視覺化介面( [Form-based Experience Composer](https://docs.adobe.com/content/help/en/target/using/experiences/form-experience-composer.html))來建立、啟動和傳遞您的活動和個人化體驗。
 
 ## 啟用Adobe Target
 
@@ -35,7 +35,7 @@ Adobe Experience Platform可以 [!DNL Web SDK] 將Adobe Target管理的個人化
 
 ## 自動演算VEC活動
 
-AEP Web SDK可讓您的使用者自動在網路上，透過Adobe Target的VEC呈現您定義的體驗。 若要向AEP Web SDK指出要自動演算VEC活動，請傳送事件，其中包含 `renderDecisions = true`:
+Adobe Experience Platform Web SDK可讓您的使用者在網路上自動透過Adobe Target的VEC呈現您定義的體驗。 為指出Adobe Experience Platform Web SDK要自動演算VEC活動，請傳送包含下列項目的事 `renderDecisions = true`件：
 
 ```javascript
 alloy
@@ -85,32 +85,33 @@ alloy
 
 ## 范 `__view__` 圍
 
-AEP [!DNL Web SDK] 提供功能，可讓您擷取VEC動作，而不需仰賴AEP [!DNL Web SDK] 來演算VEC動作。 傳送定義 `__view__` 為的事件 `decisionScopes`。
+Adobe Experience Platform Web SDK提供的功能可讓您擷取VEC動作，而不需依賴SDK來為您轉譯VEC動作。 傳送定義 `__view__` 為的事件 `decisionScopes`。
 
 ```javascript
 alloy("sendEvent", {
-  decisionScopes: [“__view__”,"foo", "bar"], 
-  "xdm": { 
-    "web": { 
-      "webPageDetails": { 
-        "name": "Home Page"
-       }
-      } 
-     }
+      "decisionScopes": ["__view__", "foo", "bar"], 
+      "xdm": { 
+        "web": { 
+          "webPageDetails": { 
+            "name": "Home Page"
+          }
+        } 
+      }
     }
-   ).then(results){
-  for (decision of results.decisions){
-     if(decision.decisionScope == "__view__")
-       console.log(decision.content)
-}
-};
+  ).then(function(results) {
+    for (decision of results.decisions) {
+      if (decision.decisionScope === "__view__") {
+        console.log(decision.content)
+      }
+    }
+  });
 ```
 
 ## XDM中的觀眾
 
-當為將透過AEP Web SDK傳送的Target活動定義「對象」時， [必須定義並使用XDM](https://docs.adobe.com/content/help/zh-Hant/experience-platform/xdm/home.html) 。 定義XDM結構、類別和混合後，您可以建立由XDM資料定義的Target對象規則以進行定位。 在Target中，XDM資料會以自訂參數顯示在Audience Builder中。 XDM使用點標籤(例如 `web.webPageDetails.name`)序列化。
+當為將透過Adobe Experience Platform Web SDK傳送的Target活動定義「對象」時， [XDM](https://docs.adobe.com/content/help/zh-Hant/experience-platform/xdm/home.html) 必須定義並使用。 定義XDM結構、類別和混合後，您可以建立由XDM資料定義的Target對象規則以進行定位。 在Target中，XDM資料會以自訂參數顯示在Audience Builder中。 XDM使用點標籤(例如 `web.webPageDetails.name`)序列化。
 
-如果您有預先定義的對象使用自訂參數或使用者設定檔，則必須知道這些活動無法透過AEP Web SDK正確傳送。 您必須改用XDM，而不是使用自訂參數或使用者描述檔。 不過，AEP Web SDK支援的觀眾定位欄位不需要XDM，而且有現成的欄位。 以下是Target UI中不需要XDM的欄位：
+如果您有預先定義的對象使用自訂參數或使用者設定檔，則請注意，這些活動無法透過SDK正確傳送。 您必須改用XDM，而不是使用自訂參數或使用者描述檔。 不過，有些透過Adobe Experience Platform Web SDK支援的現成可用的受眾定位欄位不需要XDM。 以下是Target UI中不需要XDM的欄位：
 
 * Target 資料庫
 * 地理
