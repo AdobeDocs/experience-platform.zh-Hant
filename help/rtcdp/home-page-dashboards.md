@@ -5,9 +5,9 @@ seo-title: 即時客戶資料平台首頁和資料板
 description: Adobe Experience Platform 的儀表板、首頁和首次使用者體驗
 seo-description: Adobe Experience Platform 的儀表板、首頁和首次使用者體驗
 translation-type: tm+mt
-source-git-commit: 98d3792f50f2ab95b86d162c51af9445f06343b5
+source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
 workflow-type: tm+mt
-source-wordcount: '634'
+source-wordcount: '633'
 ht-degree: 4%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 4%
 
 # [!DNL Real-time Customer Data Platform] 度量概述
 
-當您登入即時CDP時，會顯示Adobe即時客戶資料平台（即時CDP）首頁，其中包含量度控制面板。
+當您登入即時CDP時，會顯示即時客戶資料平台（即時CDP）首頁，其中包含量度儀表板。
 
 首頁只是顯示量度卡片的位置之一。 即時CDP在您的整個體驗中提供度量卡。 這些量度會通知您系統中的資料、設定檔和區段對象。
 
