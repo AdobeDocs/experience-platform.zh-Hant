@@ -5,9 +5,9 @@ description: 瞭解如何使用Experience Platform Web SDK支援同意偏好設�
 seo-description: 瞭解如何使用Experience Platform Web SDK支援同意偏好設定
 keywords: consent;defaultConsent;default consent;setConsent;Profile Privacy Mixin;Experience Event Privacy Mixin;Privacy Mixin;
 translation-type: tm+mt
-source-git-commit: 2e28fda40a135330054c749d73439448a55db52c
+source-git-commit: 0928dd3eb2c034fac14d14d6e53ba07cdc49a6ea
 workflow-type: tm+mt
-source-wordcount: '753'
+source-wordcount: '752'
 ht-degree: 0%
 
 ---
