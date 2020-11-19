@@ -2,12 +2,12 @@
 keywords: Yext Conversion Trackin;Yext;yext;yext conversion tracking
 title: Yext轉換追蹤擴充功能
 seo-title: Yext轉換追蹤擴充功能
-description: 「轉換追蹤」擴充功能是Adobe即時客戶資料平台中的分析目的地。 如需擴充功能的詳細資訊，請參閱Adobe Exchange的擴充功能頁面。
-seo-description: 「轉換追蹤」擴充功能是Adobe即時客戶資料平台中的分析目標。 如需擴充功能的詳細資訊，請參閱Adobe Exchange的擴充功能頁面。
+description: 「轉換追蹤」擴充功能是即時客戶資料平台中的分析目標。 如需擴充功能的詳細資訊，請參閱Adobe Exchange的擴充功能頁面。
+seo-description: 「轉換追蹤」擴充功能是即時客戶資料平台中的分析目標。 如需擴充功能的詳細資訊，請參閱Adobe Exchange的擴充功能頁面。
 translation-type: tm+mt
-source-git-commit: 511d64d1555151a70bdb9f71e4b50ec461c8a2e7
+source-git-commit: 6eabcd70b133051205b669253f280cb92c24412f
 workflow-type: tm+mt
-source-wordcount: '569'
+source-wordcount: '566'
 ht-degree: 4%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 4%
 
 「擴 [!DNL Yext Conversion Tracking] 充功能」可讓您測量可歸因於您使用Yext產品的轉換。
 
-[!DNL Yext Conversion Tracking] 是Adobe即時客戶資料平台中的分析擴充功能。 如需擴充功能的詳細資訊，請參閱 [Adobe Exchange的擴充功能頁面](https://exchange.adobe.com/experiencecloud.details.103174.yext-conversion-tracking.html)。
+[!DNL Yext Conversion Tracking] 是即時客戶資料平台的分析擴充功能。 如需擴充功能的詳細資訊，請參閱 [Adobe Exchange的擴充功能頁面](https://exchange.adobe.com/experiencecloud.details.103174.yext-conversion-tracking.html)。
 
 此目的地是Adobe Experience Platform Launch擴充功能。 如需Platform Launch擴充功能如何在Adobe即時CDP中運作的詳細資訊，請參閱 [Adobe Experience Platform Launch擴充功能總覽](/help/rtcdp/destinations/experience-platform-launch-extensions.md)。
 
