@@ -3,9 +3,9 @@ keywords: Experience Platform;profile;real-time customer profile;merge policies;
 title: 合併策略UI指南
 topic: guide
 translation-type: tm+mt
-source-git-commit: 6bfc256b50542e88e28f8a0c40cec7a109a05aa6
+source-git-commit: e865bf254a9a3190fcfc053bd83e9968b1a4f7f1
 workflow-type: tm+mt
-source-wordcount: '2667'
+source-wordcount: '2673'
 ht-degree: 0%
 
 ---
@@ -25,9 +25,9 @@ Adobe Experience Platform可讓您從多個來源匯整資料片段，並加以�
 
 本指南需要對幾項重要功能有充分的 [!DNL Experience Platform] 認識。 在遵循本指南或使用描述檔API之前，請先閱讀下列服務的檔案：
 
-* [[!DNL Real-time Customer Profile]](../home.md):根據來自多個來源的匯整資料，提供統一、即時的消費者個人檔案。
+* [即時客戶個人檔案](../home.md):根據來自多個來源的匯整資料，提供統一、即時的消費者個人檔案。
 * [Adobe Experience Platform Identity Service](../../identity-service/home.md):借由將不同資料來源的身分融入其中，以建立即時客戶個人檔案 [!DNL Platform]。
-* [[!DNL Experience Data Model] (XDM)](../../xdm/home.md):組織客戶體驗資料 [!DNL Platform] 的標準化架構。
+* [體驗資料模型(XDM)](../../xdm/home.md):組織客戶體驗資料 [!DNL Platform] 的標準化架構。
 
 ## 合併方法 {#merge-methods}
 
