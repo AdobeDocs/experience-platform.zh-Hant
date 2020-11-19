@@ -2,12 +2,12 @@
 keywords: QuestionPro Intercept Surveys;questionpro intercept surveys;QuestionPro;questionpro
 title: QuestionPro截距調查擴充功能
 seo-title: QuestionPro截距調查擴充功能
-description: The QuestionPro Intercept Surveys extension是Adobe即時客戶資料平台中的調查目的地。 如需擴充功能的詳細資訊，請參閱Adobe Exchange的擴充功能頁面。
-seo-description: QuestionPro Intercept Surveys擴充功能是Adobe即時客戶資料平台中的調查目的地。 如需擴充功能的詳細資訊，請參閱Adobe Exchange的擴充功能頁面。
+description: QuestionPro Intercept Surveys擴充功能是即時客戶資料平台中的調查目的地。 如需擴充功能的詳細資訊，請參閱Adobe Exchange的擴充功能頁面。
+seo-description: QuestionPro Intercept Surveys擴充功能是即時客戶資料平台中的調查目的地。 如需擴充功能的詳細資訊，請參閱Adobe Exchange的擴充功能頁面。
 translation-type: tm+mt
-source-git-commit: 511d64d1555151a70bdb9f71e4b50ec461c8a2e7
+source-git-commit: 6eabcd70b133051205b669253f280cb92c24412f
 workflow-type: tm+mt
-source-wordcount: '574'
+source-wordcount: '571'
 ht-degree: 4%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 4%
 
 [!DNL QuestionPro Intercept Surveys] 是在交易時或當使用者進入／退出您的網站時部署調查並收集態度資料的平台。
 
-[!DNL QuestionPro Intercept Surveys] 是Adobe即時客戶資料平台中的調查擴充功能。 如需擴充功能的詳細資訊，請參閱 [Adobe Exchange的擴充功能頁面](https://exchange.adobe.com/experiencecloud.details.90096.questionpro-surveys.html)。
+[!DNL QuestionPro Intercept Surveys] 是即時客戶資料平台中的調查擴充功能。 如需擴充功能的詳細資訊，請參閱 [Adobe Exchange的擴充功能頁面](https://exchange.adobe.com/experiencecloud.details.90096.questionpro-surveys.html)。
 
 此目的地是Adobe Experience Platform Launch擴充功能。 如需Platform Launch擴充功能如何在Adobe即時CDP中運作的詳細資訊，請參閱 [Adobe Experience Platform Launch擴充功能總覽](/help/rtcdp/destinations/experience-platform-launch-extensions.md)。
 
