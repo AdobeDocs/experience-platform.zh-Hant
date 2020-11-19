@@ -2,12 +2,12 @@
 keywords: livefyre;livefyre extension
 title: Adobe Livefyre擴充功能
 seo-title: Adobe Livefyre擴充功能
-description: Adobe Livefyre擴充功能是Adobe即時客戶資料平台中的社交目的地。 如需擴充功能的詳細資訊，請參閱Adobe Exchange的擴充功能頁面。
-seo-description: Adobe Livefyre擴充功能是Adobe即時客戶資料平台中的社交目的地。 如需擴充功能的詳細資訊，請參閱Adobe Exchange的擴充功能頁面。
+description: Adobe Livefyre擴充功能是即時客戶資料平台中的社交目的地。 如需擴充功能的詳細資訊，請參閱Adobe Exchange的擴充功能頁面。
+seo-description: Adobe Livefyre擴充功能是即時客戶資料平台中的社交目的地。 如需擴充功能的詳細資訊，請參閱Adobe Exchange的擴充功能頁面。
 translation-type: tm+mt
-source-git-commit: d9bf874dbfcc00c0a6e267f1a2e96f1223054825
+source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
 workflow-type: tm+mt
-source-wordcount: '543'
+source-wordcount: '540'
 ht-degree: 6%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 6%
 
 Adobe Livefyre可讓您探索、組織並發佈使用者產生的內容，以建立真實且高度個人化的體驗。
 
-Adobe Livefyre是Adobe即時客戶資料平台的社交擴充功能。 如需擴充功能的詳細資訊，請參閱 [Adobe Exchange的擴充功能頁面](https://exchange.adobe.com/experiencecloud.details.100464.html)。
+Adobe Livefyre是即時客戶資料平台中的社交擴充功能。 如需擴充功能的詳細資訊，請參閱 [Adobe Exchange的擴充功能頁面](https://exchange.adobe.com/experiencecloud.details.100464.html)。
 
 此目的地是分 [!DNL Adobe Experience Platform Launch] 機。 如需Adobe Real- [!DNL Platform Launch] time CDP擴充功能如何運作的詳細資訊，請參閱 [Experience Platform Launch擴充功能總覽](/help/rtcdp/destinations/experience-platform-launch-extensions.md)。
 
