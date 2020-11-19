@@ -1,13 +1,13 @@
 ---
 keywords: streaming;
-title: HTTP目的地是Adobe即時客戶資料平台目的地，可協助您將描述檔資料傳送至協力廠商HTTP端點。
-seo-title: HTTP目的地是Adobe即時客戶資料平台目的地，可協助您將描述檔資料傳送至協力廠商HTTP端點。
-description: HTTP目的地是Adobe即時客戶資料平台目的地，可協助您將描述檔資料傳送至協力廠商HTTP端點。
-seo-description: HTTP目的地是Adobe即時客戶資料平台目的地，可協助您將描述檔資料傳送至協力廠商HTTP端點。
+title: HTTP目的地是即時客戶資料平台目的地，可協助您將描述檔資料傳送至協力廠商HTTP端點。
+seo-title: HTTP目的地是即時客戶資料平台目的地，可協助您將描述檔資料傳送至協力廠商HTTP端點。
+description: HTTP目的地是即時客戶資料平台目的地，可協助您將描述檔資料傳送至協力廠商HTTP端點。
+seo-description: HTTP目的地是即時客戶資料平台目的地，可協助您將描述檔資料傳送至協力廠商HTTP端點。
 translation-type: tm+mt
-source-git-commit: f4840f028bb855e79c0f2ae5c82bc38906a7aaec
+source-git-commit: 6eabcd70b133051205b669253f280cb92c24412f
 workflow-type: tm+mt
-source-wordcount: '572'
+source-wordcount: '568'
 ht-degree: 2%
 
 ---
@@ -21,9 +21,9 @@ ht-degree: 2%
 
 ## 概述 {#overview}
 
-目 [!DNL HTTP] 標是串流目 [!DNL Adobe Real-Time Customer Data Platform] 標，可協助您將描述檔資料傳送至協力廠商端 [!DNL HTTP] 點。
+目 [!DNL HTTP] 標是串流目 [!DNL Real-time Customer Data Platform] 標，可協助您將描述檔資料傳送至協力廠商端 [!DNL HTTP] 點。
 
-若要傳送描述檔資 [!DNL HTTP] 料至端點，您必須先連線至中的目標 [[!DNL Adobe Real-Time Customer Data Platform]](#connect-destination)。
+若要傳送描述檔資 [!DNL HTTP] 料至端點，您必須先連線至中的目標 [[!DNL Real-time Customer Data Platform]](#connect-destination)。
 
 ## 使用案例 {#use-cases}
 
