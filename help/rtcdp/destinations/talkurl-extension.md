@@ -2,12 +2,12 @@
 keywords: Talk URL Inbox;talk url inbox;Talk URL inbox;talk URL inbox;talk url;Talk URL;Talk url
 title: 通話URL收件匣副檔名
 seo-title: 通話URL收件匣
-description: 「交談URL收件匣」副檔名是Adobe即時客戶資料平台中客戶目的地的聲音。 如需擴充功能的詳細資訊，請參閱Adobe Exchange的擴充功能頁面。
-seo-description: 「交談URL收件匣」副檔名是Adobe即時客戶資料平台中客戶目的地的聲音。 如需擴充功能的詳細資訊，請參閱Adobe Exchange的擴充功能頁面。
+description: 「通話URL收件匣」副檔名是即時客戶資料平台中客戶目的地的聲音。 如需擴充功能的詳細資訊，請參閱Adobe Exchange的擴充功能頁面。
+seo-description: 「通話URL收件匣」副檔名是即時客戶資料平台中客戶目的地的聲音。 如需擴充功能的詳細資訊，請參閱Adobe Exchange的擴充功能頁面。
 translation-type: tm+mt
-source-git-commit: 511d64d1555151a70bdb9f71e4b50ec461c8a2e7
+source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
 workflow-type: tm+mt
-source-wordcount: '584'
+source-wordcount: '581'
 ht-degree: 6%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 6%
 
 從您的網頁訪客接收語音留言。 包含代管UI和雲端機器學習功能，可將語音訊息轉錄為文字見解。
 
-[!DNL Talk URL Inbox] 是Adobe即時客戶資料平台中客戶延伸功能的聲音。 如需擴充功能的詳細資訊，請參閱 [Adobe Exchange的擴充功能頁面](https://exchange.adobe.com/experiencecloud.details.100583.html)。
+[!DNL Talk URL Inbox] 是即時客戶資料平台中客戶擴充功能的聲音。 如需擴充功能的詳細資訊，請參閱 [Adobe Exchange的擴充功能頁面](https://exchange.adobe.com/experiencecloud.details.100583.html)。
 
 此目的地是Adobe Experience Platform Launch擴充功能。 如需Platform Launch擴充功能如何在Adobe即時CDP中運作的詳細資訊，請參閱 [Adobe Experience Platform Launch擴充功能總覽](/help/rtcdp/destinations/experience-platform-launch-extensions.md)。
 
