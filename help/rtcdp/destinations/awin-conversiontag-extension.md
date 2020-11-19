@@ -2,12 +2,12 @@
 keywords: Awin Advertiser Conversion Tag extension;conversion tag;Awin;awin;AWIN
 title: Awin Advertiser轉換標籤擴充功能
 seo-title: Awin Advertiser轉換標籤擴充功能
-description: Awin廣告商轉換標籤擴充功能是Adobe即時客戶資料平台中的廣告目的地。 如需擴充功能的詳細資訊，請參閱Adobe Exchange的擴充功能頁面。
-seo-description: Awin廣告商轉換標籤擴充功能是Adobe即時客戶資料平台中的廣告目的地。 如需擴充功能的詳細資訊，請參閱Adobe Exchange的擴充功能頁面。
+description: Awin廣告商轉換標籤擴充功能是即時客戶資料平台中的廣告目的地。 如需擴充功能的詳細資訊，請參閱Adobe Exchange的擴充功能頁面。
+seo-description: Awin廣告商轉換標籤擴充功能是即時客戶資料平台中的廣告目的地。 如需擴充功能的詳細資訊，請參閱Adobe Exchange的擴充功能頁面。
 translation-type: tm+mt
-source-git-commit: d9bf874dbfcc00c0a6e267f1a2e96f1223054825
+source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
 workflow-type: tm+mt
-source-wordcount: '571'
+source-wordcount: '568'
 ht-degree: 4%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 4%
 
 轉換標籤是AWIN.Tracking.Sale JavaScript物件的宣告，會在確認頁面上完成，以指示Mastertag已進行轉換。 然後，它會執行必要的追蹤請求。
 
-Awin Advertiser Conversion Tag是Adobe即時客戶資料平台中的廣告延伸。 如需擴充功能的詳細資訊，請參閱 [Adobe Exchange的擴充功能頁面](https://exchange.adobe.com/experiencecloud.details.103240.awin-conversion-tag.html)。
+Awin Advertiser Conversion Tag是即時客戶資料平台中的廣告擴充功能。 如需擴充功能的詳細資訊，請參閱 [Adobe Exchange的擴充功能頁面](https://exchange.adobe.com/experiencecloud.details.103240.awin-conversion-tag.html)。
 
 此目的地是分 [!DNL Adobe Experience Platform Launch] 機。 如需Adobe Real- [!DNL Platform Launch] time CDP擴充功能如何運作的詳細資訊，請參閱 [Experience Platform Launch擴充功能總覽](/help/rtcdp/destinations/experience-platform-launch-extensions.md)。
 
