@@ -5,9 +5,9 @@ description: 瞭解如何使用Adobe Target使用Experience Platform Web SDK來�
 seo-description: 瞭解如何使用Adobe Target使用Experience Platform Web SDK來呈現個人化內容
 keywords: target;adobe target;xdm views; views;single page applications;SPA;SPA lifecycle;client-side;AB testing;AB;Experience targeting;XT;VEC
 translation-type: tm+mt
-source-git-commit: 8aeeef09602386f219fd8284b332469c04e88ffb
+source-git-commit: 0928dd3eb2c034fac14d14d6e53ba07cdc49a6ea
 workflow-type: tm+mt
-source-wordcount: '1671'
+source-wordcount: '1669'
 ht-degree: 14%
 
 ---
@@ -63,20 +63,20 @@ As the customer becomes more interested in the products that the business is sel
 
 XDM檢視可在Adobe Target中運用，讓行銷人員透過Visual Experience Composer在SPA上執行A/B和XT測試。 這需要執行下列步驟，才能完成一次性開發人員設定：
 
-1. 安裝 [Adobe Experience Platform Web SDK](../../fundamentals/installing-the-sdk.md)
+1. Install [Adobe Experience Platform Web SDK](../../fundamentals/installing-the-sdk.md)
 2. 確定您要個人化的單頁應用程式中的所有XDM視圖。
 3. 定義XDM視圖後，為了提供AB或XT VEC活動，在單頁應用程式中實 `sendEvent()` 施 `renderDecisions` 設 `true` 置為的函式和相應的XDM視圖。 必須傳入XDM視圖 `xdm.web.webPageDetails.viewName`。 此步驟可讓行銷人員運用Visual Experience Composer來啟動這些XDM的A/B和XT測試。
 
    ```javascript
-   alloy("sendEvent",  { 
-     "renderDecisions": true, 
-     "xdm": { 
-       "web": { 
-         "webPageDetails": { 
-            "viewName":"home" 
-         }      
+   alloy("sendEvent", { 
+     "renderDecisions": true, 
+     "xdm": { 
+       "web": { 
+         "webPageDetails": { 
+         "viewName":"home" 
+         }
        } 
-     } 
+     } 
    });
    ```
 
@@ -96,7 +96,7 @@ XDM檢視可在Adobe Target中運用，讓行銷人員透過Visual Experience Co
 
 要在整個主站點上運行A/B測試， `sendEvent()` 必須調用XDM，其 `viewName` 設定為 `home`:
 
-```javascript
+```jsx
 function onViewChange() { 
   
   var viewName = window.location.hash; // or use window.location.pathName if router works on path and not hash 
@@ -109,14 +109,15 @@ function onViewChange() {
     viewName = viewName.substr(1); 
   }
    
-  alloy("sendEvent",  { 
-    "renderDecisions": true, 
+  alloy("sendEvent", { 
+    "renderDecisions": true, 
     "xdm": { 
       "web": { 
         "webPageDetails": { 
           "viewName":"home" 
         } 
       } 
+    }
   }); 
 } 
 
@@ -137,18 +138,18 @@ history.listen(onViewChange);
 
 ![](assets/use-case-2.png)
 
-```javascript
+```jsx
 function onViewChange(viewName) { 
 
-  alloy("sendEvent",  { 
-    "renderDecisions": true, 
+  alloy("sendEvent", { 
+    "renderDecisions": true, 
     "xdm": { 
-       "web": { 
+      "web": { 
         "webPageDetails": { 
           "viewName": viewName
         }
       } 
-    } 
+    } 
   }); 
 } 
 
@@ -177,17 +178,16 @@ The marketing team want to run an A/B test to see whether changing the color of 
 
 若要根據所選的傳送偏好設定個人化網站上的內容，可針對每個傳送偏好設定建立「檢視」。 選取「 **一般傳送** 」時，「檢視」可命名為「checkout-normal」。 If **Express Delivery** is selected, the View can be named &quot;checkout-express&quot;.
 
-```javascript
+```jsx
 function onViewChange(viewName) { 
-
-  alloy("sendEvent",  { 
-    "renderDecisions": true, 
+  alloy("sendEvent", { 
+    "renderDecisions": true, 
     "xdm": { 
       "web": { 
         "webPageDetails": { 
-          "viewName": viewName   
+          "viewName": viewName 
         }
-      }
+      }
     }
   }); 
 } 
@@ -219,7 +219,7 @@ class Checkout extends Component {
 
 ## 使用Visual Experience Composer進行SPA
 
-當您定義完XDM視圖並實作這些XDM視圖時，`sendEvent()` VEC將能夠檢測這些視圖，並允許用戶為A/B或XT活動建立操作和修改。
+當您定義完XDM視圖並實作這些XDM視圖時， `sendEvent()` VEC將能夠檢測這些視圖，並允許用戶為A/B或XT活動建立操作和修改。
 
 >[!NOTE]
 >
