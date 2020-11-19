@@ -5,9 +5,9 @@ description: 瞭解如何使用Experience Platform Web SDK與Adobe Audience Mana
 seo-description: 瞭解如何使用Experience Platform Web SDK與Adobe Audience Manager同步身分
 keywords: audience manager;aam;identities;sync identities;namespace;
 translation-type: tm+mt
-source-git-commit: 290792cd507248c41690c493cc18daaab869db50
+source-git-commit: 0928dd3eb2c034fac14d14d6e53ba07cdc49a6ea
 workflow-type: tm+mt
-source-wordcount: '205'
+source-wordcount: '203'
 ht-degree: 0%
 
 ---
