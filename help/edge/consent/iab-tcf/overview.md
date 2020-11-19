@@ -5,9 +5,9 @@ description: 瞭解如何使用Experience Platform Web SDK支援IAB TCF 2.0同�
 seo-description: 瞭解如何使用Experience Platform Web SDK支援IAB TCF 2.0同意偏好設定
 keywords: consent;setConsent;Profile Privacy Mixin;Experience Event Privacy Mixin;Privacy Mixin;IAB TCF 2.0;Real-time CDP;Real-time Customer Data Profile
 translation-type: tm+mt
-source-git-commit: f86f7483e7e78edf106ddd34dc825389dadae26a
+source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
 workflow-type: tm+mt
-source-wordcount: '938'
+source-wordcount: '937'
 ht-degree: 0%
 
 ---
@@ -30,7 +30,7 @@ Adobe Experience Platform Web SDK(AEP Web SDK)支援Interactive Advertising Bure
 
 ## 即時客戶資料平台整合
 
-Adobe即時客戶資料平台（即時CDP）以Adobe Experience Platform為基礎，可協助您整合來自多個企業來源的已知和匿名資料。 這可讓您建立客戶個人檔案，以便即時跨所有通道和裝置提供個人化的客戶體驗。 若要透過AEP Web SDK將同意資料傳送至即時CDP，請執行下列動作：
+即時客戶資料平台（即時CDP）以Adobe Experience Platform為基礎，可協助您整合來自多個企業來源的已知和匿名資料。 這可讓您建立客戶個人檔案，以便即時跨所有通道和裝置提供個人化的客戶體驗。 若要透過AEP Web SDK將同意資料傳送至即時CDP，請執行下列動作：
 
 - 基於類的資料集， [!DNL XDM Individual Profile] 可在中使用， [!DNL Real-time Customer Profile]並帶有配置檔案隱私混合。
 - 使用即時CDP和上述配置檔案資料集設定的邊緣配置。
