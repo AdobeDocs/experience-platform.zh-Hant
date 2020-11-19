@@ -5,9 +5,9 @@ doc-type: release notes
 last-update: November 10, 2020
 author: crhoades, ens25212
 translation-type: tm+mt
-source-git-commit: 5ff73aa1745e78f0026ada2c66908888be5f4498
+source-git-commit: ade9da107ee6dd100a33a7e7e9a20b4335721e0a
 workflow-type: tm+mt
-source-wordcount: '2086'
+source-wordcount: '2078'
 ht-degree: 3%
 
 ---
@@ -213,7 +213,7 @@ Adobe Experience Platform可以從外部來源擷取資料，同時讓您使用�
 | 刪除連接 | 現在，可以使用 [!DNL Flow Service] API和UI刪除包含錯誤或已變為不必要的批次連接。 如需詳細資訊，請參閱教學課程 [，說明如何使用Flow Service API刪除連線](../../sources/tutorials/api/delete.md) , [以及如何使用UI刪除帳戶](../../sources/tutorials/ui/delete-accounts.md)。 |
 | 分層映射 | 您可以在資料擷取程式期間預覽階層式來源檔案，例如JSON或Parce。 如需詳細資訊，請 [參閱UI中有關為雲端儲存連接器設定資料流的教學課程](../../sources/tutorials/ui/dataflow/batch/cloud-storage.md) 。 |
 | 串流來源中對應的API支援 | 您現在可以使用API來執行串流來源的對應功能。 |
-| API支援雲端儲存來源的自訂分隔字元 | 您現在可以使用雲端儲存來源收集非CSV分隔的檔案。 您可以使用任何單一欄分隔字元，例如制表符、逗號、管道、分號或雜湊，以任何格式收集平面檔案。 如果未提供，則值預設為逗號。 |
+| API支援雲端儲存來源的自訂分隔字元 | 您現在可以使用雲端儲存來源收集非CSV分隔的檔案。 您可以使用任何單一欄分隔字元，例如制表符、逗號、管道、分號或雜湊，以任何格式收集平面檔案。 |
 | Adobe Audience Manager連接器的沙盒支援 | Audience Manager連接器現在可感知沙盒。 使用者可以啟用連接器，將Audience Manager資料集路由至其選擇的沙盒（包括非生產沙盒）。 此設定限制為每個IMS組織一個沙盒。 |
 | UX改進 | 現在可透過來源目錄存取檔案擷取。 |
 
