@@ -2,12 +2,12 @@
 keywords: Nielsen VideoJS Player Handler;nielsen video js player;nielsen videojs player;Nielsen;nielsen;Nielsen videojs player;Nielsen Digital SDK;nielsen digital sdk
 title: Nielsen VideoJS播放器處理常式擴充功能
 seo-title: Nielsen VideoJS播放器處理常式擴充功能
-description: The Nielsen VideoJS播放器處理常式擴充功能是Adobe即時客戶資料平台中的分析目的地。 如需擴充功能的詳細資訊，請參閱Adobe Exchange的擴充功能頁面。
-seo-description: Nielsen VideoJS播放器處理常式擴充功能是Adobe即時客戶資料平台中的分析目的地。 如需擴充功能的詳細資訊，請參閱Adobe Exchange的擴充功能頁面。
+description: Nielsen VideoJS播放器處理常式擴充功能是即時客戶資料平台中的分析目的地。 如需擴充功能的詳細資訊，請參閱Adobe Exchange的擴充功能頁面。
+seo-description: Nielsen VideoJS播放器處理常式擴充功能是即時客戶資料平台中的分析目的地。 如需擴充功能的詳細資訊，請參閱Adobe Exchange的擴充功能頁面。
 translation-type: tm+mt
-source-git-commit: 511d64d1555151a70bdb9f71e4b50ec461c8a2e7
+source-git-commit: 6eabcd70b133051205b669253f280cb92c24412f
 workflow-type: tm+mt
-source-wordcount: '644'
+source-wordcount: '641'
 ht-degree: 4%
 
 ---
@@ -23,7 +23,7 @@ DCR:提供非線性數位內容（包括含廣告的內容）的日常測量解�
 
 DTVR:這說明參與節目來源的桌上型電腦和行動裝置上發生的線性電視檢視。 這是MRC針對在電腦和行動裝置上檢視的節目，對電視觀眾評估所做貢獻的第一個認證解決方案。
 
-[!DNL Nielsen VideoJS Player Handler] 是Adobe即時客戶資料平台中的分析擴充功能。 如需擴充功能的詳細資訊，請參閱 [Adobe Exchange的擴充功能頁面](https://exchange.adobe.com/experiencecloud.details.101361.nielsen-digital-sdk-extension.html)。
+[!DNL Nielsen VideoJS Player Handler] 是即時客戶資料平台的分析擴充功能。 如需擴充功能的詳細資訊，請參閱 [Adobe Exchange的擴充功能頁面](https://exchange.adobe.com/experiencecloud.details.101361.nielsen-digital-sdk-extension.html)。
 
 此目的地是Adobe Experience Platform Launch擴充功能。 如需Platform Launch擴充功能如何在Adobe即時CDP中運作的詳細資訊，請參閱 [Adobe Experience Platform Launch擴充功能總覽](/help/rtcdp/destinations/experience-platform-launch-extensions.md)。
 
