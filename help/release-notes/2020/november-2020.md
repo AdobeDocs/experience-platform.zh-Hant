@@ -5,9 +5,9 @@ doc-type: release notes
 last-update: November 10, 2020
 author: crhoades, ens25212
 translation-type: tm+mt
-source-git-commit: ade9da107ee6dd100a33a7e7e9a20b4335721e0a
+source-git-commit: 5aa8dbcd85fa506f90515ce3e01d35993dd99c10
 workflow-type: tm+mt
-source-wordcount: '2078'
+source-wordcount: '2077'
 ht-degree: 3%
 
 ---
@@ -107,7 +107,7 @@ Data Science Workspace使用機器學習和人工智慧，從您的資料中建�
 
 ## [!DNL Destinations] 服務 {#destinations}
 
-在 [Adobe即時客戶資料平台中](../../rtcdp/overview.md)，目標是與目標平台預先建立的整合，以順暢的方式將資料啟動給這些合作夥伴。
+在即 [時客戶資料平台中](../../rtcdp/overview.md)，目標是與目標平台預先建立的整合，以順暢的方式將資料啟動給這些合作夥伴。
 
 **新目標**
 
