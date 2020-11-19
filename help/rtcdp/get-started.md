@@ -1,23 +1,23 @@
 ---
 keywords: RTCDP;CDP;Real-time Customer Data Platform;real time customer data platform;real time cdp;cdp;rtcdp
-title: Adobe即時客戶資料平台快速入門
-seo-title: Adobe即時客戶資料平台快速入門
-description: Adobe 即時客戶資料平台的範例案例
-seo-description: Adobe 即時客戶資料平台的範例案例
+title: 即時客戶資料平台快速入門
+seo-title: 即時客戶資料平台快速入門
+description: ' 即時客戶資料平台的範例案例'
+seo-description: ' 即時客戶資料平台的範例案例'
 translation-type: tm+mt
-source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
+source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
 workflow-type: tm+mt
-source-wordcount: '2326'
+source-wordcount: '2318'
 ht-degree: 1%
 
 ---
 
 
-# Adobe即時客戶資料平台快速入門
+# 即時客戶資料平台快速入門
 
-本快速入門手冊引導您完成Adobe即時客戶資料平台（即時CDP）的範例實作。 您可以在設定自己的實作時，將它當做範例。 雖然本指南會顯示特定範例，但會連結至您建立設定時可使用的其他資訊。
+本入門指南引導您完成即時客戶資料平台（即時CDP）的示例實施。 您可以在設定自己的實作時，將它當做範例。 雖然本指南會顯示特定範例，但會連結至您建立設定時可使用的其他資訊。
 
-此範例說明Adobe Experience Platform所提供的Adobe即時客戶資料平台對下列各項的強大功能：
+此範例說明Adobe Experience Platform提供的即時客戶資料平台，對下列各項的功能：
 
 * 從多個來源收錄資料
 * 將它們合併為單一 [!DNL real-time customer profile]
@@ -121,7 +121,7 @@ Adobe Target採用Adobe Sensei支援的個人化功能，可讓她看到相關�
 
 莎拉分心了，離開了網站，結束了她的工作。 Luma可以使用Adobe Experience Platform中的資料，協助她回到網站。
 
-Adobe Real-time Customer Data Platform採用Adobe Experience Platform，專為客戶體驗管理而打造。 它可讓組織：
+Adobe Experience Platform提供即時客戶資料平台，專為客戶體驗管理而打造。 它可讓組織：
 
 * 簡化資料整合與啟動
 * 控制已知和未知的資料使用
@@ -177,7 +177,7 @@ Luma團隊在單一位置擁有所有行為和客戶資料。
 
 ### 為使用策略的收錄資料加標籤
 
-Luma有許多內部政策限制使用特定種類收集到的資訊，而且還必須遵守與資料使用相關的法律和隱私權相關的顧慮。 使用Adobe Experience Platform，可 [!DNL Data Governance]將預先定義的資料使用標籤套用至資料集（以及這些資料集中的特定欄位），讓Luma根據特定的使用限制來分類其資料。
+Luma有許多內部政策限制使用特定種類收集到的資訊，而且還必須遵守與資料使用相關的法律和隱私權相關的顧慮。 使用Adobe Experience Platform，可 [!DNL Data Governance]將預先定義的資料使用標籤套用至資料集（以及這些資料集內的特定欄位），讓Luma根據特定的使用限制來分類其資料。
 
 ![](assets/governance-labels.png)
 
