@@ -5,27 +5,27 @@ doc-type: release notes
 last-update: September 8, 2020
 author: crhoades, ens25212
 translation-type: tm+mt
-source-git-commit: 9436779e91bf82382056acd526671b30b55e11d4
+source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
 workflow-type: tm+mt
-source-wordcount: '883'
-ht-degree: 4%
+source-wordcount: '862'
+ht-degree: 6%
 
 ---
 
 
 # Adobe Experience Platform 發行說明
 
-**發行日期: 2020 年 9 月 9 日**
+**發行日期：2020 年 9 月 9 日**
 
-Adobe Experience Platform現有功能的更新：
+Adobe Experience Platform 現有功能更新：
 
-- [[!DNL資料治理]](#governance)
-- [[!DNL目標]](#destinations)
-- [[!DNL可觀測性見解]](#observability)
-- [[!DNL隱私服務]](#privacy)
-- [[!DNL即時客戶基本資料]](#profile)
-- [[!DNL分段服務]](#segmentation)
-- [[!DNL源]](#sources)
+- [[!DNL Data Governance]](#governance)
+- [[!DNL Destinations]](#destinations)
+- [[!DNL Observability Insights]](#observability)
+- [[!DNL Privacy Service]](#privacy)
+- [[!DNL Real-time Customer Profile]](#profile)
+- [[!DNL Segmentation Service]](#segmentation)
+- [[!DNL Sources]](#sources)
 
 ## [!DNL Data Governance] {#governance}
 
@@ -41,7 +41,7 @@ Adobe Experience Platform資料治理是一系列策略和技術，用於管理�
 
 ## 目的地 {#destinations}
 
-在 [Adobe即時客戶資料平台中](../../rtcdp/overview.md)，目標是與目標平台預先建立的整合，以順暢的方式將資料啟動給這些合作夥伴。
+在即 [時客戶資料平台中](../../rtcdp/overview.md)，目標是與目標平台預先建立的整合，以順暢的方式將資料啟動給這些合作夥伴。
 
 **新功能**
 
@@ -59,7 +59,7 @@ Adobe Experience Platform資料治理是一系列策略和技術，用於管理�
 
 | 功能 | 說明 |
 | --- | --- |
-| Adobe I/O活動通知 | [!DNL Observability Insights] 運用Adobe I/O Events為數種Experience Platform服務建立事件通知。 通知負載會傳送至已設定的網頁掛接，然後您便可使用此網頁掛接來自動化下遊程式。 如需詳細 [資訊，請參閱](../../observability/notifications/overview.md) 「通知概觀」。 |
+| Adobe I/O活動通知 | [!DNL Observability Insights] 運用Adobe I/O Events為數種Experience Platform服務建立事件通知。 通知負載會傳送至已設定的網頁掛接，然後您便可使用此網頁掛接來自動化下遊程式。 See the [notifications overview](../../observability/notifications/overview.md) for more information. |
 
 如需服務 [[!DNL Observability Insights] 的詳細資訊](../../observability/home.md) ，請參閱總覽。
 
@@ -85,7 +85,7 @@ Adobe Experience Platform可讓您為客戶推動協調、一致且相關的體�
 
 有關使用資 [!DNL Real-time Customer Profile]料的更多資訊，包括教學課程和最佳實務，請 [!DNL Profile] 閱讀即時客 [戶資料概觀](../../profile/home.md)。
 
-## 區段服務 {#segmentation}
+## 劃分服務 {#segmentation}
 
 Adobe Experience Platform Segmentation Service提供使用者介面和REST風格的API，可讓您建立細分並從資料中產生受 [!DNL Real-time Customer Profile] 眾。 這些區段是集中設定並維護的， [!DNL Platform]讓任何Adobe應用程式都可輕鬆存取。
 
