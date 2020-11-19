@@ -2,12 +2,12 @@
 keywords: InMoment;inmoment;Inmoment;launch integration
 title: InMoment擴充功能
 seo-title: InMoment擴充功能
-description: InMoment擴充功能是Adobe即時客戶資料平台中的調查目的地。 如需擴充功能的詳細資訊，請參閱Adobe Exchange的擴充功能頁面。
-seo-description: InMoment擴充功能是Adobe即時客戶資料平台中的調查目的地。 如需擴充功能的詳細資訊，請參閱Adobe Exchange的擴充功能頁面。
+description: InMoment擴充功能是即時客戶資料平台中的調查目的地。 如需擴充功能的詳細資訊，請參閱Adobe Exchange的擴充功能頁面。
+seo-description: InMoment擴充功能是即時客戶資料平台中的調查目的地。 如需擴充功能的詳細資訊，請參閱Adobe Exchange的擴充功能頁面。
 translation-type: tm+mt
-source-git-commit: 511d64d1555151a70bdb9f71e4b50ec461c8a2e7
+source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
 workflow-type: tm+mt
-source-wordcount: '579'
+source-wordcount: '576'
 ht-degree: 6%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 6%
 
 Launch Integration [!DNL InMoment] 可讓您透過Digital Intercept產品快速輕鬆地啟用線上意見回應。 在應用程式中，您可透過CXI雲端管理員來設定和管理截取，讓CX管理員更能控制其程式。
 
-[!DNL InMoment] 是Adobe即時客戶資料平台中的調查擴充功能。 如需擴充功能的詳細資訊，請參閱 [Adobe Exchange的擴充功能頁面](https://exchange.adobe.com/experiencecloud.details.100847.html)。
+[!DNL InMoment] 是即時客戶資料平台中的調查擴充功能。 如需擴充功能的詳細資訊，請參閱 [Adobe Exchange的擴充功能頁面](https://exchange.adobe.com/experiencecloud.details.100847.html)。
 
 此目的地是Adobe Experience Platform Launch擴充功能。 如需Platform Launch擴充功能如何在Adobe即時CDP中運作的詳細資訊，請參閱 [Adobe Experience Platform Launch擴充功能總覽](/help/rtcdp/destinations/experience-platform-launch-extensions.md)。
 
