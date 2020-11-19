@@ -2,12 +2,12 @@
 keywords: destinations;destination;destination types
 title: 目標類型和類別
 seo-title: 目標類型和類別
-description: '在Adobe即時客戶資料平台中，描述檔／區段匯出目的地會擷取事件資料，並與其他資料來源結合，套用區段，以及將區段和合格的描述檔匯出至目的地。 Experience Platform Launch擴充功能可將原始事件資料轉送至數種目的地。 '
-seo-description: 在Adobe即時客戶資料平台中，描述檔／區段匯出目的地會擷取事件資料，並與其他資料來源結合，套用區段，以及將區段和合格的描述檔匯出至目的地。 Experience Platform Launch擴充功能可將原始事件資料轉送至數種目的地。
+description: '在即時客戶資料平台中，描述檔／區段匯出目的地會擷取事件資料，並與其他資料來源結合，套用區段，並將區段和合格的描述檔匯出至目標。 Experience Platform Launch擴充功能可將原始事件資料轉送至數種目的地。 '
+seo-description: 在即時客戶資料平台中，描述檔／區段匯出目的地會擷取事件資料，並與其他資料來源結合，套用區段，並將區段和合格的描述檔匯出至目標。 Experience Platform Launch擴充功能可將原始事件資料轉送至數種目的地。
 translation-type: tm+mt
-source-git-commit: e6276eac05f0a20a668051034e83831002a464f0
+source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
 workflow-type: tm+mt
-source-wordcount: '591'
+source-wordcount: '586'
 ht-degree: 0%
 
 ---
@@ -15,11 +15,11 @@ ht-degree: 0%
 
 # 目標類型和類別
 
-閱讀本頁以瞭解Adobe即時客戶資料平台目標的不同類型和類別。
+閱讀本頁以瞭解即時客戶資料平台目標的不同類型和類別。
 
 ## 目標類型
 
-在Adobe即時客戶資料平台中，我們區分兩種目標類型——連線和擴充功能。 連線目的地有兩種類型：描述檔匯出目的地和區段匯出目的地。
+在即時客戶資料平台中，我們區分兩種目標類型——連線和擴充功能。 連線目的地有兩種類型：描述檔匯出目的地和區段匯出目的地。
 
 ![目標類型](/help/rtcdp/destinations/assets/types-of-destinations.png)
 
@@ -27,7 +27,7 @@ ht-degree: 0%
 
 ### 連線 {#connections}
 
-**[!UICONTROL Adobe即時客戶資]** 料平台中的描述檔匯出和區段匯出目的地會擷取事件資料，並將其與其他資料來源結合以建立即時客戶描述檔 ****[](/help/profile/home.md)，套用區段，並將區段和合格描述檔匯出至目的地。
+**[!UICONTROL 即時客戶資料平台中的描述檔匯出和]** 區段匯出目的地會擷取事件資料，並將其與其他資料來源結合以建立即時客戶描述檔 ****[](/help/profile/home.md)，套用區段，並將區段和合格描述檔匯出至目的地。
 
 <br> 
 
