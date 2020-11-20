@@ -6,9 +6,9 @@ topic: overview
 type: Tutorial
 description: 本教程使用Flow Service API來引導您完成將Experience Platform連接到Amazon Kinesis帳戶的步驟。
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 967585ba078edd13f90c820f6b1a0490140ca0cf
 workflow-type: tm+mt
-source-wordcount: '540'
+source-wordcount: '534'
 ht-degree: 2%
 
 ---
@@ -41,7 +41,7 @@ ht-degree: 2%
 | ---------- | ----------- |
 | `accessKeyId` | 您帳戶的存取金鑰 [!DNL Kinesis] ID。 |
 | `secretKey` | 您帳戶的機密存取 [!DNL Kinesis] 金鑰。 |
-| `region` |  | 您帳戶的地 [!DNL Kinesis] 區。 |
+| `region` | 您帳戶的地 [!DNL Kinesis] 區。 |
 | `connectionSpec.id` | 連 [!DNL Kinesis] 接規範ID: `86043421-563b-46ec-8e6c-e23184711bf6` |
 
 有關這些值的詳細資訊，請參 [閱本Kinesis文檔](https://docs.aws.amazon.com/streams/latest/dev/getting-started.html)。
@@ -54,17 +54,17 @@ ht-degree: 2%
 
 若要呼叫API，您必 [!DNL Platform] 須先完成驗證教 [學課程](../../../../../tutorials/authentication.md)。 完成驗證教學課程後，將提供所有 [!DNL Experience Platform] API呼叫中每個必要標題的值，如下所示：
 
-* 授權：生產者 `{ACCESS_TOKEN}`
-* x-api-key: `{API_KEY}`
-* x-gw-ims-org-id: `{IMS_ORG}`
+* `Authorization: Bearer {ACCESS_TOKEN}`
+* `x-api-key: {API_KEY}`
+* `x-gw-ims-org-id: {IMS_ORG}`
 
 中的所有資 [!DNL Experience Platform]源（包括屬於的資源）都 [!DNL Flow Service]被隔離到特定的虛擬沙盒中。 對API的所 [!DNL Platform] 有請求都需要一個標題，該標題會指定要在中執行的操作的沙盒名稱：
 
-* x-sandbox-name: `{SANDBOX_NAME}`
+* `x-sandbox-name: {SANDBOX_NAME}`
 
 所有包含裝載(POST、PUT、PATCH)的請求都需要額外的媒體類型標題：
 
-* 內容類型： `application/json`
+* `Content-Type: application/json`
 
 ## 建立連線
 
@@ -123,4 +123,4 @@ curl -X POST \
 
 ## 後續步驟
 
-在本教學課程中，您已使用API建 [!DNL Amazon Kinesis] 立連線，並且已取得唯一ID作為回應內文的一部分。 您可以使用此連線ID來 [探索雲端儲存空間，使用Flow Service API](../../explore/cloud-storage.md)。
+在本教學課程中，您已使用API建 [!DNL Amazon Kinesis] 立連線，並且已取得唯一ID作為回應內文的一部分。 您可以使用此連線ID來 [使用Flow Service API收集串流資料](../../collect/streaming.md)。
