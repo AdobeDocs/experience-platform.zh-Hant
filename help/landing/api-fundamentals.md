@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Adobe Experience Platform API基礎知識
 topic: getting started
 translation-type: tm+mt
-source-git-commit: fac4b3d02a6e58a9d2c298f9b849fa7345e4fa93
+source-git-commit: b6d62492a60494deb848a88a9334e3ef20a93919
 workflow-type: tm+mt
 source-wordcount: '483'
 ht-degree: 2%
@@ -95,7 +95,7 @@ JSON指標是用於識別JSON檔案內特定值的標準字[串語法(RFC 6901](
 >
 >處理(XDM)描述 `xdm:sourceProperty` 符的 `xdm:destinationProperty` 和屬性時，必 [!DNL Experience Data Model] 須從「JSON指針」字串 `properties` 中排除任 **** 何索引鍵。 如需詳 [!DNL Schema Registry] 細資訊，請參閱描述 [符的](../xdm/api/descriptors.md) API開發人員指南子指南。
 
-## JSON修補程式
+## JSON修補程式 {#json-patch}
 
 API有許多PATCH作業會接 [!DNL Platform] 受JSON修補物件的要求負載。 JSON修補程式是用於描述JSON檔案變更的[標準格式(RFC 6902](https://tools.ietf.org/html/rfc6902))。 它可讓您定義JSON的部分更新，而不需在請求內文中傳送整個檔案。
 
