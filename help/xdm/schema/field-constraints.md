@@ -5,7 +5,7 @@ title: XDM欄位類型約束
 topic: overview
 description: XDM欄位類型限制的參考，包括可映射至的其他序列化格式，以及如何在API中定義您自己的欄位類型。
 translation-type: tm+mt
-source-git-commit: 19167f58fae6fac7d938deb74182d2e19960beb3
+source-git-commit: e92294b9dcea37ae2a4a398c9d3397dcf5aa9b9e
 workflow-type: tm+mt
 source-wordcount: '994'
 ht-degree: 6%
@@ -40,7 +40,7 @@ ht-degree: 6%
 | 日期——時間 | type:<br>stringformat:date-time<br>（RFC 3339，第5.6節） | INT64/TIMESTAMP_MILLIS | TimestampType | java.util.Date | java.util.Date | System.DateTime | 字串 | timestamp | 整數<br>(unix millis) | int64<br>(unix millis) |
 | 地圖 | 物件 | MAP注釋組<br><br>&lt;<span>key_type</span>>必須是映射值的STRING<br><br>&lt;<span>value_type</span>>類型 | MapType<br><br>&quot;keyType&quot; MUST be StringType<br><br>&quot;valueType&quot;是映射值的類型。 | java.util.Map | 地圖 | --- | 物件 | 物件 | 地圖 | map&lt;<span>key_type, value_type</span>> |
 
-## 在API中定義XDM欄位類型
+## 在API中定義XDM欄位類型 {#define-fields}
 
 XDM結構描述是使用 [JSON結構描述標準和基本欄位類型來定義的](https://json-schema.org/) ，並對欄位名稱加上其他限制，由執行 [!DNL Experience Platform]。 「方 [案註冊表API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml) 」允許您通過使用格式和可選約束定義其他欄位類型。 XDM欄位類型由欄位級屬性公開 `meta:xdmType`。
 
@@ -50,7 +50,7 @@ XDM結構描述是使用 [JSON結構描述標準和基本欄位類型來定義�
 
 下表概述了使用可選屬性定義標量欄位類型和更具體欄位類型的適當格式。 如需選用屬性和類型特定關鍵字的詳細資訊，請參閱 [JSON結構描述檔案](https://json-schema.org/understanding-json-schema/reference/type.html)。
 
-若要開始，請尋找所需的欄位類型，並使用提供的范常式式碼來建立您的API要求， [以建立混音](../api/create-mixin.md)[或建立資料類型](../api/create-data-type.md)。
+若要開始，請尋找所需的欄位類型，並使用提供的范常式式碼來建立您的API要求， [以建立混音](../api/mixins.md#create)[或建立資料類型](../api/data-types.md#create)。
 
 <table>
   <tr>
