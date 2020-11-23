@@ -5,9 +5,9 @@ title: '使用API管理資料使用標籤 '
 topic: developer guide
 description: 資料集服務API可讓您套用和編輯資料集的使用標籤。 它是Adobe Experience Platform資料目錄功能的一部分，但與管理資料集中繼資料的Catalog Service API不同。
 translation-type: tm+mt
-source-git-commit: 4096a7c1ec2b3640886d3a8c69b578987fe96dd4
+source-git-commit: 4b5e116d221e6689f95c8da0c54ef3af6827adc1
 workflow-type: tm+mt
-source-wordcount: '1007'
+source-wordcount: '1003'
 ht-degree: 3%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 3%
 
 本檔案提供如何使用 [!DNL Policy Service] API和 [!DNL Dataset Service] API管理資料使用標籤的步驟。
 
-[[!DNL 策略服務API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) 提供了幾個端點，允許您為組織建立和管理資料使用標籤。
+它提 [[!DNL Policy Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) 供數個端點，可讓您為組織建立和管理資料使用標籤。
 
 API可 [!DNL Dataset Service] 讓您套用和編輯資料集的使用標籤。 它是Adobe Experience Platform資料目錄功能的一部分，但與管理資料集中繼資料的 [!DNL Catalog Service] API不同。
 
@@ -327,7 +327,7 @@ curl -X POST \
 | 屬性 | 說明 |
 | --- | --- |
 | `labels` | 您要新增至資料集的資料使用標籤清單。 |
-| `optionalLabels` | 資料集中您想新增標籤的任何個別欄位清單。 此陣列中的每個項目都必須具有以下屬性： <br/><br/>`option`:包含欄位 [!DNL Experience Data Model] (XDM)屬性的對象。 需要下列三個屬性：<ul><li>id</code>:與欄位關聯的架構的URI</code> $id值。</li><li>contentType</code>:架構的內容類型和版本號。 這應採用XDM查閱請求的有效「接 <a href="../../xdm/api/look-up-resource.md">受」標題</a> 之一的形式。</li><li>schemaPath</code>:資料集結構中欄位的路徑。</li></ul>`labels`:您要新增至欄位的資料使用標籤清單。 |
+| `optionalLabels` | 資料集中您想新增標籤的任何個別欄位清單。 此陣列中的每個項目都必須具有以下屬性： <br/><br/>`option`:包含欄位 [!DNL Experience Data Model] (XDM)屬性的對象。 需要下列三個屬性：<ul><li>id</code>:與欄位關聯的架構的URI</code> $id值。</li><li>contentType</code>:架構的內容類型和版本號。 這應採用XDM查閱請求的有效「接 <a href="../../xdm/api/getting-started.md#accept">受」標題</a> 之一的形式。</li><li>schemaPath</code>:資料集結構中欄位的路徑。</li></ul>`labels`:您要新增至欄位的資料使用標籤清單。 |
 
 **回應**
 
