@@ -5,9 +5,9 @@ title: 架構註冊開發人員附錄
 description: 本文檔提供與使用方案註冊表API有關的補充資訊。
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 42d3bed14c5f926892467baeeea09ee7a140ebdc
+source-git-commit: 0b55f18eabcf1d7c5c233234c59eb074b2670b93
 workflow-type: tm+mt
-source-wordcount: '457'
+source-wordcount: '730'
 ht-degree: 0%
 
 ---
@@ -16,6 +16,43 @@ ht-degree: 0%
 # 附錄
 
 本檔案提供與使用 [!DNL Schema Registry] API相關的補充資訊。
+
+## 使用查詢參數 {#query}
+
+在列 [!DNL Schema Registry] 出資源時，支援對頁面使用查詢參數並篩選結果。
+
+>[!NOTE]
+>
+>組合多個查詢參數時，必須以&amp;符號(`&`)分隔。
+
+### 分頁 {#paging}
+
+最常用於分頁的查詢參數包括：
+
+| 參數 | 說明 |
+| --- | --- |
+| `start` | 指定列出的結果的開始位置。 此值可從清單回應 `_page.next` 的屬性中取得，並用於存取下一頁的結果。 如果 `_page.next` 值為null，則沒有其他頁面可用。 |
+| `limit` | 限制傳回的資源數。 範例： `limit=5` 將會傳回5個資源清單。 |
+| `orderby` | 依特定屬性排序結果。 範例： `orderby=title` 將按標題的升序排序結果(A-Z)。 在參 `-` 數值(`orderby=-title`)之前新增，將依標題以遞減順序(Z-A)排序項目。 |
+
+### 篩選 {#filtering}
+
+您可以使用參數來篩選結 `property` 果，該參數可用來對擷取的資源內的指定JSON屬性套用特定運算子。 支援的運算子包括：
+
+| 運算元 | 說明 | 範例 |
+| --- | --- | --- |
+| `==` | 依屬性是否等於提供的值來篩選。 | `property=title==test` |
+| `!=` | 依屬性是否不等於提供的值來篩選。 | `property=title!=test` |
+| `<` | 依屬性是否小於提供的值來篩選。 | `property=version<5` |
+| `>` | 依屬性是否大於提供的值來篩選。 | `property=version>5` |
+| `<=` | 依屬性是否小於或等於提供的值來篩選。 | `property=version<=5` |
+| `>=` | 依屬性大於或等於提供的值來篩選。 | `property=version>=5` |
+| `~` | 依屬性是否與提供的規則運算式相符來篩選。 | `property=title~test$` |
+| (None) | 僅聲明屬性名稱僅返回存在屬性的條目。 | `property=title` |
+
+>[!TIP]
+>
+>您可以使用參 `property` 數依其相容類別來篩選混音。 例如， `property=meta:intendedToExtend==https://ns.adobe.com/xdm/context/profile` 僅傳回與類相容的混 [!DNL XDM Individual Profile] 音。
 
 ## 相容模式
 
