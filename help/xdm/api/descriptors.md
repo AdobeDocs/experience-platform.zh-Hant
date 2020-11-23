@@ -2,18 +2,18 @@
 keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;;experience data model;Experience data model;Experience Data Model;data model;Data Model;schema registry;Schema Registry;descriptor;Descriptor;descriptors;Descriptors;identity;Identity;friendly name;Friendly name;alternatedisplayinfo;reference;Reference;relationship;Relationship
 solution: Experience Platform
 title: 描述符
-description: '結構定義資料實體的靜態視圖，但不提供基於這些結構的資料（例如資料集）如何彼此關聯的具體詳細資訊。 Adobe Experience Platform可讓您使用描述子來描述這些關係以及關於架構的其他解釋性中繼資料。 '
+description: 方案註冊表API中的／描述符端點允許您在體驗應用程式中以寫程式方式管理XDM描述符。
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: a362b67cec1e760687abb0c22dc8c46f47e766b7
+source-git-commit: e92294b9dcea37ae2a4a398c9d3397dcf5aa9b9e
 workflow-type: tm+mt
-source-wordcount: '1528'
+source-wordcount: '1569'
 ht-degree: 1%
 
 ---
 
 
-# 描述符
+# 描述符端點
 
 結構定義資料實體的靜態視圖，但不提供基於這些結構的資料（例如資料集）如何彼此關聯的具體詳細資訊。 Adobe Experience Platform可讓您使用描述子來描述這些關係以及關於架構的其他解釋性中繼資料。
 
@@ -21,15 +21,15 @@ ht-degree: 1%
 
 每個模式都可以應用一個或多個模式描述符實體。 每個模式描述符實體都包 `@type` 括描述符 `sourceSchema` 及其應用對象。 應用後，這些描述符將應用於使用模式建立的所有資料集。
 
-本文檔提供描述符的示例API調用，以及可用描述符的完整清單和定義每種類型所需的欄位。
+API中 `/descriptors` 的端點可 [!DNL Schema Registry] 讓您以程式設計方式管理體驗應用程式中的描述子。
 
->[!NOTE]
->
->描述符需要用唯一的「接受」標 `xed` 頭來替 `xdm`換，但其外觀與「接受」標頭在中其它位置使用非常相似 [!DNL Schema Registry]。 下列範例呼叫中已包含正確的「接受」標題，但請格外小心，以確保使用正確的標題。
+## 快速入門
 
-## 清單描述符
+本指南中使用的端點是 [[!DNL Schema Registry] API的一部分](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/class-registry.yaml)。 在繼續之前，請先閱讀快速入門手冊 [](./getting-started.md) ，以取得相關檔案的連結、閱讀本檔案中範例API呼叫的指南，以及成功呼叫任何Experience Platform API所需之必要標題的重要資訊。
 
-單個GET請求可用於返回由您的組織定義的所有描述符的清單。
+## 檢索描述符清單 {#list}
+
+通過向發出GET請求，可以列出組織已定義的所有描述符 `/tenant/descriptors`。
 
 **API格式**
 
@@ -49,21 +49,24 @@ curl -X GET \
   -H 'Accept: application/vnd.adobe.xdm-link+json'
 ```
 
-回應格式取決於請求中傳送的「接受」標題。 請注意，端 `/descriptors` 點使用與API中所有其他端點不同的「接受」 [!DNL Schema Registry] 標題。
+回應格式取決於在請求 `Accept` 中傳送的標題。 請注意，端 `/descriptors` 點使用 `Accept` 的標題與 [!DNL Schema Registry] API中所有其他端點不同。
 
-描述符接受標 `xed` 頭替 `xdm`換為，並提供 `link` 描述符唯一的選項。
+>[!IMPORTANT]
+>
+>描述符需要用 `Accept` 唯一的標頭 `xed` 替換 `xdm`，並提供描述符唯一的 `link` 選項。 下列范 `Accept` 例呼叫中已包含正確的標題，但請格外小心，以確保使用描述符時使用正確的標題。
 
-| 接受 | 說明 |
+| `Accept` 標題 | 說明 |
 | -------|------------ |
 | `application/vnd.adobe.xdm-id+json` | 返回描述符ID的陣列 |
 | `application/vnd.adobe.xdm-link+json` | 返回描述符API路徑的陣列 |
 | `application/vnd.adobe.xdm+json` | 返回擴展描述符對象的陣列 |
+| `application/vnd.adobe.xdm-v2+json` | 必 `Accept` 須使用此報頭才能使用尋呼功能。 |
 
 **回應**
 
 該響應包括用於具有已定義描述符的每個描述符類型的陣列。 換句話說，如果沒有某個定義的描述符，則 `@type` 註冊表將不返回該描述符類型的空陣列。
 
-使用「接 `link` 受」標頭時，每個描述符都以格式顯示為陣列項 `/{CONTAINER}/descriptors/{DESCRIPTOR_ID}`
+使用標題時， `link``Accept` 每個描述符都以格式顯示為陣列項 `/{CONTAINER}/descriptors/{DESCRIPTOR_ID}`
 
 ```JSON
 {
@@ -81,7 +84,7 @@ curl -X GET \
 }
 ```
 
-## 查找描述符
+## 查找描述符 {#lookup}
 
 如果要查看特定描述符的詳細資訊，可以使用其查找(GET)單個描述符 `@id`。
 
@@ -93,11 +96,11 @@ GET /tenant/descriptors/{DESCRIPTOR_ID}
 
 | 參數 | 說明 |
 | --- | --- |
-| `{DESCRIPTOR_ID}` | 要 `@id` 查找的描述符。 |
+| `{DESCRIPTOR_ID}` | 要 `@id` 查找的描述符的名稱。 |
 
 **請求**
 
-描述符沒有版本化，因此在查找請求中不需要「接受」標頭。
+以下請求按其值檢索描述符 `@id` 。 描述符沒有版本化，因此查 `Accept` 找請求中不需要標題。
 
 ```SHELL
 curl -X GET \
@@ -132,9 +135,13 @@ curl -X GET \
 }
 ```
 
-## 建立描述符
+## 建立描述符 {#create}
 
-允許 [!DNL Schema Registry] 您定義幾種不同的描述符類型。 每個描述符類型都要求在POST請求中發送自己的特定欄位。 定義描述符的附錄部分提供了描述符的完整清單以及定義它們所需 [的欄位](#defining-descriptors)。
+通過向端點發出POST請求，可以建立新描述符 `/tenant/descriptors` 。
+
+>[!IMPORTANT]
+>
+>允許 [!DNL Schema Registry] 您定義幾種不同的描述符類型。 每個描述符類型都需要在請求主體中發送其自己的特定欄位。 有關描述 [符的完整清單](#defining-descriptors) ，請參見附錄，以及定義它們所需的欄位。
 
 **API格式**
 
@@ -184,9 +191,9 @@ curl -X POST \
 }
 ```
 
-## 更新描述符
+## 更新描述符 {#put}
 
-通過使PUT請求引用要在請求路徑中更 `@id` 新的描述符，可以更新描述符。
+可以通過將描述符包含在PUT請 `@id` 求的路徑中來更新描述符。
 
 **API格式**
 
@@ -200,9 +207,13 @@ PUT /tenant/descriptors/{DESCRIPTOR_ID}
 
 **請求**
 
-此請求實際上重寫描述符，因此請求主體必須包含定義該類型描述符所需的所有欄位。 換言之，要更新(PUT)描述符的請求裝載與要建立(POST)相同類型描述符的裝載相同。
+此請求實際上重寫描述符，因此請求主體必須包含定義該類型描述符所需的所有欄位。 換言之，要更新(PUT)描述符的請求裝載與要建立( [POST)同類型描述符的裝載相同](#create) 。
 
-在此範例中，身分描述子正在更新，以參考不 `xdm:sourceProperty` 同（「行動電話」），並將 `xdm:namespace` 變更為「Phone」。
+>[!IMPORTANT]
+>
+>與使用POST請求建立描述符一樣，每個描述符類型都要求在PUT請求負載中發送其自己的特定欄位。 有關描述 [符的完整清單](#defining-descriptors) ，請參見附錄，以及定義它們所需的欄位。
+
+下面的示例更新身份描述符以引用不同 `xdm:sourceProperty` (`mobile phone`)，並將 `xdm:namespace` 更改為 `Phone`。
 
 ```SHELL
 curl -X PUT \
@@ -223,8 +234,6 @@ curl -X PUT \
       }'
 ```
 
-有關屬性和 `xdm:namespace` 的詳 `xdm:property`細資訊，包括如何訪問這些屬性，請參閱定義描述符的附 [錄部分](#defining-descriptors)。
-
 **回應**
 
 成功的回應會傳回HTTP狀態201（已建立）和 `@id` 更新描述符的狀態(應符合請 `@id` 求中傳送的描述符)。
@@ -235,9 +244,9 @@ curl -X PUT \
 }
 ```
 
-執行查閱(GET)請求以查看描述符時，將顯示欄位現在已更新，以反映在PUT請求中發送的更改。
+執行查 [閱(GET)請求](#lookup) ，檢視描述子時，會顯示欄位已更新，以反映在PUT請求中傳送的變更。
 
-## 刪除描述符
+## 刪除描述符 {#delete}
 
 有時，您可能需要刪除已從中定義的描述符 [!DNL Schema Registry]。 通過引用要刪除的描述符的DELETE `@id` 請求來完成此操作。
 
@@ -253,8 +262,6 @@ DELETE /tenant/descriptors/{DESCRIPTOR_ID}
 
 **請求**
 
-刪除描述符時不需要接受標頭。
-
 ```SHELL
 curl -X DELETE \
   https://platform.adobe.io/data/foundation/schemaregistry/tenant/descriptors/ca921946fb5281cbdb8ba5e07087486ce531a1f2  \
@@ -268,13 +275,13 @@ curl -X DELETE \
 
 成功的回應會傳回HTTP狀態204（無內容）和空白的內文。
 
-要確認描述符已刪除，可以對描述符執行查找請求 `@id`。 響應返回HTTP狀態404（找不到），因為描述符已從中刪除 [!DNL Schema Registry]。
+要確認描述符已刪除，可以對描述符執 [行查找請](#lookup) 求 `@id`。 響應返回HTTP狀態404（找不到），因為描述符已從中刪除 [!DNL Schema Registry]。
 
 ## 附錄
 
 下節提供了有關在 [!DNL Schema Registry] API中使用描述符的其他資訊。
 
-### 定義描述符
+### 定義描述符 {#defining-descriptors}
 
 以下各節概述了可用描述符類型，包括定義每種類型描述符的必需欄位。
 
@@ -301,7 +308,7 @@ curl -X DELETE \
 | `xdm:sourceSchema` | 定義 `$id` 描述符的方案的URI。 |
 | `xdm:sourceVersion` | 源架構的主要版本。 |
 | `xdm:sourceProperty` | 將作為身份的特定屬性的路徑。 路徑應以&quot;/&quot;開頭，而不以&quot;/&quot;結束。 路徑中不包含「屬性」（例如，使用「/personalEmail/address」而非「/properties/personalEmail/properties/address」） |
-| `xdm:namespace` | 身 `id` 分名 `code` 稱空間的或值。 使用 [[!DNL Identity Service API]可找到名稱空間清單](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/id-service-api.yaml)。 |
+| `xdm:namespace` | 身 `id` 分名 `code` 稱空間的或值。 使用可找到名稱空間清單 [[!DNL Identity Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/id-service-api.yaml)。 |
 | `xdm:property` | 或 `xdm:id` , `xdm:code`視使用者 `xdm:namespace` 而定。 |
 | `xdm:isPrimary` | 選用的布林值。 若為true，則將欄位指示為主要身分。 結構只能包含一個主要標識。 |
 
@@ -337,7 +344,7 @@ curl -X DELETE \
 | `xdm:sourceProperty` | 將作為身份的特定屬性的路徑。 路徑應以&quot;/&quot;開頭，而不以&quot;/&quot;結束。 路徑中不包含「屬性」（例如，使用「/personalEmail/address」而非「/properties/personalEmail/properties/address」） |
 | `xdm:title` | 您要為此欄位顯示的新標題，在「標題大小寫」中撰寫。 |
 | `xdm:description` | 可隨標題新增選擇性說明。 |
-| `meta:enum` | 如果由指示的欄 `xdm:sourceProperty` 位是字串欄位， `meta:enum` 會決定UI中欄位的建議值 [!DNL Experience Platform] 清單。 請務必注意，不 `meta:enum` 要聲明枚舉或為XDM欄位提供任何資料驗證。<br><br>這僅應用於Adobe定義的核心XDM欄位。 如果來源屬性是您組織定義的自訂欄位，您應直接透過 `meta:enum` PATCH請求編輯欄位 [屬性](./update-resource.md)。 |
+| `meta:enum` | 如果由指示的欄 `xdm:sourceProperty` 位是字串欄位， `meta:enum` 會決定UI中欄位的建議值 [!DNL Experience Platform] 清單。 請務必注意，不 `meta:enum` 要聲明枚舉或為XDM欄位提供任何資料驗證。<br><br>這僅應用於Adobe定義的核心XDM欄位。 如果源屬性是由您的組織定義的自定義欄位，則應通過對該欄位的父資源的 `meta:enum` PATCH請求直接編輯該欄位的屬性。 |
 
 #### 關係描述子
 
