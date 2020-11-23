@@ -5,10 +5,10 @@ user-guide-title: Experience Data Model (XDM) 系統說明
 breadcrumb-title: Data Model (XDM) 指南
 user-guide-description: 使用 Experience Data Model (XDM) 類別和 mixin 將體驗資料標準化。
 translation-type: tm+mt
-source-git-commit: 0a5b6bab6a0a11a572a4cd5de95b33f8d61d34bc
+source-git-commit: 321dc16a1296aeb28ba78825f191a0368df16547
 workflow-type: tm+mt
-source-wordcount: '203'
-ht-degree: 20%
+source-wordcount: '181'
+ht-degree: 23%
 
 ---
 
@@ -56,18 +56,14 @@ ht-degree: 20%
    * [POI互動](./data-types/poi-interaction.md)
    * [郵遞區號](./data-types/postal-address.md)
 * 方案註冊表API {#api}
+   * [概述](api/overview.md)
    * [快速入門](api/getting-started.md)
-   * [列出資源](api/list-resources.md)
-   * [查找資源](api/look-up-resource.md)
-   * [更新資源](api/update-resource.md)
-   * [替換資源](api/replace-resource.md)
-   * [刪除資源](api/delete-resource.md)
-   * [建立類](api/create-class.md)
-   * [建立混音](api/create-mixin.md)
-   * [建立資料類型](api/create-data-type.md)
-   * [建立架構](api/create-schema.md)
-   * [工會](api/unions.md)
+   * [結構描述](api/schemas.md)
+   * [類別](api/classes.md)
+   * [Mixins](api/mixins.md)
+   * [資料類型](api/data-types.md)
    * [描述符](api/descriptors.md)
+   * [工會](api/unions.md)
    * [臨機結構](api/ad-hoc.md)
    * [附錄](api/appendix.md)
 * 教學課程 {#tutorials}
