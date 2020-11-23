@@ -5,9 +5,9 @@ title: Experience Data Model(XDM)系統疑難排解指南
 description: 本檔案提供有關Experience Data Model(XDM)System的常見問題解答，以及常見錯誤的疑難排解指南。
 topic: troubleshooting
 translation-type: tm+mt
-source-git-commit: 2a528c705a7aa610f57047be39be1ce9886ce44c
+source-git-commit: e87fcd9f028bc6dedaec0435c4eef54e6aecae2d
 workflow-type: tm+mt
-source-wordcount: '1862'
+source-wordcount: '1831'
 ht-degree: 0%
 
 ---
@@ -27,7 +27,7 @@ ht-degree: 0%
 
 您可以使用mixin，將欄位添加到架構中。 每個混音都與一個或多個類相容，允許混音用於實現這些相容類之一的任何模式。 雖然Adobe Experience Platform提供數種業界混音及其預先定義的欄位，但您可以使用API或使用者介面建立新混音，將自己的欄位新增至架構。
 
-如需在API中建立新混音的詳細資訊，請參閱 [API開發人員指南中的](api/create-mixin.md) 「建立 [!DNL Schema Registry] 混音檔案」。 如果您使用UI，請參閱架構編 [輯器教學課程](./tutorials/create-schema-ui.md)。
+如需在 [!DNL Schema Registry] API中建立新混音的詳細資訊，請參 [閱混音](api/mixins.md#create)端點指南。 如果您使用UI，請參閱架構編 [輯器教學課程](./tutorials/create-schema-ui.md)。
 
 ### 混音與資料類型的最佳用途為何？
 
@@ -39,21 +39,21 @@ ht-degree: 0%
 
 所有 [!DNL Schema Registry] 資源（結構、混合、資料類型、類別）都有URI，可當成參考和查閱用途的唯一ID。 在API中檢視結構時，可在頂層和屬性中找 `$id` 到 `meta:altId` 。
 
-如需詳細資訊，請參 [閱API開發人員指南](api/getting-started.md#schema-identification)[!DNL Schema Registry] 中的架構識別區段。
+如需詳細資訊，請參 [閱「API開發人員指南](api/getting-started.md#resource-identification) 」中的 [!DNL Schema Registry] 「資源識別」一節。
 
 ### 架構何時開始防止中斷更改？
 
-只要在建立資料集時從未使用過或在 [[!DNL即時客戶配置檔案]中啟用過，就可以對模式進行中斷更改](../profile/home.md)。 一旦在資料集建立中使用模式或啟用與一起使 [!DNL Real-time Customer Profile]用模式後， [](schema/composition.md#evolution) 系統將嚴格執行模式演化規則。
+只要在建立資料集時從未使用過或在中啟用過，就可對架構進行中斷變更 [[!DNL Real-time Customer Profile]](../profile/home.md)。 一旦在資料集建立中使用模式或啟用與一起使 [!DNL Real-time Customer Profile]用模式後， [](schema/composition.md#evolution) 系統將嚴格執行模式演化規則。
 
 ### 長欄位類型的最大大小是多少？
 
 長欄位類型是一個最大大小為53(+1)位的整數，其電位範圍介於-9007199254740992和9007199254740992之間。 這是由於JSON的JavaScript實作如何表示長整數的限制。
 
-如需欄位類型的詳細資訊，請參 [閱「API開發人員指南」中的](api/appendix.md#field-types)[!DNL Schema Registry] 「定義XDM欄位類型」一節。
+有關欄位類型的詳細資訊，請參閱 [XDM欄位類型約束的文檔](./schema/field-constraints.md)。
 
 ### 如何定義我的架構的身分？
 
-在 [!DNL Experience Platform]中，身分用於識別主體（通常是個人），而不管被解釋的資料源。 它們是在結構中定義的，方法是將鍵欄位標籤為「標識」。 常用的身分識別欄位包括電子郵件地址、 [電話號碼、[!DNL Experience Cloud ID(ECID)]](https://docs.adobe.com/content/help/zh-Hant/id-service/using/home.html)、CRM ID和其他唯一ID欄位。
+在 [!DNL Experience Platform]中，身分用於識別主體（通常是個人），而不管被解釋的資料源。 它們是在結構中定義的，方法是將鍵欄位標籤為「標識」。 常用的身分識別欄位包括電子郵件地址、電話號碼、 [[!DNL Experience Cloud ID (ECID)]](https://docs.adobe.com/content/help/zh-Hant/id-service/using/home.html)CRM ID和其他唯一ID欄位。
 
 欄位可使用API或使用者介面標示為身分。
 
@@ -77,7 +77,7 @@ ht-degree: 0%
 
 ### 如何啟用模式以用於 [!DNL Real-time Customer Profile]?
 
-通過在方案的屬性中添加&quot;union&quot;標籤，可在 [[!DNL即時客戶配置檔案]](../profile/home.md)`meta:immutableTags` 中使用方案。 可使用API或使 [!DNL Profile] 用者介面來啟用結構。
+方案可通過添加位 [[!DNL Real-time Customer Profile]](../profile/home.md) 於方案屬性中的&quot;union&quot;標籤來 `meta:immutableTags` 使用。 可使用API或使 [!DNL Profile] 用者介面來啟用結構。
 
 #### 啟用現有結構以 [!DNL Profile] 使用API
 
@@ -120,7 +120,7 @@ ht-degree: 0%
 
 當系統找不到特定資源時，將顯示此錯誤。 資源可能已刪除，或API呼叫中的路徑無效。 請確定您已輸入API呼叫的有效路徑，然後再次嘗試。 您可能想檢查是否已為資源輸入正確的ID，以及路徑是否與適當的容器（全域或租用戶）正確命名。
 
-如需在API中建構查閱路徑的詳細資訊，請參閱開發 [人員指南](./api/getting-started.md#container)[中的容器](api/getting-started.md#schema-identification)[!DNL Schema Registry] 與架構識別區段。
+如需在API中建構查閱路徑的詳細資訊，請參 [閱開發人員指南](./api/getting-started.md#container)[中的容器](api/getting-started.md#resource-identification)[!DNL Schema Registry] 與資源識別區段。
 
 ### 標題必須是唯一的
 
@@ -149,7 +149,7 @@ ht-degree: 0%
 }
 ```
 
-當您嘗試建立新混音時，會顯示此錯誤訊息，其中的欄位名稱不正確。 由IMS組織定義的Mixin必須使用命名空間命名其欄位，以 `TENANT_ID` 避免與其他產業和廠商資源發生衝突。 如需混合的適當資料結構詳細範例，請參閱 [API開發人員指南中有關建立混合](api/create-mixin.md) 的章節的檔案 [!DNL Schema Registry] 。
+當您嘗試建立新混音時，會顯示此錯誤訊息，其中的欄位名稱不正確。 由IMS組織定義的Mixin必須使用命名空間命名其欄位，以 `TENANT_ID` 避免與其他產業和廠商資源發生衝突。 有關混合的適當資料結構的詳細示例，請參見混合 [端點指南](./api/mixins.md#create)。
 
 
 ### [!DNL Real-time Customer Profile] 錯誤
