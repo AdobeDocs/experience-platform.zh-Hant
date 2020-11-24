@@ -5,10 +5,10 @@ user-guide-title: Adobe Experience Platform 來源連接器說明
 breadcrumb-title: 來源連接器指南
 user-guide-description: 從多種來源或結構擷取資料、加標籤，以及增強已擷取的資料。
 translation-type: tm+mt
-source-git-commit: 39e419b78938afd91e3d7471241e377f352214ee
+source-git-commit: 68ed1ceb2f7410bd970fa43c5f0db11b1b8ea388
 workflow-type: tm+mt
-source-wordcount: '683'
-ht-degree: 3%
+source-wordcount: '663'
+ht-degree: 4%
 
 ---
 
@@ -138,10 +138,11 @@ ht-degree: 3%
       - [收集通訊協定資料](tutorials/api/collect/protocols.md)
       - [收集串流資料](tutorials/api/collect/streaming.md)
    - [從協力廠商雲端儲存系統擷取鑲木地板資料](tutorials/api/cloud-storage-parquet.md)
-   - [使用Flow Service API建立資料集基本連線](tutorials/api/create-dataset-base-connection.md)
-   - [使用流服務API監視資料流](tutorials/api/monitor.md)
-   - [使用Flow Service API更新連線資訊](tutorials/api/update.md)
-   - [使用Flow Service API刪除連線](tutorials/api/delete.md)
+   - [建立資料集連線](tutorials/api/create-dataset-base-connection.md)
+   - [監視資料流](tutorials/api/monitor.md)
+   - [更新連線](tutorials/api/update.md)
+   - [刪除連接](tutorials/api/delete.md)
+   - [刪除資料流](tutorials/api/delete-dataflows.md)
 - UI教學課程 {#ui-tutorials}
    - 建立源連接器 {#create}
       - Adobe應用程式 {#adobe-applications}
