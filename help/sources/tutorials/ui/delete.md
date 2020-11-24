@@ -6,7 +6,7 @@ title: 刪除資料流
 topic: overview
 type: Tutorial
 translation-type: tm+mt
-source-git-commit: f86f7483e7e78edf106ddd34dc825389dadae26a
+source-git-commit: e327a3e195d97c0b547608f360c5b0b6a8aded61
 workflow-type: tm+mt
 source-wordcount: '447'
 ht-degree: 0%
@@ -66,4 +66,4 @@ Adobe Experience Platform中的來源連接器可讓您依計畫吸收外部來�
 
 按照本教程，您已成功使用 **[!UICONTROL Sources工作區刪除現有]** 資料流。
 
-有關如何使用 [!DNL Flow Service] API以程式設計方式執行這些作業的步驟，請參閱使用Flow Service API [刪除連線的教學課程](../../tutorials/api/delete.md)
+有關如何使用 [!DNL Flow Service] API以程式設計方式執行這些作業的步驟，請參閱使用Flow Service API刪除 [資料流的教學課程](../../tutorials/api/delete-dataflows.md)
