@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform;getting started;content ai;commerce ai;content and commerce ai
 solution: Experience Platform
-title: 內容與商務AI快速入門]
+title: 內容與商務AI快速入門
 topic: Getting started
 description: 內容與商務AI運用Adobe I/O API。 若要呼叫Adobe I/O API和I/O Console整合，您必須先完成驗證教學課程。
 translation-type: tm+mt
-source-git-commit: 9ee888b02b4a402200ca4fcaed4a59c0a7eb94cd
+source-git-commit: 2be04547b96e1a6c293cc63e782fe1b3259619ba
 workflow-type: tm+mt
-source-wordcount: '572'
+source-wordcount: '576'
 ht-degree: 0%
 
 ---
 
 
-# Getting started with [!DNL Content and Commerce AI]
+# 內容與商務AI快速入門
 
 >[!NOTE]
 >
