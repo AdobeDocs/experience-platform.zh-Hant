@@ -6,17 +6,15 @@ topic: overview
 type: Tutorial
 description: 本教學課程涵蓋從協力廠商雲端儲存空間擷取資料，並透過來源連接器和API將其匯入平台的步驟。
 translation-type: tm+mt
-source-git-commit: b0f6e51a784aec7850d92be93175c21c91654563
+source-git-commit: 026007e5f80217f66795b2b53001b6cf5e6d2344
 workflow-type: tm+mt
-source-wordcount: '1567'
+source-wordcount: '1583'
 ht-degree: 1%
 
 ---
 
 
 # 透過來源連接器和API收集雲端儲存空間資料
-
-[!DNL Flow Service] 用於收集和集中Adobe Experience Platform內不同來源的客戶資料。 該服務提供用戶介面和REST風格的API，所有支援的源都可從中連接。
 
 本教學課程涵蓋從協力廠商雲端儲存空間擷取資料，並透過來源連接器和 [[!DNL Flow Service] API將其匯入平台的步驟](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml)。
 
@@ -62,13 +60,17 @@ ht-degree: 1%
 
 對基於檔案的連接器使用以下枚舉值：
 
-| Data.format | 列舉值 |
+| 資料格式 | 列舉值 |
 | ----------- | ---------- |
-| 分隔檔案 | `delimited` |
-| JSON檔案 | `json` |
-| 拼花檔案 | `parquet` |
+| 分隔字元 | `delimited` |
+| JSON | `json` |
+| 鑲木 | `parquet` |
 
-對於所有基於表的連接器，請使用列舉值： `tabular`.
+對於所有基於表的連接器，請將值設定為 `tabular`。
+
+>[!NOTE]
+>
+>您可以透過雲端儲存來源連接器來內嵌CSV和TSV檔案，方法是指定欄分隔字元作為屬性。 任何單一字元值都是允許的欄分隔字元。 如果未提供，則使 `(,)` 用逗號作為預設值。
 
 **API格式**
 
@@ -88,13 +90,14 @@ curl -X POST \
     -H 'Content-Type: application/json' \
     -d '{
         "name": "Cloud storage source connector",
-        "baseConnectionId": "9e2541a0-b143-4d23-a541-a0b143dd2301",
+        "connectionId": "9e2541a0-b143-4d23-a541-a0b143dd2301",
         "description": "Cloud storage source connector",
         "data": {
-            "format": "delimited"
+            "format": "delimited",
+            "columnDelimiter": "\t"
         },
         "params": {
-            "path": "/demo/data7.csv",
+            "path": "/ingestion-demos/leads/tsv_data/*.tsv",
             "recursive": "true"
         },
             "connectionSpec": {
@@ -106,7 +109,9 @@ curl -X POST \
 
 | 屬性 | 說明 |
 | --- | --- |
-| `baseConnectionId` | 您所存取之協力廠商雲端儲存系統的唯一連線ID。 |
+| `connectionId` | 您所存取之協力廠商雲端儲存系統的唯一連線ID。 |
+| `data.format` | 定義資料格式屬性的枚舉值。 |
+| `data.columnDelimiter` | 您可以使用任何單一字元欄分隔字元來收集平面檔案。 只有在接收CSV或TSV檔案時，才需要此屬性。 |
 | `params.path` | 您正在訪問的源檔案的路徑。 |
 | `connectionSpec.id` | 與特定第三方雲端儲存系統關聯的連線規格ID。 有關連 [接規範](#appendix) ID的清單，請參見附錄。 |
 
@@ -126,8 +131,6 @@ curl -X POST \
 為了使用源資料，必須創 [!DNL Platform]建目標模式，以根據您的需要構建源資料。 然後，目標模式用於建立包含 [!DNL Platform] 源資料的資料集。
 
 通過對方案註冊表API執行POST請求，可以建立目標XDM [方案](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml)。
-
-如果希望在中使用用戶介面 [!DNL Experience Platform], [](../../../../xdm/tutorials/create-schema-ui.md) Schema Editor教程將提供在Schema Editor中執行類似操作的逐步說明。
 
 **API格式**
 
@@ -279,9 +282,9 @@ curl -X POST \
 
 ## 建立目標連接 {#target-connection}
 
-目標連接表示到所收錄資料所在目的地的連接。 要建立目標連接，必須提供與資料庫關聯的固定連接規範ID。 此連接規範ID為： `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
+目標連接表示到所收錄資料所在目的地的連接。 要建立目標連接，必須提供與「資料湖」關聯的固定連接規範ID。 此連接規範ID為： `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
 
-您現在擁有目標資料集的唯一識別碼、目標模式，以及與資料湖的連線規範ID。 使用這些識別碼，您可以使用 [!DNL Flow Service] API建立目標連線，以指定將包含傳入來源資料的資料集。
+您現在擁有目標資料集的唯一識別碼、目標模式和至資料湖的連線規格ID。 使用這些識別碼，您可以使用 [!DNL Flow Service] API建立目標連線，以指定將包含傳入來源資料的資料集。
 
 **API格式**
 
@@ -322,7 +325,7 @@ curl -X POST \
 | -------- | ----------- |
 | `data.schema.id` | 目 `$id` 標XDM模式的。 |
 | `params.dataSetId` | 目標資料集的ID。 |
-| `connectionSpec.id` | 已修正連接規範ID到資料湖。 此ID為： `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
+| `connectionSpec.id` | 已修正資料湖的連線規格ID。 此ID為： `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
 
 **回應**
 
@@ -403,8 +406,8 @@ curl -X POST \
     "version": 0,
     "createdDate": 1597784069368,
     "modifiedDate": 1597784069368,
-    "createdBy": "28AF22BA5DE6B0B40A494036@AdobeID",
-    "modifiedBy": "28AF22BA5DE6B0B40A494036@AdobeID"
+    "createdBy": "{CREATED_BY}",
+    "modifiedBy": "{MODIFIED_BY}"
 }
 ```
 
