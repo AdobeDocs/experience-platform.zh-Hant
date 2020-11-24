@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics; flow service; update connections
+keywords: Experience Platform;home;popular topics;flow service;delete connections;delete;api
 solution: Experience Platform
 title: 使用流服務API刪除連接
 topic: overview
 type: Tutorial
 description: 本教學課程涵蓋使用Flow Service API刪除連線的步驟。
 translation-type: tm+mt
-source-git-commit: 9c807270181084a94f288c248a678821ca58e194
+source-git-commit: 9e28591ef9f07217363cddf72356b8e5cd8a15a3
 workflow-type: tm+mt
-source-wordcount: '581'
+source-wordcount: '580'
 ht-degree: 2%
 
 ---
@@ -31,7 +31,7 @@ Adobe Experience Platform可讓您從外部來源擷取資料，同時提供您�
 * [來源](../../home.md): [!DNL Experience Platform] 允許從各種來源接收資料，同時提供使用服務構建、標籤和增強傳入資料的 [!DNL Platform] 能力。
 * [沙盒](../../../sandboxes/home.md): [!DNL Experience Platform] 提供虛擬沙盒，可將單一執行個體分 [!DNL Platform] 割為不同的虛擬環境，以協助開發和發展數位體驗應用程式。
 
-以下各節提供您需要知道的其他資訊，以便使用 [!DNL Flow Service] API成功更新連線資訊。
+以下各節提供您必須知道的其他資訊，以便使用 [!DNL Flow Service] API成功刪除連線。
 
 ### 讀取範例API呼叫
 
@@ -132,7 +132,7 @@ DELETE /connections/{CONNECTION_ID}
 
 | 參數 | 說明 |
 | --------- | ----------- |
-| `{CONNECTION_ID}` | 要更 `id` 新的連接的唯一值。 |
+| `{CONNECTION_ID}` | 要刪 `id` 除的連接的唯一值。 |
 
 **請求**
 
