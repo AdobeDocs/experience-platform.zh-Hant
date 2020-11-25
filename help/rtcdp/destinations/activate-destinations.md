@@ -6,9 +6,9 @@ seo-title: 將描述檔和區段啟用至目標
 description: 將區段對應至目標，以啟用您在即時客戶資料平台中擁有的資料。 若要完成此作業，請遵循下列步驟。
 seo-description: 將區段對應至目標，以啟用您在即時客戶資料平台中擁有的資料。 若要完成此作業，請遵循下列步驟。
 translation-type: tm+mt
-source-git-commit: bb59d93e016d49a0ebba77af1f90563a8767f072
+source-git-commit: 5928242537acdb1f130a0e8ac1bca3f14c184c6a
 workflow-type: tm+mt
-source-wordcount: '1768'
+source-wordcount: '1722'
 ht-degree: 0%
 
 ---
@@ -127,14 +127,6 @@ ht-degree: 0%
 >對於社交目的地，您必須在此步驟中選取對象的來源。 您只能在選取下圖中的其中一個選項後，才可繼續下一步。
 
 ![選擇資料來源](./assets/choose-data-origin.png)
-
-### **[!UICONTROL 排程步驟]** (Scheduling Step) {#scheduling}
-
-適用於：電子郵件行銷目的地和雲端儲存目的地
-
-![區段排程步驟](./assets/scheduling-icon.png)
-
-在「 **[!UICONTROL 排程]** 」頁面上，您可以看到傳送資料至目的地的開始日期，以及傳送資料至目的地的頻率。 無法編輯這些值。
 
 ### **[!UICONTROL 選擇屬性]** 步驟 {#select-attributes}
 
