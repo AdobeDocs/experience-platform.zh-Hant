@@ -6,9 +6,9 @@ type: Tutorial
 description: 電子郵件服務供應商(ESP)可讓您管理電子郵件行銷活動，例如傳送促銷電子郵件促銷活動。
 seo-description: 電子郵件服務供應商(ESP)可讓您管理電子郵件行銷活動，例如傳送促銷電子郵件促銷活動。
 translation-type: tm+mt
-source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
+source-git-commit: 7903d6c715747dfc298a5e4a4615d8ecbbe5d359
 workflow-type: tm+mt
-source-wordcount: '837'
+source-wordcount: '846'
 ht-degree: 1%
 
 ---
@@ -36,7 +36,7 @@ ht-degree: 1%
 - 對於 **具有密碼連接的SFTP** ，您必須為SFTP伺服器提供域、埠、用戶名和密碼。
 - 對於 **具有SSH密鑰連接的SFTP** ，必須為SFTP伺服器提供域、埠、用戶名和SSH密鑰。
 
-或者，您可以附加RSA格式的公開密鑰，以便在「密鑰」部分下為導出的檔案添加 **[!UICONTROL 加密]** 。 請注意，此公開金 **鑰必** 須寫入為Base64編碼字串。
+或者，在「 **[!UICONTROL Encryption PGP/GPG]** 」（加密PGP/GPG）部分中 **[!UICONTROL ，您可以將RSA格式的公鑰附加到「]** Key」（密鑰）部分下的導出檔案中，以添加PGP/GPG加密。 請注意，此公開金 **鑰必** 須寫入為Base64編碼字串。
 
 在「設 **[!UICONTROL 置]** 」步驟中，輸入新目標的名稱和說明，以及導出檔案的檔案格式。
 
