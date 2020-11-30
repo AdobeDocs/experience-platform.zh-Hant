@@ -5,9 +5,9 @@ description: 瞭解如何追蹤Experience Platform Web SDK活動
 seo-description: 瞭解如何追蹤Experience Platform Web SDK活動
 keywords: sendEvent;xdm;eventType;datasetId;sendBeacon;send Beacon;documentUnloading;document Unloading;onBeforeEventSend;
 translation-type: tm+mt
-source-git-commit: 0928dd3eb2c034fac14d14d6e53ba07cdc49a6ea
+source-git-commit: 51a846124f71012b2cb324cc1469ec7c9753e574
 workflow-type: tm+mt
-source-wordcount: '1138'
+source-wordcount: '1331'
 ht-degree: 0%
 
 ---
@@ -43,6 +43,35 @@ alloy("sendEvent", {
   }
 });
 ```
+
+執行命令和將資料傳送至伺服器（例如，如果Web SDK程式庫尚未完全載入或尚未收到同意）之間，可能會有一段時間。 `sendEvent` 如果要在執行命令後修改對 `xdm` 像的任 `sendEvent` 何部分，強烈建議您在執行命令前先克隆 `xdm` 對象 __`sendEvent` 。 例如：
+
+```javascript
+var clone = function(value) {
+  return JSON.parse(JSON.stringify(value));
+};
+
+var dataLayer = {
+  "commerce": {
+    "order": {
+      "purchaseID": "a8g784hjq1mnp3",
+      "purchaseOrderNumber": "VAU3123",
+      "currencyCode": "USD",
+      "priceTotal": 999.98
+    }
+  }
+};
+
+alloy("sendEvent", {
+  "xdm": clone(dataLayer)
+});
+
+// This change will not be reflected in the data sent to the 
+// server for the prior sendEvent command.
+dataLayer.commerce = null;
+```
+
+在此範例中，資料層會先序列化至JSON，然後反序列化以將其複製。 接著，將克隆的結果傳遞到命令 `sendEvent` 中。 這樣可確保命 `sendEvent``sendEvent` 令在執行命令時具有資料層的快照，以便以後對原始資料層對象的修改不會反映在發送到伺服器的資料中。 如果您使用事件導向的資料層，複製資料的作業可能已自動處理。 例如，如果您使用 [Adobe Client資料層](https://github.com/adobe/adobe-client-data-layer/wiki)，該方 `getState()` 法會提供所有先前變更的計算、複製快照。 如果您使用AEP Web SDK Launch擴充功能，也會自動處理此問題。
 
 >[!NOTE]
 >
