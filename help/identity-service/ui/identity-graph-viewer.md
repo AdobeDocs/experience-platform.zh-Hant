@@ -5,9 +5,9 @@ title: Adobe Experience Platform Identity Service
 topic: tutorial
 description: 身分圖是特定客戶不同身分之間關係的地圖，可讓您以視覺化方式呈現客戶如何透過不同通道與您的品牌互動。
 translation-type: tm+mt
-source-git-commit: af7eab0599b17be55d5a4c129f7ebaeba91333bc
+source-git-commit: df165baceaf8dc2b21055201ec78bd392044b938
 workflow-type: tm+mt
-source-wordcount: '840'
+source-wordcount: '847'
 ht-degree: 1%
 
 ---
@@ -98,6 +98,7 @@ ht-degree: 1%
 - 識別值不存在於選定的命名空間中。
 - 該圖只有少於2個恆等式。
 - 該圖超過400個恆等式的上限。
+- 您位於非生產沙盒環境中。
 
 ![大群集](../images/identity-graph-viewer/error-screen.png)
 
