@@ -5,10 +5,10 @@ title: Audience Manager連接器
 topic: overview
 description: Adobe Audience Manager資料連接器可將在Adobe Audience Manager中收集的第一方資料串流至Adobe Experience Platform。 Audience Manager連接器可將三種資料類別擷取至平台。
 translation-type: tm+mt
-source-git-commit: 9bd893820c7ab60bf234456fdd110fb2fbe6697c
+source-git-commit: 4ab5c3a8f9dbecc27686c7ce7db4f66ac18c2d2a
 workflow-type: tm+mt
-source-wordcount: '673'
-ht-degree: 1%
+source-wordcount: '798'
+ht-degree: 0%
 
 ---
 
@@ -36,7 +36,7 @@ XDM是公開記載的規格，可提供標準化的架構，讓平台組織客�
 
 以下是映射至平台中XDM ExperienceEvent和XDM個人設定檔的Audience Manager結構範例。
 
-### ExperienceEvent —— 用於即時資料和已登錄資料
+### ExperienceEvent —— 適用於即時資料和已登入資料
 
 ![](images/aam-experience-events-for-dcs-and-onboarding-data.png)
 
@@ -52,18 +52,18 @@ XDM是公開記載的規格，可提供標準化的架構，讓平台組織客�
 
 ### 資料集
 
-資料集是資料集合的儲存和管理結構，通常是表，它包含模式（列）和欄位（行），並可通過資料連接使用。 Audience Manager資料包含即時資料、傳入資料和描述檔資料。 若要找到您的Audience Manager資料集，請使用UI中的搜尋函式，並針對每種資料類型使用提供的命名慣例。
+資料集是資料集合的儲存和管理結構，通常是表，它包含模式（列）和欄位（行），並可通過資料連接使用。 Audience Manager資料由即時資料、傳入資料和描述檔資料組成。 若要找到您的Audience Manager資料集，請使用UI中的搜尋函式，並針對每種資料類型使用提供的命名慣例。
 
 Audience Manager資料集依預設會停用至「設定檔」，而且使用者可以根據使用案例啟用或停用資料集。 建議不要停用將用於「描述檔」中區段成員資格的資料集。
 
 | 資料集名稱 | 說明 |
 | ------------ | ----------- |
-| Audience Manager Realtime | 此資料集包含Audience Manager DCS端點上的直接點擊所收集的資料，以及Audience Manager設定檔的身分對應。 讓此資料集保持啟用以擷取描述檔。 |
-| Audience Manager Realtime Profile更新 | 此資料集可讓Audience Manager特徵和區段的即時定位。 其中包含Edge地區路由、特徵和區段成員資格的資訊。 讓此資料集保持啟用以擷取描述檔。 |
-| Audience Manager裝置資料 | 在Audience Manager中匯總具有ECID和對應區段實現的裝置資料。 |
-| Audience Manager裝置設定檔資料 | 用於Audience Manager連接器診斷。 |
-| Audience Manager驗證的設定檔 | 此資料集包含Audience Manager驗證的設定檔。 |
-| Audience Manager驗證的設定檔中繼資料 | 用於Audience Manager Connector診斷。 |
+| Audience Manager即時 | 此資料集包含Audience Manager DCS端點上的直接點擊所收集的資料，以及Audience Manager設定檔的身分對應。 讓此資料集保持啟用以擷取描述檔。 |
+| Audience Manager即時個人檔案更新 | 此資料集可讓Audience Manager特徵和區段的即時定位。 其中包含Edge地區路由、特徵和區段成員資格的資訊。 讓此資料集保持啟用以擷取描述檔。 資料集中的資料不會顯示為批次。 您可以啟用「描述檔」切換，將資料直接收錄至「描述檔」。 |
+| Audience Manager裝置資料 | 在Audience Manager中匯總具有ECID和對應區段實現的裝置資料。 資料集中的資料不會顯示為批次。 您可以啟用「描述檔」切換，將資料直接收錄至「描述檔」。 |
+| Audience Manager裝置設定檔資料 | 用於Audience Manager連接器診斷。 資料集中的資料不會顯示為批次。 您可以啟用「描述檔」切換，將資料直接收錄至「描述檔」。 |
+| Audience Manager驗證的設定檔 | 此資料集包含Audience Manager驗證的設定檔。 資料集中的資料不會顯示為批次。 您可以啟用「描述檔」切換，將資料直接收錄至「描述檔」。 |
+| Audience Manager驗證的設定檔中繼資料 | 用於Audience Manager Connector診斷。 資料集中的資料不會顯示為批次。 您可以啟用「描述檔」切換，將資料直接收錄至「描述檔」。 |
 
 ### 連線
 
@@ -73,6 +73,5 @@ Adobe Audience Manager在目錄中建立一個連線：Audience Manager連線。
 
 | Audience Manager資料 | 延遲性 | 附註 |
 | --- | --- | --- |
-| 即時資料 | &lt; 35 分鐘. | 從在Realtime節點捕獲到在Platform Data Lake上顯示的時間。 |
-| 傳入資料 | &lt; 13 小時 | 從在S3儲存區擷取到出現在平台資料湖上的時間。 |
-| 描述檔資料 | &lt; 2 天 | 從Realtime/Inbound（即時／入站）資料捕獲到添加到用戶配置檔案並最終顯示在平台資料湖上的時間。 |
+| 即時資料 | &lt; 35 分鐘. | 從在Audience Manager Edge節點擷取到出現在平台資料湖上的時間。 |
+| 描述檔資料 | &lt; 2 天 | 從透過DCS/PCS Edge資料和已登入資料擷取、處理至使用者描述檔，然後顯示在描述檔中的時間。 今天，此資料並未直接登陸Platform Data Lake。 設定檔切換可在Audience Manager設定檔資料集上啟用，以直接將此資料收錄至設定檔。 |
