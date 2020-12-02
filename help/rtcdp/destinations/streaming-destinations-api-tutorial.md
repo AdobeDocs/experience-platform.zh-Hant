@@ -5,9 +5,9 @@ title: 連線至串流目的地並啟動資料
 topic: tutorial
 type: Tutorial
 translation-type: tm+mt
-source-git-commit: 502d913400a8ddc0132c64253cd30ea9f9fcd239
+source-git-commit: f12b400ca95e23d8e6ac282fafa8f4bb141d703a
 workflow-type: tm+mt
-source-wordcount: '1870'
+source-wordcount: '2012'
 ht-degree: 2%
 
 ---
@@ -33,7 +33,7 @@ ht-degree: 2%
 
 * [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md):Experience Platform組織客戶體驗資料的標準化架構。
 * [[!DNL Catalog Service]](../../catalog/home.md): [!DNL Catalog] 是Experience Platform中資料位置和世系的記錄系統。
-* [Sandboxes](../../sandboxes/home.md): Experience Platform provides virtual sandboxes which partition a single Platform instance into separate virtual environments to help develop and evolve digital experience applications.
+* [沙盒](../../sandboxes/home.md):Experience Platform提供虛擬沙盒，可將單一Platform實例分割為不同的虛擬環境，以協助開發和發展數位體驗應用程式。
 
 以下各節提供您需要瞭解的其他資訊，以便在Adobe即時CDP中將資料啟動至串流目的地。
 
@@ -592,6 +592,31 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
   }
 }
 ```
+
+## 使用Postman系列連線至串流目的地  {#collections}
+
+若要以更簡化的方式連接至本教學課程中所述的串流目的地，您可使用 [[!DNL Postman]](https://www.postman.com/)。
+
+[!DNL Postman] 是一種工具，可用來進行API呼叫並管理預先定義之呼叫和環境的程式庫。
+
+在本特定教學課程中，我們包含下 [!DNL Postman] 列系列，附於本文：
+
+* [!DNL AWS Kinesis] [!DNL Postman] 系列
+* [!DNL Azure Event Hubs] [!DNL Postman] 系列
+
+按一 [下這裡](assets/DestinationPostmanCollection.zip) ，下載系列封存。
+
+每個系列分別包含必要的要求和環 [!DNL AWS Kinesis]境變 [!DNL Azure Event Hub]數。
+
+### 如何使用郵遞員系列
+
+若要使用附加的系列成功連線至目 [!DNL Postman] 標，請遵循下列步驟：
+
+* Download and install [!DNL Postman];
+* [下載](assets/DestinationPostmanCollection.zip) ，並解壓縮附加的系列；
+* 將收藏集從對應的資料夾匯入郵遞員；
+* 根據本文的說明填寫環境變數；
+* 根據本 [!DNL API] 文中的說明，執行Postman的請求。
 
 ## 後續步驟
 
