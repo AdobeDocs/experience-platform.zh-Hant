@@ -1,22 +1,22 @@
 ---
-keywords: Experience Platform;home;popular topics;monitor accounts;monitor dataflows;data flows
-description: Adobe Experience Platform中的來源連接器可讓您依計畫吸收外部來源的資料。 本教學課程提供從Sources工作區檢視現有帳戶和資料流的步驟。
+keywords: Experience Platform;home;popular topics;monitor accounts;monitor dataflows;dataflows
+description: Adobe Experience Platform中的來源連接器可讓您依計畫吸收外部來源的資料。 本教學課程提供從Sources工作區檢視現有資料流的步驟。
 solution: Experience Platform
-title: 監視帳戶和資料流
+title: 監視資料流
 topic: overview
 type: Tutorial
 translation-type: tm+mt
-source-git-commit: f86f7483e7e78edf106ddd34dc825389dadae26a
+source-git-commit: 12b8ced6705c2b14b50ea237391d9f829c894b99
 workflow-type: tm+mt
-source-wordcount: '1102'
+source-wordcount: '822'
 ht-degree: 1%
 
 ---
 
 
-# 在UI中監視帳戶和資料流
+# 監視UI中的資料流
 
-Adobe Experience Platform中的來源連接器可讓您依計畫吸收外部來源的資料。 本教學課程提供從 [!UICONTROL Sources工作區檢視現有帳戶和資料流] 的步驟。
+Adobe Experience Platform中的來源連接器可讓您依計畫吸收外部來源的資料。 本教學課程提供從 [!UICONTROL Sources工作區檢視現有資料流] 的步驟。
 
 ## 快速入門
 
@@ -27,53 +27,9 @@ Adobe Experience Platform中的來源連接器可讓您依計畫吸收外部來�
    - [架構編輯器教程](../../../xdm/tutorials/create-schema-ui.md):瞭解如何使用架構編輯器UI建立自訂架構。
 - [[!DNL Real-time Customer Profile]](../../../profile/home.md):根據來自多個來源的匯整資料，提供統一、即時的消費者個人檔案。
 
-## 監控帳戶
-
-登入 [Adobe Experience Platform](https://platform.adobe.com) ，然後從左側導覽列選取 **[!UICONTROL Sources]** ，以存取 **** Sources工作區。 「目 **[!UICONTROL 錄]** 」螢幕顯示了各種源，您可以用這些源建立帳戶和資料流。 每個源顯示與其關聯的現有帳戶和資料流的數量。
-
-從頂 **[!UICONTROL 端標題]** ，選擇「帳戶」以檢視現有帳戶。
-
-![目錄](../../images/tutorials/monitor/catalog-accounts.png)
-
-此時 **[!UICONTROL 會顯示]** 「帳戶」頁面。 此頁面是可查看帳戶的清單，包括有關其源、用戶名、資料流數和建立日期的資訊。
-
-選擇左上角的漏斗表徵圖以啟動排序窗口。
-
-![帳戶](../../images/tutorials/monitor/accounts-list.png)
-
-排序面板允許您從特定源訪問帳戶。 選擇要使用的源，然後從右邊的清單中選擇帳戶。
-
->[!TIP]
->
-> 使用「 ![名稱](../../images/tutorials/monitor/spectrum-control.png)**** 」列中的「頻譜控制」按鈕，為選定帳戶建立新源資料流。
-
-![accounts-select](../../images/tutorials/monitor/accounts-sort.png)
-
-此外，您還可以編輯現有帳戶資訊並更新帳戶認證。 為您要編輯的帳戶資訊選取鉛筆圖示。
-
-![](../../images/tutorials/monitor/click-edit.png)
-
-此時會 **[!UICONTROL 顯示「編輯帳戶]** 」詳細資訊模式。 從本頁，您可以更新現有帳戶詳細資訊和驗證憑證。
-
->[!NOTE]
->
-> 編輯帳戶詳細資訊適用於所有批次來源連接器。
-
-![](../../images/tutorials/monitor/edit-account.png)
-
-在「帳 **[!UICONTROL 戶]** 」頁中，可以查看與您訪問的帳戶相關聯的現有資料流或目標資料集的清單。 選擇省略號(`...`)按鈕，為所選資料流啟用更多可用選項。 以下將進一步說明這些選項：
-
-| 控制 | 說明 |
-| ------- | ----------- |
-| [!UICONTROL 編輯排程] | 允許您編輯資料流的接收調度。 |
-| [!UICONTROL 禁用資料流] | 允許您禁用所選資料流的資料提取。 |
-| [!UICONTROL 刪除] | 允許您刪除選定的資料流。 |
-
-![資料流](../../images/tutorials/monitor/dataflows.png)
-
 ## 監視資料流
 
-資料流可以直接從目錄頁 **[!UICONTROL 訪問]** ，無需查看 **[!UICONTROL 帳戶]**。 從頂 **[!UICONTROL 部標題]** 中選擇資料流以查看資料流清單。
+登入「登入 [Experience Platform UI](https://platform.adobe.com) 」，然後從左側導覽器中選取「來源 **[!UICONTROL 」以存取「來源]** 」工作區。 從頂 **[!UICONTROL 部標題中]** ，選擇資料流以查看現有資料流。
 
 ![目錄資料流](../../images/tutorials/monitor/catalog-dataflows.png)
 
