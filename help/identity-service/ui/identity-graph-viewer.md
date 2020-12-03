@@ -5,9 +5,9 @@ title: Adobe Experience Platform Identity Service
 topic: tutorial
 description: 身分圖是特定客戶不同身分之間關係的地圖，可讓您以視覺化方式呈現客戶如何透過不同通道與您的品牌互動。
 translation-type: tm+mt
-source-git-commit: df165baceaf8dc2b21055201ec78bd392044b938
+source-git-commit: ef1025dfacc91b13c064db99e6304f2c09abb3d9
 workflow-type: tm+mt
-source-wordcount: '847'
+source-wordcount: '910'
 ht-degree: 1%
 
 ---
@@ -93,14 +93,19 @@ ht-degree: 1%
 
 ## 附錄
 
-如果未符合下列必要條件，圖形檢視器會傳回錯誤：
+下節提供使用身分圖表檢視器的其他資訊。
 
-- 識別值不存在於選定的命名空間中。
-- 該圖只有少於2個恆等式。
-- 該圖超過400個恆等式的上限。
-- 您位於非生產沙盒環境中。
+### 瞭解錯誤訊息
 
-![大群集](../images/identity-graph-viewer/error-screen.png)
+存取身分圖檢視器時可能會發生錯誤。 以下是使用身分圖表檢視器時要注意的先決條件和限制清單。
+
+- 標識值必須存在於所選命名空間中。
+- 身分圖表檢視器至少需要兩個連結的身分才能產生。
+- 身分圖表檢視器不能超過400個身分。
+- 目前無法在非生產沙盒中存取身分圖表檢視器。
+- 身分圖表檢視器目前僅支援批次擷取的資料，且不顯示使用串流來源擷取的資料。
+
+![錯誤畫面](../images/identity-graph-viewer/error-screen.png)
 
 ## 後續步驟
 
