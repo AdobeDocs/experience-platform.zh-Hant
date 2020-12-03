@@ -5,7 +5,7 @@ title: 區段服務使用指南
 topic: ui guide
 description: Adobe Experience Platform Segmentation Service提供使用者介面來建立和管理區段定義。
 translation-type: tm+mt
-source-git-commit: 1aff9329e1ae97caa34a205bbfbbc6f51b54b8fb
+source-git-commit: adf8e8457c8ffef263223a38d3f9c345cf7c6ab2
 workflow-type: tm+mt
 source-wordcount: '1449'
 ht-degree: 0%
@@ -102,7 +102,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
-> 目標是可用的功能， [!DNL Real-time Customer Data Platform]可讓您將資料匯出至外部平台。 有關目標的詳細資訊，請閱讀目 [標概述](../../rtcdp/destinations/destinations-overview.md)。 若要瞭解如何將區段啟用至目的地，請閱讀 [啟用區段至目的地的指南](../../rtcdp/destinations/activate-destinations.md)。
+> 目標是可用的功能， [!DNL Real-time Customer Data Platform]可讓您將資料匯出至外部平台。 有關目標的詳細資訊，請閱讀目 [標概述](../../destinations/home.md)。 若要瞭解如何將區段啟用至目的地，請閱讀 [啟用區段至目的地的指南](../../destinations/ui/activate-destinations.md)。
 
 ### 描述檔範例
 
@@ -174,7 +174,7 @@ ht-degree: 0%
 >
 >只有當您建立已指派給目標的區段時，才會套用原則違規。
 
-建立完區段後，Adobe Experience Platform資料管理會分析區段，以確保區段內沒有違反政策的情況。 如需詳細 [[!DNL Data Governance] 資訊](../../data-governance/home.md) ，請參閱總覽。
+建立完區段後，Adobe Experience Platform資料管理會分析區段，以確保區段內沒有違反政策的情況。 See the [[!DNL Data Governance] overview](../../data-governance/home.md) for more information.
 
 ![](../images/ui/overview/segment-dule-policy-violations.png)
 
