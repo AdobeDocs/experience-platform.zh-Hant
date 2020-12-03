@@ -1,14 +1,14 @@
 ---
 product: experience-platform
 audience: user
-user-guide-title: Adobe Experience Platform 概觀
-breadcrumb-title: 體驗平台概觀
-user-guide-description: 了解 Experience Platform 如何讓您即時為客戶傳遞個人化體驗。
+user-guide-title: Adobe Experience Platform 概述
+breadcrumb-title: Experience Platform 概觀
+user-guide-description: 了解 Experience Platform 如何協助您即時為客戶傳遞個人化體驗。
 translation-type: tm+mt
-source-git-commit: 36707e95a63b6be60d1d7badbe1cdc9d0bc3548c
+source-git-commit: 5761394285e56214fd59e31d530756eed1f5ad08
 workflow-type: tm+mt
-source-wordcount: '402'
-ht-degree: 44%
+source-wordcount: '399'
+ht-degree: 45%
 
 ---
 
@@ -45,7 +45,7 @@ ht-degree: 44%
    * [資料科學工作區](https://docs.adobe.com/content/help/en/experience-platform/data-science-workspace/home.html)
    * [Debugger](https://docs.adobe.com/content/help/zh-Hant/debugger/using/experience-cloud-debugger.html)
    * [除錯程式2.0（測試版）](https://docs.adobe.com/content/help/en/debugger/using-v2/experience-cloud-debugger.html)
-   * [目的地](https://docs.adobe.com/content/help/en/experience-platform/rtcdp/destinations/destinations-overview.html)
+   * [目的地](https://experienceleague.adobe.com/docs/experience-platform/destinations/home.html)
    * [ETL（擷取、轉換、載入）](https://docs.adobe.com/content/help/en/experience-platform/etl/home.html)
    * [Identity 服務](https://docs.adobe.com/content/help/zh-Hant/experience-platform/identity/home.html)
    * [Intelligent Services](https://docs.adobe.com/content/help/en/experience-platform/intelligent-services/home.html)
