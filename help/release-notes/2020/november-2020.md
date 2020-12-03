@@ -5,7 +5,7 @@ doc-type: release notes
 last-update: November 10, 2020
 author: crhoades, ens25212
 translation-type: tm+mt
-source-git-commit: 6cf9c88f6dc751a4cc877670a89cc99d1efb1b2a
+source-git-commit: adf8e8457c8ffef263223a38d3f9c345cf7c6ab2
 workflow-type: tm+mt
 source-wordcount: '2180'
 ht-degree: 3%
@@ -126,7 +126,7 @@ Data Science Workspace使用機器學習和人工智慧，從您的資料中建�
 | 檔案排程 | 對於電子郵件和雲端儲存目標，使用者都可以建立一次性匯出或建立每日快照。 |
 | 必填欄位 | 使用者可將欄位標示為必填，以確保只匯出包含必填欄位的欄位。 |
 
-如需詳細資訊，請參閱「目 [標」概觀](../../rtcdp/destinations/destinations-overview.md)。
+如需詳細資訊，請參閱「目 [標」概觀](../../destinations/home.md)。
 
 ## Intelligent Services {#intelligent-services}
 
