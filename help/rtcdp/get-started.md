@@ -2,12 +2,12 @@
 keywords: RTCDP;CDP;Real-time Customer Data Platform;real time customer data platform;real time cdp;cdp;rtcdp
 title: 即時客戶資料平台快速入門
 seo-title: 即時客戶資料平台快速入門
-description: ' 即時客戶資料平台的範例案例'
-seo-description: ' 即時客戶資料平台的範例案例'
+description: 即時客戶資料平台的範例案例
+seo-description: 即時客戶資料平台的範例案例
 translation-type: tm+mt
-source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
+source-git-commit: 8369bd517639cc66eeb95a811c3ddf46b8c4c48d
 workflow-type: tm+mt
-source-wordcount: '2318'
+source-wordcount: '2317'
 ht-degree: 1%
 
 ---
@@ -177,7 +177,7 @@ Luma團隊在單一位置擁有所有行為和客戶資料。
 
 ### 為使用策略的收錄資料加標籤
 
-Luma有許多內部政策限制使用特定種類收集到的資訊，而且還必須遵守與資料使用相關的法律和隱私權相關的顧慮。 使用Adobe Experience Platform，可 [!DNL Data Governance]將預先定義的資料使用標籤套用至資料集（以及這些資料集內的特定欄位），讓Luma根據特定的使用限制來分類其資料。
+Luma有許多內部政策限制使用特定種類收集到的資訊，而且還必須遵守與資料使用相關的法律和隱私權相關的顧慮。 使用Adobe Experience Platform，可 [!DNL Data Governance]將預先定義的資料使用標籤套用至資料集（以及這些資料集中的特定欄位），讓Luma根據特定的使用限制來分類其資料。
 
 ![](assets/governance-labels.png)
 
@@ -237,7 +237,7 @@ Loyalty member
 
 按一 **[!UICONTROL 下傳送至目的地]**。
 
-在Adobe Real-time CDP中，Luma可以順暢地依受眾細分行動，以利個人化。\
+在即時CDP中，Luma可以順暢地根據受眾細分採取行動，實現個人化。\
 在此，我們看到Luma將此目的地傳送至Adobe和非Adobe解決方案的所有可用目的地：
 
 ![image](assets/luma-dest.png)
