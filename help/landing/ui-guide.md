@@ -5,7 +5,7 @@ title: Adobe Experience Platform UI指南
 topic: ui guide
 description: 'Adobe Experience Platform '
 translation-type: tm+mt
-source-git-commit: bde9763aafb4ba32877f7ec14873eeae99760a45
+source-git-commit: adf8e8457c8ffef263223a38d3f9c345cf7c6ab2
 workflow-type: tm+mt
 source-wordcount: '1597'
 ht-degree: 0%
@@ -37,7 +37,7 @@ ht-degree: 0%
 
 「區 **[!UICONTROL 段]** 」區段會顯示在IMS組織內建立的區段總數。 建立新區段時，會更新此數字。 有關區段的詳細資訊，請參閱區段 [服務概觀](../segmentation/home.md)。
 
-「目 **[!UICONTROL 標]** 」區段顯示為IMS組織建立的目標總數。 當建立新目標時，此數字會更新。 有關目標的詳細資訊，請參閱目 [標概述](../rtcdp/destinations/destinations-overview.md)。
+「目 **[!UICONTROL 標]** 」區段顯示為IMS組織建立的目標總數。 當建立新目標時，此數字會更新。 有關目標的詳細資訊，請參閱目 [標概述](../destinations/home.md)。
 
 ### 最近的資料
 
@@ -51,7 +51,7 @@ ht-degree: 0%
 
 「最 **[!UICONTROL 近的區段]** 」區段會列出您IMS組織中最近建立的五個區段定義。 每次建立新區段定義時，都會更新此清單。 您可以從清單中選取區段定義，以檢視指定區段定義的詳細資訊，或選取「全部檢視 **** 」，以檢視所有已建立區段定義的清單。 有關區段的詳細資訊，請參閱區段 [服務概觀](../segmentation/home.md)。
 
-「最 **[!UICONTROL 近目標]** 」區段會列出您IMS組織中最近建立的五個目標。 每次建立新目標時，都會更新此清單。 您可以從清單中選擇一個目標來查看有關指定目標的詳細資訊，或選擇「全部查看 **** 」以查看所有已建立目標的清單。 有關目標的詳細資訊，請參閱目 [標概述](../rtcdp/destinations/destinations-overview.md)。
+「最 **[!UICONTROL 近目標]** 」區段會列出您IMS組織中最近建立的五個目標。 每次建立新目標時，都會更新此清單。 您可以從清單中選擇一個目標來查看有關指定目標的詳細資訊，或選擇「全部查看 **** 」以查看所有已建立目標的清單。 有關目標的詳細資訊，請參閱目 [標概述](../destinations/home.md)。
 
 ### 建議的學習
 
@@ -117,7 +117,7 @@ ht-degree: 0%
 
 「 **[!UICONTROL 來源]** 」區段可讓您建立、更新和刪除來源連線，讓您將外部來源的資料擷取至平台。 有關來源的詳細資訊，請參閱來 [源概述](../sources/home.md)。
 
-「目 **[!UICONTROL 標]** 」區段可讓您建立、更新和刪除目標，讓您將資料從平台匯出至許多外部目標。 有關目標的詳細資訊，請參閱目 [標概述](../rtcdp/destinations/destinations-overview.md)。
+「目 **[!UICONTROL 標]** 」區段可讓您建立、更新和刪除目標，讓您將資料從平台匯出至許多外部目標。 有關目標的詳細資訊，請參閱目 [標概述](../destinations/home.md)。
 
 ### [!UICONTROL 客戶]
 
@@ -127,7 +127,7 @@ ht-degree: 0%
 
 「身 **[!UICONTROL 分識別]** 」區段可讓您建立和管理身分識別名稱空間。 如需有關「身分 [!UICONTROL 識別] 」區段的詳細資訊，包括有關身分識別名稱空間以及如何在平台UI中使用身分識別的資訊，請參閱 [身分識別名稱空間總覽](../identity-service/namespaces.md)。
 
-### [!UICONTROL 隱私權]
+### [!UICONTROL 隱私]
 
 「原 **[!UICONTROL 則]** 」區段可讓您建立和管理資料使用原則。 若要進一步瞭解如何使用「原則」區段，請閱讀資 [料使用原則使用指南](../data-governance/policies/user-guide.md)。 有關資料使用原則的詳細資訊，請參閱資 [料使用原則概觀](../data-governance/policies/overview.md)。
 
