@@ -6,9 +6,9 @@ last-update: March 10, 2020
 author: ens71067
 keywords: release notes;
 translation-type: tm+mt
-source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
+source-git-commit: adf8e8457c8ffef263223a38d3f9c345cf7c6ab2
 workflow-type: tm+mt
-source-wordcount: '840'
+source-wordcount: '838'
 ht-degree: 6%
 
 ---
@@ -77,10 +77,10 @@ Adobe Experience Platform提供一組豐富的功能，可吸收任何類型的�
 
 | 目的地 | 說明 |
 |--- | ---|
-| 雲端儲存空間目標 | Adobe即時CDP現在可將區段作為資料檔案傳送至您的或SFTP雲 [!DNL Amazon S3] 端儲存位置。 這可讓您透過CSV或Tab分隔檔案，將觀眾及其描述檔屬性傳送至內部系統。 |
-| 廣告目的地 | 目 [!DNL Google] 標卡現在分為三個目標卡，適用於Adobe即時CDP [!DNL Google] 目前支援的三種不同平台： [!DNL Google Ads]、 [!DNL Google Ad Manager]顯示 [!DNL Google] 與視訊360。 |
+| 雲端儲存空間目標 | 即時CDP現在可將區段作為資料檔案傳送至您的或SFTP雲 [!DNL Amazon S3] 端儲存位置。 這可讓您透過CSV或Tab分隔檔案，將觀眾及其描述檔屬性傳送至內部系統。 |
+| 廣告目的地 | 目 [!DNL Google] 標卡現在分為三個目標卡，用於即時CDP中 [!DNL Google] 當前支援的三個不同平台： [!DNL Google Ads]、 [!DNL Google Ad Manager]顯示 [!DNL Google] 與視訊360。 |
 
-若要進一步瞭解，請造訪目 [標總覽](../../rtcdp/destinations/destinations-overview.md)
+若要進一步瞭解，請造訪目 [標總覽](../../destinations/home.md)
 
 ## [!DNL Identity Service] {#identity}
 
