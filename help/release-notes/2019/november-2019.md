@@ -5,7 +5,7 @@ doc-type: release notes
 last-update: November 18, 2019
 author: crhoades, ens28527
 translation-type: tm+mt
-source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
+source-git-commit: 5f120a716cc3396ef7749463bb6052a8ced2fbb4
 workflow-type: tm+mt
 source-wordcount: '1878'
 ht-degree: 4%
@@ -65,7 +65,7 @@ Adobe可連接到龐大的合作夥伴生態系統，更不用說與Adobe Experi
 
 ## [!DNL Destinations] {#destinations}
 
-[!DNL Destinations] 是預先建立的整合，具有之目的地平台受到 Adobe 的 Real-time Customer Data Platform 支援，其可透過順暢的方式為這些合作夥伴啟動資料。如需詳細資訊，請閱讀「目 [標概觀](../../rtcdp/destinations/destinations-overview.md) 」文章。
+[!DNL Destinations] 是預先建立的整合，具有之目的地平台受到 Adobe 的 Real-time Customer Data Platform 支援，其可透過順暢的方式為這些合作夥伴啟動資料。如需詳細資訊，請閱讀「目 [標概觀](../../destinations/home.md) 」文章。
 
 **可用目的地**
 
@@ -74,12 +74,12 @@ Adobe可連接到龐大的合作夥伴生態系統，更不用說與Adobe Experi
 * 廣告: [!DNL Google]
 * 電子郵件行銷：Adobe Campaign、 [!DNL Salesforce Marketing Cloud]、 [!DNL Responsys]、 [!DNL Oracle Eloqua]
 
-請參 [閱目標目錄](../../rtcdp/destinations/destinations-catalog.md) ，以取得每個目標的相關資訊。
+請參 [閱目標目錄](../../destinations/catalog/overview.md) ，以取得每個目標的相關資訊。
 
 **已知限制**
 
-* 在初始發行中，不提供允許自訂啟 [動流程](../../rtcdp/destinations/activate-destinations.md#activate-data) （計畫步驟）的控制項。
-* 目前無法編輯或刪除目標配置。 若要解決此限制，您可以啟用或停用目標詳細資料頁面右上角的 [目標](../../rtcdp/destinations/destination-details-page.md)。
+* 在初始發行中，不提供允許自訂啟 [動流程](../../destinations/ui/activate-destinations.md#activate-data) （計畫步驟）的控制項。
+* 目前無法編輯或刪除目標配置。 若要解決此限制，您可以啟用或停用目標詳細資料頁面右上角的 [目標](../../destinations/ui/destination-details-page.md)。
 * 當連線至您的目標或儲存帳戶時，目前沒有驗證帳戶詳細資訊、路徑或憑證。 請確定您輸入了正確的認證，並仔細檢查拼字錯誤或錯字。
 * 初始發行後，未進行任何憑證續約。 一旦帳戶過期或需要重新整理，您必須建立新的目的地連線並重新對應先前映射的區段。
 
