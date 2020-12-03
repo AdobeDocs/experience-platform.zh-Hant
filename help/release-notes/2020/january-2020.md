@@ -5,9 +5,9 @@ doc-type: release notes
 last-update: January 15, 2020
 author: crhoades, ens28527
 translation-type: tm+mt
-source-git-commit: a362b67cec1e760687abb0c22dc8c46f47e766b7
+source-git-commit: adf8e8457c8ffef263223a38d3f9c345cf7c6ab2
 workflow-type: tm+mt
-source-wordcount: '894'
+source-wordcount: '880'
 ht-degree: 7%
 
 ---
@@ -19,10 +19,10 @@ ht-degree: 7%
 
 Adobe Experience Platform 現有功能更新：
 
-* [[!DNL Experience Data Model(XDM)System]](#xdm)
-* [[!DNL隱私服務]](#privacy)
-* [[!DNL源]](#sources)
-* [[!DNL目標]](#destinations)
+* [[!DNL Experience Data Model (XDM) System]](#xdm)
+* [[!DNL Privacy Service]](#privacy)
+* [[!DNL Sources]](#sources)
+* [[!DNL Destinations]](#destinations)
 
 ## [!DNL Experience Data Model] (XDM)系統 {#xdm}
 
@@ -92,7 +92,7 @@ Adobe Experience Platform可以從外部來源擷取資料，同時讓您使用�
 
 ## 目的地 {#destinations}
 
-在 [Adobe Real-time CDP](../../rtcdp/overview.md)，目標是預先建立的與目標平台的整合，以順暢的方式將資料啟動給這些合作夥伴。
+在實 [時CDP中](../../rtcdp/overview.md)，目標是與目標平台預先構建的整合，這些平台可以無縫地向這些合作夥伴激活資料。
 
 **新功能**
 
@@ -112,4 +112,4 @@ Adobe Experience Platform可以從外部來源擷取資料，同時讓您使用�
 
 * None
 
-如需詳細 [資訊，請參閱](../../rtcdp/destinations/destinations-overview.md) 「目標概觀」。
+See the [Destinations overview](../../destinations/home.md) for more information.
