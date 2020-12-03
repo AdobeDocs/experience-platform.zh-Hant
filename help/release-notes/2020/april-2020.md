@@ -6,9 +6,9 @@ last-update: April 13, 2020
 author: ens71067
 keywords: release notes;
 translation-type: tm+mt
-source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
+source-git-commit: adf8e8457c8ffef263223a38d3f9c345cf7c6ab2
 workflow-type: tm+mt
-source-wordcount: '972'
+source-wordcount: '969'
 ht-degree: 8%
 
 ---
@@ -94,14 +94,14 @@ Adobe Experience Platform是一 [!DNL Data Governance] 系列用於管理客戶�
 
 **新目標**
 
-Adobe Real-time CDP現在支援將資料啟動至超過50種擴充功能 [!DNL Experience Cloud Launch] ，以便進行分析、個人化和其他使用案例。 如需詳細資訊，請參閱以下：
+即時CDP現在支援將資料啟動至超過50種擴充功能 [!DNL Experience Cloud Launch] ，讓分析、個人化和其他使用案例都能使用。 如需詳細資訊，請參閱以下：
 
 | 文件 | 說明 |
 |--- | ---|
-| [目標類型和類別](/help/rtcdp/destinations/destination-types.md) | 本文將說明Adobe即時CDP介面中連線與擴充功能的差異，並建議何時使用這些目標。 |
-| [Experience Platform Launch擴充功能](/help/rtcdp/destinations/experience-platform-launch-extensions.md) | 本頁說明 [!DNL Launch] Adobe Real-time CDP中各個擴充功能的擴充功能、列出使用案例，以及 [!DNL Launch] 檔案連結。 |
+| [目標類型和類別](../../destinations/destination-types.md) | 本文將說明即時CDP介面中連接和擴展之間的區別，並建議何時使用這些目標。 |
+| [Experience Platform Launch擴充功能](../../destinations/catalog/launch-extensions/overview.md) | 本頁說明 [!DNL Launch] 了哪些副檔名、列出了使用這些副檔名的使用案例，以及即時CDP中每個 [!DNL Launch] 副檔名的文檔連結。 |
 
-如需詳細資訊，請參閱「目 [標」概觀](/help/rtcdp/destinations/destinations-overview.md)。
+如需詳細資訊，請參閱「目 [標」概觀](../../destinations/home.md)。
 
 ## [!DNL Privacy Service] {#privacy}
 
