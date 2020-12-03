@@ -5,7 +5,7 @@ doc-type: release notes
 last-update: September 8, 2020
 author: crhoades, ens25212
 translation-type: tm+mt
-source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
+source-git-commit: adf8e8457c8ffef263223a38d3f9c345cf7c6ab2
 workflow-type: tm+mt
 source-wordcount: '862'
 ht-degree: 6%
@@ -47,9 +47,9 @@ Adobe Experience Platform資料治理是一系列策略和技術，用於管理�
 
 | 功能 | 說明 |
 | ------- | ----------- |
-| UX改進 | 使用者可存取內嵌表格動作，以更輕鬆地存取主要動作，例如新增資料、編輯排程和新增區段。 如需詳細 [資訊，請參閱目標工作區](../../rtcdp/destinations/destinations-workspace.md) 檔案。 |
+| UX改進 | 使用者可存取內嵌表格動作，以更輕鬆地存取主要動作，例如新增資料、編輯排程和新增區段。 如需詳細 [資訊，請參閱目標工作區](../../destinations/ui/destinations-workspace.md) 檔案。 |
 
-若要進一步瞭解，請造訪目 [標總覽](../../rtcdp/destinations/destinations-overview.md)
+若要進一步瞭解，請造訪目 [標總覽](../../destinations/home.md)
 
 ## [!DNL Observability Insights] {#observability}
 
