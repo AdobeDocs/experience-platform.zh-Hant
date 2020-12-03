@@ -6,7 +6,7 @@ topic: tutorial
 type: Tutorial
 description: 瞭解如何建立不同的目的地類型並啟用資料。
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: d29f7c7243ec798abe60fff895b36277996cb4a0
 workflow-type: tm+mt
 source-wordcount: '78'
 ht-degree: 10%
@@ -20,8 +20,8 @@ ht-degree: 10%
 
 ## 電子郵件行銷目標 {#email-destinations}
 
-* [建立電子郵件行銷目標並啟用資料](/help/rtcdp/destinations/email-marketing-api.md)
+* [建立電子郵件行銷目標並啟用資料](../destinations/api/email-marketing.md)
 
 ## 雲端儲存空間串流目的地 {#streaming-destinations}
 
-* [連線至串流目的地並啟動資料](/help/rtcdp/destinations/streaming-destinations-api-tutorial.md)
+* [連線至串流目的地並啟動資料](../destinations/api/streaming-destinations.md)
