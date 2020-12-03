@@ -5,7 +5,7 @@ title: Audience Manager連接器
 topic: overview
 description: Adobe Audience Manager資料連接器可將在Adobe Audience Manager中收集的第一方資料串流至Adobe Experience Platform。 Audience Manager連接器可將三種資料類別擷取至平台。
 translation-type: tm+mt
-source-git-commit: 4ab5c3a8f9dbecc27686c7ce7db4f66ac18c2d2a
+source-git-commit: e51f750dae2a76cd05076edfe8c6423efe949891
 workflow-type: tm+mt
 source-wordcount: '798'
 ht-degree: 0%
@@ -74,4 +74,4 @@ Adobe Audience Manager在目錄中建立一個連線：Audience Manager連線。
 | Audience Manager資料 | 延遲性 | 附註 |
 | --- | --- | --- |
 | 即時資料 | &lt; 35 分鐘. | 從在Audience Manager Edge節點擷取到出現在平台資料湖上的時間。 |
-| 描述檔資料 | &lt; 2 天 | 從透過DCS/PCS Edge資料和已登入資料擷取、處理至使用者描述檔，然後顯示在描述檔中的時間。 今天，此資料並未直接登陸Platform Data Lake。 設定檔切換可在Audience Manager設定檔資料集上啟用，以直接將此資料收錄至設定檔。 |
+| 描述檔資料 | &lt; 2 天 | 從透過DCS/PCS Edge資料和已登入資料擷取、處理至使用者描述檔，然後顯示在描述檔中的時間。 今天，此資料並未直接登陸Platform Data Lake。 可為Audience Manager Profile資料集啟用描述檔切換，以直接將此資料收錄至描述檔。 |
