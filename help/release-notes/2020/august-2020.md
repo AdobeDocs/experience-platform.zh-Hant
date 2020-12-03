@@ -5,9 +5,9 @@ doc-type: release notes
 last-update: August 10, 2020
 author: crhoades, ens28527
 translation-type: tm+mt
-source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
+source-git-commit: d29f7c7243ec798abe60fff895b36277996cb4a0
 workflow-type: tm+mt
-source-wordcount: '582'
+source-wordcount: '581'
 ht-degree: 7%
 
 ---
@@ -46,14 +46,14 @@ Adobe Experience Platform 現有功能更新：
 
 | 目的地 | 說明 |
 |--- | ---|
-| [!DNL Google Customer Match] | Google Customer Match可讓您使用您的線上和離線資料，透過Google擁有和營運的資產觸及並重新與客戶互動，例如： [!DNL Search]、 [!DNL Shopping]Gmail和YouTube。 <br><br> 請造訪 [!DNL Google Customer Match] 目 [的地目錄中的頁面](/help/rtcdp/destinations/google-customer-match-destination.md) ，以取得有關目的地以及如何在Adobe即時CDP中設定目標的詳細資訊。 |
+| [!DNL Google Customer Match] | Google Customer Match可讓您使用您的線上和離線資料，透過Google擁有和營運的資產觸及客戶並與其重新互動，例如： [!DNL Search]、 [!DNL Shopping]Gmail和YouTube。 <br><br> 請造訪 [!DNL Google Customer Match] 目 [的地目錄中的頁面](../../destinations/catalog/advertising/google-customer-match.md) ，以瞭解有關目標以及如何在即時CDP中設定目標的詳細資訊。 |
 
 **新功能**
 
 | 功能 | 說明 |
 |------- | -----------|
-| 自訂檔案名稱編輯器 | 更新至電子郵件行銷目的地和雲端儲存空間目的地的資料啟動工作流程，讓您編輯匯出檔案的名稱。 如需詳細資訊，請參閱啟 [ 動工作流程中的](/help/rtcdp/destinations/activate-destinations.md#configure) 「設定」步驟。 |
-| 建議的屬性 | 更新至電子郵件行銷目的地和雲端儲存空間目的地的資料啟動工作流程，以顯示您要新增至匯出檔案的建議屬性。 如需詳細資訊，請參閱啟 [動工作流程中的](/help/rtcdp/destinations/activate-destinations.md#select-attributes) 「選取屬性」步驟。 |
+| 自訂檔案名稱編輯器 | 更新至電子郵件行銷目的地和雲端儲存空間目的地的資料啟動工作流程，讓您編輯匯出檔案的名稱。 如需詳細資訊，請參閱啟 [ 動工作流程中的](../../destinations/ui/activate-destinations.md#configure) 「設定」步驟。 |
+| 建議的屬性 | 更新至電子郵件行銷目的地和雲端儲存空間目的地的資料啟動工作流程，以顯示您要新增至匯出檔案的建議屬性。 如需詳細資訊，請參閱啟 [動工作流程中的](../../destinations/ui/activate-destinations.md#select-attributes) 「選取屬性」步驟。 |
 
 ## [!DNL Real-time Customer Data Platform] {#rtcdp}
 
