@@ -5,9 +5,9 @@ title: 建立具有預測分數的客戶細分
 topic: Create a segment
 description: 當預測執行完成時，「設定檔」會自動使用預測傾向分數。 利用客戶人工智慧豐富個人檔案分數可建立客戶細分，以根據其傾向分數尋找受眾。 本節提供使用區段產生器建立區段的步驟。
 translation-type: tm+mt
-source-git-commit: c5e2ea5daf813bf580a11f0182361197e55c6fe8
+source-git-commit: d29f7c7243ec798abe60fff895b36277996cb4a0
 workflow-type: tm+mt
-source-wordcount: '317'
+source-wordcount: '308'
 ht-degree: 0%
 
 ---
@@ -41,4 +41,4 @@ ht-degree: 0%
 
 ## 後續步驟
 
-透過本教學課程，您已使用「區段產生器」，根據受眾的傾向分數成功找到受眾。 您現在可以透過將受眾啟動至目標來定位受眾。 如需詳細 [資訊，請參閱](https://docs.adobe.com/content/help/en/experience-platform/rtcdp/destinations/destinations-overview.html) 「目標概觀」。
+透過本教學課程，您已使用「區段產生器」，根據受眾的傾向分數成功找到受眾。 您現在可以透過將受眾啟動至目標來定位受眾。 See the [destinations overview](../../../destinations/home.md) for more information.
