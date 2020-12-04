@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 即時客戶資料平台中的IAB TCF 2.0支援
 topic: privacy events
 translation-type: tm+mt
-source-git-commit: b24c624df188be3cbe7f71dcdf8a23d2478c287c
+source-git-commit: 75a0b4ba1342ece3e34a7ef41782b9014516d4fe
 workflow-type: tm+mt
 source-wordcount: '2388'
 ht-degree: 1%
@@ -45,7 +45,7 @@ ht-degree: 1%
    * [SDK同意命令](../../../edge/consent/supporting-consent.md):本指南中所示同意相關SDK命令的使用案例概述。
 * [Adobe Experience Platform細分服務](../../../segmentation/home.md):可讓您將資料分 [!DNL Real-time Customer Profile] 為具有類似特徵且回應類似行銷策略的個人群組。
 
-除了上述 [!DNL Platform] 服務外，您也應熟悉目 [的地](../../destinations/destinations-overview.md) 及其用途 [!DNL Real-time CDP]。
+除了上述 [!DNL Platform] 服務外，您也應熟悉目 [的地](../../destinations/overview.md) 及其用途 [!DNL Real-time CDP]。
 
 ## 客戶同意流程摘要 {#summary}
 
@@ -220,7 +220,7 @@ alloy("sendEvent", {
 | `consentStringValue` | 由CMP生成的基本-64編碼的許可字串。 |
 | `gdprApplies` | 一個布爾值，它指示GDPR是否適用於當前登錄的客戶。 要為此客戶強制執行TCF 2.0，必須將值設定為&quot;true&quot;。 |
 
-### 處理SDK回應 {#sdk-1}
+### 處理SDK回應
 
 所有 [!DNL Platform SDK] 命令都返回表明呼叫是成功還是失敗的承諾。 然後，您可以將這些回應用於其他邏輯，例如向客戶顯示確認訊息。 如需特定範例， [請參閱執行SDK指令之指南](../../../edge/fundamentals/executing-commands.md#handling-success-or-failure) 中有關處理成功或失敗的章節。
 
