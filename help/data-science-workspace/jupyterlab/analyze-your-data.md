@@ -8,7 +8,7 @@ description: 本教學課程著重於如何使用Jupyter筆記型電腦（建立
 translation-type: tm+mt
 source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
-source-wordcount: '1731'
+source-wordcount: '1723'
 ht-degree: 0%
 
 ---
@@ -20,9 +20,9 @@ ht-degree: 0%
 
 以下概念介紹：
 
-- **[!DNL JupyterLab]:**[[!DNL JupyterLab]](https://blog.jupyter.org/jupyterlab-is-ready-for-users-5a6f039b8906) 是Project Jupyter的新一代基於Web的介面，並與之緊密整合 [!DNL Adobe Experience Platform]。
+- **[!DNL JupyterLab]:**[[!DNL JupyterLab]](https://blog.jupyter.org/jupyterlab-is-ready-for-users-5a6f039b8906) 是Project Jupyter的新一代Web介面，並緊密整合在其中 [!DNL Adobe Experience Platform]。
 - **批：** 資料集由批處理組成。 批是一組在一段時間內收集並作為單個單位一起處理的資料。 新增資料至資料集時，會建立新的批次。
-- **資料存取SDK（已過時）:** 「資料存取SDK」現已停用。 請使用 [[!DNL平台SDK]指南](../authoring/platform-sdk.md) 。
+- **資料存取SDK（已過時）:** 「資料存取SDK」現已停用。 請使用指 [[!DNL Platform SDK]](../authoring/platform-sdk.md) 南。
 
 ## 在Data Science Workspace中探索筆記型電腦
 
@@ -92,7 +92,7 @@ Data Science Workspace可讓使用者透過平 [!DNL Jupyter Notebooks] 台進�
 
 >[!TIP]
 >
->請參閱 [[!DNL平台SDK]指南](../authoring/platform-sdk.md) ，以轉換您的程式碼。
+>請參閱指 [[!DNL Platform SDK]](../authoring/platform-sdk.md) 南以轉換程式碼。
 
 ```PYTHON
 from data_access_sdk_python.reader import DataSetReader
