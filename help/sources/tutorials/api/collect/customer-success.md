@@ -8,7 +8,7 @@ description: 本教學課程涵蓋從客戶成功系統擷取資料，並透過�
 translation-type: tm+mt
 source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
-source-wordcount: '1624'
+source-wordcount: '1609'
 ht-degree: 1%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 1%
 
 [!DNL Flow Service] 用於收集和集中Adobe Experience Platform內不同來源的客戶資料。 該服務提供用戶介面和REST風格的API，所有支援的源都可從中連接。
 
-本教學課程涵蓋從協力廠商客戶成功系統擷取資料，並透過來源連接器 [!DNL Platform] 和 [[!DNL Flow Service]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) API將其內嵌至其中的步驟。
+本教學課程涵蓋從協力廠商客戶成功系統擷取資料，並透過來源連接器和 [!DNL Platform][[!DNL Flow Service]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) API將其內嵌至其中的步驟。
 
 ## 快速入門
 
@@ -26,11 +26,11 @@ ht-degree: 1%
 
 本教學課程也要求您對Adobe Experience Platform的下列元件有正確的認識：
 
-* [[!DNL體驗資料模型(XDM)系統]](../../../../xdm/home.md):Experience Platform組織客戶體驗資料的標準化架構。
+* [[!DNL Experience Data Model (XDM) System]](../../../../xdm/home.md):Experience Platform組織客戶體驗資料的標準化架構。
    * [架構構成基礎](../../../../xdm/schema/composition.md):瞭解XDM架構的基本建置區塊，包括架構組合的主要原則和最佳實務。
    * [架構註冊開發人員指南](../../../../xdm/api/getting-started.md):包含您必須知道的重要資訊，以便成功執行對架構註冊表API的呼叫。 這包括您 `{TENANT_ID}`的「容器」概念，以及提出要求所需的標題（請特別注意「接受」標題及其可能的值）。
-* [[!DNL目錄服務]](../../../../catalog/home.md):目錄是記錄資料位置和世系的系統 [!DNL Experience Platform]。
-* [[!DNL批處理提取]](../../../../ingestion/batch-ingestion/overview.md):「批次擷取API」可讓您將資料擷取為 [!DNL Experience Platform] 批次檔案。
+* [[!DNL Catalog Service]](../../../../catalog/home.md):目錄是記錄資料位置和世系的系統 [!DNL Experience Platform]。
+* [[!DNL Batch ingestion]](../../../../ingestion/batch-ingestion/overview.md):「批次擷取API」可讓您將資料擷取為 [!DNL Experience Platform] 批次檔案。
 * [沙盒](../../../../sandboxes/home.md): [!DNL Experience Platform] 提供虛擬沙盒，可將單一執行個體分 [!DNL Platform] 割為不同的虛擬環境，以協助開發和發展數位體驗應用程式。
 
 以下各節提供您需要瞭解的其他資訊，以便使用 [!DNL Flow Service] API成功連線至客戶成功系統。
