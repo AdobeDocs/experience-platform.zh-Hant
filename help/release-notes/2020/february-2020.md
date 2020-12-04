@@ -8,7 +8,7 @@ translation-type: tm+mt
 source-git-commit: bfbf2074a9dcadd809de043d62f7d2ddaa7c7b31
 workflow-type: tm+mt
 source-wordcount: '195'
-ht-degree: 10%
+ht-degree: 15%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 10%
 
 **發行日期：2020 年 2 月 12 日**
 
-Adobe Experience Platform現有功能的更新：
+Adobe Experience Platform 現有功能更新：
 
 * [來源](#sources)
 
@@ -39,6 +39,6 @@ Adobe Experience Platform可以從外部來源擷取資料，同時讓您使用�
 
 **已知問題**
 
-* 無
+* None
 
 如需來源的詳細資訊，請參閱來 [源概觀](../../sources/home.md)。
