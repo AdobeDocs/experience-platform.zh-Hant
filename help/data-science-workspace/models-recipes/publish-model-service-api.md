@@ -8,7 +8,7 @@ description: 本教學課程涵蓋使用Sensei Machine Learning API將模型發�
 translation-type: tm+mt
 source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
-source-wordcount: '1501'
+source-wordcount: '1496'
 ht-degree: 1%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 1%
 
 # 將模型發佈為服務(API)
 
-本教學課程涵蓋使用 [[!DNL Sensei機器學習API]將模型發佈為服務的程式](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml)。
+本教學課程涵蓋使用發佈模型為服務的程式 [[!DNL Sensei Machine Learning API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml)。
 
 ## 快速入門
 
