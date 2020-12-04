@@ -35,7 +35,7 @@ ht-degree: 9%
 
 首先，安裝Adobe Experience Platform擴充 [!DNL Web SDK] 功能。
 
-1. 在中 [!DNL Launch]，開啟「 **[!UICONTROL 擴展]** 」頁籤。
+1. In [!DNL Launch], open the **[!UICONTROL Extensions]** tab.
 
    ![image](assets/launch-overview.png)
 
