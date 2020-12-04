@@ -2,7 +2,7 @@
 product: experience-platform
 audience: user
 user-guide-title: Adobe Experience Platform 查詢服務說明
-breadcrumb-title: Query Service 指南
+breadcrumb-title: 查詢服務指南
 user-guide-description: 使用標準 SQL 在 Platform Data Lake 中查詢資料。
 translation-type: tm+mt
 source-git-commit: 4e358fda1c8f7aebe57a009a146b8b73cf88e169
