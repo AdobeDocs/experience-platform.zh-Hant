@@ -59,7 +59,7 @@ ht-degree: 5%
 | 批次 | `/batches` | 批次是多個資料單位，由一或多個要作為一個單位進行內嵌的檔案所組成。中的批處理對 [!DNL Catalog] 像概述了批處理的接收度量（如已處理的記錄數或磁碟上的大小），還可能包括資料集、視圖和其他受批處理操作影響的資源的連結。 |
 | 連線 | `/connections` | 連接是源連接器的單個實例，對於您的組織是唯一的，並且使用連接器類型的適當驗證憑據進行配置。 |
 | 連接器 | `/connectors` | 連接器可定義來源連線如何從其他Adobe應用程式（例如Adobe Analytics和Adobe Audience Manager）、協力廠商雲端儲存來源(例如 [!DNL Azure Blob], [!DNL Amazon S3]FTP伺服器和SFTP伺服器)以及協力廠商CRM系統(例如 [!DNL Microsoft Dynamics] 和 [!DNL Salesforce])收集資料。 |
-| 資料集 | `/dataSets` | 資料集是用於收集資料（通常是表格）的儲存和管理結構，其中包含結構（欄）和欄（列）。 如需詳細 [資訊，請參閱資料集](./datasets/overview.md) 概觀。 |
+| 資料集 | `/dataSets` | 資料集是用於收集資料（通常是表格）的儲存和管理結構，其中包含結構（欄）和欄（列）。 See the [datasets overview](./datasets/overview.md) for more information. |
 | 資料集檔案 | `/datasetFiles` | 資料集檔案代表已儲存在的資料區塊 [!DNL Platform]。 作為常值檔案的記錄，您可以在這些位置找到檔案的大小、檔案包含的記錄數，以及對接收檔案的批的引用。 |
 
 ## 後續步驟
