@@ -2,7 +2,7 @@
 product: experience-platform
 audience: user
 user-guide-title: Adobe Experience Platform 劃分服務說明
-breadcrumb-title: Segmentation Service 指南
+breadcrumb-title: 分段服務指南
 user-guide-description: 從您的即時客戶設定檔資料建立區段並產生對象。
 translation-type: tm+mt
 source-git-commit: beacce03136e1620ff57fb549f335d2199bb6001
