@@ -7,7 +7,7 @@ topic: overview
 translation-type: tm+mt
 source-git-commit: c5455dc0812b251483170ac19506d7c60ad4ecaa
 workflow-type: tm+mt
-source-wordcount: '787'
+source-wordcount: '781'
 ht-degree: 1%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 1%
 
 Adobe Experience Platform可讓您從外部來源擷取資料，同時提供您使用服務建構、標示及增強傳入資料的 [!DNL Platform] 能力。 您可以從多種來源（例如Adobe應用程式、雲端儲存空間、資料庫等）擷取資料。
 
-[[!DNL Adobe Experience Platform Flow Service]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) ，用於收集和集中內部不同來源的客戶資料 [!DNL Platform]。 該服務提供用戶介面和REST風格的API，所有支援的源都可從中連接。
+[[!DNL Adobe Experience Platform Flow Service]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) 用於收集和集中來自內部不同來源的客戶資料 [!DNL Platform]。 該服務提供用戶介面和REST風格的API，所有支援的源都可從中連接。
 
 有了Adobe I/O Events，您就可以訂閱事件，並使用網頁勾點來接收有關流程執行狀態的通知。 這些通知包含有關流式執行成功或導致執行失敗的錯誤的資訊。
 
