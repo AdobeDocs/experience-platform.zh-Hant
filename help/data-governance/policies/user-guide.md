@@ -7,7 +7,7 @@ description: Adobe Experience Platform Data Governance提供使用者介面，�
 translation-type: tm+mt
 source-git-commit: a362b67cec1e760687abb0c22dc8c46f47e766b7
 workflow-type: tm+mt
-source-wordcount: '765'
+source-wordcount: '762'
 ht-degree: 0%
 
 ---
@@ -25,7 +25,7 @@ Adobe Experience Platform提 [!DNL Data Governance] 供使用者介面，可讓�
 
 本指南需要對下列概念有充分的 [!DNL Experience Platform] 瞭解：
 
-- [[!DNL資料治理]](../home.md)
+- [[!DNL Data Governance]](../home.md)
 - [資料使用原則](./overview.md)
 
 ## 檢視資料使用原則 {#view-policies}
