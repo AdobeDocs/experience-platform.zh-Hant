@@ -7,7 +7,7 @@ description: 本文檔提供有關監控批處理提取、管理部分批處理�
 translation-type: tm+mt
 source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
 workflow-type: tm+mt
-source-wordcount: '904'
+source-wordcount: '892'
 ht-degree: 2%
 
 ---
@@ -23,8 +23,8 @@ Adobe Experience Platform提供兩種上傳和接收資料的方法。 您可以
 
 本指南需要有效瞭解Adobe Experience Platform的下列元件：
 
-- [[!DNL體驗資料模型(XDM)系統]](../../xdm/home.md):組織客戶體驗資料 [!DNL Experience Platform] 的標準化架構。
-- [[!DNL Adobe Experience Platform資料擷取]](../home.md):可傳送資料的方法 [!DNL Experience Platform]。
+- [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md):組織客戶體驗資料 [!DNL Experience Platform] 的標準化架構。
+- [[!DNL Adobe Experience Platform Data Ingestion]](../home.md):可傳送資料的方法 [!DNL Experience Platform]。
 
 ### 讀取範例API呼叫
 
