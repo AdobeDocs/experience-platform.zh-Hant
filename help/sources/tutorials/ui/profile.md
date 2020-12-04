@@ -69,4 +69,4 @@ ht-degree: 0%
 
 ## 後續步驟
 
-遵循本教學課程，您已成功啟動傳入的人口 [!DNL Profile] 資料。 For more information, see the [[!DNL Real-time Customer Profile] overview](../../../profile/home.md).
+遵循本教學課程，您已成功啟動傳入的人口 [!DNL Profile] 資料。 如需詳細資訊，請參閱 [[!DNL Real-time Customer Profile] 總覽](../../../profile/home.md)。
