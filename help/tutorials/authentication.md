@@ -4,19 +4,19 @@ solution: Experience Platform
 title: 驗證及存取Experience Platform API
 topic: tutorial
 type: Tutorial
-description: '本檔案提供逐步教學課程，以存取Adobe Experience Platform開發人員帳戶，以呼叫Experience Platform API。 '
+description: '本文件逐步說明如何存取 Adobe Experience Platform 開發人員帳戶，進而呼叫 Experience Platform API。 '
 translation-type: tm+mt
 source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
-source-wordcount: '878'
-ht-degree: 1%
+source-wordcount: '875'
+ht-degree: 4%
 
 ---
 
 
-# 驗證和存取 [!DNL Experience Platform] API
+# Authenticate and access [!DNL Experience Platform] APIs
 
-本檔案提供逐步教學課程，以存取Adobe Experience Platform開發人員帳戶，以便呼叫 [!DNL Experience Platform] API。
+This document provides a step-by-step tutorial for gaining access to an Adobe Experience Platform developer account in order to make calls to [!DNL Experience Platform] APIs.
 
 ## 驗證以進行API呼叫
 
@@ -49,7 +49,7 @@ ht-degree: 1%
 
 **取得開發人員存取權**
 
-請連絡 [!DNL Admin Console] 您組織中的管理員，以便使用「 [[!DNL管理控制台」將您新增為組織產品的開發人員](https://adminconsole.adobe.com/)。
+請連絡 [!DNL Admin Console] 您組織中的管理員，以使用新增您為組織產品之一的開發人員 [[!DNL Admin Console]](https://adminconsole.adobe.com/)。
 
 ![](images/authentication/assign-developer.png)
 
@@ -163,4 +163,4 @@ curl -X GET https://platform.adobe.io/data/foundation/schemaregistry/global/clas
 
 閱讀本檔案後，您已收集並成功測試API的存取認 [!DNL Platform] 證。 您現在可以遵循檔案中提供的範例API呼 [叫](../landing/documentation/overview.md)。
 
-除了您在本教學課程中收集的驗證值外，許多 [!DNL Platform] API也需要提供有 `{SANDBOX_NAME}` 效的標頭。 如需詳細 [資訊，請參閱](../sandboxes/home.md) 「沙盒總覽」。
+除了您在本教學課程中收集的驗證值外，許多 [!DNL Platform] API也需要提供有 `{SANDBOX_NAME}` 效的標頭。 See the [sandboxes overview](../sandboxes/home.md) for more information.
