@@ -350,7 +350,7 @@ curl -X PATCH https://platform.adobe.io/data/foundation/query/schedules/e95186d6
 | 屬性 | 說明 |
 | -------- | ----------- |
 | `path` | 您要修補的值的路徑。 在這種情況下，由於您要更新計畫查詢的狀態，因此需要將值設 `path` 置為 `/state`。 |
-| `value` | 的更新值 `/state`。 此值可設為，或 `enable` 啟 `disable` 用或停用排程查詢。 |
+| `value` | 的更新值 `/state`。 此值可設為或啟 `enable` 用或 `disable` 停用排程查詢。 |
 
 **回應**
 
