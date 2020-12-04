@@ -72,4 +72,4 @@ curl -X POST \
 
 **回應**
 
-成功的回應會傳回沒有裝載的HTTP狀態202（已接受），表示請求已被接受， [!DNL Privacy Service] 且正在處理中。
+成功的回應會傳回沒有裝載的HTTP狀態202（已接受），指出請求已被接受， [!DNL Privacy Service] 且正在處理中。
