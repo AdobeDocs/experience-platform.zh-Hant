@@ -7,7 +7,7 @@ topic: developer guide
 translation-type: tm+mt
 source-git-commit: 28b733a16b067f951a885c299d59e079f0074df8
 workflow-type: tm+mt
-source-wordcount: '762'
+source-wordcount: '759'
 ht-degree: 0%
 
 ---
@@ -23,7 +23,7 @@ Adobe Experience Platform提 [!DNL Privacy Service] 供REST風格的API和使用
 
 本指南需要熟悉下列功 [!DNL Experience Platform] 能：
 
-* [[!DNL隱私服務]](../home.md):提供REST風格的API和使用者介面，可讓您跨Adobe Experience Cloud應用程式管理資料主體（客戶）的存取和刪除要求。
+* [[!DNL Privacy Service]](../home.md):提供REST風格的API和使用者介面，可讓您跨Adobe Experience Cloud應用程式管理資料主體（客戶）的存取和刪除要求。
 
 以下各節提供您必須知道的其他資訊，以便成功呼叫隱私權服務API。
 
