@@ -7,7 +7,7 @@ description: '身分識別命名空間是 Identity Service 的元件，用途是
 translation-type: tm+mt
 source-git-commit: dfb16c1808ac61e6c4f4d97c08ac3d1dcc8499a8
 workflow-type: tm+mt
-source-wordcount: '772'
+source-wordcount: '759'
 ht-degree: 4%
 
 ---
@@ -21,9 +21,9 @@ Identity namespaces are a component of [[!DNL Identity Service]](./home.md) that
 
 使用身分名稱空間需要瞭解所涉及的各種Adobe Experience Platform服務。 開始使用名稱空間之前，請先閱讀下列服務的檔案：
 
-- [[!DNL即時客戶基本資料]](../profile/home.md):根據來自多個來源的匯整資料，即時提供統一的客戶個人檔案。
+- [[!DNL Real-time Customer Profile]](../profile/home.md):根據來自多個來源的匯整資料，即時提供統一的客戶個人檔案。
 - [[!DNL Identity Service]](./home.md):跨裝置和系統橋接身分，以更全面地瞭解個別客戶及其行為。
-- [[!DNL隱私服務]](../privacy-service/home.md):身分名稱空間用於遵守通用資料保護規則(GDPR)，在GDPR中可以相對於名稱空間提出請求。
+- [[!DNL Privacy Service]](../privacy-service/home.md):身分名稱空間用於遵守通用資料保護規則(GDPR)，在GDPR中可以相對於名稱空間提出請求。
 
 ## 瞭解身分名稱空間
 
