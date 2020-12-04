@@ -5,7 +5,7 @@ title: 建立電子郵件行銷目標
 topic: tutorial
 type: Tutorial
 translation-type: tm+mt
-source-git-commit: 5f120a716cc3396ef7749463bb6052a8ced2fbb4
+source-git-commit: f2fdc3b75d275698a4b1e4c8969b1b840429c919
 workflow-type: tm+mt
 source-wordcount: '1624'
 ht-degree: 1%
@@ -344,7 +344,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 ```
 
 * `{CONNECTION_SPEC_ID}`:使用在步驟獲取可用目標清單 [中獲得的連接規範ID](#get-the-list-of-available-destinations)。
-* `{S3 or SFTP}`:填寫此目的地的所需連線類型。 在目 [標目錄中](../../rtcdp/destinations/destinations-catalog.md)，捲動至您偏好的目標，以查看是否支援S3和／或SFTP連線類型。
+* `{S3 or SFTP}`:填寫此目的地的所需連線類型。 在目 [標目錄中](../catalog/overview.md)，捲動至您偏好的目標，以查看是否支援S3和／或SFTP連線類型。
 * `{ACCESS_ID}`:您的 [!DNL Amazon] S3儲存位置存取ID。
 * `{SECRET_KEY}`:S3儲存位置的 [!DNL Amazon] 機密金鑰。
 
