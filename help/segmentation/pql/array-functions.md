@@ -188,7 +188,7 @@ person.orders.storeId.distinct().count() > 1
 orders.groupBy(storeId)
 ```
 
-## 篩選器
+## 篩選
 
 該函 `filter` 數用於根據表達式過濾陣列或清單。
 
