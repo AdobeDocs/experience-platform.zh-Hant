@@ -39,7 +39,7 @@ Adobe Experience Platform將來自多個來源的資料匯集在一起，以協�
 
 來源連線可設定為從其他Adobe應用程式（例如Adobe Analytics和Adobe Audience Manager）、協力廠商雲端儲存來源(例如 [!DNL Azure Blob], [!DNL Amazon] S3、FTP伺服器和SFTP伺服器)以及協力廠商CRM系統(例如 [!DNL Microsoft Dynamics] 和 [!DNL Salesforce])收集資料。
 
-如需詳細 [資訊，請參閱](../sources/home.md) 「來源概觀」。
+See the [Sources overview](../sources/home.md) for more information.
 
 ## 後續步驟和其他資源
 
@@ -47,6 +47,6 @@ Adobe Experience Platform將來自多個來源的資料匯集在一起，以協�
 
 >[!WARNING]
 >
->下列視訊中使用的術語「統一描述檔」已過期。 條款 [!DNL "Profile"] 或 [!DNL "Real-time Customer Profile"] 是說明檔案中使用的正確 [!DNL Experience Platform] 詞語。 如需最新功能，請參閱檔案。
+>下列視訊中使用的「統一描述檔」一詞已過時。 條款 [!DNL "Profile"] 或 [!DNL "Real-time Customer Profile"] 是說明檔案中使用的正確 [!DNL Experience Platform] 詞語。 如需最新功能，請參閱檔案。
 
 >[!VIDEO](https://video.tv.adobe.com/v/27106?quality=12&learn=on)
