@@ -7,8 +7,8 @@ description: Adobe Experience Platform中的存取控制功能可讓您使用Ado
 translation-type: tm+mt
 source-git-commit: 28b733a16b067f951a885c299d59e079f0074df8
 workflow-type: tm+mt
-source-wordcount: '379'
-ht-degree: 3%
+source-wordcount: '375'
+ht-degree: 4%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 3%
 
 [!DNL Access control] for [!DNL Experience Platform] 是透過 [Adobe Admin Console管理](https://adminconsole.adobe.com)。 此功能運用Admin Console中的產品設定檔，可連結使用者與權限和沙盒。 如需詳細 [資訊，請參閱存取控制概觀](../home.md) 。
 
-本開發人員指南提供如何格式化您對 [[!DNL存取控制API]的請求](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/access-control.yaml)，並涵蓋下列作業：
+本開發人員指南提供如何格式化您要求至的資訊 [[!DNL Access Control API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/access-control.yaml)，並涵蓋下列作業：
 
 - [權限和資源類型的清單名稱](./permissions-and-resource-types.md)
 - [查看當前用戶的有效策略](./effective-policies.md)
