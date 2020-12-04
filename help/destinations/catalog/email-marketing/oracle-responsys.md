@@ -5,7 +5,7 @@ seo-title: Oracle Responsys目標
 description: Responsys是Oracle針對跨通道行銷宣傳提供的企業電子郵件行銷工具，可個人化電子郵件、行動裝置、展示廣告和社交媒體之間的互動。
 seo-description: Responsys是Oracle針對跨通道行銷宣傳提供的企業電子郵件行銷工具，可個人化電子郵件、行動裝置、展示廣告和社交媒體之間的互動。
 translation-type: tm+mt
-source-git-commit: 0bb1622895b1e0f97fc47b5c61d456bc369746c8
+source-git-commit: f2fdc3b75d275698a4b1e4c8969b1b840429c919
 workflow-type: tm+mt
 source-wordcount: '522'
 ht-degree: 0%
@@ -60,22 +60,6 @@ ht-degree: 0%
 ## 匯出的資料 {#exported-data}
 
 對於 [!DNL Oracle Responsys] 目標，即時CDP會在您提供的儲存位置中建立以Tab `.txt` 分隔 `.csv` 的或檔案。 如需檔案的詳細資訊，請參閱區 [段啟動教學課程中的「電子郵件行銷目標](../../ui/activate-destinations.md#esp-and-cloud-storage) 」和「雲端儲存目標」。
-
-<!--
-
-Expect a new file to be created in your storage location every day. The file format is:
-
-`Oracle_Responsys_segment<segmentID>_<timestamp-yyyymmddhhmmss>.csv`
-
-```
-Oracle_Responsys_segment12341e18-abcd-49c2-836d-123c88e76c39_20200408061804.csv
-Oracle_Responsys_segment12341e18-abcd-49c2-836d-123c88e76c39_20200409052200.csv
-Oracle_Responsys_segment12341e18-abcd-49c2-836d-123c88e76c39_20200410061130.csv
-```
-
-The presence of these files in your storage location is confirmation of successful activation. To understand how the exported files are structured, you can [download a sample .csv file](/help/rtcdp/destinations/assets/sample_export_file_segment12341e18-abcd-49c2-836d-123c88e76c39_20200408061804.csv). This sample file includes the profile attributes `person.firstname`, `person.lastname`, `person.gender`, `person.birthyear`, and `personalEmail.address`.
-
--->
 
 ## 設定資料匯入至 [!DNL Oracle Responsys] {#import-data-into-responsys}
 
