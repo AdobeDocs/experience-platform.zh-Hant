@@ -8,7 +8,7 @@ description: '本教學課程使用Sensei Machine Learning API來建立引擎，
 translation-type: tm+mt
 source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
-source-wordcount: '981'
+source-wordcount: '976'
 ht-degree: 2%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 2%
 
 # 匯入封裝的方式(API)
 
-本教學課程 [使用[!DNL Sensei Machine Learning API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml)[](../api/engines.md)來建立引擎，在使用者介面中也稱為「配方」。
+本教學課程 [[!DNL Sensei Machine Learning API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml) 使用建立 [引擎](../api/engines.md)，在使用者介面中也稱為「方式」。
 
 在開始使用之前，請務必注意，Adobe Experience Platform使用不 [!DNL Data Science Workspace] 同的術語來參照API和UI中的類似元素。 本教學課程中使用API詞語，下表概述相關詞語：
 
