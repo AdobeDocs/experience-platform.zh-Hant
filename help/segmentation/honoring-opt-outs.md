@@ -7,7 +7,7 @@ description: 'Experience Platform可讓您的客戶在即時客戶個人檔案�
 translation-type: tm+mt
 source-git-commit: 17ef6c1c6ce58db2b65f1769edf719b98d260fc6
 workflow-type: tm+mt
-source-wordcount: '1030'
+source-wordcount: '1006'
 ht-degree: 0%
 
 ---
@@ -23,10 +23,10 @@ ht-degree: 0%
 
 履行退出要求需要瞭解所涉及的各 [!DNL Adobe Experience Platform] 種服務。 在處理選擇退出請求之前，請先檢閱下列服務的檔案：
 
-- [[!DNL即時客戶基本資料]](../profile/home.md):根據來自多個來源的匯整資料，即時提供統一的客戶個人檔案。
-- [[!DNL Adobe Experience Platform分段服務]](./home.md):可讓您從資料建立受眾 [!DNL Real-time Customer Profile] 區段。
-- [[!DNL體驗資料模型(XDM)]](../xdm/home.md):平台組織客戶體驗資料的標準化架構。
-- [[!DNL Adobe Experience Platform隱私權服務]](../privacy-service/home.md):協助組織自動遵守與客戶資料相關的資料隱私權法規 [!DNL Platform]。
+- [[!DNL Real-time Customer Profile]](../profile/home.md):根據來自多個來源的匯整資料，即時提供統一的客戶個人檔案。
+- [[!DNL Adobe Experience Platform Segmentation Service]](./home.md):可讓您從資料建立受眾 [!DNL Real-time Customer Profile] 區段。
+- [[!DNL Experience Data Model (XDM)]](../xdm/home.md):平台組織客戶體驗資料的標準化架構。
+- [[!DNL Adobe Experience Platform Privacy Service]](../privacy-service/home.md):協助組織自動遵守與客戶資料相關的資料隱私權法規 [!DNL Platform]。
 
 ## 選擇退出混音
 
@@ -132,4 +132,4 @@ In some instances, such as building a segment of people who have opted out, it m
 
 如需細分的詳細資訊，包括透過API和使用者介面使用細分定義和觀眾，請先閱讀細分概 [述](./home.md)。
 
-若要進一步瞭解內部的資 [!DNL Platform]料隱私，包括如何協助 [!DNL Privacy Service] 協助自動遵循法律和組織的隱私權規定，請參閱 [[!DNL隱私權服務]上的檔案](../privacy-service/home.md)。
+若要進一步瞭解內部的資料 [!DNL Platform]隱私，包括如 [!DNL Privacy Service] 何協助協助自動符合法律和組織隱私權規定，請參閱相關檔案 [[!DNL Privacy Service]](../privacy-service/home.md)。
