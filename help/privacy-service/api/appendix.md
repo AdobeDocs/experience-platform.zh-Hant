@@ -7,7 +7,7 @@ translation-type: tm+mt
 source-git-commit: 5b32c1955fac4f137ba44e8189376c81cdbbfc40
 workflow-type: tm+mt
 source-wordcount: '464'
-ht-degree: 9%
+ht-degree: 10%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 9%
 
 ## 標準身分名稱空間 {#standard-namespaces}
 
-所有傳送至的身分必須以 [!DNL Privacy Service] 特定的身分命名空間提供。 身分名稱空間是 [Adobe Experience Platform Identity Service的元件](../../identity-service/home.md) ，可指出身分相關的上下文。
+所有傳送至的身分必須以 [!DNL Privacy Service] 特定的身分命名空間提供。 Identity namespaces are a component of [Adobe Experience Platform Identity Service](../../identity-service/home.md) that indicate the context to which an identity relates.
 
 下表概述了幾種常用的預先定義識別類型，這些類型由提供， [!DNL Experience Platform]以及它們的關聯 `namespace` 值：
 
@@ -61,7 +61,7 @@ ht-degree: 9%
 | Adobe Advertising Cloud | &quot;AdCloud&quot; |
 | Adobe Analytics | &quot;Analytics&quot; |
 | Adobe Audience Manager | &quot;AudienceManager&quot; |
-| Adobe Campaign | &quot;行銷活動&quot; |
+| Adobe Campaign | &quot;Campaign&quot; |
 | Adobe Experience Platform | &quot;aepDataLake&quot; |
 | Adobe Primetime驗證 | &quot;primetimeAuthentication&quot; |
 | Adobe Target | &quot;Target&quot; |
