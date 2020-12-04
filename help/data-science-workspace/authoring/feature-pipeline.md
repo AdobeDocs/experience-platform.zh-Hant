@@ -7,7 +7,7 @@ description: Adobe Experience Platform可讓您透過Sensei機器學習架構執
 translation-type: tm+mt
 source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
-source-wordcount: '1426'
+source-wordcount: '1421'
 ht-degree: 0%
 
 ---
@@ -439,4 +439,4 @@ https://www.postman.com/collections/c5fc0d1d5805a5ddd41a
 
 [//]: # (Next steps section should refer to tutorials on how to score data using the feature pipeline Engine. Update this document once those tutorials are available)
 
-閱讀本檔案後，您便使用「模型編寫SDK」編寫了功能管道、建立了Docker影像，並使用Docker影像URL來使用 [!DNL Sensei Machine Learning] API建立功能管道模型。 您現在已準備好使用 [[!DNL Sensei機器學習API]繼續大規模轉換資料集和擷取資料功能](../api/getting-started.md)。
+閱讀本檔案後，您便使用「模型編寫SDK」編寫了功能管道、建立了Docker影像，並使用Docker影像URL來使用 [!DNL Sensei Machine Learning] API建立功能管道模型。 您現在可以繼續使用來大規模轉換資料集和擷取資料功能 [[!DNL Sensei Machine Learning API]](../api/getting-started.md)。
