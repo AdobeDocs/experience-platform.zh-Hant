@@ -5,7 +5,7 @@ seo-title: Google客戶符合目的地
 description: Google Customer Match可讓您使用您的線上和離線資料，透過Google的自有和營運資產（例如搜尋、購物、Gmail和YouTube）觸及客戶並與其重新互動。
 seo-description: Google Customer Match可讓您使用您的線上和離線資料，透過Google的自有和營運資產（例如搜尋、購物、Gmail和YouTube）觸及客戶並與其重新互動。
 translation-type: tm+mt
-source-git-commit: 24c8dd0f01d7ea14b2fa5827722e797bd209f50c
+source-git-commit: f2fdc3b75d275698a4b1e4c8969b1b840429c919
 workflow-type: tm+mt
 source-wordcount: '1544'
 ht-degree: 0%
@@ -174,19 +174,6 @@ Links to be added when activation based on phone number and device IDs becomes a
 如果未檢測到任何違反策略的情況，請選擇「完 **[!UICONTROL 成]** 」以確認您的選擇並開始向目標發送資料。
 
 ![確認選擇](../../assets/catalog/advertising/google-customer-match/review.png)
-
-
-<!--
-
-Insert in Step 6 when mobile device ID activation is available
-
-    >[!IMPORTANT]
-    >
-    >If you select mobile device IDs (GAID or IDFA) as primary identity in the Identity mapping step, you must also provide an Application Id in this step. If you selected GAID as identity, see [Set the Application ID](https://developer.android.com/studio/build/application-id) in the Android developer documentation. IF you selected IDFA as identity, see [App ID](https://developer.android.com/studio/build/application-id) in the Apple developer documentation.
-
-    ![segment schedule page](/help/rtcdp/destinations/assets/gcm-segment-schedule.png) 
-
--->
 
 ## 確認區段啟動成功 {#verify-activation}
 
