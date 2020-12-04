@@ -142,7 +142,7 @@ curl -X GET \
 | --- | --- |
 | `_page.count` | 檢索的策略總數。 |
 | `name` | 原則的顯示名稱。 |
-| `status` | 策略的當前狀態。 有三種可能的狀態： `DRAFT`、 `ENABLED`或 `DISABLED`。 預設情況下，只 `ENABLED` 有策略參與評估。 如需詳細資訊，請 [參閱政策評](../enforcement/overview.md) 估概觀。 |
+| `status` | 策略的當前狀態。 有三種可能的狀態： `DRAFT`、 `ENABLED`或 `DISABLED`。 預設情況下，只 `ENABLED` 有策略參與評估。 See the overview on [policy evaluation](../enforcement/overview.md) for more information. |
 | `marketingActionRefs` | 列出策略所有適用行銷動作的URI的陣列。 |
 | `description` | 可選說明，提供策略使用案例的進一步上下文。 |
 | `deny` | 一種對象，它描述了策略的關聯行銷操作無法對其執行的特定資料使用標籤。 有關此屬性的 [詳細資訊](#create-policy) ，請參閱建立策略一節。 |
@@ -223,7 +223,7 @@ curl -X GET \
 | 屬性 | 說明 |
 | --- | --- |
 | `name` | 原則的顯示名稱。 |
-| `status` | 策略的當前狀態。 有三種可能的狀態： `DRAFT`、 `ENABLED`或 `DISABLED`。 預設情況下，只 `ENABLED` 有策略參與評估。 如需詳細資訊，請 [參閱政策評](../enforcement/overview.md) 估概觀。 |
+| `status` | 策略的當前狀態。 有三種可能的狀態： `DRAFT`、 `ENABLED`或 `DISABLED`。 預設情況下，只 `ENABLED` 有策略參與評估。 See the overview on [policy evaluation](../enforcement/overview.md) for more information. |
 | `marketingActionRefs` | 列出策略所有適用行銷操作的URI的陣列。 |
 | `description` | 可選說明，提供策略使用案例的進一步上下文。 |
 | `deny` | 一種對象，它描述了策略的關聯行銷操作無法對其執行的特定資料使用標籤。 有關此屬性的 [詳細資訊](#create-policy) ，請參閱建立策略一節。 |
@@ -317,7 +317,7 @@ curl -X POST \
 | 屬性 | 說明 |
 | --- | --- |
 | `name` | 原則的顯示名稱。 |
-| `status` | 策略的當前狀態。 有三種可能的狀態： `DRAFT`、 `ENABLED`或 `DISABLED`。 預設情況下，只 `ENABLED` 有策略參與評估。 如需詳細資訊，請 [參閱政策評](../enforcement/overview.md) 估概觀。 |
+| `status` | 策略的當前狀態。 有三種可能的狀態： `DRAFT`、 `ENABLED`或 `DISABLED`。 預設情況下，只 `ENABLED` 有策略參與評估。 See the overview on [policy evaluation](../enforcement/overview.md) for more information. |
 | `marketingActionRefs` | 列出策略所有適用行銷操作的URI的陣列。 行銷動作的URI是在查詢行 `_links.self.href` 銷動作的回 [應下提供的](./marketing-actions.md#look-up)。 |
 | `description` | 可選說明，提供策略使用案例的進一步上下文。 |
 | `deny` | 描述策略相關行銷動作之特定資料使用標籤的原則運算式，會限制其無法執行。 |
@@ -425,7 +425,7 @@ curl -X PUT \
 | 屬性 | 說明 |
 | --- | --- |
 | `name` | 原則的顯示名稱。 |
-| `status` | 策略的當前狀態。 有三種可能的狀態： `DRAFT`、 `ENABLED`或 `DISABLED`。 預設情況下，只 `ENABLED` 有策略參與評估。 如需詳細資訊，請 [參閱政策評](../enforcement/overview.md) 估概觀。 |
+| `status` | 策略的當前狀態。 有三種可能的狀態： `DRAFT`、 `ENABLED`或 `DISABLED`。 預設情況下，只 `ENABLED` 有策略參與評估。 See the overview on [policy evaluation](../enforcement/overview.md) for more information. |
 | `marketingActionRefs` | 列出策略所有適用行銷操作的URI的陣列。 行銷動作的URI是在查詢行 `_links.self.href` 銷動作的回 [應下提供的](./marketing-actions.md#look-up)。 |
 | `description` | 可選說明，提供策略使用案例的進一步上下文。 |
 | `deny` | 描述策略相關行銷動作之特定資料使用標籤的原則運算式，會限制其無法執行。 有關此屬性的 [詳細資訊](#create-policy) ，請參閱建立策略一節。 |
