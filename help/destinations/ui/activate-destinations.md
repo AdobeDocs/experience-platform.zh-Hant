@@ -6,7 +6,7 @@ seo-title: 將描述檔和區段啟用至目標
 description: 將區段對應至目標，以啟用您在即時客戶資料平台中擁有的資料。 若要完成此作業，請遵循下列步驟。
 seo-description: 將區段對應至目標，以啟用您在即時客戶資料平台中擁有的資料。 若要完成此作業，請遵循下列步驟。
 translation-type: tm+mt
-source-git-commit: 5f120a716cc3396ef7749463bb6052a8ced2fbb4
+source-git-commit: f2fdc3b75d275698a4b1e4c8969b1b840429c919
 workflow-type: tm+mt
 source-wordcount: '1768'
 ht-degree: 0%
@@ -68,7 +68,7 @@ ht-degree: 0%
 
 ![忠誠度ID身分](../assets/ui/activate-destinations/rewardsid-as-identity.gif)
 
-如果 `Email_LC_SHA256` 您根據電子郵件雜湊要求，將客戶資料擷取的電子郵件地址雜湊到Adobe Experience Platform中，請選 [!DNL Facebook][為目標身分](/help/rtcdp/destinations/facebook-destination.md#email-hashing-requirements)。
+如果 `Email_LC_SHA256` 您根據電子郵件雜湊要求，將客戶資料擷取的電子郵件地址雜湊到Adobe Experience Platform中，請選 [!DNL Facebook][為目標身分](../catalog/social/facebook.md#email-hashing-requirements)。
 
 如果 `Email` 您使用的電子郵件地址未雜湊，請選取為目標身分。 即時CDP將對電子郵件地址進行雜湊處理，以符合 [!DNL Facebook] 要求。
 
@@ -158,7 +158,7 @@ ht-degree: 0%
 
 此外，您可以將不同的屬性標示為必填。 將屬性標示為強制屬性，則會使其變成匯出的區段必須包含該屬性。 因此，它可以用作另外的過濾形式。 不需要將屬性標 **記為** mandatory。
 
-建議其中一個屬性是架構中的 [唯一識別碼](/help/rtcdp/destinations/email-marketing-destinations.md#identity) 。 如需必要屬性的詳細資訊，請參閱「電子郵件行銷目標」文 [件中的識別](/help/rtcdp/destinations/email-marketing-destinations.md#identity) 區段。
+建議其中一個屬性是架構中的 [唯一識別碼](../../destinations/catalog/email-marketing/overview.md#identity) 。 如需必要屬性的詳細資訊，請參閱「電子郵件行銷目標」文 [件中的識別](../../destinations/catalog/email-marketing/overview.md#identity) 區段。
 
 >[!NOTE]
 > 
