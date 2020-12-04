@@ -177,7 +177,7 @@ Luma團隊在單一位置擁有所有行為和客戶資料。
 
 ### 為使用策略的收錄資料加標籤
 
-Luma有許多內部政策限制使用特定種類收集到的資訊，而且還必須遵守與資料使用相關的法律和隱私權相關的顧慮。 使用Adobe Experience Platform，可 [!DNL Data Governance]將預先定義的資料使用標籤套用至資料集（以及這些資料集中的特定欄位），讓Luma根據特定的使用限制來分類其資料。
+Luma有許多內部政策限制使用特定種類收集到的資訊，而且還必須遵守與資料使用相關的法律和隱私權相關的顧慮。 使用Adobe Experience Platform，可 [!DNL Data Governance]將預先定義的資料使用標籤套用至資料集（以及這些資料集內的特定欄位），讓Luma根據特定的使用限制來分類其資料。
 
 ![](assets/governance-labels.png)
 
