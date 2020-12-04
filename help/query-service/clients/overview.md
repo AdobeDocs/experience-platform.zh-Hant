@@ -7,7 +7,7 @@ description: 本檔案說明如何從各種案頭用戶端應用程式連接至�
 translation-type: tm+mt
 source-git-commit: 37356db1666b0c800119b1e254940ad72550848a
 workflow-type: tm+mt
-source-wordcount: '97'
+source-wordcount: '78'
 ht-degree: 0%
 
 ---
@@ -21,8 +21,8 @@ ht-degree: 0%
 
 - [[!DNL Aqua Data Studio]](./aqua-data-studio.md)
 - [[!DNL Looker]](./looker.md)
-- [[!DNL Postico(Mac)]](./postico.md)
-- [[!DNL Power BI(PC)]](./power-bi.md)
+- [[!DNL Postico (Mac)]](./postico.md)
+- [[!DNL Power BI (PC)]](./power-bi.md)
 - [[!DNL PSQL]](./psql.md)
 - [[!DNL RStudio]](./rstudio.md)
 - [[!DNL Tableau]](./tableau.md)
