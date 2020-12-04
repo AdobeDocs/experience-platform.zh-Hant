@@ -8,7 +8,7 @@ description: 本教學課程涵蓋使用Flow Service API監控流程執行資料
 translation-type: tm+mt
 source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
-source-wordcount: '617'
+source-wordcount: '613'
 ht-degree: 1%
 
 ---
@@ -20,7 +20,7 @@ Adobe Experience Platform可讓您從外部來源擷取資料，同時提供您�
 
 [!DNL Flow Service] 用於收集和集中Adobe Experience Platform內不同來源的客戶資料。 該服務提供用戶介面和REST風格的API，所有支援的源都可從中連接。
 
-本教學課程涵蓋使用 [[!DNL Flow Service API]監控流程執行資料的完整性、錯誤和量度的步驟](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml)。
+本教學課程涵蓋使用監控流程執行資料的完整性、錯誤和度量的步驟 [[!DNL Flow Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml)。
 
 ## 快速入門
 
