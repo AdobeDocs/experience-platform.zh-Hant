@@ -8,7 +8,7 @@ description: Adobe Experience Platform可讓您將查詢服務整合到JupyterLa
 translation-type: tm+mt
 source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
-source-wordcount: '826'
+source-wordcount: '807'
 ht-degree: 1%
 
 ---
@@ -29,14 +29,14 @@ ht-degree: 1%
 - 資料 [!DNL Adobe Analytics] 集
 
 - 對本教學課程中使用的下列主要概念有正確認識：
-   - [[!DNL體驗資料模型(XDM)和XDM系統]](../../xdm/home.md)
-   - [[!DNL查詢服務]](../../query-service/home.md)
-   - [[!DNL查詢服務SQL語法]](../../query-service/sql/overview.md)
+   - [[!DNL Experience Data Model (XDM) and XDM System]](../../xdm/home.md)
+   - [[!DNL Query Service]](../../query-service/home.md)
+   - [[!DNL Query Service SQL Syntax]](../../query-service/sql/overview.md)
    - Adobe Analytics
 
 ## 存取 [!DNL JupyterLab] 和 [!DNL Query Service] {#access-jupyterlab-and-query-service}
 
-1. 在 [[!DNL Experience Platform]](https://platform.adobe.com)，從左側導覽欄 **[!UICONTROL 瀏覽至Notebooks]** 。 請讓JupyterLab載入。
+1. 在中 [[!DNL Experience Platform]](https://platform.adobe.com)，從左側導 **[!UICONTROL 航列導航到Notebooks]** 。 請讓JupyterLab載入。
 
    ![](../images/jupyterlab/query/jupyterlab-launcher.png)
 
