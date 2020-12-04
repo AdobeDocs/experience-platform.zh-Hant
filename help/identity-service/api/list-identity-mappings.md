@@ -29,7 +29,7 @@ GET https://platform-{REGION}.adobe.io/data/core/identity/mapping
 
 **請求**
 
-選項1:提供身分識別作為namespace(`nsId`依ID)和ID值(`id`)。
+選項1:將身分提供為namespace(`nsId`依ID)和ID值(`id`)。
 
 ```shell
 curl -X GET \
