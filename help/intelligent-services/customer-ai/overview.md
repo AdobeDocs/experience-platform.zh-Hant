@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform;overview;customer ai;popular topics;customer ai overview
 solution: Experience Platform
-title: 客戶人工智慧概觀
+title: Customer AI 概述
 topic: Customer AI overview
-description: 客戶人工智慧可用來產生自訂傾向分數，例如大規模個別個人檔案的流失和轉換。 完成此項作業時，不需將業務需求轉換為機器學習問題、挑選演算法、進行訓練或部署。
+description: Customer AI 可產生自訂傾向評分，例如大規模個別設定檔的流失和轉換。不必將企業需求轉換為機器學習問題、挑選演算法、培訓或部署，就能達成上述目的。
 translation-type: tm+mt
 source-git-commit: c30bbaead775e68f869b080e24e18d4a23cda973
 workflow-type: tm+mt
 source-wordcount: '526'
-ht-degree: 0%
+ht-degree: 16%
 
 ---
 
 
-# 客戶人工智慧概觀
+# Customer AI 概述
 
 客戶人工智慧(Customer AI)是智慧型服務的一部分，可讓行銷人員在個人層級產生客戶預測，並提供說明。
 
@@ -21,7 +21,7 @@ ht-degree: 0%
 
 ## 瞭解客戶人工智慧
 
-客戶人工智慧可用來產生自訂傾向分數，例如大規模個別個人檔案的流失和轉換。 完成此項作業時，不需將業務需求轉換為機器學習問題、挑選演算法、進行訓練或部署。
+Customer AI 可產生自訂傾向評分，例如大規模個別設定檔的流失和轉換。不必將企業需求轉換為機器學習問題、挑選演算法、培訓或部署，就能達成上述目的。
 
 客戶人工智慧可以：
 
