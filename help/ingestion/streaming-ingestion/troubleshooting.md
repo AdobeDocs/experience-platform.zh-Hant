@@ -7,7 +7,7 @@ description: 本檔案針對Adobe Experience Platform上串流擷取的常見問
 translation-type: tm+mt
 source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
 workflow-type: tm+mt
-source-wordcount: '1012'
+source-wordcount: '1008'
 ht-degree: 0%
 
 ---
@@ -101,4 +101,4 @@ Adobe Experience Platform提 [!DNL Data Ingestion] 供REST風格的API，您可�
 
 身份名稱空間有兩種類型：預設值和自訂值。 使用自訂名稱空間時，請確定名稱空間已在中註冊 [!DNL Identity Service]。 如需使用預 [設和自訂名稱空間的詳細資訊](../../identity-service/namespaces.md) ，請參閱身分名稱空間概觀。
 
-您可以使用 [[!DNL Experience Platform UI]](https://platform.adobe.com) ，查看訊息擷取失敗原因的詳細資訊。 按一 **[!UICONTROL 下左側導覽中的]** 「監控」，然後檢視「串流端對端 **** 」標籤，以查看在選取時段內串流的訊息批次。
+您可以使用來查 [[!DNL Experience Platform UI]](https://platform.adobe.com) 看有關消息未能獲取原因的詳細資訊。 按一 **[!UICONTROL 下左側導覽中的]** 「監控」，然後檢視「串流端對端 **** 」標籤，以查看在選取時段內串流的訊息批次。
