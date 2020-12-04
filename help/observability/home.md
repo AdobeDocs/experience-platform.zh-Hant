@@ -27,7 +27,7 @@ API [!DNL Observability Insights] 是REST風格的API，可讓您在Adobe Experi
 
 [!DNL Observability Insights] 可讓您訂閱與Adobe Experience Platform活動相關的事件通知。 透過訂閱事件，您可以設定自己的下游通訊協定，以在工作完成時、工作流程中已到達某個里程碑，或在程式期間發生任何失敗時使用。
 
-如需詳細資訊，請 [參閱](./notifications/overview.md) 「事件通知概觀」。
+See the overview on [event notifications](./notifications/overview.md) for more information.
 
 ## 後續步驟
 
