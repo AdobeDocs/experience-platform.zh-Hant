@@ -7,7 +7,7 @@ description: 本開發人員指南提供協助您開始使用目錄API的步驟�
 translation-type: tm+mt
 source-git-commit: c8e53a25c5b22e8d840658fe26ff47875947a6d0
 workflow-type: tm+mt
-source-wordcount: '588'
+source-wordcount: '583'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 # [!DNL Catalog Service] 開發人員指南
 
-[!DNL Catalog Service] 是Adobe Experience Platform中資料位置和世系的記錄系統。 [!DNL Catalog] 可當成中繼資料存放區或「目錄」，讓您在其中找到有關資料的資訊 [!DNL Experience Platform]，而不需存取資料本身。 如需詳細 [[!DNL Catalog] 資訊](../home.md) ，請參閱總覽。
+[!DNL Catalog Service] 是Adobe Experience Platform中資料位置和世系的記錄系統。 [!DNL Catalog] 可當成中繼資料存放區或「目錄」，讓您在其中找到有關資料的資訊 [!DNL Experience Platform]，而不需存取資料本身。 See the [[!DNL Catalog] overview](../home.md) for more information.
 
 本開發人員指南提供協助您開始使用 [!DNL Catalog] API的步驟。 然後，本指南提供使用執行關鍵操作的範例API調用 [!DNL Catalog]。
 
@@ -23,7 +23,7 @@ ht-degree: 0%
 
 [!DNL Catalog] 跟蹤中數種資源和操作的元資料 [!DNL Experience Platform]。 本開發人員指南需要對建立和管理這些資 [!DNL Experience Platform] 源所涉及的各種服務有良好的認識：
 
-* [[!DNL體驗資料模型(XDM)]](../../xdm/home.md):組織客戶體驗資料 [!DNL Platform] 的標準化架構。
+* [[!DNL Experience Data Model (XDM)]](../../xdm/home.md):組織客戶體驗資料 [!DNL Platform] 的標準化架構。
 * [批次擷取](../../ingestion/batch-ingestion/overview.md):如何 [!DNL Experience Platform] 從資料檔案（例如CSV和Parpec）中擷取和儲存資料。
 * [串流擷取](../../ingestion/streaming-ingestion/overview.md):如 [!DNL Experience Platform] 何即時從用戶端和伺服器端裝置擷取和儲存資料。
 
