@@ -8,7 +8,7 @@ translation-type: tm+mt
 source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
 workflow-type: tm+mt
 source-wordcount: '365'
-ht-degree: 8%
+ht-degree: 9%
 
 ---
 
@@ -85,8 +85,8 @@ SELECT * FROM table WHERE id >= 10000 AND id <= 10005;
 
 | id | 名字 | lastname | 出生日期 | 電子郵件 | city | count |
 |--- | --------- | -------- | --------- | ----- | ------- | ---- |
-| 10000 | 亞歷山大 | 戴維斯 | 1993-09-15 | 安全example@example.com | 溫哥華 | 加拿大 |
-| 10001 | antoine | 杜布瓦 | 1967-03-14 | example2@example.com | 巴黎 | 法國 |
+| 10000 | 亞歷山大 | 戴維斯 | 1993-09-15 | example@example.com | 溫哥華 | 加拿大 |
+| 10001 | 安托 | 杜布瓦 | 1967-03-14 | example2@example.com | 巴黎 | 法國 |
 | 10002 | 京子 | 櫻花 | 1999-11-26 | example3@example.com | 東京 | 日本 |
 | 10003 | linus | 佩特松 | 1982-06-03 | example4@example.com | 斯德哥爾摩 | 瑞典 |
 | 10004 | aasir | waithaka | 1976-12-17 | example5@example.com | 內羅畢 | 肯亞 |
