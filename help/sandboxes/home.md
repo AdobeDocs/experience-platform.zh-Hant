@@ -7,7 +7,7 @@ description: 沙盒是Experience Platform單一執行個體中的虛擬分區，
 translation-type: tm+mt
 source-git-commit: fa667d86c089c692f22cfd1b46f3f11b6e9a68d7
 workflow-type: tm+mt
-source-wordcount: '750'
+source-wordcount: '746'
 ht-degree: 0%
 
 ---
@@ -51,7 +51,7 @@ Adobe Experience Platform旨在讓全球數位體驗應用程式更加豐富。 
 
 ## Experience Platform API中的沙盒
 
-呼叫Experience Platform API時，必須在標題下提供沙盒名稱 `x-sandbox-name`。 例如，當呼叫 [[!DNL Catalog Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml) ，以檢視「生產」沙盒內的所有資料集時，沙盒的名稱(&quot;prod&quot;)會作為API請求的標題提供：
+呼叫Experience Platform API時，必須在標題下提供沙盒名稱 `x-sandbox-name`。 例如，在呼叫以檢視「生產」 [[!DNL Catalog Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml) 沙盒內的所有資料集時，沙盒的名稱(&quot;prod&quot;)會作為API請求的標題提供：
 
 ```shell
 curl -X GET \
