@@ -80,7 +80,7 @@ TCF 2.0支援需要提供兩個XDM混合，它們提供客戶許可欄位：一�
 
 ### 建立記錄型同意方案 {#profile-schema}
 
-從「方 **[!UICONTROL 案]** 」工作區的「瀏 **[!UICONTROL 覽]」標籤中**，根據類別建立新的 [!DNL XDM Individual Profile] 方案。 在「架構編輯器」中開啟架構後，按一 **[!UICONTROL 下畫布左側]** 「 **[!UICONTROL Mixins]** 」區段下的「新增」。
+從「方 **[!UICONTROL 案]** 」工作區的「瀏 **[!UICONTROL 覽] 」標籤中**，根據類別建立新的 [!DNL XDM Individual Profile] 方案。 在「架構編輯器」中開啟架構後，按一 **[!UICONTROL 下畫布左側]** 「 **[!UICONTROL Mixins]** 」區段下的「新增」。
 
 ![](../assets/iab/add-mixin-profile.png)
 
