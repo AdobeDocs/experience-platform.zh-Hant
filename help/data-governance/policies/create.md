@@ -8,7 +8,7 @@ description: 「原則服務API」可讓您建立和管理資料使用原則，�
 translation-type: tm+mt
 source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
-source-wordcount: '1209'
+source-wordcount: '1201'
 ht-degree: 2%
 
 ---
@@ -24,9 +24,9 @@ ht-degree: 2%
 
 本教學課程需要對以下在建立和評估策略時涉及的主要概念有充分的瞭解：
 
-* [[!DNL資料治理]](../home.md):強制執行資料使用 [!DNL Platform] 合規性的框架。
+* [[!DNL Data Governance]](../home.md):強制執行資料使用 [!DNL Platform] 合規性的框架。
 * [資料使用標籤](../labels/overview.md):資料使用標籤會套用至XDM資料欄位，指定資料存取限制。
-* [[!DNL體驗資料模型(XDM)]](../../xdm/home.md):組織客戶體驗資料 [!DNL Platform] 的標準化架構。
+* [[!DNL Experience Data Model (XDM)]](../../xdm/home.md):組織客戶體驗資料 [!DNL Platform] 的標準化架構。
 * [沙盒](../../sandboxes/home.md): [!DNL Experience Platform] 提供虛擬沙盒，可將單一執行個體分 [!DNL Platform] 割為不同的虛擬環境，以協助開發和發展數位體驗應用程式。
 
 在開始本教學課程之前，請先閱讀開發人員指南 [，以取得成功呼叫](../api/getting-started.md)[!DNL Policy Service] API所需的重要資訊，包括必要的標題以及如何讀取範例API呼叫。
