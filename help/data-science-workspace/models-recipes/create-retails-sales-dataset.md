@@ -8,7 +8,7 @@ description: 本教學課程提供所有其他Adobe Experience Platform資料科
 translation-type: tm+mt
 source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
-source-wordcount: '544'
+source-wordcount: '539'
 ht-degree: 0%
 
 ---
@@ -35,7 +35,7 @@ ht-degree: 0%
    - [dictor](https://pypi.org/project/dictor/)
    - [JWT](https://pypi.org/project/jwt/)
 - 對本教學課程中使用的下列概念有正確認識：
-   - [[!DNL體驗資料模型(XDM)]](../../xdm/home.md)
+   - [[!DNL Experience Data Model (XDM)]](../../xdm/home.md)
    - [架構構成基礎](../../xdm/schema/field-dictionary.md)
 
 ## 建立零售銷售結構和資料集
