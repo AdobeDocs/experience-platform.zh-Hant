@@ -118,8 +118,8 @@ alloy("sendEvent",{
 |---|---|---|
 | [currencyCode](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/content/productlistitem.schema.md#xdmcurrencycode) | 選填 | 產 [品的ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) 貨幣。 只有當您可以擁有不同貨幣代碼的產品，以及產品套用時，才有用。 例如，當有購買或新增至購物車時。 |
 | [priceTotal](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/content/productlistitem.schema.md#xdmpricetotal) | 強烈建議 | 只應在適用時設定。 例如，可能無法設定，因為 `productView` 不同產品的不同版本可能有不同的價格，但是價格 `productListAdds`。 |
-| [product](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/content/productlistitem.schema.md#xdmproduct) | 強烈建議 | 產品的XDM ID。 |
-| [productAddMethod](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/content/productlistitem.schema.md#xdmproductaddmethod) | 強烈建議 | 訪客用來新增產品項目至清單的方法。 使用度 `productListAdds` 量設定，且僅應在產品新增至清單時使用。 Examples include `add to cart button`, `quick add`, and `upsell`. |
+| [產品](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/content/productlistitem.schema.md#xdmproduct) | 強烈建議 | 產品的XDM ID。 |
+| [productAddMethod](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/content/productlistitem.schema.md#xdmproductaddmethod) | 強烈建議 | 訪客用來新增產品項目至清單的方法。 使用度 `productListAdds` 量設定，且僅應在產品新增至清單時使用。 範例包括 `add to cart button`、`quick add`、 和 `upsell`。 |
 | [productName](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/content/productlistitem.schema.md#xdmname) | 強烈建議 | 這會設為產品的顯示名稱或人類可讀名稱。 |
 | [數量](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/content/productlistitem.schema.md#xdmquantity) | 強烈建議 | 客戶表示他們需要產品的件數。 應設定在 `productListAdds`、 `productListRemoves`、 `purchases`、 `saveForLaters`等上。 |
 | [SKU](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/content/productlistitem.schema.md) | 強烈建議 | 存放單元。 它是產品的唯一識別碼。 |
