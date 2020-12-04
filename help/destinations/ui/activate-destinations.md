@@ -156,7 +156,7 @@ ht-degree: 0%
 
 ![建議的屬性](../assets/ui/activate-destinations/mark-mandatory.png)
 
-此外，您可以將不同的屬性標示為必填。 將屬性標示為強制屬性，則會使其變成匯出的區段必須包含該屬性。 因此，它可以用作另外的過濾形式。 不需要將屬性標 **記為** mandatory。
+此外，您可以將不同的屬性標示為必填。 將屬性標示為強制屬性，則會使其變成，因此匯出的區段必須包含該屬性。 因此，它可以用作另外的過濾形式。 不需要將屬性標 **記為** mandatory。
 
 建議其中一個屬性是架構中的 [唯一識別碼](../../destinations/catalog/email-marketing/overview.md#identity) 。 如需必要屬性的詳細資訊，請參閱「電子郵件行銷目標」文 [件中的識別](../../destinations/catalog/email-marketing/overview.md#identity) 區段。
 
