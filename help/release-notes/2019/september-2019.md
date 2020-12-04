@@ -7,21 +7,21 @@ author: ens28527
 translation-type: tm+mt
 source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '542'
-ht-degree: 5%
+source-wordcount: '532'
+ht-degree: 6%
 
 ---
 
 
 # Adobe Experience Platform 發行說明
 
-**發行日期: 2019 年 9 月 10 日**
+**發行日期：2019 年 10 月 9 日**
 
-Adobe Experience Platform現有功能的更新：
+Adobe Experience Platform 現有功能更新：
 
-* [[!DNL資料提取]](#ingestion)
-* [[!DNL資料科學工作區]](#dsw)
-* [[!DNL查詢服務]](#query)
+* [[!DNL Data Ingestion]](#ingestion)
+* [[!DNL Data Science Workspace]](#dsw)
+* [[!DNL Query Service]](#query)
 
 ## [!DNL Data Ingestion] {#ingestion}
 
