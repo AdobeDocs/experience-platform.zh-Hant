@@ -20,7 +20,7 @@ Adobe Experience Platform會 [!DNL Privacy Service] 處理客戶存取、選擇�
 
 ## 快速入門
 
-建議您在閱讀本指南之前，先瞭解 [!DNL Experience Platform] 下列服務：
+建議您在閱讀本指南之前，先瞭解下 [!DNL Experience Platform] 列服務：
 
 * [[!DNL Privacy Service]](home.md):管理客戶在Adobe Experience Cloud應用程式中存取、選擇退出銷售或刪除其個人資料的要求。
 * [[!DNL Identity Service]](../identity-service/home.md):透過跨裝置和系統橋接身分，解決客戶體驗資料分散所帶來的根本挑戰。
