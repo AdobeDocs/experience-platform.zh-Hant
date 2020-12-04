@@ -17,7 +17,7 @@ ht-degree: 4%
 
 篩選函式用於篩選(PQL)中數 [!DNL Profile Query Language] 組內的資料。 有關其他PQL函式的詳細資訊，請參閱 [[!DNL Profile Query Language] 概述](./overview.md)。
 
-## 篩選器
+## 篩選
 
 該 `[]` （過濾器）函式允許將過濾器應用於陣列並返回與指定條件匹配的陣列的子集。
 
