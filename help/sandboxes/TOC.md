@@ -2,7 +2,7 @@
 product: experience-platform
 audience: user
 user-guide-title: Adobe Experience Platform 中的沙盒說明
-breadcrumb-title: Sandoxes 指南
+breadcrumb-title: 沙箱指南
 user-guide-description: 將 Platform 執行個體分割至虛擬環境，以進行開發、測試和應用程式部署。
 translation-type: tm+mt
 source-git-commit: 4e358fda1c8f7aebe57a009a146b8b73cf88e169
