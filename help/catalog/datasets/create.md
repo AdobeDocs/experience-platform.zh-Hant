@@ -7,7 +7,7 @@ description: 本檔案提供使用Adobe Experience Platform API建立資料集�
 translation-type: tm+mt
 source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '1259'
+source-wordcount: '1251'
 ht-degree: 1%
 
 ---
@@ -22,8 +22,8 @@ ht-degree: 1%
 本指南需要有效瞭解Adobe Experience Platform的下列元件：
 
 * [批次擷取](../../ingestion/batch-ingestion/overview.md): [!DNL Experience Platform] 可讓您將資料內嵌為批次檔案。
-* [[!DNL體驗資料模型(XDM)系統]](../../xdm/home.md):組織客戶體驗資料 [!DNL Experience Platform] 的標準化架構。
-* [[!DNL沙盒]](../../sandboxes/home.md): [!DNL Experience Platform] 提供虛擬沙盒，可將單一執行個體分 [!DNL Platform] 割為不同的虛擬環境，以協助開發和發展數位體驗應用程式。
+* [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md):組織客戶體驗資料 [!DNL Experience Platform] 的標準化架構。
+* [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform] 提供虛擬沙盒，可將單一執行個體分 [!DNL Platform] 割為不同的虛擬環境，以協助開發和發展數位體驗應用程式。
 
 以下章節提供您必須知道的其他資訊，才能成功呼叫 [!DNL Platform] API。
 
@@ -299,7 +299,7 @@ curl -X POST 'https://platform.adobe.io/data/foundation/import/batches' \
 
 >[!NOTE]
 >
->支援的最大資料上傳檔案為512 MB。 如果您的資料檔案大於此，則需要將它分割為不大於512 MB的區塊，以一次上傳一個。 您可以對每個檔案重複此步驟，使用相同的批次ID，以相同批次上傳每個檔案。 如果您可以在批次中上傳檔案，則數目沒有限制。
+>支援的最大資料上傳檔案為512 MB。 如果您的資料檔案大於此，則需將它分割為不大於512 MB的區塊，以一次上傳一個。 您可以對每個檔案重複此步驟，使用相同的批次ID，以相同批次上傳每個檔案。 如果您可以在批次中上傳檔案，則數目沒有限制。
 
 **API格式**
 
