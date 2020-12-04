@@ -6,7 +6,7 @@ seo-title: 社交網路目標工作流程
 description: 連線至您的社交網路和帳戶的指示
 seo-description: 連線至您的社交網路和帳戶的指示
 translation-type: tm+mt
-source-git-commit: 85e6a65e1407ca60e7b63681c045fadaaa24aef9
+source-git-commit: f2fdc3b75d275698a4b1e4c8969b1b840429c919
 workflow-type: tm+mt
 source-wordcount: '499'
 ht-degree: 0%
@@ -38,7 +38,7 @@ ht-degree: 0%
 
 一旦您的認證獲得確認，而Adobe Experience Cloud已連線至您的社交網路後，您可以選取「下 **[!UICONTROL 一]** 步」繼續 **[!UICONTROL 設定步驟]** 。
 
-![認證已確認](/help/rtcdp/destinations/assets/facebook-post-connection-view.png)
+![認證已確認](../../assets/catalog/social/workflow/post-connect.png)
 
 在「設 **[!UICONTROL 定]** 」步驟中，輸入啟動流程的「名稱 [!UICONTROL 」和「說明] 」，並填寫您社交網路廣告  帳戶的「ID」帳戶。
 
