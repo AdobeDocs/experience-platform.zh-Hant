@@ -3,7 +3,7 @@ keywords: clicktale;clicktale extension;clicktale destination
 title: Clicktale擴充功能
 seo-title: Clicktale擴充功能
 description: Clicktale擴充功能是即時客戶資料平台中的分析目標。 如需擴充功能的詳細資訊，請參閱Adobe Exchange的擴充功能頁面。
-seo-description: Clicktale擴充功能是即時客戶資料平台中的分析目的地。 如需擴充功能的詳細資訊，請參閱Adobe Exchange的擴充功能頁面。
+seo-description: Clicktale擴充功能是即時客戶資料平台中的分析目標。 如需擴充功能的詳細資訊，請參閱Adobe Exchange的擴充功能頁面。
 translation-type: tm+mt
 source-git-commit: 80db19822551883da272787affb6f7dc9dc3a745
 workflow-type: tm+mt
