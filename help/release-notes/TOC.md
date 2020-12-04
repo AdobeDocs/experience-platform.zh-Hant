@@ -15,7 +15,7 @@ ht-degree: 100%
 
 # Adobe Experience Platform 發行說明 {#release-notes}
 
-* [2020 年 11 月](latest/latest.md)
+* [2020 年11月](latest/latest.md)
 * [2020 年 10 月](2020/october-2020.md)
 * [2020 年 9 月](2020/september-2020.md)
 * [2020 年 8 月](2020/august-2020.md)
