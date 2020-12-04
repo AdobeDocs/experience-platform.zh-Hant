@@ -8,7 +8,7 @@ description: 本檔案提供使用Adobe Experience Platform Segmentation Service
 translation-type: tm+mt
 source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
-source-wordcount: '916'
+source-wordcount: '894'
 ht-degree: 0%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 0%
 
 # 建立區段
 
-本檔案提供使用 [[!DNL Adobe Experience Platform Segmentation Service API]開發、測試、預覽和儲存區段定義的教學課程](../api/getting-started.md)。
+本檔案提供教學課程，以開發、測試、預覽和儲存使用的區段定義 [[!DNL Adobe Experience Platform Segmentation Service API]](../api/getting-started.md)。
 
 如需如何使用使用者介面建立區段的詳細資訊，請參閱「區段產 [生器指南」](../ui/overview.md)。
 
@@ -24,9 +24,9 @@ ht-degree: 0%
 
 本教學課程需要對建立觀眾區隔時 [!DNL Adobe Experience Platform] 涉及的各種服務有充份的瞭解。 在開始本教學課程之前，請先閱讀下列服務的檔案：
 
-- [[!DNL即時客戶基本資料]](../../profile/home.md):根據來自多個來源的匯整資料，提供統一、即時的消費者個人檔案。
-- [[!DNL Adobe Experience Platform分段服務]](../home.md):可讓您從即時客戶個人檔案資料建立受眾細分。
-- [[!DNL體驗資料模型(XDM)]](../../xdm/home.md):組織客戶體驗資料 [!DNL Platform] 的標準化架構。
+- [[!DNL Real-time Customer Profile]](../../profile/home.md):根據來自多個來源的匯整資料，提供統一、即時的消費者個人檔案。
+- [[!DNL Adobe Experience Platform Segmentation Service]](../home.md):可讓您從即時客戶個人檔案資料建立受眾細分。
+- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md):組織客戶體驗資料 [!DNL Platform] 的標準化架構。
 
 以下章節提供您必須知道的其他資訊，才能成功呼叫 [!DNL Platform] API。
 
