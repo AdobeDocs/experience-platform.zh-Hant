@@ -46,7 +46,7 @@ Adobe Experience Platform 現有功能更新：
 
 | 目的地 | 說明 |
 |--- | ---|
-| [!DNL Google Customer Match] | Google Customer Match可讓您使用您的線上和離線資料，透過Google擁有和營運的資產觸及客戶並與其重新互動，例如： [!DNL Search]、 [!DNL Shopping]Gmail和YouTube。 <br><br> 請造訪 [!DNL Google Customer Match] 目 [的地目錄中的頁面](../../destinations/catalog/advertising/google-customer-match.md) ，以瞭解有關目標以及如何在即時CDP中設定目標的詳細資訊。 |
+| [!DNL Google Customer Match] | Google Customer Match可讓您使用您的線上和離線資料，透過Google擁有和營運的資產觸及並重新與客戶互動，例如： [!DNL Search]、 [!DNL Shopping]Gmail和YouTube。 <br><br> 請造訪 [!DNL Google Customer Match] 目 [的地目錄中的頁面](../../destinations/catalog/advertising/google-customer-match.md) ，以瞭解有關目標以及如何在即時CDP中設定目標的詳細資訊。 |
 
 **新功能**
 
