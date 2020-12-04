@@ -142,7 +142,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/config/schedules \
 | `name` | **必填。** 排程的字串名稱。 |
 | `type` | **必填。** 作業的字串類型。 支援的兩種類型為「batch_segmentation」和「export」。 |
 | `properties` | **必填。** 包含與調度相關的其他屬性的對象。 |
-| `properties.segments` | **等於「`type`batch_segmentation」時為必要項目。** 使用可 `["*"]` 確保包含所有區段。 |
+| `properties.segments` | **等於「 `type` batch_segmentation」時為必要項目。** 使用可 `["*"]` 確保包含所有區段。 |
 | `schedule` | *選填.* 包含作業計畫的字串。 作業只能排程為每天執行一次，這表示您無法排程作業在24小時期間執行多次。 有關cron時間表的更多資訊，請閱讀 [cron表達式格式文檔](http://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html) 。 在此範例中，&quot;0 0 1 * *&quot;表示此排程將在每月首日的午夜執行。 <br><br>如果未提供此字串，系統會自動產生排程。 |
 | `state` | *選填.* 包含計畫狀態的字串。 兩個支援的狀態是「作用中」和「非作用中」。 依預設，狀態會設為「非作用中」。 |
 
