@@ -49,7 +49,7 @@ Experience Platform的JupyterLab整合隨附架構變更、設計考量、自訂
 
 >[!NOTE]
 >
->上的 [!DNL Platform] 某些服務整合 [!DNL JupyterLab] 僅限於特定內核。 有關詳細資訊，請參 [閱](#kernels) 「內核」一節。
+>上的 [!DNL Platform] 某些服務整合 [!DNL JupyterLab] 僅限於特定內核。 有關詳細資訊，請參 [閱](#kernels) 「內核」部分。
 
 ## 主要功能與常用作業
 
@@ -271,7 +271,7 @@ Experience Platform的JupyterLab整合隨附架構變更、設計考量、自訂
 | 發癢 | 1.3.0 |
 | 西伯恩 | 0.9.0 |
 | statmodels | 0.10.1 |
-| kit | 5.1.0.17 |
+| 彈性 | 5.1.0.17 |
 | gplot | 0.11.5 |
 | py-xgboost | 0.90 |
 | opencv | 3.4.1 |
