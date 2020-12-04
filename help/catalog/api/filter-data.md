@@ -7,7 +7,7 @@ description: 目錄服務API允許透過使用請求查詢參數來篩選回應�
 translation-type: tm+mt
 source-git-commit: 71678b10c9e137016ea404305b272508b9c8cabe
 workflow-type: tm+mt
-source-wordcount: '2084'
+source-wordcount: '2077'
 ht-degree: 1%
 
 ---
@@ -207,8 +207,8 @@ curl -X GET \
 * 標籤名稱是IMS組織唯一的。
 * Adobe程式可能會針對某些行為使用標籤。 這些標籤的名稱會以&quot;adobe&quot;為前置詞作為標準。 因此，在聲明標籤名稱時，應避免此慣例。
 * 下列標籤名稱會保留供跨組織使 [!DNL Experience Platform]用，因此無法宣告為您組織的標籤名稱：
-   * `unifiedProfile`:此標籤名稱保留給要由 [[!DNL即時客戶配置檔案]提取的資料集](../../profile/home.md)。
-   * `unifiedIdentity`:此標籤名稱保留給要由 [[!DNL Identity Service]接收的資料集](../../identity-service/home.md)。
+   * `unifiedProfile`:此標籤名稱保留給要被收錄的資料集 [[!DNL Real-time Customer Profile]](../../profile/home.md)。
+   * `unifiedIdentity`:此標籤名稱保留給要被收錄的資料集 [[!DNL Identity Service]](../../identity-service/home.md)。
 
 以下是包含屬性的資料集范 `tags` 例。 該屬性中的標籤採用鍵值配對的形式，每個標籤值顯示為包含單一字串的陣列：
 
@@ -580,7 +580,7 @@ GET /{OBJECT_TYPE}?property={CONDITION}
 
 | 符號 | 說明 | 範例 |
 | --- | --- | --- |
-| (無) | 聲明屬性名稱（不含運算子）時，只會傳回屬性存在的物件，不論其值為何。 | `property=name` |
+| (None) | 聲明屬性名稱（不含運算子）時，只會傳回屬性存在的物件，不論其值為何。 | `property=name` |
 | ! | 將&quot;`!`&quot;加上參數值後，只 `property` 會傳回屬性不存在的 **物件** 。 | `property=!name` |
 | ~ | 僅傳回屬性值（字串）與位元(`~`)符號後提供的規則運算式相符的物件。 | `property=name~^example` |
 | == | 僅返回其屬性值與雙等號(`==`)後提供的字串完全匹配的對象。 | `property=name==exampleName` |
