@@ -7,7 +7,7 @@ description: 'Adobe Experience Platform Identity Service可管理Adobe Experienc
 translation-type: tm+mt
 source-git-commit: fa667d86c089c692f22cfd1b46f3f11b6e9a68d7
 workflow-type: tm+mt
-source-wordcount: '754'
+source-wordcount: '742'
 ht-degree: 1%
 
 ---
@@ -22,8 +22,8 @@ Adobe Experience Platform可 [!DNL Identity Service] 在Adobe Experience Platfor
 本指南需要有效瞭解Adobe Experience Platform的下列元件：
 
 - [[!DNL Identity Service]](../home.md):解決客戶個人檔案資料分散所帶來的根本挑戰。 它可跨裝置和系統橋接身分，讓客戶與您的品牌互動。
-- [[!DNL即時客戶基本資料]](../../profile/home.md):根據來自多個來源的匯整資料，即時提供統一的消費者個人檔案。
-- [[!DNL體驗資料模型(XDM)]](../../xdm/home.md):組織客戶體驗資料 [!DNL Platform] 的標準化架構。
+- [[!DNL Real-time Customer Profile]](../../profile/home.md):根據來自多個來源的匯整資料，即時提供統一的消費者個人檔案。
+- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md):組織客戶體驗資料 [!DNL Platform] 的標準化架構。
 
 以下章節提供您必須知道或掌握的額外資訊，才能成功呼叫 [!DNL Identity Service] API。
 
