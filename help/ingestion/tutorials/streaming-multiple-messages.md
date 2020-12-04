@@ -8,7 +8,7 @@ description: 本檔案提供教學課程，可讓您使用串流擷取功能，�
 translation-type: tm+mt
 source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
-source-wordcount: '1487'
+source-wordcount: '1480'
 ht-degree: 1%
 
 ---
@@ -31,7 +31,7 @@ ht-degree: 1%
 
 - 授權：生產者 `{ACCESS_TOKEN}`
 
-所有POST要求都需要額外的標題：
+所有POST請求都需要額外的標題：
 
 - 內容類型：application/json
 
@@ -510,7 +510,7 @@ curl -X POST https://dcs.adobedc.net/collection/batch/{CONNECTION_ID} \
     },
 ```
 
-第三則訊息因標題中使用的IMS組織ID無效而失敗。 IMS組織必須符合您嘗試張貼至的{CONNECTION_ID}。 若要判斷哪個IMS組織ID符合您使用的串流連線，您可 `GET inlet` 以使用 [[!DNL資料擷取API]執行請求](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml)。 如需 [如何擷取先前建立之串流連線的範例](./create-streaming-connection.md#get-data-collection-url) ，請參閱擷取串流連線。
+第三則訊息因標題中使用的IMS組織ID無效而失敗。 IMS組織必須符合您嘗試張貼至的{CONNECTION_ID}。 若要判斷哪個IMS組織ID符合您使用的串流連線，您可以使用 `GET inlet` 執行請求 [[!DNL Data Ingestion API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml)。 如需 [如何擷取先前建立之串流連線的範例](./create-streaming-connection.md#get-data-collection-url) ，請參閱擷取串流連線。
 
 第四條消息失敗，因為它未遵循預期的XDM模式。 請 `xdmSchema` 求的標頭和正文中包含的與的XDM模式不匹配 `{DATASET_ID}`。 修正訊息標題和內文中的架構，可讓它傳遞DCCS驗證並成功傳送至 [!DNL Platform]。 還必須更新消息主體，使其與的XDM模式匹配， `{DATASET_ID}` 以便在上通過流驗證 [!DNL Platform]。 如需成功串流至平台之訊息的詳細資訊，請參閱本教 [學課程的確認訊息](#confirm-messages-ingested) 。
 
@@ -531,7 +531,7 @@ curl -X POST https://dcs.adobedc.net/collection/batch/{CONNECTION_ID} \
 
 ## 後續步驟
 
-現在，您知道如何在單一請求中傳送多則訊息，並驗證訊息是否已成功傳入目標資料集，因此可以開始將您自己的資料串流至 [!DNL Platform]。 有關如何從中查詢和檢索收錄資料的概 [!DNL Platform]述，請參 [閱[!DNL資料存取]指南](../../data-access/tutorials/dataset-data.md) 。
+現在，您知道如何在單一請求中傳送多則訊息，並驗證訊息是否已成功傳入目標資料集，因此可以開始將您自己的資料串流至 [!DNL Platform]。 如需如何從中查詢和擷取收錄資料的概 [!DNL Platform]述，請參閱 [[!DNL Data Access]](../../data-access/tutorials/dataset-data.md) 指南。
 
 ## 附錄
 
