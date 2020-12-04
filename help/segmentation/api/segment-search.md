@@ -172,7 +172,7 @@ GET /search/taxonomy?schema.name={SCHEMA}&namespace={NAMESPACE}&entityId={ENTITY
 | ---------- | ----------- | 
 | `schema.name={SCHEMA}` | **（必要）** ，其中{SCHEMA}包含與搜索對象關聯的方案類值。 目前僅支 `_xdm.context.segmentdefinition` 援。 |
 | `namespace={NAMESPACE}` | **（必要）** ，其中{NAMESPACE}包含您要在其中搜尋的命名空間。 |
-| `entityId={ENTITY_ID}` | **（必要）** ，您要取得相關結構資訊的搜尋物件ID，使用{ENTITY_ID}指定。 |
+| `entityId={ENTITY_ID}` | **（必要）** ，您要取得相關結構資訊的搜尋物件ID，以{ENTITY_ID}指定。 |
 
 **請求**
 
