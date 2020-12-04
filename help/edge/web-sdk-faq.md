@@ -84,7 +84,7 @@ Alloy是Adobe Experience Platform Web SDK的程式碼名稱。 它用於SDK的�
 
 ## 客戶是否需要購買Adobe Experience Platform才能使用Web SDK?
 
-不能。任何Adobe Digital Experience客戶都能使用它。 完全自由。 任何想要使用Web SDK的客戶都可存取Adobe Experience Platform UI中建立結構描述和資料集。
+否。任何Adobe Digital Experience客戶都能使用它。 完全自由。 任何想要使用Web SDK的客戶都可存取Adobe Experience Platform UI中建立結構描述和資料集。
 
 ## Web SDK應由誰使用？
 
@@ -135,7 +135,7 @@ Web SDK正在快速發展。 目前正在處理更多使用案例。 您可以�
 
 ## 我是否必須使用Adobe Experience Platform Launch來部署Web SDK?
 
-不能。您可以自行下載 `alloy.js` 檔案。
+否。您可以自行下載 `alloy.js` 檔案。
 
 但是：
 
