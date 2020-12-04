@@ -8,7 +8,7 @@ description: 串流擷取可讓您使用即時串流端點，將資料上傳至A
 translation-type: tm+mt
 source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
 workflow-type: tm+mt
-source-wordcount: '852'
+source-wordcount: '843'
 ht-degree: 3%
 
 ---
@@ -22,8 +22,8 @@ ht-degree: 3%
 
 本指南需要有效瞭解Adobe Experience Platform的下列元件：
 
-- [[!DNL體驗資料模型(XDM)系統]](../../xdm/home.md):組織客戶體驗資料 [!DNL Experience Platform] 的標準化架構。
-- [[!DNL串流擷取]](../streaming-ingestion/overview.md):其中一種方法可傳送資料 [!DNL Experience Platform]。
+- [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md):組織客戶體驗資料 [!DNL Experience Platform] 的標準化架構。
+- [[!DNL Streaming Ingestion]](../streaming-ingestion/overview.md):其中一種方法可傳送資料 [!DNL Experience Platform]。
 
 ### 讀取範例API呼叫
 
