@@ -5,7 +5,7 @@ seo-title: 即時客戶資料平台首頁和資料板
 description: Adobe Experience Platform 的儀表板、首頁和首次使用者體驗
 seo-description: Adobe Experience Platform 的儀表板、首頁和首次使用者體驗
 translation-type: tm+mt
-source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
+source-git-commit: f2fdc3b75d275698a4b1e4c8969b1b840429c919
 workflow-type: tm+mt
 source-wordcount: '633'
 ht-degree: 4%
@@ -68,7 +68,7 @@ Datasets **[!UICONTROL (資料集]** )計數器顯示系統中的資料集數和
 
 **[!UICONTROL 目標]** 顯示為組織建立的目標總數。 當建立新目標時，此數字會更新。
 
-如需目標的詳細資訊，請參閱目 [標概觀](destinations/destinations-overview.md)。
+如需目標的詳細資訊，請參閱目 [標概觀](destinations/overview.md)。
 
 <!-- ### Successful profile records
 
@@ -134,4 +134,4 @@ The number of failed profile records is updated hourly. -->
 
 按一下目標可檢視該項目的詳細資訊，或按一 **[!UICONTROL 下「全部]** 」可檢視更多目標的資訊。
 
-如需目標的詳細資訊，請參閱目 [標概觀](destinations/destinations-overview.md)。
+如需目標的詳細資訊，請參閱目 [標概觀](destinations/overview.md)。
