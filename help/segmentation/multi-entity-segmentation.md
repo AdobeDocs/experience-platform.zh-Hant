@@ -7,7 +7,7 @@ description: 多實體分段是指能夠根據產品、商店或其他非描述�
 translation-type: tm+mt
 source-git-commit: 4dd5a91146b116953ba180e3f39d24b4e1ec289e
 workflow-type: tm+mt
-source-wordcount: '671'
+source-wordcount: '656'
 ht-degree: 0%
 
 ---
@@ -21,10 +21,10 @@ ht-degree: 0%
 
 多實體細分需要對細分中涉及的各種Adobe Experience Platform服務有良好的瞭解。 繼續使用本指南之前，請先閱讀下列檔案：
 
-* [[!DNL即時客戶基本資料]](../profile/home.md):根據來自多個來源的匯總資料，即時提供統一的消費者個人檔案。
+* [[!DNL Real-time Customer Profile]](../profile/home.md):根據來自多個來源的匯總資料，即時提供統一的消費者個人檔案。
    * [描述檔護欄](../profile/guardrails.md):建立受支援資料模型的最佳實務 [!DNL Profile]。
-* [[!DNL Adobe Experience Platform分段服務]](./home.md):可讓您從資料建立 [!DNL Real-time Customer Profile] 區段。
-* [[!DNL體驗資料模型(XDM)]](../xdm/home.md):Experience Platform組織客戶體驗資料的標準化架構。
+* [[!DNL Adobe Experience Platform Segmentation Service]](./home.md):可讓您從資料建立 [!DNL Real-time Customer Profile] 區段。
+* [[!DNL Experience Data Model (XDM)]](../xdm/home.md):Experience Platform組織客戶體驗資料的標準化架構。
    * [架構構成基礎](../xdm/schema/composition.md#union):瞭解在Experience Platform中用於構成結構描述的最佳範例。
 
 ## 使用個案
@@ -45,7 +45,7 @@ ht-degree: 0%
 
 ### 定義關係
 
-在體驗資料模型(XDM)架構的結構中定義關係是建立多實體區段的不可或缺部分。 對於關係，目標中的欄位需要標籤為該方案的主標識。 標識只能標籤在字串上，不能標籤在陣列上。 此外，關係不一定需要一對一，因為您可以將個人檔案和體驗事件連接至多個目標。
+在體驗資料模型(XDM)架構的結構中定義關係是建立多實體區段的不可或缺部分。 對於關係，目標中的欄位必須標籤為該方案的主要標識。 標識只能標籤在字串上，不能標籤在陣列上。 此外，關係不一定需要一對一，因為您可以將個人檔案和體驗事件連接至多個目標。
 
 可使用方案註冊表API或方案編輯器來定義關係。 如需說明如何定義兩個結構之間的關係的詳細步驟，請從下列教學課程中選擇：
 
