@@ -13,7 +13,7 @@ ht-degree: 0%
 ---
 
 
-# API快速入 [!DNL Observability Insights] 門
+# Getting started with the [!DNL Observability Insights] API
 
 API [!DNL Observability Insights] 可讓您擷取各種Adobe Experience Platform功能的量度資料。 本檔案提供您在嘗試呼叫 [!DNL Observability Insights] API之前，需要瞭解的核心概念。
 
