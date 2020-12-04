@@ -172,7 +172,7 @@ Adobe Experience Platform可讓您透過Analytics資料連接器(ADC)來內嵌Ad
 | post_cust_visid | identityMap | 物件 | 客戶訪客ID。 |
 | post_cust_visid | endUserIDs。_experience.aacustomid.primary | 布林值 | 客戶訪客ID。 |
 | post_cust_visid | endUserIDs。_experience.aacustomid.namespace.code | 字串 | 客戶訪客ID。 |
-| post_visid_high + visid_low | identityMap | object | 瀏覽的唯一識別碼。 |
+| post_visid_high + visid_low | identityMap | 物件 | 瀏覽的唯一識別碼。 |
 | post_visid_high + visid_low | endUserIDs。_experience.aaid.id | 字串 | 瀏覽的唯一識別碼。 |
 | post_visid_high | endUserIDs。_experience.aaid.primary | 布林值 | 與visid_low搭配使用，以唯一識別瀏覽。 |
 | post_visid_high | endUserIDs。_experience.aaid.namespace.code | 字串 | 與visid_low搭配使用，以唯一識別瀏覽。 |
