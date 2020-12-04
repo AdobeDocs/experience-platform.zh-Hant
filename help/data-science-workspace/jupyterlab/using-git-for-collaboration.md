@@ -8,7 +8,7 @@ description: Git是一種分佈式版本控制系統，用於跟蹤軟體開發�
 translation-type: tm+mt
 source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
-source-wordcount: '280'
+source-wordcount: '273'
 ht-degree: 1%
 
 ---
@@ -28,7 +28,7 @@ ht-degree: 1%
 
 ## 連接 [!DNL Git] 到環 [!DNL Data Science Workspace JupyterLab Notebooks] 境
 
-首先，啟 [!DNL Adobe Experience Platform] 動並導航 [到[!DNL JupyterLabs Notebooks]環境](https://platform.adobe.com/notebooks/jupyterLab) 。
+首先，啟動 [!DNL Adobe Experience Platform] 並導覽至環 [[!DNL JupyterLabs Notebooks]](https://platform.adobe.com/notebooks/jupyterLab) 境。
 
 在中 [!DNL JupyterLab]，選擇「 **[!UICONTROL File]** （檔案）」 ，然後將滑鼠暫留在「 **[!UICONTROL New（新建）]**」上。 從出現的下拉式清單中，選取「 **[!UICONTROL 終端機]**」。
 
@@ -60,4 +60,4 @@ ht-degree: 1%
 
 ## 後續步驟
 
-克隆完儲存庫後，您可以像在本地電腦上一樣使用Git，以便與其他人在筆記本上協作。 有關可在中執行的操作的詳細 [!DNL JupyterLab]資訊，請參 [閱[!DNL JupyterLab使用手冊]](./overview.md)。
+克隆完儲存庫後，您可以像在本地電腦上一樣使用Git，以便與其他人在筆記本上協作。 有關您可在其中執行的操作的詳細 [!DNL JupyterLab]資訊，請參見 [[!DNL JupyterLab user guide]](./overview.md)。
