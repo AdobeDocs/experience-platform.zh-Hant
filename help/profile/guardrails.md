@@ -5,7 +5,7 @@ topic: guide
 translation-type: tm+mt
 source-git-commit: 59cf089a8bf7ce44e7a08b0bb1d4562f5d5104db
 workflow-type: tm+mt
-source-wordcount: '1201'
+source-wordcount: '1192'
 ht-degree: 1%
 
 ---
@@ -25,9 +25,9 @@ Adobe Experience Platform提供一系列的防護措施，幫助您避免建立�
 
 建議您先閱讀下列Experience Platform服務檔案，再嘗試建立資料模型以供使用 [!DNL Real-time Customer Profile]。 使用資料模型及本檔案中概述的防護措施，需要瞭解管理實體時涉及的各種Experience Platform服 [!DNL Real-time Customer Profile] 務：
 
-* [[!DNL即時客戶基本資料]](home.md):根據來自多個來源的匯整資料，提供統一、即時的消費者個人檔案。
+* [[!DNL Real-time Customer Profile]](home.md):根據來自多個來源的匯整資料，提供統一、即時的消費者個人檔案。
 * [Adobe Experience Platform Identity Service](../identity-service/home.md):支援建立「客戶的單一視圖」，方法是在客戶被納入時，橋接來自不同資料來源的身分識別 [!DNL Platform]。
-* [[!DNL體驗資料模型(XDM)]](../xdm/home.md):平台組織客戶體驗資料的標準化架構。
+* [[!DNL Experience Data Model (XDM)]](../xdm/home.md):平台組織客戶體驗資料的標準化架構。
    * [架構構成基礎](../xdm/schema/composition.md):介紹Experience Platform中的架構和資料模型。
 * [Adobe Experience Platform細分服務](../segmentation/home.md):此分段引擎用 [!DNL Platform] 於根據客戶行為和屬性，從客戶個人檔案建立受眾細分。
    * [多實體分段](../segmentation/multi-entity-segmentation.md):建立將維度圖元與描述檔資料整合的區段的指南。
@@ -62,7 +62,7 @@ Adobe Experience Platform提供一系列的防護措施，幫助您避免建立�
 
 | 瓜德賴爾 | 限制 | 限制類型 | 說明 |
 | --- | --- | --- | --- |
-| 建議為聯合模式貢獻的數 [!DNL Profile] 據集數 | 20 | Soft | **建議最多20[!DNL Profile]個啟用的資料集。** 若要為其他資料集啟 [!DNL Profile]用，應先移除或停用現有資料集。 |
+| 建議為聯合模式貢獻的數 [!DNL Profile] 據集數 | 20 | Soft | **建議最多20 [!DNL Profile]個啟用的資料集。** 若要為其他資料集啟 [!DNL Profile]用，應先移除或停用現有資料集。 |
 | 建議的多實體關係數 | 5 | Soft | **建議在主實體和維實體之間最多定義5個多實體關係。** 在移除或停用現有關係之前，不應建立其他關係映射。 |
 | 用於多實體關係之ID欄位的最大JSON深度 | 4 | Soft | **在多實體關係中使用的ID欄位，建議的JSON深度上限為4。** 這表示在高度巢狀結構中，巢狀內嵌超過4個層級的欄位不應當用作關係中的ID欄位。 |
 | 描述檔片段中的陣列基數 | &lt;=500 | Soft | **描述檔片段（與時間無關的資料）中的最佳陣列基數為&lt;=500。** |
@@ -72,8 +72,8 @@ Adobe Experience Platform提供一系列的防護措施，幫助您避免建立�
 
 | 瓜德賴爾 | 限制 | 限制類型 | 說明 |
 | --- | --- | --- | --- |
-| 不允許非實體使用時間序列資料[!DNL XDM Individual Profile] | 0 | 硬 | **設定檔服務中的非實體不允許使用[!DNL XDM Individual Profile]時間系列資料。** 如果時間系列資料集與非[!DNL XDM Individual Profile] ID相關聯，則不應為該資料集啟用 [!DNL Profile]。 |
-| 無嵌套關係 | 0 | Soft | **您不應在兩個非結構描述之間建立關[!DNL XDM Individual Profile]系。** 對於不屬於聯合模式的任何方案，不建議您能夠建立 [!DNL Profile] 關係。 |
+| 不允許非實體使用時間序列資料[!DNL XDM Individual Profile] | 0 | 硬 | **設定檔服務中的非實體不允許使用[!DNL XDM Individual Profile] 時間系列資料。** 如果時間系列資料集與非[!DNL XDM Individual Profile] ID相關聯，則不應為該資料集啟用 [!DNL Profile]。 |
+| 無嵌套關係 | 0 | Soft | **您不應在兩個非結構描述之間建立關[!DNL XDM Individual Profile] 系。** 對於不屬於聯合模式的任何方案，不建議您能夠建立 [!DNL Profile] 關係。 |
 | 主要ID欄位的最大JSON深度 | 4 | Soft | **主要ID欄位的建議最大JSON深度為4。** 這表示在高度嵌套的架構中，如果欄位深度超過4個級別，則不應選擇該欄位作為主ID。 位於第4個巢狀層級的欄位可用作主要ID。 |
 
 ## 資料大小護欄
