@@ -5,7 +5,7 @@ seo-title: 即時客戶資料平台概觀
 description: 即時客戶資料平台概觀
 seo-description: 即時客戶資料平台概觀
 translation-type: tm+mt
-source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
+source-git-commit: 4dfef6649b3ae07593667eb5165dad6bacc8ed2f
 workflow-type: tm+mt
 source-wordcount: '289'
 ht-degree: 0%
@@ -38,5 +38,5 @@ ht-degree: 0%
 * [如何收錄資料](sources/sources-overview.md)
 * [如何存取設定檔](profile/profile-overview.md)
 * [如何建立區段](segmentation/segmentation-overview.md)
-* [如何將區段啟用至目標](destinations/activate-destinations.md)
+* [如何將區段啟用至目標](destinations/overview.md)
 * [如何定義和實施資料治理策略](privacy/data-governance-overview.md)
