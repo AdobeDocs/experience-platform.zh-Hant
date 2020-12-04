@@ -8,7 +8,7 @@ description: 「已驗證的資料收集」可讓Adobe Experience Platform服務
 translation-type: tm+mt
 source-git-commit: 37356db1666b0c800119b1e254940ad72550848a
 workflow-type: tm+mt
-source-wordcount: '659'
+source-wordcount: '650'
 ht-degree: 2%
 
 ---
@@ -26,8 +26,8 @@ ht-degree: 2%
 
 本教學課程也需要具備各種Adobe Experience Platform服務的相關知識。 在開始本教學課程之前，請先閱讀下列服務的檔案：
 
-- [[!DNL體驗資料模型(XDM)]](../../xdm/home.md):組織體驗資料的 [!DNL Platform] 標準化架構。
-- [[!DNL即時客戶基本資料]](../../profile/home.md):根據來自多個來源的匯整資料，即時提供統一的消費者個人檔案。
+- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md):組織體驗資料的 [!DNL Platform] 標準化架構。
+- [[!DNL Real-time Customer Profile]](../../profile/home.md):根據來自多個來源的匯整資料，即時提供統一的消費者個人檔案。
 
 以下章節提供您需要知道的其他資訊，以便成功呼叫串流擷取API。
 
