@@ -221,7 +221,7 @@ POST /tenant/mixins
 
 **請求**
 
-定義新混音時，它必須包 `meta:intendedToExtend` 含屬性，列 `$id` 出混音相容的類別。 在此範例中，mixin與先前定義 `Property` 的類別相容。 自訂欄位必須巢狀內嵌在 `_{TENANT_ID}` 下方（如範例所示），以避免與類別和其他混合所提供的類似欄位產生衝突。
+定義新混音時，它必須包 `meta:intendedToExtend` 含屬性，列 `$id` 出混音相容的類別。 在此範例中，mixin與先前定義 `Property` 的類別相容。 自訂欄位必須巢狀內嵌在 `_{TENANT_ID}` 下方（如範例所示），以避免與類別和其他混音所提供的類似欄位產生衝突。
 
 >[!NOTE]
 >
