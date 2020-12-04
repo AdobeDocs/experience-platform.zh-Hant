@@ -7,7 +7,7 @@ description: 批次擷取API可讓您將資料以批次檔案的形式內嵌至A
 translation-type: tm+mt
 source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
-source-wordcount: '1196'
+source-wordcount: '1193'
 ht-degree: 2%
 
 ---
@@ -35,7 +35,7 @@ API [!DNL Data Ingestion] 可讓您將資料以批次形式（由一或多個要
 ### [!DNL Data Ingestion] 先決條件
 
 - 要上傳的資料必須採用Parce或JSON格式。
-- 在 [[!DNL目錄服務]中建立的資料集](../../catalog/home.md)。
+- 在中建立的資料集 [[!DNL Catalog services]](../../catalog/home.md)。
 - 拼字檔案的內容必須符合上傳資料集之模式的子集。
 - 在驗證後取得您唯一的存取Token。
 
@@ -398,5 +398,5 @@ curl GET "https://platform.adobe.io/data/foundation/catalog/batch/{BATCH_ID}" \
 | 正在載入 | 正在上載此批的資料，且該批當前尚 **未** 準備升級。 |
 | 重試 | 正在處理此批的資料。 但是，由於系統或瞬態錯誤，批次失敗——因此，正在重試此批次。 |
 | 已分段 | 批的升級流程的轉移階段已完成，並且已運行提取作業。 |
-| 測試 | 正在處理批的資料。 |
+| 預備 | 正在處理批的資料。 |
 | 停止 | 正在處理批的資料。 不過，批次促銷在多次重試後已停止。 |
