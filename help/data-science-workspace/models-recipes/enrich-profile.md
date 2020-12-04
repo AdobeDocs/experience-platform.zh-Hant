@@ -8,7 +8,7 @@ description: 本檔案提供逐步教學課程，讓「即時客戶個人檔案�
 translation-type: tm+mt
 source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
-source-wordcount: '1230'
+source-wordcount: '1218'
 ht-degree: 0%
 
 ---
@@ -28,9 +28,9 @@ ht-degree: 0%
 
 本教學課程需要對吸收資料和建立區段 [!DNL Adobe Experience Platform] 所涉及的各 [!DNL Profile] 個方面有深入瞭解。 在開始本教學課程之前，請先閱讀下列服務的檔案：
 
-* [[!DNL即時客戶基本資料]](../../rtcdp/overview.md):根據來自多個來源的匯整資料，提供統一、即時的消費者個人檔案。
+* [[!DNL Real-time Customer Profile]](../../rtcdp/overview.md):根據來自多個來源的匯整資料，提供統一、即時的消費者個人檔案。
 * [[!DNL Identity Service]](../../identity-service/home.md):可借 [!DNL Real-time Customer Profile] 由橋接來自不同資料來源的身分識別，並將其收錄至平台。
-* [[!DNL體驗資料模型(XDM)]](../../xdm/home.md):平台組織客戶體驗資料的標準化架構。
+* [[!DNL Experience Data Model (XDM)]](../../xdm/home.md):平台組織客戶體驗資料的標準化架構。
 
 除了上述文檔，強烈建議您還查看以下方案指南和方案編輯器：
 
