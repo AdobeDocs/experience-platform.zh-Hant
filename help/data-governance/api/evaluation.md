@@ -168,7 +168,7 @@ curl -X POST \
 | 屬性 | 說明 |
 | --- | --- |
 | `entityType` | 其ID在同級屬性中指示的實體類 `entityId` 型。 目前，唯一接受的值是 `dataSet`。 |
-| `entityId` | 測試行銷動作的資料集ID。 通過向API中的端點發出GET請求，可以獲得資料集及其 `/dataSets` 對應ID的 [!DNL Catalog Service] 清單。 如需詳細資訊，請 [ [!DNL Catalog] 參閱listingobjects](../../catalog/api/list-objects.md) 的指南。 |
+| `entityId` | 測試行銷動作的資料集ID。 通過向API中的端點發出GET請求，可以獲得資料集及其 `/dataSets` 對應ID的 [!DNL Catalog Service] 清單。 See the guide on [listing [!DNL Catalog] objects](../../catalog/api/list-objects.md) for more information. |
 
 **回應**
 
@@ -416,7 +416,7 @@ curl -X POST \
 | 屬性 | 說明 |
 | --- | --- |
 | `entityType` | 其ID在同級屬性中指示的實體類 `entityId` 型。 目前，唯一接受的值是 `dataSet`。 |
-| `entityId` | 要根據行銷動作評估其欄位的資料集ID。 通過向API中的端點發出GET請求，可以獲得資料集及其 `/dataSets` 對應ID的 [!DNL Catalog Service] 清單。 如需詳細資訊，請 [ [!DNL Catalog] 參閱listingobjects](../../catalog/api/list-objects.md) 的指南。 |
+| `entityId` | 要根據行銷動作評估其欄位的資料集ID。 通過向API中的端點發出GET請求，可以獲得資料集及其 `/dataSets` 對應ID的 [!DNL Catalog Service] 清單。 See the guide on [listing [!DNL Catalog] objects](../../catalog/api/list-objects.md) for more information. |
 | `entityMeta.fields` | 資料集結構中特定欄位的路徑陣列，以JSON指針字串的形式提供。 如需這些字串接受語法的詳細資訊，請參 [](../../landing/api-fundamentals.md#json-pointer) 閱「API基礎指南」中的「JSON指針」一節。 |
 
 **回應**
