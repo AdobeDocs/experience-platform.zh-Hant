@@ -17,11 +17,11 @@ ht-degree: 0%
 
 本檔案提供有關Adobe Experience Platform中沙盒的常見問題解答。 有關其他平台服務的問題和疑難排解，請參閱「 [Experience Platform疑難排解指南」](../landing/troubleshooting.md)。
 
-沙盒將單一平台實例分割為不同的虛擬環境，以協助開發和發展數位體驗應用程式。 如需詳細 [資訊，請參閱](home.md) 「沙盒總覽」。
+沙盒將單一平台實例分割為不同的虛擬環境，以協助開發和發展數位體驗應用程式。 See the [sandboxes overview](home.md) for more information.
 
 ## 什麼是沙盒？
 
-沙盒是Experience Platform單一實例中的虛擬分區。 每個沙盒都會維護其獨立的平台資源庫（包括結構描述、資料集、設定檔等）。 在沙盒中執行的所有內容和動作都僅限於該沙盒，不會影響任何其他沙盒。 如需詳細 [資訊，請參閱](home.md) 「沙盒總覽」。
+沙盒是Experience Platform單一實例中的虛擬分區。 每個沙盒都會維護其獨立的平台資源庫（包括結構描述、資料集、設定檔等）。 在沙盒中執行的所有內容和動作都僅限於該沙盒，不會影響任何其他沙盒。 See the [sandboxes overview](home.md) for more information.
 
 ## 有哪些沙盒類型，有哪些不同？
 
@@ -34,7 +34,7 @@ Experience Platform提供單一生產沙盒，無法刪除或重設。 單一平
 
 相反地，沙盒管理員可針對單一平台例項建立多個非生產沙盒。 非生產沙盒可讓您測試功能、執行實驗並建立自訂組態，而不會影響生產沙盒。 此外，非生產沙盒具有重設功能，可從沙盒移除所有客戶建立的資源。 非生產沙盒無法轉換為生產沙盒。 預設的Experience Platform授權會授與您5個沙盒（1個製作和4個非製作）。 您可新增10個非生產沙盒，最多可新增75個沙盒。 如需詳細資訊，請連絡您的IMS組織管理員或Adobe銷售代表。
 
-如需詳細 [資訊，請參閱](./home.md) 「沙盒總覽」。
+See the [sandboxes overview](./home.md) for more information.
 
 ## 我可以從多個沙盒存取資源嗎？
 
