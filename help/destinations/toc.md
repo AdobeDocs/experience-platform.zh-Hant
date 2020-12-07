@@ -2,11 +2,11 @@
 product: experience-platform
 audience: user
 user-guide-title: 目標指南
-user-guide-description: 在此處插入目的地說明。
+user-guide-description: 針對跨通道行銷宣傳、電子郵件宣傳、目標廣告和許多其他使用案例，啟用您已知和未知的資料。
 translation-type: tm+mt
-source-git-commit: eccf962fd9a24e6b5085f706766693ee7e468aea
+source-git-commit: 395a8c2aa7fc89cde04263dbbfb3315318245ef6
 workflow-type: tm+mt
-source-wordcount: '415'
+source-wordcount: '429'
 ht-degree: 0%
 
 ---
