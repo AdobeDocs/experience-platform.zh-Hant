@@ -1,626 +1,336 @@
 ---
 keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API;consent;Consent;preferences;Preferences;privacyOptOuts;marketingPreferences;optOutType;basisOfProcessing;consent;Consent
 title: 隱私權混音概觀
-description: 「隱私權／行銷偏好（同意）」混合是「體驗資料模型」(XDM)混合，其目的在於支援收集CMP和其他來自客戶來源的使用者權限和偏好。 本檔案涵蓋混合程式所提供的各種欄位的結構與用途。
+description: 「隱私權／行銷偏好（同意）」資料類型旨在支援收集「同意管理平台」(CMPs)和您資料作業中其他來源產生的客戶權限和偏好。
 topic: guide
 translation-type: tm+mt
-source-git-commit: 59cf089a8bf7ce44e7a08b0bb1d4562f5d5104db
+source-git-commit: ba045a635f840c62980288a1a3ad5015f54121da
 workflow-type: tm+mt
-source-wordcount: '1827'
+source-wordcount: '2022'
 ht-degree: 1%
 
 ---
 
 
-# [!DNL Privacy Consent] mixin總覽
+# [!DNL Consents & Preferences] 資料類型概述
 
-混 [!DNL Privacy/Marketing Preferences (Consent)] 合素（以下稱為「混合素」）是[!DNL Privacy Consent][!DNL Experience Data Model] (XDM)混合素，旨在支援由CMPs和來自客戶的其他來源產生的用戶權限和偏好的收集。 本檔案涵蓋混合程式所提供的各種欄位的結構與用途。
+資 [!DNL Privacy/Marketing Preferences (Consent)] 料類型（以下稱為「資料類型」）是[!DNL Consents & Preferences][!DNL Experience Data Model] (XDM)資料類型，旨在支援收集「同意管理平台」(CMPs)和您資料作業中其他來源產生的客戶權限和偏好。
+
+本檔案涵蓋資料類型所提供欄位的結構與 [!DNL Consents & Preferences] 用途。
+
+>[!IMPORTANT]
+>
+>資料 [!DNL Consents & Preferences] 類型設計為涵蓋一系列許可和優先管理使用案例。 因此，本檔案以一般術語說明資料類型欄位的使用，並僅就您應如何解讀這些欄位提供建議。 請洽詢您的隱私權法律團隊，讓資料類型的結構與您的組織如何解讀及向客戶展示這些同意和偏好選擇保持一致。
 
 ## 先決條件 {#prerequisites}
 
-本文檔需要對(XDM) [!DNL Experience Data Model] 和中的方案的使用有良好的瞭解 [!DNL Experience Platform]。 請先閱讀下列檔案，然後再繼續：
+本文檔需要對XDM和中的架構的使用有良好的瞭解 [!DNL Experience Platform]。 請先閱讀下列檔案，然後再繼續：
 
 * [XDM系統概述](http://www.adobe.com/go/xdm-home-en)
 * [架構構成基礎](http://www.adobe.com/go/xdm-schema-best-practices-en)
 
-## 架構示例 {#schema}
+## 資料類型結構 {#structure}
+
+資料 [!DNL Consents & Preferences] 類型提供數個欄位，用於擷取 **同意** 和 **偏好資訊** 。
+
+同意是允許客戶指定其資料的使用方式的選項。 大部分同意具有法律意義，因為有些司法轄區需要取得許可才能以特定方式使用資料，或要求客戶有權在不需要同意的情況下停止該使用（選擇退出）。
+
+偏好設定選項可讓客戶指定如何處理其品牌體驗的不同方面。 這分為兩類：
+
+* **個人化偏好設定**:關於品牌應如何個人化傳遞給客戶的體驗的偏好設定。
+* **行銷偏好設定**:關於品牌是否允許透過各種管道與客戶聯絡的偏好設定。
+
+下列JSON顯示資料類型可處理之資料類 [!DNL Consents & Preferences] 型的範例。 以下各節提供了有關這些欄位具體使用情況的資訊。
+
+```json
+{
+  "xdm:consents": {
+    "xdm:collect": {
+      "xdm:val": "y",
+    },
+    "xdm:adID": {
+      "xdm:val": "VI"
+    },
+    "xdm:share": {
+      "xdm:val": "y",
+    },
+    "xdm:personalize": {
+      "xdm:any": {
+        "xdm:val": "y",
+      },
+      "xdm:content": {
+        "xdm:val": "y"
+      }
+    },
+    "xdm:marketing": {
+      "xdm:preferred": "email",
+      "xdm:any": {
+        "xdm:val": "u"
+      },
+      "xdm:push": {
+        "xdm:val": "n",
+        "xdm:reason": "Too Frequent",
+        "xdm:time": "2019-01-01T15:52:25+00:00"
+      }
+    },
+    "xdm:idSpecific": {
+      "email": {
+        "jdoe@example.com": {
+          "xdm:marketing": {
+            "xdm:email": {
+              "xdm:val": "n"
+            }
+          }
+        }
+      }
+    }
+  },
+  "xdm:metadata": {
+    "xdm:time": "2019-01-01T15:52:25+00:00"
+  }
+}
+```
 
 >[!NOTE]
 >
->以下範例旨在說明透過 [!DNL Platform][!DNL Privacy Consent] mixin傳送至的資料結構，以便提供本檔案下一節的內容，說明mixin提供的主要欄位。 在附錄中可找到架構結構的完整 [示例](#full-schema) ，以供參考。
+>上述範例旨在說明透過資料類型傳送至之資料的結構 [!DNL Platform] ，以 [!DNL Consents & Preferences] 提供本檔案其餘內容，說明資料類型所提供的主要欄位。 可在附錄中找到資料類型結構的完整模 [式](#full-schema) ，以供參考。
 
-下列JSON顯示混合可處理之資料類 [!DNL Privacy Consent] 型的範例。 下一節將提供有關這些欄位之特定使用資訊。
+## xdm:consents {#choices}
+
+`xdm:consents` 包含數個欄位，說明客戶的同意與偏好。 以下子節將詳細說明這些欄位。
 
 ```json
-{
-  "xdm:privacyOptOuts": [
-     {
-        "xdm:optOutType": "general_opt_out",
-        "xdm:optOutValue": "in",
-        "xdm:timestamp": "2019-01-01T15:52:25+00:00",
-        "xdm:basisOfProcessing": "legitimate_interest"
-     },
-     {
-        "xdm:optOutType": "device_linking",
-        "xdm:optOutValue": "not_provided",
-        "xdm:basisOfProcessing": "vital_interest"
-     },
-     {
-        "xdm:optOutType": "anonymous_analysis",
-        "xdm:optOutValue": "out"
-     }
-  ],
-  "xdm:personalizationPreferences": {
-     "xdm:default": {
-        "xdm:choice": "unknown",
-        "xdm:timestamp": "2019-01-01T15:52:25+00:00",
-        "xdm:basisOfProcessing": "consent"
-     },
-     "xdm:details": [
-        {
-           "xdm:type": "email",
-           "xdm:choice": "in"
-        },
-        {
-           "xdm:type": "push_notifications",
-           "xdm:choice": "out",
-           "xdm:basisOfProcessing": "legitimate_interest",
-           "xdm:timestamp": "2019-01-01T15:52:25+00:00"
-        }
-     ]
+"xdm:consents": {
+  "xdm:collect": {
+    "xdm:val": "y",
   },
-  "xdm:marketingPreferences": {
-     "xdm:default": {
-        "xdm:choice": "unknown"
-     },
-     "xdm:details": [
-        {
-           "xdm:type": "email",
-           "xdm:choice": "in",
-           "xdm:subscriptions": {
-              "weekly_mailer": {
-                 "xdm:choice": "out",
-                 "xdm:timestamp": "2019-02-03T15:52:25+00:00"
-              },
-              "daily_newsletter": {
-                 "xdm:choice": "pending"
-              }
-           }
-        },
-        {
-           "xdm:type": "iot",
-           "xdm:choice": "out",
-           "xdm:timestamp": "2019-01-01T15:52:25+00:00",
-           "xdm:basisOfProcessing": "legitimate_interest",
-           "xdm:subscriptions": {
-              "out_of_milk": {
-                 "xdm:choice": "in"
-              }
-           }
-        }
-     ]
+  "xdm:adID": {
+    "xdm:val": "VI"
   },
-  "xdm:version": "1.0.0",
-  "xdm:timestamp": "2019-01-01T15:52:25+00:00",
-  "xdm:userLocale": "UK",
-  "xdm:localeSource": "ip"
+  "xdm:share": {
+    "xdm:val": "y",
+  },
+  "xdm:personalize": {
+    "xdm:any": {
+      "xdm:val": "y",
+    },
+    "xdm:content": {
+      "xdm:val": "y"
+    }
+  },
+  "xdm:marketing": {
+    "xdm:preferred": "email",
+    "xdm:any": {
+      "xdm:val": "u"
+    },
+    "xdm:email": {
+      "xdm:val": "n",
+      "xdm:reason": "Too Frequent",
+      "xdm:time": "2019-01-01T15:52:25+00:00"
+    }
+  }
 }
 ```
 
-## 欄位 {#fields}
+### xdm:collect
 
-以下各節介紹混音所提供之每個主要欄位的使用， [!DNL Privacy Consent] 以及其子欄位的結構。
-
-### xdm:privacyOptOuts {#privacyOptOuts}
-
-`xdm:privacyOptOuts` 是代表客戶所選一般退出設定的陣列。 此陣列中可包含數個物件，每個物件代表特定退出類型以及客戶為該類型選取的偏好設定。
+`xdm:collect` 代表客戶對收集其資料的同意。
 
 ```json
-"xdm:privacyOptOuts": [
-     {
-        "xdm:optOutType": "general_opt_out",
-        "xdm:optOutValue": "in",
-        "xdm:timestamp": "2019-01-01T15:52:25+00:00",
-        "xdm:basisOfProcessing": "legitimate_interest"
-     },
-     {
-        "xdm:optOutType": "device_linking",
-        "xdm:optOutValue": "not_provided",
-        "xdm:basisOfProcessing": "vital_interest"
-     },
-     {
-        "xdm:optOutType": "anonymous_analysis",
-        "xdm:optOutValue": "out"
-     }
-  ]
+"xdm:collect" : {
+  "xdm:val": "y"
+}
 ```
 
 | 屬性 | 說明 |
 | --- | --- |
-| `xdm:optOutType` | 選擇退出的類型。 請參閱附 [錄](#optOutType-values) ，瞭解接受的值和定義。 |
-| `xdm:optOutValue` | 客戶為此特定選擇退出類型選擇的選定首選項。 請參閱附 [錄](#choice-optOutValue-values) ，瞭解接受的值和定義。 |
-| `xdm:timestamp` | 選擇退出偏好設定變更時的ISO 8601時間戳記（如果適用）。 |
-| `xdm:basisOfProcessing` | 指出資料的收集和處理依據與隱私權相關。 依預設，此欄位會設為 `consent`，表示只有在使用者已提供同意（如所示）時才應處理資 `xdm:optOutValue`料。<br><br>在某些情況下，客戶不會被提示同意資料處理。 `xdm:basisOfProcessing` 必須包含在這些情況下的退出對象中，以說明未提供同意提示的原因。 請參閱附 [錄](#basisOfProcessing-values) ，瞭解接受的值和定義。 |
+| `xdm:val` | 客戶為此使用案例提供的許可選擇。 請參閱附 [錄](#choice-values) ，瞭解接受的值和定義。 |
 
-### xdm:personalizationPreferences {#personalizationPreferences}
+### xdm:adID
 
-`xdm:personalizationPreferences` 擷取客戶偏好設定，以瞭解他們的資料可以透過哪些方式個人化。 使用者可以選擇退出特定的個人化使用案例，或完全選擇退出個人化。
+`xdm:adID` 代表客戶同意廣告商ID（IDFA或GAID）是否可用於連結此裝置上各應用程式的客戶。
+
+```json
+"xdm:adID" : {
+  "xdm:val": "y"
+}
+```
+
+| 屬性 | 說明 |
+| --- | --- |
+| `xdm:val` | 客戶為此使用案例提供的許可選擇。 請參閱附 [錄](#choice-values) ，瞭解接受的值和定義。 |
+
+### xdm:share
+
+`xdm:share` 代表客戶同意其資料是否可與第二方或第三方共用（或銷售給）。
+
+```json
+"xdm:share" : {
+  "xdm:val": "y"
+}
+```
+
+| 屬性 | 說明 |
+| --- | --- |
+| `xdm:val` | 客戶為此使用案例提供的同意選擇。 請參閱附 [錄](#choice-values) ，瞭解接受的值和定義。 |
+
+### xdm：個人化 {#personalize}
+
+`xdm:personalize` 擷取客戶偏好設定，以瞭解他們的資料可以透過哪些方式個人化。 客戶可以選擇退出特定的個人化使用案例，或完全退出個人化。
 
 >[!IMPORTANT]
 >
->`xdm:personalizationPreferences` 不涵蓋行銷使用案例。 例如，如果客戶選擇拒絕個人化的電子郵件，他們不會停止收到電子郵件。 相反，他們收到的電子郵件將是通用的，而不是根據他們的個人檔案。
+>`xdm:personalize` 不涵蓋行銷使用案例。 例如，如果客戶退出所有通道的個人化，他們不應停止透過這些通道接收通信。 相反，他們收到的訊息應該是通用的，而不是根據他們的個人檔案。
 >
->同樣，如果客戶退出電子郵件行銷(透過下一節所述 `xdm:marketingPreferences`[](#marketingPreferences))，則該客戶將不會收到任何電子郵件，即使允許電子郵件個人化亦然。
+>同樣的範例是，如果客戶退出所有通道的直效行銷(透過下一節所述 `xdm:marketing`[](#marketing))，即使允許個人化，該客戶也不應收到任何訊息。
 
 ```json
-"xdm:personalizationPreferences": {
-     "xdm:default": {
-        "xdm:choice": "unknown",
-        "xdm:timestamp": "2019-01-01T15:52:25+00:00",
-        "xdm:basisOfProcessing": "consent"
-     },
-     "xdm:details": [
-        {
-           "xdm:type": "email",
-           "xdm:choice": "in"
-        },
-        {
-           "xdm:type": "push_notifications",
-           "xdm:choice": "out",
-           "xdm:basisOfProcessing": "legitimate_interest",
-           "xdm:timestamp": "2019-01-01T15:52:25+00:00"
-        }
-     ]
+"xdm:personalize": {
+  "xdm:content": {
+    "xdm:val": "y",
   }
+}
 ```
 
 | 屬性 | 說明 |
 | --- | --- |
-| `xdm:default` | 此物件中提供的資料代表整體客戶個人化的偏好。 |
-| `xdm:details` | 一系列物件，針對客戶提供偏好的每個特定個人化類型各一個。 |
-| `xdm:choice` | 客戶提供的同意偏好一般個人化，或特定個人化類型，視其是分別在下 `xdm:default` 或 `xdm:details`下提供。 請參閱附 [錄](#choice-optOutValue-values) ，瞭解接受的值和定義。 |
-| `xdm:type` | 陣列中的對 `xdm:details` 像必須提供此欄位，以指明客戶為其提供許可資料的特定個人化使用案例。 請參閱附 [錄](#type-values) ，瞭解接受的值和定義。 |
-| `xdm:timestamp` | 選擇退出偏好設定變更時的ISO 8601時間戳記（如果適用）。 |
-| `xdm:basisOfProcessing` | 指出資料的收集和處理依據與隱私權相關。 依預設，此欄位會設為 `consent`，表示只有在使用者已提供同意（如所示）時才應處理資 `xdm:choice`料。<br><br>在某些情況下，客戶不會收到要提供個人化同意書的提示。 `xdm:basisOfProcessing` 必須包含在這些情況下的退出對象中，以說明未提供同意提示的原因。 請參閱附 [錄](#basisOfProcessing-values) ，瞭解接受的值和定義。 |
+| `xdm:content` | 代表客戶對您網站或應用程式中個人化內容的偏好。 |
+| `xdm:val` | 指定使用案例的客戶提供的個人化偏好設定。 如果客戶不需要獲得許可，則此欄位的值應指明個人化的發生基礎。 請參閱附 [錄](#choice-values) ，瞭解接受的值和定義。 |
 
+### xdm：行銷 {#marketing}
 
-### xdm:marketingPreferences {#marketingPreferences}
-
-`xdm:marketingPreferences` 擷取客戶對其資料可用於哪些行銷目的的偏好。 使用者可以選擇退出特定的行銷使用案例，或完全退出直接行銷。
+`xdm:marketing` 擷取客戶對其資料可用於哪些行銷目的的偏好。 客戶可以選擇退出特定的行銷使用案例，或完全退出直接行銷。
 
 ```json
-"xdm:marketingPreferences": {
-     "xdm:default": {
-        "xdm:choice": "unknown"
-     },
-     "xdm:details": [
-        {
-           "xdm:type": "email",
-           "xdm:choice": "in",
-           "xdm:subscriptions": {
-              "weekly_mailer": {
-                 "xdm:choice": "out",
-                 "xdm:timestamp": "2019-02-03T15:52:25+00:00"
-              },
-              "daily_newsletter": {
-                 "xdm:choice": "pending"
-              }
-           }
-        },
-        {
-           "xdm:type": "iot",
-           "xdm:choice": "out",
-           "xdm:timestamp": "2019-01-01T15:52:25+00:00",
-           "xdm:basisOfProcessing": "legitimate_interest",
-           "xdm:subscriptions": {
-              "out_of_milk": {
-                 "xdm:choice": "in"
-              }
-           }
-        }
-     ]
+"xdm:marketing": {
+  "xdm:preferred": "email",
+  "xdm:any": {
+    "xdm:val": "u"
+  },
+  "xdm:email": {
+    "xdm:val": "n",
+    "xdm:reason": "Too Frequent"
+  },
+  "xdm:push": {
+    "xdm:val": "y"
+  },
+  "xdm:sms": {
+    "xdm:val": "y"
   }
+}
 ```
 
 | 屬性 | 說明 |
 | --- | --- |
-| `xdm:default` | 此物件中提供的資料代表整體客戶對直接行銷的偏好。 |
-| `xdm:details` | 一系列物件，針對客戶提供偏好的每個特定行銷使用案例提供一個物件。 |
-| `xdm:choice` | 客戶提供的許可偏好一般行銷或特定行銷使用案例，視其分別是在或 `xdm:default` 下 `xdm:details`提供。 請參閱附 [錄](#choice-optOutValue-values) ，瞭解接受的值和定義。 |
-| `xdm:subscriptions` | 其金鑰代表公司特定訂閱的物件，例如郵寄清單或電子報。 每個訂閱物件應接著包含 `xdm:choice` 相關訂閱的值。 |
-| `xdm:type` | 陣列中的對 `xdm:details` 像必須提供此欄位，以指明客戶為其提供許可資料的具體行銷使用案例。 請參閱附 [錄](#type-values) ，瞭解接受的值和定義。 |
-| `xdm:timestamp` | 選擇退出偏好設定變更時的ISO 8601時間戳記（如果適用）。 |
-| `xdm:basisOfProcessing` | 指出資料的收集和處理依據與隱私權相關。 依預設，此欄位會設為 `consent`，表示只有在使用者已提供同意（如所示）時才應處理資 `xdm:choice`料。<br><br>在某些情況下，並未提示客戶同意直接行銷。 `xdm:basisOfProcessing` 必須包含在這些情況下的退出對象中，以說明未提供同意提示的原因。 請參閱附 [錄](#basisOfProcessing-values) ，瞭解接受的值和定義。 |
+| `xdm:preferred` | 指出客戶首選的接收通信渠道。 請參閱附 [錄](#preferred-values) ，瞭解接受的值。 |
+| `xdm:any` | 代表客戶對整體直接行銷的偏好。 此欄位中提供的同意偏好設定會視為任何行銷管道的「預設」偏好設定，除非以下方提供的其他子欄位覆寫 `xdm:marketing`。 如果您打算使用更詳細的同意選項，建議您排除此欄位。<br><br>如果值設為，則 `n`應忽略所有更具體的個人化設定。 如果值設為，則 `y`所有更精細的個人化選項也應視為 `y`，除非明確設為 `n`。 如果未設定值，則每個個人化選項的值都應依指定的方式接受。 |
+| `xdm:email` | 指出客戶是否同意接收電子郵件訊息。 |
+| `xdm:push` | 指出客戶是否允許接收推播通知。 |
+| `xdm:sms` | 指出客戶是否同意接收簡訊。 |
+| `xdm:val` | 客戶提供的指定使用案例偏好設定。 如果客戶不需要獲得許可，則此欄位的值應指明應根據何種基礎進行市場營銷使用案例。 請參閱附 [錄](#choice-values) ，瞭解接受的值和定義。 |
+| `xdm:time` | 行銷偏好設定變更時的ISO 8601時間戳記（如果適用）。 請注意，如果任何個別偏好設定的時間戳記與下方提供的時間戳記相同 `xdm:metadata`，則不會針對該偏好設定設定此欄位。 |
+| `xdm:reason` | 當客戶退出行銷使用案例時，此字串欄位代表客戶退出的原因。 |
 
-## 使用混合素吸收許可資料 {#ingest}
+### xdm:idSpecific
 
-若要使用 [!DNL Privacy Consent] mixin從客戶擷取同意資料，您必須將mixin新增或現有的架構，並根據該架構建立資料集。
-
-有關如何將混 [音新增至架構的步驟](http://www.adobe.com/go/xdm-schema-editor-tutorial-en) ，請參閱在UI中建立架構的教學課程。 混合[!DNL  Privacy Consent] in與基於類或的方案 [!DNL XDM Individual Profile] 相容 [!DNL XDM ExperienceEvent]。
-
-建立包含混合的模式後，請參 [!DNL Privacy Consent] 閱資料集使用手冊中有關建立資料集的 [部分](../../catalog/datasets/user-guide.md#create) ，按照使用現有模式建立資料集的步驟操作。
+`xdm:idSpecific` 當特定同意或偏好並非普遍適用於客戶，但僅限於單一裝置或ID時，即可使用。 例如，客戶可以選擇不接收某個地址的電子郵件，同時允許另一個地址發送電子郵件。
 
 >[!IMPORTANT]
 >
->如果您想要傳送同意資料 [!DNL Real-time Customer Profile]給，則必鬚根據包含混合的類別 [!DNL Profile]，建立啟用 [!DNL XDM Individual Profile] 的架構 [!DNL Privacy Consent] 。 您根據該模式建立的資料集也必須啟用 [!DNL Profile]。 請參閱上述教學課程，以取得與需求相關的特定 [!DNL Real-time Customer Profile] 步驟。
+>頻道層級同意與偏好設定(即在外部提供 `xdm:consents` 的 `xdm:idSpecific`偏好設定)適用於該頻道的ID。 因此，不論是採用相同的ID或裝置特定設定，所有通道層級的同意和偏好設定都會直接影響：
+>
+>* 如果客戶已選擇退出渠道層級，則會忽略中的任何相等同意或 `xdm:idSpecific` 偏好設定。
+>* 如果未設定渠道層級的同意或偏好，或客戶已選擇加入，則會遵守中的相同同意或 `xdm:idSpecific` 偏好。
+
+
+物件中的每個金鑰 `xdm:idSpecific` 代表Adobe Experience Platform Identity Service所識別的特定身分名稱空間。 雖然您可以定義自己的自訂名稱空間來分類不同的識別碼，但建議您使用Identity Service提供的標準名稱空間之一來減少即時客戶個人檔案的儲存空間。 有關身份名稱空間的詳細資訊，請參 [閱Identity Service文檔中的身份名稱空間](../../identity-service/namespaces.md) 概述。
+
+每個namespace對象的鍵代表客戶為其設定首選項的唯一標識值。 每個識別值都可以包含一組完整的同意和偏好設定，格式與相同 `xdm:consents`。
+
+```json
+"xdm:idSpecific": {
+  "email": {
+    "jdoe@example.com": {
+      "xdm:marketing": {
+        "xdm:email": {
+          "xdm:val": "n"
+        }
+      }
+    }
+  }
+}
+```
+
+## xdm：中繼資料
+
+`xdm:metadata` 每當客戶的同意和偏好上次更新時，都會擷取一般中繼資料。
+
+```json
+"xdm:metadata": {
+  "xdm:time": "2019-01-01T15:52:25+00:00",
+}
+```
+
+| 屬性 | 說明 |
+| --- | --- |
+| `xdm:time` | 上次更新客戶同意和偏好的時間戳記。 此欄位可用來取代將時間戳記套用至個別偏好設定，以降低負載和複雜性。 在單個首 `xdm:time` 選項下提供值會覆蓋該特 `xdm:metadata` 定首選項的時間戳記。 |
+
+## 使用資料類型接收資料 {#ingest}
+
+若要使用資料類 [!DNL Consents & Preferences] 型從客戶收集同意資料，您必鬚根據包含該資料類型的架構來建立資料集。
+
+如需如何指派資 [料類型至欄位的步驟](http://www.adobe.com/go/xdm-schema-editor-tutorial-en) ，請參閱在UI中建立架構的教學課程。 在建立包含具有資料類型的欄位的模式後，請參 [!DNL Consents & Preferences] 閱資料集使用手冊中有關建立資料集的 [部分](../../catalog/datasets/user-guide.md#create) ，按照使用現有模式建立資料集的步驟操作。
+
+>[!IMPORTANT]
+>
+>如果要向發送許可資料 [!DNL Real-time Customer Profile]，則必鬚根據包含資料類 [!DNL Profile]型的類建立啟 [!DNL XDM Individual Profile] 用的模式 [!DNL Consents & Preferences] 。 您根據該模式建立的資料集也必須啟用 [!DNL Profile]。 請參閱上述連結的教學課程，以取得與結構描述和資料集 [!DNL Real-time Customer Profile] 需求相關的特定步驟。
+>
+>此外，您還必須確保您的合併策略已配置為優先順序包含最新同意和偏好資料的資料集，以便正確更新客戶個人檔案。 See the overview on [merge policies](../../rtcdp/profile/merge-policies.md) for more information.
+
+## 處理同意和偏好變更
+
+當客戶在您的網站上變更其同意或偏好設定時，應使用 [Adobe Experience Platform Web SDK收集並立即強制執行這些變更](../../edge/consent/supporting-consent.md)。 如果客戶退出資料收集，所有資料收集必須立即停止。 如果客戶退出個人化，那麼他們造訪的下一頁上應該不會出現個人化。
 
 ## 附錄 {#appendix}
 
-以下各節提供有關混音的其他參考 [!DNL Privacy Consent] 資訊。
+以下各節提供有關資料類型的其他 [!DNL Consents & Preferences] 參考資訊。
 
-### xdm:optOutType的接受值 {#optOutType-values}
+### xdm:val的接受值 {#choice-values}
 
-下表概述了以下的接受值 `xdm:optOutType`:
+下表概述了以下的接受值 `xdm:val`:
 
-| 值 | 說明 |
-| --- | --- |
-| `general_opt_out` | 資料無法用於任何用途。 這通常會封鎖資料收集，除非處理基礎並非「同意」。<br><br>使用此選擇退出類型時，接受的值 `in` 並取 `out` 得下列內容含義：<ul><li>`in`:使用者 **已同意其資料** ，以便用於一般處理。</li><li>`out`:使用者 **不同意** ，其資料用於一般處理。</li></ul>如需詳細資訊， [請參閱xdm:optOutValue的接受值表](#choice-optOutValue-values) 。 |
-| `anonymous_analysis` | 資料無法用於不需要任何類型使用者ID的一般Web量度，例如特定頁面被檢視的次數。 |
-| `device_linking` | 訪客使用之某個裝置的資料無法與該訪客使用之其他裝置的資料結合。 裝置會使用常用的使用者名稱或電子郵件地址等技術進行連結，通常會透過Adobe裝置合作社或私人裝置圖表進行連結。 |
-| `pseudonymous_analysis` | 資料無法用於Adobe Analytics提供的網路量度，因為Adobe Analytics需要假名ID來識別使用者透過網站（例如流失報表）的路徑、建立工作階段，以及用于歸因。 |
-| `sales_sharing_opt_out` | 資料不能用於銷售用途或與第三方共用。<br><br>使用此選擇退出類型時，接受的值 `in` 並取 `out` 得下列內容含義：<ul><li>`in`:使用者 **已同意其資料** ，以便用於銷售和分享用途。</li><li>`out`:使用者 **不同意其資料** ，這些資料會用於銷售和分享用途。</li></ul>如需詳細資訊， [請參閱xdm:optOutValue的接受值表](#choice-optOutValue-values) 。 |
+| 值 | 標題 | 說明 |
+| --- | --- | --- |
+| `y` | 是 | 客戶已選擇同意或偏好。 換言之，他們 **同意** ，如所涉同意或偏好所示，使用其資料。 |
+| `n` | 無 | 客戶已選擇不同意或拒絕。 換言之，他們不 **同意** ，如有關同意或偏好所示，使用其資料。 |
+| `p` | 待覈實 | 該系統尚未獲得最終同意或優惠值。 這通常是需要兩步驟驗證的同意的一部分。 例如，如果客戶選擇接收電子郵件，則該同意會設為 `p` ，直到他們在電子郵件中選擇連結以確認他們提供了正確的電子郵件地址，此時同意會更新為 `y`。<br><br>如果此許可或偏好不使用兩組驗證流程，則該選 `p` 擇可用於指示客戶尚未響應許可提示。 例如，您可以在客戶回應 `p` 同意提示之前，自動將值設為網站的第一頁。 在不需要明確同意的司法管轄區中，您也可以使用該司法管轄區來指出客戶未明確選擇退出（換言之，假定同意）。 |
+| `u` | 未知 | 客戶的同意或偏好資訊未知。 |
+| `LI` | 合法利益 | 收集並處理資料以達到特定目的的正當商業利益，比其對個人的潛在傷害要大。 |
+| `CT` | 合約 | 為達到特定目的而收集資料，是為了履行與個人的合同義務。 |
+| `CP` | 遵守法律義務 | 為達到特定目的而收集資料，是為了履行企業的法律義務。 |
+| `VI` | 個人的切身利益 | 為了保護個人的切身利益，必須收集符合特定目的的資料。 |
+| `PI` | 公共利益 | 為特定目的收集資料，是為了公共利益或行使官方權力而執行的。 |
 
-### xdm:basisOfProcessing的接受值 {#basisOfProcessing-values}
+### xdm:preferred的接受值 {#preferred-values}
 
-下表概述了以下的接受值 `xdm:basisOfProcessing`:
-
-| 值 | 說明 |
-| --- | --- |
-| `consent` **（預設值）** | 允許針對指定目的收集資料，因為個人已提供明確權限。 如果未提供其他值， `xdm:basisOfProcessing` 則此為預設值。 <br><br>**重要**:只有將 `xdm:choice` 和的 `xdm:optOutValue` 值設定為時，才 `xdm:basisOfProcessing` 會使用 `consent`。 如果本表中列出的任何其他值都用於， `xdm:basisOfProcessing` 則會忽略個人的同意選擇。 |
-| `compliance` | 為達到特定目的而收集資料，是為了履行企業的法律義務。 |
-| `contract` | 為達到特定目的而收集資料，是為了履行與個人的合同義務。 |
-| `legitimate_interest` | 收集並處理資料以達到特定目的的正當商業利益，比其對個人的潛在傷害要大。 |
-| `public_interest` | 為特定目的收集資料，是為了公共利益或行使官方權力而執行的。 |
-| `vital_interest` | 為了保護個人的切身利益，必須收集符合特定目的的資料。 |
-
-### xdm:choice和xdm:optOutValue的接受值 {#choice-optOutValue-values}
-
-下表概述和的接受 `xdm:choice` 值 `xdm:optOutValue`:
+下表概述了以下的接受值 `xdm:preferred`:
 
 | 值 | 說明 |
 | --- | --- |
-| `pending` | 系統尚未從客戶處接收到許可優先資訊。 可在取得同意時用於網站的第一頁。 它也可用來表示「假定」同意，而非明確提供。 |
-| `in` | 使用者已選擇同意偏好。 換言之，他們 **同意** ，如有關同意偏好所示，使用其資料。 |
-| `out` | 使用者已選擇退出同意偏好。 換言之，他們 **不同意** ，如有關同意偏好所示，使用其資料。 |
-| `not_applicable` | 相關的許可偏好不適用於客戶。 |
-| `not_provided` | 客戶未提供任何同意偏好資訊。 |
-| `unknown` | 客戶的同意偏好資訊未知。 |
-
-### xdm:type的接受值 {#type-values}
-
-下表概述了以下的接受值 `xdm:type`:
-
-| 值 | 說明 |
-| --- | --- |
-| `ads` | 可從不相關網站檢視的廣告。 |
-| `content` | 顯示在您網站上的內容。 |
-| `customer_support` | 與客戶支援相關的資料。 |
 | `email` | 電子郵件訊息. |
-| `iot` | 與「物聯網」(IoT)相關的資料。 |
-| `in_app_messages` | 應用程式內訊息. |
-| `in_home` | 在家留言。 |
-| `in_store` | 店內訊息。 |
-| `in_vehicle` | 車內訊息。 |
-| `offers` | 特別優惠。 |
-| `phone_calls` | 與電話通話互動相關的資料。 |
-| `push_notifications` | 推播通知. |
+| `push` | 推播通知. |
+| `inApp` | 應用程式內訊息. |
 | `sms` | SMS 訊息. |
-| `social_media` | 社交媒體內容。 |
-| `snail_mail` | 通過常規郵遞發送的資訊。 |
-| `third_party_content` | 您網站上顯示的由不相關實體提供的內容或文章。 |
-| `third_party_offers` | 您網站廣告服務上顯示的選件或廣告，來自不相關的實體。 |
+| `phone` | 電話通話互動。 |
+| `phyMail` | 實體郵件。 |
+| `inVehicle` | 車內訊息。 |
+| `inHome` | 在家留言。 |
+| `iot` | 物聯網(IoT)消息。 |
+| `social` | 社交媒體內容。 |
+| `other` | 不符合標準類別的渠道。 |
+| `none` | 無首選渠道。 |
+| `unknown` | 首選通道未知。 |
 
-### 完整架 [!DNL Privacy Consent] 構 {#full-schema}
+### 完整架 [!DNL Consents & Preferences] 構 {#full-schema}
 
-下列JSON代表在「結 [!DNL Privacy Consent] 構註冊表」中顯示的完整結構：
-
-```json
-{
-  "meta:license": [
-    "Copyright 2019 Adobe Systems Incorporated. All rights reserved.",
-    "This work is licensed under a Creative Commons Attribution 4.0 International (CC BY 4.0) license",
-    "you may not use this file except in compliance with the License. You may obtain a copy",
-    "of the License at https://creativecommons.org/licenses/by/4.0/"
-  ],
-  "$id": "https://ns.adobe.com/xdm/context/consent-preferences",
-  "$schema": "http://json-schema.org/draft-06/schema#",
-  "title": "Privacy/Marketing Preferences (Consent)",
-  "description": "This schema captures privacy, personalization and marketing preferences (consents).",
-  "type": "object",
-  "meta:extensible": true,
-  "meta:abstract": true,
-  "definitions": {
-    "consentValue": {
-      "type": "string",
-      "enum": [
-        "not_provided",
-        "pending",
-        "in",
-        "out",
-        "unknown",
-        "not_applicable"
-      ],
-      "meta:enum": {
-        "not_provided": "Not provided",
-        "pending": "Pending verification",
-        "in": "Opt-in",
-        "out": "Opt-out",
-        "unknown": "Unknown",
-        "not_applicable": "Not Applicable"
-      }
-    },
-    "basisOfProcessing": {
-      "title": "Basis Of Processing",
-      "type": "string",
-      "description": "Basis of Processing",
-      "enum": [
-        "consent",
-        "legitimate_interest",
-        "contract",
-        "vital_interest",
-        "compliance",
-        "public_interest"
-      ],
-      "meta:enum": {
-        "consent": "User Consent",
-        "legitimate_interest": "Legitimate Interest",
-        "contract": "Contract",
-        "vital_interest": "Vital Interest of the Individual",
-        "compliance": "Compliance with a Legal Obligation",
-        "public_interest": "Public Interest"
-      }
-    },
-    "timestamp": {
-      "title": "Preference timestamp",
-      "description": "Timestamp of this specific opt out or preference.",
-      "type": "string",
-      "format": "date-time"
-    },
-    "consent-preferences": {
-      "properties": {
-        "xdm:privacyOptOuts": {
-          "title": "Privacy Preferences",
-          "description": "Encapsulates data privacy preferences.",
-          "type": "array",
-          "items": {
-            "type": "object",
-            "properties": {
-              "xdm:optOutType": {
-                "title": "Opt-out type",
-                "type": "string",
-                "description": "The type of user permission.",
-                "enum": [
-                  "general_opt_out",
-                  "sales_sharing_opt_out",
-                  "anonymous_analysis",
-                  "pseudonymous_analysis",
-                  "device_linking"
-                ],
-                "meta:enum": {
-                  "general_opt_out": "General opt-out",
-                  "sales_sharing_opt_out": "Sales/sharing opt-out",
-                  "anonymous_analysis": "Anonymous Analysis",
-                  "pseudonymous_analysis": "Pseudonymous Analysis",
-                  "device_linking": "Device Linking"
-                }
-              },
-              "xdm:optOutValue": {
-                "title": "Opt Out Value",
-                "description": "The value of the specific opt out.",
-                "$ref": "#/definitions/consentValue"
-              },
-              "xdm:basisOfProcessing": {
-                "$ref": "#/definitions/basisOfProcessing"
-              },
-              "xdm:timestamp": {
-                "$ref": "#/definitions/timestamp"
-              }
-            }
-          }
-        },
-        "xdm:personalizationPreferences": {
-          "title": "Personalization Preferences",
-          "description": "User's Personalization Preferences",
-          "type": "object",
-          "properties": {
-            "xdm:default": {
-              "title": "Global Personalization Preferences",
-              "description": "User's Default Personalization Preference",
-              "type": "object",
-              "properties": {
-                "xdm:choice": {
-                  "title": "Default Personalization Preferences Value",
-                  "description": "The default value for personalization",
-                  "$ref": "#/definitions/consentValue"
-                },
-                "xdm:basisOfProcessing": {
-                  "$ref": "#/definitions/basisOfProcessing"
-                },
-                "xdm:timestamp": {
-                  "$ref": "#/definitions/timestamp"
-                }
-              }
-            },
-            "xdm:details": {
-              "title": "Itemized Personalization Preferences",
-              "description": "Preferences for specific types of personalization",
-              "type": "array",
-              "items": {
-                "type": "object",
-                "properties": {
-                  "meta:enum": {
-                    "content": "Personalize Content",
-                    "in_app": "Personalize In App Messages",
-                    "offers": "Personalize Offers",
-                    "email": "Personalize eMail",
-                    "snail_mail": "Personalize Regular Mail",
-                    "phone_calls": "Personalize Phone Calls",
-                    "push_notifications": "Personalize Push Notifications",
-                    "sms": "Personalize SMS",
-                    "customer_support": "Personalize Customer Support",
-                    "in_store": "Personalize In Store",
-                    "in_vehicle": "Personalize In Vehicle",
-                    "in_home": "Personalize In Home",
-                    "iot": "Personalize IoT",
-                    "social_media": "Personalize Social Media",
-                    "third_party_offers": "Personalize Third-party Offers",
-                    "third_party_content": "Personalize Third-party Content",
-                    "ads": "Personalize My Business's Ads on Other Sites"
-                  }
-                },
-                "xdm:choice": {
-                  "title": "Personalization Preference Value",
-                  "description": "The value for this specific personalization preference",
-                  "$ref": "#/definitions/consentValue"
-                },
-                "xdm:basisOfProcessing": {
-                  "$ref": "#/definitions/basisOfProcessing"
-                },
-                "xdm:timestamp": {
-                  "$ref": "#/definitions/timestamp"
-                }
-              }
-            }
-          }
-        }
-      },
-      "xdm:marketingPreferences": {
-        "title": "Marketing Preferences",
-        "description": "User's Direct Marketing Preferences",
-        "type": "object",
-        "properties": {
-          "xdm:default": {
-            "title": "Default Direct Marketing Preference",
-            "description": "User's Default Marketing Preference",
-            "type": "object",
-            "properties": {
-              "xdm:choice": {
-                "title": "Default Marketing Preferences Value",
-                "description": "The default value for direct marketing preferences",
-                "$ref": "#/definitions/consentValue"
-              },
-              "xdm:basisOfProcessing": {
-                "$ref": "#/definitions/basisOfProcessing"
-              },
-              "xdm:timestamp": {
-                "$ref": "#/definitions/timestamp"
-              }
-            }
-          },
-          "xdm:details": {
-            "title": "Itemized Direct Marketing Preferences",
-            "description": "Preferences for specific types of direct marketing",
-            "type": "array",
-            "items": {
-              "type": "object",
-              "properties": {
-                "xdm:type": {
-                  "title": "Marketing Preference",
-                  "type": "string",
-                  "description": "The specific marketing preference.",
-                  "enum": [
-                    "email",
-                    "push_notifications",
-                    "in_app_messages",
-                    "sms",
-                    "phone_calls",
-                    "snail_mail",
-                    "in_vehicle_messages",
-                    "in_home_messages",
-                    "iot",
-                    "social_media"
-                  ],
-                  "meta:enum": {
-                    "email": "Receive eMail",
-                    "push_notifications": "Receive Push Notifications",
-                    "in_app_messages": "Receive In App Messages",
-                    "sms": "Receive SMS",
-                    "phone_calls": "Receive Phone Calls",
-                    "snail_mail": "Receive Regular Mail",
-                    "in_vehicle_messages": "Receive In Vehicle Messages",
-                    "in_home_messages": "Receive In Home Messages",
-                    "iot": "Receive IoT",
-                    "social_media": "Receive Social Media Messages"
-                  }
-                },
-                "xdm:choice": {
-                  "title": "Marketing Preference Value",
-                  "description": "The value for this specific marketing preference",
-                  "$ref": "#/definitions/consentValue"
-                },
-                "xdm:basisOfProcessing": {
-                  "$ref": "#/definitions/basisOfProcessing"
-                },
-                "xdm:timestamp": {
-                  "$ref": "#/definitions/timestamp"
-                },
-                "xdm:subscriptions": {
-                  "title": "Company-specific subscriptions",
-                  "description": "Company-specific subscriptions, such as mailing lists or newsletters",
-                  "type": "object",
-                  "meta:xdmType": "map",
-                  "additionalProperties": {
-                    "xdm:choice": {
-                      "title": "Marketing Preference Value",
-                      "description": "The value for this specific marketing preference",
-                      "$ref": "#/definitions/consentValue"
-                    },
-                    "xdm:timestamp": {
-                      "$ref": "#/definitions/timestamp"
-                    }
-                  }
-                }
-              }
-            }
-          }
-        }
-      },
-      "xdm:timestamp": {
-        "title": "Consent Preferences timestamp",
-        "description": "Timestamp of the complete set of user consent preferences.",
-        "type": "string",
-        "format": "date-time"
-      },
-      "xdm:version": {
-        "title": "Preferences Version",
-        "description": "Version of the Privacy Preferences Standard",
-        "type": "string"
-      },
-      "xdm:userLocale": {
-        "title": "User Locale",
-        "description": "User location or jurisdiction that applies to the consents for this user",
-        "type": "string"
-      },
-      "xdm:localeSource": {
-        "title": "Locale Source",
-        "description": "Method used to determine the user's locale",
-        "enum": [
-          "ip",
-          "gps",
-          "user_provided",
-          "website_location",
-          "inferred",
-          "other"
-        ],
-        "meta:enum": {
-          "ip": "IP Address",
-          "gps": "Device GPS",
-          "user_provided": "User Provided",
-          "website_location": "Website eTDL",
-          "inferred": "Inferred",
-          "other": "Other"
-        }
-      }
-    }
-  },
-  "allOf": [
-    {
-      "$ref": "https://ns.adobe.com/xdm/common/extensible#/definitions/@context"
-    },
-    {
-      "$ref": "#/definitions/consent-preferences"
-    }
-  ],
-  "meta:status": "experimental"
-}
-```
+要查看資料類型的完 [!DNL Consents & Preferences] 整模式，請參 [閱正式XDM儲存庫](https://github.com/adobe/xdm/blob/master/components/datatypes/consentpreferences.schema.json)。
