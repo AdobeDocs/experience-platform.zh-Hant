@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API;consent;Consent;preferences;Preferences;privacyOptOuts;marketingPreferences;optOutType;basisOfProcessing;consent;Consent
-title: 隱私權混音概觀
+title: 同意與偏好資料類型
 description: 「隱私權／行銷偏好（同意）」資料類型旨在支援收集「同意管理平台」(CMPs)和您資料作業中其他來源產生的客戶權限和偏好。
 topic: guide
 translation-type: tm+mt
-source-git-commit: ba045a635f840c62980288a1a3ad5015f54121da
+source-git-commit: 1a4dd167ecd4f4f61ffe26af786b355e4561b30d
 workflow-type: tm+mt
-source-wordcount: '2022'
+source-wordcount: '2023'
 ht-degree: 1%
 
 ---
@@ -18,10 +18,6 @@ ht-degree: 1%
 
 本檔案涵蓋資料類型所提供欄位的結構與 [!DNL Consents & Preferences] 用途。
 
->[!IMPORTANT]
->
->資料 [!DNL Consents & Preferences] 類型設計為涵蓋一系列許可和優先管理使用案例。 因此，本檔案以一般術語說明資料類型欄位的使用，並僅就您應如何解讀這些欄位提供建議。 請洽詢您的隱私權法律團隊，讓資料類型的結構與您的組織如何解讀及向客戶展示這些同意和偏好選擇保持一致。
-
 ## 先決條件 {#prerequisites}
 
 本文檔需要對XDM和中的架構的使用有良好的瞭解 [!DNL Experience Platform]。 請先閱讀下列檔案，然後再繼續：
@@ -30,6 +26,10 @@ ht-degree: 1%
 * [架構構成基礎](http://www.adobe.com/go/xdm-schema-best-practices-en)
 
 ## 資料類型結構 {#structure}
+
+>[!IMPORTANT]
+>
+>資料 [!DNL Consents & Preferences] 類型設計為涵蓋一系列許可和優先管理使用案例。 因此，本檔案以一般術語說明資料類型欄位的使用，並僅就您應如何解讀這些欄位提供建議。 請洽詢您的隱私權法律團隊，讓資料類型的結構與您的組織如何解讀及向客戶展示這些同意和偏好選擇保持一致。
 
 資料 [!DNL Consents & Preferences] 類型提供數個欄位，用於擷取 **同意** 和 **偏好資訊** 。
 
@@ -172,7 +172,7 @@ ht-degree: 1%
 
 | 屬性 | 說明 |
 | --- | --- |
-| `xdm:val` | 客戶為此使用案例提供的同意選擇。 請參閱附 [錄](#choice-values) ，瞭解接受的值和定義。 |
+| `xdm:val` | 客戶為此使用案例提供的許可選擇。 請參閱附 [錄](#choice-values) ，瞭解接受的值和定義。 |
 
 ### xdm：個人化 {#personalize}
 
