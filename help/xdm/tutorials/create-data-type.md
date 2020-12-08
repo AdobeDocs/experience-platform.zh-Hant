@@ -6,7 +6,7 @@ topic: tutorial
 type: Tutorial
 description: 本教學課程使用Experience Platform UI來引導您完成自訂資料類型的步驟。
 translation-type: tm+mt
-source-git-commit: 9008b49e1eb5e32b0f4cda7049bf873c689f6442
+source-git-commit: bfb65743764b454754ca8ebb01bfe4407833b291
 workflow-type: tm+mt
 source-wordcount: '1243'
 ht-degree: 0%
@@ -22,11 +22,11 @@ Adobe Experience Platform提供許多標準資料類型，可用於涵蓋各種�
 
 本教學課程涵蓋在平台使用者介面中建立和編輯自訂資料類型的步驟。
 
-## 必要條件
+## 先決條件
 
 本教學課程需要對XDM System有充分的瞭解。 請參閱 [XDM概觀](../home.md) ，以瞭解XDM在Experience Platform生態系統中的角色，以及架構構 [成的基本概念](../schema/composition.md) ，以瞭解資料類型對XDM架構的貢獻。
 
-雖然本教學課程不需要，但建議您也要遵循在UI中 [構成架構的教學課程](./-schema-ui.md) ，以熟悉本課程的各種功能 [!DNL Schema Editor]。
+雖然本教學課程不需要，但建議您也要遵循在UI中 [構成架構的教學課程](./create-schema-ui.md) ，以熟悉本課程的各種功能 [!DNL Schema Editor]。
 
 ## 開啟 [!DNL Schema Editor] 資料類型
 
