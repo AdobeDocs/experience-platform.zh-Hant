@@ -4,7 +4,7 @@ title: 設定檔詳細資訊自訂
 description: '本指南提供逐步指示，以自訂在Adobe Experience Platform UI中顯示即時客戶個人檔案資料的方式。 '
 topic: guide
 translation-type: tm+mt
-source-git-commit: 9068d12e60da63a6a2a2ff18c016080ea581104f
+source-git-commit: d05884c87445ec16b0ad44f593cf782b8c80d646
 workflow-type: tm+mt
 source-wordcount: '1167'
 ht-degree: 0%
@@ -16,7 +16,7 @@ ht-degree: 0%
 
 在Adobe Experience Platform使用者介面中，您可以以客戶個人檔案的形 [!DNL Real-time Customer Profile] 式檢視資料並與之互動。 UI中顯示的描述檔資訊已從多個描述檔片段合併在一起，以形成每個客戶的單一檢視。 這包括基本屬性、連結身分和頻道偏好設定等詳細資訊。 配置檔案中顯示的預設欄位也可以在組織級別進行更改以顯示首選 [!DNL Profile] 屬性。 本指南提供逐步指示，以自訂資料在平台UI [!DNL Profile] 中的顯示方式。
 
-如需描述檔UI的完整指南，請造訪描述檔使 [用指南](user-guide.md)。
+如需描述檔UI的完整指南，請造訪描述檔 [UI指南](user-guide.md)。
 
 ## 重新排序卡片並調整其大小 {#reorder-and-resize-cards}
 
