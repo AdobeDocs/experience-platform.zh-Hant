@@ -5,9 +5,9 @@ seo-title: 「目標詳細資料」頁
 description: '個別目的地的詳細資訊頁面提供目的地詳細資訊的概述，例如目的地名稱、ID、對應至目的地的區段，以及編輯啟動和啟用和停用資料流的控制項。 '
 seo-description: '個別目的地的詳細資訊頁面提供目的地詳細資訊的概述，例如目的地名稱、ID、對應至目的地的區段，以及編輯啟動和啟用和停用資料流的控制項。 '
 translation-type: tm+mt
-source-git-commit: 5f120a716cc3396ef7749463bb6052a8ced2fbb4
+source-git-commit: 8ac368081c37ca5bfc2cc3382774a912e8ad68eb
 workflow-type: tm+mt
-source-wordcount: '680'
+source-wordcount: '735'
 ht-degree: 1%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->目標詳細資訊頁面是平台UI中 [!UICONTROL 「目標] 」工作區的一部分。 如需詳細 [[!UICONTROL 資訊，請參閱] 「目標」工作區總覽](./destinations-workspace.md) 。
+>目標詳細資訊頁面是平台UI中 [!UICONTROL 「目標] 」工作區的一部分。 See the [[!UICONTROL Destinations] workspace overview](./destinations-workspace.md) for more information.
 
 在「平 **[!UICONTROL 台]** 」UI的「目標」工作區中，導覽至「瀏覽 **** 」標籤並選取您要檢視的目標名稱。
 
@@ -28,6 +28,10 @@ ht-degree: 1%
 此時會顯示目標的詳細資料頁面，顯示其可用控制項。 如果您正在查看批處理目標的詳細資訊，則還會顯示一個監視控制面板。
 
 ![](../assets/ui/details-page/details.png)
+
+此外，在「瀏覽」標籤上，您可以選擇垃圾筒圖示，以刪除選 ![定的數](../assets/ui/details-page/trash-icon.png) 據流。 在刪除資料流之前，任何激活到目標的段都將被取消映射。
+
+![](../assets/ui/details-page/delete-flow.png)
 
 ## 右邊欄
 
@@ -40,6 +44,7 @@ ht-degree: 1%
 | 右側欄項目 | 說明 |
 | --- | --- |
 | [!UICONTROL 啟動] | 選取此控制項可編輯哪些區段已對應至目標。 如需詳細資訊，請 [參閱啟用區段至目的地](./activate-destinations.md) 的指南。 |
+| [!UICONTROL 刪除] | 允許您刪除此資料流，並取消映射以前激活的段（如果有）。 |
 | [!UICONTROL 目標名稱] | 可以編輯此欄位以更新目標的名稱。 |
 | [!UICONTROL 說明] | 您可以編輯此欄位，以更新或新增選擇性說明至目標。 |
 | [!UICONTROL 目標] | 代表對象被傳送至的目標平台。 如需詳細 [資訊，請參閱目](../catalog/overview.md) 標目錄。 |
@@ -75,11 +80,11 @@ ht-degree: 1%
 
 ![](../assets/ui/details-page/dataflow.png)
 
-## [!UICONTROL 區段]
+## [!UICONTROL 啟動資料]
 
-「區 [!UICONTROL 段] 」標籤會顯示已映射至目標的區段清單，包括其開始日期和結束日期（如果適用）。 若要檢視特定區段的詳細資訊，請從清單中選取其名稱。
+「啟 [!UICONTROL 動資料] 」標籤會顯示已映射至目的地的區段清單，包括其開始日期和結束日期（如果適用）。 若要檢視特定區段的詳細資訊，請從清單中選取其名稱。
 
-![](../assets/ui/details-page/segments.png)
+![](../assets/ui/details-page/activation-data.png)
 
 >[!NOTE]
 >
