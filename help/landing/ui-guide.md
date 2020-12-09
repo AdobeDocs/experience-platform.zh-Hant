@@ -5,10 +5,10 @@ title: Adobe Experience Platform UI指南
 topic: ui guide
 description: 'Adobe Experience Platform '
 translation-type: tm+mt
-source-git-commit: adf8e8457c8ffef263223a38d3f9c345cf7c6ab2
+source-git-commit: 761a212abc407fac5bc59c6f5a57c6c17c932230
 workflow-type: tm+mt
-source-wordcount: '1597'
-ht-degree: 0%
+source-wordcount: '1726'
+ht-degree: 1%
 
 ---
 
@@ -143,13 +143,25 @@ Notebooks **[!UICONTROL 部分]** (Notebooks)提供對JupyterLab的訪問，Jupy
 
 ### [!UICONTROL 資料管理]
 
-「方 **[!UICONTROL 案]** 」區段可讓您建立和管理方案。 要進一步瞭解如何使用「結構描述」部分，請閱讀有關建立結構描述 [的教程](../xdm/tutorials/create-schema-ui.md)。 有關Experience Data Model(XDM)的更多資訊，請參閱 [XDM概觀](../xdm/home.md)。
+「結 **[!UICONTROL 構]** 」區段可讓您建立和管理Experience Data Model(XDM)結構。 若要進一步瞭解結構，請閱讀有關建立結構 [的教學課程](../xdm/tutorials/create-schema-ui.md)。 有關XDM的更多資訊，請參閱 [XDM系統概述](../xdm/home.md)。
 
-「資 **[!UICONTROL 料集]** 」區段可讓您建立和管理資料集。 有關「資料集」部分的詳細資訊，請參閱資料集 [使用手冊](../catalog/datasets/user-guide.md)。
+「資 **[!UICONTROL 料集]** 」區段可讓您建立和管理資料集。 有關資料集的詳細資訊，請參 [閱資料集使用手冊](../catalog/datasets/user-guide.md)。
 
-「查 **[!UICONTROL 詢]** 」部分可讓您建立和管理查詢、記錄查詢服務進行的SQL查詢，以及查看PostgreSQL憑據。 有關「查詢」部分的詳細資訊，請參閱「查 [詢服務」使用手冊](../query-service/ui/overview.md)。
+「查 **[!UICONTROL 詢]** 」區段可讓您建立和管理查詢、記錄Adobe Experience Platform Query Service所做的SQL查詢，以及檢視您的PostgreSQL認證。 有關查詢的詳細資訊，請參閱查 [詢服務使用手冊](../query-service/ui/overview.md)。
 
-「監 **[!UICONTROL 控]** 」區段可讓您監控批次和串流擷取。 有關「監視」部分的詳細資訊，請參閱監 [視資料提取使用手冊](../ingestion/quality/monitor-data-flows.md)。
+「監 **[!UICONTROL 控]** 」區段可讓您監控批次和串流擷取。 有關監視的詳細資訊，請參閱監 [視資料提取使用手冊](../ingestion/quality/monitor-data-flows.md)。
+
+### [!UICONTROL 決策]
+
+選件決策是與Adobe Experience Platform整合的應用程式服務。 它可讓您運用Experience Platform在適當的時間跨所有觸點為客戶提供最佳優惠和體驗。 若要進一步瞭解選件決策，包括使用選 [!UICONTROL 件][!UICONTROL 和活動] ，請造 [訪選件決策檔案](https://experienceleague.adobe.com/docs/offer-decisioning.html)。
+
+### [!UICONTROL 管理]
+
+平台使用者介面(UI)提供控制面板，您可透過此控制面板檢視有關貴組織授權使用情況的重要資訊，如每日快照中所擷取。 您可以在導覽中選取「授 **[!UICONTROL 權使用]** 」來存取此項。 若要進一步瞭解授權使用控制面板，請造訪授 [權使用控制面板指南](license-usage-dashboard.md)。
+
+>[!IMPORTANT]
+>
+>授權使用資料板功能目前為alpha版，並非所有使用者都能使用。 文件和功能可能會有所變更。
 
 ## 後續步驟
 
