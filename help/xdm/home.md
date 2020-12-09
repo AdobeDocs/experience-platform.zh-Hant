@@ -5,9 +5,9 @@ title: XDM系統概述
 topic: overview
 description: '標準化和互操作性是Adobe Experience Platform的主要概念。 Adobe推動的Experience Data Model(XDM)旨在標準化客戶體驗資料並定義客戶體驗管理的架構。 '
 translation-type: tm+mt
-source-git-commit: d96890fd79acaa09628dbba49ee6930ed4f9d0e6
+source-git-commit: b0b2f0c5aa91a5aeb5836d9795a580ccc69e3e17
 workflow-type: tm+mt
-source-wordcount: '1584'
+source-wordcount: '1581'
 ht-degree: 2%
 
 ---
@@ -46,7 +46,7 @@ XDM是基礎架構，可讓Adobe Experience Cloud在適當的時機，在適當�
 
 所有XDM結構描述的資料可以分類為記錄或時間序列。 架構的資料行為由架構的類定義，該類在初次建立時被分配給架構。 XDM類描述了模式必須包含的最小屬性數，以表示特定資料行為。
 
-雖然您可以在中定義自己的類 [!DNL Schema Registry]，但建議您分別使用首選類 **[!DNL XDM Individual Profile]****[!DNL XDM ExperienceEvent]** 和記錄和時間序列資料。 下面將詳細說明這些類別。
+雖然您可以在中定義自己的類 [!DNL Schema Registry]別，但建議您分別使用首選類 **[!DNL XDM Individual Profile]****[!DNL XDM ExperienceEvent]** 和記錄和時間序列資料。 下面將詳細說明這些類別。
 
 ### [!DNL XDM Individual Profile] {#xdm-individual-profile}
 
