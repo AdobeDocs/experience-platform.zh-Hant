@@ -1,0 +1,175 @@
+---
+keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;;experience data model;Experience data model;Experience Data Model;data model;Data Model;schema registry;Schema Registry;behavior;behaviour;behaviors;behaviours;
+solution: Experience Platform
+title: 行為端點指南
+description: 架構註冊表API中的/behaviors端點可讓您擷取全域容器中的所有可用行為。
+topic: developer guide
+translation-type: tm+mt
+source-git-commit: 72c9147cefd00c9fe734ac64f8062c899b0588bc
+workflow-type: tm+mt
+source-wordcount: '394'
+ht-degree: 2%
+
+---
+
+
+# 行為端點
+
+在Experience Data Model(XDM)中，行為會定義模式所描述的資料性質。 每個XDM類都必須引用特定的行為，使用該類的所有方案都將繼承該行為。 在Platform中，幾乎所有的使用案例中，有兩種可用的行為：
+
+* **[!UICONTROL 記錄]**:提供主題屬性的相關資訊。 主題可以是組織或個人。
+* **[!UICONTROL 時間系列]**:提供記錄主體直接或間接採取操作時系統的快照。
+
+>[!NOTE]
+>
+>在Platform中，有些使用案例需要使用不採用上述任一行為的架構。 針對這些情況，提供第三種「臨機」行為。 如需詳細資 [訊，請參閱建立臨機架構的教學課程](../tutorials/ad-hoc.md) 。
+>
+>有關資料行為對架構構成影響的更一般性資訊，請參閱架構構成基 [本概念指南](../schema/composition.md)。
+
+API `/behaviors` 中的端點 [!DNL Schema Registry] 可讓您檢視容器中的可用行 `global` 為。
+
+## 快速入門
+
+本指南中使用的端點是 [[!DNL Schema Registry] API的一部分](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/behavior-registry.yaml)。 在繼續之前，請先閱讀快速入門手冊 [](./getting-started.md) ，以取得相關檔案的連結、閱讀本檔案中範例API呼叫的指南，以及成功呼叫任何Experience Platform API所需之必要標題的重要資訊。
+
+## 擷取行為清單 {#list}
+
+通過向端點發出GET請求，可以檢索所有可用行為的列 `/behaviors` 表。
+
+**API格式**
+
+```http
+GET /global/behaviors
+```
+
+**請求**
+
+```shell
+curl -X GET \
+  https://platform.adobe.io/data/foundation/schemaregistry/global/behaviors \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Accept: application/vnd.adobe.xed-id+json'
+```
+
+**回應**
+
+```json
+{
+    "results": [
+        {
+            "$id": "https://ns.adobe.com/xdm/data/record",
+            "meta:altId": "_xdm.data.record",
+            "version": "1.16.4",
+            "title": "Record Schema"
+        },
+        {
+            "$id": "https://ns.adobe.com/xdm/data/adhoc",
+            "meta:altId": "_xdm.data.adhoc",
+            "version": "1.16.4",
+            "title": "Ad Hoc Schema"
+        },
+        {
+            "$id": "https://ns.adobe.com/xdm/data/time-series",
+            "meta:altId": "_xdm.data.time-series",
+            "version": "1.16.4",
+            "title": "Time-series Schema"
+        }
+    ],
+    "_page": {
+        "orderby": "updated",
+        "next": null,
+        "count": 3
+    },
+    "_links": {
+        "next": null
+    }
+}
+```
+
+## 查看行為 {#lookup}
+
+您可在GET要求到端點的路徑中提供其ID，以查找特定 `/behaviors` 行為。
+
+**API格式**
+
+```http
+GET /global/behaviors/{BEHAVIOR_ID}
+```
+
+| 參數 | 說明 |
+| --- | --- |
+| `{BEHAVIOR_ID}` | 您 `meta:altId` 要查看的行 `$id` 為的或URL編碼。 |
+
+**請求**
+
+下列請求會在請求路徑中提供記錄行為，以擷 `meta:altId` 取記錄行為的詳細資訊。
+
+```shell
+curl -X GET \
+  https://platform.adobe.io/data/foundation/schemaregistry/global/behaviors/_xdm.data.record \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Accept: application/vnd.adobe.xed+json;version=1'
+```
+
+**回應**
+
+成功的響應返回行為的詳細資訊，包括其版本、說明以及行為提供給使用行為的類的屬性。
+
+```json
+{
+    "$id": "https://ns.adobe.com/xdm/data/record",
+    "meta:altId": "_xdm.data.record",
+    "meta:resourceType": "behaviors",
+    "version": "1.16.4",
+    "title": "Record Schema",
+    "type": "object",
+    "description": "Used to indicate the behavior of record data semantic when composed into data schemas.",
+    "definitions": {
+        "record": {
+            "properties": {
+                "_id": {
+                    "title": "Identifier",
+                    "type": "string",
+                    "format": "uri-reference",
+                    "description": "A unique identifier for the record.",
+                    "meta:xdmType": "string",
+                    "meta:xdmField": "@id"
+                }
+            }
+        }
+    },
+    "allOf": [
+        {
+            "$ref": "#/definitions/record",
+            "type": "object",
+            "meta:xdmType": "object"
+        },
+        {
+            "$ref": "https://ns.adobe.com/xdm/common/extensible#/definitions/@context",
+            "type": "object",
+            "meta:xdmType": "object"
+        }
+    ],
+    "meta:extensible": true,
+    "meta:abstract": true,
+    "meta:xdmType": "object",
+    "meta:status": "stable",
+    "$schema": "http://json-schema.org/draft-06/schema#",
+    "meta:registryMetadata": {
+        "repo:createdDate": 1606266789446,
+        "repo:lastModifiedDate": 1606266789446,
+        "eTag": "2cc114a54949a9668fe2ad046ccece59192e1bfa28f14e5ac7c893acb7820ba2",
+        "meta:globalLibVersion": "1.16.4"
+    }
+}
+```
+
+## 後續步驟
+
+本指南涵蓋 `/behaviors` API [!DNL Schema Registry] 中端點的使用。 要瞭解如何使用API將行為指派給類，請參見類 [端點指南](./classes.md)。
