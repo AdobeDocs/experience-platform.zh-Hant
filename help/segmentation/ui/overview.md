@@ -5,7 +5,7 @@ title: 區段服務使用指南
 topic: ui guide
 description: Adobe Experience Platform Segmentation Service提供使用者介面來建立和管理區段定義。
 translation-type: tm+mt
-source-git-commit: adf8e8457c8ffef263223a38d3f9c345cf7c6ab2
+source-git-commit: 3e83215cc24b32b7fe9486c6faf455f247b6c922
 workflow-type: tm+mt
 source-wordcount: '1449'
 ht-degree: 0%
@@ -13,7 +13,7 @@ ht-degree: 0%
 ---
 
 
-# 區段服務使用指南
+# 區段服務UI指南
 
 [!DNL Adobe Experience Platform Segmentation Service] 提供建立和管理區段定義的使用者介面。
 
