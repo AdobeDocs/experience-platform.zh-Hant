@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics;update accounts;
-description: null
+keywords: Experience Platform;home;popular topics;update accounts
+description: 在某些情況下，可能需要更新現有來源帳戶的詳細資訊。 「來源」工作區可讓您新增、編輯和刪除現有批次或串流連線的詳細資訊，包括其名稱、說明和認證。
 solution: Experience Platform
 title: 在UI中更新帳戶詳細資訊
 topic: overview
 type: Tutorial
 translation-type: tm+mt
-source-git-commit: 413687a0d9e790ea3f61a858002e9510216d7c34
+source-git-commit: 9b48bc1426e6259ea0b2cf9b420b55b92712f7c2
 workflow-type: tm+mt
-source-wordcount: '407'
+source-wordcount: '442'
 ht-degree: 0%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 0%
 
 # 在UI中更新帳戶詳細資訊
 
-在某些情況下，可能需要更新現有來源帳戶的詳細資訊。 「 [!UICONTROL 來源] 」工作區可讓您編輯、新增和刪除帳戶的詳細資訊，包括帳戶名稱、說明和驗證憑證的值。
+在某些情況下，可能需要更新現有來源帳戶的詳細資訊。 Sources  工作區可讓您新增、編輯和刪除現有批次或串流連線的詳細資料，包括其名稱、說明和認證。
 
 本教學課程提供從 [!UICONTROL Sources工作區更新現有帳戶的詳細資訊和認證的] 步驟。
 
@@ -24,14 +24,12 @@ ht-degree: 0%
 
 本教學課程需要對Adobe Experience Platform的下列元件有正確的認識：
 
-- [[!DNL Experience Data Model (XDM)] 系統](../../../xdm/home.md):組織客戶體驗資料 [!DNL Experience Platform] 的標準化架構。
-   - [架構構成基礎](../../../xdm/schema/composition.md):瞭解XDM架構的基本建置區塊，包括架構組合的主要原則和最佳實務。
-   - [架構編輯器教程](../../../xdm/tutorials/create-schema-ui.md):瞭解如何使用架構編輯器UI建立自訂架構。
-- [[!DNL Real-time Customer Profile]](../../../profile/home.md):根據來自多個來源的匯整資料，提供統一、即時的消費者個人檔案。
+- [來源](../../home.md):DNL Experience Platform可讓您從各種來源擷取資料，同時提供您使用平台服務來建構、標示和增強傳入資料的能力。
+- [沙盒](../../../sandboxes/home.md):DNL Experience Platform提供虛擬沙盒，可將單一Platform實例分割為獨立的虛擬環境，以協助開發和發展數位體驗應用程式。
 
 ## 更新帳戶
 
-登入「登入 [Experience Platform UI](https://platform.adobe.com) 」，然後從左側導覽器中選取「來源 **[!UICONTROL 」以存取「來源]** 」工作區。 從頂 **[!UICONTROL 端標題]** ，選擇「帳戶」以檢視現有帳戶。
+登入 [Experience Platform UI](https://platform.adobe.com) ，然後從左側導覽中選 **[!UICONTROL 取Sources]** ，以存取 [!UICONTROL Sources] 工作區。 從頂 **[!UICONTROL 端標題]** ，選擇「帳戶」以檢視現有帳戶。
 
 ![目錄](../../images/tutorials/update/catalog.png)
 
