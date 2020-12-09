@@ -4,11 +4,11 @@ solution: Experience Platform
 title: 使用流服務API刪除資料流
 topic: overview
 type: Tutorial
-description: 本教程介紹使用流服務API刪除資料流的步驟。
+description: 本教學課程涵蓋使用Flow Service API刪除批次和串流資料流的步驟。
 translation-type: tm+mt
-source-git-commit: ae3e64a5f9a82c0efe3cffeb6d4d425ae2e72bda
+source-git-commit: b63b17f2a7271fc673abc8245a4917c0daca4ef3
 workflow-type: tm+mt
-source-wordcount: '449'
+source-wordcount: '467'
 ht-degree: 1%
 
 ---
@@ -16,7 +16,9 @@ ht-degree: 1%
 
 # 使用流服務API刪除資料流
 
-本教程介紹使用刪除批處理源和流源建立的資料流的步驟 [[!DNL Flow Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml)。
+您可以使用 [[!DNL Flow Service] API刪除包含錯誤或已過時的批處理和流資料流](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml)。
+
+本教程介紹使用批處理源和流源刪除資料流的步驟 [!DNL Flow Service]。
 
 ## 快速入門
 
