@@ -5,10 +5,10 @@ user-guide-title: Adobe Experience Platform 劃分服務說明
 breadcrumb-title: 分段服務指南
 user-guide-description: 從您的即時客戶設定檔資料建立區段並產生對象。
 translation-type: tm+mt
-source-git-commit: beacce03136e1620ff57fb549f335d2199bb6001
+source-git-commit: ff7c2854d45191b27e23df54b3638955b3535e76
 workflow-type: tm+mt
-source-wordcount: '135'
-ht-degree: 27%
+source-wordcount: '139'
+ht-degree: 25%
 
 ---
 
@@ -28,7 +28,8 @@ ht-degree: 27%
    - [區段搜尋](api/segment-search.md)
    - [串流區段](api/streaming-segmentation.md)
 - 區段UI {#ui}
-   - [概述](ui/overview.md)
+   - [區段UI指南](ui/overview.md)
+   - [區段控制面板](ui/segment-dashboard.md)
    - [區段產生器](ui/segment-builder.md)
    - [串流區段](ui/streaming-segmentation.md)
    - [時間約束重構](ui/segment-refactoring.md)
