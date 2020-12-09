@@ -5,7 +5,7 @@ title: 區段服務區段產生器使用指南
 topic: ui guide
 description: '「區段產生器」提供豐富的工作區，可讓您與描述檔資料元素互動。 工作區提供建立和編輯規則的直覺式控制項，例如用來表示資料屬性的拖放圖格。 '
 translation-type: tm+mt
-source-git-commit: beacce03136e1620ff57fb549f335d2199bb6001
+source-git-commit: 761a212abc407fac5bc59c6f5a57c6c17c932230
 workflow-type: tm+mt
 source-wordcount: '1774'
 ht-degree: 0%
@@ -13,7 +13,7 @@ ht-degree: 0%
 ---
 
 
-# [!DNL Segment Builder] 使用者指南
+# [!DNL Segment Builder] UI指南
 
 [!DNL Segment Builder] 提供多樣化工作區，讓您與資料元素 [!DNL Profile] 互動。 工作區提供建立和編輯規則的直覺式控制項，例如用來表示資料屬性的拖放圖格。
 
