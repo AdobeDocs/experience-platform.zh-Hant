@@ -4,9 +4,9 @@ title: 即時客戶個人檔案總覽
 topic: guide
 description: 即時客戶描述檔是一般查閱實體儲存，可合併來自各種企業資料資產的資料，然後以個別客戶描述檔和相關時間系列事件的形式提供對該資料的存取。 此功能可讓行銷人員跨多個通道，推動與受眾之間協調、一致且相關的體驗。
 translation-type: tm+mt
-source-git-commit: 47c65ef5bdd083c2e57254189bb4a1f1d9c23ccc
+source-git-commit: b8d6bd5caf6c6f4d1da218b6ca12cec154d64412
 workflow-type: tm+mt
-source-wordcount: '1820'
+source-wordcount: '1844'
 ht-degree: 0%
 
 ---
@@ -24,7 +24,9 @@ Experience Platform中即時客戶個人檔案與其他服務之間的關係在�
 
 ### 描述檔資料儲存
 
-雖然 [!DNL Real-time Customer Profile] 會處理擷取的資料並使用Adobe Experience Platform透過身分對 [!DNL Identity Service] 應來合併相關資料，但它會在商店中維護其專屬的 [!DNL Profile] 資料。 換言之，儲存 [!DNL Profile] 區與資料( [!DNL Catalog][!DNL Data Lake])和資料 [!DNL Identity Service] （識別圖）分開。
+雖然 [!DNL Real-time Customer Profile] 會處理擷取的資料並使用Adobe Experience Platform透過身分對 [!DNL Identity Service] 應來合併相關資料，但它會在商店中維護其專屬的 [!DNL Profile] 資料。 存 [!DNL Profile] 儲區與識別圖 [!DNL Catalog] 中的資料 [!DNL Data Lake] 和 [!DNL Identity Service] 資料分開。
+
+Profile Store使用Microsoft Azure Cosmos DB基礎架構，Platform Data Lake使用Microsoft Azure Data Lake儲存。
 
 ### 輪廓護欄
 
@@ -34,7 +36,7 @@ Experience Platform提供一系列的防護，可協助您避免建立即時客�
 
 [!DNL Real-time Customer Profile] 合併來自各種企業系統的資料，然後以客戶個人檔案的形式與相關的時間序列事件來存取該資料。 此功能可讓行銷人員跨多個通道，推動與受眾之間協調、一致且相關的體驗。 以下幾節重點說明您必須瞭解的一些核心概念，以便在Platform中有效建立和維護個人檔案。
 
-### 描述檔片段與合併的描述檔
+### 描述檔片段與合併的描述檔 {#profile-fragments-vs-merged-profiles}
 
 每個客戶個人檔案都由多個已合併的個人檔案片段組成，以形成該客戶的單一檢視。 例如，如果客戶透過多個通道與您的品牌互動，您的組織將會在多個資料集中顯示與該單一客戶相關的多個描述檔片段。 當這些片段被收錄到Platform中時，會將它們合併在一起，以便為該客戶建立單一個人檔案。
 
