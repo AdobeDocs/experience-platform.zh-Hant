@@ -4,10 +4,10 @@ title: 即時客戶個人檔案UI指南
 topic: guide
 description: 即時客戶個人檔案可讓您對個別客戶建立全方位的檢視，並結合來自多個通道的資料，包括線上、離線、CRM和協力廠商資料。 本檔案可做為在Adobe Experience Platform使用者介面中與即時客戶個人檔案互動的指南。
 translation-type: tm+mt
-source-git-commit: 295315ab052ff151bea9037567bf2690d705367b
+source-git-commit: b991a767f34f0e318b9ca5092fd4cf099de11e0a
 workflow-type: tm+mt
-source-wordcount: '1245'
-ht-degree: 0%
+source-wordcount: '1304'
+ht-degree: 1%
 
 ---
 
@@ -26,9 +26,19 @@ ht-degree: 0%
 
 ## 概述
 
-在UI中 [[!DNL Experience Platform] ，選取左側導](http://platform.adobe.com)覽中的「描述檔 **[!UICONTROL 」以開啟「]** 概述 **** 」標籤。 此標籤提供檔案和影片的連結，以協助您瞭解並開始使用描述檔。
+在Experience Platform UI中，選取左側導覽 **[!UICONTROL 中的]** 「描述檔」以開啟「 **[!UICONTROL 概述]** 」標籤。 此標籤提供檔案和影片的連結，以協助您瞭解並開始使用描述檔。
 
 ![](../images/user-guide/profiles-overview.png)
+
+### (Alpha)描述檔控制面板
+
+>[!IMPORTANT]
+>
+>控制面板功能目前為alpha版，並非所有使用者都能使用。 文件和功能可能會有所變更。
+
+對於某些使用者，在左側導 **[!UICONTROL 覽中選取]****** 「描述檔」並開啟「概述」標籤時，會提供一個控制面板，概述與您的「描述檔」資料相關的關鍵量度。
+
+若要進一步瞭解，請造訪「設定檔 [儀表板」指南](profile-dashboard.md)。
 
 ## 瀏覽
 
