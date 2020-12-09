@@ -5,9 +5,9 @@ title: 資料科學工作區概觀
 topic: overview
 description: 本指南概述與Data Science Workspace相關的主要概念。
 translation-type: tm+mt
-source-git-commit: 581d11bdb934f46c53a6703829b4dc470076e195
+source-git-commit: 8b1be4e94c147124fd26f4b877ca807177c9f5ff
 workflow-type: tm+mt
-source-wordcount: '2578'
+source-wordcount: '2371'
 ht-degree: 0%
 
 ---
@@ -120,35 +120,12 @@ Adobe [!DNL Data Science Workspace]Experience Platform可讓您將以體驗為�
 
 資料科學家可在新技術和資料集一經透過Adobe服務推出，就能立即加以運用。 透過頻繁的更新，我們將資料集和技術整合到平台中，因此您不必再擔心。
 
-### 存取控制 [!DNL Data Science Workspace]
-
-存取控制 [!DNL Experience Platform] 權是透過 [Adobe Admin Console管理](https://adminconsole.adobe.com)。 此功能運用Admin Console中的產品設定檔，可連結使用者與權限和沙盒。 如需詳細 [資訊，請參閱存取控制概觀](../access-control/home.md) 。
-
->[!IMPORTANT]
->
->若要使用， [!DNL Data Science Workspace]必須啟 [!UICONTROL 用「管理資料科學工作區] 」權限。
-
-下表概述啟用或停用此權限的效果：
-
-| 權限 | 啟用 | 停用 |
-|---|---|---|
-| [!DNL Manage Data Science Workspace] | 提供對中所有服務的訪問 [!DNL Data Science Workspace]。 | API和UI存取內的所有服務 [!DNL Data Science Workspace] 皆停用。 禁用後，將阻止路 [!DNL Data Science Workspace] 由到 **[!UICONTROL 「型號]** 」和「 **[!UICONTROL 服務]** 」頁。 |
-
 ### 安全與心安
 
 保護您的資料是Adobe的首要任務。 Adobe運用開發的安全程式和控制功能來保護您的資料，以協助符合業界公認的標準、法規和認證。
 
 安全性內建在軟體和服務中，是Adobe安全產品生命週期的一部分。
 若要瞭解Adobe資料和軟體安全性、合規性等，請造訪安全性網頁：https://www.adobe.com/security.html。
-
-### 沙盒支援
-
-沙盒是單個實例中的虛擬分區 [!DNL Experience Platform]。 每個 [!DNL Platform] 執行個體都支援一個生產沙盒和多個非生產沙盒，每個執行個體都維持其專屬的資源 [!DNL Platform] 庫。 非生產沙盒可讓您測試功能、執行實驗並建立自訂組態，而不會影響生產沙盒。 如需沙盒的詳細資訊，請參閱 [沙盒總覽](../sandboxes/home.md)。
-
-目前， [!DNL Data Science Workspace] 有幾項沙盒限制：
-
-- 計算資源會在生產沙盒和非生產沙盒間共用。 生產沙盒的隔離設定將於未來提供。
-- 目前[!DNL Spark] ，生產沙盒中僅支援適用於筆記型電腦和配方的Scala/和PySpark工作負載。 未來將提供非生產沙盒的支援。
 
 ## [!DNL Data Science Workspace] 實際運作
 
