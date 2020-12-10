@@ -5,7 +5,7 @@ user-guide-title: Adobe Experience Platform 資料擷取說明
 breadcrumb-title: Data Ingestion 指南
 user-guide-description: 透過批次或串流擷取，將您的資料匯入 Platform。
 translation-type: tm+mt
-source-git-commit: da0c65b5afc19e2497816c4b84270f5f5c4617f2
+source-git-commit: cfdaf72b7f4bf190877006ccd4cc6a7fd014adc2
 workflow-type: tm+mt
 source-wordcount: '124'
 ht-degree: 21%
@@ -36,7 +36,7 @@ ht-degree: 21%
    - [串流多個訊息](tutorials/streaming-multiple-messages.md)
 - 資料擷取品質與監控{#quality}
    - [概述](quality/overview.md)
-   - [監視資料流](quality/monitor-data-flows.md)
+   - [監控資料擷取](quality/monitor-data-ingestion.md)
    - [檢索錯誤診斷](quality/error-diagnostics.md)
    - [檢索失敗的批](quality/retrieve-failed-batches.md)
    - [串流擷取驗證](quality/streaming-validation.md)
