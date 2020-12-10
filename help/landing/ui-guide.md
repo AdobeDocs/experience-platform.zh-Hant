@@ -5,7 +5,7 @@ title: Adobe Experience Platform UI指南
 topic: ui guide
 description: 'Adobe Experience Platform '
 translation-type: tm+mt
-source-git-commit: 761a212abc407fac5bc59c6f5a57c6c17c932230
+source-git-commit: 3fc24b996d2c8bdf062e70a1c5e8d8206641cd06
 workflow-type: tm+mt
 source-wordcount: '1726'
 ht-degree: 1%
@@ -149,7 +149,7 @@ Notebooks **[!UICONTROL 部分]** (Notebooks)提供對JupyterLab的訪問，Jupy
 
 「查 **[!UICONTROL 詢]** 」區段可讓您建立和管理查詢、記錄Adobe Experience Platform Query Service所做的SQL查詢，以及檢視您的PostgreSQL認證。 有關查詢的詳細資訊，請參閱查 [詢服務使用手冊](../query-service/ui/overview.md)。
 
-「監 **[!UICONTROL 控]** 」區段可讓您監控批次和串流擷取。 有關監視的詳細資訊，請參閱監 [視資料提取使用手冊](../ingestion/quality/monitor-data-flows.md)。
+「監 **[!UICONTROL 控]** 」區段可讓您監控批次和串流擷取。 有關監視的詳細資訊，請參閱監 [視資料提取使用手冊](../ingestion/quality/monitor-data-ingestion.md)。
 
 ### [!UICONTROL 決策]
 
