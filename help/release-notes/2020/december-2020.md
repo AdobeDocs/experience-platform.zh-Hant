@@ -5,10 +5,10 @@ doc-type: release notes
 last-update: December 9, 2020
 author: ens60013 & ens72471
 translation-type: tm+mt
-source-git-commit: 908b9e6e8b548dea8e39f9f9a5de396d4c9520f4
+source-git-commit: ae353e6dda3f92647c32ee8e731be5785d24e5cb
 workflow-type: tm+mt
-source-wordcount: '343'
-ht-degree: 7%
+source-wordcount: '426'
+ht-degree: 6%
 
 ---
 
@@ -17,19 +17,35 @@ ht-degree: 7%
 
 **發行日期：2020年12月9日**
 
+Adobe Experience Platform的新功能：
+
+- [[!DNL Dataflows]](#dataflows)
+
 Adobe Experience Platform 現有功能更新：
 
 - [[!DNL Data Science Workspace]](#dsw)
 - [[!DNL Sources]](#sources)
 
+## [!DNL Dataflows] {#dataflows}
+
+資料流是跨平台移動資料的資料作業的表示。 這些資料流是跨不同服務配置的，有助於將資料從源連接器移動到目標資料集、到身份和配置檔案服務以及到目標。
+
+**主要功能**
+
+| 功能 | 說明 |
+| ------- | ----------- |
+| 資料流的透明性 | 您可以監視源和目標的資料流。 如需詳細資訊，請閱讀監 [控來源的教學課程](../../dataflows/ui/monitor-sources.md) ，或 [監控目標的教學課程](../../dataflows/ui/monitor-destinations.md)。 |
+
+要瞭解有關資料流的更多資訊，請閱讀 [資料流概述](../../dataflows/home.md)。
+
 ## [!DNL Data Science Workspace] {#dsw}
 
 Data Science Workspace使用機器學習和人工智慧，從您的資料中建立見解。 Data Science Workspace整合至Adobe Experience Platform，可協助您透過Adobe解決方案使用內容和資料資產進行預測。
 
-### 主要功能
+**主要功能**
 
 | 功能 | 說明 |
-|--- | ---|
+| --- | ---|
 | Adobe Experience Platform Intelligence套件addon | Adobe Experience Platform Intelligence套件addon是Data Science Workspace升級版，可解除鎖定其他主要功能，例如： <li> UI驅動的模型實驗與評估。</li><li> 能夠部署模型並將模型與排定的培訓和推薦工作一起運作。</li><li> 支援Tensorflow模型(GPU Compute)的深入學習。</li><li> 基於Spark的分佈式計算，可針對大型資料集（10MM +列）進行訓練和評分。</li><li>還有更多</li> |
 
 若要進一步瞭解Adobe Experience Platform Intelligence套件說明，請參閱資料科學工作區存 [取與功能的相關檔案](../../data-science-workspace/access-features-dsw.md)。
