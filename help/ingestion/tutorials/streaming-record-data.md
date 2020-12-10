@@ -6,7 +6,7 @@ topic: tutorial
 type: Tutorial
 description: 本教學課程將協助您開始使用串流擷取API，這是Adobe Experience Platform Data Ingestion Service API的一部分。
 translation-type: tm+mt
-source-git-commit: e94272bf9a18595a4efd0742103569a26e4be415
+source-git-commit: cfdaf72b7f4bf190877006ccd4cc6a7fd014adc2
 workflow-type: tm+mt
 source-wordcount: '1142'
 ht-degree: 2%
@@ -453,7 +453,7 @@ curl -X GET 'https://platform.adobe.io/data/core/ups/access/entities?schema.name
 
 ## 後續步驟
 
-閱讀本檔案，您現在就瞭解如何使用串流連線將記錄資 [!DNL Platform] 料內嵌入。 您可以嘗試使用不同值進行更多呼叫並擷取更新的值。 此外，您還可以透過 [!DNL Platform] UI開始監控所擷取的資料。 如需詳細資訊，請閱讀監控資 [料擷取指南](../quality/monitor-data-flows.md) 。
+閱讀本檔案，您現在就瞭解如何使用串流連線將記錄資 [!DNL Platform] 料內嵌入。 您可以嘗試使用不同值進行更多呼叫並擷取更新的值。 此外，您還可以透過 [!DNL Platform] UI開始監控所擷取的資料。 如需詳細資訊，請閱讀監控資 [料擷取指南](../quality/monitor-data-ingestion.md) 。
 
 如需串流擷取的詳細資訊，請閱讀串流擷取 [概觀](../streaming-ingestion/overview.md)。
 
