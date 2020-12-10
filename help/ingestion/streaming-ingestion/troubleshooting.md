@@ -5,7 +5,7 @@ title: 串流擷取疑難排解
 topic: troubleshooting
 description: 本檔案針對Adobe Experience Platform上串流擷取的常見問題提供解答。
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: cfdaf72b7f4bf190877006ccd4cc6a7fd014adc2
 workflow-type: tm+mt
 source-wordcount: '1008'
 ht-degree: 0%
@@ -37,7 +37,7 @@ Adobe Experience Platform提 [!DNL Data Ingestion] 供REST風格的API，您可�
 
 ### 我是否可先驗證請求裝載，再將它傳送至 [!DNL Platform]?
 
-請求負載只能在傳送至之後評估 [!DNL Platform]。 執行同步驗證時，有效負載會傳回已填入的JSON物件，而無效負載則會傳回錯誤訊息。 在非同步驗證期間，服務會偵測並傳送任何格式錯誤的資 [!DNL Data Lake] 料至稍後可擷取的資料以供分析。 如需詳細 [資訊，請參閱串流驗證](../quality/streaming-validation.md) 概觀。
+請求負載只能在傳送至之後評估 [!DNL Platform]。 執行同步驗證時，有效負載會傳回已填入的JSON物件，而無效負載則會傳回錯誤訊息。 在非同步驗證期間，服務會偵測並傳送任何格式錯誤的資 [!DNL Data Lake] 料至稍後可擷取的資料以供分析。 See the [streaming validation overview](../quality/streaming-validation.md) for more information.
 
 ### 當在不支援同步驗證的邊緣上要求同步驗證時，會發生什麼情況？
 
@@ -59,7 +59,7 @@ Adobe Experience Platform提 [!DNL Data Ingestion] 供REST風格的API，您可�
 
 所有傳送至(成功或以其他方 [!DNL Platform] 式)的資料都會先儲存為批次檔案，再保存在資料集中。 批次的處理狀態會顯示在傳送至的資料集中。
 
-您可以使用 [Experience Platform使用者介面檢查資料集活動，以確認資料是否已成功](https://platform.adobe.com)擷取。 按一 **[!UICONTROL 下左側導覽]** 中的「資料集」，以顯示資料集清單。 從顯示的清單中選擇要流式處理的資料集，以開啟其「 **[!UICONTROL Dataset]** 」活動頁，顯示在選定時段內發送的所有批。 如需使用監控資料 [!DNL Experience Platform] 串流的詳細資訊，請參閱監 [控串流資料流指南](../quality/monitor-data-flows.md)。
+您可以使用 [Experience Platform使用者介面檢查資料集活動，以確認資料是否已成功](https://platform.adobe.com)擷取。 按一 **[!UICONTROL 下左側導覽]** 中的「資料集」，以顯示資料集清單。 從顯示的清單中選擇要流式處理的資料集，以開啟其「 **[!UICONTROL Dataset]** 」活動頁，顯示在選定時段內發送的所有批。 如需使用監控資料 [!DNL Experience Platform] 串流的詳細資訊，請參閱監 [控串流資料流指南](../quality/monitor-data-ingestion.md)。
 
 如果您的資料未能收錄，而您希望從中恢復 [!DNL Platform]，則可以通過將失敗的批次的ID發送到 [!DNL Data Access API]。 有關詳細資訊，請 [參閱檢索失敗批](../quality/retrieve-failed-batches.md) 的指南。
 
