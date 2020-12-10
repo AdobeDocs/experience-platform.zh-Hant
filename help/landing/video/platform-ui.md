@@ -9,9 +9,9 @@ doc-type: video
 activity: understand
 thumbnail: 32792.jpg
 translation-type: tm+mt
-source-git-commit: 86d6476877eb7a0413658e476802a1cd8905dcc3
+source-git-commit: 72f60ef80a23f5ca4e70147ee6aa6027028fefd0
 workflow-type: tm+mt
-source-wordcount: '105'
+source-wordcount: '118'
 ht-degree: 0%
 
 ---
@@ -23,7 +23,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Experience Platform使用者介面經常更新，自錄制此視訊後可能已變更。
+>Experience Platform使用者介面經常更新，自錄制此視訊後可能已變更。 如需最新資訊，請造訪 [Adobe Experience Platform UI指南](../ui-guide.md)。
 
 
 >[!VIDEO](https://video.tv.adobe.com/v/32792?quality=12&learn=on)
