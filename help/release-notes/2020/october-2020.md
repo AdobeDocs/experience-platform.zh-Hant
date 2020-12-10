@@ -5,7 +5,7 @@ doc-type: release notes
 last-update: October, 2020
 author: crhoades, ens28527
 translation-type: tm+mt
-source-git-commit: 5ff73aa1745e78f0026ada2c66908888be5f4498
+source-git-commit: 5e5ac80e0c79b3cc0354b469edc036523e29b45d
 workflow-type: tm+mt
 source-wordcount: '1009'
 ht-degree: 4%
@@ -71,7 +71,7 @@ Adobe Experience Platform可以從外部來源擷取資料，同時讓您使用�
 
 | 功能 | 說明 |
 | ------- | ----------- |
-| SFTP的SSH驗證支援 | 您可以使用RSA/DSA Open SSH密鑰將SFTP [!DNL Platform] 帳戶連接到。 See the [SFTP overview](../../sources/connectors/cloud-storage/ftp-sftp.md) for more information. |
+| SFTP的SSH驗證支援 | 您可以使用RSA/DSA Open SSH密鑰將SFTP [!DNL Platform] 帳戶連接到。 See the [SFTP overview](../../sources/connectors/cloud-storage/sftp.md) for more information. |
 | UX改進 | 您可以在資料擷取程式 [!DNL Profile] 期間啟用資料集。 如需詳細 [資訊，請參閱雲端儲存資料流工作流程](../../sources/tutorials/ui/dataflow/batch/cloud-storage.md) 教學課程。 |
 
 若要進一步瞭解來源，請參閱 [來源概觀](../../sources/home.md)。
