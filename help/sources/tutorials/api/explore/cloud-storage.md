@@ -5,9 +5,9 @@ title: 使用Flow Service API探索雲端儲存系統
 topic: overview
 description: 本教學課程使用Flow Service API來探索協力廠商雲端儲存系統。
 translation-type: tm+mt
-source-git-commit: 026007e5f80217f66795b2b53001b6cf5e6d2344
+source-git-commit: 3d104cdf7c97022fe60feafd3587056d378b56bd
 workflow-type: tm+mt
-source-wordcount: '745'
+source-wordcount: '746'
 ht-degree: 2%
 
 ---
@@ -34,6 +34,7 @@ ht-degree: 2%
 * [Azure Blob](../create/cloud-storage/blob.md)
 * [Azure Data Lake Storage Gen2](../create/cloud-storage/adls-gen2.md)
 * [Azure檔案儲存](../create/cloud-storage/azure-file-storage.md)
+* [FTP](../create/cloud-storage/ftp.md)
 * [Google雲端商店](../create/cloud-storage/google.md)
 * [HDFS](../create/cloud-storage/hdfs.md)
 * [SFTP](../create/cloud-storage/sftp.md)
