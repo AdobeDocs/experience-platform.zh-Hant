@@ -5,9 +5,9 @@ seo-title: Google廣告目的地
 description: Google Ads（先前稱為Google AdWords）是線上廣告服務，可讓企業透過文字搜尋、圖形顯示、YouTube視訊和應用程式內行動顯示，按點擊付費廣告。
 seo-description: Google Ads（先前稱為Google AdWords）是線上廣告服務，可讓企業透過文字搜尋、圖形顯示、YouTube視訊和應用程式內行動顯示，按點擊付費廣告。
 translation-type: tm+mt
-source-git-commit: c24676970629f5a39297001357f8af40895533d9
+source-git-commit: 7129a375b1bf4623f78989ed75fcd2bb5dad4a02
 workflow-type: tm+mt
-source-wordcount: '646'
+source-wordcount: '663'
 ht-degree: 0%
 
 ---
@@ -35,11 +35,13 @@ ht-degree: 0%
 
 **區段匯出** -您正將區段（對象）的所有成員匯出至Google目標。
 
-## 必要條件
+## 先決條件
 
 ### 現有帳 [!DNL Google Ads] 戶
 
-[!DNL Google] 已暫停與協力 [!DNL Google Ads] 廠商的任何新整合。 您必須與現有整合， [!DNL Google Ads] 才能執行下一節中的允許清單步驟，並在即時CDP中 [!DNL Google Ads] 建立目標。
+>[!IMPORTANT]
+>
+> [!DNL Google] 已過時與 [!DNL Google Ads] 協力廠商整合的新Cookie。 為了在下一節中執行允許清單步驟，您必須與現有整合 [!DNL Google Ads]。 因此，建議使用的方法 [!DNL Google Ads] 是設定整 [!DNL Google Customer Match] 合。 如需建立整合的詳細 [!DNL Google Customer Match] 資訊，請閱讀建立連線的教 [[!DNL Google Customer Match]](./google-customer-match.md) 學課程。
 
 ### 允許清單
 
