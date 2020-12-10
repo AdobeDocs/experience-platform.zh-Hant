@@ -5,9 +5,9 @@ title: Adobe Experience Platform UI指南
 topic: ui guide
 description: 'Adobe Experience Platform '
 translation-type: tm+mt
-source-git-commit: 3fc24b996d2c8bdf062e70a1c5e8d8206641cd06
+source-git-commit: 852792c1288cf7b4815fb0afb742046d7a595da2
 workflow-type: tm+mt
-source-wordcount: '1726'
+source-wordcount: '1737'
 ht-degree: 1%
 
 ---
@@ -17,15 +17,15 @@ ht-degree: 1%
 
 本指南是使用Adobe Experience Platform使用者介面(UI)的簡介，說明各種元件的用途，並提供進一步說明檔案的連結，以取得詳細資訊。
 
-若要進一步瞭解Adobe Experience Platform，請閱讀「 [Experience Platform」總覽](./home.md)。
+若要進一步瞭解Adobe Experience Platform，請閱讀「 [Experience Platform」總覽](home.md)。
 
 ## 首頁畫面
 
-登入Adobe Experience Platform後，您將進入首頁，首頁包含量度儀表板、最近的資料和建議的學習區段。 
+登入Adobe Experience Platform後，您就會進入「首頁」  ，該頁面包含 [度量儀表板](#metrics)、最 [新資料](#recent-data)，以 [](#recommended-learning) 及建議的學習節。
 
 ![](images/user-guide/homepage.png)
 
-### 量度控制面板
+### 量度
 
 量度控制面板提供卡片，可提供您組織內資料集、設定檔、區段和目的地的相關資訊。
 
@@ -63,13 +63,13 @@ ht-degree: 1%
 
 平台UI中的頂端導覽列會顯示您目前登入的IMS組織，並提供數個重要的控制項。
 
-導覽列的左側是Adobe Experience Platform標誌。 選取此選項會將您帶回「平台UI」首頁畫面。
+導覽列的左側是Adobe Experience Platform標誌。 您隨時選取此選項，將會回到Platform UI首頁畫面。
 
 ![](./images/user-guide/homepage-top-nav-bar.png)
 
 ### IMS組織切換器
 
-導覽列右側的第一個項目是 **IMS組織切換器**。
+頂端導覽列右側的第一個項目是 **IMS組織切換器**。
 
 ![](./images/user-guide/homepage-ims-org.png)
 
@@ -79,7 +79,7 @@ ht-degree: 1%
 
 ### 交換機應用程式
 
-右邊的下一個項目是應用程式 **切換器**，由應用程式 ![切換器圖示表示](./images/user-guide/app-switcher-icon.png) 。 當您選取此圖示時，可以在Experience Platform、Assets、Exchange和Launch之間切換。
+頂端導覽右側的下一個項目是應用程式 **切換器**，由應用程 ![式切換器圖示](./images/user-guide/app-switcher-icon.png) 。 當您選取此圖示時，可以在IMS組織可存取的Adobe應用程式之間切換，例如Experience Platform、Analytics、Assets和Launch。
 
 ### 說明
 
@@ -89,7 +89,7 @@ ht-degree: 1%
 
 ### 通知與公告
 
-在說明與支援功能表後， **會顯示通知區**，此區 ![段由鐘聲／通知與公告圖示表示](images/user-guide/notification-icon.png) 。 「通 **[!UICONTROL 知]** 」標籤顯示有關產品和其他相關更新的重要資訊，而「公告」標籤則 **** 顯示有關服務維護的通知。
+在通 **知區段**，此區段由鐘聲／通 ![知和公告圖示表示](images/user-guide/notification-icon.png) 。 「通 **[!UICONTROL 知]** 」標籤顯示有關產品和其他相關更新的重要資訊，而「公告」標籤則 **** 顯示有關服務維護的資訊。
 
 ### 使用者設定檔
 
