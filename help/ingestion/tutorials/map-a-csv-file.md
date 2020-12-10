@@ -6,9 +6,9 @@ topic: tutorial
 type: Tutorial
 description: 本教學課程涵蓋如何使用Adobe Experience Platform使用者介面，將CSV檔案對應至XDM架構。
 translation-type: tm+mt
-source-git-commit: d69d0dd8c5a3d3a5e92cc88e390c079ed46aba32
+source-git-commit: c19360450d7b1f11063683b796774a04f3dbe16c
 workflow-type: tm+mt
-source-wordcount: '860'
+source-wordcount: '861'
 ht-degree: 1%
 
 ---
@@ -113,9 +113,9 @@ ht-degree: 1%
 
 ![](../images/tutorials/map-a-csv-file/new-calculated-field.png)
 
-## 監控資料流
+## 監控資料擷取
 
-一旦映射並建立CSV檔案後，您就可以監控透過它擷取的資料。 有關監視資料流的詳細資訊，請參見有關監視流資料流 [的教程](../../ingestion/quality/monitor-data-flows.md)。
+一旦映射並建立CSV檔案後，您就可以監控透過它擷取的資料。 如需監控資料擷取的詳細資訊，請參閱監控資料擷取 [的教學課程](../../ingestion/quality/monitor-data-ingestion.md)。
 
 ## 後續步驟
 
