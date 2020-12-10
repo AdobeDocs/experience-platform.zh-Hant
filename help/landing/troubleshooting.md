@@ -7,10 +7,10 @@ landing-page-description: Find answers to frequently asked questions and a guide
 topic: getting started
 type: Documentation
 translation-type: tm+mt
-source-git-commit: 4a65d5e31eda3973d3e8e0d8e066692c667934e1
+source-git-commit: 72f60ef80a23f5ca4e70147ee6aa6027028fefd0
 workflow-type: tm+mt
-source-wordcount: '1940'
-ht-degree: 3%
+source-wordcount: '1954'
+ht-degree: 2%
 
 ---
 
@@ -25,7 +25,7 @@ ht-degree: 3%
 
 ## 什麼是 [!DNL Experience Platform] API? {#what-are-experience-platform-apis}
 
-[!DNL Experience Platform] 提供多個使用HTTP請求來存取資源的REST風格 [!DNL Platform] API。 這些服務API每個都會顯示多個端點，並允許您執行列出(GET)、查閱(GET)、編輯（PUT和／或修補）和刪除(DELETE)資源的操作。 如需每項服務可用之特定端點和作業的詳細資訊，請參閱Adobe I/O的 [API參考檔案](https://www.adobe.io/apis/experienceplatform/home/api-reference.html) 。
+[!DNL Experience Platform] 提供多個使用HTTP請求來存取資源的REST風格 [!DNL Platform] API。 這些服務API每個都會顯示多個端點，並允許您執行列出(GET)、查閱(GET)、編輯（PUT和／或修補）和刪除(DELETE)資源的操作。 如需每項服務可用之特定端點和作業的詳細資訊，請參閱Adobe I/O的 [API參考檔案](http://www.adobe.com/go/platform-api-reference-en) 。
 
 ## 如何設定API要求的格式？ {#how-do-i-format-an-api-request}
 
@@ -87,19 +87,19 @@ curl -X GET \
 }
 ```
 
-如需平台API中特定端點的詳細資訊，包括必要的標題和要求主體，請參閱 [API參考檔案](https://www.adobe.io/apis/experienceplatform/home/api-reference.html)。
+如需平台API中特定端點的詳細資訊，包括必要的標題和要求主體，請參閱 [API參考檔案](http://www.adobe.com/go/platform-api-reference-en)。
 
 ## 我的IMS組織是什麼？ {#what-is-my-ims-organization}
 
-IMS組織是客戶的Adobe代表。 任何授權的Adobe解決方案皆與此客戶組織整合。 當IMS組織有權存取時，它 [!DNL Experience Platform]可指派存取權給開發人員。 IMS組織ID(`x-gw-ims-org-id`)代表應執行API呼叫的組織，因此是所有API請求中的標題。 此ID可透過 [Adobe Developer Console找到](https://www.adobe.com/go/devs_console_ui):在「整 **合** 」標籤中，導覽至任何特定整合的「概述」區段，以在「用戶端認證」下尋找 **ID******。 如需如何驗證的逐步逐步說明，請參 [!DNL Platform]閱驗證教 [學課程](../tutorials/authentication.md)。
+IMS組織是客戶的Adobe代表。 任何授權的Adobe解決方案皆與此客戶組織整合。 當IMS組織有權存取時，它 [!DNL Experience Platform]可指派存取權給開發人員。 IMS組織ID(`x-gw-ims-org-id`)代表應執行API呼叫的組織，因此是所有API請求中的標題。 此ID可透過 [Adobe Developer Console找到](https://www.adobe.com/go/devs_console_ui):在「整 **合** 」標籤中，導覽至任何特定整合的「概述」區段，以在「用戶端認證」下尋找 **ID******。 如需如何驗證的逐步逐步說明，請參 [!DNL Platform]閱驗證教 [學課程](http://www.adobe.com/go/platform-api-authentication-en)。
 
 ## 我可以在哪裡找到API金鑰？ {#where-can-i-find-my-api-key}
 
-所有API請求中都需要API金鑰作為標題。 您可從 [Adobe Developer Console找到它](https://www.adobe.com/go/devs_console_ui)。 在主控台的「整合 **」索引標籤上，導覽至特定整合的「概述** 」區段，然後在「用戶端認證」下方找到 **金鑰******。 如需如何驗證的逐步逐步說明，請參 [!DNL Platform]閱驗證 [教學課程](../tutorials/authentication.md)。
+所有API請求中都需要API金鑰作為標題。 您可從 [Adobe Developer Console找到它](https://www.adobe.com/go/devs_console_ui)。 在主控台的「整合 **」索引標籤上，導覽至特定整合的「概述** 」區段，然後在「用戶端認證」下方找到 **金鑰******。 如需如何驗證的逐步逐步說明，請參 [!DNL Platform]閱驗證 [教學課程](http://www.adobe.com/go/platform-api-authentication-en)。
 
 ## 我要如何取得存取Token? {#how-do-i-get-an-access-token}
 
-所有API呼叫的「授權」標題中都需要存取Token。 只要您擁有IMS組織 `curl` 整合的存取權，就可以使用命令產生。 存取Token僅有24小時有效，之後必須產生新Token才能繼續使用API。 如需有關產生存取Token的詳細資訊，請參閱驗 [證教學課程](../tutorials/authentication.md)。
+所有API呼叫的「授權」標題中都需要存取Token。 只要您擁有IMS組織 `curl` 整合的存取權，就可以使用命令產生。 存取Token僅有24小時有效，之後必須產生新Token才能繼續使用API。 如需有關產生存取Token的詳細資訊，請參閱驗 [證教學課程](http://www.adobe.com/go/platform-api-authentication-en)。
 
 ## 如何使用查詢參數？ {#how-do-i-user-query-parameters}
 
@@ -153,7 +153,7 @@ API中的許多PATCH [!DNL Platform] 作業都使 [](https://tools.ietf.org/html
 
 ## 請求標題錯誤 {#request-header-errors}
 
-中的所有API呼叫都 [!DNL Platform] 需要特定的請求標題。 若要查看個別服務需要哪些標題，請參閱 [API參考檔案](https://www.adobe.io/apis/experienceplatform/home/api-reference.html)。 若要尋找所需驗證標題的值，請參閱驗 [證教學課程](../tutorials/authentication.md)。 如果在進行API呼叫時這些標題中有任何遺失或無效，可能會發生下列錯誤。
+中的所有API呼叫都 [!DNL Platform] 需要特定的請求標題。 若要查看個別服務需要哪些標題，請參閱 [API參考檔案](http://www.adobe.com/go/platform-api-reference-en)。 若要尋找所需驗證標題的值，請參閱驗 [證教學課程](http://www.adobe.com/go/platform-api-authentication-en)。 如果在進行API呼叫時這些標題中有任何遺失或無效，可能會發生下列錯誤。
 
 ### 遺失OAuth代號 {#oauth-token-is-missing}
 
@@ -175,7 +175,7 @@ API中的許多PATCH [!DNL Platform] 作業都使 [](https://tools.ietf.org/html
 }
 ```
 
-當標題中提供的存取Token無效時，會 `Authorization` 顯示此錯誤訊息。 請確定Token已正確輸入，或 [在Adobe I/O Console中產生](../tutorials/authentication.md) 新Token。
+當標題中提供的存取Token無效時，會 `Authorization` 顯示此錯誤訊息。 請確定Token已正確輸入，或 [在Adobe I/O Console中產生](http://www.adobe.com/go/platform-api-authentication-en) 新Token。
 
 ### 需要API金鑰
 
