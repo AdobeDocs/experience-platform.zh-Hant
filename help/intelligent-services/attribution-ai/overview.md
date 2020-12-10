@@ -4,8 +4,9 @@ solution: Experience Platform
 title: Attribution AI 概述
 topic: Attribution AI
 description: Attribution AI 可將點數歸因到導致轉換事件的接觸點。行銷人員可善用此工具，協助量化客戶歷程中各個獨立行銷接觸點對行銷的影響。舉凡廣告曝光、電子郵件傳送、電子郵件開啟和付費搜尋點擊，都是接觸點的範例。
+landing-page-description: Attribution AI is used to attribute credits to touchpoints leading to conversion events. This can be used by marketers to help quantify the marketing impact of each individual marketing touchpoint across customer journeys.
 translation-type: tm+mt
-source-git-commit: c30bbaead775e68f869b080e24e18d4a23cda973
+source-git-commit: d4a205b2e5fe4ca1f8d419eec3e7636e2ed0e5ef
 workflow-type: tm+mt
 source-wordcount: '455'
 ht-degree: 29%
