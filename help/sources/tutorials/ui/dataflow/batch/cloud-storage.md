@@ -6,9 +6,9 @@ topic: overview
 type: Tutorial
 description: 資料流是從源中檢索資料並將資料帶入平台資料集的計畫任務。 本教學課程提供使用雲端儲存帳戶設定新資料流的步驟。
 translation-type: tm+mt
-source-git-commit: f86f7483e7e78edf106ddd34dc825389dadae26a
+source-git-commit: 7f24413a99b57e28ca2106214b7eedb5b068b045
 workflow-type: tm+mt
-source-wordcount: '1789'
+source-wordcount: '1808'
 ht-degree: 0%
 
 ---
@@ -143,11 +143,11 @@ ht-degree: 0%
 
 ### 設定一次性提取資料流
 
-若要設定一次性擷取，請選取頻率下拉箭頭，然後選取「 **[!UICONTROL Once]**」。 只要開始時間未來，您就可以繼續編輯資料流集以進行一次頻率接收。 一旦開始時間過去，就無法再編輯一次頻率值。
+若要設定一次性擷取，請選取頻率下拉箭頭，然後選取「 **[!UICONTROL Once]**」。 只要開始時間未來，您就可以繼續編輯資料流集以進行一次頻率接收。 一旦開始時間過去，就無法再編輯一次頻率值。 **[!UICONTROL 設定一]** 次性擷取資料流時 **** ，不會顯示間隔和回填。
 
->[!TIP]
+>[!IMPORTANT]
 >
->**[!UICONTROL 在單]** 次擷取期間 **** ，不會顯示間隔和回填。
+>強烈建議在使用 [FTP連接器時，排程您的資料流一次性擷取](../../../../connectors/cloud-storage/ftp.md)。
 
 在為計畫提供適當值後，選擇「下 **[!UICONTROL 一步」]**。
 
