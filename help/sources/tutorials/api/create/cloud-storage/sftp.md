@@ -6,9 +6,9 @@ topic: overview
 type: Tutorial
 description: 本教學課程使用Flow Service API來引導您完成將Experience Platform連接至SFTP（安全檔案傳輸通訊協定）伺服器的步驟。
 translation-type: tm+mt
-source-git-commit: 71653681a0f4b31319bd352202bf55fb3947a455
+source-git-commit: 7b638f0516804e6a2dbae3982d6284a958230f42
 workflow-type: tm+mt
-source-wordcount: '793'
+source-wordcount: '749'
 ht-degree: 2%
 
 ---
@@ -20,18 +20,14 @@ ht-degree: 2%
 >
 >SFTP連接器為測試版。 功能和檔案可能會有所變更。 如需使用 [測試版標籤連接器的詳細資訊](../../../../home.md#terms-and-conditions) ，請參閱來源概觀。
 
-[!DNL Flow Service] 用於收集和集中Adobe Experience Platform內不同來源的客戶資料。 該服務提供用戶介面和REST風格的API，所有支援的源都可從中連接。
-
-本教學課程使 [!DNL Flow Service] 用API來引導您完成連線至SFTP(安全檔案傳 [!DNL Experience Platform] 輸通訊協定)伺服器的步驟。
-
-如果您想要使用中的使用者介面 [!DNL Experience Platform], [](../../../ui/create/cloud-storage/ftp-sftp.md) UI教學課程會提供執行類似動作的逐步指示。
+本教學課程使 [!DNL Flow Service] 用API來引導您完成將Experience Platform連接至SFTP（安全檔案傳輸通訊協定）伺服器的步驟。
 
 ## 快速入門
 
 本指南需要有效瞭解Adobe Experience Platform的下列元件：
 
-* [來源](../../../../home.md): [!DNL Experience Platform] 允許從各種來源接收資料，同時提供使用服務構建、標籤和增強傳入資料的 [!DNL Platform] 能力。
-* [沙盒](../../../../../sandboxes/home.md): [!DNL Experience Platform] 提供虛擬沙盒，可將單一執行個體分 [!DNL Platform] 割為不同的虛擬環境，以協助開發和發展數位體驗應用程式。
+* [來源](../../../../home.md):Experience Platform可讓您從各種來源擷取資料，同時讓您能夠使用平台服務來建構、標示和增強傳入資料。
+* [沙盒](../../../../../sandboxes/home.md):Experience Platform提供虛擬沙盒，可將單一Platform實例分割為不同的虛擬環境，以協助開發和發展數位體驗應用程式。
 
 以下各節提供您需要知道的其他資訊，以便使用 [!DNL Flow Service] API成功連線至SFTP伺服器。
 
