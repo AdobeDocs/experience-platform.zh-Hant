@@ -6,7 +6,7 @@ topic: overview
 type: Tutorial
 description: 資料流是從源中檢索資料並將資料帶入平台資料集的計畫任務。 本教學課程提供使用雲端儲存空間連接器來設定新資料流的步驟。
 translation-type: tm+mt
-source-git-commit: f86f7483e7e78edf106ddd34dc825389dadae26a
+source-git-commit: cfdaf72b7f4bf190877006ccd4cc6a7fd014adc2
 workflow-type: tm+mt
 source-wordcount: '695'
 ht-degree: 0%
@@ -78,7 +78,7 @@ ht-degree: 0%
 
 ## 監視和刪除資料流
 
-建立雲儲存資料流後，您可以監視通過其獲取的資料。 有關監視和刪除資料流的詳細資訊，請參見有關監視資料 [流的教程](../../../../../ingestion/quality/monitor-data-flows.md)。
+建立雲儲存資料流後，您可以監視通過其獲取的資料。 有關監視和刪除資料流的詳細資訊，請參見有關監視資料 [流的教程](../../../../../ingestion/quality/monitor-data-ingestion.md)。
 
 ## 後續步驟
 
