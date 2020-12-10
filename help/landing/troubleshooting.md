@@ -3,14 +3,14 @@ keywords: Experience Platform;home;popular topics;API error codes;API error code
 solution: Experience Platform
 title: Adobe Experience Platform常見問答集與疑難排解指南
 description: 尋找常見問題的解答，以及針對 Experience Platform 中的常見錯誤進行疑難排解的指南。
+landing-page-description: Find answers to frequently asked questions and a guide for troubleshooting common errors in Experience Platform.
 topic: getting started
 type: Documentation
-user-guide-description: 尋找常見問題的解答，以及針對 Experience Platform 中的常見錯誤進行疑難排解的指南。
 translation-type: tm+mt
-source-git-commit: bc7c0a5d59c666ba80fac81a859b5ecf4dd37412
+source-git-commit: 4a65d5e31eda3973d3e8e0d8e066692c667934e1
 workflow-type: tm+mt
-source-wordcount: '1956'
-ht-degree: 4%
+source-wordcount: '1940'
+ht-degree: 3%
 
 ---
 
