@@ -5,9 +5,9 @@ title: Adobe Experience Platform來源連接器概觀
 topic: overview
 description: Adobe Experience Platform可讓您從外部來源擷取資料，同時提供您使用平台服務來建構、標示及增強傳入資料的能力。 您可以從多種來源（例如Adobe應用程式、雲端儲存空間、資料庫等）擷取資料。
 translation-type: tm+mt
-source-git-commit: d26eaf699a67a1bc7111f5f97da277368fcc4629
+source-git-commit: 5e5ac80e0c79b3cc0354b469edc036523e29b45d
 workflow-type: tm+mt
-source-wordcount: '886'
+source-wordcount: '887'
 ht-degree: 0%
 
 ---
@@ -33,7 +33,7 @@ Adobe Experience Platform可讓您從外部來源擷取資料，同時提供您�
 - [在UI中建立Adobe Audience Manager來源連接器](./tutorials/ui/create/adobe-applications/audience-manager.md)
 - [Adobe Analytics分類資料連接器概觀](connectors/adobe-applications/classifications.md)
 - [在UI中建立Adobe Analytics分類資料來源連接器](./tutorials/ui/create/adobe-applications/classifications.md)
-- [Adobe Analytics資料連接器概觀](connectors/adobe-applications/analytics.md)
+- [Adobe Analytics data connector overview](connectors/adobe-applications/analytics.md)
 - [在UI中建立Adobe Analytics來源連接器](./tutorials/ui/create/adobe-applications/analytics.md)
 - [在UI中建立客戶屬性來源連接器](./tutorials/ui/create/adobe-applications/customer-attributes.md)
 
@@ -54,8 +54,9 @@ Adobe Experience Platform可讓您從外部來源擷取資料，同時提供您�
 - [[!DNL Apache HDFS] 連接器](connectors/cloud-storage/hdfs.md)
 - [[!DNL Azure Event Hubs] 連接器](connectors/cloud-storage/eventhub.md)
 - [[!DNL Azure File Storage] 連接器](connectors/cloud-storage/azure-file-storage.md)
-- [[!DNL FTP and SFTP] 連接器](connectors/cloud-storage/ftp-sftp.md)
+- [[!DNL FTP] 連接器](connectors/cloud-storage/ftp.md)
 - [[!DNL Google Cloud Storage] 連接器](connectors/cloud-storage/google-cloud-storage.md)
+- [[!DNL SFTP] 連接器](connectors/cloud-storage/sftp.md)
 
 ### 客戶關係管理(CRM)
 
