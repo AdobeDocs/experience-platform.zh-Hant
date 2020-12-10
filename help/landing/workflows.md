@@ -5,9 +5,9 @@ title: Adobe Experience Platform工作流程UI指南
 topic: ui guide
 description: 'Adobe Experience Platform '
 translation-type: tm+mt
-source-git-commit: 068e8270f389ed84cae6ef4b7185259cb5f6dadc
+source-git-commit: 72f60ef80a23f5ca4e70147ee6aa6027028fefd0
 workflow-type: tm+mt
-source-wordcount: '281'
+source-wordcount: '280'
 ht-degree: 2%
 
 ---
@@ -21,9 +21,9 @@ Adobe Experience Platform使 **[!UICONTROL 用者介面中的]** 「工作流程
 
 ## [!UICONTROL 資料擷取]
 
-將 **[!UICONTROL CSV對應至XDM架構工作流程]** ，可讓您上傳CSV檔案並將它轉換為「體驗資料模型」(XDM)架構格式。 有關此工作流程的更多資訊，請參閱將CSV檔 [案對應至XDM架構的教學課程](../ingestion/tutorials/map-a-csv-file.md)。
+將 **[!UICONTROL CSV對應至XDM架構工作流程]** ，可讓您上傳CSV檔案並將它轉換為體驗資料模型(XDM)架構。 有關此工作流程的更多資訊，請參閱將CSV檔 [案對應至XDM架構的教學課程](../ingestion/tutorials/map-a-csv-file.md)。
 
-「從 **[!UICONTROL 架構建立資料集]** 」工作流程可讓您從註冊的XDM架構建立新資料集。 有關此工作流程的更多資訊，請參見 [資料集使用手冊](../catalog/datasets/user-guide.md#schema)。
+「從 **[!UICONTROL 架構建立資料集]** 」工作流程可讓您從現有的XDM架構建立新資料集。 有關此工作流程的更多資訊，請參見 [資料集使用手冊](../catalog/datasets/user-guide.md#schema)。
 
 「從 **[!UICONTROL CSV建立資料集]** 」工作流程可讓您上傳CSV檔案以建立新資料集。 有關此工作流程的更多資訊，請參見 [資料集使用手冊](../catalog/datasets/user-guide.md#csv)。
 
@@ -37,4 +37,4 @@ Adobe Experience Platform使 **[!UICONTROL 用者介面中的]** 「工作流程
 
 ## 後續步驟
 
-閱讀本指南後，您便進入Experience Platform使用者介 [!UICONTROL 面的] 「工作流程」頁面。 有關Platform UI的詳細資訊，請閱讀 [Adobe Experience Platform UI指南](./ui-guide.md)。
+閱讀本指南後，您便瞭解Experience Platform使用者介 [!UICONTROL 面中] 「工作流程」。 如需平台UI功能的詳細資訊，請閱讀 [Adobe Experience Platform UI指南](ui-guide.md)。
