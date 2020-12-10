@@ -5,7 +5,7 @@ title: 資料擷取品質
 topic: overview
 description: 以下檔案提供Adobe Experience Platform中批次和串流擷取支援的檢查與驗證行為摘要。
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: cfdaf72b7f4bf190877006ccd4cc6a7fd014adc2
 workflow-type: tm+mt
 source-wordcount: '304'
 ht-degree: 5%
@@ -56,4 +56,4 @@ Adobe Experience Platform為透過批次或串流擷取上傳的任何資料，�
 | 資料集 | 確保指定、啟用和未刪除資料集。 |
 | Header | 確保標題已指定且有效。 |
 
-有關如何監視和驗 [!DNL Platform] 證資料的詳細資訊，請參閱監 [視資料流文檔](./monitor-data-flows.md)。
+有關如何監視和驗 [!DNL Platform] 證資料的詳細資訊，請參閱監 [視資料流文檔](./monitor-data-ingestion.md)。
