@@ -2,13 +2,13 @@
 product: experience-platform
 audience: user
 user-guide-title: Experience Data Model (XDM) 系統說明
-breadcrumb-title: 體驗資料模型(XDM)指南
+breadcrumb-title: Experience Data Model (XDM) 指南
 user-guide-description: 使用 Experience Data Model (XDM) 類別和 mixin 將體驗資料標準化。
 translation-type: tm+mt
-source-git-commit: fe316123c3e8925edf75d3519c80a7c85f5bc040
+source-git-commit: df763e246cd6930a31402f0a2c94d657159f4fe8
 workflow-type: tm+mt
-source-wordcount: '192'
-ht-degree: 20%
+source-wordcount: '197'
+ht-degree: 22%
 
 ---
 
@@ -69,6 +69,7 @@ ht-degree: 20%
    * [臨機結構](api/ad-hoc.md)
    * [附錄](api/appendix.md)
 * 教學課程 {#tutorials}
+   * [在UI中探索資源](./tutorials/explore.md)
    * [建立結構(API)](tutorials/create-schema-api.md)
    * [建立結構(UI)](tutorials/create-schema-ui.md)
    * [建立和編輯資料類型(UI)](./tutorials/create-data-type.md)
