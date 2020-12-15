@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;attribution ai overview;popular topics;attribution ai;Attribution ai
-solution: Experience Platform
+solution: Experience Platform, Intelligent Services
 title: Attribution AI 概述
 topic: Attribution AI
-description: Attribution AI 可將點數歸因到導致轉換事件的接觸點。行銷人員可善用此工具，協助量化客戶歷程中各個獨立行銷接觸點對行銷的影響。舉凡廣告曝光、電子郵件傳送、電子郵件開啟和付費搜尋點擊，都是接觸點的範例。
+description: Attribution AI 可將點數歸因到促成轉換事件的接觸點。行銷人員可善用此工具，協助量化客戶歷程中各個獨立行銷接觸點對行銷的影響。舉凡廣告曝光、電子郵件傳送、電子郵件開啟和付費搜尋點擊，都是接觸點的範例。
 landing-page-description: Attribution AI is used to attribute credits to touchpoints leading to conversion events. This can be used by marketers to help quantify the marketing impact of each individual marketing touchpoint across customer journeys.
 translation-type: tm+mt
-source-git-commit: d4a205b2e5fe4ca1f8d419eec3e7636e2ed0e5ef
+source-git-commit: de16ebddd8734f082f908f5b6016a1d3eadff04c
 workflow-type: tm+mt
 source-wordcount: '455'
 ht-degree: 29%
@@ -20,7 +20,7 @@ ht-degree: 29%
 
 ## 瞭解歸因AI
 
-Attribution AI 可將點數歸因到導致轉換事件的接觸點。行銷人員可善用此工具，協助量化客戶歷程中各個獨立行銷接觸點對行銷的影響。舉凡廣告曝光、電子郵件傳送、電子郵件開啟和付費搜尋點擊，都是接觸點的範例。
+Attribution AI 可將點數歸因到促成轉換事件的接觸點。行銷人員可善用此工具，協助量化客戶歷程中各個獨立行銷接觸點對行銷的影響。舉凡廣告曝光、電子郵件傳送、電子郵件開啟和付費搜尋點擊，都是接觸點的範例。
 
 歸因AI輸出可以跨不同維度加以區隔，並可跨客戶歷程的不同階段使用。 完成此項作業時，不需將業務需求轉譯為機器學習問題、挑選演算法、訓練或部署模型。
 
