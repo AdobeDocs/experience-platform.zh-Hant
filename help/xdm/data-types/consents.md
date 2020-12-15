@@ -4,7 +4,7 @@ title: 同意與偏好資料類型
 description: 「隱私權／行銷偏好（同意）」資料類型旨在支援收集「同意管理平台」(CMPs)和您資料作業中其他來源產生的客戶權限和偏好。
 topic: guide
 translation-type: tm+mt
-source-git-commit: 1a4dd167ecd4f4f61ffe26af786b355e4561b30d
+source-git-commit: 640f0be8a297fada0eee10ff80fec3b3142c09b9
 workflow-type: tm+mt
 source-wordcount: '2022'
 ht-degree: 1%
@@ -333,4 +333,4 @@ ht-degree: 1%
 
 ### 完整架 [!DNL Consents & Preferences] 構 {#full-schema}
 
-要查看資料類型的完 [!DNL Consents & Preferences] 整模式，請參 [閱正式XDM儲存庫](https://github.com/adobe/xdm/blob/master/components/datatypes/consentpreferences.schema.json)。
+要查看資料類型的完 [!DNL Consents & Preferences] 整模式，請參 [閱正式XDM儲存庫](https://github.com/adobe/xdm/blob/master/components/datatypes/consent-preferences.schema.json)。
