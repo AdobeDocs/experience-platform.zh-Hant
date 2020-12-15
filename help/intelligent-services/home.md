@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;home;intelligent services;popular topics;intelligent service;Intelligent service
-solution: Experience Platform
+solution: Experience Platform, Intelligent Services
 title: 智慧型服務概觀
 topic: Intelligent Services overview
 description: 智慧型服務可讓行銷分析師和從業人員在客戶體驗使用案例中運用人工智慧和機器學習的強大功能。 這可讓行銷分析人員使用商業層級的組態來設定特定公司需求的預測，而不需要資料科學的專業知識。 此外，行銷從業人員可在Adobe Experience Cloud、Adobe Experience Platform和第三方應用程式中啟動預測。
 translation-type: tm+mt
-source-git-commit: 8f7ce97cdefd4fe79cb806e71e12e936caca3774
+source-git-commit: de16ebddd8734f082f908f5b6016a1d3eadff04c
 workflow-type: tm+mt
 source-wordcount: '491'
 ht-degree: 0%
