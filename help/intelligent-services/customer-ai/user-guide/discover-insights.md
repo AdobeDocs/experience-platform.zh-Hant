@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;insights;customer ai;popular topics;customer ai insights
-solution: Experience Platform
+solution: Experience Platform, Intelligent Services, Real-time Customer Data Platform
 title: 透過客戶人工智慧發掘見解
 topic: Discovering insights
 description: 本檔案可做為在智慧型服務客戶AI使用者介面中與服務例項見解互動的指南。
 translation-type: tm+mt
-source-git-commit: 0b92346065b7c9615d8aef4c9b13c84e0383b4b9
+source-git-commit: de16ebddd8734f082f908f5b6016a1d3eadff04c
 workflow-type: tm+mt
 source-wordcount: '1389'
 ht-degree: 1%
@@ -15,7 +15,7 @@ ht-degree: 1%
 
 # 透過客戶人工智慧發掘見解
 
-客戶人工智慧(Customer AI)是智慧型服務的一部分，可讓行銷人員運用Adobe Sensei來預測客戶的下一步行動。 Customer AI 可產生自訂傾向評分，例如大規模個別設定檔的流失和轉換。完成此項作業時，不需將業務需求轉換為機器學習問題、選擇演算法、訓練或部署。
+客戶人工智慧(Customer AI)是智慧型服務的一部分，可讓行銷人員運用Adobe Sensei來預測客戶的下一步行動。 Customer AI 可產生自訂傾向評分，例如大規模個別設定檔的流失和轉換情形。完成此項作業時，不需將業務需求轉換為機器學習問題、選擇演算法、訓練或部署。
 
 本檔案可做為在智慧型服務客戶AI使用者介面中與服務例項見解互動的指南。
 
