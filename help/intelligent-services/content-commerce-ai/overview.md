@@ -1,23 +1,17 @@
 ---
 keywords: Experience Cloud;getting started;content and commerce ai;popular topics;Intelligent Services;ccai
-solution: Experience Cloud
+solution: Experience Cloud, Intelligent Services, Experience Platform
 title: 內容與商務AI概觀
 topic: Content and Commerce AI
 description: 內容與商務AI是一組AI服務，可讓您從內容中擷取智慧功能、組織、簡化內容流程，並為客戶提供更具影響力的個人化體驗。
 translation-type: tm+mt
-source-git-commit: 59cf089a8bf7ce44e7a08b0bb1d4562f5d5104db
+source-git-commit: de16ebddd8734f082f908f5b6016a1d3eadff04c
 workflow-type: tm+mt
 source-wordcount: '406'
 ht-degree: 1%
 
 ---
 
-
-<!--
-
-NOTE to writer: "Intelligent Services" is not a valid solution value. Log a UGP bug if you think it should be added.
-
--->
 
 # 內容與商務AI概觀
 
