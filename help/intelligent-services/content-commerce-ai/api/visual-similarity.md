@@ -1,11 +1,11 @@
 ---
 keywords: Visual similarity;visual similarity;ccai api
-solution: Experience Platform
+solution: Experience Platform, Intelligent Services
 title: 視覺相似性
 topic: Developer guide
 description: 視覺相似性服務在給定影像時，會自動從目錄中尋找視覺相似的影像。
 translation-type: tm+mt
-source-git-commit: 4f7b5ca50171f4948726c44dbf31025011adf35f
+source-git-commit: de16ebddd8734f082f908f5b6016a1d3eadff04c
 workflow-type: tm+mt
 source-wordcount: '497'
 ht-degree: 3%
