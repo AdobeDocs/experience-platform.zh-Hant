@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;user guide;customer ai;popular topics;configure instance;create instance;
-solution: Experience Platform
+solution: Experience Platform, Intelligent Services, Real-time Customer Data Platform
 title: 設定客戶AI例項
 topic: Instance creation
 description: 智慧型服務提供客戶人工智慧，提供簡單易用的Adobe Sensei服務，可針對不同使用案例進行設定。 以下各節提供設定客戶AI例項的步驟。
 translation-type: tm+mt
-source-git-commit: 0b92346065b7c9615d8aef4c9b13c84e0383b4b9
+source-git-commit: de16ebddd8734f082f908f5b6016a1d3eadff04c
 workflow-type: tm+mt
 source-wordcount: '1284'
 ht-degree: 0%
