@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;getting started;customer ai;popular topics;customer ai input;customer ai output
-solution: Experience Platform
+solution: Experience Platform, Intelligent Services, Real-time Customer Data Platform
 title: 客戶人工智慧的輸入與輸出
 topic: Getting started
 description: 以下檔案概述Customer AI中使用的不同輸入和輸出。
 translation-type: tm+mt
-source-git-commit: 0f45f12ca4f43de9489eb609fd541aa2be3bae78
+source-git-commit: de16ebddd8734f082f908f5b6016a1d3eadff04c
 workflow-type: tm+mt
 source-wordcount: '824'
 ht-degree: 1%
