@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;overview;customer ai;popular topics;customer ai overview
-solution: Experience Platform
+solution: Experience Platform, Intelligent Services, Real-time Customer Data Platform
 title: Customer AI 概述
 topic: Customer AI overview
-description: Customer AI 可產生自訂傾向評分，例如大規模個別設定檔的流失和轉換。不必將企業需求轉換為機器學習問題、挑選演算法、培訓或部署，就能達成上述目的。
+description: Customer AI 可產生自訂傾向評分，例如大規模個別設定檔的流失和轉換情形。不必將企業需求轉換為機器學習問題、挑選演算法、培訓或部署，就能達成上述目的。
 landing-page-description: Customer AI is used to generate custom propensity scores such as churn and conversion for individual profiles at-scale.
 translation-type: tm+mt
-source-git-commit: d4a205b2e5fe4ca1f8d419eec3e7636e2ed0e5ef
+source-git-commit: de16ebddd8734f082f908f5b6016a1d3eadff04c
 workflow-type: tm+mt
 source-wordcount: '526'
 ht-degree: 16%
@@ -22,7 +22,7 @@ ht-degree: 16%
 
 ## 瞭解客戶人工智慧
 
-Customer AI 可產生自訂傾向評分，例如大規模個別設定檔的流失和轉換。不必將企業需求轉換為機器學習問題、挑選演算法、培訓或部署，就能達成上述目的。
+Customer AI 可產生自訂傾向評分，例如大規模個別設定檔的流失和轉換情形。不必將企業需求轉換為機器學習問題、挑選演算法、培訓或部署，就能達成上述目的。
 
 客戶人工智慧可以：
 
