@@ -6,78 +6,68 @@ topic: overview
 type: Tutorial
 description: 本教學課程涵蓋從付款應用程式擷取資料，並透過來源連接器和API將其匯入平台的步驟。
 translation-type: tm+mt
-source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
+source-git-commit: d8ec9b4b28602bce30365fe64829c8c8df1b9211
 workflow-type: tm+mt
-source-wordcount: '1728'
-ht-degree: 2%
+source-wordcount: '1546'
+ht-degree: 1%
 
 ---
 
 
 # 透過來源連接器和API收集付款資料
 
-[!DNL Flow Service] 用於收集和集中Adobe Experience Platform內不同來源的客戶資料。 該服務提供用戶介面和REST風格的API，所有支援的源都可從中連接。
-
-本教學課程涵蓋從協力廠商付款系統擷取資料，並透過來源連接器和 [!DNL Platform] API [[!DNL Flow Service]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) 將其吸收的步驟。
+本教學課程涵蓋從協力廠商付款應用程式擷取資料，並透過來源連接器和[[!DNL Flow Service]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) API將其匯入平台的步驟。
 
 ## 快速入門
 
-本教學課程要求您透過有效連線存取付款系統，以及您要放入之檔案的相關資訊 [!DNL Platform] （包括檔案的路徑和結構）。 如果您沒有此資訊，請先參閱教學課程，瞭解 [如何使用Flow Service API來探索付款應用程式](../explore/payments.md) ，然後再嘗試本教學課程。
+本教學課程要求您透過有效的連線存取付款應用程式，以及您想要匯入平台的檔案（包括檔案的路徑和結構）的相關資訊。 如果您沒有此資訊，請先參閱[的教學課程，在嘗試本教學課程之前，先使用Flow Service API](../explore/payments.md)來探索付款應用程式。
 
 本教學課程也要求您對Adobe Experience Platform的下列元件有正確的認識：
 
 * [[!DNL Experience Data Model (XDM) System]](../../../../xdm/home.md):Experience Platform組織客戶體驗資料的標準化架構。
    * [架構構成基礎](../../../../xdm/schema/composition.md):瞭解XDM架構的基本建置區塊，包括架構組合的主要原則和最佳實務。
-   * [架構註冊開發人員指南](../../../../xdm/api/getting-started.md):包含您必須知道的重要資訊，以便成功執行對架構註冊表API的呼叫。 這包括您 `{TENANT_ID}`的「容器」概念，以及提出要求所需的標題（請特別注意「接受」標題及其可能的值）。
-* [[!DNL Catalog Service]](../../../../catalog/home.md):目錄是記錄資料位置和世系的系統 [!DNL Experience Platform]。
-* [[!DNL Batch ingestion]](../../../../ingestion/batch-ingestion/overview.md):「批次擷取API」可讓您將資料擷取為 [!DNL Experience Platform] 批次檔案。
-* [沙盒](../../../../sandboxes/home.md): [!DNL Experience Platform] 提供虛擬沙盒，可將單一執行個體分 [!DNL Platform] 割為不同的虛擬環境，以協助開發和發展數位體驗應用程式。
+   * [架構註冊開發人員指南](../../../../xdm/api/getting-started.md):包含您必須知道的重要資訊，以便成功執行對架構註冊表API的呼叫。這包括您的`{TENANT_ID}`、&quot;containers&quot;的概念，以及提出要求時所需的標題（請特別注意「接受」標題及其可能的值）。
+* [[!DNL Catalog Service]](../../../../catalog/home.md):目錄是Experience Platform中資料位置和世系的記錄系統。
+* [[!DNL Batch ingestion]](../../../../ingestion/batch-ingestion/overview.md):批次擷取API可讓您將資料以批次檔案的形式內嵌至Experience Platform。
+* [沙盒](../../../../sandboxes/home.md):Experience Platform提供虛擬沙盒，可將單一Platform實例分割為不同的虛擬環境，以協助開發和發展數位體驗應用程式。
 
-以下各節提供您需要瞭解的其他資訊，以便使用 [!DNL Flow Service] API成功連線至付款應用程式。
+以下各節提供您必須知道的其他資訊，以便使用[!DNL Flow Service] API成功連線至付款應用程式。
 
 ### 讀取範例API呼叫
 
-本教學課程提供範例API呼叫，以示範如何設定請求的格式。 這些包括路徑、必要標題和正確格式化的請求負載。 也提供API回應中傳回的範例JSON。 如需範例API呼叫檔案中所用慣例的詳細資訊，請參閱疑難排解指 [南中有關如何讀取範例API呼叫的](../../../../landing/troubleshooting.md#how-do-i-format-an-api-request)[!DNL Experience Platform] 章節。
+本教學課程提供範例API呼叫，以示範如何設定請求的格式。 這些包括路徑、必要標題和正確格式化的請求負載。 也提供API回應中傳回的範例JSON。 如需範例API呼叫檔案中所用慣例的詳細資訊，請參閱Experience Platform疑難排解指南中[如何讀取範例API呼叫](../../../../landing/troubleshooting.md#how-do-i-format-an-api-request)一節。
 
 ### 收集必要標題的值
 
-若要呼叫API，您必 [!DNL Platform] 須先完成驗證教 [學課程](../../../../tutorials/authentication.md)。 完成驗證教學課程後，將提供所有 [!DNL Experience Platform] API呼叫中每個必要標題的值，如下所示：
+若要呼叫平台API，您必須先完成[驗證教學課程](../../../../tutorials/authentication.md)。 完成驗證教學課程後，所有Experience Platform API呼叫中每個必要標題的值都會顯示在下方：
 
-* 授權：生產者 `{ACCESS_TOKEN}`
-* x-api-key: `{API_KEY}`
-* x-gw-ims-org-id: `{IMS_ORG}`
+* `Authorization: Bearer {ACCESS_TOKEN}`
+* `x-api-key: {API_KEY}`
+* `x-gw-ims-org-id: {IMS_ORG}`
 
-中的所有資 [!DNL Experience Platform]源(包括屬於這些資源 [!DNL Flow Service])都隔離到特定的虛擬沙盒。 對API的所 [!DNL Platform] 有請求都需要一個標題，該標題會指定要在中執行的操作的沙盒名稱：
+Experience Platform中的所有資源（包括[!DNL Flow Service]的資源）都隔離至特定的虛擬沙盒。 所有對平台API的請求都需要一個標題，該標題會指定要在中執行的操作的沙盒名稱：
 
-* x-sandbox-name: `{SANDBOX_NAME}`
+* `x-sandbox-name: {SANDBOX_NAME}`
 
 所有包含裝載(POST、PUT、PATCH)的請求都需要額外的媒體類型標題：
 
-* 內容類型： `application/json`
+* `Content-Type: application/json`
 
-## 建立臨機XDM類別和架構
+## 建立源連接{#source}
 
-為了透過來源連接器將 [!DNL Platform] 外部資料匯入，必須為原始來源資料建立臨機XDM類別和架構。
-
-若要建立臨機類別和架構，請依照臨機架構教學課程中 [所述的步驟進行](../../../../xdm/tutorials/ad-hoc.md)。 建立臨機類別時，來源資料中找到的所有欄位都必須在請求內文中說明。
-
-請繼續遵循開發人員指南中所述的步驟，直到您建立臨機架構為止。 取得並儲存臨機結構的唯一識別碼(`$id`)，然後繼續本教學課程的下一步。
-
-## 建立源連接 {#source}
-
-現在，只要建立臨機XDM架構，就可以使用API的POST要求建立來源連 [!DNL Flow Service] 線。 源連接由連接ID、源資料檔案和描述源資料的模式的引用組成。
+您可以通過對[!DNL Flow Service] API發出POST請求來建立源連接。 源連接由連接ID、源資料檔案的路徑和連接規範ID組成。
 
 要建立源連接，還必須為資料格式屬性定義枚舉值。
 
 對基於檔案的連接器使用以下枚舉值：
 
-| Data.format | 列舉值 |
+| 資料格式 | 列舉值 |
 | ----------- | ---------- |
-| 分隔檔案 | `delimited` |
-| JSON檔案 | `json` |
-| 拼花檔案 | `parquet` |
+| 分隔字元 | `delimited` |
+| JSON | `json` |
+| 鑲木 | `parquet` |
 
-對於所有基於表的連接器，請使用列舉值： `tabular`.
+對於所有基於表的連接器，請將值設定為`tabular`。
 
 **API格式**
 
@@ -96,14 +86,11 @@ curl -X POST \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d '{
-        "name": "Paypal source connection",
-        "baseConnectionId": "24151d58-ffa7-4960-951d-58ffa7396097",
-        "description": "Paypal",
+        "name": "PayPal source connection",
+        "connectionId": "24151d58-ffa7-4960-951d-58ffa7396097",
+        "description": "PayPal source connection",
         "data": {
             "format": "tabular",
-            "schema": {
-                "id": "https://ns.adobe.com/{TENANT_ID}/schemas/396f583b57577b2f2fca79c2cb88e9254992f5fa70ce5f1a",
-                "version": "application/vnd.adobe.xed-full-notext+json; version=1"
             }
         },
         "params": {
@@ -118,14 +105,13 @@ curl -X POST \
 
 | 屬性 | 說明 |
 | -------- | ----------- |
-| `baseConnectionId` | 您所存取之協力廠商付款應用程式的唯一連線ID。 |
-| `data.schema.id` | 臨 `$id` 機XDM架構。 |
+| `connectionId` | 您所存取之協力廠商付款應用程式的唯一連線ID。 |
 | `params.path` | 源檔案的路徑。 |
 | `connectionSpec.id` | 付款應用程式的連線規格ID。 |
 
 **回應**
 
-成功的響應返回新建立的源連`id`接的唯一標識符()。 在後續步驟中需要此ID才能建立目標連線。
+成功的響應返回新建源連接的唯一標識符(`id`)。 在後續步驟中需要此ID才能建立目標連線。
 
 ```json
 {
@@ -134,11 +120,11 @@ curl -X POST \
 }
 ```
 
-## 建立目標XDM模式 {#target-schema}
+## 建立目標XDM模式{#target-schema}
 
-在之前的步驟中，會建立臨機XDM架構來結構來源資料。 為了使用源資料，還必須創 [!DNL Platform]建目標模式，以根據您的需要構建源資料。 然後，目標模式用於建立包含 [!DNL Platform] 源資料的資料集。 此目標XDM模式還擴展了XDM [!DNL Individual Profile] 類。
+為了讓源資料用於平台，必須建立目標模式以根據您的需要來構建源資料。 然後，目標模式用於建立包含源資料的平台資料集。 此目標XDM模式還擴展了XDM [!DNL Individual Profile]類。
 
-通過對方案註冊表API執行POST請求，可以建立目標XDM [方案](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml)。 如果希望在中使用用戶介面 [!DNL Experience Platform], [](https://docs.adobe.com/content/help/zh-Hant/experience-platform/xdm/tutorials/create-schema-ui.html) Schema Editor教程將提供在Schema Editor中執行類似操作的逐步說明。
+通過對[方案註冊表API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml)執行POST請求，可以建立目標XDM方案。
 
 **API格式**
 
@@ -148,7 +134,7 @@ POST /tenant/schemas
 
 **請求**
 
-以下示例請求建立了擴展XDM類的XDM [!DNL Individual Profile] 架構。
+以下示例請求建立一個XDM模式以擴展XDM [!DNL Individual Profile]類。
 
 ```shell
 curl -X POST \
@@ -160,8 +146,8 @@ curl -X POST \
     -H 'Content-Type: application/json' \
     -d '{
         "type": "object",
-        "title": "Target schema for payments",
-        "description": "Target schema for payments",
+        "title": "PayPal target XDM schema",
+        "description": "PayPal target XDM schema",
         "allOf": [
             {
                 "$ref": "https://ns.adobe.com/xdm/context/profile"
@@ -185,7 +171,7 @@ curl -X POST \
 
 **回應**
 
-成功的回應會傳回新建立之架構的詳細資料，包括其唯一識別碼(`$id`)。 在後續步驟中需要此ID，才能建立目標資料集、對應和資料流。
+成功的響應返回新建立的架構的詳細資訊，包括其唯一標識符(`$id`)。 在後續步驟中需要此ID，才能建立目標資料集、對應和資料流。
 
 ```json
 {
@@ -193,9 +179,9 @@ curl -X POST \
     "meta:altId": "_{TENANT_ID}.schemas.14d89c5bb88e2ff488f23db896be469e7e30bb166bda8722",
     "meta:resourceType": "schemas",
     "version": "1.0",
-    "title": "Target schema for payments",
+    "title": "PayPal target XDM schema",
     "type": "object",
-    "description": "Target schema for Paypal",
+    "description": "PayPal target XDM",
     "allOf": [
         {
             "$ref": "https://ns.adobe.com/xdm/context/profile",
@@ -251,7 +237,7 @@ curl -X POST \
 
 ## 建立目標資料集
 
-目標資料集可以通過對目錄服務 [API執行POST請求](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml)，提供裝載內目標方案的ID來建立。
+通過對[目錄服務API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml)執行POST請求，提供裝載內目標方案的ID，可以建立目標資料集。
 
 **API格式**
 
@@ -270,7 +256,7 @@ curl -X POST \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d '{
-        "name": "Target dataset for payments",
+        "name": "PayPal target dataset",
         "schemaRef": {
             "id": "https://ns.adobe.com/{TENANT_ID}/schemas/14d89c5bb88e2ff488f23db896be469e7e30bb166bda8722",
             "contentType": "application/vnd.adobe.xed-full-notext+json; version=1"
@@ -280,11 +266,11 @@ curl -X POST \
 
 | 屬性 | 說明 |
 | -------- | ----------- |
-| `schemaRef.id` | 目 `$id` 標XDM模式的。 |
+| `schemaRef.id` | 目標XDM架構的`$id`。 |
 
 **回應**
 
-成功的回應會傳回包含新建立資料集ID的陣列，格式為 `"@/datasets/{DATASET_ID}"`。 資料集ID是唯讀、系統產生的字串，用於在API呼叫中參考資料集。 在後續步驟中，依需要儲存目標資料集ID以建立目標連線和資料流。
+成功的響應返回一個陣列，該陣列包含以`"@/datasets/{DATASET_ID}"`格式新建立的資料集的ID。 資料集ID是唯讀、系統產生的字串，用於在API呼叫中參考資料集。 在後續步驟中，依需要儲存目標資料集ID以建立目標連線和資料流。
 
 ```json
 [
@@ -292,11 +278,11 @@ curl -X POST \
 ]
 ```
 
-## 建立目標連接 {#target-connection}
+## 建立目標連接{#target-connection}
 
-目標連接表示到所收錄資料所在目的地的連接。 要建立目標連接，必須提供與資料庫關聯的固定連接規範ID。 此連接規範ID為： `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
+目標連接表示到所收錄資料所在目的地的連接。 要建立目標連接，必須提供與「資料湖」關聯的固定連接規範ID。 此連接規範ID為：`c604ff05-7f1a-43c0-8e18-33bf874cb11c`。
 
-您現在擁有目標資料集的唯一識別碼、目標模式，以及與資料湖的連線規範ID。 使用這些識別碼，您可以使用 [!DNL Flow Service] API建立目標連線，以指定將包含傳入來源資料的資料集。
+您現在擁有目標資料集的唯一識別碼、目標模式，以及與資料湖的連線規範ID。 使用[!DNL Flow Service] API，您可以指定這些識別碼以及包含傳入來源資料的資料集來建立目標連線。
 
 **API格式**
 
@@ -319,7 +305,8 @@ curl -X POST \
         "description": "Target Connection for payments",
         "data": {
             "schema": {
-                "id": "https://ns.adobe.com/{TENANT_ID}/schemas/14d89c5bb88e2ff488f23db896be469e7e30bb166bda8722"
+                "id": "https://ns.adobe.com/{TENANT_ID}/schemas/14d89c5bb88e2ff488f23db896be469e7e30bb166bda8722",
+                "version": "application/vnd.adobe.xed-full+json;version=1.0"
             }
         },
         "params": {
@@ -334,13 +321,13 @@ curl -X POST \
 
 | 屬性 | 說明 |
 | -------- | ----------- |
-| `data.schema.id` | 目 `$id` 標XDM模式的。 |
+| `data.schema.id` | 目標XDM架構的`$id`。 |
 | `params.dataSetId` | 目標資料集的ID。 |
-| `connectionSpec.id` | 已修正連接規範ID到資料湖。 此ID為： `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
+| `connectionSpec.id` | 用於連接到資料湖的連接規範ID。 此ID為：`c604ff05-7f1a-43c0-8e18-33bf874cb11c`。 |
 
 **回應**
 
-成功的回應會傳回新目標連線的唯一識別碼(`id`)。 在後續步驟中需要此值才能建立資料流。
+成功的響應返回新目標連接的唯一標識符(`id`)。 在後續步驟中需要此值才能建立資料流。
 
 ```json
 {
@@ -349,9 +336,9 @@ curl -X POST \
 }
 ```
 
-## 建立對應 {#mapping}
+## 建立映射{#mapping}
 
-為了將源資料引入目標資料集，必須首先將其映射到目標資料集所遵守的目標模式。 這是透過對轉換服務API執行POST要求，並在 [請求裝載中定義資料映射](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/mapping-service-api.yaml) ，來實現的。
+為了將源資料引入目標資料集，必須首先將其映射到目標資料集所遵守的目標模式。 這是通過對在請求裝載中定義的資料映射的[轉換服務API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/mapping-service-api.yaml)執行POST請求來實現的。
 
 **API格式**
 
@@ -413,11 +400,11 @@ curl -X POST \
 
 | 屬性 | 說明 |
 | -------- | ----------- |
-| `xdmSchema` | 目 `$id` 標XDM模式的。 |
+| `xdmSchema` | 目標XDM架構的`$id`。 |
 
 **回應**
 
-成功的回應會傳回新建立之對應的詳細資訊，包括其唯一識別碼(`id`)。 在後續步驟中需要此ID才能建立資料流。
+成功的響應返回新建立映射的詳細資訊，包括其唯一標識符(`id`)。 在後續步驟中需要此ID才能建立資料流。
 
 ```json
 {
@@ -425,14 +412,14 @@ curl -X POST \
     "version": 0,
     "createdDate": 1586043319604,
     "modifiedDate": 1586043319604,
-    "createdBy": "28AF22BA5DE6B0B40A494036@AdobeID",
-    "modifiedBy": "28AF22BA5DE6B0B40A494036@AdobeID"
+    "createdBy": "{CREATED_BY}",
+    "modifiedBy": "{MODIFIED_BY}"
 }
 ```
 
-## 查找資料流規範 {#specs}
+## 查找資料流規範{#specs}
 
-資料流負責從源收集資料並將其引入 [!DNL Platform]。 要建立資料流，必須首先通過對 [!DNL Flow Service] API執行GET請求來獲取資料流規範。 資料流規範負責從外部資料庫或NoSQL系統收集資料。
+資料流負責從源收集資料並將其引入平台。 要建立資料流，必須首先通過對[!DNL Flow Service] API執行GET請求來獲取資料流規範。 資料流規範負責從外部資料庫或NoSQL系統收集資料。
 
 **API格式**
 
@@ -450,10 +437,9 @@ curl -X GET \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-
 **回應**
 
-成功的響應返回負責將付款應用程式中的資料帶入資料流規範的詳細資訊 [!DNL Platform]。 在下一步中需要此ID才能建立新的資料流。
+成功的響應返回負責將源資料帶入平台的資料流規範的詳細資訊。 響應包括建立新資料流所需的唯一流規範`id`。
 
 ```json
 {
@@ -463,6 +449,59 @@ curl -X GET \
             "name": "CRMToAEP",
             "providerId": "0ed90a81-07f4-4586-8190-b40eccef1c5a",
             "version": "1.0",
+            "sourceConnectionSpecIds": [
+                "3416976c-a9ca-4bba-901a-1f08f66978ff",
+                "38ad80fe-8b06-4938-94f4-d4ee80266b07",
+                "d771e9c1-4f26-40dc-8617-ce58c4b53702",
+                "3c9b37f8-13a6-43d8-bad3-b863b941fedd",
+                "cc6a4487-9e91-433e-a3a3-9cf6626c1806",
+                "3000eb99-cd47-43f3-827c-43caf170f015",
+                "26d738e0-8963-47ea-aadf-c60de735468a",
+                "74a1c565-4e59-48d7-9d67-7c03b8a13137",
+                "cfc0fee1-7dc0-40ef-b73e-d8b134c436f5",
+                "4f63aa36-bd48-4e33-bb83-49fbcd11c708",
+                "cb66ab34-8619-49cb-96d1-39b37ede86ea",
+                "eb13cb25-47ab-407f-ba89-c0125281c563",
+                "1f372ff9-38a4-4492-96f5-b9a4e4bd00ec",
+                "37b6bf40-d318-4655-90be-5cd6f65d334b",
+                "a49bcc7d-8038-43af-b1e4-5a7a089a7d79",
+                "221c7626-58f6-4eec-8ee2-042b0226f03b",
+                "a8b6a1a4-5735-42b4-952c-85dce0ac38b5",
+                "6a8d82bc-1caf-45d1-908d-cadabc9d63a6",
+                "aac9bbd4-6c01-46ce-b47e-51c6f0f6db3f",
+                "8e6b41a8-d998-4545-ad7d-c6a9fff406c3",
+                "ecde33f2-c56f-46cc-bdea-ad151c16cd69",
+                "102706fb-a5cd-42ee-afe0-bc42f017ff43",
+                "09182899-b429-40c9-a15a-bf3ddbc8ced7",
+                "0479cc14-7651-4354-b233-7480606c2ac3",
+                "d6b52d86-f0f8-475f-89d4-ce54c8527328",
+                "a8f4d393-1a6b-43f3-931f-91a16ed857f4",
+                "1fe283f6-9bec-11ea-bb37-0242ac130002"
+            ],
+            "targetConnectionSpecIds": [
+                "c604ff05-7f1a-43c0-8e18-33bf874cb11c"
+            ],
+            "optionSpec": {
+                "name": "OptionSpec",
+                "spec": {
+                    "$schema": "http://json-schema.org/draft-07/schema#",
+                    "type": "object",
+                    "properties": {
+                        "errorDiagnosticsEnabled": {
+                            "title": "Error diagnostics.",
+                            "description": "Flag to enable detailed and sample error diagnostics summary.",
+                            "type": "boolean",
+                            "default": false
+                        },
+                        "partialIngestionPercent": {
+                            "title": "Partial ingestion threshold.",
+                            "description": "Percentage which defines the threshold of errors allowed before the run is marked as failed.",
+                            "type": "number",
+                            "exclusiveMinimum": 0
+                        }
+                    }
+                }
+            },
             "transformationSpecs": [
                 {
                     "name": "Copy",
@@ -521,21 +560,18 @@ curl -X GET \
                             "description": "epoch time",
                             "type": "integer"
                         },
-                        "endTime": {
-                            "description": "epoch time",
-                            "type": "integer"
-                        },
-                        "interval": {
-                            "type": "integer"
-                        },
                         "frequency": {
                             "type": "string",
                             "enum": [
+                                "once",
                                 "minute",
                                 "hour",
                                 "day",
                                 "week"
                             ]
+                        },
+                        "interval": {
+                            "type": "integer"
                         },
                         "backfill": {
                             "type": "boolean",
@@ -544,31 +580,88 @@ curl -X GET \
                     },
                     "required": [
                         "startTime",
-                        "frequency",
-                        "interval"
+                        "frequency"
                     ],
                     "if": {
                         "properties": {
                             "frequency": {
-                                "const": "minute"
+                                "const": "once"
                             }
                         }
                     },
                     "then": {
-                        "properties": {
-                            "interval": {
-                                "minimum": 15
+                        "allOf": [
+                            {
+                                "not": {
+                                    "required": [
+                                        "interval"
+                                    ]
+                                }
+                            },
+                            {
+                                "not": {
+                                    "required": [
+                                        "backfill"
+                                    ]
+                                }
                             }
-                        }
+                        ]
                     },
                     "else": {
-                        "properties": {
-                            "interval": {
-                                "minimum": 1
+                        "required": [
+                            "interval"
+                        ],
+                        "if": {
+                            "properties": {
+                                "frequency": {
+                                    "const": "minute"
+                                }
+                            }
+                        },
+                        "then": {
+                            "properties": {
+                                "interval": {
+                                    "minimum": 15
+                                }
+                            }
+                        },
+                        "else": {
+                            "properties": {
+                                "interval": {
+                                    "minimum": 1
+                                }
                             }
                         }
                     }
                 }
+            },
+            "attributes": {
+                "notification": {
+                    "category": "sources",
+                    "flowRun": {
+                        "enabled": true
+                    }
+                }
+            },
+            "permissionsInfo": {
+                "view": [
+                    {
+                        "@type": "lowLevel",
+                        "name": "EnterpriseSource",
+                        "permissions": [
+                            "read"
+                        ]
+                    }
+                ],
+                "manage": [
+                    {
+                        "@type": "lowLevel",
+                        "name": "EnterpriseSource",
+                        "permissions": [
+                            "write"
+                        ]
+                    }
+                ]
             }
         }
     ]
@@ -586,7 +679,7 @@ curl -X GET \
 
 資料流負責調度和收集源中的資料。 您可以通過執行POST請求來建立資料流，同時在裝載中提供先前提到的值。
 
-若要排程擷取，您必須先將開始時間值設定為以秒為單位的紀元時間。 然後，您必須將頻率值設為以下五個選項之一： `once`、 `minute`、 `hour`、 `day`或 `week`。 間隔值指定兩個連續的提取之間的期間，並且建立一次性提取不需要設定間隔。 對於所有其它頻率，間隔值必須設定為等於或大於 `15`。
+若要排程擷取，您必須先將開始時間值設定為以秒為單位的紀元時間。 然後，您必須將頻率值設為以下五個選項之一：`once`、`minute`、`hour`、`day`或`week`。 間隔值指定兩個連續的提取之間的期間，並且建立一次性提取不需要設定間隔。 對於所有其它頻率，間隔值必須設定為等於或大於`15`。
 
 **API格式**
 
@@ -645,19 +738,19 @@ curl -X POST \
 
 | 屬性 | 說明 |
 | -------- | ----------- |
-| `flowSpec.id` | 在上 [一步驟中檢索的流式規範ID](#specs) 。 |
-| `sourceConnectionIds` | 在先 [前步驟中擷取的來源連線ID](#source) 。 |
-| `targetConnectionIds` | 在先 [前步驟中擷取的目標連線ID](#target-connection) 。 |
-| `transformations.params.mappingId` | 在先 [前步驟中擷取](#mapping) 的對應ID。 |
-| `transformations.params.deltaColum` | 用於區分新資料和現有資料的指定欄。 增量資料將根據選取欄的時間戳記進行擷取。 支援的日期格 `deltaColumn` 式 `yyyy-MM-dd HH:mm:ss`為。 |
+| `flowSpec.id` | 在上一步驟中檢索的[流規範ID](#specs)。 |
+| `sourceConnectionIds` | 在先前步驟中檢索的[源連接ID](#source)。 |
+| `targetConnectionIds` | 在先前步驟中擷取的[目標連線ID](#target-connection)。 |
+| `transformations.params.mappingId` | 在先前步驟中檢索的[映射ID](#mapping)。 |
+| `transformations.params.deltaColum` | 用於區分新資料和現有資料的指定欄。 增量資料將根據選取欄的時間戳記進行擷取。 `deltaColumn`支援的日期格式為`yyyy-MM-dd HH:mm:ss`。 |
 | `transformations.params.mappingId` | 與資料庫關聯的映射ID。 |
 | `scheduleParams.startTime` | 資料流在時代時間中的開始時間。 |
-| `scheduleParams.frequency` | 資料流收集資料的頻率。 可接受的值包括： `once`、 `minute`、 `hour`、 `day`或 `week`。 |
-| `scheduleParams.interval` | 該間隔用於指定兩個連續流運行之間的期間。 間隔的值應為非零整數。 當頻率設為且應大於或等於其 `once` 他頻率值時，不需要 `15` 間隔。 |
+| `scheduleParams.frequency` | 資料流收集資料的頻率。 可接受的值包括：`once`、`minute`、`hour`、`day`或`week`。 |
+| `scheduleParams.interval` | 該間隔用於指定兩個連續流運行之間的期間。 間隔的值應為非零整數。 當頻率設為`once`時，不需要間隔，對於其他頻率值，應大於或等於`15`。 |
 
 **回應**
 
-成功的響應返回新創 `id` 建的資料流的ID。
+成功的響應返回新建立的資料流的ID `id`。
 
 ```json
 {
@@ -668,12 +761,11 @@ curl -X POST \
 
 ## 監控資料流
 
-建立資料流後，您可以監視通過其接收的資料，以查看有關流運行、完成狀態和錯誤的資訊。 有關如何監視資料流的詳細資訊，請參見API中有關監 [視資料流的教程 ](../monitor.md)
-
+建立資料流後，您可以監視通過其接收的資料，以查看有關流運行、完成狀態和錯誤的資訊。 有關如何監視資料流的詳細資訊，請參見API ](../monitor.md)中有關[監視資料流的教程
 
 ## 後續步驟
 
-在本教學課程中，您已建立來源連接器，以依計畫從付款應用程式收集資料。 現在，下游服務（例如和）可 [!DNL Platform] 以使用傳入 [!DNL Real-time Customer Profile] 的資料 [!DNL Data Science Workspace]。 如需詳細資訊，請參閱下列檔案：
+在本教學課程中，您已建立來源連接器，以依計畫從付款應用程式收集資料。 現在，下游平台服務（如[!DNL Real-time Customer Profile]和[!DNL Data Science Workspace]）可以使用傳入的資料。 如需詳細資訊，請參閱下列檔案：
 
 * [即時客戶個人檔案總覽](../../../../profile/home.md)
 * [資料科學工作區概觀](../../../../data-science-workspace/home.md)
