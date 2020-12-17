@@ -5,59 +5,62 @@ title: Adobe定義的函式
 topic: functions
 description: 本檔案提供查詢服務中Adobe定義函式的資訊。
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: c95f976efd4a281640d2f47888b34bdd12a6c7a8
 workflow-type: tm+mt
-source-wordcount: '2167'
-ht-degree: 3%
+source-wordcount: '2889'
+ht-degree: 2%
 
 ---
 
 
 # Adobe定義的函式
 
-Adobe定義的函式(ADF)是預先建立的函式，可協 [!DNL Query Service] 助您對資料執行一般的商業相關 [!DNL ExperienceEvent] 工作。 這些功能包括作業化和歸因功能，如Adobe Analytics中的功能。 如需 [Adobe Analytics的詳細資訊](https://docs.adobe.com/content/help/zh-Hant/analytics/landing/home.html) ，請參閱Adobe Analytics檔案以及本頁所定義之ADF背後的概念。 本檔案提供有關Adobe定義功能的資訊，請參閱 [!DNL Query Service]。
+Adobe定義的函式（在此稱為ADF）是Adobe Experience Platform Query Service中預先建立的函式，可協助您對[!DNL Experience Event]資料執行常見的商業相關工作。 這些功能包括[Sessionization](https://experienceleague.adobe.com/docs/analytics/components/virtual-report-suites/vrs-mobile-visit-processing.html)和[Attribution](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/attribution/overview.html)的函式，如Adobe Analytics中的函式。
 
-## 窗口函式
+本檔案提供[!DNL Query Service]中提供的Adobe定義函式資訊。
 
-大部份的商業邏輯都需要收集客戶的觸點，並依時間排序。 此支援由 [!DNL Spark] SQL以窗口函式的形式提供。 窗口函式是標準SQL的一部分，並受許多其它SQL引擎支援。
+## 窗口函式{#window-functions}
 
-窗口函式會更新匯總，並為有序子集中的每個行返回單個物料。 最基本的聚合函式是 `SUM()`。 `SUM()` 取出您的行，然後總計給您一個。 如果您改為套 `SUM()` 用至視窗，將其轉換為視窗函式，則會收到每列的累積總和。
+大部份的商業邏輯都需要收集客戶的觸點，並依時間排序。 此支援由[!DNL Spark] SQL以窗口函式的形式提供。 窗口函式是標準SQL的一部分，並受許多其它SQL引擎支援。
 
-大多數 [!DNL Spark] SQL幫助器都是窗口函式，用於更新窗口中的每一行，並添加該行的狀態。
+窗口函式會更新匯總，並為有序子集中的每個行返回單個物料。 最基本的聚合函式是`SUM()`。 `SUM()` 取出您的行，然後總計給您一個。如果您改為將`SUM()`套用至視窗，並將它轉換為視窗函式，則會收到每列的累積總和。
 
-### 規格
+[!DNL Spark] SQL幫助器中的大多數是窗口函式，用於更新窗口中每一行，並添加該行的狀態。
 
-語法: `OVER ([partition] [order] [frame])`
+**查詢語法**
 
-| 參數 | 說明 |
-| --- | --- |
-| [分區] | 基於列或可用欄位的行的子組。 範例, `PARTITION BY endUserIds._experience.mcid.id` |
-| [訂單] | 用於排序子集或行的列或可用欄位。 範例, `ORDER BY timestamp` |
-| [幀] | 分區中行的子組。 範例, `ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW` |
+```sql
+OVER ({PARTITION} {ORDER} {FRAME})
+```
+
+| 參數 | 說明 | 範例 |
+| --------- | ----------- | ------- |
+| `{PARTITION}` | 基於列或可用欄位的行子組。 | `PARTITION BY endUserIds._experience.mcid.id` |
+| `{ORDER}` | 用於排序子集或行的列或可用欄位。 | `ORDER BY timestamp` |
+| `{FRAME}` | 分區中行的子組。 | `ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW` |
 
 ## 作業化
 
-當您使用來自網站、行 [!DNL ExperienceEvent] 動應用程式、互動式語音回應系統或任何其他客戶互動管道的資料時，如果事件可依相關活動期間分組，將會有所幫助。 通常，您有特定的動機來推動您的活動，例如研究產品、支付帳單、檢查帳戶餘額、填寫應用程式等。 此群組有助於關聯事件，以發掘客戶體驗的更多相關內容。
+當您使用源自網站、行動應用程式、互動式語音回應系統或任何其他客戶互動頻道的[!DNL Experience Event]資料時，如果事件可以依相關活動期間分組，將會有所幫助。 通常，您有特定的動機來推動您的活動，例如研究產品、支付帳單、檢查帳戶餘額、填寫應用程式等。
 
-如需Adobe Analytics中作業化的詳細資訊，請參閱內容感 [知作業的檔案](https://docs.adobe.com/content/help/en/analytics/components/virtual-report-suites/vrs-mobile-visit-processing.html)。
+此資料分組或作業化有助於關聯事件，以發現客戶體驗的更多相關內容。
 
-### 規格
+如需Adobe Analytics中作業化的詳細資訊，請參閱[內容感應作業](https://experienceleague.adobe.com/docs/analytics/components/virtual-report-suites/vrs-mobile-visit-processing.html)的檔案。
 
-語法: `SESS_TIMEOUT(timestamp, expirationInSeconds) OVER ([partition] [order] [frame])`
+**查詢語法**
+
+```sql
+SESS_TIMEOUT({TIMESTAMP}, {EXPIRATION_IN_SECONDS}) OVER ({PARTITION} {ORDER} {FRAME})
+```
 
 | 參數 | 說明 |
-| --- | --- |
-| `timestamp` | 在資料集中找到時間戳記欄位 |
-| `expirationInSeconds` | 事件之間需要的秒數，以限定當前會話的結束和新會話的開始 |
+| --------- | ----------- |
+| `{TIMESTAMP}` | 在資料集中找到的時間戳記欄位。 |
+| `{EXPIRATION_IN_SECONDS}` | 事件之間需要的秒數，以限定當前會話的結束和新會話的開始。 |
 
-| 傳回的物件參數 | 說明 |
-| ---------------------- | ------------- |
-| `timestamp_diff` | 當前記錄和前一記錄之間的時間（以秒為單位） |
-| `num` | 窗口函式中定義的鍵的唯一會話編號，從1 `PARTITION BY` 開始。 |
-| `is_new` | 用於標識記錄是否是會話中第一個的布爾值 |
-| `depth` | 會話中當前記錄的深度 |
+有關`OVER()`函式中參數的說明，請參閱[窗口函式部分](#window-functions)。
 
-#### 範例查詢
+**範例查詢**
 
 ```sql
 SELECT 
@@ -73,7 +76,7 @@ ORDER BY id, timestamp ASC
 LIMIT 10
 ```
 
-#### 結果
+**結果**
 
 ```console
                 id                |       timestamp       |      session       
@@ -91,37 +94,176 @@ LIMIT 10
 (10 rows)
 ```
 
+對於給定的示例查詢，結果在`session`列中給出。 `session`欄由下列元件組成：
+
+```sql
+({TIMESTAMP_DIFF}, {NUM}, {IS_NEW}, {DEPTH})
+```
+
+| 參數 | 說明 |
+| ---------- | ------------- |
+| `{TIMESTAMP_DIFF}` | 當前記錄和前一記錄之間的時間差（以秒為單位）。 |
+| `{NUM}` | 窗口函式`PARTITION BY`中定義的鍵的唯一會話編號，從1開始。 |
+| `{IS_NEW}` | 用於標識記錄是否是會話中第一個的布爾值。 |
+| `{DEPTH}` | 會話中當前記錄的深度。 |
+
+### SESS_START_IF
+
+此查詢根據當前時間戳和給定的表達式返回當前行的會話狀態，並啟動與當前行的新會話。
+
+**查詢語法**
+
+```sql
+SESS_START_IF({TIMESTAMP}, {TEST_EXPRESSION}) OVER ({PARTITION} {ORDER} {FRAME})
+```
+
+| 參數 | 說明 |
+| --------- | ----------- |
+| `{TIMESTAMP}` | 在資料集中找到的時間戳記欄位。 |
+| `{TEST_EXPRESSION}` | 要檢查資料欄位的表達式。 例如：`application.launches > 0`。 |
+
+有關`OVER()`函式中參數的說明，請參閱[窗口函式部分](#window-functions)。
+
+**範例查詢**
+
+```sql
+SELECT
+    endUserIds._experience.mcid.id AS id,
+    timestamp,
+    IF(application.launches.value > 0, true, false) AS isLaunch,
+    SESS_START_IF(timestamp, application.launches.value > 0)
+        OVER (PARTITION BY endUserIds._experience.mcid.id
+            ORDER BY timestamp
+            ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW)
+        AS session
+    FROM experience_events
+    ORDER BY id, timestamp ASC
+    LIMIT 10
+```
+
+**結果**
+
+```console
+                id                |       timestamp       | isLaunch |      session       
+----------------------------------+-----------------------+----------+--------------------
+ 100080F22A45CB40-3A2B7A8E11096B6 | 2018-01-18 06:55:53.0 | true     | (0,1,true,1)
+ 100080F22A45CB40-3A2B7A8E11096B6 | 2018-01-18 06:56:51.0 | false    | (58,1,false,2)
+ 100080F22A45CB40-3A2B7A8E11096B6 | 2018-01-18 06:57:47.0 | false    | (56,1,false,3)
+ 100080F22A45CB40-3A2B7A8E11096B6 | 2018-01-18 06:58:27.0 | true     | (40,2,true,1)
+ 100080F22A45CB40-3A2B7A8E11096B6 | 2018-01-18 06:59:22.0 | false    | (55,2,false,2)
+ 100080F22A45CB40-3A2B7A8E11096B6 | 2018-02-03 01:16:23.0 | false    | (1361821,2,false,3)
+ 100080F22A45CB40-3A2B7A8E11096B6 | 2018-02-03 01:17:17.0 | false    | (54,2,false,4)
+ 100080F22A45CB40-3A2B7A8E11096B6 | 2018-02-03 01:18:06.0 | false    | (49,2,false,5)
+ 100080F22A45CB40-3A2B7A8E11096B6 | 2018-02-03 01:18:39.0 | false    | (33,2,false,6)
+ 100080F22A45CB40-3A2B7A8E11096B6 | 2018-02-03 01:19:10.0 | false    | (31,2,false,7)
+(10 rows)
+```
+
+對於給定的示例查詢，結果在`session`列中給出。 `session`欄由下列元件組成：
+
+```sql
+({TIMESTAMP_DIFF}, {NUM}, {IS_NEW}, {DEPTH})
+```
+
+| 參數 | 說明 |
+| ---------- | ------------- |
+| `{TIMESTAMP_DIFF}` | 當前記錄和前一記錄之間的時間差（以秒為單位）。 |
+| `{NUM}` | 窗口函式`PARTITION BY`中定義的鍵的唯一會話編號，從1開始。 |
+| `{IS_NEW}` | 用於標識記錄是否是會話中第一個的布爾值。 |
+| `{DEPTH}` | 會話中當前記錄的深度。 |
+
+### SESS_END_IF
+
+此查詢根據當前時間戳和給定的表達式返回當前行的會話狀態，結束當前會話，並在下一行啟動新會話。
+
+**查詢語法**
+
+```sql
+SESS_END_IF({TIMESTAMP}, {TEST_EXPRESSION}) OVER ({PARTITION} {ORDER} {FRAME})
+```
+
+| 參數 | 說明 |
+| --------- | ----------- |
+| `{TIMESTAMP}` | 在資料集中找到的時間戳記欄位。 |
+| `{TEST_EXPRESSION}` | 要檢查資料欄位的表達式。 例如：`application.launches > 0`。 |
+
+有關`OVER()`函式中參數的說明，請參閱[窗口函式部分](#window-functions)。
+
+**範例查詢**
+
+```sql
+SELECT
+    endUserIds._experience.mcid.id AS id,
+    timestamp,
+    IF(application.applicationCloses.value > 0 OR application.crashes.value > 0, true, false) AS isExit,
+    SESS_END_IF(timestamp, application.applicationCloses.value > 0 OR application.crashes.value > 0)
+        OVER (PARTITION BY endUserIds._experience.mcid.id
+            ORDER BY timestamp
+            ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW)
+        AS session
+    FROM experience_events
+    ORDER BY id, timestamp ASC
+    LIMIT 10
+```
+
+**結果**
+
+```console
+                id                |       timestamp       | isExit   |      session       
+----------------------------------+-----------------------+----------+--------------------
+ 100080F22A45CB40-3A2B7A8E11096B6 | 2018-01-18 06:55:53.0 | false    | (0,1,true,1)
+ 100080F22A45CB40-3A2B7A8E11096B6 | 2018-01-18 06:56:51.0 | false    | (58,1,false,2)
+ 100080F22A45CB40-3A2B7A8E11096B6 | 2018-01-18 06:57:47.0 | true     | (56,1,false,3)
+ 100080F22A45CB40-3A2B7A8E11096B6 | 2018-01-18 06:58:27.0 | false    | (40,2,true,1)
+ 100080F22A45CB40-3A2B7A8E11096B6 | 2018-01-18 06:59:22.0 | false    | (55,2,false,2)
+ 100080F22A45CB40-3A2B7A8E11096B6 | 2018-02-03 01:16:23.0 | false    | (1361821,2,false,3)
+ 100080F22A45CB40-3A2B7A8E11096B6 | 2018-02-03 01:17:17.0 | false    | (54,2,false,4)
+ 100080F22A45CB40-3A2B7A8E11096B6 | 2018-02-03 01:18:06.0 | false    | (49,2,false,5)
+ 100080F22A45CB40-3A2B7A8E11096B6 | 2018-02-03 01:18:39.0 | false    | (33,2,false,6)
+ 100080F22A45CB40-3A2B7A8E11096B6 | 2018-02-03 01:19:10.0 | false    | (31,2,false,7)
+(10 rows)
+```
+
+對於給定的示例查詢，結果在`session`列中給出。 `session`欄由下列元件組成：
+
+```sql
+({TIMESTAMP_DIFF}, {NUM}, {IS_NEW}, {DEPTH})
+```
+
+| 參數 | 說明 |
+| ---------- | ------------- |
+| `{TIMESTAMP_DIFF}` | 當前記錄和前一記錄之間的時間差（以秒為單位）。 |
+| `{NUM}` | 窗口函式`PARTITION BY`中定義的鍵的唯一會話編號，從1開始。 |
+| `{IS_NEW}` | 用於標識記錄是否是會話中第一個的布爾值。 |
+| `{DEPTH}` | 會話中當前記錄的深度。 |
+
 ## 出處
 
-將客戶行動與成功聯繫起來，是瞭解影響客戶體驗的因素的重要部分。 下列ADF支援「第一個」和「最後一個」歸因，並設定不同的過期設定。
+將客戶行動與成功聯繫起來，是瞭解影響客戶體驗的因素的重要部分。 下列ADF支援使用不同過期設定的首次接觸歸因和上次接觸歸因。
 
-如需Adobe Analytics中歸因的詳細資訊，請參閱分析指 [南中的歸因IQ](https://docs.adobe.com/content/help/en/analytics/analyze/analysis-workspace/panels/attribution.html)[!DNL Analytics] 概觀。
+如需Adobe Analytics中歸因的詳細資訊，請參閱[!DNL Analytics]歸因面板指南中的[歸因IQ概觀](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/panels/attribution.html)。
 
 ### 首次接觸歸因
 
-傳回目標資料集中單一渠道的首次接觸歸因值和詳細 [!DNL ExperienceEvent] 資訊。 查詢會傳回具 `struct` 有首次接觸值、時間戳記和屬性的物件，以供選定渠道每一列傳回。
+此查詢會傳回目標[!DNL Experience Event]資料集中單一頻道的首次接觸歸因值和詳細資料。 查詢會傳回`struct`物件，其中包含選定渠道所傳回之每列的首次接觸值、時間戳記和歸因。
 
-如果您想瞭解哪些互動導致了一系列客戶動作，此查詢會很有用。 在下列範例中，資料中的初始追蹤代碼(`em:946426`)會歸因為客戶動作是第一次互動時的100%( [!DNL ExperienceEvent]`1.0`)責任。
+如果您想瞭解哪些互動導致了一系列客戶動作，此查詢會很有用。 在以下示例中，[!DNL Experience Event]資料中的初始追蹤代碼(`em:946426`)會歸因於客戶動作的100%(`1.0`)責任，因為這是第一次互動。
 
-### 規格
+**查詢語法**
 
-語法: `ATTRIBUTION_FIRST_TOUCH(timestamp, channelName, channelValue) OVER ([partition] [order] [frame])`
+```sql
+ATTRIBUTION_FIRST_TOUCH({TIMESTAMP}, {CHANNEL_NAME}, {CHANNEL_VALUE}) OVER ({PARTITION} {ORDER} {FRAME})
+```
 
 | 參數 | 說明 |
-| --- | --- |
-| `timestamp` | 在資料集中找到時間戳記欄位 |
-| `channelName` | 友好名稱，用作傳回物件中的標籤 |
-| `channelValue` | 作為查詢目標渠道的列或欄位 |
+| --------- | ----------- |
+| `{TIMESTAMP}` | 在資料集中找到的時間戳記欄位。 |
+| `{CHANNEL_NAME}` | 傳回物件的標籤。 |
+| `{CHANNEL_VALUE}` | 作為查詢目標渠道的列或欄位。 |
 
+有關`OVER()`內參數的說明，請參閱[窗口函式部分](#window-functions)。
 
-| 傳回的物件參數 | 說明 |
-| ---------------------- | ------------- |
-| `name` | 在 `channelName` ADF中輸入為標籤 |
-| `value` | 來自的 `channelValue` 值是 [!DNL ExperienceEvent] |
-| `timestamp` | 首次接觸 [!DNL ExperienceEvent] 發生的時間戳記 |
-| `fraction` | 首次接觸的歸因：分數信用 |
-
-#### 範例查詢
+**範例查詢**
 
 ```sql
 SELECT endUserIds._experience.mcid.id, timestamp, marketing.trackingCode,
@@ -135,7 +277,7 @@ ORDER BY endUserIds._experience.mcid.id, timestamp ASC
 LIMIT 10
 ```
 
-#### 結果
+**結果**
 
 ```console
                 id                 |       timestamp       | trackingCode |                   first_touch                    
@@ -153,31 +295,40 @@ LIMIT 10
 (10 rows)
 ```
 
-### 上次接觸歸因
+對於給定的示例查詢，結果在`first_touch`列中給出。 `first_touch`欄由下列元件組成：
 
-傳回目標資料集中單一渠道的上次接觸歸因值和詳細 [!DNL ExperienceEvent] 資訊。 查詢會傳回具 `struct` 有上次接觸值、時間戳記和屬性的物件，這些物件會針對所選渠道傳回的每一列。
-
-如果您想在一系列客戶動作中查看最終交互，此查詢非常實用。 在下列範例中，傳回物件中的追蹤代碼是每個記錄中的最後一個互 [!DNL ExperienceEvent] 動。 每個代碼都歸因於客戶`1.0`動作的100%()責任，因為這是上次互動。
-
-### 規格
-
-語法: `ATTRIBUTION_LAST_TOUCH(timestamp, channelName, channelValue) OVER ([partition] [order] [frame])`
+```sql
+({NAME}, {VALUE}, {TIMESTAMP}, {FRACTION})
+```
 
 | 參數 | 說明 |
-| --- | --- |
-| `timestamp` | 在資料集中找到時間戳記欄位 |
-| `channelName` | 友好名稱，用作傳回物件中的標籤 |
-| `channelValue` | 作為查詢目標渠道的列或欄位 |
+| --------- | ----------- |
+| `{NAME}` | `{CHANNEL_NAME}`，在ADF中作為標籤輸入。 |
+| `{VALUE}` | 來自`{CHANNEL_VALUE}`的值，即[!DNL Experience Event]中的首次接觸 |
+| `{TIMESTAMP}` | 發生首次接觸的[!DNL Experience Event]時間戳記。 |
+| `{FRACTION}` | 首次接觸的歸因，以小數表示。 |
 
+### 上次接觸歸因
 
-| 傳回的物件參數 | 說明 |
-| ---------------------- | ------------- |
-| `name` | 在 `channelName` ADF中輸入為標籤 |
-| `value` | 來自的 `channelValue` 值是 [!DNL ExperienceEvent] |
-| `timestamp` | 使用的 [!DNL ExperienceEvent] 時間 `channelValue` 戳 |
-| `fraction` | 上次接觸的歸因表示為分數信用 |
+此查詢會傳回目標[!DNL Experience Event]資料集中單一頻道的上次接觸歸因值和詳細資料。 查詢會傳回`struct`物件，其上次接觸值、時間戳記和屬性會針對所選頻道傳回的每一列。
 
-#### 範例查詢
+如果您想在一系列客戶動作中查看最終交互，此查詢非常實用。 在下列範例中，傳回物件中的追蹤代碼是每個[!DNL Experience Event]記錄中的最後一次互動。 每個代碼都歸因於客戶動作的100%(`1.0`)責任，因為這是上次的互動。
+
+**查詢語法**
+
+```sql
+ATTRIBUTION_LAST_TOUCH({TIMESTAMP}, {CHANNEL_NAME}, {CHANNEL_VALUE}) OVER ({PARTITION} {ORDER} {FRAME})
+```
+
+| 參數 | 說明 |
+| --------- | ----------- |
+| `{TIMESTAMP}` | 在資料集中找到的時間戳記欄位。 |
+| `{CHANNEL_NAME}` | 傳回物件的標籤。 |
+| `{CHANNEL_VALUE}` | 作為查詢目標渠道的列或欄位。 |
+
+有關`OVER()`內參數的說明，請參閱[窗口函式部分](#window-functions)。
+
+**範例查詢**
 
 ```sql
 SELECT endUserIds._experience.mcid.id, timestamp, marketing.trackingCode,
@@ -190,7 +341,7 @@ FROM experience_events
 ORDER BY endUserIds._experience.mcid.id, timestamp ASC
 ```
 
-#### 結果
+**結果**
 
 ```console
                 id                 |       timestamp       | trackingcode |                   last_touch                   
@@ -208,32 +359,44 @@ ORDER BY endUserIds._experience.mcid.id, timestamp ASC
 (10 rows)
 ```
 
-### 具有過期條件的首次接觸歸因
+對於給定的示例查詢，結果在`last_touch`列中給出。 `last_touch`欄由下列元件組成：
 
-傳回目標資料集中單一頻道的首次接觸歸因值和詳細資訊，在條 [!DNL ExperienceEvent] 件之後或之前過期。 查詢會傳回具 `struct` 有首次接觸值、時間戳記和屬性的物件，以供選定渠道每一列傳回。
-
-如果您想要查看互動在資料集的某個部分內導致一連串客戶動作，此查詢會很有 [!DNL ExperienceEvent] 用，因為您的選擇條件已決定。 在下列範例中，購買會(`commerce.purchases.value IS NOT NULL`)記錄在結果（7月15日、21日、23日和29日）中顯示的四天中的每一天，而每天的初始追蹤代碼會歸因為客戶活動的100%(`1.0`)責任。
-
-#### 規格
-
-語法: `ATTRIBUTION_FIRST_TOUCH_EXP_IF(timestamp, channelName, channelValue, expCondition, expBefore) OVER ([partition] [order] [frame])`
+```sql
+({NAME}, {VALUE}, {TIMESTAMP}, {FRACTION})
+```
 
 | 參數 | 說明 |
-| --- | --- |
-| `timestamp` | 在資料集中找到時間戳記欄位 |
-| `channelName` | 友好名稱，用作傳回物件中的標籤 |
-| `channelValue` | 作為查詢目標渠道的列或欄位 |
-| `expCondition` | 決定頻道到期點的條件 |
-| `expBefore` | 預設為 `false`。布林值，指出頻道在符合指定條件之前或之後過期。 主要針對作業過期條件啟用(例如 `sess.depth = 1, true`)，以確保未從先前的作業中選取首次接觸。 |
+| ---------- | ----------- |
+| `{NAME}` | `{CHANNEL_NAME}`，在ADF中作為標籤輸入。 |
+| `{VALUE}` | 來自`{CHANNEL_VALUE}`的值，即[!DNL Experience Event]中的上次接觸 |
+| `{TIMESTAMP}` | 使用`channelValue`的[!DNL Experience Event]時間戳記。 |
+| `{FRACTION}` | 上次接觸的歸因，以小數表示。 |
 
-| 傳回的物件參數 | 說明 |
-| ---------------------- | ------------- |
-| `name` | 在 `channelName` ADF中輸入為標籤 |
-| `value` | 此值 `channelValue`[!DNL ExperienceEvent] 是 `expCondition` |
-| `timestamp` | 首次接觸 [!DNL ExperienceEvent] 發生的時間戳記 |
-| `fraction` | 首次接觸的歸因：分數信用 |
+### 具有有效期限的首次接觸歸因
 
-#### 範例查詢
+此查詢會傳回目標[!DNL Experience Event]資料集中單一頻道的首次接觸歸因值和詳細資料，此值會在條件之後或之前過期。 查詢會傳回`struct`物件，其中包含選定渠道所傳回之每列的首次接觸值、時間戳記和歸因。
+
+如果您想瞭解哪些互動導致在[!DNL Experience Event]資料集的一部分中，由您選擇的條件所決定的一系列客戶動作，此查詢會很有用。 在以下示例中，在結果（7月15日、21日、23日和29日）中顯示的四天中，每天記錄購買(`commerce.purchases.value IS NOT NULL`)，並且每天的初始追蹤代碼都歸因於客戶活動的100%(`1.0`)責任。
+
+**查詢語法**
+
+```sql
+ATTRIBUTION_FIRST_TOUCH_EXP_IF(
+    {TIMESTAMP}, {CHANNEL_NAME}, {CHANNEL_VALUE}, {EXP_CONDITION}, {EXP_BEFORE}) 
+    OVER ({PARTITION} {ORDER} {FRAME})
+```
+
+| 參數 | 說明 |
+| --------- | ----------- |
+| `{TIMESTAMP}` | 在資料集中找到的時間戳記欄位。 |
+| `{CHANNEL_NAME}` | 傳回物件的標籤。 |
+| `{CHANNEL_VALUE}` | 作為查詢目標渠道的列或欄位。 |
+| `{EXP_CONDITION}` | 決定頻道到期點的條件。 |
+| `{EXP_BEFORE}` | 一個布爾值，指示通道是否在指定條件`{EXP_CONDITION}`之前或之後過期。 這主要針對作業階段的過期條件啟用，以確保未從先前的作業階段中選取首次接觸。 依預設，此值會設為`false`。 |
+
+有關`OVER()`函式中參數的說明，請參閱[窗口函式部分](#window-functions)。
+
+**範例查詢**
 
 ```sql
 SELECT endUserIds._experience.mcid.id, timestamp, marketing.trackingCode,
@@ -246,7 +409,7 @@ FROM experience_events
 ORDER BY endUserIds._experience.mcid.id, timestamp ASC
 ```
 
-#### 結果
+**結果**
 
 ```console
                 id                 |       timestamp       | trackingCode |                   first_touch                    
@@ -264,29 +427,43 @@ ORDER BY endUserIds._experience.mcid.id, timestamp ASC
 (10 rows)
 ```
 
-### 具有過期逾時的首次接觸歸因
+對於給定的示例查詢，結果在`first_touch`列中給出。 `first_touch`欄由下列元件組成：
 
-傳回指定時段內目標資料集中單一頻道的首次接觸歸 [!DNL ExperienceEvent] 因值和詳細資料。 查詢會傳回具 `struct` 有首次接觸值、時間戳記和屬性的物件，以供選定渠道每一列傳回。 如果您想查看在選定時間間隔內導致客戶操作的交互，此查詢非常有用。 在下列範例中，每個客戶動作傳回的首次接觸是前七天(`expTimeout = 86400 * 7`)內最早的互動。
-
-#### 規格
-
-語法: `ATTRIBUTION_FIRST_TOUCH_EXP_TIMEOUT(timestamp, channelName, channelValue, expTimeout) OVER ([partition] [order] [frame])`
+```sql
+({NAME}, {VALUE}, {TIMESTAMP}, {FRACTION})
+```
 
 | 參數 | 說明 |
-| --- | --- |
-| `timestamp` | 在資料集中找到時間戳記欄位 |
-| `channelName` | 友好名稱，用作傳回物件中的標籤 |
-| `channelValue` | 作為查詢目標渠道的列或欄位 |
-| `expTimeout` | 查詢搜尋首次接觸事件之渠道事件之前的時間窗口（以秒為單位） |
+| ---------- | ----------- |
+| `{NAME}` | `{CHANNEL_NAME}`，在ADF中作為標籤輸入。 |
+| `{VALUE}` | 來自`CHANNEL_VALUE}`的值，即[!DNL Experience Event]中`{EXP_CONDITION}`之前的首次接觸。 |
+| `{TIMESTAMP}` | 發生首次接觸的[!DNL Experience Event]時間戳記。 |
+| `{FRACTION}` | 首次接觸的歸因，以小數表示。 |
 
-| 傳回的物件參數 | 說明 |
-| ---------------------- | ------------- |
-| `name` | 在 `channelName` ADF中輸入為標籤 |
-| `value` | 指定時 `channelValue` 間間隔內首次接觸的值 `expTimeout` 。 |
-| `timestamp` | 首次接觸 [!DNL ExperienceEvent] 發生的時間戳記 |
-| `fraction` | 首次接觸的歸因：分數信用 |
+### 具有過期逾時的首次接觸歸因
 
-#### 範例查詢
+此查詢會傳回指定時段內目標[!DNL Experience Event]資料集中單一頻道的首次接觸歸因值和詳細資料。 查詢會傳回`struct`物件，其中包含選定渠道所傳回之每列的首次接觸值、時間戳記和歸因。
+
+如果您想查看在選定時間間隔內導致客戶操作的交互，此查詢非常有用。 在下列範例中，每個客戶動作傳回的首次接觸是前七天(`expTimeout = 86400 * 7`)內最早的互動。
+
+**規格**
+
+```sql
+ATTRIBUTION_FIRST_TOUCH_EXP_TIMEOUT(
+    {TIMESTAMP}, {CHANNEL_NAME}, {CHANNEL_VALUE}, {EXP_TIMEOUT}) 
+    OVER ({PARTITION} {ORDER} {FRAME})
+```
+
+| 參數 | 說明 |
+| --------- | ----------- |
+| `{TIMESTAMP}` | 在資料集中找到的時間戳記欄位。 |
+| `{CHANNEL_NAME}` | 傳回物件的標籤。 |
+| `{CHANNEL_VALUE}` | 作為查詢目標渠道的列或欄位。 |
+| `{EXP_TIMEOUT}` | 查詢搜尋首次接觸事件的頻道事件之前的時間窗口（以秒為單位）。 |
+
+有關`OVER()`函式中參數的說明，請參閱[窗口函式部分](#window-functions)。
+
+**範例查詢**
 
 ```sql
 SELECT endUserIds._experience.mcid.id, timestamp, marketing.trackingCode,
@@ -299,7 +476,7 @@ FROM experience_events
 ORDER BY endUserIds._experience.mcid.id, timestamp ASC
 ```
 
-#### 結果
+**結果**
 
 ```console
                 id                 |       timestamp       | trackingCode |                   first_touch                    
@@ -317,30 +494,42 @@ ORDER BY endUserIds._experience.mcid.id, timestamp ASC
 (10 rows)
 ```
 
-### 具有過期條件的上次接觸歸因
+對於給定的示例查詢，結果在`first_touch`列中給出。 `first_touch`欄由下列元件組成：
 
-傳回目標資料集中單一頻道的上次接觸歸因值和詳細資訊， [!DNL ExperienceEvent] 在條件之後或之前過期。 查詢會傳回具 `struct` 有上次接觸值、時間戳記和屬性的物件，這些物件會針對所選渠道傳回的每一列。 如果您想在資料集的一部分中查看一系列客戶動作中由您選擇的條件所決定的最後一個互動， [!DNL ExperienceEvent] 此查詢會很有用。 在下列範例中，購買會(`commerce.purchases.value IS NOT NULL`)記錄在結果（7月15日、21日、23日和29日）中顯示的四天中的每一天，而每天的最後一個追蹤代碼會歸因為客戶活動的100%(`1.0`)責任。
-
-#### 規格
-
-語法: `ATTRIBUTION_LAST_TOUCH_EXP_IF(timestamp, channelName, channelValue, expCondition, expBefore) OVER ([partition] [order] [frame])`
+```sql
+({NAME}, {VALUE}, {TIMESTAMP}, {FRACTION})
+```
 
 | 參數 | 說明 |
-| --- | --- |
-| `timestamp` | 在資料集中找到時間戳記欄位 |
-| `channelName` | 友好名稱，用作傳回物件中的標籤 |
-| `channelValue` | 作為查詢目標渠道的列或欄位 |
-| `expCondition` | 決定頻道到期點的條件 |
-| `expBefore` | 預設為 `false`。布林值，指出頻道在符合指定條件之前或之後過期。 主要針對作業過期條件啟用(例如 `sess.depth = 1, true`)，以確保上次接觸未從先前的作業中選取。 |
+| ---------- | ----------- |
+| `{NAME}` | `{CHANNEL_NAME}`，在ADF中作為標籤輸入。 |
+| `{VALUE}` | 在指定的`{EXP_TIMEOUT}`間隔內首次接觸的`CHANNEL_VALUE}`值。 |
+| `{TIMESTAMP}` | 發生首次接觸的[!DNL Experience Event]時間戳記。 |
+| `{FRACTION}` | 首次接觸的歸因，以小數表示。 |
 
-| 傳回的物件參數 | 說明 |
-| ---------------------- | ------------- |
-| `name` | 在 `channelName` ADF中輸入為標籤 |
-| `value` | 此值 `channelValue`[!DNL ExperienceEvent] 是 `expCondition` |
-| `timestamp` | 上次接觸發 [!DNL ExperienceEvent] 生的時間戳記 |
-| `percentage` | 上次接觸的歸因表示為分數信用 |
+### 具有過期條件的上次接觸歸因
 
-#### 範例查詢
+此查詢會傳回目標[!DNL Experience Event]資料集中單一頻道的上次接觸歸因值和詳細資料，此值會在條件之後或之前過期。 查詢會傳回`struct`物件，其上次接觸值、時間戳記和屬性會針對所選頻道傳回的每一列。
+
+如果您想在[!DNL Experience Event]資料集的某部分查看一系列客戶動作中由您選擇的條件所決定的最後一次互動，此查詢會很有用。 在以下示例中，在結果（7月15日、21日、23日和29日）中顯示的四天中，每天記錄一次購買(`commerce.purchases.value IS NOT NULL`)，而每天的最後一個追蹤代碼被歸為客戶活動的100%(`1.0`)責任。
+
+**查詢語法**
+
+```sql
+ATTRIBUTION_LAST_TOUCH_EXP_IF(
+    {TIMESTAMP}, {CHANNEL_NAME}, {CHANNEL_VALUE}, {EXP_CONDITION}, {EXP_BEFORE}) 
+    OVER ({PARTITION} {ORDER} {FRAME})
+```
+
+| 參數 | 說明 |
+| --------- | ----------- |
+| `{TIMESTAMP}` | 在資料集中找到的時間戳記欄位。 |
+| `{CHANNEL_NAME}` | 傳回物件的標籤。 |
+| `{CHANNEL_VALUE}` | 作為查詢目標渠道的列或欄位。 |
+| `{EXP_CONDITION}` | 決定頻道到期點的條件。 |
+| `{EXP_BEFORE}` | 一個布爾值，指示通道是否在指定條件`{EXP_CONDITION}`之前或之後過期。 這主要針對作業階段的過期條件啟用，以確保未從先前的作業階段中選取首次接觸。 依預設，此值會設為`false`。 |
+
+**範例查詢**
 
 ```sql
 SELECT endUserIds._experience.mcid.id, timestamp, marketing.trackingCode,
@@ -353,7 +542,7 @@ FROM experience_events
 ORDER BY endUserIds._experience.mcid.id, timestamp ASC
 ```
 
-#### 結果
+**範例結果**
 
 ```console
                 id                 |       timestamp       | trackingcode |                   last_touch                   
@@ -371,29 +560,43 @@ ORDER BY endUserIds._experience.mcid.id, timestamp ASC
 (10 rows)
 ```
 
-### 具有過期逾時的上次接觸歸因
+對於給定的示例查詢，結果在`last_touch`列中給出。 `last_touch`欄由下列元件組成：
 
-傳回指定時段內目標資料集中單一頻道的上次接觸歸 [!DNL ExperienceEvent] 因值和詳細資料。 查詢會傳回具 `struct` 有上次接觸值、時間戳記和屬性的物件，這些物件會針對所選渠道傳回的每一列。 如果您想查看所選時間間隔內的最後一次交互，此查詢非常有用。 在下列範例中，每個客戶動作的上次接觸是後七天(`expTimeout = 86400 * 7`)內的最終互動。
-
-#### 規格
-
-語法: `ATTRIBUTION_LAST_TOUCH_EXP_TIMEOUT(timestamp, channelName, channelValue, expTimeout) OVER ([partition] [order] [frame])`
+```sql
+({NAME}, {VALUE}, {TIMESTAMP}, {FRACTION})
+```
 
 | 參數 | 說明 |
-| --- | --- |
-| `timestamp` | 在資料集中找到時間戳記欄位 |
-| `channelName` | 友好名稱，用作傳回物件中的標籤 |
-| `channelValue` | 作為查詢目標渠道的列或欄位 |
-| `expTimeout` | 查詢搜尋上次接觸事件之渠道事件後的時間窗口（以秒為單位） |
+| ---------- | ----------- |
+| `{NAME}` | `{CHANNEL_NAME}`，在ADF中作為標籤輸入。 |
+| `{VALUE}` | 來自`{CHANNEL_VALUE}`的值，即[!DNL Experience Event]中`{EXP_CONDITION}`之前的上次接觸。 |
+| `{TIMESTAMP}` | 上次接觸發生的[!DNL Experience Event]時間戳記。 |
+| `{FRACTION}` | 上次接觸的歸因，以小數表示。 |
 
-| 傳回的物件參數 | 說明 |
-| ---------------------- | ------------- |
-| `name` | 在 `channelName` ADF中輸入為標籤 |
-| `value` | 指定間隔 `channelValue``expTimeout` 內上次接觸的值（來自） |
-| `timestamp` | 上次接觸發 [!DNL ExperienceEvent] 生的時間戳記 |
-| `percentage` | 上次接觸的歸因表示為分數信用 |
+### 具有過期逾時的上次接觸歸因
 
-#### 範例查詢
+此查詢會傳回指定時段內目標[!DNL Experience Event]資料集中單一頻道的上次接觸歸因值和詳細資料。 查詢會傳回`struct`物件，其上次接觸值、時間戳記和屬性會針對所選頻道傳回的每一列。
+
+如果您想查看所選時間間隔內的最後一次交互，此查詢非常有用。 在下列範例中，每個客戶動作最後傳回的接觸是後七天內(`expTimeout = 86400 * 7`)的最終互動。
+
+**查詢語法**
+
+```sql
+ATTRIBUTION_LAST_TOUCH_EXP_TIMEOUT(
+    {TIMESTAMP}, {CHANNEL_NAME}, {CHANNEL_VALUE}, {EXP_TIMEOUT}) 
+    OVER ({PARTITION} {ORDER} {FRAME})
+```
+
+| 參數 | 說明 |
+| --------- | ----------- |
+| `{TIMESTAMP}` | 在資料集中找到的時間戳記欄位。 |
+| `{CHANNEL_NAME}` | 傳回物件的標籤 |
+| `{CHANNEL_VALUE}` | 作為查詢目標渠道的列或欄位 |
+| `{EXP_TIMEOUT}` | 查詢搜尋上次接觸事件之頻道事件後的時間視窗（以秒為單位）。 |
+
+有關`OVER()`函式中參數的說明，請參閱[窗口函式部分](#window-functions)。
+
+**範例查詢**
 
 ```sql
 SELECT endUserIds._experience.mcid.id, timestamp, marketing.trackingCode,
@@ -406,7 +609,7 @@ FROM experience_events
 ORDER BY endUserIds._experience.mcid.id, timestamp ASC
 ```
 
-#### 結果
+**結果**
 
 ```console
                 id                 |       timestamp       | trackingcode |                   last_touch                   
@@ -424,30 +627,44 @@ ORDER BY endUserIds._experience.mcid.id, timestamp ASC
 (10 rows)
 ```
 
-## 上次／下次接觸
+對於給定的示例查詢，結果在`last_touch`列中給出。 `last_touch`欄由下列元件組成：
 
-瞭解客戶在體驗中的導覽方式非常重要。 它可用來瞭解客戶的參與深度、確認體驗的預期步驟如設計般運作，並找出影響客戶的潛在痛點。 下列ADF支援從其「上一頁」和「下一頁」關係建立路徑檢視。 您將可以建立「上一頁」和「下一頁」，或逐步執行多個事件以建立「路徑」。
-
-### 先前的接觸
-
-確定特定欄位的先前值，確定窗口內的定義步驟數。 請注意，在示例中， `WINDOW` 「函式」配置了一個框架，該框架 `ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW` 將ADF設定為查看當前行以及前面的所有行。
-
-#### 規格
-
-語法: `PREVIOUS(key, [shift, [ignoreNulls]]) OVER ([partition] [order] [frame])`
+```sql
+({NAME}, {VALUE}, {TIMESTAMP}, {FRACTION})
+```
 
 | 參數 | 說明 |
-| --- | --- |
-| `key` | 事件的欄或欄位。 |
-| `shift` | （選用）離目前事件較遠的事件數。 預設值為1。 |
-| `ingnoreNulls` | 要指示是否應忽略空 `key` 值的布爾值。 Default is `false`. |
+| ---------- | ----------- |
+| `{NAME}` | `{CHANNEL_NAME}`在ADF中作為標籤輸入。 |
+| `{VALUE}` | 在指定的`{EXP_TIMEOUT}`間隔內上次接觸的`{CHANNEL_VALUE}`值 |
+| `{TIMESTAMP}` | 上次接觸發生的[!DNL Experience Event]時間戳記 |
+| `{FRACTION}` | 上次接觸的歸因，以小數表示。 |
 
+## 路徑分析
 
-| 傳回的物件參數 | 說明 |
-| ---------------------- | ------------- |
-| `value` | 基於ADF的 `key` 數值 |
+路徑分析可用來瞭解客戶的參與深度、確認體驗的預期步驟如設計般運作，並找出影響客戶的潛在痛點。
 
-#### 範例查詢
+下列ADF支援從其先前和下一個關係建立路徑檢視。 您將可以建立上一頁和下一頁，或逐步執行多個事件以建立路徑。
+
+### 上一頁
+
+確定特定欄位的先前值，確定窗口內的定義步驟數。 請注意，在示例中，`WINDOW`函式配置了一個`ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW`幀，該幀設定ADF查看當前行和所有後續行。
+
+**查詢語法**
+
+```sql
+PREVIOUS({KEY}, {SHIFT}, {IGNORE_NULLS}) OVER ({PARTITION} {ORDER} {FRAME})
+```
+
+| 參數 | 說明 |
+| --------- | ----------- |
+| `{KEY}` | 事件的欄或欄位。 |
+| `{SHIFT}` | （可選）目前事件以外的事件數。 依預設，值為1。 |
+| `{IGNORE_NULLS}` | （可選）一個布林值，指示是否應忽略null `{KEY}`值。 依預設，值為`false`。 |
+
+有關`OVER()`函式中參數的說明，請參閱[窗口函式部分](#window-functions)。
+
+**範例查詢**
 
 ```sql
 SELECT endUserIds._experience.mcid.id, _experience.analytics.session.num, timestamp, web.webPageDetails.name
@@ -460,7 +677,7 @@ FROM experience_events
 ORDER BY endUserIds._experience.mcid.id, _experience.analytics.session.num, timestamp ASC
 ```
 
-#### 結果
+**結果**
 
 ```console
                 id                 |       timestamp       |                 name                |                    previous_page                    
@@ -478,26 +695,27 @@ ORDER BY endUserIds._experience.mcid.id, _experience.analytics.session.num, time
 (10 rows)
 ```
 
-### 下次接觸
+對於給定的示例查詢，結果在`previous_page`列中給出。 `previous_page`欄內的值以ADF中使用的`{KEY}`為基礎。
 
-確定特定欄位的下一個值，即在窗口內定義的步驟數。 請注意，在示例中， `WINDOW` 「函式」配置了一個框架，該框架 `ROWS BETWEEN CURRENT ROW AND UNBOUNDED FOLLOWING` 將ADF設定為查看當前行以及其後的所有行。
+### 下一頁
 
-#### 規格
+確定特定欄位的下一個值，即在窗口內定義的步驟數。 請注意，在示例中，`WINDOW`函式配置了一個`ROWS BETWEEN CURRENT ROW AND UNBOUNDED FOLLOWING`幀，該幀設定ADF查看當前行和所有後續行。
 
-語法: `NEXT(key, [shift, [ignoreNulls]]) OVER ([partition] [order] [frame])`
+**查詢語法**
+
+```sql
+NEXT({KEY}, {SHIFT}, {IGNORE_NULLS}) OVER ({PARTITION} {ORDER} {FRAME})
+```
 
 | 參數 | 說明 |
-| --- | --- |
-| `key` | 事件的欄或欄位 |
-| `shift` | （選用）離目前事件較遠的事件數。 預設值為1。 |
-| `ingnoreNulls` | 要指示是否應忽略空 `key` 值的布爾值。 Default is `false`. |
+| --------- | ----------- |
+| `{KEY}` | 事件的欄或欄位。 |
+| `{SHIFT}` | （可選）目前事件以外的事件數。 依預設，值為1。 |
+| `{IGNORE_NULLS}` | （可選）一個布林值，指示是否應忽略null `{KEY}`值。 依預設，值為`false`。 |
 
+有關`OVER()`函式中參數的說明，請參閱[窗口函式部分](#window-functions)。
 
-| 傳回的物件參數 | 說明 |
-| ---------------------- | ------------- |
-| `value` | 基於ADF的 `key` 數值 |
-
-#### 範例查詢
+**範例查詢**
 
 ```sql
 SELECT endUserIds._experience.aaid.id, timestamp, web.webPageDetails.name,
@@ -511,7 +729,7 @@ ORDER BY endUserIds._experience.aaid.id, timestamp ASC
 LIMIT 10
 ```
 
-#### 結果
+**結果**
 
 ```console
                 id                 |       timestamp       |                name                 |             previous_page             
@@ -529,27 +747,33 @@ LIMIT 10
 (10 rows)
 ```
 
+對於給定的示例查詢，結果在`previous_page`列中給出。 `previous_page`欄內的值以ADF中使用的`{KEY}`為基礎。
+
 ## 時間間隔
 
-時間間隔可讓您探索事件發生之前或之後某個時段內的潛在客戶行為。 查看所有客戶在促銷活動或其他類型事件之後7天內的事件。
+「介於時間間隔」可讓您在事件發生前或之後的特定時段內探索潛在客戶行為。
 
 ### 上次比對之間的時間
 
-提供新維度，可測量自特定事件後經過的時間。
+此查詢會傳回一個數字，代表自前一個相符事件出現以來的時間單位。 如果找不到相符的事件，則傳回null。
 
-#### 規格
+**查詢語法**
 
-語法: `TIME_BETWEEN_PREVIOUS_MATCH(timestamp, eventDefintion, [timeUnit]) OVER ([partition] [order] [frame])`
+```sql
+TIME_BETWEEN_PREVIOUS_MATCH(
+    {TIMESTAMP}, {EVENT_DEFINITION}, {TIME_UNIT})
+    OVER ({PARTITION} {ORDER} {FRAME})
+```
 
 | 參數 | 說明 |
-| --- | --- |
-| `timestamp` | 在所有事件上填入的資料集中找到時間戳記欄位。 |
-| `eventDefintion` | 運算式以限定上一個事件。 |
-| `timeUnit` | 輸出單位：日、小時、分和秒。 預設值為秒。 |
+| --------- | ----------- |
+| `{TIMESTAMP}` | 在資料集中，在所有事件上填入的時間戳記欄位。 |
+| `{EVENT_DEFINITION}` | 用於限定前一個事件的表達式。 |
+| `{TIME_UNIT}` | 輸出單位。 可能的值包括天、小時、分鐘和秒。 預設值為秒。 |
 
-輸出：傳回代表上次顯示相符事件以來的時間單位的數字，若未找到相符事件，則仍為null。
+有關`OVER()`函式中參數的說明，請參閱[窗口函式部分](#window-functions)。
 
-#### 範例查詢
+**範例查詢**
 
 ```sql
 SELECT 
@@ -573,7 +797,7 @@ ORDER BY average_minutes_since_registration
 LIMIT 10
 ```
 
-#### 結果
+**結果**
 
 ```console
              page_name             | average_minutes_since_registration 
@@ -591,23 +815,27 @@ LIMIT 10
 (10 rows)
 ```
 
+對於給定的示例查詢，結果在`average_minutes_since_registration`列中給出。 `average_minutes_since_registration`欄中的值是目前和先前事件之間的時間差異。 時間單位先前在`{TIME_UNIT}`中定義。
+
 ### 下次比對時間
 
-提供新維度，可測量特定事件發生前的時間。
+此查詢會傳回負數，表示下一個相符事件後的時間單位。 如果找不到相符的事件，則會傳回null。
 
-#### 規格
+**查詢語法**
 
-語法: `TIME_BETWEEN_NEXT_MATCH(timestamp, eventDefintion, [timeUnit]) OVER ([partition] [order] [frame])`
+```sql
+TIME_BETWEEN_NEXT_MATCH({TIMESTAMP}, {EVENT_DEFINITION}, {TIME_UNIT}) OVER ({PARTITION} {ORDER} {FRAME})
+```
 
 | 參數 | 說明 |
-| --- | --- |
-| `timestamp` | 在所有事件上填入的資料集中找到時間戳記欄位。 |
-| `eventDefintion` | 運算式以限定下一個事件。 |
-| `timeUnit` | 輸出單位：日、小時、分和秒。 預設值為秒。 |
+| --------- | ----------- |
+| `{TIMESTAMP}` | 在資料集中，在所有事件上填入的時間戳記欄位。 |
+| `{EVENT_DEFINITION}` | 限定下一個事件的運算式。 |
+| `{TIME_UNIT}` | （可選）輸出單位。 可能的值包括天、小時、分鐘和秒。 預設值為秒。 |
 
-輸出：傳回表示下一個匹配事件後的時間單位的負數，如果找不到匹配事件，則仍為null。
+有關`OVER()`函式中參數的說明，請參閱[窗口函式部分](#window-functions)。
 
-#### 範例查詢
+**範例查詢**
 
 ```sql
 SELECT 
@@ -631,7 +859,7 @@ ORDER BY average_minutes_until_order_confirmation DESC
 LIMIT 10
 ```
 
-#### 結果
+**結果**
 
 ```console
              page_name             | average_minutes_until_order_confirmation 
@@ -649,6 +877,14 @@ LIMIT 10
 (10 rows)
 ```
 
+對於給定的示例查詢，結果在`average_minutes_until_order_confirmation`列中給出。 `average_minutes_until_order_confirmation`欄中的值是目前事件與下一個事件之間的時間差異。 時間單位先前在`{TIME_UNIT}`中定義。
+
 ## 後續步驟
 
-使用此處所述的函式，您可以編寫查詢來訪問您自己的 [!DNL ExperienceEvent] 資料集 [!DNL Query Service]。 有關在中編寫查詢的詳細信 [!DNL Query Service]息，請參閱有關建立查 [詢的文檔](../creating-queries/creating-queries.md)。
+使用此處所述的函式，可以編寫查詢以使用[!DNL Query Service]訪問您自己的[!DNL Experience Event]資料集。 有關在[!DNL Query Service]中編寫查詢的詳細資訊，請參閱有關建立查詢[的文檔。](../creating-queries/creating-queries.md)
+
+## 其他資源
+
+以下視訊說明如何在Adobe Experience Platform介面和PSQL用戶端中執行查詢。 此外，視訊還使用XDM物件中涉及個別屬性的範例、使用Adobe定義的函式，以及使用CREATE TABLE AS SELECT(CTAS)。
+
+>[!VIDEO](https://video.tv.adobe.com/v/29796?quality=12&learn=on)
