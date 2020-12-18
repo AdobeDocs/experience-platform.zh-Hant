@@ -6,9 +6,9 @@ topic: overview
 type: Tutorial
 description: 本教學課程提供使用平台使用者介面建立SFTP來源連接器的步驟。
 translation-type: tm+mt
-source-git-commit: 7b638f0516804e6a2dbae3982d6284a958230f42
+source-git-commit: 0d0d3aa4213f3a8252de82c47eef6e9caa4d3e9e
 workflow-type: tm+mt
-source-wordcount: '659'
+source-wordcount: '695'
 ht-degree: 0%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->SFTP連接器為測試版。 如需使用 [測試版標籤連接器的詳細資訊](../../../../home.md#terms-and-conditions) ，請參閱來源概觀。
+>SFTP連接器為測試版。 有關使用beta標籤連接器的詳細資訊，請參閱[來源概觀](../../../../home.md#terms-and-conditions)。
 
 本教學課程提供使用平台使用者介面建立SFTP來源連接器的步驟。
 
@@ -31,7 +31,11 @@ ht-degree: 0%
    * [架構編輯器教程](../../../../../xdm/tutorials/create-schema-ui.md):瞭解如何使用架構編輯器UI建立自訂架構。
 * [[!DNL Real-time Customer Profile]](../../../../../profile/home.md):根據來自多個來源的匯整資料，提供統一、即時的消費者個人檔案。
 
-如果您已經有有效的SFTP連接，則可以跳過本文檔的其餘部分，並繼續有關配置資料流 [的教程](../../dataflow/batch/cloud-storage.md)。
+>[!IMPORTANT]
+>
+>建議在使用SFTP來源連線來收錄JSON物件時，避免新行或回車。 若要解決限制，請每行使用單一JSON物件，並使用多行來建立後續檔案。
+
+如果您已經有有效的SFTP連接，則可跳過本文檔的其餘部分，繼續[配置資料流](../../dataflow/batch/cloud-storage.md)的教程。
 
 ### 收集必要的認證
 
@@ -49,29 +53,29 @@ ht-degree: 0%
 
 ## 連線至您的SFTP伺服器
 
-登入 [Adobe Experience Platform](https://platform.adobe.com) ，然後從左側導覽列選取 **[!UICONTROL Sources]** ，以存取  Sources工作區。 「目 [!UICONTROL 錄] 」畫面會顯示多種來源，您可為其建立傳入帳戶。
+登入[Adobe Experience Platform](https://platform.adobe.com)，然後從左側導覽列選擇&#x200B;**[!UICONTROL Sources]**&#x200B;以存取[!UICONTROL Sources]工作區。 [!UICONTROL Catalog]畫面會顯示各種來源，您可以為其建立傳入帳戶。
 
 您可以從畫面左側的目錄中選取適當的類別。 或者，您也可以使用搜尋選項找到您要使用的特定來源。
 
-在「雲端 [!UICONTROL 儲存空間] 」類別下，選 **[!UICONTROL 取SFTP]**。 如果這是您第一次使用此連接器，請選擇「配 **[!UICONTROL 置」]**。 否則，請選 **[!UICONTROL 擇「添加資料]** 」以建立新的SFTP連接。
+在[!UICONTROL 雲儲存]類別下，選擇&#x200B;**[!UICONTROL SFTP]**。 如果這是您第一次使用此連接器，請選擇&#x200B;**[!UICONTROL Configure]**。 否則，請選擇&#x200B;**[!UICONTROL 添加資料]**&#x200B;以建立新的SFTP連接。
 
 ![目錄](../../../../images/tutorials/create/sftp/catalog.png)
 
-此時 **[!UICONTROL 將顯示「連接到SFTP]** 」頁。 在此頁上，您可以使用新認證或現有認證。
+此時將顯示&#x200B;**[!UICONTROL 連接到SFTP]**&#x200B;頁。 在此頁上，您可以使用新認證或現有認證。
 
 ### 新帳戶
 
-如果您使用新認證，請選擇「新 **[!UICONTROL 帳戶」]**。 在出現的輸入表單上，提供名稱、選用說明和您的認證。 完成後，選擇 **[!UICONTROL Connect]** ，然後為建立新連接留出一些時間。
+如果您使用新憑據，請選擇&#x200B;**[!UICONTROL 新建帳戶]**。 在出現的輸入表單上，提供名稱、選用說明和您的認證。 完成後，選擇&#x200B;**[!UICONTROL Connect]** ，然後為建立新連接留出一些時間。
 
-SFTP連接器提供您不同的存取驗證類型。 在「 **[!UICONTROL Account authentication]** （帳戶驗證）」下 **[!UICONTROL ，選擇「]** Password（密碼）」以使用基於密碼的憑據。
+SFTP連接器提供您不同的存取驗證類型。 在&#x200B;**[!UICONTROL 帳戶驗證]**&#x200B;下，選擇&#x200B;**[!UICONTROL 密碼]**&#x200B;使用基於密碼的憑據。
 
 ![connect-password](../../../../images/tutorials/create/sftp/password.png)
 
-或者，您也可以選擇 **[SSH公鑰]** ，並使用私鑰內容和密碼短語的組合來連接 [!UICONTROL SFTP帳戶]。
+或者，您可以選擇&#x200B;**[SSH公鑰]**，並使用[!UICONTROL 私鑰內容]和[!UICONTROL 密碼短語]的組合來連接SFTP帳戶。
 
 >[!IMPORTANT]
 >
->SFTP連接器支援RSA/DSA OpenSSH密鑰。 請確定您的關鍵檔案內容以開頭 `"-----BEGIN [RSA/DSA] PRIVATE KEY-----"`。 如果私密金鑰檔案是PPK格式檔案，請使用PuTTY工具從PPK轉換為OpenSSH格式。
+>SFTP連接器支援RSA/DSA OpenSSH密鑰。 請確定您的關鍵檔案內容以`"-----BEGIN [RSA/DSA] PRIVATE KEY-----"`開頭。 如果私密金鑰檔案是PPK格式檔案，請使用PuTTY工具從PPK轉換為OpenSSH格式。
 
 ![connect-ssh](../../../../images/tutorials/create/sftp/ssh.png)
 
@@ -82,10 +86,10 @@ SFTP連接器提供您不同的存取驗證類型。 在「 **[!UICONTROL Accoun
 
 ### 現有帳戶
 
-若要連線現有帳戶，請選取您要連線的FTP或SFTP帳戶，然後選取「下 **[!UICONTROL 一]** 步」繼續。
+若要連接現有帳戶，請選取您要連線的FTP或SFTP帳戶，然後選取「下一步」****&#x200B;繼續。
 
 ![現有](../../../../images/tutorials/create/sftp/existing.png)
 
 ## 後續步驟
 
-在本教學課程中，您已建立與FTP或SFTP帳戶的連線。 您現在可以繼續下一個教學課程，並 [設定資料流，將雲端儲存空間的資料匯入平台](../../dataflow/batch/cloud-storage.md)。
+在本教學課程中，您已建立與FTP或SFTP帳戶的連線。 您現在可以繼續下一個教學課程，並[設定資料流，將雲端儲存空間的資料匯入Platform](../../dataflow/batch/cloud-storage.md)。
