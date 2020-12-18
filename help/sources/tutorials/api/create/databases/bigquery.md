@@ -6,9 +6,9 @@ topic: overview
 type: Tutorial
 description: 本教學課程使用Flow Service API來引導您完成將Experience Platform連接至Google BigQuery（以下稱為「BigQuery」）的步驟。
 translation-type: tm+mt
-source-git-commit: 9092c3d672967d3f6f7bf7116c40466a42e6e7b1
+source-git-commit: 74fbf388cf645c89f9f6d00a5ae2e59ba94041b9
 workflow-type: tm+mt
-source-wordcount: '608'
+source-wordcount: '610'
 ht-degree: 1%
 
 ---
@@ -35,7 +35,7 @@ ht-degree: 1%
 
 ### 收集必要的認證
 
-要使[!DNL Flow Service]與BigQuery連接，必須提供以下連接屬性：
+要[!DNL Flow Service]將BigQuery連接到平台，您必須提供以下OAuth 2.0驗證值：
 
 | 憑證 | 說明 |
 | ---------- | ----------- |
@@ -89,20 +89,22 @@ curl -X POST \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d '{
-        "name": "BigQuery base connection",
-        "description": "Base connection for Google BigQuery",
+        "name": "Google BigQuery connection",
+        "description": "Google BigQuery connection",
         "auth": {
             "specName": "Basic Authentication",
+            "type": "OAuth2.0",
             "params": {
-                "project": "{PROJECT}",
-                "clientId": "{CLIENT_ID}",
-                "clientSecret": "{CLIENT_SECRET}",
-                "refreshToken": "{REFRESH_TOKEN}"
-            }
+                    "project": "{PROJECT}",
+                    "clientId": "{CLIENT_ID},
+                    "clientSecret": "{CLIENT_SECRET}",
+                    "refreshToken": "{REFRESH_TOKEN}"
+                }
         },
         "connectionSpec": {
             "id": "3c9b37f8-13a6-43d8-bad3-b863b941fedd",
             "version": "1.0"
+        }
     }'
 ```
 
@@ -110,13 +112,13 @@ curl -X POST \
 | --------- | ----------- |
 | `auth.params.project` | 要查詢的預設[!DNL BigQuery]項目的項目ID。 反對。 |
 | `auth.params.clientId` | 用來產生重新整理Token的ID值。 |
-| `auth.params.clientSecret` | 用來產生重新整理Token的用戶端值。 |
-| `auth.params.refreshToken` | 從[!DNL Google]取得的重新整理Token，用於授權存取[!DNL BigQuery]。 |
-| `connectionSpec.id` | 在上一步中檢索的[!DNL BigQuery]帳戶的連接規範`id`。 |
+| `auth.params.clientSecret` | 用於生成刷新令牌的客戶端值。 |
+| `auth.params.refreshToken` | 從[!DNL Google]獲取的用於授權對[!DNL BigQuery]的訪問的刷新令牌。 |
+| `connectionSpec.id` | 在上一步中檢索到的[!DNL BigQuery]帳戶的連接規範`id`。 |
 
 **回應**
 
-成功的響應返回新建立的連接的詳細資訊，包括其唯一標識符(`id`)。 在下一個教學課程中探索資料時，需要此ID。
+成功的響應返回新建立的連接的詳細資訊，包括其唯一標識符(`id`)。 在下一教程中瀏覽資料時需要此ID。
 
 ```json
 {
@@ -127,4 +129,4 @@ curl -X POST \
 
 ## 後續步驟
 
-在本教程中，您使用[!DNL Flow Service] API建立了[!DNL BigQuery]連接，並獲取了該連接的唯一ID值。 在下一個教程中，您可以使用此連接ID來學習如何使用流服務API[來瀏覽資料庫或NoSQL系統。](../../explore/database-nosql.md)
+按照本教程，您已使用[!DNL Flow Service] API建立了[!DNL BigQuery]連接，並已獲得該連接的唯一ID值。 在下一教程中，您可以使用此連接ID來學習如何使用流服務API[瀏覽資料庫或NoSQL系統。](../../explore/database-nosql.md)
