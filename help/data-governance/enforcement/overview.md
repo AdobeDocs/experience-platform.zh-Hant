@@ -5,9 +5,9 @@ title: 策略實施概述
 topic: enforcement
 description: 一旦資料使用標籤套用至Adobe Experience Platform資料集，並為針對這些標籤的行銷動作定義資料使用原則後，「資料治理」功能可讓您強制執行這些原則並防止構成違反原則的資料作業。 Data Governance功能在平台上提供兩種策略實施方法：基於API的實施和自動實施。
 translation-type: tm+mt
-source-git-commit: 83f1392ffab3571ebd91325123fbe7095ad59e28
+source-git-commit: 30733f2274ff8cb9ae73cf2b9f7f0219fefbd393
 workflow-type: tm+mt
-source-wordcount: '257'
+source-wordcount: '219'
 ht-degree: 0%
 
 ---
@@ -15,18 +15,16 @@ ht-degree: 0%
 
 # 策略實施概述
 
-一旦資料使用標籤套用至資料集 [!DNL Platform] ，並且已針對這些標籤定義資料使用策略以執行行銷動作， [!DNL Data Governance] 這些功能可讓您強制執行這些原則並防止構成違反原則的資料作業。
+資料使用標籤套用至[!DNL Platform]資料集，並且已針對這些標籤定義資料使用策略以執行行銷動作後，[!DNL Data Governance]功能可讓您強制執行這些原則並防止資料操作違反原則。
 
-政策執行的方法有兩種： [!DNL Data Governance][!DNL Platform]以API為基礎的強制與自動強制。
+[!DNL Platform]上的[!DNL Data Governance]功能提供兩種策略實施方法：以API為基礎的強制與自動強制。
 
 ## 以API為基礎的強制
 
-API [!DNL Policy Service] 提供端點，可讓您針對資料集或資料使用標籤的任意組合來測試行銷動作，以檢查是否發生任何違反原則的情況。 然後，您可以根據API回應，在體驗應用程式中設定通訊協定，以適當強制符合資料使用原則。
+[!DNL Policy Service] API提供端點，可讓您針對資料集或資料使用標籤的任意組合來測試行銷動作，以檢查是否發生任何違反原則的情況。 然後，您可以根據API回應，在體驗應用程式中設定通訊協定，以適當強制符合資料使用原則。
 
-如需如何使用API [評估策略](api-enforcement.md) ，請參閱策略實施教學課程。
+有關如何使用API評估策略的步驟，請參閱[API型強制實施](./api-enforcement.md)的教學課程。
 
 ## 自動強制
 
-某些以（例如）為基礎的應用程 [!DNL Experience Platform] 式可自動強 [!DNL Real-time Customer Data Platform]制執行資料使用政策。 每個應用程式都維護自己的方法來呈現違反策略的情況並提供解決問題的步驟。
-
-即時CDP中的自動策略實施利用資料譜系、資料分類和策略管理功能來評估和呈現策略違規。 有關詳細資訊， [請參閱即時CDP資料治理概述](../../rtcdp/privacy/data-governance-overview.md#enforce-data-usage-compliance) 。
+Experience Platform運用資料世系、資料分類和原則管理功能，自動評估並呈現違反原則的情況。 如需詳細資訊，請參閱[自動原則實施](./auto-enforcement.md)的概述。
