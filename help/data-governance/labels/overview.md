@@ -5,9 +5,9 @@ title: 資料使用標籤概觀
 topic: labels
 description: Adobe Experience Platform資料治理可讓您將資料使用標籤套用至資料集和欄位，並依據相關資料使用政策對每個資料使用標籤進行分類。 本檔案概述Experience Platform中的資料使用標籤。
 translation-type: tm+mt
-source-git-commit: f86f7483e7e78edf106ddd34dc825389dadae26a
+source-git-commit: e680191d495e4c33baa8242d40a15b9124eec8cd
 workflow-type: tm+mt
-source-wordcount: '616'
+source-wordcount: '603'
 ht-degree: 0%
 
 ---
@@ -15,48 +15,48 @@ ht-degree: 0%
 
 # 資料使用標籤概觀
 
-Adobe Experience Platform可 [!DNL Data Governance] 讓您將資料使用標籤套用至資料集和欄位，並依據相關資料使用政策對每個欄位進行分類。
+Adobe Experience Platform [!DNL Data Governance]可讓您將資料使用標籤套用至資料集和欄位，並依據相關資料使用政策對每個欄位進行分類。
 
-本檔案概述中的資料使用標籤 [!DNL Experience Platform]。 在閱讀本指南之前，請參閱資 [料治理概觀](../home.md) ，以取得資料治理架構更健全的簡介。
+本檔案概述[!DNL Experience Platform]中的資料使用標籤。 在閱讀本指南之前，請參閱[資料治理概觀](../home.md)以取得更強穩的資料治理架構簡介。
 
 ## 瞭解資料使用標籤
 
-資料使用標籤可讓您根據套用至該資料的使用原則來分類資料集和欄位。 標籤可隨時套用，提供您選擇控制資料的彈性。 最佳做法鼓勵在資料被吸收或資料可供使 [!DNL Experience Platform]用時，立即加上標籤 [!DNL Platform]。
+資料使用標籤可讓您根據套用至該資料的使用原則來分類資料集和欄位。 標籤可隨時套用，提供您選擇控制資料的彈性。 最佳做法鼓勵在資料被收錄到[!DNL Experience Platform]或資料可供[!DNL Platform]使用時，立即加上標籤。
 
 在資料集層級套用的資料使用標籤會傳播至資料集內的所有欄位。 標籤也可以直接套用至資料集中的個別欄位（欄標題），而不需傳播。
 
-[!DNL Platform] 提供數種「核心」資料使用標籤，其中涵蓋適用於資料治理的各種常見限制。 如需這些標籤及其所代表之使用原則的詳細資訊，請參閱核心資料使 [用標籤的指南](reference.md)。
+[!DNL Platform] 提供數種「核心」資料使用標籤，其中涵蓋適用於資料治理的各種常見限制。有關這些標籤及其所代表的使用策略的詳細資訊，請參閱[核心資料使用標籤](reference.md)上的指南。
 
-除了Adobe提供的標籤外，您也可以為組織定義您自己的自訂標籤。 如需詳細資訊，請 [參閱管理](#manage-labels) 標籤一節。
+除了Adobe提供的標籤外，您也可以為組織定義您自己的自訂標籤。 如需詳細資訊，請參閱[管理標籤的章節。](#manage-labels)
 
 ## 對象區段的標籤繼承
 
-由 [Adobe Experience Platform Segmentation Service建立的所有受眾細分](../../segmentation/home.md) ，都會繼承其對應資料集的使用標籤。 這可讓以Experience Platform（例如）為基礎的應用程式，在啟 [!DNL Real-time Customer Data Platform]用區段至目的地時，提供自動資料使用原則強制執行功能。
+由[Adobe Experience Platform Segmentation Service](../../segmentation/home.md)建立的所有受眾細分會繼承其對應資料集的使用標籤。 這可讓Experience Platform在將區段啟用至目標時，提供自動資料使用原則強制執行功能。
 
-除了繼承資料集層級標籤外，依預設，區段會繼承其關聯資料集的所有欄位層級標籤。 根據您的應用程 [!DNL Platform]式使用區段的方式，您可能會指定使用哪些欄位，從而防止區段繼承排除欄位的標籤。
+除了繼承資料集層級標籤外，依預設，區段會繼承其關聯資料集的所有欄位層級標籤。 因此，您可以更輕鬆地識別哪些屬性應排除在區段之外，並防止它們繼承排除欄位中的標籤。
 
-有關自動強制執行在即時CDP中如何運作的詳細資訊，請參見有關即時CDP中 [資料治理的概述](../../rtcdp/privacy/data-governance-overview.md#enforce-data-usage-compliance)。
+有關自動強制執行在平台中如何運作的詳細資訊，請參閱[自動強制執行原則的概觀。](../enforcement/auto-enforcement.md)
 
 ### 繼承Adobe Audience Manager資料匯出控制項
 
-[!DNL Experience Platform] 能夠與Adobe Audience Manager共用區段。 套用至Audience Manager區段的任何「資料匯出控制」都會轉換為由所識別的相同標籤和行銷動 [!DNL Experience Platform] 作 [!DNL Data Governance]。
+[!DNL Experience Platform] 能夠與Adobe Audience Manager共用區段。已套用至Audience Manager區段的任何「資料匯出控制」都會轉換為[!DNL Experience Platform] [!DNL Data Governance]所識別的等同標籤和行銷動作。
 
-如需特定「資料匯出控制」如何對應至中的資料使用標籤的參考 [!DNL Platform]資訊，請參閱 [Audience Manager檔案](https://docs.adobe.com/content/help/en/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aam-data-export-control-in-aep)。
+有關特定「資料匯出控制」如何對應至[!DNL Platform]中的資料使用標籤的參考，請參閱[Audience Manager檔案](https://docs.adobe.com/content/help/en/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aam-data-export-control-in-aep)。
 
-## 管理資料使用標籤 [!DNL Experience Platform] {#manage-labels}
+## 在[!DNL Experience Platform] {#manage-labels}中管理資料使用標籤
 
-您可以使用API或使用者介面 [!DNL Experience Platform] 來管理資料使用標籤。 請參閱下列子章節，以取得各章節的詳細資訊。
+您可以使用[!DNL Experience Platform] API或使用者介面來管理資料使用標籤。 請參閱下列子章節，以取得各章節的詳細資訊。
 
 ### 使用UI
 
-UI中 **[!UICONTROL 的]** 「原則」工作區 [!DNL Experience Platform] 可讓您檢視並管理組織的核心標籤和自訂標籤。 工作 **[!DNL Datasets]** 區可讓您將標籤套用至資料集和欄位。 如需詳細資訊，請參閱「標 [簽使用指南」](user-guide.md)。
+[!DNL Experience Platform] UI中的&#x200B;**[!UICONTROL Policys]**&#x200B;工作區可讓您檢視和管理組織的核心標籤和自訂標籤。 **[!DNL Datasets]**&#x200B;工作區可讓您將標籤套用至資料集和欄位。 有關詳細資訊，請參閱[標籤使用手冊](user-guide.md)。
 
 ### 使用API
 
-Policy `/labels` Service API中的 [](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) 端點可讓您以程式設計方式管理資料使用標籤，包括建立自訂標籤。 如需詳細資 [訊，請參閱標籤端](../api/labels.md) 點指南。
+[Policy Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml)中的`/labels`端點可讓您以程式設計方式管理資料使用標籤，包括建立自訂標籤。 有關詳細資訊，請參閱[標籤端點指南](../api/labels.md)。
 
-資料 [集服務API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dataset-service.yaml) 可用來管理資料集和欄位的標籤。 如需詳細資訊，請參 [閱管理資料集標籤](./dataset-api.md) 的指南。
+[資料集服務API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dataset-service.yaml)用於管理資料集和欄位的標籤。 如需詳細資訊，請參閱[管理資料集標籤](./dataset-api.md)上的指南。
 
 ## 後續步驟
 
-本檔案介紹了資料使用標籤及其在資料治理框架中的作用。 請參閱本指南中連結的檔案，進一步瞭解如何管理中的標籤 [!DNL Experience Platform]。
+本檔案介紹了資料使用標籤及其在資料治理框架中的作用。 請參閱本指南中連結的檔案，進一步瞭解如何管理[!DNL Experience Platform]中的標籤。
