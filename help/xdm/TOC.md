@@ -5,15 +5,15 @@ user-guide-title: Experience Data Model (XDM) 系統說明
 breadcrumb-title: Experience Data Model (XDM) 指南
 user-guide-description: 使用 Experience Data Model (XDM) 類別和 mixin 將體驗資料標準化。
 translation-type: tm+mt
-source-git-commit: df763e246cd6930a31402f0a2c94d657159f4fe8
+source-git-commit: 099e88373d945660e7529bbd508e616869fd01da
 workflow-type: tm+mt
-source-wordcount: '197'
-ht-degree: 22%
+source-wordcount: '216'
+ht-degree: 24%
 
 ---
 
 
-# Experience Data Model (XDM) System {#xdm}
+# 體驗資料模型(XDM)系統{#xdm}
 
 * [XDM系統概述](home.md)
 * 結構描述 {#schema}
@@ -21,19 +21,19 @@ ht-degree: 22%
    * [資料建模的最佳實務](schema/best-practices.md)
    * [XDM欄位類型約束](schema/field-constraints.md)
    * [XDM欄位字典](schema/field-dictionary.md)
-   * 架構使用案例 {#use-cases}
+   * 架構使用案例{#use-cases}
       * [同意與偏好資料類型](schema/privacy-consent.md)
 * 類別 {#classes}
    * [XDM個人資料](./classes/individual-profile.md)
    * [XDM ExperienceEvent](./classes/experienceevent.md)
 * Mixins {#mixins}
-   * 描述檔混合 {#profile}
+   * 描述檔混音{#profile}
       * [IdentityMap](./mixins/profile/identitymap.md)
       * [人口統計詳細資訊](./mixins/profile/person-details.md)
       * [個人聯絡資訊](./mixins/profile/personal-details.md)
       * [區段會籍詳細資訊](./mixins/profile/segmentation.md)
       * [工作聯繫人詳細資訊](./mixins/profile/work-details.md)
-   * 事件混合 {#event}
+   * 事件混音{#event}
       * [用戶ID詳細資訊](./mixins/event/enduserids.md)
       * [環境詳細資訊](./mixins/event/environment-details.md)
    * [Mixin名稱更新](./mixins/name-updates.md)
@@ -56,6 +56,22 @@ ht-degree: 22%
    * [POI詳細資訊](./data-types/poi-details.md)
    * [POI互動](./data-types/poi-interaction.md)
    * [郵遞區號](./data-types/postal-address.md)
+* [!UICONTROL 架構] UI  {#ui}
+   * [概述](./ui/overview.md)
+   * [探索XDM資源](./ui/explore.md)
+   * 建立和編輯資源{#resources}
+      * [結構描述](./ui/resources/schemas.md)
+      * [類別](./ui/resources/classes.md)
+      * [Mixins](./ui/resources/mixins.md)
+      * [資料類型](./ui/resources/data-types.md)
+   * 定義欄位{#fields}
+      * [概述](./ui/fields/overview.md)
+      * [必要欄位](./ui/fields/required.md)
+      * [物件欄位](./ui/fields/object.md)
+      * [陣列欄位](./ui/fields/array.md)
+      * [列舉欄位](./ui/fields/enum.md)
+      * [身分欄位](./ui/fields/identity.md)
+      * [關係欄位](./ui/fields/relationship.md)
 * 方案註冊表API {#api}
    * [概述](api/overview.md)
    * [快速入門](api/getting-started.md)
@@ -69,10 +85,8 @@ ht-degree: 22%
    * [臨機結構](api/ad-hoc.md)
    * [附錄](api/appendix.md)
 * 教學課程 {#tutorials}
-   * [在UI中探索資源](./tutorials/explore.md)
    * [建立結構(API)](tutorials/create-schema-api.md)
    * [建立結構(UI)](tutorials/create-schema-ui.md)
-   * [建立和編輯資料類型(UI)](./tutorials/create-data-type.md)
    * [定義兩個結構描述(API)之間的關係](tutorials/relationship-api.md)
    * [定義兩個結構描述(UI)之間的關係](tutorials/relationship-ui.md)
    * [建立臨機結構(API)](tutorials/ad-hoc.md)
