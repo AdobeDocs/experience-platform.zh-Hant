@@ -5,17 +5,17 @@ title: Adobe Experience Platform Identity Service
 topic: overview
 description: '身分識別命名空間是 Identity Service 的元件，用途是作為身分識別相關內容的指標。例如，他們會將"name@email.com"值區分為電子郵件地址或"443522"作為數值CRM ID。 '
 translation-type: tm+mt
-source-git-commit: dfb16c1808ac61e6c4f4d97c08ac3d1dcc8499a8
+source-git-commit: 0547c33e831fe1ac684f55a0e79978cd7f191e65
 workflow-type: tm+mt
-source-wordcount: '759'
-ht-degree: 4%
+source-wordcount: '1456'
+ht-degree: 2%
 
 ---
 
 
 # 身分命名空間概觀
 
-Identity namespaces are a component of [[!DNL Identity Service]](./home.md) that serve as indicators of the context to which an identity relates. 例如，他們會將&quot;name<span>@email.com&quot;值區分為電子郵件地址，或將&quot;443522&quot;區分為數值CRM ID。
+身分名稱空間是[[!DNL Identity Service]](./home.md)的一個元件，用作身份相關上下文的指示器。 例如，他們會將&quot;name<span>@email.com&quot;值區分為電子郵件地址，或將&quot;443522&quot;區分為數值CRM ID。
 
 ## 快速入門
 
@@ -27,9 +27,9 @@ Identity namespaces are a component of [[!DNL Identity Service]](./home.md) that
 
 ## 瞭解身分名稱空間
 
-完全限定身份包括ID值和命名空間。 當跨描述檔片段比對記錄資料時(如合 [!DNL Real-time Customer Profile] 並描述檔資料時)，識別值和命名空間都必須相符。
+完全限定身份包括ID值和命名空間。 當在描述檔片段間比對記錄資料時（如[!DNL Real-time Customer Profile]合併描述檔資料時），識別值和命名空間都必須相符。
 
-例如，兩個描述檔片段可能包含不同的主要ID，但是它們對「電子郵件」命名空間的值相同，因此平台可以看到這些片段實際上是相同的個人，並將資料匯整到個人的識別圖中。
+例如，兩個描述檔片段可能包含不同的主要ID，但是它們對&quot;Email&quot;命名空間有相同的值，因此[!DNL Platform]可以看到這些片段實際上是同一個個人，並將資料匯整在個人的識別圖中。
 
 ![](images/identity-service-stitching.png)
 
@@ -37,46 +37,79 @@ Identity namespaces are a component of [[!DNL Identity Service]](./home.md) that
 
 資料可由數種不同的身分類型識別。 在建立身份名稱空間時指定身份類型，並控制資料是否保存到身份圖以及如何處理該資料的任何特殊說明。
 
-下列識別類型可在中使用 [!DNL Platform]:
+[!DNL Platform]中提供以下身份類型：
 
 | 身分類型 | 說明 |
 | --- | --- |
-| Cookie | 這些身份對於擴展至關重要，並且是身份圖的大部分。 然而，從本質上講，它們會迅速衰敗，並隨著時間而失去價值。 刪除Cookie會特別在識別圖中處理。 |
-| 跨裝置 | 這表明， [!DNL Identity Service] 應將此視為強大的人物識別碼，並永久保留。 例如登入ID、CRM ID、忠誠度ID等。 |
-| 裝置 | 包含IDFA、GAID和其他IOT ID。 家庭中的人可以分享。 |
-| 電子郵件 | 此類型的身分識別資訊(PII)。 這是一個靈敏 [!DNL Identity Service] 地處理值的指標。 |
-| 行動 | 此類型的身份包括PII。 這是一個靈敏 [!DNL Identity Service] 地處理值的指標。 |
-| 非人 | 用於儲存需要名稱空間但未綁定到人員群集的標識符。 然後，從標識圖中過濾這些標識符。 可能的使用案例包括與產品、組織、商店等相關的資料。 （例如產品SKU。） |
-| 電話 | 此類型的身份包括PII。 這表明該 [!DNL Identity Service] 值處理靈敏。 |
+| Cookie ID | Cookie ID可識別網頁瀏覽器。 這些身份對於擴展至關重要，並且是身份圖的大部分。 然而，從本質上講，它們會迅速衰敗，並隨著時間而失去價值。 |
+| 跨裝置ID | 跨裝置ID可識別個別ID，並通常將其他ID系結在一起。 例如登入ID、CRM ID和忠誠度ID。 這表示[!DNL Identity Service]可靈敏地處理該值。 |
+| 裝置ID | 裝置ID可識別硬體裝置，例如IDFA（iPhone和iPad）、GAID(Android)和RIDA(Roku)，並可由家庭中的多人共用。 |
+| 電子郵件地址 | 電子郵件地址通常與單一人員相關聯，因此可用於識別不同通道的該人員。 此類型的身分識別資訊(PII)。 這表示[!DNL Identity Service]可靈敏地處理該值。 |
+| 非人員識別碼 | 非人員ID用於儲存需要名稱空間但未連接到人員群集的標識符。 例如，產品SKU、與產品、組織或商店相關的資料。 |
+| 電話號碼 | 電話號碼通常與單一人員相關聯，因此可用於識別不同通道的該人員。 此類型的身份包括PII。 這表示[!DNL Identity Service]可靈敏地處理該值。 |
 
-### 標準名稱空間 {#standard}
+### 標準名稱空間
 
-Adobe Experience Platform提供數個可供所有組織使用的身分名稱空間。 這些名稱空間稱為標準名稱空間，可使用 [!DNL Identity Service] API或透過 [!DNL Platform] UI顯示。
+Experience Platform提供數個可供所有組織使用的身分名稱空間。 這些名稱空間稱為標準名稱空間，可使用[!DNL Identity Service] API或透過平台UI顯示。
 
-若要在UI中檢視「標準」名稱空間，請按一 **[!UICONTROL 下左側導軌中的]** 「身分識別」，然後按一下「 **[!UICONTROL 瀏覽]** 」標籤。 您的組織可存取的所有身分名稱空間都會顯示出來，但以「[!UICONTROL Standard]」為「[!UICONTROL Owner]」的身分名稱空間是Adobe提供的「標準」名稱空間。
+平台內的所有組織都可使用下列標準名稱空間：
 
-然後，您可以按一下其中一個列出的名稱空間，以檢視詳細資訊。
+| 顯示名稱 | 說明 |
+| ------------ | ----------- |
+| AdCloud | 代表Adobe AdCloud的命名空間。 |
+| Adobe Analytics（舊版ID） | 代表Adobe Analytics的命名空間。 如需詳細資訊，請參閱[Adobe Analytics名稱空間](https://experienceleague.adobe.com/docs/analytics/admin/data-governance/gdpr-namespaces.html?lang=en#namespaces)上的下列檔案。 |
+| Apple IDFA（廣告商的ID） | 代表廣告商Apple ID的命名空間。 如需詳細資訊，請參閱[喜好式廣告](https://support.apple.com/en-us/HT202074)上的下列檔案。 |
+| Apple推播通知服務 | 代表使用Apple推播通知服務收集之身分的命名空間。 如需詳細資訊，請參閱[Apple推播通知服務](https://developer.apple.com/library/archive/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/APNSOverview.html#//apple_ref/doc/uid/TP40008194-CH8-SW1)上的下列檔案。 |
+| 核心 | 代表Adobe Audience Manager的命名空間。 此命名空間也可以其舊名稱引用：「Adobe AudienceManager」。 如需詳細資訊，請參閱[Audience Manager ID](https://experienceleague.adobe.com/docs/audience-manager/user-guide/overview/data-privacy/data-privacy-reference/data-privacy-ids.html?lang=en#aam-ids)上的下列檔案。 |
+| ECID | 代表ECID的命名空間。 此命名空間也可由以下別名引用：「Adobe Marketing Cloud ID」、「Adobe Experience Cloud ID」、「Adobe Experience Platform ID」。 如需詳細資訊，請參閱[ECID](./ecid.md)上的下列檔案。 |
+| 電子郵件 | 代表電子郵件地址的命名空間。 此類型的命名空間通常與單一人員相關聯，因此可用於識別不同通道的該人員。 |
+| 電子郵件（SHA256，小寫） | 預先雜湊電子郵件地址的命名空間。 在使用SHA256進行散列之前，此命名空間中提供的值將轉換為小寫。 前導和尾隨空格必須在電子郵件位址標準化之前加以修剪。 此設定無法追溯變更。 如需詳細資訊，請參閱[SHA256雜湊支援](https://experienceleague.adobe.com/docs/id-service/using/reference/hashing-support.html?lang=en#hashing-support)的下列檔案。 |
+| Firebase Cloud訊息 | 代表使用Google Firebase Cloud訊息收集的推播通知身分的命名空間。 如需詳細資訊，請參閱[Google Firebase Cloud Messaging](https://firebase.google.com/docs/cloud-messaging)上的下列檔案。 |
+| Google廣告ID(GAID) | 代表Google廣告ID的命名空間。 如需詳細資訊，請參閱[Google Advertising ID](https://support.google.com/googleplay/android-developer/answer/6048248?hl=en)上的下列檔案。 |
+| Google點按ID | 代表Google點按ID的命名空間。 如需詳細資訊，請參閱[在Google Ads](https://developers.google.com/adwords/api/docs/guides/click-tracking)中按一下追蹤的下列檔案。 |
+| 電話 | 代表電話號碼的命名空間。 此類型的命名空間通常與單一人員相關聯，因此可用於識別不同通道的該人員。 |
+| 電話(E.164) | 表示需要以E.164格式雜湊的原始電話號碼的命名空間。 E.164格式包括加號(`+`)、國際國家呼叫代碼、區域代碼和電話號碼。 例如: `(+)(country code)(area code)(phone number)`。 |
+| 電話(SHA256) | 表示需要使用SHA256雜湊的電話號碼的命名空間。 您必須移除符號、字母和任何行距零。 您也必須新增國家／地區呼叫代碼作為首碼。 |
+| 電話(SHA256_E.164) | 表示需要使用SHA256和E.164格式雜湊的原始電話號碼的命名空間。 |
+| TNTID | 代表Adobe Target的命名空間。 如需詳細資訊，請參閱[Target](https://experienceleague.adobe.com/docs/target/using/target-home.html?lang=en)上的下列檔案。 |
+| Windows AID | 代表Windows廣告ID的命名空間。 如需詳細資訊，請參閱[Windows廣告ID](https://docs.microsoft.com/en-us/uwp/api/windows.system.userprofile.advertisingmanager.advertisingid?view=winrt-19041)上的下列檔案。 |
 
-![](./images/standard-namespace-detail.png)
+若要在UI中檢視標準名稱空間，請在左側導覽器中選取&#x200B;**[!UICONTROL Identitys]**，然後選取&#x200B;**[!UICONTROL Browse]**&#x200B;標籤，以顯示組織可存取的標準身分名稱空間清單。 您可以按名稱空間的&#x200B;**[!UICONTROL 顯示名稱]**、**[!UICONTROL 識別符號]**&#x200B;或&#x200B;**[!UICONTROL 擁有者]**&#x200B;的字母順序對名稱空間進行排序。 或者，您也可以依名稱空間的最近更新日期，按時間順序排序名稱空間。
 
-## 管理組織的命名空間
-
-根據您的組織資料和使用案例，您可能需要自訂命名空間。
-
-在UI中，這些名稱空間會顯示為「自[!UICONTROL 訂]」為「擁有[!UICONTROL 者]」。 您可使用 [!DNL Identity Service] API或使用者介面來建立自訂命名空間。
-
-若要使用UI建立自訂命名空間，請按一下「 **[!UICONTROL 建立身分命名空間]**」，然後完成對話方塊並按一下「 **[!UICONTROL 建立」]**。
-
-您定義的名稱空間是專屬於您的組織，且需要唯一的「[!UICONTROL Identity Symbol]」（若您使用API，則為「程式碼」），才能成功建立。
-
-![](./images/create-identity-namespace.png)
-
-與「標準」名稱空間類似，您可以從「瀏覽」索引標籤按一下「自訂」名稱空間來檢視其詳細資訊，但是使用「自訂」名稱空間，您也可以從詳細資訊區域編輯其「顯示名稱」和「說明」。 ****
+選取名稱空間，以檢視右側邊欄上的更多特定資訊。
 
 >[!NOTE]
 >
->命名空間一旦建立後，就無法刪除，其「身分符號」（或API中的「程式碼」）和「類型」也無法變更。
+>平台也提供名稱空間以進行整合。 這些名稱空間預設為隱藏，因為它們用於連接其他系統，而不是用於縫合標識。 要查看整合名稱空間，請選擇&#x200B;**[!UICONTROL 查看整合標識]**。
+
+![](./images/browse-namespaces.png)
+
+## 管理自訂命名空間
+
+根據您的組織資料和使用案例，您可能需要自訂命名空間。 可使用[[!DNL Identity Service]](./api/create-custom-namespace.md) API或透過UI建立自訂命名空間。
+
+若要使用UI建立自訂命名空間，請導覽至&#x200B;**[!UICONTROL Identities]**&#x200B;工作區，選取&#x200B;**[!UICONTROL Browse]**，然後選取&#x200B;**[!UICONTROL Create identity namespace]**。
+
+![](./images/create.png)
+
+此時將顯示&#x200B;**[!UICONTROL 建立標識名稱空間]**&#x200B;對話框。 提供唯一的&#x200B;**[!UICONTROL 顯示名稱]**&#x200B;和&#x200B;**[!UICONTROL 識別符號]**，然後選擇要建立的識別類型。 您也可以新增選擇性說明，以進一步瞭解命名空間。 完成後，選擇&#x200B;**[!UICONTROL Create]**。
+
+>[!IMPORTANT]
+>
+>您定義的名稱空間是貴組織專用的，且需要唯一的識別符號，才能成功建立。
+
+![](./images/create-namespace.png)
+
+與標準名稱空間類似，您可以從&#x200B;**[!UICONTROL Browse]**&#x200B;標籤中選擇自訂名稱空間，以檢視其詳細資訊。 不過，使用自訂命名空間，您也可以從詳細資料區域編輯其顯示名稱和說明。
+
+>[!NOTE]
+>
+>命名空間一旦建立後，就無法刪除，其標識符號和類型也無法更改。
 
 ## 身分資料中的命名空間
 
-提供身分的命名空間取決於您提供身分資料的方法。 有關提供資料身分資料的詳細資訊，請參閱總 [覽中有關提供身](./home.md#supplying-identity-data-to-identity-service) 分資料 [!DNL Identity Service] 的章節。
+提供身分的命名空間取決於您提供身分資料的方法。 有關提供資料身份資料的詳細資訊，請參閱[!DNL Identity Service]概述中關於提供身份資料](./home.md#supplying-identity-data-to-identity-service)的部分。[
+
+## 後續步驟
+
+現在，您已瞭解身分名稱空間的主要概念，可以開始學習如何使用[身分圖表檢視器](./ui/identity-graph-viewer.md)來處理您的身分圖表。
