@@ -1,11 +1,11 @@
 ---
-keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;;experience data model;Experience data model;Experience Data Model;data model;Data Model;mixin registry;Schema Registry;mixin;Mixin;mixins;Mixins;create
+keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;experience data model;Experience data model;Experience Data Model;data model;Data Model;mixin registry;Schema Registry;mixin;Mixin;mixins;Mixins;create
 solution: Experience Platform
 title: 建立混音
 description: 架構註冊表API中的/mixins端點可讓您以程式設計方式管理體驗應用程式中的XDM混合。
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 0b55f18eabcf1d7c5c233234c59eb074b2670b93
+source-git-commit: 1f18bf7367addd204f3ef8ce23583de78c70b70c
 workflow-type: tm+mt
 source-wordcount: '1102'
 ht-degree: 2%
@@ -15,19 +15,19 @@ ht-degree: 2%
 
 # Mixins端點
 
-Mixin是可重複使用的元件，它定義了表示特定概念的一個或多個欄位，例如個人、郵寄地址或Web瀏覽器環境。 Mixin將作為實現相容類的方案的一部分被包括，具體取決於它們所代表的資料（記錄或時間序列）的行為。 API中 `/mixins` 的端點可讓您以程式設計方式 [!DNL Schema Registry] 管理體驗應用程式中的混合。
+Mixin是可重複使用的元件，它定義了表示特定概念的一個或多個欄位，例如個人、郵寄地址或Web瀏覽器環境。 Mixin將作為實現相容類的方案的一部分被包括，具體取決於它們所代表的資料（記錄或時間序列）的行為。 [!DNL Schema Registry] API中的`/mixins`端點可讓您以程式設計方式管理體驗應用程式中的混音。
 
 ## 快速入門
 
-本指南中使用的端點是 [[!DNL Schema Registry] API的一部分](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/mixin-registry.yaml)。 在繼續之前，請先閱讀快速入門手冊 [](./getting-started.md) ，以取得相關檔案的連結、閱讀本檔案中範例API呼叫的指南，以及成功呼叫任何Experience Platform API所需之必要標題的重要資訊。
+本指南中使用的端點是[[!DNL Schema Registry] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/mixin-registry.yaml)的一部分。 在繼續之前，請先閱讀[快速入門手冊](./getting-started.md)，以取得相關檔案的連結、閱讀本檔案中範例API呼叫的指南，以及成功呼叫任何Experience Platform API所需之必要標題的重要資訊。
 
-## 擷取混合清單 {#list}
+## 檢索mixins {#list}清單
 
-您可以分別對或提出GET `global` 請求， `tenant` 將所有混合列 `/global/mixins` 在或容器下 `/tenant/mixins`方。
+您可以分別對`/global/mixins`或`/tenant/mixins`發出GET請求，將所有混合列在`global`或`tenant`容器下。
 
 >[!NOTE]
 >
->列出資源時，方案註冊表將結果集限制為300個項。 若要傳回超過此限制的資源，您必須使用分頁參數。 還建議您使用其他查詢參數來篩選結果並減少傳回的資源數。 如需詳細資訊，請 [參閱附錄檔案](./appendix.md#query) 中查詢參數一節。
+>列出資源時，方案註冊表將結果集限制為300個項。 若要傳回超過此限制的資源，您必須使用分頁參數。 還建議您使用其他查詢參數來篩選結果並減少傳回的資源數。 如需詳細資訊，請參閱附錄檔案中有關[查詢參數](./appendix.md#query)的章節。
 
 **API格式**
 
@@ -37,12 +37,12 @@ GET /{CONTAINER_ID}/mixins?{QUERY_PARAMS}
 
 | 參數 | 說明 |
 | --- | --- |
-| `{CONTAINER_ID}` | 您要從以下位置擷取混合的容器： `global` 適用於Adobe建立的混音 `tenant` 或您組織擁有的混音。 |
-| `{QUERY_PARAMS}` | 可選查詢參數，以篩選結果。 如需可用 [參數的清單](./appendix.md#query) ，請參閱附錄檔案。 |
+| `{CONTAINER_ID}` | 您要從以下位置擷取混合的容器：`global`代表Adobe建立的混音，或`tenant`代表您組織擁有的混音。 |
+| `{QUERY_PARAMS}` | 可選查詢參數，以篩選結果。 有關可用參數的清單，請參見[附錄文檔](./appendix.md#query)。 |
 
 **請求**
 
-下列請求會從容器中擷取混合 `tenant` 集清單，使用查 `orderby` 詢參數依其屬性來排序 `title` 混合集。
+下列請求會從`tenant`容器中擷取混音清單，使用`orderby`查詢參數依其`title`屬性來排序混音。
 
 ```shell
 curl -X GET \
@@ -54,16 +54,16 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-回應格式取決於在請求 `Accept` 中傳送的標題。 下列標 `Accept` 題可用於列出混音：
+回應格式取決於請求中傳送的`Accept`標題。 下列`Accept`標題可用於列出混音：
 
 | `Accept` 標題 | 說明 |
 | --- | --- |
 | `application/vnd.adobe.xed-id+json` | 返回每個資源的簡短摘要。 這是列出資源的建議標題。 (限制：300) |
-| `application/vnd.adobe.xed+json` | 傳回每個資源的完整JSON混合，並包含原 `$ref` 始資 `allOf` 源。 (限制：300) |
+| `application/vnd.adobe.xed+json` | 傳回每個資源的完整JSON混音，並包含原始的`$ref`和`allOf`。 (限制：300) |
 
 **回應**
 
-上述請求使用標 `application/vnd.adobe.xed-id+json` 題，因此回應僅包 `Accept` 含每個混音的 `title`、 `$id``meta:altId`和 `version` 屬性。 使用其他 `Accept` 標題(`application/vnd.adobe.xed+json`)會傳回每個混音的所有屬性。 根據您在回 `Accept` 應中需要的資訊，選擇適當的標題。
+上述請求使用`application/vnd.adobe.xed-id+json` `Accept`標題，因此回應僅包含每個混音的`title`、`$id`、`meta:altId`和`version`屬性。 使用其他`Accept`標題(`application/vnd.adobe.xed+json`)會傳回每個混音的所有屬性。 根據您在回應中需要的資訊，選擇適當的`Accept`標題。
 
 ```json
 {
@@ -107,7 +107,7 @@ curl -X GET \
 }
 ```
 
-## 尋找混音 {#lookup}
+## 查找{#lookup}的混音
 
 您可以在GET請求的路徑中加入mixin的ID，以尋找特定的mixin。
 
@@ -119,12 +119,12 @@ GET /{CONTAINER_ID}/mixins/{MIXIN_ID}
 
 | 參數 | 說明 |
 | --- | --- |
-| `{CONTAINER_ID}` | 儲存您要擷取之混合的容器： `global` Adobe建立的混音或您 `tenant` 組織擁有的混音。 |
-| `{MIXIN_ID}` | 您 `meta:altId` 要尋找的混 `$id` 音的或URL編碼。 |
+| `{CONTAINER_ID}` | 儲存您要擷取之混合的容器：`global`代表Adobe建立的混音，或`tenant`代表您組織擁有的混音。 |
+| `{MIXIN_ID}` | 您要尋找的混音的`meta:altId`或URL編碼`$id`。 |
 
 **請求**
 
-以下請求通過路徑中提供的 `meta:altId` 值檢索混合。
+以下請求通過路徑中提供的`meta:altId`值檢索混音。
 
 ```shell
 curl -X GET \
@@ -136,19 +136,19 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-回應格式取決於在請求 `Accept` 中傳送的標題。 所有查閱請求都 `version` 必須包含在標 `Accept` 題中。 The following `Accept` headers are available:
+回應格式取決於請求中傳送的`Accept`標題。 所有查閱請求都要求`version`包含在`Accept`標題中。 以下`Accept`標題可用：
 
 | `Accept` 標題 | 說明 |
 | ------- | ------------ |
-| `application/vnd.adobe.xed+json; version={MAJOR_VERSION}` | Raw含 `$ref` 和 `allOf`，有標題和說明。 |
+| `application/vnd.adobe.xed+json; version={MAJOR_VERSION}` | Raw含`$ref`和`allOf`，有標題和說明。 |
 | `application/vnd.adobe.xed-full+json; version={MAJOR_VERSION}` | `$ref` 而且 `allOf` 有標題和說明。 |
-| `application/vnd.adobe.xed-notext+json; version={MAJOR_VERSION}` | Raw含 `$ref` 和 `allOf`，無標題或說明。 |
+| `application/vnd.adobe.xed-notext+json; version={MAJOR_VERSION}` | Raw含`$ref`和`allOf`，無標題或說明。 |
 | `application/vnd.adobe.xed-full-notext+json; version={MAJOR_VERSION}` | `$ref` 並解 `allOf` 決，沒有標題或說明。 |
-| `application/vnd.adobe.xed-full-desc+json; version={MAJOR_VERSION}` | `$ref` 和已解 `allOf` 析的包含描述符。 |
+| `application/vnd.adobe.xed-full-desc+json; version={MAJOR_VERSION}` | `$ref` 並解 `allOf` 決了包含的描述符。 |
 
 **回應**
 
-成功的回應會傳回混音的詳細資料。 傳回的欄位取決於請求 `Accept` 中傳送的標題。 嘗試不同 `Accept` 的標題以比較回應，並判斷哪個標題最適合您的使用案例。
+成功的回應會傳回混音的詳細資料。 傳回的欄位取決於請求中傳送的`Accept`標題。 嘗試不同的`Accept`標題，以比較回應並判斷哪個標題最適合您的使用案例。
 
 ```json
 {
@@ -209,9 +209,9 @@ curl -X GET \
 }
 ```
 
-## 建立混音 {#create}
+## 建立{#create}混音
 
-您可以透過提出POST請求，在容 `tenant` 器下定義自訂混音。
+您可以透過發出POST請求，在`tenant`容器下定義自訂混音。
 
 **API格式**
 
@@ -221,11 +221,11 @@ POST /tenant/mixins
 
 **請求**
 
-定義新混音時，它必須包 `meta:intendedToExtend` 含屬性，列 `$id` 出混音相容的類別。 在此範例中，mixin與先前定義 `Property` 的類別相容。 自訂欄位必須巢狀內嵌在 `_{TENANT_ID}` 下方（如範例所示），以避免與類別和其他混音所提供的類似欄位產生衝突。
+定義新混音時，它必須包含`meta:intendedToExtend`屬性，列出混音與之相容的類的`$id`。 在此範例中，mixin與先前定義的`Property`類別相容。 自訂欄位必須巢狀內嵌在`_{TENANT_ID}`下（如範例所示），以避免與類別和其他混音所提供的類似欄位產生衝突。
 
 >[!NOTE]
 >
->有關如何定義要包括在混合中的不同欄位類型的詳細資訊，請參 [閱欄位約束指南](../schema/field-constraints.md#define-fields)。
+>有關如何定義要包含在混合中的不同欄位類型的詳細資訊，請參閱[欄位約束指南](../schema/field-constraints.md#define-fields)。
 
 ```SHELL
 curl -X POST \
@@ -294,7 +294,7 @@ curl -X POST \
 
 **回應**
 
-成功的回應會傳回HTTP狀態201（已建立）和包含新建立混音詳細資料的裝載，包括 `$id`、 `meta:altId`和 `version`。 這些值是唯讀的，由指定 [!DNL Schema Registry]。
+成功的回應會傳回HTTP狀態201（已建立）和包含新建立混音詳細資料的裝載，包括`$id`、`meta:altId`和`version`。 這些值是只讀的，由[!DNL Schema Registry]指定。
 
 ```JSON
 {
@@ -378,15 +378,15 @@ curl -X POST \
 }
 ```
 
-執行GET請求以 [列出租用戶容器中的所有混音](#list) ，現在會包含「屬性詳細資料」混音，或者您可以使用URL編碼的 [](#lookup)`$id` URI來執行查閱(GET)請求，以直接檢視新混音。
+執行GET要求，將[清單中所有mixin](#list)的租用戶容器現在都包含「屬性詳細資料」混音，或您可以[使用URL編碼的`$id` URI，執行查閱(GET)要求](#lookup)，以直接檢視新混音。
 
-## 更新混音 {#put}
+## 更新mixin {#put}
 
-您可以通過PUT操作替換整個混音，實際上重寫資源。 當透過PUT請求更新混音時，主體必須包含在POST請求中建立新混音 [時所需的所有欄位](#create) 。
+您可以通過PUT操作替換整個混音，實際上重寫資源。 當通過PUT請求更新混音時，主體必須包括在POST請求中建立新混音](#create)時所需的所有欄位。[
 
 >[!NOTE]
 >
->如果您只想更新混音的一部分，而不是完全取代它，請參閱有關更 [新混音部分的章節](#patch)。
+>如果您只想更新混音的一部分，而不是完全替換它，請參閱[中關於更新混音的一部分的章節。](#patch)
 
 **API格式**
 
@@ -396,11 +396,11 @@ PUT /tenant/mixins/{MIXIN_ID}
 
 | 參數 | 說明 |
 | --- | --- |
-| `{MIXIN_ID}` | 您 `meta:altId` 要重寫的 `$id` 混音的或URL編碼。 |
+| `{MIXIN_ID}` | 您要重寫的混音的`meta:altId`或URL編碼`$id`。 |
 
 **請求**
 
-下列請求會重寫現有的混音，並新增新欄 `propertyCountry` 位。
+下列請求會重新寫入現有的混音，並新增新的`propertyCountry`欄位。
 
 ```SHELL
 curl -X PUT \
@@ -563,13 +563,13 @@ curl -X PUT \
 }
 ```
 
-## 更新混音的一部分 {#patch}
+## 更新{#patch}混音的一部分
 
-您可以使用PATCH請求來更新混合的一部分。 支援 [!DNL Schema Registry] 所有標準JSON修補程式作業， `add`包括 `remove`、和 `replace`。 如需JSON修補程式的詳細資訊，請參閱 [API基礎指南](../../landing/api-fundamentals.md#json-patch)。
+您可以使用PATCH請求來更新混合的一部分。 [!DNL Schema Registry]支援所有標準JSON修補程式作業，包括`add`、`remove`和`replace`。 如需JSON修補程式的詳細資訊，請參閱[API基礎指南](../../landing/api-fundamentals.md#json-patch)。
 
 >[!NOTE]
 >
->如果要用新值替換整個資源，而不是更新單個欄位，請參見有關使用PUT [操作替換混合的部分](#put)。
+>如果要用新值替換整個資源，而不是更新單個欄位，請參見關於使用PUT操作替換混音的[一節。](#put)
 
 **API格式**
 
@@ -579,13 +579,13 @@ PATCH /tenant/mixin/{MIXIN_ID}
 
 | 參數 | 說明 |
 | --- | --- |
-| `{MIXIN_ID}` | URL編碼的 `$id` URI或 `meta:altId` 您要更新的mixin。 |
+| `{MIXIN_ID}` | 您要更新的混音的URL編碼`$id` URI或`meta:altId`。 |
 
 **請求**
 
-以下範例請求會更新 `description` 現有混音，並新增欄 `propertyCity` 位。
+以下範例請求會更新現有混音的`description`，並新增新的`propertyCity`欄位。
 
-請求主體採用陣列的形式，每個列出的對象代表對單個欄位的特定更改。 每個對象包括要執行的操作(`op`)，該操作應在哪個欄位上執行(`path`)，以及該操作應包括哪些資訊(`value`)。
+請求主體採用陣列的形式，每個列出的對象代表對單個欄位的特定更改。 每個對象包括要執行的操作(`op`)，該操作應在哪個欄位(`path`)上執行，以及該操作應包括哪些資訊(`value`)。
 
 ```SHELL
 curl -X PATCH \
@@ -615,7 +615,7 @@ curl -X PATCH \
 
 **回應**
 
-響應顯示兩個操作均成功執行。 已 `description` 更新，且已 `propertyCountry` 新增至下方 `definitions`。
+響應顯示兩個操作均成功執行。 `description`已更新，`propertyCountry`已在`definitions`下添加。
 
 ```JSON
 {
@@ -704,7 +704,7 @@ curl -X PATCH \
 }
 ```
 
-## 刪除混音 {#delete}
+## 刪除{#delete}的混音
 
 有時可能需要從模式註冊表中刪除混合。 這是透過使用路徑中提供的混合ID來執行DELETE要求來完成的。
 
@@ -716,7 +716,7 @@ DELETE /tenant/mixins/{MIXIN_ID}
 
 | 參數 | 說明 |
 | --- | --- |
-| `{MIXIN_ID}` | URL編碼的 `$id` URI或 `meta:altId` 您要刪除的mixin。 |
+| `{MIXIN_ID}` | 您要刪除之混音的URL編碼`$id` URI或`meta:altId`。 |
 
 **請求**
 
@@ -733,4 +733,4 @@ curl -X DELETE \
 
 成功的回應會傳回HTTP狀態204（無內容）和空白的內文。
 
-您可以嘗試對混音進行查 [閱(GET)請求](#lookup) ，以確認刪除。 您需要在請求中加 `Accept` 入標題，但應會收到HTTP狀態404（找不到），因為混音已從架構註冊表中移除。
+您可以嘗試將[查閱(GET)請求](#lookup)傳送至mixin，以確認刪除。 您需要在請求中包含`Accept`標題，但應接收HTTP狀態404（找不到），因為混音已從架構註冊表中移除。
