@@ -5,9 +5,9 @@ user-guide-title: Experience Data Model (XDM) 系統說明
 breadcrumb-title: Experience Data Model (XDM) 指南
 user-guide-description: 使用 Experience Data Model (XDM) 類別和 mixin 將體驗資料標準化。
 translation-type: tm+mt
-source-git-commit: 099e88373d945660e7529bbd508e616869fd01da
+source-git-commit: baf39df0e03170d6b2b5a151e753d4ad269a43fa
 workflow-type: tm+mt
-source-wordcount: '216'
+source-wordcount: '215'
 ht-degree: 24%
 
 ---
@@ -21,8 +21,6 @@ ht-degree: 24%
    * [資料建模的最佳實務](schema/best-practices.md)
    * [XDM欄位類型約束](schema/field-constraints.md)
    * [XDM欄位字典](schema/field-dictionary.md)
-   * 架構使用案例{#use-cases}
-      * [同意與偏好資料類型](schema/privacy-consent.md)
 * 類別 {#classes}
    * [XDM個人資料](./classes/individual-profile.md)
    * [XDM ExperienceEvent](./classes/experienceevent.md)
@@ -82,6 +80,9 @@ ht-degree: 24%
    * [資料類型](api/data-types.md)
    * [描述符](api/descriptors.md)
    * [工會](api/unions.md)
+   * [匯出／匯入](api/export-import.md)
+   * [範例資料](api/sample-data.md)
+   * [審計日誌](api/audit-log.md)
    * [臨機結構](api/ad-hoc.md)
    * [附錄](api/appendix.md)
 * 教學課程 {#tutorials}
