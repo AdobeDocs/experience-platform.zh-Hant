@@ -5,7 +5,7 @@ title: 使用RStudio連線
 topic: connect
 description: 本檔案將逐步說明如何將R Studio與Adobe Experience Platform Query Service連接。
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: 9fbb6b829cd9ddec30f22b0de66874be7710e465
 workflow-type: tm+mt
 source-wordcount: '225'
 ht-degree: 2%
@@ -13,11 +13,11 @@ ht-degree: 2%
 ---
 
 
-# 連接 [!DNL RStudio]
+# 連接[!DNL RStudio]
 
-本檔案將逐步說明如何將R Studio與Adobe Experience Platform連接 [!DNL Query Service]。
+本檔案將逐步說明如何將R Studio與Adobe Experience Platform [!DNL Query Service]連接。
 
-在安裝 [!DNL RStudio]後，在出現的 *Console* （控制台）畫面上，您首先需要準備R指令碼才能使用 [!DNL PostgreSQL]。
+在出現的&#x200B;*Console*&#x200B;螢幕上安裝[!DNL RStudio]後，您首先需要準備R指令碼以使用[!DNL PostgreSQL]。
 
 ```r
 install.packages("RPostgreSQL")
@@ -26,7 +26,7 @@ require("RPostgreSQL")
 require("rstudioapi")
 ```
 
-在準備好R指令碼使用後 [!DNL PostgreSQL]，您現在可以通過加 [!DNL RStudio] 載驅 [!DNL Query Service] 動程式連接 [!DNL PostgreSQL] 到。
+在您準備好使用[!DNL PostgreSQL]的R指令碼後，現在可以通過載入[!DNL PostgreSQL]驅動程式將[!DNL RStudio]連接到[!DNL Query Service]。
 
 ```r
 drv <- dbDriver("PostgreSQL")
@@ -42,17 +42,17 @@ con <- dbConnect(drv,
 | -------- | ----------- |
 | `{DATABASE_NAME}` | 將使用的資料庫的名稱。 |
 | `{HOST_NUMBER` 和 `{PORT_NUMBER}` | 查詢服務的主機端點及其埠。 |
-| `{USERNAME}` 和 `{PASSWORD}` | 將使用的登錄憑據。 用戶名的形式為 `ORG_ID@AdobeOrg`。 |
+| `{USERNAME}` 和 `{PASSWORD}` | 將使用的登錄憑據。 用戶名的形式為`ORG_ID@AdobeOrg`。 |
 
 >[!NOTE]
 >
->有關查找資料庫名稱、主機、埠和登錄憑據的詳細資訊，請訪問平台 [上的憑據頁](https://platform.adobe.com/query/configuration)。 若要尋找您的認證，請登入，按一 [!DNL Platform]下「查 **[!UICONTROL 詢]**」，然後按一 **[!UICONTROL 下「認證]**」。
+>有關查找資料庫名稱、主機、埠和登錄憑據的詳細資訊，請訪問Platform](https://platform.adobe.com/query/configuration)上的[ credentials頁。 要查找憑據，請登錄到[!DNL Platform] ，按一下&#x200B;**[!UICONTROL 查詢]** ，然後按一下&#x200B;**[!UICONTROL 憑據]**。
 
 ## 後續步驟
 
-現在您已連接到 [!DNL Query Service]，您可以編寫查詢以執行和編輯SQL陳述式。 例如，您可以使 `dbGetQuery(con, sql)` 用執行查詢，其 `sql` 中是要運行的SQL查詢。
+現在，您已連接到[!DNL Query Service]，您可以編寫查詢以執行和編輯SQL陳述式。 例如，您可以使用`dbGetQuery(con, sql)`來執行查詢，其中`sql`是您要運行的SQL查詢。
 
-下列查詢使用包含 [ExperienceEvents的資料集](../creating-queries/experience-event-queries.md) ，並根據裝置的螢幕高度建立網站頁面檢視的色階分佈圖。
+下列查詢使用包含[ExperienceEvents](../best-practices/experience-event-queries.md)的資料集，並根據裝置的螢幕高度建立網站頁面檢視的色階分佈圖。
 
 ```sql
 df_pageviews <- dbGetQuery(con,
@@ -87,4 +87,4 @@ df_pageviews
 7 600-699 3097040
 ```
 
-有關如何編寫和運行查詢的詳細資訊，請閱讀運行查 [詢指南](../creating-queries/creating-queries.md)。
+有關如何寫入和運行查詢的詳細資訊，請閱讀[運行查詢指南](../best-practices/writing-queries.md)。
