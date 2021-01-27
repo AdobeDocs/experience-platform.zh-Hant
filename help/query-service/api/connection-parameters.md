@@ -5,9 +5,9 @@ title: 查詢服務開發人員指南
 topic: connection parameters
 description: 通過向/connection_parameters端點發出GET請求，可以檢索連接參數以使用互動式服務。
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: 648544bc60c0cee8ca8b167118391980b6c33d91
 workflow-type: tm+mt
-source-wordcount: '143'
+source-wordcount: '134'
 ht-degree: 1%
 
 ---
@@ -17,11 +17,11 @@ ht-degree: 1%
 
 ## 範例API呼叫
 
-現在，您已瞭解要使用哪些標題，可以開始呼叫 [!DNL Query Service] API。 以下各節將介紹您可使用API進行的各種API [!DNL Query Service] 呼叫。 每個呼叫都包含一般API格式、顯示必要標題的範例要求，以及範例回應。
+現在您已瞭解要使用哪些標題，可以開始呼叫[!DNL Query Service] API。 以下各節將介紹您可使用[!DNL Query Service] API進行的各種API呼叫。 每個呼叫都包含一般API格式、顯示必要標題的範例要求，以及範例回應。
 
-### 請求互動式服務的連接參數
+### 請求連線參數
 
-通過向端點發出GET請求 [，可以檢索連接參](../creating-queries/writing-queries.md) 數以使用互動式服 `/connection_parameters` 務。 有關使用連接參數通過互動式服務進行連接的客戶端的詳細資訊，請閱讀查詢服務客戶端的 [文檔](../clients/overview.md)。
+通過向`/connection_parameters`端點發出GET請求，可以檢索連接參數。 有關使用連接參數通過互動式服務進行連接的客戶端的詳細資訊，請閱讀[查詢服務客戶端](../clients/overview.md)上的文檔。
 
 **API格式**
 
