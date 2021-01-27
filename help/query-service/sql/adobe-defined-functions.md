@@ -5,7 +5,7 @@ title: Adobe定義的函式
 topic: functions
 description: 本檔案提供查詢服務中Adobe定義函式的資訊。
 translation-type: tm+mt
-source-git-commit: c95f976efd4a281640d2f47888b34bdd12a6c7a8
+source-git-commit: e15229601d35d1155fc9a8ab9296f8c41811ebf9
 workflow-type: tm+mt
 source-wordcount: '2889'
 ht-degree: 2%
@@ -667,14 +667,14 @@ PREVIOUS({KEY}, {SHIFT}, {IGNORE_NULLS}) OVER ({PARTITION} {ORDER} {FRAME})
 **範例查詢**
 
 ```sql
-SELECT endUserIds._experience.mcid.id, _experience.analytics.session.num, timestamp, web.webPageDetails.name
+SELECT endUserIds._experience.mcid.id, timestamp, web.webPageDetails.name
     PREVIOUS(web.webPageDetails.name, 3)
-      OVER(PARTITION BY endUserIds._experience.mcid.id, _experience.analytics.session.num
+      OVER(PARTITION BY endUserIds._experience.mcid.id
            ORDER BY timestamp
            ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW)
       AS previous_page
 FROM experience_events
-ORDER BY endUserIds._experience.mcid.id, _experience.analytics.session.num, timestamp ASC
+ORDER BY endUserIds._experience.mcid.id, timestamp ASC
 ```
 
 **結果**
@@ -723,7 +723,7 @@ SELECT endUserIds._experience.aaid.id, timestamp, web.webPageDetails.name,
       OVER(PARTITION BY endUserIds._experience.aaid.id
            ORDER BY timestamp
            ROWS BETWEEN CURRENT ROW AND UNBOUNDED FOLLOWING)
-      AS previous_page
+      AS next_page
 FROM experience_events
 ORDER BY endUserIds._experience.aaid.id, timestamp ASC
 LIMIT 10
@@ -881,7 +881,7 @@ LIMIT 10
 
 ## 後續步驟
 
-使用此處所述的函式，可以編寫查詢以使用[!DNL Query Service]訪問您自己的[!DNL Experience Event]資料集。 有關在[!DNL Query Service]中編寫查詢的詳細資訊，請參閱有關建立查詢[的文檔。](../creating-queries/creating-queries.md)
+使用此處所述的函式，可以編寫查詢以使用[!DNL Query Service]訪問您自己的[!DNL Experience Event]資料集。 有關在[!DNL Query Service]中編寫查詢的詳細資訊，請參閱有關建立查詢[的文檔。](../best-practices/writing-queries.md)
 
 ## 其他資源
 
