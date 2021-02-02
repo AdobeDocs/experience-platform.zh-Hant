@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;ui;XDM;XDM system;experience data model;Experience data model;Experience Data Model;data model;Data Model;schema registry;Schema Registry;schema;Schema;schemas;Schemas;create;data type;data types;
+keywords: Experience Platform;home；熱門主題；ui;XDM;XDM系統；體驗資料模型；Experience資料模型；資料模型；資料模型；模式註冊表；模式；模式；模式；模式；模式；模式；模式；模式；建立；資料類型；資料類型；
 solution: Experience Platform
 title: 使用UI建立和編輯資料類型
 topic: tutorial
@@ -8,7 +8,7 @@ description: 瞭解如何在Experience Platform使用者介面中建立和編輯
 translation-type: tm+mt
 source-git-commit: eca896ca068a02da7ec7379e8ced2105bbca9f2d
 workflow-type: tm+mt
-source-wordcount: '1102'
+source-wordcount: '1137'
 ht-degree: 0%
 
 ---
@@ -22,7 +22,7 @@ Adobe Experience Platform提供許多標準資料類型，可用於涵蓋各種�
 
 本教學課程涵蓋在平台使用者介面中建立和編輯自訂資料類型的步驟。
 
-## 先決條件
+## 必要條件
 
 本指南需要對XDM System有充分的瞭解。 請參閱[XDM概述](../../home.md)以瞭解XDM在Experience Platform生態系統中的角色，以及[架構構成基礎](../../schema/composition.md)瞭解資料類型對XDM架構的貢獻。
 
@@ -89,7 +89,7 @@ Adobe Experience Platform提供許多標準資料類型，可用於涵蓋各種�
 
 建立資料類型後，您就可以開始在結構中使用它。 由於XDM模式由類和零個或多個混合組成，因此不能直接將資料類型提供的欄位添加到模式。 而必須包含在類別或混音中。
 
-首先，遵循將欄位添加到類[或](./classes.md#add-fields)將欄位添加到mixin[中涉及的步驟。 ](./mixins.md#add-fields)為新欄位選擇&#x200B;**[!UICONTROL Type]**&#x200B;時，請從下拉菜單中選擇資料類型的名稱。
+首先，遵循將欄位添加到類](./classes.md#add-fields)或[將欄位添加到mixin](./mixins.md#add-fields)中涉及的步驟。 [為新欄位選擇&#x200B;**[!UICONTROL Type]**&#x200B;時，請從下拉菜單中選擇資料類型的名稱。
 
 ## 將多欄位物件轉換為資料類型{#convert}
 
