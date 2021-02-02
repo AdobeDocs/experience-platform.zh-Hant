@@ -1,26 +1,27 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home；熱門主題
 solution: Experience Platform
-title: 同意
+title: 許可端點
 topic: developer guide
+description: 瞭解如何使用隱私權服務API管理Experience Cloud應用程式的客戶同意請求。
 translation-type: tm+mt
-source-git-commit: 5b32c1955fac4f137ba44e8189376c81cdbbfc40
+source-git-commit: 238a9200e4b43d41335bed0efab079780b252717
 workflow-type: tm+mt
-source-wordcount: '220'
+source-wordcount: '243'
 ht-degree: 1%
 
 ---
 
 
-# 同意
+# 許可端點
 
-某些法規要求客戶明確同意才能收集其個人資料。 API `/consent` 的端點可 [!DNL Privacy Service] 讓您處理客戶同意要求，並將它們整合到您的隱私權工作流程中。
+某些法規要求客戶明確同意才能收集其個人資料。 [!DNL Privacy Service] API中的`/consent`端點可讓您處理客戶同意請求，並將它們整合到您的隱私權工作流程中。
 
-在使用本指南之前，請參閱快速入 [門](./getting-started.md) ，以取得以下範例API呼叫中所需驗證標題的相關資訊。
+在使用本指南之前，請參閱[快速入門](./getting-started.md)一節，以取得以下範例API呼叫中所需驗證標題的相關資訊。
 
 ## 處理客戶同意請求
 
-對端點發出POST請求，即可處理同意 `/consent` 請求。
+對`/consent`端點發出POST請求，即可處理許可請求。
 
 **API格式**
 
@@ -30,7 +31,7 @@ POST /consent
 
 **請求**
 
-下列請求會為陣列中提供的使用者ID建立新的許可 `entities` 工作。
+以下請求會為`entities`陣列中提供的用戶ID建立新的許可作業。
 
 ```shell
 curl -X POST \
@@ -61,15 +62,15 @@ curl -X POST \
 
 | 屬性 | 說明 |
 | --- | --- |
-| `optOutOfSale` | 設為true時，表示依據提供的使 `entities` 用者希望退出銷售或分享其個人資料。 |
-| `entities` | 一系列對象，用於指示對許可請求申請的用戶。 每個物件都包含一 `namespace` 個和一個陣列，以 `values` 搭配具有該命名空間的個別使用者。 |
-| `nameSpace` | 陣列中的每個對 `entities` 像都必須包含Privacy Service API所識 [別的標準身份名稱空間](./appendix.md#standard-namespaces) 。 |
-| `values` | 每個用戶的值陣列，對應於所提供的值 `nameSpace`。 |
+| `optOutOfSale` | 設為true時，表示`entities`下提供的使用者希望退出銷售或分享其個人資料。 |
+| `entities` | 一系列對象，用於指示對許可請求申請的用戶。 每個物件都包含`namespace`和`values`陣列，以搭配個別使用者與該命名空間。 |
+| `nameSpace` | `entities`陣列中的每個對象都必須包含由隱私服務API識別的[標準身份名稱空間](./appendix.md#standard-namespaces)中的一個。 |
+| `values` | 每個用戶的值陣列，與提供的`nameSpace`相對應。 |
 
 >[!NOTE]
 >
->如需如何決定要傳送給哪些客戶身分值的詳細資訊，請 [!DNL Privacy Service]參閱提供身 [分資料指南](../identity-data.md)。
+>有關如何確定要發送到[!DNL Privacy Service]的客戶身份值的詳細資訊，請參閱[提供身份資料](../identity-data.md)的指南。
 
 **回應**
 
-成功的回應會傳回沒有裝載的HTTP狀態202（已接受），指出請求已被接受， [!DNL Privacy Service] 且正在處理中。
+成功的回應會傳回沒有裝載的HTTP狀態202（已接受），指出[!DNL Privacy Service]已接受請求，且正在處理中。
