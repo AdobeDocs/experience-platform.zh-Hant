@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;experience data model;data model;ui;workspace;enum;field;
+keywords: Experience Platform;home；熱門主題；api;API;XDM;XDM系統；體驗資料模型；ui;workspace;enum;field;
 solution: Experience Platform
 title: 在UI中定義列舉欄位
 description: 瞭解如何在Experience Platform使用者介面中定義列舉欄位。
@@ -7,7 +7,7 @@ topic: user guide
 translation-type: tm+mt
 source-git-commit: 2e20403122e65d28f04114af9b7e8d41874f76e2
 workflow-type: tm+mt
-source-wordcount: '234'
+source-wordcount: '253'
 ht-degree: 0%
 
 ---
