@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics;;XDM;XDM system;XDM individual profile;XDM ExperienceEvent;XDM Experience Event;experienceEvent;experience eventExperience event;XDM Experience Event;XDM ExperienceEvent;;experience data model;Experience data model;Experience Data Model;data model;Data Model;schema;troubleshooting;FAQ;faq;Union schema;UNION PROFILE;union profile
+keywords: Experience Platform;home；熱門主題；XDM;XDM系統；XDM個人資料；XDM ExperienceEvent;XDM ExperienceEvent;experienceEvent;XDM ExperienceEvent;XDM ExperienceEnt；體驗資料模型；體驗資料模型；資料模型；model;schema；疑難排解； FAQ;faq;Union schema;UNION PROFILE;union配置檔案
 solution: Experience Platform
 title: Experience Data Model(XDM)系統疑難排解指南
 description: 本檔案提供有關Experience Data Model(XDM)System的常見問題解答，以及常見錯誤的疑難排解指南。
 topic: troubleshooting
 translation-type: tm+mt
-source-git-commit: e87fcd9f028bc6dedaec0435c4eef54e6aecae2d
+source-git-commit: 2dbd92efbd992b70f4f750b09e9d2e0626e71315
 workflow-type: tm+mt
-source-wordcount: '1831'
+source-wordcount: '1873'
 ht-degree: 0%
 
 ---
@@ -15,45 +15,45 @@ ht-degree: 0%
 
 # [!DNL Experience Data Model] (XDM)系統故障排除指南
 
-本檔案提供有關 [!DNL Experience Data Model] (XDM)系統的常見問題解答，以及常見錯誤的疑難排解指南。 如需Adobe Experience Platform中其他服務的相關問題和疑難排解，請參閱 [Experience Platform疑難排解指南](../landing/troubleshooting.md)。
+本文檔提供有關[!DNL Experience Data Model](XDM)系統的常見問題解答，以及常見錯誤的故障排除指南。 有關Adobe Experience Platform中其他服務的相關問題和疑難排解，請參閱[ Experience Platform疑難排解指南](../landing/troubleshooting.md)。
 
-**[!DNL Experience Data Model](XDM)** ，是一種開放原始碼規格，可定義客戶體驗管理的標準結構。 構建的方 [!DNL Experience Platform] 法— **XDM System**—操作模式 [!DNL Experience Data Model] 供服務 [!DNL Platform] 使用。 提供 **[!DNL Schema Registry]** 了一個用戶介面和一個REST風格的API以訪問 **[!DNL Schema Library]** 中 [!DNL Experience Platform]。 See the [XDM documentation](home.md) for more information.
+**[!DNL Experience Data Model](XDM)是開** 放原始碼規格，可定義客戶體驗管理的標準架構。構建[!DNL Experience Platform]的方法&#x200B;**XDM系統**&#x200B;操作[!DNL Experience Data Model]方案，以便由[!DNL Platform]服務使用。 **[!DNL Schema Registry]**&#x200B;提供用戶介面和REST風格的API以訪問[!DNL Experience Platform]中的&#x200B;**[!DNL Schema Library]**。 如需詳細資訊，請參閱[XDM檔案](home.md)。
 
 ## 常見問題集
 
-以下是有關XDM系統及 [!DNL Schema Registry] API使用的常見問題解答清單。
+以下是有關XDM系統及[!DNL Schema Registry] API使用的常見問題解答清單。
 
 ### 如何將欄位新增至架構？
 
 您可以使用mixin，將欄位添加到架構中。 每個混音都與一個或多個類相容，允許混音用於實現這些相容類之一的任何模式。 雖然Adobe Experience Platform提供數種業界混音及其預先定義的欄位，但您可以使用API或使用者介面建立新混音，將自己的欄位新增至架構。
 
-如需在 [!DNL Schema Registry] API中建立新混音的詳細資訊，請參 [閱混音](api/mixins.md#create)端點指南。 如果您使用UI，請參閱架構編 [輯器教學課程](./tutorials/create-schema-ui.md)。
+有關在[!DNL Schema Registry] API中建立新混音的詳細資訊，請參閱[mixin端點指南](api/mixins.md#create)。 如果您使用UI，請參閱[架構編輯器教程](./tutorials/create-schema-ui.md)。
 
 ### 混音與資料類型的最佳用途為何？
 
-[Mixins](./schema/composition.md#mixin) 是定義架構中一或多個欄位的元件。 Mixins可強制其欄位在架構階層中的顯示方式，因此在每個架構中都會顯示與其所包含的相同結構。 Mixin只與特定類別相容，由其屬性 `meta:intendedToExtend` 識別。
+[Mixinsare](./schema/composition.md#mixin) 是定義架構中一個或多個欄位的元件。Mixins可強制其欄位在架構階層中的顯示方式，因此在每個架構中都會顯示與其所包含的相同結構。 Mixins僅與特定類相容，由其`meta:intendedToExtend`屬性所識別。
 
-[資料類型](./schema/composition.md#data-type) ，也可以為方案提供一個或多個欄位。 但是，與mixin不同，資料類型不限於特定類別。 這使得資料類型成為更有彈性的選項，以說明可在具有潛在不同類別的多個結構中重複使用的常用資料結構。
+[資料](./schema/composition.md#data-type) 類型還可以為模式提供一個或多個欄位。但是，與mixin不同，資料類型不限於特定類別。 這使得資料類型成為更有彈性的選項，以說明可在具有潛在不同類別的多個結構中重複使用的常用資料結構。
 
 ### 架構的唯一ID是什麼？
 
-所有 [!DNL Schema Registry] 資源（結構、混合、資料類型、類別）都有URI，可當成參考和查閱用途的唯一ID。 在API中檢視結構時，可在頂層和屬性中找 `$id` 到 `meta:altId` 。
+所有[!DNL Schema Registry]資源（結構、混合、資料類型、類別）都有URI，可當成參考和查閱用途的唯一ID。 在API中查看架構時，可在頂級`$id`和`meta:altId`屬性中找到。
 
-如需詳細資訊，請參 [閱「API開發人員指南](api/getting-started.md#resource-identification) 」中的 [!DNL Schema Registry] 「資源識別」一節。
+如需詳細資訊，請參閱[!DNL Schema Registry] API開發人員指南中的[資源識別](api/getting-started.md#resource-identification)一節。
 
 ### 架構何時開始防止中斷更改？
 
-只要在建立資料集時從未使用過或在中啟用過，就可對架構進行中斷變更 [[!DNL Real-time Customer Profile]](../profile/home.md)。 一旦在資料集建立中使用模式或啟用與一起使 [!DNL Real-time Customer Profile]用模式後， [](schema/composition.md#evolution) 系統將嚴格執行模式演化規則。
+只要在建立資料集時從未使用過或在[[!DNL Real-time Customer Profile]](../profile/home.md)中啟用過，就可以對模式進行中斷更改。 一旦在資料集建立中使用模式或啟用與[!DNL Real-time Customer Profile]一起使用，系統將嚴格執行[模式演化](schema/composition.md#evolution)規則。
 
 ### 長欄位類型的最大大小是多少？
 
 長欄位類型是一個最大大小為53(+1)位的整數，其電位範圍介於-9007199254740992和9007199254740992之間。 這是由於JSON的JavaScript實作如何表示長整數的限制。
 
-有關欄位類型的詳細資訊，請參閱 [XDM欄位類型約束的文檔](./schema/field-constraints.md)。
+有關欄位類型的詳細資訊，請參閱[XDM欄位類型約束](./schema/field-constraints.md)上的文檔。
 
 ### 如何定義我的架構的身分？
 
-在 [!DNL Experience Platform]中，身分用於識別主體（通常是個人），而不管被解釋的資料源。 它們是在結構中定義的，方法是將鍵欄位標籤為「標識」。 常用的身分識別欄位包括電子郵件地址、電話號碼、 [[!DNL Experience Cloud ID (ECID)]](https://docs.adobe.com/content/help/zh-Hant/id-service/using/home.html)CRM ID和其他唯一ID欄位。
+在[!DNL Experience Platform]中，身分用於識別對象（通常是個人），而不管所解釋的資料源為何。 它們是在結構中定義的，方法是將鍵欄位標籤為「標識」。 常用的身分識別欄位包括電子郵件地址、電話號碼、[[!DNL Experience Cloud ID (ECID)]](https://experienceleague.adobe.com/docs/id-service/using/home.html)、CRM ID和其他唯一ID欄位。
 
 欄位可使用API或使用者介面標示為身分。
 
@@ -63,48 +63,48 @@ ht-degree: 0%
 
 身份描述符由POST請求建立到／描述符端點。 如果成功，您將會收到HTTP狀態201（已建立）和包含新描述符詳細資訊的響應對象。
 
-有關在API中建立身份描述符的詳細資訊，請參閱開發人員指南中 [描述符](api/descriptors.md) 部分的 [!DNL Schema Registry] 文檔。
+有關在API中建立身份描述符的詳細資訊，請參閱[!DNL Schema Registry]開發人員指南中[描述符](api/descriptors.md)部分的文檔。
 
 #### 在UI中定義身份
 
-在模式編輯器中開啟模式時，按一下要標籤為身份的編輯器的「結構 **** 」部分中的欄位。 在右 **[!UICONTROL 側的「欄位屬性]** 」下，按一下「識別」核取 **[!UICONTROL 方塊]** 。
+在模式編輯器中開啟模式時，在編輯器的&#x200B;**[!UICONTROL Structure]**&#x200B;部分中選擇要標籤為身份的欄位。 在右側的&#x200B;**[!UICONTROL 欄位屬性]**&#x200B;下，選擇&#x200B;**[!UICONTROL Identity]**&#x200B;複選框。
 
-有關在UI中管理身份的詳細資訊，請參閱「架構編輯器」教程中 [的「定義身份欄位](./tutorials/create-schema-ui.md#identity-field) 」一節。
+有關在UI中管理身份的詳細資訊，請參閱方案編輯器教程中[定義身份欄位](./tutorials/create-schema-ui.md#identity-field)部分一節。
 
 ### 我的架構需要主要身分識別嗎？
 
-主要身份是可選的，因為結構可能有0或1個。 但是，方案必須具有主標識，才能在中啟用該方案 [!DNL Real-time Customer Profile]。 如需詳細 [資訊，請參閱](./tutorials/create-schema-ui.md#identity-field) 「架構編輯器」教學課程的識別區段。
+主要身份是可選的，因為結構可能有0或1個。 但是，方案必須具有主標識，才能在[!DNL Real-time Customer Profile]中啟用方案。 如需詳細資訊，請參閱架構編輯器教學課程的[identity](./tutorials/create-schema-ui.md#identity-field)一節。
 
-### 如何啟用模式以用於 [!DNL Real-time Customer Profile]?
+### 如何啟用模式以用於[!DNL Real-time Customer Profile]?
 
-方案可通過添加位 [[!DNL Real-time Customer Profile]](../profile/home.md) 於方案屬性中的&quot;union&quot;標籤來 `meta:immutableTags` 使用。 可使用API或使 [!DNL Profile] 用者介面來啟用結構。
+通過在架構的`meta:immutableTags`屬性中添加&quot;union&quot;標籤，可在[[!DNL Real-time Customer Profile]](../profile/home.md)中使用架構。 可以使用API或用戶介面來啟用與[!DNL Profile]一起使用的模式。
 
-#### 啟用現有結構以 [!DNL Profile] 使用API
+#### 使用API為[!DNL Profile]啟用現有模式
 
-發出PATCH請求以更新模式並將屬 `meta:immutableTags` 性添加為包含值&quot;union&quot;的陣列。 如果更新成功，回應將顯示現在包含union標籤的更新架構。
+發出PATCH請求以更新模式，並將`meta:immutableTags`屬性添加為包含值&quot;union&quot;的陣列。 如果更新成功，回應將顯示現在包含union標籤的更新架構。
 
-如需使用API啟用架構以供使用的詳細資訊 [!DNL Real-time Customer Profile]，請參 [閱開發人員指](./api/unions.md)[!DNL Schema Registry] 南的Unions檔案。
+有關使用API啟用架構以用於[!DNL Real-time Customer Profile]的詳細資訊，請參閱[!DNL Schema Registry]開發人員指南的[unions](./api/unions.md)檔案。
 
-#### 啟用現有模式以 [!DNL Profile] 使用UI
+#### 使用UI為[!DNL Profile]啟用現有模式
 
-在中 [!DNL Experience Platform]，按一下左 **[!UICONTROL 側導航中的方案]** ，然後從方案清單中選擇要啟用的方案的名稱。 然後，在編輯器的右側，按一下「架構屬性」( **[!UICONTROL Schema Properties]**)下的「 **[!UICONTROL Profile]** 」（配置檔案）將其開啟。
+在[!DNL Experience Platform]中，在左側導航中選擇&#x200B;**[!UICONTROL 方案]**，然後從方案清單中選擇要啟用的方案的名稱。 然後，在編輯器的右側，在&#x200B;**[!UICONTROL 方案屬性]**&#x200B;下，選擇&#x200B;**[!UICONTROL 描述檔]**&#x200B;以開啟它。
 
 
-如需詳細資訊，請參閱「架構編 [輯器」教學課程的「即時客戶描述檔](./tutorials/create-schema-ui.md#profile) 」中 [!UICONTROL 的「使用」一節] 。
+如需詳細資訊，請參閱[!UICONTROL 架構編輯器]教學課程中「即時客戶描述檔[使用」一節。](./tutorials/create-schema-ui.md#profile)
 
 ### 我可以直接編輯聯合架構嗎？
 
 聯合模式是只讀的，由系統自動生成。 無法直接編輯。 將&quot;union&quot;標籤添加到實現該類的模式時，將為特定類建立聯合模式。
 
-如需XDM中工會的詳細資訊，請參閱 [API開發人員指南](./api/unions.md)[!DNL Schema Registry] 中的工會一節。
+有關XDM中工會的詳細資訊，請參閱[!DNL Schema Registry] API開發人員指南中的[unions](./api/unions.md)一節。
 
 ### 如何格式化資料檔案以將資料嵌入到模式？
 
-[!DNL Experience Platform] 接受或JSON格式 [!DNL Parquet] 的資料檔案。 這些檔案的內容必須符合資料集參考的架構。 有關資料檔案提取的最佳做法的詳細資訊，請參 [閱批處理概述](../ingestion/home.md)。
+[!DNL Experience Platform] 接受或JSON格式 [!DNL Parquet] 的資料檔案。這些檔案的內容必須符合資料集參考的架構。 有關資料檔案提取的最佳做法的詳細資訊，請參見[批次提取概述](../ingestion/home.md)。
 
 ## 錯誤和疑難排解
 
-以下是您使用 [!DNL Schema Registry] API時可能遇到的錯誤訊息清單。
+以下是使用[!DNL Schema Registry] API時可能遇到的錯誤訊息清單。
 
 ### 找不到對象
 
@@ -120,7 +120,7 @@ ht-degree: 0%
 
 當系統找不到特定資源時，將顯示此錯誤。 資源可能已刪除，或API呼叫中的路徑無效。 請確定您已輸入API呼叫的有效路徑，然後再次嘗試。 您可能想檢查是否已為資源輸入正確的ID，以及路徑是否與適當的容器（全域或租用戶）正確命名。
 
-如需在API中建構查閱路徑的詳細資訊，請參 [閱開發人員指南](./api/getting-started.md#container)[中的容器](api/getting-started.md#resource-identification)[!DNL Schema Registry] 與資源識別區段。
+如需在API中建構查閱路徑的詳細資訊，請參閱[!DNL Schema Registry]開發人員指南中的[container](./api/getting-started.md#container)和[資源識別](api/getting-started.md#resource-identification)章節。
 
 ### 標題必須是唯一的
 
@@ -149,12 +149,12 @@ ht-degree: 0%
 }
 ```
 
-當您嘗試建立新混音時，會顯示此錯誤訊息，其中的欄位名稱不正確。 由IMS組織定義的Mixin必須使用命名空間命名其欄位，以 `TENANT_ID` 避免與其他產業和廠商資源發生衝突。 有關混合的適當資料結構的詳細示例，請參見混合 [端點指南](./api/mixins.md#create)。
+當您嘗試建立新混音時，會顯示此錯誤訊息，其中的欄位名稱不正確。 由IMS組織定義的Mixin必須使用`TENANT_ID`命名其欄位，以避免與其他產業和廠商資源產生衝突。 在[mixins端點指南](./api/mixins.md#create)中可找到混合的適當資料結構的詳細示例。
 
 
 ### [!DNL Real-time Customer Profile] 錯誤
 
-以下錯誤消息與為啟用方案涉及的操作相關聯 [!DNL Real-time Customer Profile]。 如需詳細 [資訊](./api/unions.md) ，請參閱 [!DNL Schema Registry] API開發人員指南中的Unions一節。
+以下錯誤消息與啟用[!DNL Real-time Customer Profile]方案時涉及的操作相關聯。 如需詳細資訊，請參閱[!DNL Schema Registry] API開發人員指南中的[unions](./api/unions.md)一節。
 
 #### 要啟用配置檔案資料集，架構應有效
 
@@ -167,7 +167,7 @@ ht-degree: 0%
 }
 ```
 
-當您嘗試為尚未啟用的架構啟用描述檔資料集時，會顯示此錯誤訊息 [!DNL Real-time Customer Profile]。 在啟用資料集之前，請確定架構包含union標籤。
+當您嘗試為尚未為[!DNL Real-time Customer Profile]啟用的架構啟用配置式資料集時，將顯示此錯誤消息。 在啟用資料集之前，請確定架構包含union標籤。
 
 #### 必須有引用標識描述符
 
@@ -182,7 +182,7 @@ ht-degree: 0%
 }
 ```
 
-當您嘗試為模式啟用時，將顯示此錯誤消息，其 [!DNL Profile] 中一個屬性包含沒有引用標識描述符的關係描述符。 將參考身份描述符添加到相關的模式欄位以解決此錯誤。
+當您嘗試為[!DNL Profile]啟用模式時，將顯示此錯誤消息，其中一個屬性包含沒有引用標識描述符的關係描述符。 將參考身份描述符添加到相關的模式欄位以解決此錯誤。
 
 #### 引用標識描述符欄位和目標模式的名稱空間必須匹配
 
@@ -200,13 +200,13 @@ ht-degree: 0%
 }
 ```
 
-為了啟用包含關係描述符的方案以便在中使 [!DNL Profile]用，源欄位的命名空間和目標欄位的主命名空間必須相同。 當您嘗試啟用包含引用標識描述符的不匹配命名空間的架構時，將顯示此錯誤消息。 確保目標方 `xdm:namespace` 案的標識欄位的值與源欄位的 `xdm:identityNamespace` 引用標識描述符中屬性的值匹配，以解決此問題。
+為了啟用包含關係描述符的方案以便用於[!DNL Profile]，源欄位的命名空間和目標欄位的主命名空間必須相同。 當您嘗試啟用包含引用標識描述符的不匹配命名空間的架構時，將顯示此錯誤消息。 確保目標方案的標識欄位的`xdm:namespace`值與源欄位的引用標識描述符中`xdm:identityNamespace`屬性的值匹配，以解決此問題。
 
-如需支援的身分名稱空間代碼清單，請參閱身分名稱空 [間概觀中](../identity-service/namespaces.md) ，關於標準名稱空間的章節。
+如需支援的身分名稱空間代碼清單，請參閱識別名稱空間概觀中有關[標準名稱空間](../identity-service/namespaces.md)的章節。
 
 ### 接受標題錯誤
 
-API中的大部分GET [!DNL Schema Registry] 請求都需要「接受」標題，系統才能決定如何格式化回應。 以下是與「接受」標題相關的常見錯誤清單。 有關不同API請求的相容「接受」標題清單，請參閱「架構註冊表」開發人員指南中 [的相應章節](api/getting-started.md)。
+[!DNL Schema Registry] API中的大多數GET請求都需要「接受」標題，以便系統決定如何格式化回應。 以下是與「接受」標題相關的常見錯誤清單。 有關不同API請求的相容「接受」標題清單，請參閱[方案註冊表開發人員指南](api/getting-started.md)中的相應章節。
 
 #### 必須接受標題參數
 
@@ -245,7 +245,7 @@ API中的大部分GET [!DNL Schema Registry] 請求都需要「接受」標題�
 }
 ```
 
-查找描述符時，如果「接受」標題提供不正確，則會顯示此錯誤消息。 請確定您已正確輸入了描述符的 [一個支援的接受標頭](./api/descriptors.md) ，然後再重試。
+查找描述符時，如果「接受」標題提供不正確，則會顯示此錯誤消息。 在重試之前，請確保已正確輸入[支援的描述符](./api/descriptors.md)的接受標頭之一。
 
 #### 必須在「接受」標題中提供版本
 
@@ -265,7 +265,7 @@ API中的大部分GET [!DNL Schema Registry] 請求都需要「接受」標題�
 application/vnd.adobe.xed+json; version=1
 ```
 
-如需支援的「接受」標題清單，請參閱開發 [人員指南中](api/getting-started.md#accept) 「接受 [!DNL Schema Registry] 」標題區段。
+如需支援的「接受」標題清單，請參閱[!DNL Schema Registry]開發人員指南中的[接受標題](api/getting-started.md#accept)一節。
 
 #### 「接受」標題中不能提供版本
 
