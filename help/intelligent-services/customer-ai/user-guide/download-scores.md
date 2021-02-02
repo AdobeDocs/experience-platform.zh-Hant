@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;download scores;customer ai;popular topics;Export;export;customer ai download;customer ai scores
+keywords: Experience Platform；下載分數；客戶ai；熱門主題；導出；客戶ai下載；客戶ai分數
 solution: Experience Platform, Intelligent Services, Real-time Customer Data Platform
 title: 在客戶人工智慧中下載分數
 topic: Downloading scores
-description: 客戶AI可讓您以鑲木地板檔案格式下載分數。
+description: 客戶AI可讓您下載Parce檔案格式的分數。
 translation-type: tm+mt
-source-git-commit: de16ebddd8734f082f908f5b6016a1d3eadff04c
+source-git-commit: 2940f030aa21d70cceeedc7806a148695f68739e
 workflow-type: tm+mt
-source-wordcount: '945'
+source-wordcount: '961'
 ht-degree: 2%
 
 ---
@@ -19,18 +19,18 @@ ht-degree: 2%
 
 ## 快速入門
 
-客戶AI可讓您以鑲木地板檔案格式下載分數。 本教學課程要求您已閱讀並完成快速入門手冊中的「客戶AI [分數](../getting-started.md) 」區段。
+客戶AI可讓您下載Parce檔案格式的分數。 本教學課程要求您已閱讀並完成[快速入門](../getting-started.md)指南中的「Customer AI」（客戶AI）分數區段下載。
 
-此外，為了存取客戶AI的分數，您需要有成功執行狀態的服務例項。 若要建立新的服務例項，請造 [訪設定客戶AI例項](./configure.md)。 如果您最近建立了一個服務例項，但它仍在訓練和計分中，請允許24小時以完成執行。
+此外，為了存取客戶AI的分數，您需要有成功執行狀態的服務例項。 要建立新服務實例，請訪問[配置客戶AI實例](./configure.md)。 如果您最近建立了一個服務例項，但它仍在訓練和計分中，請允許24小時以完成執行。
 
 目前，有兩種方式可下載客戶AI分數：
 
-1. 如果您想要在個別層級下載分數且／或未啟用即時客戶設定檔，請先導覽至尋找資料集ID [開始](#dataset-id)。
-2. 如果您已啟用描述檔且想要下載您使用客戶AI設定的區段，請導覽至下 [載使用客戶AI設定的區段](#segment)。
+1. 如果您想要下載個別層級的分數，且／或未啟用即時客戶設定檔，請先導覽至[尋找資料集ID](#dataset-id)。
+2. 如果您已啟用描述檔，並想要下載您使用客戶AI設定的區段，請導覽至[下載使用客戶AI設定的區段。](#segment)
 
-## Find your dataset ID {#dataset-id}
+## 尋找您的資料集ID {#dataset-id}
 
-在您的客戶AI見解服務例項中，按一下右上方導覽中的「更多 *動作* 」下拉式清單，然後選取「存 **[!UICONTROL 取分數」]**。
+在您的客戶AI見解服務例項中，按一下右上角導覽中的&#x200B;*更多動作*&#x200B;下拉式清單，然後選取&#x200B;**[!UICONTROL 存取分數]**。
 
 ![更多動作](../images/insights/more-actions.png)
 
@@ -40,7 +40,7 @@ ht-degree: 2%
 
 ## 擷取您的批次ID {#retrieve-your-batch-id}
 
-使用上一步的資料集ID，您必須呼叫目錄API以擷取批次ID。 此API呼叫會使用其他查詢參數，以傳回最新成功的批次，而非屬於您組織的批次清單。 要返回附加批，請將限制查詢參數的數量增加到希望返回的所需金額。 有關可用查詢參數類型的詳細資訊，請造訪使用查詢參數篩 [選目錄資料的指南](../../../catalog/api/filter-data.md)。
+使用上一步的資料集ID，您必須呼叫目錄API以擷取批次ID。 此API呼叫會使用其他查詢參數，以傳回最新成功的批次，而非屬於您組織的批次清單。 要返回附加批，請將限制查詢參數的數量增加到希望返回的所需金額。 有關可用查詢參數類型的詳細資訊，請訪問[使用查詢參數](../../../catalog/api/filter-data.md)過濾目錄資料的指南。
 
 **API格式**
 
@@ -64,7 +64,7 @@ curl -X GET 'https://platform.adobe.io/data/foundation/catalog/batches?dataSet=5
 
 **回應**
 
-成功的回應會傳回包含批次ID物件的裝載。 在此範例中，傳回物件的索引鍵值是批次ID `01E5QSWCAASFQ054FNBKYV6TIQ`。 複製您的批次ID以用於下一個API呼叫。
+成功的回應會傳回包含批次ID物件的裝載。 在此示例中，返回對象的鍵值是批ID `01E5QSWCAASFQ054FNBKYV6TIQ`。 複製您的批次ID以用於下一個API呼叫。
 
 ```json
 {
@@ -113,9 +113,9 @@ curl -X GET 'https://platform.adobe.io/data/foundation/catalog/batches?dataSet=5
 }
 ```
 
-## 使用您的批次ID擷取下一個API呼叫 {#retrieve-the-next-api-call-with-your-batch-id}
+## 使用您的批次ID {#retrieve-the-next-api-call-with-your-batch-id}擷取下一個API呼叫
 
-在您取得批次ID後，就可以提出新的GET要求 `/batches`。 請求會傳回用作下一個API請求的連結。
+一旦擁有批次ID，您就可以向`/batches`提出新的GET請求。 請求會傳回用作下一個API請求的連結。
 
 **API格式**
 
@@ -125,7 +125,7 @@ GET batches/{BATCH_ID}/files
 
 | 參數 | 說明 |
 | --------- | ----------- |
-| `{BATCH_ID}` | 在上一步驟中擷取的批次ID會擷 [取您的批次ID](#retrieve-your-batch-id)。 |
+| `{BATCH_ID}` | 在上一步[中擷取的批次ID會擷取您的批次ID](#retrieve-your-batch-id)。 |
 
 **請求**
 
@@ -141,7 +141,7 @@ curl -X GET 'https://platform.adobe.io/data/foundation/export/batches/035e2520-5
 
 **回應**
 
-成功的回應會傳回包含物件的 `_links` 裝載。 物件內 `_links` 有新 `href` 的API呼叫作為其值。 複製此值以繼續下一步。
+成功的響應返回包含`_links`對象的裝載。 在`_links`物件中是`href`，其值是新的API呼叫。 複製此值以繼續下一步。
 
 ```json
 {
@@ -167,9 +167,9 @@ curl -X GET 'https://platform.adobe.io/data/foundation/export/batches/035e2520-5
 }
 ```
 
-## 擷取您的檔案 {#retrieving-your-files}
+## 檢索檔案{#retrieving-your-files}
 
-使用 `href` 上一步驟中的值做為API呼叫，提出新的GET請求以擷取您的檔案目錄。
+使用您在上一步驟中取得的`href`值做為API呼叫，提出新的GET請求以擷取您的檔案目錄。
 
 **API格式**
 
@@ -179,7 +179,7 @@ GET files/{DATASETFILE_ID}
 
 | 參數 | 說明 |
 | --------- | ----------- |
-| `{DATASETFILE_ID}` | 資料集檔案ID會在上一步 `href` 驟的值中 [傳回](#retrieve-the-next-api-call-with-your-batch-id)。 也可在對象類型下 `data` 的陣列中訪問 `dataSetFileId`。 |
+| `{DATASETFILE_ID}` | dataSetFile ID會從[上一步](#retrieve-the-next-api-call-with-your-batch-id)的`href`值中傳回。 在`data`陣列中，對象類型`dataSetFileId`下也可以訪問它。 |
 
 **請求**
 
@@ -238,15 +238,15 @@ curl -X GET 'https://platform.adobe.io:443/data/foundation/export/files/035e2520
 | `_links.self.href` | 用於下載目錄中檔案的GET要求URL。 |
 
 
-複製數 `href` 組中任何檔案對象的值， `data` 然後繼續執行下一步。
+複製`data`陣列中任何檔案對象的`href`值，然後繼續執行下一步。
 
 ## 下載您的檔案資料
 
-若要下載檔案資料，請對您在上一步驟中復 `"href"` 制的檔案值提出GET [要求](#retrieving-your-files)。
+要下載檔案資料，請對在上一步[檢索檔案](#retrieving-your-files)中複製的`"href"`值發出GET請求。
 
 >[!NOTE]
 >
->如果您直接在命令列中提出此請求，可能會提示您在請求標題後新增輸出。 以下請求範例使用 `--output {FILENAME.FILETYPE}`。
+>如果您直接在命令列中提出此請求，可能會提示您在請求標題後新增輸出。 下列請求範例使用`--output {FILENAME.FILETYPE}`。
 
 **API格式**
 
@@ -256,7 +256,7 @@ GET files/{DATASETFILE_ID}?path={FILE_NAME}
 
 | 參數 | 說明 |
 | --------- | ----------- |
-| `{DATASETFILE_ID}` | 資料集檔案ID會從上一步 `href` 驟的值中 [傳回](#retrieve-the-next-api-call-with-your-batch-id)。 |
+| `{DATASETFILE_ID}` | dataSetFile ID會從[上一步](#retrieve-the-next-api-call-with-your-batch-id)的`href`值中傳回。 |
 | `{FILE_NAME}` | 檔案的名稱。 |
 
 **請求**
@@ -280,21 +280,21 @@ curl -X GET 'https://platform.adobe.io:443/data/foundation/export/files/035e2520
 
 ![終端](../images/download-scores/response.png)
 
-## 下載使用客戶AI設定的區段 {#segment}
+## 下載使用客戶AI {#segment}設定的區段
 
-另一種下載分數資料的方式是將讀者匯出至資料集。 分段工作成功完成(屬性的值為 `status` 「成功」)後，您可將對象匯出至資料集，供您存取及操作。 若要進一步瞭解區段，請造訪區 [段總覽](../../../segmentation/home.md)。
+另一種下載分數資料的方式是將讀者匯出至資料集。 分段工作成功完成後（`status`屬性的值為&quot;SUCCEEDED&quot;），您可以將對象匯出至資料集，供您存取並執行操作。 若要進一步瞭解區段，請造訪[區段概述](../../../segmentation/home.md)。
 
 >[!IMPORTANT]
 >
 >為了運用此匯出方法，資料集需要啟用即時客戶設定檔。
 
-區 [段評估指南中的](../../../segmentation/tutorials/evaluate-a-segment.md) 「匯出區段」區段涵蓋匯出觀眾資料集的必要步驟。 本指南概述並提供下列範例：
+區段評估指南中的[匯出區段](../../../segmentation/tutorials/evaluate-a-segment.md)區段涵蓋匯出觀眾資料集的必要步驟。 本指南概述並提供下列範例：
 
-- **建立目標資料集：** 建立資料集以容納觀眾成員。
-- **在資料集中產生觀眾設定檔：** 根據區段工作的結果，以XDM個別描述檔填入資料集。
-- **監視導出進度：** 檢查導出進程的當前進度。
-- **讀取受眾資料：** 擷取代表觀眾成員的產生的XDM個人設定檔。
+- **建立目標資料集：** 建立資料集以容納對象成員。
+- **在資料集中產生觀眾設定檔：** 根據區段工作的結果，以XDM個別設定檔填入資料集。
+- **監視導出進** 度：檢查導出進程的當前進度。
+- **讀取觀眾資料：** 擷取代表觀眾成員的XDM個人設定檔。
 
 ## 後續步驟
 
-本檔案概述下載客戶AI分數所需的步驟。 您現在可以繼續瀏覽其他 [智慧型服務](../../home.md) 和參考線。
+本檔案概述下載客戶AI分數所需的步驟。 您現在可以繼續瀏覽其他提供的[智慧型服務](../../home.md)和參考線。
