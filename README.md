@@ -1,9 +1,9 @@
 ---
-source-git-commit: b0cc44b33b399eb64122374251840a4298946d80
+source-git-commit: 2dbd92efbd992b70f4f750b09e9d2e0626e71315
 workflow-type: tm+mt
 translation-type: tm+mt
-source-wordcount: '509'
-ht-degree: 81%
+source-wordcount: '508'
+ht-degree: 79%
 
 ---
 # 提供內容
@@ -16,7 +16,7 @@ ht-degree: 81%
 
 ## Adobe內容的貢獻方式
 
-請參閱 [Adobe Docs 貢獻者指南](https://docs.adobe.com/help/en/contributor/contributor-guide/introduction.html)。
+請參閱 [Adobe Docs 貢獻者指南](https://experienceleague.adobe.com/docs/contributor/contributor-guide/introduction.html?lang=en)。
 
 貢獻方式取決於您的身分和您要貢獻的變更類型：
 
@@ -24,7 +24,7 @@ ht-degree: 81%
 
 若要提交請求，請按一下文章中的&#x200B;**「登錄問題」**&#x200B;連結，在 GitHub 中開啟問題。指定標題和說明，然後按一下&#x200B;**「提交新問題」**。
 
-若要請求微幅更新，請按一下文章中的&#x200B;**「編輯此頁面」**&#x200B;連結，在 GitHub 中開啟來源文章。使用 GitHub UI 進行更新。如需詳細資訊，請參閱一般 [Adobe Docs 貢獻者指南](https://docs.adobe.com/help/en/contributor/contributor-guide/introduction.html)。
+若要請求微幅更新，請按一下文章中的&#x200B;**「編輯此頁面」**&#x200B;連結，在 GitHub 中開啟來源文章。使用 GitHub UI 進行更新。如需詳細資訊，請參閱一般 [Adobe Docs 貢獻者指南](https://experienceleague.adobe.com/docs/contributor/contributor-guide/introduction.html?lang=zh-Hant)。
 
 您為此存放庫文件和程式碼範例提交的微幅更正或釐清，均屬於 Adobe 使用條款規範的範圍。
 
@@ -38,13 +38,13 @@ If you submit a pull request with significant changes to documentation and code 
 
 ### Adobe Employees的重大變更或新文章
 
-若您是 Adobe Experience Cloud 解決方案產品團隊的技術撰寫人員、專案經理或開發人員，且您的工作正是貢獻或撰寫技術文章，請使用 `https://git.corp.adobe.com/AdobeDocs` 的私人存放庫。See the [Internal Collaboration Guide](https://docs.adobe.com/content/help/en/collaborative-doc-instructions/collaboration-guide/home.html) for more information.
+若您是 Adobe Experience Cloud 解決方案產品團隊的技術撰寫人員、專案經理或開發人員，且您的工作正是貢獻或撰寫技術文章，請使用 `https://git.corp.adobe.com/AdobeDocs` 的私人存放庫。如需詳細資訊，請參閱[內部協作指南](https://experienceleague.adobe.com/docs/authoring-guide-exl/using/home.html?lang=zh-tw)。
 
 <!--Employees from other parts of the Adobe world should use the public repo for minor updates.-->
 
 ## 聯絡Experience Platform檔案團隊
 
-如上所述，Adobe社群成員可提交指派給適當撰寫者的問題。 如果您是Adobe員工，可以提交問題或直接聯絡Experience Platform檔案團隊。 若要尋找特定平台區域的主要撰寫人員，請參閱 [Adobe Experience Platform檔案Wiki](https://wiki.corp.adobe.com/display/DMSArchitecture/Adobe+Experience+Platform+Documentation)。
+如上所述，Adobe社群成員可提交指派給適當撰寫者的問題。 如果您是Adobe員工，可以提交問題或直接聯絡Experience Platform檔案團隊。 若要尋找特定平台區域的主要寫入者，請參閱[Adobe Experience Platform Documentation Wiki](https://wiki.corp.adobe.com/display/DMSArchitecture/Adobe+Experience+Platform+Documentation)。
 
 ## 工具和設定
 
@@ -52,7 +52,7 @@ If you submit a pull request with significant changes to documentation and code 
 
 社群貢獻者可使用 GitHub UI 進行基本編輯或建立存放庫複本，提交重要貢獻。
 
-如需詳細資訊，請參閱 [Adobe Docs 貢獻者指南](https://docs.adobe.com/help/en/contributor/contributor-guide/introduction.html)。
+如需詳細資訊，請參閱 [Adobe Docs 貢獻者指南](https://experienceleague.adobe.com/docs/contributor/contributor-guide/introduction.html)。
 
 ### Markdown
 
