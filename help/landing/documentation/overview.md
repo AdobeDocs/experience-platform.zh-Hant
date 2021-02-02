@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;CJA;journey analytics;customer journey analytics;campaign orchestration;orchestration;customer journey;journey;journey orchestration;capability;workflow
+keywords: Experience Platform；首頁；熱門主題；CJA；歷程分析；客戶歷程分析；宣傳協調；客戶歷程；歷程；歷程協調；功能；工作流程
 solution: Experience Platform
 title: Adobe Experience Platform檔案總覽
 topic: overview
@@ -7,7 +7,7 @@ description: Adobe Experience Platform檔案提供多種格式，包括使用者
 translation-type: tm+mt
 source-git-commit: 96600567bb4965a1611e2b9a7cd6cb49298a567f
 workflow-type: tm+mt
-source-wordcount: '463'
+source-wordcount: '484'
 ht-degree: 0%
 
 ---
