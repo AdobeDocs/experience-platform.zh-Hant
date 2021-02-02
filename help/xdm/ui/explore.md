@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics;ui;UI;XDM;XDM system;experience data model;Experience data model;Experience Data Model;data model;Data Model;explore;class;mixin;data type;schema;
+keywords: 體驗平台；首頁；熱門主題；ui;UI;XDM;XDM系統；體驗資料模型；體驗資料模型；資料模型；資料模型；瀏覽；類；混合；資料類型；模式；
 solution: Experience Platform
 title: 在UI中探索XDM資源
 description: 瞭解如何在Experience Platform使用者介面中探索現有的架構、類別、混合和資料類型。
 topic: tutorial
 type: Tutorial
 translation-type: tm+mt
-source-git-commit: e5c5fea783aa4088d225f771905fa8b2098613cf
+source-git-commit: 912d02477febdafa4a53aebc83bc3a93b0f84f09
 workflow-type: tm+mt
-source-wordcount: '859'
+source-wordcount: '941'
 ht-degree: 0%
 
 ---
@@ -34,7 +34,7 @@ ht-degree: 0%
 
 ![](../images/ui/explore/filter.png)
 
-您也可以使用搜尋列，將結果縮小為名稱與搜尋查詢相符的資源。
+您也可以使用搜尋列進一步縮小結果。 在搜尋詞語時，排名最前的項目代表名稱與搜尋查詢相符的資源。 在這些項下，在&#x200B;**[!UICONTROL 標準欄位]**&#x200B;下，將列出包含與查詢匹配的欄位的所有資源。 這樣，您就可以根據所包含的資料類型來搜索XDM資源，而無需事先知道該資源的名稱。
 
 ![](../images/ui/explore/search.png)
 
@@ -100,7 +100,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->有關在XDM架構中使用關係的詳細資訊，請參閱[在UI](../tutorials/create-schema-ui.md)中建立關係的教程。
+>有關在XDM結構描述中使用關係的詳細資訊，請參閱[在UI](../tutorials/create-schema-ui.md)中建立關係的教程。
 
 ## 後續步驟
 
