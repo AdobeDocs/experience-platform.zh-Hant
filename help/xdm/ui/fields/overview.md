@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;experience data model;data model;ui;workspace;field;
+keywords: Experience Platform;home;popular topics;api;API;XDM;XDM系統；experience資料模型；資料模型；ui;workspace;field;
 solution: Experience Platform
 title: 在UI中定義XDM欄位
 description: 瞭解如何在Experience Platform使用者介面中定義XDM欄位。
 topic: user guide
 translation-type: tm+mt
-source-git-commit: 2e20403122e65d28f04114af9b7e8d41874f76e2
+source-git-commit: 70b3ad788dd78c6100782869e3065cc17a54ece1
 workflow-type: tm+mt
-source-wordcount: '1241'
+source-wordcount: '1311'
 ht-degree: 4%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 4%
 
 Adobe Experience Platform使用者介面中的[!DNL Schema Editor]可讓您在自訂的Experience Data Model(XDM)類別和混音中定義您自己的欄位。 本指南涵蓋在UI中定義XDM欄位的步驟，包括每個欄位類型的可用設定選項。
 
-## 先決條件
+## 必要條件
 
 本指南需要對XDM System有充分的瞭解。 請參閱[XDM概述](../../home.md)以瞭解XDM在Experience Platform生態系統中的角色，以及[架構構成基礎](../../schema/composition.md)，瞭解類別和混合如何將欄位貢獻至XDM架構。
 
@@ -86,10 +86,10 @@ Adobe Experience Platform使用者介面中的[!DNL Schema Editor]可讓您在�
 | [!UICONTROL Format] | [!UICONTROL 字串] | 從預先定義的字串格式清單中選取值必須符合的格式。 可用格式包括： <ul><li>[[!UICONTROL 日期——時間]](https://tools.ietf.org/html/rfc3339)</li><li>[[!UICONTROL 電子郵件]](https://tools.ietf.org/html/rfc2822)</li><li>[[!UICONTROL 主機名]](https://tools.ietf.org/html/rfc1123#page-13)</li><li>[[!UICONTROL ipv4]](https://tools.ietf.org/html/rfc791)</li><li>[[!UICONTROL ipv6]](https://tools.ietf.org/html/rfc2460)</li><li>[[!UICONTROL uri]](https://tools.ietf.org/html/rfc3986)</li><li>[[!UICONTROL uri-reference]](https://tools.ietf.org/html/rfc3986#section-4.1)</li><li>[[!UICONTROL url-template]](https://tools.ietf.org/html/rfc6570)</li><li>[[!UICONTROL json-pointer]](https://tools.ietf.org/html/rfc6901)</li></ul> |
 | [!UICONTROL 最小長度] | [!UICONTROL 字串] | 字串必須包含的字元數目下限，才能在擷取期間接受值。 |
 | [!UICONTROL 長度上限] | [!UICONTROL 字串] | 字串必須包含的字元數上限，才能在擷取期間接受值。 |
-| [!UICONTROL 最小值] | [!UICONTROL 雙倍] | 擷取期間接受Double的最小值。 如果收錄的值與此處輸入的值完全相符，則會接受該值。 |
-| [!UICONTROL 最大值] | [!UICONTROL 雙倍] | 擷取期間接受Double的最大值。 如果收錄的值與此處輸入的值完全相符，則會接受該值。 |
-| [!UICONTROL 獨佔最小值] | [!UICONTROL 雙倍] | 擷取期間接受Double的最大值。 如果收錄的值與此處輸入的值完全相符，則會拒絕該值。 |
-| [!UICONTROL 獨佔最大值] | [!UICONTROL 雙倍] | 擷取期間接受Double的最大值。 如果收錄的值與此處輸入的值完全相符，則會拒絕該值。 |
+| [!UICONTROL 最小值] | [!UICONTROL 雙倍] | 擷取期間接受Double的最小值。 如果收錄的值與此處輸入的值完全相符，則會接受該值。 使用此約束時，「[!UICONTROL 排除最小值]」約束必須留空。 |
+| [!UICONTROL 最大值] | [!UICONTROL 雙倍] | 擷取期間接受Double的最大值。 如果收錄的值與此處輸入的值完全相符，則會接受該值。 使用此約束時，&quot;[!UICONTROL 獨佔最大值]&quot;約束必須留空。 |
+| [!UICONTROL 獨佔最小值] | [!UICONTROL 雙倍] | 擷取期間接受Double的最大值。 如果收錄的值與此處輸入的值完全相符，則會拒絕該值。 使用此約束時，「[!UICONTROL 最小值]」（非獨佔）約束必須留空。 |
+| [!UICONTROL 獨佔最大值] | [!UICONTROL 雙倍] | 擷取期間接受Double的最大值。 如果收錄的值與此處輸入的值完全相符，則會拒絕該值。 使用此約束時，「[!UICONTROL 最大值]」（非獨佔）約束必須留空。 |
 
 ## 特殊欄位類型{#special}
 
