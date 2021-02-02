@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;Authenticate;access
+keywords: Experience Platform;home；熱門主題；Authenticate;access
 solution: Experience Platform
 title: 驗證及存取Experience Platform API
 topic: tutorial
@@ -8,7 +8,7 @@ description: '本文件逐步說明如何存取 Adobe Experience Platform 開發
 translation-type: tm+mt
 source-git-commit: 681a2554111f988ec03d40f23a3b2c8225a077ae
 workflow-type: tm+mt
-source-wordcount: '875'
+source-wordcount: '882'
 ht-degree: 4%
 
 ---
