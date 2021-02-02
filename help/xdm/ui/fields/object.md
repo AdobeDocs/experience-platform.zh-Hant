@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;experience data model;data model;ui;workspace;object;field;
+keywords: Experience Platform;home;popular topics;api;API;XDM;XDM系統；experience資料模型；資料模型；ui;workspace;object;field;
 solution: Experience Platform
 title: 在UI中定義物件欄位
 description: 瞭解如何在Experience Platform使用者介面中定義物件類型欄位。
@@ -7,7 +7,7 @@ topic: user guide
 translation-type: tm+mt
 source-git-commit: 2e20403122e65d28f04114af9b7e8d41874f76e2
 workflow-type: tm+mt
-source-wordcount: '289'
+source-wordcount: '308'
 ht-degree: 0%
 
 ---
@@ -33,7 +33,7 @@ Adobe Experience Platform可讓您完全自訂自訂Experience Data Model(XDM)�
 
 ![](../../images/ui/fields/special/object-nested.png)
 
-在完成物件建構後，您可能會發現想要在不同的類別和混合中重複使用其結構。 在這種情況下，您可以選擇將對象轉換為資料類型。 如需詳細資訊，請參閱資料類型UI指南中有關將物件轉換為資料類型[的章節。](../resources/data-types.md#convert)
+在完成物件建構後，您可能會發現想要在不同的類別和混合中重複使用其結構。 在這種情況下，您可以選擇將對象轉換為資料類型。 如需詳細資訊，請參閱資料類型UI指南中有關將物件轉換為資料類型](../resources/data-types.md#convert)的章節。[
 
 ## 後續步驟
 
