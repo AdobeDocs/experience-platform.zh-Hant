@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;experience data model;data model;ui;workspace;required;field;
+keywords: Experience Platform;home;popular topics;api;API;XDM;XDM系統；experience資料模型；資料模型；ui;workspace;required;field;
 solution: Experience Platform
 title: 在UI中定義必填欄位
 description: 瞭解如何在Experience Platform使用者介面中定義必要的XDM欄位。
@@ -7,7 +7,7 @@ topic: user guide
 translation-type: tm+mt
 source-git-commit: 48025fc11558bf6773ce5c48054483758c7e993f
 workflow-type: tm+mt
-source-wordcount: '174'
+source-wordcount: '193'
 ht-degree: 1%
 
 ---
