@@ -1,26 +1,26 @@
 ---
-keywords: Experience Platform;home;popular topics;CJA;journey analytics;customer journey analytics;campaign orchestration;orchestration;customer journey;journey;journey orchestration;capability;region
+keywords: Experience Platform；首頁；熱門主題；CJA；歷程分析；客戶歷程分析；宣傳協調；客戶歷程；歷程；歷程協調；功能；地區
 solution: Experience Platform
-title: 平台檔案語言支援
+title: Experience Platform檔案語言支援
 topic: getting started
-description: Adobe Experience Platform是市面上功能最強大、最靈活、最開放的系統，可協助您建立和管理能推動客戶體驗的完整解決方案。  Experience Platform 可讓組織集中和標準化來自任何系統的客戶資料與內容，並運用資料科學和機器學習技術大幅改善豐富個人化體驗的設計和傳遞。
+description: Adobe Experience Platform可讓組織在套用資料科學和機器學習之前，集中化和標準化客戶資料，以大幅改善多樣化個人化體驗的設計和傳遞。
 translation-type: tm+mt
-source-git-commit: 72f60ef80a23f5ca4e70147ee6aa6027028fefd0
+source-git-commit: 96600567bb4965a1611e2b9a7cd6cb49298a567f
 workflow-type: tm+mt
-source-wordcount: '129'
-ht-degree: 27%
+source-wordcount: '103'
+ht-degree: 0%
 
 ---
 
 
-# 平台檔案語言支援
+# Experience Platform檔案語言支援
 
-Adobe Experience Platform檔案提供多種語言版本。 若要變更語言，請按一下語言下拉式清單並選取所要的語言。
+Adobe Experience Platform檔案提供多種語言版本。
 
-![image](../images/overview/lang.jpg)
+若要變更檔案顯示的語言，請選取頂端導覽中的語言圖示。
 
-## [!DNL Experience Platform]文件
+![](../images/overview/documentation-language.png)
 
-若要進一步瞭解可用的檔案類型，請造訪平台檔案 [類型概觀](overview.md)。
+當語言下拉式清單開啟時，選擇您要檢視檔案的語言。
 
-若要進一步瞭解特定功 [!DNL Platform] 能或服務，請從「 [Experience Platform」檔案登陸頁面選擇指南](https://experienceleague.adobe.com/docs/experience-platform.html)。
+![](../images/overview/documentation-language-select.png)
