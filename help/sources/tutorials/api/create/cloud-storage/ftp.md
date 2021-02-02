@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics; File Transfer Protocol; file transfer protocol
+keywords: Experience Platform; home；熱門主題；檔案傳輸協定；檔案傳輸協定
 solution: Experience Platform
 title: 使用流程服務API建立FTP連接器
 topic: overview
 type: Tutorial
 description: 本教學課程使用Flow Service API來引導您完成將Experience Platform連接至FTP（檔案傳輸通訊協定）伺服器的步驟。
 translation-type: tm+mt
-source-git-commit: 9092c3d672967d3f6f7bf7116c40466a42e6e7b1
+source-git-commit: 2940f030aa21d70cceeedc7806a148695f68739e
 workflow-type: tm+mt
-source-wordcount: '565'
+source-wordcount: '580'
 ht-degree: 2%
 
 ---
@@ -47,7 +47,7 @@ ht-degree: 2%
 
 ### 收集必要標題的值
 
-若要呼叫[!DNL Platform] API，您必須先完成[驗證教學課程](../../../../../tutorials/authentication.md)。 完成驗證教學課程後，所有[!DNL Experience Platform] API呼叫中每個所需標題的值都會顯示在下面：
+若要呼叫[!DNL Platform] API，您必須先完成[驗證教學課程](https://www.adobe.com/go/platform-api-authentication-en)。 完成驗證教學課程後，所有[!DNL Experience Platform] API呼叫中每個所需標題的值都會顯示在下面：
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
@@ -125,4 +125,4 @@ curl -X POST \
 
 ## 後續步驟
 
-在本教程中，您已使用[!DNL Flow Service] API建立FTP連線，並已取得連線的唯一ID值。 您可以使用此連線ID來探索使用Flow Service API[或](../../explore/cloud-storage.md)使用Flow Service API[收錄拼花資料的雲端儲存空間。](../../cloud-storage-parquet.md)
+在本教程中，您已使用[!DNL Flow Service] API建立FTP連線，並已取得連線的唯一ID值。 您可以使用此連線ID來探索使用Flow Service API](../../explore/cloud-storage.md)或[使用Flow Service API](../../cloud-storage-parquet.md)來內嵌Parce資料的雲端儲存空間。[
