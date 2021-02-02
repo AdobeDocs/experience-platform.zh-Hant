@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics;cloud storage data
+keywords: Experience Platform; home；熱門主題；雲端儲存資料
 solution: Experience Platform
 title: 透過來源連接器和API收集雲端儲存空間資料
 topic: overview
 type: Tutorial
 description: 本教學課程涵蓋從協力廠商雲端儲存空間擷取資料，並透過來源連接器和API將其匯入平台的步驟。
 translation-type: tm+mt
-source-git-commit: cab1d65b643b919a6529926cd0856d89c5264d55
+source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
 workflow-type: tm+mt
-source-wordcount: '1609'
+source-wordcount: '1621'
 ht-degree: 1%
 
 ---
@@ -37,7 +37,7 @@ ht-degree: 1%
 
 ### 收集必要標題的值
 
-若要呼叫平台API，您必須先完成[驗證教學課程](../../../../tutorials/authentication.md)。 完成驗證教學課程後，所有Experience Platform API呼叫中每個必要標題的值都會顯示在下方：
+若要呼叫平台API，您必須先完成[驗證教學課程](https://www.adobe.com/go/platform-api-authentication-en)。 完成驗證教學課程後，所有Experience Platform API呼叫中每個必要標題的值都會顯示在下方：
 
 - `Authorization: Bearer {ACCESS_TOKEN}`
 - `x-api-key: {API_KEY}`
@@ -653,7 +653,7 @@ curl -X POST \
 - [即時客戶個人檔案總覽](../../../../profile/home.md)
 - [資料科學工作區概觀](../../../../data-science-workspace/home.md)
 
-## 附錄{#appendix}
+## 附錄 {#appendix}
 
 下節列出不同的雲儲存源連接器及其連接規範。
 
