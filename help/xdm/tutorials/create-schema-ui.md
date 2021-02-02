@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;ui;UI;XDM;XDM system;experience data model;Experience data model;Experience Data Model;data model;Data Model;schema editor;Schema Editor;schema;Schema;schemas;Schemas;create
+keywords: Experience Platform;home；熱門主題；ui;UI;XDM;XDM系統；體驗資料模型；Experience資料模型；資料模型；模式編輯器；模式編輯器；模式；模式；模式；模式；模式；模式；模式；建立
 solution: Experience Platform
 title: 使用結構編輯器建立架構
 topic: tutorial
@@ -8,7 +8,7 @@ description: 本教學課程涵蓋以 Experience Platform 結構編輯器建立�
 translation-type: tm+mt
 source-git-commit: e5c5fea783aa4088d225f771905fa8b2098613cf
 workflow-type: tm+mt
-source-wordcount: '3568'
+source-wordcount: '3600'
 ht-degree: 0%
 
 ---
