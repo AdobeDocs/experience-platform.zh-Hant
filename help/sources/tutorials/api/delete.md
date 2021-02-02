@@ -6,9 +6,9 @@ topic: overview
 type: Tutorial
 description: 本教學課程涵蓋使用Flow Service API刪除連線的步驟。
 translation-type: tm+mt
-source-git-commit: 9e28591ef9f07217363cddf72356b8e5cd8a15a3
+source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
 workflow-type: tm+mt
-source-wordcount: '580'
+source-wordcount: '595'
 ht-degree: 2%
 
 ---
@@ -16,36 +16,36 @@ ht-degree: 2%
 
 # 使用流服務API刪除連接
 
-Adobe Experience Platform可讓您從外部來源擷取資料，同時提供您使用服務建構、標示及增強傳入資料的 [!DNL Platform] 能力。 您可以從多種來源（例如Adobe應用程式、雲端儲存空間、資料庫等）擷取資料。
+Adobe Experience Platform可讓您從外部來源擷取資料，同時讓您能夠使用[!DNL Platform]服務來建構、標示並增強傳入資料。 您可以從多種來源（例如Adobe應用程式、雲端儲存空間、資料庫等）擷取資料。
 
-[!DNL Flow Service] 用於收集和集中Adobe Experience Platform內不同來源的客戶資料。 該服務提供用戶介面和REST風格的API，所有支援的源都可從中連接。
+[!DNL Flow Service] 用於收集和集中Adobe Experience Platform內不同來源的客戶資料。該服務提供用戶介面和REST風格的API，所有支援的源都可從中連接。
 
-本教學課程涵蓋使用進行刪除的步驟 [[!DNL Flow Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml)。
+本教學課程涵蓋使用[[!DNL Flow Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml)進行刪除的步驟。
 
 ## 快速入門
 
-本教學課程要求您必須有有效的連線ID。 如果您沒有有效的連線ID，請從來源概觀中選取您選擇的連 [接器](../../home.md) ，並依照本教學課程前所述的步驟進行。
+本教學課程要求您必須有有效的連線ID。 如果您沒有有效的連線ID，請從[來源概觀](../../home.md)中選取您選擇的連接器，然後依照本教學課程嘗試前所述的步驟進行。
 
 本教學課程也要求您對Adobe Experience Platform的下列元件有正確的認識：
 
 * [來源](../../home.md): [!DNL Experience Platform] 允許從各種來源接收資料，同時提供使用服務構建、標籤和增強傳入資料的 [!DNL Platform] 能力。
 * [沙盒](../../../sandboxes/home.md): [!DNL Experience Platform] 提供虛擬沙盒，可將單一執行個體分 [!DNL Platform] 割為不同的虛擬環境，以協助開發和發展數位體驗應用程式。
 
-以下各節提供您必須知道的其他資訊，以便使用 [!DNL Flow Service] API成功刪除連線。
+以下各節提供您需要瞭解的其他資訊，以便使用[!DNL Flow Service] API成功刪除連線。
 
 ### 讀取範例API呼叫
 
-本教學課程提供範例API呼叫，以示範如何設定請求的格式。 這些包括路徑、必要標題和正確格式化的請求負載。 也提供API回應中傳回的範例JSON。 如需範例API呼叫檔案中所用慣例的詳細資訊，請參閱疑難排解指 [南中有關如何讀取範例API呼叫的](../../../landing/troubleshooting.md#how-do-i-format-an-api-request)[!DNL Experience Platform] 章節。
+本教學課程提供範例API呼叫，以示範如何設定請求的格式。 這些包括路徑、必要標題和正確格式化的請求負載。 也提供API回應中傳回的範例JSON。 如需範例API呼叫檔案中所用慣例的詳細資訊，請參閱[!DNL Experience Platform]疑難排解指南中[如何讀取範例API呼叫](../../../landing/troubleshooting.md#how-do-i-format-an-api-request)一節。
 
 ### 收集必要標題的值
 
-若要呼叫API，您必 [!DNL Platform] 須先完成驗證教 [學課程](../../../tutorials/authentication.md)。 完成驗證教學課程後，將提供所有 [!DNL Experience Platform] API呼叫中每個必要標題的值，如下所示：
+若要呼叫[!DNL Platform] API，您必須先完成[驗證教學課程](https://www.adobe.com/go/platform-api-authentication-en)。 完成驗證教學課程後，所有[!DNL Experience Platform] API呼叫中每個所需標題的值都會顯示在下面：
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
 * `x-gw-ims-org-id: {IMS_ORG}`
 
-中的所有資 [!DNL Experience Platform]源(包括屬於這些資源 [!DNL Flow Service])都隔離到特定的虛擬沙盒。 對API的所 [!DNL Platform] 有請求都需要一個標題，該標題會指定要在中執行的操作的沙盒名稱：
+[!DNL Experience Platform]中的所有資源（包括屬於[!DNL Flow Service]的資源）都隔離到特定的虛擬沙盒。 對[!DNL Platform] API的所有請求都需要一個標題，該標題指定要在中執行操作的沙盒的名稱：
 
 * `x-sandbox-name: {SANDBOX_NAME}`
 
@@ -56,7 +56,7 @@ Adobe Experience Platform可讓您從外部來源擷取資料，同時提供您�
 ## 查找連接詳細資訊
 
 >[!NOTE]
->本教學課程以 [Azure Blob來源連接器為例](../../connectors/cloud-storage/blob.md) ，但概述的步驟適用於任何可 [用來源連接器](../../home.md)。
+>本教學課程以[Azure Blob源連接器](../../connectors/cloud-storage/blob.md)為例，但概述的步驟適用於[可用源連接器](../../home.md)中的任何一個。
 
 更新連線資訊的第一步是使用連線ID擷取連線詳細資訊。
 
@@ -68,7 +68,7 @@ GET /connections/{CONNECTION_ID}
 
 | 參數 | 說明 |
 | --------- | ----------- |
-| `{CONNECTION_ID}` | 要檢 `id` 索的連接的唯一值。 |
+| `{CONNECTION_ID}` | 要檢索的連接的唯一`id`值。 |
 
 **請求**
 
@@ -85,7 +85,7 @@ curl -X GET \
 
 **回應**
 
-成功的回應會傳回您連線的目前詳細資料，包括其認證、唯一識別碼(`id`)和版本。
+成功的回應會傳回連線的目前詳細資料，包括其認證、唯一識別碼(`id`)和版本。
 
 ```json
 {
@@ -122,7 +122,7 @@ curl -X GET \
 
 ## 刪除連接
 
-在您擁有現有的連線ID後，請對 [!DNL Flow Service] API執行DELETE要求。
+擁有現有連接ID後，請對[!DNL Flow Service] API執行DELETE請求。
 
 **API格式**
 
@@ -132,7 +132,7 @@ DELETE /connections/{CONNECTION_ID}
 
 | 參數 | 說明 |
 | --------- | ----------- |
-| `{CONNECTION_ID}` | 要刪 `id` 除的連接的唯一值。 |
+| `{CONNECTION_ID}` | 要刪除的連接的唯一`id`值。 |
 
 **請求**
 
@@ -153,6 +153,6 @@ curl -X DELETE \
 
 ## 後續步驟
 
-遵循本教學課程，您已成功使用 [!DNL Flow Service] API刪除現有帳戶。
+在本教學課程中，您已成功使用[!DNL Flow Service] API刪除現有帳戶。
 
-有關如何使用用戶介面執行這些操作的步驟，請參閱UI中有關刪 [除帳戶的教程](../../tutorials/ui/delete-accounts.md)
+有關如何使用用戶介面執行這些操作的步驟，請參閱有關在UI](../../tutorials/ui/delete-accounts.md)中刪除帳戶的[教程
