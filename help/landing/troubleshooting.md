@@ -1,41 +1,41 @@
 ---
-keywords: Experience Platform;home;popular topics;API error codes;API error code;error code API;error codes API;API request error;API troubleshooting;API error
+keywords: Experience Platform;home；熱門主題；API錯誤代碼；API錯誤代碼；錯誤代碼API；錯誤代碼API;API請求錯誤；API疑難排解；API錯誤
 solution: Experience Platform
 title: Adobe Experience Platform常見問答集與疑難排解指南
 description: 尋找常見問題的解答，以及針對 Experience Platform 中的常見錯誤進行疑難排解的指南。
-landing-page-description: Find answers to frequently asked questions and a guide for troubleshooting common errors in Experience Platform.
+landing-page-description: 尋找常見問題的解答，以及針對 Experience Platform 中的常見錯誤進行疑難排解的指南。
 topic: getting started
 type: Documentation
 translation-type: tm+mt
-source-git-commit: 72f60ef80a23f5ca4e70147ee6aa6027028fefd0
+source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
 workflow-type: tm+mt
-source-wordcount: '1954'
-ht-degree: 2%
+source-wordcount: '1994'
+ht-degree: 3%
 
 ---
 
 
 # [!DNL Platform] 常見問答集與疑難排解指南
 
-本檔案提供有關Adobe Experience Platform的常見問題解答，以及任何 [!DNL Experience Platform] API中常見錯誤的高階疑難排解指南。 如需個別服務的疑難排 [!DNL Platform] 解指南，請參 [閱以下服務疑難排解目錄](#service-troubleshooting-directory) 。
+本檔案提供有關Adobe Experience Platform的常見問題解答，以及適用於任何[!DNL Experience Platform] API中常見錯誤的高階疑難排解指南。 有關各個[!DNL Platform]服務的故障排除指南，請參見下面的[服務故障排除目錄](#service-troubleshooting-directory)。
 
 ## 常見問題集 {#faq}
 
 以下是有關Adobe Experience Platform常見問題的解答清單。
 
-## 什麼是 [!DNL Experience Platform] API? {#what-are-experience-platform-apis}
+## 什麼是[!DNL Experience Platform] API?{#what-are-experience-platform-apis}
 
-[!DNL Experience Platform] 提供多個使用HTTP請求來存取資源的REST風格 [!DNL Platform] API。 這些服務API每個都會顯示多個端點，並允許您執行列出(GET)、查閱(GET)、編輯（PUT和／或修補）和刪除(DELETE)資源的操作。 如需每項服務可用之特定端點和作業的詳細資訊，請參閱Adobe I/O的 [API參考檔案](http://www.adobe.com/go/platform-api-reference-en) 。
+[!DNL Experience Platform] 提供多個使用HTTP請求來存取資源的REST風格 [!DNL Platform] API。這些服務API每個都會顯示多個端點，並允許您執行列出(GET)、查閱(GET)、編輯（PUT和／或修補）和刪除(DELETE)資源的操作。 有關每項服務可用的特定端點和操作的詳細資訊，請參閱Adobe I/O上的[API參考檔案](http://www.adobe.com/go/platform-api-reference-en)。
 
-## 如何設定API要求的格式？ {#how-do-i-format-an-api-request}
+## 如何設定API要求的格式？{#how-do-i-format-an-api-request}
 
-請求格式會依使用的 [!DNL Platform] API而異。 瞭解如何建構API呼叫的最佳方式，是依循您所使用特定服務的說明檔案中 [!DNL Platform] 提供的範例。
+請求格式會依使用的[!DNL Platform] API而異。 瞭解如何建構API呼叫的最佳方式，是依循您所使用之特定[!DNL Platform]服務的說明檔案中提供的範例。
 
 ### 閱讀範例API呼叫
 
-說明檔案 [!DNL Experience Platform] 以兩種不同的方式顯示範例API呼叫。 首先，呼叫以其 **API格式呈現**，其範本表示僅顯示操作(GET、POST、PUT、PATCH、DELETE)和所使用的端點(例如 `/global/classes`)。 某些範本也會顯示變數的位置，以協助說明如何制定呼叫，例如 `GET /{VARIABLE}/classes/{ANOTHER_VARIABLE}`。
+[!DNL Experience Platform]的檔案以兩種不同的方式顯示範例API呼叫。 首先，呼叫以&#x200B;**API格式**&#x200B;顯示，模板表示僅顯示操作(GET、POST、PUT、PATCH、DELETE)和所使用的端點（例如`/global/classes`）。 有些範本也會顯示變數的位置，以協助說明呼叫應如何制定，例如`GET /{VARIABLE}/classes/{ANOTHER_VARIABLE}`。
 
-然後，呼叫會在 **Request**（請求）中顯示為cURL命令，其中包含成功與API互動所需的必要標題和完整「基本路徑」。 基本路徑應預先附加到所有端點。 例如，前述端點 `/global/classes` 變為 `https://platform.adobe.io/data/foundation/schemaregistry/global/classes`。 您會在整個檔案中看到API格式／請求模式，而且在對平台API進行自己的呼叫時，預期會使用範例「請求」中顯示的完整路徑。
+然後，呼叫在&#x200B;**Request**&#x200B;中顯示為cURL命令，其中包含成功與API互動所需的必要標題和完整「基本路徑」。 基本路徑應預先附加到所有端點。 例如，前述的`/global/classes`端點變為`https://platform.adobe.io/data/foundation/schemaregistry/global/classes`。 您會在整個檔案中看到API格式／請求模式，而且在對平台API進行自己的呼叫時，預期會使用範例「請求」中顯示的完整路徑。
 
 ### 範例API要求
 
@@ -43,7 +43,7 @@ ht-degree: 2%
 
 **API格式**
 
-API格式顯示操作(GET)和所使用的端點。 變數會以大括弧表示(在本例中為 `{CONTAINER_ID}`)。
+API格式顯示操作(GET)和所使用的端點。 變數會以大括弧表示（在本例中為`{CONTAINER_ID}`）。
 
 ```http
 GET /{CONTAINER_ID}/classes
@@ -87,23 +87,23 @@ curl -X GET \
 }
 ```
 
-如需平台API中特定端點的詳細資訊，包括必要的標題和要求主體，請參閱 [API參考檔案](http://www.adobe.com/go/platform-api-reference-en)。
+如需平台API中特定端點的詳細資訊，包括必要的標頭和請求主體，請參閱[API參考檔案](http://www.adobe.com/go/platform-api-reference-en)。
 
-## 我的IMS組織是什麼？ {#what-is-my-ims-organization}
+## 我的IMS組織是什麼？{#what-is-my-ims-organization}
 
-IMS組織是客戶的Adobe代表。 任何授權的Adobe解決方案皆與此客戶組織整合。 當IMS組織有權存取時，它 [!DNL Experience Platform]可指派存取權給開發人員。 IMS組織ID(`x-gw-ims-org-id`)代表應執行API呼叫的組織，因此是所有API請求中的標題。 此ID可透過 [Adobe Developer Console找到](https://www.adobe.com/go/devs_console_ui):在「整 **合** 」標籤中，導覽至任何特定整合的「概述」區段，以在「用戶端認證」下尋找 **ID******。 如需如何驗證的逐步逐步說明，請參 [!DNL Platform]閱驗證教 [學課程](http://www.adobe.com/go/platform-api-authentication-en)。
+IMS組織是客戶的Adobe代表。 任何授權的Adobe解決方案皆與此客戶組織整合。 當IMS組織有權使用[!DNL Experience Platform]時，它可指派存取權給開發人員。 IMS組織ID(`x-gw-ims-org-id`)代表應執行API呼叫的組織，因此在所有API請求中都是必要的標題。 此ID可透過[Adobe Developer Console](https://www.adobe.com/go/devs_console_ui)找到：在&#x200B;**Integrations**&#x200B;標籤中，導覽至&#x200B;**Overview**&#x200B;區段以取得任何特定整合，以在&#x200B;**Client Credentials**&#x200B;下尋找ID。 有關如何驗證到[!DNL Platform]的逐步說明，請參見[驗證教程](https://www.adobe.com/go/platform-api-authentication-en)。
 
-## 我可以在哪裡找到API金鑰？ {#where-can-i-find-my-api-key}
+## 我可以在哪裡找到API金鑰？{#where-can-i-find-my-api-key}
 
-所有API請求中都需要API金鑰作為標題。 您可從 [Adobe Developer Console找到它](https://www.adobe.com/go/devs_console_ui)。 在主控台的「整合 **」索引標籤上，導覽至特定整合的「概述** 」區段，然後在「用戶端認證」下方找到 **金鑰******。 如需如何驗證的逐步逐步說明，請參 [!DNL Platform]閱驗證 [教學課程](http://www.adobe.com/go/platform-api-authentication-en)。
+所有API請求中都需要API金鑰作為標題。 您可透過[Adobe Developer Console](https://www.adobe.com/go/devs_console_ui)找到。 在控制台內，在&#x200B;**Integrations**&#x200B;標籤上，導覽至&#x200B;**Overview**&#x200B;區段以取得特定整合，您將在&#x200B;**Client Credentials**&#x200B;下找到金鑰。 有關如何驗證到[!DNL Platform]的逐步說明，請參見[驗證教程](https://www.adobe.com/go/platform-api-authentication-en)。
 
-## 我要如何取得存取Token? {#how-do-i-get-an-access-token}
+## 我要如何取得存取Token?{#how-do-i-get-an-access-token}
 
-所有API呼叫的「授權」標題中都需要存取Token。 只要您擁有IMS組織 `curl` 整合的存取權，就可以使用命令產生。 存取Token僅有24小時有效，之後必須產生新Token才能繼續使用API。 如需有關產生存取Token的詳細資訊，請參閱驗 [證教學課程](http://www.adobe.com/go/platform-api-authentication-en)。
+所有API呼叫的「授權」標題中都需要存取Token。 只要您擁有IMS組織整合的存取權，就可使用`curl`命令產生。 存取Token僅有24小時有效，之後必須產生新Token才能繼續使用API。 有關生成訪問Token的詳細資訊，請參閱[驗證教程](https://www.adobe.com/go/platform-api-authentication-en)。
 
-## 如何使用查詢參數？ {#how-do-i-user-query-parameters}
+## 如何使用查詢參數？{#how-do-i-user-query-parameters}
 
-有些 [!DNL Platform] API端點會接受查詢參數，以找出特定資訊並篩選回應中傳回的結果。 查詢參數會附加至具有問號(`?`)符號的請求路徑，後面接著一或多個使用該格式的查詢參數 `paramName=paramValue`。 在單一呼叫中結合多個參數時，您必須使用&amp;符號(`&`)來分隔個別參數。 下列範例說明如何使用多個查詢參數的請求在檔案中呈現。
+有些[!DNL Platform] API端點會接受查詢參數，以找出特定資訊並篩選回應中傳回的結果。 查詢參數會附加至具有問號(`?`)符號的請求路徑，後面接著使用格式`paramName=paramValue`的一或多個查詢參數。 在單一呼叫中結合多個參數時，您必須使用&amp;符號(`&`)來分隔個別參數。 下列範例說明如何使用多個查詢參數的請求在檔案中呈現。
 
 常用查詢參數的範例包括：
 
@@ -115,47 +115,47 @@ GET /batches?createdAfter=1559775880000&orderBy=desc:created
 
 有關特定服務或端點可使用哪些查詢參數的詳細資訊，請參閱特定服務的文檔。
 
-## 如何在PATCH請求中指定要更新的JSON欄位？ {#how-do-i-indicate-a-json-field-to-update-in-a-patch-request}
+## 如何在PATCH請求中指定要更新的JSON欄位？{#how-do-i-indicate-a-json-field-to-update-in-a-patch-request}
 
-API中的許多PATCH [!DNL Platform] 作業都使 [](https://tools.ietf.org/html/rfc6901) 用JSON指標字串來指示要更新的JSON屬性。 這些通常會包含在使用 [JSON修補程式格式的請求載入中](https://tools.ietf.org/html/rfc6902) 。 如需這些 [技術所需語法的詳細資訊](api-fundamentals.md) ，請參閱API基礎指南。
+[!DNL Platform] API中的許多PATCH操作都使用[JSON Pointer](https://tools.ietf.org/html/rfc6901)字串來指示要更新的JSON屬性。 這些通常包含在使用[JSON Patch](https://tools.ietf.org/html/rfc6902)格式的請求負載中。 如需這些技術所需語法的詳細資訊，請參閱[API基礎指南](api-fundamentals.md)。
 
-## 我可以使用Postman來呼叫 [!DNL Platform] API嗎？ {#how-do-i-use-postman-to-make-calls-to-platform-apis}
+## 我可以使用Postman呼叫[!DNL Platform] API嗎？{#how-do-i-use-postman-to-make-calls-to-platform-apis}
 
-[Postman](https://www.postman.com/) 是一種實用的工具，用於可視化對REST風格API的調用。 此 [中篇貼文](https://medium.com/adobetech/using-postman-for-jwt-authentication-on-adobe-i-o-7573428ffe7f) ，說明如何設定Postman以自動執行驗證，並使用它來使用 [!DNL Experience Platform] API。
+[Postmanis](https://www.postman.com/) 是可視化對REST風格的API呼叫的實用工具。本[中篇貼文](https://medium.com/adobetech/using-postman-for-jwt-authentication-on-adobe-i-o-7573428ffe7f)說明如何設定Postman以自動執行驗證，並使用它使用[!DNL Experience Platform] API。
 
-## 系統需求為何 [!DNL Platform]? {#what-are-the-system-requirements-for-platform}
+## [!DNL Platform]的系統需求為何？{#what-are-the-system-requirements-for-platform}
 
 視您使用的是UI或API而定，會套用下列系統需求：
 
 **對於基於UI的操作：**
-- 現代化、標準的網頁瀏覽器。 雖然建議使用最 [!DNL Chrome] 新版本，但也支援目前和舊版 [!DNL Firefox]、 [!DNL Internet Explorer]和Safari。
-   - 每次發行新的主要版本時， [!DNL Platform] 就會開始支援最新版本，而放棄支援最新的第三個版本。
+- 現代化、標準的網頁瀏覽器。 雖然建議使用最新版[!DNL Chrome]，但也支援目前和舊版的[!DNL Firefox]、[!DNL Internet Explorer]和Safari。
+   - 每次發行新的主版本時，[!DNL Platform]會開始支援最新版本，而放棄支援第三個最新版本。
 - 所有瀏覽器都必須啟用Cookie和JavaScript。
 
 **針對API和開發人員互動：**
 - 針對REST、串流和Webhook整合進行開發的開發環境。
 
-## 錯誤和疑難排解 {#errors-and-troubleshooting}
+## {#errors-and-troubleshooting}錯誤和疑難排解
 
-以下是您使用任何服務時可能遇到的錯誤清 [!DNL Experience Platform] 單。 如需個別服務的疑難排 [!DNL Platform] 解指南，請參 [閱以下服務疑難排解目錄](#service-troubleshooting-directory) 。
+以下是使用任何[!DNL Experience Platform]服務時可能遇到的錯誤清單。 有關各個[!DNL Platform]服務的故障排除指南，請參見下面的[服務故障排除目錄](#service-troubleshooting-directory)。
 
-## API狀態代碼 {#api-status-codes}
+## API狀態代碼{#api-status-codes}
 
-在任何 [!DNL Experience Platform] API上都可能遇到下列狀態代碼。 每個原因都有各種原因，因此本節中的解釋是一般性的。 有關個別服務中特定錯誤的詳細資 [!DNL Platform] 訊，請參閱以下的 [服務疑難排解目錄](#service-troubleshooting-directory) 。
+在任何[!DNL Experience Platform] API上都可能遇到以下狀態代碼。 每個原因都有各種原因，因此本節中的解釋是一般性的。 有關個別[!DNL Platform]服務中特定錯誤的詳細資訊，請參閱以下[服務疑難排解目錄](#service-troubleshooting-directory)。
 
 | 狀態代碼 | 說明 | 可能的原因 |
 --- | --- | ---
 | 400 | 錯誤請求 | 請求的建構不當、遺失關鍵資訊及／或語法不正確。 |
-| 401 | 驗證失敗 | 請求未通過驗證檢查。 您的存取Token可能遺失或無效。 如需詳細 [資訊，請參閱下方](#oauth-token-is-missing) 「OAuth Token錯誤」一節。 |
+| 401 | 驗證失敗 | 請求未通過驗證檢查。 您的存取Token可能遺失或無效。 如需詳細資訊，請參閱下方的[OAuth Token錯誤](#oauth-token-is-missing)一節。 |
 | 403 | 禁止 | 已找到資源，但您沒有查看該資源的正確憑據。 |
 | 404 | 找不到 | 在伺服器上找不到所請求的資源。 資源可能已刪除，或請求的路徑輸入錯誤。 |
-| 500 | 內部伺服器錯誤 | 這是伺服器端錯誤。 如果您同時進行許多呼叫，可能已達到API限制，需要篩選結果。 (如需詳細 [!DNL Catalog Service] 資訊，請參閱API開發人員指南 [的篩選資](../catalog/api/filter-data.md) 料子指南。) 請稍候片刻，然後再次嘗試您的請求，如果問題仍然存在，請聯絡您的管理員。 |
+| 500 | 內部伺服器錯誤 | 這是伺服器端錯誤。 如果您同時進行許多呼叫，可能已達到API限制，需要篩選結果。 （如需詳細資訊，請參閱[篩選資料](../catalog/api/filter-data.md)上的[!DNL Catalog Service] API開發人員指南子指南。） 請稍候片刻，然後再次嘗試您的請求，如果問題仍然存在，請聯絡您的管理員。 |
 
-## 請求標題錯誤 {#request-header-errors}
+## 請求標題錯誤{#request-header-errors}
 
-中的所有API呼叫都 [!DNL Platform] 需要特定的請求標題。 若要查看個別服務需要哪些標題，請參閱 [API參考檔案](http://www.adobe.com/go/platform-api-reference-en)。 若要尋找所需驗證標題的值，請參閱驗 [證教學課程](http://www.adobe.com/go/platform-api-authentication-en)。 如果在進行API呼叫時這些標題中有任何遺失或無效，可能會發生下列錯誤。
+[!DNL Platform]中的所有API呼叫都需要特定的請求標題。 若要瞭解個別服務需要哪些標題，請參閱[API參考檔案](http://www.adobe.com/go/platform-api-reference-en)。 要查找所需驗證標題的值，請參閱[驗證教程](https://www.adobe.com/go/platform-api-authentication-en)。 如果在進行API呼叫時這些標題中有任何遺失或無效，可能會發生下列錯誤。
 
-### 遺失OAuth代號 {#oauth-token-is-missing}
+### OAuth Token遺失{#oauth-token-is-missing}
 
 ```json
 {
@@ -164,7 +164,7 @@ API中的許多PATCH [!DNL Platform] 作業都使 [](https://tools.ietf.org/html
 }
 ```
 
-當API請求中遺失標 `Authorization` 題時，會顯示此錯誤訊息。 在再次嘗試之前，請確定授權標題已包含有效的存取Token。
+當API請求中缺少`Authorization`標題時，會顯示此錯誤訊息。 在再次嘗試之前，請確定授權標題已包含有效的存取Token。
 
 ### OAuth Token無效
 
@@ -175,7 +175,7 @@ API中的許多PATCH [!DNL Platform] 作業都使 [](https://tools.ietf.org/html
 }
 ```
 
-當標題中提供的存取Token無效時，會 `Authorization` 顯示此錯誤訊息。 請確定Token已正確輸入，或 [在Adobe I/O Console中產生](http://www.adobe.com/go/platform-api-authentication-en) 新Token。
+當`Authorization`標題中提供的存取Token無效時，會顯示此錯誤訊息。 請確定Token已正確輸入，或[在Adobe I/O主控台中產生新Token](https://www.adobe.com/go/platform-api-authentication-en)。
 
 ### 需要API金鑰
 
@@ -186,7 +186,7 @@ API中的許多PATCH [!DNL Platform] 作業都使 [](https://tools.ietf.org/html
 }
 ```
 
-當API請求中遺失API金鑰標`x-api-key`題()時，會顯示此錯誤訊息。 請先確定標題已包含有效的API金鑰，然後再再試一次。
+當API請求中遺失API金鑰標題(`x-api-key`)時，會顯示此錯誤訊息。 請先確定標題已包含有效的API金鑰，然後再再試一次。
 
 ### API金鑰無效
 
@@ -197,7 +197,7 @@ API中的許多PATCH [!DNL Platform] 作業都使 [](https://tools.ietf.org/html
 }
 ```
 
-當提供的API金鑰標題(`x-api-key`)的值無效時，會顯示此錯誤訊息。 請確定您已正確輸入密鑰，然後再次嘗試。 如果您不知道您的API金鑰，可在 [Adobe I/O Console中找到它](https://console.adobe.io):在「整 **合** 」索引標籤中，導覽至特定整合的「概述」區段，以在「用戶端認證」下尋找API **金鑰******。
+當提供的API金鑰標題(`x-api-key`)的值無效時，會顯示此錯誤訊息。 請確定您已正確輸入密鑰，然後再次嘗試。 如果您不知道您的API金鑰，可在[Adobe I/O Console](https://console.adobe.io)中找到：在&#x200B;**Integrations**&#x200B;標籤中，導覽至&#x200B;**Overview**&#x200B;區段以取得特定整合，以在&#x200B;**Client Credentials**&#x200B;下尋找API金鑰。
 
 
 ### 遺失標題
@@ -220,7 +220,7 @@ API中的許多PATCH [!DNL Platform] 作業都使 [](https://tools.ietf.org/html
 }
 ```
 
-當使用者或Adobe I/O整合(由標題中的 [存取Token](#how-do-i-get-an-access-token) )無權呼叫標題中提供的 `Authorization` IMS組織的 [!DNL Experience Platform] API時，會顯示此錯誤 `x-gw-ims-org-id` 訊息。 請確定您已在頁首中為您的IMS組織提供正確的ID，然後再次嘗試。 如果您不知道您的組織ID，可在 [Adobe I/O主控台中找到它](https://console.adobe.io):在「整 **合** 」索引標籤中，導覽至特定整合的「概述 **」區段，以在「用戶端認證」下尋找** ID ****。
+當使用者或Adobe I/O整合（由`Authorization`標題中的[存取Token](#how-do-i-get-an-access-token)識別）無權呼叫[!DNL Experience Platform] API（位於`x-gw-ims-org-id`標題中）時，會顯示此錯誤訊息。 請確定您已在頁首中為您的IMS組織提供正確的ID，然後再次嘗試。 如果您不知道您的組織ID，可在[Adobe I/O Console](https://console.adobe.io)中找到它：在&#x200B;**Integrations**&#x200B;標籤中，導覽至&#x200B;**Overview**&#x200B;區段以取得特定整合，以在&#x200B;**Client Credentials**&#x200B;下尋找ID。
 
 ### 未指定有效的內容類型
 
@@ -233,12 +233,12 @@ API中的許多PATCH [!DNL Platform] 作業都使 [](https://tools.ietf.org/html
 }
 ```
 
-當POST、PUT或PATCH請求的標題無效或遺失時，會顯示此錯誤 `Content-Type` 訊息。 請確定請求中包含標題，且其值為 `application/json`。
+當POST、PUT或PATCH請求的標題無效或缺少`Content-Type`標題時，將顯示此錯誤消息。 請確定請求中包含標題，且其值為`application/json`。
 
 
-## 服務疑難排解目錄 {#service-troubleshooting-directory}
+## 服務疑難排解目錄{#service-troubleshooting-directory}
 
-以下是API的疑難排解指南和API參考檔案 [!DNL Experience Platform] 清單。 每個疑難排解指南都提供常見問題的解答，以及個別服務專屬問題的解決 [!DNL Platform] 方案。 API參考檔案提供每個服務所有可用端點的完整指南，並顯示您可能收到的範例要求主體、回應和錯誤碼。
+以下是[!DNL Experience Platform] API的疑難排解指南和API參考檔案清單。 每個疑難排解指南都提供有關個別[!DNL Platform]服務所特有問題的常見問答和解決方案。 API參考檔案提供每個服務所有可用端點的完整指南，並顯示您可能收到的範例要求主體、回應和錯誤碼。
 
 | 服務 | API 參考 | 疑難排解 |
 | --- | --- | --- |
@@ -253,5 +253,5 @@ API中的許多PATCH [!DNL Platform] 作業都使 [](https://tools.ietf.org/html
 | [!DNL Experience Data Model] (XDM) | [[!DNL Schema Registry API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml) | [[!DNL XDM System] 常見問答集與疑難排解指南](../xdm/troubleshooting-guide.md) |
 | [!DNL Flow Service] ([!DNL Sources] 和 [!DNL Destinations]) | [[!DNL Flow Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) |  |
 | [!DNL Real-time Customer Profile] | [[!DNL Real-time Customer Profile API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml) | [[!DNL Profile] 疑難排解指南](../profile/troubleshooting.md) |
-| 沙箱 | [沙盒API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sandbox-api.yaml) | [沙盒疑難排解指南](../sandboxes/troubleshooting-guide.md) |
+| 沙盒 | [沙盒API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sandbox-api.yaml) | [沙盒疑難排解指南](../sandboxes/troubleshooting-guide.md) |
 
