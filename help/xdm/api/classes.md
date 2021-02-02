@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;experience data model;Experience data model;Experience Data Model;data model;Data Model;class registry;Schema Registry;class;Class;classes;Classes;create
+keywords: Experience Platform;home；熱門主題；API;XDM;XDM;XDM系統；體驗資料模型；Experience資料模型；資料模型；類註冊表；模式註冊表；類；類；類；類；建立
 solution: Experience Platform
 title: 建立類
 description: 方案註冊表API中的/classes端點允許您以寫程式方式管理體驗應用程式中的XDM類。
@@ -7,7 +7,7 @@ topic: developer guide
 translation-type: tm+mt
 source-git-commit: 1f18bf7367addd204f3ef8ce23583de78c70b70c
 workflow-type: tm+mt
-source-wordcount: '1470'
+source-wordcount: '1502'
 ht-degree: 1%
 
 ---
