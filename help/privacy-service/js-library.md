@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home；熱門主題
 solution: Experience Platform
 title: Adobe隱私權JavaScript程式庫概觀
 topic: overview
+description: Adobe隱私權JavaScript程式庫可讓您擷取資料主體身分，以便用於隱私權服務。
 translation-type: tm+mt
-source-git-commit: 6d706b33573e88b2f1ea9d386928dcfdb089a9c5
+source-git-commit: 5dad1fcc82707f6ee1bf75af6c10d34ff78ac311
 workflow-type: tm+mt
-source-wordcount: '922'
+source-wordcount: '944'
 ht-degree: 6%
 
 ---
@@ -14,44 +15,44 @@ ht-degree: 6%
 
 # Adobe隱私權JavaScript程式庫概觀
 
-身為資料處理者，Adobe會根據您公司的許可和指示處理個人資料。 身為資料控管方，您可以決定要由 Adobe 代表您處理和儲存哪些個人資料。根據您選擇透過Adobe Experience Cloud解決方案傳送的資訊，Adobe可儲存適用於隱私權法規(例如 [!DNL General Data Protection Regulation] (GDPR)和 [!DNL California Consumer Privacy Act] (CCPA)的私人資訊。 如需Experience Cloud解決方 [案如何收集私人資料的詳細資訊，請參閱Adobe Experience Cloud中的隱私權檔案](https://www.adobe.com/privacy/marketing-cloud.html) 。
+身為資料處理者，Adobe會根據您公司的許可和指示處理個人資料。 身為資料控管方，您可以決定要由 Adobe 代表您處理和儲存哪些個人資料。根據您選擇透過Adobe Experience Cloud解決方案傳送的資訊，Adobe可儲存適用於隱私權法規的私人資訊，例如[!DNL General Data Protection Regulation](GDPR)和[!DNL California Consumer Privacy Act](CCPA)。 如需Experience Cloud解決方案如何收集私人資料的詳細資訊，請參閱Adobe Experience Cloud中有關[隱私權的檔案。](https://www.adobe.com/privacy/marketing-cloud.html)
 
-**Adobe隱私權JavaScript程式庫** ，讓資料控制者自動擷取解決方案針對特定網域產生的所 [!DNL Experience Cloud] 有資料主體身分。 然後，使用 [Adobe Experience Platform Privacy Service提供的API](home.md)，這些身分識別可用於建立屬於這些資料主體的私人資料的存取和刪除要求。
+**Adobe隱私權JavaScript程式庫**&#x200B;可讓資料控制者自動擷取由[!DNL Experience Cloud]解決方案針對特定網域產生的所有資料主體身分。 然後，使用[Adobe Experience Platform Privacy Service](home.md)提供的API，這些身分可用來建立屬於這些資料主體的私人資料的存取和刪除要求。
 
 >[!NOTE]
 >
->通 [!DNL Privacy JS Library] 常只需在隱私權相關頁面上安裝，也不需要在網站或網域的所有頁面上安裝。
+>[!DNL Privacy JS Library]通常只需要安裝在隱私權相關頁面上，也不需要安裝在網站或網域的所有頁面上。
 
 ## 函數
 
-提供 [!DNL Privacy JS Library] 了在中管理身份的幾個功能 [!DNL Privacy Service]。 這些函式只能用來管理儲存在瀏覽器中的特定訪客身分。 不能用來直接將資訊提 [!DNL Experience Cloud Central Service] 交。
+[!DNL Privacy JS Library]提供在[!DNL Privacy Service]中管理身份的幾種功能。 這些函式只能用來管理儲存在瀏覽器中的特定訪客身分。 它們無法用於直接將資訊提交到[!DNL Experience Cloud Central Service]。
 
 下表概述程式庫提供的不同功能：
 
 | 函數 | 說明 |
 | --- | --- |
-| `retrieveIdentities` | 傳回從中擷取的符合身分(`validIds`)陣列，以 [!DNL Privacy Service]及找不到(`failedIds`)的身分陣列。 |
-| `removeIdentities` | 從瀏覽器移除每個相符（有效）的識別。 傳回符合身分的陣列(`validIds`)，每個身分包含一個布林值，指 `isDeletedClientSide` 出此ID是否已刪除。 |
-| `retrieveThenRemoveIdentities` | 擷取符合身分的陣列(`validIds`)，然後從瀏覽器移除這些身分。 雖然此函式類似 `removeIdentities`，但您使用的Adobe解決方案在可能刪除之前需要存取請求時，最好使用此函式（例如在刪除請求中提供唯一識別碼之前必須先擷取此唯一識別碼）。 |
+| `retrieveIdentities` | 傳回從[!DNL Privacy Service]擷取的符合身分識別(`validIds`)陣列，以及找不到的身分識別(`failedIds`)陣列。 |
+| `removeIdentities` | 從瀏覽器移除每個相符（有效）的識別。 傳回符合身分的陣列(`validIds`)，每個身分包含一個`isDeletedClientSide`布林值，指出此ID是否已刪除。 |
+| `retrieveThenRemoveIdentities` | 擷取相符身分的陣列(`validIds`)，然後從瀏覽器移除這些身分。 雖然此函式類似`removeIdentities`，但是當您使用的Adobe解決方案在刪除之前需要存取請求（例如在刪除請求中提供唯一識別碼之前必須先擷取此唯一識別碼）時，最好使用此函式。 |
 
 >[!NOTE]
 >
->`removeIdentities` 而且 `retrieveThenRemoveIdentities` 只會從瀏覽器移除支援特定Adobe解決方案的身分。 例如，Adobe Audience Manager不會刪除儲存在第三方Cookie中的Demdex ID，而Adobe Target會刪除儲存其ID的所有Cookie。
+>`removeIdentities` 而且 `retrieveThenRemoveIdentities` 只會從瀏覽器移除支援特定Adobe解決方案的身分。例如，Adobe Audience Manager不會刪除儲存在第三方Cookie中的Demdex ID，而Adobe Target會刪除儲存其ID的所有Cookie。
 
 由於這三個函式都代表非同步進程，所以必須使用回呼或承諾來處理任何擷取的身分。
 
 
 ## 安裝
 
-若要開始使 [!DNL Privacy JS Library]用，您必須使用下列其中一種方法將它安裝在您的電腦上：
+若要開始使用[!DNL Privacy JS Library]，您必須使用下列其中一種方法將它安裝到您的電腦上：
 
-* 運行以下命令，使用npm進行安裝： `npm install @adobe/adobe-privacy`
-* 使用名稱下的Adobe Launch Extension `AdobePrivacy`
-* 從 [Experience Cloud GitHub儲存庫下載](https://github.com/Adobe-Marketing-Cloud/adobe-privacy)
+* 運行以下命令，使用npm進行安裝：`npm install @adobe/adobe-privacy`
+* 使用名稱`AdobePrivacy`下的Adobe Launch Extension
+* 從[Experience Cloud GitHub資料庫](https://github.com/Adobe-Marketing-Cloud/adobe-privacy)下載
 
-## 實例化 [!DNL Privacy JS Library]
+## 實例化[!DNL Privacy JS Library]
 
-所有運用此功能的應 [!DNL Privacy JS Library] 用程式都必須實例化新 `AdobePrivacy` 物件，此物件必須設定為特定Adobe解決方案。 例如，Adobe Analytics的執行個體化看起來類似下列：
+所有使用[!DNL Privacy JS Library]的應用程式都必須實例化新的`AdobePrivacy`物件，此物件必須設定為特定Adobe解決方案。 例如，Adobe Analytics的執行個體化看起來類似下列：
 
 ```js
 var adobePrivacy = new AdobePrivacy({
@@ -62,19 +63,19 @@ var adobePrivacy = new AdobePrivacy({
 });
 ```
 
-如需不同Adobe解決方案支援參數的完整清單，請參閱附錄章節中有關支援的 [Adobe解決方案組態參數](#adobe-solution-configuration-parameters)。
+如需不同Adobe解決方案支援參數的完整清單，請參閱[Adobe解決方案組態參數](#adobe-solution-configuration-parameters)的附錄一節。
 
 ## 程式碼範例
 
-下列程式碼範例示範如何在您 [!DNL Privacy JS Library] 未使用或DTM的情況下，將它用於數種常見 [!DNL Launch] 的案例。
+下列程式碼範例說明如何在若干常見案例中使用[!DNL Privacy JS Library]，但您不使用[!DNL Launch]或DTM。
 
 ### 擷取身分
 
-此示例演示如何從中檢索身份清單 [!DNL Experience Cloud]。
+此示例演示如何從[!DNL Experience Cloud]檢索身份清單。
 
 #### JavaScript
 
-下列程式碼會定義函 `handleRetrievedIDs`數，用作回呼或承諾處理擷取的身分 `retrieveIdentities`。
+以下代碼定義一個函式`handleRetrievedIDs`，用作回呼或承諾處理`retrieveIdentities`檢索到的身份。
 
 ```javascript
 function handleRetrievedIDs(ids) {
@@ -92,11 +93,11 @@ adobePrivacy.retrieveIdentities().then(handleRetrievedIDs);
 | 變數 | 說明 |
 | --- | --- |
 | `validIds` | JSON物件，包含已成功擷取的所有ID。 |
-| `failedIDs` | JSON物件包含所有未從中擷取或找 [!DNL Privacy Service]不到的ID。 |
+| `failedIDs` | JSON物件包含所有未從[!DNL Privacy Service]擷取或找不到其他ID。 |
 
 #### 結果
 
-如果代碼成功執行， `validIDs` 則會填入已擷取的身分清單。
+如果代碼成功執行，`validIDs`將填入已檢索身份的清單。
 
 ```json
 {
@@ -123,7 +124,7 @@ adobePrivacy.retrieveIdentities().then(handleRetrievedIDs);
 
 #### JavaScript
 
-下列程式碼會定義函 `handleRemovedIDs`數，以用作回呼或承諾處理從瀏覽器移除 `removeIdentities` 後擷取的身分識別。
+下列程式碼定義函式`handleRemovedIDs`，當`removeIdentities`從瀏覽器移除後，將用作回呼或承諾處理由擷取的身分。
 
 ```javascript
 function handleRemovedIDs(ids) {
@@ -141,11 +142,11 @@ adobePrivacy.removeIdentities().then(handleRemovedIDs)…
 | 變數 | 說明 |
 | --- | --- |
 | `validIds` | JSON物件，包含已成功擷取的所有ID。 |
-| `failedIDs` | JSON物件包含所有未從中擷取或找 [!DNL Privacy Service]不到的ID。 |
+| `failedIDs` | JSON物件包含所有未從[!DNL Privacy Service]擷取或找不到其他ID。 |
 
 #### 結果
 
-如果代碼成功執行， `validIDs` 則會填入已擷取的身分清單。
+如果代碼成功執行，`validIDs`將填入已檢索身份的清單。
 
 ```json
 {
@@ -170,15 +171,15 @@ adobePrivacy.removeIdentities().then(handleRemovedIDs)…
 
 ## 後續步驟
 
-閱讀本檔案後，您便瞭解了本軟體的核心功能 [!DNL Privacy JS Library]。 使用程式庫擷取身分清單後，您可以使用這些身分來建立資料存取和刪除 [!DNL Privacy Service] API的請求。 如需詳細 [資訊，請參閱隱私服務開發人員指南](api/getting-started.md) 。
+閱讀本檔案，您已瞭解[!DNL Privacy JS Library]的核心功能。 使用程式庫擷取身分清單後，您可以使用這些身分來建立資料存取並刪除對[!DNL Privacy Service] API的要求。 如需詳細資訊，請參閱[隱私權服務開發人員指南](api/getting-started.md)。
 
 ## 附錄
 
-本節包含使用的補充資訊 [!DNL Privacy JS Library]。
+本節包含使用[!DNL Privacy JS Library]的補充資訊。
 
 ### Adobe解決方案設定參數
 
-以下是支援Adobe解決方案在執行個體化AdobePrivacy物件時所使用之已接受 [組態參數清單](#instantiate-the-privacy-js-library)。
+以下是支援Adobe解決方案的接受設定參數清單，當[執行個體化AdobePrivacy物件](#instantiate-the-privacy-js-library)時，會使用這些參數。
 
 **Adobe Analytics**
 
