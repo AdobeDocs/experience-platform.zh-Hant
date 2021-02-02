@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics;Vertica;vertica
+keywords: Experience Platform;home；熱門主題；Vertica;vertica
 solution: Experience Platform
 title: 使用Flow Service API建立HP Vertica連接器
 topic: overview
 type: Tutorial
 description: 本教學課程使用Flow Service API來引導您完成將HP Vertica連接至Experience Platform的步驟。
 translation-type: tm+mt
-source-git-commit: 9092c3d672967d3f6f7bf7116c40466a42e6e7b1
+source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
 workflow-type: tm+mt
-source-wordcount: '589'
+source-wordcount: '600'
 ht-degree: 3%
 
 ---
@@ -29,7 +29,7 @@ ht-degree: 3%
 本指南需要有效瞭解Adobe Experience Platform的下列元件：
 
 * [來源](https://docs.adobe.com/content/help/en/experience-platform/source-connectors/home.html): [!DNL Experience Platform] 可讓您從各種來源擷取資料，同時提供使用服務來建構、對應及增強傳入資料的 [!DNL Platform] 能力。
-* [沙盒](https://docs.adobe.com/content/help/en/experience-platform/sandbox/home.html): [!DNL Experience Platform] 提供虛擬沙盒，可將單一執行個體分 [!DNL Platform] 割為不同的虛擬環境，以協助開發和發展數位體驗應用程式。
+* [沙盒](https://docs.adobe.com/content/help/zh-Hant/experience-platform/sandbox/home.html): [!DNL Experience Platform] 提供虛擬沙盒，可將單一執行個體分 [!DNL Platform] 割為不同的虛擬環境，以協助開發和發展數位體驗應用程式。
 
 以下各節提供您需要瞭解的其他資訊，以便使用[!DNL Flow Service] API成功連接到HP [!DNL Vertica]。
 
@@ -50,7 +50,7 @@ ht-degree: 3%
 
 ### 收集必要標題的值
 
-若要呼叫[!DNL Platform] API，您必須先完成[驗證教學課程](../../../../../tutorials/authentication.md)。 完成驗證教學課程後，所有[!DNL Experience Platform] API呼叫中每個所需標題的值都會顯示在下面：
+若要呼叫[!DNL Platform] API，您必須先完成[驗證教學課程](https://www.adobe.com/go/platform-api-authentication-en)。 完成驗證教學課程後，所有[!DNL Experience Platform] API呼叫中每個所需標題的值都會顯示在下面：
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
@@ -120,4 +120,4 @@ curl -X POST \
 
 ## 後續步驟
 
-在本教程中，您使用[!DNL Flow Service] API建立了HP [!DNL Vertica]連接，並獲取了該連接的唯一ID值。 在下一個教學課程中，您可以使用此ID來學習如何使用流服務API[來探索資料庫。](../../explore/database-nosql.md)
+在本教程中，您使用[!DNL Flow Service] API建立了HP [!DNL Vertica]連接，並獲取了該連接的唯一ID值。 在下一個教學課程中，您可以使用此ID來學習如何使用流服務API](../../explore/database-nosql.md)來探索資料庫。[
