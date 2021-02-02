@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics;batch ingestion;Batch ingestion;ingestion;developer guide;api guide;upload;ingest parquet;ingest json;
+keywords: Experience Platform;home；熱門主題；批次擷取；Batch擷取；ingestion;developer guide;api guide;upload;ingest Parce;ingest json;
 solution: Experience Platform
 title: 批次擷取開發人員指南
 topic: developer guide
 description: 本檔案提供使用批次擷取API的完整概觀。
 translation-type: tm+mt
-source-git-commit: f86f7483e7e78edf106ddd34dc825389dadae26a
+source-git-commit: 2940f030aa21d70cceeedc7806a148695f68739e
 workflow-type: tm+mt
-source-wordcount: '2675'
+source-wordcount: '2698'
 ht-degree: 5%
 
 ---
@@ -15,9 +15,9 @@ ht-degree: 5%
 
 # 批次擷取開發人員指南
 
-本檔案提供使用批次擷取API [的完整概觀](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml)。
+本檔案提供使用[批次擷取API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml)的完整概觀。
 
-本檔案的附錄提供格式化資 [料以用於擷取的資訊](#data-transformation-for-batch-ingestion)，包括範例CSV和JSON資料檔案。
+本檔案的附錄提供用於擷取[的](#data-transformation-for-batch-ingestion)格式化資料的資訊，包括範例CSV和JSON資料檔案。
 
 ## 快速入門
 
@@ -28,38 +28,38 @@ ht-degree: 5%
 本指南需要有效瞭解Adobe Experience Platform的下列元件：
 
 - [批次擷取](./overview.md):可讓您將資料以批次檔案的形式內嵌至Adobe Experience Platform。
-- [[!DNL Experience Data Model (XDM)] 系統](../../xdm/home.md):組織客戶體驗資料 [!DNL Experience Platform] 的標準化架構。
+- [[!DNL Experience Data Model (XDM)] 系統](../../xdm/home.md):組織客戶體驗資 [!DNL Experience Platform] 料的標準化架構。
 - [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform] 提供虛擬沙盒，可將單一執行個體分 [!DNL Platform] 割為不同的虛擬環境，以協助開發和發展數位體驗應用程式。
 
 ### 讀取範例API呼叫
 
-本指南提供範例API呼叫，以示範如何格式化您的請求。 這些包括路徑、必要標題和正確格式化的請求負載。 也提供API回應中傳回的範例JSON。 如需範例API呼叫檔案中所用慣例的詳細資訊，請參閱疑難排解指 [南中有關如何讀取範例API呼叫的](../../landing/troubleshooting.md#how-do-i-format-an-api-request)[!DNL Experience Platform] 章節。
+本指南提供範例API呼叫，以示範如何格式化您的請求。 這些包括路徑、必要標題和正確格式化的請求負載。 也提供API回應中傳回的範例JSON。 如需範例API呼叫檔案中所用慣例的詳細資訊，請參閱[!DNL Experience Platform]疑難排解指南中[如何讀取範例API呼叫](../../landing/troubleshooting.md#how-do-i-format-an-api-request)一節。
 
 ### 收集必要標題的值
 
-若要呼叫API，您必 [!DNL Platform] 須先完成驗證教 [學課程](../../tutorials/authentication.md)。 完成驗證教學課程後，將提供所有 [!DNL Experience Platform] API呼叫中每個必要標題的值，如下所示：
+若要呼叫[!DNL Platform] API，您必須先完成[驗證教學課程](https://www.adobe.com/go/platform-api-authentication-en)。 完成驗證教學課程後，所有[!DNL Experience Platform] API呼叫中每個所需標題的值都會顯示在下面：
 
 - `Authorization: Bearer {ACCESS_TOKEN}`
 - `x-api-key: {API_KEY}`
 - `x-gw-ims-org-id: {IMS_ORG}`
 
-中的所有資 [!DNL Experience Platform] 源都與特定虛擬沙盒隔離。 對API的所 [!DNL Platform] 有請求都需要一個標題，該標題會指定要在中執行的操作的沙盒名稱：
+[!DNL Experience Platform]中的所有資源都隔離到特定的虛擬沙盒。 對[!DNL Platform] API的所有請求都需要一個標題，該標題指定要在中執行操作的沙盒的名稱：
 
 - `x-sandbox-name: {SANDBOX_NAME}`
 
 >[!NOTE]
 >
->如需中沙盒的詳細資訊 [!DNL Platform]，請參閱沙 [盒概述檔案](../../sandboxes/home.md)。
+>如需[!DNL Platform]中沙盒的詳細資訊，請參閱[沙盒概述檔案](../../sandboxes/home.md)。
 
-包含裝載(POST、PUT、PATCH)的請求可能需要額外的標 `Content-Type` 題。 在呼叫參數中提供每個呼叫的接受值。
+包含裝載(POST、PUT、PATCH)的請求可能需要額外的`Content-Type`標題。 在呼叫參數中提供每個呼叫的接受值。
 
 ## 類型
 
-在擷取資料時，請務必瞭解(XDM) [!DNL Experience Data Model] 架構的運作方式。 有關XDM欄位類型如何映射到不同格式的詳細資訊，請閱讀 [Schema Registry Developer Guide](../../xdm/api/getting-started.md)。
+在擷取資料時，請務必瞭解[!DNL Experience Data Model](XDM)結構如何運作。 有關XDM欄位類型如何映射到不同格式的詳細資訊，請閱讀[方案註冊表開發人員指南](../../xdm/api/getting-started.md)。
 
-在擷取資料時有一些彈性——如果某個類型不符合目標架構中的內容，資料將會轉換為表示的目標類型。 如果無法，則批次將失敗，並帶有 `TypeCompatibilityException`。
+在擷取資料時有一些彈性——如果某個類型不符合目標架構中的內容，資料將會轉換為表示的目標類型。 如果無法，則會失敗具有`TypeCompatibilityException`的批。
 
-例如，JSON或CSV都沒有日期或日期時間類型。 因此，這些值是使用 [ISO 8061格式字串](https://www.iso.org/iso-8601-date-and-time-format.html) (&quot;2018-07-10T15:05:59.000-08:00&quot;)或以毫秒(153126395&quot;)格式化的Unix時間來表示9000)，並在擷取時轉換為目標XDM類型。
+例如，JSON或CSV都沒有日期或日期時間類型。 因此，這些值是使用[ISO 8061格式化字串](https://www.iso.org/iso-8601-date-and-time-format.html)(&quot;2018-07-10T15:05:59.000-08:00&quot;)或以毫秒為單位的Unix時間(153126&quot;)來表示3959000)，並在擷取時轉換為目標XDM類型。
 
 下表顯示在擷取資料時支援的轉換。
 
@@ -100,7 +100,7 @@ ht-degree: 5%
 
 >[!NOTE]
 >
->以下範例適用於單行JSON。 若要收錄多行JSON, `isMultiLineJson` 必須設定旗標。 如需詳細資訊，請閱讀批次擷 [取疑難排解指南](./troubleshooting.md)。
+>以下範例適用於單行JSON。 若要收錄多行JSON，必須設定`isMultiLineJson`旗標。 如需詳細資訊，請閱讀[批次擷取疑難排解指南](./troubleshooting.md)。
 
 **API格式**
 
@@ -158,11 +158,11 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches \
 
 ### 上傳檔案
 
-現在您已建立批次，您可以使用之 `batchId` 前的開始，將檔案上傳至批次。 您可以上傳多個檔案至批次。
+現在您已建立批次，您可以使用之前的`batchId`將檔案上傳至批次。 您可以上傳多個檔案至批次。
 
 >[!NOTE]
 >
->如需格式正確的JSON資 [料檔案範例，請參閱附錄一節](#data-transformation-for-batch-ingestion)。
+>請參閱附錄一節，以取得格式正確的JSON資料檔案](#data-transformation-for-batch-ingestion)範例。[
 
 **API格式**
 
@@ -194,7 +194,7 @@ curl -X PUT https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/
 
 | 參數 | 說明 |
 | --------- | ----------- |
-| `{FILE_PATH_AND_NAME}` | 您嘗試上傳之檔案的完整路徑和名稱。 此檔案路徑是本地檔案路徑，如 `Users/sample-user/Downloads/sample.json`。 |
+| `{FILE_PATH_AND_NAME}` | 您嘗試上傳之檔案的完整路徑和名稱。 此檔案路徑是本地檔案路徑，如`Users/sample-user/Downloads/sample.json`。 |
 
 **回應**
 
@@ -297,7 +297,7 @@ curl -X POST "https://platform.adobe.io/data/foundation/import/batches" \
 
 ### 上傳檔案
 
-現在您已建立批次，您可以使用之 `batchId` 前的開始，將檔案上傳至批次。 您可以上傳多個檔案至批次。
+現在您已建立批次，您可以使用之前的`batchId`將檔案上傳至批次。 您可以上傳多個檔案至批次。
 
 **API格式**
 
@@ -329,7 +329,7 @@ curl -X PUT https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/
 
 | 參數 | 說明 |
 | --------- | ----------- |
-| `{FILE_PATH_AND_NAME}` | 您嘗試上傳之檔案的完整路徑和名稱。 此檔案路徑是本地檔案路徑，如 `Users/sample-user/Downloads/sample.json`。 |
+| `{FILE_PATH_AND_NAME}` | 您嘗試上傳之檔案的完整路徑和名稱。 此檔案路徑是本地檔案路徑，如`Users/sample-user/Downloads/sample.json`。 |
 
 **回應**
 
@@ -504,7 +504,7 @@ curl -X PATCH https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID
 | 參數 | 說明 |
 | --------- | ----------- |
 | `{CONTENT_RANGE}` | 在整數中，請求範圍的開始和結束。 |
-| `{FILE_PATH_AND_NAME}` | 您嘗試上傳之檔案的完整路徑和名稱。 此檔案路徑是本地檔案路徑，如 `Users/sample-user/Downloads/sample.json`。 |
+| `{FILE_PATH_AND_NAME}` | 您嘗試上傳之檔案的完整路徑和名稱。 此檔案路徑是本地檔案路徑，如`Users/sample-user/Downloads/sample.json`。 |
 
 
 **回應**
@@ -515,7 +515,7 @@ curl -X PATCH https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID
 
 ### 完整的大型檔案
 
-現在您已建立批次，您可以使用之 `batchId` 前的開始，將檔案上傳至批次。 您可以上傳多個檔案至批次。
+現在您已建立批次，您可以使用之前的`batchId`將檔案上傳至批次。 您可以上傳多個檔案至批次。
 
 **API格式**
 
@@ -578,7 +578,7 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}
 
 ## 收錄CSV檔案
 
-若要收錄CSV檔案，您必須建立支援CSV的類別、結構和資料集。 有關如何建立必要類和架構的詳細資訊，請遵循臨機架構建立教 [程中提供的說明](../../xdm/api/ad-hoc.md)。
+若要收錄CSV檔案，您必須建立支援CSV的類別、結構和資料集。 有關如何建立必要類和模式的詳細資訊，請按照[ad-hoc模式建立教程](../../xdm/api/ad-hoc.md)中提供的說明操作。
 
 >[!NOTE]
 >
@@ -646,10 +646,10 @@ curl -X POST https://platform.adobe.io/data/foundation/catalog/dataSets \
 | `delimiters` | 用作分隔字元的字元。 |
 | `quotes` | 用於引號的字元。 |
 | `escapes` | 用作轉義字元的字元。 |
-| `header` | 上傳的檔案 **必須** 包含標題。 由於架構驗證已完成，因此必須將其設定為true。 此外，標題不得 **包含** 任何空格——如果您的標題中有任何空格，請改用底線取代。 |
+| `header` | 上傳的檔案&#x200B;**必須**&#x200B;包含標題。 由於架構驗證已完成，因此必須將其設定為true。 此外，標題可能&#x200B;**not**&#x200B;包含任何空格——如果您的標題中有任何空格，請改用底線取代它們。 |
 | `charset` | 選填欄位。 其他支援的字元包括「US-ASCII」和「ISO-8869-1」。 如果保留空白，預設會使用UTF-8。 |
 
-引用的資料集必須具有上面列出的檔案說明塊，並且必須指向註冊表中的有效模式。 否則，檔案將不會被控制為鑲木地板。
+引用的資料集必須具有上面列出的檔案說明塊，並且必須指向註冊表中的有效模式。 否則，檔案將不會被熟悉到Parce中。
 
 ### 建立批次
 
@@ -716,11 +716,11 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches \
 
 ### 上傳檔案
 
-現在您已建立批次，您可以使用之 `batchId` 前的開始，將檔案上傳至批次。 您可以上傳多個檔案至批次。
+現在您已建立批次，您可以使用之前的`batchId`將檔案上傳至批次。 您可以上傳多個檔案至批次。
 
 >[!NOTE]
 >
->如需格式正確的CSV資 [料檔案範例，請參閱附錄一節](#data-transformation-for-batch-ingestion)。
+>請參閱附錄部分，瞭解格式正確的CSV資料檔案](#data-transformation-for-batch-ingestion)範例。[
 
 **API格式**
 
@@ -752,7 +752,7 @@ curl -X PUT https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/
 
 | 參數 | 說明 |
 | --------- | ----------- |
-| `{FILE_PATH_AND_NAME}` | 您嘗試上傳之檔案的完整路徑和名稱。 此檔案路徑是本地檔案路徑，如 `Users/sample-user/Downloads/sample.json`。 |
+| `{FILE_PATH_AND_NAME}` | 您嘗試上傳之檔案的完整路徑和名稱。 此檔案路徑是本地檔案路徑，如`Users/sample-user/Downloads/sample.json`。 |
 
 
 **回應**
@@ -817,9 +817,9 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}
 200 OK
 ```
 
-## 刪除批 {#delete-a-batch}
+## 刪除批{#delete-a-batch}
 
-對要刪除的批的ID執行以下具有查詢參數的 `action=REVERT` POST請求，可以刪除批。 批標籤為「非活動」，使其符合垃圾回收的條件。 批將非同步收集，此時將標籤為「已刪除」。
+對要刪除的批的ID執行以下具有`action=REVERT`查詢參數的POST請求，可以刪除批。 批標籤為「非活動」，使其符合垃圾回收的條件。 批將非同步收集，此時將標籤為「已刪除」。
 
 **API格式**
 
@@ -853,7 +853,7 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}
 
 ### 建立批次
 
-首先，您需要建立以JSON為輸入格式的批次。 建立批次時，您需要提供資料集ID。 您還需要確保作為批處理的一部分上載的所有檔案都符合連結到所提供的資料集的XDM模式。 此外，您還需要在重放部分中提供舊批作為參考。 在以下範例中，您正在重新播放具有ID和的 `batchIdA` 批次 `batchIdB`。
+首先，您需要建立以JSON為輸入格式的批次。 建立批次時，您需要提供資料集ID。 您還需要確保作為批處理的一部分上載的所有檔案都符合連結到所提供的資料集的XDM模式。 此外，您還需要在重放部分中提供舊批作為參考。 在以下範例中，您正在重新播放ID為`batchIdA`和`batchIdB`的批。
 
 **API格式**
 
@@ -927,7 +927,7 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches \
 
 ### 上傳檔案
 
-現在您已建立批次，您可以使用之 `batchId` 前的開始，將檔案上傳至批次。 您可以上傳多個檔案至批次。
+現在您已建立批次，您可以使用之前的`batchId`將檔案上傳至批次。 您可以上傳多個檔案至批次。
 
 **API格式**
 
@@ -959,7 +959,7 @@ curl -X PUT https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/
 
 | 參數 | 說明 |
 | --------- | ----------- |
-| `{FILE_PATH_AND_NAME}` | 您嘗試上傳之檔案的完整路徑和名稱。 此檔案路徑是本地檔案路徑，如 `Users/sample-user/Downloads/sample.json`。 |
+| `{FILE_PATH_AND_NAME}` | 您嘗試上傳之檔案的完整路徑和名稱。 此檔案路徑是本地檔案路徑，如`Users/sample-user/Downloads/sample.json`。 |
 
 **回應**
 
@@ -1001,9 +1001,9 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}
 
 ### 批次擷取的資料轉換
 
-為了將資料檔案內嵌至其中 [!DNL Experience Platform]，檔案的階層結構必須符合與上傳資料集相關的 [Experience Data Model(XDM)](../../xdm/home.md) 架構。
+為了將資料檔案嵌入[!DNL Experience Platform]中，檔案的分層結構必須符合與上載到的資料集相關聯的[體驗資料模型(XDM)](../../xdm/home.md)模式。
 
-有關如何映射CSV檔案以符合XDM架構的資訊，請參閱範例轉換文 [件](../../etl/transformations.md) ，以及格式正確的JSON資料檔案範例。 可在以下位置找到文檔中提供的示例檔案：
+有關如何映射CSV檔案以符合XDM架構的資訊，請參閱[範例轉換](../../etl/transformations.md)檔案，以及格式正確的JSON資料檔案範例。 可在以下位置找到文檔中提供的示例檔案：
 
 - [CRM_profiles.csv](https://github.com/adobe/experience-platform-etl-reference/blob/master/example_files/CRM_profiles.csv)
 - [CRM_profiles.json](https://github.com/adobe/experience-platform-etl-reference/blob/master/example_files/CRM_profiles.json)
