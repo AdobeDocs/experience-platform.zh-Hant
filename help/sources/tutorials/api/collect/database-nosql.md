@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics;database database;third party database
+keywords: Experience Platform; home；熱門主題；資料庫資料庫；第三方資料庫
 solution: Experience Platform
 title: 透過來源連接器和API，從資料庫收集資料
 topic: overview
 type: Tutorial
 description: 本教學課程涵蓋從資料庫擷取資料並透過來源連接器和API將其匯入平台的步驟。
 translation-type: tm+mt
-source-git-commit: 326de658736387ab42cd2348a052c5c5217b6c2e
+source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
 workflow-type: tm+mt
-source-wordcount: '1610'
+source-wordcount: '1624'
 ht-degree: 1%
 
 ---
@@ -39,7 +39,7 @@ ht-degree: 1%
 
 ### 收集必要標題的值
 
-若要呼叫平台API，您必須先完成[驗證教學課程](../../../../tutorials/authentication.md)。 完成驗證教學課程後，所有Experience Platform API呼叫中每個必要標題的值都會顯示在下方：
+若要呼叫平台API，您必須先完成[驗證教學課程](https://www.adobe.com/go/platform-api-authentication-en)。 完成驗證教學課程後，所有Experience Platform API呼叫中每個必要標題的值都會顯示在下方：
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
