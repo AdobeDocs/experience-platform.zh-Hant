@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;experience data model;data model;ui;workspace;identity;field;
+keywords: Experience Platform;home；熱門主題；api;API;XDM;XDM系統；體驗資料模型；ui;workspace;identity;field;
 solution: Experience Platform
 title: 在UI中定義識別欄位
 description: 瞭解如何在Experience Platform使用者介面中定義識別欄位。
@@ -7,7 +7,7 @@ topic: user guide
 translation-type: tm+mt
 source-git-commit: f5f507c2e962e2ff9f81376bfe363a6f438056cd
 workflow-type: tm+mt
-source-wordcount: '556'
+source-wordcount: '575'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 0%
 
 在Experience Data Model(XDM)中，身分欄位代表一個欄位，可用來識別與記錄或時間序列事件相關的個人。 本檔案涵蓋如何在Adobe Experience Platform UI中定義識別欄位。
 
-## 先決條件
+## 必要條件
 
 身分欄位是在Platform中建構客戶身分圖形的重要元件，這最終會影響即時客戶個人檔案如何合併不同的資料片段，以獲得客戶的完整檢視。 在您的架構中定義身份欄位之前，請參閱以下文檔以瞭解與身份欄位相關的關鍵服務和概念：
 
