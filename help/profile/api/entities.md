@@ -1,11 +1,13 @@
 ---
-keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API
-title: 實體——即時客戶個人檔案API
+keywords: Experience Platform;Profile；即時客戶配置檔案；故障排除；API
+title: 實體（描述檔存取）API端點
 topic: guide
+type: Documentation
+description: Adobe Experience Platform可讓您使用REST風格的API或使用者介面存取即時客戶個人檔案資料。 本指南概述如何使用描述檔API存取實體（通常稱為「描述檔」）。
 translation-type: tm+mt
-source-git-commit: 3287203be574cf95d7e201dc99f681e237d96e67
+source-git-commit: e6ecc5dac1d09c7906aa7c7e01139aa194ed662b
 workflow-type: tm+mt
-source-wordcount: '1695'
+source-wordcount: '1737'
 ht-degree: 1%
 
 ---
@@ -13,17 +15,17 @@ ht-degree: 1%
 
 # 實體端點（配置檔案訪問）
 
-Adobe Experience Platform可讓您使用REST風格的API [!DNL Real-time Customer Profile] 或使用者介面存取資料。 本指南概述如何使用API存取實體（通常稱為「設定檔」）。 有關使用UI存取設定檔的詳細資 [!DNL Platform] 訊，請參閱「設定檔使 [用指南」](../ui/user-guide.md)。
+Adobe Experience Platform可讓您使用REST風格的API或使用者介面存取[!DNL Real-time Customer Profile]資料。 本指南概述如何使用API存取實體（通常稱為「設定檔」）。 有關使用[!DNL Platform] UI訪問配置式的詳細資訊，請參閱[Profile使用手冊](../ui/user-guide.md)。
 
 ## 快速入門
 
-本指南中使用的API端點是的一部分 [[!DNL Real-time Customer Profile API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml)。 在繼續之前，請先閱讀快速入門 [指南](getting-started.md) ，以取得相關檔案的連結、閱讀本檔案中範例API呼叫的指南，以及成功呼叫任何 [!DNL Experience Platform] API所需之必要標題的重要資訊。
+本指南中使用的API端點是[[!DNL Real-time Customer Profile API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml)的一部分。 在繼續之前，請先閱讀[快速入門手冊](getting-started.md)，以取得相關檔案的連結、閱讀本檔案中範例API呼叫的指南，以及成功呼叫任何[!DNL Experience Platform] API所需之必要標題的重要資訊。
 
 ## 依身分存取個人檔案資料
 
-通過向端點 [!DNL Profile] 發出GET請求並提供實體的身份作為一 `/access/entities` 系列查詢參數，可以訪問實體。 此身分由ID值(`entityId`)和身分命名空間(`entityIdNS`)組成。
+通過向`/access/entities`端點發出GET請求並提供該實體作為一系列查詢參數的身份，可以訪問[!DNL Profile]實體。 此識別由ID值(`entityId`)和識別名稱空間(`entityIdNS`)組成。
 
-請求路徑中提供的查詢參數指定要存取的資料。 您可以包含多個參數，以&amp;符號分隔。 附錄的查詢參數部分提供了有 [效參數](#query-parameters) 的完整清單。
+請求路徑中提供的查詢參數指定要存取的資料。 您可以包含多個參數，以&amp;符號分隔。 在附錄的[查詢參數](#query-parameters)部分中提供了有效參數的完整清單。
 
 **API格式**
 
@@ -119,7 +121,7 @@ curl -X GET \
 
 ## 依身分清單存取個人檔案資料
 
-您可以透過多個描述檔實體的身分，對端點提出POST要求，並在 `/access/entities` 裝載中提供身分，以存取其身分。 這些身分由ID值(`entityId`)和身分命名空間(`entityIdNS`)組成。
+通過向`/access/entities`端點發出POST請求並在裝載中提供標識，可以通過其標識訪問多個配置檔案實體。 這些身分由ID值(`entityId`)和身分命名空間(`entityIdNS`)組成。
 
 **API格式**
 
@@ -180,18 +182,19 @@ curl -X POST \
 
 | 屬性 | 說明 |
 |---|---|
-| `schema.name` | ***（必要）*** ，實體所屬的XDM架構的名稱。 |
+| `schema.name` | ***（必要）*** 實體所屬的XDM架構的名稱。 |
 | `fields` | 要返回的XDM欄位，作為字串陣列。 依預設，會傳回所有欄位。 |
-| `identities` | ***（必要）*** ，包含要訪問的實體身份清單的陣列。 |
+| `identities` | ***（必要）*** 包含要訪問的實體身份清單的陣列。 |
 | `identities.entityId` | 您要存取之實體的ID。 |
 | `identities.entityIdNS.code` | 您要存取的實體ID的命名空間。 |
 | `timeFilter.startTime` | 包含時間範圍篩選器的開始時間。 應以毫秒為精細度。 如果未指定，則預設值是可用時間的開始。 |
 | `timeFilter.endTime` | 排除的時間範圍篩選的結束時間。 應以毫秒為精細度。 如果未指定，則預設為可用時間的結束。 |
 | `limit` | 要返回的記錄數。 僅適用於傳回的體驗事件數。 預設值：1000。 |
-| `orderby` | 依時間戳記（以預設值寫入）擷取的體驗事 `(+/-)timestamp` 件排序順序 `+timestamp`。 |
+| `orderby` | 依時間戳記排序擷取的體驗事件，寫入為`(+/-)timestamp`，預設為`+timestamp`。 |
 | `withCA` | 用於啟用計算屬性以進行查找的功能標籤。 預設值：false。 |
 
-**Response**&#x200B;成功的回應會傳回請求主體中指定的實體的請求欄位。
+**回**
+應成功的回應會傳回請求主體中指定的實體的請求欄位。
 
 ```json
 {
@@ -332,9 +335,9 @@ curl -X POST \
 
 ## 依身分存取描述檔的時間系列事件
 
-通過向端點發出GET請求，您可以通過相關配置檔案實體的標識訪問時間系列 `/access/entities` 事件。 此身分由ID值(`entityId`)和身分命名空間(`entityIdNS`)組成。
+通過向`/access/entities`端點發出GET請求，可以通過相關配置檔案實體的標識訪問時間系列事件。 此識別由ID值(`entityId`)和識別名稱空間(`entityIdNS`)組成。
 
-請求路徑中提供的查詢參數指定要存取的資料。 您可以包含多個參數，以&amp;符號分隔。 附錄的查詢參數部分提供了有 [效參數](#query-parameters) 的完整清單。
+請求路徑中提供的查詢參數指定要存取的資料。 您可以包含多個參數，以&amp;符號分隔。 在附錄的[查詢參數](#query-parameters)部分中提供了有效參數的完整清單。
 
 **API格式**
 
@@ -344,7 +347,7 @@ GET /access/entities?{QUERY_PARAMETERS}
 
 **請求**
 
-下列請求會依ID尋找描述檔實體，並擷取與該實體相關之所有時 `endUserIDs`間 `web`系 `channel` 列事件的屬性、和值。
+以下請求按ID查找配置檔案實體，並檢索與該實體關聯的所有時間系列事件的`endUserIDs`、`web`和`channel`屬性的值。
 
 ```shell
 curl -X GET \
@@ -361,7 +364,7 @@ curl -X GET \
 
 >[!NOTE]
 >
->請求指定限制為一(`limit=1`)，因此下 `count` 列回應中的為1，且只傳回一個實體。
+>請求指定限制為一(`limit=1`)，因此以下回應中的`count`為1，且只傳回一個實體。
 
 ```json
 {
@@ -412,11 +415,11 @@ curl -X GET \
 
 ### 存取後續的結果頁面
 
-在檢索時間系列事件時對結果進行編頁。 如果有後續的結果頁面， `_page.next` 屬性將包含ID。 此外，該屬 `_links.next.href` 性還提供檢索下一頁的請求URI。 要檢索結果，請向端點發出另 `/access/entities` 一個GET請求，但必須確 `/entities` 保用提供的URI值替換。
+在檢索時間系列事件時對結果進行編頁。 如果有後續的結果頁面，`_page.next`屬性將包含ID。 此外，`_links.next.href`屬性還提供檢索下一頁的請求URI。 要檢索結果，請向`/access/entities`端點發出另一個GET請求，但必須確保用提供的URI的值替換`/entities`。
 
 >[!NOTE]
 >
->請確定您不會意外重複 `/entities/` 在請求路徑中。 它應該只出現一次， `/access/entities?start=...`
+>請確定您不會意外重複請求路徑中的`/entities/`。 它只應出現一次，如`/access/entities?start=...`
 
 **API格式**
 
@@ -426,11 +429,11 @@ GET /access/{NEXT_URI}
 
 | 參數 | 說明 |
 |---|---|
-| `{NEXT_URI}` | 取自的URI值 `_links.next.href`。 |
+| `{NEXT_URI}` | 取自`_links.next.href`的URI值。 |
 
 **請求**
 
-以下請求會使用 `_links.next.href` URI作為請求路徑來擷取下一頁結果。
+以下請求使用`_links.next.href` URI作為請求路徑來檢索下一頁結果。
 
 ```shell
 curl -X GET \
@@ -443,7 +446,7 @@ curl -X GET \
 
 **回應**
 
-成功的回應會傳回結果的下一頁。 此響應沒有後續的結果頁，如和的空字串值所 `_page.next` 示 `_links.next.href`。
+成功的回應會傳回結果的下一頁。 此回應沒有後續的結果頁面，如`_page.next`和`_links.next.href`的空字串值所示。
 
 ```json
 {
@@ -494,7 +497,7 @@ curl -X GET \
 
 ## 依身分存取多個描述檔的時間系列事件
 
-您可以透過向端點提出POST請求並在裝載中提供描述檔身份，從多個相關描述檔 `/access/entities` 存取時間系列事件。 這些身分都由ID值(`entityId`)和身分命名空間(`entityIdNS`)組成。
+通過向`/access/entities`端點發出POST請求並在裝載中提供配置檔案標識，可以訪問多個關聯配置檔案中的時間序列事件。 這些身分各由ID值(`entityId`)和身份名稱空間(`entityIdNS`)組成。
 
 **API格式**
 
@@ -545,12 +548,12 @@ curl -X POST \
 
 | 屬性 | 說明 |
 |---|---|
-| `schema.name` | **（必要）** ，要擷取之實體的XDM架構 |
-| `relatedSchema.name` | 如果 `schema.name` 為 `_xdm.context.experienceevent` 此值，則必須指定與時間系列事件相關的配置檔案實體的方案。 |
-| `identities` | **（必要）** ，從中檢索關聯時間系列事件的配置檔案的陣列清單。 陣列中的每個條目以兩種方式之一進行設定：1)使用由ID值和命名空間組成的完全限定身份，或2)提供XID。 |
+| `schema.name` | **（必要）** 要檢索的實體的XDM模式 |
+| `relatedSchema.name` | 如果`schema.name`是`_xdm.context.experienceevent`，則此值必須指定與時間系列事件相關的配置檔案實體的模式。 |
+| `identities` | **（必要）要** 從中檢索關聯時間系列事件的配置檔案的陣列清單。陣列中的每個條目以兩種方式之一進行設定：1)使用由ID值和命名空間組成的完全限定身份，或2)提供XID。 |
 | `fields` | 將傳回的資料隔離至指定的欄位集。 使用此選項可篩選擷取的資料中包含哪些架構欄位。 範例：personalEmail,person.name,person.geder |
 | `mergePolicyId` | 標識用於管理返回資料的合併策略。 如果未在服務呼叫中指定此方案，則會使用您組織對該方案的預設值。 如果尚未設定預設的「合併原則」，則預設為無描述檔合併，也無身分聯繫。 |
-| `orderby` | 依時間戳記（以預設值寫入）擷取的體驗事 `(+/-)timestamp` 件排序順序 `+timestamp`。 |
+| `orderby` | 依時間戳記排序擷取的體驗事件，寫入為`(+/-)timestamp`，預設為`+timestamp`。 |
 | `timeFilter.startTime` | 指定篩選時間系列物件的開始時間（以毫秒為單位）。 |
 | `timeFilter.endTime` | 指定篩選時間系列物件的結束時間（以毫秒為單位）。 |
 | `limit` | 指定要返回的最大對象數的數值。 預設值：1000 |
@@ -766,19 +769,19 @@ curl -X POST \
 }`
 ```
 
-在此範例回應中，第一個列出的描述檔(&quot;GkouAW-yD9aoRCPhRROJ-TetAFW&quot;)提供值 `_links.next.payload`，表示此描述檔有其他的結果頁面。 如需如何存取其他 [結果的詳細資訊](#access-additional-results) ，請參閱以下有關存取其他結果的章節。
+在此範例回應中，第一個列出的描述檔(&quot;GkouAW-yD9aoRCPhRROJ-TetAFW&quot;)提供`_links.next.payload`的值，表示此描述檔有其他頁面的結果。 有關如何訪問這些附加結果的詳細資訊，請參閱[訪問其他結果的下節。](#access-additional-results)
 
-### 存取其他結果 {#access-additional-results}
+### 存取其他結果{#access-additional-results}
 
-在擷取時間序列事件時，可能會傳回許多結果，因此結果通常會進行編頁。 如果特定描述檔有後續的結果頁面，則該 `_links.next.payload` 描述檔的值將包含裝載物件。
+在擷取時間序列事件時，可能會傳回許多結果，因此結果通常會進行編頁。 如果某個特定配置檔案有後續的結果頁，則該配置檔案的`_links.next.payload`值將包含一個裝載對象。
 
-使用請求主體中的此裝載，您可以對端點執行額外的POST請求，以檢 `access/entities` 索該配置檔案的後續時間序列資料頁。
+在請求主體中使用此裝載，可以對`access/entities`端點執行附加的POST請求，以檢索該配置檔案的後續的時間序列資料頁。
 
 ## 訪問多個模式實體中的時間序列事件
 
-可以訪問通過關係描述符連接的多個實體。 下列範例API呼叫假設兩個結構之間已定義了關係。 有關關係描述符的詳細資訊，請閱讀 [!DNL Schema Registry] API開發人員指南描述 [符端點指南](../../xdm/api/descriptors.md)。
+可以訪問通過關係描述符連接的多個實體。 下列範例API呼叫假設兩個結構之間已定義了關係。 有關關係描述符的詳細資訊，請閱讀[!DNL Schema Registry] API開發人員指南[描述符端點指南](../../xdm/api/descriptors.md)。
 
-您可以在請求路徑中包含查詢參數，以指定要存取的資料。 您可以包含多個參數，以&amp;符號分隔。 附錄的查詢參數部分提供了有 [效參數](#query-parameters) 的完整清單。
+您可以在請求路徑中包含查詢參數，以指定要存取的資料。 您可以包含多個參數，以&amp;符號分隔。 在附錄的[查詢參數](#query-parameters)部分中提供了有效參數的完整清單。
 
 **API格式**
 
@@ -882,33 +885,33 @@ curl -X GET \
 
 ### 存取後續的結果頁面
 
-在檢索時間系列事件時對結果進行編頁。 如果有後續的結果頁面， `_page.next` 屬性將包含ID。 此外，該屬 `_links.next.href` 性還通過向端點發出附加GET請求，為檢索後續頁提供請求URI `access/entities` 。
+在檢索時間系列事件時對結果進行編頁。 如果有後續的結果頁面，`_page.next`屬性將包含ID。 此外，`_links.next.href`屬性還通過向`access/entities`端點發出附加GET請求，為檢索後續頁提供請求URI。
 
 ## 後續步驟
 
-按照本指南，您成功訪問了 [!DNL Real-time Customer Profile] 資料欄位、配置檔案和時間系列資料。 要瞭解如何訪問儲存在中的其他資料資 [!DNL Platform]源，請參 [閱資料存取概述](../../data-access/home.md)。
+按照本指南，您成功訪問了[!DNL Real-time Customer Profile]資料欄位、配置檔案和時間系列資料。 要瞭解如何訪問儲存在[!DNL Platform]中的其他資料資源，請參閱[資料存取概述](../../data-access/home.md)。
 
 ## 附錄 {#appendix}
 
-下節提供有關使用API存取資 [!DNL Profile] 料的補充資訊。
+下節提供有關使用API存取[!DNL Profile]資料的補充資訊。
 
-### 查詢參數 {#query-parameters}
+### 查詢參數{#query-parameters}
 
-GET請求到端點的路徑中使用以下參 `/access/entities` 數。 它們可用來識別您要存取的描述檔實體，並篩選回應中傳回的資料。 必要參數會加上標籤，而其餘參數則是選用的。
+GET請求到`/access/entities`端點的路徑中使用以下參數。 它們可用來識別您要存取的描述檔實體，並篩選回應中傳回的資料。 必要參數會加上標籤，而其餘參數則是選用的。
 
 | 參數 | 說明 | 範例 |
 |---|---|---|
-| `schema.name` | **（必要）** ，要擷取之實體的XDM架構 | `schema.name=_xdm.context.experienceevent` |
-| `relatedSchema.name` | 如 `schema.name` 果為&quot;_xdm.context.experienceevent&quot;，此值必須指定時間序列事件所關聯的描述檔實體的架構。 | `relatedSchema.name=_xdm.context.profile` |
-| `entityId` | **（必要）** ，實體的ID。 如果此參數的值不是XID，則還必須提供識別名稱空間參數(請參 `entityIdNS` 閱下)。 | `entityId=janedoe@example.com` |
-| `entityIdNS` | 如果 `entityId` 未以XID形式提供，則此欄位必須指定識別名稱空間。 | `entityIdNE=email` |
-| `relatedEntityId` | 如果 `schema.name` 是&quot;_xdm.context.experienceevent&quot;，此值必須指定相關描述檔實體的識別名稱空間。 此值遵循與相同的規則 `entityId`。 | `relatedEntityId=69935279872410346619186588147492736556` |
-| `relatedEntityIdNS` | 如 `schema.name` 果為&quot;_xdm.context.experienceevent&quot;，此值必須指定中指定之實體的識別名稱空間 `relatedEntityId`。 | `relatedEntityIdNS=CRMID` |
+| `schema.name` | **（必要）** 要檢索的實體的XDM模式 | `schema.name=_xdm.context.experienceevent` |
+| `relatedSchema.name` | 如果`schema.name`是&quot;_xdm.context.experienceevent&quot;，此值必須指定時間序列事件所關聯的描述檔實體的架構。 | `relatedSchema.name=_xdm.context.profile` |
+| `entityId` | **（必要）** 實體的ID。如果此參數的值不是XID，則還必須提供識別名稱空間參數（請參閱下面的`entityIdNS`）。 | `entityId=janedoe@example.com` |
+| `entityIdNS` | 如果`entityId`未以XID形式提供，則此欄位必須指定標識名稱空間。 | `entityIdNE=email` |
+| `relatedEntityId` | 如果`schema.name`是&quot;_xdm.context.experienceevent&quot;，此值必須指定相關描述檔實體的識別名稱空間。 此值遵循與`entityId`相同的規則。 | `relatedEntityId=69935279872410346619186588147492736556` |
+| `relatedEntityIdNS` | 如果`schema.name`是&quot;_xdm.context.experienceevent&quot;，此值必須指定`relatedEntityId`中指定之實體的識別名稱空間。 | `relatedEntityIdNS=CRMID` |
 | `fields` | 篩選回應中傳回的資料。 使用此選項可指定要在擷取的資料中包含的架構欄位值。 對於多個欄位，請以逗號分隔值，其間不含空格 | `fields=personalEmail,person.name,person.gender` |
 | `mergePolicyId` | 標識用於管理返回資料的合併策略。 如果未在呼叫中指定，則會使用您組織的該架構預設值。 如果尚未設定預設的「合併原則」，則預設為無描述檔合併，也無身分聯繫。 | `mergePoilcyId=5aa6885fcf70a301dabdfa4a` |
-| `orderBy` | 依時間戳記（以預設值寫入）擷取的體驗事 `(+/-)timestamp` 件排序順序 `+timestamp`。 | `orderby=-timestamp` |
+| `orderBy` | 依時間戳記排序擷取的體驗事件，寫入為`(+/-)timestamp`，預設為`+timestamp`。 | `orderby=-timestamp` |
 | `startTime` | 指定篩選時間系列物件的開始時間（以毫秒為單位）。 | `startTime=1539838505` |
 | `endTime` | 指定篩選時間系列物件的結束時間（以毫秒為單位）。 | `endTime=1539838510` |
 | `limit` | 指定要返回的最大對象數的數值。 預設值：1000 | `limit=100` |
-| `property` | 依屬性值篩選。 支援下列評估工具：=, !=, &lt;, &lt;=, >, >=. 只能與體驗事件搭配使用，最多支援3個屬性。 | `property=webPageDetails.isHomepage=true&property=localTime<="2020-07-20"` |
+| `property` | 依屬性值篩選。 支援下列評估工具：=, !=, &lt;, &lt;=, >, >=。 只能與體驗事件搭配使用，最多支援3個屬性。 | `property=webPageDetails.isHomepage=true&property=localTime<="2020-07-20"` |
 | `withCA` | 用於啟用計算屬性以進行查找的功能標籤。 預設值：false | `withCA=true` |
