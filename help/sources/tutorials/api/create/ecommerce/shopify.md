@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics;Shopify;shopify;ecommerce
+keywords: Experience Platform;home；熱門主題；Shopify;shopify;ecommerce
 solution: Experience Platform
 title: 使用Flow Service API建立Shopify連接器
 topic: overview
 type: Tutorial
 description: 本教學課程使用Flow Service API來引導您完成將Shopify連接至Experience Platform的步驟。
 translation-type: tm+mt
-source-git-commit: 9092c3d672967d3f6f7bf7116c40466a42e6e7b1
+source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
 workflow-type: tm+mt
-source-wordcount: '555'
+source-wordcount: '567'
 ht-degree: 2%
 
 ---
@@ -51,7 +51,7 @@ ht-degree: 2%
 
 ### 收集必要標題的值
 
-若要呼叫[!DNL Platform] API，您必須先完成[驗證教學課程](../../../../../tutorials/authentication.md)。 完成驗證教學課程後，所有[!DNL Experience Platform] API呼叫中每個所需標題的值都會顯示在下面：
+若要呼叫[!DNL Platform] API，您必須先完成[驗證教學課程](https://www.adobe.com/go/platform-api-authentication-en)。 完成驗證教學課程後，所有[!DNL Experience Platform] API呼叫中每個所需標題的值都會顯示在下面：
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
@@ -123,4 +123,4 @@ curl -X POST \
 
 ## 後續步驟
 
-在本教程中，您使用[!DNL Flow Service] API建立了[!DNL Shopify]連接，並獲取了該連接的唯一ID值。 您可在下一個教學課程中使用此ID，同時學習如何使用Flow Service API[來探索電子商務連線。](../../explore/ecommerce.md)
+在本教程中，您使用[!DNL Flow Service] API建立了[!DNL Shopify]連接，並獲取了該連接的唯一ID值。 您可在下一個教學課程中使用此ID，同時學習如何使用Flow Service API](../../explore/ecommerce.md)來探索電子商務連線。[
