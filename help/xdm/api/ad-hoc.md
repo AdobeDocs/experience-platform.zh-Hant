@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;experience data model;Experience data model;Experience Data Model;data model;Data Model;schema registry;Schema Registry;ad-hoc;ad hoc;adhoc;Ad-hoc;Ad hoc;Adhoc;
+keywords: Experience Platform;home；熱門主題；api;API;XDM;XDM;XDM系統；體驗資料模型；資料模型；資料模型；模式註冊表；模式註冊表；ad-hoc;adhoc;ad-hoc;Ad-hoc;Ad-hoc;Adhoc;Adhoc;
 solution: Experience Platform
 title: 臨機結構
 description: 在特定情況下，可能需要建立XDM架構，其中欄位的名稱僅限單一資料集使用。 這稱為臨機結構。
@@ -7,7 +7,7 @@ topic: developer guide
 translation-type: tm+mt
 source-git-commit: 1f18bf7367addd204f3ef8ce23583de78c70b70c
 workflow-type: tm+mt
-source-wordcount: '111'
+source-wordcount: '146'
 ht-degree: 0%
 
 ---
