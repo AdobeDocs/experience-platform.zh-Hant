@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics;Apache Hadoop Distributed File System;Apache hadoop;hdfs;HDFS
+keywords: Experience Platform;home；熱門主題；Apache Hadoop分佈式檔案系統；Apache hadoop;hdfs;HDFS
 solution: Experience Platform
 title: 使用Flow Service API建立Apache HDFS連接器
 topic: overview
 type: Tutorial
 description: 本教學課程使用Flow Service API來引導您完成將Apache Hadoop分佈式檔案系統（以下稱為「HDFS」）連接至Experience Platform的步驟。
 translation-type: tm+mt
-source-git-commit: fc6449d260ea7b96956689ce6c95c5e8b9002d89
+source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
 workflow-type: tm+mt
-source-wordcount: '555'
+source-wordcount: '573'
 ht-degree: 2%
 
 ---
@@ -46,7 +46,7 @@ ht-degree: 2%
 
 ### 收集必要標題的值
 
-若要呼叫[!DNL Platform] API，您必須先完成[驗證教學課程](../../../../../tutorials/authentication.md)。 完成驗證教學課程後，所有[!DNL Experience Platform] API呼叫中每個所需標題的值都會顯示在下面：
+若要呼叫[!DNL Platform] API，您必須先完成[驗證教學課程](https://www.adobe.com/go/platform-api-authentication-en)。 完成驗證教學課程後，所有[!DNL Experience Platform] API呼叫中每個所需標題的值都會顯示在下面：
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
@@ -116,4 +116,4 @@ curl -X POST \
 
 ## 後續步驟
 
-按照本教程，您已使用[!DNL Flow Service] API建立了HDFS連接，並獲取了該連接的唯一ID值。 您可在下一個教學課程中使用此ID，同時學習如何使用Flow Service API[來探索協力廠商雲端儲存空間。](../../explore/cloud-storage.md)
+按照本教程，您已使用[!DNL Flow Service] API建立了HDFS連接，並獲取了該連接的唯一ID值。 您可在下一個教學課程中使用此ID，同時學習如何使用Flow Service API](../../explore/cloud-storage.md)來探索協力廠商雲端儲存空間。[
