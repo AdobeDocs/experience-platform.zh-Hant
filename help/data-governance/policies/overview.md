@@ -5,9 +5,9 @@ title: 資料使用政策概觀
 topic: policies
 description: 為了讓資料使用標籤有效支援資料合規性，必須實作資料使用政策。 資料使用原則是描述您在Experience Platform內對資料執行的行銷動作類型或限制的規則。
 translation-type: tm+mt
-source-git-commit: 259c26a9d3b6ef397acd552e255f68ecb25b2dd1
+source-git-commit: 2dbd92efbd992b70f4f750b09e9d2e0626e71315
 workflow-type: tm+mt
-source-wordcount: '1003'
+source-wordcount: '1010'
 ht-degree: 0%
 
 ---
@@ -15,60 +15,60 @@ ht-degree: 0%
 
 # 資料使用政策概觀
 
-為了讓資料使用標籤有效支援資料合規性，必須實作資料使用政策。 資料使用原則是描述您允許或限制對內資料執行之行銷動作類型的規則 [!DNL Experience Platform]。
+為了讓資料使用標籤有效支援資料合規性，必須實作資料使用政策。 資料使用原則是描述您可對[!DNL Experience Platform]內的資料執行或受限制之行銷動作的類型的規則。
 
 本檔案提供資料使用原則的高階概述，並提供在UI或API中使用原則的進一步檔案連結。
 
-## 行銷動作 {#marketing-actions}
+## 行銷動作{#marketing-actions}
 
-資料管理架構中的行銷動作（也稱為行銷使用案例）是資料消費者可以採取的動作，而您的組織想要限制資料使用。 [!DNL Experience Platform] 因此，資料使用原則由下列項目定義：
+資料治理架構中的行銷動作（也稱為行銷使用案例）是[!DNL Experience Platform]資料使用者可採取的動作，您的組織想要限制資料使用。 因此，資料使用原則由下列項目定義：
 
 1. 特定行銷動作
 2. 限制動作的資料使用標籤
 
-行銷動作的範例可能是想要將資料集匯出至第三方服務。 如果有原則指出無法匯出特定資料類型(例如個人識別資訊(PII))，且您嘗試匯出包含「I」標籤（身分資料）的資料集，您會收到回應，告知您資料使用政策已遭違反。 [!DNL Policy Service]
+行銷動作的範例可能是想要將資料集匯出至第三方服務。 如果有原則指出無法匯出特定資料類型(例如個人識別資訊(PII))，且您嘗試匯出包含&quot;I&quot;標籤（身分資料）的資料集，您會收到[!DNL Policy Service]的回應，告知您資料使用原則已遭違反。
 
 >[!NOTE]
 >
 >行銷動作本身並不限制資料使用。 必須將它們納入已啟用的資料使用策略中，才能針對策略違規評估這些操作。
 
-當組織的服務中發生資料使用情形時，應指出相關的行銷動作，以便識別任何違反政策的行為。 然後，您就可以使 [用Policy Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) ，檢查整合中是否有違反原則的情況。
+當組織的服務中發生資料使用情形時，應指出相關的行銷動作，以便識別任何違反政策的行為。 然後，您可以使用[原則服務API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml)來檢查整合中是否有違反原則的情況。
 
 >[!NOTE]
 >
->如果您使用 [!DNL Real-time Customer Data Platform]，您可以在目的地設定行銷使用案例，以自動執行政策。 有關詳細資訊， [請參閱即時CDP中的資料治理](../../rtcdp/privacy/data-governance-overview.md) 文檔。
+>如果您使用[!DNL Real-time Customer Data Platform]，則可在目標上設定行銷使用案例，以自動執行原則。 有關詳細資訊，請參見[即時CDP中的資料治理文檔。](../../rtcdp/privacy/data-governance-overview.md)
 
-如需Adobe定義之可用行銷動作清單，請參 [閱本檔案附錄](#core-actions)。 您也可以使用API或使用者介面來定義您自己 [!DNL Policy Service] 的自訂行 [!DNL Experience Platform ]銷動作。 有關使用行銷動作和政策的詳細資訊，請參閱下一節。
+如需[可用的Adobe定義行銷動作清單，請參閱本檔案附錄。 ](#core-actions)您也可以使用[!DNL Policy Service] API或[!DNL Experience Platform ]使用者介面來定義您自己的自訂行銷動作。 有關使用行銷動作和政策的詳細資訊，請參閱下一節。
 
 <!-- (Add after AAM DEC mapping doc is published)
 ### Inheritance from Adobe Audience Manager Data Export Controls
 
 Experience Platform has the ability to share segments with Adobe Audience Manager. Any Data Export Controls that have been applied to Audience Manager segments are translated to equivalent marketing use cases recognized by Experience Platform Data Governance.
 
-For a reference on how specific Data Export Controls map to marketing actions in Platform, please refer to the [Audience Manager documentation](https://docs.adobe.com/content/help/en/audience-manager/user-guide/features/data-export-controls.html).
+For a reference on how specific Data Export Controls map to marketing actions in Platform, please refer to the [Audience Manager documentation](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/data-export-controls.html).
 -->
 
-## 管理資料使用原則 {#manage}
+## 管理資料使用策略{#manage}
 
-在套用資料使用標籤後，資料管理員就可使用 [!DNL Policy Service] API或 [!DNL Experience Platform] UI來管理和評估對包含資料使用標籤的資料所執行的行銷動作相關的政策。 您可以建立和更新原則、決定原則的狀態，以及使用行銷動作來評估特定動作是否違反資料使用原則。
+在套用資料使用標籤後，資料管理員可使用[!DNL Policy Service] API或[!DNL Experience Platform] UI來管理和評估對包含資料使用標籤的資料所執行的行銷動作相關政策。 您可以建立和更新原則、決定原則的狀態，以及使用行銷動作來評估特定動作是否違反資料使用原則。
 
 >[!IMPORTANT]
 >
 >預設會停用所有資料使用政策（包括Adobe提供的核心政策）。 若要考慮實施個別原則，您必須透過API或UI手動啟用該原則。
 
-如需在API中使用行銷動作和資料使用原則的逐步指示，請參閱建立和評估資 [料使用原則的教學課程](create.md)。 如需API所提供之關鍵作業的詳細資訊，請 [!DNL Policy Service] 參閱「原則服務 [開發人員指南」](../api/getting-started.md)。
+如需在API中使用行銷動作和資料使用原則的逐步指示，請參閱[建立和評估資料使用原則的教學課程](create.md)。 有關[!DNL Policy Service] API提供的關鍵操作的詳細資訊，請參閱[策略服務開發人員指南](../api/getting-started.md)。
 
-如需如何在 [!DNL Platform] UI中處理行銷動作和原則的詳細資訊，請參閱資 [料使用原則使用指南](./user-guide.md)。
+有關如何在[!DNL Platform] UI中使用行銷動作和原則的資訊，請參閱[資料使用原則使用指南](./user-guide.md)。
 
 ## 後續步驟
 
-本檔案介紹了框架中的資料使用 [!DNL Data Governance] 策略。 您現在可以繼續閱讀本指南中連結的流程檔案，以進一步瞭解如何在API和UI中使用原則。
+本檔案介紹了[!DNL Data Governance]框架中的資料使用策略。 您現在可以繼續閱讀本指南中連結的流程檔案，以進一步瞭解如何在API和UI中使用原則。
 
 ## 附錄
 
 下節提供資料使用原則的其他資訊。
 
-### Adobe定義的行銷動作 {#core-actions}
+### Adobe定義的行銷動作{#core-actions}
 
 下表說明Adobe現成可用的核心行銷動作。
 
