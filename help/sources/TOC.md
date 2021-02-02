@@ -5,7 +5,7 @@ user-guide-title: Adobe Experience Platform 來源連接器說明
 breadcrumb-title: 來源連接器指南
 user-guide-description: 從多種來源或結構擷取資料、加標籤，以及增強已擷取的資料。
 translation-type: tm+mt
-source-git-commit: c9552b4d3bbb34c81996344f2e8c7cc385c525b6
+source-git-commit: 2940f030aa21d70cceeedc7806a148695f68739e
 workflow-type: tm+mt
 source-wordcount: '663'
 ht-degree: 4%
@@ -63,7 +63,7 @@ ht-degree: 4%
       - [Oracle連接器](connectors/databases/oracle.md)
       - [菲尼克斯連接器](connectors/databases/phoenix.md)
       - [PostgreSQL連接器](connectors/databases/postgres.md)
-   - 電子商務{#ecommerce}
+   - 電子商務 {#ecommerce}
       - [Shopify連接器](connectors/ecommerce/shopify.md)
    - 行銷自動化{#marketing-automation}
       - [HubSpot連接器](connectors/marketing-automation/hubspot.md)
@@ -109,7 +109,7 @@ ht-degree: 4%
          - [菲尼克斯連接器](tutorials/api/create/databases/phoenix.md)
          - [PostgreSQL連接器](tutorials/api/create/databases/postgres.md)
          - [SQL Server連接器](tutorials/api/create/databases/sql-server.md)
-      - 電子商務{#ecommerce}
+      - 電子商務 {#ecommerce}
          - [Shopify連接器](tutorials/api/create/ecommerce/shopify.md)
       - 行銷自動化{#marketing-automation}
          - [HubSpot連接器](tutorials/api/create/marketing-automation/hubspot.md)
@@ -138,11 +138,11 @@ ht-degree: 4%
       - [收集付款資料](tutorials/api/collect/payments.md)
       - [收集通訊協定資料](tutorials/api/collect/protocols.md)
       - [收集串流資料](tutorials/api/collect/streaming.md)
-   - [從協力廠商雲端儲存系統擷取鑲木地板資料](tutorials/api/cloud-storage-parquet.md)
+   - [從協力廠商雲端儲存系統擷取Parke資料](tutorials/api/cloud-storage-parquet.md)
    - [建立資料集連線](tutorials/api/create-dataset-base-connection.md)
    - [監視資料流](tutorials/api/monitor.md)
    - [更新連線](tutorials/api/update.md)
-   - [刪除連接](tutorials/api/delete.md)
+   - [刪除連線](tutorials/api/delete.md)
    - [刪除資料流](tutorials/api/delete-dataflows.md)
 - UI教學課程{#ui-tutorials}
    - 建立源連接器{#create}
@@ -188,7 +188,7 @@ ht-degree: 4%
          - [Oracle連接器](tutorials/ui/create/databases/oracle.md)
          - [菲尼克斯連接器](tutorials/ui/create/databases/phoenix.md)
          - [PostgreSQL連接器](tutorials/ui/create/databases/postgres.md)
-      - 電子商務{#ecommerce}
+      - 電子商務 {#ecommerce}
          - [Shopify連接器](tutorials/ui/create/ecommerce/shopify.md)
       - 行銷自動化{#marketing-automation}
          - [HubSpot連接器](tutorials/ui/create/marketing-automation/hubspot.md)
