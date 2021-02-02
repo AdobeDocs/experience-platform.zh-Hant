@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics;Google Cloud Storage;google cloud storage;google;Google
+keywords: Experience Platform;home；熱門主題；Google Cloud Storage;google雲端儲存；google;Google
 solution: Experience Platform
 title: 使用Flow Service API建立Google雲端儲存連接器
 topic: overview
 type: Tutorial
 description: 本教學課程使用Flow Service API來引導您完成將Experience Platform連接至Google雲端儲存帳戶的步驟。
 translation-type: tm+mt
-source-git-commit: 9092c3d672967d3f6f7bf7116c40466a42e6e7b1
+source-git-commit: 2940f030aa21d70cceeedc7806a148695f68739e
 workflow-type: tm+mt
-source-wordcount: '540'
+source-wordcount: '557'
 ht-degree: 2%
 
 ---
@@ -46,7 +46,7 @@ ht-degree: 2%
 
 ### 收集必要標題的值
 
-若要呼叫[!DNL Platform] API，您必須先完成[驗證教學課程](../../../../../tutorials/authentication.md)。 完成驗證教學課程後，所有[!DNL Experience Platform] API呼叫中每個所需標題的值都會顯示在下面：
+若要呼叫[!DNL Platform] API，您必須先完成[驗證教學課程](https://www.adobe.com/go/platform-api-authentication-en)。 完成驗證教學課程後，所有[!DNL Experience Platform] API呼叫中每個所需標題的值都會顯示在下面：
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
@@ -118,4 +118,4 @@ curl -X POST \
 
 ## 後續步驟
 
-在本教學課程中，您已使用API建立[!DNL Google Cloud Storage]連線，並取得唯一ID做為回應內文的一部分。 您可以使用此連線ID來探索使用Flow Service API[或](../../explore/cloud-storage.md)使用Flow Service API[收錄拼花資料的雲端儲存空間。](../../cloud-storage-parquet.md)
+在本教學課程中，您已使用API建立[!DNL Google Cloud Storage]連線，並取得唯一ID做為回應內文的一部分。 您可以使用此連線ID來探索使用Flow Service API](../../explore/cloud-storage.md)或[使用Flow Service API](../../cloud-storage-parquet.md)來內嵌Parce資料的雲端儲存空間。[
