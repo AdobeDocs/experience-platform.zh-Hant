@@ -1,5 +1,5 @@
 ---
-keywords: insights;attribution ai;attribution ai insights;AAI query service;attribution queries;attribution scores
+keywords: 見解；歸因ai；歸因ai洞察；AAI查詢服務；歸因查詢；歸因分數
 solution: Intelligent Services, Experience Platform
 title: AAI查詢服務快速入門手冊
 topic: Attribution AI queries
@@ -7,7 +7,7 @@ description: 本檔案提供使用查詢服務分析歸因分數的指南和範�
 translation-type: tm+mt
 source-git-commit: 32d49c9244414afeb2729ef44eb364fb2c609380
 workflow-type: tm+mt
-source-wordcount: '481'
+source-wordcount: '494'
 ht-degree: 0%
 
 ---
