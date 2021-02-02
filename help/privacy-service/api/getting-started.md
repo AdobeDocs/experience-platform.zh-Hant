@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home；熱門主題
 solution: Experience Platform
 title: 隱私權服務開發人員指南
 description: 使用REST風格的API，跨Adobe Experience Cloud應用程式管理資料主體的個人資料
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 28b733a16b067f951a885c299d59e079f0074df8
+source-git-commit: 5d1b22253f2b382bef83e30a4295218ba6b85331
 workflow-type: tm+mt
-source-wordcount: '759'
+source-wordcount: '771'
 ht-degree: 0%
 
 ---
@@ -15,13 +15,13 @@ ht-degree: 0%
 
 # [!DNL Privacy Service] 開發人員指南
 
-Adobe Experience Platform提 [!DNL Privacy Service] 供REST風格的API和使用者介面，可讓您跨Adobe Experience Cloud應用程式管理（存取和刪除）資料主體（客戶）的個人資料。 [!DNL Privacy Service] 還提供了集中審計和記錄機制，允許您訪問涉及應用程式的作業的狀態和 [!DNL Experience Cloud] 結果。
+Adobe Experience Platform [!DNL Privacy Service]提供REST風格的API和使用者介面，可讓您跨Adobe Experience Cloud應用程式管理（存取和刪除）資料主體（客戶）的個人資料。 [!DNL Privacy Service] 還提供了集中審計和記錄機制，允許您訪問涉及應用程式的作業的狀態和 [!DNL Experience Cloud] 結果。
 
-本指南涵蓋如何使用 [!DNL Privacy Service] API。 如需如何使用UI的詳細資訊，請參閱隱私 [服務UI概觀](../ui/overview.md)。 如需API中所有可用端點的完整清 [!DNL Privacy Service] 單，請參閱 [API參考](https://www.adobe.io/apis/experiencecloud/gdpr/api-reference.html)。
+本指南介紹如何使用[!DNL Privacy Service] API。 如需如何使用UI的詳細資訊，請參閱[隱私權服務UI概觀](../ui/overview.md)。 有關[!DNL Privacy Service] API中所有可用端點的完整清單，請參閱[API參考](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/privacy-service.yaml)。
 
 ## 快速入門 {#getting-started}
 
-本指南需要熟悉下列功 [!DNL Experience Platform] 能：
+本指南需要有效瞭解下列[!DNL Experience Platform]功能：
 
 * [[!DNL Privacy Service]](../home.md):提供REST風格的API和使用者介面，可讓您跨Adobe Experience Cloud應用程式管理資料主體（客戶）的存取和刪除要求。
 
@@ -29,21 +29,21 @@ Adobe Experience Platform提 [!DNL Privacy Service] 供REST風格的API和使用
 
 ### 讀取範例API呼叫
 
-本教學課程提供範例API呼叫，以示範如何設定請求的格式。 這些包括路徑、必要標題和正確格式化的請求負載。 也提供API回應中傳回的範例JSON。 如需範例API呼叫檔案中所用慣例的詳細資訊，請參閱疑難排解指 [南中有關如何讀取範例API呼叫的](../../landing/troubleshooting.md)[!DNL Experience Platform] 章節。
+本教學課程提供範例API呼叫，以示範如何設定請求的格式。 這些包括路徑、必要標題和正確格式化的請求負載。 也提供API回應中傳回的範例JSON。 如需範例API呼叫檔案中所用慣例的詳細資訊，請參閱[!DNL Experience Platform]疑難排解指南中[如何讀取範例API呼叫](../../landing/troubleshooting.md)一節。
 
 ## 收集必要標題的值
 
-若要呼叫 [!DNL Privacy Service] API，您必須先收集要用於必要標題的存取認證：
+若要呼叫[!DNL Privacy Service] API，您必須先收集要用於必要標題的存取認證：
 
-* 授權：生產者 `{ACCESS_TOKEN}`
-* x-api-key: `{API_KEY}`
-* x-gw-ims-org-id: `{IMS_ORG}`
+* 授權：載體`{ACCESS_TOKEN}`
+* x-api-key:`{API_KEY}`
+* x-gw-ims-org-id:`{IMS_ORG}`
 
-這包括在Adobe Admin Console中取 [!DNL Experience Platform] 得開發人員權限，然後在Adobe Developer Console中產生認證。
+這包括在Adobe Admin Console中取得[!DNL Experience Platform]的開發人員權限，然後在Adobe Developer Console中產生認證。
 
-### 取得開發人員的存取權 [!DNL Experience Platform]
+### 取得[!DNL Experience Platform]的開發人員存取權
 
-若要取得開發人員的 [!DNL Platform]存取權，請依照 [Experience Platform驗證教學課程的開](../../tutorials/authentication.md)始步驟進行。 在您進入「在Adobe Developer Console中產生存取認證」步驟後，請返回本教學課程，以產生特定的認證 [!DNL Privacy Service]。
+若要取得[!DNL Platform]的開發人員存取權，請依照[體驗平台驗證教學課程](https://www.adobe.com/go/platform-api-authentication-en)中的開始步驟進行。 進入步驟「在Adobe Developer Console中產生存取認證」後，請返回本教學課程，以產生[!DNL Privacy Service]專屬的認證。
 
 ### 生成訪問憑據
 
@@ -53,31 +53,31 @@ Adobe Experience Platform提 [!DNL Privacy Service] 供REST風格的API和使用
 * `{API_KEY}`
 * `{ACCESS_TOKEN}`
 
-您 `{IMS_ORG}` 的 `{API_KEY}` API呼叫只需產生一次，即可重複使用。 但是，您的 `{ACCESS_TOKEN}` 作業是暫時的，必須每24小時重新生一次。
+您的`{IMS_ORG}`和`{API_KEY}`只需產生一次，就可在未來的API呼叫中重複使用。 但是，您的`{ACCESS_TOKEN}`是暫時的，必須每24小時重新產生一次。
 
 產生這些值的步驟詳細說明如下。
 
 #### 一次性設定
 
-前往 [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui) ，使用您的Adobe ID登入。 接著，請依照教學課程中說明的步驟， [在Adobe Developer Console檔案中建立空白的專案](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/projects-empty.md) 。
+前往[Adobe Developer Console](https://www.adobe.com/go/devs_console_ui)並使用您的Adobe ID登入。 接下來，請依照[教學課程中說明的步驟，在Adobe Developer Console檔案中建立空白專案](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/projects-empty.md)。
 
-建立新專案後，按一下「專 **[!UICONTROL 案概述」畫面上的]****[!UICONTROL 「新增API]** 」。
+建立新專案後，請在&#x200B;**[!UICONTROL 專案概述]**&#x200B;畫面上選取&#x200B;**[!UICONTROL 新增API]**。
 
 ![](../images/api/getting-started/add-api-button.png)
 
-出現 **[!UICONTROL 「Add an API]** （添加API）」螢幕。 按一 **[!UICONTROL 下「下一步]** 」前，從可用API清單中選取「隱私權服務 **[!UICONTROL API」]**。
+出現「**[!UICONTROL 新增API]**」畫面。 在選擇&#x200B;**[!UICONTROL Next]**&#x200B;之前，從可用API清單中選擇&#x200B;**[!UICONTROL 隱私服務API]**。
 
 ![](../images/api/getting-started/add-privacy-service-api.png)
 
-此時 **[!UICONTROL 會顯示「設定API]** 」畫面。 選取「產生 **[!UICONTROL 鍵對」選項]**，然後按一下右下角 **[!UICONTROL 的「產生鍵對]** 」。
+出現「**[!UICONTROL Configure API]**（配置API）」螢幕。 選擇&#x200B;**[!UICONTROL 生成鍵對]**&#x200B;的選項，然後選擇右下角的&#x200B;**[!UICONTROL 生成鍵對]**。
 
 ![](../images/api/getting-started/generate-key-pair.png)
 
-系統會自動產生金鑰對，並將包含私密金鑰和公用憑證的ZIP檔案下載至您的本機電腦（稍後的步驟將會使用）。 選擇 **[!UICONTROL 保存配置的API]** ，以完成配置。
+系統會自動產生金鑰對，並將包含私密金鑰和公用憑證的ZIP檔案下載至您的本機電腦（稍後的步驟將會使用）。 選擇&#x200B;**[!UICONTROL 保存配置的API]**&#x200B;以完成配置。
 
 ![](../images/api/getting-started/key-pair-generated.png)
 
-在將API新增至專案後，專案頁面會重新顯示在「隱私權服務 **API概觀」頁面** 。 從這裡，向下捲動至「 **[!UICONTROL Service Account(JWT)]** 」區段，該區段提供對 [!DNL Privacy Service] API的所有呼叫所需的下列存取憑證：
+在將API新增至專案後，專案頁面會重新出現在&#x200B;**隱私權服務API概觀**&#x200B;頁面。 從這裡，向下滾動到&#x200B;**[!UICONTROL 服務帳戶(JWT)]**&#x200B;部分，該部分提供對[!DNL Privacy Service] API的所有調用所需的以下訪問憑據：
 
 * **[!UICONTROL 用戶端ID]**:必須在x-api-key標 `{API_KEY}` 題中提供用戶端ID。
 * **[!UICONTROL 組織ID]**:組織ID是必 `{IMS_ORG}` 須用在x-gw-ims-org-id標題中的值。
@@ -86,16 +86,16 @@ Adobe Experience Platform提 [!DNL Privacy Service] 供REST風格的API和使用
 
 #### 每個會話的驗證
 
-您必須收集的最終必要憑證是您 `{ACCESS_TOKEN}`的，此憑證會用於「授權」標題。 與和的值不 `{API_KEY}` 同， `{IMS_ORG}`必須每24小時產生一個新的Token，才能繼續使用 [!DNL Platform] API。
+您必須收集的最終必要憑證是`{ACCESS_TOKEN}`，它用於「授權」標題中。 與`{API_KEY}`和`{IMS_ORG}`的值不同，必須每24小時產生一個新Token，才能繼續使用[!DNL Platform] API。
 
-若要產生新 `{ACCESS_TOKEN}`密鑰，請開啟先前下載的私密金鑰，並將其內容貼入「產生存取Token」旁的文字方塊， **[!UICONTROL 再按一下「產]** 生Token ****」。
+若要產生新的`{ACCESS_TOKEN}`，請開啟先前下載的私密金鑰，並將其內容貼入&#x200B;**[!UICONTROL 產生存取Token]**&#x200B;旁的文字方塊中，再選取&#x200B;**[!UICONTROL 產生Token]**。
 
 ![](../images/api/getting-started/paste-private-key.png)
 
-產生新的存取Token，並提供將Token複製至剪貼簿的按鈕。 此值用於所需的授權標題，且必須以格式提供 `Bearer {ACCESS_TOKEN}`。
+產生新的存取Token，並提供將Token複製至剪貼簿的按鈕。 此值用於所需的「授權」標頭，且必須以`Bearer {ACCESS_TOKEN}`格式提供。
 
 ![](../images/api/getting-started/generated-access-token.png)
 
 ## 後續步驟
 
-現在，您已瞭解要使用哪些標題，可以開始呼叫 [!DNL Privacy Service] API。 隱私權工 [作的檔案](privacy-jobs.md) ，會逐步說明您可使用API進行的各種API [!DNL Privacy Service] 呼叫。 每個範例呼叫都包含一般API格式、顯示必要標題的範例要求，以及範例回應。
+現在您已瞭解要使用哪些標題，可以開始呼叫[!DNL Privacy Service] API。 有關[隱私權工作](privacy-jobs.md)的檔案會逐步說明您可使用[!DNL Privacy Service] API進行的各種API呼叫。 每個範例呼叫都包含一般API格式、顯示必要標題的範例要求，以及範例回應。
