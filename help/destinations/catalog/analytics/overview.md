@@ -1,23 +1,23 @@
 ---
-keywords: analytics destinations;analytics destination
+keywords: 分析目標；分析目標
 title: Analytics目標
 seo-title: Analytics目標
 description: 分析目的地會追蹤訪客如何與您網站上的內容互動，並收集資料以瞭解讀者的行為。 這些平台提供您最具價值訪客參與度與轉化率的獨特見解。
 seo-description: 分析目的地會追蹤訪客如何與您網站上的內容互動，並收集資料以瞭解讀者的行為。 這些平台提供您最具價值訪客參與度與轉化率的獨特見解。
 translation-type: tm+mt
-source-git-commit: 85e6a65e1407ca60e7b63681c045fadaaa24aef9
+source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
 workflow-type: tm+mt
-source-wordcount: '201'
+source-wordcount: '204'
 ht-degree: 5%
 
 ---
 
 
-# Analytics目標 {#analytics-destinations}
+# Analytics目標{#analytics-destinations}
 
 分析目的地會追蹤訪客如何與您網站上的內容互動，並收集資料以瞭解讀者的行為。 這些平台提供您最具價值訪客參與度與轉化率的獨特見解。
 
-目前，即時客戶資料平台支援下列分析目標。 如需如何連線至這些目的地的詳細資訊，請參閱個別連結：
+目前，Adobe Experience Platform支援下列分析目標。 如需如何連線至這些目的地的詳細資訊，請參閱個別連結：
 
 - [Adform網站追蹤擴充功能](./adform.md)
 - [Adobe Analytics 擴充功能](./adobe-analytics.md)
