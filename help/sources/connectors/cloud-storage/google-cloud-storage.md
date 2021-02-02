@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics;Google Cloud Storage;google cloud storage
+keywords: Experience Platform;home；熱門主題；Google Cloud Storage;google雲端儲存空間
 solution: Experience Platform
 title: Google雲端儲存空間連接器
 topic: overview
 description: 以下檔案提供如何使用API或使用者介面將Google雲端儲存空間連接至平台的資訊。
 translation-type: tm+mt
-source-git-commit: e0a0b7fc28b8cc85c5140d3840e06e5c7078c307
+source-git-commit: 2940f030aa21d70cceeedc7806a148695f68739e
 workflow-type: tm+mt
-source-wordcount: '557'
+source-wordcount: '568'
 ht-degree: 0%
 
 ---
@@ -15,46 +15,46 @@ ht-degree: 0%
 
 # Google雲端儲存空間連接器
 
-Adobe Experience Platform為AWS等雲端提供商提供原生連接 [!DNL Google Cloud Platform]功能 [!DNL Azure]，讓您能夠從這些系統中取得資料。
+Adobe Experience Platform為AWS、[!DNL Google Cloud Platform]和[!DNL Azure]等雲端提供者提供原生連接，讓您能夠從這些系統中取用資料。
 
-雲端儲存來源可將您自己的資料匯入 [!DNL Platform] 其中，而不需下載、格式化或上傳。 收錄的資料可格式化為XDM JSON、XDM鑲木地板或分隔字元。 此程式的每個步驟都會整合至Sources工作流程中。 [!DNL Platform] 允許您從批中導入 [!DNL Google Cloud Storage] 資料。
+雲端儲存來源可將您自己的資料匯入[!DNL Platform]，而不需下載、格式化或上傳。 收錄的資料可格式化為XDM JSON、XDM Parce或分隔。 此程式的每個步驟都會整合至Sources工作流程中。 [!DNL Platform] 允許您從批中導入 [!DNL Google Cloud Storage] 資料。
 
 ## IP位址允許清單
 
-在使用來源連接器之前，必須將IP位址清單新增至允許清單。 若未將您地區專屬的IP位址新增至您的允許清單，在使用來源時可能會導致錯誤或效能不佳。 如需詳細 [資訊，請參閱](../../ip-address-allow-list.md) 「IP位址允許清單」頁面。
+在使用來源連接器之前，必須將IP位址清單新增至允許清單。 若未將您地區專屬的IP位址新增至您的允許清單，在使用來源時可能會導致錯誤或效能不佳。 如需詳細資訊，請參閱[IP位址允許清單](../../ip-address-allow-list.md)頁面。
 
-## 連線帳戶的先決條件設 [!DNL Google Cloud Storage] 定
+## 連接[!DNL Google Cloud Storage]帳戶的先決條件設定
 
-為了連接至，您必 [!DNL Platform]須先啟用您帳戶的互用 [!DNL Google Cloud Storage] 性。 要訪問互操作性設定，請打 [!DNL Google Cloud Platform] 開並從導航面 **[!UICONTROL 板的「存]** 儲 **** 」選項中選擇「設定」。
+要連接到[!DNL Platform]，您必須首先啟用[!DNL Google Cloud Storage]帳戶的互操作性。 要訪問互操作性設定，請開啟[!DNL Google Cloud Platform]，然後從導航面板中的&#x200B;**[!UICONTROL 儲存]**&#x200B;選項中選擇&#x200B;**[!UICONTROL 設定]**。
 
 ![](../../images/tutorials/create/google-cloud-storage/nav.png)
 
-此時會 **[!UICONTROL 顯示]** 「設定」頁面。 從這裡，您可以看到有關您的專案ID [!DNL Google] 的資訊，以及您帳戶的詳 [!DNL Google Cloud Storage] 細資訊。 要訪問互操作性設定，請從 **[!UICONTROL 頂部標題中]** 選擇「互操作性」。
+此時將顯示&#x200B;**[!UICONTROL Settings]**&#x200B;頁。 從這裡，您可以看到有關[!DNL Google]專案ID的資訊，以及有關[!DNL Google Cloud Storage]帳戶的詳細資訊。 要訪問互操作性設定，請從頂部標題中選擇&#x200B;**[!UICONTROL 互操作性]**。
 
 ![](../../images/tutorials/create/google-cloud-storage/project-access.png)
 
-「互 **[!UICONTROL 操作性]** 」頁包含有關驗證、訪問密鑰和與用戶帳戶關聯的預設項目的資訊。 如果尚未建立可互操作訪問的預設項目，則可在「預設項目」( **[!UICONTROL Default project)中設定一個可互操作訪問]** 。 如果已建立預設專案，則區段會顯示專案已設為預設的確認。
+**[!UICONTROL 互操作性]**&#x200B;頁包含有關驗證、訪問密鑰和與用戶帳戶關聯的預設項目的資訊。 如果尚未建立可互操作訪問的預設項目，可在&#x200B;**[!UICONTROL 可互操作訪問的預設項目]**&#x200B;部分內設定一個項目。 如果已建立預設專案，則區段會顯示專案已設為預設的確認。
 
-若要為您的使用者帳戶產生新的存取金鑰ID和機密存取金鑰，請選取「 **[!UICONTROL 建立金鑰]**」。
+要為用戶帳戶生成新的訪問密鑰ID和秘密訪問密鑰，請選擇&#x200B;**[!UICONTROL 建立密鑰]**。
 
 ![](../../images/tutorials/create/google-cloud-storage/interoperability.png)
 
-您可以使用新產生的存取金鑰ID和機密存取金鑰，將您的帳戶連 [!DNL Google Cloud Storage] 接至 [!DNL Platform]。
+您可以使用新生成的訪問密鑰ID和秘密訪問密鑰將[!DNL Google Cloud Storage]帳戶連接到[!DNL Platform]。
 
 ## 檔案和目錄的命名限制
 
 以下是您在命名雲端儲存檔案或目錄時必須考慮的限制清單。
 
 - 目錄和檔案元件名稱不能超過255個字元。
-- 目錄和檔案名不能以斜線(`/`)結尾。 如果提供，則會自動移除。
-- 下列保留的URL字元必須正確逸出： `! * ' ( ) ; : @ & = + $ , / ? % # [ ]`
-- 不允許使用下列字元： `" \ / : | < > * ?`.
-- 不允許非法的URL路徑字元。 代碼點（如） `\uE000`在NTFS檔案名中有效時，是無效的Unicode字元。 此外，也不允許某些ASCII或Unicode字元，例如控制字元（0x00到0x1F、\u0081等）。 有關HTTP/1.1中管理Unicode字串的規則，請參見 [RFC 2616，第2.2節：基本規則](https://www.ietf.org/rfc/rfc2616.txt) 和 [RFC 3987](https://www.ietf.org/rfc/rfc3987.txt)。
+- 目錄和檔案名不能以正斜線(`/`)結尾。 如果提供，則會自動移除。
+- 下列保留的URL字元必須正確逸出：`! * ' ( ) ; : @ & = + $ , / ? % # [ ]`
+- 不允許使用下列字元：`" \ / : | < > * ?`。
+- 不允許非法的URL路徑字元。 代碼點（如`\uE000`）在NTFS檔案名中有效，但不是有效的Unicode字元。 此外，也不允許某些ASCII或Unicode字元，例如控制字元（0x00到0x1F、\u0081等）。 有關HTTP/1.1中管理Unicode字串的規則，請參見[RFC 2616，第2.2節：基本規則](https://www.ietf.org/rfc/rfc2616.txt)和[RFC 3987](https://www.ietf.org/rfc/rfc3987.txt)。
 - 不允許使用下列檔案名稱：LPT1、LPT2、LPT3、LPT4、LPT5、LPT6、LPT7、LPT8、LPT9、COM1、COM2、COM3、COM4、COM5、COM6、COM7、COM8、COM9、prn, AUX, NUL, CON, CLOCK$，點字元(.)和兩個點字元(..)。
 
-## 連線 [!DNL Google Cloud Storage] 至 [!DNL Platform]
+## 將[!DNL Google Cloud Storage]連接到[!DNL Platform]
 
-以下檔案提供如何連線至使用API [!DNL Google Cloud Storage] 或使 [!DNL Platform] 用者介面的資訊：
+下面的文檔提供了如何使用API或用戶介面將[!DNL Google Cloud Storage]連接到[!DNL Platform]的資訊：
 
 ### 使用API
 
