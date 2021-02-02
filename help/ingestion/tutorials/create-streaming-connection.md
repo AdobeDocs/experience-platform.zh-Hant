@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics;streaming connection;create streaming connection;api guide;tutorial;create a streaming connection;streaming ingestion;ingestion;
+keywords: Experience Platform;home；熱門主題；串流連接；建立流連接；api指南；教程；建立流連接；流攝取；攝取；
 solution: Experience Platform
 title: 使用API建立串流連線
 topic: tutorial
 type: Tutorial
 description: 本教學課程將協助您開始使用串流擷取API，這是Adobe Experience Platform Data Ingestion Service API的一部分。
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
 workflow-type: tm+mt
-source-wordcount: '653'
+source-wordcount: '677'
 ht-degree: 2%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 2%
 
 # 使用API建立串流連線
 
-本教學課程將協助您開始使用串流擷取API，這是Adobe Experience Platform資料API的一 [!DNL Ingestion Service] 部分。
+本教學課程將協助您開始使用串流擷取API，這是Adobe Experience Platform資料[!DNL Ingestion Service] API的一部分。
 
 ## 快速入門
 
@@ -33,23 +33,23 @@ ht-degree: 2%
 
 ### 讀取範例API呼叫
 
-本指南提供範例API呼叫，以示範如何格式化您的請求。 這些包括路徑、必要標題和正確格式化的請求負載。 也提供API回應中傳回的範例JSON。 如需範例API呼叫檔案中所用慣例的詳細資訊，請參閱疑難排解指 [南中有關如何讀取範例API呼叫的](../../landing/troubleshooting.md#how-do-i-format-an-api-request)[!DNL Experience Platform] 章節。
+本指南提供範例API呼叫，以示範如何格式化您的請求。 這些包括路徑、必要標題和正確格式化的請求負載。 也提供API回應中傳回的範例JSON。 如需範例API呼叫檔案中所用慣例的詳細資訊，請參閱[!DNL Experience Platform]疑難排解指南中[如何讀取範例API呼叫](../../landing/troubleshooting.md#how-do-i-format-an-api-request)一節。
 
 ### 收集必要標題的值
 
-若要呼叫API，您必 [!DNL Platform] 須先完成驗證教 [學課程](../../tutorials/authentication.md)。 完成驗證教學課程後，將提供所有 [!DNL Experience Platform] API呼叫中每個必要標題的值，如下所示：
+若要呼叫[!DNL Platform] API，您必須先完成[驗證教學課程](https://www.adobe.com/go/platform-api-authentication-en)。 完成驗證教學課程後，所有[!DNL Experience Platform] API呼叫中每個所需標題的值都會顯示在下面：
 
-- 授權：生產者 `{ACCESS_TOKEN}`
-- x-api-key: `{API_KEY}`
-- x-gw-ims-org-id: `{IMS_ORG}`
+- 授權：載體`{ACCESS_TOKEN}`
+- x-api-key:`{API_KEY}`
+- x-gw-ims-org-id:`{IMS_ORG}`
 
-中的所有資 [!DNL Experience Platform] 源都與特定虛擬沙盒隔離。 對API的所 [!DNL Platform] 有請求都需要一個標題，該標題會指定要在中執行的操作的沙盒名稱：
+[!DNL Experience Platform]中的所有資源都隔離到特定的虛擬沙盒。 對[!DNL Platform] API的所有請求都需要一個標題，該標題指定要在中執行操作的沙盒的名稱：
 
-- x-sandbox-name: `{SANDBOX_NAME}`
+- x-sandbox-name:`{SANDBOX_NAME}`
 
 >[!NOTE]
 >
->如需中沙盒的詳細資訊 [!DNL Platform]，請參閱沙 [盒概述檔案](../../sandboxes/home.md)。
+>如需[!DNL Platform]中沙盒的詳細資訊，請參閱[沙盒概述檔案](../../sandboxes/home.md)。
 
 所有包含裝載(POST、PUT、PATCH)的請求都需要額外的標題：
 
@@ -69,7 +69,7 @@ POST /flowservice/connections
 
 >[!NOTE]
 >
->必須使用列 `providerId` 出和的 `connectionSpec` 值 **** ，如示例中所示，因為它們是您為串流擷取建立串流連線的API所指定的值。
+>列出的`providerId`和`connectionSpec` **的值必須**&#x200B;如示例所示，因為它們是您為流接收建立流連接的API所指定的值。
 
 ```shell
 curl -X POST https://platform.adobe.io/data/foundation/flowservice/connections \
@@ -110,7 +110,7 @@ curl -X POST https://platform.adobe.io/data/foundation/flowservice/connections \
 
 | 屬性 | 說明 |
 | -------- | ----------- |
-| `id` | 新建 `id` 的連線的名稱。 這在這裡稱為 `{CONNECTION_ID}`。 |
+| `id` | 新建立的連接的`id`。 這在這裡稱為`{CONNECTION_ID}`。 |
 | `etag` | 指派給連接的標識符，指定連接的修訂版本。 |
 
 ## 取得資料收集URL
@@ -125,7 +125,7 @@ GET /flowservice/connections/{CONNECTION_ID}
 
 | 參數 | 說明 |
 | --------- | ----------- |
-| `{CONNECTION_ID}` | 您 `id` 先前建立的連接的值。 |
+| `{CONNECTION_ID}` | 您先前建立的連接的`id`值。 |
 
 **請求**
 
@@ -139,7 +139,7 @@ curl -X GET https://platform.adobe.io/data/foundation/flowservice/connections/{C
 
 **回應**
 
-成功的響應返回HTTP狀態200，其中包含所請求連接的詳細資訊。 資料收集URL會自動與連線建立，並可使用值來擷 `inletUrl` 取。
+成功的響應返回HTTP狀態200，其中包含所請求連接的詳細資訊。 資料收集URL會自動與連線建立，並可使用`inletUrl`值來擷取。
 
 ```json
 {
@@ -178,7 +178,7 @@ curl -X GET https://platform.adobe.io/data/foundation/flowservice/connections/{C
 
 ## 後續步驟
 
-現在您已建立串流連線，您可以串流化時間系列或記錄資料，讓您在其中內嵌資料 [!DNL Platform]。 若要瞭解如何將時間系列資料串流 [!DNL Platform]至，請前往串 [流時間系列資料教學課程](./streaming-time-series-data.md)。 若要瞭解如何將記錄資料串流 [!DNL Platform]至，請至串流 [記錄資料教學課程](./streaming-record-data.md)。
+現在您已建立串流連線，您可以串流化時間系列或記錄資料，讓您在[!DNL Platform]內內嵌資料。 要瞭解如何將時間序列資料流化到[!DNL Platform]，請轉至[流時間序列資料教程](./streaming-time-series-data.md)。 要瞭解如何將記錄資料流化到[!DNL Platform]，請轉至[流記錄資料教程](./streaming-record-data.md)。
 
 ## 附錄
 
@@ -186,6 +186,6 @@ curl -X GET https://platform.adobe.io/data/foundation/flowservice/connections/{C
 
 ### 驗證的串流連線
 
-驗證資料收集可讓Adobe Experience Platform服務(例如 [!DNL Real-time Customer Profile] 和 [!DNL Identity])區隔來自受信任來源和不受信任來源的記錄。 想要傳送個人識別資訊(PII)的客戶可以透過傳送IMS存取Token作為POST要求的一部分進行傳送——如果IMS Token有效，則記錄會標示為從受信任來源收集。
+已驗證的資料收集可讓Adobe Experience Platform服務（例如[!DNL Real-time Customer Profile]和[!DNL Identity]）區隔來自受信任來源和不受信任來源的記錄。 想要傳送個人識別資訊(PII)的客戶可以透過傳送IMS存取Token作為POST要求的一部分進行傳送——如果IMS Token有效，則記錄會標示為從受信任來源收集。
 
-如需建立已驗證串流連線的詳細資訊，請參閱建立已驗 [證串流連線教學課程](create-authenticated-streaming-connection.md)。
+有關建立已驗證的流連接的更多資訊，請參見[建立已驗證的流連接教程](create-authenticated-streaming-connection.md)。
