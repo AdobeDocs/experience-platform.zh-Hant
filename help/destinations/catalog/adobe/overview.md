@@ -1,31 +1,31 @@
 ---
-keywords: destinations;experience cloud solutions; target;target destination; ad cloud; advertising cloud; audience manager; adobe target destination; target; audience manager destination;
+keywords: 目的地；體驗雲解決方案；目標；目標；廣告雲；廣告雲；觀眾經理；adobe目標；目標；觀眾管理者目標；
 title: Adobe目標
 seo-title: Adobe目標
-description: 透過將即時CDP中的資料連結到其他Adobe Experience Cloud解決方案，以利廣告鎖定、個人化、行銷自動化等，管理客戶體驗
-seo-description: 透過將即時CDP中的資料連結到其他Adobe Experience Cloud解決方案，以利廣告鎖定、個人化、行銷自動化等，管理客戶體驗
+description: 將Platform中的資料連結至其他Adobe Experience Cloud解決方案，以利廣告鎖定、個人化、行銷自動化等，以管理客戶體驗
+seo-description: 將Platform中的資料連結至其他Adobe Experience Cloud解決方案，以利廣告鎖定、個人化、行銷自動化等，以管理客戶體驗
 translation-type: tm+mt
-source-git-commit: 0bb1622895b1e0f97fc47b5c61d456bc369746c8
+source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
 workflow-type: tm+mt
-source-wordcount: '224'
-ht-degree: 13%
+source-wordcount: '243'
+ht-degree: 12%
 
 ---
 
 
-# Adobe Destinations {#adobe-destinations}
+# Adobe目標{#adobe-destinations}
 
-透過將即時CDP中的資料連結至其他Adobe Experience Cloud解決方案，以利廣告鎖定、個人化、行銷自動化等，管理客戶體驗。
+將Adobe Experience Platform中的資料連結至其他Adobe Experience Cloud解決方案，以利廣告鎖定、個人化、行銷自動化等，以管理客戶體驗。
 
 ## 連線
 
-要瞭解連接和擴展之間的差異，請參 [閱「目標類型](../../destination-types.md#connections) 」和「類別」頁中的「連接」。
+要瞭解連接和擴展之間的差異，請參閱「目標類型和類別」頁中的[連接](../../destination-types.md#connections)。
 
 - [Adobe Campaign](../email-marketing/adobe-campaign.md)
 
 ## 擴充功能
 
-要瞭解連接和擴展之間的差異，請參 [閱「目標類型](../../destination-types.md#extensions) 」和「類別」頁中的擴展。
+要瞭解連接和擴展之間的差異，請參閱「目標類型和類別」頁中的[擴展](../../destination-types.md#extensions)。
 
 - [Adobe Advertising Cloud擴充功能](../advertising/adobe-advertising-cloud.md)
 - [Adobe Analytics 擴充功能](../analytics/adobe-analytics.md)
