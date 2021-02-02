@@ -1,15 +1,15 @@
 ---
-keywords: Experience Platform;home;popular topics; analytics;classifications
+keywords: Experience Platform; home；熱門主題；analytics；分類
 description: 本教學課程提供在UI中建立Adobe Analytics分類資料連接器以將分類資料匯入Adobe Experience Platform的步驟。
 solution: Experience Platform
 title: 在UI中建立Adobe Analytics分類資料連接器
 topic: overview
 type: Tutorial
 translation-type: tm+mt
-source-git-commit: f86f7483e7e78edf106ddd34dc825389dadae26a
+source-git-commit: 2dbd92efbd992b70f4f750b09e9d2e0626e71315
 workflow-type: tm+mt
-source-wordcount: '654'
-ht-degree: 2%
+source-wordcount: '659'
+ht-degree: 0%
 
 ---
 
@@ -26,53 +26,53 @@ ht-degree: 2%
 * [[!DNL Real-time Customer Profile]](../../../../../profile/home.md):根據來自多個來源的匯整資料，提供統一、即時的消費者個人檔案。
 * [[!DNL Sandboxes]](../../../../../sandboxes/home.md):Experience Platform提供虛擬沙盒，可將單一Platform實例分割為不同的虛擬環境，以協助開發和發展數位體驗應用程式。
 
-Analytics分類資料連接器要求您的資料在使用前必須移 [!DNL Classifications] 轉至Adobe Analytics的新基礎架構。 若要確認資料的移轉狀態，請連絡您的Adobe客戶成功經理。
+Analytics分類資料連接器要求您的資料在使用前必須移轉至Adobe Analytics的新[!DNL Classifications]基礎架構。 若要確認資料的移轉狀態，請連絡您的Adobe客戶成功經理。
 
 ## 選取您的分類
 
-登入 [Adobe Experience Platform](https://platform.adobe.com) ，然後從左側導覽列選 **[!UICONTROL 取Sources]** ，以存取來源工作區。 「目 **[!UICONTROL 錄]** 」螢幕顯示可用源，以建立入站連接。 每個來源卡會顯示一個選項，可設定新帳戶或將資料新增至現有帳戶。
+登入[Adobe Experience Platform](https://platform.adobe.com)，然後從左側導覽列選擇&#x200B;**[!UICONTROL Sources]**&#x200B;以存取來源工作區。 **[!UICONTROL Catalog]**&#x200B;畫面會顯示可用來建立傳入連線的來源。 每個來源卡會顯示一個選項，可設定新帳戶或將資料新增至現有帳戶。
 
 您可以從畫面左側的目錄中選取適當的類別。 或者，您也可以使用搜尋選項找到您要使用的特定來源。
 
-在「 **[!UICONTROL Adobe應用程式]** 」類別下，選取 **[!UICONTROL Adobe Analytics]** 卡片，然後選取「新增資料 **** 」以開始使用「Analytics分類資料」。
+在&#x200B;**[!UICONTROL Adobe應用程式]**&#x200B;類別下，選取&#x200B;**[!UICONTROL Adobe Analytics]**&#x200B;卡片，然後選取&#x200B;**[!UICONTROL 新增資料]**&#x200B;以開始使用Analytics分類資料。
 
 ![](../../../../images/tutorials/create/classifications/catalog.png)
 
-此時 **[!UICONTROL 會顯示Analytics來源新增資料]** 步驟。 從上 **[!UICONTROL 方標題]** ，選取「分類」以查看資料集清單，包括 [!DNL Classifications] 其維度ID、報表套裝名稱和報表套裝ID的相關資訊。
+出現&#x200B;**[!UICONTROL Analytics來源新增資料]**&#x200B;步驟。 從頂端標題中選取&#x200B;**[!UICONTROL 分類]**，以查看[!DNL Classifications]資料集清單，包括其維度ID、報表套裝名稱和報表套裝ID的相關資訊。
 
-每個頁面最多會顯示十個您可 [!DNL Classifications] 以選擇的不同資料集。 選 **[!UICONTROL 取頁面底]** 部的「下一步」，以瀏覽更多選項。 右邊的面板顯示您選取的 [!DNL Classifications] 資料集總數及其名稱。 此面板還允許您通過一個操 [!DNL Classifications] 作來刪除可能錯誤選擇的任何資料集或清除所有選擇。
+每個頁面最多會顯示十個不同的[!DNL Classifications]資料集。 選擇頁面底部的&#x200B;**[!UICONTROL Next]**&#x200B;以瀏覽更多選項。 右側的面板顯示所選[!DNL Classifications]資料集的總數及其名稱。 此面板還允許您刪除您可能誤選的[!DNL Classifications]資料集，或通過一個操作清除所有選擇。
 
-您最多可以選取30個不同 [!DNL Classifications] 的資料集 [!DNL Platform]。
+您最多可以選擇30個不同的[!DNL Classifications]資料集，以導入[!DNL Platform]。
 
-在選取資料集 [!DNL Classifications] 後，請選 **[!UICONTROL 取頁面右上方的]** 「下一步」。
+選擇[!DNL Classifications]資料集後，請在頁面右上角選擇&#x200B;**[!UICONTROL Next]**。
 
 ![](../../../../images/tutorials/create/classifications/add-data.png)
 
 ## 檢視您的分類
 
-此時 **[!UICONTROL 會出現]** 「查看」步驟，允許您在建立選定的 [!DNL Classifications] 資料集之前對其進行查看。 詳細資訊會分組在下列類別中：
+出現&#x200B;**[!UICONTROL Review]**&#x200B;步驟，允許您在建立[!DNL Classifications]選定資料集之前對其進行查看。 詳細資訊會分組在下列類別中：
 
 * **[!UICONTROL 連接]**:顯示源平台和連接狀態。
 * **[!UICONTROL 資料類型]**:顯示選定的數量 [!DNL Classifications]。
 * **[!UICONTROL 排程]**:顯示資料的同步 [!DNL Classifications] 頻率。
 
-複查資料流後，按一下 **[!UICONTROL 完成]** ，並為建立資料流留出一些時間。
+複查資料流後，按一下&#x200B;**[!UICONTROL 完成]**&#x200B;並允許建立資料流一段時間。
 
 ![](../../../../images/tutorials/create/classifications/review.png)
 
 ## 監控您的分類資料流
 
-建立資料流後，您可以監視通過其獲取的資料。 從「目 **[!UICONTROL 錄]** 」螢幕中，選擇「數 **[!UICONTROL 據流]** 」以查看已建立的與帳戶關聯的流 [!DNL Classifications] 清單。
+建立資料流後，您可以監視通過其獲取的資料。 從&#x200B;**[!UICONTROL Catalog]**&#x200B;螢幕中，選擇&#x200B;**[!UICONTROL Dataflows]**&#x200B;以查看與[!DNL Classifications]帳戶關聯的已建立流的清單。
 
 ![](../../../../images/tutorials/create/classifications/dataflows.png)
 
-此時將 **[!UICONTROL 顯示]** 「資料流」螢幕。 此頁上是資料流清單，包括有關其名稱、源資料和資料流運行狀態的資訊。 右邊是「屬性」面 **[!UICONTROL 板]** ，其中包含與資料流相關的 [!DNL Classifications] 元資料。
+出現&#x200B;**[!UICONTROL 資料流]**&#x200B;螢幕。 此頁上是資料流清單，包括有關其名稱、源資料和資料流運行狀態的資訊。 在右側是&#x200B;**[!UICONTROL 屬性]**&#x200B;面板，其中包含與[!DNL Classifications]資料流相關的元資料。
 
-選取您 **[!UICONTROL 要存取的]** Target資料集。
+選擇您要訪問的&#x200B;**[!UICONTROL Target資料集]**。
 
 ![](../../../../images/tutorials/create/classifications/list-of-dataflows.png)
 
-「數 **[!UICONTROL 據集活動]** 」頁顯示有關所選目標資料集的資訊，包括有關其批處理狀態、資料集ID和方案的詳細資訊。
+「**[!UICONTROL 資料集活動]**」頁面會顯示您選取之目標資料集的相關資訊，包括其批次狀態、資料集ID和架構的詳細資訊。
 
 >[!IMPORTANT]
 >
@@ -83,8 +83,8 @@ Analytics分類資料連接器要求您的資料在使用前必須移 [!DNL Clas
 
 ## 後續步驟
 
-在本教學課程之後，您已建立Analytics分類資料連接器，將資料引 [!DNL Classifications] 入其中 [!DNL Platform]。 請參閱下列檔案，以取得更多有關資料 [!DNL Analytics] 的資 [!DNL Classifications] 訊：
+在本教學課程中，您已建立Analytics分類資料連接器，可將[!DNL Classifications]資料匯入[!DNL Platform]。 有關[!DNL Analytics]和[!DNL Classifications]資料的詳細資訊，請參閱以下文檔：
 
 * [Analytics資料連接器概觀](../../../../connectors/adobe-applications/analytics.md)
 * [在UI中建立Analytics資料連接器](./analytics.md)
-* [關於分類](https://docs.adobe.com/content/help/zh-Hant/analytics/components/classifications/c-classifications.html#)
+* [關於分類](https://experienceleague.adobe.com/docs/analytics/components/classifications/c-classifications.html)
