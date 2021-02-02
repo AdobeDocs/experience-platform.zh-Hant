@@ -7,7 +7,7 @@ description: 通過向/connection_parameters端點發出GET請求，可以檢索
 translation-type: tm+mt
 source-git-commit: 648544bc60c0cee8ca8b167118391980b6c33d91
 workflow-type: tm+mt
-source-wordcount: '134'
+source-wordcount: '147'
 ht-degree: 1%
 
 ---
