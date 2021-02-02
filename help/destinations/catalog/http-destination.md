@@ -1,64 +1,64 @@
 ---
-keywords: streaming;
-title: HTTP目的地是即時客戶資料平台目的地，可協助您將描述檔資料傳送至協力廠商HTTP端點。
-seo-title: HTTP目的地是即時客戶資料平台目的地，可協助您將描述檔資料傳送至協力廠商HTTP端點。
-description: HTTP目的地是即時客戶資料平台目的地，可協助您將描述檔資料傳送至協力廠商HTTP端點。
-seo-description: HTTP目的地是即時客戶資料平台目的地，可協助您將描述檔資料傳送至協力廠商HTTP端點。
+keywords: 串流；
+title: HTTP目的地是Adobe Experience Platform目的地，可協助您將描述檔資料傳送至協力廠商HTTP端點。
+seo-title: HTTP目的地是Adobe Experience Platform目的地，可協助您將描述檔資料傳送至協力廠商HTTP端點。
+description: HTTP目的地是Adobe Experience Platform目的地，可協助您將描述檔資料傳送至協力廠商HTTP端點。
+seo-description: HTTP目的地是Adobe Experience Platform目的地，可協助您將描述檔資料傳送至協力廠商HTTP端點。
 translation-type: tm+mt
-source-git-commit: 85e6a65e1407ca60e7b63681c045fadaaa24aef9
+source-git-commit: 95f57f9d1b3eeb0b16ba209b9774bd94f5758009
 workflow-type: tm+mt
-source-wordcount: '567'
+source-wordcount: '545'
 ht-degree: 2%
 
 ---
 
 
-# (Alpha)目 [!DNL HTTP] 標
+# (Alpha)[!DNL HTTP]目標
 
 >[!IMPORTANT]
 >
->即時 [!DNL HTTP] CDP中的目標當前位於alpha中。 文件和功能可能會有所變更。
+>平台中的[!DNL HTTP]目標當前位於alpha。 文件和功能可能會有所變更。
 
 ## 概述 {#overview}
 
-目 [!DNL HTTP] 標是串流目 [!DNL Real-time Customer Data Platform] 標，可協助您將描述檔資料傳送至協力廠商端 [!DNL HTTP] 點。
+[!DNL HTTP]目的地是[!DNL Adobe Experience Platform]串流目的地，可協助您將描述檔資料傳送至協力廠商[!DNL HTTP]端點。
 
-若要傳送描述檔資 [!DNL HTTP] 料至端點，您必須先連線至中的目標 [[!DNL Real-time Customer Data Platform]](#connect-destination)。
+要向[!DNL HTTP]端點發送配置檔案資料，必須首先連接到[[!DNL Adobe Experience Platform]](#connect-destination)中的目標。
 
 ## 使用案例 {#use-cases}
 
-目標 [!DNL HTTP] 對象是需要將XDM個人檔案資料和受眾細分匯出至一般端點的 [!DNL HTTP] 客戶。
+[!DNL HTTP]目標針對需要將XDM描述檔資料和對象區段匯出至一般[!DNL HTTP]端點的客戶。
 
 [!DNL HTTP] 端點可以是客戶自己的系統或第三方解決方案。
 
-## 連接到目標 {#connect-destination}
+## 連接到目標{#connect-destination}
 
-在「連 **[!UICONTROL 接]** >目 **[!UICONTROL 標]**」中，選 [!DNL HTTP API]擇並選 **[!UICONTROL 擇配置]**。
+在&#x200B;**[!UICONTROL 連接]** > **[!UICONTROL 目標]**&#x200B;中，選擇[!DNL HTTP API] ，然後選擇&#x200B;**[!UICONTROL 配置]**。
 
 ![啟動HTTP目標](../assets/catalog/http/activate.png)
 
 >[!NOTE]
 >
->如果此目標已存在連接，您可以在目標卡上看到 **[!UICONTROL 「激活]** 」按鈕。 有關「激活」( **[!UICONTROL Activate]** )和「配置」( **[!UICONTROL Configure]**)之間差異的詳細資訊，請參 [閱目標工作區文檔的「目錄](../ui/destinations-workspace.md#catalog) 」(Catalog)部分。
+>如果已存在與此目標的連接，您可以在目標卡上看到&#x200B;**[!UICONTROL 激活]**&#x200B;按鈕。 有關&#x200B;**[!UICONTROL Activate]**&#x200B;和&#x200B;**[!UICONTROL Configure]**&#x200B;之間差異的詳細資訊，請參閱目標工作區文檔的[Catalog](../ui/destinations-workspace.md#catalog)部分。
 >
 >![啟動HTTP目標](../assets/catalog/http/connect.png)
 
-在「帳 [!UICONTROL 戶] 」步驟中，您需要定義HTTP端點連線詳細資訊。 選 **[!UICONTROL 擇新帳戶]** ，然後輸入要連接的HTTP端點的連接詳細資訊。
+在[!UICONTROL Account]步驟中，您需要定義HTTP端點連接詳細資訊。 選擇&#x200B;**[!UICONTROL 新建帳戶]**&#x200B;並輸入要連接的HTTP端點的連接詳細資訊。
 - **[!UICONTROL httpEndpoint]**:您要 [!DNL URL] 將描述檔資料傳送至的HTTP端點的完整。
-   - （可選）您可以將查詢參數添加 [!UICONTROL 到httpEndpoint][!DNL URL]。
-- **[!UICONTROL authEndpoint]**:用於驗 [!DNL URL] 證的HTTP端點的完 [!DNL OAuth2] 整。
-- **[!UICONTROL 用戶端ID]**:用戶 [!DNL clientID] 端認證中使用 [!DNL OAuth2] 的參數。
-- **[!UICONTROL 用戶端密碼]**:用戶 [!DNL clientSecret] 端認證中使用 [!DNL OAuth2] 的參數。
+   - 或者，您可以將查詢參數添加到[!UICONTROL httpEndpoint] [!DNL URL]。
+- **[!UICONTROL authEndpoint]**:用於 [!DNL URL] 驗證的HTTP端點的完 [!DNL OAuth2] 整。
+- **[!UICONTROL 用戶端ID]**:用戶 [!DNL clientID] 端認證中使 [!DNL OAuth2] 用的參數。
+- **[!UICONTROL 用戶端密碼]**:用戶 [!DNL clientSecret] 端認證中使 [!DNL OAuth2] 用的參數。
 
 >[!NOTE]
 >
->目前 [!DNL OAuth2] 僅支援用戶端認證。
+>目前僅支援[!DNL OAuth2]用戶端認證。
 
 ![HTTP端點連線](../assets/catalog/http/connect.png)
 
-按一 **[!UICONTROL 下「連線至目的地]**」。 連接成功後，按一下「下 **[!UICONTROL 一步]**」。
+按一下&#x200B;**[!UICONTROL 連接到目標]**。 連接成功後，按一下&#x200B;**[!UICONTROL Next]**。
 
-在「驗 [!UICONTROL 證] 」步驟中，輸入帳戶驗證憑證：
+在[!UICONTROL Authentication]步驟中，輸入帳戶驗證憑據：
 - **[!UICONTROL 名稱]**:輸入您將來識別此目的地的名稱。
 - **[!UICONTROL 說明]**:輸入說明，以幫助您識別未來的目標。
 - **[!UICONTROL 自訂標題]**:輸入您想要納入目標呼叫的任何自訂標題，請遵循下列格式： `header1:value1,header2:value2,...headerN:valueN`.
@@ -69,21 +69,21 @@ ht-degree: 2%
 
 ![HTTP驗證](../assets/catalog/http/authenticate.png)
 
-**[!UICONTROL 行銷使用案例]**:行銷使用案例會指出將資料匯出至目的地的方式。 您可以從Adobe定義的行銷使用案例中選擇，也可以建立自己的行銷使用案例。 有關行銷使用案例的詳細資訊，請參 [閱即時CDP中的資料治理頁](../../rtcdp/privacy/data-governance-overview.md#destinations) 。 如需個別Adobe定義之行銷使用案例的詳細資訊，請參閱「資 [料使用政策」概觀](../../data-governance/policies/overview.md#core-actions)。
+**[!UICONTROL 行銷使用案例]**:行銷使用案例會指出將資料匯出至目的地的方式。您可以從Adobe定義的行銷使用案例中選擇，也可以建立自己的行銷使用案例。 如需行銷使用案例的詳細資訊，請參閱[資料使用政策概述](../../data-governance/policies/overview.md)。
 
-按一 **[!UICONTROL 下建立目標]**。
+按一下&#x200B;**[!UICONTROL 建立目標]**。
 
 ## 啟用區段
 
-如需 [區段啟動工作流程的相關資訊](../ui/activate-destinations.md#select-attributes) ，請參閱啟用設定檔和區段至目的地。
+如需區段啟動工作流程的相關資訊，請參閱[啟用設定檔和區段至目標](../ui/activate-destinations.md#select-attributes)。
 
 ## 目標屬性
 
-在「選 [[!UICONTROL 擇屬性]](../ui/activate-destinations.md#select-attributes) 」步驟中，當 [將區段啟動至](../ui/activate-destinations.md) 目標時，建議您從聯合架構中選取唯一 [!DNL HTTP] 識別碼 [](../../profile/home.md#profile-fragments-and-union-schemas)。 選擇要導出到目標的唯一標識符和任何其他XDM欄位。
+在[[!UICONTROL 選擇屬性]](../ui/activate-destinations.md#select-attributes)步驟中，當[將區段](../ui/activate-destinations.md)激活到[!DNL HTTP]目標時，我們建議您從[union架構](../../profile/home.md#profile-fragments-and-union-schemas)中選擇唯一標識符。 選擇要導出到目標的唯一標識符和任何其他XDM欄位。
 
-## 匯出的資料 {#exported-data}
+## 導出資料{#exported-data}
 
-您匯出的 [!DNL Experience Platform] 資料會以JSON格 [!DNL HTTP] 式載入您的目的地。 例如，以下事件包含符合特定區段資格並退出其他區段之對象的電子郵件地址設定檔屬性。 此潛在客戶的身份是 [!DNL ECID] 電子郵件。
+您匯出的[!DNL Experience Platform]資料會以JSON格式著陸至您的[!DNL HTTP]目的地。 例如，以下事件包含符合特定區段資格並退出其他區段之對象的電子郵件地址設定檔屬性。 此潛在客戶的身份是[!DNL ECID]和電子郵件。
 
 ```json
 {
