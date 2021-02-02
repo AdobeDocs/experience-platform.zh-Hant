@@ -1,68 +1,86 @@
 ---
-keywords: Experience Platform;home;popular topics;query service;Query service;Power BI;power bi;connect to query service;
+keywords: Experience Platform; home；熱門主題；查詢服務；查詢服務； Power BI; power bi；連接查詢服務；
 solution: Experience Platform
 title: 連接Power BI
 topic: connect
 description: 本檔案將逐步說明如何將Power BI與Adobe Experience Platform Query Service連接。
 translation-type: tm+mt
-source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
+source-git-commit: eac93f3465fa6ce4af7a6aa783cf5f8fb4ac9b9b
 workflow-type: tm+mt
-source-wordcount: '349'
+source-wordcount: '461'
 ht-degree: 0%
 
 ---
 
 
-# 連接 [!DNL Power BI] (PC)
+# [!DNL Power BI]
 
-PC用戶可從https://powerbi.microsoft.com/en-us/desktop/ [!DNL Power BI] 進行 [安裝](https://powerbi.microsoft.com/en-us/desktop/)。
-
-## 設定 [!DNL Power BI]
-
-安裝完 [!DNL Power BI] 成後，需要設定必要的元件以支援PostgreSQL連接器。 請遵循下列步驟：
-
-- 查找並安 `npgsql`裝PowerBI的。NET驅動程式包，這是PostgreSQL的正式連接方式。
-
-- 選取v4.0.10（較新版本目前會導致錯誤）。
-
-- 在「自定義設定」螢幕的「Npgsql GAC安裝」下，選擇「 **[!UICONTROL 將安裝在本地硬碟上」]**。 未安裝GAC將導致Power BI以後失敗。
-
-- 重新啟動Windows。
-
-- 尋找案頭 [!DNL PowerBI] 評估版。
-
-## 連線 [!DNL Power BI] 至 [!DNL Query Service]
-
-執行這些準備步驟後，您可以連 [!DNL Power BI] 接至 [!DNL Query Service]:
-
-- 開啟 [!DNL Power BI].
-
-- 按一 **[!UICONTROL 下頂端功能表功能區]** 中的「取得資料」。
-
-- 選擇 **[!UICONTROL PostgreSQL資料庫]**，然後按一下 **[!UICONTROL 連接]**。
-
-- 輸入伺服器和資料庫的值。 **[!UICONTROL Server]** is the Host found under the connection details. 在生產中，將端 `:80` 口添加到主機字串的末尾。 **[!UICONTROL 資料庫]** 可以是「全部」或資料集表名。 （請試用其中一個CTAS衍生的資料集。）
-
-- 按一 **[!UICONTROL 下「進階選項]**」，然後取消勾 **[!UICONTROL 選「包含關係欄」]**。 請勿勾選使 **[!UICONTROL 用完整階層導覽]**。
-
-- *（可選，但在為資料庫聲明「全部」時建議）* 輸入SQL陳述式。
+本檔案涵蓋將Power BI與Adobe Experience Platform Query Service連接的步驟。
 
 >[!NOTE]
 >
->如果未提供SQL陳述式，則 [!DNL Power BI] 將預覽資料庫中的所有表。 對於分層資料，應使用自定義SQL陳述式。 如果表模式是平面的，則它將使用或不使用自定義SQL陳述式。 複合類型尚未受支援 [!DNL Power BI] -要從複合類型中獲取基本類型，您需要編寫SQL陳述式才能導出它們。
+> 本指南假定您已經擁有[!DNL Power BI]的訪問權限，並熟悉如何導航其介面。 有關[!DNL Power BI]的更多資訊，請參閱[official [!DNL Power BI] 文檔](https://docs.looker.com/)。
+>
+> 此外，Power BI僅&#x200B;****&#x200B;可用於Windows設備。
 
-```sql
-SELECT web.webPageDetails.name AS Page_Name, 
-SUM(web.webPageDetails.pageviews.value) AS Page_Views 
-FROM _TABLE_ 
-WHERE TIMESTAMP >= to_timestamp('2018-11-20')
-GROUP BY web.webPageDetails.name 
-ORDER BY SUM(web.webPageDetails.pageviews.value) DESC 
-LIMIT 10
-```
+## 設定[!DNL Power BI]
 
-- 選擇「[!UICONTROL DirectQuery]」或「[!UICONTROL Import]」模式。 在 [!UICONTROL DirectQuery模式中] ，所有查詢都會傳送至 [!DNL Query Service] 執行。 在「 [!UICONTROL 匯入] 」模式中，資料將匯入 [!DNL Power BI]。
+在安裝Power BI後，您需要安裝`Npgsql`，這是用於PostgreSQL的。NET驅動程式包。 有關Npgsql的詳細資訊，請參閱[Npgsql文檔](https://www.npgsql.org/doc/index.html)。
 
-- 按一下&#x200B;**[!UICONTROL 「確定」]**。現在， [!DNL Power BI] 連線至並 [!DNL Query Service] 產生預覽（如果沒有錯誤）。 「預覽」轉換數值欄有已知問題。 繼續下一步。
+>[!IMPORTANT]
+>
+>您必須下載v4.0.10或更低版本，因為較新版本會導致錯誤。
 
-- 按一 **[!UICONTROL 下「載入]** 」，將資料集帶入 [!DNL Power BI]。
+在自訂設定畫面的「[!DNL Npgsql GAC Installation]」下，選取&#x200B;**[!DNL Will be installed on local hard drive]**。
+
+要確保npgsql已正確安裝，請在繼續下一步之前重新啟動電腦。
+
+## 將[!DNL Power BI]連接到[!DNL Query Service]
+
+要將[!DNL Power BI]連接到[!DNL Query Service]，請開啟[!DNL Power BI]並在頂部菜單帶中選擇&#x200B;**[!DNL Get Data]**。
+
+![](../images/clients/power-bi/open-power-bi.png)
+
+選擇&#x200B;**[!DNL PostgreSQL database]**，後面跟&#x200B;**[!DNL Connect]**。
+
+![](../images/clients/power-bi/get-data.png)
+
+您現在可以輸入伺服器和資料庫的值。 有關查找資料庫名稱、主機、埠和登錄憑據的詳細資訊，請訪問Platform](https://platform.adobe.com/query/configuration)上的[ credentials頁。 要查找憑據，請登錄到[!DNL Platform]，然後選擇&#x200B;**[!UICONTROL 查詢]**，然後選擇&#x200B;**[!UICONTROL 憑據]**。
+
+**[!DNL Server]** 是在連接詳細資訊下找到的主機。對於生產環境，請將埠`:80`添加到主機字串的末尾。 **[!DNL Database]** 可以是「all」或資料集表格名稱。
+
+此外，您也可以選取&#x200B;**[!DNL Data Connectivity mode]**。 選擇&#x200B;**[!DNL Import]**&#x200B;以顯示所有可用表的清單，或選擇&#x200B;**[!DNL DirectQuery]**&#x200B;直接建立查詢。
+
+若要進一步瞭解&#x200B;**[!DNL Import]**&#x200B;模式，請閱讀有關預覽和匯入表](#preview)的章節。 [要瞭解有關&#x200B;**[!DNL DirectQuery]**&#x200B;模式的更多資訊，請閱讀有關建立SQL陳述式](#create)的章節。 [確認資料庫詳細資訊後，選擇&#x200B;**[!DNL OK]**。
+
+![](../images/clients/power-bi/connectivity-mode.png)
+
+出現提示，詢問您的使用者名稱、密碼和應用程式設定。 填寫這些詳細資訊，然後選取&#x200B;**[!DNL Connect]**&#x200B;以繼續下一步驟。
+
+![](../images/clients/power-bi/import-mode.png)
+
+## 預覽並導入表{#preview}
+
+如果已選擇&#x200B;**[!DNL Import]**&#x200B;模式，則會出現對話框，顯示所有可用表的清單。 選擇要預覽的表，然後選擇&#x200B;**[!DNL Load]**&#x200B;以將資料集導入[!DNL Power BI]。
+
+![](../images/clients/power-bi/preview-table.png)
+
+此表現在已導入Power BI。
+
+![](../images/clients/power-bi/import-table.png)
+
+## 建立SQL陳述式{#create}
+
+如果已選擇&#x200B;**[!DNL DirectQuery]**&#x200B;模式，則需要用要建立的SQL查詢填寫「高級選項」部分。
+
+在&#x200B;**[!DNL SQL statement]**&#x200B;下，插入要建立的SQL查詢。 確保選中標有&#x200B;**[!DNL Include relationship columns]**&#x200B;的複選框。 在寫入查詢後，選擇&#x200B;**[!DNL OK]**&#x200B;繼續。
+
+![](../images/clients/power-bi/direct-query-mode.png)
+
+此時會顯示查詢的預覽。 選擇&#x200B;**[!DNL Load]**&#x200B;以查看查詢結果。
+
+![](../images/clients/power-bi/preview-direct-query.png)
+
+## 後續步驟
+
+現在您已連接[!DNL Query Service]，您可以使用[!DNL Power BI]來編寫查詢。 有關如何寫入和運行查詢的詳細資訊，請閱讀[運行查詢](../best-practices/writing-queries.md)的指南。
