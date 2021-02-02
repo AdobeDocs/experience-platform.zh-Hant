@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics;greenplum;Greenplum
+keywords: Experience Platform; home；熱門主題；greenplum;Greenplum
 solution: Experience Platform
 title: 使用Flow Service API建立GreenPlum連接器
 topic: overview
 type: Tutorial
 description: 本教學課程使用Flow Service API來引導您完成將GreenPlum連接至Experience Platform的步驟。
 translation-type: tm+mt
-source-git-commit: 9092c3d672967d3f6f7bf7116c40466a42e6e7b1
+source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
 workflow-type: tm+mt
-source-wordcount: '541'
+source-wordcount: '552'
 ht-degree: 2%
 
 ---
@@ -46,7 +46,7 @@ ht-degree: 2%
 
 ### 收集必要標題的值
 
-若要呼叫[!DNL Platform] API，您必須先完成[驗證教學課程](../../../../../tutorials/authentication.md)。 完成驗證教學課程後，所有[!DNL Experience Platform] API呼叫中每個所需標題的值都會顯示在下面：
+若要呼叫[!DNL Platform] API，您必須先完成[驗證教學課程](https://www.adobe.com/go/platform-api-authentication-en)。 完成驗證教學課程後，所有[!DNL Experience Platform] API呼叫中每個所需標題的值都會顯示在下面：
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
@@ -116,4 +116,4 @@ curl -X POST \
 
 ## 後續步驟
 
-在本教程中，您使用[!DNL Flow Service] API建立了[!DNL GreenPlum]連接，並獲取了該連接的唯一ID值。 在下一個教學課程中，您可以使用此ID來學習如何使用流服務API[來探索資料庫。](../../explore/database-nosql.md)
+在本教程中，您使用[!DNL Flow Service] API建立了[!DNL GreenPlum]連接，並獲取了該連接的唯一ID值。 在下一個教學課程中，您可以使用此ID來學習如何使用流服務API](../../explore/database-nosql.md)來探索資料庫。[
