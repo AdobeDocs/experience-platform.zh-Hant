@@ -6,18 +6,18 @@ breadcrumb-title: Platform 教學課程
 user-guide-description: 透過逐步教學課程快速輕鬆地開始使用Platform，涵蓋從準備擷取資料到使用進階機器學習演算法等所有內容。
 type: Tutorial
 translation-type: tm+mt
-source-git-commit: 097fe219e0d64090de758f388ba98e6024db2201
+source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
 workflow-type: tm+mt
-source-wordcount: '70'
-ht-degree: 14%
+source-wordcount: '74'
+ht-degree: 13%
 
 ---
 
 
-# Adobe Experience Platform tutorials {#tutorials}
+# Adobe Experience Platform教學課程{#tutorials}
 
 * [教學課程總覽](home.md)
-* [驗證至Experience Platform API](authentication.md)
+* [驗證至Experience Platform API](https://www.adobe.com/go/platform-api-authentication-en)
 * [存取平台資料](data-access.md)
 * [資料管理與隱私權](data-governance-privacy.md)
 * [資料科學工作區](data-science-workspace.md)
