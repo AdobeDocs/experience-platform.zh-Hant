@@ -5,10 +5,10 @@ audience: user
 user-guide-title: 即時客戶資料平台指南
 user-guide-description: 將來自多個企業來源的已知和匿名資料放在一起，以建立客戶設定檔，從這些設定檔建立對象區段，並對協力廠商目的地啟動這些區段。
 translation-type: tm+mt
-source-git-commit: de2f4b16677ec6e820903b1e586213a132b126be
+source-git-commit: 4a282f8890ace3be7808ffbf018377d792e30cb7
 workflow-type: tm+mt
-source-wordcount: '126'
-ht-degree: 42%
+source-wordcount: '109'
+ht-degree: 49%
 
 ---
 
@@ -29,9 +29,6 @@ ht-degree: 42%
 * 隱私權與資料管理{#privacy}
    * [隱私權概觀](privacy/privacy-overview.md)
    * [資料治理概觀](privacy/data-governance-overview.md)
-   * IAB TCF 2.0支援{#iab}
-      * [即時CDP中的IAB TCF 2.0支援](privacy/iab/overview.md)
-      * [建立資料集，以擷取IAB TCF 2.0同意資料](privacy/iab/dataset-preparation.md)
 * 設定檔 {#profile}
    * [描述檔概述](profile/profile-overview.md)
    * [身分與身分名稱空間](profile/identities-overview.md)
