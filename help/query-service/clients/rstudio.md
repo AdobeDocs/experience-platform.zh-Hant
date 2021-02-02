@@ -1,23 +1,29 @@
 ---
-keywords: Experience Platform;home;popular topics;Query service;query service;RStudio;rstudio;connect to query service;
+keywords: Experience Platform; home；熱門主題；查詢服務；查詢服務； RStudio;rstudio；連接查詢服務；
 solution: Experience Platform
 title: 使用RStudio連線
 topic: connect
 description: 本檔案將逐步說明如何將R Studio與Adobe Experience Platform Query Service連接。
 translation-type: tm+mt
-source-git-commit: 9fbb6b829cd9ddec30f22b0de66874be7710e465
+source-git-commit: eac93f3465fa6ce4af7a6aa783cf5f8fb4ac9b9b
 workflow-type: tm+mt
-source-wordcount: '225'
+source-wordcount: '272'
 ht-degree: 2%
 
 ---
 
 
-# 連接[!DNL RStudio]
+# [!DNL RStudio]
 
-本檔案將逐步說明如何將R Studio與Adobe Experience Platform [!DNL Query Service]連接。
+本檔案將逐步說明如何連接[!DNL RStudio]與Adobe Experience Platform [!DNL Query Service]。
 
-在出現的&#x200B;*Console*&#x200B;螢幕上安裝[!DNL RStudio]後，您首先需要準備R指令碼以使用[!DNL PostgreSQL]。
+>[!NOTE]
+>
+> 本指南假設您已擁有[!DNL RStudio]的存取權，並熟悉如何使用它。 有關[!DNL RStudio]的更多資訊，請參閱[official [!DNL RStudio] 文檔](https://rstudio.com/products/rstudio/)。
+
+## 連接[!DNL RStudio]與[!DNL Query Service]
+
+安裝[!DNL RStudio]後，在出現的&#x200B;**[!DNL Console]**&#x200B;螢幕上，首先需要準備R指令碼以使用[!DNL PostgreSQL]。
 
 ```r
 install.packages("RPostgreSQL")
@@ -46,13 +52,13 @@ con <- dbConnect(drv,
 
 >[!NOTE]
 >
->有關查找資料庫名稱、主機、埠和登錄憑據的詳細資訊，請訪問Platform](https://platform.adobe.com/query/configuration)上的[ credentials頁。 要查找憑據，請登錄到[!DNL Platform] ，按一下&#x200B;**[!UICONTROL 查詢]** ，然後按一下&#x200B;**[!UICONTROL 憑據]**。
+>有關查找資料庫名稱、主機、埠和登錄憑據的詳細資訊，請訪問Platform](https://platform.adobe.com/query/configuration)上的[ credentials頁。 要查找憑據，請登錄到[!DNL Platform]，然後選擇&#x200B;**[!UICONTROL 查詢]**，然後選擇&#x200B;**[!UICONTROL 憑據]**。
 
-## 後續步驟
+## 編寫查詢
 
 現在，您已連接到[!DNL Query Service]，您可以編寫查詢以執行和編輯SQL陳述式。 例如，您可以使用`dbGetQuery(con, sql)`來執行查詢，其中`sql`是您要運行的SQL查詢。
 
-下列查詢使用包含[ExperienceEvents](../best-practices/experience-event-queries.md)的資料集，並根據裝置的螢幕高度建立網站頁面檢視的色階分佈圖。
+下列查詢使用包含[Experience Events](../best-practices/experience-event-queries.md)的資料集，並根據裝置的螢幕高度建立網站頁面檢視的色階分佈圖。
 
 ```sql
 df_pageviews <- dbGetQuery(con,
@@ -87,4 +93,6 @@ df_pageviews
 7 600-699 3097040
 ```
 
-有關如何寫入和運行查詢的詳細資訊，請閱讀[運行查詢指南](../best-practices/writing-queries.md)。
+## 後續步驟
+
+有關如何寫入和運行查詢的詳細資訊，請閱讀[運行查詢](../best-practices/writing-queries.md)的指南。
