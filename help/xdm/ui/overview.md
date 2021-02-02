@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;experience data model;data model;ui;workspace;
+keywords: Experience Platform; home；熱門主題；api;API;XDM;XDM系統；體驗資料模型；資料模型；ui;workspace;
 solution: Experience Platform
 title: 結構描述工作區概述
 description: 此概觀涵蓋Experience Platform中「結構描述」工作區的主要功能。
@@ -7,7 +7,7 @@ topic: user guide
 translation-type: tm+mt
 source-git-commit: 2e20403122e65d28f04114af9b7e8d41874f76e2
 workflow-type: tm+mt
-source-wordcount: '275'
+source-wordcount: '292'
 ht-degree: 2%
 
 ---
