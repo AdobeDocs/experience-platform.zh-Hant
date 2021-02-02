@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics;schema;Schema;enum;;primary identity;primary identity;XDM individual profile;Experience event;XDM Experience Event;XDM ExperienceEvent;experienceEvent;experienceevent;XDM Experienceevenet;schema design;best practices
+keywords: Experience Platform;home；熱門主題；架構；Schema;enum;primary identity;primary identity;XDM individual profile;Experience事件；XDM ExperienceEvent;experienceEvent;experienceevent;XDM Experienceevent；架構設計；最佳實踐
 solution: Experience Platform
 title: Adobe Experience Platform中資料建模的最佳實務
 topic: overview
 description: 本檔案提供Experience Data Model(XDM)架構的簡介，以及構成Adobe Experience Platform中要使用之架構的建置區塊、原則和最佳實務。
 translation-type: tm+mt
-source-git-commit: 5fe75ab7c939c8437d675212b71229fe3fb70c01
+source-git-commit: 1f18bf7367addd204f3ef8ce23583de78c70b70c
 workflow-type: tm+mt
-source-wordcount: '2485'
+source-wordcount: '2515'
 ht-degree: 1%
 
 ---
@@ -15,45 +15,45 @@ ht-degree: 1%
 
 # Adobe Experience Platform中資料建模的最佳實務
 
-[!DNL Experience Data Model] (XDM)是核心架構，可透過提供用於下游Adobe Experience Platform服務的通用結構和定義，標準化客戶體驗資料。 遵循XDM標準，所有客戶體驗資料都可以整合在通用的呈現方式中，讓您從客戶行動中獲得寶貴的見解，透過細分定義客戶受眾，並表達客戶屬性以利個人化。
+[!DNL Experience Data Model] (XDM)是核心架構，可透過提供用於下游Adobe Experience Platform服務的通用結構和定義，標準化客戶體驗資料。遵循XDM標準，所有客戶體驗資料都可以整合在通用的呈現方式中，讓您從客戶行動中獲得寶貴的見解，透過細分定義客戶受眾，並表達客戶屬性以利個人化。
 
 由於XDM具備極強的通用性，而且可依設計自訂，因此在設計結構描述時，請務必遵循資料建模的最佳實務。 本檔案涵蓋將客戶體驗資料對應至XDM時，您必須做出的主要決策和考量。
 
 ## 快速入門
 
-在閱讀本指南之前，請先閱讀 [XDM系統概觀](../home.md) ，以瞭解XDM及其在Experience Platform中的角色。
+在閱讀本指南之前，請先閱讀[XDM系統概觀](../home.md)，以瞭解XDM及其在Experience Platform中的角色。
 
-此外，本指南專門針對架構設計的主要考量事項。 因此，強烈建議您參考架構構 [成的基本概念](./composition.md) ，以詳細說明本指南中提及的個別架構元素。
+此外，本指南專門針對架構設計的主要考量事項。 因此，強烈建議您參閱[架構構成基礎](./composition.md)，以取得本指南中提及之個別架構元素的詳細說明。
 
 ## 最佳做法摘要
 
 設計資料模型以用於Experience Platform的建議方法可總結如下：
 
 1. 瞭解您資料的商業使用案例。
-1. 確定應引入的主要資料來源以解決 [!DNL Platform] 這些使用案例。
-1. 識別可能也有興趣的次要資料來源。 例如，如果您組織中目前只有一個業務單位有興趣將其資料發佈至 [!DNL Platform]，則類似的業務單位日後可能也有興趣將類似資料發佈至。 考慮到這些次要來源有助於在整個組織內標準化資料模型。
+1. 確定應引入[!DNL Platform]以解決這些使用案例的主要資料源。
+1. 識別可能也有興趣的次要資料來源。 例如，如果您組織中目前只有一個業務單位有興趣將其資料發佈至[!DNL Platform]，則類似的業務單位日後可能也會有興趣發佈類似的資料。 考慮到這些次要來源有助於在整個組織內標準化資料模型。
 1. 為已識別的資料來源建立高階實體關係圖(ERD)。
-1. 將高階ERD轉換為以 [!DNL Platform]中心為中心的ERD（包括描述檔、體驗事件和查閱實體）。
+1. 將高階ERD轉換為[!DNL Platform]導向的ERD（包括描述檔、體驗事件和查閱實體）。
 
-識別執行業務使用案例所需之適用資料來源的相關步驟因組織而異。 本檔案其餘各節著重於在確定資料源後組織和構建ERD的後續步驟，但圖表各組成部分的解釋可能會通知您有關哪些資料源應遷移到哪個資料源的決策 [!DNL Platform]。
+識別執行業務使用案例所需之適用資料來源的相關步驟因組織而異。 本檔案其餘各節著重於在確定資料源後組織和構建ERD的後續步驟，但圖表各組成部分的解釋可能會通知您有關哪些資料源應遷移到[!DNL Platform]的決策。
 
 ## 建立高級ERD
 
-確定要引入的資料源後 [!DNL Platform]，請建立高級ERD以幫助指導將資料映射到XDM架構的過程。
+在確定要導入[!DNL Platform]的資料源後，建立一個高級ERD以幫助指導將資料映射到XDM架構的過程。
 
-以下範例代表想要將資料帶入的公司的簡化ERD [!DNL Platform]。 圖中強調了應分類為XDM類別的基本實體，包括客戶帳戶、酒店、地址和幾個常見的電子商務事件。
+以下範例代表公司想要將資料匯入[!DNL Platform]的簡化ERD。 圖中強調了應分類為XDM類別的基本實體，包括客戶帳戶、酒店、地址和幾個常見的電子商務事件。
 
 ![](../images/best-practices/erd.png)
 
 ## 將實體排序至描述檔、查閱和事件類別
 
-在您建立ERD以識別要引入的基本實體後 [!DNL Platform]，這些實體必須分類至描述檔、查閱和事件類別：
+在您建立ERD以識別要引入[!DNL Platform]的基本實體後，這些實體必須分類為描述檔、查閱和事件類別：
 
 | 類別 | 說明 |
 | --- | --- |
-| 描述檔實體 | 描述檔實體代表與個人（通常是客戶）相關的屬性。 屬於此類別的實體應由基於類的方案來表 **[!DNL XDM Individual Profile]示**。 |
-| 查閱實體 | 查閱實體代表可與個人相關的概念，但無法直接用於識別個人。 屬於此類別的實體應由基於自定義類的方案 **表示**。 |
-| 事件實體 | 事件實體代表與客戶可採取的動作、系統事件或您想要追蹤隨時間變化的任何其他概念相關的概念。 屬於此類別的實體應由基於類的方案來表 **[!DNL XDM ExperienceEvent]示**。 |
+| 描述檔實體 | 描述檔實體代表與個人（通常是客戶）相關的屬性。 屬於此類別的實體應由基於&#x200B;**[!DNL XDM Individual Profile]類**&#x200B;的方案表示。 |
+| 查閱實體 | 查閱實體代表可與個人相關的概念，但無法直接用於識別個人。 屬於此類別的實體應由基於&#x200B;**自定義類**&#x200B;的方案表示。 |
+| 事件實體 | 事件實體代表與客戶可採取的動作、系統事件或您想要追蹤隨時間變化的任何其他概念相關的概念。 屬於此類別的實體應由基於&#x200B;**[!DNL XDM ExperienceEvent]類**&#x200B;的方案表示。 |
 
 ### 實體排序的注意事項
 
@@ -69,14 +69,14 @@ ht-degree: 1%
 
 #### 隨時間追蹤資料
 
-如果您想要分析實體中特定屬性隨時間變化的情形，則最有可能是事件實體。 例如，將產品項目新增至購物車，可在下列項目中被追蹤為新增至購物車事件 [!DNL Platform]:
+如果您想要分析實體中特定屬性隨時間變化的情形，則最有可能是事件實體。 例如，在[!DNL Platform]中，將產品項目新增至購物車可以追蹤為新增至購物車事件：
 
 | 客戶 ID | 類型 | 產品 ID | 數量 | 時間戳記 |
 | --- | --- | --- | --- | --- |
-| 1234567 | 新增 | 275098 | 2 | 10月1日，上午10點32分 |
-| 1234567 | 移除 | 275098 | 1 | 10月1日，上午10點33分 |
-| 1234567 | 新增 | 486502 | 1 | 10月1日，上午10點41分 |
-| 1234567 | 新增 | 910482 | 5 | 10月3日，下午2:15 |
+| 郵編：1234567 | 新增 | 郵遞區號275098 | 2 | 10月1日，上午10點32分 |
+| 郵編：1234567 | 移除 | 郵遞區號275098 | 1 | 10月1日，上午10點33分 |
+| 郵編：1234567 | 新增 | 郵編：486502 | 3 | 10月1日，上午10點41分 |
+| 郵編：1234567 | 新增 | 郵編：910482 | 5 | 10月3日，下午2:15 |
 
 #### 區段使用案例
 
@@ -91,17 +91,17 @@ ht-degree: 1%
 
 除了區段使用案例的考量外，您也應檢視這些區段的啟動使用案例，以識別其他相關屬性。
 
-例如，公司已根據該規則建立受眾區段 `country = US`。 然後，當將該區段啟動至特定的下游目標時，公司會想根據首頁狀態來篩選所有匯出的描述檔。 因此，應 `state` 該在適用的描述檔實體中擷取屬性。
+例如，公司已根據`country = US`規則建立受眾區段。 然後，當將該區段啟動至特定的下游目標時，公司會想根據首頁狀態來篩選所有匯出的描述檔。 因此，`state`屬性也應在適用的描述檔實體中擷取。
 
 #### 匯總值
 
 根據資料的使用案例和詳細程度，您應決定某些值在納入描述檔或事件實體之前是否需要預先匯總。
 
-例如，公司想要根據購物車購買次數建立區段。 您可以選擇將每個時間戳記購買事件納入為其專屬實體，以最低精細度併入此資料。 但是，這有時會以指數方式增加已記錄事件的數量。 若要減少所擷取事件的數目，您可以選擇在一週或一個月 `numberOfPurchases` 的期間內建立匯總值。 其他集合函式（如MIN和MAX）也可以應用於這些情況。
+例如，公司想要根據購物車購買次數建立區段。 您可以選擇將每個時間戳記購買事件納入為其專屬實體，以最低精細度併入此資料。 但是，這有時會以指數方式增加已記錄事件的數量。 若要減少收錄事件的數目，您可以選擇在一週或一個月的期間內建立匯總值`numberOfPurchases`。 其他集合函式（如MIN和MAX）也可以應用於這些情況。
 
 >[!CAUTION]
 >
->Experience Platform目前不會執行自動值匯總，不過預計未來將推出此功能。 如果您選擇使用匯總值，則必須在外部執行計算，才能將資料發送到 [!DNL Platform]。
+>Experience Platform目前不會執行自動值匯總，不過預計未來將推出此功能。 如果您選擇使用匯總值，則必須在外部執行計算，才能將資料發送到[!DNL Platform]。
 
 #### 基數
 
@@ -109,7 +109,7 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->由於沒有通用方法適合所有使用案例，因此在根據基數對實體分類時，必須考慮每種情況的利弊。 如需詳細 [資訊](#pros-and-cons) ，請參閱下一節。
+>由於沒有通用方法適合所有使用案例，因此在根據基數對實體分類時，必須考慮每種情況的利弊。 如需詳細資訊，請參閱[下一節](#pros-and-cons)。
 
 下表概述了一些常見的實體關係以及可從它們派生的類別：
 
@@ -119,7 +119,7 @@ ht-degree: 1%
 | 客戶和忠誠度帳戶 | 一對一 | 單一客戶只能有一個忠誠度帳戶，反之亦然。 由於關係是一對一的，「客戶」和「忠誠度帳戶」都表示個人檔案實體。 |
 | 客戶與訂閱 | 一對多 | 單一客戶可能有許多訂閱。 由於公司只關心客戶目前的訂閱，因此「客戶」是描述檔實體，而「訂閱」是查閱實體。 |
 
-### 不同實體類的利弊 {#pros-and-cons}
+### 不同實體類{#pros-and-cons}的利弊
 
 雖然上節提供了一些一般准則，可決定如何分類實體，但請務必瞭解，在選擇一個實體類別而非另一個實體類別時，通常有利有弊。 以下案例研究旨在說明您在這些情況下如何考慮您的選項。
 
@@ -130,9 +130,9 @@ ht-degree: 1%
 1. [使用描述檔屬性](#profile-approach)
 1. [使用事件實體](#event-approach)
 
-#### 方法1:使用描述檔屬性 {#profile-approach}
+#### 方法1:使用描述檔屬性{#profile-approach}
 
-第一種方法是在客戶的描述檔實體中加入一系列訂閱作為屬性。 此陣列中的對象將包 `category`含、 `status`、 `planName`和 `startDate`的欄位 `endDate`。
+第一種方法是在客戶的描述檔實體中加入一系列訂閱作為屬性。 此陣列中的對象將包含`category`、`status`、`planName`、`startDate`和`endDate`的欄位。
 
 <img src="../images/best-practices/profile-schema.png" width="800"><br>
 
@@ -146,7 +146,7 @@ ht-degree: 1%
 * 每次對陣列中的任何欄位進行更改時，都必須重述整個陣列。
 * 如果不同的資料源或業務單元將資料送入陣列，則跨所有通道保持最新更新的陣列同步將變得十分困難。
 
-#### 方法2:使用事件實體 {#event-approach}
+#### 方法2:使用事件實體{#event-approach}
 
 第二種方法是使用事件結構描述來表示訂閱。 這需要新增訂閱ID、客戶ID和發生訂閱事件的時間戳記，以吸收與第一個方法相同的訂閱欄位。
 
@@ -169,29 +169,29 @@ ht-degree: 1%
 
 實體已排序的類別應決定您基於其模式的XDM類。 重申：
 
-* 配置檔案實體應使用 [!DNL XDM Individual Profile] 類。
-* 事件實體應使用 [!DNL XDM ExperienceEvent] 類。
+* 配置檔案實體應使用[!DNL XDM Individual Profile]類。
+* 事件實體應使用[!DNL XDM ExperienceEvent]類。
 * 查閱實體應使用您組織定義的自訂XDM類別。
 
 >[!NOTE]
 >
 >事件實體幾乎總是由不同的結構描述來表示，但配置檔案或查找類別中的實體可以在單個XDM結構描述中組合在一起，具體取決於其基數。
 >
->例如，由於「客戶」實體與LoyaltyAccounts實體有一對一關係，因此「客戶」實體的方案也可能包含一個物件，以包含每個客戶的適當忠誠度欄位。 `LoyaltyAccount` 但是，如果關係是一對多，則表示「多」的實體可以由單獨的模式或配置檔案屬性陣列表示，具體取決於其複雜性。
+>例如，由於客戶實體與LoyaltyAccounts實體有一對一的關係，因此客戶實體的方案也可以包含`LoyaltyAccount`物件，以包含每個客戶的適當忠誠度欄位。 但是，如果關係是一對多，則表示「多」的實體可以由單獨的模式或配置檔案屬性陣列表示，具體取決於其複雜性。
 
 以下各節提供有關基於ERD構建方案的一般指導。
 
 ### 採用迭代建模方法
 
-模式 [演化規則規定](./composition.md#evolution) ，只有架構實施後，才能對其進行非破壞性的變更。 換言之，一旦您新增欄位至架構，且資料已擷取到該欄位，該欄位便無法再移除。 因此，在您首次建立結構描述時，必須採用迭代建模方法，首先是簡化的實作，此實作會逐漸增加複雜性。
+模式演化的[規則](./composition.md#evolution)規定只有架構實施後才能進行非破壞性的變更。 換言之，一旦您新增欄位至架構，且資料已擷取到該欄位，該欄位便無法再移除。 因此，在您首次建立結構描述時，必須採用迭代建模方法，首先是簡化的實作，此實作會逐漸增加複雜性。
 
 如果您不確定是否需要將特定欄位包含在方案中，則最佳做法是將其排除在外。 如果稍後確定該欄位是必要的，則始終可以在模式的下一個小版本中添加該欄位。
 
 ### 身分欄位
 
-在Experience Platform中，標示為身分的XDM欄位可用來整合來自多個資料來源的個別客戶相關資訊。 雖然架構可以有多個欄位標籤為標識，但必須定義單個主標識，才能在中啟用該架構 [!DNL Real-time Customer Profile]。 如需這些欄位 [使用案例的詳細資訊](./composition.md#identity) ，請參閱架構構成基礎中的識別欄位一節。
+在Experience Platform中，標示為身分的XDM欄位可用來整合來自多個資料來源的個別客戶相關資訊。 雖然架構可以有多個欄位標籤為標識，但必須定義單個主標識，才能在[!DNL Real-time Customer Profile]中啟用該架構。 有關這些欄位的使用案例的詳細資訊，請參閱架構構成基礎中[標識欄位](./composition.md#identity)一節。
 
-在設計方案時，關係資料庫表中的任何主鍵都可能是主標識的候選。 適用身分欄位的其他範例包括客戶電子郵件地址、電話號碼、帳戶ID和 [ECID](../../identity-service/ecid.md)。
+在設計方案時，關係資料庫表中的任何主鍵都可能是主標識的候選。 適用身分欄位的其他範例包括客戶電子郵件地址、電話號碼、帳戶ID和[ECID](../../identity-service/ecid.md)。
 
 ### Adobe應用程式混合
 
@@ -202,11 +202,11 @@ Experience Platform提供數種現成可用的XDM混合，以擷取與下列Adob
 * Adobe Campaign
 * Adobe Target
 
-例如， [[!UICONTROL Adobe Analytics ExperienceEvent Template Mixin]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/analytics/experienceevent-all.schema.json) 可讓您將特定欄 [!DNL Analytics]位對應至XDM結構。 根據您使用的Adobe應用程式，您應在結構描述中使用這些Adobe提供的混合程式。
+例如，[[!UICONTROL Adobe Analytics ExperienceEvent範本Mixin]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/analytics/experienceevent-all.schema.json)可讓您將[!DNL Analytics]特定欄位對應至XDM結構。 根據您使用的Adobe應用程式，您應在結構描述中使用這些Adobe提供的混合程式。
 
 <img src="../images/best-practices/analytics-mixin.png" width="700"><br>
 
-Adobe應用程式混合會透過使用欄位自動指派預設的主要身分識別 `identityMap` ，此欄位是系統產生的唯讀物件，可對應個別客戶的標準身分識別值。
+Adobe應用程式混合會透過使用`identityMap`欄位自動指派預設的主要身分識別，此欄位是系統產生的唯讀物件，可對應個別客戶的標準身分識別值。
 
 對於Adobe Analytics,ECID是預設的主要身分識別。 如果客戶未提供ECID值，則主要身分會預設為AAID。
 
@@ -223,4 +223,4 @@ Adobe應用程式混合會透過使用欄位自動指派預設的主要身分識
 * 您的資料模型應能支援您的業務使用案例，例如細分或客戶歷程分析。
 * 讓結構描述盡可能簡單，而且只有在需要時才新增欄位。
 
-準備好後，請參閱在UI中建立架構的教學課程 [](../tutorials/create-schema-ui.md) ，以取得如何建立架構的逐步指示、為實體指派適當的類別，以及新增欄位以將資料對應至。
+準備好後，請參閱[在UI](../tutorials/create-schema-ui.md)中建立架構的教學課程，以取得如何建立架構、指派實體的適當類別，以及新增欄位以映射資料的逐步指示。
