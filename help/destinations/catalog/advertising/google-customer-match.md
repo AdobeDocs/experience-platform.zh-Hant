@@ -1,13 +1,13 @@
 ---
-keywords: google customer match;Google customer match;Google Customer Match
+keywords: google客戶符合；Google客戶符合；Google客戶符合
 title: Google客戶符合目的地
 seo-title: Google客戶符合目的地
 description: Google Customer Match可讓您使用您的線上和離線資料，透過Google的自有和營運資產（例如搜尋、購物、Gmail和YouTube）觸及客戶並與其重新互動。
 seo-description: Google Customer Match可讓您使用您的線上和離線資料，透過Google的自有和營運資產（例如搜尋、購物、Gmail和YouTube）觸及客戶並與其重新互動。
 translation-type: tm+mt
-source-git-commit: f2fdc3b75d275698a4b1e4c8969b1b840429c919
+source-git-commit: 3837f00ff8b950e1f7642a9ffb5d194388dcab28
 workflow-type: tm+mt
-source-wordcount: '1544'
+source-wordcount: '1478'
 ht-degree: 0%
 
 ---
@@ -17,167 +17,193 @@ ht-degree: 0%
 
 ## 概述 {#overview}
 
-[Google Customer Match](https://support.google.com/google-ads/answer/6379332?hl=en) 可讓您使用您的線上和離線資料，透過Google擁有和營運的資產觸及客戶並與其重新互動，例如： [!DNL Search]、 [!DNL Shopping]、 [!DNL Gmail]和 [!DNL YouTube]。
+[Google Customer ](https://support.google.com/google-ads/answer/6379332?hl=en) Matchet可讓您使用您的線上和離線資料，透過Google擁有和營運的資產觸及並重新與客戶互動，例如： [!DNL Search]、 [!DNL Shopping]、 [!DNL Gmail]和 [!DNL YouTube]。
 
 ![即時CDP UI中的Google客戶符合目標](../../assets/catalog/advertising/google-customer-match/catalog.png)
 
 ## 使用案例
 
-為協助您進一步瞭解您應如何及何時使用目標，以下是即時客戶資料平台客戶可透過使用此功能解決的範例使用案例。 [!DNL Google Customer Match]
+為了幫助您更好地瞭解應如何及何時使用[!DNL Google Customer Match]目標，以下是「即時客戶資料平台」客戶可使用此功能解決的範例使用案例。
 
 ### 使用案例#1
 
-運動服裝品牌希望透過現有客戶，並根據 [!DNL Google Search] 其過去 [!DNL Google Shopping] 的購買和瀏覽記錄，將優惠和項目個人化。 服裝品牌可將其CRM的電子郵件位址內嵌至即時CDP，從其離線資料建立細分，並將這些細分傳送至各 [!DNL Google Customer Match] 個網 [!DNL Search] 段 [!DNL Shopping]，以最佳化其廣告支出。
+運動服裝品牌希望透過[!DNL Google Search]和[!DNL Google Shopping]觸及現有客戶，根據他們過去的購買和瀏覽記錄個人化優惠和項目。 服裝品牌可將其CRM的電子郵件地址內嵌至即時CDP、從其離線資料建立區段，並將這些區段傳送至[!DNL Google Customer Match]以用於[!DNL Search]和[!DNL Shopping]，以最佳化其廣告支出。
 
 ### 使用案例#2
 
 一家知名科技公司剛剛發佈了一部新手機。 為了推廣這款新手機機型，他們希望讓擁有舊款手機的客戶對手機的新功能和特性有所瞭解。
 
-為了推廣此版本，他們會將電子郵件地址從其CRM資料庫上傳至即時CDP，並使用電子郵件地址作為識別碼。 區段是根據擁有舊款手機機型並傳送給客戶而建立，以便 [!DNL Google Customer Match] 鎖定目前客戶、擁有舊款手機機型的客戶，以及類似客戶 [!DNL YouTube]。
+為了推廣此版本，他們會將電子郵件地址從其CRM資料庫上傳至即時CDP，並使用電子郵件地址作為識別碼。 區段是根據擁有舊款手機機型並傳送至[!DNL Google Customer Match]的客戶而建立，以便鎖定目前客戶、擁有舊款手機機型的客戶，以及[!DNL YouTube]上的類似客戶。
 
-## 目的地的資料管 [!DNL Google Customer Match] 理 {#data-governance}
+## 目標詳細資訊{#destination-specs}
 
-即時CDP中的目標可能對發送到目標平台或從目標平台接收的資料具有某些規則和義務。 您有責任瞭解資料的限制和義務，以及您在Adobe Experience Platform和目標平台中如何使用該資料。 Adobe Experience Platform提供資料治理工具，可協助您管理部分資料使用義務。 [進一步瞭解](../../..//data-governance/labels/overview.md) 資料治理工具和政策。
+### [!DNL Google Customer Match]目標{#data-governance}的資料控管
 
-## 匯出類型與身分 {#export-type}
+即時CDP中的目標可能對發送到目標平台或從目標平台接收的資料具有某些規則和義務。 您有責任瞭解資料的限制和義務，以及您在Adobe Experience Platform和目標平台中如何使用該資料。 Adobe Experience Platform提供資料治理工具，可協助您管理部分資料使用義務。 [進一](../../..//data-governance/labels/overview.md) 步瞭解資料治理工具和政策。
 
-**區段匯出** -您正匯出區段（對象）的所有成員，並包含識別碼（名稱、電話號碼等） 用於目的 [!DNL Google Customer Match] 地。
+### 導出類型和身份{#export-type}
+
+**區段匯出** -您正匯出區段（對象）的所有成員，並包含識別碼（名稱、電話號碼等）用於[!DNL Google Customer Match]目標。
 
 **身分** -您可以在Google中使用原始或雜湊的電子郵件做為客戶ID
 
-## [!DNL Google Customer Match] 帳戶先決條件 {#google-account-prerequisites}
+### [!DNL Google Customer Match] 帳戶先決條件  {#google-account-prerequisites}
 
-在即時CDP中 [!DNL Google Customer Match] 設定目標之前，請務必閱讀並遵守 [!DNL Customer Match]Google支援檔案中概述的Google使用 [政策](https://support.google.com/google-ads/answer/6299717)。
+在即時CDP中設定[!DNL Google Customer Match]目標之前，請務必閱讀並遵守Google的[!DNL Customer Match]使用策略，如[ Google支援文檔](https://support.google.com/google-ads/answer/6299717)中所述。
 
-### 允許清單 {#allowlist}
+### 允許清單{#allowlist}
 
 >[!NOTE]
 >
->在即時CDP中設定您的第一個目標之前，必須先將它新 [!DNL Google Customer Match] 增至Google的允許清單。 請確定Google在建立目標之前已完成下列說明的允許清單程式。
+>在即時CDP中設定您的第一個[!DNL Google Customer Match]目標之前，必須將它新增至Google的允許清單。 請確定Google在建立目標之前已完成下列說明的允許清單程式。
 
-在即時CDP [!DNL Google Customer Match] 中建立目標之前，您必須聯絡Google，並依照「使用客戶符合」合作夥伴中的允許清單指示，在 [Google檔案中上傳您的資料](https://support.google.com/google-ads/answer/7361372?hl=en&amp;ref_topic=6296507) 。
+在即時CDP中建立[!DNL Google Customer Match]目標之前，您必須聯繫Google並遵循[使用客戶匹配合作夥伴中的允許清單指示，在Google文檔中上傳您的資料](https://support.google.com/google-ads/answer/7361372?hl=en&amp;ref_topic=6296507)。
 
+此外，如果您打算使用Google的[User_ID](https://developers.google.com/adwords/api/docs/guides/remarketing#customer_match_with_email_address_address_or_user_id)上傳資料，則還有另一個Google允許清單您必須將帳戶新增至。 請連絡您的Google帳戶管理員，確定您已新增至允許清單。
 
-### 電子郵件雜湊要求 {#hashing-requirements}
+### ID匹配要求{#id-matching-requirements}
 
-<!--
+[!DNL Google] 要求不會傳送任何個人識別資訊(PII)。因此，激活至[!DNL Google Customer Match]的觀眾可以鍵入&#x200B;*雜湊*&#x200B;標識符，如電子郵件地址或電話號碼。
 
->[!IMPORTANT]
+視您將ID收錄至Adobe Experience Platform的類型而定，您必須符合其相應的需求。
+
+#### 電話號碼雜湊要求{#phone-number-hashing-requirements}
+
+在[!DNL Google Customer Match]中啟用電話號碼有兩種方法：
+
+* **接收原始電話號碼**:您可以將原始電話號碼以格 [!DNL E.164] 式內嵌 [!DNL Platform]至，在啟動時會自動雜湊。如果您選擇此選項，請務必將原始電話號碼永遠收錄到`Phone_E.164`命名空間中。
+* **接收雜湊電話號碼**:您可先將電話號碼雜湊，再將其擷取 [!DNL Platform]。如果您選擇此選項，請務必將雜湊電話號碼永遠收錄到`PHONE_SHA256_E.164`命名空間中。
+
+>[!NOTE]
 >
-> When using mobile device IDs as identifiers, an AppId must be provided in the activation flow. For more information, see step 6 in the [Activate segments](#activate-segments) section of this page.
+>不能在[!DNL Google Customer Match]中激活包含在`Phone`名稱空間中的電話號碼。
 
--->
+#### 電子郵件散列要求{#hashing-requirements}
 
-Google要求不要傳送任何個人識別資訊(PII)。 因此，啟動的觀眾必須 [!DNL Google Customer Match] 鎖定雜湊的 *電子郵件* 位址。 您可以選擇先對電子郵件地址進行雜湊處理，然後再將它們匯入Adobe Experience Platform，或者選擇在Experience Platform中清楚處理電子郵件地址，並讓我們的演算法在啟動時對它們進行雜湊處理。
+您可以選擇先對電子郵件地址進行雜湊處理，然後再將它們匯入Adobe Experience Platform，或者選擇在Experience Platform中清楚處理電子郵件地址，並讓我們的演算法在啟動時對它們進行雜湊處理。
 
 如需有關Google雜湊要求和其他啟動限制的詳細資訊，請參閱Google檔案中的下列章節：
 
 * [[!DNL Customer Match] 包含電子郵件地址、地址或使用者ID](https://developers.google.com/adwords/api/docs/guides/remarketing#customer_match_with_email_address_address_or_user_id)
 * [[!DNL Customer Match] 注意事項](https://developers.google.com/adwords/api/docs/guides/remarketing#customer_match_considerations)
+* [客戶與電話號碼相符](https://developers.google.com/adwords/api/docs/guides/remarketing#customer_match_with_phone_number)
+* [客戶與行動裝置ID相符](https://developers.google.com/adwords/api/docs/guides/remarketing#customer_match_with_mobile_device_ids)
 
-<!--
 
-Links to be added when activation based on phone number and device IDs becomes available.
-
-* [Customer Match with phone number](https://developers.google.com/adwords/api/docs/guides/remarketing#customer_match_with_phone_number)
-* [Customer Match with mobile device IDs](https://developers.google.com/adwords/api/docs/guides/remarketing#customer_match_with_mobile_device_ids)
-
--->
-
-若要瞭解如何在Experience Platform中擷取電子郵件地址，請參閱批次 [擷取概觀](../../../ingestion/batch-ingestion/overview.md) ，以 [及快速擷取概觀](../../../ingestion/streaming-ingestion/overview.md)。
+若要瞭解如何在Experience Platform中擷取電子郵件地址，請參閱[批次擷取概觀](../../../ingestion/batch-ingestion/overview.md)和[串流擷取概觀](../../../ingestion/streaming-ingestion/overview.md)。
 
 如果您選擇自行排列電子郵件地址，請務必符合上述連結中概述的Google要求。
 
+#### 使用自訂名稱空間{#custom-namespaces}
 
->[!IMPORTANT]
->
->如果您選擇不散列電子郵件地址，Real-time CDP會在您將區段啟用至時為您執行 [!DNL Google Customer Match]。 在啟動 [工作流程](#activate-segments) （請參閱步驟5）中，針對純文字電子郵件位址選取 `Email` 如下所示的選項 *，並針對雜湊的電子郵*`Email_LC_SHA256`**&#x200B;件位址選取。
+在使用`User_ID`命名空間將資料傳送至Google之前，請務必使用[!DNL gTag]同步您自己的識別碼。 如需詳細資訊，請參閱[官方檔案](https://support.google.com/google-ads/answer/9199250)。
 
-![啟動時雜湊](../../assets/catalog/advertising/google-customer-match/identity-mapping.png)
+<!-- Data from unhashed namespaces is automatically hashed by [!DNL Platform] upon activation.
 
-## 連接到目標 {#connect-destination}
+Attribute source data is not automatically hashed. When your source field contains unhashed attributes, check the **[!UICONTROL Apply transformation]** option, to have [!DNL Platform] automatically hash the data on activation.
+![Identity mapping transformation](../../assets/ui/activate-destinations/identity-mapping-transformation.png) -->
 
-在「 **[!UICONTROL 目標]** >目錄 **[!UICONTROL 」中，捲動至「]**&#x200B;廣告 **** 」類別。 選擇 [!DNL Google Customer Match]，然後選擇 **[!UICONTROL 配置]**。
+## 連接到目標{#connect-destination}
+
+在&#x200B;**[!UICONTROL 目標]** > **[!UICONTROL 目錄]**&#x200B;中，滾動到&#x200B;**[!UICONTROL 廣告]**&#x200B;類別。 選擇[!DNL Google Customer Match]，然後選擇&#x200B;**[!UICONTROL 配置]**。
 
 ![連線至Google客戶符合目的地](../../assets/catalog/advertising/google-customer-match/connect.png)
 
 >[!NOTE]
 >
->如果此目標已存在連接，您可以在目標卡上看到 **[!UICONTROL 「激活]** 」按鈕。 有關「激活」( **[!UICONTROL Activate]** )和「配置」( **[!UICONTROL Configure]**)之間差異的詳細資訊，請參 [閱目標工作區文檔的「目錄](../../ui/destinations-workspace.md#catalog) 」(Catalog)部分。
+>如果已存在與此目標的連接，您可以在目標卡上看到&#x200B;**[!UICONTROL 激活]**&#x200B;按鈕。 有關&#x200B;**[!UICONTROL Activate]**&#x200B;和&#x200B;**[!UICONTROL Configure]**&#x200B;之間差異的詳細資訊，請參閱目標工作區文檔的[Catalog](../../ui/destinations-workspace.md#catalog)部分。
 
-在「 **Account** 」（帳戶）步驟中 [!DNL Google Customer Match] ，如果您先前已設定連線至您的目的地，請選取「 **** Existing Account」（現有帳戶）並選取您現有的連線。 或者，您可以選 **[!UICONTROL 擇「新帳戶]** 」來設定新連線 [!DNL Google Customer Match]。 選 **[!UICONTROL 擇「連線至目的地]** 」以登入，並將Adobe Experience Cloud連線至您的 [!DNL Google Ad] 帳戶。
+在&#x200B;**Account**&#x200B;步驟中，如果您先前已設定到[!DNL Google Customer Match]目標的連接，請選擇&#x200B;**[!UICONTROL Existing Account]**&#x200B;並選擇您的現有連接。 或者，您可以選擇&#x200B;**[!UICONTROL 新帳戶]**&#x200B;來設定到[!DNL Google Customer Match]的新連接。 選擇&#x200B;**[!UICONTROL 連線至目標]**&#x200B;以登入並將Adobe Experience Cloud連線至您的[!DNL Google Ad]帳戶。
 
 >[!NOTE]
 >
->即時CDP支援驗證程式中的認證驗證，如果您在帳戶中輸入錯誤的認證，則會顯示錯誤 [!DNL Google Ad] 訊息。 這可確保您不會以不正確的憑證完成工作流程。
+>即時CDP支援驗證過程中的憑據驗證，如果向[!DNL Google Ad]帳戶輸入了不正確的憑據，則會顯示錯誤消息。 這可確保您不會以不正確的憑證完成工作流程。
 
 ![連線至Google客戶符合目的地——驗證步驟](../../assets/catalog/advertising/google-customer-match/connection.png)
 
-一旦您的認證獲得確認，而Adobe Experience Cloud已連線至您的Google帳戶，您就可以選取「 **[!UICONTROL Next]** 」（下一步），繼 **[!UICONTROL 續設定]** 。
+一旦確認您的認證並將Adobe Experience Cloud連線至您的Google帳戶後，您可以選取「下一個」(**[!UICONTROL Next)，以繼續「設定」(Setup)步驟。]******
 
 ![認證已確認](../../assets/catalog/advertising/google-customer-match/connection-success.png)
 
-在「驗 **[!UICONTROL 證]** 」步驟中，輸入啟動流程的「名稱 [!UICONTROL 」和「說明] 」，然後填寫Google帳戶 ID。
+在&#x200B;**[!UICONTROL Authentication]**&#x200B;步驟中，輸入啟動流程的[!UICONTROL Name]和[!UICONTROL Description]，並將[!UICONTROL 帳戶ID]填入Google。
 
-此外，您也可以在此步驟中，選取 **[!UICONTROL 任何應套用至此目的地的Marketing]** 使用案例。 行銷使用案例會指出將資料匯出至目的地的方式。 您可以從Adobe定義的行銷使用案例中選擇，也可以建立自己的行銷使用案例。 有關行銷使用案例的詳細資訊，請參 [閱即時CDP中的資料治理頁](../../../rtcdp/privacy/data-governance-overview.md#destinations) 。 如需個別Adobe定義之行銷使用案例的詳細資訊，請參閱「資 [料使用政策」概觀](../../../data-governance/policies/overview.md#core-actions)。
+此外，在此步驟中，您也可以選取任何應套用至此目的地的&#x200B;**[!UICONTROL 行銷使用案例]**。 行銷使用案例會指出將資料匯出至目的地的方式。 您可以從Adobe定義的行銷使用案例中選擇，也可以建立自己的行銷使用案例。 有關行銷使用案例的詳細資訊，請參見[即時CDP](../../../rtcdp/privacy/data-governance-overview.md#destinations)中的資料治理頁。 如需個別Adobe定義之行銷使用案例的詳細資訊，請參閱[資料使用政策概觀](../../../data-governance/policies/overview.md#core-actions)。
 
-在填 **[!UICONTROL 入上述欄位後]** ，選取「建立目標」。
+在填寫上述欄位後，選擇「建立目標」。****
 
 >[!IMPORTANT]
 >
-> * 依預 **[!UICONTROL 設，「與PII結合]** 」行銷使用案例會針對目的地 [!DNL Google Customer Match] 選取，且無法移除。
-> * 適用於 [!DNL Google Customer Match] 目的地。 **[!UICONTROL 帳戶ID]** 是您使用Google的客戶用戶端ID。 ID的格式為xxx-xxx-xxxx。
+> * **[!UICONTROL 與PII]**&#x200B;結合行銷使用案例預設會針對[!DNL Google Customer Match]目標選取，且無法移除。
+> * 對於[!DNL Google Customer Match]目標。 **[!UICONTROL 帳戶]** ID是您使用Google的客戶用戶端ID。ID的格式為xxx-xxx-xxxx。
 
 
 ![連線Google客戶符合——驗證步驟](../../assets/catalog/advertising/google-customer-match/authentication.png)
 
-您的目標現在已建立。 如果您想 **[!UICONTROL 稍後啟動區段]** ，可以選取「儲存並退出」，或選取「下一步 **** 」以繼續工作流程，並選取要啟動的區段。 在這兩種情況下，請參閱下一 [節「啟動區段 [!DNL Google Customer Match]](#activate-segments)」，以瞭解其餘的工作流程。
+您的目標現在已建立。 如果您想稍後啟動區段，可以選取&#x200B;**[!UICONTROL 儲存並退出]**，或選取&#x200B;**[!UICONTROL Next]**&#x200B;以繼續工作流程並選取要啟動的區段。 在這兩種情況下，請參閱工作流程的下一節「啟動區段至 [!DNL Google Customer Match]](#activate-segments)」。[
 
-## 啟用區段至 [!DNL Google Customer Match] {#activate-segments}
+## 啟用區段至[!DNL Google Customer Match] {#activate-segments}
 
-若要啟用區段 [!DNL Google Customer Match]至，請遵循下列步驟：
+如需如何啟用區段至[!DNL Google Customer Match]的指示，請參閱[啟用資料至目標](../../ui/activate-destinations.md)。
 
-在「 **[!UICONTROL 目標>瀏覽]**」中，選 [!DNL Google Customer Match] 取您要啟用區段的目標。
 
-按一下目標的名稱。 這會帶您進入「啟動」流程。
+在&#x200B;**[!UICONTROL 區段排程]**&#x200B;步驟中，當傳送[!DNL IDFA]或[!DNL GAID]區段至[!DNL Google Customer Match]時，您必須提供[!UICONTROL 應用程式ID]。
+
+![Google客戶符合應用程式ID](../../assets/catalog/advertising/google-customer-match/gcm-destination-appid.png)
+
+有關如何查找[!DNL App ID]的詳細資訊，請參閱[官方文檔](https://developers.google.com/adwords/api/docs/reference/v201809/AdwordsUserListService.CrmBasedUserList#appid)。
+
+
+
+
+
+
+
+<!-- 
+To activate segments to [!DNL Google Customer Match], follow the steps below: 
+
+In **[!UICONTROL Destinations > Browse]**, select the [!DNL Google Customer Match] destination where you want to activate your segments.
+
+Click the name of the destination. This takes you to the Activate flow.
 
 ![activate-flow](../../assets/catalog/advertising/google-customer-match/activate-flow.png)
 
-請注意，如果目的地已有啟動流程，您可以看到目前傳送至目的地的區段。 選取 **[!UICONTROL 右側邊欄]** 「編輯啟動」，然後依照下列步驟修改啟動詳細資訊。
+Note that if an activation flow already exists for a destination, you can see the segments that are currently being sent to the destination. Select **[!UICONTROL Edit activation]** in the right rail and follow the steps below to modify the activation details.
 
-選擇「 **[!UICONTROL 啟動]**」。 在「啟 **[!UICONTROL 動目標]** 」工作流程的「選 **[!UICONTROL 取區段」頁面上，選取要傳送的區段]**[!DNL Google Customer Match]。
+Select **[!UICONTROL Activate]**. In the **[!UICONTROL Activate destination]** workflow, on the **[!UICONTROL Select Segments]** page, select which segments to send to [!DNL Google Customer Match].
 
-![區段到目的地](../../assets/catalog/advertising/google-customer-match/activate-segments.png)
+![segments-to-destination](../../assets/catalog/advertising/google-customer-match/activate-segments.png)
 
-在「身 **[!UICONTROL 份映射]** 」步驟中，選擇要作為身份包括在此目標中的屬性。 選擇 **[!UICONTROL 新增對應]** ，並瀏覽您的架構，選擇電子郵件和／或雜湊電子郵件，然後將它們對應至對應的目標識別。
+In the **[!UICONTROL Identity mapping]** step, select which attributes to be included as an identity in this destination. Select **[!UICONTROL Add new mapping]** and browse your schema, select email and/or hashed email, and map them to the corresponding target identity.
 
-![身份映射初始螢幕](../../assets/catalog/advertising/google-customer-match/identity-mapping.png)
+![identity mapping initial screen](../../assets/catalog/advertising/google-customer-match/identity-mapping.png) 
 
-**純文字檔案電子郵件地址作為主要身份**:如果您的架構中有純文字（未雜湊）電子郵件地址作為主要身分識別，請選取「來源屬性」中的電子郵件欄位，並對應至「目標身分」下方右欄中的「電子郵件」欄位 ********，如下所示：
+**Plain text email address as primary identity**: If you have plain text (unhashed) email addresses as primary identity in your schema, select the email field in your **[!UICONTROL Source Attributes]** and map to the Email field in the right column under **[!UICONTROL Target Identities]**, as shown below:
 
-![選擇純文字檔案電子郵件身份](../../assets/catalog/advertising/google-customer-match/raw-email.gif)
+![select plain text emails identity](../../assets/catalog/advertising/google-customer-match/raw-email.gif) 
 
-**雜湊的電子郵件地址作為主要身份**:如果您在架構中已將電子郵件地址雜湊為主要身份，請在「來源屬性」中選擇雜湊的電子郵件欄位，並映射至「目標身份」下方右欄中的「 **[!UICONTROL Email_LC_SHA256」欄位]******，如下所示：
+**Hashed email address as primary identity**: If you have hashed email addresses as primary identity in your schema, select the hashed email field in your **[!UICONTROL Source Attributes]** and map to the Email_LC_SHA256 field in the right column under **[!UICONTROL Target Identities]**, as shown below:
 
-![選擇雜湊電子郵件身份](../../assets/catalog/advertising/google-customer-match/hashed-emails.gif)
+![select hashed emails identity](../../assets/catalog/advertising/google-customer-match/hashed-emails.gif)
 
-在「區 **[!UICONTROL 段排程]** 」頁面上，您可以設定傳送資料至目的地的開始日期。
+On the **[!UICONTROL Segment schedule]** page, you can set the start date for sending data to the destination.
 
-在「審 **[!UICONTROL 閱]** 」頁面上，您可以看到您所選項目的摘要。 選擇 **[!UICONTROL 取消]** ，以劃分流程，選擇 **[!UICONTROL 返回]** ，修改設定，或選擇完 **[!UICONTROL 成]** ，確認選擇並開始向目標發送資料。
+On the **[!UICONTROL Review]** page, you can see a summary of your selection. Select **[!UICONTROL Cancel]** to break up the flow, **[!UICONTROL Back]** to modify your settings, or **[!UICONTROL Finish]** to confirm your selection and start sending data to the destination.
 
 >[!IMPORTANT]
 >
->在此步驟中，即時CDP檢查資料使用策略違規。 以下是違反原則的範例。 除非您解決違規問題，否則無法完成區段啟動工作流程。 有關如何解決違反策略的資訊，請參 [閱資料治理文檔部分](../../../rtcdp/privacy/data-governance-overview.md#enforcement) 中的策略實施。
+>In this step, Real-time CDP checks for data usage policy violations. Shown below is an example where a policy is violated. You cannot complete the segment activation workflow until you have resolved the violation. For information on how to resolve policy violations, see [Policy enforcement](../../../rtcdp/privacy/data-governance-overview.md#enforcement) in the data governance documentation section.
+ 
+![confirm-selection](../../assets/common/data-policy-violation.png)
 
-![確認選擇](../../assets/common/data-policy-violation.png)
+If no policy violations have been detected, select **[!UICONTROL Finish]** to confirm your selection and start sending data to the destination.
 
-如果未檢測到任何違反策略的情況，請選擇「完 **[!UICONTROL 成]** 」以確認您的選擇並開始向目標發送資料。
+![confirm-selection](../../assets/catalog/advertising/google-customer-match/review.png) -->
 
-![確認選擇](../../assets/catalog/advertising/google-customer-match/review.png)
+## 確認區段啟動成功{#verify-activation}
 
-## 確認區段啟動成功 {#verify-activation}
+完成啟動流程後，請切換至您的&#x200B;**[!UICONTROL Google Ads]**&#x200B;帳戶。 啟用的區段現在會以客戶清單的形式顯示在您的Google帳戶中。 請注意，視您的區段大小而定，除非有超過100位使用中使用者可供服務，否則不會填入某些對象。
 
-完成啟動流程後，請切換至您的 **[!UICONTROL Google Ads帳戶]** 。 啟用的區段現在會以客戶清單的形式顯示在您的Google帳戶中。 請注意，視您的區段大小而定，除非有超過100位使用中使用者可供服務，否則不會填入某些對象。
+將區段同時對應至[!DNL IDFA]和[!DNL GAID]行動ID時，[!DNL Google Customer Match]會為每個ID對應建立個別的區段。 您的[!DNL Google Ads]帳戶將顯示兩個不同的區段，一個用於[!DNL IDFA]，另一個用於[!DNL GAID]映射。
 
 ## 其他資源 {#additional-resources}
 
