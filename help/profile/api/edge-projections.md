@@ -1,11 +1,13 @@
 ---
-keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API
-title: Edge預測——即時客戶個人檔案API
+keywords: Experience Platform;Profile；即時客戶配置檔案；故障排除；API
+title: 邊緣投影API端點
 topic: guide
+type: Documentation
+description: Adobe Experience Platform可讓您跨多個通道即時為客戶提供協調、一致的個人化體驗，讓適當的資料隨時可用，並隨時隨地更新。 這是透過使用邊緣來完成的。邊緣是地理位置的伺服器，可儲存資料，讓應用程式更容易存取。
 translation-type: tm+mt
-source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
+source-git-commit: e6ecc5dac1d09c7906aa7c7e01139aa194ed662b
 workflow-type: tm+mt
-source-wordcount: '1900'
+source-wordcount: '1961'
 ht-degree: 2%
 
 ---
@@ -13,15 +15,15 @@ ht-degree: 2%
 
 # 邊緣投影配置和目標端點
 
-為即時跨多個通道為客戶提供協調、一致且個人化的體驗，需要隨時提供適當的資料，並在變更時持續更新。 Adobe Experience Platform可讓您透過使用所謂的邊緣，即時存取資料。 邊緣是地理位置優越的伺服器，可儲存資料，讓應用程式可輕鬆存取。 例如，Adobe Target和Adobe Campaign等Adobe應用程式會利用優勢，即時提供個人化客戶體驗。 資料通過投影被路由到邊，投影目的地定義資料要發送到的邊，投影配置定義將在邊上提供的特定資訊。 本指南提供使用 [!DNL Real-time Customer Profile] API處理邊緣投影的詳細指示，包括目標和設定。
+為即時跨多個通道為客戶提供協調、一致且個人化的體驗，需要隨時提供適當的資料，並在變更時持續更新。 Adobe Experience Platform可讓您透過使用所謂的邊緣，即時存取資料。 邊緣是地理位置優越的伺服器，可儲存資料，讓應用程式可輕鬆存取。 例如，Adobe Target和Adobe Campaign等Adobe應用程式會利用優勢，即時提供個人化客戶體驗。 資料通過投影被路由到邊，投影目的地定義資料要發送到的邊，投影配置定義將在邊上提供的特定資訊。 本指南提供使用[!DNL Real-time Customer Profile] API處理邊緣投影的詳細說明，包括目標和配置。
 
 ## 快速入門
 
-本指南中使用的API端點是的一部分 [[!DNL Real-time Customer Profile API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml)。 在繼續之前，請先閱讀快速入門 [指南](getting-started.md) ，以取得相關檔案的連結、閱讀本檔案中範例API呼叫的指南，以及成功呼叫任何 [!DNL Experience Platform] API所需之必要標題的重要資訊。
+本指南中使用的API端點是[[!DNL Real-time Customer Profile API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml)的一部分。 在繼續之前，請先閱讀[快速入門手冊](getting-started.md)，以取得相關檔案的連結、閱讀本檔案中範例API呼叫的指南，以及成功呼叫任何[!DNL Experience Platform] API所需之必要標題的重要資訊。
 
 >[!NOTE]
 >
->包含裝載(POST、PUT、PATCH)的請求需要標 `Content-Type` 頭。 本文檔中 `Content-Type` 使用了多個。 請特別注意範例呼叫中的標題，以確保您對每個請求都使 `Content-Type` 用正確。
+>包含裝載(POST、PUT、PATCH)的請求需要`Content-Type`標題。 本檔案中使用了多個`Content-Type`。 請特別注意範例呼叫中的標題，以確保您對每個請求都使用正確的`Content-Type`。
 
 ## 投影目的地
 
@@ -29,7 +31,7 @@ ht-degree: 2%
 
 ### 列出所有目標
 
-您可以向端點發出GET請求，列出已為組織建立的邊緣目 `/config/destinations` 標。
+您可以向`/config/destinations`端點發出GET請求，以列出已為組織建立的邊緣目標。
 
 **API格式**
 
@@ -50,7 +52,7 @@ curl -X GET \
 
 **回應**
 
-響應包括一個陣 `projectionDestinations` 列，每個目標的詳細資訊顯示為陣列內的單個對象。 如果尚未配置任何投影，則陣 `projectionDestinations` 列返回空。
+響應包括`projectionDestinations`陣列，每個目標的詳細資訊顯示為陣列中的單個對象。 如果未配置投影， `projectionDestinations`陣列將返回空。
 
 >[!NOTE]
 >
@@ -104,13 +106,13 @@ curl -X GET \
 | 屬性 | 說明 |
 |---|---|
 | `_links.self.href` | 在頂層，與用於發出GET請求的路徑匹配。 在每個個別的目標物件中，此路徑可用於GET請求中，以直接查閱特定目標的詳細資料。 |
-| `id` | 在每個目標對象中， `"id"` 顯示目標的唯讀、系統生成的唯一ID。 此ID用於引用特定目標和建立投影配置時。 |
+| `id` | 在每個目標對象中，`"id"`顯示目標的唯讀、系統生成的唯一ID。 此ID用於引用特定目標和建立投影配置時。 |
 
-有關個別目標屬性的詳細資訊，請參閱以下有關建 [立目標](#create-a-destination) 的章節。
+有關單個目標屬性的詳細資訊，請參閱以下有關建立目標[的部分。](#create-a-destination)
 
-### Create a destination {#create-a-destination}
+### 建立目標{#create-a-destination}
 
-如果所需的目標不存在，則可以通過向端點發出POST請求來建立新的投影目 `/config/destinations` 標。
+如果所需的目標不存在，則可以通過向`/config/destinations`端點發出POST請求來建立新的投影目標。
 
 **API格式**
 
@@ -124,7 +126,7 @@ POST /config/destinations
 
 >[!NOTE]
 >
->建立目的地的POST要求需要特定的標 `Content-Type` 題，如下所示。 使用錯誤 `Content-Type` 的標題會導致HTTP狀態415（不支援的媒體類型）錯誤。
+>建立目的地的POST要求需要特定的`Content-Type`標題，如下所示。 使用不正確的`Content-Type`標題會導致HTTP狀態415（不支援的媒體類型）錯誤。
 
 ```shell
 curl -X POST \
@@ -179,7 +181,7 @@ curl -X POST \
 
 ### 檢視目標
 
-如果您知道投影目的地的唯一ID，則可執行查閱請求以檢視其詳細資訊。 若要這麼做，請向端點提出GET請 `/config/destinations` 求，並在請求路徑中加入目標的ID。
+如果您知道投影目的地的唯一ID，則可執行查閱請求以檢視其詳細資訊。 若要這麼做，請向`/config/destinations`端點提出GET請求，並在請求路徑中加入目標的ID。
 
 **API格式**
 
@@ -206,7 +208,7 @@ curl -X GET \
 
 **回應**
 
-響應對象顯示投影目標的詳細資訊。 屬 `id` 性應符合請求中提供之投影目的地的ID。
+響應對象顯示投影目標的詳細資訊。 `id`屬性應符合請求中提供之投影目的地的ID。
 
 ```json
 {
@@ -226,7 +228,7 @@ curl -X GET \
 
 ### 更新目標
 
-通過向端點發出PUT請求並在請求路 `/config/destinations` 徑中包括要更新的目標的ID，可以更新現有目標。 此操作實質上是重寫目標，因此，在建立新目標時必須在請求主體中提供與建立新目標相同的屬性。
+通過向`/config/destinations`端點發出PUT請求並在請求路徑中包括要更新的目標的ID，可以更新現有目標。 此操作實質上是重寫目標，因此，在建立新目標時必須在請求主體中提供與建立新目標相同的屬性。
 
 >[!CAUTION]
 >
@@ -244,11 +246,11 @@ PUT /config/destinations/{DESTINATION_ID}
 
 **請求**
 
-下列請求會更新現有目的地以包含第二位置(`dataCenters`)。
+下列請求會更新現有目的地，以包含第二位置(`dataCenters`)。
 
 >[!IMPORTANT]
 >
->PUT請求需要特定的標 `Content-Type` 題，如下所示。 使用錯誤 `Content-Type` 的標題會導致HTTP狀態415（不支援的媒體類型）錯誤。
+>PUT請求需要特定的`Content-Type`標題，如下所示。 使用不正確的`Content-Type`標題會導致HTTP狀態415（不支援的媒體類型）錯誤。
 
 ```shell
 curl -X PUT \
@@ -271,11 +273,11 @@ curl -X PUT \
 
 | 屬性 | 說明 |
 |---|---|
-| `currentVersion` | 現有目標的當前版本。 執行目標查 `version` 閱請求時的屬性值。 |
+| `currentVersion` | 現有目標的當前版本。 對目標執行查找請求時的`version`屬性值。 |
 
 **回應**
 
-回應包含目標的更新詳細資料，包括其ID和目標 `version` 的新資訊。
+回應包含目標的更新詳細資料，包括其ID和目標的新`version`。
 
 ```json
 {
@@ -296,11 +298,11 @@ curl -X PUT \
 
 ### 刪除目標
 
-如果您的組織不再需要投影目的地，則可透過向端點提出DELETE請求並在請求路徑中包含您要刪除之目的地的 `/config/destinations` ID來刪除它。
+如果您的組織不再需要投影目的地，則可以透過向`/config/destinations`端點提出DELETE請求並在請求路徑中包含您要刪除之目的地的ID來刪除該目標。
 
 >[!CAUTION]
 >
->刪除請求的API回應是立即回應，但是邊緣上資料的實際變更會非同步進行。 換言之，描述檔資料將從所有邊緣(在投影目的 `dataCenters` 地中指定)中移除，但處理將需要時間完成。
+>刪除請求的API回應是立即回應，但是邊緣上資料的實際變更會非同步進行。 換言之，描述檔資料會從所有邊緣移除（在投影目的地中指定的`dataCenters`），但程式將需要時間完成。
 
 **API格式**
 
@@ -330,11 +332,11 @@ curl -X DELETE \
 
 ## 投影配置
 
-投影配置提供了有關每個邊緣上應提供哪些資料的資訊。 投影不會將完 [!DNL Experience Data Model] 整(XDM)架構投影到邊緣，而只提供架構中的特定資料或欄位。 您的組織可以為每個XDM架構定義多個投影配置。
+投影配置提供了有關每個邊緣上應提供哪些資料的資訊。 投影不會將完整的[!DNL Experience Data Model](XDM)架構投影到邊緣，而只提供架構中的特定資料或欄位。 您的組織可以為每個XDM架構定義多個投影配置。
 
 ### 列出所有投影配置
 
-通過向端點發出GET請求，可以列出為組織建立的所有投影配 `/config/projections` 置。 您也可以將可選參數新增至請求路徑，以存取特定方案的投影設定，或依其名稱查閱個別的投影。
+通過向`/config/projections`端點發出GET請求，可以列出為組織建立的所有投影配置。 您也可以將可選參數新增至請求路徑，以存取特定方案的投影設定，或依其名稱查閱個別的投影。
 
 **API格式**
 
@@ -351,11 +353,11 @@ GET /config/projections?schemaName={SCHEMA_NAME}&name={PROJECTION_NAME}
 
 >[!NOTE]
 >
->`schemaName` 是使用參數時的必 `name` 要值，因為投影配置名稱在模式類的上下文中是唯一的。
+>`schemaName` 是使用參數時所需 `name` 的值，因為投影配置名稱在模式類的上下文中是唯一的。
 
 **請求**
 
-以下請求列出與方案類關聯的所 [!DNL Experience Data Model] 有投影配置 [!DNL XDM Individual Profile]。 有關XDM及其在中的角色的更 [!DNL Platform]多資訊，請從閱讀 [XDM系統概述開始](../../xdm/home.md)。
+以下請求列出了與[!DNL Experience Data Model]方案類[!DNL XDM Individual Profile]關聯的所有投影配置。 有關XDM及其在[!DNL Platform]中的角色的詳細資訊，請從閱讀[XDM系統概述](../../xdm/home.md)開始。
 
 ```shell
 curl -X GET \
@@ -368,7 +370,7 @@ curl -X GET \
 
 **回應**
 
-成功的響應返回根屬性內包含在數 `_embedded` 組內的投影配置列 `projectionConfigs` 表。 如果沒有為您的組織進行投影配置，則陣 `projectionConfigs` 列將為空。
+成功的響應返回根`_embedded`屬性中包含在`projectionConfigs`陣列中的投影配置清單。 如果組織未進行投影配置，則`projectionConfigs`陣列將為空。
 
 ```json
 {
@@ -436,7 +438,7 @@ POST /config/projections?schemaName={SCHEMA_NAME}
 
 >[!NOTE]
 >
->建立設定的POST要求需要特定的標 `Content-Type` 題，如下所示。 使用錯誤 `Content-Type` 的標題會導致HTTP狀態415（不支援的媒體類型）錯誤。
+>建立組態的POST要求需要特定的`Content-Type`標題，如下所示。 使用不正確的`Content-Type`標題會導致HTTP狀態415（不支援的媒體類型）錯誤。
 
 ```shell
 curl -X POST \
@@ -455,7 +457,7 @@ curl -X POST \
 
 | 屬性 | 說明 |
 |---|---|
-| `selector` | 一個字串，包含要複製到邊的方案內的屬性清單。 有關使用選擇器的最佳做法，請參閱本文 [檔的「選擇器](#selectors) 」部分。 |
+| `selector` | 一個字串，包含要複製到邊的方案內的屬性清單。 有關使用選擇器的最佳做法，請參閱本文檔的[Selectors](#selectors)部分。 |
 | `name` | 新投影配置的描述性名稱。 |
 | `destinationId` | 資料將投影至的邊緣目的地識別碼。 |
 
@@ -499,18 +501,18 @@ curl -X POST \
 }
 ```
 
-## Selectors {#selectors}
+## 選擇器{#selectors}
 
-選擇器是以逗號分隔的XDM欄位名稱清單。 在投影配置中，選擇器指定要包括在投影中的屬性。 參數值的格 `selector` 式基於XPath語法鬆散。 支援的語法概述如下，並提供其他範例以供參考。
+選擇器是以逗號分隔的XDM欄位名稱清單。 在投影配置中，選擇器指定要包括在投影中的屬性。 `selector`參數值的格式基於XPath語法鬆散。 支援的語法概述如下，並提供其他範例以供參考。
 
 ### 支援的語法
 
 * 使用逗號來選取多個欄位。 因此請勿使用空格。
 * 使用點符號來選取巢狀欄位。
-   * 例如，要選擇一個名為的欄位， `field` 該欄位在名為的欄位中 `foo`嵌套，請使用選擇器 `foo.field`。
-* 當包含包含子欄位的欄位時，所有子欄位也會依預設進行投影。 不過，您可以使用括弧來篩選傳回的子欄位 `"( )"`。
-   * 例如， `addresses(type,city.country)` 僅返回每個陣列元素的地址類型和地址城市所在的 `addresses` 國家。
-   * 上述範例等同於 `addresses.type,addresses.city.country`。
+   * 例如，要選擇名為`field`的欄位，該欄位在名為`foo`的欄位內嵌，請使用選擇器`foo.field`。
+* 當包含包含子欄位的欄位時，所有子欄位也會依預設進行投影。 不過，您可以使用括弧`"( )"`來篩選傳回的子欄位。
+   * 例如，`addresses(type,city.country)`僅返回每個`addresses`陣列元素的地址類型和地址城市所在的國家。
+   * 上述範例等效於`addresses.type,addresses.city.country`。
 
 >[!NOTE]
 >
@@ -523,11 +525,11 @@ curl -X POST \
 
 ### 選擇器參數的範例
 
-以下範例顯示範 `selector` 例參數，後面接著它們所代表的結構化值。
+下列範例顯示範例`selector`參數，後面接著它們所代表的結構化值。
 
 **person.lastName**
 
-返回所 `lastName` 請求資源中對 `person` 像的子欄位。
+返回請求資源中`person`對象的`lastName`子欄位。
 
 ```json
 {
@@ -539,7 +541,7 @@ curl -X POST \
 
 **地址**
 
-傳回陣列中的所 `addresses` 有元素，包括每個元素中的所有欄位，但不傳回其他欄位。
+傳回`addresses`陣列中的所有元素，包括每個元素中的所有欄位，但不傳回其他欄位。
 
 ```json
 {
@@ -566,7 +568,7 @@ curl -X POST \
 
 **person.lastName,addresses**
 
-傳回 `person.lastName` 欄位和陣列中的所有 `addresses` 元素。
+傳回`person.lastName`欄位和`addresses`陣列中的所有元素。
 
 ```json
 {
@@ -623,7 +625,7 @@ curl -X POST \
 
 **地址（類型，城市）**
 
-僅傳回陣列中每 `type` 個元 `city` 素的和欄位值 `addresses` 。 每個元素中包含的所有其他子 `addresses` 欄位都被過濾掉。
+僅傳回`addresses`陣列中每個元素的`type`和`city`欄位值。 每個`addresses`元素中包含的所有其他子欄位都被過濾掉。
 
 ```json
 {
@@ -648,4 +650,4 @@ curl -X POST \
 
 ## 後續步驟
 
-本指南已向您顯示設定投影和目標所涉及的步驟，包括如何正確設定參數的格 `selector` 式。 您現在可以根據組織的需求建立新的投影目的地和設定。
+本指南已向您顯示配置投影和目標所涉及的步驟，包括如何正確格式化`selector`參數。 您現在可以根據組織的需求建立新的投影目的地和設定。
