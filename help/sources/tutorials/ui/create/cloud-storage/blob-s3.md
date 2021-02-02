@@ -1,25 +1,25 @@
 ---
-keywords: Experience Platform;home;popular topics;Amazon S3;Azure Blob
+keywords: Experience Platform;home；熱門主題；Amazon S3;Azure Blob
 solution: Experience Platform
 title: 在UI中建立Azure Blob或Amazon S3來源連接器
 topic: overview
 type: Tutorial
 description: 'Adobe Experience Platform中的來源連接器可讓您依計畫吸收外部來源的資料。 '
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 2940f030aa21d70cceeedc7806a148695f68739e
 workflow-type: tm+mt
-source-wordcount: '135'
+source-wordcount: '144'
 ht-degree: 0%
 
 ---
 
 
-# 在UI中 [!DNL Azure Blob] 建立 [!DNL Amazon] 或S3來源連接器
+# 在UI中建立[!DNL Azure Blob]或[!DNL Amazon] S3源連接器
 
 Adobe Experience Platform中的來源連接器可讓您依計畫吸收外部來源的資料。
 
-雲端儲存來源可將您自己的資料匯入 [!DNL Platform] 其中，而不需下載、格式化或上傳。 收錄的資料可格式化為XDM JSON、XDM鑲木地板或分隔字元。 此程式的每個步驟都會整合至Sources工作流程中。 [!DNL Platform] 允許您從批次和批次中 [!DNL Azure Blob] 導入 [!DNL Amazon S3] 資料。
+雲端儲存來源可將您自己的資料匯入[!DNL Platform]，而不需下載、格式化或上傳。 收錄的資料可格式化為XDM JSON、XDM Parce或分隔。 此程式的每個步驟都會整合至Sources工作流程中。 [!DNL Platform] 允許您從批次和批次中 [!DNL Azure Blob] 導入 [!DNL Amazon S3] 資料。
 
-有關使用源連接器的詳 [!DNL Azure Blob] 細說明，請閱讀源連 [[!DNL Azure Blob] 接器指南](./blob.md)。
+有關使用[!DNL Azure Blob]源連接器的詳細說明，請閱讀[[!DNL Azure Blob] 源連接器指南](./blob.md)。
 
-有關使用源連接器的詳 [!DNL Amazon S3] 細說明，請閱讀源連 [[!DNL Amazon S3] 接器指南](./blob.md)。
+有關使用[!DNL Amazon S3]源連接器的詳細說明，請閱讀[[!DNL Amazon S3] 源連接器指南](./blob.md)。
