@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics;Policy enforcement;Automatic enforcement;API-based enforcement;data governance
+keywords: Experience Platform;home；熱門主題；策略實施；自動實施；基於API的實施；資料治理
 solution: Experience Platform
-title: 策略實施概述
-topic: enforcement
+title: 自動執行原則
+topic: guide
 description: 本檔案涵蓋在Experience Platform中啟動區段至目標時，資料使用原則的自動強制方式。
 translation-type: tm+mt
-source-git-commit: 385084f3de2ebfcbee94d6b0c116dae82f5df764
+source-git-commit: acc4fa59a4808ed9a32c2aaf664039e0d12dc1d8
 workflow-type: tm+mt
-source-wordcount: '1115'
+source-wordcount: '1128'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 0%
 
 在標籤資料並定義使用策略後，您就可以強制資料使用與策略相符。 在將觀眾區段啟動至目標時，Adobe Experience Platform會在發生任何違規時自動實施使用政策。
 
-## 先決條件
+## 必要條件
 
 本指南需要對參與自動執行的平台服務有良好的理解。 請參閱下列檔案以進一步瞭解，然後再繼續本指南：
 
