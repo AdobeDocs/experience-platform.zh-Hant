@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;Query editor;query editor;Query service;query service;
+keywords: Experience Platform;home;popular topics；查詢編輯器；查詢編輯器；查詢服務；查詢服務；
 solution: Experience Platform
 title: 查詢編輯器使用手冊
 topic: query editor
@@ -7,7 +7,7 @@ description: Query Editor是Adobe Experience Platform Query Service提供的互�
 translation-type: tm+mt
 source-git-commit: f35443046a3d2bc5101d0fa2a58d07f4b6a31151
 workflow-type: tm+mt
-source-wordcount: '1068'
+source-wordcount: '1081'
 ht-degree: 1%
 
 ---
