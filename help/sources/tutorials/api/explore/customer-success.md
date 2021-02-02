@@ -1,23 +1,23 @@
 ---
-keywords: Experience Platform;home;popular topics;cs;CS;customer success system
+keywords: Experience Platform;home；熱門主題；cs;CS；客戶成功系統
 solution: Experience Platform
 title: 使用Flow Service API探索客戶成功系統
 topic: overview
 description: 本教學課程使用Flow Service API來探索Customer Success(CS)系統。
 translation-type: tm+mt
-source-git-commit: 25f1dfab07d0b9b6c2ce5227b507fc8c8ecf9873
+source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
 workflow-type: tm+mt
-source-wordcount: '582'
+source-wordcount: '596'
 ht-degree: 1%
 
 ---
 
 
-# 使用 [!DNL Flow Service] API探索客戶成功系統
+# 使用[!DNL Flow Service] API探索客戶成功系統
 
-[!DNL Flow Service] 用於收集和集中Adobe Experience Platform內不同來源的客戶資料。 該服務提供用戶介面和REST風格的API，所有支援的源都可從中連接。
+[!DNL Flow Service] 用於收集和集中Adobe Experience Platform內不同來源的客戶資料。該服務提供用戶介面和REST風格的API，所有支援的源都可從中連接。
 
-本教學課程使 [!DNL Flow Service] 用API來探索客戶成功(CS)系統。
+本教學課程使用[!DNL Flow Service] API來探索客戶成功(CS)系統。
 
 ## 快速入門
 
@@ -26,38 +26,38 @@ ht-degree: 1%
 * [來源](../../../home.md): [!DNL Experience Platform] 允許從各種來源接收資料，同時提供使用服務構建、標籤和增強傳入資料的 [!DNL Platform] 能力。
 * [沙盒](../../../../sandboxes/home.md): [!DNL Experience Platform] 提供虛擬沙盒，可將單一執行個體分 [!DNL Platform] 割為不同的虛擬環境，以協助開發和發展數位體驗應用程式。
 
-以下各節提供您必須知道的其他資訊，才能使用 [!DNL Flow Service] API成功連線至CS系統。
+以下各節提供您必須知道的其他資訊，才能使用[!DNL Flow Service] API成功連線至CS系統。
 
 ### 獲得基本連接
 
-若要使用API來探索您的CS [!DNL Platform] 系統，您必須擁有有效的基本連線ID。 如果您尚未建立想要使用之CS系統的基本連線，則可透過下列教學課程來建立一個連線：
+若要使用[!DNL Platform] API來探索您的CS系統，您必須擁有有效的基本連線ID。 如果您尚未建立想要使用之CS系統的基本連線，則可透過下列教學課程來建立一個連線：
 
 * [Salesforce Service Cloud](../create/customer-success/salesforce-service-cloud.md)
 * [ServiceNow](../create/customer-success/servicenow.md)
 
 ### 讀取範例API呼叫
 
-本教學課程提供範例API呼叫，以示範如何設定請求的格式。 這些包括路徑、必要標題和正確格式化的請求負載。 也提供API回應中傳回的範例JSON。 如需範例API呼叫檔案中所用慣例的詳細資訊，請參閱疑難排解指 [南中有關如何讀取範例API呼叫的](../../../../landing/troubleshooting.md#how-do-i-format-an-api-request)[!DNL Experience Platform] 章節。
+本教學課程提供範例API呼叫，以示範如何設定請求的格式。 這些包括路徑、必要標題和正確格式化的請求負載。 也提供API回應中傳回的範例JSON。 如需範例API呼叫檔案中所用慣例的詳細資訊，請參閱[!DNL Experience Platform]疑難排解指南中[如何讀取範例API呼叫](../../../../landing/troubleshooting.md#how-do-i-format-an-api-request)一節。
 
 ### 收集必要標題的值
 
-若要呼叫API，您必 [!DNL Platform] 須先完成驗證教 [學課程](../../../../tutorials/authentication.md)。 完成驗證教學課程後，將提供所有 [!DNL Experience Platform] API呼叫中每個必要標題的值，如下所示：
+若要呼叫[!DNL Platform] API，您必須先完成[驗證教學課程](https://www.adobe.com/go/platform-api-authentication-en)。 完成驗證教學課程後，所有[!DNL Experience Platform] API呼叫中每個所需標題的值都會顯示在下面：
 
-* 授權：生產者 `{ACCESS_TOKEN}`
-* x-api-key: `{API_KEY}`
-* x-gw-ims-org-id: `{IMS_ORG}`
+* 授權：載體`{ACCESS_TOKEN}`
+* x-api-key:`{API_KEY}`
+* x-gw-ims-org-id:`{IMS_ORG}`
 
-中的所有資 [!DNL Experience Platform]源(包括屬於這些資源 [!DNL Flow Service])都隔離到特定的虛擬沙盒。 對API的所 [!DNL Platform] 有請求都需要一個標題，該標題會指定要在中執行的操作的沙盒名稱：
+[!DNL Experience Platform]中的所有資源（包括屬於[!DNL Flow Service]的資源）都隔離到特定的虛擬沙盒。 對[!DNL Platform] API的所有請求都需要一個標題，該標題指定要在中執行操作的沙盒的名稱：
 
-* x-sandbox-name: `{SANDBOX_NAME}`
+* x-sandbox-name:`{SANDBOX_NAME}`
 
 所有包含裝載(POST、PUT、PATCH)的請求都需要額外的媒體類型標題：
 
-* 內容類型： `application/json`
+* 內容類型：`application/json`
 
 ## 探索您的資料表格
 
-使用CS系統的基本連線，您可以執行GET請求來探索資料表。 使用以下調用查找要檢查或裝入的表的路徑 [!DNL Platform]。
+使用CS系統的基本連線，您可以執行GET請求來探索資料表。 使用以下調用查找要檢查或裝入[!DNL Platform]的表的路徑。
 
 **API格式**
 
@@ -82,7 +82,7 @@ curl -X GET \
 
 **回應**
 
-成功的回應會從CS系統傳回一組表格。 尋找您要放入的表格， [!DNL Platform] 並記下其屬性，因 `path` 為您必須在下個步驟中提供表格以檢查其結構。
+成功的回應會從CS系統傳回一組表格。 查找要帶入[!DNL Platform]的表，並記下其`path`屬性，因為在下一步中需要提供該表來檢查其結構。
 
 ```json
 [
@@ -143,7 +143,7 @@ curl -X GET \
 
 **回應**
 
-成功的響應返回指定表的結構。 有關每個表列的詳細資訊位於陣列的元 `columns` 素中。
+成功的響應返回指定表的結構。 有關每個表列的詳細資訊位於`columns`陣列的元素中。
 
 ```json
 {
@@ -178,4 +178,4 @@ curl -X GET \
 
 ## 後續步驟
 
-在本教學課程中，您已探索您的CS系統，找到您要內嵌至的表格路徑 [!DNL Platform]，並取得其結構的相關資訊。 您可在下一個教學課程中使用此 [資訊，從CS系統收集資料並匯入Platform](../collect/customer-success.md)。
+在本教學課程中，您已探索您的CS系統，找到您要內嵌至[!DNL Platform]的表格路徑，並取得其結構的相關資訊。 您可以在下一個教學課程中使用這項資訊，從CS系統收集資料並匯入Platform](../collect/customer-success.md)。[
