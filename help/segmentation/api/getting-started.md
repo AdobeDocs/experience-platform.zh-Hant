@@ -1,51 +1,51 @@
 ---
-keywords: Experience Platform;home;popular topics;segmentation;Segmentation;Segmentation Service;api;
+keywords: Experience Platform; home；熱門主題；分段；分段；分段服務；api;
 solution: Experience Platform
 title: 區段服務開發人員指南
 topic: developer guide
 description: 以下檔案提供您需要知道的其他資訊，以便成功使用區段API。
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
 workflow-type: tm+mt
-source-wordcount: '308'
+source-wordcount: '322'
 ht-degree: 0%
 
 ---
 
 
-# Getting started with [!DNL Segmentation Service] {#getting-started}
+# 開始使用[!DNL Segmentation Service] {#getting-started}
 
-Adobe Experience Platform可 [!DNL Segmentation Service] 讓您在Adobe Experience Platform中從資料建立細分並產生受 [!DNL Real-time Customer Profile] 眾。
+Adobe Experience Platform [!DNL Segmentation Service]可讓您在Adobe Experience Platform中建立細分，並從您的[!DNL Real-time Customer Profile]資料產生受眾。
 
-開發人員指南需要對使用中涉及的各 [!DNL Experience Platform] 種服務有良好的認識 [!DNL Segmentation Service]。
+開發人員指南需要對使用[!DNL Segmentation Service]時涉及的各種[!DNL Experience Platform]服務有良好的瞭解。
 
-- [[!DNL Segmentation]](../home.md):可讓您從資料建立受眾 [!DNL Real-time Customer Profile] 區段。
-- [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md):組織客戶體驗資料 [!DNL Experience Platform] 的標準化架構。
+- [[!DNL Segmentation]](../home.md):可讓您從資料建立受眾 [!DNL Real-time Customer Profile] 細分。
+- [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md):組織客戶體驗資 [!DNL Experience Platform] 料的標準化架構。
 - [[!DNL Real-time Customer Profile]](../../profile/home.md):根據來自多個來源的匯整資料，提供統一、即時的消費者個人檔案。
 - [沙盒](../../sandboxes/home.md): [!DNL Experience Platform] 提供虛擬沙盒，可將單一執行個體分 [!DNL Platform] 割為不同的虛擬環境，以協助開發和發展數位體驗應用程式。
 
-以下各節提供您成功使用 [!DNL Segmentation] API時需要知道的其他資訊。
+以下各節提供您必須知道的其他資訊，才能成功使用[!DNL Segmentation] API。
 
 ## 讀取範例API呼叫
 
-API文 [!DNL Segmentation Service] 件提供範例API呼叫，以示範如何設定請求的格式。 這些包括路徑、必要標題和正確格式化的請求負載。 也提供API回應中傳回的範例JSON。 如需範例API呼叫檔案中所用慣例的詳細資訊，請參閱疑難排解指 [南中有關如何讀取範例API呼叫的](../../landing/troubleshooting.md#how-do-i-format-an-api-request)[!DNL Experience Platform] 章節。
+[!DNL Segmentation Service] API檔案提供範例API呼叫，以示範如何格式化您的請求。 這些包括路徑、必要標題和正確格式化的請求負載。 也提供API回應中傳回的範例JSON。 如需範例API呼叫檔案中所用慣例的詳細資訊，請參閱[!DNL Experience Platform]疑難排解指南中[如何讀取範例API呼叫](../../landing/troubleshooting.md#how-do-i-format-an-api-request)一節。
 
 ## 必要的標題
 
-API檔案也要求您完成驗證教學 [課程](../../tutorials/authentication.md) ，才能成功呼叫端點 [!DNL Platform] 。 完成驗證教學課程可提供 [!DNL Experience Platform] API呼叫中每個必要標題的值，如下所示：
+API檔案也要求您完成[驗證教學課程](https://www.adobe.com/go/platform-api-authentication-en)，才能成功呼叫[!DNL Platform]端點。 完成驗證教學課程可為[!DNL Experience Platform] API呼叫中的每個必要標題提供值，如下所示：
 
-- 授權： `Bearer {ACCESS_TOKEN}`
-- x-api-key: `{API_KEY}`
-- x-gw-ims-org-id: `{IMS_ORG}`
+- 授權：`Bearer {ACCESS_TOKEN}`
+- x-api-key:`{API_KEY}`
+- x-gw-ims-org-id:`{IMS_ORG}`
 
-中的所有資 [!DNL Experience Platform] 源都與特定虛擬沙盒隔離。 對API的所 [!DNL Platform] 有請求都需要一個標題，該標題指定執行操作的沙盒的名稱：
+[!DNL Experience Platform]中的所有資源都隔離到特定的虛擬沙盒。 對[!DNL Platform] API的所有請求都需要一個標題，該標題指定執行操作的沙盒的名稱：
 
-- x-sandbox-name: `{SANDBOX_NAME}`
+- x-sandbox-name:`{SANDBOX_NAME}`
 
 >[!NOTE]
 >
->如需有關在中使用沙盒的詳細資訊，請 [!DNL Experience Platform]參閱沙盒 [概觀檔案](../../sandboxes/home.md)。
+>如需在[!DNL Experience Platform]中使用沙盒的詳細資訊，請參閱[沙盒概觀檔案](../../sandboxes/home.md)。
 
 ## 後續步驟
 
-若要使用 [!DNL Segmentation Service] API進行呼叫，請使用左側導覽或開發人員指南總覽，選取其中一個可用 [的端點指南](./overview.md)
+若要使用[!DNL Segmentation Service] API進行呼叫，請使用左側導覽或在[開發人員指南總覽](./overview.md)中選取其中一個可用的端點指南
