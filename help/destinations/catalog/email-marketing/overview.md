@@ -1,72 +1,72 @@
 ---
-keywords: email;Email;e-mail;email destinations
+keywords: 電子郵件；電子郵件；電子郵件；電子郵件目標
 title: 電子郵件行銷目標
 seo-title: 電子郵件行銷目標
 type: Tutorial
 description: 電子郵件服務供應商(ESP)可讓您管理電子郵件行銷活動，例如傳送促銷電子郵件促銷活動。
 seo-description: 電子郵件服務供應商(ESP)可讓您管理電子郵件行銷活動，例如傳送促銷電子郵件促銷活動。
 translation-type: tm+mt
-source-git-commit: 0bb1622895b1e0f97fc47b5c61d456bc369746c8
+source-git-commit: 95f57f9d1b3eeb0b16ba209b9774bd94f5758009
 workflow-type: tm+mt
-source-wordcount: '827'
+source-wordcount: '811'
 ht-degree: 1%
 
 ---
 
 
-# 電子郵件行銷目標 {#email-marketing-destinations}
+# 電子郵件行銷目標{#email-marketing-destinations}
 
-電子郵件服務供應商(ESP)可讓您管理電子郵件行銷活動，例如傳送促銷電子郵件宣傳。 即時客戶資料平台可讓您將區段啟用至電子郵件行銷目的地，與ESP整合。
+電子郵件服務供應商(ESP)可讓您管理電子郵件行銷活動，例如傳送促銷電子郵件宣傳。 Adobe Experience Platform可讓您將區段啟用至電子郵件行銷目的地，與ESP整合。
 
-若要將區段傳送至您促銷活動的電子郵件行銷目的地，即時CDP必須先連線至目標。
+若要傳送區段至促銷活動的電子郵件行銷目的地，平台必須先連線至目的地。
 
 連線至電子郵件行銷目的地是三步驟。 本頁將進一步說明每個步驟。
 
-在連接目標流中（如下節所述），連接到Amazon S3或SFTP。 即時CDP將您的細分導出為 `.csv` 或文 `.txt` 件，並將其發送到您的首選位置。 從即時CDP中啟用的儲存位置，排程您在電子郵件行銷平台中的資料匯入。 匯入資料的程式會因每個合作夥伴而異。 如需詳細資訊，請參閱個別的目標文章。
+在連接目標流中（如下節所述），連接到Amazon S3或SFTP。 平台會將區段匯出為`.csv`或`.txt`檔案，並將它們傳送至您偏好的位置。 從平台中啟用的儲存位置，排程您在電子郵件行銷平台中的資料匯入。 匯入資料的程式會因每個合作夥伴而異。 如需詳細資訊，請參閱個別的目標文章。
 
-## 配置目標 {#connect-destination}
+## 配置目標{#connect-destination}
 
-在「 **[!UICONTROL 連線]** >目 **[!UICONTROL 的地]**」中，選取您要連線的電子郵件行銷目的地，然後選取「設 **[!UICONTROL 定」]**。
+在&#x200B;**[!UICONTROL Connections]** > **[!UICONTROL Destinations]**&#x200B;中，選擇您要連接的電子郵件行銷目標，然後選擇&#x200B;**[!UICONTROL Configure]**。
 
 ![連接到目標](../../assets/catalog/email-marketing/overview/connect-email-marketing.png)
 
-在「驗 **[!UICONTROL 證]** 」步驟中，如果您先前已設定電子郵件行銷目的地的連線，請選取「現有帳戶 **** 」並選取您現有的連線。 或者，您可以選 **[!UICONTROL 取「新帳戶]** 」來設定與電子郵件行銷目的地的新連線。 在「連 **[!UICONTROL 接類型]** 」選擇器中，您可以選擇Amazon S3、SFTP含密碼或SSH金鑰的SFTP。 根據您的連線類型，填入下列資訊，然後選取「連 **[!UICONTROL 線」]**。
+在&#x200B;**[!UICONTROL 驗證]**&#x200B;步驟中，如果您先前已設定電子郵件行銷目的地的連線，請選取&#x200B;**[!UICONTROL 現有帳戶]**&#x200B;並選取您現有的連線。 或者，您可以選擇&#x200B;**[!UICONTROL 新帳戶]**&#x200B;來設定與電子郵件行銷目的地的新連線。 在&#x200B;**[!UICONTROL 連接類型]**&#x200B;選擇器中，您可以在Amazon S3、SFTP與密碼或SSH密鑰之間選擇。 根據您的連接類型填寫以下資訊，然後選擇&#x200B;**[!UICONTROL Connect]**。
 
-- 對於 **S3連接**，您必須提供您的Amazon存取金鑰ID和密碼存取金鑰。
-- 對於 **具有密碼連接的SFTP** ，您必須為SFTP伺服器提供域、埠、用戶名和密碼。
-- 對於 **具有SSH密鑰連接的SFTP** ，必須為SFTP伺服器提供域、埠、用戶名和SSH密鑰。
+- 對於&#x200B;**S3連接**，您必須提供您的Amazon訪問密鑰ID和秘密訪問密鑰。
+- 對於具有Password **連接的** SFTP，必須為SFTP伺服器提供域、埠、用戶名和密碼。
+- 對於具有SSH密鑰&#x200B;**連接的** SFTP，必須為SFTP伺服器提供域、埠、用戶名和SSH密鑰。
 
-或者，您可以附加RSA格式的公開密鑰，以便在「密鑰」部分下為導出的檔案添加 **[!UICONTROL 加密]** 。 請注意，此公開金 **鑰必** 須寫入為Base64編碼字串。
+或者，您可以附加RSA格式的公鑰，以便在&#x200B;**[!UICONTROL 密鑰]**&#x200B;部分下嚮導出的檔案添加加密。 請注意，此公共密鑰&#x200B;**必須**&#x200B;寫入為Base64編碼字串。
 
-在「設 **[!UICONTROL 置]** 」步驟中，輸入新目標的名稱和說明，以及導出檔案的檔案格式。
+在&#x200B;**[!UICONTROL Setup]**&#x200B;步驟中，輸入新目標的名稱和說明，以及導出檔案的檔案格式。
 
 如果您在上一步驟中選擇了Amazon S3作為儲存選項，請將儲存段名稱和資料夾路徑插入雲儲存目標中將檔案發送到的位置。 對於SFTP儲存選項，插入要傳送檔案的資料夾路徑。
 
-此外，您也可以在此步驟中選取任何應套用至此目的地的行銷使用案例。 行銷使用案例會指出將資料匯出至目的地的方式。 您可以從Adobe定義的行銷使用案例中選擇，也可以建立自己的行銷使用案例。 有關行銷使用案例的詳細資訊，請參 [閱即時CDP中的資料治理頁](../../../rtcdp/privacy/data-governance-overview.md#destinations) 。 如需個別Adobe定義之行銷使用案例的詳細資訊，請參閱「資 [料使用政策」概觀](../../../data-governance/policies/overview.md#core-actions)。
+此外，您也可以在此步驟中選取任何應套用至此目的地的行銷使用案例。 行銷使用案例會指出將資料匯出至目的地的方式。 您可以從Adobe定義的行銷使用案例中選擇，也可以建立自己的行銷使用案例。 如需行銷使用案例的詳細資訊，請參閱[資料使用政策概述](../../../data-governance/policies/overview.md)。
 
 ![電子郵件設定步驟](../../assets/catalog/email-marketing/overview/email-setup-step.png)
 
-## 選擇要包含在目標導出中的段成員 {#select-segments}
+## 選擇目標導出中要包含的段成員{#select-segments}
 
-在「選 **[!UICONTROL 擇區段]** 」頁面上，選取要傳送至目的地的區段。 尋找以下各節中欄位的詳細資訊。
+在&#x200B;**[!UICONTROL 選擇區段]**&#x200B;頁面上，選擇要傳送至目的地的區段。 尋找以下各節中欄位的詳細資訊。
 
 ![選取區段](../../assets/common/email-select-segments.png)
 
 ## 配置檔案名
 
-如需區段排程和檔案名稱編輯選項的詳細資訊，請參閱啟 [動目標教學課程的](../../ui/activate-destinations.md#configure) 「設定」步驟。
+有關區段排程和檔案名稱編輯選項的資訊，請參閱啟動目標教學課程中的「設定[」步驟。](../../ui/activate-destinations.md#configure)
 
-## 選擇屬性——選擇要在導出的檔案中用作目標屬性的架構欄位 {#destination-attributes}
+## 選擇屬性——選擇在導出的檔案{#destination-attributes}中用作目標屬性的架構欄位
 
 在此步驟中，您會選取要匯出至電子郵件行銷目的地的欄位，以及標示哪些欄位是必填欄位。
 
 ![目標屬性](../../assets/catalog/email-marketing/overview/recommended-attributes.png)
 
-有關此步驟的詳細資訊，請參閱激活目 [標教程中的](../../ui/activate-destinations.md#select-attributes) 「選擇屬性」步驟。
+有關此步驟的詳細資訊，請參閱激活目標教程中的[選擇屬性](../../ui/activate-destinations.md#select-attributes)步驟。
 
-### 身份 {#identity}
+### 身份{#identity}
 
-建議您從聯合架構中選擇唯一 [識別碼](../../../profile/home.md#profile-fragments-and-union-schemas)。 這是您使用者身分識別的欄位。 最常見的欄位是電子郵件地址，但也可以是忠誠度方案ID或電話號碼。 請參見下表，瞭解模式中最常見的唯一標識符及其XDM欄位。
+我們建議您從[union架構](../../../profile/home.md#profile-fragments-and-union-schemas)中選擇唯一標識符。 這是您使用者身分識別的欄位。 最常見的欄位是電子郵件地址，但也可以是忠誠度方案ID或電話號碼。 請參見下表，瞭解模式中最常見的唯一標識符及其XDM欄位。
 
 | 唯一識別碼 | 統一模式中的XDM欄位 |
 ----------------- | ---------------------------
@@ -100,7 +100,7 @@ ht-degree: 1%
 
 ## 啟用區段至電子郵件行銷目標
 
-如需如何啟用區段至電子郵件行銷目的地的指示，請參閱啟 [用資料至目的地](../../ui/activate-destinations.md)。
+如需如何啟用區段至電子郵件行銷目的地的指示，請參閱[啟用資料至目的地](../../ui/activate-destinations.md)。
 
 ## 其他資源
 
