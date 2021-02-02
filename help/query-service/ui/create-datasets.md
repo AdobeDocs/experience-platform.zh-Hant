@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;query service;Query service;generate datasets;generate dataset;create dataset;
+keywords: Experience Platform; home；熱門主題；查詢服務；查詢服務；生成資料集；生成資料集；建立資料集；
 solution: Experience Platform
 title: 從查詢結果生成資料集
 topic: queries
@@ -8,7 +8,7 @@ description: '查詢服務允許從UI建立資料集。 建立資料集後，可
 translation-type: tm+mt
 source-git-commit: 0ba4e26927cdc96855f35d72a8a6de55f4a34bfa
 workflow-type: tm+mt
-source-wordcount: '305'
+source-wordcount: '320'
 ht-degree: 0%
 
 ---
