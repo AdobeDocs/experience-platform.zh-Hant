@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;experience data model;data model;ui;workspace;schema;schemas;
+keywords: Experience Platform;home；熱門主題；api;API;XDM;XDM系統；體驗資料模型；ui;workspace；架構；架構；
 solution: Experience Platform
 title: 在UI中建立和編輯結構
 description: 瞭解如何在Experience Platform使用者介面中建立和編輯結構描述的基本知識。
 topic: user guide
 translation-type: tm+mt
-source-git-commit: efa1d8efb26f4196f6724702784ccd13a9337a8a
+source-git-commit: 3aa838509e4e24c57508e7411b0ffcf135fbcf04
 workflow-type: tm+mt
-source-wordcount: '1032'
+source-wordcount: '1167'
 ht-degree: 0%
 
 ---
@@ -23,7 +23,7 @@ ht-degree: 0%
 >
 >有關模式建立過程的完整指南，請遵循[模式建立教程](../../tutorials/create-schema-ui.md)來建立完整的示例模式並熟悉[!DNL Schema Editor]的許多功能。
 
-## 先決條件
+## 必要條件
 
 本指南需要對XDM System有充分的瞭解。 請參閱[XDM概述](../../home.md)以瞭解Experience Platform生態系統中XDM的角色介紹，以及[架構構成基礎](../../schema/composition.md)，以瞭解如何構建架構。
 
@@ -65,13 +65,21 @@ ht-degree: 0%
 
 ![](../../images/ui/resources/schemas/add-mixin-button.png)
 
-在出現的對話方塊中，您可以從清單中選取所需的混音。 您可以從清單中選取多個混音，每個選取的混音都會出現在右側邊欄中。
+此時將出現一個對話框，其中顯示可為模式選擇的混音清單。 由於mixin只與一個類相容，因此將只列出與架構的所選類相關聯的mixin。 依預設，會根據所列出的混音在您組織中的使用人氣來排序。
+
+![](../../images/ui/resources/schemas/mixin-popularity.png)
+
+您可以使用搜尋列來協助尋找您想要的混音。 名稱與查詢相符的Mixin會出現在清單的頂端。 在&#x200B;**[!UICONTROL 標準欄位]**&#x200B;下，會顯示包含描述所需資料屬性之欄位的混音。
+
+![](../../images/ui/resources/schemas/mixin-search.png)
+
+選擇要添加到架構的混合名稱旁邊的複選框。 您可以從清單中選取多個混音，每個選取的混音都會出現在右側邊欄中。
 
 ![](../../images/ui/resources/schemas/add-mixin.png)
 
 >[!TIP]
 >
->對於任何列出的混音，您可以選擇預覽表徵圖(![](../../images/ui/resources/schemas/preview-icon.png))，以在決定將混音添加到架構之前查看混音提供的欄位結構。
+>對於任何列出的混音，您可以將滑鼠暫留或專注在資訊圖示(![](../../images/ui/resources/schemas/info-icon.png))上，以檢視混音所擷取之資料的簡短說明。 您也可以選擇預覽圖示(![](../../images/ui/resources/schemas/preview-icon.png))，以在您決定將其添加到架構之前，查看混音所提供欄位的結構。
 
 選擇mixin後，選擇&#x200B;**[!UICONTROL 添加mixin]**&#x200B;將其添加到模式。
 
