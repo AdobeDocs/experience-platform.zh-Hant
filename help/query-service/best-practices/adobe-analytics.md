@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;query service;Query service;sample queries;sample query;adobe analytics;
+keywords: Experience Platform;home;popular topics;query service;Query service;sample query;sample query;adobe analytics;
 solution: Experience Platform
 title: 範例查詢
 topic: queries
@@ -7,7 +7,7 @@ description: 從選取的Adobe Analytics報表套裝中取得的資料會轉換�
 translation-type: tm+mt
 source-git-commit: e2c648829bb3268ab319da934f5cc6cc811290b3
 workflow-type: tm+mt
-source-wordcount: '1002'
+source-wordcount: '1017'
 ht-degree: 1%
 
 ---
@@ -215,8 +215,8 @@ Adobe Analytics中另一種銷售變數類型是轉換語法。 使用產品語�
 
 | eVar6（產品尋找方法） | 收入 | 訂單 | 產品檢視 | 購物車新增 |
 | ------------------------------ | ------- | ------ | ------------- | ----- |
-| 內部搜尋：夏季襯衫 | 十九點九九 | 1 | 1 | 3 |
-| 內部搜索：冬季帽 | 12塊9毛9 | 3 | 1 | 1 |
+| 內部搜尋：夏季襯衫 | 十九點九九 | 1 | 3 | 3 |
+| 內部搜索：冬季帽 | 12塊9毛9 | 3 | 3 | 3 |
 
 若要進一步瞭解使用轉換語法，請閱讀[使用轉換語法實作eVars的Adobe Analytics檔案](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/evar-merchandising.html?lang=en#implement-using-conversion-variable-syntax)。
 
