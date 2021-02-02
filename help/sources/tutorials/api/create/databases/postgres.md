@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics;PostgreSQL;postgresql;PSQL;psql
+keywords: Experience Platform;home；熱門主題；PostgreSQL;postgresql;PSQL;psql
 solution: Experience Platform
 title: 使用流服務API建立PostgreSQL連接器
 topic: overview
 type: Tutorial
 description: 本教學課程使用Flow Service API來引導您完成將Experience Platform連接至PostgreSQL（以下稱為「PSQL」）的步驟。
 translation-type: tm+mt
-source-git-commit: 36620a229fc8e6e3fa4545bfc775a49bc89935bb
+source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
 workflow-type: tm+mt
-source-wordcount: '571'
+source-wordcount: '584'
 ht-degree: 2%
 
 ---
@@ -50,7 +50,7 @@ ht-degree: 2%
 
 ### 收集必要標題的值
 
-若要呼叫[!DNL Platform] API，您必須先完成[驗證教學課程](../../../../../tutorials/authentication.md)。 完成驗證教學課程後，所有[!DNL Experience Platform] API呼叫中每個所需標題的值都會顯示在下面：
+若要呼叫[!DNL Platform] API，您必須先完成[驗證教學課程](https://www.adobe.com/go/platform-api-authentication-en)。 完成驗證教學課程後，所有[!DNL Experience Platform] API呼叫中每個所需標題的值都會顯示在下面：
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
@@ -120,4 +120,4 @@ curl -X POST \
 
 ## 後續步驟
 
-在本教程中，您使用[!DNL Flow Service] API建立了PSQL連接，並獲取了該連接的唯一ID值。 在下一個教程中，您可以使用此連接ID來學習如何使用流服務API[來瀏覽資料庫或NoSQL系統。](../../explore/database-nosql.md)
+在本教程中，您使用[!DNL Flow Service] API建立了PSQL連接，並獲取了該連接的唯一ID值。 在下一個教程中，您可以使用此連接ID來學習如何使用流服務API](../../explore/database-nosql.md)來瀏覽資料庫或NoSQL系統。[
