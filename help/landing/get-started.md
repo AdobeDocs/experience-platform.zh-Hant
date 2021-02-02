@@ -1,19 +1,20 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home；熱門主題
 solution: Experience Platform
-title: Adobe Experience Platform產品檔案
+title: ' Adobe Experience Platform 快速入門'
 topic: getting started
+description: 此影片提供Experience Platform的簡介，並概述它解決的商業挑戰。
 translation-type: tm+mt
-source-git-commit: b5503440aec5afd48cafdfa765fd3521f6ea4c68
+source-git-commit: 2dbd92efbd992b70f4f750b09e9d2e0626e71315
 workflow-type: tm+mt
-source-wordcount: '61'
-ht-degree: 9%
+source-wordcount: '49'
+ht-degree: 24%
 
 ---
 
 
 #  Adobe Experience Platform 快速入門
 
-本影片提供快速簡介， [!DNL Experience Platform] 並概述其解決的商業挑戰。 提供多個視訊教學課程，以補充說 [!DNL Platform] 明檔案。 如需協助您開始使用的其他影片，請 [!DNL Platform]參閱「平 [台簡介」影片系列](https://docs.adobe.com/content/help/en/platform-learn/tutorials/intro-to-platform/overview.html)。
+此視訊提供[!DNL Experience Platform]的簡介，並概述它解決的一些商業挑戰。
 
 >[!VIDEO](https://video.tv.adobe.com/v/32797?quality=12&learn=on)
