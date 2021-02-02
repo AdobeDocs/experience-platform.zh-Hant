@@ -1,11 +1,11 @@
 ---
-keywords: rtcdp segments;segment builder rtcdp;rtcdp segment;customer ai rtcdp
+keywords: rtcdp區段；區段產生器rtcdp;rtcdp區段；客戶ai rtcdp
 title: 即時客戶資料平台中的客戶人工智慧
 description: 客戶人工智慧的概觀，以及它如何協助產生特定結果的分數，例如轉化或客戶流失。
 translation-type: tm+mt
 source-git-commit: de2f4b16677ec6e820903b1e586213a132b126be
 workflow-type: tm+mt
-source-wordcount: '294'
+source-wordcount: '304'
 ht-degree: 0%
 
 ---
