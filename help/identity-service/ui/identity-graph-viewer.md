@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics;identity graph viewer;Identity graph viewer;graph viewer;Graph viewer;identity namespace;Identity namespace;identity;Identity;Identity service;identity service
+keywords: Experience Platform;home；熱門主題；身份圖查看器；Identity Graph viewer;Graph viewer;Graph viewer;Identity namespace;Identity;Identity Service;identity service
 solution: Experience Platform
 title: Adobe Experience Platform Identity Service
 topic: tutorial
 description: 身分圖是特定客戶不同身分之間關係的地圖，可讓您以視覺化方式呈現客戶如何透過不同通道與您的品牌互動。
 translation-type: tm+mt
-source-git-commit: 7c52760bdceb8d45d76cd22d69241f8c23943674
+source-git-commit: 7c9c81492df9333945ac62602f10b6097296d62b
 workflow-type: tm+mt
-source-wordcount: '910'
+source-wordcount: '905'
 ht-degree: 1%
 
 ---
@@ -31,23 +31,23 @@ ht-degree: 1%
 
 ### 術語
 
-- **身份（節點）:** 身分或節點是實體（通常是個人）專屬的資料。 身份由命名空間和身份值組成。
-- **連結（邊緣）:** 連結或邊代表身份之間的連接。
-- **圖形（群集）:** 圖形或群集是一組代表個人的身份和連結。
+- **身分（節點）:** 身分或節點是實體（通常是個人）專屬的資料。身份由命名空間和身份值組成。
+- **連結（邊緣）:** 連結或邊緣代表身分之間的連結。
+- **圖形（群集）:** 圖形或群集是一組代表人的身分和連結。
 
 ## 存取身分圖表檢視器
 
-若要在UI中使用身分圖表檢視器，請在左側導覽中選 **[!UICONTROL 取「身分]** 」，然後選取「身 **[!UICONTROL 分圖表」標籤]** 。 在「 **[!UICONTROL Identity Namespace]** 」畫面中，按一下「 **[!UICONTROL Select identity namespace]** 」圖示，以搜尋您要使用的命名空間。
+若要使用UI中的身分圖表檢視器，請在左側導覽中選取&#x200B;**[!UICONTROL Identity]**，然後選取&#x200B;**[!UICONTROL Identity圖表]**&#x200B;標籤。 在&#x200B;**[!UICONTROL Identity Namespace]**&#x200B;螢幕中，按一下&#x200B;**[!UICONTROL 選擇標識名稱空間]**&#x200B;表徵圖以搜索要使用的名稱空間。
 
 ![namespace-screen](../images/identity-graph-viewer/identity-namespace.png)
 
-此時將 **[!UICONTROL 顯示「選擇身份]** 命名空間」面板。 此螢幕包含組織可用的名稱空間清單，包括有關名稱空間的 **[!UICONTROL Display name]**、 **[!UICONTROL Identity符號、]** Proper **[!UICONTROL 、]********** Last UpdatedDate、AdoberOdberAdober的資訊。 只要您有有效的識別值連接到名稱空間，您就可以使用任何提供的名稱空間。
+出現&#x200B;**[!UICONTROL 選擇身份名稱空間]**&#x200B;面板。 此螢幕包含可供組織使用的命名空間清單，包括有關命名空間的&#x200B;**[!UICONTROL 顯示名稱]**、**[!UICONTROL 標識符號]**、**[!UICONTROL 所有者]**、**[!UICONTROL 上次更新日期和**[!UICONTROL &#x200B;說明&#x200B;]**的資訊。]**&#x200B;只要您有有效的識別值連接到名稱空間，您就可以使用任何提供的名稱空間。
 
-選擇要使用的命名空間，然後按一下「 **[!UICONTROL 選擇]** 」繼續。
+選擇要使用的命名空間，然後按一下&#x200B;**[!UICONTROL 選擇]**&#x200B;繼續。
 
 ![select-identity-namespace](../images/identity-graph-viewer/select-identity-namespace.png)
 
-在您選擇了命名空間後，在「 **[!UICONTROL Identity value]** 」文本框中輸入其對應的特定客戶值，並選擇「 **[!UICONTROL View」（查看）]**。
+在您選擇了命名空間後，請在&#x200B;**[!UICONTROL Identity value]**&#x200B;文本框中輸入其對應的特定客戶值，然後選擇&#x200B;**[!UICONTROL View]**。
 
 ![add-identity-value](../images/identity-graph-viewer/identity-value-filled.png)
 
@@ -55,27 +55,27 @@ ht-degree: 1%
 
 >[!IMPORTANT]
 >
->身分圖需要至少兩個連結的身分才能產生，以及有效的命名空間和ID對。 圖形檢視器可顯示的最大身分數為150。 如需詳細資 [訊，請參閱](#appendix) 以下附錄一節。
+>身分圖需要至少兩個連結的身分才能產生，以及有效的命名空間和ID對。 圖形檢視器可顯示的最大身分數為150。 如需詳細資訊，請參閱下面的[附錄](#appendix)一節。
 
 ![身份圖](../images/identity-graph-viewer/graph-viewer.png)
 
-選擇身份以更新 **[!UICONTROL Identities]** （身份）表上突出顯示的行，並更新右邊欄上提供的資訊，該資訊包括身份的 **[!UICONTROL Value]**、 **[!UICONTROL Batch ID]**，及其上次更新的 **** Adate。
+選擇標識以更新&#x200B;**[!UICONTROL Identities]**&#x200B;表上突出顯示的行，並更新右邊欄上提供的資訊，該資訊包括標識的&#x200B;**[!UICONTROL 值]**、**[!UICONTROL 批ID]**&#x200B;及其&#x200B;**[!UICONTROL 上次更新]**&#x200B;日期。
 
 ![select-identity](../images/identity-graph-viewer/select-identity.png)
 
-您可以透過圖形進行篩選，並使用「身分識別」表格上方的排序選項來隔離特定 **[!UICONTROL 命名空間]** 。 從下拉式選單中，選取您要反白顯示的命名空間。
+您可以使用&#x200B;**[!UICONTROL Identities]**&#x200B;表格上方的排序選項，篩選圖形並隔離特定的命名空間。 從下拉式選單中，選取您要反白顯示的命名空間。
 
 ![filter-by-namespace](../images/identity-graph-viewer/filter-namespace.png)
 
-圖形檢視器會傳回，反白顯示您選取的命名空間。 篩選選項也會更新 **[!UICONTROL Identities]** 表，以僅傳回您選取之命名空間的資訊。
+圖形檢視器會傳回，反白顯示您選取的命名空間。 篩選器選項也會更新&#x200B;**[!UICONTROL Identities]**&#x200B;表格，僅傳回您選取之命名空間的資訊。
 
 ![篩選](../images/identity-graph-viewer/filtered.png)
 
-圖形檢視器方塊的右上角包含放大選項。 選取 **(+)** 圖示以放大圖形，或 **** (-)圖示以縮小。
+圖形檢視器方塊的右上角包含放大選項。 選擇&#x200B;**(+)**&#x200B;圖示以放大顯示圖形，或選擇&#x200B;**(-)**&#x200B;圖示以縮小顯示。
 
 ![縮放](../images/identity-graph-viewer/zoom.png)
 
-您可以從題頭中選擇資料源，以查看有關批 **[!UICONTROL 的詳細資訊]** 。 「資 **[!UICONTROL 料來源]** 」表格會顯示與圖形 **[!UICONTROL 關聯的批次ID]** ，以及其 **[!UICONTROL 連結ID]**、來源架構和擷取日期的清單。
+通過從標題中選擇&#x200B;**[!UICONTROL 資料源]**，可以查看有關批的詳細資訊。 **[!UICONTROL 資料來源]**&#x200B;表格顯示與圖形相關的&#x200B;**[!UICONTROL 批次ID]**&#x200B;清單，以及其&#x200B;**[!UICONTROL 連結ID]**、來源架構和擷取日期。
 
 ![資料源](../images/identity-graph-viewer/data-source-table.png)
 
@@ -102,11 +102,9 @@ ht-degree: 1%
 - 標識值必須存在於所選命名空間中。
 - 身分圖表檢視器至少需要兩個連結的身分才能產生。
 - 身分圖表檢視器不能超過150個身分。
-- 目前無法在非生產沙盒中存取身分圖表檢視器。
-- 身分圖表檢視器目前僅支援批次擷取的資料，且不顯示使用串流來源擷取的資料。
 
 ![錯誤畫面](../images/identity-graph-viewer/error-screen.png)
 
 ## 後續步驟
 
-閱讀本檔案後，您便瞭解如何在平台UI中探索客戶的身分圖。 有關平台中身分的詳細資訊，請參閱身分服務 [總覽](../home.md)
+閱讀本檔案後，您便瞭解如何在平台UI中探索客戶的身分圖。 有關平台中身份的詳細資訊，請參閱[Identity Service概述](../home.md)
