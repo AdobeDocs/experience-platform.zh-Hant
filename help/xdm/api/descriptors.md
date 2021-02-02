@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;experience data model;Experience data model;Experience Data Model;data model;Data Model;schema registry;Schema Registry;descriptor;Descriptor;descriptors;Descriptors;identity;Identity;friendly name;Friendly name;alternatedisplayinfo;reference;Reference;relationship;Relationship
+keywords: Experience Platform;home；熱門主題；API;XDM;XDM;XDM系統；體驗資料模型；Experience資料模型；資料模型；資料模型；模式註冊；模式註冊；描述符；描述符；描述符；身份；身份；友好名稱；替代項目顯示資訊；參考；關係；關係
 solution: Experience Platform
 title: 描述符
 description: 方案註冊表API中的／描述符端點允許您在體驗應用程式中以寫程式方式管理XDM描述符。
@@ -7,7 +7,7 @@ topic: developer guide
 translation-type: tm+mt
 source-git-commit: 1f18bf7367addd204f3ef8ce23583de78c70b70c
 workflow-type: tm+mt
-source-wordcount: '1569'
+source-wordcount: '1611'
 ht-degree: 1%
 
 ---
