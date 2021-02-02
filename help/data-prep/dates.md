@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics;map csv;map csv file;map csv file to xdm;map csv to xdm;ui guide;mapper;mapping;date;date functions;dates;
+keywords: Experience Platform;home；熱門主題；map csv;map csv;map csv file;map csv file to xdm;map csv to xdm;ui guide;mapper;mapping;date;date函式；dates;
 solution: Experience Platform
 title: 日期函式
 topic: overview
 description: 本檔案介紹資料準備使用的日期功能。
 translation-type: tm+mt
-source-git-commit: 1f9833c06a3423c334edb8aa7e441adfd74be0f2
+source-git-commit: 28c13101be37c5c7680c5d46005509bfd122018f
 workflow-type: tm+mt
-source-wordcount: '384'
-ht-degree: 17%
+source-wordcount: '411'
+ht-degree: 16%
 
 ---
 
@@ -53,8 +53,8 @@ ht-degree: 17%
 | 符號 | 意義 | 簡報 | 範例 |
 | ------ | ------- | ------------ | ------- |
 | G | 時代 | 文字 | 廣告；安諾·多米尼；A |
-| Y | 年，根據ISO周 | 數字 | 1996; 96 |
-| y | 年 | 數字 | 2004; 04 |
+| Y | 年，根據ISO周 | 數字 | 1996年；96 |
+| y | 年 | 數字 | 2004年；04 |
 | M/L | 年度月份 | 數字／文字 | 7;07;7月；7月；J |
 | w | 年度中的一週 | 數字 | 27 |
 | W | 當月的星期 | 數字 | 3 |
@@ -73,11 +73,11 @@ ht-degree: 17%
 | S | 毫秒 | 數字 | 245 |
 | z | 時區 | 一般時區 | 太平洋標準時間；PST;GMT-08:00 |
 | Z | 時區 | RFC 822時區 | -0800 |
-| X | 時區 | ISO 8601時區 | -08; -0800; -08:00 |
+| X | 時區 | ISO 8601時區 | -08;-0800;-08:00 |
 | V | 時區ID | 文字 | 美洲／洛杉磯 |
 | O | 時區偏移 | 文字 | GMT+8 |
 | Q/q | 年度第四季 | 數字／文字 | 3;03;第3季度；第三季度 |
 
 **範例**
 
-表達 `date(orderDate, 'yyyy-MM-dd')` 式將&quot;Decer 31st, 2020&quot; `orderDate` 值轉換為日期時間值&quot;2020-12-31&quot;。
+運算式`date(orderDate, "yyyy-MM-dd")`會將`orderDate`值&quot;Decer 31st, 2020&quot;轉換為日期時間值&quot;2020-12-31&quot;。
