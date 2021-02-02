@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics;cloud storage data;streaming data;streaming
+keywords: Experience Platform; home；熱門主題；雲端儲存資料；串流資料；串流
 solution: Experience Platform
 title: 透過來源連接器和API收集串流資料
 topic: overview
 type: Tutorial
 description: 本教學課程涵蓋擷取串流資料並透過來源連接器和API將其匯入平台的步驟。
 translation-type: tm+mt
-source-git-commit: a9d6c6dda560ec401bdf41319994153e7f2c0572
+source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
 workflow-type: tm+mt
-source-wordcount: '1288'
+source-wordcount: '1303'
 ht-degree: 2%
 
 ---
@@ -16,9 +16,9 @@ ht-degree: 2%
 
 # 透過來源連接器和API收集串流資料
 
-[!DNL Flow Service] 用於收集和集中Adobe Experience Platform內不同來源的客戶資料。 該服務提供用戶介面和REST風格的API，所有支援的源都可從中連接。
+[!DNL Flow Service] 用於收集和集中Adobe Experience Platform內不同來源的客戶資料。該服務提供用戶介面和REST風格的API，所有支援的源都可從中連接。
 
-本教學課程涵蓋從串流來源連接器擷取資料，以及使用 [!DNL Experience Platform] API [[!DNL Flow Service] 將其匯入的步驟](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml)。
+本教學課程涵蓋從串流來源連接器擷取資料，並使用[[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml)將其匯入[!DNL Experience Platform]的步驟。
 
 ## 快速入門
 
@@ -32,26 +32,26 @@ ht-degree: 2%
 
 - [[!DNL Experience Data Model (XDM) System]](../../../../xdm/home.md):Experience Platform組織客戶體驗資料的標準化架構。
    - [架構構成基礎](../../../../xdm/schema/composition.md):瞭解XDM架構的基本建置區塊，包括架構組合的主要原則和最佳實務。
-   - [架構註冊開發人員指南](../../../../xdm/api/getting-started.md):包含您必須知道的重要資訊，以便成功執行對架構註冊表API的呼叫。 這包括您 `{TENANT_ID}`的「容器」概念，以及提出要求所需的標題（請特別注意「接受」標題及其可能的值）。
+   - [架構註冊開發人員指南](../../../../xdm/api/getting-started.md):包含您必須知道的重要資訊，以便成功執行對架構註冊表API的呼叫。這包括您的`{TENANT_ID}`、&quot;containers&quot;的概念，以及提出要求時所需的標題（請特別注意「接受」標題及其可能的值）。
 - [[!DNL Catalog Service]](../../../../catalog/home.md):目錄是記錄資料位置和世系的系統 [!DNL Experience Platform]。
-- [[!DNL Streaming ingestion]](../../../../ingestion/streaming-ingestion/overview.md):串流擷取 [!DNL Platform] 為使用者提供從用戶端和伺服器端裝置即時傳送資料 [!DNL Experience Platform] 的方法。
+- [[!DNL Streaming ingestion]](../../../../ingestion/streaming-ingestion/overview.md):串流擷取 [!DNL Platform] 為使用者提供從用戶端和伺服器端裝置即時傳送資 [!DNL Experience Platform] 料的方法。
 - [沙盒](../../../../sandboxes/home.md): [!DNL Experience Platform] 提供虛擬沙盒，可將單一執行個體分 [!DNL Platform] 割為不同的虛擬環境，以協助開發和發展數位體驗應用程式。
 
-以下各節提供您需要瞭解的其他資訊，以便使用 [!DNL Flow Service] API成功收集串流資料。
+以下各節提供您需要瞭解的其他資訊，以便使用[!DNL Flow Service] API成功收集串流資料。
 
 ### 讀取範例API呼叫
 
-本教學課程提供範例API呼叫，以示範如何設定請求的格式。 這些包括路徑、必要標題和正確格式化的請求負載。 也提供API回應中傳回的範例JSON。 如需範例API呼叫檔案中所用慣例的詳細資訊，請參閱疑難排解指 [南中有關如何讀取範例API呼叫的](../../../../landing/troubleshooting.md#how-do-i-format-an-api-request)[!DNL Experience Platform] 章節。
+本教學課程提供範例API呼叫，以示範如何設定請求的格式。 這些包括路徑、必要標題和正確格式化的請求負載。 也提供API回應中傳回的範例JSON。 如需範例API呼叫檔案中所用慣例的詳細資訊，請參閱[!DNL Experience Platform]疑難排解指南中[如何讀取範例API呼叫](../../../../landing/troubleshooting.md#how-do-i-format-an-api-request)一節。
 
 ### 收集必要標題的值
 
-若要呼叫API，您必 [!DNL Platform] 須先完成驗證教 [學課程](../../../../tutorials/authentication.md)。 完成驗證教學課程後，將提供所有 [!DNL Experience Platform] API呼叫中每個必要標題的值，如下所示：
+若要呼叫[!DNL Platform] API，您必須先完成[驗證教學課程](https://www.adobe.com/go/platform-api-authentication-en)。 完成驗證教學課程後，所有[!DNL Experience Platform] API呼叫中每個所需標題的值都會顯示在下面：
 
 - `Authorization: Bearer {ACCESS_TOKEN}`
 - `x-api-key: {API_KEY}`
 - `x-gw-ims-org-id: {IMS_ORG}`
 
-中的所有資 [!DNL Experience Platform]源(包括屬於這些資源 [!DNL Flow Service])都隔離到特定的虛擬沙盒。 對API的所 [!DNL Platform] 有請求都需要一個標題，該標題會指定要在中執行的操作的沙盒名稱：
+[!DNL Experience Platform]中的所有資源（包括屬於[!DNL Flow Service]的資源）都隔離到特定的虛擬沙盒。 對[!DNL Platform] API的所有請求都需要一個標題，該標題指定要在中執行操作的沙盒的名稱：
 
 - `x-sandbox-name: {SANDBOX_NAME}`
 
@@ -59,9 +59,9 @@ ht-degree: 2%
 
 - `Content-Type: application/json`
 
-## 建立源連接 {#source}
+## 建立源連接{#source}
 
-您可以對 [!DNL Flow Service] API提出POST要求，以建立來源連線。 源連接由連接ID、源資料檔案的路徑和連接規範ID組成。
+您可以通過對[!DNL Flow Service] API發出POST請求來建立源連接。 源連接由連接ID、源資料檔案的路徑和連接規範ID組成。
 
 要建立源連接，還必須為資料格式屬性定義枚舉值。
 
@@ -73,7 +73,7 @@ ht-degree: 2%
 | JSON | `json` |
 | 鑲木 | `parquet` |
 
-對於所有基於表的連接器，請將值設定為 `tabular`。
+對於所有基於表的連接器，請將值設定為`tabular`。
 
 **API格式**
 
@@ -114,7 +114,7 @@ curl -X POST \
 
 **回應**
 
-成功的響應返回新建立的源連`id`接的唯一標識符()。 在後續步驟中需要此ID才能建立資料流。
+成功的響應返回新建源連接的唯一標識符(`id`)。 在後續步驟中需要此ID才能建立資料流。
 
 ```json
 {
@@ -123,11 +123,11 @@ curl -X POST \
 }
 ```
 
-## 建立目標XDM模式 {#target-schema}
+## 建立目標XDM模式{#target-schema}
 
-為了使用源資料，必須創 [!DNL Platform]建目標模式，以根據您的需要構建源資料。 然後，目標模式用於建立包含 [!DNL Platform] 源資料的資料集。 此目標XDM模式還擴展了XDM [!DNL Individual Profile] 類。
+要使用[!DNL Platform]中的源資料，必須建立目標模式，以根據您的需要構建源資料。 然後，目標模式用於建立包含源資料的[!DNL Platform]資料集。 此目標XDM模式還擴展了XDM [!DNL Individual Profile]類。
 
-通過對方案註冊表API執行POST請求，可以建立目標XDM [方案](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml)。
+通過對[方案註冊表API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml)執行POST請求，可以建立目標XDM方案。
 
 **API格式**
 
@@ -137,7 +137,7 @@ POST /tenant/schemas
 
 **請求**
 
-以下示例請求建立了擴展XDM類的XDM [!DNL Individual Profile] 架構。
+以下示例請求建立一個XDM模式以擴展XDM [!DNL Individual Profile]類。
 
 ```shell
 curl -X POST \
@@ -171,7 +171,7 @@ curl -X POST \
 
 **回應**
 
-成功的回應會傳回新建立之架構的詳細資料，包括其唯一識別碼(`$id`)。 在後續步驟中需要此ID，才能建立目標資料集、對應和資料流。
+成功的響應返回新建立的架構的詳細資訊，包括其唯一標識符(`$id`)。 在後續步驟中需要此ID，才能建立目標資料集、對應和資料流。
 
 ```json
 {
@@ -235,7 +235,7 @@ curl -X POST \
 
 ## 建立目標資料集
 
-目標資料集可以通過對目錄服務 [API執行POST請求](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml)，提供裝載內目標方案的ID來建立。
+通過對[目錄服務API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml)執行POST請求，提供裝載內目標方案的ID，可以建立目標資料集。
 
 **API格式**
 
@@ -279,7 +279,7 @@ curl -X POST \
 
 **回應**
 
-成功的回應會傳回包含新建立資料集ID的陣列，格式為 `"@/datasets/{DATASET_ID}"`。 資料集ID是唯讀、系統產生的字串，用於在API呼叫中參考資料集。 在後續步驟中需要目標資料集ID才能建立目標連接和資料流。
+成功的響應返回一個陣列，該陣列包含以`"@/datasets/{DATASET_ID}"`格式新建立的資料集的ID。 資料集ID是唯讀、系統產生的字串，用於在API呼叫中參考資料集。 在後續步驟中需要目標資料集ID才能建立目標連接和資料流。
 
 ```json
 [
@@ -287,11 +287,11 @@ curl -X POST \
 ]
 ```
 
-## 建立目標連接 {#target-connection}
+## 建立目標連接{#target-connection}
 
-目標連接表示到所收錄資料所在目的地的連接。 要建立目標連接，必須提供與資料庫關聯的固定連接規範ID。 此連接規範ID為： `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
+目標連接表示到所收錄資料所在目的地的連接。 要建立目標連接，必須提供與資料庫關聯的固定連接規範ID。 此連接規範ID為：`c604ff05-7f1a-43c0-8e18-33bf874cb11c`。
 
-您現在擁有目標資料集的唯一識別碼、目標模式，以及與資料湖的連線規範ID。 使用這些識別碼，您可以使用 [!DNL Flow Service] API建立目標連線，以指定將包含傳入來源資料的資料集。
+您現在擁有目標資料集的唯一識別碼、目標模式，以及與資料湖的連線規範ID。 使用這些標識符，可以使用[!DNL Flow Service] API建立目標連接，以指定將包含入站源資料的資料集。
 
 **API格式**
 
@@ -328,11 +328,11 @@ curl -X POST \
 | 屬性 | 說明 |
 | -------- | ----------- |
 | `params.dataSetId` | 目標資料集的ID。 |
-| `connectionSpec.id` | 用於連接到資料湖的連接規範ID。 此ID為： `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
+| `connectionSpec.id` | 用於連接到資料湖的連接規範ID。 此ID為：`c604ff05-7f1a-43c0-8e18-33bf874cb11c`。 |
 
 **回應**
 
-成功的回應會傳回新目標連線的唯一識別碼(`id`)。 後續步驟需要此ID。
+成功的響應返回新目標連接的唯一標識符(`id`)。 後續步驟需要此ID。
 
 ```json
 {
@@ -341,7 +341,7 @@ curl -X POST \
 }
 ```
 
-## 建立對應 {#mapping}
+## 建立映射{#mapping}
 
 為了將源資料引入目標資料集，必須首先將其映射到目標資料集所遵守的目標模式。 這是透過對轉換服務執行POST請求，並在請求裝載中定義資料映射來實現的。
 
@@ -384,11 +384,11 @@ curl -X POST \
 
 | 屬性 | 說明 |
 | -------- | ----------- |
-| `xdmSchema` | 目 `$id` 標XDM模式的。 |
+| `xdmSchema` | 目標XDM架構的`$id`。 |
 
 **回應**
 
-成功的回應會傳回新建立之對應的詳細資訊，包括其唯一識別碼(`id`)。 在後續步驟中需要此ID才能建立資料流。
+成功的響應返回新建立映射的詳細資訊，包括其唯一標識符(`id`)。 在後續步驟中需要此ID才能建立資料流。
 
 ```json
 {
@@ -401,9 +401,9 @@ curl -X POST \
 }
 ```
 
-## 查找資料流規範 {#specs}
+## 查找資料流規範{#specs}
 
-資料流負責從源收集資料並將其引入 [!DNL Platform]。 要建立資料流，必須首先通過對 [!DNL Flow Service] API執行GET請求來獲取資料流規範。 資料流規範負責從流連接器收集資料。
+資料流負責從源收集資料並將其導入[!DNL Platform]。 要建立資料流，必須首先通過對[!DNL Flow Service] API執行GET請求來獲取資料流規範。 資料流規範負責從流連接器收集資料。
 **API格式**
 
 ```http
@@ -422,7 +422,7 @@ curl -X GET \
 
 **回應**
 
-成功的響應返回負責將流連接器中的資料帶入資料流規範的詳細資訊 [!DNL Platform]。 在下一步中需要此ID才能建立新的資料流。
+成功的響應返回負責將流連接器中的資料帶入[!DNL Platform]的資料流規範的詳細資訊。 在下一步中需要此ID才能建立新的資料流。
 
 ```json
 {
@@ -545,14 +545,14 @@ curl -X POST \
 
 | 屬性 | 說明 |
 | --- | --- |
-| `flowSpec.id` | 在上 [一步驟中檢索的流式規範ID](#specs) 。 |
-| `sourceConnectionIds` | 在先 [前步驟中擷取的來源連線ID](#source) 。 |
-| `targetConnectionIds` | 在先 [前步驟中擷取的目標連線ID](#target-connection) 。 |
-| `transformations.params.mappingId` | 在先 [前步驟中擷取](#mapping) 的對應ID。 |
+| `flowSpec.id` | 在上一步驟中檢索的[流規範ID](#specs)。 |
+| `sourceConnectionIds` | 在先前步驟中檢索的[源連接ID](#source)。 |
+| `targetConnectionIds` | 在先前步驟中擷取的[目標連線ID](#target-connection)。 |
+| `transformations.params.mappingId` | 在先前步驟中檢索的[映射ID](#mapping)。 |
 
 **回應**
 
-成功的響應返回新創`id`建的資料流的ID()。
+成功的響應返回新建立的資料流的ID(`id`)。
 
 ```json
 {
@@ -563,7 +563,7 @@ curl -X POST \
 
 ## 後續步驟
 
-在本教學課程中，您已建立資料流，以從串流連接器收集串流資料。 現在，下游服務（例如和）可 [!DNL Platform] 以使用傳入 [!DNL Real-time Customer Profile] 的資料 [!DNL Data Science Workspace]。 如需詳細資訊，請參閱下列檔案：
+在本教學課程中，您已建立資料流，以從串流連接器收集串流資料。 現在，下游[!DNL Platform]服務（例如[!DNL Real-time Customer Profile]和[!DNL Data Science Workspace]）可以使用傳入的資料。 如需詳細資訊，請參閱下列檔案：
 
 - [即時客戶個人檔案總覽](../../../../profile/home.md)
 - [資料科學工作區概觀](../../../../data-science-workspace/home.md)
