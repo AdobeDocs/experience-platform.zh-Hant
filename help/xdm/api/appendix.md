@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;experience data model;Experience data model;Experience Data Model;data model;Data Model;schema registry;Schema Registry;compatibility;Compatibility;compatibility mode;Compatibility mode;field type;field types;
+keywords: Experience Platform;home；熱門主題；API;XDM;XDM;XDM系統；體驗資料模型；資料模型；資料模型；模式註冊表；模式註冊表；相容性；相容性模式；相容性模式；欄位類型；欄位類型；
 solution: Experience Platform
 title: 架構註冊開發人員附錄
 description: 本文檔提供與使用方案註冊表API有關的補充資訊。
@@ -7,7 +7,7 @@ topic: developer guide
 translation-type: tm+mt
 source-git-commit: 1f18bf7367addd204f3ef8ce23583de78c70b70c
 workflow-type: tm+mt
-source-wordcount: '730'
+source-wordcount: '767'
 ht-degree: 1%
 
 ---
