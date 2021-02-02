@@ -1,13 +1,14 @@
 ---
 product: experience-platform
 audience: user
-user-guide-title: 目標指南
-user-guide-description: 針對跨通道行銷宣傳、電子郵件宣傳、目標廣告和許多其他使用案例，啟用您已知和未知的資料。
+user-guide-title: 目的地指南
+user-guide-description: 針對跨通路行銷活動、電子郵件宣傳、鎖定特定目標的行銷活動和其他諸多使用案例，啟用已知和未知的資料。
+description: 本檔案列出Adobe Experience Platform目標的目錄
 translation-type: tm+mt
-source-git-commit: 395a8c2aa7fc89cde04263dbbfb3315318245ef6
+source-git-commit: b348a5493b13112291dd8e9234d457ff8c694147
 workflow-type: tm+mt
-source-wordcount: '429'
-ht-degree: 0%
+source-wordcount: '443'
+ht-degree: 5%
 
 ---
 
@@ -16,20 +17,20 @@ ht-degree: 0%
 
 * [目的地概觀](./home.md)
 * [目標類型和類別](./destination-types.md)
-* API教學課程 {#api}
+* API教學課程{#api}
    * [連接到流目標（AWS Kinesis和Azure事件集線器）並激活資料](./api/streaming-destinations.md)
    * [連線至電子郵件行銷目的地並啟用資料](./api/email-marketing.md)
-* UI指南 {#ui}
+* UI指南{#ui}
    * [目標工作區](./ui/destinations-workspace.md)
    * [目標詳細資訊頁](./ui/destination-details-page.md)
    * [連接到目標](./ui/connect-destination.md)
    * [將描述檔和區段啟用至目標](./ui/activate-destinations.md)
-* 目標目錄 {#catalog}
+* 目標目錄{#catalog}
    * [目標目錄概述](./catalog/overview.md)
    * [ (Alpha)HTTP目的地](./catalog/http-destination.md)
-   * Adobe destinations{#adobe}
+   * Adobe目標{#adobe}
       * [Adobe目標概觀](./catalog/adobe/overview.md)
-      * [體驗平台區隔分享](https://docs.adobe.com/help/en/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html)
+      * [體驗平台區隔分享](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html)
    * 廣告目的地{#advertising}
       * [廣告目標概觀](./catalog/advertising/overview.md)
       * [Adobe Advertising Cloud目的地](./catalog/advertising/adobe-advertising-cloud.md)
@@ -51,7 +52,7 @@ ht-degree: 0%
       * [Pinterest轉換追蹤目標](./catalog/advertising/pinterest.md)
       * [貿易台目的地](./catalog/advertising/tradedesk.md)
       * [Twitter通用網站標籤目標](./catalog/advertising/twitter-uwt.md)
-   * Analytics目標 {#analytics}
+   * Analytics目標{#analytics}
       * [Analytics目標概觀](./catalog/analytics/overview.md)
       * [Adform網站追蹤目標](./catalog/analytics/adform.md)
       * [Adobe Analytics目的地](./catalog/analytics/adobe-analytics.md)
@@ -77,12 +78,13 @@ ht-degree: 0%
       * [建立雲端儲存空間目標的工作流程](./catalog/cloud-storage/workflow.md)
       * [Amazon Kinesis目標](./catalog/cloud-storage/amazon-kinesis.md)
       * [Amazon S3目的地](./catalog/cloud-storage/amazon-s3.md)
+      * [Azure Blob目標](./catalog/cloud-storage/azure-blob.md)
       * [Azure事件集線器目標](./catalog/cloud-storage/azure-event-hubs.md)
       * [SFTP目的地](./catalog/cloud-storage/sftp.md)
-   * 資料管理平台目標 {#data-management}
+   * 資料管理平台目標{#data-management}
       * [資料管理平台目標概觀](./catalog/data-management/overview.md)
       * [Audience Manager DIL目標](./catalog/data-management/aam-dil-extension.md)
-   * 電子郵件目的地 {#email}
+   * 電子郵件目標{#email}
       * [Bizible Analytics目標](./catalog/email/bizible.md)
       * [Marketo目的地](./catalog/email/marketo.md)
       * [馬克托芒奇金目的地](./catalog/email/marketo-munchkin.md)
@@ -93,14 +95,14 @@ ht-degree: 0%
       * [Oracle Exolca目標](./catalog/email-marketing/oracle-eloqua.md)
       * [Oracle Responsys目標](./catalog/email-marketing/oracle-responsys.md)
       * [Salesforce Marketing Cloud目標](./catalog/email-marketing/salesforce-marketing-cloud.md)
-   * Experience Platform Launch extensions{#launch-extensions}
+   * Experience Platform Launch擴充功能{#launch-extensions}
       * [Experience Platform Launch擴充功能總覽](./catalog/launch-extensions/overview.md)
-   * 行動互動目標 {#mobile-engagement}
+   * 行動參與目標{#mobile-engagement}
       * [行動互動目標概觀](./catalog/mobile-engagement/overview.md)
       * [飛艇屬性目標](./catalog/mobile-engagement/airship-attributes.md)
       * [飛艇標籤目的地](./catalog/mobile-engagement/airship-tags.md)
       * [Braze目的地](./catalog/mobile-engagement/braze.md)
-   * 個人化目的地 {#personalization}
+   * 個人化目標{#personalization}
       * [個人化目標概觀](./catalog/personalization/overview.md)
       * [Adobe Target目標](./catalog/personalization/adobe-target.md)
       * [Adobe Target v2目的地](./catalog/personalization/adobe-target-v2.md)
@@ -115,13 +117,13 @@ ht-degree: 0%
       * [社交網路目的地驗證流程](./catalog/social/workflow.md)
       * [Adobe Livefyre目的地](./catalog/social/adobe-livefyre.md)
       * [Facebook目的地](./catalog/social/facebook.md)
-   * 調查目標 {#survey}
+   * 調查目標{#survey}
       * [調查目標概觀](./catalog/survey/overview.md)
       * [Foresee destination](./catalog/survey/foresee.md)
       * [InMoment目的地](./catalog/survey/inmoment.md)
       * [Qualtrics網站意見回應目的地](./catalog/survey/qualtrics.md)
       * [Web截距調查- QuestionPro目標](./catalog/survey/web-intercept-surveys.md)
-   * 客戶目標之聲 {#voice}
+   * 客戶目標語音{#voice}
       * [客戶目標之聲概觀](./catalog/voice/overview.md)
       * [確認數位意見回應目的地](./catalog/voice/confirmit-digital-feedback.md)
       * [Invoca標籤目標](./catalog/voice/invoca.md)
