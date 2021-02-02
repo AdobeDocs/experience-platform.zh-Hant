@@ -1,59 +1,59 @@
 ---
-keywords: Experience Platform;home;popular topics;retrieve failed batches;failed batches;batch ingestion;Batch ingestion;Failed batches;Get failed batches;get failed batches;Download failed batches;download failed batches;
+keywords: Experience Platform;home；常用主題；檢索失敗的批；失敗的批；批處理；批處理；失敗的批處理；獲取失敗的批處理；獲取失敗的批處理；下載失敗的批處理；下載失敗的批處理；
 solution: Experience Platform
 title: 檢索失敗的批
 topic: tutorial
 type: Tutorial
 description: 本教學課程涵蓋使用資料擷取API擷取失敗批次資訊的步驟。
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
 workflow-type: tm+mt
-source-wordcount: '613'
-ht-degree: 1%
+source-wordcount: '645'
+ht-degree: 2%
 
 ---
 
 
 # 使用API檢索失敗的批處理
 
-Adobe Experience Platform提供兩種上傳和接收資料的方法。 您可以使用批次擷取，讓您使用各種檔案類型（例如CSV）來插入其資料，或使用串流擷取，讓您即時將資料插入 [!DNL Platform] 串流端點。
+Adobe Experience Platform提供兩種上傳和接收資料的方法。 您可以使用批次擷取功能(可讓您使用各種檔案類型（例如CSV）插入其資料)或串流擷取功能（可讓您使用串流端點將資料即時插入[!DNL Platform]）。
 
-本教學課程涵蓋使用API擷取失敗批次資訊的 [!DNL Data Ingestion] 步驟。
+本教程介紹使用[!DNL Data Ingestion] API檢索失敗批的資訊的步驟。
 
 ## 快速入門
 
 本指南需要有效瞭解Adobe Experience Platform的下列元件：
 
-- [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md):組織客戶體驗資料 [!DNL Experience Platform] 的標準化架構。
+- [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md):組織客戶體驗資 [!DNL Experience Platform] 料的標準化架構。
 - [[!DNL Data Ingestion]](../home.md):可傳送資料的方法 [!DNL Experience Platform]。
 
 ### 讀取範例API呼叫
 
-本教學課程提供範例API呼叫，以示範如何設定請求的格式。 這些包括路徑、必要標題和正確格式化的請求負載。 也提供API回應中傳回的範例JSON。 如需範例API呼叫檔案中所用慣例的詳細資訊，請參閱疑難排解指 [南中有關如何讀取範例API呼叫的](../../landing/troubleshooting.md#how-do-i-format-an-api-request)[!DNL Experience Platform] 章節。
+本教學課程提供範例API呼叫，以示範如何設定請求的格式。 這些包括路徑、必要標題和正確格式化的請求負載。 也提供API回應中傳回的範例JSON。 如需範例API呼叫檔案中所用慣例的詳細資訊，請參閱[!DNL Experience Platform]疑難排解指南中[如何讀取範例API呼叫](../../landing/troubleshooting.md#how-do-i-format-an-api-request)一節。
 
 ### 收集必要標題的值
 
-若要呼叫API，您必 [!DNL Platform] 須先完成驗證教 [學課程](../../tutorials/authentication.md)。 完成驗證教學課程後，將提供所有 [!DNL Experience Platform] API呼叫中每個必要標題的值，如下所示：
+若要呼叫[!DNL Platform] API，您必須先完成[驗證教學課程](https://www.adobe.com/go/platform-api-authentication-en)。 完成驗證教學課程後，所有[!DNL Experience Platform] API呼叫中每個所需標題的值都會顯示在下面：
 
-- 授權：生產者 `{ACCESS_TOKEN}`
-- x-api-key: `{API_KEY}`
-- x-gw-ims-org-id: `{IMS_ORG}`
+- 授權：載體`{ACCESS_TOKEN}`
+- x-api-key:`{API_KEY}`
+- x-gw-ims-org-id:`{IMS_ORG}`
 
-中的所有資 [!DNL Experience Platform]源（包括屬於的資源）都 [!DNL Schema Registry]被隔離到特定的虛擬沙盒中。 對API的所 [!DNL Platform] 有請求都需要一個標題，該標題會指定要在中執行的操作的沙盒名稱：
+[!DNL Experience Platform]中的所有資源（包括屬於[!DNL Schema Registry]的資源）都與特定虛擬沙盒隔離。 對[!DNL Platform] API的所有請求都需要一個標題，該標題指定要在中執行操作的沙盒的名稱：
 
-- x-sandbox-name: `{SANDBOX_NAME}`
+- x-sandbox-name:`{SANDBOX_NAME}`
 
 >[!NOTE]
 >
->如需中沙盒的詳細資訊 [!DNL Platform]，請參閱沙 [盒概述檔案](../../sandboxes/home.md)。
+>如需[!DNL Platform]中沙盒的詳細資訊，請參閱[沙盒概述檔案](../../sandboxes/home.md)。
 
 所有包含裝載(POST、PUT、PATCH)的請求都需要額外的標題：
 
-- 內容類型： `application/json`
+- 內容類型：`application/json`
 
 ### 失敗批示例
 
-本教學課程將使用格式錯誤的時間戳記，將月份值設為 **00**，如下所示：
+本教學課程將使用格式錯誤的時間戳記格式化的範例資料，將月份值設定為&#x200B;**00**，如下所示：
 
 ```json
 {
@@ -135,7 +135,7 @@ curl -X GET "https://platform.adobe.io/data/foundation/export/batches/{BATCH_ID}
 }
 ```
 
-通過上述響應，您可以看到哪些批成功和失敗。 從此響應中，您可以看到檔案包 `part-00000-44c7b669-5e38-43fb-b56c-a0686dabb982-c000.json` 含失敗的批。
+通過上述響應，您可以看到哪些批成功和失敗。 從此響應中，您可以看到檔案`part-00000-44c7b669-5e38-43fb-b56c-a0686dabb982-c000.json`包含失敗的批處理。
 
 ## 下載失敗的批次
 
@@ -186,7 +186,7 @@ curl -X GET 'https://platform.adobe.io/data/foundation/export/batches/{BATCH_ID}
 
 ## 後續步驟
 
-閱讀本教學課程後，您已學習如何從失敗的批次擷取錯誤。 如需批次擷取的詳細資訊，請參閱批次擷取開 [發人員指南](../batch-ingestion/overview.md)。 如需串流擷取的詳細資訊，請閱讀建立串 [流連線教學課程](../tutorials/create-streaming-connection.md)。
+閱讀本教學課程後，您已學習如何從失敗的批次擷取錯誤。 有關批次擷取的詳細資訊，請閱讀[批次擷取開發人員指南](../batch-ingestion/overview.md)。 有關串流擷取的詳細資訊，請閱讀[建立串流連線教學課程](../tutorials/create-streaming-connection.md)。
 
 ## 附錄
 
@@ -213,7 +213,7 @@ curl -X GET 'https://platform.adobe.io/data/foundation/export/batches/{BATCH_ID}
 
 ### 缺少XDM模式
 
-如果缺少的 `schemaRef` 表示 `xdmMeta` 錯誤。
+如果`xdmMeta`的`schemaRef`遺失，則會顯示此錯誤。
 
 ```json
 {
@@ -228,7 +228,7 @@ curl -X GET 'https://platform.adobe.io/data/foundation/export/batches/{BATCH_ID}
 
 ### 缺少源名稱
 
-如果標題中的錯誤 `source` 遺失，則會顯示此錯誤 `name`。
+如果標題中的`source`遺失其`name`，則會顯示此錯誤。
 
 ```json
 {
@@ -244,7 +244,7 @@ curl -X GET 'https://platform.adobe.io/data/foundation/export/batches/{BATCH_ID}
 
 ### 缺少XDM實體
 
-如果沒有出現，則會顯示此 `xdmEntity` 錯誤。
+如果沒有`xdmEntity`存在，則顯示此錯誤。
 
 ```json
 {
