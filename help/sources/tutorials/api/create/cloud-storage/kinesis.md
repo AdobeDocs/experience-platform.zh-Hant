@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics;Kinesis;kinesis;Amazon Kinesis;amazon kinesis
+keywords: Experience Platform;home；熱門主題；Kinesis;kinesis;Amazon Kinesis;amazon Kinesis
 solution: Experience Platform
 title: 使用流服務API建立Amazon Kinesis連接器
 topic: overview
 type: Tutorial
 description: 本教程使用Flow Service API來引導您完成將Experience Platform連接到Amazon Kinesis帳戶的步驟。
 translation-type: tm+mt
-source-git-commit: fc6449d260ea7b96956689ce6c95c5e8b9002d89
+source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
 workflow-type: tm+mt
-source-wordcount: '534'
+source-wordcount: '549'
 ht-degree: 2%
 
 ---
@@ -52,7 +52,7 @@ ht-degree: 2%
 
 ### 收集必要標題的值
 
-若要呼叫[!DNL Platform] API，您必須先完成[驗證教學課程](../../../../../tutorials/authentication.md)。 完成驗證教學課程後，所有[!DNL Experience Platform] API呼叫中每個所需標題的值都會顯示在下面：
+若要呼叫[!DNL Platform] API，您必須先完成[驗證教學課程](https://www.adobe.com/go/platform-api-authentication-en)。 完成驗證教學課程後，所有[!DNL Experience Platform] API呼叫中每個所需標題的值都會顯示在下面：
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
@@ -123,4 +123,4 @@ curl -X POST \
 
 ## 後續步驟
 
-在本教學課程中，您已使用API建立[!DNL Amazon Kinesis]連線，並取得唯一ID做為回應內文的一部分。 您可以使用此連線ID來使用Flow Service API[收集串流資料。](../../collect/streaming.md)
+在本教學課程中，您已使用API建立[!DNL Amazon Kinesis]連線，並取得唯一ID做為回應內文的一部分。 您可以使用此連線ID來使用Flow Service API](../../collect/streaming.md)收集串流資料。[
