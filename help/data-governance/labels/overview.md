@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics;data governance;data usage label api;policy service api;data usage labels overview
+keywords: Experience Platform;home；熱門主題；資料治理；資料使用標籤api；策略服務api；資料使用標籤概述
 solution: Experience Platform
 title: 資料使用標籤概觀
 topic: labels
 description: Adobe Experience Platform資料治理可讓您將資料使用標籤套用至資料集和欄位，並依據相關資料使用政策對每個資料使用標籤進行分類。 本檔案概述Experience Platform中的資料使用標籤。
 translation-type: tm+mt
-source-git-commit: e680191d495e4c33baa8242d40a15b9124eec8cd
+source-git-commit: 2dbd92efbd992b70f4f750b09e9d2e0626e71315
 workflow-type: tm+mt
-source-wordcount: '603'
+source-wordcount: '619'
 ht-degree: 0%
 
 ---
@@ -41,7 +41,7 @@ Adobe Experience Platform [!DNL Data Governance]可讓您將資料使用標籤�
 
 [!DNL Experience Platform] 能夠與Adobe Audience Manager共用區段。已套用至Audience Manager區段的任何「資料匯出控制」都會轉換為[!DNL Experience Platform] [!DNL Data Governance]所識別的等同標籤和行銷動作。
 
-有關特定「資料匯出控制」如何對應至[!DNL Platform]中的資料使用標籤的參考，請參閱[Audience Manager檔案](https://docs.adobe.com/content/help/en/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aam-data-export-control-in-aep)。
+有關特定「資料匯出控制」如何對應至[!DNL Platform]中的資料使用標籤的參考，請參閱[Audience Manager檔案](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aam-data-export-control-in-aep)。
 
 ## 在[!DNL Experience Platform] {#manage-labels}中管理資料使用標籤
 
