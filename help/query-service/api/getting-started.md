@@ -5,9 +5,9 @@ title: 查詢服務開發人員指南
 topic: query templates
 description: 本開發人員指南提供在Adobe Experience Platform Query Service API中執行各種作業的步驟。
 translation-type: tm+mt
-source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
+source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
 workflow-type: tm+mt
-source-wordcount: '369'
+source-wordcount: '383'
 ht-degree: 1%
 
 ---
@@ -19,37 +19,37 @@ ht-degree: 1%
 
 ## 快速入門
 
-本指南需要有效瞭解與使用相關的各種Adobe Experience Platform服務 [!DNL Query Service]。
+本指南需要對使用[!DNL Query Service]時涉及的各種Adobe Experience Platform服務有良好的瞭解。
 
 - [[!DNL Query Service]](../home.md):提供查詢資料集並將生成的查詢捕獲為中的新資料集的能力 [!DNL Experience Platform]。
-- [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md):組織客戶體驗資料 [!DNL Experience Platform] 的標準化架構。
+- [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md):組織客戶體驗資 [!DNL Experience Platform] 料的標準化架構。
 - [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform] 提供虛擬沙盒，可將單一執行個體分 [!DNL Platform] 割為不同的虛擬環境，以協助開發和發展數位體驗應用程式。
 
-以下各節提供您必須知道的其他資訊，以便成功使 [!DNL Query Service] 用API。
+以下各節提供您必須知道的其他資訊，才能使用API成功使用[!DNL Query Service]。
 
 ### 讀取範例API呼叫
 
-本指南提供範例API呼叫，以示範如何格式化您的請求。 這些包括路徑、必要標題和正確格式化的請求負載。 也提供API回應中傳回的範例JSON。 如需本檔案中用於範例API呼叫之慣例的詳細資訊，請參閱疑難排解指 [南中有關如何讀取範例API呼叫的](../../landing/troubleshooting.md#how-do-i-format-an-api-request)[!DNL Experience Platform] 章節。
+本指南提供範例API呼叫，以示範如何格式化您的請求。 這些包括路徑、必要標題和正確格式化的請求負載。 也提供API回應中傳回的範例JSON。 有關本文檔中用於示例API調用的約定的資訊，請參閱[!DNL Experience Platform]故障排除指南中[如何讀取示例API調用](../../landing/troubleshooting.md#how-do-i-format-an-api-request)一節。
 
 ### 收集必要標題的值
 
-若要呼叫API，您必 [!DNL Experience Platform] 須先完成驗證教 [學課程](../../tutorials/authentication.md)。 完成驗證教學課程後，將提供所有 [!DNL Platform] API呼叫中每個必要標題的值，如下所示：
+若要呼叫[!DNL Experience Platform] API，您必須先完成[驗證教學課程](https://www.adobe.com/go/platform-api-authentication-en)。 完成驗證教學課程後，所有[!DNL Platform] API呼叫中每個所需標題的值都會顯示在下面：
 
-- 授權： `Bearer {ACCESS_TOKEN}`
-- x-api-key: `{API_KEY}`
-- x-gw-ims-org-id: `{IMS_ORG}`
+- 授權：`Bearer {ACCESS_TOKEN}`
+- x-api-key:`{API_KEY}`
+- x-gw-ims-org-id:`{IMS_ORG}`
 
-中的所有資 [!DNL Experience Platform] 源都與特定虛擬沙盒隔離。 對API的所 [!DNL Platform] 有請求都需要一個標題，該標題指定執行操作的沙盒的名稱：
+[!DNL Experience Platform]中的所有資源都隔離到特定的虛擬沙盒。 對[!DNL Platform] API的所有請求都需要一個標題，該標題指定執行操作的沙盒的名稱：
 
-- x-sandbox-name: `{SANDBOX_NAME}`
+- x-sandbox-name:`{SANDBOX_NAME}`
 
 >[!NOTE]
 >
->如需有關在中使用沙盒的詳細資訊，請 [!DNL Experience Platform]參閱沙盒 [概觀檔案](../../sandboxes/home.md)。
+>如需在[!DNL Experience Platform]中使用沙盒的詳細資訊，請參閱[沙盒概觀檔案](../../sandboxes/home.md)。
 
 ## 範例API呼叫
 
-現在，您已瞭解要使用哪些標題，可以開始呼叫 [!DNL Query Service] API。 下列檔案會逐步說明您可使用 [!DNL Query Service] API進行的各種API呼叫。 每個範例呼叫都包含一般API格式、顯示必要標題的範例要求，以及範例回應。
+現在您已瞭解要使用哪些標題，可以開始呼叫[!DNL Query Service] API。 以下檔案會逐步瞭解您可使用[!DNL Query Service] API進行的各種API呼叫。 每個範例呼叫都包含一般API格式、顯示必要標題的範例要求，以及範例回應。
 
 - [查詢](queries.md)
 - [連接參數](connection-parameters.md)
@@ -59,4 +59,4 @@ ht-degree: 1%
 
 ## 後續步驟
 
-現在您已學會如何使用 [!DNL Query Service] API進行呼叫，您可以建立自己的非互動式查詢。 有關如何建立查詢的詳細資訊，請閱讀 [SQL參考指南](../sql/overview.md)。
+現在您已學會如何使用[!DNL Query Service] API進行呼叫，您可以建立自己的非互動式查詢。 有關如何建立查詢的詳細資訊，請閱讀[SQL參考指南](../sql/overview.md)。
