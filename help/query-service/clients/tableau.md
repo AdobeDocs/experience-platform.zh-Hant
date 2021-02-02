@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;tableau;Tableau;query service;Query service;connect to query service;
+keywords: Experience Platform;home;popular topics;tableau;Tableau；查詢服務；查詢服務；連接到查詢服務；
 solution: Experience Platform
 title: 與Tableau連結
 topic: connect
@@ -7,8 +7,8 @@ description: 本檔案將逐步說明如何將Tableau與Adobe Experience Platfor
 translation-type: tm+mt
 source-git-commit: eac93f3465fa6ce4af7a6aa783cf5f8fb4ac9b9b
 workflow-type: tm+mt
-source-wordcount: '195'
-ht-degree: 1%
+source-wordcount: '210'
+ht-degree: 0%
 
 ---
 
