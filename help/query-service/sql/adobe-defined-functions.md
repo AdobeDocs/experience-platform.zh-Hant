@@ -7,7 +7,7 @@ description: 本檔案提供查詢服務中Adobe定義函式的資訊。
 translation-type: tm+mt
 source-git-commit: e15229601d35d1155fc9a8ab9296f8c41811ebf9
 workflow-type: tm+mt
-source-wordcount: '2889'
+source-wordcount: '2902'
 ht-degree: 2%
 
 ---
