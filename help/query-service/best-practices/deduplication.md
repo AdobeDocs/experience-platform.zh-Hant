@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;query service;Query service;data deduplication;deduplication;
+keywords: Experience Platform; home；熱門主題；查詢服務；查詢服務；重複資料消除；
 solution: Experience Platform
 title: 重複資料消除
 topic: queries
@@ -8,7 +8,7 @@ description: 本檔案概述了用於消除重複的三個常見使用案例：�
 translation-type: tm+mt
 source-git-commit: e2c648829bb3268ab319da934f5cc6cc811290b3
 workflow-type: tm+mt
-source-wordcount: '479'
+source-wordcount: '491'
 ht-degree: 0%
 
 ---
