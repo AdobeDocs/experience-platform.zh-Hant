@@ -1,27 +1,27 @@
 ---
 keywords: Experience Platform;profile;real-time customer profile;user interface;UI;customization;profile dashboard;dashboard
-title: 描述檔控制面板
+title: 描述檔控制面板UI指南
 description: '本指南概述Adobe Experience Platform UI中提供的即時客戶個人檔案資料控制面板。 '
 topic: guide
 type: Documentation
 translation-type: tm+mt
-source-git-commit: 983b357f2f17aad273f0465dc9250240a062dcd2
+source-git-commit: e6ecc5dac1d09c7906aa7c7e01139aa194ed662b
 workflow-type: tm+mt
-source-wordcount: '638'
+source-wordcount: '697'
 ht-degree: 1%
 
 ---
 
 
-# (Alpha)控制 [!DNL Real-time Customer Profile] 面板 {#profile-dashboard}
+# (Alpha)[!DNL Real-time Customer Profile]控制面板{#profile-dashboard}
 
 >[!IMPORTANT]
 >
 >本檔案中概述的控制面板功能目前為alpha版，並非所有使用者都能使用。 文件和功能可能會有所變更。
 
-Adobe Experience Platform使用者介面(UI)提供控制面板，您可透過此控制面板檢視每日快照期間所擷取 [!DNL Real-time Customer Profile] 之資料的重要資訊。 本指南概述如何存取和使用UI中 [!DNL Profile] 的控制面板，並提供有關控制面板中顯示之度量的詳細資訊。
+Adobe Experience Platform使用者介面(UI)提供控制面板，您可透過此控制面板檢視有關[!DNL Real-time Customer Profile]資料的重要資訊，如每日快照中所擷取。 本指南概述如何存取和使用UI中的[!DNL Profile]控制面板，並提供有關控制面板中顯示的度量的詳細資訊。
 
-如需Experience Platform使用者介面中所有描述檔功能的概述，請造訪即時 [客戶描述檔UI指南](user-guide.md)。
+如需Experience Platform使用者介面中所有描述檔功能的概述，請造訪[即時客戶描述檔UI指南](user-guide.md)。
 
 ## 描述檔控制面板資料
 
@@ -33,11 +33,11 @@ Adobe Experience Platform使用者介面(UI)提供控制面板，您可透過此
 >
 >自快照建立以來對資料所做的任何變更或更新，在下一個快照建立之前，不會反映在控制面板中。
 
-「描述檔」控制面板中顯示的量度是根據您組織的預設合併原則。 有關合併策略以及如何選擇或更改預設合併策略的詳細資訊，請訪問合 [並策略UI指南](merge-policies.md)。
+「描述檔」控制面板中顯示的量度是根據您組織的預設合併原則。 有關合併策略以及如何選擇或更改預設合併策略的詳細資訊，請訪問[合併策略UI指南](merge-policies.md)。
 
 ## 探索描述檔控制面板
 
-若要導覽至「平台UI」中的「描述檔」控制面板，請選取左側邊欄中的「描述檔 **[!UICONTROL 」，然後選取「]** 概述 **** 」索引標籤以顯示控制面板。
+若要導覽至平台UI中的「描述檔」控制面板，請在左側導軌中選取&#x200B;**[!UICONTROL Profiles]**，然後選取&#x200B;**[!UICONTROL Overview]**&#x200B;標籤以顯示控制面板。
 
 ![](../images/profile-dashboard/dashboard-overview.png)
 
@@ -56,17 +56,21 @@ Experience Platform提供多個Widget，您可使用這些Widget來視覺化與�
 
 ### [!UICONTROL 受眾規模] {#audience-size}
 
-「對 **[!UICONTROL 像大小]** 」介面工具集會顯示拍攝快照時，「描述檔」資料儲存區內合併的描述檔總數。 此數字是貴組織預設的合併原則套用至您的描述檔資料的結果，以便將描述檔片段合併為每個個人組成單一描述檔。
+**[!UICONTROL 觀眾大小]**&#x200B;介面工具集顯示拍攝快照時，描述檔資料儲存區內合併的描述檔總數。 此數字是貴組織預設的合併原則套用至您的描述檔資料的結果，以便將描述檔片段合併為每個個人組成單一描述檔。
 
-如需有關片段和合併描述檔的詳細資訊，請先閱讀描述檔總 [覽的描述檔片段與合併描述檔](../home.md#profile-fragments-vs-merged-profiles) ，以 [開始](../home.md)。
+有關片段和合併配置檔案的詳細資訊，請首先閱讀[配置檔案概述](../home.md)的&#x200B;*配置檔案片段與合併配置檔案*&#x200B;部分。
+
+>[!NOTE]
+>
+>用於計算此度量的合併原則與用於計算[!UICONTROL 授權使用]控制面板中[!UICONTROL 可定址對象]的系統產生的合併原則不同，因此[!DNL Profile]和[!UICONTROL 授權使用]控制面板中的對象計數不太可能完全相同。
 
 ![](../images/profile-dashboard/audience-size.png)
 
 ### [!UICONTROL 依命名空間劃分的描述檔] {#profiles-by-namespace}
 
-「依命 **[!UICONTROL 名空間]** 」介面工具集會顯示描述檔儲存區中所有合併描述檔的命名空間劃分。 依 [!UICONTROL ID命名空間] （換言之，將每個名稱空間顯示的值加在一起）的描述檔總數永遠高於合併描述檔總數，因為一個描述檔可能有多個與其相關聯的名稱空間。 例如，如果客戶在多個通道上與您的品牌互動，則多個名稱空間將與該個別客戶關聯。
+**[!UICONTROL Profiles by namespace]**&#x200B;介面工具集顯示Profile儲存中所有合併配置檔案的命名空間劃分。 按[!UICONTROL ID namespace]（換言之，將每個名稱空間顯示的值相加）列出的配置檔案總數將始終高於合併配置檔案總數，因為一個配置檔案可能有多個與其關聯的命名空間。 例如，如果客戶在多個通道上與您的品牌互動，則多個名稱空間將與該個別客戶關聯。
 
-若要進一步瞭解身分名稱空間，請造訪 [Adobe Experience Platform Identity Service檔案](../../identity-service/home.md)。
+若要進一步瞭解身分名稱空間，請造訪[Adobe Experience Platform Identity Service檔案](../../identity-service/home.md)。
 
 ![](../images/profile-dashboard/profiles-by-namespace.png)
 
@@ -79,4 +83,4 @@ Platform UI提供其他控制面板，以在Experience Platform中檢視資料�
 
 ## 後續步驟
 
-遵循本檔案，您現在應該可以找到描述檔控制面板，並瞭解可用Widget中顯示的量度。 若要進一步瞭解如何在 [!DNL Profile] Experience Platform UI中使用資料，請參閱 [[!DNL Profile] UI指南](user-guide.md)。
+遵循本檔案，您現在應該可以找到描述檔控制面板，並瞭解可用Widget中顯示的量度。 若要進一步瞭解如何在Experience Platform UI中使用[!DNL Profile]資料，請參閱[[!DNL Profile] UI指南](user-guide.md)。
