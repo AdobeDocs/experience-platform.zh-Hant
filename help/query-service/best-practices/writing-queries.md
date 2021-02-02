@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;query service;Query service;writing queries;writing query;
+keywords: Experience Platform; home；熱門主題；查詢服務；查詢服務；寫查詢；寫查詢；
 solution: Experience Platform
 title: 編寫查詢
 topic: queries
@@ -8,7 +8,7 @@ description: 本檔案詳細說明在Adobe Experience Platform Query Service中�
 translation-type: tm+mt
 source-git-commit: e2c648829bb3268ab319da934f5cc6cc811290b3
 workflow-type: tm+mt
-source-wordcount: '957'
+source-wordcount: '970'
 ht-degree: 3%
 
 ---
