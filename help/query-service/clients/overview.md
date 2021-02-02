@@ -1,21 +1,21 @@
 ---
-keywords: Experience Platform;home;popular topics;Query service;query service;connect;connect to query service;aqua data studio;Aqua Data Studio;Looker;looker;Postico;postico;Power BI;power bi;psql;rstudio;PSQL;RStudio;Tableau;tableau;
+keywords: Experience Platform;home；熱門主題；查詢服務；查詢服務；連接；連接到查詢服務；Aqua Data Studio;Looker;looker;Postico;postico;Power BI;power bi;psql;rstudio;PSQL;RStudio;Tableau;
 solution: Experience Platform
 title: 將客戶端連接到查詢服務
 topic: connect
 description: 本檔案說明如何從各種案頭用戶端應用程式連接至查詢服務，以及如何驗證這些連線。
 translation-type: tm+mt
-source-git-commit: 37356db1666b0c800119b1e254940ad72550848a
+source-git-commit: 5c5ea35dbed85518f7925bd13a2280cae6215927
 workflow-type: tm+mt
-source-wordcount: '78'
+source-wordcount: '112'
 ht-degree: 0%
 
 ---
 
 
-# 將客戶端連接到 [!DNL Query Service]
+# 將客戶端連接到[!DNL Query Service]
 
-本節說明如何從各種案頭客 [!DNL Query Service] 戶端應用程式連線至，以及如何驗證這些連線。 [!DNL Query Service] 使用協 [!DNL Postgres] 議，因此本節中的說明說明如何使用工 [!DNL Postgres] 具和驅動程式來連接和寫入查詢。
+本節說明如何從各種案頭客戶端應用程式連接到[!DNL Query Service]以及如何驗證這些連接。 [!DNL Query Service] 使用 [!DNL PostgreSQL] 通訊協定，因此本節說明如何使用工 [!DNL PostgreSQL] 具和驅動程式來連接和寫入查詢。
 
 為下列客戶提供說明：
 
