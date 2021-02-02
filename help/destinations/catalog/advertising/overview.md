@@ -1,29 +1,29 @@
 ---
-keywords: advertising destinations;destinations;rtcdp destinations
+keywords: 廣告目標；目標；平台目標
 title: 廣告目標
 seo-title: 廣告目標
-description: 將您的即時客戶資料平台連接至協力廠商廣告平台（例如DSP、廣告網路、SSP），並與這些平台共用假受眾。
-seo-description: 將您的即時客戶資料平台連接至協力廠商廣告平台（例如DSP、廣告網路、SSP），並與這些平台共用假受眾。
+description: 將Adobe Experience Platform連接至第三方廣告平台（例如DSP、廣告網路、SSP），並與這些平台共用假受眾。
+seo-description: 將Adobe Experience Platform連接至第三方廣告平台（例如DSP、廣告網路、SSP），並與這些平台共用假受眾。
 translation-type: tm+mt
-source-git-commit: 0bb1622895b1e0f97fc47b5c61d456bc369746c8
+source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
 workflow-type: tm+mt
-source-wordcount: '223'
+source-wordcount: '225'
 ht-degree: 2%
 
 ---
 
 
-# 廣告目的地 {#advertising-destinations}
+# 廣告目的地{#advertising-destinations}
 
-將您 [!DNL Real-time Customer Data Platform] 連接至第三方廣告平台（例如DSP、廣告網路、SSP），並與這些平台共用假名受眾。
+將Adobe Experience Platform連接至第三方廣告平台（例如DSP、廣告網路、SSP），並與這些平台共用假受眾。
 
 連線至廣告目標時，您的觀眾會以ID的形式傳送至目標平台，在此平台，觀眾會對應至目標平台已知的ID。
 
-目前，即時CDP支援下面列出的廣告目標。 如需如何連線至這些目的地的詳細資訊，請參閱個別連結：
+目前，平台支援下列廣告目標。 如需如何連線至這些目的地的詳細資訊，請參閱個別連結：
 
 ## 連線
 
-要瞭解連接和擴展之間的差異，請參 [閱「目標類型](../../destination-types.md#connections) 」和「類別」頁中的「連接」。
+要瞭解連接和擴展之間的差異，請參閱「目標類型和類別」頁中的[連接](../../destination-types.md#connections)。
 
 - [Google Display &amp; Video 360](./google-dv360.md)
 - [Google廣告](./google-ads-destination.md)
@@ -34,7 +34,7 @@ ht-degree: 2%
 
 ## 擴充功能
 
-要瞭解連接和擴展之間的差異，請參 [閱「目標類型](../../destination-types.md#extensions) 」和「類別」頁中的擴展。
+要瞭解連接和擴展之間的差異，請參閱「目標類型和類別」頁中的[擴展](../../destination-types.md#extensions)。
 
 - [Adobe Advertising Cloud擴充功能](./adobe-advertising-cloud.md)
 - [Awin廣告轉換標籤擴充功能](./awin-conversiontag.md)
