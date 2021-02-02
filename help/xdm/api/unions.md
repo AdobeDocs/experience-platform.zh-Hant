@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;experience data model;Experience data model;Experience Data Model;data model;Data Model;schema registry;Schema Registry;union;Union;unions;Unions;segmentMembership;timeSeriesEvents;
+keywords: Experience Platform;home；熱門主題；API;XDM;XDM;XDM系統；體驗資料模型；Experience Data Model；資料模型；資料模型；模式註冊表；Schema Registry;Union;Union;Union;SegmentMembersh;timeSeriesEvents;
 solution: Experience Platform
 title: 工會
 description: 架構註冊表API中的/union端點可讓您以程式設計方式管理體驗應用程式中的XDM結合架構。
@@ -7,7 +7,7 @@ topic: developer guide
 translation-type: tm+mt
 source-git-commit: 1f18bf7367addd204f3ef8ce23583de78c70b70c
 workflow-type: tm+mt
-source-wordcount: '877'
+source-wordcount: '910'
 ht-degree: 1%
 
 ---
