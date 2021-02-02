@@ -5,15 +5,15 @@ user-guide-title: Adobe Experience Platform 概述
 breadcrumb-title: Experience Platform 概觀
 user-guide-description: 了解 Experience Platform 如何協助您即時為客戶傳遞個人化體驗。
 translation-type: tm+mt
-source-git-commit: 72f60ef80a23f5ca4e70147ee6aa6027028fefd0
+source-git-commit: 6ec317dd790b6ad77d8181c1398934f9636c5f5f
 workflow-type: tm+mt
-source-wordcount: '142'
+source-wordcount: '161'
 ht-degree: 21%
 
 ---
 
 
-# Adobe Experience Platform overview {#landing}
+# Adobe Experience Platform概觀{#landing}
 
 * [平台概觀](home.md)
 * [平台概觀（視訊）](video/platform-overview.md)
@@ -32,13 +32,20 @@ ht-degree: 21%
 * Experience Platform API {#platform-apis}
    * [API基礎知識](api-fundamentals.md)
    * [API參考檔案](http://www.adobe.com/go/platform-api-reference-en)
-   * [驗證至Experience Platform API](http://www.adobe.com/go/platform-api-authentication-en)
-* 平台檔案 {#documentation}
+   * [驗證和存取平台API教學課程](api-authentication.md)
+* 平台檔案{#documentation}
    * [檔案總覽](documentation/overview.md)
-* Adobe生態系統中的平台 {#ecosystem}
+   * [檔案語言支援](documentation/language-support.md)
+* Adobe生態系統中的平台{#ecosystem}
    * [應用程式服務](application-services.md)
    * [應用程式與智慧服務（視訊）](video/application-intelligent-services.md)
    * [與Experience Cloud（視訊）的平台整合](video/experience-cloud-integrations.md)
+* 治理、隱私和安全{#governance-privacy-security}
+   * [概述](./governance-privacy-security/overview.md)
+   * 同意管理 {#consent}
+      * IAB TCF 2.0 {#iab}
+         * [概述](./governance-privacy-security/consent/iab/overview.md)
+         * [設定資料集以擷取同意和偏好設定資料](./governance-privacy-security/consent/iab/dataset.md)
 * [授權使用儀表板](license-usage-dashboard.md)
 * [疑難排解指南](troubleshooting.md)
 * [ADLS第2代遷移](adls2-gen2-migration.md)
