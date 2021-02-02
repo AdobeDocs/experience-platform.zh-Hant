@@ -1,24 +1,27 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home；熱門主題
 solution: Experience Platform
-title: 接受的身份名稱空間和限定詞
+title: 隱私權服務API開發人員指南附錄
 topic: developer guide
+description: 本檔案包含使用隱私權服務API的其他資訊。
 translation-type: tm+mt
-source-git-commit: 5b32c1955fac4f137ba44e8189376c81cdbbfc40
+source-git-commit: 5dad1fcc82707f6ee1bf75af6c10d34ff78ac311
 workflow-type: tm+mt
-source-wordcount: '464'
-ht-degree: 10%
+source-wordcount: '498'
+ht-degree: 9%
 
 ---
 
 
 # 附錄
 
-## 標準身分名稱空間 {#standard-namespaces}
+以下各節包含使用Adobe Experience Platform Privacy Service API的其他資訊。
 
-所有傳送至的身分必須以 [!DNL Privacy Service] 特定的身分命名空間提供。 Identity namespaces are a component of [Adobe Experience Platform Identity Service](../../identity-service/home.md) that indicate the context to which an identity relates.
+## 標準身份名稱空間{#standard-namespaces}
 
-下表概述了幾種常用的預先定義識別類型，這些類型由提供， [!DNL Experience Platform]以及它們的關聯 `namespace` 值：
+傳送到[!DNL Privacy Service]的所有身份都必須以特定的身份名稱空間提供。 身分名稱空間是[Adobe Experience Platform Identity Service](../../identity-service/home.md)的元件，用以指出身分相關的內容。
+
+下表概述了[!DNL Experience Platform]提供的幾種常用、預先定義的身份類型，以及其關聯的`namespace`值：
 
 | 身分類型 | `namespace` | `namespaceId` |
 | --- | --- | --- |
@@ -28,35 +31,35 @@ ht-degree: 10%
 | Adobe Audience Manager UUID | 核心 | 0 |
 | Adobe Experience Cloud ID | ECID | 4 |
 | Adobe Target ID | TNTID | 9 |
-| [!DNL Apple] 廣告商的ID | IDFA | 20915 |
-| [!DNL Google] 廣告 ID | GAID | 20914 |
+| [!DNL Apple] 廣告商的ID | IDFA | 二零九一五年 |
+| [!DNL Google] 廣告 ID | GAID | 二零九一四年 |
 | [!DNL Windows] AID | WAID | 8 |
 
 >[!NOTE]
 >
->每個身分類型也有 `namespaceId` 一個整數值，當將身分屬性設定為&quot;namespaceId&quot;時， `namespace` 可使用此整 `type` 數值來取代字串。 如需詳細資訊，請參 [閱命名空間限](#namespace-qualifiers) 定詞一節。
+>每個身分類型也有一個`namespaceId`整數值，當將身分的`type`屬性設為&quot;namespaceId&quot;時，該整數值可用來取代`namespace`字串。 如需詳細資訊，請參閱[namespace限定詞](#namespace-qualifiers)一節。
 
-您可以向API中的端點提出GET請求，以擷取組織所使用之識 `idnamespace/identities` 別名稱空間 [!DNL Identity Service] 清單。 如需詳細 [資訊，請參閱Identity Service開發人員指南](../../identity-service/api/getting-started.md) 。
+您可以向[!DNL Identity Service] API中的`idnamespace/identities`端點發出GET請求，以檢索組織正在使用的身份名稱空間清單。 如需詳細資訊，請參閱[Identity Service開發人員指南](../../identity-service/api/getting-started.md)。
 
 ## 命名空間限定詞
 
-在API中指 `namespace` 定值時，命名空間限 [!DNL Privacy Service] 定符必須包含在對應的參 ****`type` 數中。 下表概述了不同接受的命名空間限定詞。
+在[!DNL Privacy Service] API中指定`namespace`值時，**命名空間限定詞**&#x200B;必須包含在對應的`type`參數中。 下表概述了不同接受的命名空間限定詞。
 
 | 限定詞 | 定義 |
 | --------- | ---------- |
 | 標準 | 其中一個標準名稱空間是全域定義的，不會系結至個別組織資料集（例如，電子郵件、電話號碼等）。 提供命名空間ID。 |
-| 自訂 | 在組織上下文中建立的唯一名稱空間，而不是在中共用 [!DNL Experience Cloud]。 值代表要搜尋的好記名稱（&quot;name&quot;欄位）。 提供命名空間ID。 |
+| 自訂 | 在組織上下文中建立的唯一名稱空間，不在[!DNL Experience Cloud]中共用。 值代表要搜尋的好記名稱（&quot;name&quot;欄位）。 提供命名空間ID。 |
 | integrationCode | 整合代碼——類似「自訂」，但明確定義為要搜尋之資料來源的整合代碼。 提供命名空間ID。 |
 | namespaceId | 指出值是透過namespace服務建立或映射之namespace的實際ID。 |
 | 未註冊 | 未在namespace服務中定義且採用「原樣」的自由格式字串。 任何處理這些類型名稱空間的應用程式都會針對它們進行檢查，並處理（如果適合公司內容和資料集）。 未提供命名空間ID。 |
-| analytics | 在內部映射的自訂命名空間， [!DNL Analytics]而非在namespace服務中。 這會直接依原始請求所指定的方式傳入，但沒有命名空間ID |
-| Target | 自訂命名空間由內部瞭解， [!DNL Target]而非在namespace服務中。 這會直接依原始請求所指定的方式傳入，但沒有命名空間ID |
+| analytics | 在[!DNL Analytics]內部映射的自訂命名空間，而不是在namespace服務中。 這會直接依原始請求所指定的方式傳入，但沒有命名空間ID |
+| Target | [!DNL Target]在內部可理解的自訂命名空間，而不是在namespace服務中。 這會直接依原始請求所指定的方式傳入，但沒有命名空間ID |
 
 ## 接受的產品值
 
-下表概述在工作建立請求的屬性中指定Adobe `include` 產品的接受值。
+下表概述在工作建立請求的`include`屬性中指定Adobe產品的接受值。
 
-| 產品 | 用於屬性中的 `include` 值 |
+| 產品 | 用於`include`屬性的值 |
 --- | ---
 | Adobe Advertising Cloud | &quot;AdCloud&quot; |
 | Adobe Analytics | &quot;Analytics&quot; |
