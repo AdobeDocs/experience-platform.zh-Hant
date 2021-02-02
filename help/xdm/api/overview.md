@@ -1,11 +1,11 @@
 ---
-keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;experience data model;Experience data model;Experience Data Model;data model;Data Model;schema registry;Schema Registry;
+keywords: Experience Platform;home；熱門主題；api;API;XDM;XDM系統；體驗資料模型；體驗資料模型；資料模型；模式註冊；模式註冊；
 solution: Experience Platform
 title: 架構註冊API開發人員指南
 description: '架構註冊表API可讓您以程式設計方式管理Experience Platform中所有可用的架構及相關XDM資源。 '
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 1f18bf7367addd204f3ef8ce23583de78c70b70c
+source-git-commit: 44a727f6ce4c2b90aa010379583c7c4d3ebd011c
 workflow-type: tm+mt
 source-wordcount: '961'
 ht-degree: 0%
@@ -63,19 +63,19 @@ Mixin是可重複使用的元件，它定義了表示特定概念的一個或多
 
 架構註冊表API可讓您在沙盒和IMS組織之間傳輸和共用XDM資源。 對於任何方案、混合或資料類型，可以生成包含資源結構和任何從屬資源的導出裝載。 然後，此裝載可用來將資源匯入目標沙盒和IMS組織。
 
-有關使用此端點的詳細資訊，請參見[方案註冊表API參考](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml)。
+有關如何使用這些端點的詳細資訊，請參閱[導出／導入端點指南](./export-import.md)。
 
 ## 範例資料
 
 可以為架構庫內的任何指定架構生成示例資料。 然後，返回的響應對象可用作資料接收的源。
 
-有關使用此端點的詳細資訊，請參見[方案註冊表API參考](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml)。
+有關使用此端點的詳細資訊，請參見[示例資料端點指南](./sample-data.md)。
 
 ## 審計日誌
 
 方案註冊表維護不同更新之間對資源（類、混合、資料類型或方案）發生的所有更改的日誌。 通過在到此端點的GET請求路徑中提供特定資源的`$id`或`meta:altId`，可以檢索該資源的日誌。
 
-有關使用此端點的詳細資訊，請參見[方案註冊表API參考](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml)。
+有關使用此端點的詳細資訊，請參見[審核日誌端點指南](./audit-log.md)。
 
 ## 後續步驟
 
