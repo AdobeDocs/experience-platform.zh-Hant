@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;experience data model;data model;ui;workspace;mixin;mixins;
+keywords: Experience Platform;home；熱門主題；api;API;XDM;XDM系統；體驗資料模型；ui;workspace;mixin;mixins;
 solution: Experience Platform
 title: 在UI中建立和編輯混音
 description: 瞭解如何在Experience Platform使用者介面中建立和編輯混合。
@@ -7,7 +7,7 @@ topic: user guide
 translation-type: tm+mt
 source-git-commit: 2e20403122e65d28f04114af9b7e8d41874f76e2
 workflow-type: tm+mt
-source-wordcount: '649'
+source-wordcount: '668'
 ht-degree: 0%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 0%
 
 Adobe Experience Platform提供許多標準混搭，涵蓋廣泛的行銷使用案例。 不過，您也可以建立和編輯您自己的自訂混音，以定義XDM結構中與您的業務相關的其他概念。 本指南提供如何在平台UI中建立、編輯和管理組織自訂混音的概觀。
 
-## 先決條件
+## 必要條件
 
 本指南需要對XDM System有充分的瞭解。 請參閱[XDM概述](../../home.md)以瞭解XDM在Experience Platform生態系統中的角色，以及[架構構成基礎](../../schema/composition.md)，瞭解mixins對XDM架構的貢獻。
 
@@ -59,7 +59,7 @@ Adobe Experience Platform提供許多標準混搭，涵蓋廣泛的行銷使用�
 
 ![](../../images/ui/resources/mixins/add-field-button.png)
 
-畫布中會顯示&#x200B;**[!UICONTROL 新欄位]**，右側欄位會更新，顯示設定欄位屬性的控制項。 如需如何設定欄位並將欄位新增至混音的特定步驟，請參閱UI](../fields/overview.md#define)中的[定義欄位指南。
+畫布中會顯示&#x200B;**[!UICONTROL 新欄位]**，右側欄位會更新，顯示設定欄位屬性的控制項。 如需如何設定欄位並將欄位新增至混音的特定步驟，請參閱UI](../fields/overview.md#define)中[定義欄位的指南。
 
 繼續新增所需的欄位至混音。 完成後，選擇&#x200B;**[!UICONTROL Save]**&#x200B;以保存模式和混音。
 
