@@ -1,23 +1,23 @@
 ---
-keywords: Experience Platform;home;popular topics;ecommerce;eCommerce
+keywords: Experience Platform;home；熱門主題；ecommerce;eCommerce
 solution: Experience Platform
 title: 使用Flow Service API探索電子商務連線
 topic: overview
 description: 本教學課程使用Flow Service API來探索電子商務連線。
 translation-type: tm+mt
-source-git-commit: 4696bcb17427bb50549a315294baf7fbd87ac01d
+source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
 workflow-type: tm+mt
-source-wordcount: '562'
+source-wordcount: '573'
 ht-degree: 2%
 
 ---
 
 
-# 使用 [!DNL Flow Service] API探索電子商務連線
+# 使用[!DNL Flow Service] API探索電子商務連線
 
-[!DNL Flow Service] 用於收集和集中Adobe Experience Platform內不同來源的客戶資料。 該服務提供用戶介面和REST風格的API，所有支援的源都可從中連接。
+[!DNL Flow Service] 用於收集和集中Adobe Experience Platform內不同來源的客戶資料。該服務提供用戶介面和REST風格的API，所有支援的源都可從中連接。
 
-本教學課程使 [!DNL Flow Service] 用API來探索協力廠商的 **[!UICONTROL 電子商務]** 。
+本教學課程使用[!DNL Flow Service] API來探索第三方&#x200B;**[!UICONTROL 電子商務]**&#x200B;連線。
 
 ## 快速入門
 
@@ -26,27 +26,27 @@ ht-degree: 2%
 * [[!DNL Sources]](../../../home.md): [!DNL Experience Platform] 允許從各種來源接收資料，同時提供使用服務構建、標籤和增強傳入資料的 [!DNL Platform] 能力。
 * [[!DNL Sandboxes]](../../../../sandboxes/home.md): [!DNL Experience Platform] 提供虛擬沙盒，可將單一執行個體分 [!DNL Platform] 割為不同的虛擬環境，以協助開發和發展數位體驗應用程式。
 
-以下各節提供您必須知道的其他資訊，以便使用 **[!UICONTROL API成功連線至]** 電子商務 [!DNL Flow Service] 連線。
+以下各節提供您必須知道的其他資訊，以便使用[!DNL Flow Service] API成功連線至&#x200B;**[!UICONTROL eCommerce]**&#x200B;連線。
 
 ### 取得連線ID
 
-若要使用API探索 **[!UICONTROL 您的電子商務連]** 線 [!DNL Platform] ，您必須擁有有效的連線ID。 如果您尚未建立您要使用的 **[!UICONTROL 電子商務連線]** ，您可以透過下列教學課程來建立連線：
+若要使用[!DNL Platform] API探索&#x200B;**[!UICONTROL eCommerce]**&#x200B;連線，您必須擁有有效的連線ID。 如果您尚未連接要使用的&#x200B;**[!UICONTROL eCommerce]**&#x200B;連接，則可以通過以下教程建立一個連接：
 
 * [Shopify](../create/ecommerce/shopify.md)
 
 ### 讀取範例API呼叫
 
-本教學課程提供範例API呼叫，以示範如何設定請求的格式。 這些包括路徑、必要標題和正確格式化的請求負載。 也提供API回應中傳回的範例JSON。 如需範例API呼叫檔案中所用慣例的詳細資訊，請參閱疑難排解指 [南中有關如何讀取範例API呼叫的](../../../../landing/troubleshooting.md#how-do-i-format-an-api-request)[!DNL Experience Platform] 章節。
+本教學課程提供範例API呼叫，以示範如何設定請求的格式。 這些包括路徑、必要標題和正確格式化的請求負載。 也提供API回應中傳回的範例JSON。 如需範例API呼叫檔案中所用慣例的詳細資訊，請參閱[!DNL Experience Platform]疑難排解指南中[如何讀取範例API呼叫](../../../../landing/troubleshooting.md#how-do-i-format-an-api-request)一節。
 
 ### 收集必要標題的值
 
-若要呼叫API，您必 [!DNL Platform] 須先完成驗證教 [學課程](../../../../tutorials/authentication.md)。 完成驗證教學課程後，將提供所有 [!DNL Experience Platform] API呼叫中每個必要標題的值，如下所示：
+若要呼叫[!DNL Platform] API，您必須先完成[驗證教學課程](https://www.adobe.com/go/platform-api-authentication-en)。 完成驗證教學課程後，所有[!DNL Experience Platform] API呼叫中每個所需標題的值都會顯示在下面：
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
 * `x-gw-ims-org-id: {IMS_ORG}`
 
-中的所有資 [!DNL Experience Platform]源(包括屬於這些資源 [!DNL Flow Service])都隔離到特定的虛擬沙盒。 對API的所 [!DNL Platform] 有請求都需要一個標題，該標題會指定要在中執行的操作的沙盒名稱：
+[!DNL Experience Platform]中的所有資源（包括屬於[!DNL Flow Service]的資源）都隔離到特定的虛擬沙盒。 對[!DNL Platform] API的所有請求都需要一個標題，該標題指定要在中執行操作的沙盒的名稱：
 
 * `x-sandbox-name: {SANDBOX_NAME}`
 
@@ -56,7 +56,7 @@ ht-degree: 2%
 
 ## 探索您的資料表格
 
-使用 **[!UICONTROL eCommerce]** connection ID，您可以執行GET請求來探索資料表格。 使用以下調用查找要檢查或裝入的表的路徑 [!DNL Platform]。
+使用&#x200B;**[!UICONTROL eCommerce]**&#x200B;連線ID，您可以執行GET請求來探索資料表。 使用以下調用查找要檢查或裝入[!DNL Platform]的表的路徑。
 
 **API格式**
 
@@ -66,7 +66,7 @@ GET /connections/{CONNECTION_ID}/explore?objectType=root
 
 | 參數 | 說明 |
 | --- | --- |
-| `{CONNECTION_ID}` | 您的 **[!UICONTROL 電子商務]** 連線ID。 |
+| `{CONNECTION_ID}` | 您的&#x200B;**[!UICONTROL eCommerce]**&#x200B;連線ID。 |
 
 **請求**
 
@@ -81,7 +81,7 @@ curl -X GET \
 
 **回應**
 
-成功的回應會從您的電子商務連線傳回 **[!UICONTROL 一組表]** 。 尋找您要放入的表格， [!DNL Platform] 並記下其屬性，因 `path` 為您必須在下個步驟中提供表格以檢查其結構。
+成功的響應從&#x200B;**[!UICONTROL eCommerce]**&#x200B;連接返回表陣列。 查找要帶入[!DNL Platform]的表，並記下其`path`屬性，因為在下一步中需要提供該表來檢查其結構。
 
 ```json
 [
@@ -118,7 +118,7 @@ curl -X GET \
 
 ## 檢查表格結構
 
-要從 **[!UICONTROL eCommerce連接檢查表的結構]** ，請在指定查詢參數內表的路徑時執行GET `object` 請求。
+要從&#x200B;**[!UICONTROL eCommerce]**&#x200B;連接檢查表的結構，請在指定`object`查詢參數內表的路徑時執行GET請求。
 
 **API格式**
 
@@ -128,8 +128,8 @@ GET /connections/{CONNECTION_ID}/explore?objectType=table&object={TABLE_PATH}
 
 | 參數 | 說明 |
 | --------- | ----------- |
-| `{CONNECTION_ID}` | 您電子商務連線的 **[!UICONTROL 連線ID]** 。 |
-| `{TABLE_PATH}` | 電子商務連線中表 **[!UICONTROL 的路徑]** 。 |
+| `{CONNECTION_ID}` | **[!UICONTROL eCommerce]**&#x200B;連線的連線ID。 |
+| `{TABLE_PATH}` | **[!UICONTROL eCommerce]**&#x200B;連線中表的路徑。 |
 
 **請求**
 
@@ -144,7 +144,7 @@ curl -X GET \
 
 **回應**
 
-成功的響應返回指定表的結構。 有關每個表列的詳細資訊位於陣列的元 `columns` 素中。
+成功的響應返回指定表的結構。 有關每個表列的詳細資訊位於`columns`陣列的元素中。
 
 ```json
 {
@@ -198,4 +198,4 @@ curl -X GET \
 
 ## 後續步驟
 
-在本教程中，您已探索過 **[!UICONTROL eCommerce]** 連線、找到您要收錄的表格路徑 [!DNL Platform]，並取得其結構的相關資訊。 您可以在下一個教學課程中使用此資 [訊來收集電子商務資料並將其匯入平台](../collect/ecommerce.md)。
+在本教程中，您探索了&#x200B;**[!UICONTROL eCommerce]**&#x200B;連接，找到了要裝入[!DNL Platform]的表的路徑，並獲取了有關其結構的資訊。 您可以在下一個教學課程中使用這項資訊來收集電子商務資料，並將其匯入Platform](../collect/ecommerce.md)。[
