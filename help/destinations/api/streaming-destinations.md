@@ -1,31 +1,32 @@
 ---
-keywords: Experience Platform;home;popular topics; API tutorials; streaming destinations API; Real-time CDP
+keywords: Experience Platform; home；熱門主題；API教學課程；串流目標API;平台
 solution: Experience Platform
 title: 連線至串流目的地並啟動資料
+description: 本檔案涵蓋使用Adobe Experience Platform API建立串流目的地
 topic: tutorial
 type: Tutorial
 translation-type: tm+mt
-source-git-commit: 6a1552cbd7da998e3fe7d7c985611e634fc7546a
+source-git-commit: d1f357659313aba0811b267598deda9770d946a1
 workflow-type: tm+mt
-source-wordcount: '2000'
+source-wordcount: '2018'
 ht-degree: 1%
 
 ---
 
 
-# 在Adobe的即時客戶資料平台中，使用API呼叫連線至串流目的地並啟用資料
+# 使用Adobe Experience Platform中的API呼叫，連線至串流目的地並啟用資料
 
 >[!NOTE]
 >
->即時 [!DNL Amazon Kinesis] CDP [!DNL Azure Event Hubs] 中的目標和目標當前處於測試階段。 文件和功能可能會有所變更。
+>平台中的[!DNL Amazon Kinesis]和[!DNL Azure Event Hubs]目標目前處於測試階段。 文件和功能可能會有所變更。
 
-本教學課程示範如何使用API呼叫來連線至您的Adobe Experience Platform資料、建立串流雲端儲存目的地([Amazon Kinesis](../catalog/cloud-storage/amazon-kinesis.md) 或 [Azure事件中樞](../catalog/cloud-storage/azure-event-hubs.md))的連線、建立資料流至新建立的目的地，以及將資料啟動至新建立的目的地。
+本教學課程示範如何使用API呼叫來連接Adobe Experience Platform資料、建立串流雲端儲存目的地（[Amazon Kinesis](../catalog/cloud-storage/amazon-kinesis.md)或[Azure事件中樞](../catalog/cloud-storage/azure-event-hubs.md)）、建立資料流至新建立的目的地，並將資料啟動至新建立的目的地。
 
-本教學課程在所 [!DNL Amazon Kinesis] 有範例中都使用目標，但步驟完全相同 [!DNL Azure Event Hubs]。
+本教程在所有示例中都使用[!DNL Amazon Kinesis]目標，但[!DNL Azure Event Hubs]的步驟完全相同。
 
 ![概觀——建立串流目的地和啟用區段的步驟](../assets/api/streaming-destination/overview.png)
 
-如果您偏好使用Adobe即時CDP中的使用者介面來連線至目標並啟用資料，請參閱 [Connect destination](../ui/connect-destination.md)[and Activate profiles and segments to a destinational](../ui/activate-destinations.md) 。
+如果您偏好使用平台中的使用者介面來連接目標並啟用資料，請參閱[連接目標](../ui/connect-destination.md)和[啟用描述檔和區段至目標](../ui/activate-destinations.md)教學課程。
 
 ## 快速入門
 
@@ -35,48 +36,48 @@ ht-degree: 1%
 * [[!DNL Catalog Service]](../../catalog/home.md): [!DNL Catalog] 是Experience Platform中資料位置和世系的記錄系統。
 * [沙盒](../../sandboxes/home.md):Experience Platform提供虛擬沙盒，可將單一Platform實例分割為不同的虛擬環境，以協助開發和發展數位體驗應用程式。
 
-以下各節提供您需要瞭解的其他資訊，以便在即時CDP中將資料激活到串流目標。
+以下各節提供您需要瞭解的其他資訊，以便將資料啟動至平台中的串流目的地。
 
 ### 收集必要的認證
 
 要完成本教學課程中的步驟，您應準備好下列憑證，這取決於您要連接和啟用區段的目標類型。
 
-* 對於連 [!DNL Amazon Kinesis] 接： `accessKeyId`、 `secretKey`、 `region` or `connectionUrl`
-* 對於連 [!DNL Azure Event Hubs] 接： `sasKeyName`, `sasKey``namespace`
+* 對於[!DNL Amazon Kinesis]連接：`accessKeyId`、`secretKey`、`region`或`connectionUrl`
+* 對於[!DNL Azure Event Hubs]連接：`sasKeyName`、`sasKey`、`namespace`
 
-### 讀取範例API呼叫 {#reading-sample-api-calls}
+### 讀取範例API呼叫{#reading-sample-api-calls}
 
-本教學課程提供範例API呼叫，以示範如何設定請求的格式。 這些包括路徑、必要標題和正確格式化的請求負載。 也提供API回應中傳回的範例JSON。 如需範例API呼叫檔案中所用慣例的詳細資訊，請參閱「Experience Platform疑難排解指 [南」中有關如何讀取範例API呼叫的章節](../../landing/troubleshooting.md#how-do-i-format-an-api-request) 。
+本教學課程提供範例API呼叫，以示範如何設定請求的格式。 這些包括路徑、必要標題和正確格式化的請求負載。 也提供API回應中傳回的範例JSON。 如需範例API呼叫檔案中所用慣例的詳細資訊，請參閱Experience Platform疑難排解指南中[如何讀取範例API呼叫](../../landing/troubleshooting.md#how-do-i-format-an-api-request)一節。
 
-### 收集必要和選用標題的值 {#gather-values}
+### 收集必要和可選標題的值{#gather-values}
 
-若要呼叫平台API，您必須先完成驗證教 [學課程](../../tutorials/authentication.md)。 完成驗證教學課程後，所有Experience Platform API呼叫中每個必要標題的值都會顯示在下方：
+若要呼叫平台API，您必須先完成[驗證教學課程](https://www.adobe.com/go/platform-api-authentication-en)。 完成驗證教學課程後，所有Experience Platform API呼叫中每個必要標題的值都會顯示在下方：
 
-* 授權：生產者 `{ACCESS_TOKEN}`
-* x-api-key: `{API_KEY}`
-* x-gw-ims-org-id: `{IMS_ORG}`
+* 授權：載體`{ACCESS_TOKEN}`
+* x-api-key:`{API_KEY}`
+* x-gw-ims-org-id:`{IMS_ORG}`
 
 Experience Platform中的資源可以隔離至特定的虛擬沙盒。 在對平台API的請求中，您可以指定要進行操作的沙盒的名稱和ID。 這些是可選參數。
 
-* x-sandbox-name: `{SANDBOX_NAME}`
+* x-sandbox-name:`{SANDBOX_NAME}`
 
 >[!NOTE]
 >
->如需Experience Platform中沙盒的詳細資訊，請參閱沙盒 [概觀檔案](../../sandboxes/home.md)。
+>如需Experience Platform中沙盒的詳細資訊，請參閱[沙盒概述檔案](../../sandboxes/home.md)。
 
 所有包含裝載(POST、PUT、PATCH)的請求都需要額外的媒體類型標題：
 
-* 內容類型： `application/json`
+* 內容類型：`application/json`
 
-### Swagger檔案 {#swagger-docs}
+### Swagger文檔{#swagger-docs}
 
-您可在Swagger的本教學課程中，找到所有API呼叫的隨附參考檔案。 請參閱 [Adobe.io上的Flow Service API檔案](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml)。 建議您同時使用本教學課程和Swagger檔案頁面。
+您可在Swagger的本教學課程中，找到所有API呼叫的隨附參考檔案。 請參閱Adobe.io](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml)上的[Flow Service API檔案。 建議您同時使用本教學課程和Swagger檔案頁面。
 
-## 取得可用串流目的地清單 {#get-the-list-of-available-streaming-destinations}
+## 取得可用的串流目的地清單{#get-the-list-of-available-streaming-destinations}
 
 ![目標步驟概述步驟1](../assets/api/streaming-destination/step1.png)
 
-首先，您應決定要啟動資料的串流目的地。 首先，請執行呼叫以請求可連接並啟用區段至的可用目的地清單。 對端點執行以下GET請 `connectionSpecs` 求以返回可用目標清單：
+首先，您應決定要啟動資料的串流目的地。 首先，請執行呼叫以請求可連接並啟用區段至的可用目的地清單。 對`connectionSpecs`端點執行以下GET請求以返回可用目的地清單：
 
 **API格式**
 
@@ -98,7 +99,7 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 
 **回應**
 
-成功的響應包含可用目標及其唯一標識符(`id`)的清單。 儲存您計畫使用之目的地的值，因為後續步驟中將會要求它。 例如，如果您想要連線區段並傳送至或 [!DNL Amazon Kinesis] ，請 [!DNL Azure Event Hubs]在回應中尋找下列程式碼片段：
+成功的響應包含可用目標及其唯一標識符的清單(`id`)。 儲存您計畫使用之目的地的值，因為後續步驟中將會要求它。 例如，如果您想要連線區段並傳送至[!DNL Amazon Kinesis]或[!DNL Azure Event Hubs]，請在回應中尋找下列程式碼片段：
 
 ```json
 {
@@ -116,7 +117,7 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 }
 ```
 
-## 連線至您的Experience Platform資料 {#connect-to-your-experience-platform-data}
+## 連線至您的Experience Platform資料{#connect-to-your-experience-platform-data}
 
 ![目標步驟概述步驟2](../assets/api/streaming-destination/step2.png)
 
@@ -154,7 +155,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 ```
 
 
-* `{CONNECTION_SPEC_ID}`:使用統一配置式服務的連接規範ID - `8a9c3494-9708-43d7-ae3f-cda01e5030e1`。
+* `{CONNECTION_SPEC_ID}`:使用統一配置式服務的連接規範ID -  `8a9c3494-9708-43d7-ae3f-cda01e5030e1`。
 
 **回應**
 
@@ -166,7 +167,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 }
 ```
 
-### 連線至您的Experience Platform資料 {#connect-to-platform-data}
+### 連線至您的Experience Platform資料{#connect-to-platform-data}
 
 **API格式**
 
@@ -199,11 +200,11 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 ```
 
 * `{BASE_CONNECTION_ID}`:使用您在上一步驟中取得的ID。
-* `{CONNECTION_SPEC_ID}`:使用統一配置式服務的連接規範ID - `8a9c3494-9708-43d7-ae3f-cda01e5030e1`。
+* `{CONNECTION_SPEC_ID}`:使用統一配置式服務的連接規範ID -  `8a9c3494-9708-43d7-ae3f-cda01e5030e1`。
 
 **回應**
 
-成功的響應返回新建立的源連接`id`到統一配置檔案服務的唯一標識符()。 這可確認您已成功連線至您的Experience Platform資料。 在後續步驟中，視需要儲存此值。
+成功的響應返回新建立的源連接到統一配置檔案服務的唯一標識符(`id`)。 這可確認您已成功連線至您的Experience Platform資料。 在後續步驟中，視需要儲存此值。
 
 ```json
 {
@@ -212,7 +213,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 ```
 
 
-## 連接至串流目的地 {#connect-to-streaming-destination}
+## 連線至串流目的地{#connect-to-streaming-destination}
 
 ![目標步驟概述步驟3](../assets/api/streaming-destination/step3.png)
 
@@ -233,7 +234,7 @@ POST /connections
 
 >[!IMPORTANT]
 >
->下列範例包含前置詞的程式碼註解 `//`。 這些註解會反白標示不同串流目的地必須使用不同值的位置。 請先移除注釋，再使用程式碼片段。
+>下列範例包含前置有`//`的程式碼註解。 這些註解會反白標示不同串流目的地必須使用不同值的位置。 請先移除注釋，再使用程式碼片段。
 
 ```shell
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/connections' \
@@ -269,10 +270,10 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 * `{AUTHENTICATION_CREDENTIALS}`:填寫您的串流目的地名稱： `Aws Kinesis authentication credentials` 或 `Azure EventHub authentication credentials`者。
 * `{ACCESS_ID}`: *用於 [!DNL Amazon Kinesis] 連接。* Amazon Kinesis儲存位置的訪問ID。
 * `{SECRET_KEY}`: *用於 [!DNL Amazon Kinesis] 連接。* Amazon Kinesis儲存位置的密鑰。
-* `{REGION}`: *用於 [!DNL Amazon Kinesis] 連接。* 您帳戶中即 [!DNL Amazon Kinesis] 時CDP將串流您資料的地區。
-* `{SAS_KEY_NAME}`: *用於 [!DNL Azure Event Hubs] 連接。* 填寫您的SAS密鑰名稱。 瞭解 [!DNL Azure Event Hubs] Microsoft文檔中 [如何使用SAS密鑰驗證](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature)。
-* `{SAS_KEY}`: *用於 [!DNL Azure Event Hubs] 連接。* 填寫SAS密鑰。 瞭解 [!DNL Azure Event Hubs] Microsoft文檔中 [如何使用SAS密鑰驗證](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature)。
-* `{EVENT_HUB_NAMESPACE}`: *用於 [!DNL Azure Event Hubs] 連接。* 填寫Real- [!DNL Azure Event Hubs] time CDP將在其中流資料的命名空間。 如需詳細資訊，請 [參閱檔案中的建立事件中樞](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hubs-namespace) ，命名 [!DNL Microsoft] 空間。
+* `{REGION}`: *用於 [!DNL Amazon Kinesis] 連接。* 您帳戶中平台 [!DNL Amazon Kinesis] 將串流您資料的地區。
+* `{SAS_KEY_NAME}`: *用於 [!DNL Azure Event Hubs] 連接。* 填寫您的SAS密鑰名稱。瞭解如何在[Microsoft文檔](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature)中使用SAS密鑰驗證[!DNL Azure Event Hubs]。
+* `{SAS_KEY}`: *用於 [!DNL Azure Event Hubs] 連接。* 填寫SAS密鑰。瞭解如何在[Microsoft文檔](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature)中使用SAS密鑰驗證[!DNL Azure Event Hubs]。
+* `{EVENT_HUB_NAMESPACE}`: *用於 [!DNL Azure Event Hubs] 連接。* 填寫Platform將 [!DNL Azure Event Hubs] 在其中串流您資料的命名空間。有關詳細資訊，請參閱[!DNL Microsoft]文檔中的[建立事件集線器命名空間](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hubs-namespace)。
 
 **回應**
 
@@ -296,7 +297,7 @@ POST /targetConnections
 
 >[!IMPORTANT]
 >
->下列範例包含前置詞的程式碼註解 `//`。 這些註解會反白標示不同串流目的地必須使用不同值的位置。 請先移除注釋，再使用程式碼片段。
+>下列範例包含前置有`//`的程式碼註解。 這些註解會反白標示不同串流目的地必須使用不同值的位置。 請先移除注釋，再使用程式碼片段。
 
 ```shell
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/targetConnections' \
@@ -327,13 +328,13 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 * `{BASE_CONNECTION_ID}`:使用您在上述步驟中取得的基本連線ID。
 * `{CONNECTION_SPEC_ID}`:使用在步驟獲取可用目標列 [表中獲得的連接規範](#get-the-list-of-available-destinations)。
-* `{NAME_OF_DATA_STREAM}`: *用於 [!DNL Amazon Kinesis] 連接。* 提供帳戶中現有資料流的名 [!DNL Amazon Kinesis] 稱。 即時CDP將將資料導出到此流。
-* `{REGION}`: *用於 [!DNL Amazon Kinesis] 連接。* Amazon Kinesis帳戶中即時CDP將流資料的區域。
-* `{EVENT_HUB_NAME}`: *用於 [!DNL Azure Event Hubs] 連接。* 填寫Real- [!DNL Azure Event Hub] time CDP將在其中流資料的名稱。 如需詳細資訊，請 [參閱檔案中的建立事件](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hub)[!DNL Microsoft] 中心。
+* `{NAME_OF_DATA_STREAM}`: *用於 [!DNL Amazon Kinesis] 連接。* 提供帳戶中現有資料流的名 [!DNL Amazon Kinesis] 稱。平台會將資料匯出至此串流。
+* `{REGION}`: *用於 [!DNL Amazon Kinesis] 連接。* Amazon Kinesis帳戶中平台將在該地區流資料。
+* `{EVENT_HUB_NAME}`: *用於 [!DNL Azure Event Hubs] 連接。* 填寫平台 [!DNL Azure Event Hub] 將串流您資料的名稱。如需詳細資訊，請參閱[!DNL Microsoft]檔案中的[建立事件中樞](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hub)。
 
 **回應**
 
-成功的回應會傳回新建立之目標連線`id`的唯一識別碼()，以連至您的串流目的地。 在後續步驟中，視需要儲存此值。
+成功的回應會傳回新建立的串流目的地目標連線的唯一識別碼(`id`)。 在後續步驟中，視需要儲存此值。
 
 ```json
 {
@@ -400,13 +401,13 @@ curl -X POST \
 }
 ```
 
-* `{FLOW_SPEC_ID}`:基於配置檔案的目標的流規範ID是 `71471eba-b620-49e4-90fd-23f1fa0174d8`。 在呼叫中使用此值。
+* `{FLOW_SPEC_ID}`:基於配置檔案的目標的流規範ID是 `71471eba-b620-49e4-90fd-23f1fa0174d8`。在呼叫中使用此值。
 * `{SOURCE_CONNECTION_ID}`:使用您在步驟「連線至您的Experience Platform」中 [取得的來源連線ID](#connect-to-your-experience-platform-data)。
 * `{TARGET_CONNECTION_ID}`:使用您在步驟「連線至串流目的地」中 [取得的目標連線ID](#connect-to-streaming-destination)。
 
 **回應**
 
-成功的響應返回新創`id`建的資料流的ID()和 `etag`。 請記下這兩個值。 如同您在下個步驟中所做的，啟動區段。
+成功的響應返回新建立的資料流的ID(`id`)和`etag`。 請記下這兩個值。 如同您在下個步驟中所做的，啟動區段。
 
 ```json
 {
@@ -416,13 +417,13 @@ curl -X POST \
 ```
 
 
-## 將資料啟動至您的新目的地 {#activate-data}
+## 將資料激活到新目標{#activate-data}
 
 ![目標步驟概述步驟5](../assets/api/streaming-destination/step5.png)
 
 建立完所有連線和資料流後，您現在可以將個人檔案資料啟動至串流平台。 在此步驟中，您可以選擇要傳送至目的地的區段和描述檔屬性，並可排程資料並傳送至目的地。
 
-若要將區段啟用至新目的地，您必須執行JSON PATCH作業，如下例所示。 您可以在一次呼叫中啟用多個區段和描述檔屬性。 若要進一步瞭解JSON修補程式，請參閱 [RFC規格](https://tools.ietf.org/html/rfc6902)。
+若要將區段啟用至新目的地，您必須執行JSON PATCH作業，如下例所示。 您可以在一次呼叫中啟用多個區段和描述檔屬性。 若要進一步瞭解JSON修補程式，請參閱[RFC規格](https://tools.ietf.org/html/rfc6902)。
 
 **API格式**
 
@@ -469,8 +470,8 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 
 * `{DATAFLOW_ID}`:使用您在上一步驟中取得的資料流。
 * `{ETAG}`:使用您在上一步驟中取得的標籤。
-* `{SEGMENT_ID}`:提供您要匯出至此目的地的區段ID。 若要擷取您要啟用之區段的區段ID，請前往 **https://www.adobe.io/apis/experienceplatform/home/api-reference.html#/**，在左側導覽功能表中選取「區段服務API **[!UICONTROL 」，然後在「區段定義」]** 中尋找 `GET /segment/definitions` 操作 ****。
-* `{PROFILE_ATTRIBUTE}`:例如， `personalEmail.address` 或 `person.lastName`
+* `{SEGMENT_ID}`:提供您要匯出至此目的地的區段ID。若要擷取您要啟用之區段的區段ID，請前往&#x200B;**https://www.adobe.io/apis/experienceplatform/home/api-reference.html#/**，在左側導覽功能表中選取&#x200B;**[!UICONTROL 分段服務API]**，並在&#x200B;**[!UICONTROL 區段定義]**&#x200B;中尋找`GET /segment/definitions`操作。
+* `{PROFILE_ATTRIBUTE}`:例如， `personalEmail.address` 或  `person.lastName`
 
 **回應**
 
@@ -507,7 +508,7 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 
 **回應**
 
-傳回的回應應包含在參 `transformations` 數中您在上一步驟中提交的區段和描述檔屬性。 回應中 `transformations` 的範例參數可能如下所示：
+傳回的回應應包含在`transformations`參數中，您在上一步驟中提交的區段和描述檔屬性。 回應中的範例`transformations`參數可能如下所示：
 
 ```json
 "transformations": [
@@ -553,7 +554,7 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 
 >[!IMPORTANT]
 >
-> 除了設定檔屬性和步驟「啟用資料至新目的地」中的區段外 [，和中的匯出資](#activate-data)料也 [!DNL AWS Kinesis][!DNL Azure Event Hubs] 會包含有關識別地圖的資訊。 這代表匯出的設定檔身分(例如 [ECID](https://experienceleague.adobe.com/docs/id-service/using/intro/id-request.html)、行動ID、Google ID、電子郵件地址等)。 請參閱以下範例。
+> 除了步驟[將資料啟動至新目的地](#activate-data)中的描述檔屬性和區段外，[!DNL AWS Kinesis]和[!DNL Azure Event Hubs]中的匯出資料也會包含有關識別映射的資訊。 這代表匯出的設定檔身分（例如[ECID](https://experienceleague.adobe.com/docs/id-service/using/intro/id-request.html)、行動ID、Google ID、電子郵件地址等）。 請參閱以下範例。
 
 ```json
 {
@@ -593,34 +594,34 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 }
 ```
 
-## 使用Postman系列連線至串流目的地  {#collections}
+## 使用Postman集合連接到流目標{#collections}
 
-若要以更簡化的方式連接至本教學課程中所述的串流目的地，您可使用 [[!DNL Postman]](https://www.postman.com/)。
+若要以更簡化的方式連接至本教學課程中所述的串流目的地，您可使用[[!DNL Postman]](https://www.postman.com/)。
 
 [!DNL Postman] 是一種工具，可用來進行API呼叫並管理預先定義之呼叫和環境的程式庫。
 
-在本特定教學課程中，已附 [!DNL Postman] 加下列系列：
+在本特定教學課程中，已附上下列[!DNL Postman]系列：
 
 * [!DNL AWS Kinesis] [!DNL Postman] 系列
 * [!DNL Azure Event Hubs] [!DNL Postman] 系列
 
-按一 [下這裡](../assets/api/streaming-destination/DestinationPostmanCollection.zip) ，下載系列封存。
+按一下[這裡](../assets/api/streaming-destination/DestinationPostmanCollection.zip)下載系列封存。
 
-每個系列分別包含必要的要求和環 [!DNL AWS Kinesis]境變 [!DNL Azure Event Hub]數。
+每個系列分別包含[!DNL AWS Kinesis]和[!DNL Azure Event Hub]的必要請求和環境變數。
 
 ### 如何使用郵遞員系列
 
-若要使用附加的系列成功連線至目 [!DNL Postman] 標，請遵循下列步驟：
+要使用附加的[!DNL Postman]系列成功連接到目標，請執行以下步驟：
 
-* Download and install [!DNL Postman];
-* [下載](../assets/api/streaming-destination/DestinationPostmanCollection.zip) ，並解壓縮附加的系列；
+* 下載並安裝[!DNL Postman];
+* [下](../assets/api/streaming-destination/DestinationPostmanCollection.zip) 載並解壓縮所附的系列；
 * 將收藏集從對應的資料夾匯入郵遞員；
 * 根據本文的說明填寫環境變數；
-* 根據本 [!DNL API] 文中的說明，執行Postman的請求。
+* 根據本文中的說明，執行Postman的[!DNL API]請求。
 
 ## 後續步驟
 
-通過本教程，您成功將即時CDP連接到您首選的流目標之一，並設定資料流到相應目標。 傳出資料現在可用於客戶分析或您想要執行的任何其他資料作業的目標。 如需詳細資訊，請參閱下列頁面：
+在本教學課程中，您已成功將平台連接至您偏好的串流目的地，並設定資料流至個別目的地。 傳出資料現在可用於客戶分析或您想要執行的任何其他資料作業的目標。 如需詳細資訊，請參閱下列頁面：
 
 * [目的地概觀](../home.md)
 * [目標目錄概觀](../catalog/overview.md)
