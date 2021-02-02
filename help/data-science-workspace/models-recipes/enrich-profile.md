@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;machine learning model;Data Science Workspace;Real-time Customer Profile;popular topics;machine learning insights
+keywords: Experience Platform；機器學習模型；資料科學工作區；即時客戶個人檔案；熱門主題；機器學習見解
 solution: Experience Platform
 title: 運用機器學習見解豐富即時客戶個人檔案
 topic: tutorial
@@ -8,7 +8,7 @@ description: 本檔案提供如何運用機器學習的見解豐富即時客戶�
 translation-type: tm+mt
 source-git-commit: 62e6bb7e72637b06808ff87dc21f40af2c4e2d45
 workflow-type: tm+mt
-source-wordcount: '619'
+source-wordcount: '635'
 ht-degree: 0%
 
 ---
