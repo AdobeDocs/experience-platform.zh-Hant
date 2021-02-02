@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics;CJA;journey analytics;customer journey analytics;campaign orchestration;orchestration;customer journey;journey;journey orchestration;capability;region
+keywords: Experience Platform；首頁；熱門主題；CJA；歷程分析；客戶歷程分析；宣傳協調；客戶歷程；歷程；歷程協調；功能；地區
 solution: Experience Platform
 title: Adobe Experience Platform概觀
 topic: getting started
-description: Adobe Experience Platform是市面上功能最強大、最靈活、最開放的系統，可協助您建立和管理能推動客戶體驗的完整解決方案。  Experience Platform 可讓組織集中和標準化來自任何系統的客戶資料與內容，並運用資料科學和機器學習技術大幅改善豐富個人化體驗的設計和傳遞。
+description: Adobe Experience Platform可讓組織在套用資料科學和機器學習之前，集中化和標準化客戶資料，以大幅改善多樣化個人化體驗的設計和傳遞。
 translation-type: tm+mt
-source-git-commit: 72f60ef80a23f5ca4e70147ee6aa6027028fefd0
+source-git-commit: 2dbd92efbd992b70f4f750b09e9d2e0626e71315
 workflow-type: tm+mt
-source-wordcount: '474'
-ht-degree: 17%
+source-wordcount: '459'
+ht-degree: 7%
 
 ---
 
@@ -21,40 +21,42 @@ ht-degree: 17%
 
 Adobe Experience Platform是市面上功能最強大、最靈活、最開放的系統，可協助您建立和管理能推動客戶體驗的完整解決方案。 [!DNL Experience Platform] 可讓組織集中和標準化來自任何系統的客戶資料與內容，並運用資料科學和機器學習技術大幅改善豐富個人化體驗的設計和傳遞。
 
-以REST風格的API為基礎， [!DNL Experience Platform] 讓開發人員可以使用系統的完整功能，支援使用熟悉工具輕鬆整合企業解決方案。 [!DNL Experience Platform] 也支援合作夥伴以視需要建立和整合其產品與技術。 這種強大的功能和靈活 [!DNL Experience Platform] 性讓市場獨一無二。 它為合作夥伴、客戶和開發人員社群提供基礎，以建立推動體驗業務的創新：透過從客戶及其個人偏好的360度全方位檢視中不斷改善、完全個人化的體驗，超越客戶期望。
+[!DNL Experience Platform]以REST風格的API為基礎，可讓開發人員使用系統的完整功能，支援使用熟悉工具輕鬆整合企業解決方案。 [!DNL Experience Platform] 也支援合作夥伴以視需要建立和整合其產品與技術。這種強大的功能和靈活性使[!DNL Experience Platform]在市場上獨一無二。 它為合作夥伴、客戶和開發人員社群提供基礎，以建立推動體驗業務的創新：透過從客戶及其個人偏好的360度全方位檢視中不斷改善、完全個人化的體驗，超越客戶期望。
 
 ## [!DNL Experience Platform]文件
 
-[!DNL Experience Platform] 說明檔案以多種格式提供，以提供各種功能和服務。 若要進一步瞭解可用的檔案類型，請造訪平台文 [件總覽](documentation/overview.md)。
+[!DNL Experience Platform] 說明檔案以多種格式提供，以提供各種功能和服務。若要進一步瞭解可用的檔案類型，請造訪[平台檔案概觀](documentation/overview.md)。
 
-若要開始進一步瞭解特定 [!DNL Platform] 服務，請返回 [檔案登陸頁](https://experienceleague.adobe.com/docs/experience-platform.html) ，並選取適當的指南。
+若要開始進一步瞭解特定[!DNL Platform]服務，請返回[檔案登陸頁面](https://experienceleague.adobe.com/docs/experience-platform.html)並選取適當的指南。
 
-### 建立在應用程式服務上的檔案 [!DNL Experience Platform]
+### [!DNL Experience Platform]上建立的應用程式服務檔案
 
 Adobe已在Experience Platform之上建立多種應用程式服務。 您可在其專屬指南中找到這些服務的檔案，連結如下：
 
-* [[!DNL Customer Journey Analytics]](https://docs.adobe.com/content/help/en/analytics-platform/using/cja-landing.html)
-* [[!DNL Journey Orchestration]](https://docs.adobe.com/content/help/zh-Hant/journeys/using/journey-orchestration-home.html)
+* [[!DNL Customer Journey Analytics]](https://experienceleague.adobe.com/docs/customer-journey-analytics.html)
+* [[!DNL Journey Orchestration]](https://experienceleague.adobe.com/docs/journey-orchestration.html)
 * [[!DNL Offer Decisioning]](https://experienceleague.adobe.com/docs/offer-decisioning.html)
 * [[!DNL Real-time Customer Data Platform (Real-time CDP)]](../rtcdp/overview.md)
 
 ## [!DNL Experience Platform] 教學課程
 
-您可以快速輕鬆地 [!DNL Platform] 開始使用，只要遵循逐步教學課程，涵蓋從準備擷取資料到進階機器學習演算法等所有內容。 這些教學課程是為了補充說明檔案中的資 [!DNL Experience Platform] 訊而設計，因此為獲得最佳效果，在完成教學課程時，仍能保持檔案在手。 請造訪 [Experience Platform教學課程](https://experienceleague.adobe.com/docs/platform-learn/tutorials/overview.html) ，以開始使用。
+您可以快速輕鬆地開始使用[!DNL Platform]，方法是依循逐步教學課程，涵蓋從準備擷取資料到進階機器學習演算法等所有內容。 這些教學課程是為了補充[!DNL Experience Platform]說明檔案中的資訊而設計，因此為獲得最佳效果，在完成教學課程時，請隨時掌握說明檔案。
+
+請造訪[體驗平台教學課程](https://www.adobe.com/go/platform-tutorials-home-en)登陸頁面以開始使用。
 
 ## 參考檔案與資源
 
 * [**API基礎知識**](api-fundamentals.md)\
-   瞭解使用API的基本 [!DNL Platform] 知識。
+   瞭解使用[!DNL Platform] API的基本知識。
 
 * [**API參考檔案**](https://www.adobe.com/go/platform-api-reference-en)\
-   探索 [!DNL Experience Platform] API，包括標題、參數、範例請求和回應。<br/>*這些檔案是在Adobe I/O上代管。*
+   探索[!DNL Experience Platform] API，包括標題、參數、範例請求和回應。<br/>*這些檔案是在Adobe I/O上代管。*
 
 * [**字彙表**](glossary.md)\
    檢閱Adobe Experience Platform術語。
 
 * [**發行說明**](https://www.adobe.com/go/platform-release-notes.en)\
-   尋找最新版本的相關資訊， [!DNL Experience Platform] 並檢視過去的版本。
+   尋找有關最新[!DNL Experience Platform]版本的資訊，並檢視過去的版本。
 
 * [**疑難排解指南**](troubleshooting.md)\
    尋找常見錯誤的解決方案，以及常見問題的解答。
