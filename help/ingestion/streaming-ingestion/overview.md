@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics;data ingestion;ingested data;streaming;overview;streaming ingestion;latency;streaming latency;
+keywords: Experience Platform;home；熱門主題；資料擷取；收錄資料；串流；概述；串流擷取；延遲；串流延遲；
 solution: Experience Platform
 title: Adobe Experience Platform串流擷取概觀
 topic: overview
 description: Adobe Experience Platform的串流擷取為使用者提供一種方法，可即時從用戶端和伺服器端裝置傳送資料至Experience Platform。
 translation-type: tm+mt
-source-git-commit: c04fb056d4564e53f192e0734a700a13820f5ba7
+source-git-commit: 2dbd92efbd992b70f4f750b09e9d2e0626e71315
 workflow-type: tm+mt
-source-wordcount: '272'
+source-wordcount: '286'
 ht-degree: 3%
 
 ---
@@ -15,35 +15,35 @@ ht-degree: 3%
 
 # 串流擷取概觀
 
-Adobe Experience Platform的串流擷取為使用者提供即時從用戶端和伺服器端裝置傳送資料 [!DNL Experience Platform] 的方法。
+Adobe Experience Platform的串流擷取為使用者提供一種方法，可即時從用戶端和伺服器端裝置傳送資料至[!DNL Experience Platform]。
 
 ## 您可以使用串流擷取功能做什麼？
 
-Adobe Experience Platform可讓您為個別客戶產生一致、一致且相關的 [!DNL Real-time Customer Profile] 協調體驗。 串流擷取在建立這些描述檔時扮演了關鍵角色，讓您在盡可能 [!DNL Profile] 少的延遲 [!DNL Data Lake] 下，將資料傳送至其中。
+Adobe Experience Platform可讓您為每個客戶產生[!DNL Real-time Customer Profile]，以推動協調、一致且相關的體驗。 串流擷取功能可讓您盡可能少的延遲，將[!DNL Profile]資料傳送至[!DNL Data Lake]，在建立這些描述檔時起關鍵作用。
 
 以下視訊旨在協助您瞭解串流擷取，並概述上述概念。
 
 >[!VIDEO](https://video.tv.adobe.com/v/28425?quality=12&learn=on)
 
-### 串流描述檔記錄和 [!DNL ExperienceEvents]
+### 串流描述檔記錄和[!DNL ExperienceEvents]
 
-透過串流擷取，使用者可以在數秒 [!DNL ExperienceEvents] 內串流 [!DNL Platform] 個人檔案記錄，協助推動即時個人化。 傳送至串流擷取API的所有資料都會自動保留在 [!DNL Data Lake]中。
+透過串流擷取，使用者可在數秒內將描述檔記錄和[!DNL ExperienceEvents]串流至[!DNL Platform]，以協助推動即時個人化。 傳送至串流擷取API的所有資料都會自動保留在[!DNL Data Lake]中。
 
-請閱讀建立 [串流連線指南](../tutorials/create-streaming-connection.md) ，以取得詳細資訊。
+請閱讀[建立串流連線指南](../tutorials/create-streaming-connection.md)以取得詳細資訊。
 
 ### 串流至資料集
 
-一旦您確信資料是乾淨的，您就可以為和啟用資料 [!DNL Real-time Customer Profile] 集 [!DNL Identity Service]。
+一旦您確信資料是乾淨的，就可以為[!DNL Real-time Customer Profile]和[!DNL Identity Service]啟用資料集。
 
-有關為和啟用資料集的更 [!DNL Profile] 多信 [!DNL Identity Service]息，請閱 [讀配置資料集指南](../../profile/tutorials/dataset-configuration.md)。
+有關為[!DNL Profile]和[!DNL Identity Service]啟用資料集的詳細資訊，請閱讀[配置資料集指南](../../profile/tutorials/dataset-configuration.md)。
 
-## What is the expected latency for streaming ingestion on [!DNL Platform]?
+## [!DNL Platform]上串流擷取的預期延遲為何？
 
 | 目的地 | 預期延遲 |
 | --------- | ---------------- |
-| 即時客戶個人檔案 | &lt; 1分鐘 |
+| 即時客戶個人檔案 | &lt; 1=&quot;&quot; minute=&quot;&quot;> |
 | Data Lake | &lt; 60 分鐘 |
 
 ## Adobe Experience Platform 擴充功能
 
-您可以使用Adobe Experience Platform擴充功能建立新的串流連線。 擴充 [!DNL Experience Platform] 功能可提供動作，讓您傳送格式 [!DNL Experience Data Model] 為(XDM)的信標，以便即時擷取 [!DNL Experience Platform]至。 請造訪 [Experience Platform Extension](https://docs.adobe.com/content/help/en/launch/using/extensions-ref/adobe-extension/adobe-experience-platform-extension.html) 檔案，以取得詳細資訊。
+您可以使用Adobe Experience Platform擴充功能建立新的串流連線。 [!DNL Experience Platform]擴充功能提供動作，可傳送以[!DNL Experience Data Model](XDM)格式的信標，以便即時擷取至[!DNL Experience Platform]。 如需詳細資訊，請造訪[Experience Platform Extension](https://experienceleague.adobe.com/docs/launch/using/extensions-ref/adobe-extension/adobe-experience-platform-extension.html)檔案。
