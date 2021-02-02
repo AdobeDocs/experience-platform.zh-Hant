@@ -1,13 +1,13 @@
 ---
-keywords: destinations;destination;destination types
+keywords: 目標；目標；目標類型
 title: 目標類型和類別
 seo-title: 目標類型和類別
-description: '在即時客戶資料平台中，描述檔／區段匯出目的地會擷取事件資料，並與其他資料來源結合，套用區段，並將區段和合格的描述檔匯出至目標。 Experience Platform Launch擴充功能可將原始事件資料轉送至數種目的地。 '
-seo-description: 在即時客戶資料平台中，描述檔／區段匯出目的地會擷取事件資料，並與其他資料來源結合，套用區段，並將區段和合格的描述檔匯出至目標。 Experience Platform Launch擴充功能可將原始事件資料轉送至數種目的地。
+description: '在Adobe Experience Platform中，描述檔／區段匯出目的地會擷取事件資料，並與其他資料來源結合，套用區段，以及將區段和合格的描述檔匯出至目標。 Experience Platform Launch擴充功能可將原始事件資料轉送至數種目的地。 '
+seo-description: 在Adobe Experience Platform中，描述檔／區段匯出目的地會擷取事件資料，並與其他資料來源結合，套用區段，以及將區段和合格的描述檔匯出至目標。 Experience Platform Launch擴充功能可將原始事件資料轉送至數種目的地。
 translation-type: tm+mt
-source-git-commit: 5f120a716cc3396ef7749463bb6052a8ced2fbb4
+source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
 workflow-type: tm+mt
-source-wordcount: '584'
+source-wordcount: '581'
 ht-degree: 0%
 
 ---
@@ -15,25 +15,25 @@ ht-degree: 0%
 
 # 目標類型和類別
 
-閱讀本頁以瞭解即時客戶資料平台目標的不同類型和類別。
+閱讀本頁以瞭解Adobe Experience Platform目標的不同類型和類別。
 
 ## 目標類型
 
-在即時客戶資料平台中，我們區分兩種目標類型——連線和擴充功能。 連線目的地有兩種類型：描述檔匯出目的地和區段匯出目的地。
+在Adobe Experience Platform中，我們區分兩種目標類型——連線和擴充功能。 連線目的地有兩種類型：描述檔匯出目的地和區段匯出目的地。
 
 ![目標類型](./assets/destination-types/types-of-destinations.png)
 
 ### 連線 {#connections}
 
-**[!UICONTROL 即時客戶資]** 料平台中的描述檔匯出和區段匯出目的地會擷取事件資料，將其與其他資料來源結合以建立即時客戶描述檔 ****[](../profile/home.md)，套用區段，並將區段和合格的描述檔匯出至目的地。
+**[!UICONTROL Adobe Experience]** Platform中的描述檔匯出 **[!UICONTROL 和區段]** 匯出目的地會擷取事件資料，將其與其他資料來源結合以建立即時客戶描述檔 [](../profile/home.md)，套用區段，並將區段和合格描述檔匯出至目的地。
 
 #### 描述檔匯出目的地
 
-描述檔匯出目的地會產生包含描述檔和／或屬性的檔案。 這些目標使用原始資料，通常以電子郵件地址為主要金鑰。 Amazon [](./catalog/cloud-storage/amazon-s3.md) S3雲端儲存目標是您可存放包含描述檔匯出的檔案的目的地範例。
+描述檔匯出目的地會產生包含描述檔和／或屬性的檔案。 這些目標使用原始資料，通常以電子郵件地址為主要金鑰。 [Amazon S3雲儲存目標](./catalog/cloud-storage/amazon-s3.md)是一個可以存放包含配置檔案導出的檔案的目標示例。
 
 #### 區段匯出目標
 
-區段匯出目的地會將其符合資格的設定檔和區段傳送至目標平台。 這些目標使用區段ID或使用者ID。 例如或等廣告 [[!DNL Google Display & Video 360]](./catalog/advertising/google-dv360.md) 目的 [[!DNL Google Ads]](./catalog/advertising/google-ads-destination.md) 地是這類目的地的範例。
+區段匯出目的地會將其符合資格的設定檔和區段傳送至目標平台。 這些目標使用區段ID或使用者ID。 [[!DNL Google Display & Video 360]](./catalog/advertising/google-dv360.md)或[[!DNL Google Ads]](./catalog/advertising/google-ads-destination.md)等廣告目標就是這些目標類型的範例。
 
 #### 描述檔匯出和區段匯出目的地——影片總覽
 
@@ -43,13 +43,13 @@ ht-degree: 0%
 
 ### 擴充功能 {#extensions}
 
-即時CDP運用Adobe Experience Platform Launch的強大功能與彈性，將Platform Launch擴充功能加入即時CDP介面中。
+平台運用Adobe Experience Platform Launch的強大功能與彈性，將Platform Launch擴充功能加入平台介面。
 
 >[!TIP]
 >
->如需Adobe Experience Platform Launch擴充功能的詳細資訊，包括使用案例以及如何在介面中尋找這些擴充功能，請參閱 [Adobe Experience Platform Launch擴充功能概觀](./catalog/launch-extensions/overview.md)。
+>如需Adobe Experience Platform Launch擴充功能的詳細資訊，包括使用案例和如何在介面中尋找這些擴充功能，請參閱[Adobe Experience Platform Launch擴充功能概觀](./catalog/launch-extensions/overview.md)。
 
-Platform Launch擴充功能可將原始事件資料轉送至數種目的地。 將擴充功能設想為 **「事件轉發** 」類型的目標。 這是與目標平台整合的更簡單類型，目標平台只會轉送原始事件資料。 例如Gainsight個人化 [擴充功能](./catalog/personalization/gainsight.md) , [或客戶擴充功能的確認聲音](./catalog/voice/confirmit-digital-feedback.md)。
+Platform Launch擴充功能可將原始事件資料轉送至數種目的地。 將擴展視為&#x200B;**事件轉發**&#x200B;類型的目標。 這是與目標平台整合的更簡單類型，目標平台只會轉送原始事件資料。 例如[Gainsight個人化擴充功能](./catalog/personalization/gainsight.md)或[客戶擴充功能的確認聲音](./catalog/voice/confirmit-digital-feedback.md)。
 
 ![Experience Platform Launch擴充功能與其他目的地的比較](./assets/common/launch-and-other-destinations.png)
 
@@ -63,7 +63,7 @@ Platform Launch擴充功能可將原始事件資料轉送至數種目的地。 �
 
 ## 目標類別
 
-目標目錄中的連接和擴展 [](https://platform.adobe.com/destination/catalog) ，依據目標類別(**Advertising**、 **Cloud Storage**、Survey Platforms、Email Marketing ********&#x200B;等調查平台)分組，具體取決於它們幫助您實現的行銷使用案例。 如需每個類別以及每個類別所包含的目的地的詳細資訊，請參閱「目標」目 [錄檔案](./catalog/overview.md)。
+[目標目錄](https://platform.adobe.com/destination/catalog)中的連接和擴展按目標類別（**廣告**、**雲端儲存**、**調查平台**、**電子郵件行銷**&#x200B;等）分組，具體取決於它們幫助您實現的行銷使用案例。 有關每個類別以及每個類別所包含的目標的詳細資訊，請參閱[目標目錄文檔](./catalog/overview.md)。
 
 ![目標類別](./assets/destination-types/destination-categories-menu.png)
 
