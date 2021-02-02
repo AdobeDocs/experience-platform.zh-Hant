@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics;source connectors;source connector;sources;data sources;data source;data source connection
+keywords: Experience Platform;home；熱門主題；源連接器；源連接器；源；資料源；資料源；資料源；資料源；資料源連接
 solution: Experience Platform
 title: Adobe Experience Platform來源連接器概觀
 topic: overview
 description: Adobe Experience Platform可讓您從外部來源擷取資料，同時提供您使用平台服務來建構、標示及增強傳入資料的能力。 您可以從多種來源（例如Adobe應用程式、雲端儲存空間、資料庫等）擷取資料。
 translation-type: tm+mt
-source-git-commit: 466cb072537cbf462d2c4d8f3ee4b6eccc0199a0
+source-git-commit: 2940f030aa21d70cceeedc7806a148695f68739e
 workflow-type: tm+mt
-source-wordcount: '926'
+source-wordcount: '943'
 ht-degree: 0%
 
 ---
@@ -45,7 +45,7 @@ Experience Platform支援從協力廠商廣告系統擷取資料。 有關特定
 
 ### 雲端儲存空間
 
-雲端儲存來源可將您自己的資料匯入平台，而不需下載、格式化或上傳。 收錄的資料可格式化為XDM JSON、XDM鑲木地板或分隔字元。 此程式的每個步驟都會使用使用者介面，整合至Sources工作流程中。 如需詳細資訊，請參閱下列相關檔案：
+雲端儲存來源可將您自己的資料匯入平台，而不需下載、格式化或上傳。 收錄的資料可格式化為XDM JSON、XDM Parce或分隔。 此程式的每個步驟都會使用使用者介面，整合至Sources工作流程中。 如需詳細資訊，請參閱下列相關檔案：
 
 - [[!DNL Azure Data Lake Storage Gen2] 連接器](connectors/cloud-storage/adls-gen2.md)
 - [[!DNL Azure Blob] 連接器](connectors/cloud-storage/blob.md)
