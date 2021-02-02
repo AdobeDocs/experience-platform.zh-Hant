@@ -1,13 +1,13 @@
 ---
-keywords: RTCDP;CDP;Real-time Customer Data Platform;real time customer data platform;real time cdp;cdp;destinations;destination;rtcdp
+keywords: 目的地；adobe體驗平台；平台；目的地概觀；啟動資料；啟動；
 title: 目的地概述
 seo-title: 目的地概述
 description: 針對跨通道行銷宣傳、電子郵件、目標廣告等目的地啟動 Platform 資料。
-seo-description: 目標是與目標平台預先建立的整合，可讓即時客戶資料平台順暢地啟動資料。 您可以在即時客戶資料平台中使用目標，為跨通道行銷宣傳、電子郵件宣傳、目標廣告和許多其他使用案例啟用已知和未知的資料。
+seo-description: 目標是與目標平台預先建立的整合，可讓您順暢地從Adobe Experience Platform啟動資料。 您可以使用Adobe Experience Platform中的「目標」來啟用您已知和未知的跨通道行銷宣傳、電子郵件宣傳、目標廣告和許多其他使用案例資料。
 translation-type: tm+mt
-source-git-commit: 5f120a716cc3396ef7749463bb6052a8ced2fbb4
+source-git-commit: 32eae2ed782e46941bb21e3aca62c6bce68cde1e
 workflow-type: tm+mt
-source-wordcount: '490'
+source-wordcount: '488'
 ht-degree: 3%
 
 ---
@@ -17,54 +17,54 @@ ht-degree: 3%
 
 ![目標概述橫幅](./assets/overview/destinations-overview-banner.png)
 
-**[!DNL Destinations]** 是與目標平台預先建立的整合，可讓即時客戶資料平台順暢地啟動資料。 您可以使用目的地來啟用跨通道行銷宣傳、電子郵件宣傳、目標廣告和許多其他使用案例的已知和未知資料。
+**[!DNL Destinations]** 是與目標平台預先建立的整合，可讓您順暢地從Adobe Experience Platform啟動資料。您可以使用目的地來啟用跨通道行銷宣傳、電子郵件宣傳、目標廣告和許多其他使用案例的已知和未知資料。
 
-## 目標和來源 {#destinations-and-sources}
+## 目標和源{#destinations-and-sources}
 
-即時CDP的核心功能之一是接收第一方資料並根據業務需要激活它。 使用源將資料嵌入即時CDP中，並使用目標從即時CDP中導出資料。
+Platform的核心功能之一是吸收您的第一方資料，並根據您的業務需求加以啟動。 使用來源將資料內嵌至平台，並使用目的地從平台匯出資料。
 
-## 目標步驟 {#steps}
+## 目標步驟{#steps}
 
-* 從即時 [CDP中所有可用目標的自助](./catalog/overview.md) -服務目錄中進行選擇。
-* 使用 **[!UICONTROL 目的地]** 啟動 [](./ui/activate-destinations.md) ，並傳送個人檔案或區段至行銷自動化平台、數位廣告平台等。
+* 從平台中所有可用目標的[自助目錄](./catalog/overview.md)中選擇。
+* 使用&#x200B;**[!UICONTROL 目標]**&#x200B;來[activate](./ui/activate-destinations.md)，並傳送個人檔案或區段至行銷自動化平台、數位廣告平台等。
 * 定期排程匯出至您偏好目的地的資料。
 
-## 控制項 {#controls}
+## 控制{#controls}
 
-「目標」工作區 [中的控制項](./ui/destinations-workspace.md) ，可讓您：
+[目標工作區](./ui/destinations-workspace.md)中的控制項可讓您：
 
 * 瀏覽可啟動資料的目標平台目錄；
 * 建立、編輯、啟用和停用目錄中目的地的資料流；
-* 在儲存位置建立帳戶或將即時CDP連結到目標平台中的帳戶；
+* 在儲存位置建立帳戶或將平台連結至目標平台中的帳戶；
 * 選擇哪些區段應啟動至目標；
-* 在啟用 [區段至電子郵件行銷目標時](../xdm/home.md) ，選取要匯出的體驗資料模型(XDM)欄位。
+* 在啟動區段至電子郵件行銷目標時，選取要匯出的[體驗資料模型(XDM)欄位](../xdm/home.md)。
 
-## Destination types and categories {#types-and-categories}
+## 目標類型和類別{#types-and-categories}
 
-如需詳細資訊，請參 [閱目標類型和類別概觀](./destination-types.md)。
+有關詳細資訊，請參閱[目標類型和類別概述](./destination-types.md)。
 
-## 目標與存取控制 {#access-controls}
+## 目標和訪問控制{#access-controls}
 
-即時CDP的目標功能可與Adobe Experience Platform存取控制權限搭配使用。 視使用者的權限層級而定，您可以檢視、管理和啟用目標。 如需個別權限的詳細資訊，請參 [閱Adobe Experience Platform中的存取控制](../access-control/home.md) ，並向下捲動至頁面底部。
+Platform的目標功能可與Adobe Experience Platform存取控制權限搭配使用。 視使用者的權限層級而定，您可以檢視、管理和啟用目標。 如需個別權限的詳細資訊，請參閱Adobe Experience Platform](../access-control/home.md)中的「存取控制」，並向下捲動至頁面底部。[
 
-如需存取控制的詳細資訊，請參閱存取控 [制使用指南](../access-control/ui/overview.md)。
+有關訪問控制的詳細資訊，請參閱[訪問控制使用手冊](../access-control/ui/overview.md)。
 
-## [!DNL Data Governance] 啟用資料至目的地的限制 {#data-governance}
+## [!DNL Data Governance] 啟用資料至目的地的限制  {#data-governance}
 
-通過以下方式對即時CDP目標實施資料治理：
+平台目標的資料控管透過下列方式實施：
 
-* *您可在建立目標* ，工作流程中選擇的行銷使用案例；
-* *資料使用原則* ，可限制包含特定使用標籤的資料被啟動至具有特定行銷使用案例的目的地。
+* *行銷使* 用您可在建立目標工作流程中選擇的案例；
+* *資料使* 用策略，可限制包含特定使用標籤的資料被啟動至具有特定行銷使用案例的目的地。
 
-有關行 [!DNL Data Governance] 銷使用案例和解決資料原則違規 [的詳細資訊](../rtcdp/privacy/data-governance-overview.md#destinations) ，請 [參閱即時CDP檔案](../rtcdp/privacy/data-governance-overview.md#enforcement)。
+有關[行銷使用案例](../data-governance/policies/overview.md)和[解決資料原則違規的詳細資訊，請參閱平台檔案中的[!DNL Data Governance]。](../data-governance/enforcement/auto-enforcement.md)
 
-有關在建立目標工作流中選擇市場營銷使用案例的詳細資訊，請參閱以下有關即時CDP中不同目標類型的頁：
+如需在建立目標工作流程中選取行銷使用案例的詳細資訊，請參閱平台中不同目標類型的下列頁面：
 
-* [廣告目的地- Google Ad Manager ](./catalog/advertising/google-ad-manager.md)
+* [廣告目的地- Google Ad Manager  ](./catalog/advertising/google-ad-manager.md)
 * [廣告目的地- Google Ads](./catalog/advertising/google-ads-destination.md)
-* [廣告目的地- Google Display &amp; Video 360 ](./catalog/advertising/google-dv360.md)
+* [廣告目的地- Google Display &amp; Video 360  ](./catalog/advertising/google-dv360.md)
 * [雲端儲存空間目標](./catalog/cloud-storage/workflow.md)
 * [電子郵件行銷目標](./catalog/email-marketing/overview.md)
 * [社交網路目的地](./catalog/social/workflow.md)
 
-如需區段啟動工作流程中違反資料原則的詳細資訊，請參閱「啟用設定檔和區段 [至目的地」中的「檢閱」步驟](./ui/activate-destinations.md#review)。
+如需區段啟動工作流程中違反資料原則的詳細資訊，請參閱[啟用設定檔和區段至目標](./ui/activate-destinations.md#review)中的「檢閱」步驟。
