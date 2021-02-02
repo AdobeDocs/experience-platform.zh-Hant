@@ -1,66 +1,64 @@
 ---
-keywords: Amazon Kinesis;kinesis destination;kinesis
+keywords: Amazon Kinesis;kinesis目標；kinesis
 title: Amazon Kinesis目標
 seo-title: Amazon Kinesis目標
 description: 建立到Amazon Kinesis儲存的即時出站連接，以便從Adobe Experience Platform流資料。
 seo-description: 建立到Amazon Kinesis儲存的即時出站連接，以便從Adobe Experience Platform流資料。
 translation-type: tm+mt
-source-git-commit: 7484e64d0d359f40ef242dfc9d2d1704018a8ed6
+source-git-commit: a78dd4b95896387aa1daa022c9e1d5a6cf978448
 workflow-type: tm+mt
-source-wordcount: '470'
+source-wordcount: '471'
 ht-degree: 2%
 
 ---
 
 
-# （測試版）目 [!DNL Amazon Kinesis] 標
-
+# （測試版）[!DNL Amazon Kinesis]目標
 
 >[!IMPORTANT]
 >
->即時 [!DNL Amazon Kinesis] CDP中的目標當前處於測試階段。 文件和功能可能會有所變更。
+>平台中的[!DNL Amazon Kinesis]目標當前處於測試階段。 文件和功能可能會有所變更。
 
 ## 概述 {#overview}
 
-該服 [!DNL Kinesis Data Streams] 務可 [!DNL Amazon Web Services] 讓您即時收集和處理大量資料記錄。
+[!DNL Kinesis Data Streams]服務由[!DNL Amazon Web Services]提供，可讓您即時收集和處理大量資料記錄。
 
-您可以建立儲存的即時出站連線， [!DNL Amazon Kinesis] 以從Adobe Experience Platform串流資料。
+您可以建立與[!DNL Amazon Kinesis]儲存空間的即時對外連線，以串流Adobe Experience Platform的資料。
 
-* 如需詳細資訊 [!DNL Amazon Kinesis]，請參閱 [Amazon檔案](https://docs.aws.amazon.com/streams/latest/dev/introduction.html)。
-* 若要連線至使 [!DNL Amazon Kinesis] 用API呼叫，請參閱串 [流目標API教學課程](../../api/streaming-destinations.md)。
-* 要連接到 [!DNL Amazon Kinesis] 使用即時CDP用戶介面，請參見以下各節。
+* 如需[!DNL Amazon Kinesis]的詳細資訊，請參閱[Amazon檔案](https://docs.aws.amazon.com/streams/latest/dev/introduction.html)。
+* 若要使用API呼叫連線至[!DNL Amazon Kinesis]，請參閱[串流目標API教學課程](../../api/streaming-destinations.md)。
+* 要使用平台用戶介面連接到[!DNL Amazon Kinesis]，請參見以下各節。
 
 ![UI中的Amazon Kinesis](../../assets/catalog/cloud-storage/amazon-kinesis/catalog.png)
 
-
 ## 使用案例 {#use-cases}
 
-透過使用串流目的地(例如 [!DNL Amazon Kinesis])，您可以輕鬆將高價值分段事件和相關的描述檔屬性饋送到您選擇的系統中。
+透過使用串流目標（例如[!DNL Amazon Kinesis]），您可以輕鬆將高價值區段事件和相關的描述檔屬性饋送到您選擇的系統中。
 
-例如，潛在客戶下載了白皮書，使其符合「高轉換傾向」區段的資格。 將潛在客戶所處的區段對應至目標， [!DNL Amazon Kinesis] 您就會收到此事件 [!DNL Amazon Kinesis]。 在這裡，您可以採用自行動手的方法，並在活動之上描述業務邏輯，因為您認為最適合企業IT系統。
+例如，潛在客戶下載了白皮書，使其符合「高轉換傾向」區段的資格。 通過將潛在客戶所屬的段映射到[!DNL Amazon Kinesis]目標，您將在[!DNL Amazon Kinesis]中收到此事件。 在這裡，您可以採用自行動手的方法，並在活動之上描述業務邏輯，因為您認為最適合企業IT系統。
 
-## 匯出類型 {#export-type}
+## 導出類型{#export-type}
 
-**基於配置檔案** -您正在導出段的所有成員，以及所需的架構欄位(例如：電子郵件地址、電話號碼、姓氏)，這是從目標啟動工作流程的「選取屬性」畫面 [中選擇的](../../ui/activate-destinations.md#select-attributes)。
+**基於描述檔** -您要匯出區段的所有成員，以及所要的架構欄位(例如：電子郵件地址、電話號碼、姓氏)，這是從目標啟動工作流程的「選取屬性」畫面 [中選擇的](../../ui/activate-destinations.md#select-attributes)。
 
-## 連接目標 {#connect-destination}
+## 連接目標{#connect-destination}
 
-如需如 [何連線至您的雲端儲存 ](./workflow.md)空間目的地（包括支援的雲端儲存空間目的地）的指示，請參閱雲端儲存空間工作流程 [!DNL Amazon]。
+如需如何連線至您的雲端儲存目的地（包括[!DNL Amazon]支援的目的地）的指示，請參閱[雲端儲存目的地工作流程](./workflow.md)。
 
-對於目 [!DNL Amazon Kinesis] 標，請在建立目標工作流中輸入以下資訊：
+對於[!DNL Amazon Kinesis]目標，請在建立目標工作流中輸入以下資訊：
 
-### 在驗證步驟中 {#authentication-step}
+### 在驗證步驟{#authentication-step}中
 
-* **[!DNL Amazon Web Services]訪問密鑰和密鑰**:在中 [!DNL Amazon Web Services]，生成 `access key - secret access key` 一對以授予您帳戶的即時CDP訪 [!DNL Amazon Kinesis] 問權。 請參閱 [Amazon Web Services檔案瞭解更多](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html)。
+* **[!DNL Amazon Web Services]訪問密鑰和密鑰**:在中 [!DNL Amazon Web Services]，產生一 `access key - secret access key` 對以授與您帳戶的平台存 [!DNL Amazon Kinesis] 取權。請參閱[Amazon Web Services文檔](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html)瞭解更多資訊。
 * **地區**:指出要 [!DNL Amazon Web Services] 將資料串流至的區域。
 
 ![帳戶步驟中的輸入欄位](../../assets/catalog/cloud-storage/amazon-kinesis/account.png)
 
-### 在設定步驟中 {#setup-step}
+### 在設定步驟{#setup-step}中
 
-* **名稱**:提供您與 [!DNL Amazon Kinesis]
+* **名稱**:提供您與  [!DNL Amazon Kinesis]
 * **說明**:提供您與的連線說明 [!DNL Amazon Kinesis]。
-* **stream**:提供帳戶中現有資料流的名 [!DNL Amazon Kinesis] 稱。 即時CDP將將資料導出到此流。
+* **stream**:提供帳戶中現有資料流的名 [!DNL Amazon Kinesis] 稱。平台會將資料匯出至此串流。
 
 ![驗證步驟中的輸入欄位](../../assets/catalog/cloud-storage/amazon-kinesis/setup.png)
 
@@ -68,17 +66,17 @@ ht-degree: 2%
 
 >[!IMPORTANT]
 >
->Real-time CDP needs `write` permissions on the bucket object where the export files will be delivered.
+>Platform needs `write` permissions on the bucket object where the export files will be delivered.
 
 -->
 
-## 啟用區段 {#activate-segments}
+## 啟用區段{#activate-segments}
 
-如需 [區段啟動工作流程的相關資訊](../../ui/activate-destinations.md) ，請參閱啟用設定檔和區段至目的地。
+如需區段啟動工作流程的相關資訊，請參閱[啟用設定檔和區段至目標](../../ui/activate-destinations.md)。
 
-## 匯出的資料 {#exported-data}
+## 導出資料{#exported-data}
 
-您匯出的 [!DNL Experience Platform] 資料會以JSON [!DNL Amazon Kinesis] 格式著陸。 例如，以下事件包含符合特定區段資格並退出其他區段之對象的電子郵件地址設定檔屬性。 此潛在客戶的身分是ECID和電子郵件。
+您匯出的[!DNL Experience Platform]資料會以JSON格式登入[!DNL Amazon Kinesis]。 例如，以下事件包含符合特定區段資格並退出其他區段之對象的電子郵件地址設定檔屬性。 此潛在客戶的身分是ECID和電子郵件。
 
 ```json
 {
