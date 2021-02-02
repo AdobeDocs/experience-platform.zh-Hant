@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics;Audience Manager connector;Audience manager;audience manager
+keywords: Experience Platform;home；熱門主題；Audience Manager連接器；Audience Manager;Audience Manager
 solution: Experience Platform
 title: Audience Manager連接器
 topic: overview
-description: Adobe Audience Manager資料連接器可將在Adobe Audience Manager中收集的第一方資料串流至Adobe Experience Platform。 Audience Manager連接器可將三種資料類別擷取至平台。
+description: Adobe Audience Manager資料連接器可將在Adobe Audience Manager中收集的第一方資料串流至Adobe Experience Platform。 Audience Manager連接器將兩類資料收錄至平台。
 translation-type: tm+mt
-source-git-commit: e51f750dae2a76cd05076edfe8c6423efe949891
+source-git-commit: b88c358d128ba2016c9449fefc8862bd503c4aa5
 workflow-type: tm+mt
-source-wordcount: '798'
+source-wordcount: '886'
 ht-degree: 0%
 
 ---
@@ -15,14 +15,14 @@ ht-degree: 0%
 
 # Audience Manager連接器
 
-Adobe Audience Manager資料連接器可將在Adobe Audience Manager中收集的第一方資料串流至Adobe Experience Platform。 Audience Manager連接器將三種資料類別擷取至平台：
+Adobe Audience Manager資料連接器可將在Adobe Audience Manager中收集的第一方資料串流至Adobe Experience Platform。 Audience Manager連接器將兩類資料收錄至平台：
 
-- **即時資料：** 在Audience Manager的資料收集伺服器上即時擷取的資料。 此資料用於Audience Manager中，以填入以規則為基礎的特性，並會在最短的延遲時間內在平台中呈現。
-- **描述檔資料：** Audience Manager使用即時和已登入的資料來衍生客戶個人檔案。 這些描述檔可用來填入區段實現的身分圖表和特徵。
+- **即時資料：在Audience Manager** 的資料收集伺服器上即時擷取的資料。此資料用於Audience Manager中，以填入以規則為基礎的特性，並會在最短的延遲時間內在平台中呈現。
+- **描述檔資料：** Audience Manager使用即時和已登入的資料來衍生客戶描述檔。這些描述檔可用來填入區段實現的身分圖表和特徵。
 
 Audience Manager連接器會將這些資料類別對應至Experience Data Model(XDM)架構，並將它們傳送至平台。 即時資料會以XDM ExperienceEvent資料傳送，而設定檔資料則會以XDM個別設定檔傳送。
 
-如需有關使用平台UI建立與Adobe Audience Manager連線的指示，請參閱 [Audience Manager連接器教學課程](../../tutorials/ui/create/adobe-applications/audience-manager.md)。
+如需有關使用平台UI建立與Adobe Audience Manager連線的指示，請參閱[Audience Manager連接器教學課程](../../tutorials/ui/create/adobe-applications/audience-manager.md)。
 
 ## 什麼是體驗資料模型(XDM)?
 
@@ -30,7 +30,7 @@ XDM是公開記載的規格，可提供標準化的架構，讓平台組織客�
 
 遵循XDM標準，客戶體驗資料可以統一整合，更輕鬆地傳遞資料和收集資訊。
 
-如需如何在Experience Platform中使用XDM的詳細資訊，請參閱 [XDM系統概觀](../../../xdm/home.md)。 若要進一步瞭解XDM結構描述（例如Profile和ExperienceEvent）的結構，請參 [閱架構構成基礎](../../../xdm/schema/composition.md)。
+如需如何在Experience Platform中使用XDM的詳細資訊，請參閱[XDM系統概觀](../../../xdm/home.md)。 如需進一步瞭解如何建構XDM結構描述檔（如Profile和ExperienceEvent），請參閱架構構成的[基本說明](../../../xdm/schema/composition.md)。
 
 ## XDM架構示例
 
@@ -46,7 +46,7 @@ XDM是公開記載的規格，可提供標準化的架構，讓平台組織客�
 
 ## 如何將欄位從Adobe Audience Manager對應至XDM?
 
-如需詳細資訊，請參 [閱Audience Manager對應欄位的檔案](./mapping/audience-manager.md) 。
+如需詳細資訊，請參閱[Audience Manager對應欄位](./mapping/audience-manager.md)的檔案。
 
 ## 平台上的資料管理
 
@@ -58,16 +58,18 @@ Audience Manager資料集依預設會停用至「設定檔」，而且使用者�
 
 | 資料集名稱 | 說明 |
 | ------------ | ----------- |
-| Audience Manager即時 | 此資料集包含Audience Manager DCS端點上的直接點擊所收集的資料，以及Audience Manager設定檔的身分對應。 讓此資料集保持啟用以擷取描述檔。 |
-| Audience Manager即時個人檔案更新 | 此資料集可讓Audience Manager特徵和區段的即時定位。 其中包含Edge地區路由、特徵和區段成員資格的資訊。 讓此資料集保持啟用以擷取描述檔。 資料集中的資料不會顯示為批次。 您可以啟用「描述檔」切換，將資料直接收錄至「描述檔」。 |
-| Audience Manager裝置資料 | 在Audience Manager中匯總具有ECID和對應區段實現的裝置資料。 資料集中的資料不會顯示為批次。 您可以啟用「描述檔」切換，將資料直接收錄至「描述檔」。 |
-| Audience Manager裝置設定檔資料 | 用於Audience Manager連接器診斷。 資料集中的資料不會顯示為批次。 您可以啟用「描述檔」切換，將資料直接收錄至「描述檔」。 |
-| Audience Manager驗證的設定檔 | 此資料集包含Audience Manager驗證的設定檔。 資料集中的資料不會顯示為批次。 您可以啟用「描述檔」切換，將資料直接收錄至「描述檔」。 |
-| Audience Manager驗證的設定檔中繼資料 | 用於Audience Manager Connector診斷。 資料集中的資料不會顯示為批次。 您可以啟用「描述檔」切換，將資料直接收錄至「描述檔」。 |
+| AAM即時 | 此資料集包含Audience Manager DCS端點上的直接點擊所收集的資料，以及Audience Manager設定檔的身分對應。 讓此資料集保持啟用以擷取描述檔。 |
+| AAM即時描述檔更新 | 此資料集可讓Audience Manager特徵和區段的即時定位。 其中包含Edge地區路由、特徵和區段成員資格的資訊。 讓此資料集保持啟用以擷取描述檔。 資料集中的資料不會顯示為批次。 您可以啟用&#x200B;**[!UICONTROL Profile]**&#x200B;切換，將資料直接收錄至Profile。 |
+| AAM裝置資料 | 在Audience Manager中匯總具有ECID和對應區段實現的裝置資料。 資料集中的資料不會顯示為批次。 您可以啟用&#x200B;**[!UICONTROL Profile]**&#x200B;切換，將資料直接收錄至Profile。 |
+| AAM裝置設定檔資料 | 用於Audience Manager連接器診斷。 資料集中的資料不會顯示為批次。 您可以啟用&#x200B;**[!UICONTROL Profile]**&#x200B;切換，將資料直接收錄至Profile。 |
+| AAM驗證的設定檔 | 此資料集包含Audience Manager驗證的設定檔。 資料集中的資料不會顯示為批次。 您可以啟用&#x200B;**[!UICONTROL Profile]**&#x200B;切換，將資料直接收錄至Profile。 |
+| AAM驗證的設定檔中繼資料 | 用於Audience Manager Connector診斷。 資料集中的資料不會顯示為批次。 您可以啟用&#x200B;**[!UICONTROL Profile]**&#x200B;切換，將資料直接收錄至Profile。 |
+| AAM裝置資料回填 | 資料集，以匯入過去的裝置資料。 這包含ECID和Audience Manager中匯總的對應區段實現。 資料集中的資料不會顯示為批次。 您可以啟用&#x200B;**[!UICONTROL Profile]**&#x200B;切換，將資料直接收錄至Profile。 |
+| AAM驗證的設定檔回填 | 資料集，以匯入過去的驗證資料。 這包含Audience Manager驗證的個人檔案。 資料集中的資料不會顯示為批次。 您可以啟用&#x200B;**[!UICONTROL Profile]**&#x200B;切換，將資料直接收錄至Profile。 |
 
 ### 連線
 
-Adobe Audience Manager在目錄中建立一個連線：Audience Manager連線。 目錄是Adobe Experience Platform中資料位置和世系記錄的系統。 連線是Catalog物件，是Connectors的客戶專屬例項。 如需目錄、連 [線和連接器的詳細資訊](../../../catalog/home.md) ，請參閱目錄服務概觀。
+Adobe Audience Manager在目錄中建立一個連線：Audience Manager連線。 目錄是Adobe Experience Platform中資料位置和世系記錄的系統。 連線是Catalog物件，是Connectors的客戶專屬例項。 有關目錄、連接和連接器的詳細資訊，請參閱[目錄服務概述](../../../catalog/home.md)。
 
 ## 平台上的Audience Manager資料預期延遲為何？
 
