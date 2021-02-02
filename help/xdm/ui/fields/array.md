@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;experience data model;data model;ui;workspace;array;field;
+keywords: Experience Platform;home；熱門主題；api;API;XDM;XDM系統；體驗資料模型；ui;workspace;array;field;
 solution: Experience Platform
 title: 在UI中定義陣列欄位
 description: 瞭解如何在Experience Platform使用者介面中定義陣列欄位。
@@ -7,7 +7,7 @@ topic: user guide
 translation-type: tm+mt
 source-git-commit: 2e20403122e65d28f04114af9b7e8d41874f76e2
 workflow-type: tm+mt
-source-wordcount: '346'
+source-wordcount: '365'
 ht-degree: 1%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 1%
 
 陣列的內容取決於為該欄位選擇的[!UICONTROL 類型]。 例如，如果欄位的[!UICONTROL Type]設定為&quot;[!UICONTROL String]&quot;，將該欄位設定為陣列將將該欄位指定為字串陣列。 如果欄位的[!UICONTROL Type]被設定為多欄位資料類型，如&quot;[!UICONTROL 郵遞區號]&quot;，則該欄位將成為符合資料類型的郵遞區號對象陣列。
 
-在UI[中定義了新欄位後，可以通過選中右邊欄中的](./overview.md#define)Array **[!UICONTROL 複選框將其設定為陣列欄位。]**
+在UI](./overview.md#define)中定義了新欄位後，可以通過選中右邊欄中的&#x200B;**[!UICONTROL Array]**&#x200B;複選框將其設定為陣列欄位。[
 
 ![](../../images/ui/fields/special/array.png)
 
