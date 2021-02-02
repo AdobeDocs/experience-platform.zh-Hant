@@ -1,6 +1,9 @@
 ---
-source-git-commit: 1c79978cfbd5beb0561e336cddf1461686f73882
+source-git-commit: 2dbd92efbd992b70f4f750b09e9d2e0626e71315
+workflow-type: tm+mt
 translation-type: tm+mt
+source-wordcount: '296'
+ht-degree: 95%
 
 ---
 # 貢獻
@@ -11,19 +14,25 @@ translation-type: tm+mt
 
 ## 行為準則
 
-本專案受 Adobe [行為準則](code-of-conduct.md)所規範。參與專案時，請確實遵守本準則。如發現禁止的不當行為，請透過 [Grp-opensourceoffice@adobe.com](mailto:Grp-opensourceoffice@adobe.com) 舉報。
+本專案受 Adobe [行為準則](code-of-conduct.md)所規範。參與專案時，請確實遵守本準則。
+
+如發現禁止的不當行為，請透過 [Grp-opensourceoffice@adobe.com](mailto:Grp-opensourceoffice@adobe.com) 舉報。
 
 ## 貢獻者指南文件
 
-See the [Contributor Guide](https://docs.adobe.com/content/help/en/contributor/contributor-guide/introduction.html).
+請參閱[投稿人指南](https://experienceleague.adobe.com/docs/contributor/contributor-guide/introduction.html?lang=en)。
 
 ## 有任何疑問嗎?
 
 就從提報問題開始吧! 本專案的現有提交者應致力在專案方向上取得共識，並在問題討論串中適時提出解決方案。
 
-## 貢獻者授權協議 (CLA)
+## 貢獻者授權協議
 
-本專案的所有第三方貢獻者均須簽署貢獻者授權合約。如此 Adobe 才能在專案中二次使用您貢獻的內容。[敬請簽署我們的 CLA](http://opensource.adobe.com/cla.html)。Adobe CLA 只需提交一次，因此若您先前已提交過 Adobe CLA，您現在可以開始貢獻內容了!
+本專案的所有第三方貢獻者均須簽署貢獻者授權合約。如此 Adobe 才能在專案中二次使用您貢獻的內容。
+
+[敬請簽署我們的 CLA](http://opensource.adobe.com/cla.html)。
+
+Adobe CLA 只需提交一次，因此若您先前已提交過 Adobe CLA，您現在可以開始貢獻內容了!
 
 ## 程式碼審核
 
@@ -40,4 +49,4 @@ submitting a pull request!
 
 ## 安全性問題
 
-安全性問題不應透過此問題追蹤器舉報。請改[向我們的安全性專家提報問題](https://helpx.adobe.com/security/alertus.html)
+安全性問題不應透過此問題追蹤器舉報。請改[向我們的安全性專家提報問題](https://helpx.adobe.com/tw/security/alertus.html)。
