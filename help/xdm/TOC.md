@@ -5,9 +5,9 @@ user-guide-title: Experience Data Model (XDM) 系統說明
 breadcrumb-title: Experience Data Model (XDM) 指南
 user-guide-description: 使用 Experience Data Model (XDM) 類別和 mixin 將體驗資料標準化。
 translation-type: tm+mt
-source-git-commit: 2c0dc4d54dcd1dcd17ffec70dbe3b16bb45ee141
+source-git-commit: cbdeb7529d27cb8b1cacc4a64b90637bb80f514d
 workflow-type: tm+mt
-source-wordcount: '217'
+source-wordcount: '225'
 ht-degree: 24%
 
 ---
@@ -36,6 +36,7 @@ ht-degree: 24%
       * [環境詳細資訊](./mixins/event/environment-details.md)
    * [Mixin名稱更新](./mixins/name-updates.md)
 * 資料類型 {#data-types}
+   * [應用程式](./data-types/application.md)
    * [信標](./data-types/beacon.md)
    * [瀏覽器詳細資訊](./data-types/browser-details.md)
    * [同意與偏好](./data-types/consents.md)
@@ -48,6 +49,7 @@ ht-degree: 24%
    * [地理互動詳細資訊](./data-types/geo-interaction-details.md)
    * [地理形狀](./data-types/geo-shape.md)
    * [身份](./data-types/identity.md)
+   * [測量](./data-types/measure.md)
    * [「人」](./data-types/person.md)
    * [人員姓名](./data-types/person-name.md)
    * [電話號碼](./data-types/phone-number.md)
@@ -55,7 +57,10 @@ ht-degree: 24%
    * [POI詳細資訊](./data-types/poi-details.md)
    * [POI互動](./data-types/poi-interaction.md)
    * [郵遞區號](./data-types/postal-address.md)
+   * [搜尋](./data-types/search.md)
    * [訂閱](./data-types/subscription.md)
+   * [網路互動](./data-types/web-interactions.md)
+   * [網頁詳細資訊](./data-types/webpage-details.md)
 * [!UICONTROL 架構] UI  {#ui}
    * [概述](./ui/overview.md)
    * [探索XDM資源](./ui/explore.md)
