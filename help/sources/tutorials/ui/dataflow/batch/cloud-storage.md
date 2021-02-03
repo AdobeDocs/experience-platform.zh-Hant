@@ -6,9 +6,9 @@ topic: overview
 type: Tutorial
 description: 資料流是從源中檢索資料並將資料帶入平台資料集的計畫任務。 本教學課程提供使用雲端儲存帳戶設定新資料流的步驟。
 translation-type: tm+mt
-source-git-commit: 4e85dc702cda5c6c495a6f7fb70453b7897baa36
+source-git-commit: 2d1b49d774d04e7befbcc1c9e5417ee82323634a
 workflow-type: tm+mt
-source-wordcount: '1877'
+source-wordcount: '1898'
 ht-degree: 0%
 
 ---
@@ -108,7 +108,7 @@ ht-degree: 0%
 
 ![](../../../../images/tutorials/dataflow/cloud-storage/batch/mapping.png)
 
-對於JSON檔案，除了直接將欄位對應至其他欄位外，您還可將物件直接對應至其他物件和陣列至其他陣列。
+對於JSON檔案，除了直接將欄位對應至其他欄位外，您還可將物件直接對應至其他物件和陣列至其他陣列。您也可以使用雲端儲存來源連接器，預覽並對應JSON檔案中的陣列等複雜資料類型。
 
 ![](../../../../images/tutorials/dataflow/cloud-storage/batch/source-field-json.png)
 
