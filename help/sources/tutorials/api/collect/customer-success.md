@@ -6,7 +6,7 @@ topic: overview
 type: Tutorial
 description: 本教學課程涵蓋從客戶成功系統擷取資料，並透過來源連接器和API將其匯入平台的步驟。
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: 85a715a6a56c0a885cb6f5b63c1a90ba81479862
 workflow-type: tm+mt
 source-wordcount: '1541'
 ht-degree: 1%
@@ -87,24 +87,56 @@ curl -X POST \
     -H 'Content-Type: application/json' \
     -d '{
         "name": "Source connection for Customer Success",
-        "connectionId": "f1da3694-38a9-403d-9a36-9438a9203d42",
+        "baseConnectionId": "f1da3694-38a9-403d-9a36-9438a9203d42",
         "description": "Source connection for a Customer Success connector",
         "data": {
             "format": "tabular",
         },
         "params": {
-            "path": "Account"
+            "tableName": "Account",
+            "columns": [
+                {
+                    "name": "Id",
+                    "type": "string",
+                    "xdm": {
+                        "type": "string"
+                    }
+                },
+                {
+                    "name": "Name",
+                    "type": "string",
+                    "xdm": {
+                        "type": "string"
+                    }
+                },
+                {
+                    "name": "Phone",
+                    "type": "string",
+                    "xdm": {
+                        "type": "string"
+                    }
+                },
+                {
+                    "name": "CreatedDate",
+                    "type": "string",
+                    "meta:xdmType": "date-time",
+                    "xdm": {
+                        "type": "string",
+                        "format": "date-time"
+                    }
+                }
+            ]
         },
         "connectionSpec": {
             "id": "cb66ab34-8619-49cb-96d1-39b37ede86ea",
             "version": "1.0"
         }
-    }}'
+    }'
 ```
 
 | 屬性 | 說明 |
 | -------- | ----------- |
-| `connectionId` | 您存取之協力廠商客戶成功系統的唯一連線ID。 |
+| `baseConnectionId` | 您存取之協力廠商客戶成功系統的唯一連線ID。 |
 | `params.path` | 源檔案的路徑。 |
 | `connectionSpec.id` | 與特定第三方客戶成功系統關聯的連接規範ID。 有關連接規範ID的清單，請參見[附錄](#appendix)。 |
 
