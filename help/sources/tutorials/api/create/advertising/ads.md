@@ -6,9 +6,9 @@ topic: overview
 type: Tutorial
 description: 本教學課程使用Flow Service API來引導您完成將Experience Platform連接至Google AdWords的步驟。
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: 48a5dcfe5679e360da1e33f6021dc1229b92948f
 workflow-type: tm+mt
-source-wordcount: '636'
+source-wordcount: '622'
 ht-degree: 1%
 
 ---
@@ -39,12 +39,12 @@ ht-degree: 1%
 
 | **憑證** | **說明** |
 | -------------- | --------------- |
-| 客戶客戶ID | AdWords帳戶的客戶客戶ID。 |
-| 開發人員Token | 與管理員帳戶關聯的開發人員Token。 |
-| 重新整理Token | 從[!DNL Google]取得的重新整理Token，用於授權存取AdWords。 |
-| 用戶端ID | 用於獲取刷新Token的[!DNL Google]應用程式的客戶端ID。 |
-| 用戶端密碼 | 用於獲取刷新令牌的[!DNL Google]應用程式的客戶機密碼。 |
-| 連接規範ID | 建立連線所需的唯一識別碼。 [!DNL Google AdWords]的連接規範ID為：`d771e9c1-4f26-40dc-8617-ce58c4b53702` |
+| `clientCustomerId` | AdWords帳戶的客戶客戶ID。 |
+| `developerToken` | 與管理員帳戶關聯的開發人員Token。 |
+| `refreshToken` | 從[!DNL Google]取得的重新整理Token，用於授權存取AdWords。 |
+| `clientId` | 用於獲取刷新Token的[!DNL Google]應用程式的客戶端ID。 |
+| `clientSecret` | 用於獲取刷新令牌的[!DNL Google]應用程式的客戶機密碼。 |
+| `connectionSpec` | 建立連線所需的唯一識別碼。 [!DNL Google AdWords]的連接規範ID為：`d771e9c1-4f26-40dc-8617-ce58c4b53702` |
 
 如需這些值的詳細資訊，請參閱此[Google AdWords檔案](https://developers.google.com/adwords/api/docs/guides/authentication)。
 
