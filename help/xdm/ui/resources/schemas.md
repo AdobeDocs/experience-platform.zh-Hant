@@ -5,7 +5,7 @@ title: 在UI中建立和編輯結構
 description: 瞭解如何在Experience Platform使用者介面中建立和編輯結構描述的基本知識。
 topic: user guide
 translation-type: tm+mt
-source-git-commit: 3aa838509e4e24c57508e7411b0ffcf135fbcf04
+source-git-commit: e9df977272524b6aba516982e93f3128d1b9278b
 workflow-type: tm+mt
 source-wordcount: '1167'
 ht-degree: 0%
@@ -81,7 +81,7 @@ ht-degree: 0%
 >
 >對於任何列出的混音，您可以將滑鼠暫留或專注在資訊圖示(![](../../images/ui/resources/schemas/info-icon.png))上，以檢視混音所擷取之資料的簡短說明。 您也可以選擇預覽圖示(![](../../images/ui/resources/schemas/preview-icon.png))，以在您決定將其添加到架構之前，查看混音所提供欄位的結構。
 
-選擇mixin後，選擇&#x200B;**[!UICONTROL 添加mixin]**&#x200B;將其添加到模式。
+在選擇混合後，選擇&#x200B;**[!UICONTROL 添加混合]**&#x200B;將其添加到模式。
 
 ![](../../images/ui/resources/schemas/add-mixin-finish.png)
 
