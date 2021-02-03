@@ -6,7 +6,7 @@ topic: overview
 type: Tutorial
 description: 本教學課程涵蓋從行銷自動化系統擷取資料，並透過來源連接器和API將其匯入平台的步驟。
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: a9a4bbbd7128043596ebab45d12bdd6954554537
 workflow-type: tm+mt
 source-wordcount: '1537'
 ht-degree: 1%
@@ -87,7 +87,7 @@ curl -X POST \
     -H 'Content-Type: application/json' \
     -d '{
         "name": "HubSpot source connection",
-        "connectionId": "c6d4ee17-6752-4e83-94ee-1767522e83fa",
+        "baseConnectionId": "c6d4ee17-6752-4e83-94ee-1767522e83fa",
         "description": "HubSpot source connection",
         "data": {
             "format": "tabular",
@@ -104,7 +104,7 @@ curl -X POST \
 
 | 屬性 | 說明 |
 | -------- | ----------- |
-| `connectionId` | 您存取之協力廠商行銷自動化系統的唯一連線ID。 |
+| `baseConnectionId` | 您存取之協力廠商行銷自動化系統的唯一連線ID。 |
 | `params.path` | 您正在訪問的源檔案的路徑。 |
 | `connectionSpec.id` | 行銷自動化系統的連線規格ID。 |
 
