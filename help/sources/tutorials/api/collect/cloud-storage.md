@@ -6,7 +6,7 @@ topic: overview
 type: Tutorial
 description: 本教學課程涵蓋從協力廠商雲端儲存空間擷取資料，並透過來源連接器和API將其匯入平台的步驟。
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: 64627592b873a48b9cb58ef911e049869a2c21fb
 workflow-type: tm+mt
 source-wordcount: '1621'
 ht-degree: 1%
@@ -89,7 +89,7 @@ curl -X POST \
     -H 'Content-Type: application/json' \
     -d '{
         "name": "Cloud storage source connector",
-        "connectionId": "9e2541a0-b143-4d23-a541-a0b143dd2301",
+        "baseConnectionId": "9e2541a0-b143-4d23-a541-a0b143dd2301",
         "description": "Cloud storage source connector",
         "data": {
             "format": "delimited",
@@ -108,7 +108,7 @@ curl -X POST \
 
 | 屬性 | 說明 |
 | --- | --- |
-| `connectionId` | 您所存取之協力廠商雲端儲存系統的唯一連線ID。 |
+| `baseConnectionId` | 您所存取之協力廠商雲端儲存系統的唯一連線ID。 |
 | `data.format` | 定義資料格式屬性的枚舉值。 |
 | `data.columnDelimiter` | 您可以使用任何單一字元欄分隔字元來收集平面檔案。 只有在接收CSV或TSV檔案時，才需要此屬性。 |
 | `params.path` | 您正在訪問的源檔案的路徑。 |
