@@ -6,9 +6,9 @@ topic: overview
 type: Tutorial
 description: 本教學課程涵蓋從協力廠商雲端儲存空間擷取資料，並透過來源連接器和API將其匯入平台的步驟。
 translation-type: tm+mt
-source-git-commit: 64627592b873a48b9cb58ef911e049869a2c21fb
+source-git-commit: c168a1b597a1ac2d85a8b896f3b6a8d213fcb1ae
 workflow-type: tm+mt
-source-wordcount: '1621'
+source-wordcount: '1639'
 ht-degree: 1%
 
 ---
@@ -340,6 +340,10 @@ curl -X POST \
 ## 建立映射{#mapping}
 
 為了將源資料引入目標資料集，必須首先將其映射到目標資料集所遵守的目標模式。 這是透過對轉換服務執行POST請求，並在請求裝載中定義資料映射來實現的。
+
+>[!TIP]
+>
+>您可以使用雲端儲存來源連接器來對應複雜的資料類型，例如JSON檔案中的陣列。
 
 **API格式**
 
