@@ -6,7 +6,7 @@ description: 瞭解如何在Experience Platform使用者介面中探索現有的
 topic: tutorial
 type: Tutorial
 translation-type: tm+mt
-source-git-commit: 912d02477febdafa4a53aebc83bc3a93b0f84f09
+source-git-commit: 6246e623a711bff06eefe5d5954719d69df921c3
 workflow-type: tm+mt
 source-wordcount: '941'
 ht-degree: 0%
