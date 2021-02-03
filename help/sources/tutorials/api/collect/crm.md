@@ -6,7 +6,7 @@ topic: overview
 type: Tutorial
 description: 本教學課程涵蓋從協力廠商CRM系統擷取資料，並透過來源連接器和API將其匯入平台的步驟。
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: 48a5dcfe5679e360da1e33f6021dc1229b92948f
 workflow-type: tm+mt
 source-wordcount: '1552'
 ht-degree: 1%
@@ -87,13 +87,36 @@ curl -X POST \
     -H 'Content-Type: application/json' \
     -d '{
         "name": "Salesforce source connection",
-        "connectionId": "4cb0c374-d3bb-4557-b139-5712880adc55",
+        "baseConnectionId": "4cb0c374-d3bb-4557-b139-5712880adc55",
         "description": "Salesforce source connection",
         "data": {
             "format": "tabular",
         },
         "params": {
-            "path": "Accounts"
+            "tableName": "Accounts",
+            "columns": [
+                {
+                    "name": "first_name",
+                    "type": "string",
+                    "xdm": {
+                        "type": "String"
+                    }
+                },
+                {
+                    "name": "last_name",
+                    "type": "string",
+                    "xdm": {
+                        "type": "String"
+                    }
+                },
+                {
+                    "name": "email",
+                    "type": "string",
+                    "xdm": {
+                        "type": "String"
+                    }
+                }
+            ]
         },
         "connectionSpec": {
             "id": "ccfc0fee1-7dc0-40ef-b73e-d8b134c436f5",
@@ -104,7 +127,7 @@ curl -X POST \
 
 | 屬性 | 說明 |
 | --- | --- |
-| `connectionId` | 您所存取之協力廠商CRM系統的唯一連線ID。 |
+| `baseConnectionId` | 您所存取之協力廠商CRM系統的唯一連線ID。 |
 | `params.path` | 源檔案的路徑。 |
 | `connectionSpec.id` | 與特定第三方CRM系統關聯的連接規範ID。 有關連接規範ID的清單，請參見[附錄](#appendix)。 |
 
