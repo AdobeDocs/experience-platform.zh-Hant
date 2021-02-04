@@ -5,9 +5,9 @@ title: 在UI中建立和編輯類別
 description: 瞭解如何在Experience Platform使用者介面中建立和編輯類別。
 topic: user guide
 translation-type: tm+mt
-source-git-commit: 2e20403122e65d28f04114af9b7e8d41874f76e2
+source-git-commit: 5bf729197de53e9d24675c8a1d0455e807fb90c5
 workflow-type: tm+mt
-source-wordcount: '850'
+source-wordcount: '886'
 ht-degree: 0%
 
 ---
@@ -53,9 +53,9 @@ Adobe提供數種標準（「核心」）XDM類別，包括[!DNL XDM Individual 
 
 >[!NOTE]
 >
->只能編輯您組織定義的自訂類別。
+>只有您組織定義的自訂類別才能完整編輯和自訂。 對於Adobe定義的核心類，在個別結構描述的上下文中只能編輯其欄位的顯示名稱。 有關詳細資訊，請參閱[編輯架構欄位的顯示名稱一節。](./schemas.md#display-names)
 >
->此外，在儲存類別並用於資料擷取後，之後只能對類別進行加法變更。 如需詳細資訊，請參閱[模式演化規則](../../schema/composition.md#evolution)。
+>在儲存自訂類別並用於資料擷取後，之後只能對它進行加法變更。 如需詳細資訊，請參閱[模式演化規則](../../schema/composition.md#evolution)。
 
 要編輯現有類，請選擇&#x200B;**[!UICONTROL Browse]**&#x200B;頁籤，然後選擇使用要編輯的類的方案名稱。
 
