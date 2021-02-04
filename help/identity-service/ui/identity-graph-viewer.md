@@ -5,9 +5,9 @@ title: Adobe Experience Platform Identity Service
 topic: tutorial
 description: 身分圖是特定客戶不同身分之間關係的地圖，可讓您以視覺化方式呈現客戶如何透過不同通道與您的品牌互動。
 translation-type: tm+mt
-source-git-commit: 7c9c81492df9333945ac62602f10b6097296d62b
+source-git-commit: 22685a8519529ba7afb7e50262ea4d40a450b382
 workflow-type: tm+mt
-source-wordcount: '905'
+source-wordcount: '930'
 ht-degree: 1%
 
 ---
@@ -100,7 +100,7 @@ ht-degree: 1%
 存取身分圖檢視器時可能會發生錯誤。 以下是使用身分圖表檢視器時要注意的先決條件和限制清單。
 
 - 標識值必須存在於所選命名空間中。
-- 身分圖表檢視器至少需要兩個連結的身分才能產生。
+- 身分圖表檢視器至少需要兩個連結的身分才能產生。 可能只有一個識別值且沒有連結的識別，在此情況下，該值只會存在於[!DNL Profile]檢視器中。
 - 身分圖表檢視器不能超過150個身分。
 
 ![錯誤畫面](../images/identity-graph-viewer/error-screen.png)
