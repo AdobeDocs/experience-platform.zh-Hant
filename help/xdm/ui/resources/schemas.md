@@ -5,9 +5,9 @@ title: 在UI中建立和編輯結構
 description: 瞭解如何在Experience Platform使用者介面中建立和編輯結構描述的基本知識。
 topic: user guide
 translation-type: tm+mt
-source-git-commit: e9df977272524b6aba516982e93f3128d1b9278b
+source-git-commit: babe47cc864d9f79eee28989ca8b658350b9d790
 workflow-type: tm+mt
-source-wordcount: '1167'
+source-wordcount: '1321'
 ht-degree: 0%
 
 ---
@@ -53,7 +53,7 @@ ht-degree: 0%
 >
 >您可以使用工作區的搜尋和篩選功能，協助您更輕鬆地尋找結構。 如需詳細資訊，請參閱[探索XDM資源](../explore.md)指南。
 
-選擇架構後，[!DNL Schema Editor]將顯示，其結構顯示在畫布中。 您現在可以將mixins](#add-mixins)新增至架構，或者，如果架構採用任何，則可以編輯現有的自訂mixins](./mixins.md#edit)。[[
+選擇架構後，[!DNL Schema Editor]將顯示，其結構顯示在畫布中。 您現在可以在架構中加入[mixins](#add-mixins)、[編輯欄位顯示名稱](#display-names)或[，如果架構採用任何，則可編輯現有的自訂mixins](./mixins.md#edit)。
 
 ## 將混合添加到架構{#add-mixins}
 
@@ -116,6 +116,22 @@ ht-degree: 0%
 ![](../../images/ui/resources/schemas/profile-enabled.png)
 
 此結構現在已啟用，可用於即時客戶個人檔案。 當平台根據此模式將資料收錄到資料集時，該資料將被併入到合併的配置檔案資料中。
+
+## 編輯架構欄位{#display-names}的顯示名稱
+
+一旦分配了類並將混音添加到架構後，您就可以編輯該架構的任何欄位的顯示名稱，而不管這些欄位是由標準還是自定義XDM資源提供。
+
+>[!NOTE]
+>
+>請記住，屬於標準類或混合的欄位的顯示名稱只能在特定架構的上下文中編輯。 換句話說，更改一個方案中標準欄位的顯示名稱不會影響使用相同關聯類或混合的其他方案。
+
+若要編輯結構欄位的顯示名稱，請選取畫布中的欄位。 在右邊欄中，在&#x200B;**[!UICONTROL 顯示名稱]**&#x200B;下提供新名稱。
+
+![](../../images/ui/resources/schemas/display-name.png)
+
+在右邊欄中選擇&#x200B;**[!UICONTROL Apply]**，畫布會更新以顯示欄位的新顯示名稱。 選擇&#x200B;**[!UICONTROL 保存]**&#x200B;將更改應用到模式。
+
+![](../../images/ui/resources/schemas/display-name-changed.png)
 
 ## 更改方案的類{#change-class}
 
