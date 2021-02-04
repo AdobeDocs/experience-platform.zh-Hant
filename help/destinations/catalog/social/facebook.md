@@ -5,9 +5,9 @@ seo-title: Facebook目標
 description: 根據雜湊的電子郵件，啟用您Facebook宣傳的個人檔案，以鎖定受眾、個人化和抑制受眾。
 seo-description: 根據雜湊的電子郵件，啟用您Facebook宣傳的個人檔案，以鎖定受眾、個人化和抑制受眾。
 translation-type: tm+mt
-source-git-commit: d0b6225a726c13e2b77ea0f61446ea489df81e69
+source-git-commit: 4e3b7e5ad440cae1ce15e5ecb2c9bd53863a445a
 workflow-type: tm+mt
-source-wordcount: '939'
+source-wordcount: '963'
 ht-degree: 3%
 
 ---
@@ -16,6 +16,10 @@ ht-degree: 3%
 # [!DNL Facebook] 目標
 
 ## 概述 {#overview}
+
+>[!IMPORTANT]
+>
+>客戶目前正在向新目標配置體驗進行遷移。 您目前可能在存取目標設定頁面時遇到問題。
 
 啟用[!DNL Facebook]促銷活動的設定檔，根據雜湊的電子郵件鎖定受眾、個人化和抑制受眾。
 
