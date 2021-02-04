@@ -5,9 +5,9 @@ seo-title: Google客戶符合目的地
 description: Google Customer Match可讓您使用您的線上和離線資料，透過Google的自有和營運資產（例如搜尋、購物、Gmail和YouTube）觸及客戶並與其重新互動。
 seo-description: Google Customer Match可讓您使用您的線上和離線資料，透過Google的自有和營運資產（例如搜尋、購物、Gmail和YouTube）觸及客戶並與其重新互動。
 translation-type: tm+mt
-source-git-commit: 3837f00ff8b950e1f7642a9ffb5d194388dcab28
+source-git-commit: 4e3b7e5ad440cae1ce15e5ecb2c9bd53863a445a
 workflow-type: tm+mt
-source-wordcount: '1478'
+source-wordcount: '1502'
 ht-degree: 0%
 
 ---
@@ -16,6 +16,10 @@ ht-degree: 0%
 # Google客戶符合目的地
 
 ## 概述 {#overview}
+
+>[!IMPORTANT]
+>
+>客戶目前正在向新目標配置體驗進行遷移。 您目前可能在存取目標設定頁面時遇到問題。
 
 [Google Customer ](https://support.google.com/google-ads/answer/6379332?hl=en) Matchet可讓您使用您的線上和離線資料，透過Google擁有和營運的資產觸及並重新與客戶互動，例如： [!DNL Search]、 [!DNL Shopping]、 [!DNL Gmail]和 [!DNL YouTube]。
 
