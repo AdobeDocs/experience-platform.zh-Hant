@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform；開發人員指南；端點；Data Science Workspace；熱門主題；資料科學工作區；資料科學
 solution: Experience Platform
-title: Sensei Machine Learning API開發人員指南
+title: Sensei Machine Learning API指南
 topic: Developer guide
-description: 本開發人員指南提供協助您開始使用Sensei Machine Learning API的步驟，並示範針對各種資料科學工作區資源執行CRUD作業的API呼叫。
+description: Sensei Machine Learning API可讓開發人員對各種資料科學工作區資源執行CRUD作業。 請依照本指南，瞭解如何使用API執行關鍵作業。
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: e649ab3da077cdd8e98562199b8bdece6108a572
 workflow-type: tm+mt
-source-wordcount: '244'
+source-wordcount: '243'
 ht-degree: 2%
 
 ---
 
 
-# [!DNL Sensei Machine Learning] API開發人員指南
+# [!DNL Sensei Machine Learning] API指南
 
 [!DNL Sensei Machine Learning] API為資料科學家提供機制，以組織和管理機器學習服務，從演算法上線到實驗，再到服務部署。
 
