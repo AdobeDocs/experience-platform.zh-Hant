@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics;etl;ETL;etl transformations;ETL transformations
+keywords: Experience Platform; home；熱門主題；etl;ETL;etl轉換；ETL轉換
 solution: Experience Platform
 title: 範例ETL轉換
 topic: overview
 description: 本文將示範擷取、轉換、載入(ETL)開發人員可能遇到的下列範例轉換。
 translation-type: tm+mt
-source-git-commit: f4a4e65a087313dc4e2414f999e021e3f6e17137
+source-git-commit: f8186e467dc982003c6feb01886ed16d23572955
 workflow-type: tm+mt
-source-wordcount: '482'
+source-wordcount: '493'
 ht-degree: 1%
 
 ---
@@ -21,14 +21,14 @@ ht-degree: 1%
 
 ### 範例檔案
 
-Adobe維護的公開ETL參考回購提供範例CSV和JSON [!DNL GitHub] 檔案：
+Adobe維護的公開ETL參考[!DNL GitHub]回購中提供範例CSV和JSON檔案：
 
 - [CRM_profiles.csv](https://github.com/adobe/experience-platform-etl-reference/blob/master/example_files/CRM_profiles.csv)
 - [CRM_profiles.json](https://github.com/adobe/experience-platform-etl-reference/blob/master/example_files/CRM_profiles.json)
 
 ### 範例 CSV
 
-下列CRM資料已匯出為 `CRM_profiles.csv`:
+下列CRM資料已匯出為`CRM_profiles.csv`:
 
 ```shell
 TITLE   F_NAME  L_NAME  GENDER  DOB EMAIL   CRMID   ECID    LOYALTYID   ECID2   PHONE   STREET  CITY    STATE   COUNTRY ZIP LAT LONG
@@ -44,7 +44,7 @@ Dr  Cammi   Haslen  F   1973-12-17  chaslenqv@ehow.com  56059cd5-5006-ce5f-2f5f-
 ### 映射
 
 下表概述了CRM資料的對應需求，並包含下列轉換：
-- 屬性的身份 `identityMap` 列
+- `identityMap`屬性的標識列
 - 出生日期(DOB)至年和月日
 - 將字串加倍或縮短整數。
 
@@ -54,7 +54,7 @@ Dr  Cammi   Haslen  F   1973-12-17  chaslenqv@ehow.com  56059cd5-5006-ce5f-2f5f-
 | F_NAME | person.name.firstName | 複製為字串 |
 | L_NAME | person.name.lastName | 複製為字串 |
 | 性別 | person.gender | 將性別轉換為對應人。性別列舉值 |
-| DOB | person.byrthDayAndMonth:&quot;MM-DD&quot;<br/>person.birthDate:&quot;YYYY-MM-DD&quot;<br/>person.birthYear:YYYY | 將brithDayAndMonth轉換為字<br/>串將birthDate轉換<br/>為字串將birthYear轉換為short int |
+| DOB | person.byrthDayAndMonth:&quot;MM-DD&quot;<br/>person.birthDate:&quot;YYYY-MM-DD&quot;<br/>person.birthYear:YYYY | 將birthDayAndMonth轉換為string<br/>Transform birthDate為string<br/>Transform birthYear為short int |
 | 電子郵件 | personalEmail.address | 複製為字串 |
 | CRMID | identityMap.CRMID[{&quot;id&quot;:x, primary:false}] | 複製為字串至identityMap中的CRMID陣列，並將Primary設為false |
 | ECID | identityMap.ECID[{&quot;id&quot;:x,primary:false}] | 複製為字串至identityMap中ECID陣列中的第一個項目，並將Primary設為false |
@@ -72,7 +72,7 @@ Dr  Cammi   Haslen  F   1973-12-17  chaslenqv@ehow.com  56059cd5-5006-ce5f-2f5f-
 
 ### 輸出XDM
 
-以下範例顯示轉換為XDM的CSV的前兩列，如所示 `CRM_profiles.json`:
+以下範例顯示轉換為XDM的CSV的前兩列，如`CRM_profiles.json`所示：
 
 ```json
 {
@@ -178,7 +178,7 @@ Dr  Cammi   Haslen  F   1973-12-17  chaslenqv@ehow.com  56059cd5-5006-ce5f-2f5f-
 
 ### 資料幀示例
 
-以下示例資料幀的結構已映射到實現類的方案，並包含與該類型的方案 [!DNL XDM Individual Profile] 關聯的最常見欄位。
+以下示例資料幀的結構已映射到實現[!DNL XDM Individual Profile]類的方案，並包含與該類型的方案關聯的最常見欄位。
 
 ```python
 [
@@ -286,9 +286,9 @@ Dr  Cammi   Haslen  F   1973-12-17  chaslenqv@ehow.com  56059cd5-5006-ce5f-2f5f-
 
 | 身分欄位 | identityMap欄位 | 資料類型 |
 | -------------- | ----------------- | --------- |
-| identities[0].id | [identityMapEmail][{"id"}] | 複製為字串 |
-| identities[1].id | [identityMapCRMID][{"id"}] | 複製為字串 |
-| identities[2].id | [identityMapLOYALTYID][{"id"}] | 複製為字串 |
+| identities[0].id | identityMap[電子郵件][{"id"}] | 複製為字串 |
+| identities[1].id | identityMap[CRMID][{"id"}] | 複製為字串 |
+| identities[2].id | identityMap[LOYALTYID][{"id"}] | 複製為字串 |
 
 ### 輸出XDM
 
