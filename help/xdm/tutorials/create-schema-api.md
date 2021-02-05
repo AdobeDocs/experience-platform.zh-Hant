@@ -6,7 +6,7 @@ topic: tutorial
 type: Tutorial
 description: 本教程使用方案註冊表API來引導您完成使用標準類合成方案的步驟。
 translation-type: tm+mt
-source-git-commit: 2dbd92efbd992b70f4f750b09e9d2e0626e71315
+source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
 workflow-type: tm+mt
 source-wordcount: '2373'
 ht-degree: 1%
