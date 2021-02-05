@@ -5,7 +5,7 @@ title: 隱私權服務與Experience Cloud應用程式
 topic: overview
 description: 本檔案提供如何針對隱私權相關作業設定不同Experience Cloud應用程式的參考。
 translation-type: tm+mt
-source-git-commit: 5dad1fcc82707f6ee1bf75af6c10d34ff78ac311
+source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
 workflow-type: tm+mt
 source-wordcount: '576'
 ht-degree: 19%
