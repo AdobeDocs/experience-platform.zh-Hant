@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;home；熱門主題；收集電子商務資料；電子商務資料
 solution: Experience Platform
-title: 透過來源連接器和API收集電子商務資料
+title: 使用來源連接器和API收集電子商務資料
 topic: overview
 type: Tutorial
-description: 本教學課程涵蓋從協力廠商電子商務系統擷取資料，並透過來源連接器和API將其匯入平台的步驟。
+description: 本教學課程涵蓋從協力廠商電子商務系統擷取資料，並使用來源連接器和API將其匯入平台的步驟。
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
 source-wordcount: '1489'
 ht-degree: 1%
@@ -14,7 +14,7 @@ ht-degree: 1%
 ---
 
 
-# 透過來源連接器和API收集電子商務資料
+# 使用來源連接器和API收集電子商務資料
 
 本教學課程涵蓋從協力廠商&#x200B;**[!UICONTROL 電子商務]**&#x200B;系統擷取資料，並透過來源連接器和[[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml)將其匯入[!DNL Platform]的步驟。
 
