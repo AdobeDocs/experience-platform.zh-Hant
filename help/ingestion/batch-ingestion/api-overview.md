@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;home；熱門主題；批次擷取；Batch擷取；ingestion;developer guide;api guide;upload;ingest Parce;ingest json;
 solution: Experience Platform
-title: 批次擷取開發人員指南
+title: 批次擷取API指南
 topic: developer guide
 description: 本檔案提供使用批次擷取API的完整概觀。
 translation-type: tm+mt
-source-git-commit: 2940f030aa21d70cceeedc7806a148695f68739e
+source-git-commit: a489ab248793a063295578943ad600d8eacab6a2
 workflow-type: tm+mt
 source-wordcount: '2698'
 ht-degree: 5%
@@ -13,7 +13,7 @@ ht-degree: 5%
 ---
 
 
-# 批次擷取開發人員指南
+# 批次擷取API指南
 
 本檔案提供使用[批次擷取API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml)的完整概觀。
 
