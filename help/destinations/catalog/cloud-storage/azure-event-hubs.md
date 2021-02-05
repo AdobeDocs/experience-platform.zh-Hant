@@ -1,25 +1,21 @@
 ---
 keywords: Azure事件中樞目標；azure事件中樞；azure事件中樞
-title: （測試版）Azure事件集線器目標
-seo-title: （測試版）Azure事件集線器目標
+title: （測試版）Azure事件集線器連接目標
 description: 建立Azure事件中樞儲存空間的即時出站連線，以從Experience Platform串流資料。
-seo-description: 建立Azure事件中樞儲存空間的即時出站連線，以從Experience Platform串流資料。
 translation-type: tm+mt
-source-git-commit: 97c0a9f4726ec85b7a72dc682fbd201a6152c1ba
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '509'
+source-wordcount: '487'
 ht-degree: 2%
 
 ---
 
 
-# （測試版）[!DNL Azure Event Hubs]目標
+# （測試版）[!DNL Azure Event Hubs]連線
 
 >[!IMPORTANT]
 >
 >平台中的[!DNL Azure Event Hubs]目標當前處於測試階段。 文件和功能可能會有所變更。
-
-## 概述 {#overview}
 
 [!DNL Azure Event Hubs] 是大型資料串流平台和事件擷取服務。它每秒可接收和處理數百萬個事件。 可使用任何即時分析提供者或批次處理／儲存適配器來轉換和儲存傳送至事件中樞的資料。
 
