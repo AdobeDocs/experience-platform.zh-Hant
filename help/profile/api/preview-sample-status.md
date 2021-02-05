@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;profile；即時客戶配置檔案；疑難排解；API;preview;sample
-title: 描述檔預覽——即時客戶描述檔API
+title: 描述檔範例狀態API端點
 description: 使用即時客戶個人檔案API端點，您可以預覽個人檔案資料的最新成功範例，以及Adobe Experience Platform內依資料集和身分命名空間來分發清單個人檔案。
 topic: guide
 translation-type: tm+mt
-source-git-commit: fe93a3672f65168744b3a242be7f42012f323544
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
-source-wordcount: '1554'
+source-wordcount: '1553'
 ht-degree: 1%
 
 ---
