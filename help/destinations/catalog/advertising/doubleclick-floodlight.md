@@ -1,21 +1,17 @@
 ---
 keywords: DoubleClick Floodlight;doubleclick floodlight extension;doubleclick;floodlight
-title: DoubleClick Floodlight(Beta)擴充功能
-seo-title: DoubleClick Floodlight(Beta)擴充功能
+title: DoubleClick Floodlight(Beta)延伸目的地
 description: DoubleClick Floodlight(Beta)擴充功能是Adobe Experience Platform中的廣告目的地。 如需擴充功能的詳細資訊，請參閱Adobe Exchange的擴充功能頁面。
-seo-description: DoubleClick Floodlight(Beta)擴充功能是Adobe Experience Platform中的廣告目的地。 如需擴充功能的詳細資訊，請參閱Adobe Exchange的擴充功能頁面。
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '548'
+source-wordcount: '517'
 ht-degree: 3%
 
 ---
 
 
 # [!DNL DoubleClick Floodlight] （測試版）擴充功能
-
-## 概述 {#overview}
 
 此擴充功能可讓您使用傳統Floodlight格式（而非全域網站標籤）快速輕鬆部署[!DNL DoubleClick Floodlight]標籤。 注意：此擴充功能已測試。
 
