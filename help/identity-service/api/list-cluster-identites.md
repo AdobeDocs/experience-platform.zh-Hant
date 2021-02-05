@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics;list identities;list cluster
+keywords: Experience Platform;home；熱門主題；清單標識；清單群集
 solution: Experience Platform
-title: 列出群集標識
+title: 列出群集中的所有標識
 topic: API guide
 description: 在身分圖中相關的身分識別（無論名稱空間為何），都會被視為該身分圖中相同「叢集」的一部分。 以下選項提供訪問所有群整合員的方法。
 translation-type: tm+mt
-source-git-commit: 0af537e965605e6c3e02963889acd85b9d780654
+source-git-commit: 73035aec86297cfc4ee9337cf922d599001379c3
 workflow-type: tm+mt
-source-wordcount: '347'
+source-wordcount: '359'
 ht-degree: 1%
 
 ---
@@ -21,10 +21,10 @@ ht-degree: 1%
 
 檢索所有群整合員的單個標識。
 
-您可以使用可選參 `graph-type` 數來指示身份圖表，從中獲取群集。 選項包括：
+可以使用可選`graph-type`參數來指示從中獲取群集的身份圖。 選項包括：
 
 - 無——不執行身份聯繫。
-- 私用圖表——根據您的私用身份圖表執行身份拼接。 如果未提 `graph-type` 供，則此為預設值。
+- 私用圖表——根據您的私用身份圖表執行身份拼接。 如果未提供`graph-type`，則此為預設值。
 
 **API格式**
 
@@ -34,7 +34,7 @@ GET https://platform-{REGION}.adobe.io/data/core/identity/cluster/members?{PARAM
 
 **請求**
 
-選項1:將身分提供為namespace(`nsId`依ID)和ID值(`id`)。
+選項1:將識別碼提供為命名空間（`nsId`，依ID）和ID值(`id`)。
 
 ```shell
 curl -X GET \
@@ -45,7 +45,7 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-選項2:提供身分識別為namespace(`ns`依名稱)和ID值(`id`)。
+選項2:將身分提供為namespace（`ns`，依名稱）和ID值(`id`)。
 
 ```shell
 curl -X GET \
@@ -56,7 +56,7 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-選項3:提供身份作為XID(`xid`)。 如需如何取得身分識別的XID的詳細資訊，請參閱本檔案中有關取得 [身分識別的XID一節](./list-native-id.md)。
+選項3:提供身份作為XID(`xid`)。 有關如何獲取身份的XID的詳細資訊，請參閱本文檔中有關[獲取身份的XID的章節](./list-native-id.md)。
 
 ```shell
 curl -X GET \
@@ -69,7 +69,7 @@ curl -X GET \
 
 ## 取得多個身分的相關身分
 
-使用 `POST` 作為上述方法的批 `GET` 次等效，以傳回多個身分的叢集中的身分。
+使用`POST`作為批次等效於上述`GET`方法，以返回多個身份簇中的身份。
 
 >[!NOTE]
 >
@@ -87,7 +87,7 @@ POST https://platform-{REGION}.adobe.io/data/core/identity/clusters/members
 
 **存根請求**
 
-使用標 `x-uis-cst-ctx: stub` 題會傳回無效回應。 這是一個臨時解決方案，在服務完成的同時，促進早期的一體化發展進程。 當不再需要時，此選項將不再提供。
+使用`x-uis-cst-ctx: stub`標題會傳回無效回應。 這是一個臨時解決方案，在服務完成的同時，促進早期的一體化發展進程。 當不再需要時，此選項將不再提供。
 
 ```shell
 curl -X POST \
@@ -243,4 +243,4 @@ curl -X POST \
 
 ## 後續步驟
 
-繼續下一個教程，列 [出身份的群集歷史記錄](./list-cluster-history.md)
+繼續下一個教程[列出身份的群集歷史記錄](./list-cluster-history.md)
