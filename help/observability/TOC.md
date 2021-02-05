@@ -4,10 +4,10 @@ audience: user
 user-guide-title: 檢視範圍指南
 user-guide-description: 透過使用統計量度和事件通知來監控 Platform 活動。
 translation-type: tm+mt
-source-git-commit: 72b2172bbcc8613a2030b4784270321c3933f6aa
+source-git-commit: 92e3edaba5793d18e826d3e3f3151ba8a51fce53
 workflow-type: tm+mt
-source-wordcount: '55'
-ht-degree: 45%
+source-wordcount: '53'
+ht-degree: 47%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 45%
 # 可觀察性深入分析 {#observability}
 
 * [可觀性見解概觀](home.md)
-* 可觀性分析API開發人員指南 {#api}
+* 可觀測性分析API {#api}
    * [概述](api/overview.md)
    * [快速入門](api/getting-started.md)
    * [量度](api/metrics.md)
