@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;home；熱門主題；api;API;XDM;XDM系統；體驗資料模型；ui;workspace;mixin;mixins;
 solution: Experience Platform
-title: 在UI中建立和編輯混音
+title: 在UI中建立和編輯Mixin
 description: 瞭解如何在Experience Platform使用者介面中建立和編輯混合。
 topic: user guide
 translation-type: tm+mt
-source-git-commit: cf74c7922271035474c7f10534692983add48616
+source-git-commit: aa2088d30716f56ac2909214badbb39c0ae97855
 workflow-type: tm+mt
 source-wordcount: '704'
 ht-degree: 0%
