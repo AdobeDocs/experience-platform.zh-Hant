@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;home；熱門主題；CRM;crm;crm流程服務
 solution: Experience Platform
-title: 使用Flow Service API探索CRM系統
+title: 利用流服務API探索CRM系統
 topic: overview
 description: 本教學課程使用Flow Service API來探索CRM系統。
 translation-type: tm+mt
-source-git-commit: 48a5dcfe5679e360da1e33f6021dc1229b92948f
+source-git-commit: 62266187ed1f3ce2f0acca3f50487fb70cfa7307
 workflow-type: tm+mt
 source-wordcount: '589'
 ht-degree: 2%
