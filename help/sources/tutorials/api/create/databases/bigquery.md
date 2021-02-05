@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform;home;popular topics;bigquery;Google;google;Google BigQuery
 solution: Experience Platform
-title: 使用Flow Service API建立Google BigQuery連接器
+title: 使用Flow Service API建立Google BigQuery來源連線
 topic: overview
 type: Tutorial
-description: 本教學課程使用Flow Service API來引導您完成將Experience Platform連接至Google BigQuery（以下稱為「BigQuery」）的步驟。
+description: 瞭解如何使用Flow Service API將Adobe Experience Platform連接至Google BigQuery。
 translation-type: tm+mt
-source-git-commit: ddf5be2f30bc347a881bdcbc6b880f087c03e263
+source-git-commit: 62266187ed1f3ce2f0acca3f50487fb70cfa7307
 workflow-type: tm+mt
-source-wordcount: '624'
+source-wordcount: '616'
 ht-degree: 1%
 
 ---
 
 
-# 使用[!DNL Flow Service] API建立[!DNL Google BigQuery]連接器
+# 使用[!DNL Flow Service] API建立[!DNL Google BigQuery]來源連線
 
 >[!NOTE]
 >
