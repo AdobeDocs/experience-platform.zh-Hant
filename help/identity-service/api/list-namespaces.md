@@ -1,19 +1,19 @@
 ---
-keywords: Experience Platform;home;popular topics;namespace list;list namespace
+keywords: Experience Platform;home；熱門主題；namespace list;list namespace
 solution: Experience Platform
-title: 列出可用的名稱空間
+title: 列出可用身份名稱空間
 topic: API guide
 description: 列出所有可用的名稱空間。
 translation-type: tm+mt
-source-git-commit: 0af537e965605e6c3e02963889acd85b9d780654
+source-git-commit: 73035aec86297cfc4ee9337cf922d599001379c3
 workflow-type: tm+mt
-source-wordcount: '72'
-ht-degree: 5%
+source-wordcount: '83'
+ht-degree: 4%
 
 ---
 
 
-# 列出可用的名稱空間
+# 列出可用的身份名稱空間
 
 **API格式**
 
@@ -34,7 +34,7 @@ curl -X GET \
 
 **回應**
 
-響應包括對象陣列，每個對象表示可用的命名空間。 具有&quot;[!UICONTROL custom]&quot;值&quot;[!UICONTROL false]&quot;的名稱空間是標準名稱空間，而具有&quot;[!UICONTROL custom]&quot;值&quot;true&quot;值的名稱空間是貴組織已建立的名稱空間。
+響應包括對象陣列，每個對象表示可用的命名空間。 「[!UICONTROL custom]」值為「[!UICONTROL false]」的名稱空間是標準名稱空間，而「[!UICONTROL custom]」值為「[!UICONTROL true]」的名稱空間是貴組織已建立的名稱空間。
 
 >[!NOTE]
 >
@@ -80,4 +80,4 @@ curl -X GET \
 
 ## 後續步驟
 
-繼續下一個教學課程，以建 [立自訂命名空間](./create-custom-namespace.md)
+繼續下一個教學課程，以[建立自訂命名空間](./create-custom-namespace.md)
