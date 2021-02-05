@@ -6,7 +6,7 @@ topic: tutorial
 type: Tutorial
 description: 本教學課程提供所有其他Adobe Experience Platform資料科學工作區教學課程的必要條件和必要資產。 完成後，您和您的IMS組織Experience Platform成員將可使用零售銷售架構和資料集。
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
 source-wordcount: '554'
 ht-degree: 0%
@@ -112,7 +112,7 @@ ht-degree: 0%
 您也使用提供的引導指令碼成功將零售銷售示例資料導入[!DNL Experience Platform]。
 
 要繼續使用收錄的資料：
-- [使用Jupyter筆記型電腦分析資料](../jupyterlab/analyze-your-data.md)
-   - 使用Data Science Workspace中的Jupyter筆記型電腦存取、探索、視覺化和瞭解您的資料。
+- [使用Jupyter Notebooks分析資料](../jupyterlab/analyze-your-data.md)
+   - 使用Data Science Workspace中的Jupyter Notebooks來存取、探索、視覺化和瞭解您的資料。
 - [將來源檔案封裝至配方](./package-source-files-recipe.md)
    - 請依照本教學課程，瞭解如何將來源檔案封裝在可匯入的方式檔案中，將您自己的模型帶入[!DNL Data Science Workspace]。
