@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform;home；熱門主題；api;API;XDM;XDM系統；體驗資料模型；體驗資料模型；資料模型；模式註冊；模式註冊；
 solution: Experience Platform
-title: 架構註冊API開發人員指南
-description: '架構註冊表API可讓您以程式設計方式管理Experience Platform中所有可用的架構及相關XDM資源。 '
+title: 方案註冊表API指南
+description: 架構註冊表API可讓開發人員以程式設計方式管理Adobe Experience Platform中的所有架構和相關的Experience Data Model(XDM)資源。 請依照本指南，瞭解如何使用API執行關鍵作業。
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 44a727f6ce4c2b90aa010379583c7c4d3ebd011c
+source-git-commit: e649ab3da077cdd8e98562199b8bdece6108a572
 workflow-type: tm+mt
-source-wordcount: '961'
+source-wordcount: '973'
 ht-degree: 0%
 
 ---
 
 
-# [!DNL Schema Registry] API開發人員指南
+# [!DNL Schema Registry] API指南
 
 [!DNL Schema Registry]用於存取Adobe Experience Platform中的架構程式庫，提供使用者介面和REST風格的API，讓所有可用的程式庫資源都可從中存取。
 
