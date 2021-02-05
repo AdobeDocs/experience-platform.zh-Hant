@@ -1,19 +1,19 @@
 ---
 keywords: 資料管理rtcdp;rtcdp資料管理；即時客戶資料資料描述檔資料管理；隱私權rtcdp;rtcdp隱私
-title: 即時客戶資料設定檔中的隱私權
-seo-title: 即時客戶資料設定檔中的隱私權
-description: 即時客戶資料設定檔可讓您簡化維持資料作業符合隱私權規範的程式。
-seo-description: 即時客戶資料設定檔可讓您簡化維持資料作業符合隱私權規範的程式。
+title: 即時客戶資料平台中的隱私權
+seo-title: 即時客戶資料平台中的隱私權
+description: 即時客戶資料平台可讓您簡化維持資料作業符合隱私權法規的程式。
+seo-description: 即時客戶資料平台可讓您簡化維持資料作業符合隱私權法規的程式。
 translation-type: tm+mt
-source-git-commit: 49c984a60fd699706eec508ec1d786340df40b57
+source-git-commit: 8d403e73a804953f9584d6a72f945d4444e65d11
 workflow-type: tm+mt
-source-wordcount: '386'
+source-wordcount: '390'
 ht-degree: 0%
 
 ---
 
 
-# [!DNL Real-time CDP]中的隱私權
+# 即時客戶資料平台中的隱私權
 
 [!DNL Real-time Customer Data Platform] ([!DNL Real-time CDP])協助行銷人員將來自多個企業系統的資料整合在一起，讓他們能夠更好地識別、瞭解並吸引客戶。Adobe將消費者資料隱私視為基本的設計原則，並提供各種控制項以協助行銷人員管理其客戶的資料隱私。
 
