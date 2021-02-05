@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform; home；熱門主題；批處理；批處理；部分處理；部分處理；檢索錯誤；檢索錯誤；部分批處理；部分處理；部分處理；攝取；
 solution: Experience Platform
-title: 部分批次擷取概觀
+title: 部分批提取概述
 topic: overview
 description: 本檔案提供管理部分批次擷取的教學課程。
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: 089a4d517476b614521d1db4718966e3ebb13064
 workflow-type: tm+mt
 source-wordcount: '945'
 ht-degree: 0%
