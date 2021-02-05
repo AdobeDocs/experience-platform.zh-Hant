@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform; home；熱門主題；沙盒開發人員指南
 solution: Experience Platform
-title: 沙盒API開發人員指南
+title: 沙盒API指南
 topic: developer guide
-description: 此開發人員指南提供步驟，協助您使用沙盒API來管理Experience Platform中的沙盒，並包含執行各種作業的範例API呼叫。
+description: 沙盒API可讓開發人員以程式設計方式管理Adobe Experience Platform中的沙盒。 請依照本指南，瞭解如何使用API執行關鍵作業。
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: e649ab3da077cdd8e98562199b8bdece6108a572
 workflow-type: tm+mt
-source-wordcount: '376'
+source-wordcount: '373'
 ht-degree: 0%
 
 ---
 
 
-# 沙盒API開發人員指南
+# 沙盒API指南
 
 Adobe Experience Platform中的沙盒可提供獨立的開發環境，讓您測試功能、執行實驗並建立自訂組態，而不會影響您的生產環境。
 
