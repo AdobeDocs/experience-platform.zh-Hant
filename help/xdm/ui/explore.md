@@ -6,7 +6,7 @@ description: 瞭解如何在Experience Platform使用者介面中探索現有的
 topic: tutorial
 type: Tutorial
 translation-type: tm+mt
-source-git-commit: 6246e623a711bff06eefe5d5954719d69df921c3
+source-git-commit: 62266187ed1f3ce2f0acca3f50487fb70cfa7307
 workflow-type: tm+mt
 source-wordcount: '941'
 ht-degree: 0%
@@ -100,7 +100,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->有關在XDM結構描述中使用關係的詳細資訊，請參閱[在UI](../tutorials/create-schema-ui.md)中建立關係的教程。
+>有關在XDM架構中使用關係的詳細資訊，請參閱[在UI](../tutorials/create-schema-ui.md)中建立關係的教程。
 
 ## 後續步驟
 
