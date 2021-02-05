@@ -1,25 +1,25 @@
 ---
-keywords: Experience Platform;home;popular topics;schema;Schema;XDM;ExperienceEvent;fields;schemas;Schemas;Schema design;mixin;mixin;enduserids;end-user;end user;ids;
+keywords: Experience Platform;home；熱門主題；架構；架構；Schema;XDM;ExperienceEvent;fields;schemas;Schema設計；mixin;mixin;enduserids；最終用戶；IDS;
 solution: Experience Platform
-title: 混合使用者ID詳細資料
+title: 最終用戶ID詳細資料混合
 topic: overview
 description: 本檔案提供「使用者ID詳細資料」混合檔的概觀。
 translation-type: tm+mt
-source-git-commit: f9d8021643e72e3fbb5315b54a19815dcdaaa702
+source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
 workflow-type: tm+mt
-source-wordcount: '175'
+source-wordcount: '196'
 ht-degree: 1%
 
 ---
 
 
-# [!UICONTROL 混合使用者ID詳細資訊] (End User ID Details)
+# [!UICONTROL 使用者ID詳細資] 訊mixin
 
 >[!NOTE]
 >
->幾個混音的名字已經改變。 如需詳細資訊，請 [參閱混合名稱更新](../name-updates.md) 的檔案。
+>幾個混音的名字已經改變。 如需詳細資訊，請參閱[mixin name updates](../name-updates.md)上的檔案。
 
-[!UICONTROL 「使用者ID詳細資訊] 」是類別的標準混合 [[!DNL XDM ExperienceEvent] 檔](../../classes/individual-profile.md)，用來說明個人在數個Adobe應用程式中的身分資訊。 混音提供根層級物 `endUserIDs` 件，其本身包含唯讀欄 `_experience` 位，其值會隨著資料擷取而自動更新。
+[!UICONTROL 使用者ID詳] 細資訊是類別的標準混 [[!DNL XDM ExperienceEvent] 合檔](../../classes/individual-profile.md)，用來說明個人在數個Adobe應用程式中的身分資訊。mixin提供根級別`endUserIDs`物件，其本身包含唯讀`_experience`欄位，當擷取資料時，其值會自動更新。
 
 <img src="../../images/mixins/enduserids.png" width="700" /><br />
 
