@@ -1,25 +1,21 @@
 ---
 keywords: Amazon Kinesis;kinesis目標；kinesis
-title: Amazon Kinesis目標
-seo-title: Amazon Kinesis目標
+title: Amazon Kinesis連接目標
 description: 建立到Amazon Kinesis儲存的即時出站連接，以便從Adobe Experience Platform流資料。
-seo-description: 建立到Amazon Kinesis儲存的即時出站連接，以便從Adobe Experience Platform流資料。
 translation-type: tm+mt
-source-git-commit: a78dd4b95896387aa1daa022c9e1d5a6cf978448
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '471'
+source-wordcount: '451'
 ht-degree: 2%
 
 ---
 
 
-# （測試版）[!DNL Amazon Kinesis]目標
+# （測試版）[!DNL Amazon Kinesis]連線
 
 >[!IMPORTANT]
 >
 >平台中的[!DNL Amazon Kinesis]目標當前處於測試階段。 文件和功能可能會有所變更。
-
-## 概述 {#overview}
 
 [!DNL Kinesis Data Streams]服務由[!DNL Amazon Web Services]提供，可讓您即時收集和處理大量資料記錄。
 
