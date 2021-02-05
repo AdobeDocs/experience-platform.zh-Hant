@@ -1,19 +1,19 @@
 ---
 keywords: 體驗平台； home；熱門主題；查詢服務；查詢服務；postico; Postico；連接查詢服務；
 solution: Experience Platform
-title: 與Postico連線
+title: 將Postico連接至查詢服務
 topic: connect
 description: 本檔案包含安裝Adobe Experience Platform Query Service備份用戶端Postico的連結。
 translation-type: tm+mt
-source-git-commit: eac93f3465fa6ce4af7a6aa783cf5f8fb4ac9b9b
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '250'
+source-wordcount: '253'
 ht-degree: 0%
 
 ---
 
 
-# [!DNL Postico]
+# 將[!DNL Postico]連接到查詢服務(Mac)
 
 本檔案涵蓋連接[!DNL Postico]與Adobe Experience Platform [!DNL Query Service]的步驟。
 
@@ -22,8 +22,6 @@ ht-degree: 0%
 > 本指南假定您已經擁有[!DNL Postico]的訪問權限，並熟悉如何導航其介面。 有關[!DNL Postico]的更多資訊，請參閱[official [!DNL Postico] 文檔](https://eggerapps.at/postico/docs)。
 > 
 > 此外，[!DNL Postico]僅&#x200B;**適用於macOS裝置。**
-
-## 將[!DNL Postico]連接到查詢服務
 
 要將[!DNL Postico]連接到查詢服務，請開啟[!DNL Postico]並選擇&#x200B;**[!DNL New Favorite]**。
 
