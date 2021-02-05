@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics; delete dataflows
+keywords: Experience Platform; home；熱門主題；刪除資料流
 description: 來源工作區可讓您刪除包含錯誤或已過時的現有批處理和流資料流。
 solution: Experience Platform
-title: 刪除資料流
+title: 刪除UI中的資料流
 topic: overview
 type: Tutorial
 translation-type: tm+mt
-source-git-commit: 7cb5862112c80e386e697aa2bd503abe49f11a3f
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
-source-wordcount: '358'
+source-wordcount: '368'
 ht-degree: 1%
 
 ---
@@ -16,9 +16,9 @@ ht-degree: 1%
 
 # 刪除UI中的資料流
 
-Sources工 [!UICONTROL 作區] ，可讓您刪除現有的批次和串流資料流，這些資料流包含錯誤或已過時。
+[!UICONTROL Sources]工作區允許您刪除包含錯誤或已過時的現有批處理和流資料流。
 
-本教學課程提供使用 [!UICONTROL Sources工作區刪除資料流] 的步驟。
+本教程提供使用[!UICONTROL Sources]工作區刪除資料流的步驟。
 
 ## 快速入門
 
@@ -29,13 +29,13 @@ Sources工 [!UICONTROL 作區] ，可讓您刪除現有的批次和串流資料�
 
 ## 刪除資料流
 
-在 [Experience Platform UI中](https://platform.adobe.com)，從左側導覽器中選取 **[!UICONTROL Sources]** ，以存取 [!UICONTROL Sources] 工作區，然後從頂端標題 **** 選取DataflowsTraflows。
+在[Experience Platform UI](https://platform.adobe.com)中，從左側導覽選擇&#x200B;**[!UICONTROL Sources]**&#x200B;以存取[!UICONTROL  Sources]工作區，然後從上方標題中選擇&#x200B;**[!UICONTROL Dataflows]**。
 
 ![目錄](../../images/tutorials/delete/catalog.png)
 
-此時將 **[!UICONTROL 顯示]** 「資料流」頁。 本頁列出了可查看的資料流，包括其目標資料集、源、帳戶名和建立日期的相關資訊。
+此時將顯示&#x200B;**[!UICONTROL 資料流]**&#x200B;頁。 本頁列出了可查看的資料流，包括其目標資料集、源、帳戶名和建立日期的相關資訊。
 
-選取左上角的篩![選器圖示](../../images/tutorials/delete/filter.png)（篩選器圖示）以啟動排序面板。
+選取左上角的篩選圖示(![filter-icon](../../images/tutorials/delete/filter.png))，以啟動排序面板。
 
 ![資料流](../../images/tutorials/delete/dataflows.png)
 
@@ -47,11 +47,11 @@ Sources工 [!UICONTROL 作區] ，可讓您刪除現有的批次和串流資料�
 
 此時將顯示一個下拉菜單，為您提供了編輯資料流時間表、禁用資料流或完全刪除資料流的選項。
 
-選擇 **[!UICONTROL 刪除]** ，刪除資料流。
+選擇&#x200B;**[!UICONTROL Delete]**&#x200B;刪除資料流。
 
 ![刪除](../../images/tutorials/delete/delete.png)
 
-將出現最終確認對話框。 選擇 **[!UICONTROL 刪除]** ，以完成流程。
+將出現最終確認對話框。 選擇&#x200B;**[!UICONTROL Delete]**&#x200B;以完成該過程。
 
 ![confirm](../../images/tutorials/delete/confirm.png)
 
@@ -61,6 +61,6 @@ Sources工 [!UICONTROL 作區] ，可讓您刪除現有的批次和串流資料�
 
 ## 後續步驟
 
-按照本教程，您已成功使用 [!UICONTROL Sources] 工作區刪除現有資料流。
+在本教程中，您成功使用[!UICONTROL  Sources]工作區刪除了現有的資料流。
 
-有關如何使用 [API調用以寫程式方式執行這些操作的步驟](../../tutorials/api/delete-dataflows.md) ，請參閱使用Flow Service API刪除資料流的教程。
+有關如何使用API調用以寫程式方式執行這些操作的步驟，請參見有關使用流服務API](../../tutorials/api/delete-dataflows.md)刪除資料流的教程。[
