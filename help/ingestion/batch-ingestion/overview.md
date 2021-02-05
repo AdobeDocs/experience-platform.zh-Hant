@@ -3,19 +3,19 @@ keywords: Experience Platform; home；熱門主題；資料提取；batch;Batch�
 solution: Experience Platform
 title: 批次擷取概觀
 topic: overview
-description: 批次擷取API可讓您將資料以批次檔案的形式內嵌至Adobe Experience Platform。 所吸收的資料可以是CRM系統中平面檔案（例如Parce檔案）的描述檔資料，或是符合Experience Data Model(XDM)註冊表中已知架構的資料。
+description: Adobe Experience Platform Data Ingestion API可讓您將資料以批次檔案的形式內嵌至Platform。 所吸收的資料可以是CRM系統中平面檔案（例如Parce檔案）的描述檔資料，或是符合Experience Data Model(XDM)註冊表中已知架構的資料。
 translation-type: tm+mt
-source-git-commit: 2940f030aa21d70cceeedc7806a148695f68739e
+source-git-commit: a489ab248793a063295578943ad600d8eacab6a2
 workflow-type: tm+mt
-source-wordcount: '1216'
+source-wordcount: '1222'
 ht-degree: 2%
 
 ---
 
 
-# [!DNL Batch Ingestion]概述
+# 批次擷取概觀
 
-[!DNL Batch Ingestion] API可讓您將資料以批次檔案的形式內嵌至Adobe Experience Platform。 所吸收的資料可以是CRM系統中平面檔案（例如Parce檔案）的描述檔資料，或符合[!DNL Experience Data Model](XDM)註冊表中已知架構的資料。
+Adobe Experience Platform Data Ingestion API可讓您將資料以批次檔案的形式內嵌至Platform。 所吸收的資料可以是CRM系統中平面檔案（例如Parce檔案）的描述檔資料，或符合[!DNL Experience Data Model](XDM)註冊表中已知架構的資料。
 
 [資料擷取API參考](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml)提供這些API呼叫的其他資訊。
 
