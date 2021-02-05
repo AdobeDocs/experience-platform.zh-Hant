@@ -1,14 +1,14 @@
 ---
 keywords: Experience Platform；首頁；熱門主題；CJA；歷程分析；客戶歷程分析；宣傳協調；客戶歷程；歷程；歷程協調；功能；地區
 solution: Experience Platform
-title: Adobe Experience Platform概觀
+title: Adobe Experience Platform 概述
 topic: getting started
 description: Adobe Experience Platform可讓組織在套用資料科學和機器學習之前，集中化和標準化客戶資料，以大幅改善多樣化個人化體驗的設計和傳遞。
 translation-type: tm+mt
-source-git-commit: 2dbd92efbd992b70f4f750b09e9d2e0626e71315
+source-git-commit: 5575d5e45bddcc007dcf78720cd7a7e20475f78c
 workflow-type: tm+mt
 source-wordcount: '459'
-ht-degree: 7%
+ht-degree: 8%
 
 ---
 
