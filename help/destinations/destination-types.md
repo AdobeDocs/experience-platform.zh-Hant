@@ -2,12 +2,11 @@
 keywords: 目標；目標；目標類型
 title: 目標類型和類別
 seo-title: 目標類型和類別
-description: '在Adobe Experience Platform中，描述檔／區段匯出目的地會擷取事件資料，並與其他資料來源結合，套用區段，以及將區段和合格的描述檔匯出至目標。 Experience Platform Launch擴充功能可將原始事件資料轉送至數種目的地。 '
-seo-description: 在Adobe Experience Platform中，描述檔／區段匯出目的地會擷取事件資料，並與其他資料來源結合，套用區段，以及將區段和合格的描述檔匯出至目標。 Experience Platform Launch擴充功能可將原始事件資料轉送至數種目的地。
+description: 瞭解Adobe Experience Platform中不同的目的地類型和類別。
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '581'
+source-wordcount: '514'
 ht-degree: 0%
 
 ---
