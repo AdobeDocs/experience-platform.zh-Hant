@@ -1,19 +1,19 @@
 ---
-keywords: Experience Platform;home;popular topics;Analytics mapping fields;analytics mapping
+keywords: Experience Platform;home；熱門主題；Analytics映射欄位；分析映射
 solution: Experience Platform
-title: Analytics對應欄位
+title: Adobe Analytics Source Connector的對應欄位
 topic: overview
 description: Adobe Experience Platform可讓您透過Analytics資料連接器(ADC)來內嵌Adobe Analytics資料。 透過ADC擷取的部分資料可直接從Analytics欄位映射至「體驗資料模型」(XDM)欄位，而其他資料則需要轉換和特定函式才能成功映射。
 translation-type: tm+mt
-source-git-commit: 6934bfeee84f542558894bbd4ba5759891cd17f3
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
-source-wordcount: '3378'
+source-wordcount: '3393'
 ht-degree: 12%
 
 ---
 
 
-# Analytics對應欄位
+# Analytics欄位對應
 
 Adobe Experience Platform可讓您透過Analytics資料連接器(ADC)來內嵌Adobe Analytics資料。 透過ADC擷取的部分資料可直接從Analytics欄位映射至「體驗資料模型」(XDM)欄位，而其他資料則需要轉換和特定函式才能成功映射。
 
@@ -23,7 +23,7 @@ Adobe Experience Platform可讓您透過Analytics資料連接器(ADC)來內嵌Ad
 
 選取的欄位會直接從Adobe Analytics對應至Experience Data Model(XDM)。
 
-下表包含顯示Analytics欄位(*Analytics欄位*)名稱、對應的XDM欄位(*XDM欄位*)及其類型(*XDM類型)的欄，以及欄位說明(*** DescriptionComprization)。
+下表包含顯示「分析」欄位名稱（*Analytics欄位*）、對應的XDM欄位（*XDM欄位*）及其類型（*XDM類型*），以及欄位說明(*Description*)的欄。
 
 >[!NOTE]
 >
@@ -57,7 +57,7 @@ Adobe Experience Platform可讓您透過Analytics資料連接器(ADC)來內嵌Ad
 | ipv6 | environment.ipV6 | 字串 |
 | j_jscript | environment.browserDetails.javaScriptVersion | 字串 | 瀏覽器支援的JavaScript版本。 |
 | user_agent | environment.browserDetails.userAgent | 字串 | 在HTTP標題中傳送的使用者代理字串。 |
-| mobileappid | application.</span>name | 字串 | 以下列格式儲存的行動應用程式ID: `[AppName][BundleVersion]`. |
+| mobileappid | application.</span>name | 字串 | 以下列格式儲存的行動應用程式ID:`[AppName][BundleVersion]`。 |
 | mobiledevice | device.model | 字串 | 行動裝置的名稱。 在iOS上，它會儲存為逗號分隔的2位數字串。 第一數字代表裝置產生，第二數字代表裝置系列。 |
 | pointofinterest | placeContext.POIinteraction.POIDetail.</span>名稱 | 字串 | 行動服務使用。 代表興趣點。 |
 | pointofinterestdistance | placeContext.POIinteraction.POIDetail.geoInteractionDetails.distanceToCenter | 數字 | 行動服務使用。 表示興趣點距離。 |
@@ -126,7 +126,7 @@ Adobe Experience Platform可讓您透過Analytics資料連接器(ADC)來內嵌Ad
 
 ## 分割對應欄位
 
-這些欄位有單個源，但映射到 **多個** XDM位置。
+這些欄位具有單個源，但映射到&#x200B;**多個** XDM位置。
 
 | Analytics欄位 | XDM欄位 | XDM類型 | 說明 |
 | --------------- | --------- | -------- | ---------- |
@@ -138,7 +138,7 @@ Adobe Experience Platform可讓您透過Analytics資料連接器(ADC)來內嵌Ad
 
 選取來自ADC的欄位需要轉換，需要邏輯不限於Adobe Analytics的直接復本，才能在XDM中產生。
 
-下表包含顯示Analytics欄位(*Analytics欄位*)名稱、對應的XDM欄位(*XDM欄位*)及其類型(*XDM類型)的欄，以及欄位說明(*** DescriptionComprization)。
+下表包含顯示「分析」欄位名稱（*Analytics欄位*）、對應的XDM欄位（*XDM欄位*）及其類型（*XDM類型*），以及欄位說明(*Description*)的欄。
 
 >[!NOTE]
 >
@@ -196,9 +196,9 @@ Adobe Experience Platform可讓您透過Analytics資料連接器(ADC)來內嵌Ad
 
 選取欄位（稱為「後置值」）需要進行更進階的轉換，才能從Adobe Analytics欄位成功地對應至Experience Data Model(XDM)。 執行這些進階轉換需要使用Adobe Experience Platform查詢服務和預先建立的函式（稱為Adobe定義的函式）來進行作業化、歸因和去重複化。
 
-若要進一步瞭解如何使用查詢服務執行此轉換，請造訪 [Adobe定義的函式檔案](../../../../query-service/sql/adobe-defined-functions.md) 。
+若要進一步瞭解如何使用查詢服務執行此轉換，請造訪[Adobe定義的函式](../../../../query-service/sql/adobe-defined-functions.md)檔案。
 
-下表包含顯示Analytics欄位(*Analytics欄位*)名稱、對應的XDM欄位(*XDM欄位*)及其類型(*XDM類型)的欄，以及欄位說明(*** DescriptionComprization)。
+下表包含顯示「分析」欄位名稱（*Analytics欄位*）、對應的XDM欄位（*XDM欄位*）及其類型（*XDM類型*），以及欄位說明(*Description*)的欄。
 
 >[!NOTE]
 >
