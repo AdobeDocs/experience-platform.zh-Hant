@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform;home；常用主題；檢索失敗的批；失敗的批；批處理；批處理；失敗的批處理；獲取失敗的批處理；獲取失敗的批處理；下載失敗的批處理；下載失敗的批處理；
 solution: Experience Platform
-title: 檢索失敗的批
+title: 使用Data Access API檢索失敗的批
 topic: tutorial
 type: Tutorial
 description: 本教學課程涵蓋使用資料擷取API擷取失敗批次資訊的步驟。
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: 089a4d517476b614521d1db4718966e3ebb13064
 workflow-type: tm+mt
-source-wordcount: '645'
-ht-degree: 2%
+source-wordcount: '652'
+ht-degree: 1%
 
 ---
 
 
-# 使用API檢索失敗的批處理
+# 使用Data Access API檢索失敗的批處理
 
 Adobe Experience Platform提供兩種上傳和接收資料的方法。 您可以使用批次擷取功能(可讓您使用各種檔案類型（例如CSV）插入其資料)或串流擷取功能（可讓您使用串流端點將資料即時插入[!DNL Platform]）。
 
