@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform; home；熱門主題；雲端儲存資料；串流資料；串流
 solution: Experience Platform
-title: 透過來源連接器和API收集串流資料
+title: 使用來源連接器和API收集串流資料
 topic: overview
 type: Tutorial
-description: 本教學課程涵蓋擷取串流資料並透過來源連接器和API將其匯入平台的步驟。
+description: 本教學課程涵蓋使用來源連接器和API擷取串流資料並將其匯入平台的步驟。
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
 source-wordcount: '1303'
 ht-degree: 2%
@@ -14,7 +14,7 @@ ht-degree: 2%
 ---
 
 
-# 透過來源連接器和API收集串流資料
+# 使用來源連接器和API收集串流資料
 
 [!DNL Flow Service] 用於收集和集中Adobe Experience Platform內不同來源的客戶資料。該服務提供用戶介面和REST風格的API，所有支援的源都可從中連接。
 
