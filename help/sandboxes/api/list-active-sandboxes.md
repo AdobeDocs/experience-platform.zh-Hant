@@ -1,25 +1,25 @@
 ---
-keywords: Experience Platform;home;popular topics;list active sandboxes;list sandboxes
+keywords: Experience Platform;home；熱門主題；列出活動的沙盒；列出沙盒
 solution: Experience Platform
-title: 列出目前使用者的作用中沙盒
+title: 在API中列出目前使用者的作用中沙盒
 topic: developer guide
 description: 您可以向根端點發出GET請求，以列出目前使用者的作用中沙盒。
 translation-type: tm+mt
-source-git-commit: 6326b3072737acf30ba2aee7081ce28dc9627a9a
+source-git-commit: 36f63cecd49e6a6b39367359d50252612ea16d7a
 workflow-type: tm+mt
-source-wordcount: '345'
+source-wordcount: '361'
 ht-degree: 2%
 
 ---
 
 
-# 列出目前使用者的作用中沙盒
+# 在API中列出目前使用者的作用中沙盒
 
 >[!NOTE]
 >
 >與沙盒API中提供的其他端點不同，此端點適用於所有使用者，包括沒有沙盒管理存取權限的使用者。
 
-您可以向根()端點發出GET請求，以列出當前用戶處於活動狀態的`/`沙盒。
+您可以向根(`/`)端點發出GET請求，以列出當前用戶處於活動狀態的沙盒。
 
 **API格式**
 
@@ -29,7 +29,7 @@ GET /{QUERY_PARAMS}
 
 | 參數 | 說明 |
 | --------- | ----------- |
-| `{QUERY_PARAMS}` | 可選查詢參數，以篩選結果。 如需詳細資訊，請 [參閱查詢](#query) 參數一節。 |
+| `{QUERY_PARAMS}` | 可選查詢參數，以篩選結果。 如需詳細資訊，請參閱[查詢參數](#query)一節。 |
 
 **請求**
 
@@ -44,7 +44,7 @@ curl -X GET \
 
 **回應**
 
-成功的回應會傳回目前使用者作用中的沙盒清單，包括諸如、 `name`、 `title``state`和等詳細資訊 `type`。
+成功的回應會傳回目前使用者作用中的沙盒清單，包括詳細資訊，例如`name`、`title`、`state`和`type`。
 
 ```json
 {
@@ -111,13 +111,13 @@ curl -X GET \
 | `isDefault` | 布林屬性，指出此沙盒是否為組織的預設沙盒。 通常這是生產沙盒。 |
 | `eTag` | 沙盒特定版本的識別碼。 用於版本控制和快取效率，此值會在每次對沙盒進行變更時更新。 |
 
-## 使用查詢參數 {#query}
+## 使用查詢參數{#query}
 
-API [[!DNL Sandbox]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sandbox-api.yaml) 支援在列出沙盒時，使用查詢參數來建立頁面並篩選結果。
+[[!DNL Sandbox]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sandbox-api.yaml) API支援在列出沙盒時，對頁面使用查詢參數並篩選結果。
 
 >[!NOTE]
 >
->必 `limit` 須一 `offset` 起指定和查詢參數。 如果您只指定一個，API將會傳回錯誤。 如果指定無，則預設限制為50，偏移為0。
+>必須同時指定`limit`和`offset`查詢參數。 如果您只指定一個，API將會傳回錯誤。 如果指定無，則預設限制為50，偏移為0。
 
 | 參數 | 說明 |
 | --------- | ----------- |
