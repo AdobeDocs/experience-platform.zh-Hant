@@ -1,21 +1,21 @@
 ---
-keywords: Experience Platform;home;popular topics;reset sandbox
+keywords: Experience Platform;home；熱門主題；重設沙箱
 solution: Experience Platform
-title: 重設沙盒
+title: 在API中重設沙盒
 topic: developer guide
 description: 開發沙盒具有「工廠重設」功能，可從沙盒中刪除所有非預設資源。 您可以重設沙盒，方法是進行PUT請求，請求路徑中包含沙盒的名稱。
 translation-type: tm+mt
-source-git-commit: 0af537e965605e6c3e02963889acd85b9d780654
+source-git-commit: 36f63cecd49e6a6b39367359d50252612ea16d7a
 workflow-type: tm+mt
-source-wordcount: '156'
+source-wordcount: '169'
 ht-degree: 3%
 
 ---
 
 
-# 重設沙盒
+# 在API中重設沙盒
 
-開發沙盒具有「工廠重設」功能，可從沙盒中刪除所有非預設資源。 您可以重設沙盒，方法是進行PUT請求，其中在請求路徑中 `name` 包含沙盒。
+開發沙盒具有「工廠重設」功能，可從沙盒中刪除所有非預設資源。 您可以重設沙盒，方法是發出PUT請求，請求路徑中包含沙盒的`name`。
 
 **API格式**
 
@@ -25,7 +25,7 @@ PUT /sandboxes/{SANDBOX_NAME}
 
 | 參數 | 說明 |
 | --- | --- |
-| `{SANDBOX_NAME}` | 您 `name` 要重設沙盒的屬性。 |
+| `{SANDBOX_NAME}` | 您要重設沙盒的`name`屬性。 |
 
 **請求**
 
@@ -50,7 +50,7 @@ curl -X PUT \
 
 **回應**
 
-成功的回應會傳回更新沙盒的詳細資料，顯示其 `state` 是「重設」。
+成功的回應會傳回更新沙盒的詳細資料，顯示其`state`是「重設」。
 
 ```json
 {
@@ -65,4 +65,4 @@ curl -X PUT \
 
 >[!NOTE]
 >
->重設沙盒後，系統大約需要15分鐘才能布建。 布建後，沙盒的 `state` 變為「活動」或「失敗」。
+>重設沙盒後，系統大約需要15分鐘才能布建。 布建後，沙盒的`state`會變成「作用中」或「失敗」。
