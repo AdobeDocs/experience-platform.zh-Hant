@@ -1,21 +1,17 @@
 ---
 keywords: Nielsen BSDK;nielsen bsdk;nielsen BSDK
-title: Nielsen BSDK擴充功能
-seo-title: Nielsen BSDK擴充功能
+title: Nielsen BSDK擴充功能目的地
 description: Nielsen BSDK擴充功能是Adobe Experience Platform中的分析目的地。 如需擴充功能的詳細資訊，請參閱Adobe Exchange的擴充功能頁面。
-seo-description: Nielsen BSDK擴充功能是Adobe Experience Platform中的分析目的地。 如需擴充功能的詳細資訊，請參閱Adobe Exchange的擴充功能頁面。
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '620'
+source-wordcount: '591'
 ht-degree: 4%
 
 ---
 
 
 # [!DNL Nielsen BSDK] 擴充功能 {#nielsen-bsdk-extension}
-
-## 概述 {#overview}
 
 [!DNL Nielsen Digital SDK] 啟動擴充功能透過下列數位測量產品提供觀眾測量：
 
