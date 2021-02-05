@@ -1,14 +1,14 @@
 ---
 keywords: Experience Platform; home；熱門主題；監控資料流；流服務api；流服務
 solution: Experience Platform
-title: 監視流和運行
+title: 使用流服務API監視資料流
 topic: overview
 type: Tutorial
 description: 本教學課程涵蓋使用Flow Service API監控流程執行資料的完整性、錯誤和度量的步驟。
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: f8186e467dc982003c6feb01886ed16d23572955
 workflow-type: tm+mt
-source-wordcount: '719'
+source-wordcount: '722'
 ht-degree: 1%
 
 ---
