@@ -1,27 +1,27 @@
 ---
-keywords: Experience Platform;home;popular topics;Catalog service;catalog api;appendix
+keywords: Experience Platform;home；熱門主題；Catalog service;catalog api；附錄
 solution: Experience Platform
-title: 目錄服務開發人員指南附錄
+title: 目錄服務API指南附錄
 topic: developer guide
 description: 本檔案包含其他資訊，可協助您使用Adobe Experience Platform中的目錄API。
 translation-type: tm+mt
-source-git-commit: 14f99c23cd82894fee5eb5c4093b3c50b95c52e8
+source-git-commit: b395535cbe7e4030606ee2808eb173998f5c32e0
 workflow-type: tm+mt
-source-wordcount: '910'
+source-wordcount: '920'
 ht-degree: 0%
 
 ---
 
 
-# [!DNL Catalog Service] 開發人員指南附錄
+# [!DNL Catalog Service] API指南附錄
 
-本檔案包含協助您使用 [!DNL Catalog] API的其他資訊。
+本檔案包含協助您使用[!DNL Catalog] API的其他資訊。
 
-## 查看相關對象 {#view-interrelated-objects}
+## 查看相關對象{#view-interrelated-objects}
 
-某些 [!DNL Catalog] 對象可以與其他對象相 [!DNL Catalog] 關。 任何在響應負載中前置詞的 `@` 欄位都表示相關對象。 這些欄位的值採用URI的形式，可用於個別的GET請求，以擷取其所代表的相關物件。
+某些[!DNL Catalog]對象可以與其他[!DNL Catalog]對象相關聯。 在響應負載中以`@`為前置詞的任何欄位都表示相關對象。 這些欄位的值採用URI的形式，可用於個別的GET請求，以擷取其所代表的相關物件。
 
-查找特定資料集時在文檔中 [返回的示例資料集包含](look-up-object.md)`files` 具有以下URI值的欄位： `"@/dataSets/5ba9452f7de80400007fc52a/views/5ba9452f7de80400007fc52b/files"`. 使用此URI `files` 作為新GET請求的路徑，即可檢視欄位內容。
+在[查找特定資料集](look-up-object.md)的文檔中返回的示例資料集包含具有以下URI值的`files`欄位：`"@/dataSets/5ba9452f7de80400007fc52a/views/5ba9452f7de80400007fc52b/files"`。 使用此URI作為新GET請求的路徑，可以查看`files`欄位的內容。
 
 **API格式**
 
@@ -31,11 +31,11 @@ GET {OBJECT_URI}
 
 | 參數 | 說明 |
 | --- | --- |
-| `{OBJECT_URI}` | 由相關對象欄位（不包括符號）提供 `@` 的URI。 |
+| `{OBJECT_URI}` | 由相關對象欄位（不包括`@`符號）提供的URI。 |
 
 **請求**
 
-以下請求使用URI(提供範例資料集的屬 `files` 性)來擷取資料集相關聯檔案的清單。
+下列請求使用範例資料集的`files`屬性提供的URI來擷取資料集相關聯檔案的清單。
 
 ```shell
 curl -X GET \
@@ -93,9 +93,9 @@ curl -X GET \
 
 ## 在單一呼叫中提出多個請求
 
-API的根端點 [!DNL Catalog] 允許在單一呼叫中提出多個請求。 請求裝載包含代表通常是個別請求的物件陣列，然後依序執行。
+[!DNL Catalog] API的根端點允許在單次呼叫中發出多個請求。 請求裝載包含代表通常是個別請求的物件陣列，然後依序執行。
 
-如果這些請求是對的修改或添加，而 [!DNL Catalog] 且任何更改都失敗，則所有更改都將恢復。
+如果這些請求是對[!DNL Catalog]的修改或添加，而且任何更改都失敗，則所有更改都將恢復。
 
 **API格式**
 
@@ -107,11 +107,11 @@ POST /
 
 下列請求會建立新資料集，然後建立該資料集的相關檢視。 此範例示範如何使用範本語言來存取先前呼叫中傳回的值，以便用於後續呼叫。
 
-例如，如果您想要參考從先前的子請求傳回的值，則可以建立以下格式的參考： `<<{REQUEST_ID}.{ATTRIBUTE_NAME}>>` (其 `{REQUEST_ID}` 中是使用者提供的子請求ID，如下所示)。 您可以使用這些範本，來參考先前子請求回應物件內文中可用的任何屬性。
+例如，如果您想要參考從先前的子請求傳回的值，則可以建立以下格式的參考：`<<{REQUEST_ID}.{ATTRIBUTE_NAME}>>`（其中`{REQUEST_ID}`是使用者提供的子請求ID，如下所示）。 您可以使用這些範本，來參考先前子請求回應物件內文中可用的任何屬性。
 
 >[!NOTE]
 >
->當執行的子請求僅傳回物件的參考（在目錄API中，大部分POST和PUT請求的預設值）時，此參考會設為值 `id` 別名，可當做 `<<{OBJECT_ID}.id>>`。
+>當執行的子請求僅返回對對象的引用（在目錄API中，對於大多數POST和PUT請求，此為預設值）時，此引用將被別名化為值`id`，並可用作`<<{OBJECT_ID}.id>>`。
 
 ```shell
 curl -X POST \
@@ -146,13 +146,13 @@ curl -X POST \
 | 屬性 | 說明 |
 | --- | --- |
 | `id` | 附加至回應物件的使用者提供ID，以便您將要求與回應相符。 [!DNL Catalog] 不會儲存此值，只會在回應中傳回該值，以供參考。 |
-| `resource` | 與 [!DNL Catalog] API根目錄相對的資源路徑。 協定和域不應是此值的一部分，並且應加上前置詞&quot;/&quot;。 <br/><br/> 使用PATCH或DELETE作為子請求時， `method`請在資源路徑中包含對象ID。 不要與用戶提供的路 `id`徑混淆，資源路徑使用對 [!DNL Catalog] 像本身的ID(例如 `resource: "/dataSets/1234567890"`)。 |
+| `resource` | 相對於[!DNL Catalog] API根的資源路徑。 協定和域不應是此值的一部分，並且應加上前置詞&quot;/&quot;。 <br/><br/> 使用PATCH或DELETE作為子請求時， `method`請在資源路徑中包含對象ID。不要與用戶提供的`id`混淆，資源路徑使用[!DNL Catalog]對象本身的ID（例如`resource: "/dataSets/1234567890"`）。 |
 | `method` | 與請求中發生的動作相關的方法名稱（GET、PUT、POST、PATCH或DELETE）。 |
 | `body` | 通常會在POST、PUT或PATCH請求中作為裝載傳遞的JSON檔案。 GET或DELETE請求不需要此屬性。 |
 
 **回應**
 
-成功的回應會傳回一組物件，其中包 `id` 含您指派給每個請求的物件、個別請求的HTTP狀態碼，以及回應 `body`。 由於這三個範例請求都是為了建立新物件，因此每個物件的陣列都只包含新建立物件的ID，而標準的POST回應在中也是最成功的 `body`[!DNL Catalog]。
+成功的響應返回一組對象，這些對象包含您分配給每個請求的`id`、單個請求的HTTP狀態代碼和響應`body`。 由於三個示例請求都是為了建立新對象，因此每個對象的`body`都是一個僅包含新建立對象ID的陣列，而[!DNL Catalog]中最成功的POST響應的標準也是。
 
 ```json
 [
@@ -183,16 +183,16 @@ curl -X POST \
 
 最好使用物件版本控制來防止多個使用者同時儲存物件時發生的資料損毀類型。
 
-更新物件時的最佳實務是先進行API呼叫以檢視(GET)要更新的物件。 包含在回應中（以及任何回應包含單一物件的呼叫）是包含 `E-Tag` 物件版本的標題。 將物件版本新增為更新(PUT或 `If-Match` PATCH)呼叫中命名的請求標題，只有在版本不變時，才會成功進行更新，有助於避免資料衝突。
+更新物件時的最佳實務是先進行API呼叫以檢視(GET)要更新的物件。 包含在回應中（以及任何回應包含單一物件的呼叫）是包含物件版本的`E-Tag`標題。 在更新（PUT或PATCH）呼叫中將物件版本新增為名為`If-Match`的請求標題，只有在版本仍相同時，才會成功進行更新，有助於避免資料衝突。
 
 如果版本不匹配（自您檢索到該對象後，該對象被其他進程修改），則您將收到HTTP狀態412（先決條件失敗），表示對目標資源的訪問被拒絕。
 
 ### Pragma
 
-有時，您可能希望驗證對象而不保存資訊。 使用 `Pragma` 具有值的標題 `validate-only` 可讓您僅傳送POST或PUT要求以進行驗證，避免資料的任何變更持續存在。
+有時，您可能希望驗證對象而不保存資訊。 使用`Pragma`標題及值`validate-only`可讓您僅傳送POST或PUT要求以進行驗證，避免資料的任何變更持續存在。
 
 ## 資料壓縮
 
-壓縮是一種 [!DNL Experience Platform] 服務，可將小檔案的資料合併為大檔案，而不會變更任何資料。 基於效能的考慮，將一組小型檔案合併為較大的檔案有時很有幫助，以便在查詢資料時能更快速地存取資料。
+壓縮是一種[!DNL Experience Platform]服務，可將小檔案的資料合併為大檔案，而不會變更任何資料。 基於效能的考慮，將一組小型檔案合併為較大的檔案有時很有幫助，以便在查詢資料時能更快速地存取資料。
 
-當收錄批次中的檔案已壓縮時，會更新其相 [!DNL Catalog] 關物件以用於監控。
+當收錄批次中的檔案已壓縮時，會更新其相關的[!DNL Catalog]物件，以利監控。
