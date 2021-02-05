@@ -1,22 +1,22 @@
 ---
 keywords: Experience Platform;home；熱門主題；客戶屬性
 solution: Experience Platform
-title: 在UI中建立客戶屬性來源連接器
+title: 在UI中建立客戶屬性來源連線
 topic: overview
 type: Tutorial
-description: 本教學課程提供在UI中建立來源連接器的步驟，以便將客戶屬性描述檔資料收集到Adobe Experience Platform。
+description: 瞭解如何在UI中建立來源連線，以便將客戶屬性描述檔資料收集到Adobe Experience Platform中。
 translation-type: tm+mt
-source-git-commit: 2dbd92efbd992b70f4f750b09e9d2e0626e71315
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
-source-wordcount: '379'
+source-wordcount: '377'
 ht-degree: 5%
 
 ---
 
 
-# 在UI中建立客戶屬性來源連接器
+# 在UI中建立客戶屬性來源連線
 
-本教學課程提供在UI中建立來源連接器的步驟，以便將客戶屬性描述檔資料收集到Adobe Experience Platform。 有關客戶屬性的詳細資訊，請參閱[概述文檔](https://experienceleague.adobe.com/docs/core-services/interface/customer-attributes/attributes.html)。
+本教學課程提供在UI中建立來源連線的步驟，以便將「客戶屬性」描述檔資料收集到Adobe Experience Platform。 有關客戶屬性的詳細資訊，請參閱[概述文檔](https://experienceleague.adobe.com/docs/core-services/interface/customer-attributes/attributes.html)。
 
 ## 建立源連接
 
