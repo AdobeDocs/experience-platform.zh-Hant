@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform; home；熱門主題；api;API;XDM;XDM系統；體驗資料模型；體驗資料模型；資料模型；資料模型；示例資料；rpc;
 solution: Experience Platform
-title: 資料端點指南範例
+title: 範例資料API端點
 description: 方案註冊表API中的/sampledata端點允許您生成映射到任何現有XDM方案結構的示例資料。
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: eb5e34dc3b48a6fe0757635cad1df08caa68b019
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
 source-wordcount: '319'
 ht-degree: 1%
