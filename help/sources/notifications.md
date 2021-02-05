@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics; notifications
-description: 透過Adobe I/O Events，您可以訂閱事件，並使用網頁勾點來接收有關流程執行狀態的通知。 這些通知包含有關流式執行成功或導致執行失敗的錯誤的資訊。
+keywords: Experience Platform; home；熱門主題；通知
+description: 透過訂閱Adobe I/O Events，您可以使用網頁勾點來接收有關來源連線的流程執行狀態的通知。 這些通知包含有關流式執行成功或導致執行失敗的錯誤的資訊。
 solution: Experience Platform
 title: 流量執行通知
 topic: overview
 translation-type: tm+mt
-source-git-commit: c5455dc0812b251483170ac19506d7c60ad4ecaa
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
-source-wordcount: '781'
+source-wordcount: '785'
 ht-degree: 1%
 
 ---
@@ -15,9 +15,9 @@ ht-degree: 1%
 
 # 流量執行通知
 
-Adobe Experience Platform可讓您從外部來源擷取資料，同時提供您使用服務建構、標示及增強傳入資料的 [!DNL Platform] 能力。 您可以從多種來源（例如Adobe應用程式、雲端儲存空間、資料庫等）擷取資料。
+Adobe Experience Platform可讓您從外部來源擷取資料，同時讓您能夠使用[!DNL Platform]服務來建構、標示並增強傳入資料。 您可以從多種來源（例如Adobe應用程式、雲端儲存空間、資料庫等）擷取資料。
 
-[[!DNL Adobe Experience Platform Flow Service]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) 用於收集和集中來自內部不同來源的客戶資料 [!DNL Platform]。 該服務提供用戶介面和REST風格的API，所有支援的源都可從中連接。
+[[!DNL Adobe Experience Platform Flow Service]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) 用於收集和集中來自內部不同來源的客戶資料 [!DNL Platform]。該服務提供用戶介面和REST風格的API，所有支援的源都可從中連接。
 
 有了Adobe I/O Events，您就可以訂閱事件，並使用網頁勾點來接收有關流程執行狀態的通知。 這些通知包含有關流式執行成功或導致執行失敗的錯誤的資訊。
 
@@ -25,19 +25,19 @@ Adobe Experience Platform可讓您從外部來源擷取資料，同時提供您�
 
 ## 快速入門
 
-本教學課程假設您至少已建立了一個源連接，其流運行要監視。 如果您尚未設定來源連線，請先造訪 [來源概觀](./home.md) ，以設定您選擇的來源，然後再返回本指南。
+本教學課程假設您至少已建立了一個源連接，其流運行要監視。 如果您尚未配置源連接，請首先訪問[源概述](./home.md)以配置您選擇的源，然後再返回本指南。
 
-本檔案也要求您瞭解網頁勾點，以及如何將網頁勾點從一個應用程式連接至另一個應用程式。 請參閱文 [[!DNL I/O Events] 件](https://www.adobe.io/apis/experienceplatform/events/docs.html#!adobedocs/adobeio-events/master/intro/webhook_docs_intro.md) ，以取得網頁勾點簡介。
+本檔案也要求您瞭解網頁勾點，以及如何將網頁勾點從一個應用程式連接至另一個應用程式。 有關Webhook的簡介，請參閱[[!DNL I/O Events] documentation](https://www.adobe.io/apis/experienceplatform/events/docs.html#!adobedocs/adobeio-events/master/intro/webhook_docs_intro.md)。
 
 ## 註冊網路掛接以取得流程執行通知
 
-若要接收流程執行通知，您必須使用Adobe Developer Console註冊網頁掛接至您的整 [!DNL Experience Platform] 合。
+若要接收流程執行通知，您必須使用Adobe Developer Console註冊網頁掛接至您的[!DNL Experience Platform]整合。
 
-請依照訂閱通知 [的教 [!DNL I/O Event] 學課程](../observability/notifications/subscribe.md) ，取得如何完成此作業的詳細步驟。
+請依照[訂閱 [!DNL I/O Event] 通知](../observability/notifications/subscribe.md)的教學課程，瞭解如何完成此作業的詳細步驟。
 
 >[!IMPORTANT]
 >
->在訂閱程式中，請確定您選取「 **[!UICONTROL 平台通知]** 」作為事件提供者，並選取下列事件訂閱：
+>在訂閱程式中，請確定您選擇&#x200B;**[!UICONTROL 平台通知]**&#x200B;作為事件提供者，並選取下列事件訂閱：
 >
 >* **[!UICONTROL Experience Platform來源的流程運行成功]**
 >* **[!UICONTROL Experience Platform來源的流運行失敗]**
@@ -47,15 +47,15 @@ Adobe Experience Platform可讓您從外部來源擷取資料，同時提供您�
 
 連線網頁掛接並完成事件訂閱後，您就可以開始透過網頁掛接控制面板接收流量執行通知。
 
-通知會傳回執行的擷取工作數、檔案大小和錯誤等資訊。 通知也會傳回與您以JSON格式執行的流程相關聯的裝載。 響應有效負載可分類為 `sources_flow_run_success` 或 `sources_flow_run_failure`。
+通知會傳回執行的擷取工作數、檔案大小和錯誤等資訊。 通知也會傳回與您以JSON格式執行的流程相關聯的裝載。 響應有效負載可分類為`sources_flow_run_success`或`sources_flow_run_failure`。
 
 >[!IMPORTANT]
 >
->如果在流建立過程中啟用了部分提取，則僅當錯誤數低於在流建立過程中設定的錯誤閾值百分比時， `sources_flow_run_success` 包含成功和失敗提取的流才會被標籤為。 如果成功的流運行包含錯誤，這些錯誤仍將作為返回裝載的一部分被包括在內。
+>如果流程建立過程中啟用了部分提取，則只有當錯誤數低於流程建立過程中設定的錯誤閾值百分比時，包含成功和失敗提取的流程才會標籤為`sources_flow_run_success`。 如果成功的流運行包含錯誤，這些錯誤仍將作為返回裝載的一部分被包括在內。
 
 ### 成功
 
-成功的響應返回一組定義特 `metrics` 定流運行的特性，以及 `activities` 如何轉換資料的特性。
+成功的響應返回一組`metrics`，這些定義了特定流運行的特性，並且`activities`概述了如何轉換資料。
 
 ```json
 {
@@ -314,21 +314,21 @@ Adobe Experience Platform可讓您從外部來源擷取資料，同時提供您�
 
 >[!NOTE]
 >
->有關錯誤 [消息的詳細資訊](#errors) ，請參見附錄。
+>有關錯誤消息的詳細資訊，請參見[附錄](#errors)。
 
 ## 後續步驟
 
-您現在可以訂閱事件，讓您接收有關流程執行狀態的即時通知。 如需流量執行和來源的詳細資訊，請參閱來 [源概觀](./home.md)。
+您現在可以訂閱事件，讓您接收有關流程執行狀態的即時通知。 有關流運行和源的詳細資訊，請參閱[源概述](./home.md)。
 
 ## 附錄
 
 以下章節提供使用流程執行通知的其他資訊。
 
-### 瞭解錯誤訊息 {#errors}
+### 瞭解錯誤消息{#errors}
 
-從來源複製資料或將複製的資料處理至時，可能會發生擷取錯誤 [!DNL Platform]。 有關特定錯誤的詳細資訊，請參閱下表。
+當從來源複製資料或將複製的資料處理至[!DNL Platform]時，可能會發生擷取錯誤。 有關特定錯誤的詳細資訊，請參閱下表。
 
 | 錯誤 | 說明 |
 | ---------- | ----------- |
 | `CONNECTOR-1001-500` | 從源複製資料時出錯。 |
-| `CONNECTOR-2001-500` | 將複製的資料處理到時出錯 [!DNL Platform]。 此錯誤可能與剖析、驗證或轉換有關。 |
+| `CONNECTOR-2001-500` | 將複製的資料處理到[!DNL Platform]時出錯。 此錯誤可能與剖析、驗證或轉換有關。 |
