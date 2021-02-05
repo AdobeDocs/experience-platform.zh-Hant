@@ -1,14 +1,14 @@
 ---
 keywords: Experience Platform; home；熱門主題；資料使用合規性；強制；強制資料使用合規性；分段服務；分段；分段；
 solution: Experience Platform
-title: 對受眾細分強制執行資料使用規範
+title: 使用API強制對象區段的資料使用符合性
 topic: tutorial
 type: Tutorial
 description: 本教學課程涵蓋使用API強制「即時客戶個人檔案」受眾細分資料使用合規性的步驟。
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: b3defc3e33a55855e307ab70b9797d985d5719e3
 workflow-type: tm+mt
-source-wordcount: '1359'
+source-wordcount: '1362'
 ht-degree: 1%
 
 ---
