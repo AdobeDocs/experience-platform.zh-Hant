@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform; home；熱門主題；資料庫資料庫；第三方資料庫
 solution: Experience Platform
-title: 透過來源連接器和API，從資料庫收集資料
+title: 使用來源連接器和API從資料庫收集資料
 topic: overview
 type: Tutorial
-description: 本教學課程涵蓋從資料庫擷取資料並透過來源連接器和API將其匯入平台的步驟。
+description: 本教學課程涵蓋從資料庫擷取資料，並使用來源連接器和API將其匯入平台的步驟。
 translation-type: tm+mt
-source-git-commit: ddf5be2f30bc347a881bdcbc6b880f087c03e263
+source-git-commit: 62266187ed1f3ce2f0acca3f50487fb70cfa7307
 workflow-type: tm+mt
 source-wordcount: '1611'
 ht-degree: 1%
@@ -14,7 +14,7 @@ ht-degree: 1%
 ---
 
 
-# 透過來源連接器和API，從資料庫收集資料
+# 使用來源連接器和API從資料庫收集資料
 
 本教學課程涵蓋從協力廠商資料庫擷取資料，並透過來源連接器和[[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml)將其匯入平台的步驟。
 
