@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;home；熱門主題；api;API;XDM;XDM系統；體驗資料模型；體驗資料模型；資料模型；模式註冊；模式註冊；行為；行為；行為；行為；行為；
 solution: Experience Platform
-title: 行為端點指南
+title: 行為API端點
 description: 架構註冊表API中的/behaviors端點可讓您擷取全域容器中的所有可用行為。
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 1f18bf7367addd204f3ef8ce23583de78c70b70c
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
 source-wordcount: '425'
 ht-degree: 2%
