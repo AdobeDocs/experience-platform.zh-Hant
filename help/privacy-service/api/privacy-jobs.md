@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform;home；熱門主題
 solution: Experience Platform
-title: 隱私權工作端點
+title: 隱私權工作API端點
 topic: developer guide
 description: 瞭解如何使用隱私權服務API管理Experience Cloud應用程式的隱私權工作。
 translation-type: tm+mt
-source-git-commit: 238a9200e4b43d41335bed0efab079780b252717
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
-source-wordcount: '1343'
+source-wordcount: '1344'
 ht-degree: 1%
 
 ---
