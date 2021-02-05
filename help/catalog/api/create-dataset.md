@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform;home；熱門主題；dataset;Dataset；建立資料集；建立資料集；啟用資料集
 solution: Experience Platform
-title: 建立資料集
+title: 在API中建立資料集
 topic: developer guide
-description: 本文檔介紹如何在目錄中建立資料集對象。
+description: 本檔案說明如何在Catalog Service API中建立資料集物件。
 translation-type: tm+mt
-source-git-commit: 2940f030aa21d70cceeedc7806a148695f68739e
+source-git-commit: a489ab248793a063295578943ad600d8eacab6a2
 workflow-type: tm+mt
-source-wordcount: '223'
+source-wordcount: '232'
 ht-degree: 1%
 
 ---
 
 
-# 建立資料集
+# 在API中建立資料集
 
 要使用[!DNL Catalog] API建立資料集，您必須知道資料集所基於的[!DNL Experience Data Model](XDM)模式的`$id`值。 一旦擁有架構ID，您就可以透過對[!DNL Catalog] API中的`/datasets`端點發出POST請求來建立資料集。
 
