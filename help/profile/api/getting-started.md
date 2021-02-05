@@ -5,9 +5,9 @@ topic: guide
 type: Documentation
 description: 描述檔API快速入門手冊概述了使用即時客戶描述檔API端點，對描述檔資料執行基本CRUD作業時，您需要知道的主要概念和基本功能。
 translation-type: tm+mt
-source-git-commit: e6ecc5dac1d09c7906aa7c7e01139aa194ed662b
+source-git-commit: cad9c690be986961aea2969ef0ade975f33a8ee5
 workflow-type: tm+mt
-source-wordcount: '409'
+source-wordcount: '410'
 ht-degree: 0%
 
 ---
