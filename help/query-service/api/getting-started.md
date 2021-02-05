@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform;home;popular topics;query service;Query service;query
 solution: Experience Platform
-title: 查詢服務開發人員指南
+title: 查詢服務API指南
 topic: query templates
-description: 本開發人員指南提供在Adobe Experience Platform Query Service API中執行各種作業的步驟。
+description: Query Service API可讓開發人員使用標準SQL來查詢其Adobe Experience Platform資料。 請依照本指南，瞭解如何使用API執行關鍵作業。
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: e649ab3da077cdd8e98562199b8bdece6108a572
 workflow-type: tm+mt
-source-wordcount: '383'
+source-wordcount: '395'
 ht-degree: 1%
 
 ---
 
 
-# [!DNL Query Service] 開發人員指南
+# [!DNL Query Service] API指南
 
 本開發人員指南提供在Adobe Experience Platform [!DNL Query Service] API中執行各種作業的步驟。
 
