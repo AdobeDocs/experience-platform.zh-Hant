@@ -1,30 +1,30 @@
 ---
-keywords: Experience Platform;publish a model;Data Science Workspace;popular topics;sensei machine learning api
+keywords: Experience Platform；發佈模型；Data Science Workspace；熱門主題；sensei機器學習api
 solution: Experience Platform
-title: 將模型發佈為服務(API)
+title: 使用Sensei機器學習API將模型發佈為服務
 topic: tutorial
 type: Tutorial
 description: 本教學課程涵蓋使用Sensei Machine Learning API將模型發佈為服務的程式。
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: f6cfd691ed772339c888ac34fcbd535360baa116
 workflow-type: tm+mt
-source-wordcount: '1496'
+source-wordcount: '1516'
 ht-degree: 1%
 
 ---
 
 
-# 將模型發佈為服務(API)
+# 使用[!DNL Sensei Machine Learning API]將模型發佈為服務
 
-本教學課程涵蓋使用發佈模型為服務的程式 [[!DNL Sensei Machine Learning API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml)。
+本教學課程涵蓋使用[[!DNL Sensei Machine Learning API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml)將模型發佈為服務的程式。
 
 ## 快速入門
 
-本教學課程需要對Adobe Experience Platform資料科學工作區有良好的認識。 在開始本教學課程之前，請先閱讀 [Data Science Workspace概觀](../home.md) ，以取得服務的高階簡介。
+本教學課程需要對Adobe Experience Platform資料科學工作區有良好的認識。 在開始本教學課程之前，請先閱讀[資料科學工作區概觀](../home.md)，以取得服務的高階簡介。
 
-要遵循本教學課程，您必須有現有的ML引擎、ML實例和實驗。 如需如何在API中建立這些功能的步驟，請參閱匯入封裝 [方式的教學課程](./import-packaged-recipe-api.md)。
+要遵循本教學課程，您必須有現有的ML引擎、ML實例和實驗。 如需如何在API中建立這些功能的步驟，請參閱[匯入封裝方式](./import-packaged-recipe-api.md)的教學課程。
 
-最後，在開始本教學課程之前，請先閱讀開發人員指南的 [getting](../api/getting-started.md) started [!DNL Sensei Machine Learning] section，以取得成功呼叫API所需的重要資訊，包括本教學課程中使用的必要標題：
+最後，在開始本教學課程之前，請先閱讀開發人員指南的[快速入門](../api/getting-started.md)一節，以取得成功呼叫[!DNL Sensei Machine Learning] API所需的重要資訊，包括本教學課程中使用的必要標題：
 
 - `{ACCESS_TOKEN}`
 - `{IMS_ORG}`
@@ -40,7 +40,7 @@ ht-degree: 1%
 
 | 詞語 | 定義 |
 --- | ---
-| **機器學習實例（ML實例）** | 特定租用戶 [!DNL Sensei] 的引擎例項，包含特定資料、參數和程 [!DNL Sensei] 式碼。 |
+| **機器學習實例（ML實例）** | 特定租用戶的[!DNL Sensei]引擎例項，包含特定資料、參數和[!DNL Sensei]程式碼。 |
 | **實驗** | 用於舉行培訓實驗運行、打分實驗運行或兩者的傘形實體。 |
 | **排程實驗** | 描述由使用者定義之排程管理之「實驗執行」訓練或計分自動化的術語。 |
 | **實驗執行** | 訓練或計分實驗的特定例項。 來自特定實驗的多個實驗執行，在訓練或計分的資料集值上可能不同。 |
@@ -88,7 +88,7 @@ curl -X POST
 | `trainingExperimentId` | 與ML實例標識對應的實驗標識。 |
 | `trainingExperimentRunId` | 用於發佈ML服務的特定訓練實驗執行。 |
 | `scoringDataSetId` | 參考用於計畫計分實驗執行的特定資料集的識別。 |
-| `scoringTimeframe` | 一個整數值，代表用於篩選資料的分鐘數，用於計分「實驗執行」。 例如，值表示過去10080分 `10080` 鐘或168小時的資料將用於每個排程的計分實驗執行。 請注意，值&#39;&#39; `0` 不會篩選資料，資料集內的所有資料都會用於計分。 |
+| `scoringTimeframe` | 一個整數值，代表用於篩選資料的分鐘數，用於計分「實驗執行」。 例如，值`10080`表示過去10080分鐘或168小時的資料將用於每個排程的計分實驗執行。 請注意，值`0`將不會篩選資料，資料集內的所有資料都會用來計分。 |
 | `scoringSchedule` | 包含計畫計分實驗執行的詳細資訊。 |
 | `scoringSchedule.startTime` | 日期時間指示何時開始計分。 |
 | `scoringSchedule.endTime` | 日期時間指示何時開始計分。 |
@@ -96,7 +96,7 @@ curl -X POST
 
 **回應**
 
-成功的回應會傳回新建立之ML服務的詳細資訊，包括其獨 `id` 特性 `scoringExperimentId` 和對應的計分實驗。
+成功的回應會傳回新建立之ML服務的詳細資訊，包括其唯一`id`和`scoringExperimentId`的對應計分實驗。
 
 
 ```JSON
@@ -129,9 +129,9 @@ curl -X POST
 
 請注意，ML服務可使用ML例項建立，而不需排程任何訓練或計分實驗。 此類ML服務將建立一般實驗實體和單一實驗執行，以進行訓練和評分。
 
-### ML服務與計畫評分實驗 {#ml-service-with-scheduled-experiment-for-scoring}
+### ML服務，計畫進行評分{#ml-service-with-scheduled-experiment-for-scoring}的實驗
 
-您可以發佈ML例項並排程實驗執行以進行計分，以建立ML服務，此實驗執行將建立一般的實驗實體以進行訓練。 會產生訓練實驗執行，並將用於所有排程的計分實驗執行。 請確定您具 `mlInstanceId`有、 `trainingDataSetId``scoringDataSetId` 和建立ML服務所需的值，並且它們是有效值。
+您可以發佈ML例項並排程實驗執行以進行計分，以建立ML服務，此實驗執行將建立一般的實驗實體以進行訓練。 會產生訓練實驗執行，並將用於所有排程的計分實驗執行。 請確定您具有建立ML服務所需的`mlInstanceId`、`trainingDataSetId`和`scoringDataSetId`，並且它們是有效值。
 
 **API格式**
 
@@ -168,9 +168,9 @@ curl -X POST
 | --- | --- |
 | `mlInstanceId` | 現有ML實例標識，表示用於建立ML服務的ML實例。 |
 | `trainingDataSetId` | 識別是指用於訓練實驗的特定資料集。 |
-| `trainingTimeframe` | 一個整數值，代表用於篩選資料以用於訓練實驗的分鐘數。 例如，值為means `"10080"` for the last 10080 minutes or 168 hours的資料將用於訓練實驗執行。 請注意，值&#39;&#39; `"0"` 不會篩選資料，資料集內的所有資料都會用於訓練。 |
+| `trainingTimeframe` | 一個整數值，代表用於篩選資料以用於訓練實驗的分鐘數。 例如，值`"10080"`表示過去10080分鐘或168小時的資料將用於訓練實驗執行。 請注意，值`"0"`將不會篩選資料，資料集內的所有資料都會用於訓練。 |
 | `scoringDataSetId` | 參考用於計畫計分實驗執行的特定資料集的識別。 |
-| `scoringTimeframe` | 一個整數值，代表用於篩選資料的分鐘數，用於計分「實驗執行」。 例如，值表示過去10080分 `"10080"` 鐘或168小時的資料將用於每個排程的計分實驗執行。 請注意，值&#39;&#39; `"0"` 不會篩選資料，資料集內的所有資料都會用於計分。 |
+| `scoringTimeframe` | 一個整數值，代表用於篩選資料的分鐘數，用於計分「實驗執行」。 例如，值`"10080"`表示過去10080分鐘或168小時的資料將用於每個排程的計分實驗執行。 請注意，值`"0"`將不會篩選資料，資料集內的所有資料都會用來計分。 |
 | `scoringSchedule` | 包含計畫計分實驗執行的詳細資訊。 |
 | `scoringSchedule.startTime` | 日期時間指示何時開始計分。 |
 | `scoringSchedule.endTime` | 日期時間指示何時開始計分。 |
@@ -178,7 +178,7 @@ curl -X POST
 
 **回應**
 
-成功的響應返回新建立的ML服務的詳細資訊。 這包括服務的獨特 `id`性，以及 `trainingExperimentId` 其相 `scoringExperimentId` 應的訓練和計分實驗。
+成功的響應返回新建立的ML服務的詳細資訊。 這包括服務的唯一`id`，以及`trainingExperimentId`和`scoringExperimentId`，分別用於其相應的訓練和計分實驗。
 
 ```JSON
 {
@@ -202,7 +202,7 @@ curl -X POST
 }
 ```
 
-### ML服務，具有計畫的訓練和評分實驗 {#ml-service-with-scheduled-experiments-for-training-and-scoring}
+### ML服務，針對訓練和評分{#ml-service-with-scheduled-experiments-for-training-and-scoring}進行計畫實驗
 
 若要將現有的ML例項發佈為具有計畫培訓與計分實驗執行的ML服務，您必須同時提供培訓與計分排程。 建立此配置的ML服務時，也會建立培訓和評分的計畫實驗實體。 請注意，培訓和計分排程不一定相同。 在計分作業執行期間，將擷取由排程培訓「實驗執行」產生的最新受訓模型，並用於排程的計分執行。
 
@@ -245,9 +245,9 @@ curl -X POST 'https://platform-int.adobe.io/data/sensei/mlServices'
 | --- | --- |
 | `mlInstanceId` | 現有ML實例標識，表示用於建立ML服務的ML實例。 |
 | `trainingDataSetId` | 識別是指用於訓練實驗的特定資料集。 |
-| `trainingTimeframe` | 一個整數值，代表用於篩選資料以用於訓練實驗的分鐘數。 例如，值為means `"10080"` for the last 10080 minutes or 168 hours的資料將用於訓練實驗執行。 請注意，值&#39;&#39; `"0"` 不會篩選資料，資料集內的所有資料都會用於訓練。 |
+| `trainingTimeframe` | 一個整數值，代表用於篩選資料以用於訓練實驗的分鐘數。 例如，值`"10080"`表示過去10080分鐘或168小時的資料將用於訓練實驗執行。 請注意，值`"0"`將不會篩選資料，資料集內的所有資料都會用於訓練。 |
 | `scoringDataSetId` | 參考用於計畫計分實驗執行的特定資料集的識別。 |
-| `scoringTimeframe` | 一個整數值，代表用於篩選資料的分鐘數，用於計分「實驗執行」。 例如，值表示過去10080分 `"10080"` 鐘或168小時的資料將用於每個排程的計分實驗執行。 請注意，值&#39;&#39; `"0"` 不會篩選資料，資料集內的所有資料都會用於計分。 |
+| `scoringTimeframe` | 一個整數值，代表用於篩選資料的分鐘數，用於計分「實驗執行」。 例如，值`"10080"`表示過去10080分鐘或168小時的資料將用於每個排程的計分實驗執行。 請注意，值`"0"`將不會篩選資料，資料集內的所有資料都會用來計分。 |
 | `trainingSchedule` | 包含計畫訓練實驗執行的詳細資訊。 |
 | `scoringSchedule` | 包含計畫計分實驗執行的詳細資訊。 |
 | `scoringSchedule.startTime` | 日期時間指示何時開始計分。 |
@@ -256,7 +256,7 @@ curl -X POST 'https://platform-int.adobe.io/data/sensei/mlServices'
 
 **回應**
 
-成功的響應返回新建立的ML服務的詳細資訊。 這包括服務的獨特 `id`性，以及 `trainingExperimentId` 其相 `scoringExperimentId` 應的訓練和計分實驗。 在以下示例回應中，存在並 `trainingSchedule` 建議 `scoringSchedule` 用於培訓和評分的實驗實體是預定的實驗。
+成功的響應返回新建立的ML服務的詳細資訊。 這包括服務的唯一`id`，以及其對應訓練和計分實驗的`trainingExperimentId`和`scoringExperimentId`。 在以下範例回應中，`trainingSchedule`和`scoringSchedule`的出現表明，用於訓練和評分的實驗實體是計畫的實驗。
 
 ```JSON
 {
@@ -285,9 +285,9 @@ curl -X POST 'https://platform-int.adobe.io/data/sensei/mlServices'
 }
 ```
 
-## 查找ML服務 {#retrieving-ml-services}
+## 查找ML服務{#retrieving-ml-services}
 
-您可以向路徑中的ML服務提出請求並提 `GET` 供其 `/mlServices` 唯一性， `id` 以查找現有的ML服務。
+通過向`/mlServices`發出`GET`請求並在路徑中提供ML服務的唯一`id`，您可以查找現有的ML服務。
 
 **API格式**
 
@@ -297,7 +297,7 @@ GET /mlServices/{SERVICE_ID}
 
 | 參數 | 說明 |
 | --- | --- |
-| `{SERVICE_ID}` | 您所 `id` 尋找的ML服務的獨特性。 |
+| `{SERVICE_ID}` | 您正在查找的ML服務的唯一`id`。 |
 
 **請求**
 
@@ -342,12 +342,12 @@ curl -X GET 'https://platform.adobe.io/data/sensei/mlServices/{SERVICE_ID}'
 
 >[!NOTE]
 >
->檢索不同的ML服務時，可能會返回帶有一個或多個鍵值對的響應。 以上回應是 [ML服務的呈現方式，其中包含已排程的訓練和計分實驗執行](#ml-service-with-scheduled-experiments-for-training-and-scoring)。
+>檢索不同的ML服務時，可能會返回帶有一個或多個鍵值對的響應。 以上回應是[ML服務的表示，其中已排程的訓練和計分實驗執行](#ml-service-with-scheduled-experiments-for-training-and-scoring)。
 
 
 ## 排程培訓或計分
 
-如果您想要針對已發佈的ML服務排程計分和培訓，可以透過更新現有的ML服務，在上提出 `PUT` 要求 `/mlServices`。
+如果您想針對已發佈的ML服務排程計分和培訓，可以使用`/mlServices`上的`PUT`請求更新現有ML服務。
 
 **API格式**
 
@@ -357,11 +357,11 @@ PUT /mlServices/{SERVICE_ID}
 
 | 參數 | 說明 |
 | --- | --- |
-| `{SERVICE_ID}` | 您所更 `id` 新的ML服務的獨特性。 |
+| `{SERVICE_ID}` | 您正在更新的ML服務的唯一`id`。 |
 
 **請求**
 
-下列要求會新增與索引鍵及其各自的索引鍵，以排程現有ML `trainingSchedule` 服務 `scoringSchedule` 的訓練 `startTime`與計 `endTime`分 `cron` 。
+下列請求會新增`trainingSchedule`和`scoringSchedule`鍵及其各自的`startTime`、`endTime`和`cron`鍵，以排程現有ML服務的訓練和計分。
 
 ```SHELL
 curl -X PUT 'https://platform.adobe.io/data/sensei/mlServices/{SERVICE_ID}' 
@@ -394,7 +394,7 @@ curl -X PUT 'https://platform.adobe.io/data/sensei/mlServices/{SERVICE_ID}'
 
 >[!WARNING]
 >
->請勿嘗試修改現有已排 `startTime` 程的訓練和計分工作。 如果必 `startTime` 須修改，請考慮發佈相同的模型並重新計畫培訓和計分任務。
+>請勿嘗試修改現有已排程培訓與計分工作上的`startTime`。 如果`startTime`必須修改，請考慮發佈相同的模型並重新計畫培訓和計分作業。
 
 **回應**
 
