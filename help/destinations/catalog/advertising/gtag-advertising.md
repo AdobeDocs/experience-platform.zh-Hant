@@ -1,21 +1,17 @@
 ---
 keywords: gtag;google gtag;google extension;google gtag extension;GTAG
-title: Google gtag擴充功能
-seo-title: Google gtag擴充功能
+title: Google Gtag延伸功能目的地
 description: Google Gtag擴充功能是Adobe Experience Platform中的廣告目的地。 如需擴充功能的詳細資訊，請參閱Adobe Exchange的擴充功能頁面。
-seo-description: Google Gtag擴充功能是Adobe Experience Platform中的廣告目的地。 如需擴充功能的詳細資訊，請參閱Adobe Exchange的擴充功能頁面。
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '582'
+source-wordcount: '553'
 ht-degree: 3%
 
 ---
 
 
 # Google gtag extension {#gtag-advertising-extension}
-
-## 概述 {#overview}
 
 將Google的`gtag.js`載入您的網站，以傳送事件資料至[!DNL Google Analytics]、Google廣告和[!DNL Google Marketing Platform]。 此擴充功能只會將gtag程式碼新增至您的網站。 您將需要使用其他Google擴充功能來新增將使用gtag的事件和動作。
 
