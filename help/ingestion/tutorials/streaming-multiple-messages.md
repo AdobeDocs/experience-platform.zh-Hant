@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform; home；熱門主題；串流擷取；擷取；串流多則訊息；多則訊息；
 solution: Experience Platform
-title: 在單一HTTP要求中串流多個訊息
+title: 在單一HTTP請求中傳送多則訊息
 topic: tutorial
 type: Tutorial
 description: 本檔案提供教學課程，可讓您使用串流擷取功能，在單一HTTP要求內傳送多則訊息至Adobe Experience Platform。
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: 089a4d517476b614521d1db4718966e3ebb13064
 workflow-type: tm+mt
 source-wordcount: '1497'
 ht-degree: 1%
@@ -14,7 +14,7 @@ ht-degree: 1%
 ---
 
 
-# 在單一HTTP請求中傳送多個訊息
+# 在單一HTTP請求中傳送多則訊息
 
 將資料串流至Adobe Experience Platform時，進行大量HTTP呼叫的成本可能很高。 例如，建立1KB負載的200個HTTP請求，而不是建立1KB負載的200個HTTP請求，建立200個每個1KB訊息的1HTTP請求，而且單一負載為200KB，效率更高。 正確使用時，將多個訊息分組在單一要求中是最佳化傳送至[!DNL Experience Platform]資料的絕佳方式。
 
@@ -31,7 +31,7 @@ ht-degree: 1%
 
 - 授權：載體`{ACCESS_TOKEN}`
 
-所有POST要求都需要額外的標題：
+所有POST請求都需要額外的標題：
 
 - 內容類型：application/json
 
