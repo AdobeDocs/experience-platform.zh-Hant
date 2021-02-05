@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;home；熱門主題；收集付款資料；付款資料
 solution: Experience Platform
-title: 透過來源連接器和API收集付款資料
+title: 使用來源連接器和API收集付款資料
 topic: overview
 type: Tutorial
-description: 本教學課程涵蓋從付款應用程式擷取資料，並透過來源連接器和API將其匯入平台的步驟。
+description: 本教學課程涵蓋從付款應用程式擷取資料，並使用來源連接器和API將其匯入平台的步驟。
 translation-type: tm+mt
-source-git-commit: 9b4965e4256967961a92c544bbe355eae768e3dd
+source-git-commit: 62266187ed1f3ce2f0acca3f50487fb70cfa7307
 workflow-type: tm+mt
 source-wordcount: '1560'
 ht-degree: 1%
@@ -14,7 +14,7 @@ ht-degree: 1%
 ---
 
 
-# 透過來源連接器和API收集付款資料
+# 使用來源連接器和API收集付款資料
 
 本教學課程涵蓋從協力廠商付款應用程式擷取資料，並透過來源連接器和[[!DNL Flow Service]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) API將其匯入平台的步驟。
 
