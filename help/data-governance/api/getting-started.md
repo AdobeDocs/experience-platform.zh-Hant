@@ -5,7 +5,7 @@ title: 原則服務API快速入門
 topic: developer guide
 description: Policy Service API可讓您建立並管理與Adobe Experience Platform資料治理相關的各種資源。 本檔案提供您在嘗試呼叫Policy Service API之前，需要瞭解的核心概念的簡介。
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
 workflow-type: tm+mt
 source-wordcount: '438'
 ht-degree: 0%
