@@ -1,19 +1,17 @@
 ---
 keywords: dmp目的地；DIL;audience manager dmp extension;dmp extension；資料管理平台；資料管理平台目標
-title: 資料管理平台(DMP)目標
-seo-title: 資料管理平台(DMP)目標
+title: 資料管理平台(DMP)目標概觀
 description: 資料管理平台(DMP)可讓廣告商、發行商和代理商建立獨特的受眾個人檔案、識別最有價值的細分，並跨任何數位通道使用。 這可讓您建立真正360度的消費者個人檔案檢視，建立並啟動有意義的受眾。
-seo-description: 資料管理平台(DMP)可讓廣告商、發行商和代理商建立獨特的受眾個人檔案、識別最有價值的細分，並跨任何數位通道使用。 這可讓您建立真正360度的消費者個人檔案檢視，建立並啟動有意義的受眾。
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '184'
+source-wordcount: '138'
 ht-degree: 0%
 
 ---
 
 
-# [!DNL Data Management Platform] (DMP)目的地  {#dmp-destinations}
+# [!DNL Data Management Platform] (DMP)目標概觀  {#dmp-destinations}
 
 [!DNL Data Management Platforms] (DMP)可讓廣告商、發行商和廣告公司建立獨特的受眾個人檔案、識別最有價值的細分，並跨任何數位通道使用。這可讓您建立真正360度的消費者個人檔案檢視，建立並啟動有意義的受眾。
 
