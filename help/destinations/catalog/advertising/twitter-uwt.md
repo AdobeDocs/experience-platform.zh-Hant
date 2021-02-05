@@ -1,21 +1,17 @@
 ---
 keywords: twitter;Twitter；推特通用網站標籤；Twitter通用網站標籤；Twitter UWT標籤；Twitter uwt;twitter uwt
-title: Twitter通用網站標籤擴充功能
-seo-title: Twitter通用網站標籤擴充功能
+title: Twitter通用網站標籤延伸功能目標
 description: Twitter通用網站標籤擴充功能是Adobe Experience Platform中的廣告目的地。 如需擴充功能的詳細資訊，請參閱Adobe Exchange的擴充功能頁面。
-seo-description: Twitter通用網站標籤擴充功能是Adobe Experience Platform中的廣告目的地。 如需擴充功能的詳細資訊，請參閱Adobe Exchange的擴充功能頁面。
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '541'
+source-wordcount: '508'
 ht-degree: 3%
 
 ---
 
 
 # [!DNL Twitter Universal Website Tag] 擴充功能 {#twitter-uwt-extension}
-
-## 概述 {#overview}
 
 [!DNL Twitter Universal Website Tag] 提供向Twitter UWT標籤發送信標的操作。
 
