@@ -6,7 +6,7 @@ topic: overview
 type: Tutorial
 description: 資料流是從源中檢索資料並將資料帶入平台資料集的計畫任務。 本教學課程提供使用雲端儲存帳戶設定新資料流的步驟。
 translation-type: tm+mt
-source-git-commit: 2d1b49d774d04e7befbcc1c9e5417ee82323634a
+source-git-commit: 62266187ed1f3ce2f0acca3f50487fb70cfa7307
 workflow-type: tm+mt
 source-wordcount: '1898'
 ht-degree: 0%
@@ -14,7 +14,7 @@ ht-degree: 0%
 ---
 
 
-# 在UI中為雲儲存批處理連接器配置資料流
+# 在UI中為雲儲存批處理連接配置資料流
 
 資料流是從源中檢索資料並將資料帶入[!DNL Platform]資料集的計畫任務。 本教學課程提供使用雲端儲存帳戶設定新資料流的步驟。
 
