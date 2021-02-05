@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;home；熱門主題；api;API;XDM;XDM系統；體驗資料模型；Experience資料模型；資料模型；模式註冊；模式註冊；模式；模式；模式；模式；模式；模式；模式；建立
 solution: Experience Platform
-title: 建立架構
+title: 方案API端點
 description: 架構註冊表API中的/schemas端點可讓您以程式設計方式管理體驗應用程式中的XDM架構。
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 1f18bf7367addd204f3ef8ce23583de78c70b70c
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
 source-wordcount: '1418'
 ht-degree: 2%
