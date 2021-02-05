@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;developer guide;Data Science Workspace;popular topics;Real time machine learning;
+keywords: Experience Platform；開發人員指南； Data Science Workspace；熱門主題；即時機器學習；
 solution: Experience Platform
 title: 即時機器學習概觀
 topic: Overview
 description: 即時機器學習功能可大幅提升數位體驗內容對使用者的相關性。 透過在Experience Edge上運用即時參考和持續學習，您就能做到這一點。
 translation-type: tm+mt
-source-git-commit: 9ba229195892245d29fb4f17b9f2e5cd6c6ea567
+source-git-commit: f6cfd691ed772339c888ac34fcbd535360baa116
 workflow-type: tm+mt
-source-wordcount: '535'
+source-wordcount: '548'
 ht-degree: 1%
 
 ---
@@ -19,11 +19,11 @@ ht-degree: 1%
 >
 >目前尚未針對所有使用者提供即時機器學習。 此功能是alpha版，仍在測試中。 本檔案可能會有所變更。
 
-即時機器學習功能可大幅提升數位體驗內容對使用者的相關性。 這可透過在上運用即時參考和持續學習來實現 [!DNL Experience Edge]。
+即時機器學習功能可大幅提升數位體驗內容對使用者的相關性。 在[!DNL Experience Edge]上運用即時參考和持續學習，即可做到這點。
 
-在Hub和Thab上結合流暢的運算，可大幅 [!DNL Edge] 降低傳統上為超個人化體驗提供相關與回應的延遲。 因此，即時機器學習為同步決策提供極低的延遲。 例如，轉換個人化網頁內容，或呈現優惠或折扣，以減少客戶流失並提高網路商店的轉化率。
+在集線器和[!DNL Edge]上結合流暢的運算，可大幅降低傳統上為相關且回應速度快的個人化體驗提供動力時的延遲。 因此，即時機器學習為同步決策提供極低的延遲。 例如，轉換個人化網頁內容，或呈現優惠或折扣，以減少客戶流失並提高網路商店的轉化率。
 
-## 即時機器學習架構 {#architecture}
+## 即時機器學習架構{#architecture}
 
 下圖為Real-time Machine Learning體系結構提供了概述。 目前，Alpha版已有更簡化的版本。
 
@@ -37,7 +37,7 @@ ht-degree: 1%
 
 ### 資料擷取與準備
 
-透過Adobe Experience Platform上的(XDM), [!DNL Experience Data Model] 擷取並轉換資料。 此資料用於模型訓練。 若要進一步瞭解XDM，請造訪 [XDM概觀](../../xdm/home.md)。
+Adobe Experience Platform上的[!DNL Experience Data Model](XDM)會擷取並轉換資料。 此資料用於模型訓練。 若要進一步瞭解XDM，請造訪[XDM綜覽](../../xdm/home.md)。
 
 ### 製作
 
@@ -45,7 +45,7 @@ ht-degree: 1%
 
 ### 部署
 
-部署您的模型 [!DNL Experience Edge] 以使用預測API端點，在服務收藏館 [!UICONTROL 中建立即時機器學習服務] 。
+將模型部署至[!DNL Experience Edge]，以使用預測API端點在[!UICONTROL 服務收藏館]中建立即時機器學習服務。
 
 ### 推理
 
@@ -64,8 +64,8 @@ ht-degree: 1%
 > Alpha限制：
 > - 目前僅支援基於ONNX的型號。
 > - 節點中使用的函式無法序列化。 例如，Apcots節點中使用的lambda函式。
-> - 手動完成部署後，會有20 [!DNL Edge] 秒的睡眠時間。
-> - 要進行深入學習，您需要以這樣的方式發送資料：在調用資料時， `df.values` 它會返回一個DL模型可接受的陣列。 這是因為ONNX模型計分節點使用並 `df.values` 發送輸出以對模型進行計分。
+> - 手動完成[!DNL Edge]部署後有20秒的睡眠。
+> - 為了深入學習，您需要以這樣的方式發送資料：當`df.values`被調用時，它將返回一個DL型號可接受的陣列。 這是因為ONNX模型計分節點使用`df.values`併發送輸出以對模型進行計分。
 
 
 
@@ -73,12 +73,12 @@ ht-degree: 1%
 
 |  | Alpha（5月） |
 | --- | --- |
-| **功能** | -使用RTML筆記型電腦範本，製作、測試和部署自訂的機器學習模型。 <br> -支援匯入預先訓練的機器學習模型。 <br> -即時機器學習SDK。 <br> -創作節點的起始集。 <br> -部署至Adobe Experience Platform Hub。 |
+| **功能** | -使用RTML筆記型電腦範本，製作、測試和部署自訂的機器學習模型。 <br> -支援匯入預先訓練的機器學習模型。<br> -即時機器學習SDK。<br> -創作節點的起始集。<br> -部署至Adobe Experience Platform Hub。 |
 | **可用性** | 北美 |
-| **編寫節點** | - Pactices <br> - ScikitLearn <br> - ONNXNode <br> - Split <br> - ModelUpload <br> - OneHotEncoder |
+| **編寫節點** | - Aprocts <br> - ScikitLearn <br> - ONNXNode <br> - Split <br> - ModelUpload <br> - OneHotEncoder |
 | **計分執行時間** | ONNX |
 
 ## 後續步驟
 
-您可依照快速入 [門指南](./getting-started.md) 。 本指南會逐步引導您設定建立即時機器學習模型的所有必要先決條件。
+您可以從[快速入門](./getting-started.md)指南開始。 本指南會逐步引導您設定建立即時機器學習模型的所有必要先決條件。
 
