@@ -1,21 +1,17 @@
 ---
 keywords: demandbase擴展；demandbase;demandbase目標
-title: Demandbase擴充功能
-seo-title: Demandbase擴充功能
+title: Demandbase擴充功能目的地
 description: Demandbase擴充功能是Adobe Experience Platform中的分析目標。 如需擴充功能的詳細資訊，請參閱Adobe Exchange的擴充功能頁面。
-seo-description: Demandbase擴充功能是Adobe Experience Platform中的分析目標。 如需擴充功能的詳細資訊，請參閱Adobe Exchange的擴充功能頁面。
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '566'
+source-wordcount: '539'
 ht-degree: 4%
 
 ---
 
 
 # [!DNL Demandbase] 擴充功能 {#demandbase-extension}
-
-## 概述 {#overview}
 
 直接將[!DNL Demandbase] B2B帳戶見解匯入Adobe Analytics，您可依產業、收入和目標帳戶劃分流量和行為。 此以帳戶為基礎的檢視可針對您最有價值的訪客提供參與、轉化和來源的獨特見解。
 
