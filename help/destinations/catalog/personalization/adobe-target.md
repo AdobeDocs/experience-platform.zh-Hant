@@ -1,21 +1,17 @@
 ---
 keywords: 目標擴展；目標
-title: Adobe Target 擴充功能
-seo-title: Adobe Target 擴充功能
+title: Adobe Target擴充功能目標
 description: Adobe Target擴充功能是Adobe Experience Platform中的個人化目的地。 如需擴充功能的詳細資訊，請參閱Adobe Exchange的擴充功能頁面。
-seo-description: Adobe Target擴充功能是Adobe Experience Platform中的個人化目的地。 如需擴充功能的詳細資訊，請參閱Adobe Exchange的擴充功能頁面。
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '540'
+source-wordcount: '511'
 ht-degree: 12%
 
 ---
 
 
-# Adobe Target 擴充功能 版{#adobe-target-extension}
-
-## 概述 {#overview}
+# Adobe Target 擴充功能 {#adobe-target-extension}
 
 Adobe Target 是 Adobe Experience Cloud 解決方案，提供您量身訂做和個人化客戶體驗所需的一切，以將您的網站和行動網站、應用程式、社交媒體和其他數位通道的營收最大化。
 
