@@ -1,33 +1,33 @@
 ---
-keywords: Experience Platform;developer guide;Data Science Workspace;popular topics;Real time machine learning;node reference;
+keywords: Experience Platform；開發人員指南； Data Science Workspace；熱門主題；即時機器學習；節點參考；
 solution: Experience Platform
-title: 即時機器學習筆記型電腦使用指南
+title: 管理即時機器學習筆記型電腦
 topic: Training and scoring a ML model
 description: 以下指南概述在Adobe Experience Platform JupyterLab中建立即時機器學習應用程式所需的步驟。
 translation-type: tm+mt
-source-git-commit: 28b733a16b067f951a885c299d59e079f0074df8
+source-git-commit: f6cfd691ed772339c888ac34fcbd535360baa116
 workflow-type: tm+mt
-source-wordcount: '1656'
+source-wordcount: '1669'
 ht-degree: 0%
 
 ---
 
 
-# 即時機器學習筆記型電腦使用指南(Alpha)
+# 管理即時機器學習筆記型電腦(Alpha)
 
 >[!IMPORTANT]
 >
 >目前尚未針對所有使用者提供即時機器學習。 此功能是alpha版，仍在測試中。 本檔案可能會有所變更。
 
-以下指南概述建立即時機器學習應用程式所需的步驟。 本指南使用Adobe提供的 **[!UICONTROL Real-time ML]** Python筆記型電腦範本，涵蓋模型訓練、建立DSL、將DSL發佈至Edge，以及計分要求。 當您透過實作即時機器學習模型進行時，您應根據資料集的需求修改範本。
+以下指南概述建立即時機器學習應用程式所需的步驟。 本指南使用Adobe提供的&#x200B;**[!UICONTROL 即時ML]** Python筆記型電腦範本，涵蓋模型訓練、建立DSL、將DSL發佈至Edge，以及計分要求。 當您透過實作即時機器學習模型進行時，您應根據資料集的需求修改範本。
 
 ## 建立即時機器學習筆記型電腦
 
-在Adobe Experience Platform UI中，從Data Science中選 **[!UICONTROL 擇]****Notebooks**。 接著，選 **[!UICONTROL 擇JupyterLab]** ，並為環境載入留出一些時間。
+在Adobe Experience Platform UI中，從&#x200B;**Data Science**&#x200B;中選擇&#x200B;**[!UICONTROL Notebooks]**。 接著，選擇&#x200B;**[!UICONTROL JupyterLab]** ，並為環境提供一些載入時間。
 
 ![open JupyterLab](../images/rtml/open-jupyterlab.png)
 
-出現 [!DNL JupyterLab] 啟動器。 向下捲動 *至「即時機器學習」* ，並選 **[!UICONTROL 取「即時ML]** 」筆記本。 範本開啟時，包含範例筆記型儲存格和範例資料集。
+出現[!DNL JupyterLab]啟動器。 向下滾動到&#x200B;*即時機器學習*&#x200B;並選擇&#x200B;**[!UICONTROL 即時ML]**&#x200B;筆記本。 範本開啟時，包含範例筆記型儲存格和範例資料集。
 
 ![空白python](../images/rtml/authoring-notebook.png)
 
@@ -37,7 +37,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->您的匯入清單可能會因您想要建立的模型而異。 隨著新節點的不斷添加，此清單將會發生變化。 請參閱節點參 [考指南](./node-reference.md) ，以取得可用節點的完整清單。
+>您的匯入清單可能會因您想要建立的模型而異。 隨著新節點的不斷添加，此清單將會發生變化。 請參閱[節點參考指南](./node-reference.md)以取得可用節點的完整清單。
 
 ```python
 from pprint import pprint
@@ -73,26 +73,26 @@ pprint(nf.discover_nodes())
 
 ## 訓練即時機器學習模型
 
-使用下列選項之一，您將編寫程式碼以 [!DNL Python] 讀取、預處理和分析資料。 接下來，您需要訓練自己的ML模型，將其序列化為ONNX格式，然後將其上傳至Real-time Machine Learning模型商店。
+使用下列選項之一，您將編寫[!DNL Python]程式碼以讀取、預處理和分析資料。 接下來，您需要訓練自己的ML模型，將其序列化為ONNX格式，然後將其上傳至Real-time Machine Learning模型商店。
 
 - [在JupyterLab筆記型電腦中訓練您自己的機型](#training-your-own-model)
 - [將您自己預先培訓的ONNX型號上傳到JupyterLab筆記型電腦](#pre-trained-model-upload)
 
-### 訓練您自己的模型 {#training-your-own-model}
+### 培訓您自己的型號{#training-your-own-model}
 
 首先，載入您的訓練資料。
 
 >[!NOTE]
 >
->在「即 **時ML** 」範本中， [會從中擷取汽車保險CSV資料集](https://github.com/adobe/experience-platform-dsw-reference/tree/master/datasets/insurance)[!DNL Github]。
+>在&#x200B;**即時ML**&#x200B;範本中，從[!DNL Github]擷取[汽車保險CSV資料集](https://github.com/adobe/experience-platform-dsw-reference/tree/master/datasets/insurance)。
 
 ![載入訓練資料](../images/rtml/load_training.png)
 
-如果您想要從Adobe Experience Platform內使用資料集，請取消下方儲存格的註解。 接下來，您需要以適 `DATASET_ID` 當的值取代。
+如果您想要從Adobe Experience Platform內使用資料集，請取消下方儲存格的註解。 接下來，您需要將`DATASET_ID`取代為適當的值。
 
 ![rtml資料集](../images/rtml/rtml-dataset.png)
 
-要訪問筆記本中的數 [!DNL JupyterLab] 據集，請在的左 **側導航中選擇** 「資料」頁籤 [!DNL JupyterLab]。 此時將 **[!UICONTROL 顯示Dataset]** 和 **[!UICONTROL Schemas目錄]** 。 選擇 **[!UICONTROL 資料集]** ，然後按一下滑鼠右鍵，然後從您要使用的資料集上的下拉式選單中選取「在筆記型電腦中 **[!UICONTROL 探索資料]** 」選項。 可執行代碼條目出現在筆記本底部。 這個牢房有你的 `dataset_id`。
+要訪問[!DNL JupyterLab]筆記本中的資料集，請在[!DNL JupyterLab]的左側導航中選擇&#x200B;**資料**&#x200B;頁籤。 將顯示&#x200B;**[!UICONTROL Datasets]**&#x200B;和&#x200B;**[!UICONTROL Schemas]**&#x200B;目錄。 選擇&#x200B;**[!UICONTROL Datasets]**&#x200B;並按一下右鍵，然後從要使用的資料集上的下拉菜單中選擇&#x200B;**[!UICONTROL Explore Data in Notebook]**&#x200B;選項。 可執行代碼條目出現在筆記本底部。 此儲存格包含您的`dataset_id`。
 
 ![資料集存取](../images/rtml/access-dataset.png)
 
@@ -100,7 +100,7 @@ pprint(nf.discover_nodes())
 
 ### 訓練屬性
 
-使用提供的模板，修改中的任何培訓屬性 `config_properties`。
+使用提供的模板，修改`config_properties`中的任何培訓屬性。
 
 ```python
 config_properties = {
@@ -113,15 +113,15 @@ config_properties = {
 
 ### 準備您的模型
 
-使用 **[!UICONTROL 即時ML範本]** ，您需要分析、預處理、訓練和評估ML模型。 這是透過套用資料轉換和建立訓練管道來完成的。
+使用&#x200B;**[!UICONTROL 即時ML]**&#x200B;範本，您需要分析、預處理、訓練和評估ML模型。 這是透過套用資料轉換和建立訓練管道來完成的。
 
 **資料轉換**
 
-需 **[!UICONTROL 要修改即時ML]** 范 **** 本資料轉換儲存格，才能搭配您自己的資料集運作。 這通常涉及重新命名欄、資料統計以及資料準備／功能工程。
+**[!UICONTROL 即時ML]**&#x200B;範本&#x200B;**資料轉換**&#x200B;儲存格需要修改，才能與您自己的資料集搭配使用。 這通常涉及重新命名欄、資料統計以及資料準備／功能工程。
 
 >[!NOTE]
 >
->以下範例已經過壓縮，以利於可讀性 `[ ... ]`。 請檢視並展開完整 *程式碼儲存格的即時ML* 範本資料轉換區段。
+>以下範例已使用`[ ... ]`以利於可讀性。 請查看並展開完整代碼單元格的&#x200B;*即時ML*&#x200B;模板資料轉換部分。
 
 ```python
 df1.rename(columns = {config_properties['ten_id']+'.identification.ecid' : 'ecid',
@@ -196,7 +196,7 @@ cat_cols = ['age_bucket', 'gender', 'city', 'dayofweek', 'country', 'carbrand', 
 df_final = pd.get_dummies(df_final, columns = cat_cols)
 ```
 
-執行提供的儲存格，查看範例結果。 從資料集傳回的輸出表 `carinsurancedataset.csv` 格會傳回您定義的修改。
+執行提供的儲存格，查看範例結果。 從`carinsurancedataset.csv`資料集傳回的輸出表格會傳回您定義的修改。
 
 ![資料轉換範例](../images/rtml/table-return.png)
 
@@ -204,7 +204,7 @@ df_final = pd.get_dummies(df_final, columns = cat_cols)
 
 接下來，您需要建立培訓管道。 除了需要轉換和生成ONNX檔案外，它看起來與任何其他培訓管線檔案類似。
 
-使用上一個儲存格中定義的資料轉換，修改範本。 以下突出顯示的代碼用於在功能管線中生成ONNX檔案。 請檢視完整 *管道程式碼儲存格的即時ML* 範本。
+使用上一個儲存格中定義的資料轉換，修改範本。 以下突出顯示的代碼用於在功能管線中生成ONNX檔案。 請檢視完整管線程式碼儲存格的&#x200B;*即時ML*&#x200B;範本。
 
 ```python
 #for generating onnx
@@ -246,7 +246,7 @@ model.generate_onnx_resources()
 
 >[!NOTE]
 >
->更改 `model_path` 字串值(`model.onnx`)以更改模型的名稱。
+>更改`model_path`字串值(`model.onnx`)以更改模型的名稱。
 
 ```python
 model_path = "model.onnx"
@@ -266,13 +266,13 @@ print("Model ID : ", model_id)
 
 ![ONNX型號](../images/rtml/onnx-model-rail.png)
 
-### 上傳您自己的預先培訓的ONNX模型 {#pre-trained-model-upload}
+### 上傳您自己預先培訓的ONNX型號{#pre-trained-model-upload}
 
-使用筆記型電腦中的上 [!DNL JupyterLab] 傳按鈕，將預先培訓的ONNX型號上傳到筆記本 [!DNL Data Science Workspace] 電腦環境。
+使用[!DNL JupyterLab]筆記本中的上載按鈕，將預先培訓的ONNX型號上載到[!DNL Data Science Workspace]筆記本環境。
 
 ![上傳圖示](../images/rtml/upload.png)
 
-接著，變更 `model_path` Real-time ML ** 筆記本中的字串值，以符合您的ONNX機型名稱。 完成後，執行「設 *定模型路徑* 」儲存格，然後執行「 *上傳模型至RTML模型商店」儲存格* 。 成功時，在回應中會傳回模型位置和模型ID。
+接下來，更改&#x200B;*即時ML*&#x200B;筆記本中的`model_path`字串值，以匹配ONNX型號名稱。 完成後，請執行「設定模型路徑&#x200B;*」儲存格，然後執行「將模型上傳至RTML模型商店*」儲存格。 **&#x200B;成功時，在回應中會傳回模型位置和模型ID。
 
 ![上傳自己的模型](../images/rtml/upload-own-model.png)
 
@@ -288,9 +288,9 @@ print("Model ID : ", model_id)
 
 >[!NOTE]
 >
-> 您可能會根據使用的資料類型擁有多個節點。 以下示例僅概述即時ML模 *板中的單個節點* 。 請檢視完整 *程式碼儲存格的「即時ML* 范 *本節點製作* 」區段。
+> 您可能會根據使用的資料類型擁有多個節點。 下面的示例僅概述&#x200B;*即時ML*&#x200B;模板中的單個節點。 請查看完整代碼單元格的&#x200B;*即時ML*&#x200B;模板&#x200B;*節點編寫*&#x200B;部分。
 
-下面的Apcotis節點 `"import": "map"` 將方法名稱作為字串輸入到參數中，然後輸入參數作為映射函式。 以下範例使用執行此動作 `{'arg': {'dataLayerNull': 'notgiven', 'no': 'no', 'yes': 'yes', 'notgiven': 'notgiven'}}`。 在對應到位後，您可以選擇設 `inplace` 為 `True` 或 `False`。 設 `inplace` 置為 `True` 或 `False` 基於是否要就地應用轉換。 預設情 `"inplace": False` 況下，建立新列。 對提供新欄名稱的支援已設定為在後續版本中新增。 最後一行 `cols` 可以是單欄名稱或欄清單。 指定要應用轉換的列。 在此示例中 `leasing` 指定。 有關可用節點以及如何使用這些節點的詳細資訊，請訪問節 [點參考指南](./node-reference.md)。
+下面的Apcoties節點使用`"import": "map"`將方法名稱作為字串輸入到參數中，然後將參數作為映射函式輸入。 以下範例使用`{'arg': {'dataLayerNull': 'notgiven', 'no': 'no', 'yes': 'yes', 'notgiven': 'notgiven'}}`執行此動作。 在對應到位後，您可以選擇將`inplace`設為`True`或`False`。 根據是否要就地應用轉換，將`inplace`設定為`True`或`False`。 預設情況下，`"inplace": False`會建立新列。 對提供新欄名稱的支援已設定為在後續版本中新增。 最後一行`cols`可以是單列名稱或列清單。 指定要應用轉換的列。 在此示例中指定了`leasing`。 有關可用節點以及如何使用這些節點的詳細資訊，請訪問[節點參考指南](./node-reference.md)。
 
 ```python
 # Renaming leasing column using Pandas Node
@@ -330,7 +330,7 @@ nodes = [json_df_node,
         onnx_node]
 ```
 
-接著，將節點與邊連接。 每個元組都是一 [!DNL Edge] 個連接。
+接著，將節點與邊連接。 每個元組都是[!DNL Edge]連接。
 
 >[!TIP]
 >
@@ -347,7 +347,7 @@ dsl = GraphBuilder.generate_dsl(nodes=nodes, edges=edges)
 pprint(json.loads(dsl))
 ```
 
-完成後，將返 `edge` 回一個對象，其中包含每個節點以及映射到這些節點的參數。
+完成後，將返回一個`edge`對象，其中包含每個節點以及映射到這些節點的參數。
 
 ![邊緣返回](../images/rtml/edge-return.png)
 
@@ -355,13 +355,13 @@ pprint(json.loads(dsl))
 
 >[!NOTE]
 >
->即時機器學習會暫時部署至Adobe Experience Platform Hub並由其管理。 如需其他詳細資訊，請造訪「即時機器學 [習」架構的概觀章節](./home.md#architecture)。
+>即時機器學習會暫時部署至Adobe Experience Platform Hub並由其管理。 如需詳細資訊，請造訪[即時機器學習架構](./home.md#architecture)的概述章節。
 
-現在您已建立DSL圖形，您可將圖形部署至 [!DNL Edge]。
+現在您已建立DSL圖形，您可將圖形部署至[!DNL Edge]。
 
 >[!IMPORTANT]
 >
->不要經常發佈， [!DNL Edge] 這可能會使節點過載 [!DNL Edge] 。 不建議多次發佈相同模型。
+>不要經常發佈到[!DNL Edge]，這會使[!DNL Edge]節點過載。 不建議多次發佈相同模型。
 
 ```python
 edge_utils = EdgeUtils()
@@ -372,13 +372,13 @@ print(f'Service ID: {service_id}')
 
 ### 更新DSL並重新發佈至Edge（可選）
 
-如果您不需要更新DSL，可跳至計 [分](#scoring)。
+如果您不需要更新DSL，可跳至[計分](#scoring)。
 
 >[!NOTE]
 >
 >只有當您想要更新已發佈至Edge的現有DSL時，才需要下列儲存格。
 
-您的模型可能會持續發展。 與其建立全新服務，您不如使用新模型更新現有服務。 您可以定義要更新的節點、為其指派新ID，然後將新DSL重新上傳到 [!DNL Edge]。
+您的模型可能會持續發展。 與其建立全新服務，您不如使用新模型更新現有服務。 您可以定義要更新的節點、為其指派新ID，然後將新DSL重新上傳到[!DNL Edge]。
 
 在以下範例中，節點0會以新ID更新。
 
@@ -408,9 +408,9 @@ print(f'Updated dsl: {updated_dsl}')
 
 ![更新的DSL](../images/rtml/updated-dsl.png)
 
-## 計分 {#scoring}
+## 計分{#scoring}
 
-發佈至後， [!DNL Edge]計分會由用戶端的POST要求來完成。 通常，這可以從需要ML分數的用戶端應用程式完成。 您也可以從郵遞員處完成。 即 **[!UICONTROL 時ML範本使用EdgeUtils]** 來示範此程式。
+發佈至[!DNL Edge]後，計分由用戶端的POST要求完成。 通常，這可以從需要ML分數的用戶端應用程式完成。 您也可以從郵遞員處完成。 **[!UICONTROL 即時ML]**&#x200B;範本使用EdgeUtils來示範此程式。
 
 >[!NOTE]
 >
@@ -422,21 +422,21 @@ import time
 time.sleep(20)
 ```
 
-使用與訓練中使用的相同模式，產生範例計分資料。 此資料可用來建立計分資料框架，然後轉換為計分字典。 請檢視完整 *程式碼儲存格的即時ML* 範本。
+使用與訓練中使用的相同模式，產生範例計分資料。 此資料可用來建立計分資料框架，然後轉換為計分字典。 請檢視完整程式碼儲存格的&#x200B;*即時ML*&#x200B;範本。
 
 ![計分資料](../images/rtml/generate-score-data.png)
 
 ### 對Edge端點評分
 
-在「即時ML」範本中使 *用下列儲存格* ，對您的服務評分 [!DNL Edge] 。
+在&#x200B;*即時ML*&#x200B;範本中使用下列儲存格，對您的[!DNL Edge]服務評分。
 
 ![對邊緣評分](../images/rtml/scoring-edge.png)
 
-計分完成後，會傳 [!DNL Edge] 回URL、裝載和計分輸出 [!DNL Edge] 自的。
+計分完成後，會傳回[!DNL Edge]的[!DNL Edge] URL、Payload和計分輸出。
 
-## 從 [!DNL Edge]
+## 從[!DNL Edge]列出您已部署的應用程式
 
-若要在中產生目前部署的應用程式清單，請 [!DNL Edge]執行下列程式碼儲存格。 無法編輯或刪除此儲存格。
+若要在[!DNL Edge]中產生目前部署之應用程式的清單，請執行下列程式碼儲存格。 無法編輯或刪除此儲存格。
 
 ```python
 services = edge_utils.list_deployed_services()
@@ -457,11 +457,11 @@ print(services)
 ]
 ```
 
-## 從（可選）刪除已部署的應用程 [!DNL Edge] 式或服務ID
+## 從[!DNL Edge]刪除已部署的應用程式或服務ID（可選）
 
 >[!CAUTION]
 >
->此儲存格用於刪除已部署的Edge應用程式。 請勿使用下列儲存格，除非您需要刪除已部署的應用程 [!DNL Edge] 式。
+>此儲存格用於刪除已部署的Edge應用程式。 請勿使用下列儲存格，除非您需要刪除已部署的[!DNL Edge]應用程式。
 
 ```python
 if edge_utils.delete_from_edge(service_id=service_id):
@@ -472,4 +472,4 @@ else:
 
 ## 後續步驟
 
-按照上述教程，您已成功地培訓了ONNX模型並將其上傳到即時機器學習模型儲存。 此外，您已對即時機器學習模型進行計分和部署。 如果您想要進一步瞭解可用於製作模型的節點，請造訪節 [點參考指南](./node-reference.md)。
+按照上述教程，您已成功地培訓了ONNX模型並將其上傳到即時機器學習模型儲存。 此外，您已對即時機器學習模型進行計分和部署。 如果您想進一步瞭解可用於編寫模型的節點，請訪問[節點參考指南](./node-reference.md)。
