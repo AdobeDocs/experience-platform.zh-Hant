@@ -1,25 +1,25 @@
 ---
-keywords: Experience Platform;home;popular topics;schema;Schema;XDM;ExperienceEvent;fields;schemas;Schemas;Schema design;mixin;mixin;environment;environment details;
+keywords: Experience Platform;home；熱門主題；架構；架構；Schema;XDM;ExperienceEvent;fields;schemas；架構設計；mixin;mixin;environment；環境詳細資訊；
 solution: Experience Platform
 title: 混合環境詳細資訊
 topic: overview
 description: 本檔案提供ExperienceEvent環境詳細資訊混合的概觀。
 translation-type: tm+mt
-source-git-commit: f9d8021643e72e3fbb5315b54a19815dcdaaa702
+source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
 workflow-type: tm+mt
-source-wordcount: '179'
+source-wordcount: '198'
 ht-degree: 2%
 
 ---
 
 
-# [!UICONTROL 混合環境詳細資訊]
+# [!UICONTROL 環境詳] 細資訊
 
 >[!NOTE]
 >
->幾個混音的名字已經改變。 如需詳細資訊，請 [參閱混合名稱更新](../name-updates.md) 的檔案。
+>幾個混音的名字已經改變。 如需詳細資訊，請參閱[mixin name updates](../name-updates.md)上的檔案。
 
-[!UICONTROL 「環境詳細資訊][[!DNL XDM ExperienceEvent] ](../../classes/individual-profile.md) 」是用來擷取與「體驗事件」相關之環境詳細資訊（例如裝置詳細資訊、瀏覽器資訊、當地時間和其他地理資訊）之類別的標準混合。
+[!UICONTROL 環境] 詳細資訊是用來擷取與體驗事 [[!DNL XDM ExperienceEvent] ](../../classes/individual-profile.md) 件相關之環境詳細資訊（例如裝置詳細資訊、瀏覽器資訊、當地時間和其他地理資訊）之類別的標準混合。
 
 <img src="../../images/mixins/environment-details.png" width="500" /><br />
 
