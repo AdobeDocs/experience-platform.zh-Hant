@@ -1,19 +1,17 @@
 ---
 keywords: 啟動擴充功能；啟動擴充功能；啟動目的地；平台啟動擴展；平台啟動擴展；平台啟動目標
-title: Experience Platform Launch 延伸功能
-seo-title: Experience Platform Launch 延伸功能
-description: Launch 是新一代 Adobe 標籤管理功能。Launch 可讓客戶透過簡單的方式部署及管理所有必要的分析、行銷及廣告整合功能，以便支援相關客戶體驗。
-seo-description: Launch 是新一代 Adobe 標籤管理功能。Launch 可讓客戶透過簡單的方式部署及管理所有必要的分析、行銷及廣告整合功能，以便支援相關客戶體驗。
+title: Adobe Experience Platform Launch Extension目標
+description: Adobe Experience Platform Launch是Adobe的新一代標籤管理功能。  Platform Launch 可讓客戶透過簡單的方式部署及管理所有必要的分析、行銷及廣告整合功能，以便支援相關客戶體驗。
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '648'
-ht-degree: 19%
+source-wordcount: '617'
+ht-degree: 11%
 
 ---
 
 
-# Adobe Experience Platform Launch 擴充功能 {#overview.md}
+# Adobe Experience Platform Launch 擴充功能
 
 Adobe Experience Platform Launch是Adobe的新一代標籤管理功能。  Platform Launch 可讓客戶透過簡單的方式部署及管理所有必要的分析、行銷及廣告整合功能，以便支援相關客戶體驗。Platform Launch是以附加的增值功能提供給Adobe Experience Cloud客戶。
 
