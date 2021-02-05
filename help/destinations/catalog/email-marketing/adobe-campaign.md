@@ -1,21 +1,17 @@
 ---
 keywords: email;Email;e-mail;email destinations;adobe campaign;campaign
-title: Adobe Campaign
-seo-title: Adobe Campaign
+title: Adobe Campaign連線目的地
 description: Adobe Campaign是一套解決方案，可協助您跨所有線上及線下通道個人化並傳遞宣傳活動。
-seo-description: Adobe Campaign是一套解決方案，可協助您跨所有線上及線下通道個人化並傳遞宣傳活動。
 translation-type: tm+mt
-source-git-commit: cf2d76799c03a2ea0414aedd83b35f3ce2ca3cb5
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '675'
-ht-degree: 1%
+source-wordcount: '654'
+ht-degree: 0%
 
 ---
 
 
-# Adobe Campaign
-
-## 概述
+# Adobe Campaign連線
 
 Adobe Campaign是一套解決方案，可協助您跨所有線上及線下通道個人化並傳遞宣傳活動。 如需詳細資訊，請參閱[關於Adobe Campaign Classic](https://experienceleague.adobe.com/docs/campaign-classic/using/getting-started/starting-with-adobe-campaign/about-adobe-campaign-classic.html)。
 
