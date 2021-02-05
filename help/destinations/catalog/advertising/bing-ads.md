@@ -1,21 +1,17 @@
 ---
 keywords: bing;bing ads event tracking;event tracking bing;UET;UET擴展
-title: Bing Ads通用事件追蹤(UET)擴充功能
-seo-title: Bing Ads通用事件追蹤(UET)擴充功能
+title: Bing Ads通用事件追蹤(UET)擴充目標
 description: Bing Ads通用事件追蹤(UET)擴充功能是Adobe Experience Platform中的廣告目的地。 如需擴充功能的詳細資訊，請參閱Adobe Exchange的擴充功能頁面。
-seo-description: Bing Ads通用事件追蹤(UET)擴充功能是Adobe Experience Platform中的廣告目的地。 如需擴充功能的詳細資訊，請參閱Adobe Exchange的擴充功能頁面。
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '574'
+source-wordcount: '537'
 ht-degree: 4%
 
 ---
 
 
 # [!DNL Bing Ads Universal Event Tracking] (UET)擴充功能  {#bing-ads-extension}
-
-## 概述 {#overview}
 
 [!DNL Bing Ads Universal Event Tracking] (UET)for是追 [!DNL Experience Platform Launch] 蹤某人點按您的搜尋廣告後所發生情況的實用方法。透過使用單一UET標籤來記錄客戶在您網站上的行為，您可以運用該資料，讓您使用再行銷清單來追蹤轉換或鎖定受眾。
 
