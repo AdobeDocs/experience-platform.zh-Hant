@@ -1,21 +1,17 @@
 ---
 keywords: Invoca;invoca
-title: Invoca標籤擴充功能
-seo-title: Invoca標籤擴充功能
+title: Invoca標籤擴展目標
 description: Invoca Tags擴充功能是Adobe Experience Platform中客戶目的地的聲音。 如需擴充功能的詳細資訊，請參閱Adobe Exchange的擴充功能頁面。
-seo-description: Invoca Tags擴充功能是Adobe Experience Platform中客戶目的地的聲音。 如需擴充功能的詳細資訊，請參閱Adobe Exchange的擴充功能頁面。
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '568'
+source-wordcount: '536'
 ht-degree: 3%
 
 ---
 
 
 # [!DNL Invoca Tags] 擴充功能 {#invoca-extension}
-
-## 概述 {#overview}
 
 [!DNL Invoca] 將通話資料和語音見解帶入數位客戶歷程。透過[!DNL Invoca’s]呼叫智慧平台，行銷人員終於可以分析來評估呼叫結果，並將離線轉換與數位支出聯繫起來。
 
