@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics;segmentation;Segmentation;Segmentation Service;pql;PQL;Profile Query Language;string functions;string;
+keywords: Experience Platform;home；熱門主題；分段；分段；分段服務；pql;PQL；配置檔案查詢語言；字串函式；字串；
 solution: Experience Platform
-title: 字串函式
+title: PQL字串函式
 topic: developer guide
 description: 描述檔查詢語言(PQL)提供函式，讓字串互動更簡單。
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: b3defc3e33a55855e307ab70b9797d985d5719e3
 workflow-type: tm+mt
-source-wordcount: '766'
+source-wordcount: '784'
 ht-degree: 6%
 
 ---
@@ -15,11 +15,11 @@ ht-degree: 6%
 
 # 字串函式
 
-[!DNL Profile Query Language] (PQL)提供函式，讓字串互動更簡單。 有關其他PQL函式的詳細資訊，請參閱 [[!DNL Profile Query Language] 概述](./overview.md)。
+[!DNL Profile Query Language] (PQL)提供函式，讓字串互動更簡單。有關其他PQL函式的詳細資訊，請參閱[[!DNL Profile Query Language] overview](./overview.md)。
 
 ## 贊
 
-函 `like` 數用於確定字串是否與指定的模式匹配。
+`like`函式用於確定字串是否與指定的模式匹配。
 
 **Format**
 
@@ -30,7 +30,7 @@ ht-degree: 6%
 | 引數 | 說明 |
 | --------- | ----------- |
 | `{STRING_1}` | 要執行檢查的字串。 |
-| `{STRING_2}` | 與第一個字串相符的運算式。 建立表達式時有兩個支援的特殊字元： `%` 和 `_`。 <ul><li>`%` 用於表示零或多個字元。</li><li>`_` 僅代表一個字元。</li></ul> |
+| `{STRING_2}` | 與第一個字串相符的運算式。 建立表達式時有兩個支援的特殊字元：`%`和`_`。 <ul><li>`%` 用於表示零或多個字元。</li><li>`_` 僅代表一個字元。</li></ul> |
 
 **範例**
 
@@ -42,9 +42,9 @@ city like "%es%"
 
 ## 開始於
 
-函 `startsWith` 數用來判斷字串是否以指定的子字串開頭。
+`startsWith`函式用於確定字串是否以指定的子字串開頭。
 
-**Format**
+**格式**
 
 ```sql
 {STRING_1}.startsWith({STRING_2}, {BOOLEAN})
@@ -66,9 +66,9 @@ person.name.startsWith("Joe")
 
 ## 不以
 
-函 `doesNotStartWith` 數用於判斷字串是否不以指定的子字串開頭。
+`doesNotStartWith`函式用於確定字串是否不以指定的子字串開頭。
 
-**Format**
+**格式**
 
 ```sql
 {STRING_1}.doesNotStartWith({STRING_2}, {BOOLEAN})
@@ -90,9 +90,9 @@ person.name.doesNotStartWith("Joe")
 
 ## 終止於
 
-函 `endsWith` 數用於確定字串是否以指定的子字串結尾。
+`endsWith`函式用於確定字串是否以指定的子字串結尾。
 
-**Format**
+**格式**
 
 ```sql
 {STRING_1}.endsWith({STRING_2}, {BOOLEAN})
@@ -114,9 +114,9 @@ person.emailAddress.endsWith(".com")
 
 ## 不以
 
-函 `doesNotEndWith` 數用於判斷字串是否未以指定的子字串結尾。
+`doesNotEndWith`函式用於確定字串是否不以指定的子字串結尾。
 
-**Format**
+**格式**
 
 ```sql
 {STRING_1}.doesNotEndWith({STRING_2}, {BOOLEAN})
@@ -138,9 +138,9 @@ person.emailAddress.doesNotEndWith(".com")
 
 ## 包含
 
-函 `contains` 數用於確定字串是否包含指定的子字串。
+`contains`函式用於確定字串是否包含指定的子字串。
 
-**Format**
+**格式**
 
 ```sql
 {STRING_1}.contains({STRING_2}, {BOOLEAN})
@@ -162,9 +162,9 @@ person.emailAddress.contains("2010@gm")
 
 ## 不包含
 
-函 `doesNotContain` 數用於判斷字串是否不包含指定的子字串。
+`doesNotContain`函式用於確定字串是否不包含指定的子字串。
 
-**Format**
+**格式**
 
 ```sql
 {STRING_1}.doesNotContain({STRING_2}, {BOOLEAN})
@@ -186,9 +186,9 @@ person.emailAddress.doesNotContain("2010@gm")
 
 ## 等於
 
-函 `equals` 數用來判斷字串是否等於指定字串。
+`equals`函式用於確定字串是否等於指定字串。
 
-**Format**
+**格式**
 
 ```sql
 {STRING_1}.equals({STRING_2})
@@ -209,9 +209,9 @@ person.name.equals("John")
 
 ## 不等於
 
-函 `notEqualTo` 數用於判斷字串是否不等於指定字串。
+`notEqualTo`函式用於確定字串是否不等於指定字串。
 
-**Format**
+**格式**
 
 ```sql
 {STRING_1}.notEqualTo({STRING_2})
@@ -232,9 +232,9 @@ person.name.notEqualTo("John")
 
 ## 符合
 
-函 `matches` 數用於確定字串是否與特定規則運算式匹配。 如需規則運算 [式中的比對模式](https://docs.oracle.com/javase/8/docs/api/java/util/regex/Pattern.html) ，請參閱本檔案。
+`matches`函式用於確定字串是否與特定規則運算式匹配。 有關規則運算式中的匹配模式的詳細資訊，請參閱[本檔案](https://docs.oracle.com/javase/8/docs/api/java/util/regex/Pattern.html)。
 
-**Format**
+**格式**
 
 ```sql
 {STRING_1}.matches(STRING_2})
@@ -250,9 +250,9 @@ person.name.matches("(?i)^John")
 
 ## 規則運算式群組
 
-該函 `regexGroup` 數用於根據所提供的規則運算式提取特定資訊。
+`regexGroup`函式用於根據提供的規則運算式提取特定資訊。
 
-**Format**
+**格式**
 
 ```sql
 {STRING}.regexGroup({EXPRESSION})
@@ -268,5 +268,5 @@ emailAddress.regexGroup("@(\w+)", 1)
 
 ## 後續步驟
 
-現在您已瞭解字串函式，可在PQL查詢中使用它們。 有關其他PQL函式的詳細資訊，請閱讀配置式查 [詢語言概述](./overview.md)。
+現在您已瞭解字串函式，可在PQL查詢中使用它們。 有關其他PQL函式的詳細資訊，請閱讀[配置檔案查詢語言概述](./overview.md)。
 
