@@ -1,28 +1,28 @@
 ---
-keywords: Experience Platform;home;popular topics;schema;Schema;XDM;fields;schemas;Schemas;identity;datatype;data-type;data type;
+keywords: Experience Platform;home；熱門主題；模式；模式；XDM;fields；模式；Schemas;identity;datatype；資料類型；
 solution: Experience Platform
 title: 身分資料類型
 topic: overview
 description: 本文檔概述了Identity XDM資料類型。
 translation-type: tm+mt
-source-git-commit: f5bddb39c16eb25e85297f56e331d3aa51510eb9
+source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
 workflow-type: tm+mt
-source-wordcount: '267'
-ht-degree: 2%
+source-wordcount: '283'
+ht-degree: 3%
 
 ---
 
 
-# [!UICONTROL 身分資料] 類型
+#  Identitydata type
 
-[!UICONTROL Identity] 是標準的XDM資料類型，用來清楚區分與數位體驗互動的人。 身分由身分提供者建立，其本身在屬性中 `namespace` 參考。 在每個組 `namespace`件中，身份都是唯一的。
+[!UICONTROL Identity] 是標準的XDM資料類型，用來清楚區分與數位體驗互動的使用者。身分由身分提供者建立，身分提供者本身在`namespace`屬性中參考。 在每個`namespace`中，身分是唯一的。
 
 <img src="../images/data-types/identity.png" width="550" /><br />
 
 | 屬性 | 資料類型 | 說明 |
 | --- | --- | --- |
-| `namespace` | 物件 | 包含單一字串欄位(`code`)的物件，指出與所提供屬性相關聯的命名空 `id` 間。 |
-| `authenticatedState` | 字串 | 在觀察到的體驗事件時，此身分的已驗證狀態。 請參閱附 [錄](#authenticatedState) ，瞭解接受的值和定義。 |
+| `namespace` | 物件 | 包含單一字串欄位(`code`)的物件，指出與所提供之`id`屬性相關的命名空間。 |
+| `authenticatedState` | 字串 | 在觀察到的體驗事件時，此身分的已驗證狀態。 有關接受的值和定義，請參見[附錄](#authenticatedState)。 |
 | `id` | 字串 | 相關名稱空間中的消費者身份。 |
 | `primary` | 布林值 | 指出這是否為個人的主要身分。 每個個人只能有一個主要身份。 |
 | `xid` | 字串 | 當存在時，此值表示跨名稱空間標識符，該標識符在所有名稱空間中所有命名空間範圍內的標識符中都是唯一的。 |
@@ -34,11 +34,11 @@ ht-degree: 2%
 
 ## 附錄
 
-以下部分包含有關 [!UICONTROL Identity] 資料類型的其他資訊。
+以下部分包含有關[!UICONTROL Identity]資料類型的其他資訊。
 
-## authenticatedState的接受值 {#authenticatedState}
+## authenticatedState {#authenticatedState}的接受值
 
-下表概述接受的值及其 `authenticatedState` 相關意義：
+下表概述`authenticatedState`的接受值及其相關含義：
 
 | 值 | 說明 |
 | --- | --- |
