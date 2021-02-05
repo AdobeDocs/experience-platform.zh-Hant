@@ -1,21 +1,17 @@
 ---
 keywords: PebblePost；卵石郵件；PebblePost Programmatic Direct Mail；卵石郵件程式化直接郵件
-title: PebblePost擴充功能
-seo-title: PebblePost擴充功能
+title: PebblePost Extension Destination
 description: PebblePost擴充功能是Adobe Experience Platform中的電子郵件目的地。 如需擴充功能的詳細資訊，請參閱Adobe Exchange的擴充功能頁面。
-seo-description: PebblePost擴充功能是Adobe Experience Platform中的電子郵件目的地。 如需擴充功能的詳細資訊，請參閱Adobe Exchange的擴充功能頁面。
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '581'
+source-wordcount: '554'
 ht-degree: 3%
 
 ---
 
 
 # [!DNL PebblePost] 擴充功能 {#pebblepost-extension}
-
-## 概述 {#overview}
 
 [!DNL PebblePost's Programmatic Direct Mail®] 解決方案可協助數位行銷人員將線上興趣和意圖與線下、有形的媒體連結在一起，進而轉化客戶。行銷人員可運用他們在Adobe中建立的自訂資料區段，現在以具有相關、更持久、內建媒體印象的消費者為目標。 根據回應路徑活動和現場轉換即時分析效能。
 
