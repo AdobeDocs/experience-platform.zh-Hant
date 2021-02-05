@@ -5,7 +5,7 @@ title: 資料使用標籤概觀
 topic: labels
 description: Adobe Experience Platform資料治理可讓您將資料使用標籤套用至資料集和欄位，並依據相關資料使用政策對每個資料使用標籤進行分類。 本檔案概述Experience Platform中的資料使用標籤。
 translation-type: tm+mt
-source-git-commit: 2dbd92efbd992b70f4f750b09e9d2e0626e71315
+source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
 workflow-type: tm+mt
 source-wordcount: '619'
 ht-degree: 0%
