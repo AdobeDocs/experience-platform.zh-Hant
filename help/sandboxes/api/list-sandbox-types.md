@@ -1,21 +1,21 @@
 ---
-keywords: Experience Platform;home;popular topics;list sandboxes
+keywords: Experience Platform;home；熱門主題；清單沙箱
 solution: Experience Platform
-title: 列出支援的沙盒類型
+title: 在API中列出支援的沙盒類型
 topic: developer guide
 description: 您可以向/sandboxTypes端點提出GET請求，以擷取組織支援的沙盒類型清單。
 translation-type: tm+mt
-source-git-commit: 0af537e965605e6c3e02963889acd85b9d780654
+source-git-commit: 36f63cecd49e6a6b39367359d50252612ea16d7a
 workflow-type: tm+mt
-source-wordcount: '68'
+source-wordcount: '81'
 ht-degree: 2%
 
 ---
 
 
-# 列出支援的沙盒類型
+# 在API中列出支援的沙盒類型
 
-您可以向端點提出GET請求，以擷取組織支援的沙盒類型清 `/sandboxTypes` 單。
+您可以向`/sandboxTypes`端點提出GET請求，以擷取組織支援的沙盒類型清單。
 
 **API格式**
 
