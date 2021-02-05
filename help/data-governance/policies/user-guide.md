@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform; home；熱門主題；資料治理；資料使用策略使用手冊
 solution: Experience Platform
-title: 資料使用原則使用指南
+title: 在UI中管理資料使用原則
 topic: policies
 description: Adobe Experience Platform Data Governance提供使用者介面，可讓您建立和管理資料使用政策。 本檔案概述您可在Experience Platform使用者介面的「原則」工作區中執行的動作。
 translation-type: tm+mt
-source-git-commit: 00010d38a5d05800aeac9af8505093fee3593b45
+source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
 workflow-type: tm+mt
-source-wordcount: '773'
+source-wordcount: '772'
 ht-degree: 0%
 
 ---
 
 
-# 資料使用原則使用指南
+# 在UI中管理資料使用原則
 
 Adobe Experience Platform [!DNL Data Governance]提供使用者介面，可讓您建立並管理資料使用政策。 本文檔概述了在[!DNL Experience Platform]用戶介面的&#x200B;**策略**&#x200B;工作區中可以執行的操作。
 
@@ -28,7 +28,7 @@ Adobe Experience Platform [!DNL Data Governance]提供使用者介面，可讓�
 - [[!DNL Data Governance]](../home.md)
 - [資料使用原則](./overview.md)
 
-## 查看資料使用策略{#view-policies}
+## 查看現有策略{#view-policies}
 
 在[!DNL Experience Platform] UI中，選擇&#x200B;**[!UICONTROL 策略]**&#x200B;以開啟&#x200B;**[!UICONTROL 策略]**&#x200B;工作區。 在&#x200B;**[!UICONTROL 瀏覽]**&#x200B;標籤中，您可以看到可用原則的清單，包括其相關標籤、行銷動作和狀態。
 
@@ -38,7 +38,7 @@ Adobe Experience Platform [!DNL Data Governance]提供使用者介面，可讓�
 
 ![](../images/policies/policy-details.png)
 
-## 建立自訂資料使用原則{#create-policy}
+## 建立自訂原則{#create-policy}
 
 要建立新的自定義資料使用策略，請在&#x200B;**[!UICONTROL 策略]**&#x200B;工作區的&#x200B;**[!UICONTROL 瀏覽]**&#x200B;頁籤的右上角選擇&#x200B;**[!UICONTROL 建立策略]**。
 
@@ -68,7 +68,7 @@ Adobe Experience Platform [!DNL Data Governance]提供使用者介面，可讓�
 
 ![](../images/policies/created-policy.png)
 
-## 啟用或禁用資料使用策略{#enable}
+## 啟用或禁用策略{#enable}
 
 預設會停用所有資料使用政策（包括Adobe提供的核心政策）。 若要考慮實施個別原則，您必須透過API或UI手動啟用該原則。
 
