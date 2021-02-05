@@ -1,27 +1,25 @@
 ---
 keywords: Experience Platform;home;popular topics;tableau;Tableau；查詢服務；查詢服務；連接到查詢服務；
 solution: Experience Platform
-title: 與Tableau連結
+title: 將Tableau連接至查詢服務
 topic: connect
 description: 本檔案將逐步說明如何將Tableau與Adobe Experience Platform Query Service連接。
 translation-type: tm+mt
-source-git-commit: eac93f3465fa6ce4af7a6aa783cf5f8fb4ac9b9b
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '210'
+source-wordcount: '213'
 ht-degree: 0%
 
 ---
 
 
-# [!DNL Tableau]
+# 將[!DNL Tableau]連接到查詢服務
 
 本檔案涵蓋將Tableau與Adobe Experience Platform [!DNL Query Service]連接的步驟。
 
 >[!NOTE]
 >
 > 本指南假定您已經擁有[!DNL Tableau]的訪問權限，並熟悉如何導航其介面。 有關[!DNL Tableau]的更多資訊，請參閱[official [!DNL Tableau] 文檔](https://help.tableau.com/current/pro/desktop/en-us/default.htm)。
-
-## 連接[!DNL Tableau]平台
 
 要將[!DNL Tableau]連接到[!DNL Query Service]，請開啟[!DNL Tableau]，並在&#x200B;**[!DNL To a Server]**&#x200B;部分中選擇&#x200B;**[!DNL More]** ，然後選擇&#x200B;**[!DNL PostgreSQL]**
 
