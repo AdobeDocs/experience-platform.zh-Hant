@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics;segmentation;Segmentation;Segmentation Service;schedules;schedule;api;API;
+keywords: Experience Platform;home；熱門主題；Segmentation;Segmentation;Segmentation Service;Schedules;schedule;api;API;
 solution: Experience Platform
-title: 計畫
+title: 排程API端點
 topic: developer guide
 description: 排程是一種工具，可用來每天自動執行一次批次分段工作。
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
-source-wordcount: '1188'
+source-wordcount: '1203'
 ht-degree: 3%
 
 ---
@@ -15,19 +15,19 @@ ht-degree: 3%
 
 # 計畫端點
 
-排程是一種工具，可用來每天自動執行一次批次分段工作。 您可以使用端 `/config/schedules` 點來檢索計劃清單、建立新計畫、檢索特定計畫的詳細資訊、更新特定計畫或刪除特定計畫。
+排程是一種工具，可用來每天自動執行一次批次分段工作。 您可以使用`/config/schedules`端點來檢索計劃清單、建立新計畫、檢索特定計畫的詳細資訊、更新特定計畫或刪除特定計畫。
 
 ## 快速入門
 
-本指南中使用的端點是 [!DNL Adobe Experience Platform Segmentation Service] API的一部分。 在繼續之前，請先檢閱 [快速入門手冊](./getting-started.md) ，以取得成功呼叫API所需的重要資訊，包括必要的標題和如何讀取範例API呼叫。
+本指南中使用的端點是[!DNL Adobe Experience Platform Segmentation Service] API的一部分。 在繼續之前，請參閱[快速入門手冊](./getting-started.md)，以取得成功呼叫API所需的重要資訊，包括必要的標題和如何讀取範例API呼叫。
 
-## 檢索計劃清單 {#retrieve-list}
+## 檢索計劃清單{#retrieve-list}
 
-您可以向端點提出GET請求，以擷取IMS組織的所有排程清 `/config/schedules` 單。
+您可以向`/config/schedules`端點提出GET請求，以擷取IMS組織的所有排程清單。
 
 **API格式**
 
-端點 `/config/schedules` 支援數個查詢參數，以協助篩選結果。 雖然這些參數是可選的，但強烈建議使用它們，以幫助降低昂貴的開銷。 在沒有參數的情況下呼叫此端點將檢索組織可用的所有計畫。 可包含多個參數，由&amp;符號(`&`)分隔。
+`/config/schedules`端點支援數個查詢參數，以協助篩選結果。 雖然這些參數是可選的，但強烈建議使用它們，以幫助降低昂貴的開銷。 在沒有參數的情況下呼叫此端點將檢索組織可用的所有計畫。 可以包括多個參數，用&amp;符號(`&`)分隔。
 
 ```http
 GET /config/schedules
@@ -100,13 +100,13 @@ curl -X GET https://platform.adobe.io/data/core/ups/config/schedules?limit=10 \
 | `children.name` | 排程的字串名稱。 |
 | `children.type` | 作業的字串類型。 支援的兩種類型為「batch_segmentation」和「export」。 |
 | `children.properties` | 包含與調度相關的其他屬性的對象。 |
-| `children.properties.segments` | 使用可 `["*"]` 確保包含所有區段。 |
-| `children.schedule` | 包含作業計畫的字串。 作業只能排程為每天執行一次，這表示您無法排程作業在24小時期間執行多次。 有關cron時間表的更多資訊，請閱讀 [cron表達式格式文檔](http://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html) 。 在此範例中，&quot;0 0 1 * *&quot;表示此排程將在每月首日的午夜執行。 |
+| `children.properties.segments` | 使用`["*"]`可確保包含所有區段。 |
+| `children.schedule` | 包含作業計畫的字串。 作業只能排程為每天執行一次，這表示您無法排程作業在24小時期間執行多次。 有關cron計畫的更多資訊，請閱讀[cron表達式格式](http://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html)文檔。 在此範例中，&quot;0 0 1 * *&quot;表示此排程將在每月首日的午夜執行。 |
 | `children.state` | 包含計畫狀態的字串。 兩個支援的狀態是「作用中」和「非作用中」。 依預設，狀態會設為「非作用中」。 |
 
-## Create a new schedule {#create}
+## 建立新計畫{#create}
 
-您可以向端點發出POST請求，以建立新的計 `/config/schedules` 划。
+您可以通過向`/config/schedules`端點發出POST請求來建立新計畫。
 
 **API格式**
 
@@ -140,11 +140,11 @@ curl -X POST https://platform.adobe.io/data/core/ups/config/schedules \
 | 屬性 | 說明 |
 | -------- | ------------ |
 | `name` | **必填。** 排程的字串名稱。 |
-| `type` | **必填。** 作業的字串類型。 支援的兩種類型為「batch_segmentation」和「export」。 |
+| `type` | **必填。** 作業的字串類型。支援的兩種類型為「batch_segmentation」和「export」。 |
 | `properties` | **必填。** 包含與調度相關的其他屬性的對象。 |
-| `properties.segments` | **等於「 `type` batch_segmentation」時為必要項目。** 使用可 `["*"]` 確保包含所有區段。 |
-| `schedule` | *選填.* 包含作業計畫的字串。 作業只能排程為每天執行一次，這表示您無法排程作業在24小時期間執行多次。 有關cron時間表的更多資訊，請閱讀 [cron表達式格式文檔](http://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html) 。 在此範例中，&quot;0 0 1 * *&quot;表示此排程將在每月首日的午夜執行。 <br><br>如果未提供此字串，系統會自動產生排程。 |
-| `state` | *選填.* 包含計畫狀態的字串。 兩個支援的狀態是「作用中」和「非作用中」。 依預設，狀態會設為「非作用中」。 |
+| `properties.segments` | **等於「 `type` batch_segmentation」時為必要項目。** 使用 `["*"]` 可確保包含所有區段。 |
+| `schedule` | *選填.* 包含作業計畫的字串。作業只能排程為每天執行一次，這表示您無法排程作業在24小時期間執行多次。 有關cron計畫的更多資訊，請閱讀[cron表達式格式](http://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html)文檔。 在此範例中，&quot;0 0 1 * *&quot;表示此排程將在每月首日的午夜執行。 <br><br>如果未提供此字串，系統會自動產生排程。 |
+| `state` | *選填.* 包含計畫狀態的字串。兩個支援的狀態是「作用中」和「非作用中」。 依預設，狀態會設為「非作用中」。 |
 
 **回應**
 
@@ -174,9 +174,9 @@ curl -X POST https://platform.adobe.io/data/core/ups/config/schedules \
 }
 ```
 
-## 擷取特定排程 {#get}
+## 檢索特定計畫{#get}
 
-通過向端點發出GET請求並提供您希望在請求路徑中檢索的計畫的ID，可以檢索有關特定計畫的詳細資訊。 `/config/schedules`
+通過向`/config/schedules`端點發出GET請求，並在請求路徑中提供要檢索的計畫的ID，可以檢索有關特定計畫的詳細資訊。
 
 **API格式**
 
@@ -186,7 +186,7 @@ GET /config/schedules/{SCHEDULE_ID}
 
 | 參數 | 說明 |
 | --------- | ----------- |
-| `{SCHEDULE_ID}` | 您 `id` 要擷取的排程值。 |
+| `{SCHEDULE_ID}` | 您要擷取之排程的`id`值。 |
 
 **請求**
 
@@ -229,21 +229,21 @@ curl -X GET https://platform.adobe.io/data/core/ups/config/schedules/4e538382-db
 | 屬性 | 說明 |
 | -------- | ------------ |
 | `name` | 排程的字串名稱。 |
-| `type` | 作業的字串類型。 支援的兩種類型是 `batch_segmentation` 和 `export`。 |
+| `type` | 作業的字串類型。 支援的兩種類型是`batch_segmentation`和`export`。 |
 | `properties` | 包含與調度相關的其他屬性的對象。 |
-| `properties.segments` | 使用可 `["*"]` 確保包含所有區段。 |
-| `schedule` | 包含作業計畫的字串。 作業只能排程為每天執行一次，這表示您無法排程作業在24小時期間執行多次。 有關cron時間表的更多資訊，請閱讀 [cron表達式格式文檔](http://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html) 。 在此範例中，&quot;0 0 1 * *&quot;表示此排程將在每月首日的午夜執行。 |
-| `state` | 包含計畫狀態的字串。 兩個受支援狀態是 `active` 和 `inactive`。 預設情況下，狀態設定為 `inactive`。 |
+| `properties.segments` | 使用`["*"]`可確保包含所有區段。 |
+| `schedule` | 包含作業計畫的字串。 作業只能排程為每天執行一次，這表示您無法排程作業在24小時期間執行多次。 有關cron計畫的更多資訊，請閱讀[cron表達式格式](http://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html)文檔。 在此範例中，&quot;0 0 1 * *&quot;表示此排程將在每月首日的午夜執行。 |
+| `state` | 包含計畫狀態的字串。 支援的兩種狀態為`active`和`inactive`。 預設情況下，狀態設定為`inactive`。 |
 
-## 更新特定排程的詳細資訊 {#update}
+## 更新特定計畫{#update}的詳細資料
 
-通過向端點發出PATCH請求並提供您嘗試在請求路徑中更 `/config/schedules` 新的調度的ID，可以更新特定的調度。
+通過向`/config/schedules`端點發出PATCH請求，並提供您嘗試在請求路徑中更新的計畫的ID，可以更新特定計畫。
 
-PATCH請求允許您更新單個 [計畫的狀](#update-state)[態或cron計畫](#update-schedule) 。
+PATCH請求允許您針對單個計畫更新[state](#update-state)或[cron計畫](#update-schedule)。
 
-### 更新計畫狀態 {#update-state}
+### 更新計畫狀態{#update-state}
 
-您可以使用JSON修補程式作業來更新排程的狀態。 若要更新狀態，請將屬 `path` 性宣告為 `/state` ，並將 `value` 其設為 `active` 或 `inactive`。 如需JSON修補程式的詳細資訊，請閱讀 [JSON修補程式檔案](http://jsonpatch.com/) 。
+您可以使用JSON修補程式作業來更新排程的狀態。 若要更新狀態，請將`path`屬性宣告為`/state`，並將`value`設為`active`或`inactive`。 如需JSON修補程式的詳細資訊，請閱讀[JSON修補程式](http://jsonpatch.com/)檔案。
 
 **API格式**
 
@@ -253,7 +253,7 @@ PATCH /config/schedules/{SCHEDULE_ID}
 
 | 參數 | 說明 |
 | --------- | ----------- |
-| `{SCHEDULE_ID}` | 您 `id` 要更新的排程值。 |
+| `{SCHEDULE_ID}` | 您要更新的計畫的`id`值。 |
 
 **請求**
 
@@ -275,16 +275,16 @@ curl -X DELETE https://platform.adobe.io/data/core/ups/config/schedules/4e538382
 
 | 屬性 | 說明 |
 | -------- | ----------- |
-| `path` | 您要修補的值的路徑。 在這種情況下，由於您要更新計畫的狀態，因此需要將值設 `path` 置為&quot;/state&quot;。 |
+| `path` | 您要修補的值的路徑。 在這種情況下，由於您要更新計畫的狀態，因此需要將`path`的值設定為&quot;/state&quot;。 |
 | `value` | 計畫狀態的更新值。 此值可設為「作用中」或「非作用中」以啟用或停用排程。 |
 
 **回應**
 
 成功的回應會傳回HTTP狀態204（無內容）。
 
-### 更新cron排程 {#update-schedule}
+### 更新cron計畫{#update-schedule}
 
-您可以使用JSON修補程式作業來更新cron排程。 若要更新排程，請將屬 `path` 性宣告為 `/schedule` 並將 `value` 其設為有效的cron排程。 如需JSON修補程式的詳細資訊，請閱讀 [JSON修補程式檔案](http://jsonpatch.com/) 。 有關cron時間表的更多資訊，請閱讀 [cron表達式格式文檔](http://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html) 。
+您可以使用JSON修補程式作業來更新cron排程。 要更新計畫，請將`path`屬性聲明為`/schedule`，並將`value`設定為有效的cron計畫。 如需JSON修補程式的詳細資訊，請閱讀[JSON修補程式](http://jsonpatch.com/)檔案。 有關cron計畫的更多資訊，請閱讀[cron表達式格式](http://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html)文檔。
 
 **API格式**
 
@@ -294,7 +294,7 @@ PATCH /config/schedules/{SCHEDULE_ID}
 
 | 參數 | 說明 |
 | --------- | ----------- |
-| `{SCHEDULE_ID}` | 您 `id` 要更新的排程值。 |
+| `{SCHEDULE_ID}` | 您要更新的計畫的`id`值。 |
 
 **請求**
 
@@ -316,7 +316,7 @@ curl -X PATCH https://platform.adobe.io/data/core/ups/config/schedules/4e538382-
 
 | 屬性 | 說明 |
 | -------- | ----------- |
-| `path` | 您要更新的值的路徑。 在這種情況下，由於您要更新cron計畫，因此需要將值設 `path` 為 `/schedule`。 |
+| `path` | 您要更新的值的路徑。 在這種情況下，由於您正在更新cron計畫，因此需要將`path`的值設定為`/schedule`。 |
 | `value` | cron計畫的更新值。 此值必須以cron計畫的形式。 在此範例中，排程將在每月的第二天執行。 |
 
 **回應**
@@ -325,7 +325,7 @@ curl -X PATCH https://platform.adobe.io/data/core/ups/config/schedules/4e538382-
 
 ## 刪除特定計畫
 
-您可以向端點發出DELETE請求，並在請求路徑中提供 `/config/schedules` 要刪除的計畫的ID，以請求刪除特定計畫。
+您可以向`/config/schedules`端點發出DELETE請求並在請求路徑中提供要刪除的計畫的ID，以請求刪除特定計畫。
 
 **API格式**
 
@@ -335,7 +335,7 @@ DELETE /config/schedules/{SCHEDULE_ID}
 
 | 參數 | 說明 |
 | --------- | ----------- |
-| `{SCHEDULE_ID}` | 您 `id` 要刪除的排程值。 |
+| `{SCHEDULE_ID}` | 要刪除的計畫的`id`值。 |
 
 **請求**
 
