@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform; home；熱門主題；驗證串流連接；串流連接；建立驗證串流連接；建立驗證串流連接；流接收；接收；
 solution: Experience Platform
-title: 建立驗證的串流連線
+title: 建立已驗證的串流連線
 topic: tutorial
 type: Tutorial
 description: 「已驗證的資料收集」可讓Adobe Experience Platform服務（例如即時客戶個人檔案和身分識別）區隔來自受信任來源和不受信任來源的記錄。
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: 089a4d517476b614521d1db4718966e3ebb13064
 workflow-type: tm+mt
 source-wordcount: '674'
 ht-degree: 2%
