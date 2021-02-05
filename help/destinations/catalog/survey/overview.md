@@ -1,19 +1,17 @@
 ---
 keywords: 調查目標；survey;foresee;inmoment;web intercept surveys;qualtrics
-title: 調查目標
-seo-title: 調查目標
-description: 調查平台會偵測調查事件、透過資料元素即時擷取客戶意見，並與平台共用資料。
-seo-description: 調查平台會偵測調查事件、透過資料元素即時擷取客戶意見，並與平台共用資料。
+title: 調查目標概觀
+description: 調查平台會偵測調查事件、透過資料元素即時擷取客戶意見，並與Adobe Experience Platform共用資料。
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '105'
+source-wordcount: '89'
 ht-degree: 0%
 
 ---
 
 
-# 調查目標{#survey-destinations}
+# 調查目標概觀{#survey-destinations}
 
 調查平台會偵測調查事件、透過資料元素即時擷取客戶意見，並與Adobe Experience Platform共用資料。
 
