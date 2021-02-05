@@ -1,21 +1,17 @@
 ---
 keywords: SFTP;sftp
-title: SFTP目的地
-seo-title: SFTP目的地
+title: SFTP連線目標
 description: 建立與SFTP伺服器的即時對外連線，以定期從Experience Platform匯出分隔資料檔案。
-seo-description: 建立與SFTP伺服器的即時對外連線，以定期從Experience Platform匯出分隔資料檔案。
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '205'
+source-wordcount: '185'
 ht-degree: 0%
 
 ---
 
 
-# SFTP目的地
-
-## 概述
+# SFTP連線
 
 建立與SFTP伺服器的即時對外連線，以定期從Experience Platform匯出分隔資料檔案。
 
