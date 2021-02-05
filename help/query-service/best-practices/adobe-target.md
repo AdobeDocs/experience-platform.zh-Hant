@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform;home;popular topics;query service;Query service;sample query;sample query;adobe target;
 solution: Experience Platform
-title: 範例查詢
+title: Adobe Target資料的範例查詢
 topic: queries
 description: 來自Adobe Target的資料會轉換為Experience Event XDM架構，並以資料集的形式匯入Experience Platform。 本檔案包含將Query Service與Adobe Target資料集搭配使用的範例查詢。
 translation-type: tm+mt
-source-git-commit: e2c648829bb3268ab319da934f5cc6cc811290b3
+source-git-commit: 97dc0b5fb44f5345fd89f3f56bd7861668da9a6e
 workflow-type: tm+mt
-source-wordcount: '324'
+source-wordcount: '328'
 ht-degree: 1%
 
 ---
