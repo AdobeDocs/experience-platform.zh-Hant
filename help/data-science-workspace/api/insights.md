@@ -1,25 +1,25 @@
 ---
-keywords: Experience Platform;developer guide;endpoint;Data Science Workspace;popular topics;insights;sensei machine learning api
+keywords: Experience Platform；開發人員指南；端點；Data Science Workspace；熱門主題；見解；sensei機器學習api
 solution: Experience Platform
-title: 見解
+title: 前瞻分析API端點
 topic: Developer guide
 description: 前瞻分析包含度量，可讓資料科學家透過顯示相關評估度量來評估和選擇最佳ML模型。
 translation-type: tm+mt
-source-git-commit: 194a29124949571638315efe00ff0b04bff19303
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
-source-wordcount: '497'
+source-wordcount: '515'
 ht-degree: 3%
 
 ---
 
 
-# 見解
+# 前瞻分析端點
 
 前瞻分析包含度量，可讓資料科學家透過顯示相關評估度量來評估和選擇最佳ML模型。
 
 ## 擷取前瞻分析清單
 
-您可以對前瞻分析端點執行單一GET請求，以擷取前瞻分析清單。  若要協助篩選結果，您可以在請求路徑中指定查詢參數。 有關可用查詢的清單，請參閱有關資產檢索查 [詢參數的附錄部分](./appendix.md#query)。
+您可以對前瞻分析端點執行單一GET請求，以擷取前瞻分析清單。  若要協助篩選結果，您可以在請求路徑中指定查詢參數。 有關可用查詢的清單，請參閱[資產檢索查詢參數](./appendix.md#query)的附錄部分。
 
 **API格式**
 
@@ -40,7 +40,7 @@ curl -X GET \
 
 **回應**
 
-成功的回應會傳回包含深入解析清單的裝載，且每個前瞻分析都有唯一識別碼( `id` )。 此外，您會收到其中 `context` 包含與前瞻分析事件和度量資料之後的特定前瞻分析相關聯的唯一識別碼。
+成功的回應會傳回包含深入解析清單的裝載，且每個前瞻分析都有唯一識別碼(`id`)。 此外，您會收到`context`，其中包含與前瞻分析事件和度量資料後的特定前瞻分析相關聯的唯一識別碼。
 
 ```json
 {
@@ -109,7 +109,7 @@ curl -X GET \
 
 ## 擷取特定分析
 
-若要尋找特定洞察力，請提出GET請求，並在請求路徑 `{INSIGHT_ID}` 中提供有效。 若要協助篩選結果，您可以在請求路徑中指定查詢參數。 有關可用查詢的清單，請參閱有關資產檢索查 [詢參數的附錄部分](./appendix.md#query)。
+若要尋找特定洞察力，請提出GET請求，並在請求路徑中提供有效的`{INSIGHT_ID}`。 若要協助篩選結果，您可以在請求路徑中指定查詢參數。 有關可用查詢的清單，請參閱[資產檢索查詢參數](./appendix.md#query)的附錄部分。
 
 **API格式**
 
@@ -134,7 +134,7 @@ curl -X GET \
 
 **回應**
 
-成功的回應會傳回包含前瞻分析唯一識別碼(`id`)的裝載。 此外，您還會收 `context` 到包含與前瞻分析事件和度量資料後續的特定前瞻分析相關聯的唯一識別碼。
+成功的回應會傳回包含前瞻分析唯一識別碼(`id`)的裝載。 此外，您還會收到`context`，其中包含與前瞻分析事件和度量資料之後的特定前瞻分析相關聯的唯一識別碼。
 
 ```json
 {
@@ -230,7 +230,7 @@ curl -X POST \
 
 **回應**
 
-成功的回應會傳回包含您在初始 `{INSIGHT_ID}` 請求中提供之參數的裝載。
+成功的回應會傳回包含`{INSIGHT_ID}`的裝載，以及您在初始請求中提供的任何參數。
 
 ```json
 {
@@ -265,7 +265,7 @@ curl -X POST \
 
 ## 擷取演算法的預設度量清單
 
-您可以透過對度量端點執行單一GET請求，擷取演算法和預設度量的清單。 若要查詢特定量度提出GET請求，並在請求路徑 `{ALGORITHM}` 中提供有效。
+您可以透過對度量端點執行單一GET請求，擷取演算法和預設度量的清單。 若要查詢特定量度進行GET請求，並在請求路徑中提供有效的`{ALGORITHM}`。
 
 **API格式**
 
@@ -280,7 +280,7 @@ GET /insights/metrics?algorithm={ALGORITHM}
 
 **請求**
 
-下列請求包含查詢，並使用演算法識別碼擷取特定度量 `{ALGORITHM}`
+下列請求包含查詢，並使用演算法識別碼`{ALGORITHM}`擷取特定度量
 
 ```shell
 curl -X GET \
@@ -293,7 +293,7 @@ curl -X GET \
 
 **回應**
 
-成功的回應會傳回包含唯一識別碼 `algorithm` 和預設度量陣列的裝載。
+成功的回應會傳回包含`algorithm`唯一識別碼和預設度量陣列的裝載。
 
 ```json
 {
