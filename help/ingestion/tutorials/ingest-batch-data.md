@@ -1,14 +1,14 @@
 ---
 keywords: Experience Platform;home；熱門主題；ingestion;ingest batch data;tutorial;batch ingestion;tutorial;ui guide;
 solution: Experience Platform
-title: 將資料內嵌至Adobe Experience Platform
+title: 將資料內嵌至Experience Platform
 topic: tutorial
 type: Tutorial
 description: Adobe Experience Platform可讓您輕鬆將資料匯入為符合已知Experience Data Model(XDM)架構的Parce檔案或資料。
 translation-type: tm+mt
-source-git-commit: 2940f030aa21d70cceeedc7806a148695f68739e
+source-git-commit: 8d403e73a804953f9584d6a72f945d4444e65d11
 workflow-type: tm+mt
-source-wordcount: '1323'
+source-wordcount: '1322'
 ht-degree: 0%
 
 ---
