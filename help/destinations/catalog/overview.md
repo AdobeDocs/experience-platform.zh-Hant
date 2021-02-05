@@ -5,17 +5,17 @@ seo-title: 目標目錄
 description: 「目標目錄」提供可接收資料的可用目標清單。 這些目標包括Adobe解決方案、廣告平台、調查平台、電子郵件行銷平台等。
 seo-description: 「目標目錄」提供可接收資料的可用目標清單。 這些目標包括Adobe解決方案、廣告平台、調查平台、電子郵件行銷平台等。
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '170'
+source-wordcount: '174'
 ht-degree: 0%
 
 ---
 
 
-# [!DNL Destinations Catalog]
+# 目標目錄
 
-**[!DNL Destinations Catalog]**&#x200B;提供可接收資料的可用目標平台清單。 這些目標平台包括Adobe解決方案、廣告平台、調查平台、電子郵件行銷平台、Experience Platform擴充功能等。
+目標目錄提供可接收資料的可用目標平台清單。 這些目標平台包括Adobe解決方案、廣告平台、調查平台、電子郵件行銷平台、Experience Platform擴充功能等。
 
 瀏覽目錄以判斷哪些目標平台最適合您的廣告和個人化使用案例，然後設定流程，將您的細分激活至目標。
 
