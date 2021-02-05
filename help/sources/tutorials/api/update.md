@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform; home；熱門主題；流服務；更新連接
 solution: Experience Platform
-title: 使用Flow Service API更新連線資訊
+title: 使用流服務API更新連接資訊
 topic: overview
 type: Tutorial
 description: 在某些情況下，可能需要更新現有源連接的詳細資訊。 Flow Service API可讓您新增、編輯和刪除現有批次或串流連線的詳細資料，包括其名稱、說明和認證。
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
 source-wordcount: '709'
 ht-degree: 2%
