@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;insights;customer ai;popular topics;customer ai segments
+keywords: 體驗平台；見解；客戶ai；熱門主題；客戶ai細分
 solution: Experience Platform, Intelligent Services, Real-time Customer Data Platform
-title: 建立具有預測分數的客戶細分
+title: 使用預測分數建立客戶區段
 topic: Create a segment
 description: 當預測執行完成時，「設定檔」會自動使用預測傾向分數。 利用客戶人工智慧豐富個人檔案分數可建立客戶細分，以根據其傾向分數尋找受眾。 本節提供使用區段產生器建立區段的步驟。
 translation-type: tm+mt
-source-git-commit: de16ebddd8734f082f908f5b6016a1d3eadff04c
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
-source-wordcount: '308'
+source-wordcount: '318'
 ht-degree: 0%
 
 ---
@@ -15,30 +15,30 @@ ht-degree: 0%
 
 # 建立具有預測分數的客戶細分
 
-當預測執行完成時，「設定檔」會自動使用預測傾向分數。 利用客戶人工智慧豐富個人檔案分數可建立客戶細分，以根據其傾向分數尋找受眾。 本節提供使用區段產生器建立區段的步驟。 如需建立區段的更強穩教學課程，請參閱「區段產 [生器」使用指南](../../../segmentation/ui/segment-builder.md)。
+當預測執行完成時，「設定檔」會自動使用預測傾向分數。 利用客戶人工智慧豐富個人檔案分數可建立客戶細分，以根據其傾向分數尋找受眾。 本節提供使用區段產生器建立區段的步驟。 如需建立區段的更強穩教學課程，請參閱[區段產生器使用指南](../../../segmentation/ui/segment-builder.md)。
 
 >[!IMPORTANT]
 >
 >為了運用此方法，資料集需要啟用即時客戶設定檔。
 
-在「平台UI」中，按一下左 **[!UICONTROL 側導覽中的]** 「區段」，然後按一下「 **[!UICONTROL 建立區段」]**。
+在平台UI中，按一下左側導覽中的&#x200B;**[!UICONTROL 區段]**，然後按一下「建立區段&#x200B;**[!UICONTROL 」。]**
 
 ![](../images/user-guide/segments.png)
 
-此時會 **顯示「區段產生** 器」。 在左側的 **[!UICONTROL 欄位]** ，在「屬性」標籤下，按一下名為「 **[!UICONTROL XDM Individual Profile]****** 」的檔案夾，然後按一下具有您組織名稱空間的檔案夾。 名為 **[!UICONTROL Customer AI]** 的資料夾包含預測執行的結果，並以分數所屬的例項命名。 按一下例項資料夾，以存取所需例項的結果。
+出現&#x200B;**區段產生器**。 從左&#x200B;**[!UICONTROL 欄位]**&#x200B;列和&#x200B;**[!UICONTROL 屬性]**&#x200B;頁籤下，按一下名為&#x200B;**[!UICONTROL XDM單個配置檔案]**&#x200B;的資料夾，然後按一下包含您組織名稱空間的資料夾。 名為&#x200B;**[!UICONTROL Customer AI]**&#x200B;的資料夾包含預測運行的結果，並以分數所屬的實例命名。 按一下例項資料夾，以存取所需例項的結果。
 
 ![](../images/user-guide/results.png)
 
-位於「區段產生器」的中心，將「分數」屬性拖放至 **[!UICONTROL 規則產生器畫布上，]** 以定義規則 ** 。
+位於區段產生器中心，將&#x200B;**[!UICONTROL Score]**&#x200B;屬性拖放至&#x200B;*規則產生器畫布*&#x200B;以定義規則。
 
-在右側的區段 *屬性欄* ，提供區段的名稱。
+在右側的&#x200B;*區段屬性*&#x200B;欄下，提供區段的名稱。
 
 ![](../images/user-guide/properties.png)
 
-在左側的「欄 *位* 」欄上方，按一下 **gear** 圖示，然後從下拉式清單中選取 *「合併* 」原則。 Click **[!UICONTROL Save]** to create the segment.
+在左側的&#x200B;*欄位*&#x200B;欄上，按一下&#x200B;**gear**&#x200B;圖示，然後從下拉式清單中選取&#x200B;*合併原則*。 按一下「儲存」以建立區段。****
 
 ![](../images/user-guide/merge_policy.png)
 
 ## 後續步驟
 
-透過本教學課程，您已使用「區段產生器」，根據受眾的傾向分數成功找到受眾。 您現在可以透過將受眾啟動至目標來定位受眾。 See the [destinations overview](../../../destinations/home.md) for more information.
+透過本教學課程，您已使用「區段產生器」，根據受眾的傾向分數成功找到受眾。 您現在可以透過將受眾啟動至目標來定位受眾。 如需詳細資訊，請參閱[目標概觀](../../../destinations/home.md)。
