@@ -1,21 +1,17 @@
 ---
 keywords: Awin Advertiser mastertag extension;mastertag tag;Awin;awin;AWIN
-title: Awin Advertiser Mastertag extension
-seo-title: Awin Advertiser Mastertag extension
+title: Awin Advertiser Mastertag Extension Destination
 description: Awin Advertiser Mastertag擴充功能是Adobe Experience Platform中的廣告目的地。 如需擴充功能的詳細資訊，請參閱Adobe Exchange的擴充功能頁面。
-seo-description: Awin Advertiser Mastertag擴充功能是Adobe Experience Platform中的廣告目的地。 如需擴充功能的詳細資訊，請參閱Adobe Exchange的擴充功能頁面。
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '549'
+source-wordcount: '518'
 ht-degree: 3%
 
 ---
 
 
 # [!DNL Awin Advertiser Mastertag] 擴充功能 {#awin-mastertag-extension}
-
-## 概述 {#overview}
 
 [!DNL MasterTag]是JavaScript程式庫，包含Awin追蹤解決方案所需的所有函式，且應無條件附加至網站上的每個頁面，包括確認頁面，但排除顯示或處理付款資訊的任何頁面。
 
