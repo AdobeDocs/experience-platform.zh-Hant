@@ -1,21 +1,17 @@
 ---
 keywords: JW player;jw player;JW Player;jw extension;JW extension
-title: JW Player Analytics(BETA)擴充功能
-seo-title: JW Player Analytics(BETA)擴充功能
-description: JW Player Analytics(BETA)擴充功能是Adobe Experience Platform中的分析目標。 如需擴充功能的詳細資訊，請參閱Adobe Exchange的擴充功能頁面。
-seo-description: JW Player Analytics(BETA)擴充功能是Adobe Experience Platform中的分析目標。 如需擴充功能的詳細資訊，請參閱Adobe Exchange的擴充功能頁面。
+title: JW Player Analytics（測試版）延伸模組目標
+description: JW Player Analytics（測試版）擴充功能是Adobe Experience Platform中的分析目標。 如需擴充功能的詳細資訊，請參閱Adobe Exchange的擴充功能頁面。
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 8d403e73a804953f9584d6a72f945d4444e65d11
 workflow-type: tm+mt
-source-wordcount: '578'
+source-wordcount: '545'
 ht-degree: 3%
 
 ---
 
 
 # [!DNL JW Player Analytics] （測試版）擴充功能  {#jw-player-analytics-extension}
-
-## 概述 {#overview}
 
 此擴充功能會安裝[!DNL JW Player]介面卡，以將[!DNL JW Player]事件連線至Adobe Video Analytics。 利用Adobe Video Analytics的強大功能，獲得深入見解，以瞭解客戶的視訊觀看習慣。
 
@@ -33,7 +29,7 @@ ht-degree: 3%
 
 ## 安裝擴展{#install-extension}
 
-要安裝[!DNL JW Player Analytics](BETA)擴展：
+要安裝[!DNL JW Player Analytics]（測試版）擴展：
 
 在[平台介面](http://platform.adobe.com/)中，轉至&#x200B;**[!UICONTROL 目標]** > **[!UICONTROL 目錄]**。
 
@@ -45,7 +41,7 @@ ht-degree: 3%
 
 工作流程會帶您前往Platform Launch以完成安裝。
 
-如需擴充功能設定選項的詳細資訊，請參閱Adobe Exchange中的[JW Player Analytics(BETA)擴充功能頁面](https://exchange.adobe.com/experiencecloud.details.101523.jw-player-analytics-launch-extension.html)。
+如需擴充功能設定選項的詳細資訊，請參閱Adobe Exchange中的[JW Player Analytics(Beta)擴充功能頁面](https://exchange.adobe.com/experiencecloud.details.101523.jw-player-analytics-launch-extension.html)。
 
 您也可以直接在[Adobe Experience Platform Launch介面](https://launch.adobe.com/tw/)中安裝擴充功能。 請參閱Platform Launch檔案中的[新增副檔名](https://experienceleague.adobe.com/docs/launch/using/reference/manage-resources/extensions/overview.html?lang=en#add-a-new-extension)。
 
