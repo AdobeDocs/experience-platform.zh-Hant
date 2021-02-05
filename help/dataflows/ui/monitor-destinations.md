@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics;monitor accounts;monitor dataflows;dataflows;destinations
+keywords: Experience Platform; home；熱門主題；監視器帳戶；監視器資料流；資料流；目標
 description: 目標可讓您將Adobe Experience Platform中的資料啟動給無數外部合作夥伴。 本教學課程提供如何使用Experience Platform使用者介面監控目的地資料流的指示。
 solution: Experience Platform
-title: 監視資料流
+title: 在UI中監視目標的資料流
 topic: overview
 type: Tutorial
 translation-type: tm+mt
-source-git-commit: 12a6682b6e28e656899aee5c38d3bb4a84bcdd2f
+source-git-commit: f8186e467dc982003c6feb01886ed16d23572955
 workflow-type: tm+mt
-source-wordcount: '426'
+source-wordcount: '442'
 ht-degree: 1%
 
 ---
@@ -27,7 +27,7 @@ ht-degree: 1%
 
 ## 監視資料流
 
-在「平 **[!UICONTROL 台]** 」UI的「目標」工作區中，導覽至「瀏覽 **** 」標籤並選取您要檢視的目標名稱。
+在平台UI的&#x200B;**[!UICONTROL 目標]**&#x200B;工作區中，導覽至&#x200B;**[!UICONTROL 瀏覽]**&#x200B;標籤，並選取您要檢視的目標名稱。
 
 ![](../assets/ui/monitor-destinations/select-destination.png)
 
@@ -37,17 +37,17 @@ ht-degree: 1%
 
 | 狀態 | 說明 |
 | ------ | ----------- |
-| 啟用 | 狀 `Enabled` 態表示資料流處於活動狀態，並正在根據提供的時間表接收資料。 |
-| 停用 | 狀 `Disabled` 態表示資料流處於非活動狀態且未吸收任何資料。 |
-| 正在處理 | 狀 `Processing` 態表示資料流尚未激活。 建立新資料流後，通常會立即出現此狀態。 |
-| 錯誤 | 狀態 `Error` 表示資料流的激活過程已中斷。 |
+| 啟用 | `Enabled`狀態表示資料流處於活動狀態，並正在根據提供的時間表接收資料。 |
+| 停用 | `Disabled`狀態表示資料流處於非活動狀態，且未接收任何資料。 |
+| 正在處理 | `Processing`狀態表示資料流尚未激活。 建立新資料流後，通常會立即出現此狀態。 |
+| 錯誤 | `Error`狀態表示資料流的激活過程已中斷。 |
 
 ## [!UICONTROL 資料流運行]
 
-「數 [!UICONTROL 據流運行] 」頁籤提供資料流運行到批處理目標的度量資料。 會顯示個別執行及其特定度量的清單，以及下列描述檔記錄總計：
+[!UICONTROL 資料流運行]頁籤提供了資料流運行到批處理目標的度量資料。 會顯示個別執行及其特定度量的清單，以及下列描述檔記錄總計：
 
 - **[!UICONTROL 已激活配置檔案記錄]**:為啟動而建立或更新的描述檔記錄總計。
-- **[!UICONTROL 已略過描述檔記錄]**: 根據描述檔退出或遺失屬性，跳過以進行啟動的描述檔記錄總計。
+- **[!UICONTROL 已略過描述檔記錄]**:根據描述檔退出或遺失屬性，跳過以進行啟動的描述檔記錄總計。
 
 ![](../assets/ui/monitor-destinations/dataflow-runs.png)
 
