@@ -5,7 +5,7 @@ title: 資料使用政策概觀
 topic: policies
 description: 為了讓資料使用標籤有效支援資料合規性，必須實作資料使用政策。 資料使用原則是描述您在Experience Platform內對資料執行的行銷動作類型或限制的規則。
 translation-type: tm+mt
-source-git-commit: 2dbd92efbd992b70f4f750b09e9d2e0626e71315
+source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
 workflow-type: tm+mt
 source-wordcount: '1010'
 ht-degree: 0%
