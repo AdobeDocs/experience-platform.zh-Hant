@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform;home;popular topics;query service;api guide;connection parameters;Query service;
 solution: Experience Platform
-title: 查詢服務開發人員指南
+title: 連接參數API端點
 topic: connection parameters
 description: 通過向/connection_parameters端點發出GET請求，可以檢索連接參數以使用互動式服務。
 translation-type: tm+mt
-source-git-commit: 648544bc60c0cee8ca8b167118391980b6c33d91
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
-source-wordcount: '147'
+source-wordcount: '148'
 ht-degree: 1%
 
 ---
 
 
-# 連接參數
+# 連接參數端點
 
 ## 範例API呼叫
 
