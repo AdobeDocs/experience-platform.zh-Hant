@@ -1,21 +1,17 @@
 ---
 keywords: LinkedIn;linkedin;Linkedin;LinkedIn Insight Tag;insight tag;Insight Tag
-title: LinkedIn In Insight標籤擴充功能
-seo-title: LinkedIn In Insight標籤擴充功能
+title: LinkedIn In Insight標籤擴充功能目標
 description: LinkedIn Insight Tag擴充功能是Adobe Experience Platform中的廣告目的地。 如需擴充功能的詳細資訊，請參閱Adobe Exchange的擴充功能頁面。
-seo-description: LinkedIn Insight Tag擴充功能是Adobe Experience Platform中的廣告目的地。 如需擴充功能的詳細資訊，請參閱Adobe Exchange的擴充功能頁面。
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '546'
+source-wordcount: '515'
 ht-degree: 3%
 
 ---
 
 
 # [!DNL LinkedIn Insight Tag] 擴充功能 {#linkedin-insights-extension}
-
-## 概述 {#overview}
 
 安裝[!DNL LinkedIn Insight Tag]以使用轉換追蹤、重新定位和網站人口統計功能。
 
