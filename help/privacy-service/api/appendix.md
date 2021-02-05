@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform;home；熱門主題
 solution: Experience Platform
-title: 隱私權服務API開發人員指南附錄
+title: 隱私權服務API指南附錄
 topic: developer guide
 description: 本檔案包含使用隱私權服務API的其他資訊。
 translation-type: tm+mt
-source-git-commit: 5dad1fcc82707f6ee1bf75af6c10d34ff78ac311
+source-git-commit: b395535cbe7e4030606ee2808eb173998f5c32e0
 workflow-type: tm+mt
-source-wordcount: '498'
+source-wordcount: '501'
 ht-degree: 9%
 
 ---
 
 
-# 附錄
+# 隱私權服務API指南附錄
 
 以下各節包含使用Adobe Experience Platform Privacy Service API的其他資訊。
 
