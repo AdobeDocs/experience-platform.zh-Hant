@@ -1,23 +1,23 @@
 ---
 keywords: Experience Platform; home；熱門主題；資料治理；資料使用標籤；策略服務；資料使用標籤使用手冊
 solution: Experience Platform
-title: 資料使用標籤使用指南
+title: 在UI中管理資料使用標籤
 topic: labels
-description: 本使用指南涵蓋在Adobe Experience Platform使用者介面中使用資料使用標籤的步驟。
+description: 本指南涵蓋在Adobe Experience Platform使用者介面中使用資料使用標籤的步驟。
 translation-type: tm+mt
-source-git-commit: 00010d38a5d05800aeac9af8505093fee3593b45
+source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
 workflow-type: tm+mt
-source-wordcount: '1136'
+source-wordcount: '1134'
 ht-degree: 0%
 
 ---
 
 
-# 資料使用標籤使用指南
+# 在UI中管理資料使用標籤
 
 本使用指南涵蓋在[!DNL Experience Platform]使用者介面中使用資料使用標籤的步驟。 在使用指南之前，請參閱[[!DNL Data Governance] overview](../home.md)以取得[!DNL Data Governance]架構的更強穩簡介。
 
-## 在資料集層級管理資料使用標籤
+## 在資料集層級管理標籤
 
 若要在資料集層級管理資料使用標籤，您必須選取現有的資料集或建立新的資料集。 登入Adobe Experience Platform後，在左側導覽中選取&#x200B;**[!UICONTROL Datasets]**&#x200B;以開啟&#x200B;**[!UICONTROL Datasets]**&#x200B;工作區。 此頁列出屬於您組織的所有已建立資料集，以及與每個資料集相關的有用詳細資訊。
 
@@ -75,7 +75,7 @@ ht-degree: 0%
 
 ![隱藏繼承的標籤](../images/labels/hide_inherited_labels.png)
 
-## 在資料集欄位層級管理資料使用標籤
+## 在欄位層級管理標籤
 
 繼續[在資料集層級](#add-labels)新增和編輯資料使用標籤的工作流程，您也可以在該資料集的&#x200B;**[!UICONTROL 資料控管]**&#x200B;工作區中管理欄位層級標籤。
 
