@@ -1,21 +1,17 @@
 ---
 keywords: Google廣告；google廣告；google廣告延伸；Google廣告延伸
-title: Google Ads擴充功能
-seo-title: Google Ads擴充功能
+title: Google Ads Extension Destination
 description: Google Ads擴充功能是Adobe Experience Platform中的廣告目的地。 如需擴充功能的詳細資訊，請參閱Adobe Exchange的擴充功能頁面。
-seo-description: Google Ads擴充功能是Adobe Experience Platform中的廣告目的地。 如需擴充功能的詳細資訊，請參閱Adobe Exchange的擴充功能頁面。
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '567'
+source-wordcount: '538'
 ht-degree: 3%
 
 ---
 
 
 # [!DNL Google Ads] 擴充功能
-
-## 概述 {#overview}
 
 此擴充功能會追蹤點按[!DNL Google Ads]的使用者轉換。 您也需要安裝gtag.js擴充功能並將它新增至程式庫，因為[!DNL Google Ads]會依此而定。
 
