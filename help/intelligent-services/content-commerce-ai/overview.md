@@ -1,13 +1,13 @@
 ---
-keywords: Experience Cloud;getting started;content and commerce ai;popular topics;Intelligent Services;ccai
+keywords: Experience Cloud；快速入門；內容與商務ai；熱門主題；智慧服務；ccai
 solution: Experience Cloud, Intelligent Services, Experience Platform
 title: 內容與商務AI概觀
 topic: Content and Commerce AI
 description: 內容與商務AI是一組AI服務，可讓您從內容中擷取智慧功能、組織、簡化內容流程，並為客戶提供更具影響力的個人化體驗。
 translation-type: tm+mt
-source-git-commit: de16ebddd8734f082f908f5b6016a1d3eadff04c
+source-git-commit: eb163949f91b0d1e9cc23180bb372b6f94fc951f
 workflow-type: tm+mt
-source-wordcount: '406'
+source-wordcount: '419'
 ht-degree: 1%
 
 ---
@@ -29,8 +29,8 @@ ht-degree: 1%
 
 | 內容類型 | 功能 | 功能概觀 |
 | --- | --- | --- |
-| 文字 | -關鍵字與實體擷取 <br>-自訂分類器 | -使用現成可用的AI服務，自動從企業檔案和網頁擷取關鍵字和標籤。 <br> -使用自訂AI模型所建立的服務，根據公司分類法自動為企業的檔案或網頁加上標籤。 |
-| 影像 | -視覺化建 <br> 議——色彩擷取 | -運用以直覺式產品功能（設計、色彩、形狀）開發的AI模型，向消費者提供視覺上類似的產品建議。 <br> -從產品影像中精確擷取主導色彩（標籤和十六進位值）及其權重。 |
+| 文字 | -關鍵字與實體提取<br>-自訂分類器 | -使用現成可用的AI服務，自動從企業檔案和網頁擷取關鍵字和標籤。 <br> -使用自訂AI模型所建立的服務，根據公司分類法自動為企業的檔案或網頁加上標籤。 |
+| 影像 | -視覺化建議<br> —— 色彩擷取 | -運用以直覺式產品功能（設計、色彩、形狀）開發的AI模型，向消費者提供視覺上類似的產品建議。 <br> -從產品影像中精確擷取主導色彩（標籤和十六進位值）及其權重。 |
 
 ## 瞭解內容與商務AI
 
