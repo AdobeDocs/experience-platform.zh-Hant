@@ -1,25 +1,25 @@
 ---
-keywords: Experience Platform;getting started;customer ai;popular topics;customer ai input;customer ai output
+keywords: Experience Platform；快速入門；客戶ai；熱門主題；客戶ai輸入；客戶ai輸出
 solution: Experience Platform, Intelligent Services, Real-time Customer Data Platform
 title: 客戶人工智慧的輸入與輸出
 topic: Getting started
 description: 以下檔案概述Customer AI中使用的不同輸入和輸出。
 translation-type: tm+mt
-source-git-commit: de16ebddd8734f082f908f5b6016a1d3eadff04c
+source-git-commit: eb163949f91b0d1e9cc23180bb372b6f94fc951f
 workflow-type: tm+mt
-source-wordcount: '824'
+source-wordcount: '840'
 ht-degree: 1%
 
 ---
 
 
-# 客戶人工智慧的輸入與輸出
+# 客戶人工智慧中的輸入與輸出
 
 以下檔案概述Customer AI中使用的不同輸入和輸出。
 
 ## 客戶人工智慧輸入資料
 
-客戶人工智慧使用消費者體驗事件資料來計算傾向分數。 有關消費者體驗事件的詳細資訊，請參閱「準 [備要在智慧型服務檔案中使用的資料」](../data-preparation.md)。
+客戶人工智慧使用消費者體驗事件資料來計算傾向分數。 如需消費者體驗事件的詳細資訊，請參閱[準備資料以用於智慧型服務檔案](../data-preparation.md)。
 
 ### 歷史資料
 
@@ -68,4 +68,4 @@ ht-degree: 1%
 
 ## 下一步 {#next-steps}
 
-準備好資料並準備好所有憑證和結構描述後，請先遵循「設定客戶人工智慧 [例項」指南](./user-guide/configure.md) 。 本指南會逐步帶您建立客戶人工智慧的例項。
+準備好資料並準備好所有憑證和結構描述後，請從[設定客戶AI實例指南開始。 ](./user-guide/configure.md)本指南會逐步帶您建立客戶人工智慧的例項。
