@@ -1,27 +1,27 @@
 ---
 keywords: Experience Platform;home;popular topics;query service;run scheduled queries;run scheduled query;Query service;scheduled queries;scheduled query;
 solution: Experience Platform
-title: 查詢服務開發人員指南
+title: 排程查詢執行API端點
 topic: runs for scheduled queries
 description: 以下各節將逐步介紹您可以使用查詢服務API來針對執行排程查詢所進行的各種API呼叫。
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
-source-wordcount: '676'
+source-wordcount: '696'
 ht-degree: 2%
 
 ---
 
 
-# 針對排程查詢執行
+# 排程查詢執行端點
 
 ## 範例API呼叫
 
-現在，您已瞭解要使用哪些標題，可以開始呼叫 [!DNL Query Service] API。 以下各節將介紹您可使用API進行的各種API [!DNL Query Service] 呼叫。 每個呼叫都包含一般API格式、顯示必要標題的範例要求，以及範例回應。
+現在您已瞭解要使用哪些標題，可以開始呼叫[!DNL Query Service] API。 以下各節將介紹您可使用[!DNL Query Service] API進行的各種API呼叫。 每個呼叫都包含一般API格式、顯示必要標題的範例要求，以及範例回應。
 
 ### 擷取指定之排程查詢之所有執行的清單
 
-您可以擷取特定排程查詢的所有執行清單，不論這些執行目前是否已執行。 這是通過向端點發出GET請求來完 `/schedules/{SCHEDULE_ID}/runs` 成的，其中 `{SCHEDULE_ID}` 是 `id` 要檢索其運行的已調度查詢的值。
+您可以擷取特定排程查詢的所有執行清單，不論這些執行目前是否已執行。 這是通過向`/schedules/{SCHEDULE_ID}/runs`端點發出GET請求來完成的，其中`{SCHEDULE_ID}`是要檢索其運行的已調度查詢的`id`值。
 
 **API格式**
 
@@ -32,8 +32,8 @@ GET /schedules/{SCHEDULE_ID}/runs?{QUERY_PARAMETERS}
 
 | 屬性 | 說明 |
 | -------- | ----------- |
-| `{SCHEDULE_ID}` | 要 `id` 檢索的計畫查詢的值。 |
-| `{QUERY_PARAMETERS}` | (可&#x200B;*選*)新增至請求路徑的參數，用以設定回應中傳回的結果。 可包含多個參數，由&amp;符號(`&`)分隔。 以下列出可用參數。 |
+| `{SCHEDULE_ID}` | 您要擷取之排程查詢的`id`值。 |
+| `{QUERY_PARAMETERS}` | （*可選*）新增至請求路徑的參數，用以設定回應中傳回的結果。 可以包括多個參數，用&amp;符號(`&`)分隔。 以下列出可用參數。 |
 
 **查詢參數**
 
@@ -41,10 +41,10 @@ GET /schedules/{SCHEDULE_ID}/runs?{QUERY_PARAMETERS}
 
 | 參數 | 說明 |
 | --------- | ----------- |
-| `orderby` | 指定結果排序依據的欄位。 支援的欄位 `created` 為和 `updated`。 例如，將 `orderby=created` 依據以升序建立的結果排序。 在建立 `-` 前新增(`orderby=-created`)，將依建立項目的遞減順序排序。 |
-| `limit` | 指定頁面大小限制，以控制包含在頁面中的結果數。 (*Default value: 20*) |
-| `start` | 使用零編號來偏移響應清單。 例如，將 `start=2` 返回從第三個列出查詢開始的清單。 (*Default value: 0*) |
-| `property` | 根據欄位篩選結果。 篩選器 **必須** HTML逸出。 逗號可用來組合多組篩選器。 支援的欄位 `created`有、 `state`和 `externalTrigger`。 支援的運算子 `>` 清單有（大於）、 `<` （小於）、 `==` （等於） `!=` 和（不等於）。 例如，將傳 `externalTrigger==true,state==SUCCESS,created>2019-04-20T13:37:00Z` 回在2019年4月20日之後手動建立、成功和建立的所有執行。 |
+| `orderby` | 指定結果排序依據的欄位。 支援的欄位有`created`和`updated`。 例如，`orderby=created`會依建立結果的升序排序。 在建立前新增`-`(`orderby=-created`)，將依遞減順序排序建立的項目。 |
+| `limit` | 指定頁面大小限制，以控制包含在頁面中的結果數。 (*預設值：20*) |
+| `start` | 使用零編號來偏移響應清單。 例如，`start=2`將返回從第三個列出的查詢開始的清單。 (*預設值：0*) |
+| `property` | 根據欄位篩選結果。 篩選器&#x200B;**必須**&#x200B;為HTML逸出。 逗號可用來組合多組篩選器。 支援的欄位有`created`、`state`和`externalTrigger`。 支援的運算子清單包括`>`（大於）、`<`（小於）、`==`（等於）和`!=`（不等於）。 例如，`externalTrigger==true,state==SUCCESS,created>2019-04-20T13:37:00Z`將傳回在2019年4月20日之後手動建立、成功和建立的所有執行。 |
 
 **請求**
 
@@ -150,11 +150,11 @@ curl -X GET https://platform.adobe.io/data/foundation/query/schedules/e95186d65a
 
 >[!NOTE]
 >
->您可以使用的值來 `_links.cancel` 停 [止指定計畫查詢的運行](#immediately-stop-a-run-for-a-specific-scheduled-query)。
+>您可以使用`_links.cancel`的值來停止對指定計畫查詢的運行](#immediately-stop-a-run-for-a-specific-scheduled-query)。[
 
 ### 立即觸發特定排程查詢的執行
 
-通過向端點發出POST請求，可立即觸發指定計畫查詢的運行， `/schedules/{SCHEDULE_ID}/runs` 其中 `{SCHEDULE_ID}``id` 是要觸發其運行的計畫查詢的值。
+通過向`/schedules/{SCHEDULE_ID}/runs`端點發出POST請求，您可以立即觸發指定計畫查詢的運行，其中`{SCHEDULE_ID}`是要觸發其運行的計畫查詢的`id`值。
 
 **API格式**
 
@@ -185,7 +185,7 @@ curl -X POST https://platform.adobe.io/data/foundation/query/schedules/e95186d65
 
 ### 擷取特定排程查詢之執行的詳細資料
 
-您可以對端點發出GET請求，並同時提供已排程查詢的ID和請求路徑中的執行，以擷取特定已排程查詢之執行的詳細資訊。 `/schedules/{SCHEDULE_ID}/runs/{RUN_ID}`
+通過向`/schedules/{SCHEDULE_ID}/runs/{RUN_ID}`端點發出GET請求，並同時提供計畫查詢的ID和請求路徑中的運行，可以檢索有關特定計畫查詢運行的詳細資訊。
 
 **API格式**
 
@@ -195,8 +195,8 @@ GET /schedules/{SCHEDULE_ID}/runs/{RUN_ID}
 
 | 屬性 | 說明 |
 | -------- | ----------- |
-| `{SCHEDULE_ID}` | 要 `id` 檢索其運行的計畫查詢的詳細資訊的值。 |
-| `{RUN_ID}` | 您要 `id` 擷取之執行的值。 |
+| `{SCHEDULE_ID}` | 要檢索其運行的計畫查詢的`id`值。 |
+| `{RUN_ID}` | 您要擷取之執行的`id`值。 |
 
 **請求**
 
@@ -246,7 +246,7 @@ curl -X GET https://platform.adobe.io/data/foundation/query/schedules/e95186d65a
 
 ### 立即停止特定計畫查詢的運行
 
-通過向端點發出PATCH請求並同時提供已調度查詢的ID和請求路徑中的運行，可以立即停止特定已調度查詢的運行。 `/schedules/{SCHEDULE_ID}/runs/{RUN_ID}`
+通過向`/schedules/{SCHEDULE_ID}/runs/{RUN_ID}`端點發出PATCH請求並同時提供計畫查詢的ID和請求路徑中的運行，可以立即停止特定計畫查詢的運行。
 
 **API格式**
 
@@ -256,8 +256,8 @@ PATCH /schedules/{SCHEDULE_ID}/runs/{RUN_ID}
 
 | 屬性 | 說明 |
 | -------- | ----------- |
-| `{SCHEDULE_ID}` | 要 `id` 檢索其運行的計畫查詢的詳細資訊的值。 |
-| `{RUN_ID}` | 您要 `id` 擷取之執行的值。 |
+| `{SCHEDULE_ID}` | 要檢索其運行的計畫查詢的`id`值。 |
+| `{RUN_ID}` | 您要擷取之執行的`id`值。 |
 
 **請求**
 
