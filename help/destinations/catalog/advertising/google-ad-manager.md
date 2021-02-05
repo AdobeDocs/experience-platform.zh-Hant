@@ -1,21 +1,17 @@
 ---
 keywords: google廣告管理員；google廣告；doubleclick;DoubleClick AdX;DoubleClick;Google廣告管理員；Google廣告管理員
-title: Google廣告管理員目標
-seo-title: Google廣告管理員目標
-description: 'Google Ad Manager之前稱為DoubleClick for Publishers或DoubleClick AdX，是來自谷歌的廣告服務平台，可讓出版業者透過視訊和行動應用程式管理其網站上的廣告展示。 '
-seo-description: 'Google Ad Manager之前稱為DoubleClick for Publishers或DoubleClick AdX，是來自谷歌的廣告服務平台，可讓出版業者透過視訊和行動應用程式管理其網站上的廣告展示。 '
+title: Google Ad Manager連線目標
+description: 'Google Ad Manager之前稱為DoubleClick for Publishers或DoubleClick AdX，是來自谷歌的廣告服務平台，可讓出版業者透過視訊和行動應用程式管理其網站上的廣告展示。  '
 translation-type: tm+mt
-source-git-commit: bb2fc2658d32c59b476dd9d526eb8bc2f055a1af
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '718'
+source-wordcount: '676'
 ht-degree: 0%
 
 ---
 
 
-# [!DNL Google Ad Manager Destination]
-
-## 概述
+# [!DNL Google Ad Manager] 連接
 
 [!DNL Google Ad Manager](之前稱為「發 [!DNL DoubleClick] 布者」或 [!DNL DoubleClick AdX]「發佈者」)是廣告服務平台，可 [!DNL Google] 讓發佈者透過視訊和行動應用程式管理其網站上的廣告顯示。
 
