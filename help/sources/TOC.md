@@ -5,10 +5,10 @@ user-guide-title: Adobe Experience Platform 來源連接器說明
 breadcrumb-title: 來源連接器指南
 user-guide-description: 從多種來源或結構擷取資料、加標籤，以及增強已擷取的資料。
 translation-type: tm+mt
-source-git-commit: 2940f030aa21d70cceeedc7806a148695f68739e
+source-git-commit: a489ab248793a063295578943ad600d8eacab6a2
 workflow-type: tm+mt
-source-wordcount: '663'
-ht-degree: 4%
+source-wordcount: '551'
+ht-degree: 12%
 
 ---
 
@@ -22,10 +22,10 @@ ht-degree: 4%
       - [Analytics資料連接器](connectors/adobe-applications/analytics.md)
       - [Audience Manager連接器](connectors/adobe-applications/audience-manager.md)
       - [客戶屬性連接器](connectors/adobe-applications/customer-attributes.md)
-      - 對應Adobe應用程式欄位{#mapping}
-         - [Analytics對應欄位](connectors/adobe-applications/mapping/analytics.md)
-         - [Audience Manager對應欄位](connectors/adobe-applications/mapping/audience-manager.md)
-         - [目標映射欄位](connectors/adobe-applications/mapping/target.md)
+      - Adobe應用程式欄位對應{#mapping}
+         - [Analytics欄位對應](connectors/adobe-applications/mapping/analytics.md)
+         - [Audience Manager欄位對應](connectors/adobe-applications/mapping/audience-manager.md)
+         - [目標欄位映射](connectors/adobe-applications/mapping/target.md)
    - 廣告 {#advertising}
       - [Google AdWords連接器](connectors/advertising/ads.md)
    - 雲端儲存空間{#cloud-storage}
@@ -72,51 +72,51 @@ ht-degree: 4%
    - 協定{#protocols}
       - [通用OData連接器](connectors/protocols/odata.md)
 - API教學課程{#api-tutorials}
-   - 建立源連接器{#create}
+   - 建立源連接{#create}
       - 廣告 {#advertising}
-         - [Google AdWords連接器](tutorials/api/create/advertising/ads.md)
+         - [Google AdWords](tutorials/api/create/advertising/ads.md)
       - 雲端儲存空間{#cloud-storage}
          - [Amazon Kinesis](tutorials/api/create/cloud-storage/kinesis.md)
-         - [Amazon S3連接器](tutorials/api/create/cloud-storage/s3.md)
-         - [Apache HDFS連接器](tutorials/api/create/cloud-storage/hdfs.md)
-         - [Azure Blob連接器](tutorials/api/create/cloud-storage/blob.md)
-         - [Azure Data Lake Storage Gen2連接器](tutorials/api/create/cloud-storage/adls-gen2.md)
-         - [Azure事件集線器連接器](tutorials/api/create/cloud-storage/eventhub.md)
-         - [Azure檔案儲存連接器](tutorials/api/create/cloud-storage/azure-file-storage.md)
-         - [FTP連接器](tutorials/api/create/cloud-storage/ftp.md)
-         - [Google雲端儲存空間連接器](tutorials/api/create/cloud-storage/google.md)
-         - [SFTP連接器](tutorials/api/create/cloud-storage/sftp.md)
+         - [Amazon S3](tutorials/api/create/cloud-storage/s3.md)
+         - [Apache HDFS](tutorials/api/create/cloud-storage/hdfs.md)
+         - [Azure Blob](tutorials/api/create/cloud-storage/blob.md)
+         - [Azure Data Lake Storage Gen2](tutorials/api/create/cloud-storage/adls-gen2.md)
+         - [Azure事件集線器](tutorials/api/create/cloud-storage/eventhub.md)
+         - [Azure檔案儲存](tutorials/api/create/cloud-storage/azure-file-storage.md)
+         - [FTP](tutorials/api/create/cloud-storage/ftp.md)
+         - [Google雲端儲存空間](tutorials/api/create/cloud-storage/google.md)
+         - [SFTP](tutorials/api/create/cloud-storage/sftp.md)
       - CRM {#crm}
-         - [Microsoft Dynamics連接器](tutorials/api/create/crm/ms-dynamics.md)
-         - [Salesforce連接器](tutorials/api/create/crm/salesforce.md)
+         - [Microsoft Dynamics](tutorials/api/create/crm/ms-dynamics.md)
+         - [Salesforce](tutorials/api/create/crm/salesforce.md)
       - 客戶成功{#customer-success}
-         - [Salesforce Service Cloud連接器](tutorials/api/create/customer-success/salesforce-service-cloud.md)
-         - [ServiceNow連接器](tutorials/api/create/customer-success/servicenow.md)
+         - [Salesforce Service Cloud](tutorials/api/create/customer-success/salesforce-service-cloud.md)
+         - [ServiceNow](tutorials/api/create/customer-success/servicenow.md)
       - 資料庫{#databases}
-         - [Amazon Redshift連接器](tutorials/api/create/databases/redshift.md)
-         - [Apache Hive on Azure HDInsights連接器](tutorials/api/create/databases/hive.md)
-         - [Apache Spark on Azure HDInsights連接器](tutorials/api/create/databases/spark.md)
-         - [Azure資料總管連接器](tutorials/api/create/databases/data-explorer.md)
-         - [Azure Synapse Analytics連接器](tutorials/api/create/databases/synapse-analytics.md)
-         - [Azure表格儲存連接器](tutorials/api/create/databases/ats.md)
-         - [Couchbase連接器](tutorials/api/create/databases/couchbase.md)
-         - [Google BigQuery連接器](tutorials/api/create/databases/bigquery.md)
-         - [GreenPlum連接器](tutorials/api/create/databases/greenplum.md)
-         - [HP Vertica連接器](tutorials/api/create/databases/hp-vertica.md)
-         - [IBM DB2連接器](tutorials/api/create/databases/ibm-db2.md)
-         - [MySQL連接器](tutorials/api/create/databases/mysql.md)
-         - [Oracle連接器](tutorials/api/create/databases/oracle.md)
-         - [菲尼克斯連接器](tutorials/api/create/databases/phoenix.md)
-         - [PostgreSQL連接器](tutorials/api/create/databases/postgres.md)
-         - [SQL Server連接器](tutorials/api/create/databases/sql-server.md)
+         - [Amazon Redshift](tutorials/api/create/databases/redshift.md)
+         - [Apache Hive on Azure HDInsights](tutorials/api/create/databases/hive.md)
+         - [Apache Spark on Azure HDInsights](tutorials/api/create/databases/spark.md)
+         - [Azure資料總管](tutorials/api/create/databases/data-explorer.md)
+         - [Azure突觸分析](tutorials/api/create/databases/synapse-analytics.md)
+         - [Azure表格儲存](tutorials/api/create/databases/ats.md)
+         - [庫克巴塞](tutorials/api/create/databases/couchbase.md)
+         - [Google BigQuery](tutorials/api/create/databases/bigquery.md)
+         - [綠梅](tutorials/api/create/databases/greenplum.md)
+         - [HP Vertica](tutorials/api/create/databases/hp-vertica.md)
+         - [IBM DB2](tutorials/api/create/databases/ibm-db2.md)
+         - [MySQL](tutorials/api/create/databases/mysql.md)
+         - [Oracle](tutorials/api/create/databases/oracle.md)
+         - [鳳凰城](tutorials/api/create/databases/phoenix.md)
+         - [PostgreSQL](tutorials/api/create/databases/postgres.md)
+         - [SQL Server](tutorials/api/create/databases/sql-server.md)
       - 電子商務 {#ecommerce}
-         - [Shopify連接器](tutorials/api/create/ecommerce/shopify.md)
+         - [Shopify](tutorials/api/create/ecommerce/shopify.md)
       - 行銷自動化{#marketing-automation}
-         - [HubSpot連接器](tutorials/api/create/marketing-automation/hubspot.md)
+         - [HubSpot](tutorials/api/create/marketing-automation/hubspot.md)
       - 付款{#payments}
-         - [PayPal連接器](tutorials/api/create/payments/paypal.md)
+         - [PayPal](tutorials/api/create/payments/paypal.md)
       - 協定{#protocols}
-         - [通用OData連接器](tutorials/api/create/protocols/odata.md)
+         - [通用OData](tutorials/api/create/protocols/odata.md)
    - 探索資料{#explore}
       - [探索廣告資料](tutorials/api/explore/advertising.md)
       - [探索雲端儲存空間資料](tutorials/api/explore/cloud-storage.md)
@@ -145,68 +145,68 @@ ht-degree: 4%
    - [刪除連線](tutorials/api/delete.md)
    - [刪除資料流](tutorials/api/delete-dataflows.md)
 - UI教學課程{#ui-tutorials}
-   - 建立源連接器{#create}
+   - 建立源連接{#create}
       - Adobe應用程式{#adobe-applications}
-         - [Adobe Analytics分類資料連接器](tutorials/ui/create/adobe-applications/classifications.md)
-         - [Adobe Analytics連接器](tutorials/ui/create/adobe-applications/analytics.md)
-         - [Adobe Audience Manager連接器](tutorials/ui/create/adobe-applications/audience-manager.md)
-         - [客戶屬性連接器](tutorials/ui/create/adobe-applications/customer-attributes.md)
+         - [Adobe Analytics（報表套裝資料）](tutorials/ui/create/adobe-applications/analytics.md)
+         - [Adobe Analytics（分類資料）](tutorials/ui/create/adobe-applications/classifications.md)
+         - [Adobe Audience Manager](tutorials/ui/create/adobe-applications/audience-manager.md)
+         - [客戶屬性](tutorials/ui/create/adobe-applications/customer-attributes.md)
       - 廣告 {#create}
-         - [Google AdWords連接器](tutorials/ui/create/advertising/ads.md)
+         - [Google AdWords](tutorials/ui/create/advertising/ads.md)
       - 雲端儲存空間{#cloud-storage}
-         - [Amazon Kinesis連接器](tutorials/ui/create/cloud-storage/kinesis.md)
-         - [Amazon S3連接器](tutorials/ui/create/cloud-storage/s3.md)
-         - [Apache HDFS連接器](tutorials/ui/create/cloud-storage/hdfs.md)
-         - [Azure Data Lake Storage Gen2連接器](tutorials/ui/create/cloud-storage/adls-gen2.md)
-         - [Azure Blob連接器](tutorials/ui/create/cloud-storage/blob.md)
-         - [Azure事件集線器連接器](tutorials/ui/create/cloud-storage/eventhub.md)
-         - [Azure檔案儲存連接器](tutorials/ui/create/cloud-storage/azure-file-storage.md)
-         - [FTP連接器](tutorials/ui/create/cloud-storage/ftp.md)
-         - [Google雲端儲存空間連接器](tutorials/ui/create/cloud-storage/google-cloud-storage.md)
-         - [SFTP連接器](tutorials/ui/create/cloud-storage/sftp.md)
-         - [Amazon S3和Blob連接器](tutorials/ui/create/cloud-storage/blob-s3.md)
+         - [Amazon Kinesis](tutorials/ui/create/cloud-storage/kinesis.md)
+         - [Amazon S3](tutorials/ui/create/cloud-storage/s3.md)
+         - [Apache HDFS](tutorials/ui/create/cloud-storage/hdfs.md)
+         - [Azure Data Lake Storage Gen2](tutorials/ui/create/cloud-storage/adls-gen2.md)
+         - [Azure Blob](tutorials/ui/create/cloud-storage/blob.md)
+         - [Azure事件集線器](tutorials/ui/create/cloud-storage/eventhub.md)
+         - [Azure檔案儲存](tutorials/ui/create/cloud-storage/azure-file-storage.md)
+         - [FTP](tutorials/ui/create/cloud-storage/ftp.md)
+         - [Google雲端儲存空間](tutorials/ui/create/cloud-storage/google-cloud-storage.md)
+         - [SFTP](tutorials/ui/create/cloud-storage/sftp.md)
+         - [Amazon S3和Blob](tutorials/ui/create/cloud-storage/blob-s3.md)
       - CRM {#crm}
-         - [Microsoft Dynamics連接器](tutorials/ui/create/crm/dynamics.md)
-         - [Salesforce連接器](tutorials/ui/create/crm/salesforce.md)
+         - [Microsoft Dynamics](tutorials/ui/create/crm/dynamics.md)
+         - [Salesforce](tutorials/ui/create/crm/salesforce.md)
       - 客戶成功{#customer-success}
-         - [Salesforce Service Cloud連接器](tutorials/ui/create/customer-success/salesforce-service-cloud.md)
-         - [ServiceNow連接器](tutorials/ui/create/customer-success/servicenow.md)
+         - [Salesforce Service Cloud](tutorials/ui/create/customer-success/salesforce-service-cloud.md)
+         - [ServiceNow](tutorials/ui/create/customer-success/servicenow.md)
       - 資料庫{#databases}
-         - [Amazon Redshift連接器](tutorials/ui/create/databases/redshift.md)
-         - [Apache Hive on Azure HDInsights連接器](tutorials/ui/create/databases/hive.md)
-         - [Apache Spark on Azure HDInsights連接器](tutorials/ui/create/databases/spark.md)
-         - [Azure資料總管連接器](tutorials/ui/create/databases/data-explorer.md)
-         - [Azure Synapse Analytics連接器](tutorials/ui/create/databases/synapse-analytics.md)
-         - [Azure表格儲存連接器](tutorials/ui/create/databases/ats.md)
-         - [Couchbase連接器](tutorials/ui/create/databases/couchbase.md)
-         - [Google Big Query連接器](tutorials/ui/create/databases/bigquery.md)
-         - [GreenPlum連接器](tutorials/ui/create/databases/greenplum.md)
-         - [HP Vertica連接器](tutorials/ui/create/databases/hp-vertica.md)
-         - [IBM DB2連接器](tutorials/ui/create/databases/ibm-db2.md)
-         - [Microsoft SQL Server連接器](tutorials/ui/create/databases/sql-server.md)
-         - [MySQL連接器](tutorials/ui/create/databases/mysql.md)
-         - [Oracle連接器](tutorials/ui/create/databases/oracle.md)
-         - [菲尼克斯連接器](tutorials/ui/create/databases/phoenix.md)
-         - [PostgreSQL連接器](tutorials/ui/create/databases/postgres.md)
+         - [Amazon Redshift](tutorials/ui/create/databases/redshift.md)
+         - [Apache Hive on Azure HDInsights](tutorials/ui/create/databases/hive.md)
+         - [Apache Spark on Azure HDInsights](tutorials/ui/create/databases/spark.md)
+         - [Azure資料總管](tutorials/ui/create/databases/data-explorer.md)
+         - [Azure突觸分析](tutorials/ui/create/databases/synapse-analytics.md)
+         - [Azure表格儲存](tutorials/ui/create/databases/ats.md)
+         - [庫克巴塞](tutorials/ui/create/databases/couchbase.md)
+         - [Google Big Query](tutorials/ui/create/databases/bigquery.md)
+         - [綠梅](tutorials/ui/create/databases/greenplum.md)
+         - [HP Vertica](tutorials/ui/create/databases/hp-vertica.md)
+         - [IBM DB2](tutorials/ui/create/databases/ibm-db2.md)
+         - [Microsoft SQL Server](tutorials/ui/create/databases/sql-server.md)
+         - [MySQL](tutorials/ui/create/databases/mysql.md)
+         - [Oracle](tutorials/ui/create/databases/oracle.md)
+         - [鳳凰城](tutorials/ui/create/databases/phoenix.md)
+         - [PostgreSQL](tutorials/ui/create/databases/postgres.md)
       - 電子商務 {#ecommerce}
-         - [Shopify連接器](tutorials/ui/create/ecommerce/shopify.md)
+         - [Shopify](tutorials/ui/create/ecommerce/shopify.md)
       - 行銷自動化{#marketing-automation}
-         - [HubSpot連接器](tutorials/ui/create/marketing-automation/hubspot.md)
+         - [HubSpot](tutorials/ui/create/marketing-automation/hubspot.md)
       - 付款{#payments}
-         - [PayPal連接器](tutorials/ui/create/payments/paypal.md)
+         - [PayPal](tutorials/ui/create/payments/paypal.md)
       - 協定{#protocols}
-         - [通用OData連接器](tutorials/ui/create/protocols/odata.md)
+         - [通用OData](tutorials/ui/create/protocols/odata.md)
    - 配置資料流{#dataflow}
-      - [為廣告連接器配置資料流](tutorials/ui/dataflow/advertising.md)
-      - [為批處理雲儲存連接器配置資料流](tutorials/ui/dataflow/batch/cloud-storage.md)
-      - [為流雲儲存連接器配置資料流](tutorials/ui/dataflow/streaming/cloud-storage-streaming.md)
-      - [為CRM連接器配置資料流](tutorials/ui/dataflow/crm.md)
-      - [為客戶成功連接器配置資料流](tutorials/ui/dataflow/customer-success.md)
-      - [為資料庫連接器配置資料流](tutorials/ui/dataflow/databases.md)
-      - [為電子商務連接器配置資料流](tutorials/ui/dataflow/ecommerce.md)
-      - [為行銷自動化連接器配置資料流](tutorials/ui/dataflow/marketing-automation.md)
-      - [為付款連接器配置資料流](tutorials/ui/dataflow/payments.md)
-      - [為協定連接器配置資料流](tutorials/ui/dataflow/protocols.md)
+      - [廣告連接資料流](tutorials/ui/dataflow/advertising.md)
+      - [批處理雲儲存連接資料流](tutorials/ui/dataflow/batch/cloud-storage.md)
+      - [串流雲端儲存連線資料流](tutorials/ui/dataflow/streaming/cloud-storage-streaming.md)
+      - [CRM連接資料流](tutorials/ui/dataflow/crm.md)
+      - [客戶成功連接資料流](tutorials/ui/dataflow/customer-success.md)
+      - [資料庫連接資料流](tutorials/ui/dataflow/databases.md)
+      - [電子商務連接資料流](tutorials/ui/dataflow/ecommerce.md)
+      - [行銷自動化連線資料流](tutorials/ui/dataflow/marketing-automation.md)
+      - [付款連線資料流](tutorials/ui/dataflow/payments.md)
+      - [協定連接資料流](tutorials/ui/dataflow/protocols.md)
    - [啟用傳入資料以填入客戶個人檔案](tutorials/ui/profile.md)
    - [監視資料流](tutorials/ui/monitor.md)
    - [更新帳戶](tutorials/ui/update.md)
