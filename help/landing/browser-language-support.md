@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform；首頁；熱門主題；CJA；歷程分析；客戶歷程分析；宣傳協調；客戶歷程；歷程；歷程協調；功能；地區
 solution: Experience Platform
-title: Adobe Experience Platform瀏覽器和語言支援
+title: Experience Platform UI的瀏覽器和語言支援
 topic: getting started
 description: Adobe Experience Platform是市面上功能最強大、最靈活、最開放的系統，可協助您建立和管理能推動客戶體驗的完整解決方案。  Experience Platform 可讓組織集中和標準化來自任何系統的客戶資料與內容，並運用資料科學和機器學習技術大幅改善豐富個人化體驗的設計和傳遞。
 translation-type: tm+mt
-source-git-commit: 00010d38a5d05800aeac9af8505093fee3593b45
+source-git-commit: 5575d5e45bddcc007dcf78720cd7a7e20475f78c
 workflow-type: tm+mt
-source-wordcount: '243'
+source-wordcount: '248'
 ht-degree: 17%
 
 ---
 
 
-# Experience Platform瀏覽器和語言支援
+# Experience Platform UI的瀏覽器和語言支援
 
 Adobe Experience Platform使用者介面(UI)可支援多種瀏覽器和語言。
 
