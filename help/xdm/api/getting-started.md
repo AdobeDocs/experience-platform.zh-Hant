@@ -5,7 +5,7 @@ title: 架構註冊表API快速入門
 description: 本文檔介紹了在嘗試調用方案註冊表API之前需要知道的核心概念。
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
 workflow-type: tm+mt
 source-wordcount: '1163'
 ht-degree: 0%
