@@ -1,19 +1,19 @@
 ---
-keywords: Experience Platform;home;popular topics;GDPR;gdpr;CCPA;ccpa;PDPA;pdpa;LGPD;lgpd;overview;Overview;regulation;Regulation;regulations;Regulations;privacy;Privacy;
+keywords: Experience Platform;home；熱門主題；GDPR;gdpr;CCPA;ccpa;PDPA;pdpa;LGPDP;lgpd;overview;Regulation;Regulation;Regulation;Regulations;Regulations;Privacy;Privacy;
 solution: Experience Platform
-title: 隱私權規範術語
+title: 隱私權法規術語
 topic: troubleshooting
 description: 本檔案提供與Adobe Experience Cloud支援的隱私權法規相關之關鍵術語的定義。
 translation-type: tm+mt
-source-git-commit: 714b071bfa68ad0796afad25525b62b42bd56b3f
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
-source-wordcount: '1491'
+source-wordcount: '1512'
 ht-degree: 7%
 
 ---
 
 
-# 隱私權規範術語
+# 隱私權法規術語
 
 本檔案提供與Adobe Experience Cloud支援的隱私權法規相關之關鍵術語的定義。
 
@@ -23,11 +23,11 @@ ht-degree: 7%
 
 **約束性公司規則(BCR)**:為了允許跨國公司和組織將其控制的個人資料從歐盟傳輸到歐盟以外（但在組織內）的分支機構，制定了一套有約束力的規則。
 
-**生物特徵資料** ：與個體的生理、生理或行為特徵相關的任何個人資料，其允許其唯一標識。
+**生物** 特徵資料任何與個體的物理、生理或行為特徵相關的個人資料，允許其唯一標識。
 
 ## C
 
-**CCPA**:加 [!DNL California Consumer Privacy Act] 州居民可以更多地控制企業收集的個人資訊。 該法為消費者提供了若干新權利，包括存取權和從他們收集到的個人資訊，以及選擇退出向第三方銷售其個人資訊的權利。
+**CCPA**:加 [!DNL California Consumer Privacy Act] 州居民可以更好地控制企業收集的個人資訊。該法為消費者提供了若干新權利，包括存取權和從他們收集到的個人資訊，以及選擇退出向第三方銷售其個人資訊的權利。
 
 **同意**:通過聲明或行動自由地給予、具體、知情和明確的同意，表示同意處理其個人資料。
 
@@ -61,7 +61,7 @@ ht-degree: 7%
 
 **企業**:任何從事經濟活動的實體，不論其法律形式，包括個人、夥伴關係、協會等。
 
-**明確同意**:同意標準，包含以口頭或書面形式明確、知情且明確表示資料主體意願。 簡言之，資料主體必須字面明確地說出「我同意」或「我同意」，才能將同意視為明確。 此外，撤回同意必須和給予同意一樣容易。
+**明確同意**:同意標準，包含以口頭或書面形式明確、知情且明確表示資料主體意願。簡言之，資料主體必須字面明確地說出「我同意」或「我同意」，才能將同意視為明確。 此外，撤回同意必須和給予同意一樣容易。
 
 ## F
 
@@ -69,7 +69,7 @@ ht-degree: 7%
 
 ## G
 
-**GDPR**:( [!DNL General Data Protection Regulation] GDPR)是一個法律框架，為歐盟(EU)內的個人個人資訊收集和處理制定了准則。 GDPR 說明資料管理原則以及個人的權利，同時按收入處以罰款。GDPR 涵蓋處理歐盟公民資料的所有公司，因此對於銀行、保險業者和其他金融公司等公司合規人員而言為一重要規範。
+**GDPR**:( [!DNL General Data Protection Regulation] GDPR)是一個法律框架，為歐盟(EU)內的個人個人資訊收集和處理制定了准則。GDPR 說明資料管理原則以及個人的權利，同時按收入處以罰款。GDPR 涵蓋處理歐盟公民資料的所有公司，因此對於銀行、保險業者和其他金融公司等公司合規人員而言為一重要規範。
 
 **遺傳資料**:關於遺傳或獲得的個體特徵的資料，這些資料提供關於個體健康或生理學的獨特資訊。
 
@@ -79,11 +79,11 @@ ht-degree: 7%
 
 ## I
 
-**身分管理服務(IMS)**:Adobe實作Federated ID和OAuth 2.0，以驗證Adobe ID使用者並授權Adobe資源。 您必須整合 IMS 和您的 Adobe 應用程式或服務以讓使用者登入及存取 Adobe 服務。Users can log in directly with Renga (the Adobe identity services provider), or log in through a trusted third party authentication domain (such as [!DNL Google], [!DNL Facebook], or a corporate/organization LDAP).
+**身分管理服務(IMS)**:Adobe實作Federated ID和OAuth 2.0，以驗證Adobe ID使用者並授權Adobe資源。您必須整合 IMS 和您的 Adobe 應用程式或服務以讓使用者登入及存取 Adobe 服務。使用者可以直接使用Renga（Adobe身分服務提供者）登入，或透過受信任的第三方驗證網域（例如[!DNL Google]、[!DNL Facebook]或公司／組織LDAP）登入。
 
-**暗示同意**:這又稱為明確同意，是指未由資料主體明確給予但在性質上卻明確表示的同意。 例如，在公司網站的註冊程式中，會通知資料主體提供電子郵件地址，同意接收特別優惠的電子郵件。 如果資料主體讀取通知，輸入其電子郵件的肯定行動就足以被視為隱含同意。
+**暗示同意**:這又稱為明確同意，是指未由資料主體明確給予但在性質上卻明確表示的同意。例如，在公司網站的註冊程式中，會通知資料主體提供電子郵件地址，同意接收特別優惠的電子郵件。 如果資料主體讀取通知，輸入其電子郵件的肯定行動就足以被視為隱含同意。
 
-**IMS組織ID**:指服務對服務驗證的Adobe授權Token，不需要使用者登入。 它發佈給IMS用戶端，且沒有相關使用者。 IMS用戶端需要服務Token來授權服務之間的後通道請求。 (「系統代號」一詞通常用於指稱服務代號。)
+**IMS組織ID**:指服務對服務驗證的Adobe授權Token，不需要使用者登入。它發佈給IMS用戶端，且沒有相關使用者。 IMS用戶端需要服務Token來授權服務之間的後通道請求。 (「系統代號」一詞通常用於指稱服務代號。)
 
 ## J
 
@@ -91,7 +91,7 @@ ht-degree: 7%
 
 ## L
 
-**LGPD**:( [!DNL Lei Geral de Proteção de Dados] LGPD)旨在規範巴西所有個人或自然人個人資料的處理。 LGPD賦予巴西公民存取和刪除個人資料、瞭解個人資料是否被出售或披露（以及向誰）的權利，以及選擇不將其資料出售給第三方的權利。
+**LGPD**:巴 [!DNL Lei Geral de Proteção de Dados] 西(LGPD)旨在規範對巴西所有個人或自然人個人資料的處理。LGPD賦予巴西公民存取和刪除個人資料、瞭解個人資料是否被出售或披露（以及向誰）的權利，以及選擇不將其資料出售給第三方的權利。
 
 ## M
 
@@ -103,11 +103,11 @@ ht-degree: 7%
 
 ## P
 
-**PDPA**:泰 [!DNL Personal Data Protection Act] 國(PDPA)的引入是為了保護泰國資料擁有者免受非法收集、使用或披露其個人資料的侵害。 受歐盟GDPR的啟發，該規定授予泰國公民要求訪問或刪除其儲存的個人資料的權利。
+**PDPA**:泰 [!DNL Personal Data Protection Act] 國(PDPA)的引入是為了保護泰國資料擁有者免受非法收集、使用或披露其個人資料的侵害。受歐盟GDPR的啟發，該規定授予泰國公民要求訪問或刪除其儲存的個人資料的權利。
 
 **個人資料**:任何與自然人或「資料主體」相關的資訊，皆可用於直接或間接識別該人。
 
-**個人資料洩露**:違反安全性導致意外或非法存取、銷毀、誤用等。 個人資料。
+**個人資料洩露**:違反安全性導致意外或非法存取、銷毀、誤用等。個人資料。
 
 **依設計的隱私權**:這一原則要求從系統設計開始就納入資料保護，而不是添加。
 
@@ -135,7 +135,7 @@ ht-degree: 7%
 
 ## S
 
-**敏感資料**: 與種族或族裔出身、政治觀點、宗教或哲學信仰、性行為、犯罪記錄、健康資料、殘疾、工會資訊、遺傳資料、生物特徵資料或可能影響資料主體的任何資料有關的任何個人資料。
+**敏感資料**:與種族或族裔出身、政治觀點、宗教或哲學信仰、性行為、犯罪記錄、健康資料、殘疾、工會資訊、遺傳資料、生物特徵資料或可能影響資料主體的任何資料有關的任何個人資料。
 
 **主體存取權**:它又稱為「存取權」，賦予資料主體存取權及控制者有關個人資料的資訊。
 
@@ -147,7 +147,7 @@ ht-degree: 7%
 
 ## U
 
-**明確同意**:這又稱為隱性同意，是指未由資料主體明確給予但在性質上是明確的同意。 例如，在公司網站的註冊程式中，會通知資料主體提供電子郵件地址，同意接收特別優惠的電子郵件。 如果資料主體讀取通知，輸入其電子郵件的肯定動作就足以被視為明確同意。
+**明確同意**:這又稱為隱性同意，是指未由資料主體明確給予但在性質上是明確的同意。例如，在公司網站的註冊程式中，會通知資料主體提供電子郵件地址，同意接收特別優惠的電子郵件。 如果資料主體讀取通知，輸入其電子郵件的肯定動作就足以被視為明確同意。
 
 ## V
 
