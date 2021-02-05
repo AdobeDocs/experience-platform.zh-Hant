@@ -1,25 +1,25 @@
 ---
-keywords: Experience Platform;home;popular topics;segmentation;Segmentation;Segmentation Service;pql;PQL;Profile Query Language;comparison functions;comparison;
+keywords: Experience Platform; home；熱門主題；分段；分段；分段服務；pql;PQL；配置檔案查詢語言；比較函式；比較；
 solution: Experience Platform
-title: 比較函式
+title: PQL比較函式
 topic: developer guide
 description: 比較函式可用來比較不同的運算式和值，並據以傳回"true"或"false"。
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: b3defc3e33a55855e307ab70b9797d985d5719e3
 workflow-type: tm+mt
-source-wordcount: '308'
-ht-degree: 10%
+source-wordcount: '326'
+ht-degree: 9%
 
 ---
 
 
 # 比較函式
 
-比較函式可用來比較不同的運算式和值，並傳回 `true` 或相 `false` 應。 有關其他PQL函式的詳細資訊，請參閱 [[!DNL Profile Query Language] 概述](./overview.md)。
+比較函式用於比較不同的運算式和值，並據以傳回`true`或`false`。 有關其他PQL函式的詳細資訊，請參閱[[!DNL Profile Query Language] overview](./overview.md)。
 
 ## 等於
 
-( `=` equals)函式會檢查一個值或運算式是否等於另一個值或運算式。
+`=`(equals)函式會檢查一個值或運算式是否等於另一個值或運算式。
 
 **Format**
 
@@ -37,9 +37,9 @@ homeAddress.countryISO = "CA"
 
 ## 不等於
 
-( `!=` 不等於)函式會檢查一個值或運算式是否 **不等於** 其他值或運算式。
+`!=`（不等於）函式會檢查一個值或運算式是否為&#x200B;**not**&#x200B;等於另一個值或運算式。
 
-**Format**
+**格式**
 
 ```sql
 {EXPRESSION} != {VALUE}
@@ -55,9 +55,9 @@ homeAddress.countryISO != "CA"
 
 ## Greater than
 
-( `>` 大於)函式用於檢查第一值是否大於第二值。
+`>`（大於）函式用於檢查第一值是否大於第二值。
 
-**Format**
+**格式**
 
 ```sql
 {EXPRESSION} > {EXPRESSION} 
@@ -73,9 +73,9 @@ person.birthMonth > 2
 
 ## Greater than or equal to
 
-使 `>=` 用（大於或等於）函式來檢查第一值是否大於或等於第二值。
+使用`>=`（大於或等於）函式來檢查第一值是否大於或等於第二值。
 
-**Format**
+**格式**
 
 ```sql
 {EXPRESSION} >= {EXPRESSION} 
@@ -91,9 +91,9 @@ person.birthMonth >= 3
 
 ## Less than
 
-該 `<` （小於）比較函式用於檢查第一值是否小於第二值。
+使用`<`（小於）比較函式來檢查第一值是否小於第二值。
 
-**Format**
+**格式**
 
 ```sql
 {EXPRESSION} < {EXPRESSION} 
@@ -109,9 +109,9 @@ person.birthMonth < 2
 
 ## Less than or equal to
 
-比 `<=` 較函式（小於或等於）用於檢查第一值是否小於或等於第二值。
+使用`<=`（小於或等於）比較函式來檢查第一值是否小於或等於第二值。
 
-**Format**
+**格式**
 
 ```sql
 {EXPRESSION} <= {EXPRESSION} 
@@ -127,4 +127,4 @@ person.birthMonth <= 2
 
 ## 後續步驟
 
-現在您已瞭解了比較函式，可以在PQL查詢中使用它們。 有關其他PQL函式的詳細資訊，請閱讀配置式查 [詢語言概述](./overview.md)。
+現在您已瞭解了比較函式，可以在PQL查詢中使用它們。 有關其他PQL函式的詳細資訊，請閱讀[配置檔案查詢語言概述](./overview.md)。
