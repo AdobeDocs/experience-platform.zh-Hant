@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform;home；熱門主題；API;XDM;XDM;XDM系統；體驗資料模型；資料模型；資料模型；模式註冊表；模式註冊表；相容性；相容性模式；相容性模式；欄位類型；欄位類型；
 solution: Experience Platform
-title: 架構註冊開發人員附錄
+title: 方案註冊表API指南附錄
 description: 本文檔提供與使用方案註冊表API有關的補充資訊。
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 1f18bf7367addd204f3ef8ce23583de78c70b70c
+source-git-commit: b395535cbe7e4030606ee2808eb173998f5c32e0
 workflow-type: tm+mt
-source-wordcount: '767'
-ht-degree: 1%
+source-wordcount: '772'
+ht-degree: 0%
 
 ---
 
 
-# 附錄
+# 方案註冊表API指南附錄
 
 本檔案提供與使用[!DNL Schema Registry] API相關的補充資訊。
 
