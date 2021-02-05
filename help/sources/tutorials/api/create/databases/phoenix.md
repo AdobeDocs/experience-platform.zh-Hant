@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform; home；熱門主題； Phoenix;phoenix
 solution: Experience Platform
-title: 使用Flow Service API建立Phoenix連接器
+title: 使用Flow Service API建立Phoenix Source Connection
 topic: overview
 type: Tutorial
-description: 本教學課程使用Flow Service API來引導您完成將Phoenix資料庫連接至Experience Platform的步驟。
+description: 瞭解如何使用Flow Service API將Phoenix資料庫連線至Adobe Experience Platform。
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
-source-wordcount: '651'
+source-wordcount: '648'
 ht-degree: 1%
 
 ---
 
 
-# 使用[!DNL Flow Service] API建立[!DNL Phoenix]連接器
+# 使用[!DNL Flow Service] API建立[!DNL Phoenix]來源連線
 
 >[!NOTE]
 >
