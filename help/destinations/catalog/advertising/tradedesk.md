@@ -1,21 +1,17 @@
 ---
 keywords: 廣告；貿易部門；
-title: 貿易桌目的地
-seo-title: 貿易桌目的地
+title: The Trade Desk Connection Destination
 description: '交易台是廣告購買者的自助服務平台，可跨展示廣告、視訊和行動庫存來源執行重新鎖定目標及受眾目標數位宣傳。 '
-seo-description: 交易台是廣告購買者的自助服務平台，可跨展示廣告、視訊和行動庫存來源執行重新鎖定目標及受眾目標數位宣傳。
 translation-type: tm+mt
-source-git-commit: 95f57f9d1b3eeb0b16ba209b9774bd94f5758009
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '579'
-ht-degree: 1%
+source-wordcount: '550'
+ht-degree: 0%
 
 ---
 
 
-# [!DNL The Trade Desk] 目的地
-
-## 概述 {#overview}
+# [!DNL The Trade Desk] 連接
 
 [!DNL The Trade Desk] 目的地可協助您傳送描述檔資 [!DNL The Trade Desk]料。
 
