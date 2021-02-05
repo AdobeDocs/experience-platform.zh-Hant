@@ -1,22 +1,22 @@
 ---
 keywords: Experience Platform; home；熱門主題；analytics；分類
-description: 本教學課程提供在UI中建立Adobe Analytics分類資料連接器以將分類資料匯入Adobe Experience Platform的步驟。
+description: 瞭解如何建立UI的Adobe Analytics來源連接器，以便將分類資料匯入Adobe Experience Platform。
 solution: Experience Platform
-title: 在UI中建立Adobe Analytics分類資料連接器
+title: 在UI中建立分類資料的Adobe Analytics來源連線
 topic: overview
 type: Tutorial
 translation-type: tm+mt
-source-git-commit: 2dbd92efbd992b70f4f750b09e9d2e0626e71315
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
-source-wordcount: '659'
+source-wordcount: '660'
 ht-degree: 0%
 
 ---
 
 
-# 在UI中建立Adobe Analytics分類資料連接器
+# 在UI中建立分類資料的Adobe Analytics來源連線
 
-本教學課程提供在UI中建立Adobe Analytics分類資料連接器以將分類資料匯入Adobe Experience Platform的步驟。
+本教學課程提供在UI中建立Adobe Analytics分類資料來源連線以將分類資料匯入Adobe Experience Platform的步驟。
 
 ## 快速入門
 
@@ -86,5 +86,5 @@ Analytics分類資料連接器要求您的資料在使用前必須移轉至Adobe
 在本教學課程中，您已建立Analytics分類資料連接器，可將[!DNL Classifications]資料匯入[!DNL Platform]。 有關[!DNL Analytics]和[!DNL Classifications]資料的詳細資訊，請參閱以下文檔：
 
 * [Analytics資料連接器概觀](../../../../connectors/adobe-applications/analytics.md)
-* [在UI中建立Analytics資料連接器](./analytics.md)
+* [在UI中建立Analytics資料連線](./analytics.md)
 * [關於分類](https://experienceleague.adobe.com/docs/analytics/components/classifications/c-classifications.html)
