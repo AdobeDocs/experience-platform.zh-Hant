@@ -1,22 +1,19 @@
 ---
 keywords: 雲儲存目標；雲儲存
-title: 雲端儲存目標工作流程
-seo-title: 雲端儲存目標工作流程
+title: 建立雲端儲存空間目標
 type: Tutorial
 description: 連線至雲端儲存空間的指示
 seo-description: 連線至雲端儲存空間的指示
 translation-type: tm+mt
-source-git-commit: 95f57f9d1b3eeb0b16ba209b9774bd94f5758009
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '539'
+source-wordcount: '534'
 ht-degree: 0%
 
 ---
 
 
-# 建立雲端儲存空間目標的工作流程
-
-## 概述
+# 建立雲端儲存空間目標
 
 本頁說明如何連線至Adobe Experience Platform中的雲端儲存空間位置。
 
