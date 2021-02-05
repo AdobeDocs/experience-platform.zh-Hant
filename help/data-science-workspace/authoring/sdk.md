@@ -1,27 +1,27 @@
 ---
-keywords: Experience Platform;developer guide;SDK;Model authoring;Data Science Workspace;popular topics;testing
+keywords: Experience Platform；開發人員指南；SDK；模型編寫；Data Science Workspace；熱門主題；測試
 solution: Experience Platform
-title: SDK開發人員指南
+title: 模型編寫SDK
 topic: Overview
 description: 模型製作SDK可讓您開發自訂的機器學習方式和功能管道，這些方式和功能管道可用於Adobe Experience Platform Data Science Workspace，在PySpark和Spark(Scala)中提供可實作的範本。
 translation-type: tm+mt
-source-git-commit: e1b8bc378c2f72862c0c28e44dceb8a35e44a29e
+source-git-commit: f6cfd691ed772339c888ac34fcbd535360baa116
 workflow-type: tm+mt
-source-wordcount: '964'
+source-wordcount: '977'
 ht-degree: 1%
 
 ---
 
 
-# SDK開發人員指南
+# 模型編寫SDK
 
-Model Authoring SDK可讓您開發自訂的機器學習方式和功能管道，可用於 [!DNL Adobe Experience Platform] Data Science Workspace，在和中提供可實施的范 [!DNL PySpark] 本 [!DNL Spark (Scala)]。
+Model Authoring SDK可讓您開發自訂的機器學習方式和功能管道，可用於[!DNL Adobe Experience Platform]資料科學工作區，提供[!DNL PySpark]和[!DNL Spark (Scala)]中可實作的範本。
 
 本檔案提供有關「模型編寫SDK」中各類的資訊。
 
 ## DataLoader {#dataloader}
 
-DataLoader類封裝與擷取、篩選和傳回原始輸入資料相關的任何內容。 輸入資料的範例包括訓練、計分或功能工程的資料。 資料載入器擴展了抽象類， `DataLoader` 必須覆蓋抽象方法 `load`。
+DataLoader類封裝與擷取、篩選和傳回原始輸入資料相關的任何內容。 輸入資料的範例包括訓練、計分或功能工程的資料。 資料載入器擴展抽象類`DataLoader`，並必須覆蓋抽象方法`load`。
 
 **PySpark**
 
@@ -53,7 +53,7 @@ DataLoader類封裝與擷取、篩選和傳回原始輸入資料相關的任何�
 
 **Spark**
 
-下表說明Data Loader類的抽象 [!DNL Spark] 方法：
+下表說明[!DNL Spark] Data Loader類的抽象方法：
 
 <table>
     <thead>
@@ -78,9 +78,9 @@ DataLoader類封裝與擷取、篩選和傳回原始輸入資料相關的任何�
     </tbody>
 </table>
 
-### 從資料集載入資 [!DNL Platform] 料 {#load-data-from-a-platform-dataset}
+### 從[!DNL Platform]資料集{#load-data-from-a-platform-dataset}載入資料
 
-下列範例依 [!DNL Platform] 據ID擷取資料並傳回DataFrame，其中資料集ID(`datasetId`)是設定檔案中已定義的屬性。
+下面的示例按ID檢索[!DNL Platform]資料並返回DataFrame，其中資料集ID(`datasetId`)是配置檔案中定義的屬性。
 
 **PySpark**
 
@@ -195,11 +195,11 @@ class MyDataLoader extends DataLoader {
 
 ## DataSaver {#datasaver}
 
-DataSaver類封裝了與儲存輸出資料相關的任何內容，包括來自計分或功能工程的輸出資料。 資料保護程式會擴充抽象類 `DataSaver` 別，且必須覆寫抽象方法 `save`。
+DataSaver類封裝了與儲存輸出資料相關的任何內容，包括來自計分或功能工程的輸出資料。 資料保護程式會擴充抽象類別`DataSaver`，且必須覆寫抽象方法`save`。
 
 **PySpark**
 
-下表介紹了Data Saver類的抽象 [!DNL PySpark] 方法：
+下表說明[!DNL PySpark]資料保護程式類的抽象方法：
 
 <table>
     <thead>
@@ -227,7 +227,7 @@ DataSaver類封裝了與儲存輸出資料相關的任何內容，包括來自�
 
 **Spark(Scala)**
 
-下表介紹了Data Saver類的抽象 [!DNL Spark] 方法：
+下表說明[!DNL Spark]資料保護程式類的抽象方法：
 
 <table>
     <thead>
@@ -252,14 +252,14 @@ DataSaver類封裝了與儲存輸出資料相關的任何內容，包括來自�
     </tbody>
 </table>
 
-### 將資料儲存至資料 [!DNL Platform] 集 {#save-data-to-a-platform-dataset}
+### 將資料儲存至[!DNL Platform]資料集{#save-data-to-a-platform-dataset}
 
-要將資料儲存到資料集上， [!DNL Platform] 必須在配置檔案中提供或定義屬性：
+要將資料儲存到[!DNL Platform]資料集，必須在配置檔案中提供或定義屬性：
 
-- 資料將 [!DNL Platform] 儲存至的有效資料集ID
+- 資料將儲存至的有效[!DNL Platform]資料集ID
 - 屬於貴組織的租用戶ID
 
-下列範例將資料(`prediction`)儲存至資料 [!DNL Platform] 集，其中資料集ID(`datasetId`)和租用戶ID(`tenantId`)是設定檔中定義的屬性。
+下列範例將資料(`prediction`)儲存至[!DNL Platform]資料集，其中資料集ID(`datasetId`)和租用戶ID(`tenantId`)是設定檔案中定義的屬性。
 
 
 **PySpark**
@@ -395,7 +395,7 @@ class ScoringDataSaver extends DataSaver {
 
 ## DatasetTransformer {#datasettransformer}
 
-DatasetTransformer類別會修改並變換資料集的結構。 不需 [!DNL Sensei Machine Learning Runtime] 要定義此元件，並根據您的需求實施。
+DatasetTransformer類別會修改並變換資料集的結構。 [!DNL Sensei Machine Learning Runtime]不需要定義此元件，並根據您的要求實施。
 
 對於特徵流水線，資料集轉換器可以與特徵流水線工廠合作使用，為特徵工程準備資料。
 
@@ -429,7 +429,7 @@ DatasetTransformer類別會修改並變換資料集的結構。 不需 [!DNL Sen
 
 **Spark(Scala)**
 
-下表說明資料集互感器類別的 [!DNL Spark] 抽象方法：
+下表說明[!DNL Spark]資料集轉換器類別的抽象方法：
 
 <table>
     <thead>
@@ -500,7 +500,7 @@ FeaturePipelineFactory類包含特徵提取算法，並定義特徵管線從開�
 
 **Spark(Scala)**
 
-下表說明FeaturePipelineFactory的類 [!DNL Spark] 方法：
+下表說明[!DNL Spark] FeaturePipelineFactory的類方法：
 
 <table>
     <thead>
@@ -538,7 +538,7 @@ FeaturePipelineFactory類包含特徵提取算法，並定義特徵管線從開�
 
 ## PipelineFactory {#pipelinefactory}
 
-PipelineFactory類別封裝了模型訓練和評分的方法和定義，其中訓練邏輯和演算法以管線的形式 [!DNL Spark] 定義。
+PipelineFactory類別封裝了模型訓練和評分的方法和定義，其中訓練邏輯和算法以[!DNL Spark]管線的形式定義。
 
 **PySpark**
 
@@ -609,7 +609,7 @@ PipelineFactory類別封裝了模型訓練和評分的方法和定義，其中�
 
 **Spark(Scala)**
 
-下表說明了PipelineFactory的類 [!DNL Spark] 方法：
+下表說明[!DNL Spark] PipelineFactory的類方法：
 
 <table>
     <thead>
@@ -645,7 +645,7 @@ PipelineFactory類別封裝了模型訓練和評分的方法和定義，其中�
     </tbody>
 </table>
 
-## MLEvaluator {#mlevaluator}
+## MLEvalueator {#mlevaluator}
 
 MLEvaluator類提供了用於定義評估度量和確定培訓和測試資料集的方法。
 
@@ -693,7 +693,7 @@ MLEvaluator類提供了用於定義評估度量和確定培訓和測試資料集
 
 **Spark(Scala)**
 
-下表說明了MLEvaluator的類 [!DNL Spark] 方法：
+下表說明[!DNL Spark] MLvalueator的類方法：
 
 <table>
     <thead>
