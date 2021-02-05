@@ -1,21 +1,17 @@
 ---
 keywords: D&B訪客智慧；D&B；訪客智慧擴充
-title: D&B訪客智慧擴充功能
-seo-title: D&B訪客智慧擴充功能
+title: D&B訪客智慧擴充目標
 description: D&B訪客智慧擴充功能是Adobe Experience Platform中的個人化目的地。 如需擴充功能的詳細資訊，請參閱Adobe Exchange的擴充功能頁面。
-seo-description: D&B訪客智慧擴充功能是Adobe Experience Platform中的個人化目的地。 如需擴充功能的詳細資訊，請參閱Adobe Exchange的擴充功能頁面。
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '534'
+source-wordcount: '501'
 ht-degree: 3%
 
 ---
 
 
 # [!DNL D&B Visitor Intelligence] 擴充功能 {#dnb-extension}
-
-## 概述 {#overview}
 
 分析未知訪客，並將其轉化為潛在客戶。
 
