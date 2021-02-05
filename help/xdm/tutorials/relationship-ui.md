@@ -1,14 +1,14 @@
 ---
 keywords: Experience Platform;home；熱門主題；ui;UI;XDM;XDM;XDM系統；體驗資料模型；資料模型；資料模型；模式編輯器；模式編輯器；模式；模式；模式；模式；模式；建立；關係；參考；參考；
 solution: Experience Platform
-title: 使用架構架構編輯器定義兩個架構之間的關係
+title: 使用架構編輯器定義兩個架構之間的關係
 description: 本檔案提供教學課程，可讓您使用Experience Platform使用者介面中的「架構編輯器」來定義兩個架構之間的關係。
 topic: tutorial
 type: Tutorial
 translation-type: tm+mt
-source-git-commit: 1f18bf7367addd204f3ef8ce23583de78c70b70c
+source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
 workflow-type: tm+mt
-source-wordcount: '946'
+source-wordcount: '945'
 ht-degree: 0%
 
 ---
