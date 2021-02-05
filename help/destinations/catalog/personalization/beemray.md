@@ -1,21 +1,17 @@
 ---
 keywords: beemray,beemray延伸功能
-title: Beemray擴充功能
-seo-title: Beemray擴充功能
+title: Beemray Extension Destination
 description: Beemray擴充功能是Adobe Experience Platform中的個人化目的地。 如需擴充功能的詳細資訊，請參閱Adobe Exchange的擴充功能頁面。
-seo-description: Beemray擴充功能是Adobe Experience Platform中的個人化目的地。 如需擴充功能的詳細資訊，請參閱Adobe Exchange的擴充功能頁面。
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '548'
+source-wordcount: '521'
 ht-degree: 3%
 
 ---
 
 
 # [!DNL Beemray] 擴充功能 {#beemray-extension}
-
-## 概述 {#overview}
 
 [!DNL Beemray] 協助您根據情境加速產品的推展。讓您獲得見解、建立新體驗、推動互動，並參與真正重要的時刻。 Beemray使用機器學習自動化情境智慧。 Beemray可連接Adobe Experience Cloud和您的其他技術合作夥伴。 一切都會即時進行。 此擴充功能會在您的網站上安裝[!DNL Beemray] SDK。
 
