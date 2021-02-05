@@ -1,19 +1,17 @@
 ---
 keywords: 個人化；個人化
-title: 個人化目的地
-seo-title: 個人化目的地
+title: 個人化目標概觀
 description: 個人化平台會收集個人行為的資料和見解。 這些平台可協助行銷人員導覽匿名資料、根據先前的活動或類似習慣的受眾細分向潛在客戶提供優惠或廣告。
-seo-description: 個人化平台會收集個人行為的資料和見解。 這些平台可協助行銷人員導覽匿名資料、根據先前的活動或類似習慣的受眾細分向潛在客戶提供優惠或廣告。
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '170'
-ht-degree: 7%
+source-wordcount: '132'
+ht-degree: 9%
 
 ---
 
 
-# 個人化目標{#personalization-destinations}
+# 個人化目標概觀{#personalization-destinations}
 
 個人化平台會收集個人行為的資料和見解。 這些平台可協助行銷人員導覽匿名資料、根據先前的活動或類似習慣的受眾細分向潛在客戶提供優惠或廣告。
 
