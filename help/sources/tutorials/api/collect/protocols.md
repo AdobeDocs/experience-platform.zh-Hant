@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform; home；熱門主題；收集協定資料；協定資料
 solution: Experience Platform
-title: 透過來源連接器和API收集通訊協定資料
+title: 使用來源連接器和API收集通訊協定資料
 topic: overview
 type: Tutorial
-description: 本教學課程涵蓋從通訊協定應用程式擷取資料並透過來源連接器和API將其匯入平台的步驟。
+description: 本教學課程涵蓋從通訊協定應用程式擷取資料，並使用來源連接器和API將其匯入平台的步驟。
 translation-type: tm+mt
-source-git-commit: 478c73935d674ef4eb40511cc562b27df77f58c8
+source-git-commit: 62266187ed1f3ce2f0acca3f50487fb70cfa7307
 workflow-type: tm+mt
 source-wordcount: '1528'
 ht-degree: 1%
@@ -14,7 +14,7 @@ ht-degree: 1%
 ---
 
 
-# 透過來源連接器和API收集通訊協定資料
+# 使用來源連接器和API收集通訊協定資料
 
 本教學課程涵蓋從協力廠商通訊協定應用程式擷取資料，並透過來源連接器和[[!DNL Flow Service]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) API將其匯入Adobe Experience Platform的步驟。
 
