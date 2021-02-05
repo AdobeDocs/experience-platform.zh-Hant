@@ -1,21 +1,17 @@
 ---
 keywords: google Universal Analytics;Google Universal Analytics;Google Universal Analytics
-title: Google Universal Analytics擴充功能
-seo-title: Google Universal Analytics擴充功能
+title: Google Universal Analytics擴充功能目標
 description: Google Universal Analytics擴充功能是Adobe Experience Platform中的分析目標。 如需擴充功能的詳細資訊，請參閱Adobe Exchange的擴充功能頁面。
-seo-description: Google Universal Analytics擴充功能是Adobe Experience Platform中的分析目標。 如需擴充功能的詳細資訊，請參閱Adobe Exchange的擴充功能頁面。
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '559'
+source-wordcount: '528'
 ht-degree: 3%
 
 ---
 
 
 # [!DNL Google Universal Analytics] 擴充功能 {#google-universal-analytics-extension}
-
-## 概述 {#overview}
 
 [!DNL Google Universal Analytics] 可讓您衡量廣告投資報酬率，並追蹤您的Flash、視訊和社交網路網站和應用程式。
 
