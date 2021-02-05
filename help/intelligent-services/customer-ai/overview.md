@@ -1,15 +1,15 @@
 ---
-keywords: Experience Platform;overview;customer ai;popular topics;customer ai overview
+keywords: Experience Platform;overview;customer ai；熱門主題；customer ai概觀
 solution: Experience Platform, Intelligent Services, Real-time Customer Data Platform
 title: Customer AI 概述
-topic: Customer AI overview
+topic: Customer AI Overview
 description: Customer AI 可產生自訂傾向評分，例如大規模個別設定檔的流失和轉換情形。不必將企業需求轉換為機器學習問題、挑選演算法、培訓或部署，就能達成上述目的。
-landing-page-description: Customer AI is used to generate custom propensity scores such as churn and conversion for individual profiles at-scale.
+landing-page-description: Customer AI 可產生自訂傾向評分，例如大量個別設定檔的流失和轉換情形。
 translation-type: tm+mt
-source-git-commit: de16ebddd8734f082f908f5b6016a1d3eadff04c
+source-git-commit: eb163949f91b0d1e9cc23180bb372b6f94fc951f
 workflow-type: tm+mt
-source-wordcount: '526'
-ht-degree: 16%
+source-wordcount: '554'
+ht-degree: 18%
 
 ---
 
@@ -37,7 +37,7 @@ Customer AI 可產生自訂傾向評分，例如大規模個別設定檔的流�
 
 - 客戶人工智慧不應用於預測動態定價或客戶要購買的價格點。
 - 客戶人工智慧無法判斷提供選件是否會讓客戶更有可能購買產品。 雖然您可能會根據傾向分數決定傳送折扣優惠，但這未必是轉換這些客戶的最佳方式。
-- 客戶人工智慧不是產品建議工具。 如果您有數千個SKU，請勿將客戶AI當做實際產品建議解決方案（例如）的代理 [!DNL Adobe Target]。
+- 客戶人工智慧不是產品建議工具。 如果您有數千個SKU，請勿將客戶AI當做實際產品建議解決方案（例如[!DNL Adobe Target]）的代理程式。
 - 客戶人工智慧無法預測客戶在購買歷程的哪個階段，例如，如果他們處於「認知」、「考慮」、「購買」或「保留」階段。
 - 請勿使用客戶人工智慧來判斷日後可能購買產品的客戶。 這要求客戶AI必須在過去出現某些成功事件，才能成功訓練資料上的機器學習演算法。
 
@@ -51,4 +51,4 @@ Customer AI 可產生自訂傾向評分，例如大規模個別設定檔的流�
 
 ## 後續步驟
 
-您可依照快速入 [門指南](./getting-started.md) 。 本指南會逐步引導您設定客戶人工智慧的所有必要先決條件。 如果您已準備好所有認證和資料，請造 [訪設定Customer AI例項](./user-guide/configure.md)。 它提供使用客戶AI的步驟。
+您可以從[快速入門](./getting-started.md)指南開始。 本指南會逐步引導您設定客戶人工智慧的所有必要先決條件。 如果您已準備好所有憑證和資料，請造訪[設定客戶AI例項](./user-guide/configure.md)。 它提供使用客戶AI的步驟。
