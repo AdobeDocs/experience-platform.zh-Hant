@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics;ingested data;troubleshooting;faq;Ingestion;Batch ingestion;batch ingestion;
+keywords: Experience Platform; home；熱門主題；收錄資料；疑難排解；常見問題；擷取；批次擷取；批次擷取；批次擷取；
 solution: Experience Platform
 title: 批次擷取疑難排解指南
 topic: troubleshooting
 description: '本檔案將協助解答有關Adobe Experience Platform批次資料擷取API的常見問題。 '
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: 089a4d517476b614521d1db4718966e3ebb13064
 workflow-type: tm+mt
-source-wordcount: '1402'
+source-wordcount: '1416'
 ht-degree: 1%
 
 ---
@@ -15,13 +15,13 @@ ht-degree: 1%
 
 # 批次擷取疑難排解指南
 
-本檔案將協助解答有關Adobe Experience Platform API的常見問 [!DNL Batch Data Ingestion] 題。
+本檔案將協助您解答有關Adobe Experience Platform [!DNL Batch Data Ingestion] API的常見問題。
 
 ## 批次API呼叫
 
 ### 從CompleteBatch API接收HTTP 200確定後，批是否立即處於活動狀態？
 
-API `200 OK` 的回應表示已接受批處理——在批次轉換至最終狀態（例如「活動」或「失敗」）之前，該批處理才處於活動狀態。
+來自API的`200 OK`回應表示批已接受處理——直到它轉換為最終狀態（如「活動」或「失敗」），才會處於活動狀態。
 
 ### CompleteBatch API呼叫失敗後，是否可安全重試？
 
@@ -29,7 +29,7 @@ API `200 OK` 的回應表示已接受批處理——在批次轉換至最終狀�
 
 ### 何時應使用大型檔案上傳API?
 
-使用大型檔案上傳API的建議檔案大小為256 MB或更大。 如需如何使用大型檔案上傳API的詳細資訊，請參 [閱](./api-overview.md#ingest-large-parquet-files)。
+使用大型檔案上傳API的建議檔案大小為256 MB或更大。 有關如何使用大型檔案上傳API的詳細資訊，請參閱[這裡](./api-overview.md#ingest-large-parquet-files)。
 
 ### 為什麼大型檔案完整API呼叫失敗？
 
@@ -73,7 +73,7 @@ curl -X POST "https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID
 
 ### 多行JSON如何收錄？
 
-若要收錄多行JSON, `isMultiLineJson` 必須在建立批次時設定旗標。 以下是此範例：
+若要收錄多行JSON,`isMultiLineJson`標幟必須在建立批次時設定。 以下是此範例：
 
 ```shell
 curl -X POST "https://platform.adobe.io/data/foundation/import/batches" \
@@ -122,7 +122,7 @@ curl -X POST "https://platform.adobe.io/data/foundation/import/batches" \
 ]
 ```
 
-依預設， [!DNL Batch Data Ingestion] 使用單行JSON。
+依預設，[!DNL Batch Data Ingestion]使用單行JSON。
 
 ### 是否支援CSV擷取？
 
@@ -140,7 +140,7 @@ CSV擷取僅支援平面結構描述。 目前不支援以CSV格式擷取階層�
 
 ### 如何更換已收錄的批？
 
-已收錄的批次可使用「批次重播」功能來取代。 有關「批次重放」的更多資訊，請 [到此處](./api-overview.md#replay-a-batch)。
+已收錄的批次可使用「批次重播」功能來取代。 有關批次重放的詳細資訊，請參閱[此處](./api-overview.md#replay-a-batch)。
 
 ### 如何監控批次擷取？
 
@@ -184,17 +184,17 @@ curl -X GET "https://platform.adobe.io/data/foundation/catalog/batches/{BATCH_ID
 | 狀態 | 寫入主版的資料 | 說明 |
 | ------ | ---------------------- | ----------- |
 | 已放棄 |  | 客戶端未能在預期的時間範圍內完成批處理。 |
-| 已中止 |  | 用戶端已透過API明確呼 [!DNL Batch Data Ingestion] 叫指定批次的中止作業。 一旦批處於「已載入」狀態，便無法中止該批。 |
-| 作用中／成功 | x | 批已成功從階段升級到主批，現在可用於下游衝減。 **注意：** 「作用中」和「成功」可互換使用。 |
+| 已中止 |  | 客戶端已通過[!DNL Batch Data Ingestion] API明確調用指定批的中止操作。 一旦批處於「已載入」狀態，便無法中止該批。 |
+| 作用中／成功 | x | 批已成功從階段升級到主批，現在可用於下游衝減。 **注意： 「** 作用中」和「成功」可互換使用。 |
 | 已封存 |  | 批已存檔到冷儲存中。 |
-| 失敗／失敗 |  | 由錯誤配置和／或錯誤資料引起的終端狀態。 系統會記錄可操作的錯誤以及批次，讓客戶能夠更正並重新提交資料。 **注意：** 「失敗」和「失敗」可互換使用。 |
+| 失敗／失敗 |  | 由錯誤配置和／或錯誤資料引起的終端狀態。 系統會記錄可操作的錯誤以及批次，讓客戶能夠更正並重新提交資料。 **注意：「** 失敗」(Failed)和「失敗」(Failure)可互換使用。 |
 | 非活動 | x | 批已成功升級，但已還原或過期。 批將不再可用於下游衝減，但基礎資料將保留在「主」中，直到保留、存檔或以其他方式刪除。 |
-| 正在載入 |  | 客戶端當前正在編寫批的資料。 此時，批 **尚未** 準備升級。 |
+| 正在載入 |  | 客戶端當前正在編寫批的資料。 此時，批處於&#x200B;**不**&#x200B;狀態，可供升級。 |
 | 已載入 |  | 客戶端已完成編寫批處理資料。 批已準備好升級。 |
 | 保留 |  | 資料已從Master中取出，並存放在Adobe Data Lake的指定封存中。 |
 | 預備 |  | 用戶端已成功發出批次促銷的信號，且資料正在儲存以供下游消費。 |
 | 重試 |  | 客戶端已發出批次升級的信號，但由於錯誤，批次正在由批次監控服務重試。 此狀態可用來告知用戶端在擷取資料時可能會有延遲。 |
-| 停止 |  | 客戶端已發出批次升級的信號，但在「批次監 `n` 控」服務重試後，批次升級已停止。 |
+| 停止 |  | 客戶端已發出批次升級的信號，但在批次監控服務`n`重試後，批次升級已停止。 |
 
 ### 「階移」對批次有何意義？
 
@@ -206,7 +206,7 @@ curl -X GET "https://platform.adobe.io/data/foundation/catalog/batches/{BATCH_ID
 
 ### 當批處理為「停止」時，它意味著什麼？
 
-當批處於「停止」狀態時，這表示嘗試批 [!DNL Data Ingestion Services] 時遇到了困難，且所有重試都已完成。
+當批處於「停止」狀態時，表示[!DNL Data Ingestion Services]在接收批時遇到困難，且所有重試都已用完。
 
 ### 如果批仍然是「正在載入」，這意味著什麼？
 
@@ -214,11 +214,11 @@ curl -X GET "https://platform.adobe.io/data/foundation/catalog/batches/{BATCH_ID
 
 ### 有沒有方法可以知道批是否已成功攝取？
 
-批狀態為「活動」後，批就已成功吸收。 要瞭解批的狀態，請遵循以前詳細說明的 [步驟](#how-is-batch-ingestion-monitored)。
+批狀態為「活動」後，批就已成功吸收。 要瞭解批的狀態，請遵循[erier](#how-is-batch-ingestion-monitored)中詳細說明的步驟。
 
 ### 批次失敗後會發生什麼？
 
-當批次失敗時，可在裝載的區段中識別其失 `errors` 敗的原因。 錯誤範例如下：
+當批失敗時，可以在裝載的`errors`部分中確定其失敗的原因。 錯誤範例如下：
 
 ```json
     "errors":[
@@ -241,7 +241,7 @@ curl -X GET "https://platform.adobe.io/data/foundation/catalog/batches/{BATCH_ID
 
 ### 如何刪除批？
 
-不應直接從中刪除批 [!DNL Catalog]處理，應使用以下任一方法刪除批處理：
+不應直接從[!DNL Catalog]刪除，應使用以下任一方法刪除批：
 
 1. 如果批正在進行中，則應中止該批。
 2. 如果批已成功掌握，應還原批。
@@ -252,11 +252,11 @@ curl -X GET "https://platform.adobe.io/data/foundation/catalog/batches/{BATCH_ID
 
 | 量度 | 說明 |
 | ------ | ----------- |
-| inputByteSize | 要處理的分段位元組 [!DNL Data Ingestion Services] 總數。 |
-| inputRecordSize | 要處理的分段行 [!DNL Data Ingestion Services] 總數。 |
-| outputByteSize | 輸出的總位元組數 [!DNL Data Ingestion Services] 為 [!DNL Data Lake]。 |
-| outputRecordSize | 輸出到的總行 [!DNL Data Ingestion Services] 數 [!DNL Data Lake]。 |
-| partitionCount | 寫入的分區總數 [!DNL Data Lake]。 |
+| inputByteSize | 要處理的[!DNL Data Ingestion Services]分段的位元組總數。 |
+| inputRecordSize | [!DNL Data Ingestion Services]要處理的分段行總數。 |
+| outputByteSize | [!DNL Data Ingestion Services]輸出到[!DNL Data Lake]的位元組總數。 |
+| outputRecordSize | 由[!DNL Data Ingestion Services]輸出到[!DNL Data Lake]的總行數。 |
+| partitionCount | 寫入[!DNL Data Lake]的分區總數。 |
 
 ### 為什麼某些批次無法使用量度？
 
@@ -271,7 +271,7 @@ curl -X GET "https://platform.adobe.io/data/foundation/catalog/batches/{BATCH_ID
 | ----------- | ----------- |
 | 106 | 資料集檔案為空。 |
 | 118 | CSV檔案包含空的標題列。 |
-| 200 | 批已接受處理，並將轉換到最終狀態，如「活動」或「失敗」。 提交後，可以使用端點監視批 `GetBatch` 處理。 |
+| 200 | 批已接受處理，並將轉換到最終狀態，如「活動」或「失敗」。 提交後，可使用`GetBatch`端點監視批。 |
 | 400 | Bad Request. 如果批中缺少或重疊的塊，則返回。 |
 
 [large-file-upload]: batch_data_ingestion_developer_guide.md#how-to-ingest-large-parquet-files
