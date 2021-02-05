@@ -1,23 +1,23 @@
 ---
 product: experience-platform
 audience: user
-user-guide-title: Adobe Experience Platform 劃分服務說明
+user-guide-title: Adobe Experience Platform細分服務
 breadcrumb-title: 分段服務指南
 user-guide-description: 從您的即時客戶設定檔資料建立區段並產生對象。
 translation-type: tm+mt
-source-git-commit: ff7c2854d45191b27e23df54b3638955b3535e76
+source-git-commit: b3defc3e33a55855e307ab70b9797d985d5719e3
 workflow-type: tm+mt
-source-wordcount: '139'
-ht-degree: 25%
+source-wordcount: '135'
+ht-degree: 17%
 
 ---
 
 
-# Adobe Experience Platform 劃分服務說明 {#segmentation}
+# Adobe Experience Platform細分服務{#segmentation}
 
-- [概述](home.md)
+- [區段服務概觀](home.md)
 - [區段資料類型](data-types.md)
-- 區段API開發人員指南 {#api}
+- 區段API {#api}
    - [概述](api/overview.md)
    - [快速入門](api/getting-started.md)
    - [匯出工作](api/export-jobs.md)
@@ -28,14 +28,14 @@ ht-degree: 25%
    - [區段搜尋](api/segment-search.md)
    - [串流區段](api/streaming-segmentation.md)
 - 區段UI {#ui}
-   - [區段UI指南](ui/overview.md)
+   - [概述](ui/overview.md)
    - [區段控制面板](ui/segment-dashboard.md)
    - [區段產生器](ui/segment-builder.md)
    - [串流區段](ui/streaming-segmentation.md)
    - [時間約束重構](ui/segment-refactoring.md)
 - [支援退出](honoring-opt-outs.md)
 - [多實體分段](multi-entity-segmentation.md)
-- 描述檔查詢語言 {#pql}
+- 描述檔查詢語言{#pql}
    - [概述](pql/overview.md)
    - [布爾函式](pql/boolean-functions.md)
    - [比較函式](pql/comparison-functions.md)
