@@ -5,7 +5,7 @@ title: 在UI中定義XDM欄位
 description: 瞭解如何在Experience Platform使用者介面中定義XDM欄位。
 topic: user guide
 translation-type: tm+mt
-source-git-commit: 70b3ad788dd78c6100782869e3065cc17a54ece1
+source-git-commit: a489ab248793a063295578943ad600d8eacab6a2
 workflow-type: tm+mt
 source-wordcount: '1311'
 ht-degree: 4%
