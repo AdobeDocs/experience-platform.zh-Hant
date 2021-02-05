@@ -1,21 +1,17 @@
 ---
 keywords: DoubleClick競標管理器；DoubleClick競標管理器；DoubleClick；顯示與視訊360；顯示360；視訊360；視訊360；顯示與視訊360；顯示與視訊
-title: Google Display & Video 360 Destination
-seo-title: Google Display & Video 360 Destination
+title: Google Display & Video 360 Connection Destination
 description: Display & Video 360（先前稱為DoubleClick競標管理器）是一種工具，用於在顯示、視訊和行動庫存來源中執行重新鎖定目標及受眾目標數位促銷活動。
-seo-description: 'Display & Video 360（先前稱為DoubleClick競標管理器）是一種工具，用於在顯示、視訊和行動庫存來源中執行重新鎖定目標及受眾目標數位促銷活動。 '
 translation-type: tm+mt
-source-git-commit: bb2fc2658d32c59b476dd9d526eb8bc2f055a1af
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '742'
+source-wordcount: '711'
 ht-degree: 0%
 
 ---
 
 
-# [!DNL Google Display & Video 360] 目標
-
-## 概述
+# [!DNL Google Display & Video 360] 連接
 
 [!DNL Display & Video 360](先前稱為 [!DNL DoubleClick Bid Manager])工具，用於在顯示、視訊和行動庫存來源上執行重新定位和受眾鎖定的數位促銷活動。
 
