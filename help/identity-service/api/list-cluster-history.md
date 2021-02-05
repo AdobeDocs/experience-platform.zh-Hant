@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics;identities;cluster history
+keywords: Experience Platform;home；熱門主題；identities；群集歷史記錄
 solution: Experience Platform
-title: 獲取身份的群集歷史記錄
+title: 獲取身份的集群歷史記錄
 topic: API guide
 description: 身分可在各種裝置圖表執行過程中移動叢集。 Identity Service可讓您隨時間檢視特定身分的叢集關聯。
 translation-type: tm+mt
-source-git-commit: 0af537e965605e6c3e02963889acd85b9d780654
+source-git-commit: 73035aec86297cfc4ee9337cf922d599001379c3
 workflow-type: tm+mt
-source-wordcount: '329'
+source-wordcount: '337'
 ht-degree: 1%
 
 ---
@@ -17,10 +17,10 @@ ht-degree: 1%
 
 身分可在各種裝置圖表執行過程中移動叢集。 [!DNL Identity Service] 可隨時間查看指定身份的群集關聯。
 
-使用可 `graph-type` 選參數指示從中獲取群集的輸出類型。 選項包括：
+使用可選`graph-type`參數指示從中獲取群集的輸出類型。 選項包括：
 
 - `None` -不執行身份聯繫。
-- `Private Graph` -根據您的個人身份圖表執行身份拼接。 如果未提 `graph-type` 供，則此為預設值。
+- `Private Graph` -根據您的個人身份圖表執行身份拼接。如果未提供`graph-type`，則此為預設值。
 
 ## 獲取單個身份的群集歷史記錄
 
@@ -32,7 +32,7 @@ GET https://platform-{REGION}.adobe.io/data/core/identity/cluster/history
 
 **請求**
 
-選項1:將身分提供為namespace(`nsId`依ID)和ID值(`id`)。
+選項1:將識別碼提供為命名空間（`nsId`，依ID）和ID值(`id`)。
 
 ```shell
 curl -X GET \
@@ -43,7 +43,7 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-選項2:提供身分識別為namespace(`ns`依名稱)和ID值(`id`)。
+選項2:將身分提供為namespace（`ns`，依名稱）和ID值(`id`)。
 
 ```shell
 curl -X GET \
@@ -54,7 +54,7 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-選項3:提供身份作為XID(`xid`)。 如需如何取得身分識別的XID的詳細資訊，請參閱本檔案中有關取得 [身分識別的XID一節](./list-native-id.md)。
+選項3:提供身份作為XID(`xid`)。 有關如何獲取身份的XID的詳細資訊，請參閱本文檔中有關[獲取身份的XID的章節](./list-native-id.md)。
 
 ```shell
 curl -X GET \
@@ -67,7 +67,7 @@ curl -X GET \
 
 ## 獲取多個身份的群集歷史記錄
 
-使用方 `POST` 法作為上述方法的批 `GET` 次等效值，返回多個身份的簇歷史記錄。
+使用`POST`方法作為與上述`GET`方法相等的批次，以返回多個身份的群集歷史記錄。
 
 >[!NOTE]
 >
@@ -110,7 +110,7 @@ POST https://platform-va7.adobe.io/data/core/identity/clusters/history
 
 **存根請求**
 
-使用標 `x-uis-cst-ctx: stub` 題會傳回無效回應。 這是一個臨時解決方案，在服務完成的同時，促進早期的一體化發展進程。 當不再需要時，此選項將不再提供。
+使用`x-uis-cst-ctx: stub`標題會傳回無效回應。 這是一個臨時解決方案，在服務完成的同時，促進早期的一體化發展進程。 當不再需要時，此選項將不再提供。
 
 ```shell
 curl -X POST \
@@ -219,4 +219,4 @@ curl -X POST \
 
 ## 後續步驟
 
-繼續下一個教學課程，列出 [身分對應](./list-identity-mappings.md)
+繼續下一個教學課程[列出身份映射](./list-identity-mappings.md)
