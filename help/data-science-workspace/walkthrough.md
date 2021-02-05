@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;walkthrough;Data Science Workspace;popular topics
+keywords: Experience Platform；逐步介紹；Data Science Workspace；熱門主題
 solution: Experience Platform
 title: Data Science Workspace逐步說明
 topic: Walkthrough
 description: 本檔案提供Adobe Experience Platform Data Science Workspace的逐步說明。 尤其是資料科學家將透過的一般工作流程，來解決使用機器學習的問題。
 translation-type: tm+mt
-source-git-commit: 0d76b14599bc6b6089f9c760ef6a6be3a19243d4
+source-git-commit: f6cfd691ed772339c888ac34fcbd535360baa116
 workflow-type: tm+mt
-source-wordcount: '1708'
+source-wordcount: '1716'
 ht-degree: 0%
 
 ---
@@ -15,12 +15,12 @@ ht-degree: 0%
 
 # [!DNL Data Science Workspace] 漫步
 
-本檔案提供Adobe Experience Platform的逐步說明 [!DNL Data Science Workspace]。 本教學課程概述一般資料科學家的工作流程，以及他們如何運用機器學習來解決問題。
+本檔案提供Adobe Experience Platform [!DNL Data Science Workspace]的逐步說明。 本教學課程概述一般資料科學家的工作流程，以及他們如何運用機器學習來解決問題。
 
 ## 必要條件
 
 - 已註冊的Adobe ID帳戶
-   - Adobe ID帳戶必須已新增至可存取Adobe Experience Platform和的組織 [!DNL Data Science Workspace]。
+   - Adobe ID帳戶必須已新增至可存取Adobe Experience Platform和[!DNL Data Science Workspace]的組織。
 
 ## 零售使用案例
 
@@ -30,22 +30,22 @@ ht-degree: 0%
 
 資料科學家的解決方案是運用零售商提供的豐富歷史資訊，預測未來趨勢並最佳化定價決策。 本逐步介紹使用過去的銷售資料來訓練機器學習模型，並使用模型來預測未來的銷售趨勢。 有了這項功能，您就可以產生深入資訊，協助您進行最佳價格變更。
 
-此概述反映資料科學家在取得資料集並建立模型以預測每週銷售的步驟。 本教學課程涵蓋Adobe Experience Platform上「零售銷售筆記型範例」的下列章節 [!DNL Data Science Workspace]:
+此概述反映資料科學家在取得資料集並建立模型以預測每週銷售的步驟。 本教學課程涵蓋Adobe Experience Platform [!DNL Data Science Workspace]上「零售銷售筆記型電腦範例」的下列章節：
 
 - [設定](#setup)
 - [探索資料](#exploring-data)
 - [功能工程](#feature-engineering)
 - [訓練與驗證](#training-and-verification)
 
-### 筆記本 [!DNL Data Science Workspace]
+### [!DNL Data Science Workspace]中的筆記型電腦
 
-在Adobe Experience Platform UI中，從「 **[!UICONTROL Data Science]** 」（資料科學）標籤中選取「Notebooks **[!UICONTROL 」（筆記型電腦），將您帶到「]** Notebooks [!UICONTROL 」(筆記型電腦] )概觀頁面。 在此頁中，選擇要啟 [!DNL JupyterLab] 動環境的選 [!DNL JupyterLab] 項卡。 Launcher的預設著陸頁 [!DNL JupyterLab] 面是 **[!UICONTROL Launcher]**。
+在Adobe Experience Platform UI中，從&#x200B;**[!UICONTROL Data Science]**&#x200B;標籤中選擇&#x200B;**[!UICONTROL Notebooks]**，將您帶到[!UICONTROL Notebooks]概觀頁面。 在此頁中，選擇[!DNL JupyterLab]頁籤以啟動[!DNL JupyterLab]環境。 [!DNL JupyterLab]的預設著陸頁面是&#x200B;**[!UICONTROL Launcher]**。
 
 ![](./images/walkthrough/notebooks.png)
 
 ![](./images/walkthrough/jupyterlab_launcher.png)
 
-本教學課程 [!DNL Python] 使用中 [!DNL JupyterLab Notebooks] 的3來說明如何存取和探索資料。 在「啟動器」頁面中，提供了示例筆記本。 Retail Sales **** （零售銷售）示例筆記型電腦用於以下示例。
+本教學課程使用[!DNL JupyterLab Notebooks]中的[!DNL Python] 3來顯示如何存取和探索資料。 在「啟動器」頁面中，提供了示例筆記本。 **[!UICONTROL 零售銷售]**&#x200B;示例筆記型電腦用於以下示例。
 
 ### 設定 {#setup}
 
@@ -58,25 +58,25 @@ ht-degree: 0%
 - **sklearn**:具備分類、回歸、支援向量和叢集演算法的機器學習庫
 - **警告**:控制警告訊息的程式庫
 
-### 探索資料 {#exploring-data}
+### 探索資料{#exploring-data}
 
 #### 載入資料
 
-載入程式庫後，您就可以開始檢視資料。 以下程 [!DNL Python] 式碼使用 `DataFrame` 熊貓的資料結構和 [read_csv()](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.read_csv.html#pandas.read_csv) 函式，讀取熊貓資料 [!DNL Github] 框上的CSV:
+載入程式庫後，您就可以開始檢視資料。 以下[!DNL Python]代碼使用熊貓&#39; `DataFrame`資料結構和[read_csv()](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.read_csv.html#pandas.read_csv)函式將[!DNL Github]上托管的CSV讀入熊貓資料框：
 
 ![](./images/walkthrough/read_csv.png)
 
-熊貓的DataFrame資料結構是一種二維標籤資料結構。 若要快速查看資料的維度，您可使用 `df.shape`。 這會傳回表示DataFrame維度的元組：
+熊貓的DataFrame資料結構是一種二維標籤資料結構。 若要快速查看資料的維度，您可使用`df.shape`。 這會傳回表示DataFrame維度的元組：
 
 ![](./images/walkthrough/df_shape.png)
 
-最後，您可以預覽資料的外觀。 您可以使 `df.head(n)` 用來檢視DataFrame `n` 的前幾列：
+最後，您可以預覽資料的外觀。 您可以使用`df.head(n)`來檢視DataFrame的前`n`列：
 
 ![](./images/walkthrough/df_head.png)
 
 #### 統計摘要
 
-我們可以利 [!DNL Python's] 用熊貓庫來獲取每個屬性的資料類型。 下列呼叫的輸出將提供每個欄的項目數和資料類型的相關資訊：
+我們可以利用[!DNL Python's]熊貓庫來獲取每個屬性的資料類型。 下列呼叫的輸出將提供每個欄的項目數和資料類型的相關資訊：
 
 ```PYTHON
 df.info()
@@ -86,7 +86,7 @@ df.info()
 
 由於瞭解每欄的資料類型可讓我們瞭解如何處理資料，因此這項資訊十分實用。
 
-現在讓我們來看一下統計摘要。 只會顯示數值資料類型 `date`, `storeType`且 `isHoliday` 不會輸出：
+現在讓我們來看一下統計摘要。 只會顯示數值資料類型，因此`date`、`storeType`和`isHoliday`將不會輸出：
 
 ```PYTHON
 df.describe()
@@ -96,11 +96,11 @@ df.describe()
 
 透過此項功能，您可以看到每個特徵有6435個執行個體。 此外，還給出了平均、標準差(std)、最小、最大和四分位數等統計資訊。 這會提供資料的偏差資訊。 在下一節中，您將檢視視覺化，並搭配這項資訊運作，讓我們完全瞭解您的資料。
 
-從資料的最小值和最大值 `store`來看，您可以看到有45個唯一儲存區。 此外，還有 `storeTypes` 哪些功能讓商店與眾不同。 您可以執行下列 `storeTypes` 動作，來查看
+查看`store`的最小值和最大值，您可以看到有45個唯一儲存資料。 還有`storeTypes`可區分商店的不同。 您可以執行下列動作，以檢視`storeTypes`的分佈：
 
 ![](./images/walkthrough/df_groupby.png)
 
-這表示22家店是 `storeType A` ,17家是 `storeType B`,6家是 `storeType C`。
+這表示22個商店的`storeType A`、17個商店的`storeType B`和6個商店的`storeType C`。
 
 #### 視覺化資料
 
@@ -110,7 +110,7 @@ df.describe()
 
 單變數圖是個別變數的圖形。 用於視覺化資料的通用單變數圖形是方框圖和須條圖。
 
-使用您以前的零售資料集，您就可以為45家商店及其每週銷售量產生包裝盒和須條圖。 使用函式生成 `seaborn.boxplot` 圖。
+使用您以前的零售資料集，您就可以為45家商店及其每週銷售量產生包裝盒和須條圖。 該出圖使用`seaborn.boxplot`函式生成。
 
 ![](./images/walkthrough/box_whisker.png)
 
@@ -132,7 +132,7 @@ df.describe()
 
 請注意中心下方的對角線。 這顯示在比較變數本身時，其具有完全正相關性。 強正相關度將接近1，弱關聯度接近0。 負相關顯示，負系數顯示逆趨勢。
 
-### 功能工程 {#feature-engineering}
+### 功能工程{#feature-engineering}
 
 在本節中，功能工程可用來透過執行下列作業來修改您的零售資料集：
 
@@ -143,7 +143,7 @@ df.describe()
 
 #### 新增周和年欄
 
-目前的日期格式(`2010-02-05`)可讓您很難區分每週的資料。 因此，您應將日期轉換為包含周和年。
+日期的目前格式(`2010-02-05`)可讓您很難區分每週的資料。 因此，您應將日期轉換為包含周和年。
 
 ![](./images/walkthrough/date_to_week_year.png)
 
@@ -153,25 +153,25 @@ df.describe()
 
 #### 將storeType轉換為指標變數
 
-接著，您要將storeType欄轉換為代表各欄的欄 `storeType`。 有3種商店類型(`A`、 `B`、 `C`)，您要從中建立3個新欄。 在每個欄中設定的值都是布林值，其中會根據原來的欄位和其他2欄位 `storeType` 設定 `0` &#39;1&#39;。
+接下來，您要將storeType欄轉換為代表每個`storeType`的欄。 有3種商店類型(`A`、`B`、`C`)，您要從中建立3個新欄。 在每個值中設定的值是布爾值，其中設定&#39;1&#39;取決於`storeType`的內容，而其它2列的`0`。
 
 ![](./images/walkthrough/storeType.png)
 
-將刪 `storeType` 除當前列。
+刪除當前`storeType`列。
 
 #### 將isHoliday轉換為數值類型
 
-接下來的修改是將布林值 `isHoliday` 變更為數值表示。
+下一項修改是將`isHoliday`布林值變更為數值表示。
 
 ![](./images/walkthrough/isHoliday.png)
 
 #### 預測每週下週的銷售情況
 
-現在，您想要將之前和未來的每週銷售新增至每個資料集。 您可以抵消您的影像 `weeklySales`。 此外，還計 `weeklySales` 算差異。 這是透過扣 `weeklySales` 除前一週的值 `weeklySales`。
+現在，您想要將之前和未來的每週銷售新增至每個資料集。 您可以通過偏移`weeklySales`來執行此操作。 此外，還計算`weeklySales`差。 這是透過減去前一週的`weeklySales`而完成的。`weeklySales`
 
 ![](./images/walkthrough/weekly_past_future.png)
 
-由於您正在向前偏移45個數 `weeklySales` 據集，而向後偏移45個資料集以建立新列，因此前45個資料點和前45個資料點具有NaN值。 您可以使用函式從資料集中移除這些點， `df.dropna()` 此函式可移除所有具有NaN值的列。
+由於您正在向前偏移`weeklySales`資料45個資料集，並向後偏移45個資料集以建立新列，因此前45個資料點和前45個資料點具有NaN值。 您可以使用`df.dropna()`函式從資料集中移除這些點，此函式會移除所有具有NaN值的列。
 
 ![](./images/walkthrough/dropna.png)
 
@@ -179,7 +179,7 @@ df.describe()
 
 ![](./images/walkthrough/df_info_new.png)
 
-### 培訓與驗證 {#training-and-verification}
+### 訓練與驗證{#training-and-verification}
 
 現在，是時候建立一些資料模型，並選擇哪個模型在預測未來銷售時表現最佳。 您將評估下列5種演算法：
 
@@ -191,23 +191,23 @@ df.describe()
 
 #### 將資料集分割為訓練和測試子集
 
-您需要一種方法來瞭解模型能夠預測值的精確度。 此評估可借由分配部分資料集以用作驗證，而其餘資料則用作訓練資料來完成。 由 `weeklySalesAhead` 於是的實際未來值， `weeklySales`因此您可以使用它來評估模型在預測值時的準確度。 拆分如下：
+您需要一種方法來瞭解模型能夠預測值的精確度。 此評估可借由分配部分資料集以用作驗證，而其餘資料則用作訓練資料來完成。 由於`weeklySalesAhead`是`weeklySales`的實際未來值，因此您可使用此值來評估模型在預測值時的準確性。 拆分如下：
 
 ![](./images/walkthrough/split_data.png)
 
-您現在有 `X_train` 準備 `y_train` 模型，以及以 `X_test` 後 `y_test` 進行評估。
+您現在有`X_train`和`y_train`來準備模型，並有`X_test`和`y_test`可供稍後評估。
 
 #### 特別檢查算法
 
-在本節中，您會將所有演算法宣告至名為的陣列 `model`。 接著，您重複此陣列，並針對每個演算法輸入訓練資料，以 `model.fit()` 建立模型 `mdl`。 使用此模型，您就可以用您的 `weeklySalesAhead` 資料進行 `X_test` 預測。
+在本節中，將所有算法聲明到名為`model`的陣列中。 接著，您重複此陣列，並針對每個演算法，使用`model.fit()`輸入訓練資料，以建立模型`mdl`。 使用此模型，您可以使用`X_test`資料預測`weeklySalesAhead`。
 
 ![](./images/walkthrough/training_scoring.png)
 
-對於計分，您會採用預測值與資料中實際值之 `weeklySalesAhead` 間的平均百分比差 `y_test` 異。 由於您想要將預測與實際結果之間的差異降至最低，因此，「漸層提升回歸」模型是效能最佳的模型。
+對於計分，您會使用預測`weeklySalesAhead`與`y_test`資料中實際值之間的平均百分比差值。 由於您想要將預測與實際結果之間的差異降至最低，因此，「漸層提升回歸」模型是效能最佳的模型。
 
 #### 視覺化預測
 
-最後，您可使用實際的每週銷售值來視覺化您的預測模型。 藍線代表實際數字，綠色代表您使用漸層提升的預測。 下列程式碼會產生6張圖，代表您資料集中45個商店中的6張。 僅 `Store 1` 顯示於：
+最後，您可使用實際的每週銷售值來視覺化您的預測模型。 藍線代表實際數字，綠色代表您使用漸層提升的預測。 下列程式碼會產生6張圖，代表您資料集中45個商店中的6張。 此處僅顯示`Store 1`:
 
 ![](./images/walkthrough/visualize_prediction.png)
 
@@ -220,4 +220,4 @@ df.describe()
 - 接著，使用功能工程來修改零售資料集。
 - 最後，建立資料模型，並選擇哪個模型在預測未來銷售時表現最佳。
 
-準備好之後，請先閱讀 [JupyterLab使用指南](./jupyterlab/overview.md) ，以快速概觀Adobe Experience Platform Data Science Workspace中的筆記型電腦。 此外，如果您有興趣瞭解模型和方式，請先閱讀零售銷售模式 [和資料集教學課程](./models-recipes/create-retails-sales-dataset.md) 。 本教學課程可讓您準備後續的Data Science Workspace教學課程，您可在「Data Science Workspace教學課程」頁面 [中檢視](../tutorials/data-science-workspace.md)。
+準備好後，請先閱讀[JupyterLab使用指南](./jupyterlab/overview.md)，以快速概觀Adobe Experience Platform Data Science Workspace中的筆記型電腦。 此外，如果您有興趣瞭解模型和方式，請先閱讀[零售銷售模式和dataset](./models-recipes/create-retails-sales-dataset.md)教學課程。 本教學課程可讓您準備後續的Data Science Workspace教學課程，這些教學課程可在Data Science Workspace [教學課程頁面](../tutorials/data-science-workspace.md)中檢視。
