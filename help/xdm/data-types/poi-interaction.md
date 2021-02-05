@@ -1,21 +1,21 @@
 ---
-keywords: Experience Platform;home;popular topics;schema;Schema;XDM;fields;schemas;Schemas;poi;interaction;point of interest;point-of-interest;datatype;data-type;data type;
+keywords: Experience Platform;home；熱門主題；架構；Schema;XDM;fields;schemas;Schemas;poi;interaction;interect;interest;point-of-interest;datatype;data-type；資料類型；
 solution: Experience Platform
 title: 興趣點互動資料類型
 topic: overview
 description: 本檔案提供興趣點互動XDM資料類型的概觀。
 translation-type: tm+mt
-source-git-commit: 032adc72db7f094b268f14e8f7d48810830a84e4
+source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
 workflow-type: tm+mt
-source-wordcount: '162'
+source-wordcount: '183'
 ht-degree: 2%
 
 ---
 
 
-# [!UICONTROL 興趣點互動資料] 類型
+# [!UICONTROL 興趣點互動資] 料類型
 
-[!UICONTROL 興趣點互動] (Point of interest interaction)是標準的XDM資料類型，可描述在行動裝置在範圍內時，將身分資訊傳送至行動應用程式的無線裝置。
+[!UICONTROL 興趣點互] 動是標準的XDM資料類型，可描述在行動裝置在範圍內時，將身分資訊傳送至行動應用程式的無線裝置。
 
 <img src="../images/data-types/poi-interaction.png" width="400" /><br />
 
