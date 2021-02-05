@@ -1,21 +1,21 @@
 ---
-keywords: Experience Platform;home;popular topics;data type;data types;Data types;Data type;Segmentation data types;Segmentation;segmentation;Segmentation Service;Segmentation service data types;
+keywords: Experience Platform; home；熱門主題；資料類型；資料類型；資料類型；資料類型；分段資料類型；分段；分段服務；分段服務資料類型；
 solution: Experience Platform
-title: Adobe Experience Platform細分服務資料類型
+title: 分段服務中支援的資料類型
 topic: overview
-description: 區段服務支援所有XDM資料類型。 構成區段定義的規則會依下列資料類型來情境化。
+description: Adobe Segmentation Service支援所有Experience Data Model(XDM)資料類型。 構成區段定義的規則會依下列資料類型來情境化。
 translation-type: tm+mt
-source-git-commit: 17ef6c1c6ce58db2b65f1769edf719b98d260fc6
+source-git-commit: b3defc3e33a55855e307ab70b9797d985d5719e3
 workflow-type: tm+mt
-source-wordcount: '479'
+source-wordcount: '514'
 ht-degree: 3%
 
 ---
 
 
-# Adobe Experience Platform支援 [!DNL Segmentation Service] 的資料類型
+# 區段服務中支援的資料類型
 
-支援內的所有XDM資料類型 [!DNL Segmentation Service]。 構成區段定義的規則會依下列資料類型來情境化。
+Adobe Experience Platform劃分服務支援所有Experience Data Model(XDM)資料類型。 構成區段定義的規則會依下列資料類型來情境化。
 
 ## 字串資料
 
@@ -27,20 +27,20 @@ ht-degree: 3%
 | -------------- | -------- |
 | 邏輯 | `and`, `or`, `not` |
 | 包含／排除 | `include`, `must` `exist`, `exclude`, `must not exist` |
-| 比較 | `equals`, `does not equal`, `contains`, `starts with` |
+| 比較 | `equals`,  `does not equal`,  `contains`,  `starts with` |
 
 ## 日期資料
 
-日期資料可讓您使用特定的開始／結束日期或使用與日期相關的陳述式，將時間相關的內容指派給區段定義。 其中一項實作可能是為今年任何時間與您品牌互動且在過 *去幾天內也**活躍的客* 戶建立觀眾。
+日期資料可讓您使用特定的開始／結束日期或使用與日期相關的陳述式，將時間相關的內容指派給區段定義。 其中一個實作可能是建立在&#x200B;*今年*&#x200B;任何時候與您的品牌互動，且在&#x200B;*最近幾天內也*&#x200B;活躍的客戶群。
 
 | 範例欄位 | 與日期相關的聲明 | 時間表 |
 | ------------- | ------------------------ | --------- |
-| person.firstPurchase | `today`, `yesterday`, `this month`, `this year` | 與區段建立當日相關。 |
+| person.firstPurchase | `today`,  `yesterday`,  `this month`,  `this year` | 與區段建立當日相關。 |
 | person.lastPurchase | `in last`, `during`, `before`, `after`, `within` | 在任何指定的周／月內相關。 |
 
 ## 體驗事件
 
-以Adobe Experience Platform架構 [!DNL XDM ExperienceEvents][!DNL Platform]記錄客戶與整合式應用程式的明確和隱含互動，包括互動發生時的系統快照。 [!DNL ExperienceEvents] 是事實記錄。 因此，它們是區段定義期間可供您使用的資料來源。
+[!DNL XDM ExperienceEvents]是Adobe Experience Platform架構，可記錄客戶與[!DNL Platform]整合式應用程式的明確和隱含互動，包括互動發生時系統的快照。 [!DNL ExperienceEvents] 是事實記錄。因此，它們是區段定義期間可供您使用的資料來源。
 
 如下表所示，事件資料會使用有助於調整事件行為並指定事件屬性的關鍵字來呈現。
 
@@ -55,11 +55,11 @@ ht-degree: 3%
 
 外部對象也可以用作新區段定義的元件，將其屬性規則新增至新區段。
 
-目前，只有Adobe Audience Manager才支援做為外部觀眾，未來會啟用其他來源。 有關搭配使用Adobe Audience Manager觀眾的更多資訊，請參閱Adobe Audience Manager [檔案中的觀眾分享指南](https://docs.adobe.com/content/help/en/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html)。
+目前，只有Adobe Audience Manager才支援做為外部觀眾，未來會啟用其他來源。 有關搭配平台使用Adobe Audience Manager觀眾的更多資訊，請參閱Adobe Audience Manager檔案](https://docs.adobe.com/content/help/en/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html)中的[觀眾分享指南。
 
 ### 區段共用
 
-在Platform中建立的區段可用於其他 [Adobe Experience Cloud核心服務](https://docs.adobe.com/content/help/zh-Hant/core-services/interface/experience-cloud.html)。 若要啟用此功能，您必須聯絡解決方案架構師或顧問。
+在平台中建立的區段可用於其他[Adobe Experience Cloud核心服務](https://docs.adobe.com/content/help/zh-Hant/core-services/interface/experience-cloud.html)。 若要啟用此功能，您必須聯絡解決方案架構師或顧問。
 
 ## 其他資料類型
 
