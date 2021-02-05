@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform;home；熱門主題；架構；Schema;enum;primary identity;primary identity;XDM individual profile;Experience事件；XDM ExperienceEvent;experienceEvent;experienceevent;XDM Experienceevent；架構設計；最佳實踐
 solution: Experience Platform
-title: Adobe Experience Platform中資料建模的最佳實務
+title: 資料建模的最佳實務
 topic: overview
 description: 本檔案提供Experience Data Model(XDM)架構的簡介，以及構成Adobe Experience Platform中要使用之架構的建置區塊、原則和最佳實務。
 translation-type: tm+mt
-source-git-commit: 1f18bf7367addd204f3ef8ce23583de78c70b70c
+source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
 workflow-type: tm+mt
-source-wordcount: '2515'
+source-wordcount: '2507'
 ht-degree: 1%
 
 ---
 
 
-# Adobe Experience Platform中資料建模的最佳實務
+# 資料建模的最佳實務
 
 [!DNL Experience Data Model] (XDM)是核心架構，可透過提供用於下游Adobe Experience Platform服務的通用結構和定義，標準化客戶體驗資料。遵循XDM標準，所有客戶體驗資料都可以整合在通用的呈現方式中，讓您從客戶行動中獲得寶貴的見解，透過細分定義客戶受眾，並表達客戶屬性以利個人化。
 
@@ -75,7 +75,7 @@ ht-degree: 1%
 | --- | --- | --- | --- | --- |
 | 郵編：1234567 | 新增 | 郵遞區號275098 | 2 | 10月1日，上午10點32分 |
 | 郵編：1234567 | 移除 | 郵遞區號275098 | 1 | 10月1日，上午10點33分 |
-| 郵編：1234567 | 新增 | 郵編：486502 | 3 | 10月1日，上午10點41分 |
+| 郵編：1234567 | 新增 | 郵編：486502 | 1 | 10月1日，上午10點41分 |
 | 郵編：1234567 | 新增 | 郵編：910482 | 5 | 10月3日，下午2:15 |
 
 #### 區段使用案例
