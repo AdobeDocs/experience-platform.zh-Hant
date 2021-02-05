@@ -1,21 +1,21 @@
 ---
-keywords: Experience Platform;home;popular topics;schema;Schema;XDM;fields;schemas;Schemas;poi;poi details;point of interest;point of interest details;datatype;data-type;data type;
+keywords: Experience Platform;home；熱門主題；架構；Schema;XDM;fields;schemas;Schemas;poi;poi details;interest;interest details;datatype;data type;
 solution: Experience Platform
 title: 興趣點詳細資料資料類型
 topic: overview
 description: 本檔案提供興趣點詳細資訊XDM資料類型的概觀。
 translation-type: tm+mt
-source-git-commit: 27ce9b6e8608bbfccac25387ba96f998272273c1
+source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
 workflow-type: tm+mt
-source-wordcount: '175'
+source-wordcount: '200'
 ht-degree: 4%
 
 ---
 
 
-# [!UICONTROL 興趣點詳細資料] ，資料類型
+# [!UICONTROL 興趣點詳細資] 料類型
 
-[!UICONTROL 興趣點詳細資訊] ，是一種標準的XDM資料類型，可說明觀察到事件的地理相關資料。
+[!UICONTROL 興趣點詳] 細說明標準XDM資料類型，可說明觀察到事件的地理相關資料。
 
 <img src="../images/data-types/poi-details.png" width="550" /><br />
 
