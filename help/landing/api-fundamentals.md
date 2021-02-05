@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform;home；熱門主題
 solution: Experience Platform
-title: Adobe Experience Platform API基礎知識
+title: Experience Platform API基礎知識
 topic: getting started
 description: 本檔案簡要概述與Experience Platform API相關的一些基礎技術與同步。
 translation-type: tm+mt
-source-git-commit: 5dad1fcc82707f6ee1bf75af6c10d34ff78ac311
+source-git-commit: 5575d5e45bddcc007dcf78720cd7a7e20475f78c
 workflow-type: tm+mt
-source-wordcount: '506'
+source-wordcount: '504'
 ht-degree: 1%
 
 ---
 
 
-# Adobe Experience Platform API基礎知識
+# Experience Platform API基礎知識
 
 Adobe Experience Platform API採用數種重要的基礎技術和語法，以有效管理以JSON為基礎的[!DNL Platform]資源。 本檔案提供這些技術的簡要概述，以及外部檔案的連結，以取得更多資訊。
 
