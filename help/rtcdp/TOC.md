@@ -5,10 +5,10 @@ audience: user
 user-guide-title: 即時客戶資料平台指南
 user-guide-description: 將來自多個企業來源的已知和匿名資料放在一起，以建立客戶設定檔，從這些設定檔建立對象區段，並對協力廠商目的地啟動這些區段。
 translation-type: tm+mt
-source-git-commit: 4a282f8890ace3be7808ffbf018377d792e30cb7
+source-git-commit: 1305d789c68ac8f84d5a5f82d8f17035e56ef712
 workflow-type: tm+mt
-source-wordcount: '109'
-ht-degree: 49%
+source-wordcount: '103'
+ht-degree: 52%
 
 ---
 
@@ -40,6 +40,5 @@ ht-degree: 49%
    * [客戶人工智慧](segmentation/customer-ai.md)
 * 來源 {#sources}
    * [來源概觀](sources/sources-overview.md)
-   * [使用Adobe Launch實作網站標籤](sources/launch.md)
 * [Experience Platform發行說明](https://www.adobe.com/go/platform-release-notes-en)
 * [Experience Platform 詞彙表](https://www.adobe.com/go/platform-glossary-en)
