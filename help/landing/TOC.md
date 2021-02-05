@@ -5,10 +5,10 @@ user-guide-title: Adobe Experience Platform 概述
 breadcrumb-title: Experience Platform 概觀
 user-guide-description: 了解 Experience Platform 如何協助您即時為客戶傳遞個人化體驗。
 translation-type: tm+mt
-source-git-commit: 6ec317dd790b6ad77d8181c1398934f9636c5f5f
+source-git-commit: a489ab248793a063295578943ad600d8eacab6a2
 workflow-type: tm+mt
-source-wordcount: '161'
-ht-degree: 21%
+source-wordcount: '159'
+ht-degree: 22%
 
 ---
 
@@ -30,12 +30,12 @@ ht-degree: 21%
    * [工作流程UI指南](workflows.md)
    * [瀏覽器和語言支援](browser-language-support.md)
 * Experience Platform API {#platform-apis}
+   * [驗證和存取平台API](api-authentication.md)
    * [API基礎知識](api-fundamentals.md)
    * [API參考檔案](http://www.adobe.com/go/platform-api-reference-en)
-   * [驗證和存取平台API教學課程](api-authentication.md)
 * 平台檔案{#documentation}
-   * [檔案總覽](documentation/overview.md)
-   * [檔案語言支援](documentation/language-support.md)
+   * [概述](documentation/overview.md)
+   * [語言支援](documentation/language-support.md)
 * Adobe生態系統中的平台{#ecosystem}
    * [應用程式服務](application-services.md)
    * [應用程式與智慧服務（視訊）](video/application-intelligent-services.md)
@@ -48,6 +48,6 @@ ht-degree: 21%
          * [設定資料集以擷取同意和偏好設定資料](./governance-privacy-security/consent/iab/dataset.md)
 * [授權使用儀表板](license-usage-dashboard.md)
 * [疑難排解指南](troubleshooting.md)
-* [ADLS第2代遷移](adls2-gen2-migration.md)
+* [Gen2資料湖遷移](adls2-gen2-migration.md)
 * [字彙表](glossary.md)
 * [發行說明](https://www.adobe.com/go/platform-release-notes-en)
