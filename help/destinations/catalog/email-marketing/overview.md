@@ -1,20 +1,18 @@
 ---
 keywords: 電子郵件；電子郵件；電子郵件；電子郵件目標
-title: 電子郵件行銷目標
-seo-title: 電子郵件行銷目標
+title: 電子郵件行銷目標概觀
 type: Tutorial
 description: 電子郵件服務供應商(ESP)可讓您管理電子郵件行銷活動，例如傳送促銷電子郵件促銷活動。
-seo-description: 電子郵件服務供應商(ESP)可讓您管理電子郵件行銷活動，例如傳送促銷電子郵件促銷活動。
 translation-type: tm+mt
-source-git-commit: 95f57f9d1b3eeb0b16ba209b9774bd94f5758009
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '811'
+source-wordcount: '791'
 ht-degree: 1%
 
 ---
 
 
-# 電子郵件行銷目標{#email-marketing-destinations}
+# 電子郵件行銷目標概觀{#email-marketing-destinations}
 
 電子郵件服務供應商(ESP)可讓您管理電子郵件行銷活動，例如傳送促銷電子郵件宣傳。 Adobe Experience Platform可讓您將區段啟用至電子郵件行銷目的地，與ESP整合。
 
