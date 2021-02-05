@@ -1,21 +1,21 @@
 ---
-keywords: Experience Platform;home;popular topics;PSQL;psql;Query service;query service;metadata;commands;metadata commands;
+keywords: Experience Platform;home；常用主題；PSQL;psql；查詢服務；查詢服務；元資料；命令；元資料命令；
 solution: Experience Platform
-title: 中繼資料命令
+title: 查詢服務中的元資料PostgreSQL命令
 topic: metadata
-description: 目前支援查詢中繼資料的PSQL命令清單。
+description: Adobe Experience Platform Query Service中目前支援查詢中繼資料的PostgreSQL命令清單。
 translation-type: tm+mt
-source-git-commit: c5d3be4706ca6d6a30e203067db6ddc894b9bfb4
+source-git-commit: 97dc0b5fb44f5345fd89f3f56bd7861668da9a6e
 workflow-type: tm+mt
-source-wordcount: '309'
+source-wordcount: '338'
 ht-degree: 0%
 
 ---
 
 
-# 中繼資料命令
+# 查詢服務中的元資料PostgreSQL命令
 
-對於資料集上的中繼資料，目前支援下列PSQL命令以進行查詢：
+對於資料集上的元資料，當前支援查詢以下PostgreSQL命令：
 
 >[!NOTE]
 >
@@ -39,10 +39,10 @@ ht-degree: 0%
 | `\errverbose` | 以最大詳細程度重複最近的伺服器錯誤消息。 |
 | `\l or \list` | 顯示伺服器中的資料庫清單。 |
 | `\set` | 顯示所有當前psql變數的名稱和值。 |
-| `\showtables` | 顯示下列資訊： <br>名稱：引用表的名稱。<br>datasetId:儲存的資料集的ID。<br>資料集：儲存的資料集名稱。<br>說明：資料集的說明。<br>已解決：一個布爾值，用於指示當前會話中是否解析資料集。 |
+| `\showtables` | 顯示下列資訊：<br>name:引用表的名稱。<br>datasetId:儲存的資料集的ID。<br>資料集：儲存的資料集名稱。<br>說明：資料集的說明。<br>已解決：一個布爾值，用於指示當前會話中是否解析資料集。 |
 | `\timing` | 在開啟和關閉之間切換顯示。 顯示以毫秒為單位。 超過一秒的間隔以分鐘：秒格式顯示，並視需要新增小時和天欄位。 |
 
-所有以開頭的命令都可 `\d` 以組合。 例如，您可以發佈 `\dtsn` 以顯示所有表、序列和結構的清單。 `\d` 單獨顯示所有可見表、視圖、實體化視圖和序列。
+所有以`\d`開頭的命令都可以合併。 例如，您可以發佈`\dtsn`來顯示所有表、序列和方案的清單。 `\d` 單獨顯示所有可見表、視圖、實體化視圖和序列。
 
-有關上述命令的其他資訊，請參閱 [postgresql.org上的文檔](https://www.postgresql.org/docs/10/app-psql.html)。 但是，請注意，並非PostgreSQL文檔中顯示的所有選項都受支援 [!DNL Experience Platform]。
+有關上述命令的其他資訊，請參閱[postgresql.org](https://www.postgresql.org/docs/10/app-psql.html)中的文檔。 但是，請注意，並非[!DNL Experience Platform]支援PostgreSQL文檔中顯示的所有選項。
 
