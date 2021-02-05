@@ -1,21 +1,17 @@
 ---
 keywords: bizible;bizible extension;bizible destination
-title: Bizible extension
-seo-title: Bizible extension
+title: Bizible Extension Destination
 description: Bizible擴充功能是Adobe Experience Platform中的電子郵件目的地。 如需擴充功能的詳細資訊，請參閱Adobe Exchange的擴充功能頁面。
-seo-description: Bizible擴充功能是Adobe Experience Platform中的電子郵件目的地。 如需擴充功能的詳細資訊，請參閱Adobe Exchange的擴充功能頁面。
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '515'
+source-wordcount: '488'
 ht-degree: 3%
 
 ---
 
 
 # [!DNL Bizible] 擴充功能 {#bizible-extension}
-
-## 概述 {#overview}
 
 [!DNL Bizible] 是領先業界的B2B歸因解決方案，可讓您無法並行地洞察資料，以便您做出明智的決策，以推動經濟增長。
 
