@@ -1,21 +1,21 @@
 ---
 keywords: Experience Platform;profile；即時客戶配置檔案；疑難排解；guardrails;guidelines;limit;entity;primary entity;dimension entity;
-title: 即時客戶個人檔案資料的Experience Platform保障
+title: 即時客戶個人檔案資料的護欄
 solution: Experience Platform
 product: experience platform
 topic: guide
 type: Documentation
 description: 'Adobe Experience Platform提供一系列的防護措施，幫助您避免建立「即時客戶個人檔案」無法支援的資料模型。 本檔案概述在建立描述檔資料模型時要牢記的最佳實務和限制。 '
 translation-type: tm+mt
-source-git-commit: e6ecc5dac1d09c7906aa7c7e01139aa194ed662b
+source-git-commit: ba1cbed3b5e3f3a8879b3882856a03ef4be9b96a
 workflow-type: tm+mt
-source-wordcount: '1457'
+source-wordcount: '1456'
 ht-degree: 1%
 
 ---
 
 
-# [!DNL Platform] 護欄  [!DNL Real-time Customer Profile]
+# [!DNL Real-time Customer Profile]資料的護欄
 
 [!DNL Real-time Customer Profile] 提供個人個人檔案，讓您根據行為見解和客戶屬性，提供個人化的跨通道體驗。為達到此目標，Adobe Experience Platform中的[!DNL Profile]和分段引擎使用高度非標準化的混合資料模型，提供開發客戶個人檔案的新方式。 使用這種混合資料模型，對於正確建模所收集的資料至關重要。 雖然[!DNL Profile]資料存放區維護描述檔資料不是關聯式存放區，但[!DNL Profile]允許與小維度實體整合，以便以簡化且直覺的方式建立區段。 此整合稱為多實體分段。
 
