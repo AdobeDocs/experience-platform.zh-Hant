@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform；匯入封裝配方；資料科學工作區；熱門主題；配方；api;sensei機器學習；建立引擎
 solution: Experience Platform
-title: 匯入封裝的方式(API)
+title: 使用Sensei Machine Learning API匯入封裝配方
 topic: tutorial
 type: Tutorial
 description: '本教學課程使用Sensei Machine Learning API來建立引擎，在使用者介面中也稱為「配方」。 '
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: f6cfd691ed772339c888ac34fcbd535360baa116
 workflow-type: tm+mt
-source-wordcount: '997'
+source-wordcount: '1007'
 ht-degree: 2%
 
 ---
 
 
-# 匯入封裝的方式(API)
+# 使用Sensei Machine Learning API匯入封裝的配方
 
 本教學課程使用[[!DNL Sensei Machine Learning API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml)來建立[Engine](../api/engines.md)，也稱為使用者介面中的方式。
 
