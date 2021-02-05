@@ -1,23 +1,23 @@
 ---
-keywords: Experience Platform;home;popular topics;namespace;Namespace;namespaces;Namespaces;identity namespace;Identity namespace;identity;Identity
+keywords: Experience Platform;home；常用主題；namespace;Namespace;namespaces;Namespaces;Identity namespace;Identity namespace;Identity
 solution: Experience Platform
-title: 建立自訂命名空間
+title: 在Identity Service API中建立自訂命名空間
 topic: API guide
 description: 使用Identity Namespace API，您可以建立自訂的身分名稱空間，該名稱空間僅供您的組織使用。
 translation-type: tm+mt
-source-git-commit: 3376d6cace9ab196f457e2bf7b84cde06693103c
+source-git-commit: 73035aec86297cfc4ee9337cf922d599001379c3
 workflow-type: tm+mt
-source-wordcount: '95'
-ht-degree: 4%
+source-wordcount: '120'
+ht-degree: 3%
 
 ---
 
 
-# 建立自訂命名空間
+# 在Identity Service API中建立自訂命名空間
 
-使用 [!DNL Identity Namespace] API，您可以建立自訂的身分名稱空間，該名稱空間僅供您的組織使用。
+使用[!DNL Identity Namespace] API，您可以建立自訂的身分名稱空間，該名稱空間僅供您的組織使用。
 
-如需有關建立自訂名稱空間的建議，請參 [閱Identity Service常見問答檔案](../troubleshooting-guide.md)。
+如需有關建立自訂名稱空間的建議，請參閱[Identity Service常見問答集檔案](../troubleshooting-guide.md)。
 
 >[!NOTE]
 >
@@ -65,4 +65,4 @@ curl -X POST \
 
 ## 後續步驟
 
-繼續下一個教學課程， [列出身分的原生ID](./list-native-id.md)
+繼續下一個教學課程[列出身分的原生ID](./list-native-id.md)
