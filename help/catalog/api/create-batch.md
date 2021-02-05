@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics;create batch;catalog service;api
+keywords: Experience Platform;home；熱門主題；create batch;catalog service;api
 solution: Experience Platform
-title: 建立資料集
+title: 在API中建立批次
 topic: developer guide
-description: 為了讓資料集收錄資料，資料集必須有與其關聯的批次。 使用現有資料集的id值，您可以透過對目錄API中的/batches端點提出POST請求來建立批次。
+description: 您可以通過對目錄API中的/batches端點發出POST請求來建立批。
 translation-type: tm+mt
-source-git-commit: 14f99c23cd82894fee5eb5c4093b3c50b95c52e8
+source-git-commit: 8a213ac0ef1ac0f9c42e4b880b24157d28878bf1
 workflow-type: tm+mt
-source-wordcount: '128'
+source-wordcount: '117'
 ht-degree: 3%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 3%
 
 # 建立批次
 
-為了讓資料集收錄資料，資料集必須有與其關聯的批次。 使用現 `id` 有資料集的值，您可以透過對API中的端點提出POST要求來 `/batches` 建立批 [!DNL Catalog] 次。
+為了讓資料集收錄資料，資料集必須有與其關聯的批次。 使用現有資料集的`id`值，可以通過向[!DNL Catalog] API中的`/batches`端點發出POST請求來建立批。
 
 **API格式**
 
@@ -40,11 +40,11 @@ curl -X POST 'https://platform.adobe.io/data/foundation/import/batches' \
 
 | 屬性 | 說明 |
 | --- | --- |
-| `datasetId` | 批 `id` 次將關聯的資料集。 |
+| `datasetId` | 批處理將與的資料集的`id`相關聯。 |
 
 **回應**
 
-成功的響應返回HTTP狀態201（已建立）和包含新建立批的詳細資訊的響應對象，包括其只讀 `id`系統生成的字串。
+成功的響應返回HTTP狀態201（已建立）和包含新建立批的詳細資訊的響應對象，包括其`id`（只讀，系統生成的字串）。
 
 ```JSON
 {
