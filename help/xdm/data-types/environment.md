@@ -1,31 +1,31 @@
 ---
-keywords: Experience Platform;home;popular topics;schema;Schema;XDM;fields;schemas;Schemas;environment;datatype;data-type;data type;
+keywords: Experience Platform;home；熱門主題；模式；模式；XDM;fields；模式；環境；資料類型；資料類型；
 solution: Experience Platform
 title: 環境資料類型
 topic: overview
 description: 本文檔概述了環境XDM資料類型。
 translation-type: tm+mt
-source-git-commit: f5bddb39c16eb25e85297f56e331d3aa51510eb9
+source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
 workflow-type: tm+mt
-source-wordcount: '448'
+source-wordcount: '464'
 ht-degree: 4%
 
 ---
 
 
-# [!UICONTROL 環境] 資料類型
+# [!UICONTROL 環] 境資料類型
 
-[!UICONTROL 環境] 是標準的XDM資料類型，它描述了觀察到的事件的周圍環境，具體詳述了諸如網路和軟體版本之類的過渡資訊。
+[!UICONTROL 環] 境是一種標準的XDM資料類型，它描述了觀察到的事件的周圍環境，具體詳述了網路和軟體版本等過渡資訊。
 
 >[!IMPORTANT]
 >
->所有值都應與Adobe授 [權的DeviceAtlas](https://deviceatlas.com) 資料庫一致。
+>所有值都應與Adobe授權的[DeviceAtlas](https://deviceatlas.com)資料庫對齊。
 
 <img src="../images/data-types/environment.png" width="400" /><br />
 
 | 屬性 | 資料類型 | 說明 |
 | --- | --- | --- |
-| `_dc` | 物件 | 包含單一欄位的物件， `language`表示環境的語言，以代表使用者在資料呈現時的語言、地理或文化偏好。 語言在 [IETF RFC 3066中定義的語言代碼中指定](https://www.ietf.org/rfc/rfc3066.txt)。 |
+| `_dc` | 物件 | 包含單一欄位`language`的對象，該欄位指示環境的語言，以表示用戶對資料表示的語言、地理或文化偏好。 語言在[IETF RFC 3066](https://www.ietf.org/rfc/rfc3066.txt)中定義的語言代碼中指定。 |
 | `browserDetails` | [瀏覽器詳細資訊](./browser-details.md) | 說明環境的瀏覽器特定詳細資訊，例如瀏覽器名稱、版本、JavaScript版本、使用者代理字串和接受語言。 |
 | `ISP` | 字串 | 用戶的Internet服務提供商的名稱。 |
 | `carrier` | 字串 | 向用戶銷售和提供通信服務的移動網路運營商或MNO（也稱為無線服務提供商、無線運營商、蜂窩公司或移動網路運營商）的名稱。 |
@@ -34,10 +34,10 @@ ht-degree: 4%
 | `domain` | 字串 | 用戶ISP的域。 |
 | `ipV4` | 字串 | 分配給參與使用網際網路協定進行通信的電腦網路（32位）的設備的數值標籤。 |
 | `ipV6` | 字串 | 分配給參與使用網際網路協定進行通信的電腦網路（128位）的設備的數字標籤。 |
-| `operatingSystem` | 字串 | 進行觀察時使用的作業系統的名稱。 屬性不應包含任何版本資訊(例如 `10.5.3`)，但應包含「版本」名稱(例如 `Ultimate` 或 `Professional`)。 |
+| `operatingSystem` | 字串 | 進行觀察時使用的作業系統的名稱。 屬性不應包含任何版本資訊（例如`10.5.3`），但應包含「edition」（版本）名稱，例如`Ultimate`或`Professional`。 |
 | `operatingSystemVendor` | 字串 | 進行觀察時使用的作業系統供應商的名稱。 |
 | `operatingSystemVersion` | 字串 | 進行觀察時所用作業系統的完整版本識別碼。 版本通常以數字形式組成，但可能採用供應商定義的格式。 |
-| `type` | 字串 | 應用程式環境的類型。 請參閱附 [錄](#type) ，瞭解接受的值。 |
+| `type` | 字串 | 應用程式環境的類型。 有關接受的值，請參見[附錄](#type)。 |
 | `viewportHeight` | 整數 | 體驗顯示於其中之視窗的垂直大小（像素）。 對於Web檢視事件，此為瀏覽器檢視區高度。 |
 | `viewPortWidth` | 整數 | 體驗顯示於其中之視窗的水準大小（像素）。 對於Web檢視事件，此為瀏覽器檢視埠寬度。 |
 
@@ -48,11 +48,11 @@ ht-degree: 4%
 
 ## 附錄
 
-下節包含有關「設備」資料類 [!UICONTROL 型的其] 他資訊。
+以下部分包含有關[!UICONTROL Device]資料類型的其他資訊。
 
-## 接受的類型值 {#type}
+## 類型{#type}的接受值
 
-下表概述接受的值及其 `type` 相關意義：
+下表概述`type`的接受值及其相關含義：
 
 | 值 | 說明 |
 | --- | --- |
