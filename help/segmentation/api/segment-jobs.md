@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics;segmentation;Segmentation;Segmentation Service;segment jobs;segment job;API;api;
+keywords: Experience Platform;home；熱門主題；分段；分段；分段服務；分段作業；分段作業；分段作業；API;api;
 solution: Experience Platform
-title: 區段工作
+title: 區段作業API端點
 topic: developer guide
-description: 本指南提供相關資訊，以協助您進一步瞭解區段工作，並包含使用API執行基本動作的範例API呼叫。
+description: Adobe Experience Platform Segmentation Service API中的區段工作端點可讓您以程式設計方式管理組織的區段工作。
 translation-type: tm+mt
-source-git-commit: 521b760da850144d7a8e75126453c2aae5c2ce72
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
-source-wordcount: '1152'
+source-wordcount: '1168'
 ht-degree: 2%
 
 ---
@@ -15,21 +15,21 @@ ht-degree: 2%
 
 # 區段作業端點
 
-區段工作是建立新讀者區段的非同步程式。 它引用段定 [義](./segment-definitions.md)，以及任何合併策略 [，以控制如何合併配置檔案片段](../../profile/api/merge-policies.md)[!DNL Real-time Customer Profile] 中的重疊屬性。 當區段工作成功完成時，您可以收集區段的各種資訊，例如處理期間可能發生的任何錯誤，以及您的受眾的最終規模。
+區段工作是建立新讀者區段的非同步程式。 它引用[段定義](./segment-definitions.md)以及控制[!DNL Real-time Customer Profile]如何合併配置檔案片段中重疊屬性的[合併策略](../../profile/api/merge-policies.md)。 當區段工作成功完成時，您可以收集區段的各種資訊，例如處理期間可能發生的任何錯誤，以及您的受眾的最終規模。
 
 本指南提供相關資訊，以協助您進一步瞭解區段工作，並包含使用API執行基本動作的範例API呼叫。
 
 ## 快速入門
 
-本指南中使用的端點是 [!DNL Adobe Experience Platform Segmentation Service] API的一部分。 在繼續之前，請先檢閱 [快速入門手冊](./getting-started.md) ，以取得成功呼叫API所需的重要資訊，包括必要的標題和如何讀取範例API呼叫。
+本指南中使用的端點是[!DNL Adobe Experience Platform Segmentation Service] API的一部分。 在繼續之前，請參閱[快速入門手冊](./getting-started.md)，以取得成功呼叫API所需的重要資訊，包括必要的標題和如何讀取範例API呼叫。
 
-## 擷取區段工作清單 {#retrieve-list}
+## 檢索段作業清單{#retrieve-list}
 
-您可以向端點提出GET請求，以擷取IMS組織所有區段工作的清 `/segment/jobs` 單。
+您可以向`/segment/jobs`端點提出GET請求，以擷取IMS組織的所有區段工作清單。
 
 **API格式**
 
-端點 `/segment/jobs` 支援數個查詢參數，以協助篩選結果。 雖然這些參數是可選的，但強烈建議使用它們，以幫助降低昂貴的開銷。 在沒有參數的情況下呼叫此端點將會擷取組織所有可用的匯出工作。 可包含多個參數，由&amp;符號(`&`)分隔。
+`/segment/jobs`端點支援數個查詢參數，以協助篩選結果。 雖然這些參數是可選的，但強烈建議使用它們，以幫助降低昂貴的開銷。 在沒有參數的情況下呼叫此端點將會擷取組織所有可用的匯出工作。 可以包括多個參數，用&amp;符號(`&`)分隔。
 
 ```http
 GET /segment/jobs
@@ -43,7 +43,7 @@ GET /segment/jobs?{QUERY_PARAMETERS}
 | `start` | 指定返回的段作業的起始偏移。 | `start=1` |
 | `limit` | 指定每頁傳回的區段工作數。 | `limit=20` |
 | `status` | 根據狀態篩選結果。 支援的值有新值、排隊、處理、成功、失敗、取消、取消 | `status=NEW` |
-| `sort` | 訂購傳回的區段工作。 以格式寫入 `[attributeName]:[desc|asc]`。 | `sort=creationTime:desc` |
+| `sort` | 訂購傳回的區段工作。 以`[attributeName]:[desc|asc]`格式寫入。 | `sort=creationTime:desc` |
 | `property` | 篩選群體工作，並取得指定篩選的完全相符項目。 它可以以下列任一格式編寫： <ul><li>`[jsonObjectPath]==[value]` -對對象鍵進行篩選</li><li>`[arrayTypeAttributeName]~[objectKey]==[value]` -陣列內的篩選</li></ul> | `property=segments~segmentId==workInUS` |
 
 **請求**
@@ -180,9 +180,9 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/jobs?status=SUCCEEDE
 | `metrics.segmentProfileByStatusCounter` | 每個狀態的描述檔計數。 支援下列三種狀態： <ul><li>「已實現」-進入區段的新設定檔數。</li><li>&quot;existing&quot; —— 區段中繼續存在的設定檔數。</li><li>「退出」-區段中不再存在的描述檔區段數。</li></ul> |
 | `metrics.totalProfilesByMergePolicy` | 每個合併策略的合併配置檔案總數。 |
 
-## 建立新區段工作 {#create}
+## 建立新的區段工作{#create}
 
-您可以透過向端點提出POST請求，並在內文中加入您要建立新對象的區段定義的ID，來建立新的區段工作。 `/segment/jobs`
+您可以透過向`/segment/jobs`端點提出POST要求，並在內文中加入您要建立新對象之區段定義的ID，來建立新的區段工作。
 
 **API格式**
 
@@ -209,7 +209,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/jobs \
 
 | 屬性 | 說明 |
 | -------- | ----------- |
-| `segmentId` | 您要為其建立區段工作之區段定義的ID。 這些區段定義可屬於不同的合併原則。 如需區段定義的詳細資訊，請參閱區段定 [義端點指南](./segment-definitions.md)。 |
+| `segmentId` | 您要為其建立區段工作之區段定義的ID。 這些區段定義可屬於不同的合併原則。 有關段定義的詳細資訊，請參閱[段定義端點指南](./segment-definitions.md)。 |
 
 **回應**
 
@@ -274,9 +274,9 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/jobs \
 | `segments.segment.id` | 您提供的區段定義ID。 |
 | `segments.segment.expression` | 包含有關段定義表達式的資訊的對象，用PQL編寫。 |
 
-## 擷取特定區段工作 {#get}
+## 檢索特定段作業{#get}
 
-您可以向端點發出GET請求，並提供您想在請求路徑中檢索的區段作業ID，以檢索有關特定區段作業的詳細資訊。 `/segment/jobs`
+您可以向`/segment/jobs`端點發出GET請求，並在請求路徑中提供您要檢索的段作業的ID，以檢索有關特定段作業的詳細資訊。
 
 **API格式**
 
@@ -286,7 +286,7 @@ GET /segment/jobs/{SEGMENT_JOB_ID}
 
 | 屬性 | 說明 |
 | -------- | ----------- | 
-| `{SEGMENT_JOB_ID}` | 您 `id` 要擷取的區段工作值。 |
+| `{SEGMENT_JOB_ID}` | 要檢索的段作業的`id`值。 |
 
 **請求**
 
@@ -371,9 +371,9 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/jobs/d3b4a50d-dfea-4
 | `segments.segment.expression` | 包含有關段定義表達式的資訊的對象，用PQL編寫。 |
 | `metrics` | 包含區段作業診斷資訊的物件。 |
 
-## 大量擷取區段工作 {#bulk-get}
+## 批量檢索段作業{#bulk-get}
 
-您可以向端點提出POST請求，並在請求主體中提供段作業值，以檢 `/segment/jobs/bulk-get` 索多 `id` 個段作業的詳細資訊。
+通過向`/segment/jobs/bulk-get`端點發出POST請求並在請求主體中提供段作業的`id`值，可以檢索有關多個段作業的詳細資訊。
 
 **API格式**
 
@@ -477,9 +477,9 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/jobs/bulk-get \
 | `segments.segment.id` | 區段定義的ID。 |
 | `segments.segment.expression` | 包含有關段定義表達式的資訊的對象，用PQL編寫。 |
 
-## 取消或刪除特定區段工作 {#delete}
+## 取消或刪除特定區段工作{#delete}
 
-您可以對端點進行DELETE請求，並在請求路徑中提供 `/segment/jobs` 您要刪除的區段作業ID，以刪除特定的區段作業。
+您可以對`/segment/jobs`端點發出DELETE請求，並在請求路徑中提供要刪除的段作業的ID，以刪除特定的段作業。
 
 >[!NOTE]
 >
@@ -493,7 +493,7 @@ DELETE /segment/jobs/{SEGMENT_JOB_ID}
 
 | 屬性 | 說明 |
 | -------- | ----------- | 
-| `{SEGMENT_JOB_ID}` | 您 `id` 要刪除的區段工作值。 |
+| `{SEGMENT_JOB_ID}` | 要刪除的段作業的`id`值。 |
 
 **請求**
 
