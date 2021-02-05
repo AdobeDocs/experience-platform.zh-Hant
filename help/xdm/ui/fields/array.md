@@ -5,9 +5,9 @@ title: 在UI中定義陣列欄位
 description: 瞭解如何在Experience Platform使用者介面中定義陣列欄位。
 topic: user guide
 translation-type: tm+mt
-source-git-commit: 2e20403122e65d28f04114af9b7e8d41874f76e2
+source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
 workflow-type: tm+mt
-source-wordcount: '365'
+source-wordcount: '363'
 ht-degree: 1%
 
 ---
