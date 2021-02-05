@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform;home;popular topics;query service;Query service;adobe defined functions;sql;
 solution: Experience Platform
-title: Adobe定義的函式
+title: 查詢服務中Adobe定義的SQL函式
 topic: functions
-description: 本檔案提供查詢服務中Adobe定義函式的資訊。
+description: 本檔案提供Adobe Experience Platform Query Service中Adobe定義功能的相關資訊。
 translation-type: tm+mt
-source-git-commit: e15229601d35d1155fc9a8ab9296f8c41811ebf9
+source-git-commit: 97dc0b5fb44f5345fd89f3f56bd7861668da9a6e
 workflow-type: tm+mt
-source-wordcount: '2902'
+source-wordcount: '2913'
 ht-degree: 2%
 
 ---
 
 
-# Adobe定義的函式
+# Query Service中Adobe定義的SQL函式
 
 Adobe定義的函式（在此稱為ADF）是Adobe Experience Platform Query Service中預先建立的函式，可協助您對[!DNL Experience Event]資料執行常見的商業相關工作。 這些功能包括[Sessionization](https://experienceleague.adobe.com/docs/analytics/components/virtual-report-suites/vrs-mobile-visit-processing.html)和[Attribution](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/attribution/overview.html)的函式，如Adobe Analytics中的函式。
 
