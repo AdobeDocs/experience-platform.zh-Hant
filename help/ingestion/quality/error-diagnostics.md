@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform; home；熱門主題；批處理提取；部分提取；部分提取；檢索錯誤；檢索錯誤；部分批處理提取；部分；提取；提取；錯誤診斷；檢索錯誤診斷；獲取錯誤診斷；獲取錯誤；獲取錯誤；檢索錯誤；
 solution: Experience Platform
-title: Adobe Experience Platform部分批次擷取概觀
+title: 檢索資料提取錯誤診斷
 topic: overview
 description: 本文檔提供有關監控批處理提取、管理部分批處理提取錯誤的資訊，以及有關部分批處理提取類型的參考。
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: 089a4d517476b614521d1db4718966e3ebb13064
 workflow-type: tm+mt
 source-wordcount: '936'
 ht-degree: 2%
@@ -13,7 +13,7 @@ ht-degree: 2%
 ---
 
 
-# 檢索錯誤診斷
+# 檢索資料攝取錯誤診斷
 
 Adobe Experience Platform提供兩種上傳和接收資料的方法。 您可以使用批次擷取功能(可讓您使用各種檔案類型（例如CSV）插入資料)或串流擷取功能（可讓您使用串流端點將資料即時插入[!DNL Platform]）。
 
