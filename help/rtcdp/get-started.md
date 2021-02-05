@@ -3,7 +3,7 @@ keywords: RTCDP;CDP；即時客戶資料平台；即時客戶資料平台；即�
 title: 即時客戶資料平台快速入門
 description: 設定 Real-time Customer Data Platform 實作時使用此範本案例作為的範例。
 translation-type: tm+mt
-source-git-commit: 00010d38a5d05800aeac9af8505093fee3593b45
+source-git-commit: 36f63cecd49e6a6b39367359d50252612ea16d7a
 workflow-type: tm+mt
 source-wordcount: '2326'
 ht-degree: 1%
