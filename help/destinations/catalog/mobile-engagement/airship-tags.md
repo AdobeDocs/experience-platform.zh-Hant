@@ -1,19 +1,17 @@
 ---
 keywords: 飛艇標籤；飛艇目的地
-title: 飛艇標籤目的地
-seo-title: 飛艇標籤目的地
+title: 飛艇標籤連接目的地
 description: 順暢地將Adobe觀眾資料傳遞至Axphiry做為觀眾標籤，以便在Axphiry中定位。
-seo-description: 順暢地將Adobe觀眾資料傳遞至Axphiry做為觀眾標籤，以便在Axphiry中定位。
 translation-type: tm+mt
-source-git-commit: 95f57f9d1b3eeb0b16ba209b9774bd94f5758009
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '1213'
+source-wordcount: '1197'
 ht-degree: 1%
 
 ---
 
 
-# （測試版）[!DNL Airship Tags]目標{#airship-tags-destination}
+# （測試版）[!DNL Airship Tags]連接{#airship-tags-destination}
 
 >[!IMPORTANT]
 >
