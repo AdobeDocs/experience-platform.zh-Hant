@@ -5,9 +5,9 @@ title: 在UI中定義識別欄位
 description: 瞭解如何在Experience Platform使用者介面中定義識別欄位。
 topic: user guide
 translation-type: tm+mt
-source-git-commit: f5f507c2e962e2ff9f81376bfe363a6f438056cd
+source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
 workflow-type: tm+mt
-source-wordcount: '575'
+source-wordcount: '573'
 ht-degree: 0%
 
 ---
