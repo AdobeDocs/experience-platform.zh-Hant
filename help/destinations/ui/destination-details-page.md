@@ -1,27 +1,26 @@
 ---
-keywords: destinations;destination;destinations detail page;destinations details page
-title: 「目標詳細資料」頁
-seo-title: 「目標詳細資料」頁
+keywords: 目標；目標；目標詳細資訊頁；目標詳細資訊頁
+title: 在UI中檢視目標的詳細資訊
 description: '個別目的地的詳細資訊頁面提供目的地詳細資訊的概述，例如目的地名稱、ID、對應至目的地的區段，以及編輯啟動和啟用和停用資料流的控制項。 '
 seo-description: '個別目的地的詳細資訊頁面提供目的地詳細資訊的概述，例如目的地名稱、ID、對應至目的地的區段，以及編輯啟動和啟用和停用資料流的控制項。 '
 translation-type: tm+mt
-source-git-commit: 8ac368081c37ca5bfc2cc3382774a912e8ad68eb
+source-git-commit: 8d403e73a804953f9584d6a72f945d4444e65d11
 workflow-type: tm+mt
-source-wordcount: '735'
+source-wordcount: '749'
 ht-degree: 1%
 
 ---
 
 
-# 目標詳細資訊頁
+# 檢視目標的詳細資訊
 
 在Adobe Experience Platform使用者介面中，您可以檢視和監控目標的屬性和活動。 這些詳細資訊包括目標的名稱和ID、啟用或停用目標的控制項，以及更多功能。 批次目的地的詳細資訊還包括已啟動描述檔記錄的度量和資料流執行的歷史記錄。
 
 >[!NOTE]
 >
->目標詳細資訊頁面是平台UI中 [!UICONTROL 「目標] 」工作區的一部分。 See the [[!UICONTROL Destinations] workspace overview](./destinations-workspace.md) for more information.
+>目標詳細資訊頁面是平台UI中[!UICONTROL 目標]工作區的一部分。 如需詳細資訊，請參閱[[!UICONTROL 目標]工作區概述](./destinations-workspace.md)。
 
-在「平 **[!UICONTROL 台]** 」UI的「目標」工作區中，導覽至「瀏覽 **** 」標籤並選取您要檢視的目標名稱。
+在平台UI的&#x200B;**[!UICONTROL 目標]**&#x200B;工作區中，導覽至&#x200B;**[!UICONTROL 瀏覽]**&#x200B;標籤，並選取您要檢視的目標名稱。
 
 ![](../assets/ui/details-page/select-destination.png)
 
@@ -29,7 +28,7 @@ ht-degree: 1%
 
 ![](../assets/ui/details-page/details.png)
 
-此外，在「瀏覽」標籤上，您可以選擇垃圾筒圖示，以刪除選 ![定的數](../assets/ui/details-page/trash-icon.png) 據流。 在刪除資料流之前，任何激活到目標的段都將被取消映射。
+此外，在「瀏覽」頁籤上，您可以選擇![垃圾桶](../assets/ui/details-page/trash-icon.png)表徵圖來刪除選定的資料流。 在刪除資料流之前，任何激活到目標的段都將被取消映射。
 
 ![](../assets/ui/details-page/delete-flow.png)
 
@@ -43,32 +42,32 @@ ht-degree: 1%
 
 | 右側欄項目 | 說明 |
 | --- | --- |
-| [!UICONTROL 啟動] | 選取此控制項可編輯哪些區段已對應至目標。 如需詳細資訊，請 [參閱啟用區段至目的地](./activate-destinations.md) 的指南。 |
+| [!UICONTROL 啟動] | 選取此控制項可編輯哪些區段已對應至目標。 如需詳細資訊，請參閱[啟用區段至目標](./activate-destinations.md)的指南。 |
 | [!UICONTROL 刪除] | 允許您刪除此資料流，並取消映射以前激活的段（如果有）。 |
 | [!UICONTROL 目標名稱] | 可以編輯此欄位以更新目標的名稱。 |
 | [!UICONTROL 說明] | 您可以編輯此欄位，以更新或新增選擇性說明至目標。 |
-| [!UICONTROL 目標] | 代表對象被傳送至的目標平台。 如需詳細 [資訊，請參閱目](../catalog/overview.md) 標目錄。 |
+| [!UICONTROL 目標] | 代表對象被傳送至的目標平台。 如需詳細資訊，請參閱[目標目錄](../catalog/overview.md)。 |
 | [!UICONTROL 狀態] | 指示目標是啟用還是禁用。 |
 | [!UICONTROL 行銷動作] | 指出針對資料治理用途適用於此目的地的行銷動作（使用案例）。 |
-| [!UICONTROL 類別] | 指示目標類型。 如需詳細 [資訊，請參閱目](../catalog/overview.md) 標目錄。 |
-| [!UICONTROL 連線類型] | 指出將觀眾傳送至目的地的表單。 可能的值包[!UICONTROL 括「Cookie]」和「[!UICONTROL 基於描述檔]」。 |
-| [!UICONTROL 頻率] | 指出觀眾被傳送至目的地的頻率。 可能的值包[!UICONTROL 括]「串流」和[!UICONTROL 「Batch]」。 |
-| [!UICONTROL 身份] | 代表目標所接受的身分名稱空間， `GAID`例如 `IDFA`、或 `email`。 如需接受身分名稱空間的詳細資訊，請參閱 [身分名稱空間概觀](../../identity-service/namespaces.md)。 |
+| [!UICONTROL 類別] | 指示目標類型。 如需詳細資訊，請參閱[目標目錄](../catalog/overview.md)。 |
+| [!UICONTROL 連線類型] | 指出將觀眾傳送至目的地的表單。 可能的值包括&quot;[!UICONTROL Cookie]&quot;和&quot;[!UICONTROL Profile-based]&quot;。 |
+| [!UICONTROL 頻率] | 指出觀眾被傳送至目的地的頻率。 可能的值包括&quot;[!UICONTROL Streaming]&quot;和&quot;[!UICONTROL Batch]&quot;。 |
+| [!UICONTROL 身份] | 代表目標接受的識別名稱空間，例如`GAID`、`IDFA`或`email`。 有關接受的身份名稱空間的詳細資訊，請參閱[身份名稱空間概述](../../identity-service/namespaces.md)。 |
 | [!UICONTROL 建立者] | 表示建立此目標的用戶。 |
 | [!UICONTROL 已建立] | 指示建立此目標時的UTC日期時間。 |
 
-## [!UICONTROL 啟用]/停用[!UICONTROL 切換]
+## [!UICONTROL 啟用]/停用 切換
 
-您可以使用「啟 **[!UICONTROL 用]/停用** 」切換來啟動和暫停所有匯出至目的地的資料。
+您可以使用&#x200B;**[!UICONTROL Enabled]/[!UICONTROL Disabled]**&#x200B;切換，開始並暫停所有匯出至目的地的資料。
 
 ![](../assets/ui/details-page/enable-disable.png)
 
 ## [!UICONTROL 資料流運行]
 
-「數 [!UICONTROL 據流運行] 」頁籤提供資料流運行到批處理目標的度量資料。 會顯示個別執行及其特定度量的清單，以及下列描述檔記錄總計：
+[!UICONTROL 資料流運行]頁籤提供了資料流運行到批處理目標的度量資料。 會顯示個別執行及其特定度量的清單，以及下列描述檔記錄總計：
 
 * **[!UICONTROL 已激活配置檔案記錄]**:為啟動而建立或更新的描述檔記錄總計。
-* **[!UICONTROL 已略過描述檔記錄]**: 根據描述檔退出或遺失屬性，跳過以進行啟動的描述檔記錄總計。
+* **[!UICONTROL 已略過描述檔記錄]**:根據描述檔退出或遺失屬性，跳過以進行啟動的描述檔記錄總計。
 
 ![](../assets/ui/details-page/dataflow-runs.png)
 
@@ -82,14 +81,14 @@ ht-degree: 1%
 
 ## [!UICONTROL 啟動資料]
 
-「啟 [!UICONTROL 動資料] 」標籤會顯示已映射至目的地的區段清單，包括其開始日期和結束日期（如果適用）。 若要檢視特定區段的詳細資訊，請從清單中選取其名稱。
+[!UICONTROL 啟動資料]標籤會顯示已映射至目的地的區段清單，包括其開始日期和結束日期（如果適用）。 若要檢視特定區段的詳細資訊，請從清單中選取其名稱。
 
 ![](../assets/ui/details-page/activation-data.png)
 
 >[!NOTE]
 >
->如需探索區段詳細資訊頁面的詳細資訊，請參閱區段 [UI概觀](../../segmentation/ui/overview.md#segment-details)。
+>如需探索區段詳細資訊頁面的詳細資訊，請參閱[區段UI概觀](../../segmentation/ui/overview.md#segment-details)。
 
 ## 後續步驟
 
-本檔案涵蓋目標詳細資訊頁面的功能。 如需在UI中管理目標的詳細資訊，請參閱「目標」工作區 [[!UICONTROL 的] 概觀](./destinations-workspace.md)。
+本檔案涵蓋目標詳細資訊頁面的功能。 有關在UI中管理目標的詳細資訊，請參閱[[!UICONTROL 目標]工作區](./destinations-workspace.md)的概述。
