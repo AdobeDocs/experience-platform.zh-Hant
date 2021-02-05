@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform; home；熱門主題；Azure Data Lake Storage Gen2;azure資料湖儲存；Azure
 solution: Experience Platform
-title: 使用Flow Service API建立Azure Data Lake Storage Gen2連接器
+title: 使用流式服務API建立Azure資料湖儲存Gen2來源連線
 topic: overview
 type: Tutorial
-description: 本教學課程使用Flow Service API來引導您完成將Experience Platform連接至Azure Data Lake Storage Gen2（以下稱為「ADLS Gen2」）的步驟。
+description: 瞭解如何使用Flow Service API將Adobe Experience Platform連接至Azure Data Lake Storage Gen2。
 translation-type: tm+mt
-source-git-commit: 2940f030aa21d70cceeedc7806a148695f68739e
+source-git-commit: a489ab248793a063295578943ad600d8eacab6a2
 workflow-type: tm+mt
-source-wordcount: '611'
+source-wordcount: '602'
 ht-degree: 1%
 
 ---
 
 
-# 使用[!DNL Flow Service] API建立[!DNL Azure] Data Lake Storage Gen2連接器
+# 使用[!DNL Flow Service] API建立[!DNL Azure] Data Lake Storage Gen2源連接
 
 [!DNL Flow Service] 用於收集和集中Adobe Experience Platform內不同來源的客戶資料。該服務提供用戶介面和REST風格的API，所有支援的源都可從中連接。
 
@@ -27,7 +27,7 @@ ht-degree: 1%
 * [來源](../../../../home.md): [!DNL Experience Platform] 允許從各種來源接收資料，同時提供使用服務構建、標籤和增強傳入資料的 [!DNL Platform] 能力。
 * [沙盒](../../../../../sandboxes/home.md): [!DNL Experience Platform] 提供虛擬沙盒，可將單一平台實例分割為獨立的虛擬環境，以協助開發和發展數位體驗應用程式。
 
-以下各節提供您必須知道的其他資訊，以便使用[!DNL Flow Service] API成功建立ADLS Gen2來源連接器。
+以下各節提供您必須知道的其他資訊，以便使用[!DNL Flow Service] API成功建立ADLS Gen2來源連線。
 
 ### 收集必要的認證
 
