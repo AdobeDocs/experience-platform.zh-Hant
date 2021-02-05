@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics;Policy enforcement;API-based enforcement;data governance
+keywords: Experience Platform;home；熱門主題；策略實施；基於API的實施；資料治理
 solution: Experience Platform
-title: 策略
+title: 策略API端點
 topic: developer guide
 description: 資料使用原則是貴組織採用的規則，可說明您在Experience Platform內對資料執行的行銷動作類型，或受其限制。 /policys端點用於與查看、建立、更新或刪除資料使用策略相關的所有API調用。
 translation-type: tm+mt
-source-git-commit: a362b67cec1e760687abb0c22dc8c46f47e766b7
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
-source-wordcount: '1804'
+source-wordcount: '1817'
 ht-degree: 2%
 
 ---
@@ -15,15 +15,15 @@ ht-degree: 2%
 
 # 策略端點
 
-資料使用原則是描述您允許或限制對內資料執行之行銷動作類型的規則 [!DNL Experience Platform]。 中的 `/policies` 端點允許您 [!DNL Policy Service API] 以寫程式方式管理組織的資料使用策略。
+資料使用原則是描述您可對[!DNL Experience Platform]內的資料執行或受限制之行銷動作的類型的規則。 [!DNL Policy Service API]中的`/policies`端點可讓您以程式設計方式管理組織的資料使用政策。
 
 ## 快速入門
 
-本指南中使用的API端點是 [[!DNL Policy Service] API的一部分](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml)。 在繼續之前，請先閱讀快速入門 [指南](getting-started.md) ，以取得相關檔案的連結、閱讀本檔案中範例API呼叫的指南，以及成功呼叫任何 [!DNL Experience Platform] API所需之必要標題的重要資訊。
+本指南中使用的API端點是[[!DNL Policy Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml)的一部分。 在繼續之前，請先閱讀[快速入門手冊](getting-started.md)，以取得相關檔案的連結、閱讀本檔案中範例API呼叫的指南，以及成功呼叫任何[!DNL Experience Platform] API所需之必要標題的重要資訊。
 
-## 檢索策略清單 {#list}
+## 檢索策略清單{#list}
 
-您可以分別向 `core` 或 `custom` 分別發出GET請求，以列 `/policies/core` 出所有或 `/policies/custom`策略。
+您可以分別對`/policies/core`或`/policies/custom`發出GET請求，以列出所有`core`或`custom`策略。
 
 **API格式**
 
@@ -47,7 +47,7 @@ curl -X GET \
 
 **回應**
 
-成功的響應包括一 `children` 個陣列，該陣列列出每個檢索到的策略的詳細資訊，包括其 `id` 值。 您可以使用特 `id` 定原則的欄位來執行 [查閱](#lookup)、 [更新和刪](#update)除該原則 [的請求](#delete) 。
+成功的響應包括`children`陣列，該陣列列出了每個檢索到的策略的詳細資訊，包括其`id`值。 您可以使用特定原則的`id`欄位來執行[查閱](#lookup)、[update](#update)和[delete](#delete)要求。
 
 ```JSON
 {
@@ -142,14 +142,14 @@ curl -X GET \
 | --- | --- |
 | `_page.count` | 檢索的策略總數。 |
 | `name` | 原則的顯示名稱。 |
-| `status` | 策略的當前狀態。 有三種可能的狀態： `DRAFT`、 `ENABLED`或 `DISABLED`。 預設情況下，只 `ENABLED` 有策略參與評估。 See the overview on [policy evaluation](../enforcement/overview.md) for more information. |
+| `status` | 策略的當前狀態。 有三種可能的狀態：`DRAFT`、`ENABLED`或`DISABLED`。 預設情況下，只有`ENABLED`策略參與評估。 有關詳細資訊，請參閱[策略評估](../enforcement/overview.md)的概述。 |
 | `marketingActionRefs` | 列出策略所有適用行銷動作的URI的陣列。 |
 | `description` | 可選說明，提供策略使用案例的進一步上下文。 |
-| `deny` | 一種對象，它描述了策略的關聯行銷操作無法對其執行的特定資料使用標籤。 有關此屬性的 [詳細資訊](#create-policy) ，請參閱建立策略一節。 |
+| `deny` | 一種對象，它描述了策略的關聯行銷操作無法對其執行的特定資料使用標籤。 有關此屬性的詳細資訊，請參閱[建立策略](#create-policy)一節。 |
 
-## 查找策略 {#look-up}
+## 查找策略{#look-up}
 
-您可以在GET請求的路徑中加入該策略 `id` 的屬性，以查找特定策略。
+您可以在GET請求的路徑中加入該策略的`id`屬性，以查找特定策略。
 
 **API格式**
 
@@ -160,7 +160,7 @@ GET /policies/custom/{POLICY_ID}
 
 | 參數 | 說明 |
 | --- | --- |
-| `{POLICY_ID}` | 你 `id` 要查的政策。 |
+| `{POLICY_ID}` | 您要查找的策略的`id`。 |
 
 **請求**
 
@@ -223,21 +223,21 @@ curl -X GET \
 | 屬性 | 說明 |
 | --- | --- |
 | `name` | 原則的顯示名稱。 |
-| `status` | 策略的當前狀態。 有三種可能的狀態： `DRAFT`、 `ENABLED`或 `DISABLED`。 預設情況下，只 `ENABLED` 有策略參與評估。 See the overview on [policy evaluation](../enforcement/overview.md) for more information. |
+| `status` | 策略的當前狀態。 有三種可能的狀態：`DRAFT`、`ENABLED`或`DISABLED`。 預設情況下，只有`ENABLED`策略參與評估。 有關詳細資訊，請參閱[策略評估](../enforcement/overview.md)的概述。 |
 | `marketingActionRefs` | 列出策略所有適用行銷操作的URI的陣列。 |
 | `description` | 可選說明，提供策略使用案例的進一步上下文。 |
-| `deny` | 一種對象，它描述了策略的關聯行銷操作無法對其執行的特定資料使用標籤。 有關此屬性的 [詳細資訊](#create-policy) ，請參閱建立策略一節。 |
+| `deny` | 一種對象，它描述了策略的關聯行銷操作無法對其執行的特定資料使用標籤。 有關此屬性的詳細資訊，請參閱[建立策略](#create-policy)一節。 |
 
-## Create a custom policy {#create-policy}
+## 建立自訂原則{#create-policy}
 
-在 [!DNL Policy Service] API中，原則由下列項目定義：
+在[!DNL Policy Service] API中，策略由以下內容定義：
 
 * 特定行銷動作的參考
 * 描述限制行銷動作執行之資料使用標籤的運算式
 
 為滿足後一個要求，策略定義必須包含關於資料使用標籤存在的布爾表達式。 此表達式稱為策略表達式。
 
-在每個策略定義中以屬性的形 `deny` 式提供策略表達式。 僅檢查單一標 `deny` 簽是否存在的簡單對象示例如下所示：
+在每個策略定義中以`deny`屬性的形式提供策略表達式。 簡單`deny`物件的範例（僅檢查單一標籤是否存在）如下所示：
 
 ```json
 "deny": {
@@ -247,7 +247,7 @@ curl -X GET \
 
 但是，許多策略會針對資料使用標籤的存在指定更複雜的條件。 若要支援這些使用案例，您也可以包含布林運算，以說明原則運算式。 策略表達式對象必須包含標籤或運算子和操作數，但不能同時包含兩者。 反過來，每個操作數也是策略表達式對象。
 
-例如，為了定義禁止對存在標籤的資料執行行銷動作的原則， `C1 OR (C3 AND C7)` 原則的屬 `deny` 性會指定為：
+例如，為了定義禁止對`C1 OR (C3 AND C7)`標籤存在的資料執行行銷動作的策略，策略的`deny`屬性將指定為：
 
 ```JSON
 "deny": {
@@ -267,11 +267,11 @@ curl -X GET \
 
 | 屬性 | 說明 |
 | --- | --- |
-| `operator` | 指示同級陣列中提供的標籤之間的條件 `operands` 關係。 接受的值為： <ul><li>`OR`:如果陣列中有任何標籤存在，表達式會解 `operands` 析為true。</li><li>`AND`:運算式只會在陣列中所有標籤都存在時解析 `operands` 為true。</li></ul> |
-| `operands` | 對象陣列，每個對象表示單個標籤或另一對和屬 `operator` 性 `operands` 。 陣列中標籤和／或操作的存在會根 `operands` 據其同級屬性的值解析為true或false `operator` 。 |
+| `operator` | 指示在同級`operands`陣列中提供的標籤之間的條件關係。 接受的值為： <ul><li>`OR`:如果陣列中有任何標籤存在，表達式會解 `operands` 析為true。</li><li>`AND`:運算式只會在陣列中所有標籤都存在時解 `operands` 析為true。</li></ul> |
+| `operands` | 對象陣列，每個對象代表單個標籤或`operator`和`operands`屬性的另一對。 `operands`陣列中標籤和／或操作的存在根據其同級`operator`屬性的值解析為true或false。 |
 | `label` | 套用至原則的單一資料使用標籤的名稱。 |
 
-您可以向端點發出POST請求，以建立新的自訂 `/policies/custom` 原則。
+您可以通過向`/policies/custom`端點發出POST請求來建立新的自定義策略。
 
 **API格式**
 
@@ -281,7 +281,7 @@ POST /policies/custom
 
 **請求**
 
-下列請求會建立新原則，限制對包含標籤的 `exportToThirdParty` 資料執行行銷動作 `C1 OR (C3 AND C7)`。
+下列請求會建立新原則，限制對包含標籤`C1 OR (C3 AND C7)`的資料執行行銷動作`exportToThirdParty`。
 
 ```shell
 curl -X POST \
@@ -317,14 +317,14 @@ curl -X POST \
 | 屬性 | 說明 |
 | --- | --- |
 | `name` | 原則的顯示名稱。 |
-| `status` | 策略的當前狀態。 有三種可能的狀態： `DRAFT`、 `ENABLED`或 `DISABLED`。 預設情況下，只 `ENABLED` 有策略參與評估。 See the overview on [policy evaluation](../enforcement/overview.md) for more information. |
-| `marketingActionRefs` | 列出策略所有適用行銷操作的URI的陣列。 行銷動作的URI是在查詢行 `_links.self.href` 銷動作的回 [應下提供的](./marketing-actions.md#look-up)。 |
+| `status` | 策略的當前狀態。 有三種可能的狀態：`DRAFT`、`ENABLED`或`DISABLED`。 預設情況下，只有`ENABLED`策略參與評估。 有關詳細資訊，請參閱[策略評估](../enforcement/overview.md)的概述。 |
+| `marketingActionRefs` | 列出策略所有適用行銷操作的URI的陣列。 在[查詢行銷動作](./marketing-actions.md#look-up)的回應中，在`_links.self.href`下提供行銷動作的URI。 |
 | `description` | 可選說明，提供策略使用案例的進一步上下文。 |
 | `deny` | 描述策略相關行銷動作之特定資料使用標籤的原則運算式，會限制其無法執行。 |
 
 **回應**
 
-成功的回應會傳回新建立之原則的詳細資料，包括其詳細資訊 `id`。 此值是唯讀的，在建立原則時會自動指派。
+成功的響應返回新建立策略的詳細資訊，包括其`id`。 此值是唯讀的，在建立原則時會自動指派。
 
 ```JSON
 {
@@ -369,17 +369,17 @@ curl -X POST \
 }
 ```
 
-## 更新自訂原則 {#update}
+## 更新自訂原則{#update}
 
 >[!IMPORTANT]
 >
->您只能更新自訂原則。 如果要啟用或禁用核心策略，請參閱有關更 [新已啟用核心策略清單的部分](#update-enabled-core)。
+>您只能更新自訂原則。 如果要啟用或禁用核心策略，請參閱[中有關更新已啟用核心策略清單的章節](#update-enabled-core)。
 
 您可以在PUT請求路徑中提供現有自訂原則的ID，以包含完整原則的更新形式的裝載，借此更新現有自訂原則。 換句話說，PUT請求實際上重寫策略。
 
 >[!NOTE]
 >
->如果您只想 [要更新策略的一個或多個欄位](#patch) ，而不是覆寫策略，請參閱更新自定義策略部分的章節。
+>如果您只想更新策略的一個或多個欄位，而不是覆寫策略，請參閱[更新自定義策略的部分部分。](#patch)
 
 **API格式**
 
@@ -389,11 +389,11 @@ PUT /policies/custom/{POLICY_ID}
 
 | 參數 | 說明 |
 | --- | --- |
-| `{POLICY_ID}` | 您 `id` 要更新的原則。 |
+| `{POLICY_ID}` | 您要更新的策略的`id`。 |
 
 **請求**
 
-在此範例中，將資料匯出至第三方的條件已經變更，現在您需要建立的原則才能在資料標籤存在時拒絕 `C1 AND C5` 此行銷動作。
+在此範例中，將資料匯出至第三方的條件已經變更，而且，如果`C1 AND C5`資料標籤存在，您現在需要建立的原則才能拒絕此行銷動作。
 
 以下請求會更新現有策略以包含新策略表達式。 請注意，由於此請求實際上會重寫原則，因此所有欄位都必須包含在裝載中，即使部分欄位值未更新亦然。
 
@@ -425,10 +425,10 @@ curl -X PUT \
 | 屬性 | 說明 |
 | --- | --- |
 | `name` | 原則的顯示名稱。 |
-| `status` | 策略的當前狀態。 有三種可能的狀態： `DRAFT`、 `ENABLED`或 `DISABLED`。 預設情況下，只 `ENABLED` 有策略參與評估。 See the overview on [policy evaluation](../enforcement/overview.md) for more information. |
-| `marketingActionRefs` | 列出策略所有適用行銷操作的URI的陣列。 行銷動作的URI是在查詢行 `_links.self.href` 銷動作的回 [應下提供的](./marketing-actions.md#look-up)。 |
+| `status` | 策略的當前狀態。 有三種可能的狀態：`DRAFT`、`ENABLED`或`DISABLED`。 預設情況下，只有`ENABLED`策略參與評估。 有關詳細資訊，請參閱[策略評估](../enforcement/overview.md)的概述。 |
+| `marketingActionRefs` | 列出策略所有適用行銷操作的URI的陣列。 在[查詢行銷動作](./marketing-actions.md#look-up)的回應中，在`_links.self.href`下提供行銷動作的URI。 |
 | `description` | 可選說明，提供策略使用案例的進一步上下文。 |
-| `deny` | 描述策略相關行銷動作之特定資料使用標籤的原則運算式，會限制其無法執行。 有關此屬性的 [詳細資訊](#create-policy) ，請參閱建立策略一節。 |
+| `deny` | 描述策略相關行銷動作之特定資料使用標籤的原則運算式，會限制其無法執行。 有關此屬性的詳細資訊，請參閱[建立策略](#create-policy)一節。 |
 
 **回應**
 
@@ -469,19 +469,19 @@ curl -X PUT \
 }
 ```
 
-## 更新自訂原則的一部分 {#patch}
+## 更新自訂原則的一部分{#patch}
 
 >[!IMPORTANT]
 >
->您只能更新自訂原則。 如果要啟用或禁用核心策略，請參閱有關更 [新已啟用核心策略清單的部分](#update-enabled-core)。
+>您只能更新自訂原則。 如果要啟用或禁用核心策略，請參閱[中有關更新已啟用核心策略清單的章節](#update-enabled-core)。
 
-策略的特定部分可以使用PATCH請求進行更新。 與重寫策略的PUT請求不同，PATCH請求只更新請求主體中指定的屬性。 當您想要啟用或停用原則時，這特別有用，因為您只需要提供適當屬性(`/status`)及其值(`ENABLED` 或 `DISABLED`)的路徑。
+策略的特定部分可以使用PATCH請求進行更新。 與重寫策略的PUT請求不同，PATCH請求只更新請求主體中指定的屬性。 當您想要啟用或停用原則時，這特別有用，因為您只需要提供適當屬性(`/status`)及其值（`ENABLED`或`DISABLED`）的路徑。
 
 >[!NOTE]
 >
->PATCH請求的裝載會遵循JSON修補程式格式。 如需接受 [語法的詳細資訊](../../landing/api-fundamentals.md) ，請參閱API基礎指南。
+>PATCH請求的裝載會遵循JSON修補程式格式。 如需已接受語法的詳細資訊，請參閱[API基礎指南](../../landing/api-fundamentals.md)。
 
-API [!DNL Policy Service] 支援JSON修補程式 `add`、 `remove``replace`和，並可讓您將多個更新合併為單一呼叫，如以下範例所示。
+[!DNL Policy Service] API支援JSON修補程式作業`add`、`remove`和`replace`，並可讓您將數個更新合併為單一呼叫，如下例所示。
 
 **API格式**
 
@@ -491,11 +491,11 @@ PATCH /policies/custom/{POLICY_ID}
 
 | 參數 | 說明 |
 | --- | --- |
-| `{POLICY_ID}` | 要 `id` 更新其屬性的策略。 |
+| `{POLICY_ID}` | 要更新其屬性的策略的`id`。 |
 
 **請求**
 
-以下請求使用兩 `replace` 個操作將策略狀態從 `DRAFT` 更 `ENABLED`改為，並使用新說明更 `description` 新欄位。
+以下請求使用兩個`replace`操作將策略狀態從`DRAFT`更改為`ENABLED` ，並使用新說明更新`description`欄位。
 
 >[!IMPORTANT]
 >
@@ -571,13 +571,13 @@ curl -X PATCH \
 }
 ```
 
-## 刪除自訂原則 {#delete}
+## 刪除自訂原則{#delete}
 
-您可以將自訂原則納入DELETE請 `id` 求的路徑，以刪除該原則。
+您可以通過在DELETE請求的路徑中包括其`id`來刪除自定義策略。
 
 >[!WARNING]
 >
->刪除後，將無法恢復策略。 最好先執行查 [閱(GET)請求](#lookup) ，以檢視原則並確認這是您要移除的正確原則。
+>刪除後，將無法恢復策略。 最好先執行查閱(GET)請求](#lookup)，以檢視原則並確認這是您要移除的正確原則。[
 
 **API格式**
 
@@ -606,9 +606,9 @@ curl -X DELETE \
 
 您可以嘗試再次查找(GET)原則，以確認刪除。 如果策略已成功刪除，您應該會收到HTTP 404（找不到）錯誤。
 
-## 檢索已啟用的核心策略清單 {#list-enabled-core}
+## 檢索已啟用核心策略的清單{#list-enabled-core}
 
-依預設，只有啟用的資料使用政策才會參與評估。 您可以向端點發出GET請求，以擷取組織目前啟用的核心原則清 `/enabledCorePolicies` 單。
+依預設，只有啟用的資料使用政策才會參與評估。 通過向`/enabledCorePolicies`端點發出GET請求，可以檢索組織當前啟用的核心策略清單。
 
 **API格式**
 
@@ -629,7 +629,7 @@ curl -X GET \
 
 **回應**
 
-成功的響應返回陣列下啟用的核心策略 `policyIds` 清單。
+成功的響應返回`policyIds`陣列下啟用的核心策略清單。
 
 ```json
 {
@@ -658,13 +658,13 @@ curl -X GET \
 }
 ```
 
-## 更新已啟用核心原則的清單 {#update-enabled-core}
+## 更新已啟用的核心策略清單{#update-enabled-core}
 
-依預設，只有啟用的資料使用政策才會參與評估。 通過向端點發出PUT請 `/enabledCorePolicies` 求，您可以使用單次調用更新組織的已啟用核心策略清單。
+依預設，只有啟用的資料使用政策才會參與評估。 通過向`/enabledCorePolicies`端點發出PUT請求，您可以使用單次調用更新組織的已啟用核心策略清單。
 
 >[!NOTE]
 >
->此端點只能啟用或禁用核心策略。 要啟用或禁用自定義策略，請參 [閱更新策略部分一節](#patch)。
+>此端點只能啟用或禁用核心策略。 要啟用或禁用自定義策略，請參閱[更新策略的一部分。](#patch)
 
 **API格式**
 
@@ -695,11 +695,11 @@ curl -X GET \
 
 | 屬性 | 說明 |
 | --- | --- |
-| `policyIds` | 要啟用的核心原則ID清單。 未包含的任何核心政策都設為 `DISABLED` 狀態，不會參與評估。 |
+| `policyIds` | 要啟用的核心原則ID清單。 未包含的任何核心策略都設定為`DISABLED`狀態，不參與評估。 |
 
 **回應**
 
-成功的響應返回陣列下啟用的核心策略的更新 `policyIds` 清單。
+成功的響應返回`policyIds`陣列下已啟用核心策略的更新清單。
 
 ```json
 {
@@ -726,4 +726,4 @@ curl -X GET \
 
 ## 後續步驟
 
-定義新策略或更新現有策略後，您可以使用 [!DNL Policy Service] API測試針對特定標籤或資料集的行銷動作，並查看您的策略是否如預期提高違規。 如需詳細資訊，請參 [閱政策評估端點](./evaluation.md) 的指南。
+定義新策略或更新現有策略後，可以使用[!DNL Policy Service] API來測試針對特定標籤或資料集的行銷動作，並查看您的策略是否如預期引發違規。 有關詳細資訊，請參見[策略評估端點](./evaluation.md)上的指南。
