@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;profile；即時客戶配置檔案；疑難排解；API；啟用資料集
-title: 使用API為Profile and Identity Service設定資料集
+title: 使用API設定描述檔和身分服務的資料集
 topic: tutorial
 type: Tutorial
 description: 本教學課程說明如何啟用資料集，以便與使用Adobe Experience Platform API的即時客戶個人檔案和身分服務搭配使用。
 translation-type: tm+mt
-source-git-commit: f34983dc13a900e7c8fe2e2cef454400c1b6a726
+source-git-commit: cad9c690be986961aea2969ef0ade975f33a8ee5
 workflow-type: tm+mt
 source-wordcount: '1057'
 ht-degree: 1%
