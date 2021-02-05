@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform; home；熱門主題；行銷自動化系統；收集行銷自動化資料
 solution: Experience Platform
-title: 透過來源連接器和API收集行銷自動化資料
+title: 使用來源連接器和API收集行銷自動化資料
 topic: overview
 type: Tutorial
-description: 本教學課程涵蓋從行銷自動化系統擷取資料，並透過來源連接器和API將其匯入平台的步驟。
+description: 本教學課程涵蓋從行銷自動化系統擷取資料，並使用來源連接器和API將其匯入Adobe Experience Platform的步驟。
 translation-type: tm+mt
-source-git-commit: a9a4bbbd7128043596ebab45d12bdd6954554537
+source-git-commit: 62266187ed1f3ce2f0acca3f50487fb70cfa7307
 workflow-type: tm+mt
-source-wordcount: '1537'
+source-wordcount: '1538'
 ht-degree: 1%
 
 ---
 
 
-# 透過來源連接器和API收集行銷自動化資料
+# 使用來源連接器和API收集行銷自動化資料
 
 本教學課程涵蓋從協力廠商行銷自動化系統擷取資料，並透過來源連接器和[[!DNL Flow Service]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) API將其匯入平台的步驟。
 
