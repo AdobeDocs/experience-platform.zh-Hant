@@ -1,19 +1,17 @@
 ---
 keywords: 社交網路；社交網路目的地；Livefyre;facebook;Facebook
-title: 社交網路目的地
-seo-title: 社交網路目的地
+title: 社交網路目標概觀
 description: 透過社交網路目的地，您可以根據雜湊電子郵件啟用宣傳的個人檔案，以鎖定受眾、個人化和抑制受眾。
-seo-description: 透過社交網路目的地，您可以根據雜湊電子郵件啟用宣傳的個人檔案，以鎖定受眾、個人化和抑制受眾。
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '93'
+source-wordcount: '71'
 ht-degree: 0%
 
 ---
 
 
-# 社交網路目的地{#social-network-destinations}
+# 社交網路目的地概觀{#social-network-destinations}
 
 透過社交網路目的地，您可以根據雜湊電子郵件啟用宣傳的個人檔案，以鎖定受眾、個人化和抑制受眾。
 
