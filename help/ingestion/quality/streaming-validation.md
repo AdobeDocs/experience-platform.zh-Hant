@@ -6,7 +6,7 @@ topic: tutorial
 type: Tutorial
 description: 串流擷取可讓您使用即時串流端點，將資料上傳至Adobe Experience Platform。 串流擷取API支援同步和非同步兩種驗證模式。
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: 089a4d517476b614521d1db4718966e3ebb13064
 workflow-type: tm+mt
 source-wordcount: '875'
 ht-degree: 3%
