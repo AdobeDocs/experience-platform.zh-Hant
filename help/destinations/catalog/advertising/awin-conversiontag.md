@@ -1,21 +1,17 @@
 ---
 keywords: Awin Advertiser Conversion Tag extension;conversion tag;Awin;awin;AWIN
-title: Awin Advertiser轉換標籤擴充功能
-seo-title: Awin Advertiser轉換標籤擴充功能
+title: Awin Advertiser Conversion Tag Extension Destination
 description: Awin Advertiser轉換標籤擴充功能是Adobe Experience Platform中的廣告目的地。 如需擴充功能的詳細資訊，請參閱Adobe Exchange的擴充功能頁面。
-seo-description: Awin Advertiser轉換標籤擴充功能是Adobe Experience Platform中的廣告目的地。 如需擴充功能的詳細資訊，請參閱Adobe Exchange的擴充功能頁面。
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '562'
+source-wordcount: '529'
 ht-degree: 3%
 
 ---
 
 
 # Awin Advertiser轉換標籤副檔名{#awin-conversiontag-extension}
-
-## 概述 {#overview}
 
 轉換標籤是AWIN.Tracking.Sale JavaScript物件的宣告，會在確認頁面上完成，以指示Mastertag已進行轉換。 然後，它會執行必要的追蹤請求。
 
