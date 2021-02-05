@@ -1,19 +1,17 @@
 ---
 keywords: 雲儲存目標；雲儲存
-title: 雲端儲存空間目標
-seo-title: 雲端儲存空間目標
-description: 平台可將您的細分作為資料檔案傳遞到Amazon S3、AWS Kinesis、Azure事件集線器或SFTP雲儲存位置。
-seo-description: 平台可將您的細分作為資料檔案傳遞到Amazon S3、AWS Kinesis、Azure事件集線器或SFTP雲儲存位置。
+title: 雲端儲存目標概觀
+description: Adobe Experience Platform可將您的細分作為資料檔案傳遞到Amazon S3、AWS Kinesis、Azure事件集線器或SFTP雲儲存位置。
 translation-type: tm+mt
-source-git-commit: b348a5493b13112291dd8e9234d457ff8c694147
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '182'
+source-wordcount: '161'
 ht-degree: 0%
 
 ---
 
 
-# 雲端儲存空間目標{#cloud-storage-destinations}
+# 雲端儲存空間目標概觀{#cloud-storage-destinations}
 
 Adobe Experience Platform可將您的細分作為資料檔案傳送至您的雲端儲存位置。 這可讓您透過[!DNL Amazon S3]和SFTP的CSV或Tab分隔檔案，將觀眾及其描述檔屬性傳送至內部系統。 對於[!DNL AWS Kinesis]和[!DNL Azure Event Hubs]目標，資料會以JSON格式串流化出Experience Platform。
 
