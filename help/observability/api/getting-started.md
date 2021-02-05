@@ -5,7 +5,7 @@ title: 可觀性洞察API快速入門
 topic: developer guide
 description: 可觀測性洞察API可讓您擷取各種Adobe Experience Platform功能的量度資料。 本檔案提供您在嘗試呼叫Oncerbility Insights API之前，需要瞭解的核心概念。
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
 workflow-type: tm+mt
 source-wordcount: '253'
 ht-degree: 0%
