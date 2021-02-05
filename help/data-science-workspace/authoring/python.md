@@ -1,22 +1,22 @@
 ---
-keywords: Experience Platform;home;popular topics;data access;python sdk;data access api;read python;write python
+keywords: Experience Platform;home；熱門主題；資料存取；python sdk；資料存取api;read python;write python
 solution: Experience Platform
-title: 使用Python訪問資料
+title: 在資料科學工作區中使用Python訪問資料
 topic: tutorial
 type: Tutorial
 description: 以下檔案包含如何在Python中存取資料以用於資料科學工作區的範例。
 translation-type: tm+mt
-source-git-commit: fcb4088ecac76d10b0cb69b04ad55167f5cdac3e
+source-git-commit: f6cfd691ed772339c888ac34fcbd535360baa116
 workflow-type: tm+mt
-source-wordcount: '396'
+source-wordcount: '420'
 ht-degree: 0%
 
 ---
 
 
-# 使用Python訪問資料
+# 在資料科學工作區中使用Python存取資料
 
-以下檔案包含如何使用Python存取資料以用於資料科學工作區的範例。 有關使用JupyterLab筆記型電腦訪問資料的資訊，請訪問 [JupyterLab筆記型電腦資料存取文檔](../jupyterlab/access-notebook-data.md) 。
+以下檔案包含如何使用Python存取資料以用於資料科學工作區的範例。 有關使用JupyterLab筆記型電腦訪問資料的資訊，請訪問[JupyterLab筆記型電腦資料存取](../jupyterlab/access-notebook-data.md)文檔。
 
 ## 讀取資料集
 
@@ -55,7 +55,7 @@ partitions = dataset.get_partitions_info()
 
 DISTINCT子句允許您在行／列級別讀取所有不同值，從響應中刪除所有重複值。
 
-以下是使用函 `distinct()` 數的範例：
+以下是使用`distinct()`函式的範例：
 
 ```python
 df = dataset_reader.select(['column-a']).distinct().read()
@@ -87,9 +87,9 @@ df = dataset_reader.where(experience_ds['timestamp'].gt(87879779797).And(experie
 
 ### ORDER BY子句
 
-ORDER BY子句允許按指定列按特定順序（升序或降序）對接收結果進行排序。 這是使用函式來完 `sort()` 成的。
+ORDER BY子句允許按指定列按特定順序（升序或降序）對接收結果進行排序。 這是使用`sort()`函式來完成的。
 
-以下是使用函 `sort()` 數的範例：
+以下是使用`sort()`函式的範例：
 
 ```python
 df = dataset_reader.sort([('column_1', 'asc'), ('column_2', 'desc')])
@@ -99,7 +99,7 @@ df = dataset_reader.sort([('column_1', 'asc'), ('column_2', 'desc')])
 
 LIMIT子句允許您限制從資料集接收的記錄數。
 
-以下是使用函 `limit()` 數的範例：
+以下是使用`limit()`函式的範例：
 
 ```python
 df = dataset_reader.limit(100).read()
@@ -109,7 +109,7 @@ df = dataset_reader.limit(100).read()
 
 OFFSET子句允許您從開頭跳過行，從後一點開始返回行。 與LIMIT結合使用，可用於迭代塊中的行。
 
-以下是使用函 `offset()` 數的範例：
+以下是使用`offset()`函式的範例：
 
 ```python
 df = dataset_reader.offset(100).read()
@@ -138,7 +138,7 @@ write_tracker = dataset_writer.write(<your_dataFrame>, file_format='json')
 
 >[!NOTE]
 >
->不會儲存資料的 **路徑** 。 您需要將對應的路徑儲存到其各自的資料。
+>資料的路徑被儲存在&#x200B;**not**&#x200B;中。 您需要將對應的路徑儲存到其各自的資料。
 
 ### 寫入用戶空間
 
@@ -160,4 +160,4 @@ my_df = user_helper.read(path=<path_to_directory>, ref_dataset_id=<ref_dataset_i
 
 ## 後續步驟
 
-Adobe Experience Platform Data Science Workspace提供使用上述程式碼範例來讀取和寫入資料的方式範例。 如果您想要進一步瞭解如何使用Python存取您的資料，請參閱資料科學工作區Python GitHub [資料庫](https://github.com/adobe/experience-platform-dsw-reference/tree/master/recipes/python/retail)。
+Adobe Experience Platform Data Science Workspace提供使用上述程式碼範例來讀取和寫入資料的方式範例。 如果您想要進一步瞭解如何使用Python存取您的資料，請參閱[資料科學工作區Python GitHub Repository](https://github.com/adobe/experience-platform-dsw-reference/tree/master/recipes/python/retail)。
