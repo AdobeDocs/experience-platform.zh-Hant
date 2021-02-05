@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics;segmentation;Segmentation;Segmentation Service;pql;PQL;Profile Query Language;arithmetic functions;arithmetic;
+keywords: Experience Platform; home；熱門主題；分段；分段；分段服務；pql;PQL；配置檔案查詢語言；算術函式；算術；
 solution: Experience Platform
-title: 算術函式
+title: PAL算術函式
 topic: developer guide
 description: 算術函式用於對配置檔案查詢語言(PQL)中的值執行基本計算。
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: b3defc3e33a55855e307ab70b9797d985d5719e3
 workflow-type: tm+mt
-source-wordcount: '242'
+source-wordcount: '260'
 ht-degree: 5%
 
 ---
@@ -15,11 +15,11 @@ ht-degree: 5%
 
 # 算術函式
 
-算術函式用於對(PQL)中的值執 [!DNL Profile Query Language] 行基本計算。 有關其他PQL函式的詳細資訊，請參閱 [[!DNL Profile Query Language] 概述](./overview.md)。
+算術函式用於對[!DNL Profile Query Language](PQL)中的值執行基本計算。 有關其他PQL函式的詳細資訊，請參閱[[!DNL Profile Query Language] overview](./overview.md)。
 
 ## 新增
 
-( `+` addition)函式用於查找兩個參數表達式的和。
+`+`（加法）函式用於查找兩個引數表達式的總和。
 
 **Format**
 
@@ -37,9 +37,9 @@ product1.price + product2.price
 
 ## 乘
 
-( `*` 乘法)函式用於查找兩個參數表達式的乘積。
+`*`（乘法）函式用於查找兩個參數表達式的乘積。
 
-**Format**
+**格式**
 
 ```sql
 {NUMBER} * {NUMBER}
@@ -55,9 +55,9 @@ product.inventory * product.price
 
 ## 去除
 
-利用 `-` （減法）函式來尋找兩個引數表達式的差異。
+`-`（減法）函式用於查找兩個引數表達式的差異。
 
-**Format**
+**格式**
 
 ```sql
 {NUMBER} - {NUMBER}
@@ -73,9 +73,9 @@ product1.price - product2.price
 
 ## 除法
 
-( `/` 除法)函式用於查找兩個引數表達式的商。
+`/`（除法）函式用於查找兩個引數表達式的商。
 
-**Format**
+**格式**
 
 ```sql
 {NUMBER} / {NUMBER}
@@ -91,9 +91,9 @@ totalProduct.price / totalProduct.sold
 
 ## 剩餘
 
-( `%` modulo/remainder)函式用於在將兩個引數表達式除以後查找余數。
+`%`(modulo/remainder)函式用於在將兩個引數表達式除以後查找余數。
 
-**Format**
+**格式**
 
 ```sql
 {NUMBER} % {NUMBER}
@@ -109,4 +109,4 @@ person.age % 5 = 0
 
 ## 後續步驟
 
-現在您已瞭解算術函式，可以在PQL查詢中使用它們。 有關其他PQL函式的詳細資訊，請閱讀配置式查 [詢語言概述](./overview.md)。
+現在您已瞭解算術函式，可以在PQL查詢中使用它們。 有關其他PQL函式的詳細資訊，請閱讀[配置檔案查詢語言概述](./overview.md)。
