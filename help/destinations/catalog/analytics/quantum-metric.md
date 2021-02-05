@@ -1,21 +1,17 @@
 ---
 keywords: 量子度量擴展；量子度量；量子度量
-title: 量子量度擴充功能
-seo-title: 量子量度擴充功能
+title: 量子量度延伸目的地
 description: Quantum Metric擴充功能是Adobe Experience Platform中的分析目標。 如需擴充功能的詳細資訊，請參閱Adobe Exchange的擴充功能頁面。
-seo-description: Quantum Metric擴充功能是Adobe Experience Platform中的分析目標。 如需擴充功能的詳細資訊，請參閱Adobe Exchange的擴充功能頁面。
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '565'
+source-wordcount: '536'
 ht-degree: 3%
 
 ---
 
 
 # [!DNL Quantum Metric] 擴充功能 {#quantum-metric-extension}
-
-## 概述 {#overview}
 
 [!DNL Quantum Metric's] 與Adobe Launch整合有助於資料收集標籤的 [!DNL Quantum Metric's] 無程式碼部署。此外，此擴充功能還能從[!DNL Quantum Metric] API擷取包含有用資訊的啟動資料元素。
 
