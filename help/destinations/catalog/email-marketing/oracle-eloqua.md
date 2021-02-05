@@ -1,21 +1,17 @@
 ---
 keywords: email;Email;e-mail;email destinations;oracle exorca;oracle
-title: Oracle Exolca目標
-seo-title: Oracle Exolca目標
+title: Oracle Exolca Connection Destination
 description: Oracle Exvola是Oracle為行銷自動化提供的軟體即服務(SaaS)平台，旨在幫助B2B行銷人員和組織管理營銷活動和銷售線索生成。
-seo-description: Oracle Exvola是Oracle為行銷自動化提供的軟體即服務(SaaS)平台，旨在幫助B2B行銷人員和組織管理營銷活動和銷售線索生成。
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '555'
+source-wordcount: '521'
 ht-degree: 0%
 
 ---
 
 
-# [!DNL Oracle Eloqua]
-
-## 概述
+# [!DNL Oracle Eloqua] 連接
 
 [[!DNL Oracle Eloqua]](https://www.oracle.com/marketingcloud/products/marketing-automation/) 是由B2B行銷人員和組織提供的行銷自動化軟體即服務(SaaS) [!DNL Oracle] 平台，旨在協助B2B行銷人員和組織管理行銷活動和銷售機會開發。
 
