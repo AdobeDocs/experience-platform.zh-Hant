@@ -5,7 +5,7 @@ title: 自動執行原則
 topic: guide
 description: 本檔案涵蓋在Experience Platform中啟動區段至目標時，資料使用原則的自動強制方式。
 translation-type: tm+mt
-source-git-commit: acc4fa59a4808ed9a32c2aaf664039e0d12dc1d8
+source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
 workflow-type: tm+mt
 source-wordcount: '1128'
 ht-degree: 0%
