@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics;Customer Attributes connector
+keywords: Experience Platform;home；熱門主題；客戶屬性連接器
 solution: Experience Platform
-title: 客戶屬性連接器
+title: 客戶屬性來源連接器概述
 topic: overview
-description: 以下檔案提供如何使用API或使用者介面將客戶屬性連接至平台的資訊
+description: 瞭解如何使用API或使用者介面將客戶屬性連接至Adobe Experience Platform
 translation-type: tm+mt
-source-git-commit: 6934bfeee84f542558894bbd4ba5759891cd17f3
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
-source-wordcount: '121'
+source-wordcount: '130'
 ht-degree: 0%
 
 ---
@@ -19,8 +19,8 @@ Adobe Experience Platform可讓您從外部來源擷取資料，同時提供您�
 
 Experience Platform支援將客戶屬性描述檔資料擷取至Adobe Experience Platform。
 
-以下檔案提供如何使用API或使用者介面將客戶屬性連接至平台的資訊：
+以下檔案提供如何使用API或使用者介面將客戶屬性連接至Adobe Experience Platform的資訊：
 
 ## 使用UI將客戶屬性連接至平台
 
-- [在UI中建立客戶屬性來源連接器](../../tutorials/ui/create/adobe-applications/customer-attributes.md)
+- [在UI中建立客戶屬性來源連線](../../tutorials/ui/create/adobe-applications/customer-attributes.md)
