@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform;home；熱門主題；源連接器；源連接器；源；資料源；資料源；資料源；資料源；資料源連接
 solution: Experience Platform
-title: Adobe Experience Platform來源連接器概觀
+title: 來源連接器概觀
 topic: overview
 description: Adobe Experience Platform可讓您從外部來源擷取資料，同時提供您使用平台服務來建構、標示及增強傳入資料的能力。 您可以從多種來源（例如Adobe應用程式、雲端儲存空間、資料庫等）擷取資料。
 translation-type: tm+mt
-source-git-commit: 2940f030aa21d70cceeedc7806a148695f68739e
+source-git-commit: a489ab248793a063295578943ad600d8eacab6a2
 workflow-type: tm+mt
-source-wordcount: '943'
+source-wordcount: '940'
 ht-degree: 0%
 
 ---
@@ -30,12 +30,12 @@ Experience Platform中的來源可分為下列類別：
 Experience Platform可讓您從其他Adobe應用程式擷取資料，包括Adobe Analytics、Adobe Audience Manager和[!DNL Experience Platform Launch]。 如需詳細資訊，請參閱下列相關檔案：
 
 - [Adobe Audience Manager連接器概觀](connectors/adobe-applications/audience-manager.md)
-- [在UI中建立Adobe Audience Manager來源連接器](./tutorials/ui/create/adobe-applications/audience-manager.md)
+- [在UI中建立Adobe Audience Manager來源連線](./tutorials/ui/create/adobe-applications/audience-manager.md)
 - [Adobe Analytics分類資料連接器概觀](connectors/adobe-applications/classifications.md)
-- [在UI中建立Adobe Analytics分類資料來源連接器](./tutorials/ui/create/adobe-applications/classifications.md)
+- [在UI中建立Adobe Analytics分類資料來源連線](./tutorials/ui/create/adobe-applications/classifications.md)
 - [Adobe Analytics資料連接器概觀](connectors/adobe-applications/analytics.md)
-- [在UI中建立Adobe Analytics來源連接器](./tutorials/ui/create/adobe-applications/analytics.md)
-- [在UI中建立客戶屬性來源連接器](./tutorials/ui/create/adobe-applications/customer-attributes.md)
+- [在UI中建立Adobe Analytics來源連線](./tutorials/ui/create/adobe-applications/analytics.md)
+- [在UI中建立客戶屬性來源連線](./tutorials/ui/create/adobe-applications/customer-attributes.md)
 
 ### 廣告
 
