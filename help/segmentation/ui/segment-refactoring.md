@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics;segmentation;Segmentation;segment builder;Segment builder
+keywords: Experience Platform;home；熱門主題；分段；分段；分段產生器；分段產生器
 solution: Experience Platform
-title: 區段服務區段產生器變更指南
+title: 重構分段時間限制UI指南
 topic: ui guide
 description: '「區段產生器」提供豐富的工作區，可讓您與描述檔資料元素互動。 工作區提供建立和編輯規則的直覺式控制項，例如用來表示資料屬性的拖放圖格。 '
 translation-type: tm+mt
-source-git-commit: beacce03136e1620ff57fb549f335d2199bb6001
+source-git-commit: b3defc3e33a55855e307ab70b9797d985d5719e3
 workflow-type: tm+mt
-source-wordcount: '250'
+source-wordcount: '261'
 ht-degree: 0%
 
 ---
@@ -23,7 +23,7 @@ ht-degree: 0%
 
 ![](../images/ui/segment-refactoring/former-time-constraint.png)
 
-如您所見，此區段在規則層級有兩個限制：一個代表&quot;[!UICONTROL 今天]&quot;，另一個代表&quot;[!UICONTROL 昨天]&quot;。
+如您所見，此區段在規則層級有兩個限制：一個代表&quot;[!UICONTROL Today]&quot;，另一個代表&quot;[!UICONTROL Yerseday]&quot;。
 
 上一個區段等同於下列區段— 兩個事件層級時間限制都已使用AND運算子連接。 第一個事件層級時間限制會參照名稱等於「Training」且目前發生的點按事件，而第二個事件層級時間限制會參照名稱等於「Pets」且昨天發生的點按事件。
 
