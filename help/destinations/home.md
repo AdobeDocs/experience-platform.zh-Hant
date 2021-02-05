@@ -2,13 +2,13 @@
 keywords: 目的地；adobe體驗平台；平台；目的地概觀；啟動資料；啟動；
 title: 目的地概述
 seo-title: 目的地概述
-description: 針對跨通道行銷宣傳、電子郵件、目標廣告等目的地啟動 Platform 資料。
+description: 瞭解如何將Adobe Experience Platform資料啟用至跨通道行銷宣傳、電子郵件、目標廣告等目的地。
 seo-description: 目標是與目標平台預先建立的整合，可讓您順暢地從Adobe Experience Platform啟動資料。 您可以使用Adobe Experience Platform中的「目標」來啟用您已知和未知的跨通道行銷宣傳、電子郵件宣傳、目標廣告和許多其他使用案例資料。
 translation-type: tm+mt
-source-git-commit: 32eae2ed782e46941bb21e3aca62c6bce68cde1e
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '488'
-ht-degree: 3%
+source-wordcount: '493'
+ht-degree: 1%
 
 ---
 
