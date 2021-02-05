@@ -1,14 +1,14 @@
 ---
 keywords: Experience Platform; home；熱門主題；資料集連接流服務；流服務；流服務連接
 solution: Experience Platform
-title: 使用Flow Service API建立Experience Platform資料集基本連線
+title: 使用Flow Service API建立Adobe Experience Platform資料集基本連線
 topic: overview
 type: Tutorial
-description: Flow Service用於收集和集中Adobe Experience Platform內不同來源的客戶資料。 該服務提供用戶介面和REST風格的API，所有支援的源都可從中連接。
+description: 瞭解如何使用Flow Service API建立Adobe Experience Platform的資料集基礎連線。
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
-source-wordcount: '736'
+source-wordcount: '721'
 ht-degree: 1%
 
 ---
