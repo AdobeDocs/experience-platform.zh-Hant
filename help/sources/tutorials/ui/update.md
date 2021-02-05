@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics;update accounts
+keywords: Experience Platform;home；熱門主題；更新帳戶
 description: 在某些情況下，可能需要更新現有來源帳戶的詳細資訊。 「來源」工作區可讓您新增、編輯和刪除現有批次或串流連線的詳細資訊，包括其名稱、說明和認證。
 solution: Experience Platform
-title: 在UI中更新帳戶詳細資訊
+title: 在UI中更新來源連線帳戶詳細資訊
 topic: overview
 type: Tutorial
 translation-type: tm+mt
-source-git-commit: 9b48bc1426e6259ea0b2cf9b420b55b92712f7c2
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
-source-wordcount: '442'
+source-wordcount: '451'
 ht-degree: 0%
 
 ---
@@ -53,7 +53,7 @@ ht-degree: 0%
 
 ![edit-account-details](../../images/tutorials/update/edit-account-details.png)
 
-片刻後，畫面底部會顯示綠色的確認方塊，以確認更新是否成功。
+片刻後，畫面底部會出現綠色的確認方塊，以確認更新是否成功。
 
 ![更新——確認](../../images/tutorials/update/update-confirmed.png)
 
