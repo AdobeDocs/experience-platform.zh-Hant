@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;attribution ai;access scores；熱門主題；下載分數；attribution ai scores;export;Export
 solution: Experience Platform, Intelligent Services
-title: 在Attribution AI中存取分數
-topic: Accessing scores
+title: 在Attribution AI中下載分數
+topic: Downloading scores
 description: 本檔案可做為下載Attribution AI分數的指南。
 translation-type: tm+mt
-source-git-commit: 2940f030aa21d70cceeedc7806a148695f68739e
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
 source-wordcount: '1056'
 ht-degree: 2%
