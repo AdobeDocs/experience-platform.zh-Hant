@@ -5,7 +5,7 @@ title: 客戶AI快速入門
 topic: Getting started
 description: 本指南提供範例API呼叫，以示範如何格式化您的請求。 這些包括路徑、必要標題和正確格式化的請求負載。
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: eb163949f91b0d1e9cc23180bb372b6f94fc951f
 workflow-type: tm+mt
 source-wordcount: '571'
 ht-degree: 0%
