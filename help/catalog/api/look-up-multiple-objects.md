@@ -1,25 +1,25 @@
 ---
 keywords: Experience Platform;home;popular topics;catalog;multiple object lookup;api
 solution: Experience Platform
-title: 查找多個對象
+title: 查找多個目錄對象
 topic: developer guide
 description: 如果您想要檢視數個特定物件，而不是每個物件提出一個要求，「目錄」會提供簡單的捷徑，讓您要求同一類型的多個物件。 您可以使用單一GET請求來傳回多個特定物件，方法是加入以逗號分隔的ID清單。
 translation-type: tm+mt
-source-git-commit: b791e9e060d7686e8fc264c445bbfd1e01ff5987
+source-git-commit: a1103bfbf79f9c87bac5b113c01386a6fb8950e7
 workflow-type: tm+mt
-source-wordcount: '225'
+source-wordcount: '237'
 ht-degree: 1%
 
 ---
 
 
-# 查找多個對象
+# 查找多個目錄對象
 
-如果您想要檢視數個特定物件，而不是每個物件提出一個要求，則提供 [!DNL Catalog] 簡單的捷徑，讓您要求同類型的多個物件。 您可以使用單一GET請求來傳回多個特定物件，方法是加入以逗號分隔的ID清單。
+如果您想要檢視數個特定物件，而不是每個物件提出一個要求，[!DNL Catalog]會提供簡單的捷徑，讓您要求多個相同類型的物件。 您可以使用單一GET請求來傳回多個特定物件，方法是加入以逗號分隔的ID清單。
 
 >[!NOTE]
 >
->即使在請求特 [!DNL Catalog] 定物件時，查詢參數仍 `properties` 是最佳實務，只傳回您所需的屬性。
+>即使在請求特定[!DNL Catalog]物件時，`properties`查詢參數仍是最佳實務，只傳回您所需的屬性。
 
 **API格式**
 
@@ -30,7 +30,7 @@ GET /{OBJECT_TYPE}/{ID_1},{ID_2},{ID_3},{ID_4}?properties={PROPERTY_1},{PROPERTY
 
 | 參數 | 說明 |
 | -------- | ----------- |
-| `{OBJECT_TYPE}` | 要檢索 [!DNL Catalog] 的對象類型。 有效對象包括： <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_TYPE}` | 要檢索的[!DNL Catalog]對象的類型。 有效對象包括： <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
 | `{ID}` | 您要擷取之特定物件之一的識別碼。 |
 
 **請求**
@@ -48,11 +48,11 @@ curl -X GET \
 
 **回應**
 
-成功的響應返回指定資料集的清單，其中僅包含每個資料集所請求`name`的屬 `description`性( `files`、和)。
+成功的響應返回指定資料集的清單，其中僅包含每個資料集的請求屬性（`name`、`description`和`files`）。
 
 >[!NOTE]
 >
->如果返回的對象不包含查詢所指示的一個或多個請求屬性，則 `properties` 響應只返回它所包含的請求屬性，如下 ***`Sample Dataset 3`*** 所示 ***`Sample Dataset 4`*** 。
+>如果返回的對象不包含`properties`查詢所指示的一個或多個請求屬性，則響應只返回其所包含的請求屬性，如以下&#x200B;***`Sample Dataset 3`***&#x200B;和&#x200B;***`Sample Dataset 4`***&#x200B;所示。
 
 ```json
 {
