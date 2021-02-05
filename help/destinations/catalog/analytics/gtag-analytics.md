@@ -1,21 +1,17 @@
 ---
 keywords: Google全域網站標籤；gtag;google gtag;google extension;google gtag extension;GTAG
-title: Google全域網站標籤延伸功能
-seo-title: Google全域網站標籤延伸功能
+title: Google全域網站標籤延伸功能目標
 description: Google全域網站標籤延伸模組是Adobe Experience Platform中的分析目的地。 如需擴充功能的詳細資訊，請參閱Adobe Exchange的擴充功能頁面。
-seo-description: Google全域網站標籤延伸模組是Adobe Experience Platform中的分析目的地。 如需擴充功能的詳細資訊，請參閱Adobe Exchange的擴充功能頁面。
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '560'
+source-wordcount: '527'
 ht-degree: 3%
 
 ---
 
 
 # [!DNL Google Global Site Tag] 擴充功能 {#gtag-analytics-extension}
-
-## 概述 {#overview}
 
 透過[!DNL Google's Global Site Tag]或gtag.js，將資料傳送至[!DNL Google Analytics]、[!DNL Google Ads]和[!DNL Google Marketing Platform]。 可以設定每個產品的多個帳戶。
 
