@@ -1,19 +1,19 @@
 ---
-keywords: Experience Platform;home;popular topics;map csv;map csv file;map csv file to xdm;map csv to xdm;ui guide;mapper;mapping;data prep;data preparation;preparing data;
+keywords: Experience Platform;home；熱門主題；map csv;map csv;map csv file;map csv file to xdm;map csv to xdm;ui guide;mapper;mapper;data preparation;data preparation；準備資料；
 solution: Experience Platform
-title: 映射函式
+title: 資料準備概述
 topic: overview
 description: 本檔案介紹Adobe Experience Platform中的資料準備。
 translation-type: tm+mt
-source-git-commit: db38f0666f5c945461043ad08939ebda52c21855
+source-git-commit: 37c1c98ccba50fa917acc5e93763294f4dde5c36
 workflow-type: tm+mt
-source-wordcount: '304'
-ht-degree: 1%
+source-wordcount: '335'
+ht-degree: 0%
 
 ---
 
 
-# 資料準備
+# 資料準備概觀
 
 資料準備可讓資料工程師將資料對應、轉換及驗證至Experience Data Model(XDM)。 「資料準備」會以「地圖」步驟顯示在「資料擷取」程式中，包括「CSV擷取」工作流程。 資料工程師可使用資料準備，在擷取期間執行下列資料操作：
 
@@ -29,7 +29,7 @@ ht-degree: 1%
 
 映射是輸入屬性或計算欄位與一個XDM屬性的關聯。 單一屬性可建立個別的映射，以映射至多個XDM屬性。
 
-若要進一步瞭解不同的對應函式，請閱讀對應 [函式指南](./functions.md)。
+若要進一步瞭解不同的映射函式，請閱讀[映射函式指南](./functions.md)。
 
 ## 映射集
 
@@ -37,4 +37,4 @@ ht-degree: 1%
 
 ## 後續步驟
 
-本檔案涵蓋Adobe Experience Platform中資料準備的基本知識。 若要進一步瞭解不同的對應函式，請閱讀 [對應函式指南](./functions.md)。 要瞭解有關不同日期時間字串的更多資訊，請閱讀 [日期字串指南](./dates.md)。
+本檔案涵蓋Adobe Experience Platform中資料準備的基本知識。 若要進一步瞭解不同的映射函式，請閱讀[映射函式指南](./functions.md)。 要瞭解有關不同日期時間字串的更多資訊，請閱讀[日期字串指南](./dates.md)。
