@@ -1,32 +1,32 @@
 ---
-keywords: Experience Platform;home;popular topics;filter;Filter;filter data;Filter data;date range
+keywords: Experience Platform;home；熱門主題；filter;Filter;filter data;filter data;date range
 solution: Experience Platform
 title: 使用查詢參數篩選目錄資料
 topic: developer guide
 description: 目錄服務API允許透過使用請求查詢參數來篩選回應資料。 目錄的最佳實務是在所有API呼叫中使用篩選器，因為這些篩選器可減輕API的負載，並有助於改善整體效能。
 translation-type: tm+mt
-source-git-commit: 71678b10c9e137016ea404305b272508b9c8cabe
+source-git-commit: a1103bfbf79f9c87bac5b113c01386a6fb8950e7
 workflow-type: tm+mt
-source-wordcount: '2077'
+source-wordcount: '2090'
 ht-degree: 1%
 
 ---
 
 
-# 使用查 [!DNL Catalog] 詢參數篩選資料
+# 使用查詢參數篩選[!DNL Catalog]資料
 
-API [!DNL Catalog Service] 允許透過使用請求查詢參數來篩選回應資料。 最佳實務的一 [!DNL Catalog] 部分是在所有API呼叫中使用篩選器，因為這些篩選器可減少API的負載並協助改善整體效能。
+[!DNL Catalog Service] API允許透過使用請求查詢參數來篩選回應資料。 [!DNL Catalog]的最佳實務是在所有API呼叫中使用篩選器，因為這些篩選器可降低API的負載，並有助於改善整體效能。
 
-本檔案概述API中篩選物件 [!DNL Catalog] 最常用的方法。 建議您在閱讀 [Catalog開發人員指南時參考本檔案](getting-started.md) ，以進一步瞭解如何與 [!DNL Catalog] API互動。 有關的更多一般 [!DNL Catalog Service]資訊，請參 [[!DNL Catalog] 閱概述](../home.md)。
+本檔案概述在API中篩選[!DNL Catalog]物件的最常用方法。 建議您在閱讀[目錄開發人員指南](getting-started.md)時參考本檔案，以進一步瞭解如何與[!DNL Catalog] API互動。 有關[!DNL Catalog Service]的更多一般資訊，請參見[[!DNL Catalog] overview](../home.md)。
 
 ## 限制返回的對象
 
-查詢 `limit` 參數會限制在回應中傳回的物件數目。 [!DNL Catalog] 回應會根據設定的限制自動計量：
+`limit`查詢參數會限制回應中傳回的物件數目。 [!DNL Catalog] 回應會根據設定的限制自動計量：
 
-* 如果未 `limit` 指定參數，則每個回應裝載的物件數上限為20。
-* 對於資料集查詢，如 `observableSchema` 果使用查詢參數 `properties` 請求，則返回的資料集的最大數量為20。
+* 如果未指定`limit`參數，則每個響應有效載荷的對象數上限為20。
+* 對於資料集查詢，如果使用`properties`查詢參數請求`observableSchema`，則返回的資料集的最大數量為20。
 * 所有其他目錄查詢的全局限制是100個對象。
-* 無效 `limit` 的參數(包 `limit=0`括)會導致400級錯誤回應，以概述適當的範圍。
+* 無效的`limit`參數（包括`limit=0`）會導致400級錯誤回應，以列出正確的範圍。
 * 作為查詢參數傳遞的限制或偏移優先於作為標題傳遞的限制或偏移。
 
 **API格式**
@@ -37,7 +37,7 @@ GET /{OBJECT_TYPE}?limit={LIMIT}
 
 | 參數 | 說明 |
 | --- | --- |
-| `{OBJECT_TYPE}` | 要檢索 [!DNL Catalog] 的對象類型。 有效對象包括： <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_TYPE}` | 要檢索的[!DNL Catalog]對象的類型。 有效對象包括： <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
 | `{LIMIT}` | 一個整數，表示要返回的對象數，範圍從1到100。 |
 
 **請求**
@@ -55,7 +55,7 @@ curl -X GET \
 
 **回應**
 
-成功的響應返回資料集清單，其數量僅限於查詢參數所指 `limit` 示的數量。
+成功的響應返回資料集清單，其數量僅限於`limit`查詢參數所指示的數量。
 
 ```json
 {
@@ -77,11 +77,11 @@ curl -X GET \
 
 ## 限制顯示的屬性
 
-即使在篩選使用參數傳回的物件數目時，傳 `limit` 回的物件本身通常也會包含您實際需要的更多資訊。 為進一步降低系統的負載，最佳做法是篩選回應，只包含您所需的屬性。
+即使使用`limit`參數篩選傳回的物件數目，傳回的物件本身通常也會包含您實際需要的更多資訊。 為進一步降低系統的負載，最佳做法是篩選回應，只包含您所需的屬性。
 
-參數 `properties` 會篩選回應物件，只傳回一組指定的屬性。 參數可設為傳回一或多個屬性。
+`properties`參數篩選器只返回一組指定的屬性來響應對象。 參數可設為傳回一或多個屬性。
 
-此參 `properties` 數只接受頂層物件屬性，這表示對於下列範例物件，您可以套用篩選器 `name`、 `description`和 `subItem`，但不適用於 `sampleKey`。
+`properties`參數只接受頂層對象屬性，這表示對於以下示例對象，可以對`name`、`description`和`subItem`應用篩選器，但對`sampleKey`不能。
 
 ```json
 {
@@ -105,13 +105,13 @@ GET /{OBJECT_TYPE}/{OBJECT_ID}?properties={PROPERTY_1},{PROPERTY_2},{PROPERTY_3}
 
 | 參數 | 說明 |
 | --- | --- |
-| `{OBJECT_TYPE}` | 要檢索 [!DNL Catalog] 的對象類型。 有效對象包括： <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_TYPE}` | 要檢索的[!DNL Catalog]對象的類型。 有效對象包括： <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
 | `{PROPERTY}` | 要包含在響應主體中的屬性的名稱。 |
-| `{OBJECT_ID}` | 要檢索的特定對象的唯 [!DNL Catalog] 一標識符。 |
+| `{OBJECT_ID}` | 要檢索的特定[!DNL Catalog]對象的唯一標識符。 |
 
 **請求**
 
-下列請求會擷取資料集清單。 參數下提供的屬性名稱的逗號分隔清 `properties` 單會指出要在回應中傳回的屬性。 也包 `limit` 含參數，可限制傳回的資料集數目。 如果請求未包含參 `limit` 數，回應最多會包含20個物件。
+下列請求會擷取資料集清單。 在`properties`參數下提供的屬性名稱的逗號分隔清單會指出要在回應中傳回的屬性。 也包含`limit`參數，可限制傳回的資料集數目。 如果請求未包含`limit`參數，則回應最多會包含20個物件。
 
 ```shell
 curl -X GET \
@@ -124,7 +124,7 @@ curl -X GET \
 
 **回應**
 
-成功的響應返回僅顯示所 [!DNL Catalog] 請求屬性的對象清單。
+成功的響應返回僅顯示所請求屬性的[!DNL Catalog]對象清單。
 
 ```json
 {
@@ -158,9 +158,9 @@ curl -X GET \
 
 ## 響應清單的偏移起始索引
 
-查詢 `start` 參數使用基於零的編號，將響應清單向前偏移指定的編號。 例如，會 `start=2` 偏移對第三個列出物件上開始的回應。
+`start`查詢參數使用零編號，將響應清單向前偏移指定的編號。 例如，`start=2`會偏移對第三個列出物件上開始的回應。
 
-如果參 `start` 數未與參數配對，則傳 `limit` 回的物件數上限為20。
+如果`start`參數未與`limit`參數配對，則返回的對象數上限為20。
 
 **API格式**
 
@@ -175,7 +175,7 @@ GET /{OBJECT_TYPE}?start={OFFSET}
 
 **請求**
 
-下列請求會擷取資料集清單，偏移至第五個物件(`start=4`)，並限制回應至兩個傳回的資料集(`limit=2`)。
+以下請求檢索資料集清單，偏移到第五個對象(`start=4`)並限制對兩個返回資料集(`limit=2`)的響應。
 
 ```shell
 curl -X GET \
@@ -188,7 +188,7 @@ curl -X GET \
 
 **回應**
 
-回應包含包含兩個頂層項目(`limit=2`)的JSON物件，每個資料集一個項目及其詳細資訊（詳細資訊已在範例中壓縮）。 回應會移四(`start=4`)，這表示顯示的資料集是按時間順序排列的五和六。
+回應包含包含兩個頂層項目(`limit=2`)的JSON物件，每個資料集各有一個項目及其詳細資料（在範例中已壓縮詳細資料）。 回應會移四(`start=4`)，這表示顯示的資料集是按時間順序排列的五和六。
 
 ```json
 {
@@ -199,18 +199,18 @@ curl -X GET \
 
 ## 依標籤篩選
 
-某些目錄對象支援使用屬 `tags` 性。 標籤可附加資訊至物件，然後稍後再用來擷取該物件。 要使用哪些標籤以及如何套用這些標籤的選擇取決於您的組織流程。
+某些目錄對象支援使用`tags`屬性。 標籤可附加資訊至物件，然後稍後再用來擷取該物件。 要使用哪些標籤以及如何套用這些標籤的選擇取決於您的組織流程。
 
 使用標籤時，需要考慮一些限制：
 
 * 目前唯一支援標籤的目錄對象是資料集、批處理和連接。
 * 標籤名稱是IMS組織唯一的。
 * Adobe程式可能會針對某些行為使用標籤。 這些標籤的名稱會以&quot;adobe&quot;為前置詞作為標準。 因此，在聲明標籤名稱時，應避免此慣例。
-* 下列標籤名稱會保留供跨組織使 [!DNL Experience Platform]用，因此無法宣告為您組織的標籤名稱：
+* 下列標籤名稱會保留為供跨[!DNL Experience Platform]使用，因此無法宣告為組織的標籤名稱：
    * `unifiedProfile`:此標籤名稱保留給要被收錄的資料集 [[!DNL Real-time Customer Profile]](../../profile/home.md)。
    * `unifiedIdentity`:此標籤名稱保留給要被收錄的資料集 [[!DNL Identity Service]](../../identity-service/home.md)。
 
-以下是包含屬性的資料集范 `tags` 例。 該屬性中的標籤採用鍵值配對的形式，每個標籤值顯示為包含單一字串的陣列：
+以下是包含`tags`屬性的資料集範例。 該屬性中的標籤採用鍵值配對的形式，每個標籤值顯示為包含單一字串的陣列：
 
 ```json
 {
@@ -249,9 +249,9 @@ curl -X GET \
 
 **API格式**
 
-參數的 `tags` 值採用鍵值對的形式，使用格式 `{TAG_NAME}:{TAG_VALUE}`。 可以以逗號分隔的清單形式提供多個鍵值對。 當提供多個標籤時，會假設AND關係。
+`tags`參數的值採用鍵值對的形式，格式為`{TAG_NAME}:{TAG_VALUE}`。 可以以逗號分隔的清單形式提供多個鍵值對。 當提供多個標籤時，會假設AND關係。
 
-此參數支援標籤值`*`的萬用字元()。 例如，搜尋字串會傳 `test*` 回任何標籤值以&quot;test&quot;開頭的物件。 僅由通配符組成的搜索字串可用於根據對象是否包含特定標籤（無論其值如何）來過濾對象。
+此參數支援標籤值的萬用字元(`*`)。 例如，`test*`的搜尋字串會傳回任何標籤值以&quot;test&quot;開頭的物件。 僅由通配符組成的搜索字串可用於根據對象是否包含特定標籤（無論其值如何）來過濾對象。
 
 ```http
 GET /{OBJECT_TYPE}?tags={TAG_NAME}:{TAG_VALUE}
@@ -262,7 +262,7 @@ GET /{OBJECT_TYPE}?tags={TAG_NAME}:*
 
 | 參數 | 說明 |
 | --- | --- |
-| `{OBJECT_TYPE}` | 要檢索 [!DNL Catalog] 的對象類型。 有效對象包括： <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`dataSets`</li></ul> |
+| `{OBJECT_TYPE}` | 要檢索的[!DNL Catalog]對象的類型。 有效對象包括： <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`dataSets`</li></ul> |
 | `{TAG_NAME}` | 要篩選依據的標籤名稱。 |
 | `{TAG_VALUE}` | 要篩選依據的標籤值。 支援萬用字元(`*`)。 |
 
@@ -281,7 +281,7 @@ curl -X GET \
 
 **回應**
 
-成功的響應返回包含值為&quot;123456&quot;的 `sampleTag` 資料集清單，並返回值為AND `secondTag` 的任意值。 除非另有指定限制，否則回應最多包含20個物件。
+成功的響應返回包含值為&quot;123456&quot;的`sampleTag`和值為`secondTag`的資料集清單。 除非另有指定限制，否則回應最多包含20個物件。
 
 ```json
 {
@@ -333,7 +333,7 @@ curl -X GET \
 
 ## 依日期範圍篩選
 
-API中的某些 [!DNL Catalog] 端點具有允許區間查詢的查詢參數，在日期的情況下最常出現。
+[!DNL Catalog] API中的某些端點具有允許區間查詢的查詢參數，在日期情況下最常見。
 
 **API格式**
 
@@ -360,7 +360,7 @@ curl -X GET \
 
 **回應**
 
-成功的回應包含位於指 [!DNL Catalog] 定日期範圍內的物件清單。 除非另有指定限制，否則回應最多包含20個物件。
+成功的回應包含位於指定日期範圍內的[!DNL Catalog]物件清單。 除非另有指定限制，否則回應最多包含20個物件。
 
 ```json
 {
@@ -393,11 +393,11 @@ curl -X GET \
 
 ## 依屬性排序
 
-查 `orderBy` 詢參數允許您根據指定的屬性值對響應資料進行排序（排序）。 此參數需要&quot;direction&quot;(`asc` 用於升序或 `desc` 降序)，後面接著冒號(`:`)，然後是屬性，以排序結果。 如果未指定方向，則預設方向為遞增。
+`orderBy`查詢參數允許您根據指定的屬性值對響應資料進行排序（排序）。 此參數需要&quot;direction&quot;（`asc`代表遞增，`desc`代表遞減），後面接著冒號(`:`)，然後是屬性，以排序結果。 如果未指定方向，則預設方向為遞增。
 
 可以在逗號分隔的清單中提供多個排序屬性。 如果第一個排序屬性生成多個對象，這些對象包含該屬性的相同值，則使用第二個排序屬性進一步排序這些匹配對象。
 
-For example, consider the following query: `orderBy=name,desc:created`. 根據第一個排序屬性，結果會以升序排序 `name`。 在多個記錄共用相同屬性的情 `name` 況下，這些匹配記錄隨後會按第二個排序屬性排序 `created`。 如果沒有傳回的記錄共用相 `name`同， `created` 則屬性不會納入排序。
+例如，請考慮以下查詢：`orderBy=name,desc:created`。 根據第一個排序屬性`name`，結果會以升序排序。 如果多個記錄共用相同的`name`屬性，則這些匹配記錄隨後按第二個排序屬性`created`排序。 如果沒有傳回的記錄共用相同的`name`，則`created`屬性不會納入排序。
 
 
 **API格式**
@@ -415,7 +415,7 @@ GET /{OBJECT_TYPE}?orderBy={PROPERTY_NAME_1},desc:{PROPERTY_NAME_2}
 
 **請求**
 
-下列請求會擷取依其屬性排序的資料集 `name` 清單。 如果任何資料集共用相 `name`同，則這些資料集依其屬性的降序 `updated` 排序。
+以下請求檢索按其`name`屬性排序的資料集清單。 如果任何資料集共用相同的`name` ，則這些資料集依其`updated`屬性的降序排列。
 
 ```shell
 curl -X GET \
@@ -428,7 +428,7 @@ curl -X GET \
 
 **回應**
 
-成功的響應包含根據參 [!DNL Catalog] 數排序的對象列 `orderBy` 表。 除非另有指定限制，否則回應最多包含20個物件。
+成功的響應包含根據`orderBy`參數排序的[!DNL Catalog]對象清單。 除非另有指定限制，否則回應最多包含20個物件。
 
 ```json
 {
@@ -478,13 +478,13 @@ curl -X GET \
 * [使用簡單篩選](#using-simple-filters):依特定屬性是否符合特定值來篩選。
 * [使用屬性參數](#using-the-property-parameter):使用條件運算式來篩選屬性是否存在，或屬性的值是否與其他指定值或規則運算式相符、相近或相比較。
 
-### 使用簡單濾鏡 {#using-simple-filters}
+### 使用簡單篩選器{#using-simple-filters}
 
-簡單篩選可讓您根據特定屬性值來篩選回應。 簡單篩選的形式為 `{PROPERTY_NAME}={VALUE}`。
+簡單篩選可讓您根據特定屬性值來篩選回應。 簡單篩選器的形式為`{PROPERTY_NAME}={VALUE}`。
 
-例如，查詢只 `name=exampleName` 返回屬性包含&quot;exampleName&quot; `name` 值的對象。 相反，查詢只 `name=!exampleName` 會傳回屬性不 `name` 是 **** &quot;exampleName&quot;的物件。
+例如，查詢`name=exampleName`僅返回其`name`屬性包含&quot;exampleName&quot;值的對象。 相反地，查詢`name=!exampleName`只返回`name`屬性為&#x200B;**not** &quot;exampleName&quot;的對象。
 
-此外，簡單篩選器支援查詢單一屬性之多個值的能力。 提供多個值時，回應會傳回屬性符合所 **提供清單** 中任何值的物件。 您可以將字元預先固定至清單，以反轉多值查詢， `!` 只傳回屬性值不在提供清單中 **** (例如 `name=!exampleName,anotherName`)的物件。
+此外，簡單篩選器支援查詢單一屬性之多個值的能力。 提供多個值時，響應返回屬性與提供清單中的值&#x200B;**any**&#x200B;匹配的對象。 您可以將`!`字元預先固定至清單，只傳回屬性值為&#x200B;**not**&#x200B;的物件（例如`name=!exampleName,anotherName`），以反轉多值查詢。
 
 **API格式**
 
@@ -497,13 +497,13 @@ GET /{OBJECT_TYPE}?{PROPERTY_NAME}=!{VALUE_1},{VALUE_2},{VALUE_3}
 
 | 參數 | 說明 |
 | --- | --- |
-| `{OBJECT_TYPE}` | 要檢索 [!DNL Catalog] 的對象類型。 有效對象包括： <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_TYPE}` | 要檢索的[!DNL Catalog]對象的類型。 有效對象包括： <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
 | `{PROPERTY_NAME}` | 您要篩選其值的屬性名稱。 |
 | `{VALUE}` | 一個屬性值，它決定要包括（或排除，視查詢而定）哪些結果。 |
 
 **請求**
 
-下列請求會擷取資料集的清單，篩選為僅包含其屬 `name` 性值為&quot;exampleName&quot;或&quot;anotherName&quot;的資料集。
+下列請求會擷取資料集的清單，篩選為僅包含`name`屬性值為&quot;exampleName&quot;或&quot;anotherName&quot;的資料集。
 
 ```shell
 curl -X GET \
@@ -516,7 +516,7 @@ curl -X GET \
 
 **回應**
 
-成功的響應包含資料集清單，排除了「exampleName」或「 `name` anotherName」的任何資料集。 除非另有指定限制，否則回應最多包含20個物件。
+成功的響應包含資料集清單，排除`name`為&quot;exampleName&quot;或&quot;anotherName&quot;的任何資料集。 除非另有指定限制，否則回應最多包含20個物件。
 
 ```json
 {
@@ -547,11 +547,11 @@ curl -X GET \
 }
 ```
 
-### 使用參 `property` 數 {#using-the-property-parameter}
+### 使用`property`參數{#using-the-property-parameter}
 
-與簡 `property` 單篩選器相比，查詢參數為屬性篩選提供更大的彈性。 除了根據屬性是否具有特定值進行篩選外，參數還可使用其他比較運算子(例如「比較」( `property` )和「比較」(`>``<`))，以及規則運算式來依屬性值篩選。 它也可以依屬性是否存在來篩選，不論其值為何。
+與簡單篩選器相比，`property`查詢參數提供了更多基於屬性的篩選靈活性。 除了根據屬性是否具有特定值進行篩選外，`property`參數還可使用其他比較運算子(例如&quot;more-than&quot;(`>`)和&quot;less-than&quot;(`<`))以及規則運算式來依屬性值進行篩選。 它也可以依屬性是否存在來篩選，不論其值為何。
 
-此參 `property` 數只接受頂層物件屬性，這表示對於下列範例物件，您可依屬性篩選 `name`、 `description`和 `subItem`，但NOT的屬性 `sampleKey`。
+`property`參數只接受頂層對象屬性，這表示對於以下示例對象，可以按`name`、`description`和`subItem`的屬性進行篩選，但不能按`sampleKey`的屬性進行篩選。
 
 ```json
 {
@@ -573,26 +573,26 @@ GET /{OBJECT_TYPE}?property={CONDITION}
 
 | 參數 | 說明 |
 | --- | --- |
-| `{OBJECT_TYPE}` | 要檢索 [!DNL Catalog] 的對象類型。 有效對象包括： <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_TYPE}` | 要檢索的[!DNL Catalog]對象的類型。 有效對象包括： <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
 | `{CONDITION}` | 一個條件式運算式，指出要查詢的屬性，以及如何評估其值。 以下提供範例。 |
 
-參數的值支 `property` 援數種不同的條件運算式。 下表概述支援運算式的基本語法：
+`property`參數的值支援幾種不同的條件表達式。 下表概述支援運算式的基本語法：
 
 | 符號 | 說明 | 範例 |
 | --- | --- | --- |
 | (None) | 聲明屬性名稱（不含運算子）時，只會傳回屬性存在的物件，不論其值為何。 | `property=name` |
-| ! | 將&quot;`!`&quot;加上參數值後，只 `property` 會傳回屬性不存在的 **物件** 。 | `property=!name` |
-| ~ | 僅傳回屬性值（字串）與位元(`~`)符號後提供的規則運算式相符的物件。 | `property=name~^example` |
+| ! | 將&quot;`!`&quot;預定為`property`參數的值時，僅返回屬性&#x200B;**not**&#x200B;存在的對象。 | `property=!name` |
+| ~ | 僅傳回屬性值（字串）與位元(`~`)符號後提供之規則運算式相符的物件。 | `property=name~^example` |
 | == | 僅返回其屬性值與雙等號(`==`)後提供的字串完全匹配的對象。 | `property=name==exampleName` |
-| != | 僅傳回屬性值與 **not** -equals符號(`!=`)後提供之字串不符的物件。 | `property=name!=exampleName` |
-| &lt; | 僅傳回屬性值小於（但不等於）指定金額的物件。 | `property=version<1.0.0` |
-| &lt;= | 僅返回屬性值小於（或等於）指定金額的對象。 | `property=version<=1.0.0` |
+| != | 僅傳回屬性值為&#x200B;**not**&#x200B;且符合在not-equals符號(`!=`)之後提供之字串的物件。 | `property=name!=exampleName` |
+| &lt;> | 僅傳回屬性值小於（但不等於）指定金額的物件。 | `property=version<1.0.0` |
+| &lt;> | 僅返回屬性值小於（或等於）指定金額的對象。 | `property=version<=1.0.0` |
 | > | 僅傳回屬性值大於（但不等於）指定金額的物件。 | `property=version>1.0.0` |
 | >= | 僅返回屬性值大於（或等於）指定金額的對象。 | `property=version>=1.0.0` |
 
 >[!NOTE]
 >
->屬 `name` 性支援使用通配符， `*`作為整個搜索字串或通配符的一部分。 萬用字元會比對空字元，如此搜尋字串 `te*st` 就會比對值&quot;test&quot;。 星號加倍(`**`)可逸出。 搜尋字串中的雙星號代表單一星號做為常值字串。
+>`name`屬性支援使用萬用字元`*`作為整個搜尋字串或其一部分。 萬用字元會比對空字元，如此搜尋字串`te*st`就會比對值&quot;test&quot;。 星號加倍(`**`)即可逸出。 搜尋字串中的雙星號代表單一星號做為常值字串。
 
 **請求**
 
@@ -654,7 +654,7 @@ curl -X GET \
 
 ## 合併多個濾鏡
 
-使用&amp;符號(`&`)，您可以在單一請求中合併多個篩選器。 當請求中新增其他條件時，會假設AND關係。
+使用&amp;符號(`&`)，您可以在單一請求中組合多個篩選器。 當請求中新增其他條件時，會假設AND關係。
 
 **API格式**
 
