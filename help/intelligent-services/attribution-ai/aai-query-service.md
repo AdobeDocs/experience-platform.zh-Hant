@@ -1,19 +1,19 @@
 ---
 keywords: 見解；歸因ai；歸因ai洞察；AAI查詢服務；歸因查詢；歸因分數
 solution: Intelligent Services, Experience Platform
-title: AAI查詢服務快速入門手冊
+title: 使用查詢服務分析歸因分數
 topic: Attribution AI queries
-description: 本檔案提供使用查詢服務分析歸因分數的指南和範本。
+description: 瞭解如何使用Adobe Experience Platform Query Service來分析Attribution AI分數。
 translation-type: tm+mt
-source-git-commit: 32d49c9244414afeb2729ef44eb364fb2c609380
+source-git-commit: eb163949f91b0d1e9cc23180bb372b6f94fc951f
 workflow-type: tm+mt
-source-wordcount: '494'
+source-wordcount: '487'
 ht-degree: 0%
 
 ---
 
 
-# Adobe Experience Platform查詢服務快速入門手冊，用於分析歸因分數
+# 使用查詢服務分析歸因分數
 
 資料中的每一列代表轉換，相關觸點的資訊會儲存為`touchpointsDetail`欄下的結構陣列。
 
@@ -21,7 +21,7 @@ ht-degree: 0%
 | ---------------------- | ------ |
 | 觸點名稱 | `touchpointsDetail. touchpointName` |
 | 觸點頻道 | `touchpointsDetail.touchPoint.mediaChannel` |
-| 觸點AAI演算法分數 | <li>`touchpointsDetail.scores.algorithmicSourced`</li> <li> `touchpointsDetail.scores.algorithmicInfluenced` </li> |
+| 觸點歸因AI演算法分數 | <li>`touchpointsDetail.scores.algorithmicSourced`</li> <li> `touchpointsDetail.scores.algorithmicInfluenced` </li> |
 
 ## 尋找資料路徑
 
