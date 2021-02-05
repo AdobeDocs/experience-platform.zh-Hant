@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform; home；熱門主題；第三方資料庫；資料庫流服務
 solution: Experience Platform
-title: 使用Flow Service API探索資料庫
+title: 使用流服務API探索資料庫
 topic: overview
 description: 本教學課程使用Flow Service API來探索協力廠商資料庫的內容和檔案結構。
 translation-type: tm+mt
-source-git-commit: ddf5be2f30bc347a881bdcbc6b880f087c03e263
+source-git-commit: 62266187ed1f3ce2f0acca3f50487fb70cfa7307
 workflow-type: tm+mt
 source-wordcount: '563'
 ht-degree: 2%
