@@ -5,7 +5,7 @@ description: 瞭解如何在Adobe Experience Platform使用者介面中將現有
 topic: user guide
 type: Tutorial
 translation-type: tm+mt
-source-git-commit: 2d6e833db7cd79135e6da4c68c9dca8cbed09ce4
+source-git-commit: 8d6916890a94300dc68d018d56579df9616c177c
 workflow-type: tm+mt
 source-wordcount: '502'
 ht-degree: 0%
@@ -205,11 +205,11 @@ ht-degree: 0%
 
 裝載採用陣列的形式，每個陣列項都是表示要導出的自定義XDM資源的對象。 在上述範例中，「[!DNL Loyalty details]」自訂混音和「[!DNL Loyalty Members]」結構包含在內。 匯出中不會包含架構採用的任何核心資源，因為這些資源可用於所有沙盒和IMS組織。
 
-請注意，您組織的租用戶ID的每個例項在裝載中會顯示為`<XDM_TENANTID_PLACEHOLDER>`。 這些預留位置會自動取代為適當的租用戶ID值，這取決於您在下一步驟中匯出架構的位置。
+請注意，您組織的租用戶ID的每個例項在裝載中會顯示為`<XDM_TENANTID_PLACEHOLDER>`。 這些預留位置會自動取代為適當的租用戶ID值，這取決於您在下一步驟中匯入架構的位置。
 
 ## 使用API匯入資源
 
-複製結構的匯出JSON後，您就可將它當做POST要求的裝載，用於結構註冊表API的`/import`端點。 如需如何設定呼叫，將結構傳送至正確的IMS組織與沙盒的詳細資訊，請參閱API](../api/export-import.md#import)中有關匯入XDM資源的章節。[
+複製結構的匯出JSON後，您就可將它當做POST要求的裝載，用於結構註冊表API的`/import`端點。 如需如何設定呼叫，將結構傳送至所需IMS組織與沙盒的詳細資訊，請參閱API](../api/export-import.md#import)中有關匯入XDM資源的章節。[
 
 ## 後續步驟
 
