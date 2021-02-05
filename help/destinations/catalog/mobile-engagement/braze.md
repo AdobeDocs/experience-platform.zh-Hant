@@ -1,25 +1,21 @@
 ---
 keywords: 行動裝置；硬；訊息；
-title: Braze目的地
-seo-title: Braze目的地
+title: Braze連接目標
 description: Braze是一個全面的客戶互動平台，為客戶和他們喜愛的品牌提供相關且值得回味的體驗。
-seo-description: Braze是一個全面的客戶互動平台，為客戶和他們喜愛的品牌提供相關且值得回味的體驗。
 translation-type: tm+mt
-source-git-commit: 95f57f9d1b3eeb0b16ba209b9774bd94f5758009
+source-git-commit: f4095a90ff70e8d054bae4f3b0f884552ffd30df
 workflow-type: tm+mt
-source-wordcount: '954'
+source-wordcount: '932'
 ht-degree: 1%
 
 ---
 
 
-# （測試版）[!DNL Braze]目標
+# （測試版）[!DNL Braze]連線
 
 >[!IMPORTANT]
 >
 >Adobe Experience Platform中的Braze目標目前正在測試中。 文件和功能可能會有所變更。
-
-## 概述 {#overview}
 
 [!DNL Braze]目的地可協助您將描述檔資料傳送至[!DNL Braze]。
 
