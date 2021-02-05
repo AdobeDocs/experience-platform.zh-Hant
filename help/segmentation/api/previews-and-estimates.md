@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics;segmentation;Segmentation;Segmentation Service;previews;estimates;previews and estimates;estimates and previews;api;API;
+keywords: Experience Platform; home；熱門主題；分段；分段；分段服務；預覽；估計；預覽和估計；估計和預覽；api;API;
 solution: Experience Platform
-title: 預覽和估計端點
+title: 預覽和估計API端點
 topic: developer guide
-description: 當您開發區段定義時，可以使用Adobe Experience Platform中的估計和預覽工具來檢視摘要層級資訊，以協助您隔離預期的觀眾。
+description: Adobe Experience Platform Segmentation Service API中的預覽和估計端點可讓您檢視摘要層級資訊，以協助您隔離區段中預期的觀眾。
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
-source-wordcount: '773'
+source-wordcount: '793'
 ht-degree: 2%
 
 ---
@@ -15,11 +15,11 @@ ht-degree: 2%
 
 # 預覽和估計端點
 
-當您開發區段定義時，可以使用中的估計和預覽工具來檢 [!DNL Adobe Experience Platform] 視摘要層級的資訊，以協助您隔離預期的觀眾。 **預覽** 提供區段定義之合格描述檔的分頁清單，讓您比較結果與預期。 **估計** 提供區段定義的統計資訊，例如預測受眾大小、信賴區間和錯誤標準差。
+當您開發區段定義時，可使用[!DNL Adobe Experience Platform]中的估計和預覽工具來檢視摘要層級資訊，以協助您隔離預期的觀眾。 **預** 覽提供區段定義之合格描述檔的分頁清單，讓您比較結果與預期。**「估** 計」會提供區段定義的統計資訊，例如預測對象大小、信賴區間和錯誤標準差。
 
 ## 快速入門
 
-本指南中使用的端點是 [!DNL Adobe Experience Platform Segmentation Service] API的一部分。 在繼續之前，請先檢閱 [快速入門手冊](./getting-started.md) ，以取得成功呼叫API所需的重要資訊，包括必要的標題和如何讀取範例API呼叫。
+本指南中使用的端點是[!DNL Adobe Experience Platform Segmentation Service] API的一部分。 在繼續之前，請參閱[快速入門手冊](./getting-started.md)，以取得成功呼叫API所需的重要資訊，包括必要的標題和如何讀取範例API呼叫。
 
 ## 如何產生估計
 
@@ -41,9 +41,9 @@ ht-degree: 2%
 >
 >估計通常需要10到15秒才能執行，從粗略的估計開始，並隨著讀取更多記錄而調整。
 
-## Create a new preview {#create-preview}
+## 建立新的預覽{#create-preview}
 
-您可以向端點發出POST請求，以建立新的預 `/preview` 覽。
+您可以通過向`/preview`端點發出POST請求來建立新預覽。
 
 >[!NOTE]
 >
@@ -75,8 +75,8 @@ curl -X POST https://platform.adobe.io/data/core/ups/preview \
 | 屬性 | 說明 |
 | -------- | ----------- |
 | `predicateExpression` | 用於查詢資料的PQL表達式。 |
-| `predicateType` | 下查詢表達式的謂詞類型 `predicateExpression`。 目前，此屬性唯一接受的值是 `pql/text`。 |
-| `predicateModel` | 描述檔資 [!DNL Experience Data Model] 料所依據之(XDM)架構的名稱。 |
+| `predicateType` | `predicateExpression`下查詢表達式的謂詞類型。 目前，此屬性唯一接受的值是`pql/text`。 |
+| `predicateModel` | 描述檔資料所依據之[!DNL Experience Data Model](XDM)架構的名稱。 |
 
 **回應**
 
@@ -97,9 +97,9 @@ curl -X POST https://platform.adobe.io/data/core/ups/preview \
 | `state` | 預覽作業的目前狀態。 最初建立時，它將處於「新」狀態。 隨後，它將處於「運行」狀態，直到處理完成，此時它將變為「RESULT_READY」或「FAILED」。 |
 | `previewId` | 預覽工作的ID，在檢視估計值或預覽時用於查閱目的，如下一節所述。 |
 
-## 擷取特定預覽的結果 {#get-preview}
+## 擷取特定預覽的結果{#get-preview}
 
-您可以向端點提出GET請求並在請求路徑中提供預覽ID，以 `/preview` 擷取特定預覽的詳細資訊。
+您可以向`/preview`端點提出GET請求，並在請求路徑中提供預覽ID，以擷取特定預覽的詳細資訊。
 
 **API格式**
 
@@ -109,7 +109,7 @@ GET /preview/{PREVIEW_ID}
 
 | 參數 | 說明 |
 | --------- | ----------- |
-| `{PREVIEW_ID}` | 您 `previewId` 要擷取的預覽值。 |
+| `{PREVIEW_ID}` | 您要擷取之預覽的`previewId`值。 |
 
 **請求**
 
@@ -172,11 +172,11 @@ curl -X GET https://platform.adobe.io/data/core/ups/preview/MDphcHAtMzJiZTAzMjgt
 
 | 屬性 | 說明 |
 | -------- | ----------- |
-| `results` | 實體ID的清單，以及其相關身分。 提供的連結可用於查找指定的實體，使用 [[!DNL Profile Access API]](../../profile/api/entities.md)。 |
+| `results` | 實體ID的清單，以及其相關身分。 提供的連結可用於使用[[!DNL Profile Access API]](../../profile/api/entities.md)查找指定的實體。 |
 
-## 檢索特定估計作業的結果 {#get-estimate}
+## 檢索特定估計作業的結果{#get-estimate}
 
-建立預覽工作後，您就可在GET要求到端點的路徑中使用該工作，以檢視區段定義的相關統計資訊，包括預計的觀眾大小、信賴區間和錯誤標準差。 `previewId``/estimate`
+建立預覽工作後，您可在GET要求至`/estimate`端點的路徑中使用其`previewId`，以檢視區段定義的統計資訊，包括預計讀者大小、信賴區間和錯誤標準差。
 
 **API格式**
 
@@ -186,7 +186,7 @@ GET /estimate/{PREVIEW_ID}
 
 | 參數 | 說明 |
 | --------- | ----------- |
-| `{PREVIEW_ID}` | 只有在建立預覽工作且兩個工作共用相同的ID值以供查閱時，才會觸發估計工作。 具體而言，這是建 `previewId` 立預覽工作時傳回的值。 |
+| `{PREVIEW_ID}` | 只有在建立預覽工作且兩個工作共用相同的ID值以供查閱時，才會觸發估計工作。 具體而言，這是建立預覽工作時傳回的`previewId`值。 |
 
 **請求**
 
@@ -231,4 +231,4 @@ curl -X GET https://platform.adobe.io/data/core/ups/estimate/MDoyOjRhNDVlODUzLWF
 
 ## 後續步驟
 
-閱讀本指南後，您現在更能瞭解如何使用預覽和估計。 若要進一步瞭解其他 [!DNL Segmentation Service] API端點，請閱讀區 [段服務開發人員指南概觀](./overview.md)。
+閱讀本指南後，您現在更能瞭解如何使用預覽和估計。 若要進一步瞭解其他[!DNL Segmentation Service] API端點，請閱讀[分段服務開發人員指南概述](./overview.md)。
