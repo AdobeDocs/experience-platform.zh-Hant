@@ -1,21 +1,17 @@
 ---
 keywords: 媒體分析擴充功能；媒體分析；音訊和視訊擴充功能
-title: Adobe Media Analytics for Audio and Video 擴充功能
-seo-title: Adobe Media Analytics for Audio and Video 擴充功能
+title: Adobe Media Analytics for Audio and Video Extension Destination
 description: Adobe Media Analytics for Audio and Video Extension是Adobe Experience Platform中的分析目的地。 如需擴充功能的詳細資訊，請參閱Adobe Exchange的擴充功能頁面。
-seo-description: Adobe Media Analytics for Video Extension是Adobe Experience Platform中的分析目的地。 如需擴充功能的詳細資訊，請參閱Adobe Exchange的擴充功能頁面。
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '575'
-ht-degree: 9%
+source-wordcount: '538'
+ht-degree: 6%
 
 ---
 
 
-# Adobe Media Analytics for Audio and Video 擴充功能 版{#adobe-analytics-for-video-extension}
-
-## 概述 {#overview}
+# Adobe Media Analytics for Audio and Video 擴充功能 {#adobe-analytics-for-video-extension}
 
 Adobe Media Analytics for Audio and Video是基本Analytics產品的附加元件，可為客戶提供強穩的視訊、音訊和廣告度量。
 
