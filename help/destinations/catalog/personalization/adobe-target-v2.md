@@ -1,21 +1,17 @@
 ---
 keywords: 目標擴展；目標v2；目標v2；目標v2擴展
-title: Adobe Target v2 擴充功能
-seo-title: Adobe Target v2 擴充功能
+title: Adobe Target v2 Extension Destination
 description: Adobe Target v2擴充功能是Adobe Experience Platform中的個人化目的地。 如需擴充功能的詳細資訊，請參閱Adobe Exchange的擴充功能頁面。
-seo-description: Adobe Target v2擴充功能是Adobe Experience Platform中的個人化目的地。 如需擴充功能的詳細資訊，請參閱Adobe Exchange的擴充功能頁面。
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '562'
-ht-degree: 12%
+source-wordcount: '531'
+ht-degree: 11%
 
 ---
 
 
-# Adobe Target v2 擴充功能 版{#adobe-target-v2-extension}
-
-## 概述 {#overview}
+# Adobe Target v2 擴充功能 {#adobe-target-v2-extension}
 
 Adobe Target 是 Adobe Experience Cloud 解決方案，提供您量身訂做和個人化客戶體驗所需的一切，以將您的網站和行動網站、應用程式、社交媒體和其他數位通道的營收最大化。
 
