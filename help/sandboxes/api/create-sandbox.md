@@ -1,21 +1,21 @@
 ---
-keywords: Experience Platform;home;popular topics;Sandbox;sandbox
+keywords: Experience Platform;home；熱門主題；沙盒；沙盒
 solution: Experience Platform
-title: 建立沙盒
+title: 在API中建立沙盒
 topic: developer guide
 description: 您可以向「/沙盒」端點發出POST請求，以建立新沙盒。
 translation-type: tm+mt
-source-git-commit: c081a7521be9715ca32d35504922a70767924fd7
+source-git-commit: 36f63cecd49e6a6b39367359d50252612ea16d7a
 workflow-type: tm+mt
-source-wordcount: '151'
+source-wordcount: '164'
 ht-degree: 2%
 
 ---
 
 
-# 建立沙盒
+# 在API中建立沙盒
 
-您可以向端點提出POST請求，以建立新沙 `/sandboxes` 盒。
+您可以向`/sandboxes`端點發出POST請求，以建立新沙盒。
 
 **API格式**
 
@@ -50,7 +50,7 @@ curl -X POST \
 
 **回應**
 
-成功的回應會傳回新建立沙盒的詳細資訊，顯示其 `state` 是「建立」。
+成功的回應會傳回新建立沙盒的詳細資料，顯示其`state`是「建立」。
 
 ```json
 {
@@ -64,4 +64,4 @@ curl -X POST \
 
 >[!NOTE]
 >
->沙盒需要大約15分鐘的時間才能由系統布建，之後它們 `state` 會變成「活動」或「失敗」。
+>沙盒由系統布建大約需要15分鐘，之後其`state`將變為「活動」或「失敗」。
