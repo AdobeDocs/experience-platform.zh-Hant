@@ -1,27 +1,27 @@
 ---
-keywords: Experience Platform;home;popular topics;data access;python sdk;spark sdk;data access api;export;Export
+keywords: Experience Platform;home；熱門主題；資料存取；python sdk;spark sdk；資料存取api；匯出；匯出
 solution: Experience Platform
-title: 資料存取開發人員指南
+title: 資料存取API指南
 topic: developer guide
-description: Data Access API支援Adobe Experience Platform，為使用者提供REST風格的介面，著重於在Experience Platform中發現和存取已收錄資料集。
+description: Data Access API為開發人員提供REST風格的介面，以支援Adobe Experience Platform，主要針對Experience Platform內所擷取資料集的可探索性和可存取性。
 translation-type: tm+mt
-source-git-commit: 172710c62b6f60de74e05364edb1191fbba0ff64
+source-git-commit: e649ab3da077cdd8e98562199b8bdece6108a572
 workflow-type: tm+mt
-source-wordcount: '512'
+source-wordcount: '528'
 ht-degree: 4%
 
 ---
 
 
-# 資料存取開發人員指南
+# 資料存取API指南
 
-Data Access API為使用者提供REST風格的介面，以協助使用者在Adobe Experience Platform中找到所擷取的資料集並存取資料集 [!DNL Experience Platform]。
+Data Access API為使用者提供REST風格的介面，以支援Adobe Experience Platform，其重點是[!DNL Experience Platform]內收錄資料集的可探索性和可存取性。
 
 ![Experience Platform上的資料存取](images/Data_Access_Experience_Platform.png)
 
 ## API規格參考
 
-Swagger API參考檔案可在這裡 [找到](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-access-api.yaml)。
+Swagger API參考檔案可在[這裡](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-access-api.yaml)找到。
 
 ## 術語
 
@@ -95,7 +95,7 @@ curl -X GET https://platform.adobe.io/data/foundation/export/batches/{BATCH_ID}/
 }
 ```
 
-陣 `"data"` 列包含指定批中所有檔案的清單。 傳回的每個檔案在欄位中都包含其`{FILE_ID}`專屬的唯一ID( `"dataSetFileId"` )。 然後，此唯一ID可用來存取或下載檔案。
+`"data"`陣列包含指定批中所有檔案的清單。 傳回的每個檔案在`"dataSetFileId"`欄位中都包含其專屬的唯一ID(`{FILE_ID}`)。 然後，此唯一ID可用來存取或下載檔案。
 
 | 屬性 | 說明 |
 | -------- | ----------- |
@@ -104,7 +104,7 @@ curl -X GET https://platform.adobe.io/data/foundation/export/batches/{BATCH_ID}/
 
 ## 在批次中存取和下載檔案
 
-透過使用檔案識別碼(`{FILE_ID}`)，資料存取API可用來存取檔案的特定詳細資訊，包括檔案名稱、檔案大小（以位元組為單位）以及下載連結。
+透過使用檔案識別碼(`{FILE_ID}`)，資料存取API可用來存取檔案的特定詳細資料，包括檔案名稱、位元組大小和下載連結。
 
 回應將包含資料陣列。 根據ID所指向的檔案是單個檔案還是目錄，返回的資料陣列可能包含屬於該目錄的單個條目或檔案清單。 每個檔案元素都會包含檔案的詳細資訊。
 
@@ -116,7 +116,7 @@ GET /files/{FILE_ID}
 
 | 屬性 | 說明 |
 | -------- | ----------- |
-| `{FILE_ID}` | 等於 `"dataSetFileId"`，即要訪問的檔案的ID。 |
+| `{FILE_ID}` | 等於`"dataSetFileId"`，即要訪問的檔案的ID。 |
 
 **請求**
 
@@ -204,7 +204,7 @@ curl -X GET https://platform.adobe.io/data/foundation/export/files/{FILE_ID} \
 
 ## 存取檔案內容
 
-此 [!DNL Data Access] API也可用來存取檔案的內容。 然後，這可用來將內容下載至外部來源。
+[!DNL Data Access] API也可用來存取檔案的內容。 然後，這可用來將內容下載至外部來源。
 
 **API格式**
 
@@ -237,8 +237,8 @@ curl -X GET https://platform.adobe.io/data/foundation/export/files/{FILE_ID}?pat
 
 ## 其他程式碼範例
 
-如需其他範例，請參閱資料 [存取教學課程](tutorials/dataset-data.md)。
+有關其他示例，請參閱[資料存取教程](tutorials/dataset-data.md)。
 
 ## 訂閱資料擷取事件
 
-[!DNL Platform] 透過 [Adobe Developer Console提供特定高價值事件供訂閱](https://www.adobe.com/go/devs_console_ui)。 例如，您可以訂閱資料擷取事件，以通知您可能發生的延遲和失敗。 如需詳細資訊，請 [參閱訂閱資料擷取通知](../ingestion/quality/subscribe-events.md) 的教學課程。
+[!DNL Platform] 透過 [Adobe Developer Console提供特定高價值事件供訂閱](https://www.adobe.com/go/devs_console_ui)。例如，您可以訂閱資料擷取事件，以通知您可能發生的延遲和失敗。 如需詳細資訊，請參閱[訂閱資料擷取通知的教學課程。](../ingestion/quality/subscribe-events.md)
