@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform;home；熱門主題；identity namespace;Identity namespace
 solution: Experience Platform
-title: Adobe Experience Platform Identity Service疑難排解指南
+title: Identity Service疑難排解指南
 topic: troubleshooting
 description: 本檔案提供有關Adobe Experience Platform Identity Service常見問題的解答，以及常見錯誤的疑難排解指南。
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: 73035aec86297cfc4ee9337cf922d599001379c3
 workflow-type: tm+mt
-source-wordcount: '2191'
+source-wordcount: '2188'
 ht-degree: 0%
 
 ---
