@@ -1,19 +1,19 @@
 ---
-keywords: Experience Platform;developer guide;endpoint;Data Science Workspace;popular topics;engines;sensei machine learning api
+keywords: Experience Platform；開發人員指南；端點；Data Science Workspace；熱門主題；引擎；sensei機器學習api
 solution: Experience Platform
-title: 引擎
+title: 引擎API端點
 topic: Developer guide
 description: 引擎是資料科學工作區中機器學習模型的基礎。 它們包含可解決特定問題的機器學習演算法、可執行特徵工程的特徵管線，或兩者皆可。
 translation-type: tm+mt
-source-git-commit: 6e4a3ebe84c82790f58f8ec54e6f72c2aca0b7da
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
-source-wordcount: '1147'
+source-wordcount: '1165'
 ht-degree: 3%
 
 ---
 
 
-# 引擎
+# 引擎端點
 
 引擎是資料科學工作區中機器學習模型的基礎。 它們包含可解決特定問題的機器學習演算法、可執行特徵工程的特徵管線，或兩者皆可。
 
@@ -21,7 +21,7 @@ ht-degree: 3%
 
 >[!TIP]
 >
->如果您沒有Docker URL，請造訪 [Package source files into a recipe](../models-recipes/package-source-files-recipe.md) tutorial，以取得建立Docker主機URL的逐步逐步說明。
+>如果您沒有Docker URL，請造訪[將來源檔案封裝至recipe](../models-recipes/package-source-files-recipe.md)教學課程，以取得建立Docker主機URL的逐步逐步說明。
 
 您的Docker註冊表憑證是上傳封裝的Recipe檔案（包括您的Docker主機URL、使用者名稱和密碼）的必要條件。 您可以執行下列GET請求來查閱此資訊：
 
@@ -47,7 +47,7 @@ curl -X GET https://platform.adobe.io/data/sensei/engines/dockerRegistry \
 
 >[!NOTE]
 >
->每當您的Docker密碼更新時， `{ACCESS_TOKEN}` 密碼就會變更。
+>每當`{ACCESS_TOKEN}`更新時，Docker密碼都會更改。
 
 ```json
 {
@@ -57,7 +57,7 @@ curl -X GET https://platform.adobe.io/data/sensei/engines/dockerRegistry \
 }
 ```
 
-## 使用Docker URL建立引擎 {#docker-image}
+## 使用Docker URL {#docker-image}建立引擎
 
 您可以執行POST請求，同時提供中繼資料和Docker URL，以多部分表單引用Docker影像，以建立引擎。
 
@@ -105,7 +105,7 @@ curl -X POST \
 
 **要求PySpark/Scala**
 
-提出PySpark配方要求時， `executionType` 和 `type` 是「PySpark」。 提出Scala配方要求時， `executionType` 和 `type` 是「Spark」。 下列Scala配方範例使用Spark:
+提出PySpark配方要求時，`executionType`和`type`是「PySpark」。 提出Scala配方要求時，`executionType`和`type`是&quot;Spark&quot;。 下列Scala配方範例使用Spark:
 
 ```shell
 curl -X POST \
@@ -138,13 +138,13 @@ curl -X POST \
 | `name` | 引擎的所需名稱。 與此引擎對應的配方將繼承此值，並以配方名稱顯示在UI中。 |
 | `description` | 引擎的選用說明。 與此引擎對應的方式將繼承此值，並以方式說明的形式顯示在UI中。 此為必要屬性。如果您不想提供說明，請將其值設為空字串。 |
 | `type` | 引擎的執行類型。 此值與Docker映像所基於的語言相對應。 此值可設為Spark或PySpark。 |
-| `mlLibrary` | 建立PySpark和Scala配方引擎時所需的欄位。 此欄位必須設定為 `databricks-spark`。 |
+| `mlLibrary` | 建立PySpark和Scala配方引擎時所需的欄位。 此欄位必須設定為`databricks-spark`。 |
 | `artifacts.default.image.location` | Docker映像的位置。 僅支援Azure ACR或Public（未驗證）Dockerhub。 |
 | `artifacts.default.image.executionType` | 引擎的執行類型。 此值與Docker映像所基於的語言相對應。 這可以是「Spark」或「PySpark」。 |
 
 **回應**
 
-成功的回應會傳回包含新建立之引擎詳細資料（包括其唯一識別碼）的裝載`id`。 以下是Python引擎的範例回應。 所有引擎回應都遵循下列格式：
+成功的回應會傳回包含新建立之引擎之詳細資料（包括其唯一識別碼）的裝載。 `id`以下是Python引擎的範例回應。 所有引擎回應都遵循下列格式：
 
 ```json
 {
@@ -171,7 +171,7 @@ curl -X POST \
 }
 ```
 
-## 使用Docker URL建立功能管線引擎 {#feature-pipeline-docker}
+## 使用Docker URL {#feature-pipeline-docker}建立功能管線引擎
 
 您可以通過執行POST請求來建立功能管線引擎，同時提供其元資料和引用Docker影像的Docker URL。
 
@@ -215,18 +215,18 @@ curl -X POST \
 | 屬性 | 說明 |
 | --- | --- |
 | `type` | 引擎的執行類型。 此值與Docker映像所基於的語言相對應。 此值可設為Spark或PySpark。 |
-| `algorithm` | 使用的演算法，請將此值設 `fp` 為（特徵管線）。 |
+| `algorithm` | 使用的演算法，請將此值設為`fp`（功能管線）。 |
 | `name` | 特徵管線引擎的所需名稱。 與此引擎對應的配方將繼承此值，並以配方名稱顯示在UI中。 |
 | `description` | 引擎的選用說明。 與此引擎對應的方式將繼承此值，並以方式說明的形式顯示在UI中。 此為必要屬性。如果您不想提供說明，請將其值設為空字串。 |
-| `mlLibrary` | 建立PySpark和Scala配方引擎時所需的欄位。 此欄位必須設定為 `databricks-spark`。 |
+| `mlLibrary` | 建立PySpark和Scala配方引擎時所需的欄位。 此欄位必須設定為`databricks-spark`。 |
 | `artifacts.default.image.location` | Docker映像的位置。 僅支援Azure ACR或Public（未驗證）Dockerhub。 |
 | `artifacts.default.image.executionType` | 引擎的執行類型。 此值與Docker映像所基於的語言相對應。 這可以是「Spark」或「PySpark」。 |
-| `artifacts.default.image.packagingType` | 引擎的封裝類型。 此值應設為 `docker`。 |
-| `artifacts.default.defaultMLInstanceConfigs` | 您的 `pipeline.json` 配置檔案參數。 |
+| `artifacts.default.image.packagingType` | 引擎的封裝類型。 此值應設為`docker`。 |
+| `artifacts.default.defaultMLInstanceConfigs` | 您的`pipeline.json`配置檔案參數。 |
 
 **回應**
 
-成功的回應會傳回包含新建立之功能管道引擎詳細資料（包括其唯一識別碼）的裝載`id`值。 以下是PySpark特徵管線引擎的示例響應。
+成功的響應返回包含新建立的特徵管線引擎的詳細資訊（包括其唯一標識符）的有效載荷。 `id`以下是PySpark特徵管線引擎的示例響應。
 
 ```json
 {
@@ -255,7 +255,7 @@ curl -X POST \
 
 ## 擷取引擎清單
 
-您可以執行單一GET請求來擷取引擎清單。 若要協助篩選結果，您可以在請求路徑中指定查詢參數。 有關可用查詢的清單，請參閱有關資產檢索查 [詢參數的附錄部分](./appendix.md#query)。
+您可以執行單一GET請求來擷取引擎清單。 若要協助篩選結果，您可以在請求路徑中指定查詢參數。 有關可用查詢的清單，請參閱[資產檢索查詢參數](./appendix.md#query)的附錄部分。
 
 **API格式**
 
@@ -328,7 +328,7 @@ curl -X GET \
 }
 ```
 
-### 擷取特定引擎 {#retrieve-specific}
+### 檢索特定引擎{#retrieve-specific}
 
 您可以執行GET請求，在請求路徑中包含所需引擎的ID，以擷取特定引擎的詳細資訊。
 
@@ -388,7 +388,7 @@ curl -X GET \
 
 >[!NOTE]
 >
->為確保此PUT請求成功，建議您先執行GET請求，以依ID [擷取引擎](#retrieve-specific)。 然後，修改並更新傳回的JSON物件，並套用已修改的JSON物件的完整內容作為PUT要求的裝載。
+>為確保此PUT請求成功，建議您先執行GET請求，以[依ID](#retrieve-specific)擷取引擎。 然後，修改並更新傳回的JSON物件，並套用已修改的JSON物件的完整內容作為PUT要求的裝載。
 
 下列範例API呼叫會在最初具有這些屬性時更新引擎的名稱和說明：
 
