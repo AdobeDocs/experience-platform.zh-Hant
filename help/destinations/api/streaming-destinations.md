@@ -1,14 +1,14 @@
 ---
 keywords: Experience Platform; home；熱門主題；API教學課程；串流目標API;平台
 solution: Experience Platform
-title: 連線至串流目的地並啟動資料
+title: 使用API呼叫連線至串流目的地並啟用資料
 description: 本檔案涵蓋使用Adobe Experience Platform API建立串流目的地
 topic: tutorial
 type: Tutorial
 translation-type: tm+mt
-source-git-commit: d1f357659313aba0811b267598deda9770d946a1
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '2018'
+source-wordcount: '2021'
 ht-degree: 1%
 
 ---
