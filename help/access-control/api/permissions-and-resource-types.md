@@ -1,23 +1,23 @@
 ---
-keywords: Experience Platform;home;popular topics;access control permissions;access control resource types;access control api
+keywords: Experience Platform; home；熱門主題；訪問控制權限；訪問控制資源類型；訪問控制api
 solution: Experience Platform
-title: 權限和資源類型的清單名稱
+title: 參考API端點
 topic: developer guide
-description: Adobe Experience Platform中的存取控制功能可讓您使用Adobe Admin Console管理各種平台功能的角色和權限。 通過向/acl/reference端點發出GET請求，可以列出所有權限和資源類型的名稱。 然後，這些名稱可用於API呼叫，以檢視目前使用者的有效原則。
+description: Adobe Experience Platform中的存取控制功能可讓您使用Adobe Admin Console管理各種平台功能的角色和權限。 通過向訪問控制API中的/acl/reference端點發出GET請求，可以列出所有權限和資源類型的名稱。 然後，這些名稱可用於API呼叫，以檢視目前使用者的有效原則。
 translation-type: tm+mt
-source-git-commit: 28b733a16b067f951a885c299d59e079f0074df8
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
-source-wordcount: '184'
+source-wordcount: '195'
 ht-degree: 1%
 
 ---
 
 
-# 權限和資源類型的清單名稱
+# 參照端點
 
-通過向端點發出GET請求，可以列出所有權限和資源類型的 `/acl/reference` 名稱。 然後，這些名稱可用於API呼叫中，以 [檢視目前使用者的](./effective-policies.md) 有效原則。
+通過向`/acl/reference`端點發出GET請求，可以列出所有權限和資源類型的名稱。 然後，這些名稱可用於[檢視目前使用者之有效原則](./effective-policies.md)的API呼叫。
 
-權限是透過Adobe Admin Console管理的原則，並對應至零或多個資源類型原則。 資源類型是一種策略，可為特定資源類型（如資料集或方案）啟用讀、寫和/ [!DNL Platform] 或刪除功能。
+權限是透過Adobe Admin Console管理的原則，並對應至零或多個資源類型原則。 資源類型是一種策略，可為特定類型的[!DNL Platform]資源（如資料集或方案）啟用讀、寫和／或刪除功能。
 
 **API格式**
 
@@ -37,7 +37,7 @@ curl -X GET \
 
 **回應**
 
-成功的響應返回 `permissions` 對象和對 `resource-types` 像，每個對象分別包含訪問權限或資源類型的完整名稱清單。
+成功的響應返回`permissions`對象和`resource-types`對象，每個對象分別包含訪問權限或資源類型的完整名稱清單。
 
 ```json
 {
