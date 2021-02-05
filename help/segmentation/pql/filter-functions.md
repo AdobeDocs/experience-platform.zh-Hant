@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics;segmentation;Segmentation;Segmentation Service;pql;PQL;Profile Query Language;filter functions;filter;
+keywords: Experience Platform; home；熱門主題；分段；分段；分段服務；pql;PQL；配置檔案查詢語言；過濾功能；過濾；
 solution: Experience Platform
-title: 濾鏡函式
+title: PQL過濾器函式
 topic: developer guide
 description: 篩選函式用於篩選描述檔查詢語言(PQL)中陣列內的資料。
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: b3defc3e33a55855e307ab70b9797d985d5719e3
 workflow-type: tm+mt
-source-wordcount: '202'
+source-wordcount: '220'
 ht-degree: 4%
 
 ---
@@ -15,11 +15,11 @@ ht-degree: 4%
 
 # 濾鏡函式
 
-篩選函式用於篩選(PQL)中數 [!DNL Profile Query Language] 組內的資料。 有關其他PQL函式的詳細資訊，請參閱 [[!DNL Profile Query Language] 概述](./overview.md)。
+篩選函式用於篩選[!DNL Profile Query Language](PQL)中陣列內的資料。 有關其他PQL函式的詳細資訊，請參閱[[!DNL Profile Query Language] overview](./overview.md)。
 
 ## 篩選
 
-該 `[]` （過濾器）函式允許將過濾器應用於陣列並返回與指定條件匹配的陣列的子集。
+`[]`(filter)函式允許將過濾器應用於陣列並返回與指定條件匹配的陣列子集。
 
 **Format**
 
@@ -37,9 +37,9 @@ xEvent[productListItems[SKU="PS"]]
 
 ## 向上運算子
 
-( `^` up)運算子可讓您參考上層篩選器中的屬性。
+`^`(up)運算子可讓您參照上層篩選器中的屬性。
 
-**Format**
+**格式**
 
 ```sql
 {ARRAY}[{FILTER_1}[{FILTER_2} or ^{PROPERTY}]]
@@ -50,11 +50,11 @@ xEvent[productListItems[SKU="PS"]]
 | `{ARRAY}` | 正在篩選的陣列。 |
 | `{FILTER_1}` | 過濾的外層。 |
 | `{FILTER_2}` | 過濾的內層 |
-| `^{PROPERTY}` | 也正在篩選的屬性。 由於 `^`，它正在基於filter1檢查屬性。 |
+| `^{PROPERTY}` | 也正在篩選的屬性。 由於`^`，它正在基於filter1檢查屬性。 |
 
 **範例**
 
-下列PQL查詢會取得至少有一個SKU等於「PS」或 **** 「性別為女性」的產品項目的所有事件。
+以下PQL查詢獲取至少具有一個SKU等於「PS」 **或**&#x200B;的產品項目且性別為女性的所有事件。
 
 ```sql
 xEvent[productListItems[SKU="PS" or ^^.person.gender="female"]]
@@ -62,4 +62,4 @@ xEvent[productListItems[SKU="PS" or ^^.person.gender="female"]]
 
 ## 後續步驟
 
-現在您已經瞭解過濾器函式，可以在PQL查詢中使用它們。 有關其他PQL函式的詳細資訊，請閱讀配置式查 [詢語言概述](./overview.md)。
+現在您已經瞭解過濾器函式，可以在PQL查詢中使用它們。 有關其他PQL函式的詳細資訊，請閱讀[配置檔案查詢語言概述](./overview.md)。
