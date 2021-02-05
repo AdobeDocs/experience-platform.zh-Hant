@@ -1,19 +1,18 @@
 ---
 keywords: 連接目的地；目的地連接；如何連接目的地
 title: 在Adobe Experience Platform中連線至目的地
-seo-title: 在Adobe Experience Platform中連線至目的地
 type: Tutorial
 description: 本教學課程列出在Adobe Experience Platform中連接目標的步驟
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '126'
+source-wordcount: '117'
 ht-degree: 0%
 
 ---
 
 
-# 如何連接目標
+# 連接到目標
 
 請依照下列步驟連線至Adobe Experience Platform中的目的地：
 
