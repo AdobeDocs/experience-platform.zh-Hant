@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform;home；熱門主題；map csv;map csv;map csv file;map csv file to xdm;map csv to xdm;ui guide;mapper;mapping;mapping fields;mapping functions;
 solution: Experience Platform
-title: 資料準備功能
+title: 資料準備映射函式
 topic: overview
 description: 本文檔介紹與「資料準備」一起使用的映射功能。
 translation-type: tm+mt
-source-git-commit: bfcb1924e40b67c0af41dc789b5ff0bf8e8366e1
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
-source-wordcount: '3597'
+source-wordcount: '3599'
 ht-degree: 3%
 
 ---
 
 
-# 資料準備功能
+# 資料準備映射函式
 
 「資料準備」功能可用來根據在來源欄位中輸入的內容來計算和計算值。
 
