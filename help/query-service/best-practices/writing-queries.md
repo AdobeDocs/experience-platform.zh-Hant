@@ -1,14 +1,14 @@
 ---
 keywords: Experience Platform; home；熱門主題；查詢服務；查詢服務；寫查詢；寫查詢；
 solution: Experience Platform
-title: 編寫查詢
+title: 查詢服務中查詢執行的一般指導
 topic: queries
 type: Tutorial
 description: 本檔案詳細說明在Adobe Experience Platform Query Service中撰寫查詢時要知道的重要詳細資訊。
 translation-type: tm+mt
-source-git-commit: e2c648829bb3268ab319da934f5cc6cc811290b3
+source-git-commit: 97dc0b5fb44f5345fd89f3f56bd7861668da9a6e
 workflow-type: tm+mt
-source-wordcount: '970'
+source-wordcount: '976'
 ht-degree: 3%
 
 ---
