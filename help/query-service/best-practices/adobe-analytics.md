@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform;home;popular topics;query service;Query service;sample query;sample query;adobe analytics;
 solution: Experience Platform
-title: 範例查詢
+title: Adobe Analytics資料的範例查詢
 topic: queries
 description: 從選取的Adobe Analytics報表套裝中取得的資料會轉換成XDM ExperienceEvents，並以資料集的形式匯入Adobe Experience Platform。 本檔案概述Adobe Experience Platform Query Service運用此資料的多種使用案例，其中所包含的範例查詢應與您的Adobe Analytics資料集搭配使用。
 translation-type: tm+mt
-source-git-commit: e2c648829bb3268ab319da934f5cc6cc811290b3
+source-git-commit: 97dc0b5fb44f5345fd89f3f56bd7861668da9a6e
 workflow-type: tm+mt
-source-wordcount: '1017'
+source-wordcount: '1021'
 ht-degree: 1%
 
 ---
@@ -215,8 +215,8 @@ Adobe Analytics中另一種銷售變數類型是轉換語法。 使用產品語�
 
 | eVar6（產品尋找方法） | 收入 | 訂單 | 產品檢視 | 購物車新增 |
 | ------------------------------ | ------- | ------ | ------------- | ----- |
-| 內部搜尋：夏季襯衫 | 十九點九九 | 1 | 3 | 3 |
-| 內部搜索：冬季帽 | 12塊9毛9 | 3 | 3 | 3 |
+| 內部搜尋：夏季襯衫 | 十九點九九 | 1 | 1 | 1 |
+| 內部搜索：冬季帽 | 12塊9毛9 | 3 | 1 | 3 |
 
 若要進一步瞭解使用轉換語法，請閱讀[使用轉換語法實作eVars的Adobe Analytics檔案](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/evar-merchandising.html?lang=en#implement-using-conversion-variable-syntax)。
 
