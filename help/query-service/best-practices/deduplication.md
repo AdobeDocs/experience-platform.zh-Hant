@@ -1,14 +1,14 @@
 ---
 keywords: Experience Platform; home；熱門主題；查詢服務；查詢服務；重複資料消除；
 solution: Experience Platform
-title: 重複資料消除
+title: 查詢服務中的重複資料消除
 topic: queries
 type: Tutorial
 description: 本檔案概述了用於消除重複的三個常見使用案例：體驗事件、購買和度量的子選取和完整範例查詢範例。
 translation-type: tm+mt
-source-git-commit: e2c648829bb3268ab319da934f5cc6cc811290b3
+source-git-commit: 97dc0b5fb44f5345fd89f3f56bd7861668da9a6e
 workflow-type: tm+mt
-source-wordcount: '491'
+source-wordcount: '494'
 ht-degree: 0%
 
 ---
