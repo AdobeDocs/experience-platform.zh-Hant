@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics;Data quality;quality;Quality;Supported validation;Validation;supported validation;
+keywords: Experience Platform; home；熱門主題；資料品質；品質；支援的驗證；支援的驗證；
 solution: Experience Platform
-title: 資料擷取品質
+title: 資料品質
 topic: overview
 description: 以下檔案提供Adobe Experience Platform中批次和串流擷取支援的檢查與驗證行為摘要。
 translation-type: tm+mt
-source-git-commit: cfdaf72b7f4bf190877006ccd4cc6a7fd014adc2
+source-git-commit: 089a4d517476b614521d1db4718966e3ebb13064
 workflow-type: tm+mt
-source-wordcount: '304'
+source-wordcount: '317'
 ht-degree: 5%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 5%
 
 # Adobe Experience Platform中的資料品質
 
-Adobe Experience Platform為透過批次或串流擷取上傳的任何資料，提供定義完善的保證，確保其完整性、正確性和一致性。 以下文檔提供了中支援的批處理和流提取檢查和驗證行為的摘要 [!DNL Experience Platform]。
+Adobe Experience Platform為透過批次或串流擷取上傳的任何資料，提供定義完善的保證，確保其完整性、正確性和一致性。 以下檔案提供[!DNL Experience Platform]中支援的批次和串流擷取檢查與驗證行為的摘要。
 
 ## 支援的檢查
 
@@ -30,7 +30,7 @@ Adobe Experience Platform為透過批次或串流擷取上傳的任何資料，�
 
 ## 支援的驗證行為
 
-批次和串流擷取功能都會移動不良資料，以便在中擷取和分析，以防止失敗資料下游 [!DNL Data Lake]。 資料擷取提供下列批次和串流擷取驗證。
+批處理和串流擷取功能都可在[!DNL Data Lake]中移動不良資料以擷取和分析，以防止失敗資料下游。 資料擷取提供下列批次和串流擷取驗證。
 
 ### 批次擷取
 
@@ -38,7 +38,7 @@ Adobe Experience Platform為透過批次或串流擷取上傳的任何資料，�
 
 | 驗證區域 | 說明 |
 | --------------- | ----------- |
-| 結構 | 確保架構不 **為空** ，並包含對聯合架構的引用，如下所示： `"meta:immutableTags": ["union"]` |
+| 結構 | 確保架構為&#x200B;**not**&#x200B;空，並包含對聯合架構的引用，如下所示：`"meta:immutableTags": ["union"]` |
 | `identityField` | 確保定義所有有效的身份描述符。 |
 | `createdUser` | 確保接收批的用戶可以接收批。 |
 
@@ -48,7 +48,7 @@ Adobe Experience Platform為透過批次或串流擷取上傳的任何資料，�
 
 | 驗證區域 | 說明 |
 | --------------- | ----------- |
-| 結構 | 確保架構不 **為空** ，並包含對聯合架構的引用，如下所示： `"meta:immutableTags": ["union"]` |
+| 結構 | 確保架構為&#x200B;**not**&#x200B;空，並包含對聯合架構的引用，如下所示：`"meta:immutableTags": ["union"]` |
 | `identityField` | 確保定義所有有效的身份描述符。 |
 | JSON | 確保JSON有效。 |
 | IMS組織 | 確保列出的IMS組織為有效組織。 |
@@ -56,4 +56,4 @@ Adobe Experience Platform為透過批次或串流擷取上傳的任何資料，�
 | 資料集 | 確保指定、啟用和未刪除資料集。 |
 | Header | 確保標題已指定且有效。 |
 
-有關如何監視和驗 [!DNL Platform] 證資料的詳細資訊，請參閱監 [視資料流文檔](./monitor-data-ingestion.md)。
+有關[!DNL Platform]如何監視和驗證資料的詳細資訊，請參閱[監視資料流文檔](./monitor-data-ingestion.md)。
