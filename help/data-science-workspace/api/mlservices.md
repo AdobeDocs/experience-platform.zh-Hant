@@ -1,23 +1,23 @@
 ---
-keywords: Experience Platform;developer guide;endpoint;Data Science Workspace;popular topics;mlservices;sensei machine learning api
+keywords: Experience Platform；開發人員指南；端點；Data Science Workspace；熱門主題；mlservices;sensei機器學習api
 solution: Experience Platform
-title: 服務
+title: MLServices API端點
 topic: Developer guide
 description: MLService是已發佈的訓練模型，可讓您的組織存取和重複使用先前開發的模型。 MLServices的主要功能是能夠依計畫自動化培訓與計分。 排程的訓練執行可協助維持模型的效率和正確性，而排程的計分執行則可確保產生一致的新見解。
 translation-type: tm+mt
-source-git-commit: 194a29124949571638315efe00ff0b04bff19303
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
-source-wordcount: '872'
+source-wordcount: '890'
 ht-degree: 2%
 
 ---
 
 
-# MLServices
+# MLServices端點
 
 MLService是已發佈的訓練模型，可讓您的組織存取和重複使用先前開發的模型。 MLServices的主要功能是能夠依計畫自動化培訓與計分。 排程的訓練執行可協助維持模型的效率和正確性，而排程的計分執行則可確保產生一致的新見解。
 
-自動培訓和計分計畫定義有開始時間戳記、結束時間戳記和表示為 [cron表達式的頻率](https://en.wikipedia.org/wiki/Cron)。 可在建立MLService時定 [義排程](#create-an-mlservice) ，或透過更新現 [有的MLService套用排程](#update-an-mlservice)。
+自動培訓和計分計畫定義有開始時間戳記、結束時間戳記和表示為[cron表達式](https://en.wikipedia.org/wiki/Cron)的頻率。 可在[建立MLService](#create-an-mlservice)或[更新現有MLService](#update-an-mlservice)時定義計畫。
 
 ## 建立MLService {#create-an-mlservice}
 
@@ -78,7 +78,7 @@ curl -X POST \
 
 **回應**
 
-成功的回應會傳回包含新建立之MLService之詳細資料的負載，包括其唯一識別碼(`id`)、訓練的實驗ID(`trainingExperimentId`)、計分的實驗ID(`scoringExperimentId`)，以及輸入訓練資料集ID(`trainingDataSetId`)。
+成功的響應返回包含新建立的MLService的詳細資訊的負載，包括其唯一標識符(`id`)、訓練實驗ID(`trainingExperimentId`)、計分實驗ID(`scoringExperimentId`)和輸入訓練資料集ID(`trainingDataSetId`)。
 
 ```json
 {
@@ -107,9 +107,9 @@ curl -X POST \
 }
 ```
 
-## 擷取MLServices清單 {#retrieve-a-list-of-mlservices}
+## 檢索MLServices {#retrieve-a-list-of-mlservices}清單
 
-您可以執行單一GET請求來擷取MLServices清單。 若要協助篩選結果，您可以在請求路徑中指定查詢參數。 有關可用查詢的清單，請參閱有關資產檢索查 [詢參數的附錄部分](./appendix.md#query)。
+您可以執行單一GET請求來擷取MLServices清單。 若要協助篩選結果，您可以在請求路徑中指定查詢參數。 有關可用查詢的清單，請參閱[資產檢索查詢參數](./appendix.md#query)的附錄部分。
 
 **API格式**
 
@@ -121,12 +121,12 @@ GET /mlServices?{QUERY_PARAMETER_1}={VALUE_1}&{QUERY_PARAMETER_2}={VALUE_2}
 
 | 參數 | 說明 |
 | --- | --- |
-| `{QUERY_PARAMETER}` | 用於篩選 [結果的可用查](./appendix.md#query) 詢參數之一。 |
+| `{QUERY_PARAMETER}` | 用於篩選結果的[可用查詢參數](./appendix.md#query)之一。 |
 | `{VALUE}` | 前面查詢參數的值。 |
 
 **請求**
 
-下列請求包含查詢，並擷取共用相同MLInstance ID(`{MLINSTANCE_ID}`)的MLServices清單。
+下列請求包含查詢並擷取共用相同MLInstance ID(`{MLINSTANCE_ID}`)的MLServices清單。
 
 ```shell
 curl -X GET \
@@ -139,7 +139,7 @@ curl -X GET \
 
 **回應**
 
-成功的回應會傳回MLServices的清單及其詳細資訊，包括其MLService ID(`{MLSERVICE_ID}`)、訓練的實驗ID(`{TRAINING_ID}`)、計分的實驗ID(`{SCORING_ID}`)，以及輸入訓練資料集ID(`{DATASET_ID}`)。
+成功的回應會傳回MLServices及其詳細資訊的清單，包括其MLService ID(`{MLSERVICE_ID}`)、訓練實驗ID(`{TRAINING_ID}`)、計分實驗ID(`{SCORING_ID}`)，以及輸入訓練資料集ID(`{DATASET_ID}`)。
 
 ```json
 {
@@ -166,7 +166,7 @@ curl -X GET \
 }
 ```
 
-## 擷取特定MLService {#retrieve-a-specific-mlservice}
+## 檢索特定MLService {#retrieve-a-specific-mlservice}
 
 您可以執行GET請求，在請求路徑中包含所需的MLService ID來擷取特定實驗的詳細資訊。
 
@@ -216,7 +216,7 @@ curl -X GET \
 
 >[!TIP]
 >
->為確保此PUT請求成功，建議您先執行GET請求，以依ID [擷取MLService](#retrieve-a-specific-mlservice)。 然後，修改並更新傳回的JSON物件，並套用已修改的JSON物件的完整內容作為PUT要求的裝載。
+>為確保此PUT請求成功，建議您先執行GET請求，以[依ID](#retrieve-a-specific-mlservice)擷取MLService。 然後，修改並更新傳回的JSON物件，並套用已修改的JSON物件的完整內容作為PUT要求的裝載。
 
 **API格式**
 
