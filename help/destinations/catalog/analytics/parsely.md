@@ -1,21 +1,17 @@
 ---
 keywords: 解析。 ly;parsely;parsely;parse.ly;Parse.ly
-title: Parse.ly Analytics擴充功能
-seo-title: Parse.ly Analytics擴充功能
+title: Parse.ly Analytics擴充功能目標
 description: Parse.ly Analytics擴充功能是Adobe Experience Platform中的分析目標。 如需擴充功能的詳細資訊，請參閱Adobe Exchange的擴充功能頁面。
-seo-description: Parse.ly Analytics擴充功能是Adobe Experience Platform中的分析目標。 如需擴充功能的詳細資訊，請參閱Adobe Exchange的擴充功能頁面。
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '531'
+source-wordcount: '502'
 ht-degree: 3%
 
 ---
 
 
 # [!DNL Parse.ly Analytics] 擴充功能 {#parsely-analytics-extension}
-
-## 概述 {#overview}
 
 [!DNL Parse.ly Analytics] 協助2,500多家公司使用資料來瞭解其線上受眾。此擴充功能會安裝JavaScript程式碼片段，以追蹤訪客與您網站內容的互動方式。
 
