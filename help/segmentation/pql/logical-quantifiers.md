@@ -1,25 +1,25 @@
 ---
-keywords: Experience Platform;home;popular topics;segmentation;Segmentation;Segmentation Service;pql;PQL;Profile Query Language;logical quantifiers;logical quantifier;
+keywords: Experience Platform; home；熱門主題；分段；分段；分段服務；pql;PQL；配置檔案查詢語言；邏輯量詞；邏輯量詞；
 solution: Experience Platform
-title: 邏輯量詞
+title: PQL邏輯量詞
 topic: developer guide
 description: 邏輯量詞可用於在配置檔案查詢語言(PQL)中用陣列來斷言條件。
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: b3defc3e33a55855e307ab70b9797d985d5719e3
 workflow-type: tm+mt
-source-wordcount: '200'
-ht-degree: 5%
+source-wordcount: '219'
+ht-degree: 4%
 
 ---
 
 
 # 邏輯量詞函式
 
-邏輯量詞可用來斷言(PQL)中的 [!DNL Profile Query Language] 陣列條件。 有關其他PQL函式的詳細資訊，請參閱 [[!DNL Profile Query Language] 概述](./overview.md)。
+邏輯量詞可用於對[!DNL Profile Query Language](PQL)中的陣列斷言條件。 有關其他PQL函式的詳細資訊，請參閱[[!DNL Profile Query Language] overview](./overview.md)。
 
 ## 存在
 
-該函 `exists` 數確定在滿足所提供條件的陣列中項的存在。
+`exists`函式確定在滿足所提供條件的陣列中是否存在項。
 
 **Format**
 
@@ -44,9 +44,9 @@ exists E from xEvent where (E.commerce.item.price > 50), I from E.productListIte
 
 ## 適合所有人
 
-該函 `forall` 數確定陣列中滿足所有給定條件的所有項目。
+`forall`函式確定陣列中滿足所有給定條件的所有項。
 
-**Format**
+**格式**
 
 ```sql
 forall {VARIABLE} from {EXPRESSION} where {CONDITION}
@@ -69,4 +69,4 @@ forall E from xEvent where (E.commerce.item.price > 50), I from E.productListIte
 
 ## 後續步驟
 
-現在，您已經瞭解了邏輯量詞，可以在PQL查詢中使用它們。 有關其他PQL函式的詳細資訊，請閱讀配置式查 [詢語言概述](./overview.md)。
+現在，您已經瞭解了邏輯量詞，可以在PQL查詢中使用它們。 有關其他PQL函式的詳細資訊，請閱讀[配置檔案查詢語言概述](./overview.md)。
