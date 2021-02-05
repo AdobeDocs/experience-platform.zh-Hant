@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;retail sales recipe;Data Science Workspace;popular topics;recipes;pre build recipe
+keywords: Experience Platform；零售銷售配方； Data Science Workspace；熱門主題；配方；預建配方
 solution: Experience Platform
 title: 零售銷售方式
 topic: overview
 description: 「零售銷售」方式使您能夠預測特定時段內所有系統初始商店的銷售預測。 透過精確的預測模型，零售商將能夠找出需求與定價政策之間的關係，並做出最佳化定價決策，以最大化銷售與收入。
 translation-type: tm+mt
-source-git-commit: 7615476c4b728b451638f51cfaa8e8f3b432d659
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
-source-wordcount: '571'
+source-wordcount: '585'
 ht-degree: 2%
 
 ---
@@ -32,13 +32,13 @@ ht-degree: 2%
 
 ## 如何開始使用？
 
-您可依本教學課程開始 [使用](../jupyterlab/create-a-recipe.md)。
+您可依照本[教學課程](../jupyterlab/create-a-recipe.md)開始使用。
 
 本教學課程將在Jupyter筆記型電腦中建立零售銷售配方，並使用筆記型電腦來配方工作流程，在Adobe Experience Platform中建立配方。
 
 ## 資料架構
 
-此方式使 [用XDM結構](../../xdm/schema/field-dictionary.md) ，來建立資料模型。 此方式所用的架構如下所示：
+此方式使用[XDM結構](../../xdm/schema/field-dictionary.md)來建模資料。 此方式所用的架構如下所示：
 
 | 欄位名稱 | 類型 |
 --- | ---
@@ -57,7 +57,7 @@ ht-degree: 2%
 
 ## 演算法
 
-首先，載入 *DSWRetailSales模式中的訓練資* 料集。 在此基礎上，利用梯度推進回歸算法 [對模型進行訓練](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.GradientBoostingRegressor.html)。 漸層強化採用弱學員（至少略好於隨機機會的學員）可形成一連串的學員，專注於改善先前學員的弱點。 搭配使用，可用來建立強大的預測模型。
+首先，載入&#x200B;*DSWRetailSales*&#x200B;架構中的訓練資料集。 在此，使用[梯度提升回歸算法](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.GradientBoostingRegressor.html)訓練模型。 漸層強化採用弱學員（至少略好於隨機機會的學員）可形成一連串的學員，專注於改善先前學員的弱點。 搭配使用，可用來建立強大的預測模型。
 
 此程式包括三個要素：損失函式、弱學習者和加性模型。
 
