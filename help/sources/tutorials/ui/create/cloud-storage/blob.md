@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform; home；熱門主題；Azure Blob;azure blob;Azure blob連接器
 solution: Experience Platform
-title: 在UI中建立Azure Blob來源連接器
+title: 在UI中建立Azure Blob來源連線
 topic: overview
 type: Tutorial
-description: 本教學課程提供使用平台使用者介面建立Azure Blob（以下稱為「Blob」）的步驟。
+description: 瞭解如何使用平台使用者介面建立Azure Blob來源連接器。
 translation-type: tm+mt
-source-git-commit: e22e57e20b985b50e1d29e944fb8f04addc91703
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
-source-wordcount: '649'
+source-wordcount: '644'
 ht-degree: 1%
 
 ---
 
 
-# 在UI中建立[!DNL Azure Blob]源連接器
+# 在UI中建立[!DNL Azure Blob]來源連線
 
 本教學課程提供使用平台使用者介面建立[!DNL Azure Blob]（以下稱為「[!DNL Blob]」）的步驟。
 
