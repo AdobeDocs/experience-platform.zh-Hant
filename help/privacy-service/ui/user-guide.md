@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform;home；熱門主題；export;Export
 solution: Experience Platform
-title: 隱私權服務使用指南
+title: 在隱私權服務UI中管理隱私權工作
 topic: UI guide
 description: 瞭解如何使用隱私權服務使用者介面來協調和監控各種Experience Cloud應用程式的隱私權要求。
 translation-type: tm+mt
-source-git-commit: 238a9200e4b43d41335bed0efab079780b252717
+source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
 workflow-type: tm+mt
-source-wordcount: '1090'
+source-wordcount: '1100'
 ht-degree: 0%
 
 ---
 
 
-# [!DNL Privacy Service] 使用者指南
+# 在隱私權服務UI中管理隱私權工作
 
 本檔案提供使用[!DNL Privacy Service]使用者介面建立和管理隱私權要求的步驟。
 
