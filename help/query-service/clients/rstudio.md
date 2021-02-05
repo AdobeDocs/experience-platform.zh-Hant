@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform; home；熱門主題；查詢服務；查詢服務； RStudio;rstudio；連接查詢服務；
 solution: Experience Platform
-title: 使用RStudio連線
+title: 將RStudio連接至查詢服務
 topic: connect
 description: 本檔案將逐步說明如何將R Studio與Adobe Experience Platform Query Service連接。
 translation-type: tm+mt
-source-git-commit: eac93f3465fa6ce4af7a6aa783cf5f8fb4ac9b9b
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '272'
+source-wordcount: '282'
 ht-degree: 2%
 
 ---
 
 
-# [!DNL RStudio]
+# 將[!DNL RStudio]連接到查詢服務
 
 本檔案將逐步說明如何連接[!DNL RStudio]與Adobe Experience Platform [!DNL Query Service]。
 
@@ -21,7 +21,7 @@ ht-degree: 2%
 >
 > 本指南假設您已擁有[!DNL RStudio]的存取權，並熟悉如何使用它。 有關[!DNL RStudio]的更多資訊，請參閱[official [!DNL RStudio] 文檔](https://rstudio.com/products/rstudio/)。
 
-## 連接[!DNL RStudio]與[!DNL Query Service]
+## 在[!DNL RStudio]介面中建立[!DNL Query Service]連接
 
 安裝[!DNL RStudio]後，在出現的&#x200B;**[!DNL Console]**&#x200B;螢幕上，首先需要準備R指令碼以使用[!DNL PostgreSQL]。
 
