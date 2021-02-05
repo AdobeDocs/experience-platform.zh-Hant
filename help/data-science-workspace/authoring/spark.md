@@ -1,26 +1,26 @@
 ---
-keywords: Experience Platform;home;popular topics;data access;spark sdk;data access api;spark recipe;read spark;write spark
+keywords: Experience Platform; home；熱門主題；資料存取；spark sdk；資料存取api;spark方式；讀取spark；寫入spark
 solution: Experience Platform
-title: 使用Spark存取資料
+title: 在資料科學工作區中使用Spark訪問資料
 topic: tutorial
 type: Tutorial
 description: 以下檔案包含如何使用Spark存取資料以用於資料科學工作區的範例。
 translation-type: tm+mt
-source-git-commit: e1035f3d1ad225a0892c5f97ca51618cd6b47412
+source-git-commit: f6cfd691ed772339c888ac34fcbd535360baa116
 workflow-type: tm+mt
-source-wordcount: '424'
+source-wordcount: '450'
 ht-degree: 0%
 
 ---
 
 
-# 使用Spark存取資料
+# 在資料科學工作區中使用Spark存取資料
 
-以下檔案包含如何使用Spark存取資料以用於資料科學工作區的範例。 有關使用JupyterLab筆記型電腦訪問資料的資訊，請訪問 [JupyterLab筆記型電腦資料存取文檔](../jupyterlab/access-notebook-data.md) 。
+以下檔案包含如何使用Spark存取資料以用於資料科學工作區的範例。 有關使用JupyterLab筆記型電腦訪問資料的資訊，請訪問[JupyterLab筆記型電腦資料存取](../jupyterlab/access-notebook-data.md)文檔。
 
 ## 快速入門
 
-使用 [!DNL Spark] 需要將效能最佳化添加到中 `SparkSession`。 此外，您也可以設 `configProperties` 定以後讀取和寫入資料集。
+使用[!DNL Spark]需要將效能最佳化添加到`SparkSession`中。 此外，您也可以為以後的資料集設定`configProperties`以進行讀寫。
 
 ```scala
 import com.adobe.platform.ml.config.ConfigProperties
@@ -51,9 +51,9 @@ Class Helper {
 
 使用Spark時，您可以存取兩種閱讀模式：互動式和批次處理。
 
-交互模式建立Java資料庫連接(JDBC)連接， [!DNL Query Service] 並通過自動轉換為的常規JDBC `ResultSet` 獲取結果 `DataFrame`。 此模式的運作方式與內建方 [!DNL Spark] 法類似 `spark.read.jdbc()`。 此模式僅適用於小資料集。 如果您的資料集超過500萬列，建議您換用批次模式。
+交互模式建立到[!DNL Query Service]的Java資料庫連接(JDBC)連接，並通過常規JDBC `ResultSet`獲取結果，該JDBC 將自動轉換為`DataFrame`。 此模式的運作方式與內建[!DNL Spark]方法`spark.read.jdbc()`類似。 此模式僅適用於小資料集。 如果您的資料集超過500萬列，建議您換用批次模式。
 
-批處理模 [!DNL Query Service]式使用的COPY命令在共用位置生成Parce結果集。 然後，這些Parce檔案可以進一步處理。
+批處理模式使用[!DNL Query Service]的COPY命令在共用位置生成Parce結果集。 然後，這些Parce檔案可以進一步處理。
 
 以互動模式讀取資料集的範例如下：
 
@@ -105,7 +105,7 @@ df = df.select("column-a", "column-b").show()
 
 DISTINCT子句允許您在行／列級別讀取所有不同值，從響應中刪除所有重複值。
 
-以下是使用函 `distinct()` 數的範例：
+以下是使用`distinct()`函式的範例：
 
 ```scala
 df = df.select("column-a", "column-b").distinct().show()
@@ -113,7 +113,7 @@ df = df.select("column-a", "column-b").distinct().show()
 
 ### WHERE子句
 
-SDK [!DNL Spark] 允許兩種篩選方法：使用SQL表達式或通過篩選條件。
+[!DNL Spark] SDK允許兩種篩選方法：使用SQL表達式或通過篩選條件。
 
 以下是使用這些篩選函式的範例：
 
@@ -131,9 +131,9 @@ df.where("age" > 15 || "name" = "Steve")
 
 ### ORDER BY子句
 
-ORDER BY子句允許按指定列按特定順序（升序或降序）對接收結果進行排序。 在 [!DNL Spark] SDK中，這是使用函式來完 `sort()` 成。
+ORDER BY子句允許按指定列按特定順序（升序或降序）對接收結果進行排序。 在[!DNL Spark] SDK中，這是使用`sort()`函式來完成的。
 
-以下是使用函 `sort()` 數的範例：
+以下是使用`sort()`函式的範例：
 
 ```scala
 df = df.sort($"column1", $"column2".desc)
@@ -143,7 +143,7 @@ df = df.sort($"column1", $"column2".desc)
 
 LIMIT子句允許您限制從資料集接收的記錄數。
 
-以下是使用函 `limit()` 數的範例：
+以下是使用`limit()`函式的範例：
 
 ```scala
 df = df.limit(100)
@@ -151,7 +151,7 @@ df = df.limit(100)
 
 ## 寫入資料集
 
-使用您 `configProperties``QSOption`的對應，您可以使用
+使用`configProperties`對應，您可以使用`QSOption`在Experience Platform中寫入資料集。
 
 ```scala
 val userToken: String = sparkSession.sparkContext.getConf.get("ML_FRAMEWORK_IMS_TOKEN", "").toString
@@ -171,4 +171,4 @@ val sandboxName: String = sparkSession.sparkContext.getConf.get("sandboxName", "
 
 ## 後續步驟
 
-Adobe Experience Platform Data Science Workspace提供Scala(Spark)配方範例，使用上述程式碼範例來讀取和寫入資料。 如果您想要進一步瞭解如何使用Spark存取您的資料，請參閱 [Data Science Workspace Scala GitHub Repository](https://github.com/adobe/experience-platform-dsw-reference/tree/master/recipes/scala)。
+Adobe Experience Platform Data Science Workspace提供Scala(Spark)配方範例，使用上述程式碼範例來讀取和寫入資料。 如果您想要進一步瞭解如何使用Spark存取您的資料，請參閱[資料科學工作區Scala GitHub Repository](https://github.com/adobe/experience-platform-dsw-reference/tree/master/recipes/scala)。
