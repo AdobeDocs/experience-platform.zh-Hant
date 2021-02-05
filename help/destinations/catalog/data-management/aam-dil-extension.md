@@ -1,21 +1,17 @@
 ---
 keywords: Audience Manager DIL擴充功能；目的地觀眾管理器；dil擴充功能
-title: Audience Manager DIL擴充功能
-seo-title: Audience Manager DIL擴充功能
+title: Audience Manager DIL Extension Destination
 description: Audience Manager DIL擴充功能是Adobe Experience Platform中的資料管理平台(DMP)目標。 如需擴充功能的詳細資訊，請參閱Adobe Exchange的擴充功能頁面。
-seo-description: Audience Manager DIL擴充功能是Adobe Experience Platform中的資料管理平台(DMP)目標。 如需擴充功能的詳細資訊，請參閱Adobe Exchange的擴充功能頁面。
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '594'
+source-wordcount: '560'
 ht-degree: 3%
 
 ---
 
 
 # Audience Manager DIL擴充功能{#aam-dil-extension}
-
-## 概述 {#overview}
 
 這是Adobe Audience Manager資料整合庫擴充功能（用戶端實作）。 注意：此擴充功能不適用於Adobe Analytics資料的伺服器端轉送(SSF)。 對於SSF，請使用Adobe Analytics擴充功能。 重要：從8.0版開始，DIL對[!DNL Experience Cloud] ID服務（3.3版或更新版本）的依賴性很強。 請實作[!DNL Experience Cloud] ID服務和DIL，以取得完整的[!DNL Audience Manager]資料整合功能。
 
