@@ -1,21 +1,17 @@
 ---
 keywords: 分貝擴展；分貝；分貝；分貝
-title: 分貝擴展
-seo-title: 分貝擴展
+title: Decibel擴充功能目的地
 description: Decibel擴充功能是Adobe Experience Platform中的分析目標。 如需擴充功能的詳細資訊，請參閱Adobe Exchange的擴充功能頁面。
-seo-description: Decibel擴充功能是Adobe Experience Platform中的分析目標。 如需擴充功能的詳細資訊，請參閱Adobe Exchange的擴充功能頁面。
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '548'
+source-wordcount: '521'
 ht-degree: 4%
 
 ---
 
 
 # [!DNL Decibel] 擴充功能 {#decibel-extension}
-
-## 概述 {#overview}
 
 快速順暢地在您的Web屬性上部署[!DNL Decibel]。 使用透過擴充功能提供的動作，也可隨規則部署其他進階設定。
 
