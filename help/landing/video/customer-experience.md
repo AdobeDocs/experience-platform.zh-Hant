@@ -1,5 +1,5 @@
 ---
-title: 採用Adobe Experience Platform的客戶體驗
+title: 由Experience Platform提供的客戶體驗
 description: 這段視訊是以Adobe Experience Platform建立的假設性體驗為依據，從客戶的角度來看。 瞭解Experience Platform如何建立豐富、相關且即時的體驗。
 feature: null
 topics: null
@@ -9,9 +9,9 @@ doc-type: video
 activity: understand
 thumbnail: 27361.jpg
 translation-type: tm+mt
-source-git-commit: 333b89ccf2365c04646df9dc0434036bdd6f12ac
+source-git-commit: 5575d5e45bddcc007dcf78720cd7a7e20475f78c
 workflow-type: tm+mt
-source-wordcount: '78'
+source-wordcount: '77'
 ht-degree: 0%
 
 ---
