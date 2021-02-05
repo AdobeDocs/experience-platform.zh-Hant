@@ -1,25 +1,25 @@
 ---
-keywords: Experience Platform;home;popular topics;schema;Schema;XDM;individual profile;fields;schemas;Schemas;Schema design;mixin;mixins;work details;profile work;
+keywords: Experience Platform;home；熱門主題；架構；架構；XDM；個別描述檔；欄位；架構；架構設計；mixin;mixins；工作詳細資訊；描述檔工作；
 solution: Experience Platform
-title: 混合工作聯繫人詳細資訊
+title: Work Contact Details Mixin
 topic: overview
 description: 本文檔概述了「工作聯繫人詳細資訊」混合。
 translation-type: tm+mt
-source-git-commit: f9d8021643e72e3fbb5315b54a19815dcdaaa702
+source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
 workflow-type: tm+mt
-source-wordcount: '156'
+source-wordcount: '177'
 ht-degree: 3%
 
 ---
 
 
-# [!UICONTROL 混合工作聯繫人詳細資訊]
+# [!UICONTROL Work Contact ] Detailsmixin
 
 >[!NOTE]
 >
->幾個混音的名字已經改變。 如需詳細資訊，請 [參閱混合名稱更新](../name-updates.md) 的檔案。
+>幾個混音的名字已經改變。 如需詳細資訊，請參閱[mixin name updates](../name-updates.md)上的檔案。
 
-[!UICONTROL Work Contact Details] （工作聯繫人詳細資訊）是該類的標 [[!DNL XDM Individual Profile] 準混合](../../classes/individual-profile.md)。 混音程式提供數個欄位，可擷取個人相關的職業資訊，例如工作地址、工作電子郵件、工作電話號碼，以及該人員所屬的組織。
+[!UICONTROL 工作聯] 絡詳細資訊是該類的標準 [[!DNL XDM Individual Profile] 混合](../../classes/individual-profile.md)。混音程式提供數個欄位，可擷取個人相關的職業資訊，例如工作地址、工作電子郵件、工作電話號碼，以及該人員所屬的組織。
 
 <img src="../../images/mixins/profile-work-details.png" width="550" /><br />
 
