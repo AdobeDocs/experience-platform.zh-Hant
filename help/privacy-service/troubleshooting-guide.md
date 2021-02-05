@@ -5,7 +5,7 @@ title: 隱私權服務疑難排解指南
 topic: troubleshooting
 description: 本檔案提供隱私權服務常見問題的解答，以及API中常見錯誤的相關資訊。
 translation-type: tm+mt
-source-git-commit: 5dad1fcc82707f6ee1bf75af6c10d34ff78ac311
+source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
 workflow-type: tm+mt
 source-wordcount: '884'
 ht-degree: 0%
