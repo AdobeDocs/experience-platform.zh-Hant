@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform;home；熱門主題；GDPR;gdpr;ccpa:CCPA;pdpa;PDPA;pdpa_that;PDPA_THA;lgpd;LGPD;lgpd_bra;LGPD_bra;
 solution: Experience Platform
-title: Adobe Experience Platform隱私權服務概觀
+title: 隱私權服務概觀
 topic: overview
 description: 隱私權服務可讓您在Experience Cloud資料作業中，自動符合法律隱私權法規。
 translation-type: tm+mt
-source-git-commit: 5dad1fcc82707f6ee1bf75af6c10d34ff78ac311
+source-git-commit: 37c1c98ccba50fa917acc5e93763294f4dde5c36
 workflow-type: tm+mt
-source-wordcount: '1400'
+source-wordcount: '1394'
 ht-degree: 0%
 
 ---
 
 
-# Adobe Experience Platform [!DNL Privacy Service]總覽
+# [!DNL Privacy Service]概述
 
 為了提供更好的客戶體驗，您需要收集和儲存客戶的個人資料。 使用這些資料時，請務必瞭解並尊重客戶的隱私權。 新的法律和組織法規讓使用者有權應要求從資料存放區存取或刪除其個人資料。
 
