@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics;Microsoft Dynamics;microsoft dynamics;dynamics;Dynamics
+keywords: Experience Platform;home；熱門主題；Microsoft Dynamics;microsoft Dynamics;Dynamics
 solution: Experience Platform
-title: Microsoft Dynamics連接器
+title: Microsoft Dynamics Source Connector概觀
 topic: overview
-description: 以下檔案提供如何使用API或使用者介面將Microsoft Dynamics連接至平台的資訊。
+description: 瞭解如何使用API或使用者介面將Microsoft Dynamics連接至Adobe Experience Platform。
 translation-type: tm+mt
-source-git-commit: e0a0b7fc28b8cc85c5140d3840e06e5c7078c307
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
-source-wordcount: '208'
+source-wordcount: '219'
 ht-degree: 0%
 
 ---
@@ -15,23 +15,23 @@ ht-degree: 0%
 
 # Microsoft Dynamics連接器
 
-Adobe Experience Platform可讓您從外部來源擷取資料，同時提供您使用服務建構、標示及增強傳入資料的 [!DNL Platform] 能力。 您可以從多種來源（例如Adobe應用程式、雲端儲存空間、資料庫等）擷取資料。
+Adobe Experience Platform可讓您從外部來源擷取資料，同時讓您能夠使用[!DNL Platform]服務來建構、標示並增強傳入資料。 您可以從多種來源（例如Adobe應用程式、雲端儲存空間、資料庫等）擷取資料。
 
-[!DNL Experience Platform] 支援從協力廠商CRM系統擷取資料。 支援CRM供應商包括 [!DNL Microsoft Dynamics]。
+[!DNL Experience Platform] 支援從協力廠商CRM系統擷取資料。支援CRM提供者包括[!DNL Microsoft Dynamics]。
 
 ## IP位址允許清單
 
-在使用來源連接器之前，必須將IP位址清單新增至允許清單。 若未將您地區專屬的IP位址新增至您的允許清單，在使用來源時可能會導致錯誤或效能不佳。 如需詳細 [資訊，請參閱](../../ip-address-allow-list.md) 「IP位址允許清單」頁面。
+在使用來源連接器之前，必須將IP位址清單新增至允許清單。 若未將您地區專屬的IP位址新增至您的允許清單，在使用來源時可能會導致錯誤或效能不佳。 如需詳細資訊，請參閱[IP位址允許清單](../../ip-address-allow-list.md)頁面。
 
-以下檔案提供如何連線至使用API [!DNL Microsoft Dynamics] 或使 [!DNL Platform] 用者介面的資訊：
+下面的文檔提供了如何使用API或用戶介面將[!DNL Microsoft Dynamics]連接到[!DNL Platform]的資訊：
 
-## 連線 [!DNL Microsoft Dynamics] 至使 [!DNL Platform] 用API
+## 使用API將[!DNL Microsoft Dynamics]連接至[!DNL Platform]
 
-- [使用Flow Service API建立Microsoft Dynamics連接器](../../tutorials/api/create/crm/ms-dynamics.md)
+- [使用Flow Service API建立Microsoft Dynamics來源連線](../../tutorials/api/create/crm/ms-dynamics.md)
 - [使用Flow Service API探索CRM系統](../../tutorials/api/explore/crm.md)
 - [使用Flow Service API收集CRM資料](../../tutorials/api/collect/crm.md)
 
-## 使用 [!DNL Microsoft Dynamics] UI [!DNL Platform] 連線至
+## 使用UI將[!DNL Microsoft Dynamics]連接至[!DNL Platform]
 
-- [在UI中建立Microsoft Dynamics來源連接器](../../tutorials/ui/create/crm/dynamics.md)
-- [在UI中為CRM連接器配置資料流](../../tutorials/ui/dataflow/crm.md)
+- [在UI中建立Microsoft Dynamics來源連線](../../tutorials/ui/create/crm/dynamics.md)
+- [在UI中為CRM連接配置資料流](../../tutorials/ui/dataflow/crm.md)
