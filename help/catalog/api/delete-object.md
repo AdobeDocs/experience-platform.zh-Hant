@@ -1,25 +1,25 @@
 ---
 keywords: Experience Platform;home;popular topics;delete an object;catalog service;api
 solution: Experience Platform
-title: 刪除對象
+title: 刪除API中的物件
 topic: developer guide
 description: 可以通過在DELETE請求的路徑中提供目錄對象的ID來刪除目錄對象。
 translation-type: tm+mt
-source-git-commit: 14f99c23cd82894fee5eb5c4093b3c50b95c52e8
+source-git-commit: b395535cbe7e4030606ee2808eb173998f5c32e0
 workflow-type: tm+mt
-source-wordcount: '190'
-ht-degree: 2%
+source-wordcount: '207'
+ht-degree: 1%
 
 ---
 
 
-# 刪除對象
+# 刪除API中的物件
 
-您可以在DELETE [!DNL Catalog] 請求的路徑中提供物件ID來刪除物件。
+您可以在DELETE請求的路徑中提供[!DNL Catalog]物件的ID，以刪除它。
 
 >[!WARNING]
 >
->刪除物件時請格外小心，因為這無法復原，而且可能會在其他位置產生中斷變更 [!DNL Experience Platform]。
+>刪除物件時請格外小心，因為這無法復原，而且可能會在[!DNL Experience Platform]的其他位置產生中斷變更。
 
 **API格式**
 
@@ -29,11 +29,11 @@ DELETE /{OBJECT_TYPE}/{OBJECT_ID}
 
 >[!IMPORTANT]
 >
->端 `DELETE /batches/{ID}` 點已過時。 若要刪除批次，您應使用「批次擷取 [API」](../../ingestion/batch-ingestion/api-overview.md#delete-a-batch)。
+>`DELETE /batches/{ID}`端點已過時。 若要刪除批，您應使用[批次擷取API](../../ingestion/batch-ingestion/api-overview.md#delete-a-batch)。
 
 | 參數 | 說明 |
 | --- | --- |
-| `{OBJECT_TYPE}` | 要刪除 [!DNL Catalog] 的對象類型。 有效對象包括： <ul><li>`accounts`</li><li>`connections`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_TYPE}` | 要刪除的[!DNL Catalog]對象類型。 有效對象包括： <ul><li>`accounts`</li><li>`connections`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
 | `{OBJECT_ID}` | 您要更新的特定物件的識別碼。 |
 
 **請求**
@@ -61,4 +61,4 @@ curl -X DELETE \
 
 >[!NOTE]
 >
->如果沒 [!DNL Catalog] 有物件符合您請求中提供的ID，您仍可能收到HTTP狀態碼200，但回應陣列會是空的。
+>如果沒有[!DNL Catalog]物件符合您請求中提供的ID，您仍可能收到HTTP狀態代碼200，但回應陣列會是空的。
