@@ -1,22 +1,18 @@
 ---
 keywords: Facebook;facebook；社交網路；社交網路；社交網路；社交網路驗證；社交網路驗證
-title: 社交網路目標工作流程
+title: 建立社交網路目的地
 type: Tutorial
-seo-title: 社交網路目標工作流程
-description: 連線至您的社交網路和帳戶的指示
-seo-description: 連線至您的社交網路和帳戶的指示
+description: 瞭解如何在Adobe Experience Platform中連線至您的社交網路廣告帳戶。
 translation-type: tm+mt
-source-git-commit: d1aa2c825cd679d593cf97d84506058482a7fe8f
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '473'
+source-wordcount: '460'
 ht-degree: 0%
 
 ---
 
 
-# 社交網路目標驗證工作流程{#social-network-destinations-workflow}
-
-## 建立社交網路目的地的工作流程
+# 建立社交網路目標{#social-network-destinations-workflow}
 
 本教學課程以[!DNL Facebook]為例，但Adobe Experience Platform中的工作流程對於所有社交網路目的地而言都會相同，只要再新增至產品即可。
 
