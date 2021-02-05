@@ -6,7 +6,7 @@ topic: tutorial
 type: Tutorial
 description: 資料擷取包括批次擷取、串流擷取，以及使用來源連接器擷取。
 translation-type: tm+mt
-source-git-commit: 2940f030aa21d70cceeedc7806a148695f68739e
+source-git-commit: a489ab248793a063295578943ad600d8eacab6a2
 workflow-type: tm+mt
 source-wordcount: '497'
 ht-degree: 0%
@@ -18,7 +18,7 @@ ht-degree: 0%
 
 Adobe Experience Platform將來自多個來源的資料匯集在一起，以協助行銷人員更好地瞭解客戶的行為。 Adobe [!DNL Experience Platform Data Ingestion]代表[!DNL Platform]從這些來源擷取資料的多種方法，以及該資料如何保存在資料湖中，以供下游[!DNL Platform services]使用。 [!DNL Data Ingestion] 包括批次擷取、串流擷取，以及使用來源連接器擷取。如需詳細資訊，請閱讀[資料擷取概觀](../ingestion/home.md)，或直接前往[Sources檔案](../sources/home.md)。
 
-## 在UI和API中建立來源連接器
+## 在UI和API中建立來源連線
 
 來源連接器可讓您從多個來源擷取資料，然後在這些來源使用[!DNL Platform services]加以標籤、結構化和增強。 要開始建立源連接器，請參閱[源概述](../sources/home.md)。
 
