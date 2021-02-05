@@ -1,21 +1,21 @@
 ---
 keywords: Experience Platform;home；熱門主題；XDM;XDM系統；XDM個人資料；XDM ExperienceEvent;XDM ExperienceEvent;experienceEvent;XDM ExperienceEvent;XDM ExperienceEnt；體驗資料模型；體驗資料模型；資料模型；model;schema；疑難排解； FAQ;faq;Union schema;UNION PROFILE;union配置檔案
 solution: Experience Platform
-title: Experience Data Model(XDM)系統疑難排解指南
-description: 本檔案提供有關Experience Data Model(XDM)System的常見問題解答，以及常見錯誤的疑難排解指南。
+title: XDM系統故障排除指南
+description: 本檔案提供有關Adobe Experience Platform中Experience Data Model(XDM)和XDM System的常見問題解答，以及常見錯誤的疑難排解指南。
 topic: troubleshooting
 translation-type: tm+mt
-source-git-commit: 2dbd92efbd992b70f4f750b09e9d2e0626e71315
+source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
 workflow-type: tm+mt
-source-wordcount: '1873'
+source-wordcount: '1879'
 ht-degree: 0%
 
 ---
 
 
-# [!DNL Experience Data Model] (XDM)系統故障排除指南
+# XDM系統故障排除指南
 
-本文檔提供有關[!DNL Experience Data Model](XDM)系統的常見問題解答，以及常見錯誤的故障排除指南。 有關Adobe Experience Platform中其他服務的相關問題和疑難排解，請參閱[ Experience Platform疑難排解指南](../landing/troubleshooting.md)。
+本檔案提供有關Adobe Experience Platform中[!DNL Experience Data Model](XDM)和XDM System的常見問題解答，以及常見錯誤的疑難排解指南。 有關其他平台服務的問題和疑難排解，請參閱[體驗平台疑難排解指南](../landing/troubleshooting.md)。
 
 **[!DNL Experience Data Model](XDM)是開** 放原始碼規格，可定義客戶體驗管理的標準架構。構建[!DNL Experience Platform]的方法&#x200B;**XDM系統**&#x200B;操作[!DNL Experience Data Model]方案，以便由[!DNL Platform]服務使用。 **[!DNL Schema Registry]**&#x200B;提供用戶介面和REST風格的API以訪問[!DNL Experience Platform]中的&#x200B;**[!DNL Schema Library]**。 如需詳細資訊，請參閱[XDM檔案](home.md)。
 
