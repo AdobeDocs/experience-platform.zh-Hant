@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform; home；熱門主題；雲端儲存資料
 solution: Experience Platform
-title: 透過來源連接器和API收集雲端儲存空間資料
+title: 使用來源連接器和API收集雲端儲存資料
 topic: overview
 type: Tutorial
-description: 本教學課程涵蓋從協力廠商雲端儲存空間擷取資料，並透過來源連接器和API將其匯入平台的步驟。
+description: 本教學課程涵蓋從協力廠商雲端儲存空間擷取資料，並使用來源連接器和API將其匯入平台的步驟。
 translation-type: tm+mt
-source-git-commit: c168a1b597a1ac2d85a8b896f3b6a8d213fcb1ae
+source-git-commit: 62266187ed1f3ce2f0acca3f50487fb70cfa7307
 workflow-type: tm+mt
 source-wordcount: '1639'
 ht-degree: 1%
@@ -14,7 +14,7 @@ ht-degree: 1%
 ---
 
 
-# 透過來源連接器和API收集雲端儲存空間資料
+# 使用來源連接器和API收集雲端儲存空間資料
 
 本教學課程涵蓋從協力廠商雲端儲存空間擷取資料，並透過來源連接器和[[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml)將其匯入平台的步驟。
 
