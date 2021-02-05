@@ -6,9 +6,9 @@ user-guide-title: Intelligent Services 說明
 breadcrumb-title: Intelligent Services 指南
 user-guide-description: 利用智慧型人工智慧服務，從行銷事件資料產生分數、探索見解並建立區段。
 translation-type: tm+mt
-source-git-commit: 0675b38397667e8764c75e22a1e2f2e4aaddeb3c
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
-source-wordcount: '120'
+source-wordcount: '119'
 ht-degree: 23%
 
 ---
@@ -23,9 +23,9 @@ ht-degree: 23%
    - [Attribution AI快速入門](attribution-ai/getting-started.md)
    - [輸入與輸出](attribution-ai/input-output.md)
    - [使用者介面指南](attribution-ai/user-guide.md)
-   - [發現見解](attribution-ai/discover-insights.md)
-   - [存取分數](attribution-ai/download-scores.md)
-   - [AAI查詢服務快速入門手冊](attribution-ai/aai-query-service.md)
+   - [探索見解](attribution-ai/discover-insights.md)
+   - [下載分數](attribution-ai/download-scores.md)
+   - [使用查詢服務分析分數](attribution-ai/aai-query-service.md)
 - 內容與商務AI（測試版）{#content-commerce-ai}
    - [概述](content-commerce-ai/overview.md)
    - [快速入門](content-commerce-ai/getting-started.md)
@@ -41,7 +41,7 @@ ht-degree: 23%
    - [輸入與輸出](customer-ai/input-output.md)
    - UI指南{#user-guide}
       - [設定例項](customer-ai/user-guide/configure.md)
-      - [發現見解](customer-ai/user-guide/discover-insights.md)
+      - [探索見解](customer-ai/user-guide/discover-insights.md)
       - [使用客戶AI分數建立區段](customer-ai/user-guide/create-segment.md)
       - [下載分數](customer-ai/user-guide/download-scores.md)
 - [平台版本注意事項](https://www.adobe.com/go/platform-release-notes-en)
