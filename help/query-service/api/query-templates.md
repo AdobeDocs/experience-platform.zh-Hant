@@ -1,27 +1,27 @@
 ---
 keywords: Experience Platform;home;popular topics;query service;query templates;api guide;templates;Query service;
 solution: Experience Platform
-title: 查詢服務開發人員指南
+title: 查詢模板API端點
 topic: query templates
 description: 以下檔案將逐步介紹您可以使用查詢服務API的查詢範本進行的各種API呼叫。
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
-source-wordcount: '659'
+source-wordcount: '674'
 ht-degree: 3%
 
 ---
 
 
-# 查詢範本
+# 查詢範本端點
 
 ## 範例API呼叫
 
-現在，您已瞭解要使用哪些標題，可以開始呼叫 [!DNL Query Service] API。 以下各節將介紹您可使用API進行的各種API [!DNL Query Service] 呼叫。 每個呼叫都包含一般API格式、顯示必要標題的範例要求，以及範例回應。
+現在您已瞭解要使用哪些標題，可以開始呼叫[!DNL Query Service] API。 以下各節將介紹您可使用[!DNL Query Service] API進行的各種API呼叫。 每個呼叫都包含一般API格式、顯示必要標題的範例要求，以及範例回應。
 
 ### 檢索查詢模板清單
 
-您可以向端點提出GET請求，以擷取IMS組織的所有查詢範本清 `/query-templates` 單。
+您可以向`/query-templates`端點提出GET請求，以擷取IMS組織的所有查詢範本清單。
 
 **API格式**
 
@@ -32,7 +32,7 @@ GET /query-templates?{QUERY_PARAMETERS}
 
 | 屬性 | 說明 |
 | -------- | ----------- |
-| `{QUERY_PARAMETERS}` | (可&#x200B;*選*)新增至請求路徑的參數，用以設定回應中傳回的結果。 可包含多個參數，由&amp;符號(`&`)分隔。 以下列出可用參數。 |
+| `{QUERY_PARAMETERS}` | （*可選*）新增至請求路徑的參數，用以設定回應中傳回的結果。 可以包括多個參數，用&amp;符號(`&`)分隔。 以下列出可用參數。 |
 
 **查詢參數**
 
@@ -40,10 +40,10 @@ GET /query-templates?{QUERY_PARAMETERS}
 
 | 參數 | 說明 |
 | --------- | ----------- |
-| `orderby` | 指定結果排序依據的欄位。 支援的欄位 `created` 為和 `updated`。 例如，將 `orderby=created` 依據以升序建立的結果排序。 在建立 `-` 前新增(`orderby=-created`)，將依建立項目的遞減順序排序。 |
-| `limit` | 指定頁面大小限制，以控制包含在頁面中的結果數。 (*Default value: 20*) |
-| `start` | 使用零編號來偏移響應清單。 例如，將 `start=2` 返回從第三個列出查詢開始的清單。 (*Default value: 0*) |
-| `property` | 根據欄位篩選結果。 篩選器 **必須** HTML逸出。 逗號可用來組合多組篩選器。 支援的欄位 `name` 為和 `userId`。 唯一支援的運算 `==` 子是（等於）。 例如，將 `name==my_template` 傳回名稱為的所有查詢範本 `my_template`。 |
+| `orderby` | 指定結果排序依據的欄位。 支援的欄位有`created`和`updated`。 例如，`orderby=created`會依建立結果的升序排序。 在建立前新增`-`(`orderby=-created`)，將依遞減順序排序建立的項目。 |
+| `limit` | 指定頁面大小限制，以控制包含在頁面中的結果數。 (*預設值：20*) |
+| `start` | 使用零編號來偏移響應清單。 例如，`start=2`將返回從第三個列出的查詢開始的清單。 (*預設值：0*) |
+| `property` | 根據欄位篩選結果。 篩選器&#x200B;**必須**&#x200B;為HTML逸出。 逗號可用來組合多組篩選器。 支援的欄位有`name`和`userId`。 唯一支援的運算子是`==`（等於）。 例如，`name==my_template`將返回名稱為`my_template`的所有查詢模板。 |
 
 **請求**
 
@@ -108,11 +108,11 @@ curl -X GET https://platform.adobe.io/data/foundation/query/query-templates?limi
 
 >[!NOTE]
 >
->您可以使用的值來 `_links.delete` 刪 [除查詢模板](#delete-a-specified-query-template)。
+>您可以使用`_links.delete`的值刪除查詢模板](#delete-a-specified-query-template)。[
 
 ### 建立查詢範本
 
-您可以通過向端點發出POST請求來建立查詢 `/query-templates` 模板。
+通過向`/query-templates`端點發出POST請求，可以建立查詢模板。
 
 **API格式**
 
@@ -171,11 +171,11 @@ curl -X POST https://platform.adobe.io/data/foundation/query/query-templates
 
 >[!NOTE]
 >
->您可以使用的值來 `_links.delete` 刪 [除查詢模板](#delete-a-specified-query-template)。
+>您可以使用`_links.delete`的值刪除查詢模板](#delete-a-specified-query-template)。[
 
 ### 檢索指定的查詢模板
 
-通過向端點發出GET請求並在請求路徑中提 `/query-templates/{TEMPLATE_ID}` 供查詢模板的ID，可以檢索特定查詢模板。
+通過向`/query-templates/{TEMPLATE_ID}`端點發出GET請求並在請求路徑中提供查詢模板的ID，可以檢索特定查詢模板。
 
 **API格式**
 
@@ -185,7 +185,7 @@ GET /query-templates/{TEMPLATE_ID}
 
 | 屬性 | 說明 |
 | -------- | ----------- | 
-| `{TEMPLATE_ID}` | 要 `id` 檢索的查詢模板的值。 |
+| `{TEMPLATE_ID}` | 要檢索的查詢模板的`id`值。 |
 
 **請求**
 
@@ -229,11 +229,11 @@ curl -X GET https://platform.adobe.io/data/foundation/query/query-templates/0094
 
 >[!NOTE]
 >
->您可以使用的值來 `_links.delete` 刪 [除查詢模板](#delete-a-specified-query-template)。
+>您可以使用`_links.delete`的值刪除查詢模板](#delete-a-specified-query-template)。[
 
 ### 更新指定的查詢模板
 
-通過向端點發出PUT請求並在請求路徑中提供查 `/query-templates/{TEMPLATE_ID}` 詢模板的ID，可以更新特定查詢模板。
+通過向`/query-templates/{TEMPLATE_ID}`端點發出PUT請求並在請求路徑中提供查詢模板的ID，可以更新特定查詢模板。
 
 **API格式**
 
@@ -243,13 +243,13 @@ PUT /query-templates/{TEMPLATE_ID}
 
 | 屬性 | 說明 |
 | -------- | ----------- |
-| `{TEMPLATE_ID}` | 要 `id` 檢索的查詢模板的值。 |
+| `{TEMPLATE_ID}` | 要檢索的查詢模板的`id`值。 |
 
 **請求**
 
 >[!NOTE]
 >
->PUT請求需要同時填入sql和name欄位，並且將覆 **寫該查詢** 模板的當前內容。
+>PUT請求需要同時填入sql和name欄位，並且&#x200B;**overwrite**&#x200B;該查詢模板的當前內容。
 
 ```shell
 curl -X PUT https://platform.adobe.io/data/foundation/query/query-templates/0094d000-9062-4e6a-8fdb-05606805f08f
@@ -301,11 +301,11 @@ curl -X PUT https://platform.adobe.io/data/foundation/query/query-templates/0094
 
 >[!NOTE]
 >
->您可以使用的值來 `_links.delete` 刪 [除查詢模板](#delete-a-specified-query-template)。
+>您可以使用`_links.delete`的值刪除查詢模板](#delete-a-specified-query-template)。[
 
 ### 刪除指定的查詢模板
 
-您可以通過對進行DELETE請求並在請求路徑中提 `/query-templates/{TEMPLATE_ID}` 供查詢模板的ID來刪除特定查詢模板。
+您可以通過向`/query-templates/{TEMPLATE_ID}`發出DELETE請求並在請求路徑中提供查詢模板的ID來刪除特定查詢模板。
 
 **API格式**
 
@@ -315,7 +315,7 @@ DELETE /query-templates/{TEMPLATE_ID}
 
 | 屬性 | 說明 |
 | -------- | ----------- |
-| `{TEMPLATE_ID}` | 要 `id` 檢索的查詢模板的值。 |
+| `{TEMPLATE_ID}` | 要檢索的查詢模板的`id`值。 |
 
 **請求**
 
