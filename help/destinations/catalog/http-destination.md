@@ -1,25 +1,21 @@
 ---
 keywords: 串流；
-title: HTTP目的地是Adobe Experience Platform目的地，可協助您將描述檔資料傳送至協力廠商HTTP端點。
-seo-title: HTTP目的地是Adobe Experience Platform目的地，可協助您將描述檔資料傳送至協力廠商HTTP端點。
-description: HTTP目的地是Adobe Experience Platform目的地，可協助您將描述檔資料傳送至協力廠商HTTP端點。
-seo-description: HTTP目的地是Adobe Experience Platform目的地，可協助您將描述檔資料傳送至協力廠商HTTP端點。
+title: HTTP連接目標
+description: Adobe Experience Platform中的HTTP目標可讓您傳送描述檔資料至協力廠商HTTP端點。
 translation-type: tm+mt
-source-git-commit: 95f57f9d1b3eeb0b16ba209b9774bd94f5758009
+source-git-commit: 8d403e73a804953f9584d6a72f945d4444e65d11
 workflow-type: tm+mt
-source-wordcount: '545'
+source-wordcount: '488'
 ht-degree: 2%
 
 ---
 
 
-# (Alpha)[!DNL HTTP]目標
+# (Alpha)[!DNL HTTP]連接
 
 >[!IMPORTANT]
 >
 >平台中的[!DNL HTTP]目標當前位於alpha。 文件和功能可能會有所變更。
-
-## 概述 {#overview}
 
 [!DNL HTTP]目的地是[!DNL Adobe Experience Platform]串流目的地，可協助您將描述檔資料傳送至協力廠商[!DNL HTTP]端點。
 
