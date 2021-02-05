@@ -1,21 +1,21 @@
 ---
-keywords: Experience Platform;home;popular topics;find sandbox;look up a sandbox
+keywords: Experience Platform;home；熱門主題；查找沙盒；查找沙盒
 solution: Experience Platform
-title: 尋找沙盒
+title: 在API中尋找沙盒
 topic: developer guide
 description: 您可以提出GET請求，在請求路徑中包含沙盒的名稱屬性，以尋找個別沙盒。
 translation-type: tm+mt
-source-git-commit: 0af537e965605e6c3e02963889acd85b9d780654
+source-git-commit: 36f63cecd49e6a6b39367359d50252612ea16d7a
 workflow-type: tm+mt
-source-wordcount: '226'
+source-wordcount: '243'
 ht-degree: 2%
 
 ---
 
 
-# 尋找沙盒
+# 在API中尋找沙盒
 
-您可以提出GET請求，在請求路徑中包含沙盒的屬性，以 `name` 尋找個別沙盒。
+您可以提出GET請求，在請求路徑中包含沙盒的`name`屬性，以尋找個別沙盒。
 
 **API格式**
 
@@ -25,7 +25,7 @@ GET /sandboxes/{SANDBOX_NAME}
 
 | 參數 | 說明 |
 | --- | --- |
-| `{SANDBOX_NAME}` | 您 `name` 要尋找的沙盒屬性。 |
+| `{SANDBOX_NAME}` | 您要尋找的沙盒的`name`屬性。 |
 
 **請求**
 
@@ -42,7 +42,7 @@ curl -X GET \
 
 **回應**
 
-成功的回應會傳回沙盒的詳細資訊，包括 `name`沙盒 `title`、 `state`和 `type`。
+成功的回應會傳回沙盒的詳細資訊，包括其`name`、`title`、`state`和`type`。
 
 ```json
 {
