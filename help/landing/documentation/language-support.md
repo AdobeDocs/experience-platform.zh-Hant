@@ -5,7 +5,7 @@ title: Experience Platform檔案語言支援
 topic: getting started
 description: Adobe Experience Platform可讓組織在套用資料科學和機器學習之前，集中化和標準化客戶資料，以大幅改善多樣化個人化體驗的設計和傳遞。
 translation-type: tm+mt
-source-git-commit: 96600567bb4965a1611e2b9a7cd6cb49298a567f
+source-git-commit: 5575d5e45bddcc007dcf78720cd7a7e20475f78c
 workflow-type: tm+mt
 source-wordcount: '103'
 ht-degree: 0%
