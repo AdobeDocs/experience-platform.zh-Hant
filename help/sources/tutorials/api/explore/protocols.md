@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;home；熱門主題；協定
 solution: Experience Platform
-title: 使用流服務API探索通訊協定系統
+title: 利用流服務API開發協定系統
 topic: overview
 description: 本教學課程使用Flow Service API來探索通訊協定應用程式。
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
 source-wordcount: '588'
 ht-degree: 1%
