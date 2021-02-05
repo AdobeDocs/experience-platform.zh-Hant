@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform;home；熱門主題；通用OData；通用資料
 solution: Experience Platform
-title: 使用Flow Service API建立通用OData連接器
+title: 使用流服務API建立通用OData源連接
 topic: overview
 type: Tutorial
-description: 本教學課程使用Flow Service API來引導您完成將Generic OData連接至Experience Platform的步驟。
+description: 瞭解如何使用Flow Service API將Generic OData連線至Adobe Experience Platform。
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
-source-wordcount: '549'
+source-wordcount: '546'
 ht-degree: 2%
 
 ---
 
 
-# 使用[!DNL Flow Service] API建立[!DNL Generic OData]連接器
+# 使用[!DNL Flow Service] API建立[!DNL Generic OData]來源連線
 
 >[!NOTE]
 >
