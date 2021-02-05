@@ -4,7 +4,7 @@ title: 同意與偏好資料類型
 description: 「隱私權／行銷偏好（同意）」資料類型旨在支援收集「同意管理平台」(CMPs)和您資料作業中其他來源產生的客戶權限和偏好。
 topic: guide
 translation-type: tm+mt
-source-git-commit: caebdcd48e03bd8b91da624532569b55d8696fb4
+source-git-commit: 10ccccf72ff7a2fd726066332b9771dff1929af6
 workflow-type: tm+mt
 source-wordcount: '2040'
 ht-degree: 1%
@@ -138,7 +138,7 @@ ht-degree: 1%
 
 | 屬性 | 說明 |
 | --- | --- |
-| `xdm:val` | 客戶為此使用案例提供的同意選擇。 有關接受的值和定義，請參見[附錄](#choice-values)。 |
+| `xdm:val` | 客戶為此使用案例提供的許可選擇。 有關接受的值和定義，請參見[附錄](#choice-values)。 |
 
 ### xdm:adID
 
@@ -152,7 +152,7 @@ ht-degree: 1%
 
 | 屬性 | 說明 |
 | --- | --- |
-| `xdm:val` | 客戶為此使用案例提供的同意選擇。 有關接受的值和定義，請參見[附錄](#choice-values)。 |
+| `xdm:val` | 客戶為此使用案例提供的許可選擇。 有關接受的值和定義，請參見[附錄](#choice-values)。 |
 
 ### xdm:share
 
@@ -166,7 +166,7 @@ ht-degree: 1%
 
 | 屬性 | 說明 |
 | --- | --- |
-| `xdm:val` | 客戶為此使用案例提供的同意選擇。 有關接受的值和定義，請參見[附錄](#choice-values)。 |
+| `xdm:val` | 客戶為此使用案例提供的許可選擇。 有關接受的值和定義，請參見[附錄](#choice-values)。 |
 
 ### xdm：個人化{#personalize}
 
