@@ -1,11 +1,11 @@
 ---
-keywords: Experience Platform;home;popular topics;target mapping;Target mapping
+keywords: Experience Platform;home；熱門主題；目標映射；目標映射
 solution: Experience Platform
-title: 目標映射欄位
+title: 將Adobe Target事件資料對應至XDM
 topic: overview
-description: 下表概述「體驗事件」架構的欄位（*XDM ExperienceEvent欄位*），以及應對應至的「目標」欄位（「目標請求」欄位）。 另外，也提供一些映射的附加說明。
+description: 瞭解如何將Adobe Target事件欄位對應至Experience Data Model(XDM)架構，以便用於Adobe Experience Platform。
 translation-type: tm+mt
-source-git-commit: 6934bfeee84f542558894bbd4ba5759891cd17f3
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
 source-wordcount: '462'
 ht-degree: 0%
@@ -13,11 +13,11 @@ ht-degree: 0%
 ---
 
 
-# 目標映射欄位
+# 目標映射欄位映射
 
-Adobe Experience Platform可讓您透過Target來源連接器來收錄Adobe Target資料。 使用連接器時，Target欄位中的所有資料都必須對應至與XDM ExperienceEvent類別關聯的 [Experience Data Model(XDM)](../../../../xdm/home.md) 欄位。
+Adobe Experience Platform可讓您透過Target來源連接器來收錄Adobe Target資料。 使用連接器時，來自Target欄位的所有資料都必須映射至與XDM ExperienceEvent類別相關聯的[Experience Data Model(XDM)](../../../../xdm/home.md)欄位。
 
-下表概述「體驗事件」結構描述(*XDM ExperienceEvent欄位*)的欄位，以及對應至的「目標」欄位(*「目標請求」欄位*)。 另外，也提供一些映射的附加說明。
+下表概述「體驗事件」架構的欄位（*XDM ExperienceEvent欄位*），以及對應的「目標」欄位（*「目標請求」欄位*）。 另外，也提供一些映射的附加說明。
 
 >[!NOTE]
 >
@@ -62,7 +62,7 @@ Adobe Experience Platform可讓您透過Target來源連接器來收錄Adobe Targ
 | `experience.target.activities[i].activityEvents` | 包含使用者在此事件中點擊的活動事件的詳細資料。 |
 | **`device`** |
 | `device.typeIDService` | `XDMDevice.Device.TypeIDService.typeIDService_deviceatlas` |
-| `device.type` | 下列屬性之一( `deviceAtlas` 或NULL): <ul><li>`type_mobile`</li><li>`type_tablet`</li><li>`type_desktop`</li><li>`type_ereader`</li><li>`type_television`</li><li>`type_settop`</li><li>`type_mediaplayer`</li></ul> |
+| `device.type` | `deviceAtlas`（或NULL）的以下屬性之一： <ul><li>`type_mobile`</li><li>`type_tablet`</li><li>`type_desktop`</li><li>`type_ereader`</li><li>`type_television`</li><li>`type_settop`</li><li>`type_mediaplayer`</li></ul> |
 | `device.typeID` | （空字串） |
 | `device.manufacturer` | `deviceAtlas.manufacturer` |
 | `device.model` | `deviceAtlas.model` |
