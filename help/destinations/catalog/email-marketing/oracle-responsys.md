@@ -1,21 +1,17 @@
 ---
 keywords: email;Email;e-mail;email destinations;oracle responsys destination
-title: Oracle Responsys目標
-seo-title: Oracle Responsys目標
+title: Oracle Responsys連接目標
 description: Responsys是Oracle針對跨通道行銷宣傳提供的企業電子郵件行銷工具，可個人化電子郵件、行動裝置、展示廣告和社交媒體之間的互動。
-seo-description: Responsys是Oracle針對跨通道行銷宣傳提供的企業電子郵件行銷工具，可個人化電子郵件、行動裝置、展示廣告和社交媒體之間的互動。
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '526'
+source-wordcount: '501'
 ht-degree: 0%
 
 ---
 
 
-# [!DNL Oracle Responsys]
-
-## 概述
+# [!DNL Oracle Responsys] 連接
 
 [Responsys](https://www.oracle.com/marketingcloud/products/cross-channel-orchestration/) 是企業電子郵件行銷工具，適用於跨通道行銷宣傳， [!DNL Oracle] 可個人化電子郵件、行動裝置、展示廣告和社交媒體的互動。
 
