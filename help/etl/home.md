@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform; home；熱門主題；ETL;etl;etl整合；ETL整合
 solution: Experience Platform
-title: 建立ETL整合
+title: 開發Adobe Experience Platform的ETL整合
 topic: overview
 description: ETL整合指南概述建立Experience Platform的高效能、安全連接器以及將資料匯入Platform的一般步驟。
 translation-type: tm+mt
-source-git-commit: 2940f030aa21d70cceeedc7806a148695f68739e
+source-git-commit: a489ab248793a063295578943ad600d8eacab6a2
 workflow-type: tm+mt
-source-wordcount: '4139'
+source-wordcount: '4143'
 ht-degree: 0%
 
 ---
