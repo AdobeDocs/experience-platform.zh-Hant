@@ -1,18 +1,18 @@
 ---
 keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API;unified profile;Unified Profile;unified;Profile;rtcp;enable profile；啟用profile；啟用profile
-title: 即時客戶個人檔案API開發人員指南
+title: 即時客戶個人檔案API指南
 topic: guide
-description: 即時客戶描述檔API包含多個端點，可用來探索和使用描述檔資料，包括檢視描述檔、建立和更新合併原則、匯出或取樣描述檔資料，以及刪除您不再需要或錯誤新增的描述檔資料。
+description: 即時客戶描述檔API可讓開發人員探索和使用描述檔資料，包括檢視描述檔、建立和更新合併原則、匯出或取樣描述檔資料，以及刪除不再需要或錯誤新增的描述檔資料。 請依照本指南，瞭解如何使用API執行關鍵作業。
 translation-type: tm+mt
-source-git-commit: 823d89ab37156e775a2879e3a2c91bfd911b83bb
+source-git-commit: e649ab3da077cdd8e98562199b8bdece6108a572
 workflow-type: tm+mt
-source-wordcount: '861'
+source-wordcount: '870'
 ht-degree: 0%
 
 ---
 
 
-# [!DNL Real-time Customer Profile] API開發人員指南
+# [!DNL Real-time Customer Profile] API指南
 
 [!DNL Real-time Customer Profile] 讓您在Adobe Experience Platform中全面瞭解每一位客戶。[!DNL Profile] 可讓您將來自多個通道的零散客戶資料（例如線上、離線、CRM和第三方資料）整合為一個統一的檢視，為每個客戶互動提供可操作的時間戳記帳戶。
 
