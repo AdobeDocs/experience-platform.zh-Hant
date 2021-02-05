@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform; home；熱門主題；分段；分段；分段服務；流分段；流分段；流分段；連續評價；
 solution: Experience Platform
-title: 串流區段
+title: '使用串流分段功能，即時評估事件 '
 topic: developer guide
-description: 本檔案包含如何使用串流分段API的串流分段範例。
+description: 本檔案包含如何使用Adobe Experience Platform Segmentation Service API的串流區段的範例。
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: b3defc3e33a55855e307ab70b9797d985d5719e3
 workflow-type: tm+mt
-source-wordcount: '1329'
+source-wordcount: '1338'
 ht-degree: 1%
 
 ---
