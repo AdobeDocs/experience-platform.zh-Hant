@@ -1,27 +1,27 @@
 ---
 keywords: Experience Platform;home;popular topics;query service;api guide;queries;query;Query service;
 solution: Experience Platform
-title: 查詢服務開發人員指南
+title: 查詢API端點
 topic: queries
 description: 以下各節將介紹您可以使用Query Service API中的/querys端點進行的調用。
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
-source-wordcount: '663'
+source-wordcount: '676'
 ht-degree: 2%
 
 ---
 
 
-# 查詢
+# 查詢端點
 
 ## 範例API呼叫
 
-以下各節將介紹您可以使用API中的 `/queries` 端點進行的 [!DNL Query Service] 呼叫。 每個呼叫都包含一般API格式、顯示必要標題的範例要求，以及範例回應。
+以下各節將介紹您可以使用[!DNL Query Service] API中的`/queries`端點進行的調用。 每個呼叫都包含一般API格式、顯示必要標題的範例要求，以及範例回應。
 
 ### 檢索查詢清單
 
-您可以向端點提出GET請求，以擷取IMS組織的所有查詢清 `/queries` 單。
+您可以向`/queries`端點提出GET請求，以擷取IMS組織的所有查詢清單。
 
 **API格式**
 
@@ -30,7 +30,7 @@ GET /queries
 GET /queries?{QUERY_PARAMETERS}
 ```
 
-- `{QUERY_PARAMETERS}`:(可&#x200B;*選*)新增至請求路徑的參數，用以設定回應中傳回的結果。 可包含多個參數，由&amp;符號(`&`)分隔。 以下列出可用參數。
+- `{QUERY_PARAMETERS}`:(可&#x200B;*選*)新增至請求路徑的參數，用以設定回應中傳回的結果。可以包括多個參數，用&amp;符號(`&`)分隔。 以下列出可用參數。
 
 **查詢參數**
 
@@ -38,12 +38,12 @@ GET /queries?{QUERY_PARAMETERS}
 
 | 參數 | 說明 |
 | --------- | ----------- |
-| `orderby` | 指定結果排序依據的欄位。 支援的欄位 `created` 為和 `updated`。 例如，將 `orderby=created` 依據以升序建立的結果排序。 在建立 `-` 前新增(`orderby=-created`)，將依建立項目的遞減順序排序。 |
-| `limit` | 指定頁面大小限制，以控制包含在頁面中的結果數。 (*Default value: 20*) |
-| `start` | 使用零編號來偏移響應清單。 例如，將 `start=2` 返回從第三個列出查詢開始的清單。 (*Default value: 0*) |
-| `property` | 根據欄位篩選結果。 篩選器 **必須** HTML逸出。 逗號可用來組合多組篩選器。 支援的欄位 `created`有、 `updated`、 `state`和 `id`。 受支援運算子的清 `>` 單為（大於）、 `<` （小於）、 `>=` （大於或等於）、 `<=` （小於或等於）、 `==` （等於）、 `!=` （不等於） `~` 和（包含）。 例如，將 `id==6ebd9c2d-494d-425a-aa91-24033f3abeec` 傳回所有具有指定ID的查詢。 |
-| `excludeSoftDeleted` | 指示是否應包括已軟刪除的查詢。 例如，將包 `excludeSoftDeleted=false` 含 **可變刪除** 的查詢。 (布&#x200B;*爾值，預設值：true*) |
-| `excludeHidden` | 指示是否應顯示非用戶驅動的查詢。 將此值設定為false將包 **括非用戶驅動** ，如CURSOR定義、FETCH或元資料查詢。 (布&#x200B;*爾值，預設值：true*) |
+| `orderby` | 指定結果排序依據的欄位。 支援的欄位有`created`和`updated`。 例如，`orderby=created`會依建立結果的升序排序。 在建立前新增`-`(`orderby=-created`)，將依遞減順序排序建立的項目。 |
+| `limit` | 指定頁面大小限制，以控制包含在頁面中的結果數。 (*預設值：20*) |
+| `start` | 使用零編號來偏移響應清單。 例如，`start=2`將返回從第三個列出的查詢開始的清單。 (*預設值：0*) |
+| `property` | 根據欄位篩選結果。 篩選器&#x200B;**必須**&#x200B;為HTML逸出。 逗號可用來組合多組篩選器。 支援的欄位有`created`、`updated`、`state`和`id`。 支援的運算子清單包括`>`（大於）、`<`（小於）、`>=`（大於或等於）、`<=`（小於或等於）、`==`（等於）、`!=`（不等於）和`~`（包含）。 例如，`id==6ebd9c2d-494d-425a-aa91-24033f3abeec`將返回所有具有指定ID的查詢。 |
+| `excludeSoftDeleted` | 指示是否應包括已軟刪除的查詢。 例如，`excludeSoftDeleted=false`將&#x200B;**包含**&#x200B;可刪除的查詢。 (*布林值，預設值：true*) |
+| `excludeHidden` | 指示是否應顯示非用戶驅動的查詢。 將此值設定為false時，**將包括非用戶驅動的查詢，如CURSOR定義、FETCH或元資料查詢。**(*布林值，預設值：true*) |
 
 **請求**
 
@@ -120,7 +120,7 @@ curl -X GET https://platform.adobe.io/data/foundation/query/queries?limit=1 \
 
 ### 建立查詢
 
-通過向端點發出POST請求，可以建立新查 `/queries` 詢。
+通過向`/queries`端點發出POST請求，可以建立新查詢。
 
 **API格式**
 
@@ -156,7 +156,7 @@ curl -X POST https://platform.adobe.io/data/foundation/query/queries \
 
 **回應**
 
-成功的回應會傳回HTTP狀態202（已接受），並包含您新建立查詢的詳細資訊。 在查詢完成激活並成功運行後，將 `state` 從更改為 `SUBMITTED``SUCCESS`。
+成功的回應會傳回HTTP狀態202（已接受），並包含您新建立查詢的詳細資訊。 在查詢完成激活並成功運行後，`state`將從`SUBMITTED`更改為`SUCCESS`。
 
 ```json
 {
@@ -199,11 +199,11 @@ curl -X POST https://platform.adobe.io/data/foundation/query/queries \
 
 >[!NOTE]
 >
->您可以使用的值來 `_links.cancel` 取 [消已建立的查詢](#cancel-a-query)。
+>可以使用`_links.cancel`的值來取消建立的查詢](#cancel-a-query)。[
 
 ### 按ID檢索查詢
 
-通過向端點發出GET請求並在請求路徑中提供查詢值，可以 `/queries` 檢索有關特定查 `id` 詢的詳細資訊。
+通過向`/queries`端點發出GET請求並在請求路徑中提供查詢的`id`值，可以檢索有關特定查詢的詳細資訊。
 
 **API格式**
 
@@ -213,7 +213,7 @@ GET /queries/{QUERY_ID}
 
 | 屬性 | 說明 |
 | -------- | ----------- |
-| `{QUERY_ID}` | 要 `id` 檢索的查詢的值。 |
+| `{QUERY_ID}` | 要檢索的查詢的`id`值。 |
 
 **請求**
 
@@ -270,11 +270,11 @@ curl -X GET https://platform.adobe.io/data/foundation/query/queries/4d64cd49-cf8
 
 >[!NOTE]
 >
->您可以使用的值來 `_links.cancel` 取 [消已建立的查詢](#cancel-a-query)。
+>可以使用`_links.cancel`的值來取消建立的查詢](#cancel-a-query)。[
 
 ### 取消查詢
 
-通過向端點發出PATCH請求並在請求路徑中提供查詢值， `/queries` 可以請求刪除指 `id` 定的查詢。
+通過向`/queries`端點發出PATCH請求並在請求路徑中提供查詢的`id`值，可以請求刪除指定的查詢。
 
 **API格式**
 
@@ -284,7 +284,7 @@ PATCH /queries/{QUERY_ID}
 
 | 屬性 | 說明 |
 | -------- | ----------- |
-| `{QUERY_ID}` | 要 `id` 取消的查詢的值。 |
+| `{QUERY_ID}` | 要取消的查詢的`id`值。 |
 
 
 **請求**
@@ -305,7 +305,7 @@ curl -X PATCH https://platform.adobe.io/data/foundation/query/queries/4d64cd49-c
 
 | 屬性 | 說明 |
 | -------- | ----------- |
-| `op` | 要取消查詢，必須使用值設定op參數 `cancel `。 |
+| `op` | 要取消查詢，必須使用值`cancel `設定op參數。 |
 
 **回應**
 
