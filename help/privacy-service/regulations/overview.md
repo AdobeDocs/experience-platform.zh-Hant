@@ -5,7 +5,7 @@ title: 隱私權法規概觀
 topic: troubleshooting
 description: 本檔案概述Adobe Experience Cloud支援的不同隱私權規範。
 translation-type: tm+mt
-source-git-commit: 238a9200e4b43d41335bed0efab079780b252717
+source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
 workflow-type: tm+mt
 source-wordcount: '428'
 ht-degree: 6%
