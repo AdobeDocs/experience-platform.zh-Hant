@@ -1,19 +1,17 @@
 ---
 keywords: 目的地；體驗雲解決方案；目標；目標；廣告雲；廣告雲；觀眾經理；adobe目標；目標；觀眾管理者目標；
-title: Adobe目標
-seo-title: Adobe目標
+title: Adobe目標概觀
 description: 將Platform中的資料連結至其他Adobe Experience Cloud解決方案，以利廣告鎖定、個人化、行銷自動化等，以管理客戶體驗
-seo-description: 將Platform中的資料連結至其他Adobe Experience Cloud解決方案，以利廣告鎖定、個人化、行銷自動化等，以管理客戶體驗
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '243'
-ht-degree: 12%
+source-wordcount: '219'
+ht-degree: 13%
 
 ---
 
 
-# Adobe目標{#adobe-destinations}
+# Adobe目標概觀{#adobe-destinations}
 
 將Adobe Experience Platform中的資料連結至其他Adobe Experience Cloud解決方案，以利廣告鎖定、個人化、行銷自動化等，以管理客戶體驗。
 
