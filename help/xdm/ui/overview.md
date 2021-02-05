@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform; home；熱門主題；api;API;XDM;XDM系統；體驗資料模型；資料模型；ui;workspace;
 solution: Experience Platform
-title: 結構描述工作區概述
+title: 結構描述UI概述
 description: 此概觀涵蓋Experience Platform中「結構描述」工作區的主要功能。
 topic: user guide
 translation-type: tm+mt
-source-git-commit: 2e20403122e65d28f04114af9b7e8d41874f76e2
+source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
 workflow-type: tm+mt
 source-wordcount: '292'
 ht-degree: 2%
@@ -13,7 +13,7 @@ ht-degree: 2%
 ---
 
 
-# [!UICONTROL 方案] 工作區概述
+# [!UICONTROL 架構] UI概觀
 
 Adobe Experience Platform使用者介面中的[!UICONTROL 結構]工作區可讓您管理Experience Data Model(XDM)資源，包括結構、類別、混合和資料類型。 您可以檢視和探索Adobe提供的核心資源，並為您的組織建立自訂資源和結構。
 
