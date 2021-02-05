@@ -1,21 +1,17 @@
 ---
 keywords: QuestionPro攔截調查；questionpro攔截調查；QuestionPro;questionpro
-title: QuestionPro截距調查擴充功能
-seo-title: QuestionPro截距調查擴充功能
+title: QuestionPro攔截調查延伸目標
 description: QuestionPro Intercept Surveys擴充功能是Adobe Experience Platform中的調查目的地。 如需擴充功能的詳細資訊，請參閱Adobe Exchange的擴充功能頁面。
-seo-description: QuestionPro Intercept Surveys擴充功能是Adobe Experience Platform中的調查目的地。 如需擴充功能的詳細資訊，請參閱Adobe Exchange的擴充功能頁面。
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '563'
+source-wordcount: '532'
 ht-degree: 3%
 
 ---
 
 
 # [!DNL QuestionPro Intercept Surveys] 擴充功能 {#questionpro-extension}
-
-## 概述 {#overview}
 
 [!DNL QuestionPro Intercept Surveys] 是在交易時或當使用者進入／退出您的網站時部署調查並收集態度資料的平台。
 
