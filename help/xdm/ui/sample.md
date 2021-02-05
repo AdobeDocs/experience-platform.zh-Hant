@@ -4,7 +4,7 @@ title: 在UI中為XDM架構生成示例資料
 description: 瞭解如何根據Adobe Experience Platform使用者介面中現有的架構產生範例JSON資料。
 topic: user guide
 translation-type: tm+mt
-source-git-commit: 87497ef8a0ebf8de8b6c2dff1650c0b982299e8a
+source-git-commit: 8d6916890a94300dc68d018d56579df9616c177c
 workflow-type: tm+mt
 source-wordcount: '336'
 ht-degree: 0%
@@ -18,7 +18,7 @@ ht-degree: 0%
 
 對於您在Experience Platform UI中定義的任何結構，您可以產生符合結構的範例JSON物件。 此物件可當成任何資料的範本，這些資料會收錄在採用相關架構的資料集中。
 
-在平台UI中，選擇左側導航中的&#x200B;**[!UICONTROL 方案]**。 在&#x200B;**[!UICONTROL Browse]**&#x200B;標籤下，找到要為其生成示例資料的方案。 從清單中選取它，然後右側邊欄會更新，以顯示架構的詳細資訊。 在此處，選擇&#x200B;**[!UICONTROL 下載示例檔案]。**
+在平台UI中，選擇左側導航中的&#x200B;**[!UICONTROL 方案]**。 在&#x200B;**[!UICONTROL Browse]**&#x200B;標籤下，找到要為其生成示例資料的方案。 從清單中選取它，然後右側邊欄會更新，以顯示架構的詳細資訊。 在此處，選擇&#x200B;**[!UICONTROL 下載示例檔案]**。
 
 ![](../images/ui/sample/sample-data.png)
 
