@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform;home；熱門主題
 solution: Experience Platform
-title: 隱私權服務開發人員指南
-description: 使用REST風格的API，跨Adobe Experience Cloud應用程式管理資料主體的個人資料
+title: 隱私權服務API指南
+description: 隱私權服務API可讓開發人員建立並管理客戶要求，以便在Experience Cloud應用程式中存取或刪除其個人資料，以符合法律隱私權法規。 請依照本指南，瞭解如何使用API執行關鍵作業。
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 5d1b22253f2b382bef83e30a4295218ba6b85331
+source-git-commit: e649ab3da077cdd8e98562199b8bdece6108a572
 workflow-type: tm+mt
-source-wordcount: '771'
+source-wordcount: '795'
 ht-degree: 0%
 
 ---
 
 
-# [!DNL Privacy Service] 開發人員指南
+# [!DNL Privacy Service] API指南
 
 Adobe Experience Platform [!DNL Privacy Service]提供REST風格的API和使用者介面，可讓您跨Adobe Experience Cloud應用程式管理（存取和刪除）資料主體（客戶）的個人資料。 [!DNL Privacy Service] 還提供了集中審計和記錄機制，允許您訪問涉及應用程式的作業的狀態和 [!DNL Experience Cloud] 結果。
 
