@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics;query service;Query service;prepared statements;prepared;sql;
+keywords: Experience Platform;home;popular topics;query service;Query service;prepared陳述式；prepared;sql;
 solution: Experience Platform
-title: 準備的陳述
+title: 查詢服務中的準備語句
 topic: prepared statements
 description: 在SQL中，預準備語句用於模板類似的查詢或更新。 Adobe Experience Platform Query Service支援使用參數化查詢來準備陳述式。
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: 8d403e73a804953f9584d6a72f945d4444e65d11
 workflow-type: tm+mt
-source-wordcount: '365'
+source-wordcount: '381'
 ht-degree: 9%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 9%
 
 # 準備的陳述
 
-在SQL中，預準備語句用於模擬類似的查詢或更新。 Adobe Experience Platform支援使 [!DNL Query Service] 用參數化查詢來準備陳述式。 這可用來最佳化效能，因為您將不再需要反複重新剖析查詢。
+在SQL中，預準備語句用於模擬類似的查詢或更新。 Adobe Experience Platform [!DNL Query Service]支援使用參數化查詢來準備陳述式。 這可用來最佳化效能，因為您將不再需要反複重新剖析查詢。
 
 ## 使用預準備的語句
 
@@ -25,9 +25,9 @@ ht-degree: 9%
 - [執行](#execute)
 - [取消分配](#deallocate)
 
-### 準備準備聲明 {#prepare}
+### 準備準備語句{#prepare}
 
-此SQL查詢保存所寫入的SELECT查詢，其名稱為 `PLAN_NAME`。 您可以使用變數，例如 `$1` 取代實際值。 此預準備語句將在當前會話期間保存。 請注意，計畫名稱不 **區分大小寫** 。
+此SQL查詢保存已寫入的SELECT查詢，其名稱為`PLAN_NAME`。 您可以使用變數，例如`$1`來取代實際值。 此預準備語句將在當前會話期間保存。 請注意，計畫名稱&#x200B;**不**&#x200B;區分大小寫。
 
 #### SQL格式
 
@@ -41,7 +41,7 @@ PREPARE {PLAN_NAME} AS {SELECT_QUERY}
 PREPARE test AS SELECT * FROM table WHERE country = $1 AND city = $2;
 ```
 
-### 執行準備語句 {#execute}
+### 執行預準備語句{#execute}
 
 此SQL查詢使用先前建立的預準備語句。
 
@@ -57,7 +57,7 @@ EXECUTE {PLAN_NAME}('{PARAMETERS}')
 EXECUTE test('canada', 'vancouver');
 ```
 
-### 取消分配預準備語句 {#deallocate}
+### 取消分配準備語句{#deallocate}
 
 此SQL查詢用於刪除已命名的預準備語句。
 
@@ -86,11 +86,11 @@ SELECT * FROM table WHERE id >= 10000 AND id <= 10005;
 | id | 名字 | lastname | 出生日期 | 電子郵件 | city | count |
 |--- | --------- | -------- | --------- | ----- | ------- | ---- |
 | 10000 | 亞歷山大 | 戴維斯 | 1993-09-15 | example@example.com | 溫哥華 | 加拿大 |
-| 10001 | 安托 | 杜布瓦 | 1967-03-14 | example2@example.com | 巴黎 | 法國 |
-| 10002 | 京子 | 櫻花 | 1999-11-26 | example3@example.com | 東京 | 日本 |
-| 10003 | linus | 佩特松 | 1982-06-03 | example4@example.com | 斯德哥爾摩 | 瑞典 |
-| 10004 | aasir | waithaka | 1976-12-17 | example5@example.com | 內羅畢 | 肯亞 |
-| 10005 | 費爾南 | rios | 2002-07-30 | example6@example.com | 聖地亞哥 | 智利 |
+| 郵遞區號10001 | 安托 | 杜布瓦 | 1967-03-14 | example2@example.com | 巴黎 | 法國 |
+| 郵遞區號10002 | 京子 | 櫻花 | 1999-11-26 | example3@example.com | 東京 | 日本 |
+| 郵遞區號10003 | linus | 佩特松 | 1982-06-03 | example4@example.com | 斯德哥爾摩 | 瑞典 |
+| 郵遞區號10004 | aasir | waithaka | 1976-12-17 | example5@example.com | 內羅畢 | 肯亞 |
+| 郵遞區號10005 | 費爾南 | rios | 2002-07-30 | example6@example.com | 聖地亞哥 | 智利 |
 
 此SQL查詢可以使用以下準備語句進行參數化：
 
@@ -106,14 +106,14 @@ EXECUTE getIdRange(10000, 10005);
 
 在呼叫此項時，您會看到與之前完全相同的結果：
 
-| id | 名字 | lastname | 出生日期 | 電子郵件 | city | count |
+| id | 名字 | lastname | 出生日期 | 電子郵件 | 城市 | count |
 |--- | --------- | -------- | --------- | ----- | ------- | ---- |
 | 10000 | 亞歷山大 | 戴維斯 | 1993-09-15 | example@example.com | 溫哥華 | 加拿大 |
-| 10001 | 安托 | 杜布瓦 | 1967-03-14 | example2@example.com | 巴黎 | 法國 |
-| 10002 | 京子 | 櫻花 | 1999-11-26 | example3@example.com | 東京 | 日本 |
-| 10003 | linus | 佩特松 | 1982-06-03 | example4@example.com | 斯德哥爾摩 | 瑞典 |
-| 10004 | aasir | waithaka | 1976-12-17 | example5@example.com | 內羅畢 | 肯亞 |
-| 10005 | 費爾南 | rios | 2002-07-30 | example6@example.com | 聖地亞哥 | 智利 |
+| 郵遞區號10001 | 安托 | 杜布瓦 | 1967-03-14 | example2@example.com | 巴黎 | 法國 |
+| 郵遞區號10002 | 京子 | 櫻花 | 1999-11-26 | example3@example.com | 東京 | 日本 |
+| 郵遞區號10003 | linus | 佩特松 | 1982-06-03 | example4@example.com | 斯德哥爾摩 | 瑞典 |
+| 郵遞區號10004 | aasir | waithaka | 1976-12-17 | example5@example.com | 內羅畢 | 肯亞 |
+| 郵遞區號10005 | 費爾南 | rios | 2002-07-30 | example6@example.com | 聖地亞哥 | 智利 |
 
 使用完預準備語句後，可以使用以下調用取消分配該語句：
 
