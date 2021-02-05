@@ -1,21 +1,21 @@
 ---
-keywords: Experience Platform;home;popular topics;schema;Schema;XDM;fields;schemas;Schemas;device;datatype;data-type;data type;
+keywords: Experience Platform;home；熱門主題；模式；模式；XDM;fields；模式；設備；資料類型；資料類型；
 solution: Experience Platform
 title: 裝置資料類型
 topic: overview
 description: 本文檔概述了Device XDM資料類型。
 translation-type: tm+mt
-source-git-commit: f5bddb39c16eb25e85297f56e331d3aa51510eb9
+source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
 workflow-type: tm+mt
-source-wordcount: '309'
+source-wordcount: '325'
 ht-degree: 4%
 
 ---
 
 
-# [!UICONTROL 裝置] 資料類型
+# [!UICONTROL 設] 備資料類型
 
-[!UICONTROL Device] （設備）是一種標準的XDM資料類型，用於描述已識別的設備。 裝置是應用程式或瀏覽器例項，可跨作業追蹤，通常由Cookie追蹤。
+[!UICONTROL Device] 是一種標準XDM資料類型，用於描述已識別的設備。裝置是應用程式或瀏覽器例項，可跨作業追蹤，通常由Cookie追蹤。
 
 <img src="../images/data-types/device.png" width="450" /><br />
 
@@ -26,11 +26,11 @@ ht-degree: 4%
 | `model` | 字串 | 設備的型號名稱。 這是裝置的通用、可讀或行銷名稱。 例如，「iPhone 6S」是行動電話的特定機型。 |
 | `modelNumber` | 字串 | 製造商為此設備指定的唯一型號。 型號不是版本，而是標識特定型號配置的唯一標識符。 |
 | `screenHeight` | 整數 | 預設方向的裝置作用中顯示的垂直像素數。 |
-| `screenOrientation` | 字串 | 目前的畫面方向。 接受的值包 `portrait` 括和 `landscape`。 |
+| `screenOrientation` | 字串 | 目前的畫面方向。 接受的值包括`portrait`和`landscape`。 |
 | `screenWidth` | 字串 | 預設方向中裝置作用中顯示的水準像素數。 |
 | `type` | 字串 | 所追蹤的裝置類型。 接受的值包括： <ul><li>`mobile`</li><li>`tablet`</li><li>`desktop`</li><li>`ereader`</li><li>`gaming`</li><li>`television`</li><li>`settop`</li><li>`mediaplayer`</li><li>`computers`</li><li>`tv screens`</li></ul> |
 | `typeID` | 字串 | 裝置的識別碼。 這可以是DeviceAtlas的識別碼，或是識別所使用硬體的其他服務。 |
-| `typeIDService` | 字串 | 用於標識設備類型的服務的名稱空間。 如需已接 [受值的詳細資訊](#typeIDService) ，請參閱附錄。 |
+| `typeIDService` | 字串 | 用於標識設備類型的服務的名稱空間。 有關接受值的詳細資訊，請參見[附錄](#typeIDService)。 |
 
 有關混音的詳細資訊，請參閱公用XDM存放庫：
 
@@ -39,11 +39,11 @@ ht-degree: 4%
 
 ## 附錄
 
-下節包含有關「設備」資料類 [!UICONTROL 型的其] 他資訊。
+以下部分包含有關[!UICONTROL Device]資料類型的其他資訊。
 
-## typeIDService的接受值 {#typeIDService}
+## typeIDService {#typeIDService}的接受值
 
-下表概述接受的值及其 `typeIDService` 相關意義：
+下表概述`typeIDService`的接受值及其相關含義：
 
 | 值 | 說明 |
 | --- | --- |
