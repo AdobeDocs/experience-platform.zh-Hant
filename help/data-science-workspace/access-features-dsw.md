@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;Data Science Workspace;popular topics;access control;sandbox;intelligence pack;dsw features;dsw access;Adobe Experience Platform Intelligence;intelligence;aep intelligence package
+keywords: Experience Platform;home;Data Science Workspace；熱門主題；存取控制；沙盒；智慧套件；dsw功能；dsw access;Adobe Experience Platform Intelligence；智慧；aep智慧套件
 solution: Experience Platform
 title: 資料科學工作區存取與功能
 topic: Access and features for data science workspace
 description: '以下檔案概述Data Science Workspace的權限和功能存取權。 '
 translation-type: tm+mt
-source-git-commit: 40181fc9b1b08c2e21f806caae76b8af0ec9e5e6
+source-git-commit: f6cfd691ed772339c888ac34fcbd535360baa116
 workflow-type: tm+mt
-source-wordcount: '619'
+source-wordcount: '644'
 ht-degree: 3%
 
 ---
@@ -19,15 +19,15 @@ ht-degree: 3%
 
 ![DSW頁籤](./images/access/platform-tabs.png)
 
-- **筆記型電腦：** 提供互動式開發環境([JupyterLab](./jupyterlab/overview.md))，讓您在Experience Platform上探索、分析並建立資料模型。
-- **型號：** 提供用來建立、發佈和儲存進階機器學習方式和模型的工具。 如需詳細資訊，請造訪建 [立並發佈機器學習模型教學課程](./models-recipes/create-publish-model.md) 。
-- **服務：** 包含Adobe提供的服務，例如 [Intelligent Services](../intelligent-services/home.md) ，以及您使用Data Science Workspace建立的任何自訂服務。
+- **筆記型電** 腦：提供互動式開發環境([JupyterLab](./jupyterlab/overview.md))，讓您在Experience Platform上探索、分析並建立資料模型。
+- **模型：提** 供用來建立、發佈和儲存進階機器學習方式和模型的工具。如需詳細資訊，請造訪[建立並發佈機器學習模型](./models-recipes/create-publish-model.md)教學課程。
+- **服務：** 包含Adobe提供的服務，例如智慧型 [服](../intelligent-services/home.md) 務，以及您使用Data Science Workspace建立的任何自訂服務。
 
 為什麼我只看到「服務」標籤？
 
 - 貴組織只能享有包含智慧型服務客戶AI的即時客戶資料平台(RTCDP)。
 
-如果您看不到任何「 **Data Science** 」標籤，並想要運用「Data Science Workspace」功能，請連絡您的公司管理員以檢查您是否擁有Adobe Experience Platform Intelligence授權。
+如果您看不到任何&#x200B;**Data Science**&#x200B;標籤，並想要運用Data Science Workspace功能，請連絡您的公司管理員以檢查您是否擁有Adobe Experience Platform Intelligence授權。
 
 ## Adobe Experience Platform Intelligence套件addon
 
@@ -52,17 +52,17 @@ ht-degree: 3%
 
 ## 存取控制
 
-Experience Platform的存取控制權是透過 [Adobe Admin Console管理](https://adminconsole.adobe.com)。 此功能運用Admin Console中的產品設定檔，可連結使用者與權限和沙盒。 See the [access control overview](../access-control/home.md) for more information.
+Experience Platform的存取控制權是透過[Adobe Admin Console](https://adminconsole.adobe.com)管理。 此功能運用Admin Console中的產品設定檔，可連結使用者與權限和沙盒。 有關詳細資訊，請參閱[訪問控制概述](../access-control/home.md)。
 
 若要使用「資料科學工作區」，必須啟用「管理資料科學工作區」權限。 下表概述啟用或停用此權限的效果：
 
 | 權限 | 啟用 | 停用 |
 |---|---|---|
-| 管理資料科學工作區 | 提供資料科學工作區中所有服務的存取權。 | 資料科學工作區內所有服務的API和UI存取權已停用。 禁用時，將 **阻止選擇**「Notebooks **」、「Models**」和「 **Services** 」頁。 <li>您仍可 **以透過** 「即時客戶資料平台」(RTCDP)存取服務。</li> |
+| 管理資料科學工作區 | 提供資料科學工作區中所有服務的存取權。 | 資料科學工作區內所有服務的API和UI存取權已停用。 在禁用時，不能選擇&#x200B;**Notebooks**、**Models**&#x200B;和&#x200B;**Services**&#x200B;頁。 <li>**服務**&#x200B;的存取權仍可透過即時客戶資料平台(RTCDP)取得。</li> |
 
 ## 沙盒支援
 
-沙盒是Experience Platform單一實例中的虛擬分區。 每個平台實例都支援一個生產沙盒和多個非生產沙盒，每個沙盒都維護其專屬的平台資源庫。 非生產沙盒可讓您測試功能、執行實驗並建立自訂組態，而不會影響生產沙盒。 如需沙盒的詳細資訊，請參閱 [沙盒總覽](../sandboxes/home.md)。
+沙盒是Experience Platform單一實例中的虛擬分區。 每個平台實例都支援一個生產沙盒和多個非生產沙盒，每個沙盒都維護其專屬的平台資源庫。 非生產沙盒可讓您測試功能、執行實驗並建立自訂組態，而不會影響生產沙盒。 如需沙盒的詳細資訊，請參閱[沙盒概述](../sandboxes/home.md)。
 
 目前，Data Science Workspace有下列沙盒限制：
 
@@ -72,4 +72,4 @@ Experience Platform的存取控制權是透過 [Adobe Admin Console管理](https
 
 本檔案概述資料科學工作區中可用的存取類型和功能。
 
-若要進一步瞭解資料科學工作區，例如完整的日常工作流程，請先閱讀資料科學工作區 [逐步說明檔案](./walkthrough.md) 。 如需詳細資訊，請造訪資 [料科學工作區概觀](./home.md)。
+若要進一步瞭解資料科學工作區，例如完整的日常工作流程，請先閱讀[資料科學工作區逐步說明檔案](./walkthrough.md)。 如需詳細資訊，請造訪[資料科學工作區概觀](./home.md)。
