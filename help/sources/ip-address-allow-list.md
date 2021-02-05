@@ -2,12 +2,12 @@
 keywords: Experience Platform;home;popular topics;ip address;ip address;ip allow list;允許清單
 description: 在使用源連接器之前，必須將IP地址添加到允許清單。
 solution: Experience Platform
-title: IP位址允許清單
+title: IP地址允許源連接清單
 topic: overview
 translation-type: tm+mt
-source-git-commit: a812ad3b130c5998013688dcda522e7d20ae578f
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
-source-wordcount: '110'
+source-wordcount: '113'
 ht-degree: 0%
 
 ---
