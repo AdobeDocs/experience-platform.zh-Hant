@@ -1,27 +1,27 @@
 ---
 keywords: Experience Platform;home;popular topics;query service;Query service;scheduled queries;scheduled query;
 solution: Experience Platform
-title: 查詢服務開發人員指南
+title: 計畫查詢API端點
 topic: scheduled queries
 description: 以下各節將逐步介紹您可以使用查詢服務API對計畫查詢進行的各種API調用。
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
-source-wordcount: '963'
+source-wordcount: '977'
 ht-degree: 3%
 
 ---
 
 
-# 排程查詢
+# 計畫查詢端點
 
 ## 範例API呼叫
 
-現在，您已瞭解要使用哪些標題，可以開始呼叫 [!DNL Query Service] API。 以下各節將介紹您可使用API進行的各種API [!DNL Query Service] 呼叫。 每個呼叫都包含一般API格式、顯示必要標題的範例要求，以及範例回應。
+現在您已瞭解要使用哪些標題，可以開始呼叫[!DNL Query Service] API。 以下各節將介紹您可使用[!DNL Query Service] API進行的各種API呼叫。 每個呼叫都包含一般API格式、顯示必要標題的範例要求，以及範例回應。
 
 ### 擷取排程查詢的清單
 
-您可以向端點提出GET請求，以擷取IMS組織所有排程查詢的清 `/schedules` 單。
+您可以向`/schedules`端點提出GET請求，以擷取IMS組織的所有排程查詢清單。
 
 **API格式**
 
@@ -32,7 +32,7 @@ GET /schedules?{QUERY_PARAMETERS}
 
 | 屬性 | 說明 |
 | -------- | ----------- |
-| `{QUERY_PARAMETERS}` | (可&#x200B;*選*)新增至請求路徑的參數，用以設定回應中傳回的結果。 可包含多個參數，由&amp;符號(`&`)分隔。 以下列出可用參數。 |
+| `{QUERY_PARAMETERS}` | （*可選*）新增至請求路徑的參數，用以設定回應中傳回的結果。 可以包括多個參數，用&amp;符號(`&`)分隔。 以下列出可用參數。 |
 
 **查詢參數**
 
@@ -40,10 +40,10 @@ GET /schedules?{QUERY_PARAMETERS}
 
 | 參數 | 說明 |
 | --------- | ----------- |
-| `orderby` | 指定結果排序依據的欄位。 支援的欄位 `created` 為和 `updated`。 例如，將 `orderby=created` 依據以升序建立的結果排序。 在建立 `-` 前新增(`orderby=-created`)，將依建立項目的遞減順序排序。 |
-| `limit` | 指定頁面大小限制，以控制包含在頁面中的結果數。 (*Default value: 20*) |
-| `start` | 使用零編號來偏移響應清單。 例如，將 `start=2` 返回從第三個列出查詢開始的清單。 (*Default value: 0*) |
-| `property` | 根據欄位篩選結果。 篩選器 **必須** HTML逸出。 逗號可用來組合多組篩選器。 支援的欄位 `created`有、 `templateId`和 `userId`。 支援的運算子 `>` 清單有（大於）、 `<` （小於） `==` 和（等於）。 例如，將傳 `userId==6ebd9c2d-494d-425a-aa91-24033f3abeec` 回使用者ID如指定的所有排程查詢。 |
+| `orderby` | 指定結果排序依據的欄位。 支援的欄位有`created`和`updated`。 例如，`orderby=created`會依建立結果的升序排序。 在建立前新增`-`(`orderby=-created`)，將依遞減順序排序建立的項目。 |
+| `limit` | 指定頁面大小限制，以控制包含在頁面中的結果數。 (*預設值：20*) |
+| `start` | 使用零編號來偏移響應清單。 例如，`start=2`將返回從第三個列出的查詢開始的清單。 (*預設值：0*) |
+| `property` | 根據欄位篩選結果。 篩選器&#x200B;**必須**&#x200B;為HTML逸出。 逗號可用來組合多組篩選器。 支援的欄位有`created`、`templateId`和`userId`。 支援的運算子清單包括`>`（大於）、`<`（小於）和`==`（等於）。 例如，`userId==6ebd9c2d-494d-425a-aa91-24033f3abeec`將傳回使用者ID如指定的所有排程查詢。 |
 
 **請求**
 
@@ -125,7 +125,7 @@ curl -X GET https://platform.adobe.io/data/foundation/query/schedules?limit=1
 
 ### 建立新的排程查詢
 
-您可以通過向端點發出POST請求來建立新的計畫查 `/schedules` 詢。
+通過向`/schedules`端點發出POST請求，可以建立新的計畫查詢。
 
 **API格式**
 
@@ -162,12 +162,12 @@ curl -X POST https://platform.adobe.io/data/foundation/query/schedules
 | `query.dbName` | 要為其建立計畫查詢的資料庫的名稱。 |
 | `query.sql` | 要建立的SQL查詢。 |
 | `query.name` | 計畫查詢的名稱。 |
-| `schedule.schedule` | 查詢的cron調度。 有關cron時間表的更多資訊，請閱讀 [cron表達式格式文檔](http://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html) 。 在此範例中，&quot;30 * * * * *&quot;表示查詢將在30分鐘標籤下每小時運行一次。 |
+| `schedule.schedule` | 查詢的cron調度。 有關cron計畫的更多資訊，請閱讀[cron表達式格式](http://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html)文檔。 在此範例中，&quot;30 * * * * *&quot;表示查詢將在30分鐘標籤下每小時運行一次。 |
 | `schedule.startDate` | 排程查詢的開始日期，寫入為UTC時間戳記。 |
 
 **回應**
 
-成功的回應會傳回HTTP狀態202（已接受），並包含您新建立之排程查詢的詳細資訊。 在排程查詢完成啟動後， `state` 將從變 `REGISTERING` 更為 `ENABLED`。
+成功的回應會傳回HTTP狀態202（已接受），並包含您新建立之排程查詢的詳細資訊。 在計畫查詢完成激活後，`state`將從`REGISTERING`更改為`ENABLED`。
 
 ```json
 {
@@ -220,11 +220,11 @@ curl -X POST https://platform.adobe.io/data/foundation/query/schedules
 
 >[!NOTE]
 >
->您可以使用的值刪 `_links.delete` 除 [已建立的計畫查詢](#delete-a-specified-scheduled-query)。
+>您可以使用`_links.delete`的值刪除已建立的計畫查詢](#delete-a-specified-scheduled-query)。[
 
 ### 指定計畫查詢的請求詳細資料
 
-通過向端點發出GET請求並在請求路徑中提供其ID，可以 `/schedules` 檢索特定計畫查詢的資訊。
+通過向`/schedules`端點發出GET請求並在請求路徑中提供其ID，可以檢索特定計畫查詢的資訊。
 
 **API格式**
 
@@ -234,7 +234,7 @@ GET /schedules/{SCHEDULE_ID}
 
 | 屬性 | 說明 |
 | -------- | ----------- |
-| `{SCHEDULE_ID}` | 要 `id` 檢索的計畫查詢的值。 |
+| `{SCHEDULE_ID}` | 您要擷取之排程查詢的`id`值。 |
 
 **請求**
 
@@ -303,17 +303,17 @@ curl -X GET https://platform.adobe.io/data/foundation/query/schedules/e95186d65a
 
 >[!NOTE]
 >
->您可以使用的值刪 `_links.delete` 除 [已建立的計畫查詢](#delete-a-specified-scheduled-query)。
+>您可以使用`_links.delete`的值刪除已建立的計畫查詢](#delete-a-specified-scheduled-query)。[
 
 ### 更新指定計畫查詢的詳細資料
 
-通過向端點發出PATCH請求並在請求路徑中提供其ID，可以更 `/schedules` 新指定計畫查詢的詳細資訊。
+通過向`/schedules`端點發出PATCH請求，並在請求路徑中提供其ID，可以更新指定計畫查詢的詳細資訊。
 
-PATCH請求支援兩種不同的路徑： `/state` 和 `/schedule/schedule`。
+PATCH請求支援兩種不同的路徑：`/state`和`/schedule/schedule`。
 
 ### 更新計畫查詢狀態
 
-您可以使用 `/state` 更新所選計畫查詢的狀態- ENABLED或DISABLED。 若要更新狀態，您必須將值設為 `enable` 或 `disable`。
+您可以使用`/state`來更新所選計畫查詢的狀態- ENABLED或DISABLED。 若要更新狀態，您必須將值設為`enable`或`disable`。
 
 **API格式**
 
@@ -323,7 +323,7 @@ PATCH /schedules/{SCHEDULE_ID}
 
 | 屬性 | 說明 |
 | -------- | ----------- |
-| `{SCHEDULE_ID}` | 要 `id` 檢索的計畫查詢的值。 |
+| `{SCHEDULE_ID}` | 您要擷取之排程查詢的`id`值。 |
 
 
 **請求**
@@ -349,8 +349,8 @@ curl -X PATCH https://platform.adobe.io/data/foundation/query/schedules/e95186d6
 
 | 屬性 | 說明 |
 | -------- | ----------- |
-| `path` | 您要修補的值的路徑。 在這種情況下，由於您要更新計畫查詢的狀態，因此需要將值設 `path` 置為 `/state`。 |
-| `value` | 的更新值 `/state`。 此值可設為或啟 `enable` 用或 `disable` 停用排程查詢。 |
+| `path` | 您要修補的值的路徑。 在這種情況下，由於要更新計畫查詢的狀態，因此需要將`path`的值設定為`/state`。 |
+| `value` | `/state`的更新值。 此值可以設定為`enable`或`disable`以啟用或禁用計畫查詢。 |
 
 **回應**
 
@@ -365,7 +365,7 @@ curl -X PATCH https://platform.adobe.io/data/foundation/query/schedules/e95186d6
 
 ### 更新計畫查詢排程
 
-您可以使用 `/schedule/schedule` 來更新已排程查詢的cron排程。 有關cron時間表的更多資訊，請閱讀 [cron表達式格式文檔](http://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html) 。
+您可以使用`/schedule/schedule`來更新已排程查詢的cron排程。 有關cron計畫的更多資訊，請閱讀[cron表達式格式](http://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html)文檔。
 
 **API格式**
 
@@ -375,7 +375,7 @@ PATCH /schedules/{SCHEDULE_ID}
 
 | 屬性 | 說明 |
 | -------- | ----------- |
-| `{SCHEDULE_ID}` | 要 `id` 檢索的計畫查詢的值。 |
+| `{SCHEDULE_ID}` | 您要擷取之排程查詢的`id`值。 |
 
 **請求**
 
@@ -400,8 +400,8 @@ curl -X PATCH https://platform.adobe.io/data/foundation/query/schedules/e95186d6
 
 | 屬性 | 說明 |
 | -------- | ----------- |
-| `path` | 您要修補的值的路徑。 在此情況下，由於您要更新排程查詢的排程，因此需要將值設 `path` 為 `/schedule/schedule`。 |
-| `value` | 的更新值 `/schedule`。 此值必須以cron計畫的形式。 因此，在此範例中，排程的查詢會在每小時45分鐘標籤下執行。 |
+| `path` | 您要修補的值的路徑。 在這種情況下，由於您要更新計畫查詢的計畫，因此需要將`path`的值設定為`/schedule/schedule`。 |
+| `value` | `/schedule`的更新值。 此值必須以cron計畫的形式。 因此，在此範例中，排程的查詢會在每小時45分鐘標籤下執行。 |
 
 **回應**
 
@@ -416,11 +416,11 @@ curl -X PATCH https://platform.adobe.io/data/foundation/query/schedules/e95186d6
 
 ### 刪除指定的計畫查詢
 
-通過向端點發出DELETE請求並提供要在請求路徑中刪除的 `/schedules` 已調度查詢的ID，可以刪除指定的已調度查詢。
+通過向`/schedules`端點發出DELETE請求並在請求路徑中提供要刪除的計畫查詢的ID，可以刪除指定的計畫查詢。
 
 >[!NOTE]
 >
->刪除前 **必須禁** 用該計畫。
+>計畫&#x200B;**必須**&#x200B;在刪除前被禁用。
 
 **API格式**
 
@@ -430,7 +430,7 @@ DELETE /schedules/{SCHEDULE_ID}
 
 | 屬性 | 說明 |
 | -------- | ----------- |
-| `{SCHEDULE_ID}` | 要 `id` 檢索的計畫查詢的值。 |
+| `{SCHEDULE_ID}` | 您要擷取之排程查詢的`id`值。 |
 
 **請求**
 
