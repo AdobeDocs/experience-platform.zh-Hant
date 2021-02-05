@@ -1,31 +1,31 @@
 ---
-keywords: Experience Platform;getting started;Attribution ai;popular topics;Attribution ai input;Attribution ai output;
+keywords: Experience Platform；快速入門； Attribution ai；熱門主題； Attribution ai輸入； Attribution ai輸出；
 solution: Experience Platform, Intelligent Services
-title: 歸因人工智慧輸入與輸出
+title: 歸因人工智慧的輸入與輸出
 topic: Input and Output data for Attribution AI
 description: 以下檔案概述Attribution AI中使用的不同輸入和輸出。
 translation-type: tm+mt
-source-git-commit: de16ebddd8734f082f908f5b6016a1d3eadff04c
+source-git-commit: eb163949f91b0d1e9cc23180bb372b6f94fc951f
 workflow-type: tm+mt
-source-wordcount: '2075'
+source-wordcount: '2091'
 ht-degree: 3%
 
 ---
 
 
-# [!DNL Attribution AI] 輸入與輸出
+# [!DNL Attribution AI]中的輸入和輸出
 
-以下文檔概述了中使用的不同輸入和輸出 [!DNL Attribution AI]。
+以下文檔概述了[!DNL Attribution AI]中使用的不同輸入和輸出。
 
 ## [!DNL Attribution AI] 輸入資料
 
-[!DNL Attribution AI] 使用 [!DNL Consumer Experience Event] 資料來計算演算得分。 有關的詳細資 [!DNL Consumer Experience Event]訊，請參閱「準 [備要在智慧型服務檔案中使用的資料」](../data-preparation.md)。
+[!DNL Attribution AI] 使用 [!DNL Consumer Experience Event] 資料來計算演算法分數。有關[!DNL Consumer Experience Event]的詳細資訊，請參閱[準備資料以用於智慧服務文檔](../data-preparation.md)。
 
-(CEE)架構中的 [!DNL Consumer Experience Event] 所有欄並非Attribution AI的必填欄。
+並非[!DNL Consumer Experience Event](CEE)架構中的所有欄都是Attribution AI的必填欄。
 
 >[!NOTE]
 >
-> 以下9欄是必填欄，其他欄則為選填欄，但如果您想要將相同資料用於其他Adobe解決方案，例如和，則建議／必 [!DNL Customer AI] 要欄 [!DNL Journey AI]。
+> 以下9欄是必填欄，其他欄是選用欄，但如果您想要將相同資料用於其他Adobe解決方案，例如[!DNL Customer AI]和[!DNL Journey AI]，則建議／必要欄。
 
 | 必填欄 | 需要 |
 | --- | --- |
@@ -60,7 +60,7 @@ ht-degree: 3%
 
 Attribution AI需要歷史資料作為模型訓練的輸入。 所需的資料持續時間主要由兩個關鍵因素決定：訓練窗口和回顧窗口。 縮短培訓視窗的輸入會更敏感於最新趨勢，而較長的培訓視窗有助於產生更穩定、更精確的模型。 以最能代表您業務目標的歷史資料來建立目標模型非常重要。
 
-訓練 [視窗設定](./user-guide.md#training-window) ，會根據發生時間篩選要納入模型訓練的轉換事件。 目前，最低培訓時間為1個季度（90天）。 回 [顧視窗](./user-guide.md#lookback-window) ，提供一個時間範圍，指出應包含多少天前的轉換事件接觸點與此轉換事件相關。 這兩個概念一起決定應用程式所需的輸入資料量（以天計）。
+[訓練視窗設定](./user-guide.md#training-window)會根據發生時間篩選要包含於模型訓練的轉換事件。 目前，最低培訓時間為1個季度（90天）。 [回顧視窗](./user-guide.md#lookback-window)提供一個時間範圍，指出應包含多少天前的轉換事件接觸點與此轉換事件相關。 這兩個概念一起決定應用程式所需的輸入資料量（以天計）。
 
 依預設，Attribution AI會將培訓視窗定義為最近2個季度（6個月），並將回顧視窗定義為56天。 換言之，模型將考慮過去2個季度中發生的所有已定義轉換事件，並尋找在相關轉換事件前56天內發生的所有觸點。
 
@@ -87,9 +87,9 @@ Attribution AI輸出如下：
 
 ![](./images/input-output/schema_output.gif)
 
-### 原始粒度分數 {#raw-granular-scores}
+### 原始粒度分數{#raw-granular-scores}
 
-歸因AI會以最細微的層級輸出歸因分數，讓您可以依任何分數欄來切割分數。 若要在UI中檢視這些分數，請閱讀有關檢視原始分 [數路徑的章節](#raw-score-path)。 若要使用API下載分數，請造訪Attribution AI文 [件中的下載分數](./download-scores.md) 。
+歸因AI會以最細微的層級輸出歸因分數，讓您可以依任何分數欄來切割分數。 若要在UI中檢視這些分數，請閱讀[檢視原始分數路徑](#raw-score-path)的章節。 若要使用API下載分數，請造訪[下載Attribution AI](./download-scores.md)檔案中的分數。
 
 >[!NOTE]
 >
@@ -102,50 +102,50 @@ Attribution AI輸出如下：
 
 | 欄名稱(DataType) | 可為空 | 說明 |
 | --- | --- | --- |
-| 時間戳記(DateTime) | False | 發生轉換事件或觀察的時間。 <br> **範例：** 2020-06-09T00:01:51.000Z |
+| 時間戳記(DateTime) | False | 發生轉換事件或觀察的時間。<br> **範例：** 2020-06-09T00:01:51.000Z |
 | identityMap(Map) | True | 與CEE XDM格式類似的用戶的identityMap。 |
-| eventType（字串） | True | 此時間系列記錄的主要事件類型。 <br> **範例：** 「訂購」、「購買」、「瀏覽」 |
-| eventMergeId（字串） | True | ID，可關聯或合併多 [!DNL Experience Events] 個本質上相同或應合併的事件。 這將由資料產生器在擷取之前填入。 <br> **範例：** 575525617716-0-edc2ed37-1ab-4750-a820-1c2b3844b8c4 |
-| _id（字串） | False | 時間序列事件的唯一識別碼。 <br> **範例：** 4461-edc2ed37-1aab-4750-a820-1c2b3844b8c4 |
-| _tenantId（物件） | False | 與您的保留ID對應的頂層物件容器。 <br> **範例：** _atsdsnrmmsv2 |
-| your_schema_name（對象） | False | 使用轉換事件對所有與其關聯的觸點事件及其元資料進行分數。 <br> **範例：** 歸因AI分數——型號名稱__2020 |
-| 區段（字串） | True | 轉換區段，例如模型所依據的地域劃分。 若沒有區段，則區段與conversionName相同。 <br> **範例：** ORDER_US |
-| conversionName（字串） | True | 設定期間設定的轉換名稱。 <br> **範例：** 訂購、潛在客戶、瀏覽 |
+| eventType（字串） | True | 此時間系列記錄的主要事件類型。<br> **範例：** 「訂購」、「購買」、「瀏覽」 |
+| eventMergeId（字串） | True | 一個ID，可關聯或合併多個實質上是相同事件或應該合併的[!DNL Experience Events]。 這將由資料產生器在擷取之前填入。<br> **範例：** 575525617716-0-edc2ed37-1aab-4750-a820-1c2b3844b8c4 |
+| _id（字串） | False | 時間序列事件的唯一識別碼。<br> **範例：** 4461-edc2ed37-1ab-4750-a820-1c2b3844b8c4 |
+| _tenantId（物件） | False | 與您的保留ID對應的頂層物件容器。<br> **範例：** _atsdsnrmmsv2 |
+| your_schema_name（對象） | False | 使用轉換事件對所有與其關聯的觸點事件及其元資料進行分數。<br> **範例：** Attribution AI分數- Model Name_2020 |
+| 區段（字串） | True | 轉換區段，例如模型所依據的地域劃分。 若沒有區段，則區段與conversionName相同。<br> **範例：** ORDER_US |
+| conversionName（字串） | True | 設定期間設定的轉換名稱。<br> **範例：** 訂單、銷售線索、瀏覽 |
 | 轉換（物件） | False | 轉換中繼資料欄。 |
-| dataSource（字串） | True | 資料來源的全域唯一識別。 <br> **範例：** Adobe Analytics |
-| eventSource（字串） | True | 實際事件發生時的來源。 <br> **範例：** Adobe.com |
-| eventType（字串） | True | 此時間系列記錄的主要事件類型。 <br> **範例：** 訂單 |
-| geo（字串） | True | 傳遞轉換的地理位置 `placeContext.geo.countryCode`。 <br> **範例：** 美國 |
-| priceTotal(Double) | True | 透過轉換取得之收入 <br> **範例：** 99.9 |
-| product（字串） | True | 產品本身的XDM識別碼。 <br> **範例：** RX 1080 ti |
-| productType（字串） | True | 產品的顯示名稱，如此顯示給此產品檢視的使用者。 <br> **範例：** Gpus |
-| 數量（整數） | True | 轉換期間購買的數量。 <br> **範例：** 1 1080鈦 |
-| receivedTimestamp(DateTime) | True | 收到轉換的時間戳記。 <br> **範例：** 2020-06-09T00:01:51.000Z |
-| skuId（字串） | True | 庫存保留單位(SKU)，由廠商定義之產品的唯一識別碼。 <br> **範例：** MJ-03-XS-Black |
-| 時間戳記(DateTime) | True | 轉換的時間戳記。 <br> **範例：** 2020-06-09T00:01:51.000Z |
+| dataSource（字串） | True | 資料來源的全域唯一識別。<br> **範例：** Adobe Analytics |
+| eventSource（字串） | True | 實際事件發生時的來源。<br> **範例：** Adobe.com |
+| eventType（字串） | True | 此時間系列記錄的主要事件類型。<br> **範例：** Order |
+| geo（字串） | True | 傳送轉換的地理位置`placeContext.geo.countryCode`。<br> **範例：** US |
+| priceTotal(Double) | True | 透過轉換<br>取得的收入 **範例：** 99.9 |
+| product（字串） | True | 產品本身的XDM識別碼。<br> **示例：** RX 1080 ti |
+| productType（字串） | True | 產品的顯示名稱，如此顯示給此產品檢視的使用者。<br> **範例：** Gpus |
+| 數量（整數） | True | 轉換期間購買的數量。<br> **示例：** 1 1080 ti |
+| receivedTimestamp(DateTime) | True | 收到轉換的時間戳記。<br> **範例：** 2020-06-09T00:01:51.000Z |
+| skuId（字串） | True | 庫存保留單位(SKU)，由廠商定義之產品的唯一識別碼。<br> **示例：** MJ-03-XS-Black |
+| 時間戳記(DateTime) | True | 轉換的時間戳記。<br> **範例：** 2020-06-09T00:01:51.000Z |
 | passThrough（物件） | True | 設定模型時，使用者指定的其他分數資料集欄。 |
-| commerce_order_purchaseCity（字串） | True | 其他分數資料集欄。 <br> **範例：** 城市：聖荷西 |
+| commerce_order_purchaseCity（字串） | True | 其他分數資料集欄。<br> **範例：** city:聖荷西 |
 | customerProfile（對象） | False | 用於建立模型之使用者的身分詳細資料。 |
-| identity（物件） | False | 包含用於建立模型的使用者的詳細資料，例如 `id` 和 `namespace`。 |
-| id（字串） | True | 使用者的身分識別碼，例如Cookie ID、AAID或MCID等。 <br> **範例：** 17348762725408665634688320891369597404 |
-| namespace（字串） | True | 用於建立路徑的身分名稱空間，進而建立模型。 <br> **範例：** aid |
+| identity（物件） | False | 包含用於構建模型的用戶的詳細資訊，如`id`和`namespace`。 |
+| id（字串） | True | 使用者的身分識別碼，例如Cookie ID、AAID或MCID等。<br> **範例：** 1734876272540865634688320891369597404 |
+| namespace（字串） | True | 用於建立路徑的身分名稱空間，進而建立模型。<br> **範例：** aaid |
 | 接觸點詳細資料（物件陣列） | True | 觸點詳細資料清單，可導致依觸點發生次數或時間戳記排序的轉換。 |
-| touchpointName（字串） | True | 設定期間設定的觸點名稱。 <br> **範例：** PAID_SEARCH_CLICK |
-| 分數（物件） | True | 此轉換的觸點貢獻為分數。 如需此物件中產生之分數的詳細資訊，請參閱匯 [總歸因分數](#aggregated-attribution-scores) 。 |
-| touchPoint（物件） | True | 觸點中繼資料。 如需此物件中產生的分數的詳細資訊，請參閱匯總 [的分數](#aggregated-scores) 區段。 |
+| touchpointName（字串） | True | 設定期間設定的觸點名稱。<br> **範例：** PAID_SEARCH_CLICK |
+| 分數（物件） | True | 此轉換的觸點貢獻為分數。 如需此物件中產生之分數的詳細資訊，請參閱[匯總歸因分數](#aggregated-attribution-scores)一節。 |
+| touchPoint（物件） | True | 觸點中繼資料。 有關在此對象中生成的分數的詳細資訊，請參閱[聚合分數](#aggregated-scores)部分。 |
 
-### 檢視原始分數路徑(UI) {#raw-score-path}
+### 檢視原始分數路徑(UI){#raw-score-path}
 
-您可以在UI中檢視原始分數的路徑。 首先，在平 **[!UICONTROL 台UI中選擇]** 「結構描述」，然後從「瀏覽」頁籤中搜索並選擇您的歸因AI分數結 **[!UICONTROL 構]** 。
+您可以在UI中檢視原始分數的路徑。 首先，在平台UI中選擇&#x200B;**[!UICONTROL 結構描述]**，然後從&#x200B;**[!UICONTROL 瀏覽]**&#x200B;標籤中搜索並選擇您的歸因AI分數結構描述。
 
 ![選擇您的架構](./images/input-output/schemas_browse.png)
 
-接著，在UI的「結構」視 **[!UICONTROL 窗中選取欄位]** ,「欄位屬 **[!UICONTROL 性」標籤隨即開啟]** 。 在欄 **[!UICONTROL 位內]** ，屬性是對應至原始分數的路徑欄位。
+接著，在UI的&#x200B;**[!UICONTROL Structure]**&#x200B;窗口中選擇一個欄位，**[!UICONTROL Field properties]**&#x200B;頁籤開啟。 在&#x200B;**[!UICONTROL 欄位屬性]**&#x200B;中是對應至原始分數的路徑欄位。
 
 ![挑選結構](./images/input-output/field_properties.png)
 
 
-### 匯總歸因分數 {#aggregated-attribution-scores}
+### 匯總歸因分數{#aggregated-attribution-scores}
 
 如果日期範圍少於30天，可從平台UI以CSV格式下載匯總的分數。
 
@@ -171,7 +171,7 @@ Attribution AI輸出如下：
 
 **原始分數參考（歸因分數）**
 
-下表將歸因分數對應至原始分數。 如果您想要下載原始分數，請造訪Attribution AI [檔案中的下載分數](./download-scores.md) 。
+下表將歸因分數對應至原始分數。 如果您想要下載原始分數，請造訪[下載Attribution AI](./download-scores.md)檔案中的分數。
 
 | 歸因分數 | 原始分數參考欄 |
 | --- | --- |
@@ -183,30 +183,30 @@ Attribution AI輸出如下：
 | U 形 | _tenantID.your_schema_name.touchpointsDetail.element.touchpoint.uShape |
 | 時間耗損 | _tenantID.your_schema_name.touchpointsDetail.element.touchpoint.decayUnits |
 
-### 匯總分數 {#aggregated-scores}
+### 匯總分數{#aggregated-scores}
 
 如果日期範圍少於30天，可從平台UI以CSV格式下載匯總的分數。 有關這些聚合列的詳細資訊，請參見下表。
 
 | 欄名稱 | 約束 | 可為空 | 說明 |
 | --- | --- | --- | --- |
-| customerevents_date(DateTime) | 用戶定義和固定格式 | False | YYYY-MM-DD格式的客戶事件日期。 <br> **範例**:2016-05-02 |
-| mediatouchpoints_date(DateTime) | 用戶定義和固定格式 | True | YYYY-MM-DD格式的媒體接觸點日期 <br> **範例**:2017-04-21 |
-| segment（字串） | 計算 | False | 轉換區段，例如模型所依據的地域劃分。 若沒有區段，則區段會與conversion_scope相同。 <br> **範例**:ORDER_AMER |
-| conversion_scope（字串） | 用戶定義 | False | 使用者設定的轉換名稱。 <br> **範例**:訂單 |
-| touchpoint_scope（字串） | 用戶定義 | True | 使用者設定的Touchpoint名稱 <br> **範例**:PAID_SEARCH_CLICK |
-| product（字串） | 用戶定義 | True | 產品的XDM識別碼。 <br> **範例**:CC |
-| product_type（字串） | 用戶定義 | True | 產品的顯示名稱，如此顯示給此產品檢視的使用者。 <br> **範例**:gpus，筆記型電腦 |
-| geo（字串） | 用戶定義 | True | 傳送轉換的地理位置(placeContext.geo.countryCode) <br> **範例**:美國 |
-| event_type（字串） | 用戶定義 | True | 此時間系列記錄的主要事件類型 <br> **範例**:付費轉換 |
-| media_type（字串） | ENUM | False | 說明媒體類型是付費、擁有還是免費。 <br> **範例**:付費、擁有 |
-| channel（字串） | ENUM | False | 用 `channel._type` 於提供XDM中具有相似屬性之渠道的粗略分類的屬 [!DNL Consumer Experience Event] 性。 <br> **範例**:搜尋 |
-| action(String) | ENUM | False | 屬性 `mediaAction` 可用來提供體驗事件媒體動作類型。 <br> **範例**:按一下 |
-| campaign_group（字串） | 用戶定義 | True | 將多個促銷活動分組在一起的促銷活動群組名稱，例如&#39;50%_DISCOUNT&#39;。 <br> **範例**:商業 |
-| campaign_name（字串） | 用戶定義 | True | 用於識別行銷促銷活動的促銷活動名稱，例如&#39;50%_DISCOUNT_USA&#39;或&#39;50%_DISCOUNT_ASIA&#39;。 <br> **範例**:感恩節大甩賣 |
+| customerevents_date(DateTime) | 用戶定義和固定格式 | False | YYYY-MM-DD格式的客戶事件日期。<br> **範例**:2016-05-02 |
+| mediatouchpoints_date(DateTime) | 用戶定義和固定格式 | True | YYYY-MM-DD格式<br>的媒體接觸點日期 **範例**:2017-04-21 |
+| segment（字串） | 計算 | False | 轉換區段，例如模型所依據的地域劃分。 若沒有區段，則區段會與conversion_scope相同。<br> **範例**:ORDER_AMER |
+| conversion_scope（字串） | 用戶定義 | False | 使用者設定的轉換名稱。<br> **範例**:訂單 |
+| touchpoint_scope（字串） | 用戶定義 | True | 使用者<br>所設定的Touchpoint名稱 **範例**:PAID_SEARCH_CLICK |
+| product（字串） | 用戶定義 | True | 產品的XDM識別碼。<br> **範例**:CC |
+| product_type（字串） | 用戶定義 | True | 產品的顯示名稱，如此顯示給此產品檢視的使用者。<br> **範例**:gpus，筆記型電腦 |
+| geo（字串） | 用戶定義 | True | 傳送轉換的地理位置(placeContext.geo.countryCode)<br> **範例**:美國 |
+| event_type（字串） | 用戶定義 | True | 此時間系列記錄的主要事件類型<br> **範例**:付費轉換 |
+| media_type（字串） | ENUM | False | 說明媒體類型是付費、擁有還是免費。<br> **範例**:付費、擁有 |
+| channel（字串） | ENUM | False | `channel._type`屬性，用於提供具有[!DNL Consumer Experience Event] XDM中相似屬性的渠道的粗略分類。<br> **範例**:搜尋 |
+| action(String) | ENUM | False | `mediaAction`屬性用於提供體驗事件媒體動作類型。<br> **範例**:按一下 |
+| campaign_group（字串） | 用戶定義 | True | 將多個促銷活動分組在一起的促銷活動群組名稱，例如&#39;50%_DISCOUNT&#39;。<br> **範例**:商業 |
+| campaign_name（字串） | 用戶定義 | True | 用於識別行銷促銷活動的促銷活動名稱，例如&#39;50%_DISCOUNT_USA&#39;或&#39;50%_DISCOUNT_ASIA&#39;。<br> **範例**:感恩節大甩賣 |
 
 **原始分數參考（匯總）**
 
-下表將匯總的分數對應至原始分數。 如果您想要下載原始分數，請造訪Attribution AI [檔案中的下載分數](./download-scores.md) 。 若要從UI中檢視原始分數路徑，請造訪本檔案中有關檢 [視原始分數路徑](#raw-score-path) 的章節。
+下表將匯總的分數對應至原始分數。 如果您想要下載原始分數，請造訪[下載Attribution AI](./download-scores.md)檔案中的分數。 若要從UI中檢視原始分數路徑，請造訪本檔案中檢視原始分數路徑[的章節。](#raw-score-path)
 
 | 欄名稱 | 原始分數參考欄 |
 | --- | --- |
@@ -228,4 +228,4 @@ Attribution AI輸出如下：
 
 ## 下一步 {#next-steps}
 
-準備好資料並準備好所有認證和結構描述後，請先遵循 [Attribution AI使用指南](./user-guide.md)。 本指南會逐步帶您建立Attribution AI的例項。
+準備好資料並準備好所有憑證和結構描述後，請從[歸因AI使用指南](./user-guide.md)開始。 本指南會逐步帶您建立Attribution AI的例項。
