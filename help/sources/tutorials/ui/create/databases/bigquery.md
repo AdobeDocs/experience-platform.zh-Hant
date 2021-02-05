@@ -1,20 +1,20 @@
 ---
-keywords: Experience Platform;home;popular topics;Google Big Query;google big query;GBQ;gbq
+keywords: Experience Platform;home；熱門主題；Google Big Query;google big query;GBQ;gbq
 solution: Experience Platform
-title: 在UI中建立Google Big Query來源連接器
+title: 在UI中建立Google Big查詢來源連線
 topic: overview
 type: Tutorial
-description: 本教學課程提供使用平台使用者介面來建立Google Big Query（以下稱為「GBQ」）來源連接器的步驟。
+description: 瞭解如何使用Adobe Experience Platform UI建立Google Big Query來源連線。
 translation-type: tm+mt
-source-git-commit: 74fbf388cf645c89f9f6d00a5ae2e59ba94041b9
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
-source-wordcount: '508'
+source-wordcount: '515'
 ht-degree: 0%
 
 ---
 
 
-# 在UI中建立[!DNL Google Big Query]源連接器
+# 在UI中建立[!DNL Google Big Query]源連接
 
 >[!NOTE]
 >
