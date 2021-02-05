@@ -1,19 +1,19 @@
 ---
 keywords: 廣告目標；目標；平台目標
 title: 廣告目標
-seo-title: 廣告目標
+seo-title: 廣告目標概觀
 description: 將Adobe Experience Platform連接至第三方廣告平台（例如DSP、廣告網路、SSP），並與這些平台共用假受眾。
 seo-description: 將Adobe Experience Platform連接至第三方廣告平台（例如DSP、廣告網路、SSP），並與這些平台共用假受眾。
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '225'
+source-wordcount: '227'
 ht-degree: 2%
 
 ---
 
 
-# 廣告目的地{#advertising-destinations}
+# 廣告目標概觀{#advertising-destinations}
 
 將Adobe Experience Platform連接至第三方廣告平台（例如DSP、廣告網路、SSP），並與這些平台共用假受眾。
 
