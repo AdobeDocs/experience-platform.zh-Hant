@@ -1,5 +1,5 @@
 ---
-title: Adobe Experience Platform的主要功能
+title: Experience Platform的主要功能
 description: 本影片會檢視Adobe Experience Platform&mdash;Create accoptive, intelligent, real-time customer profiles;利用AI/ML模型和資料查詢豐富資料並獲得更多見解；運用開放且可組合的元件進行創新；增強即時體驗的傳遞與個人化；並透過控管、安全性和隱私權控制獲得信任。
 feature: null
 topics: null
@@ -9,9 +9,9 @@ doc-type: video
 activity: understand
 thumbnail: 32502.jpg
 translation-type: tm+mt
-source-git-commit: 333b89ccf2365c04646df9dc0434036bdd6f12ac
+source-git-commit: 5575d5e45bddcc007dcf78720cd7a7e20475f78c
 workflow-type: tm+mt
-source-wordcount: '113'
+source-wordcount: '112'
 ht-degree: 0%
 
 ---
