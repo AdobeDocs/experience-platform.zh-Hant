@@ -1,25 +1,25 @@
 ---
-keywords: Experience Platform;home;popular topics;delete sandbox
+keywords: Experience Platform;home；熱門主題；刪除沙盒
 solution: Experience Platform
-title: 刪除沙盒
+title: 刪除API中的沙盒
 topic: developer guide
 description: 您可以透過提出DELETE請求來刪除沙盒，請求路徑中包含沙盒的名稱。
 translation-type: tm+mt
-source-git-commit: 0af537e965605e6c3e02963889acd85b9d780654
+source-git-commit: 36f63cecd49e6a6b39367359d50252612ea16d7a
 workflow-type: tm+mt
-source-wordcount: '103'
+source-wordcount: '116'
 ht-degree: 3%
 
 ---
 
 
-# 刪除沙盒
+# 刪除API中的沙盒
 
-您可以透過提出DELETE請求來刪除沙盒，請求路徑中包含沙 `name` 盒的請求。
+您可以透過提出DELETE請求來刪除沙盒，該請求在請求路徑中包含沙盒的`name`。
 
 >[!NOTE]
 >
->使用此API呼叫會將沙盒的屬性 `status` 更新為「已刪除」並停用它。 刪除沙盒後，GET請求仍可擷取其詳細資訊。
+>讓此API呼叫將沙盒的`status`屬性更新為&quot;deleted&quot;，並停用它。 刪除沙盒後，GET請求仍可擷取其詳細資訊。
 
 **API格式**
 
@@ -29,7 +29,7 @@ DELETE /sandboxes/{SANDBOX_NAME}
 
 | 參數 | 說明 |
 | --- | --- |
-| `{SANDBOX_NAME}` | 您 `name` 要刪除的沙盒。 |
+| `{SANDBOX_NAME}` | 您要刪除的沙盒的`name`。 |
 
 **請求**
 
@@ -46,7 +46,7 @@ curl -X DELETE \
 
 **回應**
 
-成功的回應會傳回沙盒的更新詳細資訊，顯示其 `state` 已「刪除」。
+成功的回應會傳回沙盒的更新詳細資訊，顯示其`state`已「刪除」。
 
 ```json
 {
