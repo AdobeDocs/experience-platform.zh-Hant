@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform;home；熱門主題
 solution: Experience Platform
-title: 建立電子郵件行銷目標
+title: 使用API呼叫建立電子郵件行銷目標
 description: 本檔案涵蓋使用Adobe Experience Platform API建立電子郵件行銷目的地
 topic: tutorial
 type: Tutorial
 translation-type: tm+mt
-source-git-commit: d1f357659313aba0811b267598deda9770d946a1
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '1645'
+source-wordcount: '1644'
 ht-degree: 1%
 
 ---
 
 
-# 在Adobe Experience Platform中使用API呼叫建立電子郵件行銷目標並啟用資料
+# 使用API呼叫建立電子郵件行銷目標並啟用資料
 
 本教學課程示範如何使用API呼叫連線至您的Adobe Experience Platform資料、建立[電子郵件行銷目標](../catalog/email-marketing/overview.md)、建立資料流至新建立的目標，以及啟用資料至新建立的目標。
 
