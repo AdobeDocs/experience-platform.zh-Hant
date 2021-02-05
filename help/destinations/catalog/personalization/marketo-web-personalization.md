@@ -1,21 +1,17 @@
 ---
 keywords: Marketo Web Personalization; marketo Web Personalization; Marketto Web Personalization Extension;marketo Web Personalization Extension;marketo Web Personalization Extension;marketo;Marketto
-title: Marketo Web Personalization擴充功能
-seo-title: Marketo Web Personalization擴充功能
+title: Marketo Web Personalization Extension Destination
 description: Marketo Web Personalization擴充功能是Adobe Experience Platform中的個人化目的地。 如需擴充功能的詳細資訊，請參閱Adobe Exchange的擴充功能頁面。
-seo-description: Marketo Web Personalization擴充功能是Adobe Experience Platform中的個人化目的地。 如需擴充功能的詳細資訊，請參閱Adobe Exchange的擴充功能頁面。
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: f4095a90ff70e8d054bae4f3b0f884552ffd30df
 workflow-type: tm+mt
-source-wordcount: '611'
+source-wordcount: '580'
 ht-degree: 3%
 
 ---
 
 
 # [!DNL Marketo Web Personalization] 擴充功能 {#marketo-web-personalization-extension}
-
-## 概述 {#overview}
 
 此擴充功能會部署[!DNL Marketo’s]網頁個人化和ContentAI應用程式的指令碼。 [!DNL Marketo] Web Personalization可獨特地識別並個人化網頁訪客特徵的內容，例如匿名訪客的圖片，以及已知訪客在 [!DNL Marketo] Engagement Platform中廣泛的行為屬性。[!DNL Marketo] ContentAI包含針對B2B客戶獨一無二之網頁和電子郵件宣傳的AI支援建議和個人化功能。
 
