@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;home；熱門主題；Amazon Kinesis;amazon kinesis;Kinesis
 solution: Experience Platform
-title: Amazon Kinesis連接器
+title: Amazon Kinesis源連接器概述
 topic: overview
-description: 下面的文檔提供了如何使用API或用戶介面將Amazon Kinesis連接到平台的資訊。
+description: 瞭解如何使用API或用戶介面將Amazon Kinesis連接到Adobe Experience Platform。
 translation-type: tm+mt
-source-git-commit: 2940f030aa21d70cceeedc7806a148695f68739e
+source-git-commit: a489ab248793a063295578943ad600d8eacab6a2
 workflow-type: tm+mt
 source-wordcount: '234'
 ht-degree: 0%
@@ -33,10 +33,10 @@ Adobe Experience Platform為AWS、[!DNL Google Cloud Platform]和[!DNL Azure]等
 
 ### 使用API
 
-- [使用流服務API建立Amazon Kinesis連接器](../../tutorials/api/create/cloud-storage/kinesis.md)
+- [使用流服務API建立Amazon Kinesis源連接](../../tutorials/api/create/cloud-storage/kinesis.md)
 - [使用Flow Service API收集串流資料](../../tutorials/api/collect/streaming.md)
 
 ### 使用UI
 
-- [在UI中建立Amazon Kinesis源連接器](../../tutorials/ui/create/cloud-storage/kinesis.md)
-- [在UI中為雲端儲存連接器設定資料流](../../tutorials/ui/dataflow/streaming/cloud-storage-streaming.md)
+- [在UI中建立Amazon Kinesis源連接](../../tutorials/ui/create/cloud-storage/kinesis.md)
+- [在UI中為雲端儲存區連線設定資料流](../../tutorials/ui/dataflow/streaming/cloud-storage-streaming.md)
