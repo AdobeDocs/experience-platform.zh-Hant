@@ -1,12 +1,12 @@
 ---
 keywords: 分段；分段rtcdp；即時客戶資料平台分段
-title: 區段服務概觀
+title: 即時客戶資料平台中的細分服務
 seo-title: 即時客戶資料平台中的細分服務
 description: 即時CDP建立在Adobe Experience Platform之上，並運用許多Experience Platform服務和功能。 使用「分段服務」，您可以將客戶劃分為具有類似特徵的較小群組，以提供量身打造的行銷。
 translation-type: tm+mt
-source-git-commit: 9f20f8bfeefb5bc427a72a11ac1f01816cdbc4b2
+source-git-commit: 36f63cecd49e6a6b39367359d50252612ea16d7a
 workflow-type: tm+mt
-source-wordcount: '540'
+source-wordcount: '544'
 ht-degree: 0%
 
 ---
