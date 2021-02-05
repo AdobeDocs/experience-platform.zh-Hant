@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform;home；熱門主題；身份圖查看器；Identity Graph viewer;Graph viewer;Graph viewer;Identity namespace;Identity;Identity Service;identity service
 solution: Experience Platform
-title: Adobe Experience Platform Identity Service
+title: Identity Graph檢視器概觀
 topic: tutorial
 description: 身分圖是特定客戶不同身分之間關係的地圖，可讓您以視覺化方式呈現客戶如何透過不同通道與您的品牌互動。
 translation-type: tm+mt
-source-git-commit: 22685a8519529ba7afb7e50262ea4d40a450b382
+source-git-commit: 8ec904d584225113a6791533ff544560fc2efdf3
 workflow-type: tm+mt
-source-wordcount: '930'
-ht-degree: 1%
+source-wordcount: '946'
+ht-degree: 0%
 
 ---
 
 
-# （測試版）身分圖表檢視器
+# （測試版）身分圖表檢視器概觀
 
 >[!NOTE]
 >
@@ -108,3 +108,9 @@ ht-degree: 1%
 ## 後續步驟
 
 閱讀本檔案後，您便瞭解如何在平台UI中探索客戶的身分圖。 有關平台中身份的詳細資訊，請參閱[Identity Service概述](../home.md)
+
+## 其他資源
+
+以下影片旨在協助您瞭解身分圖表檢視器。
+
+>[!VIDEO](https://video.tv.adobe.com/v/331030/?quality=12&learn=on)
