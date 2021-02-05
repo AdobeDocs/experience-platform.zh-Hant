@@ -1,21 +1,17 @@
 ---
 keywords: 確認數字反饋；確認擴展；確認
-title: 確認數位回饋擴充功能
-seo-title: 確認數位回饋擴充功能
+title: 確認數位回饋擴充目的地
 description: 確認數位意見延伸功能是Adobe Experience Platform中客戶目標的聲音。 如需擴充功能的詳細資訊，請參閱Adobe Exchange的擴充功能頁面。
-seo-description: 確認數位意見延伸功能是Adobe Experience Platform中客戶目標的聲音。 如需擴充功能的詳細資訊，請參閱Adobe Exchange的擴充功能頁面。
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '597'
+source-wordcount: '563'
 ht-degree: 3%
 
 ---
 
 
 # [!DNL Confirmit Digital Feedback] 擴充功能
-
-## 概述 {#overview}
 
 [!DNL Confirmit Digital Feedback] 解決方案可協助您將網站流量轉化為即時見解。透過[!DNL Confirmit]，可以根據您的需求顯示不顯眼且目標明確的調查，鼓勵訪客提供意見回應，例如：
 
