@@ -1,21 +1,17 @@
 ---
 Keywords: ECID;ecid
-title: Experience Cloud ID 服務擴充功能
-seo-title: Experience Cloud ID 服務擴充功能
+title: Experience Cloud ID服務擴充目標
 description: Experience Cloud ID服務擴充功能是Adobe Experience Platform中的個人化目的地。 如需擴充功能的詳細資訊，請參閱Adobe Exchange的擴充功能頁面。
-seo-description: Experience Cloud ID服務擴充功能是Adobe Experience Platform中的個人化目的地。 如需擴充功能的詳細資訊，請參閱Adobe Exchange的擴充功能頁面。
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '534'
-ht-degree: 5%
+source-wordcount: '501'
+ht-degree: 3%
 
 ---
 
 
 # [!DNL Experience Cloud] ID服務擴充功能  {#adobe-ecid-extension}
-
-## 概述 {#overview}
 
 此擴充功能實作[!DNL Experience Cloud] ID服務，可識別所有[!DNL Experience Cloud]解決方案的訪客。
 
