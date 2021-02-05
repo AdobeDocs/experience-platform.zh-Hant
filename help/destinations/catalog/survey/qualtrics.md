@@ -1,21 +1,17 @@
 ---
 keywords: Qualtrics;qualtrics;Qualtrics Website Feedback;qualtrics網站回饋；Qualtrics網站回饋
-title: Qualtrics網站意見延伸功能
-seo-title: Qualtrics網站意見延伸功能
+title: Qualtrics Website Feedback Extension Destination
 description: Qualtrics網站意見擴充功能是Adobe Experience Platform中的調查目的地。 如需擴充功能的詳細資訊，請參閱Adobe Exchange的擴充功能頁面。
-seo-description: Qualtrics網站意見擴充功能是Adobe Experience Platform中的調查目的地。 如需擴充功能的詳細資訊，請參閱Adobe Exchange的擴充功能頁面。
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '621'
+source-wordcount: '590'
 ht-degree: 3%
 
 ---
 
 
 # [!DNL Qualtrics Website Feedback] 擴充功能 {#qualtrics-extension}
-
-## 概述 {#overview}
 
 [!DNL Qualtrics Website Feedback] 可讓您在正確的時間，以適當的訊息吸引網站訪客。無論您是想要改善網站意見調查的訪客體驗，還是想要提高轉化率，[!DNL Qualtrics Website Feedback]都能提供您所需的一切。
 
