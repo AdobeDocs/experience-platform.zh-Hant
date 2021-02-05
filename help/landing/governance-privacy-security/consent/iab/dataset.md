@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;home;IAB;IAB 2.0;connownence;Conconence
 solution: Experience Platform
-title: 建立資料集，以擷取IAB TCF 2.0同意資料
+title: 建立用於捕獲IAB TCF 2.0許可資料的資料集
 topic: privacy events
 description: 本文檔提供了設定兩個收集IAB TCF 2.0許可資料所需資料集的步驟。
 translation-type: tm+mt
-source-git-commit: 58bafd206e42caba9879594ca95fe17376be327b
+source-git-commit: b0af9d49f6cfe50f6dff745dfac174dbaa76d070
 workflow-type: tm+mt
 source-wordcount: '1645'
 ht-degree: 0%
