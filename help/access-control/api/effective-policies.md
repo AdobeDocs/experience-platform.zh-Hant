@@ -1,21 +1,21 @@
 ---
-keywords: Experience Platform;home;popular topics;effective policies;access control api
+keywords: Experience Platform; home；熱門主題；有效策略；訪問控制api
 solution: Experience Platform
-title: 檢視有效的原則
+title: 有效策略API端點
 topic: developer guide
 description: Adobe Experience Platform中的存取控制功能可讓您使用Adobe Admin Console管理各種平台功能的角色和權限。 本檔案是如何使用Adobe Experience Platform的存取控制API來檢視有效政策的指南。
 translation-type: tm+mt
-source-git-commit: 8967a820ab19bceb2be69f37e3399ed99f0b8e72
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
-source-wordcount: '309'
+source-wordcount: '320'
 ht-degree: 1%
 
 ---
 
 
-# 檢視有效的原則
+# 有效的策略端點
 
-若要檢視目前使用者的有效原則，請向API中的端點 `/acl/effective-policies` 提出POST要 [!DNL Access Control] 求。 您要擷取的權限和資源類型必須以陣列的形式提供在請求裝載中。 以下範例API呼叫中說明此點。
+要查看當前用戶的有效策略，請向[!DNL Access Control] API中的`/acl/effective-policies`端點發出POST請求。 您要擷取的權限和資源類型必須以陣列的形式提供在請求裝載中。 以下範例API呼叫中說明此點。
 
 **API格式**
 
@@ -25,7 +25,7 @@ POST /acl/effective-policies
 
 **請求**
 
-以下請求將檢索有關當前用戶的「[!UICONTROL Manage Datasets]」權限和對「[!UICONTROL Schemas]」資源類型的訪問權限的資訊。
+以下請求將檢索有關當前用戶的&quot;[!UICONTROL 管理資料集]&quot;權限和對&quot;[!UICONTROL 方案]&quot;資源類型的訪問的資訊。
 
 ```shell
 curl -X POST \
@@ -43,11 +43,11 @@ curl -X POST \
 
 >[!NOTE]
 >
->有關可在裝載陣列中提供的權限和資源類型的完整清單，請參見關於接受的權限和 [資源類型的附錄部分](#accepted-permissions-and-resource-types)。
+>有關可以在裝載陣列中提供的權限和資源類型的完整清單，請參見[接受的權限和資源類型](#accepted-permissions-and-resource-types)上的附錄部分。
 
 **回應**
 
-成功的回應會傳回請求中提供之權限和資源類型的相關資訊。 回應包含目前使用者對於請求中指定之資源類型的作用中權限。 如果請求裝載中包含的任何權限對目前使用者有效，API會傳回具有應用程式磁碟(`*`)的權限，以指出該權限有效。 回應裝載中會忽略請求中提供對使用者未作用的任何權限。
+成功的回應會傳回請求中提供之權限和資源類型的相關資訊。 回應包含目前使用者對於請求中指定之資源類型的作用中權限。 如果請求裝載中包含的任何權限對於當前用戶處於活動狀態，則API返回具有應用程式盤(`*`)的權限，以指示該權限處於活動狀態。 回應裝載中會忽略請求中提供對使用者未作用的任何權限。
 
 ```json
 {
@@ -66,15 +66,15 @@ curl -X POST \
 
 ## 後續步驟
 
-本檔案說明如何呼叫 [!DNL Access Control] API，以傳回資源類型之作用中權限和相關原則的資訊。 有關訪問控制的詳細信 [!DNL Experience Platform]息，請參 [閱訪問控制概述](../home.md)。
+本檔案說明如何呼叫[!DNL Access Control] API，以傳回資源類型之作用中權限和相關原則的資訊。 有關[!DNL Experience Platform]的訪問控制的詳細資訊，請參閱[訪問控制概述](../home.md)。
 
 ## 附錄
 
-本節提供使用API的補充 [!DNL Access Control] 資訊。
+本節提供使用[!DNL Access Control] API的補充資訊。
 
 ### 接受的權限和資源類型
 
-以下是權限和資源類型的清單，您可以在POST請求到端點的裝載中加入這些權 `/acl/active-permissions` 限。
+以下是權限和資源類型的清單，您可以在到`/acl/active-permissions`端點的POST請求的裝載中包括這些權限和資源類型。
 
 **權限**
 
