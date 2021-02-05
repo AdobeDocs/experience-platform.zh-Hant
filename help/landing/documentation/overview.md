@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform；首頁；熱門主題；CJA；歷程分析；客戶歷程分析；宣傳協調；客戶歷程；歷程；歷程協調；功能；工作流程
 solution: Experience Platform
-title: Adobe Experience Platform檔案總覽
+title: Experience Platform檔案概觀
 topic: overview
 description: Adobe Experience Platform檔案提供多種格式，包括使用者介面和API的概觀、教學課程和指南。 以下是Experience Platform服務最常用的檔案類型簡介。
 translation-type: tm+mt
-source-git-commit: 96600567bb4965a1611e2b9a7cd6cb49298a567f
+source-git-commit: 5575d5e45bddcc007dcf78720cd7a7e20475f78c
 workflow-type: tm+mt
-source-wordcount: '484'
+source-wordcount: '483'
 ht-degree: 0%
 
 ---
