@@ -1,26 +1,26 @@
 ---
-keywords: Experience Platform;home;popular topics;SFTP;sftp
+keywords: Experience Platform;home；熱門主題；SFTP;sftp
 solution: Experience Platform
-title: 在UI中建立SFTP來源連接器
+title: 在UI中建立SFTP來源連線
 topic: overview
 type: Tutorial
-description: 本教學課程提供使用平台使用者介面建立SFTP來源連接器的步驟。
+description: 瞭解如何使用Adobe Experience Platform UI建立SFTP來源連線。
 translation-type: tm+mt
-source-git-commit: 0d0d3aa4213f3a8252de82c47eef6e9caa4d3e9e
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
-source-wordcount: '695'
+source-wordcount: '702'
 ht-degree: 0%
 
 ---
 
 
-# 在UI中建立SFTP來源連接器
+# 在UI中建立SFTP來源連線
 
 >[!NOTE]
 >
 >SFTP連接器為測試版。 有關使用beta標籤連接器的詳細資訊，請參閱[來源概觀](../../../../home.md#terms-and-conditions)。
 
-本教學課程提供使用平台使用者介面建立SFTP來源連接器的步驟。
+本教學課程提供使用Adobe Experience Platform UI建立SFTP來源連線的步驟。
 
 ## 快速入門
 
