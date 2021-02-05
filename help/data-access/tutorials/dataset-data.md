@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform; home；熱門主題；資料存取；資料存取api；查詢資料存取
 solution: Experience Platform
-title: 資料存取概述
+title: 使用資料存取API檢視資料集資料
 topic: tutorial
 type: Tutorial
-description: 本檔案提供逐步教學課程，其中涵蓋如何使用Adobe Experience Platform中的資料存取API來尋找、存取及下載儲存在資料集中的資料。 您也將會瞭解資料存取API的一些獨特功能，例如分頁和部分下載。
+description: 瞭解如何使用Adobe Experience Platform中的資料存取API來尋找、存取及下載儲存在資料集中的資料。 您也將會瞭解資料存取API的一些獨特功能，例如分頁和部分下載。
 translation-type: tm+mt
-source-git-commit: 2940f030aa21d70cceeedc7806a148695f68739e
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
-source-wordcount: '1400'
+source-wordcount: '1398'
 ht-degree: 2%
 
 ---
 
 
-# 使用[!DNL Data Access] API查詢資料集資料
+# 使用[!DNL Data Access] API檢視資料集資料
 
 本檔案提供逐步教學課程，其中涵蓋如何使用Adobe Experience Platform的[!DNL Data Access] API來尋找、存取和下載儲存在資料集中的資料。 此外，您還將瞭解[!DNL Data Access] API的一些獨特功能，例如分頁和部分下載。
 
