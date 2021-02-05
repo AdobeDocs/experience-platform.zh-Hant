@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform; home；熱門主題；查詢服務；查詢服務； Power BI; power bi；連接查詢服務；
 solution: Experience Platform
-title: 連接Power BI
+title: 將Power BI連接到查詢服務
 topic: connect
 description: 本檔案將逐步說明如何將Power BI與Adobe Experience Platform Query Service連接。
 translation-type: tm+mt
-source-git-commit: eac93f3465fa6ce4af7a6aa783cf5f8fb4ac9b9b
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '461'
+source-wordcount: '466'
 ht-degree: 0%
 
 ---
 
 
-# [!DNL Power BI]
+# 將[!DNL Power BI]連接到查詢服務(PC)
 
 本檔案涵蓋將Power BI與Adobe Experience Platform Query Service連接的步驟。
 
@@ -22,8 +22,6 @@ ht-degree: 0%
 > 本指南假定您已經擁有[!DNL Power BI]的訪問權限，並熟悉如何導航其介面。 有關[!DNL Power BI]的更多資訊，請參閱[official [!DNL Power BI] 文檔](https://docs.looker.com/)。
 >
 > 此外，Power BI僅&#x200B;****&#x200B;可用於Windows設備。
-
-## 設定[!DNL Power BI]
 
 在安裝Power BI後，您需要安裝`Npgsql`，這是用於PostgreSQL的。NET驅動程式包。 有關Npgsql的詳細資訊，請參閱[Npgsql文檔](https://www.npgsql.org/doc/index.html)。
 
