@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics;IBM DB2;ibm db2;DB2;db2
+keywords: Experience Platform;home；熱門主題；IBM DB2;ibm db2;DB2;db2
 solution: Experience Platform
-title: IBM DB2連接器
+title: IBM DB2 Source Connector概觀
 topic: overview
-description: 以下文檔提供了如何使用API或用戶介面將IBM DB2連接到平台的資訊。
+description: 瞭解如何使用API或使用者介面將IBM DB2連線至Adobe Experience Platform。
 translation-type: tm+mt
-source-git-commit: e0a0b7fc28b8cc85c5140d3840e06e5c7078c307
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
-source-wordcount: '216'
+source-wordcount: '227'
 ht-degree: 0%
 
 ---
@@ -17,25 +17,25 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->IBM DB2連接器處於測試階段。 如需使用 [測試版標籤連接器的詳細資訊](../../home.md#terms-and-conditions) ，請參閱來源概觀。
+>IBM DB2連接器處於測試階段。 有關使用beta標籤連接器的詳細資訊，請參閱[來源概觀](../../home.md#terms-and-conditions)。
 
-Adobe Experience Platform為資料庫提供者(例如MySQL [!DNL Microsoft]和)提供原生連接 [!DNL Azure]。 您可以將這些系統的資料匯入其中 [!DNL Platform]。
+Adobe Experience Platform為[!DNL Microsoft]、MySQL和[!DNL Azure]等資料庫提供者提供原生連接。 您可以將這些系統中的資料導入[!DNL Platform]。
 
 支援不同類型的第三方資料庫，包括關聯式、NoSQL或資料倉庫。 支援資料庫提供者包括IBM DB2。
 
 ## IP位址允許清單
 
-在使用來源連接器之前，必須將IP位址清單新增至允許清單。 若未將您地區專屬的IP位址新增至您的允許清單，在使用來源時可能會導致錯誤或效能不佳。 如需詳細 [資訊，請參閱](../../ip-address-allow-list.md) 「IP位址允許清單」頁面。
+在使用來源連接器之前，必須將IP位址清單新增至允許清單。 若未將您地區專屬的IP位址新增至您的允許清單，在使用來源時可能會導致錯誤或效能不佳。 如需詳細資訊，請參閱[IP位址允許清單](../../ip-address-allow-list.md)頁面。
 
-以下文檔提供了如何將IBM DB2連接到使用API [!DNL Platform] 或用戶介面的資訊：
+以下文檔提供了如何使用API或用戶介面將IBM DB2連接到[!DNL Platform]的資訊：
 
-## 將IBM DB2連接到使 [!DNL Platform] 用API
+## 使用API將IBM DB2連接到[!DNL Platform]
 
-- [使用Flow Service API建立IBM DB2連接器](../../tutorials/api/create/databases/ibm-db2.md)
+- [使用Flow Service API建立IBM DB2源連接](../../tutorials/api/create/databases/ibm-db2.md)
 - [使用Flow Service API探索資料庫系統](../../tutorials/api/explore/database-nosql.md)
 - [使用Flow Service API從資料庫收集資料](../../tutorials/api/collect/database-nosql.md)
 
-## 將IBM DB2連接 [!DNL Platform] 到使用UI
+## 使用UI將IBM DB2連接到[!DNL Platform]
 
-- [在UI中建立IBM DB2源連接器](../../tutorials/ui/create/databases/ibm-db2.md)
-- [在UI中為資料庫連接器配置資料流](../../tutorials/ui/dataflow/databases.md)
+- [在UI中建立IBM DB2源連接](../../tutorials/ui/create/databases/ibm-db2.md)
+- [在UI中為資料庫連接配置資料流](../../tutorials/ui/dataflow/databases.md)
