@@ -5,9 +5,9 @@ doc-type: release notes
 last-update: January 27, 2021
 author: ens60013
 translation-type: tm+mt
-source-git-commit: 74325dcfe9d7b117e3f812d88e0c4a980d44ef53
+source-git-commit: 2e3a6acbfaa7f733a9843068c00f31f0b7f535b6
 workflow-type: tm+mt
-source-wordcount: '478'
+source-wordcount: '490'
 ht-degree: 7%
 
 ---
@@ -38,6 +38,12 @@ Adobe Experience Platform 現有功能更新：
 ## 目的地 {#destinations}
 
 [!DNL Destinations] 是與目標平台預先建立的整合，可讓您順暢地從Adobe Experience Platform啟動資料。您可以使用目的地來啟用跨通道行銷宣傳、電子郵件宣傳、目標廣告和許多其他使用案例的已知和未知資料。
+
+**新目標**
+
+| 目的地 | 說明 |
+| ----------- | ----------- |
+| [!DNL Azure Blob] | [!DNL Azure Blob] 是Microsoft的雲端物件儲存解決方案。 |
 
 **新功能**
 
