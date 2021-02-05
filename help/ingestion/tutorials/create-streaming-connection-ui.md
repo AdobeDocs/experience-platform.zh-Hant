@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics;streaming connection;create streaming connection;ui guide;tutorial;create a streaming connection;streaming ingestion;ingestion;
+keywords: Experience Platform;home；熱門主題；串流連接；建立流連接；ui指南；教學課程；建立流連接；流攝取；攝取；
 solution: Experience Platform
 title: 使用UI建立串流連線
 topic: tutorial
 type: Tutorial
 description: 本UI指南將協助您使用Adobe Experience Platform建立串流連線。
 translation-type: tm+mt
-source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
+source-git-commit: 089a4d517476b614521d1db4718966e3ebb13064
 workflow-type: tm+mt
-source-wordcount: '512'
+source-wordcount: '532'
 ht-degree: 0%
 
 ---
@@ -20,42 +20,42 @@ ht-degree: 0%
 
 ## 快速入門
 
-若要開始串流資料至， [!DNL Experience Platform]您必須先建立串流HTTP連線。 建立串流連線時，您需要提供關鍵詳細資料，例如串流資料來源，以及您是否要從受信任（已驗證）或不受信任（未驗證）來源傳送資料。
+若要開始將資料串流至[!DNL Experience Platform]，您必須先建立串流HTTP連線。 建立串流連線時，您需要提供關鍵詳細資料，例如串流資料來源，以及您是否要從受信任（已驗證）或不受信任（未驗證）來源傳送資料。
 
-在註冊串流連線後，您將擁有可用來串流資料的唯一URL [!DNL Platform]。
+註冊串流連線後，您將擁有可用來將資料串流至[!DNL Platform]的唯一URL。
 
-請注意，為了完成本指南，您需要存取Adobe Experience Platform。 如果您沒有存取權，請先與 [!DNL Platform]系統管理員聯絡，再繼續。
+請注意，為了完成本指南，您需要存取Adobe Experience Platform。 如果您沒有[!DNL Platform]的存取權，請在繼續之前與系統管理員聯絡。
 
 ## 建立串流連線
 
-登入UI後，按一 [!DNL Experience Platform] 下「來源 **** 」以開啟「 **[!UICONTROL 目錄]** 」標籤。 此頁面將可用的來源類型顯示為個別卡片，每張卡片都包含泡泡，顯示從串流連線到資料集所建立的資料流數。
+登入[!DNL Experience Platform] UI後，按一下&#x200B;**[!UICONTROL Sources]**&#x200B;以開啟&#x200B;**[!UICONTROL Catalog]**&#x200B;標籤。 此頁面將可用的來源類型顯示為個別卡片，每張卡片都包含泡泡，顯示從串流連線到資料集所建立的資料流數。
 
 ![](../images/streaming-ingestion/ui/click-sources.png)
 
-在「來 **[!UICONTROL 源]** 」頁面上，按一下 **[!UICONTROL HTTP API]**，然後按 **[!UICONTROL 一下「連線來源」]**。
+在&#x200B;**[!UICONTROL Sources]**&#x200B;頁面上，按一下&#x200B;**[!UICONTROL HTTP API]**，然後按一下&#x200B;**[!UICONTROL Connect sources]**。
 
 ![](../images/streaming-ingestion/ui/click-connect-source.png)
 
-出現 **[!UICONTROL 「Connect to HTTP]** （連接到HTTP）」螢幕。 在「 **[!UICONTROL 服務詳細資訊]**」下，提供新串流連線的名稱和說明。
+出現&#x200B;**[!UICONTROL 連接到HTTP]**&#x200B;螢幕。 在&#x200B;**[!UICONTROL Service details]**&#x200B;下，提供新串流連線的名稱和說明。
 
-在「 **[!UICONTROL 帳戶驗證]**」下，為串流連線選取下列組態屬性：
+在&#x200B;**[!UICONTROL 帳戶驗證]**&#x200B;下，為您的串流連接選擇以下配置屬性：
 
-- **[!UICONTROL 驗證]:** 無論串流連線是否需要驗證。 驗證可確保從受信任的來源收集資料。 如果處理個人識別資訊(PII)，建議開啟此功能。
-- **[!UICONTROL XDM模式相容性]:** 此串流連線是否會傳送與XDM架構相容的事件。 依預設，此屬性會 **開啟**。
+- **[!UICONTROL 驗證]:** 串流連線是否需要驗證。驗證可確保從受信任的來源收集資料。 如果處理個人識別資訊(PII)，建議開啟此功能。
+- **[!UICONTROL XDM架構相容性]:** 此串流連線是否會傳送與XDM架構相容的事件。依預設，此屬性會轉換為&#x200B;**on**。
 
-選擇完配置屬性後，按一下「連 **[!UICONTROL 接」]**。 您的串流HTTP連線現在已建立，現在可在「來源」工作區的「瀏 **[!UICONTROL 覽]** 」標籤下 **[!UICONTROL 檢視]** 。
+選擇完配置屬性後，按一下&#x200B;**[!UICONTROL Connect]**。 您的串流HTTP連線現在已建立，現在可在&#x200B;**[!UICONTROL Sources]**&#x200B;工作區的&#x200B;**[!UICONTROL Browse]**&#x200B;標籤下檢視。
 
 ![](../images/streaming-ingestion/ui/http-sources-details.png)
 
-在「瀏 **[!UICONTROL 覽]** 」標籤中，您可以按一下新建立的串流HTTP連線，並檢視該連線的詳細資訊。
+在&#x200B;**[!UICONTROL Browse]**&#x200B;標籤中，您可以按一下新建立的串流HTTP連線，並檢視該連線的詳細資訊。
 
 ![](../images/streaming-ingestion/ui/browse-sources.png)
 
-按一下連線名稱的超連結，您就可以透過設定所連接的資料集，來選取要顯示的資料，方法是按一下「選 **[!UICONTROL 取資料」]**。
+通過按一下連接名稱的超連結，可以通過配置所連接的資料集來選擇要顯示的資料，方法是按一下&#x200B;**[!UICONTROL 選擇data]**。
 
 ![](../images/streaming-ingestion/ui/select-data.png)
 
-您可以建 [立新資料集](#create-a-new-dataset) , [或使用現有資料集](#use-an-existing-dataset)。
+您可以[建立新資料集](#create-a-new-dataset)或[使用現有資料集](#use-an-existing-dataset)。
 
 ### 建立新資料集
 
@@ -63,20 +63,20 @@ ht-degree: 0%
 
 ![](../images/streaming-ingestion/ui/create-new-dataset.png)
 
-插入所有詳細資訊並按一下「下 **[!UICONTROL 一步]**」後，您可以先檢視所提供的詳細資訊，再按一下「完成 **** 」將資料集連接至您的串流HTTP連線。
+插入所有詳細資訊並按一下&#x200B;**[!UICONTROL Next]**&#x200B;後，您可以先查看提供的詳細資訊，然後按一下&#x200B;**[!UICONTROL Finish]**&#x200B;將資料集連接到流HTTP連接。
 
 ![](../images/streaming-ingestion/ui/review-create-new-dataset.png)
 
 ### 使用現有資料集
 
-若要使用現有資料集，請選取「輸 **[!UICONTROL 出資料集名稱」]**。
+若要使用現有資料集，請選取&#x200B;**[!UICONTROL Output資料集名稱]**。
 
 ![](../images/streaming-ingestion/ui/use-existing-dataset.png)
 
-按一下「 **[!UICONTROL 下一步]**」後，您可以先檢閱詳細資訊，再按一下「完成 **** 」，將選取的資料集連接至您的串流HTTP連線。
+按一下&#x200B;**[!UICONTROL Next]**&#x200B;後，您可先檢視詳細資訊，再按一下&#x200B;**[!UICONTROL Finish]**&#x200B;將選取的資料集連線至您的串流HTTP連線。
 
 ![](../images/streaming-ingestion/ui/review-existing-dataset.png)
 
 ## 後續步驟
 
-在本教學課程中，您已建立串流HTTP連線，讓您使用串流端點來存取各種 [!DNL Data Ingestion] API。 如需在API中建立串流連線的指示，請閱讀建立串 [流連線教學課程](../tutorials/create-streaming-connection.md)。
+在本教學課程中，您已建立串流HTTP連線，讓您使用串流端點來存取各種[!DNL Data Ingestion] API。 有關在API中建立流連接的說明，請閱讀[建立流連接教程](../tutorials/create-streaming-connection.md)。
