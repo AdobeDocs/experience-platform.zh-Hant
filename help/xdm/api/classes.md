@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;home；熱門主題；API;XDM;XDM;XDM系統；體驗資料模型；Experience資料模型；資料模型；類註冊表；模式註冊表；類；類；類；類；建立
 solution: Experience Platform
-title: 建立類
+title: 類別API端點
 description: 方案註冊表API中的/classes端點允許您以寫程式方式管理體驗應用程式中的XDM類。
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 1f18bf7367addd204f3ef8ce23583de78c70b70c
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
 source-wordcount: '1502'
 ht-degree: 1%
