@@ -1,23 +1,23 @@
 ---
-keywords: Experience Platform;home;popular topics;Audience Manager mapping;audience manager mapping
+keywords: Experience Platform;home；熱門主題；Audience Manager映射；Audience Manager映射
 solution: Experience Platform
-title: Audience Manager對應欄位
+title: Adobe Audience Manager Source Connector的對應欄位
 topic: overview
-description: 下表包含Adobe Audience Manager資料（即時、已登錄和描述檔資料）中欄位與其對應XDM欄位之間的對應。
+description: 瞭解如何將Adobe Audience Manager資料（即時、已登入和描述檔資料）對應至Audience Manager來源連接器的對應Experience Data Model(XDM)欄位。
 translation-type: tm+mt
-source-git-commit: 6934bfeee84f542558894bbd4ba5759891cd17f3
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
-source-wordcount: '151'
+source-wordcount: '169'
 ht-degree: 0%
 
 ---
 
 
-# Audience Manager對應欄位
+# Audience Manager欄位對應
 
 下表包含Adobe Audience Manager資料（即時、已登錄和描述檔資料）中欄位與其對應XDM欄位之間的對應。
 
-有關每個 [XDM欄位的詳細資訊](../../../../xdm/schema/field-dictionary.md) ，請參閱XDM欄位字典。
+有關每個XDM欄位的詳細資訊，請參閱[XDM欄位字典](../../../../xdm/schema/field-dictionary.md)。
 
 ## 即時資料
 
@@ -28,7 +28,7 @@ ht-degree: 0%
 | `requestIds[]` | `ExperienceEvent.identityMap["ECID"]` |
 | `requestIds[]` | `ExperienceEvent.endUserIds` -僅 *限endUserIds中存在的名稱空間，且僅限第一個值。* |
 | `primaryDeviceId` | `ExperienceEvent.identityMap["CORE"]` |
-| `primaryDeviceId` | ExperienceEvent.endUserIds —— 僅限 *endUserIds中出現的名稱空間，且僅限第一個值。* |
+| `primaryDeviceId` | ExperienceEvent.endUserIds - *僅適用於endUserIds中存在的名稱空間，且僅適用於第一個值。* |
 | `trait[] ` | `ExperienceEvent.segmentMemberships["AAMTraits"]` |
 | `segments[]` | `ExperienceEvent.segmentMemberships["AAMSegments"]` |
 | `mergeRules[]` | `ExperienceEvent.profileStitch[]` |
