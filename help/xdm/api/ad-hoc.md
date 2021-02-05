@@ -5,7 +5,7 @@ title: 臨機結構
 description: 在特定情況下，可能需要建立XDM架構，其中欄位的名稱僅限單一資料集使用。 這稱為臨機結構。
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 1f18bf7367addd204f3ef8ce23583de78c70b70c
+source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
 workflow-type: tm+mt
 source-wordcount: '146'
 ht-degree: 0%
