@@ -5,7 +5,7 @@ title: 內容與商務AI快速入門
 topic: Getting started
 description: 內容與商務AI運用Adobe I/O API。 若要呼叫Adobe I/O API和I/O Console整合，您必須先完成驗證教學課程。
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: eb163949f91b0d1e9cc23180bb372b6f94fc951f
 workflow-type: tm+mt
 source-wordcount: '596'
 ht-degree: 0%
