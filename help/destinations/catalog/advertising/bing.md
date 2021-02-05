@@ -1,21 +1,17 @@
 ---
 keywords: '廣告；bing; '
-title: Microsoft Bing目標
-seo-title: Microsoft Bing目標可協助您將描述檔資料傳送至Microsoft Display Advertising。
-description: 透過Microsoft Bing目標，您可以跨Microsoft Display Advertising執行重新定位和受眾鎖定的數位宣傳。
-seo-description: 透過Microsoft Bing目標，您可以跨Microsoft Display Advertising執行重新定位和受眾鎖定的數位宣傳。
+title: Microsoft Bing連接目標
+description: 有了Microsoft Bing連線目標，您就可以跨Microsoft Display Advertising執行重新定位和受眾鎖定的數位宣傳。
 translation-type: tm+mt
-source-git-commit: 95f57f9d1b3eeb0b16ba209b9774bd94f5758009
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '491'
+source-wordcount: '461'
 ht-degree: 0%
 
 ---
 
 
-# [!DNL Microsoft Bing] 目的地
-
-## 概述 {#overview}
+# [!DNL Microsoft Bing] 連接
 
 [!DNL Microsoft Bing]目的地可協助您將描述檔資料傳送至[!DNL Microsoft Display Advertising]。
 
