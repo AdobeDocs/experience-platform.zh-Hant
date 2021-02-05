@@ -1,11 +1,10 @@
 ---
 keywords: 平台；目標；目標工作區；工作區；ui；目標ui；目錄；目標目錄；
-title: 目標工作區
-seo-title: 目標工作區
+title: 目標工作區概述
 description: 「目標」工作區包含4個部分：目錄、瀏覽、帳戶和系統視圖，這些部分在以下各節中介紹。
 seo-description: 在Adobe Experience Platform中，從左側導覽列選取「目標」以存取目標工作區。
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
 source-wordcount: '910'
 ht-degree: 2%
@@ -13,7 +12,7 @@ ht-degree: 2%
 ---
 
 
-# 目標工作區{#destinations-workspace}
+# 目標工作區概述{#destinations-workspace}
 
 在Adobe Experience Platform中，從左側導覽列選擇&#x200B;**[!UICONTROL 目標]**&#x200B;以存取[!UICONTROL 目標]工作區。
 
