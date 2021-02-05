@@ -1,25 +1,25 @@
 ---
 keywords: Experience Platform;home;popular topics;catalog;api;replace an object
 solution: Experience Platform
-title: 替換對象
+title: 替換目錄對象
 topic: developer guide
 description: 您可以使用PUT請求覆寫目錄對象的內容，其中整個資源將替換為請求裝載。
 translation-type: tm+mt
-source-git-commit: dd1f508b93e8eac14e3c41fac9d8f49769d08f46
+source-git-commit: a1103bfbf79f9c87bac5b113c01386a6fb8950e7
 workflow-type: tm+mt
-source-wordcount: '161'
+source-wordcount: '173'
 ht-degree: 2%
 
 ---
 
 
-# 替換對象
+# 替換目錄對象
 
-您可以使用PUT請求覆 [!DNL Catalog] 寫物件的內容，其中整個資源會以請求裝載取代。
+您可以使用PUT請求覆寫[!DNL Catalog]物件的內容，其中整個資源會被請求裝載所取代。
 
 >[!NOTE]
 >
->如果您只需要更新對象中的幾個特定字 [!DNL Catalog] 段，則使用PATCH請求可能會更有效。
+>如果您只需要更新[!DNL Catalog]物件中的幾個特定欄位，使用PATCH請求可能會更有效率。
 
 **API格式**
 
@@ -29,7 +29,7 @@ PUT /{OBJECT_TYPE}/{OBJECT_ID}
 
 | 參數 | 說明 |
 | --- | --- |
-| `{OBJECT_TYPE}` | 要替換 [!DNL Catalog] 的對象類型。 有效對象包括： <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_TYPE}` | 要替換的[!DNL Catalog]對象的類型。 有效對象包括： <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
 | `{OBJECT_ID}` | 您要更新的特定物件的識別碼。 |
 
 **請求**
