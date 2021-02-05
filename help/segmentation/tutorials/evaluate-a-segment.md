@@ -1,14 +1,14 @@
 ---
 keywords: 體驗平台； home；熱門主題；群體評價；群體服務；群體；群體；群體；群體；群體；群體；群體；群體；群體；群體；
 solution: Experience Platform
-title: 評估區段
+title: 評估並存取區段結果
 topic: tutorial
 type: Tutorial
-description: 本檔案提供使用區段API評估區段及存取區段結果的教學課程。
+description: 請依照本教學課程學習如何使用Adobe Experience Platform Segmentation Service API評估細分並存取細分結果。
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: b3defc3e33a55855e307ab70b9797d985d5719e3
 workflow-type: tm+mt
-source-wordcount: '1560'
+source-wordcount: '1567'
 ht-degree: 0%
 
 ---
