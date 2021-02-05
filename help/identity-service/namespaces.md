@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform;home；常用主題；namespace;Namespace;Namespace;Namespaces;Identity namespace;Identity namespace;Identity;Identity service;identity service
 solution: Experience Platform
-title: Adobe Experience Platform Identity Service
+title: Identity Namespace概觀
 topic: overview
 description: '身分識別命名空間是 Identity Service 的元件，用途是作為身分識別相關內容的指標。例如，他們會將"name@email.com"值區分為電子郵件地址或"443522"作為數值CRM ID。 '
 translation-type: tm+mt
-source-git-commit: 0547c33e831fe1ac684f55a0e79978cd7f191e65
+source-git-commit: 73035aec86297cfc4ee9337cf922d599001379c3
 workflow-type: tm+mt
-source-wordcount: '1475'
+source-wordcount: '1473'
 ht-degree: 2%
 
 ---
