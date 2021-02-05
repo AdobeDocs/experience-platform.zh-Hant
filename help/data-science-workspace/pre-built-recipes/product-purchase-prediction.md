@@ -1,21 +1,19 @@
 ---
-keywords: Experience Platform;product purchase recipe;Data Science Workspace;popular topics;recipes;pre build recipe
+keywords: Experience Platform；產品購買配方； Data Science Workspace；熱門主題；配方；預建配方
 solution: Experience Platform
-title: 產品購買方式
+title: 產品購買預測方式
 topic: overview
 description: 「產品購買預測」方式可讓您預測特定類型客戶購買事件的可能性，例如產品購買。
 translation-type: tm+mt
-source-git-commit: 7615476c4b728b451638f51cfaa8e8f3b432d659
+source-git-commit: f4095a90ff70e8d054bae4f3b0f884552ffd30df
 workflow-type: tm+mt
-source-wordcount: '382'
+source-wordcount: '397'
 ht-degree: 6%
 
 ---
 
 
-# 產品購買方式
-
-## 概述
+# 產品購買預測方式
 
 「產品購買預測」方式可讓您預測特定類型客戶購買事件的可能性，例如產品購買。
 
@@ -35,7 +33,7 @@ ht-degree: 6%
 
 ## 資料架構
 
-此方式使 [用XDM結構](../../xdm/home.md) ，來建立資料模型。 此方式所用的架構如下所示：
+此方式使用[XDM結構](../../xdm/home.md)來建模資料。 此方式所用的架構如下所示：
 
 | 欄位名稱 | 類型 |
 --- | ---
@@ -60,6 +58,6 @@ ht-degree: 6%
 
 ## 演算法
 
-首先，載入 *ProductPrediction模式中的訓* 練資料集。 在此基礎上，利用隨機森林分類器對模 [型進行訓練](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestClassifier.html)。 隨機森林分類器是一種整合算法，它是指將多種算法結合起來以獲得改進預測效能的算法。 算法的思想是隨機森林分類器建立多個決策樹並合併它們，從而建立更準確、更穩定的預測。
+首先，載入&#x200B;*ProductPrediction*&#x200B;模式中的訓練資料集。 從這裡，使用[隨機森林分類器來訓練模型。 ](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestClassifier.html)隨機森林分類器是一種整合算法，它是指將多種算法結合起來以獲得改進預測效能的算法。 算法的思想是隨機森林分類器建立多個決策樹並合併它們，從而建立更準確、更穩定的預測。
 
 此程式首先建立一組決策樹，該決策樹隨機選擇訓練資料的子集。 然後，對每個決策樹的結果進行平均。
