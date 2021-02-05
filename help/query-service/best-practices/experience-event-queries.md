@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform;home;popular topics;query service;Query service;experienceevent queries;experienceeventquery;Experience Event查詢；
 solution: Experience Platform
-title: 體驗事件查詢
+title: 體驗事件的範例查詢
 topic: queries
 type: Tutorial
-description: 以下檔案提供與「體驗事件」相關的查詢範例。
+description: 以下檔案提供Adobe Experience Platform查詢服務中與Experience Events相關的查詢範例。
 translation-type: tm+mt
-source-git-commit: 5348ea4fb381f938ef635077c04cbff69c1b1a45
+source-git-commit: 97dc0b5fb44f5345fd89f3f56bd7861668da9a6e
 workflow-type: tm+mt
-source-wordcount: '310'
+source-wordcount: '320'
 ht-degree: 0%
 
 ---
 
 
-# [!DNL Experience Event] 查詢
+# [!DNL Experience Events]的查詢範例
 
 除了標準SQL查詢外，Adobe Experience Platform [!DNL Query Service]還支援使用[!DNL Experience Events]編寫查詢。 「體驗事件」由「體驗資料模型」(XDM)ExperienceEvent類別表示，當使用者與網站或服務互動時，該類別會擷取系統的不可變和非匯總快照，因此可用於時域分析。
 
