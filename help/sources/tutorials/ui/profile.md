@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics;activate inbound data;populate profile;populate rtcp;populated unified profile
+keywords: Experience Platform;home;popular topics;activate inbound data;populate profile;populate rtcp;pelipted unified profile
 solution: Experience Platform
-title: 啟用傳入來源資料以填入客戶個人檔案
+title: 啟用傳入來源資料，在UI中填入客戶個人檔案
 topic: overview
 type: Tutorial
 description: 來自來源連接器的傳入資料可用於豐富和填入即時客戶個人檔案資料。
 translation-type: tm+mt
-source-git-commit: f86f7483e7e78edf106ddd34dc825389dadae26a
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
-source-wordcount: '489'
+source-wordcount: '507'
 ht-degree: 0%
 
 ---
@@ -16,57 +16,57 @@ ht-degree: 0%
 
 # 啟用傳入來源資料以填入客戶個人檔案
 
-來自來源連接器的傳入資料可用於豐富和填入資 [!DNL Real-time Customer Profile] 料。
+來自源連接器的入站資料可用於豐富和填充[!DNL Real-time Customer Profile]資料。
 
 ## 快速入門
 
 本教學課程需要對Adobe Experience Platform的下列元件有正確的認識：
 
-- [[!DNL Experience Data Model (XDM)] 系統](../../../xdm/home.md):組織客戶體驗資料 [!DNL Experience Platform] 的標準化架構。
+- [[!DNL Experience Data Model (XDM)] 系統](../../../xdm/home.md):組織客戶體驗資 [!DNL Experience Platform] 料的標準化架構。
    - [架構構成基礎](../../../xdm/schema/composition.md):瞭解XDM架構的基本建置區塊，包括架構組合的主要原則和最佳實務。
    - [架構編輯器教程](../../../xdm/tutorials/create-schema-ui.md):瞭解如何使用架構編輯器UI建立自訂架構。
 - [[!DNL Real-time Customer Profile]](../../../profile/home.md):根據來自多個來源的匯整資料，提供統一、即時的消費者個人檔案。
 
-此外，本教學課程要求您已建立並設定來源連接器。  如需在UI中建立不同連接器的教學課程清單，請參閱來源連 [接器概觀](../../home.md)。
+此外，本教學課程要求您已建立並設定來源連接器。  在[來源連接器概述](../../home.md)中，可找到在UI中建立不同連接器的教學課程清單。
 
-## 填入您的 [!DNL Real-time Customer Profile] 資料
+## 填入您的[!DNL Real-time Customer Profile]資料
 
-為了豐富客戶個人檔案，目標資料集的來源架構必須相容，才能用於 [!DNL Real-time Customer Profile]。 相容的架構符合下列需求：
+為了豐富客戶個人檔案，目標資料集的來源架構必須相容，才能用於[!DNL Real-time Customer Profile]。 相容的架構符合下列需求：
 
 - 架構至少有一個屬性指定為標識屬性。
 - 架構具有定義為主標識的身份屬性。
 - 資料流記憶體在映射，其中主標識是目標屬性。
 
-在「來源」工作區中，按一下「 **[!UICONTROL 瀏覽]** 」標籤以列出您的基本連線。 在顯示的清單中，查找包含要填充配置檔案的資料流的連接。 按一下連接的名稱以訪問其詳細資訊。
+在「來源」工作區中，按一下「瀏覽&#x200B;****」標籤以列出基本連線。 在顯示的清單中，查找包含要填充配置檔案的資料流的連接。 按一下連接的名稱以訪問其詳細資訊。
 
 ![](../../images/tutorials/dataflow/cloud-storage/batch/browse.png)
 
-此時將顯示連 **[!UICONTROL 接的「源」活動]** 螢幕，顯示連接正在將源資料收錄到的資料集。 按一下您要啟用的資料集名稱 [!DNL Profile]。
+此時將顯示連接的&#x200B;**[!UICONTROL 源活動]**&#x200B;螢幕，顯示連接正在將源資料收錄到的資料集。 按一下您要為[!DNL Profile]啟用的資料集名稱。
 
 ![](../../images/tutorials/dataflow/cloud-storage/batch/dataset-dataflow.png)
 
-此時會 **[!UICONTROL 顯示「資料集]** 」活動畫面。 畫面 **[!UICONTROL 右側的]****** 「屬性」欄會顯示資料集的詳細資料，並包含「描述檔」切換器和資料集所遵守之架構的連結。 按一下架構的名稱可查看其構成。
+出現&#x200B;**[!UICONTROL 資料集活動]**&#x200B;畫面。 畫面右側的&#x200B;**[!UICONTROL Properties]**&#x200B;欄顯示資料集的詳細資料，並包含&#x200B;**[!UICONTROL Profile]**&#x200B;開關和資料集所依循之模式的連結。 按一下架構的名稱可查看其構成。
 
 ![](../../images/tutorials/dataflow/cloud-storage/batch/select-dataset-schema.png)
 
-此時 **[!UICONTROL 會出現]** 「架構編輯器」，在中央畫布中顯示架構的結構。 在畫布中，選取要設為主要身分的欄位。 在出現的 **[!UICONTROL 欄位屬性]** (Field properties **[!UICONTROL )標籤下，選取「]** Identity **[!UICONTROL 」核取方塊，然後選取「]** Primary identity」。 最後，選取適當的 **[!UICONTROL Identity命名空間]**，然後按一下 **[!UICONTROL 套用]**。
+出現&#x200B;**[!UICONTROL 架構編輯器]**，顯示中心畫布中的架構結構。 在畫布中，選取要設為主要身分的欄位。 在出現的&#x200B;**[!UICONTROL 欄位屬性]**&#x200B;頁籤下，選擇&#x200B;**[!UICONTROL Identity]**&#x200B;複選框，然後選擇&#x200B;**[!UICONTROL Primary identity]**。 最後，選擇適當的&#x200B;**[!UICONTROL Identity namespace]**，然後按一下&#x200B;**[!UICONTROL Apply]**。
 
 ![](../../images/tutorials/dataflow/cloud-storage/batch/set-schema-identity.png)
 
-按一下方案結構的頂級對象，並顯示「方 **[!UICONTROL 案屬性]** 」列。 通過切換配置 [!DNL Profile] 式交換機啟 **[!UICONTROL 用模式]** 。 按一 **[!UICONTROL 下「儲存]** 」以完成變更。
+按一下架構結構的頂級對象，將顯示&#x200B;**[!UICONTROL 架構屬性]**&#x200B;列。 通過切換&#x200B;**[!UICONTROL 配置檔案]**&#x200B;交換機為[!DNL Profile]啟用模式。 按一下&#x200B;**[!UICONTROL 保存]**&#x200B;以完成更改。
 
 ![](../../images/tutorials/dataflow/cloud-storage/batch/enable-profile.png)
 
-現在已啟用方案，請 [!DNL Profile]返回「資料集」活動畫面，然後按一下「屬性」欄內的「設定檔 **[!UICONTROL 」切換]** 資料集，以啟 [!DNL Profile]******** 用該活動。
+現在已為[!DNL Profile]啟用模式，返回&#x200B;**[!UICONTROL Dataset activity]**&#x200B;螢幕，並通過按一下&#x200B;**[!UICONTROL Profile]**&#x200B;在&#x200B;**[!UICONTROL Properties]**&#x200B;列內切換來啟用[!DNL Profile]資料集。
 
 ![](../../images/tutorials/dataflow/cloud-storage/batch/enable-dataset-profile.png)
 
-在同時啟用模式和資料集的情 [!DNL Profile]況下，收入至該資料集的資料現在也會填入客戶個人檔案。
+在[!DNL Profile]啟用架構和資料集後，內嵌至該資料集的資料現在也會填入客戶個人檔案。
 
 >[!NOTE]
 >
->最近啟用的資料集內的現有資料不會被使用 [!DNL Profile]。
+>[!DNL Profile]不會使用最近啟用的資料集內的現有資料。
 
 ## 後續步驟
 
-遵循本教學課程，您已成功啟動傳入的人口 [!DNL Profile] 資料。 如需詳細資訊，請參閱 [[!DNL Real-time Customer Profile] 總覽](../../../profile/home.md)。
+按照本教程，您已成功激活[!DNL Profile]人口的入站資料。 如需詳細資訊，請參閱[[!DNL Real-time Customer Profile] overview](../../../profile/home.md)。
