@@ -5,7 +5,7 @@ title: Data Science Workspace疑難排解指南
 topic: Troubleshooting
 description: 本檔案提供有關Adobe Experience Platform Data Science Workspace常見問題的解答。
 translation-type: tm+mt
-source-git-commit: 045ad186efac59317635439a05b9d24e703c9859
+source-git-commit: 10ccccf72ff7a2fd726066332b9771dff1929af6
 workflow-type: tm+mt
 source-wordcount: '925'
 ht-degree: 0%
