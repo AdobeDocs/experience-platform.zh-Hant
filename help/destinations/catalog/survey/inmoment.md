@@ -1,21 +1,17 @@
 ---
 keywords: InMoment;inmoment;Inmoment；啟動整合
-title: InMoment擴充功能
-seo-title: InMoment擴充功能
+title: InMoment擴充功能目的地
 description: InMoment擴充功能是Adobe Experience Platform中的調查目的地。 如需擴充功能的詳細資訊，請參閱Adobe Exchange的擴充功能頁面。
-seo-description: InMoment擴充功能是Adobe Experience Platform中的調查目的地。 如需擴充功能的詳細資訊，請參閱Adobe Exchange的擴充功能頁面。
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '565'
+source-wordcount: '538'
 ht-degree: 4%
 
 ---
 
 
 # [!DNL InMoment] 擴充功能 {#inmoment-extension}
-
-## 概述 {#overview}
 
 [!DNL InMoment]啟動整合功能可讓您透過Digital Intercept產品快速輕鬆地啟用線上意見回應。 在應用程式中，您可透過CXI雲端管理員來設定和管理截取，讓CX管理員更能控制其程式。
 
