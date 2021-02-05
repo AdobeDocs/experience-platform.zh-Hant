@@ -1,5 +1,5 @@
 ---
-title: 以Adobe Experience Platform為基礎的應用程式與智慧服務
+title: 基於Experience Platform的應用程式與智慧服務
 description: 此視訊概述以Adobe Experience Platform為基礎的應用程式服務和智慧服務，以補充Experience Cloud Applications&mdash；即時客戶資料平台、歷程協調、客戶歷程分析、歸因人工智慧和客戶人工智慧。
 feature: platform
 topics: null
@@ -9,10 +9,10 @@ doc-type: video
 activity: understand
 thumbnail: 32554.jpg
 translation-type: tm+mt
-source-git-commit: 72f60ef80a23f5ca4e70147ee6aa6027028fefd0
+source-git-commit: 5575d5e45bddcc007dcf78720cd7a7e20475f78c
 workflow-type: tm+mt
-source-wordcount: '119'
-ht-degree: 21%
+source-wordcount: '118'
+ht-degree: 22%
 
 ---
 
