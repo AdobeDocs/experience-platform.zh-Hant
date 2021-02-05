@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform; home；熱門主題；segment;Segment;Create segmentation;segmentation;create a segment;Segmentation Service;
 solution: Experience Platform
-title: 建立區段
+title: 使用分段服務API建立分段
 topic: tutorial
 type: Tutorial
-description: 本檔案提供使用Adobe Experience Platform Segmentation Service API來開發、測試、預覽和儲存區段定義的教學課程。
+description: 請依照本教學課程，瞭解如何使用Adobe Experience Platform Segmentation Service API來開發、測試、預覽和儲存區段定義。
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: b3defc3e33a55855e307ab70b9797d985d5719e3
 workflow-type: tm+mt
-source-wordcount: '913'
+source-wordcount: '924'
 ht-degree: 0%
 
 ---
 
 
-# 建立區段
+# 使用分段服務API建立區段
 
 本檔案提供使用[[!DNL Adobe Experience Platform Segmentation Service API]](../api/getting-started.md)來開發、測試、預覽和儲存區段定義的教學課程。
 
