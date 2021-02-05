@@ -1,25 +1,21 @@
 ---
 keywords: 飛艇屬性；飛艇目的地
-title: 飛艇屬性目標
-seo-title: 飛艇屬性目標
+title: 飛艇屬性連接目的地
 description: 順暢地將Adobe觀眾資料傳遞至Ansphiry，做為觀眾屬性，以便在Ansphiry中定位。
-seo-description: 順暢地將Adobe觀眾資料傳遞至Ansphiry，做為觀眾屬性，以便在Ansphiry中定位。
 translation-type: tm+mt
-source-git-commit: 95f57f9d1b3eeb0b16ba209b9774bd94f5758009
+source-git-commit: f4095a90ff70e8d054bae4f3b0f884552ffd30df
 workflow-type: tm+mt
-source-wordcount: '1222'
-ht-degree: 1%
+source-wordcount: '1205'
+ht-degree: 0%
 
 ---
 
 
-# （測試版）[!DNL Airship Attributes]目標{#airship-attributes-destination}
+# （測試版）[!DNL Airship Attributes]連接{#airship-attributes-destination}
 
 >[!IMPORTANT]
 >
 >Adobe Experience Platform中的[!DNL Airship Attributes]目標目前正在測試中。 文件和功能可能會有所變更。
-
-## 概述 {#overview}
 
 [!DNL Airship] 是領先的客戶互動平台，可協助您在客戶生命週期的每個階段，為您的使用者提供有意義的個人化全通道訊息。
 
