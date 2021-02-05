@@ -1,10 +1,10 @@
 ---
 keywords: Experience Platform;home；熱門主題；API;XDM;XDM;XDM系統；體驗資料模型；Experience資料模型；資料模型；資料類型註冊表；模式註冊表；資料類型；資料類型；資料類型；資料類型；建立
 solution: Experience Platform
-title: 建立資料類型
+title: 資料類型API端點
 description: 架構註冊表API中的/datatypes端點可讓您以程式設計方式管理體驗應用程式中的XDM資料類型。
 translation-type: tm+mt
-source-git-commit: 1f18bf7367addd204f3ef8ce23583de78c70b70c
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
 source-wordcount: '1147'
 ht-degree: 2%
