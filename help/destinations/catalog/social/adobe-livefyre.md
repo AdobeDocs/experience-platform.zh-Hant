@@ -1,21 +1,17 @@
 ---
 keywords: livefyre;livefyre擴充功能
-title: Adobe Livefyre擴充功能
-seo-title: Adobe Livefyre擴充功能
+title: Adobe Livefyre Extension Destination
 description: Adobe Livefyre擴充功能是Adobe Experience Platform中的社交目的地。 如需擴充功能的詳細資訊，請參閱Adobe Exchange的擴充功能頁面。
-seo-description: Adobe Livefyre擴充功能是Adobe Experience Platform中的社交目的地。 如需擴充功能的詳細資訊，請參閱Adobe Exchange的擴充功能頁面。
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '527'
-ht-degree: 4%
+source-wordcount: '498'
+ht-degree: 5%
 
 ---
 
 
 # Adobe Livefyre擴充功能{#adobe-livefyre-extension}
-
-## 概述 {#overview}
 
 Adobe Livefyre可讓您探索、組織並發佈使用者產生的內容，以建立真實且高度個人化的體驗。
 
