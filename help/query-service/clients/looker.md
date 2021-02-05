@@ -1,27 +1,25 @@
 ---
 keywords: Experience Platform; home；熱門主題；查詢服務；查詢服務； Looker;looker；連接到查詢服務；
 solution: Experience Platform
-title: 與Looker連接
+title: 將Looker連接到查詢服務
 topic: connect
 description: 本檔案將逐步說明如何將Looker與Adobe Experience Platform Query Service連接。
 translation-type: tm+mt
-source-git-commit: bc1bbdddd75b11ac180b5e6faa391fd74e5f7e02
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '241'
+source-wordcount: '244'
 ht-degree: 0%
 
 ---
 
 
-# [!DNL Looker]
+# 將[!DNL Looker]連接到查詢服務
 
 本檔案涵蓋連接[!DNL Looker]與Adobe Experience Platform [!DNL Query Service]的步驟。
 
 >[!NOTE]
 >
 > 本指南假定您已經擁有[!DNL Looker]的訪問權限，並熟悉如何導航其介面。 有關[!DNL Looker]的更多資訊，請參閱[official [!DNL Looker] 文檔](https://docs.looker.com/)。
-
-## 連接[!DNL Looker]平台
 
 登入[!DNL Looker]後，選擇&#x200B;**[!DNL Admin]**，然後選擇&#x200B;**[!DNL Connections]**。
 
