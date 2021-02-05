@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics;ETL;etl;etl workflow;ETL workflow
+keywords: Experience Platform; home；熱門主題；ETL;etl;etl工作流；ETL工作流
 solution: Experience Platform
 title: ETL工作流程
 topic: overview
 description: 各種擷取、轉換和載入(ETL)工具的格式可能不同，但大部分都會公開類似的功能，以協助結合多個資料來源。
 translation-type: tm+mt
-source-git-commit: f4a4e65a087313dc4e2414f999e021e3f6e17137
+source-git-commit: f8186e467dc982003c6feb01886ed16d23572955
 workflow-type: tm+mt
-source-wordcount: '202'
+source-wordcount: '213'
 ht-degree: 0%
 
 ---
@@ -21,13 +21,13 @@ ht-degree: 0%
 
 以下圖表提供常見ETL動作的模型，以及以標準互動為基礎的一般使用者體驗。 這些影像可輕鬆適用於特定ETL使用者體驗。
 
-以下動作在「 [ETL整合指南」中說明的步驟中說明](home.md)。 有些步驟會參照特定的「圖」，有些則會說明與此處顯示的工作流程類似的動作。
+[ETL整合指南](home.md)中概述的步驟說明了以下操作。 有些步驟會參照特定的「圖」，有些則會說明與此處顯示的工作流程類似的動作。
 
 ### 圖1 —— 設定新的Adobe Experience Platform連接器：
 
 ![](images/image2.png)
 
-### 圖2 —— 已激活 [!DNL Experience Platform] 連接器：
+### 圖2 - [!DNL Experience Platform]接頭已激活：
 
 ![](images/image3.png)
 
@@ -35,11 +35,11 @@ ht-degree: 0%
 
 ![](images/image4.png)
 
-### 圖4 —— 新的轉換UI，選擇 [!DNL Experience Platform] 連接：
+### 圖4 —— 新建轉換UI，選擇[!DNL Experience Platform]連接：
 
 ![](images/image5.png)
 
-### 圖5 —— 瀏覽源資料 [!DNL Experience Platform] 集：
+### 圖5 —— 瀏覽源[!DNL Experience Platform]資料集：
 
 ![](images/image6.png)
 
@@ -59,7 +59,7 @@ ht-degree: 0%
 
 ![](images/image10.png)
 
-### 圖10 —— 定義(XDM) [!DNL Experience Data Model] 目標資料集：
+### 圖10 —— 定義[!DNL Experience Data Model](XDM)目標資料集：
 
 ![](images/image11.png)
 
