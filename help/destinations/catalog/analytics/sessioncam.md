@@ -1,21 +1,17 @@
 ---
 keywords: SessionCam;session cam;sessioncam
-title: SessionCam擴充功能
-seo-title: SessionCam擴充功能
+title: SessionCam擴充功能目標
 description: SessionCam擴充功能是Adobe Experience Platform中的分析目標。 如需擴充功能的詳細資訊，請參閱Adobe Exchange的擴充功能頁面。
-seo-description: SessionCam擴充功能是Adobe Experience Platform中的分析目標。 如需擴充功能的詳細資訊，請參閱Adobe Exchange的擴充功能頁面。
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '544'
-ht-degree: 4%
+source-wordcount: '517'
+ht-degree: 5%
 
 ---
 
 
 # [!DNL SessionCam] 擴充功能 {#sessioncam-extension}
-
-## 概述 {#overview}
 
 [!DNL SessionCam] 提供一套重要的工具，可顯示使用者行為，並顯示要修正的最重要問題。
 
