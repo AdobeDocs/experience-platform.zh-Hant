@@ -1,27 +1,25 @@
 ---
 keywords: Experience Platform;home;popular topics;PSQL;psqlconnect to query service;Query service;query service;
 solution: Experience Platform
-title: 使用PSQL連接
+title: 將PSQL連接到查詢服務
 topic: connect
 description: 'PSQL是命令行介面，在電腦上安裝PostgreSQL時會出現。 您可依照下列指示進行安裝。 '
 translation-type: tm+mt
-source-git-commit: bc1bbdddd75b11ac180b5e6faa391fd74e5f7e02
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '244'
+source-wordcount: '247'
 ht-degree: 1%
 
 ---
 
 
-# PSQL
+# 將PSQL連接到查詢服務
 
 PSQL是命令行介面，在電腦上安裝[!DNL PostgreSQL]時會安裝該介面。 本檔案涵蓋將PSQL與Adobe Experience Platform [!DNL Query Service]連接的步驟。
 
 >[!NOTE]
 >
 > 本指南假設您已擁有[!DNL PSQL]的存取權，並熟悉如何使用它。 有關[!DNL PSQL]的更多資訊，請參閱[official [!DNL PSQL] documentation](https://www.postgresql.org/docs/current/app-psql.html)。
-
-## 連接PSQL和[!DNL Query Service]
 
 在電腦上安裝PSQL後，您可以將PSQL與查詢服務連接。 返回[!DNL Platform] UI，然後選擇&#x200B;**[!UICONTROL 查詢]**，然後選擇&#x200B;**[!UICONTROL 憑據]**。
 
