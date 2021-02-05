@@ -1,21 +1,17 @@
 ---
 keywords: 通話URL收件箱；通話URL收件箱；通話URL收件箱；通話URL收件箱；通話URL；通話URL；通話URL
-title: 通話URL收件匣副檔名
-seo-title: 通話URL收件匣
+title: 通話URL收件匣副檔名目標
 description: 「交談URL收件匣」副檔名是Adobe Experience Platform中客戶目的地的聲音。 如需擴充功能的詳細資訊，請參閱Adobe Exchange的擴充功能頁面。
-seo-description: 「交談URL收件匣」副檔名是Adobe Experience Platform中客戶目的地的聲音。 如需擴充功能的詳細資訊，請參閱Adobe Exchange的擴充功能頁面。
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 8d403e73a804953f9584d6a72f945d4444e65d11
 workflow-type: tm+mt
-source-wordcount: '583'
+source-wordcount: '550'
 ht-degree: 4%
 
 ---
 
 
 # [!DNL Talk URL Inbox] 擴充功能 {#talk-url-extension}
-
-## 概述 {#overview}
 
 從您的網頁訪客接收語音留言。 包含代管UI和雲端機器學習功能，可將語音訊息轉錄為文字見解。
 
