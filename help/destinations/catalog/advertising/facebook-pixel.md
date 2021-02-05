@@ -1,21 +1,17 @@
 ---
 keywords: facebook像素擴展；facebook像素擴展；facebook像素目標；facebook像素目標
-title: Facebook Pixel擴充功能
-seo-title: Facebook Pixel擴充功能
+title: Facebook Pixel Extension Destination
 description: Facebook Pixel擴充功能是Adobe Experience Platform中的廣告目的地。 如需擴充功能的詳細資訊，請參閱Adobe Exchange的擴充功能頁面。
-seo-description: Facebook Pixel擴充功能是Adobe Experience Platform中的廣告目的地。 如需擴充功能的詳細資訊，請參閱Adobe Exchange的擴充功能頁面。
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '538'
+source-wordcount: '509'
 ht-degree: 3%
 
 ---
 
 
 # [!DNL Facebook Pixel] 擴充功能 {#facebook-pixel-extension}
-
-## 概述 {#overview}
 
 [!DNL Facebook Pixel]是一種分析工具，可讓您透過瞭解訪客在您的網站上採取的動作來評估廣告的成效。
 
