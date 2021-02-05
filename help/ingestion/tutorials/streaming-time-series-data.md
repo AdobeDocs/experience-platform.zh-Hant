@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform; home；熱門主題；串流擷取；擷取；時間序列資料；串流時間序列資料；
 solution: Experience Platform
-title: 串流時間系列資料
+title: 使用串流擷取API串流時間系列資料
 topic: tutorial
 type: Tutorial
 description: 本教學課程將協助您開始使用串流擷取API，這是Adobe Experience Platform Data Ingestion Service API的一部分。
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
-source-wordcount: '1234'
+source-wordcount: '1236'
 ht-degree: 2%
 
 ---
 
 
-# 將時間系列資料串流至Adobe Experience Platform
+# 使用串流擷取API串流時間系列資料
 
 本教學課程將協助您開始使用串流擷取API，這是Adobe Experience Platform [!DNL Data Ingestion Service] API的一部分。
 
