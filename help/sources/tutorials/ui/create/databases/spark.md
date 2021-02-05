@@ -1,26 +1,26 @@
 ---
-keywords: Experience Platform;home;popular topics;Azure HDInsights;Apache Spark
+keywords: Experience Platform;home；熱門主題；Azure HDInsights;Apache Spark
 solution: Experience Platform
-title: 在Azure HDInsights的UI中建立Apache Spark來源連接器
+title: 在UI中的Azure HDInsights Source Connection上建立Apache Spark
 topic: overview
 type: Tutorial
-description: 本教學課程提供在Azure HDInsights來源連接器上使用平台使用者介面建立Apache Spark的步驟。
+description: 瞭解如何使用Adobe Experience Platform UI在Azure HDInsights來源連線上建立Apache Spark。
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
-source-wordcount: '488'
+source-wordcount: '496'
 ht-degree: 1%
 
 ---
 
 
-# 在UI中 [!DNL Apache Spark] 建立 [!DNL Azure HDInsights] 來源連接器
+# 在UI的[!DNL Azure HDInsights]源連接上建立[!DNL Apache Spark]
 
 >[!NOTE]
 >
-> 開 [!DNL Apache Spark] 機接 [!DNL Azure HDInsights] 頭為測試版。 如需使用 [測試版標籤連接器的詳細資訊](../../../../home.md#terms-and-conditions) ，請參閱來源概觀。
+> [!DNL Azure HDInsights]連接器上的[!DNL Apache Spark]為beta。 有關使用beta標籤連接器的詳細資訊，請參閱[來源概觀](../../../../home.md#terms-and-conditions)。
 
-Adobe Experience Platform中的來源連接器可讓您依計畫吸收外部來源的資料。 本教學課程提供使用使用者介 [!DNL Apache Spark] 面建立 [!DNL Azure HDInsights] 來源連接器 [!DNL Platform] 的步驟。
+Adobe Experience Platform中的來源連接器可讓您依計畫吸收外部來源的資料。 本教程提供使用[!DNL Platform]用戶介面在[!DNL Azure HDInsights]源連接器上建立[!DNL Apache Spark]的步驟。
 
 ## 快速入門
 
@@ -31,46 +31,46 @@ Adobe Experience Platform中的來源連接器可讓您依計畫吸收外部來�
    * [架構編輯器教程](../../../../../xdm/tutorials/create-schema-ui.md):瞭解如何使用架構編輯器UI建立自訂架構。
 * [即時客戶個人檔案](../../../../../profile/home.md):根據來自多個來源的匯整資料，提供統一、即時的消費者個人檔案。
 
-如果您已經有有效的 [!DNL Spark] 連接，則可以跳過本文檔的其餘部分，並繼續有關配置資料流 [的教程](../../dataflow/databases.md)
+如果您已經有有效的[!DNL Spark]連接，則可跳過本文檔的其餘部分，繼續[配置資料流](../../dataflow/databases.md)的教程
 
 ### 收集必要的認證
 
-若要存取您的帳 [!DNL Spark] 戶， [!DNL Platform]您必須提供下列值：
+若要存取[!DNL Platform]上的[!DNL Spark]帳戶，您必須提供下列值：
 
 | 憑證 | 說明 |
 | ---------- | ----------- |
-| `host` | 伺服器的IP地址或主 [!DNL Spark] 機名。 |
-| `username` | 用於訪問伺服器的用戶 [!DNL Spark] 名。 |
+| `host` | [!DNL Spark]伺服器的IP地址或主機名。 |
+| `username` | 用於訪問[!DNL Spark]伺服器的用戶名。 |
 | `password` | 與用戶對應的口令。 |
 
-如需快速入門的詳細資訊，請參閱 [此Spark檔案](https://docs.microsoft.com/en-us/azure/hdinsight/spark/apache-spark-overview)。
+有關入門的詳細資訊，請參閱[此Spark檔案](https://docs.microsoft.com/en-us/azure/hdinsight/spark/apache-spark-overview)。
 
-## 連線您的帳 [!DNL Spark] 戶
+## 連接您的[!DNL Spark]帳戶
 
-收集完所需的認證後，您可依照下列步驟連結帳戶以 [!DNL Spark] 連線至 [!DNL Platform]。
+收集完所需憑證後，您可以按照以下步驟將[!DNL Spark]帳戶連結到[!DNL Platform]。
 
-登入 [Adobe Experience Platform](https://platform.adobe.com) ，然後從左側導覽列選取 **[!UICONTROL Sources]** ，以存取 **** Sources工作區。 「目 **[!UICONTROL 錄]** 」畫面會顯示多種來源，您可以用來建立帳戶。
+登入[Adobe Experience Platform](https://platform.adobe.com)，然後從左側導覽列選擇&#x200B;**[!UICONTROL Sources]**&#x200B;以存取&#x200B;**[!UICONTROL Sources]**&#x200B;工作區。 **[!UICONTROL Catalog]**&#x200B;畫面會顯示多種來源，您可以用來建立帳戶。
 
 您可以從畫面左側的目錄中選取適當的類別。 或者，您也可以使用搜尋選項找到您要使用的特定來源。
 
-在「數 **[!UICONTROL 據庫]** 」類別下，選 **[!UICONTROL 擇Spark]**。 如果這是您第一次使用此連接器，請選擇「配 **[!UICONTROL 置」]**。 否則，請選 **[!UICONTROL 擇「添加資料]** 」(Add data [!DNL Spark] )以建立新連接器。
+在&#x200B;**[!UICONTROL Databases]**&#x200B;類別下，選擇&#x200B;**[!UICONTROL Spark]**。 如果這是您第一次使用此連接器，請選擇&#x200B;**[!UICONTROL Configure]**。 否則，選擇「添加資料」(**[!UICONTROL Add data]**)以建立新的[!DNL Spark]連接器。
 
 ![目錄](../../../../images/tutorials/create/spark/catalog.png)
 
-此時 **[!UICONTROL 會顯示「連線至Spark]** 」頁面。 在此頁上，您可以使用新認證或現有認證。
+此時會顯示「連線至Spark ]**」頁面。**[!UICONTROL &#x200B;在此頁上，您可以使用新認證或現有認證。
 
 ### 新帳戶
 
-如果您使用新認證，請選擇「新 **[!UICONTROL 帳戶」]**。 在出現的輸入表單上，提供名稱、選用說明和您的認 [!DNL Spark] 證。 完成後，選擇 **[!UICONTROL Connect]** ，然後為建立新連接留出一些時間。
+如果您使用新憑據，請選擇&#x200B;**[!UICONTROL 新建帳戶]**。 在顯示的輸入表單上，提供名稱、可選說明和您的[!DNL Spark]憑證。 完成後，選擇&#x200B;**[!UICONTROL Connect]** ，然後為建立新連接留出一些時間。
 
 ![new](../../../../images/tutorials/create/spark/new.png)
 
 ### 現有帳戶
 
-若要連線現有帳戶，請選 [!DNL Spark] 取您要連線的帳戶，然後選取「下 **[!UICONTROL 一]** 步」繼續。
+要連接現有帳戶，請選擇要連接的[!DNL Spark]帳戶，然後選擇&#x200B;**[!UICONTROL Next]**&#x200B;繼續。
 
 ![現有](../../../../images/tutorials/create/spark/existing.png)
 
 ## 後續步驟
 
-遵循本教學課程，您已建立與帳戶的 [!DNL Spark] 連線。 您現在可以繼續下一個教程，並 [配置資料流以將資料導入 [!DNL Platform]](../../dataflow/databases.md)。
+在本教學課程之後，您已建立與[!DNL Spark]帳戶的連線。 現在，您可以繼續下一個教程，並[配置資料流以將資料導入 [!DNL Platform]](../../dataflow/databases.md)。
