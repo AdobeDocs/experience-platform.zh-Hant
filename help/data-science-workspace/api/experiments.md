@@ -1,23 +1,23 @@
 ---
-keywords: Experience Platform;developer guide;endpoint;Data Science Workspace;popular topics;experiments;sensei machine learning api
+keywords: Experience Platform；開發人員指南；端點；Data Science Workspace；熱門主題；實驗；sensei機器學習api
 solution: Experience Platform
-title: 實驗
+title: 實驗API端點
 topic: Developer guide
 description: 模型開發與訓練是在實驗層級進行，其中實驗由MLInstance、訓練執行和計分執行組成。
 translation-type: tm+mt
-source-git-commit: 194a29124949571638315efe00ff0b04bff19303
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
-source-wordcount: '765'
+source-wordcount: '783'
 ht-degree: 4%
 
 ---
 
 
-# 實驗
+# 實驗端點
 
 模型開發與訓練是在實驗層級進行，其中實驗由MLInstance、訓練執行和計分執行組成。
 
-## 建立實驗 {#create-an-experiment}
+## 建立實驗{#create-an-experiment}
 
 您可以執行POST請求，同時在請求裝載中提供名稱和有效的MLInstance ID，以建立實驗。
 
@@ -54,7 +54,7 @@ curl -X POST \
 
 **回應**
 
-成功的回應會傳回包含新建立之實驗詳細資料（包括其唯一識別碼）的負載`id`。
+成功的回應會傳回包含新建立之實驗詳細資料（包括其唯一識別碼）的負載(`id`)。
 
 ```json
 {
@@ -70,7 +70,7 @@ curl -X POST \
 }
 ```
 
-## 建立並執行訓練或計分執行 {#experiment-training-scoring}
+## 建立並執行訓練或計分執行{#experiment-training-scoring}
 
 您可以執行POST請求並提供有效的實驗ID並指定執行任務，以建立訓練或計分執行。 只有在「實驗」有現有且成功的訓練執行時，才可建立計分執行。 成功建立培訓運行將初始化模型培訓過程，成功完成該過程將生成一個受培訓的模型。 產生已訓練的模型將取代任何先前現有的模型，使得實驗在任何指定時間只能使用單一已訓練的模型。
 
@@ -101,7 +101,7 @@ curl -X POST \
 
 | 屬性 | 說明 |
 | --- | --- |
-| `{TASK}` | 指定運行的任務。 將此值設為訓練 `train` 、計分 `score` 或功能管 `featurePipeline` 道的值。 |
+| `{TASK}` | 指定運行的任務。 將此值設為訓練的`train`、計分的`score`或功能管道的`featurePipeline`。 |
 
 **回應**
 
@@ -134,7 +134,7 @@ curl -X POST \
 
 ## 擷取實驗清單
 
-您可以執行單一GET請求並提供有效的MLInstance ID作為查詢參數，以擷取屬於特定MLInstance的實驗清單。 有關可用查詢的清單，請參閱有關資產檢索查 [詢參數的附錄部分](./appendix.md#query)。
+您可以執行單一GET請求並提供有效的MLInstance ID作為查詢參數，以擷取屬於特定MLInstance的實驗清單。 有關可用查詢的清單，請參閱[資產檢索查詢參數](./appendix.md#query)的附錄部分。
 
 
 **API格式**
@@ -198,7 +198,7 @@ curl -X GET \
 }
 ```
 
-## 擷取特定實驗 {#retrieve-specific}
+## 擷取特定實驗{#retrieve-specific}
 
 您可以執行GET請求，在請求路徑中包含所需實驗的ID，以擷取特定實驗的詳細資訊。
 
@@ -243,7 +243,7 @@ curl -X GET \
 
 ## 擷取實驗執行清單
 
-您可以執行單一GET要求並提供有效的實驗ID，以擷取屬於特定實驗的訓練或計分執行清單。 若要協助篩選結果，您可以在請求路徑中指定查詢參數。 有關可用查詢參數的完整清單，請參閱有關資產檢索 [查詢參數的附錄部分](./appendix.md#query)。
+您可以執行單一GET要求並提供有效的實驗ID，以擷取屬於特定實驗的訓練或計分執行清單。 若要協助篩選結果，您可以在請求路徑中指定查詢參數。 有關可用查詢參數的完整清單，請參閱[資產檢索查詢參數](./appendix.md#query)的附錄部分。
 
 >[!NOTE]
 >
@@ -260,7 +260,7 @@ GET /experiments/{EXPERIMENT_ID}/runs?{QUERY_PARAMETER_1}={VALUE_1}&{QUERY_PARAM
 | 參數 | 說明 |
 | --- | --- |
 | `{EXPERIMENT_ID}` | 有效的實驗ID。 |
-| `{QUERY_PARAMETER}` | 用於篩選 [結果的可用查](./appendix.md#query) 詢參數之一。 |
+| `{QUERY_PARAMETER}` | 用於篩選結果的[可用查詢參數](./appendix.md#query)之一。 |
 | `{VALUE}` | 前面查詢參數的值。 |
 
 **請求**
@@ -278,7 +278,7 @@ curl -X GET \
 
 **回應**
 
-成功的回應會傳回包含執行清單及其每個詳細資訊（包括其實驗執行ID）的裝載`{RUN_ID}`。
+成功的回應會傳回包含執行清單及其每個詳細資訊（包括其實驗執行ID）的裝載。`{RUN_ID}`
 
 ```json
 {
@@ -308,7 +308,7 @@ curl -X GET \
 
 >[!TIP]
 >
->為確保此PUT請求成功，建議您先執行GET請求，以依ID [擷取實驗](#retrieve-specific)。 然後，修改並更新傳回的JSON物件，並套用已修改的JSON物件的完整內容作為PUT要求的裝載。
+>為確保此PUT請求成功，建議您先執行GET請求，以[擷取「依ID擷取實驗」(Emperity by ID)](#retrieve-specific)。 然後，修改並更新傳回的JSON物件，並套用已修改的JSON物件的完整內容作為PUT要求的裝載。
 
 下列範例API呼叫會在最初具有這些屬性時更新實驗的名稱：
 
