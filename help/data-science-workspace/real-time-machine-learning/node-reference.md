@@ -1,19 +1,19 @@
 ---
-keywords: Experience Platform;developer guide;Data Science Workspace;popular topics;Real-time Machine Learning;node reference;
+keywords: Experience Platform；開發人員指南； Data Science Workspace；熱門主題；即時機器學習；節點參考；
 solution: Experience Platform
-title: 即時機器學習節點參考指南
+title: 即時機器學習節點參考
 topic: Nodes reference
 description: 節點是圖形形成的基礎單元。 每個節點都執行特定任務，並且可以使用連結將它們連結在一起，以形成表示ML管線的圖形。 由節點執行的任務表示對輸入資料的操作，如資料或模式的轉換或機器學習推理。 節點將變換或推斷的值輸出到下一個節點。
 translation-type: tm+mt
-source-git-commit: 9ba229195892245d29fb4f17b9f2e5cd6c6ea567
+source-git-commit: f6cfd691ed772339c888ac34fcbd535360baa116
 workflow-type: tm+mt
-source-wordcount: '666'
+source-wordcount: '678'
 ht-degree: 0%
 
 ---
 
 
-# 即時機器學習節點參考指南(Alpha)
+# 即時機器學習節點參考(Alpha)
 
 >[!IMPORTANT]
 >
@@ -25,7 +25,7 @@ ht-degree: 0%
 
 ## 發現要在ML管線中使用的節點
 
-將以下代碼複製到 [!DNL Python] 筆記本中，以查看所有可用節點。
+將以下代碼複製到[!DNL Python]筆記本中，以查看所有可用節點。
 
 ```python
 from pprint import pprint
@@ -81,11 +81,11 @@ ONNXode是內部Adobe節點，會使用模型ID來提取預先訓練的ONNX模�
 node_model_score = ONNXNode(params={"features": ['browser', 'device', 'login_page', 'product_page', 'search_page'], "model_id": model_id})
 ```
 
-### 熊貓 {#pandas}
+### 熊貓{#pandas}
 
-下面的熊貓節點，可以匯入任何方 `pd.DataFrame` 法或一般熊貓的頂層功能。 要進一步瞭解熊貓方法，請訪問熊貓方 [法文檔](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html)。 有關頂級功能的更多資訊，請訪問 [Apcites API參考指南以瞭解一般功能](https://pandas.pydata.org/pandas-docs/stable/reference/general_functions.html)。
+下面的熊貓節點，可以匯入任何`pd.DataFrame`方法或任何普通熊貓的頂層功能。 要進一步瞭解熊貓方法，請訪問[熊貓方法文檔](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html)。 有關頂級函式的更多資訊，請訪問[Apcots API參考指南，以瞭解一般函式](https://pandas.pydata.org/pandas-docs/stable/reference/general_functions.html)。
 
-以下節點使 `"import": "map"` 用在參數中將方法名稱作為字串導入，然後將參數作為映射函式輸入。 以下範例使用執行此動作 `{"arg": {"Desktop": 1, "Mobile": 0}, "na_action": 0}`。 在對應到位後，您可以選擇設 `inplace` 為 `True` 或 `False`。 設 `inplace` 置為 `True` 或 `False` 基於是否要就地應用轉換。 預設情 `"inplace": False` 況下，建立新列。 對提供新欄名稱的支援已設定為在後續版本中新增。 最後一行 `cols` 可以是單欄名稱或欄清單。 指定要應用轉換的列。 在此示例中 `device` 指定。
+以下節點使用`"import": "map"`將方法名稱作為字串導入參數中，然後將參數作為映射函式輸入。 以下範例使用`{"arg": {"Desktop": 1, "Mobile": 0}, "na_action": 0}`執行此動作。 在對應到位後，您可以選擇將`inplace`設為`True`或`False`。 根據是否要就地應用轉換，將`inplace`設定為`True`或`False`。 預設情況下，`"inplace": False`會建立新列。 對提供新欄名稱的支援已設定為在後續版本中新增。 最後一行`cols`可以是單列名稱或列清單。 指定要應用轉換的列。 在此示例中指定了`device`。
 
 ```python
 #  df["device"] = df["device"].map({"Desktop":1, "Mobile":0}, na_action=0)
@@ -123,17 +123,17 @@ msg6 = model_train.process(msg5)
 
 | 值 | 說明 |
 | --- | --- |
-| 功能 | 輸入模型特徵（字串清單）。 <br> 例如： `browser`, `device`, `login_page`, `product_page`, `search_page` |
+| 功能 | 輸入模型特徵（字串清單）。 <br> 例如： `browser`,  `device`,  `login_page`,  `product_page`,  `search_page` |
 | 標籤 | 目標欄名稱（字串）。 |
 | 模式 | 訓練／測試（字串）。 |
 | model_path | 以onnx格式本機儲存模型的路徑。 |
-| params.model | 模型的絕對匯入路徑（字串），例如： `sklearn.linear_model.LogisticRegression`. |
-| params.model_params | 模型超參數，請參閱 [sklearn API(map/dict)檔案](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html) ，以取得詳細資訊。 |
-| node_instance.process(data_message_from_previous_node) | 該方法 `process()` 從前一個節點取用DataMsg並應用轉換。 這取決於當前使用的節點。 |
+| params.model | 模型的絕對匯入路徑（字串），例如：`sklearn.linear_model.LogisticRegression`。 |
+| params.model_params | 模型超參數，請參閱[sklearn API(map/dict)](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html)檔案以取得詳細資訊。 |
+| node_instance.process(data_message_from_previous_node) | 方法`process()`從上一個節點獲取DataMsg並應用轉換。 這取決於當前使用的節點。 |
 
 ### Split
 
-使用以下節點將資料幀拆分為通過或進行訓練和 `train_size` 測試 `test_size`。 這會傳回具有多索引的資料幀。 您可以使用以下示例訪問訓練和測試資料幀 `msg5.data.xs(“train”)`。
+使用以下節點將資料幀拆分為列並通過傳遞`train_size`或`test_size`進行測試。 這會傳回具有多索引的資料幀。 您可以使用以下示例`msg5.data.xs(“train”)`訪問訓練和測試資料幀。
 
 ```python
 splitter = Split(params={"train_size": 0.7})
@@ -142,4 +142,4 @@ msg5 = splitter.process(msg4)
 
 ## 後續步驟
 
-下一步是建立節點，以用於即時機器學習模型的計分。 如需詳細資訊，請造 [訪即時機器學習筆記型電腦使用指南](./rtml-authoring-notebook.md)。
+下一步是建立節點，以用於即時機器學習模型的計分。 如需詳細資訊，請造訪[即時機器學習筆記型電腦使用指南](./rtml-authoring-notebook.md)。
