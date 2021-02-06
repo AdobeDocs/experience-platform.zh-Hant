@@ -5,9 +5,9 @@ user-guide-title: Experience Data Model (XDM) 系統說明
 breadcrumb-title: Experience Data Model (XDM) 指南
 user-guide-description: 使用 Experience Data Model (XDM) 類別和 mixin 將體驗資料標準化。
 translation-type: tm+mt
-source-git-commit: 288f47306853fcc39234ad098bc0e73f24f8540a
+source-git-commit: b735e5f7eb8d1f0526d8786430c844b4d36fa09d
 workflow-type: tm+mt
-source-wordcount: '232'
+source-wordcount: '236'
 ht-degree: 23%
 
 ---
@@ -39,6 +39,7 @@ ht-degree: 23%
    * [應用程式](./data-types/application.md)
    * [信標](./data-types/beacon.md)
    * [瀏覽器詳細資訊](./data-types/browser-details.md)
+   * [商務](./data-types/commerce.md)
    * [同意與偏好](./data-types/consents.md)
    * [裝置](./data-types/device.md)
    * [電子郵件地址](./data-types/email-address.md)
@@ -50,6 +51,8 @@ ht-degree: 23%
    * [地理形狀](./data-types/geo-shape.md)
    * [身份](./data-types/identity.md)
    * [測量](./data-types/measure.md)
+   * [訂單](./data-types/order.md)
+   * [付款項](./data-types/payment-item.md)
    * [「人」](./data-types/person.md)
    * [人員姓名](./data-types/person-name.md)
    * [電話號碼](./data-types/phone-number.md)
