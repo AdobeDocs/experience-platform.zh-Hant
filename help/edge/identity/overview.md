@@ -5,9 +5,9 @@ description: 瞭解如何取得Adobe Experience Cloud Id。
 seo-description: 瞭解如何取得Adobe Experience Cloud Id。
 keywords: Identity；第一方身分；Identity Service；第三方身份；ID移轉；訪客ID；第三方身份；第三方身份；第三方CookieEnabled;idMigrationEnabled;getIdentity；同步身份；syncIdentity;sendEvent;identityMap;primary;ecid;ItyNamespace idenamespace id;authenticationState;authenticationhashEnabled;
 translation-type: tm+mt
-source-git-commit: 60945f7f3a87568b82d968692cc7a6e07593fa01
+source-git-commit: 3ac00fda2c0a43437fb212dcba7e98c63503b9c4
 workflow-type: tm+mt
-source-wordcount: '921'
+source-wordcount: '919'
 ht-degree: 3%
 
 ---
@@ -19,11 +19,11 @@ Adobe Experience Platform Web SDK運用[Adobe Identity Service](../../identity-s
 
 ## 第一方身分
 
-[!DNL Identity Service]將識別儲存在第一方網域的Cookie中。 [!DNL Identity Service]會嘗試使用網域上的HTTP標題來設定Cookie。 如果失敗，[!DNL Identity Service]將會回到透過Javascript設定Cookie。 Adobe建議您設定CNAME，以確保您的Cookie不受用戶端ITP限制。
+[!DNL Identity Service]會將身分儲存在第一方網域的Cookie中。 [!DNL Identity Service]會嘗試使用網域上的HTTP標題來設定Cookie。 如果失敗，[!DNL Identity Service]將會回到透過Javascript設定Cookie。 Adobe建議您設定CNAME，以確保您的Cookie不受用戶端ITP限制。
 
 ## 第三方身份
 
-[!DNL Identity Service]可將ID與第三方網域(demdex.net)同步，以便跨網站追蹤。 啟用此功能後，會對demdex.net提出對訪客的第一個要求（例如，沒有ECID的訪客）。 這只會在允許其執行的瀏覽器（例如Chrome）上執行，並由設定中的`thirdPartyCookiesEnabled`參數控制。 如果您想要同時停用此功能，請將`thirdPartyCookiesEnabled`設為false。
+[!DNL Identity Service]可將ID與第三方網域(demdex.net)同步，以便跨網站追蹤。 啟用此功能後，將會對demdex.net提出訪客的第一個要求（例如，沒有ECID的訪客）。 這只會在允許其執行的瀏覽器（例如Chrome）上執行，並由組態中的`thirdPartyCookiesEnabled`參數控制。 如果您想要同時停用此功能，請將`thirdPartyCookiesEnabled`設為false。
 
 ## ID移轉
 
