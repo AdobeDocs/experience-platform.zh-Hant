@@ -5,7 +5,7 @@ description: 瞭解如何設定Experience Platform Web SDK
 seo-description: 瞭解如何設定Experience Platform Web SDK
 keywords: configuring;configuration;SDK;edge;Web SDK;configure;edgeConfigId;context;web;device;placeContext;debugEnabled;egdeDomain;orgId;clickCollectionEnabled;onBeforeEventSend;defaultConowensen;wewew;web sd sd設定；p;prehingStyle;ching;cookie；不透明；conse;comen;con;coned;ce;coop;up;cone;use;we;used;usen;un;use;usen;use;ur;useEn;urlEn;e;en;e;e;e;use;en;usen;en;usen;un;un;un;urlEnabled;e;e;ed;eDestinationsEnabled;idMigrationEnabled;thirdPartyCookiesEnabled;
 translation-type: tm+mt
-source-git-commit: 723711ee0c2b7b5ca4aea617a81241dbebbc839c
+source-git-commit: 3ac00fda2c0a43437fb212dcba7e98c63503b9c4
 workflow-type: tm+mt
 source-wordcount: '740'
 ht-degree: 11%
@@ -94,7 +94,7 @@ alloy("configure", {
 | -------- | ------------ | ----------------- |
 | 函數 | 無 | ()=>未定義 |
 
-設定此設定，以設定在每個事件傳送前呼叫的回呼。  欄位`xdm`的對象將發送到回調。  修改`xdm`物件以變更所傳送的內容。  在回呼中，`xdm`物件已具有在event命令中傳遞的資料，以及自動收集的資訊。  有關此回呼的時間安排和示例的詳細資訊，請參閱[全局修改事件](tracking-events.md#modifying-events-globally)。
+設定此設定，以設定在每個事件傳送前呼叫的回呼。  欄位`xdm`的對象將發送到回調。  修改`xdm`物件以變更所傳送的內容。  在回呼中，`xdm`物件已具有在event命令中傳遞的資料，以及自動收集的資訊。 有關此回呼的時間安排和示例的詳細資訊，請參閱[全局修改事件](tracking-events.md#modifying-events-globally)。
 
 ## 隱私權選項
 
