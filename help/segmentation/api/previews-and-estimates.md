@@ -3,11 +3,11 @@ keywords: Experience Platform; home；熱門主題；分段；分段；分段服
 solution: Experience Platform
 title: 預覽和估計API端點
 topic: developer guide
-description: Adobe Experience Platform Segmentation Service API中的預覽和估計端點可讓您檢視摘要層級資訊，以協助您隔離區段中預期的觀眾。
+description: 在開發區段定義時，您可以使用Adobe Experience Platform中的估計和預覽工具來檢視摘要層級的資訊，以協助您隔離預期的觀眾。
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: eba6de210dcbc12b829b09ba6e7083d342517ba2
 workflow-type: tm+mt
-source-wordcount: '793'
+source-wordcount: '949'
 ht-degree: 2%
 
 ---
@@ -15,7 +15,15 @@ ht-degree: 2%
 
 # 預覽和估計端點
 
-當您開發區段定義時，可使用[!DNL Adobe Experience Platform]中的估計和預覽工具來檢視摘要層級資訊，以協助您隔離預期的觀眾。 **預** 覽提供區段定義之合格描述檔的分頁清單，讓您比較結果與預期。**「估** 計」會提供區段定義的統計資訊，例如預測對象大小、信賴區間和錯誤標準差。
+當您開發區段定義時，可以使用Adobe Experience Platform中的估計和預覽工具來檢視摘要層級資訊，以協助您隔離預期的受眾。
+
+* **預** 覽提供區段定義之合格描述檔的分頁清單，讓您比較結果與預期。
+
+* **「估** 計」會提供區段定義的統計資訊，例如預測對象大小、信賴區間和錯誤標準差。
+
+>[!NOTE]
+>
+>若要存取與即時客戶描述檔資料相關的類似度量，例如特定名稱空間或描述檔資料存放區中的描述檔片段和合併描述檔總數，請參閱描述檔API開發人員指南中的[描述檔預覽（預覽範例狀態）端點指南](../../profile/api/preview-sample-status.md)。
 
 ## 快速入門
 
@@ -23,11 +31,10 @@ ht-degree: 2%
 
 ## 如何產生估計
 
-資料採樣觸發方式取決於提取方法。
+當將記錄擷取至描述檔儲存區時，會觸發取樣工作以更新該計數，將總描述檔計數增加或減少超過5%。 觸發資料取樣的方式取決於擷取方法：
 
-對於批次擷取，描述檔存放區會每十五分鐘自動掃描一次，以查看自上次執行取樣工作以來是否成功擷取新批次。 如果是這樣，則隨後掃描配置檔案儲存，以查看記錄數是否至少有5%的變化。 如果滿足這些條件，則觸發新的採樣作業。
-
-對於串流擷取，會每小時自動掃描描述檔存放區，以查看記錄數是否至少有5%的變更。 如果符合此條件，則會觸發新的取樣工作。
+* **批次擷取：** 對於批次擷取，在成功將批次擷取至描述檔存放區的15分鐘內，如果達到5%增加或減少臨界值，則會執行工作以更新計數。
+* **串流擷取：** 對於串流資料工作流程，會每小時檢查一次，以判斷是否達到5%的增加或減少臨界值。如果已觸發，則會自動觸發作業以更新計數。
 
 掃描的樣本大小取決於配置檔案儲存中的實體總數。 下表列出了這些樣本大小：
 
@@ -76,7 +83,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/preview \
 | -------- | ----------- |
 | `predicateExpression` | 用於查詢資料的PQL表達式。 |
 | `predicateType` | `predicateExpression`下查詢表達式的謂詞類型。 目前，此屬性唯一接受的值是`pql/text`。 |
-| `predicateModel` | 描述檔資料所依據之[!DNL Experience Data Model](XDM)架構的名稱。 |
+| `predicateModel` | 配置檔案資料所基於的[!DNL Experience Data Model](XDM)模式類的名稱。 |
 
 **回應**
 
@@ -172,7 +179,7 @@ curl -X GET https://platform.adobe.io/data/core/ups/preview/MDphcHAtMzJiZTAzMjgt
 
 | 屬性 | 說明 |
 | -------- | ----------- |
-| `results` | 實體ID的清單，以及其相關身分。 提供的連結可用於使用[[!DNL Profile Access API]](../../profile/api/entities.md)查找指定的實體。 |
+| `results` | 實體ID的清單，以及其相關身分。 提供的連結可用於使用[配置檔案訪問API端點](../../profile/api/entities.md)查找指定實體。 |
 
 ## 檢索特定估計作業的結果{#get-estimate}
 
@@ -206,17 +213,27 @@ curl -X GET https://platform.adobe.io/data/core/ups/estimate/MDoyOjRhNDVlODUzLWF
 
 ```json
 {
-    "estimatedSize": 0,
-    "numRowsToRead": 1,
+    "estimatedSize": 4275,
+    "numRowsToRead": 4275,
+    "estimatedNamespaceDistribution": [
+        {
+            "namespaceId": "4",
+            "profilesMatchedSoFar": 35
+        },
+        {
+            "namespaceId": "6",
+            "profilesMatchedSoFar": 4275
+        }
+    ],
     "state": "RESULT_READY",
-    "profilesReadSoFar": 1,
+    "profilesReadSoFar": 4275,
     "standardError": 0,
     "error": {
         "description": "",
         "traceback": ""
     },
-    "profilesMatchedSoFar": 0,
-    "totalRows": 1,
+    "profilesMatchedSoFar": 4275,
+    "totalRows": 4275,
     "confidenceInterval": "95%",
     "_links": {
         "preview": "https://platform.adobe.io/data/core/ups/preview/app-32be0328-3f31-4b64-8d84-acd0c4fbdad3/execution/0?previewQueryId=e890068b-f5ca-4a8f-a6b5-af87ff0caac3"
@@ -226,9 +243,10 @@ curl -X GET https://platform.adobe.io/data/core/ups/estimate/MDoyOjRhNDVlODUzLWF
 
 | 屬性 | 說明 |
 | -------- | ----------- |
-| `state` | 預覽作業的目前狀態。 在處理完成之前，將為「RUNNING」，此時它將變為「RESULT_READY」或「FAILED」。 |
-| `_links.preview` | 當預覽作業的當前狀態為&quot;RESULT_READY&quot;時，此屬性提供URL以檢視估計值。 |
+| `estimatedNamespaceDistribution` | 顯示區段內依身分名稱空間劃分之描述檔數目的物件陣列。 依名稱空間劃分的描述檔總數（將每個名稱空間顯示的值加在一起）可能高於描述檔計數量度，因為一個描述檔可能與多個名稱空間相關聯。 例如，如果客戶在多個通道上與您的品牌互動，則多個名稱空間將與該個別客戶關聯。 |
+| `state` | 預覽作業的目前狀態。 狀態將為「RUNNING」，直到處理完成，此時狀態將變為「RESULT_READY」或「FAILED」。 |
+| `_links.preview` | 當`state`為&quot;RESULT_READY&quot;時，此欄位會提供URL以檢視估計值。 |
 
 ## 後續步驟
 
-閱讀本指南後，您現在更能瞭解如何使用預覽和估計。 若要進一步瞭解其他[!DNL Segmentation Service] API端點，請閱讀[分段服務開發人員指南概述](./overview.md)。
+閱讀本指南後，您應更瞭解如何使用區段API來處理預覽和估計。 要瞭解如何存取與即時客戶個人檔案資料相關的度量，例如特定名稱空間或個人檔案資料存放區中的個人檔案片段和合併個人檔案總數，請造訪[個人檔案預覽(`/previewsamplestatus`)端點指南](../../profile/api/preview-sample-status.md)。
