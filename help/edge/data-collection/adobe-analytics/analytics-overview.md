@@ -3,11 +3,11 @@ title: 傳送資料至Adobe Analytics
 seo-title: 使用Adobe Experience Platform Web SDK將資料傳送至Adobe Analytics
 description: 瞭解如何使用Experience Platform Web SDK將資料傳送至Adobe Analytics
 seo-description: 瞭解如何使用Experience Platform Web SDK將資料傳送至Adobe Analytics
-keywords: adobe analytics;analytics;mapped data;mapped vars;
+keywords: adobe analytics;analytics；映射資料；映射變數；
 translation-type: tm+mt
-source-git-commit: db742119d8f169817080f1fd4e0dc08a0f0faa47
+source-git-commit: 723711ee0c2b7b5ca4aea617a81241dbebbc839c
 workflow-type: tm+mt
-source-wordcount: '202'
+source-wordcount: '207'
 ht-degree: 6%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 6%
 
 # 傳送資料至Adobe Analytics
 
-Adobe Experience Platform可 [!DNL Web SDK] 以傳送資料至Adobe Analytics。 如此可轉譯 `xdm` 為Adobe Analytics可使用的格式。
+Adobe Experience Platform [!DNL Web SDK]可傳送資料至Adobe Analytics。 這可將`xdm`轉譯為Adobe Analytics可使用的格式。
 
 ## 設定
 
@@ -23,7 +23,7 @@ Adobe Experience Platform可 [!DNL Web SDK] 以傳送資料至Adobe Analytics。
 
 ## 自動映射的資料
 
-Adobe Experience Platform會自動 [!DNL Edge Network] 映射許多XDM變數。 此處列出自動映射變數的完整 [清單](automatically-mapped-vars.md)。
+Adobe Experience Platform [!DNL Edge Network]會自動映射許多XDM變數。 這些變數的完整清單列於[這裡](automatically-mapped-vars.md)。
 
 ## 手動映射的資料
 
