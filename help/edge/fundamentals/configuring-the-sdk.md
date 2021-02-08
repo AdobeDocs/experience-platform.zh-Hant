@@ -3,11 +3,11 @@ title: 設定SDK
 seo-title: 設定Adobe Experience Platform Web SDK
 description: 瞭解如何設定Experience Platform Web SDK
 seo-description: 瞭解如何設定Experience Platform Web SDK
-keywords: configuring;configuration;SDK;edge;Web SDK;configure;edgeConfigId;context;web;device;environment;placeContext;debugEnabled;edgeDomain;orgId;clickCollectionEnabled;onBeforeEventSend;defaultConsent;web sdk settings;prehidingStyle;opacity;cookieDestinationsEnabled;urlDestinationsEnabled;idMigrationEnabled;thirdPartyCookiesEnabled;
+keywords: configuring;configuration;SDK;edge;Web SDK;configure;edgeConfigId;context;web;device;placeContext;debugEnabled;egdeDomain;orgId;clickCollectionEnabled;onBeforeEventSend;defaultConowensen;wewew;web sd sd設定；p;prehingStyle;ching;cookie；不透明；conse;comen;con;coned;ce;coop;up;cone;use;we;used;usen;un;use;usen;use;ur;useEn;urlEn;e;en;e;e;e;use;en;usen;en;usen;un;un;un;urlEnabled;e;e;ed;eDestinationsEnabled;idMigrationEnabled;thirdPartyCookiesEnabled;
 translation-type: tm+mt
-source-git-commit: 0928dd3eb2c034fac14d14d6e53ba07cdc49a6ea
+source-git-commit: 723711ee0c2b7b5ca4aea617a81241dbebbc839c
 workflow-type: tm+mt
-source-wordcount: '710'
+source-wordcount: '740'
 ht-degree: 11%
 
 ---
@@ -15,11 +15,11 @@ ht-degree: 11%
 
 # 設定SDK
 
-SDK的設定是使用命令 `configure` 完成。
+SDK的設定是使用`configure`命令完成。
 
 >[!IMPORTANT]
 >
->`configure` 永遠 *是第* 一個調用的命令。
+>`configure` 永遠 ** 是第一個叫做的命令。
 
 ```javascript
 alloy("configure", {
@@ -38,7 +38,7 @@ alloy("configure", {
 | -------- | ------------ | ----------------- |
 | 字串 | 是 | 無 |
 
-您指派的設定ID，會將SDK連結至適當的帳戶和設定。  在單一頁面中設定多個例項時，您必須為每個例項設 `edgeConfigId` 定不同的例項。
+您指派的設定ID，會將SDK連結至適當的帳戶和設定。  在單頁內配置多個實例時，必須為每個實例配置不同的`edgeConfigId`。
 
 ### `context`
 
@@ -46,7 +46,7 @@ alloy("configure", {
 | ---------------- | ------------ | -------------------------------------------------- |
 | 字串陣列 | 無 | `["web", "device", "environment", "placeContext"]` |
 
-指出要自動收集哪些上下文類別，如「自動資訊」 [中所述](../data-collection/automatic-information.md)。  如果未指定此配置，則預設情況下會使用所有類別。
+指示要自動收集哪些上下文類別，如[自動資訊](../data-collection/automatic-information.md)中所述。  如果未指定此配置，則預設情況下會使用所有類別。
 
 ### `debugEnabled`
 
@@ -54,11 +54,11 @@ alloy("configure", {
 | -------- | ------------ | ----------------- |
 | 布林值 | 無 | `false` |
 
-指出是否應啟用除錯。 將此配置設 `true` 置為啟用以下功能：
+指出是否應啟用除錯。 將此配置設定為`true`將啟用以下功能：
 
 | **功能** | **函數** |
 | ---------------------- | ------------------ |
-| 同步驗證 | 驗證針對架構收集的資料，並在下列標籤下的回應中傳回錯誤： `collect:error OR success` |
+| 同步驗證 | 驗證針對架構收集的資料，並在下列標籤下的回應中傳回錯誤：`collect:error OR success` |
 | 控制台記錄 | 啟用除錯訊息，以便顯示在瀏覽器的JavaScript主控台中 |
 
 ### `edgeDomain`
@@ -66,6 +66,7 @@ alloy("configure", {
 | **類型** | **必填** | **預設值** |
 | -------- | ------------ | ------------------ |
 | 字串 | 無 | `beta.adobedc.net` |
+| 字串 | 無 | `omtrdc.net` |
 
 用於與Adobe服務互動的網域。 只有當您有第一方網域(CNAME)，可代理Adobe Edge基礎架構的請求時，才會使用此功能。
 
@@ -75,7 +76,7 @@ alloy("configure", {
 | -------- | ------------ | ----------------- |
 | 字串 | 是 | 無 |
 
-Your assigned [!DNL Experience Cloud] organization ID.  在頁面內設定多個例項時，您必須為每個例項設 `orgId` 定不同的例項。
+您指派的[!DNL Experience Cloud]組織ID。  在頁面中配置多個實例時，必須為每個實例配置不同的`orgId`。
 
 ## 資料彙集
 
@@ -85,7 +86,7 @@ Your assigned [!DNL Experience Cloud] organization ID.  在頁面內設定多個
 | -------- | ------------ | ----------------- |
 | 布林值 | 無 | `true` |
 
-指出是否應自動收集與連結點按次數關聯的資料。 如需詳 [細資訊，請參閱](../data-collection/track-links.md#automaticLinkTracking) 「自動連結追蹤」。
+指出是否應自動收集與連結點按次數關聯的資料。 如需詳細資訊，請參閱[自動連結追蹤](../data-collection/track-links.md#automaticLinkTracking)。
 
 ### `onBeforeEventSend`
 
@@ -93,7 +94,7 @@ Your assigned [!DNL Experience Cloud] organization ID.  在頁面內設定多個
 | -------- | ------------ | ----------------- |
 | 函數 | 無 | ()=>未定義 |
 
-設定此設定，以設定在每個事件傳送前呼叫的回呼。  包含該欄位的對 `xdm` 像將發送到回調。  修改 `xdm` 對象以更改發送內容。  在回呼中，物 `xdm` 件已在event命令中傳遞資料，並自動收集資訊。  有關此回呼的時間安排和示例的詳細資訊，請參 [閱全局修改事件](tracking-events.md#modifying-events-globally)。
+設定此設定，以設定在每個事件傳送前呼叫的回呼。  欄位`xdm`的對象將發送到回調。  修改`xdm`物件以變更所傳送的內容。  在回呼中，`xdm`物件已具有在event命令中傳遞的資料，以及自動收集的資訊。  有關此回呼的時間安排和示例的詳細資訊，請參閱[全局修改事件](tracking-events.md#modifying-events-globally)。
 
 ## 隱私權選項
 
@@ -103,7 +104,7 @@ Your assigned [!DNL Experience Cloud] organization ID.  在頁面內設定多個
 | -------- | ------------ | ----------------- |
 | 物件 | 無 | `"in"` |
 
-設定使用者的預設同意。 當使用者尚未儲存同意偏好設定時，就會使用此選項。 另一個有效值是 `"pending"`。 設定後，工作將排入佇列，直到使用者提供同意偏好為止。 在提供使用者的偏好設定後，工作會根據使用者的偏好進行或中止。 如需詳 [細資訊](../consent/supporting-consent.md) ，請參閱支援同意。
+設定使用者的預設同意。 當使用者尚未儲存同意偏好設定時，就會使用此選項。 另一個有效值是`"pending"`。 設定後，工作將排入佇列，直到使用者提供同意偏好為止。 在提供使用者的偏好設定後，工作會根據使用者的偏好進行或中止。 如需詳細資訊，請參閱[支援同意](../consent/supporting-consent.md)。
 
 ## 個人化選項
 
@@ -115,7 +116,7 @@ Your assigned [!DNL Experience Cloud] organization ID.  在頁面內設定多個
 
 用來建立CSS樣式定義，當從伺服器載入個人化內容時，會隱藏網頁的內容區域。 如果未提供此選項，SDK在載入個人化內容時不會嘗試隱藏任何內容區域，可能會導致「閃爍」。
 
-例如，若您的網頁上有一個元素，其ID為您想要在從伺服器載入個人化內容時隱藏的預設內容，則預先隱藏樣式的範例如下： `container`
+例如，若您的網頁上有ID為`container`的元素，當從伺服器載入個人化內容時，您要隱藏其預設內容，則預先隱藏樣式的範例如下：
 
 ```javascript
   prehidingStyle: "#container { opacity: 0 !important }"
@@ -129,7 +130,7 @@ Your assigned [!DNL Experience Cloud] organization ID.  在頁面內設定多個
 | -------- | ------------ | ----------------- |
 | 布林值 | 無 | `true` |
 
-啟用 [!DNL Audience Manager] Cookie目標，允許根據區段限定來設定Cookie。
+啟用[!DNL Audience Manager] Cookie目標，允許根據區段限定來設定Cookie。
 
 ### `urlDestinationsEnabled`
 
@@ -137,7 +138,7 @@ Your assigned [!DNL Experience Cloud] organization ID.  在頁面內設定多個
 | -------- | ------------ | ----------------- |
 | 布林值 | 無 | `true` |
 
-啟用 [!DNL Audience Manager] URL目標，這可允許根據區段限定引發URL。
+啟用[!DNL Audience Manager] URL目標，允許根據區段限定引發URL。
 
 ## 身分選項
 
