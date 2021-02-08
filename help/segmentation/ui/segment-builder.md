@@ -5,9 +5,9 @@ title: 區段產生器UI指南
 topic: ui guide
 description: 'Adobe Experience Platform UI中的「區段產生器」提供豐富的工作區，讓您與描述檔資料元素互動。 工作區提供建立和編輯規則的直覺式控制項，例如用來表示資料屬性的拖放圖格。 '
 translation-type: tm+mt
-source-git-commit: 8d403e73a804953f9584d6a72f945d4444e65d11
+source-git-commit: 8fc1c5414f38e84ed1700ee95b1c382007ff2c27
 workflow-type: tm+mt
-source-wordcount: '1800'
+source-wordcount: '1928'
 ht-degree: 0%
 
 ---
@@ -100,6 +100,22 @@ ht-degree: 0%
 程式碼檢視提供一個按鈕，可讓您複製要用於API呼叫的區段值。 若要取得區段的最新版本，請確定您已儲存區段的最新變更。
 
 ![](../images/ui/segment-builder/copy-code.png)
+
+### 聚集函式
+
+[!DNL Segment Builder]中的聚合是對一組XDM屬性的計算，其資料類型是數字（雙倍或整數）。 「區段產生器」中支援的四個匯總函式為SUM、AVERAGE、MIN和MAX。
+
+要建立聚合函式，請從左側導軌中選擇一個事件，並將其插入[!UICONTROL Events]容器。
+
+![](../images/ui/segment-builder/select-event.png)
+
+將事件放在「事件」容器中後，選擇省略號表徵圖(...)，然後選擇&#x200B;**[!UICONTROL Aggregate]**。
+
+![](../images/ui/segment-builder/add-aggregation.png)
+
+現在添加了聚合。 您現在可以選擇聚集函式、選擇要聚集的屬性、等式函式以及值。 對於下列範例，此區段將符合任何已購買值總和大於$100的描述檔，即使個別購買小於$100亦然。
+
+![](../images/ui/segment-builder/filled-aggregation.png)
 
 ## 容器
 
