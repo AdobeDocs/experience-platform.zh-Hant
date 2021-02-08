@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;profile；即時客戶配置檔案；疑難排解；API;preview;sample
-title: 描述檔範例狀態API端點
-description: 使用即時客戶個人檔案API端點，您可以預覽個人檔案資料的最新成功範例，以及Adobe Experience Platform內依資料集和身分命名空間來分發清單個人檔案。
+title: 預覽範例狀態（描述檔預覽）API端點
+description: 使用「即時客戶描述檔API」的一部分預覽範例狀態端點，您可以預覽您描述檔資料的最新成功範例，以及Adobe Experience Platform內依資料集和身分命名空間來分發描述檔。
 topic: guide
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 5266c393b034d1744134522cf1769304f39733da
 workflow-type: tm+mt
-source-wordcount: '1553'
+source-wordcount: '1655'
 ht-degree: 1%
 
 ---
@@ -16,13 +16,20 @@ ht-degree: 1%
 
 Adobe Experience Platform可讓您從多個來源收集客戶資料，為個別客戶建立強穩的統一個人檔案。 當啟用「即時客戶描述檔」的資料被收錄到[!DNL Platform]時，它會儲存在「描述檔」資料儲存區中。
 
-當將記錄擷取至描述檔存放區時，會觸發工作以更新該計數，將總描述檔計數增加或減少超過5%。 對於串流資料工作流程，會每小時檢查一次，以判斷是否符合5%增加或減少臨界值。 如果已觸發，則會自動觸發作業以更新計數。 對於批處理，在成功將批處理裝入配置檔案儲存的15分鐘內，如果達到5%增加或減少閾值，則運行作業以更新計數。 使用描述檔API，您可以預覽最新成功的範例工作，以及依資料集和身分命名空間來列出描述檔散發。
+當將記錄擷取至描述檔儲存區時，會觸發取樣工作以更新該計數，將總描述檔計數增加或減少超過5%。 觸發範例的方式取決於使用的擷取類型：
+
+* 對於&#x200B;**串流資料工作流程**，會每小時檢查一次，以判斷是否符合5%增加或減少臨界值。 如果已觸發，系統會自動觸發範例工作以更新計數。
+* 對於&#x200B;**批次提取**，在成功將批次提取到配置檔案儲存的15分鐘內，如果滿足5%增加或減少閾值，則運行作業以更新計數。 使用描述檔API，您可以預覽最新成功的範例工作，以及依資料集和身分命名空間來列出描述檔散發。
 
 這些量度也可在Experience Platform UI的[!UICONTROL Profiles]區段中使用。 有關如何使用UI存取描述檔資料的資訊，請造訪[[!DNL Profile] 使用指南](../ui/user-guide.md)。
 
+>[!NOTE]
+>
+>Adobe Experience Platform Segmentation Service API提供預估和預覽端點，可讓您檢視區段定義的摘要層級資訊，以協助您隔離預期的觀眾。 若要尋找使用區段預覽和估計端點的詳細步驟，請造訪[預覽和估計端點指南](../../segmentation/api/previews-and-estimates.md)，此為[!DNL Segmentation] API開發人員指南的一部分。
+
 ## 快速入門
 
-本指南中使用的API端點是[[!DNL Real-time Customer Profile] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml)的一部分。 在繼續之前，請先閱讀[快速入門手冊](getting-started.md)，以取得相關檔案的連結、閱讀本檔案中範例API呼叫的指南，以及成功呼叫任何[!DNL Experience Platform] API所需之必要標題的重要資訊。
+本指南中使用的API端點是[[!DNL Real-time Customer Profile] API](https://www.adobe.com/go/profile-apis-en)的一部分。 在繼續之前，請先閱讀[快速入門手冊](getting-started.md)，以取得相關檔案的連結、閱讀本檔案中範例API呼叫的指南，以及成功呼叫任何[!DNL Experience Platform] API所需之必要標題的重要資訊。
 
 ## 描述檔片段與合併的描述檔
 
@@ -89,7 +96,7 @@ curl -X GET \
 | `totalFragmentCount` | 描述檔儲存區中的描述檔片段總數。 |
 | `lastSuccessfulBatchTimestamp` | 上次成功的批次擷取時間戳記。 |
 | `streamingDriven` | *此欄位已過時，且不包含回應的重要性。* |
-| `totalRows` | Experience平台中合併的設定檔總數，也稱為「設定檔計數」。 |
+| `totalRows` | Experience Platform中合併的設定檔總數，也稱為「設定檔計數」。 |
 | `lastBatchId` | 上次批次擷取ID。 |
 | `status` | 最後一個範例的狀態。 |
 | `samplingRatio` | 採樣的合併配置檔案(`numRowsToRead`)與合併配置檔案(`totalRows`)的比率，以小數格式表示。 |
@@ -189,8 +196,6 @@ curl -X GET \
 | `createdUser` | 建立資料集之使用者的使用者ID。 |
 | `reportTimestamp` | 報表的時間戳記。 如果在請求期間提供`date`參數，則傳回的報表是提供日期。 如果未提供`date`參數，則會傳回最近的報表。 |
 
-
-
 ## 依命名空間列出描述檔分發
 
 您可以對`/previewsamplestatus/report/namespace`端點執行GET請求，以檢視Profile Store中所有合併的描述檔的識別名稱空間劃分。 身分名稱空間是Adobe Experience Platform Identity Service的重要元件，可做為客戶資料相關內容的指標。 若要進一步瞭解，請造訪[identity namespace overview](../../identity-service/namespaces.md)。
@@ -288,5 +293,4 @@ curl -X GET \
 
 ## 後續步驟
 
-您也可以使用類似的估計和預覽來檢視區段定義的摘要層級資訊，以協助您隔離預期的觀眾。 若要尋找使用[!DNL Adobe Experience Platform Segmentation Service] API處理區段預覽和估計的詳細步驟，請造訪[預覽和估計端點指南](../../segmentation/api/previews-and-estimates.md)，此為[!DNL Segmentation] API開發人員指南的一部分。
-
+現在您知道如何在描述檔儲存區中預覽範例資料，您也可以使用分段服務API的估計和預覽端點來檢視區段定義的摘要層級資訊。 這些資訊有助於確保您隔離區段中預期的觀眾。 若要進一步瞭解如何使用區段預覽和估計，請造訪[預覽和估計端點指南](../../segmentation/api/previews-and-estimates.md)。
