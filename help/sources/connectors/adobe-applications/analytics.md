@@ -5,7 +5,7 @@ title: Adobe Analytics Source Connector for Report-Suite資料
 topic: overview
 description: 本檔案提供Analytics的概觀，並說明Analytics資料的使用案例。
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: e480ce789c849db24713da312345ea3162e617a6
 workflow-type: tm+mt
 source-wordcount: '502'
 ht-degree: 3%
@@ -49,7 +49,7 @@ XDM是公開記載的規格，提供應用程式與[!DNL Experience Platform]上
 | -------------- | ---------------- |
 | 新資料至[!DNL Real-time Customer Profile]（A4T **未啟用**） | &lt; 2 分鐘 |
 | 新資料至[!DNL Real-time Customer Profile]（A4T **已啟用**） | &lt; 15 分鐘 |
-| 資料湖的新資料 | &lt; 45 分鐘 |
+| 資料湖的新資料 | &lt; 90 分鐘 |
 | 回填資料（13個月的資料或100億個事件，以較低者為準） | &lt; 4 週 |
 
 >[!NOTE]
