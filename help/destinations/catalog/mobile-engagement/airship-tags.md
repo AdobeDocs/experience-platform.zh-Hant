@@ -1,11 +1,11 @@
 ---
 keywords: 飛艇標籤；飛艇目的地
-title: 飛艇標籤連接目的地
+title: 飛艇標籤連接
 description: 順暢地將Adobe觀眾資料傳遞至Axphiry做為觀眾標籤，以便在Axphiry中定位。
 translation-type: tm+mt
-source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
+source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
 workflow-type: tm+mt
-source-wordcount: '1197'
+source-wordcount: '1196'
 ht-degree: 1%
 
 ---
@@ -30,7 +30,7 @@ ht-degree: 1%
 >
 >此文檔頁面由[!DNL Airship]團隊建立。 如需任何查詢或更新要求，請直接與[support.airship.com](https://support.airship.com/)聯絡。
 
-## 必要條件
+## 先決條件
 
 您必須先執行下列動作，才能將Adobe Experience Platform區段傳送至[!DNL Airship]:
 
