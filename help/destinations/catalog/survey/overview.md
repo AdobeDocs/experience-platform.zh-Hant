@@ -3,7 +3,7 @@ keywords: 調查目標；survey;foresee;inmoment;web intercept surveys;qualtrics
 title: 調查目標概觀
 description: 調查平台會偵測調查事件、透過資料元素即時擷取客戶意見，並與Adobe Experience Platform共用資料。
 translation-type: tm+mt
-source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
+source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
 workflow-type: tm+mt
 source-wordcount: '89'
 ht-degree: 0%
