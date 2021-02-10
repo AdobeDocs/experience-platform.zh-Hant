@@ -3,7 +3,7 @@ keywords: 分析目標；分析目標
 title: Analytics目標概觀
 description: 分析目的地會追蹤訪客如何與您網站上的內容互動，並收集資料以瞭解讀者的行為。 這些平台提供您最具價值訪客參與度與轉化率的獨特見解。
 translation-type: tm+mt
-source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
+source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
 workflow-type: tm+mt
 source-wordcount: '169'
 ht-degree: 6%
