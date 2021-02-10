@@ -1,9 +1,9 @@
 ---
 keywords: 語音目標；語音目標
-title: 客戶目標之聲概觀
+title: 客戶之聲目標概觀
 description: 語音平台收集和整理來自各種來源的資料，包括語音訊息、通話資料和聊天對話。 可以篩選和分析收集的資訊，讓公司最佳化其網站，以符合其需求。
 translation-type: tm+mt
-source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
+source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
 workflow-type: tm+mt
 source-wordcount: '127'
 ht-degree: 0%
