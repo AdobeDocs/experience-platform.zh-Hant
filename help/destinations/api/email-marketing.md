@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform;home；熱門主題
 solution: Experience Platform
-title: 使用API呼叫建立電子郵件行銷目標
+title: 連線至電子郵件行銷目標，並使用API呼叫啟用資料
 description: 本檔案涵蓋使用Adobe Experience Platform API建立電子郵件行銷目的地
 topic: tutorial
 type: Tutorial
 translation-type: tm+mt
-source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
+source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
 workflow-type: tm+mt
-source-wordcount: '1644'
+source-wordcount: '1649'
 ht-degree: 1%
 
 ---
 
 
-# 使用API呼叫建立電子郵件行銷目標並啟用資料
+# 連線至電子郵件行銷目標，並使用API呼叫啟用資料
 
 本教學課程示範如何使用API呼叫連線至您的Adobe Experience Platform資料、建立[電子郵件行銷目標](../catalog/email-marketing/overview.md)、建立資料流至新建立的目標，以及啟用資料至新建立的目標。
 
@@ -63,7 +63,7 @@ ht-degree: 1%
 
 所有包含裝載(POST、PUT、PATCH)的請求都需要額外的媒體類型標題：
 
-* 內容類型：`application/json`
+* Content-Type: `application/json`
 
 ### Swagger檔案
 
