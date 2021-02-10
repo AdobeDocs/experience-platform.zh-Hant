@@ -1,11 +1,11 @@
 ---
 keywords: email;Email;e-mail;email destinations;oracle exorca;oracle
-title: Oracle Exolca Connection Destination
+title: Oracle Evolca連接
 description: Oracle Exvola是Oracle為行銷自動化提供的軟體即服務(SaaS)平台，旨在幫助B2B行銷人員和組織管理營銷活動和銷售線索生成。
 translation-type: tm+mt
-source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
+source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
 workflow-type: tm+mt
-source-wordcount: '521'
+source-wordcount: '520'
 ht-degree: 0%
 
 ---
