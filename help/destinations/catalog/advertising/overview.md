@@ -1,14 +1,14 @@
 ---
 keywords: 廣告目標；目標；平台目標
-title: 廣告目標
+title: 廣告目標概觀
 seo-title: 廣告目標概觀
 description: 將Adobe Experience Platform連接至第三方廣告平台（例如DSP、廣告網路、SSP），並與這些平台共用假受眾。
 seo-description: 將Adobe Experience Platform連接至第三方廣告平台（例如DSP、廣告網路、SSP），並與這些平台共用假受眾。
 translation-type: tm+mt
-source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
+source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
 workflow-type: tm+mt
-source-wordcount: '227'
-ht-degree: 2%
+source-wordcount: '233'
+ht-degree: 0%
 
 ---
 
@@ -25,12 +25,12 @@ ht-degree: 2%
 
 要瞭解連接和擴展之間的差異，請參閱「目標類型和類別」頁中的[連接](../../destination-types.md#connections)。
 
-- [Google Display &amp; Video 360](./google-dv360.md)
-- [Google廣告](./google-ads-destination.md)
-- [Google廣告管理員](./google-ad-manager.md)
-- [Google Customer Match](./google-customer-match.md)
-- [Microsoft Bing](./bing.md)
-- [貿易台目的地](./tradedesk.md)
+- [Google Display &amp; Video 360連線](./google-dv360.md)
+- [Google Ads連線](./google-ads-destination.md)
+- [Google廣告管理員連線](./google-ad-manager.md)
+- [Google客戶符合連線](./google-customer-match.md)
+- [Microsoft Bing連線](./bing.md)
+- [The Trade Desk connection](./tradedesk.md)
 
 ## 擴充功能
 
