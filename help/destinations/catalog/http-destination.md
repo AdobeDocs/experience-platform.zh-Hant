@@ -1,11 +1,11 @@
 ---
 keywords: 串流；
-title: HTTP連接目標
+title: HTTP連線
 description: Adobe Experience Platform中的HTTP目標可讓您傳送描述檔資料至協力廠商HTTP端點。
 translation-type: tm+mt
-source-git-commit: 8d403e73a804953f9584d6a72f945d4444e65d11
+source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
 workflow-type: tm+mt
-source-wordcount: '488'
+source-wordcount: '487'
 ht-degree: 2%
 
 ---
