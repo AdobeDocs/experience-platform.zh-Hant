@@ -1,9 +1,9 @@
 ---
 keywords: 移動消息；移動消息傳送目標； Braze;飛艇
-title: 行動參與目標概觀
+title: 行動互動目標概觀
 description: 瞭解Adobe Experience Platform支援的不同行動互動目標。
 translation-type: tm+mt
-source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
+source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
 workflow-type: tm+mt
 source-wordcount: '39'
 ht-degree: 0%
