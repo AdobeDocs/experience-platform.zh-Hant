@@ -1,17 +1,17 @@
 ---
 keywords: google客戶符合；Google客戶符合；Google客戶符合
-title: Google客戶符合連線目的地
+title: Google客戶符合連線
 description: Google Customer Match可讓您使用您的線上和離線資料，透過Google的自有和營運資產（例如搜尋、購物、Gmail和YouTube）觸及客戶並與其重新互動。
 translation-type: tm+mt
-source-git-commit: aa2088d30716f56ac2909214badbb39c0ae97855
+source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
 workflow-type: tm+mt
-source-wordcount: '1474'
+source-wordcount: '1470'
 ht-degree: 0%
 
 ---
 
 
-# Google客戶符合連線
+# [!DNL Google Customer Match] 連接
 
 >[!IMPORTANT]
 >
