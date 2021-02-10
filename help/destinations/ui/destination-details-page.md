@@ -1,18 +1,18 @@
 ---
 keywords: 目標；目標；目標詳細資訊頁；目標詳細資訊頁
-title: 在UI中檢視目標的詳細資訊
+title: 檢視目標詳細資訊
 description: '個別目的地的詳細資訊頁面提供目的地詳細資訊的概述，例如目的地名稱、ID、對應至目的地的區段，以及編輯啟動和啟用和停用資料流的控制項。 '
 seo-description: '個別目的地的詳細資訊頁面提供目的地詳細資訊的概述，例如目的地名稱、ID、對應至目的地的區段，以及編輯啟動和啟用和停用資料流的控制項。 '
 translation-type: tm+mt
-source-git-commit: 8d403e73a804953f9584d6a72f945d4444e65d11
+source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
 workflow-type: tm+mt
-source-wordcount: '749'
+source-wordcount: '740'
 ht-degree: 1%
 
 ---
 
 
-# 檢視目標的詳細資訊
+# 檢視目標詳細資訊
 
 在Adobe Experience Platform使用者介面中，您可以檢視和監控目標的屬性和活動。 這些詳細資訊包括目標的名稱和ID、啟用或停用目標的控制項，以及更多功能。 批次目的地的詳細資訊還包括已啟動描述檔記錄的度量和資料流執行的歷史記錄。
 
