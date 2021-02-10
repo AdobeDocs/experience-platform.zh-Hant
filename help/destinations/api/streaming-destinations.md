@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform; home；熱門主題；API教學課程；串流目標API;平台
 solution: Experience Platform
-title: 使用API呼叫連線至串流目的地並啟用資料
+title: 使用Adobe Experience Platform中的API呼叫，連線至串流目的地並啟用資料
 description: 本檔案涵蓋使用Adobe Experience Platform API建立串流目的地
 topic: tutorial
 type: Tutorial
 translation-type: tm+mt
-source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
+source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
 workflow-type: tm+mt
 source-wordcount: '2021'
 ht-degree: 1%
@@ -14,7 +14,7 @@ ht-degree: 1%
 ---
 
 
-# 使用Adobe Experience Platform中的API呼叫，連線至串流目的地並啟用資料
+# 使用API呼叫連線至串流目的地並啟用資料
 
 >[!NOTE]
 >
@@ -67,7 +67,7 @@ Experience Platform中的資源可以隔離至特定的虛擬沙盒。 在對平
 
 所有包含裝載(POST、PUT、PATCH)的請求都需要額外的媒體類型標題：
 
-* 內容類型：`application/json`
+* Content-Type: `application/json`
 
 ### Swagger文檔{#swagger-docs}
 
