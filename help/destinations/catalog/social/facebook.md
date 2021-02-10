@@ -1,11 +1,11 @@
 ---
 keywords: facebook擴充功能；facebook擴充功能；facebook目的地；facebook;instagram;messenger;facebook Messenger
-title: Facebook延伸功能目的地
+title: Facebook擴充功能
 description: 根據雜湊的電子郵件，啟用您Facebook宣傳的個人檔案，以鎖定受眾、個人化和抑制受眾。
 translation-type: tm+mt
-source-git-commit: aa2088d30716f56ac2909214badbb39c0ae97855
+source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
 workflow-type: tm+mt
-source-wordcount: '952'
+source-wordcount: '951'
 ht-degree: 3%
 
 ---
