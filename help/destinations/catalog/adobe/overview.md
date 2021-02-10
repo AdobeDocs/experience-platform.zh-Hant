@@ -3,10 +3,10 @@ keywords: 目的地；體驗雲解決方案；目標；目標；廣告雲；廣�
 title: Adobe目標概觀
 description: 將Platform中的資料連結至其他Adobe Experience Cloud解決方案，以利廣告鎖定、個人化、行銷自動化等，以管理客戶體驗
 translation-type: tm+mt
-source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
+source-git-commit: 48c5f6d6a45de5f7982543f7a43cb4ece8cf3a9f
 workflow-type: tm+mt
-source-wordcount: '219'
-ht-degree: 13%
+source-wordcount: '220'
+ht-degree: 12%
 
 ---
 
@@ -19,7 +19,7 @@ ht-degree: 13%
 
 要瞭解連接和擴展之間的差異，請參閱「目標類型和類別」頁中的[連接](../../destination-types.md#connections)。
 
-- [Adobe Campaign](../email-marketing/adobe-campaign.md)
+- [Adobe Campaign連線](../email-marketing/adobe-campaign.md)
 
 ## 擴充功能
 
