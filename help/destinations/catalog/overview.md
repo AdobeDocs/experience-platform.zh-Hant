@@ -1,19 +1,19 @@
 ---
 keywords: 目錄；目錄
-title: 目標目錄
-seo-title: 目標目錄
-description: 「目標目錄」提供可接收資料的可用目標清單。 這些目標包括Adobe解決方案、廣告平台、調查平台、電子郵件行銷平台等。
-seo-description: 「目標目錄」提供可接收資料的可用目標清單。 這些目標包括Adobe解決方案、廣告平台、調查平台、電子郵件行銷平台等。
+title: 目標目錄概述
+seo-title: 目標目錄概述
+description: 「目標」目錄提供可接收資料的可用目標清單。 這些目標包括Adobe解決方案、廣告平台、調查平台、電子郵件行銷平台等。
+seo-description: 「目標」目錄提供可接收資料的可用目標清單。 這些目標包括Adobe解決方案、廣告平台、調查平台、電子郵件行銷平台等。
 translation-type: tm+mt
-source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
+source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
 workflow-type: tm+mt
-source-wordcount: '174'
+source-wordcount: '177'
 ht-degree: 0%
 
 ---
 
 
-# 目標目錄
+# 目標目錄概述
 
 目標目錄提供可接收資料的可用目標平台清單。 這些目標平台包括Adobe解決方案、廣告平台、調查平台、電子郵件行銷平台、Experience Platform擴充功能等。
 
