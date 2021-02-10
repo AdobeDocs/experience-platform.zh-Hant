@@ -3,7 +3,7 @@ keywords: dmp目的地；DIL;audience manager dmp extension;dmp extension；資�
 title: 資料管理平台(DMP)目標概觀
 description: 資料管理平台(DMP)可讓廣告商、發行商和代理商建立獨特的受眾個人檔案、識別最有價值的細分，並跨任何數位通道使用。 這可讓您建立真正360度的消費者個人檔案檢視，建立並啟動有意義的受眾。
 translation-type: tm+mt
-source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
+source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
 workflow-type: tm+mt
 source-wordcount: '138'
 ht-degree: 0%
