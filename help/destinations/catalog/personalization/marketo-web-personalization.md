@@ -1,11 +1,11 @@
 ---
 keywords: Marketo Web Personalization; marketo Web Personalization; Marketto Web Personalization Extension;marketo Web Personalization Extension;marketo Web Personalization Extension;marketo;Marketto
-title: Marketo Web Personalization Extension Destination
+title: Marketo Web Personalization擴充功能
 description: Marketo Web Personalization擴充功能是Adobe Experience Platform中的個人化目的地。 如需擴充功能的詳細資訊，請參閱Adobe Exchange的擴充功能頁面。
 translation-type: tm+mt
-source-git-commit: f4095a90ff70e8d054bae4f3b0f884552ffd30df
+source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
 workflow-type: tm+mt
-source-wordcount: '580'
+source-wordcount: '579'
 ht-degree: 3%
 
 ---
