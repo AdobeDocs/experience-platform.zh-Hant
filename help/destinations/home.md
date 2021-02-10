@@ -5,7 +5,7 @@ seo-title: 目的地概觀
 description: 瞭解如何將Adobe Experience Platform資料啟用至跨通道行銷宣傳、電子郵件、目標廣告等目的地。
 seo-description: 目標是與目標平台預先建立的整合，可讓您順暢地從Adobe Experience Platform啟動資料。 您可以使用Adobe Experience Platform中的「目標」來啟用您已知和未知的跨通道行銷宣傳、電子郵件宣傳、目標廣告和許多其他使用案例資料。
 translation-type: tm+mt
-source-git-commit: fc0813b457f039c0f0fa965df2d1100170424d23
+source-git-commit: 2efdefc69c937c70f6a463113a73ca71d8998e14
 workflow-type: tm+mt
 source-wordcount: '493'
 ht-degree: 1%
@@ -21,12 +21,12 @@ ht-degree: 1%
 
 ## 目標和源{#destinations-and-sources}
 
-Platform的核心功能之一是吸收您的第一方資料，並根據您的業務需求加以啟動。 使用來源將資料內嵌至平台，並使用目的地從平台匯出資料。
+Platform的核心功能之一是吸收您的第一方資料，並根據您的業務需求加以啟動。 使用[sources](../sources/home.md)將資料內嵌至平台，並使用目的地從平台匯出資料。
 
 ## 目標步驟{#steps}
 
 * 從平台中所有可用目標的[自助目錄](./catalog/overview.md)中選擇。
-* 使用&#x200B;**[!UICONTROL 目標]**&#x200B;來[activate](./ui/activate-destinations.md)，並傳送個人檔案或區段至行銷自動化平台、數位廣告平台等。
+* 使用目標[activate](./ui/activate-destinations.md)，並傳送個人檔案或區段至行銷自動化平台、數位廣告平台等。
 * 定期排程匯出至您偏好目的地的資料。
 
 ## 控制{#controls}
