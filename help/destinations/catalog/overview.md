@@ -5,9 +5,9 @@ seo-title: 目標目錄概述
 description: 「目標」目錄提供可接收資料的可用目標清單。 這些目標包括Adobe解決方案、廣告平台、調查平台、電子郵件行銷平台等。
 seo-description: 「目標」目錄提供可接收資料的可用目標清單。 這些目標包括Adobe解決方案、廣告平台、調查平台、電子郵件行銷平台等。
 translation-type: tm+mt
-source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
+source-git-commit: 48c5f6d6a45de5f7982543f7a43cb4ece8cf3a9f
 workflow-type: tm+mt
-source-wordcount: '177'
+source-wordcount: '194'
 ht-degree: 0%
 
 ---
@@ -23,13 +23,13 @@ ht-degree: 0%
 
 您可以在Adobe Experience Platform中將資料啟用至不同的目的地類別。 以下連結提供每個目標類別的詳細資訊：
 
-- [Adobe解決方案](./adobe/overview.md)
-- [廣告目的地](./advertising/overview.md)
-- [Analytics目標](./analytics/overview.md)
-- [雲端儲存空間目標](./cloud-storage/overview.md)
-- [資料管理平台](./data-management/overview.md)
-- [電子郵件行銷](./email-marketing/overview.md)
-- [個性化](./personalization/overview.md)
-- [社交目的地](./social/overview.md)
-- [調查](./survey/overview.md)
-- [客戶之聲](./voice/overview.md)
+- [Adobe目標概觀](./adobe/overview.md)
+- [廣告目標概觀](./advertising/overview.md)
+- [Analytics目標概觀](./analytics/overview.md)
+- [雲端儲存空間目標概觀](./cloud-storage/overview.md)
+- [資料管理平台(DMP)目標概觀](./data-management/overview.md)
+- [電子郵件行銷目標概觀](./email-marketing/overview.md)
+- [個人化目標概觀](./personalization/overview.md)
+- [社交網路目的地總覽](./social/overview.md)
+- [調查目標概觀](./survey/overview.md)
+- [客戶之聲目標概觀](./voice/overview.md)
