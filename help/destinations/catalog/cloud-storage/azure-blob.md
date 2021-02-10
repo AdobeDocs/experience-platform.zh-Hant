@@ -1,11 +1,11 @@
 ---
 keywords: Azure Blob;Blob目標；s3;azure blob目標
-title: Azure Blob連接目標
+title: Azure Blob連接
 description: 建立Azure Blob儲存空間的即時對外連線，以定期從Adobe Experience Platform匯出以Tab分隔或CSV資料檔案。
 translation-type: tm+mt
-source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
+source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
 workflow-type: tm+mt
-source-wordcount: '477'
+source-wordcount: '476'
 ht-degree: 1%
 
 ---
