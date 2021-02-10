@@ -1,12 +1,12 @@
 ---
 keywords: 媒體分析擴充功能；媒體分析；音訊和視訊擴充功能
-title: Adobe Media Analytics for Audio and Video Extension Destination
+title: Adobe Media Analytics for Audio and Video 擴充功能
 description: Adobe Media Analytics for Audio and Video Extension是Adobe Experience Platform中的分析目的地。 如需擴充功能的詳細資訊，請參閱Adobe Exchange的擴充功能頁面。
 translation-type: tm+mt
-source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
+source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
 workflow-type: tm+mt
-source-wordcount: '538'
-ht-degree: 6%
+source-wordcount: '537'
+ht-degree: 8%
 
 ---
 
