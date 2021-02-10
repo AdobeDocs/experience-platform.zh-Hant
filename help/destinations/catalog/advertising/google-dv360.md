@@ -1,11 +1,11 @@
 ---
 keywords: DoubleClick競標管理器；DoubleClick競標管理器；DoubleClick；顯示與視訊360；顯示360；視訊360；視訊360；顯示與視訊360；顯示與視訊
-title: Google Display & Video 360 Connection Destination
+title: Google Display & Video 360連線
 description: Display & Video 360（先前稱為DoubleClick競標管理器）是一種工具，用於在顯示、視訊和行動庫存來源中執行重新鎖定目標及受眾目標數位促銷活動。
 translation-type: tm+mt
-source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
+source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
 workflow-type: tm+mt
-source-wordcount: '711'
+source-wordcount: '710'
 ht-degree: 0%
 
 ---
@@ -32,7 +32,7 @@ ht-degree: 0%
 
 **區段匯出** -您正將區段（對象）的所有成員匯出至Google目標。
 
-## 必要條件
+## 先決條件
 
 ### 允許清單
 
