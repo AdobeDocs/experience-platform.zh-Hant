@@ -5,9 +5,9 @@ seo-title: 目標目錄概述
 description: 「目標」目錄提供可接收資料的可用目標清單。 這些目標包括Adobe解決方案、廣告平台、調查平台、電子郵件行銷平台等。
 seo-description: 「目標」目錄提供可接收資料的可用目標清單。 這些目標包括Adobe解決方案、廣告平台、調查平台、電子郵件行銷平台等。
 translation-type: tm+mt
-source-git-commit: 48c5f6d6a45de5f7982543f7a43cb4ece8cf3a9f
+source-git-commit: 2efdefc69c937c70f6a463113a73ca71d8998e14
 workflow-type: tm+mt
-source-wordcount: '194'
+source-wordcount: '198'
 ht-degree: 0%
 
 ---
@@ -29,6 +29,7 @@ ht-degree: 0%
 - [雲端儲存空間目標概觀](./cloud-storage/overview.md)
 - [資料管理平台(DMP)目標概觀](./data-management/overview.md)
 - [電子郵件行銷目標概觀](./email-marketing/overview.md)
+- [行動互動目標概觀](./mobile-engagement/overview.md)
 - [個人化目標概觀](./personalization/overview.md)
 - [社交網路目的地總覽](./social/overview.md)
 - [調查目標概觀](./survey/overview.md)
