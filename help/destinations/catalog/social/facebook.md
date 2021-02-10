@@ -1,9 +1,9 @@
 ---
-keywords: facebook擴充功能；facebook擴充功能；facebook目的地；facebook;instagram;messenger;facebook Messenger
-title: Facebook擴充功能
+keywords: facebook連接；facebook連接；facebook目標；facebook;instagram;messenger;facebook Messenger
+title: Facebook連線
 description: 根據雜湊的電子郵件，啟用您Facebook宣傳的個人檔案，以鎖定受眾、個人化和抑制受眾。
 translation-type: tm+mt
-source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
+source-git-commit: 2efdefc69c937c70f6a463113a73ca71d8998e14
 workflow-type: tm+mt
 source-wordcount: '951'
 ht-degree: 3%
@@ -11,7 +11,7 @@ ht-degree: 3%
 ---
 
 
-# [!DNL Facebook] 擴充功能
+# [!DNL Facebook] 連接
 
 >[!IMPORTANT]
 >
