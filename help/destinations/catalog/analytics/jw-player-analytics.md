@@ -1,11 +1,11 @@
 ---
 keywords: JW player;jw player;JW Player;jw extension;JW extension
-title: JW Player Analytics（測試版）延伸模組目標
+title: JW Player Analytics（測試版）擴充功能
 description: JW Player Analytics（測試版）擴充功能是Adobe Experience Platform中的分析目標。 如需擴充功能的詳細資訊，請參閱Adobe Exchange的擴充功能頁面。
 translation-type: tm+mt
-source-git-commit: 8d403e73a804953f9584d6a72f945d4444e65d11
+source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
 workflow-type: tm+mt
-source-wordcount: '545'
+source-wordcount: '544'
 ht-degree: 3%
 
 ---
