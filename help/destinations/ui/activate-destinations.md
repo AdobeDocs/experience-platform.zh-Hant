@@ -1,12 +1,12 @@
 ---
 keywords: 激活目標；激活目標；激活資料
-title: 將設定檔和區段啟動至目標
+title: 將描述檔和區段啟用至目標
 type: Tutorial
 seo-title: 將描述檔和區段啟用至目標
 description: 將區段對應至目標，以啟用您在Adobe Experience Platform中擁有的資料。 若要完成此作業，請遵循下列步驟。
 seo-description: 將區段對應至目標，以啟用您在Adobe Experience Platform中擁有的資料。 若要完成此作業，請遵循下列步驟。
 translation-type: tm+mt
-source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
+source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
 workflow-type: tm+mt
 source-wordcount: '2141'
 ht-degree: 0%
