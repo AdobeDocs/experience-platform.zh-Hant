@@ -1,11 +1,11 @@
 ---
 keywords: Medallia;medallia
-title: Medallia Extension Destination
+title: 美達利亞
 description: Medallia擴充功能是Adobe Experience Platform中客戶目的地的聲音。 如需擴充功能的詳細資訊，請參閱Adobe Exchange的擴充功能頁面。
 translation-type: tm+mt
-source-git-commit: 8d403e73a804953f9584d6a72f945d4444e65d11
+source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
 workflow-type: tm+mt
-source-wordcount: '542'
+source-wordcount: '541'
 ht-degree: 3%
 
 ---
