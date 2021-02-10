@@ -1,11 +1,11 @@
 ---
 keywords: 飛艇屬性；飛艇目的地
-title: 飛艇屬性連接目的地
+title: 飛艇屬性連接
 description: 順暢地將Adobe觀眾資料傳遞至Ansphiry，做為觀眾屬性，以便在Ansphiry中定位。
 translation-type: tm+mt
-source-git-commit: f4095a90ff70e8d054bae4f3b0f884552ffd30df
+source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
 workflow-type: tm+mt
-source-wordcount: '1205'
+source-wordcount: '1204'
 ht-degree: 0%
 
 ---
