@@ -3,9 +3,9 @@ keywords: 廣告；貿易部門；
 title: The Trade Desk connection
 description: '交易台是廣告購買者的自助服務平台，可跨展示廣告、視訊和行動庫存來源執行重新鎖定目標及受眾目標數位宣傳。 '
 translation-type: tm+mt
-source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
+source-git-commit: ad025630cbae5c220f5bbd7f55cad70620b6f335
 workflow-type: tm+mt
-source-wordcount: '549'
+source-wordcount: '540'
 ht-degree: 0%
 
 ---
@@ -50,7 +50,6 @@ ht-degree: 0%
 * **[!UICONTROL 名稱]**:您將來識別此目的地的名稱。
 * **[!UICONTROL 說明]**:將來幫助您識別此目標的說明。
 * **[!UICONTROL 帳戶ID]**:您的 [!DNL Trade Desk] [!UICONTROL 帳戶ID]。
-* **[!UICONTROL 用戶端密碼]**:用 `clientSecret` 戶端認證中使 [!DNL OAuth2] 用的參數。
 * **[!UICONTROL 伺服器位置]**:詢問您 [!DNL The Trade Desk] 的代表您應使用哪個地區伺服器。這些是您可從以下位置選擇的可用區域伺服器：
 
    * **[!UICONTROL 歐洲]**
