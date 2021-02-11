@@ -6,10 +6,10 @@ user-guide-title: Adobe Experience Platform 網頁 SDK 說明
 breadcrumb-title: Web SDK 指南
 user-guide-description: 透過 Edge 網路與 Experience Cloud 服務互動。
 translation-type: tm+mt
-source-git-commit: cea3e2f32d9489f5f06be70581bd974b9374646d
+source-git-commit: b7e8a1a72ed199440748f570f13ea844f3276682
 workflow-type: tm+mt
-source-wordcount: '128'
-ht-degree: 38%
+source-wordcount: '144'
+ht-degree: 37%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 38%
 # Adobe Experience Platform Web SDK {#edge}
 
 * [網頁SDK概觀](home.md)
-* 基礎 {#fundamentals}
+* 基礎知識{#fundamentals}
    * [先決條件](fundamentals/prerequisite.md)
    * [設定Edge](fundamentals/edge-configuration.md)
    * [安裝SDK](fundamentals/installing-the-sdk.md)
@@ -27,7 +27,7 @@ ht-degree: 38%
    * [為 ](fundamentals/debugging.md) 除錯
    * [合併事件資料](fundamentals/merging-event-data.md)
    * [與多個屬性互動](fundamentals/interacting-with-multiple-properties.md)
-* 身份 {#identity}
+* 身份{#identity}
    * [概述](identity/overview.md)
 * 資料彙集 {#data-collection}
    * [自動收集的資訊](data-collection/automatic-information.md)
@@ -46,12 +46,16 @@ ht-degree: 38%
       * [實作單頁應用程式](personalization/adobe-target/spa-implementation.md)
    * Offer Decisioning {#offer-decisioning}
       * [選件決策概觀](personalization/offer-decisioning/offer-decisioning-overview.md)
-* 同意 {#consent}
+* 同意{#consent}
    * [支援許可](consent/supporting-consent.md)
-   * IAB透明與同意框架2.0 {#iab-tcf}
+   * IAB透明度和同意框架2.0 {#iab-tcf}
       * [概述](consent/iab-tcf/overview.md)
       * [與Adobe Experience Platform Launch整合](consent/iab-tcf/with-launch.md)
       * [不需Adobe Experience Platform Launch即可整合](consent/iab-tcf/without-launch.md)
+* Adobe Experience Platform Launch {#extension}的網頁SDK擴充功能
+   * [網頁SDK擴充功能](extension/web-sdk-extension.md)
+   * [動作類型](extension/action-types.md)
+   * [資料元素類型](extension/data-element-types.md)
 * [發行說明](release-notes.md)
 * [常見問題](web-sdk-faq.md)
 * [部落格文章](blog-posts.md)
