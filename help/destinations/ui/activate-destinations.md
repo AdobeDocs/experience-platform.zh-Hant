@@ -6,7 +6,7 @@ seo-title: 將描述檔和區段啟用至目標
 description: 將區段對應至目標，以啟用您在Adobe Experience Platform中擁有的資料。 若要完成此作業，請遵循下列步驟。
 seo-description: 將區段對應至目標，以啟用您在Adobe Experience Platform中擁有的資料。 若要完成此作業，請遵循下列步驟。
 translation-type: tm+mt
-source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
+source-git-commit: ef0f7e20a55804c013756e261818c2ee2df4d103
 workflow-type: tm+mt
 source-wordcount: '2141'
 ht-degree: 0%
@@ -60,7 +60,7 @@ ht-degree: 0%
 
 對於社交目標，您必須選擇源屬性或身份名稱空間，以在目標中映射為目標身份。
 
-#### 範例：啟用[!DNL Facebook] {#example-facebook}的觀眾資料
+#### 範例：啟用[!DNL Facebook Custom Audience] {#example-facebook}的觀眾資料
 
 這是在[!DNL Facebook]中啟用觀眾資料時正確身分對應的範例。
 
@@ -85,7 +85,7 @@ ht-degree: 0%
 
 啟動後，[!DNL Platform]會自動雜湊來自未雜湊名稱空間的資料。
 
-屬性來源資料不會自動雜湊。 當您的來源欄位包含未雜湊的屬性時，請勾選「套用轉換&#x200B;]**」選項，讓[!DNL Platform]在啟動時自動雜湊資料。**[!UICONTROL ![身份映射轉換](../assets/ui/activate-destinations/identity-mapping-transformation.png)
+屬性來源資料不會自動雜湊。 當您的來源欄位包含未雜湊的屬性時，請勾選「套用transformation ]**」選項，讓[!DNL Platform]在啟動時自動雜湊資料。**[!UICONTROL ![身份映射轉換](../assets/ui/activate-destinations/identity-mapping-transformation.png)
 
  
 
@@ -114,7 +114,7 @@ ht-degree: 0%
 
 啟動後，[!DNL Platform]會自動雜湊來自未雜湊名稱空間的資料。
 
-屬性來源資料不會自動雜湊。 當您的來源欄位包含未雜湊的屬性時，請勾選「套用轉換&#x200B;]**」選項，讓[!DNL Platform]在啟動時自動雜湊資料。**[!UICONTROL ![身份映射轉換](../assets/ui/activate-destinations/identity-mapping-gcm-transformation.png)
+屬性來源資料不會自動雜湊。 當您的來源欄位包含未雜湊的屬性時，請勾選「套用transformation ]**」選項，讓[!DNL Platform]在啟動時自動雜湊資料。**[!UICONTROL ![身份映射轉換](../assets/ui/activate-destinations/identity-mapping-gcm-transformation.png)
 
 <!-- 
 `IDFA` IDs will be mapped to:
@@ -200,7 +200,7 @@ If you are using another ID, such as "Rewards ID" or "Loyalty ID", as primary id
 
 ![區段排程步驟](../assets/ui/activate-destinations/scheduling-icon.png)
 
-在&#x200B;**[!UICONTROL 計畫]**&#x200B;頁上，您可以看到向目標發送資料的開始日期以及向目標發送資料的頻率。 無法編輯這些值。
+在&#x200B;**[!UICONTROL 計畫]**&#x200B;頁面上，您可以看到將資料傳送至目的地的開始日期以及傳送資料至目的地的頻率。 無法編輯這些值。
 
 ### **[!UICONTROL 選擇屬]** 性步驟  {#select-attributes}
 
@@ -220,7 +220,7 @@ If you are using another ID, such as "Rewards ID" or "Loyalty ID", as primary id
 
 ![建議的屬性](../assets/ui/activate-destinations/mark-mandatory.png)
 
-此外，您可以將不同的屬性標示為必填。 將屬性標示為強制屬性，則會使其變成，因此匯出的區段必須包含該屬性。 因此，它可以用作另外的過濾形式。 將屬性標籤為必要屬性是&#x200B;**not**。
+此外，您可以將不同的屬性標示為必填。 將屬性標示為強制屬性，則會使其變成匯出的區段必須包含該屬性。 因此，它可以用作另外的過濾形式。 將屬性標籤為必要屬性是&#x200B;**not**。
 
 建議其中一個屬性是架構中的[唯一標識符](../../destinations/catalog/email-marketing/overview.md#identity)。 如需必要屬性的詳細資訊，請參閱[電子郵件行銷目標](../../destinations/catalog/email-marketing/overview.md#identity)檔案中的識別區段。
 
