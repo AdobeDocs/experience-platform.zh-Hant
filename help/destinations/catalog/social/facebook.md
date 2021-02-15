@@ -3,9 +3,9 @@ keywords: facebook連接；facebook連接；facebook目標；facebook;instagram;
 title: Facebook連線
 description: 根據雜湊的電子郵件，啟用您Facebook宣傳的個人檔案，以鎖定受眾、個人化和抑制受眾。
 translation-type: tm+mt
-source-git-commit: 2efdefc69c937c70f6a463113a73ca71d8998e14
+source-git-commit: 8b7befd9775654a2d55d28a64b4b104e7f9576aa
 workflow-type: tm+mt
-source-wordcount: '951'
+source-wordcount: '1001'
 ht-degree: 3%
 
 ---
@@ -15,7 +15,9 @@ ht-degree: 3%
 
 >[!IMPORTANT]
 >
->客戶目前正在向新目標版本遷移。 在遷移完成之前，您只會看到此目標的[!UICONTROL EMAIL]和[!UICONTROL EMAIL_LC_SHA_256]可用身份。
+>我們目前正在將客戶遷移到此目標的新版本[!DNL Facebook Custom Audience]。
+>
+> 本文中的說明適用於這兩個版本，並附下列附註：此移轉進行中時，您只會在使用者介面中看到目前版本的[!DNL Facebook]目的地，您只能使用[!UICONTROL EMAIL]和[!UICONTROL EMAIL_LC_SHA_256]身分進行啟動。
 
 啟用[!DNL Facebook]促銷活動的設定檔，根據雜湊的電子郵件鎖定受眾、個人化和抑制受眾。
 
@@ -95,9 +97,13 @@ ht-degree: 3%
    - 範例：`55e79200c1635b37ad31a378c39feb12f120f116625093a19bc32fff15041149`，而非`55E79200C1635B37AD31A378C39FEB12F120F116625093A19bC32FFF15041149`;
 - 別用鹽鹽。
 
-啟動後，[!DNL Platform]會自動雜湊來自未雜湊名稱空間的資料。
+>[!NOTE]
+>
+>啟動後，[!DNL Platform]會自動雜湊來自未雜湊名稱空間的資料。
+> 屬性來源資料不會自動雜湊。 當您的來源欄位包含未雜湊的屬性時，請勾選「套用transformation ]**」選項，讓[!DNL Platform]在啟動時自動雜湊資料。**[!UICONTROL 
+> **[!UICONTROL 只有在選擇屬性作為源欄位時，才會顯示應用轉換]**&#x200B;選項。 當您選擇名稱空間時，不會顯示它。
 
-屬性來源資料不會自動雜湊。 當您的來源欄位包含未雜湊的屬性時，請勾選「套用轉換&#x200B;]**」選項，讓[!DNL Platform]在啟動時自動雜湊資料。**[!UICONTROL ![身份映射轉換](../../assets/ui/activate-destinations/identity-mapping-transformation.png)
+![身份映射轉換](../../assets/ui/activate-destinations/identity-mapping-transformation.png)
 
 #### 使用自訂名稱空間{#custom-namespaces}
 
