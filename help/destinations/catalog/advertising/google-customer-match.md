@@ -3,9 +3,9 @@ keywords: google客戶符合；Google客戶符合；Google客戶符合
 title: Google客戶符合連線
 description: Google Customer Match可讓您使用您的線上和離線資料，透過Google的自有和營運資產（例如搜尋、購物、Gmail和YouTube）觸及客戶並與其重新互動。
 translation-type: tm+mt
-source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
+source-git-commit: ef0f7e20a55804c013756e261818c2ee2df4d103
 workflow-type: tm+mt
-source-wordcount: '1470'
+source-wordcount: '1498'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,9 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->客戶目前正在向新目標版本遷移。 在遷移完成之前，您只會看到此目標的[!UICONTROL EMAIL]和[!UICONTROL EMAIL_LC_SHA_256]可用身份。
+>我們目前正在將客戶移轉至此目標的新版本。
+>
+> 本文中的說明適用於這兩個版本，並附下列附註：此移轉進行中時，您只會在使用者介面中看到目前版本的[!DNL Google Customer Match]目的地，您只能使用[!UICONTROL EMAIL]和[!UICONTROL EMAIL_LC_SHA_256]身分進行啟動。
 
 [Google Customer ](https://support.google.com/google-ads/answer/6379332?hl=en) Matchet可讓您使用您的線上和離線資料，透過Google擁有和營運的資產觸及並重新與客戶互動，例如： [!DNL Search]、 [!DNL Shopping]、 [!DNL Gmail]和 [!DNL YouTube]。
 
@@ -59,7 +61,7 @@ ht-degree: 0%
 
 在即時CDP中建立[!DNL Google Customer Match]目標之前，您必須聯繫Google並遵循[使用客戶匹配合作夥伴中的允許清單指示，在Google文檔中上傳您的資料](https://support.google.com/google-ads/answer/7361372?hl=en&amp;ref_topic=6296507)。
 
-此外，如果您打算使用Google的[User_ID](https://developers.google.com/adwords/api/docs/guides/remarketing#customer_match_with_email_address_address_or_user_id)上傳資料，則還有另一個Google允許清單您必須將帳戶新增至。 請連絡您的Google帳戶管理員，確定您已新增至允許清單。
+此外，如果您打算使用Google的[User_ID](https://developers.google.com/adwords/api/docs/guides/remarketing#customer_match_with_email_address_address_or_user_id)上傳資料，則還有第二個Google允許清單您必須將帳戶新增至。 請連絡您的Google帳戶管理員，確定您已新增至允許清單。
 
 ### ID匹配要求{#id-matching-requirements}
 
@@ -82,7 +84,7 @@ ht-degree: 0%
 
 您可以選擇先對電子郵件地址進行雜湊處理，然後再將它們匯入Adobe Experience Platform，或者選擇在Experience Platform中清楚處理電子郵件地址，並讓我們的演算法在啟動時對它們進行雜湊處理。
 
-如需有關Google雜湊要求和其他啟動限制的詳細資訊，請參閱Google檔案中的下列章節：
+如需Google雜湊要求和其他啟動限制的詳細資訊，請參閱Google檔案中的下列章節：
 
 * [[!DNL Customer Match] 包含電子郵件地址、地址或使用者ID](https://developers.google.com/adwords/api/docs/guides/remarketing#customer_match_with_email_address_address_or_user_id)
 * [[!DNL Customer Match] 注意事項](https://developers.google.com/adwords/api/docs/guides/remarketing#customer_match_considerations)
