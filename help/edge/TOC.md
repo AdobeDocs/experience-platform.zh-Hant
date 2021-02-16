@@ -6,10 +6,10 @@ user-guide-title: Adobe Experience Platform 網頁 SDK 說明
 breadcrumb-title: Web SDK 指南
 user-guide-description: 透過 Edge 網路與 Experience Cloud 服務互動。
 translation-type: tm+mt
-source-git-commit: b7e8a1a72ed199440748f570f13ea844f3276682
+source-git-commit: 090050d89c628d82ebe1da6625a2ef1f2adf3e6c
 workflow-type: tm+mt
-source-wordcount: '144'
-ht-degree: 37%
+source-wordcount: '149'
+ht-degree: 36%
 
 ---
 
@@ -56,6 +56,7 @@ ht-degree: 37%
    * [網頁SDK擴充功能](extension/web-sdk-extension.md)
    * [動作類型](extension/action-types.md)
    * [資料元素類型](extension/data-element-types.md)
+   * [網頁SDK擴充功能版本注意事項](extension/web-sdk-ext-release-notes.md)
 * [發行說明](release-notes.md)
 * [常見問題](web-sdk-faq.md)
 * [部落格文章](blog-posts.md)
