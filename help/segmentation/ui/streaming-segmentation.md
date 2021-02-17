@@ -5,9 +5,9 @@ title: 串流區段UI指南
 topic: ui guide
 description: Adobe Experience Platform上的串流細分可讓您近乎即時地進行細分，同時專注於資料的豐富性。 透過串流分段，區段資格現在會在資料進入平台時進行，以減輕排程和執行分段工作的需求。 有了這項功能，大部份的區段規則現在都可以在資料傳入平台時進行評估，這表示區段成員資格將會保持最新，而不會執行排程的區段工作。
 translation-type: tm+mt
-source-git-commit: c0c42f872666323bfb3bdbdf5fb02475d3b5bc79
+source-git-commit: 405b7eb0c95ebef0b05d2b10ef92f28a37b7cc86
 workflow-type: tm+mt
-source-wordcount: '802'
+source-wordcount: '769'
 ht-degree: 0%
 
 ---
@@ -75,12 +75,6 @@ ht-degree: 0%
 ![](../images/ui/streaming-segmentation/info-bubble.png)
 
 如需區段定義的詳細資訊，請閱讀[區段定義詳細資訊](#segment-details)的上一節。
-
-## 串流細分影片示範
-
-以下視訊旨在支援您對串流區段的瞭解。 它顯示客戶體驗範例，然後快速導覽[!DNL Platform]介面中的主要功能。
-
->[!VIDEO](https://video.tv.adobe.com/v/36184?quality=12&learn=on)
 
 ## 後續步驟
 
