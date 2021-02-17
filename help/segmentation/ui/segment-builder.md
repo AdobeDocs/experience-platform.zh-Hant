@@ -5,9 +5,9 @@ title: 區段產生器UI指南
 topic: ui guide
 description: 'Adobe Experience Platform UI中的「區段產生器」提供豐富的工作區，讓您與描述檔資料元素互動。 工作區提供建立和編輯規則的直覺式控制項，例如用來表示資料屬性的拖放圖格。 '
 translation-type: tm+mt
-source-git-commit: 8fc1c5414f38e84ed1700ee95b1c382007ff2c27
+source-git-commit: 354b756e53b360f31c1832c2b0f946b67099a87f
 workflow-type: tm+mt
-source-wordcount: '1928'
+source-wordcount: '1896'
 ht-degree: 0%
 
 ---
@@ -127,7 +127,7 @@ ht-degree: 0%
 
 新容器會以第一個容器的子系出現，但您可以拖曳並移動容器來調整階層。 容器的預設行為是「[!UICONTROL 包含]」提供的屬性、事件或對象。 您可以將規則設為「[!UICONTROL 排除]」描述檔，這些描述檔符合容器標準，方法是選取方塊左上角的&#x200B;**[!UICONTROL 包含]**，然後選取「[!UICONTROL 排除]」。
 
-您也可以選取子容器上的「解除包裝容器」，將子容器擷取並內嵌至父容器。 選取子容器右上角的省略號(...)以存取此選項。
+子容器也可以透過選取子容器上的「解除包裝容器」，以內嵌方式擷取並新增至父容器。 選取子容器右上角的省略號(...)以存取此選項。
 
 ![](../images/ui/segment-builder/include-exclude.png)
 
@@ -163,7 +163,7 @@ ht-degree: 0%
 >
 >觀眾估計是使用當天樣本資料的樣本大小產生。 如果您的描述檔儲存區中有少於100萬個實體，則會使用完整資料集；100萬到2000萬個單位使用100萬個單位；超過2000萬個單位，佔全部單位的5%。 有關產生區段估計的更多資訊，請參閱區段建立教學課程的[估計產生區段](../tutorials/create-a-segment.md#estimate-and-preview-an-audience)。
 
-## 後續步驟和其他資源{#next-steps}
+## 下一步 {#next-steps}
 
 「區段產生器」提供豐富的工作流程，讓您將有價對象與[!DNL Real-time Customer Profile]資料隔離。 閱讀本指南後，您現在可以：
 
@@ -173,16 +173,4 @@ ht-degree: 0%
 - 為排程的區段啟用所有區段定義。
 - 為串流區段啟用指定的區段定義。
 
-若要進一步瞭解[!DNL Segmentation Service]，請繼續閱讀檔案，並觀賞以下影片以補充您的學習。 若要進一步瞭解[!DNL Segmentation Service] UI的其他部分，請閱讀[[!DNL Segmentation Service] 使用指南](./overview.md)
-
->[!WARNING]
->
-> 下列視訊中顯示的[!DNL Platform] UI已過期。 請參閱上述檔案以取得最新的UI螢幕擷取和功能。
-
-**建立區段：**
-
->[!VIDEO](https://video.tv.adobe.com/v/27254?quality=12&learn=on)
-
-**建立動態區段：**
-
->[!VIDEO](https://video.tv.adobe.com/v/27428?quality=12&learn=on)
+若要進一步瞭解[!DNL Segmentation Service]，請繼續閱讀檔案並觀賞相關影片以補充您的學習。 若要進一步瞭解[!DNL Segmentation Service] UI的其他部分，請閱讀[[!DNL Segmentation Service] 使用指南](./overview.md)
