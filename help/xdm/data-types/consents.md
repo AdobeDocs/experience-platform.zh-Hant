@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;profile；即時客戶配置檔案；疑難排解；API；同意；同意；偏好；偏好；privacyOptOuts;marketingPreferences;optOutType;basisOfProcessing；同意；同意
 title: 同意與偏好資料類型
-description: 「隱私權／行銷偏好（同意）」資料類型旨在支援收集「同意管理平台」(CMPs)和您資料作業中其他來源產生的客戶權限和偏好。
+description: 「同意隱私權、個人化和行銷偏好」資料類型旨在支援收集「同意管理平台」(CMP)和其他來源自您資料作業產生的客戶權限和偏好。
 topic: guide
 translation-type: tm+mt
-source-git-commit: 10ccccf72ff7a2fd726066332b9771dff1929af6
+source-git-commit: 865379292985037b184d92e5d3fc1abc1873e962
 workflow-type: tm+mt
-source-wordcount: '2040'
+source-wordcount: '2067'
 ht-degree: 1%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 1%
 
 # [!DNL Consents & Preferences] 資料類型
 
-[!DNL Privacy/Marketing Preferences (Consent)]資料類型（以下稱為「[!DNL Consents & Preferences]資料類型」）是[!DNL Experience Data Model](XDM)資料類型，旨在支援收集「同意管理平台」(CMP)和您資料作業的其他來源所產生的客戶權限和偏好。
+[!UICONTROL 隱私、個人化和行銷偏好的同意]資料類型（以下稱為「[!DNL Consents & Preferences]資料類型」）是[!DNL Experience Data Model](XDM)資料類型，旨在支援收集「同意管理平台」(CMPs)和您資料營運的其他來源所產生的客戶權限和偏好。
 
 本檔案涵蓋[!DNL Consents & Preferences]資料類型所提供欄位的結構和用途。
 
@@ -40,234 +40,246 @@ ht-degree: 1%
 * **個人化偏好設定**:關於品牌應如何個人化傳遞給客戶的體驗的偏好設定。
 * **行銷偏好設定**:關於品牌是否允許透過各種管道與客戶聯絡的偏好設定。
 
+下列螢幕擷取顯示資料類型結構在平台UI中的呈現方式：
+
+![](../images/data-types/consents.png)
+
+>[!TIP]
+>
+>請參閱[探索XDM資源](../ui/explore.md)指南，以瞭解如何在平台UI中查找任何XDM資源並檢查其結構的步驟。
+
 以下JSON顯示[!DNL Consents & Preferences]資料類型可處理的資料類型範例。 以下各節提供了有關這些欄位具體使用情況的資訊。
 
 ```json
 {
-  "xdm:consents": {
-    "xdm:collect": {
-      "xdm:val": "y",
+  "consents": {
+    "collect": {
+      "val": "y",
     },
-    "xdm:adID": {
-      "xdm:val": "VI"
+    "adID": {
+      "val": "VI"
     },
-    "xdm:share": {
-      "xdm:val": "y",
+    "share": {
+      "val": "y",
     },
-    "xdm:personalize": {
-      "xdm:content": {
-        "xdm:val": "y"
+    "personalize": {
+      "content": {
+        "val": "y"
       }
     },
-    "xdm:marketing": {
-      "xdm:preferred": "email",
-      "xdm:any": {
-        "xdm:val": "u"
+    "marketing": {
+      "preferred": "email",
+      "any": {
+        "val": "u"
       },
-      "xdm:push": {
-        "xdm:val": "n",
-        "xdm:reason": "Too Frequent",
-        "xdm:time": "2019-01-01T15:52:25+00:00"
+      "push": {
+        "val": "n",
+        "reason": "Too Frequent",
+        "time": "2019-01-01T15:52:25+00:00"
       }
     },
-    "xdm:idSpecific": {
+    "metadata": {
+      "time": "2019-01-01T15:52:25+00:00"
+    },
+    "idSpecific": {
       "email": {
         "jdoe@example.com": {
-          "xdm:marketing": {
-            "xdm:email": {
-              "xdm:val": "n"
+          "marketing": {
+            "email": {
+              "val": "n"
             }
           }
         }
       }
     }
-  },
-  "xdm:metadata": {
-    "xdm:time": "2019-01-01T15:52:25+00:00"
   }
 }
 ```
 
->[!NOTE]
+>[!TIP]
 >
->上述範例旨在說明透過[!DNL Consents & Preferences]資料類型傳送至[!DNL Platform]的資料結構，以便提供本檔案其餘內容，說明資料類型所提供的主要欄位。 [附錄](#full-schema)中可找到資料類型結構的完整模式，以供參考。
+>您可以針對您在Experience Platform中定義的任何XDM結構，產生範例JSON資料，以協助視覺化您的客戶同意和偏好資料應如何對應。 如需詳細資訊，請參閱下列檔案：
+>
+>* [在UI中產生範例資料](../ui/sample.md)
+>* [在API中產生範例資料](../api/sample-data.md)
 
-## xdm:consents {#choices}
 
-`xdm:consents` 包含數個欄位，說明客戶的同意與偏好。以下子節將詳細說明這些欄位。
+## `consents` {#choices}
+
+`consents` 包含數個欄位，說明客戶的同意與偏好。以下子節將詳細說明這些欄位。
 
 ```json
-"xdm:consents": {
-  "xdm:collect": {
-    "xdm:val": "y",
+"consents": {
+  "collect": {
+    "val": "y",
   },
-  "xdm:adID": {
-    "xdm:val": "VI"
+  "adID": {
+    "val": "VI"
   },
-  "xdm:share": {
-    "xdm:val": "y",
+  "share": {
+    "val": "y",
   },
-  "xdm:personalize": {
-    "xdm:content": {
-      "xdm:val": "y"
+  "personalize": {
+    "content": {
+      "val": "y"
     }
   },
-  "xdm:marketing": {
-    "xdm:preferred": "email",
-    "xdm:any": {
-      "xdm:val": "u"
+  "marketing": {
+    "preferred": "email",
+    "any": {
+      "val": "u"
     },
-    "xdm:email": {
-      "xdm:val": "n",
-      "xdm:reason": "Too Frequent",
-      "xdm:time": "2019-01-01T15:52:25+00:00"
+    "email": {
+      "val": "n",
+      "reason": "Too Frequent",
+      "time": "2019-01-01T15:52:25+00:00"
     }
   }
 }
 ```
 
-### xdm:collect
+### `collect`
 
-`xdm:collect` 代表客戶對收集其資料的同意。
+`collect` 代表客戶對收集其資料的同意。
 
 ```json
-"xdm:collect" : {
-  "xdm:val": "y"
+"collect" : {
+  "val": "y"
 }
 ```
 
 | 屬性 | 說明 |
 | --- | --- |
-| `xdm:val` | 客戶為此使用案例提供的許可選擇。 有關接受的值和定義，請參見[附錄](#choice-values)。 |
+| `val` | 客戶為此使用案例提供的許可選擇。 有關接受的值和定義，請參見[附錄](#choice-values)。 |
 
-### xdm:adID
+### `adID`
 
-`xdm:adID` 代表客戶同意廣告商ID（IDFA或GAID）是否可用於連結此裝置上各應用程式的客戶。
+`adID` 代表客戶同意廣告商ID（IDFA或GAID）是否可用於連結此裝置上各應用程式的客戶。
 
 ```json
-"xdm:adID" : {
-  "xdm:val": "y"
+"adID" : {
+  "val": "y"
 }
 ```
 
 | 屬性 | 說明 |
 | --- | --- |
-| `xdm:val` | 客戶為此使用案例提供的許可選擇。 有關接受的值和定義，請參見[附錄](#choice-values)。 |
+| `val` | 客戶為此使用案例提供的許可選擇。 有關接受的值和定義，請參見[附錄](#choice-values)。 |
 
-### xdm:share
+### `share`
 
-`xdm:share` 代表客戶同意其資料是否可與第二方或第三方共用（或銷售給）。
+`share` 代表客戶同意其資料是否可與第二方或第三方共用（或銷售給）。
 
 ```json
-"xdm:share" : {
-  "xdm:val": "y"
+"share" : {
+  "val": "y"
 }
 ```
 
 | 屬性 | 說明 |
 | --- | --- |
-| `xdm:val` | 客戶為此使用案例提供的許可選擇。 有關接受的值和定義，請參見[附錄](#choice-values)。 |
+| `val` | 客戶為此使用案例提供的許可選擇。 有關接受的值和定義，請參見[附錄](#choice-values)。 |
 
-### xdm：個人化{#personalize}
+### `personalize` {#personalize}
 
-`xdm:personalize` 擷取客戶偏好設定，以瞭解他們的資料可以透過哪些方式個人化。客戶可以選擇退出特定的個人化使用案例，或完全退出個人化。
+`personalize` 擷取客戶偏好設定，以瞭解他們的資料可以透過哪些方式個人化。客戶可以選擇退出特定的個人化使用案例，或完全退出個人化。
 
 >[!IMPORTANT]
 >
->`xdm:personalize` 不涵蓋行銷使用案例。例如，如果客戶退出所有通道的個人化，他們不應停止透過這些通道接收通信。 相反，他們收到的訊息應該是通用的，而不是根據他們的個人檔案。
+>`personalize` 不涵蓋行銷使用案例。例如，如果客戶退出所有通道的個人化，他們不應停止透過這些通道接收通信。 相反，他們收到的訊息應該是通用的，而不是根據他們的個人檔案。
 >
->同樣，如果客戶退出所有通道的直接行銷（透過[下一節](#marketing)說明），即使允許個人化，該客戶也不應收到任何訊息。`xdm:marketing`
+>同樣，如果客戶退出所有通道的直接行銷（透過[下一節](#marketing)說明），即使允許個人化，該客戶也不應收到任何訊息。`marketing`
 
 ```json
-"xdm:personalize": {
-  "xdm:content": {
-    "xdm:val": "y",
+"personalize": {
+  "content": {
+    "val": "y",
   }
 }
 ```
 
 | 屬性 | 說明 |
 | --- | --- |
-| `xdm:content` | 代表客戶對您網站或應用程式中個人化內容的偏好。 |
-| `xdm:val` | 指定使用案例的客戶提供的個人化偏好設定。 如果客戶不需要獲得許可，則此欄位的值應指明個人化的發生基礎。 有關接受的值和定義，請參見[附錄](#choice-values)。 |
+| `content` | 代表客戶對您網站或應用程式中個人化內容的偏好。 |
+| `val` | 指定使用案例的客戶提供的個人化偏好設定。 如果客戶不需要獲得許可，則此欄位的值應指明個人化的發生基礎。 有關接受的值和定義，請參見[附錄](#choice-values)。 |
 
-### xdm:marketing {#marketing}
+### `marketing` {#marketing}
 
-`xdm:marketing` 擷取客戶對其資料可用於哪些行銷目的的偏好。客戶可以選擇退出特定的行銷使用案例，或完全退出直接行銷。
+`marketing` 擷取客戶對其資料可用於哪些行銷目的的偏好。客戶可以選擇退出特定的行銷使用案例，或完全退出直接行銷。
 
 ```json
-"xdm:marketing": {
-  "xdm:preferred": "email",
-  "xdm:any": {
-    "xdm:val": "u"
+"marketing": {
+  "preferred": "email",
+  "any": {
+    "val": "u"
   },
-  "xdm:email": {
-    "xdm:val": "n",
-    "xdm:reason": "Too Frequent"
+  "email": {
+    "val": "n",
+    "reason": "Too Frequent"
   },
-  "xdm:push": {
-    "xdm:val": "y"
+  "push": {
+    "val": "y"
   },
-  "xdm:sms": {
-    "xdm:val": "y"
+  "sms": {
+    "val": "y"
   }
 }
 ```
 
 | 屬性 | 說明 |
 | --- | --- |
-| `xdm:preferred` | 指出客戶首選的接收通信渠道。 有關接受的值，請參見[附錄](#preferred-values)。 |
-| `xdm:any` | 代表客戶對整體直接行銷的偏好。 此欄位中提供的同意偏好設定會視為任何行銷管道的「預設」偏好設定，除非以`xdm:marketing`下提供的其他子欄位覆寫。 如果您打算使用更詳細的同意選項，建議您排除此欄位。<br><br>如果值設為，則 `n`應忽略所有更具體的個人化設定。如果值設為`y`，則所有更精細的個人化選項也應視為`y`，除非明確設為`n`。 如果未設定值，則每個個人化選項的值都應依指定的方式接受。 |
-| `xdm:email` | 指出客戶是否同意接收電子郵件訊息。 |
-| `xdm:push` | 指出客戶是否允許接收推播通知。 |
-| `xdm:sms` | 指出客戶是否同意接收簡訊。 |
-| `xdm:val` | 客戶提供的指定使用案例偏好設定。 如果客戶不需要獲得許可，則此欄位的值應指明應根據何種基礎進行市場營銷使用案例。 有關接受的值和定義，請參見[附錄](#choice-values)。 |
-| `xdm:time` | 行銷偏好設定變更時的ISO 8601時間戳記（如果適用）。 請注意，如果任何個別偏好設定的時間戳記與`xdm:metadata`下提供的時間戳記相同，則不會針對該偏好設定設定此欄位。 |
-| `xdm:reason` | 當客戶退出行銷使用案例時，此字串欄位代表客戶退出的原因。 |
+| `preferred` | 指出客戶首選的接收通信渠道。 有關接受的值，請參見[附錄](#preferred-values)。 |
+| `any` | 代表客戶對整體直接行銷的偏好。 此欄位中提供的同意偏好設定會視為任何行銷管道的「預設」偏好設定，除非以`marketing`下提供的其他子欄位覆寫。 如果您打算使用更詳細的同意選項，建議您排除此欄位。<br><br>如果值設為，則 `n`應忽略所有更具體的個人化設定。如果值設為`y`，則所有更精細的個人化選項也應視為`y`，除非明確設為`n`。 如果未設定值，則每個個人化選項的值都應依指定的方式接受。 |
+| `email` | 指出客戶是否同意接收電子郵件訊息。 |
+| `push` | 指出客戶是否允許接收推播通知。 |
+| `sms` | 指出客戶是否同意接收簡訊。 |
+| `val` | 客戶提供的指定使用案例偏好設定。 如果客戶不需要獲得許可，則此欄位的值應指明應根據何種基礎進行市場營銷使用案例。 有關接受的值和定義，請參見[附錄](#choice-values)。 |
+| `time` | 行銷偏好設定變更時的ISO 8601時間戳記（如果適用）。 請注意，如果任何個別偏好設定的時間戳記與`metadata`下提供的時間戳記相同，則不會針對該偏好設定設定此欄位。 |
+| `reason` | 當客戶退出行銷使用案例時，此字串欄位代表客戶退出的原因。 |
 
-### xdm:idSpecific
+### `metadata`
 
-`xdm:idSpecific` 當特定同意或偏好並非普遍適用於客戶，但僅限於單一裝置或ID時，即可使用。例如，客戶可以選擇不接收某個地址的電子郵件，同時允許另一個地址發送電子郵件。
+`metadata` 每當客戶的同意和偏好上次更新時，都會擷取一般中繼資料。
+
+```json
+"metadata": {
+  "time": "2019-01-01T15:52:25+00:00",
+}
+```
+
+| 屬性 | 說明 |
+| --- | --- |
+| `time` | 上次更新客戶同意和偏好設定時的ISO 8601時間戳記。 此欄位可用來取代將時間戳記套用至個別偏好設定，以降低負載和複雜性。 在個別偏好設定下提供`time`值會覆寫該特定偏好設定的`metadata`時間戳記。 |
+
+### `idSpecific`
+
+`idSpecific` 當特定同意或偏好並非普遍適用於客戶，但僅限於單一裝置或ID時，即可使用。例如，客戶可以選擇不接收某個地址的電子郵件，同時允許另一個地址發送電子郵件。
 
 >[!IMPORTANT]
 >
->頻道層級同意與偏好設定（即在`xdm:idSpecific`以外的`xdm:consents`下提供的偏好設定）適用於該頻道內的ID。 因此，不論是採用相同的ID或裝置特定設定，所有通道層級的同意和偏好設定都會直接影響：
+>頻道層級同意與偏好設定（即在`idSpecific`以外的`consents`下提供的偏好設定）適用於該頻道內的ID。 因此，不論是採用相同的ID或裝置特定設定，所有通道層級的同意和偏好設定都會直接影響：
 >
->* 如果客戶已選擇退出渠道級別，則會忽略`xdm:idSpecific`中的任何等同同意或偏好。
->* 如果未設定渠道層級的同意或偏好，或客戶已選擇加入，則`xdm:idSpecific`中的相同同意或偏好將獲得履行。
+>* 如果客戶已選擇退出渠道級別，則會忽略`idSpecific`中的任何等同同意或偏好。
+>* 如果未設定渠道層級的同意或偏好，或客戶已選擇加入，則`idSpecific`中的相同同意或偏好將獲得履行。
 
 
-`xdm:idSpecific`物件中的每個金鑰代表Adobe Experience Platform Identity Service所識別的特定身分名稱空間。 雖然您可以定義自己的自訂名稱空間來分類不同的識別碼，但建議您使用Identity Service提供的標準名稱空間之一來減少即時客戶個人檔案的儲存空間。 有關身份名稱空間的詳細資訊，請參閱Identity Service文檔中的[identity namespace overview](../../identity-service/namespaces.md)。
+`idSpecific`物件中的每個金鑰代表Adobe Experience Platform Identity Service所識別的特定身分名稱空間。 雖然您可以定義自己的自訂名稱空間來分類不同的識別碼，但建議您使用Identity Service提供的標準名稱空間之一來減少即時客戶個人檔案的儲存空間。 有關身份名稱空間的詳細資訊，請參閱Identity Service文檔中的[identity namespace overview](../../identity-service/namespaces.md)。
 
-每個namespace對象的鍵代表客戶為其設定首選項的唯一標識值。 每個識別值都可以包含一組完整的同意和偏好設定，格式與`xdm:consents`相同。
+每個namespace對象的鍵代表客戶為其設定首選項的唯一標識值。 每個識別值都可以包含一組完整的同意和偏好設定，格式與`consents`相同。
 
 ```json
-"xdm:idSpecific": {
+"idSpecific": {
   "email": {
     "jdoe@example.com": {
-      "xdm:marketing": {
-        "xdm:email": {
-          "xdm:val": "n"
+      "marketing": {
+        "email": {
+          "val": "n"
         }
       }
     }
   }
 }
 ```
-
-## xdm：中繼資料
-
-`xdm:metadata` 每當客戶的同意和偏好上次更新時，都會擷取一般中繼資料。
-
-```json
-"xdm:metadata": {
-  "xdm:time": "2019-01-01T15:52:25+00:00",
-}
-```
-
-| 屬性 | 說明 |
-| --- | --- |
-| `xdm:time` | 上次更新客戶同意和偏好的時間戳記。 此欄位可用來取代將時間戳記套用至個別偏好設定，以降低負載和複雜性。 在個別偏好設定下提供`xdm:time`值會覆寫該特定偏好設定的`xdm:metadata`時間戳記。 |
 
 ## 使用資料類型{#ingest}接收資料
 
@@ -289,9 +301,9 @@ ht-degree: 1%
 
 以下各節提供有關[!DNL Consents & Preferences]資料類型的其他參考資訊。
 
-### xdm:val {#choice-values}的接受值
+### `val` {#choice-values}的接受值
 
-下表概述`xdm:val`的接受值：
+下表概述`val`的接受值：
 
 | 值 | 標題 | 說明 |
 | --- | --- | --- |
@@ -305,9 +317,9 @@ ht-degree: 1%
 | `VI` | 個人的切身利益 | 為了保護個人的切身利益，必須收集符合特定目的的資料。 |
 | `PI` | 公共利益 | 為特定目的收集資料，是為了公共利益或行使官方權力而執行的。 |
 
-### xdm:preferred {#preferred-values}的接受值
+### `preferred` {#preferred-values}的接受值
 
-下表概述`xdm:preferred`的接受值：
+下表概述`preferred`的接受值：
 
 | 值 | 說明 |
 | --- | --- |
