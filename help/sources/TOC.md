@@ -5,9 +5,9 @@ user-guide-title: Adobe Experience Platform 來源連接器說明
 breadcrumb-title: 來源連接器指南
 user-guide-description: 從多種來源或結構擷取資料、加標籤，以及增強已擷取的資料。
 translation-type: tm+mt
-source-git-commit: a489ab248793a063295578943ad600d8eacab6a2
+source-git-commit: 17eb7b9cb715d7d8d0d7bce930ddec43259149cc
 workflow-type: tm+mt
-source-wordcount: '551'
+source-wordcount: '557'
 ht-degree: 12%
 
 ---
@@ -117,6 +117,8 @@ ht-degree: 12%
          - [PayPal](tutorials/api/create/payments/paypal.md)
       - 協定{#protocols}
          - [通用OData](tutorials/api/create/protocols/odata.md)
+      - 串流{#streaming}
+         - [HTTP API](tutorials/api/create/streaming/http.md)
    - 探索資料{#explore}
       - [探索廣告資料](tutorials/api/explore/advertising.md)
       - [探索雲端儲存空間資料](tutorials/api/explore/cloud-storage.md)
@@ -196,6 +198,8 @@ ht-degree: 12%
          - [PayPal](tutorials/ui/create/payments/paypal.md)
       - 協定{#protocols}
          - [通用OData](tutorials/ui/create/protocols/odata.md)
+      - 串流{#streaming}
+         - [HTTP API](tutorials/ui/create/streaming/http.md)
    - 配置資料流{#dataflow}
       - [廣告連接資料流](tutorials/ui/dataflow/advertising.md)
       - [批處理雲儲存連接資料流](tutorials/ui/dataflow/batch/cloud-storage.md)
