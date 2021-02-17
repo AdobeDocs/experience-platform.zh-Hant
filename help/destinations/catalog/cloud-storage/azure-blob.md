@@ -3,9 +3,9 @@ keywords: Azure Blob;Blob目標；s3;azure blob目標
 title: Azure Blob連接
 description: 建立Azure Blob儲存空間的即時對外連線，以定期從Adobe Experience Platform匯出以Tab分隔或CSV資料檔案。
 translation-type: tm+mt
-source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
+source-git-commit: 6d1960be886d12475603aeb79fe6283a1fd3030e
 workflow-type: tm+mt
-source-wordcount: '476'
+source-wordcount: '602'
 ht-degree: 1%
 
 ---
@@ -30,7 +30,7 @@ ht-degree: 1%
 
 [!DNL Experience Platform] 支援以下要導出到的檔案格式 [!DNL Blob]:
 
-- 分隔字元分隔值(DSV):目前，對DSV格式化資料檔案的支援僅限於逗號分隔值。 將來將提供對一般DSV檔案的支援。 有關支援檔案的詳細資訊，請參閱[激活目標](../../ui/activate-destinations.md#esp-and-cloud-storage)教程中的雲儲存部分
+- 分隔字元分隔值(DSV):目前，對DSV格式化資料檔案的支援僅限於逗號分隔值。 將來將提供對一般DSV檔案的支援。 有關受支援檔案的詳細資訊，請閱讀[激活目標](../../ui/activate-destinations.md#esp-and-cloud-storage)教程中的雲儲存部分。
 
 ## 連接您的Blob帳戶{#connect-destination}
 
@@ -38,15 +38,21 @@ ht-degree: 1%
 
 您可以從畫面左側的目錄中選取適當的類別。 或者，您也可以使用搜尋選項，找到您要使用的特定目的地。
 
-在&#x200B;**[!UICONTROL 雲儲存]**&#x200B;類別下，選擇&#x200B;**[!UICONTROL Azure Blob儲存]** ，然後選擇&#x200B;**[!UICONTROL Activate]**。
+在&#x200B;**[!UICONTROL 雲儲存]**&#x200B;類別下，選擇&#x200B;**[!UICONTROL Azure Blob儲存]** ，然後選擇&#x200B;**[!UICONTROL 配置]**。
 
 ![目錄](../../assets/catalog/cloud-storage/blob/catalog.png)
+
+>[!NOTE]
+>
+>如果已存在與此目標的連接，您可以在目標卡上看到&#x200B;**[!UICONTROL 激活]**&#x200B;按鈕。 有關&#x200B;**[!UICONTROL Activate]**&#x200B;和&#x200B;**[!UICONTROL Configure]**&#x200B;之間差異的詳細資訊，請參閱目標工作區文檔的[Catalog](../../ui/destinations-workspace.md#catalog)部分。
 
 此時將顯示&#x200B;**[!UICONTROL 連接到Azure Blob儲存]**&#x200B;頁。 在此頁上，您可以使用新認證或現有認證。
 
 ### 新帳戶{#new-account}
 
-如果您使用新憑據，請選擇&#x200B;**[!UICONTROL 新建帳戶]**。 在出現的輸入表單上，提供連線字串。 訪問Blob儲存中的資料所需的連接字串。 [!DNL Blob]連接字串模式以：`DefaultEndpointsProtocol=https;AccountName={ACCOUNT_NAME};AccountKey={ACCOUNT_KEY}`。
+如果您使用新憑據，請選擇&#x200B;**[!UICONTROL 新建帳戶]**。 在出現的輸入表單上，提供連線字串。 訪問Blob儲存中的資料時需要連接字串。 [!DNL Blob]連接字串模式以：`DefaultEndpointsProtocol=https;AccountName={ACCOUNT_NAME};AccountKey={ACCOUNT_KEY}`。
+
+有關配置[!DNL Blob]連接字串的詳細資訊，請參閱Microsoft文檔中的[配置Azure儲存帳戶的連接字串。](https://docs.microsoft.com/en-us/azure/storage/common/storage-configure-connection-string#configure-a-connection-string-for-an-azure-storage-account)
 
 或者，您可以附加RSA格式的公鑰，以便將加密添加到導出的檔案。 請注意，此公共密鑰&#x200B;**必須**&#x200B;寫入為Base64編碼字串。
 
@@ -60,7 +66,11 @@ ht-degree: 1%
 
 ## 驗證{#authentication}
 
-此時將顯示&#x200B;**Authentication**&#x200B;頁。 在出現的輸入表單上，提供檔案的名稱、選用說明、檔案夾路徑和容器。 完成後，選擇&#x200B;**[!UICONTROL 建立目標]**。
+此時將顯示&#x200B;**Authentication**&#x200B;頁。 在出現的輸入表單上，提供檔案的名稱、選用說明、檔案夾路徑和容器。
+
+在此步驟中，您也可以選取應套用至此目的地的任何&#x200B;**[!UICONTROL 行銷動作]**。 行銷動作會指出將資料匯出至目的地的方式。 您可以從Adobe定義的行銷動作中選擇，也可以建立自己的行銷動作。 如需行銷動作的詳細資訊，請參閱[資料使用政策概述](../../../data-governance/policies/overview.md)。
+
+完成後，選擇&#x200B;**[!UICONTROL 建立目標]**。
 
 ![驗證](../../assets/catalog/cloud-storage/blob/authentication.png)
 
