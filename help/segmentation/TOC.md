@@ -1,19 +1,19 @@
 ---
 product: experience-platform
 audience: user
-user-guide-title: Adobe Experience Platform細分服務
+user-guide-title: Adobe Experience Platform Segmentation Service
 breadcrumb-title: 分段服務指南
 user-guide-description: 從您的即時客戶設定檔資料建立區段並產生對象。
 translation-type: tm+mt
-source-git-commit: b3defc3e33a55855e307ab70b9797d985d5719e3
+source-git-commit: b37cf48b839ac30026162d2224528d8aabd3d263
 workflow-type: tm+mt
-source-wordcount: '135'
-ht-degree: 17%
+source-wordcount: '152'
+ht-degree: 22%
 
 ---
 
 
-# Adobe Experience Platform細分服務{#segmentation}
+# Adobe Experience Platform細分服務  {#segmentation}
 
 - [區段服務概觀](home.md)
 - [區段資料類型](data-types.md)
@@ -32,6 +32,7 @@ ht-degree: 17%
    - [區段控制面板](ui/segment-dashboard.md)
    - [區段產生器](ui/segment-builder.md)
    - [串流區段](ui/streaming-segmentation.md)
+   - [串流區段（視訊）](video/streaming-segmentation-overview.md)
    - [時間約束重構](ui/segment-refactoring.md)
 - [支援退出](honoring-opt-outs.md)
 - [多實體分段](multi-entity-segmentation.md)
@@ -51,6 +52,9 @@ ht-degree: 17%
    - [其他函式](pql/misc-functions.md)
 - 教學課程 {#tutorials}
    - [建立區段](tutorials/create-a-segment.md)
+   - [建立區段（視訊）](video/create-segment.md)
+   - [建立動態區段（視訊）](video/create-a-dynamic-segment.md)
+   - [建立多實體區段（視訊）](video/create-multi-entity-segments.md)
    - [評估區段](tutorials/evaluate-a-segment.md)
    - [建立資料集以匯出資料](tutorials/create-dataset-export-segment.md)
    - [強制區段的資料使用符合性](tutorials/governance.md)
