@@ -5,9 +5,9 @@ title: 區段服務概觀
 topic: overview
 description: 瞭解Adobe Experience Platform細分服務及其在平台生態系統中的作用。
 translation-type: tm+mt
-source-git-commit: b3defc3e33a55855e307ab70b9797d985d5719e3
+source-git-commit: c0c42f872666323bfb3bdbdf5fb02475d3b5bc79
 workflow-type: tm+mt
-source-wordcount: '1394'
+source-wordcount: '1407'
 ht-degree: 0%
 
 ---
@@ -46,6 +46,8 @@ Adobe Experience Platform [!DNL Segmentation Service]提供使用者介面和RES
 >在模式被擴展時，所有以後的上載都必須相應地更新新添加的欄位。 有關自定義[!DNL Experience Data Model](XDM)的詳細資訊，請訪問[方案編輯器教程](../xdm/tutorials/create-schema-ui.md)。
 
 ## 評估區段
+
+平台目前支援兩種評估區段的方法：串流分段和批次分段。
 
 ### 串流區段
 
