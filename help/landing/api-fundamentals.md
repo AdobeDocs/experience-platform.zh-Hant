@@ -5,7 +5,7 @@ title: Experience Platform API基礎知識
 topic: getting started
 description: 本檔案簡要概述與Experience Platform API相關的一些基礎技術與同步。
 translation-type: tm+mt
-source-git-commit: 5575d5e45bddcc007dcf78720cd7a7e20475f78c
+source-git-commit: 8c98632b67ddae4fb7800e80fb8c83aca9bfa291
 workflow-type: tm+mt
 source-wordcount: '504'
 ht-degree: 1%
@@ -98,7 +98,7 @@ JSON指標是用於識別JSON檔案內特定值的標準字串語法([RFC 6901](
 
 ## JSON修補程式{#json-patch}
 
-[!DNL Platform] API有許多PATCH作業，可接受JSON修補物件的要求負載。 JSON修補程式是用於描述JSON檔案變更的標準化格式([RFC 6902](https://tools.ietf.org/html/rfc6902))。 它可讓您定義JSON的部分更新，而不需在請求內文中傳送整個檔案。
+[!DNL Platform] API有許多PATCH作業，可接受JSON修補物件的要求負載。 JSON修補程式是用於描述JSON檔案變更的標準格式([RFC 6902](https://tools.ietf.org/html/rfc6902))。 它可讓您定義JSON的部分更新，而不需在請求內文中傳送整個檔案。
 
 ### 範例JSON修補程式物件
 
@@ -120,7 +120,7 @@ JSON指標是用於識別JSON檔案內特定值的標準字串語法([RFC 6901](
 
 根據`op`中指出的作業類型，JSON Patch物件可能需要其他屬性。 有關不同JSON修補程式作業及其必要語法的詳細資訊，請參閱[JSON修補程式檔案](http://jsonpatch.com/)。
 
-## JSON結構描述
+## JSON結構描述{#json-schema}
 
 JSON結構描述是用於說明和驗證JSON資料結構的格式。 [體驗資料模型(XDM)運](../xdm/home.md) 用JSON結構描述功能，對所擷取的客戶體驗資料的結構和格式實施限制。如需JSON結構描述的詳細資訊，請參閱[官方檔案](https://json-schema.org/)。
 
