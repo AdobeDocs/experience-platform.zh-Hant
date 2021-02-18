@@ -1,19 +1,17 @@
 ---
-title: Edge Configuration
-seo-title: Experience Platform Web SDK的Edge組態
+title: 建立Experience Platform Web SDK的Edge組態
 description: '瞭解如何設定Experience Platform Edge Network。 '
-seo-description: '瞭解如何設定Experience Platform Edge Network。 '
-keywords: configuration;edge;edge configuration id;Environment Settings;edgeConfigId;identity;id sync enabled;ID Sync Container ID;Sandbox;Streaming Inlet;Event Dataset;target;client code;Property Token;Target Environment ID;Cookie Destinations;url Destinations;Analytics Settings Blockreport suite id;
+keywords: configuration;edge;edge configuration id;Environment Settings;edgeConfigId;id sync enabled;ID Sync Container ID;Sandbox;Streaming Inlet；事件資料集；目標；客戶代碼；屬性Token；目標環境ID;Cookie目標；url目標；分析設定區塊報告套裝ID;
 translation-type: tm+mt
-source-git-commit: 94b3faf3157f4e1f4e46b6055914a04883dc44fa
+source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '916'
+ht-degree: 1%
 
 ---
 
 
-# 設定Edge
+# 建立邊緣設定
 
 Adobe Experience Platform Web SDK的組態分為兩個部分。 SDK中的[configure命令](configuring-the-sdk.md)可控制必須在用戶端上處理的事項，例如`edgeDomain`。 邊緣設定可處理SDK的所有其他設定。 當請求傳送至Adobe Experience Platform Edge Network時，`edgeConfigId`會用來參考伺服器端組態。 這可讓您更新設定，而不需在網站上變更程式碼。
 
@@ -81,7 +79,7 @@ ID同步可分組至容器，以允許在不同時間執行不同的ID同步。 
 
 ### [!UICONTROL 用戶端代碼]
 
-目標帳戶的唯一ID。 若要找到此問題，您可導覽至[!UICONTROL Adobe Target] > [!UICONTROL Setup][!UICONTROL >] > [!UICONTROL [!UICONTROL 下載]按鈕旁的[!UICONTROL at.js]或&lt;a11/>設定a12/>mbox.js]][!UICONTROL 
+目標帳戶的唯一ID。 若要找到此問題，您可導覽至[!UICONTROL Adobe Target] > [!UICONTROL Setup][!UICONTROL >] > [!UICONTROL [!UICONTROL 下載]按鈕旁的[!UICONTROL at.js]或]設定a12/>mbox.js][!UICONTROL 
 
 ### [!UICONTROL 屬性Token]
 
