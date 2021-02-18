@@ -1,20 +1,19 @@
 ---
-title: Adobe Experience Platform Web SDK 擴充功能
-seo-title: Adobe Experience Platform Launch 中的 Adobe Experience Platform Web SDK 擴充功能
+title: Adobe Experience Platform Web SDK Extension發行說明
 description: Adobe Experience Platform Launch 中的 Adobe Experience Platform Web SDK 擴充功能
 seo-description: Adobe Experience Platform Launch 中的 Adobe Experience Platform Web SDK 擴充功能
 translation-type: tm+mt
-source-git-commit: 56f0b3abd859a6b27f0117fb6ec4c312ca93ba5d
+source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
 workflow-type: tm+mt
-source-wordcount: '970'
-ht-degree: 100%
+source-wordcount: '988'
+ht-degree: 94%
 
 ---
 
 
-# Adobe Experience Platform Web SDK 發行說明
+# Adobe Experience Platform Web SDK擴充版本注意事項
 
-[深入了解：Adobe Experience Platform Web SDK 發行說明](https://docs.adobe.com/content/help/zh-Hant/experience-platform/edge/release-notes.html)
+本檔案涵蓋Adobe Experience Platform Web SDK Launch的Adobe Experience Platform Web SDK擴充功能發行說明。 如需SDK本身的最新發行說明，請參閱[平台網頁SDK發行說明](https://docs.adobe.com/content/help/zh-Hant/experience-platform/edge/release-notes.html)。
 
 ## 2020 年 11 月 4 日
 
