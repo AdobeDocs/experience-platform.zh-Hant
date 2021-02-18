@@ -1,13 +1,11 @@
 ---
-title: 管理Flicker以提供個人化體驗
-seo-title: Adobe Experience Platform Web SDK管理Flicker
-description: 瞭解如何管理使用者體驗的閃爍
-seo-description: 瞭解如何使用Experience Platform Web SDK屬性來管理Flicker
-keywords: target;flicker;prehidingStyle;asynchronously;asynchronous;
+title: 使用Adobe Experience Platform Web SDK管理Flicker以提供個人化體驗
+description: 瞭解如何使用Adobe Experience Platform Web SDK管理使用者體驗的閃爍。
+keywords: target;flicker;prehidingStyle;ansynchronous;
 translation-type: tm+mt
-source-git-commit: e0f992eafbb973fa1c48acc3b165788137d143a4
+source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
 workflow-type: tm+mt
-source-wordcount: '491'
+source-wordcount: '492'
 ht-degree: 0%
 
 ---
@@ -25,9 +23,9 @@ ht-degree: 0%
 
 ## 預隱藏
 
-在預先隱藏階段，SDK會使用 `prehidingStyle` 配置選項來建立HTML樣式標籤，並將它附加至DOM，以確保頁面的大部分部分已隱藏。 如果您不確定頁面的哪些部分會個人化，建議您將其設 `prehidingStyle` 為 `body { opacity: 0 !important }`。 這可確保整個頁面都隱藏。 但是，這會造成Lighthouse、網頁測試等工具報告的頁面轉換效能降低。 若要獲得最佳的頁面轉換效能，建議您設 `prehidingStyle` 定容器元素清單，其中包含將要個人化之頁面的部分。
+在預先隱藏階段，SDK會使用`prehidingStyle`組態選項來建立HTML樣式標籤，並將它附加至DOM，以確保頁面的大部分已隱藏。 如果您不確定頁面的哪些部分將進行個人化，建議將`prehidingStyle`設為`body { opacity: 0 !important }`。 這可確保整個頁面都隱藏。 但是，這會造成Lighthouse、網頁測試等工具報告的頁面轉換效能降低。 為獲得最佳的頁面演算效能，建議將`prehidingStyle`設為包含將要個人化之頁面部分的容器元素清單。
 
-假設您有如下HTML頁面，而且您知道只有和容器 `bar` 元素 `bazz` 才會個人化：
+假設您有如下HTML頁面，而且您知道只有`bar`和`bazz`容器元素會一直個人化：
 
 ```html
 <html>
@@ -49,11 +47,11 @@ ht-degree: 0%
 </html>
 ```
 
-那就 `prehidingStyle` 應該設成這樣 `#bar, #bazz { opacity: 0 !important }`.
+然後，應將`prehidingStyle`設為類似`#bar, #bazz { opacity: 0 !important }`的內容。
 
 ## 預處理
 
-當SDK從伺服器收到個人化內容後，預處理階段就會開始。 在此階段中，會預先處理回應，確保必須包含個人化內容的元素會隱藏起來。 隱藏這些元素後，會移除根據設定選項所建立的HTML樣式標籤，並顯示 `prehidingStyle` HTML內文或隱藏的容器元素。
+當SDK從伺服器收到個人化內容後，預處理階段就會開始。 在此階段中，會預先處理回應，確保必須包含個人化內容的元素會隱藏起來。 隱藏這些元素後，會移除根據`prehidingStyle`設定選項所建立的HTML樣式標籤，並顯示HTML內文或隱藏的容器元素。
 
 ## 演算
 
@@ -75,4 +73,4 @@ ht-degree: 0%
 </script>
 ```
 
-為了確保HTML內文或容器元素在較長的一段時間內未隱藏，預先隱藏的程式碼片段會使用計時器，預設會在毫秒後移除程式碼片 `3000` 段。 毫 `3000` 秒是最長等待時間。 如果伺服器的回應已收到並處理得較早，則會盡快移除預先隱藏的HTML樣式標籤。
+為了確保HTML內文或容器元素在較長的時間內未隱藏，預先隱藏的程式碼片段會使用計時器，預設會在`3000`毫秒後移除程式碼片段。 `3000`毫秒是最長等待時間。 如果伺服器的回應已收到並處理得較早，則會盡快移除預先隱藏的HTML樣式標籤。
