@@ -1,19 +1,18 @@
 ---
-title: 擷取Experience Cloud ID
-seo-title: Adobe Experience Platform Web SDK擷取Experience Cloud ID
-description: 瞭解如何取得Adobe Experience Cloud Id。
+title: 使用Adobe Experience Platform Web SDK擷取Experience Cloud ID
+description: 瞭解如何使用Adobe Experience Platform Web SDK擷取Adobe Experience Cloud ID(ECID)。
 seo-description: 瞭解如何取得Adobe Experience Cloud Id。
 keywords: Identity；第一方身分；Identity Service；第三方身份；ID移轉；訪客ID；第三方身份；第三方身份；第三方CookieEnabled;idMigrationEnabled;getIdentity；同步身份；syncIdentity;sendEvent;identityMap;primary;ecid;ItyNamespace idenamespace id;authenticationState;authenticationhashEnabled;
 translation-type: tm+mt
-source-git-commit: 3ac00fda2c0a43437fb212dcba7e98c63503b9c4
+source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
 workflow-type: tm+mt
-source-wordcount: '919'
+source-wordcount: '924'
 ht-degree: 3%
 
 ---
 
 
-# 身分——擷取Experience Cloud ID
+# 擷取Adobe Experience Cloud ID
 
 Adobe Experience Platform Web SDK運用[Adobe Identity Service](../../identity-service/ecid.md)。 這可確保每個裝置都有一個唯一識別碼，該識別碼會保存在裝置上，以便將頁面之間的活動系結在一起。
 
