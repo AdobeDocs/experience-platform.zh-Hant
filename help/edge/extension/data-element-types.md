@@ -1,11 +1,11 @@
 ---
-title: 平台Web SDK擴充功能資料元素類型
-description: Adobe Experience Platform Launch中的Adobe Experience Platform Web SDK Extension資料元素類型
+title: Adobe Experience Platform Web SDK Extension中的資料元素類型
+description: 瞭解Adobe Experience Platform Launch中Adobe Experience Platform Web SDK擴充功能提供的不同資料元素類型。
 translation-type: tm+mt
-source-git-commit: 473cc1f7617f1d65cdb70ff0e758178ea0174f00
+source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
 workflow-type: tm+mt
-source-wordcount: '307'
-ht-degree: 81%
+source-wordcount: '318'
+ht-degree: 78%
 
 ---
 
