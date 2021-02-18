@@ -1,19 +1,17 @@
 ---
-title: IAB透明與同意框架2.0概觀
-seo-title: 支援互動式廣告局透明度與同意框架2.0的Adobe Experience Platform Web SDK同意偏好設定
-description: 瞭解如何使用Experience Platform Web SDK支援IAB TCF 2.0同意偏好設定
-seo-description: 瞭解如何使用Experience Platform Web SDK支援IAB TCF 2.0同意偏好設定
+title: Adobe Experience Platform Web SDK中的IAB TCF 2.0支援
+description: 瞭解如何使用Adobe Experience Platform Web SDK支援IAB TCF 2.0同意偏好設定
 keywords: connence;setConnonce；描述檔隱私權Mixin；體驗事件隱私權Mixin；隱私權Mixin;IAB TCF 2.0；即時CDP；即時客戶資料概要檔案
 translation-type: tm+mt
-source-git-commit: 49c984a60fd699706eec508ec1d786340df40b57
+source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
 workflow-type: tm+mt
-source-wordcount: '894'
+source-wordcount: '878'
 ht-degree: 0%
 
 ---
 
 
-# IAB透明與同意框架2.0概觀
+# Adobe Experience Platform Web SDK中的IAB TCF 2.0支援
 
 Adobe Experience Platform Web SDK支援Interactive Advertising Bureau透明度與同意框架2.0版(IAB TCF 2.0)。 本指南說明透過整合即時客戶資料平台、Audience Manager、Experience Events、Adobe Analytics和Experience Edge的Adobe Experience Platform Web SDK支援IAB TCF 2.0的需求。
 
