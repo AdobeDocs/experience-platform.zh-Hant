@@ -1,19 +1,18 @@
 ---
-title: 設定SDK
-seo-title: 設定Adobe Experience Platform Web SDK
-description: 瞭解如何設定Experience Platform Web SDK
+title: 設定Adobe Experience Platform Web SDK
+description: 瞭解如何設定Adobe Experience Platform Web SDK。
 seo-description: 瞭解如何設定Experience Platform Web SDK
-keywords: configuring;configuration;SDK;edge;Web SDK;configure;edgeConfigId;context;web;device;placeContext;debugEnabled;egdeDomain;orgId;clickCollectionEnabled;onBeforeEventSend;defaultConowensen;wewew;web sd sd設定；p;prehingStyle;ching;cookie；不透明；conse;comen;con;coned;ce;coop;up;cone;use;we;used;usen;un;use;usen;use;ur;useEn;urlEn;e;en;e;e;e;use;en;usen;en;usen;un;un;un;urlEnabled;e;e;ed;eDestinationsEnabled;idMigrationEnabled;thirdPartyCookiesEnabled;
+keywords: configure;configuration;SDK;edge;Web SDK;configure;edgeConfigId;context;web;device;placeContext;debugEnabled;edgeDomain;orgId;clickCollectionEnabled;onBeforeEventSend;defaultConowensen;web sd設定；prehiningStyle；不透明；cookieDesing;webet;e;web sd;e;e;en;ed;emen;up;en;usen;up;usen;ured;ure;usen;urlEnabled;en;used;urlEnabled;ed;ed;ed;urlEn;en;ed;ed;un;ed;un;um;un;urlDestinationsEnabled;idMigrationEnabled;thirdPartyCookiesEnabled;
 translation-type: tm+mt
-source-git-commit: 3ac00fda2c0a43437fb212dcba7e98c63503b9c4
+source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
 workflow-type: tm+mt
-source-wordcount: '740'
+source-wordcount: '741'
 ht-degree: 11%
 
 ---
 
 
-# 設定SDK
+# 設定平台網頁SDK
 
 SDK的設定是使用`configure`命令完成。
 
