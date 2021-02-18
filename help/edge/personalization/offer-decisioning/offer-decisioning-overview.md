@@ -1,19 +1,17 @@
 ---
-title: 選件決策概觀
-seo-title: 選件決策與Adobe Experience Platform Web SDK
+title: 搭配平台網頁SDK使用選件決策
 description: Adobe Experience Platform Web SDK可提供並轉譯選件決策中管理的個人化選件。 您可以使用選件決策UI或API來建立選件和其他相關物件。
-seo-description: Adobe Experience Platform Web SDK可提供並轉譯選件決策中管理的個人化選件。 您可以使用選件決策UI或API來建立選件和其他相關物件。
 keywords: 選件決策；決策；Web SDK；平台Web SDK；個人化選件；傳遞選件；選件傳遞；選件個人化；
 translation-type: tm+mt
-source-git-commit: 05049025bdfc67af4d811e90218bf6e2613fab51
+source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
 workflow-type: tm+mt
-source-wordcount: '875'
+source-wordcount: '849'
 ht-degree: 9%
 
 ---
 
 
-# [!DNL Offer Decisioning] 概述
+# 搭配平台網頁SDK使用選件決策
 
 >[!NOTE]
 >
@@ -21,7 +19,7 @@ ht-degree: 9%
 
 Adobe Experience Platform [!DNL Web SDK]可提供並轉譯在選件決策中管理的個人化選件。 您可以使用選件決策使用者介面(UI)或API來建立選件和其他相關物件。
 
-## 必要條件
+## 先決條件
 
 * IMS組織已啟用邊緣決策功能
 * 選件、建立的活動
