@@ -1,11 +1,11 @@
 ---
 solution: Experience Platform
-title: 體驗平台儀表板
+title: Experience Platform儀表板簡介
 topic: overview
 type: Documentation
-description: 'Adobe Experience Platform提供多種儀表板，您可透過這些儀表板檢視有關組織資料的重要資訊，如每日快照時所擷取的資訊。 '
+description: '在Adobe Experience Platform中探索多個控制面板，以檢視在每日快照期間擷取的組織資料相關重要資訊。 '
 translation-type: tm+mt
-source-git-commit: 5d33b8db91491ec5d7f45b3ebe3067cd382d9d46
+source-git-commit: d97fd09b382877608edf665d7559a684be00c0bb
 workflow-type: tm+mt
 source-wordcount: '274'
 ht-degree: 3%
