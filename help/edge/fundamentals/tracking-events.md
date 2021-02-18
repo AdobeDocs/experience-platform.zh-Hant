@@ -1,13 +1,11 @@
 ---
-title: 追蹤事件
-seo-title: 追蹤Adobe Experience Platform Web SDK事件
-description: 瞭解如何追蹤Experience Platform Web SDK活動
-seo-description: 瞭解如何追蹤Experience Platform Web SDK活動
+title: 使用Adobe Experience Platform Web SDK追蹤事件
+seo-description: 瞭解如何追蹤Adobe Experience Platform Web SDK活動。
 keywords: sendEvent;xdm;eventType;datasetId;sendBeacon;send Beacon;documentUnloading;document Unloading;onBeforeEventSend;
 translation-type: tm+mt
-source-git-commit: 51a846124f71012b2cb324cc1469ec7c9753e574
+source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
 workflow-type: tm+mt
-source-wordcount: '1331'
+source-wordcount: '1334'
 ht-degree: 0%
 
 ---
@@ -15,7 +13,7 @@ ht-degree: 0%
 
 # 追蹤事件
 
-若要傳送事件資料至Adobe Experience Cloud，請使用命 `sendEvent` 令。 此命 `sendEvent` 令是傳送資料至，並擷取個人化內容、身 [!DNL Experience Cloud]分和受眾目的地的主要方式。
+若要傳送事件資料至Adobe Experience Cloud，請使用`sendEvent`命令。 `sendEvent`命令是將資料傳送至[!DNL Experience Cloud]，並擷取個人化內容、身分和觀眾目的地的主要方式。
 
 傳送至Adobe Experience Cloud的資料分為兩類：
 
@@ -26,7 +24,7 @@ ht-degree: 0%
 
 XDM資料是一個物件，其內容和結構符合您在Adobe Experience Platform中建立的架構。 [進一步瞭解如何建立架構。](../../xdm/tutorials/create-schema-ui.md)
 
-您想要成為分析、個人化、受眾或目的地一部分的任何XDM資料，都應使用此選 `xdm` 項傳送。
+您想要成為分析、個人化、對象或目的地一部分的任何XDM資料都應使用`xdm`選項來傳送。
 
 
 ```javascript
@@ -44,7 +42,7 @@ alloy("sendEvent", {
 });
 ```
 
-執行命令和將資料傳送至伺服器（例如，如果Web SDK程式庫尚未完全載入或尚未收到同意）之間，可能會有一段時間。 `sendEvent` 如果要在執行命令後修改對 `xdm` 像的任 `sendEvent` 何部分，強烈建議您在執行命令前先克隆 `xdm` 對象 __`sendEvent` 。 例如：
+在執行`sendEvent`命令和將資料傳送至伺服器（例如，如果Web SDK程式庫尚未完全載入或尚未收到同意）之間，可能會有一段時間。 如果要在執行`sendEvent`命令後修改`xdm`對象的任何部分，強烈建議在&#x200B;_執行`sendEvent`命令之前克隆`xdm`對象_。 例如：
 
 ```javascript
 var clone = function(value) {
@@ -71,7 +69,7 @@ alloy("sendEvent", {
 dataLayer.commerce = null;
 ```
 
-在此範例中，資料層會先序列化至JSON，然後反序列化以將其複製。 接著，將克隆的結果傳遞到命令 `sendEvent` 中。 這樣可確保命 `sendEvent``sendEvent` 令在執行命令時具有資料層的快照，以便以後對原始資料層對象的修改不會反映在發送到伺服器的資料中。 如果您使用事件導向的資料層，複製資料的作業可能已自動處理。 例如，如果您使用 [Adobe Client資料層](https://github.com/adobe/adobe-client-data-layer/wiki)，該方 `getState()` 法會提供所有先前變更的計算、複製快照。 如果您使用AEP Web SDK Launch擴充功能，也會自動處理此問題。
+在此範例中，資料層會先序列化至JSON，然後反序列化以將其複製。 接著，將克隆的結果傳遞到`sendEvent`命令。 這樣可確保`sendEvent`命令在執行`sendEvent`命令時具有資料層的快照，以便以後對原始資料層對象的修改不會反映在發送到伺服器的資料中。 如果您使用事件導向的資料層，複製資料的作業可能已自動處理。 例如，如果您使用[Adobe用戶端資料層](https://github.com/adobe/adobe-client-data-layer/wiki),`getState()`方法會提供所有先前變更的計算、複製快照。 如果您使用AEP Web SDK Launch擴充功能，也會自動處理此問題。
 
 >[!NOTE]
 >
@@ -83,7 +81,7 @@ dataLayer.commerce = null;
 
 ### 設定 `eventType`
 
-在XDM體驗事件中，有一個選填欄 `eventType` 位。 這保存記錄的主要事件類型。 設定事件類型可協助您區分要傳入的不同事件。 XDM提供幾種預先定義的事件類型，您可以使用這些類型，或隨時為您的使用案例建立您自己的自訂事件類型。 以下是XDM提供的所有預先定義事件類型的清單。 [閱讀XDM public repo](https://github.com/adobe/xdm/blob/master/docs/reference/behaviors/time-series.schema.md#xdmeventtype-known-values)。
+在XDM體驗事件中，有一個可選的`eventType`欄位。 這保存記錄的主要事件類型。 設定事件類型可協助您區分要傳入的不同事件。 XDM提供幾種預先定義的事件類型，您可以使用這些類型，或隨時為您的使用案例建立您自己的自訂事件類型。 以下是XDM提供的所有預先定義事件類型的清單。 [閱讀XDM public repo](https://github.com/adobe/xdm/blob/master/docs/reference/behaviors/time-series.schema.md#xdmeventtype-known-values)。
 
 
 | **事件類型:** | **定義:** |
@@ -112,7 +110,7 @@ dataLayer.commerce = null;
 | delivery.feedback | 提供意見回應事件。 電子郵件傳送的範例意見回應事件 |
 
 
-如果使用Adobe Experience Platform Launch擴充功能，或者您隨時都可以在沒有Experience Platform Launch的情況下傳遞這些事件類型，這些事件類型會顯示在下拉式清單中。 這些項目可作為選項的一部分 `xdm` 傳入。
+如果使用Adobe Experience Platform Launch擴充功能，或者您隨時都可以在沒有Experience Platform Launch的情況下傳遞這些事件類型，這些事件類型會顯示在下拉式清單中。 它們可作為`xdm`選項的一部分傳入。
 
 
 ```javascript
@@ -131,7 +129,7 @@ alloy("sendEvent", {
 });
 ```
 
-或者，可 `eventType` 以使用選項將該命令傳遞到event命 `type` 令。 在幕後，這會新增至XDM資料。 使用 `type` 作為選項可讓您更輕鬆地設定， `eventType` 而無需修改XDM負載。
+或者，可使用`type`選項將`eventType`傳遞至event命令。 在幕後，這會新增至XDM資料。 使用`type`選項，您可以更輕鬆地設定`eventType`，而不需修改XDM負載。
 
 
 ```javascript
@@ -145,7 +143,7 @@ alloy("sendEvent", {
 
 ### 覆寫資料集ID
 
-在某些使用情況下，您可能會想要將事件傳送至設定UI中設定的資料集以外的資料集。 為此，您需要設定命 `datasetId` 令上的選 `sendEvent` 項：
+在某些使用情況下，您可能會想要將事件傳送至設定UI中設定的資料集以外的資料集。 為此，您需要在`sendEvent`命令上設定`datasetId`選項：
 
 
 ```javascript
@@ -160,11 +158,11 @@ alloy("sendEvent", {
 
 ### 添加身份資訊
 
-自訂身分資訊也可以新增至事件。 請參 [閱擷取Experience Cloud ID](../identity/overview.md)。
+自訂身分資訊也可以新增至事件。 請參閱[擷取Experience Cloud ID](../identity/overview.md)。
 
 ## 使用sendBeacon API
 
-在網頁使用者離開之前傳送事件資料可能很棘手。 如果請求過長，瀏覽器可能會取消請求。 有些瀏覽器已實作一個叫做Web標準API `sendBeacon` 的API，讓資料在此期間更容易收集。 使用時， `sendBeacon`瀏覽器會在全域瀏覽內容中提出Web請求。 這表示瀏覽器會在背景提出信標請求，而不會保留頁面導覽。 若要告訴Adobe Experience Platform [!DNL Web SDK] 使用 `sendBeacon`，請將選項新 `"documentUnloading": true` 增至event命令。  其範例如下：
+在網頁使用者離開之前傳送事件資料可能很棘手。 如果請求過長，瀏覽器可能會取消請求。 有些瀏覽器已實作名為`sendBeacon`的Web標準API，讓資料在此期間更容易收集。 使用`sendBeacon`時，瀏覽器會在全域瀏覽內容中發出Web請求。 這表示瀏覽器會在背景提出信標請求，而不會保留頁面導覽。 若要通知Adobe Experience Platform [!DNL Web SDK]使用`sendBeacon`，請將選項`"documentUnloading": true`新增至event命令。  其範例如下：
 
 
 ```javascript
@@ -183,7 +181,7 @@ alloy("sendEvent", {
 });
 ```
 
-瀏覽器已對一次可傳送的資料量加 `sendBeacon` 以限制。 在許多瀏覽器中，限制為64K。 如果瀏覽器因負載過大而拒絕事件，Adobe Experience Platform會回 [!DNL Web SDK] 到使用其一般傳輸方法（例如擷取）。
+瀏覽器已對一次可隨`sendBeacon`傳送的資料量設限。 在許多瀏覽器中，限制為64K。 如果瀏覽器因負載過大而拒絕事件，Adobe Experience Platform [!DNL Web SDK]會回到使用其一般傳輸方法（例如，擷取）。
 
 ## 處理事件的回應
 
@@ -211,9 +209,9 @@ alloy("sendEvent", {
   });
 ```
 
-## 全局修改事件 {#modifying-events-globally}
+## 全局修改事件{#modifying-events-globally}
 
-如果您想要全域新增、移除或修改事件中的欄位，可以設定回 `onBeforeEventSend` 呼。  每次傳送事件時都會呼叫此回呼。  此回呼會傳入具有欄位的事件物 `xdm` 件。  修改 `event.xdm` 以變更事件中傳送的資料。
+如果要全局添加、刪除或修改事件中的欄位，可以配置`onBeforeEventSend`回調。  每次傳送事件時都會呼叫此回呼。  此回呼會傳入具有`xdm`欄位的事件物件。  修改`event.xdm`以變更事件中傳送的資料。
 
 
 ```javascript
@@ -233,11 +231,11 @@ alloy("configure", {
 
 `xdm` 欄位依此順序設定：
 
-1. 作為選項傳入事件命令的值 `alloy("sendEvent", { xdm: ... });`
-2. 自動收集的值。  (請參閱 [自動資訊](../data-collection/automatic-information.md)。)
-3. 回呼中所做的 `onBeforeEventSend` 變更。
+1. 作為選項傳遞給event命令`alloy("sendEvent", { xdm: ... });`的值
+2. 自動收集的值。  （請參閱[自動資訊](../data-collection/automatic-information.md)）。
+3. 在`onBeforeEventSend`回呼中所做的變更。
 
-如果回 `onBeforeEventSend` 呼引發例外，事件仍會傳送；不過，回呼中所做的變更不會套用至最終事件。
+如果`onBeforeEventSend`回呼引發例外，則事件仍會傳送；不過，回呼中所做的變更不會套用至最終事件。
 
 ## 可能的可操作錯誤
 
