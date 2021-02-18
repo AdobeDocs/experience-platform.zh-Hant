@@ -1,14 +1,12 @@
 ---
-title: 傳送資料至Adobe Analytics
-seo-title: 使用Adobe Experience Platform Web SDK將資料傳送至Adobe Analytics
-description: 瞭解如何使用Experience Platform Web SDK將資料傳送至Adobe Analytics
-seo-description: 瞭解如何使用Experience Platform Web SDK將資料傳送至Adobe Analytics
+title: 使用Adobe Experience Platform Web SDK傳送資料至Adobe Analytics
+description: 瞭解如何使用Adobe Experience Platform Web SDK將資料傳送至Adobe Analytics。
 keywords: adobe analytics;analytics；映射資料；映射變數；
 translation-type: tm+mt
-source-git-commit: 723711ee0c2b7b5ca4aea617a81241dbebbc839c
+source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
 workflow-type: tm+mt
-source-wordcount: '207'
-ht-degree: 6%
+source-wordcount: '192'
+ht-degree: 7%
 
 ---
 
