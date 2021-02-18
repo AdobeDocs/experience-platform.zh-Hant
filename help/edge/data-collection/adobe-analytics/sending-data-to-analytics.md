@@ -1,13 +1,11 @@
 ---
-title: 使用Adobe Analytics進行頁面和連結追蹤
-seo-title: 使用Adobe Experience Platform Web SDK追蹤Adobe Analytics的連結
-description: 瞭解如何使用Experience Platform Web SDK將連結資料傳送至Adobe Analytics
-seo-description: 瞭解如何使用Experience Platform Web SDK將連結資料傳送至Adobe Analytics
-keywords: adobe analytics;analytics;sendEvent;s.t();s.tl();webPageDetails;pageViews;webInteraction;web Interaction;page views;link tracking;links;track links;clickCollection;click collection;
+title: 使用Adobe Experience Platform Web SDK傳送資料至Adobe Analytics
+description: 瞭解如何使用Adobe Experience Platform Web SDK將資料傳送至Adobe Analytics。
+keywords: adobe analytics;analytics;sendEvent;s.t();s.tl();webPageDetails;pageViews;webInteraction;Web Interaction；頁面檢視；連結跟蹤；跟蹤連結；clickCollection;click collection;
 translation-type: tm+mt
-source-git-commit: c9d777f4350f0b039608c4f9b01d5206994e2572
+source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
 workflow-type: tm+mt
-source-wordcount: '160'
+source-wordcount: '162'
 ht-degree: 0%
 
 ---
@@ -15,11 +13,11 @@ ht-degree: 0%
 
 # 傳送資料至Adobe Analytics
 
-過去有不同的函式可區分頁面檢視和連結(例如 `s.t(), s.tl()`)，而在Web SDK中只有指令 `sendEvent` 。 您隨事件傳送的資料會決定事件應是頁面檢視或連結。 [進一步瞭解追蹤連結](../track-links.md)。
+過去有不同的函式可區分頁面檢視和連結（例如`s.t(), s.tl()`），而在Web SDK中只有`sendEvent`命令。 您隨事件傳送的資料會決定事件應是頁面檢視或連結。 [進一步瞭解追蹤連結](../track-links.md)。
 
 ## 傳送頁面檢視
 
-您可以設定變數來指定頁面 `web.webPageDetails.pageViews.value=1` 檢視。
+您可以設定`web.webPageDetails.pageViews.value=1`變數來指定頁面檢視。
 
 ```javascript
 alloy("sendEvent", {
