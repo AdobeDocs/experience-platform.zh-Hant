@@ -1,18 +1,16 @@
 ---
-title: Adobe Experience Platform Web SDK 擴充功能
-seo-title: Adobe Experience Platform Launch 中的 Adobe Experience Platform Web SDK 擴充功能
-description: Adobe Experience Platform Launch 中的 Adobe Experience Platform Web SDK 擴充功能
-seo-description: Adobe Experience Platform Web SDK 擴充功能 Adobe Experience Platform Launch
+title: Adobe Experience Platform Web SDK 擴充功能 概述
+description: 瞭解Adobe Experience Platform Web SDK Extension for Adobe Experience Platform Launch
 translation-type: tm+mt
-source-git-commit: 473cc1f7617f1d65cdb70ff0e758178ea0174f00
+source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
 workflow-type: tm+mt
-source-wordcount: '664'
-ht-degree: 58%
+source-wordcount: '645'
+ht-degree: 55%
 
 ---
 
 
-# Adobe Experience Platform Web SDK Extension for Platform Launch
+# Adobe Experience Platform Web SDK擴充功能總覽
 
 Adobe Experience Platform Web SDK Extension會透過Adobe Experience Platform Edge Network，從Web屬性將資料傳送至Adobe Experience Cloud。 Adobe Experience Platform Web SDK 擴充功能可將資料串流至平台、同步身分資料、啟用加入宣告功能，並自動收集內容資料。
 
