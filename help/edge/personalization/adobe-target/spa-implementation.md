@@ -1,21 +1,19 @@
 ---
-title: 'Adobe Target和Adobe Experience Platform Web SDK。 '
-seo-title: Adobe Experience Platform Web SDK與使用Adobe Target
-description: 瞭解如何使用Adobe Target使用Experience Platform Web SDK來呈現個人化內容
-seo-description: 瞭解如何使用Adobe Target使用Experience Platform Web SDK來呈現個人化內容
+title: Adobe Experience Platform Web SDK的單頁應用程式實作
+description: 瞭解如何使用Adobe Target建立Adobe Experience Platform Web SDK的單頁應用程式(SPA)實作。
 keywords: target;adobe target;xdm檢視；視圖；單頁應用程式；SPA;SPA生命週期；客戶端；AB測試；AB；體驗目標；XT;VEC
 translation-type: tm+mt
-source-git-commit: 3ac00fda2c0a43437fb212dcba7e98c63503b9c4
+source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
 workflow-type: tm+mt
-source-wordcount: '1688'
+source-wordcount: '1665'
 ht-degree: 12%
 
 ---
 
 
-# 實作單頁應用程式
+# 單頁應用程式實作
 
-Adobe Experience Platform Web SDK提供多樣化功能，讓您的企業能夠運用新一代的用戶端技術(例如單頁應用程式(SPA))，進行個人化。
+Adobe Experience Platform Web SDK提供多樣化功能，讓您的企業能夠運用新一代的用戶端技術(例如單頁應用程式(SPA))進行個人化。
 
 傳統的網站採用「頁面至頁面」導覽模型 (又稱為「多頁應用程式」)，網站設計與 URL 緊密結合，而從某網頁轉換到另一個網頁，需要頁面載入。
 
@@ -33,7 +31,7 @@ Adobe Experience Platform Web SDK提供多樣化功能，讓您的企業能夠�
 
 ## XDM檢視和單頁應用程式
 
-適用於SPA的Adobe Target VEC運用了稱為「檢視」的概念：邏輯的視覺元素群組，可組成SPA體驗。 因此，根據使用者互動，單一頁面應用程式可視為透過檢視進行轉換，而非URL。 檢視通常可代表整個網站或網站內的分組視覺元素。
+適用於SPA的Adobe Target VEC運用了稱為「檢視」的概念：邏輯的視覺元素群組，可組成SPA體驗。 因此，根據使用者互動，單頁應用程式可視為透過檢視進行轉換，而非URL。 檢視通常可代表整個網站或網站內的分組視覺元素。
 
 為進一步說明「檢視」是什麼，下列範例使用React中建置的虛擬線上電子商務網站來探索範例「檢視」。
 
@@ -64,7 +62,7 @@ Adobe Experience Platform Web SDK提供多樣化功能，讓您的企業能夠�
 XDM檢視可在Adobe Target中運用，讓行銷人員透過Visual Experience Composer在SPA上執行A/B和XT測試。 這需要執行下列步驟，才能完成一次性開發人員設定：
 
 1. 安裝[Adobe Experience Platform Web SDK](../../fundamentals/installing-the-sdk.md)
-2. 確定您要個人化的單頁應用程式中的所有XDM視圖。
+2. 確定您單頁應用程式中要個性化的所有XDM視圖。
 3. 在定義XDM視圖後，為了傳遞AB或XT VEC活動，在單頁應用程式中實施`sendEvent()`函式，其中`renderDecisions`設定為`true`並且相應的XDM視圖。 必須在`xdm.web.webPageDetails.viewName`中傳遞XDM視圖。 此步驟可讓行銷人員運用Visual Experience Composer來啟動這些XDM的A/B和XT測試。
 
    ```javascript
@@ -176,7 +174,7 @@ class Products extends Component {
 
 ![](assets/use-case-3.png)
 
-若要根據所選的傳送偏好設定個人化網站上的內容，可針對每個傳送偏好設定建立「檢視」。 選擇&#x200B;**Normal Delivery**&#x200B;時，該視圖可命名為「checkout-normal」。 如果選擇了「快遞」(Express Delivery)**，則「視圖」(View)可命名為「checkout-express」。**
+若要根據所選的傳送偏好設定個人化網站上的內容，可針對每個傳送偏好設定建立檢視。 選擇&#x200B;**Normal Delivery**&#x200B;時，該視圖可命名為「checkout-normal」。 如果選擇了「快遞」(Express Delivery)**，則「視圖」(View)可命名為「checkout-express」。**
 
 ```jsx
 function onViewChange(viewName) { 
