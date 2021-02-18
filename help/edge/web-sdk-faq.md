@@ -1,12 +1,10 @@
 ---
-title: 網頁SDK常見問答集
-seo-title: Adobe Experience Platform網頁SDK常見問答集
-description: 有關Adobe Experience Platform Web SDK的常見問題
-seo-description: 有關Adobe Experience Platform Web SDK的常見問題
+title: Adobe Experience Platform網頁SDK常見問答集
+description: 取得有關Adobe Experience Platform Web SDK的常見問題解答。
 translation-type: tm+mt
-source-git-commit: f4f0b00dfd324f69aa2b4348740f6e767e86a6de
+source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
 workflow-type: tm+mt
-source-wordcount: '1808'
+source-wordcount: '1804'
 ht-degree: 2%
 
 ---
@@ -14,7 +12,7 @@ ht-degree: 2%
 
 # 常見問題集
 
-本常見問答集包含常問有關Adobe Web SDK的問題。
+本指南提供有關Adobe Experience Platform Web SDK常見問題的解答。
 
 ## 什麼是Adobe Experience Platform Web SDK?
 
