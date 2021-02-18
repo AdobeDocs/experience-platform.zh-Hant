@@ -1,19 +1,17 @@
 ---
-title: 使用Adobe Experience Platform Web SDK的先決條件
-seo-title: 使用Adobe Experience Platform Web SDK的先決條件
-description: 使用Adobe Experience Platform Web SDK的先決條件
-seo-description: 使用Adobe Experience Platform Web SDK的先決條件
+title: 使用Adobe Experience Platform Web SDK的必要條件
+description: 瞭解使用Adobe Experience Platform Web SDK的必要條件。
 keywords: 第一方域；CNAME;schema;create schema;launch;aep web sdk extension;extension;configuration id;configuration tool;data element;create data element;XDM Object;sendEvent;sendEvent;
 translation-type: tm+mt
-source-git-commit: a19b4384e2ea64eb9ab5f0f5443fd329ec44a2a0
+source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
 workflow-type: tm+mt
-source-wordcount: '281'
+source-wordcount: '270'
 ht-degree: 0%
 
 ---
 
 
-# 使用Adobe Experience Platform Web SDK的先決條件
+# 使用Adobe Experience Platform Web SDK的必要條件
 
 若要使用平台網頁SDK，您必須先：
 
