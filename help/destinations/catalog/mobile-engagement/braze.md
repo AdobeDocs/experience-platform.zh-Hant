@@ -3,9 +3,9 @@ keywords: 行動裝置；硬；訊息；
 title: Braze連接
 description: Braze是一個全面的客戶互動平台，為客戶和他們喜愛的品牌提供相關且值得回味的體驗。
 translation-type: tm+mt
-source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
+source-git-commit: 6e7ecfdc0b2cbf6f07e6b2220ec163289511375e
 workflow-type: tm+mt
-source-wordcount: '931'
+source-wordcount: '925'
 ht-degree: 1%
 
 ---
@@ -63,7 +63,7 @@ ht-degree: 1%
 * **[!UICONTROL 名稱]**:輸入您將來識別此目的地的名稱。
 * **[!UICONTROL 說明]**:輸入說明，以幫助您識別未來的目標。
 * **[!UICONTROL 端點實例]**:詢問您的 [!DNL Braze] 代表您應使用哪個端點實例。
-* **[!UICONTROL 行銷使用案例]**:行銷使用案例會指出資料將匯出至目的地的方式。您可以從Adobe定義的行銷使用案例中選擇，也可以建立自己的行銷使用案例。 如需行銷使用案例的詳細資訊，請參閱「Adobe Experience Platform中的[資料治理」頁面。 ](../../../data-governance/policies/overview.md)如需個別Adobe定義之行銷使用案例的詳細資訊，請參閱[資料使用政策概觀](../../../data-governance/policies/overview.md)。
+* **[!UICONTROL 行銷動作]**:行銷動作會指出將資料匯出至目的地的方式。您可以從Adobe定義的行銷動作中選擇，也可以建立自己的行銷動作。 如需行銷動作的詳細資訊，請參閱Adobe Experience Platform中的[資料治理](../../../data-governance/policies/overview.md)頁面。 如需個別Adobe定義之行銷動作的詳細資訊，請參閱[資料使用政策概觀](../../../data-governance/policies/overview.md)。
 
 ![Braze驗證步驟](../../assets/catalog/mobile-engagement/braze/authentication.png)
 
