@@ -3,9 +3,9 @@ keywords: 廣告；貿易部門；
 title: The Trade Desk connection
 description: '交易台是廣告購買者的自助服務平台，可跨展示廣告、視訊和行動庫存來源執行重新鎖定目標及受眾目標數位宣傳。 '
 translation-type: tm+mt
-source-git-commit: ad025630cbae5c220f5bbd7f55cad70620b6f335
+source-git-commit: 6e7ecfdc0b2cbf6f07e6b2220ec163289511375e
 workflow-type: tm+mt
-source-wordcount: '540'
+source-wordcount: '534'
 ht-degree: 0%
 
 ---
@@ -59,7 +59,7 @@ ht-degree: 0%
    * **[!UICONTROL 北美洲西部]**
    * **[!UICONTROL 拉丁美洲]**
 
-* **[!UICONTROL 行銷使用案例]**:行銷使用案例會指出將資料匯出至目的地的方式。您可以從Adobe定義的行銷使用案例中選擇，也可以建立自己的行銷使用案例。 如需行銷使用案例的詳細資訊，請參閱「Adobe Experience Platform中的[資料治理」頁面。 ](../../../data-governance/policies/overview.md)如需個別Adobe定義之行銷使用案例的詳細資訊，請參閱[資料使用政策概觀](../../../data-governance/policies/overview.md)。
+* **[!UICONTROL 行銷動作]**:行銷動作會指出將資料匯出至目的地的方式。您可以從Adobe定義的行銷動作中選擇，也可以建立自己的行銷動作。 如需行銷動作的詳細資訊，請參閱Adobe Experience Platform中的[資料治理](../../../data-governance/policies/overview.md)頁面。 如需個別Adobe定義之行銷動作的詳細資訊，請參閱[資料使用政策概觀](../../../data-governance/policies/overview.md)。
 
 ![交易台驗證步驟](../../assets/catalog/advertising/tradedesk/authenticate.png)
 
