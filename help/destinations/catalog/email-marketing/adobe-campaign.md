@@ -3,9 +3,9 @@ keywords: email;Email;e-mail;email destinations;adobe campaign;campaign
 title: Adobe Campaign連線
 description: Adobe Campaign是一套解決方案，可協助您跨所有線上及線下通道個人化並傳遞宣傳活動。
 translation-type: tm+mt
-source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
+source-git-commit: 6e7ecfdc0b2cbf6f07e6b2220ec163289511375e
 workflow-type: tm+mt
-source-wordcount: '653'
+source-wordcount: '713'
 ht-degree: 0%
 
 ---
@@ -47,6 +47,7 @@ Adobe Campaign是一套解決方案，可協助您跨所有線上及線下通道
 - **[!UICONTROL 資料夾路徑]**:在您的儲存位置提供路徑，讓Platform將匯出資料儲存為CSV或Tab分隔檔案。
 - **[!UICONTROL 容器]**: *用於Blob連接*。保存資料夾路徑所在的Blob的容器。
 - **[!UICONTROL 檔案格式]**: **CSV** 或 **TAB_DELIMITED**。選擇要導出到儲存位置的檔案格式。
+- **[!UICONTROL 行銷動作]**:行銷動作會指出將資料匯出至目的地的方式。您可以從Adobe定義的行銷動作中選擇，也可以建立自己的行銷動作。 如需行銷動作的詳細資訊，請參閱Adobe Experience Platform中的[資料治理](../../../data-governance/policies/overview.md)頁面。 如需個別Adobe定義之行銷動作的詳細資訊，請參閱[資料使用政策概觀](../../../data-governance/policies/overview.md)。
 
 ![促銷活動基本資訊](../../assets/catalog/email-marketing/adobe-campaign/basic-information.png)
 
