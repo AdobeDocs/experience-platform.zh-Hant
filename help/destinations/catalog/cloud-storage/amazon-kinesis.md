@@ -3,9 +3,9 @@ keywords: Amazon Kinesis;kinesis目標；kinesis
 title: Amazon Kinesis連接
 description: 建立到Amazon Kinesis儲存的即時出站連接，以便從Adobe Experience Platform流資料。
 translation-type: tm+mt
-source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
+source-git-commit: 6e7ecfdc0b2cbf6f07e6b2220ec163289511375e
 workflow-type: tm+mt
-source-wordcount: '450'
+source-wordcount: '510'
 ht-degree: 2%
 
 ---
@@ -55,6 +55,7 @@ ht-degree: 2%
 * **名稱**:提供您與  [!DNL Amazon Kinesis]
 * **說明**:提供您與的連線說明 [!DNL Amazon Kinesis]。
 * **stream**:提供帳戶中現有資料流的名 [!DNL Amazon Kinesis] 稱。平台會將資料匯出至此串流。
+* **[!UICONTROL 行銷動作]**:行銷動作會指出將資料匯出至目的地的方式。您可以從Adobe定義的行銷動作中選擇，也可以建立自己的行銷動作。 如需行銷動作的詳細資訊，請參閱Adobe Experience Platform中的[資料治理](../../../data-governance/policies/overview.md)頁面。 如需個別Adobe定義之行銷動作的詳細資訊，請參閱[資料使用政策概觀](../../../data-governance/policies/overview.md)。
 
 ![驗證步驟中的輸入欄位](../../assets/catalog/cloud-storage/amazon-kinesis/setup.png)
 
