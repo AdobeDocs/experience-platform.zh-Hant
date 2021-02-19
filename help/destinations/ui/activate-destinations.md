@@ -6,9 +6,9 @@ seo-title: 將描述檔和區段啟用至目標
 description: 將區段對應至目標，以啟用您在Adobe Experience Platform中擁有的資料。 若要完成此作業，請遵循下列步驟。
 seo-description: 將區段對應至目標，以啟用您在Adobe Experience Platform中擁有的資料。 若要完成此作業，請遵循下列步驟。
 translation-type: tm+mt
-source-git-commit: ef0f7e20a55804c013756e261818c2ee2df4d103
+source-git-commit: 6e7ecfdc0b2cbf6f07e6b2220ec163289511375e
 workflow-type: tm+mt
-source-wordcount: '2141'
+source-wordcount: '2140'
 ht-degree: 0%
 
 ---
@@ -232,7 +232,7 @@ If you are using another ID, such as "Rewards ID" or "Loyalty ID", as primary id
 
 >
 > 
-例如，如果欄位`person.name.firstName`具有與目標的行銷使用案例衝突的特定資料使用標籤，則在審查步驟中會顯示資料使用政策違規。 如需詳細資訊，請參閱Adobe Experience Platform中的[資料治理](../../rtcdp/privacy/data-governance-overview.md#destinations)。
+例如，如果欄位`person.name.firstName`具有與目標的市場營銷操作衝突的特定資料使用標籤，則在複查步驟中將顯示資料使用策略違規。 如需詳細資訊，請參閱Adobe Experience Platform中的[資料治理](../../rtcdp/privacy/data-governance-overview.md#destinations)。
 
 ### **[!UICONTROL 檢]** 視步驟  {#review}
 
