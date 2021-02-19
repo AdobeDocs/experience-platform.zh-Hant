@@ -3,9 +3,9 @@ keywords: google廣告管理員；google廣告；doubleclick;DoubleClick AdX;Dou
 title: Google廣告管理員連線
 description: 'Google Ad Manager之前稱為DoubleClick for Publishers或DoubleClick AdX，是來自谷歌的廣告服務平台，可讓出版業者透過視訊和行動應用程式管理其網站上的廣告展示。  '
 translation-type: tm+mt
-source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
+source-git-commit: 6e7ecfdc0b2cbf6f07e6b2220ec163289511375e
 workflow-type: tm+mt
-source-wordcount: '675'
+source-wordcount: '670'
 ht-degree: 0%
 
 ---
@@ -68,7 +68,7 @@ ht-degree: 0%
    * 使用`DFP by Google`表示[!DNL DoubleClick]表示發佈者
    * 使用`AdX buyer`作為[!DNL Google AdX]
 * **[!UICONTROL 帳戶ID]**:在您的帳戶ID中填入 [!DNL Google]。這可以是您的網路ID或對象連結ID。 通常，這是8位數的ID。
-* **[!UICONTROL 行銷使用案例]**:行銷使用案例會指出將資料匯出至目的地的方式。您可以從Adobe定義的行銷使用案例中選擇，也可以建立自己的行銷使用案例。 如需行銷使用案例的詳細資訊，請參閱[資料使用政策概述](../../../data-governance/policies/overview.md)。
+* **[!UICONTROL 行銷動作]**:行銷動作會指出將資料匯出至目的地的方式。您可以從Adobe定義的行銷動作中選擇，也可以建立自己的行銷動作。 如需行銷動作的詳細資訊，請參閱[資料使用政策概述](../../../data-governance/policies/overview.md)。
 
 >[!NOTE]
 >
