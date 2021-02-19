@@ -1,13 +1,13 @@
 ---
-keywords: data governance rtcdp;rtcdp data governance;real time customer data profile data governance
+keywords: 資料治理rtcdp;rtcdp資料治理；即時客戶資料配置檔案資料治理
 title: 資料治理概觀
 seo-title: 即時客戶資料平台中的資料治理
 description: '「資料管理」可讓您管理客戶資料，並確保符合適用於資料使用的法規、限制和政策。 '
 seo-description: '「資料管理」可讓您管理客戶資料，並確保符合適用於資料使用的法規、限制和政策。 '
 translation-type: tm+mt
-source-git-commit: e680191d495e4c33baa8242d40a15b9124eec8cd
+source-git-commit: 5435661d750c4138ea6a2d40619a48236b7b1e4f
 workflow-type: tm+mt
-source-wordcount: '694'
+source-wordcount: '701'
 ht-degree: 0%
 
 ---
@@ -31,17 +31,17 @@ Adobe Experience Platform [!DNL Data Governance]可讓您管理客戶資料，�
 
 如需使用資料使用標籤的詳細資訊，請參閱[資料使用標籤使用指南](../../data-governance/labels/overview.md) for Adobe Experience Platform。
 
-## 設定目標{#destinations}的行銷使用案例
+## 設定目標{#destinations}的行銷動作
 
-您可以定義目標的行銷使用案例（也稱為行銷動作），以設定目標的資料使用限制。 目的地的行銷使用案例會指出將匯出至該目的地的資料意圖。
+您可以定義目標的行銷動作（也稱為行銷使用案例），以設定目標的資料使用限制。 目的地的行銷動作會指出將匯出至該目的地的資料意圖。
 
 >[!NOTE]
 >
 >如需有關行銷動作及其在資料使用政策中使用的詳細資訊，請參閱[!DNL Experience Platform]檔案中的[資料使用政策概述](../../data-governance/policies/overview.md)。
 
-定義目的地的行銷使用案例可讓您確保傳送至這些目的地的任何描述檔或區段符合資料使用政策。 因此，您應根據組織對啟動實施政策限制的需求，將適當的行銷使用案例新增至您的目的地。
+定義目的地的行銷動作可讓您確保傳送至這些目的地的任何描述檔或區段符合資料使用政策。 因此，您應根據組織對啟動實施政策限制的需求，將適當的行銷動作新增至您的目的地。
 
-行銷使用案例只能在第一次設定目標時選取。 根據您使用的目的地類型，設定行銷使用案例的機會會顯示在設定工作流程的不同點。 有關如何配置特定目標的步驟，請參閱[目標文檔](../destinations/overview.md)。
+行銷動作只能在第一次設定目標時選取。 根據您使用的目標類型，設定行銷動作的機會會顯示在設定工作流程的不同點。 有關如何配置特定目標的步驟，請參閱[目標文檔](../destinations/overview.md)。
 
 ## 管理資料使用策略{#policies}
 
