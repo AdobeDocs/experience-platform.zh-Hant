@@ -3,9 +3,9 @@ keywords: google客戶符合；Google客戶符合；Google客戶符合
 title: Google客戶符合連線
 description: Google Customer Match可讓您使用您的線上和離線資料，透過Google的自有和營運資產（例如搜尋、購物、Gmail和YouTube）觸及客戶並與其重新互動。
 translation-type: tm+mt
-source-git-commit: ef0f7e20a55804c013756e261818c2ee2df4d103
+source-git-commit: 6e7ecfdc0b2cbf6f07e6b2220ec163289511375e
 workflow-type: tm+mt
-source-wordcount: '1498'
+source-wordcount: '1491'
 ht-degree: 0%
 
 ---
@@ -129,13 +129,13 @@ Attribute source data is not automatically hashed. When your source field contai
 
 在&#x200B;**[!UICONTROL Authentication]**&#x200B;步驟中，輸入啟動流程的[!UICONTROL Name]和[!UICONTROL Description]，並將[!UICONTROL 帳戶ID]填入Google。
 
-此外，在此步驟中，您也可以選取任何應套用至此目的地的&#x200B;**[!UICONTROL 行銷使用案例]**。 行銷使用案例會指出將資料匯出至目的地的方式。 您可以從Adobe定義的行銷使用案例中選擇，也可以建立自己的行銷使用案例。 有關行銷使用案例的詳細資訊，請參見[即時CDP](../../../rtcdp/privacy/data-governance-overview.md#destinations)中的資料治理頁。 如需個別Adobe定義之行銷使用案例的詳細資訊，請參閱[資料使用政策概觀](../../../data-governance/policies/overview.md#core-actions)。
+此外，在此步驟中，您也可以選取任何應套用至此目的地的&#x200B;**[!UICONTROL 行銷動作]**。 行銷動作會指出將資料匯出至目的地的方式。 您可以從Adobe定義的行銷動作中選擇，也可以建立自己的行銷動作。 有關行銷操作的詳細資訊，請參見[即時CDP](../../../rtcdp/privacy/data-governance-overview.md#destinations)中的資料治理頁。 如需個別Adobe定義之行銷動作的詳細資訊，請參閱[資料使用政策概觀](../../../data-governance/policies/overview.md#core-actions)。
 
 在填寫上述欄位後，選擇「建立目標」。****
 
 >[!IMPORTANT]
 >
-> * **[!UICONTROL 與PII]**&#x200B;結合行銷使用案例預設會針對[!DNL Google Customer Match]目標選取，且無法移除。
+> * **[!UICONTROL 結合PII]**&#x200B;行銷動作預設會針對[!DNL Google Customer Match]目標選取，且無法移除。
 > * 對於[!DNL Google Customer Match]目標。 **[!UICONTROL 帳戶]** ID是您使用Google的客戶用戶端ID。ID的格式為xxx-xxx-xxxx。
 
 
