@@ -3,9 +3,9 @@ keywords: 飛艇標籤；飛艇目的地
 title: 飛艇標籤連接
 description: 順暢地將Adobe觀眾資料傳遞至Axphiry做為觀眾標籤，以便在Axphiry中定位。
 translation-type: tm+mt
-source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
+source-git-commit: 6e7ecfdc0b2cbf6f07e6b2220ec163289511375e
 workflow-type: tm+mt
-source-wordcount: '1196'
+source-wordcount: '1193'
 ht-degree: 1%
 
 ---
@@ -99,7 +99,7 @@ Adobe Experience Platform中區段的概念與Airship中的[Tags](https://docs.a
 
 在&#x200B;**[!UICONTROL 驗證]**&#x200B;步驟中，輸入激活流程的&#x200B;**[!UICONTROL 名稱]**&#x200B;和&#x200B;**[!UICONTROL 說明]**。
 
-此外，在此步驟中，您可以選擇美國或歐盟的資料中心，具體取決於哪個[!DNL Airship]資料中心適用於此目標。 最後，選取一或多個將資料匯出至目的地的行銷使用案例。 您可以從Adobe定義的行銷使用案例中選擇，也可以自行建立。 如需行銷使用案例的詳細資訊，請參閱[資料使用政策概述](../../../data-governance/policies/overview.md)。
+此外，在此步驟中，您可以選擇美國或歐盟的資料中心，具體取決於哪個[!DNL Airship]資料中心適用於此目標。 最後，選擇一個或多個將其資料導出到目標的&#x200B;**[!UICONTROL 行銷操作]**。 您可以從Adobe定義的行銷動作中選擇，也可以自行建立。 如需行銷動作的詳細資訊，請參閱[資料使用政策概述](../../../data-governance/policies/overview.md)。
 
 在填寫上述欄位後，選擇「建立目標」。****
 
