@@ -3,9 +3,9 @@ keywords: 串流；
 title: HTTP連線
 description: Adobe Experience Platform中的HTTP目標可讓您傳送描述檔資料至協力廠商HTTP端點。
 translation-type: tm+mt
-source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
+source-git-commit: 5435661d750c4138ea6a2d40619a48236b7b1e4f
 workflow-type: tm+mt
-source-wordcount: '487'
+source-wordcount: '542'
 ht-degree: 2%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 2%
 >
 >平台中的[!DNL HTTP]目標當前位於alpha。 文件和功能可能會有所變更。
 
-[!DNL HTTP]目的地是[!DNL Adobe Experience Platform]串流目的地，可協助您將描述檔資料傳送至協力廠商[!DNL HTTP]端點。
+[!DNL HTTP]目的地是[!DNL Adobe Experience Platform]串流目的地，可協助您將描述檔資料傳送至第三方[!DNL HTTP]端點。
 
 要向[!DNL HTTP]端點發送配置檔案資料，必須首先連接到[[!DNL Adobe Experience Platform]](#connect-destination)中的目標。
 
@@ -58,6 +58,7 @@ ht-degree: 2%
 - **[!UICONTROL 名稱]**:輸入您將來識別此目的地的名稱。
 - **[!UICONTROL 說明]**:輸入說明，以幫助您識別未來的目標。
 - **[!UICONTROL 自訂標題]**:輸入您想要納入目標呼叫的任何自訂標題，請遵循下列格式： `header1:value1,header2:value2,...headerN:valueN`.
+- **[!UICONTROL 行銷動作]**:行銷動作會指出將資料匯出至目的地的方式。您可以從Adobe定義的行銷動作中選擇，也可以建立自己的行銷動作。 如需行銷動作的詳細資訊，請參閱Adobe Experience Platform中的[資料治理](/help/data-governance/policies/overview.md)頁面。 如需個別Adobe定義之行銷動作的詳細資訊，請參閱[資料使用政策概觀](/help/data-governance/policies/overview.md)。
 
 >[!IMPORTANT]
 >
@@ -65,7 +66,7 @@ ht-degree: 2%
 
 ![HTTP驗證](../assets/catalog/http/authenticate.png)
 
-**[!UICONTROL 行銷使用案例]**:行銷使用案例會指出將資料匯出至目的地的方式。您可以從Adobe定義的行銷使用案例中選擇，也可以建立自己的行銷使用案例。 如需行銷使用案例的詳細資訊，請參閱[資料使用政策概述](../../data-governance/policies/overview.md)。
+**[!UICONTROL 行銷動作]**:行銷動作會指出將資料匯出至目的地的方式。您可以從Adobe定義的行銷動作中選擇，也可以建立自己的行銷動作。 如需行銷動作的詳細資訊，請參閱[資料使用政策概述](../../data-governance/policies/overview.md)。
 
 按一下&#x200B;**[!UICONTROL 建立目標]**。
 
