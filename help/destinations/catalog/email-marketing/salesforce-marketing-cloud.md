@@ -3,9 +3,9 @@ keywords: 電子郵件；電子郵件；電子郵件；電子郵件目標；sale
 title: Salesforce Marketing Cloud連線
 seo-description: Salesforce Marketing Cloud是數位行銷套裝，先前稱為ExactTarget，可讓您為訪客和客戶建構並自訂歷程，以個人化其體驗。
 translation-type: tm+mt
-source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
+source-git-commit: 6e7ecfdc0b2cbf6f07e6b2220ec163289511375e
 workflow-type: tm+mt
-source-wordcount: '512'
+source-wordcount: '620'
 ht-degree: 0%
 
 ---
@@ -38,8 +38,10 @@ ht-degree: 0%
 在&#x200B;**[!UICONTROL Setup]**&#x200B;步驟中，填寫目標的相關資訊，如下所示：
 - **[!UICONTROL 名稱]**:為目的地選擇相關名稱。
 - **[!UICONTROL 說明]**:輸入目標的說明。
+- **[!UICONTROL 貯體名稱]**:您的Amazon S3儲存貯體，Platform將儲存資料匯出。您的輸入長度必須介於3到63個字元之間。 必須以字母或數字開頭和結尾。 只能包含小寫字母、數字或連字型大小(-)。 不得格式化為IP位址（例如192.100.1.1）。
 - **[!UICONTROL 資料夾路徑]**:在您的儲存位置提供路徑，讓Platform將匯出資料儲存為CSV或Tab分隔檔案。
-- **[!UICONTROL 檔案格式]**: **[!UICONTROL CSV]** 或 **[!UICONTROL TAB_DELIMITED]**。選擇要導出到儲存位置的檔案格式。
+- **[!UICONTROL 檔案格式]**: **CSV** 或 **TAB_DELIMITED**。選擇要導出到儲存位置的檔案格式。
+- **[!UICONTROL 行銷動作]**:行銷動作會指出將資料匯出至目的地的方式。您可以從Adobe定義的行銷動作中選擇，也可以建立自己的行銷動作。 如需行銷動作的詳細資訊，請參閱Adobe Experience Platform中的[資料治理](../../../data-governance/policies/overview.md)頁面。 如需個別Adobe定義之行銷動作的詳細資訊，請參閱[資料使用政策概觀](../../../data-governance/policies/overview.md)。
 
 ![Salesforce基本資訊](../../assets/catalog/email-marketing/salesforce/basic-information.png)
 
