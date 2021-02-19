@@ -5,9 +5,9 @@ seo-title: 目的地概觀
 description: 瞭解如何將Adobe Experience Platform資料啟用至跨通道行銷宣傳、電子郵件、目標廣告等目的地。
 seo-description: 目標是與目標平台預先建立的整合，可讓您順暢地從Adobe Experience Platform啟動資料。 您可以使用Adobe Experience Platform中的「目標」來啟用您已知和未知的跨通道行銷宣傳、電子郵件宣傳、目標廣告和許多其他使用案例資料。
 translation-type: tm+mt
-source-git-commit: 2efdefc69c937c70f6a463113a73ca71d8998e14
+source-git-commit: 6e7ecfdc0b2cbf6f07e6b2220ec163289511375e
 workflow-type: tm+mt
-source-wordcount: '493'
+source-wordcount: '489'
 ht-degree: 1%
 
 ---
@@ -53,12 +53,12 @@ Platform的目標功能可與Adobe Experience Platform存取控制權限搭配�
 
 平台目標的資料控管透過下列方式實施：
 
-* *行銷使* 用您可在建立目標工作流程中選擇的案例；
-* *資料使* 用策略，可限制包含特定使用標籤的資料被啟動至具有特定行銷使用案例的目的地。
+* *您可* 在建立目標工作流程中選擇的行銷動作；
+* *資料使用* 策略，可限制包含特定使用標籤的資料被啟動至具有特定行銷動作的目的地。
 
-有關[行銷使用案例](../data-governance/policies/overview.md)和[解決資料原則違規的詳細資訊，請參閱平台檔案中的[!DNL Data Governance]。](../data-governance/enforcement/auto-enforcement.md)
+有關[行銷動作](../data-governance/policies/overview.md)和[解決資料原則違規的詳細資訊，請參閱平台檔案中的[!DNL Data Governance]。](../data-governance/enforcement/auto-enforcement.md)
 
-如需在建立目標工作流程中選取行銷使用案例的詳細資訊，請參閱平台中不同目標類型的下列頁面：
+如需在建立目標工作流程中選取行銷動作的詳細資訊，請參閱「平台」中不同目標類型的下列頁面：
 
 * [廣告目的地- Google Ad Manager  ](./catalog/advertising/google-ad-manager.md)
 * [廣告目的地- Google Ads](./catalog/advertising/google-ads-destination.md)
