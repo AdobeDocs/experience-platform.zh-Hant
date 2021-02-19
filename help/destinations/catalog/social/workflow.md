@@ -4,9 +4,9 @@ title: 建立社交網路目的地
 type: Tutorial
 description: 瞭解如何在Adobe Experience Platform中連線至您的社交網路廣告帳戶。
 translation-type: tm+mt
-source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
+source-git-commit: 6e7ecfdc0b2cbf6f07e6b2220ec163289511375e
 workflow-type: tm+mt
-source-wordcount: '460'
+source-wordcount: '455'
 ht-degree: 0%
 
 ---
@@ -38,7 +38,7 @@ ht-degree: 0%
 
 在&#x200B;**[!UICONTROL Setup]**&#x200B;步驟中，輸入啟動流程的[!UICONTROL Name]和[!UICONTROL Description]，並填寫社交網路廣告帳戶的[!UICONTROL Account ID]。
 
-此外，在此步驟中，您也可以選取任何應套用至此目的地的&#x200B;**[!UICONTROL 行銷使用案例]**。 行銷使用案例會指出將資料匯出至目的地的方式。 您可以從Adobe定義的行銷使用案例中選擇，也可以建立自己的行銷使用案例。 如需行銷使用案例的詳細資訊，請參閱[資料使用政策概述](../../../data-governance/policies/overview.md)。
+此外，在此步驟中，您也可以選取任何應套用至此目的地的&#x200B;**[!UICONTROL 行銷動作]**。 行銷動作會指出將資料匯出至目的地的方式。 您可以從Adobe定義的行銷動作中選擇，也可以建立自己的行銷動作。 如需行銷動作的詳細資訊，請參閱[資料使用政策概述](../../../data-governance/policies/overview.md)。
 
 在填寫上述欄位後，選擇「建立目標」。****
 
