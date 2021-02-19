@@ -3,9 +3,9 @@ keywords: '廣告；bing; '
 title: Microsoft Bing連線
 description: 有了Microsoft Bing連線目標，您就可以跨Microsoft Display Advertising執行重新定位和受眾鎖定的數位宣傳。
 translation-type: tm+mt
-source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
+source-git-commit: 6e7ecfdc0b2cbf6f07e6b2220ec163289511375e
 workflow-type: tm+mt
-source-wordcount: '460'
+source-wordcount: '454'
 ht-degree: 0%
 
 ---
@@ -54,7 +54,7 @@ ht-degree: 0%
 * **[!UICONTROL 名稱]**:您將來識別此目的地的名稱。
 * **[!UICONTROL 說明]**:將來幫助您識別此目標的說明。
 * **[!UICONTROL 帳戶ID]**:您的 [!DNL Bing Ads CID]。
-* **[!UICONTROL 行銷使用案例]**:行銷使用案例會指出將資料匯出至目的地的方式。您可以從Adobe定義的行銷使用案例中選擇，也可以建立自己的行銷使用案例。 如需行銷使用案例的詳細資訊，請參閱「Adobe Experience Platform中的[資料治理」頁面。 ](../../../data-governance/policies/overview.md)如需個別Adobe定義之行銷使用案例的詳細資訊，請參閱[資料使用政策概觀](../../../data-governance/policies/overview.md)。
+* **[!UICONTROL 行銷動作]**:行銷動作會指出將資料匯出至目的地的方式。您可以從Adobe定義的行銷動作中選擇，也可以建立自己的行銷動作。 如需行銷動作的詳細資訊，請參閱Adobe Experience Platform中的[資料治理](../../../data-governance/policies/overview.md)頁面。 如需個別Adobe定義之行銷動作的詳細資訊，請參閱[資料使用政策概觀](../../../data-governance/policies/overview.md)。
 
 ![Microsoft Bing目標驗證](../../assets/catalog/advertising/bing/authentication.png)
 
