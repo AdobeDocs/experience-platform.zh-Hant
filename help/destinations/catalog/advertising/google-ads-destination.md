@@ -3,9 +3,9 @@ keywords: Google ads;google ads;google adwords;Google AdWords;Google Adwords
 title: Google Ads連線
 description: Google Ads（先前稱為Google AdWords）是線上廣告服務，可讓企業透過文字搜尋、圖形顯示、YouTube視訊和應用程式內行動顯示，按點擊付費廣告。
 translation-type: tm+mt
-source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
+source-git-commit: 6e7ecfdc0b2cbf6f07e6b2220ec163289511375e
 workflow-type: tm+mt
-source-wordcount: '659'
+source-wordcount: '654'
 ht-degree: 0%
 
 ---
@@ -71,7 +71,7 @@ ht-degree: 0%
 * **[!UICONTROL 說明]**:可選。例如，您可以提及您使用此目的地的促銷活動。
 * **[!UICONTROL 帳戶類型]**:AdWords是唯一可用的選項。
 * **[!UICONTROL 帳戶ID]**:在您的帳戶ID中填入 [!DNL Google Ads]。ID格式通常為123-456-7890。
-* **[!UICONTROL 行銷使用案例]**:行銷使用案例會指出將資料匯出至目的地的方式。您可以從Adobe定義的行銷使用案例中選擇，也可以建立自己的行銷使用案例。 如需行銷使用案例的詳細資訊，請參閱[資料使用政策概述](../../../data-governance/policies/overview.md)。
+* **[!UICONTROL 行銷動作]**:行銷動作會指出將資料匯出至目的地的方式。您可以從Adobe定義的行銷動作中選擇，也可以建立自己的行銷動作。 如需行銷動作的詳細資訊，請參閱[資料使用政策概述](../../../data-governance/policies/overview.md)。
 
 ## 啟用區段至[!DNL Google Ads]
 
