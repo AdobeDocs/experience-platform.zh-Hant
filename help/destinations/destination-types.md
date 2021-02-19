@@ -4,9 +4,9 @@ title: 目標類型和類別
 seo-title: 目標類型和類別
 description: 瞭解Adobe Experience Platform中不同的目的地類型和類別。
 translation-type: tm+mt
-source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
+source-git-commit: 6e7ecfdc0b2cbf6f07e6b2220ec163289511375e
 workflow-type: tm+mt
-source-wordcount: '514'
+source-wordcount: '513'
 ht-degree: 0%
 
 ---
@@ -62,7 +62,7 @@ Platform Launch擴充功能可將原始事件資料轉送至數種目的地。 �
 
 ## 目標類別
 
-[目標目錄](https://platform.adobe.com/destination/catalog)中的連接和擴展按目標類別（**廣告**、**雲端儲存**、**調查平台**、**電子郵件行銷**&#x200B;等）分組，具體取決於它們幫助您實現的行銷使用案例。 有關每個類別以及每個類別所包含的目標的詳細資訊，請參閱[目標目錄文檔](./catalog/overview.md)。
+[目標目錄](https://platform.adobe.com/destination/catalog)中的連接和擴展按目標類別（**廣告**、**雲端儲存**、**調查平台**、**電子郵件行銷**&#x200B;等）分組，具體取決於它們幫助您實現的行銷動作。 有關每個類別以及每個類別所包含的目標的詳細資訊，請參閱[目標目錄文檔](./catalog/overview.md)。
 
 ![目標類別](./assets/destination-types/destination-categories-menu.png)
 
