@@ -4,9 +4,9 @@ title: 電子郵件行銷目標概觀
 type: Tutorial
 description: 電子郵件服務供應商(ESP)可讓您管理電子郵件行銷活動，例如傳送促銷電子郵件促銷活動。
 translation-type: tm+mt
-source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
+source-git-commit: 6e7ecfdc0b2cbf6f07e6b2220ec163289511375e
 workflow-type: tm+mt
-source-wordcount: '791'
+source-wordcount: '786'
 ht-degree: 1%
 
 ---
@@ -40,7 +40,7 @@ ht-degree: 1%
 
 如果您在上一步驟中選擇了Amazon S3作為儲存選項，請將儲存段名稱和資料夾路徑插入雲儲存目標中將檔案發送到的位置。 對於SFTP儲存選項，插入要傳送檔案的資料夾路徑。
 
-此外，您也可以在此步驟中選取任何應套用至此目的地的行銷使用案例。 行銷使用案例會指出將資料匯出至目的地的方式。 您可以從Adobe定義的行銷使用案例中選擇，也可以建立自己的行銷使用案例。 如需行銷使用案例的詳細資訊，請參閱[資料使用政策概述](../../../data-governance/policies/overview.md)。
+此外，您也可以在此步驟中選取任何應套用至此目的地的行銷動作。 行銷動作會指出將資料匯出至目的地的方式。 您可以從Adobe定義的行銷動作中選擇，也可以建立自己的行銷動作。 如需行銷動作的詳細資訊，請參閱[資料使用政策概述](../../../data-governance/policies/overview.md)。
 
 ![電子郵件設定步驟](../../assets/catalog/email-marketing/overview/email-setup-step.png)
 
