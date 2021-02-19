@@ -3,9 +3,9 @@ keywords: Azure事件中樞目標；azure事件中樞；azure事件中樞
 title: （測試版）Azure事件集線器連接
 description: 建立Azure事件中樞儲存空間的即時出站連線，以從Experience Platform串流資料。
 translation-type: tm+mt
-source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
+source-git-commit: 6e7ecfdc0b2cbf6f07e6b2220ec163289511375e
 workflow-type: tm+mt
-source-wordcount: '486'
+source-wordcount: '546'
 ht-degree: 2%
 
 ---
@@ -55,6 +55,7 @@ ht-degree: 2%
 * **[!UICONTROL 名稱]**:填寫連接的名稱 [!DNL Azure Event Hubs]。
 * **[!UICONTROL 說明]**:提供連接的說明。範例：「Premium tier customers」、「Males intered to kitesurfing」。
 * **[!UICONTROL eventHubName]**:提供串流至您目的地的名 [!DNL Azure Event Hubs] 稱。
+* **[!UICONTROL 行銷動作]**:行銷動作會指出將資料匯出至目的地的方式。您可以從Adobe定義的行銷動作中選擇，也可以建立自己的行銷動作。 如需行銷動作的詳細資訊，請參閱Adobe Experience Platform中的[資料治理](../../../data-governance/policies/overview.md)頁面。 如需個別Adobe定義之行銷動作的詳細資訊，請參閱[資料使用政策概觀](../../../data-governance/policies/overview.md)。
 
 ![設定步驟中所需的資料](../../assets/catalog/cloud-storage/event-hubs/setup.png)
 
