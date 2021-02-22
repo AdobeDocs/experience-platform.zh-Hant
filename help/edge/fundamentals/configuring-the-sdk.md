@@ -4,7 +4,7 @@ description: 瞭解如何設定Adobe Experience Platform Web SDK。
 seo-description: 瞭解如何設定Experience Platform Web SDK
 keywords: configure;configuration;SDK;edge;Web SDK;configure;edgeConfigId;context;web;device;placeContext;debugEnabled;edgeDomain;orgId;clickCollectionEnabled;onBeforeEventSend;defaultConowensen;web sd設定；prehiningStyle；不透明；cookieDesing;webet;e;web sd;e;e;en;ed;emen;up;en;usen;up;usen;ured;ure;usen;urlEnabled;en;used;urlEnabled;ed;ed;ed;urlEn;en;ed;ed;un;ed;un;um;un;urlDestinationsEnabled;idMigrationEnabled;thirdPartyCookiesEnabled;
 translation-type: tm+mt
-source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
+source-git-commit: 85bb984231a3069aad0c63707f5024612181798c
 workflow-type: tm+mt
 source-wordcount: '741'
 ht-degree: 11%
@@ -60,7 +60,7 @@ alloy("configure", {
 | 同步驗證 | 驗證針對架構收集的資料，並在下列標籤下的回應中傳回錯誤：`collect:error OR success` |
 | 控制台記錄 | 啟用除錯訊息，以便顯示在瀏覽器的JavaScript主控台中 |
 
-### `edgeDomain`
+### `edgeDomain` {#edge-domain}
 
 | **類型** | **必填** | **預設值** |
 | -------- | ------------ | ------------------ |
@@ -141,7 +141,7 @@ alloy("configure", {
 
 ## 身分選項
 
-### `idMigrationEnabled`
+### `idMigrationEnabled` {#id-migration-enabled}
 
 | **類型** | **必填** | **預設值** |
 | -------- | ------------ | ----------------- |
