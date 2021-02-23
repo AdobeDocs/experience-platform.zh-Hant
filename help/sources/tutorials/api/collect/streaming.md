@@ -2,13 +2,13 @@
 keywords: Experience Platform; home；熱門主題；雲端儲存資料；串流資料；串流
 solution: Experience Platform
 title: 使用來源連接器和API收集串流資料
-topic: overview
-type: Tutorial
+topic: 概述
+type: 教學課程
 description: 本教學課程涵蓋使用來源連接器和API擷取串流資料並將其匯入平台的步驟。
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: b8f7f6e7f110dc9ebd025cd594fd1a54126ccdf3
 workflow-type: tm+mt
-source-wordcount: '1303'
+source-wordcount: '1305'
 ht-degree: 2%
 
 ---
@@ -26,7 +26,8 @@ ht-degree: 2%
 
 - [[!DNL Amazon Kinesis]](../create/cloud-storage/kinesis.md)
 - [[!DNL Azure Event Hubs]](../create/cloud-storage/eventhub.md)
-- [[!DNL HTTP API]](../../../../ingestion/tutorials/create-streaming-connection.md)
+- [[!DNL HTTP API]](../create/streaming/http.md)
+- [[!DNL Google PubSub]](../create/cloud-storage/google-pubsub.md)
 
 本教學課程也要求您對Adobe Experience Platform的下列元件有正確的認識：
 
