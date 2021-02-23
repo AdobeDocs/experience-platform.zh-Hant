@@ -5,9 +5,9 @@ user-guide-title: Adobe Experience Platform 資料科學工作區說明
 breadcrumb-title: Data Science Workspace 指南
 user-guide-description: 透過 Adobe Sensei 和 JupyterLab Notebooks，使用機器學習來開發、訓練和對模型與配方計分。
 translation-type: tm+mt
-source-git-commit: f6cfd691ed772339c888ac34fcbd535360baa116
+source-git-commit: fe2872519cfeda8024a5ad62f6a71e854822f858
 workflow-type: tm+mt
-source-wordcount: '233'
+source-wordcount: '237'
 ht-degree: 17%
 
 ---
@@ -23,6 +23,7 @@ ht-degree: 17%
    * [資料存取](jupyterlab/access-notebook-data.md)
    * [分析您的資料](jupyterlab/analyze-your-data.md)
    * [查詢服務](jupyterlab/query-service.md)
+   * [探索性資料分析(EDA)](jupyterlab/eda-notebook.md)
    * [建立配方](jupyterlab/create-a-recipe.md)
    * [使用Git在JupyterLab中協作](jupyterlab/using-git-for-collaboration.md)
 * Sensei Machine Learning API {#api}
