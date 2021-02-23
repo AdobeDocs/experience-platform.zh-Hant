@@ -2,12 +2,12 @@
 keywords: Experience Platform;home；熱門主題；源連接器；源連接器；源；資料源；資料源；資料源；資料源；資料源連接
 solution: Experience Platform
 title: 來源連接器概觀
-topic: overview
+topic: 概述
 description: Adobe Experience Platform可讓您從外部來源擷取資料，同時提供您使用平台服務來建構、標示及增強傳入資料的能力。 您可以從多種來源（例如Adobe應用程式、雲端儲存空間、資料庫等）擷取資料。
 translation-type: tm+mt
-source-git-commit: a489ab248793a063295578943ad600d8eacab6a2
+source-git-commit: b8f7f6e7f110dc9ebd025cd594fd1a54126ccdf3
 workflow-type: tm+mt
-source-wordcount: '940'
+source-wordcount: '942'
 ht-degree: 0%
 
 ---
@@ -56,6 +56,7 @@ Experience Platform支援從協力廠商廣告系統擷取資料。 有關特定
 - [[!DNL Azure File Storage] 連接器](connectors/cloud-storage/azure-file-storage.md)
 - [[!DNL FTP] 連接器](connectors/cloud-storage/ftp.md)
 - [[!DNL Google Cloud Storage] 連接器](connectors/cloud-storage/google-cloud-storage.md)
+- [[!DNL Google PubSub] 連接器](connectors/cloud-storage/google-pubsub.md)
 - [[!DNL SFTP] 連接器](connectors/cloud-storage/sftp.md)
 
 ### 客戶關係管理(CRM)
@@ -133,7 +134,7 @@ Experience Platform支援從協力廠商通訊協定系統擷取資料。 有關
 
 ## 條款與條件{#terms-and-conditions}
 
-使用任何標示為beta(「Beta」)的「來源」，即表示您瞭解Beta是「按原樣」提供，不提供任何類型的「***」保證。***
+使用任何標示為beta(「Beta」)的「來源」，即表示您承認該「測試版」依「現狀」提供，不提供任何類型的「***」保證。***
 
 Adobe無義務維護、更正、更新、變更、修改或以其他方式支援測試版。 建議您務必小心謹慎，不要依賴測試版及／或隨附材料的正確運作或效能。 測試版視為Adobe的機密資訊。
 
