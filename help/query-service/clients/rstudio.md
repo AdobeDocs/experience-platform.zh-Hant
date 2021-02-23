@@ -2,13 +2,13 @@
 keywords: Experience Platform; home；熱門主題；查詢服務；查詢服務； RStudio;rstudio；連接查詢服務；
 solution: Experience Platform
 title: 將RStudio連接至查詢服務
-topic: connect
+topic: 連接
 description: 本檔案將逐步說明如何將R Studio與Adobe Experience Platform Query Service連接。
 translation-type: tm+mt
-source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
+source-git-commit: f1b2fd7efd43f317a85c831cd64c09be29688f7a
 workflow-type: tm+mt
-source-wordcount: '282'
-ht-degree: 2%
+source-wordcount: '368'
+ht-degree: 0%
 
 ---
 
@@ -20,39 +20,40 @@ ht-degree: 2%
 >[!NOTE]
 >
 > 本指南假設您已擁有[!DNL RStudio]的存取權，並熟悉如何使用它。 有關[!DNL RStudio]的更多資訊，請參閱[official [!DNL RStudio] 文檔](https://rstudio.com/products/rstudio/)。
+> 
+> 此外，要將RStudio與查詢服務一起使用，需要安裝PostgreSQL JDBC 4.2驅動程式。 您可以從[PostgreSQL正式站點](https://jdbc.postgresql.org/download.html)下載JDBC驅動程式。
 
 ## 在[!DNL RStudio]介面中建立[!DNL Query Service]連接
 
-安裝[!DNL RStudio]後，在出現的&#x200B;**[!DNL Console]**&#x200B;螢幕上，首先需要準備R指令碼以使用[!DNL PostgreSQL]。
+安裝[!DNL RStudio]後，需要安裝RJDBC包。 前往&#x200B;**[!DNL Packages]**&#x200B;窗格，然後選擇&#x200B;**[!DNL Install]**。
 
-```r
-install.packages("RPostgreSQL")
-install.packages("rstudioapi")
-require("RPostgreSQL")
-require("rstudioapi")
+![](../images/clients/rstudio/install-package.png)
+
+此時會出現一個彈出畫面，顯示&#x200B;**[!DNL Install Packages]**&#x200B;畫面。 請確定&#x200B;**[!DNL Install from]**&#x200B;區段已選取&#x200B;**[!DNL Repository (CRAN)]**。 **[!DNL Packages]**&#x200B;的值應為`RJDBC`。 確保已選擇&#x200B;**[!DNL Install dependencies]**。 確認所有值都正確後，選擇&#x200B;**[!DNL Install]**&#x200B;以安裝軟體包。
+
+![](../images/clients/rstudio/install-jrdbc.png)
+
+現在已安裝RJDBC包，請重新啟動RStudio以完成安裝程式。
+
+在RStudio重新啟動後，您現在可以連線至查詢服務。 在&#x200B;**[!DNL Packages]**&#x200B;窗格中選擇&#x200B;**[!DNL RJDBC]**&#x200B;軟體包，然後在控制台中輸入以下命令：
+
+```console
+pgsql <- JDBC("org.postgresql.Driver", "{PATH TO THE POSTGRESQL JDBC JAR}", "`")
 ```
 
-在您準備好使用[!DNL PostgreSQL]的R指令碼後，現在可以通過載入[!DNL PostgreSQL]驅動程式將[!DNL RStudio]連接到[!DNL Query Service]。
+其中{PATH TO THE POSTGRESQL JDBC JAR}代表您電腦上安裝的PostgreSQL JDBC JAR的路徑。
 
-```r
-drv <- dbDriver("PostgreSQL")
-con <- dbConnect(drv, 
- dbname = "{DATABASE_NAME}",
- host="{HOST_NUMBER}",
- port={PORT_NUMBER},
- user="{USERNAME}",
- password="{PASSWORD}")
+現在，您可以在控制台中輸入以下命令來建立與查詢服務的連接：
+
+```console
+qsconnection <- dbConnect(pgsql, "jdbc:postgresql://{HOSTNAME}:{PORT}/{DATABASE_NAME}?user={USERNAME}&password={PASSWORD}&sslmode=require")
 ```
-
-| 屬性 | 說明 |
-| -------- | ----------- |
-| `{DATABASE_NAME}` | 將使用的資料庫的名稱。 |
-| `{HOST_NUMBER` 和 `{PORT_NUMBER}` | 查詢服務的主機端點及其埠。 |
-| `{USERNAME}` 和 `{PASSWORD}` | 將使用的登錄憑據。 用戶名的形式為`ORG_ID@AdobeOrg`。 |
 
 >[!NOTE]
 >
 >有關查找資料庫名稱、主機、埠和登錄憑據的詳細資訊，請訪問Platform](https://platform.adobe.com/query/configuration)上的[ credentials頁。 要查找憑據，請登錄到[!DNL Platform]，然後選擇&#x200B;**[!UICONTROL 查詢]**，然後選擇&#x200B;**[!UICONTROL 憑據]**。
+
+![](../images/clients/rstudio/connection-rjdbc.png)
 
 ## 編寫查詢
 
