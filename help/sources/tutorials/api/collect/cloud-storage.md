@@ -2,11 +2,11 @@
 keywords: Experience Platform; home；熱門主題；雲端儲存資料
 solution: Experience Platform
 title: 使用來源連接器和API收集雲端儲存資料
-topic: overview
-type: Tutorial
+topic: 概述
+type: 教學課程
 description: 本教學課程涵蓋從協力廠商雲端儲存空間擷取資料，並使用來源連接器和API將其匯入平台的步驟。
 translation-type: tm+mt
-source-git-commit: 62266187ed1f3ce2f0acca3f50487fb70cfa7307
+source-git-commit: 60a70352c2e13565fd3e8c44ae68e011a1d443a6
 workflow-type: tm+mt
 source-wordcount: '1639'
 ht-degree: 1%
@@ -33,7 +33,7 @@ ht-degree: 1%
 
 ### 讀取範例API呼叫
 
-本教學課程提供範例API呼叫，以示範如何設定請求的格式。 這些包括路徑、必要標題和正確格式化的請求負載。 也提供API回應中傳回的範例JSON。 如需範例API呼叫檔案中所用慣例的詳細資訊，請參閱Experience Platform疑難排解指南中[如何讀取範例API呼叫](../../../../landing/troubleshooting.md#how-do-i-format-an-api-request)一節。
+本教學課程提供範例API呼叫，以示範如何設定請求的格式。 這些包括路徑、必要標題和正確格式化的請求負載。 也提供API回應中傳回的範例JSON。 如需範例API呼叫檔案中使用之慣例的詳細資訊，請參閱Experience Platform疑難排解指南中[如何讀取範例API呼叫](../../../../landing/troubleshooting.md#how-do-i-format-an-api-request)一節。
 
 ### 收集必要標題的值
 
@@ -672,5 +672,6 @@ curl -X POST \
 | [!DNL Azure Event Hubs] （事件集線器） | `bf9f5905-92b7-48bf-bf20-455bc6b60a4e` |
 | [!DNL Azure File Storage] | `be5ec48c-5b78-49d5-b8fa-7c89ec4569b8` |
 | [!DNL Google Cloud Storage] | `32e8f412-cdf7-464c-9885-78184cb113fd` |
-| HDFS | `54e221aa-d342-4707-bcff-7a4bceef0001` |
-| SFTP | `bf367b0d-3d9b-4060-b67b-0d3d9bd06094` |
+| [!DNL HDFS] | `54e221aa-d342-4707-bcff-7a4bceef0001` |
+| [!DNL Oracle Object Storage] | `c85f9425-fb21-426c-ad0b-405e9bd8a46c` |
+| [!DNL SFTP] | `bf367b0d-3d9b-4060-b67b-0d3d9bd06094` |
