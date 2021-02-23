@@ -2,12 +2,12 @@
 keywords: Experience Platform; home；熱門主題；雲端儲存；雲端儲存空間
 solution: Experience Platform
 title: 使用Flow Service API探索Cloud儲存系統
-topic: overview
+topic: 概述
 description: 本教學課程使用Flow Service API來探索協力廠商雲端儲存系統。
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: 60a70352c2e13565fd3e8c44ae68e011a1d443a6
 workflow-type: tm+mt
-source-wordcount: '758'
+source-wordcount: '742'
 ht-degree: 2%
 
 ---
@@ -30,14 +30,15 @@ ht-degree: 2%
 
 若要使用[!DNL Platform] API來探索第三方雲端儲存空間，您必須擁有有效的連線ID。 如果您尚未連接要使用的儲存，則可以通過以下教程建立一個：
 
-* [Amazon S3](../create/cloud-storage/s3.md)
-* [Azure Blob](../create/cloud-storage/blob.md)
-* [Azure Data Lake Storage Gen2](../create/cloud-storage/adls-gen2.md)
-* [Azure檔案儲存](../create/cloud-storage/azure-file-storage.md)
-* [FTP](../create/cloud-storage/ftp.md)
-* [Google雲端商店](../create/cloud-storage/google.md)
+* [[!DNL Amazon S3]](../create/cloud-storage/s3.md)
+* [[!DNL Azure Blob]](../create/cloud-storage/blob.md)
+* [[!DNL Azure Data Lake Storage Gen2]](../create/cloud-storage/adls-gen2.md)
+* [[!DNL Azure File Storage]](../create/cloud-storage/azure-file-storage.md)
+* [[!DNL FTP]](../create/cloud-storage/ftp.md)
+* [[!DNL Google Cloud Storage]](../create/cloud-storage/google.md)
 * [HDFS](../create/cloud-storage/hdfs.md)
-* [SFTP](../create/cloud-storage/sftp.md)
+* [[!DNL Oracle Object Storage]](../create/cloud-storage/oracle-object-storage.md)
+* [[!DNL SFTP]](../create/cloud-storage/sftp.md)
 
 ### 讀取範例API呼叫
 
