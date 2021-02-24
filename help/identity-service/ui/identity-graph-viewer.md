@@ -2,26 +2,28 @@
 keywords: Experience Platform;home；熱門主題；身份圖查看器；Identity Graph viewer;Graph viewer;Graph viewer;Identity namespace;Identity;Identity Service;identity service
 solution: Experience Platform
 title: Identity Graph檢視器概觀
-topic: tutorial
+topic: 教學課程
 description: 身分圖是特定客戶不同身分之間關係的地圖，可讓您以視覺化方式呈現客戶如何透過不同通道與您的品牌互動。
 translation-type: tm+mt
-source-git-commit: 8ec904d584225113a6791533ff544560fc2efdf3
+source-git-commit: f4326c7a8bb8af90c092d3790e51c133744d498f
 workflow-type: tm+mt
-source-wordcount: '946'
-ht-degree: 0%
+source-wordcount: '1038'
+ht-degree: 1%
 
 ---
 
 
-# （測試版）身分圖表檢視器概觀
-
->[!NOTE]
->
->身分圖表檢視器目前處於測試階段。 其功能可能會有所改變。
+# 身分圖表檢視器概觀
 
 身分圖是特定客戶不同身分之間關係的地圖，可讓您以視覺化方式呈現客戶如何透過不同通道與您的品牌互動。 Adobe Experience Platform Identity Service會針對客戶活動，近乎即時地管理和更新所有客戶識別圖。
 
 平台使用者介面中的身分圖表檢視器可讓您視覺化並深入瞭解哪些客戶身份是結合在一起的，以及以哪些方式連結在一起。 檢視器可讓您拖曳圖形的不同部分並與之互動，讓您檢查複雜的身分關係、更有效率地進行除錯，並透過提高透明度來運用資訊。
+
+## 教學課程影片
+
+以下影片旨在協助您瞭解身分圖表檢視器。
+
+>[!VIDEO](https://video.tv.adobe.com/v/331030/?quality=12&learn=on)
 
 ## 快速入門
 
@@ -50,6 +52,20 @@ ht-degree: 0%
 在您選擇了命名空間後，請在&#x200B;**[!UICONTROL Identity value]**&#x200B;文本框中輸入其對應的特定客戶值，然後選擇&#x200B;**[!UICONTROL View]**。
 
 ![add-identity-value](../images/identity-graph-viewer/identity-value-filled.png)
+
+### 從資料集存取身分圖表檢視器
+
+您也可以使用資料集介面來存取身分圖表檢視器。 從資料集[!UICONTROL Browse]頁中，選擇要與之交互的資料集，然後選擇&#x200B;**[!UICONTROL Preview dataset]**
+
+![preview-dataset](../images/identity-graph-viewer/preview-dataset.png)
+
+從預覽視窗中，選取指紋圖示，以檢視透過身分圖表檢視器呈現的身分識別。
+
+>[!TIP]
+>
+>只有當資料集有兩個或兩個以上的身分時，才會出現指紋圖示。
+
+![指紋](../images/identity-graph-viewer/fingerprint.png)
 
 此時會出現識別圖形檢視器。 畫面的左側是識別圖，顯示連結至您選取之命名空間的所有身分識別以及您輸入的身分識別值。 每個身分節點都由命名空間及其對應的ID值組成。 您可以選取並保留任何身分，以拖曳圖形並與之互動。 或者，您可以將滑鼠指標暫留在身分上，以檢視其ID值的相關資訊。 圖形輸出也顯示為螢幕中央的表清單。
 
@@ -109,8 +125,9 @@ ht-degree: 0%
 
 閱讀本檔案後，您便瞭解如何在平台UI中探索客戶的身分圖。 有關平台中身份的詳細資訊，請參閱[Identity Service概述](../home.md)
 
-## 其他資源
+## 更改日誌
 
-以下影片旨在協助您瞭解身分圖表檢視器。
-
->[!VIDEO](https://video.tv.adobe.com/v/331030/?quality=12&learn=on)
+| Date | 動作 |
+| ---- | ------ |
+| 2021-01 | <ul><li>新增對串流內嵌資料和非生產沙盒的支援。</li><li>微幅錯誤修正。</li></ul> |
+| 2021-02 | <ul><li>身分圖表檢視器可透過資料集預覽存取。</li><li>微幅錯誤修正。</li><li>身分圖表檢視器已設為「一般可用」。</li></ul> |
