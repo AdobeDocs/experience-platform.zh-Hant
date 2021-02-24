@@ -1,9 +1,9 @@
 ---
 keywords: linkedin連接；linkedin連接；linkedin目的地；linkedin連接；
-title: LinkedIn符合的觀眾連線
+title: Linkedin符合的觀眾連線
 description: 根據雜湊的電子郵件，啟用您LinkedIn促銷活動的個人檔案，以鎖定受眾、個人化和抑制受眾。
 translation-type: tm+mt
-source-git-commit: d51de1ab4b2d4e91232166657466e597093f22ef
+source-git-commit: db2e5d51a5ed07b91997df8a566272c86a7c1708
 workflow-type: tm+mt
 source-wordcount: '564'
 ht-degree: 0%
