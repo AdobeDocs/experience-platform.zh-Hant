@@ -3,7 +3,7 @@ title: 搭配平台網頁SDK使用選件決策
 description: Adobe Experience Platform Web SDK可提供並轉譯選件決策中管理的個人化選件。 您可以使用選件決策UI或API來建立選件和其他相關物件。
 keywords: 選件決策；決策；Web SDK；平台Web SDK；個人化選件；傳遞選件；選件傳遞；選件個人化；
 translation-type: tm+mt
-source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
+source-git-commit: 0b9a92f006d1ec151a0bb11c10c607ea9362f729
 workflow-type: tm+mt
 source-wordcount: '849'
 ht-degree: 9%
@@ -81,7 +81,7 @@ Adobe Experience Platform [!DNL Web SDK]可提供並轉譯在選件決策中管�
    * Platform Launch已安裝SDK
       1. [建立平台啟動屬性](https://docs.adobe.com/content/help/zh-Hant/launch/using/reference/admin/companies-and-properties.html)
       2. [新增平台啟動內嵌代碼](https://docs.adobe.com/content/help/en/core-services-learn/implementing-in-websites-with-launch/configure-launch/launch-add-embed.html)
-      3. 從「Edge Configuration」（邊緣設定）下拉式清單中選取設定，以您剛建立的Edge Configuration（邊緣設定）來安裝和設定AEP Web SDK擴充功能。 關於[extensions](https://docs.adobe.com/content/help/en/launch/using/reference/manage-resources/extensions/overview.html)的實用文檔。
+      3. 從「Edge Configuration」（邊緣設定）下拉式清單中選取您剛建立的「Edge Configuration」（邊緣設定），安裝並設定平台網頁SDK擴充功能。 關於[extensions](https://docs.adobe.com/content/help/en/launch/using/reference/manage-resources/extensions/overview.html)的實用文檔。
          ![install-aep-web-sdk-extension](./assets/install-aep-web-sdk-extension.png)
 
          ![configure-aep-web-sdk-extension](./assets/configure-aep-web-sdk-extension.png)
