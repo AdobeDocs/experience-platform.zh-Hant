@@ -5,10 +5,10 @@ doc-type: release notes
 last-update: February 24, 2021
 author: ens70167
 translation-type: tm+mt
-source-git-commit: 9f7d7ae9c721d1ce7abf0dc7d3eaff18eed09d6f
+source-git-commit: 7142d13b144f34d92087affe101c5ccfcb52d90e
 workflow-type: tm+mt
-source-wordcount: '682'
-ht-degree: 8%
+source-wordcount: '770'
+ht-degree: 6%
 
 ---
 
@@ -19,12 +19,25 @@ ht-degree: 8%
 
 Adobe Experience Platform 現有功能更新：
 
-- [資料流](#dataflows)
-- [體驗資料模型(XDM)系統](#xdm)
-- [Identity 服務](#identity)
-- [來源](#sources)
+- [[!DNL Data Science Workspace]](#dsw)
+- [[!DNL Dataflows]](#dataflows)
+- [[!DNL Experience Data Model (XDM) System]](#xdm)
+- [[!DNL Identity Service]](#identity)
+- [[!DNL Sources]](#sources)
 
-## 資料流 {#dataflows}
+## [!DNL Data Science Workspace] {#dsw}
+
+Data Science Workspace使用機器學習和人工智慧，從您的資料中建立見解。 Data Science Workspace整合至Adobe Experience Platform，可協助您透過Adobe解決方案使用內容和資料資產進行預測。
+
+**新功能**
+
+| 功能 | 說明 |
+| --- | --- |
+| JupyterLab EDA筆記型電腦 | 探索性資料分析(EDA)Python筆記型電腦現已在Jupyterlab中提供。 本筆記型電腦旨在幫助您發現資料中的模式、檢查資料的健全性，並匯總預測模型的相關資料。 如需詳細資訊，請參閱[關於探索預測性模型的網路資料的教學課程](../../data-science-workspace/jupyterlab/eda-notebook.md)。 |
+
+有關Data Science Workspace的更多一般資訊，請參閱[Data Science Workspace概觀](../../data-science-workspace/home.md)。
+
+## [!DNL Dataflows] {#dataflows}
 
 在Adobe Experience Platform中，資料會從多種來源擷取，在Experience Platform中分析，並啟動至多種目的地。 平台提供資料流透明度，讓追蹤這種可能非線性的資料流程變得更輕鬆。
 
@@ -38,7 +51,7 @@ Adobe Experience Platform 現有功能更新：
 
 有關資料流的更多一般資訊，請參閱[資料流概述](../../dataflows/home.md)。
 
-## 體驗資料模型(XDM)系統{#xdm}
+## [!DNL Experience Data Model (XDM) System] {#xdm}
 
 標準化和互操作性是[!DNL Experience Platform]背後的關鍵概念。 [!DNL Experience Data Model] (XDM)是由Adobe推動，旨在標準化客戶體驗資料並定義客戶體驗管理的架構。
 
@@ -52,7 +65,7 @@ XDM是公開記載的規格，旨在改善數位體驗的強大功能。 它提�
 
 有關XDM的更多一般資訊，請參閱[XDM系統概述](../../xdm/home.md)。
 
-## Identity Service {#identity}
+## [!DNL Identity Service] {#identity}
 
 要提供相關的數位體驗，必須全面瞭解客戶。 當客戶資料分散在不同的系統上時，這會更加困難，導致每個客戶看起來都有多個「身分」。
 
@@ -66,7 +79,7 @@ Adobe Experience Platform [!DNL Identity Service]可跨裝置和系統橋接身�
 
 有關[!DNL Identity Service]的更多一般資訊，請參閱[Identity Service概述](../../identity-service/home.md)。
 
-## 來源 {#sources}
+## [!DNL Sources] {#sources}
 
 Adobe Experience Platform可以從外部來源擷取資料，同時允許您使用平台服務來建構、標示和增強該資料。 您可以從多種來源收集資料，例如Adobe應用程式、雲端儲存空間、協力廠商軟體和您的CRM系統。
 
