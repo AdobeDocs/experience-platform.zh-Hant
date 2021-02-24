@@ -2,13 +2,13 @@
 keywords: Experience Platform;home；熱門主題；串流；串流擷取；串流擷取驗證；驗證；串流擷取驗證；驗證；同步驗證；同步驗證；非同步驗證；非同步驗證；
 solution: Experience Platform
 title: 串流擷取驗證
-topic: tutorial
-type: Tutorial
+topic: 教學課程
+type: 教學課程
 description: 串流擷取可讓您使用即時串流端點，將資料上傳至Adobe Experience Platform。 串流擷取API支援同步和非同步兩種驗證模式。
 translation-type: tm+mt
-source-git-commit: 089a4d517476b614521d1db4718966e3ebb13064
+source-git-commit: 8f863eb3427097406237aa443262917fdc3f3e1c
 workflow-type: tm+mt
-source-wordcount: '875'
+source-wordcount: '898'
 ht-degree: 3%
 
 ---
@@ -47,12 +47,12 @@ ht-degree: 3%
 
 所有包含裝載(POST、PUT、PATCH)的請求都需要額外的標題：
 
-- 內容類型：`application/json`
+- Content-Type: `application/json`
 
 ### 驗證涵蓋範圍
 
 [!DNL Streaming Validation Service] 涵蓋下列方面的驗證：
-- 範圍
+- Range
 - Presence
 - Enum
 - 圖樣
@@ -66,6 +66,10 @@ ht-degree: 3%
 依預設，同步驗證不會開啟。 若要啟用它，您必須在進行API呼叫時傳入選用的查詢參數`synchronousValidation=true`。 此外，同步驗證目前僅在您的串流端點位於VA7資料中心時才可用。
 
 如果消息在同步驗證期間失敗，則不會將該消息寫入輸出隊列，從而為用戶提供立即反饋。
+
+>[!NOTE]
+>
+>由於會快取變更，因此架構變更可能無法立即使用。 最多需要15分鐘的時間刷新快取。
 
 **API格式**
 
