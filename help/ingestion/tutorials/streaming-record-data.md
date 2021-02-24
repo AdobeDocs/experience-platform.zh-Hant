@@ -2,13 +2,13 @@
 keywords: Experience Platform; home；熱門主題；串流擷取；擷取；記錄資料；串流記錄資料；
 solution: Experience Platform
 title: 使用串流擷取API來串流記錄資料
-topic: tutorial
-type: Tutorial
+topic: 教學課程
+type: 教學課程
 description: 本教學課程將協助您開始使用串流擷取API，這是Adobe Experience Platform Data Ingestion Service API的一部分。
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 27a7855492f2f8e7a92651cd97371c904dd1561d
 workflow-type: tm+mt
-source-wordcount: '1163'
+source-wordcount: '1165'
 ht-degree: 2%
 
 ---
@@ -264,7 +264,7 @@ curl -X POST https://platform.adobe.io/data/foundation/catalog/dataSets \
 ]
 ```
 
-## 將記錄資料內嵌至串流連線
+## 將記錄資料收錄到流連接{#ingest-data}
 
 有了資料集和串流連線，您就可以內嵌XDM格式的JSON記錄，將記錄資料內嵌至[!DNL Platform]。
 
