@@ -2,12 +2,12 @@
 keywords: Experience Platform;home；常用主題；namespace;Namespace;Namespace;Namespaces;Identity namespace;Identity namespace;Identity;Identity service;identity service
 solution: Experience Platform
 title: Identity Namespace概觀
-topic: overview
+topic: 概述
 description: '身分識別命名空間是 Identity Service 的元件，用途是作為身分識別相關內容的指標。例如，他們會將"name@email.com"值區分為電子郵件地址或"443522"作為數值CRM ID。 '
 translation-type: tm+mt
-source-git-commit: 73035aec86297cfc4ee9337cf922d599001379c3
+source-git-commit: fc493a207e305887e798238ba6883f4934c5cba5
 workflow-type: tm+mt
-source-wordcount: '1473'
+source-wordcount: '1474'
 ht-degree: 2%
 
 ---
@@ -23,13 +23,13 @@ ht-degree: 2%
 
 - [[!DNL Real-time Customer Profile]](../profile/home.md):根據來自多個來源的匯整資料，即時提供統一的客戶個人檔案。
 - [[!DNL Identity Service]](./home.md):跨裝置和系統橋接身分，以更全面地瞭解個別客戶及其行為。
-- [[!DNL Privacy Service]](../privacy-service/home.md):身分名稱空間用於遵守通用資料保護規則(GDPR)，在GDPR中可以相對於名稱空間提出請求。
+- [[!DNL Privacy Service]](../privacy-service/home.md):身分名稱空間用於遵守通用資料保護規則(GDPR)，在GDPR中，可以相對於名稱空間提出GDPR請求。
 
 ## 瞭解身分名稱空間
 
 完全限定身份包括ID值和命名空間。 當在描述檔片段間比對記錄資料時（如[!DNL Real-time Customer Profile]合併描述檔資料時），識別值和命名空間都必須相符。
 
-例如，兩個描述檔片段可能包含不同的主要ID，但是它們對&quot;Email&quot;命名空間有相同的值，因此[!DNL Platform]可以看到這些片段實際上是同一個個人，並將資料匯整在個人的識別圖中。
+例如，兩個描述檔片段可能包含不同的主要ID，但是它們對&quot;Email&quot;命名空間有相同的值，因此[!DNL Platform]可以看到這些片段實際上是同一個個體，並將資料匯整在個體的識別圖中。
 
 ![](images/identity-service-stitching.png)
 
@@ -84,7 +84,7 @@ Experience Platform提供數個可供所有組織使用的身分名稱空間。 
 
 ![](./images/browse-namespaces.png)
 
-## 管理自訂命名空間
+## 管理自訂命名空間{#manage-namespaces}
 
 根據您的組織資料和使用案例，您可能需要自訂命名空間。 可使用[[!DNL Identity Service]](./api/create-custom-namespace.md) API或透過UI建立自訂命名空間。
 
