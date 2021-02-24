@@ -3,10 +3,10 @@ title: Adobe Experience Platform Web SDK Extension發行說明
 description: Adobe Experience Platform Launch 中的 Adobe Experience Platform Web SDK 擴充功能
 seo-description: Adobe Experience Platform Launch 中的 Adobe Experience Platform Web SDK 擴充功能
 translation-type: tm+mt
-source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
+source-git-commit: 0b9a92f006d1ec151a0bb11c10c607ea9362f729
 workflow-type: tm+mt
-source-wordcount: '988'
-ht-degree: 94%
+source-wordcount: '990'
+ht-degree: 89%
 
 ---
 
@@ -33,7 +33,7 @@ ht-degree: 94%
 
 #### 錯誤修正
 
-* 客戶嘗試以沙盒結構描述建立 XDM 物件時，遇到驗證問題。呼叫 AEP 的 API 現在可感知環境，因此使用者只會看到他們有權編輯的結構描述。
+* 客戶嘗試以沙盒結構描述建立 XDM 物件時，遇到驗證問題。呼叫平台的API現在已知道環境，因此使用者只會看到有權編輯的架構。
 
 #### 功能
 
@@ -62,7 +62,7 @@ ht-degree: 94%
 * 支援在 `sendEvent` 動作中覆寫資料集 ID。
 * 新增全新的 `IdentityMap` 類型「資料元素」，可供在 XDM 物件資料元素 (現已啟用) 以及 `setConsent` 動作中填入 `identityMap` 項目。
 * 支援在 `setConsent` 動作中傳遞身分對應。
-* 支援在 XDM 物件資料元素中選擇 AEP 沙盒。
+* 支援在XDM物件資料元素中選擇平台沙盒。
 
 
 ## 2020 年 5 月 26 日
@@ -91,7 +91,7 @@ ht-degree: 94%
 * 修正每次參考資料元素時，「事件合併 ID」都會重設的問題。
 * 將 `setCustomerIds` 動作重新命名為 `syncIdentity`。
 * 新增 `getIdentity` 命令。目前僅能透過自訂程式碼使用。
-* 透過 `_satellite` 啟用除錯功能後，現在會在 AEP Web SDK 中啟用除錯功能。
+* 使用`_satellite`啟用除錯\&#39;b5\&#39;7b在可在Adobe Experience Platform Web SDK中啟用除錯\&#39;a5\&#39;5c能。
 * 新增在 XDM 物件中輸入值的相關支援：布林值、數字和小數。
 
 ## 2020 年 3 月 16 日
@@ -168,7 +168,7 @@ ht-degree: 94%
 * 擴充功能突然出現
 * ECID 支援，不需額外程式庫或網路呼叫
 * 選擇加入支援
-* 支援將 XDM 傳送至 AEP
+* 支援將XDM傳送至平台
 * 第一方網域支援
 * 自動收集瀏覽器內容
 * 完全開放原始碼 ([擴充功能](https://github.com/adobe/reactor-extension-alloy)、[SDK](https://github.com/adobe/reactor-extension-alloy))
