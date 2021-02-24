@@ -1,58 +1,83 @@
 ---
 title: Adobe Experience Platform 發行說明
-description: Experience Platform發行說明2021年1月27日
+description: 2021年2月24日的Experience Platform發行說明。
 doc-type: release notes
-last-update: January 27, 2021
-author: ens60013
+last-update: February 24, 2021
+author: ens70167
 translation-type: tm+mt
-source-git-commit: 2e3a6acbfaa7f733a9843068c00f31f0b7f535b6
+source-git-commit: d3151d9ccaf61e6ec1a88e147f3694292e953de0
 workflow-type: tm+mt
-source-wordcount: '651'
-ht-degree: 5%
+source-wordcount: '770'
+ht-degree: 6%
 
 ---
 
 
 # Adobe Experience Platform 發行說明
 
-**發行日期：2021 年 1 月 27 日**
+**發行日期：2021 年 2 月 24 日**
 
 Adobe Experience Platform 現有功能更新：
 
-- [[!DNL Data Prep]](#data-prep)
-- [[!DNL Destinations]](#destinations)
+- [[!DNL Data Science Workspace]](#dsw)
+- [[!DNL Dataflows]](#dataflows)
+- [[!DNL Experience Data Model (XDM) System]](#xdm)
+- [[!DNL Identity Service]](#identity)
 - [[!DNL Sources]](#sources)
-- [[!DNL Experience Platform Launch Server Side]](#launch)
 
-## [!DNL Data Prep] {#data-prep}
+## [!DNL Data Science Workspace] {#dsw}
 
-[!DNL Data Prep] 可讓資料工程師將資料對應、轉換及驗證資料與Experience Data Model(XDM)。
-
-**新功能**
-
-| 功能 | 說明 |
-| ------- | ----------- |
-| 規則運算式函式 | [!DNL Data Prep] 映射器現在支援基於規則運算式匹配和提取部分輸入欄位。 |
-
-如需詳細資訊，請參閱[[!DNL Data Prep] overview](../../data-prep/home.md)。
-
-## 目的地 {#destinations}
-
-[!DNL Destinations] 是與目標平台預先建立的整合，可讓您順暢地從Adobe Experience Platform啟動資料。您可以使用目的地來啟用跨通道行銷宣傳、電子郵件宣傳、目標廣告和許多其他使用案例的已知和未知資料。
-
-**新目標**
-
-| 目的地 | 說明 |
-| ----------- | ----------- |
-| [!DNL Azure Blob] | [!DNL Azure Blob] 是Microsoft的雲端物件儲存解決方案。 |
+Data Science Workspace使用機器學習和人工智慧，從您的資料中建立見解。 Data Science Workspace整合至Adobe Experience Platform，可協助您透過Adobe解決方案使用內容和資料資產進行預測。
 
 **新功能**
 
 | 功能 | 說明 |
-| ------- | ----------- |
-| 進階ID符合 | 對[!DNL Facebook Custom Audiences]和[!DNL Google Customer Match]中的受眾比對率功能的增強功能，新增了對其他身分比對的支援，例如外部ID、電話號碼和行動裝置ID。 如需詳細資訊，請參閱下列檔案： <ul><li>[Facebook目的地](../../destinations/catalog/social/facebook.md)</li><li>[Google客戶符合目的地](../../destinations/catalog/advertising/google-customer-match.md)</li><li>[將描述檔和區段啟用至目標](../../destinations/ui/activate-destinations.md)</li></ul> |
+| --- | --- |
+| JupyterLab EDA筆記型電腦 | 探索性資料分析(EDA)Python筆記型電腦現已在Jupyterlab中提供。 本筆記型電腦旨在幫助您發現資料中的模式、檢查資料的健全性，並匯總預測模型的相關資料。 如需詳細資訊，請參閱[關於探索預測性模型的網路資料的教學課程](../../data-science-workspace/jupyterlab/eda-notebook.md)。 |
 
-若要進一步瞭解，請造訪[目標概觀](../../destinations/home.md)。
+有關Data Science Workspace的更多一般資訊，請參閱[Data Science Workspace概觀](../../data-science-workspace/home.md)。
+
+## [!DNL Dataflows] {#dataflows}
+
+在Adobe Experience Platform中，資料會從多種來源擷取，在Experience Platform中分析，並啟動至多種目的地。 平台提供資料流透明度，讓追蹤這種可能非線性的資料流程變得更輕鬆。
+
+資料流能呈現資料處理作業在 Platform 上移動資料的情形。這些資料流是跨不同的服務配置的，有助於將資料從源連接器移動到目標資料集，然後[!DNL Identity Service]和[!DNL Real-time Customer Profile]將其用於目標資料集，最終激活到[!DNL Destinations]。
+
+**新功能**
+
+| 功能 | 說明 |
+| --- | --- |
+| 新的監控控制面板 | 您現在可以使用監控控制面板來提供跨服務的透明度，以及來源資料擷取的可執行見解。 新的監控控制面板提供從[!DNL Data Lake]到[!DNL Identity Service]和[!DNL Profile]所處理的資料的完整檢視，同時也可讓您監控擷取率、成功和失敗。 有關詳細資訊，請參閱UI](../../dataflows/ui/monitor-sources.md)中有關[監視源資料流的教程。 |
+
+有關資料流的更多一般資訊，請參閱[資料流概述](../../dataflows/home.md)。
+
+## [!DNL Experience Data Model (XDM) System] {#xdm}
+
+標準化和互操作性是[!DNL Experience Platform]背後的關鍵概念。 [!DNL Experience Data Model] (XDM)是由Adobe推動，旨在標準化客戶體驗資料並定義客戶體驗管理的架構。
+
+XDM是公開記載的規格，旨在改善數位體驗的強大功能。 它提供任何應用程式的通用結構和定義，以便與Adobe Experience Platform上的服務通訊。 遵循XDM標準，所有客戶體驗資料都可整合在以更快速、更整合的方式提供見解的通用表現形式中。 您可以從客戶行動中獲得寶貴見解，透過細分定義客戶受眾，並將客戶屬性用於個人化目的。
+
+**新功能**
+
+| 功能 | 說明 |
+| --- | --- |
+| 升級搜尋UI | [!UICONTROL 方案]工作區的[!UICONTROL 瀏覽]標籤和[!DNL Schema Editor]的混合選擇對話方塊中現在提供改進的搜尋功能。<br><br>在先前搜尋詞語時，結果只會包含名稱與搜尋查詢相符的XDM資源。現在，除了名稱與查詢相符的資源外，還會包含包含符合詞語之個別屬性的資源。 這可讓您根據XDM資源包含的屬性來搜尋XDM資源，而非依據資源名稱。<br><br>如需詳細資訊，請 [參閱UI中](../../xdm/ui/explore.md) 的XDM資 [源和](../../xdm/ui/resources/schemas.md) 管理架構的相關檔案。 |
+
+有關XDM的更多一般資訊，請參閱[XDM系統概述](../../xdm/home.md)。
+
+## [!DNL Identity Service] {#identity}
+
+要提供相關的數位體驗，必須全面瞭解客戶。 當客戶資料分散在不同的系統上時，這會更加困難，導致每個客戶看起來都有多個「身分」。
+
+Adobe Experience Platform [!DNL Identity Service]可跨裝置和系統橋接身分，協助您更全面地瞭解客戶及其行為，讓您即時提供具影響力的個人化數位體驗。
+
+**新功能**
+
+| 功能 | 說明 |
+| --- | --- |
+| 身分圖表檢視器 | 身分圖形檢視器可讓您驗證並視覺化UI中銜接的身分識別，進而改善除錯和透明度。 如需詳細資訊，請參閱[識別圖檢視器檔案](../../identity-service/ui/identity-graph-viewer.md)。 |
+
+有關[!DNL Identity Service]的更多一般資訊，請參閱[Identity Service概述](../../identity-service/home.md)。
 
 ## [!DNL Sources] {#sources}
 
@@ -60,27 +85,11 @@ Adobe Experience Platform可以從外部來源擷取資料，同時允許您使�
 
 Experience Platform提供REST風格的API和互動式UI，讓您輕鬆為各種資料提供者設定來源連線。 這些源連接允許您驗證並連接到外部儲存系統和CRM服務、設定接收運行的時間，以及管理資料接收吞吐量。
 
-**新功能**
+**新來源**
 
 | 功能 | 說明 |
-| ------- | ----------- |
-| Adobe Audience Manager來源連接器增強功能 | 您現在可以從Audience Manager篩選並選取個別的第一方區段，以便將其內嵌至平台，並篩選掉第一方特徵。 如需詳細資訊，請參閱[建立Audience Manager來源連接器](../../sources/tutorials/ui/create/adobe-applications/audience-manager.md)的教學課程。 |
-| [!DNL Google BigQuery] 來源連接器增強功能 | 您現在可以使用[!DNL BigQuery]來源連接器，在單一流程執行中內嵌大於10GB的檔案。 如需詳細資訊，請參閱[[!DNL BigQuery] 來源連接器概觀](../../sources/connectors/databases/bigquery.md)。 |
-| 支援雲端儲存空間的複雜資料類型 | 您現在可以在使用雲端儲存來源連接器時，內嵌複雜的資料類型，例如JSON檔案中的陣列。 如需詳細資訊，請參閱UI](../../sources/tutorials/ui/dataflow/batch/cloud-storage.md)或[中有關使用 [!DNL Flow Service] API](../../sources/tutorials/api/collect/cloud-storage.md)建立雲端儲存資料流[的教學課程。 |
-| 支援[!DNL Microsoft Dynamics]源的基於服務主體密鑰的身份驗證 | 您現在可以使用服務主體密鑰來驗證您的[!DNL Dynamics]帳戶，以替代基於密碼的驗證。 如需詳細資訊，請參閱[[!DNL Dynamics] 來源連接器概觀](../../sources/connectors/crm/ms-dynamics.md)。 |
-| 雲端儲存來源中自訂分隔符的UI支援 | 您現在可以設定自訂欄分隔字元，例如逗號(`,`)、制表符(`\t`)或管道(`|`)，以收集UI的分隔檔案。 如需詳細資訊，請參閱[使用雲端儲存來源連接器建立資料流的教學課程。](../../sources/tutorials/ui/dataflow/batch/cloud-storage.md) |
+| --- | --- |
+| [!DNL Google PubSub] | 您現在可以使用[!DNL Flow Service] API或UI將[!DNL Google PubSub]連線至[!DNL Experience Platform]。 如需詳細資訊，請參閱[[!DNL Google PubSub] 連接器概觀](../../sources/connectors/cloud-storage/google-pubsub.md)。 |
+| [!DNL Oracle Object Storage] | 您現在可以使用[!DNL Flow Service] API或UI將[!DNL Oracle Object Storage]連線至[!DNL Experience Platform]。 如需詳細資訊，請參閱[[!DNL Oracle Object Storage] 連接器概觀](../../sources/connectors/cloud-storage/oracle-object-storage.md)。 |
 
-若要進一步瞭解來源，請參閱[來源概觀](../../sources/home.md)。
-
-## [!DNL Experience Platform Launch Server Side] {#launch}
-
-Adobe Experience Platform Launch Server Side使用Adobe Experience Platform Edge Network執行通常在用戶端上完成的工作，以降低網頁和應用程式的重量。 平台啟動伺服器端規則可轉換資料並傳送至新目的地，而不需變更用戶端實作。
-
-Platform Launch Server Side與Adobe Experience Platform Web和Mobile SDK結合，可讓您：
-
-- 從包含資料裝載的頁面進行單一呼叫，然後將此資料伺服器端聯合，以減少用戶端網路流量，並為客戶提供更快速的體驗。
-- 降低網頁載入所需的時間，讓您的網站符合業界最佳效能實務。
-- 提高透明度，並控制在所有用戶端屬性之間傳送哪些類型的資料。
-- 建立伺服器端規則，將先前追蹤的資料傳送至新目標。
-
-如需詳細資訊，請參閱[平台啟動檔案](https://experienceleague.adobe.com/docs/launch/using/server-side-info/server-side-overview.html?lang=en)。
+有關來源的更多一般資訊，請參閱[來源概述](../../sources/home.md)。
