@@ -3,7 +3,7 @@ keywords: facebook連接；facebook連接；facebook目標；facebook;instagram;
 title: Facebook連線
 description: 根據雜湊的電子郵件，啟用您Facebook宣傳的個人檔案，以鎖定受眾、個人化和抑制受眾。
 translation-type: tm+mt
-source-git-commit: 8b7befd9775654a2d55d28a64b4b104e7f9576aa
+source-git-commit: 28cfac3d7fed311d9eec01ef464cf921f44a10e9
 workflow-type: tm+mt
 source-wordcount: '1001'
 ht-degree: 3%
@@ -86,7 +86,7 @@ ht-degree: 3%
 
 您可以選擇先對電子郵件地址進行雜湊處理，然後再將它們匯入Adobe Experience Platform，或者選擇在Experience Platform中清楚處理電子郵件地址，並讓我們的演算法在啟動時對它們進行雜湊處理。
 
-若要瞭解如何在Experience Platform中擷取電子郵件地址，請參閱[批次擷取概觀](/help/ingestion/batch-ingestion/overview.md)和[蒸發擷取概觀](/help/ingestion/streaming-ingestion/overview.md)。
+若要瞭解如何在Experience Platform中擷取電子郵件地址，請參閱[批次擷取概觀](/help/ingestion/batch-ingestion/overview.md)和[串流擷取概觀](/help/ingestion/streaming-ingestion/overview.md)。
 
 如果您選擇自行排列電子郵件地址，請務必符合下列要求：
 
