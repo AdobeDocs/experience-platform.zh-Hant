@@ -3,9 +3,9 @@ title: 使用Adobe Experience Platform Web SDK整合IAB TCF 2.0支援
 description: 瞭解如何在不使用Adobe Experience Platform Launch的情況下，為您的網站設定IAB TCF 2.0支援。
 seo-description: 瞭解如何透過Adobe Experience Platform Web SDK設定IAB TCF 2.0同意
 translation-type: tm+mt
-source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
+source-git-commit: 0b9a92f006d1ec151a0bb11c10c607ea9362f729
 workflow-type: tm+mt
-source-wordcount: '683'
+source-wordcount: '685'
 ht-degree: 0%
 
 ---
@@ -23,7 +23,7 @@ ht-degree: 0%
 >
 >這些範例假設在執行程式碼時，會在頁面上定義`window.__tcfapi`。 CMP可提供掛接，在`__tcfapi`對象就緒時，您可在其中運行這些函式。
 
-若要搭配使用IAB TCF 2.0和Experience Platform Launch和AEP Web SDK擴充功能，您必須有可用的XDM架構。 如果您未設定其中任一設定，請先檢視此頁面，再繼續。
+若要搭配使用IAB TCF 2.0和Experience Platform Launch和Adobe Experience Platform Web SDK擴充功能，您必須有可用的XDM架構。 如果您未設定其中任一設定，請先檢視此頁面，再繼續。
 
 此外，本指南要求您對Adobe Experience Platform Web SDK有良好的認識。 如需快速進階，請閱讀[Adobe Experience Platform Web SDK總覽](../../home.md)和[常見問題](../../web-sdk-faq.md)檔案。
 
@@ -109,4 +109,4 @@ window.__tcfapi('getTCData', 2, function (tcData, success) {
 
 ## 後續步驟
 
-現在您已學會如何搭配使用AEP Web SDK擴充功能的IAB TCF 2.0，您也可以選擇與其他Adobe解決方案整合，例如Adobe Analytics或即時客戶資料平台。 如需詳細資訊，請參閱[IAB透明與同意框架2.0概觀](./overview.md)。
+現在您已學會如何搭配Platform Web SDK擴充功能使用IAB TCF 2.0，您也可以選擇與其他Adobe解決方案（例如Adobe Analytics或即時客戶資料平台）整合。 如需詳細資訊，請參閱[IAB透明與同意框架2.0概觀](./overview.md)。
