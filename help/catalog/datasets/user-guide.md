@@ -2,12 +2,12 @@
 keywords: Experience Platform;home；熱門主題；enable dataset;Dataset;dataset
 solution: Experience Platform
 title: 資料集UI指南
-topic: datasets
+topic: 資料集
 description: 瞭解如何在Adobe Experience Platform使用者介面中處理資料集時執行常見動作。
 translation-type: tm+mt
-source-git-commit: 2b8c08dad34bcd69368c00050323835f05379c82
+source-git-commit: fc493a207e305887e798238ba6883f4934c5cba5
 workflow-type: tm+mt
-source-wordcount: '1140'
+source-wordcount: '1141'
 ht-degree: 0%
 
 ---
@@ -30,7 +30,7 @@ ht-degree: 0%
 
 ## 檢視資料集
 
-在[!DNL Experience Platform] UI中，按一下左側導覽中的&#x200B;**[!UICONTROL Dataces]**&#x200B;以開啟&#x200B;**[!UICONTROL Dataces]**&#x200B;控制面板。 控制面板會列出您組織的所有可用資料集。 會針對每個列出的資料集顯示詳細資訊，包括其名稱、資料集所遵守的架構，以及最近擷取執行的狀態。
+在[!DNL Experience Platform] UI中，按一下左側導覽中的&#x200B;**[!UICONTROL Dataces]**，以開啟&#x200B;**[!UICONTROL Dataces]**&#x200B;控制面板。 控制面板會列出您組織的所有可用資料集。 會針對每個列出的資料集顯示詳細資訊，包括其名稱、資料集所遵守的架構，以及最近擷取執行的狀態。
 
 ![](../images/datasets/user-guide/browse_datasets.png)
 
@@ -97,7 +97,7 @@ ht-degree: 0%
 
 ![](../images/datasets/user-guide/add_csv_data.png)
 
-## 為即時客戶個人檔案啟用資料集
+## 啟用即時客戶個人資料資料集{#enable-profile}
 
 每個資料集都能運用其收錄的資料豐富客戶個人檔案。 若要這麼做，資料集所遵循的架構必須相容，才能用於[!DNL Real-time Customer Profile]。 相容的架構符合下列需求：
 
