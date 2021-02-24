@@ -5,10 +5,10 @@ user-guide-title: 目的地指南
 user-guide-description: 針對跨通路行銷活動、電子郵件宣傳、鎖定特定目標的行銷活動和其他諸多使用案例，啟用已知和未知的資料。
 description: 本檔案列出Adobe Experience Platform目標的目錄
 translation-type: tm+mt
-source-git-commit: 2efdefc69c937c70f6a463113a73ca71d8998e14
+source-git-commit: 2ee4014de1eb5c02ee2b554bb543d2bee5854922
 workflow-type: tm+mt
-source-wordcount: '451'
-ht-degree: 11%
+source-wordcount: '455'
+ht-degree: 10%
 
 ---
 
@@ -117,6 +117,7 @@ ht-degree: 11%
       * [建立社交網路目的地](./catalog/social/workflow.md)
       * [Adobe Livefyre擴充功能](./catalog/social/adobe-livefyre.md)
       * [Facebook連線](./catalog/social/facebook.md)
+      * [LinkedIn符合的觀眾連線](./catalog/social/linkedin.md)
    * 調查目標{#survey}
       * [調查目標概觀](./catalog/survey/overview.md)
       * [Foresee extension destion](./catalog/survey/foresee.md)
