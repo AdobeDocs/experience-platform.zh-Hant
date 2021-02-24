@@ -2,10 +2,10 @@
 title: Adobe Experience Platform Web SDK 擴充功能 概述
 description: 瞭解Adobe Experience Platform Web SDK Extension for Adobe Experience Platform Launch
 translation-type: tm+mt
-source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
+source-git-commit: 0b9a92f006d1ec151a0bb11c10c607ea9362f729
 workflow-type: tm+mt
-source-wordcount: '645'
-ht-degree: 55%
+source-wordcount: '640'
+ht-degree: 53%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 55%
 
 Adobe Experience Platform Web SDK Extension會透過Adobe Experience Platform Edge Network，從Web屬性將資料傳送至Adobe Experience Cloud。 Adobe Experience Platform Web SDK 擴充功能可將資料串流至平台、同步身分資料、啟用加入宣告功能，並自動收集內容資料。
 
-## 設定 AEP Web SDK 擴充功能
+## 設定擴充功能
 
 本節提供設定 Adobe Experience Platform Web SDK 擴充功能時可用選項的參考資料。
 
@@ -47,11 +47,11 @@ Adobe Experience Platform Web SDK擴充功能支援頁面上的多個例項。 �
 
 ### **[!UICONTROL 啟用選擇加入]**
 
-如果&#x200B;**[!UICONTROL 啟用選擇加入]**&#x200B;已啟用，AEP Web SDK擴充功能可保留點擊，直到收到選擇加入為止。 此擴充功能會顯示設定加入宣告偏好設定的動作。
+如果啟用「啟用選擇加入」，擴充功能可保留點擊，直到收到選擇加入為止。 ****&#x200B;此擴充功能會顯示設定加入宣告偏好設定的動作。
 
 ### **[!UICONTROL 啟用移轉ECID]**
 
-AEP Web SDK 擴充功能會使用新的 Cookie 來儲存 ECID。此設定可讓新 Cookie 與舊 Cookie 相容，以利移轉。Adobe 強烈建議您啟用此設定，除非您沒有具 ECID 的現有訪客，則另當別論。
+平台網頁SDK擴充功能使用新Cookie來儲存ECID。 此設定可讓新 Cookie 與舊 Cookie 相容，以利移轉。Adobe 強烈建議您啟用此設定，除非您沒有具 ECID 的現有訪客，則另當別論。
 
 ### **[!UICONTROL 使用第三方Cookie]**
 
