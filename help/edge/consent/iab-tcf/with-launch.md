@@ -2,9 +2,9 @@
 title: 使用Platform Launch和Platform Web SDK Extension整合IAB TCF 2.0支援
 description: 瞭解如何透過Adobe Experience Platform Launch和Adobe Experience Platform Web SDK擴充功能設定IAB TCF 2.0同意。
 translation-type: tm+mt
-source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
+source-git-commit: 0b9a92f006d1ec151a0bb11c10c607ea9362f729
 workflow-type: tm+mt
-source-wordcount: '832'
+source-wordcount: '834'
 ht-degree: 0%
 
 ---
@@ -12,13 +12,13 @@ ht-degree: 0%
 
 # 使用Platform Launch和Platform Web SDK擴充功能整合IAB TCF 2.0支援
 
-Adobe Experience Platform Web SDK支援Interactive Advertising Bureau透明度與同意框架2.0版(IAB TCF 2.0)。 本指南說明如何設定Adobe Experience Platform Launch屬性，以便使用Experience Platform Launch的AEP Web SDK擴充功能，將IAB TCF 2.0同意資訊傳送給Adobe。
+Adobe Experience Platform Web SDK支援Interactive Advertising Bureau透明度與同意框架2.0版(IAB TCF 2.0)。 本指南說明如何設定Adobe Experience Platform Launch屬性，以便使用Experience Platform Launch的Adobe Experience Platform Web SDK擴充功能，將IAB TCF 2.0同意資訊傳送給Adobe。
 
 如果您不想使用Experience Platform Launch，請參閱[使用IAB TCF 2.0而不使用Experience Platform Launch](./without-launch.md)的指南。
 
 ## 快速入門
 
-若要搭配使用IAB TCF 2.0和Experience Platform Launch和AEP Web SDK擴充功能，您需要有可用的XDM架構和資料集。
+若要搭配Experience Platform Launch和Platform Web SDK擴充功能使用IAB TCF 2.0，您必須有可用的XDM架構和資料集。
 
 此外，本指南要求您對Adobe Experience Platform Web SDK有良好的認識。 如需快速進階，請閱讀[Adobe Experience Platform Web SDK總覽](../../home.md)和[常見問題](../../web-sdk-faq.md)檔案。
 
@@ -120,7 +120,7 @@ addEventListener();
 
 此程式碼與先前的自訂程式碼相同，但`useractioncomplete`和`tcloaded`事件皆已處理。 [先前的自訂代碼](#consent-code-1)只會在客戶第一次選擇偏好設定時觸發。 當客戶已選擇其偏好設定時，也會觸發此程式碼。 例如，在第二頁載入時。
 
-從AEP Web SDK擴充功能新增「傳送事件」動作。 在「XDM」欄位中，選擇您在上一節中建立的XDM資料元素。
+從平台網頁SDK擴充功能新增「傳送事件」動作。 在「XDM」欄位中，選擇您在上一節中建立的XDM資料元素。
 
 ## 以IAB TCF 2.0許可資訊發送其他事件
 
@@ -128,4 +128,4 @@ addEventListener();
 
 ## 後續步驟
 
-現在您已學會如何搭配使用AEP Web SDK擴充功能的IAB TCF 2.0，您也可以選擇與其他Adobe解決方案整合，例如Adobe Analytics或即時客戶資料平台。 如需詳細資訊，請參閱[IAB透明與同意框架2.0概觀](./overview.md)。
+現在您已學會如何搭配Platform Web SDK擴充功能使用IAB TCF 2.0，您也可以選擇與其他Adobe解決方案（例如Adobe Analytics或即時客戶資料平台）整合。 如需詳細資訊，請參閱[IAB透明與同意框架2.0概觀](./overview.md)。
