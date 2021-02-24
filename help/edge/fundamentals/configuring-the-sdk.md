@@ -4,9 +4,9 @@ description: 瞭解如何設定Adobe Experience Platform Web SDK。
 seo-description: 瞭解如何設定Experience Platform Web SDK
 keywords: configure;configuration;SDK;edge;Web SDK;configure;edgeConfigId;context;web;device;placeContext;debugEnabled;edgeDomain;orgId;clickCollectionEnabled;onBeforeEventSend;defaultConowensen;web sd設定；prehiningStyle；不透明；cookieDesing;webet;e;web sd;e;e;en;ed;emen;up;en;usen;up;usen;ured;ure;usen;urlEnabled;en;used;urlEnabled;ed;ed;ed;urlEn;en;ed;ed;un;ed;un;um;un;urlDestinationsEnabled;idMigrationEnabled;thirdPartyCookiesEnabled;
 translation-type: tm+mt
-source-git-commit: 85bb984231a3069aad0c63707f5024612181798c
+source-git-commit: 0b9a92f006d1ec151a0bb11c10c607ea9362f729
 workflow-type: tm+mt
-source-wordcount: '741'
+source-wordcount: '743'
 ht-degree: 11%
 
 ---
@@ -147,7 +147,7 @@ alloy("configure", {
 | -------- | ------------ | ----------------- |
 | 布林值 | 無 | true |
 
-如果為true,SDK將讀取並設定舊的AMCV Cookie。 這有助於轉換至使用Adobe Experience Platform Web SDK，而網站的某些部分可能仍在使用Visitor.js。 此外，如果頁面上已定義訪客API,SDK將查詢訪客API以取得ECID。 這可讓您使用AEP Web SDK來建立雙標籤頁面，而且仍有相同的ECID。
+如果為true,SDK將讀取並設定舊的AMCV Cookie。 這有助於轉換至使用Adobe Experience Platform Web SDK，而網站的某些部分可能仍在使用Visitor.js。 此外，如果頁面上已定義訪客API,SDK將查詢訪客API以取得ECID。 這可讓您使用Adobe Experience Platform Web SDK將頁面加上雙標籤，而且仍有相同的ECID。
 
 ### `thirdPartyCookiesEnabled`
 
