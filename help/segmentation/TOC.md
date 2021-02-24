@@ -5,10 +5,10 @@ user-guide-title: Adobe Experience Platform Segmentation Service
 breadcrumb-title: 分段服務指南
 user-guide-description: 從您的即時客戶設定檔資料建立區段並產生對象。
 translation-type: tm+mt
-source-git-commit: b37cf48b839ac30026162d2224528d8aabd3d263
+source-git-commit: fc493a207e305887e798238ba6883f4934c5cba5
 workflow-type: tm+mt
-source-wordcount: '152'
-ht-degree: 22%
+source-wordcount: '157'
+ht-degree: 21%
 
 ---
 
@@ -56,6 +56,7 @@ ht-degree: 22%
    - [建立動態區段（視訊）](video/create-a-dynamic-segment.md)
    - [建立多實體區段（視訊）](video/create-multi-entity-segments.md)
    - [評估區段](tutorials/evaluate-a-segment.md)
+   - [匯入和使用外部觀眾](tutorials/using-external-audiences.md)
    - [建立資料集以匯出資料](tutorials/create-dataset-export-segment.md)
    - [強制區段的資料使用符合性](tutorials/governance.md)
 - [API 參考資料](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/segmentation.yaml)
