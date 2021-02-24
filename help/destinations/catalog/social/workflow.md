@@ -1,12 +1,12 @@
 ---
 keywords: Facebook;facebook；社交網路；社交網路；社交網路；社交網路驗證；社交網路驗證
 title: 建立社交網路目的地
-type: Tutorial
+type: 教學課程
 description: 瞭解如何在Adobe Experience Platform中連線至您的社交網路廣告帳戶。
 translation-type: tm+mt
-source-git-commit: 6e7ecfdc0b2cbf6f07e6b2220ec163289511375e
+source-git-commit: 19e38faa84d365682e97c2ec1c6352d127c0ac29
 workflow-type: tm+mt
-source-wordcount: '455'
+source-wordcount: '460'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # 建立社交網路目標{#social-network-destinations-workflow}
 
-本教學課程以[!DNL Facebook]為例，但Adobe Experience Platform中的工作流程對於所有社交網路目的地而言都會相同，只要再新增至產品即可。
+本教學課程以[!DNL Facebook]為例，但Adobe Experience Platform工作流程對於所有社交網路目的地都是相同的。
 
 在&#x200B;**[!UICONTROL 目標]** > **[!UICONTROL 目錄]**&#x200B;中，捲動至&#x200B;**[!UICONTROL Social]**&#x200B;類別。 選擇您偏好的社交網路目的地，然後選擇&#x200B;**[!UICONTROL Configure]**。
 
@@ -38,16 +38,19 @@ ht-degree: 0%
 
 在&#x200B;**[!UICONTROL Setup]**&#x200B;步驟中，輸入啟動流程的[!UICONTROL Name]和[!UICONTROL Description]，並填寫社交網路廣告帳戶的[!UICONTROL Account ID]。
 
-此外，在此步驟中，您也可以選取任何應套用至此目的地的&#x200B;**[!UICONTROL 行銷動作]**。 行銷動作會指出將資料匯出至目的地的方式。 您可以從Adobe定義的行銷動作中選擇，也可以建立自己的行銷動作。 如需行銷動作的詳細資訊，請參閱[資料使用政策概述](../../../data-governance/policies/overview.md)。
+>[!IMPORTANT]
+>
+> 對於[!DNL Facebook]目標，**[!UICONTROL 帳戶ID]**&#x200B;是您的[!DNL Facebook Ad Account ID]。 您可以在[!DNL Facebook Ads Manager]中找到此ID。 將ID前置詞為`act_`，如下所示：
 
-在填寫上述欄位後，選擇「建立目標」。****
+![連線至社交網路目的地——設定步驟](../../assets/catalog/social/workflow/setup.png)
 
 >[!IMPORTANT]
 >
-> * 對於[!DNL Facebook]目標。 **[!UICONTROL 帳戶]** ID是您的 [!DNL Facebook Ad Account ID]。您可以在[!DNL Facebook Ads Manager]中找到此ID。 將ID前置詞為`act_`，如下所示：
+> 對於[!DNL LinkedIn]目標，**[!UICONTROL 帳戶ID]**&#x200B;是您的[!DNL LinkedIn Campaign Manager Account ID]。 您可以在[!DNL LinkedIn Campaign Manager]中找到此ID。
 
+此外，在此步驟中，您也可以選取任何應套用至此目的地的&#x200B;**[!UICONTROL 行銷動作]**。 行銷動作會指出將資料匯出至目的地的方式。 您可以從Adobe定義的行銷動作中選擇，也可以建立自己的行銷動作。 如需行銷動作的詳細資訊，請參閱[資料使用政策概述](../../../data-governance/policies/overview.md)。
 
-![連線至社交網路目的地——設定步驟](../../assets/catalog/social/workflow/setup.png)
+在填寫上述欄位後，選擇「建立目標」。****
 
 您的目標現在已建立。 如果您想稍後啟動區段，可以選取&#x200B;**[!UICONTROL 儲存並退出]**，或選取&#x200B;**[!UICONTROL Next]**&#x200B;以繼續工作流程並選取要啟動的區段。 在這兩種情況下，請參閱工作流程的下一節[啟用社交網路的區段](#activate-segments)。
 
