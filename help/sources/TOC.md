@@ -5,9 +5,9 @@ user-guide-title: Adobe Experience Platform 來源連接器說明
 breadcrumb-title: 來源連接器指南
 user-guide-description: 從多種來源或結構擷取資料、加標籤，以及增強已擷取的資料。
 translation-type: tm+mt
-source-git-commit: 0e4fda4abf5c02df81b74f15d2fbcafb68548070
+source-git-commit: f3b27fbe75af7499f4ce43d8904d2f7e01384cb3
 workflow-type: tm+mt
-source-wordcount: '572'
+source-wordcount: '574'
 ht-degree: 12%
 
 ---
@@ -22,15 +22,15 @@ ht-degree: 12%
       - [Analytics資料連接器](connectors/adobe-applications/analytics.md)
       - [Audience Manager連接器](connectors/adobe-applications/audience-manager.md)
       - [客戶屬性連接器](connectors/adobe-applications/customer-attributes.md)
-      - Adobe應用程式欄位對應{#mapping}
+      - Adobe應用程式欄位映射{#mapping}
          - [Analytics欄位對應](connectors/adobe-applications/mapping/analytics.md)
-         - [Audience Manager欄位對應](connectors/adobe-applications/mapping/audience-manager.md)
+         - [Audience Manager欄位映射](connectors/adobe-applications/mapping/audience-manager.md)
          - [目標欄位映射](connectors/adobe-applications/mapping/target.md)
    - 廣告 {#advertising}
       - [Google AdWords連接器](connectors/advertising/ads.md)
    - 雲端儲存空間{#cloud-storage}
-      - [Amazon Kinesis連接器](connectors/cloud-storage/kinesis.md)
-      - [Amazon S3連接器](connectors/cloud-storage/s3.md)
+      - [AmazonKinesis連接器](connectors/cloud-storage/kinesis.md)
+      - [AmazonS3連接器](connectors/cloud-storage/s3.md)
       - [Apache HDFS連接器](connectors/cloud-storage/hdfs.md)
       - [Azure Data Lake Storage Gen2連接器](connectors/cloud-storage/adls-gen2.md)
       - [Azure Blob連接器](connectors/cloud-storage/blob.md)
@@ -39,9 +39,9 @@ ht-degree: 12%
       - [FTP連接器](connectors/cloud-storage/ftp.md)
       - [Google雲端儲存空間連接器](connectors/cloud-storage/google-cloud-storage.md)
       - [Google PubSub](connectors/cloud-storage/google-pubsub.md)
-      - [Oracle對象儲存](connectors/cloud-storage/oracle-object-storage.md)
+      - [Oracle物件儲存](connectors/cloud-storage/oracle-object-storage.md)
       - [SFTP連接器](connectors/cloud-storage/sftp.md)
-      - [Amazon S3和Azure Blob連接器](connectors/cloud-storage/blob-s3.md)
+      - [AmazonS3和Azure Blob連接器](connectors/cloud-storage/blob-s3.md)
    - CRM {#crm}
       - [Microsoft Dynamics 連接器](connectors/crm/ms-dynamics.md)
       - [Salesforce連接器](connectors/crm/salesforce.md)
@@ -49,11 +49,11 @@ ht-degree: 12%
       - [Salesforce Service Cloud連接器](connectors/customer-success/salesforce-service-cloud.md)
       - [ServiceNow連接器](connectors/customer-success/servicenow.md)
    - 資料庫{#databases}
-      - [Amazon Redshift連接器](connectors/databases/redshift.md)
+      - [Amazon紅移連接器](connectors/databases/redshift.md)
       - [Apache Hive on Azure HDInsights連接器](connectors/databases/hive.md)
       - [Apache Spark on Azure HDInsights連接器](connectors/databases/spark.md)
-      - [Azure資料總管連接器](connectors/databases/data-explorer.md)
-      - [Azure Synapse Analytics連接器](connectors/databases/synapse-analytics.md)
+      - [AzureData Explorer連接器](connectors/databases/data-explorer.md)
+      - [azure synapse分析連接器](connectors/databases/synapse-analytics.md)
       - [Azure表格儲存連接器](connectors/databases/ats.md)
       - [Couchbase連接器](connectors/databases/couchbase.md)
       - [Google BigQuery連接器](connectors/databases/bigquery.md)
@@ -78,7 +78,7 @@ ht-degree: 12%
       - 廣告 {#advertising}
          - [Google AdWords](tutorials/api/create/advertising/ads.md)
       - 雲端儲存空間{#cloud-storage}
-         - [Amazon Kinesis](tutorials/api/create/cloud-storage/kinesis.md)
+         - [AmazonKinesis](tutorials/api/create/cloud-storage/kinesis.md)
          - [Amazon S3](tutorials/api/create/cloud-storage/s3.md)
          - [Apache HDFS](tutorials/api/create/cloud-storage/hdfs.md)
          - [Azure Blob](tutorials/api/create/cloud-storage/blob.md)
@@ -88,7 +88,7 @@ ht-degree: 12%
          - [FTP](tutorials/api/create/cloud-storage/ftp.md)
          - [Google雲端儲存空間](tutorials/api/create/cloud-storage/google.md)
          - [Google PubSub](tutorials/api/create/cloud-storage/google-pubsub.md)
-         - [Oracle對象儲存](tutorials/api/create/cloud-storage/oracle-object-storage.md)
+         - [Oracle物件儲存](tutorials/api/create/cloud-storage/oracle-object-storage.md)
          - [SFTP](tutorials/api/create/cloud-storage/sftp.md)
       - CRM {#crm}
          - [Microsoft Dynamics](tutorials/api/create/crm/ms-dynamics.md)
@@ -100,8 +100,8 @@ ht-degree: 12%
          - [Amazon Redshift](tutorials/api/create/databases/redshift.md)
          - [Apache Hive on Azure HDInsights](tutorials/api/create/databases/hive.md)
          - [Apache Spark on Azure HDInsights](tutorials/api/create/databases/spark.md)
-         - [Azure資料總管](tutorials/api/create/databases/data-explorer.md)
-         - [Azure突觸分析](tutorials/api/create/databases/synapse-analytics.md)
+         - [AzureData Explorer](tutorials/api/create/databases/data-explorer.md)
+         - [azure synapse分析](tutorials/api/create/databases/synapse-analytics.md)
          - [Azure表格儲存](tutorials/api/create/databases/ats.md)
          - [庫克巴塞](tutorials/api/create/databases/couchbase.md)
          - [Google BigQuery](tutorials/api/create/databases/bigquery.md)
@@ -148,6 +148,7 @@ ht-degree: 12%
    - [建立資料集連線](tutorials/api/create-dataset-base-connection.md)
    - [監視資料流](tutorials/api/monitor.md)
    - [更新連線](tutorials/api/update.md)
+   - [更新資料流](tutorials/api/update-dataflows.md)
    - [刪除連線](tutorials/api/delete.md)
    - [刪除資料流](tutorials/api/delete-dataflows.md)
 - UI教學課程{#ui-tutorials}
@@ -160,8 +161,8 @@ ht-degree: 12%
       - 廣告 {#create}
          - [Google AdWords](tutorials/ui/create/advertising/ads.md)
       - 雲端儲存空間{#cloud-storage}
-         - [Amazon Kinesis](tutorials/ui/create/cloud-storage/kinesis.md)
-         - [Amazon S3](tutorials/ui/create/cloud-storage/s3.md)
+         - [AmazonKinesis](tutorials/ui/create/cloud-storage/kinesis.md)
+         - [AmazonS3](tutorials/ui/create/cloud-storage/s3.md)
          - [Apache HDFS](tutorials/ui/create/cloud-storage/hdfs.md)
          - [Azure Data Lake Storage Gen2](tutorials/ui/create/cloud-storage/adls-gen2.md)
          - [Azure Blob](tutorials/ui/create/cloud-storage/blob.md)
@@ -170,9 +171,9 @@ ht-degree: 12%
          - [FTP](tutorials/ui/create/cloud-storage/ftp.md)
          - [Google雲端儲存空間](tutorials/ui/create/cloud-storage/google-cloud-storage.md)
          - [Google PubSub](tutorials/ui/create/cloud-storage/google-pubsub.md)
-         - [Oracle對象儲存](tutorials/ui/create/cloud-storage/oracle-object-storage.md)
+         - [Oracle物件儲存](tutorials/ui/create/cloud-storage/oracle-object-storage.md)
          - [SFTP](tutorials/ui/create/cloud-storage/sftp.md)
-         - [Amazon S3和Blob](tutorials/ui/create/cloud-storage/blob-s3.md)
+         - [AmazonS3和blob](tutorials/ui/create/cloud-storage/blob-s3.md)
       - CRM {#crm}
          - [Microsoft Dynamics](tutorials/ui/create/crm/dynamics.md)
          - [Salesforce](tutorials/ui/create/crm/salesforce.md)
@@ -180,11 +181,11 @@ ht-degree: 12%
          - [Salesforce Service Cloud](tutorials/ui/create/customer-success/salesforce-service-cloud.md)
          - [ServiceNow](tutorials/ui/create/customer-success/servicenow.md)
       - 資料庫{#databases}
-         - [Amazon Redshift](tutorials/ui/create/databases/redshift.md)
+         - [Amazon紅移](tutorials/ui/create/databases/redshift.md)
          - [Apache Hive on Azure HDInsights](tutorials/ui/create/databases/hive.md)
          - [Apache Spark on Azure HDInsights](tutorials/ui/create/databases/spark.md)
-         - [Azure資料總管](tutorials/ui/create/databases/data-explorer.md)
-         - [Azure突觸分析](tutorials/ui/create/databases/synapse-analytics.md)
+         - [AzureData Explorer](tutorials/ui/create/databases/data-explorer.md)
+         - [azure synapse分析](tutorials/ui/create/databases/synapse-analytics.md)
          - [Azure表格儲存](tutorials/ui/create/databases/ats.md)
          - [庫克巴塞](tutorials/ui/create/databases/couchbase.md)
          - [Google Big Query](tutorials/ui/create/databases/bigquery.md)
