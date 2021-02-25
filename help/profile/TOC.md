@@ -4,10 +4,10 @@ audience: user
 user-guide-title: 即時客戶設定檔指南
 user-guide-description: 合併客戶資料，以建立跨通道客戶互動的統一檢視。
 translation-type: tm+mt
-source-git-commit: cab7ba65cc62d8cab402bc23ea38c17d77841363
+source-git-commit: 08eff53f107549fab0f167a6c206b632f3c8c183
 workflow-type: tm+mt
-source-wordcount: '111'
-ht-degree: 20%
+source-wordcount: '122'
+ht-degree: 19%
 
 ---
 
@@ -20,7 +20,6 @@ ht-degree: 20%
 * [!DNL Profile] API {#api}
    * [概述](api/overview.md)
    * [快速入門](api/getting-started.md)
-   * [(Alpha)計算屬性](api/computed-attributes.md)
    * [邊緣投影](api/edge-projections.md)
    * [實體([!DNL Profile] 存取)](api/entities.md)
    * [匯出工作([!DNL Profile] 匯出)](api/export-jobs.md)
@@ -35,6 +34,11 @@ ht-degree: 20%
    * [建立合併原則（視訊）](video/create-merge-policies.md)
    * [聯合架構UI指南](ui/union-schema.md)
    * [聯合架構概觀（視訊）](video/union-schemas-overview.md)
+* (Alpha)計算屬性{#computed-attributes}
+   * [概述](computed-attributes/overview.md)
+   * [計算屬性API](computed-attributes/ca-api.md)
+   * [配置計算屬性欄位](computed-attributes/configure-api.md)
+   * [範例運算式](computed-attributes/expressions.md)
 * 教學課程 {#tutorials}
    * [新增資料至 [!DNL Profile]](tutorials/add-profile-data.md)
    * [為服務配置數 [!DNL Profile] & [!DNL Identity] 據集](tutorials/dataset-configuration.md)
