@@ -5,10 +5,10 @@ doc-type: release notes
 last-update: January 27, 2021
 author: ens60013
 translation-type: tm+mt
-source-git-commit: 2e3a6acbfaa7f733a9843068c00f31f0b7f535b6
+source-git-commit: 18712835b2408b24cd2735b19c94bf1b1fe50df1
 workflow-type: tm+mt
-source-wordcount: '490'
-ht-degree: 7%
+source-wordcount: '712'
+ht-degree: 6%
 
 ---
 
@@ -21,6 +21,7 @@ Adobe Experience Platform 現有功能更新：
 
 - [[!DNL Data Prep]](#data-prep)
 - [[!DNL Destinations]](#destinations)
+- [[!DNL Real-time Customer Profile]](#profile)
 - [[!DNL Sources]](#sources)
 
 ## [!DNL Data Prep] {#data-prep}
@@ -49,9 +50,22 @@ Adobe Experience Platform 現有功能更新：
 
 | 功能 | 說明 |
 | ------- | ----------- |
-| 進階ID符合 | 對[!DNL Facebook Custom Audiences]和[!DNL Google Customer Match]中的受眾比對率功能的增強功能，新增了對其他身分比對的支援，例如外部ID、電話號碼和行動裝置ID。 如需詳細資訊，請參閱下列檔案： <ul><li>[Facebook目的地](../../destinations/catalog/social/facebook.md)</li><li>[Google客戶符合目的地](../../destinations/catalog/advertising/google-customer-match.md)</li><li>[將描述檔和區段啟用至目標](../../destinations/ui/activate-destinations.md)</li></ul> |
+| 進階ID符合 | 對[!DNL Facebook Custom Audiences]和[!DNL Google Customer Match]中的受眾比對率功能的增強，新增了對其他身分比對的支援，例如外部ID、電話號碼和行動裝置ID。 如需詳細資訊，請參閱下列檔案： <ul><li>[Facebook目的地](../../destinations/catalog/social/facebook.md)</li><li>[Google客戶符合目的地](../../destinations/catalog/advertising/google-customer-match.md)</li><li>[將描述檔和區段啟用至目標](../../destinations/ui/activate-destinations.md)</li></ul> |
 
 若要進一步瞭解，請造訪[目標概觀](../../destinations/home.md)。
+
+## 即時客戶個人檔案 {#profile}
+
+Adobe Experience Platform可讓您為客戶推動協調、一致且相關的體驗，不論客戶在何處或何時與您的品牌互動。 透過即時客戶個人檔案，您可以全面瞭解每個客戶，並結合來自多個通道的資料，包括線上、離線、CRM和第三方資料。 [!DNL Profile] 可讓您將客戶資料整合到統一的檢視中，提供每個客戶互動的可操作、時間戳記帳戶。
+
+**新功能**
+
+| 功能 | 說明 |
+| ------- | ----------- |
+| 從描述檔儲存區刪除資料集 | 當您從Experience Platform Data Lake刪除資料集時，資料集也會自動從Profile儲存區刪除。 您不再需要使用描述檔系統工作API端點來提出刪除要求，以明確地從描述檔存放區刪除資料集。 如需詳細資訊，請參閱[描述檔系統作業API端點指南](../../profile/api/profile-system-jobs.md)。 |
+| 指定區段的估計ID命名空間計數 | 針對估計的描述檔計數，預覽API現在會報告：<ul><li>指定命名空間的區段中估計描述檔總計數。</li><li>指定命名空間的「描述檔結合架構」中估計描述檔的總計數。</li></ul>如需詳細資訊，請參閱[描述檔預覽API端點指南](../../profile/api/preview-sample-status.md)。 |
+
+有關即時客戶基本資料的更多資訊，包括使用[!DNL Profile]資料的教學課程和最佳實務，請先閱讀[即時客戶基本資料概觀](../../profile/home.md)。
 
 ## [!DNL Sources] {#sources}
 
