@@ -5,10 +5,10 @@ doc-type: release notes
 last-update: February 24, 2021
 author: ens70167
 translation-type: tm+mt
-source-git-commit: 7142d13b144f34d92087affe101c5ccfcb52d90e
+source-git-commit: a2470d44512821996a2d5ee44722cb24990d1054
 workflow-type: tm+mt
-source-wordcount: '770'
-ht-degree: 6%
+source-wordcount: '1069'
+ht-degree: 7%
 
 ---
 
@@ -17,13 +17,28 @@ ht-degree: 6%
 
 **發行日期：2021 年 2 月 24 日**
 
+Adobe Experience Platform的新功能：
+
+- [（測試版）控制面板](#dashboards)
+
 Adobe Experience Platform 現有功能更新：
 
 - [[!DNL Data Science Workspace]](#dsw)
 - [[!DNL Dataflows]](#dataflows)
 - [[!DNL Experience Data Model (XDM) System]](#xdm)
 - [[!DNL Identity Service]](#identity)
+- [[!DNL Real-time Customer Profile]](#profile)
 - [[!DNL Sources]](#sources)
+
+## （測試版）控制面板{#dashboards}
+
+Adobe Experience Platform提供多種儀表板，您可透過這些儀表板檢視有關組織資料的重要資訊，如每日快照時所擷取的資訊。
+
+**新功能**
+
+| 功能 | 說明 |
+| --- | --- |
+| 設定檔、區段、目的地和授權使用資料板（測試版） | **注意：儀表板功能目前處於測試階段，並非所有使用者都能使用。文件和功能可能會有所變更。**<br/><br/>&#x200B;儀表板可提供組織資料的現成報告功能，並直接內建在平台的行銷人員工作流程中。這些儀表板可供使用，而不需額外的IT支援，也不需花費時間和精力來匯出和處理資料，並提供額外的資料倉儲設計和實施。 |
 
 ## [!DNL Data Science Workspace] {#dsw}
 
@@ -78,6 +93,18 @@ Adobe Experience Platform [!DNL Identity Service]可跨裝置和系統橋接身�
 | 身分圖表檢視器 | 身分圖形檢視器可讓您驗證並視覺化UI中銜接的身分識別，進而改善除錯和透明度。 如需詳細資訊，請參閱[識別圖檢視器檔案](../../identity-service/ui/identity-graph-viewer.md)。 |
 
 有關[!DNL Identity Service]的更多一般資訊，請參閱[Identity Service概述](../../identity-service/home.md)。
+
+## 即時客戶個人檔案 {#profile}
+
+Adobe Experience Platform可讓您為客戶推動協調、一致且相關的體驗，不論客戶在何處或何時與您的品牌互動。 透過即時客戶個人檔案，您可以全面瞭解每個客戶，並結合來自多個通道的資料，包括線上、離線、CRM和第三方資料。 [!DNL Profile] 可讓您將客戶資料整合到統一的檢視中，提供每個客戶互動的可操作、時間戳記帳戶。
+
+**新功能**
+
+| 功能 | 說明 |
+| ------- | ----------- |
+| 計算屬性(Alpha) | ***注意：此功能目前為alpha版，並非所有使用者都能使用。文件和功能可能會有所變更。*** <br/><br/>計算屬性是用於將事件級別資料聚合到配置檔案級別屬性的函式。然後，您就可以在細分、啟動和個人化中使用匯總。 這些函式的一些示例包括計數、總和、平均、最小、最大、真／假。 計算屬性目前僅透過API提供。 有關詳細資訊，請參閱[計算屬性概述](../../profile/computed-attributes/overview.md)。 |
+
+有關即時客戶基本資料的更多資訊，包括使用[!DNL Profile]資料的教學課程和最佳實務，請先閱讀[即時客戶基本資料概觀](../../profile/home.md)。
 
 ## [!DNL Sources] {#sources}
 
