@@ -5,7 +5,7 @@ topic: 指南
 type: 文件
 description: 在Adobe Experience Platform中，計算屬性是用來將事件層級資料匯整為描述檔層級屬性的函式。 這些函式會自動計算，以便跨區段、啟動和個人化使用。 本指南說明如何使用即時客戶描述檔API來建立、檢視、更新和刪除計算的屬性。
 translation-type: tm+mt
-source-git-commit: 6ae96ab25bd7992fe93d15bfc16b58a2fe7b4b7c
+source-git-commit: 4ed2b80ebfd87f8920462ae0a918b01bb13d4210
 workflow-type: tm+mt
 source-wordcount: '2279'
 ht-degree: 2%
@@ -96,7 +96,7 @@ curl -X POST \
     "id": "2afcf410-450e-4a39-984d-2de99ab58877",
     "imsOrgId": "{IMS_ORG}",
     "sandbox": {
-        "sandboxId": "ff0f6870-c46d-11e9-8ca3-036939a64204",
+        "sandboxId": "{SANDBOX_ID}",
         "sandboxName": "prod",
         "type": "production",
         "default": true
