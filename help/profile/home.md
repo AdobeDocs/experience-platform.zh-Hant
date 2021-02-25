@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API;unified profile;Unified Profile;Profile;rtcp;XDM圖
 title: 即時客戶個人檔案概觀
-topic: guide
-description: 即時客戶描述檔是一般查閱實體儲存，可合併來自各種企業資料資產的資料，然後以個別客戶描述檔和相關時間系列事件的形式提供對該資料的存取。 此功能可讓行銷人員跨多個通道，推動與受眾之間協調、一致且相關的體驗。
+topic: 指南
+description: 即時客戶描述檔是一般查閱實體儲存，可合併來自各種企業資料資產的資料，然後以個別客戶描述檔和相關時間系列事件的形式提供對該資料的存取。 此功能可讓行銷人員跨多個通道，推動與受眾的協調、一致且相關的體驗。
 translation-type: tm+mt
-source-git-commit: e6ecc5dac1d09c7906aa7c7e01139aa194ed662b
+source-git-commit: 08eff53f107549fab0f167a6c206b632f3c8c183
 workflow-type: tm+mt
-source-wordcount: '1883'
-ht-degree: 1%
+source-wordcount: '1825'
+ht-degree: 0%
 
 ---
 
@@ -24,7 +24,7 @@ Experience Platform中即時客戶個人檔案與其他服務之間的關係在�
 
 ## 瞭解個人檔案
 
-[!DNL Real-time Customer Profile] 合併來自各種企業系統的資料，然後以客戶個人檔案的形式與相關的時間序列事件來存取該資料。此功能可讓行銷人員跨多個通道，推動與受眾之間協調、一致且相關的體驗。 以下幾節重點說明您必須瞭解的一些核心概念，以便在Platform中有效建立和維護個人檔案。
+[!DNL Real-time Customer Profile] 合併來自各種企業系統的資料，然後以客戶個人檔案的形式與相關的時間序列事件來存取該資料。此功能可讓行銷人員跨多個通道，推動與受眾的協調、一致且相關的體驗。 以下幾節重點說明您必須瞭解的一些核心概念，以便在Platform中有效建立和維護個人檔案。
 
 ### 描述檔資料儲存
 
@@ -36,11 +36,11 @@ Profile Store使用Microsoft Azure Cosmos DB基礎架構，Platform Data Lake使
 
 Experience Platform提供一系列的防護欄，可協助您避免建立「即時客戶個人檔案」無法支援的[Experience Data Model(XDM)結構](../xdm/home.md)。 這包括會導致效能降低的軟限制，以及導致錯誤和系統中斷的硬限制。 如需詳細資訊，包括准則清單和範例使用案例，請閱讀[描述檔護欄](guardrails.md)檔案。
 
-### (Alpha)描述檔控制面板{#profile-dashboard}
+### （測試版）設定檔控制面板{#profile-dashboard}
 
 >[!IMPORTANT]
 >
->控制面板功能目前為alpha版，並非所有使用者都能使用。 文件和功能可能會有所變更。
+>控制面板功能目前處於測試階段，並非所有使用者都能使用。 文件和功能可能會有所變更。
 
 Experience Platform UI提供儀表板，您可以透過儀表板檢視有關即時客戶個人檔案資料的重要資訊，如每日快照中所擷取。 若要瞭解如何存取和使用UI中的[!DNL Profile]控制面板，以及控制面板中顯示的度量的詳細資訊，請參閱[描述檔控制面板UI指南](ui/profile-dashboard.md)。
 
@@ -78,9 +78,9 @@ Experience Platform UI提供儀表板，您可以透過儀表板檢視有關即�
 
 >[!IMPORTANT]
 >
->計算的屬性功能為alpha。 文件和功能可能會有所變更。
+>計算的屬性功能為alpha。 說明檔案和功能可能會有所變更。
 
-計算屬性可讓您根據其他值、計算和運算式自動計算欄位的值。 計算屬性在描述檔層級上運作，這表示您可以匯總所有記錄和事件的值。 每個計算屬性都包含一個運算式（或「規則」），可評估傳入的資料，並將產生的值儲存在描述檔屬性或事件中。 這些計算可協助您輕鬆回答與期限購買值、購買間隔時間或應用程式開啟次數等相關的問題，而不需在每次需要資訊時手動執行複雜的計算。 有關使用[!DNL Real-time Customer Profile] API處理計算屬性的詳細資訊和逐步說明，請參閱[計算屬性端點指南](api/computed-attributes.md)。 本指南將協助您進一步瞭解Adobe Experience Platform中計算屬性的角色，並包含執行基本CRUD作業的範例API呼叫。
+計算屬性是用於將事件級別資料聚合到配置檔案級別屬性的函式。 這些函式會自動計算，以便跨區段、啟動和個人化使用。 這些計算可協助您輕鬆回答與期限購買值、購買間隔時間或應用程式開啟次數等相關的問題，而不需在每次需要資訊時手動執行複雜的計算。 有關計算屬性的詳細資訊，包括瞭解Adobe Experience Platform中計算屬性的角色，請先閱讀[計算屬性概述](computed-attributes/overview.md)開始。
 
 ## 描述檔和區段
 
@@ -92,7 +92,7 @@ Adobe Experience Platform [!DNL Segmentation Service]可產生為個別客戶提
 
 ## 邊緣投影
 
-為即時跨多個通道為客戶提供協調、一致且個人化的體驗，需要隨時提供適當的資料，並在變更時持續更新。 Adobe Experience Platform可讓您透過使用所謂的邊緣，即時存取資料。 邊緣是地理位置優越的伺服器，可儲存資料，讓應用程式可輕鬆存取。 例如，Adobe Target和Adobe Campaign等Adobe應用程式會利用優勢，即時提供個人化客戶體驗。 資料通過投影被路由到邊，投影目的地定義資料要發送到的邊，投影配置定義將在邊上提供的特定資訊。 若要進一步瞭解並開始使用[!DNL Real-time Customer Profile] API處理投影，請參閱[邊緣投影端點指南](api/edge-projections.md)。
+為即時跨多個通道為客戶提供協調、一致且個人化的體驗，需要隨時提供適當的資料，並在變更時持續更新。 Adobe Experience Platform可讓您透過使用所謂的邊緣，即時存取資料。 邊緣是地理位置的伺服器，可儲存資料，讓應用程式可輕鬆存取。 例如，Adobe Target和Adobe Campaign等Adobe應用程式會利用優勢，即時提供個人化客戶體驗。 資料通過投影被路由到邊，投影目的地定義資料要發送到的邊，投影配置定義將在邊上提供的特定資訊。 若要進一步瞭解並開始使用[!DNL Real-time Customer Profile] API處理投影，請參閱[邊緣投影端點指南](api/edge-projections.md)。
 
 ## 將資料收錄到[!DNL Profile]
 
