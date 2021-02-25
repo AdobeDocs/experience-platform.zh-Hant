@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API;unified profile;Unified Profile;unified;Profile;rtcp;enable profile；啟用profile；啟用profile
 title: 即時客戶個人檔案API指南
-topic: guide
+topic: 指南
 description: 即時客戶描述檔API可讓開發人員探索和使用描述檔資料，包括檢視描述檔、建立和更新合併原則、匯出或取樣描述檔資料，以及刪除不再需要或錯誤新增的描述檔資料。 請依照本指南，瞭解如何使用API執行關鍵作業。
 translation-type: tm+mt
-source-git-commit: e649ab3da077cdd8e98562199b8bdece6108a572
+source-git-commit: 24a5af0440f58b4e1db639ec971c4e1611f107d8
 workflow-type: tm+mt
-source-wordcount: '870'
+source-wordcount: '895'
 ht-degree: 0%
 
 ---
@@ -28,11 +28,15 @@ ht-degree: 0%
 >
 >計算屬性功能為alpha，並非所有使用者皆可使用。 檔案和功能可能會有所變更。
 
-計算屬性可讓您根據其他值、計算和運算式自動計算欄位的值。 計算屬性在描述檔層級上運作，這表示您可以匯總所有記錄和事件的值。 每個計算屬性都包含一個運算式（或「規則」），可評估傳入的資料，並將產生的值儲存在描述檔屬性或事件中。 這些計算可協助您輕鬆回答與期限購買值、購買間隔時間或應用程式開啟次數等相關的問題，而不需在每次需要資訊時手動執行複雜的計算。 可以使用`config/computedAttributes`端點建立、查看、編輯和刪除計算屬性。 要瞭解如何使用此端點，請訪問[計算屬性端點指南](computed-attributes.md)。
+計算屬性是用於將事件級別資料聚合到配置檔案級別屬性的函式。 這些函式會自動計算，以便跨區段、啟動和個人化使用。
+
+每個計算屬性都包含一個運算式（或「規則」），可評估傳入的資料並將產生的值儲存在描述檔屬性中。 這些計算可協助您輕鬆回答與期限購買值、購買間隔時間或應用程式開啟次數等相關的問題，而不需在每次需要資訊時手動執行複雜的計算。 然後，這些計算的屬性值可以在描述檔中檢視、用於建立區段，或透過許多不同的存取模式存取。
+
+可以使用`config/computedAttributes`端點建立、查看、編輯和刪除計算屬性。 要瞭解如何使用計算屬性，請參閱[計算屬性概述](../computed-attributes/overview.md)。 有關API操作，請訪問[計算屬性API端點指南](../computed-attributes/ca-api.md)。
 
 ## 邊緣投影{#edge-projections}
 
-Adobe Experience Platform讓資料可輕鬆地在戰略性位置的伺服器（稱為「邊緣」）上存取，讓客戶體驗即時個人化。 [!DNL Real-time Customer Profile] API提供端點，以透過稱為「投影」的元件處理邊緣。 這包括確定應將哪些資料投影到每個邊的投影配置，以及定義投影路由位置的投影目標。 如需使用邊緣投影的詳細資訊，請造訪[投影組態和目標端點指南](edge-projections.md)。
+Adobe Experience Platform讓資料可輕鬆在戰略性位置的伺服器（稱為「邊緣」）上存取，讓客戶體驗即時個人化。 [!DNL Real-time Customer Profile] API提供端點，以透過稱為「投影」的元件處理邊緣。 這包括確定應將哪些資料投影到每個邊的投影配置，以及定義投影路由位置的投影目標。 如需使用邊緣投影的詳細資訊，請造訪[投影組態和目標端點指南](edge-projections.md)。
 
 ## 實體（[!DNL Profile]訪問）{#entities}
 
