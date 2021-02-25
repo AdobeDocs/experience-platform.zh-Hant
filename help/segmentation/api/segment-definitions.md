@@ -2,12 +2,12 @@
 keywords: Experience Platform;home；熱門主題；分段；分段；分段服務；分段定義；分段定義；api;API;
 solution: Experience Platform
 title: 區段定義API端點
-topic: developer guide
+topic: 開發人員指南
 description: Adobe Experience Platform Segmentation Service API中的區段定義端點可讓您以程式設計方式管理組織的區段定義。
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 24a5af0440f58b4e1db639ec971c4e1611f107d8
 workflow-type: tm+mt
-source-wordcount: '1080'
+source-wordcount: '1124'
 ht-degree: 3%
 
 ---
@@ -29,7 +29,7 @@ Adobe Experience Platform可讓您建立區段，從一組描述檔定義一組�
 
 **API格式**
 
-`/segment/definitions`端點支援數個查詢參數，以協助篩選結果。 雖然這些參數是可選的，但強烈建議使用它們，以幫助降低昂貴的開銷。 在沒有參數的情況下呼叫此端點將會擷取組織所有可用的區段定義。 可以包括多個參數，用&amp;符號(`&`)分隔。
+`/segment/definitions`端點支援數個查詢參數，以協助篩選結果。 雖然這些參數是可選的，但強烈建議使用這些參數以幫助降低昂貴的開銷。 在沒有參數的情況下呼叫此端點將會擷取組織所有可用的區段定義。 可以包括多個參數，用&amp;符號(`&`)分隔。
 
 ```http
 GET /segment/definitions
@@ -60,7 +60,7 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/definitions?limit=2 
 
 **回應**
 
-成功的回應會傳回HTTP狀態200，其中包含指定IMS組織的區段定義清單，如JSON。
+成功的回應會傳回HTTP狀態200，其中包含指定IMS組織的區段定義清單為JSON。
 
 ```json
 {
@@ -194,9 +194,15 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/definitions
 | `schema` | **必填。** 與區段中的實體關聯的架構。包含`id`或`name`欄位。 |
 | `expression` | **必填。** 包含區段定義之欄位資訊的實體。 |
 | `expression.type` | 指定表達式類型。 目前僅支援「PQL」。 |
-| `expression.format` | 指示值中表達式的結構。 目前支援下列格式： <ul><li>`pql/text`:根據發佈的PQL語法對段定義的文本表示。例如：`workAddress.stateProvince = homeAddress.stateProvince`。</li></ul> |
+| `expression.format` | 指示值中表達式的結構。 目前支援下列格式： <ul><li>`pql/text`:根據發佈的PQL語法對段定義的文本表示。例如 `workAddress.stateProvince = homeAddress.stateProvince`。</li></ul> |
 | `expression.value` | 符合`expression.format`中指示類型的表達式。 |
 | `description` | 定義的人類可讀描述。 |
+
+>[!NOTE]
+>
+>段定義表達式也可以引用計算的屬性。 若要瞭解更多資訊，請參閱[計算屬性API端點指南](../../profile/computed-attributes/ca-api.md)
+>
+>計算屬性功能為alpha，並非所有使用者皆可使用。 檔案和功能可能會有所變更。
 
 **回應**
 
@@ -246,7 +252,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/definitions
 
 | 屬性 | 說明 |
 | -------- | ----------- |
-| `id` | 新建立之區段定義的系統產生ID。 |
+| `id` | 系統產生的新建區段定義的ID。 |
 | `evaluationInfo` | 系統產生的物件，可告知區段定義將進行何種評估。 它可以是批次、連續（也稱為串流）或同步分段。 |
 
 ## 檢索特定段定義{#get}
@@ -326,7 +332,7 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/definitions/4afe34ae
 | `schema` | 與區段中的實體關聯的架構。 包含`id`或`name`欄位。 |
 | `expression` | 包含區段定義之欄位資訊的實體。 |
 | `expression.type` | 指定表達式類型。 目前僅支援「PQL」。 |
-| `expression.format` | 指示值中表達式的結構。 目前支援下列格式： <ul><li>`pql/text`:根據發佈的PQL語法對段定義的文本表示。例如：`workAddress.stateProvince = homeAddress.stateProvince`。</li></ul> |
+| `expression.format` | 指示值中表達式的結構。 目前支援下列格式： <ul><li>`pql/text`:根據發佈的PQL語法對段定義的文本表示。例如 `workAddress.stateProvince = homeAddress.stateProvince`。</li></ul> |
 | `expression.value` | 符合`expression.format`中指示類型的表達式。 |
 | `description` | 定義的人類可讀描述。 |
 | `evaluationInfo` | 系統產生的物件，會告訴區段定義將會經歷何種評估、批次、連續（也稱為串流）或同步。 |
@@ -459,7 +465,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/definitions/bulk-ge
 | `schema` | 與區段中的實體關聯的架構。 包含`id`或`name`欄位。 |
 | `expression` | 包含區段定義之欄位資訊的實體。 |
 | `expression.type` | 指定表達式類型。 目前僅支援「PQL」。 |
-| `expression.format` | 指示值中表達式的結構。 目前支援下列格式： <ul><li>`pql/text`:根據發佈的PQL語法對段定義的文本表示。例如：`workAddress.stateProvince = homeAddress.stateProvince`。</li></ul> |
+| `expression.format` | 指示值中表達式的結構。 目前支援下列格式： <ul><li>`pql/text`:根據發佈的PQL語法對段定義的文本表示。例如 `workAddress.stateProvince = homeAddress.stateProvince`。</li></ul> |
 | `expression.value` | 符合`expression.format`中指示類型的表達式。 |
 | `description` | 定義的人類可讀描述。 |
 | `evaluationInfo` | 系統產生的物件，會告訴區段定義將會經歷何種評估、批次、連續（也稱為串流）或同步。 |
