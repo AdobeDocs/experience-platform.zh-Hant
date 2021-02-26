@@ -5,9 +5,9 @@ doc-type: release notes
 last-update: February 24, 2021
 author: ens70167
 translation-type: tm+mt
-source-git-commit: 2eea954217a8f0cca605cd0435bace59200cacda
+source-git-commit: efa06bec5af65240fdd586da4fd0439b8d1146b8
 workflow-type: tm+mt
-source-wordcount: '1126'
+source-wordcount: '1137'
 ht-degree: 7%
 
 ---
@@ -76,6 +76,8 @@ Data Science Workspace使用機器學習和人工智慧，從您的資料中建�
 | 目的地 | 說明 |
 | ----------- | ----------- |
 | [[!DNL LinkedIn Matched Audiences]](destinations/catalog/social/linkedin.md) | [!DNL LinkedIn Matched Audiences]連線可讓您在[!DNL LinkedIn]社交平台中啟用觀眾。 |
+
+有關目標的更多一般資訊，請參閱[目標概述](../../destinations/home.md)。
 
 ## [!DNL Experience Data Model (XDM) System] {#xdm}
 
