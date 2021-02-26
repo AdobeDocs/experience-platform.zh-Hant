@@ -5,9 +5,9 @@ doc-type: release notes
 last-update: February 24, 2021
 author: ens70167
 translation-type: tm+mt
-source-git-commit: a2470d44512821996a2d5ee44722cb24990d1054
+source-git-commit: c1fed1ff4be5f32a93b41a74bb4c541813907354
 workflow-type: tm+mt
-source-wordcount: '1069'
+source-wordcount: '1126'
 ht-degree: 7%
 
 ---
@@ -32,7 +32,7 @@ Adobe Experience Platform 現有功能更新：
 
 ## （測試版）控制面板{#dashboards}
 
-Adobe Experience Platform提供多種儀表板，您可透過這些儀表板檢視有關組織資料的重要資訊，如每日快照時所擷取的資訊。
+Adobe Experience Platform提供多個儀表板，您可以透過這些儀表板檢視有關組織資料的重要資訊，如每日快照時所擷取。
 
 **新功能**
 
@@ -42,7 +42,7 @@ Adobe Experience Platform提供多種儀表板，您可透過這些儀表板檢�
 
 ## [!DNL Data Science Workspace] {#dsw}
 
-Data Science Workspace使用機器學習和人工智慧，從您的資料中建立見解。 Data Science Workspace整合至Adobe Experience Platform，可協助您透過Adobe解決方案使用內容和資料資產進行預測。
+Data Science Workspace使用機器學習和人工智慧，從您的資料中建立見解。 Data Science Workspace整合至Adobe Experience Platform，可協助您跨Adobe解決方案使用內容和資料資產進行預測。
 
 **新功能**
 
@@ -54,7 +54,7 @@ Data Science Workspace使用機器學習和人工智慧，從您的資料中建�
 
 ## [!DNL Dataflows] {#dataflows}
 
-在Adobe Experience Platform中，資料會從多種來源擷取，在Experience Platform中分析，並啟動至多種目的地。 平台提供資料流透明度，讓追蹤這種可能非線性的資料流程變得更輕鬆。
+在Adobe Experience Platform，資料是從各種來源中提取的，在Experience Platform中分析，並激活到各種目的地。 平台提供資料流透明度，讓追蹤這種可能非線性的資料流程變得更輕鬆。
 
 資料流能呈現資料處理作業在 Platform 上移動資料的情形。這些資料流是跨不同的服務配置的，有助於將資料從源連接器移動到目標資料集，然後[!DNL Identity Service]和[!DNL Real-time Customer Profile]將其用於目標資料集，最終激活到[!DNL Destinations]。
 
@@ -66,11 +66,21 @@ Data Science Workspace使用機器學習和人工智慧，從您的資料中建�
 
 有關資料流的更多一般資訊，請參閱[資料流概述](../../dataflows/home.md)。
 
+## [!DNL Destinations] {#destinations}
+
+[!DNL Destinations] 是與目標平台預先建立的整合，讓Adobe Experience Platform的資料得以順暢啟動。您可以使用目的地來啟用跨通道行銷宣傳、電子郵件宣傳、目標廣告和許多其他使用案例的已知和未知資料。
+
+**新目標**
+
+| 目的地 | 說明 |
+| ----------- | ----------- |
+| [[!DNL LinkedIn Matched Audiences]](../../destinations/catalog/social/linkedin.md) | [!DNL LinkedIn Matched Audiences]連線可讓您在[!DNL LinkedIn]社交平台中啟用觀眾。 |
+
 ## [!DNL Experience Data Model (XDM) System] {#xdm}
 
-標準化和互操作性是[!DNL Experience Platform]背後的關鍵概念。 [!DNL Experience Data Model] (XDM)是由Adobe推動，旨在標準化客戶體驗資料並定義客戶體驗管理的架構。
+標準化和互操作性是[!DNL Experience Platform]背後的關鍵概念。 [!DNL Experience Data Model] (XDM)由Adobe驅動，旨在標準化客戶體驗資料並定義客戶體驗管理的架構。
 
-XDM是公開記載的規格，旨在改善數位體驗的強大功能。 它提供任何應用程式的通用結構和定義，以便與Adobe Experience Platform上的服務通訊。 遵循XDM標準，所有客戶體驗資料都可整合在以更快速、更整合的方式提供見解的通用表現形式中。 您可以從客戶行動中獲得寶貴見解，透過細分定義客戶受眾，並將客戶屬性用於個人化目的。
+XDM是公開記載的規格，旨在改善數位體驗的強大功能。 它為與Adobe Experience Platform服務通訊的任何應用程式提供共同的架構和定義。 遵循XDM標準，所有客戶體驗資料都可整合在以更快速、更整合的方式提供見解的通用表現形式中。 您可以從客戶行動中獲得寶貴見解，透過細分定義客戶受眾，並將客戶屬性用於個人化目的。
 
 **新功能**
 
@@ -84,7 +94,7 @@ XDM是公開記載的規格，旨在改善數位體驗的強大功能。 它提�
 
 要提供相關的數位體驗，必須全面瞭解客戶。 當客戶資料分散在不同的系統上時，這會更加困難，導致每個客戶看起來都有多個「身分」。
 
-Adobe Experience Platform [!DNL Identity Service]可跨裝置和系統橋接身分，協助您更全面地瞭解客戶及其行為，讓您即時提供具影響力的個人化數位體驗。
+Adobe Experience Platform[!DNL Identity Service]可跨裝置和系統橋接身份，協助您更全面地瞭解客戶及其行為，讓您即時提供具影響力的個人化數位體驗。
 
 **新功能**
 
@@ -108,9 +118,9 @@ Adobe Experience Platform可讓您為客戶推動協調、一致且相關的體�
 
 ## [!DNL Sources] {#sources}
 
-Adobe Experience Platform可以從外部來源擷取資料，同時允許您使用平台服務來建構、標示和增強該資料。 您可以從多種來源收集資料，例如Adobe應用程式、雲端儲存空間、協力廠商軟體和您的CRM系統。
+Adobe Experience Platform可以從外部來源收集資料，同時允許您使用平台服務來建構、標籤和增強該資料。 您可以從多種來源收集資料，例如Adobe應用程式、雲端儲存空間、協力廠商軟體和您的CRM系統。
 
-Experience Platform提供REST風格的API和互動式UI，讓您輕鬆為各種資料提供者設定來源連線。 這些源連接允許您驗證並連接到外部儲存系統和CRM服務、設定接收運行的時間，以及管理資料接收吞吐量。
+Experience Platform提供REST風格的API和互動式UI，讓您輕鬆地為各種資料提供者設定來源連線。 這些源連接允許您驗證並連接到外部儲存系統和CRM服務、設定接收運行的時間，以及管理資料接收吞吐量。
 
 **新來源**
 
