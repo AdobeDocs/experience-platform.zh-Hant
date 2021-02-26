@@ -3,9 +3,9 @@ keywords: facebook連接；facebook連接；facebook目標；facebook;instagram;
 title: Facebook連線
 description: 根據雜湊的電子郵件，啟用您Facebook宣傳的個人檔案，以鎖定受眾、個人化和抑制受眾。
 translation-type: tm+mt
-source-git-commit: 28cfac3d7fed311d9eec01ef464cf921f44a10e9
+source-git-commit: bec44832a235dd3f9e2ee0f3ffc77854ee5784d7
 workflow-type: tm+mt
-source-wordcount: '1001'
+source-wordcount: '942'
 ht-degree: 3%
 
 ---
@@ -13,31 +13,25 @@ ht-degree: 3%
 
 # [!DNL Facebook] 連接
 
->[!IMPORTANT]
->
->我們目前正在將客戶遷移到此目標的新版本[!DNL Facebook Custom Audience]。
->
-> 本文中的說明適用於這兩個版本，並附下列附註：此移轉進行中時，您只會在使用者介面中看到目前版本的[!DNL Facebook]目的地，您只能使用[!UICONTROL EMAIL]和[!UICONTROL EMAIL_LC_SHA_256]身分進行啟動。
-
 啟用[!DNL Facebook]促銷活動的設定檔，根據雜湊的電子郵件鎖定受眾、個人化和抑制受眾。
 
 您可以將此目標用於[!DNL Facebook’s]系列應用程式（包括[!DNL Facebook]、[!DNL Instagram]、[!DNL Audience Network]和[!DNL Messenger]）中的受眾定位。 [!DNL Custom Audiences]在 [!DNL Facebook Ads Manager] 中的廣告版位層級會指出您選擇針對哪個應用程式執行行銷活動。
 
-![Adobe Experience Platform UI中的Facebook目標](../../assets/catalog/social/facebook/catalog.png)
+![Adobe Experience PlatformUI中的Facebook目的地](../../assets/catalog/social/facebook/catalog.png)
 
 ## 使用案例
 
-為協助您進一步瞭解應如何及何時使用[!DNL Facebook]目標，以下是Adobe Experience Platform客戶可使用此功能解決的兩個範例使用案例。
+為協助您進一步瞭解應如何及何時使用[!DNL Facebook]目的地，以下是Adobe Experience Platform客戶可使用此功能解決的兩個範例使用案例。
 
 ### 使用案例#1
 
-線上零售商想透過社交平台接觸現有客戶，並根據先前的訂單向他們展示個人化優惠。 線上零售商可將其CRM的電子郵件位址內嵌至Adobe Experience Platform，從其線下資料建立細分，並將這些細分傳送至[!DNL Facebook]社交平台，以最佳化其廣告支出。
+線上零售商想透過社交平台接觸現有客戶，並根據先前的訂單向他們展示個人化優惠。 線上零售商可將其CRM的電子郵件位址收錄至Adobe Experience Platform，從其線下資料建立區段，並將這些區段傳送至[!DNL Facebook]社交平台，以最佳化其廣告支出。
 
 ### 使用案例#2
 
 航空公司有不同的客戶層級（銅、銀和金），並希望透過社交平台為每個層級提供個人化優惠。 不過，並非所有客戶都使用該航空公司的行動應用程式，其中有些客戶尚未登入該公司網站。 公司對於這些客戶的唯一識別碼是會籍ID和電子郵件地址。
 
-若要跨社交媒體鎖定客戶，他們可以將客戶資料從CRM載入Adobe Experience Platform，使用電子郵件地址做為識別碼。
+若要跨社交媒體鎖定客戶，他們可以將客戶資料從CRM載入Adobe Experience Platform，將電子郵件地址當做識別碼。
 
 接著，他們可以使用離線資料（包括相關的會籍ID和客戶層級）來建立新的受眾細分，以便透過[!DNL Facebook]目標鎖定。
 
@@ -68,7 +62,7 @@ ht-degree: 3%
 
 [!DNL Facebook] 要求不會傳送任何個人識別資訊(PII)。因此，激活至[!DNL Facebook]的觀眾可以鍵入&#x200B;*雜湊*&#x200B;標識符，如電子郵件地址或電話號碼。
 
-視您將ID收錄至Adobe Experience Platform的類型而定，您必須符合其相應的需求。
+根據您收錄至Adobe Experience Platform的ID類型，您必須符合其相應需求。
 
 #### 電話號碼雜湊要求{#phone-number-hashing-requirements}
 
@@ -84,7 +78,7 @@ ht-degree: 3%
 
 #### 電子郵件散列要求{#email-hashing-requirements}
 
-您可以選擇先對電子郵件地址進行雜湊處理，然後再將它們匯入Adobe Experience Platform，或者選擇在Experience Platform中清楚處理電子郵件地址，並讓我們的演算法在啟動時對它們進行雜湊處理。
+您可以選擇先將電子郵件地址雜湊，再將其匯入Adobe Experience Platform，或選擇以清楚的Experience Platform方式處理電子郵件地址，並讓我們的演算法在啟動時雜湊這些地址。
 
 若要瞭解如何在Experience Platform中擷取電子郵件地址，請參閱[批次擷取概觀](/help/ingestion/batch-ingestion/overview.md)和[串流擷取概觀](/help/ingestion/streaming-ingestion/overview.md)。
 
@@ -127,4 +121,4 @@ ht-degree: 3%
 
 >[!TIP]
 >
->Adobe Experience Platform與[!DNL Facebook]的整合可支援歷史觀眾回填。 當您將區段啟動至目標時，所有歷史區段資格都會傳送至[!DNL Facebook]。
+>Adobe Experience Platform與[!DNL Facebook]之間的整合支援歷史讀者回填。 當您將區段啟動至目標時，所有歷史區段資格都會傳送至[!DNL Facebook]。
