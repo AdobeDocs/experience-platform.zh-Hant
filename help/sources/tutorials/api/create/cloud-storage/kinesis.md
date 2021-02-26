@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform;home；熱門主題；Kinesis;kinesis;Amazon Kinesis;amazon Kinesis
+keywords: Experience Platform；首頁；熱門主題；Kinesis;kinesis;AmazonKinesis;amazon kinesis
 solution: Experience Platform
-title: 使用流服務API建立Amazon Kinesis源連接
-topic: overview
-type: Tutorial
-description: 瞭解如何使用Flow Service API將Adobe Experience Platform連接至Amazon Kinesis帳戶。
+title: 使用流服務API建立AmazonKinesis源連接
+topic: 概述
+type: 教學課程
+description: 瞭解如何使用Flow Service API將Adobe Experience Platform連線至AmazonKinesis帳戶。
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: 4f3d88e1241fd19dc9963f34dd60086ae2135557
 workflow-type: tm+mt
-source-wordcount: '546'
+source-wordcount: '548'
 ht-degree: 2%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 2%
 
 >[!NOTE]
 >
->[!DNL Amazon Kineses]介面處於測試狀態。 有關使用beta標籤連接器的詳細資訊，請參閱[來源概觀](../../../../home.md#terms-and-conditions)。
+>[!DNL Amazon Kineses]介面處於測試狀態。 有關使用beta標籤連接器的詳細資訊，請參閱[ Sources綜覽](../../../../home.md#terms-and-conditions)。
 
 [!DNL Flow Service] 用於收集和集中Adobe Experience Platform內不同來源的客戶資料。該服務提供用戶介面和REST風格的API，所有支援的源都可從中連接。
 
@@ -26,7 +26,7 @@ ht-degree: 2%
 
 ## 快速入門
 
-本指南需要有效瞭解Adobe Experience Platform的下列元件：
+本指南需要對Adobe Experience Platform的下列組成部分有切實的瞭解：
 
 * [來源](../../../../home.md): [!DNL Experience Platform] 允許從各種來源接收資料，同時提供使用服務構建、標籤和增強傳入資料的 [!DNL Platform] 能力。
 * [沙盒](../../../../../sandboxes/home.md): [!DNL Experience Platform] 提供虛擬沙盒，可將單一執行個體分 [!DNL Platform] 割為不同的虛擬環境，以協助開發和發展數位體驗應用程式。
@@ -44,7 +44,7 @@ ht-degree: 2%
 | `region` | [!DNL Kinesis]帳戶的地區。 |
 | `connectionSpec.id` | [!DNL Kinesis]連接規範ID:`86043421-563b-46ec-8e6c-e23184711bf6` |
 
-有關這些值的詳細資訊，請參閱[此Kinesis文檔](https://docs.aws.amazon.com/streams/latest/dev/getting-started.html)。
+有關這些值的詳細資訊，請參閱[本Kinesis文檔](https://docs.aws.amazon.com/streams/latest/dev/getting-started.html)。
 
 ### 讀取範例API呼叫
 
@@ -62,7 +62,7 @@ ht-degree: 2%
 
 * `x-sandbox-name: {SANDBOX_NAME}`
 
-所有包含裝載(POST、PUT、PATCH)的請求都需要額外的媒體類型標題：
+所有包含裝載(POST、PUT、PATCH)的請求都需要附加的媒體類型標題：
 
 * `Content-Type: application/json`
 
@@ -90,7 +90,7 @@ curl -X POST \
         "name": "Amazon Kinesis connection",
         "description": "Connector for Amazon Kinesis",
         "auth": {
-            "specName": "Basic Authentication for Kinesis",
+            "specName": "Aws Kinesis authentication credentials",
             "params": {
                 "accessKeyId": "accessKeyId",
                 "secretKey": "secretKey"
