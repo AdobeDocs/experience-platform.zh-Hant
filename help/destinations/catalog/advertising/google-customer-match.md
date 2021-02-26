@@ -3,21 +3,15 @@ keywords: google客戶符合；Google客戶符合；Google客戶符合
 title: Google客戶符合連線
 description: Google Customer Match可讓您使用您的線上和離線資料，透過Google的自有和營運資產（例如搜尋、購物、Gmail和YouTube）觸及客戶並與其重新互動。
 translation-type: tm+mt
-source-git-commit: 6e7ecfdc0b2cbf6f07e6b2220ec163289511375e
+source-git-commit: bec44832a235dd3f9e2ee0f3ffc77854ee5784d7
 workflow-type: tm+mt
-source-wordcount: '1491'
+source-wordcount: '1432'
 ht-degree: 0%
 
 ---
 
 
 # [!DNL Google Customer Match] 連接
-
->[!IMPORTANT]
->
->我們目前正在將客戶移轉至此目標的新版本。
->
-> 本文中的說明適用於這兩個版本，並附下列附註：此移轉進行中時，您只會在使用者介面中看到目前版本的[!DNL Google Customer Match]目的地，您只能使用[!UICONTROL EMAIL]和[!UICONTROL EMAIL_LC_SHA_256]身分進行啟動。
 
 [Google Customer ](https://support.google.com/google-ads/answer/6379332?hl=en) Matchet可讓您使用您的線上和離線資料，透過Google擁有和營運的資產觸及並重新與客戶互動，例如： [!DNL Search]、 [!DNL Shopping]、 [!DNL Gmail]和 [!DNL YouTube]。
 
@@ -41,7 +35,7 @@ ht-degree: 0%
 
 ### [!DNL Google Customer Match]目標{#data-governance}的資料控管
 
-即時CDP中的目標可能對發送到目標平台或從目標平台接收的資料具有某些規則和義務。 您有責任瞭解資料的限制和義務，以及您在Adobe Experience Platform和目標平台中如何使用該資料。 Adobe Experience Platform提供資料治理工具，可協助您管理部分資料使用義務。 [進一](../../..//data-governance/labels/overview.md) 步瞭解資料治理工具和政策。
+即時CDP中的目標可能對發送到目標平台或從目標平台接收的資料具有某些規則和義務。 您有責任瞭解資料的限制和義務，以及您在Adobe Experience Platform和目的地平台中使用資料的方式。 Adobe Experience Platform公司提供資料治理工具，幫助您管理部分資料使用義務。 [進一](../../..//data-governance/labels/overview.md) 步瞭解資料治理工具和政策。
 
 ### 導出類型和身份{#export-type}
 
@@ -67,7 +61,7 @@ ht-degree: 0%
 
 [!DNL Google] 要求不會傳送任何個人識別資訊(PII)。因此，激活至[!DNL Google Customer Match]的觀眾可以鍵入&#x200B;*雜湊*&#x200B;標識符，如電子郵件地址或電話號碼。
 
-視您將ID收錄至Adobe Experience Platform的類型而定，您必須符合其相應的需求。
+根據您收錄至Adobe Experience Platform的ID類型，您必須符合其相應需求。
 
 #### 電話號碼雜湊要求{#phone-number-hashing-requirements}
 
@@ -82,7 +76,7 @@ ht-degree: 0%
 
 #### 電子郵件散列要求{#hashing-requirements}
 
-您可以選擇先對電子郵件地址進行雜湊處理，然後再將它們匯入Adobe Experience Platform，或者選擇在Experience Platform中清楚處理電子郵件地址，並讓我們的演算法在啟動時對它們進行雜湊處理。
+您可以選擇先將電子郵件地址雜湊，再將其匯入Adobe Experience Platform，或選擇以清楚的Experience Platform方式處理電子郵件地址，並讓我們的演算法在啟動時雜湊這些地址。
 
 如需Google雜湊要求和其他啟動限制的詳細資訊，請參閱Google檔案中的下列章節：
 
@@ -115,7 +109,7 @@ Attribute source data is not automatically hashed. When your source field contai
 >
 >如果已存在與此目標的連接，您可以在目標卡上看到&#x200B;**[!UICONTROL 激活]**&#x200B;按鈕。 有關&#x200B;**[!UICONTROL Activate]**&#x200B;和&#x200B;**[!UICONTROL Configure]**&#x200B;之間差異的詳細資訊，請參閱目標工作區文檔的[Catalog](../../ui/destinations-workspace.md#catalog)部分。
 
-在&#x200B;**Account**&#x200B;步驟中，如果您先前已設定到[!DNL Google Customer Match]目標的連接，請選擇&#x200B;**[!UICONTROL Existing Account]**&#x200B;並選擇您的現有連接。 或者，您可以選擇&#x200B;**[!UICONTROL 新帳戶]**&#x200B;來設定到[!DNL Google Customer Match]的新連接。 選擇&#x200B;**[!UICONTROL 連線至目標]**&#x200B;以登入並將Adobe Experience Cloud連線至您的[!DNL Google Ad]帳戶。
+在&#x200B;**Account**&#x200B;步驟中，如果您先前已設定到[!DNL Google Customer Match]目標的連接，請選擇&#x200B;**[!UICONTROL Existing Account]**&#x200B;並選擇您的現有連接。 或者，您可以選擇&#x200B;**[!UICONTROL 新帳戶]**&#x200B;來設定到[!DNL Google Customer Match]的新連接。 選擇&#x200B;**[!UICONTROL 連接到目標]**&#x200B;以登錄並將Adobe Experience Cloud連接到您的[!DNL Google Ad]帳戶。
 
 >[!NOTE]
 >
@@ -123,13 +117,13 @@ Attribute source data is not automatically hashed. When your source field contai
 
 ![連線至Google客戶符合目的地——驗證步驟](../../assets/catalog/advertising/google-customer-match/connection.png)
 
-一旦確認您的認證並將Adobe Experience Cloud連線至您的Google帳戶後，您可以選取「下一個」(**[!UICONTROL Next)，以繼續「設定」(Setup)步驟。]******
+確認您的認證並將Adobe Experience Cloud連接至您的Google帳戶後，您可以選擇&#x200B;**[!UICONTROL Next]**&#x200B;繼續&#x200B;**[!UICONTROL Setup]**&#x200B;步驟。
 
 ![認證已確認](../../assets/catalog/advertising/google-customer-match/connection-success.png)
 
 在&#x200B;**[!UICONTROL Authentication]**&#x200B;步驟中，輸入啟動流程的[!UICONTROL Name]和[!UICONTROL Description]，並將[!UICONTROL 帳戶ID]填入Google。
 
-此外，在此步驟中，您也可以選取任何應套用至此目的地的&#x200B;**[!UICONTROL 行銷動作]**。 行銷動作會指出將資料匯出至目的地的方式。 您可以從Adobe定義的行銷動作中選擇，也可以建立自己的行銷動作。 有關行銷操作的詳細資訊，請參見[即時CDP](../../../rtcdp/privacy/data-governance-overview.md#destinations)中的資料治理頁。 如需個別Adobe定義之行銷動作的詳細資訊，請參閱[資料使用政策概觀](../../../data-governance/policies/overview.md#core-actions)。
+此外，在此步驟中，您也可以選取任何應套用至此目的地的&#x200B;**[!UICONTROL 行銷動作]**。 行銷動作會指出將資料匯出至目的地的方式。 您可以從Adobe定義的行銷動作中選擇，也可以建立自己的行銷動作。 有關行銷操作的詳細資訊，請參見[即時CDP](../../../rtcdp/privacy/data-governance-overview.md#destinations)中的資料治理頁。 如需個別Adobe定義之行銷動作的詳細資訊，請參閱[資料使用政策概述](../../../data-governance/policies/overview.md#core-actions)。
 
 在填寫上述欄位後，選擇「建立目標」。****
 
