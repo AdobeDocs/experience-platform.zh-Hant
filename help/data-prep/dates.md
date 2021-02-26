@@ -1,21 +1,39 @@
 ---
-keywords: Experience Platform;home；熱門主題；map csv;map csv;map csv file;map csv file to xdm;map csv to xdm;ui guide;mapper;mapping;date;date函式；dates;
+keywords: Experience Platform;home；熱門主題；map csv;map csv;csv檔案；map csv檔案到xdm;map csv到xdm;ui guide;mapper;mapping;date函式；date函式；date函式；date
 solution: Experience Platform
 title: 資料準備日期函式
-topic: overview
+topic: 概述
 description: 本檔案介紹資料準備使用的日期功能。
 translation-type: tm+mt
-source-git-commit: 37c1c98ccba50fa917acc5e93763294f4dde5c36
+source-git-commit: d3531248f8a7116b66f9a7ca00e0eadbc3d9df3d
 workflow-type: tm+mt
-source-wordcount: '415'
-ht-degree: 16%
+source-wordcount: '483'
+ht-degree: 15%
 
 ---
 
 
-# 資料準備日期函式
+# Date函式
 
 「資料準備」支援日期函式，包括字串和日期時間對象。
+
+## 日期函式格式
+
+日期函式將字串和日期時間對象轉換為ISO 8601格式的ZonedDateTime對象。
+
+**Format**
+
+```http
+date({DATE}, {FORMAT}, {DEFAULT_DATE})
+```
+
+| 參數 | 說明 |
+| --------- | ----------- |
+| `{DATE}` | 必填。代表日期的字串。 |
+| `{FORMAT}` | 選填. 代表日期格式的字串。 有關字串格式的詳細資訊，請參閱[date/time格式字串區段](#format)。 |
+| `{DEFAULT_DATE}` | 選填. 如果提供的日期為null，則傳回的預設日期。 |
+
+例如，運算式`date(orderDate, "yyyy-MM-dd")`會將`orderDate`值&quot;Decer 31st, 2020&quot;轉換為日期時間值&quot;2020-12-31&quot;。
 
 ## 日期函式轉換
 
@@ -46,7 +64,7 @@ ht-degree: 16%
 >
 > 「資料準備」會盡量將字串轉換為日期。 但是，這些轉換可能會導致不理想的結果。 例如，字串值&quot;12112020&quot;與模式&quot;MMddyyyy&quot;相符，但使用者可能想要將日期與模式&quot;ddMMyyyy&quot;一起讀取。 因此，使用者應明確提及字串的日期格式。
 
-## 日期／時間格式字串
+## 日期／時間格式字串{#format}
 
 下表顯示為格式字串定義的模式字母。 請注意，字母區分大小寫。
 
@@ -77,7 +95,3 @@ ht-degree: 16%
 | V | 時區ID | 文字 | 美洲／洛杉磯 |
 | O | 時區偏移 | 文字 | GMT+8 |
 | Q/q | 年度第四季 | 數字／文字 | 3;03;第3季度；第三季度 |
-
-**範例**
-
-運算式`date(orderDate, "yyyy-MM-dd")`會將`orderDate`值&quot;Decer 31st, 2020&quot;轉換為日期時間值&quot;2020-12-31&quot;。
