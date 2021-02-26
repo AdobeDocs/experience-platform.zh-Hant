@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform; home；熱門主題；串流擷取；擷取；時間序列資料；串流時間序列資料；
+keywords: Experience Platform; home；熱門主題；流處理；提取；時間序列資料；流時間序列資料；
 solution: Experience Platform
 title: 使用串流擷取API串流時間系列資料
-topic: tutorial
-type: Tutorial
-description: 本教學課程將協助您開始使用串流擷取API，這是Adobe Experience Platform Data Ingestion Service API的一部分。
+topic: 教學課程
+type: 教學課程
+description: 本教學課程將協助您開始使用串流擷取API，這是Adobe Experience Platform資料擷取服務API的一部分。
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: d3531248f8a7116b66f9a7ca00e0eadbc3d9df3d
 workflow-type: tm+mt
-source-wordcount: '1236'
+source-wordcount: '1313'
 ht-degree: 2%
 
 ---
@@ -16,11 +16,11 @@ ht-degree: 2%
 
 # 使用串流擷取API串流時間系列資料
 
-本教學課程將協助您開始使用串流擷取API，這是Adobe Experience Platform [!DNL Data Ingestion Service] API的一部分。
+本教學課程將協助您開始使用串流擷取API，這是Adobe Experience Platform[!DNL Data Ingestion Service] API的一部分。
 
 ## 快速入門
 
-本教學課程需要具備各種Adobe Experience Platform服務的相關知識。 在開始本教學課程之前，請先閱讀下列服務的檔案：
+本教學課程需要具備Adobe Experience Platform各項服務的相關知識。 在開始本教學課程之前，請先閱讀下列服務的檔案：
 
 - [[!DNL Experience Data Model (XDM)]](../../xdm/home.md):組織體驗資料的 [!DNL Platform] 標準化架構。
 - [[!DNL Real-time Customer Profile]](../../profile/home.md):根據來自多個來源的匯整資料，即時提供統一的消費者個人檔案。
@@ -316,9 +316,11 @@ POST /collection/{CONNECTION_ID}?synchronousValidation=true
 
 以下的範例請求將遺失來源名稱的時間系列資料擷取至平台。 如果資料遺失來源名稱，則會從串流連線定義新增來源ID。
 
->[!NOTE]
+>[!IMPORTANT]
 >
->您需要產生自己的`xdmEntity._id`和`xdmEntity.timestamp`。 產生ID的好方法是使用UUID。 此外，下列API呼叫不需要任何驗證標題。****
+>您需要產生自己的`xdmEntity._id`和`xdmEntity.timestamp`。 產生ID的好方法是在「資料準備」中使用UUID函式。 有關UUID函式的詳細資訊，請參閱[資料準備函式指南](../../data-prep/functions.md)。 `xdmEntity._id`屬性代表記錄本身的唯一識別碼，**not**&#x200B;是記錄所在人或裝置的唯一ID。 人員或裝置ID將在指派為架構之人員或裝置識別碼的任何屬性中指定。
+>
+>`xdmEntity._id`和`xdmEntity.timestamp`都是時間序列資料的唯一必需欄位。 此外，下列API呼叫不需要任何驗證標題。****
 
 ```shell
 curl -X POST https://dcs.adobedc.net/collection/{CONNECTION_ID}?synchronousValidation=true \
@@ -417,13 +419,13 @@ curl -X POST https://dcs.adobedc.net/collection/{CONNECTION_ID}?synchronousValid
 | 屬性 | 說明 |
 | -------- | ----------- |
 | `{CONNECTION_ID}` | 先前建立之串流連線的ID。 |
-| `xactionId` | 唯一識別碼是您剛傳送之記錄的伺服器端產生。 此ID可協助Adobe透過各種系統及除錯來追蹤此記錄的生命週期。 |
+| `xactionId` | 唯一識別碼是您剛傳送之記錄的伺服器端產生。 此ID有助於Adobe通過各種系統和調試跟蹤此記錄的生命週期。 |
 | `receivedTimeMs`:時間戳記（以毫秒為單位），顯示收到請求的時間。 |
 | `synchronousValidation.status` | 由於已添加查詢參數`synchronousValidation=true`，因此將顯示此值。 如果驗證成功，狀態將為`pass`。 |
 
 ## 擷取新擷取的時間序列資料
 
-要驗證以前提取的記錄，可以使用[[!DNL Profile Access API]](../../profile/api/entities.md)來檢索時間序列資料。 這可以使用對`/access/entities`端點的GET請求和可選查詢參數來完成。 可以使用多個參數，由&amp;符號(&amp;)分隔。&quot;
+要驗證以前提取的記錄，可以使用[[!DNL Profile Access API]](../../profile/api/entities.md)來檢索時間序列資料。 這可以使用對`/access/entities`端點的GET請求和可選的查詢參數來完成。 可以使用多個參數，由&amp;符號(&amp;)分隔。&quot;
 
 >[!NOTE]
 >
