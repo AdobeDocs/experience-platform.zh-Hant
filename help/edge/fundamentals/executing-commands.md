@@ -1,11 +1,11 @@
 ---
-title: 執行Adobe Experience Platform Web SDK命令
-description: 瞭解如何執行Experience Platform Web SDK命令
+title: 執行Adobe Experience PlatformWeb SDK命令
+description: 瞭解如何執行Experience PlatformWeb SDK命令
 keywords: 執行命令；commandName;Promises;getLibraryInfo;response對象；connection;
 translation-type: tm+mt
-source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
+source-git-commit: 308c10eb0d1f78dad2b8b6158f28d0384a65c78c
 workflow-type: tm+mt
-source-wordcount: '417'
+source-wordcount: '416'
 ht-degree: 2%
 
 ---
@@ -13,7 +13,8 @@ ht-degree: 2%
 
 # 執行命令
 
-在您的網頁上實作基本程式碼後，您就可以開始使用SDK執行指令。 執行命令之前，您不需要等待外部檔案(alloy.js)從伺服器載入。 如果SDK尚未完成載入，SDK會盡快將命令排入佇列並處理。
+
+在您的網頁上實作基本程式碼後，您就可以開始使用SDK執行指令。 執行命令之前，您不需要等待從伺服器載入外部檔案(`alloy.js`)。 如果SDK尚未完成載入，SDK會盡快將命令排入佇列並處理。
 
 命令使用下列語法執行。
 
