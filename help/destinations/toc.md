@@ -3,7 +3,7 @@ product: experience-platform
 audience: user
 user-guide-title: 目的地指南
 user-guide-description: 針對跨通路行銷活動、電子郵件宣傳、鎖定特定目標的行銷活動和其他諸多使用案例，啟用已知和未知的資料。
-description: 本檔案列出Adobe Experience Platform目標的目錄
+description: 本檔案列出了Adobe Experience Platform目的地的目錄
 translation-type: tm+mt
 source-git-commit: db2e5d51a5ed07b91997df8a566272c86a7c1708
 workflow-type: tm+mt
@@ -30,10 +30,10 @@ ht-degree: 10%
    * [ (Alpha)HTTP連線](./catalog/http-destination.md)
    * Adobe目標{#adobe}
       * [Adobe目標概觀](./catalog/adobe/overview.md)
-      * [體驗平台區隔分享](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html)
+      * [Experience Platform區段共用](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html)
    * 廣告目的地{#advertising}
       * [廣告目標概觀](./catalog/advertising/overview.md)
-      * [Adobe Advertising Cloud擴充功能](./catalog/advertising/adobe-advertising-cloud.md)
+      * [Adobe Advertising Cloud分機](./catalog/advertising/adobe-advertising-cloud.md)
       * [Awin Advertiser轉換標籤擴充功能](./catalog/advertising/awin-conversiontag.md)
       * [Awin Advertiser Mastertag extension](./catalog/advertising/awin-mastertag.md)
       * [Bing Ads通用事件追蹤(UET)擴充功能](./catalog/advertising/bing-ads.md)
@@ -76,14 +76,14 @@ ht-degree: 10%
    * 雲端儲存空間目標{#cloud-storage}
       * [雲端儲存空間目標概觀](./catalog/cloud-storage/overview.md)
       * [建立雲端儲存空間目標](./catalog/cloud-storage/workflow.md)
-      * [Amazon Kinesis連接](./catalog/cloud-storage/amazon-kinesis.md)
-      * [Amazon S3連線](./catalog/cloud-storage/amazon-s3.md)
+      * [AmazonKinesis連接](./catalog/cloud-storage/amazon-kinesis.md)
+      * [AmazonS3連線](./catalog/cloud-storage/amazon-s3.md)
       * [Azure Blob連接](./catalog/cloud-storage/azure-blob.md)
       * [（測試版）Azure事件集線器連接](./catalog/cloud-storage/azure-event-hubs.md)
       * [SFTP連線](./catalog/cloud-storage/sftp.md)
    * 資料管理平台目標{#data-management}
       * [資料管理平台(DMP)目標概觀](./catalog/data-management/overview.md)
-      * [Audience Manager DIL擴充功能](./catalog/data-management/aam-dil-extension.md)
+      * [Audience ManagerDIL擴展](./catalog/data-management/aam-dil-extension.md)
    * 電子郵件目標{#email}
       * [Bizible extension](./catalog/email/bizible.md)
       * [Marketo延伸功能](./catalog/email/marketo.md)
@@ -91,12 +91,12 @@ ht-degree: 10%
       * [PebblePost擴充功能](./catalog/email/pebblepost.md)
    * 電子郵件行銷目標{#email-marketing}
       * [電子郵件行銷目標概觀](./catalog/email-marketing/overview.md)
-      * [Adobe Campaign連線](./catalog/email-marketing/adobe-campaign.md)
-      * [Oracle Evolca連接](./catalog/email-marketing/oracle-eloqua.md)
-      * [Oracle Responsys連接](./catalog/email-marketing/oracle-responsys.md)
-      * [Salesforce Marketing Cloud連線](./catalog/email-marketing/salesforce-marketing-cloud.md)
-   * Experience Platform Launch擴充功能{#launch-extensions}
-      * [Adobe Experience Platform Launch擴充功能總覽](./catalog/launch-extensions/overview.md)
+      * [Adobe Campaign連接](./catalog/email-marketing/adobe-campaign.md)
+      * [Oracle雄辯聯繫](./catalog/email-marketing/oracle-eloqua.md)
+      * [OracleResponsys連接](./catalog/email-marketing/oracle-responsys.md)
+      * [SalesforceMarketing Cloud連線](./catalog/email-marketing/salesforce-marketing-cloud.md)
+   * Experience Platform Launch副檔名{#launch-extensions}
+      * [Adobe Experience Platform Launch分機總覽](./catalog/launch-extensions/overview.md)
    * 行動參與目標{#mobile-engagement}
       * [行動互動目標概觀](./catalog/mobile-engagement/overview.md)
       * [飛艇屬性連接](./catalog/mobile-engagement/airship-attributes.md)
@@ -115,7 +115,7 @@ ht-degree: 10%
    * 社交網路目的地{#social}
       * [社交網路目的地總覽](./catalog/social/overview.md)
       * [建立社交網路目的地](./catalog/social/workflow.md)
-      * [Adobe Livefyre擴充功能](./catalog/social/adobe-livefyre.md)
+      * [AdobeLivefyre擴充功能](./catalog/social/adobe-livefyre.md)
       * [Facebook連線](./catalog/social/facebook.md)
       * [Linkedin符合的觀眾連線](./catalog/social/linkedin.md)
    * 調查目標{#survey}
