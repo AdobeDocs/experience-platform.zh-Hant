@@ -13,7 +13,7 @@ ht-degree: 21%
 ---
 
 
-# Adobe Experience Platform細分服務  {#segmentation}
+# Adobe Experience Platform區段服務  {#segmentation}
 
 - [區段服務概觀](home.md)
 - [區段資料類型](data-types.md)
