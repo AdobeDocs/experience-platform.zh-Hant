@@ -13,7 +13,7 @@ ht-degree: 22%
 ---
 
 
-# Adobe Experience Platform概觀{#landing}
+# Adobe Experience Platform概述{#landing}
 
 * [平台概觀](home.md)
 * [平台概觀（視訊）](video/platform-overview.md)
@@ -24,12 +24,12 @@ ht-degree: 22%
    * [主要使用案例（視訊）](video/platform-use-cases.md)
    * [平台架構（視訊）](video/platform-architecture.md)
    * [角色和專案階段（影片）](video/roles-project-phases.md)
-* Experience Platform UI {#platform-ui}
+* Experience PlatformUI {#platform-ui}
    * [平台UI指南](ui-guide.md)
    * [平台UI導覽（影片）](video/platform-ui.md)
    * [工作流程UI指南](workflows.md)
    * [瀏覽器和語言支援](browser-language-support.md)
-* Experience Platform API {#platform-apis}
+* Experience PlatformAPI {#platform-apis}
    * [驗證和存取平台API](api-authentication.md)
    * [API基礎知識](api-fundamentals.md)
    * [API參考檔案](http://www.adobe.com/go/platform-api-reference-en)
@@ -39,7 +39,7 @@ ht-degree: 22%
 * Adobe生態系統中的平台{#ecosystem}
    * [應用程式服務](application-services.md)
    * [應用程式與智慧服務（視訊）](video/application-intelligent-services.md)
-   * [與Experience Cloud（視訊）的平台整合](video/experience-cloud-integrations.md)
+   * [平台與Experience Cloud（視訊）的整合](video/experience-cloud-integrations.md)
 * 治理、隱私和安全{#governance-privacy-security}
    * [概述](./governance-privacy-security/overview.md)
    * 同意管理 {#consent}
@@ -50,4 +50,4 @@ ht-degree: 22%
 * [疑難排解指南](troubleshooting.md)
 * [Gen2資料湖遷移](adls2-gen2-migration.md)
 * [字彙表](glossary.md)
-* [發行說明](https://www.adobe.com/go/platform-release-notes-en)
+* [版本注意事項](https://www.adobe.com/go/platform-release-notes-en)
