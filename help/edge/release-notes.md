@@ -1,12 +1,12 @@
 ---
 title: Adobe Experience Platform Web SDK 發行說明
-description: Adobe Experience Platform Web SDK的最新發行說明。
-keywords: Adobe Experience Platform Web SDK;Platform Web SDK;Web SDK；發行說明；
+description: Adobe Experience Platform Web SDK 最新版本注意事項。
+keywords: Adobe Experience Platform網頁SDK；平台網頁SDK；網頁SDK；發行說明；
 translation-type: tm+mt
 source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
 workflow-type: tm+mt
 source-wordcount: '223'
-ht-degree: 5%
+ht-degree: 10%
 
 ---
 
