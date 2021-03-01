@@ -74,7 +74,7 @@ ht-degree: 23%
       * [資料類型](./ui/resources/data-types.md)
    * 定義欄位{#fields}
       * [概述](./ui/fields/overview.md)
-      * [必要欄位](./ui/fields/required.md)
+      * [必填欄位](./ui/fields/required.md)
       * [物件欄位](./ui/fields/object.md)
       * [陣列欄位](./ui/fields/array.md)
       * [列舉欄位](./ui/fields/enum.md)
