@@ -13,7 +13,7 @@ ht-degree: 30%
 ---
 
 
-# 沙箱 {#sandbox}
+# 沙盒 {#sandbox}
 
 * [沙盒總覽](home.md)
 * 沙盒UI {#ui}
