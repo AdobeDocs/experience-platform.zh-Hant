@@ -37,7 +37,7 @@ ht-degree: 18%
 - SQL參考{#sql}
    - [SQL概述](sql/overview.md)
    - [SQL語法](sql/syntax.md)
-   - [Adobe定義的函式](sql/adobe-defined-functions.md)
+   - [Adobe定義函式](sql/adobe-defined-functions.md)
    - [Spark SQL函式](sql/spark-sql-functions.md)
    - [中繼資料命令](sql/metadata.md)
    - [準備的陳述](sql/prepared-statements.md)
