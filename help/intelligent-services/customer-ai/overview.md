@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform;overview;customer ai；熱門主題；customer ai概觀
+keywords: Experience Platform；概述；客戶ai；熱門主題；客戶ai概述
 solution: Experience Platform, Intelligent Services, Real-time Customer Data Platform
 title: Customer AI 概述
-topic: Customer AI Overview
+topic: 客戶人工智慧概觀
 description: Customer AI 可產生自訂傾向評分，例如大規模個別設定檔的流失和轉換情形。不必將企業需求轉換為機器學習問題、挑選演算法、培訓或部署，就能達成上述目的。
 landing-page-description: Customer AI 可產生自訂傾向評分，例如大量個別設定檔的流失和轉換情形。
 translation-type: tm+mt
 source-git-commit: eb163949f91b0d1e9cc23180bb372b6f94fc951f
 workflow-type: tm+mt
-source-wordcount: '554'
+source-wordcount: '557'
 ht-degree: 18%
 
 ---
@@ -47,8 +47,8 @@ Customer AI 可產生自訂傾向評分，例如大規模個別設定檔的流�
 
 ## 它如何運作？
 
-客戶人工智慧可分析現有的消費者體驗事件資料，以預測客戶流失或轉化傾向分數。 Adobe瞭解客戶流失和轉換的定義在所有使用案例中並不統一，因此，您可以將自訂目標定義為一組條件。 只要目標事件存在於輸入的消費者體驗事件資料中，您就可以設定預測目標。
+客戶人工智慧可分析現有的消費者體驗事件資料，以預測客戶流失或轉化傾向分數。 Adobe意識到客戶流失和轉換的定義在所有使用案例中並不統一，因此，您可以將自訂目標目標定義為一組條件。 只要目標事件存在於輸入的消費者體驗事件資料中，您就可以設定預測目標。
 
 ## 後續步驟
 
-您可以從[快速入門](./getting-started.md)指南開始。 本指南會逐步引導您設定客戶人工智慧的所有必要先決條件。 如果您已準備好所有憑證和資料，請造訪[設定客戶AI例項](./user-guide/configure.md)。 它提供使用客戶AI的步驟。
+您可以從[快速入門](./getting-started.md)指南開始。 本指南會逐步帶您設定客戶AI的所有必要先決條件。 如果您已準備好所有憑證和資料，請造訪[設定客戶AI例項](./user-guide/configure.md)。 它提供使用客戶AI的步驟。
