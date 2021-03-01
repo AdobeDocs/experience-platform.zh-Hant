@@ -13,18 +13,18 @@ ht-degree: 41%
 ---
 
 
-# Adobe Experience Platform隱私權服務{#privacy}
+# Adobe Experience Platform Privacy Service{#privacy}
 
-* [隱私權服務概觀](home.md)
-* [隱私權服務與Experience Cloud應用程式](experience-cloud-apps.md)
+* [Privacy Service概觀](home.md)
+* [Privacy Service與Experience Cloud應用程式](experience-cloud-apps.md)
 * [隱私權要求的身分資料](identity-data.md)
 * [隱私權JS程式庫概觀](js-library.md)
-* 隱私權服務API {#api}
+* Privacy ServiceAPI {#api}
    * [快速入門](api/getting-started.md)
    * [隱私權工作](api/privacy-jobs.md)
    * [同意](api/consent.md)
    * [附錄](api/appendix.md)
-* 隱私權服務UI {#ui}
+* Privacy ServiceUI {#ui}
    * [概述](ui/overview.md)
    * [管理隱私權工作](ui/user-guide.md)
 * [訂閱隱私權事件](privacy-events.md)
@@ -34,4 +34,4 @@ ht-degree: 41%
    * [術語](regulations/terminology.md)
 * [疑難排解指南](troubleshooting-guide.md)
 * [API 參考資料](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/privacy-service.yaml)
-* [發行說明](release-notes.md)
+* [版本注意事項](release-notes.md)
