@@ -20,7 +20,7 @@ ht-degree: 52%
    * [快速入門](get-started.md)
    * [量度概觀](home-page-dashboards.md)
 * 管理 {#admin}
-   * [管理概觀](administration/admin-overview.md)
+   * [管理概述](administration/admin-overview.md)
 * 資料集 {#datasets}
    * [資料集](datasets/dataset.md)
    * [平台上的資料品質](datasets/data-quality.md)
