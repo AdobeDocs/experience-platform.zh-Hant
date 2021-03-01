@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform;home；熱門主題；ui;UI;XDM;XDM系統；體驗資料模型；Experience資料模型；資料模型；模式編輯器；模式編輯器；模式；模式；模式；模式；模式；模式；模式；建立
+keywords: Experience Platform;home；熱門主題；ui;UI;XDM;XDM系統；體驗資料模型；體驗資料模型；資料模型；模式編輯器；模式編輯器；模式；模式；模式；模式；模式；模式；建立模式
 solution: Experience Platform
 title: 使用架構編輯器建立架構
-topic: tutorial
-type: Tutorial
+topic: 教學課程
+type: 教學課程
 description: 本教學課程涵蓋以 Experience Platform 結構編輯器建立結構的相關步驟。
 translation-type: tm+mt
 source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
 workflow-type: tm+mt
-source-wordcount: '3600'
+source-wordcount: '3602'
 ht-degree: 0%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 0%
 
 # 使用[!DNL Schema Editor]建立模式
 
-Adobe Experience Platform使用者介面可讓您在稱為[!DNL Schema Editor]的互動式視覺畫布中建立和管理[!DNL Experience Data Model](XDM)結構。 本教程介紹如何使用[!DNL Schema Editor]建立模式。
+Adobe Experience Platform用戶介面允許您在稱為[!DNL Schema Editor]的互動式可視畫布中建立和管理[!DNL Experience Data Model](XDM)模式。 本教程介紹如何使用[!DNL Schema Editor]建立模式。
 
 >[!NOTE]
 >
@@ -26,7 +26,7 @@ Adobe Experience Platform使用者介面可讓您在稱為[!DNL Schema Editor]�
 
 ## 快速入門
 
-本教學課程需要對架構建立中涉及的Adobe Experience Platform各個方面有深入的瞭解。 在開始本教學課程之前，請先閱讀說明檔案，瞭解下列概念：
+本教學課程需要對Adobe Experience Platform在模式建立中涉及的各個方面有深入的瞭解。 在開始本教學課程之前，請先閱讀說明檔案，瞭解下列概念：
 
 * [[!DNL Experience Data Model (XDM)]](../home.md):組織客戶體驗資 [!DNL Platform] 料的標準化架構。
    * [架構構成基礎](../schema/composition.md):概述XDM結構描述及其構建塊，包括類、混合、資料類型和欄位。
@@ -34,7 +34,7 @@ Adobe Experience Platform使用者介面可讓您在稱為[!DNL Schema Editor]�
 
 ## 開啟[!UICONTROL 方案]工作區{#browse}
 
-[!DNL Platform] UI中的[!UICONTROL 結構描述]工作區提供[!DNL Schema Library]的視覺化效果，允許您查看管理組織可用的結構描述。 工作區也包含[!DNL Schema Editor]，您可在此教學課程中組合架構的畫布。
+[!DNL Platform] UI中的[!UICONTROL 結構描述]工作區提供[!DNL Schema Library]的視覺化，讓您檢視管理組織可用的結構描述。 工作區也包含[!DNL Schema Editor]，您可在此教學課程中組合架構的畫布。
 
 登入[!DNL Experience Platform]後，在左側導覽中選擇&#x200B;**[!UICONTROL 方案]**&#x200B;以開啟&#x200B;**[!UICONTROL 方案]**&#x200B;工作區。 **[!UICONTROL 瀏覽]**&#x200B;標籤顯示可查看和自定義的方案清單（[!DNL Schema Library]的表示法）。 該清單包括方案所基於的名稱、類型、類和行為（記錄或時間序列），以及上次修改方案的日期和時間。
 
