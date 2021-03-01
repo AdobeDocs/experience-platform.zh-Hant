@@ -1,11 +1,11 @@
 ---
-title: 使用Adobe Experience Platform Web SDK支援客戶同意偏好
-description: 瞭解如何使用Adobe Experience Platform Web SDK支援同意偏好設定。
+title: 使用Adobe Experience PlatformWeb SDK支援客戶同意偏好
+description: 瞭解如何使用Adobe Experience Platform網頁SDK支援同意偏好設定。
 keywords: connence;defaultConnence;default connonce;setConnence;Profile Privacy Mixin; Experience Event Privacy Mixin; Privacy Mixin;
 translation-type: tm+mt
-source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
+source-git-commit: 308c10eb0d1f78dad2b8b6158f28d0384a65c78c
 workflow-type: tm+mt
-source-wordcount: '760'
+source-wordcount: '753'
 ht-degree: 0%
 
 ---
@@ -13,12 +13,12 @@ ht-degree: 0%
 
 # 支援客戶同意偏好
 
-若要尊重使用者的隱私權，您可能會在允許SDK針對特定用途使用使用者特定資料之前，先要求使用者同意。 目前，SDK僅允許使用者選擇加入或退出所有用途，但Adobe希望未來能針對特定用途提供更精細的控制。
+若要尊重使用者的隱私權，您可能會在允許SDK針對特定用途使用使用者特定資料之前，先要求使用者同意。 目前，SDK僅允許使用者選擇退出或退出所有用途，但未來Adobe希望提供更精細的特定用途控制。
 
 如果使用者選擇用於所有用途，則允許SDK執行下列工作：
 
-* 傳送資料至Adobe伺服器或從Adobe伺服器傳送資料。
-* 讀取和寫入Cookie或網頁儲存項目（除非使用者的選擇加入偏好設定持續存在）。
+* 傳送資料至Adobe的伺服器或從伺服器傳送資料。
+* 讀取和寫入Cookie或網頁儲存項目。
 
 如果使用者退出所有用途，SDK不會執行任何這些工作。
 
@@ -38,7 +38,7 @@ alloy("configure", {
 
 此時，您可能會希望使用者在使用者介面中選擇加入。 收集使用者的偏好設定後，請將這些偏好設定傳達給SDK。
 
-## 透過Adobe Standard傳達同意偏好
+## 透過Adobe標準傳達同意偏好
 
 如果用戶選擇，請執行`setConsent`命令，並將`general`選項設定為`in` ，如下所示：
 
@@ -78,7 +78,7 @@ alloy("setConsent", {
 
 >[!NOTE]
 >
->目前，SDK僅支援`general`用途。 雖然我們計畫建立一套更健全的目的或類別，以對應不同的Adobe功能和產品方案，但目前的實作方式是完全或完全不選擇加入。  這僅適用於Adobe Experience Platform [!DNL Web SDK]，而不適用於其他Adobe JavaScript程式庫。
+>目前，SDK僅支援`general`用途。 雖然我們計畫建立一套更健全的用途或類別，以因應不同的Adobe功能和產品方案，但目前的實作是選擇加入的全部或全部方法。  這僅適用於Adobe Experience Platform[!DNL Web SDK]和NOT其他AdobeJavaScript庫。
 
 ## 透過IAB TCF標準傳達同意偏好
 
@@ -120,9 +120,9 @@ alloy("setConsent", {
 
 ## 持續遵守同意偏好
 
-在您使用`setConsent`命令將使用者偏好設定傳達至SDK後，SDK會將使用者偏好設定保留至Cookie。 下次使用者將您的網站載入瀏覽器時，SDK將會擷取並使用這些持續的偏好設定來判斷事件是否可傳送至Adobe。 您不需要再執行`setConsent`命令，只需要通知用戶首選項中的更改，您隨時都可以這樣做。
+在您使用`setConsent`命令將使用者偏好設定傳達至SDK後，SDK會將使用者偏好設定保留至Cookie。 下次使用者將您的網站載入瀏覽器時，SDK會擷取並使用這些持續的偏好設定，以決定事件是否可傳送至Adobe。 您不需要再執行`setConsent`命令，只需要通知用戶首選項中的更改，您隨時都可以這樣做。
 
 ## 同步身分並設定同意
 
-當預設同意擱置中時，`setConsent`可能是第一個送出並建立身分的要求。 因此，在第一個要求上同步身分可能很重要。 身分映射可以像`sendEvent`命令一樣添加到`setConsent`命令中。 請參閱[擷取Experience Cloud ID](../identity/overview.md)
+當預設同意擱置中時，`setConsent`可能是第一個送出並建立身分的要求。 因此，在第一個要求上同步身分可能很重要。 身分映射可以像`sendEvent`命令一樣添加到`setConsent`命令中。 請參閱[檢索Experience CloudID](../identity/overview.md)
 
