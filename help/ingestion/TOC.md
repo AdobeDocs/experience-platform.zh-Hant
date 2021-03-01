@@ -8,15 +8,15 @@ translation-type: tm+mt
 source-git-commit: 089a4d517476b614521d1db4718966e3ebb13064
 workflow-type: tm+mt
 source-wordcount: '121'
-ht-degree: 22%
+ht-degree: 25%
 
 ---
 
 
-# Adobe Experience Platform資料擷取{#ingestion}
+# Adobe Experience Platform資料提取{#ingestion}
 
 - [資料擷取概觀](home.md)
-- 串流擷取{#streaming}
+- 串流擷取 {#streaming}
    - [概述](streaming-ingestion/overview.md)
    - [卡夫卡連接器](streaming-ingestion/kafka.md)
    - [疑難排解](streaming-ingestion/troubleshooting.md)
