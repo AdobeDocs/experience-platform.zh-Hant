@@ -14,13 +14,13 @@ ht-degree: 23%
 ---
 
 
-# Adobe Intelligent Services {#intelligent-services}
+# Adobe智慧服務{#intelligent-services}
 
 - [智慧型服務概觀](home.md)
 - [準備資料以用於智慧型服務](data-preparation.md)
-- 歸因AI {#attribution-ai}
+- Attribution AI{#attribution-ai}
    - [概述](attribution-ai/overview.md)
-   - [Attribution AI快速入門](attribution-ai/getting-started.md)
+   - [開始使用Attribution AI](attribution-ai/getting-started.md)
    - [輸入與輸出](attribution-ai/input-output.md)
    - [使用者介面指南](attribution-ai/user-guide.md)
    - [探索見解](attribution-ai/discover-insights.md)
