@@ -4,12 +4,12 @@ solution: Experience Platform
 title: Adobe Experience Platform常見問答集與疑難排解指南
 description: 尋找常見問題的解答，以及針對 Experience Platform 中的常見錯誤進行疑難排解的指南。
 landing-page-description: 尋找常見問題的解答，以及針對 Experience Platform 中的常見錯誤進行疑難排解的指南。
-topic: getting started
-type: Documentation
+topic: 快速入門
+type: 文件
 translation-type: tm+mt
 source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
 workflow-type: tm+mt
-source-wordcount: '1994'
+source-wordcount: '1997'
 ht-degree: 3%
 
 ---
@@ -17,15 +17,15 @@ ht-degree: 3%
 
 # [!DNL Platform] 常見問答集與疑難排解指南
 
-本檔案提供有關Adobe Experience Platform的常見問題解答，以及適用於任何[!DNL Experience Platform] API中常見錯誤的高階疑難排解指南。 有關各個[!DNL Platform]服務的故障排除指南，請參見下面的[服務故障排除目錄](#service-troubleshooting-directory)。
+本檔案提供有關Adobe Experience Platform常見問題的解答，以及高階疑難排解指南，說明在任何[!DNL Experience Platform] API中可能遇到的常見錯誤。 有關各個[!DNL Platform]服務的故障排除指南，請參見下面的[服務故障排除目錄](#service-troubleshooting-directory)。
 
 ## 常見問題集 {#faq}
 
-以下是有關Adobe Experience Platform常見問題的解答清單。
+以下是關於Adobe Experience Platform的常見問題的解答清單。
 
 ## 什麼是[!DNL Experience Platform] API?{#what-are-experience-platform-apis}
 
-[!DNL Experience Platform] 提供多個使用HTTP請求來存取資源的REST風格 [!DNL Platform] API。這些服務API每個都會顯示多個端點，並允許您執行列出(GET)、查閱(GET)、編輯（PUT和／或修補）和刪除(DELETE)資源的操作。 有關每項服務可用的特定端點和操作的詳細資訊，請參閱Adobe I/O上的[API參考檔案](http://www.adobe.com/go/platform-api-reference-en)。
+[!DNL Experience Platform] 提供多個使用HTTP請求來存取資源的REST風格 [!DNL Platform] API。這些服務API每個都會顯示多個端點，並允許您執行列出(GET)、查閱(GET)、編輯(PUT和／或PATCH)和刪除(DELETE)資源的操作。 有關每項服務可用的特定端點和操作的詳細資訊，請參閱[API參考文檔](http://www.adobe.com/go/platform-api-reference-en)中的Adobe I/O。
 
 ## 如何設定API要求的格式？{#how-do-i-format-an-api-request}
 
@@ -33,7 +33,7 @@ ht-degree: 3%
 
 ### 閱讀範例API呼叫
 
-[!DNL Experience Platform]的檔案以兩種不同的方式顯示範例API呼叫。 首先，呼叫以&#x200B;**API格式**&#x200B;顯示，模板表示僅顯示操作(GET、POST、PUT、PATCH、DELETE)和所使用的端點（例如`/global/classes`）。 有些範本也會顯示變數的位置，以協助說明呼叫應如何制定，例如`GET /{VARIABLE}/classes/{ANOTHER_VARIABLE}`。
+[!DNL Experience Platform]的檔案以兩種不同的方式顯示範例API呼叫。 首先，調用以&#x200B;**API格式**&#x200B;顯示，模板表示僅顯示操作(GET、POST、PUT、PATCH、DELETE)和所使用的端點（例如`/global/classes`）。 有些範本也會顯示變數的位置，以協助說明呼叫應如何制定，例如`GET /{VARIABLE}/classes/{ANOTHER_VARIABLE}`。
 
 然後，呼叫在&#x200B;**Request**&#x200B;中顯示為cURL命令，其中包含成功與API互動所需的必要標題和完整「基本路徑」。 基本路徑應預先附加到所有端點。 例如，前述的`/global/classes`端點變為`https://platform.adobe.io/data/foundation/schemaregistry/global/classes`。 您會在整個檔案中看到API格式／請求模式，而且在對平台API進行自己的呼叫時，預期會使用範例「請求」中顯示的完整路徑。
 
@@ -43,7 +43,7 @@ ht-degree: 3%
 
 **API格式**
 
-API格式顯示操作(GET)和所使用的端點。 變數會以大括弧表示（在本例中為`{CONTAINER_ID}`）。
+API格式顯示所使用的操作(GET)和端點。 變數會以大括弧表示（在本例中為`{CONTAINER_ID}`）。
 
 ```http
 GET /{CONTAINER_ID}/classes
@@ -91,11 +91,11 @@ curl -X GET \
 
 ## 我的IMS組織是什麼？{#what-is-my-ims-organization}
 
-IMS組織是客戶的Adobe代表。 任何授權的Adobe解決方案皆與此客戶組織整合。 當IMS組織有權使用[!DNL Experience Platform]時，它可指派存取權給開發人員。 IMS組織ID(`x-gw-ims-org-id`)代表應執行API呼叫的組織，因此在所有API請求中都是必要的標題。 此ID可透過[Adobe Developer Console](https://www.adobe.com/go/devs_console_ui)找到：在&#x200B;**Integrations**&#x200B;標籤中，導覽至&#x200B;**Overview**&#x200B;區段以取得任何特定整合，以在&#x200B;**Client Credentials**&#x200B;下尋找ID。 有關如何驗證到[!DNL Platform]的逐步說明，請參見[驗證教程](https://www.adobe.com/go/platform-api-authentication-en)。
+IMS組織是客戶的Adobe表示。 任何授權的Adobe解決方案皆與此客戶組織整合。 當IMS組織有權使用[!DNL Experience Platform]時，它可指派存取權給開發人員。 IMS組織ID(`x-gw-ims-org-id`)代表應執行API呼叫的組織，因此在所有API請求中都是必要的標題。 此ID可透過[Adobe開發人員主控台](https://www.adobe.com/go/devs_console_ui)找到：在&#x200B;**Integrations**&#x200B;標籤中，導覽至&#x200B;**Overview**&#x200B;區段以取得任何特定整合，以在&#x200B;**Client Credentials**&#x200B;下尋找ID。 有關如何驗證到[!DNL Platform]的逐步說明，請參見[驗證教程](https://www.adobe.com/go/platform-api-authentication-en)。
 
 ## 我可以在哪裡找到API金鑰？{#where-can-i-find-my-api-key}
 
-所有API請求中都需要API金鑰作為標題。 您可透過[Adobe Developer Console](https://www.adobe.com/go/devs_console_ui)找到。 在控制台內，在&#x200B;**Integrations**&#x200B;標籤上，導覽至&#x200B;**Overview**&#x200B;區段以取得特定整合，您將在&#x200B;**Client Credentials**&#x200B;下找到金鑰。 有關如何驗證到[!DNL Platform]的逐步說明，請參見[驗證教程](https://www.adobe.com/go/platform-api-authentication-en)。
+所有API請求中都需要API金鑰作為標題。 您可透過[Adobe開發人員主控台](https://www.adobe.com/go/devs_console_ui)找到。 在控制台內，在&#x200B;**Integrations**&#x200B;標籤上，導覽至&#x200B;**Overview**&#x200B;區段以取得特定整合，您將在&#x200B;**Client Credentials**&#x200B;下找到金鑰。 有關如何驗證到[!DNL Platform]的逐步說明，請參見[驗證教程](https://www.adobe.com/go/platform-api-authentication-en)。
 
 ## 我要如何取得存取Token?{#how-do-i-get-an-access-token}
 
@@ -117,7 +117,7 @@ GET /batches?createdAfter=1559775880000&orderBy=desc:created
 
 ## 如何在PATCH請求中指定要更新的JSON欄位？{#how-do-i-indicate-a-json-field-to-update-in-a-patch-request}
 
-[!DNL Platform] API中的許多PATCH操作都使用[JSON Pointer](https://tools.ietf.org/html/rfc6901)字串來指示要更新的JSON屬性。 這些通常包含在使用[JSON Patch](https://tools.ietf.org/html/rfc6902)格式的請求負載中。 如需這些技術所需語法的詳細資訊，請參閱[API基礎指南](api-fundamentals.md)。
+[!DNL Platform] API中的許多PATCH操作使用[JSON Pointer](https://tools.ietf.org/html/rfc6901)字串來指示要更新的JSON屬性。 這些通常包含在使用[JSON Patch](https://tools.ietf.org/html/rfc6902)格式的請求負載中。 如需這些技術所需語法的詳細資訊，請參閱[API基礎指南](api-fundamentals.md)。
 
 ## 我可以使用Postman呼叫[!DNL Platform] API嗎？{#how-do-i-use-postman-to-make-calls-to-platform-apis}
 
@@ -197,7 +197,7 @@ GET /batches?createdAfter=1559775880000&orderBy=desc:created
 }
 ```
 
-當提供的API金鑰標題(`x-api-key`)的值無效時，會顯示此錯誤訊息。 請確定您已正確輸入密鑰，然後再次嘗試。 如果您不知道您的API金鑰，可在[Adobe I/O Console](https://console.adobe.io)中找到：在&#x200B;**Integrations**&#x200B;標籤中，導覽至&#x200B;**Overview**&#x200B;區段以取得特定整合，以在&#x200B;**Client Credentials**&#x200B;下尋找API金鑰。
+當提供的API金鑰標題(`x-api-key`)的值無效時，會顯示此錯誤訊息。 請確定您已正確輸入密鑰，然後再次嘗試。 如果您不知道您的API金鑰，則可在[Adobe I/O控制台](https://console.adobe.io)中找到：在&#x200B;**Integrations**&#x200B;標籤中，導覽至&#x200B;**Overview**&#x200B;區段以取得特定整合，以在&#x200B;**Client Credentials**&#x200B;下尋找API金鑰。
 
 
 ### 遺失標題
@@ -220,7 +220,7 @@ GET /batches?createdAfter=1559775880000&orderBy=desc:created
 }
 ```
 
-當使用者或Adobe I/O整合（由`Authorization`標題中的[存取Token](#how-do-i-get-an-access-token)識別）無權呼叫[!DNL Experience Platform] API（位於`x-gw-ims-org-id`標題中）時，會顯示此錯誤訊息。 請確定您已在頁首中為您的IMS組織提供正確的ID，然後再次嘗試。 如果您不知道您的組織ID，可在[Adobe I/O Console](https://console.adobe.io)中找到它：在&#x200B;**Integrations**&#x200B;標籤中，導覽至&#x200B;**Overview**&#x200B;區段以取得特定整合，以在&#x200B;**Client Credentials**&#x200B;下尋找ID。
+當使用者或Adobe I/O整合（由`Authorization`標題中的[存取Token](#how-do-i-get-an-access-token)識別）無權呼叫[!DNL Experience Platform] API（用於`x-gw-ims-org-id`標題中提供的IMS組織）時，會顯示此錯誤訊息。 請確定您已在頁首中為您的IMS組織提供正確的ID，然後再次嘗試。 如果您不知道您的組織ID，可在[Adobe I/O控制台](https://console.adobe.io)中找到：在&#x200B;**Integrations**&#x200B;標籤中，導覽至&#x200B;**Overview**&#x200B;區段以取得特定整合，以在&#x200B;**Client Credentials**&#x200B;下尋找ID。
 
 ### 未指定有效的內容類型
 
@@ -245,10 +245,10 @@ GET /batches?createdAfter=1559775880000&orderBy=desc:created
 | 存取控制 | [存取控制API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/access-control.yaml) | [存取控制疑難排解指南](../access-control/troubleshooting-guide.md) |
 | Adobe Experience Platform資料擷取 | [[!DNL Data Ingestion API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml) | [批次擷取疑難排解](../ingestion/batch-ingestion/troubleshooting.md)<br><br>[指南串流擷取疑難排解指南](../ingestion/streaming-ingestion/troubleshooting.md) |
 | Adobe Experience Platform資料科學工作區 | [[!DNL Sensei Machine Learning API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml) | [[!DNL Data Science Workspace] 疑難排解指南](../data-science-workspace/troubleshooting-guide.md) |
-| Adobe Experience Platform資料治理 | [[!DNL Policy Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) |  |
+| Adobe Experience Platform資料管理 | [[!DNL Policy Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) |  |
 | Adobe Experience Platform Identity Service | [[!DNL Identity Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/id-service-api.yaml) | [[!DNL Identity Service] 疑難排解指南](../identity-service/troubleshooting-guide.md) |
 | Adobe Experience Platform查詢服務 | [[!DNL Query Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/qs-api.yaml) | [[!DNL Query Service] 疑難排解指南](../query-service/troubleshooting-guide.md) |
-| Adobe Experience Platform細分 | [[!DNL Segmentation API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/segmentation.yaml) |
+| Adobe Experience Platform Segmentation | [[!DNL Segmentation API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/segmentation.yaml) |
 | [!DNL Catalog Service] | [[!DNL Catalog Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml) |  |
 | [!DNL Experience Data Model] (XDM) | [[!DNL Schema Registry API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml) | [[!DNL XDM System] 常見問答集與疑難排解指南](../xdm/troubleshooting-guide.md) |
 | [!DNL Flow Service] ([!DNL Sources] 和 [!DNL Destinations]) | [[!DNL Flow Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) |  |
