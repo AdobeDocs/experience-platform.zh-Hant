@@ -15,7 +15,7 @@ ht-degree: 1%
 
 本入門指南引導您完成即時客戶資料平台（即時CDP）的示例實施。 您可以在設定自己的實作時，將它當做範例。 雖然本指南會顯示特定範例，但會連結至您建立設定時可使用的其他資訊。
 
-此範例說明Adobe Experience Platform提供的即時客戶資料平台，對下列各項的功能：
+此範例說明由Adobe Experience Platform提供支援的即時客戶資料平台對下列產品的強大功能：
 
 * 從多個來源收錄資料
 * 將它們合併為單一[!DNL real-time customer profile]
@@ -40,7 +40,7 @@ ht-degree: 1%
 
 為達成這些目標，行銷團隊必須能夠大規模管理客戶資料。
 
-借助由Adobe Experience Platform提供支援的即時CDP,Luma的行銷組織可以：
+借助由Adobe Experience Platform提供支援的即時CDP,Luma的營銷組織可以：
 
 1. 從分散的平台收集資料，並確保資料在下游可供其他行銷活動使用。
 1. 建立其消費者的單一即時檢視，不受資料來源的影響。
@@ -66,7 +66,7 @@ ht-degree: 1%
 
 ![image](assets/luma-site.png)
 
-資料在導覽時即時擷取，不僅會傳送至Adobe Analytics中的報表套裝，還會直接傳送至Adobe Experience Platform。 在收集資料時，您會開始根據[!DNL Experience Platform's real-time customer profile]中的行為資料，對消費者形成單一檢視。
+資料在導覽時即時擷取，不僅會傳送至Adobe Analytics的報表套裝，還會直接傳送至Adobe Experience Platform。 在收集資料時，您會開始根據[!DNL Experience Platform's real-time customer profile]中的行為資料，對消費者形成單一檢視。
 
 許多網站的訪客可能是舊有從Luma購買的客戶。  Luma必須個人化訊息傳遞和產品，以解決新訪客和回頭訪客以及已知客戶的問題。
 
@@ -76,11 +76,11 @@ ht-degree: 1%
 
 ![影像](assets/luma-sweatshirts.png)
 
-當客戶導覽以進一步瞭解這些產品時，這些產品檢視會收集在Adobe Analytics中，並傳送至[!DNL Experience Platform]。
+當客戶導覽以進一步瞭解這些產品時，這些產品檢視會收集在Adobe Analytics，並傳送至[!DNL Experience Platform]。
 
 <!--![image](assets/luma-shirt-detail.png)-->
 
-Luma可將訪客的行為對應至Adobe Experience Platform上的使用者個人檔案，並開始匯整該消費者行為的更豐富檢視。
+Luma可將訪客的行為對應至Adobe Experience Platform的使用者個人檔案，並開始匯整該消費者行為的更豐富檢視。
 
 ### 取得更詳細的客戶檢視
 
@@ -107,9 +107,9 @@ Sarah受到了忠誠的歡迎，並感謝她成為銅牌會員，獲得了更多
 
 ![影像](assets/luma-personal.png)
 
-Sarah會根據Adobe Experience Platform中的[!DNL Real-time Customer Profile]收到動態傳遞的個人化首頁體驗。
+Sarah會根據她在Adobe Experience Platform的[!DNL Real-time Customer Profile]，獲得動態傳遞的個人化首頁體驗。
 
-Adobe Target採用Adobe Sensei支援的個人化功能，可讓她看到相關內容，其中會考慮到她過去的購買行為，以及對跑步服裝和服裝的親和力。 Luma還根據她最近的瀏覽，為男性量身訂做男性跑步器材的目錄內容。
+她看到了相關內容，這要歸功於Adobe TargetAdobe Sensei推動的個人化，這個個人化考慮了她過去購買的服裝和服裝的親和力。 Luma還根據她最近的瀏覽，為男性量身訂做男性跑步器材的目錄內容。
 
 在下一頁，Sarah會看到精選產品，並根據她最近檢視的項目提供新的建議托盤。
 
@@ -117,9 +117,9 @@ Adobe Target採用Adobe Sensei支援的個人化功能，可讓她看到相關�
 
 ### 將客戶帶回來
 
-莎拉分心了，離開了網站，結束了她的工作。 Luma可以使用Adobe Experience Platform中的資料，協助她回到網站。
+莎拉分心了，離開了網站，結束了她的工作。 盧瑪可以利用她在Adobe Experience Platform的資料幫助她回到網站。
 
-Adobe Experience Platform提供即時客戶資料平台，專為客戶體驗管理而打造。 它可讓組織：
+由Adobe Experience Platform提供支援的即時客戶資料平台，專為客戶體驗管理而打造。 它可讓組織：
 
 * 簡化資料整合與啟動
 * 控制已知和未知的資料使用
@@ -133,7 +133,7 @@ Luma團隊在單一位置擁有所有行為和客戶資料。
 
 他們可以從下列所有來源擷取資料：
 
-* 現有的Adobe Experience Cloud解決方案資料
+* 現有Adobe Experience Cloud解決方案資料
 * 非Adobe來源，例如Luma的忠誠度計畫、客服中心和銷售點系統資料
 * 從Luma資料來源即時串流資料
 * 來自Adobe解決方案的即時資料（不需要新標籤）
@@ -175,7 +175,7 @@ Luma團隊在單一位置擁有所有行為和客戶資料。
 
 ### 為使用策略的收錄資料加標籤
 
-Luma有許多內部政策限制使用特定種類收集到的資訊，而且還必須遵守與資料使用相關的法律和隱私權相關的顧慮。 使用Adobe Experience Platform [!DNL Data Governance]，可將預先定義的資料使用標籤套用至資料集（以及這些資料集內的特定欄位），讓Luma根據特定的使用限制來分類其資料。
+Luma有許多內部政策限制使用特定種類收集到的資訊，而且還必須遵守與資料使用相關的法律和隱私權相關的顧慮。 使用Adobe Experience Platform[!DNL Data Governance]，可將預先定義的資料使用標籤套用至資料集（以及這些資料集內的特定欄位），讓Luma根據特定的使用限制來分類其資料。
 
 ![](assets/governance-labels.png)
 
@@ -191,7 +191,7 @@ Luma擁有的關於Sarah的所有個人檔案資訊都會顯示出來。 這包�
 
 | 類別 | 說明 |
 |---|---|
-| 身份 | 顯示在[!DNL Platform]中，Sarah與Luma之間跨通道和裝置的互動所連結的身分。 會顯示她來自網站的ECID。 她的身分也包含行動應用程式的ECID、電子郵件ID、最近新增[!DNL Microsoft Dynamics]資料集的CRM ID，以及從Luma忠誠度系統傳入Adobe Experience Platform的忠誠度ID。 |
+| 身份 | 顯示在[!DNL Platform]中，Sarah與Luma之間跨通道和裝置的互動所連結的身分。 會顯示她來自網站的ECID。 她的身分識別也包含其行動應用程式的ECID、電子郵件ID、最近新增[!DNL Microsoft Dynamics]資料集的CRM ID，以及從Luma忠誠度系統傳入Adobe Experience Platform的忠誠度ID。 |
 | 事件 | 顯示Sarah與Luma品牌的所有互動資料。 這包括她剛剛檢視的項目、她過去檢視的任何內容、她收到的電子郵件、她與客服中心的互動，以及每個互動的通道和裝置。 |
 
 Real-time CDP配置檔案將Luma營銷團隊的工作流程從數週縮減為幾分鐘，並基於此360度客戶視圖，為個人化開啟可能性。 此描述檔會合併她登入前瀏覽網站時的行為資料，以及她現有的客戶描述檔，以建立Sarah的完整檢視。
@@ -200,7 +200,7 @@ Real-time CDP配置檔案將Luma營銷團隊的工作流程從數週縮減為幾
 
 ## 區段
 
-強大的Adobe Experience Platform細分功能可讓行銷人員根據[!DNL Real-time Customer Profile]中擷取的資料，結合屬性、事件和現有細分。
+強大的Adobe Experience Platform區段功能可讓行銷人員根據[!DNL Real-time Customer Profile]中擷取的資料，結合屬性、事件和現有區段。
 
 <!-- ![image](assets/luma-segments.png) -->
 
@@ -236,7 +236,7 @@ Loyalty member
 選擇&#x200B;**[!UICONTROL 發送到目標]**。
 
 在即時CDP中，Luma可以順暢地根據受眾細分採取行動，實現個人化。\
-在此，我們看到Luma將此目的地傳送至Adobe和非Adobe解決方案的所有可用目的地：
+在此，我們看到Luma將此目標(包括Adobe和非Adobe解決方案)發送到的所有目標：
 
 ![影像](assets/luma-dest.png)
 
@@ -247,7 +247,7 @@ Loyalty member
 * Google，用於顯示
 
    <!--* Facebook -->
-* Adobe Campaign，適用於電子郵件
+* Adobe Campaign，請寄電子郵件
 
 <!-- ![image](assets/luma-sched-dest.png) -->
 
@@ -267,7 +267,7 @@ Loyalty member
 
 ### 強制目標的資料使用策略
 
-Adobe Experience Platform包含隱私權與安全性控制，可判斷區段是否可啟動至特定目標。 啟用或限制啟動的依據是建立時指派給目的地的行銷目的，以及貴組織定義的資料使用政策。
+Adobe Experience Platform包含隱私權和安全性控制，以判斷區段是否可啟動至特定目的地。 啟用或限制啟動的依據是建立時指派給目的地的行銷目的，以及貴組織定義的資料使用政策。
 
 如果您的活動違反原則，會出現警告。 此警告包含資料世系資訊，可協助您識別違反原則的原因，以及您可以採取哪些措施來解決違規問題。
 
@@ -285,7 +285,7 @@ Sarah在自己的行動裝置上瀏覽社交媒體網站，然後看到Luma廣�
 
 之後，她開啟電子郵件，看到重新定向的電子郵件。 她從電子郵件中選擇Luma的連結。
 
-這個連結會帶Sarah前往行動Luma首頁，她在首頁看到Adobe Target提供的高度個人化體驗。
+這條連結將Sarah帶到移動Luma首頁，她在那裡看到了由Adobe Target提供的高度個性化的體驗。
 
 * 她受到銅獎的歡迎。
 * 她看到了&quot;禮物&quot;的訊息。
@@ -298,7 +298,7 @@ Sarah在自己的行動裝置上瀏覽社交媒體網站，然後看到Luma廣�
 
 ## 分析配置檔案
 
-Luma行銷人員使用Adobe Experience Platform在即時CDP儀表板上查看禮品贈送部分。 他們看到這項計畫的成果，並看到它在不斷增長。 客戶會回應優惠，並投入更多資金。
+Luma行銷人員使用Adobe Experience Platform來查看即時CDP儀表板上的禮品贈送部分。 他們看到這項計畫的成果，並看到它在不斷增長。 客戶會回應優惠，並投入更多資金。
 
 這些洞見讓行銷人員能夠對此信號採取行動，而CDP中提供此資料並讓像Sarah這樣的客戶加入此細分，也為此提供了動力。
 
