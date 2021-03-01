@@ -52,12 +52,12 @@ ht-degree: 33%
    * IAB透明度和同意框架2.0 {#iab-tcf}
       * [概述](consent/iab-tcf/overview.md)
       * [與Adobe Experience Platform Launch整合](consent/iab-tcf/with-launch.md)
-      * [不需Adobe Experience Platform Launch即可整合](consent/iab-tcf/without-launch.md)
-* Adobe Experience Platform Launch {#extension}的網頁SDK擴充功能
+      * [整合，不需Adobe Experience Platform Launch](consent/iab-tcf/without-launch.md)
+* 適用於Adobe Experience Platform Launch的Web SDK擴充功能{#extension}
    * [網頁SDK擴充功能](extension/web-sdk-extension.md)
    * [動作類型](extension/action-types.md)
    * [資料元素類型](extension/data-element-types.md)
    * [網頁SDK擴充功能版本注意事項](extension/web-sdk-ext-release-notes.md)
-* [發行說明](release-notes.md)
+* [版本注意事項](release-notes.md)
 * [常見問題](web-sdk-faq.md)
 * [部落格文章](blog-posts.md)
