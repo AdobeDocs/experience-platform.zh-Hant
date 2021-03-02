@@ -4,7 +4,7 @@ title: 檢視目標詳細資訊
 description: '個別目的地的詳細資訊頁面提供目的地詳細資訊的概述，例如目的地名稱、ID、對應至目的地的區段，以及編輯啟動和啟用和停用資料流的控制項。 '
 seo-description: '個別目的地的詳細資訊頁面提供目的地詳細資訊的概述，例如目的地名稱、ID、對應至目的地的區段，以及編輯啟動和啟用和停用資料流的控制項。 '
 translation-type: tm+mt
-source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
+source-git-commit: 9305936ca1e73821b2fe948ff1a17a7168840cba
 workflow-type: tm+mt
 source-wordcount: '740'
 ht-degree: 1%
@@ -14,7 +14,7 @@ ht-degree: 1%
 
 # 檢視目標詳細資訊
 
-在Adobe Experience Platform使用者介面中，您可以檢視和監控目標的屬性和活動。 這些詳細資訊包括目標的名稱和ID、啟用或停用目標的控制項，以及更多功能。 批次目的地的詳細資訊還包括已啟動描述檔記錄的度量和資料流執行的歷史記錄。
+在Adobe Experience Platform用戶介面中，您可以查看和監視目標的屬性和活動。 這些詳細資訊包括目標的名稱和ID、啟用或停用目標的控制項，以及更多功能。 批次目的地的詳細資訊還包括已啟動描述檔記錄的度量和資料流執行的歷史記錄。
 
 >[!NOTE]
 >
@@ -79,7 +79,7 @@ ht-degree: 1%
 
 ![](../assets/ui/details-page/dataflow.png)
 
-## [!UICONTROL 啟動資料]
+## [!UICONTROL 啟動資料] {#activation-data}
 
 [!UICONTROL 啟動資料]標籤會顯示已映射至目的地的區段清單，包括其開始日期和結束日期（如果適用）。 若要檢視特定區段的詳細資訊，請從清單中選取其名稱。
 
