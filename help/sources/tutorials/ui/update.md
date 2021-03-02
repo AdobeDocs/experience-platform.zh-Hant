@@ -1,12 +1,12 @@
 ---
-keywords: Experience Platform;home；熱門主題；更新帳戶
+keywords: Experience Platform；首頁；熱門主題；更新帳戶
 description: 在某些情況下，可能需要更新現有來源帳戶的詳細資訊。 「來源」工作區可讓您新增、編輯和刪除現有批次或串流連線的詳細資訊，包括其名稱、說明和認證。
 solution: Experience Platform
 title: 在UI中更新來源連線帳戶詳細資訊
-topic: overview
-type: Tutorial
+topic: 概述
+type: 教學課程
 translation-type: tm+mt
-source-git-commit: ac477ee8053b30e88a38800ebe33fc9b5a520308
+source-git-commit: 04cf2cc1f15d9a673a0753643fc6263bcaf41464
 workflow-type: tm+mt
 source-wordcount: '681'
 ht-degree: 1%
@@ -24,14 +24,14 @@ ht-degree: 1%
 
 ## 快速入門
 
-本教學課程需要對Adobe Experience Platform的下列元件有正確的認識：
+本教學課程需要對Adobe Experience Platform的下列部分有正確的理解：
 
-- [來源](../../home.md):DNL Experience Platform可讓您從各種來源擷取資料，同時提供您使用平台服務來建構、標示和增強傳入資料的能力。
-- [沙盒](../../../sandboxes/home.md):DNL Experience Platform提供虛擬沙盒，可將單一Platform實例分割為獨立的虛擬環境，以協助開發和發展數位體驗應用程式。
+- [來源](../../home.md):Experience Platform可讓您從各種來源擷取資料，同時讓您能夠使用平台服務來建構、標示並增強傳入資料。
+- [沙盒](../../../sandboxes/home.md):Experience Platform提供虛擬沙盒，可將單一平台實例分割為獨立的虛擬環境，以協助開發和發展數位體驗應用程式。
 
 ## 更新帳戶
 
-登入[Experience Platform UI](https://platform.adobe.com)，然後從左側導覽器選擇&#x200B;**[!UICONTROL Sources]**&#x200B;以存取[!UICONTROL Sources]工作區。 從頂部標題中選擇&#x200B;**[!UICONTROL Accounts]**&#x200B;以查看現有帳戶。
+登入[Experience PlatformUI](https://platform.adobe.com)，然後從左側導覽器選擇&#x200B;**[!UICONTROL 源]**&#x200B;以存取[!UICONTROL 源]工作區。 從頂部標題中選擇&#x200B;**[!UICONTROL Accounts]**&#x200B;以查看現有帳戶。
 
 ![目錄](../../images/tutorials/update/catalog.png)
 
