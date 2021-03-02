@@ -6,9 +6,9 @@ topic: 概述
 type: 教學課程
 description: 瞭解如何使用Flow Service API將Adobe Experience Platform連線至AmazonKinesis帳戶。
 translation-type: tm+mt
-source-git-commit: 4f3d88e1241fd19dc9963f34dd60086ae2135557
+source-git-commit: ed14fe464a4dc82f54902c8dc92fe00bc2a5381e
 workflow-type: tm+mt
-source-wordcount: '548'
+source-wordcount: '561'
 ht-degree: 2%
 
 ---
@@ -92,8 +92,9 @@ curl -X POST \
         "auth": {
             "specName": "Aws Kinesis authentication credentials",
             "params": {
-                "accessKeyId": "accessKeyId",
-                "secretKey": "secretKey"
+                "accessKeyId": "{ACCESS_KEY_ID}",
+                "secretKey": "{SECRET_KEY}",
+                "region: "{REGION}
             }
         },
         "connectionSpec": {
@@ -107,7 +108,7 @@ curl -X POST \
 | -------- | ----------- |
 | `auth.params.accessKeyId` | [!DNL Kinesis]帳戶的存取金鑰ID。 |
 | `auth.params.secretKey` | [!DNL Kinesis]帳戶的機密存取金鑰。 |
-| `auth.params.region` | [!DNL Kinesis]帳戶的地區。 |
+| `auth.params.region` | [!DNL Kinesis]帳戶的地區。 如需地區的詳細資訊，請參閱[IP位址允許清單](../../../../ip-address-allow-list.md)上的檔案 |
 | `connectionSpec.id` | [!DNL Kinesis]連接規範ID:`86043421-563b-46ec-8e6c-e23184711bf6` |
 
 **回應**
