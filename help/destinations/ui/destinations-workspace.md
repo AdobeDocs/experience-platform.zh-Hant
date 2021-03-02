@@ -2,11 +2,11 @@
 keywords: 平台；目標；目標工作區；工作區；ui；目標ui；目錄；目標目錄；
 title: 目標工作區概觀
 description: 「目標」工作區包含4個部分：目錄、瀏覽、帳戶和系統視圖，這些部分在以下各節中介紹。
-seo-description: 在Adobe Experience Platform中，從左側導覽列選取「目標」以存取目標工作區。
+seo-description: 在Adobe Experience Platform，從左側導覽列選擇「目標」以存取目標工作區。
 translation-type: tm+mt
-source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
+source-git-commit: 9305936ca1e73821b2fe948ff1a17a7168840cba
 workflow-type: tm+mt
-source-wordcount: '910'
+source-wordcount: '939'
 ht-degree: 2%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 2%
 
 # 目標工作區概述{#destinations-workspace}
 
-在Adobe Experience Platform中，從左側導覽列選擇&#x200B;**[!UICONTROL 目標]**&#x200B;以存取[!UICONTROL 目標]工作區。
+在Adobe Experience Platform，從左側導航欄選擇&#x200B;**[!UICONTROL 目標]**&#x200B;以訪問[!UICONTROL 目標]工作區。
 
 [!UICONTROL 目標]工作區由以下各節介紹的四個部分組成：[!UICONTROL 目錄]、[!UICONTROL 瀏覽]、[!UICONTROL 帳戶]和[!UICONTROL 系統視圖]。
 
@@ -64,7 +64,7 @@ ht-degree: 2%
 | 元素 | 說明 |
 ---------|----------
 | [!UICONTROL 平台] | 您已設定連接的目標。 |
-| [!UICONTROL 連線類型] | 表示與儲存桶或目標的連接類型。 <ul><li>對於電子郵件行銷目標：可以是S3或FTP。</li><li>針對即時廣告目的地：伺服器對伺服器</li><li>對於Amazon S3雲端儲存空間目標：存取金鑰 </li><li>對於SFTP雲端儲存空間目標：SFTP的基本驗證</li></ul> |
+| [!UICONTROL 連線類型] | 表示與儲存桶或目標的連接類型。 <ul><li>對於電子郵件行銷目標：可以是S3或FTP。</li><li>針對即時廣告目的地：伺服器對伺服器</li><li>針對AmazonS3雲端儲存空間目標：存取金鑰 </li><li>對於SFTP雲端儲存空間目標：SFTP的基本驗證</li></ul> |
 | [!UICONTROL 使用者名稱] | 在[連接目標嚮導](../catalog/email-marketing/overview.md#connect-destination)中選擇的用戶名。 |
 | [!UICONTROL 目的地] | 表示與為目標建立的基本資訊連接的唯一成功目標流的數量。 |
 | [!UICONTROL 已驗證] | 授權此目的地的連線的日期。 |
@@ -97,7 +97,7 @@ ht-degree: 2%
 | [!UICONTROL 目標] | 您為啟動流程選擇的目標平台。 |
 | [!UICONTROL 連線類型] | 表示與儲存桶或目標的連接類型。 <ul><li>對於電子郵件行銷目標：可以是S3或FTP。</li><li>針對即時廣告目的地：伺服器對伺服器</li></ul> |
 | [!UICONTROL 使用者名稱] | 您為目標流選擇的帳戶憑據。 |
-| [!UICONTROL 區段] | 要啟動至此目標的區段數。 |
+| [!UICONTROL 啟動資料] | 指出要啟動至此目標的區段數。 選取此控制項，以進一步瞭解已啟動的區段。 如需已啟動區段的詳細資訊，請參閱目標詳細資訊頁面中的[啟動資料](/help/destinations/ui/destination-details-page.md#activation-data)。 |
 | [!UICONTROL 已建立] | 建立啟動流程至目的地的日期和UTC時間。 |
 | [!UICONTROL 狀態] | `Active` 或 `Inactive`. 指出資料目前是否正在啟動至此目標。 若要編輯狀態，請參閱[停用啟動](./activate-destinations.md#disable-activation)。 |
 
@@ -109,7 +109,7 @@ ht-degree: 2%
 
 ## [!UICONTROL 系統視圖] {#system-view}
 
-**[!UICONTROL 系統檢視]**&#x200B;標籤會顯示您在Adobe Experience Platform中設定之啟動流程的圖形表示。
+**[!UICONTROL 系統視圖]**&#x200B;頁籤顯示您在Adobe Experience Platform設定的激活流的圖形表示。
 
 ![資料流1](../assets/ui/workspace/data-flows1.png)
 
