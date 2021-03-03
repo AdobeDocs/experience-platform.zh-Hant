@@ -3,11 +3,12 @@ product: experience-platform
 audience: user
 user-guide-title: 檢視範圍指南
 user-guide-description: 透過使用統計量度和事件通知來監控 Platform 活動。
+feature: 資料管理
 translation-type: tm+mt
-source-git-commit: 92e3edaba5793d18e826d3e3f3151ba8a51fce53
+source-git-commit: ac6935f09f620ea55cf8f612ff0a1fba503b5e17
 workflow-type: tm+mt
-source-wordcount: '53'
-ht-degree: 47%
+source-wordcount: '55'
+ht-degree: 45%
 
 ---
 
