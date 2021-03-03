@@ -5,9 +5,9 @@ title: 資料準備映射函式
 topic: 概述
 description: 本文檔介紹與「資料準備」一起使用的映射功能。
 translation-type: tm+mt
-source-git-commit: fd2dffd5b8957833b670e9cb434517bcb0f886a3
+source-git-commit: 6a541cca307dec8937c2d49470e8bcab770c80c7
 workflow-type: tm+mt
-source-wordcount: '3625'
+source-wordcount: '3719'
 ht-degree: 3%
 
 ---
@@ -79,146 +79,148 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 
 | 函數 | 說明 | 參數 | 語法 | 運算式 | 範例輸出 |
 -------- | ----------- | ---------- | -------| ---------- | -------------
-| sha1 | 使用安全散列算法1(SHA-1)獲取輸入並生成散列值。 | <ul><li>輸入：**必需**&#x200B;要散列的純文字檔案。</li><li>字元集：*可選*&#x200B;字元集的名稱。 可能的值包括UTF-8、UTF-16、ISO-8859-1和US-ASCII。</li></ul> | sha1(INPUT、CHARSET) | sha1(&quot;my text&quot;、&quot;UTF-8&quot;) | c3599c11e47719df18a24 &#x200B;48690840c5dfcce3c80 |
-| sha256 | 使用安全散列算法256(SHA-256)獲取輸入並生成散列值。 | <ul><li>輸入：**必需**&#x200B;要散列的純文字檔案。</li><li>字元集：*可選*&#x200B;字元集的名稱。 可能的值包括UTF-8、UTF-16、ISO-8859-1和US-ASCII。</li></ul> | sha256(INPUT, CHARSET) | sha256(&quot;my text&quot;、&quot;UTF-8&quot;) | 7330d2b39ca35eaf4cb95fc846c21 ee6a39af&#x200B;698154a83a586ee270a0d372104 |
-| sha512 | 使用安全散列算法512(SHA-512)獲取輸入並生成散列值。 | <ul><li>輸入：**必需**&#x200B;要散列的純文字檔案。</li><li>字元集：*可選*&#x200B;字元集的名稱。 可能的值包括UTF-8、UTF-16、ISO-8859-1和US-ASCII。</li></ul> | sha512（輸入、字元集） | sha512(&quot;my text&quot;、&quot;UTF-8&quot;) | a3d7e45a0d9be5fd4e4b9a3b8c9c2163c21ef &#x200B;708bf11b4232bb21d2a8704ada2cd7b367dd078a89 &#x200B;a5c908cfe377aceb1072a7b386b7d4fd2ff68a8fd24d16 |
-| md5 | 使用MD5獲取輸入並生成散列值。 | <ul><li>輸入：**必需**&#x200B;要散列的純文字檔案。</li><li>字元集：*可選*&#x200B;字元集的名稱。 可能的值包括UTF-8、UTF-16、ISO-8859-1和US-ASCII。 </li></ul> | md5（輸入、字元集） | md5(&quot;my text&quot;, &quot;UTF-8&quot;) | d3b96ce8c9fb4 &#x200B;e9bd0198d03ba6852c7 |
-| crc32 | 輸入使用循環冗餘校驗(CRC)算法來生成32位循環碼。 | <ul><li>輸入：**必需**&#x200B;要散列的純文字檔案。</li><li>字元集：*可選*&#x200B;字元集的名稱。 可能的值包括UTF-8、UTF-16、ISO-8859-1和US-ASCII。</li></ul> | CRC32(INPUT, CHARSET) | crc32(&quot;my text&quot;, &quot;UTF-8&quot;) | 8df92e80 |
+| sha1 | 使用安全雜湊算法1(SHA-1)輸入並產生雜湊值。 | <ul><li>輸入：**必要**&#x200B;要雜湊的純文字檔案。</li><li>字元集：*可選*&#x200B;字元集的名稱。 可能的值包括UTF-8、UTF-16、ISO-8859-1和US-ASCII。</li></ul> | sha1(INPUT, CHARSET) | sha1(&quot;my text&quot;, &quot;UTF-8&quot;) | c3599c11e47719df18a24 &#x200B; 48690840c5dfcce3c80 |
+| sha256 | 使用安全雜湊演算法256(SHA-256)輸入並產生雜湊值。 | <ul><li>輸入：**必要**&#x200B;要雜湊的純文字檔案。</li><li>字元集：*可選*&#x200B;字元集的名稱。 可能的值包括UTF-8、UTF-16、ISO-8859-1和US-ASCII。</li></ul> | sha256(INPUT, CHARSET) | sha256(&quot;my text&quot;, &quot;UTF-8&quot;) | 7330d2b39ca35eaf4cb95fc846c21&#x200B; e6a39af698154a83a586ee270a0d372104 |
+| sha512 | 使用安全雜湊演算法512(SHA-512)輸入並產生雜湊值。 | <ul><li>輸入：**必要**&#x200B;要雜湊的純文字檔案。</li><li>字元集：*可選*&#x200B;字元集的名稱。 可能的值包括UTF-8、UTF-16、ISO-8859-1和US-ASCII。</li></ul> | sha512(INPUT, CHARSET) | sha512(&quot;my text&quot;, &quot;UTF-8&quot;) | a3d7e45a0d9be5fd4e4b9a3b8c9c2163c21ef &#x200B; 708bf11b4232b21d2a8704ada2cdcd7b367dd078a89 &#x200B; a5c908cfe377aceb1072a7b386b7d4fd2ff68a8fd24d16 |
+| md5 | 使用MD5輸入並產生雜湊值。 | <ul><li>輸入：**必要**&#x200B;要雜湊的純文字檔案。</li><li>字元集：*可選*&#x200B;字元集的名稱。 可能的值包括UTF-8、UTF-16、ISO-8859-1和US-ASCII。 </li></ul> | md5(INPUT, CHARSET) | md5(&quot;my text&quot;, &quot;UTF-8&quot;) | d3b96ce8c9fb4 &#x200B; e9bd0198d03ba6852c7 |
+| crc32 | 輸入使用循環冗餘校驗(CRC)算法產生32位循環碼。 | <ul><li>輸入：**必要**&#x200B;要雜湊的純文字檔案。</li><li>字元集：*可選*&#x200B;字元集的名稱。 可能的值包括UTF-8、UTF-16、ISO-8859-1和US-ASCII。</li></ul> | crc32(INPUT, CHARSET) | crc32(&quot;my text&quot;, &quot;UTF-8&quot;) | 8df92e80 |
 
 ### URL函式
 
 >[!NOTE]
 >
->請向左/向右滾動以查看表的完整內容。
+>請向左／向右滾動以查看表的完整內容。
 
 | 函數 | 說明 | 參數 | 語法 | 運算式 | 範例輸出 |
 -------- | ----------- | ---------- | -------| ---------- | -------------
-| get_url_protocol | 從給定URL返回協定。 如果輸入無效，則返回null。 | <ul><li>URL:**必需**&#x200B;需要從中提取協定的URL。</li></ul> | get_url_protocol&#x200B;(URL) | get_url_protocol(&quot;https://platform &#x200B; .adobe.com/home&quot;) | https |
-| get_url_host | 返回給定URL的主機。 如果輸入無效，則返回null。 | <ul><li>URL:**必需**&#x200B;需要提取主機的URL。</li></ul> | get_url_host&#x200B;(URL) | get_url_host&#x200B;(&quot;https://platform &#x200B;.adobe.com/home&quot;) | platform.adobe.com |
-| get_url_port | 返回給定URL的埠。 如果輸入無效，則返回null。 | <ul><li>URL:**必需**&#x200B;需要從中提取埠的URL。</li></ul> | get_url_port(URL) | get_url_port&#x200B;(&quot;sftp://example.com//home/ &#x200B; joe/employee.csv&quot;) | 22 |
-| get_url_path | 返回給定URL的路徑。 預設情況下，返回完整路徑。 | <ul><li>URL:**必需**&#x200B;需要從中提取路徑的URL。</li><li>完整路徑(_P):*可選*&#x200B;一個布爾值，它確定是否返回完整路徑。 如果設定為false，則只返迴路徑的結尾。</li></ul> | get_url_path&#x200B;(URL, FULL_PATH) | get_url_path&#x200B;(&quot;sftp://example.com// &#x200B; home/joe/employee.csv&quot;) | &quot;//home/joe/&#x200B; employee.csv&quot; |
-| get_url_query_str | 返回給定URL的查詢字串。 | <ul><li>URL:**必需**&#x200B;您嘗試從中獲取查詢字串的URL。</li><li>錨點：**必需**&#x200B;確定將對查詢字串中的錨點執行什麼操作。 可以是三個值之一：&quot;retain&quot;、&quot;remove&quot;或&quot;append&quot;。<br><br>如果值為「retain」，則錨點將附加到返回的值。<br>如果值為&quot;remove&quot;，則錨點將從返回的值中刪除。<br>如果值為「append」，則錨點將作為單獨的值返回。</li></ul> | get_url_query_str&#x200B;(URL, ANCHOR) | geturl&#x200B;_str&#x200B;(&quot;foo://example.com:8042/over/there?ret &#x200B;name&quot;,&quot;retar&quot;&#x200B;,<br>retur_ret_ret_get nose&quot;,&lt;aur_url &#x200B;name#nose&quot;, &quot;append&quot;)<br> | `{"name": "ferret#nose"}`<br>`{"name": "ferret"}`<br>`{"name": "ferret", "_anchor_": "nose"}` |
+| get_url_protocol | 從指定URL傳回通訊協定。 如果輸入無效，則返回null。 | <ul><li>URL:**必要**&#x200B;需要提取協定的URL。</li></ul> | get_url_protocol&#x200B;(URL) | get_url_protocol(&quot;https://platform &#x200B; .adobe.com/home&quot;) | https |
+| get_url_host | 傳回指定URL的主機。 如果輸入無效，則返回null。 | <ul><li>URL:**必要**&#x200B;需要提取主機的URL。</li></ul> | get_url_host&#x200B;(URL) | get_url_host&#x200B;(&quot;https://platform &#x200B; .adobe.com/home&quot;) | platform.adobe.com |
+| get_url_port | 傳回指定URL的連接埠。 如果輸入無效，則返回null。 | <ul><li>URL:**必要**&#x200B;需要從中提取埠的URL。</li></ul> | get_url_port(URL) | get_url_port&#x200B;(&quot;sftp://example.com//home/ &#x200B; joe/employee.csv&quot;) | 22 |
+| get_url_path | 傳回指定URL的路徑。 預設會傳回完整路徑。 | <ul><li>URL:**必要**&#x200B;需要擷取路徑的URL。</li><li>完整路徑：*可選*&#x200B;一個布爾值，它確定是否返回完整路徑。 如果設為false，則只會傳迴路徑的結尾。</li></ul> | get_url_path&#x200B;(URL, FULL_PATH) | get_url_path&#x200B;(&quot;sftp://example.com// &#x200B; home/joe/employee.csv&quot;) | &quot;//home/joe/&#x200B; employee.csv&quot; |
+| get_url_query_str | 傳回指定URL的查詢字串。 | <ul><li>URL:**必要**&#x200B;您嘗試從中取得查詢字串的URL。</li><li>錨點：**Required**&#x200B;決定如何使用查詢字串中的錨點。 可以是三個值之一：&quot;retain&quot;、&quot;remove&quot;或&quot;append&quot;。<br><br>如果值為&quot;retain&quot;，則錨點會附加至傳回的值。<br>如果值為&quot;remove&quot;，則錨點將從傳回的值中移除。<br>如果值是「附加」，則錨點會傳回為個別值。</li></ul> | get_url_query_str&#x200B;(URL, ANCHOR) | get_url_&#x200B;str(&quot;foo://example.com:8042&#x200B;/over/there?name&#x200B; nose&quot;, &quot;retain&quot;)&lt;a0/&#x200B;>get_url_str&#x200B;=get_query ronesi&quot;, &quot;ret_ret other?name=ferret#nosi&quot;)<br>get_url_url_url_ur_r_0(8_rerer_&#x200B;_serer_0(8_serererererer(2 foo://example.com#nose&quot;, &quot;append&quot;)<br> | `{"name": "ferret#nose"}`<br>`{"name": "ferret"}`<br>`{"name": "ferret", "_anchor_": "nose"}` |
 
 ### 日期和時間函式
 
 >[!NOTE]
 >
->請向左/向右滾動以查看表的完整內容。 有關`date`函式的詳細資訊，請參閱[date函式指南](./dates.md)。
+>請向左／向右滾動以查看表的完整內容。 有關`date`函式的詳細資訊，請參閱[date函式指南](./dates.md)。
 
 | 函數 | 說明 | 參數 | 語法 | 運算式 | 範例輸出 |
 -------- | ----------- | ---------- | -------| ---------- | -------------
 | now | 檢索當前時間。 |  | now() | now() | `2020-09-23T10:10:24.556-07:00[America/Los_Angeles]` |
 | timestamp | 檢索當前Unix時間。 |  | timestamp() | timestamp() | 1571850624571 |
-| 格式 | 根據指定的格式設定輸入日期的格式。 | <ul><li>日期：**必需**&#x200B;要格式化的輸入日期（作為ZonedDateTime對象）。</li><li>格式：**必需**&#x200B;要將日期更改為的格式。</li></ul> | 格式（日期，格式） | 格式(2019-10-23T11:24:00+00:00, &quot;yyyy-MM-dd HH:mm:ss&quot;) | &quot;2019-10-23 11:24:35&quot; |
-| 格式 | 根據指定的格式將時間戳轉換為日期字串。 | <ul><li>時間戳：**必需**&#x200B;要格式化的時間戳。 此操作以毫秒為單位。</li><li>格式：**必需**&#x200B;要將時間戳更改為的格式。</li></ul> | dformat&#x200B;(TIMESTAMP, FORMAT) | dformat(1571829875, &quot;dd-MMM-yyyy hh:mm&quot;) | 「2019年10月23日11:24」 |
-| 日期 | 將日期字串轉換為ZonedDateTime對象（ISO 8601格式）。 | <ul><li>日期：**必需**&#x200B;表示日期的字串。</li><li>格式：**必需**&#x200B;表示日期格式的字串。</li><li>預設日期：**必需**&#x200B;如果提供的日期為空，則返回預設日期。</li></ul> | date(DATE、FORMAT、DEFAULT_DATE) | date(&quot;2019-10-23 11:24&quot;, &quot;yyyy-MM-dd HH:mm&quot;, now()) | &quot;2019-10-23T11:24Z&quot; |
-| 日期 | 將日期字串轉換為ZonedDateTime對象（ISO 8601格式）。 | <ul><li>日期：**必需**&#x200B;表示日期的字串。</li><li>格式：**必需**&#x200B;表示日期格式的字串。</li></ul> | 日期（日期，格式） | date(&quot;2019-10-23 11:24&quot;, &quot;yyyy-MM-dd HH:mm&quot;) | &quot;2019-10-23T11:24Z&quot; |
-| 日期 | 將日期字串轉換為ZonedDateTime對象（ISO 8601格式）。 | <ul><li>日期：**必需**&#x200B;表示日期的字串。</li></ul> | 日期（日期） | 日期(&quot;2019-10-23 11:24&quot;) | &quot;2019-10-23T11:24Z&quot; |
-| 日期/部分 | 檢索日期的部分。 支援以下元件值：<br><br>&quot;year&quot;<br>&quot;yyyy&quot;<br>&quot;yy&quot;<br><br>&quot;quarter&quot;<br>&quot;qq&quot;<br>&quot;q&quot;<br><br>&quot;month&quot;<br>&quot;mm&quot;<br>&quot;m&quot;<br><br>&quot;dayofyear&quot;<br>&quot;&lt;dy>&quot;y&quot;<br><br>&quot;day&quot;<br>&quot;dd&quot;<br>&quot;d&quot;<br><br>&quot;week&quot;<br>&quot;w&quot;<br>&quot;w&quot;<br><br>&quot;weekd&quot;<br>&quot;dw&quot;<br>&quot;w&quot;<br><br>&quot;小時&quot;<br>&quot;hh&quot;<br>&quot;hh24&quot;<br>&quot;hh12&quot;<br><br>&quot;分鐘&quot;<br>&quot;mi&quot;<br>&quot;n&quot;<br><br>&quot;秒&quot;a29/>&quot;ss&quot;<br>&quot;s&quot;<br><br>&quot;miss&quot;<br>&quot;ms&quot;<br><br> | <ul><li>元件：**必需**&#x200B;表示日期部分的字串。 </li><li>日期：**必需**&#x200B;日期，採用標準格式。</li></ul> | date_part&#x200B;（元件，日期） | date_part(&quot;MM&quot;, date(&quot;2019-10-17 11:55:12&quot;) | 10 |
-| set_date_part | 在給定日期替換元件。 接受以下元件：<br><br>&quot;year&quot;<br>&quot;yyyy&quot;<br>&quot;yy&quot;<br><br>&quot;month&quot;<br>&quot;mm&quot;<br>&quot;m&quot;<br><br>&quot;day&quot;<br>&quot;dd&quot;<br>&quot;d&quot;<br><br>&quot;h&quot;<br><br>&quot;minute&quot;<br>&quot;mi&quot;<br>&quot;n&quot;<br><br>&quot;second&quot;<br>&quot;ss&quot;<br>&quot;s&quot;<br> | <ul><li>元件：**必需**&#x200B;表示日期部分的字串。 </li><li>值：**必需**&#x200B;為給定日期為元件設定的值。</li><li>日期：**必需**&#x200B;日期，採用標準格式。</li></ul> | set_date_part &#x200B;(COMPONENT, VALUE, DATE) | set_date_part(&quot;m&quot;, 4, date(&quot;2016-11-09T11:44:44.797&quot;) | &quot;2016-04-09T11:44:44.797&quot; |
-| make_date_time | 從部件建立日期。 此函式也可以使用make_timestamp來誘導。 | <ul><li>年：**必需**&#x200B;年，以四位數寫成。</li><li>月：**必填**&#x200B;月份。 允許的值為1到12。</li><li>日：**必填**&#x200B;天。 允許的值為1到31。</li><li>小時：**必需**&#x200B;小時。 允許的值為0到23。</li><li>分鐘：**必需**&#x200B;分鐘。 允許的值為0到59。</li><li>納秒：**必需**&#x200B;納秒值。 允許的值為0到99999999。</li><li>時區：**必需**&#x200B;日期時間的時區。</li></ul> | make_date_time&#x200B;(YEAR、MONTH、DAY、HOUR、MINUTE、SECOND、NS、TIMEZONE) | make_date_time&#x200B;(2019、10、17、11、55、12、999，「America/Los_Angeles」) | `2019-10-17T11:55:12.0&#x200B;00000999-07:00[America/Los_Angeles]` |
-| 區域_日期_到utc | 將任意時區中的日期轉換為UTC中的日期。 | <ul><li>日期：**必需**&#x200B;您嘗試轉換的日期。</li></ul> | zone_date_to_utc&#x200B;(DATE) | `zone_date_to_utc&#x200B;(2019-10-17T11:55:&#x200B;12.000000999-&#x200B;07:00[America/Los_Angeles])` | `2019-10-17T18:55:12.000000999Z[UTC]` |
-| zone_date_to_zone | 將日期從一個時區轉換為另一個時區。 | <ul><li>日期：**必需**&#x200B;您嘗試轉換的日期。</li><li>區域：**必需**&#x200B;您嘗試將日期轉換為的時區。</li></ul> | zone_date_to_zone&#x200B;(DATE, ZONE) | `zone_date_to_utc&#x200B;(2019-10-17T11:55:12&#x200B;.000000999-07:00&#x200B;[America/Los_Angeles], "Europe/Paris")` | `2019-10-17T20:55:12.000000999+02:00[Europe/Paris]` |
+| 格式 | 根據指定的格式格式化輸入日期。 | <ul><li>日期：**Required**&#x200B;您要格式化的輸入日期，作為ZonedDateTime物件。</li><li>格式：**必要**&#x200B;您要將日期變更為的格式。</li></ul> | 格式（日期，格式） | format(2019-10-23T11:24:00+00:00, &quot;yyyy-MM-dd HH:mm:ss&quot;) | &quot;2019-10-23 11:24:35&quot; |
+| dformat | 根據指定的格式將時間戳轉換為日期字串。 | <ul><li>時間戳記：**必要**&#x200B;您要格式化的時間戳記。 以毫秒為單位寫入。</li><li>格式：**Required**&#x200B;您希望將時間戳更改為的格式。</li></ul> | dformat&#x200B;(TIMESTAMP, FORMAT) | dformat(1571829875, &quot;dd-MMM-yyyy hh:mm&quot;) | 「2019年10月23日11:24」 |
+| 日期 | 將日期字串轉換為ZonedDateTime物件（ISO 8601格式）。 | <ul><li>日期：**必要**&#x200B;代表日期的字串。</li><li>格式：**Required**&#x200B;代表日期格式的字串。</li><li>DEFAULT_DATE:**Required**&#x200B;如果提供的日期為null，則返回預設日期。</li></ul> | date(DATE, FORMAT, DEFAULT_DATE) | date(&quot;2019-10-23 11:24&quot;, &quot;yyyy-MM-dd HH:mm&quot;, now()) | &quot;2019-10-23T11:24Z&quot; |
+| 日期 | 將日期字串轉換為ZonedDateTime物件（ISO 8601格式）。 | <ul><li>日期：**必要**&#x200B;代表日期的字串。</li><li>格式：**Required**&#x200B;代表日期格式的字串。</li></ul> | date(DATE, FORMAT) | date(&quot;2019-10-23 11:24&quot;, &quot;yyyy-MM-dd HH:mm&quot;) | &quot;2019-10-23T11:24Z&quot; |
+| 日期 | 將日期字串轉換為ZonedDateTime物件（ISO 8601格式）。 | <ul><li>日期：**必要**&#x200B;代表日期的字串。</li></ul> | 日期（日期） | date(&quot;2019-10-23 11:24&quot;) | &quot;2019-10-23T11:24Z&quot; |
+| date_part | 擷取日期的部分。 支援下列元件值：<br><br>&quot;year&quot;<br>&quot;yyyy&quot;<br>&quot;yy&quot;<br><br>&quot;quarter&quot;<br>&quot;q&quot;<br>&quot;q&quot;<br><br>&quot;month&quot;<br>&quot;mm&quot;<br>&quot;m&quot;<br><br>&quot;dayofyear&quot;<br>&quot;&lt;dydya1111>&quot;y&quot;<br><br>&quot;day&quot;<br>&quot;dd&quot;<br>&quot;d&quot;<br><br>&quot;week&quot;<br>&quot;ww&quot;<br>&quot;w&quot;<br><br>&quot;weekday&quot;<br>&quot;dw&quot;<br>&quot;w&quot;<br><br>&quot;hour&quot;<br>&quot;hh&quot;<br>&quot;hh24&quot;<br>&quot;hh12&quot;<br><br>&quot;minute&quot;<br>&quot;mi&quot;<br>&quot;n&quot;<br><br>&quot;second&quot;a29/>&quot;ss&quot;<br>&quot;s&quot;<br><br>&quot;毫秒&quot;<br>&quot;ms&quot;<br><br> | <ul><li>元件：**必要**&#x200B;代表日期部分的字串。 </li><li>日期：**必要**&#x200B;日期，以標準格式。</li></ul> | date_part&#x200B;(COMPONENT, DATE) | date_part(&quot;MM&quot;, date(&quot;2019-10-17 11:55:12&quot;) | 10 |
+| set_date_part | 在指定日期中替換元件。 接受下列元件：<br><br>&quot;year&quot;<br>&quot;yyyy&quot;<br>&quot;yy&quot;<br><br>&quot;month&quot;<br>&quot;mm&quot;<br>&quot;m&quot;<br><br>&quot;day&quot;<br>&quot;dd&quot;<br>&quot;d&quot;<br><br>&quot;hour&quot;<br><br>&quot;minute&quot;<br>&quot;mi&quot;<br>&quot;n&quot;<br><br>&quot;second&quot;<br>&quot;ss&quot;<br>&quot;s&quot;<br> | <ul><li>元件：**必要**&#x200B;代表日期部分的字串。 </li><li>值：**Required**&#x200B;要為指定日期的元件設定的值。</li><li>日期：**必要**&#x200B;日期，以標準格式。</li></ul> | set_date_part&#x200B;(COMPONENT, VALUE, DATE) | set_date_part(&quot;m&quot;, 4, date(&quot;2016-11-09T11:44:44.797&quot;) | &quot;2016-04-09T11:44:44.797&quot; |
+| make_date_time | 從零件建立日期。 此函式也可使用make_timestamp來感應。 | <ul><li>年：**必填**&#x200B;年份，以四位數字寫入。</li><li>月份：**必要**&#x200B;月份。 允許的值是1到12。</li><li>日：**必要**&#x200B;日。 允許的值是1到31。</li><li>小時：**必要**&#x200B;小時。 允許的值為0到23。</li><li>分鐘：**必要**&#x200B;分鐘。 允許的值是0到59。</li><li>納秒：**必要**&#x200B;納秒值。 允許的值為0到999999999。</li><li>時區：**必要**&#x200B;日期時間的時區。</li></ul> | make_date_time&#x200B;(YEAR、MONTH、DAY、HOUR、MINUTE、SECOND、NS、TIMEZONE) | make_date_time&#x200B;(2019、10、17、11、55、12、999、「America/Los_Angeles」) | `2019-10-17T11:55:12.0&#x200B;00000999-07:00[America/Los_Angeles]` |
+| zone_date_to_utc | 將任何時區中的日期轉換為UTC中的日期。 | <ul><li>日期：**必要**&#x200B;您嘗試轉換的日期。</li></ul> | zone_date_to_utc&#x200B;(DATE) | `zone_date_to_utc&#x200B;(2019-10-17T11:55:&#x200B;12.000000999-&#x200B;07:00[America/Los_Angeles])` | `2019-10-17T18:55:12.000000999Z[UTC]` |
+| zone_date_to_zone | 將日期從一個時區轉換為另一個時區。 | <ul><li>日期：**必要**&#x200B;您嘗試轉換的日期。</li><li>區域：**必要**&#x200B;您嘗試將日期轉換為的時區。</li></ul> | zone_date_to_zone&#x200B;(DATE, ZONE) | `zone_date_to_utc&#x200B;(2019-10-17T11:55:12&#x200B;.000000999-07:00&#x200B;[America/Los_Angeles], "Europe/Paris")` | `2019-10-17T20:55:12.000000999+02:00[Europe/Paris]` |
 
 &#x200B;
 
-### 層次 — 對象
+### 階層——物件
 
 >[!NOTE]
 >
->請向左/向右滾動以查看表的完整內容。
+>請向左／向右滾動以查看表的完整內容。
 
 | 函數 | 說明 | 參數 | 語法 | 運算式 | 範例輸出 |
 -------- | ----------- | ---------- | -------| ---------- | -------------
-| 大小 | 返回輸入的大小。 | <ul><li>輸入：**必需**&#x200B;您嘗試查找的對象大小。</li></ul> | size_of(INPUT) | `size_of([1, 2, 3, 4])` | 4 |
-| is_empty | 檢查對象是否為空。 | <ul><li>輸入：**必需**&#x200B;您嘗試檢查的對象為空。</li></ul> | is_empty(INPUT) | `is_empty([1, 2, 3])` | false |
-| 陣列_到對象 | 建立對象清單。 | <ul><li>輸入：**必需**&#x200B;鍵和陣列對的分組。</li></ul> | arrays_to_object(INPUT) | 需要樣本 | 需要樣本 |
-| 到對象 | 根據給定的平面鍵/值對建立對象。 | <ul><li>輸入：**必需**&#x200B;鍵/值對的平面清單。</li></ul> | to_object(INPUT) | to_object &#x200B;(&quot;firstName&quot;、&quot;John&quot;、&quot;lastName&quot;、&quot;Doe&quot;) | `{"firstName": "John", "lastName": "Doe"}` |
-| str_to_object | 從輸入字串建立對象。 | <ul><li>字串：**必需**&#x200B;正在分析以建立對象的字串。</li><li>VALUE_DELIMITER:*可選*&#x200B;分隔欄位與值的分隔符。 預設分隔字元為`:`。</li><li>欄位分隔符：*可選*&#x200B;分隔欄位值對的分隔符。 預設分隔字元為`,`。</li></ul> | str_to_object &#x200B;(STRING, VALUE_DELIMITER, FIELD_DELIMITER) | str_to_object(&quot;firstName - John | 姓氏 —  | 電話 — 123 456 7890&quot;, &quot;-&quot;, &quot; | &quot;) | `{"firstName": "John", "lastName": "Doe", "phone": "123 456 7890"}` |
-| is_set | 檢查源資料中是否存在對象。 | <ul><li>輸入：**必需**&#x200B;如果源資料中存在要檢查的路徑。</li></ul> | is_set(INPUT) | is_set&#x200B;(&quot;evars.evar.field1&quot;) | true |
-| 取消 | 將屬性值設定為`null`。 當您不想將欄位複製到目標架構時，應使用此選項。 |  | nullify() | nullify() | `null` |
+| size_of | 傳回輸入的大小。 | <ul><li>輸入：**Required**&#x200B;您要尋找大小的物件。</li></ul> | size_of(INPUT) | `size_of([1, 2, 3, 4])` | 4 |
+| is_empty | 檢查對象是否為空。 | <ul><li>輸入：**Required**&#x200B;您嘗試檢查的物件為空。</li></ul> | is_empty(INPUT) | `is_empty([1, 2, 3])` | false |
+| arrays_to_object | 建立對象清單。 | <ul><li>輸入：**必需**&#x200B;鍵和陣列對的分組。</li></ul> | arrays_to_object(INPUT) | 需要樣本 | 需要樣本 |
+| to_object | 根據給定的平面鍵／值對建立對象。 | <ul><li>輸入：**Required**&#x200B;鍵／值對的平面清單。</li></ul> | to_object(INPUT) | to_object&#x200B;(&quot;firstName&quot;、&quot;John&quot;、&quot;lastName&quot;、&quot;Doe&quot;) | `{"firstName": "John", "lastName": "Doe"}` |
+| str_to_object | 從輸入字串建立對象。 | <ul><li>字串：**Required**&#x200B;正在解析以建立對象的字串。</li><li>VALUE_DELIMITER:*可選*&#x200B;分隔欄位與值的分隔字元。 預設分隔字元為`:`。</li><li>FIELD_DELIMITER:*可選*&#x200B;分隔欄位值對的分隔字元。 預設分隔字元為`,`。</li></ul> | str_to_object&#x200B;(STRING, VALUE_DELIMITER, FIELD_DELIMITER) | str_to_object(&quot;firstName - John | lastName - | 電話- 123 456 7890&quot;、&quot;-&quot;、&quot; | &quot;) | `{"firstName": "John", "lastName": "Doe", "phone": "123 456 7890"}` |
+| is_set | 檢查源資料中是否存在對象。 | <ul><li>輸入：**必要**&#x200B;要檢查的路徑（如果它存在於源資料中）。</li></ul> | is_set(INPUT) | is_set&#x200B;(&quot;evars.evar.field1&quot;) | true |
+| 抵消 | 將屬性的值設定為`null`。 當您不想將欄位複製到目標架構時，應使用此功能。 |  | nullify() | nullify() | `null` |
 
-### 層次 — 陣列
+### 階層——陣列
 
 >[!NOTE]
 >
->請向左/向右滾動以查看表的完整內容。
+>請向左／向右滾動以查看表的完整內容。
 
 | 函數 | 說明 | 參數 | 語法 | 運算式 | 範例輸出 |
 -------- | ----------- | ---------- | -------| ---------- | -------------
-| 聚結 | 返回給定陣列中的第一個非空對象。 | <ul><li>輸入：**必需**&#x200B;要查找的第一個非空對象的陣列。</li></ul> | 合併(INPUT) | coalesce(null、null、null、null、&quot;first&quot;、null、&quot;second&quot;) | &quot;第一個&quot; |
-| 第一 | 檢索給定陣列的第一個元素。 | <ul><li>輸入：**必需**&#x200B;要查找的第一個元素的陣列。</li></ul> | 第一個（輸入） | first(&quot;1&quot;、&quot;2&quot;、&quot;3&quot;) | &quot;1&quot; |
-| last | 檢索給定陣列的最後一個元素。 | <ul><li>輸入：**必需**&#x200B;要查找的最後一個元素的陣列。</li></ul> | last(INPUT) | last(&quot;1&quot;、&quot;2&quot;、&quot;3&quot; | &quot;3&quot; |
-| 到陣列 | 獲取輸入清單並將其轉換為陣列。 | <ul><li>INCLUDE_NULLS:**必需**&#x200B;一個布爾值，用於指示是否在響應陣列中包括空值。</li><li>值：**必需**&#x200B;要轉換為陣列的元素。</li></ul> | to_array &#x200B;(INCLUDE_NULLS, VALUES) | to_array(false, 1,null, 2, 3) | `[1, 2, 3]` |
+| 聚結 | 返回給定陣列中的第一個非空對象。 | <ul><li>輸入：**Required**&#x200B;要查找的第一個非空對象的陣列。</li></ul> | 合併（輸入） | coalesce(null, null, null, &quot;first&quot;, null, &quot;second&quot;) | &quot;first&quot; |
+| first | 檢索給定陣列的第一個元素。 | <ul><li>輸入：**Required**&#x200B;您要尋找的第一個元素的陣列。</li></ul> | first(INPUT) | first(&quot;1&quot;, &quot;2&quot;, &quot;3&quot;) | &quot;1&quot; |
+| last | 檢索給定陣列的最後一個元素。 | <ul><li>輸入：**Required**&#x200B;您要查找的最後一個元素的陣列。</li></ul> | last(INPUT) | last(&quot;1&quot;, &quot;2&quot;, &quot;3&quot;) | &quot;3&quot; |
+| add_to_array | 將元素添加到陣列末尾。 | <ul><li>陣列：**Required**&#x200B;您要新增元素的陣列。</li><li>值：要附加到陣列的元素。</li></ul> | add_to_array&#x200B;(ARRAY, VALUES) | add_to_array&#x200B;([&#39;a&#39;, &#39;b&#39;], &#39;c&#39;, &#39;d&#39;) | [&#39;a&#39;、&#39;b&#39;、&#39;c&#39;、&#39;d&#39;] |
+| join_arrays | 將陣列彼此結合。 | <ul><li>陣列：**Required**&#x200B;您要新增元素的陣列。</li><li>值：要附加到父陣列的陣列。</li></ul> | join_arrays&#x200B;(ARRAY, VALUES) | join_arrays&#x200B;([&#39;a&#39;, &#39;b&#39;], [&#39;c&#39;], [&#39;d&#39;, &#39;e&#39;]) | [&#39;a&#39;、&#39;b&#39;、&#39;c&#39;、&#39;d&#39;、&#39;e&#39;] |
+| to_array | 獲取輸入清單並將其轉換為陣列。 | <ul><li>INCLUDE_NULLS:**Required**&#x200B;指示是否在響應陣列中包含空值的布爾值。</li><li>值：**必需**&#x200B;要轉換為陣列的元素。</li></ul> | to_array&#x200B;(INCLUDE_NULLS, VALUES) | to_array(false, 1, null, 2, 3) | `[1, 2, 3]` |
 
 ### 邏輯運算子
 
 >[!NOTE]
 >
->請向左/向右滾動以查看表的完整內容。
+>請向左／向右滾動以查看表的完整內容。
 
 | 函數 | 說明 | 參數 | 語法 | 運算式 | 範例輸出 |
 -------- | ----------- | ---------- | -------| ---------- | -------------
-| 解碼 | 如果給定一個鍵和一個按陣列拼合的鍵值對清單，則函式將在找到鍵時返回值，或在陣列中存在時返回預設值。 | <ul><li>密鑰：**必需**&#x200B;要匹配的鍵。</li><li>OPTIONS:**必需**&#x200B;鍵/值對的拼合陣列。 （可選）可以在結尾處放置預設值。</li></ul> | decode(KEY,OPTIONS) | decode(stateCode, &quot;ca&quot;, &quot;California&quot;, &quot;pa&quot;, &quot;Pennylvania&quot;, &quot;N/A&quot;) | 如果給定的stateCode是&quot;ca&quot;, &quot;California&quot;。<br>如果給定的stateCode是&quot;pa&quot;, &quot;Pennsylvania&quot;。<br>如果stateCode與以下項不匹配，則「N/A」。 |
-| if | 計算給定的布爾表達式並根據結果返回指定的值。 | <ul><li>表達式：**必需**&#x200B;正在計算的布爾表達式。</li><li>TRUE_VALUE:**必需**&#x200B;表達式計算結果為true時返回的值。</li><li>FALSE_VALUE:**必需**&#x200B;如果表達式的計算結果為false，則返回的值。</li></ul> | iif(EXPRESSION、TRUE_VALUE、FALSE_VALUE) | iif(&quot;s&quot;。equalsIgnoreCase(&quot;S&quot;)、&quot;True&quot;、&quot;False&quot;) | &quot;True&quot; |
+| 解碼 | 給定一個鍵和一個作為陣列平面化的鍵值對清單，如果找到鍵，該函式將返回該值，如果在陣列中存在，則返回預設值。 | <ul><li>索引鍵：**必要**&#x200B;要匹配的密鑰。</li><li>OPTIONS:**必要**&#x200B;鍵／值對的平面化陣列。 （可選）預設值可以放在結尾。</li></ul> | decode(KEY,OPTIONS) | decode(stateCode, &quot;ca&quot;, &quot;California&quot;, &quot;pa&quot;, &quot;Pennylvania&quot;, &quot;N/A&quot;) | 如果stateCode是&quot;ca&quot;，則為&quot;California&quot;。<br>如果給定的stateCode是&quot;pa&quot;，則為&quot;Pennylvania&quot;。<br>如果stateCode不符合下列項目，則為&quot;N/A&quot;。 |
+| if | 評估給定的布爾表達式，並根據結果返回指定的值。 | <ul><li>運算式：**必要**&#x200B;正在評估的布林運算式。</li><li>TRUE_VALUE:**必要**&#x200B;運算式評估為true時傳回的值。</li><li>FALSE_VALUE:**必要**&#x200B;運算式評估為false時傳回的值。</li></ul> | iif(EXPRESSION, TRUE_VALUE, FALSE_VALUE) | if(&quot;s&quot;。equalsIgnoreCase(&quot;S&quot;), &quot;True&quot;, &quot;False&quot;) | &quot;True&quot; |
 
 ### 彙總
 
 >[!NOTE]
 >
->請向左/向右滾動以查看表的完整內容。
+>請向左／向右滾動以查看表的完整內容。
 
 | 函數 | 說明 | 參數 | 語法 | 運算式 | 範例輸出 |
 -------- | ----------- | ---------- | -------| ---------- | -------------
-| min | 返回給定參數的最小值。 使用自然排序。 | <ul><li>OPTIONS:**必需**&#x200B;一個或多個可以相互比較的對象。</li></ul> | min(OPTIONS) | min(3、1、4) | 1 |
-| max | 返回給定參數的最大值。 使用自然排序。 | <ul><li>OPTIONS:**必需**&#x200B;一個或多個可以相互比較的對象。</li></ul> | 最大(OPTIONS) | 最大值(3、1、4) | 4 |
+| min | 返回給定參數的最小值。 使用自然排序。 | <ul><li>OPTIONS:**Required**&#x200B;一個或多個可相互比較的對象。</li></ul> | min(OPTIONS) | min(3, 1, 4) | 1 |
+| max | 返回給定參數的最大值。 使用自然排序。 | <ul><li>OPTIONS:**Required**&#x200B;一個或多個可相互比較的對象。</li></ul> | max(OPTIONS) | max(3, 1, 4) | 4 |
 
-### 類型轉換
+### 文字轉換
 
 >[!NOTE]
 >
->請向左/向右滾動以查看表的完整內容。
+>請向左／向右滾動以查看表的完整內容。
 
 | 函數 | 說明 | 參數 | 語法 | 運算式 | 範例輸出 |
 -------- | ----------- | ---------- | -------| ---------- | -------------
-| 到 | 將字串轉換為BigInteger。 | <ul><li>字串：**必需**&#x200B;要轉換為BigInteger的字串。</li></ul> | to_bigint(STRING) | to_bigint &#x200B;(&quot;1000000.34&quot;) | 100000.34 |
-| 到十進位 | 將字串轉換為Double。 | <ul><li>字串：**必需**&#x200B;要轉換為Double的字串。</li></ul> | to_decimal（字串） | to_decimal(&quot;20.5&quot;) | 20.5 |
-| 至浮點 | 將字串轉換為浮點。 | <ul><li>字串：**必需**&#x200B;要轉換為Float的字串。</li></ul> | to_float(STRING) | to_float(&quot;12.3456&quot;) | 12.34566 |
-| 到整數 | 將字串轉換為整數。 | <ul><li>字串：**必需**&#x200B;要轉換為整數的字串。</li></ul> | to_integer(STRING) | to_integer(&quot;12&quot;) | 12 |
+| to_bigint | 將字串轉換為BigInteger。 | <ul><li>字串：**Required**&#x200B;要轉換為BigInteger的字串。</li></ul> | to_bigint(STRING) | to_bigint&#x200B;(&quot;100000.34&quot;) | 100000.34 |
+| to_decimal | 將字串轉換為Double。 | <ul><li>字串：**必要**&#x200B;要轉換為Double的字串。</li></ul> | to_decimal(STRING) | to_decimal(&quot;20.5&quot;) | 20.5 |
+| to_float | 將字串轉換為浮點數。 | <ul><li>字串：**Required**&#x200B;要轉換為浮點數的字串。</li></ul> | to_float(STRING) | to_float(&quot;12.3456&quot;) | 12.34566 |
+| to_integer | 將字串轉換為整數。 | <ul><li>字串：**必要**&#x200B;要轉換為整數的字串。</li></ul> | to_integer(STRING) | to_integer(&quot;12&quot;) | 12 |
 
 ### JSON函式
 
 >[!NOTE]
 >
->請向左/向右滾動以查看表的完整內容。
+>請向左／向右滾動以查看表的完整內容。
 
 | 函數 | 說明 | 參數 | 語法 | 運算式 | 範例輸出 |
 -------- | ----------- | ---------- | -------| ---------- | -------------
-| json_to對象 | 從給定字串反序列化JSON內容。 | <ul><li>字串：**要求**&#x200B;要反序列化的JSON字串。</li></ul> | json_to_object&#x200B;(STRING) | json_to_object&#x200B;({&quot;info&quot;:{&quot;firstName&quot;:&quot;John&quot;,&quot;lastName&quot; :&quot;Doe&quot;}) | 表示JSON的對象。 |
+| json_to_object | 從指定字串反序列化JSON內容。 | <ul><li>字串：**必要**&#x200B;要取消序列化的JSON字串。</li></ul> | json_to_object&#x200B;(STRING) | json_to_object&#x200B;({&quot;info&quot;:{&quot;firstName&quot;:&quot;John&quot;,&quot;lastName&quot; :&quot;Doe&quot;}) | 表示JSON的物件。 |
 
-### 特別行動
+### 特殊行動
 
 >[!NOTE]
 >
->請向左/向右滾動以查看表的完整內容。
+>請向左／向右滾動以查看表的完整內容。
 
 | 函數 | 說明 | 參數 | 語法 | 運算式 | 範例輸出 |
 -------- | ----------- | ---------- | -------| ---------- | -------------
-| uuid/<br>guid | 生成偽隨機ID。 |  | uuid()<br>guid() | uuid()<br>guid() | 7c0267d2-bb74-4e1a-9275-3bf4fccda5f4<br>c7016dc7-3163-43f7-afc7-2e1c9c20633 |
+| uuid /&lt;a0/ guid<br> | 產生偽隨機ID。 |  | uuid()<br>guid() | uuid()<br>guid() | 7c0267d2-bb74-4e1a-9275-3bf4fccda5f4<br>c7016dc7-3163-43f7-afc7-2e1c9c206333 |
 
 ### 用戶代理函式
 
 >[!NOTE]
 >
->請向左/向右滾動以查看表的完整內容。
+>請向左／向右滾動以查看表的完整內容。
 
 | 函數 | 說明 | 參數 | 語法 | 運算式 | 範例輸出 |
 -------- | ----------- | ---------- | -------| ---------- | -------------
-| ua_os_name | 從用戶代理字串中提取作業系統名稱。 | <ul><li>USER_AGENT:**必需**&#x200B;用戶代理字串。</li></ul> | ua_os_name&#x200B;(USER_AGENT) | ua_os_name&#x200B;(&quot;Mozilla/5.0(iPhone;CPU iPhone OS 5_1_1（如Mac OS X）AppleWebKit/534.46（KHTML，如Gecko）Version/5.1 Mobile/9B206 Safari/7534.48.3&quot;) | iOS |
-| ua_os_version_major | 從用戶代理字串中提取作業系統的主要版本。 | <ul><li>USER_AGENT:**必需**&#x200B;用戶代理字串。</li></ul> | ua_os_version_major&#x200B;(USER_AGENT) | ua_os_version_major &#x200B;s(&quot;Mozilla/5.0(iPhone;CPU iPhone OS 5_1_1（如Mac OS X）AppleWebKit/534.46（KHTML，如Gecko）Version/5.1 Mobile/9B206 Safari/7534.48.3&quot;) | iOS 5 |
-| ua_os_version | 從用戶代理字串中提取作業系統的版本。 | <ul><li>USER_AGENT:**必需**&#x200B;用戶代理字串。</li></ul> | ua_os_version&#x200B;(USER_AGENT) | ua_os_version&#x200B;(&quot;Mozilla/5.0(iPhone;CPU iPhone OS 5_1_1（如Mac OS X）AppleWebKit/534.46（KHTML，如Gecko）Version/5.1 Mobile/9B206 Safari/7534.48.3&quot;) | 5.1.1 |
-| ua_os_name_version | 從用戶代理字串中提取作業系統的名稱和版本。 | <ul><li>USER_AGENT:**必需**&#x200B;用戶代理字串。</li></ul> | ua_os_name_version&#x200B;(USER_AGENT) | ua_os_name_version&#x200B;(&quot;Mozilla/5.0(iPhone;CPU iPhone OS 5_1_1（如Mac OS X）AppleWebKit/534.46（KHTML，如Gecko）Version/5.1 Mobile/9B206 Safari/7534.48.3&quot;) | iOS 5.1.1 |
-| ua_agent_version | 從用戶代理字串中提取代理版本。 | <ul><li>USER_AGENT:**必需**&#x200B;用戶代理字串。</li></ul> | ua_agent_version&#x200B;(USER_AGENT) | ua_agent_version&#x200B;(&quot;Mozilla/5.0(iPhone;CPU iPhone OS 5_1_1（如Mac OS X）AppleWebKit/534.46（KHTML，如Gecko）Version/5.1 Mobile/9B206 Safari/7534.48.3&quot;) | 5.1 |
-| ua_agent_version_major | 從用戶代理字串中提取代理名稱和主要版本。 | <ul><li>USER_AGENT:**必需**&#x200B;用戶代理字串。</li></ul> | ua_agent_version_major&#x200B;(USER_AGENT) | ua_agent_version_major&#x200B;(&quot;Mozilla/5.0(iPhone;CPU iPhone OS 5_1_1（如Mac OS X）AppleWebKit/534.46（KHTML，如Gecko）Version/5.1 Mobile/9B206 Safari/7534.48.3&quot;) | Safari 5 |
-| ua_agent_name | 從用戶代理字串中提取代理名稱。 | <ul><li>USER_AGENT:**必需**&#x200B;用戶代理字串。</li></ul> | ua_agent_name&#x200B;(USER_AGENT) | ua_agent_name&#x200B;(&quot;Mozilla/5.0(iPhone;CPU iPhone OS 5_1_1（如Mac OS X）AppleWebKit/534.46（KHTML，如Gecko）Version/5.1 Mobile/9B206 Safari/7534.48.3&quot;) | Safari |
-| ua_device_class | 從用戶代理字串中提取設備類。 | <ul><li>USER_AGENT:**必需**&#x200B;用戶代理字串。</li></ul> | ua_device_class&#x200B;(USER_AGENT) | ua_device_class&#x200B;(&quot;Mozilla/5.0(iPhone;CPU iPhone OS 5_1_1（如Mac OS X）AppleWebKit/534.46（KHTML，如Gecko）Version/5.1 Mobile/9B206 Safari/7534.48.3&quot;) | 電話 |
+| ua_os_name | 從用戶代理字串中提取作業系統名稱。 | <ul><li>USER_AGENT:**必要**&#x200B;使用者代理字串。</li></ul> | ua_os_name&#x200B;(USER_AGENT) | ua_os_name&#x200B;(&quot;Mozilla/5.0(iPhone;CPU iPhone OS 5_1_1（如Mac OS X）AppleWebKit/534.46（KHTML如Gecko）Version/5.1 Mobile/9B206 Safari/7534.48.3英吋) | iOS |
+| ua_os_version_major | 從用戶代理字串中提取作業系統的主要版本。 | <ul><li>USER_AGENT:**必要**&#x200B;使用者代理字串。</li></ul> | ua_os_version_major&#x200B;(USER_AGENT) | ua_os_version_major &#x200B; s(&quot;Mozilla/5.0(iPhone;CPU iPhone OS 5_1_1（如Mac OS X）AppleWebKit/534.46（KHTML如Gecko）Version/5.1 Mobile/9B206 Safari/7534.48.3英吋) | iOS 5 |
+| ua_os_version | 從用戶代理字串中提取作業系統的版本。 | <ul><li>USER_AGENT:**必要**&#x200B;使用者代理字串。</li></ul> | ua_os_version&#x200B;(USER_AGENT) | ua_os_version&#x200B;(&quot;Mozilla/5.0(iPhone;CPU iPhone OS 5_1_1（如Mac OS X）AppleWebKit/534.46（KHTML如Gecko）Version/5.1 Mobile/9B206 Safari/7534.48.3英吋) | 5.1.1 |
+| ua_os_name_version | 從用戶代理字串中提取作業系統的名稱和版本。 | <ul><li>USER_AGENT:**必要**&#x200B;使用者代理字串。</li></ul> | ua_os_name_version&#x200B;(USER_AGENT) | ua_os_name_version&#x200B;(&quot;Mozilla/5.0(iPhone;CPU iPhone OS 5_1_1（如Mac OS X）AppleWebKit/534.46（KHTML如Gecko）Version/5.1 Mobile/9B206 Safari/7534.48.3英吋) | iOS 5.1.1 |
+| ua_agent_version | 從用戶代理字串中提取代理版本。 | <ul><li>USER_AGENT:**必要**&#x200B;使用者代理字串。</li></ul> | ua_agent_version&#x200B;(USER_AGENT) | ua_agent_version&#x200B;(&quot;Mozilla/5.0(iPhone;CPU iPhone OS 5_1_1（如Mac OS X）AppleWebKit/534.46（KHTML如Gecko）Version/5.1 Mobile/9B206 Safari/7534.48.3英吋) | 5.1 |
+| ua_agent_version_major | 從用戶代理字串中提取代理名稱和主版本。 | <ul><li>USER_AGENT:**必要**&#x200B;使用者代理字串。</li></ul> | ua_agent_version_major&#x200B;(USER_AGENT) | ua_agent_version_major&#x200B;(&quot;Mozilla/5.0(iPhone;CPU iPhone OS 5_1_1（如Mac OS X）AppleWebKit/534.46（KHTML如Gecko）Version/5.1 Mobile/9B206 Safari/7534.48.3英吋) | Safari 5 |
+| ua_agent_name | 從用戶代理字串中提取代理名。 | <ul><li>USER_AGENT:**必要**&#x200B;使用者代理字串。</li></ul> | ua_agent_name&#x200B;(USER_AGENT) | ua_agent_name&#x200B;(&quot;Mozilla/5.0(iPhone;CPU iPhone OS 5_1_1（如Mac OS X）AppleWebKit/534.46（KHTML如Gecko）Version/5.1 Mobile/9B206 Safari/7534.48.3英吋) | Safari |
+| ua_device_class | 從用戶代理字串中提取設備類。 | <ul><li>USER_AGENT:**必要**&#x200B;使用者代理字串。</li></ul> | ua_device_class&#x200B;(USER_AGENT) | ua_device_class&#x200B;(&quot;Mozilla/5.0(iPhone;CPU iPhone OS 5_1_1（如Mac OS X）AppleWebKit/534.46（KHTML如Gecko）Version/5.1 Mobile/9B206 Safari/7534.48.3英吋) | 電話 |
