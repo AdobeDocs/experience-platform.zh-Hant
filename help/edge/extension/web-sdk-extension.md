@@ -2,10 +2,10 @@
 title: Adobe Experience Platform Web SDK 擴充功能 概述
 description: 瞭解適用於Adobe Experience Platform Launch的Adobe Experience Platform網頁SDK擴充功能
 translation-type: tm+mt
-source-git-commit: 18e511337eaa8b6eb7785b1ee5f1ce2366ddd7c7
+source-git-commit: 2a0ae9541a8bb2bb985d43a402d0842e73b23c81
 workflow-type: tm+mt
-source-wordcount: '560'
-ht-degree: 19%
+source-wordcount: '553'
+ht-degree: 14%
 
 ---
 
@@ -32,17 +32,17 @@ Adobe Experience PlatformWeb SDK擴充功能會透過Adobe Experience Platform�
 
 ## 一般配置選項
 
-頁面頂部的配置選項告訴Adobe Experience Platform資料路由的位置以及伺服器上應使用哪些配置。
+頁面頂部的配置選項告訴Adobe Experience Platform資料路由的位置以及伺服器上要使用的配置。
 
 ### [!UICONTROL 名稱]
 
-Adobe Experience Platform網頁SDK擴充功能支援頁面上的多個執行個體。 只要藉由單一 Platform Launch 設定，即可將資料傳送至多個組織。
+Adobe Experience Platform網頁SDK擴充功能支援頁面上的多個執行個體。 此名稱用於使用單一Platform launch配置向多個組織發送資料。
 
 副檔名預設為&quot;[!DNL alloy]&quot;。 不過您可將例項名稱變更為任何有效的 JavaScript 物件名稱。
 
 ### **[!UICONTROL IMS 組織 ID]**
 
-[!UICONTROL IMS組織ID]是您要在Adobe傳送資料的組織。 大多數案例中，您都應該使用自動填入的預設值。當頁面上有多個例項時，請將您要傳送資料至的第二個組織的值填入此欄位。
+[!UICONTROL IMS組織ID]是您要在Adobe傳送資料的組織。 大部分時候，請使用自動填入的預設值。 當頁面上有多個例項時，請將您要傳送資料至的第二個組織的值填入此欄位。
 
 ### **[!UICONTROL 邊緣網域]**
 
@@ -50,7 +50,7 @@ Adobe Experience Platform網頁SDK擴充功能支援頁面上的多個執行個�
 
 ## [!UICONTROL Edge Configurations]
 
-當請求傳送至Adobe Experience Platform邊緣網路時，會使用邊緣組態ID來參考伺服器端組態。 這可讓您更新設定，而不需在網站上變更程式碼。
+當請求傳送至Adobe Experience Platform邊緣網路時，會使用邊緣組態ID來參考伺服器端組態。 您可以更新設定，而不需在網站上變更程式碼。
 
 如需詳細資訊，請參閱[edge configurations](../fundamentals/edge-configuration.md)上的指南。
 
@@ -61,5 +61,5 @@ Adobe Experience Platform網頁SDK擴充功能支援頁面上的多個執行個�
 | [!UICONTROL 預設許可級別] | 說明 |
 | --- | --- |
 | [!UICONTROL 在] | 選擇加入。 如果您預設同意客戶，且僅遵守退出訊號，請使用此選項。 |
-| [!UICONTROL 待定] | 在傳送選擇加入訊號之前，一律假定擁有「待決」同意的客戶已選擇退出。 如果您需要明確的客戶同意您的業務運營，請使用此選項。 |
+| [!UICONTROL 待定] | 具有「擱置中」同意的客戶會選擇退出，直到傳送選擇加入訊號為止。 如果您需要明確的客戶同意您的業務運營，請使用此選項。 |
 | [!UICONTROL 由資料元素提供] | 預設同意層級由您定義的個別資料元素決定。 使用此選項時，您必須使用提供的下拉式功能表指定資料元素。 |
