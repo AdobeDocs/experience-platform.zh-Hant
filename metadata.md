@@ -3,21 +3,22 @@ cloud: experience-cloud
 product: adobe experience platform
 feature-set: Platform
 solution-title: 平台概觀
-solution-hub-url: https://docs.adobe.com/content/help/zh-Hant/experience-platform/landing/home.html
+solution-hub-url: https://experienceleague.adobe.com/docs/experience-platform/landing/home.html
 solution-image: assets/experience_cloud_appicon_32.png
 getting-started-title: 文件
-getting-started-url: https://docs.adobe.com/content/help/en/experience-platform/landing/documentation/overview.html
+getting-started-url: https://experienceleague.adobe.com/docs/experience-platform.html
 tutorials-title: 教學課程
-tutorials-url: https://docs.adobe.com/content/help/zh-Hant/experience-platform/tutorials/home.html
+tutorials-url: https://experienceleague.adobe.com/docs/platform-learn/tutorials/overview.html
 git-repo: https://git.corp.adobe.com/AdobeDocs/experience-platform.zh-Hant
 solution: Experience Platform
 type: 文件
 index: true
+role: 架構師、開發人員、資料架構師、資料工程師、業務從業人員、管理員、領導者
 translation-type: tm+mt
-source-git-commit: 100e17f44c3af2a888d92d982ae3b2de1ed45ec5
+source-git-commit: 467edb785bd3c8609d2fc64183edd1d7b34d7e86
 workflow-type: tm+mt
-source-wordcount: '146'
-ht-degree: 86%
+source-wordcount: '147'
+ht-degree: 74%
 
 ---
 
