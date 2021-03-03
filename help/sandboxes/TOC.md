@@ -4,11 +4,12 @@ audience: user
 user-guide-title: Adobe Experience Platform 中的沙盒說明
 breadcrumb-title: 沙箱指南
 user-guide-description: 將 Platform 執行個體分割至虛擬環境，以進行開發、測試和應用程式部署。
+feature: 資料管理
 translation-type: tm+mt
-source-git-commit: 4e358fda1c8f7aebe57a009a146b8b73cf88e169
+source-git-commit: ac6935f09f620ea55cf8f612ff0a1fba503b5e17
 workflow-type: tm+mt
-source-wordcount: '86'
-ht-degree: 30%
+source-wordcount: '88'
+ht-degree: 29%
 
 ---
 
