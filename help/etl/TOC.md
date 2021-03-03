@@ -4,16 +4,17 @@ audience: user
 user-guide-title: Adobe Experience Platform ETL 指南
 breadcrumb-title: ETL 指南
 user-guide-description: 了解建立安全、高效能連接器以將資料擷取至 Platform 的一般步驟。
+feature: 資料管理，資料擷取
 translation-type: tm+mt
-source-git-commit: f8186e467dc982003c6feb01886ed16d23572955
+source-git-commit: ac6935f09f620ea55cf8f612ff0a1fba503b5e17
 workflow-type: tm+mt
-source-wordcount: '43'
-ht-degree: 48%
+source-wordcount: '47'
+ht-degree: 44%
 
 ---
 
 
-# 在Experience Platform {#etl}中擷取、轉換和載入程式
+# 在{#etl}Experience Platform中提取、轉換和載入過程
 
 - [開發ETL整合](home.md)
 - [ETL轉換](transformations.md)
