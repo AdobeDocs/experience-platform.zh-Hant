@@ -4,16 +4,17 @@ audience: user
 user-guide-title: Adobe Experience Platform Segmentation Service
 breadcrumb-title: 分段服務指南
 user-guide-description: 從您的即時客戶設定檔資料建立區段並產生對象。
+feature: 區段
 translation-type: tm+mt
-source-git-commit: fc493a207e305887e798238ba6883f4934c5cba5
+source-git-commit: ac6935f09f620ea55cf8f612ff0a1fba503b5e17
 workflow-type: tm+mt
-source-wordcount: '157'
-ht-degree: 21%
+source-wordcount: '158'
+ht-degree: 22%
 
 ---
 
 
-# Adobe Experience Platform區段服務  {#segmentation}
+# Adobe Experience Platform Segmentation Service {#segmentation}
 
 - [區段服務概觀](home.md)
 - [區段資料類型](data-types.md)
