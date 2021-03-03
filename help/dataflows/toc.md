@@ -3,11 +3,12 @@ product: experience-platform
 audience: user
 user-guide-title: 資料流指南
 user-guide-description: 資料流能呈現資料處理作業在 Platform 上移動資料的情形。
+feature: 資料管理，資料擷取
 translation-type: tm+mt
-source-git-commit: 185c9c953a6ce923359e221d6f0f91b0f6614f05
+source-git-commit: ac6935f09f620ea55cf8f612ff0a1fba503b5e17
 workflow-type: tm+mt
-source-wordcount: '43'
-ht-degree: 34%
+source-wordcount: '47'
+ht-degree: 31%
 
 ---
 
