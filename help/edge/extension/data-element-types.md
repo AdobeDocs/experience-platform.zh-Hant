@@ -1,18 +1,18 @@
 ---
-title: Adobe Experience Platform Web SDK Extension中的資料元素類型
-description: 瞭解Adobe Experience Platform Launch中Adobe Experience Platform Web SDK擴充功能提供的不同資料元素類型。
+title: Adobe Experience Platform網頁SDK擴充功能中的資料元素類型
+description: 瞭解Adobe Experience Platform LaunchAdobe Experience Platform網頁SDK擴充功能提供的不同資料元素類型。
 translation-type: tm+mt
-source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
+source-git-commit: 2a0ae9541a8bb2bb985d43a402d0842e73b23c81
 workflow-type: tm+mt
-source-wordcount: '318'
-ht-degree: 78%
+source-wordcount: '305'
+ht-degree: 47%
 
 ---
 
 
 # 資料元素類型
 
-在[Adobe Experience Platform Web SDK擴充功能](web-sdk-extension.md)中為[Adobe Experience Platform Launch](https://experienceleague.adobe.com/docs/launch.html)設定[動作類型](action-types.md)後，請設定您的資料元素類型。
+在[Adobe Experience Platform網頁SDK擴充功能](web-sdk-extension.md)中為[Adobe Experience Platform Launch](https://experienceleague.adobe.com/docs/launch.html)設定[動作類型](action-types.md)後，請設定您的資料元素類型。
 
 此頁說明可用的資料元素類型。
 
@@ -22,18 +22,18 @@ ht-degree: 78%
 
 ## 身分對應
 
-身分對應資料元素可讓您以指定的其他資料元素或其他值建立身分。您建立的所有身分都必須連回相對應的命名空間。此資料元素的下拉式選單會顯示所有預設的命名空間，以及您建立的所有命名空間。
+身分對應資料元素可讓您以指定的其他資料元素或其他值建立身分。您建立的所有身分都必須連回相對應的命名空間。此資料元素提供下拉式清單，顯示所有預設名稱空間以及您所建立的任何名稱空間。
 
 ![](./assets/identity-map-data-element.png)
 
 ## XDM 物件
 
-您傳送至 Adobe Experience Platform Web SDK 的所有資料都應採用 XDM 格式。使用 XDM 物件資料元素可更輕鬆格式化資料。第一次開啟此資料元素時，請選取正確的 Adobe Experience Platform 沙箱和結構描述。選取結構描述後，您會看到結構描述的架構，供您輕鬆填寫。
+使用XDM格式將任何資料傳送至Adobe Experience Platform網頁SDK。 使用 XDM 物件資料元素可更輕鬆格式化資料。第一次開啟此資料元素時，請選取正確的 Adobe Experience Platform 沙箱和結構描述。在選取結構後，您會看到結構，您可輕鬆填寫。
 
 ![](./assets/XDM-object.png)
 
-請注意，當您開啟結構描述的特定欄位時 (例如「`web.webPageDetails.URL`」)，系統會自動收集部分項目。即使系統會自動收集多個項目，不過您還是可以視需求選擇覆寫任何項目。所有值都可手動填寫，也可使用其他資料元素來填寫。
+請注意，當您開啟結構描述的特定欄位時 (例如「`web.webPageDetails.URL`」)，系統會自動收集部分項目。即使會自動收集數個項目，您也可以視需要覆寫任何項目。 所有值都可手動填寫，也可使用其他資料元素來填寫。
 
 >[!NOTE]
 >
->您只需填寫想收集的資訊片段。資料傳送至解決方案後，系統會忽略未填寫的項目。
+>只填寫您有興趣收集的資訊。 當資料傳送至解決方案時，任何未填入的項目都會略過。
