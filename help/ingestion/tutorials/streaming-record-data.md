@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform; home；熱門主題；串流擷取；擷取；記錄資料；串流記錄資料；
+keywords: Experience Platform; home；熱門主題；流處理；攝取；記錄資料；流記錄資料；
 solution: Experience Platform
 title: 使用串流擷取API來串流記錄資料
 topic: 教學課程
 type: 教學課程
-description: 本教學課程將協助您開始使用串流擷取API，這是Adobe Experience Platform Data Ingestion Service API的一部分。
+description: 本教學課程將協助您開始使用串流擷取API，這是Adobe Experience Platform資料擷取服務API的一部分。
 translation-type: tm+mt
-source-git-commit: 27a7855492f2f8e7a92651cd97371c904dd1561d
+source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
 workflow-type: tm+mt
-source-wordcount: '1165'
+source-wordcount: '1166'
 ht-degree: 2%
 
 ---
@@ -16,11 +16,11 @@ ht-degree: 2%
 
 # 使用串流擷取API來串流記錄資料
 
-本教學課程將協助您開始使用串流擷取API，這是Adobe Experience Platform [!DNL Data Ingestion Service] API的一部分。
+本教學課程將協助您開始使用串流擷取API，這是Adobe Experience Platform[!DNL Data Ingestion Service] API的一部分。
 
 ## 快速入門
 
-本教學課程需要具備各種Adobe Experience Platform服務的相關知識。 在開始本教學課程之前，請先閱讀下列服務的檔案：
+本教學課程需要具備Adobe Experience Platform各項服務的相關知識。 在開始本教學課程之前，請先閱讀下列服務的檔案：
 
 - [[!DNL Experience Data Model (XDM)]](../../xdm/home.md):組織體驗資料的 [!DNL Platform] 標準化架構。
 - [[!DNL Real-time Customer Profile]](../../profile/home.md):根據來自多個來源的匯整資料，即時提供統一的消費者個人檔案。
@@ -364,7 +364,7 @@ curl -X POST https://dcs.adobedc.net/collection/{CONNECTION_ID}?synchronousValid
 | 屬性 | 說明 |
 | -------- | ----------- |
 | `{CONNECTION_ID}` | 先前建立之串流連線的ID。 |
-| `xactionId` | 唯一識別碼是您剛傳送之記錄的伺服器端產生。 此ID可協助Adobe透過各種系統及除錯來追蹤此記錄的生命週期。 |
+| `xactionId` | 唯一識別碼是您剛傳送之記錄的伺服器端產生。 此ID有助於Adobe通過各種系統和調試跟蹤此記錄的生命週期。 |
 | `receivedTimeMs` | 時間戳記（以毫秒為單位），顯示收到請求的時間。 |
 | `synchronousValidation.status` | 由於已添加查詢參數`synchronousValidation=true`，因此將顯示此值。 如果驗證成功，狀態將為`pass`。 |
 
@@ -392,7 +392,7 @@ GET /access/entities?schema.name=_xdm.context.profile&entityId=janedoe@example.c
 
 **請求**
 
-您可以使用下列GET請求來檢閱先前擷取的記錄資料。
+您可以使用下列GET請求來檢閱先前收錄的記錄資料。
 
 ```shell
 curl -X GET 'https://platform.adobe.io/data/core/ups/access/entities?schema.name=_xdm.context.profile&entityId=janedoe@example.com&entityIdNS=email'\
