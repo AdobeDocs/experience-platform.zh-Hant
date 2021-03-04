@@ -1,28 +1,28 @@
 ---
-keywords: Experience Platform;home；常用主題；檢索失敗的批；失敗的批；批處理；批處理；失敗的批處理；獲取失敗的批處理；獲取失敗的批處理；下載失敗的批處理；下載失敗的批處理；
+keywords: Experience Platform;home；常用主題；檢索失敗的批；失敗的批；批處理；失敗的批處理；失敗的批處理；獲取失敗的批處理；獲取失敗的批處理；下載失敗的批處理；下載失敗的批處理；
 solution: Experience Platform
 title: 使用Data Access API檢索失敗的批
-topic: tutorial
-type: Tutorial
+topic: 教學課程
+type: 教學課程
 description: 本教學課程涵蓋使用資料擷取API擷取失敗批次資訊的步驟。
 translation-type: tm+mt
-source-git-commit: 089a4d517476b614521d1db4718966e3ebb13064
+source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
 workflow-type: tm+mt
-source-wordcount: '652'
-ht-degree: 1%
+source-wordcount: '655'
+ht-degree: 2%
 
 ---
 
 
 # 使用Data Access API檢索失敗的批處理
 
-Adobe Experience Platform提供兩種上傳和接收資料的方法。 您可以使用批次擷取功能(可讓您使用各種檔案類型（例如CSV）插入其資料)或串流擷取功能（可讓您使用串流端點將資料即時插入[!DNL Platform]）。
+Adobe Experience Platform提供兩種上傳和收錄資料的方法。 您可以使用批次擷取功能(可讓您使用各種檔案類型（例如CSV）插入其資料)或串流擷取功能（可讓您使用串流端點將資料即時插入[!DNL Platform]）。
 
 本教程介紹使用[!DNL Data Ingestion] API檢索失敗批的資訊的步驟。
 
 ## 快速入門
 
-本指南需要有效瞭解Adobe Experience Platform的下列元件：
+本指南需要對Adobe Experience Platform的下列組成部分有切實的瞭解：
 
 - [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md):組織客戶體驗資 [!DNL Experience Platform] 料的標準化架構。
 - [[!DNL Data Ingestion]](../home.md):可傳送資料的方法 [!DNL Experience Platform]。
@@ -49,7 +49,7 @@ Adobe Experience Platform提供兩種上傳和接收資料的方法。 您可以
 
 所有包含裝載(POST、PUT、PATCH)的請求都需要額外的標題：
 
-- 內容類型：`application/json`
+- Content-Type: `application/json`
 
 ### 失敗批示例
 
