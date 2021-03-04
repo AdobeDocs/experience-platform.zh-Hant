@@ -2,12 +2,12 @@
 keywords: Experience Platform;home；熱門主題；目錄服務；目錄服務；目錄服務；目錄
 solution: Experience Platform
 title: 目錄服務API指南
-topic: developer guide
-description: Catalog Service API可讓開發人員在Adobe Experience Platform中管理資料集中繼資料。 請依照本指南，瞭解如何使用API執行關鍵作業。
+topic: 開發人員指南
+description: Catalog Service API可讓開發人員管理Adobe Experience Platform的資料集中繼資料。 請依照本指南，瞭解如何使用API執行關鍵作業。
 translation-type: tm+mt
-source-git-commit: e649ab3da077cdd8e98562199b8bdece6108a572
+source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
 workflow-type: tm+mt
-source-wordcount: '599'
+source-wordcount: '602'
 ht-degree: 0%
 
 ---
@@ -15,17 +15,17 @@ ht-degree: 0%
 
 # [!DNL Catalog Service] API指南
 
-[!DNL Catalog Service] 是Adobe Experience Platform中資料位置和世系的記錄系統。[!DNL Catalog] 可當成中繼資料存放區或「目錄」，讓您在其中找到有關資料的資訊 [!DNL Experience Platform]，而不需存取資料本身。如需詳細資訊，請參閱[[!DNL Catalog] overview](../home.md)。
+[!DNL Catalog Service] 是Adobe Experience Platform境內資料位置和世系記錄系統。[!DNL Catalog] 可當成中繼資料存放區或「目錄」，讓您在其中找到有關資料的資訊 [!DNL Experience Platform]，而不需存取資料本身。如需詳細資訊，請參閱[[!DNL Catalog] overview](../home.md)。
 
 本開發人員指南提供協助您開始使用[!DNL Catalog] API的步驟。 然後，該指南提供使用[!DNL Catalog]執行鍵操作的示例API調用。
 
-## 必要條件
+## 先決條件
 
 [!DNL Catalog] 跟蹤中數種資源和操作的元資料 [!DNL Experience Platform]。本開發人員指南要求您對建立和管理這些資源時涉及的各種[!DNL Experience Platform]服務有良好的瞭解：
 
 * [[!DNL Experience Data Model (XDM)]](../../xdm/home.md):組織客戶體驗資 [!DNL Platform] 料的標準化架構。
 * [批次擷取](../../ingestion/batch-ingestion/overview.md):如何 [!DNL Experience Platform] 從資料檔案（例如CSV和Parpec）中擷取和儲存資料。
-* [串流擷取](../../ingestion/streaming-ingestion/overview.md):如 [!DNL Experience Platform] 何即時從用戶端和伺服器端裝置擷取和儲存資料。
+* [串流擷取](../../ingestion/streaming-ingestion/overview.md):如 [!DNL Experience Platform] 何即時從用戶端和伺服器端裝置收集和儲存資料。
 
 以下各節提供您必須知道或掌握的額外資訊，才能成功呼叫[!DNL Catalog Service] API。
 
