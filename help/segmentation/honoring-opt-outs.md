@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform; home；熱門主題；選擇退出；分段；分段服務；分段服務；榮譽退出；選擇退出；選擇退出；選擇退出；選擇退出；
+keywords: Experience Platform;home；熱門主題；選擇退出；分段；分段服務；分段服務；遵守退出；選擇退出；選擇退出；選擇退出；選擇退出；
 solution: Experience Platform
 title: 在區段中啟用退出請求
-topic: overview
-description: 'Adobe Experience Platform可讓您的客戶在即時客戶個人檔案中，針對資料的使用和儲存，傳送選擇退出要求。 這些選擇退出要求是加州消費者隱私法(CCPA)的一部分，該法案賦予加州居民存取和刪除個人資料的權利，並可得知他們的個人資料是否被出售或披露（以及向誰）。 '
+topic: 概述
+description: 'Adobe Experience Platform允許您的客戶在即時客戶個人檔案中傳送有關資料使用和儲存的退出要求]。 這些選擇退出要求是加州消費者隱私法(CCPA)的一部分，該法案賦予加州居民存取和刪除個人資料的權利，並可得知他們的個人資料是否被出售或披露（以及向誰）。 '
 translation-type: tm+mt
-source-git-commit: b3defc3e33a55855e307ab70b9797d985d5719e3
+source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
 workflow-type: tm+mt
-source-wordcount: '1031'
+source-wordcount: '1033'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 # 允許區段中的退出請求
 
-Adobe Experience Platform可讓您的客戶針對[!DNL Real-time Customer Profile]中資料的使用和儲存方式，傳送退出要求。 這些選擇退出要求是[!DNL California Consumer Privacy Act](CCPA)的一部分，CCPA為加州居民提供存取和刪除個人資料的權利，以及他們的個人資料是否被出售或披露（以及向誰）。
+Adobe Experience Platform允許您的客戶在[!DNL Real-time Customer Profile]內傳送有關其資料使用和儲存的退出要求。 這些選擇退出要求是[!DNL California Consumer Privacy Act](CCPA)的一部分，CCPA為加州居民提供存取和刪除個人資料的權利，以及他們的個人資料是否被出售或披露（以及向誰）。
 
 當客戶選擇退出後，貴組織在產生行銷活動的觀眾時，請務必遵守這些選擇退出。 本檔案說明有關執行退出要求的重要詳細資訊。
 
@@ -23,7 +23,7 @@ Adobe Experience Platform可讓您的客戶針對[!DNL Real-time Customer Profil
 
 履行退出要求需要瞭解所涉及的各種[!DNL Adobe Experience Platform]服務。 在處理選擇退出請求之前，請先檢閱下列服務的檔案：
 
-- [[!DNL Real-time Customer Profile]](../profile/home.md):根據來自多個來源的匯整資料，即時提供統一的客戶個人檔案。
+- [[!DNL Real-time Customer Profile]](../profile/home.md):根據來自多個來源的匯總資料即時提供統一的客戶個人檔案。
 - [[!DNL Adobe Experience Platform Segmentation Service]](./home.md):可讓您從資料建立受眾 [!DNL Real-time Customer Profile] 細分。
 - [[!DNL Experience Data Model (XDM)]](../xdm/home.md):平台組織客戶體驗資料的標準化架構。
 - [[!DNL Adobe Experience Platform Privacy Service]](../privacy-service/home.md):協助組織自動遵守與客戶資料相關的資料隱私權法規 [!DNL Platform]。
@@ -112,7 +112,7 @@ Adobe Experience Platform可讓您的客戶針對[!DNL Real-time Customer Profil
 
 ### 一般退出
 
-[!DNL Segmentation] 自動接受包含「一般退出[!UICONTROL 」標幟的所有設定檔]，這表示這些設定檔預設不會包含在觀眾或匯出中。但是，最佳做法是新增適當欄位，以確保觀眾和行銷活動中不包含選擇退出的設定檔。
+[!DNL Segmentation] 自動接受包含「一般退出[!UICONTROL 」標幟的所有設定檔]，這表示這些設定檔預設不會包含在觀眾或匯出中。但是，最佳做法是新增適當欄位，以確保觀眾和行銷活動不包含選擇退出的個人檔案。
 
 這可透過新增&#x200B;**[!UICONTROL 隱私權退出]**&#x200B;屬性，使用使用者介面來完成。 在此例中，區段設為僅包含已選擇加入的群體（這表示他們的描述檔上沒有一般的選擇退出標幟）。 通過聲明&quot;[!UICONTROL 退出類型]&quot;等於&quot;[!UICONTROL 一般退出]&quot;和&quot;[!UICONTROL 退出值]&quot;等於&quot;[!UICONTROL 選擇加入]&quot;來完成此操作。
 
