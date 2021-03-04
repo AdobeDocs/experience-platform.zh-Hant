@@ -1,14 +1,14 @@
 ---
-keywords: 體驗平台； home；熱門主題；群體評價；群體服務；群體；群體；群體；群體；群體；群體；群體；群體；群體；群體；
+keywords: Experience Platform; home；熱門主題；分段評價；分段服務；分段；分段；分段；分段；分段；分段；分段；分段；分段；分段；分段；分段；分段；分段；分段；分段；分段；分段；分段；分段；分段；分段；分段；分段；分段；分段；分段；
 solution: Experience Platform
 title: 評估並存取區段結果
-topic: tutorial
-type: Tutorial
-description: 請依照本教學課程學習如何使用Adobe Experience Platform Segmentation Service API評估細分並存取細分結果。
+topic: 教學課程
+type: 教學課程
+description: 請依照本教學課程學習如何使用Adobe Experience Platform區段服務API來評估區段並存取區段結果。
 translation-type: tm+mt
-source-git-commit: b3defc3e33a55855e307ab70b9797d985d5719e3
+source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
 workflow-type: tm+mt
-source-wordcount: '1567'
+source-wordcount: '1570'
 ht-degree: 0%
 
 ---
@@ -22,7 +22,7 @@ ht-degree: 0%
 
 本教學課程需要對建立觀眾區隔時涉及的各種[!DNL Adobe Experience Platform]服務有深入的瞭解。 在開始本教學課程之前，請先閱讀下列服務的檔案：
 
-- [[!DNL Real-time Customer Profile]](../../profile/home.md):根據來自多個來源的匯整資料，即時提供統一的客戶個人檔案。
+- [[!DNL Real-time Customer Profile]](../../profile/home.md):根據來自多個來源的匯總資料即時提供統一的客戶個人檔案。
 - [[!DNL Adobe Experience Platform Segmentation Service]](../home.md):可讓您從資料建立受眾 [!DNL Real-time Customer Profile] 細分。
 - [[!DNL Experience Data Model (XDM)]](../../xdm/home.md):平台組織客戶體驗資料的標準化架構。
 - [沙盒](../../sandboxes/home.md): [!DNL Experience Platform] 提供虛擬沙盒，可將單一執行個體分 [!DNL Platform] 割為不同的虛擬環境，以協助開發和發展數位體驗應用程式。
@@ -43,7 +43,7 @@ ht-degree: 0%
 >
 >如需[!DNL Platform]中沙盒的詳細資訊，請參閱[沙盒概述檔案](../../sandboxes/home.md)。
 
-所有POST、PUT和PATCH請求都需要附加標題：
+所有POST、PUT和PATCH請求都需要額外的標題：
 
 - 內容類型：application/json
 
