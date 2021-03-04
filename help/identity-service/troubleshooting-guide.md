@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home；熱門主題；identity namespace;Identity namespace
+keywords: Experience Platform;home；熱門主題；標識命名空間；標識命名空間
 solution: Experience Platform
 title: Identity Service疑難排解指南
-topic: troubleshooting
-description: 本檔案提供有關Adobe Experience Platform Identity Service常見問題的解答，以及常見錯誤的疑難排解指南。
+topic: 疑難排解
+description: 本檔案提供有關Adobe Experience Platform身分服務常見問題的解答，以及常見錯誤的疑難排解指南。
 translation-type: tm+mt
-source-git-commit: 73035aec86297cfc4ee9337cf922d599001379c3
+source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
 workflow-type: tm+mt
-source-wordcount: '2188'
+source-wordcount: '2190'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 # Identity Service疑難排解指南
 
-本檔案提供有關Adobe Experience Platform [!DNL Identity Service]常見問題的解答，以及常見錯誤的疑難排解指南。 有關一般[!DNL Platform] API的問題和疑難排解，請參閱[ Adobe Experience Platform API疑難排解指南](../landing/troubleshooting.md)。
+本檔案提供有關Adobe Experience Platform[!DNL Identity Service]常見問題的解答，以及常見錯誤的疑難排解指南。 有關[!DNL Platform] API的一般問題和疑難排解，請參閱[Adobe Experience PlatformAPI疑難排解指南](../landing/troubleshooting.md)。
 
 識別單一客戶的資料通常會分散在他們用來與您的品牌互動的各種裝置和系統上。 [!DNL Identity Service] 將這些零散的身份匯集在一起，以便全面瞭解客戶行為，以便您即時提供具影響力的數位體驗。如需詳細資訊，請參閱[身分服務概觀](./home.md)。
 
@@ -47,7 +47,7 @@ ht-degree: 0%
 
 [體驗資料模型(XDM)結構](../xdm/home.md) 支援多個身分欄位。在實現XDM Individual Profile或XDM ExperienceEvent類的架構中，任何類型`string`的資料欄位都可以標籤為標識欄位。 標籤後，這些欄位中包含的任何資料都會新增至描述檔的識別地圖。
 
-有關如何使用用戶介面將XDM欄位標籤為標識欄位的步驟，請參見「方案編輯器」教程中的[Identity部分](../xdm/tutorials/create-schema-ui.md)。 如果您使用API，請參閱「方案註冊表API」教程中的[Identity描述符部分](../xdm/tutorials/create-schema-api.md)。
+有關如何使用用戶介面將XDM欄位標籤為標識欄位的步驟，請參閱「模式編輯器」教程中的[標識部分](../xdm/tutorials/create-schema-ui.md)。 如果您使用API，請參閱「方案註冊表API」教程中的[Identity描述符部分](../xdm/tutorials/create-schema-api.md)。
 
 ## 是否有些欄位不應標示為身分的上下文？
 
@@ -73,7 +73,7 @@ ht-degree: 0%
 
 有關使用API建立標識描述符時定義命名空間的逐步說明，請參閱《方案註冊表開發人員指南》中有關建立描述符[的部分。 ](../xdm/tutorials/create-schema-ui.md)要在UI中將架構欄位標籤為標識，請遵循[架構編輯器教程](../xdm/tutorials/create-schema-api.md)中的步驟。
 
-## Experience Platform提供的標準身分名稱空間為何？{#standard-namespaces}
+## Experience Platform提供的標準身分名稱空間是什麼？{#standard-namespaces}
 
 標準識別名稱空間是所有組織都可用的名稱空間。 如需可用標準名稱空間的完整清單，請參閱[身分名稱空間概觀](./namespaces.md)。
 
@@ -83,7 +83,7 @@ ht-degree: 0%
 
 ## 如何為組織建立自訂命名空間？
 
-使用[Identity Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/id-service-api.yaml)，您可以向`/idnamespace/identities`端點發出POST請求，為組織建立自訂身分名稱空間。 如需詳細資訊，請參閱Identity Service API總覽中有關建立自訂命名空間的[一節。](./api/create-custom-namespace.md)
+使用[Identity Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/id-service-api.yaml)，您可以向`/idnamespace/identities`端點發出POST請求，為組織建立自定義身份名稱空間。 如需詳細資訊，請參閱Identity Service API總覽中有關建立自訂命名空間的[一節。](./api/create-custom-namespace.md)
 
 ## 什麼是複合身份和XID?
 
@@ -95,7 +95,7 @@ Identity Service會在持續值之前建立強大、單向的PII密碼雜湊。 
 
 ## 我是否應在傳送至平台之前加密所有PII?
 
-在將PII資料收入Platform之前，您不需要手動加密PII資料。 透過將`I1`資料使用標籤套用至所有適用的資料欄位，Platform會在擷取時自動將這些欄位轉換為雜湊的ID值。
+在將PII資料收入平台之前，您不需要手動加密PII資料。 透過將`I1`資料使用標籤套用至所有適用的資料欄位，Platform會在擷取時自動將這些欄位轉換為雜湊的ID值。
 
 如需如何套用和管理資料使用標籤的步驟，請參閱[資料使用標籤教學課程](../data-governance/labels/user-guide.md)。
 
