@@ -1,13 +1,13 @@
 ---
-keywords: 體驗平台； home；熱門主題；分段；分段；分段；分段；分段；分段；多實體；多實體分段；
+keywords: Experience Platform; home；熱門主題；分段；分段；分段；分段；分段；分段；多實體；多實體分段；
 solution: Experience Platform
 title: 多實體區段概觀
-topic: overview
+topic: 概述
 description: 多實體分段是指能夠根據產品、商店或其他非描述檔類別，以額外資料擴充描述檔資料。 連線後，其他類別的資料就會變成描述檔架構的原生資料。
 translation-type: tm+mt
-source-git-commit: b3defc3e33a55855e307ab70b9797d985d5719e3
+source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
 workflow-type: tm+mt
-source-wordcount: '674'
+source-wordcount: '676'
 ht-degree: 0%
 
 ---
@@ -15,17 +15,17 @@ ht-degree: 0%
 
 # 多實體分段概觀
 
-多實體細分是Adobe Experience Platform [!DNL Segmentation Service]的進階功能。 此功能可讓您使用貴組織可定義的額外「非人員」資料（又稱為「維度實體」）來擴充[!DNL Real-time Customer Profile]資料，例如與產品或商店相關的資料。 多實體細分可根據與您獨特業務需求相關的資料來定義受眾細分，而且無需具備查詢資料庫的專業知識即可執行。 透過多實體分段，您可以將關鍵資料新增至區段，而不需對資料串流進行昂貴的變更，或等待後端資料合併。
+多實體分段是Adobe Experience Platform[!DNL Segmentation Service]中的進階功能。 此功能可讓您使用貴組織可定義的額外「非人員」資料（又稱為「維度實體」）來擴充[!DNL Real-time Customer Profile]資料，例如與產品或商店相關的資料。 多實體細分可根據與您獨特業務需求相關的資料來定義受眾細分，而且無需具備查詢資料庫的專業知識即可執行。 透過多實體分段，您可以將關鍵資料新增至區段，而不需對資料串流進行昂貴的變更，或等待後端資料合併。
 
 ## 快速入門
 
-多實體細分需要對細分中涉及的各種Adobe Experience Platform服務有良好的瞭解。 繼續使用本指南之前，請先閱讀下列檔案：
+多實體細分需要對細分中涉及的Adobe Experience Platform各種服務有充分的瞭解。 繼續使用本指南之前，請先閱讀下列檔案：
 
 * [[!DNL Real-time Customer Profile]](../profile/home.md):根據來自多個來源的匯總資料，即時提供統一的消費者個人檔案。
    * [描述檔護欄](../profile/guardrails.md):建立受支援資料模型的最佳實務 [!DNL Profile]。
 * [[!DNL Adobe Experience Platform Segmentation Service]](./home.md):可讓您從資料建立 [!DNL Real-time Customer Profile] 區段。
 * [[!DNL Experience Data Model (XDM)]](../xdm/home.md):Experience Platform組織客戶體驗資料的標準化架構。
-   * [架構構成基礎](../xdm/schema/composition.md#union):瞭解在Experience Platform中用於構成結構描述的最佳範例。
+   * [架構構成基礎](../xdm/schema/composition.md#union):瞭解合成要用於Experience Platform的架構的最佳實踐。
 
 ## 使用個案
 
@@ -61,4 +61,4 @@ ht-degree: 0%
 
 ## 評估並存取多實體區段
 
-建立區段後，您可使用區段API來評估和存取區段結果。 評估多實體區段與評估標準區段非常類似。 此程式只能使用區段API來完成。 如需如何使用API評估和存取區段的詳細指南，請閱讀[評估和存取區段](./tutorials/evaluate-a-segment.md)教學課程。
+建立區段後，您可以使用區段API來評估和存取區段結果。 評估多實體區段與評估標準區段非常類似。 此程式只能使用區段API來完成。 如需如何使用API評估和存取區段的詳細指南，請閱讀[評估和存取區段](./tutorials/evaluate-a-segment.md)教學課程。
