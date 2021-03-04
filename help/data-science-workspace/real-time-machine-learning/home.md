@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform；開發人員指南； Data Science Workspace；熱門主題；即時機器學習；
+keywords: Experience Platform；開發人員指南；資料科學工作區；熱門主題；即時機器學習；
 solution: Experience Platform
 title: 即時機器學習概觀
-topic: Overview
+topic: 概述
 description: 即時機器學習功能可大幅提升數位體驗內容對使用者的相關性。 透過在Experience Edge上運用即時參考和持續學習，您就能做到這一點。
 translation-type: tm+mt
-source-git-commit: f6cfd691ed772339c888ac34fcbd535360baa116
+source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
 workflow-type: tm+mt
-source-wordcount: '548'
-ht-degree: 1%
+source-wordcount: '550'
+ht-degree: 2%
 
 ---
 
@@ -37,11 +37,11 @@ ht-degree: 1%
 
 ### 資料擷取與準備
 
-Adobe Experience Platform上的[!DNL Experience Data Model](XDM)會擷取並轉換資料。 此資料用於模型訓練。 若要進一步瞭解XDM，請造訪[XDM綜覽](../../xdm/home.md)。
+使用Adobe Experience Platform的[!DNL Experience Data Model](XDM)來吸收和轉換資料。 此資料用於模型訓練。 若要進一步瞭解XDM，請造訪[XDM綜覽](../../xdm/home.md)。
 
 ### 製作
 
-從頭開始製作即時機器學習模型，或以預先訓練好的序號化ONNX模型在Adobe Experience Platform Jupyter Notebooks中引入，以建立即時機器學習模型。
+在Adobe Experience PlatformJupyter Notebooks中，從頭開始編寫或以預先培訓過的序號化ONNX模型引入，以建立即時機器學習模型。
 
 ### 部署
 
@@ -73,7 +73,7 @@ Adobe Experience Platform上的[!DNL Experience Data Model](XDM)會擷取並轉�
 
 |  | Alpha（5月） |
 | --- | --- |
-| **功能** | -使用RTML筆記型電腦範本，製作、測試和部署自訂的機器學習模型。 <br> -支援匯入預先訓練的機器學習模型。<br> -即時機器學習SDK。<br> -創作節點的起始集。<br> -部署至Adobe Experience Platform Hub。 |
+| **功能** | -使用RTML筆記型電腦範本，製作、測試和部署自訂的機器學習模型。 <br> -支援匯入預先訓練的機器學習模型。<br> -即時機器學習SDK。<br> -創作節點的起始集。<br> -部署到Adobe Experience Platform樞紐。 |
 | **可用性** | 北美 |
 | **編寫節點** | - Aprocts <br> - ScikitLearn <br> - ONNXNode <br> - Split <br> - ModelUpload <br> - OneHotEncoder |
 | **計分執行時間** | ONNX |
