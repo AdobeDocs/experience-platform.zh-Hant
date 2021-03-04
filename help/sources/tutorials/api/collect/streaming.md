@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform; home；熱門主題；雲端儲存資料；串流資料；串流
+keywords: Experience Platform；首頁；熱門主題；雲儲存資料；流資料；流
 solution: Experience Platform
 title: 使用來源連接器和API收集串流資料
 topic: 概述
 type: 教學課程
 description: 本教學課程涵蓋使用來源連接器和API擷取串流資料並將其匯入平台的步驟。
 translation-type: tm+mt
-source-git-commit: b8f7f6e7f110dc9ebd025cd594fd1a54126ccdf3
+source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
 workflow-type: tm+mt
-source-wordcount: '1305'
+source-wordcount: '1306'
 ht-degree: 2%
 
 ---
@@ -29,13 +29,13 @@ ht-degree: 2%
 - [[!DNL HTTP API]](../create/streaming/http.md)
 - [[!DNL Google PubSub]](../create/cloud-storage/google-pubsub.md)
 
-本教學課程也要求您對Adobe Experience Platform的下列元件有正確的認識：
+本教學課程還要求您對Adobe Experience Platform的以下部分有切實的瞭解：
 
 - [[!DNL Experience Data Model (XDM) System]](../../../../xdm/home.md):Experience Platform組織客戶體驗資料的標準化架構。
    - [架構構成基礎](../../../../xdm/schema/composition.md):瞭解XDM架構的基本建置區塊，包括架構組合的主要原則和最佳實務。
    - [架構註冊開發人員指南](../../../../xdm/api/getting-started.md):包含您必須知道的重要資訊，以便成功執行對架構註冊表API的呼叫。這包括您的`{TENANT_ID}`、&quot;containers&quot;的概念，以及提出要求時所需的標題（請特別注意「接受」標題及其可能的值）。
 - [[!DNL Catalog Service]](../../../../catalog/home.md):目錄是記錄資料位置和世系的系統 [!DNL Experience Platform]。
-- [[!DNL Streaming ingestion]](../../../../ingestion/streaming-ingestion/overview.md):串流擷取 [!DNL Platform] 為使用者提供從用戶端和伺服器端裝置即時傳送資 [!DNL Experience Platform] 料的方法。
+- [[!DNL Streaming ingestion]](../../../../ingestion/streaming-ingestion/overview.md):串流擷取 [!DNL Platform] 為使用者提供從用戶端和伺服器端裝置即時傳送資料 [!DNL Experience Platform] 的方法。
 - [沙盒](../../../../sandboxes/home.md): [!DNL Experience Platform] 提供虛擬沙盒，可將單一執行個體分 [!DNL Platform] 割為不同的虛擬環境，以協助開發和發展數位體驗應用程式。
 
 以下各節提供您需要瞭解的其他資訊，以便使用[!DNL Flow Service] API成功收集串流資料。
@@ -56,13 +56,13 @@ ht-degree: 2%
 
 - `x-sandbox-name: {SANDBOX_NAME}`
 
-所有包含裝載(POST、PUT、PATCH)的請求都需要額外的媒體類型標題：
+所有包含裝載(POST、PUT、PATCH)的請求都需要附加的媒體類型標題：
 
 - `Content-Type: application/json`
 
 ## 建立源連接{#source}
 
-您可以通過對[!DNL Flow Service] API發出POST請求來建立源連接。 源連接由連接ID、源資料檔案的路徑和連接規範ID組成。
+您可以通過向[!DNL Flow Service] API發出POST請求來建立源連接。 源連接由連接ID、源資料檔案的路徑和連接規範ID組成。
 
 要建立源連接，還必須為資料格式屬性定義枚舉值。
 
@@ -502,7 +502,7 @@ curl -X GET \
 - [對應ID](#mapping)
 - [資料流規範ID](#specs)
 
-資料流負責調度和收集源中的資料。 您可以通過執行POST請求來建立資料流，同時在裝載中提供先前提到的值。
+資料流負責調度和收集源中的資料。 您可以通過執行POST請求，同時在裝載中提供先前提到的值來建立資料流。
 
 **API格式**
 
