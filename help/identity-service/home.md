@@ -2,12 +2,12 @@
 keywords: Experience Platform;home；熱門主題；identity;Identity;XDM圖形；identity service;Identity Service
 solution: Experience Platform
 title: Identity Service概觀
-topic: overview
-description: Adobe Experience Platform Identity Service可跨裝置和系統橋接身分，協助您更全面地瞭解客戶及其行為，讓您即時提供具影響力的個人化數位體驗。
+topic: 概述
+description: Adobe Experience Platform身分服務可跨裝置和系統橋接身分，協助您更全面地瞭解客戶及其行為，讓您即時提供具影響力的個人化數位體驗。
 translation-type: tm+mt
-source-git-commit: 73035aec86297cfc4ee9337cf922d599001379c3
+source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
 workflow-type: tm+mt
-source-wordcount: '1730'
+source-wordcount: '1733'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 # [!DNL Identity Service]概述
 
-要提供相關的數位體驗，必須全面瞭解客戶。 當客戶資料分散在不同的系統上時，這會更加困難，導致每個客戶看起來都有多個「身分」。 Adobe Experience Platform [!DNL Identity Service]可跨裝置和系統橋接身分，協助您更全面地瞭解客戶及其行為，讓您即時提供具影響力的個人化數位體驗。
+要提供相關的數位體驗，必須全面瞭解客戶。 當客戶資料分散在不同的系統上時，這會更加困難，導致每個客戶看起來都有多個「身分」。 Adobe Experience Platform[!DNL Identity Service]可跨裝置和系統橋接身份，協助您更全面地瞭解客戶及其行為，讓您即時提供具影響力的個人化數位體驗。
 
 ## 瞭解 [!DNL Identity Service]
 
@@ -27,7 +27,7 @@ Mary在您的電子商務網站上有一個帳戶，她過去在那裡完成了�
 
 此時，Mary的活動會以兩個不同的配置檔案的形式出現：她的電子商務登入和平板電腦裝置，可能是透過裝置ID識別。
 
-瑪麗稍後會繼續其平板電腦作業，並在訂閱您的電子報時提供電子郵件地址。 在這麼做時，串流擷取會在其個人檔案中新增新的身分識別作為記錄資料。 因此，[!DNL Identity Service]現在將Mary的平板電腦裝置活動與其電子商務帳戶記錄建立關聯。
+瑪麗稍後會繼續其平板電腦作業，並在訂閱您的電子報時提供電子郵件地址。 在這麼做時，串流擷取會在其個人檔案中新增新的身分識別作為記錄資料。 因此，[!DNL Identity Service]現在將Mary的平板電腦裝置活動與其電子商務帳戶記錄關聯起來。
 
 在她的平板電腦上按一下，您的定位內容可以反映瑪麗的完整個人檔案和歷史，而不只是未知顧客使用的平板電腦。
 
@@ -62,7 +62,7 @@ PII（例如電子郵件地址和電話號碼）可直接識別客戶。 因此�
 
 [!DNL Experience Platform] 通過兩個概念來解決此難題： [身分](#identity-namespaces) 名稱和 [身分圖](#identity-graphs)。
 
-以下影片旨在協助您瞭解身分和身分圖。 以下視訊涵蓋Identity Collection、Identity Graphs和API的3種功能。 此外，還說明如何使用確定性和概率性演算法來建構私人身分識別圖，並討論私人身分識別圖、Adobe Experience Platform Identity Service Co-Op Graph和協力廠商圖的角色。
+以下影片旨在協助您瞭解身分和身分圖。 以下視訊涵蓋Identity Collection、Identity Graphs和API的3種功能。 同時，也描述了如何使用確定性和概率性算法來構造私有身份圖，並討論了私有身份圖、Adobe Experience Platform身份服務合作圖和第三方圖的作用。
 
 >[!IMPORTANT]
 >
@@ -74,7 +74,7 @@ PII（例如電子郵件地址和電話號碼）可直接識別客戶。 因此�
 
 當您的客戶在多個通道（包括網路、行動應用程式、客服中心或店面）與您的品牌互動時，如果您無法跨通道觀察和追蹤他們的活動，就很難瞭解並提供服務。
 
-透過不同的裝置和通道瞭解客戶，首先要在每個通道中識別客戶。 Adobe Experience Platform透過使用身分名稱空間來實現此目標。
+透過不同的裝置和通道瞭解客戶，首先要在每個通道中識別客戶。 Adobe Experience Platform是使用身份名稱空間來實現這一目的的。
 身分命名空間是用於提供資料來源之上下文的識別碼，例如裝置ID或電子郵件ID。 身分名稱空間可用來尋找或連結個別身分，並提供身分值的上下文，以避免資料衝突。 例如，ID &quot;123456&quot;可能是指電子商務系統中的一個人，以及服務台系統中的另一人。 如需詳細資訊，請參閱[identity namespace overview](./namespaces.md)。
 
 ### 身分圖
@@ -91,11 +91,11 @@ PII（例如電子郵件地址和電話號碼）可直接識別客戶。 因此�
 
 ## 向[!DNL Identity Service]提供身份資料
 
-本節說明在[!DNL Identity Service]使用Adobe Experience Platform建立每位客戶的身分圖表之前，如何處理提供給Adobe Experience Platform的資料。
+本節介紹在[!DNL Identity Service]使用提供給Adobe Experience Platform的資料為每個客戶構建身份圖之前如何處理資料。
 
 ### 決定身分欄位
 
-根據您的企業資料收集策略，您標示為身分的資料欄位會決定哪些資料會包含在您的身分映射中。 為了充份運用Adobe Experience Platform的優點和最全面的客戶身分，您應上傳線上和離線資料。
+根據您的企業資料收集策略，您標示為身分的資料欄位會決定哪些資料會包含在您的身分映射中。 為了充份運用Adobe Experience Platform的優勢和最全面的客戶身分，您應上傳線上和離線資料。
 
 - 線上資料是描述線上存在與行為的資料，例如使用者名稱與電子郵件地址。
 
@@ -134,7 +134,7 @@ PII（例如電子郵件地址和電話號碼）可直接識別客戶。 因此�
 
 [!DNL Identity Service] 使用批次擷取或串流擷取 [!DNL Experience Platform] 傳送至 [的XDM](../ingestion/batch-ingestion/overview.md) 相容 [資料](../ingestion/streaming-ingestion/overview.md)。
 
-以下視訊旨在支援您對Identity Service的瞭解。 此影片示範如何將資料欄位標示為身分、擷取身分資料，然後確認資料已傳至Adobe Experience Platform Identity Service私用圖表。
+以下視訊旨在支援您對Identity Service的瞭解。 此視訊示範如何將資料欄位標示為身分、擷取身分資料，然後確認資料已傳至Adobe Experience Platform身分服務私人圖表。
 
 >[!WARNING]
 >
@@ -144,7 +144,7 @@ PII（例如電子郵件地址和電話號碼）可直接識別客戶。 因此�
 
 ## 資料治理
 
-Adobe Experience Platform是以隱私權為考量而建立，並包含資料治理架構，以保護客戶PII資料。 預設會加密「電子郵件」或「電話」名稱空間下的身分資料，但為了確保機密資料在保存前已加密，資料使用標籤可在資料被收錄時或在資料送達[!DNL Platform]時套用至資料。 如需詳細資訊，請閱讀[資料治理概觀](../data-governance/home.md)。
+Adobe Experience Platform的建置考量到隱私權，並包含資料治理架構，以保護客戶PII資料。 預設會加密「電子郵件」或「電話」名稱空間下的身分資料，但為了確保機密資料在保存前已加密，資料使用標籤可在資料被收錄時或在資料送達[!DNL Platform]時套用至資料。 如需詳細資訊，請閱讀[資料治理概觀](../data-governance/home.md)。
 
 ## 後續步驟
 
