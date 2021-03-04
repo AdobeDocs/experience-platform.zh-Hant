@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform;home；熱門主題；串流連接；建立流連接；api指南；教程；建立流連接；流攝取；攝取；
+keywords: Experience Platform;home；熱門主題；流連接；建立流連接；api指南；教學課程；建立流連接；流攝取；攝取；
 solution: Experience Platform
 title: 使用API建立串流連線
-topic: tutorial
-type: Tutorial
-description: 本教學課程將協助您開始使用串流擷取API，這是Adobe Experience Platform Data Ingestion Service API的一部分。
+topic: 教學課程
+type: 教學課程
+description: 本教學課程將協助您開始使用串流擷取API，這是Adobe Experience Platform資料擷取服務API的一部分。
 translation-type: tm+mt
-source-git-commit: 5932d63820dd0e50acccd18573746061232e099e
+source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
 workflow-type: tm+mt
-source-wordcount: '882'
+source-wordcount: '885'
 ht-degree: 2%
 
 ---
@@ -22,7 +22,7 @@ Flow Service用於收集和集中Adobe Experience Platform內不同來源的客�
 
 ## 快速入門
 
-本指南需要有效瞭解Adobe Experience Platform的下列元件：
+本指南需要對Adobe Experience Platform的下列組成部分有切實的瞭解：
 
 - [[!DNL Experience Data Model (XDM)]](../../../../../xdm/home.md):組織體驗資料的 [!DNL Platform] 標準化架構。
 - [[!DNL Real-time Customer Profile]](../../../../../profile/home.md):根據來自多個來源的匯整資料，即時提供統一的消費者個人檔案。
@@ -69,7 +69,7 @@ POST /flowservice/connections
 
 **請求**
 
-若要建立串流連線，必須在POST要求中提供提供者ID和連線規格ID。 提供程式ID為`521eee4d-8cbe-4906-bb48-fb6bd4450033`，連接規範ID為`bc7b00d6-623a-4dfc-9fdb-f1240aeadaeb`。
+為了建立串流連線，必須在POST請求中提供提供者ID和連線規格ID。 提供程式ID為`521eee4d-8cbe-4906-bb48-fb6bd4450033`，連接規範ID為`bc7b00d6-623a-4dfc-9fdb-f1240aeadaeb`。
 
 ```shell
 curl -X POST https://platform.adobe.io/data/foundation/flowservice/connections \
@@ -132,7 +132,7 @@ POST /flowservice/connections
 
 **請求**
 
-若要建立串流連線，必須在POST要求中提供提供者ID和連線規格ID。 提供程式ID為`521eee4d-8cbe-4906-bb48-fb6bd4450033`，連接規範ID為`bc7b00d6-623a-4dfc-9fdb-f1240aeadaeb`。
+為了建立串流連線，必須在POST請求中提供提供者ID和連線規格ID。 提供程式ID為`521eee4d-8cbe-4906-bb48-fb6bd4450033`，連接規範ID為`bc7b00d6-623a-4dfc-9fdb-f1240aeadaeb`。
 
 ```shell
 curl -X POST https://platform.adobe.io/data/foundation/flowservice/connections \
