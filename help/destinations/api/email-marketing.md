@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform;home；熱門主題
+keywords: Experience Platform；首頁；熱門主題
 solution: Experience Platform
 title: 連線至電子郵件行銷目標，並使用API呼叫啟用資料
-description: 本檔案涵蓋使用Adobe Experience Platform API建立電子郵件行銷目的地
-topic: tutorial
-type: Tutorial
+description: 本檔案涵蓋使用Adobe Experience PlatformAPI建立電子郵件行銷目的地
+topic: 教學課程
+type: 教學課程
 translation-type: tm+mt
-source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
+source-git-commit: c8b08b2feb30bf137d802ce82df92d3f9f8bdb78
 workflow-type: tm+mt
-source-wordcount: '1649'
+source-wordcount: '1681'
 ht-degree: 1%
 
 ---
@@ -16,9 +16,9 @@ ht-degree: 1%
 
 # 連線至電子郵件行銷目標，並使用API呼叫啟用資料
 
-本教學課程示範如何使用API呼叫連線至您的Adobe Experience Platform資料、建立[電子郵件行銷目標](../catalog/email-marketing/overview.md)、建立資料流至新建立的目標，以及啟用資料至新建立的目標。
+本教學課程示範如何使用API呼叫來連線至您的Adobe Experience Platform資料、建立[電子郵件行銷目標](../catalog/email-marketing/overview.md)、建立資料流至您新建立的目標，以及啟用資料至您新建立的目標。
 
-本教學課程在所有範例中都使用Adobe Campaign目標，但所有電子郵件行銷目標的步驟都相同。
+本教學課程在所有範例中都使用Adobe Campaign目的地，但所有電子郵件行銷目的地的步驟都相同。
 
 ![概觀——建立目標及啟用區段的步驟](../assets/api/email-marketing/overview.png)
 
@@ -26,7 +26,7 @@ ht-degree: 1%
 
 ## 快速入門
 
-本指南需要有效瞭解Adobe Experience Platform的下列元件：
+本指南需要對Adobe Experience Platform的下列組成部分有切實的瞭解：
 
 * [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md):組織客戶體驗資 [!DNL Experience Platform] 料的標準化架構。
 * [[!DNL Catalog Service]](../../catalog/home.md): [!DNL Catalog] 是資料位置和世系的記錄系統 [!DNL Experience Platform]。
@@ -61,19 +61,19 @@ ht-degree: 1%
 >
 >如需[!DNL Experience Platform]中沙盒的詳細資訊，請參閱[沙盒概述檔案](../../sandboxes/home.md)。
 
-所有包含裝載(POST、PUT、PATCH)的請求都需要額外的媒體類型標題：
+所有包含裝載(POST、PUT、PATCH)的請求都需要附加的媒體類型標題：
 
 * Content-Type: `application/json`
 
 ### Swagger檔案
 
-您可在Swagger的本教學課程中，找到所有API呼叫的隨附參考檔案。 請參閱Adobe.io](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml)上的[Flow Service API檔案。 建議您同時使用本教學課程和Swagger檔案頁面。
+您可在Swagger的本教學課程中，找到所有API呼叫的隨附參考檔案。 請參閱Adobe.io](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml)上的[Flow Service API文檔。 建議您同時使用本教學課程和Swagger檔案頁面。
 
 ## 獲取可用目的地清單{#get-the-list-of-available-destinations}
 
 ![目標步驟概述步驟1](../assets/api/email-marketing/step1.png)
 
-首先，您應決定要啟動資料的電子郵件行銷目標。 首先，請執行呼叫以請求可連接並啟用區段至的可用目的地清單。 對`connectionSpecs`端點執行以下GET請求以返回可用目的地清單：
+首先，您應決定要啟動資料的電子郵件行銷目標。 首先，請執行呼叫以請求可連接並啟用區段至的可用目的地清單。 對`connectionSpecs`端點執行以下GET請求以返回可用目標清單：
 
 **API格式**
 
@@ -361,6 +361,12 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 ### 指定儲存位置和資料格式
 
+[!DNL Adobe Experience Platform] 以檔案形式匯出電子郵件行銷和雲端儲存目的地的 [!DNL CSV] 資料。
+
+>[!IMPORTANT]
+> 
+>[!DNL Adobe Experience Platform] 自動將匯出檔案分割為每個檔案500萬個記錄（列）。每一行代表一個描述檔。
+
 **API格式**
 
 ```http
@@ -454,7 +460,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 使用您在前面的步驟中獲得的ID，您現在可以在[!DNL Experience Platform]資料和要啟用資料的目標之間建立資料流。 將此步驟設想成在[!DNL Experience Platform]和您所要的目的地之間構建資料稍後將通過的管線。
 
-要建立資料流，請執行如下所示的POST請求，同時在裝載中提供以下提及的值。
+要建立資料流，請執行POST請求，如下所示，同時在裝載中提供以下提及的值。
 
 執行以下POST請求以建立資料流。
 
@@ -504,8 +510,8 @@ curl -X POST \
     }
 ```
 
-* `{FLOW_SPEC_ID}`:使用您要連線至的電子郵件行銷目的地的流程。要獲取流規範，請在`flowspecs`端點上執行GET操作。 請參閱Swagger檔案：https://platform.adobe.io/data/foundation/flowservice/swagger#/Flow%20Specs%20API/getFlowSpecs。 在回應中，尋找`upsTo`並複製您要連線至之電子郵件行銷目的地的對應ID。 例如，若是Adobe Campaign，請尋找`upsToCampaign`並複製`id`參數。
-* `{SOURCE_CONNECTION_ID}`:使用您在步驟「連線至您的Experience Platform」中 [取得的來源連線ID](#connect-to-your-experience-platform-data)。
+* `{FLOW_SPEC_ID}`:使用您要連線至的電子郵件行銷目的地的流程。要獲取流規範，請在`flowspecs`端點上執行GET操作。 請參閱Swagger檔案：https://platform.adobe.io/data/foundation/flowservice/swagger#/Flow%20Specs%20API/getFlowSpecs。 在回應中，尋找`upsTo`並複製您要連線至之電子郵件行銷目的地的對應ID。 例如，對於Adobe Campaign，請查找`upsToCampaign`並複製`id`參數。
+* `{SOURCE_CONNECTION_ID}`:使用在步驟「連接至Experience Platform」中 [獲得的源連接ID](#connect-to-your-experience-platform-data)。
 * `{TARGET_CONNECTION_ID}`:使用您在「連線至電子郵件行銷目的地」 [步驟中取得的目標連線ID](#connect-to-email-marketing-destination)。
 
 **回應**
@@ -526,7 +532,7 @@ curl -X POST \
 
 建立完所有連線和資料流程後，您現在可以將個人檔案資料啟動至電子郵件行銷平台。 在此步驟中，您可以選擇要傳送至目的地的區段和描述檔屬性，並可排程資料並傳送至目的地。
 
-若要將區段啟用至新目的地，您必須執行JSON PATCH作業，如下例所示。 您可以在一次呼叫中啟用多個區段和描述檔屬性。 若要進一步瞭解JSON修補程式，請參閱[RFC規格](https://tools.ietf.org/html/rfc6902)。
+若要將區段啟用至新目的地，您必須執行JSONPATCH作業，類似以下範例。 您可以在一次呼叫中啟用多個區段和描述檔屬性。 若要進一步瞭解JSONPATCH，請參閱[RFC規格](https://tools.ietf.org/html/rfc6902)。
 
 **API格式**
 
@@ -598,7 +604,7 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 
 在教學課程的最後一個步驟中，您應驗證區段和描述檔屬性確實已正確對應至資料流。
 
-若要驗證此功能，請執行下列GET要求：
+要驗證此GET，請執行以下請求：
 
 **API格式**
 
