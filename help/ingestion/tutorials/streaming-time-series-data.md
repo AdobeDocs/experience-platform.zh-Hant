@@ -6,9 +6,9 @@ topic: 教學課程
 type: 教學課程
 description: 本教學課程將協助您開始使用串流擷取API，這是Adobe Experience Platform資料擷取服務API的一部分。
 translation-type: tm+mt
-source-git-commit: d3531248f8a7116b66f9a7ca00e0eadbc3d9df3d
+source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
 workflow-type: tm+mt
-source-wordcount: '1313'
+source-wordcount: '1314'
 ht-degree: 2%
 
 ---
