@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform;home；熱門主題；串流；串流擷取；串流擷取驗證；驗證；串流擷取驗證；驗證；同步驗證；同步驗證；非同步驗證；非同步驗證；
+keywords: Experience Platform;home；熱門主題；流；流處理；流處理驗證；驗證；流處理驗證；驗證；同步驗證；同步驗證；非同步驗證；非同步驗證；
 solution: Experience Platform
 title: 串流擷取驗證
 topic: 教學課程
 type: 教學課程
-description: 串流擷取可讓您使用即時串流端點，將資料上傳至Adobe Experience Platform。 串流擷取API支援同步和非同步兩種驗證模式。
+description: 串流擷取可讓您使用串流端點即時將資料上傳至Adobe Experience Platform。 串流擷取API支援同步和非同步兩種驗證模式。
 translation-type: tm+mt
-source-git-commit: 8f863eb3427097406237aa443262917fdc3f3e1c
+source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
 workflow-type: tm+mt
-source-wordcount: '898'
+source-wordcount: '900'
 ht-degree: 3%
 
 ---
@@ -16,11 +16,11 @@ ht-degree: 3%
 
 # 串流擷取驗證
 
-串流擷取可讓您使用即時串流端點，將資料上傳至Adobe Experience Platform。 串流擷取API支援同步和非同步兩種驗證模式。
+串流擷取可讓您使用串流端點即時將資料上傳至Adobe Experience Platform。 串流擷取API支援同步和非同步兩種驗證模式。
 
 ## 快速入門
 
-本指南需要有效瞭解Adobe Experience Platform的下列元件：
+本指南需要對Adobe Experience Platform的下列組成部分有切實的瞭解：
 
 - [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md):組織客戶體驗資 [!DNL Experience Platform] 料的標準化架構。
 - [[!DNL Streaming Ingestion]](../streaming-ingestion/overview.md):其中一種方法可傳送資料 [!DNL Experience Platform]。
