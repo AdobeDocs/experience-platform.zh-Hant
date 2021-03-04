@@ -3,9 +3,9 @@ keywords: RTCDP;CDP；即時客戶資料平台；即時客戶資料平台；即�
 title: 即時客戶資料平台快速入門
 description: 設定 Real-time Customer Data Platform 實作時使用此範本案例作為的範例。
 translation-type: tm+mt
-source-git-commit: 36f63cecd49e6a6b39367359d50252612ea16d7a
+source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
 workflow-type: tm+mt
-source-wordcount: '2326'
+source-wordcount: '2328'
 ht-degree: 1%
 
 ---
@@ -261,7 +261,7 @@ Loyalty member
 
 選擇&#x200B;**[!UICONTROL 保存]**&#x200B;以轉至下一頁。
 
-當此觀眾中的客戶進行購買時，他們對此觀眾的會籍會即時抑制。 由於狀態已改變，他們不再符合資格。
+當此觀眾中的客戶進行購買時，即時抑制其對此觀眾的會籍。 由於狀態已改變，他們不再符合資格。
 
 如此，Luma媒體團隊的主管就可省下數十萬美元，因為沒有針對不合格的觀眾使用庫存。
 
