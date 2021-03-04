@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform; home；熱門主題；分段；分段；分段服務；流分段；流分段；流分段；連續評價；
+keywords: Experience Platform; home；熱門主題；分段；分段；分段服務；流分段；流分段；連續評價；
 solution: Experience Platform
 title: '使用串流分段功能，即時評估事件 '
-topic: developer guide
-description: 本檔案包含如何使用Adobe Experience Platform Segmentation Service API的串流區段的範例。
+topic: 開發人員指南
+description: 本檔案包含如何搭配Adobe Experience Platform分段服務API使用串流分段的範例。
 translation-type: tm+mt
-source-git-commit: b3defc3e33a55855e307ab70b9797d985d5719e3
+source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
 workflow-type: tm+mt
-source-wordcount: '1338'
+source-wordcount: '1341'
 ht-degree: 1%
 
 ---
@@ -25,7 +25,7 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->串流區段只能用來評估串流至平台的資料。 換言之，透過批次擷取所擷取的資料不會透過串流分段來評估，而且會與每夜排程的分段工作一起評估。
+>串流區段只能用來評估串流至Platform的資料。 換言之，透過批次擷取所擷取的資料不會透過串流分段來評估，而且會與每夜排程的分段工作一起評估。
 
 ## 快速入門
 
@@ -82,7 +82,7 @@ ht-degree: 1%
 
 在下列情況下，區段定義將&#x200B;**not**&#x200B;啟用串流區段：
 
-- 區段定義包括Adobe Audience Manager(AAM)區段或特徵。
+- 區段定義包含Adobe Audience Manager(AAM)區段或特徵。
 - 區段定義包括多個實體（多實體查詢）。
 
 此外，執行串流區段時，也會套用一些准則：
@@ -94,7 +94,7 @@ ht-degree: 1%
 
 ## 擷取所有啟用串流區段的區段
 
-您可以透過向`/segment/definitions`端點提出GET請求，擷取IMS組織內所有已啟用串流分段的區段清單。
+您可以向`/segment/definitions`端點提出GET請求，以擷取IMS組織內啟用串流分段的所有區段清單。
 
 **API格式**
 
