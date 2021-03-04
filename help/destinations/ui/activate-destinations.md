@@ -1,14 +1,14 @@
 ---
 keywords: 激活目標；激活目標；激活資料
 title: 將描述檔和區段啟用至目標
-type: Tutorial
+type: 教學課程
 seo-title: 將描述檔和區段啟用至目標
-description: 將區段對應至目標，以啟用您在Adobe Experience Platform中擁有的資料。 若要完成此作業，請遵循下列步驟。
-seo-description: 將區段對應至目標，以啟用您在Adobe Experience Platform中擁有的資料。 若要完成此作業，請遵循下列步驟。
+description: 將區段對應至目的地，以啟用您在Adobe Experience Platform的資料。 若要完成此作業，請遵循下列步驟。
+seo-description: 將區段對應至目的地，以啟用您在Adobe Experience Platform的資料。 若要完成此作業，請遵循下列步驟。
 translation-type: tm+mt
-source-git-commit: 6e7ecfdc0b2cbf6f07e6b2220ec163289511375e
+source-git-commit: efb66b6374f8c0579d90f63452528353f4d1418d
 workflow-type: tm+mt
-source-wordcount: '2140'
+source-wordcount: '2164'
 ht-degree: 0%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 0%
 
 # 將描述檔和區段啟用至目標
 
-將區段對應至目標，以啟用您在Adobe Experience Platform中擁有的資料。 若要完成此作業，請遵循下列步驟。
+將區段對應至目標，以啟動您在[!DNL Adobe Experience Platform]中擁有的資料。 若要完成此作業，請遵循下列步驟。
 
 ## 先決條件 {#prerequisites}
 
@@ -30,7 +30,7 @@ ht-degree: 0%
 
 適用於：所有目標
 
-在Adobe Experience Platform使用者介面中，導覽至&#x200B;**[!UICONTROL 目標]** > **[!UICONTROL 瀏覽]**，並選取您要啟動區段的目標。
+在Adobe Experience Platform用戶介面中，導覽至&#x200B;**[!UICONTROL 目標]** > **[!UICONTROL 瀏覽]**，並選取您要啟動區段的目標。
 
 ![瀏覽到目的地](../assets/ui/activate-destinations/connect.png)
 
@@ -38,7 +38,9 @@ ht-degree: 0%
 
 ![activate-flow](../assets/ui/activate-destinations/activate-flow.png)
 
-請注意，如果目的地的啟動工作流程已存在，您可以看到目前正在啟動至目的地的區段。 選擇右側導軌中的&#x200B;**[!UICONTROL 編輯激活]** ，然後按照以下步驟修改激活詳細資訊。
+>[!NOTE]
+>
+>如果目的地的啟動工作流程已存在，您可以看到目前正在啟動至目的地的區段。 選擇右側導軌中的&#x200B;**[!UICONTROL 編輯激活]** ，然後按照以下步驟修改激活詳細資訊。
 
 選擇目標後，選擇&#x200B;**[!UICONTROL 激活]**。
 
@@ -62,7 +64,7 @@ ht-degree: 0%
 
 #### 範例：啟用[!DNL Facebook Custom Audience] {#example-facebook}的觀眾資料
 
-這是在[!DNL Facebook]中啟用觀眾資料時正確身分對應的範例。
+以下是在[!DNL Facebook]中啟用觀眾資料時正確身分對應的範例。
 
 選擇源欄位：
 
@@ -76,7 +78,7 @@ ht-degree: 0%
 
 選擇目標欄位：
 
-* 當您的源名稱空間為`Email`或`Email_LC_SHA256`時，選擇`Email_LC_SHA256`名稱空間作為目標標識。
+* 當源名稱空間為`Email`或`Email_LC_SHA256`時，選擇`Email_LC_SHA256`名稱空間作為目標標識。
 * 當源名稱空間為`PHONE_E.164`或`Phone_SHA256`時，選擇`Phone_SHA256`名稱空間作為目標標識。
 * 當源名稱空間為`IDFA`或`GAID`時，選擇`IDFA`或`GAID`名稱空間作為目標標識。
 * 當您的來源名稱空間是自訂名稱空間時，請選取`Extern_ID`名稱空間作為目標識別。
@@ -138,13 +140,17 @@ If you are using another ID, such as "Rewards ID" or "Loyalty ID", as primary id
 
 ![設定步驟](../assets/ui/activate-destinations/configure-icon.png)
 
-在&#x200B;**[!UICONTROL Configure]**&#x200B;步驟中，您可以為要導出的每個段配置時間表和檔案名。 配置計畫是強制的，但配置檔案名是可選的。
+[!DNL Adobe Experience Platform] 以檔案形式匯出電子郵件行銷和雲端儲存目的地的 [!DNL CSV] 資料。在&#x200B;**[!UICONTROL Configure]**&#x200B;步驟中，您可以為要導出的每個段配置時間表和檔案名。 配置計畫是強制的，但配置檔案名是可選的。
+
+>[!IMPORTANT]
+> 
+>[!DNL Adobe Experience Platform] 自動將匯出檔案分割為每個檔案500萬個記錄（列）。每一行代表一個描述檔。
 
 要添加段的調度，請選擇&#x200B;**[!UICONTROL 建立調度]**。
 
 ![](../assets/ui/activate-destinations/configure-destination-schedule.png)
 
-此時會出現一個快顯視窗，顯示建立區段排程的選項。
+此時會出現對話方塊，顯示建立區段排程的選項。
 
 * **檔案匯出**:您可以選擇導出完整檔案或增量檔案。匯出完整檔案會發佈符合該區段之所有描述檔的完整快照。 匯出增量檔案會發佈自上次匯出以來符合該區段資格的描述檔增量。
 * **頻率**:如果 **[!UICONTROL 選取「]** 匯出完整檔案」，您可以選擇匯出 **** 「Onceor  **[!UICONTROL Daily]**」。如果選擇了「導出增量檔案」**[!UICONTROL ，則您只能導出**[!UICONTROL  Daily ]**。]**&#x200B;導出檔案&#x200B;**[!UICONTROL Once]**&#x200B;一次導出檔案。 導出檔案&#x200B;**[!UICONTROL Daily]**&#x200B;時，如果選擇了完整檔案，則每天從開始日期導出檔案到結束日期(UTC:00 PM EST:7:00)。如果選擇了增量檔案，則每天導出檔案。
@@ -212,7 +218,7 @@ If you are using another ID, such as "Rewards ID" or "Loyalty ID", as primary id
 
 >[!NOTE]
 >
-> Adobe Experience Platform會從您的架構中預先填入4個建議的常用屬性：`person.name.firstName`、`person.name.lastName`、`personalEmail.address`、`segmentMembership.status`。
+> Adobe Experience Platform在您的選擇中預先填入四個建議、常用的架構屬性：`person.name.firstName`、`person.name.lastName`、`personalEmail.address`、`segmentMembership.status`。
 
 檔案匯出會依下列方式而有所不同，視是否選取`segmentMembership.status`而定：
 * 如果選擇了`segmentMembership.status`欄位，則導出的檔案在初始完整快照中包括&#x200B;**[!UICONTROL Active]**&#x200B;成員，在後續增量導出中包括&#x200B;**[!UICONTROL Active]**&#x200B;和&#x200B;**[!UICONTROL Expired]**&#x200B;成員。
@@ -232,7 +238,7 @@ If you are using another ID, such as "Rewards ID" or "Loyalty ID", as primary id
 
 >
 > 
-例如，如果欄位`person.name.firstName`具有與目標的市場營銷操作衝突的特定資料使用標籤，則在複查步驟中將顯示資料使用策略違規。 如需詳細資訊，請參閱Adobe Experience Platform中的[資料治理](../../rtcdp/privacy/data-governance-overview.md#destinations)。
+例如，如果欄位`person.name.firstName`具有與目標的市場營銷操作衝突的特定資料使用標籤，則在複查步驟中將顯示資料使用策略違規。 如需詳細資訊，請參閱[Adobe Experience Platform的資料治理](../../rtcdp/privacy/data-governance-overview.md#destinations)。
 
 ### **[!UICONTROL 檢]** 視步驟  {#review}
 
@@ -254,7 +260,7 @@ If you are using another ID, such as "Rewards ID" or "Loyalty ID", as primary id
 
 ## 編輯啟動{#edit-activation}
 
-請依照下列步驟編輯Adobe Experience Platform中現有的啟動流程：
+請依照下列步驟編輯Adobe Experience Platform現有的啟動流程：
 
 1. 在左側導覽列中選擇&#x200B;**[!UICONTROL 目標]**，然後按一下&#x200B;**[!UICONTROL 瀏覽]**&#x200B;標籤，然後按一下目標名稱。
 2. 選擇右側導軌中的&#x200B;**[!UICONTROL 編輯啟動]**&#x200B;以變更要傳送至目的地的區段。
@@ -263,7 +269,7 @@ If you are using another ID, such as "Rewards ID" or "Loyalty ID", as primary id
 
 ### 電子郵件行銷目標和雲端儲存空間目標{#esp-and-cloud-storage}
 
-對於電子郵件行銷目標和雲端儲存目標，Adobe Experience Platform會在您提供的儲存位置中建立以定位點分隔的`.csv`或`.txt`檔案。 希望每天在您的儲存位置中建立一個新檔案。 預設檔案格式為：
+對於電子郵件行銷目標和雲端儲存目標，Adobe Experience Platform會在您提供的儲存位置建立以Tab分隔的`.csv`或`.txt`檔案。 希望每天在您的儲存位置中建立一個新檔案。 預設檔案格式為：
 `<destinationName>_segment<segmentID>_<timestamp-yyyymmddhhmmss>.csv|txt`
 
 請注意，您可以編輯檔案格式。 如需詳細資訊，請前往雲端儲存空間目標和電子郵件行銷目標的「設定」步驟。[](#configure)
@@ -288,7 +294,7 @@ Salesforce_Marketing_Cloud_segment12341e18-abcd-49c2-836d-123c88e76c39_202004100
 
 >[!TIP]
 >
->Adobe Experience Platform與[!DNL Facebook]的整合可支援歷史觀眾回填。 當您將區段啟動至目標時，所有歷史區段資格都會傳送至[!DNL Facebook]。
+>Adobe Experience Platform與[!DNL Facebook]之間的整合支援歷史讀者回填。 當您將區段啟動至目標時，所有歷史區段資格都會傳送至[!DNL Facebook]。
 
 ## 停用啟動{#disable-activation}
 
