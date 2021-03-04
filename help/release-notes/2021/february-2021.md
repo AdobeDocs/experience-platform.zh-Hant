@@ -5,9 +5,9 @@ doc-type: release notes
 last-update: February 24, 2021
 author: ens70167
 translation-type: tm+mt
-source-git-commit: efa06bec5af65240fdd586da4fd0439b8d1146b8
+source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
 workflow-type: tm+mt
-source-wordcount: '1137'
+source-wordcount: '1138'
 ht-degree: 7%
 
 ---
