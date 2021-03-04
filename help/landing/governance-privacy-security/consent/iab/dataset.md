@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;IAB;IAB 2.0;connownence;Conconence
+keywords: Experience Platform;home;IAB;IAB 2.0；同意；同意
 solution: Experience Platform
 title: 建立用於捕獲IAB TCF 2.0許可資料的資料集
-topic: privacy events
+topic: 隱私權事件
 description: 本文檔提供了設定兩個收集IAB TCF 2.0許可資料所需資料集的步驟。
 translation-type: tm+mt
-source-git-commit: b0af9d49f6cfe50f6dff745dfac174dbaa76d070
+source-git-commit: a845ade0fc1e6e18c36b5f837fe7673a976f01c7
 workflow-type: tm+mt
-source-wordcount: '1645'
+source-wordcount: '1647'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 # 建立資料集，以擷取IAB TCF 2.0同意資料
 
-為了讓Adobe Experience Platform根據IAB [!DNL Transparency & Consent Framework](TCF)2.0處理客戶同意資料，該資料必須傳送至其結構包含TCF 2.0同意欄位的資料集。
+為了讓Adobe Experience Platform按照IAB [!DNL Transparency & Consent Framework](TCF)2.0處理客戶同意資料，必須將該資料發送到方案包含TCF 2.0同意欄位的資料集。
 
 具體來說，捕獲TCF 2.0許可資料需要兩個資料集：
 
@@ -24,13 +24,13 @@ ht-degree: 0%
 
 本文檔提供了設定這兩個資料集以收集IAB TCF 2.0許可資料的步驟。 有關為TCF 2.0配置平台資料操作的完整工作流程的概述，請參閱[IAB TCF 2.0合規性概述](./overview.md)。
 
-## 必要條件
+## 先決條件
 
-本教學課程需要對Adobe Experience Platform的下列元件有正確的認識：
+本教學課程需要對Adobe Experience Platform的下列部分有正確的理解：
 
 * [體驗資料模型(XDM)](../../../../xdm/home.md):組織客戶體驗資 [!DNL Experience Platform] 料的標準化架構。
    * [架構構成基礎](../../../../xdm/schema/composition.md):瞭解XDM架構的基本建置區塊。
-* [Adobe Experience Platform Identity Service](../../../../identity-service/home.md):可讓您跨裝置和系統，從不同的資料來源橋接客戶身份。
+* [Adobe Experience Platform身分服務](../../../../identity-service/home.md):可讓您跨裝置和系統，從不同的資料來源橋接客戶身份。
    * [身分名稱空間](../../../../identity-service/namespaces.md):客戶身分資料必須以Identity Service所識別的特定身分名稱空間提供。
 * [即時客戶個人檔案](../../../../profile/home.md):利用 [!DNL Identity Service] 這些工具，您可以即時從資料集建立詳細的客戶個人檔案。[!DNL Real-time Customer Profile] 從資料湖提取資料，並將客戶個人檔案保留在其個別的資料儲存中。
 
@@ -65,7 +65,7 @@ ht-degree: 0%
 }
 ```
 
-如示例所示，`xdm:identityPrivacyInfo`的每個根級別密鑰都與Identity Service所識別的身份名稱空間相對應。 反過來，每個namespace屬性至少必須有一個子屬性，其索引鍵與該namespace的客戶對應識別值相符。 在此範例中，客戶的識別值為`13782522493631189`的Experience Cloud ID(`ECID`)。
+如示例所示，`xdm:identityPrivacyInfo`的每個根級別密鑰都與Identity Service所識別的身份名稱空間相對應。 反過來，每個namespace屬性至少必須有一個子屬性，其索引鍵與該namespace的客戶對應識別值相符。 在此範例中，客戶的Experience CloudID(`ECID`)值為`13782522493631189`。
 
 >[!NOTE]
 >
@@ -105,7 +105,7 @@ ht-degree: 0%
 | `xdm:consentStandard` | 資料適用的同意框架。 對於TCF合規性，值必須為`IAB TCF`。 |
 | `xdm:consentStandardVersion` | `xdm:consentStandard`所指示之同意框架的版本號。 對於TCF 2.0合規性，值必須為`2.0`。 |
 | `xdm:consentStringValue` | 由許可管理平台(CMP)根據客戶的選定設定生成的許可字串。 |
-| `xdm:gdprApplies` | 一個布爾值，指示GDPR是否適用於此客戶。 必須將值設定為`true` ，才能執行TCF 2.0。 如果未包含，則預設為`false`。 |
+| `xdm:gdprApplies` | 一個布爾值，指示GDPR是否適用於此客戶。 必須將值設定為`true` ，才能執行TCF 2.0。 如果未包含，則預設為`true`。 |
 | `xdm:containsPersonalData` | 指示許可更新是否包含個人資料的布爾值。 如果未包含，則預設為`false`。 |
 
 ## 建立客戶許可方案{#create-schemas}
