@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;Profile；即時客戶配置檔案；故障排除；API
+keywords: Experience Platform；配置檔案；即時客戶配置檔案；故障排除；API
 title: 邊緣投影API端點
-topic: guide
-type: Documentation
-description: Adobe Experience Platform可讓您跨多個通道即時為客戶提供協調、一致的個人化體驗，讓適當的資料隨時可用，並隨時隨地更新。 這是透過使用邊緣來完成的。邊緣是地理位置的伺服器，可儲存資料，讓應用程式更容易存取。
+topic: 指南
+type: 文件
+description: Adobe Experience Platform可讓您跨多個通道即時為客戶提供協調、一致且個人化的體驗，讓適當的資料隨時可用，並隨時隨地更新。 這是透過使用邊緣來完成的。邊緣是地理位置的伺服器，可儲存資料，讓應用程式更容易存取。
 translation-type: tm+mt
-source-git-commit: e6ecc5dac1d09c7906aa7c7e01139aa194ed662b
+source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
 workflow-type: tm+mt
-source-wordcount: '1961'
+source-wordcount: '1966'
 ht-degree: 2%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 2%
 
 # 邊緣投影配置和目標端點
 
-為即時跨多個通道為客戶提供協調、一致且個人化的體驗，需要隨時提供適當的資料，並在變更時持續更新。 Adobe Experience Platform可讓您透過使用所謂的邊緣，即時存取資料。 邊緣是地理位置優越的伺服器，可儲存資料，讓應用程式可輕鬆存取。 例如，Adobe Target和Adobe Campaign等Adobe應用程式會利用優勢，即時提供個人化客戶體驗。 資料通過投影被路由到邊，投影目的地定義資料要發送到的邊，投影配置定義將在邊上提供的特定資訊。 本指南提供使用[!DNL Real-time Customer Profile] API處理邊緣投影的詳細說明，包括目標和配置。
+為即時跨多個通道為客戶提供協調、一致且個人化的體驗，需要隨時提供適當的資料，並在變更時持續更新。 Adobe Experience Platform使用戶能夠通過使用所謂的邊來即時訪問資料。 邊緣是地理位置優越的伺服器，可儲存資料，讓應用程式可輕鬆存取。 例如，Adobe應用程式(例如Adobe Target和Adobe Campaign)使用邊緣，以便即時提供個人化的客戶體驗。 資料通過投影被路由到邊，投影目的地定義資料要發送到的邊，投影配置定義將在邊上提供的特定資訊。 本指南提供使用[!DNL Real-time Customer Profile] API處理邊緣投影的詳細說明，包括目標和配置。
 
 ## 快速入門
 
@@ -31,7 +31,7 @@ ht-degree: 2%
 
 ### 列出所有目標
 
-您可以向`/config/destinations`端點發出GET請求，以列出已為組織建立的邊緣目標。
+您可以向`/config/destinations`端點發出GET請求，列出已為組織建立的邊緣目標。
 
 **API格式**
 
@@ -105,7 +105,7 @@ curl -X GET \
 
 | 屬性 | 說明 |
 |---|---|
-| `_links.self.href` | 在頂層，與用於發出GET請求的路徑匹配。 在每個個別的目標物件中，此路徑可用於GET請求中，以直接查閱特定目標的詳細資料。 |
+| `_links.self.href` | 在頂層，符合用來提出GET請求的路徑。 在每個個別目標物件中，此路徑可用於GET請求中，以直接查閱特定目標的詳細資料。 |
 | `id` | 在每個目標對象中，`"id"`顯示目標的唯讀、系統生成的唯一ID。 此ID用於引用特定目標和建立投影配置時。 |
 
 有關單個目標屬性的詳細資訊，請參閱以下有關建立目標[的部分。](#create-a-destination)
@@ -126,7 +126,7 @@ POST /config/destinations
 
 >[!NOTE]
 >
->建立目的地的POST要求需要特定的`Content-Type`標題，如下所示。 使用不正確的`Content-Type`標題會導致HTTP狀態415（不支援的媒體類型）錯誤。
+>建立目標的POST請求需要特定的`Content-Type`標題，如下所示。 使用不正確的`Content-Type`標題會導致HTTP狀態415（不支援的媒體類型）錯誤。
 
 ```shell
 curl -X POST \
@@ -181,7 +181,7 @@ curl -X POST \
 
 ### 檢視目標
 
-如果您知道投影目的地的唯一ID，則可執行查閱請求以檢視其詳細資訊。 若要這麼做，請向`/config/destinations`端點提出GET請求，並在請求路徑中加入目標的ID。
+如果您知道投影目的地的唯一ID，則可執行查閱請求以檢視其詳細資訊。 若要這麼做，請向`/config/destinations`端點提出GET要求，並在要求路徑中加入目標的ID。
 
 **API格式**
 
@@ -422,7 +422,7 @@ curl -X GET \
 
 ### 建立投影配置
 
-您可以建立(POST)新的投影配置，該配置將指定哪些XDM欄位可用於邊。
+可以建立(POST)新的投影配置，該配置將指示哪些XDM欄位可用於邊。
 
 **API格式**
 
