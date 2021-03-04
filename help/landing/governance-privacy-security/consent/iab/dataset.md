@@ -5,9 +5,9 @@ title: 建立用於捕獲IAB TCF 2.0許可資料的資料集
 topic: 隱私權事件
 description: 本文檔提供了設定兩個收集IAB TCF 2.0許可資料所需資料集的步驟。
 translation-type: tm+mt
-source-git-commit: a845ade0fc1e6e18c36b5f837fe7673a976f01c7
+source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
 workflow-type: tm+mt
-source-wordcount: '1647'
+source-wordcount: '1648'
 ht-degree: 0%
 
 ---
