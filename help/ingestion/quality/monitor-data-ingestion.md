@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform; home；熱門主題；monitoring;monitor;data flows;monitor ingestion;data ingestion;data ingestion;view records;view batches;
+keywords: Experience Platform; home；熱門主題；監控；監控；資料流；監控攝取；資料攝取；資料攝取；查看記錄；查看批次；
 solution: Experience Platform
 title: 監控資料擷取
-topic: overview
-description: 本使用指南提供如何在Adobe Experience Platform使用者介面中監控資料的步驟。 本指南要求您必須擁有Adobe ID和Adobe Experience Platform的存取權。
+topic: 概述
+description: 本使用指南提供如何在Adobe Experience Platform使用者介面中監控資料的步驟。 本指南要求您擁有Adobe ID並可以訪問Adobe Experience Platform。
 translation-type: tm+mt
-source-git-commit: 089a4d517476b614521d1db4718966e3ebb13064
+source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
 workflow-type: tm+mt
-source-wordcount: '571'
+source-wordcount: '573'
 ht-degree: 0%
 
 ---
@@ -17,11 +17,11 @@ ht-degree: 0%
 
 資料擷取可讓您將資料擷取至Adobe Experience Platform。 您可以使用批次擷取功能(可讓您使用各種檔案類型（例如CSV）插入資料)或串流擷取功能（可讓您使用串流端點將資料即時擷取至[!DNL Platform]）。
 
-本使用指南提供如何在Adobe Experience Platform使用者介面中監控資料的步驟。 本指南要求您必須擁有Adobe ID和Adobe Experience Platform的存取權。
+本使用指南提供如何在Adobe Experience Platform使用者介面中監控資料的步驟。 本指南要求您擁有Adobe ID並可以訪問Adobe Experience Platform。
 
 ## 監控端對端資料擷取
 
-在[Experience Platform UI](https://platform.adobe.com)中，按一下左側導覽功能表上的&#x200B;**[!UICONTROL Monitoring]**，然後按一下「端對端串流」。****
+在[Experience PlatformUI](https://platform.adobe.com)中，按一下左側導覽功能表上的&#x200B;**[!UICONTROL 監視]**，然後按一下「端對端串流」。****
 
 ![](../images/quality/monitor-data-flows/click-streaming-end-to-end.png)
 
