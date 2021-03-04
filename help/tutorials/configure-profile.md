@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform; home；熱門主題；即時客戶資料；Identity Service;
+keywords: Experience Platform; home；熱門主題；即時客戶概要；身份服務；
 solution: Experience Platform
 title: 即時客戶個人檔案教學課程
 topic: 教學課程
 type: 教學課程
 description: 本檔案概述了相關步驟，並提供教學課程連結，以完成個別工作流程。
 translation-type: tm+mt
-source-git-commit: 0aa59a5375757f81d63ac43d778ff2c7179d449b
+source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
 workflow-type: tm+mt
-source-wordcount: '795'
+source-wordcount: '796'
 ht-degree: 0%
 
 ---
@@ -38,7 +38,7 @@ ht-degree: 0%
 
 ## 為[!DNL Profile]和[!DNL Identity]服務啟用模式
 
-在將資料收錄至Adobe Experience Platform並用於建立[!DNL Real-time Customer Profiles]之前，必須建立結構來提供要收錄的資料結構，且必須啟用該結構才能用於[!DNL Profile]和Adobe Experience Platform [!DNL Identity Service]。
+在將資料收錄到Adobe Experience Platform並用於建立[!DNL Real-time Customer Profiles]之前，必須建立一個模式以提供要收錄的資料的結構，並且該模式必須啟用以用於[!DNL Profile]和Adobe Experience Platform[!DNL Identity Service]。
 
 **本指南將幫助您：**
 - 瀏覽現有結構。
@@ -63,7 +63,7 @@ ht-degree: 0%
 
 ## 配置合併策略
 
-Adobe Experience Platform可讓您從多個來源匯整資料並加以匯整，以全面瞭解每個客戶。 合併策略是[!DNL Platform]用於確定資料的優先順序以及將哪些資料合併以建立該統一視圖的規則，將這些資料合併在一起。
+Adobe Experience Platform可讓您從多個來源匯整資料，並加以結合，以全面瞭解每個客戶。 合併策略是[!DNL Platform]用於確定資料的優先順序以及將哪些資料合併以建立該統一視圖的規則，將這些資料合併在一起。
 
 **本指南將幫助您：**
 - 建立新的合併原則。
@@ -75,7 +75,7 @@ Adobe Experience Platform可讓您從多個來源匯整資料並加以匯整，�
 
 ## 設定邊緣投影
 
-為即時跨多個通道為客戶提供協調、一致且個人化的體驗，需要隨時提供適當的資料，並在變更時持續更新。 Adobe [!DNL Experience Platform]可透過使用稱為邊緣的功能，即時存取資料。 邊緣是地理位置優越的伺服器，可儲存資料，讓應用程式可輕鬆存取。 資料通過投影被路由到邊，投影目的地定義資料要發送到的邊，投影配置定義將在邊上提供的特定資訊。
+為即時跨多個通道為客戶提供協調、一致且個人化的體驗，需要隨時提供適當的資料，並在變更時持續更新。 Adobe[!DNL Experience Platform]可讓您透過使用稱為邊緣的功能，即時存取資料。 邊緣是地理位置優越的伺服器，可儲存資料，讓應用程式可輕鬆存取。 資料通過投影被路由到邊，投影目的地定義資料要發送到的邊，投影配置定義將在邊上提供的特定資訊。
 
 **本指南將幫助您：**
 - 列出、建立、查看、更新和刪除邊投影目標。
