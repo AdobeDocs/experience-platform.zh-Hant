@@ -5,9 +5,9 @@ title: Google PubSub Source Connector概觀
 topic: 概述
 description: 瞭解如何使用API或使用者介面將Google PubSub連線至Adobe Experience Platform。
 translation-type: tm+mt
-source-git-commit: 0af90253f04377149986aedf2e9d3012ca06d4f8
+source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
 workflow-type: tm+mt
-source-wordcount: '243'
+source-wordcount: '244'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 0%
 >
 >[!DNL Google PubSub]介面處於測試狀態。 如需使用beta標籤連接器的詳細資訊，請參閱[來源概觀](../../home.md#terms-and-conditions)。
 
-Adobe Experience Platform為[!DNL AWS]、[!DNL Google Cloud Platform]和[!DNL Azure]等雲端提供者提供原生連接，讓您將這些系統的資料匯入平台，以便用於下游服務和目的地。
+Adobe Experience Platform為[!DNL AWS]、[!DNL Google Cloud Platform]和[!DNL Azure]等雲端提供者提供原生連線，讓您將這些系統的資料匯入平台，以用於下游服務和目的地。
 
 雲端儲存來源可將您的資料匯入平台，而不需下載、格式化或上傳。 收錄的資料可格式化為XDM JSON、XDM Parce或分隔。 流程的每個步驟都整合在來源工作流程中。 平台可讓您即時從[!DNL Azure Event Hubs]匯入資料。
 
