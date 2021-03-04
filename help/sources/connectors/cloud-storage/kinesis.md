@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home；熱門主題；Amazon Kinesis;amazon kinesis;Kinesis
+keywords: Experience Platform；首頁；熱門主題；AmazonKinesis;amazon kinesis;Kinesis;kinesis
 solution: Experience Platform
-title: Amazon Kinesis源連接器概述
-topic: overview
-description: 瞭解如何使用API或用戶介面將Amazon Kinesis連接到Adobe Experience Platform。
+title: AmazonKinesis源連接器概述
+topic: 概述
+description: 瞭解如何使用API或使用者介面將AmazonKinesis與Adobe Experience Platform連線。
 translation-type: tm+mt
-source-git-commit: a489ab248793a063295578943ad600d8eacab6a2
+source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
 workflow-type: tm+mt
-source-wordcount: '234'
+source-wordcount: '236'
 ht-degree: 0%
 
 ---
@@ -17,11 +17,11 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->[!DNL Amazon Kinesis]介面處於測試狀態。 有關使用beta標籤連接器的詳細資訊，請參閱[來源概觀](../../home.md#terms-and-conditions)。
+>[!DNL Amazon Kinesis]介面處於測試狀態。 有關使用beta標籤連接器的詳細資訊，請參閱[ Sources綜覽](../../home.md#terms-and-conditions)。
 
-Adobe Experience Platform為AWS、[!DNL Google Cloud Platform]和[!DNL Azure]等雲提供商提供原生連接。 您可以將這些系統中的資料導入[!DNL Platform]。
+Adobe Experience Platform為AWS、[!DNL Google Cloud Platform]和[!DNL Azure]等雲提供商提供本機連接。 您可以將這些系統中的資料導入[!DNL Platform]。
 
-雲端儲存來源可將您自己的資料匯入[!DNL Platform]，而不需下載、格式化或上傳。 收錄的資料可格式化為XDM JSON、XDM Parce或分隔。 此程式的每個步驟都會整合至Sources工作流程中。 [!DNL Platform] 可讓您即時從 [!DNL Amazon Kinesis] 資料中匯入。
+雲端儲存來源可將您自己的資料匯入[!DNL Platform]，而不需下載、格式化或上傳。 收錄的資料可格式化為XDM JSON、XDM Parce或分隔。 此程式的每個步驟都會整合至Sources工作流程中。 [!DNL Platform] 可讓您即時從資料 [!DNL Amazon Kinesis] 中匯入。
 
 ## IP位址允許清單
 
@@ -33,10 +33,10 @@ Adobe Experience Platform為AWS、[!DNL Google Cloud Platform]和[!DNL Azure]等
 
 ### 使用API
 
-- [使用流服務API建立Amazon Kinesis源連接](../../tutorials/api/create/cloud-storage/kinesis.md)
+- [使用Flow Service API建立AmazonKinesis來源連線](../../tutorials/api/create/cloud-storage/kinesis.md)
 - [使用Flow Service API收集串流資料](../../tutorials/api/collect/streaming.md)
 
 ### 使用UI
 
-- [在UI中建立Amazon Kinesis源連接](../../tutorials/ui/create/cloud-storage/kinesis.md)
+- [在UI中建立AmazonKinesis源連接](../../tutorials/ui/create/cloud-storage/kinesis.md)
 - [在UI中為雲端儲存區連線設定資料流](../../tutorials/ui/dataflow/streaming/cloud-storage-streaming.md)
