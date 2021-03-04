@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home；熱門主題；資料位置；資料位置；資料管理；資料管理；世系；世系；資料類型；資料類型；資料類型
+keywords: Experience Platform;home；熱門主題；資料位置；資料位置；資料管理；資料管理；世系；資料類型；資料類型；資料類型；資料類型
 solution: Experience Platform
 title: 資料集概述
-topic: datasets
-description: 本檔案提供Experience Platform中資料集的高階概述。
+topic: 資料集
+description: 本檔案提供Experience Platform中資料集的高階概觀。
 translation-type: tm+mt
-source-git-commit: a1103bfbf79f9c87bac5b113c01386a6fb8950e7
+source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
 workflow-type: tm+mt
-source-wordcount: '706'
+source-wordcount: '708'
 ht-degree: 2%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 2%
 
 # 資料集總覽
 
-成功收錄至Adobe Experience Platform的所有資料都會以資料集的形式保存在[!DNL Data Lake]中。 資料集是資料集合的儲存和管理結構，通常是包含結構（欄）和欄（列）的表格。 資料集也包含描述其儲存之資料各方面的中繼資料。
+成功收錄到Adobe Experience Platform的所有資料都會以資料集的形式保存在[!DNL Data Lake]中。 資料集是資料集合的儲存和管理結構，通常是包含結構（欄）和欄（列）的表格。 資料集也包含描述其儲存之資料各方面的中繼資料。
 
 本文檔提供[!DNL Experience Platform]中資料集的高級概述。
 
@@ -41,7 +41,7 @@ Adobe Experience Platform資料擷取代表[!DNL Platform]從各種來源擷取�
 
 ## 將使用情況標籤套用至資料集
 
-Adobe Experience Platform [!DNL Data Governance]可讓您管理客戶資料，以確保符合資料使用適用的法規、限制和政策。 [!DNL Data Governance]框架允許您應用使用標籤，以根據應用於該資料的使用策略對資料進行分類。
+Adobe Experience Platform[!DNL Data Governance]可讓您管理客戶資料，以確保符合資料使用適用的法規、限制和政策。 [!DNL Data Governance]框架允許您應用使用標籤，以根據應用於該資料的使用策略對資料進行分類。
 
 資料使用標籤可套用至整個資料集或個別資料集欄位。 在資料集層級新增的標籤會由該資料集內的所有欄位繼承。
 
@@ -57,9 +57,9 @@ Adobe Experience Platform [!DNL Data Governance]可讓您管理客戶資料，�
 以下是使用資料集進行各種操作的下游服務的清單。 請檢視每項服務的檔案，以取得更多資訊。
 
 * [[!DNL Data Access API]](../../data-access/home.md):允許您訪問和下載儲存在資料集中的檔案的內容。
-* [Adobe Experience Platform Identity Service](../../identity-service/home.md):跨裝置和系統橋接身分識別，並根據資料集符合的XDM架構所定義的身分欄位，將資料集連結在一起。
+* [Adobe Experience Platform身分服務](../../identity-service/home.md):跨裝置和系統橋接身分識別，並根據資料集符合的XDM架構所定義的身分欄位，將資料集連結在一起。
 * [[!DNL Real-time Customer Profile]](../../profile/home.md):利用 [!DNL Identity Service] 資料集即時建立詳細的客戶個人檔案。[!DNL Real-time Customer Profile] 從資料中提取資 [!DNL Data Lake] 料，並將客戶個人檔案保留在其個別的資料儲存中。
-* [Adobe Experience Platform細分服務](../../segmentation/home.md):可讓您建立區段並從資料產生 [!DNL Real-time Customer Profile] 觀眾。然後，這些對象可以導出到[!DNL Data Lake]中自己的資料集。
+* [Adobe Experience Platform區段服務](../../segmentation/home.md):可讓您建立區段並從資料產生 [!DNL Real-time Customer Profile] 觀眾。然後，這些對象可以導出到[!DNL Data Lake]中自己的資料集。
 * [Adobe Experience Platform資料科學工作區](../../data-science-workspace/home.md):使用機器學習和人工智慧發掘大型資料集的見解。
 * [Adobe Experience Platform查詢服務](../../query-service/home.md):允許您使用標準SQL來查詢中的資料、 [!DNL Experience Platform]連接中的任何資料 [!DNL Data Lake] 集，並將查詢結果捕獲為新資料集以用於報告、 [!DNL Data Science Workspace]或中 [!DNL Real-time Customer Profile]。
 
