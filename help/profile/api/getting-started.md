@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;Profile；即時客戶配置檔案；故障排除；API
+keywords: Experience Platform；配置檔案；即時客戶配置檔案；故障排除；API
 title: 即時客戶個人檔案API快速入門
-topic: guide
-type: Documentation
+topic: 指南
+type: 文件
 description: 描述檔API快速入門手冊概述了使用即時客戶描述檔API端點，對描述檔資料執行基本CRUD作業時，您需要知道的主要概念和基本功能。
 translation-type: tm+mt
-source-git-commit: cad9c690be986961aea2969ef0ade975f33a8ee5
+source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
 workflow-type: tm+mt
-source-wordcount: '410'
+source-wordcount: '413'
 ht-degree: 0%
 
 ---
@@ -17,9 +17,9 @@ ht-degree: 0%
 
 使用即時客戶配置檔案API端點，您可以對配置檔案資料執行基本的CRUD操作，例如配置計算屬性、訪問實體、導出配置檔案資料以及刪除不需要的資料集或批。
 
-使用開發人員指南時，必須瞭解使用[!DNL Profile]資料時涉及的各種Adobe Experience Platform服務。 開始使用[!DNL Real-time Customer Profile] API之前，請先閱讀下列服務的檔案：
+使用開發人員指南需要對使用[!DNL Profile]資料時涉及的各種Adobe Experience Platform服務有良好的瞭解。 開始使用[!DNL Real-time Customer Profile] API之前，請先閱讀下列服務的檔案：
 
-* [[!DNL Real-time Customer Profile]](../home.md):根據來自多個來源的匯整資料，即時提供統一的客戶個人檔案。
+* [[!DNL Real-time Customer Profile]](../home.md):根據來自多個來源的匯總資料即時提供統一的客戶個人檔案。
 * [[!DNL Adobe Experience Platform Identity Service]](../../identity-service/home.md):跨裝置和系統橋接身分，以更全面地瞭解客戶及其行為。
 * [[!DNL Adobe Experience Platform Segmentation Service]](../../segmentation/home.md):可讓您從即時客戶個人檔案資料建立受眾細分。
 * [[!DNL Experience Data Model (XDM)]](../../xdm/home.md):平台組織客戶體驗資料的標準化架構。
@@ -45,7 +45,7 @@ API檔案也要求您完成[驗證教學課程](https://www.adobe.com/go/platfor
 
 如需[!DNL Platform]中沙盒的詳細資訊，請參閱[沙盒概述檔案](../../sandboxes/home.md)。
 
-所有在請求正文中包含裝載的請求（例如POST、PUT和PATCH呼叫）都必須包含`Content-Type`標題。 在呼叫參數中提供每個呼叫的接受值。
+所有在請求正文中包含裝載的請求(例如POST、PUT和PATCH呼叫)都必須包含`Content-Type`標題。 在呼叫參數中提供每個呼叫的接受值。
 
 ## 後續步驟
 
