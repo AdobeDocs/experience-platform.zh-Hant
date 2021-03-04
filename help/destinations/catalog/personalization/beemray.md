@@ -1,11 +1,11 @@
 ---
 keywords: beemray,beemray延伸功能
 title: Beemray擴充功能
-description: Beemray擴充功能是Adobe Experience Platform中的個人化目的地。 如需擴充功能的詳細資訊，請參閱Adobe Exchange的擴充功能頁面。
+description: Beemray擴充功能是Adobe Experience Platform的個人化目的地。 如需擴充功能的詳細資訊，請參閱Adobe交換的擴充功能頁面。
 translation-type: tm+mt
-source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
+source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
 workflow-type: tm+mt
-source-wordcount: '520'
+source-wordcount: '521'
 ht-degree: 3%
 
 ---
@@ -13,11 +13,11 @@ ht-degree: 3%
 
 # [!DNL Beemray] 擴充功能 {#beemray-extension}
 
-[!DNL Beemray] 協助您根據情境加速產品的推展。讓您獲得見解、建立新體驗、推動互動，並參與真正重要的時刻。 Beemray使用機器學習自動化情境智慧。 Beemray可連接Adobe Experience Cloud和您的其他技術合作夥伴。 一切都會即時進行。 此擴充功能會在您的網站上安裝[!DNL Beemray] SDK。
+[!DNL Beemray] 協助您根據情境加速產品的推展。讓您獲得見解、建立新體驗、推動互動，並參與真正重要的時刻。 Beemray使用機器學習自動化情境智慧。 Beemray可連接Adobe Experience Cloud和其他技術合作夥伴。 一切都會即時進行。 此擴充功能會在您的網站上安裝[!DNL Beemray] SDK。
 
-Beemray是Adobe Experience Platform中的個人化延伸。 如需擴充功能的詳細資訊，請參閱[Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.101063.beemray-human-context.html)上的擴充頁。
+Beemray是Adobe Experience Platform的個人化延伸。 有關擴展功能的詳細資訊，請參閱[AdobeExchange](https://exchange.adobe.com/experiencecloud.details.101063.beemray-human-context.html)上的擴展頁。
 
-此目標是[!DNL Adobe Experience Platform Launch]擴展。 如需[!DNL Platform Launch]擴充功能在Platform中運作的詳細資訊，請參閱[Experience Platform Launch擴充功能概觀](../launch-extensions/overview.md)。
+此目標是[!DNL Adobe Experience Platform Launch]擴展。 如需[!DNL Platform Launch]擴充功能在Platform中運作的詳細資訊，請參閱[Experience Platform Launch擴充功能概述](../launch-extensions/overview.md)。
 
 ![Beemray擴充功能](../../assets/catalog/personalization/beemray/catalog.png)
 
@@ -25,7 +25,7 @@ Beemray是Adobe Experience Platform中的個人化延伸。 如需擴充功能�
 
 此擴充功能可在[!DNL Destinations]目錄中，針對所有已購買平台的客戶提供。
 
-若要使用此擴充功能，您需要存取[!DNL Adobe Experience Platform Launch]。 [!DNL Platform Launch] Adobe Experience Cloud客戶可享有附加的附加價值功能。請連絡您的組織管理員以取得[!DNL Platform Launch]的存取權，並要求他們授予您&#x200B;**[!UICONTROL manage_properties]**&#x200B;的權限，以便您安裝擴充功能。
+若要使用此擴充功能，您需要存取[!DNL Adobe Experience Platform Launch]。 [!DNL Platform Launch] 作為附帶的增值功能提供給Adobe Experience Cloud客戶。請連絡您的組織管理員以取得[!DNL Platform Launch]的存取權，並要求他們授予您&#x200B;**[!UICONTROL manage_properties]**&#x200B;的權限，以便您安裝擴充功能。
 
 ## 安裝擴展{#install-extension}
 
@@ -37,13 +37,13 @@ Beemray是Adobe Experience Platform中的個人化延伸。 如需擴充功能�
 
 按一下目的地以反白標示，然後選取右側導軌中的「設定」。 ****&#x200B;如果&#x200B;**[!UICONTROL Configure]**&#x200B;控制項呈灰色，表示您遺失&#x200B;**[!UICONTROL manage_properties]**&#x200B;權限。 請參閱[先決條件](#prerequisites)。
 
-在&#x200B;**[!UICONTROL 選擇可用的平台啟動屬性]**&#x200B;窗口中，選擇要安裝擴展的[!DNL Platform Launch]屬性。 您也可以在[!DNL Platform Launch]中選擇建立新屬性。 屬性是規則、資料元素、設定的擴充功能、環境和程式庫的集合。瞭解[!DNL Launch]檔案的[「屬性」頁面部分](https://experienceleague.adobe.com/docs/launch/using/reference/admin/companies-and-properties.html#properties-page)中的屬性。
+在&#x200B;**[!UICONTROL 選擇可用Platform launch屬性]**&#x200B;窗口中，選擇要安裝副檔名的[!DNL Platform Launch]屬性。 您也可以在[!DNL Platform Launch]中選擇建立新屬性。 屬性是規則、資料元素、設定的擴充功能、環境和程式庫的集合。瞭解[!DNL Launch]檔案的[「屬性」頁面部分](https://experienceleague.adobe.com/docs/launch/using/reference/admin/companies-and-properties.html#properties-page)中的屬性。
 
 工作流將帶您到[!DNL Platform Launch]完成安裝。
 
-有關擴展配置選項和安裝支援的資訊，請參閱Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.101063.beemray-human-context.html)上的[ Beemray頁。
+有關擴展配置選項和安裝支援的資訊，請參閱AdobeExchange](https://exchange.adobe.com/experiencecloud.details.101063.beemray-human-context.html)上的[ Beemray頁。
 
-您也可以直接在[Adobe Experience Platform Launch介面](https://launch.adobe.com/tw/)中安裝擴充功能。 請參閱[!DNL Platform Launch]檔案中的[新增副檔名](https://experienceleague.adobe.com/docs/launch/using/reference/manage-resources/extensions/overview.html?lang=en#add-a-new-extension)。
+您也可以直接在[Adobe Experience Platform Launch介面](https://launch.adobe.com/tw/)中安裝擴展。 請參閱[!DNL Platform Launch]檔案中的[新增副檔名](https://experienceleague.adobe.com/docs/launch/using/reference/manage-resources/extensions/overview.html?lang=en#add-a-new-extension)。
 
 ## 如何使用副檔名{#how-to-use}
 
