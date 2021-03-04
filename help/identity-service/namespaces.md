@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home；常用主題；namespace;Namespace;Namespace;Namespaces;Identity namespace;Identity namespace;Identity;Identity service;identity service
+keywords: Experience Platform;home；常用主題；namespace；命名空間；命名空間；標識名稱空間；標識名稱空間；標識；標識服務；標識服務
 solution: Experience Platform
 title: Identity Namespace概觀
 topic: 概述
 description: '身分識別命名空間是 Identity Service 的元件，用途是作為身分識別相關內容的指標。例如，他們會將"name@email.com"值區分為電子郵件地址或"443522"作為數值CRM ID。 '
 translation-type: tm+mt
-source-git-commit: fc493a207e305887e798238ba6883f4934c5cba5
+source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
 workflow-type: tm+mt
-source-wordcount: '1474'
+source-wordcount: '1475'
 ht-degree: 2%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 2%
 
 使用身分名稱空間需要瞭解所涉及的各種Adobe Experience Platform服務。 開始使用名稱空間之前，請先閱讀下列服務的檔案：
 
-- [[!DNL Real-time Customer Profile]](../profile/home.md):根據來自多個來源的匯整資料，即時提供統一的客戶個人檔案。
+- [[!DNL Real-time Customer Profile]](../profile/home.md):根據來自多個來源的匯總資料即時提供統一的客戶個人檔案。
 - [[!DNL Identity Service]](./home.md):跨裝置和系統橋接身分，以更全面地瞭解個別客戶及其行為。
 - [[!DNL Privacy Service]](../privacy-service/home.md):身分名稱空間用於遵守通用資料保護規則(GDPR)，在GDPR中，可以相對於名稱空間提出GDPR請求。
 
@@ -50,18 +50,18 @@ ht-degree: 2%
 
 ### 標準名稱空間
 
-Experience Platform提供數個可供所有組織使用的身分名稱空間。 這些名稱空間稱為標準名稱空間，可使用[!DNL Identity Service] API或透過平台UI顯示。
+Experience Platform提供多個身份名稱空間，可供所有組織使用。 這些名稱空間稱為標準名稱空間，可使用[!DNL Identity Service] API或透過平台UI顯示。
 
 平台內的所有組織都可使用下列標準名稱空間：
 
 | 顯示名稱 | 說明 |
 | ------------ | ----------- |
-| AdCloud | 代表Adobe AdCloud的命名空間。 |
+| AdCloud | 代表AdobeAdCloud的命名空間。 |
 | Adobe Analytics（舊版ID） | 代表Adobe Analytics的命名空間。 如需詳細資訊，請參閱[Adobe Analytics名稱空間](https://experienceleague.adobe.com/docs/analytics/admin/data-governance/gdpr-namespaces.html?lang=en#namespaces)上的下列檔案。 |
 | Apple IDFA（廣告商的ID） | 代表廣告商Apple ID的命名空間。 如需詳細資訊，請參閱[喜好式廣告](https://support.apple.com/en-us/HT202074)上的下列檔案。 |
 | Apple推播通知服務 | 代表使用Apple推播通知服務收集之身分的命名空間。 如需詳細資訊，請參閱[Apple推播通知服務](https://developer.apple.com/library/archive/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/APNSOverview.html#//apple_ref/doc/uid/TP40008194-CH8-SW1)上的下列檔案。 |
-| 核心 | 代表Adobe Audience Manager的命名空間。 此命名空間也可以其舊名稱引用：「Adobe AudienceManager」。 如需詳細資訊，請參閱[Audience Manager ID](https://experienceleague.adobe.com/docs/audience-manager/user-guide/overview/data-privacy/data-privacy-reference/data-privacy-ids.html?lang=en#aam-ids)上的下列檔案。 |
-| ECID | 代表ECID的命名空間。 此命名空間也可由以下別名引用：「Adobe Marketing Cloud ID」、「Adobe Experience Cloud ID」、「Adobe Experience Platform ID」。 如需詳細資訊，請參閱[ECID](./ecid.md)上的下列檔案。 |
+| 核心 | 代表Adobe Audience Manager的命名空間。 此命名空間也可以其舊名稱引用：「Adobe AudienceManager」。 如需詳細資訊，請參閱[Audience ManagerID](https://experienceleague.adobe.com/docs/audience-manager/user-guide/overview/data-privacy/data-privacy-reference/data-privacy-ids.html?lang=en#aam-ids)上的下列檔案。 |
+| ECID | 代表ECID的命名空間。 此命名空間也可由以下別名引用：&quot;Adobe Marketing CloudID&quot;、&quot;Adobe Experience CloudID&quot;、&quot;Adobe Experience PlatformID&quot;。 如需詳細資訊，請參閱[ECID](./ecid.md)上的下列檔案。 |
 | 電子郵件 | 代表電子郵件地址的命名空間。 此類型的命名空間通常與單一人員相關聯，因此可用於識別不同通道的該人員。 |
 | 電子郵件（SHA256，小寫） | 預先雜湊電子郵件地址的命名空間。 在使用SHA256進行散列之前，此命名空間中提供的值將轉換為小寫。 前導和尾隨空格必須在電子郵件位址標準化之前加以修剪。 此設定無法追溯變更。 如需詳細資訊，請參閱[SHA256雜湊支援](https://experienceleague.adobe.com/docs/id-service/using/reference/hashing-support.html?lang=en#hashing-support)的下列檔案。 |
 | Firebase Cloud訊息 | 代表使用Google Firebase Cloud訊息收集的推播通知身分的命名空間。 如需詳細資訊，請參閱[Google Firebase Cloud Messaging](https://firebase.google.com/docs/cloud-messaging)上的下列檔案。 |
