@@ -5,9 +5,9 @@ doc-type: release notes
 last-update: December 12, 2019
 author: ens71067
 translation-type: tm+mt
-source-git-commit: 00010d38a5d05800aeac9af8505093fee3593b45
+source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
 workflow-type: tm+mt
-source-wordcount: '656'
+source-wordcount: '657'
 ht-degree: 7%
 
 ---
@@ -26,7 +26,7 @@ Adobe Experience Platform 現有功能更新：
 
 ## [!DNL Segmentation Service] {#segmentation}
 
-Adobe Experience Platform Segmentation Service提供使用者介面和REST風格的API，可讓您從[!DNL Real-time Customer Profile]資料建立細分並產生受眾。 這些區段會集中設定並維護在[!DNL Platform]上，讓任何Adobe應用程式都能輕鬆存取。
+Adobe Experience Platform區段服務提供使用者介面和REST風格的API，可讓您建立區段並從您的[!DNL Real-time Customer Profile]資料產生觀眾。 這些區段是集中設定並維護在[!DNL Platform]上，讓任何Adobe應用程式都可輕鬆存取。
 
 [!DNL Segmentation Service] 定義個人檔案的特定子集，方法是描述區分客戶群中有價人群的標準。區段可以根據記錄資料（例如人口統計資訊）或代表客戶與品牌互動的時間系列事件來劃分。
 
@@ -45,7 +45,7 @@ Adobe Experience Platform Segmentation Service提供使用者介面和REST風格
 
 ## [!DNL Decisioning Service] {#decisioning}
 
-Adobe Experience Platform [!DNL Decisioning Service]提供以程式設計方式智慧地從一組可供特定個人使用的選項中選取「下一個最佳體驗」、將這些選項傳送至任何通道或應用程式，並執行報告與分析。
+Adobe Experience Platform[!DNL Decisioning Service]提供以程式設計方式智慧地從一組可供特定個人使用的選項中選取「下一個最佳體驗」、將這些選項傳送至任何通道或應用程式，以及執行報告和分析的能力。
 
 **新功能**
 
@@ -59,7 +59,7 @@ Adobe Experience Platform [!DNL Decisioning Service]提供以程式設計方式�
 
 ## [!DNL Sources] {#sources}
 
-Adobe Experience Platform可以從外部來源收錄資料，同時允許您使用[!DNL Platform]服務來建構、標籤和增強該資料。 您可以從多種來源收集資料，例如Adobe解決方案、雲端儲存空間、協力廠商軟體和您的CRM系統。
+Adobe Experience Platform可以從外部來源收集資料，同時允許您使用[!DNL Platform]服務來建構、標籤和增強該資料。 您可以從多種來源收集資料，例如Adobe解決方案、雲端儲存空間、協力廠商軟體和您的CRM系統。
 
 [!DNL Experience Platform] 提供REST風格的API和互動式UI，讓您輕鬆地為各種資料提供者設定來源連線。這些源連接允許您對儲存系統和CRM服務進行身份驗證，設定接收運行的時間，並管理資料接收吞吐量。
 
@@ -67,7 +67,7 @@ Adobe Experience Platform可以從外部來源收錄資料，同時允許您使�
 
 | 功能 | 說明 |
 | ---------- | ------------ |
-| 串流連線 | 串流擷取可讓您即時從用戶端和伺服器端裝置傳送資料至[!DNL Experience Platform]。 發行包含新的串流連線使用者介面。 |
+| 串流連線 | 串流擷取可讓您從用戶端和伺服器端裝置即時傳送資料至[!DNL Experience Platform]。 發行包含新的串流連線使用者介面。 |
 | [!DNL Google Cloud Store]的連接器支援 | 支援從[!DNL Google Cloud Store]收集資料。 |
 
 **已知問題**
@@ -78,9 +78,9 @@ Adobe Experience Platform可以從外部來源收錄資料，同時允許您使�
 
 ## [!DNL Experience Data Model] (XDM)系統  {#xdm}
 
-標準化和互操作性是[!DNL Experience Platform]背後的關鍵概念。 [!DNL Experience Data Model] (XDM)是由Adobe推動，旨在標準化客戶體驗資料並定義客戶體驗管理的架構。
+標準化和互操作性是[!DNL Experience Platform]背後的關鍵概念。 [!DNL Experience Data Model] (XDM)由Adobe驅動，旨在標準化客戶體驗資料並定義客戶體驗管理的架構。
 
-XDM是公開記載的規格，旨在改善數位體驗的強大功能。 它提供任何應用程式的通用結構和定義，以便與Adobe Experience Platform上的服務通訊。 遵循XDM標準，所有客戶體驗資料都可整合在以更快速、更整合的方式提供見解的通用表現形式中。 您可以從客戶行動中獲得寶貴見解，透過細分定義客戶受眾，並將客戶屬性用於個人化目的。
+XDM是公開記載的規格，旨在改善數位體驗的強大功能。 它為與Adobe Experience Platform服務通訊的任何應用程式提供共同的架構和定義。 遵循XDM標準，所有客戶體驗資料都可整合在以更快速、更整合的方式提供見解的通用表現形式中。 您可以從客戶行動中獲得寶貴見解，透過細分定義客戶受眾，並將客戶屬性用於個人化目的。
 
 **新功能**
 
