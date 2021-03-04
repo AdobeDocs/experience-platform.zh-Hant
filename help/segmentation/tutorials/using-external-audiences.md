@@ -1,12 +1,12 @@
 ---
-keywords: Experience Platform;home；熱門主題
+keywords: Experience Platform；首頁；熱門主題
 solution: Experience Platform
 title: 對受眾細分強制執行資料使用規範
 topic: 教學課程
 translation-type: tm+mt
-source-git-commit: 2ca0768c951cf67a775fdfc2c1f9440596d118bf
+source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
 workflow-type: tm+mt
-source-wordcount: '639'
+source-wordcount: '640'
 ht-degree: 0%
 
 ---
@@ -14,15 +14,15 @@ ht-degree: 0%
 
 # 匯入和使用外部觀眾
 
-Adobe Experience Platform支援匯入外部觀眾的能力，這些觀眾隨後可用作新區段定義的元件。 本檔案提供教學課程，以設定Experience Platform以匯入和使用外部觀眾。
+Adobe Experience Platform支援匯入外部觀眾的能力，這些觀眾隨後可用作新區段定義的元件。 本檔案提供教學課程，說明如何設定匯入和使用外部觀眾的Experience Platform。
 
 ## 快速入門
 
 - [區段服務](../home.md):可讓您從即時客戶個人檔案資料建立受眾細分。
 - [即時客戶個人檔案](../../profile/home.md):根據來自多個來源的匯整資料，提供統一、即時的消費者個人檔案。
 - [體驗資料模型(XDM)](../../xdm/home.md):平台組織客戶體驗資料的標準化架構。
-- [資料集](../../catalog/datasets/overview.md):Experience Platform中資料永續性的儲存和管理架構。
-- [串流擷取](../../ingestion/streaming-ingestion/overview.md):Experience Platform如何即時從用戶端和伺服器端裝置擷取和儲存資料。
+- [資料集](../../catalog/datasets/overview.md):Experience Platform中資料持久性的儲存和管理結構。
+- [串流擷取](../../ingestion/streaming-ingestion/overview.md):Experience Platform如何即時從用戶端和伺服器端裝置接收和儲存資料。
 
 ## 為外部觀眾建立身分命名空間
 
@@ -68,7 +68,7 @@ Adobe Experience Platform支援匯入外部觀眾的能力，這些觀眾隨後�
 
 ## 設定並匯入觀眾資料
 
-啟用資料集後，資料現在可以透過UI或使用Experience Platform API傳送至平台。 若要將此資料匯入Platform，您需要建立串流連線。
+啟用資料集後，資料現在可以透過UI或使用Experience PlatformAPI傳送至平台。 若要將此資料匯入Platform，您需要建立串流連線。
 
 若要建立串流連線，您可依照[API教學課程](../../sources/tutorials/api/create/streaming/http.md)或[UI教學課程](../../sources/tutorials/ui/create/streaming/http.md)中的指示進行。
 
