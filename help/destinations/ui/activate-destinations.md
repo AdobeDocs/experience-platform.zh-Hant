@@ -6,9 +6,9 @@ seo-title: 將描述檔和區段啟用至目標
 description: 將區段對應至目的地，以啟用您在Adobe Experience Platform的資料。 若要完成此作業，請遵循下列步驟。
 seo-description: 將區段對應至目的地，以啟用您在Adobe Experience Platform的資料。 若要完成此作業，請遵循下列步驟。
 translation-type: tm+mt
-source-git-commit: efb66b6374f8c0579d90f63452528353f4d1418d
+source-git-commit: 789534c02746ed24dfa01c7b471cdf3be407711e
 workflow-type: tm+mt
-source-wordcount: '2164'
+source-wordcount: '2184'
 ht-degree: 0%
 
 ---
@@ -145,6 +145,9 @@ If you are using another ID, such as "Rewards ID" or "Loyalty ID", as primary id
 >[!IMPORTANT]
 > 
 >[!DNL Adobe Experience Platform] 自動將匯出檔案分割為每個檔案500萬個記錄（列）。每一行代表一個描述檔。
+>
+>分割檔案名稱會附加一個數字，指出檔案是較大匯出的一部分，例如：`filename.csv`、`filename_2.csv`、`filename_3.csv`。
+
 
 要添加段的調度，請選擇&#x200B;**[!UICONTROL 建立調度]**。
 
