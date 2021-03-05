@@ -7,10 +7,10 @@ landing-page-description: 尋找常見問題的解答，以及針對 Experience 
 topic: 快速入門
 type: 文件
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: 83cc3ddbf067f413cb524a3a685d985d5853eafd
 workflow-type: tm+mt
-source-wordcount: '1997'
-ht-degree: 3%
+source-wordcount: '1718'
+ht-degree: 4%
 
 ---
 
@@ -31,63 +31,7 @@ ht-degree: 3%
 
 請求格式會依使用的[!DNL Platform] API而異。 瞭解如何建構API呼叫的最佳方式，是依循您所使用之特定[!DNL Platform]服務的說明檔案中提供的範例。
 
-### 閱讀範例API呼叫
-
-[!DNL Experience Platform]的檔案以兩種不同的方式顯示範例API呼叫。 首先，調用以&#x200B;**API格式**&#x200B;顯示，模板表示僅顯示操作(GET、POST、PUT、PATCH、DELETE)和所使用的端點（例如`/global/classes`）。 有些範本也會顯示變數的位置，以協助說明呼叫應如何制定，例如`GET /{VARIABLE}/classes/{ANOTHER_VARIABLE}`。
-
-然後，呼叫在&#x200B;**Request**&#x200B;中顯示為cURL命令，其中包含成功與API互動所需的必要標題和完整「基本路徑」。 基本路徑應預先附加到所有端點。 例如，前述的`/global/classes`端點變為`https://platform.adobe.io/data/foundation/schemaregistry/global/classes`。 您會在整個檔案中看到API格式／請求模式，而且在對平台API進行自己的呼叫時，預期會使用範例「請求」中顯示的完整路徑。
-
-### 範例API要求
-
-以下是範例API要求，示範您在說明檔案中將會遇到的格式。
-
-**API格式**
-
-API格式顯示所使用的操作(GET)和端點。 變數會以大括弧表示（在本例中為`{CONTAINER_ID}`）。
-
-```http
-GET /{CONTAINER_ID}/classes
-```
-
-**請求**
-
-在此範例請求中，API格式的變數會在請求路徑中指定實際值。 所有必要的標題也會顯示，例如範例標題值或應包含敏感資訊（例如安全性Token和存取ID）的變數。
-
-```shell
-curl -X GET \
-  https://platform.adobe.io/data/foundation/schemaregistry/global/classes \
-  -H 'Accept: application/vnd.adobe.xed-id+json' \
-  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME}'
-```
-
-**回應**
-
-此回應說明您在成功呼叫API後，會根據所傳送的請求收到哪些訊息。 有時候，回應會因空間而截斷，這表示您可能會看到範例中顯示的更多資訊或其他資訊。
-
-```json
-{
-    "results": [
-        {
-            "title": "XDM ExperienceEvent",
-            "$id": "https://ns.adobe.com/xdm/context/experienceevent",
-            "meta:altId": "_xdm.context.experienceevent",
-            "version": "1"
-        },
-        {
-            "title": "XDM Individual Profile",
-            "$id": "https://ns.adobe.com/xdm/context/profile",
-            "meta:altId": "_xdm.context.profile",
-            "version": "1"
-        }
-    ],
-    "_links": {}
-}
-```
-
-如需平台API中特定端點的詳細資訊，包括必要的標頭和請求主體，請參閱[API參考檔案](http://www.adobe.com/go/platform-api-reference-en)。
+如需有關建立API要求的詳細資訊，請造訪平台API快速入門手冊[閱讀範例API呼叫](./api-guide.md#sample-api)一節。
 
 ## 我的IMS組織是什麼？{#what-is-my-ims-organization}
 
@@ -121,7 +65,7 @@ GET /batches?createdAfter=1559775880000&orderBy=desc:created
 
 ## 我可以使用Postman呼叫[!DNL Platform] API嗎？{#how-do-i-use-postman-to-make-calls-to-platform-apis}
 
-[Postmanis](https://www.postman.com/) 是可視化對REST風格的API呼叫的實用工具。本[中篇貼文](https://medium.com/adobetech/using-postman-for-jwt-authentication-on-adobe-i-o-7573428ffe7f)說明如何設定Postman以自動執行驗證，並使用它使用[!DNL Experience Platform] API。
+[Postmanis](https://www.postman.com/) 是可視化對REST風格的API呼叫的實用工具。[平台API快速入門手冊](api-guide.md)包含視訊和匯入Postman系列的指示。 此外，還提供每個服務的郵遞員收集清單。
 
 ## [!DNL Platform]的系統需求為何？{#what-are-the-system-requirements-for-platform}
 
