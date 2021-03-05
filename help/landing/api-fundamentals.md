@@ -1,21 +1,21 @@
 ---
-keywords: Experience Platform;home；熱門主題
+keywords: Experience Platform；首頁；熱門主題
 solution: Experience Platform
-title: Experience Platform API基礎知識
-topic: getting started
-description: 本檔案簡要概述與Experience Platform API相關的一些基礎技術與同步。
+title: Experience PlatformAPI基礎
+topic: 快速入門
+description: 本文檔簡要概述了與Experience PlatformAPI相關的一些基礎技術和語法。
 translation-type: tm+mt
-source-git-commit: 8c98632b67ddae4fb7800e80fb8c83aca9bfa291
+source-git-commit: ca5c8527b1b54856aa1e762a06ddbe404f30ec42
 workflow-type: tm+mt
-source-wordcount: '504'
+source-wordcount: '513'
 ht-degree: 1%
 
 ---
 
 
-# Experience Platform API基礎知識
+# Experience PlatformAPI基礎
 
-Adobe Experience Platform API採用數種重要的基礎技術和語法，以有效管理以JSON為基礎的[!DNL Platform]資源。 本檔案提供這些技術的簡要概述，以及外部檔案的連結，以取得更多資訊。
+Adobe Experience PlatformAPI採用數種重要的基礎技術和語法，以有效管理以JSON為基礎的[!DNL Platform]資源。 本檔案提供這些技術的簡要概述，以及外部檔案的連結，以取得更多資訊。
 
 ## JSON指標{#json-pointer}
 
@@ -126,4 +126,4 @@ JSON結構描述是用於說明和驗證JSON資料結構的格式。 [體驗資�
 
 ## 後續步驟
 
-本檔案介紹了管理[!DNL Experience Platform] JSON型資源時涉及的一些技術和語法。 有關使用[!DNL Platform] API的詳細資訊，包括最佳實務和常見問題的解答，請參閱[平台疑難排解指南](troubleshooting.md)。
+本檔案介紹了管理[!DNL Experience Platform] JSON型資源時涉及的一些技術和語法。 請參閱[快速入門手冊](api-guide.md)以取得有關使用平台API的詳細資訊，包括最佳實務。 有關常見問題的解答，請參閱[平台疑難排解指南](troubleshooting.md)。
