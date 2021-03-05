@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform;home；熱門主題；Authenticate;access
+keywords: Experience Platform;home；熱門主題；驗證；訪問
 solution: Experience Platform
-title: 驗證及存取Experience Platform API
-topic: tutorial
-type: Tutorial
+title: 驗證和存取Experience PlatformAPI
+topic: 教學課程
+type: 教學課程
 description: '本文件逐步說明如何存取 Adobe Experience Platform 開發人員帳戶，進而呼叫 Experience Platform API。 '
 translation-type: tm+mt
-source-git-commit: 681a2554111f988ec03d40f23a3b2c8225a077ae
+source-git-commit: ca5c8527b1b54856aa1e762a06ddbe404f30ec42
 workflow-type: tm+mt
-source-wordcount: '882'
+source-wordcount: '908'
 ht-degree: 4%
 
 ---
@@ -20,36 +20,36 @@ ht-degree: 4%
 
 ## 驗證以進行API呼叫
 
-為了維護應用程式和使用者的安全性，對Adobe I/O API的所有要求都必須使用OAuth和JSON Web Token(JWT)等標準進行驗證和授權。 然後，JWT會與用戶端特定資訊一起使用，以產生您的個人存取Token。
+為了維護應用程式和使用者的安全性，對Adobe I/OAPI的所有要求都必須使用OAuth和JSON Web Token(JWT)等標準進行驗證和授權。 然後，JWT會與用戶端特定資訊一起使用，以產生您的個人存取Token。
 
 本教學課程涵蓋透過建立存取Token來驗證的步驟，其流程圖如下：
 ![](images/api-authentication/authentication-flowchart.png)
 
-## 必要條件
+## 先決條件
 
 為了成功呼叫[!DNL Experience Platform] API，您需要：
 
-* 可存取Adobe Experience Platform的IMS組織
-* 已註冊的Adobe ID帳戶
-* Admin Console管理員會將您新增為產品的&#x200B;**開發人員**&#x200B;和&#x200B;**使用者**。
+* 可訪問Adobe Experience Platform的IMS組織
+* 註冊的Adobe ID帳戶
+* Admin Console管理員，可將您新增為產品的&#x200B;**開發人員**&#x200B;和&#x200B;**使用者**。
 
-以下各節將逐步說明建立Adobe ID並成為組織的開發人員和使用者的步驟。
+以下各節將逐步介紹建立Adobe ID並成為組織的開發人員和使用者的步驟。
 
 ### 建立Adobe ID
 
-如果您沒有Adobe ID，可使用下列步驟建立Adobe ID:
+如果您沒有Adobe ID，則可使用下列步驟建立一個：
 
-1. 前往[Adobe Developer Console](https://console.adobe.io)
+1. 前往[Adobe開發人員主控台](https://console.adobe.io)
 2. 選擇&#x200B;**[!UICONTROL 建立新帳戶]**
 3. 完成註冊程式
 
 ## 成為組織[!DNL Experience Platform]的開發人員和使用者
 
-在Adobe I/O上建立整合之前，您的帳戶必須擁有IMS組織中產品的開發人員權限。 有關Admin Console開發人員帳戶的詳細資訊，請參閱[支援檔案](https://helpx.adobe.com/tw/enterprise/using/manage-developers.html)，以管理開發人員。
+在Adobe I/O上建立整合之前，您的帳戶必須擁有IMS組織中產品的開發人員權限。 有關Admin Console開發人員帳戶的詳細資訊，請參閱[支援檔案](https://helpx.adobe.com/tw/enterprise/using/manage-developers.html)中，以管理開發人員。
 
 **取得開發人員存取權**
 
-請洽詢您組織中的[!DNL Admin Console]管理員，以便使用[[!DNL Admin Console]](https://adminconsole.adobe.com/tw/)新增您為您組織其中一項產品的開發人員。
+請洽詢您組織中的[!DNL Admin Console]管理員，以便使用[[!DNL Admin Console]](https://adminconsole.adobe.com/)新增您為您組織其中一項產品的開發人員。
 
 ![](images/api-authentication/assign-developer.png)
 
@@ -57,7 +57,7 @@ ht-degree: 4%
 
 ![](images/api-authentication/add-developer.png)
 
-一旦您被指派為開發人員，您就擁有在[Adobe I/O](https://www.adobe.com/go/devs_console_ui)上建立整合的存取權限。 這些整合是從外部應用程式和服務到Adobe API的管道。
+一旦您被指派為開發人員，您將擁有在[Adobe I/O](https://www.adobe.com/go/devs_console_ui)上建立整合的存取權限。 這些整合是從外部應用程式與服務到AdobeAPI的管道。
 
 **取得使用者存取權**
 
@@ -69,13 +69,13 @@ ht-degree: 4%
 
 ![](images/api-authentication/assign-user-details.png)
 
-## 在Adobe Developer Console中產生存取認證
+## 在Adobe開發人員主控台中產生存取認證
 
 >[!NOTE]
 >
->如果您正從[隱私服務開發人員指南](../privacy-service/api/getting-started.md)遵循本檔案，現在可返回該指南，以產生[!DNL Privacy Service]專屬的存取憑證。
+>如果您正在從[Privacy Service開發人員指南](../privacy-service/api/getting-started.md)中遵循本文檔，現在可返回該指南以生成[!DNL Privacy Service]的唯一訪問憑據。
 
-使用Adobe Developer Console，您必須產生下列三種存取憑證：
+使用Adobe開發人員主控台，您必須產生下列三種存取憑證：
 
 * `{IMS_ORG}`
 * `{API_KEY}`
@@ -87,13 +87,13 @@ ht-degree: 4%
 
 ### 一次性設定
 
-前往[Adobe Developer Console](https://www.adobe.com/go/devs_console_ui)並使用您的Adobe ID登入。 接下來，請依照[教學課程中說明的步驟，在Adobe Developer Console檔案中建立空白專案](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/projects-empty.md)。
+前往[Adobe開發人員主控台](https://www.adobe.com/go/devs_console_ui)並使用您的Adobe ID登入。 接下來，請依照[教學課程中描述的步驟，在「Adobe開發人員主控台」檔案中建立空白專案](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/projects-empty.md)。
 
 建立新專案後，請在&#x200B;**專案概述**&#x200B;畫面上選取&#x200B;**[!UICONTROL 新增API]**。
 
 ![](images/api-authentication/add-api-button.png)
 
-出現「**新增API**」畫面。 選擇Adobe Experience Platform的產品圖示，然後選擇&#x200B;**[!UICONTROL Experience Platform API]**，再選擇&#x200B;**[!UICONTROL Next]**。
+出現「**新增API**」畫面。 選擇Adobe Experience Platform的產品表徵圖，然後選擇&#x200B;**[!UICONTROL Experience PlatformAPI]**，然後選擇&#x200B;**[!UICONTROL Next]**。
 
 ![](images/api-authentication/add-platform-api.png)
 
@@ -157,10 +157,10 @@ curl -X GET https://platform.adobe.io/data/foundation/schemaregistry/global/clas
 
 ## 使用Postman進行JWT驗證和API呼叫
 
-[Postmanis](https://www.postman.com/) 是使用REST風格API的常用工具。本[中篇貼文](https://medium.com/adobetech/using-postman-for-jwt-authentication-on-adobe-i-o-7573428ffe7f)說明如何設定郵遞員以自動執行JWT驗證，並使用它來使用Adobe Experience Platform API。
+[Postmanis](https://www.postman.com/) 是使用REST風格API的常用工具。此[中篇貼文](https://medium.com/adobetech/using-postman-for-jwt-authentication-on-adobe-i-o-7573428ffe7f)說明如何設定郵遞員以自動執行JWT驗證，並使用它使用Adobe Experience PlatformAPI。
 
 ## 後續步驟
 
-閱讀本檔案後，您已收集並成功測試了[!DNL Platform] API的存取憑證。 您現在可以遵循[documentation](../landing/documentation/overview.md)中提供的範例API呼叫。
+閱讀本檔案後，您已收集並成功測試了[!DNL Platform] API的存取憑證。 您現在可以依照[平台API快速入門手冊](api-guide.md)中提供的範例進行。 本指南包含每個平台服務之API指南的連結，並提供其他資訊。 錯誤、Postman和JSON。
 
 除了您在本教學課程中收集的驗證值之外，許多[!DNL Platform] API也需要提供有效的`{SANDBOX_NAME}`作為標題。 如需詳細資訊，請參閱[沙盒概述](../sandboxes/home.md)。
