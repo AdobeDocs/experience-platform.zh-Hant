@@ -3,11 +3,11 @@ keywords: Experience Platform；首頁；熱門主題；身份服務api；身份
 solution: Experience Platform
 title: Identity Service API指南
 topic: API指南
-description: Identity Service API可讓開發人員使用身分圖表Adobe Experience Platform，管理跨裝置、跨通道和接近即時的客戶身分識別。 請依照本指南，瞭解如何使用API執行關鍵作業。
+description: Identity Service API可讓開發人員使用Adobe Experience Platform的身分圖表，管理客戶的跨裝置、跨通道和近乎即時的身分識別。 請依照本指南，瞭解如何使用API執行關鍵作業。
 translation-type: tm+mt
-source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
+source-git-commit: 69c3106070e31377ea8571cd14dc33aa9b6f7037
 workflow-type: tm+mt
-source-wordcount: '772'
+source-wordcount: '773'
 ht-degree: 0%
 
 ---
