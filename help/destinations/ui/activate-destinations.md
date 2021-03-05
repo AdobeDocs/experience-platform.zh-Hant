@@ -6,7 +6,7 @@ seo-title: 將描述檔和區段啟用至目標
 description: 將區段對應至目的地，以啟用您在Adobe Experience Platform的資料。 若要完成此作業，請遵循下列步驟。
 seo-description: 將區段對應至目的地，以啟用您在Adobe Experience Platform的資料。 若要完成此作業，請遵循下列步驟。
 translation-type: tm+mt
-source-git-commit: 789534c02746ed24dfa01c7b471cdf3be407711e
+source-git-commit: 6c8bf05285dcfc3e631ae5a41dcf40f90217320a
 workflow-type: tm+mt
 source-wordcount: '2184'
 ht-degree: 0%
@@ -229,7 +229,7 @@ If you are using another ID, such as "Rewards ID" or "Loyalty ID", as primary id
 
 ![建議的屬性](../assets/ui/activate-destinations/mark-mandatory.png)
 
-此外，您可以將不同的屬性標示為必填。 將屬性標示為強制屬性，則會使其變成匯出的區段必須包含該屬性。 因此，它可以用作另外的過濾形式。 將屬性標籤為必要屬性是&#x200B;**not**。
+此外，您可以將不同的屬性標示為必填。 將屬性標示為強制屬性，則會使其變成匯出的區段必須包含該屬性。 因此，它可以用作其他過濾形式。 將屬性標籤為必要屬性是&#x200B;**not**。
 
 建議其中一個屬性是架構中的[唯一標識符](../../destinations/catalog/email-marketing/overview.md#identity)。 如需必要屬性的詳細資訊，請參閱[電子郵件行銷目標](../../destinations/catalog/email-marketing/overview.md#identity)檔案中的識別區段。
 
