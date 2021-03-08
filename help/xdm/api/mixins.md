@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home；熱門主題；API;XDM;XDM;XDM系統；體驗資料模型；體驗資料模型；資料模型；Data Model;mixin註冊表；模式註冊表；Mixin;Mixin;Mixins；建立
+keywords: Experience Platform;home；熱門主題；api;API;XDM;XDM系統；體驗資料模型；體驗資料模型；資料模型；混合登錄；模式註冊；混合；混合；混合；混合；建立
 solution: Experience Platform
 title: Mixins API端點
 description: 架構註冊表API中的/mixins端點可讓您以程式設計方式管理體驗應用程式中的XDM混合。
-topic: developer guide
+topic: 開發人員指南
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 0727ffa0c72bcb6a85de1a13215b691b97889b70
 workflow-type: tm+mt
-source-wordcount: '1134'
+source-wordcount: '1136'
 ht-degree: 2%
 
 ---
@@ -19,11 +19,11 @@ Mixin是可重複使用的元件，它定義了表示特定概念的一個或多
 
 ## 快速入門
 
-本指南中使用的端點是[[!DNL Schema Registry] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/mixin-registry.yaml)的一部分。 在繼續之前，請先閱讀[快速入門手冊](./getting-started.md)，以取得相關檔案的連結、閱讀本檔案中範例API呼叫的指南，以及成功呼叫任何Experience Platform API所需之必要標題的重要資訊。
+本指南中使用的端點是[[!DNL Schema Registry] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml)的一部分。 在繼續之前，請先閱讀[快速入門手冊](./getting-started.md)，以取得相關檔案的連結、閱讀本檔案中範例API呼叫的指南，以及成功呼叫任何Experience PlatformAPI所需之必要標題的重要資訊。
 
 ## 檢索mixins {#list}清單
 
-您可以分別對`/global/mixins`或`/tenant/mixins`發出GET請求，將所有混合列在`global`或`tenant`容器下。
+您可以分別向`/global/mixins`或`/tenant/mixins`提出GET請求，將所有混合列在`global`或`tenant`容器下。
 
 >[!NOTE]
 >
@@ -109,7 +109,7 @@ curl -X GET \
 
 ## 查找{#lookup}的混音
 
-您可以在GET請求的路徑中加入mixin的ID，以尋找特定的mixin。
+您可以在請求的路徑中加入mixin的ID，以尋找特定的mixin。
 
 **API格式**
 
@@ -211,7 +211,7 @@ curl -X GET \
 
 ## 建立{#create}混音
 
-您可以透過發出POST請求，在`tenant`容器下定義自訂混音。
+您可以透過提出POST請求，在`tenant`容器下定義自訂混音。
 
 **API格式**
 
@@ -378,11 +378,11 @@ curl -X POST \
 }
 ```
 
-執行GET要求，將[清單中所有mixin](#list)的租用戶容器現在都包含「屬性詳細資料」混音，或您可以[使用URL編碼的`$id` URI，執行查閱(GET)要求](#lookup)，以直接檢視新混音。
+執行GET請求以列出租用戶容器中的所有mixins](#list)，現在會包含「屬性詳細資料」混音，或者您可以[使用URL編碼的`$id` URI執行查閱(GET)請求](#lookup)，以直接檢視新混音。[
 
 ## 更新mixin {#put}
 
-您可以通過PUT操作替換整個混音，實際上重寫資源。 當通過PUT請求更新混音時，主體必須包括在POST請求中建立新混音](#create)時所需的所有欄位。[
+您可以通過PUT操作替換整個混音，實際上重寫資源。 當通過PUT請求更新混音時，主體必須包括在POST請求中建立新混音時所需的所有欄位。[](#create)
 
 >[!NOTE]
 >
@@ -565,11 +565,11 @@ curl -X PUT \
 
 ## 更新{#patch}混音的一部分
 
-您可以使用PATCH請求來更新混合的一部分。 [!DNL Schema Registry]支援所有標準JSON修補程式作業，包括`add`、`remove`和`replace`。 如需JSON修補程式的詳細資訊，請參閱[API基礎指南](../../landing/api-fundamentals.md#json-patch)。
+您可以使用PATCH請求來更新混音的一部分。 [!DNL Schema Registry]支援所有標準JSON修補程式作業，包括`add`、`remove`和`replace`。 如需JSON修補程式的詳細資訊，請參閱[API基礎指南](../../landing/api-fundamentals.md#json-patch)。
 
 >[!NOTE]
 >
->如果要用新值替換整個資源，而不是更新單個欄位，請參見關於使用PUT操作替換混音的[一節。](#put)
+>如果要用新值替換整個資源，而不是更新單個欄位，請參閱[中的「使用PUT操作替換混音」部分](#put)。
 
 **API格式**
 
@@ -706,7 +706,7 @@ curl -X PATCH \
 
 ## 刪除{#delete}的混音
 
-有時可能需要從模式註冊表中刪除混合。 這是透過使用路徑中提供的混合ID來執行DELETE要求來完成的。
+有時可能需要從模式註冊表中刪除混合。 這是通過使用路徑中提供的混合ID執行DELETE請求來完成的。
 
 **API格式**
 
