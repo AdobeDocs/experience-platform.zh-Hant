@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform; home；熱門主題；api;API;XDM;XDM系統；體驗資料模型；體驗資料模型；資料模型；資料模型；審計；審計日誌；changelog;change log;rpc;
+keywords: Experience Platform;home；熱門主題；api;API;XDM;XDM系統；體驗資料模型；體驗資料模型；資料模型；資料模型；審計；審計；更改日誌；rpc;
 solution: Experience Platform
 title: 審核日誌API端點
 description: 方案註冊表API中的/auditlog端點允許您檢索對現有XDM資源所做更改的時間順序清單。
-topic: developer guide
+topic: 開發人員指南
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 0727ffa0c72bcb6a85de1a13215b691b97889b70
 workflow-type: tm+mt
-source-wordcount: '396'
+source-wordcount: '398'
 ht-degree: 2%
 
 ---
@@ -19,13 +19,13 @@ ht-degree: 2%
 
 ## 快速入門
 
-本指南中使用的端點是[[!DNL Schema Registry] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/mixin-registry.yaml)的一部分。 在繼續之前，請先閱讀[快速入門手冊](./getting-started.md)，以取得相關檔案的連結、閱讀本檔案中範例API呼叫的指南，以及成功呼叫任何Experience Platform API所需之必要標題的重要資訊。
+本指南中使用的端點是[[!DNL Schema Registry] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml)的一部分。 在繼續之前，請先閱讀[快速入門手冊](./getting-started.md)，以取得相關檔案的連結、閱讀本檔案中範例API呼叫的指南，以及成功呼叫任何Experience PlatformAPI所需之必要標題的重要資訊。
 
 `/auditlog`端點是[!DNL Schema Registry]所支援的遠程過程調用(RPC)的一部分。 與[!DNL Schema Registry] API中的其他端點不同，RPC端點不需要額外的標題，如`Accept`或`Content-Type`，也不使用`CONTAINER_ID`。 而必須改用`/rpc`命名空間，如下列API呼叫所示。
 
 ## 檢索資源的審計日誌
 
-通過在到`/auditlog`端點的GET請求路徑中指定資源的ID，可以檢索方案庫中任何類、混合、資料類型或方案的審計日誌。
+通過在`/auditlog`端點的GET請求路徑中指定資源的ID，可以檢索方案庫中任何類、混合、資料類型或方案的審計日誌。
 
 **API格式**
 
