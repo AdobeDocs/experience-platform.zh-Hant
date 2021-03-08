@@ -1,10 +1,10 @@
 ---
-keywords: Experience Platform;home；熱門主題；API;XDM;XDM;XDM系統；體驗資料模型；Experience資料模型；資料模型；資料類型註冊表；模式註冊表；資料類型；資料類型；資料類型；資料類型；建立
+keywords: Experience Platform;home；熱門主題；api;API;XDM;XDM系統；體驗資料模型；體驗資料模型；資料模型；資料類型註冊表；模式註冊表；資料類型；資料類型；資料類型；資料類型；建立
 solution: Experience Platform
 title: 資料類型API端點
 description: 架構註冊表API中的/datatypes端點可讓您以程式設計方式管理體驗應用程式中的XDM資料類型。
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 0727ffa0c72bcb6a85de1a13215b691b97889b70
 workflow-type: tm+mt
 source-wordcount: '1147'
 ht-degree: 2%
@@ -18,11 +18,11 @@ ht-degree: 2%
 
 ## 快速入門
 
-本指南中使用的端點是[[!DNL Schema Registry] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/mixin-registry.yaml)的一部分。 在繼續之前，請先閱讀[快速入門手冊](./getting-started.md)，以取得相關檔案的連結、閱讀本檔案中範例API呼叫的指南，以及成功呼叫任何Experience Platform API所需之必要標題的重要資訊。
+本指南中使用的端點是[[!DNL Schema Registry] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml)的一部分。 在繼續之前，請先閱讀[快速入門手冊](./getting-started.md)，以取得相關檔案的連結、閱讀本檔案中範例API呼叫的指南，以及成功呼叫任何Experience PlatformAPI所需之必要標題的重要資訊。
 
 ## 檢索{#list}資料類型清單
 
-您可以分別對`/global/datatypes`或`/tenant/datatypes`發出GET請求，以列出`global`或`tenant`容器下的所有資料類型。
+您可以分別向`/global/datatypes`或`/tenant/datatypes`發出GET請求，以列出`global`或`tenant`容器下的所有資料類型。
 
 >[!NOTE]
 >
@@ -96,7 +96,7 @@ curl -X GET \
 
 ## 查找資料類型{#lookup}
 
-您可以在GET請求的路徑中加入資料類型的ID，以尋找特定的資料類型。
+您可以在請求的路徑中加入資料類型的ID，以尋找特定的資料類型。
 
 **API格式**
 
@@ -216,7 +216,7 @@ curl -X GET \
 
 ## 建立資料類型{#create}
 
-您可以透過發出POST請求，在`tenant`容器下定義自訂資料類型。
+您可以透過提出POST請求，在`tenant`容器下定義自訂資料類型。
 
 **API格式**
 
@@ -324,7 +324,7 @@ curl -X POST \
 }
 ```
 
-執行GET請求以列出租用戶容器中的所有資料類型](#list)，現在會包含「屬性詳細資料」資料類型，或者您可以[使用URL編碼的`$id` URI執行查閱(GET)請求](#lookup)，以直接檢視新的資料類型。[
+執行[列出租用戶容器中所有資料類型](#list)的GET請求，現在會包含「屬性詳細資料」資料類型，或者，您可以[使用URL編碼的`$id` URI，執行查閱(GET)請求](#lookup)，以直接檢視新的資料類型。
 
 ## 更新資料類型{#put}
 
@@ -457,11 +457,11 @@ curl -X PUT \
 
 ## 更新{#patch}資料類型的一部分
 
-您可以使用PATCH請求來更新資料類型的一部分。 [!DNL Schema Registry]支援所有標準JSON修補程式作業，包括`add`、`remove`和`replace`。 如需JSON修補程式的詳細資訊，請參閱[API基礎指南](../../landing/api-fundamentals.md#json-patch)。
+您可以使用PATCH請求來更新部分資料類型。 [!DNL Schema Registry]支援所有標準JSON修補程式作業，包括`add`、`remove`和`replace`。 如需JSON修補程式的詳細資訊，請參閱[API基礎指南](../../landing/api-fundamentals.md#json-patch)。
 
 >[!NOTE]
 >
->如果要用新值替換整個資源，而不是更新單個欄位，請參閱[上的使用PUT操作替換資料類型的部分](#put)。
+>如果要用新值替換整個資源，而不是更新單個欄位，請參閱[中有關使用PUT操作替換資料類型的部分](#put)。
 
 **API格式**
 
@@ -598,7 +598,7 @@ curl -X PATCH \
 
 ## 刪除資料類型{#delete}
 
-有時可能需要從架構註冊表中刪除資料類型。 這是透過使用路徑中提供的資料類型ID來執行DELETE要求來完成。
+有時可能需要從架構註冊表中刪除資料類型。 這是透過使用路徑中提供的資料類型ID執行DELETE要求來完成的。
 
 **API格式**
 
