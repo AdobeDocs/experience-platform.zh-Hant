@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform; home；熱門主題；api;API;XDM;XDM系統；體驗資料模型；體驗資料模型；資料模型；資料模型；示例資料；rpc;
+keywords: Experience Platform;home；熱門主題；api;API;XDM;XDM系統；體驗資料模型；體驗資料模型；資料模型；資料模型；示例資料；rpc;
 solution: Experience Platform
 title: 範例資料API端點
 description: 方案註冊表API中的/sampledata端點允許您生成映射到任何現有XDM方案結構的示例資料。
-topic: developer guide
+topic: 開發人員指南
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 0727ffa0c72bcb6a85de1a13215b691b97889b70
 workflow-type: tm+mt
-source-wordcount: '319'
+source-wordcount: '321'
 ht-degree: 1%
 
 ---
@@ -15,19 +15,19 @@ ht-degree: 1%
 
 # 範例資料端點
 
-為了將資料內嵌至Adobe Experience Platform，資料的格式和結構必須符合現有的Experience Data Model(XDM)架構。 根據特定資料集的架構複雜性，很難判斷資料集在擷取時所需的確切資料形狀。
+為了將資料收錄至Adobe Experience Platform，資料的格式和結構必須符合現有的體驗資料模型(XDM)架構。 根據特定資料集的架構複雜性，很難判斷資料集在擷取時所需的確切資料形狀。
 
 使用[!DNL Schema Registry] API中的`/sampledata`端點，您可以為任何先前建立的方案生成示例提取對象。
 
 ## 快速入門
 
-本指南中使用的端點是[[!DNL Schema Registry] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/mixin-registry.yaml)的一部分。 在繼續之前，請先閱讀[快速入門手冊](./getting-started.md)，以取得相關檔案的連結、閱讀本檔案中範例API呼叫的指南，以及成功呼叫任何Experience Platform API所需之必要標題的重要資訊。
+本指南中使用的端點是[[!DNL Schema Registry] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml)的一部分。 在繼續之前，請先閱讀[快速入門手冊](./getting-started.md)，以取得相關檔案的連結、閱讀本檔案中範例API呼叫的指南，以及成功呼叫任何Experience PlatformAPI所需之必要標題的重要資訊。
 
 示例資料端點是[!DNL Schema Registry]支援的遠程過程調用(RPC)的一部分。 與[!DNL Schema Registry] API中的其他端點不同，RPC端點不需要額外的標題，如`Accept`或`Content-Type`，也不使用`CONTAINER_ID`。 而必須改用`/rpc`命名空間，如下列API呼叫所示。
 
 ## 檢索模式的示例資料
 
-通過在到端點的GET請求路徑中指定方案的ID，可以檢索方案庫中任何方案的示例資料。
+通過在指向端點的GET請求路徑中指定方案的ID，可以檢索方案庫中任何方案的示例資料。
 
 **API格式**
 
