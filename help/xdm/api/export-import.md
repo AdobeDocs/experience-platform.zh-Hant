@@ -3,11 +3,11 @@ keywords: Experience Platform;home；熱門主題；api;API;XDM;XDM系統；體�
 solution: Experience Platform
 title: 匯出／匯入API端點
 description: 架構註冊表API中的/export和/import端點可讓您在IMS組織和沙盒之間共用XDM資源。
-topic: developer guide
+topic: 開發人員指南
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 0727ffa0c72bcb6a85de1a13215b691b97889b70
 workflow-type: tm+mt
-source-wordcount: '500'
+source-wordcount: '502'
 ht-degree: 1%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 1%
 
 ## 快速入門
 
-本指南中使用的端點是[[!DNL Schema Registry] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/mixin-registry.yaml)的一部分。 在繼續之前，請先閱讀[快速入門手冊](./getting-started.md)，以取得相關檔案的連結、閱讀本檔案中範例API呼叫的指南，以及成功呼叫任何Experience Platform API所需之必要標題的重要資訊。
+本指南中使用的端點是[[!DNL Schema Registry] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml)的一部分。 在繼續之前，請先閱讀[快速入門手冊](./getting-started.md)，以取得相關檔案的連結、閱讀本檔案中範例API呼叫的指南，以及成功呼叫任何Experience PlatformAPI所需之必要標題的重要資訊。
 
 導出／導入端點是[!DNL Schema Registry]支援的遠程過程調用(RPC)的一部分。 與[!DNL Schema Registry] API中的其他端點不同，RPC端點不需要額外的標題，如`Accept`或`Content-Type`，也不使用`CONTAINER_ID`。 而必須改用`/rpc`命名空間，如下列API呼叫所示。
 
@@ -197,7 +197,7 @@ curl -X GET \
 
 ## 導入資源{#import}
 
-一旦您為XDM資源產生了[匯出裝載](#export)，您就可以在對`/import`端點的POST請求中使用該裝載，將該資源匯入目標IMS組織和沙盒。
+一旦您為XDM資源產生了[匯出裝載](#export)，您就可以在向`/import`端點POST請求中使用該裝載，將該資源匯入目標IMS組織和沙盒。
 
 **API格式**
 
