@@ -1,13 +1,13 @@
 ---
-title: 設定Adobe Experience Platform Web SDK
-description: 瞭解如何設定Adobe Experience Platform Web SDK。
-seo-description: 瞭解如何設定Experience Platform Web SDK
+title: 設定Adobe Experience Platform網頁SDK
+description: 瞭解如何設定Adobe Experience Platform網頁SDK。
+seo-description: 瞭解如何設定Experience Platform網頁SDK
 keywords: configure;configuration;SDK;edge;Web SDK;configure;edgeConfigId;context;web;device;placeContext;debugEnabled;edgeDomain;orgId;clickCollectionEnabled;onBeforeEventSend;defaultConowensen;web sd設定；prehiningStyle；不透明；cookieDesing;webet;e;web sd;e;e;en;ed;emen;up;en;usen;up;usen;ured;ure;usen;urlEnabled;en;used;urlEnabled;ed;ed;ed;urlEn;en;ed;ed;un;ed;un;um;un;urlDestinationsEnabled;idMigrationEnabled;thirdPartyCookiesEnabled;
 translation-type: tm+mt
-source-git-commit: 0b9a92f006d1ec151a0bb11c10c607ea9362f729
+source-git-commit: f78da58ba7a593d9c161030833d9b69e2ba57c9a
 workflow-type: tm+mt
-source-wordcount: '743'
-ht-degree: 11%
+source-wordcount: '793'
+ht-degree: 10%
 
 ---
 
@@ -67,7 +67,7 @@ alloy("configure", {
 | 字串 | 無 | `beta.adobedc.net` |
 | 字串 | 無 | `omtrdc.net` |
 
-用於與Adobe服務互動的網域。 只有當您有第一方網域(CNAME)，可代理Adobe Edge基礎架構的請求時，才會使用此功能。
+與Adobe服務互動的網域。 只有當您有第一方網域(CNAME)，可代理Adobe邊緣基礎架構的請求時，才會使用此功能。
 
 ### `orgId`
 
@@ -103,7 +103,10 @@ alloy("configure", {
 | -------- | ------------ | ----------------- |
 | 物件 | 無 | `"in"` |
 
-設定使用者的預設同意。 當使用者尚未儲存同意偏好設定時，就會使用此選項。 另一個有效值是`"pending"`。 設定後，工作將排入佇列，直到使用者提供同意偏好為止。 在提供使用者的偏好設定後，工作會根據使用者的偏好進行或中止。 如需詳細資訊，請參閱[支援同意](../consent/supporting-consent.md)。
+設定使用者的預設同意。 當使用者尚未儲存同意偏好設定時，就會使用此選項。 其他有效值為`"pending"`和`"out"`。 此預設值不會持續存在於使用者的設定檔中。 只有在呼叫setConnownence時，使用者的設定檔才會更新。
+* `"in"`:當設定此值或未提供值時，工作會在沒有使用者同意偏好的情況下進行。
+* `"pending"`:設定後，工作將排入佇列，直到使用者提供同意偏好為止。
+* `"out"`:當設定此值時，將捨棄工作，直到使用者提供同意偏好為止。在提供使用者的偏好設定後，工作會根據使用者的偏好進行或中止。 如需詳細資訊，請參閱[支援同意](../consent/supporting-consent.md)。
 
 ## 個人化選項
 
@@ -147,7 +150,7 @@ alloy("configure", {
 | -------- | ------------ | ----------------- |
 | 布林值 | 無 | true |
 
-如果為true,SDK將讀取並設定舊的AMCV Cookie。 這有助於轉換至使用Adobe Experience Platform Web SDK，而網站的某些部分可能仍在使用Visitor.js。 此外，如果頁面上已定義訪客API,SDK將查詢訪客API以取得ECID。 這可讓您使用Adobe Experience Platform Web SDK將頁面加上雙標籤，而且仍有相同的ECID。
+如果為true,SDK將讀取並設定舊的AMCV Cookie。 這有助於轉換至使用Adobe Experience Platform網頁SDK，而網站的某些部分可能仍使用Visitor.js。 此外，如果頁面上已定義訪客API,SDK將查詢訪客API以取得ECID。 這可讓您使用Adobe Experience Platform網頁SDK加上雙標籤頁面，而且仍有相同的ECID。
 
 ### `thirdPartyCookiesEnabled`
 
