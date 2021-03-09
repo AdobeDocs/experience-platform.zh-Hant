@@ -1,11 +1,11 @@
 ---
-title: 使用Adobe Experience Platform Web SDK整合IAB TCF 2.0支援
-description: 瞭解如何在不使用Adobe Experience Platform Launch的情況下，為您的網站設定IAB TCF 2.0支援。
-seo-description: 瞭解如何透過Adobe Experience Platform Web SDK設定IAB TCF 2.0同意
+title: 使用Adobe Experience PlatformWeb SDK整合IAB TCF 2.0支援
+description: 瞭解如何在不使用Adobe Experience Platform Launch的情況下為您的網站設定IAB TCF 2.0支援。
+seo-description: 瞭解如何透過Adobe Experience PlatformWeb SDK設定IAB TCF 2.0同意
 translation-type: tm+mt
-source-git-commit: 0b9a92f006d1ec151a0bb11c10c607ea9362f729
+source-git-commit: b9fb71ac7eca95c65165d6780b681ada3f16325b
 workflow-type: tm+mt
-source-wordcount: '685'
+source-wordcount: '688'
 ht-degree: 0%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 # 將IAB TCF 2.0支援與平台網頁SDK整合
 
-本指南說明如何在不使用Experience Platform Launch的情況下，將Interactive Advertising Bureau透明度與同意框架2.0版(IAB TCF 2.0)與Adobe Experience Platform Web SDK整合。 有關與IAB TCF 2.0整合的概述，請閱讀[overview](./overview.md)。 如需如何與Experience Platform Launch整合的指南，請閱讀[IAB TCF 2.0指南，以取得Experience Platform Launch的相關資訊。](./with-launch.md)
+本指南說明如何在不使用Experience Platform Launch的情況下，將互動式廣告局透明度與同意框架2.0版(IAB TCF 2.0)與Adobe Experience Platform網頁SDK整合。 有關與IAB TCF 2.0整合的概述，請閱讀[overview](./overview.md)。 有關如何與Experience Platform Launch整合的指南，請閱讀[IAB TCF 2.0指南中的Experience Platform Launch](./with-launch.md)。
 
 ## 快速入門
 
@@ -23,13 +23,13 @@ ht-degree: 0%
 >
 >這些範例假設在執行程式碼時，會在頁面上定義`window.__tcfapi`。 CMP可提供掛接，在`__tcfapi`對象就緒時，您可在其中運行這些函式。
 
-若要搭配使用IAB TCF 2.0和Experience Platform Launch和Adobe Experience Platform Web SDK擴充功能，您必須有可用的XDM架構。 如果您未設定其中任一設定，請先檢視此頁面，再繼續。
+若要搭配使用IAB TCF 2.0和Experience Platform Launch及Adobe Experience Platform網頁SDK擴充功能，您必須有可用的XDM架構。 如果您未設定其中任一設定，請先檢視此頁面，再繼續。
 
-此外，本指南要求您對Adobe Experience Platform Web SDK有良好的認識。 如需快速進階，請閱讀[Adobe Experience Platform Web SDK總覽](../../home.md)和[常見問題](../../web-sdk-faq.md)檔案。
+此外，本指南要求您對Adobe Experience Platform網頁SDK有良好的認識。 如需快速複習，請閱讀[Adobe Experience Platform網頁SDK概觀](../../home.md)和[常見問答](../../web-sdk-faq.md)檔案。
 
 ## 啟用預設許可
 
-如果您想要對所有未知的使用者視為相同，可將預設同意設為`pending`。 這會將「體驗事件」排入佇列，直到收到同意偏好設定。
+如果您想要對所有未知的使用者視為相同，可以將預設同意設定為`pending`或`out`。 在收到許可偏好設定之前，此會佇列或放棄體驗事件。
 
 有關預設許可的詳細資訊，請參閱平台Web SDK配置文檔中的[預設許可部分](../../fundamentals/configuring-the-sdk.md#default-consent)。
 
@@ -109,4 +109,4 @@ window.__tcfapi('getTCData', 2, function (tcData, success) {
 
 ## 後續步驟
 
-現在您已學會如何搭配Platform Web SDK擴充功能使用IAB TCF 2.0，您也可以選擇與其他Adobe解決方案（例如Adobe Analytics或即時客戶資料平台）整合。 如需詳細資訊，請參閱[IAB透明與同意框架2.0概觀](./overview.md)。
+現在您已學會如何搭配使用IAB TCF 2.0與Platform Web SDK擴充功能，您也可以選擇與其他Adobe解決方案整合，例如Adobe Analytics或即時客戶資料平台。 如需詳細資訊，請參閱[IAB透明與同意框架2.0概觀](./overview.md)。
