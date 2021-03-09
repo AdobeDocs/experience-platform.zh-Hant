@@ -2,9 +2,9 @@
 title: 使用Platform launch和平台網頁SDK擴充功能整合IAB TCF 2.0支援
 description: 瞭解如何設定IAB TCF 2.0與Adobe Experience Platform Launch及Adobe Experience Platform網頁SDK擴充功能的同意。
 translation-type: tm+mt
-source-git-commit: 1a51ce92eb5c41ff65ebcf4c652640dd0782487f
+source-git-commit: b9fb71ac7eca95c65165d6780b681ada3f16325b
 workflow-type: tm+mt
-source-wordcount: '836'
+source-wordcount: '855'
 ht-degree: 0%
 
 ---
@@ -24,7 +24,7 @@ Adobe Experience Platform網頁SDK支援互動式廣告局透明度與同意框�
 
 ## 設定預設許可
 
-在擴充功能設定中，有預設同意的設定。 這可控制未取得同意Cookie的客戶的行為。 如果您要為沒有許可Cookie的客戶排入「體驗事件」佇列，請將此設定為`pending`。 您也可以使用資料元素動態設定預設同意值。
+在擴充功能設定中，有預設同意的設定。 這可控制未取得同意Cookie的客戶的行為。 如果您要為沒有同意Cookie的客戶排入「體驗事件」佇列，請將此設定為`pending`。 如果您想要針對沒有同意Cookie的客戶捨棄「體驗事件」，請將此設定為`out`。 您也可以使用資料元素動態設定預設同意值。
 
 如需如何設定預設同意的詳細資訊，請參閱SDK設定指南中的[預設同意章節](../../fundamentals/configuring-the-sdk.md#default-consent)。
 
