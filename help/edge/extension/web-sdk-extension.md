@@ -2,10 +2,10 @@
 title: Adobe Experience Platform Web SDK 擴充功能 概述
 description: 瞭解適用於Adobe Experience Platform Launch的Adobe Experience Platform網頁SDK擴充功能
 translation-type: tm+mt
-source-git-commit: 2a0ae9541a8bb2bb985d43a402d0842e73b23c81
+source-git-commit: b9fb71ac7eca95c65165d6780b681ada3f16325b
 workflow-type: tm+mt
-source-wordcount: '553'
-ht-degree: 14%
+source-wordcount: '584'
+ht-degree: 13%
 
 ---
 
@@ -56,10 +56,13 @@ Adobe Experience Platform網頁SDK擴充功能支援頁面上的多個執行個�
 
 ## [!UICONTROL 隱私]
 
-[!UICONTROL 隱私]區段可讓您設定SDK如何處理您網站上的客戶同意訊號。 具體來說，它允許您選擇未提供其他明確同意偏好的客戶所承擔的預設同意級別。 下表列出每個選項所包含的內容：
+[!UICONTROL 隱私]區段可讓您設定SDK如何處理您網站的使用者同意訊號。 具體來說，它允許您選擇在未提供其他明確同意偏好的情況下假定用戶的預設同意級別。 預設同意層級不會儲存至使用者的設定檔。 下表列出每個選項所包含的內容：
 
 | [!UICONTROL 預設許可級別] | 說明 |
 | --- | --- |
-| [!UICONTROL 在] | 選擇加入。 如果您預設同意客戶，且僅遵守退出訊號，請使用此選項。 |
-| [!UICONTROL 待定] | 具有「擱置中」同意的客戶會選擇退出，直到傳送選擇加入訊號為止。 如果您需要明確的客戶同意您的業務運營，請使用此選項。 |
+| [!UICONTROL 在] | 收集在使用者提供同意偏好設定之前發生的事件。 |
+| [!UICONTROL Out] | 捨棄在使用者提供同意偏好設定之前發生的事件。 |
+| [!UICONTROL 待定] | 在使用者提供同意偏好設定之前發生的佇列事件。 當提供許可偏好時，會根據提供的偏好收集或捨棄事件。 |
 | [!UICONTROL 由資料元素提供] | 預設同意層級由您定義的個別資料元素決定。 使用此選項時，您必須使用提供的下拉式功能表指定資料元素。 |
+
+如果您需要明確的使用者同意才能進行業務運作，請使用「退出」或「待定」。
