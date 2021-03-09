@@ -1,20 +1,20 @@
 ---
-title: 使用Adobe Experience Platform Web SDK擷取Experience Cloud ID
-description: 瞭解如何使用Adobe Experience Platform Web SDK擷取Adobe Experience Cloud ID(ECID)。
-seo-description: 瞭解如何取得Adobe Experience Cloud Id。
+title: 使用Adobe Experience Platform網頁SDK擷取Experience CloudID
+description: 瞭解如何使用Adobe Experience Platform網頁SDK擷取Adobe Experience CloudID(ECID)。
+seo-description: 瞭解如何取得Adobe Experience CloudID。
 keywords: Identity；第一方身分；Identity Service；第三方身份；ID移轉；訪客ID；第三方身份；第三方身份；第三方CookieEnabled;idMigrationEnabled;getIdentity；同步身份；syncIdentity;sendEvent;identityMap;primary;ecid;ItyNamespace idenamespace id;authenticationState;authenticationhashEnabled;
 translation-type: tm+mt
-source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
+source-git-commit: 882bcd2f9aa7a104270865783eed82089862dea3
 workflow-type: tm+mt
-source-wordcount: '924'
+source-wordcount: '963'
 ht-degree: 3%
 
 ---
 
 
-# 擷取Adobe Experience Cloud ID
+# 擷取Adobe Experience CloudID
 
-Adobe Experience Platform Web SDK運用[Adobe Identity Service](../../identity-service/ecid.md)。 這可確保每個裝置都有一個唯一識別碼，該識別碼會保存在裝置上，以便將頁面之間的活動系結在一起。
+Adobe Experience Platform網頁SDK運用[Adobe身分服務](../../identity-service/ecid.md)。 這可確保每個裝置都有一個唯一識別碼，該識別碼會保存在裝置上，以便將頁面之間的活動系結在一起。
 
 ## 第一方身分
 
@@ -29,30 +29,31 @@ Adobe Experience Platform Web SDK運用[Adobe Identity Service](../../identity-s
 從使用訪客API進行移轉時，您也可以移轉現有的AMCV Cookie。 要啟用ECID遷移，請在配置中設定`idMigrationEnabled`參數。 ID移轉可啟用下列使用案例：
 
 * 當網域的某些頁面使用訪客API，而其他頁面使用此SDK時。 為支援此案例，SDK會讀取現有的AMCV Cookie，並使用現有的ECID寫入新Cookie。 此外，SDK會編寫AMCV Cookie，如此，如果ECID是先在SDK所創作的頁面上取得，則使用訪客API所創作的後續頁面具有相同的ECID。
-* 當Adobe Experience Platform Web SDK設定在同時具有訪客API的頁面上時。 為支援此案例，如果未設定AMCV Cookie,SDK會在頁面上尋找訪客API並呼叫它以取得ECID。
-* 當整個網站使用Adobe Experience Platform Web SDK且沒有訪客API時，移轉ECID以保留回訪訪客資訊會很有用。 在SDK與`idMigrationEnabled`一起部署一段時間後，如此大部分的訪客Cookie都會移轉，就可關閉設定。
+* 當Adobe Experience Platform網頁SDK設定在具有訪客API的頁面上時。 為支援此案例，如果未設定AMCV Cookie,SDK會在頁面上尋找訪客API並呼叫它以取得ECID。
+* 當整個網站使用Adobe Experience Platform網頁SDK且沒有訪客API時，移轉ECID以保留回訪訪客資訊會很有用。 在SDK與`idMigrationEnabled`一起部署一段時間後，如此大部分的訪客Cookie都會移轉，就可關閉設定。
 
 ## 更新移轉特徵
 
-當XDM格式化資料傳送至Audience Manager時，轉換時需要將此資料轉換為訊號。 您的特徵需要更新，以反映XDM提供的新密鑰。 使用Audience Manager已建立的[BAAM工具](https://docs.adobe.com/content/help/en/audience-manager/user-guide/reference/bulk-management-tools/bulk-management-intro.html#getting-started-with-bulk-management)，讓此程式變得更輕鬆。
+當XDM格式化的資料發送到Audience Manager時，遷移時需要將這些資料轉換為信號。 您的特徵需要更新，以反映XDM提供的新密鑰。 使用該Audience Manager已建立的[BAAM工具](https://docs.adobe.com/content/help/en/audience-manager/user-guide/reference/bulk-management-tools/bulk-management-intro.html#getting-started-with-bulk-management)，使此過程更加容易。
 
 ## 伺服器端轉送
 
-如果您目前已啟用伺服器端轉送，且使用`appmeasurement.js`。 和`visitor.js`，您可以保持啟用伺服器端轉送功能，而不會造成任何問題。 在後端，Adobe會擷取任何AAM區段，並將它們新增至對Analytics的呼叫。 如果對Analytics的呼叫包含這些區段，Analytics不會呼叫Audience Manager來轉送任何資料，因此不會有雙重資料收集。 使用Web SDK時也不需要位置提示，因為後端會呼叫相同的分段端點。
+如果您目前已啟用伺服器端轉送，且使用`appmeasurement.js`。 和`visitor.js`，您可以保持啟用伺服器端轉送功能，而不會造成任何問題。 在後端，Adobe會擷取AAM任何區段，並將它們新增至對Analytics的呼叫。 如果對Analytics的呼叫包含這些區段，Analytics不會呼叫Audience Manager來轉送任何資料，因此沒有雙重資料收集。 使用Web SDK時也不需要位置提示，因為後端會呼叫相同的分段端點。
 
-## 擷取訪客ID
+## 擷取訪客ID和地區ID
 
-如果要使用此唯一ID，請使用`getIdentity`命令。 `getIdentity` 傳回目前訪客的現有ECID。對於尚未擁有ECID的首次訪客，此命令會產生新的ECID。
+如果您想要使用唯一訪客ID，請使用`getIdentity`命令。 `getIdentity` 傳回目前訪客的現有ECID。對於尚未擁有ECID的首次訪客，此命令會產生新的ECID。 `getIdentity` 也會傳回訪客的地區ID。如需詳細資訊，請參閱[Adobe Audience Manager使用指南](https://experienceleague.adobe.com/docs/audience-manager/user-guide/api-and-sdk-code/dcs/dcs-api-reference/dcs-regions.html)。
 
 >[!NOTE]
 >
->此方法通常用於需要讀取[!DNL Experience Cloud] ID的自訂解決方案。 標準實作不會使用此函數。
+>此方法通常用於需要讀取[!DNL Experience Cloud] ID或需要Adobe Audience Manager位置提示的自訂解決方案。 標準實作不會使用此函數。
 
 ```javascript
 alloy("getIdentity")
   .then(function(result) {
     // The command succeeded.
-    console.log(result.identity.ECID);
+    console.log("ECID:", result.identity.ECID);
+    console.log("RegionId:", result.edge.regionId);
   })
   .catch(function(error) {
     // The command failed.
@@ -90,7 +91,7 @@ alloy("sendEvent", {
 });
 ```
 
-`identityMap`中的每個屬性代表屬於特定[identity namespace](../../identity-service/namespaces.md)的身分。 屬性名稱應為身分名稱空間符號，您可在Adobe Experience Platform使用者介面的「[!UICONTROL Identities]」下找到此符號。 屬性值應為與該標識名稱空間相關的標識陣列。
+`identityMap`中的每個屬性代表屬於特定[identity namespace](../../identity-service/namespaces.md)的身分。 屬性名稱應為身份名稱空間符號，您可在「[!UICONTROL Identities]」下的Adobe Experience Platform用戶介面中找到該符號。 屬性值應為與該標識名稱空間相關的標識陣列。
 
 身份陣列中的每個身份對象的結構如下：
 
