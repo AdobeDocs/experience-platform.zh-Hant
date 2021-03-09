@@ -1,34 +1,34 @@
 ---
-keywords: Experience Platform；預覽模式資料；Data Science Workspace；熱門主題
+keywords: Experience Platform；預覽模式資料；資料科學工作區；熱門主題
 solution: Experience Platform
 title: 預覽零售銷售結構和資料集
-topic: tutorial
-type: Tutorial
-description: 以下檔案概述在Adobe Experience Platform上預覽架構和資料集。
+topic: 教學課程
+type: 教學課程
+description: 以下文檔概述了在Adobe Experience Platform上預覽模式和資料集。
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 5129a75071af680bc54a7f60bb89ce32d3216d09
 workflow-type: tm+mt
-source-wordcount: '243'
-ht-degree: 0%
+source-wordcount: '238'
+ht-degree: 1%
 
 ---
 
 
 # 預覽零售銷售模式和資料集
 
-成功完成[建立零售銷售模式和dataset](./create-retails-sales-dataset.md)教學課程的引導指令碼後。 可在[!DNL Experience Platform]上查看輸出方案和資料集。 要查看方案和資料集，請執行以下步驟：
+成功完成[零售銷售模式和dataset](./create-retails-sales-dataset.md)教程中的引導指令碼後。 可在[!DNL Experience Platform]上查看輸出方案和資料集。 要查看方案和資料集，請執行以下步驟：
 
-1. 按一下左側導航列中的&#x200B;**[!UICONTROL 方案]**&#x200B;連結，並查找由引導指令碼建立的輸入方案。 架構的名稱將與上一步驟中在`config.yaml`中定義的名稱相對應。 按一下查看架構詳細資訊及其組成。
+選擇位於左側導航中的&#x200B;**[!UICONTROL 方案]**&#x200B;頁籤，並查找由引導指令碼建立的輸入方案。 架構的名稱將與上一步驟中在`config.yaml`中定義的名稱相對應。 按一下查看架構詳細資訊及其組成。
 
-   ![](../images/models-recipes/access-data/schema_overview.png)
+![](../images/models-recipes/access-data/schema.PNG)
 
-2. 按一下左側導覽欄中的&#x200B;**[!UICONTROL Dataces]**&#x200B;連結，並開啟透過按一下清單名稱所建立的輸入資料集。 資料集的名稱會與前一步驟中在`config.yaml`中定義的名稱相對應。
+選擇位於左側導覽中的&#x200B;**[!UICONTROL Datasets]**&#x200B;標籤，並開啟透過選取資料集名稱所建立的輸入資料集。 資料集的名稱與前一步驟中在`config.yaml`中定義的名稱相對應。
 
-   ![](../images/models-recipes/access-data/dataset_overview.png)
+![](../images/models-recipes/access-data/dataset.PNG)
 
-3. 按一下位於右上方的「預覽資料集」，預覽資料集的子集。****
+選擇位於右上角的&#x200B;**[!UICONTROL 預覽資料集]**&#x200B;以預覽資料集的子集。
 
-   ![](../images/models-recipes/access-data/preview_dataset.png)
+![](../images/models-recipes/access-data/preview.PNG)
 
 ## 後續步驟
 
