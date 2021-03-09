@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform；首頁；熱門主題
 solution: Experience Platform
-title: 連線至電子郵件行銷目標，並使用API呼叫啟用資料
+title: 使用Flow Service API連線至電子郵件行銷目的地並啟用資料
 description: 本檔案涵蓋使用Adobe Experience PlatformAPI建立電子郵件行銷目的地
 topic: 教學課程
 type: 教學課程
 translation-type: tm+mt
-source-git-commit: 789534c02746ed24dfa01c7b471cdf3be407711e
+source-git-commit: 32cb198bcf2c142b50c4b7a60282f0c923be06b1
 workflow-type: tm+mt
-source-wordcount: '1701'
+source-wordcount: '1707'
 ht-degree: 1%
 
 ---
 
 
-# 連線至電子郵件行銷目標，並使用API呼叫啟用資料
+# 使用Flow Service API連線至電子郵件行銷目的地並啟用資料
 
 本教學課程示範如何使用API呼叫來連線至您的Adobe Experience Platform資料、建立[電子郵件行銷目標](../catalog/email-marketing/overview.md)、建立資料流至您新建立的目標，以及啟用資料至您新建立的目標。
 
@@ -67,7 +67,7 @@ ht-degree: 1%
 
 ### Swagger檔案
 
-您可在Swagger的本教學課程中，找到所有API呼叫的隨附參考檔案。 請參閱Adobe.io](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml)上的[Flow Service API文檔。 建議您同時使用本教學課程和Swagger檔案頁面。
+您可在Swagger的本教學課程中，找到所有API呼叫的隨附參考檔案。 請參閱Adobe I/O](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml)上的[Flow Service API文檔。 建議您同時使用本教學課程和Swagger檔案頁面。
 
 ## 獲取可用目的地清單{#get-the-list-of-available-destinations}
 
