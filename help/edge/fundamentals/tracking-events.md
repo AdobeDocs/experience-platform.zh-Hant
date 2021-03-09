@@ -1,11 +1,11 @@
 ---
-title: 使用Adobe Experience Platform Web SDK追蹤事件
-seo-description: 瞭解如何追蹤Adobe Experience Platform Web SDK活動。
+title: 使用Adobe Experience Platform網頁SDK追蹤事件
+description: 瞭解如何追蹤Adobe Experience Platform網頁SDK活動。
 keywords: sendEvent;xdm;eventType;datasetId;sendBeacon;send Beacon;documentUnloading;document Unloading;onBeforeEventSend;
 translation-type: tm+mt
-source-git-commit: 0b9a92f006d1ec151a0bb11c10c607ea9362f729
+source-git-commit: 25cf425df92528cec88ea027f3890abfa9cd9b41
 workflow-type: tm+mt
-source-wordcount: '1340'
+source-wordcount: '1397'
 ht-degree: 0%
 
 ---
@@ -13,16 +13,16 @@ ht-degree: 0%
 
 # 追蹤事件
 
-若要傳送事件資料至Adobe Experience Cloud，請使用`sendEvent`命令。 `sendEvent`命令是將資料傳送至[!DNL Experience Cloud]，並擷取個人化內容、身分和觀眾目的地的主要方式。
+要向Adobe Experience Cloud發送事件資料，請使用`sendEvent`命令。 `sendEvent`命令是將資料傳送至[!DNL Experience Cloud]，並擷取個人化內容、身分和觀眾目的地的主要方式。
 
-傳送至Adobe Experience Cloud的資料分為兩類：
+傳送到Adobe Experience Cloud的資料可分為兩類：
 
 * XDM資料
 * 非XDM資料（目前不支援）
 
 ## 傳送XDM資料
 
-XDM資料是一個物件，其內容和結構符合您在Adobe Experience Platform中建立的架構。 [進一步瞭解如何建立架構。](../../xdm/tutorials/create-schema-ui.md)
+XDM資料是一個對象，其內容和結構與您在Adobe Experience Platform內建立的模式匹配。 [進一步瞭解如何建立架構。](../../xdm/tutorials/create-schema-ui.md)
 
 您想要成為分析、個人化、對象或目的地一部分的任何XDM資料都應使用`xdm`選項來傳送。
 
@@ -69,7 +69,7 @@ alloy("sendEvent", {
 dataLayer.commerce = null;
 ```
 
-在此範例中，資料層會先序列化至JSON，然後反序列化以將其複製。 接著，將克隆的結果傳遞到`sendEvent`命令。 這樣可確保`sendEvent`命令在執行`sendEvent`命令時具有資料層的快照，以便以後對原始資料層對象的修改不會反映在發送到伺服器的資料中。 如果您使用事件導向的資料層，複製資料的作業可能已自動處理。 例如，如果您使用[Adobe用戶端資料層](https://github.com/adobe/adobe-client-data-layer/wiki),`getState()`方法會提供所有先前變更的計算、複製快照。 如果您使用Adobe Experience Platform Launch中的Adobe Experience Platform Web SDK擴充功能，也會自動為您處理。
+在此範例中，資料層會先序列化至JSON，然後反序列化以將其複製。 接著，將克隆的結果傳遞到`sendEvent`命令。 這樣可確保`sendEvent`命令在執行`sendEvent`命令時具有資料層的快照，以便以後對原始資料層對象的修改不會反映在發送到伺服器的資料中。 如果您使用事件導向的資料層，複製資料的作業可能已自動處理。 例如，如果您使用[Adobe客戶端資料層](https://github.com/adobe/adobe-client-data-layer/wiki), `getState()`方法將提供所有先前更改的計算克隆快照。 如果您使用Adobe Experience Platform Launch的Adobe Experience Platform網頁SDK擴充功能，也會自動為您處理。
 
 >[!NOTE]
 >
@@ -79,7 +79,7 @@ dataLayer.commerce = null;
 
 目前，不支援傳送不符合XDM架構的資料。 預計未來將提供支援。
 
-### 設定 `eventType`
+### 設定 `eventType` {#event-types}
 
 在XDM體驗事件中，有一個可選的`eventType`欄位。 這保存記錄的主要事件類型。 設定事件類型可協助您區分要傳入的不同事件。 XDM提供幾種預先定義的事件類型，您可以使用這些類型，或隨時為您的使用案例建立您自己的自訂事件類型。 以下是XDM提供的所有預先定義事件類型的清單。 [閱讀XDM public repo](https://github.com/adobe/xdm/blob/master/docs/reference/behaviors/time-series.schema.md#xdmeventtype-known-values)。
 
@@ -110,7 +110,7 @@ dataLayer.commerce = null;
 | delivery.feedback | 提供意見回應事件。 電子郵件傳送的範例意見回應事件 |
 
 
-如果使用Adobe Experience Platform Launch擴充功能，或者您隨時都可以在沒有Experience Platform Launch的情況下傳遞這些事件類型，這些事件類型會顯示在下拉式清單中。 它們可作為`xdm`選項的一部分傳入。
+如果使用Adobe Experience Platform Launch副檔名，這些事件類型將顯示在下拉式清單中，或者您始終可以不Experience Platform Launch地傳遞它們。 它們可作為`xdm`選項的一部分傳入。
 
 
 ```javascript
@@ -158,11 +158,11 @@ alloy("sendEvent", {
 
 ### 添加身份資訊
 
-自訂身分資訊也可以新增至事件。 請參閱[擷取Experience Cloud ID](../identity/overview.md)。
+自訂身分資訊也可以新增至事件。 請參閱[檢索Experience CloudID](../identity/overview.md)。
 
 ## 使用sendBeacon API
 
-在網頁使用者離開之前傳送事件資料可能很棘手。 如果請求過長，瀏覽器可能會取消請求。 有些瀏覽器已實作名為`sendBeacon`的Web標準API，讓資料在此期間更容易收集。 使用`sendBeacon`時，瀏覽器會在全域瀏覽內容中發出Web請求。 這表示瀏覽器會在背景提出信標請求，而不會保留頁面導覽。 若要通知Adobe Experience Platform [!DNL Web SDK]使用`sendBeacon`，請將選項`"documentUnloading": true`新增至event命令。  其範例如下：
+在網頁使用者離開之前傳送事件資料可能很棘手。 如果請求過長，瀏覽器可能會取消請求。 有些瀏覽器已實作名為`sendBeacon`的Web標準API，讓資料在此期間更容易收集。 使用`sendBeacon`時，瀏覽器會在全域瀏覽內容中發出Web請求。 這表示瀏覽器會在背景提出信標請求，而不會保留頁面導覽。 要告訴Adobe Experience Platform[!DNL Web SDK]使用`sendBeacon`，請將選項`"documentUnloading": true`添加到event命令中。  其範例如下：
 
 
 ```javascript
@@ -181,7 +181,7 @@ alloy("sendEvent", {
 });
 ```
 
-瀏覽器已對一次可隨`sendBeacon`傳送的資料量設限。 在許多瀏覽器中，限制為64K。 如果瀏覽器因負載過大而拒絕事件，Adobe Experience Platform [!DNL Web SDK]會回到使用其一般傳輸方法（例如，擷取）。
+瀏覽器已對一次可隨`sendBeacon`傳送的資料量設限。 在許多瀏覽器中，限制為64K。 如果瀏覽器因為裝載過大而拒絕事件，Adobe Experience Platform[!DNL Web SDK]會返回使用其正常傳輸方法（例如，讀取）。
 
 ## 處理事件的回應
 
@@ -211,20 +211,20 @@ alloy("sendEvent", {
 
 ## 全局修改事件{#modifying-events-globally}
 
-如果要全局添加、刪除或修改事件中的欄位，可以配置`onBeforeEventSend`回調。  每次傳送事件時都會呼叫此回呼。  此回呼會傳入具有`xdm`欄位的事件物件。  修改`event.xdm`以變更事件中傳送的資料。
+如果要全局添加、刪除或修改事件中的欄位，可以配置`onBeforeEventSend`回調。  每次傳送事件時都會呼叫此回呼。  此回呼會傳入具有`xdm`欄位的事件物件。  修改`content.xdm`以變更隨事件傳送的資料。
 
 
 ```javascript
 alloy("configure", {
   "edgeConfigId": "ebebf826-a01f-4458-8cec-ef61de241c93",
   "orgId": "ADB3LETTERSANDNUMBERS@AdobeOrg",
-  "onBeforeEventSend": function(event) {
+  "onBeforeEventSend": function(content) {
     // Change existing values
-    event.xdm.web.webPageDetails.URL = xdm.web.webPageDetails.URL.toLowerCase();
+    content.xdm.web.webPageDetails.URL = xdm.web.webPageDetails.URL.toLowerCase();
     // Remove existing values
-    delete event.xdm.web.webReferrer.URL;
+    delete content.xdm.web.webReferrer.URL;
     // Or add new values
-    event.xdm._adb3lettersandnumbers.mycustomkey = "value";
+    content.xdm._adb3lettersandnumbers.mycustomkey = "value";
   }
 });
 ```
@@ -235,10 +235,54 @@ alloy("configure", {
 2. 自動收集的值。  （請參閱[自動資訊](../data-collection/automatic-information.md)）。
 3. 在`onBeforeEventSend`回呼中所做的變更。
 
-如果`onBeforeEventSend`回呼引發例外，則事件仍會傳送；不過，回呼中所做的變更不會套用至最終事件。
+關於`onBeforeEventSend`回呼的幾個附註：
+
+* 事件XDM可在回呼期間進行修改。 回呼傳回後，任何已修改的欄位和值
+content.xdm和content.data物件會隨事件一起傳送。
+
+   ```javascript
+   onBeforeEventSend: function(content){
+     //sets a query parameter in XDM
+     const queryString = window.location.search;
+     const urlParams = new URLSearchParams(queryString);
+     content.xdm.marketing.trackingCode = urlParams.get('cid')
+   }
+   ```
+
+* 如果回呼引發例外，則事件的處理中斷，且事件不會傳送。
+* 如果回呼傳回`false`的布林值，事件處理會中斷，
+而不會傳送事件。 此機制可讓某些事件輕鬆被
+檢查事件資料，並傳回`false`（如果事件不應傳送）。
+
+   >[!NOTE]
+   >請務必小心，以免在頁面上的第一個事件上傳回false。 在第一個事件上傳回false可能會對個人化造成負面影響。
+
+```javascript
+   onBeforeEventSend: function(content) {
+     // ignores events from bots
+     if (MyBotDetector.isABot()) {
+       return false;
+     }
+   }
+```
+
+除布林值`false`以外的任何傳回值都允許事件在回呼後處理和傳送。
+
+* 可通過檢查事件類型來篩選事件（請參閱[事件類型](#event-types)）:
+
+```javascript
+    onBeforeEventSend: function(content) {  
+      // augments XDM if link click event is to a partner website
+      if (
+        content.xdm.eventType === "web.webinteraction.linkClicks" &&
+        content.xdm.web.webInteraction.URL ===
+          "http://example.com/partner-page.html"
+      ) {
+        content.xdm.partnerWebsiteClick = true;
+      }
+   }
+```
 
 ## 可能的可操作錯誤
 
 傳送事件時，如果傳送的資料太大，可能會擲回錯誤（完整請求的資料超過32KB）。 在這種情況下，您需要減少所傳送的資料量。
-
-啟用除錯時，伺服器會同步驗證針對已設定的XDM架構所傳送的事件資料。 如果資料不符合架構，則會從伺服器傳回與不符的詳細資料，並擲回錯誤。 在這種情況下，請修改資料以匹配模式。 未啟用除錯時，伺服器會以非同步方式驗證資料，因此不會擲回任何對應的錯誤。
