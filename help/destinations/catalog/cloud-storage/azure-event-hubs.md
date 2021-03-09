@@ -1,9 +1,9 @@
 ---
 keywords: Azure事件中樞目標；azure事件中樞；azure事件中樞
 title: （測試版）Azure事件集線器連接
-description: 建立Azure事件中樞儲存空間的即時出站連線，以從Experience Platform串流資料。
+description: 建立Azure事件集線器儲存空間的即時出站連線，以串流來自Experience Platform的資料。
 translation-type: tm+mt
-source-git-commit: 6e7ecfdc0b2cbf6f07e6b2220ec163289511375e
+source-git-commit: 32cb198bcf2c142b50c4b7a60282f0c923be06b1
 workflow-type: tm+mt
 source-wordcount: '546'
 ht-degree: 2%
@@ -19,13 +19,13 @@ ht-degree: 2%
 
 [!DNL Azure Event Hubs] 是大型資料串流平台和事件擷取服務。它每秒可接收和處理數百萬個事件。 可使用任何即時分析提供者或批次處理／儲存適配器來轉換和儲存傳送至事件中樞的資料。
 
-您可以建立與[!DNL Azure Event Hubs]儲存空間的即時對外連線，以串流Adobe Experience Platform的資料。
+您可以建立與[!DNL Azure Event Hubs]儲存空間的即時出站連線，以串流來自Adobe Experience Platform的資料。
 
 * 有關[!DNL Azure Event Hubs]的詳細資訊，請參閱[Microsoft文檔](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-about)。
-* 若要使用API呼叫連線至[!DNL Azure Event Hubs]，請參閱[串流目標API教學課程](../../api/streaming-destinations.md)。
+* 若要以程式設計方式連線至[!DNL Azure Event Hubs]，請參閱[串流目標API教學課程](../../api/streaming-destinations.md)。
 * 要使用平台用戶介面連接到[!DNL Azure Event Hubs]，請參見以下各節。
 
-![UI中的AWS Kinesis](../../assets/catalog/cloud-storage/event-hubs/catalog.png)
+![AWS UI中的Kinesis](../../assets/catalog/cloud-storage/event-hubs/catalog.png)
 
 ## 使用案例 {#use-cases}
 
@@ -55,7 +55,7 @@ ht-degree: 2%
 * **[!UICONTROL 名稱]**:填寫連接的名稱 [!DNL Azure Event Hubs]。
 * **[!UICONTROL 說明]**:提供連接的說明。範例：「Premium tier customers」、「Males intered to kitesurfing」。
 * **[!UICONTROL eventHubName]**:提供串流至您目的地的名 [!DNL Azure Event Hubs] 稱。
-* **[!UICONTROL 行銷動作]**:行銷動作會指出將資料匯出至目的地的方式。您可以從Adobe定義的行銷動作中選擇，也可以建立自己的行銷動作。 如需行銷動作的詳細資訊，請參閱Adobe Experience Platform中的[資料治理](../../../data-governance/policies/overview.md)頁面。 如需個別Adobe定義之行銷動作的詳細資訊，請參閱[資料使用政策概觀](../../../data-governance/policies/overview.md)。
+* **[!UICONTROL 行銷動作]**:行銷動作會指出將資料匯出至目的地的方式。您可以從Adobe定義的行銷動作中選擇，也可以建立自己的行銷動作。 如需行銷動作的詳細資訊，請參閱「Adobe Experience Platform的資料治理」頁面。 [](../../../data-governance/policies/overview.md)如需個別Adobe定義之行銷動作的詳細資訊，請參閱[資料使用政策概述](../../../data-governance/policies/overview.md)。
 
 ![設定步驟中所需的資料](../../assets/catalog/cloud-storage/event-hubs/setup.png)
 
@@ -108,6 +108,6 @@ ht-degree: 2%
 
 >[!MORELIKETHIS]
 >
->* [連線至Azure事件中樞，並使用API呼叫啟用資料](../../api/streaming-destinations.md)
->* [AWS Kinesis目標](./amazon-kinesis.md)
+>* [連線至Azure事件中樞，並使用Flow Service API啟用資料](../../api/streaming-destinations.md)
+>* [AWSKinesis目標](./amazon-kinesis.md)
 >* [目標類型和類別](../../destination-types.md)
