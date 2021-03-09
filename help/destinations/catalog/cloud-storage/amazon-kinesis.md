@@ -1,9 +1,9 @@
 ---
-keywords: Amazon Kinesis;kinesis目標；kinesis
-title: Amazon Kinesis連接
-description: 建立到Amazon Kinesis儲存的即時出站連接，以便從Adobe Experience Platform流資料。
+keywords: AmazonKinesis；移動目標；
+title: AmazonKinesis連接
+description: 建立與AmazonKinesis儲存區的即時出站連線，以串流Adobe Experience Platform的資料。
 translation-type: tm+mt
-source-git-commit: 6e7ecfdc0b2cbf6f07e6b2220ec163289511375e
+source-git-commit: 32cb198bcf2c142b50c4b7a60282f0c923be06b1
 workflow-type: tm+mt
 source-wordcount: '510'
 ht-degree: 2%
@@ -19,13 +19,13 @@ ht-degree: 2%
 
 [!DNL Kinesis Data Streams]服務由[!DNL Amazon Web Services]提供，可讓您即時收集和處理大量資料記錄。
 
-您可以建立與[!DNL Amazon Kinesis]儲存空間的即時對外連線，以串流Adobe Experience Platform的資料。
+您可以建立與[!DNL Amazon Kinesis]儲存空間的即時出站連線，以串流來自Adobe Experience Platform的資料。
 
-* 如需[!DNL Amazon Kinesis]的詳細資訊，請參閱[Amazon檔案](https://docs.aws.amazon.com/streams/latest/dev/introduction.html)。
-* 若要使用API呼叫連線至[!DNL Amazon Kinesis]，請參閱[串流目標API教學課程](../../api/streaming-destinations.md)。
+* 有關[!DNL Amazon Kinesis]的更多資訊，請參見[Amazon文檔](https://docs.aws.amazon.com/streams/latest/dev/introduction.html)。
+* 若要以程式設計方式連線至[!DNL Amazon Kinesis]，請參閱[串流目標API教學課程](../../api/streaming-destinations.md)。
 * 要使用平台用戶介面連接到[!DNL Amazon Kinesis]，請參見以下各節。
 
-![UI中的Amazon Kinesis](../../assets/catalog/cloud-storage/amazon-kinesis/catalog.png)
+![Amazon·Kinesis在UI中](../../assets/catalog/cloud-storage/amazon-kinesis/catalog.png)
 
 ## 使用案例 {#use-cases}
 
@@ -45,7 +45,7 @@ ht-degree: 2%
 
 ### 在驗證步驟{#authentication-step}中
 
-* **[!DNL Amazon Web Services]訪問密鑰和密鑰**:在中 [!DNL Amazon Web Services]，產生一 `access key - secret access key` 對以授與您帳戶的平台存 [!DNL Amazon Kinesis] 取權。請參閱[Amazon Web Services文檔](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html)瞭解更多資訊。
+* **[!DNL Amazon Web Services]訪問密鑰和密鑰**:在中 [!DNL Amazon Web Services]，產生一 `access key - secret access key` 對以授與您帳戶的平台存 [!DNL Amazon Kinesis] 取權。請參閱[Amazon網站服務檔案](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html)瞭解更多資訊。
 * **地區**:指出要 [!DNL Amazon Web Services] 將資料串流至的區域。
 
 ![帳戶步驟中的輸入欄位](../../assets/catalog/cloud-storage/amazon-kinesis/account.png)
@@ -55,7 +55,7 @@ ht-degree: 2%
 * **名稱**:提供您與  [!DNL Amazon Kinesis]
 * **說明**:提供您與的連線說明 [!DNL Amazon Kinesis]。
 * **stream**:提供帳戶中現有資料流的名 [!DNL Amazon Kinesis] 稱。平台會將資料匯出至此串流。
-* **[!UICONTROL 行銷動作]**:行銷動作會指出將資料匯出至目的地的方式。您可以從Adobe定義的行銷動作中選擇，也可以建立自己的行銷動作。 如需行銷動作的詳細資訊，請參閱Adobe Experience Platform中的[資料治理](../../../data-governance/policies/overview.md)頁面。 如需個別Adobe定義之行銷動作的詳細資訊，請參閱[資料使用政策概觀](../../../data-governance/policies/overview.md)。
+* **[!UICONTROL 行銷動作]**:行銷動作會指出將資料匯出至目的地的方式。您可以從Adobe定義的行銷動作中選擇，也可以建立自己的行銷動作。 如需行銷動作的詳細資訊，請參閱「Adobe Experience Platform的資料治理」頁面。 [](../../../data-governance/policies/overview.md)如需個別Adobe定義之行銷動作的詳細資訊，請參閱[資料使用政策概述](../../../data-governance/policies/overview.md)。
 
 ![驗證步驟中的輸入欄位](../../assets/catalog/cloud-storage/amazon-kinesis/setup.png)
 
@@ -117,7 +117,7 @@ ht-degree: 2%
 
 >[!MORELIKETHIS]
 >
->* [連接到Amazon Kinesis並使用API調用激活資料](../../api/streaming-destinations.md)
+>* [連線至AmazonKinesis，並使用Flow Service API啟動資料](../../api/streaming-destinations.md)
 >* [Azure事件集線器目標](./azure-event-hubs.md)
 >* [目標類型和類別](../../destination-types.md)
 
