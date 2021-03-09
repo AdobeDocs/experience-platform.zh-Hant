@@ -2,10 +2,10 @@
 title: Adobe Experience Platform網頁SDK擴充功能中的動作類型
 description: 瞭解Adobe Experience Platform LaunchAdobe Experience Platform網頁SDK擴充功能提供的不同動作類型。
 translation-type: tm+mt
-source-git-commit: 2a0ae9541a8bb2bb985d43a402d0842e73b23c81
+source-git-commit: ff261c507d310b8132912680b6ddd1e7d5675d08
 workflow-type: tm+mt
-source-wordcount: '354'
-ht-degree: 18%
+source-wordcount: '341'
+ht-degree: 6%
 
 ---
 
@@ -24,9 +24,9 @@ ht-degree: 18%
 
 ## 設定同意
 
-在您收到使用者的同意後，必須使用「設定同意」動作類型將此同意傳達至Adobe Experience Platform網頁SDK。 目前支援「Adobe」和「IAB TCF」等兩種標準。如果使用 Adobe 標準，目前您可將同意宣告設為「加入」或「退出」，或者也可使用資料元素來提供。如果使用 IAB TCF 標準，請提供要使用的版本和值，以及其他 GDPR 相關資訊。
+在您收到使用者的同意後，必須使用「設定同意」動作類型將此同意傳達至Adobe Experience Platform網頁SDK。 目前支援「Adobe」和「IAB TCF」等兩種標準。請參閱[支援客戶同意首選項](../consent/supporting-consent.md)。 使用Adobe2.0版時，僅支援資料元素值。 您將需要建立可解析至同意物件的資料元素。
 
-在此動作中，您也會收到選填欄位，以包含身分圖，以便在收到同意後同步身分。 同步在同意設定為「擱置中」時很有用，因為同意呼叫很可能是第一個要觸發的呼叫。
+在此動作中，您也會收到選填欄位，以包含身分圖，以便在收到同意後同步身分。 同步在同意設定為「擱置中」或「退出」時很有用，因為同意呼叫可能是第一個要觸發的呼叫。
 
 ## 重設事件合併 ID
 
