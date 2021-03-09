@@ -1,19 +1,32 @@
 ---
-title: Adobe Experience Platform Web SDK Extension發行說明
+title: Adobe Experience Platform網頁SDK擴充功能發行說明
 description: Adobe Experience Platform Launch 中的 Adobe Experience Platform Web SDK 擴充功能
 seo-description: Adobe Experience Platform Launch 中的 Adobe Experience Platform Web SDK 擴充功能
 translation-type: tm+mt
-source-git-commit: 0b9a92f006d1ec151a0bb11c10c607ea9362f729
+source-git-commit: 14cf62084c88956906cd9454176619ed08081a0e
 workflow-type: tm+mt
-source-wordcount: '990'
-ht-degree: 89%
+source-wordcount: '1134'
+ht-degree: 79%
 
 ---
 
 
-# Adobe Experience Platform Web SDK擴充版本注意事項
+# Adobe Experience Platform網頁SDK擴充功能發行說明
 
-本檔案涵蓋Adobe Experience Platform Web SDK Launch的Adobe Experience Platform Web SDK擴充功能發行說明。 如需SDK本身的最新發行說明，請參閱[平台網頁SDK發行說明](https://docs.adobe.com/content/help/zh-Hant/experience-platform/edge/release-notes.html)。
+本檔案涵蓋適用於Adobe Experience Platform Launch的Adobe Experience Platform網頁SDK擴充功能的發行說明。 如需SDK本身的最新發行說明，請參閱[平台網頁SDK發行說明](https://docs.adobe.com/content/help/zh-Hant/experience-platform/edge/release-notes.html)。
+
+## 2020 年 3 月 9 日
+
+### Adobe Experience Platform Web SDK 2.4.0
+
+包含 2.4.0 版的 Adobe Experience Platform Web SDK 程式庫。
+
+* 已新增[「檔案卸載」](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/tracking-events.html?lang=en#using-the-sendbeacon-api)核取方塊至「傳送事件動作UI」。
+* 新增在[設定預設同意](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html#default-consent)時支援`out`選項，此預設同意會丟棄所有事件直到收到同意（現有的`pending`選項會佇列事件，並在收到同意後傳送這些事件）。
+* 新增工具提示至預設的同意欄位。
+* 新增[Adobe同意2.0標準](https://experienceleague.adobe.com/docs/experience-platform/edge/consent/supporting-consent.html?communicating-consent-preferences-via-the-adobe-standard)的支援。
+* 如果使用者的存取Token無效或未正確布建，XDM物件資料元素UI現在會顯示更好的錯誤。
+* 修正檢視XDM物件資料元素時，瀏覽器開發人員主控台上顯示的跨原始碼錯誤（不影響擴充功能的運作）。
 
 ## 2020 年 11 月 4 日
 
@@ -91,7 +104,7 @@ ht-degree: 89%
 * 修正每次參考資料元素時，「事件合併 ID」都會重設的問題。
 * 將 `setCustomerIds` 動作重新命名為 `syncIdentity`。
 * 新增 `getIdentity` 命令。目前僅能透過自訂程式碼使用。
-* 使用`_satellite`啟用除錯\&#39;b5\&#39;7b在可在Adobe Experience Platform Web SDK中啟用除錯\&#39;a5\&#39;5c能。
+* 使用`_satellite`啟用除錯\&#39;b5\&#39;7b在可啟用Adobe Experience Platform網頁SDK中的除錯\&#39;a5\&#39;5c能。
 * 新增在 XDM 物件中輸入值的相關支援：布林值、數字和小數。
 
 ## 2020 年 3 月 16 日
