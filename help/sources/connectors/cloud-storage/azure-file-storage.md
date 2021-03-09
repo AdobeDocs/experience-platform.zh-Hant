@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform; home；熱門主題；Azure檔案儲存；azure檔案儲存
+keywords: Experience Platform；首頁；熱門主題；Azure檔案儲存；azure檔案儲存
 solution: Experience Platform
 title: Azure檔案儲存來源連接器概觀
-topic: overview
+topic: 概述
 description: 瞭解如何使用API或使用者介面將Azure檔案儲存空間連接至Adobe Experience Platform。
 translation-type: tm+mt
-source-git-commit: a489ab248793a063295578943ad600d8eacab6a2
+source-git-commit: 0fb97fcf5d3f8230ff86906aeef245e4a7f44f30
 workflow-type: tm+mt
-source-wordcount: '419'
+source-wordcount: '470'
 ht-degree: 0%
 
 ---
@@ -17,15 +17,19 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Azure檔案儲存連接器正在測試中。 有關使用beta標籤連接器的詳細資訊，請參閱[來源概觀](../../home.md#terms-and-conditions)。
+>Azure檔案儲存連接器正在測試中。 有關使用beta標籤連接器的詳細資訊，請參閱[ Sources綜覽](../../home.md#terms-and-conditions)。
 
-Adobe Experience Platform為AWS、[!DNL Google Cloud Platform]和[!DNL Azure]等雲端提供者提供原生連接，讓您能夠從這些系統中取用資料。
+Adobe Experience Platform為AWS、[!DNL Google Cloud Platform]和[!DNL Azure]等雲提供商提供了本機連接，使您能夠從這些系統中獲取資料。
 
 雲端儲存來源可將您自己的資料匯入[!DNL Platform]，而不需下載、格式化或上傳。 收錄的資料可格式化為XDM JSON、XDM Parce或分隔。 此程式的每個步驟都會整合至Sources工作流程中。 [!DNL Platform] 允許您從批中導入 [!DNL Azure File Storage] 資料。
 
 ## IP位址允許清單
 
 在使用來源連接器之前，必須將IP位址清單新增至允許清單。 若未將您地區專屬的IP位址新增至您的允許清單，在使用來源時可能會導致錯誤或效能不佳。 如需詳細資訊，請參閱[IP位址允許清單](../../ip-address-allow-list.md)頁面。
+
+>[!IMPORTANT]
+>
+>[!DNL Azure File Storage]源連接器當前不支援與平台的相同區域連接。 這表示如果您的Azure例項使用與平台相同的網路區域，則無法建立與平台來源的連線。 目前僅支援跨地區連線。 如需詳細資訊，請洽詢您的Adobe客戶經理。
 
 ## 檔案和目錄的命名限制
 
