@@ -2,14 +2,14 @@
 keywords: Experience Platform;home；熱門主題；SFTP;sftp；安全檔案傳輸協定；安全檔案傳輸協定
 solution: Experience Platform
 title: 使用流程服務API建立SFTP來源連線
-topic: overview
-type: Tutorial
-description: 瞭解如何使用流程服務API將Adobe Experience Platform連接至SFTP（安全檔案傳輸通訊協定）伺服器。
+topic: 概述
+type: 教學課程
+description: 瞭解如何使用Flow Service API將Adobe Experience Platform連接至SFTP（安全檔案傳輸通訊協定）伺服器。
 translation-type: tm+mt
-source-git-commit: a489ab248793a063295578943ad600d8eacab6a2
+source-git-commit: b39426d768a0c6fdfa742ec74e4e0bed9c432269
 workflow-type: tm+mt
-source-wordcount: '823'
-ht-degree: 1%
+source-wordcount: '877'
+ht-degree: 2%
 
 ---
 
@@ -18,16 +18,16 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->SFTP連接器為測試版。 功能和檔案可能會有所變更。 有關使用beta標籤連接器的詳細資訊，請參閱[來源概觀](../../../../home.md#terms-and-conditions)。
+>SFTP連接器為測試版。 功能和檔案可能會有所變更。 有關使用beta標籤連接器的詳細資訊，請參閱[ Sources綜覽](../../../../home.md#terms-and-conditions)。
 
-本教學課程使用[!DNL Flow Service] API來引導您完成將Experience Platform連接至SFTP（安全檔案傳輸通訊協定）伺服器的步驟。
+本教學課程使用[!DNL Flow Service] API來引導您完成將Experience Platform連接至SFTP（安全檔案傳輸協定）伺服器的步驟。
 
 ## 快速入門
 
-本指南需要有效瞭解Adobe Experience Platform的下列元件：
+本指南需要對Adobe Experience Platform的下列組成部分有切實的瞭解：
 
-* [來源](../../../../home.md):Experience Platform可讓您從各種來源擷取資料，同時讓您能夠使用平台服務來建構、標示和增強傳入資料。
-* [沙盒](../../../../../sandboxes/home.md):Experience Platform提供虛擬沙盒，可將單一Platform實例分割為不同的虛擬環境，以協助開發和發展數位體驗應用程式。
+* [來源](../../../../home.md):Experience Platform可讓您從各種來源擷取資料，同時讓您能夠使用平台服務來建構、標示並增強傳入資料。
+* [沙盒](../../../../../sandboxes/home.md):Experience Platform提供虛擬沙盒，可將單一平台實例分割為獨立的虛擬環境，以協助開發和發展數位體驗應用程式。
 
 >[!IMPORTANT]
 >
@@ -44,7 +44,7 @@ ht-degree: 1%
 | `host` | 與您的SFTP伺服器相關聯的名稱或IP位址。 |
 | `username` | 可存取您SFTP伺服器的使用者名稱。 |
 | `password` | SFTP伺服器的密碼。 |
-| `privateKeyContent` | Base64編碼的SSH私鑰內容。 SSH私鑰OpenSSH(RSA/DSA)格式。 |
+| `privateKeyContent` | Base64編碼的SSH私鑰內容。 OpenSSH密鑰的類型必須分類為RSA或DSA。 |
 | `passPhrase` | 如果密鑰檔案或密鑰內容受密碼片語保護，則解密密鑰的密碼或密碼。 如果PrivateKeyContent受到密碼保護，則此參數必須與PrivateKeyContent的密碼短語一起使用，作為值。 |
 
 ### 讀取範例API呼叫
@@ -53,7 +53,7 @@ ht-degree: 1%
 
 ### 收集必要標題的值
 
-若要呼叫平台API，您必須先完成[驗證教學課程](https://www.adobe.com/go/platform-api-authentication-en)。 完成驗證教學課程後，所有Experience Platform API呼叫中每個必要標題的值都會顯示在下方：
+若要呼叫平台API，您必須先完成[驗證教學課程](https://www.adobe.com/go/platform-api-authentication-en)。 完成驗證教學課程後，將提供所有Experience PlatformAPI呼叫中每個必要標題的值，如下所示：
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
@@ -63,7 +63,7 @@ ht-degree: 1%
 
 * `x-sandbox-name: {SANDBOX_NAME}`
 
-所有包含裝載(POST、PUT、PATCH)的請求都需要額外的媒體類型標題：
+所有包含裝載(POST、PUT、PATCH)的請求都需要附加的媒體類型標題：
 
 * `Content-Type: application/json`
 
@@ -73,7 +73,7 @@ ht-degree: 1%
 
 ### 使用基本驗證建立SFTP連線
 
-若要使用基本驗證建立SFTP連線，請在提供連線`host`、`userName`和`password`的值時，向[!DNL Flow Service] API提出POST要求。
+若要使用基本驗證建立SFTP連線，請向[!DNL Flow Service] API提出POST要求，同時提供連線的`host`、`userName`和`password`值。
 
 **API格式**
 
@@ -131,7 +131,11 @@ curl -X POST \
 
 ### 使用SSH公鑰驗證建立SFTP連接
 
-要使用SSH公鑰身份驗證建立SFTP連接，請向[!DNL Flow Service] API發出POST請求，同時提供連接的`host`、`userName`、`privateKeyContent`和`passPhrase`值。
+要使用SSH公鑰驗證建立SFTP連接，請向[!DNL Flow Service] API發出POST請求，同時為連接的`host`、`userName`、`privateKeyContent`和`passPhrase`提供值。
+
+>[!IMPORTANT]
+>
+>SFTP連接器支援RSA或DSA類型的OpenSSH金鑰。 請確定您的關鍵檔案內容以`"-----BEGIN [RSA/DSA] PRIVATE KEY-----"`開頭，以`"-----END [RSA/DSA] PRIVATE KEY-----"`結尾。 如果私密金鑰檔案是PPK格式檔案，請使用PuTTY工具從PPK轉換為OpenSSH格式。
 
 **API格式**
 
@@ -172,7 +176,7 @@ curl -X POST \
 | -------- | ----------- |
 | `auth.params.host` | SFTP伺服器的主機名稱。 |
 | `auth.params.username` | 與您的SFTP伺服器相關聯的使用者名稱。 |
-| `auth.params.privateKeyContent` | base64編碼的SSH私鑰內容。 SSH私鑰OpenSSH(RSA/DSA)格式。 |
+| `auth.params.privateKeyContent` | Base64編碼的SSH私鑰內容。 OpenSSH密鑰的類型必須分類為RSA或DSA。 |
 | `auth.params.passPhrase` | 如果密鑰檔案或密鑰內容受密碼片語保護，則解密密鑰的密碼或密碼。 如果PrivateKeyContent受到密碼保護，則此參數必須與PrivateKeyContent的密碼短語一起使用，作為值。 |
 | `connectionSpec.id` | SFTP伺服器連接規範ID:`b7bf2577-4520-42c9-bae9-cad01560f7bc` |
 
