@@ -2,26 +2,26 @@
 keywords: Experience Platform;JupyterLab；筆記型電腦；資料科學工作區；熱門主題；jupyterlab
 solution: Experience Platform
 title: JupyterLab UI概觀
-topic: Overview
-description: JupyterLab是Project Jupyter的網路使用者介面，並與Adobe Experience Platform緊密整合。 它為資料科學家提供互動式開發環境，以便與Jupyter Notebooks、程式碼和資料搭配使用。 本文檔概述了JupyterLab及其功能，以及執行常見操作的說明。
+topic: 概述
+description: JupyterLab是Project Jupyter的基於Web的用戶介面，與Adobe Experience Platform緊密整合。 它為資料科學家提供互動式開發環境，以便與Jupyter Notebooks、程式碼和資料搭配使用。 本文檔概述了JupyterLab及其功能，以及執行常見操作的說明。
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 23128fb481452b558c52f962f78ae638fc1f0418
 workflow-type: tm+mt
-source-wordcount: '1950'
-ht-degree: 9%
+source-wordcount: '1816'
+ht-degree: 3%
 
 ---
 
 
 # [!DNL JupyterLab] UI概觀
 
-[!DNL JupyterLab] 是Project  [Jupyter的網路使用者介](https://jupyter.org/) 面，並與Adobe Experience Platform緊密整合。它為資料科學家提供互動式開發環境，以便與Jupyter Notebooks、程式碼和資料搭配使用。
+[!DNL JupyterLab] 是Project  [Jupyter的Web使用者介面，並](https://jupyter.org/) 與Adobe Experience Platform緊密整合。它為資料科學家提供互動式開發環境，以便與Jupyter Notebooks、程式碼和資料搭配使用。
 
 本檔案概述[!DNL JupyterLab]及其功能，以及執行常見動作的指示。
 
 ## [!DNL JupyterLab] on  [!DNL Experience Platform]
 
-Experience Platform的JupyterLab整合隨附架構變更、設計考量、自訂的筆記型電腦擴充功能、預先安裝的程式庫和Adobe主題介面。
+Experience Platform公司的JupyterLab整合附帶了體系結構更改、設計考慮、定製的筆記本擴展、預安裝的庫和Adobe主題介面。
 
 下列清單概述JupyterLab在Platform上獨有的一些功能：
 
@@ -30,9 +30,9 @@ Experience Platform的JupyterLab整合隨附架構變更、設計考量、自訂
 | **內核** | 內核提供筆記型電腦和其他[!DNL JupyterLab]前端，以不同的寫程式語言執行和查看代碼。 [!DNL Experience Platform] 提供額外的內核，以支 [!DNL Python]援R、PySpark和的開發 [!DNL Spark]。有關詳細資訊，請參閱[kernels](#kernels)部分。 |
 | **資料存取** | 直接從[!DNL JupyterLab]中訪問現有資料集，並完全支援讀寫功能。 |
 | **[!DNL Platform]服務整合** | 內建整合可讓您直接從[!DNL JupyterLab]內運用其他[!DNL Platform]服務。 [與其他平台服務](#service-integration)整合一節提供支援整合的完整清單。 |
-| **驗證** | 除了<a href="https://jupyter-notebook.readthedocs.io/en/latest/security.html" target="_blank">JupyterLab的內建安全性模型</a>外，您的應用程式與Experience Platform（包括平台服務對服務通訊）之間的每次互動都會透過<a href="https://www.adobe.io/authentication/auth-methods.html" target="_blank">[!DNL Adobe Identity Management System](IMS)</a>進行加密和驗證。 |
+| **驗證** | 除了<a href="https://jupyter-notebook.readthedocs.io/en/latest/security.html" target="_blank">JupyterLab的內建安全模型</a>外，您的應用程式與Experience Platform之間的每次互動，包括平台服務對服務通訊，都會透過<a href="https://www.adobe.io/authentication/auth-methods.html" target="_blank">[!DNL Adobe Identity Management System](IMS)</a>進行加密和驗證。 |
 | **開發程式庫** | 在[!DNL Experience Platform]中，[!DNL JupyterLab]提供了[!DNL Python]、R和PySpark的預安裝庫。 有關支援庫的完整清單，請參見[附錄](#supported-libraries)。 |
-| **程式庫控制器** | 當預先安裝的程式庫不符合您的需求時，可為Python和R安裝其他程式庫，並暫時儲存在隔離的容器中，以維持[!DNL Platform]的完整性並確保資料安全。 有關詳細資訊，請參閱[kernels](#kernels)部分。 |
+| **程式庫控制器** | 當預先安裝的程式庫不符合您的需求時，可為Python和R安裝其他程式庫，並暫時儲存在隔離的容器中，以維持[!DNL Platform]的完整性並保有資料的安全。 有關詳細資訊，請參閱[kernels](#kernels)部分。 |
 
 >[!NOTE]
 >
@@ -45,7 +45,7 @@ Experience Platform的JupyterLab整合隨附架構變更、設計考量、自訂
 * **[!DNL Catalog Service]：訪** 問和探索具有讀寫功能的資料集。
 * **[!DNL Query Service]：使** 用SQL訪問和瀏覽資料集，在處理大量資料時提供較低的資料存取開銷。
 * **[!DNL Sensei ML Framework]：可** 以訓練和分數資料的模型開發，以及只需按一下即可建立方式。
-* **[!DNL Experience Data Model (XDM)]：標** 準化和互操作性是Adobe Experience Platform的主要概念。[Adobe推動的Experience Data Model(XDM)](https://www.adobe.com/go/xdm-home-en)，旨在標準化客戶體驗資料並定義客戶體驗管理的架構。
+* **[!DNL Experience Data Model (XDM)]：標** 準化和互操作性是Adobe Experience Platform背後的關鍵概念。[Experience Data Model(XDM)](https://www.adobe.com/go/xdm-home-en)，由Adobe驅動，旨在標準化客戶體驗資料並定義客戶體驗管理的架構。
 
 >[!NOTE]
 >
@@ -64,7 +64,7 @@ Experience Platform的JupyterLab整合隨附架構變更、設計考量、自訂
 
 ### 存取 [!DNL JupyterLab] {#access-jupyterlab}
 
-在[Adobe Experience Platform](https://platform.adobe.com)中，從左側導覽欄選取&#x200B;**Notebooks**。 請讓[!DNL JupyterLab]稍候完全初始化。
+在[Adobe Experience Platform](https://platform.adobe.com)中，從左側導航列中選擇&#x200B;**[!UICONTROL Notebooks]**。 請讓[!DNL JupyterLab]稍候完全初始化。
 
 ![](../images/jupyterlab/user-guide/access_jupyterlab.png)
 
@@ -96,7 +96,7 @@ Experience Platform的JupyterLab整合隨附架構變更、設計考量、自訂
 * **儲存格檢視** 器：儲存格編輯器，可存取工具和中繼資料，以用於設定筆記型電腦以進行簡報
 * **頁籤：** 開啟的頁籤清單
 
-按一下標籤以顯示其功能，或按一下展開的標籤以收合左側邊欄，如下所示：
+選取要公開其功能的標籤，或在展開的標籤上選取以收合左側邊欄，如下所示：
 
 ![](../images/jupyterlab/user-guide/left_sidebar_collapse.gif)
 
@@ -105,6 +105,24 @@ Experience Platform的JupyterLab整合隨附架構變更、設計考量、自訂
 [!DNL JupyterLab]中的主要工作區域可讓您將檔案和其他活動排列成標籤面板，這些標籤可以調整大小或細分。 將標籤拖曳至標籤面板的中央，以移轉標籤。 將標籤拖曳至面板的左、右、上或下方，以劃分面板：
 
 ![](../images/jupyterlab/user-guide/main_work_area.gif)
+
+### [!DNL Python]/R中的GPU和記憶體伺服器配置
+
+在[!DNL JupyterLab]中，選擇右上角的齒輪表徵圖以開啟&#x200B;*筆記本伺服器配置*。 您可以使用滑桿來切換GPU並分配所需的記憶體量。 可分配的記憶體量取決於您的組織已布建的記憶體量。 選擇&#x200B;**[!UICONTROL 更新配置]**&#x200B;以保存。
+
+>[!NOTE]
+>
+>每個組織只為筆記型電腦配置一個GPU。 如果GPU正在使用中，您需要等待目前已保留GPU的使用者釋放它。 若要這麼做，請登出或讓GPU處於閒置狀態達4小時以上。
+
+![](../images/jupyterlab/user-guide/notebook-gpu-config.png)
+
+### 終止並重新啟動[!DNL JupyterLab]
+
+在[!DNL JupyterLab]中，您可以終止會話，以防止使用其他資源。 從選擇&#x200B;**電源表徵圖**&#x200B;開始，然後從顯示為終止會話的快顯窗口中選擇&#x200B;**[!UICONTROL 關閉]**。 筆記型電腦會話在12小時無活動後自動終止。
+
+要重新啟動[!DNL JupyterLab]，請選擇位於電源表徵圖左側的&#x200B;**重新啟動表徵圖**，然後從顯示的快顯窗口中選擇&#x200B;**[!UICONTROL 重新啟動]**。
+
+![終止jupterlab](../images/jupyterlab/user-guide/shutdown-jupyterlab.gif)
 
 ### 代碼單元格{#code-cells}
 
@@ -231,141 +249,12 @@ Experience Platform的JupyterLab整合隨附架構變更、設計考量、自訂
 
 ![](../images/jupyterlab/user-guide/new_launcher.gif)
 
-### [!DNL Python]/R中的GPU和記憶體伺服器配置
-
-在[!DNL JupyterLab]中，選擇右上角的齒輪表徵圖以開啟&#x200B;*筆記本伺服器配置*。 您可以使用滑桿來切換GPU並分配所需的記憶體量。 可分配的記憶體量取決於您的組織已布建的記憶體量。 選擇&#x200B;**[!UICONTROL 更新配置]**&#x200B;以保存。
-
->[!NOTE]
->
->每個組織只為筆記型電腦配置一個GPU。 如果GPU正在使用中，您需要等待目前已保留GPU的使用者釋放它。 若要這麼做，請登出或讓GPU處於閒置狀態達4小時以上。
-
-![](../images/jupyterlab/user-guide/notebook-gpu-config.png)
-
 ## 後續步驟
 
 若要進一步瞭解每個受支援的筆記型電腦以及如何使用它們，請造訪[Jupyterlab筆記型電腦資料存取](./access-notebook-data.md)開發人員指南。 本指南著重說明如何使用JupyterLab筆記型電腦存取您的資料，包括讀取、寫入和查詢資料。 資料存取指南還包含每個支援的筆記型電腦可以讀取的最大資料量的資訊。
 
 ## 支援的程式庫{#supported-libraries}
 
-### [!DNL Python] / R
+如需Python、R和PySpark中支援的套件清單，請複製並貼入新儲存格中的`!pip list --format=columns`，然後執行儲存格。 支援的包清單按字母順序填充。
 
-| 資料庫 | 版本 |
-| :------ | :------ |
-| 筆記本 | 6.0.0 |
-| 請求 | 2.22.0 |
-| 隱晦 | 4.0.0 |
-| 青葉 | 0.10.0 |
-| ipywidget | 7.5.1 |
-| bokeh | 1.3.1 |
-| gensim | 3.7.3 |
-| ipyparallel | 0.5.2 |
-| jq | 1.6 |
-| keras | 2.2.4 |
-| nltk | 3.2.5 |
-| 熊貓 | 0.22.0 |
-| 潘達斯 | 0.7.3 |
-| 枕 | 6.0.0 |
-| scikit-image | 0.15.0 |
-| scikit-learn | 0.21.3 |
-| 接骨 | 1.3.0 |
-| 發癢 | 1.3.0 |
-| 西伯恩 | 0.9.0 |
-| statmodels | 0.10.1 |
-| 彈性 | 5.1.0.17 |
-| gplot | 0.11.5 |
-| py-xgboost | 0.90 |
-| opencv | 3.4.1 |
-| 皮什帕克 | 2.4.3 |
-| 火炬 | 1.0.1 |
-| wxpython | 4.0.6 |
-| colorlover | 0.3.0 |
-| geopandas | 0.5.1 |
-| 地源 | 2.1.0 |
-| 風格 | 1.6.4 |
-| rpy2 | 2.9.4 |
-| r-essentials | 3.6 |
-| r-arules | 1.6_3 |
-| r-fpc | 2.2_3 |
-| r-e1071 | 1.7_2 |
-| r-gam | 1.16.1 |
-| r-gbm | 2.1.5 |
-| r-ggthemes | 4.2.0 |
-| r-ggvis | 0.4.4 |
-| r-igraph | 1.2.4.1 |
-| r-lapes | 3.0 |
-| r-操縱 | 1.0.1 |
-| r-rocr | 1.0_7 |
-| r-rmysql | 0.10.17 |
-| r-rodbc | 1.3_15 |
-| r-rsqlite | 2.1.2 |
-| r-rstan | 2.19.2 |
-| r-sqldf | 0.4_11 |
-| r-存活 | 2.44_1.1 |
-| r-zoo | 1.8_6 |
-| r弦長 | 0.9.5.2 |
-| r-quadprog | 1.5_7 |
-| r-rjson | 0.2.20 |
-| r-forecast | 8.7 |
-| r-rsolnp | 一點一六 |
-| r-網狀 | 一點一二 |
-| r-mlr | 2.14.0 |
-| r-viridis | 0.5.1 |
-| r-corplot | 0.84 |
-| r-fnn | 1.1.3 |
-| r-lubridate | 1.7.4 |
-| r-隨機森林 | 4.6_14 |
-| 逆向 | 1.2.1 |
-| r樹 | 1.0_39 |
-| 皮蒙戈 | 3.8.0 |
-| pyarrow | 0.14.1 |
-| boto3 | 1.9.199 |
-| ipyvolume | 0.5.2 |
-| fast鑲木地板 | 0.3.2 |
-| python-snappy | 0.5.4 |
-| ipywebrtc | 0.5.0 |
-| jupyter_client | 5.3.1 |
-| wordcloud | 1.5.0 |
-| graphviz | 2.40.1 |
-| python-graphviz | 0.11.1 |
-| azure儲存 | 0.36.0 |
-| [!DNL jupyterlab] | 1.0.4 |
-| 熊貓-ml | 0.6.1 |
-| tensorflow-gpu | 1.14.0 |
-| nodejs | 12.3.0 |
-| 模擬 | 3.0.5 |
-| ipympl | 0.3.3 |
-| fonts-anacond | 1.0 |
-| psycopg | 2.8.3 |
-| 鼻子 | 1.3.7 |
-| autovizwidget | 0.12.9 |
-| 阿爾塔 | 3.1.0 |
-| vega_datasets | 0.7.0 |
-| 平磨機 | 1.0.1 |
-| sql_magic | 0.0.4 |
-| iso3166 | 1.0 |
-| nbimporter | 0.3.1 |
-
-### PySpark
-
-| 資料庫 | 版本 |
-| :------ | :------ |
-| 請求 | 2.18.4 |
-| gensim | 2.3.0 |
-| keras | 2.0.6 |
-| nltk | 3.2.4 |
-| 熊貓 | 0.20.1 |
-| 潘達斯 | 0.7.3 |
-| 枕 | 5.3.0 |
-| scikit-image | 0.13.0 |
-| scikit-learn | 0.19.0 |
-| 接骨 | 0.19.1 |
-| 發癢 | 1.3.3 |
-| statmodels | 0.8.0 |
-| 彈性 | 4.0.30.44 |
-| py-xgboost | 0.60 |
-| opencv | 3.1.0 |
-| pyarrow | 0.8.0 |
-| boto3 | 1.5.18 |
-| azure-storage-blob | 1.4.0 |
-| [!DNL python] | 3.6.7 |
-| mkl-rt | 11.1 |
+![示例](../images/jupyterlab/user-guide/libraries.PNG)
