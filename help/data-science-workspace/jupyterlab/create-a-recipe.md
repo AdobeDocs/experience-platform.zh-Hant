@@ -2,13 +2,13 @@
 keywords: Experience Platform;JupyterLab;recipe;notebooks;Data Science Workspace；熱門主題；建立配方
 solution: Experience Platform
 title: 使用Jupyter Notebooks建立配方
-topic: tutorial
-type: Tutorial
+topic: 教學課程
+type: 教學課程
 description: 本教學課程將涵蓋兩個主要部分。 首先，您將使用JupyterLab Notebook中的範本建立機器學習模型。 接下來，您將在JupyterLab中練習筆記本至配方工作流程，以便在Data Science Workspace中建立配方。
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 9d84fc1eb898020ed4b154c091fcc9fc4933c7de
 workflow-type: tm+mt
-source-wordcount: '2362'
+source-wordcount: '2366'
 ht-degree: 0%
 
 ---
@@ -20,14 +20,14 @@ ht-degree: 0%
 
 ## 引入的概念：
 
-- **配方：** 配方是Adobe的模型規格術語，是代表特定機器學習、AI演算法或整合演算法、處理邏輯和設定的頂層容器，以建立並執行已訓練的模型，進而協助解決特定商業問題。
+- **配方：** 配方是模型規格的Adobe術語，是代表特定機器學習、AI演算法或整合演算法、處理邏輯和設定的頂層容器，用來建立並執行已訓練的模型，進而協助解決特定的商業問題。
 - **模型：** 模型是機器學習方式的例項，使用歷史資料和組態進行訓練，以解決商業使用案例。
 - **訓練：** 訓練是學習模式和從標籤資料獲得見解的過程。
 - **計分：** 計分是使用訓練好的模型從資料產生見解的程式。
 
 ## 開始使用[!DNL JupyterLab]筆記本環境
 
-您可在[!DNL Data Science Workspace]中從頭建立配方。 若要開始，請導覽至[Adobe Experience Platform](https://platform.adobe.com)，然後按一下左側的&#x200B;**[!UICONTROL Notebooks]**&#x200B;標籤。 從[!DNL JupyterLab Launcher]中選擇「方式產生器」範本，以建立新筆記型電腦。
+您可在[!DNL Data Science Workspace]中從頭建立配方。 要開始，請導航至[Adobe Experience Platform](https://platform.adobe.com) ，然後按一下左側的&#x200B;**[!UICONTROL 筆記本]**&#x200B;頁籤。 從[!DNL JupyterLab Launcher]中選擇「方式產生器」範本，以建立新筆記型電腦。
 
 [!UICONTROL Recipe Builder]筆記型電腦可讓您在筆記型電腦中執行訓練和計分。 這可讓您在訓練和計分資料上執行實驗之間，靈活地變更其`train()`和`score()`方法。 一旦您對培訓和計分的輸出感到滿意，您就可以使用筆記型電腦建立用於[!DNL Data Science Workspace]的配方，以便將配方功能內建在Recipe Builder筆記型電腦上。
 
@@ -92,11 +92,11 @@ data_access_sdk_python
 - `ACP_DSW_SCORING_RESULTS_XDM_SCHEMA`
 - `scoringResultsDataSetId`
 
-若要尋找資料集和結構ID，請前往左側導覽列（資料夾圖示下）筆記型電腦中的資料標籤。
+要查找資料集和方案ID，請轉到左側導航欄（資料夾表徵圖下）筆記本內的資料頁籤![資料頁籤](../images/jupyterlab/create-recipe/dataset-tab.png)。
 
-![](../images/jupyterlab/create-recipe/datasets.png)
+![](../images/jupyterlab/create-recipe/dataset_tab.png)
 
-在[Adobe Experience Platform](https://platform.adobe.com/)的&#x200B;**[Schema](https://platform.adobe.com/schema)**&#x200B;和&#x200B;**[Datasets](https://platform.adobe.com/dataset/overview)**&#x200B;標籤下可找到相同的資訊。
+在&#x200B;**[Schema](https://platform.adobe.com/schema)**&#x200B;和&#x200B;**[Datasets](https://platform.adobe.com/dataset/overview)**&#x200B;標籤下的[Adobe Experience Platform](https://platform.adobe.com/)上可以找到相同的資訊。
 
 預設情況下，在訪問資料時會為您設定以下配置參數：
 
@@ -173,7 +173,7 @@ def load(config_properties):
 
 >[!NOTE]
 >
->如[設定檔區段](#configuration-files)中所述，當您使用`client_context`存取Experience Platform的資料時，會為您設定下列設定參數：
+>如[配置檔案部分](#configuration-files)中所述，當您使用`client_context`從Experience Platform訪問資料時，將為您設定以下配置參數：
 > - `ML_FRAMEWORK_IMS_USER_CLIENT_ID`
 > - `ML_FRAMEWORK_IMS_TOKEN`
 > - `ML_FRAMEWORK_IMS_ML_TOKEN`
@@ -474,7 +474,7 @@ def save(configProperties, prediction):
 
 ![](../images/jupyterlab/create-recipe/enter_recipe_name.png)
 
-按&#x200B;**[!UICONTROL Ok]**&#x200B;後，您就可以導覽至[Adobe Experience Platform](https://platform.adobe.com/)上的新配方。 您可以按一下「檢視配方&#x200B;**[!UICONTROL 」按鈕，將您帶至「ML模型]**」下的「配方&#x200B;**[!UICONTROL Recipes]**」標籤&#x200B;]****[!UICONTROL 
+按&#x200B;**[!UICONTROL Ok]**&#x200B;後，您就可以瀏覽至[Adobe Experience Platform](https://platform.adobe.com/)上的新配方。 您可以按一下「檢視配方&#x200B;**[!UICONTROL 」按鈕，將您帶至「ML模型]**」下的「配方&#x200B;**[!UICONTROL Recipes]**」標籤&#x200B;]****[!UICONTROL 
 
 ![](../images/jupyterlab/create-recipe/recipe_creation_started.png)
 
