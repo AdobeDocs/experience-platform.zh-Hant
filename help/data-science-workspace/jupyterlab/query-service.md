@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform;JupyterLab；筆記型電腦；Data Science Workspace；熱門主題；查詢服務
+keywords: Experience Platform;JupyterLab；筆記型電腦；資料科學工作區；熱門主題；查詢服務
 solution: Experience Platform
 title: Jupyter筆記本中的查詢服務
-topic: tutorial
-type: Tutorial
-description: Adobe Experience Platform可讓您將查詢服務整合到JupyterLab中，做為標準功能，在資料科學工作區中使用結構化查詢語言(SQL)。 本教學課程示範常見使用案例的SQL查詢範例，以探索、轉換和分析Adobe Analytics資料。
+topic: 教學課程
+type: 教學課程
+description: Adobe Experience Platform允許您將查詢服務整合到JupyterLab中作為標準功能，在資料科學工作區中使用結構化查詢語言(SQL)。 本教程示範SQL查詢範例，以瞭解、轉換和分析Adobe Analytics資料的常見使用案例。
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 9d84fc1eb898020ed4b154c091fcc9fc4933c7de
 workflow-type: tm+mt
-source-wordcount: '818'
+source-wordcount: '824'
 ht-degree: 1%
 
 ---
@@ -42,7 +42,7 @@ ht-degree: 1%
 
    >[!NOTE]
    >
-   >如果未自動顯示新的「啟動器」頁籤，請按一下&#x200B;**[!UICONTROL 檔案]** ，然後選擇&#x200B;**[!UICONTROL 新建啟動器]** ，開啟新的「啟動器」頁籤。
+   >如果未自動顯示新的「啟動器」頁籤，請按一下&#x200B;**[!UICONTROL 檔案]** ，然後選擇&#x200B;**[!UICONTROL 新的啟動器]** ，開啟新的「啟動器」頁籤。
 
 2. 在「啟動器」頁籤中，按一下Python 3環境中的&#x200B;**[!UICONTROL Blank]**&#x200B;表徵圖以開啟空的筆記本。
 
@@ -98,13 +98,11 @@ ht-degree: 1%
 
 ## 查詢您的資料{#query-your-data}
 
-在單個筆記本單元格中輸入以下SQL查詢。 通過按一下查詢的單元格，然後按一下&#x200B;**[!UICONTROL play]**&#x200B;按鈕來執行查詢。 成功的查詢結果或錯誤日誌顯示在已執行的單元格下面。
+在單個筆記本單元格中輸入以下SQL查詢。 在查詢的單元格上選擇，然後選擇&#x200B;**[!UICONTROL play]**&#x200B;按鈕，以執行查詢。 成功的查詢結果或錯誤日誌顯示在已執行的單元格下面。
 
-當筆記本長時間處於非活動狀態時，筆記本和[!DNL Query Service]之間的連接可能中斷。 在這種情況下，按一下右上角的&#x200B;**[!UICONTROL 電源]**&#x200B;按鈕，重新啟動[!DNL JupyterLab]。
+當筆記本長時間處於非活動狀態時，筆記本和[!DNL Query Service]之間的連接可能中斷。 在這種情況下，通過選擇位於電源按鈕旁右上角的&#x200B;**重新啟動**&#x200B;按鈕![重新啟動按鈕](../images/jupyterlab/user-guide/restart_button.png)來重新啟動[!DNL JupyterLab]。
 
-![](../images/jupyterlab/query/restart_button.png)
-
-筆記本內核將重置，但單元格將保留，重新運行&#x200B;**all**&#x200B;單元格以繼續您離開的位置。
+筆記本內核會重設，但儲存格會保留，重新執行所有儲存格，以繼續您離開的位置。
 
 ### 每小時訪客計數{#hourly-visitor-count}
 
