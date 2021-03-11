@@ -6,9 +6,9 @@ seo-title: 將描述檔和區段啟用至目標
 description: 將區段對應至目的地，以啟用您在Adobe Experience Platform的資料。 若要完成此作業，請遵循下列步驟。
 seo-description: 將區段對應至目的地，以啟用您在Adobe Experience Platform的資料。 若要完成此作業，請遵循下列步驟。
 translation-type: tm+mt
-source-git-commit: 6c8bf05285dcfc3e631ae5a41dcf40f90217320a
+source-git-commit: 95ff15b212e0d6f454f0319ac1ec5bbee9c07dac
 workflow-type: tm+mt
-source-wordcount: '2184'
+source-wordcount: '2151'
 ht-degree: 0%
 
 ---
@@ -30,19 +30,11 @@ ht-degree: 0%
 
 適用於：所有目標
 
-在Adobe Experience Platform用戶介面中，導覽至&#x200B;**[!UICONTROL 目標]** > **[!UICONTROL 瀏覽]**，並選取您要啟動區段的目標。
+在Adobe Experience Platform用戶介面中，導覽至&#x200B;**[!UICONTROL 目標]** > **[!UICONTROL 瀏覽]**，然後按與您要啟用區段的目的地對應的&#x200B;**[!UICONTROL 啟動]**&#x200B;按鈕，如下圖所示。
 
-![瀏覽到目的地](../assets/ui/activate-destinations/connect.png)
+![啟動至目的地](../assets/ui/activate-destinations/browse-tab-activate.png)
 
-選擇要導覽至啟動工作流程的目標名稱。
-
-![activate-flow](../assets/ui/activate-destinations/activate-flow.png)
-
->[!NOTE]
->
->如果目的地的啟動工作流程已存在，您可以看到目前正在啟動至目的地的區段。 選擇右側導軌中的&#x200B;**[!UICONTROL 編輯激活]** ，然後按照以下步驟修改激活詳細資訊。
-
-選擇目標後，選擇&#x200B;**[!UICONTROL 激活]**。
+請依照下一節的步驟，選取您要啟動的區段。
 
 ### [!UICONTROL 選取] 區段步驟  {#select-segments}
 
