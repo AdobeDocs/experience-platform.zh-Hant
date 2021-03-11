@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform;home；熱門主題；dataflow;Dataflow
+keywords: Experience Platform；首頁；熱門主題；資料流；資料流
 solution: Experience Platform
 title: 在UI中為雲儲存批處理連接器配置資料流
-topic: overview
-type: Tutorial
+topic: 概述
+type: 教學課程
 description: 資料流是從源中檢索資料並將資料帶入平台資料集的計畫任務。 本教學課程提供使用雲端儲存帳戶設定新資料流的步驟。
 translation-type: tm+mt
-source-git-commit: 62266187ed1f3ce2f0acca3f50487fb70cfa7307
+source-git-commit: 115442a90ab56a93748bf161aa2e7ed680980f6e
 workflow-type: tm+mt
-source-wordcount: '1898'
+source-wordcount: '1874'
 ht-degree: 0%
 
 ---
@@ -20,7 +20,7 @@ ht-degree: 0%
 
 ## 快速入門
 
-本教學課程需要對Adobe Experience Platform的下列元件有正確的認識：
+本教學課程需要對Adobe Experience Platform的下列部分有正確的理解：
 
 * [[!DNL Experience Data Model (XDM)] 系統](../../../../../xdm/home.md):組織客戶體驗資 [!DNL Experience Platform] 料的標準化架構。
    * [架構構成基礎](../../../../../xdm/schema/composition.md):瞭解XDM架構的基本建置區塊，包括架構組合的主要原則和最佳實務。
@@ -33,7 +33,7 @@ ht-degree: 0%
 
 [!DNL Experience Platform] 支援從外部儲存中提取的以下檔案格式：
 
-* 分隔字元分隔值(DSV):目前，對DSV格式化資料檔案的支援僅限於逗號分隔值。 DSV格式檔案中欄位標題的值只能由字母數字字元和下划線組成。 將來將提供對一般DSV檔案的支援。
+* 分隔字元分隔值(DSV):任何單字元值都可用作DSV格式資料檔案的分隔符。
 * [!DNL JavaScript Object Notation] (JSON):JSON格式的資料檔案必須符合XDM規範。
 * [!DNL Apache Parquet]:拼花格式的資料檔案必須與XDM相容。
 
@@ -104,7 +104,7 @@ ht-degree: 0%
 
 ![](../../../../images/tutorials/dataflow/cloud-storage/batch/select-schema.png)
 
-根據您的需求，您可以選擇直接映射欄位，或使用映射器函式轉換來源資料以衍生計算或計算值。 有關資料映射和映射器功能的詳細資訊，請參閱有關將CSV資料映射到XDM模式欄位](../../../../../ingestion/tutorials/map-a-csv-file.md)的教程。[
+您可以根據需要選擇直接映射欄位，或使用映射器函式轉換源資料以導出計算值或計算值。 有關資料映射和映射器功能的詳細資訊，請參閱有關將CSV資料映射到XDM模式欄位](../../../../../ingestion/tutorials/map-a-csv-file.md)的教程。[
 
 ![](../../../../images/tutorials/dataflow/cloud-storage/batch/mapping.png)
 
