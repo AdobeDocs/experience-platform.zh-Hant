@@ -4,7 +4,7 @@ title: 目標工作區概觀
 description: 「目標」工作區包含4個部分：目錄、瀏覽、帳戶和系統視圖，這些部分在以下各節中介紹。
 seo-description: 在Adobe Experience Platform，從左側導覽列選擇「目標」以存取目標工作區。
 translation-type: tm+mt
-source-git-commit: 95ff15b212e0d6f454f0319ac1ec5bbee9c07dac
+source-git-commit: 37b0ec0e04c45cb065eca9d262249016e80655ef
 workflow-type: tm+mt
 source-wordcount: '1017'
 ht-degree: 2%
@@ -117,6 +117,6 @@ ht-degree: 2%
 
 ![資料流1](../assets/ui/workspace/data-flows1.png)
 
-選擇頁面上顯示的任何目標，然後按&#x200B;**[!UICONTROL 查看流]**&#x200B;以查看您為每個目標設定的所有連接的資訊。
+選擇頁面上顯示的任何目標，然後按一下&#x200B;**[!UICONTROL 查看流]**&#x200B;以查看您為每個目標設定的所有連接的資訊。
 
 ![資料流2](../assets/ui/workspace/data-flows2.png)
