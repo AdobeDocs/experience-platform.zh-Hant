@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform;JupyterLab；筆記型電腦；資料科學工作區；熱門主題；分析資料筆記本
+keywords: Experience Platform;JupyterLab；筆記型電腦；資料科學工作區；熱門主題；分析資料筆記型電腦
 solution: Experience Platform
 title: 使用筆記型電腦分析資料
-topic: tutorial
-type: Tutorial
+topic: 教學課程
+type: 教學課程
 description: 本教學課程著重於如何使用Jupyter Notebooks（在Data Science Workspace中建立）來存取、探索和視覺化您的資料。
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 6908c582cb7e0d60b82112dbc0854411d76b4fd4
 workflow-type: tm+mt
-source-wordcount: '1735'
+source-wordcount: '1733'
 ht-degree: 0%
 
 ---
@@ -80,11 +80,11 @@ Data Science Workspace可讓使用者透過[!DNL JupyterLab]平台建立[!DNL Ju
 
 在本節中，我們使用零售銷售資料集，該資料集與零售銷售示例筆記本中使用的資料集相同。
 
-在Jupyter Notebook中，我們可以從左側的&#x200B;**Data**&#x200B;標籤訪問我們的資料。 按一下該頁籤後，您將能夠看到資料集清單。
+在Jupyter Notebook中，可以從左側的&#x200B;**Data**&#x200B;標籤![資料標籤](../images/jupyterlab/analyze-data/dataset-tab.png)訪問資料。 在選擇頁籤時，將提供兩個資料夾。 選擇&#x200B;**[!UICONTROL Datasets]**&#x200B;資料夾。
 
 ![](../images/jupyterlab/analyze-data/dataset_tab.png)
 
-現在，在Datasets目錄中，我們將能夠看到所有收錄的資料集。 請注意，如果目錄中填入了大量資料集，則可能需要一分鐘來載入所有條目。
+現在，在Datasets目錄中，您可以看到所有收錄的資料集。 請注意，如果目錄中填入了大量資料集，則可能需要一分鐘來載入所有條目。
 
 由於資料集相同，因此我們想要取代使用外部資料的上一區段的載入資料。 在&#x200B;**Load Data**&#x200B;下選擇代碼塊，然後在鍵盤上按兩次&#x200B;**&#39;d&#39;**&#x200B;鍵。 請確定焦點在區塊上，而非在文字中。 您可以按兩下&#x200B;**&#39;esc&#39;**&#x200B;以逸出文字焦點，然後再按兩下&#x200B;**&#39;d&#39;**。
 
@@ -177,7 +177,7 @@ df.describe()
 
 單變數圖是個別變數的圖形。 常用的單變數圖形是方框和須條圖，用來視覺化您的資料。
 
-使用我們過去的零售資料集，我們可以為45家商店及其每週銷售量產生包裝盒和須條圖。 該出圖使用`seaborn.boxplot`函式生成。
+使用我們過去的零售資料集，我們可以為45家商店及其每週銷售量產生包裝盒和須條圖。 該出圖是使用`seaborn.boxplot`函式生成的。
 
 ![](../images/jupyterlab/analyze-data/box_whisker.png)
 
