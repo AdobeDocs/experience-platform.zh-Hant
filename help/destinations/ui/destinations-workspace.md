@@ -4,9 +4,9 @@ title: 目標工作區概觀
 description: 「目標」工作區包含4個部分：目錄、瀏覽、帳戶和系統視圖，這些部分在以下各節中介紹。
 seo-description: 在Adobe Experience Platform，從左側導覽列選擇「目標」以存取目標工作區。
 translation-type: tm+mt
-source-git-commit: 9305936ca1e73821b2fe948ff1a17a7168840cba
+source-git-commit: 95ff15b212e0d6f454f0319ac1ec5bbee9c07dac
 workflow-type: tm+mt
-source-wordcount: '939'
+source-wordcount: '1017'
 ht-degree: 2%
 
 ---
@@ -87,15 +87,19 @@ ht-degree: 2%
 
 >[!TIP]
 >
->使用&#x200B;**[!UICONTROL Name]**&#x200B;欄中的![新增資料按鈕](../assets/ui/workspace/add-data-symbol.png)按鈕，將其他區段啟用至該目標。
+> * 使用&#x200B;**[!UICONTROL Name]**&#x200B;欄中的![新增區段按鈕](../assets/ui/workspace/add-data-symbol.png)按鈕，將其他區段啟用至該目標。
+> * 使用&#x200B;**[!UICONTROL Name]**&#x200B;欄中的![刪除目標按鈕](../assets/ui/workspace/delete-destination-symbol.png)按鈕刪除目標的現有連接。
+
 
 ![瀏覽標籤](../assets/ui/workspace/browse-tab.png)
 
 | 元素 | 說明 |
 ---------|----------
-| 名稱 | 您為啟動流程提供的名稱，會前往此目的地。 |
+| 名稱 | 您為啟動流程提供的名稱，會前往此目的地。 同一欄包含兩個控制項：[!UICONTROL 啟動]和[!UICONTROL 刪除目標]。 |
+| 上次流運行狀態 | 上次資料流運行的狀態。 有關資料流運行的詳細資訊，請參見[查看目標詳細資訊](destination-details-page.md)。 |
+| 上次流程運行日期 | 上次資料流運行發生的時間和日期。 有關資料流運行的詳細資訊，請參見[查看目標詳細資訊](destination-details-page.md)。 |
 | [!UICONTROL 目標] | 您為啟動流程選擇的目標平台。 |
-| [!UICONTROL 連線類型] | 表示與儲存桶或目標的連接類型。 <ul><li>對於電子郵件行銷目標：可以是S3或FTP。</li><li>針對即時廣告目的地：伺服器對伺服器</li></ul> |
+| [!UICONTROL 連線類型] | 表示與儲存桶或目標的連接類型。 <ul><li>對於電子郵件行銷目標：可以是S3、FTP或[!DNL Azure Blob]。</li><li>針對即時廣告目的地：伺服器對伺服器。</li><li>對於串流目的地：可以是[!DNL Azure Event Hubs]或[!DNL Amazon Kinesis]。</li></ul> |
 | [!UICONTROL 使用者名稱] | 您為目標流選擇的帳戶憑據。 |
 | [!UICONTROL 啟動資料] | 指出要啟動至此目標的區段數。 選取此控制項，以進一步瞭解已啟動的區段。 如需已啟動區段的詳細資訊，請參閱目標詳細資訊頁面中的[啟動資料](/help/destinations/ui/destination-details-page.md#activation-data)。 |
 | [!UICONTROL 已建立] | 建立啟動流程至目的地的日期和UTC時間。 |
