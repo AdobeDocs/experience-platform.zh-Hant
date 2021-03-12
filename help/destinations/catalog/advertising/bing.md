@@ -3,9 +3,9 @@ keywords: '廣告；bing; '
 title: Microsoft Bing連線
 description: 有了Microsoft Bing連線目標，您就可以跨Microsoft Display Advertising執行重新定位和受眾鎖定的數位宣傳。
 translation-type: tm+mt
-source-git-commit: 6e7ecfdc0b2cbf6f07e6b2220ec163289511375e
+source-git-commit: 0ef107963f7da377070eb845fd7c24218a99464b
 workflow-type: tm+mt
-source-wordcount: '454'
+source-wordcount: '527'
 ht-degree: 0%
 
 ---
@@ -23,6 +23,10 @@ ht-degree: 0%
 
 * 您可以將下列[identitys](../../../identity-service/namespaces.md)傳送至[!DNL Microsoft Bing]目標：[!DNL Microsoft ID]。
 
+>[!IMPORTANT]
+>
+>如果您想要使用[!DNL Microsoft Bing]建立您的第一個目標，而過去(使用Adobe Audience Manager或其他應用程式)未啟用Experience CloudID服務中的[ID同步功能](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html)，請聯絡Adobe諮詢或客戶服務以啟用ID同步。 如果您先前已在Audience Manager中設定[!DNL Microsoft Bing]整合，您設定的ID同步化會延續至平台。
+
 ## 使用案例 {#use-cases}
 
 身為行銷人員，我想要能夠使用以[!DNL Microsoft Advertising IDs]為基礎的區段，透過[!DNL Microsoft Advertising]通道的展示廣告來鎖定使用者。
@@ -33,7 +37,7 @@ ht-degree: 0%
 
 ## 先決條件 {#prerequisites}
 
-設定目標時，您會要求提供下列資訊：
+配置目標時，必須提供以下資訊：
 
 * [!UICONTROL 帳戶ID]:這是整數 [!DNL Bing Ads CID]格式的您。
 
@@ -54,7 +58,7 @@ ht-degree: 0%
 * **[!UICONTROL 名稱]**:您將來識別此目的地的名稱。
 * **[!UICONTROL 說明]**:將來幫助您識別此目標的說明。
 * **[!UICONTROL 帳戶ID]**:您的 [!DNL Bing Ads CID]。
-* **[!UICONTROL 行銷動作]**:行銷動作會指出將資料匯出至目的地的方式。您可以從Adobe定義的行銷動作中選擇，也可以建立自己的行銷動作。 如需行銷動作的詳細資訊，請參閱Adobe Experience Platform中的[資料治理](../../../data-governance/policies/overview.md)頁面。 如需個別Adobe定義之行銷動作的詳細資訊，請參閱[資料使用政策概觀](../../../data-governance/policies/overview.md)。
+* **[!UICONTROL 行銷動作]**:行銷動作會指出將資料匯出至目的地的方式。您可以從Adobe定義的行銷動作中選擇，也可以建立自己的行銷動作。 如需行銷動作的詳細資訊，請參閱「Adobe Experience Platform的資料治理」頁面。 [](../../../data-governance/policies/overview.md)如需個別Adobe定義之行銷動作的詳細資訊，請參閱[資料使用政策概述](../../../data-governance/policies/overview.md)。
 
 ![Microsoft Bing目標驗證](../../assets/catalog/advertising/bing/authentication.png)
 
