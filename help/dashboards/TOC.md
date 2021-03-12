@@ -6,10 +6,10 @@ breadcrumb-title: 儀表板指南
 user-guide-description: 在可自訂儀表板上呈現視覺化的 Experience Platform 資料。
 feature: 資料管理
 translation-type: tm+mt
-source-git-commit: ac6935f09f620ea55cf8f612ff0a1fba503b5e17
+source-git-commit: 4b087685f065d05894fb45c19fce453346448614
 workflow-type: tm+mt
-source-wordcount: '36'
-ht-degree: 47%
+source-wordcount: '40'
+ht-degree: 42%
 
 ---
 
@@ -22,4 +22,6 @@ ht-degree: 47%
    * [區段](guides/segments.md)
    * [目的地](guides/destinations.md)
    * [授權使用](guides/license-usage.md)
+* [修改控制面板](modify.md)
+* [介面工具集程式庫](widget-library.md)
 * [平台版本注意事項](https://www.adobe.com/go/platform-release-notes-en)
