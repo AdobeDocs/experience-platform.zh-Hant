@@ -8,8 +8,8 @@ landing-page-description: Customer AI 可產生自訂傾向評分，例如大量
 translation-type: tm+mt
 source-git-commit: eb163949f91b0d1e9cc23180bb372b6f94fc951f
 workflow-type: tm+mt
-source-wordcount: '557'
-ht-degree: 18%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
