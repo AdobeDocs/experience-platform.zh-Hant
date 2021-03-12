@@ -3,9 +3,9 @@ keywords: 廣告；貿易部門；
 title: The Trade Desk connection
 description: '交易台是廣告購買者的自助服務平台，可跨展示廣告、視訊和行動庫存來源執行重新鎖定目標及受眾目標數位宣傳。 '
 translation-type: tm+mt
-source-git-commit: 6e7ecfdc0b2cbf6f07e6b2220ec163289511375e
+source-git-commit: 0ef107963f7da377070eb845fd7c24218a99464b
 workflow-type: tm+mt
-source-wordcount: '534'
+source-wordcount: '609'
 ht-degree: 0%
 
 ---
@@ -17,13 +17,17 @@ ht-degree: 0%
 
 [!DNL The Trade Desk] 是自助服務平台，讓廣告購買者跨展示、視訊和行動庫存來源執行重新鎖定目標及受眾鎖定的數位促銷活動。
 
-要向[!DNL The Trade Desk]發送配置檔案資料，必須首先連接到目標。
+要向[!DNL Trade Desk]發送配置檔案資料，必須首先連接到目標。
 
 ## 目標規格{#destination-specs}
 
-請注意以下特定於[!DNL The Trade Desk]目標的詳細資訊：
+請注意以下特定於[!DNL Trade Desk]目標的詳細資訊：
 
 * 您可以將下列[identitys](../../../identity-service/namespaces.md)傳送至[!DNL The Trade Desk]目標：[!DNL The Trade Desk ID]、[!DNL IDFA]、[!DNL GAID]。
+
+>[!IMPORTANT]
+>
+>如果您想要使用[!DNL The Trade Desk]建立您的第一個目標，而過去(使用Adobe Audience Manager或其他應用程式)未啟用Experience CloudID服務中的[ID同步功能](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html)，請聯絡Adobe諮詢或客戶服務以啟用ID同步。 如果您先前已在Audience Manager中設定[!DNL The Trade Desk]整合，您設定的ID同步化會延續至平台。
 
 ## 使用案例 {#use-cases}
 
@@ -50,7 +54,7 @@ ht-degree: 0%
 * **[!UICONTROL 名稱]**:您將來識別此目的地的名稱。
 * **[!UICONTROL 說明]**:將來幫助您識別此目標的說明。
 * **[!UICONTROL 帳戶ID]**:您的 [!DNL Trade Desk] [!UICONTROL 帳戶ID]。
-* **[!UICONTROL 伺服器位置]**:詢問您 [!DNL The Trade Desk] 的代表您應使用哪個地區伺服器。這些是您可從以下位置選擇的可用區域伺服器：
+* **[!UICONTROL 伺服器位置]**:詢問您 [!DNL Trade Desk] 的代表您應使用哪個地區伺服器。這些是您可從以下位置選擇的可用區域伺服器：
 
    * **[!UICONTROL 歐洲]**
    * **[!UICONTROL 新加坡]**
@@ -59,7 +63,7 @@ ht-degree: 0%
    * **[!UICONTROL 北美洲西部]**
    * **[!UICONTROL 拉丁美洲]**
 
-* **[!UICONTROL 行銷動作]**:行銷動作會指出將資料匯出至目的地的方式。您可以從Adobe定義的行銷動作中選擇，也可以建立自己的行銷動作。 如需行銷動作的詳細資訊，請參閱Adobe Experience Platform中的[資料治理](../../../data-governance/policies/overview.md)頁面。 如需個別Adobe定義之行銷動作的詳細資訊，請參閱[資料使用政策概觀](../../../data-governance/policies/overview.md)。
+* **[!UICONTROL 行銷動作]**:行銷動作會指出將資料匯出至目的地的方式。您可以從Adobe定義的行銷動作中選擇，也可以建立自己的行銷動作。 如需行銷動作的詳細資訊，請參閱「Adobe Experience Platform的資料治理」頁面。 [](../../../data-governance/policies/overview.md)如需個別Adobe定義之行銷動作的詳細資訊，請參閱[資料使用政策概述](../../../data-governance/policies/overview.md)。
 
 ![交易台驗證步驟](../../assets/catalog/advertising/tradedesk/authenticate.png)
 
@@ -79,4 +83,4 @@ ht-degree: 0%
 
 ## 導出資料{#exported-data}
 
-要驗證資料是否已成功導出到[!DNL The Trade Desk]目標，請檢查[!DNL The Trade Desk]帳戶。 如果啟動成功，您的帳戶會填入觀眾。
+要驗證資料是否已成功導出到[!DNL The Trade Desk]目標，請檢查[!DNL Trade Desk]帳戶。 如果啟動成功，您的帳戶會填入觀眾。
