@@ -8,8 +8,8 @@ landing-page-description: Attribution AI 可將點數歸因到促成轉換事件
 translation-type: tm+mt
 source-git-commit: eb163949f91b0d1e9cc23180bb372b6f94fc951f
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '501'
+ht-degree: 32%
 
 ---
 
