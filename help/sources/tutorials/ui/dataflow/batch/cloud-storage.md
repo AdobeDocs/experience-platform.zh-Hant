@@ -6,9 +6,9 @@ topic: 概述
 type: 教學課程
 description: 資料流是從源中檢索資料並將資料帶入平台資料集的計畫任務。 本教學課程提供使用雲端儲存帳戶設定新資料流的步驟。
 translation-type: tm+mt
-source-git-commit: 115442a90ab56a93748bf161aa2e7ed680980f6e
+source-git-commit: 1fb4a272a914bf4ce7653f3f4f7fff63f36f9a48
 workflow-type: tm+mt
-source-wordcount: '1874'
+source-wordcount: '1924'
 ht-degree: 0%
 
 ---
@@ -41,38 +41,52 @@ ht-degree: 0%
 
 在建立雲端儲存帳戶後，會出現「選取資料&#x200B;]**」步驟，提供介面供您探索雲端儲存檔案階層。**[!UICONTROL 
 
-* 介面的左半部分是目錄瀏覽器，顯示伺服器的檔案和目錄。
-* 介面的右半部分可讓您從相容檔案中預覽最多100列資料。
+* 介面的左側是目錄瀏覽器，顯示您的雲端儲存檔案和目錄。
+* 介面的右側部分可讓您從相容檔案中預覽最多100列資料。
 
-選擇列出的資料夾可讓您將資料夾層次結構遍歷到更深的資料夾中。 選擇相容檔案或資料夾後，將出現&#x200B;**[!UICONTROL 選擇資料格式]**&#x200B;下拉式清單，您可以在其中選擇在預覽窗口中顯示資料的格式。
+![介面](../../../../images/tutorials/dataflow/cloud-storage/batch/interface.png)
 
-![](../../../../images/tutorials/dataflow/cloud-storage/batch/select-data.png)
+選擇列出的資料夾可讓您將資料夾層次結構遍歷到更深的資料夾中。 您可以選取單一檔案夾，以遞歸方式收錄檔案夾中的所有檔案。 在收錄整個資料夾時，必須確保資料夾中的所有檔案共用同一模式。
 
-為要收錄的檔案選擇適當的資料格式，並在數秒內讓預覽視窗填入。
+選擇相容檔案或資料夾後，從[!UICONTROL 選擇資料格式]下拉菜單中選擇相應的資料格式。
 
-![](../../../../images/tutorials/dataflow/cloud-storage/batch/data-format.png)
+下表顯示了支援的檔案類型的相應資料格式：
 
-在擷取分隔字元檔案時，您可以設定自訂分隔字元。 選擇&#x200B;**[!UICONTROL 分隔字元]**&#x200B;選項，然後從下拉式選單中選取分隔字元。 功能表顯示最常用於分隔字元的選項，包括逗號(`,`)、標籤(`\t`)和垂直號(`|`)。 或者，您也可以選擇&#x200B;**[!UICONTROL Custom]**，然後在彈出式輸入列中輸入您選擇的自訂分隔字元。
+| 檔案類型 | 資料格式 |
+| --- | --- |
+| CSV | [!UICONTROL 分隔字元] |
+| JSON | [!UICONTROL JSON] |
+| 鑲木 | [!UICONTROL XDM Parce] |
+
+選擇&#x200B;**[!UICONTROL JSON]**，然後等待幾秒鐘以填入預覽介面。
+
+![select-data](../../../../images/tutorials/dataflow/cloud-storage/batch/select-data.png)
+
+>[!NOTE]
+>
+>與分隔字元和JSON檔案類型不同，Parce格式化的檔案無法預覽。
+
+預覽介面可讓您檢查檔案的內容和結構。 預設情況下，預覽介面會顯示您選取之檔案夾中的第一個檔案。
+
+若要預覽不同的檔案，請選取您要檢查之檔案名稱旁的預覽圖示。
+
+![預設預覽](../../../../images/tutorials/dataflow/cloud-storage/batch/default-preview.png)
+
+檢查資料夾中檔案的內容和結構後，選擇&#x200B;**[!UICONTROL Next]**&#x200B;以遞歸方式收錄資料夾中的所有檔案。
+
+![select-folder](../../../../images/tutorials/dataflow/cloud-storage/batch/select-folder.png)
+
+如果希望選擇特定檔案，請選擇要收錄的檔案，然後選擇&#x200B;**[!UICONTROL Next]**。
+
+![select-file](../../../../images/tutorials/dataflow/cloud-storage/batch/select-file.png)
+
+### 為分隔檔案設定自訂分隔字元
+
+在擷取分隔字元檔案時，您可以設定自訂分隔字元。 選擇&#x200B;**[!UICONTROL 分隔字元]**&#x200B;選項，然後從下拉式選單中選取分隔字元。 功能表顯示最常用於分隔字元的選項，包括逗號(`,`)、標籤(`\t`)和垂直號(`|`)。 如果您偏好使用自訂分隔字元，請選取&#x200B;**[!UICONTROL Custom]**，然後在快顯輸入列中輸入您選擇的單字元分隔字元。
 
 在選擇資料格式並設定分隔符後，選擇&#x200B;**[!UICONTROL Next]**。
 
 ![](../../../../images/tutorials/dataflow/cloud-storage/batch/delimiter.png)
-
-### 收錄Parce或JSON檔案
-
-雲端儲存空間帳戶也支援JSON和Parce檔案。 拼花檔案必須與XDM相容，而JSON檔案則不需要與XDM相容。 若要擷取JSON或Parce檔案，請從目錄瀏覽器中選取適當的檔案格式，並從正確的介面套用相容的資料格式。
-
-如果資料格式為JSON，則會顯示預覽，顯示檔案中資料的相關資訊。 在預覽畫面上，您可以使用&#x200B;**[!UICONTROL XDM相容]**&#x200B;下拉式清單來選取JSON是否符合XDM。
-
-選擇&#x200B;**[!UICONTROL Next]**&#x200B;繼續。
-
-![](../../../../images/tutorials/dataflow/cloud-storage/batch/json-preview.png)
-
->[!IMPORTANT]
->
->與分隔字元和JSON檔案類型不同，Parce格式化的檔案無法預覽。
-
-![](../../../../images/tutorials/dataflow/cloud-storage/batch/select-data-parquet.png)
 
 ## 將資料欄位對應至XDM架構
 
