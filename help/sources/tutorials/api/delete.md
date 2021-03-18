@@ -1,22 +1,22 @@
 ---
-keywords: Experience Platform;home;popular topics;flow service;delete connections;delete;api
+keywords: Experience Platform;home；熱門主題；流服務；刪除帳戶；delete;api
 solution: Experience Platform
-title: 使用流服務API刪除連接
-topic: overview
-type: Tutorial
-description: 瞭解如何使用Flow Service API刪除連線。
+title: 使用流程服務API刪除帳戶
+topic: 概述
+type: 教學課程
+description: 瞭解如何使用Flow Service API刪除帳戶。
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: 37be5f5ffa4640d7d4442a24cc257069237f15cb
 workflow-type: tm+mt
-source-wordcount: '592'
+source-wordcount: '594'
 ht-degree: 2%
 
 ---
 
 
-# 使用流服務API刪除連接
+# 使用流程服務API刪除帳戶
 
-Adobe Experience Platform可讓您從外部來源擷取資料，同時讓您能夠使用[!DNL Platform]服務來建構、標示並增強傳入資料。 您可以從多種來源（例如Adobe應用程式、雲端儲存空間、資料庫等）擷取資料。
+Adobe Experience Platform允許從外部來源接收資料，同時提供使用[!DNL Platform]服務構建、標籤和增強傳入資料的能力。 您可以從多種來源收錄資料，例如Adobe應用程式、雲端儲存空間、資料庫等。
 
 [!DNL Flow Service] 用於收集和集中Adobe Experience Platform內不同來源的客戶資料。該服務提供用戶介面和REST風格的API，所有支援的源都可從中連接。
 
@@ -26,7 +26,7 @@ Adobe Experience Platform可讓您從外部來源擷取資料，同時讓您能�
 
 本教學課程要求您必須有有效的連線ID。 如果您沒有有效的連線ID，請從[來源概觀](../../home.md)中選取您選擇的連接器，然後依照本教學課程嘗試前所述的步驟進行。
 
-本教學課程也要求您對Adobe Experience Platform的下列元件有正確的認識：
+本教學課程還要求您對Adobe Experience Platform的以下部分有切實的瞭解：
 
 * [來源](../../home.md): [!DNL Experience Platform] 允許從各種來源接收資料，同時提供使用服務構建、標籤和增強傳入資料的 [!DNL Platform] 能力。
 * [沙盒](../../../sandboxes/home.md): [!DNL Experience Platform] 提供虛擬沙盒，可將單一執行個體分 [!DNL Platform] 割為不同的虛擬環境，以協助開發和發展數位體驗應用程式。
@@ -49,7 +49,7 @@ Adobe Experience Platform可讓您從外部來源擷取資料，同時讓您能�
 
 * `x-sandbox-name: {SANDBOX_NAME}`
 
-所有包含裝載(POST、PUT、PATCH)的請求都需要額外的媒體類型標題：
+所有包含裝載(POST、PUT、PATCH)的請求都需要附加的媒體類型標題：
 
 * `Content-Type: application/json`
 
@@ -149,7 +149,7 @@ curl -X DELETE \
 
 成功的回應會傳回HTTP狀態204（無內容）和空白的內文。
 
-您可以嘗試對連線進行查閱(GET)，以確認刪除。
+您可以嘗試對連線進行查閱(GET)請求，以確認刪除。
 
 ## 後續步驟
 
