@@ -3,9 +3,9 @@ title: 使用Adobe Experience PlatformWeb SDK支援客戶同意偏好
 description: 瞭解如何使用Adobe Experience Platform網頁SDK支援同意偏好設定。
 keywords: connence;defaultConnence;default connonce;setConnence;Profile Privacy Mixin; Experience Event Privacy Mixin; Privacy Mixin;
 translation-type: tm+mt
-source-git-commit: ff261c507d310b8132912680b6ddd1e7d5675d08
+source-git-commit: dd9101079a1093c109f43b268a78c07770221156
 workflow-type: tm+mt
-source-wordcount: '964'
+source-wordcount: '977'
 ht-degree: 0%
 
 ---
@@ -66,13 +66,16 @@ alloy("setConsent", {
       value: {
         collect: {
           val: "y"
+        },
+        metadata: {
+          time: "2021-03-17T15:48:42-07:00"
         }
       }
     }]
 });
 ```
 
-如果用戶選擇退出，請執行`setConsent`命令，並將收集首選項設定為`n` ，如下所示：
+時間欄位應指定使用者上次更新其同意偏好設定的時間。 如果用戶選擇退出，請執行`setConsent`命令，並將收集首選項設定為`n` ，如下所示：
 
 ```javascript
 alloy("setConsent", {
@@ -82,6 +85,9 @@ alloy("setConsent", {
       value: {
         collect: {
           val: "n"
+        },
+        metadata: {
+          time: "2021-03-17T15:51:30-07:00"
         }
       }
     }]
@@ -155,6 +161,9 @@ alloy("setConsent", {
       value: {
         collect: {
           val: "y"
+        },
+        metadata: {
+          time: "2021-03-17T15:48:42-07:00"
         }
       }
     },{
