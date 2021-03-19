@@ -1,11 +1,11 @@
 ---
 keywords: SFTP;sftp
 title: SFTP連線
-description: 建立與SFTP伺服器的即時對外連線，以定期從Experience Platform匯出分隔資料檔案。
+description: 建立與SFTP伺服器的即時對外連線，以定期從Adobe Experience Platform匯出分隔資料檔案。
 translation-type: tm+mt
-source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
+source-git-commit: 4f0047e7ac4c83e3e17ea0a077bbeb09c86d1db6
 workflow-type: tm+mt
-source-wordcount: '184'
+source-wordcount: '231'
 ht-degree: 0%
 
 ---
@@ -13,7 +13,11 @@ ht-degree: 0%
 
 # SFTP連線
 
-建立與SFTP伺服器的即時對外連線，以定期從Experience Platform匯出分隔資料檔案。
+建立與SFTP伺服器的即時對外連線，以定期從Adobe Experience Platform匯出分隔資料檔案。
+
+>[!IMPORTANT]
+>
+> 雖然Adobe支援將資料匯出至SFTP伺服器，但建議的雲端儲存位置會是[!DNL Amazon S3]和[!DNL Azure Blob]。
 
 ## 導出類型{#export-type}
 
@@ -23,7 +27,7 @@ ht-degree: 0%
 
 ## 連接目標{#connect-destination}
 
-如需如何連線至您的雲端儲存目的地（包括SFTP）的指示，請參閱[雲端儲存目的地工作流程](./workflow.md)。
+請參閱[雲端儲存目標工作流程](./workflow.md)，以取得如何連線至您的雲端儲存目標（包括SFTP）的指示。
 
 對於SFTP目標，請在&#x200B;**驗證**&#x200B;步驟的建立目標工作流中輸入以下資訊：
 
@@ -34,3 +38,7 @@ ht-degree: 0%
 ## 導出資料{#exported-data}
 
 對於SFTP目標，平台會在您提供的儲存位置中建立以Tab分隔的`.txt`或`.csv`檔案。 如需檔案的詳細資訊，請參閱區段啟動教學課程中的[電子郵件行銷目標和雲端儲存目標](../../ui/activate-destinations.md#esp-and-cloud-storage)。
+
+## IP位址允許清單
+
+如果您需要將AdobeIP新增至允許清單，請參閱雲端儲存空間目標的[IP位址允許清單。](./ip-address-allow-list.md)
