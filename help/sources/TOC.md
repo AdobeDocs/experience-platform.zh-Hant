@@ -6,9 +6,9 @@ breadcrumb-title: 來源連接器指南
 user-guide-description: 從多種來源或結構擷取資料、加標籤，以及增強已擷取的資料。
 feature: 資料擷取，來源
 translation-type: tm+mt
-source-git-commit: ac6935f09f620ea55cf8f612ff0a1fba503b5e17
+source-git-commit: 73ad0a264bcb0e9510ef500592fd945903c5cfea
 workflow-type: tm+mt
-source-wordcount: '577'
+source-wordcount: '579'
 ht-degree: 12%
 
 ---
@@ -148,9 +148,9 @@ ht-degree: 12%
    - [從協力廠商雲端儲存系統擷取Parke資料](tutorials/api/cloud-storage-parquet.md)
    - [建立資料集連線](tutorials/api/create-dataset-base-connection.md)
    - [監視資料流](tutorials/api/monitor.md)
-   - [更新連線](tutorials/api/update.md)
+   - [更新帳戶](tutorials/api/update.md)
    - [更新資料流](tutorials/api/update-dataflows.md)
-   - [刪除連線](tutorials/api/delete.md)
+   - [刪除帳戶](tutorials/api/delete.md)
    - [刪除資料流](tutorials/api/delete-dataflows.md)
 - UI教學課程{#ui-tutorials}
    - 建立源連接{#create}
@@ -222,6 +222,7 @@ ht-degree: 12%
    - [啟用傳入資料以填入客戶個人檔案](tutorials/ui/profile.md)
    - [監視資料流](tutorials/ui/monitor.md)
    - [更新帳戶](tutorials/ui/update.md)
+   - [更新資料流](tutorials/ui/update-dataflows.md)
    - [刪除帳戶](tutorials/ui/delete-accounts.md)
    - [刪除資料流](tutorials/ui/delete.md)
 - [流量執行通知](notifications.md)
