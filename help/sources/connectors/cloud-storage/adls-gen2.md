@@ -5,7 +5,7 @@ title: Azure Data Lake Storage Gen2 Source Connector概觀
 topic: 概述
 description: 瞭解如何使用API或使用者介面將Azure Data Lake Storage Gen2連線至Adobe Experience Platform。
 translation-type: tm+mt
-source-git-commit: 0fb97fcf5d3f8230ff86906aeef245e4a7f44f30
+source-git-commit: 5c6539d45df91369c3608965fd887c013d528b98
 workflow-type: tm+mt
 source-wordcount: '457'
 ht-degree: 0%
@@ -48,7 +48,7 @@ Adobe Experience Platform為AWS、[!DNL Google Cloud Platform]和[!DNL Azure]等
 - [使用Flow Service API探索雲端儲存系統](../../tutorials/api/explore/cloud-storage.md)
 - [使用Flow Service API收集雲端儲存空間資料](../../tutorials/api/collect/cloud-storage.md)
 
-## 使用UI
+### 使用UI
 
 - [在UI中建立ADLS-Gen2來源連線](../../tutorials/ui/create/cloud-storage/adls-gen2.md)
 - [在UI中為雲端儲存區連線設定資料流](../../tutorials/ui/dataflow/batch/cloud-storage.md)
