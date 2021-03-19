@@ -6,9 +6,9 @@ topic: 概述
 type: 教學課程
 description: 瞭解如何使用平台使用者介面建立Google PubSub來源連接器。
 translation-type: tm+mt
-source-git-commit: 0af90253f04377149986aedf2e9d3012ca06d4f8
+source-git-commit: b5358ce206888c413035b46fe751520fd9aefb14
 workflow-type: tm+mt
-source-wordcount: '445'
+source-wordcount: '492'
 ht-degree: 1%
 
 ---
@@ -24,10 +24,10 @@ ht-degree: 1%
 
 ## 快速入門
 
-本教學課程需要對Adobe Experience Platform的下列元件有正確的認識：
+本教學課程需要對Adobe Experience Platform的下列部分有正確的理解：
 
-* [來源](../../../../home.md):Experience Platform可讓您從各種來源擷取資料，同時讓您能夠使用平台服務來建構、標示和增強傳入資料。
-* [沙盒](../../../../../sandboxes/home.md):Experience Platform提供虛擬沙盒，可將單一Platform實例分割為不同的虛擬環境，以協助開發和發展數位體驗應用程式。
+* [來源](../../../../home.md):Experience Platform可讓您從各種來源擷取資料，同時讓您能夠使用平台服務來建構、標示並增強傳入資料。
+* [沙盒](../../../../../sandboxes/home.md):Experience Platform提供虛擬沙盒，可將單一平台實例分割為獨立的虛擬環境，以協助開發和發展數位體驗應用程式。
 
 如果您已經有有效的[!DNL PubSub]連接，則可跳過本文檔的其餘部分，繼續[配置資料流](../../dataflow/batch/cloud-storage.md)的教程。
 
@@ -38,23 +38,27 @@ ht-degree: 1%
 | 憑證 | 說明 |
 | ---------- | ----------- |
 | `projectId` | 驗證[!DNL PubSub]所需的項目ID。 |
-| `credentials` | 驗證[!DNL PubSub]所需的憑證或金鑰。 |
+| `credentials` | 驗證[!DNL PubSub]所需的憑證或私密金鑰ID。 |
 
-如需這些值的詳細資訊，請參閱下列[PubSub authentication](https://cloud.google.com/pubsub/docs/authentication)檔案。
+如需這些值的詳細資訊，請參閱下列[PubSub authentication](https://cloud.google.com/pubsub/docs/authentication)檔案。 如果您使用服務帳戶型驗證，請參閱以下[PubSub指南](https://cloud.google.com/docs/authentication/production#create_service_account)以取得如何產生認證的步驟。
 
-收集完所需憑證後，您可依照下列步驟將[!DNL Blob]帳戶連結至平台。
+>[!TIP]
+>
+>如果您使用以服務帳戶為基礎的驗證，請確定您已授與足夠的使用者存取權給您的服務帳戶，而且在複製和貼上認證時，JSON中沒有額外的空格。
+
+收集完所需憑證後，您可依照下列步驟將[!DNL PubSub]帳戶連結至平台。
 
 ## 連接您的[!DNL PubSub]帳戶
 
-在[平台UI](https://platform.adobe.com)中，從左側導覽列選擇&#x200B;**[!UICONTROL 源]**&#x200B;以存取[!UICONTROL 源]工作區。 [!UICONTROL Catalog]畫面會顯示多種來源，您可以用來建立帳戶。
+在[平台UI](https://platform.adobe.com)中，從左側導覽列選擇&#x200B;**[!UICONTROL Sources]**&#x200B;以存取[!UICONTROL Sources]工作區。 [!UICONTROL Catalog]畫面會顯示各種來源，您可以用來建立帳戶。
 
 您可以從畫面左側的目錄中選取適當的類別。 或者，您也可以使用搜尋列，找到您要使用的特定來源。
 
-在[!UICONTROL 雲端儲存區]類別下，選取&#x200B;**[!UICONTROL Google PubSub]**，然後選取&#x200B;**[!UICONTROL 新增資料]**。
+在[!UICONTROL Cloud storage]類別下，選擇&#x200B;**[!UICONTROL Google PubSub]**，然後選擇&#x200B;**[!UICONTROL Add data]**。
 
 ![目錄](../../../../images/tutorials/create/google-pubsub/catalog.png)
 
-此時會顯示「連線至Google PubSub ]**」頁面。**[!UICONTROL &#x200B;在此頁上，您可以使用新認證或現有認證。
+此時將顯示&#x200B;**[!UICONTROL Connect to Google PubSub]**&#x200B;頁。 在此頁上，您可以使用新認證或現有認證。
 
 ### 現有帳戶
 
@@ -64,7 +68,7 @@ ht-degree: 1%
 
 ### 新帳戶
 
-如果要建立新帳戶，請選擇&#x200B;**[!UICONTROL 新建帳戶]**，然後在輸入表單中提供名稱、可選說明和[!DNL PubSub]驗證憑據。 完成後，選擇&#x200B;**[!UICONTROL 連接到源]** ，然後允許新連接建立一段時間。
+如果要建立新帳戶，請選擇&#x200B;**[!UICONTROL New account]**，然後在輸入表單上提供名稱、可選說明和[!DNL PubSub]驗證憑據。 完成後，選擇&#x200B;**[!UICONTROL Connect to source]** ，然後允許一些時間建立新連接。
 
 ![new](../../../../images/tutorials/create/google-pubsub/new.png)
 
