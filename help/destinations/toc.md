@@ -6,7 +6,7 @@ user-guide-description: 針對跨通路行銷活動、電子郵件宣傳、鎖�
 description: 本檔案列出了Adobe Experience Platform目的地的目錄
 feature: 目的地
 translation-type: tm+mt
-source-git-commit: 648be489aa77870f67564ee350c4d85885673832
+source-git-commit: 3ae5efca9744e5f5edde56038beab93be5157de3
 workflow-type: tm+mt
 source-wordcount: '464'
 ht-degree: 10%
@@ -130,6 +130,6 @@ ht-degree: 10%
       * [客戶之聲目標概觀](./catalog/voice/overview.md)
       * [確認數位回饋擴充功能](./catalog/voice/confirmit-digital-feedback.md)
       * [Invoca標籤擴充功能](./catalog/voice/invoca.md)
-      * [美達利亞](./catalog/voice/medallia.md)
+      * [Medallia擴充功能](./catalog/voice/medallia.md)
       * [通話URL收件匣副檔名](./catalog/voice/talkurl.md)
 * [平台版本注意事項](https://www.adobe.com/go/platform-release-notes-en)
