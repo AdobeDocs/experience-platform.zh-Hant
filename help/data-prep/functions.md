@@ -5,7 +5,7 @@ title: 資料準備映射函式
 topic: 概述
 description: 本文檔介紹與「資料準備」一起使用的映射功能。
 translation-type: tm+mt
-source-git-commit: 6a541cca307dec8937c2d49470e8bcab770c80c7
+source-git-commit: 85a99171a6786b47bf50d4579a3ebc88af3c82f6
 workflow-type: tm+mt
 source-wordcount: '3719'
 ht-degree: 3%
@@ -35,7 +35,7 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 
 下表列出所有支援的映射函式，包括範例運算式及其產生的輸出。
 
-### 字串函式
+### 字串函式{#string}
 
 >[!NOTE]
 >
@@ -71,7 +71,7 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 | extract_regex | 根據規則運算式，從輸入字串擷取群組。 | <ul><li>字串：**Required**&#x200B;您要從中提取組的字串。</li><li>REGEX:**必要**&#x200B;您希望群組相符的規則運算式。</li></ul> | extract_regex(STRING, REGEX) | extract_regex&#x200B;(&quot;E259,E259B_009,1_1&quot;&#x200B;, &quot;([^,]+),[^,]*,([^,]+)&quot;) | [&quot;E259,E259B_009,1_1&quot;、&quot;E259&quot;、&quot;1_1&quot;] |
 | matches_regex | 檢查字串是否與輸入的規則運算式相符。 | <ul><li>字串：**Required**&#x200B;您正在檢查的字串與規則運算式相符。</li><li>REGEX:**必要**&#x200B;您要比較的規則運算式。</li></ul> | matches_regex(STRING, REGEX) | matches_regex(&quot;E259,E259B_009,1_1&quot;, &quot;([^,]+),[^,]*,([^,]+)&quot;) | true |
 
-### 散列函式
+### 散列函式{#hashing}
 
 >[!NOTE]
 >
@@ -85,7 +85,7 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 | md5 | 使用MD5輸入並產生雜湊值。 | <ul><li>輸入：**必要**&#x200B;要雜湊的純文字檔案。</li><li>字元集：*可選*&#x200B;字元集的名稱。 可能的值包括UTF-8、UTF-16、ISO-8859-1和US-ASCII。 </li></ul> | md5(INPUT, CHARSET) | md5(&quot;my text&quot;, &quot;UTF-8&quot;) | d3b96ce8c9fb4 &#x200B; e9bd0198d03ba6852c7 |
 | crc32 | 輸入使用循環冗餘校驗(CRC)算法產生32位循環碼。 | <ul><li>輸入：**必要**&#x200B;要雜湊的純文字檔案。</li><li>字元集：*可選*&#x200B;字元集的名稱。 可能的值包括UTF-8、UTF-16、ISO-8859-1和US-ASCII。</li></ul> | crc32(INPUT, CHARSET) | crc32(&quot;my text&quot;, &quot;UTF-8&quot;) | 8df92e80 |
 
-### URL函式
+### URL函式{#url}
 
 >[!NOTE]
 >
@@ -99,7 +99,7 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 | get_url_path | 傳回指定URL的路徑。 預設會傳回完整路徑。 | <ul><li>URL:**必要**&#x200B;需要擷取路徑的URL。</li><li>完整路徑：*可選*&#x200B;一個布爾值，它確定是否返回完整路徑。 如果設為false，則只會傳迴路徑的結尾。</li></ul> | get_url_path&#x200B;(URL, FULL_PATH) | get_url_path&#x200B;(&quot;sftp://example.com// &#x200B; home/joe/employee.csv&quot;) | &quot;//home/joe/&#x200B; employee.csv&quot; |
 | get_url_query_str | 傳回指定URL的查詢字串。 | <ul><li>URL:**必要**&#x200B;您嘗試從中取得查詢字串的URL。</li><li>錨點：**Required**&#x200B;決定如何使用查詢字串中的錨點。 可以是三個值之一：&quot;retain&quot;、&quot;remove&quot;或&quot;append&quot;。<br><br>如果值為&quot;retain&quot;，則錨點會附加至傳回的值。<br>如果值為&quot;remove&quot;，則錨點將從傳回的值中移除。<br>如果值是「附加」，則錨點會傳回為個別值。</li></ul> | get_url_query_str&#x200B;(URL, ANCHOR) | get_url_&#x200B;str(&quot;foo://example.com:8042&#x200B;/over/there?name&#x200B; nose&quot;, &quot;retain&quot;)&lt;a0/&#x200B;>get_url_str&#x200B;=get_query ronesi&quot;, &quot;ret_ret other?name=ferret#nosi&quot;)<br>get_url_url_url_ur_r_0(8_rerer_&#x200B;_serer_0(8_serererererer(2 foo://example.com#nose&quot;, &quot;append&quot;)<br> | `{"name": "ferret#nose"}`<br>`{"name": "ferret"}`<br>`{"name": "ferret", "_anchor_": "nose"}` |
 
-### 日期和時間函式
+### 日期和時間函式{#date-and-time}
 
 >[!NOTE]
 >
@@ -122,7 +122,7 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 
 &#x200B;
 
-### 階層——物件
+### 層次——對象{#objects}
 
 >[!NOTE]
 >
@@ -138,7 +138,7 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 | is_set | 檢查源資料中是否存在對象。 | <ul><li>輸入：**必要**&#x200B;要檢查的路徑（如果它存在於源資料中）。</li></ul> | is_set(INPUT) | is_set&#x200B;(&quot;evars.evar.field1&quot;) | true |
 | 抵消 | 將屬性的值設定為`null`。 當您不想將欄位複製到目標架構時，應使用此功能。 |  | nullify() | nullify() | `null` |
 
-### 階層——陣列
+### 層次——陣列{#arrays}
 
 >[!NOTE]
 >
@@ -153,7 +153,7 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 | join_arrays | 將陣列彼此結合。 | <ul><li>陣列：**Required**&#x200B;您要新增元素的陣列。</li><li>值：要附加到父陣列的陣列。</li></ul> | join_arrays&#x200B;(ARRAY, VALUES) | join_arrays&#x200B;([&#39;a&#39;, &#39;b&#39;], [&#39;c&#39;], [&#39;d&#39;, &#39;e&#39;]) | [&#39;a&#39;、&#39;b&#39;、&#39;c&#39;、&#39;d&#39;、&#39;e&#39;] |
 | to_array | 獲取輸入清單並將其轉換為陣列。 | <ul><li>INCLUDE_NULLS:**Required**&#x200B;指示是否在響應陣列中包含空值的布爾值。</li><li>值：**必需**&#x200B;要轉換為陣列的元素。</li></ul> | to_array&#x200B;(INCLUDE_NULLS, VALUES) | to_array(false, 1, null, 2, 3) | `[1, 2, 3]` |
 
-### 邏輯運算子
+### 邏輯運算子{#logical-operators}
 
 >[!NOTE]
 >
@@ -164,7 +164,7 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 | 解碼 | 給定一個鍵和一個作為陣列平面化的鍵值對清單，如果找到鍵，該函式將返回該值，如果在陣列中存在，則返回預設值。 | <ul><li>索引鍵：**必要**&#x200B;要匹配的密鑰。</li><li>OPTIONS:**必要**&#x200B;鍵／值對的平面化陣列。 （可選）預設值可以放在結尾。</li></ul> | decode(KEY,OPTIONS) | decode(stateCode, &quot;ca&quot;, &quot;California&quot;, &quot;pa&quot;, &quot;Pennylvania&quot;, &quot;N/A&quot;) | 如果stateCode是&quot;ca&quot;，則為&quot;California&quot;。<br>如果給定的stateCode是&quot;pa&quot;，則為&quot;Pennylvania&quot;。<br>如果stateCode不符合下列項目，則為&quot;N/A&quot;。 |
 | if | 評估給定的布爾表達式，並根據結果返回指定的值。 | <ul><li>運算式：**必要**&#x200B;正在評估的布林運算式。</li><li>TRUE_VALUE:**必要**&#x200B;運算式評估為true時傳回的值。</li><li>FALSE_VALUE:**必要**&#x200B;運算式評估為false時傳回的值。</li></ul> | iif(EXPRESSION, TRUE_VALUE, FALSE_VALUE) | if(&quot;s&quot;。equalsIgnoreCase(&quot;S&quot;), &quot;True&quot;, &quot;False&quot;) | &quot;True&quot; |
 
-### 彙總
+### 彙總 {#aggregation}
 
 >[!NOTE]
 >
@@ -175,7 +175,7 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 | min | 返回給定參數的最小值。 使用自然排序。 | <ul><li>OPTIONS:**Required**&#x200B;一個或多個可相互比較的對象。</li></ul> | min(OPTIONS) | min(3, 1, 4) | 1 |
 | max | 返回給定參數的最大值。 使用自然排序。 | <ul><li>OPTIONS:**Required**&#x200B;一個或多個可相互比較的對象。</li></ul> | max(OPTIONS) | max(3, 1, 4) | 4 |
 
-### 文字轉換
+### 類型轉換{#type-conversions}
 
 >[!NOTE]
 >
@@ -188,7 +188,7 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 | to_float | 將字串轉換為浮點數。 | <ul><li>字串：**Required**&#x200B;要轉換為浮點數的字串。</li></ul> | to_float(STRING) | to_float(&quot;12.3456&quot;) | 12.34566 |
 | to_integer | 將字串轉換為整數。 | <ul><li>字串：**必要**&#x200B;要轉換為整數的字串。</li></ul> | to_integer(STRING) | to_integer(&quot;12&quot;) | 12 |
 
-### JSON函式
+### JSON函式{#json}
 
 >[!NOTE]
 >
@@ -198,7 +198,7 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 -------- | ----------- | ---------- | -------| ---------- | -------------
 | json_to_object | 從指定字串反序列化JSON內容。 | <ul><li>字串：**必要**&#x200B;要取消序列化的JSON字串。</li></ul> | json_to_object&#x200B;(STRING) | json_to_object&#x200B;({&quot;info&quot;:{&quot;firstName&quot;:&quot;John&quot;,&quot;lastName&quot; :&quot;Doe&quot;}) | 表示JSON的物件。 |
 
-### 特殊行動
+### 特殊操作{#special-operations}
 
 >[!NOTE]
 >
@@ -208,7 +208,7 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 -------- | ----------- | ---------- | -------| ---------- | -------------
 | uuid /&lt;a0/ guid<br> | 產生偽隨機ID。 |  | uuid()<br>guid() | uuid()<br>guid() | 7c0267d2-bb74-4e1a-9275-3bf4fccda5f4<br>c7016dc7-3163-43f7-afc7-2e1c9c206333 |
 
-### 用戶代理函式
+### 用戶代理函式{#user-agent}
 
 >[!NOTE]
 >
