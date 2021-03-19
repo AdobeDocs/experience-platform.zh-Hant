@@ -6,10 +6,10 @@ user-guide-description: 針對跨通路行銷活動、電子郵件宣傳、鎖�
 description: 本檔案列出了Adobe Experience Platform目的地的目錄
 feature: 目的地
 translation-type: tm+mt
-source-git-commit: 32cb198bcf2c142b50c4b7a60282f0c923be06b1
+source-git-commit: 648be489aa77870f67564ee350c4d85885673832
 workflow-type: tm+mt
-source-wordcount: '460'
-ht-degree: 11%
+source-wordcount: '464'
+ht-degree: 10%
 
 ---
 
@@ -82,6 +82,7 @@ ht-degree: 11%
       * [Azure Blob連接](./catalog/cloud-storage/azure-blob.md)
       * [（測試版）Azure事件集線器連接](./catalog/cloud-storage/azure-event-hubs.md)
       * [SFTP連線](./catalog/cloud-storage/sftp.md)
+      * [IP位址允許清單](./catalog/cloud-storage/ip-address-allow-list.md)
    * 資料管理平台目標{#data-management}
       * [資料管理平台(DMP)目標概觀](./catalog/data-management/overview.md)
       * [Audience ManagerDIL擴展](./catalog/data-management/aam-dil-extension.md)
