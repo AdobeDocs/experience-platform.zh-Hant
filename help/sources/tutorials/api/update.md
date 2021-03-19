@@ -1,12 +1,12 @@
 ---
-keywords: Experience Platform；首頁；熱門主題；流服務；更新連接
+keywords: Experience Platform;home；熱門主題；流服務；更新帳戶
 solution: Experience Platform
-title: 使用流服務API更新連接
+title: 使用流程服務API更新帳戶
 topic: 概述
 type: 教學課程
-description: 本教學課程涵蓋使用Flow Service API更新連線詳細資訊和認證的步驟。
+description: 本教學課程涵蓋使用Flow Service API更新帳戶詳細資訊和認證的步驟。
 translation-type: tm+mt
-source-git-commit: 5187647dfcf82a476bc776bf2b606db228ca70a4
+source-git-commit: 37be5f5ffa4640d7d4442a24cc257069237f15cb
 workflow-type: tm+mt
 source-wordcount: '689'
 ht-degree: 2%
@@ -14,7 +14,7 @@ ht-degree: 2%
 ---
 
 
-# 使用Flow Service API更新連線
+# 使用流程服務API更新帳戶
 
 在某些情況下，可能需要更新現有源連接的詳細資訊。 [!DNL Flow Service] 提供您新增、編輯和刪除現有批處理或串流連接詳細資料的能力，包括其名稱、說明和認證。
 
