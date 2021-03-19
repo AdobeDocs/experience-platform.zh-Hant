@@ -3,9 +3,9 @@ keywords: linkedin連接；linkedin連接；linkedin目的地；linkedin連接�
 title: Linkedin符合的觀眾連線
 description: 根據雜湊的電子郵件，啟用您LinkedIn促銷活動的個人檔案，以鎖定受眾、個人化和抑制受眾。
 translation-type: tm+mt
-source-git-commit: 950dc24e44a32cfd3e0cdde0fee967cb687c572e
+source-git-commit: fd95357f3e3533fe6b7b9752798dd99eb1cc0eb5
 workflow-type: tm+mt
-source-wordcount: '673'
+source-wordcount: '666'
 ht-degree: 0%
 
 ---
@@ -19,9 +19,9 @@ ht-degree: 0%
 
 ## 使用案例
 
-為協助您進一步瞭解應如何及何時使用[!DNL LinkedIn Matched Audiences]目的地，以下是Adobe Experience Platform客戶可使用此功能解決的使用案例。
+為協助您進一步瞭解如何及何時使用[!DNL LinkedIn Matched Audiences]目標，以下是Adobe Experience Platform客戶可使用此功能解決的使用案例。
 
-軟體公司會組織會議，並希望與與會者保持聯絡，並根據與會者的出席狀況向他們展示個人化優惠。 公司可將其[!DNL CRM]的電子郵件位址或行動裝置ID從自己的內嵌至Adobe Experience Platform，從自己的離線資料建立區段，並將這些區段傳送至[!DNL LinkedIn]社交平台，以最佳化其廣告支出。
+軟體公司會組織會議，並希望與與會者保持聯絡，並根據與會者的出席狀況向他們展示個人化優惠。 公司可以將自己的[!DNL CRM]電子郵件位址或行動裝置ID收錄到Adobe Experience Platform。 然後，他們可以從自己的離線資料建立區段，並將這些區段傳送至[!DNL LinkedIn]社交平台，以最佳化其廣告支出。
 
 ## 目標詳細資訊{#destination-specs}
 
@@ -40,7 +40,7 @@ ht-degree: 0%
 
 ### 導出類型{#export-type}
 
-**區段匯出** -您正匯出區段（對象）的所有成員，並包含識別碼（名稱、電話號碼等）用於[!DNL LinkedIn Matched Audiences]目標。
+**區段匯出** -您正匯出區段（對象）的所有成員，並使用目標中使用的識別碼（名稱、電話號碼等） [!DNL LinkedIn Matched Audiences] 。
 
 ### LinkedIn帳戶的先決條件{#LinkedIn-account-prerequisites}
 
@@ -52,11 +52,11 @@ ht-degree: 0%
 
 [!DNL LinkedIn Matched Audiences] 要求不會傳送任何個人識別資訊(PII)。因此，激活至[!DNL LinkedIn Matched Audiences]的觀眾可以鍵入&#x200B;*雜湊*&#x200B;識別碼，例如電子郵件地址或行動裝置ID。
 
-根據您收錄至Adobe Experience Platform的ID類型，您必須符合其相應需求。
+您必須依據您收錄至Adobe Experience Platform的ID類型，遵守其相應要求。
 
 #### 電子郵件散列要求{#email-hashing-requirements}
 
-您可以選擇先將電子郵件地址雜湊，再將其匯入Adobe Experience Platform，或選擇以清楚的Experience Platform方式處理電子郵件地址，並讓我們的演算法在啟動時雜湊這些地址。
+您可以先將電子郵件地址雜湊，再將其匯入Adobe Experience Platform，或在Experience Platform中清楚使用電子郵件地址，並在啟動時讓[!DNL Platform]雜湊這些地址。
 
 若要瞭解如何在Experience Platform中擷取電子郵件地址，請參閱[批次擷取概觀](/help/ingestion/batch-ingestion/overview.md)和[串流擷取概觀](/help/ingestion/streaming-ingestion/overview.md)。
 
@@ -65,7 +65,7 @@ ht-degree: 0%
 - 從電子郵件字串修剪所有前導和尾隨空格。 例如：`johndoe@example.com`，而非`<space>johndoe@example.com<space>`;
 - 在對電子郵件字串進行散列時，請務必對小寫字串進行散列；
    - 範例：`example@email.com`，而非`EXAMPLE@EMAIL.COM`;
-- 請確定雜湊字串全部為小寫
+- 確保雜湊字串全部為小寫
    - 範例：`55e79200c1635b37ad31a378c39feb12f120f116625093a19bc32fff15041149`，而非`55E79200C1635B37AD31A378C39FEB12F120F116625093A19bC32FFF15041149`;
 - 別用鹽鹽。
 
