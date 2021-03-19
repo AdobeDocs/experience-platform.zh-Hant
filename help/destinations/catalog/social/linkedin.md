@@ -3,9 +3,9 @@ keywords: linkedin連接；linkedin連接；linkedin目的地；linkedin連接�
 title: Linkedin符合的觀眾連線
 description: 根據雜湊的電子郵件，啟用您LinkedIn促銷活動的個人檔案，以鎖定受眾、個人化和抑制受眾。
 translation-type: tm+mt
-source-git-commit: 6d64bc362aa8c85e354f5c02cc2acbe6f1405c99
+source-git-commit: 950dc24e44a32cfd3e0cdde0fee967cb687c572e
 workflow-type: tm+mt
-source-wordcount: '564'
+source-wordcount: '673'
 ht-degree: 0%
 
 ---
@@ -15,17 +15,28 @@ ht-degree: 0%
 
 根據雜湊的電子郵件和行動ID，啟用[!DNL LinkedIn]促銷活動的個人檔案，以鎖定受眾、個人化和抑制受眾。
 
-![Adobe Experience Platform UI中的LinkedIn目標](../../assets/catalog/social/linkedin/catalog.png)
+![Adobe Experience PlatformUI中的LinkedIn目標](../../assets/catalog/social/linkedin/catalog.png)
 
 ## 使用案例
 
-為協助您進一步瞭解應如何及何時使用[!DNL LinkedIn Matched Audiences]目標，Adobe Experience Platform客戶可使用此功能來解決使用案例。
+為協助您進一步瞭解應如何及何時使用[!DNL LinkedIn Matched Audiences]目的地，以下是Adobe Experience Platform客戶可使用此功能解決的使用案例。
 
-軟體公司會組織會議，並希望與與會者保持聯絡，並根據與會者的出席狀況向他們展示個人化優惠。 公司可將其[!DNL CRM]的電子郵件地址或行動裝置ID從自己的內嵌至Adobe Experience Platform，從其離線資料建立區段，並將這些區段傳送至[!DNL LinkedIn]社交平台，最佳化其廣告支出。
+軟體公司會組織會議，並希望與與會者保持聯絡，並根據與會者的出席狀況向他們展示個人化優惠。 公司可將其[!DNL CRM]的電子郵件位址或行動裝置ID從自己的內嵌至Adobe Experience Platform，從自己的離線資料建立區段，並將這些區段傳送至[!DNL LinkedIn]社交平台，以最佳化其廣告支出。
 
 ## 目標詳細資訊{#destination-specs}
 
 [!DNL LinkedIn Matched Audiences] 支援啟用下列身分：雜湊的電子 [!DNL GAID]郵件和 [!DNL IDFA]。
+
+### 支援的身份{#supported-identities}
+
+[!DNL LinkedIn Matched Audiences] 支援啟用下表所述的身分。進一步瞭解[identities](/help/identity-service/namespaces.md)。
+
+| 目標識別 | 說明 | 考量事項 |
+|---|---|---|
+| GAID | Google廣告ID | 當您的來源識別為GAID命名空間時，請選取此目標識別。 |
+| IDFA | 廣告商的Apple ID | 當您的來源識別為IDFA命名空間時，請選取此目標識別。 |
+| email_lc_sha256 | 使用SHA256演算法雜湊的電子郵件地址 | Adobe Experience Platform支援純文字和SHA256雜湊電子郵件地址。 請依照[ID符合要求](#id-matching-requirements-id-matching-requirements)區段中的指示，分別針對純文字和雜湊電子郵件使用適當的名稱空間。 當來源欄位包含未雜湊屬性時，請勾選&#x200B;**[!UICONTROL Apply transformation]**&#x200B;選項，讓[!DNL Platform]在啟動時自動雜湊資料。 |
+
 
 ### 導出類型{#export-type}
 
@@ -33,7 +44,7 @@ ht-degree: 0%
 
 ### LinkedIn帳戶的先決條件{#LinkedIn-account-prerequisites}
 
-在您可以使用[!UICONTROL LinkedIn Matched Audience]目標之前，請確定您的[!DNL LinkedIn Campaign Manager]帳戶具有[!DNL Creative Manager]權限層級或更高。
+使用[!UICONTROL LinkedIn Matched Audience]目標之前，請確定您的[!DNL LinkedIn Campaign Manager]帳戶具有[!DNL Creative Manager]權限級別或更高級別。
 
 如要瞭解如何編輯[!DNL LinkedIn Campaign Manager]使用者權限，請參閱LinkedIn檔案中的[新增、編輯和移除廣告帳戶的使用者權限](https://www.linkedin.com/help/lms/answer/5753)。
 
@@ -41,11 +52,11 @@ ht-degree: 0%
 
 [!DNL LinkedIn Matched Audiences] 要求不會傳送任何個人識別資訊(PII)。因此，激活至[!DNL LinkedIn Matched Audiences]的觀眾可以鍵入&#x200B;*雜湊*&#x200B;識別碼，例如電子郵件地址或行動裝置ID。
 
-視您將ID收錄至Adobe Experience Platform的類型而定，您必須符合其相應的需求。
+根據您收錄至Adobe Experience Platform的ID類型，您必須符合其相應需求。
 
 #### 電子郵件散列要求{#email-hashing-requirements}
 
-您可以選擇先對電子郵件地址進行雜湊處理，然後再將它們匯入Adobe Experience Platform，或者選擇在Experience Platform中清楚處理電子郵件地址，並讓我們的演算法在啟動時對它們進行雜湊處理。
+您可以選擇先將電子郵件地址雜湊，再將其匯入Adobe Experience Platform，或選擇以清楚的Experience Platform方式處理電子郵件地址，並讓我們的演算法在啟動時雜湊這些地址。
 
 若要瞭解如何在Experience Platform中擷取電子郵件地址，請參閱[批次擷取概觀](/help/ingestion/batch-ingestion/overview.md)和[串流擷取概觀](/help/ingestion/streaming-ingestion/overview.md)。
 
@@ -63,9 +74,9 @@ ht-degree: 0%
 >啟動後，[!DNL Platform]會自動雜湊來自未雜湊名稱空間的資料。
 > 屬性來源資料不會自動雜湊。
 > 
-> 在[身分對應](../../ui/activate-destinations.md#identity-mapping)步驟中，當您的來源欄位包含未雜湊屬性時，請勾選&#x200B;**[!UICONTROL 套用轉換]**&#x200B;選項，讓[!DNL Platform]在啟動時自動雜湊資料。
+> 在[身分對應](../../ui/activate-destinations.md#identity-mapping)步驟中，當您的來源欄位包含未雜湊屬性時，請勾選&#x200B;**[!UICONTROL Apply transformation]**&#x200B;選項，讓[!DNL Platform]在啟動時自動雜湊資料。
 > 
-> **[!UICONTROL 只有在選擇屬性作為源欄位時，才會顯示應用轉換]**&#x200B;選項。 當您選擇名稱空間時，不會顯示它。
+> **[!UICONTROL Apply transformation]**&#x200B;選項僅在選擇屬性作為源欄位時顯示。 當您選擇名稱空間時，不會顯示它。
 
 ![身份映射轉換](../../assets/ui/activate-destinations/identity-mapping-transformation.png)
 
@@ -83,4 +94,4 @@ ht-degree: 0%
 
 >[!TIP]
 >
->Adobe Experience Platform與[!DNL LinkedIn Matched Audiences]的整合可支援歷史觀眾回填。 當您將區段啟動至目標時，所有歷史區段資格都會傳送至[!DNL LinkedIn]。
+>Adobe Experience Platform與[!DNL LinkedIn Matched Audiences]之間的整合支援歷史讀者回填。 當您將區段啟動至目標時，所有歷史區段資格都會傳送至[!DNL LinkedIn]。
