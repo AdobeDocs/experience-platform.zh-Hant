@@ -6,9 +6,9 @@ breadcrumb-title: 來源連接器指南
 user-guide-description: 從多種來源或結構擷取資料、加標籤，以及增強已擷取的資料。
 feature: 資料擷取，來源
 translation-type: tm+mt
-source-git-commit: 73ad0a264bcb0e9510ef500592fd945903c5cfea
+source-git-commit: 26e7116858574b366760ffd4f92b14117ccd28eb
 workflow-type: tm+mt
-source-wordcount: '579'
+source-wordcount: '582'
 ht-degree: 12%
 
 ---
@@ -227,4 +227,5 @@ ht-degree: 12%
    - [刪除資料流](tutorials/ui/delete.md)
 - [流量執行通知](notifications.md)
 - [IP位址允許清單](ip-address-allow-list.md)
+- [常見問題集](./troubleshooting.md)
 - [平台版本注意事項](https://www.adobe.com/go/platform-release-notes-en)
