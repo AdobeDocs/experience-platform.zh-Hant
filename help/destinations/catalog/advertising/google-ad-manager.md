@@ -3,9 +3,9 @@ keywords: google廣告管理員；google廣告；doubleclick;DoubleClick AdX;Dou
 title: Google廣告管理員連線
 description: 'Google Ad Manager之前稱為DoubleClick for Publishers或DoubleClick AdX，是來自谷歌的廣告服務平台，可讓出版業者透過視訊和行動應用程式管理其網站上的廣告展示。  '
 translation-type: tm+mt
-source-git-commit: 709908196bb5df665c7e7df10dc58ee9f3b0edbf
+source-git-commit: 24e0a274e61fcf6311c647067920686e4f25e840
 workflow-type: tm+mt
-source-wordcount: '739'
+source-wordcount: '738'
 ht-degree: 0%
 
 ---
@@ -17,16 +17,12 @@ ht-degree: 0%
 
 [!DNL Google Ad Manager](之前稱為「發 [!DNL DoubleClick] 布者」或 [!DNL DoubleClick AdX]「發佈者」)是廣告服務平台，可 [!DNL Google] 讓發佈者透過視訊和行動應用程式管理其網站上的廣告顯示。
 
-## 目標規格
+## 目標詳細資訊{#specifics}
 
 請注意以下特定於[!DNL Google Ad Manager]目標的詳細資訊：
 
 * 在[!DNL Google]平台中以程式設計方式建立已啟動的觀眾。
-* 平台目前不包含用於驗證成功啟動的測量量度。 請參閱Google中的觀眾計數，以驗證整合併瞭解觀眾鎖定規模。
-
->[!IMPORTANT]
->
->如果您想要使用[!DNL Google Ad Manager]建立您的第一個目標，而過去(使用Experience Cloud或其他應用程式)未啟用Audience ManagerID服務中的[ID同步功能](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html)，請聯絡Adobe諮詢或客戶服務以啟用ID同步。 如果您先前已在Audience Manager中設定[!DNL Google]整合，您設定的ID同步化會延續至平台。
+* [!DNL Platform] 目前不包含用於驗證成功啟動的測量量度。請參閱Google中的觀眾計數，以驗證整合併瞭解觀眾鎖定規模。
 
 ## 支援的身份{#supported-identities}
 
@@ -48,7 +44,9 @@ ht-degree: 0%
 
 ## 先決條件
 
-### 允許清單
+如果您想要使用[!DNL Google Ad Manager]建立您的第一個目標，而過去(使用Experience Cloud或其他應用程式)未啟用Audience ManagerID服務中的[ID同步功能](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html)，請聯絡Adobe諮詢或客戶服務以啟用ID同步。 如果您先前已在Audience Manager中設定[!DNL Google]整合，您設定的ID同步化會延續至平台。
+
+## 允許清單
 
 >[!NOTE]
 >
