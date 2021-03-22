@@ -3,15 +3,17 @@ keywords: Medallia;medallia
 title: Medallia擴充功能
 description: Medallia擴充功能是Adobe Experience Platform客戶目的地的聲音。 如需擴充功能的詳細資訊，請參閱Adobe交換的擴充功能頁面。
 translation-type: tm+mt
-source-git-commit: 205382b68bd8dde8d40a290c4c4825f851216ce2
+source-git-commit: 709908196bb5df665c7e7df10dc58ee9f3b0edbf
 workflow-type: tm+mt
-source-wordcount: '528'
+source-wordcount: '529'
 ht-degree: 3%
 
 ---
 
 
 # [!DNL Medallia] 擴充功能 {#medallia-extension}
+
+## 概述 {#overview}
 
 快速順暢地在您的Web屬性上部署[!DNL Medallia]。 此擴充功能還可讓您偵測調查事件、透過資料元素即時擷取客戶意見、在規則中使用它來個人化客戶體驗並與Adobe Analytics分享資料。
 
