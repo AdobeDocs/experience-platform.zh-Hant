@@ -3,15 +3,17 @@ keywords: SFTP;sftp
 title: SFTP連線
 description: 建立與SFTP伺服器的即時對外連線，以定期從Adobe Experience Platform匯出分隔資料檔案。
 translation-type: tm+mt
-source-git-commit: 4f0047e7ac4c83e3e17ea0a077bbeb09c86d1db6
+source-git-commit: 709908196bb5df665c7e7df10dc58ee9f3b0edbf
 workflow-type: tm+mt
-source-wordcount: '231'
+source-wordcount: '232'
 ht-degree: 0%
 
 ---
 
 
 # SFTP連線
+
+## 概述 {#overview}
 
 建立與SFTP伺服器的即時對外連線，以定期從Adobe Experience Platform匯出分隔資料檔案。
 
