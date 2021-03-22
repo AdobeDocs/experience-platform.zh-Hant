@@ -3,15 +3,17 @@ keywords: 廣告；貿易部門；
 title: The Trade Desk connection
 description: '交易台是廣告購買者的自助服務平台，可跨展示廣告、視訊和行動庫存來源執行重新鎖定目標及受眾目標數位宣傳。 '
 translation-type: tm+mt
-source-git-commit: 0ef107963f7da377070eb845fd7c24218a99464b
+source-git-commit: 709908196bb5df665c7e7df10dc58ee9f3b0edbf
 workflow-type: tm+mt
-source-wordcount: '609'
+source-wordcount: '577'
 ht-degree: 0%
 
 ---
 
 
 # [!DNL The Trade Desk] 連接
+
+## 概述 {#overview}
 
 [!DNL The Trade Desk] 目的地可協助您傳送描述檔資 [!DNL The Trade Desk]料。
 
@@ -39,35 +41,35 @@ ht-degree: 0%
 
 ## 連接到目標{#connect-destination}
 
-在&#x200B;**[!UICONTROL 連接]** > **[!UICONTROL 目標]**&#x200B;中，選擇[!DNL The Trade Desk] ，然後選擇&#x200B;**[!UICONTROL 配置]**。
+在&#x200B;**[!UICONTROL Connections]** > **[!UICONTROL Destinations]**&#x200B;中，選擇[!DNL The Trade Desk] ，然後選擇&#x200B;**[!UICONTROL Configure]**。
 
 ![配置交易台目標](../../assets/catalog/advertising/tradedesk/configure.png)
 
 >[!NOTE]
 >
->如果已存在與此目標的連接，您可以在目標卡上看到&#x200B;**[!UICONTROL 激活]**&#x200B;按鈕。 有關&#x200B;**[!UICONTROL Activate]**&#x200B;和&#x200B;**[!UICONTROL Configure]**&#x200B;之間差異的詳細資訊，請參閱目標工作區文檔的[Catalog](../../ui/destinations-workspace.md#catalog)部分。
+>如果已存在與此目標的連接，則可以在目標卡上看到&#x200B;**[!UICONTROL Activate]**&#x200B;按鈕。 有關&#x200B;**[!UICONTROL Activate]**&#x200B;和&#x200B;**[!UICONTROL Configure]**&#x200B;之間差異的詳細資訊，請參閱目標工作區文檔的[目錄](../../ui/destinations-workspace.md#catalog)部分。
 >
 >![激活交易台目標](../../assets/catalog/advertising/tradedesk/activate.png)
 
 在[!UICONTROL Authentication]步驟中，您需要輸入[!DNL The Trade Desk]連接詳細資訊：
 
-* **[!UICONTROL 名稱]**:您將來識別此目的地的名稱。
-* **[!UICONTROL 說明]**:將來幫助您識別此目標的說明。
-* **[!UICONTROL 帳戶ID]**:您的 [!DNL Trade Desk] [!UICONTROL 帳戶ID]。
-* **[!UICONTROL 伺服器位置]**:詢問您 [!DNL Trade Desk] 的代表您應使用哪個地區伺服器。這些是您可從以下位置選擇的可用區域伺服器：
+* **[!UICONTROL Name]**:您將來識別此目的地的名稱。
+* **[!UICONTROL Description]**:將來幫助您識別此目標的說明。
+* **[!UICONTROL Account ID]**:您的 [!DNL Trade Desk] [!UICONTROL Account ID]。
+* **[!UICONTROL Server Location]**:詢問您 [!DNL Trade Desk] 的代表您應使用哪個地區伺服器。這些是您可從以下位置選擇的可用區域伺服器：
 
-   * **[!UICONTROL 歐洲]**
-   * **[!UICONTROL 新加坡]**
-   * **[!UICONTROL 東京]**
-   * **[!UICONTROL 北美洲東部]**
-   * **[!UICONTROL 北美洲西部]**
-   * **[!UICONTROL 拉丁美洲]**
+   * **[!UICONTROL Europe]**
+   * **[!UICONTROL Singapore]**
+   * **[!UICONTROL Tokyo]**
+   * **[!UICONTROL North America East]**
+   * **[!UICONTROL North America West]**
+   * **[!UICONTROL Latin America]**
 
-* **[!UICONTROL 行銷動作]**:行銷動作會指出將資料匯出至目的地的方式。您可以從Adobe定義的行銷動作中選擇，也可以建立自己的行銷動作。 如需行銷動作的詳細資訊，請參閱「Adobe Experience Platform的資料治理」頁面。 [](../../../data-governance/policies/overview.md)如需個別Adobe定義之行銷動作的詳細資訊，請參閱[資料使用政策概述](../../../data-governance/policies/overview.md)。
+* **[!UICONTROL Marketing action]**:行銷動作會指出將資料匯出至目的地的方式。您可以從Adobe定義的行銷動作中選擇，也可以建立自己的行銷動作。 如需行銷動作的詳細資訊，請參閱「Adobe Experience Platform的資料治理」頁面。 [](../../../data-governance/policies/overview.md)如需個別Adobe定義之行銷動作的詳細資訊，請參閱[資料使用政策概述](../../../data-governance/policies/overview.md)。
 
 ![交易台驗證步驟](../../assets/catalog/advertising/tradedesk/authenticate.png)
 
-按一下&#x200B;**[!UICONTROL 建立目標]**。 您的目標現在已建立。 如果您想稍後啟動區段，可以按一下「儲存並退出」，或選擇「下一步」以繼續工作流程並選取要啟動的區段。 在這兩種情況下，請參閱工作流程的下一節[啟動區段](#activate-segments)。
+按一下「**[!UICONTROL Create destination]**」。您的目標現在已建立。 如果您想稍後啟動區段，可按一下[!UICONTROL Save & Exit]，或選取[!UICONTROL Next]以繼續工作流程並選取要啟動的區段。 在這兩種情況下，請參閱工作流程的下一節[啟動區段](#activate-segments)。
 
 ## 啟用區段{#activate-segments}
 
