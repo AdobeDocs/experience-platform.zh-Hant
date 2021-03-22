@@ -3,15 +3,17 @@ keywords: '廣告；bing; '
 title: Microsoft Bing連線
 description: 有了Microsoft Bing連線目標，您就可以跨Microsoft Display Advertising執行重新定位和受眾鎖定的數位宣傳。
 translation-type: tm+mt
-source-git-commit: 0ef107963f7da377070eb845fd7c24218a99464b
+source-git-commit: 709908196bb5df665c7e7df10dc58ee9f3b0edbf
 workflow-type: tm+mt
-source-wordcount: '527'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
 
 
 # [!DNL Microsoft Bing] 連接  {#bing-destination}
+
+## 概述 {#overview}
 
 [!DNL Microsoft Bing]目的地可協助您將描述檔資料傳送至[!DNL Microsoft Display Advertising]。
 
@@ -39,30 +41,30 @@ ht-degree: 0%
 
 配置目標時，必須提供以下資訊：
 
-* [!UICONTROL 帳戶ID]:這是整數 [!DNL Bing Ads CID]格式的您。
+* [!UICONTROL Account ID]:這是整數 [!DNL Bing Ads CID]格式的您。
 
 ## 連接到目標{#connect-destination}
 
-在&#x200B;**[!UICONTROL 連接]** > **[!UICONTROL 目標]**&#x200B;中，選擇[!DNL Microsoft Bing] ，然後選擇&#x200B;**[!UICONTROL 配置]**。
+在&#x200B;**[!UICONTROL Connections]** > **[!UICONTROL Destinations]**&#x200B;中，選擇[!DNL Microsoft Bing] ，然後選擇&#x200B;**[!UICONTROL Configure]**。
 
 ![配置Microsoft Bing目標](../../assets/catalog/advertising/bing/configure.png)
 
 >[!NOTE]
 >
->如果已存在與此目標的連接，您可以在目標卡上看到&#x200B;**[!UICONTROL 激活]**&#x200B;按鈕。 有關&#x200B;**[!UICONTROL Activate]**&#x200B;和&#x200B;**[!UICONTROL Configure]**&#x200B;之間差異的詳細資訊，請參閱目標工作區文檔的[Catalog](../../ui/destinations-workspace.md#catalog)部分。
+>如果已存在與此目標的連接，則可以在目標卡上看到&#x200B;**[!UICONTROL Activate]**&#x200B;按鈕。 有關&#x200B;**[!UICONTROL Activate]**&#x200B;和&#x200B;**[!UICONTROL Configure]**&#x200B;之間差異的詳細資訊，請參閱目標工作區文檔的[目錄](../../ui/destinations-workspace.md#catalog)部分。
 >
 >![啟動Microsoft Bing目標](../../assets/catalog/advertising/bing/activate.png)
 
 在[!UICONTROL Authentication]步驟中，必須輸入目標連接詳細資訊：
 
-* **[!UICONTROL 名稱]**:您將來識別此目的地的名稱。
-* **[!UICONTROL 說明]**:將來幫助您識別此目標的說明。
-* **[!UICONTROL 帳戶ID]**:您的 [!DNL Bing Ads CID]。
-* **[!UICONTROL 行銷動作]**:行銷動作會指出將資料匯出至目的地的方式。您可以從Adobe定義的行銷動作中選擇，也可以建立自己的行銷動作。 如需行銷動作的詳細資訊，請參閱「Adobe Experience Platform的資料治理」頁面。 [](../../../data-governance/policies/overview.md)如需個別Adobe定義之行銷動作的詳細資訊，請參閱[資料使用政策概述](../../../data-governance/policies/overview.md)。
+* **[!UICONTROL Name]**:您將來識別此目的地的名稱。
+* **[!UICONTROL Description]**:將來幫助您識別此目標的說明。
+* **[!UICONTROL Account ID]**:您的 [!DNL Bing Ads CID]。
+* **[!UICONTROL Marketing action]**:行銷動作會指出將資料匯出至目的地的方式。您可以從Adobe定義的行銷動作中選擇，也可以建立自己的行銷動作。 如需行銷動作的詳細資訊，請參閱「Adobe Experience Platform的資料治理」頁面。 [](../../../data-governance/policies/overview.md)如需個別Adobe定義之行銷動作的詳細資訊，請參閱[資料使用政策概述](../../../data-governance/policies/overview.md)。
 
 ![Microsoft Bing目標驗證](../../assets/catalog/advertising/bing/authentication.png)
 
-按一下&#x200B;**[!UICONTROL 建立目標]**。 您的目標現在已建立。 如果您想稍後啟動區段，可以按一下[!UICONTROL 儲存並退出]，或按一下[!UICONTROL Next]繼續工作流程並選取要啟動的區段。 在這兩種情況下，請參閱工作流程的下一節[啟動區段](#activate-segments)。
+按一下「**[!UICONTROL Create destination]**」。您的目標現在已建立。 如果您想稍後啟動區段，可按一下[!UICONTROL Save & Exit]，或按一下[!UICONTROL Next]繼續工作流程並選取要啟動的區段。 在這兩種情況下，請參閱工作流程的下一節[啟動區段](#activate-segments)。
 
 ## 啟用區段{#activate-segments}
 
