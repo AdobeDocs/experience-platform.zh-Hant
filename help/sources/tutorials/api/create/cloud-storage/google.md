@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform;home；熱門主題；Google Cloud Storage;google雲端儲存；google;Google
+keywords: Experience Platform;home；熱門主題；Google雲端儲存；google雲端儲存；google;Google
 solution: Experience Platform
 title: 使用流程服務API建立Google雲端儲存來源連線
-topic: overview
-type: Tutorial
-description: 瞭解如何使用Flow Service API將Adobe Experience Platform連接至Google雲端儲存帳戶。
+topic: 概述
+type: 教學課程
+description: 瞭解如何使用Flow Service API將Adobe Experience Platform連接至Google雲端儲存空間帳戶。
 translation-type: tm+mt
-source-git-commit: a489ab248793a063295578943ad600d8eacab6a2
+source-git-commit: f6a63ca1e21b3c3f6a55574f31fdf04038b7e5c4
 workflow-type: tm+mt
-source-wordcount: '554'
+source-wordcount: '597'
 ht-degree: 2%
 
 ---
@@ -22,7 +22,7 @@ ht-degree: 2%
 
 ## 快速入門
 
-本指南需要有效瞭解Adobe Experience Platform的下列元件：
+本指南需要對Adobe Experience Platform的下列組成部分有切實的瞭解：
 
 * [來源](../../../../home.md): [!DNL Experience Platform] 允許從各種來源接收資料，同時提供使用服務構建、標籤和增強傳入資料的 [!DNL Platform] 能力。
 * [沙盒](../../../../../sandboxes/home.md): [!DNL Experience Platform] 提供虛擬沙盒，可將單一執行個體分 [!DNL Platform] 割為不同的虛擬環境，以協助開發和發展數位體驗應用程式。
@@ -35,10 +35,10 @@ ht-degree: 2%
 
 | 憑證 | 說明 |
 | ---------- | ----------- |
-| `accessKeyId` | [!DNL Google Cloud Storage]帳戶的存取金鑰ID。 |
-| `secretAccessKey` | [!DNL Google Cloud Storage]帳戶的機密存取金鑰。 |
+| 存取金鑰ID | 用於向平台驗證[!DNL Google Cloud Storage]帳戶的61個字元英數字串。 |
+| 機密存取金鑰 | 40個字元、基本64編碼的字串，用於向平台驗證您的[!DNL Google Cloud Storage]帳戶。 |
 
-如需快速入門的詳細資訊，請造訪[這個Google Cloud檔案](https://cloud.google.com/docs/authentication)。
+如需這些值的詳細資訊，請參閱[ Google Cloud Storage HMAC金鑰指南。 ](https://cloud.google.com/storage/docs/authentication/hmackeys#overview)有關如何生成自己的訪問密鑰ID和秘密訪問密鑰的步驟，請參閱[[!DNL Google Cloud Storage] overview](../../../../connectors/cloud-storage/google-cloud-storage.md)。
 
 ### 讀取範例API呼叫
 
@@ -56,7 +56,7 @@ ht-degree: 2%
 
 * `x-sandbox-name: {SANDBOX_NAME}`
 
-所有包含裝載(POST、PUT、PATCH)的請求都需要額外的媒體類型標題：
+所有包含裝載(POST、PUT、PATCH)的請求都需要附加的媒體類型標題：
 
 * `Content-Type: application/json`
 
