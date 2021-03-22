@@ -2,12 +2,12 @@
 keywords: Experience Platform;home；熱門主題；HDFS;hdfs;Apache HDFS;apache hdfs
 solution: Experience Platform
 title: Apache HDFS Source Connector概觀
-topic: overview
+topic: 概述
 description: 瞭解如何使用API或使用者介面將Apache HDFS連線至Adobe Experience Platform。
 translation-type: tm+mt
-source-git-commit: a489ab248793a063295578943ad600d8eacab6a2
+source-git-commit: 7fc99214272d2ce743b3666826c66f5d65e4d2ca
 workflow-type: tm+mt
-source-wordcount: '381'
+source-wordcount: '382'
 ht-degree: 0%
 
 ---
@@ -17,9 +17,9 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Apache HDFS連接器正在測試中。 有關使用beta標籤連接器的詳細資訊，請參閱[來源概觀](../../home.md#terms-and-conditions)。
+>Apache HDFS連接器正在測試中。 有關使用beta標籤連接器的詳細資訊，請參閱[ Sources綜覽](../../home.md#terms-and-conditions)。
 
-Adobe Experience Platform為AWS、[!DNL Google Cloud Platform]和[!DNL Azure]等雲端提供者提供原生連接，讓您能夠從這些系統中取用資料。 收錄的資料可格式化為JSON、Parce或分隔。 雲端儲存空間提供者支援包括[!DNL Apache] HDFS。
+Adobe Experience Platform為AWS、[!DNL Google Cloud Platform]和[!DNL Azure]等雲提供商提供了本機連接，使您能夠從這些系統中獲取資料。 收錄的資料可格式化為JSON、Parce或分隔。 雲端儲存空間提供者支援包括[!DNL Apache] HDFS。
 
 ## IP位址允許清單
 
@@ -31,7 +31,7 @@ Adobe Experience Platform為AWS、[!DNL Google Cloud Platform]和[!DNL Azure]等
 
 - 目錄和檔案元件名稱不能超過255個字元。
 - 目錄和檔案名不能以正斜線(`/`)結尾。 如果提供，則會自動移除。
-- 下列保留的URL字元必須正確逸出：`! * ' ( ) ; : @ & = + $ , / ? % # [ ]`
+- 下列保留的URL字元必須正確逸出：`! ' ( ) ; @ & = + $ , % # [ ]`
 - 不允許使用下列字元：`" \ / : | < > * ?`。
 - 不允許非法的URL路徑字元。 代碼點（如`\uE000`）在NTFS檔案名中有效，但不是有效的Unicode字元。 此外，也不允許某些ASCII或Unicode字元，例如控制字元（0x00到0x1F、\u0081等）。 有關HTTP/1.1中管理Unicode字串的規則，請參見[RFC 2616，第2.2節：基本規則](https://www.ietf.org/rfc/rfc2616.txt)和[RFC 3987](https://www.ietf.org/rfc/rfc3987.txt)。
 - 不允許使用下列檔案名稱：LPT1、LPT2、LPT3、LPT4、LPT5、LPT6、LPT7、LPT8、LPT9、COM1、COM2、COM3、COM4、COM5、COM6、COM7、COM8、COM9、prn, AUX, NUL, CON, CLOCK$，點字元(.)和兩個點字元(..)。
