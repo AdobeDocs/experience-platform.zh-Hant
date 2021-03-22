@@ -1,11 +1,11 @@
 ---
 keywords: 串流；
 title: HTTP連線
-description: Adobe Experience Platform中的HTTP目標可讓您傳送描述檔資料至協力廠商HTTP端點。
+description: Adobe Experience Platform的HTTP目的地可讓您傳送描述檔資料至協力廠商的HTTP端點。
 translation-type: tm+mt
-source-git-commit: 5435661d750c4138ea6a2d40619a48236b7b1e4f
+source-git-commit: 709908196bb5df665c7e7df10dc58ee9f3b0edbf
 workflow-type: tm+mt
-source-wordcount: '542'
+source-wordcount: '510'
 ht-degree: 2%
 
 ---
@@ -16,6 +16,8 @@ ht-degree: 2%
 >[!IMPORTANT]
 >
 >平台中的[!DNL HTTP]目標當前位於alpha。 文件和功能可能會有所變更。
+
+## 概述 {#overview}
 
 [!DNL HTTP]目的地是[!DNL Adobe Experience Platform]串流目的地，可協助您將描述檔資料傳送至第三方[!DNL HTTP]端點。
 
@@ -29,22 +31,20 @@ ht-degree: 2%
 
 ## 連接到目標{#connect-destination}
 
-在&#x200B;**[!UICONTROL 連接]** > **[!UICONTROL 目標]**&#x200B;中，選擇[!DNL HTTP API] ，然後選擇&#x200B;**[!UICONTROL 配置]**。
+在&#x200B;**[!UICONTROL Connections]** > **[!UICONTROL Destinations]**&#x200B;中，選擇[!DNL HTTP API] ，然後選擇&#x200B;**[!UICONTROL Configure]**。
 
 ![啟動HTTP目標](../assets/catalog/http/activate.png)
 
->[!NOTE]
->
->如果已存在與此目標的連接，您可以在目標卡上看到&#x200B;**[!UICONTROL 激活]**&#x200B;按鈕。 有關&#x200B;**[!UICONTROL Activate]**&#x200B;和&#x200B;**[!UICONTROL Configure]**&#x200B;之間差異的詳細資訊，請參閱目標工作區文檔的[Catalog](../ui/destinations-workspace.md#catalog)部分。
->
->![啟動HTTP目標](../assets/catalog/http/connect.png)
+如果已存在與此目標的連接，則可以在目標卡上看到&#x200B;**[!UICONTROL Activate]**&#x200B;按鈕。 有關&#x200B;**[!UICONTROL Activate]**&#x200B;和&#x200B;**[!UICONTROL Configure]**&#x200B;之間差異的詳細資訊，請參閱目標工作區文檔的[目錄](../ui/destinations-workspace.md#catalog)部分。
 
-在[!UICONTROL Account]步驟中，您需要定義HTTP端點連接詳細資訊。 選擇&#x200B;**[!UICONTROL 新建帳戶]**&#x200B;並輸入要連接的HTTP端點的連接詳細資訊。
+![啟動HTTP目標](../assets/catalog/http/connect.png)
+
+在[!UICONTROL Account]步驟中，您需要定義HTTP端點連接詳細資訊。 選擇&#x200B;**[!UICONTROL New account]**&#x200B;並輸入要連接的HTTP端點的連接詳細資訊。
 - **[!UICONTROL httpEndpoint]**:您要 [!DNL URL] 將描述檔資料傳送至的HTTP端點的完整。
    - 或者，您可以將查詢參數添加到[!UICONTROL httpEndpoint] [!DNL URL]。
 - **[!UICONTROL authEndpoint]**:用於 [!DNL URL] 驗證的HTTP端點的完 [!DNL OAuth2] 整。
-- **[!UICONTROL 用戶端ID]**:用戶 [!DNL clientID] 端認證中使 [!DNL OAuth2] 用的參數。
-- **[!UICONTROL 用戶端密碼]**:用戶 [!DNL clientSecret] 端認證中使 [!DNL OAuth2] 用的參數。
+- **[!UICONTROL Client ID]**:用戶 [!DNL clientID] 端認證中使 [!DNL OAuth2] 用的參數。
+- **[!UICONTROL Client Secret]**:用戶 [!DNL clientSecret] 端認證中使 [!DNL OAuth2] 用的參數。
 
 >[!NOTE]
 >
@@ -52,13 +52,13 @@ ht-degree: 2%
 
 ![HTTP端點連線](../assets/catalog/http/connect.png)
 
-按一下&#x200B;**[!UICONTROL 連接到目標]**。 連接成功後，按一下&#x200B;**[!UICONTROL Next]**。
+按一下「**[!UICONTROL Connect to destination]**」。連接成功後，按一下&#x200B;**[!UICONTROL Next]**。
 
 在[!UICONTROL Authentication]步驟中，輸入帳戶驗證憑據：
-- **[!UICONTROL 名稱]**:輸入您將來識別此目的地的名稱。
-- **[!UICONTROL 說明]**:輸入說明，以幫助您識別未來的目標。
-- **[!UICONTROL 自訂標題]**:輸入您想要納入目標呼叫的任何自訂標題，請遵循下列格式： `header1:value1,header2:value2,...headerN:valueN`.
-- **[!UICONTROL 行銷動作]**:行銷動作會指出將資料匯出至目的地的方式。您可以從Adobe定義的行銷動作中選擇，也可以建立自己的行銷動作。 如需行銷動作的詳細資訊，請參閱Adobe Experience Platform中的[資料治理](/help/data-governance/policies/overview.md)頁面。 如需個別Adobe定義之行銷動作的詳細資訊，請參閱[資料使用政策概觀](/help/data-governance/policies/overview.md)。
+- **[!UICONTROL Name]**:輸入您將來識別此目的地的名稱。
+- **[!UICONTROL Description]**:輸入說明，以幫助您識別未來的目標。
+- **[!UICONTROL Custom Headers]**:輸入您想要納入目標呼叫的任何自訂標題，請遵循下列格式： `header1:value1,header2:value2,...headerN:valueN`.
+- **[!UICONTROL Marketing actions]**:行銷動作會指出將資料匯出至目的地的方式。您可以從Adobe定義的行銷動作中選擇，也可以建立自己的行銷動作。 如需行銷動作的詳細資訊，請參閱「Adobe Experience Platform的資料治理」頁面。 [](/help/data-governance/policies/overview.md)如需個別Adobe定義之行銷動作的詳細資訊，請參閱[資料使用政策概述](/help/data-governance/policies/overview.md)。
 
 >[!IMPORTANT]
 >
@@ -66,9 +66,9 @@ ht-degree: 2%
 
 ![HTTP驗證](../assets/catalog/http/authenticate.png)
 
-**[!UICONTROL 行銷動作]**:行銷動作會指出將資料匯出至目的地的方式。您可以從Adobe定義的行銷動作中選擇，也可以建立自己的行銷動作。 如需行銷動作的詳細資訊，請參閱[資料使用政策概述](../../data-governance/policies/overview.md)。
+**[!UICONTROL Marketing action]**:行銷動作會指出將資料匯出至目的地的方式。您可以從Adobe定義的行銷動作中選擇，也可以建立自己的行銷動作。 如需行銷動作的詳細資訊，請參閱[資料使用政策概述](../../data-governance/policies/overview.md)。
 
-按一下&#x200B;**[!UICONTROL 建立目標]**。
+按一下「**[!UICONTROL Create destination]**」。
 
 ## 啟用區段
 
@@ -76,7 +76,7 @@ ht-degree: 2%
 
 ## 目標屬性
 
-在[[!UICONTROL 選擇屬性]](../ui/activate-destinations.md#select-attributes)步驟中，當[將區段](../ui/activate-destinations.md)激活到[!DNL HTTP]目標時，我們建議您從[union架構](../../profile/home.md#profile-fragments-and-union-schemas)中選擇唯一標識符。 選擇要導出到目標的唯一標識符和任何其他XDM欄位。
+在[[!UICONTROL Select attributes]](../ui/activate-destinations.md#select-attributes)步驟中，當[啟用區段](../ui/activate-destinations.md)至[!DNL HTTP]目的地時，我們建議您從[union架構](../../profile/home.md#profile-fragments-and-union-schemas)中選取唯一識別碼。 選擇要導出到目標的唯一標識符和任何其他XDM欄位。
 
 ## 導出資料{#exported-data}
 
