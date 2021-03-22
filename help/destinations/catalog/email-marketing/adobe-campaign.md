@@ -3,9 +3,9 @@ keywords: email;Email;e-mail;email destinations;adobe campaign;campaign
 title: Adobe Campaign連接
 description: Adobe Campaign是一套解決方案，可協助您跨所有線上及線下通道個人化並傳遞宣傳活動。
 translation-type: tm+mt
-source-git-commit: b6e795d33b5590001a3270ea42995fdbad28dd88
+source-git-commit: 7d579d85d427c45f39d000288ed883c7ffd003bf
 workflow-type: tm+mt
-source-wordcount: '843'
+source-wordcount: '793'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,7 @@ Adobe Campaign是一套解決方案，可協助您跨所有線上及線下通道
 
 ## 導出類型{#export-type}
 
-**基於描述檔** -您要匯出區段的所有成員，以及所要的架構欄位(例如：電子郵件地址、電話號碼、姓氏)，如「選擇目標啟 **[!UICONTROL 動」]** 工作流程的「屬 [性」步驟所選](../../ui/activate-destinations.md#select-attributes)。
+**基於描述檔** -您要匯出區段的所有成員，以及所要的架構欄位(例如：電子郵件地址、電話號碼、姓氏)，如目標啟 **[!UICONTROL Select attributes]** 動工作流程 [中所選](../../ui/activate-destinations.md#select-attributes)。
 
 ## 連接目標{#connect-destination}
 
@@ -27,37 +27,36 @@ Adobe Campaign是一套解決方案，可協助您跨所有線上及線下通道
 
 >[!NOTE]
 >
->如果已存在與此目標的連接，您可以在目標卡上看到&#x200B;**[!UICONTROL 激活]**&#x200B;按鈕。 有關[!UICONTROL Activate]和[!UICONTROL Configure]之間差異的詳細資訊，請參閱目標工作區文檔的[Catalog](../../ui/destinations-workspace.md#catalog)部分。
+>如果已存在與此目標的連接，則可以在目標卡上看到&#x200B;**[!UICONTROL Activate]**&#x200B;按鈕。 有關[!UICONTROL Activate]和[!UICONTROL Configure]之間差異的詳細資訊，請參閱目標工作區文檔的[目錄](../../ui/destinations-workspace.md#catalog)部分。
 
 ![連線至Adobe Campaign](../../assets/catalog/email-marketing/adobe-campaign/catalog.png)
 
-在連接目標工作流的&#x200B;**[!UICONTROL 帳戶]**&#x200B;步驟中，為儲存位置選擇&#x200B;**[!UICONTROL 連接類型]**。 對於Adobe Campaign，您可以在&#x200B;**[!UICONTROL AmazonS3]**、**[!UICONTROL 帶密碼的SFTP、**[!UICONTROL &#x200B;帶SSH密鑰的SFTP和&#x200B;**[!UICONTROL Azure Blob]**&#x200B;之間進行選擇。 ]**]**&#x200B;傳送資料至Adobe Campaign的偏好方法是透過[!DNL Amazon S3]或[!DNL Azure Blob]。 根據您的連接類型填寫以下資訊，然後選擇&#x200B;**[!UICONTROL Connect]**。
-
+在連接目標工作流的&#x200B;**[!UICONTROL Account]**&#x200B;步驟中，為儲存位置選擇&#x200B;**[!UICONTROL Connection type]**。 對於Adobe Campaign，可以選擇&#x200B;**[!UICONTROL Amazon S3]**、**[!UICONTROL SFTP with Password]**、**[!UICONTROL SFTP with SSH Key]**&#x200B;和&#x200B;**[!UICONTROL Azure Blob]**。 傳送資料至Adobe Campaign的偏好方法是透過[!DNL Amazon S3]或[!DNL Azure Blob]。 根據您的連線類型，填寫下列資訊，然後選取&#x200B;**[!UICONTROL Connect]**。
 
 
 ![設定促銷活動精靈](../../assets/catalog/email-marketing/adobe-campaign/connection-type.png)
 
-- 對於&#x200B;**[!UICONTROL AmazonS3]**&#x200B;連接，必須提供您的訪問密鑰ID和秘密訪問密鑰。
-- 對於具有Password ]**連接的**[!UICONTROL  SFTP，必須提供域、埠、用戶名和密碼。
-- 對於具有SSH密鑰&#x200B;]**連接的**[!UICONTROL  SFTP，必須提供域、埠、用戶名和SSH密鑰。
+- 對於&#x200B;**[!UICONTROL Amazon S3]**&#x200B;連接，必須提供訪問密鑰ID和密鑰。
+- 對於&#x200B;**[!UICONTROL SFTP with Password]**&#x200B;連接，必須提供域、埠、用戶名和密碼。
+- 對於&#x200B;**[!UICONTROL SFTP with SSH Key]**&#x200B;連接，必須提供域、埠、用戶名和SSH密鑰。
 - 對於&#x200B;**[!UICONTROL Azure Blob]**&#x200B;連接，必須提供連接字串。
 
-或者，您可以將RSA格式的公鑰附加到&#x200B;**[!UICONTROL 密鑰]**&#x200B;部分下的導出檔案中，以添加PGP/GPG加密。 請注意，此公共密鑰&#x200B;**必須**&#x200B;寫入為Base64編碼字串。
+或者，您可以將RSA格式的公鑰附加到&#x200B;**[!UICONTROL Key]**&#x200B;部分下的導出檔案中，以添加PGP/GPG加密。 請注意，此公共密鑰&#x200B;**必須**&#x200B;寫入為Base64編碼字串。
 
 ![填寫促銷活動資訊](../../assets/catalog/email-marketing/adobe-campaign/account-info.png)
 
-在&#x200B;**[!UICONTROL 帳戶驗證]**&#x200B;中，填寫您目的地的相關資訊，如下所示：
-- **[!UICONTROL 名稱]**:為目的地選擇相關名稱。
-- **[!UICONTROL 說明]**:輸入目標的說明。
-- **[!UICONTROL 貯體名稱]**: *適用於S3連線*。輸入S3儲存貯體的位置，[!DNL Platform]會將匯出資料儲存為CSV或Tab分隔檔案。
-- **[!UICONTROL 資料夾路徑]**:在儲存位置中提供將匯出資 [!DNL Platform] 料儲存為CSV或Tab分隔檔案的路徑。
-- **[!UICONTROL 容器]**: *用於Blob連接*。保存資料夾路徑所在的Blob的容器。
-- **[!UICONTROL 檔案格式]**: **CSV** 或 **TAB_DELIMITED**。選擇要導出到儲存位置的檔案格式。
-- **[!UICONTROL 行銷動作]**:行銷動作會指出將資料匯出至目的地的方式。您可以從Adobe定義的行銷動作中選擇，也可以建立自己的行銷動作。 如需行銷動作的詳細資訊，請參閱[資料使用政策概述](../../../data-governance/policies/overview.md)頁面。 另請參閱同一份檔案中的[Adobe定義的行銷動作](../../../data-governance/policies/overview.md#core-actions)。
+在&#x200B;**[!UICONTROL Account authentication]**&#x200B;中，填寫您目的地的相關資訊，如下所示：
+- **[!UICONTROL Name]**:為目的地選擇相關名稱。
+- **[!UICONTROL Description]**:輸入目標的說明。
+- **[!UICONTROL Bucket Name]**: *適用於S3連線*。輸入S3儲存貯體的位置，[!DNL Platform]會將匯出資料儲存為CSV或Tab分隔檔案。
+- **[!UICONTROL Folder Path]**:在儲存位置中提供將匯出資 [!DNL Platform] 料儲存為CSV或Tab分隔檔案的路徑。
+- **[!UICONTROL Container]**: *用於Blob連接*。保存資料夾路徑所在的Blob的容器。
+- **[!UICONTROL File Format]**: **CSV** 或 **TAB_DELIMITED**。選擇要導出到儲存位置的檔案格式。
+- **[!UICONTROL Marketing actions]**:行銷動作會指出將資料匯出至目的地的方式。您可以從Adobe定義的行銷動作中選擇，也可以建立自己的行銷動作。 如需行銷動作的詳細資訊，請參閱[資料使用政策概述](../../../data-governance/policies/overview.md)頁面。 另請參閱同一份檔案中的[Adobe定義的行銷動作](../../../data-governance/policies/overview.md#core-actions)。
 
 ![促銷活動基本資訊](../../assets/catalog/email-marketing/adobe-campaign/basic-information.png)
 
-填寫上述欄位後，選擇「建立目標」。 ****&#x200B;您的目標現在已連線，您可以[啟動區段](../../ui/activate-destinations.md)至目標。
+填寫上述欄位後，請選取&#x200B;**[!UICONTROL Create destination]**。 您的目標現在已連線，您可以[啟動區段](../../ui/activate-destinations.md)至目標。
 
 ## 啟用區段{#activate-segments}
 
