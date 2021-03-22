@@ -6,10 +6,10 @@ breadcrumb-title: Experience Data Model (XDM) 指南
 user-guide-description: 使用 Experience Data Model (XDM) 類別和 mixin 將體驗資料標準化。
 feature: 結構描述
 translation-type: tm+mt
-source-git-commit: ac6935f09f620ea55cf8f612ff0a1fba503b5e17
+source-git-commit: b99af98c99a75863ed8e8408841d93aa17d61ae0
 workflow-type: tm+mt
-source-wordcount: '237'
-ht-degree: 24%
+source-wordcount: '259'
+ht-degree: 22%
 
 ---
 
@@ -22,6 +22,12 @@ ht-degree: 24%
    * [資料建模的最佳實務](schema/best-practices.md)
    * [XDM欄位類型約束](schema/field-constraints.md)
    * [XDM欄位字典](schema/field-dictionary.md)
+   * 行業資料模型{#industries}
+      * [概述](./schema/industries/overview.md)
+      * [零售資料模型ERD](./schema/industries/retail.md)
+      * [金融服務資料模型](./schema/industries/financial.md)
+      * [旅行和接待服務資料模型](./schema/industries/travel-hospitality.md)
+      * [電信資料模型ERD](./schema/industries/telecom.md)
 * 類別 {#classes}
    * [XDM個人資料](./classes/individual-profile.md)
    * [XDM ExperienceEvent](./classes/experienceevent.md)
@@ -65,7 +71,7 @@ ht-degree: 24%
    * [訂閱](./data-types/subscription.md)
    * [網路互動](./data-types/web-interactions.md)
    * [網頁詳細資訊](./data-types/webpage-details.md)
-* [!UICONTROL 架構] UI  {#ui}
+* [!UICONTROL Schemas] UI {#ui}
    * [概述](./ui/overview.md)
    * [探索XDM資源](./ui/explore.md)
    * 建立和編輯資源{#resources}
