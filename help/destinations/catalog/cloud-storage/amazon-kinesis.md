@@ -3,9 +3,9 @@ keywords: AmazonKinesis；移動目標；
 title: AmazonKinesis連接
 description: 建立與AmazonKinesis儲存區的即時出站連線，以串流Adobe Experience Platform的資料。
 translation-type: tm+mt
-source-git-commit: 32cb198bcf2c142b50c4b7a60282f0c923be06b1
+source-git-commit: 7d579d85d427c45f39d000288ed883c7ffd003bf
 workflow-type: tm+mt
-source-wordcount: '510'
+source-wordcount: '504'
 ht-degree: 2%
 
 ---
@@ -43,19 +43,19 @@ ht-degree: 2%
 
 對於[!DNL Amazon Kinesis]目標，請在建立目標工作流中輸入以下資訊：
 
-### 在驗證步驟{#authentication-step}中
+## 驗證步驟{#authentication-step}
 
 * **[!DNL Amazon Web Services]訪問密鑰和密鑰**:在中 [!DNL Amazon Web Services]，產生一 `access key - secret access key` 對以授與您帳戶的平台存 [!DNL Amazon Kinesis] 取權。請參閱[Amazon網站服務檔案](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html)瞭解更多資訊。
 * **地區**:指出要 [!DNL Amazon Web Services] 將資料串流至的區域。
 
 ![帳戶步驟中的輸入欄位](../../assets/catalog/cloud-storage/amazon-kinesis/account.png)
 
-### 在設定步驟{#setup-step}中
+## 設定步驟{#setup-step}
 
 * **名稱**:提供您與  [!DNL Amazon Kinesis]
 * **說明**:提供您與的連線說明 [!DNL Amazon Kinesis]。
 * **stream**:提供帳戶中現有資料流的名 [!DNL Amazon Kinesis] 稱。平台會將資料匯出至此串流。
-* **[!UICONTROL 行銷動作]**:行銷動作會指出將資料匯出至目的地的方式。您可以從Adobe定義的行銷動作中選擇，也可以建立自己的行銷動作。 如需行銷動作的詳細資訊，請參閱「Adobe Experience Platform的資料治理」頁面。 [](../../../data-governance/policies/overview.md)如需個別Adobe定義之行銷動作的詳細資訊，請參閱[資料使用政策概述](../../../data-governance/policies/overview.md)。
+* **[!UICONTROL Marketing actions]**:行銷動作會指出將資料匯出至目的地的方式。您可以從Adobe定義的行銷動作中選擇，也可以建立自己的行銷動作。 如需行銷動作的詳細資訊，請參閱「Adobe Experience Platform的資料治理」頁面。 [](../../../data-governance/policies/overview.md)如需個別Adobe定義之行銷動作的詳細資訊，請參閱[資料使用政策概述](../../../data-governance/policies/overview.md)。
 
 ![驗證步驟中的輸入欄位](../../assets/catalog/cloud-storage/amazon-kinesis/setup.png)
 
