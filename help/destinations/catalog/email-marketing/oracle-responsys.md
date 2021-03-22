@@ -1,11 +1,11 @@
 ---
-keywords: email;Email;e-mail;email destinations;oracle responsys destination
-title: Oracle Responsys連接
-description: Responsys是Oracle針對跨通道行銷宣傳提供的企業電子郵件行銷工具，可個人化電子郵件、行動裝置、展示廣告和社交媒體之間的互動。
+keywords: 電子郵件；電子郵件；電子郵件；電子郵件目標；oracle響應目標
+title: OracleResponsys連接
+description: Responsys是企業電子郵件行銷工具，可讓Oracle跨通道行銷宣傳，以個人化電子郵件、行動裝置、展示廣告和社交媒體的互動。
 translation-type: tm+mt
-source-git-commit: 6e7ecfdc0b2cbf6f07e6b2220ec163289511375e
+source-git-commit: 709908196bb5df665c7e7df10dc58ee9f3b0edbf
 workflow-type: tm+mt
-source-wordcount: '608'
+source-wordcount: '567'
 ht-degree: 0%
 
 ---
@@ -13,9 +13,11 @@ ht-degree: 0%
 
 # [!DNL Oracle Responsys] 連接
 
+## 概述 {#overview}
+
 [Responsys](https://www.oracle.com/marketingcloud/products/cross-channel-orchestration/) 是企業電子郵件行銷工具，適用於跨通道行銷宣傳， [!DNL Oracle] 可個人化電子郵件、行動裝置、展示廣告和社交媒體的互動。
 
-若要傳送區段資料至[!DNL Oracle Responsys]，您必須先[連線至Adobe Experience Platform中的目標](#connect-destination)，然後[設定從儲存位置匯入](#import-data-into-responsys)至[!DNL Oracle Responsys]的資料。
+若要傳送區段資料至[!DNL Oracle Responsys]，您必須先[連線至Adobe Experience Platform的目的地](#connect-destination)，然後[設定從儲存位置匯入[!DNL Oracle Responsys]的資料。](#import-data-into-responsys)
 
 ## 導出類型{#export-type}
 
@@ -23,29 +25,29 @@ ht-degree: 0%
 
 ## 連接目標{#connect-destination}
 
-在&#x200B;**[!UICONTROL 連接]** > **[!UICONTROL 目標]**&#x200B;中，選擇[!DNL Oracle Responsys] ，然後選擇&#x200B;**[!UICONTROL 連接目標]**。
+在&#x200B;**[!UICONTROL Connections]** > **[!UICONTROL Destinations]**&#x200B;中，選擇[!DNL Oracle Responsys]，然後選擇&#x200B;**[!UICONTROL Connect destination]**。
 
 ![連線至Responsys](../../assets/catalog/email-marketing/oracle-responsys/catalog.png)
 
-在&#x200B;**[!UICONTROL Authentication]**&#x200B;步驟中，如果您先前已設定到雲儲存目標的連接，請選擇&#x200B;**[!UICONTROL Existing Account]**&#x200B;並選擇一個現有連接。 或者，您可以選擇&#x200B;**[!UICONTROL 新帳戶]**&#x200B;來設定新連接。 填寫您的帳戶驗證憑證，然後選擇&#x200B;**[!UICONTROL 連接到目標]**。 對於[!DNL Oracle Responsys]，可以在&#x200B;**[!UICONTROL 使用密碼]**&#x200B;的SFTP和&#x200B;**[!UICONTROL 使用SSH密鑰]**&#x200B;的SFTP之間進行選擇。 根據您的連接類型填寫以下資訊，然後選擇&#x200B;**[!UICONTROL 連接到目標]**。
+在&#x200B;**[!UICONTROL Authentication]**&#x200B;步驟中，如果您先前已設定到雲儲存目標的連接，請選擇&#x200B;**[!UICONTROL Existing Account]**&#x200B;並選擇一個現有連接。 或者，您可以選擇&#x200B;**[!UICONTROL New Account]**&#x200B;來設定新連接。 填寫您的帳戶驗證憑證，然後選取&#x200B;**[!UICONTROL Connect to destination]**。 對於[!DNL Oracle Responsys]，可以選擇&#x200B;**[!UICONTROL SFTP with Password]**&#x200B;和&#x200B;**[!UICONTROL SFTP with SSH Key]**。 根據您的連線類型，填寫下列資訊，然後選取&#x200B;**[!UICONTROL Connect to destination]**。
 
-對於具有Password ]**連接的**[!UICONTROL  SFTP，必須提供域、埠、用戶名和密碼。
+對於&#x200B;**[!UICONTROL SFTP with Password]**&#x200B;連接，必須提供域、埠、用戶名和密碼。
 
-對於具有SSH密鑰&#x200B;]**連接的**[!UICONTROL  SFTP，必須提供域、埠、用戶名和SSH密鑰。
+對於&#x200B;**[!UICONTROL SFTP with SSH Key]**&#x200B;連接，必須提供域、埠、用戶名和SSH密鑰。
 
 ![填寫Responsys資訊](../../assets/catalog/email-marketing/oracle-responsys/account-info.png)
 
 在&#x200B;**[!UICONTROL Setup]**&#x200B;步驟中，填寫目標的相關資訊，如下所示：
-- **[!UICONTROL 名稱]**:為目的地選擇相關名稱。
-- **[!UICONTROL 說明]**:輸入目標的說明。
-- **[!UICONTROL 貯體名稱]**:您的Amazon S3儲存貯體，Platform將儲存資料匯出。您的輸入長度必須介於3到63個字元之間。 必須以字母或數字開頭和結尾。 只能包含小寫字母、數字或連字型大小(-)。 不得格式化為IP位址（例如192.100.1.1）。
-- **[!UICONTROL 資料夾路徑]**:在您的儲存位置提供路徑，讓Platform將匯出資料儲存為CSV或Tab分隔檔案。
-- **[!UICONTROL 檔案格式]**: **CSV** 或 **TAB_DELIMITED**。選擇要導出到儲存位置的檔案格式。
-- **[!UICONTROL 行銷動作]**:行銷動作會指出將資料匯出至目的地的方式。您可以從Adobe定義的行銷動作中選擇，也可以建立自己的行銷動作。 如需行銷動作的詳細資訊，請參閱Adobe Experience Platform中的[資料治理](../../../data-governance/policies/overview.md)頁面。 如需個別Adobe定義之行銷動作的詳細資訊，請參閱[資料使用政策概觀](../../../data-governance/policies/overview.md)。
+- **[!UICONTROL Name]**:為目的地選擇相關名稱。
+- **[!UICONTROL Description]**:輸入目標的說明。
+- **[!UICONTROL Bucket name]**:您的AmazonS3儲存貯體，平台將存放資料匯出。您的輸入長度必須介於3到63個字元之間。 必須以字母或數字開頭和結尾。 只能包含小寫字母、數字或連字型大小(-)。 不得格式化為IP位址（例如192.100.1.1）。
+- **[!UICONTROL Folder Path]**:在您的儲存位置提供路徑，讓Platform將匯出資料儲存為CSV或Tab分隔檔案。
+- **[!UICONTROL File Format]**: **CSV** 或 **TAB_DELIMITED**。選擇要導出到儲存位置的檔案格式。
+- **[!UICONTROL Marketing actions]**:行銷動作會指出將資料匯出至目的地的方式。您可以從Adobe定義的行銷動作中選擇，也可以建立自己的行銷動作。 如需行銷動作的詳細資訊，請參閱「Adobe Experience Platform的資料治理」頁面。 [](../../../data-governance/policies/overview.md)如需個別Adobe定義之行銷動作的詳細資訊，請參閱[資料使用政策概述](../../../data-governance/policies/overview.md)。
 
 ![Responsys基本資訊](../../assets/catalog/email-marketing/oracle-responsys/basic-information.png)
 
-填寫上述欄位後，按一下「建立目標」。 ****&#x200B;您的目標現在已連線，您可以[啟動區段](../../ui/activate-destinations.md)至目標。
+填寫上述欄位後，按一下&#x200B;**[!UICONTROL Create destination]**。 您的目標現在已連線，您可以[啟動區段](../../ui/activate-destinations.md)至目標。
 
 ## 啟用區段{#activate-segments}
 
