@@ -6,15 +6,17 @@ seo-title: 將描述檔和區段啟用至目標
 description: 將區段對應至目的地，以啟用您在Adobe Experience Platform的資料。 若要完成此作業，請遵循下列步驟。
 seo-description: 將區段對應至目的地，以啟用您在Adobe Experience Platform的資料。 若要完成此作業，請遵循下列步驟。
 translation-type: tm+mt
-source-git-commit: 7d579d85d427c45f39d000288ed883c7ffd003bf
+source-git-commit: 709908196bb5df665c7e7df10dc58ee9f3b0edbf
 workflow-type: tm+mt
-source-wordcount: '2070'
+source-wordcount: '2071'
 ht-degree: 0%
 
 ---
 
 
 # 將描述檔和區段啟用至目標
+
+## 概述 {#overview}
 
 將區段對應至目標，以啟動您在[!DNL Adobe Experience Platform]中擁有的資料。 若要完成此作業，請遵循下列步驟。
 
