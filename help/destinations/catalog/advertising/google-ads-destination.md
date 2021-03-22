@@ -3,9 +3,9 @@ keywords: Google ads;google ads;google adwords;Google AdWords;Google Adwords
 title: Google Ads連線
 description: Google Ads（先前稱為Google AdWords）是線上廣告服務，可讓企業透過文字搜尋、圖形顯示、YouTube視訊和應用程式內行動顯示，按點擊付費廣告。
 translation-type: tm+mt
-source-git-commit: 709908196bb5df665c7e7df10dc58ee9f3b0edbf
+source-git-commit: 24e0a274e61fcf6311c647067920686e4f25e840
 workflow-type: tm+mt
-source-wordcount: '723'
+source-wordcount: '722'
 ht-degree: 0%
 
 ---
@@ -22,7 +22,7 @@ ht-degree: 0%
 請注意以下特定於[!DNL Google Ads]目標的詳細資訊：
 
 * 在[!DNL Google]平台中以程式設計方式建立已啟動的觀眾。
-* 平台目前不包含用於驗證成功啟動的測量量度。 請參閱Google中的觀眾計數，以驗證整合併瞭解觀眾鎖定規模。
+* [!DNL Platform] 目前不包含用於驗證成功啟動的測量量度。請參閱Google中的觀眾計數，以驗證整合併瞭解觀眾鎖定規模。
 
 >[!IMPORTANT]
 >
