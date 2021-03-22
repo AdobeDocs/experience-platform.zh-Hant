@@ -3,10 +3,10 @@ keywords: 行動裝置；硬；訊息；
 title: Braze連接
 description: Braze是一個全面的客戶互動平台，為客戶和他們喜愛的品牌提供相關且值得回味的體驗。
 translation-type: tm+mt
-source-git-commit: 0759919dc458798ca4bc5f233a9cb319194ea534
+source-git-commit: 7d579d85d427c45f39d000288ed883c7ffd003bf
 workflow-type: tm+mt
-source-wordcount: '899'
-ht-degree: 2%
+source-wordcount: '900'
+ht-degree: 1%
 
 ---
 
@@ -37,7 +37,7 @@ ht-degree: 2%
 
 身為行銷人員，我想鎖定行動參與目的地的使用者，並內建[!DNL Adobe Experience Platform]區段。 此外，我想根據[!DNL Adobe Experience Platform]個人檔案的屬性，在[!DNL Adobe Experience Platform]中更新區段和個人檔案後，立即為他們提供個人化體驗。
 
-### 支援的身份{#supported-identities}
+## 支援的身份{#supported-identities}
 
 [!DNL Google Ad Manager] 支援啟用下表所述的身分。
 
@@ -48,7 +48,6 @@ ht-degree: 2%
 ## 導出類型{#export-type}
 
 **[!DNL Profile-based]** -您要匯出區段的所有成員，以及所需的架構欄位(例如：電子郵件地址、電話號碼、姓氏)和／或身分，視您的欄位對應而定。[!DNL Adobe Experience Platform] 區段會匯出至 [!DNL Braze] 屬性下 `AdobeExperiencePlatformSegments` 方。
-
 
 ## 連接到目標{#connect-destination}
 
@@ -127,7 +126,7 @@ ht-degree: 2%
 
 要添加更多映射，請重複上述步驟。
 
-### 範例 {#mapping-example}
+## 映射示例{#mapping-example}
 
 假設您的XDM配置檔案模式和[!DNL Braze]實例包含以下屬性和身份：
 
