@@ -3,7 +3,7 @@ keywords: Google ads;google ads;google adwords;Google AdWords;Google Adwords
 title: Google Ads連線
 description: Google Ads（先前稱為Google AdWords）是線上廣告服務，可讓企業透過文字搜尋、圖形顯示、YouTube視訊和應用程式內行動顯示，按點擊付費廣告。
 translation-type: tm+mt
-source-git-commit: 0759919dc458798ca4bc5f233a9cb319194ea534
+source-git-commit: 7d579d85d427c45f39d000288ed883c7ffd003bf
 workflow-type: tm+mt
 source-wordcount: '722'
 ht-degree: 0%
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 [!DNL Google Ads]線上廣告服 [!DNL Google AdWords]務，可讓企業透過文字搜尋、圖形顯示、視訊和應用程式內行動顯示，以每次點按付費 [!DNL YouTube] 方式進行廣告。
 
-## 目標規格
+## 目標詳細資訊{#specifics}
 
 請注意以下特定於[!DNL Google Ads]目標的詳細資訊：
 
@@ -26,7 +26,7 @@ ht-degree: 0%
 >
 >如果您想要使用[!DNL Google Ads]建立您的第一個目標，而過去(使用Experience Cloud或其他應用程式)未啟用Audience ManagerID服務中的[ID同步功能](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html)，請聯絡Adobe諮詢或客戶服務以啟用ID同步。 如果您先前在Audience Manager中設定Google整合，您設定的ID會同步至平台。
 
-### 支援的身份{#supported-identities}
+## 支援的身份{#supported-identities}
 
 [!DNL Google Ad Manager] 支援啟用下表所述的身分。
 
@@ -40,7 +40,7 @@ ht-degree: 0%
 | 女傭 | Microsoft廣告ID。 此ID可唯一識別執行Windows 10的裝置。 |  |
 | Amazon消防電視ID | 此ID可唯一識別Amazon消防電視。 |  |
 
-### 導出類型{#export-type}
+## 導出類型{#export-type}
 
 **區段匯出** -您正將區段（對象）的所有成員匯出至Google目標。
 
