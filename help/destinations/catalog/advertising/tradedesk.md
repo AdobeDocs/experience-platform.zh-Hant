@@ -3,10 +3,10 @@ keywords: 廣告；貿易部門；
 title: The Trade Desk connection
 description: '交易台是廣告購買者的自助服務平台，可跨展示廣告、視訊和行動庫存來源執行重新鎖定目標及受眾目標數位宣傳。 '
 translation-type: tm+mt
-source-git-commit: 709908196bb5df665c7e7df10dc58ee9f3b0edbf
+source-git-commit: 24e0a274e61fcf6311c647067920686e4f25e840
 workflow-type: tm+mt
-source-wordcount: '577'
-ht-degree: 0%
+source-wordcount: '592'
+ht-degree: 1%
 
 ---
 
@@ -21,23 +21,27 @@ ht-degree: 0%
 
 要向[!DNL Trade Desk]發送配置檔案資料，必須首先連接到目標。
 
-## 目標規格{#destination-specs}
-
-請注意以下特定於[!DNL Trade Desk]目標的詳細資訊：
-
-* 您可以將下列[identitys](../../../identity-service/namespaces.md)傳送至[!DNL The Trade Desk]目標：[!DNL The Trade Desk ID]、[!DNL IDFA]、[!DNL GAID]。
-
->[!IMPORTANT]
->
->如果您想要使用[!DNL The Trade Desk]建立您的第一個目標，而過去(使用Adobe Audience Manager或其他應用程式)未啟用Experience CloudID服務中的[ID同步功能](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html)，請聯絡Adobe諮詢或客戶服務以啟用ID同步。 如果您先前已在Audience Manager中設定[!DNL The Trade Desk]整合，您設定的ID同步化會延續至平台。
-
 ## 使用案例 {#use-cases}
 
 身為行銷人員，我想要能夠使用以[!DNL Trade Desk IDs]或裝置ID為基礎的細分來建立重新鎖定目標或受眾鎖定的數位促銷活動。
 
+## 支援的身份{#supported-identities}
+
+[!DNL The Trade Desk] 支援啟用下表所述的身分。進一步瞭解[identities](/help/identity-service/namespaces.md)。
+
+| 目標識別 | 說明 |
+|---|---|
+| GAID | [!DNL Google Advertising ID] |
+| IDFA | [!DNL Apple ID for Advertisers] |
+| 交易台ID | Trade Desk平台中的廣告商ID |
+
 ## 導出類型{#export-type}
 
 **[!DNL Segment export]** -您正將區段（觀眾）的所有成員匯出至目的地。
+
+## 先決條件 {#prerequisites}
+
+如果您想要使用[!DNL The Trade Desk]建立您的第一個目標，而過去(使用Adobe Audience Manager或其他應用程式)未啟用Experience CloudID服務中的[ID同步功能](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html)，請聯絡Adobe諮詢或客戶服務以啟用ID同步。 如果您先前已在Audience Manager中設定[!DNL The Trade Desk]整合，您設定的ID同步化會延續至平台。
 
 ## 連接到目標{#connect-destination}
 
@@ -45,13 +49,13 @@ ht-degree: 0%
 
 ![配置交易台目標](../../assets/catalog/advertising/tradedesk/configure.png)
 
->[!NOTE]
->
->如果已存在與此目標的連接，則可以在目標卡上看到&#x200B;**[!UICONTROL Activate]**&#x200B;按鈕。 有關&#x200B;**[!UICONTROL Activate]**&#x200B;和&#x200B;**[!UICONTROL Configure]**&#x200B;之間差異的詳細資訊，請參閱目標工作區文檔的[目錄](../../ui/destinations-workspace.md#catalog)部分。
->
->![激活交易台目標](../../assets/catalog/advertising/tradedesk/activate.png)
+如果已存在與此目標的連接，則可以在目標卡上看到&#x200B;**[!UICONTROL Activate]**&#x200B;按鈕。 有關&#x200B;**[!UICONTROL Activate]**&#x200B;和&#x200B;**[!UICONTROL Configure]**&#x200B;之間差異的詳細資訊，請參閱目標工作區文檔的[目錄](../../ui/destinations-workspace.md#catalog)部分。
 
-在[!UICONTROL Authentication]步驟中，您需要輸入[!DNL The Trade Desk]連接詳細資訊：
+![激活交易台目標](../../assets/catalog/advertising/tradedesk/activate.png)
+
+## 驗證步驟{#authentication}
+
+在&#x200B;**[!UICONTROL Authentication]**&#x200B;步驟中，您需要輸入[!DNL The Trade Desk]連接詳細資訊：
 
 * **[!UICONTROL Name]**:您將來識別此目的地的名稱。
 * **[!UICONTROL Description]**:將來幫助您識別此目標的說明。
