@@ -6,9 +6,9 @@ seo-title: 將描述檔和區段啟用至目標
 description: 將區段對應至目的地，以啟用您在Adobe Experience Platform的資料。 若要完成此作業，請遵循下列步驟。
 seo-description: 將區段對應至目的地，以啟用您在Adobe Experience Platform的資料。 若要完成此作業，請遵循下列步驟。
 translation-type: tm+mt
-source-git-commit: 37b0ec0e04c45cb065eca9d262249016e80655ef
+source-git-commit: 7d579d85d427c45f39d000288ed883c7ffd003bf
 workflow-type: tm+mt
-source-wordcount: '2151'
+source-wordcount: '2070'
 ht-degree: 0%
 
 ---
@@ -26,27 +26,27 @@ ht-degree: 0%
 
 啟動工作流程中的步驟依目標類型略有不同。 以下列出所有目標類型的完整工作流程。
 
-### 選擇要將資料激活到{#select-destination}的目標
+## 選擇要將資料激活到{#select-destination}的目標
 
 適用於：所有目標
 
-在Adobe Experience Platform用戶介面中，導覽至&#x200B;**[!UICONTROL 目標]** > **[!UICONTROL 瀏覽]**，然後按一下與您要啟用區段的目的地對應的&#x200B;**[!UICONTROL 啟動]**&#x200B;按鈕，如下圖所示。
+在Adobe Experience Platform用戶介面中，導覽至&#x200B;**[!UICONTROL Destinations]** > **[!UICONTROL Browse]**，然後按一下與您要啟動區段的目的地對應的&#x200B;**[!UICONTROL Activate]**&#x200B;按鈕，如下圖所示。
 
 ![啟動至目的地](../assets/ui/activate-destinations/browse-tab-activate.png)
 
 請依照下一節的步驟，選取您要啟動的區段。
 
-### [!UICONTROL 選取] 區段步驟  {#select-segments}
+## [!UICONTROL Select Segments] 步驟  {#select-segments}
 
 適用於：所有目標
 
 ![選取區段步驟](../assets/ui/activate-destinations/select-segments-icon.png)
 
-在&#x200B;**[!UICONTROL 啟動目標]**&#x200B;工作流程中，在&#x200B;**[!UICONTROL 選擇區段]**&#x200B;頁面上，選取一或多個區段以啟動至目標。 選擇&#x200B;**[!UICONTROL Next]**&#x200B;繼續下一步。
+在&#x200B;**[!UICONTROL Activate destination]**&#x200B;工作流程的&#x200B;**[!UICONTROL Select Segments]**&#x200B;頁面上，選取一或多個區段以啟動至目標。 選擇&#x200B;**[!UICONTROL Next]**&#x200B;繼續下一步。
 
 ![區段到目的地](../assets/ui/activate-destinations/email-select-segments.png)
 
-### [!UICONTROL 身份映] 射步驟  {#identity-mapping}
+## [!UICONTROL Identity mapping] 步驟  {#identity-mapping}
 
 適用於：社交目的地與Google客戶符合廣告目的地
 
@@ -54,7 +54,7 @@ ht-degree: 0%
 
 對於社交目標，您必須選擇源屬性或身份名稱空間，以在目標中映射為目標身份。
 
-#### 範例：啟用[!DNL Facebook Custom Audience] {#example-facebook}的觀眾資料
+## 範例：啟用[!DNL Facebook Custom Audience] {#example-facebook}的觀眾資料
 
 以下是在[!DNL Facebook]中啟用觀眾資料時正確身分對應的範例。
 
@@ -79,11 +79,12 @@ ht-degree: 0%
 
 啟動後，[!DNL Platform]會自動雜湊來自未雜湊名稱空間的資料。
 
-屬性來源資料不會自動雜湊。 當您的來源欄位包含未雜湊的屬性時，請勾選「套用transformation ]**」選項，讓[!DNL Platform]在啟動時自動雜湊資料。**[!UICONTROL ![身份映射轉換](../assets/ui/activate-destinations/identity-mapping-transformation.png)
+屬性來源資料不會自動雜湊。 當來源欄位包含未雜湊屬性時，請勾選&#x200B;**[!UICONTROL Apply transformation]**&#x200B;選項，讓[!DNL Platform]在啟動時自動雜湊資料。
+![身份映射轉換](../assets/ui/activate-destinations/identity-mapping-transformation.png)
 
  
 
-#### 範例：啟用[!DNL Google Customer Match] {#example-gcm}的觀眾資料
+## 範例：啟用[!DNL Google Customer Match] {#example-gcm}的觀眾資料
 
 這是在[!DNL Google Customer Match]中啟用觀眾資料時正確身分對應的範例。
 
@@ -108,25 +109,10 @@ ht-degree: 0%
 
 啟動後，[!DNL Platform]會自動雜湊來自未雜湊名稱空間的資料。
 
-屬性來源資料不會自動雜湊。 當您的來源欄位包含未雜湊的屬性時，請勾選「套用transformation ]**」選項，讓[!DNL Platform]在啟動時自動雜湊資料。**[!UICONTROL ![身份映射轉換](../assets/ui/activate-destinations/identity-mapping-gcm-transformation.png)
+屬性來源資料不會自動雜湊。 當來源欄位包含未雜湊屬性時，請勾選&#x200B;**[!UICONTROL Apply transformation]**&#x200B;選項，讓[!DNL Platform]在啟動時自動雜湊資料。
+![身份映射轉換](../assets/ui/activate-destinations/identity-mapping-gcm-transformation.png)
 
-<!-- 
-`IDFA` IDs will be mapped to:
-
-* [MADID](https://developers.facebook.com/docs/marketing-api/audiences/guides/custom-audiences#hash) if you are activating audiences in [[!DNL Facebook]](../../destinations/catalog/social/facebook.md).
-* [mobileId](https://developers.google.com/adwords/api/docs/reference/v201809/AdwordsUserListService.Member#mobileid) if you are activating audiences in [[!DNL Google Customer Match]](../../destinations/catalog/advertising/google-customer-match.md).
-
-Select `GAID` as target identity if your data consists of Android device IDs. `GAID` IDs will be mapped to:
-
-* [MADID](https://developers.facebook.com/docs/marketing-api/audiences/guides/custom-audiences#hash) if you are activating audiences in [[!DNL Facebook]](../../destinations/catalog/social/facebook.md).
-* [mobileId](https://developers.google.com/adwords/api/docs/reference/v201809/AdwordsUserListService.Member#mobileid) if you are activating audiences in [[!DNL Google Customer Match]](../../destinations/catalog/advertising/google-customer-match.md).
-
-If you are using another ID, such as "Rewards ID" or "Loyalty ID", as primary identity in your schema, you need to map it to the following target identities:
-
-* [EXTERN_ID](https://developers.facebook.com/docs/marketing-api/audiences/guides/custom-audiences#external_identifiers) if you are activating audiences in [[!DNL Facebook]](../../destinations/catalog/social/facebook.md).
-* [USER_ID](https://developers.google.com/adwords/api/docs/reference/v201809/AdwordsUserListService.Member#userid) if you are activating audiences in [[!DNL Google Customer Match]](../../destinations/catalog/advertising/google-customer-match.md). -->
-
-### **[!UICONTROL Configurestep]**   {#configure}
+## **[!UICONTROL Configure]** 步驟  {#configure}
 
 適用於：電子郵件行銷目的地和雲端儲存空間目的地
 
@@ -141,15 +127,15 @@ If you are using another ID, such as "Rewards ID" or "Loyalty ID", as primary id
 >分割檔案名稱會附加一個數字，指出檔案是較大匯出的一部分，例如：`filename.csv`、`filename_2.csv`、`filename_3.csv`。
 
 
-要添加段的調度，請選擇&#x200B;**[!UICONTROL 建立調度]**。
+若要新增區段的排程，請選取&#x200B;**[!UICONTROL Create schedule]**。
 
 ![](../assets/ui/activate-destinations/configure-destination-schedule.png)
 
 此時會出現對話方塊，顯示建立區段排程的選項。
 
 * **檔案匯出**:您可以選擇導出完整檔案或增量檔案。匯出完整檔案會發佈符合該區段之所有描述檔的完整快照。 匯出增量檔案會發佈自上次匯出以來符合該區段資格的描述檔增量。
-* **頻率**:如果 **[!UICONTROL 選取「]** 匯出完整檔案」，您可以選擇匯出 **** 「Onceor  **[!UICONTROL Daily]**」。如果選擇了「導出增量檔案」**[!UICONTROL ，則您只能導出**[!UICONTROL  Daily ]**。]**&#x200B;導出檔案&#x200B;**[!UICONTROL Once]**&#x200B;一次導出檔案。 導出檔案&#x200B;**[!UICONTROL Daily]**&#x200B;時，如果選擇了完整檔案，則每天從開始日期導出檔案到結束日期(UTC:00 PM EST:7:00)。如果選擇了增量檔案，則每天導出檔案。
-* **日期**:如果 **** 選取「一次性」，您可以選取一次性匯出的日期。如果選擇了&#x200B;**[!UICONTROL Daily]**，則可以選擇導出的開始和結束日期。
+* **頻率**:如果 **[!UICONTROL Export full files]** 已選取，您可以選擇匯出 **[!UICONTROL Once]** 或 **[!UICONTROL Daily]**。如果選取&#x200B;**[!UICONTROL Export incremental files]**，則您只有匯出&#x200B;**[!UICONTROL Daily]**&#x200B;的選項。 導出檔案&#x200B;**[!UICONTROL Once]**&#x200B;一次導出檔案。 導出檔案&#x200B;**[!UICONTROL Daily]**&#x200B;時，如果選擇了完整檔案，則每天從開始日期導出檔案，直到結束日期為12:00 AM UTC（東部時間7:00 PM）；如果選擇了增量檔案，則導出檔案的時間為12:00 PM（東部時間7:00 AM EST）。
+* **日期**:如果 **[!UICONTROL Once]** 已選取，您可以選取一次匯出的日期。如果選擇了&#x200B;**[!UICONTROL Daily]**，則可以選擇導出的開始和結束日期。
 
 ![](../assets/ui/activate-destinations/export-full-file.png)
 
@@ -161,27 +147,27 @@ If you are using another ID, such as "Rewards ID" or "Loyalty ID", as primary id
 
 在檔案名編輯器中，可以選擇要添加到檔案名中的不同元件。 無法從檔案名稱中移除目標名稱和區段ID。 除了這些外，您還可以新增下列項目：
 
-* **[!UICONTROL 區段名稱]**:您可以將區段名稱附加至檔案名稱。
-* **[!UICONTROL 日期和時間]**:選擇添加格 `MMDDYYYY_HHMMSS` 式或生成檔案時的Unix 10位時間戳。如果您希望檔案在每次增量匯出時產生動態檔案名稱，請選擇其中一個選項。
-* **[!UICONTROL 自訂文字]**:新增自訂文字至檔案名稱。
+* **[!UICONTROL Segment name]**:您可以將區段名稱附加至檔案名稱。
+* **[!UICONTROL Date and time]**:選擇添加格 `MMDDYYYY_HHMMSS` 式或生成檔案時的Unix 10位時間戳。如果您希望檔案在每次增量匯出時產生動態檔案名稱，請選擇其中一個選項。
+* **[!UICONTROL Custom text]**:新增自訂文字至檔案名稱。
 
-選擇&#x200B;**[!UICONTROL 應用更改]**&#x200B;以確認您的選擇。
+選擇&#x200B;**[!UICONTROL Apply changes]**&#x200B;以確認選擇。
 
 >[!IMPORTANT]
 > 
->如果您未選擇&#x200B;**[!UICONTROL 日期和時間]**&#x200B;元件，則檔案名將是靜態的，新導出的檔案將用每次導出覆蓋儲存位置中的先前檔案。 當從儲存位置將重複匯入工作執行至電子郵件行銷平台時，建議使用此選項。
+>如果未選擇&#x200B;**[!UICONTROL Date and Time]**&#x200B;元件，則檔案名將是靜態的，而新導出的檔案將用每次導出覆蓋儲存位置中的先前檔案。 當從儲存位置將重複匯入工作執行至電子郵件行銷平台時，建議使用此選項。
 
 ![編輯檔案名選項](../assets/ui/activate-destinations/activate-workflow-configure-step-2.png)
 
-完成所有區段的設定後，請選取&#x200B;**[!UICONTROL Next]**&#x200B;繼續。
+完成所有區段的設定後，請選取&#x200B;**[!UICONTROL Next]**&#x200B;以繼續。
 
-### **[!UICONTROL 區段排]** 程  {#segment-schedule}
+## **[!UICONTROL Segment schedule]** 步驟  {#segment-schedule}
 
 適用於：廣告目的地，社交目的地
 
 ![區段排程步驟](../assets/ui/activate-destinations/segment-schedule-icon.png)
 
-在&#x200B;**[!UICONTROL 區段排程]**&#x200B;頁面上，您可以設定傳送資料至目的地的開始日期，以及傳送資料至目的地的頻率。
+在&#x200B;**[!UICONTROL Segment schedule]**&#x200B;頁面上，您可以設定傳送資料至目的地的開始日期，以及傳送資料至目的地的頻率。
 
 >[!IMPORTANT]
 >
@@ -191,25 +177,25 @@ If you are using another ID, such as "Rewards ID" or "Loyalty ID", as primary id
 
 >[!IMPORTANT]
 >
->若是Google客戶符合，在啟動[!DNL IDFA]或[!DNL GAID]區段時，您必須在此步驟中提供[!UICONTROL 應用程式ID]。
+>對於Google客戶符合，您必須在啟動[!DNL IDFA]或[!DNL GAID]區段時，在此步驟中提供[!UICONTROL App ID]。
 
 ![輸入應用程式ID](../assets/catalog/advertising/google-customer-match/gcm-destination-appid.png)
 
-### **[!UICONTROL 排]** 程步驟  {#scheduling}
+## **[!UICONTROL Scheduling]** 步驟  {#scheduling}
 
 適用於：電子郵件行銷目的地和雲端儲存目的地
 
 ![區段排程步驟](../assets/ui/activate-destinations/scheduling-icon.png)
 
-在&#x200B;**[!UICONTROL 計畫]**&#x200B;頁面上，您可以看到將資料傳送至目的地的開始日期以及傳送資料至目的地的頻率。 無法編輯這些值。
+在&#x200B;**[!UICONTROL Scheduling]**&#x200B;頁面上，您可以看到傳送資料至目的地的開始日期以及傳送資料至目的地的頻率。 無法編輯這些值。
 
-### **[!UICONTROL 選擇屬]** 性步驟  {#select-attributes}
+## **[!UICONTROL Select attributes]** 步驟  {#select-attributes}
 
 適用於：電子郵件行銷目的地和雲端儲存目的地
 
 ![選擇屬性步驟](../assets/ui/activate-destinations/select-attributes-icon.png)
 
-在&#x200B;**[!UICONTROL 選擇屬性]**&#x200B;頁面上，選擇&#x200B;**[!UICONTROL 添加新欄位]**&#x200B;並選擇要發送到目標的屬性。
+在&#x200B;**[!UICONTROL Select attributes]**&#x200B;頁面上，選擇&#x200B;**[!UICONTROL Add new field]**&#x200B;並選擇要發送到目標的屬性。
 
 >[!NOTE]
 >
@@ -235,13 +221,13 @@ If you are using another ID, such as "Rewards ID" or "Loyalty ID", as primary id
 > 
 例如，如果欄位`person.name.firstName`具有與目標的市場營銷操作衝突的特定資料使用標籤，則在複查步驟中將顯示資料使用策略違規。 如需詳細資訊，請參閱[Adobe Experience Platform的資料治理](../../rtcdp/privacy/data-governance-overview.md#destinations)。
 
-### **[!UICONTROL 檢]** 視步驟  {#review}
+## **[!UICONTROL Review]** 步驟  {#review}
 
 適用於：所有目標
 
 ![審閱步驟](../assets/ui/activate-destinations/review-icon.png)
 
-在&#x200B;**[!UICONTROL Review]**&#x200B;頁面上，您可以看到您所選內容的摘要。 選擇&#x200B;**[!UICONTROL 取消]**&#x200B;以劃分流程，選擇&#x200B;**[!UICONTROL 返回]**&#x200B;以修改設定，或選擇&#x200B;**[!UICONTROL 完成]**&#x200B;以確認選擇並開始向目標發送資料。
+在&#x200B;**[!UICONTROL Review]**&#x200B;頁面上，您可以看到您所選內容的摘要。 選擇&#x200B;**[!UICONTROL Cancel]**&#x200B;以劃分流程，選擇&#x200B;**[!UICONTROL Back]**&#x200B;以修改設定，或選擇&#x200B;**[!UICONTROL Finish]**&#x200B;以確認選擇並開始向目標發送資料。
 
 >[!IMPORTANT]
 >
@@ -249,7 +235,7 @@ If you are using another ID, such as "Rewards ID" or "Loyalty ID", as primary id
 
 ![資料策略違規](../assets/common/data-policy-violation.png)
 
-如果未檢測到任何違反策略的情況，請選擇&#x200B;**[!UICONTROL 完成]**&#x200B;以確認選擇並開始向目標發送資料。
+如果未檢測到任何違反策略的情況，請選擇&#x200B;**[!UICONTROL Finish]**&#x200B;以確認選擇並開始向目標發送資料。
 
 ![確認選擇](../assets/ui/activate-destinations/confirm-selection.png)
 
@@ -257,8 +243,8 @@ If you are using another ID, such as "Rewards ID" or "Loyalty ID", as primary id
 
 請依照下列步驟編輯Adobe Experience Platform現有的啟動流程：
 
-1. 在左側導覽列中選擇&#x200B;**[!UICONTROL 目標]**，然後按一下&#x200B;**[!UICONTROL 瀏覽]**&#x200B;標籤，然後按一下目標名稱。
-2. 選擇右側導軌中的&#x200B;**[!UICONTROL 編輯啟動]**&#x200B;以變更要傳送至目的地的區段。
+1. 在左側導覽列中選取&#x200B;**[!UICONTROL Destinations]**，然後按一下&#x200B;**[!UICONTROL Browse]**&#x200B;標籤，然後按一下目標名稱。
+2. 選取右側導軌中的&#x200B;**[!UICONTROL Edit activation]**&#x200B;以變更要傳送至目的地的區段。
 
 ## 確認區段啟動成功{#verify-activation}
 
@@ -279,13 +265,13 @@ Salesforce_Marketing_Cloud_segment12341e18-abcd-49c2-836d-123c88e76c39_202004100
 
 這些檔案在您的儲存位置即表示確認是否成功啟動。 若要瞭解匯出檔案的結構，您可以[下載範例。csv檔案](../assets/common/sample_export_file_segment12341e18-abcd-49c2-836d-123c88e76c39_20200408061804.csv)。 此示例檔案包括配置檔案屬性`person.firstname`、`person.lastname`、`person.gender`、`person.birthyear`和`personalEmail.address`。
 
-### 廣告目的地
+## 廣告目的地
 
 在您要啟動資料的各個廣告目的地檢查您的帳戶。 如果啟動成功，您的廣告平台會填入受眾。
 
-### 社交網路目的地
+## 社交網路目的地
 
-對於[!DNL Facebook]，成功啟動表示[!DNL Facebook]自訂對象將以程式設計方式在[[!UICONTROL Facebook廣告管理員]](https://www.facebook.com/adsmanager/manage/)中建立。 當使用者符合已啟用區段的資格或被取消資格時，會新增及移除觀眾中的區段成員資格。
+對於[!DNL Facebook]，成功啟動表示[!DNL Facebook]自訂觀眾將以程式設計方式建立在[[!UICONTROL Facebook Ads Manager]](https://www.facebook.com/adsmanager/manage/)中。 當使用者符合已啟用區段的資格或被取消資格時，會新增及移除觀眾中的區段成員資格。
 
 >[!TIP]
 >
@@ -295,6 +281,6 @@ Salesforce_Marketing_Cloud_segment12341e18-abcd-49c2-836d-123c88e76c39_202004100
 
 若要停用現有的啟動流程，請遵循下列步驟：
 
-1. 在左側導覽列中選擇&#x200B;**[!UICONTROL 目標]**，然後按一下&#x200B;**[!UICONTROL 瀏覽]**&#x200B;標籤，然後按一下目標名稱。
+1. 在左側導覽列中選取&#x200B;**[!UICONTROL Destinations]**，然後按一下&#x200B;**[!UICONTROL Browse]**&#x200B;標籤，然後按一下目標名稱。
 2. 按一下右側導軌中的&#x200B;**[!UICONTROL Enabled]**&#x200B;控制項，以變更啟動流程狀態。
 3. 在&#x200B;**更新資料流狀態**&#x200B;窗口中，選擇&#x200B;**確認**&#x200B;禁用激活流。
