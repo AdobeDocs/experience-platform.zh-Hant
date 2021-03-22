@@ -3,15 +3,17 @@ keywords: facebook連接；facebook連接；facebook目標；facebook;instagram;
 title: Facebook連線
 description: 根據雜湊的電子郵件，啟用您Facebook促銷活動的個人檔案，以鎖定受眾、個人化和抑制受眾。
 translation-type: tm+mt
-source-git-commit: 7d579d85d427c45f39d000288ed883c7ffd003bf
+source-git-commit: 709908196bb5df665c7e7df10dc58ee9f3b0edbf
 workflow-type: tm+mt
-source-wordcount: '1118'
+source-wordcount: '1119'
 ht-degree: 2%
 
 ---
 
 
 # [!DNL Facebook] 連接
+
+## 概述 {#overview}
 
 啟用[!DNL Facebook]促銷活動的設定檔，以便根據雜湊的電子郵件鎖定受眾、個人化和抑制受眾。
 
