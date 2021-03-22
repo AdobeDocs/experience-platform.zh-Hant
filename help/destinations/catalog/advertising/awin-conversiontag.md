@@ -1,11 +1,11 @@
 ---
 keywords: Awin Advertiser Conversion Tag extension;conversion tag;Awin;awin;AWIN
 title: Awin Advertiser轉換標籤擴充功能
-description: Awin Advertiser轉換標籤擴充功能是Adobe Experience Platform中的廣告目的地。 如需擴充功能的詳細資訊，請參閱Adobe Exchange的擴充功能頁面。
+description: Awin廣告商轉換標籤擴充功能是Adobe Experience Platform的廣告目的地。 如需擴充功能的詳細資訊，請參閱Adobe交換的擴充功能頁面。
 translation-type: tm+mt
-source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
+source-git-commit: 709908196bb5df665c7e7df10dc58ee9f3b0edbf
 workflow-type: tm+mt
-source-wordcount: '528'
+source-wordcount: '515'
 ht-degree: 3%
 
 ---
@@ -13,11 +13,13 @@ ht-degree: 3%
 
 # Awin Advertiser轉換標籤副檔名{#awin-conversiontag-extension}
 
+## 概述 {#overview}
+
 轉換標籤是AWIN.Tracking.Sale JavaScript物件的宣告，會在確認頁面上完成，以指示Mastertag已進行轉換。 然後，它會執行必要的追蹤請求。
 
-Awin Advertiser Conversion Tag是Adobe Experience Platform中的廣告延伸。 如需擴充功能的詳細資訊，請參閱[Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.103240.awin-conversion-tag.html)上的擴充頁。
+Awin Advertiser Conversion Tag是Adobe Experience Platform的廣告延伸。 有關擴展功能的詳細資訊，請參閱[AdobeExchange](https://exchange.adobe.com/experiencecloud.details.103240.awin-conversion-tag.html)上的擴展頁。
 
-此目標是[!DNL Adobe Experience Platform Launch]擴展。 如需[!DNL Platform Launch]擴充功能在Platform中運作的詳細資訊，請參閱[Experience Platform Launch擴充功能概觀](../launch-extensions/overview.md)。
+此目標是[!DNL Adobe Experience Platform Launch]擴展。 如需[!DNL Platform Launch]擴充功能在Platform中運作的詳細資訊，請參閱[Experience Platform Launch擴充功能概述](../launch-extensions/overview.md)。
 
 ![UI中的Awin Advertiser Conversiontag擴充功能](../../assets/catalog/advertising/awin-conversion-tag/catalog.png)
 
@@ -25,25 +27,25 @@ Awin Advertiser Conversion Tag是Adobe Experience Platform中的廣告延伸。 
 
 此擴充功能可在「目標」目錄中，針對所有已購買平台的客戶提供。
 
-若要使用此擴充功能，您需要存取[!DNL Experience Platform Launch]。 [!DNL Experience Platform Launch] Adobe Experience Cloud客戶可享有附加的附加價值功能。請連絡您的組織管理員以取得[!DNL Launch]的存取權，並要求他們授予您&#x200B;**[!UICONTROL manage_properties]**&#x200B;的權限，以便您安裝擴充功能。
+若要使用此擴充功能，您需要存取[!DNL Experience Platform Launch]。 [!DNL Experience Platform Launch] 作為附帶的增值功能提供給Adobe Experience Cloud客戶。請連絡您的組織管理員以取得[!DNL Launch]的存取權，並要求他們授予您&#x200B;**[!UICONTROL manage_properties]**&#x200B;權限，以便您安裝擴充功能。
 
 ## 安裝擴展{#install-extension}
 
 要安裝[!DNL Awin Advertiser Conversion Tag]擴展：
 
-在[平台介面](http://platform.adobe.com/)中，轉至&#x200B;**[!UICONTROL 目標]** > **[!UICONTROL 目錄]**。
+在[平台介面](http://platform.adobe.com/)中，轉至&#x200B;**[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**。
 
 從目錄中選擇副檔名或使用搜索欄。
 
-按一下目的地以反白標示，然後選取右側導軌中的「設定」。 ****&#x200B;如果&#x200B;**[!UICONTROL Configure]**&#x200B;控制項呈灰色，表示您遺失&#x200B;**[!UICONTROL manage_properties]**&#x200B;權限。 請參閱[先決條件](#prerequisites)。
+按一下目的地以反白標示，然後在右側導軌中選取&#x200B;**[!UICONTROL Configure]**。 如果&#x200B;**[!UICONTROL Configure]**&#x200B;控制項呈灰色，表示您遺失&#x200B;**[!UICONTROL manage_properties]**&#x200B;權限。 請參閱[先決條件](#prerequisites)。
 
-在&#x200B;**[!UICONTROL 選擇可用的平台啟動屬性]**&#x200B;窗口中，選擇要安裝擴展的[!DNL Platform Launch]屬性。 您也可以在[!DNL Platform Launch]中選擇建立新屬性。 屬性是規則、資料元素、設定的擴充功能、環境和程式庫的集合。瞭解[!DNL Launch]檔案的[「屬性」頁面部分](https://experienceleague.adobe.com/docs/launch/using/reference/admin/companies-and-properties.html#properties-page)中的屬性。
+在&#x200B;**[!UICONTROL Select available Platform Launch property]**&#x200B;窗口中，選擇要安裝副檔名的[!DNL Platform Launch]屬性。 您也可以在[!DNL Platform Launch]中選擇建立新屬性。 屬性是規則、資料元素、設定的擴充功能、環境和程式庫的集合。瞭解[!DNL Launch]檔案的[「屬性」頁面部分](https://experienceleague.adobe.com/docs/launch/using/reference/admin/companies-and-properties.html#properties-page)中的屬性。
 
 工作流將帶您到[!DNL Platform Launch]完成安裝。
 
-如需擴充功能設定選項和安裝支援的詳細資訊，請參閱Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.103240.awin-conversion-tag.html)上的[ Awin廣告商轉換標籤頁。
+有關擴展配置選項和安裝支援的資訊，請參閱AdobeExchange](https://exchange.adobe.com/experiencecloud.details.103240.awin-conversion-tag.html)上的[ Awin Advertiser Conversion Tag頁。
 
-您也可以直接在[Adobe Experience Platform Launch介面](https://launch.adobe.com/tw/)中安裝擴充功能。 請參閱[!DNL Platform Launch]檔案中的[新增副檔名](https://experienceleague.adobe.com/docs/launch/using/reference/manage-resources/extensions/overview.html?lang=en#add-a-new-extension)。
+您也可以直接在[Adobe Experience Platform Launch介面](https://launch.adobe.com/tw/)中安裝擴展。 請參閱[!DNL Platform Launch]檔案中的[新增副檔名](https://experienceleague.adobe.com/docs/launch/using/reference/manage-resources/extensions/overview.html?lang=en#add-a-new-extension)。
 
 
 ## 如何使用副檔名{#how-to-use}
