@@ -3,15 +3,17 @@ keywords: linkedin連接；linkedin連接；linkedin目的地；linkedin連接�
 title: Linkedin符合的觀眾連線
 description: 根據雜湊的電子郵件，啟用您LinkedIn促銷活動的個人檔案，以鎖定受眾、個人化和抑制受眾。
 translation-type: tm+mt
-source-git-commit: 7d579d85d427c45f39d000288ed883c7ffd003bf
+source-git-commit: 709908196bb5df665c7e7df10dc58ee9f3b0edbf
 workflow-type: tm+mt
-source-wordcount: '654'
-ht-degree: 0%
+source-wordcount: '655'
+ht-degree: 1%
 
 ---
 
 
 # [!DNL LinkedIn Matched Audiences] 連接
+
+## 概述 {#overview}
 
 根據雜湊的電子郵件和行動ID，啟用[!DNL LinkedIn]促銷活動的個人檔案，以鎖定受眾、個人化和抑制受眾。
 
