@@ -3,10 +3,10 @@ keywords: '廣告；bing; '
 title: Microsoft Bing連線
 description: 有了Microsoft Bing連線目標，您就可以跨Microsoft Display Advertising執行重新定位和受眾鎖定的數位宣傳。
 translation-type: tm+mt
-source-git-commit: 709908196bb5df665c7e7df10dc58ee9f3b0edbf
+source-git-commit: 24e0a274e61fcf6311c647067920686e4f25e840
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '513'
+ht-degree: 1%
 
 ---
 
@@ -19,25 +19,25 @@ ht-degree: 0%
 
 要向[!DNL Microsoft Bing]發送配置檔案資料，必須首先連接到目標。
 
-## 目標規格{#destination-specs}
-
-請注意以下特定於[!DNL Microsoft Bing]目標的詳細資訊：
-
-* 您可以將下列[identitys](../../../identity-service/namespaces.md)傳送至[!DNL Microsoft Bing]目標：[!DNL Microsoft ID]。
-
->[!IMPORTANT]
->
->如果您想要使用[!DNL Microsoft Bing]建立您的第一個目標，而過去(使用Adobe Audience Manager或其他應用程式)未啟用Experience CloudID服務中的[ID同步功能](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html)，請聯絡Adobe諮詢或客戶服務以啟用ID同步。 如果您先前已在Audience Manager中設定[!DNL Microsoft Bing]整合，您設定的ID同步化會延續至平台。
-
 ## 使用案例 {#use-cases}
 
 身為行銷人員，我想要能夠使用以[!DNL Microsoft Advertising IDs]為基礎的區段，透過[!DNL Microsoft Advertising]通道的展示廣告來鎖定使用者。
+
+## 支援的身份{#supported-identities}
+
+[!DNL The Trade Desk] 支援啟用下表所述的身分。進一步瞭解[identities](/help/identity-service/namespaces.md)。
+
+| 目標識別 | 說明 |
+|---|---|
+| 女傭 | Microsoft Advertising ID |
 
 ## 導出類型{#export-type}
 
 **[!DNL Segment Export]** -您正將區段（觀眾）的所有成員匯出至目 [!DNL Microsoft Bing] 標。
 
 ## 先決條件 {#prerequisites}
+
+如果您想要使用[!DNL Microsoft Bing]建立您的第一個目標，而過去(使用Adobe Audience Manager或其他應用程式)未啟用Experience CloudID服務中的[ID同步功能](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html)，請聯絡Adobe諮詢或客戶服務以啟用ID同步。 如果您先前已在Audience Manager中設定[!DNL Microsoft Bing]整合，您設定的ID同步化會延續至平台。
 
 配置目標時，必須提供以下資訊：
 
@@ -49,13 +49,13 @@ ht-degree: 0%
 
 ![配置Microsoft Bing目標](../../assets/catalog/advertising/bing/configure.png)
 
->[!NOTE]
->
->如果已存在與此目標的連接，則可以在目標卡上看到&#x200B;**[!UICONTROL Activate]**&#x200B;按鈕。 有關&#x200B;**[!UICONTROL Activate]**&#x200B;和&#x200B;**[!UICONTROL Configure]**&#x200B;之間差異的詳細資訊，請參閱目標工作區文檔的[目錄](../../ui/destinations-workspace.md#catalog)部分。
->
->![啟動Microsoft Bing目標](../../assets/catalog/advertising/bing/activate.png)
+如果已存在與此目標的連接，則可以在目標卡上看到&#x200B;**[!UICONTROL Activate]**&#x200B;按鈕。 有關&#x200B;**[!UICONTROL Activate]**&#x200B;和&#x200B;**[!UICONTROL Configure]**&#x200B;之間差異的詳細資訊，請參閱目標工作區文檔的[目錄](../../ui/destinations-workspace.md#catalog)部分。
 
-在[!UICONTROL Authentication]步驟中，必須輸入目標連接詳細資訊：
+![啟動Microsoft Bing目標](../../assets/catalog/advertising/bing/activate.png)
+
+## 驗證步驟{#authentication}
+
+在&#x200B;**[!UICONTROL Authentication]**&#x200B;步驟中，必須輸入目標連接詳細資訊：
 
 * **[!UICONTROL Name]**:您將來識別此目的地的名稱。
 * **[!UICONTROL Description]**:將來幫助您識別此目標的說明。
