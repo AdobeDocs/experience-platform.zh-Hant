@@ -3,15 +3,17 @@ keywords: Azure Blob;Blob目標；s3;azure blob目標
 title: Azure Blob連接
 description: 建立Azure Blob儲存空間的即時對外連線，以定期從Adobe Experience Platform匯出以Tab分隔或CSV資料檔案。
 translation-type: tm+mt
-source-git-commit: 7d579d85d427c45f39d000288ed883c7ffd003bf
+source-git-commit: 709908196bb5df665c7e7df10dc58ee9f3b0edbf
 workflow-type: tm+mt
-source-wordcount: '579'
+source-wordcount: '580'
 ht-degree: 1%
 
 ---
 
 
 # [!DNL Azure Blob] 連接
+
+## 概述 {#overview}
 
 [!DNL Azure Blob] (以下簡稱「[!DNL Blob]」)是Microsoft的雲端物件儲存解決方案。本教程提供使用[!DNL Platform]用戶介面建立[!DNL Blob]目標的步驟。
 
