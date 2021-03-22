@@ -3,7 +3,7 @@ keywords: facebook連接；facebook連接；facebook目標；facebook;instagram;
 title: Facebook連線
 description: 根據雜湊的電子郵件，啟用您Facebook促銷活動的個人檔案，以鎖定受眾、個人化和抑制受眾。
 translation-type: tm+mt
-source-git-commit: fd95357f3e3533fe6b7b9752798dd99eb1cc0eb5
+source-git-commit: 7d579d85d427c45f39d000288ed883c7ffd003bf
 workflow-type: tm+mt
 source-wordcount: '1118'
 ht-degree: 2%
@@ -74,7 +74,7 @@ ht-degree: 2%
 
 您必須依據您收錄至Adobe Experience Platform的ID類型，遵守其相應要求。
 
-### 電話號碼雜湊要求{#phone-number-hashing-requirements}
+## 電話號碼雜湊要求{#phone-number-hashing-requirements}
 
 在[!DNL Facebook]中啟用電話號碼有兩種方法：
 
@@ -86,7 +86,7 @@ ht-degree: 2%
 >不能在[!DNL Facebook]中激活包含在`Phone`名稱空間中的電話號碼。
 
 
-### 電子郵件散列要求{#email-hashing-requirements}
+## 電子郵件散列要求{#email-hashing-requirements}
 
 您可以先將電子郵件地址雜湊，再將其匯入Adobe Experience Platform，或在Experience Platform中清楚使用電子郵件地址，並在啟動時讓[!DNL Platform]雜湊這些地址。
 
@@ -109,7 +109,7 @@ ht-degree: 2%
 
 ![身份映射轉換](../../assets/ui/activate-destinations/identity-mapping-transformation.png)
 
-### 使用自訂名稱空間{#custom-namespaces}
+## 使用自訂名稱空間{#custom-namespaces}
 
 在使用`Extern_ID`命名空間將資料傳送至[!DNL Facebook]之前，請務必使用[!DNL Facebook Pixel]同步您自己的識別碼。 如需詳細資訊，請參閱[官方檔案](https://developers.facebook.com/docs/marketing-api/audiences/guides/custom-audiences/#external_identifiers)。
 
