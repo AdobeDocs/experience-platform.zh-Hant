@@ -3,9 +3,9 @@ keywords: Azure事件中樞目標；azure事件中樞；azure事件中樞
 title: （測試版）Azure事件集線器連接
 description: 建立Azure事件集線器儲存空間的即時出站連線，以串流來自Experience Platform的資料。
 translation-type: tm+mt
-source-git-commit: 32cb198bcf2c142b50c4b7a60282f0c923be06b1
+source-git-commit: 7d579d85d427c45f39d000288ed883c7ffd003bf
 workflow-type: tm+mt
-source-wordcount: '546'
+source-wordcount: '531'
 ht-degree: 2%
 
 ---
@@ -43,19 +43,19 @@ ht-degree: 2%
 
 對於[!DNL Azure Event Hubs]目標，請在建立目標工作流中輸入以下資訊：
 
-### 在驗證步驟{#authentication-step}中
+## 驗證步驟{#authentication-step}
 
-* **[!UICONTROL SAS密鑰]** 名稱 **[!UICONTROL 和SAS密鑰]**:填寫您的SAS密鑰名稱和密鑰。瞭解如何在[Microsoft文檔](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature)中使用SAS密鑰驗證[!DNL Azure Event Hubs]。
-* **[!UICONTROL 命名空間]**:填寫您的命名 [!DNL Azure Event Hubs] 空間。瞭解[Microsoft文檔](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hubs-namespace)中的[!DNL Azure Event Hubs]名稱空間。
+* **[!UICONTROL SAS Key Name]** 和 **[!UICONTROL SAS Key]**:填寫您的SAS密鑰名稱和密鑰。瞭解如何在[Microsoft文檔](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature)中使用SAS密鑰驗證[!DNL Azure Event Hubs]。
+* **[!UICONTROL Namespace]**:填寫您的命名 [!DNL Azure Event Hubs] 空間。瞭解[Microsoft文檔](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hubs-namespace)中的[!DNL Azure Event Hubs]名稱空間。
 
 ![驗證步驟中需要的輸入](../../assets/catalog/cloud-storage/event-hubs/authentication.png)
 
-### 在設定步驟{#setup-step}中
+## 設定步驟{#setup-step}
 
-* **[!UICONTROL 名稱]**:填寫連接的名稱 [!DNL Azure Event Hubs]。
-* **[!UICONTROL 說明]**:提供連接的說明。範例：「Premium tier customers」、「Males intered to kitesurfing」。
+* **[!UICONTROL Name]**:填寫連接的名稱 [!DNL Azure Event Hubs]。
+* **[!UICONTROL Description]**:提供連接的說明。範例：「Premium tier customers」、「Males intered to kitesurfing」。
 * **[!UICONTROL eventHubName]**:提供串流至您目的地的名 [!DNL Azure Event Hubs] 稱。
-* **[!UICONTROL 行銷動作]**:行銷動作會指出將資料匯出至目的地的方式。您可以從Adobe定義的行銷動作中選擇，也可以建立自己的行銷動作。 如需行銷動作的詳細資訊，請參閱「Adobe Experience Platform的資料治理」頁面。 [](../../../data-governance/policies/overview.md)如需個別Adobe定義之行銷動作的詳細資訊，請參閱[資料使用政策概述](../../../data-governance/policies/overview.md)。
+* **[!UICONTROL Marketing actions]**:行銷動作會指出將資料匯出至目的地的方式。您可以從Adobe定義的行銷動作中選擇，也可以建立自己的行銷動作。 如需行銷動作的詳細資訊，請參閱「Adobe Experience Platform的資料治理」頁面。 [](../../../data-governance/policies/overview.md)如需個別Adobe定義之行銷動作的詳細資訊，請參閱[資料使用政策概述](../../../data-governance/policies/overview.md)。
 
 ![設定步驟中所需的資料](../../assets/catalog/cloud-storage/event-hubs/setup.png)
 
