@@ -3,9 +3,9 @@ keywords: Azure Blob;Blob目標；s3;azure blob目標
 title: Azure Blob連接
 description: 建立Azure Blob儲存空間的即時對外連線，以定期從Adobe Experience Platform匯出以Tab分隔或CSV資料檔案。
 translation-type: tm+mt
-source-git-commit: 6d1960be886d12475603aeb79fe6283a1fd3030e
+source-git-commit: 7d579d85d427c45f39d000288ed883c7ffd003bf
 workflow-type: tm+mt
-source-wordcount: '602'
+source-wordcount: '579'
 ht-degree: 1%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 1%
 
 ## 快速入門
 
-本教學課程需要對Adobe Experience Platform的下列元件有正確的認識：
+本教學課程需要對Adobe Experience Platform的下列部分有正確的理解：
 
 - [[!DNL Experience Data Model (XDM)] 系統](../../../xdm/home.md):Experience Platform組織客戶體驗資料的標準化架構。
    - [架構構成基礎](../../../xdm/schema/composition.md):瞭解XDM架構的基本建置區塊，包括架構組合的主要原則和最佳實務。
@@ -26,7 +26,7 @@ ht-degree: 1%
 
 如果您已經擁有有效的Blob目標，則可跳過本文檔的其餘部分，並繼續[激活目標](../../ui/activate-destinations.md)段的教程。
 
-### 支援的檔案格式
+## 支援的檔案格式 {#file-formats}
 
 [!DNL Experience Platform] 支援以下要導出到的檔案格式 [!DNL Blob]:
 
@@ -34,23 +34,23 @@ ht-degree: 1%
 
 ## 連接您的Blob帳戶{#connect-destination}
 
-登入[Adobe Experience Platform](https://platform.adobe.com)，然後從左側導覽列選擇&#x200B;**[!UICONTROL 目標]**&#x200B;以存取&#x200B;**[!UICONTROL 目標]**&#x200B;工作區。 **[!UICONTROL Catalog]**&#x200B;畫面會顯示您可為其建立帳戶的多種目的地。
+登入[Adobe Experience Platform](https://platform.adobe.com)，然後從左側導覽列選擇&#x200B;**[!UICONTROL Destinations]**&#x200B;以存取&#x200B;**[!UICONTROL Destinations]**&#x200B;工作區。 **[!UICONTROL Catalog]**&#x200B;畫面會顯示您可以為其建立帳戶的各種目的地。
 
 您可以從畫面左側的目錄中選取適當的類別。 或者，您也可以使用搜尋選項，找到您要使用的特定目的地。
 
-在&#x200B;**[!UICONTROL 雲儲存]**&#x200B;類別下，選擇&#x200B;**[!UICONTROL Azure Blob儲存]** ，然後選擇&#x200B;**[!UICONTROL 配置]**。
+在&#x200B;**[!UICONTROL Cloud Storage]**&#x200B;類別下，選擇&#x200B;**[!UICONTROL Azure Blob Storage]**，然後選擇&#x200B;**[!UICONTROL Configure]**。
 
 ![目錄](../../assets/catalog/cloud-storage/blob/catalog.png)
 
 >[!NOTE]
 >
->如果已存在與此目標的連接，您可以在目標卡上看到&#x200B;**[!UICONTROL 激活]**&#x200B;按鈕。 有關&#x200B;**[!UICONTROL Activate]**&#x200B;和&#x200B;**[!UICONTROL Configure]**&#x200B;之間差異的詳細資訊，請參閱目標工作區文檔的[Catalog](../../ui/destinations-workspace.md#catalog)部分。
+>如果已存在與此目標的連接，則可以在目標卡上看到&#x200B;**[!UICONTROL Activate]**&#x200B;按鈕。 有關&#x200B;**[!UICONTROL Activate]**&#x200B;和&#x200B;**[!UICONTROL Configure]**&#x200B;之間差異的詳細資訊，請參閱目標工作區文檔的[目錄](../../ui/destinations-workspace.md#catalog)部分。
 
-此時將顯示&#x200B;**[!UICONTROL 連接到Azure Blob儲存]**&#x200B;頁。 在此頁上，您可以使用新認證或現有認證。
+此時將顯示&#x200B;**[!UICONTROL Connect to Azure Blob Storage]**&#x200B;頁。 在此頁上，您可以使用新認證或現有認證。
 
-### 新帳戶{#new-account}
+## 新帳戶{#new-account}
 
-如果您使用新憑據，請選擇&#x200B;**[!UICONTROL 新建帳戶]**。 在出現的輸入表單上，提供連線字串。 訪問Blob儲存中的資料時需要連接字串。 [!DNL Blob]連接字串模式以：`DefaultEndpointsProtocol=https;AccountName={ACCOUNT_NAME};AccountKey={ACCOUNT_KEY}`。
+如果使用新憑據，請選擇&#x200B;**[!UICONTROL New account]**。 在出現的輸入表單上，提供連線字串。 訪問Blob儲存中的資料時需要連接字串。 [!DNL Blob]連接字串模式以：`DefaultEndpointsProtocol=https;AccountName={ACCOUNT_NAME};AccountKey={ACCOUNT_KEY}`。
 
 有關配置[!DNL Blob]連接字串的詳細資訊，請參閱Microsoft文檔中的[配置Azure儲存帳戶的連接字串。](https://docs.microsoft.com/en-us/azure/storage/common/storage-configure-connection-string#configure-a-connection-string-for-an-azure-storage-account)
 
@@ -58,7 +58,7 @@ ht-degree: 1%
 
 ![新帳戶](../../assets/catalog/cloud-storage/blob/new.png)
 
-### 現有帳戶
+## 現有帳戶{#existing-account}
 
 要連接現有帳戶，請選擇要連接的[!DNL Blob]帳戶，然後選擇&#x200B;**Next**&#x200B;繼續。
 
@@ -68,9 +68,9 @@ ht-degree: 1%
 
 此時將顯示&#x200B;**Authentication**&#x200B;頁。 在出現的輸入表單上，提供檔案的名稱、選用說明、檔案夾路徑和容器。
 
-在此步驟中，您也可以選取應套用至此目的地的任何&#x200B;**[!UICONTROL 行銷動作]**。 行銷動作會指出將資料匯出至目的地的方式。 您可以從Adobe定義的行銷動作中選擇，也可以建立自己的行銷動作。 如需行銷動作的詳細資訊，請參閱[資料使用政策概述](../../../data-governance/policies/overview.md)。
+在此步驟中，您也可以選取任何應套用至此目的地的&#x200B;**[!UICONTROL Marketing actions]**。 行銷動作會指出將資料匯出至目的地的方式。 您可以從Adobe定義的行銷動作中選擇，也可以建立自己的行銷動作。 如需行銷動作的詳細資訊，請參閱[資料使用政策概述](../../../data-governance/policies/overview.md)。
 
-完成後，選擇&#x200B;**[!UICONTROL 建立目標]**。
+完成後，選擇&#x200B;**[!UICONTROL Create destination]**。
 
 ![驗證](../../assets/catalog/cloud-storage/blob/authentication.png)
 
