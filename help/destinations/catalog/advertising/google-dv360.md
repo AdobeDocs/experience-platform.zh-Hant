@@ -3,7 +3,7 @@ keywords: DoubleClick競標管理器；DoubleClick競標管理器；DoubleClick�
 title: Google Display & Video 360連線
 description: Display & Video 360（先前稱為DoubleClick競標管理器）是一種工具，用於在顯示、視訊和行動庫存來源中執行重新鎖定目標及受眾目標數位促銷活動。
 translation-type: tm+mt
-source-git-commit: 0759919dc458798ca4bc5f233a9cb319194ea534
+source-git-commit: 7d579d85d427c45f39d000288ed883c7ffd003bf
 workflow-type: tm+mt
 source-wordcount: '772'
 ht-degree: 0%
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 [!DNL Display & Video 360](先前稱為 [!DNL DoubleClick Bid Manager])工具，用於在顯示、視訊和行動庫存來源上執行重新定位和受眾鎖定的數位促銷活動。
 
-## 目標規格
+## 目標詳細資訊{#specifics}
 
 請注意以下特定於[!DNL Google Display & Video 360]目標的詳細資訊：
 
@@ -26,7 +26,7 @@ ht-degree: 0%
 >
 >如果您想要使用Google Display &amp; Video 360建立您的第一個目的地，而且過去(在Adobe Audience Manager或其他應用程式中)未啟用Experience CloudID服務的[ID同步功能](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html)，請聯絡Adobe諮詢或客戶服務以啟用ID同步。 如果您先前在Audience Manager中設定Google整合，您設定的ID會同步至平台。
 
-### 支援的身份{#supported-identities}
+## 支援的身份{#supported-identities}
 
 [!DNL Google Ad Manager] 支援啟用下表所述的身分。
 
@@ -40,7 +40,7 @@ ht-degree: 0%
 | 女傭 | Microsoft廣告ID。 此ID可唯一識別執行Windows 10的裝置。 |  |
 | Amazon消防電視ID | 此ID可唯一識別Amazon消防電視。 |  |
 
-### 導出類型{#export-type}
+## 導出類型{#export-type}
 
 **區段匯出** -您正將區段（對象）的所有成員匯出至Google目標。
 
