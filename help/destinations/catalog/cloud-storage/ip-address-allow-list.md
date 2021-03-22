@@ -4,15 +4,17 @@ title: 'IP位址允許雲端儲存目標清單 '
 type: 文件
 description: 此頁提供可添加到允許清單的IP範圍，以安全地將資料從Experience Platform導出到SFTP伺服器、AmazonS3或Azure Blob儲存。
 translation-type: tm+mt
-source-git-commit: 648be489aa77870f67564ee350c4d85885673832
+source-git-commit: 709908196bb5df665c7e7df10dc58ee9f3b0edbf
 workflow-type: tm+mt
-source-wordcount: '187'
-ht-degree: 0%
+source-wordcount: '188'
+ht-degree: 1%
 
 ---
 
 
 # IP位址允許雲端儲存空間目標清單{#ip-address-allow-list}
+
+## 概述 {#overview}
 
 >[!IMPORTANT]
 >
