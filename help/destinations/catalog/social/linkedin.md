@@ -3,9 +3,9 @@ keywords: linkedin連接；linkedin連接；linkedin目的地；linkedin連接�
 title: Linkedin符合的觀眾連線
 description: 根據雜湊的電子郵件，啟用您LinkedIn促銷活動的個人檔案，以鎖定受眾、個人化和抑制受眾。
 translation-type: tm+mt
-source-git-commit: fd95357f3e3533fe6b7b9752798dd99eb1cc0eb5
+source-git-commit: 7d579d85d427c45f39d000288ed883c7ffd003bf
 workflow-type: tm+mt
-source-wordcount: '666'
+source-wordcount: '654'
 ht-degree: 0%
 
 ---
@@ -23,11 +23,7 @@ ht-degree: 0%
 
 軟體公司會組織會議，並希望與與會者保持聯絡，並根據與會者的出席狀況向他們展示個人化優惠。 公司可以將自己的[!DNL CRM]電子郵件位址或行動裝置ID收錄到Adobe Experience Platform。 然後，他們可以從自己的離線資料建立區段，並將這些區段傳送至[!DNL LinkedIn]社交平台，以最佳化其廣告支出。
 
-## 目標詳細資訊{#destination-specs}
-
-[!DNL LinkedIn Matched Audiences] 支援啟用下列身分：雜湊的電子 [!DNL GAID]郵件和 [!DNL IDFA]。
-
-### 支援的身份{#supported-identities}
+## 支援的身份{#supported-identities}
 
 [!DNL LinkedIn Matched Audiences] 支援啟用下表所述的身分。進一步瞭解[identities](/help/identity-service/namespaces.md)。
 
@@ -38,23 +34,23 @@ ht-degree: 0%
 | email_lc_sha256 | 使用SHA256演算法雜湊的電子郵件地址 | Adobe Experience Platform支援純文字和SHA256雜湊電子郵件地址。 請依照[ID符合要求](#id-matching-requirements-id-matching-requirements)區段中的指示，分別針對純文字和雜湊電子郵件使用適當的名稱空間。 當來源欄位包含未雜湊屬性時，請勾選&#x200B;**[!UICONTROL Apply transformation]**&#x200B;選項，讓[!DNL Platform]在啟動時自動雜湊資料。 |
 
 
-### 導出類型{#export-type}
+## 導出類型{#export-type}
 
 **區段匯出** -您正匯出區段（對象）的所有成員，並使用目標中使用的識別碼（名稱、電話號碼等） [!DNL LinkedIn Matched Audiences] 。
 
-### LinkedIn帳戶的先決條件{#LinkedIn-account-prerequisites}
+## LinkedIn帳戶的先決條件{#LinkedIn-account-prerequisites}
 
 使用[!UICONTROL LinkedIn Matched Audience]目標之前，請確定您的[!DNL LinkedIn Campaign Manager]帳戶具有[!DNL Creative Manager]權限級別或更高級別。
 
 如要瞭解如何編輯[!DNL LinkedIn Campaign Manager]使用者權限，請參閱LinkedIn檔案中的[新增、編輯和移除廣告帳戶的使用者權限](https://www.linkedin.com/help/lms/answer/5753)。
 
-### ID匹配要求{#id-matching-requirements}
+## ID匹配要求{#id-matching-requirements}
 
 [!DNL LinkedIn Matched Audiences] 要求不會傳送任何個人識別資訊(PII)。因此，激活至[!DNL LinkedIn Matched Audiences]的觀眾可以鍵入&#x200B;*雜湊*&#x200B;識別碼，例如電子郵件地址或行動裝置ID。
 
 您必須依據您收錄至Adobe Experience Platform的ID類型，遵守其相應要求。
 
-#### 電子郵件散列要求{#email-hashing-requirements}
+## 電子郵件散列要求{#email-hashing-requirements}
 
 您可以先將電子郵件地址雜湊，再將其匯入Adobe Experience Platform，或在Experience Platform中清楚使用電子郵件地址，並在啟動時讓[!DNL Platform]雜湊這些地址。
 
