@@ -1,17 +1,19 @@
 ---
 keywords: 電子郵件；電子郵件；電子郵件；電子郵件目標；salesforce;salesforce目標
-title: Salesforce Marketing Cloud連線
-seo-description: Salesforce Marketing Cloud是數位行銷套裝，先前稱為ExactTarget，可讓您為訪客和客戶建構並自訂歷程，以個人化其體驗。
+title: SalesforceMarketing Cloud連線
+seo-description: SalesforceMarketing Cloud是數位行銷套件，先前稱為ExactTarget，可讓您為訪客和客戶建構並自訂歷程，以個人化其體驗。
 translation-type: tm+mt
-source-git-commit: 6e7ecfdc0b2cbf6f07e6b2220ec163289511375e
+source-git-commit: 709908196bb5df665c7e7df10dc58ee9f3b0edbf
 workflow-type: tm+mt
-source-wordcount: '620'
+source-wordcount: '579'
 ht-degree: 0%
 
 ---
 
 
 # [!DNL Salesforce Marketing Cloud] 連接
+
+## 概述 {#overview}
 
 [[!DNL Salesforce Marketing Cloud]](https://www.salesforce.com/products/marketing-cloud/email-marketing/) 是數位行銷套裝，先前稱為ExactTarget，可讓您為訪客和客戶建立和自訂歷程，以個人化其體驗。
 
@@ -23,29 +25,29 @@ ht-degree: 0%
 
 ## 連接目標{#connect-destination}
 
-在&#x200B;**[!UICONTROL 連接]** > **[!UICONTROL 目標]**&#x200B;中，選擇[!DNL Salesforce Marketing Cloud] ，然後選擇&#x200B;**[!UICONTROL 連接目標]**。
+在&#x200B;**[!UICONTROL Connections]** > **[!UICONTROL Destinations]**&#x200B;中，選擇[!DNL Salesforce Marketing Cloud]，然後選擇&#x200B;**[!UICONTROL Connect destination]**。
 
 ![連線至Salesforce](../../assets/catalog/email-marketing/salesforce/catalog.png)
 
-在&#x200B;**[!UICONTROL Authentication]**&#x200B;步驟中，如果您先前已設定到雲儲存目標的連接，請選擇&#x200B;**[!UICONTROL Existing Account]**&#x200B;並選擇一個現有連接。 或者，您可以選擇&#x200B;**[!UICONTROL 新帳戶]**&#x200B;來設定新連接。 填寫您的帳戶驗證憑證，然後選擇&#x200B;**[!UICONTROL 連接到目標]**。 對於[!DNL Salesforce Marketing Cloud]，可以在&#x200B;**[!UICONTROL 使用密碼]**&#x200B;的SFTP和&#x200B;**[!UICONTROL 使用SSH密鑰]**&#x200B;的SFTP之間進行選擇。 根據您的連接類型填寫以下資訊，然後選擇&#x200B;**[!UICONTROL 連接到目標]**。
+在&#x200B;**[!UICONTROL Authentication]**&#x200B;步驟中，如果您先前已設定到雲儲存目標的連接，請選擇&#x200B;**[!UICONTROL Existing Account]**&#x200B;並選擇一個現有連接。 或者，您可以選擇&#x200B;**[!UICONTROL New Account]**&#x200B;來設定新連接。 填寫您的帳戶驗證憑證，然後選取&#x200B;**[!UICONTROL Connect to destination]**。 對於[!DNL Salesforce Marketing Cloud]，可以選擇&#x200B;**[!UICONTROL SFTP with Password]**&#x200B;和&#x200B;**[!UICONTROL SFTP with SSH Key]**。 根據您的連線類型，填寫下列資訊，然後選取&#x200B;**[!UICONTROL Connect to destination]**。
 
-對於具有Password ]**連接的**[!UICONTROL  SFTP，必須提供域、埠、用戶名和密碼。
+對於&#x200B;**[!UICONTROL SFTP with Password]**&#x200B;連接，必須提供域、埠、用戶名和密碼。
 
-對於具有SSH密鑰&#x200B;]**連接的**[!UICONTROL  SFTP，必須提供域、埠、用戶名和SSH密鑰。
+對於&#x200B;**[!UICONTROL SFTP with SSH Key]**&#x200B;連接，必須提供域、埠、用戶名和SSH密鑰。
 
 ![填寫Salesforce資訊](../../assets/catalog/email-marketing/salesforce/account-info.png)
 
 在&#x200B;**[!UICONTROL Setup]**&#x200B;步驟中，填寫目標的相關資訊，如下所示：
-- **[!UICONTROL 名稱]**:為目的地選擇相關名稱。
-- **[!UICONTROL 說明]**:輸入目標的說明。
-- **[!UICONTROL 貯體名稱]**:您的Amazon S3儲存貯體，Platform將儲存資料匯出。您的輸入長度必須介於3到63個字元之間。 必須以字母或數字開頭和結尾。 只能包含小寫字母、數字或連字型大小(-)。 不得格式化為IP位址（例如192.100.1.1）。
-- **[!UICONTROL 資料夾路徑]**:在您的儲存位置提供路徑，讓Platform將匯出資料儲存為CSV或Tab分隔檔案。
-- **[!UICONTROL 檔案格式]**: **CSV** 或 **TAB_DELIMITED**。選擇要導出到儲存位置的檔案格式。
-- **[!UICONTROL 行銷動作]**:行銷動作會指出將資料匯出至目的地的方式。您可以從Adobe定義的行銷動作中選擇，也可以建立自己的行銷動作。 如需行銷動作的詳細資訊，請參閱Adobe Experience Platform中的[資料治理](../../../data-governance/policies/overview.md)頁面。 如需個別Adobe定義之行銷動作的詳細資訊，請參閱[資料使用政策概觀](../../../data-governance/policies/overview.md)。
+- **[!UICONTROL Name]**:為目的地選擇相關名稱。
+- **[!UICONTROL Description]**:輸入目標的說明。
+- **[!UICONTROL Bucket name]**:您的AmazonS3儲存貯體，平台將存放資料匯出。您的輸入長度必須介於3到63個字元之間。 必須以字母或數字開頭和結尾。 只能包含小寫字母、數字或連字型大小(-)。 不得格式化為IP位址（例如192.100.1.1）。
+- **[!UICONTROL Folder Path]**:在您的儲存位置提供路徑，讓Platform將匯出資料儲存為CSV或Tab分隔檔案。
+- **[!UICONTROL File Format]**: **CSV** 或 **TAB_DELIMITED**。選擇要導出到儲存位置的檔案格式。
+- **[!UICONTROL Marketing actions]**:行銷動作會指出將資料匯出至目的地的方式。您可以從Adobe定義的行銷動作中選擇，也可以建立自己的行銷動作。 如需行銷動作的詳細資訊，請參閱「Adobe Experience Platform的資料治理」頁面。 [](../../../data-governance/policies/overview.md)如需個別Adobe定義之行銷動作的詳細資訊，請參閱[資料使用政策概述](../../../data-governance/policies/overview.md)。
 
 ![Salesforce基本資訊](../../assets/catalog/email-marketing/salesforce/basic-information.png)
 
-填寫上述欄位後，按一下「建立目標」。 ****&#x200B;您的目標現在已連線，您可以[啟動區段](../../ui/activate-destinations.md)至目標。
+填寫上述欄位後，按一下&#x200B;**[!UICONTROL Create destination]**。 您的目標現在已連線，您可以[啟動區段](../../ui/activate-destinations.md)至目標。
 
 ## 啟用區段{#activate-segments}
 
@@ -61,4 +63,4 @@ ht-degree: 0%
 
 ## 將資料導入設定為[!DNL Salesforce Marketing Cloud] {#import-data-into-salesforce}
 
-將平台連接到[!DNL Amazon S3]或SFTP儲存後，必須將資料從儲存位置導入[!DNL Salesforce Marketing Cloud]。 如要瞭解如何完成此作業，請參閱[!DNL Salesforce Help Center]中的「從檔案](https://help.salesforce.com/articleView?id=mc_es_import_subscribers_from_file.htm&amp;type=5)將訂閱者匯入Marketing Cloud」。[
+將平台連接到[!DNL Amazon S3]或SFTP儲存後，必須將資料從儲存位置導入[!DNL Salesforce Marketing Cloud]。 要瞭解如何完成此操作，請參閱[!DNL Salesforce Help Center]中的[將訂閱者從檔案](https://help.salesforce.com/articleView?id=mc_es_import_subscribers_from_file.htm&amp;type=5)導入Marketing Cloud。
