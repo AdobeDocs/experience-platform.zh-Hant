@@ -3,7 +3,7 @@ keywords: 行動裝置；硬；訊息；
 title: Braze連接
 description: Braze是一個全面的客戶互動平台，為客戶和他們喜愛的品牌提供相關且值得回味的體驗。
 translation-type: tm+mt
-source-git-commit: 709908196bb5df665c7e7df10dc58ee9f3b0edbf
+source-git-commit: 24e0a274e61fcf6311c647067920686e4f25e840
 workflow-type: tm+mt
 source-wordcount: '901'
 ht-degree: 1%
@@ -25,7 +25,7 @@ ht-degree: 1%
 
 要向[!DNL Braze]發送配置檔案資料，必須首先連接到目標。
 
-## 目標規格{#destination-specs}
+## 目標詳細資訊{#specifics}
 
 請注意以下特定於[!DNL Braze]目標的詳細資訊：
 
