@@ -3,9 +3,9 @@ keywords: 行動裝置；硬；訊息；
 title: Braze連接
 description: Braze是一個全面的客戶互動平台，為客戶和他們喜愛的品牌提供相關且值得回味的體驗。
 translation-type: tm+mt
-source-git-commit: 7d579d85d427c45f39d000288ed883c7ffd003bf
+source-git-commit: 709908196bb5df665c7e7df10dc58ee9f3b0edbf
 workflow-type: tm+mt
-source-wordcount: '900'
+source-wordcount: '901'
 ht-degree: 1%
 
 ---
@@ -16,6 +16,8 @@ ht-degree: 1%
 >[!IMPORTANT]
 >
 >Adobe Experience Platform的Braze目前正在測試中。 文件和功能可能會有所變更。
+
+## 概述 {#overview}
 
 [!DNL Braze]目的地可協助您將描述檔資料傳送至[!DNL Braze]。
 
