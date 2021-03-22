@@ -3,15 +3,17 @@ keywords: Azure事件中樞目標；azure事件中樞；azure事件中樞
 title: （測試版）Azure事件集線器連接
 description: 建立Azure事件集線器儲存空間的即時出站連線，以串流來自Experience Platform的資料。
 translation-type: tm+mt
-source-git-commit: 7d579d85d427c45f39d000288ed883c7ffd003bf
+source-git-commit: 709908196bb5df665c7e7df10dc58ee9f3b0edbf
 workflow-type: tm+mt
-source-wordcount: '531'
+source-wordcount: '532'
 ht-degree: 2%
 
 ---
 
 
 # （測試版）[!DNL Azure Event Hubs]連線
+
+## 概述 {#overview}
 
 >[!IMPORTANT]
 >
