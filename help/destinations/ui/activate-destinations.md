@@ -6,9 +6,9 @@ seo-title: 將描述檔和區段啟用至目標
 description: 將區段對應至目的地，以啟用您在Adobe Experience Platform的資料。 若要完成此作業，請遵循下列步驟。
 seo-description: 將區段對應至目的地，以啟用您在Adobe Experience Platform的資料。 若要完成此作業，請遵循下列步驟。
 translation-type: tm+mt
-source-git-commit: 709908196bb5df665c7e7df10dc58ee9f3b0edbf
+source-git-commit: 0992b223a96b77446a9f9c2823f5195541dd93fa
 workflow-type: tm+mt
-source-wordcount: '2071'
+source-wordcount: '2069'
 ht-degree: 0%
 
 ---
@@ -102,7 +102,7 @@ ht-degree: 0%
 
 選擇目標欄位：
 
-* 當您的源名稱空間為`Email`或`Email_LC_SHA256`時，選擇`Email_LC_SHA256`名稱空間作為目標標識。
+* 當源名稱空間為`Email`或`Email_LC_SHA256`時，選擇`Email_LC_SHA256`名稱空間作為目標標識。
 * 當源名稱空間為`PHONE_E.164`或`Phone_SHA256_E.164`時，選擇`Phone_SHA256_E.164`名稱空間作為目標標識。
 * 當源名稱空間為`IDFA`或`GAID`時，選擇`IDFA`或`GAID`名稱空間作為目標標識。
 * 當您的來源名稱空間是自訂名稱空間時，請選取`User_ID`名稱空間作為目標識別。
@@ -143,7 +143,7 @@ ht-degree: 0%
 
 預設檔案名稱包含目標名稱、區段ID和日期和時間指標。 例如，您可以編輯匯出的檔案名稱，以區分不同的促銷活動，或將資料匯出時間附加至檔案。
 
-選取鉛筆圖示以開啟模式視窗並編輯檔案名稱。 請注意，檔案名稱的限制為255個字元。
+選取鉛筆圖示以開啟模式視窗並編輯檔案名稱。 檔案名稱上限為255個字元。
 
 ![配置檔案名](../assets/ui/activate-destinations/configure-name.png)
 
