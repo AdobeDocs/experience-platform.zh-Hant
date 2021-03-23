@@ -1,12 +1,12 @@
 ---
 keywords: 目標；目標；目標詳細資訊頁；目標詳細資訊頁
 title: 檢視目標詳細資訊
-description: '個別目的地的詳細資訊頁面提供目的地詳細資訊的概述，例如目的地名稱、ID、對應至目的地的區段，以及編輯啟動和啟用和停用資料流的控制項。 '
-seo-description: '個別目的地的詳細資訊頁面提供目的地詳細資訊的概述，例如目的地名稱、ID、對應至目的地的區段，以及編輯啟動和啟用和停用資料流的控制項。 '
+description: '個別目標的詳細資料頁面提供目標詳細資料的概述。 目標詳細資訊包括目標名稱、ID、對應至目標的區段，以及用於編輯啟動以及啟用和停用資料流的控制項。 '
+seo-description: '個別目標的詳細資料頁面提供目標詳細資料的概述。 目標詳細資訊包括目標名稱、ID、對應至目標的區段，以及用於編輯啟動以及啟用和停用資料流的控制項。 '
 translation-type: tm+mt
-source-git-commit: 709908196bb5df665c7e7df10dc58ee9f3b0edbf
+source-git-commit: 49905060a18fc94fe524401fb3cf86f212b639ce
 workflow-type: tm+mt
-source-wordcount: '697'
+source-wordcount: '698'
 ht-degree: 0%
 
 ---
