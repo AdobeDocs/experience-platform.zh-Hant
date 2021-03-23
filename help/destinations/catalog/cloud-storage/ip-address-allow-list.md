@@ -4,7 +4,7 @@ title: 'IP位址允許雲端儲存目標清單 '
 type: 文件
 description: 此頁提供可添加到允許清單的IP範圍，以安全地將資料從Experience Platform導出到SFTP伺服器、AmazonS3或Azure Blob儲存。
 translation-type: tm+mt
-source-git-commit: 7d7568de57cf79843a833a05b9bdfa6eb048bdbc
+source-git-commit: 49905060a18fc94fe524401fb3cf86f212b639ce
 workflow-type: tm+mt
 source-wordcount: '212'
 ht-degree: 0%
@@ -14,13 +14,13 @@ ht-degree: 0%
 
 # IP位址允許雲端儲存空間目標清單{#ip-address-allow-list}
 
-## 概述 {#overview}
-
 >[!IMPORTANT]
 >
 > * Adobe建議您將此頁面設為書籤，每三個月重新造訪一次，以檢查最新的IP位址。 Adobe不提供新IP範圍的通知。
 > * 雖然Adobe支援將資料匯出至SFTP伺服器，但建議的雲端儲存位置會是[!DNL Amazon S3]和[!DNL Azure Blob]。
 
+
+## 概述 {#overview}
 
 本頁提供可添加到允許清單的IP範圍，以安全地將資料從Experience Platform導出到[SFTP伺服器](./sftp.md)、[AmazonS3](./amazon-s3.md)或[Azure Blob](./azure-blob.md)儲存。
 
