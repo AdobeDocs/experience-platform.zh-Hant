@@ -3,11 +3,11 @@ keywords: Experience Platform;home；熱門主題；分段；分段；分段服�
 solution: Experience Platform
 title: 區段定義API端點
 topic: 開發人員指南
-description: Adobe Experience Platform Segmentation Service API中的區段定義端點可讓您以程式設計方式管理組織的區段定義。
+description: Adobe Experience Platform區段服務API中的區段定義端點可讓您以程式設計方式管理組織的區段定義。
 translation-type: tm+mt
-source-git-commit: 24a5af0440f58b4e1db639ec971c4e1611f107d8
+source-git-commit: 4e4672f4101f92f035985d187512d917890aab6b
 workflow-type: tm+mt
-source-wordcount: '1124'
+source-wordcount: '1174'
 ht-degree: 3%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 3%
 
 # 區段定義端點
 
-Adobe Experience Platform可讓您建立區段，從一組描述檔定義一組特定屬性或行為。 段定義是一個對象，用於封裝寫入[!DNL Profile Query Language](PQL)中的查詢。 此對象也稱為PQL謂語。 PQL謂語根據與您提供給[!DNL Real-time Customer Profile]的任何記錄或時間系列資料相關的條件定義段規則。 有關編寫PQL查詢的詳細資訊，請參見[ PQL指南](../pql/overview.md)。
+Adobe Experience Platform可讓您建立區段，從一組描述檔中定義一組特定屬性或行為。 段定義是一個對象，用於封裝寫入[!DNL Profile Query Language](PQL)中的查詢。 此對象也稱為PQL謂語。 PQL謂語根據與您提供給[!DNL Real-time Customer Profile]的任何記錄或時間系列資料相關的條件定義段規則。 有關編寫PQL查詢的詳細資訊，請參見[ PQL指南](../pql/overview.md)。
 
 本指南提供相關資訊，以協助您進一步瞭解區段定義，並包含使用API執行基本動作的範例API呼叫。
 
@@ -154,7 +154,7 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/definitions?limit=2 
 
 ## 建立新的區段定義{#create}
 
-您可以向`/segment/definitions`端點發出POST請求，以建立新的段定義。
+您可以向`/segment/definitions`端點發出POST請求，以建立新段定義。
 
 **API格式**
 
@@ -257,7 +257,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/definitions
 
 ## 檢索特定段定義{#get}
 
-您可以向`/segment/definitions`端點發出GET請求，並提供您要在請求路徑中檢索的段定義的ID，以檢索有關特定段定義的詳細資訊。
+您可以向`/segment/definitions`端點提出GET請求，並在請求路徑中提供您要檢索的段定義ID，以檢索有關特定段定義的詳細資訊。
 
 **API格式**
 
@@ -500,7 +500,7 @@ curl -X DELETE https://platform.adobe.io/data/core/ups/segment/definitions/4afe3
 
 ## 更新特定區段定義
 
-通過向`/segment/definitions`端點發出PATCH請求，並在請求路徑中提供要更新的段定義的ID，可以更新特定段定義。
+您可以更新特定區段定義，方法是向`/segment/definitions`端點提出PATCH請求，並在請求路徑中提供您要更新的區段定義ID。
 
 **API格式**
 
@@ -588,6 +588,67 @@ curl -X PATCH https://platform.adobe.io/data/core/ups/segment/definitions/4afe34
     "creationTime": 0,
     "updateEpoch": 1579295340,
     "updateTime": 1579295340000
+}
+```
+
+## 轉換區段定義
+
+您可以向`/segment/conversion`端點發出POST請求，將`pql/text`和`pql/json`或`pql/json`之間的段定義轉換為`pql/text`。
+
+**API格式**
+
+```http
+POST /segment/conversion
+```
+
+**請求**
+
+下列請求會將區段定義的格式從`pql/text`變更為`pql/json`。
+
+```shell
+curl -X POST https://platform.adobe.io/data/core/ups/segment/conversion \
+ -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+ -H 'Content-Type: application/json' \
+ -H 'x-gw-ims-org-id: {IMS_ORG}' \
+ -H 'x-api-key: {API_KEY}' \
+ -H 'x-sandbox-name: {SANDBOX_NAME}'
+ -d '{
+        "name": "People who ordered in the last 30 days",
+        "profileInstanceId": "ups",
+        "description": "Last 30 days",
+        "expression": {
+            "type": "PQL",
+            "format": "pql/text",
+            "value": "workAddress.country = \"US\""
+        },
+        "schema": {
+            "name": "_xdm.context.profile"
+        },
+        "payloadSchema": "string",
+        "ttlInDays": 60
+    }'
+```
+
+**回應**
+
+成功的回應會傳回HTTP狀態200，並包含您新轉換的區段定義的詳細資訊。
+
+```json
+{
+    "ttlInDays": 60,
+    "imsOrgId": "6A29340459CA8D350A49413A@AdobeOrg",
+    "sandbox": {
+        "sandboxId": "ff0f6870-c46d-11e9-8ca3-036939a64204",
+        "sandboxName": "prod",
+        "type": "production",
+        "default": true
+    },
+    "description": "Last 30 days",
+    "expression": {
+        "type": "PQL",
+        "format": "pql/json",
+        "value": "{\"nodeType\":\"fnApply\",\"fnName\":\"=\",\"params\":[{\"nodeType\":\"fieldLookup\",\"fieldName\":\"country\",\"object\":{\"nodeType\":\"fieldLookup\",\"fieldName\":\"workAddress\",\"object\":{\"nodeType\":\"parameterReference\",\"position\":1}}},{\"nodeType\":\"literal\",\"literalType\":\"String\",\"value\":\"US\"}]}"
+    }
 }
 ```
 
