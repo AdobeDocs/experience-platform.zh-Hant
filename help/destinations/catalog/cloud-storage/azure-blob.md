@@ -3,9 +3,9 @@ keywords: Azure Blob;Blob目標；s3;azure blob目標
 title: Azure Blob連接
 description: 建立Azure Blob儲存空間的即時對外連線，以定期從Adobe Experience Platform匯出以Tab分隔或CSV資料檔案。
 translation-type: tm+mt
-source-git-commit: 709908196bb5df665c7e7df10dc58ee9f3b0edbf
+source-git-commit: 02754055e2be8a45a0699386cb559dad8f25717c
 workflow-type: tm+mt
-source-wordcount: '580'
+source-wordcount: '577'
 ht-degree: 1%
 
 ---
@@ -56,7 +56,7 @@ ht-degree: 1%
 
 有關配置[!DNL Blob]連接字串的詳細資訊，請參閱Microsoft文檔中的[配置Azure儲存帳戶的連接字串。](https://docs.microsoft.com/en-us/azure/storage/common/storage-configure-connection-string#configure-a-connection-string-for-an-azure-storage-account)
 
-或者，您可以附加RSA格式的公鑰，以便將加密添加到導出的檔案。 請注意，此公共密鑰&#x200B;**必須**&#x200B;寫入為Base64編碼字串。
+或者，您可以附加RSA格式的公鑰，以便將加密添加到導出的檔案。 您的公開金鑰必須寫入為[!DNL Base64]編碼字串。
 
 ![新帳戶](../../assets/catalog/cloud-storage/blob/new.png)
 
