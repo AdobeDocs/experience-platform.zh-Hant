@@ -3,9 +3,9 @@ keywords: email;Email;e-mail;email destinations;adobe campaign;campaign
 title: Adobe Campaign連接
 description: Adobe Campaign是一套解決方案，可協助您跨所有線上及線下通道個人化並傳遞宣傳活動。
 translation-type: tm+mt
-source-git-commit: 709908196bb5df665c7e7df10dc58ee9f3b0edbf
+source-git-commit: 02754055e2be8a45a0699386cb559dad8f25717c
 workflow-type: tm+mt
-source-wordcount: '794'
+source-wordcount: '762'
 ht-degree: 0%
 
 ---
@@ -38,12 +38,12 @@ Adobe Campaign是一套解決方案，可協助您跨所有線上及線下通道
 
 ![設定促銷活動精靈](../../assets/catalog/email-marketing/adobe-campaign/connection-type.png)
 
-- 對於&#x200B;**[!UICONTROL Amazon S3]**&#x200B;連接，必須提供訪問密鑰ID和密鑰。
-- 對於&#x200B;**[!UICONTROL SFTP with Password]**&#x200B;連接，必須提供域、埠、用戶名和密碼。
-- 對於&#x200B;**[!UICONTROL SFTP with SSH Key]**&#x200B;連接，必須提供域、埠、用戶名和SSH密鑰。
+- 對於&#x200B;**[!UICONTROL Amazon S3]**&#x200B;連接，必須提供[!UICONTROL Access Key ID]和[!UICONTROL Secret Access Key]。
+- 對於&#x200B;**[!UICONTROL SFTP with Password]**&#x200B;連接，必須提供[!UICONTROL Domain]、[!UICONTROL Port]、[!UICONTROL Username]和[!UICONTROL Password]。
+- 對於&#x200B;**[!UICONTROL SFTP with SSH Key]**&#x200B;連接，必須提供[!UICONTROL Domain]、[!UICONTROL Port]、[!UICONTROL Username]和[!UICONTROL SSH Key]。
 - 對於&#x200B;**[!UICONTROL Azure Blob]**&#x200B;連接，必須提供連接字串。
 
-或者，您可以將RSA格式的公鑰附加到&#x200B;**[!UICONTROL Key]**&#x200B;部分下的導出檔案中，以添加PGP/GPG加密。 請注意，此公共密鑰&#x200B;**必須**&#x200B;寫入為Base64編碼字串。
+或者，您可以將RSA格式的公鑰附加到&#x200B;**[!UICONTROL Key]**&#x200B;部分下的導出檔案中，以添加PGP/GPG加密。 您的公開金鑰必須寫入為[!DNL Base64]編碼字串。
 
 ![填寫促銷活動資訊](../../assets/catalog/email-marketing/adobe-campaign/account-info.png)
 
@@ -54,7 +54,7 @@ Adobe Campaign是一套解決方案，可協助您跨所有線上及線下通道
 - **[!UICONTROL Folder Path]**:在儲存位置中提供將匯出資 [!DNL Platform] 料儲存為CSV或Tab分隔檔案的路徑。
 - **[!UICONTROL Container]**: *用於Blob連接*。保存資料夾路徑所在的Blob的容器。
 - **[!UICONTROL File Format]**: **CSV** 或 **TAB_DELIMITED**。選擇要導出到儲存位置的檔案格式。
-- **[!UICONTROL Marketing actions]**:行銷動作會指出將資料匯出至目的地的方式。您可以從Adobe定義的行銷動作中選擇，也可以建立自己的行銷動作。 如需行銷動作的詳細資訊，請參閱[資料使用政策概述](../../../data-governance/policies/overview.md)頁面。 另請參閱同一份檔案中的[Adobe定義的行銷動作](../../../data-governance/policies/overview.md#core-actions)。
+- **[!UICONTROL Marketing actions]**:行銷動作會指出將資料匯出至目的地的方式。您可以從Adobe定義的行銷動作中選擇，也可以建立自己的行銷動作。 如需行銷動作的詳細資訊，請參閱[資料使用政策概述](../../../data-governance/policies/overview.md)頁面。
 
 ![促銷活動基本資訊](../../assets/catalog/email-marketing/adobe-campaign/basic-information.png)
 
@@ -66,7 +66,7 @@ Adobe Campaign是一套解決方案，可協助您跨所有線上及線下通道
 
 ## 目標屬性{#destination-attributes}
 
-當[啟用區段](../../ui/activate-destinations.md)至Adobe Campaign目的地時，我們建議您從[union架構](../../../profile/home.md#profile-fragments-and-union-schemas)中選取唯一識別碼。 選擇要導出到目標的唯一標識符和任何其他XDM欄位。 如需詳細資訊，請參閱電子郵件行銷目標檔案中的[選擇要在匯出檔案](./overview.md#destination-attributes)中當做目標屬性的架構欄位。
+當[啟用區段](../../ui/activate-destinations.md)至Adobe Campaign目的地時，Adobe建議您從[union架構](../../../profile/home.md#profile-fragments-and-union-schemas)中選擇唯一識別碼。 選擇要導出到目標的唯一標識符和任何其他XDM欄位。 有關詳細資訊，請參閱[選擇在導出檔案中用作目標屬性的架構欄位](./overview.md#destination-attributes)。
 
 ## 導出資料{#exported-data}
 
