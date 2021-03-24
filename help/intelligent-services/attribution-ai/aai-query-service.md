@@ -2,12 +2,12 @@
 keywords: 見解；歸因ai；歸因ai洞察；AAI查詢服務；歸因查詢；歸因分數
 solution: Intelligent Services, Experience Platform
 title: 使用查詢服務分析歸因分數
-topic: Attribution AI queries
-description: 瞭解如何使用Adobe Experience Platform Query Service來分析Attribution AI分數。
+topic: Attribution AI查詢
+description: 瞭解如何使用Adobe Experience Platform查詢服務來分析Attribution AI分數。
 translation-type: tm+mt
-source-git-commit: eb163949f91b0d1e9cc23180bb372b6f94fc951f
+source-git-commit: d83244ac93830b0e40f6d14e87497d4cb78544d9
 workflow-type: tm+mt
-source-wordcount: '487'
+source-wordcount: '581'
 ht-degree: 0%
 
 ---
@@ -21,11 +21,11 @@ ht-degree: 0%
 | ---------------------- | ------ |
 | 觸點名稱 | `touchpointsDetail. touchpointName` |
 | 觸點頻道 | `touchpointsDetail.touchPoint.mediaChannel` |
-| 觸點歸因AI演算法分數 | <li>`touchpointsDetail.scores.algorithmicSourced`</li> <li> `touchpointsDetail.scores.algorithmicInfluenced` </li> |
+| 觸點Attribution AI演算法分數 | <li>`touchpointsDetail.scores.algorithmicSourced`</li> <li> `touchpointsDetail.scores.algorithmicInfluenced` </li> |
 
 ## 尋找資料路徑
 
-在Adobe Experience Platform UI中，選取左側導覽中的&#x200B;**[!UICONTROL Datasets]**。 此時將顯示&#x200B;**[!UICONTROL Datasets]**&#x200B;頁。 接著，選取&#x200B;**[!UICONTROL Browse]**&#x200B;標籤，並尋找Attribution AI分數的輸出資料集。
+在Adobe Experience PlatformUI中，選擇左側導覽中的&#x200B;**[!UICONTROL Datasets]**。 此時將顯示&#x200B;**[!UICONTROL Datasets]**&#x200B;頁。 接著，選取&#x200B;**[!UICONTROL Browse]**&#x200B;標籤，並尋找您的Attribution AI分數的輸出資料集。
 
 ![存取您的例項](./images/aai-query/datasets_browse.png)
 
@@ -33,7 +33,7 @@ ht-degree: 0%
 
 ![資料集活動頁](./images/aai-query/select_preview.png)
 
-在資料集活動頁面中，選取右上角的&#x200B;**[!UICONTROL 預覽資料集]**，以預覽您的資料，並確定資料已如預期接收。
+在資料集活動頁面中，選取右上角的&#x200B;**[!UICONTROL Preview dataset]**&#x200B;以預覽資料，並確定資料已如預期接收。
 
 ![預覽資料集](./images/aai-query/preview_dataset.JPG)
 
@@ -41,17 +41,17 @@ ht-degree: 0%
 
 ![選擇方案](./images/aai-query/select_schema.png)
 
-使用計分結構，您可以選擇或搜索值。 選擇後，**[!UICONTROL 欄位屬性]**&#x200B;側欄將開啟，允許您複製用於建立查詢的路徑。
+使用計分結構，您可以選擇或搜索值。 選取後，**[!UICONTROL Field properties]**&#x200B;側欄會開啟，讓您複製路徑以用於建立查詢。
 
 ![複製路徑](./images/aai-query/copy_path.png)
 
 ## 存取查詢服務
 
-若要從平台UI存取查詢服務，請先在左側導覽中選取&#x200B;**[!UICONTROL Queries]**，然後選取&#x200B;**[!UICONTROL Browse]**&#x200B;標籤。 系統會載入先前儲存的查詢清單。
+若要從平台UI存取查詢服務，請從左側導覽中選取&#x200B;**[!UICONTROL Queries]**&#x200B;開始，然後選取&#x200B;**[!UICONTROL Browse]**&#x200B;標籤。 系統會載入先前儲存的查詢清單。
 
 ![查詢服務瀏覽](./images/aai-query/query_tab.png)
 
-接著，在右上角選擇「建立查詢」。 ****&#x200B;查詢編輯器將載入。 使用查詢編輯器，您可以開始使用計分資料建立查詢。
+接著，選取右上角的&#x200B;**[!UICONTROL Create query]**。 查詢編輯器將載入。 使用查詢編輯器，您可以開始使用計分資料建立查詢。
 
 ![查詢編輯器](./images/aai-query/query_example.png)
 
@@ -59,7 +59,7 @@ ht-degree: 0%
 
 ## 用于歸因分數分析的查詢範本
 
-以下查詢可用作不同分數分析變數的範本。 您需要將`_tenantId`和`your_score_output_dataset`取代為計分輸出結構中的適當值。
+以下查詢可用作不同分數分析藍本的範本。 您需要將`_tenantId`和`your_score_output_dataset`取代為計分輸出結構中的適當值。
 
 >[!NOTE]
 >
@@ -299,4 +299,58 @@ ht-degree: 0%
         conversionName, num_dist_tp
     ORDER BY
         conversionName, num_dist_tp
+```
+
+### 架構平面化和展開範例
+
+此查詢會將結構列平面化為多個奇異列，並將陣列分解為多個行。 這有助於將歸因分數轉換為CSV格式。 此查詢的輸出具有一個轉換和一個對應於每行中該轉換的觸點。
+
+>[!TIP]
+>
+> 在此範例中，除了`_tenantId`和`your_score_output_dataset`外，您還需要取代`{COLUMN_NAME}`。 `COLUMN_NAME`變數可取用在設定Attribution AI例項期間新增的選擇性傳遞欄名稱（報告欄）的值。 請檢閱計分輸出結構，以尋找完成此查詢所需的`{COLUMN_NAME}`值。
+
+```sql
+SELECT 
+  segmentation,
+  conversionName,
+  scoreCreatedTime,
+  aaid, _id, eventMergeId,
+  conversion.eventType as conversion_eventType,
+  conversion.quantity as conversion_quantity,
+  conversion.eventSource as conversion_eventSource,
+  conversion.priceTotal as conversion_priceTotal,
+  conversion.timestamp as conversion_timestamp,
+  conversion.geo as conversion_geo,
+  conversion.receivedTimestamp as conversion_receivedTimestamp,
+  conversion.dataSource as conversion_dataSource,
+  conversion.productType as conversion_productType,
+  conversion.passThrough.{COLUMN_NAME} as conversion_passThru_column,
+  conversion.skuId as conversion_skuId,
+  conversion.product as conversion_product,
+  touchpointName,
+  touchPoint.campaignGroup as tp_campaignGroup, 
+  touchPoint.mediaType as tp_mediaType,
+  touchPoint.campaignTag as tp_campaignTag,
+  touchPoint.timestamp as tp_timestamp,
+  touchPoint.geo as tp_geo,
+  touchPoint.receivedTimestamp as tp_receivedTimestamp,
+  touchPoint.passThrough.{COLUMN_NAME} as tp_passThru_column,
+  touchPoint.campaignName as tp_campaignName,
+  touchPoint.mediaAction as tp_mediaAction,
+  touchPoint.mediaChannel as tp_mediaChannel,
+  touchPoint.eventid as tp_eventid,
+  scores.*
+FROM (
+  SELECT
+        _tenantId.your_score_output_dataset.segmentation,
+        _tenantId.your_score_output_dataset.conversionName,
+        _tenantId.your_score_output_dataset.scoreCreatedTime,
+        _tenantId.your_score_output_dataset.conversion,
+        _id,
+        eventMergeId,
+        map_values(identityMap)[0][0].id as aaid,
+        inline(_tenantId.your_score_output_dataset.touchpointsDetail)
+  FROM
+        your_score_output_dataset
+)
 ```
