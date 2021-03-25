@@ -1,12 +1,13 @@
 ---
 keywords: Experience Platform；首頁；熱門主題
 solution: Experience Platform
-title: 對受眾細分強制執行資料使用規範
+title: 匯入和使用外部觀眾
+description: 請依照本教學課程學習如何搭配Adobe Experience Platform使用外部觀眾。
 topic: 教學課程
 translation-type: tm+mt
-source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
+source-git-commit: 400e4d9007212ed2693d031ae912a4f1cca97c57
 workflow-type: tm+mt
-source-wordcount: '640'
+source-wordcount: '630'
 ht-degree: 0%
 
 ---
@@ -28,7 +29,7 @@ Adobe Experience Platform支援匯入外部觀眾的能力，這些觀眾隨後�
 
 使用外部對象的第一步是建立身分名稱空間。 身分名稱空間可讓平台關聯區段的來源。
 
-要建立標識名稱空間，請按照[標識名稱空間指南](../../identity-service/namespaces.md#manage-namespaces)中的說明操作。 在建立身份名稱空間時，將源詳細資訊添加到身份名稱空間，並將其[!UICONTROL Type]標籤為&#x200B;**[!UICONTROL 非人員標識符]**。
+要建立標識名稱空間，請按照[標識名稱空間指南](../../identity-service/namespaces.md#manage-namespaces)中的說明操作。 在建立身份名稱空間時，將源詳細資訊添加到身份名稱空間，並將其[!UICONTROL Type]標籤為&#x200B;**[!UICONTROL Non-people identifier]**。
 
 ![](../images/tutorials/external-audiences/identity-namespace-info.png)
 
@@ -36,11 +37,11 @@ Adobe Experience Platform支援匯入外部觀眾的能力，這些觀眾隨後�
 
 建立身分命名空間後，您需要為要建立的區段建立新架構。
 
-要開始合成方案，請首先在左側導航欄上選擇&#x200B;**[!UICONTROL 方案]**，然後在方案工作區右上角選擇&#x200B;**[!UICONTROL 建立方案]**。 在此處，選擇&#x200B;**[!UICONTROL Browse]**&#x200B;以查看可用方案類型的完整選擇。
+要開始合成方案，請首先在左側導航欄上選擇&#x200B;**[!UICONTROL Schemas]**，然後選擇「方案」工作區右上角的&#x200B;**[!UICONTROL Create schema]**。 在此處，選擇&#x200B;**[!UICONTROL Browse]**&#x200B;以查看可用方案類型的完整選擇。
 
 ![](../images/tutorials/external-audiences/create-schema-browse.png)
 
-由於您要建立段定義（即預定義的類），因此選擇&#x200B;**[!UICONTROL 使用現有類]**。 現在，選擇&#x200B;**[!UICONTROL 段定義]**&#x200B;類，然後選擇&#x200B;**[!UICONTROL 分配類]**。
+由於您正在建立段定義（即預定義的類），因此請選擇&#x200B;**[!UICONTROL Use existing class]**。 現在，請選取&#x200B;**[!UICONTROL Segment definition]**&#x200B;類別，後面接著&#x200B;**[!UICONTROL Assign class]**。
 
 ![](../images/tutorials/external-audiences/assign-class.png)
 
@@ -48,17 +49,17 @@ Adobe Experience Platform支援匯入外部觀眾的能力，這些觀眾隨後�
 
 ![](../images/tutorials/external-audiences/mark-primary-identifier.png)
 
-將`_id`欄位標示為主要身分後，請選取架構的標題，接著選取標示為&#x200B;**[!UICONTROL Profile]**&#x200B;的切換。 選擇&#x200B;**[!UICONTROL 啟用]**&#x200B;以啟用[!DNL Real-time Customer Profile]的模式。
+將`_id`欄位標示為主要身分後，請選取架構的標題，接著選取標示為&#x200B;**[!UICONTROL Profile]**&#x200B;的切換。 選擇&#x200B;**[!UICONTROL Enable]**&#x200B;以啟用[!DNL Real-time Customer Profile]的架構。
 
 ![](../images/tutorials/external-audiences/schema-profile.png)
 
-現在，此架構已針對描述檔啟用，且主要識別碼已指派給您建立的非人員身分名稱空間。 因此，這表示使用此架構匯入至平台的區段中繼資料將會收錄至「描述檔」，而不會與其他人員相關的描述檔資料合併。
+現在，此架構已針對描述檔啟用，並將主要識別碼指派給您建立的非人員身分名稱空間。 因此，這表示使用此架構匯入至平台的區段中繼資料將會收錄至「描述檔」，而不會與其他人員相關的描述檔資料合併。
 
 ## 為模式建立資料集
 
 設定結構後，您需要為區段中繼資料建立資料集。
 
-要建立資料集，請按照[dataset使用手冊](../../catalog/datasets/user-guide.md#create)中的說明操作。 您將希望使用先前建立的模式，遵循&#x200B;**[!UICONTROL 從模式]**&#x200B;建立資料集選項。
+要建立資料集，請按照[dataset使用手冊](../../catalog/datasets/user-guide.md#create)中的說明操作。 您將希望使用先前建立的架構，遵循&#x200B;**[!UICONTROL Create dataset from schema]**&#x200B;選項。
 
 ![](../images/tutorials/external-audiences/select-schema.png)
 
@@ -78,7 +79,7 @@ Adobe Experience Platform支援匯入外部觀眾的能力，這些觀眾隨後�
 
 ## 使用匯入的觀眾建立區段
 
-一旦設定匯入的觀眾後，就可以當做區段程式的一部分使用。 若要尋找外部對象，請前往「區段產生器」，並在&#x200B;**[!UICONTROL 欄位]**&#x200B;區段中選取「對象&#x200B;]**」標籤。**[!UICONTROL 
+一旦設定匯入的觀眾後，就可以當做區段程式的一部分使用。 若要尋找外部對象，請前往「區段產生器」，並在&#x200B;**[!UICONTROL Fields]**&#x200B;區段中選取&#x200B;**[!UICONTROL Audiences]**&#x200B;標籤。
 
 ![](../images/tutorials/external-audiences/external-audiences.png)
 
