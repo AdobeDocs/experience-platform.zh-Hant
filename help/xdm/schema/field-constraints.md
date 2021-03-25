@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform;home；熱門主題；架構；Schema;Mixin;Mixin;Mixins；資料類型；資料類型；資料類型；資料類型；模式設計；資料類型；資料類型；資料類型；資料類型；資料類型；模式；架構；架構設計；映射；映射；
+keywords: Experience Platform;home；熱門主題；模式；模式；混合；Mixin;Mixin;Mixins；資料類型；資料類型；資料類型；資料類型；模式設計；資料類型；資料類型；資料類型；資料類型；模式；模式；映射；映射；
 solution: Experience Platform
 title: XDM欄位類型約束
-topic: overview
+topic: 概述
 description: Experience Data Model(XDM)中欄位類型限制的參考，包括其他可映射至的序列化格式，以及如何在API中定義您自己的欄位類型。
 translation-type: tm+mt
-source-git-commit: c9ea7471bb18c92443a5e45c14c8505ef3ccf30d
+source-git-commit: cc1fa21df0bb2d49106775c75a0cb3c4f4d73941
 workflow-type: tm+mt
-source-wordcount: '1079'
-ht-degree: 2%
+source-wordcount: '1052'
+ht-degree: 1%
 
 ---
 
@@ -21,7 +21,7 @@ ht-degree: 2%
 
 在使用本指南之前，請先閱讀[架構構成的基本說明](./composition.md)，以瞭解XDM架構、類和混合的簡介。
 
-如果您打算在API中定義自己的欄位類型，強烈建議您從[方案註冊表開發人員指南](../api/getting-started.md)開始，以瞭解如何建立混合和資料類型以包含您的自訂欄位。 如果您使用Experience Platform UI來建立結構，請參閱UI](../ui/fields/overview.md)中[定義欄位的指南，瞭解如何在自訂混合和資料類型中定義欄位實施限制。
+如果您打算在API中定義自己的欄位類型，強烈建議您從[方案註冊表開發人員指南](../api/getting-started.md)開始，以瞭解如何建立混合和資料類型以包含您的自訂欄位。 如果您使用Experience PlatformUI來建立結構，請參閱UI](../ui/fields/overview.md)中[定義欄位的指南，瞭解如何對自訂混合和資料類型中定義的欄位實施限制。
 
 ## 基本結構與範例
 
@@ -151,7 +151,7 @@ XDM建立在JSON結構描述之上，因此，在定義其類型時，XDM欄位�
 
 >[!IMPORTANT]
 >
->在下表中列出的標準XDM類型中，[!UICONTROL Map]類型也包括在內。 當資料表示為對應至特定值的索引鍵，或當索引鍵無法合理地包含在靜態架構中且必須視為資料值時，標準架構中會使用地圖。
+>在下表中列出的標準XDM類型中，還包括[!UICONTROL Map]類型。 當資料表示為對應至特定值的索引鍵，或當索引鍵無法合理地包含在靜態架構中且必須視為資料值時，標準架構中會使用地圖。
 >
 >映射類型欄位保留給行業和供應商模式使用，因此不能用於您定義的自定義資源。 映射類型包含在下表中僅用於幫助您確定如何將現有資料映射到XDM（如果當前資料以下列任何格式儲存）。
 
@@ -159,46 +159,46 @@ XDM建立在JSON結構描述之上，因此，在定義其類型時，XDM欄位�
 
 | XDM類型 | 鑲木 | Spark SQL | Java |
 | --- | --- | --- | --- |
-| [!UICONTROL 字串] | 類型：`BYTE_ARRAY`<br>注釋：`UTF8` | `StringType` | `java.lang.String` |
-| [!UICONTROL 雙倍] | 類型：`DOUBLE` | `LongType` | `java.lang.Double` |
-| [!UICONTROL 長] | 類型：`INT64` | `LongType` | `java.lang.Long` |
-| [!UICONTROL 整數] | 類型：`INT32`<br>注釋：`INT_32` | `IntegerType` | `java.lang.Integer` |
-| [!UICONTROL 簡短] | 類型：`INT32`<br>注釋：`INT_16` | `ShortType` | `java.lang.Short` |
-| [!UICONTROL 位元組] | 類型：`INT32`<br>注釋：`INT_8` | `ByteType` | `java.lang.Short` |
+| [!UICONTROL String] | 類型：`BYTE_ARRAY`<br>注釋：`UTF8` | `StringType` | `java.lang.String` |
+| [!UICONTROL Double] | 類型：`DOUBLE` | `LongType` | `java.lang.Double` |
+| [!UICONTROL Long] | 類型：`INT64` | `LongType` | `java.lang.Long` |
+| [!UICONTROL Integer] | 類型：`INT32`<br>注釋：`INT_32` | `IntegerType` | `java.lang.Integer` |
+| [!UICONTROL Short] | 類型：`INT32`<br>注釋：`INT_16` | `ShortType` | `java.lang.Short` |
+| [!UICONTROL Byte] | 類型：`INT32`<br>注釋：`INT_8` | `ByteType` | `java.lang.Short` |
 | [!UICONTROL Date] | 類型：`INT32`<br>注釋：`DATE` | `DateType` | `java.util.Date` |
 | [!UICONTROL DateTime] | 類型：`INT64`<br>注釋：`TIMESTAMP_MILLIS` | `TimestampType` | `java.util.Date` |
-| [!UICONTROL 布林值] | 類型：`BOOLEAN` | `BooleanType` | `java.lang.Boolean` |
-| [!UICONTROL 地圖] | `MAP`-annotated group<br><br>(`<key-type>` 必須 `STRING`) | `MapType`<br><br>(`keyType` 必須 `StringType`) | `java.util.Map` |
+| [!UICONTROL Boolean] | 類型：`BOOLEAN` | `BooleanType` | `java.lang.Boolean` |
+| [!UICONTROL Map] | `MAP`-annotated group<br><br>(`<key-type>` 必須 `STRING`) | `MapType`<br><br>(`keyType` 必須 `StringType`) | `java.util.Map` |
 
 ### Scala、.NET和CosmosDB {#scala}
 
 | XDM類型 | 斯卡拉 | .NET | CosmosDB |
 | --- | --- | --- | --- |
-| [!UICONTROL 字串] | `String` | `System.String` | `String` |
-| [!UICONTROL 雙倍] | `Double` | `System.Double` | `Number` |
-| [!UICONTROL 長] | `Long` | `System.Int64` | `Number` |
-| [!UICONTROL 整數] | `Int` | `System.Int32` | `Number` |
-| [!UICONTROL 簡短] | `Short` | `System.Int16` | `Number` |
-| [!UICONTROL 位元組] | `Byte` | `System.SByte` | `Number` |
-| [!UICONTROL 日期] | `java.util.Date` | `System.DateTime` | `String` |
+| [!UICONTROL String] | `String` | `System.String` | `String` |
+| [!UICONTROL Double] | `Double` | `System.Double` | `Number` |
+| [!UICONTROL Long] | `Long` | `System.Int64` | `Number` |
+| [!UICONTROL Integer] | `Int` | `System.Int32` | `Number` |
+| [!UICONTROL Short] | `Short` | `System.Int16` | `Number` |
+| [!UICONTROL Byte] | `Byte` | `System.SByte` | `Number` |
+| [!UICONTROL Date] | `java.util.Date` | `System.DateTime` | `String` |
 | [!UICONTROL DateTime] | `java.util.Date` | `System.DateTime` | `String` |
-| [!UICONTROL 布林值] | `Boolean` | `System.Boolean` | `Boolean` |
-| [!UICONTROL 地圖] | `Map` | (不適用) | `object` |
+| [!UICONTROL Boolean] | `Boolean` | `System.Boolean` | `Boolean` |
+| [!UICONTROL Map] | `Map` | (不適用) | `object` |
 
 ### MongoDB、Aerospike和Protobuf 2 {#mongo}
 
 | XDM類型 | MongoDB | 塞式飛行器 | Protobuf 2 |
 | --- | --- | --- | --- |
-| [!UICONTROL 字串] | `string` | `String` | `string` |
-| [!UICONTROL 雙倍] | `double` | `Double` | `double` |
-| [!UICONTROL 長] | `long` | `Integer` | `int64` |
-| [!UICONTROL 整數] | `int` | `Integer` | `int32` |
-| [!UICONTROL 簡短] | `int` | `Integer` | `int32` |
-| [!UICONTROL 位元組] | `int` | `Integer` | `int32` |
-| [!UICONTROL 日期] | `date` | `Integer`<br>（Unix毫秒） | `int64`<br>（Unix毫秒） |
+| [!UICONTROL String] | `string` | `String` | `string` |
+| [!UICONTROL Double] | `double` | `Double` | `double` |
+| [!UICONTROL Long] | `long` | `Integer` | `int64` |
+| [!UICONTROL Integer] | `int` | `Integer` | `int32` |
+| [!UICONTROL Short] | `int` | `Integer` | `int32` |
+| [!UICONTROL Byte] | `int` | `Integer` | `int32` |
+| [!UICONTROL Date] | `date` | `Integer`<br>（Unix毫秒） | `int64`<br>（Unix毫秒） |
 | [!UICONTROL DateTime] | `timestamp` | `Integer`<br>（Unix毫秒） | `int64`<br>（Unix毫秒） |
-| [!UICONTROL 布林值] | `bool` | `Integer`<br>（0/1二進位） | `bool` |
-| [!UICONTROL 地圖] | `object` | `map` | `map<key_type, value_type>` |
+| [!UICONTROL Boolean] | `bool` | `Integer`<br>（0/1二進位） | `bool` |
+| [!UICONTROL Map] | `object` | `map` | `map<key_type, value_type>` |
 
 ## 在API {#define-fields}中定義XDM欄位類型
 
@@ -448,3 +448,5 @@ XDM建立在JSON結構描述之上，因此，在定義其類型時，XDM欄位�
     </td>
   </tr>
 </table>
+
+{style=&quot;table-layout:auto&quot;}
