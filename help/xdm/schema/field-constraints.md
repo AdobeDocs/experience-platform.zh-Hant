@@ -5,9 +5,9 @@ title: XDM欄位類型約束
 topic: 概述
 description: Experience Data Model(XDM)中欄位類型限制的參考，包括其他可映射至的序列化格式，以及如何在API中定義您自己的欄位類型。
 translation-type: tm+mt
-source-git-commit: cc1fa21df0bb2d49106775c75a0cb3c4f4d73941
+source-git-commit: bb5880340ca4c01d0b25c7cb16fd422d3182a89e
 workflow-type: tm+mt
-source-wordcount: '1052'
+source-wordcount: '1049'
 ht-degree: 1%
 
 ---
@@ -212,7 +212,7 @@ XDM建立在JSON結構描述之上，因此，在定義其類型時，XDM欄位�
 
 若要開始，請尋找所需的欄位類型，並使用提供的范常式式碼來建立您的API要求，以建立[混合](../api/mixins.md#create)或[建立資料類型](../api/data-types.md#create)。
 
-<table>
+<table style="table-layout:auto">
   <tr>
     <th>XDM類型</th>
     <th>可選屬性</th>
@@ -448,5 +448,3 @@ XDM建立在JSON結構描述之上，因此，在定義其類型時，XDM欄位�
     </td>
   </tr>
 </table>
-
-{style=&quot;table-layout:auto&quot;}
