@@ -4,9 +4,9 @@ title: 檢視目標詳細資訊
 description: '個別目標的詳細資料頁面提供目標詳細資料的概述。 目標詳細資訊包括目標名稱、ID、對應至目標的區段，以及用於編輯啟動以及啟用和停用資料流的控制項。 '
 seo-description: '個別目標的詳細資料頁面提供目標詳細資料的概述。 目標詳細資訊包括目標名稱、ID、對應至目標的區段，以及用於編輯啟動以及啟用和停用資料流的控制項。 '
 translation-type: tm+mt
-source-git-commit: 49905060a18fc94fe524401fb3cf86f212b639ce
+source-git-commit: 4f5e7dfee17b2dde371efb82cf52d91c08696f39
 workflow-type: tm+mt
-source-wordcount: '698'
+source-wordcount: '701'
 ht-degree: 0%
 
 ---
@@ -57,6 +57,8 @@ ht-degree: 0%
 | [!UICONTROL Identity] | 代表目標接受的識別名稱空間，例如`GAID`、`IDFA`或`email`。 有關接受的身份名稱空間的詳細資訊，請參閱[身份名稱空間概述](../../identity-service/namespaces.md)。 |
 | [!UICONTROL Created by] | 表示建立此目標的用戶。 |
 | [!UICONTROL Created] | 指示建立此目標時的UTC日期時間。 |
+
+{style=&quot;table-layout:auto&quot;}
 
 ## [!UICONTROL Enabled]/[!UICONTROL Disabled] toggle
 
