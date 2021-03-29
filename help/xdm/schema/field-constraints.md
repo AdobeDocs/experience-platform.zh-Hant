@@ -5,9 +5,9 @@ title: XDM欄位類型約束
 topic: 概述
 description: Experience Data Model(XDM)中欄位類型限制的參考，包括其他可映射至的序列化格式，以及如何在API中定義您自己的欄位類型。
 translation-type: tm+mt
-source-git-commit: bb5880340ca4c01d0b25c7cb16fd422d3182a89e
+source-git-commit: 456e595e66436c35c7d081ddf4699263e9c87234
 workflow-type: tm+mt
-source-wordcount: '1049'
+source-wordcount: '1055'
 ht-degree: 1%
 
 ---
@@ -33,7 +33,7 @@ XDM建立在JSON結構描述之上，因此，在定義其類型時，XDM欄位�
 
 下表概述JSON結構描述中每個XDM類型的表示方式，以及符合該類型的範例值：
 
-<table>
+<table style="table-layout:auto">
   <thead>
     <tr>
       <th>XDM類型</th>
@@ -185,6 +185,8 @@ XDM建立在JSON結構描述之上，因此，在定義其類型時，XDM欄位�
 | [!UICONTROL Boolean] | `Boolean` | `System.Boolean` | `Boolean` |
 | [!UICONTROL Map] | `Map` | (不適用) | `object` |
 
+{style=&quot;table-layout:auto&quot;}
+
 ### MongoDB、Aerospike和Protobuf 2 {#mongo}
 
 | XDM類型 | MongoDB | 塞式飛行器 | Protobuf 2 |
@@ -199,6 +201,8 @@ XDM建立在JSON結構描述之上，因此，在定義其類型時，XDM欄位�
 | [!UICONTROL DateTime] | `timestamp` | `Integer`<br>（Unix毫秒） | `int64`<br>（Unix毫秒） |
 | [!UICONTROL Boolean] | `bool` | `Integer`<br>（0/1二進位） | `bool` |
 | [!UICONTROL Map] | `object` | `map` | `map<key_type, value_type>` |
+
+{style=&quot;table-layout:auto&quot;}
 
 ## 在API {#define-fields}中定義XDM欄位類型
 
