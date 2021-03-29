@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home；熱門主題
+keywords: Experience Platform；首頁；熱門主題
 solution: Experience Platform
 title: 量度API端點
-topic: developer guide
-description: 瞭解如何使用Experience Insights API在Experience Platform中擷取可觀測度量。
+topic: 開發人員指南
+description: 瞭解如何使用可觀察分析API在Experience Platform中擷取可觀察度量。
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 136c75f56c2ba4d61fef7981ff8a7889a0ade3d1
 workflow-type: tm+mt
-source-wordcount: '2027'
+source-wordcount: '2056'
 ht-degree: 2%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 2%
 
 # 量度端點
 
-可觀測度量可針對Adobe Experience Platform中的各種功能，提供使用統計資料、歷史趨勢和績效指標的深入資訊。 [!DNL Observability Insights API]中的`/metrics`端點可讓您以程式設計方式擷取組織在[!DNL Platform]中活動的量度資料。
+可觀測度量可針對Adobe Experience Platform的各種功能提供使用統計資料、歷史趨勢和績效指標的深入資訊。 [!DNL Observability Insights API]中的`/metrics`端點可讓您以程式設計方式擷取組織在[!DNL Platform]中活動的量度資料。
 
 ## 快速入門
 
@@ -30,7 +30,7 @@ ht-degree: 2%
 
 ### 第1版{#v1}
 
-您可以透過對`/metrics`端點提出GET請求，並透過使用查詢參數指定量度，來擷取量度資料。
+您可以透過向`/metrics`端點提出GET要求，並透過使用查詢參數指定量度，來擷取量度資料。
 
 **API格式**
 
@@ -46,7 +46,7 @@ GET /metrics?metric={METRIC}&metric={METRIC_2}&id={ID}&dateRange={DATE_RANGE}
 
 | 參數 | 說明 |
 | --- | --- |
-| `{METRIC}` | 您要公開的量度。 在單一呼叫中合併多個量度時，您必須使用&amp;符號(`&`)來區隔個別量度。 例如：`metric={METRIC_1}&metric={METRIC_2}`。 |
+| `{METRIC}` | 您要公開的量度。 在單一呼叫中合併多個量度時，您必須使用&amp;符號(`&`)來區隔個別量度。 例如 `metric={METRIC_1}&metric={METRIC_2}`。 |
 | `{ID}` | 要公開其度量的特定[!DNL Platform]資源的標識符。 此ID可能是選用、必要或不適用，視使用的量度而定。 如需可用度量的清單，包括每個度量的支援ID（必要和選用），請參閱[附錄](#available-metrics)。 |
 | `{DATE_RANGE}` | 您要公開的量度日期範圍，使用ISO 8601格式（例如`2018-10-01T07:00:00.000Z/2018-10-09T07:00:00.000Z`）。 |
 
@@ -117,7 +117,7 @@ curl -X GET \
 
 ### 第2版{#v2}
 
-您可以透過向`/metrics`端點提出POST請求，指定您要在裝載中擷取的量度，來擷取量度資料。
+您可以透過向`/metrics`端點提出POST請求，並指定您要在裝載中擷取的量度，來擷取量度資料。
 
 **API格式**
 
@@ -177,6 +177,8 @@ curl -X POST \
 | `filters` | 可選欄位，可讓您依特定資料集篩選量度。 此欄位是物件的陣列（每個篩選器各一個），每個物件包含下列屬性： <ul><li>`name`:要篩選量度的實體類型。目前僅支援`dataSets`。</li><li>`value`:一或多個資料集的ID。多個資料集ID可提供為單一字串，每個ID由垂直橫條字元(`|`)分隔。</li><li>`groupBy`:設為true時，表示對應的代表 `value` 應個別傳回其度量結果的多個資料集。如果設為false，這些資料集的度量結果會分組在一起。</li></ul> |
 | `aggregator` | 指定應用於將多個時間序列記錄分組為單個結果的聚合函式。 有關可用聚合器的詳細資訊，請參閱[OpenTSDB文檔](http://opentsdb.net/docs/build/html/user_guide/query/aggregators.html)。 |
 | `downsample` | 可選欄位，可讓您指定匯總函式，透過將欄位排序至間隔（或「區間」）來降低量度資料的取樣率。 縮減採樣的間隔由`granularity`屬性確定。 有關縮減採樣的詳細資訊，請參閱[OpenTSDB文檔](http://opentsdb.net/docs/build/html/user_guide/query/downsampling.html)。 |
+
+{style=&quot;table-layout:auto&quot;}
 
 **回應**
 
@@ -270,6 +272,8 @@ curl -X POST \
 | `groupBy` | 如果在度量的`filter`屬性中指定了多個資料集，而請求中的`groupBy`選項設為true，則此物件將包含對應`dps`屬性所套用之資料集的ID。<br><br>如果此對象在響應中顯示為空，則相應的屬 `dps` 性將應用於陣列中提供的所有資料集( `filters` 如果未提供篩選器，則 [!DNL Platform] 會應用於陣列中的所有資料集)。 |
 | `dps` | 指定量度、篩選和時間範圍的傳回資料。 此物件中的每個索引鍵代表具有指定量度對應值的時間戳記。 每個資料點之間的時段取決於請求中指定的`granularity`值。 |
 
+{style=&quot;table-layout:auto&quot;}
+
 ## 附錄
 
 以下部分包含有關使用`/metrics`端點的其他資訊。
@@ -284,7 +288,7 @@ curl -X POST \
 
 #### [!DNL Data Ingestion] {#ingestion}
 
-下表概述Adobe Experience Platform [!DNL Data Ingestion]的量度。 **bold**&#x200B;中的度量是串流擷取度量。
+下表概述Adobe Experience Platform[!DNL Data Ingestion]的量度。 **bold**&#x200B;中的度量是串流擷取度量。
 
 | 前瞻分析度量 | 說明 | ID查詢參數 |
 | ---- | ---- | ---- |
@@ -310,9 +314,11 @@ curl -X POST \
 | **timeseries.data.collection.inlet.success** | 成功呼叫一個資料入口或所有資料入口的HTTP呼叫總數。 | 入口ID |
 | **timeseries.data.collection.inlet.failure** | 對一個資料入口或所有資料入口的失敗HTTP呼叫總數。 | 入口ID |
 
+{style=&quot;table-layout:auto&quot;}
+
 #### [!DNL Identity Service] {#identity}
 
-下表概述Adobe Experience Platform [!DNL Identity Service]的量度。
+下表概述Adobe Experience Platform[!DNL Identity Service]的量度。
 
 | 前瞻分析度量 | 說明 | ID查詢參數 |
 | ---- | ---- | ---- |
@@ -326,9 +332,11 @@ curl -X POST \
 | timeseries.identity.graph.imsorg.numidgraphs.count | 儲存在IMS組織之識別圖中的唯一圖形識別數。 | 不適用 |
 | timeseries.identity.graph.imsorg.graphstrength.uniqueidentities.count | IMS組織在識別圖中針對特定圖形強度（「未知」、「弱」或「強」）儲存的獨特身分數。 | 圖形強度（**必要**） |
 
+{style=&quot;table-layout:auto&quot;}
+
 #### [!DNL Privacy Service] {#privacy}
 
-下表概述Adobe Experience Platform [!DNL Privacy Service]的量度。
+下表概述Adobe Experience Platform[!DNL Privacy Service]的量度。
 
 | 前瞻分析度量 | 說明 | ID查詢參數 |
 | ---- | ---- | ---- |
@@ -336,9 +344,11 @@ curl -X POST \
 | timeseries.gdpr.jobs.completedjobs.count | 來自GDPR的已完成工作總數。 | ENV（**必需**） |
 | timeseries.gdpr.jobs.errorjobs.count | 來自GDPR的錯誤工作總數。 | ENV（**必需**） |
 
+{style=&quot;table-layout:auto&quot;}
+
 #### [!DNL Query Service] {#query}
 
-下表概述Adobe Experience Platform [!DNL Query Service]的量度。
+下表概述Adobe Experience Platform[!DNL Query Service]的量度。
 
 | 前瞻分析度量 | 說明 | ID查詢參數 |
 | ---- | ---- | ---- |
@@ -348,6 +358,8 @@ curl -X POST \
 | timeseries.queryservice.query.scheduledquery.count | 已執行的計畫查詢總數。 | 不適用 |
 | timeseries.queryservice.query.interactivequery.count | 執行的互動式查詢總數。 | 不適用 |
 | timeseries.queryservice.query.batchfrompsqlquery.count | 來自PSQL的已執行批次查詢總數。 | 不適用 |
+
+{style=&quot;table-layout:auto&quot;}
 
 #### [!DNL Real-time Customer Profile] {#profile}
 
@@ -369,6 +381,8 @@ curl -X POST \
 | platform.ups.profile-commons.ingest.streaming.dataSet.record.updated.timestamp | 資料集上次更新記錄要求的時間戳記。 | 資料集ID(**Required**) |
 | platform.ups.ingest.streaming.record.size.m1_rate | 平均記錄大小。 | IMS組織（**必填**） |
 | platform.ups.ingest.streaming.records.updated.m15_rate | 針對資料集所收錄記錄的更新請求率。 | 資料集ID(**Required**) |
+
+{style=&quot;table-layout:auto&quot;}
 
 ### 錯誤訊息
 
@@ -403,6 +417,8 @@ curl -X POST \
 | `title` | 包含錯誤訊息的字串，以及可能發生錯誤訊息的可能原因。 |
 | `report` | 包含錯誤的相關內容資訊，包括觸發錯誤的作業中使用的沙盒和IMS組織。 |
 
+{style=&quot;table-layout:auto&quot;}
+
 下表列出API可傳回的不同錯誤碼：
 
 | 錯誤代碼 | 標題 | 說明 |
@@ -412,3 +428,5 @@ curl -X POST \
 | `INSGHT-1001-500` | 量度查詢失敗 | 由於伺服器錯誤，嘗試查詢量度資料庫時發生錯誤。 請再試一次請求，如果問題仍然存在，請聯絡Adobe支援。 |
 | `INSGHT-1002-500` | 服務錯誤 | 由於內部錯誤，無法處理請求。 請再試一次請求，如果問題仍然存在，請聯絡Adobe支援。 |
 | `INSGHT-1003-401` | 沙盒驗證錯誤 | 由於沙盒驗證錯誤，無法處理請求。 請確定您在`x-sandbox-name`標題中提供的沙盒名稱代表IMS組織的有效、啟用的沙盒，然後再重新嘗試請求。 |
+
+{style=&quot;table-layout:auto&quot;}
