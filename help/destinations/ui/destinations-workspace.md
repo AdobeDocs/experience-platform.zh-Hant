@@ -4,9 +4,9 @@ title: 目標工作區
 description: 「目標」工作區包含4個部分：目錄、瀏覽、帳戶和系統視圖，這些部分在以下各節中介紹。
 seo-description: 在Adobe Experience Platform，從左側導覽列選擇「目標」以存取目標工作區。
 translation-type: tm+mt
-source-git-commit: 49905060a18fc94fe524401fb3cf86f212b639ce
+source-git-commit: 4f5e7dfee17b2dde371efb82cf52d91c08696f39
 workflow-type: tm+mt
-source-wordcount: '934'
+source-wordcount: '940'
 ht-degree: 1%
 
 ---
@@ -45,6 +45,8 @@ ht-degree: 1%
 | [!UICONTROL View dataflows] | 檢視目的地的資料啟動流程。 |
 | [!UICONTROL View documentation] | 開啟該特定目的地的檔案頁面連結，以取得詳細資訊並協助您設定。 |
 
+{style=&quot;table-layout:auto&quot;}
+
 ![目標卡的控制項](../assets/ui/workspace/destination-card-options.png)
 
 在目錄中選取目標卡片，以開啟右側導軌。 在這裡，您可以看到目的地的說明。 右側導軌提供與上表所述相同的控制項，以及目的地的描述，以及目的地類別和類型的指示。
@@ -71,6 +73,8 @@ ht-degree: 1%
 | [!UICONTROL Destinations] | 表示與為目標建立的基本資訊連接的唯一成功目標流的數量。 |
 | [!UICONTROL Authorized] | 授權此目的地的連線的日期。 |
 
+{style=&quot;table-layout:auto&quot;}
+
 此外，您也可以編輯或更新帳戶資訊。 在&#x200B;**[!UICONTROL Platform]**&#x200B;欄中選擇「編輯帳戶」按鈕![以編輯帳戶的資訊。](../assets/ui/workspace/pencil-icon.png)
 
 對於使用`OAuth2`連接類型的帳戶，您可以選擇&#x200B;**[!UICONTROL Reconnect OAuth]**&#x200B;以續約帳戶憑證。
@@ -85,7 +89,7 @@ ht-degree: 1%
 
 ## [!UICONTROL Browse] {#browse}
 
-**[!UICONTROL Browse]**&#x200B;頁籤顯示已建立連接的目標。 啟用&#x200B;**[!UICONTROL Enabled]**&#x200B;切換的目標會將目標設為作用中，反之亦然。 您也可以選擇&#x200B;**[!UICONTROL Segments]** > **[!UICONTROL Browse]**&#x200B;並選取要檢查的區段，以檢視資料流動的目的地。 有關「瀏覽」頁籤中為每個目標提供的所有資訊，請參見下表：
+**[!UICONTROL Browse]**&#x200B;頁籤顯示已建立連接的目標。 啟用&#x200B;**[!UICONTROL Enabled]**&#x200B;切換的目標將目標設為活動，反之亦然。 您也可以選擇&#x200B;**[!UICONTROL Segments]** > **[!UICONTROL Browse]**&#x200B;並選取要檢查的區段，以檢視資料流動的目的地。 有關「瀏覽」頁籤中為每個目標提供的所有資訊，請參見下表：
 
 >[!TIP]
 >
