@@ -2,26 +2,22 @@
 keywords: Experience Platform; home；熱門主題；shopify;Shopify;
 solution: Experience Platform
 title: Shopify Source Connector概觀
-topic: overview
-description: 瞭解如何使用API或使用者介面將Shopify連接至Adobe Experience Platform。
+topic: 概述
+description: 瞭解如何使用API或使用者介面將Shopify連線至Adobe Experience Platform。
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: cc23228cb410dc4c70a56c5142be00c2ca1c40d3
 workflow-type: tm+mt
-source-wordcount: '174'
+source-wordcount: '156'
 ht-degree: 0%
 
 ---
 
 
-# （測試版）[!DNL Shopify]連接器
+# [!DNL Shopify] 連接器
 
->[!NOTE]
->
->[!DNL Shopify]介面處於測試狀態。 如需使用beta標籤連接器的詳細資訊，請參閱[來源概觀](../../home.md#terms-and-conditions)。
+Adobe Experience Platform允許從外部來源接收資料，同時提供使用[!DNL Platform]服務構建、標籤和增強傳入資料的能力。 您可以從多種來源收錄資料，例如Adobe應用程式、雲端儲存空間、資料庫等。
 
-Adobe Experience Platform可讓您從外部來源擷取資料，同時讓您能夠使用[!DNL Platform]服務來建構、標示並增強傳入資料。 您可以從多種來源（例如Adobe應用程式、雲端儲存空間、資料庫等）擷取資料。
-
-[!DNL Experience Platform] 支援從第三方電子商務提供者擷取 **** 資料。支援&#x200B;**[!UICONTROL 電子商務]**&#x200B;提供者，包括[!DNL Shopify]。
+[!DNL Experience Platform] 支援從協力廠商提供者擷取資 **[!UICONTROL eCommerce]** 料。支援&#x200B;**[!UICONTROL eCommerce]**&#x200B;提供者，包括[!DNL Shopify]。
 
 下面的文檔提供了如何使用API或用戶介面將[!DNL Shopify]連接到[!DNL Platform]的資訊：
 
