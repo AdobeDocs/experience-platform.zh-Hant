@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform；訓練和評估； Data Science Workspace；熱門主題；建立模型；建立培訓運行
+keywords: Experience Platform；訓練和評估；資料科學工作區；熱門主題；建立模型；建立培訓運行
 solution: Experience Platform
 title: 在資料科學工作區UI中訓練和評估模型
-topic: tutorial
-type: Tutorial
-description: 在Adobe Experience Platform Data Science Workspace中，機器學習模型是透過整合符合模型意圖的現有配方來建立的。 然後，對模型進行訓練和評估，通過微調其相關的超參數來優化其操作效率和效能。 方式可重複使用，這表示您可以使用單一方式，針對特定目的建立並量身打造多個模型。
+topic: 教學課程
+type: 教學課程
+description: 在Adobe Experience Platform資料科學工作區中，機器學習模型是通過結合適合模型意圖的現有配方來建立的。 然後，對模型進行訓練和評估，通過微調其相關的超參數來優化其操作效率和效能。 方式可重複使用，這表示您可以使用單一方式，針對特定目的建立並量身打造多個模型。
 translation-type: tm+mt
-source-git-commit: f6cfd691ed772339c888ac34fcbd535360baa116
+source-git-commit: 52415eb572a82f18f6daa3f45be1c670cae98b83
 workflow-type: tm+mt
-source-wordcount: '1065'
+source-wordcount: '1085'
 ht-degree: 1%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 1%
 
 # 在資料科學工作區UI中訓練和評估模型
 
-在Adobe Experience Platform Data Science Workspace中，機器學習模型是透過整合符合模型意圖的現有配方來建立的。 然後，對模型進行訓練和評估，通過微調其相關的超參數來優化其操作效率和效能。 方式可重複使用，這表示您可以使用單一方式，針對特定目的建立並量身打造多個模型。
+在Adobe Experience Platform資料科學工作區中，機器學習模型是通過結合適合模型意圖的現有配方來建立的。 然後，對模型進行訓練和評估，通過微調其相關的超參數來優化其操作效率和效能。 方式可重複使用，這表示您可以使用單一方式，針對特定目的建立並量身打造多個模型。
 
 本教學課程將逐步介紹建立、訓練和評估模型的步驟。
 
@@ -28,63 +28,76 @@ ht-degree: 1%
 
 ## 建立模型
 
-1. 在Adobe Experience Platform中，按一下左側導覽欄中的&#x200B;**[!UICONTROL Models]**&#x200B;連結，以列出所有現有的模型。 按一下頁面右上角的&#x200B;**[!UICONTROL 建立模型]**以開始建立模型。
-   ![](../images/models-recipes/train-evaluate-ui/models_browse.png)
+在Experience Platform中，選擇位於左側導航中的&#x200B;**[!UICONTROL Models]**&#x200B;頁籤，然後選擇瀏覽頁籤以查看現有模型。 選擇頁面右上角的&#x200B;**[!UICONTROL Create Model]**&#x200B;以開始建立模型。
 
-2. 瀏覽現有配方的清單，查找並選擇用於建立模型的配方，然後按一下&#x200B;**[!UICONTROL Next]**。
-   ![](../images/models-recipes/train-evaluate-ui/select_recipe.png)
+![](../images/models-recipes/train-evaluate-ui/models_browse.png)
 
-3. 選擇適當的輸入資料集，然後按一下&#x200B;**[!UICONTROL Next]**。 這將設定模型的預設輸入訓練資料集。
-   ![](../images/models-recipes/train-evaluate-ui/select_dataset.png)
+瀏覽現有配方的清單，查找並選擇用於建立模型的配方，然後選擇&#x200B;**[!UICONTROL Next]**。
+![](../images/models-recipes/train-evaluate-ui/select_recipe.png)
 
-4. 為「模型」(Model)提供名稱並查看預設「模型」(Model)配置。 在「配方」建立過程中，通過按兩下配置值來應用預設配置，複查和修改配置值。 若要提供新的組態，請按一下「上傳新設定」，並將包含「模型」組態的JSON檔案拖曳至瀏覽器視窗。 ****&#x200B;按一下&#x200B;**[!UICONTROL 完成]**&#x200B;以建立模型。
+選擇適當的輸入資料集，然後選擇&#x200B;**[!UICONTROL Next]**。 這將設定模型的預設輸入訓練資料集。
+![](../images/models-recipes/train-evaluate-ui/select_dataset.png)
 
-   >[!NOTE]
-   >
-   >配置是獨特且特定於其預定配方的，這意味著零售銷售配方的配置將不適用於產品建議配方。 有關零售銷售方式配置的清單，請參閱[reference](#reference)部分。
+為「模型」(Model)提供名稱並查看預設「模型」(Model)配置。 在「配方」建立過程中，通過按兩下配置值來應用預設配置，複查和修改配置值。
 
-   ![](../images/models-recipes/train-evaluate-ui/name_and_configure.png)
+若要提供新的組態，請選取&#x200B;**[!UICONTROL Upload New Config]**，並將包含「模型」組態的JSON檔案拖曳至瀏覽器視窗。 選擇&#x200B;**[!UICONTROL Finish]**&#x200B;以建立模型。
+
+>[!NOTE]
+>
+>配置是獨特的，且特定於其預定配方，這表示「零售銷售配方」的配置將不適用於「產品Recommendations配方」。 有關零售銷售方式配置的清單，請參閱[reference](#reference)部分。
+
+![](../images/models-recipes/train-evaluate-ui/name_and_configure.png)
 
 ## 建立訓練執行
 
-1. 在Adobe Experience Platform中，按一下左側導覽欄中的&#x200B;**[!UICONTROL Models]**連結，以列出所有現有的模型。 查找並按一下要培訓的模型的名稱。
-   ![](../images/models-recipes/train-evaluate-ui/models_browse.png)
+在Experience Platform中，選擇位於左側導航中的&#x200B;**[!UICONTROL Models]**&#x200B;頁籤，然後選擇瀏覽頁籤以查看現有模型。 查找並選擇附加到要培訓的模型名稱的超連結。
 
-2. 所有現有培訓執行都會列出其目前的培訓狀態。 對於使用[!DNL Data Science Workspace]使用者介面建立的模型，會自動產生訓練執行，並使用預設組態和輸入訓練資料集來執行。
-   ![](../images/models-recipes/train-evaluate-ui/model_overview.png)
+![](../images/models-recipes/train-evaluate-ui/model-hyperlink.png)
 
-3. 按一下「模型概述」頁面右上角的&#x200B;**[!UICONTROL Train]**，建立新的訓練執行。
-   ![](../images/models-recipes/train-evaluate-ui/training_input.png)
+所有現有培訓執行都會列出其目前的培訓狀態。 對於使用[!DNL Data Science Workspace]使用者介面建立的模型，會自動產生訓練執行，並使用預設組態和輸入訓練資料集來執行。
 
-4. 為培訓運行選擇培訓輸入資料集，然後按一下&#x200B;**[!UICONTROL Next]**。
-   ![](../images/models-recipes/train-evaluate-ui/training_configuration.png)
+選擇「模型概述」頁面右上角的&#x200B;**[!UICONTROL Train]**，以建立新的訓練執行。
 
-5. 如圖所示，建立模型期間提供的預設配置，請按兩下這些值，以相應地更改和修改這些配置。 按一下&#x200B;**[!UICONTROL 完成]**&#x200B;以建立並執行培訓運行。
+![](../images/models-recipes/train-evaluate-ui/model_overview.png)
 
-   >[!NOTE]
-   >
-   >配置是獨特且特定於其預定配方的，這意味著零售銷售配方的配置將不適用於產品建議配方。 有關零售銷售方式配置的清單，請參閱[reference](#reference)部分。
+為培訓運行選擇培訓輸入資料集，然後選擇&#x200B;**[!UICONTROL Next]**。
 
-   ![](../images/models-recipes/train-evaluate-ui/training_configuration.png)
+![](../images/models-recipes/train-evaluate-ui/training_input.png)
+
+如圖所示，建立模型期間提供的預設配置，請按兩下這些值，以相應地更改和修改這些配置。 選擇&#x200B;**[!UICONTROL Finish]**&#x200B;以建立並執行培訓運行。
+
+>[!NOTE]
+>
+>配置是獨特的，且特定於其預定配方，這表示「零售銷售配方」的配置將不適用於「產品Recommendations配方」。 有關零售銷售方式配置的清單，請參閱[reference](#reference)部分。
+
+![](../images/models-recipes/train-evaluate-ui/training_configuration.png)
+
 
 ## 評估模型
 
-1. 在Adobe Experience Platform中，按一下左側導覽欄中的&#x200B;**[!UICONTROL Models]**連結，以列出所有現有的模型。 查找並按一下要評估的模型的名稱。
-   ![](../images/models-recipes/train-evaluate-ui/models_browse.png)
+在Experience Platform中，選擇位於左側導航中的&#x200B;**[!UICONTROL Models]**&#x200B;頁籤，然後選擇瀏覽頁籤以查看現有模型。 查找並選擇附加到要評估的模型名稱的超連結。
 
-2. 所有現有培訓執行都會列出其目前的培訓狀態。 在完成多個培訓執行後，可以在「模型評估」圖表中比較不同培訓執行的評估度量，並使用圖表上方的下拉式清單選取評估度量。
+![選取模型](../images/models-recipes/train-evaluate-ui/model-hyperlink.png)
 
-   「平均絕對百分比錯誤(MAPE)」量度將正確性表示為錯誤的百分比。 這用於識別效能最佳的實驗。 MAPE越低越好。
+所有現有培訓執行都會列出其目前的培訓狀態。 在完成多個培訓執行後，您可以在模型評估圖表中比較不同培訓執行的評估度量。 使用圖形上方的下拉式清單選取評估度量。
 
-   ![](../images/models-recipes/train-evaluate-ui/complete_training_run.png)
+「平均絕對百分比錯誤(MAPE)」量度將正確性表示為錯誤的百分比。 這用於識別效能最佳的實驗。 MAPE越低越好。
 
-   「精確度」度量描述相關例項與擷取的&#x200B;*例項總數之比例。*精確度可以看作是隨機選擇的結果正確的概率。
-   ![](../images/models-recipes/train-evaluate-ui/multiple_training_runs.png)
+![培訓執行概觀](../images/models-recipes/train-evaluate-ui/complete_training_run.png)
 
-   按一下特定培訓執行，以檢視該執行的詳細資訊。 這可在執行完成之前完成。 在執行詳細資料頁面上，您可以看到其他評估度量、設定參數和訓練執行專屬的視覺化。 您也可以下載活動記錄檔，以檢視執行的詳細資訊。 對於失敗的執行，記錄檔特別有用，以檢視出錯之處。
-   ![](../images/models-recipes/train-evaluate-ui/activity_logs.png)
+「精確度」度量描述相關例項與擷取的&#x200B;*例項總數之比例。*&#x200B;精確度可以看作是隨機選擇的結果正確的概率。
 
-3. 超參數無法訓練，模型必須通過測試不同的超參陣列合來優化。 重複此模型訓練和評估流程，直到您到達最佳模型。
+![執行多個執行](../images/models-recipes/train-evaluate-ui/multiple_training_runs.png)
+
+選取特定的訓練執行會開啟評估頁面，提供該執行的詳細資訊。 這可在執行完成之前完成。 在評估頁面上，您可以看到其他評估度量、設定參數和訓練執行專屬的視覺化。
+
+![預覽記錄](../images/models-recipes/train-evaluate-ui/evaluate_training.png)
+
+您也可以下載活動記錄檔，以檢視執行的詳細資訊。 對於失敗的執行，記錄檔特別有用，以檢視出錯之處。
+
+![活動日誌](../images/models-recipes/train-evaluate-ui/activity_logs.png)
+
+超參數無法訓練，模型必須通過測試不同的超參陣列合來優化。 重複此模型訓練和評估流程，直到您到達最佳模型。
 
 ## 後續步驟
 
