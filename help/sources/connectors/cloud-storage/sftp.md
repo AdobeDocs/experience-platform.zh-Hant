@@ -5,19 +5,15 @@ title: SFTP來源連接器概述
 topic: 概述
 description: 瞭解如何使用API或使用者介面將SFTP伺服器連線至Adobe Experience Platform。
 translation-type: tm+mt
-source-git-commit: 7fc99214272d2ce743b3666826c66f5d65e4d2ca
+source-git-commit: 0e11acc4a599d360cb3048445003f61848ad23d3
 workflow-type: tm+mt
-source-wordcount: '470'
+source-wordcount: '452'
 ht-degree: 0%
 
 ---
 
 
-# （測試版）SFTP連接器
-
->[!NOTE]
->
->SFTP連接器為測試版。 有關使用beta標籤連接器的詳細資訊，請參閱[ Sources綜覽](../../home.md#terms-and-conditions)。
+# SFTP連接器
 
 Adobe Experience Platform為AWS、[!DNL Google Cloud Platform]和[!DNL Azure]等雲提供商提供了本機連接，使您能夠從這些系統中獲取資料。
 
