@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform; home；熱門主題；雲端儲存；雲端儲存空間
+keywords: Experience Platform；首頁；熱門主題；雲儲存；雲儲存
 solution: Experience Platform
 title: 使用Flow Service API探索Cloud儲存系統
 topic: 概述
 description: 本教學課程使用Flow Service API來探索協力廠商雲端儲存系統。
 translation-type: tm+mt
-source-git-commit: 60a70352c2e13565fd3e8c44ae68e011a1d443a6
+source-git-commit: 457fc9e1b0c445233f0f574fefd31bc1fc3bafc8
 workflow-type: tm+mt
-source-wordcount: '742'
+source-wordcount: '821'
 ht-degree: 2%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 2%
 
 ## 快速入門
 
-本指南需要有效瞭解Adobe Experience Platform的下列元件：
+本指南需要對Adobe Experience Platform的下列組成部分有切實的瞭解：
 
 * [來源](../../../home.md): [!DNL Experience Platform] 允許從各種來源接收資料，同時提供使用服務構建、標籤和增強傳入資料的 [!DNL Platform] 能力。
 * [沙盒](../../../../sandboxes/home.md): [!DNL Experience Platform] 提供虛擬沙盒，可將單一執行個體分 [!DNL Platform] 割為不同的虛擬環境，以協助開發和發展數位體驗應用程式。
@@ -56,13 +56,13 @@ ht-degree: 2%
 
 * `x-sandbox-name: {SANDBOX_NAME}`
 
-所有包含裝載(POST、PUT、PATCH)的請求都需要額外的媒體類型標題：
+所有包含裝載(POST、PUT、PATCH)的請求都需要附加的媒體類型標題：
 
 * `Content-Type: application/json`
 
 ## 探索您的雲端儲存空間
 
-使用雲端儲存空間的連線ID，您可以執行GET請求來探索檔案和目錄。 當執行GET請求以探索您的雲端儲存空間時，您必須包含下表所列的查詢參數：
+使用雲端儲存空間的連線ID，您可以執行GET要求來探索檔案和目錄。 執行GET請求以探索雲端儲存空間時，您必須包含下表所列的查詢參數：
 
 | 參數 | 說明 |
 | --------- | ----------- |
@@ -101,30 +101,41 @@ curl -X GET \
 ```json
 [
     {
-        "type": "File",
-        "name": "data.csv",
-        "path": "/some/path/data.csv"
+        "type": "file",
+        "name": "account.csv",
+        "path": "/test-connectors/testFolder-fileIngestion/account.csv",
+        "canPreview": true,
+        "canFetchSchema": true
     },
     {
-        "type": "Folder",
-        "name": "foobar",
-        "path": "/some/path/foobar"
+        "type": "file",
+        "name": "profileData.json",
+        "path": "/test-connectors/testFolder-fileIngestion/profileData.json",
+        "canPreview": true,
+        "canFetchSchema": true
+    },
+    {
+        "type": "file",
+        "name": "sampleprofile--3.parquet",
+        "path": "/test-connectors/testFolder-fileIngestion/sampleprofile--3.parquet",
+        "canPreview": true,
+        "canFetchSchema": true
     }
 ]
 ```
 
-## 檢查檔案結構
+## Inspect檔案結構
 
 若要從雲端儲存空間檢查資料檔案的結構，請執行GET要求，同時提供檔案的路徑和類型作為查詢參數。
 
-您可以指定自訂分隔字元作為查詢周長，以檢查CSV或TSV檔案的結構。 任何單一字元值都是允許的欄分隔字元。 如果未提供，則使用逗號`(,)`作為預設值。
+您可以在提供檔案路徑和類型的同時，執行GET要求，從雲端儲存來源檢查資料檔案的結構。 您也可以透過指定檔案類型作為查詢參數的一部分，來檢查不同的檔案類型，例如CSV、TSV或壓縮的JSON和分隔檔案。
 
 **API格式**
 
 ```http
-GET /connections/{CONNECTION_ID}/explore?objectType=file&object={FILE_PATH}&fileType={FILE_TYPE}
-GET /connections/{CONNECTION_ID}/explore?objectType=file&object={FILE_PATH}&fileType={FILE_TYPE}&preview=true&fileType=delimited&columnDelimiter=;
-GET /connections/{CONNECTION_ID}/explore?objectType=file&object={FILE_PATH}&fileType={FILE_TYPE}&preview=true&fileType=delimited&columnDelimiter=\t
+GET /connections/{CONNECTION_ID}/explore?objectType=file&object={FILE_PATH}&fileType={FILE_TYPE}&{QUERY_PARAMS}&preview=true
+GET /connections/{CONNECTION_ID}/explore?objectType=file&object={FILE_PATH}&preview=true&fileType=delimited&columnDelimiter=\t
+GET /connections/{CONNECTION_ID}/explore?objectType=file&object={FILE_PATH}&preview=true&fileType=delimited&compressionType=gzip;
 ```
 
 | 參數 | 說明 |
@@ -132,13 +143,13 @@ GET /connections/{CONNECTION_ID}/explore?objectType=file&object={FILE_PATH}&file
 | `{CONNECTION_ID}` | 雲端儲存空間來源連接器的連線ID。 |
 | `{FILE_PATH}` | 要檢查的檔案的路徑。 |
 | `{FILE_TYPE}` | 檔案的類型。 支援的檔案類型包括：<ul><li>分隔字元</code>:分隔字元分隔值。 DSV檔案必須以逗號分隔。</li><li>JSON</code>:JavaScript物件符號。 JSON檔案必須符合XDM規範</li><li>PARCE</code>:阿帕奇鑲木地板。 拼花檔案必須與XDM相容。</li></ul> |
-| `columnDelimiter` | 您指定為欄分隔字元的單一字元值，用來檢查CSV或TSV檔案。 如果未提供參數，則值預設為逗號`(,)`。 |
+| `{QUERY_PARAMS}` | 可用於篩選結果的可選查詢參數。 如需詳細資訊，請參閱[查詢參數](#query)一節。 |
 
 **請求**
 
 ```shell
 curl -X GET \
-    'http://platform.adobe.io/data/foundation/flowservice/connections/{CONNECTION_ID}/explore?objectType=file&object=/some/path/data.csv&fileType=DELIMITED' \
+    'http://platform.adobe.io/data/foundation/flowservice/connections/{CONNECTION_ID}/explore?objectType=file&object=/aep-bootcamp/Adobe%20Pets%20Customer%2020190801%20EXP.json&fileType=json&preview=true' \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
     -H 'x-gw-ims-org-id: {IMS_ORG}' \
@@ -173,6 +184,15 @@ curl -X GET \
     }
 ]
 ```
+
+## 使用查詢參數{#query}
+
+[[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml)支援使用查詢參數來預覽和檢查不同的檔案類型。
+
+| 參數 | 說明 |
+| --------- | ----------- |
+| `columnDelimiter` | 您指定為欄分隔字元的單一字元值，用來檢查CSV或TSV檔案。 如果未提供參數，則值預設為逗號`(,)`。 |
+| `compressionType` | 預覽壓縮分隔字元或JSON檔案的必要查詢參數。 支援的壓縮檔案包括： <ul><li>`bzip2`</li><li>`gzip`</li><li>`deflate`</li><li>`zipDeflate`</li><li>`tarGzip`</li><li>`tar`</li></ul> |
 
 ## 後續步驟
 
