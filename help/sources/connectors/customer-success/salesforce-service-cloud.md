@@ -1,25 +1,21 @@
 ---
-keywords: Experience Platform; home；熱門主題；Salesforce Service Cloud;salesforce Service Cloud
+keywords: Experience Platform；首頁；熱門主題；Salesforce Service Cloud;salesforce Service Cloud
 solution: Experience Platform
 title: Salesforce Service Cloud來源連接器概觀
-topic: overview
-description: 瞭解如何使用API或使用者介面將Salesforce Service Cloud連接至Adobe Experience Platform。
+topic: 概述
+description: 瞭解如何使用API或使用者介面將Salesforce Service Cloud連線至Adobe Experience Platform。
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: a0b016e8adc519bc79701f9fd850b6ddf7d46127
 workflow-type: tm+mt
-source-wordcount: '245'
+source-wordcount: '229'
 ht-degree: 0%
 
 ---
 
 
-# （測試版）[!DNL Salesforce Service Cloud]連接器
+# [!DNL Salesforce Service Cloud] 連接器
 
->[!NOTE]
->
->[!DNL Salesforce Service Cloud]介面處於測試狀態。 有關使用beta標籤連接器的詳細資訊，請參閱[來源概觀](../../home.md#terms-and-conditions)。
-
-Adobe Experience Platform可讓您從外部來源擷取資料，同時讓您能夠使用[!DNL Platform]服務來建構、標示並增強傳入資料。 您可以從多種來源（例如Adobe應用程式、雲端儲存空間、資料庫等）擷取資料。
+Adobe Experience Platform允許從外部來源接收資料，同時提供使用[!DNL Platform]服務構建、標籤和增強傳入資料的能力。 您可以從多種來源收錄資料，例如Adobe應用程式、雲端儲存空間、資料庫等。
 
 [!DNL Experience Platform] 支援從協力廠商客戶成功系統擷取資料。客戶成功提供者支援包括[!DNL Salesforce Service Cloud]。
 
