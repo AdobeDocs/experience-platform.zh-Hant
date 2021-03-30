@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform;home；熱門主題；ssc;SSC;Salesforce Service Cloud;salesforce Service Cloud
+keywords: Experience Platform；首頁；熱門主題；ssc;SSC;Salesforce Service Cloud;salesforce Service Cloud
 solution: Experience Platform
 title: 使用流程服務API建立Salesforce Service Cloud來源連線
-topic: overview
-type: Tutorial
+topic: 概述
+type: 教學課程
 description: 瞭解如何使用Flow Service API將Adobe Experience Platform連接至Salesforce Service Cloud。
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: a0b016e8adc519bc79701f9fd850b6ddf7d46127
 workflow-type: tm+mt
-source-wordcount: '594'
+source-wordcount: '580'
 ht-degree: 2%
 
 ---
@@ -16,17 +16,13 @@ ht-degree: 2%
 
 # 使用[!DNL Flow Service] API建立[!DNL Salesforce Service Cloud]來源連線
 
->[!NOTE]
->
->[!DNL Salesforce Service Cloud]介面處於測試狀態。 有關使用beta標籤連接器的詳細資訊，請參閱[來源概觀](../../../../home.md#terms-and-conditions)。
-
 [!DNL Flow Service] 用於收集和集中Adobe Experience Platform內不同來源的客戶資料。該服務提供用戶介面和REST風格的API，所有支援的源都可從中連接。
 
 本教學課程使用[!DNL Flow Service] API來引導您完成將[!DNL Experience Platform]連接至[!DNL Salesforce Service Cloud]（以下稱為「SSC」）的步驟。
 
 ## 快速入門
 
-本指南需要有效瞭解Adobe Experience Platform的下列元件：
+本指南需要對Adobe Experience Platform的下列組成部分有切實的瞭解：
 
 * [來源](../../../../home.md): [!DNL Experience Platform] 允許從各種來源接收資料，同時提供使用服務構建、標籤和增強傳入資料的 [!DNL Platform] 能力。
 * [沙盒](../../../../../sandboxes/home.md): [!DNL Experience Platform] 提供虛擬沙盒，可將單一執行個體分 [!DNL Platform] 割為不同的虛擬環境，以協助開發和發展數位體驗應用程式。
@@ -61,7 +57,7 @@ ht-degree: 2%
 
 * `x-sandbox-name: {SANDBOX_NAME}`
 
-所有包含裝載(POST、PUT、PATCH)的請求都需要額外的媒體類型標題：
+所有包含裝載(POST、PUT、PATCH)的請求都需要附加的媒體類型標題：
 
 * `Content-Type: application/json`
 
