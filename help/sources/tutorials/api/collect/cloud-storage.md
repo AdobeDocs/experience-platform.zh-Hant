@@ -1,15 +1,15 @@
 ---
-keywords: Experience Platform; home；熱門主題；雲端儲存資料
+keywords: Experience Platform；首頁；熱門主題；雲儲存資料
 solution: Experience Platform
 title: 使用來源連接器和API收集雲端儲存資料
 topic: 概述
 type: 教學課程
 description: 本教學課程涵蓋從協力廠商雲端儲存空間擷取資料，並使用來源連接器和API將其匯入平台的步驟。
 translation-type: tm+mt
-source-git-commit: 60a70352c2e13565fd3e8c44ae68e011a1d443a6
+source-git-commit: 8b85b25112ee16b09b1411c5d001bf13fb7fbcaa
 workflow-type: tm+mt
-source-wordcount: '1639'
-ht-degree: 1%
+source-wordcount: '1768'
+ht-degree: 2%
 
 ---
 
@@ -22,42 +22,42 @@ ht-degree: 1%
 
 本教學課程要求您透過有效的連線存取協力廠商雲端儲存空間，並瞭解您要匯入平台的檔案，包括檔案的路徑和結構。 如果您沒有此資訊，請先參閱[教學課程，瞭解如何使用 [!DNL Flow Service] API](../explore/cloud-storage.md)來探索協力廠商雲端儲存空間，然後再嘗試本教學課程。
 
-本教學課程也要求您對Adobe Experience Platform的下列元件有正確的認識：
+本教學課程還要求您對Adobe Experience Platform的以下部分有切實的瞭解：
 
 - [[!DNL Experience Data Model (XDM) System]](../../../../xdm/home.md):Experience Platform組織客戶體驗資料的標準化架構。
    - [架構構成基礎](../../../../xdm/schema/composition.md):瞭解XDM架構的基本建置區塊，包括架構組合的主要原則和最佳實務。
    - [架構註冊開發人員指南](../../../../xdm/api/getting-started.md):包含您必須知道的重要資訊，以便成功執行對架構註冊表API的呼叫。這包括您的`{TENANT_ID}`、&quot;containers&quot;的概念，以及提出要求時所需的標題（請特別注意「接受」標題及其可能的值）。
-- [[!DNL Catalog Service]](../../../../catalog/home.md):目錄是Experience Platform中資料位置和世系的記錄系統。
-- [[!DNL Batch ingestion]](../../../../ingestion/batch-ingestion/overview.md):批次擷取API可讓您將資料以批次檔案的形式內嵌至Experience Platform。
-- [沙盒](../../../../sandboxes/home.md):Experience Platform提供虛擬沙盒，可將單一Platform實例分割為不同的虛擬環境，以協助開發和發展數位體驗應用程式。以下各節提供您必須知道的其他資訊，以便使用[!DNL Flow Service] API成功連線至雲端儲存空間。
+- [[!DNL Catalog Service]](../../../../catalog/home.md):目錄是記錄Experience Platform中資料位置和世系的系統。
+- [[!DNL Batch ingestion]](../../../../ingestion/batch-ingestion/overview.md):「批次擷取API」可讓您將資料以批次檔案的形式內嵌至Experience Platform。
+- [沙盒](../../../../sandboxes/home.md):Experience Platform提供虛擬沙盒，可將單一平台實例分割為獨立的虛擬環境，以協助開發和發展數位體驗應用程式。以下各節提供您必須知道的其他資訊，以便使用[!DNL Flow Service] API成功連線至雲端儲存空間。
 
 ### 讀取範例API呼叫
 
-本教學課程提供範例API呼叫，以示範如何設定請求的格式。 這些包括路徑、必要標題和正確格式化的請求負載。 也提供API回應中傳回的範例JSON。 如需範例API呼叫檔案中使用之慣例的詳細資訊，請參閱Experience Platform疑難排解指南中[如何讀取範例API呼叫](../../../../landing/troubleshooting.md#how-do-i-format-an-api-request)一節。
+本教學課程提供範例API呼叫，以示範如何設定請求的格式。 這些包括路徑、必要標題和正確格式化的請求負載。 也提供API回應中傳回的範例JSON。 如需範例API呼叫檔案中所用慣例的詳細資訊，請參閱Experience Platform疑難排解指南中[如何讀取範例API呼叫](../../../../landing/troubleshooting.md#how-do-i-format-an-api-request)一節。
 
 ### 收集必要標題的值
 
-若要呼叫平台API，您必須先完成[驗證教學課程](https://www.adobe.com/go/platform-api-authentication-en)。 完成驗證教學課程後，所有Experience Platform API呼叫中每個必要標題的值都會顯示在下方：
+若要呼叫平台API，您必須先完成[驗證教學課程](https://www.adobe.com/go/platform-api-authentication-en)。 完成驗證教學課程後，將提供所有Experience PlatformAPI呼叫中每個必要標題的值，如下所示：
 
 - `Authorization: Bearer {ACCESS_TOKEN}`
 - `x-api-key: {API_KEY}`
 - `x-gw-ims-org-id: {IMS_ORG}`
 
-Experience Platform中的所有資源（包括[!DNL Flow Service]的資源）都隔離至特定的虛擬沙盒。 所有對平台API的請求都需要一個標題，該標題會指定要在中執行的操作的沙盒名稱：
+Experience Platform中的所有資源（包括屬於[!DNL Flow Service]的資源）都與特定虛擬沙盒隔離。 所有對平台API的請求都需要一個標題，該標題會指定要在中執行的操作的沙盒名稱：
 
 - `x-sandbox-name: {SANDBOX_NAME}`
 
-所有包含裝載(POST、PUT、PATCH)的請求都需要額外的媒體類型標題：
+所有包含裝載(POST、PUT、PATCH)的請求都需要附加的媒體類型標題：
 
 - `Content-Type: application/json`
 
 ## 建立源連接{#source}
 
-您可以通過對[!DNL Flow Service] API發出POST請求來建立源連接。 源連接由連接ID、源資料檔案的路徑和連接規範ID組成。
+您可以通過向[!DNL Flow Service] API發出POST請求來建立源連接。 源連接由連接ID、源資料檔案的路徑和連接規範ID組成。
 
 要建立源連接，還必須為資料格式屬性定義枚舉值。
 
-對基於檔案的連接器使用以下枚舉值：
+請為檔案來源使用下列列舉值：
 
 | 資料格式 | 列舉值 |
 | ----------- | ---------- |
@@ -65,11 +65,10 @@ Experience Platform中的所有資源（包括[!DNL Flow Service]的資源）都
 | JSON | `json` |
 | 鑲木 | `parquet` |
 
-對於所有基於表的連接器，請將值設定為`tabular`。
+對於所有基於表的源，請將值設定為`tabular`。
 
->[!NOTE]
->
->您可以透過雲端儲存來源連接器來內嵌CSV和TSV檔案，方法是指定欄分隔字元作為屬性。 任何單一字元值都是允許的欄分隔字元。 如果未提供，則使用逗號`(,)`作為預設值。
+- [使用自訂分隔檔案建立來源連線](#using-custom-delimited-files)
+- [使用壓縮檔案建立源連接](#using-compressed-files)
 
 **API格式**
 
@@ -77,7 +76,13 @@ Experience Platform中的所有資源（包括[!DNL Flow Service]的資源）都
 POST /sourceConnections
 ```
 
+### 使用自訂分隔檔案{#using-custom-delimited-files}建立來源連線
+
 **請求**
+
+您可以指定`columnDelimiter`為屬性，以自訂分隔字元來內嵌分隔字元的檔案。 任何單一字元值都是允許的欄分隔字元。 如果未提供，則使用逗號`(,)`作為預設值。
+
+下列範例要求會使用Tab分隔值建立分隔檔案類型的來源連線。
 
 ```shell
 curl -X POST \
@@ -88,9 +93,9 @@ curl -X POST \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d '{
-        "name": "Cloud storage source connector",
-        "baseConnectionId": "9e2541a0-b143-4d23-a541-a0b143dd2301",
+        "name": "Cloud storage source connection for delimited files",
         "description": "Cloud storage source connector",
+        "baseConnectionId": "9e2541a0-b143-4d23-a541-a0b143dd2301",
         "data": {
             "format": "delimited",
             "columnDelimiter": "\t"
@@ -99,7 +104,7 @@ curl -X POST \
             "path": "/ingestion-demos/leads/tsv_data/*.tsv",
             "recursive": "true"
         },
-            "connectionSpec": {
+        "connectionSpec": {
             "id": "4c10e202-c428-4796-9208-5f1f5732b1cf",
             "version": "1.0"
         }
@@ -113,6 +118,64 @@ curl -X POST \
 | `data.columnDelimiter` | 您可以使用任何單一字元欄分隔字元來收集平面檔案。 只有在接收CSV或TSV檔案時，才需要此屬性。 |
 | `params.path` | 您正在訪問的源檔案的路徑。 |
 | `connectionSpec.id` | 與特定第三方雲端儲存系統關聯的連線規格ID。 有關連接規範ID的清單，請參見[附錄](#appendix)。 |
+
+**回應**
+
+成功的響應返回新建源連接的唯一標識符(`id`)。 在後續步驟中需要此ID才能建立資料流。
+
+```json
+{
+    "id": "26b53912-1005-49f0-b539-12100559f0e2",
+    "etag": "\"11004d97-0000-0200-0000-5f3c3b140000\""
+}
+```
+
+### 使用壓縮檔案{#using-compressed-files}建立源連接
+
+**請求**
+
+您也可以透過指定壓縮的JSON或分隔檔案`compressionType`為屬性，來內嵌其檔案。 支援的壓縮檔案類型清單包括：
+
+- `bzip2`
+- `gzip`
+- `deflate`
+- `zipDeflate`
+- `tarGzip`
+- `tar`
+
+以下示例請求使用`gzip`檔案類型為壓縮分隔檔案建立源連接。
+
+```shell
+curl -X POST \
+    'https://platform.adobe.io/data/foundation/flowservice/sourceConnections' \
+    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+    -H 'x-api-key: {API_KEY}' \
+    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-sandbox-name: {SANDBOX_NAME}' \
+    -H 'Content-Type: application/json' \
+    -d '{
+        "name": "Cloud storage source connection for compressed files",
+        "description": "Cloud storage source connection for compressed files",
+        "baseConnectionId": "9e2541a0-b143-4d23-a541-a0b143dd2301",
+        "data": {
+            "format": "delimited",
+            "properties": {
+                "compressionType" : "gzip"
+            }
+        },
+        "params": {
+            "path": "/compressed/files.gzip"
+        },
+        "connectionSpec": {
+            "id": "4c10e202-c428-4796-9208-5f1f5732b1cf",
+            "version": "1.0"
+        }
+     }'
+```
+
+| 屬性 | 說明 |
+| --- | --- |
+| `data.properties.compressionType` | 決定擷取的壓縮檔案類型。 只有在擷取壓縮的JSON或分隔檔案時，才需要此屬性。 |
 
 **回應**
 
@@ -572,7 +635,7 @@ curl -X GET \
 - [對應ID](#mapping)
 - [資料流規範ID](#specs)
 
-資料流負責調度和收集源中的資料。 您可以通過執行POST請求來建立資料流，同時在裝載中提供先前提到的值。
+資料流負責調度和收集源中的資料。 您可以通過執行POST請求，同時在裝載中提供先前提到的值來建立資料流。
 
 若要排程擷取，您必須先將開始時間值設定為以秒為單位的紀元時間。 然後，您必須將頻率值設為以下五個選項之一：`once`、`minute`、`hour`、`day`或`week`。 間隔值指定兩個連續的提取之間的期間，並且建立一次性提取不需要設定間隔。 對於所有其它頻率，間隔值必須設定為等於或大於`15`。
 
