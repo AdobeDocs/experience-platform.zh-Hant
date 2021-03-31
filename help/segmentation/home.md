@@ -5,9 +5,9 @@ title: 區段服務概觀
 topic: 概述
 description: 瞭解Adobe Experience Platform細分服務及其在平台生態系統中的作用。
 translation-type: tm+mt
-source-git-commit: 7eadb14dc71792174dfd750775148763f55834dd
+source-git-commit: 738256021fb583e7dc14fd33f5df193813a6e0bb
 workflow-type: tm+mt
-source-wordcount: '1449'
+source-wordcount: '1499'
 ht-degree: 0%
 
 ---
@@ -58,6 +58,8 @@ Adobe Experience Platform[!DNL Segmentation Service]提供使用者介面和REST
 ### 批次分段
 
 作為持續資料選擇程式的替代選擇，批次分段會透過區段定義一次移動所有描述檔資料，以產生對應的觀眾。 建立後，會儲存此區段，以便匯出以供使用。
+
+使用批次分段評估的區段每24小時評估一次。 不過，對於現有區段，增量分段會使用批次分段來評估區段，最多維持一小時。 任何新的或最近修改的區段都必須等到下一個完整的批次區段工作執行完畢後，才能運用增量區段。
 
 若要瞭解如何評估區段，請參閱[區段評估教學課程](./tutorials/evaluate-a-segment.md)。
 
@@ -111,7 +113,7 @@ Adobe Experience Platform[!DNL Segmentation Service]提供使用者介面和REST
 
 ## 循序分段{#sequential}
 
-標準的使用者歷程在本質上是循序的。 Adobe Experience Platform可讓您定義一系列有序的區段，以反映此歷程，從而在事件發生時擷取事件的序列。 您可以使用[!DNL Segment Builder]中的視覺化事件時間軸，依所需順序排列事件。
+標準的使用者歷程在本質上是循序的。 Adobe Experience Platform可讓您定義有序的區段系列，以反映此歷程，因此可在事件發生時擷取事件序列。 您可以使用[!DNL Segment Builder]中的視覺化事件時間軸，依所需順序排列事件。
 
 需要循序劃分的客戶歷程範例包括產品檢視>產品新增>結帳>無購買。
 
@@ -137,7 +139,7 @@ Adobe Experience Platform[!DNL Segmentation Service]提供使用者介面和REST
 
 ## 多實體分段{#multi-entity}
 
-透過進階的多實體分段功能，您可以根據產品、商店或其他非人（亦稱為「維度」實體），以額外資料擴充[!DNL Real-time Customer Profile]資料。 因此，[!DNL Segmentation Service]可在區段定義期間存取其他欄位，就像這些欄位是[!DNL Profile]資料存放區的原生欄位。 多實體區隔可讓您根據與您獨特業務需求相關的資料來識別受眾時，有彈性。 如需詳細資訊，包括使用案例和工作流程，請參閱[多實體分段指南](multi-entity-segmentation.md)。
+透過進階的多實體分段功能，您可以根據產品、商店或其他非人員（亦稱為「維度」實體），使用額外資料來擴充[!DNL Real-time Customer Profile]資料。 因此，[!DNL Segmentation Service]可在區段定義期間存取其他欄位，就像這些欄位是[!DNL Profile]資料存放區的原生欄位。 多實體區隔可讓您根據與您獨特業務需求相關的資料來識別受眾時，有彈性。 如需詳細資訊，包括使用案例和工作流程，請參閱[多實體分段指南](multi-entity-segmentation.md)。
 
 ## [!DNL Segmentation Service] 資料類型
 
