@@ -1,13 +1,13 @@
 ---
-keywords: 體驗平台；home；熱門主題；分段服務；分段服務；使用手冊；ui指南；分段使用手冊；分段構建器；分段構建器；實現；現有；退出；
+keywords: Experience Platform; home；熱門主題；分段服務；分段服務；使用手冊；ui指南；分段使用手冊；分段生成器；分段生成器；實現；現有；退出；
 solution: Experience Platform
 title: 區段服務UI指南
-topic: ui guide
-description: Adobe Experience Platform Segmentation Service提供使用者介面來建立和管理區段定義。
+topic: ui指南
+description: Adobe Experience Platform區段服務提供使用者介面，以建立和管理區段定義。
 translation-type: tm+mt
-source-git-commit: b3defc3e33a55855e307ab70b9797d985d5719e3
+source-git-commit: 1634466d3a1d8eadc4c98bb93214d8772b6a47a3
 workflow-type: tm+mt
-source-wordcount: '1473'
+source-wordcount: '1481'
 ht-degree: 0%
 
 ---
@@ -32,19 +32,19 @@ ht-degree: 0%
 
 ## 概述
 
-在[[!DNL Experience Platform] UI](http://platform.adobe.com/)中，選擇左側導覽中的&#x200B;**[!UICONTROL 區段]**&#x200B;以開啟&#x200B;**[!UICONTROL 概述]**&#x200B;標籤。 此標籤提供檔案和影片的連結，以協助您瞭解並開始使用區段。
+在[[!DNL Experience Platform] UI](http://platform.adobe.com/)中，選擇左側導覽器中的&#x200B;**[!UICONTROL Segments]**&#x200B;以開啟&#x200B;**[!UICONTROL Overview]**&#x200B;標籤。 此標籤提供檔案和影片的連結，以協助您瞭解並開始使用區段。
 
 ![](../images/ui/overview/segment-overview.png)
 
 ## 瀏覽
 
-選擇&#x200B;**[!UICONTROL 瀏覽]**&#x200B;標籤，查看IMS組織的所有區段定義清單。
+選取&#x200B;**[!UICONTROL Browse]**&#x200B;標籤，查看IMS組織的所有區段定義清單。
 
 ![](../images/ui/overview/segment-browse-all.png)
 
 此檢視會列出區段定義的相關資訊，包括劃分、流失、描述檔計數、評估方法、建立日期和上次修改日期。
 
-劃分會顯示橫條圖，概述屬於下列各種狀態的描述檔百分比：[!UICONTROL Entered]、[!UICONTROL Eramiled]和[!UICONTROL Exiting]。
+劃分會顯示橫條圖，概述屬於下列各種狀態的描述檔百分比：[!UICONTROL Entered]、[!UICONTROL Realized]和[!UICONTROL Exiting]。
 
 ![](../images/ui/overview/segment-browse-breakdown.png)
 
@@ -62,9 +62,9 @@ ht-degree: 0%
 
 頁面頂端有選項，可將所有區段新增至排程並建立新區段。
 
-切換&#x200B;**[!UICONTROL 新增所有區段至schedule]**&#x200B;將啟用排程的區段。 有關排程分段的詳細資訊，請參閱本使用手冊](#scheduled-segmentation)的「排程分段」區段。[
+切換&#x200B;**[!UICONTROL Add all segments to schedule]**&#x200B;將啟用計劃分段。 有關排程分段的詳細資訊，請參閱本使用手冊](#scheduled-segmentation)的「排程分段」區段。[
 
-選取&#x200B;**[!UICONTROL 建立區段]**&#x200B;會帶您前往區段產生器。 若要進一步瞭解建立區段，請閱讀使用指南](#create-segment)中有關建立區段的章節。[
+選取&#x200B;**[!UICONTROL Create segment]**&#x200B;會帶您前往區段產生器。 若要進一步瞭解建立區段，請閱讀使用指南](#create-segment)中有關建立區段的章節。[
 
 ![](../images/ui/overview/segment-browse-top.png)
 
@@ -78,7 +78,7 @@ ht-degree: 0%
 
 ## 區段定義詳細資訊{#segment-details}
 
-若要檢視特定區段定義的詳細資訊，請在&#x200B;**[!UICONTROL 瀏覽]**&#x200B;標籤中選取區段名稱。
+若要檢視特定區段定義的詳細資訊，請在&#x200B;**[!UICONTROL Browse]**&#x200B;標籤中選取區段名稱。
 
 此時會顯示區段詳細資訊頁面。 在上方，有區段定義的摘要、符合資格對象大小的相關資訊，以及區段的啟動目標。
 
@@ -86,19 +86,19 @@ ht-degree: 0%
 
 ### 區段摘要
 
-**[!UICONTROL 區段摘要]**&#x200B;區段提供如屬性的ID、名稱、說明和詳細資訊。
+**[!UICONTROL Segment summary]**&#x200B;部分提供如屬性的ID、名稱、說明和詳細資訊等資訊。
 
-此外，您也可以選擇編輯區段。 選擇&#x200B;**[!UICONTROL 編輯段]**&#x200B;將帶您進入[!DNL Segment Builder]。 有關使用[!DNL Segment Builder]工作區的更多詳細資訊，請閱讀[[!DNL Segment Builder] 使用手冊](./segment-builder.md)。
+此外，您也可以選擇編輯區段。 選擇&#x200B;**[!UICONTROL Edit segment]**&#x200B;將帶您進入[!DNL Segment Builder]。 有關使用[!DNL Segment Builder]工作區的更多詳細資訊，請閱讀[[!DNL Segment Builder] 使用手冊](./segment-builder.md)。
 
 ### 群體中的受眾總數
 
-區段&#x200B;]**中的**[!UICONTROL &#x200B;觀眾總數區段顯示符合區段資格的設定檔總數。
+**[!UICONTROL Total audience in segment]**&#x200B;區段顯示符合區段資格的描述檔總數。
 
 估計值是使用當天樣本資料的樣本大小產生。 如果您的描述檔儲存區中有少於100萬個實體，則會使用完整資料集；100萬到2000萬個單位使用100萬個單位；超過2000萬個單位，佔全部單位的5%。 有關產生區段估計的更多資訊，請參閱區段建立教學課程的[估計產生區段](../tutorials/create-a-segment.md#estimate-and-preview-an-audience)。
 
 ### 已啟動的目標
 
-**[!UICONTROL 已激活的目標]**&#x200B;部分顯示此段的激活目標。
+**[!UICONTROL Activated destinations]**&#x200B;區段顯示此段的激活目標。
 
 >[!NOTE]
 >
@@ -128,7 +128,7 @@ ht-degree: 0%
 
 ## 建立區段 {#create-segment}
 
-選擇右上角的&#x200B;**[!UICONTROL 建立區段]**&#x200B;會開啟[!DNL Segment Builder]工作區，您可在此開始建立區段定義。
+選擇右上角的&#x200B;**[!UICONTROL Create segment]**&#x200B;會開啟[!DNL Segment Builder]工作區，您可在其中開始建立區段定義。
 
 ![](../images/ui/overview/segment-browse-create.png)
 
@@ -144,11 +144,11 @@ ht-degree: 0%
 
 建立區段定義後，您就可以透過隨選或排程（持續）評估來評估區段定義。 評估意指透過區段定義移動[!DNL Real-time Customer Profile]資料，以產生對應的觀眾。 建立後，會儲存觀眾，以便使用[!DNL Experience Platform] API匯出觀眾。
 
-隨選評估包括視需要使用API來執行評估並建立觀眾，而排程評估（也稱為「排程區段」）可讓您建立循環性排程，以評估特定時間（最多每天一次）的區段定義。
+隨選評估包括視需要使用API來執行評估並建立觀眾，而排程評估（也稱為「排程區段」）可讓您建立循環排程，以評估特定時間（最多每天一次）的區段定義。
 
 ### 啟用計劃分段{#enable-scheduled-segmentation}
 
-您可使用UI或API來啟用計畫評估的區段定義。 在UI中，返回&#x200B;**[!UICONTROL Segments]**&#x200B;內的&#x200B;**[!UICONTROL Browse]**&#x200B;標籤，並切換至&#x200B;**[!UICONTROL 新增所有區段至排程]**。 這會導致根據您組織所設定的排程評估所有區段。
+您可使用UI或API來啟用計畫評估的區段定義。 在UI中，返回&#x200B;**[!UICONTROL Segments]**&#x200B;內的&#x200B;**[!UICONTROL Browse]**&#x200B;標籤，並切換至&#x200B;**[!UICONTROL Add all segments to schedule]**。 這會導致根據您組織所設定的排程評估所有區段。
 
 >[!NOTE]
 >
@@ -167,6 +167,12 @@ ht-degree: 0%
 >[!NOTE]
 >
 >為了讓串流區段正常運作，您必須啟用組織的排程區段。 如需啟用排程分段的詳細資訊，請參閱本使用手冊](#scheduled-segmentation)中的[串流分段區段。
+
+## 邊緣區段{#edge-segmentation}
+
+邊緣區段是指能夠即時在邊緣上評估平台中的區段，讓相同的頁面和下一頁個人化使用案例。
+
+有關邊緣分段的更多資訊，請參閱[邊緣分段UI指南](./edge-segmentation.md)
 
 ## 違反策略
 
