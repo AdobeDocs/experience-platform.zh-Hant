@@ -1,23 +1,23 @@
 ---
-keywords: Experience Platform;home；熱門主題；分段；分段；分段；分段服務；分段；分段；分段；分段；分段；分段；分段；分段
+keywords: Experience Platform；首頁；熱門主題；分段；分段；分段服務；分段；分段；分段；分段；分段；分段；分段；分段；分段；分段；分段；分段
 solution: Experience Platform
 title: 區段服務概觀
-topic: overview
+topic: 概述
 description: 瞭解Adobe Experience Platform細分服務及其在平台生態系統中的作用。
 translation-type: tm+mt
-source-git-commit: c0c42f872666323bfb3bdbdf5fb02475d3b5bc79
+source-git-commit: 7eadb14dc71792174dfd750775148763f55834dd
 workflow-type: tm+mt
-source-wordcount: '1407'
+source-wordcount: '1449'
 ht-degree: 0%
 
 ---
 
 
-# [!DNL Segmentation Service]概述
+# [!DNL Segmentation Service] 概觀
 
-Adobe Experience Platform [!DNL Segmentation Service]提供使用者介面和REST風格的API，可讓您從[!DNL Real-time Customer Profile]資料建立細分並產生觀眾。 這些區段是集中設定並維護在[!DNL Platform]上，任何Adobe解決方案都可輕鬆存取。
+Adobe Experience Platform[!DNL Segmentation Service]提供使用者介面和RESTful API，可讓您建立區段並從您的[!DNL Real-time Customer Profile]資料產生觀眾。 這些區段是集中設定並維護在[!DNL Platform]上，任何Adobe解決方案都可輕鬆存取。
 
-本檔案概述[!DNL Segmentation Service]及其在Adobe Experience Platform中所扮演的角色。
+本檔案概述[!DNL Segmentation Service]及其在Adobe Experience Platform的作用。
 
 ## [!DNL Segmentation Service]快速入門
 
@@ -60,6 +60,12 @@ Adobe Experience Platform [!DNL Segmentation Service]提供使用者介面和RES
 作為持續資料選擇程式的替代選擇，批次分段會透過區段定義一次移動所有描述檔資料，以產生對應的觀眾。 建立後，會儲存此區段，以便匯出以供使用。
 
 若要瞭解如何評估區段，請參閱[區段評估教學課程](./tutorials/evaluate-a-segment.md)。
+
+### 邊緣分割
+
+邊緣區段是指能夠即時在邊緣上評估平台中的區段，讓相同的頁面和下一頁個人化使用案例。
+
+若要進一步瞭解邊緣區段，請閱讀[API檔案](./api/edge-segmentation.md)或[UI檔案](./ui/edge-segmentation.md)。
 
 ## 存取區段結果
 
@@ -105,7 +111,7 @@ Adobe Experience Platform [!DNL Segmentation Service]提供使用者介面和RES
 
 ## 循序分段{#sequential}
 
-標準的使用者歷程在本質上是循序的。 Adobe Experience Platform可讓您定義一系列有序的細分，以反映此歷程，從而在事件發生時捕捉事件序列。 您可以使用[!DNL Segment Builder]中的視覺化事件時間軸，依所需順序排列事件。
+標準的使用者歷程在本質上是循序的。 Adobe Experience Platform可讓您定義一系列有序的區段，以反映此歷程，從而在事件發生時擷取事件的序列。 您可以使用[!DNL Segment Builder]中的視覺化事件時間軸，依所需順序排列事件。
 
 需要循序劃分的客戶歷程範例包括產品檢視>產品新增>結帳>無購買。
 
