@@ -5,9 +5,9 @@ title: 架構構成基礎
 topic: 概述
 description: 本檔案介紹Experience Data Model(XDM)架構，以及組合要在Adobe Experience Platform使用的架構的構建區塊、原則和最佳實務。
 translation-type: tm+mt
-source-git-commit: 8448b5dcedc42898d8a403aae1e044841bc2734c
+source-git-commit: 9a5618674946f67528de1b40609596dbb75ced0c
 workflow-type: tm+mt
-source-wordcount: '3142'
+source-wordcount: '3461'
 ht-degree: 0%
 
 ---
@@ -23,19 +23,9 @@ ht-degree: 0%
 
 除了描述資料的結構外，模式還對資料應用約束和期望，以便在系統之間移動時驗證它。 這些標準定義允許一致地解釋資料，而不論其來源為何，並消除跨應用程式翻譯的需要。
 
-[!DNL Experience Platform] 通過使用模式來維護此語義規範化。方案是描述[!DNL Experience Platform]中資料的標準方式，可讓符合方案的所有資料重複使用，而不會在組織間產生衝突，甚至可在多個組織間共用。
+[!DNL Experience Platform] 通過使用模式來維護此語義規範化。方案是描述[!DNL Experience Platform]中資料的標準方式，允許所有符合方案的資料在組織中重複使用，而不發生衝突，甚至在多個組織之間共用。
 
-### 關係表與嵌入對象
-
-使用關係式資料庫時，最佳實務是標準化資料，或將實體分割為離散的部分，然後跨多個表格顯示。 為了整體讀取資料或更新實體，必須使用JOIN對許多單個表執行讀和寫操作。
-
-XDM模式通過嵌入對象的使用，可以直接表示複雜的資料，並將其儲存在具有層次結構的自包含文檔中。 此結構的主要優點之一是，它可讓您查詢資料，而不需透過昂貴的連接來重新建構實體至多個非標準化表格。 您的架構階層可以有多少層級沒有硬性限制。
-
-### 結構圖和大資料
-
-現代數位系統會產生大量的行為訊號（交易資料、網路記錄、物聯網、展示等等）。 此巨量資料提供了最佳化體驗的絕佳機會，但由於資料的規模和多樣性，使用起來十分困難。 為了從資料中獲取價值，必須標準化其結構、格式和定義，以便能夠一致且有效率地處理。
-
-結構描述可解決此問題，它允許從多個來源整合資料、透過共同結構和定義標準化資料，並跨解決方案共用。 這允許後續的流程和服務回答任何類型的資料問題，從傳統的資料建模方法轉向資料建模方法，在該方法中，將要詢問資料的所有問題都事先已知，並且資料建模以符合這些期望。
+XDM模式最適合以獨立格式儲存大量複雜資料。 有關XDM如何做到這一點的詳細資訊，請參閱本文檔附錄中[嵌入對象](#embedded)和[ big data](#big-data)的章節。
 
 ### [!DNL Experience Platform]中的架構式工作流程
 
@@ -70,7 +60,7 @@ XDM模式通過嵌入對象的使用，可以直接表示複雜的資料，並�
 
 在方案規劃階段，務必考慮客戶身份，以協助確保資料匯整在一起，以建立最強穩的個人檔案。 請參閱[Adobe Experience Platform身分服務](../../identity-service/home.md)的概觀，進一步瞭解身分資訊如何協助您為客戶提供數位體驗。
 
-#### xdm:identityMap {#identityMap}
+#### `xdm:identityMap` {#identityMap}
 
 `xdm:identityMap` 是映射類型欄位，它描述單個的各種標識值及其關聯的名稱空間。此欄位可用於為方案提供身份資訊，而不是在方案本身的結構中定義身份值。
 
@@ -107,7 +97,7 @@ XDM模式通過嵌入對象的使用，可以直接表示複雜的資料，並�
 
 >[!NOTE]
 >
->也可以為每個標識值提供一個布爾值，用於確定該值是否為主標識(`primary`)。 僅需為[!DNL Real-time Customer Profile]中要使用的方案設定主標識。 如需詳細資訊，請參閱[union結構描述](#union)一節。
+>也可以為每個標識值提供一個布爾值，用於該值是否為主標識(`primary`)。 僅需為[!DNL Real-time Customer Profile]中要使用的方案設定主標識。 如需詳細資訊，請參閱[union結構描述](#union)一節。
 
 ### 模式演化原則{#evolution}
 
@@ -143,7 +133,13 @@ XDM模式通過嵌入對象的使用，可以直接表示複雜的資料，並�
 
 架構的類決定哪些混合符合在該架構中使用的資格。 這將在[下一節](#mixin)中詳細討論。
 
-Adobe提供兩個標準（「核心」）XDM類：[!DNL XDM Individual Profile]和[!DNL XDM ExperienceEvent]。 除了這些核心類別外，您也可以建立自己的自訂類別，以說明組織的更多特定使用案例。 當沒有Adobe定義的核心類可用於描述唯一使用案例時，自定義類由組織定義。
+Adobe提供數種標準（「核心」）XDM類。 幾乎所有下游平台進程都需要其中兩個類[!DNL XDM Individual Profile]和[!DNL XDM ExperienceEvent]。 除了這些核心類別外，您也可以建立自己的自訂類別，以說明組織的更多特定使用案例。 當沒有Adobe定義的核心類可用於描述唯一使用案例時，自定義類由組織定義。
+
+下列螢幕擷取說明如何在平台UI中呈現類別。 由於顯示的示例架構不包含任何混音，所以所有顯示的欄位都由架構的類([!UICONTROL XDM Individual Profile])提供。
+
+![](../images/schema-composition/class.png)
+
+有關可用標準XDM類的最新清單，請參閱[正式的XDM儲存庫](https://github.com/adobe/xdm/tree/master/components/classes)。 或者，如果希望在UI中查看資源，可參閱[瀏覽XDM元件](../ui/explore.md)上的指南。
 
 ### Mixin {#mixin}
 
@@ -157,21 +153,27 @@ Mixins會根據所代表資料的行為（記錄或時間系列）來定義與�
 
 請記住，結構描述是由「零個或更多」混合組成，因此這表示您無需使用任何混合即可合成有效結構描述。
 
-有關所有當前標準混合的清單，請參閱[正式的XDM儲存庫](https://github.com/adobe/xdm/tree/master/components/mixins)。
+下列螢幕擷取說明mixin如何在平台UI中呈現。 在本例中，單個混音([!UICONTROL Demographic Details])被添加到模式，該模式為模式結構提供欄位分組。
+
+![](../images/schema-composition/mixin.png)
+
+有關可用標準XDM混合的最新清單，請參閱[正式的XDM儲存庫](https://github.com/adobe/xdm/tree/master/components/mixins)。 或者，如果希望在UI中查看資源，可參閱[瀏覽XDM元件](../ui/explore.md)上的指南。
 
 ### 資料類型{#data-type}
 
-資料類型與基本常值欄位的使用方式相同，在類或方案中用作參考欄位類型。 關鍵區別在於資料類型可以定義多個子欄位。 與混合類似，資料類型允許一致地使用多欄位結構，但比混合更具靈活性，因為通過將資料類型添加為欄位的「資料類型」，可以將資料類型包括在模式中的任何位置。
+資料類型與基本常值欄位的使用方式相同，在類或方案中用作參考欄位類型。 關鍵區別在於資料類型可以定義多個子欄位。 與混音類似，資料類型允許一致地使用多欄位結構，但比混音更具靈活性，因為通過將資料類型添加為欄位的「資料類型」，資料類型可以包括在模式中的任意位置。
 
->[!NOTE]
->
->有關混合和資料類型之間差異以及使用一種方法與另一種方法進行類似使用情形的利弊的詳細資訊，請參閱[附錄](#mixins-v-datatypes)。
+[!DNL Experience Platform] 提供了一些常用資料類型作為的一部分，以 [!DNL Schema Registry] 支援使用標準模式來描述常用資料結構。這在[!DNL Schema Registry]教學課程中有更詳細的說明，當您逐步定義資料類型時，會更清楚說明。
 
-[!DNL Experience Platform] 提供了許多公用資料類型，作為其中的一 [!DNL Schema Registry] 部分，以支援使用標準模式來描述公用資料結構。這在[!DNL Schema Registry]教程中有更詳細的說明，在您完成定義資料類型的步驟後，該說明將變得更加清晰。
+下列螢幕擷取顯示資料類型在平台UI中的呈現方式。 ([!UICONTROL Demographic Details])mixin提供的一個欄位使用「[!UICONTROL Person name]」資料類型，如欄位名稱旁的垂直號字元(`|`)後面的文本所示。 此特定資料類型提供了與個人姓名相關的多個子欄位，此構造可以重複用於需要捕獲人員姓名的其他欄位。
+
+![](../images/schema-composition/data-type.png)
+
+有關可用標準XDM資料類型的最新清單，請參閱[正式的XDM儲存庫](https://github.com/adobe/xdm/tree/master/components/datatypes)。 或者，如果希望在UI中查看資源，可參閱[瀏覽XDM元件](../ui/explore.md)上的指南。
 
 ### 欄位
 
-欄位是架構的最基本構建塊。 欄位提供了通過定義特定資料類型可以包含的資料類型的約束。 這些基本資料類型定義一個欄位，而先前提到的[資料類型](#data-type)允許您定義多個子欄位，並在各種方案中重新使用相同的多欄位結構。 因此，除了將欄位的「資料類型」定義為註冊表中定義的資料類型之一外，[!DNL Experience Platform]還支援基本標量類型，如：
+欄位是架構最基本的建置區塊。 欄位可定義特定資料類型，以限制其可包含的資料類型。 這些基本資料類型定義單一欄位，而先前提及的[資料類型](#data-type)可讓您定義多個子欄位，並在各種結構中重複使用相同的多欄位結構。 因此，除了將欄位的「資料類型」定義為註冊表中定義的其中一種資料類型外，[!DNL Experience Platform]還支援基本標量類型，例如：
 
 * 字串
 * 整數
@@ -182,13 +184,13 @@ Mixins會根據所代表資料的行為（記錄或時間系列）來定義與�
 
 >[!TIP]
 >
->有關在對象類型欄位上使用自由格式欄位的利弊資訊，請參閱[附錄](#objects-v-freeform)。
+>有關在對象類型欄位上使用自由格式欄位的利弊，請參見[附錄](#objects-v-freeform)。
 
-這些標量類型的有效範圍可以進一步限制為某些模式、格式、最小值/最大值或預定義值。 使用這些約束，可以表示範圍更廣的更具體的欄位類型，包括：
+這些標量類型的有效範圍可以進一步限制為某些模式、格式、最小值／最大值或預定義值。 使用這些約束，可以表示各種更具體的欄位類型，包括：
 
-* 枚舉
-* 龍
-* 短
+* Enum
+* 長
+* 簡短
 * 位元組
 * Date
 * 日期時間
@@ -196,9 +198,9 @@ Mixins會根據所代表資料的行為（記錄或時間系列）來定義與�
 
 >[!NOTE]
 >
->「map」欄位類型允許鍵值對資料，包括單個鍵的多個值。 映射只能在系統級別定義，這意味著您可能會在行業或供應商定義的架構中遇到映射，但在您定義的欄位中無法使用。 [架構註冊表API開發人員指南](../api/getting-started.md)包含有關定義欄位類型的詳細資訊。
+>「映射」欄位類型允許鍵值對資料，包括單個鍵的多個值。 映射只能在系統級別定義，這表示您可能在行業或供應商定義的方案中遇到映射，但無法用於您定義的欄位。 [方案註冊表API開發人員指南](../api/getting-started.md)包含有關定義欄位類型的詳細資訊。
 
-下游服務和應用程式使用的某些資料操作會強制限制特定欄位類型。 受影響的服務包括但不限於：
+下游服務和應用程式使用的某些資料操作對特定欄位類型強制執行限制。 受影響的服務包括但不限於：
 
 * [[!DNL Real-time Customer Profile]](../../profile/home.md)
 * [[!DNL Identity Service]](../../identity-service/home.md)
@@ -206,94 +208,113 @@ Mixins會根據所代表資料的行為（記錄或時間系列）來定義與�
 * [[!DNL Query Service]](../../query-service/home.md)
 * [[!DNL Data Science Workspace]](../../data-science-workspace/home.md)
 
-在建立用於下游服務的架構之前，請查看這些服務的相應文檔，以便更好地瞭解該架構要用於的資料操作的欄位要求和約束。
+在建立用於下游服務的架構之前，請先閱讀這些服務的適當檔案，以便更好地瞭解該架構用於資料操作的現場要求和限制。
 
 ### XDM欄位
 
-除了基本欄位和定義自己資料類型的能力之外，XDM還提供了一組標準欄位和資料類型，這些欄位和資料類型是[!DNL Experience Platform]服務隱式理解的，並且當在[!DNL Platform]元件中使用時提供了更高的一致性。
+除了基本欄位和定義您自己的資料類型外，XDM還提供了一組標準欄位和資料類型，這些欄位和資料類型皆為[!DNL Experience Platform]服務所隱含，而且當跨[!DNL Platform]元件使用時，可提供更一致性。
 
-這些欄位（如「名字」和「電子郵件地址」）包含除基本標量欄位類型之外的附加含義，並告訴[!DNL Platform]任何共用相同XDM資料類型的欄位都將以相同方式運行。 無論資料來自何處，或[!DNL Platform]服務使用資料，都可以信任此行為保持一致。
+這些欄位（如「名字」和「電子郵件地址」）包含除基本標量欄位類型以外的附加含義，並告知[!DNL Platform]共用相同XDM資料類型的所有欄位將以相同的方式運行。 無論資料來自何處，或[!DNL Platform]服務使用資料，都可信任此行為是一致的。
 
-有關可用XDM欄位的完整清單，請參閱[ XDM欄位字典](field-dictionary.md)。 建議盡可能使用XDM欄位和資料類型來支援[!DNL Experience Platform]中的一致性和標準化。
+有關可用XDM欄位的完整清單，請參見[XDM欄位字典](field-dictionary.md)。 建議盡可能使用XDM欄位和資料類型，以支援[!DNL Experience Platform]的一致性和標準化。
 
 ## 合成示例
 
-架構表示將被攝取到[!DNL Platform]中並使用合成模型構建的資料的格式和結構。 如前所述，這些架構由類和與該類相容的零個或多個混合組成。
+結構表示將被收錄到[!DNL Platform]中並使用構圖模型構建的資料的格式和結構。 如前所述，這些模式由類和與該類相容的零個或多個混合組成。
 
-例如，描述在零售商店進行的採購的架構可能稱為「[!UICONTROL Store Transactions]」。 架構實現與標準[!UICONTROL Commerce]混合和用戶定義的[!UICONTROL Product Info]混合組合的[!DNL XDM ExperienceEvent]類。
+例如，描述在零售商店購買之商品的架構可能稱為「[!UICONTROL Store Transactions]」。 該模式實現與標準[!UICONTROL Commerce] mixin和用戶定義的[!UICONTROL Product Info] mixin組合的[!DNL XDM ExperienceEvent]類。
 
-另一個跟蹤網站流量的架構可能稱為「[!UICONTROL Web Visits]」。 它還實現了[!DNL XDM ExperienceEvent]類，但此次合併了標準[!UICONTROL Web]混合。
+追蹤網站流量的另一個架構可能稱為「[!UICONTROL Web Visits]」。 它也實作[!DNL XDM ExperienceEvent]類別，但這次結合了標準[!UICONTROL Web] mixin。
 
-下圖顯示了這些方案以及每個混合所貢獻的欄位。 它還包含基於[!DNL XDM Individual Profile]類的兩個架構，包括本指南中前面提到的「[!UICONTROL Loyalty Members]」架構。
+下圖顯示了這些方案以及每個混音所貢獻的欄位。 它還包含基於[!DNL XDM Individual Profile]類的兩個方案，包括本指南中前面提到的&quot;[!UICONTROL Loyalty Members]&quot;方案。
 
 ![](../images/schema-composition/composition.png)
 
 ### Union {#union}
 
-雖然[!DNL Experience Platform]允許您為特定使用情形合成架構，但它也允許您看到特定類類型的架構的「聯合」。 上圖顯示了基於XDM ExperienceEvent類的兩個架構和基於[!DNL XDM Individual Profile]類的兩個架構。 如下所示，聯合聚合共用同一類（分別為[!DNL XDM ExperienceEvent]和[!DNL XDM Individual Profile]）的所有架構的欄位。
+雖然[!DNL Experience Platform]允許您為特定使用案例合成方案，但它還允許您查看特定類型的方案「聯合」。 上圖顯示基於XDM ExperienceEvent類的兩個模式和基於[!DNL XDM Individual Profile]類的兩個模式。 聯合（如下所示）會聚合共用相同類（[!DNL XDM ExperienceEvent]和[!DNL XDM Individual Profile]）的所有方案的欄位。
 
 ![](../images/schema-composition/union.png)
 
-通過啟用與[!DNL Real-time Customer Profile]一起使用的架構，該架構將包含在該類型的聯合中。 [!DNL Profile] 提供強健、集中的客戶屬性配置檔案以及客戶在與整合的任何系統中發生的每個事件的時間戳記 [!DNL Platform]。[!DNL Profile] 使用聯合視圖來表示此資料並提供每個客戶的整體視圖。
+通過啟用與[!DNL Real-time Customer Profile]一起使用的模式，該模式將包含在該類型的聯合中。 [!DNL Profile] 提供強穩、集中的客戶屬性描述檔，以及客戶在與之整合的任何系統上所發生之每個事件的時間戳記帳戶 [!DNL Platform]。[!DNL Profile] 使用聯合檢視來呈現此資料，並提供每位客戶的全面檢視。
 
 有關使用[!DNL Profile]的詳細資訊，請參閱[即時客戶概要資訊概述](../../profile/home.md)。
 
-## 將資料檔案映射到XDM架構
+## 將資料檔案映射到XDM模式
 
-所有被攝入[!DNL Experience Platform]的資料檔案必須符合XDM架構的結構。 有關如何設定資料檔案格式以符合XDM層次結構（包括示例檔案）的詳細資訊，請參閱[示例ETL轉換](../../etl/transformations.md)上的文檔。 有關將資料檔案插入[!DNL Experience Platform]的一般資訊，請參閱[批處理接收概述](../../ingestion/batch-ingestion/overview.md)。
+所有被收錄到[!DNL Experience Platform]中的資料檔案都必須符合XDM架構的結構。 有關如何格式化資料檔案以符合XDM層次（包括示例檔案）的詳細資訊，請參見[示例ETL轉換](../../etl/transformations.md)上的文檔。 有關將資料檔案提取到[!DNL Experience Platform]的一般資訊，請參見[批處理提取概述](../../ingestion/batch-ingestion/overview.md)。
+
+## 外部區段的結構
+
+如果您要將外部系統的區段帶入平台，您必須使用下列元件，才能在您的架構中擷取這些區段：
+
+* [[!UICONTROL Segment definition] 類別](../classes/segment-definition.md):使用此標準類別來擷取外部區段定義的關鍵屬性。
+* [[!UICONTROL Segment Membership Details] mixin](../mixins/profile/segmentation.md):將此混音新增至您的 [!UICONTROL XDM Individual Profile] 結構，以便將客戶個人檔案與特定區段建立關聯。
 
 ## 後續步驟
 
-現在，您已經瞭解了架構組合的基本知識，可以開始使用[!DNL Schema Registry]來探索和構建架構。
+既然您瞭解架構構成的基本知識，就可以開始使用[!DNL Schema Registry]來探索和構建架構。
 
-要查看兩個核心XDM類及其常用相容混合的結構，請參閱以下參考文檔：
+要查看兩個核心XDM類及其常用相容混音的結構，請參見以下參考文檔：
 
 * [[!DNL XDM Individual Profile]](../classes/individual-profile.md)
 * [[!DNL XDM ExperienceEvent]](../classes/experienceevent.md)
 
-[!DNL Schema Registry]用於訪問Adobe Experience Platform內的[!DNL Schema Library]，並提供用戶介面和REST風格的API，可從中訪問所有可用的庫資源。 [!DNL Schema Library]包含由Adobe定義的行業資源、由[!DNL Experience Platform]合作夥伴定義的供應商資源以及由組織成員組成的類、混合、資料類型和架構。
+[!DNL Schema Registry]用於訪問Adobe Experience Platform的[!DNL Schema Library]，並提供用戶介面和REST風格的API，可從中訪問所有可用的庫資源。 [!DNL Schema Library]包含由Adobe定義的行業資源、由[!DNL Experience Platform]合作夥伴定義的供應商資源，以及由組織成員組成的類、混合、資料類型和方案。
 
-要開始使用UI合成架構，請與[架構編輯器教程](../tutorials/create-schema-ui.md)一起構建本文檔中提到的「會員」架構。
+要開始使用UI合成架構，請遵循[架構編輯器教程](../tutorials/create-schema-ui.md)來構建本文檔中提及的「忠誠成員」架構。
 
-要開始使用[!DNL Schema Registry] API，請從閱讀[架構註冊表API開發人員指南](../api/getting-started.md)開始。 閱讀開發人員指南後，請按照[教程中介紹的步驟使用架構註冊表API](../tutorials/create-schema-api.md)建立架構。
+若要開始使用[!DNL Schema Registry] API，請從閱讀[方案註冊表API開發人員指南](../api/getting-started.md)開始。 閱讀開發人員指南後，請依照[教學課程中說明的步驟，使用架構註冊表API](../tutorials/create-schema-api.md)建立架構。
 
 ## 附錄
 
-下節包含有關架構組合原則的其他資訊。
+以下各節包含有關模式組合原則的其他資訊。
+
+### 關係表與嵌入式對象{#embedded}
+
+使用關係式資料庫時，最佳實務是標準化資料，或將實體分割為離散的部分，然後跨多個表格顯示。 為了整體讀取資料或更新實體，必須使用JOIN對許多單個表執行讀和寫操作。
+
+XDM模式通過嵌入對象的使用，可以直接表示複雜的資料，並將其儲存在具有層次結構的自包含文檔中。 此結構的主要優點之一是，它可讓您查詢資料，而不需透過昂貴的連接來重新建構實體至多個非標準化表格。 您的架構階層可以有多少層級沒有硬性限制。
+
+### 方案和大資料{#big-data}
+
+現代數位系統會產生大量的行為訊號（交易資料、網路記錄、物聯網、展示等等）。 此巨量資料提供了最佳化體驗的絕佳機會，但由於資料的規模和多樣性，使用起來十分困難。 為了從資料中獲取價值，必須標準化其結構、格式和定義，以便能夠一致且有效率地處理。
+
+結構描述可解決此問題，它允許從多個來源整合資料、透過共同結構和定義標準化資料，並跨解決方案共用。 這允許後續的流程和服務回答任何類型的資料問題，從傳統的資料建模方法轉向資料建模方法，在該方法中，將要詢問資料的所有問題都事先已知，並且資料建模以符合這些期望。
 
 ### 對象與自由格式欄位{#objects-v-freeform}
 
-在設計方案時，在自由格式欄位上選擇對象時，需要考慮一些關鍵因素：
+在設計方案時，在自由格式欄位上選擇物件時，需考慮一些關鍵因素：
 
-| 對象 | 自由格式欄位 |
+| 物件 | 自由格式欄位 |
 | --- | --- |
-| 增加嵌套 | 少或無嵌套 |
-| 建立邏輯欄位分組 | 欄位放置在即席位置 |
+| 增加巢狀結構 | 少或無巢狀 |
+| 建立邏輯欄位組 | 欄位會置於臨機位置 |
 
-#### 對象
+#### 物件
 
-下面列出了在自由格式欄位上使用對象的利弊。
+在自由格式欄位上使用物件的利弊列於下方。
 
 **專業**:
 
 * 當要建立特定欄位的邏輯分組時，最好使用對象。
-* 對象以更結構化的方式組織架構。
-* 對象間接有助於在段生成器UI中建立良好的菜單結構。 架構中的分組欄位直接反映在段生成器UI中提供的資料夾結構中。
+* 對象以更結構化的方式組織模式。
+* 物件間接有助於在區段產生器UI中建立良好的功能表結構。 架構內的群組欄位會直接反映在「區段產生器UI」中提供的資料夾結構中。
 
 **缺點**:
 
-* 欄位變得更嵌套。
-* 使用[Adobe Experience Platform查詢服務](../../query-service/home.md)時，必須為查詢嵌套在對象中的欄位提供較長的引用字串。
+* 欄位會變得更巢狀化。
+* 使用[Adobe Experience Platform查詢服務](../../query-service/home.md)時，必須為對象中嵌套的查詢欄位提供較長的引用字串。
 
 #### 自由格式欄位
 
-下面列出了在對象上使用自由格式欄位的利弊。
+在物件上使用自由格式欄位的利弊列於下方。
 
 **專業**:
 
-* 自由格式欄位直接在架構的根對象(`_tenantId`)下建立，提高了可見性。
-* 使用查詢服務時，自由表單域的引用字串往往較短。
+* 自由格式欄位直接在模式的根對象(`_tenantId`)下建立，提高了可見性。
+* 使用查詢服務時，自由格式欄位的參考字串會較短。
 
 **缺點**:
 
-* 架構中自由格式欄位的位置是即席的，這意味著它們按字母順序顯示在架構編輯器中。 這會使架構的結構化程度降低，並且類似的自由格式欄位最終可能會根據名稱被分開很遠。
+* 架構中自由格式欄位的位置是臨機的，這表示它們在架構編輯器中按字母順序顯示。 這可能會使結構描述變得不那麼結構化，而類似的自由格式欄位可能會因名稱而分離得很遠。
