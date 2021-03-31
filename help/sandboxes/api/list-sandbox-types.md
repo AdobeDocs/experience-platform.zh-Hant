@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home；熱門主題；清單沙箱
+keywords: Experience Platform；首頁；熱門主題；清單沙箱
 solution: Experience Platform
 title: 在API中列出支援的沙盒類型
-topic: developer guide
+topic: 開發人員指南
 description: 您可以向/sandboxTypes端點提出GET請求，以擷取組織支援的沙盒類型清單。
 translation-type: tm+mt
-source-git-commit: 36f63cecd49e6a6b39367359d50252612ea16d7a
+source-git-commit: ca3de18c093d7b692b582045afea4401d7133b9b
 workflow-type: tm+mt
-source-wordcount: '81'
+source-wordcount: '83'
 ht-degree: 2%
 
 ---
@@ -31,7 +31,6 @@ curl -X GET \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
 **回應**
