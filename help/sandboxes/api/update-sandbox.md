@@ -2,20 +2,20 @@
 keywords: Experience Platform;home；熱門主題；更新沙盒
 solution: Experience Platform
 title: 在API中更新沙盒
-topic: developer guide
-description: 您可以透過提出PATCH請求來更新沙盒中的一或多個欄位，該請求會在請求路徑中包含沙盒的名稱，並在請求裝載中包含要更新的屬性。
+topic: 開發人員指南
+description: 您可以更新沙盒中的一或多個欄位，方法是提出PATCH請求，請求路徑中包含沙盒的名稱，請求裝載中包含要更新的屬性。
 translation-type: tm+mt
-source-git-commit: 36f63cecd49e6a6b39367359d50252612ea16d7a
+source-git-commit: ca3de18c093d7b692b582045afea4401d7133b9b
 workflow-type: tm+mt
-source-wordcount: '133'
-ht-degree: 3%
+source-wordcount: '135'
+ht-degree: 2%
 
 ---
 
 
 # 在API中更新沙盒
 
-您可以發出PATCH請求，在請求路徑中包含沙盒的`name`，並在請求裝載中包含要更新的屬性，以更新沙盒中的一或多個欄位。
+您可以更新沙盒中的一或多個欄位，方法是提出PATCH請求，請求中包含沙盒的`name`在請求路徑中，以及要在請求裝載中更新的屬性。
 
 >[!NOTE]
 >
@@ -41,7 +41,6 @@ curl -X PATCH \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -H 'Content-Type: application/json' \
   -d '{
     "title": "Development B"
