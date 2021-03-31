@@ -2,12 +2,12 @@
 keywords: Experience Platform;home；熱門主題；查找沙盒；查找沙盒
 solution: Experience Platform
 title: 在API中尋找沙盒
-topic: developer guide
+topic: 開發人員指南
 description: 您可以提出GET請求，在請求路徑中包含沙盒的名稱屬性，以尋找個別沙盒。
 translation-type: tm+mt
-source-git-commit: 36f63cecd49e6a6b39367359d50252612ea16d7a
+source-git-commit: ca3de18c093d7b692b582045afea4401d7133b9b
 workflow-type: tm+mt
-source-wordcount: '243'
+source-wordcount: '245'
 ht-degree: 2%
 
 ---
@@ -37,7 +37,6 @@ curl -X GET \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
 **回應**
