@@ -5,10 +5,10 @@ doc-type: release notes
 last-update: March 31, 2021
 author: ens72741
 translation-type: tm+mt
-source-git-commit: 8d4270d9168a570fcf92ba60d70dbc8e9af98136
+source-git-commit: 0192c951a288cc1e0891a12ba9eff32aea120518
 workflow-type: tm+mt
-source-wordcount: '244'
-ht-degree: 9%
+source-wordcount: '436'
+ht-degree: 7%
 
 ---
 
@@ -19,7 +19,35 @@ ht-degree: 9%
 
 Adobe Experience Platform 現有功能更新：
 
+- [[!DNL Data Prep]](#data-prep)
+- [[!DNL Segmentation Service]](#segmentation)
 - [[!DNL Sources]](#sources)
+
+## [!DNL Data Prep] {#data-prep}
+
+[!DNL Data Prep] 可讓資料工程師將資料對應、轉換及驗證資料與Experience Data Model(XDM)。
+
+| 功能 | 說明 |
+| ------- | ----------- |
+| `add_to_array` 函數 | 更新功能，以支援陣列做為參數。 |
+| `to_array` 函數 | 更新功能以支援物件做為參數。 |
+
+如需詳細資訊，請參閱[[!DNL Data Prep] overview](../../data-prep/home.md)。
+
+## 劃分服務 {#segmentation}
+
+Adobe Experience Platform區段服務提供使用者介面和REST風格的API，可讓您建立區段並從您的[!DNL Real-time Customer Profile]資料產生觀眾。 這些區段是集中設定並維護在[!DNL Platform]上，讓任何Adobe應用程式都可輕鬆存取。
+
+[!DNL Segmentation Service] 定義個人檔案的特定子集，方法是描述區分客戶群中有價人群的標準。區段可以根據記錄資料（例如人口統計資訊）或代表客戶與品牌互動的時間系列事件來劃分。
+
+**新功能**
+
+| 功能 | 說明 |
+| ------- | ----------- |
+| （測試版）邊緣區隔 | 邊緣區段會即時評估區段，允許相同頁面和下一頁個人化使用案例。 有關邊緣分段的詳細資訊，請參閱[分段UI概觀](../../segmentation/ui/overview.md)。 |
+| （測試版）增量細分 | 將批次分段中評估的現有區段定義新鮮度提高至一小時。 |
+
+如需[!DNL Segmentation Service]的詳細資訊，請參閱[區段概述](../../segmentation/home.md)。
 
 ## [!DNL Sources] {#sources}
 
