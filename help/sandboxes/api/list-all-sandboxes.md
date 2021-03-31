@@ -5,7 +5,7 @@ title: 在API中列出沙盒
 topic: 開發人員指南
 description: 若要列出屬於您IMS組織（活動或其他）的所有沙盒，請向/sandbox端點提出GET要求。
 translation-type: tm+mt
-source-git-commit: ca3de18c093d7b692b582045afea4401d7133b9b
+source-git-commit: 62ce5ac92d03a6e85589fc92e8d953f7fc1d8f31
 workflow-type: tm+mt
 source-wordcount: '322'
 ht-degree: 2%
@@ -35,6 +35,7 @@ curl -X GET \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
 **回應**
