@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home；熱門主題；列出活動的沙盒；列出沙盒
+keywords: Experience Platform；首頁；熱門主題；列出活動的沙盒；列出沙盒
 solution: Experience Platform
 title: 在API中列出目前使用者的作用中沙盒
-topic: developer guide
-description: 您可以向根端點發出GET請求，以列出目前使用者的作用中沙盒。
+topic: 開發人員指南
+description: 您可以向根端點提出GET請求，列出目前使用者的作用中沙盒。
 translation-type: tm+mt
-source-git-commit: 36f63cecd49e6a6b39367359d50252612ea16d7a
+source-git-commit: ca3de18c093d7b692b582045afea4401d7133b9b
 workflow-type: tm+mt
-source-wordcount: '361'
+source-wordcount: '363'
 ht-degree: 2%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 2%
 >
 >與沙盒API中提供的其他端點不同，此端點適用於所有使用者，包括沒有沙盒管理存取權限的使用者。
 
-您可以向根(`/`)端點發出GET請求，以列出當前用戶處於活動狀態的沙盒。
+您可以向根(`/`)端點提出GET請求，以列出當前用戶處於活動狀態的沙盒。
 
 **API格式**
 
@@ -39,7 +39,6 @@ curl -X GET \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
 **回應**
