@@ -5,9 +5,9 @@ title: 沙盒UI指南
 topic: 使用指南
 description: 本檔案提供如何在Adobe Experience Platform使用者介面中執行與沙盒相關之各種作業的步驟。
 translation-type: tm+mt
-source-git-commit: ee2fb54ba59f22a1ace56a6afd78277baba5271e
+source-git-commit: 62ce5ac92d03a6e85589fc92e8d953f7fc1d8f31
 workflow-type: tm+mt
-source-wordcount: '602'
+source-wordcount: '610'
 ht-degree: 0%
 
 ---
@@ -45,67 +45,65 @@ ht-degree: 0%
 
 ## 建立新的沙盒
 
->[!NOTE]
->
->「多重製作沙盒」功能是beta版。
-
 使用下列影片快速概述如何在Experience Platform中使用沙盒。
 
 >[!VIDEO](https://video.tv.adobe.com/v/29838/?quality=12&learn=on)
 
-若要建立新沙盒，請選取畫面右上方的&#x200B;**[!UICONTROL Create Sandbox]**&#x200B;按鈕。
+若要在UI中建立新沙盒，請選取畫面右上方的&#x200B;**[!UICONTROL Create Sandbox]**&#x200B;按鈕。
 
 ![](../images/ui/create-sandbox.png)
 
-出現&#x200B;**[!UICONTROL Create Sandbox]**&#x200B;對話方塊，提示您提供沙盒的類型、標題和名稱。 如果您要建立開發沙盒，請在顯示的下拉式面板中選取&#x200B;**[!UICONTROL Development]**。 如果您要建立生產沙盒，請選取&#x200B;**[!UICONTROL Production]**。
-
-標題應具備人類可讀性，且應具備足夠的描述性，以便易於識別。 沙盒名稱是全小寫的識別碼，可用於API呼叫，因此應是唯一且簡明的。 沙盒名稱只能由英數字元和連字型大小(`-`)組成，且必須以字母開頭，且最多包含256個字元。
+出現&#x200B;**[!UICONTROL Create Sandbox]**&#x200B;對話方塊，提示您提供沙盒的顯示標題和名稱。 **顯示標題**&#x200B;意為人類可讀，且描述性應足以易於識別。 沙盒&#x200B;**[!UICONTROL Name]**&#x200B;是全小寫的識別碼，可用於API呼叫，因此應是唯一且簡明的。 沙盒&#x200B;**[!UICONTROL Name]**&#x200B;只能由英數字元和連字型大小&#x200B;**(-)**&#x200B;組成，它必須以字母開頭，且最多包含256個字元。
 
 完成後，選擇&#x200B;**[!UICONTROL Create]**。
 
 ![](../images/ui/create-dialog.png)
 
+>[!NOTE]
+>
+>由於您僅限於建立非生產沙盒類型，因此&#x200B;**[!UICONTROL type]**&#x200B;選項會鎖定在「非生產」，因此無法操控。
+
 建立完沙盒後，請重新整理頁面，新沙盒就會出現在狀態為&quot;[!UICONTROL Creating]&quot;的&#x200B;**[!UICONTROL Sandboxes]**&#x200B;控制面板中。 新沙盒需要大約15分鐘的時間才能由系統布建，之後其狀態會變更為「[!UICONTROL Active]」。
+
+![](../images/ui/creating.png)
 
 ## 重設沙盒
 
 >[!NOTE]
 >
->您可以重設組織中的任何生產或開發沙盒，但預設生產沙盒除外。
+>此功能僅適用於非生產沙盒。 無法重設生產沙盒。
 
-重設生產或開發沙盒會刪除與該沙盒（結構、資料集等）相關的所有資源，同時仍會保留沙盒的名稱和相關權限。 對於具有存取權的使用者，這個「乾淨」的沙盒仍以相同名稱提供。
+重設非生產沙盒會刪除與該沙盒（結構、資料集等）相關的所有資源，同時仍會保留沙盒的名稱和相關權限。 對於具有存取權的使用者，這個「乾淨」的沙盒仍以相同名稱提供。
 
-從沙盒清單中選取您要重設的沙盒。 在出現的右側導覽面板中，選取&#x200B;**[!UICONTROL Sandbox reset]**。
+若要在UI中重設沙盒，請在左側導覽中選取&#x200B;**[!UICONTROL Sandboxes]**，然後選取您要重設的沙盒。 在顯示在螢幕右側的對話框中，選擇&#x200B;**[!UICONTROL Reset Sandbox]**。
 
 ![](../images/ui/reset-sandbox.png)
 
-出現對話方塊提示您確認選擇。 選擇&#x200B;**[!UICONTROL Continue]**&#x200B;繼續。
+出現對話方塊提示您確認選擇。 選擇&#x200B;**[!UICONTROL Reset]**&#x200B;繼續。
 
 ![](../images/ui/reset-confirm.png)
 
-在最終確認窗口中，在對話框中輸入沙箱的名稱並選擇&#x200B;**[!UICONTROL Reset]**
+出現確認訊息，沙盒的狀態會變更為&quot;**[!UICONTROL Resetting]&quot;**。 系統布建後，其狀態將更新為&#x200B;**&quot;[!UICONTROL Active]&quot;**&#x200B;或&#x200B;**&quot;[!UICONTROL Failed]&quot;**。
 
-![](../images/ui/reset-final-confirm.png)
+![](../images/ui/resetting.png)
 
 ## 刪除沙盒
 
 >[!NOTE]
 >
->您可以刪除組織中的任何生產或開發沙盒，但預設的生產沙盒除外。
+>此功能僅適用於非生產沙盒。 無法刪除生產沙盒。
 
-刪除生產或開發沙盒會永久移除與該沙盒相關的所有資源，包括權限。
+刪除非生產沙盒會永久移除與該沙盒相關的所有資源，包括權限。
 
-從沙盒清單中選取您要刪除的沙盒。 在出現的右側導覽面板中，選取&#x200B;**[!UICONTROL Delete]**。
+若要刪除UI中的沙盒，請在左側導覽中選取&#x200B;**[!UICONTROL Sandboxes]**，然後選取您要刪除的沙盒。 在顯示在螢幕右側的對話框中，選擇&#x200B;**[!UICONTROL Delete Sandbox]**。
 
 ![](../images/ui/delete-sandbox.png)
 
-出現對話方塊提示您確認選擇。 選擇&#x200B;**[!UICONTROL Continue]**&#x200B;繼續。
+出現對話方塊提示您確認選擇。 選擇&#x200B;**[!UICONTROL Delete]**&#x200B;繼續。
 
 ![](../images/ui/delete-confirm.png)
 
-在最終確認窗口中，在對話框中輸入沙箱的名稱並選擇&#x200B;**[!UICONTROL Delete]**
-
-![](../images/ui/delete-final-confirm.png)
+會出現確認訊息，並從&#x200B;**[!UICONTROL Sandboxes]**&#x200B;工作區移除沙盒。
 
 ## 後續步驟
 
