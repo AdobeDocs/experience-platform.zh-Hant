@@ -5,10 +5,10 @@ doc-type: release notes
 last-update: March 31, 2021
 author: ens70167
 translation-type: tm+mt
-source-git-commit: 58382528cc787e8d2005c8c322904266880ad0b9
+source-git-commit: 9b4395d423bbc62c8a1a9427ea91248a0f693794
 workflow-type: tm+mt
-source-wordcount: '550'
-ht-degree: 6%
+source-wordcount: '422'
+ht-degree: 7%
 
 ---
 
@@ -20,7 +20,6 @@ ht-degree: 6%
 Adobe Experience Platform 現有功能更新：
 
 - [[!DNL Data Prep]](#data-prep)
-- [[!DNL Sandboxes]](#sandboxes)
 - [[!DNL Segmentation Service]](#segmentation)
 - [[!DNL Sources]](#sources)
 
@@ -34,18 +33,6 @@ Adobe Experience Platform 現有功能更新：
 | `to_array` 函數 | 更新功能以支援物件做為參數。 |
 
 如需詳細資訊，請參閱[[!DNL Data Prep] overview](../../data-prep/home.md)。
-
-## [!DNL Sandboxes] {#sandboxes}
-
-Adobe Experience Platform的設計宗旨是在全球範圍豐富數位體驗應用程式。 公司通常並行執行多種數位體驗應用程式，並需要滿足這些應用程式的開發、測試和部署需求，同時確保運作符合規範。
-
-為瞭解決此需求，Experience Platform提供沙盒，可將單一平台執行個體分割為不同的虛擬環境，以協助開發和發展數位體驗應用程式。
-
-| 功能 | 說明 |
-| ------- | ----------- |
-| （測試版）多個製作沙盒 | 您現在可以在IMS組織中建立和管理多個生產沙盒，並將特定生產沙盒專用於不同的業務、品牌、專案或地區。 如需詳細資訊，請參閱UI](../../sandboxes/ui/user-guide.md)或[中有關使用API](../../sandboxes/api/create-sandbox.md)建立生產沙盒[的教學課程。 |
-
-如需沙盒的詳細資訊，請參閱[沙盒概述](../../sandboxes/home.md)。
 
 ## 劃分服務 {#segmentation}
 
