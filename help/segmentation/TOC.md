@@ -6,10 +6,10 @@ breadcrumb-title: 分段服務指南
 user-guide-description: 從您的即時客戶設定檔資料建立區段並產生對象。
 feature: 區段
 translation-type: tm+mt
-source-git-commit: ac6935f09f620ea55cf8f612ff0a1fba503b5e17
+source-git-commit: 5839ab36a7d8f992e92c7f9eff8c58459c4c3260
 workflow-type: tm+mt
-source-wordcount: '158'
-ht-degree: 22%
+source-wordcount: '162'
+ht-degree: 21%
 
 ---
 
@@ -21,6 +21,7 @@ ht-degree: 22%
 - 區段API {#api}
    - [概述](api/overview.md)
    - [快速入門](api/getting-started.md)
+   - [邊緣分割](api/edge-segmentation.md)
    - [匯出工作](api/export-jobs.md)
    - [預覽和估計](api/previews-and-estimates.md)
    - [計畫](api/schedules.md)
@@ -32,6 +33,7 @@ ht-degree: 22%
    - [概述](ui/overview.md)
    - [區段控制面板](ui/segment-dashboard.md)
    - [區段產生器](ui/segment-builder.md)
+   - [邊緣分割](ui/edge-segmentation.md)
    - [串流區段](ui/streaming-segmentation.md)
    - [串流區段（視訊）](video/streaming-segmentation-overview.md)
    - [時間約束重構](ui/segment-refactoring.md)
