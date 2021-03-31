@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home；熱門主題；重設沙箱
+keywords: Experience Platform;home；熱門主題；重置沙箱
 solution: Experience Platform
 title: 在API中重設沙盒
-topic: developer guide
-description: 開發沙盒具有「工廠重設」功能，可從沙盒中刪除所有非預設資源。 您可以重設沙盒，方法是進行PUT請求，請求路徑中包含沙盒的名稱。
+topic: 開發人員指南
+description: 開發沙盒具有「工廠重設」功能，可從沙盒中刪除所有非預設資源。 您可以重設沙盒，方法是提出PUT請求，請求路徑中包含沙盒的名稱。
 translation-type: tm+mt
-source-git-commit: 36f63cecd49e6a6b39367359d50252612ea16d7a
+source-git-commit: ca3de18c093d7b692b582045afea4401d7133b9b
 workflow-type: tm+mt
-source-wordcount: '169'
+source-wordcount: '171'
 ht-degree: 3%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 3%
 
 # 在API中重設沙盒
 
-開發沙盒具有「工廠重設」功能，可從沙盒中刪除所有非預設資源。 您可以重設沙盒，方法是發出PUT請求，請求路徑中包含沙盒的`name`。
+開發沙盒具有「工廠重設」功能，可從沙盒中刪除所有非預設資源。 您可以重設沙盒，方法是提出PUT請求，請求路徑中包含沙盒的`name`。
 
 **API格式**
 
@@ -37,7 +37,6 @@ curl -X PUT \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -H 'Content-Type: application/json' \
   -d '{
     "action": "reset"
