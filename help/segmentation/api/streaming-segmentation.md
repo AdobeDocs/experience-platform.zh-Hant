@@ -5,9 +5,9 @@ title: '使用串流分段功能，即時評估事件 '
 topic: 開發人員指南
 description: 本檔案包含如何搭配Adobe Experience Platform分段服務API使用串流分段的範例。
 translation-type: tm+mt
-source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
+source-git-commit: bb7edcaccca87918c56d00e092e4b7154d7c5d6e
 workflow-type: tm+mt
-source-wordcount: '1341'
+source-wordcount: '1342'
 ht-degree: 1%
 
 ---
@@ -403,6 +403,6 @@ curl -X POST \
 
 ## 後續步驟
 
-現在您已啟用新區段和現有區段的串流區段，並啟用排程區段來建立基準並執行循環評估，您就可以開始為組織建立區段。
+現在您已啟用新區段和現有區段的串流區段，並啟用排程區段以建立基準並執行循環評估，您就可以開始為組織建立可串流化的區段。
 
 若要瞭解如何使用Adobe Experience Platform使用者介面執行類似動作及使用區段，請造訪[區段產生器使用指南](../ui/segment-builder.md)。
