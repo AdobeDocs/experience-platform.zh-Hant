@@ -5,7 +5,7 @@ title: 在API中重設沙盒
 topic: 開發人員指南
 description: 開發沙盒具有「工廠重設」功能，可從沙盒中刪除所有非預設資源。 您可以重設沙盒，方法是提出PUT請求，請求路徑中包含沙盒的名稱。
 translation-type: tm+mt
-source-git-commit: ca3de18c093d7b692b582045afea4401d7133b9b
+source-git-commit: 62ce5ac92d03a6e85589fc92e8d953f7fc1d8f31
 workflow-type: tm+mt
 source-wordcount: '171'
 ht-degree: 3%
@@ -37,6 +37,7 @@ curl -X PUT \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -H 'Content-Type: application/json' \
   -d '{
     "action": "reset"
