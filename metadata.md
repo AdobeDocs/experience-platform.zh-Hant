@@ -1,5 +1,5 @@
 ---
-cloud: experience-cloud
+cloud: Experience Cloud
 product: adobe experience platform
 feature-set: Platform
 solution-title: 平台概觀
@@ -15,7 +15,7 @@ type: 文件
 index: true
 role: 架構師、開發人員、資料架構師、資料工程師、業務從業人員、管理員、領導者
 translation-type: tm+mt
-source-git-commit: 467edb785bd3c8609d2fc64183edd1d7b34d7e86
+source-git-commit: b3ab087a9cae13d2ff270916d88b8086a4122af6
 workflow-type: tm+mt
 source-wordcount: '147'
 ht-degree: 74%
