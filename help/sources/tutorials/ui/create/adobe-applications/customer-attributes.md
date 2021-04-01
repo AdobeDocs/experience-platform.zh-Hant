@@ -1,59 +1,65 @@
 ---
-keywords: Experience Platform;home；熱門主題；客戶屬性
+keywords: Experience Platform；首頁；熱門主題；客戶屬性
 solution: Experience Platform
 title: 在UI中建立客戶屬性來源連線
-topic: overview
-type: Tutorial
-description: 瞭解如何在UI中建立來源連線，以便將客戶屬性描述檔資料收集到Adobe Experience Platform中。
+topic: 概述
+type: 教學課程
+description: 瞭解如何在UI中建立來源連線，以收集客戶屬性描述檔資料至Adobe Experience Platform。
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: 08a3026e969a8739a8b57226c35a6d1d3150006e
 workflow-type: tm+mt
-source-wordcount: '377'
-ht-degree: 5%
+source-wordcount: '399'
+ht-degree: 6%
 
 ---
 
 
 # 在UI中建立客戶屬性來源連線
 
-本教學課程提供在UI中建立來源連線的步驟，以便將「客戶屬性」描述檔資料收集到Adobe Experience Platform。 有關客戶屬性的詳細資訊，請參閱[概述文檔](https://experienceleague.adobe.com/docs/core-services/interface/customer-attributes/attributes.html)。
+本教學課程提供在UI中建立來源連線的步驟，以收集客戶屬性描述檔資料至Adobe Experience Platform。 有關客戶屬性的詳細資訊，請參閱[客戶屬性概述](https://experienceleague.adobe.com/docs/core-services/interface/customer-attributes/attributes.html)。
+
+>[!IMPORTANT]
+>
+>客戶屬性來源目前不支援停用、啟用和刪除資料流功能。
 
 ## 建立源連接
 
-登入[Adobe Experience Platform](https://platform.adobe.com)，然後從左側導覽列選擇&#x200B;**[!UICONTROL Sources]**&#x200B;以存取來源工作區。 **[!UICONTROL Catalog]**&#x200B;螢幕顯示可用源以建立入站連接，每個源顯示與其關聯的現有連接數。 選擇&#x200B;**[!UICONTROL 客戶屬性]**&#x200B;的選項，然後選擇&#x200B;**[!UICONTROL 添加資料]**。 如果連線成功建立，將會重新導向您。
+在平台UI中，從左側導覽器選擇&#x200B;**[!UICONTROL Sources]**&#x200B;以存取[!UICONTROL Sources]工作區。 [!UICONTROL Catalog]畫面會顯示多種來源，您可以用來建立連線。
+
+您可以從畫面左側的目錄中選取適當的類別。 或者，您也可以使用搜尋列，找到您要使用的特定來源。
+
+在[!UICONTROL Adobe applications]類別下，選擇&#x200B;**[!UICONTROL Customer Attributes]**，然後選擇&#x200B;**[!UICONTROL Add data]**。
 
 >[!NOTE]
 >
->如果您已建立客戶屬性描述檔資料的來源連接器，則與來源連線的選項將會停用。
+>如果您已建立「客戶屬性」描述檔資料的來源連線，則會停用與來源連線的選項。
 
 ![](../../../../images/tutorials/create/customer-attributes/catalog.png)
 
-**源活動**&#x200B;螢幕列出了客戶屬性配置檔案資料的所有先前建立的連接，您可以按一下&#x200B;**選擇資料**&#x200B;建立新連接。
+[!UICONTROL Add data]畫面會列出客戶屬性的所有可用資料來源。 要建立新連接，請從清單中選擇資料源，然後選擇&#x200B;**[!UICONTROL Next]**。
 
 >[!NOTE]
 >
->可以建立多個來源的入站連接，以導入不同的資料。
+>每個「客戶屬性」來源連線只能選取一個資料集。
 
-![](../../../../images/tutorials/create/customer-attributes/source_activity.png)
+![](../../../../images/tutorials/create/customer-attributes/add-data.png)
 
-從可用客戶屬性配置檔案資料集清單中，選擇要導入[!DNL Platform]的資料集，然後按一下&#x200B;**Next**。
+出現[!UICONTROL Dataflow detail]步驟，允許您命名新資料流並提供簡要說明。
 
->[!NOTE]
->
->每個客戶屬性來源連線只能選取一個資料集。
+在此過程中，您也可以啟用[!UICONTROL Partial ingestion]和[!UICONTROL Error diagnostics]。 [!UICONTROL Partial ingestion] 提供可收錄包含錯誤的資料的功能，最高可設定特定臨界值，同時提供 [!UICONTROL Error diagnostics] 任何個別批次錯誤資料的詳細資訊。如需詳細資訊，請參閱[部分批次擷取概觀](../../../../../ingestion/batch-ingestion/partial.md)。
 
-![](../../../../images/tutorials/create/customer-attributes/select_data.png)
+![](../../../../images/tutorials/create/customer-attributes/dataflow-detail.png)
 
-出現&#x200B;**Review**&#x200B;步驟，允許您在建立新入站連接之前查看該連接。 連接的詳細資訊按類別分組，包括：
+出現[!UICONTROL Review]步驟，允許您在建立新資料流之前對其進行查看。 詳細資訊會分組在下列類別中：
 
-* **來源詳細資訊**:顯示源連接的類型和選定的源資料。
-* **目標詳細資訊**:建立其他來源連接器時，此容器會顯示來源資料所吸收的資料集，包括資料集所遵守的架構。客戶屬性描述檔資料會自動對應並收錄至即時客戶描述檔。
+* **[!UICONTROL Connection]**:顯示源檔案的類型、所選源檔案的相關路徑，以及該源檔案中的列數。
+* **[!UICONTROL Assign dataset & map fields]**:顯示源資料被吸收到的資料集，包括資料集所附的模式。
 
 ![](../../../../images/tutorials/create/customer-attributes/review.png)
 
 ## 後續步驟
 
-建立連線後，系統會自動建立目標結構和資料集以包含傳入的資料。當初始擷取完成時，下游[!DNL Platform]服務（例如[!DNL Real-time Customer Profile]和[!DNL Segmentation Service]）可使用客戶屬性描述檔資料。 如需詳細資訊，請參閱下列檔案：
+建立連線後，系統會自動建立目標結構和資料集以包含傳入的資料。當初始擷取完成時，下游平台服務（例如[!DNL Real-time Customer Profile]和[!DNL Segmentation Service]）可使用客戶屬性描述檔資料。 如需詳細資訊，請參閱下列檔案：
 
-* [[!DNL Real-time Customer Profile] 概述](../../../../../profile/home.md)
-* [[!DNL Segmentation Service] 概述](../../../../../segmentation/home.md)
+* [[!DNL Real-time Customer Profile] 概觀](../../../../../profile/home.md)
+* [[!DNL Segmentation Service] 概觀](../../../../../segmentation/home.md)
