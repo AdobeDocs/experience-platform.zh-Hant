@@ -1,20 +1,20 @@
 ---
-title: 在Adobe Experience Platform Web SDK中自動映射Adobe Analytics變數
-description: 瞭解哪些變數在Adobe Analytics中使用Experience Platform Web SDK自動對應
-seo-description: 瞭解哪些變數會使用Adobe Experience Platform Web SDK在Adobe Analytics中自動對應
+title: 自動映射Adobe Experience Platform網頁SDK中的Adobe Analytics變數
+description: 瞭解哪些變數在Adobe Analytics自動對應使用Experience Platform網頁SDK
+seo-description: 瞭解哪些變數在Adobe Analytics自動與Adobe Experience Platform網頁SDK對應
 keywords: adobe analytics；變數；analytics；自動映射；自動映射；
+exl-id: 856fada7-b62c-4fd2-9372-a19ae1cdec33
 translation-type: tm+mt
-source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
+source-git-commit: 7a6a9f1ee764ab614fa163f90a2051bd35b76b7f
 workflow-type: tm+mt
-source-wordcount: '681'
+source-wordcount: '684'
 ht-degree: 0%
 
 ---
 
-
 # 在[!DNL Analytics]中自動映射的變數
 
-以下是Adobe Experience Platform Edge Network自動對應至Adobe Analytics的變數清單。
+以下是Adobe Experience Platform邊緣網路自動對應至Adobe Analytics的變數清單。
 
 | XDM欄位路徑 | [!DNL Analytics Query String] / HTTP 標題 | 說明 |
 | ---------- | ------------------------- | ----------------------------------------- |
@@ -103,3 +103,5 @@ ht-degree: 0%
 | `web.webPageDetails.server` | `sv` | AppMeasurement查詢參數USER_SERVER映射。 |
 | `web.webPageDetails.siteSection` | `ch` | AppMeasurement查詢參數CHANNEL映射。 |
 | `web.webReferrer.URL` | `r` | AppMeasurement查詢參數REFERRER映射。 |
+
+{style=&quot;table-layout:auto&quot;}
