@@ -6,7 +6,7 @@ description: 連線至雲端儲存空間的指示
 seo-description: 連線至雲端儲存空間的指示
 exl-id: 58003c1e-2f70-4e28-8a38-3be00da7cc3c
 translation-type: tm+mt
-source-git-commit: 1e33a7b48e20d7afe9f10b206a6fd68433b205db
+source-git-commit: 7bb862c4c6c52c42e45d5e736fa6d239e812ac2c
 workflow-type: tm+mt
 source-wordcount: '581'
 ht-degree: 0%
@@ -71,22 +71,19 @@ ht-degree: 0%
 
 以下範例參考範例區段`Luxury Audience`，其ID為`25768be6-ebd5-45cc-8913-12fb3f348615`。
 
-### 宏1 - `%SEGMENT_NAME%`
+**宏1:`%SEGMENT_NAME%`**
 
 輸入：`acme/campaigns/2021/%SEGMENT_NAME%`
-
 儲存位置中的資料夾路徑：`acme/campaigns/2021/Luxury Audience`
 
-### 宏2 - `%SEGMENT_ID%`
+**宏2:`%SEGMENT_ID%`**
 
 輸入：`acme/campaigns/2021/%SEGMENT_ID%`
-
 儲存位置中的資料夾路徑：`acme/campaigns/2021/25768be6-ebd5-45cc-8913-12fb3f348615`
 
-### 宏3 - `%SEGMENT_NAME%/%SEGMENT_ID%`
+**宏3:`%SEGMENT_NAME%/%SEGMENT_ID%`**
 
 輸入：`acme/campaigns/2021/%SEGMENT_NAME%/%SEGMENT_ID%`
-
 儲存位置中的資料夾路徑：`acme/campaigns/2021/Luxury Audience/25768be6-ebd5-45cc-8913-12fb3f348615`
 
 
