@@ -4,14 +4,14 @@ title: 建立雲端儲存空間目標
 type: 教學課程
 description: 連線至雲端儲存空間的指示
 seo-description: 連線至雲端儲存空間的指示
+exl-id: 58003c1e-2f70-4e28-8a38-3be00da7cc3c
 translation-type: tm+mt
-source-git-commit: 632003773100ec8ef0389840695a1c75a1aa663d
+source-git-commit: 1e33a7b48e20d7afe9f10b206a6fd68433b205db
 workflow-type: tm+mt
-source-wordcount: '496'
+source-wordcount: '581'
 ht-degree: 0%
 
 ---
-
 
 # 建立雲端儲存空間目標
 
@@ -37,7 +37,7 @@ ht-degree: 0%
 >
 >平台支援驗證程式中的認證驗證，如果您在雲端儲存位置輸入錯誤的認證，則會顯示錯誤訊息。 這可確保您不會以不正確的憑證完成工作流程。
 
-![連線至雲端儲存空間目標——驗證步驟](../../assets/catalog/cloud-storage/workflow/destination-account.png)
+![連線至雲端儲存空間目標——帳戶步驟](../../assets/catalog/cloud-storage/workflow/destination-account.png)
 
 ## 驗證步驟{#authentication}
 
@@ -61,7 +61,35 @@ ht-degree: 0%
 
 ![連接到事件集線器雲儲存目標——驗證步驟](../../assets/catalog/cloud-storage/workflow/event-hubs-setup.png)
 
-您的目標現在已建立。 如果您想稍後啟動區段，可以選取&#x200B;**[!UICONTROL Save & Exit]**，或選取&#x200B;**[!UICONTROL Next]**&#x200B;以繼續工作流程，並選取要啟動的區段。 在這兩種情況下，請參閱下一節[啟用區段](#activate-segments)，以便在工作流程的其餘部分匯出資料。
+您的目標現在已建立。 如果您想稍後啟動區段，可以選取&#x200B;**[!UICONTROL Save & Exit]**，或選取&#x200B;**[!UICONTROL Next]**&#x200B;以繼續工作流程，並選取要啟動的區段。 閱讀[啟用區段](#activate-segments)一節，以匯出工作流程的其餘部分。
+
+## 使用宏在儲存位置中建立資料夾{#use-macros}
+
+要在儲存位置中為每個段檔案建立自定義資料夾，可以在資料夾路徑輸入欄位中使用宏。 在輸入欄位的末尾插入宏，如下所示。
+
+![如何使用宏在儲存中建立資料夾](../../assets/catalog/cloud-storage/workflow/macros-folder-path.png)
+
+以下範例參考範例區段`Luxury Audience`，其ID為`25768be6-ebd5-45cc-8913-12fb3f348615`。
+
+### 宏1 - `%SEGMENT_NAME%`
+
+輸入：`acme/campaigns/2021/%SEGMENT_NAME%`
+
+儲存位置中的資料夾路徑：`acme/campaigns/2021/Luxury Audience`
+
+### 宏2 - `%SEGMENT_ID%`
+
+輸入：`acme/campaigns/2021/%SEGMENT_ID%`
+
+儲存位置中的資料夾路徑：`acme/campaigns/2021/25768be6-ebd5-45cc-8913-12fb3f348615`
+
+### 宏3 - `%SEGMENT_NAME%/%SEGMENT_ID%`
+
+輸入：`acme/campaigns/2021/%SEGMENT_NAME%/%SEGMENT_ID%`
+
+儲存位置中的資料夾路徑：`acme/campaigns/2021/Luxury Audience/25768be6-ebd5-45cc-8913-12fb3f348615`
+
+
 
 ## 啟用區段{#activate-segments}
 
