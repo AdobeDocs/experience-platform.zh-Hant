@@ -4,14 +4,14 @@ solution: Experience Platform
 title: '使用API進行邊緣區段 '
 topic: 開發人員指南
 description: 本檔案包含如何搭配Adobe Experience Platform分段服務API使用邊緣分段的範例。
+exl-id: effce253-3d9b-43ab-b330-943fb196180f
 translation-type: tm+mt
-source-git-commit: 0c4625ec0728c8c94b72e3e16e7ecf45ea2d0c0b
+source-git-commit: 692bfca8d14ac247527f956bbcba8b4eb37516e3
 workflow-type: tm+mt
-source-wordcount: '632'
+source-wordcount: '636'
 ht-degree: 1%
 
 ---
-
 
 # 邊緣分割
 
@@ -39,8 +39,8 @@ ht-degree: 1%
 | ---------- | ------- |
 | 傳入點擊 | 任何區段定義，是指沒有時間限制的單一傳入事件。 |
 | 參照描述檔的傳入點擊 | 任何區段定義，是指單一傳入事件（無時間限制）以及一或多個描述檔屬性。 |
-| 頻率查詢 | 任何區段定義，是指發生特定次數的事件。 |
-| 參照描述檔的頻率查詢 | 任何區段定義，是指發生特定次數且具有一或多個描述檔屬性的事件。 |
+| 頻率查詢 | 任何區段定義，指發生至少特定次數之事件。 |
+| 參照描述檔的頻率查詢 | 任何區段定義，是指發生至少特定次數且具有一或多個描述檔屬性的事件。 |
 
 {style=&quot;table-layout:auto&quot;}
 
