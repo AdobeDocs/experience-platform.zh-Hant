@@ -3,15 +3,15 @@ keywords: Experience Platform; home；熱門主題；邊緣分割；分段服務
 solution: Experience Platform
 title: 邊緣區段UI指南
 topic: ui指南
-description: '邊緣區段是指能夠即時在邊緣上評估平台中的區段，讓相同的頁面和下一頁個人化使用案例。 '
+description: 邊緣區段是指能夠即時在邊緣上評估平台中的區段，讓相同的頁面和下一頁個人化使用案例。
+exl-id: eae948e6-741c-45ce-8e40-73d10d5a88f1
 translation-type: tm+mt
-source-git-commit: 7eadb14dc71792174dfd750775148763f55834dd
+source-git-commit: 692bfca8d14ac247527f956bbcba8b4eb37516e3
 workflow-type: tm+mt
-source-wordcount: '328'
+source-wordcount: '332'
 ht-degree: 1%
 
 ---
-
 
 # 邊緣區段UI指南
 
@@ -25,8 +25,8 @@ ht-degree: 1%
 | ---------- | ------- | ------- |
 | 傳入點擊 | 任何區段定義，是指沒有時間限制的單一傳入事件。 | ![](../images/ui/edge-segmentation/incoming-hit.png) |
 | 參照描述檔的傳入點擊 | 任何區段定義，是指單一傳入事件（無時間限制）以及一或多個描述檔屬性。 | ![](../images/ui/edge-segmentation/profile-hit.png) |
-| 頻率查詢 | 任何區段定義，是指發生特定次數的事件。 |  |
-| 參照描述檔的頻率查詢 | 任何區段定義，是指發生特定次數且具有一或多個描述檔屬性的事件。 |  |
+| 頻率查詢 | 任何區段定義，指發生至少特定次數之事件。 |  |
+| 參照描述檔的頻率查詢 | 任何區段定義，是指發生至少特定次數且具有一或多個描述檔屬性的事件。 |  |
 
 如果查詢與上述任何查詢類型相符，您可以通過開啟&#x200B;**[!UICONTROL Evaluate as streaming segment on the edge]**&#x200B;切換來啟用該查詢以進行邊緣分割。
 
