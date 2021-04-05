@@ -6,9 +6,9 @@ description: 連線至雲端儲存空間的指示
 seo-description: 連線至雲端儲存空間的指示
 exl-id: 58003c1e-2f70-4e28-8a38-3be00da7cc3c
 translation-type: tm+mt
-source-git-commit: 7bb862c4c6c52c42e45d5e736fa6d239e812ac2c
+source-git-commit: ecda1f1c4a2829124aedaae2395a74e54929c7ad
 workflow-type: tm+mt
-source-wordcount: '581'
+source-wordcount: '595'
 ht-degree: 0%
 
 ---
@@ -64,6 +64,10 @@ ht-degree: 0%
 您的目標現在已建立。 如果您想稍後啟動區段，可以選取&#x200B;**[!UICONTROL Save & Exit]**，或選取&#x200B;**[!UICONTROL Next]**&#x200B;以繼續工作流程，並選取要啟動的區段。 閱讀[啟用區段](#activate-segments)一節，以匯出工作流程的其餘部分。
 
 ## 使用宏在儲存位置中建立資料夾{#use-macros}
+
+>[!NOTE]
+>
+> 本節所述的功能目前僅適用於[AmazonS3](./amazon-s3.md)目標。
 
 要在儲存位置中為每個段檔案建立自定義資料夾，可以在資料夾路徑輸入欄位中使用宏。 在輸入欄位的末尾插入宏，如下所示。
 
