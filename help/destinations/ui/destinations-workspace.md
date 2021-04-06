@@ -1,16 +1,16 @@
 ---
 keywords: 平台；目標；目標工作區；工作區；ui；目標ui；目錄；目標目錄；
 title: 目標工作區
-description: 「目標」工作區包含4個部分：目錄、瀏覽、帳戶和系統視圖，這些部分在以下各節中介紹。
+description: 「目標」工作區包含4個部分：「目錄」、「瀏覽」、「帳戶」和「系統視圖」。 以下各節將說明這些問題。
 seo-description: 在Adobe Experience Platform，從左側導覽列選擇「目標」以存取目標工作區。
+exl-id: 0f46f08d-0fe3-441d-933a-86bc146c0f19
 translation-type: tm+mt
-source-git-commit: 4f5e7dfee17b2dde371efb82cf52d91c08696f39
+source-git-commit: cc432f7c07f0f82deec653864154016638ec8138
 workflow-type: tm+mt
-source-wordcount: '940'
+source-wordcount: '742'
 ht-degree: 1%
 
 ---
-
 
 # 目標工作區{#destinations-workspace}
 
@@ -20,17 +20,17 @@ ht-degree: 1%
 
 [!UICONTROL Destinations]工作區由以下幾節中介紹的四個部分組成：[!UICONTROL Catalog]、[!UICONTROL Browse]、[!UICONTROL Accounts]和[!UICONTROL System View]。
 
-![目標——概觀](../assets/ui/workspace/destinations-overview.png)
+![目標——概觀](../assets/ui/workspace/destinations-workspace.png)
 
 ## [!UICONTROL Catalog] {#catalog}
 
-**[!UICONTROL Catalog]**&#x200B;標籤顯示平台中所有可傳送資料的目標清單。
+**[!UICONTROL Catalog]**&#x200B;標籤顯示[!DNL Platform]中所有可傳送資料的目標清單。
 
-平台使用者介面在目標目錄頁面上提供數個搜尋和篩選選項：
+[!DNL Platform]使用者介面在目標目錄頁面上提供數個搜尋和篩選選項：
 
 * 使用頁面上的搜尋功能來尋找特定目標。
 * 使用[!UICONTROL Categories]控制項篩選目標。
-* 在[!UICONTROL All destinations]和[!UICONTROL My destinations]之間切換。 選擇&#x200B;**[!UICONTROL All destinations]**&#x200B;時，將顯示所有可用的平台目標。 選擇&#x200B;**[!UICONTROL My destinations]**&#x200B;時，您只能看到已建立連接的目標。
+* 在[!UICONTROL All destinations]和[!UICONTROL My destinations]之間切換。 選擇&#x200B;**[!UICONTROL All destinations]**&#x200B;時，將顯示所有可用的[!DNL Platform]目標。 選擇&#x200B;**[!UICONTROL My destinations]**&#x200B;時，您只能看到已建立連接的目標。
 * 選擇查看&#x200B;**[!UICONTROL Connections]**&#x200B;和／或&#x200B;**[!UICONTROL Extensions]**。 要瞭解兩個類別之間的差異，請參閱[目標類型和類別](../destination-types.md)。
 
 ![目標篩選和搜尋示範](../assets/ui/workspace/destinations-search-and-filter.gif)
@@ -49,7 +49,7 @@ ht-degree: 1%
 
 ![目標卡的控制項](../assets/ui/workspace/destination-card-options.png)
 
-在目錄中選取目標卡片，以開啟右側導軌。 在這裡，您可以看到目的地的說明。 右側導軌提供與上表所述相同的控制項，以及目的地的描述，以及目的地類別和類型的指示。
+在目錄中選取目標卡片，以開啟右側導軌。 在這裡，您可以看到目的地的說明。 右側導軌提供與上表中所述相同的控制項，包括目的地描述以及目的地類別和類型的指示。
 
 ![目標目錄選項](../assets/ui/workspace/destination-right-rail.png)
 
@@ -57,44 +57,16 @@ ht-degree: 1%
 
 ## [!UICONTROL Accounts] {#accounts}
 
-在&#x200B;**[!UICONTROL Accounts]**&#x200B;標籤中，您可以進一步瞭解您與各種目的地建立的連線。 請參閱下表，以取得有關每個目標的所有資訊：
-
->[!TIP]
->
->使用&#x200B;**[!UICONTROL Platform]**&#x200B;欄中的![新增資料按鈕](../assets/ui/workspace/add-data-symbol.png)按鈕為該帳戶建立新的目的地連線。
-
-![「帳戶」頁籤](../assets/ui/workspace/edit-account-destinations.png)
-
-| 元素 | 說明 |
----------|----------
-| [!UICONTROL Platform] | 您已設定連接的目標。 |
-| [!UICONTROL Connection Type] | 表示與儲存桶或目標的連接類型。 <ul><li>對於電子郵件行銷目標：可以是S3或FTP。</li><li>針對即時廣告目的地：伺服器對伺服器</li><li>針對AmazonS3雲端儲存空間目標：存取金鑰 </li><li>對於SFTP雲端儲存空間目標：SFTP的基本驗證</li></ul> |
-| [!UICONTROL Username] | 在[連接目標嚮導](../catalog/email-marketing/overview.md#connect-destination)中選擇的用戶名。 |
-| [!UICONTROL Destinations] | 表示與為目標建立的基本資訊連接的唯一成功目標流的數量。 |
-| [!UICONTROL Authorized] | 授權此目的地的連線的日期。 |
-
-{style=&quot;table-layout:auto&quot;}
-
-此外，您也可以編輯或更新帳戶資訊。 在&#x200B;**[!UICONTROL Platform]**&#x200B;欄中選擇「編輯帳戶」按鈕![以編輯帳戶的資訊。](../assets/ui/workspace/pencil-icon.png)
-
-對於使用`OAuth2`連接類型的帳戶，您可以選擇&#x200B;**[!UICONTROL Reconnect OAuth]**&#x200B;以續約帳戶憑證。
-
-![Oauth影像](../assets/ui/workspace/reconnect-oauth.png)
-
-對於使用`Access Key`或`ConnectionString`連線類型的帳戶，您可以編輯帳戶驗證資訊，包括存取ID、機密金鑰或連線字串等資訊。
-
-![帳戶資訊影像](../assets/ui/workspace/edit-account-details.png)
-
-編輯完帳戶詳細資訊後，選擇&#x200B;**[!UICONTROL Save]**&#x200B;以完成更新。
+**[!UICONTROL Accounts]**&#x200B;頁籤顯示您與各種目標建立的連接的詳細資訊，並允許您更新現有的連接詳細資訊。 如需詳細說明，請參閱[更新帳戶](update-accounts.md)。
 
 ## [!UICONTROL Browse] {#browse}
 
-**[!UICONTROL Browse]**&#x200B;頁籤顯示已建立連接的目標。 啟用&#x200B;**[!UICONTROL Enabled]**&#x200B;切換的目標將目標設為活動，反之亦然。 您也可以選擇&#x200B;**[!UICONTROL Segments]** > **[!UICONTROL Browse]**&#x200B;並選取要檢查的區段，以檢視資料流動的目的地。 有關「瀏覽」頁籤中為每個目標提供的所有資訊，請參見下表：
+**[!UICONTROL Browse]**&#x200B;頁籤顯示已建立連接的目標。 已開啟&#x200B;**[!UICONTROL Enabled/Disabled]**&#x200B;切換的目標會分別將目標設定為活動中或非活動中。 您也可以選擇&#x200B;**[!UICONTROL Segments]** > **[!UICONTROL Browse]**&#x200B;並選取要檢查的區段，以檢視資料流動的目的地。 有關「瀏覽」頁籤中為每個目標提供的所有資訊，請參見下表：
 
 >[!TIP]
 >
-> * 使用&#x200B;**[!UICONTROL Name]**&#x200B;欄中的![新增區段按鈕](../assets/ui/workspace/add-data-symbol.png)按鈕，將其他區段啟用至該目標。
-> * 使用&#x200B;**[!UICONTROL Name]**&#x200B;欄中的![刪除目標按鈕](../assets/ui/workspace/delete-destination-symbol.png)按鈕刪除目標的現有連接。
+> * 使用&#x200B;**[!UICONTROL Name]**&#x200B;欄中的![新增區段按鈕](../assets/ui/workspace/add-data-symbol.png)按鈕，將更多區段啟動至該目標。[](activate-destinations.md)
+> * 使用&#x200B;**[!UICONTROL Name]**&#x200B;列中的![刪除目標按鈕](../assets/ui/workspace/delete-destination-symbol.png)按鈕，刪除到目標的現有連接。[](delete-destinations.md)
 
 
 ![瀏覽標籤](../assets/ui/workspace/browse-tab.png)
