@@ -1,18 +1,18 @@
 ---
-keywords: 編輯啟動；編輯目的地；
+keywords: 編輯啟動，編輯目標
 title: 編輯啟動流程
 type: 教學課程
 seo-title: 編輯啟動流程
 description: 請依照本文中的步驟，編輯Adobe Experience Platform現有的啟動流程。
 seo-description: 請依照本文中的步驟，編輯Adobe Experience Platform現有的啟動流程。
+exl-id: 0d79fbff-bfde-4109-8353-c7530e9719fb
 translation-type: tm+mt
-source-git-commit: 0bb6db19dc27031115e47415c1b3241661e0a0ae
+source-git-commit: 07869d63f395bbab6c49a3976051facdf94d43b7
 workflow-type: tm+mt
 source-wordcount: '192'
 ht-degree: 0%
 
 ---
-
 
 # 編輯啟動流程{#edit-activation-flows}
 
