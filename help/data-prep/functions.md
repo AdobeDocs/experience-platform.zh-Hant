@@ -4,14 +4,14 @@ solution: Experience Platform
 title: 資料準備映射函式
 topic: 概述
 description: 本文檔介紹與「資料準備」一起使用的映射功能。
+exl-id: e95d9329-9dac-4b54-b804-ab5744ea6289
 translation-type: tm+mt
-source-git-commit: 85a99171a6786b47bf50d4579a3ebc88af3c82f6
+source-git-commit: 21782ee74adfe97fa0a88f499d01393155691b29
 workflow-type: tm+mt
-source-wordcount: '3719'
+source-wordcount: '3793'
 ht-degree: 3%
 
 ---
-
 
 # 資料準備映射函式
 
@@ -44,13 +44,13 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 | 函數 | 說明 | 參數 | 語法 | 運算式 | 範例輸出 |
 -------- | ----------- | ---------- | -------| ---------- | -------------
 | concat | 串連指定的字串。 | <ul><li>字串：將串連的字串。</li></ul> | concat(STRING_1, STRING_2) | concat(&quot;Hi, &quot;, &quot;there&quot;, &quot;!&quot;) | `"Hi, there!"` |
-| 爆炸 | 根據規則運算式分割字串，並傳回部件陣列。 可選擇包含規則運算式以分割字串。 預設情況下，拆分解析為&quot;,&quot;。 下列分隔字元&#x200B;**需要**&#x200B;以`\`逸出：`+, ?, ^, |, ., [, (, {, ), *, $, \` | <ul><li>字串：**必要**&#x200B;需要分割的字串。</li><li>REGEX:*可選*&#x200B;可用於拆分字串的規則運算式。</li></ul> | explode(STRING, REGEX) | explode(&quot;Hi, there!&quot;, &quot;) | `["Hi,", "there"]` |
+| 爆炸 | 根據規則運算式分割字串，並傳回部件陣列。 可選擇包含規則運算式以分割字串。 預設情況下，拆分解析為&quot;,&quot;。 下列分隔字元&#x200B;**需要**&#x200B;以`\`逸出：`+, ?, ^, |, ., [, (, {, ), *, $, \`如果您包含多個字元作為分隔字元，分隔字元將視為多字元分隔字元。 | <ul><li>字串：**必要**&#x200B;需要分割的字串。</li><li>REGEX:*可選*&#x200B;可用於拆分字串的規則運算式。</li></ul> | explode(STRING, REGEX) | explode(&quot;Hi, there!&quot;, &quot;) | `["Hi,", "there"]` |
 | instr | 傳回子字串的位置／索引。 | <ul><li>輸入：**必要**&#x200B;正在搜索的字串。</li><li>子字串：**Required**&#x200B;在字串中搜尋的子字串。</li><li>START_POSITION:*可選*&#x200B;要開始查找字串的位置。</li><li>具體值：*可選*&#x200B;從開始位置尋找的第n個出現點。 預設為1。 </li></ul> | instr（INPUT，子字串， START_POSITION, OCCURRENCE） | instr(&quot;adobe.com&quot;, &quot;com&quot;) | 6 |
 | replacestr | 如果原始字串中有搜尋字串，請取代該搜尋字串。 | <ul><li>輸入：**必要**&#x200B;輸入字串。</li><li>TO_FIND:**必要**&#x200B;要在輸入內查找的字串。</li><li>TO_REPLACE:**Required**&#x200B;將取代&quot;TO_FIND&quot;中值的字串。</li></ul> | replacestr(INPUT, TO_FIND, TO_REPLACE) | replacestr(&quot;This is a string re test&quot;, &quot;re&quot;, &quot;replace&quot;) | &quot;這是字串替換測試&quot; |
 | substr | 傳回指定長度的子字串。 | <ul><li>輸入：**必要**&#x200B;輸入字串。</li><li>START_INDEX:**Required**&#x200B;子字串開始的輸入字串索引。</li><li>長度：**必要**&#x200B;子字串的長度。</li></ul> | substr(INPUT, START_INDEX, LENGTH) | substr(&quot;This is a substring test&quot;, 7, 8) | &quot; a subst&quot; |
 | lower /&lt;a0/lcase<br> | 將字串轉換為小寫。 | <ul><li>輸入：**必要**&#x200B;將轉換為小寫的字串。</li></ul> | lower(INPUT) | lower(&quot;HeLLo&quot;)<br>lcase(&quot;HeLLo&quot;) | &quot;hello&quot; |
 | upper /&lt;a0/ucase<br> | 將字串轉換為大寫。 | <ul><li>輸入：**必要**&#x200B;將轉換為大寫的字串。</li></ul> | upper(INPUT) | upper(&quot;HeLLo&quot;)<br>ucase(&quot;HeLLo&quot;) | &quot;HELLO&quot; |
-| split | 在分隔符上拆分輸入字串。 以下分隔符&#x200B;**需要**&#x200B;以`\`逸出：`\`。 | <ul><li>輸入：**必要**&#x200B;將要拆分的輸入字串。</li><li>分隔符號：**必要**&#x200B;用於拆分輸入的字串。</li></ul> | split(INPUT, SEPARATOR) | split(&quot;Hello world&quot;, &quot; &quot;) | `["Hello", "world"]` |
+| split | 在分隔符上拆分輸入字串。 以下分隔符&#x200B;**需要**&#x200B;以`\`逸出：`\`。 如果您包含多個分隔字元，字串將分割在字串中所顯示之分隔字元的&#x200B;**any**&#x200B;上。 | <ul><li>輸入：**必要**&#x200B;將要拆分的輸入字串。</li><li>分隔符號：**必要**&#x200B;用於拆分輸入的字串。</li></ul> | split(INPUT, SEPARATOR) | split(&quot;Hello world&quot;, &quot; &quot;) | `["Hello", "world"]` |
 | 加入 | 使用分隔符連接對象清單。 | <ul><li>分隔符號：**Required**&#x200B;將用於連接對象的字串。</li><li>對象：**必要**&#x200B;要連接的字串陣列。</li></ul> | `join(SEPARATOR, [OBJECTS])` | `join(" ", to_array(true, "Hello", "world"))` | &quot;Hello world&quot; |
 | lpad | 將字串的左側與另一個指定字串相貼。 | <ul><li>輸入：**必要**&#x200B;要填補的字串。 此字串可以是null。</li><li>計數：**必要**&#x200B;要填補的字串大小。</li><li>填充：**Required**&#x200B;用來加入輸入的字串。 如果為null或空白，則會視為單一空格。</li></ul> | lpad（輸入、計數、填充） | lpad(&quot;bat&quot;, 8, &quot;yz&quot;) | &quot;yzybat&quot; |
 | rpad | 將字串的右側與另一個指定字串貼齊。 | <ul><li>輸入：**必要**&#x200B;要填補的字串。 此字串可以是null。</li><li>計數：**必要**&#x200B;要填補的字串大小。</li><li>填充：**Required**&#x200B;用來加入輸入的字串。 如果為null或空白，則會視為單一空格。</li></ul> | rpad（輸入、計數、填充） | rpad(&quot;bat&quot;, 8, &quot;yz&quot;) | &quot;batyzyzy&quot; |
@@ -62,7 +62,7 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 | 等於 | 比較兩個字串以確認其是否相等。 此函式區分大小寫。 | <ul><li>STRING1:**必要**&#x200B;您要比較的第一個字串。</li><li>STRING2:**必要**&#x200B;您要比較的第二個字串。</li></ul> | STRING1&#x200B;.equals(&#x200B;STRING2) | &quot;string1&quot;&#x200B;。equals&#x200B;(&quot;STRING1&quot;) | false |
 | equalsIgnoreCase | 比較兩個字串以確認其是否相等。 此函式區分&#x200B;**not**&#x200B;大小寫。 | <ul><li>STRING1:**必要**&#x200B;您要比較的第一個字串。</li><li>STRING2:**必要**&#x200B;您要比較的第二個字串。</li></ul> | STRING1&#x200B;.equalsIgnoreCase&#x200B;(STRING2) | &quot;string1&quot;&#x200B;。equalsIgnoreCase&#x200B;(&quot;STRING1) | true |
 
-&#x200B;
+{style=&quot;table-layout:auto&quot;}
 
 ### 規則運算式函式
 
@@ -70,6 +70,8 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 -------- | ----------- | ---------- | -------| ---------- | -------------
 | extract_regex | 根據規則運算式，從輸入字串擷取群組。 | <ul><li>字串：**Required**&#x200B;您要從中提取組的字串。</li><li>REGEX:**必要**&#x200B;您希望群組相符的規則運算式。</li></ul> | extract_regex(STRING, REGEX) | extract_regex&#x200B;(&quot;E259,E259B_009,1_1&quot;&#x200B;, &quot;([^,]+),[^,]*,([^,]+)&quot;) | [&quot;E259,E259B_009,1_1&quot;、&quot;E259&quot;、&quot;1_1&quot;] |
 | matches_regex | 檢查字串是否與輸入的規則運算式相符。 | <ul><li>字串：**Required**&#x200B;您正在檢查的字串與規則運算式相符。</li><li>REGEX:**必要**&#x200B;您要比較的規則運算式。</li></ul> | matches_regex(STRING, REGEX) | matches_regex(&quot;E259,E259B_009,1_1&quot;, &quot;([^,]+),[^,]*,([^,]+)&quot;) | true |
+
+{style=&quot;table-layout:auto&quot;}
 
 ### 散列函式{#hashing}
 
@@ -85,6 +87,8 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 | md5 | 使用MD5輸入並產生雜湊值。 | <ul><li>輸入：**必要**&#x200B;要雜湊的純文字檔案。</li><li>字元集：*可選*&#x200B;字元集的名稱。 可能的值包括UTF-8、UTF-16、ISO-8859-1和US-ASCII。 </li></ul> | md5(INPUT, CHARSET) | md5(&quot;my text&quot;, &quot;UTF-8&quot;) | d3b96ce8c9fb4 &#x200B; e9bd0198d03ba6852c7 |
 | crc32 | 輸入使用循環冗餘校驗(CRC)算法產生32位循環碼。 | <ul><li>輸入：**必要**&#x200B;要雜湊的純文字檔案。</li><li>字元集：*可選*&#x200B;字元集的名稱。 可能的值包括UTF-8、UTF-16、ISO-8859-1和US-ASCII。</li></ul> | crc32(INPUT, CHARSET) | crc32(&quot;my text&quot;, &quot;UTF-8&quot;) | 8df92e80 |
 
+{style=&quot;table-layout:auto&quot;}
+
 ### URL函式{#url}
 
 >[!NOTE]
@@ -98,6 +102,8 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 | get_url_port | 傳回指定URL的連接埠。 如果輸入無效，則返回null。 | <ul><li>URL:**必要**&#x200B;需要從中提取埠的URL。</li></ul> | get_url_port(URL) | get_url_port&#x200B;(&quot;sftp://example.com//home/ &#x200B; joe/employee.csv&quot;) | 22 |
 | get_url_path | 傳回指定URL的路徑。 預設會傳回完整路徑。 | <ul><li>URL:**必要**&#x200B;需要擷取路徑的URL。</li><li>完整路徑：*可選*&#x200B;一個布爾值，它確定是否返回完整路徑。 如果設為false，則只會傳迴路徑的結尾。</li></ul> | get_url_path&#x200B;(URL, FULL_PATH) | get_url_path&#x200B;(&quot;sftp://example.com// &#x200B; home/joe/employee.csv&quot;) | &quot;//home/joe/&#x200B; employee.csv&quot; |
 | get_url_query_str | 傳回指定URL的查詢字串。 | <ul><li>URL:**必要**&#x200B;您嘗試從中取得查詢字串的URL。</li><li>錨點：**Required**&#x200B;決定如何使用查詢字串中的錨點。 可以是三個值之一：&quot;retain&quot;、&quot;remove&quot;或&quot;append&quot;。<br><br>如果值為&quot;retain&quot;，則錨點會附加至傳回的值。<br>如果值為&quot;remove&quot;，則錨點將從傳回的值中移除。<br>如果值是「附加」，則錨點會傳回為個別值。</li></ul> | get_url_query_str&#x200B;(URL, ANCHOR) | get_url_&#x200B;str(&quot;foo://example.com:8042&#x200B;/over/there?name&#x200B; nose&quot;, &quot;retain&quot;)&lt;a0/&#x200B;>get_url_str&#x200B;=get_query ronesi&quot;, &quot;ret_ret other?name=ferret#nosi&quot;)<br>get_url_url_url_ur_r_0(8_rerer_&#x200B;_serer_0(8_serererererer(2 foo://example.com#nose&quot;, &quot;append&quot;)<br> | `{"name": "ferret#nose"}`<br>`{"name": "ferret"}`<br>`{"name": "ferret", "_anchor_": "nose"}` |
+
+{style=&quot;table-layout:auto&quot;}
 
 ### 日期和時間函式{#date-and-time}
 
@@ -120,6 +126,7 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 | zone_date_to_utc | 將任何時區中的日期轉換為UTC中的日期。 | <ul><li>日期：**必要**&#x200B;您嘗試轉換的日期。</li></ul> | zone_date_to_utc&#x200B;(DATE) | `zone_date_to_utc&#x200B;(2019-10-17T11:55:&#x200B;12.000000999-&#x200B;07:00[America/Los_Angeles])` | `2019-10-17T18:55:12.000000999Z[UTC]` |
 | zone_date_to_zone | 將日期從一個時區轉換為另一個時區。 | <ul><li>日期：**必要**&#x200B;您嘗試轉換的日期。</li><li>區域：**必要**&#x200B;您嘗試將日期轉換為的時區。</li></ul> | zone_date_to_zone&#x200B;(DATE, ZONE) | `zone_date_to_utc&#x200B;(2019-10-17T11:55:12&#x200B;.000000999-07:00&#x200B;[America/Los_Angeles], "Europe/Paris")` | `2019-10-17T20:55:12.000000999+02:00[Europe/Paris]` |
 
+{style=&quot;table-layout:auto&quot;}
 &#x200B;
 
 ### 層次——對象{#objects}
@@ -138,6 +145,8 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 | is_set | 檢查源資料中是否存在對象。 | <ul><li>輸入：**必要**&#x200B;要檢查的路徑（如果它存在於源資料中）。</li></ul> | is_set(INPUT) | is_set&#x200B;(&quot;evars.evar.field1&quot;) | true |
 | 抵消 | 將屬性的值設定為`null`。 當您不想將欄位複製到目標架構時，應使用此功能。 |  | nullify() | nullify() | `null` |
 
+{style=&quot;table-layout:auto&quot;}
+
 ### 層次——陣列{#arrays}
 
 >[!NOTE]
@@ -153,6 +162,8 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 | join_arrays | 將陣列彼此結合。 | <ul><li>陣列：**Required**&#x200B;您要新增元素的陣列。</li><li>值：要附加到父陣列的陣列。</li></ul> | join_arrays&#x200B;(ARRAY, VALUES) | join_arrays&#x200B;([&#39;a&#39;, &#39;b&#39;], [&#39;c&#39;], [&#39;d&#39;, &#39;e&#39;]) | [&#39;a&#39;、&#39;b&#39;、&#39;c&#39;、&#39;d&#39;、&#39;e&#39;] |
 | to_array | 獲取輸入清單並將其轉換為陣列。 | <ul><li>INCLUDE_NULLS:**Required**&#x200B;指示是否在響應陣列中包含空值的布爾值。</li><li>值：**必需**&#x200B;要轉換為陣列的元素。</li></ul> | to_array&#x200B;(INCLUDE_NULLS, VALUES) | to_array(false, 1, null, 2, 3) | `[1, 2, 3]` |
 
+{style=&quot;table-layout:auto&quot;}
+
 ### 邏輯運算子{#logical-operators}
 
 >[!NOTE]
@@ -164,6 +175,8 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 | 解碼 | 給定一個鍵和一個作為陣列平面化的鍵值對清單，如果找到鍵，該函式將返回該值，如果在陣列中存在，則返回預設值。 | <ul><li>索引鍵：**必要**&#x200B;要匹配的密鑰。</li><li>OPTIONS:**必要**&#x200B;鍵／值對的平面化陣列。 （可選）預設值可以放在結尾。</li></ul> | decode(KEY,OPTIONS) | decode(stateCode, &quot;ca&quot;, &quot;California&quot;, &quot;pa&quot;, &quot;Pennylvania&quot;, &quot;N/A&quot;) | 如果stateCode是&quot;ca&quot;，則為&quot;California&quot;。<br>如果給定的stateCode是&quot;pa&quot;，則為&quot;Pennylvania&quot;。<br>如果stateCode不符合下列項目，則為&quot;N/A&quot;。 |
 | if | 評估給定的布爾表達式，並根據結果返回指定的值。 | <ul><li>運算式：**必要**&#x200B;正在評估的布林運算式。</li><li>TRUE_VALUE:**必要**&#x200B;運算式評估為true時傳回的值。</li><li>FALSE_VALUE:**必要**&#x200B;運算式評估為false時傳回的值。</li></ul> | iif(EXPRESSION, TRUE_VALUE, FALSE_VALUE) | if(&quot;s&quot;。equalsIgnoreCase(&quot;S&quot;), &quot;True&quot;, &quot;False&quot;) | &quot;True&quot; |
 
+{style=&quot;table-layout:auto&quot;}
+
 ### 彙總 {#aggregation}
 
 >[!NOTE]
@@ -174,6 +187,8 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 -------- | ----------- | ---------- | -------| ---------- | -------------
 | min | 返回給定參數的最小值。 使用自然排序。 | <ul><li>OPTIONS:**Required**&#x200B;一個或多個可相互比較的對象。</li></ul> | min(OPTIONS) | min(3, 1, 4) | 1 |
 | max | 返回給定參數的最大值。 使用自然排序。 | <ul><li>OPTIONS:**Required**&#x200B;一個或多個可相互比較的對象。</li></ul> | max(OPTIONS) | max(3, 1, 4) | 4 |
+
+{style=&quot;table-layout:auto&quot;}
 
 ### 類型轉換{#type-conversions}
 
@@ -188,6 +203,8 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 | to_float | 將字串轉換為浮點數。 | <ul><li>字串：**Required**&#x200B;要轉換為浮點數的字串。</li></ul> | to_float(STRING) | to_float(&quot;12.3456&quot;) | 12.34566 |
 | to_integer | 將字串轉換為整數。 | <ul><li>字串：**必要**&#x200B;要轉換為整數的字串。</li></ul> | to_integer(STRING) | to_integer(&quot;12&quot;) | 12 |
 
+{style=&quot;table-layout:auto&quot;}
+
 ### JSON函式{#json}
 
 >[!NOTE]
@@ -198,6 +215,8 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 -------- | ----------- | ---------- | -------| ---------- | -------------
 | json_to_object | 從指定字串反序列化JSON內容。 | <ul><li>字串：**必要**&#x200B;要取消序列化的JSON字串。</li></ul> | json_to_object&#x200B;(STRING) | json_to_object&#x200B;({&quot;info&quot;:{&quot;firstName&quot;:&quot;John&quot;,&quot;lastName&quot; :&quot;Doe&quot;}) | 表示JSON的物件。 |
 
+{style=&quot;table-layout:auto&quot;}
+
 ### 特殊操作{#special-operations}
 
 >[!NOTE]
@@ -207,6 +226,8 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 | 函數 | 說明 | 參數 | 語法 | 運算式 | 範例輸出 |
 -------- | ----------- | ---------- | -------| ---------- | -------------
 | uuid /&lt;a0/ guid<br> | 產生偽隨機ID。 |  | uuid()<br>guid() | uuid()<br>guid() | 7c0267d2-bb74-4e1a-9275-3bf4fccda5f4<br>c7016dc7-3163-43f7-afc7-2e1c9c206333 |
+
+{style=&quot;table-layout:auto&quot;}
 
 ### 用戶代理函式{#user-agent}
 
@@ -224,3 +245,5 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 | ua_agent_version_major | 從用戶代理字串中提取代理名稱和主版本。 | <ul><li>USER_AGENT:**必要**&#x200B;使用者代理字串。</li></ul> | ua_agent_version_major&#x200B;(USER_AGENT) | ua_agent_version_major&#x200B;(&quot;Mozilla/5.0(iPhone;CPU iPhone OS 5_1_1（如Mac OS X）AppleWebKit/534.46（KHTML如Gecko）Version/5.1 Mobile/9B206 Safari/7534.48.3英吋) | Safari 5 |
 | ua_agent_name | 從用戶代理字串中提取代理名。 | <ul><li>USER_AGENT:**必要**&#x200B;使用者代理字串。</li></ul> | ua_agent_name&#x200B;(USER_AGENT) | ua_agent_name&#x200B;(&quot;Mozilla/5.0(iPhone;CPU iPhone OS 5_1_1（如Mac OS X）AppleWebKit/534.46（KHTML如Gecko）Version/5.1 Mobile/9B206 Safari/7534.48.3英吋) | Safari |
 | ua_device_class | 從用戶代理字串中提取設備類。 | <ul><li>USER_AGENT:**必要**&#x200B;使用者代理字串。</li></ul> | ua_device_class&#x200B;(USER_AGENT) | ua_device_class&#x200B;(&quot;Mozilla/5.0(iPhone;CPU iPhone OS 5_1_1（如Mac OS X）AppleWebKit/534.46（KHTML如Gecko）Version/5.1 Mobile/9B206 Safari/7534.48.3英吋) | 電話 |
+
+{style=&quot;table-layout:auto&quot;}
