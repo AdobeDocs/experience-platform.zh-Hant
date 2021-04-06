@@ -5,14 +5,14 @@ type: 教學課程
 seo-title: 將描述檔和區段啟用至目標
 description: 將區段對應至目的地，以啟用您在Adobe Experience Platform的資料。 若要完成此作業，請遵循下列步驟。
 seo-description: 將區段對應至目的地，以啟用您在Adobe Experience Platform的資料。 若要完成此作業，請遵循下列步驟。
+exl-id: c3792046-ffa8-4851-918f-98ced8b8a835
 translation-type: tm+mt
-source-git-commit: 0992b223a96b77446a9f9c2823f5195541dd93fa
+source-git-commit: 0bb6db19dc27031115e47415c1b3241661e0a0ae
 workflow-type: tm+mt
-source-wordcount: '2069'
+source-wordcount: '2025'
 ht-degree: 0%
 
 ---
-
 
 # 將描述檔和區段啟用至目標
 
@@ -240,13 +240,6 @@ ht-degree: 0%
 如果未檢測到任何違反策略的情況，請選擇&#x200B;**[!UICONTROL Finish]**&#x200B;以確認選擇並開始向目標發送資料。
 
 ![確認選擇](../assets/ui/activate-destinations/confirm-selection.png)
-
-## 編輯啟動{#edit-activation}
-
-請依照下列步驟編輯Adobe Experience Platform現有的啟動流程：
-
-1. 在左側導覽列中選取&#x200B;**[!UICONTROL Destinations]**，然後按一下&#x200B;**[!UICONTROL Browse]**&#x200B;標籤，然後按一下目標名稱。
-2. 選取右側導軌中的&#x200B;**[!UICONTROL Edit activation]**&#x200B;以變更要傳送至目的地的區段。
 
 ## 確認區段啟動成功{#verify-activation}
 
