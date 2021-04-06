@@ -4,7 +4,7 @@ title: 更新目標帳戶
 type: 教學課程
 description: 本教學課程列出在Adobe Experience PlatformUI中更新目標帳戶的步驟
 translation-type: tm+mt
-source-git-commit: 6fd980b486c4a330f9188065bac55c624af584a1
+source-git-commit: e4afbdd6ff8f45ea8d5506f0228f0a80b44eee51
 workflow-type: tm+mt
 source-wordcount: '313'
 ht-degree: 1%
@@ -21,7 +21,7 @@ ht-degree: 1%
 ![「帳戶」頁籤](../assets/ui/update-accounts/destination-accounts.png)
 
 | 元素 | 說明 |
----------|----------
+|---|---|
 | [!UICONTROL Platform] | 您已設定連接的目標。 |
 | [!UICONTROL Connection Type] | 表示與儲存桶或目標的連接類型。 <ul><li>對於電子郵件行銷目標：可以是S3或FTP。</li><li>針對即時廣告目的地：伺服器對伺服器</li><li>針對AmazonS3雲端儲存空間目標：存取金鑰 </li><li>對於SFTP雲端儲存空間目標：SFTP的基本驗證</li></ul> |
 | [!UICONTROL Username] | 在[連接目標嚮導](../catalog/email-marketing/overview.md#connect-destination)中選擇的用戶名。 |
