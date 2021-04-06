@@ -1,16 +1,16 @@
 ---
-keywords: 刪除目標；如何刪除目標
+keywords: 刪除目的地
 title: 刪除目標
 type: 教學課程
 description: 本教學課程列出刪除Adobe Experience PlatformUI中現有目標的步驟
+exl-id: 7b672859-e61a-4b3c-9db9-62048258f0aa
 translation-type: tm+mt
-source-git-commit: c7f01ce5667ad92e95f1576ff466b2a13338b54b
+source-git-commit: 07869d63f395bbab6c49a3976051facdf94d43b7
 workflow-type: tm+mt
-source-wordcount: '392'
+source-wordcount: '388'
 ht-degree: 1%
 
 ---
-
 
 # 刪除目標{#delete-destinations}
 
