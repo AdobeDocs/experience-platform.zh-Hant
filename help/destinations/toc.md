@@ -6,10 +6,10 @@ user-guide-description: 針對跨通路行銷活動、電子郵件宣傳、鎖�
 description: 本檔案列出了Adobe Experience Platform目的地的目錄
 feature: 目的地
 translation-type: tm+mt
-source-git-commit: 709908196bb5df665c7e7df10dc58ee9f3b0edbf
+source-git-commit: 0bb6db19dc27031115e47415c1b3241661e0a0ae
 workflow-type: tm+mt
-source-wordcount: '463'
-ht-degree: 11%
+source-wordcount: '473'
+ht-degree: 10%
 
 ---
 
@@ -23,9 +23,13 @@ ht-degree: 11%
    * [使用Flow Service API連線至電子郵件行銷目的地並啟用資料](./api/email-marketing.md)
 * UI指南{#ui}
    * [目標工作區](./ui/destinations-workspace.md)
-   * [檢視目標詳細資訊](./ui/destination-details-page.md)
    * [連接到目標](./ui/connect-destination.md)
+   * [檢視目標詳細資訊](./ui/destination-details-page.md)
    * [將描述檔和區段啟用至目標](./ui/activate-destinations.md)
+   * [更新目標帳戶](./ui/update-accounts.md)
+   * [編輯啟動流程](./ui/edit-activation.md)
+   * [刪除目標](./ui/delete-destinations.md)
+   * [監視資料流](./ui/monitor-dataflows.md)
 * 目標目錄{#catalog}
    * [目標目錄概述](./catalog/overview.md)
    * [ (Alpha)HTTP連線](./catalog/http-destination.md)
