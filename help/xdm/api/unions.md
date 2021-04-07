@@ -1,17 +1,17 @@
 ---
-keywords: Experience Platform;home；熱門主題；API;XDM;XDM;XDM系統；體驗資料模型；Experience Data Model；資料模型；資料模型；模式註冊表；Schema Registry;Union;Union;Union;SegmentMembersh;timeSeriesEvents;
+keywords: Experience Platform;home；熱門主題；api;API;XDM;XDM;XDM系統；體驗資料模型；體驗資料模型；資料模型；資料模型；模式註冊表；結構；聯合；聯盟；segmentMembership;timeSeriesEvents;
 solution: Experience Platform
 title: 工會API端點
 description: 架構註冊表API中的/union端點可讓您以程式設計方式管理體驗應用程式中的XDM結合架構。
-topic: developer guide
+topic: 開發人員指南
+exl-id: d0ece235-72e8-49d9-856b-5dba44e16ee7
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 610ce5c6dca5e7375b941e7d6f550382da10ca27
 workflow-type: tm+mt
-source-wordcount: '912'
+source-wordcount: '902'
 ht-degree: 1%
 
 ---
-
 
 # 工會端點
 
@@ -33,7 +33,7 @@ ht-degree: 1%
 
 ### 區段會籍圖
 
-`segmentMembership`地圖會儲存區段評估的結果。 使用[分段API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/segmentation.yaml)成功執行分段作業時，會更新對應。 `segmentMembership` 此外，還會儲存任何預先評估的受眾細分，這些細分會納入Platform中，以便與其他解決方案（例如Adobe Audience Manager）整合。如需詳細資訊，請參閱[使用API建立區段的教學課程。](../../segmentation/tutorials/create-a-segment.md)
+`segmentMembership`地圖會儲存區段評估的結果。 使用[分段API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/segmentation.yaml)成功執行分段作業時，會更新對應。 `segmentMembership` 此外，還會儲存任何預先評估的受眾細分，這些細分會收錄到Platform中，以便與Adobe Audience Manager等其他解決方案整合。如需詳細資訊，請參閱[使用API建立區段的教學課程。](../../segmentation/tutorials/create-a-segment.md)
 
 ## 檢索工會清單{#list}
 
@@ -91,7 +91,7 @@ curl -X GET \
 
 ## 查找聯合{#lookup}
 
-您可以通過執行包含`$id`的GET請求來查看特定的聯合，並根據「接受」標題查看聯合的部分或全部詳細資訊。
+您可以通過執行包含`$id`和（取決於「接受」標題）的GET請求來查看特定的聯合，以及聯合的部分或全部詳細資訊。
 
 >[!NOTE]
 >
@@ -124,10 +124,10 @@ curl -X GET \
 
 以下「接受」標題可用於聯合方案查找：
 
-| 接受 | 說明 |
+| Accept | 說明 |
 | -------|------------ |
-| application/vnd.adobe.xed+json;version={MAJOR_VERSION} | Raw含`$ref`和`allOf`。 包含標題和說明。 |
-| application/vnd.adobe.xed-full+json;version={MAJOR_VERSION} | `$ref` 屬性並 `allOf` 解析。包含標題和說明。 |
+| `application/vnd.adobe.xed+json; version=1` | Raw含`$ref`和`allOf`。 包含標題和說明。 |
+| `application/vnd.adobe.xed-full+json; version=1` | `$ref` 屬性並 `allOf` 解析。包含標題和說明。 |
 
 **回應**
 
@@ -176,11 +176,11 @@ curl -X GET \
 
 ## 為聯合成員資格啟用方案{#enable}
 
-要使架構包含在其類的union中，必須將`union`標籤添加到架構的`meta:immutableTags`屬性中。 通過發出PATCH請求將`meta:immutableTags`陣列添加到相關方案中，該陣列的單個字串值為`union`，可以完成此操作。 有關詳細示例，請參見[方案端點指南](./schemas.md#union)。
+要使架構包含在其類的union中，必須將`union`標籤添加到架構的`meta:immutableTags`屬性中。 您可以通過PATCH請求將`meta:immutableTags`陣列添加到相關方案中，該陣列的單字串值為`union`。 有關詳細示例，請參見[方案端點指南](./schemas.md#union)。
 
 ## 列出聯合{#list-schemas}中的方案
 
-為了查看哪些方案屬於特定聯合的一部分，可以對`/tenant/schemas`端點執行GET請求。 使用`property`查詢參數，可以將響應配置為僅包含`meta:immutableTags`欄位和`meta:class`等於您正在訪問其聯合的類的返回方案。
+為了查看哪些方案屬於特定聯合的一部分，您可以對`/tenant/schemas`端點執行GET請求。 使用`property`查詢參數，可以將響應配置為僅包含`meta:immutableTags`欄位和`meta:class`等於您正在訪問其聯合的類的返回方案。
 
 **API格式**
 
