@@ -2,16 +2,16 @@
 keywords: Experience Platform;home；熱門主題；filter;Filter;filter data;filter data;date range
 solution: Experience Platform
 title: 使用查詢參數篩選目錄資料
-topic: developer guide
+topic: 開發人員指南
 description: 目錄服務API允許透過使用請求查詢參數來篩選回應資料。 目錄的最佳實務是在所有API呼叫中使用篩選器，因為這些篩選器可減輕API的負載，並有助於改善整體效能。
+exl-id: 0cdb5a7e-527b-46be-9ad8-5337c8dc72b7
 translation-type: tm+mt
-source-git-commit: a1103bfbf79f9c87bac5b113c01386a6fb8950e7
+source-git-commit: 610ce5c6dca5e7375b941e7d6f550382da10ca27
 workflow-type: tm+mt
-source-wordcount: '2090'
+source-wordcount: '2123'
 ht-degree: 1%
 
 ---
-
 
 # 使用查詢參數篩選[!DNL Catalog]資料
 
@@ -155,6 +155,10 @@ curl -X GET \
 * 如果對象不包含任何請求的屬性，則它將顯示為空對象。(`Dataset2`)
 * 如果資料集包含屬性但沒有值，則可將請求的屬性傳回為空物件。(`Dataset3`)
 * 否則，資料集會顯示所有請求屬性的完整值。(`Dataset4`)
+
+>[!NOTE]
+>
+>在每個資料集的`schemaRef`屬性中，版本號表示架構的最新次要版本。 如需詳細資訊，請參閱XDM API指南中有關[架構版本控制](../../xdm/api/getting-started.md#versioning)的章節。
 
 ## 響應清單的偏移起始索引
 
@@ -582,7 +586,7 @@ GET /{OBJECT_TYPE}?property={CONDITION}
 | --- | --- | --- |
 | (None) | 聲明屬性名稱（不含運算子）時，只會傳回屬性存在的物件，不論其值為何。 | `property=name` |
 | ! | 將&quot;`!`&quot;預定為`property`參數的值時，僅返回屬性&#x200B;**not**&#x200B;存在的對象。 | `property=!name` |
-| ~ | 僅傳回屬性值（字串）與位元(`~`)符號後提供之規則運算式相符的物件。 | `property=name~^example` |
+| ~ | 僅傳回屬性值（字串）與位元(`~`)符號後所提供的規則運算式相符的物件。 | `property=name~^example` |
 | == | 僅返回其屬性值與雙等號(`==`)後提供的字串完全匹配的對象。 | `property=name==exampleName` |
 | != | 僅傳回屬性值為&#x200B;**not**&#x200B;且符合在not-equals符號(`!=`)之後提供之字串的物件。 | `property=name!=exampleName` |
 | &lt;> | 僅傳回屬性值小於（但不等於）指定金額的物件。 | `property=version<1.0.0` |
