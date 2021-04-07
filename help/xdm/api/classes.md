@@ -1,24 +1,24 @@
 ---
-keywords: Experience Platform;home；熱門主題；API;XDM;XDM;XDM系統；體驗資料模型；Experience資料模型；資料模型；類註冊表；模式註冊表；類；類；類；類；建立
+keywords: Experience Platform;home；熱門主題；api;API;XDM;XDM系統；體驗資料模型；體驗資料模型；資料模型；類註冊；模式註冊；類；類；類；建立
 solution: Experience Platform
 title: 類別API端點
 description: 方案註冊表API中的/classes端點允許您以寫程式方式管理體驗應用程式中的XDM類。
-topic: developer guide
+topic: 開發人員指南
+exl-id: 7beddb37-0bf2-4893-baaf-5b292830f368
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 610ce5c6dca5e7375b941e7d6f550382da10ca27
 workflow-type: tm+mt
-source-wordcount: '1502'
+source-wordcount: '1497'
 ht-degree: 1%
 
 ---
-
 
 # 類端點
 
 所有體驗資料模型(XDM)結構必須以類別為基礎。 類確定基於該類的所有方案必須包含的公共屬性的基本結構，以及哪些混合適用於這些方案。 此外，架構的類確定了架構將包含的資料的行為方面，其中有兩種類型：
 
-* **[!UICONTROL 記錄]**:提供主題屬性的相關資訊。主題可以是組織或個人。
-* **[!UICONTROL 時間系列]**:提供記錄主體直接或間接採取操作時系統的快照。
+* **[!UICONTROL Record]**:提供主題屬性的相關資訊。主題可以是組織或個人。
+* **[!UICONTROL Time-series]**:提供記錄主體直接或間接採取操作時系統的快照。
 
 >[!NOTE]
 >
@@ -28,11 +28,11 @@ ht-degree: 1%
 
 ## 快速入門
 
-本指南中使用的端點是[[!DNL Schema Registry] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/class-registry.yaml)的一部分。 在繼續之前，請先閱讀[快速入門手冊](./getting-started.md)，以取得相關檔案的連結、閱讀本檔案中範例API呼叫的指南，以及成功呼叫任何Experience Platform API所需之必要標題的重要資訊。
+本指南中使用的端點是[[!DNL Schema Registry] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/class-registry.yaml)的一部分。 在繼續之前，請先閱讀[快速入門手冊](./getting-started.md)，以取得相關檔案的連結、閱讀本檔案中範例API呼叫的指南，以及成功呼叫任何Experience PlatformAPI所需之必要標題的重要資訊。
 
 ## 檢索{#list}類清單
 
-您可以分別對`/global/classes`或`/tenant/classes`發出GET請求，以列出`global`或`tenant`容器下的所有類。
+您可以分別向`/global/classes`或`/tenant/classes`發出GET請求，以列出`global`或`tenant`容器下的所有類。
 
 >[!NOTE]
 >
@@ -143,11 +143,11 @@ curl -X GET \
 
 | `Accept` 標題 | 說明 |
 | ------- | ------------ |
-| `application/vnd.adobe.xed+json; version={MAJOR_VERSION}` | Raw含`$ref`和`allOf`，有標題和說明。 |
-| `application/vnd.adobe.xed-full+json; version={MAJOR_VERSION}` | `$ref` 而且 `allOf` 有標題和說明。 |
-| `application/vnd.adobe.xed-notext+json; version={MAJOR_VERSION}` | Raw含`$ref`和`allOf`，無標題或說明。 |
-| `application/vnd.adobe.xed-full-notext+json; version={MAJOR_VERSION}` | `$ref` 並解 `allOf` 決，沒有標題或說明。 |
-| `application/vnd.adobe.xed-full-desc+json; version={MAJOR_VERSION}` | `$ref` 並解 `allOf` 決了包含的描述符。 |
+| `application/vnd.adobe.xed+json; version=1` | Raw含`$ref`和`allOf`，有標題和說明。 |
+| `application/vnd.adobe.xed-full+json; version=1` | `$ref` 而且 `allOf` 有標題和說明。 |
+| `application/vnd.adobe.xed-notext+json; version=1` | Raw含`$ref`和`allOf`，無標題或說明。 |
+| `application/vnd.adobe.xed-full-notext+json; version=1` | `$ref` 並解 `allOf` 決，沒有標題或說明。 |
+| `application/vnd.adobe.xed-full-desc+json; version=1` | `$ref` 並解 `allOf` 決了包含的描述符。 |
 
 **回應**
 
@@ -242,13 +242,13 @@ curl -X GET \
 
 ## 建立{#create}類
 
-您可以透過發出POST請求，在`tenant`容器下定義自訂類別。
+您可以透過提出POST請求，在`tenant`容器下定義自訂類別。
 
 >[!IMPORTANT]
 >
 >根據您定義的自訂類合成架構時，將無法使用標準混音。 每個mixin都定義了它們在其`meta:intendedToExtend`屬性中相容的類。 一旦開始定義與新類相容的混音（通過使用混音的`meta:intendedToExtend`欄位中新類的`$id`），您就可以在每次定義實現所定義類的方案時重複使用這些混音。 如需詳細資訊，請參閱[建立混合](./mixins.md#create)和[建立結構](./schemas.md#create)各自端點指南中的章節。
 >
->如果您打算在即時客戶配置檔案中使用基於自定義類的方案，請務必記住，聯合方案僅基於共用同一類的方案構建。 如果要將自定義類模式包括在聯合中，以便使用其它類（如[!UICONTROL XDM Individual Profile]或[!UICONTROL XDM ExperienceEvent]），則必須與使用該類的其他模式建立關係。 如需詳細資訊，請參閱API](../tutorials/relationship-api.md)中關於建立兩個架構之間關係的[教學課程。
+>如果您打算在即時客戶配置檔案中使用基於自定義類的方案，請務必記住，聯合方案僅基於共用同一類的方案構建。 如果要在聯合中為[!UICONTROL XDM Individual Profile]或[!UICONTROL XDM ExperienceEvent]等其他類包含自定義類模式，則必須與使用該類的其他模式建立關係。 如需詳細資訊，請參閱API](../tutorials/relationship-api.md)中關於建立兩個架構之間關係的[教學課程。
 
 **API格式**
 
@@ -380,7 +380,7 @@ curl -X POST \
 }
 ```
 
-對[列出`tenant`容器中的所有類](#list)執行GET請求時，現在將包含屬性類。 您也可以[使用URL編碼的`$id`執行查閱(GET)請求](#lookup)，以直接檢視新類別。
+執行[列出`tenant`容器中所有類](#list)的GET請求，現在將包含屬性類。 您也可以[使用URL編碼的`$id`執行查閱(GET)請求](#lookup)，以直接檢視新類別。
 
 ## 更新{#put}類
 
@@ -519,11 +519,11 @@ curl -X PUT \
 
 ## 更新{#patch}類的一部分
 
-您可以使用PATCH請求更新類的一部分。 [!DNL Schema Registry]支援所有標準JSON修補程式作業，包括`add`、`remove`和`replace`。 如需JSON修補程式的詳細資訊，請參閱[API基礎指南](../../landing/api-fundamentals.md#json-patch)。
+您可以使用PATCH請求來更新類別的一部分。 [!DNL Schema Registry]支援所有標準JSON修補程式作業，包括`add`、`remove`和`replace`。 如需JSON修補程式的詳細資訊，請參閱[API基礎指南](../../landing/api-fundamentals.md#json-patch)。
 
 >[!NOTE]
 >
->如果要用新值替換整個資源，而不是更新單個欄位，請參見[中的「使用PUT操作替換類」部分。](#put)
+>如果要用新值替換整個資源，而不是更新單個欄位，請參閱[中的「使用PUT操作替換類」部分。](#put)
 
 **API格式**
 
@@ -623,7 +623,7 @@ curl -X PATCH \
 
 ## 刪除{#delete}類
 
-有時可能需要從架構註冊表中刪除類。 這是透過使用路徑中提供的類別ID來執行DELETE請求來完成的。
+有時可能需要從架構註冊表中刪除類。 這是透過使用路徑中提供的類別ID來執行DELETE要求來完成的。
 
 **API格式**
 
