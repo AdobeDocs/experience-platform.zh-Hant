@@ -2,16 +2,16 @@
 keywords: Experience Platform;home；熱門主題；dataset;Dataset；建立資料集；建立資料集；啟用資料集
 solution: Experience Platform
 title: 在API中建立資料集
-topic: developer guide
+topic: 開發人員指南
 description: 本檔案說明如何在Catalog Service API中建立資料集物件。
+exl-id: f3e5de7f-1781-4898-ac42-063eb51e661a
 translation-type: tm+mt
-source-git-commit: a489ab248793a063295578943ad600d8eacab6a2
+source-git-commit: 610ce5c6dca5e7375b941e7d6f550382da10ca27
 workflow-type: tm+mt
-source-wordcount: '232'
+source-wordcount: '256'
 ht-degree: 1%
 
 ---
-
 
 # 在API中建立資料集
 
@@ -57,6 +57,7 @@ curl -X POST \
 | --- | --- |
 | `name` | 要建立的資料集的名稱。 |
 | `schemaRef.id` | 資料集將基於的XDM模式的URI `$id`值。 |
+| `schemaRef.contentType` | 指示方案的格式和版本。 如需詳細資訊，請參閱XDM API指南中有關[架構版本控制](../../xdm/api/getting-started.md#versioning)的章節。 |
 
 >[!NOTE]
 >
