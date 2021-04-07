@@ -2,24 +2,24 @@
 keywords: Experience Platform;home；熱門主題；dataset;Dataset；建立資料集；建立資料集
 solution: Experience Platform
 title: 使用API建立資料集
-topic: datasets
-description: 本檔案提供使用Adobe Experience Platform API建立資料集，以及使用檔案填入資料集的一般步驟。
+topic: 資料集
+description: 本檔案提供使用Adobe Experience PlatformAPI建立資料集，以及使用檔案填入資料集的一般步驟。
+exl-id: 3a5f48cf-ad05-4b9e-be1d-ff213a26a477
 translation-type: tm+mt
-source-git-commit: a489ab248793a063295578943ad600d8eacab6a2
+source-git-commit: 610ce5c6dca5e7375b941e7d6f550382da10ca27
 workflow-type: tm+mt
-source-wordcount: '1268'
+source-wordcount: '1306'
 ht-degree: 1%
 
 ---
 
-
 # 使用API建立資料集
 
-本檔案提供使用Adobe Experience Platform API建立資料集，以及使用檔案填入資料集的一般步驟。
+本檔案提供使用Adobe Experience PlatformAPI建立資料集，以及使用檔案填入資料集的一般步驟。
 
 ## 快速入門
 
-本指南需要有效瞭解Adobe Experience Platform的下列元件：
+本指南需要對Adobe Experience Platform的下列組成部分有切實的瞭解：
 
 * [批次擷取](../../ingestion/batch-ingestion/overview.md): [!DNL Experience Platform] 可讓您將資料內嵌為批次檔案。
 * [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md):組織客戶體驗資 [!DNL Experience Platform] 料的標準化架構。
@@ -213,6 +213,11 @@ curl -X POST \
 }'
 ```
 
+| 屬性 | 說明 |
+| --- | --- |
+| `schemaRef.id` | 資料集將基於的XDM模式的URI `$id`值。 |
+| `schemaRef.contentType` | 指示方案的格式和版本。 如需詳細資訊，請參閱XDM API指南中有關[架構版本控制](../../xdm/api/getting-started.md#versioning)的章節。 |
+
 >[!NOTE]
 >
 >本教程的所有示例都使用[Apache Parce](https://parquet.apache.org/documentation/latest/)檔案格式。 使用JSON檔案格式的範例可在[批次擷取開發人員指南](../../ingestion/batch-ingestion/api-overview.md)中找到
@@ -299,7 +304,7 @@ curl -X POST 'https://platform.adobe.io/data/foundation/import/batches' \
 
 >[!NOTE]
 >
->支援的最大資料上傳檔案為512 MB。 如果您的資料檔案大於此，則需將它分割為不大於512 MB的區塊，以一次上傳一個。 您可以對每個檔案重複此步驟，使用相同的批次ID，以相同批次上傳每個檔案。 如果您可以在批次中上傳檔案，則數目沒有限制。
+>支援的最大資料上傳檔案為512 MB。 如果您的資料檔案大於此，則需要將它分割為不大於512 MB的區塊，以一次上傳一個。 您可以對每個檔案重複此步驟，使用相同的批次ID，以相同批次上傳每個檔案。 如果您可以在批次中上傳檔案，則數目沒有限制。
 
 **API格式**
 
@@ -476,4 +481,4 @@ curl -X GET \
 
 更新架構後，您可以重新遵循本教學課程中的步驟，以便新增符合修訂架構的資料。
 
-請務必記住，模式演化純粹是可加性的，這表示一旦將模式保存到註冊表並用於資料提取，您就不能對模式引入中斷更改。 若要進一步瞭解合成架構以搭配Adobe Experience Platform使用的最佳範例，請參閱架構合成[基礎指南](../../xdm/schema/composition.md)。
+請務必記住，模式演化純粹是可加性的，這表示一旦將模式保存到註冊表並用於資料提取，您就不能對模式引入中斷更改。 要瞭解有關構成方案以用於Adobe Experience Platform的最佳實踐，請參見[架構構成基礎](../../xdm/schema/composition.md)的指南。
