@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform;home；熱門主題；資料治理；資料使用標籤api；策略服務api
+keywords: Experience Platform；首頁；熱門主題；資料治理；資料使用標籤api；策略服務api
 solution: Experience Platform
 title: '使用API管理資料使用標籤 '
-topic: developer guide
-description: 資料集服務API可讓您套用和編輯資料集的使用標籤。 它是Adobe Experience Platform資料目錄功能的一部分，但與管理資料集中繼資料的Catalog Service API不同。
+topic: 開發人員指南
+description: 資料集服務API可讓您套用和編輯資料集的使用標籤。 它是Adobe Experience Platform資料目錄功能的一部分，但與管理資料集元資料的目錄服務API不同。
 translation-type: tm+mt
-source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
+source-git-commit: 4e75e3fbdcd480c384411c2f33bad5b2cdcc5c42
 workflow-type: tm+mt
-source-wordcount: '1017'
-ht-degree: 3%
+source-wordcount: '1147'
+ht-degree: 2%
 
 ---
 
@@ -19,7 +19,7 @@ ht-degree: 3%
 
 [[!DNL Policy Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml)提供數個端點，可讓您為組織建立和管理資料使用標籤。
 
-[!DNL Dataset Service] API可讓您套用和編輯資料集的使用標籤。 它是Adobe Experience Platform資料目錄功能的一部分，但與管理資料集中繼資料的[!DNL Catalog Service] API不同。
+[!DNL Dataset Service] API可讓您套用和編輯資料集的使用標籤。 它是Adobe Experience Platform資料目錄功能的一部分，但與管理資料集元資料的[!DNL Catalog Service] API不同。
 
 ## 快速入門
 
@@ -29,7 +29,7 @@ ht-degree: 3%
 
 ## 列出所有標籤{#list-labels}
 
-使用[!DNL Policy Service] API，您可以分別對`/labels/core`或`/labels/custom`發出GET請求，列出所有`core`或`custom`標籤。
+使用[!DNL Policy Service] API，您可以分別向`/labels/core`或`/labels/custom`發出GET請求，列出所有`core`或`custom`標籤。
 
 **API格式**
 
@@ -111,7 +111,7 @@ curl -X GET \
 
 ## 查找標籤{#look-up-label}
 
-您可以在GET請求至[!DNL Policy Service] API的路徑中加入該標籤的`name`屬性，以尋找特定標籤。
+您可以在[!DNL Policy Service] API的GET請求路徑中加入該標籤的`name`屬性，以尋找特定標籤。
 
 **API格式**
 
@@ -165,7 +165,7 @@ curl -X GET \
 
 ## 建立或更新自訂標籤{#create-update-label}
 
-若要建立或更新自訂標籤，您必須對[!DNL Policy Service] API提出PUT要求。
+若要建立或更新自訂標籤，您必須向[!DNL Policy Service] API提出PUT要求。
 
 **API格式**
 
@@ -231,7 +231,7 @@ curl -X PUT \
 
 ## 查找資料集{#look-up-dataset-labels}的標籤
 
-您可以對[!DNL Dataset Service] API提出GET請求，以尋找已套用至現有資料集的資料使用標籤。
+您可以向[!DNL Dataset Service] API提出GET請求，以查找已應用到現有資料集的資料使用標籤。
 
 **API格式**
 
@@ -280,11 +280,15 @@ curl -X GET \
 | 屬性 | 說明 |
 | --- | --- |
 | `labels` | 已套用至資料集的資料使用標籤清單。 |
-| `optionalLabels` | 資料集內已套用資料使用標籤的個別欄位清單。 |
+| `optionalLabels` | 資料集內已套用資料使用標籤的個別欄位清單。 需要下列子屬性：<br/><br/>`option`:包含欄位[!DNL Experience Data Model](XDM)屬性的對象。 需要下列三個屬性：<ul><li>`id`:與欄位 `$id` 關聯的架構的URI值。</li><li>`contentType`:指示方案的格式和版本。如需詳細資訊，請參閱XDM API指南中有關[架構版本控制](../../xdm/api/getting-started.md#versioning)的章節。</li><li>`schemaPath`:相關結構屬性的路徑，以 [JSON ](../../landing/api-fundamentals.md#json-pointer) Pointersyntax撰寫。</li></ul>`labels`:您要新增至欄位的資料使用標籤清單。 |
+
+- id:資料集所依據之XDM架構的URI $id值。
+- contentType:指示方案的格式和版本。 如需詳細資訊，請參閱XDM API指南中有關[架構版本控制](../../xdm/api/getting-started.md#versioning)的章節。
+- schemaPath:相關架構屬性的路徑，以[JSON Pointer](../../landing/api-fundamentals.md#json-pointer)語法編寫。
 
 ## 將標籤套用至資料集{#apply-dataset-labels}
 
-您可以在POST或PUT請求的裝載中提供標籤給[!DNL Dataset Service] API，為資料集建立一組標籤。 使用其中一種方法會覆寫任何現有的標籤，並以裝載中提供的標籤來取代標籤。
+您可以在POST或PUT請求的裝載中提供標籤給[!DNL Dataset Service] API，為資料集建立標籤集。 使用其中一種方法會覆寫任何現有的標籤，並以裝載中提供的標籤來取代標籤。
 
 **API格式**
 
@@ -299,7 +303,7 @@ PUT /datasets/{DATASET_ID}/labels
 
 **請求**
 
-下列POST要求會將一系列標籤新增至資料集，以及該資料集內的特定欄位。 裝載中提供的欄位與PUT請求所需的欄位相同。
+下列POST請求會將一系列標籤新增至資料集，以及該資料集內的特定欄位。 裝載中提供的欄位與PUT要求所需的欄位相同。
 
 ```shell
 curl -X POST \
@@ -327,7 +331,7 @@ curl -X POST \
 | 屬性 | 說明 |
 | --- | --- |
 | `labels` | 您要新增至資料集的資料使用標籤清單。 |
-| `optionalLabels` | 資料集中您想新增標籤的任何個別欄位清單。 此陣列中的每個項目都必須具有以下屬性：<br/><br/>`option`:包含欄位[!DNL Experience Data Model](XDM)屬性的對象。 需要下列三個屬性：<ul><li>id</code>:與欄位關聯的架構的URI $id</code>值。</li><li>contentType</code>:架構的內容類型和版本號。 這應採用有效<a href="../../xdm/api/getting-started.md#accept">Accept headers</a>的其中一種形式，用於XDM查閱請求。</li><li>schemaPath</code>:資料集結構中欄位的路徑。</li></ul>`labels`:您要新增至欄位的資料使用標籤清單。 |
+| `optionalLabels` | 資料集中您想新增標籤的任何個別欄位清單。 此陣列中的每個項目都必須具有以下屬性：<br/><br/>`option`:包含欄位[!DNL Experience Data Model](XDM)屬性的對象。 需要下列三個屬性：<ul><li>`id`:與欄位 `$id` 關聯的架構的URI值。</li><li>`contentType`:指示方案的格式和版本。如需詳細資訊，請參閱XDM API指南中有關[架構版本控制](../../xdm/api/getting-started.md#versioning)的章節。</li><li>`schemaPath`:相關結構屬性的路徑，以 [JSON ](../../landing/api-fundamentals.md#json-pointer) Pointersyntax撰寫。</li></ul>`labels`:您要新增至欄位的資料使用標籤清單。 |
 
 **回應**
 
@@ -351,7 +355,7 @@ curl -X POST \
 
 ## 從資料集{#remove-dataset-labels}移除標籤
 
-您可以對[!DNL Dataset Service] API發出DELETE請求，以移除套用至資料集的標籤。
+您可以對[!DNL Dataset Service] API提出DELETE請求，以移除套用至資料集的標籤。
 
 **API格式**
 
@@ -380,7 +384,7 @@ curl -X DELETE \
 
 ## 後續步驟
 
-閱讀本檔案後，您就學會了如何使用API管理資料使用標籤。
+閱讀本檔案後，您便瞭解如何使用API管理資料使用標籤。
 
 在資料集和欄位層級新增資料使用標籤後，您就可以開始將資料內嵌至[!DNL Experience Platform]。 若要進一步瞭解，請先閱讀[資料擷取檔案](../../ingestion/home.md)。
 
