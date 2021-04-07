@@ -1,25 +1,25 @@
 ---
-keywords: Experience Platform;home；熱門主題；api;API;XDM;XDM系統；體驗資料模型；體驗資料模型；資料模型；模式註冊；模式註冊；
+keywords: Experience Platform;home；熱門主題；api;API;XDM;XDM系統；體驗資料模型；體驗資料模型；資料模型；模式註冊；
 solution: Experience Platform
 title: 架構註冊表API快速入門
 description: 本文檔介紹了在嘗試調用方案註冊表API之前需要知道的核心概念。
-topic: developer guide
+topic: 開發人員指南
+exl-id: 7daebb7d-72d2-4967-b4f7-1886736db69f
 translation-type: tm+mt
-source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
+source-git-commit: 610ce5c6dca5e7375b941e7d6f550382da10ca27
 workflow-type: tm+mt
-source-wordcount: '1163'
+source-wordcount: '1365'
 ht-degree: 0%
 
 ---
-
 
 # [!DNL Schema Registry] API快速入門
 
 [!DNL Schema Registry] API可讓您建立和管理各種Experience Data Model(XDM)資源。 本檔案提供您在嘗試呼叫[!DNL Schema Registry] API之前，需要瞭解的核心概念的簡介。
 
-## 必要條件
+## 先決條件
 
-使用開發人員指南需要瞭解Adobe Experience Platform的下列元件：
+使用開發人員指南需要對下列Adobe Experience Platform元件有良好的認識：
 
 * [[!DNL Experience Data Model (XDM) System]](../home.md):組織客戶體驗資 [!DNL Experience Platform] 料的標準化架構。
    * [架構構成基礎](../schema/composition.md):瞭解XDM架構的基本建置區塊。
@@ -160,7 +160,7 @@ curl -X GET \
 
 ### 全域容器
 
-`global`容器包含所有標準Adobe和[!DNL Experience Platform]合作夥伴提供的類別、混合、資料類型和結構。 您只能對`global`容器執行清單和查閱(GET)請求。
+`global`容器包含所有標準Adobe和[!DNL Experience Platform]合作夥伴提供的類、混合、資料類型和方案。 您只能對`global`容器執行清單和查閱(GET)請求。
 
 使用`global`容器的呼叫範例如下：
 
@@ -203,25 +203,42 @@ XDM資源以URI形式使用`$id`屬性進行標識，例如：
 
 下表列出相容的`Accept`標題值，包括具有版本號碼的值，以及使用API時傳回內容的說明。
 
-| 接受 | 說明 |
+| Accept | 說明 |
 | ------- | ------------ |
 | `application/vnd.adobe.xed-id+json` | 僅傳回ID清單。 這最常用於列出資源。 |
 | `application/vnd.adobe.xed+json` | 傳回包含原始`$ref`和`allOf`的完整JSON結構描述清單。 這可用來傳回完整資源清單。 |
-| `application/vnd.adobe.xed+json; version={MAJOR_VERSION}` | 具有`$ref`和`allOf`的原始XDM。 有標題和說明。 |
-| `application/vnd.adobe.xed-full+json; version={MAJOR_VERSION}` | `$ref` 屬性並 `allOf` 解析。有標題和說明。 |
-| `application/vnd.adobe.xed-notext+json; version={MAJOR_VERSION}` | 具有`$ref`和`allOf`的原始XDM。 無標題或說明。 |
-| `application/vnd.adobe.xed-full-notext+json; version={MAJOR_VERSION}` | `$ref` 屬性並 `allOf` 解析。無標題或說明。 |
-| `application/vnd.adobe.xed-full-desc+json; version={MAJOR_VERSION}` | `$ref` 屬性並 `allOf` 解析。包括描述符。 |
+| `application/vnd.adobe.xed+json; version=1` | 具有`$ref`和`allOf`的原始XDM。 有標題和說明。 |
+| `application/vnd.adobe.xed-full+json; version=1` | `$ref` 屬性並 `allOf` 解析。有標題和說明。 |
+| `application/vnd.adobe.xed-notext+json; version=1` | 具有`$ref`和`allOf`的原始XDM。 無標題或說明。 |
+| `application/vnd.adobe.xed-full-notext+json; version=1` | `$ref` 屬性並 `allOf` 解析。無標題或說明。 |
+| `application/vnd.adobe.xed-full-desc+json; version=1` | `$ref` 屬性並 `allOf` 解析。包括描述符。 |
 
 >[!NOTE]
 >
->如果僅提供主版本（如1、2、3），則註冊表將返回最新的次版本(如.1、.2、.3)。
+>平台目前僅支援每個架構(`1`)的一個主要版本。 因此，在執行查找請求時，`version`的值必須始終為`1`，以返回方案的最新次要版本。 有關方案版本化的詳細資訊，請參閱以下子部分。
+
+### 方案版本控制{#versioning}
+
+架構版本由架構註冊表API的`Accept`標題和下游平台服務API負載的`schemaRef.contentType`屬性中的標題引用。
+
+目前，平台僅支援每個架構的單一主要版本(`1`)。 根據[模式演化規則](../schema/composition.md#evolution)，對模式的每次更新都必須是非破壞性的，這表示模式的新次要版本（`1.2`、`1.3`等） 始終向後相容以前的次要版本。 因此，在指定`version=1`時，架構註冊表始終返回架構的&#x200B;**最新**&#x200B;主版本`1` ，這表示不返回以前的次版本。
+
+>[!NOTE]
+>
+>只有在資料集引用了模式且以下情況之一成立後，才會強制執行模式演化的非破壞性要求：
+>
+>* 資料已收錄至資料集。
+>* 資料集已啟用，可用於即時客戶個人檔案（即使未收錄任何資料）。
+
+>
+>
+如果模式尚未與符合上述條件之一的資料集建立關聯，則可對其進行任何變更。 但是，在所有情況下，`version`元件仍保持在`1`。
 
 ## XDM現場限制和最佳做法
 
 方案的欄位列在其`properties`對象中。 每個欄位本身都是物件，包含屬性以說明並限制欄位可包含的資料。
 
-有關在API中定義欄位類型的詳細資訊，請參閱本指南的[附錄](appendix.md)，包括程式碼範例和最常用資料類型的選用限制。
+有關在API中定義欄位類型的詳細資訊，請參閱本指南的[欄位約束指南](../schema/field-constraints.md)，包括代碼示例和最常用資料類型的可選約束。
 
 以下示例欄位說明了格式正確的XDM欄位，下面提供了有關命名約束和最佳做法的詳細資訊。 在定義包含類似屬性的其他資源時，也可套用這些做法。
 
