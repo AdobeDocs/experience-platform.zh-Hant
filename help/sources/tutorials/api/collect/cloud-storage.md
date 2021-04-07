@@ -5,14 +5,14 @@ title: 使用來源連接器和API收集雲端儲存資料
 topic: 概述
 type: 教學課程
 description: 本教學課程涵蓋從協力廠商雲端儲存空間擷取資料，並使用來源連接器和API將其匯入平台的步驟。
+exl-id: 95373c25-24f6-4905-ae6c-5000bf493e6f
 translation-type: tm+mt
-source-git-commit: 8b85b25112ee16b09b1411c5d001bf13fb7fbcaa
+source-git-commit: 610ce5c6dca5e7375b941e7d6f550382da10ca27
 workflow-type: tm+mt
-source-wordcount: '1768'
-ht-degree: 2%
+source-wordcount: '1806'
+ht-degree: 1%
 
 ---
-
 
 # 使用來源連接器和API收集雲端儲存空間資料
 
@@ -331,6 +331,7 @@ curl -X POST \
 | 屬性 | 說明 |
 | --- | --- |
 | `schemaRef.id` | 目標XDM架構的ID。 |
+| `schemaRef.contentType` | 架構的版本。 此值必須設定為`application/vnd.adobe.xed-full-notext+json;version=1` ，以返回方案的最新次要版本。 |
 
 **回應**
 
@@ -370,7 +371,7 @@ curl -X POST \
         "data": {
             "schema": {
                 "id": "https://ns.adobe.com/{TENANT_ID}/schemas/995dabbea86d58e346ff91bd8aa741a9f36f29b1019138d4",
-                "version": "application/vnd.adobe.xed-full+json;version=1.0"
+                "version": "application/vnd.adobe.xed-full+json;version=1"
             }
         },
         "params": {
@@ -386,6 +387,7 @@ curl -X POST \
 | 屬性 | 說明 |
 | -------- | ----------- |
 | `data.schema.id` | 目標XDM架構的`$id`。 |
+| `data.schema.version` | 架構的版本。 此值必須設定為`application/vnd.adobe.xed-full+json;version=1` ，以返回方案的最新次要版本。 |
 | `params.dataSetId` | 目標資料集的ID。 |
 | `connectionSpec.id` | 已修正資料湖的連線規格ID。 此ID為：`c604ff05-7f1a-43c0-8e18-33bf874cb11c`。 |
 
