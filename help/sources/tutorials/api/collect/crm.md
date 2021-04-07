@@ -1,18 +1,18 @@
 ---
-keywords: Experience Platform;home；熱門主題；crm;CRM
+keywords: Experience Platform；首頁；熱門主題；crm;CRM
 solution: Experience Platform
 title: 透過來源連接器和API收集CRM資料
-topic: overview
-type: Tutorial
+topic: 概述
+type: 教學課程
 description: 本教學課程涵蓋從協力廠商CRM系統擷取資料，並使用來源連接器和API將其匯入平台的步驟。
+exl-id: b07dd640-bce6-4699-9d2b-b7096746934a
 translation-type: tm+mt
-source-git-commit: 62266187ed1f3ce2f0acca3f50487fb70cfa7307
+source-git-commit: 610ce5c6dca5e7375b941e7d6f550382da10ca27
 workflow-type: tm+mt
-source-wordcount: '1552'
+source-wordcount: '1592'
 ht-degree: 1%
 
 ---
-
 
 # 使用來源連接器和API收集CRM資料
 
@@ -22,14 +22,14 @@ ht-degree: 1%
 
 本教學課程要求您透過有效的連線和想要匯入平台的表格相關資訊，包括表格的路徑和結構，來存取協力廠商CRM系統。 如果您沒有此資訊，請先參閱[教學課程，瞭解如何使用Flow Service API](../explore/crm.md)來探索CRM系統，然後再嘗試本教學課程。
 
-本教學課程也要求您對Adobe Experience Platform的下列元件有正確的認識：
+本教學課程還要求您對Adobe Experience Platform的以下部分有切實的瞭解：
 
 * [[!DNL Experience Data Model (XDM) System]](../../../../xdm/home.md):Experience Platform組織客戶體驗資料的標準化架構。
    * [架構構成基礎](../../../../xdm/schema/composition.md):瞭解XDM架構的基本建置區塊，包括架構組合的主要原則和最佳實務。
    * [架構註冊開發人員指南](../../../../xdm/api/getting-started.md):包含您必須知道的重要資訊，以便成功執行對架構註冊表API的呼叫。這包括您的`{TENANT_ID}`、&quot;containers&quot;的概念，以及提出要求時所需的標題（請特別注意「接受」標題及其可能的值）。
-* [[!DNL Catalog Service]](../../../../catalog/home.md):目錄是Experience Platform中資料位置和世系的記錄系統。
-* [[!DNL Batch ingestion]](../../../../ingestion/batch-ingestion/overview.md):批次擷取API可讓您將資料以批次檔案的形式內嵌至Experience Platform。
-* [沙盒](../../../../sandboxes/home.md):Experience Platform提供虛擬沙盒，可將單一Platform實例分割為不同的虛擬環境，以協助開發和發展數位體驗應用程式。
+* [[!DNL Catalog Service]](../../../../catalog/home.md):目錄是記錄Experience Platform中資料位置和世系的系統。
+* [[!DNL Batch ingestion]](../../../../ingestion/batch-ingestion/overview.md):「批次擷取API」可讓您將資料以批次檔案的形式內嵌至Experience Platform。
+* [沙盒](../../../../sandboxes/home.md):Experience Platform提供虛擬沙盒，可將單一平台實例分割為獨立的虛擬環境，以協助開發和發展數位體驗應用程式。
 
 以下各節提供您必須知道的其他資訊，以便使用[!DNL Flow Service] API成功連線至CRM系統。
 
@@ -39,23 +39,23 @@ ht-degree: 1%
 
 ### 收集必要標題的值
 
-若要呼叫平台API，您必須先完成[驗證教學課程](https://www.adobe.com/go/platform-api-authentication-en)。 完成驗證教學課程後，所有Experience Platform API呼叫中每個必要標題的值都會顯示在下方：
+若要呼叫平台API，您必須先完成[驗證教學課程](https://www.adobe.com/go/platform-api-authentication-en)。 完成驗證教學課程後，將提供所有Experience PlatformAPI呼叫中每個必要標題的值，如下所示：
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
 * `x-gw-ims-org-id: {IMS_ORG}`
 
-Experience Platform中的所有資源（包括[!DNL Flow Service]的資源）都隔離至特定的虛擬沙盒。 所有對平台API的請求都需要一個標題，該標題會指定要在中執行的操作的沙盒名稱：
+Experience Platform中的所有資源（包括屬於[!DNL Flow Service]的資源）都與特定虛擬沙盒隔離。 所有對平台API的請求都需要一個標題，該標題會指定要在中執行的操作的沙盒名稱：
 
 * `x-sandbox-name: {SANDBOX_NAME}`
 
-所有包含裝載(POST、PUT、PATCH)的請求都需要額外的媒體類型標題：
+所有包含裝載(POST、PUT、PATCH)的請求都需要附加的媒體類型標題：
 
 * `Content-Type: application/json`
 
 ## 建立源連接{#source}
 
-您可以通過對[!DNL Flow Service] API發出POST請求來建立源連接。 源連接由連接ID、源資料檔案的路徑和連接規範ID組成。
+您可以通過向[!DNL Flow Service] API發出POST請求來建立源連接。 源連接由連接ID、源資料檔案的路徑和連接規範ID組成。
 
 要建立源連接，還必須為資料格式屬性定義枚舉值。
 
@@ -260,6 +260,7 @@ curl -X POST \
 | 屬性 | 說明 |
 | --- | --- |
 | `schemaRef.id` | 目標XDM架構的ID。 |
+| `schemaRef.contentType` | 架構的版本。 此值必須設定為`application/vnd.adobe.xed-full-notext+json;version=1` ，以返回方案的最新次要版本。 |
 
 **回應**
 
@@ -299,7 +300,7 @@ curl -X POST \
         "data": {
             "schema": {
                 "id": "https://ns.adobe.com/{TENANT_ID}/schemas/417a33eg81a221bd10495920574gfa2d",
-                "version": "application/vnd.adobe.xed-full+json;version=1.0"
+                "version": "application/vnd.adobe.xed-full+json;version=1"
             }
         },
         "params": {
@@ -315,6 +316,7 @@ curl -X POST \
 | 屬性 | 說明 |
 | -------- | ----------- |
 | `data.schema.id` | 目標XDM架構的`$id`。 |
+| `data.schema.version` | 架構的版本。 此值必須設定為`application/vnd.adobe.xed-full+json;version=1` ，以返回方案的最新次要版本。 |
 | `params.dataSetId` | 目標資料集的ID。 |
 | `connectionSpec.id` | 用於連接到資料湖的連接規範ID。 此ID為：`c604ff05-7f1a-43c0-8e18-33bf874cb11c`。 |
 
@@ -658,7 +660,7 @@ curl -X GET \
 * [對應ID](#mapping)
 * [資料流規範ID](#specs)
 
-資料流負責調度和收集源中的資料。 您可以通過執行POST請求來建立資料流，同時在裝載中提供先前提到的值。
+資料流負責調度和收集源中的資料。 您可以通過執行POST請求，同時在裝載中提供先前提到的值來建立資料流。
 
 若要排程擷取，您必須先將開始時間值設定為以秒為單位的紀元時間。 然後，您必須將頻率值設為以下五個選項之一：`once`、`minute`、`hour`、`day`或`week`。 間隔值指定兩個連續的提取之間的期間，並且建立一次性提取不需要設定間隔。 對於所有其它頻率，間隔值必須設定為等於或大於`15`。
 
