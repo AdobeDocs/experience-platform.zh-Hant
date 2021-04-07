@@ -1,18 +1,18 @@
 ---
-keywords: Experience Platform;home；熱門主題；資料源連接
+keywords: Experience Platform；首頁；熱門主題；資料源連接
 solution: Experience Platform
 title: 使用Flow Service API從第三方雲端儲存系統內嵌鑲木地板資料
-topic: overview
-type: Tutorial
+topic: 概述
+type: 教學課程
 description: 本教學課程使用Flow Service API來引導您逐步從協力廠商雲端儲存系統擷取Apache Parce Parce資料。
+exl-id: fb1b19d6-16bb-4a5f-9e81-f537bac95041
 translation-type: tm+mt
-source-git-commit: a489ab248793a063295578943ad600d8eacab6a2
+source-git-commit: 610ce5c6dca5e7375b941e7d6f550382da10ca27
 workflow-type: tm+mt
-source-wordcount: '1101'
+source-wordcount: '1103'
 ht-degree: 2%
 
 ---
-
 
 # 使用[!DNL Flow Service] API從第三方雲端儲存系統內嵌Parke資料
 
@@ -22,7 +22,7 @@ ht-degree: 2%
 
 ## 快速入門
 
-本指南需要有效瞭解Adobe Experience Platform的下列元件：
+本指南需要對Adobe Experience Platform的下列組成部分有切實的瞭解：
 
 - [來源](../../home.md): [!DNL Experience Platform] 允許從各種來源接收資料，同時提供使用服務構建、標籤和增強傳入資料的 [!DNL Platform] 能力。
 - [沙盒](../../../sandboxes/home.md): [!DNL Experience Platform] 提供虛擬沙盒，可將單一執行個體分 [!DNL Platform] 割為不同的虛擬環境，以協助開發和發展數位體驗應用程式。
@@ -45,7 +45,7 @@ ht-degree: 2%
 
 - `x-sandbox-name: `{SANDBOX_NAME}`
 
-所有包含裝載(POST、PUT、PATCH)的請求都需要額外的媒體類型標題：
+所有包含裝載(POST、PUT、PATCH)的請求都需要附加的媒體類型標題：
 
 - `Content-Type: application/json`
 
@@ -200,7 +200,7 @@ curl -X POST \
 
 ## 建立源連接{#source}
 
-在建立目標XDM架構後，現在可以使用對[!DNL Flow Service] API的POST請求建立來源連線。 源連接由API的連接、源資料格式和對在前一步驟中檢索的目標XDM模式的引用組成。
+在建立目標XDM架構後，現在可以使用對[!DNL Flow Service] API的POST請求來建立來源連線。 源連接由API的連接、源資料格式和對在前一步驟中檢索的目標XDM模式的引用組成。
 
 **API格式**
 
@@ -230,7 +230,7 @@ curl -X POST \
             "schema": {
                 "id": "https://ns.adobe.com/{TENANT_ID}/schemas/e15530faf88aeb52d9ca5c5671a059f44f1a42ea7f5fdb80",
                 "id": "",
-                "version": "application/vnd.adobe.xed-full+json;version=1.0"
+                "version": "application/vnd.adobe.xed-full+json;version=1"
             }
         },
         "params": {
@@ -342,7 +342,7 @@ curl -X POST \
             "format": "parquet_xdm",
             "schema": {
                 "id": ""https://ns.adobe.com/{TENANT_ID}/schemas/e15530faf88aeb52d9ca5c5671a059f44f1a42ea7f5fdb80"",
-                "version": "application/vnd.adobe.xed-full+json;version=1.0"
+                "version": "application/vnd.adobe.xed-full+json;version=1"
             }
         },
         "params": {
@@ -376,7 +376,7 @@ curl -X POST \
 - [源連接ID](#source)
 - [目標連線ID](#target)
 
-資料流負責調度和收集源中的資料。 您可以通過執行POST請求來建立資料流，同時在裝載中提供先前提到的值。
+資料流負責調度和收集源中的資料。 您可以通過執行POST請求，同時在裝載中提供先前提到的值來建立資料流。
 
 **API格式**
 
