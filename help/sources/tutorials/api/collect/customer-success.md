@@ -1,18 +1,18 @@
 ---
-keywords: Experience Platform; home；熱門主題；收集客戶成功；客戶成功
+keywords: Experience Platform；首頁；熱門主題；收集客戶成功；客戶成功
 solution: Experience Platform
 title: 使用來源連接器和API從客戶成功系統收集資料
-topic: overview
-type: Tutorial
+topic: 概述
+type: 教學課程
 description: 本教學課程涵蓋從客戶成功系統擷取資料，並使用來源連接器和API將其匯入平台的步驟。
+exl-id: 0fae04d0-164b-4113-a274-09677f4bbde5
 translation-type: tm+mt
-source-git-commit: 62266187ed1f3ce2f0acca3f50487fb70cfa7307
+source-git-commit: 610ce5c6dca5e7375b941e7d6f550382da10ca27
 workflow-type: tm+mt
-source-wordcount: '1541'
+source-wordcount: '1581'
 ht-degree: 1%
 
 ---
-
 
 # 使用來源連接器和API從客戶成功系統收集資料
 
@@ -22,7 +22,7 @@ ht-degree: 1%
 
 本教學課程要求您透過有效的連線和您要匯入[!DNL Platform]之檔案的相關資訊（包括檔案的路徑和結構），存取協力廠商客戶成功系統。 如果您沒有此資訊，請先參閱有關[使用流服務API](../explore/customer-success.md)瀏覽資料庫或NoSQL系統的教程，然後再嘗試本教程。
 
-本教學課程也要求您對Adobe Experience Platform的下列元件有正確的認識：
+本教學課程還要求您對Adobe Experience Platform的以下部分有切實的瞭解：
 
 * [[!DNL Experience Data Model (XDM) System]](../../../../xdm/home.md):Experience Platform組織客戶體驗資料的標準化架構。
    * [架構構成基礎](../../../../xdm/schema/composition.md):瞭解XDM架構的基本建置區塊，包括架構組合的主要原則和最佳實務。
@@ -49,13 +49,13 @@ ht-degree: 1%
 
 * `x-sandbox-name: {SANDBOX_NAME}`
 
-所有包含裝載(POST、PUT、PATCH)的請求都需要額外的媒體類型標題：
+所有包含裝載(POST、PUT、PATCH)的請求都需要附加的媒體類型標題：
 
 * `Content-Type: application/json`
 
 ## 建立源連接{#source}
 
-您可以通過對[!DNL Flow Service] API發出POST請求來建立源連接。 源連接由連接ID、源資料檔案的路徑和連接規範ID組成。
+您可以通過向[!DNL Flow Service] API發出POST請求來建立源連接。 源連接由連接ID、源資料檔案的路徑和連接規範ID組成。
 
 要建立源連接，還必須為資料格式屬性定義枚舉值。
 
@@ -291,6 +291,7 @@ curl -X POST \
 | 屬性 | 說明 |
 | -------- | ----------- |
 | `schemaRef.id` | 目標XDM架構的`$id`。 |
+| `schemaRef.contentType` | 架構的版本。 此值必須設定為`application/vnd.adobe.xed-full-notext+json;version=1` ，以返回方案的最新次要版本。 |
 
 **回應**
 
@@ -329,7 +330,7 @@ curl -X POST \
             "format": "parquet_xdm",
             "schema": {
                 "id": "https://ns.adobe.com/{TENANT_ID}/schemas/deb3e1096c35d8311b5d80868c4bd5b3cdfd4b3150e7345f",
-                "version": "application/vnd.adobe.xed-full+json;version=1.0"
+                "version": "application/vnd.adobe.xed-full+json;version=1"
             }
         },
         "params": {
@@ -345,6 +346,7 @@ curl -X POST \
 | 屬性 | 說明 |
 | -------- | ----------- |
 | `data.schema.id` | 目標XDM架構的`$id`。 |
+| `data.schema.version` | 架構的版本。 此值必須設定為`application/vnd.adobe.xed-full+json;version=1` ，以返回方案的最新次要版本。 |
 | `params.dataSetId` | 目標資料集的ID。 |
 | `connectionSpec.id` | 用於連接到資料湖的連接規範ID。 此ID為：`c604ff05-7f1a-43c0-8e18-33bf874cb11c`。 |
 
