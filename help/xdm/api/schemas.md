@@ -1,29 +1,29 @@
 ---
-keywords: Experience Platform;home；熱門主題；api;API;XDM;XDM系統；體驗資料模型；Experience資料模型；資料模型；模式註冊；模式註冊；模式；模式；模式；模式；模式；模式；模式；建立
+keywords: Experience Platform;home；熱門主題；api;API;XDM;XDM系統；體驗資料模型；體驗資料模型；資料模型；模式註冊；模式註冊；模式；模式；模式；模式；模式；模式；建立
 solution: Experience Platform
 title: 方案API端點
 description: 架構註冊表API中的/schemas端點可讓您以程式設計方式管理體驗應用程式中的XDM架構。
-topic: developer guide
+topic: 開發人員指南
+exl-id: d0bda683-9cd3-412b-a8d1-4af700297abf
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 610ce5c6dca5e7375b941e7d6f550382da10ca27
 workflow-type: tm+mt
-source-wordcount: '1418'
+source-wordcount: '1420'
 ht-degree: 2%
 
 ---
 
-
 # 方案端點
 
-架構可視為您要匯入Adobe Experience Platform之資料的藍圖。 每個模式由類和零個或多個混合組成。 [!DNL Schema Registry] API中的`/schemas`端點可讓您以程式設計方式管理體驗應用程式中的架構。
+架構可視為您要收錄至Adobe Experience Platform之資料的藍圖。 每個模式由類和零個或多個混合組成。 [!DNL Schema Registry] API中的`/schemas`端點可讓您以程式設計方式管理體驗應用程式中的架構。
 
 ## 快速入門
 
-本指南中使用的API端點是[[!DNL Schema Registry] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml)的一部分。 在繼續之前，請先閱讀[快速入門手冊](./getting-started.md)，以取得相關檔案的連結、閱讀本檔案中範例API呼叫的指南，以及成功呼叫任何Experience Platform API所需之必要標題的重要資訊。
+本指南中使用的API端點是[[!DNL Schema Registry] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml)的一部分。 在繼續之前，請先閱讀[快速入門手冊](./getting-started.md)，以取得相關檔案的連結、閱讀本檔案中範例API呼叫的指南，以及成功呼叫任何Experience PlatformAPI所需之必要標題的重要資訊。
 
 ## 檢索方案清單{#list}
 
-通過分別對`/global/schemas`或`/tenant/schemas`發出GET請求，可以在`global`或`tenant`容器下列出所有方案。
+您可以分別向`/global/schemas`或`/tenant/schemas`發出GET請求，以列出`global`或`tenant`容器下的所有方案。
 
 >[!NOTE]
 >
@@ -37,7 +37,7 @@ GET /{CONTAINER_ID}/schemas?{QUERY_PARAMS}
 
 | 參數 | 說明 |
 | --- | --- |
-| `{CONTAINER_ID}` | 存放您要擷取之結構的容器：`global`代表Adobe建立的結構描述，或`tenant`代表您組織擁有的結構描述。 |
+| `{CONTAINER_ID}` | 存放您要擷取之結構的容器：`global`代表Adobe建立的結構，或`tenant`代表您組織擁有的結構。 |
 | `{QUERY_PARAMS}` | 可選查詢參數，以篩選結果。 有關可用參數的清單，請參見[附錄文檔](./appendix.md#query)。 |
 
 **請求**
@@ -97,7 +97,7 @@ curl -X GET \
 
 ## 查找架構{#lookup}
 
-您可以通過發出GET請求來查找特定方案，該請求在路徑中包括方案的ID。
+您可以透過在路徑中提出包含架構ID的GET請求，來尋找特定的架構。
 
 **API格式**
 
@@ -128,11 +128,11 @@ curl -X GET \
 
 | `Accept` 標題 | 說明 |
 | ------- | ------------ |
-| `application/vnd.adobe.xed+json; version={MAJOR_VERSION}` | Raw含`$ref`和`allOf`，有標題和說明。 |
-| `application/vnd.adobe.xed-full+json; version={MAJOR_VERSION}` | `$ref` 而且 `allOf` 有標題和說明。 |
-| `application/vnd.adobe.xed-notext+json; version={MAJOR_VERSION}` | Raw含`$ref`和`allOf`，無標題或說明。 |
-| `application/vnd.adobe.xed-full-notext+json; version={MAJOR_VERSION}` | `$ref` 並解 `allOf` 決，沒有標題或說明。 |
-| `application/vnd.adobe.xed-full-desc+json; version={MAJOR_VERSION}` | `$ref` 並解 `allOf` 決了包含的描述符。 |
+| `application/vnd.adobe.xed+json; version=1` | Raw含`$ref`和`allOf`，有標題和說明。 |
+| `application/vnd.adobe.xed-full+json; version=1` | `$ref` 而且 `allOf` 有標題和說明。 |
+| `application/vnd.adobe.xed-notext+json; version=1` | Raw含`$ref`和`allOf`，無標題或說明。 |
+| `application/vnd.adobe.xed-full-notext+json; version=1` | `$ref` 並解 `allOf` 決，沒有標題或說明。 |
+| `application/vnd.adobe.xed-full-desc+json; version=1` | `$ref` 並解 `allOf` 決了包含的描述符。 |
 
 **回應**
 
@@ -266,13 +266,13 @@ curl -X POST \
 }
 ```
 
-執行[清單租用戶容器中所有結構描述](#list)的GET請求，現在會包含新結構描述。 您可以使用URL編碼的`$id` URI來執行[查閱(GET)請求](#lookup)，以直接檢視新架構。
+執行[清單租用戶容器中所有結構](#list)的GET請求時，現在會包含新結構。 您可以使用URL編碼的`$id` URI來執行[查閱(GET)請求](#lookup)，以直接檢視新架構。
 
 要向架構添加其他欄位，可以執行[PATCH操作](#patch)以向架構的`allOf`和`meta:extends`陣列添加混頻。
 
 ## 更新架構{#put}
 
-您可以通過PUT操作替換整個模式，實際上重寫資源。 通過PUT請求更新方案時，主體必須包括[在POST請求中建立新方案](#create)時所需的所有欄位。
+您可以通過PUT操作來替換整個方案，實際上是重寫資源。 通過PUT請求更新方案時，主體必須包括[在POST請求中建立新方案](#create)時所需的所有欄位。
 
 >[!NOTE]
 >
@@ -355,7 +355,7 @@ curl -X PUT \
 
 >[!NOTE]
 >
->如果要用新值替換整個資源，而不是更新單個欄位，請參見[中有關使用PUT操作替換方案的部分](#put)。
+>如果要用新值替換整個資源，而不是更新單個欄位，請參閱[中的「使用PUT操作替換方案」部分](#put)。
 
 最常見的PATCH操作之一是將先前定義的混合添加到模式，如下例所示。
 
@@ -442,7 +442,7 @@ curl -X PATCH\
 
 ## 啟用用於即時客戶概要檔案{#union}的方案
 
-為了使架構參與[即時客戶概要檔案](../../profile/home.md)，您必須向架構的`meta:immutableTags`陣列添加`union`標籤。 您可以通過對相關方案發出PATCH請求來完成此操作。
+為了使架構參與[即時客戶概要檔案](../../profile/home.md)，您必須向架構的`meta:immutableTags`陣列添加`union`標籤。 您可以透過對相關結構提出PATCH要求來完成此作業。
 
 >[!IMPORTANT]
 >
@@ -527,7 +527,7 @@ curl -X PATCH\
 
 ## 刪除方案{#delete}
 
-有時可能需要從架構註冊表中刪除架構。 這是透過使用路徑中提供的架構ID執行DELETE請求來完成的。
+有時可能需要從架構註冊表中刪除架構。 這是透過使用路徑中提供的架構ID執行DELETE要求來完成的。
 
 **API格式**
 
