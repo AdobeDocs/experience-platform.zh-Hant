@@ -2,27 +2,27 @@
 keywords: Experience Platform;home；熱門主題；收集電子商務資料；電子商務資料
 solution: Experience Platform
 title: 使用來源連接器和API收集電子商務資料
-topic: overview
-type: Tutorial
+topic: 概述
+type: 教學課程
 description: 本教學課程涵蓋從協力廠商電子商務系統擷取資料，並使用來源連接器和API將其匯入平台的步驟。
+exl-id: 0952f037-5e20-4d84-a2e6-2c9470f168f5
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: 610ce5c6dca5e7375b941e7d6f550382da10ca27
 workflow-type: tm+mt
-source-wordcount: '1489'
+source-wordcount: '1521'
 ht-degree: 1%
 
 ---
 
-
 # 使用來源連接器和API收集電子商務資料
 
-本教學課程涵蓋從協力廠商&#x200B;**[!UICONTROL 電子商務]**&#x200B;系統擷取資料，並透過來源連接器和[[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml)將其匯入[!DNL Platform]的步驟。
+本教學課程涵蓋從協力廠商&#x200B;**[!UICONTROL eCommerce]**&#x200B;系統擷取資料，並透過來源連接器和[[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml)將其內嵌至[!DNL Platform]的步驟。
 
 ## 快速入門
 
-本教學課程要求您透過有效連線存取&#x200B;**[!UICONTROL eCommerce]**&#x200B;系統，以及您要匯入[!DNL Platform]之檔案的相關資訊（包括檔案的路徑和結構）。 如果您沒有此資訊，請先參閱[教學課程，瞭解如何使用Flow Service API](../explore/ecommerce.md)來探索電子商務系統，然後再嘗試本教學課程。
+本教程要求您通過有效連接訪問&#x200B;**[!UICONTROL eCommerce]**&#x200B;系統，以及有關要導入[!DNL Platform]的檔案（包括檔案的路徑和結構）的資訊。 如果您沒有此資訊，請先參閱[教學課程，瞭解如何使用Flow Service API](../explore/ecommerce.md)來探索電子商務系統，然後再嘗試本教學課程。
 
-本教學課程也要求您對Adobe Experience Platform的下列元件有正確的認識：
+本教學課程還要求您對Adobe Experience Platform的以下部分有切實的瞭解：
 
 * [[!DNL Experience Data Model (XDM) System]](../../../../xdm/home.md):Experience Platform組織客戶體驗資料的標準化架構。
    * [架構構成基礎](../../../../xdm/schema/composition.md):瞭解XDM架構的基本建置區塊，包括架構組合的主要原則和最佳實務。
@@ -49,13 +49,13 @@ ht-degree: 1%
 
 * `x-sandbox-name: {SANDBOX_NAME}`
 
-所有包含裝載(POST、PUT、PATCH)的請求都需要額外的媒體類型標題：
+所有包含裝載(POST、PUT、PATCH)的請求都需要附加的媒體類型標題：
 
 * `Content-Type: application/json`
 
 ## 建立源連接{#source}
 
-您可以通過對[!DNL Flow Service] API發出POST請求來建立源連接。 源連接由連接ID、源資料檔案的路徑和連接規範ID組成。
+您可以通過向[!DNL Flow Service] API發出POST請求來建立源連接。 源連接由連接ID、源資料檔案的路徑和連接規範ID組成。
 
 要建立源連接，還必須為資料格式屬性定義枚舉值。
 
@@ -114,9 +114,9 @@ curl -X POST \
 
 | 屬性 | 說明 |
 | -------- | ----------- |
-| `baseConnectionId` | **[!UICONTROL eCommerce]**&#x200B;來源的連線ID。 |
+| `baseConnectionId` | **[!UICONTROL eCommerce]**&#x200B;源的連接ID。 |
 | `params.path` | 源檔案的路徑。 |
-| `connectionSpec.id` | **[!UICONTROL eCommerce]**&#x200B;來源的連接規範ID。 |
+| `connectionSpec.id` | **[!UICONTROL eCommerce]**&#x200B;源的連接規範ID。 |
 
 **回應**
 
@@ -271,6 +271,7 @@ curl -X POST \
 | 屬性 | 說明 |
 | -------- | ----------- |
 | `schemaRef.id` | 目標XDM架構的`$id`。 |
+| `schemaRef.contentType` | 架構的版本。 此值必須設定為`application/vnd.adobe.xed-full-notext+json;version=1` ，以返回方案的最新次要版本。 |
 
 **回應**
 
@@ -327,6 +328,7 @@ curl -X POST \
 | 屬性 | 說明 |
 | -------- | ----------- |
 | `data.schema.id` | 目標XDM架構的`$id`。 |
+| `data.schema.version` | 架構的版本。 此值必須設定為`application/vnd.adobe.xed-full+json;version=1` ，以返回方案的最新次要版本。 |
 | `params.dataSetId` | 目標資料集的ID。 |
 | `connectionSpec.id` | 用於連接到資料湖的連接規範ID。 此ID為：`c604ff05-7f1a-43c0-8e18-33bf874cb11c`。 |
 
@@ -343,7 +345,7 @@ curl -X POST \
 
 ## 建立映射{#mapping}
 
-為了將源資料引入目標資料集，必須首先將其映射到目標資料集所遵守的目標模式。 這是通過對在請求裝載中定義的資料映射的[轉換服務API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/mapping-service-api.yaml)執行POST請求來實現的。
+為了將源資料引入目標資料集，必須首先將其映射到目標資料集所遵守的目標模式。 這是通過對[轉換服務API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/mapping-service-api.yaml)執行POST請求，並在請求裝載中定義資料映射來實現的。
 
 **API格式**
 
@@ -662,7 +664,7 @@ curl -X GET \
 * [對應ID](#mapping)
 * [資料流規範ID](#specs)
 
-資料流負責調度和收集源中的資料。 您可以通過執行POST請求來建立資料流，同時在請求裝載中提供先前提到的值。
+資料流負責調度和收集源中的資料。 您可以在執行POST請求的同時在請求裝載中提供先前提到的值，從而建立資料流。
 
 若要排程擷取，您必須先將開始時間值設定為以秒為單位的紀元時間。 然後，您必須將頻率值設為以下五個選項之一：`once`、`minute`、`hour`、`day`或`week`。 間隔值指定兩個連續的提取之間的期間，並且建立一次性提取不需要設定間隔。 對於所有其它頻率，間隔值必須設定為等於或大於`15`。
 
@@ -716,7 +718,7 @@ curl -X POST \
 | `sourceConnectionIds` | 在先前步驟中檢索的[源連接ID](#source)。 |
 | `targetConnectionIds` | 在先前步驟中擷取的[目標連線ID](#target-connection)。 |
 | `transformations.params.mappingId` | 在先前步驟中檢索的[映射ID](#mapping)。 |
-| `transformations.params.mappingId` | 與&#x200B;**[!UICONTROL eCommerce]**&#x200B;來源關聯的映射ID。 |
+| `transformations.params.mappingId` | 與&#x200B;**[!UICONTROL eCommerce]**&#x200B;源關聯的映射ID。 |
 | `scheduleParams.startTime` | 資料流在時代時間中的開始時間。 |
 | `scheduleParams.frequency` | 資料流將收集資料的`frequency`。 可接受的值包括：`once`、`minute`、`hour`、`day`或`week`。 |
 | `scheduleParams.interval` | 該間隔用於指定兩個連續流運行之間的期間。 間隔的值應為非零整數。 當`frequency`設為`once`時，不需要間隔，對於其他`frequency`值，間隔應大於或等於`15`。 |
@@ -738,7 +740,7 @@ curl -X POST \
 
 ## 後續步驟
 
-在本教學課程中，您已建立來源連接器，以依排程收集資料&#x200B;**[!UICONTROL eCommerce]**。 現在，下游[!DNL Platform]服務（例如[!DNL Real-time Customer Profile]和[!DNL Data Science Workspace]）可以使用傳入的資料。 如需詳細資訊，請參閱下列檔案：
+在本教程中，您建立了源連接器，以按計畫收集資料&#x200B;**[!UICONTROL eCommerce]**。 現在，下游[!DNL Platform]服務（例如[!DNL Real-time Customer Profile]和[!DNL Data Science Workspace]）可以使用傳入的資料。 如需詳細資訊，請參閱下列檔案：
 
 * [即時客戶個人檔案總覽](../../../../profile/home.md)
 * [資料科學工作區概觀](../../../../data-science-workspace/home.md)
