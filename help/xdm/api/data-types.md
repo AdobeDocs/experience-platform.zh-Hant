@@ -3,14 +3,14 @@ keywords: Experience Platform;home；熱門主題；api;API;XDM;XDM系統；體�
 solution: Experience Platform
 title: 資料類型API端點
 description: 架構註冊表API中的/datatypes端點可讓您以程式設計方式管理體驗應用程式中的XDM資料類型。
+exl-id: 2a58d641-c681-40cf-acc8-7ad842cd6243
 translation-type: tm+mt
-source-git-commit: 0727ffa0c72bcb6a85de1a13215b691b97889b70
+source-git-commit: 610ce5c6dca5e7375b941e7d6f550382da10ca27
 workflow-type: tm+mt
 source-wordcount: '1147'
 ht-degree: 2%
 
 ---
-
 
 # 資料類型端點
 
@@ -127,11 +127,11 @@ curl -X GET \
 
 | `Accept` 標題 | 說明 |
 | ------- | ------------ |
-| `application/vnd.adobe.xed+json; version={MAJOR_VERSION}` | Raw含`$ref`和`allOf`，有標題和說明。 |
-| `application/vnd.adobe.xed-full+json; version={MAJOR_VERSION}` | `$ref` 而且 `allOf` 有標題和說明。 |
-| `application/vnd.adobe.xed-notext+json; version={MAJOR_VERSION}` | Raw含`$ref`和`allOf`，無標題或說明。 |
-| `application/vnd.adobe.xed-full-notext+json; version={MAJOR_VERSION}` | `$ref` 並解 `allOf` 決，沒有標題或說明。 |
-| `application/vnd.adobe.xed-full-desc+json; version={MAJOR_VERSION}` | `$ref` 並解 `allOf` 決了包含的描述符。 |
+| `application/vnd.adobe.xed+json; version=1` | Raw含`$ref`和`allOf`，有標題和說明。 |
+| `application/vnd.adobe.xed-full+json; version=1` | `$ref` 而且 `allOf` 有標題和說明。 |
+| `application/vnd.adobe.xed-notext+json; version=1` | Raw含`$ref`和`allOf`，無標題或說明。 |
+| `application/vnd.adobe.xed-full-notext+json; version=1` | `$ref` 並解 `allOf` 決，沒有標題或說明。 |
+| `application/vnd.adobe.xed-full-desc+json; version=1` | `$ref` 並解 `allOf` 決了包含的描述符。 |
 
 **回應**
 
