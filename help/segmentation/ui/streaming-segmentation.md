@@ -1,17 +1,17 @@
 ---
-keywords: Experience Platform; home；熱門主題；串流分段；分段服務；分段服務；用戶介面指南；
+keywords: Experience Platform; home；熱門主題；流分段；分段服務；分段服務；用戶介面指南；
 solution: Experience Platform
 title: 串流區段UI指南
-topic: ui guide
-description: Adobe Experience Platform上的串流細分可讓您近乎即時地進行細分，同時專注於資料的豐富性。 透過串流分段，區段資格現在會在資料進入平台時進行，以減輕排程和執行分段工作的需求。 有了這項功能，大部份的區段規則現在都可以在資料傳入平台時進行評估，這表示區段成員資格將會保持最新，而不會執行排程的區段工作。
+topic: ui指南
+description: Adobe Experience Platform的串流細分可讓您近乎即時地進行細分，同時專注於資料的豐富性。 透過串流分段，區段資格現在會在資料進入平台時進行，以減輕排程和執行分段工作的需求。 有了這項功能，大部份的區段規則現在都可以在資料傳入平台時進行評估，這表示區段成員資格將會保持最新，而不會執行排程的區段工作。
+exl-id: cb9b32ce-7c0f-4477-8c49-7de0fa310b97
 translation-type: tm+mt
-source-git-commit: 405b7eb0c95ebef0b05d2b10ef92f28a37b7cc86
+source-git-commit: e1ae20412f449c991f53fdd0f095d0c3a6de262c
 workflow-type: tm+mt
-source-wordcount: '769'
+source-wordcount: '798'
 ht-degree: 0%
 
 ---
-
 
 # 串流區段
 
@@ -39,14 +39,16 @@ ht-degree: 0%
 | ---------- | ------- | ------- |
 | 傳入點擊 | 任何區段定義，是指沒有時間限制的單一傳入事件。 | ![](../images/ui/streaming-segmentation/incoming-hit.png) |
 | 在相對時間視窗內傳入點擊 | 任何參照單一傳入事件的區段定義。 | ![](../images/ui/streaming-segmentation/relative-hit-success.png) |
+| 含時間視窗的傳入點擊 | 任何區段定義，是指具有時間視窗的單一傳入事件。 | ![](../images/ui/streaming-segmentation/historic-time-window.png) |
 | 僅限描述檔 | 任何僅指描述檔屬性的區段定義。 |  |
 | 參照描述檔的傳入點擊 | 任何區段定義，是指單一傳入事件（無時間限制）以及一或多個描述檔屬性。 | ![](../images/ui/streaming-segmentation/profile-hit.png) |
 | 在相對時間視窗內參照描述檔的傳入點擊 | 任何區段定義，指單一傳入事件和一或多個描述檔屬性。 | ![](../images/ui/streaming-segmentation/profile-relative-success.png) |
+| 區段 | 包含一或多個批次或串流區段的任何區段定義。 | ![](../images/ui/streaming-segmentation/two-batches.png) |
 | 參考描述檔的多個事件 | 在過去24小時內參照多個事件&#x200B;**且（可選）的區段定義具有一個或多個描述檔屬性。** | ![](../images/ui/streaming-segmentation/event-history-success.png) |
 
 在下列情況下，區段定義將&#x200B;**not**&#x200B;啟用串流區段：
 
-- 區段定義包括Adobe Audience Manager(AAM)區段或特徵。
+- 區段定義包含Adobe Audience Manager(AAM)區段或特徵。
 - 區段定義包括多個實體（多實體查詢）。
 
 此外，執行串流區段時，也會套用一些准則：
@@ -64,7 +66,7 @@ ht-degree: 0%
 
 ![](../images/ui/streaming-segmentation/monitoring-streaming-segment.png)
 
-具體來說，會顯示&#x200B;**[!UICONTROL 總合格對象大小]**&#x200B;的詳細資訊。 **[!UICONTROL 總合格對象大小]**&#x200B;顯示上次完成區段工作執行的合格對象總數。 如果區段工作在過去24小時內未完成，則會改用估計的受眾數。
+具體來說，會顯示&#x200B;**[!UICONTROL total qualified audience size]**&#x200B;的詳細資訊。 **[!UICONTROL Total qualified audience size]**&#x200B;顯示上次完成區段工作執行的合格對象總數。 如果區段工作在過去24小時內未完成，則會改用估計的受眾數。
 
 下面是折線圖，顯示過去24小時內合格和不合格的區段數。 下拉式清單可調整為顯示最近24小時、上週或最近30天。
 
@@ -78,6 +80,6 @@ ht-degree: 0%
 
 ## 後續步驟
 
-本使用指南說明啟用串流的區段定義如何在Adobe Experience Platform上運作，以及如何監控啟用串流的區段。
+本使用指南說明啟用串流的區段定義如何在Adobe Experience Platform運作，以及如何監控啟用串流的區段。
 
-若要進一步瞭解如何使用Adobe Experience Platform使用者介面，請閱讀[區段使用指南](./overview.md)。
+若要進一步瞭解使用Adobe Experience Platform使用者介面，請閱讀[區段使用指南](./overview.md)。
