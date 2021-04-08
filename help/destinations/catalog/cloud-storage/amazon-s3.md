@@ -2,14 +2,14 @@
 keywords: AmazonS3;S3目標；s3;amazon s3
 title: AmazonS3連線
 description: 建立到您的AmazonWeb Services(AWS)S3儲存的即時出站連接，以定期從Adobe Experience Platform將Tab分隔或CSV資料檔案導出到您自己的S3儲存區。
+exl-id: 6a2a2756-4bbf-4f82-88e4-62d211cbbb38
 translation-type: tm+mt
-source-git-commit: 709908196bb5df665c7e7df10dc58ee9f3b0edbf
+source-git-commit: d77cd063e61118631b757d9821267b2fd6ab0148
 workflow-type: tm+mt
-source-wordcount: '223'
+source-wordcount: '233'
 ht-degree: 0%
 
 ---
-
 
 # [!DNL Amazon S3] 連接  {#s3-connection}
 
@@ -31,10 +31,34 @@ ht-degree: 0%
 
 * **[!DNL Amazon S3]訪問密鑰和 [!DNL Amazon S3] 密鑰**:在中 [!DNL Amazon S3]，產生一 `access key - secret access key` 對以授與您帳戶的平台存 [!DNL Amazon S3] 取權。請參閱[Amazon網站服務檔案](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html)瞭解更多資訊。
 
+## 需要[!DNL Amazon S3]權限{#required-s3-permission}
+
+要成功將資料連接並導出到[!DNL Amazon S3]儲存位置，請在[!DNL Amazon S3]中為[!DNL Platform]建立IAM用戶，並為以下操作分配權限：
+
+* `s3:DeleteObject`
+* `s3:DeleteObjectVersion`
+* `s3:GetBucketLocation`
+* `s3:GetObject`
+* `s3:GetObjectVersion`
+* `s3:ListBucket`
+* `s3:ListBuckets`
+* `s3:PutBucketVersioning`
+* `s3:PutObject`
+* `s3:ReplicateObject`
+* `s3:RestoreObject`
+
+
+<!--
+
+Commenting out this note, as write permissions are assigned through the s3:PutObject permission.
+
 >[!IMPORTANT]
 >
->平台需要`write`權限才能傳送匯出檔案的貯體物件。
+>Platform needs `write` permissions on the bucket object where the export files will be delivered.
+
+-->
+
 
 ## 導出資料{#exported-data}
 
-對於[!DNL Amazon S3]目標，平台會在您提供的儲存位置中建立以定位點分隔的`.txt`或`.csv`檔案。 如需檔案的詳細資訊，請參閱區段啟動教學課程中的[電子郵件行銷目標和雲端儲存目標](../../ui/activate-destinations.md#esp-and-cloud-storage)。
+對於[!DNL Amazon S3]目標，[!DNL Platform]會在您提供的儲存位置中建立以定位點分隔的`.txt`或`.csv`檔案。 如需檔案的詳細資訊，請參閱區段啟動教學課程中的[電子郵件行銷目標和雲端儲存目標](../../ui/activate-destinations.md#esp-and-cloud-storage)。
