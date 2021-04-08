@@ -4,14 +4,14 @@ solution: Experience Platform
 title: '使用串流分段功能，即時評估事件 '
 topic: 開發人員指南
 description: 本檔案包含如何搭配Adobe Experience Platform分段服務API使用串流分段的範例。
+exl-id: 119508bd-5b2e-44ce-8ebf-7aef196abd7a
 translation-type: tm+mt
-source-git-commit: bb7edcaccca87918c56d00e092e4b7154d7c5d6e
+source-git-commit: e1ae20412f449c991f53fdd0f095d0c3a6de262c
 workflow-type: tm+mt
-source-wordcount: '1342'
+source-wordcount: '1377'
 ht-degree: 1%
 
 ---
-
 
 # 使用串流分段功能，即時評估事件
 
@@ -75,9 +75,11 @@ ht-degree: 1%
 | ---------- | ------- |
 | 傳入點擊 | 任何區段定義，是指沒有時間限制的單一傳入事件。 |
 | 在相對時間視窗內傳入點擊 | 任何參照單一傳入事件的區段定義。 |
+| 含時間視窗的傳入點擊 | 任何區段定義，是指具有時間視窗的單一傳入事件。 |
 | 僅限描述檔 | 任何僅指描述檔屬性的區段定義。 |
 | 參照描述檔的傳入點擊 | 任何區段定義，是指單一傳入事件（無時間限制）以及一或多個描述檔屬性。 |
 | 在相對時間視窗內參照描述檔的傳入點擊 | 任何區段定義，指單一傳入事件和一或多個描述檔屬性。 |
+| 區段 | 包含一或多個批次或串流區段的任何區段定義。 |
 | 參考描述檔的多個事件 | 在過去24小時內參照多個事件&#x200B;**且（可選）的區段定義具有一個或多個描述檔屬性。** |
 
 在下列情況下，區段定義將&#x200B;**not**&#x200B;啟用串流區段：
