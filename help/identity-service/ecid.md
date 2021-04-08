@@ -1,33 +1,38 @@
 ---
-keywords: Experience Platform;home;popular topics;ECID;ecid
+keywords: Experience Platform;home；熱門主題；ECID;ecid
 solution: Experience Platform
 title: ECID概觀
-topic: overview
-description: Experience Cloud識別碼(ECID)是用戶端模組，可提供身份管理的存取權，提供三項主要功能。
+topic: 概述
+description: Experience Cloud識別碼(ECID)是用戶端模組，可存取身分識別管理，提供三項主要功能。
+exl-id: da7717d2-da2e-414b-978d-2eab8ff2c5a0
 translation-type: tm+mt
-source-git-commit: 73035aec86297cfc4ee9337cf922d599001379c3
+source-git-commit: 441c9b520bf163f989ad6a8a683174957e08a6f2
 workflow-type: tm+mt
-source-wordcount: '186'
-ht-degree: 8%
+source-wordcount: '287'
+ht-degree: 3%
 
 ---
 
-
 # ECID概觀
 
-[!DNL Experience Cloud Identity Service](ECID)是用戶端模組，可存取身分識別管理，提供三項主要功能：
+Experience CloudID(ECID)是跨Adobe Experience Platform和Adobe Experience Cloud應用程式使用的共用身分名稱空間。
 
-- 識別每位訪客
-- 與合作夥伴提供同步
-- 將兩對連結傳送至圖形，以與離線或其他ID連線
+ECID為客戶身分提供基礎。 在[[!DNL Identity Service]](./home.md)的上下文中，ECID用作設備的主ID，也用作標識圖的基節點。
 
-識別您的線上使用者需要使用ECID對您的網站或行動應用程式進行工具化，此ECID提供通用且永久的ID，可識別Adobe Experience Platform中所有解決方案的訪客。
+使用ECID，您可以：
 
-如果您正在處理網站實作，請探索[這裡](https://docs.adobe.com/content/help/zh-Hant/id-service/using/home.html)的資源。
+* 將以人為中心的內容加入身分識別，讓您將內容行銷給真正的人，而非裝置。
+* 與合作夥伴同步。
+* 將兩對連結饋送至圖形，以與離線或其他ID連線。
 
-如果您使用行動應用程式，請參閱ECID如何用於[追蹤應用程式與行動網頁之間的訪客。](https://docs.adobe.com/content/help/en/mobile-services/ios/sdk-reference-ios/hybrid-app.html)
+識別您的線上使用者需要使用ECID對您的網站或行動應用程式進行工具化，此ECID提供通用且永久的ID，可識別Adobe Experience Cloud所有應用程式的訪客。
 
-如果您使用[Adobe Launch](https://docs.adobe.com/content/help/zh-Hant/launch/using/overview.html)，部署這些工具既簡單又易於管理。
+## 後續步驟和其他資源
 
-此外，如需使用ECID符合GDPR的資訊，請參閱[隱私權服務檔案](../privacy-service/identity-data.md)。
+以下文檔提供了進一步的資源，以瞭解跨不同平台和Experience Cloud應用程式的ECID:
 
+* 若要將ECID與網站實作搭配使用，請參閱[Experience Cloud身分服務](https://experienceleague.adobe.com/docs/id-service/using/home.html?lang=zh-tw)的檔案。
+* 若要瞭解ECID如何與應用程式和行動網頁內容搭配使用，請參閱應用程式和行動網頁之間[訪客追蹤的檔案](https://experienceleague.adobe.com/docs/mobile-services/ios/sdk-reference-ios/hybrid-app.html?lang=en#sdk-reference-ios)。
+* 如果您使用[Adobe Experience Platform Launch](https://experienceleague.adobe.com/docs/launch/using/home.html?lang=en)，部署這些工具既簡單又易於管理。
+* 如需使用ECID以協助符合GDPR等隱私權規範的資訊，請參閱[Privacy Service檔案](../privacy-service/identity-data.md)。
+* 有關平台上下文的ECID的詳細資訊，請參閱[Identity Service概述](./home.md)和[標識命名空間概述](./namespaces.md)。
