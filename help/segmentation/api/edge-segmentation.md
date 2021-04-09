@@ -6,18 +6,18 @@ topic: 開發人員指南
 description: 本檔案包含如何搭配Adobe Experience Platform分段服務API使用邊緣分段的範例。
 exl-id: effce253-3d9b-43ab-b330-943fb196180f
 translation-type: tm+mt
-source-git-commit: 692bfca8d14ac247527f956bbcba8b4eb37516e3
+source-git-commit: 36169a42c7f6a73ca9cc165cd338d6a1cf245bfc
 workflow-type: tm+mt
-source-wordcount: '636'
-ht-degree: 1%
+source-wordcount: '653'
+ht-degree: 3%
 
 ---
 
-# 邊緣分割
+# 邊緣分段（測試版）
 
 >[!NOTE]
 >
->下列檔案說明如何使用API執行邊緣分段。 如需使用UI執行邊緣分段的資訊，請閱讀[邊緣分段UI指南](../ui/edge-segmentation.md)。
+>下列檔案說明如何使用API執行邊緣分段。 如需使用UI執行邊緣分段的資訊，請閱讀[邊緣分段UI指南](../ui/edge-segmentation.md)。 此外，邊緣區段目前也在測試中。 文件和功能可能會有所變更。
 
 邊緣區段是指能夠即時評估Adobe Experience Platform邊緣區段的能力，讓相同的頁面和下一頁個人化使用案例。
 
