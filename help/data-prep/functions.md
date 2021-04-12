@@ -6,7 +6,7 @@ topic: 概述
 description: 本文檔介紹與「資料準備」一起使用的映射功能。
 exl-id: e95d9329-9dac-4b54-b804-ab5744ea6289
 translation-type: tm+mt
-source-git-commit: 21782ee74adfe97fa0a88f499d01393155691b29
+source-git-commit: 8b74cf5f54ddf56486d7b947b38bef58823c3684
 workflow-type: tm+mt
 source-wordcount: '3793'
 ht-degree: 3%
@@ -42,7 +42,7 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 >請向左／向右滾動以查看表的完整內容。
 
 | 函數 | 說明 | 參數 | 語法 | 運算式 | 範例輸出 |
--------- | ----------- | ---------- | -------| ---------- | -------------
+| -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | concat | 串連指定的字串。 | <ul><li>字串：將串連的字串。</li></ul> | concat(STRING_1, STRING_2) | concat(&quot;Hi, &quot;, &quot;there&quot;, &quot;!&quot;) | `"Hi, there!"` |
 | 爆炸 | 根據規則運算式分割字串，並傳回部件陣列。 可選擇包含規則運算式以分割字串。 預設情況下，拆分解析為&quot;,&quot;。 下列分隔字元&#x200B;**需要**&#x200B;以`\`逸出：`+, ?, ^, |, ., [, (, {, ), *, $, \`如果您包含多個字元作為分隔字元，分隔字元將視為多字元分隔字元。 | <ul><li>字串：**必要**&#x200B;需要分割的字串。</li><li>REGEX:*可選*&#x200B;可用於拆分字串的規則運算式。</li></ul> | explode(STRING, REGEX) | explode(&quot;Hi, there!&quot;, &quot;) | `["Hi,", "there"]` |
 | instr | 傳回子字串的位置／索引。 | <ul><li>輸入：**必要**&#x200B;正在搜索的字串。</li><li>子字串：**Required**&#x200B;在字串中搜尋的子字串。</li><li>START_POSITION:*可選*&#x200B;要開始查找字串的位置。</li><li>具體值：*可選*&#x200B;從開始位置尋找的第n個出現點。 預設為1。 </li></ul> | instr（INPUT，子字串， START_POSITION, OCCURRENCE） | instr(&quot;adobe.com&quot;, &quot;com&quot;) | 6 |
@@ -67,7 +67,7 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 ### 規則運算式函式
 
 | 函數 | 說明 | 參數 | 語法 | 運算式 | 範例輸出 |
--------- | ----------- | ---------- | -------| ---------- | -------------
+| -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | extract_regex | 根據規則運算式，從輸入字串擷取群組。 | <ul><li>字串：**Required**&#x200B;您要從中提取組的字串。</li><li>REGEX:**必要**&#x200B;您希望群組相符的規則運算式。</li></ul> | extract_regex(STRING, REGEX) | extract_regex&#x200B;(&quot;E259,E259B_009,1_1&quot;&#x200B;, &quot;([^,]+),[^,]*,([^,]+)&quot;) | [&quot;E259,E259B_009,1_1&quot;、&quot;E259&quot;、&quot;1_1&quot;] |
 | matches_regex | 檢查字串是否與輸入的規則運算式相符。 | <ul><li>字串：**Required**&#x200B;您正在檢查的字串與規則運算式相符。</li><li>REGEX:**必要**&#x200B;您要比較的規則運算式。</li></ul> | matches_regex(STRING, REGEX) | matches_regex(&quot;E259,E259B_009,1_1&quot;, &quot;([^,]+),[^,]*,([^,]+)&quot;) | true |
 
@@ -80,7 +80,7 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 >請向左／向右滾動以查看表的完整內容。
 
 | 函數 | 說明 | 參數 | 語法 | 運算式 | 範例輸出 |
--------- | ----------- | ---------- | -------| ---------- | -------------
+| -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | sha1 | 使用安全雜湊算法1(SHA-1)輸入並產生雜湊值。 | <ul><li>輸入：**必要**&#x200B;要雜湊的純文字檔案。</li><li>字元集：*可選*&#x200B;字元集的名稱。 可能的值包括UTF-8、UTF-16、ISO-8859-1和US-ASCII。</li></ul> | sha1(INPUT, CHARSET) | sha1(&quot;my text&quot;, &quot;UTF-8&quot;) | c3599c11e47719df18a24 &#x200B; 48690840c5dfcce3c80 |
 | sha256 | 使用安全雜湊演算法256(SHA-256)輸入並產生雜湊值。 | <ul><li>輸入：**必要**&#x200B;要雜湊的純文字檔案。</li><li>字元集：*可選*&#x200B;字元集的名稱。 可能的值包括UTF-8、UTF-16、ISO-8859-1和US-ASCII。</li></ul> | sha256(INPUT, CHARSET) | sha256(&quot;my text&quot;, &quot;UTF-8&quot;) | 7330d2b39ca35eaf4cb95fc846c21&#x200B; e6a39af698154a83a586ee270a0d372104 |
 | sha512 | 使用安全雜湊演算法512(SHA-512)輸入並產生雜湊值。 | <ul><li>輸入：**必要**&#x200B;要雜湊的純文字檔案。</li><li>字元集：*可選*&#x200B;字元集的名稱。 可能的值包括UTF-8、UTF-16、ISO-8859-1和US-ASCII。</li></ul> | sha512(INPUT, CHARSET) | sha512(&quot;my text&quot;, &quot;UTF-8&quot;) | a3d7e45a0d9be5fd4e4b9a3b8c9c2163c21ef &#x200B; 708bf11b4232b21d2a8704ada2cdcd7b367dd078a89 &#x200B; a5c908cfe377aceb1072a7b386b7d4fd2ff68a8fd24d16 |
@@ -96,7 +96,7 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 >請向左／向右滾動以查看表的完整內容。
 
 | 函數 | 說明 | 參數 | 語法 | 運算式 | 範例輸出 |
--------- | ----------- | ---------- | -------| ---------- | -------------
+| -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | get_url_protocol | 從指定URL傳回通訊協定。 如果輸入無效，則返回null。 | <ul><li>URL:**必要**&#x200B;需要提取協定的URL。</li></ul> | get_url_protocol&#x200B;(URL) | get_url_protocol(&quot;https://platform &#x200B; .adobe.com/home&quot;) | https |
 | get_url_host | 傳回指定URL的主機。 如果輸入無效，則返回null。 | <ul><li>URL:**必要**&#x200B;需要提取主機的URL。</li></ul> | get_url_host&#x200B;(URL) | get_url_host&#x200B;(&quot;https://platform &#x200B; .adobe.com/home&quot;) | platform.adobe.com |
 | get_url_port | 傳回指定URL的連接埠。 如果輸入無效，則返回null。 | <ul><li>URL:**必要**&#x200B;需要從中提取埠的URL。</li></ul> | get_url_port(URL) | get_url_port&#x200B;(&quot;sftp://example.com//home/ &#x200B; joe/employee.csv&quot;) | 22 |
@@ -112,7 +112,7 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 >請向左／向右滾動以查看表的完整內容。 有關`date`函式的詳細資訊，請參閱[date函式指南](./dates.md)。
 
 | 函數 | 說明 | 參數 | 語法 | 運算式 | 範例輸出 |
--------- | ----------- | ---------- | -------| ---------- | -------------
+| -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | now | 檢索當前時間。 |  | now() | now() | `2020-09-23T10:10:24.556-07:00[America/Los_Angeles]` |
 | timestamp | 檢索當前Unix時間。 |  | timestamp() | timestamp() | 1571850624571 |
 | 格式 | 根據指定的格式格式化輸入日期。 | <ul><li>日期：**Required**&#x200B;您要格式化的輸入日期，作為ZonedDateTime物件。</li><li>格式：**必要**&#x200B;您要將日期變更為的格式。</li></ul> | 格式（日期，格式） | format(2019-10-23T11:24:00+00:00, &quot;yyyy-MM-dd HH:mm:ss&quot;) | &quot;2019-10-23 11:24:35&quot; |
@@ -136,7 +136,7 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 >請向左／向右滾動以查看表的完整內容。
 
 | 函數 | 說明 | 參數 | 語法 | 運算式 | 範例輸出 |
--------- | ----------- | ---------- | -------| ---------- | -------------
+| -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | size_of | 傳回輸入的大小。 | <ul><li>輸入：**Required**&#x200B;您要尋找大小的物件。</li></ul> | size_of(INPUT) | `size_of([1, 2, 3, 4])` | 4 |
 | is_empty | 檢查對象是否為空。 | <ul><li>輸入：**Required**&#x200B;您嘗試檢查的物件為空。</li></ul> | is_empty(INPUT) | `is_empty([1, 2, 3])` | false |
 | arrays_to_object | 建立對象清單。 | <ul><li>輸入：**必需**&#x200B;鍵和陣列對的分組。</li></ul> | arrays_to_object(INPUT) | 需要樣本 | 需要樣本 |
@@ -154,7 +154,7 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 >請向左／向右滾動以查看表的完整內容。
 
 | 函數 | 說明 | 參數 | 語法 | 運算式 | 範例輸出 |
--------- | ----------- | ---------- | -------| ---------- | -------------
+| -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | 聚結 | 返回給定陣列中的第一個非空對象。 | <ul><li>輸入：**Required**&#x200B;要查找的第一個非空對象的陣列。</li></ul> | 合併（輸入） | coalesce(null, null, null, &quot;first&quot;, null, &quot;second&quot;) | &quot;first&quot; |
 | first | 檢索給定陣列的第一個元素。 | <ul><li>輸入：**Required**&#x200B;您要尋找的第一個元素的陣列。</li></ul> | first(INPUT) | first(&quot;1&quot;, &quot;2&quot;, &quot;3&quot;) | &quot;1&quot; |
 | last | 檢索給定陣列的最後一個元素。 | <ul><li>輸入：**Required**&#x200B;您要查找的最後一個元素的陣列。</li></ul> | last(INPUT) | last(&quot;1&quot;, &quot;2&quot;, &quot;3&quot;) | &quot;3&quot; |
@@ -171,7 +171,7 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 >請向左／向右滾動以查看表的完整內容。
 
 | 函數 | 說明 | 參數 | 語法 | 運算式 | 範例輸出 |
--------- | ----------- | ---------- | -------| ---------- | -------------
+| -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | 解碼 | 給定一個鍵和一個作為陣列平面化的鍵值對清單，如果找到鍵，該函式將返回該值，如果在陣列中存在，則返回預設值。 | <ul><li>索引鍵：**必要**&#x200B;要匹配的密鑰。</li><li>OPTIONS:**必要**&#x200B;鍵／值對的平面化陣列。 （可選）預設值可以放在結尾。</li></ul> | decode(KEY,OPTIONS) | decode(stateCode, &quot;ca&quot;, &quot;California&quot;, &quot;pa&quot;, &quot;Pennylvania&quot;, &quot;N/A&quot;) | 如果stateCode是&quot;ca&quot;，則為&quot;California&quot;。<br>如果給定的stateCode是&quot;pa&quot;，則為&quot;Pennylvania&quot;。<br>如果stateCode不符合下列項目，則為&quot;N/A&quot;。 |
 | if | 評估給定的布爾表達式，並根據結果返回指定的值。 | <ul><li>運算式：**必要**&#x200B;正在評估的布林運算式。</li><li>TRUE_VALUE:**必要**&#x200B;運算式評估為true時傳回的值。</li><li>FALSE_VALUE:**必要**&#x200B;運算式評估為false時傳回的值。</li></ul> | iif(EXPRESSION, TRUE_VALUE, FALSE_VALUE) | if(&quot;s&quot;。equalsIgnoreCase(&quot;S&quot;), &quot;True&quot;, &quot;False&quot;) | &quot;True&quot; |
 
@@ -184,7 +184,7 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 >請向左／向右滾動以查看表的完整內容。
 
 | 函數 | 說明 | 參數 | 語法 | 運算式 | 範例輸出 |
--------- | ----------- | ---------- | -------| ---------- | -------------
+| -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | min | 返回給定參數的最小值。 使用自然排序。 | <ul><li>OPTIONS:**Required**&#x200B;一個或多個可相互比較的對象。</li></ul> | min(OPTIONS) | min(3, 1, 4) | 1 |
 | max | 返回給定參數的最大值。 使用自然排序。 | <ul><li>OPTIONS:**Required**&#x200B;一個或多個可相互比較的對象。</li></ul> | max(OPTIONS) | max(3, 1, 4) | 4 |
 
@@ -197,7 +197,7 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 >請向左／向右滾動以查看表的完整內容。
 
 | 函數 | 說明 | 參數 | 語法 | 運算式 | 範例輸出 |
--------- | ----------- | ---------- | -------| ---------- | -------------
+| -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | to_bigint | 將字串轉換為BigInteger。 | <ul><li>字串：**Required**&#x200B;要轉換為BigInteger的字串。</li></ul> | to_bigint(STRING) | to_bigint&#x200B;(&quot;100000.34&quot;) | 100000.34 |
 | to_decimal | 將字串轉換為Double。 | <ul><li>字串：**必要**&#x200B;要轉換為Double的字串。</li></ul> | to_decimal(STRING) | to_decimal(&quot;20.5&quot;) | 20.5 |
 | to_float | 將字串轉換為浮點數。 | <ul><li>字串：**Required**&#x200B;要轉換為浮點數的字串。</li></ul> | to_float(STRING) | to_float(&quot;12.3456&quot;) | 12.34566 |
@@ -212,7 +212,7 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 >請向左／向右滾動以查看表的完整內容。
 
 | 函數 | 說明 | 參數 | 語法 | 運算式 | 範例輸出 |
--------- | ----------- | ---------- | -------| ---------- | -------------
+| -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | json_to_object | 從指定字串反序列化JSON內容。 | <ul><li>字串：**必要**&#x200B;要取消序列化的JSON字串。</li></ul> | json_to_object&#x200B;(STRING) | json_to_object&#x200B;({&quot;info&quot;:{&quot;firstName&quot;:&quot;John&quot;,&quot;lastName&quot; :&quot;Doe&quot;}) | 表示JSON的物件。 |
 
 {style=&quot;table-layout:auto&quot;}
@@ -224,7 +224,7 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 >請向左／向右滾動以查看表的完整內容。
 
 | 函數 | 說明 | 參數 | 語法 | 運算式 | 範例輸出 |
--------- | ----------- | ---------- | -------| ---------- | -------------
+| -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | uuid /&lt;a0/ guid<br> | 產生偽隨機ID。 |  | uuid()<br>guid() | uuid()<br>guid() | 7c0267d2-bb74-4e1a-9275-3bf4fccda5f4<br>c7016dc7-3163-43f7-afc7-2e1c9c206333 |
 
 {style=&quot;table-layout:auto&quot;}
@@ -236,7 +236,7 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 >請向左／向右滾動以查看表的完整內容。
 
 | 函數 | 說明 | 參數 | 語法 | 運算式 | 範例輸出 |
--------- | ----------- | ---------- | -------| ---------- | -------------
+| -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | ua_os_name | 從用戶代理字串中提取作業系統名稱。 | <ul><li>USER_AGENT:**必要**&#x200B;使用者代理字串。</li></ul> | ua_os_name&#x200B;(USER_AGENT) | ua_os_name&#x200B;(&quot;Mozilla/5.0(iPhone;CPU iPhone OS 5_1_1（如Mac OS X）AppleWebKit/534.46（KHTML如Gecko）Version/5.1 Mobile/9B206 Safari/7534.48.3英吋) | iOS |
 | ua_os_version_major | 從用戶代理字串中提取作業系統的主要版本。 | <ul><li>USER_AGENT:**必要**&#x200B;使用者代理字串。</li></ul> | ua_os_version_major&#x200B;(USER_AGENT) | ua_os_version_major &#x200B; s(&quot;Mozilla/5.0(iPhone;CPU iPhone OS 5_1_1（如Mac OS X）AppleWebKit/534.46（KHTML如Gecko）Version/5.1 Mobile/9B206 Safari/7534.48.3英吋) | iOS 5 |
 | ua_os_version | 從用戶代理字串中提取作業系統的版本。 | <ul><li>USER_AGENT:**必要**&#x200B;使用者代理字串。</li></ul> | ua_os_version&#x200B;(USER_AGENT) | ua_os_version&#x200B;(&quot;Mozilla/5.0(iPhone;CPU iPhone OS 5_1_1（如Mac OS X）AppleWebKit/534.46（KHTML如Gecko）Version/5.1 Mobile/9B206 Safari/7534.48.3英吋) | 5.1.1 |
