@@ -4,10 +4,11 @@ solution: Experience Platform
 title: 資料準備概述
 topic: 概述
 description: 本檔案介紹Adobe Experience Platform的資料準備。
+exl-id: f15eeb50-a531-4560-a524-1a670fbda706
 translation-type: tm+mt
-source-git-commit: 73bf6abb143c0866a400aafe984f9a553ffc1abf
+source-git-commit: 827a593c046530edba701edf26d9a47918cfd8f8
 workflow-type: tm+mt
-source-wordcount: '352'
+source-wordcount: '389'
 ht-degree: 1%
 
 ---
@@ -35,6 +36,10 @@ ht-degree: 1%
 
 將一個模式轉換為另一個模式的映射集統稱為映射集。 每個資料流都會建立單一對應集。 映射集是資料流的一個組成部分，並作為資料流的一部分建立、編輯和監控。
 
+## 資料格式處理
+
+「資料準備」可強穩地處理傳入Platform的不同格式資料。 若要進一步瞭解資料準備如何處理不同的資料類型，請閱讀[資料格式處理概述](./data-handling.md)。
+
 ## 後續步驟
 
-本文檔介紹了有關Adobe Experience Platform資料準備的基本知識。 若要進一步瞭解不同的映射函式，請閱讀[映射函式指南](./functions.md)。 要瞭解有關不同日期時間字串的更多資訊，請閱讀[日期字串指南](./dates.md)。 要瞭解如何使用資料準備API，請閱讀[資料準備開發人員指南](api/overview.md)。
+本文檔介紹了有關Adobe Experience Platform資料準備的基本知識。 若要進一步瞭解不同的映射函式，請閱讀[映射函式指南](./functions.md)。 若要進一步瞭解資料準備如何處理不同的資料類型，請閱讀[資料格式處理指南](./data-handling.md#dates)。 要瞭解如何使用資料準備API，請閱讀[資料準備開發人員指南](api/overview.md)。
