@@ -6,9 +6,9 @@ topic: 概述
 description: 本文檔介紹與「資料準備」一起使用的映射功能。
 exl-id: e95d9329-9dac-4b54-b804-ab5744ea6289
 translation-type: tm+mt
-source-git-commit: 8b74cf5f54ddf56486d7b947b38bef58823c3684
+source-git-commit: c3939d4ce30bf12748b898f461a166f28f010abf
 workflow-type: tm+mt
-source-wordcount: '3793'
+source-wordcount: '3798'
 ht-degree: 3%
 
 ---
@@ -109,7 +109,7 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 
 >[!NOTE]
 >
->請向左／向右滾動以查看表的完整內容。 有關`date`函式的詳細資訊，請參閱[date函式指南](./dates.md)。
+>請向左／向右滾動以查看表的完整內容。 有關`date`函式的更多資訊，請參閱[資料格式處理指南](./data-handling.md#dates)的日期部分。
 
 | 函數 | 說明 | 參數 | 語法 | 運算式 | 範例輸出 |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
