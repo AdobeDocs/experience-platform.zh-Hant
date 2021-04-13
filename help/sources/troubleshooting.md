@@ -4,14 +4,14 @@ solution: Experience Platform
 title: 來源疑難排解
 topic: 疑難排解
 description: 本檔案提供有關Adobe Experience Platform消息來源的常見問題解答。
+exl-id: 94875121-7d4d-4eb2-8760-aa795933dd7e
 translation-type: tm+mt
-source-git-commit: 26e7116858574b366760ffd4f92b14117ccd28eb
+source-git-commit: 827a593c046530edba701edf26d9a47918cfd8f8
 workflow-type: tm+mt
-source-wordcount: '655'
+source-wordcount: '663'
 ht-degree: 0%
 
 ---
-
 
 # （測試版）來源疑難排解指南
 
@@ -57,7 +57,7 @@ ht-degree: 0%
 
 ### 支援哪些日期和時間格式？
 
-Sources支援多種日期時間格式，同時擷取資料。 有關支援的日期時間格式的詳細資訊，請參閱[資料準備日期函式指南](../data-prep/dates.md)。
+Sources支援多種日期時間格式，同時擷取資料。 有關支援的日期時間格式的詳細資訊，請參閱資料準備文檔中[資料格式處理指南](../data-prep/data-handling.md#dates)的日期部分。
 
 ### 我要如何將CSV、JSON和Parce檔案中的陣列格式化？
 
