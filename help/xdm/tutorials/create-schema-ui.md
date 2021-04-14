@@ -3,16 +3,16 @@ keywords: Experience Platform;home；熱門主題；ui;UI;XDM;XDM系統；體驗
 solution: Experience Platform
 title: 使用架構編輯器建立架構
 topic: 教學課程
-type: 教學課程
+type: Tutorial
 description: 本教學課程涵蓋以 Experience Platform 結構編輯器建立結構的相關步驟。
+exl-id: 3edeb879-3ce4-4adb-a0bd-8d7ad2ec6102
 translation-type: tm+mt
-source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
+source-git-commit: 53bf2ad757b24ad294af32101124e8047580807a
 workflow-type: tm+mt
-source-wordcount: '3602'
+source-wordcount: '3533'
 ht-degree: 0%
 
 ---
-
 
 # 使用[!DNL Schema Editor]建立模式
 
@@ -32,23 +32,27 @@ Adobe Experience Platform用戶介面允許您在稱為[!DNL Schema Editor]的�
    * [架構構成基礎](../schema/composition.md):概述XDM結構描述及其構建塊，包括類、混合、資料類型和欄位。
 * [[!DNL Real-time Customer Profile]](../../profile/home.md):根據來自多個來源的匯整資料，提供統一、即時的消費者個人檔案。
 
-## 開啟[!UICONTROL 方案]工作區{#browse}
+## 開啟[!UICONTROL Schemas]工作區{#browse}
 
-[!DNL Platform] UI中的[!UICONTROL 結構描述]工作區提供[!DNL Schema Library]的視覺化，讓您檢視管理組織可用的結構描述。 工作區也包含[!DNL Schema Editor]，您可在此教學課程中組合架構的畫布。
+[!DNL Platform] UI中的[!UICONTROL Schemas]工作區提供[!DNL Schema Library]的視覺化效果，可讓您檢視管理組織可用的結構。 工作區也包含[!DNL Schema Editor]，您可在此教學課程中組合架構的畫布。
 
-登入[!DNL Experience Platform]後，在左側導覽中選擇&#x200B;**[!UICONTROL 方案]**&#x200B;以開啟&#x200B;**[!UICONTROL 方案]**&#x200B;工作區。 **[!UICONTROL 瀏覽]**&#x200B;標籤顯示可查看和自定義的方案清單（[!DNL Schema Library]的表示法）。 該清單包括方案所基於的名稱、類型、類和行為（記錄或時間序列），以及上次修改方案的日期和時間。
+登入[!DNL Experience Platform]後，在左側導覽中選取&#x200B;**[!UICONTROL Schemas]**&#x200B;以開啟&#x200B;**[!UICONTROL Schemas]**&#x200B;工作區。 **[!UICONTROL Browse]**&#x200B;頁籤顯示可查看和自定義的方案清單（[!DNL Schema Library]的表示法）。 該清單包括方案所基於的名稱、類型、類和行為（記錄或時間序列），以及上次修改方案的日期和時間。
 
 如需詳細資訊，請參閱UI](../ui/explore.md)中[探索現有XDM資源的指南。
 
 ## 建立並命名方案{#create}
 
-要開始合成方案，請在&#x200B;**[!UICONTROL 方案]**&#x200B;工作區右上角選擇&#x200B;**[!UICONTROL 建立方案]**。 此時會顯示下拉式選單，提供您選擇核心類別[!UICONTROL XDM Individual Profile]和[!UICONTROL XDM ExperienceEvent]的選項。 如果這些類不符合您的目的，您也可以選擇&#x200B;**[!UICONTROL Browse]**&#x200B;以從其他可用類中選擇，或者選擇[建立新類](#create-new-class)。
+要開始合成方案，請在&#x200B;**[!UICONTROL Schemas]**&#x200B;工作區右上角選擇&#x200B;**[!UICONTROL Create schema]**。 此時會出現下拉式功能表，提供您選擇核心類別[!UICONTROL XDM Individual Profile]和[!UICONTROL XDM ExperienceEvent]的選項。 如果這些類不符合您的目的，您也可以選擇&#x200B;**[!UICONTROL Browse]**&#x200B;以從其他可用類中選擇，或選擇[建立新類](#create-new-class)。
 
-在本教程中，選擇&#x200B;**[!UICONTROL XDM Individual Profile]**。
+在本教程中，請選擇&#x200B;**[!UICONTROL XDM Individual Profile]**。
 
 ![](../images/tutorials/create-schema/create_schema_button.png)
 
-出現[!DNL Schema Editor]。 這是您將在其中構成架構的畫布。 由於您選擇了標準XDM類作為模式的基礎，因此當您到達編輯器時，將在畫布的&#x200B;**[!UICONTROL Structure]**&#x200B;部分自動建立未命名的模式，以及基於該類的所有架構中包含的標準欄位。 在&#x200B;**[!UICONTROL Composition]**&#x200B;節中，該架構的已分配類也列在&#x200B;**[!UICONTROL Class]**&#x200B;下。
+由於您選擇了標準XDM類作為模式的基礎，因此將出現&#x200B;**[!UICONTROL Add mixin]**&#x200B;對話框，允許您立即開始向模式添加欄位。 目前，請選擇&#x200B;**[!UICONTROL Cancel]**&#x200B;退出對話方塊。
+
+![](../images/tutorials/create-schema/cancel-mixin.png)
+
+出現[!DNL Schema Editor]。 這是您將在其中構成架構的畫布。 當您進入編輯器時，未命名的架構會自動在畫布的&#x200B;**[!UICONTROL Structure]**&#x200B;區段中建立，並根據該類別在所有架構中包含的標準欄位。 在&#x200B;**[!UICONTROL Composition]**&#x200B;節的&#x200B;**[!UICONTROL Class]**&#x200B;下還列出了為模式分配的類。
 
 ![](../images/tutorials/create-schema/schema_editor.png)
 
@@ -84,47 +88,49 @@ Adobe Experience Platform用戶介面允許您在稱為[!DNL Schema Editor]的�
 
 ![](../images/tutorials/create-schema/preview-mixin-button.png)
 
-在預覽混音時，在右側導軌中提供混音的結構的詳細描述。 您也可以瀏覽所提供畫布中的mixin欄位。 當您選取不同欄位時，右側欄位會更新，以顯示相關欄位的詳細資訊。 當您完成預覽時，選擇&#x200B;**[!UICONTROL Back]**&#x200B;以返回混音選擇對話框。
+在預覽混音時，在右側導軌中提供混音的結構的詳細描述。 您也可以瀏覽所提供畫布中的mixin欄位。 當您選取不同欄位時，右側欄位會更新，以顯示相關欄位的詳細資訊。 完成預覽後，選擇&#x200B;**[!UICONTROL Back]**&#x200B;以返回混合選擇對話框。
 
 ![](../images/tutorials/create-schema/preview-mixin.png)
 
-在本教學課程中，選擇&#x200B;**[!UICONTROL 人口統計詳細資料]** mixin，然後選擇&#x200B;**[!UICONTROL 新增mixin]**。
+在本教學課程中，選擇&#x200B;**[!UICONTROL Demographic Details]** mixin，然後選擇&#x200B;**[!UICONTROL Add mixin]**。
 
 ![](../images/tutorials/create-schema/add_mixin_person_details.png)
 
-結構畫布會重新出現。 **[!UICONTROL Mixins]**&#x200B;區段現在列出「[!UICONTROL 人口統計詳細資料]」，而&#x200B;**[!UICONTROL Structure]**&#x200B;區段包含由mixin貢獻的欄位。 您可以在&#x200B;**[!UICONTROL Mixins]**&#x200B;區段下選取mixin的名稱，以反白顯示它在畫布中提供的特定欄位。
+結構畫布會重新出現。 **[!UICONTROL Mixins]**&#x200B;區段現在會列出&quot;[!UICONTROL Demographic Details]&quot;，而&#x200B;**[!UICONTROL Structure]**&#x200B;區段則包含mixin所貢獻的欄位。 您可以在&#x200B;**[!UICONTROL Mixins]**&#x200B;區段下選取mixin的名稱，以反白顯示它在畫布中提供的特定欄位。
 
 ![](../images/tutorials/create-schema/person_details_structure.png)
 
-此混音在頂層名稱`person`下提供數個欄位，資料類型為&quot;[!UICONTROL Person]&quot;。 此欄位群組說明個人的相關資訊，包括姓名、出生日期和性別。
+此混音在頂層名稱`person`下包含數個欄位，資料類型為&quot;[!UICONTROL Person]&quot;。 此欄位群組說明個人的相關資訊，包括姓名、出生日期和性別。
 
 >[!NOTE]
 >
 >請記住，欄位可能會使用標量類型（例如字串、整數、陣列或日期），以及[!DNL Schema Registry]中定義的任何資料類型（表示共同概念的欄位群組）。
 
-請注意，`name`欄位的資料類型為&quot;[!UICONTROL 人員名稱]&quot;，這表示它也說明一個通用概念，並包含與名稱相關的子欄位，例如名字、姓氏、禮貌標題和字尾。
+請注意，`name`欄位的資料類型為&quot;[!UICONTROL Person name]&quot;，這表示它也說明一個通用概念，並包含與名稱相關的子欄位，例如名字、姓氏、禮貌標題和字尾。
 
 選擇畫布中的不同欄位，以顯示它們對架構結構所貢獻的其他欄位。
 
 ## 添加另一個混音{#mixin-2}
 
-您現在可以重複相同的步驟來新增另一個混音。 當您這次檢視「新增mixin ]**」對話方塊時，請注意「[!UICONTROL 人口統計詳細資料]」混音已變灰，且旁邊的核取方塊無法選取。**[!UICONTROL &#x200B;這可防止意外複製您已包含在目前架構中的混音。
+您現在可以重複相同的步驟來新增另一個混音。 此時，當您檢視&#x200B;**[!UICONTROL Add mixin]**&#x200B;對話方塊時，請注意&quot;[!UICONTROL Demographic Details]&quot;混音已變灰，且旁邊的核取方塊無法選取。 這可防止意外複製您已包含在目前架構中的混音。
 
-在本教程中，從對話框中選擇&quot;[!DNL Personal Contact Details]&quot; mixin，然後選擇&#x200B;**[!UICONTROL 添加mixin]**&#x200B;將其添加到模式。
+在本教程中，從對話框中選擇&quot;[!DNL Personal Contact Details]&quot; mixin，然後選擇&#x200B;**[!UICONTROL Add mixin]**&#x200B;將其添加到模式。
 
 ![](../images/tutorials/create-schema/add_mixin_personal_details.png)
 
-新增後，畫布會重新顯示。 &quot;[!UICONTROL 個人聯絡資訊]&quot;現在列在&#x200B;**[!UICONTROL Composition]**&#x200B;區段的&#x200B;**[!UICONTROL Mixins]**&#x200B;下，而且在&#x200B;**[!UICONTROL Structure]**&#x200B;下新增了家庭位址、行動電話等欄位。
+新增後，畫布會重新顯示。 &quot;[!UICONTROL Personal Contact Details]&quot;現在會列在&#x200B;**[!UICONTROL Composition]**&#x200B;區段的&#x200B;**[!UICONTROL Mixins]**&#x200B;下，而&#x200B;**[!UICONTROL Structure]**&#x200B;則會新增家庭位址、行動電話等欄位。
 
-與`name`欄位類似，您剛新增的欄位代表多欄位概念。 例如，`homeAddress`的資料類型為「[!UICONTROL 郵遞區號]」，而`mobilePhone`的資料類型為「[!UICONTROL 電話號碼]」。 您可以選取每個欄位以展開這些欄位，並查看資料類型中包含的其他欄位。
+與`name`欄位類似，您剛新增的欄位代表多欄位概念。 例如，`homeAddress`的資料類型為&quot;[!UICONTROL Postal address]&quot;，而`mobilePhone`的資料類型為&quot;[!UICONTROL Phone number]&quot;。 您可以選取每個欄位以展開這些欄位，並查看資料類型中包含的其他欄位。
 
 ![](../images/tutorials/create-schema/personal_details_structure.png)
 
-## 定義新混音{#define-mixin}
+## 定義{#define-mixin}的自訂混音
 
-「[!UICONTROL 忠誠度成員]」結構旨在捕獲與忠誠度方案成員相關的資料，因此它需要一些與忠誠度相關的特定欄位。 沒有可用的標準混音包含必要的欄位，因此您需要定義新的混音。
+「[!UICONTROL Loyalty Members]」架構旨在擷取與忠誠度方案成員相關的資料，因此它需要某些特定的忠誠度相關欄位。
 
-此時，當您開啟&#x200B;**[!UICONTROL 新增Mixin]**&#x200B;對話方塊時，請選取&#x200B;**[!UICONTROL 建立新Mixin]**。 接著會要求您提供混合的顯示名稱和說明。
+您可以新增標準[!UICONTROL Loyalty Details]混音至結構，以擷取與忠誠度方案相關的常用欄位。 雖然我們強烈建議您使用標準混合來表示結構所擷取的概念，但標準忠誠度混合的結構可能無法擷取特定忠誠度計畫的所有相關資料。 在此案例中，您可以選擇定義新的自訂混音，以擷取這些欄位。
+
+再次開啟&#x200B;**[!UICONTROL Add Mixin]**&#x200B;對話框，但此次在頂部附近選擇&#x200B;**[!UICONTROL Create New Mixin]**。 然後系統會要求您提供混合音效的顯示名稱和說明。
 
 ![](../images/tutorials/create-schema/mixin_create_new.png)
 
@@ -132,13 +138,13 @@ Adobe Experience Platform用戶介面允許您在稱為[!DNL Schema Editor]的�
 
 在本教學課程中，請將新混音命名為「忠誠度詳細資訊」。
 
-選擇&#x200B;**[!UICONTROL 添加mixin]**&#x200B;返回[!DNL Schema Editor]。 &quot;[!UICONTROL 忠誠度詳細資料]&quot;現在應顯示在畫布左側的&#x200B;**[!UICONTROL Mixins]**&#x200B;下，但目前尚無相關欄位，因此在&#x200B;**[!UICONTROL Structure]**&#x200B;下不會顯示新欄位。
+選擇&#x200B;**[!UICONTROL Add mixin]**&#x200B;返回[!DNL Schema Editor]。 &quot;[!UICONTROL Loyalty Details]&quot;現在應顯示在畫布左側的&#x200B;**[!UICONTROL Mixins]**&#x200B;下方，但目前尚無相關欄位，因此&#x200B;**[!UICONTROL Structure]**&#x200B;下方不會顯示新欄位。
 
 ## 新增欄位至mixin {#mixin-fields}
 
 現在您已建立「忠誠度詳細資料」混音，是時候定義混音將對結構貢獻的欄位了。
 
-首先，在&#x200B;**[!UICONTROL Mixins]**&#x200B;區段中選擇混音名稱。 執行此操作後，mixin的屬性會顯示在編輯器的右側，並且&#x200B;**+(+)**&#x200B;表徵圖會出現在&#x200B;**[!UICONTROL Structure]**&#x200B;下的架構名稱旁。
+若要開始，請在&#x200B;**[!UICONTROL Mixins]**&#x200B;區段中選取混音名稱。 執行此操作後，mixin的屬性會顯示在編輯器的右側，並且&#x200B;**[!UICONTROL Structure]**&#x200B;下方架構名稱旁會出現&#x200B;**加號(+)**&#x200B;圖示。
 
 ![](../images/tutorials/create-schema/loyalty_details_structure.png)
 
@@ -146,30 +152,30 @@ Adobe Experience Platform用戶介面允許您在稱為[!DNL Schema Editor]的�
 
 換言之，您新增的欄位對您的組織而言是獨一無二的，而且會儲存在[!DNL Schema Registry]中，位於只有您的組織才能存取的特定區域。 您定義的欄位必須一律新增至您的租用戶名稱空間，以避免與其他標準類別、混合、資料類型和欄位的名稱產生衝突。
 
-該命名空間節點內部是&quot;[!UICONTROL 新建欄位]&quot;。 這是&quot;[!UICONTROL 忠誠度詳細資料]&quot;混合的開頭。
+該命名空間節點內部是&quot;[!UICONTROL New Field]&quot;。 這是&quot;[!UICONTROL Loyalty Details]&quot;混音的開頭。
 
 ![](../images/tutorials/create-schema/new_field_loyalty.png)
 
-使用編輯器右側的控制項，首先建立類型為&quot;[!UICONTROL Object]&quot;的`loyalty`欄位，以用於保存您的忠誠度相關欄位。 完成後，選擇&#x200B;**[!UICONTROL Apply]**。
+使用編輯器右側的控制項，首先建立類型為&quot;[!UICONTROL Object]&quot;的`loyalty`欄位，以用來保存您的忠誠度相關欄位。 完成後，選擇&#x200B;**[!UICONTROL Apply]**。
 
 ![](../images/tutorials/create-schema/loyalty_object.png)
 
-將應用更改並顯示新建立的`loyalty`對象。 選取物件旁的&#x200B;**加號(+)**&#x200B;圖示，以新增其他與忠誠度相關的欄位。 「[!UICONTROL 新欄位]」出現，而「**[!UICONTROL 欄位屬性]**」區段會顯示在畫布的右側。
+將應用更改並顯示新建立的`loyalty`對象。 選取物件旁的&#x200B;**加號(+)**&#x200B;圖示，以新增其他與忠誠度相關的欄位。 「[!UICONTROL New Field]」會出現，而「**[!UICONTROL Field properties]**」區段會顯示在畫布的右側。
 
 ![](../images/tutorials/create-schema/new_field_in_loyalty_object.png)
 
 每個欄位都需要下列資訊：
 
-* **[!UICONTROL 欄位名稱]：欄** 位的名稱，以駝峰大小寫寫。範例：loyaltyLevel
-* **[!UICONTROL 顯示名稱]:** 以標題大小寫寫的欄位名稱。範例：忠誠度等級
-* **[!UICONTROL 類型]:** 欄位的資料類型。這包括基本標量類型和[!DNL Schema Registry]中定義的任何資料類型。 範例：[!UICONTROL 字串]、[!UICONTROL 整數]、[!UICONTROL 布林]、[!UICONTROL 人]、[!UICONTROL 地址]、[!UICONTROL 電話號碼]等。
-* **[!UICONTROL 說明]:** 欄位的選用說明應包含在句子中，最多應包含200個字元。
+* **[!UICONTROL Field Name]:** 欄位的名稱，以駝峰大小寫寫寫。範例：loyaltyLevel
+* **[!UICONTROL Display Name]:** 以標題寫入的欄位名稱。範例：忠誠度等級
+* **[!UICONTROL Type]:** 欄位的資料類型。這包括基本標量類型和[!DNL Schema Registry]中定義的任何資料類型。 範例：[!UICONTROL String]、[!UICONTROL Integer]、[!UICONTROL Boolean]、[!UICONTROL Person]、[!UICONTROL Address]、[!UICONTROL Phone number]等。
+* **[!UICONTROL Description]:** 欄位的選擇性說明應包含在句子中，最多200個字元。
 
-`Loyalty`物件的第一個欄位將是名為`loyaltyId`的字串。 將新欄位的類型設定為&quot;[!UICONTROL String]&quot;時，**[!UICONTROL Field屬性]**&#x200B;部分將填入幾個用於應用約束的選項，包括預設值、格式和最大長度。
+`Loyalty`物件的第一個欄位將是名為`loyaltyId`的字串。 將新欄位的類型設定為&quot;[!UICONTROL String]&quot;時，**[!UICONTROL Field properties]**&#x200B;部分將填入幾個用於應用約束的選項，包括預設值、格式和最大長度。
 
 ![](../images/tutorials/create-schema/string_constraints.png)
 
-根據所選資料類型，可使用不同的約束選項。 由於`loyaltyId`將是電子郵件地址，因此從&#x200B;**[!UICONTROL 格式]**&#x200B;下拉式選單中選擇「[!UICONTROL email]」。 選擇&#x200B;**[!UICONTROL 應用]**&#x200B;以應用更改。
+根據所選資料類型，可使用不同的約束選項。 由於`loyaltyId`將是電子郵件地址，所以從&#x200B;**[!UICONTROL Format]**&#x200B;下拉式選單中選擇「[!UICONTROL email]」。 選擇&#x200B;**[!UICONTROL Apply]**&#x200B;以應用更改。
 
 ![](../images/tutorials/create-schema/loyaltyId_field.png)
 
@@ -192,11 +198,11 @@ Adobe Experience Platform用戶介面允許您在稱為[!DNL Schema Editor]的�
 
 | 約束 | 說明 |
 | --- | --- |
-| [!UICONTROL 必填] | 指出資料擷取需要此欄位。 任何根據此架構上傳至資料集且不包含此欄位的資料，在擷取時都會失敗。 |
-| [!UICONTROL 陣列] | 指出欄位包含一組值，每個值都指定了資料類型。 例如，在資料類型為&quot;[!UICONTROL String]&quot;的欄位上使用此約束指定該欄位將包含字串陣列。 |
+| [!UICONTROL Required] | 指出資料擷取需要此欄位。 任何根據此架構上傳至資料集且不包含此欄位的資料，在擷取時都會失敗。 |
+| [!UICONTROL Array] | 指出欄位包含一組值，每個值都指定了資料類型。 例如，在資料類型為&quot;[!UICONTROL String]&quot;的欄位上使用此約束指定該欄位將包含字串陣列。 |
 | [!UICONTROL Enum] | 指出此欄位必須包含可能值列舉清單中的其中一個值。 |
-| [!UICONTROL 身份] | 指出此欄位是身分欄位。 有關身分欄位的更多資訊，請參閱本教學課程](#identity-field)的稍後章節。[ |
-| [!UICONTROL 關係] | 雖然架構關係可以通過使用union架構和[!DNL Real-time Customer Profile]來推斷，但這僅適用於共用相同類的架構。 [!UICONTROL Relationship]約束表示該欄位引用基於不同類的方案的主標識，這意味著兩個方案之間的關係。 有關詳細資訊，請參閱[定義關係](./relationship-ui.md)的教程。 |
+| [!UICONTROL Identity] | 指出此欄位是身分欄位。 有關身分欄位的更多資訊，請參閱本教學課程](#identity-field)的稍後章節。[ |
+| [!UICONTROL Relationship] | 雖然架構關係可以通過使用union架構和[!DNL Real-time Customer Profile]來推斷，但這僅適用於共用相同類的架構。 [!UICONTROL Relationship]約束表示此欄位引用基於不同類的方案的主標識，這表示兩個方案之間的關係。 有關詳細資訊，請參閱[定義關係](./relationship-ui.md)的教程。 |
 
 >[!NOTE]
 >
@@ -204,13 +210,13 @@ Adobe Experience Platform用戶介面允許您在稱為[!DNL Schema Editor]的�
 >
 >![](../images/tutorials/create-schema/left-rail-special.png)
 
-在本教學課程中，架構中的[!DNL "loyalty"]物件需要新的列舉欄位，以說明客戶的「忠誠度等級」，其中值只能是四個可能選項之一。 要將此欄位添加到方案中，請選擇`loyalty`對象旁的&#x200B;**加號(+)**&#x200B;表徵圖，並填寫&#x200B;**[!UICONTROL 欄位名]**&#x200B;和&#x200B;**[!UICONTROL 顯示名]**&#x200B;的必需欄位。 對於&#x200B;**[!UICONTROL Type]**，選擇「[!UICONTROL 字串]」。
+在本教學課程中，架構中的[!DNL "loyalty"]物件需要新的列舉欄位，以說明客戶的「忠誠度等級」，其中值只能是四個可能選項之一。 要將此欄位添加到方案中，請選擇`loyalty`對象旁的&#x200B;**加號(+)**&#x200B;表徵圖，並填寫&#x200B;**[!UICONTROL Field name]**&#x200B;和&#x200B;**[!UICONTROL Display name]**&#x200B;的必填欄位。 針對&#x200B;**[!UICONTROL Type]**，選取 &quot;[!UICONTROL String]&quot;.
 
 ![](../images/tutorials/create-schema/loyalty-level-type.png)
 
-選擇欄位類型後，將顯示其他複選框，包括&#x200B;**[!UICONTROL Array]**、**[!UICONTROL Enum]**&#x200B;和&#x200B;**[!UICONTROL Identity]**&#x200B;的複選框。
+選擇欄位類型後，將顯示其他複選框，包括&#x200B;**[!UICONTROL Array]** 、 **[!UICONTROL Enum]**&#x200B;和&#x200B;**[!UICONTROL Identity]**&#x200B;的複選框。
 
-選擇&#x200B;**[!UICONTROL Enum]**&#x200B;複選框以開啟下面的&#x200B;**[!UICONTROL Enum值]**&#x200B;部分。 在這裡，您可以為每個可接受的忠誠度等級輸入&#x200B;**[!UICONTROL Value]**（在camelCase中）和&#x200B;**[!UICONTROL Label]**（在Title Case中為可選的讀者友好名稱）。
+選擇&#x200B;**[!UICONTROL Enum]**&#x200B;複選框以開啟下面的&#x200B;**[!UICONTROL Enum values]**&#x200B;部分。 您可以在這裡為每個可接受的忠誠度等級輸入&#x200B;**[!UICONTROL Value]**（在camelCase中）和&#x200B;**[!UICONTROL Label]**（在「標題大小寫」中是可選的讀者友好名稱）。
 
 完成所有欄位屬性後，選擇&#x200B;**[!UICONTROL Apply]**&#x200B;將「[!DNL loyaltyLevel]」欄位添加到`loyalty`對象。
 
@@ -222,11 +228,11 @@ Adobe Experience Platform用戶介面允許您在稱為[!DNL Schema Editor]的�
 
 資料類型允許一致地使用多欄位結構，並提供比混音更大的靈活性，因為它們可以在架構中的任意位置使用。 這是通過將欄位的&#x200B;**[!UICONTROL Type]**&#x200B;值設定為[!DNL Schema Registry]中定義的任何資料類型的值來完成的。
 
-要將`loyalty`對象轉換為資料類型，請選擇&#x200B;**[!UICONTROL 結構]**&#x200B;下的`loyalty`欄位，然後選擇編輯器右側&#x200B;**[!UICONTROL 欄位屬性]**&#x200B;下的&#x200B;**[!UICONTROL 轉換為新資料類型]**。 出現綠色快顯，確認物件已成功轉換。
+要將`loyalty`對象轉換為資料類型，請選擇&#x200B;**[!UICONTROL Structure]**&#x200B;下的`loyalty`欄位，然後選擇&#x200B;**[!UICONTROL Field properties]**&#x200B;下編輯器右側的&#x200B;**[!UICONTROL Convert to new data type]**。 出現綠色快顯，確認物件已成功轉換。
 
 ![](../images/tutorials/create-schema/convert-data-type.png)
 
-現在，當您查看&#x200B;**[!UICONTROL Structure]**&#x200B;下方時，您會看到`loyalty`欄位的資料類型為&quot;[!DNL Loyalty]&quot;，欄位旁邊有小型鎖定圖示，表示它們不再是個別欄位，而是多欄位資料類型的一部分。
+現在，當您查看&#x200B;**[!UICONTROL Structure]**&#x200B;下方時，您會看到`loyalty`欄位的資料類型為&quot;[!DNL Loyalty]&quot;，欄位旁邊有小型鎖定圖示，表示這些欄位不再是個別欄位，而是多欄位資料類型的一部分。
 
 ![](../images/tutorials/create-schema/loyalty_data_type.png)
 
@@ -252,9 +258,9 @@ Adobe Experience Platform用戶介面允許您在稱為[!DNL Schema Editor]的�
 
 ## 將架構欄位設定為標識欄位{#identity-field}
 
-架構所提供的標準資料結構可用於跨多個來源識別屬於同一個人的資料，允許各種下游使用案例，例如分段、報告、資料科學分析等。 為了根據個別身分來接合資料，索引鍵欄位必須標示為適用結構中的[!UICONTROL Identity]欄位。
+架構所提供的標準資料結構可用於跨多個來源識別屬於同一個人的資料，允許各種下游使用案例，例如分段、報告、資料科學分析等。 為了根據個別身分來接合資料，索引鍵欄位必須標示為適用結構圖中的[!UICONTROL Identity]欄位。
 
-[!DNL Experience Platform] 使您可以透過使用中的「識別」核取方塊，輕鬆 **** 地標示識別欄 [!DNL Schema Editor]位不過，您必鬚根據資料的性質，判斷哪個欄位最適合做為身分識別。
+[!DNL Experience Platform] 使您可以透過使用中的核取方塊，輕鬆地標示 **[!UICONTROL Identity]** 身分欄位 [!DNL Schema Editor]。不過，您必鬚根據資料的性質，判斷哪個欄位最適合做為身分識別。
 
 例如，可能有數千個忠誠度方案成員屬於相同的「忠誠度等級」，但忠誠度方案的每個成員都有唯一的`loyaltyId`（在此例中為個別成員的電子郵件地址）。 `loyaltyId`是每個成員的唯一標識符，這使它成為身份欄位的理想候選符，而`loyaltyLevel`則否。
 
@@ -264,13 +270,13 @@ Adobe Experience Platform用戶介面允許您在稱為[!DNL Schema Editor]的�
 >
 >如果您打算使用`identityMap`，請記住它將覆蓋您直接添加到架構中的任何主標識。 有關詳細資訊，請參閱[架構構成指南](../schema/composition.md#identityMap)中有關`identityMap`的部分。
 
-在編輯器的&#x200B;**[!UICONTROL Structure]**&#x200B;部分，選擇`loyaltyId`欄位，並在&#x200B;**[!UICONTROL Field properties]**&#x200B;下顯示&#x200B;**[!UICONTROL Identity]**&#x200B;複選框。 選中該框並顯示將其設定為&#x200B;**[!UICONTROL 主標識]**&#x200B;的選項。 也選擇此框。
+在編輯器的&#x200B;**[!UICONTROL Structure]**&#x200B;部分，選擇`loyaltyId`欄位，並在&#x200B;**[!UICONTROL Field properties]**&#x200B;下顯示&#x200B;**[!UICONTROL Identity]**&#x200B;複選框。 選中該框並顯示將其設定為&#x200B;**[!UICONTROL Primary identity]**&#x200B;的選項。 也選擇此框。
 
 >[!NOTE]
 >
 >每個架構只能包含一個主標識欄位。 一旦將方案欄位設定為主標識，如果您稍後嘗試將方案中的另一個標識欄位設定為主標識，將會收到錯誤消息。
 
-接著，您必須從下拉式清單中預先定義的名稱空間清單中提供&#x200B;**[!UICONTROL Identity namespace]**。 由於`loyaltyId`是客戶的電子郵件地址，因此從下拉式清單中選擇「[!UICONTROL 電子郵件]」。 選擇&#x200B;**[!UICONTROL 應用]**&#x200B;以確認`loyaltyId`欄位的更新。
+接著，您必須從下拉式清單中預先定義的名稱空間清單中提供&#x200B;**[!UICONTROL Identity namespace]**。 由於`loyaltyId`是客戶的電子郵件地址，因此請從下拉式清單中選擇「[!UICONTROL Email]」。 選擇&#x200B;**[!UICONTROL Apply]**&#x200B;以確認`loyaltyId`欄位的更新。
 
 ![](../images/tutorials/create-schema/loyaltyId_primary_identity.png)
 
@@ -292,13 +298,13 @@ Adobe Experience Platform用戶介面允許您在稱為[!DNL Schema Editor]的�
 
 <img src="../images/tutorials/create-schema/missing_primary_identity.png" width="600" /><br>
 
-要啟用[!DNL Profile]中的「忠誠成員」架構，請首先在編輯器的&#x200B;**[!UICONTROL 結構]**&#x200B;部分中選擇「[!DNL Loyalty Members]」。
+要啟用[!DNL Profile]中的「忠誠成員」架構，請首先在編輯器的&#x200B;**[!UICONTROL Structure]**&#x200B;部分中選擇「[!DNL Loyalty Members]」。
 
-在編輯器的右側，會顯示有關架構的資訊，包括其顯示名稱、說明和類型。 除此資訊外，還有&#x200B;**[!UICONTROL 描述檔]**&#x200B;切換按鈕。
+在編輯器的右側，會顯示有關架構的資訊，包括其顯示名稱、說明和類型。 除了此資訊外，還有&#x200B;**[!UICONTROL Profile]**&#x200B;切換按鈕。
 
 ![](../images/tutorials/create-schema/profile-toggle.png)
 
-選擇&#x200B;**[!UICONTROL 描述檔]**&#x200B;並出現一個快顯視窗，要求您確認您要啟用[!DNL Profile]的架構。
+選擇&#x200B;**[!UICONTROL Profile]**&#x200B;並出現一個快顯窗口，要求您確認要為[!DNL Profile]啟用模式。
 
 <img src="../images/tutorials/create-schema/enable-profile.png" width="700" /><br>
 
@@ -306,11 +312,11 @@ Adobe Experience Platform用戶介面允許您在稱為[!DNL Schema Editor]的�
 >
 >在[!DNL Real-time Customer Profile]啟用並儲存架構後，便無法停用它。
 
-選擇&#x200B;**[!UICONTROL 啟用]**&#x200B;以確認您的選擇。 如果需要，可以再次選擇&#x200B;**[!UICONTROL Profile]**&#x200B;切換以禁用模式，但在[!DNL Profile]啟用時保存模式後，便不能再禁用它。
+選擇&#x200B;**[!UICONTROL Enable]**&#x200B;以確認您的選擇。 如果需要，可以再次選擇&#x200B;**[!UICONTROL Profile]**&#x200B;切換以禁用模式，但在[!DNL Profile]啟用時保存模式後，就不能再禁用它。
 
 ## 後續步驟和其他資源
 
-現在，您已完成架構合成，您就可以在畫布中看到完整的架構。 選擇&#x200B;**[!UICONTROL Save]**，架構將保存到[!DNL Schema Library]，使[!DNL Schema Registry]可以訪問該架構。
+現在，您已完成架構合成，您就可以在畫布中看到完整的架構。 選擇&#x200B;**[!UICONTROL Save]**&#x200B;並將模式保存到[!DNL Schema Library]，使[!DNL Schema Registry]可以訪問該模式。
 
 您的新架構現在可用來將資料內嵌至[!DNL Platform]。 請記住，一旦使用架構來收錄資料，則只能進行加性變更。 有關方案版本化的詳細資訊，請參見[架構組成的基礎](../schema/composition.md)。
 
