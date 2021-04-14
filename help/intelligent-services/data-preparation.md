@@ -1,17 +1,17 @@
 ---
-keywords: Experience Platform;Home;Intelligent Services；熱門主題；智慧服務；智慧服務
+keywords: Experience Platform；家庭；智慧服務；熱門主題；智慧服務；智慧服務
 solution: Experience Platform, Intelligent Services
 title: 準備資料以用於智慧型服務
 topic: Intelligent Services
-description: '為了讓智慧型服務能夠從行銷事件資料中發掘見解，資料必須以標準結構進行語義豐富和維護。 智慧型服務運用Experience Data Model(XDM)架構來達成此目標。 具體來說，Intelligent Services中使用的所有資料集都必須符合Consumer ExperienceEvent(CEE)XDM架構。 '
+description: 為了讓智慧型服務能夠從行銷事件資料中發掘見解，資料必須以標準結構進行語義豐富和維護。 智慧型服務運用Experience Data Model(XDM)架構來達成此目標。 具體來說，Intelligent Services中使用的所有資料集都必須符合Consumer ExperienceEvent(CEE)XDM架構。
+exl-id: 17bd7cc0-da86-4600-8290-cd07bdd5d262
 translation-type: tm+mt
-source-git-commit: eb163949f91b0d1e9cc23180bb372b6f94fc951f
+source-git-commit: b311a5970a121a3277bdb72f5a1285216444b339
 workflow-type: tm+mt
-source-wordcount: '1862'
-ht-degree: 0%
+source-wordcount: '2020'
+ht-degree: 1%
 
 ---
-
 
 # 準備要用於[!DNL Intelligent Services]的資料
 
@@ -21,22 +21,22 @@ ht-degree: 0%
 
 ## 工作流程摘要
 
-準備程式會視您的資料儲存在Adobe Experience Platform或外部而定。 本節概述了在兩種情況下需要採取的必要步驟。
+準備程式視您的資料儲存在Adobe Experience Platform或外部而定。 本節概述了在兩種情況下需要採取的必要步驟。
 
 ### 外部資料準備
 
 如果您的資料儲存在[!DNL Experience Platform]以外，請遵循下列步驟：
 
-1. 請連絡Adobe諮詢服務以要求專屬Azure Blob儲存容器的存取憑證。
+1. 請聯絡Adobe諮詢服務以要求專屬Azure Blob儲存容器的存取憑證。
 1. 使用您的存取憑證，將資料上傳至Blob容器。
-1. 使用Adobe諮詢服務可將您的資料對應至[消費者體驗事件架構](#cee-schema)並內嵌至[!DNL Intelligent Services]。
+1. 使用Adobe咨詢服務獲取映射至[消費者體驗事件模式](#cee-schema)的資料，並收錄至[!DNL Intelligent Services]。
 
 ### [!DNL Experience Platform] 資料準備
 
 如果您的資料已儲存在[!DNL Platform]中，請遵循下列步驟：
 
 1. 檢閱[Consumer ExperienceEvent架構](#cee-schema)的結構，並判斷您的資料是否可對應至其欄位。
-1. 請連絡Adobe諮詢服務，協助您將資料對應至架構，並將其內嵌至[!DNL Intelligent Services]或[，如果您想要自行對應資料，請依照本指南中的步驟進行。](#mapping)
+1. 請聯絡Adobe諮詢服務，協助您將資料對應至架構，並將其內嵌至[!DNL Intelligent Services]，或[，如果您要自行對應資料，請依照本指南中的步驟進行。](#mapping)
 
 ## 瞭解CEE方案{#cee-schema}
 
@@ -62,7 +62,7 @@ CEE架構與所有XDM ExperienceEvent架構一樣，會在發生事件（或事�
 
 * [主要身份欄位](#identity)
 * [xdm:timestamp](#timestamp)
-* [xdm:channel](#channel) （僅Attribution AI必填）
+* [xdm:channel](#channel) (僅對Attribution AI必需)
 
 #### 主要身份{#identity}
 
@@ -72,10 +72,31 @@ CEE架構與所有XDM ExperienceEvent架構一樣，會在發生事件（或事�
 
 * &quot;電子郵件&quot;
 * &quot;phone&quot;
-* &quot;mcid&quot;（適用於Adobe Audience Manager ID）
-* 「aid」（適用於Adobe Analytics ID）
+* &quot;mcid&quot;(針對Adobe Audience ManagerID)
+* &quot;aid&quot;(針對Adobe AnalyticsID)
 
-如果您不確定應將哪個欄位當做主要身分識別，請聯絡Adobe諮詢服務以決定最佳解決方案。
+如果您不確定您應使用哪個欄位做為主要身分識別，請連絡Adobe諮詢服務以決定最佳解決方案。 如果未設定主標識，Intelligent Service應用程式將使用以下預設行為：
+
+| 預設 | Attribution AI | 客戶人工智慧 |
+| --- | --- | --- |
+| Identity欄 | `endUserIDs._experience.aaid.id` | `endUserIDs._experience.mcid.id` |
+| 命名空間 | AAID | ECID |
+
+要設定主標識，請從&#x200B;**[!UICONTROL Schemas]**&#x200B;頁籤導航到您的模式，然後選擇模式名稱超連結以開啟&#x200B;**[!DNL Schema Editor]**。
+
+![導覽至架構](./images/data-preparation/navigate_schema.png)
+
+接著，導覽至您要當做主要身分的欄位，並加以選取。 **[!UICONTROL Field properties]**&#x200B;功能表隨即開啟。
+
+![選取欄位](./images/data-preparation/find_field.png)
+
+在&#x200B;**[!UICONTROL Field properties]**&#x200B;功能表中，向下捲動直到找到&#x200B;**[!UICONTROL Identity]**&#x200B;複選框。 選中該框後，將顯示將選定身份設定為&#x200B;**[!UICONTROL Primary identity]**&#x200B;的選項。 也選擇此框。
+
+![選擇複選框](./images/data-preparation/set_primary_identity.png)
+
+接著，您必須從下拉式清單中預先定義的名稱空間清單中提供&#x200B;**[!UICONTROL Identity namespace]**。 在此示例中，選擇ECID名稱空間是因為使用了Adobe Audience ManagerID `mcid.id`。 選擇&#x200B;**[!UICONTROL Apply]**&#x200B;以確認更新，然後選擇右上角的&#x200B;**[!UICONTROL Save]**&#x200B;以保存對架構所做的更改。
+
+![儲存變更](./images/data-preparation/select_namespace.png)
 
 #### xdm:timestamp {#timestamp}
 
@@ -85,7 +106,7 @@ CEE架構與所有XDM ExperienceEvent架構一樣，會在發生事件（或事�
 
 >[!NOTE]
 >
->只有在使用Attribution AI時，此欄位才是必填欄位。
+>此欄位僅在使用Attribution AI時為必填欄位。
 
 此欄位代表與ExperienceEvent相關的行銷渠道。 欄位包含頻道類型、媒體類型和位置類型的相關資訊。
 
@@ -104,7 +125,7 @@ CEE架構與所有XDM ExperienceEvent架構一樣，會在發生事件（或事�
 
 有關`xdm:channel`每個必要子欄位的完整資訊，請參閱[體驗渠道方案](https://github.com/adobe/xdm/blob/797cf4930d5a80799a095256302675b1362c9a15/docs/reference/channels/channel.schema.md)規範。 有關某些示例映射，請參見[下表](#example-channels)。
 
-##### 通道映射示例{#example-channels}
+#### 通道映射示例{#example-channels}
 
 下表提供映射至`xdm:channel`架構的行銷渠道的一些範例：
 
@@ -252,7 +273,7 @@ CEE架構與所有XDM ExperienceEvent架構一樣，會在發生事件（或事�
 >
 >下列步驟需要訂閱Experience Platform。 如果您沒有平台的存取權，請跳至[後續步驟](#next-steps)區段。
 
-本節概述將資料對應並收錄至Experience Platform以用於[!DNL Intelligent Services]的工作流程，包括教學課程的連結以取得詳細步驟。
+本節概述了將資料對應並收錄至[!DNL Intelligent Services]Experience Platform的工作流程，包括教學課程的連結，以取得詳細步驟。
 
 #### 建立CEE架構和資料集
 
@@ -272,7 +293,7 @@ CEE架構與所有XDM ExperienceEvent架構一樣，會在發生事件（或事�
 * [在UI中建立資料集](../catalog/datasets/user-guide.md#create) （依照工作流程使用現有架構）
 * [在API中建立資料集](../catalog/datasets/create.md)
 
-建立資料集後，您可以在&#x200B;**[!UICONTROL Dataces]**&#x200B;工作區的平台UI中找到它。
+建立資料集後，您可以在&#x200B;**[!UICONTROL Datasets]**&#x200B;工作區的平台UI中找到它。
 
 ![](images/data-preparation/dataset-location.png)
 
@@ -292,7 +313,7 @@ CEE架構與所有XDM ExperienceEvent架構一樣，會在發生事件（或事�
 
 ## 下一步 {#next-steps}
 
-本檔案提供有關準備資料以用於[!DNL Intelligent Services]的一般指引。 如果您需要根據使用案例提供其他諮詢服務，請聯絡Adobe諮詢支援。
+本檔案提供有關準備資料以用於[!DNL Intelligent Services]的一般指引。 如果您需要根據您的使用案例進行其他諮詢，請聯絡Adobe諮詢支援。
 
 在您成功將客戶體驗資料填入資料集後，您就可以使用[!DNL Intelligent Services]產生見解。 請參閱下列檔案以開始使用：
 
