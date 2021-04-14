@@ -6,10 +6,10 @@ breadcrumb-title: Experience Data Model (XDM) 指南
 user-guide-description: 使用 Experience Data Model (XDM) 類別和 mixin 將體驗資料標準化。
 feature: 結構描述
 translation-type: tm+mt
-source-git-commit: 4a67bcbd2a1458ae47ba64fe2647da442fdf4695
+source-git-commit: 3e1005aa11b648bd633ee4f64d527cae56cca620
 workflow-type: tm+mt
-source-wordcount: '238'
-ht-degree: 24%
+source-wordcount: '257'
+ht-degree: 22%
 
 ---
 
@@ -22,6 +22,11 @@ ht-degree: 24%
    * [資料建模的最佳實務](schema/best-practices.md)
    * [XDM欄位類型約束](schema/field-constraints.md)
    * [XDM欄位字典](schema/field-dictionary.md)
+   * 行業資料模型{#industries}
+      * [概覽](./schema/industries/overview.md)
+      * [零售資料模型ERD](./schema/industries/retail.md)
+      * [金融服務資料模型](./schema/industries/financial.md)
+      * [旅行和接待服務資料模型](./schema/industries/travel-hospitality.md)
 * 類別 {#classes}
    * [XDM個人資料](./classes/individual-profile.md)
    * [XDM ExperienceEvent](./classes/experienceevent.md)
@@ -67,7 +72,7 @@ ht-degree: 24%
    * [網路互動](./data-types/web-interactions.md)
    * [網頁詳細資訊](./data-types/webpage-details.md)
 * [!UICONTROL Schemas] UI {#ui}
-   * [概述](./ui/overview.md)
+   * [概覽](./ui/overview.md)
    * [探索XDM資源](./ui/explore.md)
    * 建立和編輯資源{#resources}
       * [結構描述](./ui/resources/schemas.md)
@@ -75,7 +80,7 @@ ht-degree: 24%
       * [Mixins](./ui/resources/mixins.md)
       * [資料類型](./ui/resources/data-types.md)
    * 定義欄位{#fields}
-      * [概述](./ui/fields/overview.md)
+      * [概覽](./ui/fields/overview.md)
       * [必填欄位](./ui/fields/required.md)
       * [物件欄位](./ui/fields/object.md)
       * [陣列欄位](./ui/fields/array.md)
