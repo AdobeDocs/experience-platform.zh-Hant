@@ -1,14 +1,14 @@
 ---
 title: Adobe Experience Platform網頁SDK擴充功能中的資料元素類型
 description: 瞭解Adobe Experience Platform LaunchAdobe Experience Platform網頁SDK擴充功能提供的不同資料元素類型。
+exl-id: 3c2c257f-1fbc-4722-8040-61ad19aa533f
 translation-type: tm+mt
-source-git-commit: 2a0ae9541a8bb2bb985d43a402d0842e73b23c81
+source-git-commit: 3f7808a08d033c5940d2115006c269b8c4079822
 workflow-type: tm+mt
 source-wordcount: '305'
 ht-degree: 47%
 
 ---
-
 
 # 資料元素類型
 
@@ -26,7 +26,7 @@ ht-degree: 47%
 
 ![](./assets/identity-map-data-element.png)
 
-## XDM 物件
+## XDM 物件 {#xdm-object}
 
 使用XDM格式將任何資料傳送至Adobe Experience Platform網頁SDK。 使用 XDM 物件資料元素可更輕鬆格式化資料。第一次開啟此資料元素時，請選取正確的 Adobe Experience Platform 沙箱和結構描述。在選取結構後，您會看到結構，您可輕鬆填寫。
 
