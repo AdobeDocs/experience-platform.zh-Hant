@@ -6,10 +6,10 @@ breadcrumb-title: Experience Data Model (XDM) 指南
 user-guide-description: 使用 Experience Data Model (XDM) 類別和 mixin 將體驗資料標準化。
 feature: 結構描述
 translation-type: tm+mt
-source-git-commit: 3e1005aa11b648bd633ee4f64d527cae56cca620
+source-git-commit: 8b88a828f8680ac4d064f7f84e0db9e315526833
 workflow-type: tm+mt
-source-wordcount: '257'
-ht-degree: 22%
+source-wordcount: '279'
+ht-degree: 21%
 
 ---
 
@@ -36,6 +36,7 @@ ht-degree: 22%
       * [IdentityMap](./mixins/profile/identitymap.md)
       * [人口統計詳細資訊](./mixins/profile/person-details.md)
       * [個人聯絡資訊](./mixins/profile/personal-details.md)
+      * [隱私權／個人化／行銷偏好設定（同意）](./mixins/profile/consents.md)
       * [區段會籍詳細資訊](./mixins/profile/segmentation.md)
       * [工作聯繫人詳細資訊](./mixins/profile/work-details.md)
    * 事件混音{#event}
@@ -51,6 +52,10 @@ ht-degree: 22%
    * [裝置](./data-types/device.md)
    * [電子郵件地址](./data-types/email-address.md)
    * [環境](./data-types/environment.md)
+   * [通用許可欄位](./data-types/consent-field.md)
+   * [一般行銷偏好設定欄位](./data-types/marketing-field.md)
+   * [具有訂閱的一般行銷偏好設定欄位](./data-types/marketing-field-subscriptions.md)
+   * [一般個人化偏好設定欄位](./data-types/personalization-field.md)
    * [地理](./data-types/geo.md)
    * [地域社交圈](./data-types/geo-circle.md)
    * [地理坐標](./data-types/geo-coordinates.md)
