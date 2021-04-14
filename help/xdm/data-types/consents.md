@@ -1,20 +1,20 @@
 ---
-keywords: Experience Platform;profile；即時客戶配置檔案；疑難排解；API；同意；同意；偏好；偏好；privacyOptOuts;marketingPreferences;optOutType;basisOfProcessing；同意；同意
+keywords: Experience Platform；描述檔；即時客戶描述檔；疑難排解；API；同意；同意；偏好；偏好；privacyOptOuts;marketingPreferences;optOutType;basisOfProcessing；同意；同意
 title: 同意與偏好資料類型
 description: 「同意隱私權、個人化和行銷偏好」資料類型旨在支援收集「同意管理平台」(CMP)和其他來源自您資料作業產生的客戶權限和偏好。
-topic: guide
+topic: 指南
+exl-id: cdcc7b04-eeb9-40d3-b0b5-f736a5472621
 translation-type: tm+mt
-source-git-commit: 865379292985037b184d92e5d3fc1abc1873e962
+source-git-commit: 4e9395b4551842cf75b0d1a4ec36c85930c42da5
 workflow-type: tm+mt
-source-wordcount: '2067'
+source-wordcount: '1838'
 ht-degree: 1%
 
 ---
 
-
 # [!DNL Consents & Preferences] 資料類型
 
-[!UICONTROL 隱私、個人化和行銷偏好的同意]資料類型（以下稱為「[!DNL Consents & Preferences]資料類型」）是[!DNL Experience Data Model](XDM)資料類型，旨在支援收集「同意管理平台」(CMPs)和您資料營運的其他來源所產生的客戶權限和偏好。
+[!UICONTROL Consent for Privacy, Personalization and Marketing Preferences]資料類型（以下稱為「[!DNL Consents & Preferences]資料類型」）是[!DNL Experience Data Model](XDM)資料類型，旨在支援收集「同意管理平台」(CMP)和您資料作業的其他來源所產生的客戶權限和偏好。
 
 本檔案涵蓋[!DNL Consents & Preferences]資料類型所提供欄位的結構和用途。
 
@@ -80,17 +80,6 @@ ht-degree: 1%
     },
     "metadata": {
       "time": "2019-01-01T15:52:25+00:00"
-    },
-    "idSpecific": {
-      "email": {
-        "jdoe@example.com": {
-          "marketing": {
-            "email": {
-              "val": "n"
-            }
-          }
-        }
-      }
     }
   }
 }
@@ -98,7 +87,7 @@ ht-degree: 1%
 
 >[!TIP]
 >
->您可以針對您在Experience Platform中定義的任何XDM結構，產生範例JSON資料，以協助視覺化您的客戶同意和偏好資料應如何對應。 如需詳細資訊，請參閱下列檔案：
+>您可以針對您在Experience Platform中定義的任何XDM結構，產生範例JSON資料，以協助視覺化您應如何對應客戶同意和偏好資料。 如需詳細資訊，請參閱下列檔案：
 >
 >* [在UI中產生範例資料](../ui/sample.md)
 >* [在API中產生範例資料](../api/sample-data.md)
@@ -251,36 +240,6 @@ ht-degree: 1%
 | --- | --- |
 | `time` | 上次更新客戶同意和偏好設定時的ISO 8601時間戳記。 此欄位可用來取代將時間戳記套用至個別偏好設定，以降低負載和複雜性。 在個別偏好設定下提供`time`值會覆寫該特定偏好設定的`metadata`時間戳記。 |
 
-### `idSpecific`
-
-`idSpecific` 當特定同意或偏好並非普遍適用於客戶，但僅限於單一裝置或ID時，即可使用。例如，客戶可以選擇不接收某個地址的電子郵件，同時允許另一個地址發送電子郵件。
-
->[!IMPORTANT]
->
->頻道層級同意與偏好設定（即在`idSpecific`以外的`consents`下提供的偏好設定）適用於該頻道內的ID。 因此，不論是採用相同的ID或裝置特定設定，所有通道層級的同意和偏好設定都會直接影響：
->
->* 如果客戶已選擇退出渠道級別，則會忽略`idSpecific`中的任何等同同意或偏好。
->* 如果未設定渠道層級的同意或偏好，或客戶已選擇加入，則`idSpecific`中的相同同意或偏好將獲得履行。
-
-
-`idSpecific`物件中的每個金鑰代表Adobe Experience Platform Identity Service所識別的特定身分名稱空間。 雖然您可以定義自己的自訂名稱空間來分類不同的識別碼，但建議您使用Identity Service提供的標準名稱空間之一來減少即時客戶個人檔案的儲存空間。 有關身份名稱空間的詳細資訊，請參閱Identity Service文檔中的[identity namespace overview](../../identity-service/namespaces.md)。
-
-每個namespace對象的鍵代表客戶為其設定首選項的唯一標識值。 每個識別值都可以包含一組完整的同意和偏好設定，格式與`consents`相同。
-
-```json
-"idSpecific": {
-  "email": {
-    "jdoe@example.com": {
-      "marketing": {
-        "email": {
-          "val": "n"
-        }
-      }
-    }
-  }
-}
-```
-
 ## 使用資料類型{#ingest}接收資料
 
 若要使用[!DNL Consents & Preferences]資料類型從客戶收集同意資料，您必鬚根據包含該資料類型的架構來建立資料集。
@@ -295,7 +254,7 @@ ht-degree: 1%
 
 ## 處理同意和偏好變更
 
-當客戶在您的網站上變更其同意或偏好設定時，應使用[Adobe Experience Platform Web SDK](../../edge/consent/supporting-consent.md)來收集並立即執行這些變更。 如果客戶退出資料收集，所有資料收集必須立即停止。 如果客戶退出個人化，那麼他們造訪的下一頁上應該不會出現個人化。
+當客戶在您的網站上變更其同意或偏好設定時，應使用[Adobe Experience Platform網頁SDK](../../edge/consent/supporting-consent.md)來收集並立即執行這些變更。 如果客戶退出資料收集，所有資料收集必須立即停止。 如果客戶退出個人化，那麼他們造訪的下一頁上應該不會出現個人化。
 
 ## 附錄 {#appendix}
 
