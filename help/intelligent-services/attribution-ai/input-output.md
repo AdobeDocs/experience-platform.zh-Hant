@@ -1,17 +1,17 @@
 ---
-keywords: Experience Platform；快速入門； Attribution ai；熱門主題； Attribution ai輸入； Attribution ai輸出；
+keywords: Experience Platform；入門；歸因ai；熱門主題；歸因ai輸入；歸因ai輸出；
 solution: Experience Platform, Intelligent Services
-title: 歸因人工智慧的輸入與輸出
-topic: Input and Output data for Attribution AI
-description: 以下檔案概述Attribution AI中使用的不同輸入和輸出。
+title: 輸入與輸出在Attribution AI
+topic: 輸入和輸出資料以用於Attribution AI
+description: 以下檔案概述了Attribution AI中使用的不同輸入和輸出。
+exl-id: d6dbc9ee-0c1a-4a5f-b922-88c7a36a5380
 translation-type: tm+mt
-source-git-commit: eb163949f91b0d1e9cc23180bb372b6f94fc951f
+source-git-commit: 2ef2a6431865e8ffdc2abd6cf527249e8b5ca4d0
 workflow-type: tm+mt
 source-wordcount: '2091'
 ht-degree: 3%
 
 ---
-
 
 # [!DNL Attribution AI]中的輸入和輸出
 
@@ -21,7 +21,7 @@ ht-degree: 3%
 
 [!DNL Attribution AI] 使用 [!DNL Consumer Experience Event] 資料來計算演算法分數。有關[!DNL Consumer Experience Event]的詳細資訊，請參閱[準備資料以用於智慧服務文檔](../data-preparation.md)。
 
-並非[!DNL Consumer Experience Event](CEE)架構中的所有欄都是Attribution AI的必填欄。
+並非[!DNL Consumer Experience Event](CEE)架構中的所有列都是必需的。
 
 >[!NOTE]
 >
@@ -49,7 +49,7 @@ ht-degree: 3%
 - web.webPageDetails
 - xdm:productListItems
 
-### 歷史資料
+### 歷史資料 {#data-requirements}
 
 >[!IMPORTANT]
 >
@@ -76,9 +76,9 @@ Attribution AI需要歷史資料作為模型訓練的輸入。 所需的資料�
 
 - 您想要歸因過去90天（3個月）內發生的轉換事件，並追蹤轉換事件前4週內發生的所有觸點。 輸入資料的持續時間應跨越過去90天+ 28天（4週）。 培訓時間為90天，回顧時間為28天，總計為118天。
 
-## 歸因人工智慧輸出資料
+## Attribution AI輸出資料
 
-Attribution AI輸出如下：
+Attribution AI輸出：
 
 - [原始粒度分數](#raw-granular-scores)
 - [匯總分數](#aggregated-attribution-scores)
@@ -89,7 +89,7 @@ Attribution AI輸出如下：
 
 ### 原始粒度分數{#raw-granular-scores}
 
-歸因AI會以最細微的層級輸出歸因分數，讓您可以依任何分數欄來切割分數。 若要在UI中檢視這些分數，請閱讀[檢視原始分數路徑](#raw-score-path)的章節。 若要使用API下載分數，請造訪[下載Attribution AI](./download-scores.md)檔案中的分數。
+Attribution AI會以最細微的層級輸出歸因分數，讓您可以依任何分數欄來切割分數。 若要在UI中檢視這些分數，請閱讀[檢視原始分數路徑](#raw-score-path)的章節。 若要使用API下載分數，請造訪[下載Attribution AI](./download-scores.md)檔案中的分數。
 
 >[!NOTE]
 >
@@ -108,11 +108,11 @@ Attribution AI輸出如下：
 | eventMergeId（字串） | True | 一個ID，可關聯或合併多個實質上是相同事件或應該合併的[!DNL Experience Events]。 這將由資料產生器在擷取之前填入。<br> **範例：** 575525617716-0-edc2ed37-1aab-4750-a820-1c2b3844b8c4 |
 | _id（字串） | False | 時間序列事件的唯一識別碼。<br> **範例：** 4461-edc2ed37-1ab-4750-a820-1c2b3844b8c4 |
 | _tenantId（物件） | False | 與您的保留ID對應的頂層物件容器。<br> **範例：** _atsdsnrmmsv2 |
-| your_schema_name（對象） | False | 使用轉換事件對所有與其關聯的觸點事件及其元資料進行分數。<br> **範例：** Attribution AI分數- Model Name_2020 |
+| your_schema_name（對象） | False | 使用轉換事件對所有與其關聯的觸點事件及其元資料進行分數。<br> **範例：** Attribution AI分數——模型名稱__2020 |
 | 區段（字串） | True | 轉換區段，例如模型所依據的地域劃分。 若沒有區段，則區段與conversionName相同。<br> **範例：** ORDER_US |
 | conversionName（字串） | True | 設定期間設定的轉換名稱。<br> **範例：** 訂單、銷售線索、瀏覽 |
 | 轉換（物件） | False | 轉換中繼資料欄。 |
-| dataSource（字串） | True | 資料來源的全域唯一識別。<br> **範例：** Adobe Analytics |
+| dataSource（字串） | True | 資料來源的全域唯一識別。<br> **示例：** Adobe Analytics |
 | eventSource（字串） | True | 實際事件發生時的來源。<br> **範例：** Adobe.com |
 | eventType（字串） | True | 此時間系列記錄的主要事件類型。<br> **範例：** Order |
 | geo（字串） | True | 傳送轉換的地理位置`placeContext.geo.countryCode`。<br> **範例：** US |
@@ -136,11 +136,11 @@ Attribution AI輸出如下：
 
 ### 檢視原始分數路徑(UI){#raw-score-path}
 
-您可以在UI中檢視原始分數的路徑。 首先，在平台UI中選擇&#x200B;**[!UICONTROL 結構描述]**，然後從&#x200B;**[!UICONTROL 瀏覽]**&#x200B;標籤中搜索並選擇您的歸因AI分數結構描述。
+您可以在UI中檢視原始分數的路徑。 首先，在「平台UI」中選擇&#x200B;**[!UICONTROL Schemas]**，然後從&#x200B;**[!UICONTROL Browse]**&#x200B;標籤中搜尋並選取您的歸因AI分數架構。
 
 ![選擇您的架構](./images/input-output/schemas_browse.png)
 
-接著，在UI的&#x200B;**[!UICONTROL Structure]**&#x200B;窗口中選擇一個欄位，**[!UICONTROL Field properties]**&#x200B;頁籤開啟。 在&#x200B;**[!UICONTROL 欄位屬性]**&#x200B;中是對應至原始分數的路徑欄位。
+接著，在UI的&#x200B;**[!UICONTROL Structure]**&#x200B;視窗中選取欄位，**[!UICONTROL Field properties]**&#x200B;標籤隨即開啟。 在&#x200B;**[!UICONTROL Field properties]**&#x200B;中是對應至原始分數的路徑欄位。
 
 ![挑選結構](./images/input-output/field_properties.png)
 
@@ -149,11 +149,11 @@ Attribution AI輸出如下：
 
 如果日期範圍少於30天，可從平台UI以CSV格式下載匯總的分數。
 
-歸因AI支援兩類歸因分數：演算法和規則型分數。
+Attribution AI支援兩類歸因分數：演算法和規則型分數。
 
-歸因人工智慧產生兩種不同的演算法分數，遞增和影響。 受影響的分數是每個行銷觸點所負責的轉換率的一部分。 遞增分數是行銷觸點直接造成的邊際影響量。 遞增分數與受影響分數的主要差異在於遞增分數會考慮基準效果。 不會假設轉換純粹是由先前的行銷觸點所造成。
+Attribution AI產生兩種不同的演算法分數，遞增和影響。 受影響的分數是每個行銷觸點所負責的轉換率的一部分。 遞增分數是行銷觸點直接造成的邊際影響量。 遞增分數與受影響分數的主要差異在於遞增分數會考慮基準效果。 不會假設轉換純粹是由先前的行銷觸點所造成。
 
-以下是Adobe Experience Platform UI的Attribution AI架構輸出範例：
+以下是Adobe Experience PlatformUI的Attribution AI架構輸出範例：
 
 ![](./images/input-output/schema_screenshot.png)
 
@@ -228,4 +228,4 @@ Attribution AI輸出如下：
 
 ## 下一步 {#next-steps}
 
-準備好資料並準備好所有憑證和結構描述後，請從[歸因AI使用指南](./user-guide.md)開始。 本指南會逐步帶您建立Attribution AI的例項。
+準備好資料並準備好所有憑據和方案後，請從[Attribution AI使用手冊](./user-guide.md)開始。 本指南會逐步帶您建立Attribution AI的例項。
