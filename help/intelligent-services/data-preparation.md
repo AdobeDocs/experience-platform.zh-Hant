@@ -3,21 +3,21 @@ keywords: Experience Platform；家庭；智慧服務；熱門主題；智慧服
 solution: Experience Platform, Intelligent Services
 title: 準備資料以用於智慧型服務
 topic: Intelligent Services
-description: 為了讓智慧型服務能夠從行銷事件資料中發掘見解，資料必須以標準結構進行語義豐富和維護。 智慧型服務運用Experience Data Model(XDM)架構來達成此目標。 具體來說，Intelligent Services中使用的所有資料集都必須符合Consumer ExperienceEvent(CEE)XDM架構。
+description: 為了讓智慧型服務能夠從行銷事件資料中發掘見解，資料必須以標準結構進行語義豐富和維護。 智慧型服務使用Experience Data Model(XDM)架構來達成此目的。
 exl-id: 17bd7cc0-da86-4600-8290-cd07bdd5d262
 translation-type: tm+mt
-source-git-commit: b311a5970a121a3277bdb72f5a1285216444b339
+source-git-commit: 867c97d58f3496cb9e9e437712f81bd8929ba99f
 workflow-type: tm+mt
-source-wordcount: '2020'
-ht-degree: 1%
+source-wordcount: '2387'
+ht-degree: 0%
 
 ---
 
 # 準備要用於[!DNL Intelligent Services]的資料
 
-為了[!DNL Intelligent Services]從行銷事件資料中發掘見解，資料必須在標準結構中加以語義豐富和維護。 [!DNL Intelligent Services] 利 [!DNL Experience Data Model] 用(XDM)模式來實現此目的。具體而言，[!DNL Intelligent Services]中使用的所有資料集都必須符合Consumer ExperienceEvent(CEE)XDM架構。
+為了[!DNL Intelligent Services]從行銷事件資料中發掘見解，資料必須在標準結構中加以語義豐富和維護。 [!DNL Intelligent Services] 利 [!DNL Experience Data Model] 用(XDM)模式來實現此目的。具體而言，[!DNL Intelligent Services]中使用的所有資料集都必須符合Consumer ExperienceEvent(CEE)XDM架構或使用Adobe Analytics連接器。 此外，客戶AI還支援Adobe Audience Manager介面。
 
-本檔案提供將行銷事件資料從多個管道對應至此架構的一般指引，概述有關架構中重要欄位的資訊，以協助您判斷如何有效地將資料對應至其架構。
+本檔案提供將行銷事件資料從多個通道對應至CEE架構的一般指引，概述架構中重要欄位的資訊，以協助您決定如何有效地將資料對應至其架構。 如果您打算使用Adobe Analytics資料，請查看[Adobe Analytics資料準備](#analytics-data)的部分。 如果您打算使用Adobe Audience Manager資料（僅限客戶人工智慧），請檢視[AdobeAudience Manager資料準備](#AAM-data)的章節。
 
 ## 工作流程摘要
 
@@ -31,12 +31,32 @@ ht-degree: 1%
 1. 使用您的存取憑證，將資料上傳至Blob容器。
 1. 使用Adobe咨詢服務獲取映射至[消費者體驗事件模式](#cee-schema)的資料，並收錄至[!DNL Intelligent Services]。
 
+### Adobe Analytics資料準備{#analytics-data}
+
+客戶人工智慧和Attribution AI本機支援Adobe Analytics資料。 若要使用Adobe Analytics資料，請依照說明檔案所述的步驟，設定[Analytics來源連接器](../sources/tutorials/ui/create/adobe-applications/analytics.md)。
+
+在來源連接器將您的資料串流至Experience Platform後，您就可以在執行個體設定期間選取Adobe Analytics做為資料來源，接著選取資料集。 在連線設定期間，會自動建立所有必要的架構欄位和混合。 您不需要將資料集（擷取、轉換、載入）ETL為CEE格式。
+
+>[!IMPORTANT]
+>
+>Adobe Analytics連接器回填資料最長需要4週。 如果您最近設定了連線，您應確認資料集的資料長度是客戶或Attribution AI所需的最短資料長度。 請檢閱[客戶AI](./customer-ai/input-output.md#data-requirements)或[Attribution AI](./attribution-ai/input-output.md#data-requirements)中的歷史資料區段，並確認您擁有足夠的資料以達成預測目標。
+
+### Adobe Audience Manager資料準備（僅限客戶人工智慧）{#AAM-data}
+
+客戶人工智慧支援Adobe Audience Manager資料。 要使用Audience Manager資料，請按照文檔中介紹的步驟設定[Audience Manager源連接器](../sources/tutorials/ui/create/adobe-applications/audience-manager.md)。
+
+在來源連接器將您的資料串流至Experience Platform後，您就可以在客戶AI設定期間，選擇Adobe Audience Manager作為資料來源，接著選擇資料集。 在連線設定期間，會自動建立所有必要的架構欄位和混合。 您不需要將資料集（擷取、轉換、載入）ETL為CEE格式。
+
+>[!IMPORTANT]
+>
+>如果您最近設定了連接器，您應驗證資料集是否具有所需的最小資料長度。 請檢閱[輸入／輸出檔案](./customer-ai/input-output.md)中有關客戶人工智慧的歷史資料區段，並確認您有足夠的資料可用於預測目標。
+
 ### [!DNL Experience Platform] 資料準備
 
-如果您的資料已儲存在[!DNL Platform]中，請遵循下列步驟：
+如果您的資料已儲存在[!DNL Platform]中，而未串流透過Adobe Analytics或Adobe Audience Manager（僅限客戶AI）來源連接器，請遵循下列步驟。 如果您計畫與客戶AI合作，仍建議您瞭解CEE架構。
 
 1. 檢閱[Consumer ExperienceEvent架構](#cee-schema)的結構，並判斷您的資料是否可對應至其欄位。
-1. 請聯絡Adobe諮詢服務，協助您將資料對應至架構，並將其內嵌至[!DNL Intelligent Services]，或[，如果您要自行對應資料，請依照本指南中的步驟進行。](#mapping)
+2. 請聯絡Adobe諮詢服務，協助您將資料對應至架構，並將其內嵌至[!DNL Intelligent Services]，或[，如果您要自行對應資料，請依照本指南中的步驟進行。](#mapping)
 
 ## 瞭解CEE方案{#cee-schema}
 
@@ -48,7 +68,7 @@ CEE架構與所有XDM ExperienceEvent架構一樣，會在發生事件（或事�
 
 ![](./images/data-preparation/schema-expansion.gif)
 
-與所有XDM模式一樣，CEE混合模式具有可擴充性。 換言之，CEE混音中可新增其他欄位，若有需要，可在多個結構中加入不同的變數。
+與所有XDM模式一樣，CEE混合模式具有可擴充性。 換言之，CEE混音中可新增其他欄位，如有需要，可在多個結構中加入不同的變化。
 
 在[public XDM repository](https://github.com/adobe/xdm/blob/797cf4930d5a80799a095256302675b1362c9a15/docs/reference/context/experienceevent-consumer.schema.md)中可找到混音的完整示例。 此外，您還可以檢視並複製下列[JSON檔案](https://github.com/AdobeDocs/experience-platform.en/blob/master/help/intelligent-services/assets/CEE_XDM_sample_rows.json)，以取得如何結構化資料以符合CEE架構的範例。 在瞭解以下章節中概述的關鍵欄位時，請參閱這兩個範例，以決定如何將您自己的資料對應至架構。
 
