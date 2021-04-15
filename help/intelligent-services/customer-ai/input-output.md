@@ -1,27 +1,96 @@
 ---
-keywords: Experience Platform；快速入門；客戶ai；熱門主題；客戶ai輸入；客戶ai輸出
+keywords: Experience Platform；入門；客戶ai；熱門主題；客戶ai輸入；客戶ai輸出
 solution: Experience Platform, Intelligent Services, Real-time Customer Data Platform
 title: 客戶人工智慧的輸入與輸出
-topic: Getting started
-description: 以下檔案概述Customer AI中使用的不同輸入和輸出。
+topic: 快速入門
+description: 進一步瞭解客戶人工智慧所使用的必要事件、輸入和輸出。
+exl-id: 9b21a89c-bf48-4c45-9eb3-ace38368481d
 translation-type: tm+mt
-source-git-commit: eb163949f91b0d1e9cc23180bb372b6f94fc951f
+source-git-commit: 2ef2a6431865e8ffdc2abd6cf527249e8b5ca4d0
 workflow-type: tm+mt
-source-wordcount: '840'
+source-wordcount: '2867'
 ht-degree: 1%
 
 ---
 
-
 # 客戶人工智慧中的輸入與輸出
 
-以下檔案概述Customer AI中使用的不同輸入和輸出。
+以下檔案概述客戶人工智慧中使用的不同必要事件、輸入和輸出。
+
+## 快速入門
+
+客戶人工智慧可透過分析下列其中一個資料集來預測客戶流失或轉化傾向分數：
+
+- 消費者體驗事件(CEE)資料集
+- Adobe Analytics使用[Analytics來源連接器](../../sources/tutorials/ui/create/adobe-applications/analytics.md)的資料
+- Adobe Audience Manager資料使用[Audience Manager源連接器](../../sources/tutorials/ui/create/adobe-applications/audience-manager.md)
+
+>[!IMPORTANT]
+>
+>來源連接器回填資料最多需要4週。 如果您最近設定了連接器，您應驗證資料集是否具有客戶AI所需的最小資料長度。 請檢閱[歷史資料](#data-requirements)區段，以確認您有足夠的資料可用於預測目標。
+
+本文檔要求對CEE架構有基本的瞭解。 請先閱讀[智慧型服務資料準備](../data-preparation.md)檔案，再繼續。
+
+下表概述本檔案中使用的一些常見術語：
+
+| 詞語 | 定義 |
+| --- | --- |
+| [體驗資料模型(XDM)](../../xdm/home.md) | XDM是基礎性的架構，可讓Adobe Experience Platform的Adobe Experience Cloud在正確的時間，在正確的通道上向正確的人傳遞正確的訊息。 建立Experience Platform的方法XDM System可操作Experience Data Model架構，供平台服務使用。 |
+| XDM 結構 | Experience Platform 會使用結構，以一致且可重複使用的方式說明資料結構。藉由定義跨系統的一致資料，將可輕易保留意義，而發揮資料應有的價值。在將資料匯入平台之前，必須先組合架構，以描述資料的結構，並為每個欄位中可包含的資料類型提供限制。 結構描述由基本XDM類和零個或多個混合組成。 |
+| XDM類 | 所有XDM結構描述的資料可以分類為記錄或時間序列。 架構的資料行為由架構的類別定義，當初建立架構時，會指派給架構。 XDM類描述了模式必須包含的最小屬性數，以表示特定資料行為。 |
+| [Mixins](../../xdm/schema/composition.md) | 定義方案中一個或多個欄位的元件。 Mixins可強制其欄位在架構階層中的顯示方式，因此在每個架構中都會顯示與其所包含的相同結構。 Mixins僅與特定類相容，由其`meta:intendedToExtend`屬性所識別。 |
+| [資料類型](../../xdm/schema/composition.md) | 也可以為架構提供一個或多個欄位的元件。 但是，與mixin不同，資料類型不限於特定類別。 這使得資料類型成為更有彈性的選項，以說明可在具有潛在不同類別的多個結構中重複使用的常用資料結構。 CEE和Adobe Analytics模式都支援本文檔中概述的資料類型。 |
+| 客戶流失 | 取消或選擇不續約其訂閱之帳戶百分比的測量。 高流失率可能會對月度經常性收入(MRR)產生負面影響，也可能表示對產品或服務的不滿。 |
+| [即時客戶個人檔案](../../profile/home.md) | 即時客戶個人檔案提供集中的消費者個人檔案，以進行針對性的個人化體驗管理。 每個描述檔都包含匯總至所有系統的資料，以及與您使用Experience Platform的任何系統中發生之個人相關之事件的可操作時間戳記帳戶。 |
 
 ## 客戶人工智慧輸入資料
 
-客戶人工智慧使用消費者體驗事件資料來計算傾向分數。 如需消費者體驗事件的詳細資訊，請參閱[準備資料以用於智慧型服務檔案](../data-preparation.md)。
+>[!TIP]
+>
+> 客戶人工智慧會自動判斷哪些事件對預測有用，並在可用資料不足以產生品質預測時發出警告。
 
-### 歷史資料
+客戶AI支援CEE、Adobe Analytics和Adobe Audience Manager資料集。 CEE架構要求您在架構建立過程中添加混合。 如果您使用Adobe Analytics或Adobe Audience Manager資料集，來源連接器會在連線程式中直接對應下列的標準事件（商務、網頁詳細資訊、應用程式和搜尋）。
+
+有關映射Adobe Analytics資料或Audience Manager資料的詳細資訊，請訪問[Analytics欄位映射](../../sources/connectors/adobe-applications/analytics.md)或[Audience Manager欄位映射](../../sources/connectors/adobe-applications/mapping/audience-manager.md)指南。
+
+### 客戶AI {#standard-events}使用的標準事件
+
+XDM體驗事件可用來判斷各種客戶行為。 根據您的資料結構，下列事件類型可能不包含客戶的所有行為。 您需要決定哪些欄位具備必要資料，才能清楚明確地識別Web使用者活動。 視您的預測目標而定，所需的必填欄位可能會變更。
+
+客戶人工智慧依賴不同的事件類型來建立模型功能。 這些事件類型會使用多個XDM混合自動新增至您的架構。
+
+>[!NOTE]
+>
+>如果您使用Adobe Analytics或Adobe Audience Manager資料，系統會自動建立結構，並包含擷取資料所需的標準事件。 如果您要建立自己的自訂CEE架構來擷取資料，則需要考慮擷取資料所需的混合。
+
+您不需要針對下列每個標準事件提供資料，但某些情況需要特定事件。 如果您有任何可用的標準事件資料，建議您將其納入架構中。 例如，如果您想要建立用於預測購買事件的Customer AI應用程式，請務必從`Commerce`和`Web page details`資料類型取得資料。
+
+若要在平台UI中檢視混音，請選取左側導軌上的&#x200B;**[!UICONTROL Schemas]**&#x200B;標籤，然後選取&#x200B;**[!UICONTROL Mixins]**&#x200B;標籤。
+
+
+| Mixin | 事件類型 | XDM欄位路徑 |
+| --- | --- | --- |
+| [!UICONTROL Commerce Details] | 訂單 | <li> commerce.order.purchaseID </li> <li> productListItems.SKU </li> |
+|  | productListViews | <li> commerce.productListViews.value </li> <li> productListItems.SKU </li> |
+|  | 結帳 | <li> commerce.checkouts.value </li> <li> productListItems.SKU </li> |
+|  | 購買 | <li> commerce.purchases.value </li> <li> productListItems.SKU </li> |
+|  | productListRemoves | <li> commerce.productListRemovals.value </li> <li> productListItems.SKU </li> |
+|  | productListOpens | <li> commerce.productListOpens.value </li> <li> productListItems.SKU </li> |
+|  | productViews | <li> commerce.productViews.value </li> <li> productListItems.SKU </li> |
+| [!UICONTROL Web Details] | webVisit | web.webPageDetails.name |
+|  | webInteraction | web.webInteraction.linkClicks.value |
+| [!UICONTROL Application Details] | applicationCloses | <li> application.applicationCloses.value </li> <li> application.name </li> |
+|  | applicationCrances | <li> application.crashes.value </li> <li> application.name </li> |
+|  | applicationFeatureUsages | <li> application.featureUsages.value </li> <li> application.name </li> |
+|  | applicationFirstLaunches | <li> application.firstLaunches.value </li> <li> application.name </li> |
+|  | applicationInstalls | <li> application.installs.value </li> <li> application.name </li> |
+|  | applicationLaunches | <li> application.launches.value </li> <li> application.name </li> |
+|  | applicationUpgrades | <li> application.upgrades.value </li> <li> application.name </li> |
+| [!UICONTROL Search Details] | 搜尋 | search.keywords |
+
+此外，客戶人工智慧可以使用訂閱資料來建立更佳的客戶流失模型。 每個使用[[!UICONTROL Subscription]](../../xdm/data-types/subscription.md)資料類型格式的配置檔案都需要訂閱資料。 但是，大部分欄位都是選用的，對於最佳流失模型，強烈建議您盡可能多地提供資料，例如`startDate`、`endDate`和任何其他相關詳細資訊。
+
+### 歷史資料 {#data-requirements}
 
 客戶人工智慧需要模型訓練的歷史資料，但所需的資料量是根據兩個關鍵元素：結果窗口和合格人口。
 
@@ -47,13 +116,150 @@ ht-degree: 1%
 
 除了所需的最低資料外，客戶人工智慧也能處理最新資料。 在此使用案例中，客戶AI會根據使用者最近的行為資料預測未來。 換言之，更新的資料可能會產生更準確的預測。
 
-## 客戶人工智慧輸出資料
+### 範例藍本
 
-客戶AI會針對個別個人檔案產生數個屬性，這些屬性被認定為符合資格。 根據您已布建的項目，有兩種方式可以使用分數。 如果您的資料集已啟用即時客戶個人檔案，您可以透過即時客戶個人檔案來使用。 如果您沒有即時客戶個人檔案，您可以下載資料湖上可用的客戶人工智慧輸出資料集。
+在本節中，說明客戶AI例項的不同藍本，以及所需和建議的事件類型。 有關mixin及其欄位路徑的詳細資訊，請參閱上面的[標準事件表](#standard-events)。
 
 >[!NOTE]
 >
->「即時客戶描述檔」會使用輸出值，可用來建立和定義區段。
+> 必要事件類型可用來明確識別Web使用者活動。 所需事件類型的數量將根據模式的預測目標和結構而改變。 如果您不確定需要某個特定事件類型，建議在建立CEE架構時加入該事件類型。 如果您使用Adobe Analytics或Adobe Audience Manager資料，則必須提供必要的標準事件，視您串流的資料而定。
+
+### 方案1:電子商務零售網站上的購買轉換
+
+**預測目標：** 預測合格設定檔的轉換傾向，以便在網站上購買特定的服裝文章。
+
+**必要的標準事件類型：**
+
+下列事件類型是最佳客戶人工智慧輸出與此特定預測目標的必要條件。 根據您的預測目標排除必要事件是可能的，但排除多個事件可能會導致結果不佳。
+
+- 訂單
+- 結帳
+- 購買
+- webVisit
+- 搜尋
+
+**其他建議的標準事件類型：**
+
+在設定客戶AI例項時，可能會根據目標和合格人口的複雜性，要求剩餘的[事件類型](#standard-events)。 建議如果資料適用於特定資料類型，則此資料會包含在您的架構中。
+
+### 方案2:媒體串流服務網站上的訂閱轉換
+
+**預測目標：** 預測合格設定檔訂閱至特定訂閱層級（例如標準或優質計畫）的訂閱轉換傾向。
+
+**必要的標準事件類型：**
+
+下列事件類型是最佳客戶人工智慧輸出與此特定預測目標的必要條件。 根據您的預測目標排除必要事件是可能的，但排除多個事件可能會導致結果不佳。
+
+- 訂單
+- 結帳
+- 購買
+- webVisit
+- 搜尋
+
+在此範例中，`order`、`checkouts`和`purchases`用於指出已購買訂閱及其類型。
+
+此外，對於精確的模型，建議您使用[訂閱資料類型](../../xdm/data-types/subscription.md)中的部分可用屬性。
+
+**其他建議的標準事件類型：**
+
+在設定客戶AI例項時，可能會根據目標和合格人口的複雜性，要求剩餘的[事件類型](#standard-events)。 建議如果資料適用於特定資料類型，則此資料會包含在您的架構中。
+
+### 方案3:電子商務零售網站的流失率
+
+**預測目** 標：預測購買事件不發生的可能性。
+
+**必要的標準事件類型：**
+
+下列事件類型是最佳客戶人工智慧輸出與此特定預測目標的必要條件。 根據您的預測目標排除必要事件是可能的，但排除多個事件可能會導致結果不佳。
+
+- 訂單
+- 結帳
+- 購買
+- webVisit
+- 搜尋
+
+**其他建議的標準事件類型：**
+
+在設定客戶AI例項時，可能會根據目標和合格人口的複雜性，要求剩餘的[事件類型](#standard-events)。 建議如果資料適用於特定資料類型，則此資料會包含在您的架構中。
+
+### 方案4:電子商務零售網站的向上銷售轉換
+
+**預測目** 標：預測已購買特定產品以購買新相關產品之人口的購買傾向。
+
+**必要的標準事件類型：**
+
+下列事件類型是最佳客戶人工智慧輸出與此特定預測目標的必要條件。 根據您的預測目標排除必要事件是可能的，但排除多個事件可能會導致結果不佳。
+
+- 訂單
+- 結帳
+- 購買
+- webVisit
+- 搜尋
+
+**其他建議的標準事件類型：**
+
+在設定客戶AI例項時，可能會根據目標和合格人口的複雜性，要求剩餘的[事件類型](#standard-events)。 建議如果資料適用於特定資料類型，則此資料會包含在您的架構中。
+
+### 方案5:取消訂閱（流失）線上新聞出版社
+
+**預測目標：** 預測合格人口下個月取消訂閱服務的傾向。
+
+**必要的標準事件類型：**
+
+下列事件類型是最佳客戶人工智慧輸出與此特定預測目標的必要條件。 根據您的預測目標排除必要事件是可能的，但排除多個事件可能會導致結果不佳。
+
+- webVisit
+- 搜尋
+
+此外，對於精確的模型，建議您使用[訂閱資料類型](../../xdm/data-types/subscription.md)中的部分可用屬性。
+
+**其他建議的標準事件類型：**
+
+在設定客戶AI例項時，可能會根據目標和合格人口的複雜性，要求剩餘的[事件類型](#standard-events)。 建議如果資料適用於特定資料類型，則此資料會包含在您的架構中。
+
+### 方案6:啟動行動應用程式
+
+**預測目標：** 預測合格設定檔在未來X天內啟動付費行動應用程式的傾向。這類似於預測「每月活動使用者」的關鍵績效指標(KPI)。
+
+**必要的標準事件類型：**
+
+下列事件類型是最佳客戶人工智慧輸出與此特定預測目標的必要條件。 根據您的預測目標排除必要事件是可能的，但排除多個事件可能會導致結果不佳。
+
+- 訂單
+- 結帳
+- 購買
+- webVisit
+- applicationCloses
+- applicationCrances
+- applicationFeatureUsages
+- applicationFirstLaunches
+- applicationInstalls
+- applicationLaunches
+- applicationUpgrades
+
+在此範例中，當需要購買行動應用程式時，會使用`order`、`checkouts`和`purchases`。
+
+**其他建議的標準事件類型：**
+
+在設定客戶AI例項時，可能會根據目標和合格人口的複雜性，要求剩餘的[事件類型](#standard-events)。 建議如果資料適用於特定資料類型，則此資料會包含在您的架構中。
+
+### 方案7:已實現特徵(Adobe Audience Manager)
+
+**預測目** 標：預測某些特徵的傾向。
+
+**必要的標準事件類型：**
+
+為了使用來自Adobe Audience Manager的特性，您需要使用[Audience Manager源連接器](../../sources/tutorials/ui/create/adobe-applications/audience-manager.md)建立源連接。 源連接器自動建立具有正確混音的模式。 您不需要手動添加其他事件類型，方案才能與客戶AI一起使用。
+
+當您設定新客戶AI例項時，`audienceName`和`audienceID`可用於在定義目標時選取要計分的特定特徵。
+
+## 客戶人工智慧輸出資料
+
+客戶AI會針對個別個人檔案產生數個屬性，這些屬性被認定為符合資格。 根據您已布建的內容，有兩種方式可以使用分數（輸出）。 如果您有啟用「即時客戶個人檔案」的資料集，您可以在[區段產生器](../../segmentation/ui/segment-builder.md)中使用來自「即時客戶個人檔案」的見解。 如果您沒有啟用設定檔的資料集，您可以[下載資料湖上可用的客戶AI輸出](./user-guide/download-scores.md)資料集。
+
+>[!NOTE]
+>
+> 「即時客戶描述檔」會使用輸出值，可用來建立和定義區段。
 
 下表說明在Customer AI輸出中找到的各種屬性：
 
