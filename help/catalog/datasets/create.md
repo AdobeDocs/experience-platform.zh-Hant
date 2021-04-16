@@ -6,7 +6,7 @@ topic: 資料集
 description: 本檔案提供使用Adobe Experience PlatformAPI建立資料集，以及使用檔案填入資料集的一般步驟。
 exl-id: 3a5f48cf-ad05-4b9e-be1d-ff213a26a477
 translation-type: tm+mt
-source-git-commit: 610ce5c6dca5e7375b941e7d6f550382da10ca27
+source-git-commit: 727c9dbd87bacfd0094ca29157a2d0283c530969
 workflow-type: tm+mt
 source-wordcount: '1306'
 ht-degree: 1%
@@ -71,7 +71,7 @@ ht-degree: 1%
 GET /tenant/schemas/{schema meta:altId or URL encoded $id URI}
 ```
 
-**請求**
+**要求**
 
 ```SHELL
 curl -X GET \
@@ -189,7 +189,7 @@ curl -X GET \
 POST /dataSets
 ```
 
-**請求**
+**要求**
 
 ```SHELL
 curl -X POST \
@@ -204,11 +204,6 @@ curl -X POST \
     "schemaRef": {
         "id": "https://ns.adobe.com/{TENANT_ID}/schemas/719c4e19184402c27595e65b931a142b",
         "contentType": "application/vnd.adobe.xed+json;version=1"
-    },
-    "fileDescription": {
-        "persisted": true,
-        "containerFormat": "parquet",
-        "format": "parquet"
     }
 }'
 ```
@@ -242,7 +237,7 @@ curl -X POST \
 POST /batches
 ```
 
-**請求**
+**要求**
 
 請求內文包含「datasetId」欄位，其值為上一步驟中產生的`{DATASET_ID}`。
 
@@ -318,7 +313,7 @@ PUT /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 | `{DATASET_ID}` | 批次將保留的資料集的`id`。 |
 | `{FILE_NAME}` | 您要上傳的檔案名稱。 |
 
-**請求**
+**要求**
 
 ```SHELL
 curl -X PUT 'https://platform.adobe.io/data/foundation/import/batches/5d01230fc78a4e4f8c0c6b387b4b8d1c/datasets/5c8c3c555033b814b69f947f/files/loyaltyData.parquet' \
@@ -347,7 +342,7 @@ POST /batches/{BATCH_ID}?action=COMPLETE
 | --- | --- |
 | `{BATCH_ID}` | 您標籤為完成的批的`id`。 |
 
-**請求**
+**要求**
 
 ```SHELL
 curl -X POST "https://platform.adobe.io/data/foundation/import/batches/5d01230fc78a4e4f8c0c6b387b4b8d1c?action=COMPLETE" \
@@ -374,7 +369,7 @@ GET /batches?batch={BATCH_ID}
 | --- | --- |
 | `{BATCH_ID}` | 要監視的批的`id`。 |
 
-**請求**
+**要求**
 
 ```SHELL
 curl -X GET \
