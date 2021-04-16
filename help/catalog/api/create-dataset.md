@@ -6,7 +6,7 @@ topic: 開發人員指南
 description: 本檔案說明如何在Catalog Service API中建立資料集物件。
 exl-id: f3e5de7f-1781-4898-ac42-063eb51e661a
 translation-type: tm+mt
-source-git-commit: 610ce5c6dca5e7375b941e7d6f550382da10ca27
+source-git-commit: 727c9dbd87bacfd0094ca29157a2d0283c530969
 workflow-type: tm+mt
 source-wordcount: '256'
 ht-degree: 1%
@@ -27,7 +27,7 @@ ht-degree: 1%
 POST /dataSets
 ```
 
-**請求**
+**要求**
 
 下列請求會建立參照先前定義之架構的資料集。
 
@@ -44,11 +44,6 @@ curl -X POST \
     "schemaRef": {
         "id": "https://ns.adobe.com/{TENANT_ID}/schemas/719c4e19184402c27595e65b931a142b",
         "contentType": "application/vnd.adobe.xed+json;version=1"
-    },
-    "fileDescription": {
-        "persisted": true,
-        "containerFormat": "parquet",
-        "format": "parquet"
     }
 }'
 ```
