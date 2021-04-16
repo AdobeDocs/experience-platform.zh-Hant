@@ -7,7 +7,7 @@ type: Tutorial
 description: 本教學課程涵蓋使用來源連接器和API擷取串流資料並將其匯入平台的步驟。
 exl-id: 898df7fe-37a9-4495-ac05-30029258a6f4
 translation-type: tm+mt
-source-git-commit: a63208dcdbe6851262e567a89c00b160dffa0e41
+source-git-commit: 727c9dbd87bacfd0094ca29157a2d0283c530969
 workflow-type: tm+mt
 source-wordcount: '1499'
 ht-degree: 2%
@@ -82,7 +82,7 @@ ht-degree: 2%
 POST /sourceConnections
 ```
 
-**請求**
+**要求**
 
 ```shell
 curl -X POST \
@@ -138,7 +138,7 @@ GET /flowservice/sourceConnections/{CONNECTION_ID}
 | --------- | ----------- |
 | `{CONNECTION_ID}` | 先前建立的sourceConnections的`id`值。 |
 
-**請求**
+**要求**
 
 ```shell
 curl -X GET https://platform.adobe.io/data/foundation/flowservice/sourceConnections/e96d6135-4b50-446e-922c-6dd66672b6b2 \
@@ -215,7 +215,7 @@ curl -X GET https://platform.adobe.io/data/foundation/flowservice/sourceConnecti
 POST /tenant/schemas
 ```
 
-**請求**
+**要求**
 
 以下示例請求建立一個XDM模式以擴展XDM [!DNL Individual Profile]類。
 
@@ -323,7 +323,7 @@ curl -X POST \
 POST /catalog/dataSets
 ```
 
-**請求**
+**要求**
 
 ```shell
 curl -X POST \
@@ -337,9 +337,6 @@ curl -X POST \
         "schemaRef": {
             "id": "https://ns.adobe.com/{TENANT_ID}/schemas/e45dd983026ce0daec5185cfddd48cbc0509015d880d6186",
             "contentType": "application/vnd.adobe.xed-full-notext+json; version=1"
-        },
-        "fileDescription": {
-            "format": "parquet"
         },
         "tags": {
             "identity": [
@@ -380,7 +377,7 @@ curl -X POST \
 POST /targetConnections
 ```
 
-**請求**
+**要求**
 
 ```shell
 curl -X POST \
@@ -432,7 +429,7 @@ curl -X POST \
 POST /conversion/mappingSets
 ```
 
-**請求**
+**要求**
 
 ```shell
 curl -X POST \
@@ -491,7 +488,7 @@ curl -X POST \
 GET /flowSpecs?property=name=="Steam data with transformation"
 ```
 
-**請求**
+**要求**
 
 ```shell
 curl -X GET \
@@ -590,7 +587,7 @@ curl -X GET \
 POST /flows
 ```
 
-**請求**
+**要求**
 
 ```shell
 curl -X POST \
@@ -656,7 +653,7 @@ POST /collection/{CONNECTION_ID}
 | --------- | ----------- |
 | `{CONNECTION_ID}` | 您新建立的串流連線的`id`值。 |
 
-**請求**
+**要求**
 
 範例請求會將原始資料收錄至先前建立的串流端點。
 
