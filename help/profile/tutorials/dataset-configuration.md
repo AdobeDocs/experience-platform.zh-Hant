@@ -1,17 +1,17 @@
 ---
-keywords: Experience Platform;profile；即時客戶配置檔案；疑難排解；API；啟用資料集
+keywords: Experience Platform；配置檔案；即時客戶配置檔案；故障排除；API；啟用資料集
 title: 使用API設定描述檔和身分服務的資料集
-topic: tutorial
+topic: 教學課程
 type: Tutorial
-description: 本教學課程說明如何啟用資料集，以便與使用Adobe Experience Platform API的即時客戶個人檔案和身分服務搭配使用。
+description: 本教學課程示範如何啟用資料集以搭配使用Adobe Experience PlatformAPI的即時客戶個人檔案和身分服務。
+exl-id: 142cb7df-072a-4f3a-8a9c-9a78afb35312
 translation-type: tm+mt
-source-git-commit: cad9c690be986961aea2969ef0ade975f33a8ee5
+source-git-commit: 87729e4996b0b2ac26e1a0abaa80af717825f9e6
 workflow-type: tm+mt
-source-wordcount: '1057'
+source-wordcount: '1058'
 ht-degree: 1%
 
 ---
-
 
 # 使用API為[!DNL Profile]和[!DNL Identity Service]配置資料集
 
@@ -26,7 +26,7 @@ ht-degree: 1%
 
 ## 快速入門
 
-本教學課程需要對管理[!DNL Profile]啟用資料集時涉及的各種Adobe Experience Platform服務有充份的瞭解。 在開始本教學課程之前，請先閱讀相關[!DNL Platform]服務的說明檔案：
+本教學課程需要對管理[!DNL Profile]啟用資料集時涉及的各種Adobe Experience Platform服務有正確的理解。 在開始本教學課程之前，請先閱讀相關[!DNL Platform]服務的說明檔案：
 
 - [[!DNL Real-time Customer Profile]](../home.md):根據來自多個來源的匯整資料，提供統一、即時的消費者個人檔案。
 - [[!DNL Identity Service]](../../identity-service/home.md):可 [!DNL Real-time Customer Profile] 借由將不同資料來源的身分橋接到其中 [!DNL Platform]。
@@ -65,7 +65,7 @@ ht-degree: 1%
 POST /dataSets
 ```
 
-**請求**
+**要求**
 
 借由在請求主體中的`tags`下方加入`unifiedProfile`和`unifiedIdentity`，資料集將會立即分別啟用[!DNL Profile]和[!DNL Identity Service]。 這些標籤的值必須是包含字串`"enabled:true"`的陣列。
 
@@ -79,9 +79,7 @@ curl -X POST \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '{
     "fileDescription" : {
-    "persisted": true,
-        "containerFormat": "parquet",
-        "format": "parquet"
+        "persisted": true
     },
     "fields":[],
     "schemaRef" : {
@@ -128,7 +126,7 @@ GET /dataSets/{DATASET_ID}
 |---|---|
 | `{DATASET_ID}` | 您要檢查的資料集ID。 |
 
-**請求**
+**要求**
 
 ```shell
 curl -X GET \
@@ -175,9 +173,7 @@ curl -X GET \
         "viewId": "5b020a27e7040801dedbf46f",
         "status": "enabled",
         "fileDescription": {
-            "persisted": true,
-            "containerFormat": "parquet",
-            "format": "parquet"
+            "persisted": true
         },
         "transforms": "@/dataSets/5b020a27e7040801dedbf46e/views/5b020a27e7040801dedbf46f/transforms",
         "files": "@/dataSets/5b020a27e7040801dedbf46e/views/5b020a27e7040801dedbf46f/files",
@@ -200,7 +196,7 @@ curl -X GET \
 
 ### 啟用資料集{#enable-the-dataset}
 
-如果[!DNL Profile]或[!DNL Identity Service]未啟用現有資料集，則可以使用資料集ID發出PATCH請求來啟用它。
+如果[!DNL Profile]或[!DNL Identity Service]尚未啟用現有資料集，則可使用資料集ID進行PATCH請求以啟用它。
 
 **API格式**
 
@@ -212,7 +208,7 @@ PATCH /dataSets/{DATASET_ID}
 |---|---|
 | `{DATASET_ID}` | 您要更新的資料集ID。 |
 
-**請求**
+**要求**
 
 ```shell
 curl -X PATCH \
@@ -232,8 +228,8 @@ curl -X PATCH \
 
 請求主體包含`tags`屬性，其中包含兩個子屬性：`"unifiedProfile"`和`"unifiedIdentity"`。 這些子屬性的值是包含字串`"enabled:true"`的陣列。
 
-**響**
-應成功的PATCH請求返回HTTP狀態200(OK)和包含更新資料集ID的陣列。此ID應與PATCH請求中發送的ID匹配。 `"unifiedProfile"`和`"unifiedIdentity"`標籤現在已新增，且資料集已啟用供Profile和Identity Services使用。
+**回**
+應成功的PATCH請求會傳回HTTP狀態200（確定）和包含更新資料集ID的陣列。此ID應符合在PATCH請求中傳送的ID。 `"unifiedProfile"`和`"unifiedIdentity"`標籤現在已新增，且資料集已啟用供Profile和Identity Services使用。
 
 ```json
 [
