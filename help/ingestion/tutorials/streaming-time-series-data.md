@@ -3,13 +3,13 @@ keywords: Experience Platform; home；熱門主題；流處理；提取；時間
 solution: Experience Platform
 title: 使用串流擷取API串流時間系列資料
 topic: 教學課程
-type: 教學課程
+type: Tutorial
 description: 本教學課程將協助您開始使用串流擷取API，這是Adobe Experience Platform資料擷取服務API的一部分。
 exl-id: 720b15ea-217c-4c13-b68f-41d17b54d500
 translation-type: tm+mt
-source-git-commit: 610ce5c6dca5e7375b941e7d6f550382da10ca27
+source-git-commit: 727c9dbd87bacfd0094ca29157a2d0283c530969
 workflow-type: tm+mt
-source-wordcount: '1314'
+source-wordcount: '1313'
 ht-degree: 2%
 
 ---
@@ -64,7 +64,7 @@ ht-degree: 2%
 POST /schemaregistry/tenant/schemas
 ```
 
-**請求**
+**要求**
 
 ```shell
 curl -X POST https://platform.adobe.io/data/foundation/schemaregistry/tenant/schemas
@@ -257,7 +257,7 @@ curl -X POST https://platform.adobe.io/data/foundation/schemaregistry/tenant/des
 POST /catalog/dataSets
 ```
 
-**請求**
+**要求**
 
 ```shell
 curl -X POST https://platform.adobe.io/data/foundation/catalog/dataSets \
@@ -272,11 +272,6 @@ curl -X POST https://platform.adobe.io/data/foundation/catalog/dataSets \
     "schemaRef": {
         "id": "{SCHEMA_REF_ID}",
         "contentType": "application/vnd.adobe.xed-full+json;version=1"
-    },
-    "fileDescription": {
-        "persisted": true,
-        "containerFormat": "parquet",
-        "format": "parquet"
     },
     "tags": {
         "unifiedIdentity": ["enabled:true"],
@@ -310,7 +305,7 @@ POST /collection/{CONNECTION_ID}?synchronousValidation=true
 | `{CONNECTION_ID}` | 您新建立的串流連線的`id`值。 |
 | `synchronousValidation` | 可選的查詢參數，用於開發用途。 如果設為`true`，則可用於立即回饋，以判斷請求是否成功傳送。 依預設，此值會設為`false`。 |
 
-**請求**
+**要求**
 
 將時間序列資料引入流連接可以使用或不使用源名稱。
 
@@ -446,7 +441,7 @@ GET /access/entities?schema.name=_xdm.context.experienceevent&relatedSchema.name
 | `relatedEntityId` | 相關實體的ID。 如果提供，您也必須提供實體名稱空間。 |
 | `relatedEntityIdNS` | 您嘗試擷取之ID的命名空間。 |
 
-**請求**
+**要求**
 
 ```shell
 curl -X GET \
