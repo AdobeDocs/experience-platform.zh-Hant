@@ -3,13 +3,13 @@ keywords: Experience Platform；首頁；熱門主題；資料源連接
 solution: Experience Platform
 title: 使用Flow Service API從第三方雲端儲存系統內嵌鑲木地板資料
 topic: 概述
-type: 教學課程
+type: Tutorial
 description: 本教學課程使用Flow Service API來引導您逐步從協力廠商雲端儲存系統擷取Apache Parce Parce資料。
 exl-id: fb1b19d6-16bb-4a5f-9e81-f537bac95041
 translation-type: tm+mt
-source-git-commit: 610ce5c6dca5e7375b941e7d6f550382da10ca27
+source-git-commit: 727c9dbd87bacfd0094ca29157a2d0283c530969
 workflow-type: tm+mt
-source-wordcount: '1103'
+source-wordcount: '1102'
 ht-degree: 2%
 
 ---
@@ -73,7 +73,7 @@ ht-degree: 2%
 POST /schemaregistry/tenant/schemas
 ```
 
-**請求**
+**要求**
 
 以下示例請求建立一個XDM模式以擴展XDM [!DNL Individual Profile]類。
 
@@ -208,7 +208,7 @@ curl -X POST \
 POST /sourceConnections
 ```
 
-**請求**
+**要求**
 
 ```shell
 curl -X POST \
@@ -275,7 +275,7 @@ curl -X POST \
 POST /catalog/dataSets
 ```
 
-**請求**
+**要求**
 
 ```shell
 curl -X POST \
@@ -290,9 +290,6 @@ curl -X POST \
         "schemaRef": {
             "id": ""https://ns.adobe.com/{TENANT_ID}/schemas/e15530faf88aeb52d9ca5c5671a059f44f1a42ea7f5fdb80"",
             "contentType": "application/vnd.adobe.xed-full-notext+json; version=1"
-        },
-        "fileDescription": {
-            "format": "parquet"
         }
     }'
 ```
@@ -321,7 +318,7 @@ curl -X POST \
 POST /targetConnections
 ```
 
-**請求**
+**要求**
 
 ```shell
 curl -X POST \
@@ -384,7 +381,7 @@ curl -X POST \
 POST /flows
 ```
 
-**請求**
+**要求**
 
 ```shell
 curl -X POST \
