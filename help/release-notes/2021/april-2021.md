@@ -5,10 +5,10 @@ doc-type: release notes
 last-update: April 21, 2021
 author: ens72741
 translation-type: tm+mt
-source-git-commit: 2736b81ae32eebe4cbc997e106315be2529c0d15
+source-git-commit: fff9e6455c6eae5f9903e1d28ab365cddfd51ef8
 workflow-type: tm+mt
-source-wordcount: '298'
-ht-degree: 15%
+source-wordcount: '331'
+ht-degree: 23%
 
 ---
 
@@ -38,6 +38,8 @@ Adobe Experience Platform 現有功能更新：
 有關受支援資料集的詳細資訊，請參閱[[!DNL Intelligent Services] 資料準備文檔](../../intelligent-services/data-preparation.md)。
 
 ### Attribution AI
+
+Attribution AI 可將點數歸因到促成轉換事件的接觸點。行銷人員可善用此工具，協助量化客戶歷程中各個獨立行銷接觸點對行銷的影響。
 
 | 功能 | 說明 |
 | ------- | ----------- |
