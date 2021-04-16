@@ -3,16 +3,16 @@ keywords: Experience Platform; home；熱門主題；分段評價；分段服務
 solution: Experience Platform
 title: 評估並存取區段結果
 topic: 教學課程
-type: 教學課程
+type: Tutorial
 description: 請依照本教學課程學習如何使用Adobe Experience Platform區段服務API來評估區段並存取區段結果。
+exl-id: 47702819-f5f8-49a8-a35d-034ecac4dd98
 translation-type: tm+mt
-source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
+source-git-commit: 87729e4996b0b2ac26e1a0abaa80af717825f9e6
 workflow-type: tm+mt
-source-wordcount: '1570'
+source-wordcount: '1569'
 ht-degree: 0%
 
 ---
-
 
 # 評估並存取區段結果
 
@@ -174,7 +174,7 @@ ht-degree: 0%
 POST /dataSets
 ```
 
-**請求**
+**要求**
 
 下列請求會建立新資料集，提供裝載中的設定參數。
 
@@ -193,9 +193,7 @@ curl -X POST \
         "contentType": "application/vnd.adobe.xed+json;version=1"
     },
     "fileDescription": {
-        "persisted": true,
-        "containerFormat": "parquet",
-        "format": "parquet"
+        "persisted": true
     }
 }'
 ```
