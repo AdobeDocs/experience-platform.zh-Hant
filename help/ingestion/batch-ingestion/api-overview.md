@@ -1,17 +1,17 @@
 ---
-keywords: Experience Platform;home；熱門主題；批次擷取；Batch擷取；ingestion;developer guide;api guide;upload;ingest Parce;ingest json;
+keywords: Experience Platform;home；熱門主題；批次擷取；批次擷取；ingestion;developer guide;api guide;upload;ingest Parce;ingestjson;
 solution: Experience Platform
 title: 批次擷取API指南
-topic: developer guide
+topic: 開發人員指南
 description: 本檔案提供使用批次擷取API的完整概觀。
+exl-id: 4ca9d18d-1b65-4aa7-b608-1624bca19097
 translation-type: tm+mt
-source-git-commit: a489ab248793a063295578943ad600d8eacab6a2
+source-git-commit: 727c9dbd87bacfd0094ca29157a2d0283c530969
 workflow-type: tm+mt
-source-wordcount: '2698'
-ht-degree: 5%
+source-wordcount: '2558'
+ht-degree: 6%
 
 ---
-
 
 # 批次擷取API指南
 
@@ -25,9 +25,9 @@ ht-degree: 5%
 
 以下章節提供您必須知道或掌握的額外資訊，才能成功呼叫「批次擷取API」。
 
-本指南需要有效瞭解Adobe Experience Platform的下列元件：
+本指南需要對Adobe Experience Platform的下列組成部分有切實的瞭解：
 
-- [批次擷取](./overview.md):可讓您將資料以批次檔案的形式內嵌至Adobe Experience Platform。
+- [批次擷取](./overview.md):可讓您將資料以批次檔案的形式收錄到Adobe Experience Platform。
 - [[!DNL Experience Data Model (XDM)] 系統](../../xdm/home.md):組織客戶體驗資 [!DNL Experience Platform] 料的標準化架構。
 - [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform] 提供虛擬沙盒，可將單一執行個體分 [!DNL Platform] 割為不同的虛擬環境，以協助開發和發展數位體驗應用程式。
 
@@ -63,7 +63,7 @@ ht-degree: 5%
 
 下表顯示在擷取資料時支援的轉換。
 
-| 入站（行）與目標（列） | 字串 | 位元組 | 簡短 | 整數 | 長 | 雙倍 | 日期 | 日期——時間 | 物件 | 地圖 |
+| 入站（行）與目標（列） | 字串 | 位元組 | 簡短 | 整數 | 長 | 雙倍 | Date | 日期——時間 | 物件 | 地圖 |
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 | 字串 | X | X | X | X | X | X | X | X |  |  |
 | 位元組 | X | X | X | X | X | X |  |  |  |  |
@@ -108,7 +108,7 @@ ht-degree: 5%
 POST /batches
 ```
 
-**請求**
+**要求**
 
 ```shell
 curl -X POST https://platform.adobe.io/data/foundation/import/batches \
@@ -174,9 +174,9 @@ PUT /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 | --------- | ----------- |
 | `{BATCH_ID}` | 您要上傳至的批次ID。 |
 | `{DATASET_ID}` | 批次參考資料集的ID。 |
-| `{FILE_NAME}` | 您要上傳的檔案名稱。 此檔案路徑是檔案將儲存在Adobe端的位置。 |
+| `{FILE_NAME}` | 您要上傳的檔案名稱。 此檔案路徑是檔案將保存在Adobe端的位置。 |
 
-**請求**
+**要求**
 
 >[!NOTE]
 >
@@ -216,7 +216,7 @@ POST /batches/{BATCH_ID}?action=COMPLETE
 | --------- | ----------- |
 | `{BATCH_ID}` | 您要上傳至的批次ID。 |
 
-**請求**
+**要求**
 
 ```shell
 curl -X POST "https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}?action=COMPLETE" \
@@ -242,7 +242,7 @@ curl -X POST "https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID
 
 首先，您需要建立以Parce為輸入格式的批次。 建立批次時，您需要提供資料集ID。 您還需要確保作為批處理的一部分上載的所有檔案都符合連結到所提供的資料集的XDM模式。
 
-**請求**
+**要求**
 
 ```shell
 curl -X POST "https://platform.adobe.io/data/foundation/import/batches" \
@@ -309,9 +309,9 @@ PUT /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 | --------- | ----------- |
 | `{BATCH_ID}` | 您要上傳至的批次ID。 |
 | `{DATASET_ID}` | 批次參考資料集的ID。 |
-| `{FILE_NAME}` | 您要上傳的檔案名稱。 此檔案路徑是檔案將儲存在Adobe端的位置。 |
+| `{FILE_NAME}` | 您要上傳的檔案名稱。 此檔案路徑是檔案將保存在Adobe端的位置。 |
 
-**請求**
+**要求**
 
 >[!CAUTION]
 >
@@ -351,7 +351,7 @@ POST /batches/{BATCH_ID}?action=complete
 | --------- | ----------- |
 | `{BATCH_ID}` | 您要傳送訊號的批次ID已準備就緒，可供完成。 |
 
-**請求**
+**要求**
 
 ```shell
 curl -X POST https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}?action=COMPLETE \
@@ -383,7 +383,7 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}
 POST /batches
 ```
 
-**請求**
+**要求**
 
 ```shell
 curl -X POST https://platform.adobe.io/data/foundation/import/batches \
@@ -452,7 +452,7 @@ POST /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 | `{DATASET_ID}` | 參考資料集的ID。 |
 | `{FILE_NAME}` | 即將初始化的檔案的名稱。 |
 
-**請求**
+**要求**
 
 ```shell
 curl -X POST https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}.parquet?action=INITIALIZE \
@@ -470,7 +470,7 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}
 
 ### 上傳大型檔案區塊
 
-現在已建立檔案，可以通過重複的PATCH請求來上載所有後續的塊，對檔案的每個部分都可以一個。
+現在已建立檔案，所有後續區塊都可以透過重複的PATCH要求上傳，這是檔案每個區段的一個要求。
 
 **API格式**
 
@@ -482,9 +482,9 @@ PATCH /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 | --------- | ----------- |
 | `{BATCH_ID}` | 您要上傳至的批次ID。 |
 | `{DATASET_ID}` | 批次參考資料集的ID。 |
-| `{FILE_NAME}` | 您要上傳的檔案名稱。 此檔案路徑是檔案將儲存在Adobe端的位置。 |
+| `{FILE_NAME}` | 您要上傳的檔案名稱。 此檔案路徑是檔案將保存在Adobe端的位置。 |
 
-**請求**
+**要求**
 
 >[!CAUTION]
 >
@@ -529,7 +529,7 @@ POST /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 | `{DATASET_ID}` | 批次參考資料集的ID。 |
 | `{FILE_NAME}` | 要指示完成的檔案的名稱。 |
 
-**請求**
+**要求**
 
 ```shell
 curl -X POST https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}.parquet?action=COMPLETE \
@@ -560,7 +560,7 @@ POST /batches/{BATCH_ID}?action=COMPLETE
 | `{BATCH_ID}` | 您要傳送訊號的批次ID已完成。 |
 
 
-**請求**
+**要求**
 
 ```shell
 curl -X POST https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}?action=COMPLETE \
@@ -594,7 +594,7 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}
 POST /catalog/dataSets
 ```
 
-**請求**
+**要求**
 
 ```shell
 curl -X POST https://platform.adobe.io/data/foundation/catalog/dataSets \
@@ -608,15 +608,7 @@ curl -X POST https://platform.adobe.io/data/foundation/catalog/dataSets \
       "schemaRef": {
           "id": "https://ns.adobe.com/{TENANT_ID}/schemas/{SCHEMA_ID}",
           "contentType": "application/vnd.adobe.xed+json;version=1"
-      },
-      "fileDescription": {
-          "format": "parquet",
-          "delimiters": [","], 
-          "quotes": ["\""],
-          "escapes": ["\\"],
-          "header": true,
-          "charset": "UTF-8"
-      }      
+      }
   }'
 ```
 
@@ -624,32 +616,6 @@ curl -X POST https://platform.adobe.io/data/foundation/catalog/dataSets \
 | --------- | ----------- |
 | `{TENANT_ID}` | 此ID可用來確保您建立的資源已正確命名並包含在IMS組織中。 |
 | `{SCHEMA_ID}` | 您所建立之架構的ID。 |
-
-以下說明JSON內文「fileDescription」區段的不同部分：
-
-```json
-{
-    "fileDescription": {
-        "format": "parquet",
-        "delimiters": [","],
-        "quotes": ["\""],
-        "escapes": ["\\"],
-        "header": true,
-        "charset": "UTF-8"
-    }
-}
-```
-
-| 參數 | 說明 |
-| --------- | ----------- |
-| `format` | 已掌握檔案的格式，而不是輸入檔案的格式。 |
-| `delimiters` | 用作分隔字元的字元。 |
-| `quotes` | 用於引號的字元。 |
-| `escapes` | 用作轉義字元的字元。 |
-| `header` | 上傳的檔案&#x200B;**必須**&#x200B;包含標題。 由於架構驗證已完成，因此必須將其設定為true。 此外，標題可能&#x200B;**not**&#x200B;包含任何空格——如果您的標題中有任何空格，請改用底線取代它們。 |
-| `charset` | 選填欄位。 其他支援的字元包括「US-ASCII」和「ISO-8869-1」。 如果保留空白，預設會使用UTF-8。 |
-
-引用的資料集必須具有上面列出的檔案說明塊，並且必須指向註冊表中的有效模式。 否則，檔案將不會被熟悉到Parce中。
 
 ### 建立批次
 
@@ -661,7 +627,7 @@ curl -X POST https://platform.adobe.io/data/foundation/catalog/dataSets \
 POST /batches
 ```
 
-**請求**
+**要求**
 
 ```shell
 curl -X POST https://platform.adobe.io/data/foundation/import/batches \
@@ -732,9 +698,9 @@ PUT /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 | --------- | ----------- |
 | `{BATCH_ID}` | 您要上傳至的批次ID。 |
 | `{DATASET_ID}` | 批次參考資料集的ID。 |
-| `{FILE_NAME}` | 您要上傳的檔案名稱。 此檔案路徑是檔案將儲存在Adobe端的位置。 |
+| `{FILE_NAME}` | 您要上傳的檔案名稱。 此檔案路徑是檔案將保存在Adobe端的位置。 |
 
-**請求**
+**要求**
 
 >[!CAUTION]
 >
@@ -771,7 +737,7 @@ curl -X PUT https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/
 POST /batches/{BATCH_ID}?action=COMPLETE
 ```
 
-**請求**
+**要求**
 
 ```shell
 curl -X POST https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}?action=COMPLETE \
@@ -801,7 +767,7 @@ POST /batches/{BATCH_ID}?action=ABORT
 | --------- | ----------- |
 | `{BATCH_ID}` | 要取消的批的ID。 |
 
-**請求**
+**要求**
 
 ```shell
 curl -X POST https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}?action=ABORT \
@@ -819,7 +785,7 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}
 
 ## 刪除批{#delete-a-batch}
 
-對要刪除的批的ID執行以下具有`action=REVERT`查詢參數的POST請求，可以刪除批。 批標籤為「非活動」，使其符合垃圾回收的條件。 批將非同步收集，此時將標籤為「已刪除」。
+對要刪除的批的ID執行以下POST請求並使用`action=REVERT`查詢參數來刪除批。 批標籤為「非活動」，使其符合垃圾回收的條件。 批將非同步收集，此時將標籤為「已刪除」。
 
 **API格式**
 
@@ -831,7 +797,7 @@ POST /batches/{BATCH_ID}?action=REVERT
 | --------- | ----------- |
 | `{BATCH_ID}` | 要刪除的批的ID。 |
 
-**請求**
+**要求**
 
 ```shell
 curl -X POST https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}?action=REVERT \
@@ -861,7 +827,7 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}
 POST /batches
 ```
 
-**請求**
+**要求**
 
 ```shell
 curl -X POST https://platform.adobe.io/data/foundation/import/batches \
@@ -939,9 +905,9 @@ PUT /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 | --------- | ----------- |
 | `{BATCH_ID}` | 您要上傳至的批次ID。 |
 | `{DATASET_ID}` | 批次參考資料集的ID。 |
-| `{FILE_NAME}` | 您要上傳的檔案名稱。 此檔案路徑是檔案將儲存在Adobe端的位置。 |
+| `{FILE_NAME}` | 您要上傳的檔案名稱。 此檔案路徑是檔案將保存在Adobe端的位置。 |
 
-**請求**
+**要求**
 
 >[!CAUTION]
 >
@@ -981,7 +947,7 @@ POST /batches/{BATCH_ID}?action=COMPLETE
 | --------- | ----------- |
 | `{BATCH_ID}` | 您要完成的批次的ID。 |
 
-**請求**
+**要求**
 
 ```shell
 curl -X POST https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}?action=COMPLETE \
