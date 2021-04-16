@@ -1,17 +1,17 @@
 ---
-keywords: Experience Platform;Profile；即時客戶配置檔案；故障排除；API
+keywords: Experience Platform；配置檔案；即時客戶配置檔案；故障排除；API
 title: 匯出工作API端點
-topic: guide
+topic: 指南
 type: Documentation
-description: 即時客戶個人檔案可讓您將來自多個來源的資料（包括屬性資料和行為資料）整合在一起，在Adobe Experience Platform中建立個別客戶的單一檢視。 然後可將描述檔資料匯出至資料集以進一步處理。
+description: 即時客戶個人檔案可讓您將來自多個來源的資料（包括屬性資料和行為資料）整合在一起，以建立Adobe Experience Platform地區個別客戶的單一檢視。 然後可將描述檔資料匯出至資料集以進一步處理。
+exl-id: d51b1d1c-ae17-4945-b045-4001e4942b67
 translation-type: tm+mt
-source-git-commit: e6ecc5dac1d09c7906aa7c7e01139aa194ed662b
+source-git-commit: 87729e4996b0b2ac26e1a0abaa80af717825f9e6
 workflow-type: tm+mt
-source-wordcount: '1542'
+source-wordcount: '1543'
 ht-degree: 2%
 
 ---
-
 
 # 導出作業端點
 
@@ -21,7 +21,7 @@ ht-degree: 2%
 
 >[!NOTE]
 >
->本指南涵蓋[!DNL Profile API]中導出作業的使用。 如需如何管理Adobe Experience Platform Segmentation Service匯出工作的詳細資訊，請參閱「分段API」中[匯出工作的指南。](../../profile/api/export-jobs.md)
+>本指南涵蓋[!DNL Profile API]中導出作業的使用。 如需如何管理Adobe Experience Platform分段服務匯出工作的詳細資訊，請參閱分段API](../../profile/api/export-jobs.md)中[匯出工作的指南。
 
 除了建立導出作業外，您還可以使用`/entities`端點訪問[!DNL Profile]資料，也稱為&quot;[!DNL Profile Access]&quot;。 如需詳細資訊，請參閱[entities端點指南](./entities.md)。 有關如何使用UI訪問[!DNL Profile]資料的步驟，請參閱[使用手冊](../ui/user-guide.md)。
 
@@ -31,7 +31,7 @@ ht-degree: 2%
 
 ## 建立匯出工作
 
-匯出[!DNL Profile]資料需要先建立資料匯出至的資料集，然後開始新的匯出工作。 這兩個步驟都可使用Experience Platform API來完成，前者使用Catalog Service API，後者則使用即時客戶設定檔API。 以下各節將列出完成每個步驟的詳細說明。
+匯出[!DNL Profile]資料需要先建立資料匯出至的資料集，然後開始新的匯出工作。 這兩個步驟都可透過Experience PlatformAPI來達成，前者使用目錄服務API，後者則使用即時客戶設定檔API。 以下各節將列出完成每個步驟的詳細說明。
 
 ### 建立目標資料集
 
@@ -49,7 +49,7 @@ ht-degree: 2%
 POST /dataSets
 ```
 
-**請求**
+**要求**
 
 下列請求會建立新資料集，提供裝載中的設定參數。
 
@@ -68,9 +68,7 @@ curl -X POST \
           "contentType": "application/vnd.adobe.xed+json;version=1"
         },
         "fileDescription": {
-          "persisted": true,
-          "containerFormat": "parquet",
-          "format": "parquet"
+          "persisted": true
         }
       }'
 ```
@@ -93,7 +91,7 @@ curl -X POST \
 
 ### 啟動導出作業{#initiate}
 
-在您擁有持續統一的資料集後，您可以建立匯出工作，將描述檔資料保存至資料集，方法是在即時客戶描述檔API中對`/export/jobs`端點提出POST要求，並在要求內文中提供您要匯出的資料詳細資訊。
+在您擁有持續統一的資料集後，您可以建立匯出工作，將描述檔資料保存至資料集，方法是在即時客戶描述檔API中向`/export/jobs`端點提出POST要求，並提供您要在請求內文中匯出的資料詳細資訊。
 
 **API格式**
 
@@ -101,7 +99,7 @@ curl -X POST \
 POST /export/jobs
 ```
 
-**請求**
+**要求**
 
 下列請求會建立新的匯出工作，提供裝載中的設定參數。
 
@@ -188,7 +186,7 @@ curl -X POST \
 
 ## 列出所有匯出工作
 
-您可以通過向`export/jobs`端點執行GET請求，返回特定IMS組織的所有導出作業的清單。 此請求也支援查詢參數`limit`和`offset`，如下所示。
+您可以對`export/jobs`端點執行GET請求，以傳回特定IMS組織的所有匯出作業清單。 此請求也支援查詢參數`limit`和`offset`，如下所示。
 
 **API格式**
 
@@ -199,12 +197,12 @@ GET /export/jobs?{QUERY_PARAMETERS}
 
 | 參數 | 說明 |
 | -------- | ----------- |
-| `start` | 依照請求的建立時間，偏移傳回的結果頁面。 範例: `start=4` |
-| `limit` | 限制傳回的結果數。 範例: `limit=10` |
-| `page` | 依照請求的建立時間傳回特定的結果頁面。 範例: `page=2` |
-| `sort` | 按特定欄位的升序(**`asc`**)或降序(**`desc`**)排序結果。 傳回多頁結果時，排序參數無法運作。 範例: `sort=updateTime:asc` |
+| `start` | 依照請求的建立時間，偏移傳回的結果頁面。 範例：`start=4` |
+| `limit` | 限制傳回的結果數。 範例：`limit=10` |
+| `page` | 依照請求的建立時間傳回特定的結果頁面。 範例：`page=2` |
+| `sort` | 按特定欄位的升序(**`asc`**)或降序(**`desc`**)排序結果。 傳回多頁結果時，排序參數無法運作。 範例：`sort=updateTime:asc` |
 
-**請求**
+**要求**
 
 ```shell
 curl -X GET \
@@ -346,7 +344,7 @@ GET /export/jobs/{EXPORT_JOB_ID}
 | -------- | ----------- |
 | `{EXPORT_JOB_ID}` | 要訪問的導出作業的`id`。 |
 
-**請求**
+**要求**
 
 ```shell
 curl -X GET \
@@ -411,7 +409,7 @@ curl -X GET \
 
 ## 取消匯出工作
 
-Experience Platform可讓您取消現有的匯出工作，這在許多原因（包括匯出工作未完成或在處理階段卡住）中可能很有用。 為了取消導出作業，可以對`/export/jobs`端點執行DELETE請求，並包括要取消的導出作業的`id`到請求路徑。
+Experience Platform允許您取消現有的導出作業，這可能有用於許多原因，包括如果導出作業未完成或在處理階段卡住。 為了取消導出作業，可以對`/export/jobs`端點執行DELETE請求，並將要取消的導出作業的`id`包含到請求路徑。
 
 **API格式**
 
@@ -423,7 +421,7 @@ DELETE /export/jobs/{EXPORT_JOB_ID}
 | -------- | ----------- |
 | `{EXPORT_JOB_ID}` | 要訪問的導出作業的`id`。 |
 
-**請求**
+**要求**
 
 ```shell
 curl -X POST \
@@ -444,7 +442,7 @@ curl -X POST \
 
 有關如何使用Data Access API存取和下載批處理檔案的逐步說明，請遵循[資料存取教程](../../data-access/tutorials/dataset-data.md)。
 
-您也可以使用Adobe Experience Platform Query Service，存取成功匯出的即時客戶個人檔案資料。 使用UI或REST風格的API，查詢服務可讓您編寫、驗證及執行資料湖中資料的查詢。
+您也可以使用Adobe Experience Platform查詢服務訪問成功導出的即時客戶概要檔案資料。 使用UI或REST風格的API，查詢服務可讓您編寫、驗證及執行資料湖中資料的查詢。
 
 有關如何查詢受眾資料的更多資訊，請參閱[查詢服務檔案](../../query-service/home.md)。
 
