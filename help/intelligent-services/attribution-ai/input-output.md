@@ -6,9 +6,9 @@ topic: 輸入和輸出資料以用於Attribution AI
 description: 以下檔案概述了Attribution AI中使用的不同輸入和輸出。
 exl-id: d6dbc9ee-0c1a-4a5f-b922-88c7a36a5380
 translation-type: tm+mt
-source-git-commit: 2ef2a6431865e8ffdc2abd6cf527249e8b5ca4d0
+source-git-commit: 35b3994287d4f556fab8ee75c3bf242ff2690aef
 workflow-type: tm+mt
-source-wordcount: '2091'
+source-wordcount: '2182'
 ht-degree: 3%
 
 ---
@@ -19,7 +19,16 @@ ht-degree: 3%
 
 ## [!DNL Attribution AI] 輸入資料
 
-[!DNL Attribution AI] 使用 [!DNL Consumer Experience Event] 資料來計算演算法分數。有關[!DNL Consumer Experience Event]的詳細資訊，請參閱[準備資料以用於智慧服務文檔](../data-preparation.md)。
+Attribution AI的運作方式是分析下列其中一個資料集，以計算演算法分數：
+
+- 消費者體驗事件(CEE)資料集
+- Adobe Analytics使用[Analytics來源連接器](../../sources/tutorials/ui/create/adobe-applications/analytics.md)的資料集
+
+>[!IMPORTANT]
+>
+>Adobe Analytics源連接器最多需要四周時間才能回填資料。 如果您最近設定了連接器，您應驗證資料集是否具有Attribution AI所需的最小資料長度。 請檢閱[歷史資料](#data-requirements)區段，以確認您有足夠的資料可計算精確的演算法分數。
+
+有關設定[!DNL Consumer Experience Event](CEE)架構的詳細資訊，請參閱[智慧服務資料準備](../data-preparation.md)指南。 有關映射Adobe Analytics資料的詳細資訊，請訪問[Analytics欄位映射](../../sources/connectors/adobe-applications/analytics.md)文檔。
 
 並非[!DNL Consumer Experience Event](CEE)架構中的所有列都是必需的。
 
