@@ -5,14 +5,14 @@ title: Customer AI 概述
 topic: 客戶人工智慧概觀
 description: Customer AI 可產生自訂傾向評分，例如大規模個別設定檔的流失和轉換情形。不必將企業需求轉換為機器學習問題、挑選演算法、培訓或部署，就能達成上述目的。
 landing-page-description: Customer AI 可產生自訂傾向評分，例如大量個別設定檔的流失和轉換情形。
+exl-id: 3e668103-e2a2-4ce6-a40a-8029a6aaa8dd
 translation-type: tm+mt
-source-git-commit: eb163949f91b0d1e9cc23180bb372b6f94fc951f
+source-git-commit: 0085306a2f5172eb19590cc12bc9645278bd2b42
 workflow-type: tm+mt
 source-wordcount: '557'
 ht-degree: 18%
 
 ---
-
 
 # Customer AI 概述
 
