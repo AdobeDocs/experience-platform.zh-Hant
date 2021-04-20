@@ -1,21 +1,21 @@
 ---
-keywords: Experience Platform;home；熱門主題；Audience Manager映射；Audience Manager映射
+keywords: Experience Platform；首頁；熱門主題；Audience Manager映射；觀眾管理器映射
 solution: Experience Platform
-title: Adobe Audience Manager Source Connector的對應欄位
-topic: overview
-description: 瞭解如何將Adobe Audience Manager資料（即時、已登入和描述檔資料）對應至Audience Manager來源連接器的對應Experience Data Model(XDM)欄位。
+title: Adobe Audience Manager源連接器的映射欄位
+topic-legacy: overview
+description: 瞭解如何將Adobe Audience Manager資料（即時、已登錄和配置檔案資料）映射到Audience Manager源連接器的相應體驗資料模型(XDM)欄位。
+exl-id: b800ba43-c308-4334-adce-3d554d50cefb
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: af5564a07577a0123e1a45043d5479f6ad45d73e
 workflow-type: tm+mt
-source-wordcount: '169'
+source-wordcount: '175'
 ht-degree: 0%
 
 ---
 
+# Audience Manager欄位映射
 
-# Audience Manager欄位對應
-
-下表包含Adobe Audience Manager資料（即時、已登錄和描述檔資料）中欄位與其對應XDM欄位之間的對應。
+下表包含Adobe Audience Manager資料（即時、已登錄和配置檔案資料）中各欄位與其對應的XDM欄位之間的映射。
 
 有關每個XDM欄位的詳細資訊，請參閱[XDM欄位字典](../../../../xdm/schema/field-dictionary.md)。
 
@@ -38,6 +38,8 @@ ht-degree: 0%
 | `request_user_agent` | `ExperienceEvent.environment.browserDetails` <ul><li>h_user-agent→ userAgent</li><li>h_accept-language → acceptLanguage</li></ul> |
 | `client_ip` | `ExperienceEvent.environment` <ul><li>d_os_name → os名稱 </li><li>d_os_version → os_version</li></ul> |
 
+{style=&quot;table-layout:auto&quot;}
+
 ## 描述檔資料
 
 類型：概要檔案XDM
@@ -47,3 +49,5 @@ ht-degree: 0%
 | `ids` | `identityMap` |
 | `smem` | `ExperienceEvent.segmentMemberships["AAMSegments"]` |
 | `tmem` | `ExperienceEvent.segmentMemberships["AAMTraits"]` |
+
+{style=&quot;table-layout:auto&quot;}
