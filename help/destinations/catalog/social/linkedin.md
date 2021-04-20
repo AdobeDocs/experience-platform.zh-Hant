@@ -1,15 +1,15 @@
 ---
 keywords: linkedin連接；linkedin連接；linkedin目的地；linkedin連接；
 title: Linkedin符合的觀眾連線
-description: 根據雜湊的電子郵件，啟用您LinkedIn促銷活動的個人檔案，以鎖定受眾、個人化和抑制受眾。
+description: 根據雜湊的電子郵件，啟用您LinkedIn宣傳的個人檔案，以鎖定受眾、個人化和抑制受眾。
+exl-id: 74c233e9-161a-4e4a-98ef-038a031feff0
 translation-type: tm+mt
-source-git-commit: 709908196bb5df665c7e7df10dc58ee9f3b0edbf
+source-git-commit: 95ca7112d1f2655bf33e8a1c549e886ced244a5d
 workflow-type: tm+mt
-source-wordcount: '655'
+source-wordcount: '669'
 ht-degree: 1%
 
 ---
-
 
 # [!DNL LinkedIn Matched Audiences] 連接
 
@@ -17,15 +17,15 @@ ht-degree: 1%
 
 根據雜湊的電子郵件和行動ID，啟用[!DNL LinkedIn]促銷活動的個人檔案，以鎖定受眾、個人化和抑制受眾。
 
-![Adobe Experience PlatformUI中的LinkedIn目標](../../assets/catalog/social/linkedin/catalog.png)
+![linkedInAdobe Experience PlatformUI的目的地](../../assets/catalog/social/linkedin/catalog.png)
 
-## 使用案例
+## 使用個案
 
 為協助您進一步瞭解如何及何時使用[!DNL LinkedIn Matched Audiences]目標，以下是Adobe Experience Platform客戶可使用此功能解決的使用案例。
 
 軟體公司會組織會議，並希望與與會者保持聯絡，並根據與會者的出席狀況向他們展示個人化優惠。 公司可以將自己的[!DNL CRM]電子郵件位址或行動裝置ID收錄到Adobe Experience Platform。 然後，他們可以從自己的離線資料建立區段，並將這些區段傳送至[!DNL LinkedIn]社交平台，以最佳化其廣告支出。
 
-## 支援的身份{#supported-identities}
+## 支援的身分{#supported-identities}
 
 [!DNL LinkedIn Matched Audiences] 支援啟用下表所述的身分。進一步瞭解[identities](/help/identity-service/namespaces.md)。
 
@@ -40,11 +40,11 @@ ht-degree: 1%
 
 **區段匯出** -您正匯出區段（對象）的所有成員，並使用目標中使用的識別碼（名稱、電話號碼等） [!DNL LinkedIn Matched Audiences] 。
 
-## LinkedIn帳戶的先決條件{#LinkedIn-account-prerequisites}
+## linkedIn帳戶先決條件{#LinkedIn-account-prerequisites}
 
 使用[!UICONTROL LinkedIn Matched Audience]目標之前，請確定您的[!DNL LinkedIn Campaign Manager]帳戶具有[!DNL Creative Manager]權限級別或更高級別。
 
-如要瞭解如何編輯[!DNL LinkedIn Campaign Manager]使用者權限，請參閱LinkedIn檔案中的[新增、編輯和移除廣告帳戶的使用者權限](https://www.linkedin.com/help/lms/answer/5753)。
+要瞭解如何編輯[!DNL LinkedIn Campaign Manager]用戶權限，請參閱LinkedIn文檔中的[添加、編輯和刪除廣告帳戶的用戶權限。](https://www.linkedin.com/help/lms/answer/5753)
 
 ## ID匹配要求{#id-matching-requirements}
 
@@ -81,6 +81,10 @@ ht-degree: 1%
 ## 連接到目標{#connect-destination}
 
 若要連線至[!DNL LinkedIn Matched Audiences]目的地，請參閱[社交網路目的地驗證工作流程](./workflow.md)。
+
+下面的視訊也示範設定[!DNL LinkedIn Matched Audiences]目標及啟用區段的步驟。
+
+>[!VIDEO](https://video.tv.adobe.com/v/332599/?quality=12&learn=on&captions=eng)
 
 ## 啟用區段至[!DNL LinkedIn Matched Audiences] {#activate-segments}
 
