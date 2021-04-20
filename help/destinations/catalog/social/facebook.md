@@ -4,9 +4,9 @@ title: Facebook連接
 description: 啟用您Facebook宣傳的個人檔案，根據雜湊的電子郵件鎖定受眾、個人化和抑制受眾。
 exl-id: 51e8c8f0-5e79-45b9-afbc-110bae127f76
 translation-type: tm+mt
-source-git-commit: 01aed33913b5334263090aea17f75ce181717c50
+source-git-commit: 805cb72e91e6446f74cc3461d39841740eb576c7
 workflow-type: tm+mt
-source-wordcount: '1134'
+source-wordcount: '1133'
 ht-degree: 2%
 
 ---
@@ -117,7 +117,7 @@ ht-degree: 2%
 
 ## 連接到目標{#connect-destination}
 
-若要連線至[!DNL Facebook]目的地，請參閱[社交網路目的地驗證工作流程](./workflow.md)。
+若要連線至[!DNL Facebook]目的地，請參閱[社交目的地驗證工作流程](./workflow.md)。
 
 下面的視訊也示範設定[!DNL Facebook]目標及啟用區段的步驟。
 
