@@ -1,22 +1,22 @@
 ---
-keywords: Facebook;facebook；社交網路；社交網路；社交網路；社交網路驗證；社交網路驗證
-title: 建立社交網路目的地
+keywords: Facebook;facebook；社交網路；社交網路；社交認證；社交網路認證
+title: 建立社交目標
 type: Tutorial
-description: 瞭解如何連線至您在Adobe Experience Platform的社交網路廣告帳戶。
+description: 瞭解如何連線至您在Adobe Experience Platform的社交廣告帳戶。
 exl-id: a0cdf2b7-b1e8-4a8e-9d5b-58a118e7b689
 translation-type: tm+mt
-source-git-commit: 95ca7112d1f2655bf33e8a1c549e886ced244a5d
+source-git-commit: 805cb72e91e6446f74cc3461d39841740eb576c7
 workflow-type: tm+mt
-source-wordcount: '471'
+source-wordcount: '457'
 ht-degree: 0%
 
 ---
 
-# 建立社交網路目標{#social-network-destinations-workflow}
+# 建立社交目標{#social-network-destinations-workflow}
 
 ## 概述 {#overview}
 
-本教學課程以[!DNL Facebook]為例，但Adobe Experience Platform工作流程對於所有社交網路目的地都是相同的。
+本教學課程以[!DNL Facebook]為例，但Adobe Experience Platform工作流程對於所有社交目標都是相同的。
 
 ## 設定社交目標——影片逐步瀏覽{#video}
 
@@ -26,9 +26,9 @@ ht-degree: 0%
 
 ## 選擇社交目標{#select-destination}
 
-在&#x200B;**[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**&#x200B;中，滾動到&#x200B;**[!UICONTROL Social]**&#x200B;類別。 選擇您偏好的社交網路目的地，然後選擇&#x200B;**[!UICONTROL Configure]**。
+在&#x200B;**[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**&#x200B;中，滾動到&#x200B;**[!UICONTROL Social]**&#x200B;類別。 選擇您偏好的社交目的地，然後選擇&#x200B;**[!UICONTROL Configure]**。
 
-![連線至社交網路目的地](../../assets/catalog/social/workflow/catalog.png)
+![連線至社交目的地](../../assets/catalog/social/workflow/catalog.png)
 
 >[!NOTE]
 >
@@ -36,13 +36,13 @@ ht-degree: 0%
 
 ## 帳戶步驟{#account}
 
-在&#x200B;**Account**&#x200B;步驟中，如果您先前已設定社交網路目的地的連線，請選取&#x200B;**[!UICONTROL Existing Account]**&#x200B;並選取您現有的連線。 或者，您可以選取&#x200B;**[!UICONTROL New Account]**&#x200B;來設定與社交網路目的地的新連線。 選擇&#x200B;**[!UICONTROL Connect to destination]**，這會將您帶往選取的社交網路目的地，以登入並連線Adobe Experience Cloud至您的社交網路廣告帳戶。
+在&#x200B;**Account**&#x200B;步驟中，如果您先前已設定連線至您的社交目的地，請選取&#x200B;**[!UICONTROL Existing Account]**&#x200B;並選取您現有的連線。 或者，您可以選取&#x200B;**[!UICONTROL New Account]**&#x200B;來設定與社交目的地的新連線。 選擇&#x200B;**[!UICONTROL Connect to destination]**，這會帶您前往選取的社交目的地，以登入並連線Adobe Experience Cloud至您的社交廣告帳戶。
 
 >[!NOTE]
 >
->平台支援驗證程式中的認證驗證，如果您在社交網路帳戶ID中輸入錯誤的認證，則會顯示錯誤訊息。 這可確保您不會以不正確的憑證完成工作流程。
+>平台支援驗證程式中的認證驗證，如果您在您的社交帳戶ID中輸入錯誤的認證，則會顯示錯誤訊息。 這可確保您不會以不正確的憑證完成工作流程。
 
-![連線至社交網路目的地——驗證步驟](../../assets/catalog/social/workflow/pre-connect.png)
+![連線至社交目的地——驗證步驟](../../assets/catalog/social/workflow/pre-connect.png)
 
 在確認您的認證並將Adobe Experience Cloud連線至您的社交網路後，您可以選取&#x200B;**[!UICONTROL Next]**&#x200B;以繼續&#x200B;**[!UICONTROL Authentication]**&#x200B;步驟。
 
@@ -58,7 +58,7 @@ ht-degree: 0%
 > * 對於[!DNL LinkedIn]目標，**[!UICONTROL Account ID]**&#x200B;是您的[!DNL LinkedIn Campaign Manager Account ID]。 您可以在[!DNL LinkedIn Campaign Manager]中找到此ID。
 
 
-![連線至社交網路目的地——驗證步驟](../../assets/catalog/social/workflow/authentication.png)
+![連線至社交目的地——驗證步驟](../../assets/catalog/social/workflow/authentication.png)
 
 在此步驟中，您也可以選取任何應套用至此目的地的&#x200B;**[!UICONTROL Marketing action]**。 行銷動作會指出將資料匯出至目的地的方式。 您可以從Adobe定義的行銷動作中選擇，也可以建立自己的行銷動作。 如需行銷動作的詳細資訊，請參閱[資料使用政策概述](../../../data-governance/policies/overview.md)。
 
