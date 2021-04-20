@@ -1,15 +1,15 @@
 ---
 keywords: google客戶符合；Google客戶符合；Google客戶符合
 title: Google客戶符合連線
-description: Google Customer Match可讓您使用您的線上和離線資料，透過Google的自有和營運資產（例如搜尋、購物、Gmail和YouTube）觸及客戶並與其重新互動。
+description: Google Customer Match可讓您使用您的線上和離線資料，透過Google的自有和營運資產(例如搜尋、購物、Gmail和YouTube)觸及並與客戶重新互動。
+exl-id: 8209b5eb-b05c-4ef7-9fdc-22a528d5f020
 translation-type: tm+mt
-source-git-commit: 709908196bb5df665c7e7df10dc58ee9f3b0edbf
+source-git-commit: 95ca7112d1f2655bf33e8a1c549e886ced244a5d
 workflow-type: tm+mt
-source-wordcount: '1546'
+source-wordcount: '1574'
 ht-degree: 0%
 
 ---
-
 
 # [!DNL Google Customer Match] 連接
 
@@ -19,7 +19,7 @@ ht-degree: 0%
 
 ![Adobe Experience PlatformUI中的Google客戶符合目標](../../assets/catalog/advertising/google-customer-match/catalog.png)
 
-## 使用案例
+## 使用個案
 
 為協助您進一步瞭解如何及何時使用[!DNL Google Customer Match]目標，以下是Adobe Experience Platform客戶可使用此功能解決的範例使用案例。
 
@@ -37,7 +37,7 @@ ht-degree: 0%
 
 Experience Platform中的某些目標對於發送到目標平台或從目標平台接收的資料具有特定規則和義務。 您有責任瞭解資料的限制和義務，以及您在Adobe Experience Platform和目的地平台中使用資料的方式。 Adobe Experience Platform公司提供資料治理工具，幫助您管理部分資料使用義務。 [進一](../../..//data-governance/labels/overview.md) 步瞭解資料治理工具和政策。
 
-## 支援的身份{#supported-identities}
+## 支援的身分{#supported-identities}
 
 [!DNL Google Customer Match] 支援啟用下表所述的身分。進一步瞭解[identities](/help/identity-service/namespaces.md)。
 
@@ -108,6 +108,12 @@ Experience Platform中的某些目標對於發送到目標平台或從目標平�
 
 Attribute source data is not automatically hashed. When your source field contains unhashed attributes, check the **[!UICONTROL Apply transformation]** option, to have [!DNL Platform] automatically hash the data on activation.
 ![Identity mapping transformation](../../assets/ui/activate-destinations/identity-mapping-transformation.png) -->
+
+## 配置目標——視頻逐步{#video}
+
+以下視訊示範設定[!DNL Google Customer Match]目標及啟用區段的步驟。 步驟也依序排列在下幾節。
+
+>[!VIDEO](https://video.tv.adobe.com/v/332599/?quality=12&learn=on&captions=eng)
 
 ## 連接到目標{#connect-destination}
 
