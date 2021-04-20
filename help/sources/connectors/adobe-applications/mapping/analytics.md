@@ -1,17 +1,17 @@
 ---
 keywords: Experience Platform;home；熱門主題；Analytics映射欄位；分析映射
 solution: Experience Platform
-title: Adobe Analytics Source Connector的對應欄位
-topic: overview
+title: Adobe Analytics源連接器的映射欄位
+topic-legacy: overview
 description: Adobe Experience Platform可讓您透過Analytics資料連接器(ADC)來內嵌Adobe Analytics資料。 透過ADC擷取的部分資料可直接從Analytics欄位映射至「體驗資料模型」(XDM)欄位，而其他資料則需要轉換和特定函式才能成功映射。
+exl-id: 15dc1368-5cf1-42e1-9683-d5158f8aa2db
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: af5564a07577a0123e1a45043d5479f6ad45d73e
 workflow-type: tm+mt
-source-wordcount: '3393'
-ht-degree: 12%
+source-wordcount: '3405'
+ht-degree: 14%
 
 ---
-
 
 # Analytics欄位對應
 
@@ -48,7 +48,7 @@ Adobe Experience Platform可讓您透過Analytics資料連接器(ADC)來內嵌Ad
 | m_page_url | web.webPageDetails.URL | 字串 | 頁面點擊的URL。 |
 | m_pagename_no_url | web.webPageDetails.</span>名稱 | 字串 | 用於填入「頁面」維度的變數。 |
 | m_referrer | web.webReferrer.URL | 字串 | 上一頁的頁面URL。 |
-| m_search_page_num | search.pageDepth | 整數 | 「所有搜尋頁面排名」維度使用。 指出您的網站在使用者點進您的網站之前所出現的搜尋結果頁面。 |
+| m_search_page_num | search.pageDepth | 整數 | 由所有搜尋頁面排名維度使用。指出在用戶點進您的網站之前，網站顯示的搜尋結果頁面。 |
 | m_state | _experience.analytics.customDimensions.stateProvince | 字串 | 狀態變數。 |
 | m_user_server | web.webPageDetails.server | 字串 | 用於伺服器維的變數。 |
 | m_zip | _experience.analytics.customDimensions.postalCode | 字串 | 用於填入郵遞區號維度的變數。 |
@@ -124,19 +124,23 @@ Adobe Experience Platform可讓您透過Analytics資料連接器(ADC)來內嵌Ad
 | videopausetime | media.mediaTimed.pauseTime | 物件 | <!-- MISSING --> | {id（字串），值（數字）} |
 | videosecondsincelastcall | media.mediaTimed.primaryAssetViewDetails.sessionTimeout | 整數 |
 
+{style=&quot;table-layout:auto&quot;}
+
 ## 分割對應欄位
 
 這些欄位具有單個源，但映射到&#x200B;**多個** XDM位置。
 
 | Analytics欄位 | XDM欄位 | XDM類型 | 說明 |
 | --------------- | --------- | -------- | ---------- |
-| s_resolution | device.screenWidth、device.screenHeight | 整數 | 代表螢幕解析度的數值ID。 |
+| s_resolution | device.screenWidth、device.screenHeight | 整數 | 表示螢幕解析度的數值 ID。 |
 | mobileosversion | environment.operatingSystem、environment.operatingSystemVersion | 字串 | 行動作業系統版本。 |
 | videoadlength | advertising.adAssetReference._xmpDM.duration | 整數 | 視訊廣告長度。 |
 
+{style=&quot;table-layout:auto&quot;}
+
 ## 生成的映射欄位
 
-選取來自ADC的欄位需要轉換，需要邏輯不限於Adobe Analytics的直接復本，才能在XDM中產生。
+需要轉換來自ADC的選取欄位，而邏輯不是來自Adobe Analytics的直接復本，才能在XDM中產生。
 
 下表包含顯示「分析」欄位名稱（*Analytics欄位*）、對應的XDM欄位（*XDM欄位*）及其類型（*XDM類型*），以及欄位說明(*Description*)的欄。
 
@@ -165,7 +169,7 @@ Adobe Experience Platform可讓您透過Analytics資料連接器(ADC)來內嵌Ad
 | m_pagename_no_url | web.webPageDetails.pageViews.value | 數字 | 頁面名稱（若已設定）。 如果未指定任何頁面，此值會留空。 |
 | m_paid_search | search.isPaid | 布林值 | 如果點擊符合付費搜尋偵測而設定的旗標。 |
 | m_product_list | productListItems[].items | 陣列 | 透過產品變數傳入的產品清單。 | {SKU（字串）、quantity(integer)、priceTotal(number)} |
-| m_ref_type | web.webReferrer.type | 字串 | 此數值 ID 表示點擊的反向連結類型。1表示您的網站內部，2表示其他網站，3表示搜尋引擎，4表示硬碟，5表示USENET,6表示分類／建立書籤（無反向連結）,7表示電子郵件，8表示無JavaScript,9表示社交網路。 |
+| m_ref_type | web.webReferrer.type | 字串 | 表示點擊的反向連結類型的數值 ID。1表示您的網站內部，2表示其他網站，3表示搜尋引擎，4表示硬碟，5表示USENET,6表示分類／建立書籤（無反向連結）,7表示電子郵件，8表示無JavaScript,9表示社交網路。 |
 | m_search_engine | search.searchEngine | 字串 | 代表將訪客引薦至您網站之搜尋引擎的數值ID。 |
 | post_currency | commerce.order.currencyCode | 字串 | 交易期間使用的貨幣代碼。 |
 | post_cust_hit_time_gmt | timestamp | 字串 | 這僅適用於啟用時間戳記的資料集。 這是隨其一起發送的基於Unix時間的時間戳。 |
@@ -192,11 +196,13 @@ Adobe Experience Platform可讓您透過Analytics資料連接器(ADC)來內嵌Ad
 | videochapter | media.mediaTimed.mediaChapter.chapterAssetReference._xmpDM.duration | 整數 | 視訊章節的名稱。 |
 | videolength | media.mediaTimed.primaryAssetReference._xmpDM.duration | 整數 | 視訊長度。 |
 
+{style=&quot;table-layout:auto&quot;}
+
 ## 進階對應欄位
 
-選取欄位（稱為「後置值」）需要進行更進階的轉換，才能從Adobe Analytics欄位成功地對應至Experience Data Model(XDM)。 執行這些進階轉換需要使用Adobe Experience Platform查詢服務和預先建立的函式（稱為Adobe定義的函式）來進行作業化、歸因和去重複化。
+選取欄位（稱為「後置值」）需要更進階的轉換，才能從Adobe Analytics欄位成功地對應至Experience Data Model(XDM)。 執行這些進階轉換需要使用Adobe Experience Platform查詢服務和預先建立的函式(稱為Adobe定義函式)來進行作業化、歸因和去重複化。
 
-若要進一步瞭解如何使用查詢服務執行此轉換，請造訪[Adobe定義的函式](../../../../query-service/sql/adobe-defined-functions.md)檔案。
+要瞭解有關使用查詢服務執行此轉換的更多資訊，請訪問[Adobe定義函式](../../../../query-service/sql/adobe-defined-functions.md)文檔。
 
 下表包含顯示「分析」欄位名稱（*Analytics欄位*）、對應的XDM欄位（*XDM欄位*）及其類型（*XDM類型*），以及欄位說明(*Description*)的欄。
 
@@ -237,7 +243,7 @@ Adobe Experience Platform可讓您透過Analytics資料連接器(ADC)來內嵌Ad
 | visit_page_num | _experience.analytics.session.depth | 整數 | 「點擊深度」維度中使用的變數。 此值會針對使用者產生的每次點擊增加1，並在每次瀏覽後重設。 |
 | visit_referrer | _experience.analytics.session.web.webReferrer.URL | 字串 | 瀏覽的第一個反向連結。 |
 | visit_search_page_num | _experience.analytics.session.search.pageDepth | 整數 | 造訪的第一個頁面名稱。 |
-| post_prop1 - post_prop75 | _experience.analytics.customDimensions.listprops.prop1 - _experience.analytics.customDimensions.listprops.prop75 | 物件 | 自訂流量變數1-75。 |
+| post_prop1 - post_prop75 | _experience.analytics.customDimensions.listprops.prop1 - _experience.analytics.customDimensions.listprops.prop75 | 物件 | 自訂流量變數 1 - 75。 |
 | post_hier1 - post_hier5 | _experience.analytics.customDimensions.hier1 - _experience.analytics.customDimensions.hier5 | 物件 | 階層變數使用，並包含分隔值清單。 | {values(array)，分隔字元（字串）} |
 | post_mvvar1 - post_mvvar3 | _experience.analytics.customDimensions.lists.list1.list[] - _experience.analytics.customDimensions.list3.list[] | 陣列 | 變數值清單。 包含自訂值的分隔清單，視實作而定。 | {value(string), key(string)} |
 | post_cookies | environment.browserDetails.cookiesEnabled | 布林值 | 「Cookie 支援」維度所使用的變數。 |
@@ -260,12 +266,14 @@ Adobe Experience Platform可讓您透過Analytics資料連接器(ADC)來內嵌Ad
 | 顏色 | device.colorDepth | 整數 | 色彩深度ID，根據c_color欄的值。 |
 | first_hit_ref_type | _experience.analytics.endUser.firstWeb.webReferrer.type | 字串 | 數值ID，代表訪客第一個反向連結的反向連結類型。 |
 | first_hit_time_gmt | _experience.analytics.endUser.firstTimestamp | 整數 | 訪客初次點擊的時間戳記，格式為 Unix 時間。 |
-| geo_country | placeContext.geo.countryCode | 字串 | 根據IP，點擊來源國家的縮寫。 |
+| geo_country | placeContext.geo.countryCode | 字串 | 根據 IP 的點擊來源國家/地區縮寫。 |
 | geo_latitude | placeContext.geo._schema.latitude | 數字 | <!-- MISSING --> |
 | geo_longidute | placeContext.geo._schema.hongitude | 數字 | <!-- MISSING --> |
 | paid_search | search.isPaid | 布林值 | 如果點擊符合付費搜尋偵測而設定的旗標。 |
 | ref_type | web.webReferrer.type | 字串 | 此數值 ID 表示點擊的反向連結類型。 |
 | visit_paid_search | _experience.analytics.session.search.isPaid | 布林值 | 標幟（1=付費，0=未付費），指出瀏覽的第一次點擊是否來自付費搜尋點擊。 |
-| visit_ref_type | _experience.analytics.session.web.webReferrer.type | 字串 | 代表瀏覽之第一個反向連結反向連結類型的數值ID。 |
-| visit_search_engine | _experience.analytics.session.search.searchEngine | 字串 | 瀏覽之第一個搜尋引擎的數值ID。 |
+| visit_ref_type | _experience.analytics.session.web.webReferrer.type | 字串 | 表示造訪的首次反向連結的反向連結類型數值 ID。 |
+| visit_search_engine | _experience.analytics.session.search.searchEngine | 字串 | 造訪的第一個搜尋引擎數值 ID。 |
 | visit_start_time_gmt | _experience.analytics.session.timestamp | 整數 | Unix時間中瀏覽首次點擊的時間戳記。 |
+
+{style=&quot;table-layout:auto&quot;}
