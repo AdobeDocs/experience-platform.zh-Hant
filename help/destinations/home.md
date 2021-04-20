@@ -2,22 +2,22 @@
 keywords: 目的地；adobe體驗平台；平台；目的地概觀；啟動資料；啟動；
 title: 目的地概觀
 seo-title: 目的地概觀
-description: 瞭解如何將Adobe Experience Platform資料啟用至跨通道行銷宣傳、電子郵件、目標廣告等目的地。
-seo-description: 目標是與目標平台預先建立的整合，可讓您順暢地從Adobe Experience Platform啟動資料。 您可以使用Adobe Experience Platform中的「目標」來啟用您已知和未知的跨通道行銷宣傳、電子郵件宣傳、目標廣告和許多其他使用案例資料。
+description: 瞭解如何將Adobe Experience Platform資料啟動至跨通道行銷宣傳、電子郵件、目標廣告等目的地。
+seo-description: 目的地是與目的地平台預先建立的整合，可以順暢地啟動來自Adobe Experience Platform的資料。 您可以使用Adobe Experience Platform的「目的地」來啟用您已知和未知的跨通道行銷宣傳、電子郵件宣傳、目標廣告和許多其他使用案例資料。
+exl-id: afd07ddc-652e-4e22-b298-feba27332462
 translation-type: tm+mt
-source-git-commit: 6e7ecfdc0b2cbf6f07e6b2220ec163289511375e
+source-git-commit: 805cb72e91e6446f74cc3461d39841740eb576c7
 workflow-type: tm+mt
-source-wordcount: '489'
+source-wordcount: '488'
 ht-degree: 1%
 
 ---
 
-
-# [!DNL Destinations]概述{#overview}
+# [!DNL Destinations] 概觀 {#overview}
 
 ![目標概述橫幅](./assets/overview/destinations-overview-banner.png)
 
-**[!DNL Destinations]** 是與目標平台預先建立的整合，可讓您順暢地從Adobe Experience Platform啟動資料。您可以使用目的地來啟用跨通道行銷宣傳、電子郵件宣傳、目標廣告和許多其他使用案例的已知和未知資料。
+**[!DNL Destinations]** 是與目標平台預先建立的整合，讓Adobe Experience Platform的資料得以順暢啟動。您可以使用目的地來啟用跨通道行銷宣傳、電子郵件宣傳、目標廣告和許多其他使用案例的已知和未知資料。
 
 ## 目標和源{#destinations-and-sources}
 
@@ -45,7 +45,7 @@ Platform的核心功能之一是吸收您的第一方資料，並根據您的業
 
 ## 目標和訪問控制{#access-controls}
 
-Platform的目標功能可與Adobe Experience Platform存取控制權限搭配使用。 視使用者的權限層級而定，您可以檢視、管理和啟用目標。 如需個別權限的詳細資訊，請參閱Adobe Experience Platform](../access-control/home.md)中的「存取控制」，並向下捲動至頁面底部。[
+Platform中的目標功能可與Adobe Experience Platform存取控制權限搭配使用。 視使用者的權限層級而定，您可以檢視、管理和啟用目標。 如需個別權限的詳細資訊，請參閱Adobe Experience Platform的[存取控制，並向下捲動至頁面底部。](../access-control/home.md)
 
 有關訪問控制的詳細資訊，請參閱[訪問控制使用手冊](../access-control/ui/overview.md)。
 
@@ -65,6 +65,6 @@ Platform的目標功能可與Adobe Experience Platform存取控制權限搭配�
 * [廣告目的地- Google Display &amp; Video 360  ](./catalog/advertising/google-dv360.md)
 * [雲端儲存空間目標](./catalog/cloud-storage/workflow.md)
 * [電子郵件行銷目標](./catalog/email-marketing/overview.md)
-* [社交網路目的地](./catalog/social/workflow.md)
+* [社交目的地](./catalog/social/workflow.md)
 
 如需區段啟動工作流程中違反資料原則的詳細資訊，請參閱[啟用設定檔和區段至目標](./ui/activate-destinations.md#review)中的「檢閱」步驟。
