@@ -2,8 +2,8 @@
 keywords: Experience Platform;home；熱門主題；SFTP;sftp；安全檔案傳輸協定；安全檔案傳輸協定
 solution: Experience Platform
 title: 使用流程服務API建立SFTP來源連線
-topic: 概述
-type: 教學課程
+topic: overview
+type: Tutorial
 description: 瞭解如何使用Flow Service API將Adobe Experience Platform連接至SFTP（安全檔案傳輸通訊協定）伺服器。
 translation-type: tm+mt
 source-git-commit: 0e11acc4a599d360cb3048445003f61848ad23d3

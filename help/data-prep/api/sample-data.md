@@ -2,7 +2,7 @@
 keywords: Experience Platform; home；熱門主題；資料準備；api指南；示例資料；
 solution: Experience Platform
 title: 範例資料API端點
-topic: 樣本資料
+topic: sample data
 description: '您可以使用Adobe Experience PlatformAPI中的「/samples」端點，以程式設計方式擷取、建立、更新及驗證對應範例資料。 '
 translation-type: tm+mt
 source-git-commit: a2c966ae2401faa572cbba974ce6f572d5280a8f

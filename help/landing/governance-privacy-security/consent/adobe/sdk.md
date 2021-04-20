@@ -1,6 +1,6 @@
 ---
 title: 使用Adobe Experience Platform網頁SDK處理客戶同意資料
-topic: 快速入門
+topic: getting started
 description: 瞭解如何整合Adobe Experience Platform網頁SDK，以使用Adobe2.0標準處理Adobe Experience Platform的客戶同意資料。
 translation-type: tm+mt
 source-git-commit: fee3f005ca3679f8639cea45c16150090b2a1e0f

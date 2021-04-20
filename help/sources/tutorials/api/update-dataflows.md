@@ -2,8 +2,8 @@
 keywords: Experience Platform;home；熱門主題；流服務；更新資料流
 solution: Experience Platform
 title: 使用流服務API更新資料流
-topic: 概述
-type: 教學課程
+topic: overview
+type: Tutorial
 description: 本教程介紹使用流服務API更新資料流的步驟，包括其名稱、說明和時間表。
 translation-type: tm+mt
 source-git-commit: e19b5b905a38c63b7dc47904c5af30dc2ed21e22

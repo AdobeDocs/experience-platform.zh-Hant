@@ -2,7 +2,7 @@
 keywords: Experience Platform;home；熱門主題；標識命名空間；標識命名空間
 solution: Experience Platform
 title: Identity Service疑難排解指南
-topic: 疑難排解
+topic: troubleshooting
 description: 本檔案提供有關Adobe Experience Platform身分服務常見問題的解答，以及常見錯誤的疑難排解指南。
 translation-type: tm+mt
 source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac

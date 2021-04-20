@@ -3,7 +3,7 @@ product: experience-platform
 audience: user
 user-guide-title: 資料準備指南
 user-guide-description: 準備您的資料以擷取至 Adobe Experience Platform。
-feature: 資料管理，資料擷取
+feature: Data Management, Data Ingestion
 translation-type: tm+mt
 source-git-commit: c3939d4ce30bf12748b898f461a166f28f010abf
 workflow-type: tm+mt

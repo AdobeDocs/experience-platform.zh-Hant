@@ -2,7 +2,7 @@
 keywords: Experience Platform;home；熱門主題；資料提取；資料位置；資料管理；資料管理；世系；世系；批處理；提取的資料
 solution: Experience Platform
 title: 資料擷取概觀
-topic: 概述
+topic: overview
 description: 本檔案介紹將資料收錄至Platform的三種主要方式，以及各自概述檔案的連結，以取得更詳細的資訊。
 translation-type: tm+mt
 source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac

@@ -2,8 +2,8 @@
 keywords: Experience Platform;home；常用主題；檢索失敗的批；失敗的批；批處理；失敗的批處理；失敗的批處理；獲取失敗的批處理；獲取失敗的批處理；下載失敗的批處理；下載失敗的批處理；
 solution: Experience Platform
 title: 使用Data Access API檢索失敗的批
-topic: 教學課程
-type: 教學課程
+topic: tutorial
+type: Tutorial
 description: 本教學課程涵蓋使用資料擷取API擷取失敗批次資訊的步驟。
 translation-type: tm+mt
 source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac

@@ -2,7 +2,7 @@
 keywords: Experience Platform;home；常用主題；namespace；命名空間；命名空間；標識名稱空間；標識名稱空間；標識；標識服務；標識服務
 solution: Experience Platform
 title: Identity Namespace概觀
-topic: 概述
+topic: overview
 description: '身分識別命名空間是 Identity Service 的元件，用途是作為身分識別相關內容的指標。例如，他們會將"name@email.com"值區分為電子郵件地址或"443522"作為數值CRM ID。 '
 translation-type: tm+mt
 source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac

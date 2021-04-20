@@ -2,7 +2,7 @@
 keywords: Experience Platform；首頁；熱門主題；資料治理；資料使用標籤api；策略服務api
 solution: Experience Platform
 title: '使用API管理資料使用標籤 '
-topic: 開發人員指南
+topic: developer guide
 description: 資料集服務API可讓您套用和編輯資料集的使用標籤。 它是Adobe Experience Platform資料目錄功能的一部分，但與管理資料集元資料的目錄服務API不同。
 translation-type: tm+mt
 source-git-commit: 4e75e3fbdcd480c384411c2f33bad5b2cdcc5c42

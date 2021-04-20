@@ -2,7 +2,7 @@
 keywords: Experience Platform;home；熱門主題；沙盒使用手冊；沙盒指南
 solution: Experience Platform
 title: 沙盒UI指南
-topic: 使用指南
+topic: user guide
 description: 本檔案提供如何在Adobe Experience Platform使用者介面中執行與沙盒相關之各種作業的步驟。
 translation-type: tm+mt
 source-git-commit: 62ce5ac92d03a6e85589fc92e8d953f7fc1d8f31

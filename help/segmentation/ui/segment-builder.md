@@ -2,7 +2,7 @@
 keywords: Experience Platform; home；熱門主題；分段服務；分段服務；使用手冊；ui指南；分段使用手冊；分段生成器；分段生成器；
 solution: Experience Platform
 title: 區段產生器UI指南
-topic: ui指南
+topic: ui guide
 description: Adobe Experience PlatformUI中的區段產生器提供豐富的工作區，可讓您與描述檔資料元素互動。 工作區提供建立和編輯規則的直覺式控制項，例如用來表示資料屬性的拖放圖格。
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
 translation-type: tm+mt

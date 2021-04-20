@@ -2,8 +2,8 @@
 keywords: Experience Platform；首頁；熱門主題；收集付款資料；付款資料
 solution: Experience Platform
 title: 使用來源連接器和API收集付款資料
-topic: 概述
-type: 教學課程
+topic: overview
+type: Tutorial
 description: 本教學課程涵蓋從付款應用程式擷取資料，並使用來源連接器和API將其匯入平台的步驟。
 exl-id: b75e2a3d-6590-4079-a261-fa4e9626e8dc
 translation-type: tm+mt

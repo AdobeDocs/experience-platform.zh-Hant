@@ -2,8 +2,8 @@
 keywords: Experience Platform；首頁；熱門主題；雲儲存資料
 solution: Experience Platform
 title: 使用來源連接器和API收集雲端儲存資料
-topic: 概述
-type: 教學課程
+topic: overview
+type: Tutorial
 description: 本教學課程涵蓋從協力廠商雲端儲存空間擷取資料，並使用來源連接器和API將其匯入平台的步驟。
 exl-id: 95373c25-24f6-4905-ae6c-5000bf493e6f
 translation-type: tm+mt

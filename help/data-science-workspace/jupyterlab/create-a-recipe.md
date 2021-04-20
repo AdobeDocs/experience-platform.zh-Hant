@@ -2,8 +2,8 @@
 keywords: Experience Platform;JupyterLab;recipe;notebooks;Data Science Workspace；熱門主題；建立配方
 solution: Experience Platform
 title: 使用Jupyter Notebooks建立配方
-topic: 教學課程
-type: 教學課程
+topic: tutorial
+type: Tutorial
 description: 本教學課程將涵蓋兩個主要部分。 首先，您將使用JupyterLab Notebook中的範本建立機器學習模型。 接下來，您將在JupyterLab中練習筆記本至配方工作流程，以便在Data Science Workspace中建立配方。
 translation-type: tm+mt
 source-git-commit: 9d84fc1eb898020ed4b154c091fcc9fc4933c7de

@@ -2,8 +2,8 @@
 keywords: Experience Platform;home；熱門主題；流服務；更新帳戶
 solution: Experience Platform
 title: 使用流程服務API更新帳戶
-topic: 概述
-type: 教學課程
+topic: overview
+type: Tutorial
 description: 本教學課程涵蓋使用Flow Service API更新帳戶詳細資訊和認證的步驟。
 translation-type: tm+mt
 source-git-commit: 37be5f5ffa4640d7d4442a24cc257069237f15cb

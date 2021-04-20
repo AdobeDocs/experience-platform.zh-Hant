@@ -2,7 +2,7 @@
 keywords: Experience Platform；首頁；熱門主題
 solution: Experience Platform
 title: Experience PlatformAPI基礎
-topic: 快速入門
+topic: getting started
 description: 本文檔簡要概述了與Experience PlatformAPI相關的一些基礎技術和語法。
 translation-type: tm+mt
 source-git-commit: ca5c8527b1b54856aa1e762a06ddbe404f30ec42

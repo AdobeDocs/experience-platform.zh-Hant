@@ -2,8 +2,8 @@
 keywords: Experience Platform；首頁；熱門主題；資料流；資料流
 solution: Experience Platform
 title: 在UI中為雲儲存批處理連接器配置資料流
-topic: 概述
-type: 教學課程
+topic: overview
+type: Tutorial
 description: 資料流是從源中檢索資料並將資料帶入平台資料集的計畫任務。 本教學課程提供使用雲端儲存帳戶設定新資料流的步驟。
 translation-type: tm+mt
 source-git-commit: 1fb4a272a914bf4ce7653f3f4f7fff63f36f9a48

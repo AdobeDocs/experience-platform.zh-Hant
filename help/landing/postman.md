@@ -2,7 +2,7 @@
 keywords: Experience Platform；首頁；熱門主題；Adobe Experience Platform;api指南；平台api指南；平台簡介；開發人員指南
 solution: Experience Platform
 title: Adobe Experience Platform郵遞員
-topic: api指南
+topic: api guide
 description: 本檔案包含如何設定郵遞員環境、匯入郵遞員系列以及每個平台服務可用系列清單的步驟。
 translation-type: tm+mt
 source-git-commit: effc8fef666ffbf62c2e0874d048245f19c12111

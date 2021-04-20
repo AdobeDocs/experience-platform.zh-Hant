@@ -2,7 +2,7 @@
 keywords: Experience Platform; home；熱門主題；分段評價；分段服務；分段；分段；分段；分段；分段；分段；分段；分段；分段；分段；分段；分段；分段；分段；分段；分段；分段；分段；分段；分段；分段；分段；分段；分段；分段；分段；分段；
 solution: Experience Platform
 title: 評估並存取區段結果
-topic: 教學課程
+topic: tutorial
 type: Tutorial
 description: 請依照本教學課程學習如何使用Adobe Experience Platform區段服務API來評估區段並存取區段結果。
 exl-id: 47702819-f5f8-49a8-a35d-034ecac4dd98

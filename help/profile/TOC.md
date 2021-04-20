@@ -3,7 +3,7 @@ product: experience-platform
 audience: user
 user-guide-title: 即時客戶設定檔指南
 user-guide-description: 合併客戶資料，以建立跨通道客戶互動的統一檢視。
-feature: 設定檔
+feature: Profiles
 translation-type: tm+mt
 source-git-commit: ac6935f09f620ea55cf8f612ff0a1fba503b5e17
 workflow-type: tm+mt

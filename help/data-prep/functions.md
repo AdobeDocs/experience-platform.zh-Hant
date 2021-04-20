@@ -2,7 +2,7 @@
 keywords: Experience Platform;home；熱門主題；map csv;map csv;map csv file;map csv file to xdm;map csv to xdm;ui guide;mapper;mapping;mapping fields;mapping functions;
 solution: Experience Platform
 title: 資料準備映射函式
-topic: 概述
+topic: overview
 description: 本文檔介紹與「資料準備」一起使用的映射功能。
 exl-id: e95d9329-9dac-4b54-b804-ab5744ea6289
 translation-type: tm+mt

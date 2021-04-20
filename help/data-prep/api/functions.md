@@ -2,7 +2,7 @@
 keywords: Experience Platform;home；熱門主題；資料準備；api指南；方案；
 solution: Experience Platform
 title: 方案API端點
-topic: 模式
+topic: schemas
 description: '您可以使用Adobe Experience PlatformAPI中的「/functions」端點來驗證映射表達式並列出可用的映射集函式。 '
 translation-type: tm+mt
 source-git-commit: 60c80a73deb8c77f19d5963cc3319d46143fb4c3

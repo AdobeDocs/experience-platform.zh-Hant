@@ -2,7 +2,7 @@
 keywords: Experience Platform;home；熱門主題；PostgreSQL;postgresql
 solution: Experience Platform
 title: PostgreSQL源連接器概述
-topic: 概述
+topic: overview
 description: 瞭解如何使用API或使用者介面將PostgreSQL連線至Adobe Experience Platform。
 translation-type: tm+mt
 source-git-commit: 8851e11e956b393e56714d4d48870b7f68947c18

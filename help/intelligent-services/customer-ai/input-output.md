@@ -2,7 +2,7 @@
 keywords: Experience Platform；入門；客戶ai；熱門主題；客戶ai輸入；客戶ai輸出
 solution: Experience Platform, Intelligent Services, Real-time Customer Data Platform
 title: 客戶人工智慧的輸入與輸出
-topic: 快速入門
+topic: Getting started
 description: 進一步瞭解客戶人工智慧所使用的必要事件、輸入和輸出。
 exl-id: 9b21a89c-bf48-4c45-9eb3-ace38368481d
 translation-type: tm+mt

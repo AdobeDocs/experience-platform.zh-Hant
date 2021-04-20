@@ -2,8 +2,8 @@
 keywords: Experience Platform；導入打包的配方；資料科學工作區；熱門主題；配方；ui；建立引擎
 solution: Experience Platform
 title: 在Data Science Workspace UI中匯入封裝配方
-topic: 教學課程
-type: 教學課程
+topic: tutorial
+type: Tutorial
 description: 本教學課程提供如何使用提供的零售銷售範例來設定和匯入封裝方式的見解。 在本教學課程結束時，您將準備好在Adobe Experience Platform資料科學工作區中建立、訓練和評估模型。
 translation-type: tm+mt
 source-git-commit: 13fa4af388c6f31768a6b7e1da05cb56c5635c9e

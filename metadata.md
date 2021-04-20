@@ -11,9 +11,9 @@ tutorials-title: 教學課程
 tutorials-url: https://experienceleague.adobe.com/docs/platform-learn/tutorials/overview.html
 git-repo: https://git.corp.adobe.com/AdobeDocs/experience-platform.zh-Hant
 solution: Experience Platform
-type: 文件
+type: Documentation
 index: true
-role: 架構師、開發人員、資料架構師、資料工程師、業務從業人員、管理員、領導者
+role: Architect, Developer, Data Architect, Data Engineer, Business Practitioner, Administrator, Leader
 translation-type: tm+mt
 source-git-commit: b3ab087a9cae13d2ff270916d88b8086a4122af6
 workflow-type: tm+mt

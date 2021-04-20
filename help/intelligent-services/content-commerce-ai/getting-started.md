@@ -2,7 +2,7 @@
 keywords: Experience Platform；快速入門；內容ai；商務ai；內容和商務ai
 solution: Experience Platform, Intelligent Services
 title: 內容與商務AI快速入門
-topic: Getting started
+topic: Getting started 
 description: 內容與商務AI運用Adobe I/O API。 若要呼叫Adobe I/O API和I/O Console整合，您必須先完成驗證教學課程。
 translation-type: tm+mt
 source-git-commit: eb163949f91b0d1e9cc23180bb372b6f94fc951f

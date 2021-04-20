@@ -2,8 +2,8 @@
 keywords: Experience Platform；首頁；熱門主題；客戶屬性
 solution: Experience Platform
 title: 在UI中建立客戶屬性來源連線
-topic: 概述
-type: 教學課程
+topic: overview
+type: Tutorial
 description: 瞭解如何在UI中建立來源連線，以收集客戶屬性描述檔資料至Adobe Experience Platform。
 translation-type: tm+mt
 source-git-commit: 08a3026e969a8739a8b57226c35a6d1d3150006e

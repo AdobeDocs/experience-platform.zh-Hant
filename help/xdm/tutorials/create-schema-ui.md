@@ -2,7 +2,7 @@
 keywords: Experience Platform;home；熱門主題；ui;UI;XDM;XDM系統；體驗資料模型；體驗資料模型；資料模型；模式編輯器；模式編輯器；模式；模式；模式；模式；模式；模式；建立模式
 solution: Experience Platform
 title: 使用架構編輯器建立架構
-topic: 教學課程
+topic: tutorial
 type: Tutorial
 description: 本教學課程涵蓋以 Experience Platform 結構編輯器建立結構的相關步驟。
 exl-id: 3edeb879-3ce4-4adb-a0bd-8d7ad2ec6102

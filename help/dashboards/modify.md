@@ -2,7 +2,7 @@
 keywords: Experience Platform；用戶介面；UI；儀表板；概要檔案；段；目標；許可證使用
 title: 在UI中修改平台控制面板
 description: '本指南提供逐步指示，以自訂組織的Adobe Experience Platform資料在控制面板中的顯示方式。 '
-topic: 指南
+topic: guide
 translation-type: tm+mt
 source-git-commit: 5cc973a5db88eb23c6e1aeee3695820a0555e4cf
 workflow-type: tm+mt

@@ -2,7 +2,7 @@
 keywords: Experience Platform;home；熱門主題；資料準備；api指南；方案；
 solution: Experience Platform
 title: 方案API端點
-topic: 模式
+topic: schemas
 description: '您可以使用Adobe Experience PlatformAPI中的「/方案」端點，以寫程式方式檢索、建立和更新方案，以便與平台中的映射器一起使用。 '
 translation-type: tm+mt
 source-git-commit: 435d27f7187074c78209948c0e57b610b63d2055

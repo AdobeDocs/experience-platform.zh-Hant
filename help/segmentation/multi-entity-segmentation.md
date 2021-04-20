@@ -2,7 +2,7 @@
 keywords: Experience Platform; home；熱門主題；分段；分段；分段；分段；分段；分段；多實體；多實體分段；
 solution: Experience Platform
 title: 多實體區段概觀
-topic: 概述
+topic: overview
 description: 多實體分段是指能夠根據產品、商店或其他非描述檔類別，以額外資料擴充描述檔資料。 連線後，其他類別的資料就會變成描述檔架構的原生資料。
 translation-type: tm+mt
 source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac

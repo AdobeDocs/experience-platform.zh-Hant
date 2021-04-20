@@ -2,7 +2,7 @@
 keywords: Experience Platform；使用手冊；歸因ai；熱門主題；地區
 solution: Experience Platform, Intelligent Services
 title: Attribution AIUI指南
-topic: '使用手冊 '
+topic: User guide 
 description: 本檔案可做為與智慧型服務使用者介面中Attribution AI互動的指南。
 exl-id: 32e1dd07-31a8-41c4-88df-8893ff773f79
 translation-type: tm+mt

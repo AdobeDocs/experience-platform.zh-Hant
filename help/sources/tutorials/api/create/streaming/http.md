@@ -2,7 +2,7 @@
 keywords: Experience Platform;home；熱門主題；流連接；建立流連接；api指南；教學課程；建立流連接；流攝取；攝取；
 solution: Experience Platform
 title: 使用API建立串流連線
-topic: 教學課程
+topic: tutorial
 type: Tutorial
 description: 本教學課程將協助您開始使用串流擷取API，這是Adobe Experience Platform資料擷取服務API的一部分。
 exl-id: 9f7fbda9-4cd3-4db5-92ff-6598702adc34

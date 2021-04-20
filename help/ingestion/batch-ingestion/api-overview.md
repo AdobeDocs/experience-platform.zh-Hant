@@ -2,7 +2,7 @@
 keywords: Experience Platform;home；熱門主題；批次擷取；批次擷取；ingestion;developer guide;api guide;upload;ingest Parce;ingestjson;
 solution: Experience Platform
 title: 批次擷取API指南
-topic: 開發人員指南
+topic: developer guide
 description: 本檔案提供使用批次擷取API的完整概觀。
 exl-id: 4ca9d18d-1b65-4aa7-b608-1624bca19097
 translation-type: tm+mt

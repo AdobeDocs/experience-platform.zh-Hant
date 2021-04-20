@@ -1,7 +1,7 @@
 ---
 keywords: 電子郵件；電子郵件；電子郵件；電子郵件目標
 title: 電子郵件行銷目標概觀
-type: 教學課程
+type: Tutorial
 description: 電子郵件服務供應商(ESP)可讓您管理電子郵件行銷活動，例如傳送促銷電子郵件促銷活動。
 translation-type: tm+mt
 source-git-commit: 02754055e2be8a45a0699386cb559dad8f25717c

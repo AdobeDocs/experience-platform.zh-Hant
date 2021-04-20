@@ -3,8 +3,8 @@ keywords: Experience Platform；首頁；熱門主題；更新帳戶
 description: 在某些情況下，可能需要更新現有來源帳戶的詳細資訊。 「來源」工作區可讓您新增、編輯和刪除現有批次或串流連線的詳細資訊，包括其名稱、說明和認證。
 solution: Experience Platform
 title: 在UI中更新來源連線帳戶詳細資訊
-topic: 概述
-type: 教學課程
+topic: overview
+type: Tutorial
 translation-type: tm+mt
 source-git-commit: 4a7405e2c8c97442d2781295dd827c6940aa33eb
 workflow-type: tm+mt

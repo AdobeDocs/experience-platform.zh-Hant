@@ -1,7 +1,7 @@
 ---
 keywords: 編輯啟動；編輯目的地；
 title: 編輯啟動流程
-type: 教學課程
+type: Tutorial
 seo-title: 編輯啟動流程
 description: 請依照本文中的步驟，編輯Adobe Experience Platform現有的啟動流程。
 seo-description: 請依照本文中的步驟，編輯Adobe Experience Platform現有的啟動流程。

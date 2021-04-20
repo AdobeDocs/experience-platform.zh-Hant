@@ -1,8 +1,8 @@
 ---
 keywords: Experience Platform;Profile；即時客戶配置檔案；故障排除；API
 title: 計算屬性API端點
-topic: 指南
-type: 文件
+topic: guide
+type: Documentation
 description: 在Adobe Experience Platform中，計算屬性是用來將事件層級資料匯整為描述檔層級屬性的函式。 這些函式會自動計算，以便跨區段、啟動和個人化使用。 本指南說明如何使用即時客戶描述檔API來建立、檢視、更新和刪除計算的屬性。
 translation-type: tm+mt
 source-git-commit: 4ed2b80ebfd87f8920462ae0a918b01bb13d4210

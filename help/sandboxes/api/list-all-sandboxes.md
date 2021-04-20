@@ -2,7 +2,7 @@
 keywords: Experience Platform；首頁；熱門主題；清單沙箱
 solution: Experience Platform
 title: 在API中列出沙盒
-topic: 開發人員指南
+topic: developer guide
 description: 若要列出屬於您IMS組織（活動或其他）的所有沙盒，請向/sandbox端點提出GET要求。
 translation-type: tm+mt
 source-git-commit: 62ce5ac92d03a6e85589fc92e8d953f7fc1d8f31

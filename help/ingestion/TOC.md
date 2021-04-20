@@ -4,7 +4,7 @@ audience: user
 user-guide-title: Adobe Experience Platform 資料擷取說明
 breadcrumb-title: Data Ingestion 指南
 user-guide-description: 透過批次或串流擷取，將您的資料匯入 Platform。
-feature: 資料擷取
+feature: Data Ingestion
 translation-type: tm+mt
 source-git-commit: ac6935f09f620ea55cf8f612ff0a1fba503b5e17
 workflow-type: tm+mt

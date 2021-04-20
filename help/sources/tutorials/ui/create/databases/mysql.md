@@ -2,8 +2,8 @@
 keywords: Experience Platform;home；熱門主題；mysql;MySQL
 solution: Experience Platform
 title: 在UI中建立MySQL源連接
-topic: 概述
-type: 教學課程
+topic: overview
+type: Tutorial
 description: 瞭解如何使用Adobe Experience PlatformUI建立MySQL源連接。
 translation-type: tm+mt
 source-git-commit: 8851e11e956b393e56714d4d48870b7f68947c18

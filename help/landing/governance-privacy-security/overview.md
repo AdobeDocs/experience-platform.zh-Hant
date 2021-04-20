@@ -2,7 +2,7 @@
 keywords: Experience Platform；首頁；熱門主題
 solution: Experience Platform
 title: 管理、隱私權與安全性概觀
-topic: 概述
+topic: overview
 description: Adobe Experience Platform提供數種服務和工具，讓您放心地控制所收集的體驗資料，以符合您的商業慣例、法律義務和開發程式。
 exl-id: 1ab5a436-c5dd-4e7a-aba1-549f0613f224
 translation-type: tm+mt

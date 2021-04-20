@@ -4,7 +4,7 @@ audience: user
 user-guide-title: Adobe Experience Platform 來源連接器說明
 breadcrumb-title: 來源連接器指南
 user-guide-description: 從多種來源或結構擷取資料、加標籤，以及增強已擷取的資料。
-feature: 資料擷取，來源
+feature: Data Ingestion, Sources
 translation-type: tm+mt
 source-git-commit: 26e7116858574b366760ffd4f92b14117ccd28eb
 workflow-type: tm+mt

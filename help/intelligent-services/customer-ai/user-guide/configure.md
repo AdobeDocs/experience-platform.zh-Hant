@@ -2,7 +2,7 @@
 keywords: Experience Platform；使用手冊；客戶ai；熱門主題；配置實例；建立實例；
 solution: Experience Platform, Intelligent Services, Real-time Customer Data Platform
 title: 設定客戶AI例項
-topic: 建立例項
+topic: Instance creation
 description: 智慧型服務提供客戶人工智慧，以簡單易用的Adobe Sensei服務形式提供，可針對不同使用案例進行設定。 以下各節提供設定客戶AI例項的步驟。
 exl-id: 78353dab-ccb5-4692-81f6-3fb3f6eca886
 translation-type: tm+mt

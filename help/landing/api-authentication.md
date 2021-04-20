@@ -2,8 +2,8 @@
 keywords: Experience Platform;home；熱門主題；驗證；訪問
 solution: Experience Platform
 title: 驗證和存取Experience PlatformAPI
-topic: 教學課程
-type: 教學課程
+topic: tutorial
+type: Tutorial
 description: '本文件逐步說明如何存取 Adobe Experience Platform 開發人員帳戶，進而呼叫 Experience Platform API。 '
 translation-type: tm+mt
 source-git-commit: ca5c8527b1b54856aa1e762a06ddbe404f30ec42

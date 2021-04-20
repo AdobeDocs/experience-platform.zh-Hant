@@ -2,7 +2,7 @@
 keywords: Experience Platform;home；熱門主題；filter;Filter;filter data;filter data;date range
 solution: Experience Platform
 title: 使用查詢參數篩選目錄資料
-topic: 開發人員指南
+topic: developer guide
 description: 目錄服務API允許透過使用請求查詢參數來篩選回應資料。 目錄的最佳實務是在所有API呼叫中使用篩選器，因為這些篩選器可減輕API的負載，並有助於改善整體效能。
 exl-id: 0cdb5a7e-527b-46be-9ad8-5337c8dc72b7
 translation-type: tm+mt

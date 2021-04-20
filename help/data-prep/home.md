@@ -2,7 +2,7 @@
 keywords: Experience Platform;home；熱門主題；map csv;map csv;map csv file;map csv file to xdm;map csv to xdm;ui guide;mapper;mapping;data preparation;data preparation；準備資料；
 solution: Experience Platform
 title: 資料準備概述
-topic: 概述
+topic: overview
 description: 本檔案介紹Adobe Experience Platform的資料準備。
 exl-id: f15eeb50-a531-4560-a524-1a670fbda706
 translation-type: tm+mt

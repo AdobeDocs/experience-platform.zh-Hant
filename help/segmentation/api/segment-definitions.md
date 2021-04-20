@@ -2,7 +2,7 @@
 keywords: Experience Platform;home；熱門主題；分段；分段；分段服務；分段定義；分段定義；api;API;
 solution: Experience Platform
 title: 區段定義API端點
-topic: 開發人員指南
+topic: developer guide
 description: Adobe Experience Platform區段服務API中的區段定義端點可讓您以程式設計方式管理組織的區段定義。
 translation-type: tm+mt
 source-git-commit: 4e4672f4101f92f035985d187512d917890aab6b

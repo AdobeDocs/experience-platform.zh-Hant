@@ -2,8 +2,8 @@
 keywords: Experience Platform;home；熱門主題；Oracle Object Storage;Oracle對象儲存
 solution: Experience Platform
 title: 在UI中建立Oracle對象儲存源連接
-topic: 概述
-type: 教學課程
+topic: overview
+type: Tutorial
 description: 瞭解如何使用Adobe Experience Platform UI建立Oracle Object Storage來源連線。
 translation-type: tm+mt
 source-git-commit: c1453a9f0be42f834d35af871051324df8dadf80

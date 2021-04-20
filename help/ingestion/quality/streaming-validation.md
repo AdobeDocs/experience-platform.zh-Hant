@@ -2,8 +2,8 @@
 keywords: Experience Platform;home；熱門主題；流；流處理；流處理驗證；驗證；流處理驗證；驗證；同步驗證；同步驗證；非同步驗證；非同步驗證；
 solution: Experience Platform
 title: 串流擷取驗證
-topic: 教學課程
-type: 教學課程
+topic: tutorial
+type: Tutorial
 description: 串流擷取可讓您使用串流端點即時將資料上傳至Adobe Experience Platform。 串流擷取API支援同步和非同步兩種驗證模式。
 translation-type: tm+mt
 source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac

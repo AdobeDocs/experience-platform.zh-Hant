@@ -2,7 +2,7 @@
 keywords: Experience Platform;home；熱門主題；沙盒；沙盒
 solution: Experience Platform
 title: 在API中建立沙盒
-topic: 開發人員指南
+topic: developer guide
 description: 您可以向「/沙盒」端點提出POST請求，以建立新沙盒。
 translation-type: tm+mt
 source-git-commit: 62ce5ac92d03a6e85589fc92e8d953f7fc1d8f31

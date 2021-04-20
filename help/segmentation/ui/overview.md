@@ -2,7 +2,7 @@
 keywords: Experience Platform; home；熱門主題；分段服務；分段服務；使用手冊；ui指南；分段使用手冊；分段生成器；分段生成器；實現；現有；退出；
 solution: Experience Platform
 title: 區段服務UI指南
-topic: ui指南
+topic: ui guide
 description: Adobe Experience Platform區段服務提供使用者介面，以建立和管理區段定義。
 translation-type: tm+mt
 source-git-commit: 1634466d3a1d8eadc4c98bb93214d8772b6a47a3

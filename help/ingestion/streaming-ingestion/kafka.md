@@ -2,7 +2,7 @@
 keywords: Experience Platform; home；熱門話題； kafka; kafka連接器；
 solution: Experience Platform
 title: Kafka Connector
-topic: 概述
+topic: overview
 description: Adobe Experience Platform的串流連接器是以Apache Kafka Connect為基礎。 此程式庫可用來將JSON事件從您資料中心的Kafka主題即時串流至Experience Platform。
 translation-type: tm+mt
 source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac

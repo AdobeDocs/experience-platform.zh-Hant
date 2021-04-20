@@ -3,7 +3,7 @@ keywords: Experience Platform;home；熱門主題；api;API;XDM;XDM系統；體�
 solution: Experience Platform
 title: Mixins API端點
 description: 架構註冊表API中的/mixins端點可讓您以程式設計方式管理體驗應用程式中的XDM混合。
-topic: 開發人員指南
+topic: developer guide
 exl-id: 93ba2fe3-0277-4c06-acf6-f236cd33252e
 translation-type: tm+mt
 source-git-commit: 610ce5c6dca5e7375b941e7d6f550382da10ca27

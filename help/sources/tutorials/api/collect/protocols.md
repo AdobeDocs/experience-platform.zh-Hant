@@ -2,8 +2,8 @@
 keywords: Experience Platform;home；熱門主題；收集協定資料；協定資料
 solution: Experience Platform
 title: 使用來源連接器和API收集通訊協定資料
-topic: 概述
-type: 教學課程
+topic: overview
+type: Tutorial
 description: 本教學課程涵蓋從通訊協定應用程式擷取資料，並使用來源連接器和API將其匯入平台的步驟。
 exl-id: e14e75c2-2a93-45d8-8056-f06075bd4b8d
 translation-type: tm+mt

@@ -2,7 +2,7 @@
 keywords: Experience Platform;home；熱門主題；Oracle Object Storage;Oracle對象儲存
 solution: Experience Platform
 title: Oracle對象儲存源連接器概覽
-topic: 概述
+topic: overview
 description: 瞭解如何使用API或使用者介面將Oracle Object Storage連接至Adobe Experience Platform。
 translation-type: tm+mt
 source-git-commit: 04c605aedd4c52b54d0f075c169ce919650cdee9

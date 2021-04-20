@@ -2,8 +2,8 @@
 keywords: Experience Platform；首頁；熱門主題；行銷自動化系統；收集行銷自動化資料
 solution: Experience Platform
 title: 使用來源連接器和API收集行銷自動化資料
-topic: 概述
-type: 教學課程
+topic: overview
+type: Tutorial
 description: 本教學課程涵蓋從行銷自動化系統擷取資料，以及使用來源連接器和API將資料匯入Adobe Experience Platform的步驟。
 exl-id: f3754bd0-ed31-4bf2-8f97-975bf6a9b076
 translation-type: tm+mt

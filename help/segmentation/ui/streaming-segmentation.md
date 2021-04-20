@@ -2,7 +2,7 @@
 keywords: Experience Platform; home；熱門主題；流分段；分段服務；分段服務；用戶介面指南；
 solution: Experience Platform
 title: 串流區段UI指南
-topic: ui指南
+topic: ui guide
 description: Adobe Experience Platform的串流細分可讓您近乎即時地進行細分，同時專注於資料的豐富性。 透過串流分段，區段資格現在會在資料進入平台時進行，以減輕排程和執行分段工作的需求。 有了這項功能，大部份的區段規則現在都可以在資料傳入平台時進行評估，這表示區段成員資格將會保持最新，而不會執行排程的區段工作。
 exl-id: cb9b32ce-7c0f-4477-8c49-7de0fa310b97
 translation-type: tm+mt

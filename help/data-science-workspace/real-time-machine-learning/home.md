@@ -2,7 +2,7 @@
 keywords: Experience Platform；開發人員指南；資料科學工作區；熱門主題；即時機器學習；
 solution: Experience Platform
 title: 即時機器學習概觀
-topic: 概述
+topic: Overview
 description: 即時機器學習功能可大幅提升數位體驗內容對使用者的相關性。 透過在Experience Edge上運用即時參考和持續學習，您就能做到這一點。
 translation-type: tm+mt
 source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac

@@ -2,7 +2,7 @@
 keywords: Experience Platform;home；熱門主題；資料位置；資料位置；資料管理；資料管理；世系；資料類型；資料類型；資料類型；資料類型
 solution: Experience Platform
 title: 資料集概述
-topic: 資料集
+topic: datasets
 description: 本檔案提供Experience Platform中資料集的高階概觀。
 translation-type: tm+mt
 source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac

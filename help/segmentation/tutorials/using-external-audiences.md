@@ -3,7 +3,7 @@ keywords: Experience Platform；首頁；熱門主題
 solution: Experience Platform
 title: 匯入和使用外部觀眾
 description: 請依照本教學課程學習如何搭配Adobe Experience Platform使用外部觀眾。
-topic: 教學課程
+topic: tutorial
 translation-type: tm+mt
 source-git-commit: 400e4d9007212ed2693d031ae912a4f1cca97c57
 workflow-type: tm+mt

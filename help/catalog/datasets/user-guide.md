@@ -2,7 +2,7 @@
 keywords: Experience Platform;home；熱門主題；enable dataset;Dataset;dataset
 solution: Experience Platform
 title: 資料集UI指南
-topic: 資料集
+topic: datasets
 description: 瞭解如何在Adobe Experience Platform使用者介面中處理資料集時執行常見動作。
 translation-type: tm+mt
 source-git-commit: fc493a207e305887e798238ba6883f4934c5cba5

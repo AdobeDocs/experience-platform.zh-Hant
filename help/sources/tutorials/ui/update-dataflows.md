@@ -3,7 +3,7 @@ keywords: Experience Platform;home；熱門主題；更新資料流；編輯調�
 description: 本教程介紹使用Sources工作區更新資料流調度的步驟，包括其接收頻率和間隔速率。
 solution: Experience Platform
 title: 在UI中更新源連接資料流
-topic: 概述
+topic: overview
 type: Tutorial
 exl-id: 0499a2a3-5a22-47b1-ac0e-76a432bd26c0
 translation-type: tm+mt

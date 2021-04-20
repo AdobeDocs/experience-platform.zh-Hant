@@ -2,8 +2,8 @@
 keywords: Experience Platform；首頁；熱門主題；Google雲端儲存空間；google雲端儲存空間；GCS;gcs
 solution: Experience Platform
 title: 在UI中建立Google雲端儲存來源連線
-topic: 概述
-type: 教學課程
+topic: overview
+type: Tutorial
 description: 瞭解如何使用Adobe Experience PlatformUI建立Google雲端儲存空間來源連線。
 translation-type: tm+mt
 source-git-commit: f6a63ca1e21b3c3f6a55574f31fdf04038b7e5c4

@@ -4,8 +4,8 @@ solution: Experience Platform
 title: Adobe Experience Platform常見問答集與疑難排解指南
 description: 尋找常見問題的解答，以及針對 Experience Platform 中的常見錯誤進行疑難排解的指南。
 landing-page-description: 尋找常見問題的解答，以及針對 Experience Platform 中的常見錯誤進行疑難排解的指南。
-topic: 快速入門
-type: 文件
+topic: getting started
+type: Documentation
 translation-type: tm+mt
 source-git-commit: 83cc3ddbf067f413cb524a3a685d985d5853eafd
 workflow-type: tm+mt

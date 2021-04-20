@@ -2,8 +2,8 @@
 keywords: Experience Platform；預覽模式資料；資料科學工作區；熱門主題
 solution: Experience Platform
 title: 預覽零售銷售結構和資料集
-topic: 教學課程
-type: 教學課程
+topic: tutorial
+type: Tutorial
 description: 以下文檔概述了在Adobe Experience Platform上預覽模式和資料集。
 translation-type: tm+mt
 source-git-commit: 5129a75071af680bc54a7f60bb89ce32d3216d09

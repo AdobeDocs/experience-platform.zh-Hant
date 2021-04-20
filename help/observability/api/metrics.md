@@ -2,7 +2,7 @@
 keywords: Experience Platform；首頁；熱門主題
 solution: Experience Platform
 title: 量度API端點
-topic: 開發人員指南
+topic: developer guide
 description: 瞭解如何使用可觀察分析API在Experience Platform中擷取可觀察度量。
 translation-type: tm+mt
 source-git-commit: 136c75f56c2ba4d61fef7981ff8a7889a0ade3d1

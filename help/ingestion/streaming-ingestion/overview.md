@@ -2,7 +2,7 @@
 keywords: Experience Platform；首頁；熱門主題；資料攝取；收錄資料；流；概述；串流攝取；延遲；串流延遲；
 solution: Experience Platform
 title: 串流擷取概觀
-topic: 概述
+topic: overview
 description: Adobe Experience Platform的串流擷取為使用者提供一種方法，可即時從用戶端和伺服器端裝置傳送資料至Experience Platform。
 translation-type: tm+mt
 source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac

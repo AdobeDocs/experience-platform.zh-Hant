@@ -2,7 +2,7 @@
 keywords: Experience Platform；用戶介面；UI；儀表板；概要檔案；段；目標；許可證使用
 title: 使用介面工具集程式庫來新增和建立控制面板介面工具集
 description: '本指南提供逐步指示，說明如何新增標準Widget以及建立自訂Widget，以視覺化Adobe Experience Platform的控制面板資料。 '
-topic: 指南
+topic: guide
 translation-type: tm+mt
 source-git-commit: 27444a0106eacbd69149168d7439773ebbb26119
 workflow-type: tm+mt

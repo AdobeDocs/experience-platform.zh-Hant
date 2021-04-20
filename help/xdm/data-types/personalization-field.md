@@ -1,7 +1,7 @@
 ---
 solution: Experience Platform
 title: 一般個人化偏好設定欄位資料類型
-topic: 概述
+topic: overview
 description: 本檔案提供一般個人化偏好設定欄位XDM資料類型的概述。
 translation-type: tm+mt
 source-git-commit: 9ca0978cdf42926303d622a4d536ac48bca32e70

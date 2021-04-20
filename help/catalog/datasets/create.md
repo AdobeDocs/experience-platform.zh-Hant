@@ -2,7 +2,7 @@
 keywords: Experience Platform;home；熱門主題；dataset;Dataset；建立資料集；建立資料集
 solution: Experience Platform
 title: 使用API建立資料集
-topic: 資料集
+topic: datasets
 description: 本檔案提供使用Adobe Experience PlatformAPI建立資料集，以及使用檔案填入資料集的一般步驟。
 exl-id: 3a5f48cf-ad05-4b9e-be1d-ff213a26a477
 translation-type: tm+mt

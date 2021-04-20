@@ -2,7 +2,7 @@
 keywords: Experience Platform；首頁；熱門主題
 solution: Experience Platform
 title: Adobe Experience Platform辭彙表
-topic: 快速入門
+topic: getting started
 description: Experience Platform 重要術語表。
 translation-type: tm+mt
 source-git-commit: 5575d5e45bddcc007dcf78720cd7a7e20475f78c

@@ -1,8 +1,8 @@
 ---
 keywords: Experience Platform;Profile；即時客戶配置檔案；故障排除；API
 title: 計算屬性的PQL表達式示例
-topic: 指南
-type: 文件
+topic: guide
+type: Documentation
 description: 計算屬性是用於將事件級別資料聚合到配置檔案級別屬性的函式。 這些函式需要使用有效的配置檔案查詢語言(PQL)表達式。 本指南概述了一些最常用於計算屬性的PQL表達式。
 translation-type: tm+mt
 source-git-commit: 92533f732cc14b57d2a0a34ce9afe99554f9af04

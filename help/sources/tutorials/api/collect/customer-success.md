@@ -2,8 +2,8 @@
 keywords: Experience Platform；首頁；熱門主題；收集客戶成功；客戶成功
 solution: Experience Platform
 title: 使用來源連接器和API從客戶成功系統收集資料
-topic: 概述
-type: 教學課程
+topic: overview
+type: Tutorial
 description: 本教學課程涵蓋從客戶成功系統擷取資料，並使用來源連接器和API將其匯入平台的步驟。
 exl-id: 0fae04d0-164b-4113-a274-09677f4bbde5
 translation-type: tm+mt

@@ -4,7 +4,7 @@ audience: user
 user-guide-title: Adobe Experience Platform 隱私權服務說明
 breadcrumb-title: 隱私權服務指南
 user-guide-description: 管理客戶資料要求，以符合 GDPR 和 CCPA 等法律隱私權法規。
-feature: 隱私
+feature: Privacy
 translation-type: tm+mt
 source-git-commit: ac6935f09f620ea55cf8f612ff0a1fba503b5e17
 workflow-type: tm+mt

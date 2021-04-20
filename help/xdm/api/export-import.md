@@ -3,7 +3,7 @@ keywords: Experience Platform;home；熱門主題；api;API;XDM;XDM系統；體�
 solution: Experience Platform
 title: 匯出／匯入API端點
 description: 架構註冊表API中的/export和/import端點可讓您在IMS組織和沙盒之間共用XDM資源。
-topic: 開發人員指南
+topic: developer guide
 translation-type: tm+mt
 source-git-commit: 0727ffa0c72bcb6a85de1a13215b691b97889b70
 workflow-type: tm+mt

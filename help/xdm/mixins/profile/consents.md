@@ -1,7 +1,7 @@
 ---
 solution: Experience Platform
 title: 隱私權／個人化／行銷偏好設定（同意）Mixin
-topic: 概述
+topic: overview
 description: 本檔案提供隱私權／個人化／行銷偏好設定（同意）混合的概觀。
 translation-type: tm+mt
 source-git-commit: 8c5ab298bad69305358ae961ebaf7836a90a0eaa

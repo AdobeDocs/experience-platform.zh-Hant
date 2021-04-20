@@ -4,7 +4,7 @@ audience: user
 user-guide-title: Adobe Experience Platform 儀表板說明
 breadcrumb-title: 儀表板指南
 user-guide-description: 在可自訂儀表板上呈現視覺化的 Experience Platform 資料。
-feature: 資料管理
+feature: Data Management
 translation-type: tm+mt
 source-git-commit: 4b087685f065d05894fb45c19fce453346448614
 workflow-type: tm+mt

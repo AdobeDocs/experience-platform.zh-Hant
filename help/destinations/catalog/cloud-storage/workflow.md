@@ -1,7 +1,7 @@
 ---
 keywords: 雲儲存目標；雲儲存
 title: 建立雲端儲存空間目標
-type: 教學課程
+type: Tutorial
 description: 連線至雲端儲存空間的指示
 seo-description: 連線至雲端儲存空間的指示
 exl-id: 58003c1e-2f70-4e28-8a38-3be00da7cc3c

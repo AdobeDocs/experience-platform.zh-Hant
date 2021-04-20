@@ -2,7 +2,7 @@
 keywords: Experience Platform；首頁；熱門主題；AmazonKinesis;amazon kinesis;Kinesis;kinesis
 solution: Experience Platform
 title: AmazonKinesis源連接器概述
-topic: 概述
+topic: overview
 description: 瞭解如何使用API或使用者介面將AmazonKinesis與Adobe Experience Platform連線。
 translation-type: tm+mt
 source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac

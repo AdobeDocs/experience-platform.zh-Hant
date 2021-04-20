@@ -2,7 +2,7 @@
 keywords: 見解；歸因ai；歸因ai洞察；AAI查詢服務；歸因查詢；歸因分數
 solution: Intelligent Services, Experience Platform
 title: 使用查詢服務分析歸因分數
-topic: Attribution AI查詢
+topic: Attribution AI queries
 description: 瞭解如何使用Adobe Experience Platform查詢服務來分析Attribution AI分數。
 translation-type: tm+mt
 source-git-commit: d83244ac93830b0e40f6d14e87497d4cb78544d9

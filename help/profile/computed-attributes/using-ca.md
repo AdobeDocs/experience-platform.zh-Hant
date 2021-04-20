@@ -1,8 +1,8 @@
 ---
 keywords: Experience Platform;Profile；即時客戶配置檔案；故障排除；API
 title: 在平台中使用計算屬性
-topic: 指南
-type: 文件
+topic: guide
+type: Documentation
 description: '計算屬性是將事件級別資料聚合到配置檔案級別屬性的函式。 這些函式會自動計算，以便跨區段、啟動和個人化使用。 '
 translation-type: tm+mt
 source-git-commit: 08eff53f107549fab0f167a6c206b632f3c8c183

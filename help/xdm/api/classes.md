@@ -3,7 +3,7 @@ keywords: Experience Platform;home；熱門主題；api;API;XDM;XDM系統；體�
 solution: Experience Platform
 title: 類別API端點
 description: 方案註冊表API中的/classes端點允許您以寫程式方式管理體驗應用程式中的XDM類。
-topic: 開發人員指南
+topic: developer guide
 exl-id: 7beddb37-0bf2-4893-baaf-5b292830f368
 translation-type: tm+mt
 source-git-commit: 610ce5c6dca5e7375b941e7d6f550382da10ca27

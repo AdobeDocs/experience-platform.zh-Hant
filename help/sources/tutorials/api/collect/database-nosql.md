@@ -2,8 +2,8 @@
 keywords: Experience Platform;home；熱門主題；資料庫；第三方資料庫
 solution: Experience Platform
 title: 使用來源連接器和API從資料庫收集資料
-topic: 概述
-type: 教學課程
+topic: overview
+type: Tutorial
 description: 本教學課程涵蓋從資料庫擷取資料，並使用來源連接器和API將其匯入平台的步驟。
 exl-id: 1e1f9bbe-eb5e-40fb-a03c-52df957cb683
 translation-type: tm+mt

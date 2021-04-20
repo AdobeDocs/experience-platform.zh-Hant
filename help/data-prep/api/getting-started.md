@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform；資料準備；資料準備api；故障排除；API
 title: 資料準備API快速入門
-topic: 指南
+topic: guide
 description: 瞭解您需要瞭解的關鍵概念和基本功能，以便使用資料準備API端點執行與映射程式一起使用的基本CRUD操作。
 translation-type: tm+mt
 source-git-commit: a3ea7a6b68c81ee91a338735009ae0fa63884ded

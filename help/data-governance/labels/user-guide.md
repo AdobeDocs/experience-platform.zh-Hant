@@ -2,7 +2,7 @@
 keywords: Experience Platform；首頁；熱門主題；資料治理；資料使用標籤；策略服務；資料使用標籤使用手冊
 solution: Experience Platform
 title: 在UI中管理資料使用標籤
-topic: 標籤
+topic: labels
 description: 本指南涵蓋在Adobe Experience Platform用戶介面中使用資料使用標籤的步驟。
 translation-type: tm+mt
 source-git-commit: 41d01b3aec0afa60dd602716a30cc94402702a70

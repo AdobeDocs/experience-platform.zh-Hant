@@ -2,7 +2,7 @@
 keywords: Experience Platform;home；熱門主題；ECID;ecid
 solution: Experience Platform
 title: ECID概觀
-topic: 概述
+topic: overview
 description: Experience Cloud識別碼(ECID)是用戶端模組，可存取身分識別管理，提供三項主要功能。
 exl-id: da7717d2-da2e-414b-978d-2eab8ff2c5a0
 translation-type: tm+mt

@@ -2,7 +2,7 @@
 keywords: Experience Platform；首頁；熱門主題；分段；分段；分段服務；分段；分段；分段；分段；分段；分段；分段；分段；分段；分段；分段；分段
 solution: Experience Platform
 title: 區段服務概觀
-topic: 概述
+topic: overview
 description: 瞭解Adobe Experience Platform細分服務及其在平台生態系統中的作用。
 translation-type: tm+mt
 source-git-commit: eff833f20eba4e51579a43fbb98c1e2333e326ef

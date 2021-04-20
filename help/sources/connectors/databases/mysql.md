@@ -2,7 +2,7 @@
 keywords: Experience Platform;home；常用主題；MySQL;mysql;My SQL
 solution: Experience Platform
 title: MySQL源連接器概述
-topic: 概述
+topic: overview
 description: 瞭解如何使用API或使用者介面將MySQL連線至Adobe Experience Platform。
 translation-type: tm+mt
 source-git-commit: 8851e11e956b393e56714d4d48870b7f68947c18

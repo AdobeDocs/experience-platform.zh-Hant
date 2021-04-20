@@ -2,8 +2,8 @@
 keywords: Experience Platform;home；熱門主題；Google雲端儲存；google雲端儲存；google;Google
 solution: Experience Platform
 title: 使用流程服務API建立Google雲端儲存來源連線
-topic: 概述
-type: 教學課程
+topic: overview
+type: Tutorial
 description: 瞭解如何使用Flow Service API將Adobe Experience Platform連接至Google雲端儲存空間帳戶。
 translation-type: tm+mt
 source-git-commit: f6a63ca1e21b3c3f6a55574f31fdf04038b7e5c4

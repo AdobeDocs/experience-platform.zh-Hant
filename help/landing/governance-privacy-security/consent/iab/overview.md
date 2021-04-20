@@ -2,7 +2,7 @@
 keywords: Experience Platform;home;IAB;IAB 2.0；同意；同意
 solution: Experience Platform
 title: IAB TCF 2.0Experience Platform支援
-topic: 隱私權事件
+topic: privacy events
 description: 瞭解如何設定您的資料作業和結構，以在將區段啟動至Adobe Experience Platform的目的地時傳達客戶同意選擇。
 translation-type: tm+mt
 source-git-commit: a845ade0fc1e6e18c36b5f837fe7673a976f01c7

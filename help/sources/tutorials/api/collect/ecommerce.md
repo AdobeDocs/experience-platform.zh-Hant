@@ -2,8 +2,8 @@
 keywords: Experience Platform;home；熱門主題；收集電子商務資料；電子商務資料
 solution: Experience Platform
 title: 使用來源連接器和API收集電子商務資料
-topic: 概述
-type: 教學課程
+topic: overview
+type: Tutorial
 description: 本教學課程涵蓋從協力廠商電子商務系統擷取資料，並使用來源連接器和API將其匯入平台的步驟。
 exl-id: 0952f037-5e20-4d84-a2e6-2c9470f168f5
 translation-type: tm+mt

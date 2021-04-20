@@ -3,8 +3,8 @@ keywords: Experience Platform; home；熱門主題；監控帳戶；監控資料
 description: 本教程提供了使用聚合監視視圖和跨服務監視來監視資料流的步驟。
 solution: Experience Platform
 title: 在UI中監視源的資料流
-topic: 概述
-type: 教學課程
+topic: overview
+type: Tutorial
 translation-type: tm+mt
 source-git-commit: 4c668a47e62ba7736dd2d7afe4e71fd015198356
 workflow-type: tm+mt

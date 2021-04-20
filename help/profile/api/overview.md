@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API;unified profile;Unified Profile;unified;Profile;rtcp;enable profile；啟用profile；啟用profile
 title: 即時客戶個人檔案API指南
-topic: 指南
+topic: guide
 description: 即時客戶描述檔API可讓開發人員探索和使用描述檔資料，包括檢視描述檔、建立和更新合併原則、匯出或取樣描述檔資料，以及刪除不再需要或錯誤新增的描述檔資料。 請依照本指南，瞭解如何使用API執行關鍵作業。
 translation-type: tm+mt
 source-git-commit: 24a5af0440f58b4e1db639ec971c4e1611f107d8

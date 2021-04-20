@@ -2,7 +2,7 @@
 keywords: Experience Platform;home；常用主題；Microsoft SQL;microsoft sql;SQL;sql
 solution: Experience Platform
 title: SQL Server源連接器概述
-topic: 概述
+topic: overview
 description: 瞭解如何使用API或使用者介面將Microsoft SQL Server連接至Adobe Experience Platform。
 translation-type: tm+mt
 source-git-commit: 0fb97fcf5d3f8230ff86906aeef245e4a7f44f30

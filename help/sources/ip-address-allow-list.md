@@ -3,7 +3,7 @@ keywords: Experience Platform; home；熱門主題；ip address;ip address;ip ad
 description: 在使用源連接器之前，必須將IP地址添加到允許清單。
 solution: Experience Platform
 title: IP地址允許源連接清單
-topic: 概述
+topic: overview
 translation-type: tm+mt
 source-git-commit: 6ee71de86d487a38ca4acc76813111994eb44bd9
 workflow-type: tm+mt

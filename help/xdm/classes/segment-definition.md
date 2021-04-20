@@ -1,7 +1,7 @@
 ---
 solution: Experience Platform
 title: 區段定義類別
-topic: 概述
+topic: overview
 description: 本檔案概述Experience Data Model(XDM)中的「區段定義」類別。
 translation-type: tm+mt
 source-git-commit: f4e80cc6a5e5e135bedb77b2d56ae5cb2c8d8c53

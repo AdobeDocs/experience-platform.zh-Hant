@@ -2,8 +2,8 @@
 keywords: Experience Platform；首頁；熱門主題；流式服務；廣告；google adwords；廣告
 solution: Experience Platform
 title: 使用來源連接器和API收集廣告資料
-topic: 概述
-type: 教學課程
+topic: overview
+type: Tutorial
 description: 本教學課程涵蓋從協力廠商廣告應用程式擷取資料，並使用來源連接器和Flow Service API將其匯入平台的步驟。
 exl-id: 2a0eb13b-d09e-4bc1-aae3-84c8741eead1
 translation-type: tm+mt

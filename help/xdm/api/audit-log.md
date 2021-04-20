@@ -3,7 +3,7 @@ keywords: Experience Platform;home；熱門主題；api;API;XDM;XDM系統；體�
 solution: Experience Platform
 title: 審核日誌API端點
 description: 方案註冊表API中的/auditlog端點允許您檢索對現有XDM資源所做更改的時間順序清單。
-topic: 開發人員指南
+topic: developer guide
 translation-type: tm+mt
 source-git-commit: 0727ffa0c72bcb6a85de1a13215b691b97889b70
 workflow-type: tm+mt

@@ -4,7 +4,7 @@ audience: user
 user-guide-title: 目的地指南
 user-guide-description: 針對跨通路行銷活動、電子郵件宣傳、鎖定特定目標的行銷活動和其他諸多使用案例，啟用已知和未知的資料。
 description: 本檔案列出了Adobe Experience Platform目的地的目錄
-feature: 目的地
+feature: Destinations
 translation-type: tm+mt
 source-git-commit: 805cb72e91e6446f74cc3461d39841740eb576c7
 workflow-type: tm+mt

@@ -2,8 +2,8 @@
 keywords: Experience Platform;JupyterLab；筆記型電腦；資料科學工作區；熱門主題；資料筆記本；eda；探索性資料分析；資料科學
 solution: Experience Platform
 title: 探索性資料分析(EDA)筆記本
-topic: 概述
-type: 教學課程
+topic: overview
+type: Tutorial
 description: 本指南著重說明如何使用探索性資料分析(EDA)筆記型電腦來發現Web資料中的模式、以預測目標匯整事件、清理匯整資料，並瞭解預測者與目標之間的關係。
 translation-type: tm+mt
 source-git-commit: 1d1a19c75d2972a6fce0d39aa508cca91fb4becd

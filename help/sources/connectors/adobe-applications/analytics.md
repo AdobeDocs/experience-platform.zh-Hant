@@ -2,7 +2,7 @@
 keywords: Experience Platform；首頁；熱門主題；Analytics資料連接器；分析；Analytics
 solution: Experience Platform
 title: Adobe Analytics報表套裝資料的來源連接器
-topic: 概述
+topic: overview
 description: 本檔案提供Analytics的概觀，並說明Analytics資料的使用案例。
 translation-type: tm+mt
 source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac

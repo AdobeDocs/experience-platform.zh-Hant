@@ -3,7 +3,7 @@ keywords: Experience Platform;home；熱門主題；api;API;XDM;XDM;XDM系統；
 solution: Experience Platform
 title: 工會API端點
 description: 架構註冊表API中的/union端點可讓您以程式設計方式管理體驗應用程式中的XDM結合架構。
-topic: 開發人員指南
+topic: developer guide
 exl-id: d0ece235-72e8-49d9-856b-5dba44e16ee7
 translation-type: tm+mt
 source-git-commit: 610ce5c6dca5e7375b941e7d6f550382da10ca27

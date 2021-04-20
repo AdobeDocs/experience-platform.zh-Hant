@@ -2,8 +2,8 @@
 keywords: Experience Platform; home；熱門主題；流處理；攝取；記錄資料；流記錄資料；
 solution: Experience Platform
 title: 使用串流擷取API來串流記錄資料
-topic: 教學課程
-type: 教學課程
+topic: tutorial
+type: Tutorial
 description: 本教學課程將協助您開始使用串流擷取API，這是Adobe Experience Platform資料擷取服務API的一部分。
 exl-id: 097dfd5a-4e74-430d-8a12-cac11b1603aa
 translation-type: tm+mt

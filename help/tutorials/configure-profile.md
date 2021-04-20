@@ -2,8 +2,8 @@
 keywords: Experience Platform; home；熱門主題；即時客戶概要；身份服務；
 solution: Experience Platform
 title: 即時客戶個人檔案教學課程
-topic: 教學課程
-type: 教學課程
+topic: tutorial
+type: Tutorial
 description: 本檔案概述了相關步驟，並提供教學課程連結，以完成個別工作流程。
 translation-type: tm+mt
 source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac

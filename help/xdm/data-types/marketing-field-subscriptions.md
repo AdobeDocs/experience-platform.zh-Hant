@@ -1,7 +1,7 @@
 ---
 solution: Experience Platform
 title: 具有訂閱資料類型的一般行銷偏好設定欄位
-topic: 概述
+topic: overview
 description: 本檔案提供「一般行銷偏好設定欄位」與「訂閱XDM」資料類型的概述。
 translation-type: tm+mt
 source-git-commit: 8c5ab298bad69305358ae961ebaf7836a90a0eaa

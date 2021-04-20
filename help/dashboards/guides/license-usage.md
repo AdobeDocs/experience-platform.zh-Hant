@@ -2,8 +2,8 @@
 keywords: Experience Platform；用戶介面；UI；自定義；許可證使用儀表板；儀表板；許可證使用；權益；衝減
 title: 授權使用儀表板
 description: Adobe Experience Platform提供儀表板，您可透過儀表板檢視貴組織授權使用的重要資訊。
-topic: 指南
-type: 文件
+topic: guide
+type: Documentation
 translation-type: tm+mt
 source-git-commit: 6baf1fbff20a02cd599d9ad9102d56db5a9004c3
 workflow-type: tm+mt

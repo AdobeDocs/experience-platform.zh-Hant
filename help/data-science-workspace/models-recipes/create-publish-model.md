@@ -2,8 +2,8 @@
 keywords: Experience Platform；機器學習模型；資料科學工作區；熱門主題；建立和發佈模型
 solution: Experience Platform
 title: 建立和發佈機器學習模型
-topic: 教學課程
-type: 教學課程
+topic: tutorial
+type: Tutorial
 description: Adobe Experience Platform資料科學工作區提供使用預先建立的產品Recommendations配方來達成目標的方式。 請依照本教學課程，瞭解如何存取和瞭解您的零售資料、建立和最佳化機器學習模型，以及在資料科學工作區中產生見解。
 translation-type: tm+mt
 source-git-commit: b5d42c6a38a50d39e1ca46e18623dde59c33833b

@@ -2,8 +2,8 @@
 keywords: Experience Platform;home；熱門主題；shopify;Shopify
 solution: Experience Platform
 title: 在UI中建立Shopify來源連線
-topic: 概述
-type: 教學課程
+topic: overview
+type: Tutorial
 description: 瞭解如何使用Adobe Experience PlatformUI建立Shopify來源連線。
 translation-type: tm+mt
 source-git-commit: cc23228cb410dc4c70a56c5142be00c2ca1c40d3

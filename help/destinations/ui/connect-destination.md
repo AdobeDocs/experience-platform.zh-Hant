@@ -1,7 +1,7 @@
 ---
 keywords: 連接目的地；目的地連接；如何連接目的地
 title: 連接到目標
-type: 教學課程
+type: Tutorial
 description: 本教學課程列出連接Adobe Experience Platform目標的步驟
 exl-id: 56d7799a-d1da-4727-ae79-fb2c775fe5a5
 translation-type: tm+mt

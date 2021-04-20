@@ -2,7 +2,7 @@
 keywords: Experience Platform;home；熱門主題；模式；模式；混合；Mixin;Mixin;Mixins；資料類型；資料類型；資料類型；資料類型；模式設計；資料類型；資料類型；資料類型；資料類型；模式；模式；映射；映射；
 solution: Experience Platform
 title: XDM欄位類型約束
-topic: 概述
+topic: overview
 description: Experience Data Model(XDM)中欄位類型限制的參考，包括其他可映射至的序列化格式，以及如何在API中定義您自己的欄位類型。
 translation-type: tm+mt
 source-git-commit: 456e595e66436c35c7d081ddf4699263e9c87234

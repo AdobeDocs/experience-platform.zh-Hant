@@ -2,7 +2,7 @@
 keywords: Experience Platform；首頁；熱門主題；雲儲存；雲儲存
 solution: Experience Platform
 title: 使用Flow Service API探索Cloud儲存系統
-topic: 概述
+topic: overview
 description: 本教學課程使用Flow Service API來探索協力廠商雲端儲存系統。
 translation-type: tm+mt
 source-git-commit: 457fc9e1b0c445233f0f574fefd31bc1fc3bafc8

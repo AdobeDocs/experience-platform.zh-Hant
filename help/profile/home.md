@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform；配置檔案；即時客戶配置檔案；疑難排解；API；統一配置檔案；統一配置檔案；配置檔案；rtcp;XDM圖
 title: 即時客戶個人檔案概觀
-topic: 指南
+topic: guide
 description: 即時客戶描述檔是一般查閱實體儲存，可合併來自各種企業資料資產的資料，然後以個別客戶描述檔和相關時間系列事件的形式提供對該資料的存取。 此功能可讓行銷人員跨多個通道，推動與受眾的協調、一致且相關的體驗。
 translation-type: tm+mt
 source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac

@@ -2,7 +2,7 @@
 keywords: Experience Platform；首頁；熱門主題；資料源連接
 solution: Experience Platform
 title: 使用Flow Service API從第三方雲端儲存系統內嵌鑲木地板資料
-topic: 概述
+topic: overview
 type: Tutorial
 description: 本教學課程使用Flow Service API來引導您逐步從協力廠商雲端儲存系統擷取Apache Parce Parce資料。
 exl-id: fb1b19d6-16bb-4a5f-9e81-f537bac95041

@@ -2,8 +2,8 @@
 keywords: Experience Platform；首頁；熱門主題；crm;CRM
 solution: Experience Platform
 title: 透過來源連接器和API收集CRM資料
-topic: 概述
-type: 教學課程
+topic: overview
+type: Tutorial
 description: 本教學課程涵蓋從協力廠商CRM系統擷取資料，並使用來源連接器和API將其匯入平台的步驟。
 exl-id: b07dd640-bce6-4699-9d2b-b7096746934a
 translation-type: tm+mt

@@ -2,7 +2,7 @@
 keywords: Experience Platform；首頁；熱門主題；列出活動的沙盒；列出沙盒
 solution: Experience Platform
 title: 在API中列出目前使用者的作用中沙盒
-topic: 開發人員指南
+topic: developer guide
 description: 您可以向根端點提出GET請求，列出目前使用者的作用中沙盒。
 translation-type: tm+mt
 source-git-commit: 62ce5ac92d03a6e85589fc92e8d953f7fc1d8f31

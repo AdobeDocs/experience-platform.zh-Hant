@@ -1,8 +1,8 @@
 ---
 keywords: Experience Platform；配置檔案；即時客戶配置檔案；故障排除；API
 title: 邊緣投影API端點
-topic: 指南
-type: 文件
+topic: guide
+type: Documentation
 description: Adobe Experience Platform可讓您跨多個通道即時為客戶提供協調、一致且個人化的體驗，讓適當的資料隨時可用，並隨時隨地更新。 這是透過使用邊緣來完成的。邊緣是地理位置的伺服器，可儲存資料，讓應用程式更容易存取。
 translation-type: tm+mt
 source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac

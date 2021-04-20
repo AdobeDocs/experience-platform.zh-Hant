@@ -1,8 +1,8 @@
 ---
 keywords: Experience Platform;Profile；即時客戶配置檔案；故障排除；API
 title: 如何配置計算屬性欄位
-topic: 指南
-type: 文件
+topic: guide
+type: Documentation
 description: 計算屬性是用於將事件級別資料聚合到配置檔案級別屬性的函式。 為了配置計算屬性，首先需要標識將保存計算屬性值的欄位。 可以使用混音建立此欄位，以將欄位添加到現有方案，或者選擇已在方案中定義的欄位。
 translation-type: tm+mt
 source-git-commit: 92533f732cc14b57d2a0a34ce9afe99554f9af04

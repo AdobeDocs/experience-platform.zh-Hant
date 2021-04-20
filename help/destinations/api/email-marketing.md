@@ -3,8 +3,8 @@ keywords: Experience Platform；首頁；熱門主題
 solution: Experience Platform
 title: 使用Flow Service API連線至電子郵件行銷目的地並啟用資料
 description: 本檔案涵蓋使用Adobe Experience PlatformAPI建立電子郵件行銷目的地
-topic: 教學課程
-type: 教學課程
+topic: tutorial
+type: Tutorial
 translation-type: tm+mt
 source-git-commit: 32cb198bcf2c142b50c4b7a60282f0c923be06b1
 workflow-type: tm+mt

@@ -3,7 +3,7 @@ product: experience-platform
 audience: user
 user-guide-title: 目錄與資料集指南
 user-guide-description: 在 Data Lake 中探索資料處理歷程、中繼資料、檔案說明、目錄和資料集。
-feature: 資料管理
+feature: Data Management
 translation-type: tm+mt
 source-git-commit: ac6935f09f620ea55cf8f612ff0a1fba503b5e17
 workflow-type: tm+mt

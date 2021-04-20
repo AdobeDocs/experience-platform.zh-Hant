@@ -2,7 +2,7 @@
 keywords: Experience Platform; home；熱門主題；監控；監控；資料流；監控攝取；資料攝取；資料攝取；查看記錄；查看批次；
 solution: Experience Platform
 title: 監控資料擷取
-topic: 概述
+topic: overview
 description: 本使用指南提供如何在Adobe Experience Platform使用者介面中監控資料的步驟。 本指南要求您擁有Adobe ID並可以訪問Adobe Experience Platform。
 translation-type: tm+mt
 source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac

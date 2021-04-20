@@ -2,8 +2,8 @@
 keywords: Experience Platform;JupyterLab；筆記型電腦；資料科學工作區；熱門主題；分析資料筆記型電腦
 solution: Experience Platform
 title: 使用筆記型電腦分析資料
-topic: 教學課程
-type: 教學課程
+topic: tutorial
+type: Tutorial
 description: 本教學課程著重於如何使用Jupyter Notebooks（在Data Science Workspace中建立）來存取、探索和視覺化您的資料。
 translation-type: tm+mt
 source-git-commit: 6908c582cb7e0d60b82112dbc0854411d76b4fd4

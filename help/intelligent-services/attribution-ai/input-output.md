@@ -2,7 +2,7 @@
 keywords: Experience Platform；入門；歸因ai；熱門主題；歸因ai輸入；歸因ai輸出；
 solution: Experience Platform, Intelligent Services
 title: 輸入與輸出在Attribution AI
-topic: 輸入和輸出資料以用於Attribution AI
+topic: Input and Output data for Attribution AI
 description: 以下檔案概述了Attribution AI中使用的不同輸入和輸出。
 exl-id: d6dbc9ee-0c1a-4a5f-b922-88c7a36a5380
 translation-type: tm+mt

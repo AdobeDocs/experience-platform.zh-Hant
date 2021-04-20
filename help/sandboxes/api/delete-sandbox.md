@@ -2,7 +2,7 @@
 keywords: Experience Platform;home；熱門主題；刪除沙盒
 solution: Experience Platform
 title: 刪除API中的沙盒
-topic: 開發人員指南
+topic: developer guide
 description: 您可以透過提出DELETE請求來刪除沙盒，請求路徑中包含沙盒的名稱。
 translation-type: tm+mt
 source-git-commit: 62ce5ac92d03a6e85589fc92e8d953f7fc1d8f31

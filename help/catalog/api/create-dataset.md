@@ -2,7 +2,7 @@
 keywords: Experience Platform;home；熱門主題；dataset;Dataset；建立資料集；建立資料集；啟用資料集
 solution: Experience Platform
 title: 在API中建立資料集
-topic: 開發人員指南
+topic: developer guide
 description: 本檔案說明如何在Catalog Service API中建立資料集物件。
 exl-id: f3e5de7f-1781-4898-ac42-063eb51e661a
 translation-type: tm+mt

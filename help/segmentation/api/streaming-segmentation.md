@@ -2,7 +2,7 @@
 keywords: Experience Platform; home；熱門主題；分段；分段；分段服務；流分段；流分段；連續評價；
 solution: Experience Platform
 title: '使用串流分段功能，即時評估事件 '
-topic: 開發人員指南
+topic: developer guide
 description: 本檔案包含如何搭配Adobe Experience Platform分段服務API使用串流分段的範例。
 exl-id: 119508bd-5b2e-44ce-8ebf-7aef196abd7a
 translation-type: tm+mt

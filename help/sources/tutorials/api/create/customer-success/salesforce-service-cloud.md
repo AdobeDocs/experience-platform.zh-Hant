@@ -2,8 +2,8 @@
 keywords: Experience Platform；首頁；熱門主題；ssc;SSC;Salesforce Service Cloud;salesforce Service Cloud
 solution: Experience Platform
 title: 使用流程服務API建立Salesforce Service Cloud來源連線
-topic: 概述
-type: 教學課程
+topic: overview
+type: Tutorial
 description: 瞭解如何使用Flow Service API將Adobe Experience Platform連接至Salesforce Service Cloud。
 translation-type: tm+mt
 source-git-commit: a0b016e8adc519bc79701f9fd850b6ddf7d46127

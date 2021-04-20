@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform；資料準備；資料準備api；故障排除；API
 title: 資料準備API概觀
-topic: 指南
+topic: guide
 description: 資料準備API可讓您以程式設計方式建立對應集和函式，讓您在來源和目標結構描述之間轉換資料。
 translation-type: tm+mt
 source-git-commit: cae6dc80d0394db51dc97478b92459be64c64498

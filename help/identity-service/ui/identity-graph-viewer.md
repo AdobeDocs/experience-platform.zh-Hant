@@ -2,7 +2,7 @@
 keywords: Experience Platform;home；熱門主題；身份圖查看器；Identity Graph viewer;Graph viewer;Graph viewer;Identity namespace;Identity;Identity Service;identity service
 solution: Experience Platform
 title: Identity Graph檢視器概觀
-topic: 教學課程
+topic: tutorial
 description: 身分圖是特定客戶不同身分之間關係的地圖，可讓您以視覺化方式呈現客戶如何透過不同通道與您的品牌互動。
 translation-type: tm+mt
 source-git-commit: f4326c7a8bb8af90c092d3790e51c133744d498f

@@ -1,7 +1,7 @@
 ---
 solution: Experience Platform
 title: 通用同意欄位資料類型
-topic: 概述
+topic: overview
 description: 本檔案概述「通用同意欄位XDM」資料類型。
 translation-type: tm+mt
 source-git-commit: ebcd8900687b6e91d3f06690a9db0e118bbc3b58
