@@ -1,22 +1,22 @@
 ---
-keywords: 社交網路；社交網路目的地；Livefyre;facebook;Facebook
-title: 社交網路目的地總覽
-description: 透過社交網路目的地，您可以根據雜湊電子郵件啟用宣傳的個人檔案，以鎖定受眾、個人化和抑制受眾。
+keywords: social；社交目的地；Livefyre;facebook;Facebook
+title: 社交目標概觀
+description: 透過社交目的地，您可以啟用促銷活動的個人檔案，以便根據雜湊的電子郵件鎖定受眾、個人化和抑制受眾。
+exl-id: c5da8dae-c1ff-45a8-b769-037d7bb7947a
 translation-type: tm+mt
-source-git-commit: db2e5d51a5ed07b91997df8a566272c86a7c1708
+source-git-commit: 805cb72e91e6446f74cc3461d39841740eb576c7
 workflow-type: tm+mt
-source-wordcount: '76'
+source-wordcount: '69'
 ht-degree: 1%
 
 ---
 
+# 社交目標概觀{#social-network-destinations}
 
-# 社交網路目的地概觀{#social-network-destinations}
+透過社交目的地，您可以啟用促銷活動的個人檔案，以便根據雜湊的電子郵件鎖定受眾、個人化和抑制受眾。
 
-透過社交網路目的地，您可以根據雜湊電子郵件啟用宣傳的個人檔案，以鎖定受眾、個人化和抑制受眾。
+Adobe Experience Platform目前支援下列社交目的地：
 
-Adobe Experience Platform目前支援下列社交網路目的地：
-
-- [Adobe Livefyre擴充功能](./adobe-livefyre.md)
+- [AdobeLivefyre擴充功能](./adobe-livefyre.md)
 - [[!DNL Facebook] 擴充功能](./facebook.md)
 - [Linkedin符合的觀眾連線](./linkedin.md)
