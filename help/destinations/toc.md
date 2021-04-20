@@ -6,9 +6,9 @@ user-guide-description: 針對跨通路行銷活動、電子郵件宣傳、鎖�
 description: 本檔案列出了Adobe Experience Platform目的地的目錄
 feature: 目的地
 translation-type: tm+mt
-source-git-commit: 0bb6db19dc27031115e47415c1b3241661e0a0ae
+source-git-commit: 805cb72e91e6446f74cc3461d39841740eb576c7
 workflow-type: tm+mt
-source-wordcount: '473'
+source-wordcount: '470'
 ht-degree: 10%
 
 ---
@@ -44,7 +44,7 @@ ht-degree: 10%
       * [Bing Ads通用事件追蹤(UET)擴充功能](./catalog/advertising/bing-ads.md)
       * [分支擴充功能](./catalog/advertising/branch.md)
       * [DoubleClick Floodlight(Beta)擴充功能](./catalog/advertising/doubleclick-floodlight.md)
-      * [Facebook Pixel擴充功能](./catalog/advertising/facebook-pixel.md)
+      * [Facebook像素擴充功能](./catalog/advertising/facebook-pixel.md)
       * [Flashtalking OneTag擴充功能](./catalog/advertising/flashtalking.md)
       * [Google Ads連線](./catalog/advertising/google-ads-destination.md)
       * [Google Ads擴充功能](./catalog/advertising/google-ads-extension.md)
@@ -52,7 +52,7 @@ ht-degree: 10%
       * [Google客戶符合連線](./catalog/advertising/google-customer-match.md)
       * [Google Display &amp; Video 360連線](./catalog/advertising/google-dv360.md)
       * [Google gtag擴充功能](./catalog/advertising/gtag-advertising.md)
-      * [LinkedIn In Insight標籤擴充功能](./catalog/advertising/linkedin.md)
+      * [linkedIn洞察標籤擴充功能](./catalog/advertising/linkedin.md)
       * [Microsoft Bing連線](./catalog/advertising/bing.md)
       * [Pinterest轉換追蹤擴充功能](./catalog/advertising/pinterest.md)
       * [The Trade Desk connection](./catalog/advertising/tradedesk.md)
@@ -92,7 +92,7 @@ ht-degree: 10%
       * [Audience ManagerDIL擴展](./catalog/data-management/aam-dil-extension.md)
    * 電子郵件目標{#email}
       * [Bizible extension](./catalog/email/bizible.md)
-      * [Marketo延伸功能](./catalog/email/marketo.md)
+      * [Marketo分機](./catalog/email/marketo.md)
       * [Marketo Munchkin 擴充功能](./catalog/email/marketo-munchkin.md)
       * [PebblePost擴充功能](./catalog/email/pebblepost.md)
    * 電子郵件行銷目標{#email-marketing}
@@ -117,12 +117,12 @@ ht-degree: 10%
       * [Experience Cloud ID 服務擴充功能](./catalog/personalization/adobe-ecid.md)
       * [Gainsight擴充功能](./catalog/personalization/gainsight.md)
       * [KickFire擴充功能](./catalog/personalization/kickfire.md)
-      * [Marketo Web Personalization擴充功能](./catalog/personalization/marketo-web-personalization.md)
-   * 社交網路目的地{#social}
-      * [社交網路目的地總覽](./catalog/social/overview.md)
-      * [建立社交網路目的地](./catalog/social/workflow.md)
+      * [Marketo網路個人化擴充功能](./catalog/personalization/marketo-web-personalization.md)
+   * 社交目標{#social}
+      * [社交目標概觀](./catalog/social/overview.md)
+      * [建立社交目標](./catalog/social/workflow.md)
       * [AdobeLivefyre擴充功能](./catalog/social/adobe-livefyre.md)
-      * [Facebook連線](./catalog/social/facebook.md)
+      * [Facebook連接](./catalog/social/facebook.md)
       * [Linkedin符合的觀眾連線](./catalog/social/linkedin.md)
    * 調查目標{#survey}
       * [調查目標概觀](./catalog/survey/overview.md)
