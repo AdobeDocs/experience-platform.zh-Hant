@@ -1,21 +1,21 @@
 ---
-keywords: Experience Platform;home；熱門主題；目標映射；目標映射
+keywords: Experience Platform；首頁；熱門主題；目標映射；目標映射
 solution: Experience Platform
-title: 將Adobe Target事件資料對應至XDM
-topic: overview
+title: 將Adobe Target事件資料映射到XDM
+topic-legacy: overview
 description: 瞭解如何將Adobe Target事件欄位對應至Experience Data Model(XDM)架構，以便用於Adobe Experience Platform。
+exl-id: dab08ab6-6c1c-460a-bb52-8dcdb5709a34
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: af5564a07577a0123e1a45043d5479f6ad45d73e
 workflow-type: tm+mt
-source-wordcount: '462'
+source-wordcount: '465'
 ht-degree: 0%
 
 ---
 
-
 # 目標映射欄位映射
 
-Adobe Experience Platform可讓您透過Target來源連接器來收錄Adobe Target資料。 使用連接器時，來自Target欄位的所有資料都必須映射至與XDM ExperienceEvent類別相關聯的[Experience Data Model(XDM)](../../../../xdm/home.md)欄位。
+Adobe Experience Platform允許您通過Target源連接器接收Adobe Target資料。 使用連接器時，來自Target欄位的所有資料都必須映射至與XDM ExperienceEvent類別相關聯的[Experience Data Model(XDM)](../../../../xdm/home.md)欄位。
 
 下表概述「體驗事件」架構的欄位（*XDM ExperienceEvent欄位*），以及對應的「目標」欄位（*「目標請求」欄位*）。 另外，也提供一些映射的附加說明。
 
@@ -88,3 +88,5 @@ Adobe Experience Platform可讓您透過Target來源連接器來收錄Adobe Targ
 | **`identityMap`** |
 | `identityMap.TNTID` | `tntId.mboxPC` |
 | `identityMap.ECID` | `marketingCloudVisitorId` |
+
+{style=&quot;table-layout:auto&quot;}
