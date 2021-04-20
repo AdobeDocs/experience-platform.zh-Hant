@@ -5,7 +5,7 @@ type: Tutorial
 description: 瞭解如何連線至您在Adobe Experience Platform的社交廣告帳戶。
 exl-id: a0cdf2b7-b1e8-4a8e-9d5b-58a118e7b689
 translation-type: tm+mt
-source-git-commit: 805cb72e91e6446f74cc3461d39841740eb576c7
+source-git-commit: e2af4fcfe232889f3f928c00c9f9b37cf9754ca1
 workflow-type: tm+mt
 source-wordcount: '457'
 ht-degree: 0%
@@ -64,8 +64,8 @@ ht-degree: 0%
 
 在填入上述欄位後，請選取&#x200B;**[!UICONTROL Create Destination]**。
 
-您的目標現在已建立。 如果您想稍後啟動區段，可以選取&#x200B;**[!UICONTROL Save & Exit]**，或選取&#x200B;**[!UICONTROL Next]**&#x200B;以繼續工作流程，並選取要啟動的區段。 在這兩種情況下，請參閱工作流程的下一節[啟用社交網路的區段](#activate-segments)。
+您的目標現在已建立。 如果您想稍後啟動區段，可以選取&#x200B;**[!UICONTROL Save & Exit]**，或選取&#x200B;**[!UICONTROL Next]**&#x200B;以繼續工作流程，並選取要啟動的區段。 在這兩種情況下，請參閱工作流程的下一節「啟動區段至社交目標](#activate-segments)」。[
 
-## 將區段啟用至社交網路{#activate-segments}
+## 啟用區段至社交目的地{#activate-segments}
 
-如需如何將區段啟用至社交網路的指示，請參閱[將資料啟用至目標](../../ui/activate-destinations.md)。
+如需如何啟用區段至社交目的地的指示，請參閱[啟用資料至目的地](../../ui/activate-destinations.md)。
