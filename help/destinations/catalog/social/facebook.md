@@ -1,15 +1,15 @@
 ---
-keywords: facebook連接；facebook連接；facebook目標；facebook;instagram;messenger;facebook Messenger
-title: Facebook連線
-description: 根據雜湊的電子郵件，啟用您Facebook促銷活動的個人檔案，以鎖定受眾、個人化和抑制受眾。
+keywords: facebook連接；facebook連接；facebook目的地；facebook;instagram；信使；facebook信使
+title: Facebook連接
+description: 啟用您Facebook宣傳的個人檔案，根據雜湊的電子郵件鎖定受眾、個人化和抑制受眾。
+exl-id: 51e8c8f0-5e79-45b9-afbc-110bae127f76
 translation-type: tm+mt
-source-git-commit: 709908196bb5df665c7e7df10dc58ee9f3b0edbf
+source-git-commit: 01aed33913b5334263090aea17f75ce181717c50
 workflow-type: tm+mt
-source-wordcount: '1119'
+source-wordcount: '1134'
 ht-degree: 2%
 
 ---
-
 
 # [!DNL Facebook] 連接
 
@@ -19,9 +19,9 @@ ht-degree: 2%
 
 您可以將此目標用於[!DNL Facebook’s]系列應用程式（包括[!DNL Facebook]、[!DNL Instagram]、[!DNL Audience Network]和[!DNL Messenger]）中的受眾定位。 [!DNL Custom Audiences]在 [!DNL Facebook Ads Manager] 中的廣告版位層級會指出您選擇針對哪個應用程式執行行銷活動。
 
-![Adobe Experience PlatformUI中的Facebook目的地](../../assets/catalog/social/facebook/catalog.png)
+![FacebookAdobe Experience PlatformUI的目的地](../../assets/catalog/social/facebook/catalog.png)
 
-## 使用案例
+## 使用個案
 
 為協助您進一步瞭解如何及何時使用[!DNL Facebook]目標，以下是Adobe Experience Platform客戶可使用此功能解決的兩個範例使用案例。
 
@@ -43,7 +43,7 @@ ht-degree: 2%
 >
 >傳送至[!DNL Facebook]的資料不能包含銜接身分。 您有責任履行此義務，並可確保選定進行啟動的區段不會在其合併政策中使用拼接選項來履行此義務。 進一步瞭解[合併策略](/help/profile/ui/merge-policies.md)。
 
-## 支援的身份{#supported-identities}
+## 支援的身分{#supported-identities}
 
 [!DNL Facebook Custom Audiences] 支援啟用下表所述的身分。進一步瞭解[identities](/help/identity-service/namespaces.md)。
 
@@ -57,7 +57,7 @@ ht-degree: 2%
 
 ## 導出類型{#export-type}
 
-**區段匯出** -您正匯出區段（對象）的所有成員，並使用Facebook目標中使用的識別碼（名稱、電話號碼或其他）。
+**區段匯出** -您正匯出區段（對象）的所有成員，並使用Facebook目的地所使用的識別碼（名稱、電話號碼或其他）。
 
 ## Facebook帳戶先決條件{#facebook-account-prerequisites}
 
@@ -113,11 +113,15 @@ ht-degree: 2%
 
 ## 使用自訂名稱空間{#custom-namespaces}
 
-在使用`Extern_ID`命名空間將資料傳送至[!DNL Facebook]之前，請務必使用[!DNL Facebook Pixel]同步您自己的識別碼。 如需詳細資訊，請參閱[官方檔案](https://developers.facebook.com/docs/marketing-api/audiences/guides/custom-audiences/#external_identifiers)。
+在使用`Extern_ID`命名空間將資料傳送至[!DNL Facebook]之前，請務必使用[!DNL Facebook Pixel]同步您自己的識別碼。 如需詳細資訊，請參閱[Facebook官方檔案](https://developers.facebook.com/docs/marketing-api/audiences/guides/custom-audiences/#external_identifiers)。
 
 ## 連接到目標{#connect-destination}
 
 若要連線至[!DNL Facebook]目的地，請參閱[社交網路目的地驗證工作流程](./workflow.md)。
+
+下面的視訊也示範設定[!DNL Facebook]目標及啟用區段的步驟。
+
+>[!VIDEO](https://video.tv.adobe.com/v/332599/?quality=12&learn=on&captions=eng)
 
 ## 啟用區段至[!DNL Facebook] {#activate-segments}
 
@@ -125,7 +129,7 @@ ht-degree: 2%
 
 在&#x200B;**[!UICONTROL Segment schedule]**&#x200B;步驟中，當將區段傳送至[!DNL Facebook Custom Audiences]時，您必須提供[!UICONTROL Origin of audience]。
 
-![Facebook對象來源](../../assets/catalog/social/facebook/facebook-origin-audience.png)
+![Facebook觀眾源](../../assets/catalog/social/facebook/facebook-origin-audience.png)
 
 ## 導出資料{#exported-data}
 
