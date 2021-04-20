@@ -4,16 +4,16 @@ solution: Experience Platform
 title: Adobe Experience Platform常見問答集與疑難排解指南
 description: 尋找常見問題的解答，以及針對 Experience Platform 中的常見錯誤進行疑難排解的指南。
 landing-page-description: 尋找常見問題的解答，以及針對 Experience Platform 中的常見錯誤進行疑難排解的指南。
-topic: getting started
+topic: 快速入門
 type: Documentation
+exl-id: 3e6d29aa-2138-421b-8bee-82b632962c01
 translation-type: tm+mt
-source-git-commit: 83cc3ddbf067f413cb524a3a685d985d5853eafd
+source-git-commit: e722d7598a558bcbc5c48d237d394f91c0803352
 workflow-type: tm+mt
-source-wordcount: '1718'
+source-wordcount: '1717'
 ht-degree: 4%
 
 ---
-
 
 # [!DNL Platform] 常見問答集與疑難排解指南
 
@@ -88,7 +88,7 @@ GET /batches?createdAfter=1559775880000&orderBy=desc:created
 在任何[!DNL Experience Platform] API上都可能遇到以下狀態代碼。 每個原因都有各種原因，因此本節中的解釋是一般性的。 有關個別[!DNL Platform]服務中特定錯誤的詳細資訊，請參閱以下[服務疑難排解目錄](#service-troubleshooting-directory)。
 
 | 狀態代碼 | 說明 | 可能的原因 |
---- | --- | ---
+|--- | --- | ---|
 | 400 | 錯誤請求 | 請求的建構不當、遺失關鍵資訊及／或語法不正確。 |
 | 401 | 驗證失敗 | 請求未通過驗證檢查。 您的存取Token可能遺失或無效。 如需詳細資訊，請參閱下方的[OAuth Token錯誤](#oauth-token-is-missing)一節。 |
 | 403 | 禁止 | 已找到資源，但您沒有查看該資源的正確憑據。 |
@@ -198,4 +198,3 @@ GET /batches?createdAfter=1559775880000&orderBy=desc:created
 | [!DNL Flow Service] ([!DNL Sources] 和 [!DNL Destinations]) | [[!DNL Flow Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) |  |
 | [!DNL Real-time Customer Profile] | [[!DNL Real-time Customer Profile API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml) | [[!DNL Profile] 疑難排解指南](../profile/troubleshooting.md) |
 | 沙盒 | [沙盒API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sandbox-api.yaml) | [沙盒疑難排解指南](../sandboxes/troubleshooting-guide.md) |
-
