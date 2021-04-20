@@ -1,15 +1,15 @@
 ---
 keywords: 激活目標；激活目標；激活資料
 title: 將描述檔和區段啟用至目標
-type: 教學課程
+type: Tutorial
 seo-title: 將描述檔和區段啟用至目標
 description: 將區段對應至目的地，以啟用您在Adobe Experience Platform的資料。 若要完成此作業，請遵循下列步驟。
 seo-description: 將區段對應至目的地，以啟用您在Adobe Experience Platform的資料。 若要完成此作業，請遵循下列步驟。
 exl-id: c3792046-ffa8-4851-918f-98ced8b8a835
 translation-type: tm+mt
-source-git-commit: 0bb6db19dc27031115e47415c1b3241661e0a0ae
+source-git-commit: 805cb72e91e6446f74cc3461d39841740eb576c7
 workflow-type: tm+mt
-source-wordcount: '2025'
+source-wordcount: '2023'
 ht-degree: 0%
 
 ---
@@ -175,7 +175,7 @@ ht-degree: 0%
 >
 >對於社交目的地，您必須在此步驟中選取對象的來源。 您只能在選取下圖中的其中一個選項後，才可繼續下一步。
 
-![Facebook對象來源](../assets/catalog/social/facebook/facebook-origin-audience.png)
+![Facebook觀眾源](../assets/catalog/social/facebook/facebook-origin-audience.png)
 
 >[!IMPORTANT]
 >
@@ -264,7 +264,7 @@ Salesforce_Marketing_Cloud_segment12341e18-abcd-49c2-836d-123c88e76c39_202004100
 
 在您要啟動資料的各個廣告目的地檢查您的帳戶。 如果啟動成功，您的廣告平台會填入受眾。
 
-## 社交網路目的地
+## 社交目的地
 
 對於[!DNL Facebook]，成功啟動表示[!DNL Facebook]自訂觀眾將以程式設計方式建立在[[!UICONTROL Facebook Ads Manager]](https://www.facebook.com/adsmanager/manage/)中。 當使用者符合已啟用區段的資格或被取消資格時，會新增及移除觀眾中的區段成員資格。
 
