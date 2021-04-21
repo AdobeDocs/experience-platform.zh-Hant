@@ -1,12 +1,11 @@
 ---
-product: experience-platform
 audience: user
 user-guide-title: Adobe Experience Platform 中的沙盒說明
 breadcrumb-title: 沙箱指南
 user-guide-description: 將 Platform 執行個體分割至虛擬環境，以進行開發、測試和應用程式部署。
-feature: Data Management
+feature: 資料管理
 translation-type: tm+mt
-source-git-commit: ac6935f09f620ea55cf8f612ff0a1fba503b5e17
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '88'
 ht-degree: 29%
@@ -21,7 +20,7 @@ ht-degree: 29%
    * [沙盒UI總覽](ui/overview.md)
    * [沙盒使用指南](ui/user-guide.md)
 * 沙盒API {#api}
-   * [快速入門](api/getting-started.md)
+   * [開始使用](api/getting-started.md)
    * [列出支援的沙盒類型](api/list-sandbox-types.md)
    * [列出所有沙盒](api/list-all-sandboxes.md)
    * [列出目前使用者的作用中沙盒](api/list-active-sandboxes.md)
