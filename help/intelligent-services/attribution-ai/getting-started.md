@@ -1,27 +1,27 @@
 ---
 keywords: Experience Platform；快速入門；歸因ai；熱門主題
 solution: Experience Platform, Intelligent Services
-title: Attribution AI快速入門
-topic: Getting started
-description: 以下指南需要瞭解使用Attribution AI時涉及的各種Adobe Experience Platform服務。 在開始教學課程之前，請先閱讀下列檔案。
+title: 開始使用Attribution AI
+topic-legacy: Getting started
+description: 以下指南要求瞭解與使用Attribution AI有關的Adobe Experience Platform各種服務。 在開始教學課程之前，請先閱讀下列檔案。
+exl-id: ab269c24-97ac-4da9-9b6c-7d2dde61f0dc
 translation-type: tm+mt
-source-git-commit: eb163949f91b0d1e9cc23180bb372b6f94fc951f
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '538'
 ht-degree: 0%
 
 ---
 
+# 開始使用Attribution AI
 
-# Attribution AI快速入門
+以下指南要求瞭解使用Attribution AI時涉及的各種[!DNL Adobe Experience Platform]服務。 在開始教學課程之前，請先檢閱下列檔案：
 
-以下指南需要瞭解使用Attribution AI時涉及的各種[!DNL Adobe Experience Platform]服務。 在開始教學課程之前，請先檢閱下列檔案：
-
-- [體驗資料模型(XDM)系統概觀](../../xdm/home.md):XDM是基礎架構，可讓 [!DNL Adobe Experience Cloud]Experience Platform提供支援，讓您在適當的時間，透過適當的通道，向適當的人傳遞適當的訊息。Experience Platform的建立方法XDM System可操作Experience Data Model架構，供Platform服務使用。
+- [體驗資料模型(XDM)系統概觀](../../xdm/home.md):XDM是基礎性的框架，可 [!DNL Adobe Experience Cloud]讓Experience Platform提供支援，在適當的時機，在適當的通道上向適當的人傳遞適當的訊息。建立Experience Platform的方法XDM System可操作Experience Data Model架構，供平台服務使用。
 - [架構構成基礎](../../xdm/schema/composition.md):本檔案提供Experience Data Model(XDM)架構的簡介，以及用於合成架構的建立區塊、原則和最佳實務 [!DNL Adobe Experience Platform]。
-- [建立結構](../../xdm/tutorials/create-schema-ui.md):本教學課程涵蓋使用Experience Platform中的架構編輯器建立架構的步驟。
+- [建立結構](../../xdm/tutorials/create-schema-ui.md):本教程介紹使用Experience Platform中的架構編輯器建立架構的步驟。
 
-歸因AI要求資料集符合消費者體驗事件(CEE)架構，此架構是[體驗資料模型](../../xdm/home.md)(XDM)中的混音。 若要實作或變更此資料，請在attributionai-support@adobe.com與Adobe支援聯絡。 如果媒體支出資料已經存在，您可以做進一步分析，例如增加收入和投資報酬率。 如果客戶配置檔案資料可用，您可以進一步將信用歸因於客戶配置檔案層。
+Attribution AI要求資料集符合消費者體驗事件(CEE)架構，此架構是[體驗資料模型](../../xdm/home.md)(XDM)中的混音。 如需實作或變更此資料，請聯絡Adobe支援，來信請寄至attributionai-support@adobe.com。 如果媒體支出資料已經存在，您可以做進一步分析，例如增加收入和投資報酬率。 如果客戶配置檔案資料可用，您可以進一步將信用歸因於客戶配置檔案層。
 
 ## 術語
 
@@ -35,13 +35,13 @@ ht-degree: 0%
 >
 >如果您不需要下載原始分數，可以略過此步驟並繼續[後續步驟](#next-steps)。
 
-下載Attribution AI分數是透過API呼叫的組合來完成。 若要呼叫平台API，您必須先完成[驗證教學課程](https://www.adobe.com/go/platform-api-authentication-en)。 完成驗證教學課程後，所有Experience Platform API呼叫中每個必要標題的值都會顯示在下方：
+下載Attribution AI分數是透過API呼叫的組合來完成。 若要呼叫平台API，您必須先完成[驗證教學課程](https://www.adobe.com/go/platform-api-authentication-en)。 完成驗證教學課程後，將提供所有Experience PlatformAPI呼叫中每個必要標題的值，如下所示：
 
 - 授權：載體`{ACCESS_TOKEN}`
 - x-api-key:`{API_KEY}`
 - x-gw-ims-org-id:`{IMS_ORG}`
 
-Experience Platform中的所有資源都隔離至特定的虛擬沙盒。 所有對平台API的請求都需要一個標題，該標題會指定要在中執行的操作的沙盒名稱：
+Experience Platform中的所有資源都隔離到特定的虛擬沙盒。 所有對平台API的請求都需要一個標題，該標題會指定要在中執行的操作的沙盒名稱：
 
 - x-sandbox-name:`{SANDBOX_NAME}`
 
@@ -55,4 +55,4 @@ Experience Platform中的所有資源都隔離至特定的虛擬沙盒。 所有
 
 ## 下一步 {#next-steps}
 
-在您準備好並準備好所有憑證和結構描述後，請從[歸因AI使用者介面指南](./user-guide.md)開始。 本指南會逐步引導您建立執行個體，並送出以進行訓練和計分。
+準備好並準備好所有憑據和方案後，請從[Attribution AI用戶介面指南](./user-guide.md)開始。 本指南會逐步引導您建立執行個體，並送出以進行訓練和計分。
