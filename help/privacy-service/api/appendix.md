@@ -1,25 +1,25 @@
 ---
-keywords: Experience Platform;home；熱門主題
+keywords: Experience Platform；首頁；熱門主題
 solution: Experience Platform
-title: 隱私權服務API指南附錄
-topic: developer guide
-description: 本檔案包含使用隱私權服務API的其他資訊。
+title: Privacy ServiceAPI指南附錄
+topic-legacy: developer guide
+description: 本檔案包含使用Privacy ServiceAPI的其他資訊。
+exl-id: 7099e002-b802-486e-8863-0630d66e330f
 translation-type: tm+mt
-source-git-commit: b395535cbe7e4030606ee2808eb173998f5c32e0
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '501'
 ht-degree: 9%
 
 ---
 
+# Privacy ServiceAPI指南附錄
 
-# 隱私權服務API指南附錄
-
-以下各節包含使用Adobe Experience Platform Privacy Service API的其他資訊。
+以下各節包含使用Adobe Experience Platform Privacy ServiceAPI的其他資訊。
 
 ## 標準身份名稱空間{#standard-namespaces}
 
-傳送到[!DNL Privacy Service]的所有身份都必須以特定的身份名稱空間提供。 身分名稱空間是[Adobe Experience Platform Identity Service](../../identity-service/home.md)的元件，用以指出身分相關的內容。
+傳送到[!DNL Privacy Service]的所有身份都必須以特定的身份名稱空間提供。 身分名稱空間是[Adobe Experience Platform身份服務](../../identity-service/home.md)的一個元件，用於指示與身份相關的上下文。
 
 下表概述了[!DNL Experience Platform]提供的幾種常用、預先定義的身份類型，以及其關聯的`namespace`值：
 
@@ -27,10 +27,10 @@ ht-degree: 9%
 | --- | --- | --- |
 | 電子郵件 | 電子郵件 | 6 |
 | 電話 | 電話 | 7 |
-| Adobe Advertising Cloud ID | AdCloud | 411 |
-| Adobe Audience Manager UUID | 核心 | 0 |
-| Adobe Experience Cloud ID | ECID | 4 |
-| Adobe Target ID | TNTID | 9 |
+| Adobe Advertising CloudID | AdCloud | 411 |
+| Adobe Audience ManagerUUID | 核心 | 0 |
+| Adobe Experience CloudID | ECID | 4 |
+| Adobe TargetID | TNTID | 9 |
 | [!DNL Apple] 廣告商的ID | IDFA | 二零九一五年 |
 | [!DNL Google] 廣告 ID | GAID | 二零九一四年 |
 | [!DNL Windows] AID | WAID | 8 |
@@ -39,7 +39,7 @@ ht-degree: 9%
 >
 >每個身分類型也有一個`namespaceId`整數值，當將身分的`type`屬性設為&quot;namespaceId&quot;時，該整數值可用來取代`namespace`字串。 如需詳細資訊，請參閱[namespace限定詞](#namespace-qualifiers)一節。
 
-您可以向[!DNL Identity Service] API中的`idnamespace/identities`端點發出GET請求，以檢索組織正在使用的身份名稱空間清單。 如需詳細資訊，請參閱[Identity Service開發人員指南](../../identity-service/api/getting-started.md)。
+您可以通過向[!DNL Identity Service] API中的`idnamespace/identities`端點發出GET請求，檢索組織正在使用的標識名稱空間清單。 如需詳細資訊，請參閱[Identity Service開發人員指南](../../identity-service/api/getting-started.md)。
 
 ## 命名空間限定詞
 
@@ -57,7 +57,7 @@ ht-degree: 9%
 
 ## 接受的產品值
 
-下表概述在工作建立請求的`include`屬性中指定Adobe產品的接受值。
+下表概述了在作業建立請求的`include`屬性中指定Adobe產品的接受值。
 
 | 產品 | 用於`include`屬性的值 |
 --- | ---
@@ -66,7 +66,7 @@ ht-degree: 9%
 | Adobe Audience Manager | &quot;AudienceManager&quot; |
 | Adobe Campaign | &quot;Campaign&quot; |
 | Adobe Experience Platform | &quot;aepDataLake&quot; |
-| Adobe Primetime驗證 | &quot;primetimeAuthentication&quot; |
+| Adobe Primetime認證 | &quot;primetimeAuthentication&quot; |
 | Adobe Target | &quot;Target&quot; |
 | 客戶記錄服務 | &quot;CRS&quot; |
 | 即時客戶個人檔案 | &quot;ProfileService&quot; |
