@@ -1,23 +1,23 @@
 ---
-keywords: Experience Platform; home;intelligent services；熱門主題；智慧服務；智慧服務
+keywords: Experience Platform; home；智慧服務；熱門主題；智慧服務；智慧服務
 solution: Experience Platform, Intelligent Services
 title: 智慧型服務概觀
-topic: Intelligent Services overview
+topic-legacy: Intelligent Services overview
 description: 智慧型服務可讓行銷分析師和從業人員在客戶體驗使用案例中運用人工智慧和機器學習的強大功能。 這可讓行銷分析人員使用商業層級的組態來設定特定公司需求的預測，而不需要資料科學的專業知識。 此外，行銷從業人員可在Adobe Experience Cloud、Adobe Experience Platform和第三方應用程式中啟動預測。
+exl-id: db080c83-2a45-4fd5-8502-d9cae2a063be
 translation-type: tm+mt
-source-git-commit: eb163949f91b0d1e9cc23180bb372b6f94fc951f
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '502'
 ht-degree: 0%
 
 ---
 
-
 # 智慧型服務概觀
 
 智慧型服務可讓行銷分析師和從業人員在客戶體驗使用案例中運用人工智慧和機器學習的強大功能。 這可讓行銷分析人員使用商業層級的組態來設定特定公司需求的預測，而不需要資料科學的專業知識。 此外，行銷從業者可在[!DNL Adobe Experience Cloud]、[!DNL Adobe Experience Platform]和第三方應用程式中啟動預測。
 
-以下影片旨在支援您對智慧型服務的瞭解。 本視訊以商業使用案例為例，說明高階工作流程，並概述Attribution AI和Customer AI的功能。
+以下影片旨在支援您對智慧型服務的瞭解。 本視訊以商業使用案例為例，說明高階工作流程，並概述Attribution AI和客戶人工智慧的功能。
 
 >[!VIDEO](https://video.tv.adobe.com/v/32654?learn=on&quality=12)
 
@@ -27,7 +27,7 @@ ht-degree: 0%
 
 ### 以具成本效益的速度上市
 
-Adobe具備AI/ML專業知識與深入的CXM經驗，而智慧型服務則是專為行銷人員所設計，讓AI/ML立即投入一般行銷使用案例，而不需雇用稀缺且昂貴的資料科學家，加速上市速度和行動能力。
+Adobe擁有AI/ML專業知識和深入的CXM經驗，而智慧服務專為行銷人員而設計，以便立即將AI/ML用於常見的行銷使用案例，而不需雇用稀缺且昂貴的資料科學家，加速上市速度和行動能力。
 
 ### 預測性洞察更精確
 
@@ -57,4 +57,4 @@ Adobe具備AI/ML專業知識與深入的CXM經驗，而智慧型服務則是專�
 
 ## 後續步驟
 
-目前，智慧型服務提供歸因AI和客戶AI。 Attribution AI可讓行銷人員跨通道和宣傳智慧地提升行銷成效。 若要進一步瞭解Attribution AI，請造訪[Attribution AI概觀](./attribution-ai/overview.md)。 客戶人工智慧可讓行銷人員高度個人化客戶體驗。 若要進一步瞭解客戶AI，請造訪[客戶AI概觀](./customer-ai/overview.md)。
+目前，智慧型服務提供Attribution AI和客戶人工智慧。 Attribution AI可讓行銷人員跨通道和宣傳智慧地提升行銷成效。 若要進一步瞭解Attribution AI，請造訪[Attribution AI概觀](./attribution-ai/overview.md)。 客戶人工智慧可讓行銷人員高度個人化客戶體驗。 若要進一步瞭解客戶AI，請造訪[客戶AI概觀](./customer-ai/overview.md)。
