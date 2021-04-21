@@ -1,17 +1,17 @@
 ---
-keywords: Experience Platform;Profile；即時客戶配置檔案；故障排除；API
+keywords: Experience Platform；配置檔案；即時客戶配置檔案；故障排除；API
 title: 如何配置計算屬性欄位
-topic: guide
+topic-legacy: guide
 type: Documentation
 description: 計算屬性是用於將事件級別資料聚合到配置檔案級別屬性的函式。 為了配置計算屬性，首先需要標識將保存計算屬性值的欄位。 可以使用方案註冊表API建立此欄位，以定義將保存計算屬性欄位的方案和自定義混合。
+exl-id: 91c5d125-8ab5-4291-a974-48dd44c68a13
 translation-type: tm+mt
-source-git-commit: 2a4fb8af8cd29254c499bfa6bfb8b316a4834526
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '715'
+source-wordcount: '713'
 ht-degree: 2%
 
 ---
-
 
 # (Alpha)使用方案註冊表API配置計算屬性欄位
 
@@ -25,7 +25,7 @@ ht-degree: 2%
 
 ## 建立計算屬性混合
 
-若要使用方案註冊表API建立混音，首先向`/tenant/mixins`端點發出POST請求，並在請求主體中提供混音的詳細資訊。 有關使用架構註冊表API使用混合的詳細資訊，請參閱[mixins API端點指南](../../xdm/api/mixins.md)。
+要使用方案註冊表API建立混合，首先向`/tenant/mixins`端點發出POST請求，並在請求主體中提供混合的詳細資訊。 有關使用架構註冊表API使用混合的詳細資訊，請參閱[mixins API端點指南](../../xdm/api/mixins.md)。
 
 **API格式**
 
@@ -33,7 +33,7 @@ ht-degree: 2%
 POST /tenant/mixins
 ```
 
-**請求**
+**要求**
 
 ```shell
 curl -X POST \
@@ -157,7 +157,7 @@ curl -X POST \
 PUT /tenant/mixins/{MIXIN_ID}
 ```
 
-**請求**
+**要求**
 
 此請求會新增與`purchaseSummary`資訊相關的欄位。
 
@@ -312,7 +312,7 @@ curl -X PUT \
 
 ## 建立啟用配置檔案的架構
 
-要使用方案註冊表API建立方案，請首先向`/tenant/schemas`端點發出POST請求，並在請求主體中提供方案的詳細資訊。 [!DNL Profile]還必須啟用架構，並作為架構類的聯合架構的一部分出現。
+要使用方案註冊表API建立方案，首先向`/tenant/schemas`端點發出POST請求，並在請求主體中提供方案的詳細資訊。 [!DNL Profile]還必須啟用架構，並作為架構類的聯合架構的一部分出現。
 
 有關[!DNL Profile]啟用的架構和聯合架構的詳細資訊，請查看[[!DNL Schema Registry] API指南](../../xdm/api/overview.md)和[架構構成基礎文檔](../../xdm/schema/composition.md)。
 
@@ -322,7 +322,7 @@ curl -X PUT \
 POST /tenants/schemas
 ```
 
-**請求**
+**要求**
 
 以下請求將建立一個新模式，該模式引用在本文檔之前建立的`computedAttributesMixin`（使用其唯一ID），並且已為Profile union模式（使用`meta:immutableTags`陣列）啟用。 有關如何使用方案註冊表API建立方案的詳細說明，請參閱[方案API端點指南](../../xdm/api/schemas.md)。
 
