@@ -1,17 +1,17 @@
 ---
-keywords: Experience Platform；開發人員指南；端點；Data Science Workspace；熱門主題；實驗；sensei機器學習api
+keywords: Experience Platform；開發人員指南；端點；資料科學工作區；熱門主題；實驗；sensei機器學習api
 solution: Experience Platform
 title: 實驗API端點
-topic: Developer guide
+topic-legacy: Developer guide
 description: 模型開發與訓練是在實驗層級進行，其中實驗由MLInstance、訓練執行和計分執行組成。
+exl-id: 6ca5106e-896d-4c03-aecc-344632d5307d
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '783'
 ht-degree: 4%
 
 ---
-
 
 # 實驗端點
 
@@ -19,7 +19,7 @@ ht-degree: 4%
 
 ## 建立實驗{#create-an-experiment}
 
-您可以執行POST請求，同時在請求裝載中提供名稱和有效的MLInstance ID，以建立實驗。
+您可以執行POST請求，同時在請求裝載中提供名稱和有效的MLInstance ID來建立實驗。
 
 >[!NOTE]
 >
@@ -31,7 +31,7 @@ ht-degree: 4%
 POST /experiments
 ```
 
-**請求**
+**要求**
 
 ```shell
 curl -X POST \
@@ -84,7 +84,7 @@ POST /experiments/{EXPERIMENT_ID}/runs
 | --- | --- |
 | `{EXPERIMENT_ID}` | 有效的實驗ID。 |
 
-**請求**
+**要求**
 
 ```shell
 curl -X POST \
@@ -134,7 +134,7 @@ curl -X POST \
 
 ## 擷取實驗清單
 
-您可以執行單一GET請求並提供有效的MLInstance ID作為查詢參數，以擷取屬於特定MLInstance的實驗清單。 有關可用查詢的清單，請參閱[資產檢索查詢參數](./appendix.md#query)的附錄部分。
+您可以執行單一GET請求並提供有效的MLInstance ID作為查詢參數，以檢索屬於特定MLInstance的實驗清單。 有關可用查詢的清單，請參閱[資產檢索查詢參數](./appendix.md#query)的附錄部分。
 
 
 **API格式**
@@ -148,7 +148,7 @@ GET /experiments?property=mlInstanceId=={MLINSTANCE_ID}
 | --- | --- |
 | `{MLINSTANCE_ID}` | 提供有效的MLInstance ID，以擷取屬於該特定MLInstance的實驗清單。 |
 
-**請求**
+**要求**
 
 ```shell
 curl -X GET \
@@ -200,7 +200,7 @@ curl -X GET \
 
 ## 擷取特定實驗{#retrieve-specific}
 
-您可以執行GET請求，在請求路徑中包含所需實驗的ID，以擷取特定實驗的詳細資訊。
+您可以執行請求，將所需實驗的ID包含在請求路徑中，以擷取特定實驗的詳細資訊。
 
 **API格式**
 
@@ -212,7 +212,7 @@ GET /experiments/{EXPERIMENT_ID}
 | --- | --- |
 | `{EXPERIMENT_ID}` | 有效的實驗ID。 |
 
-**請求**
+**要求**
 
 ```shell
 curl -X GET \
@@ -263,7 +263,7 @@ GET /experiments/{EXPERIMENT_ID}/runs?{QUERY_PARAMETER_1}={VALUE_1}&{QUERY_PARAM
 | `{QUERY_PARAMETER}` | 用於篩選結果的[可用查詢參數](./appendix.md#query)之一。 |
 | `{VALUE}` | 前面查詢參數的值。 |
 
-**請求**
+**要求**
 
 下列請求包含查詢，並擷取屬於某些實驗的訓練執行清單。
 
@@ -308,7 +308,7 @@ curl -X GET \
 
 >[!TIP]
 >
->為確保此PUT請求成功，建議您先執行GET請求，以[擷取「依ID擷取實驗」(Emperity by ID)](#retrieve-specific)。 然後，修改並更新傳回的JSON物件，並套用已修改的JSON物件的完整內容作為PUT要求的裝載。
+>為確保此PUT請求成功，建議您先執行GET請求，以[擷取「實驗依ID」](#retrieve-specific)。 然後，修改並更新傳回的JSON物件，並套用已修改的JSON物件作為PUT要求的裝載。
 
 下列範例API呼叫會在最初具有這些屬性時更新實驗的名稱：
 
@@ -334,7 +334,7 @@ PUT /experiments/{EXPERIMENT_ID}
 | --- | --- |
 | `{EXPERIMENT_ID}` | 有效的實驗ID。 |
 
-**請求**
+**要求**
 
 ```shell
 curl -X PUT \
@@ -387,7 +387,7 @@ DELETE /experiments/{EXPERIMENT_ID}
 | --- | --- |
 | `{EXPERIMENT_ID}` | 有效的實驗ID。 |
 
-**請求**
+**要求**
 
 ```shell
 curl -X DELETE \
@@ -410,7 +410,7 @@ curl -X DELETE \
 
 ## 刪除由MLInstance ID進行的實驗
 
-您可以執行DELETE請求，將MLInstance ID作為查詢參數，刪除屬於特定MLInstance的所有實驗。
+您可以執行包含MLInstance ID作為查詢參數的DELETE請求，刪除屬於特定MLInstance的所有實驗。
 
 **API格式**
 
@@ -422,7 +422,7 @@ DELETE /experiments?mlInstanceId={MLINSTANCE_ID}
 | --- | ---|
 | `{MLINSTANCE_ID}` | 有效的MLInstance ID。 |
 
-**請求**
+**要求**
 
 ```shell
 curl -X DELETE \
