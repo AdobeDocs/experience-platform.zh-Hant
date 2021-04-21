@@ -1,17 +1,17 @@
 ---
-keywords: Experience Platform;home;popular topics;query service;run scheduled queries;run scheduled query;Query service;scheduled queries;scheduled query;
+keywords: Experience Platform;home;popular topics;query service;run scheduled querys;run scheduled query;Query service;scheduled query;scheduled query;
 solution: Experience Platform
 title: 排程查詢執行API端點
-topic: runs for scheduled queries
+topic-legacy: runs for scheduled queries
 description: 以下各節將逐步介紹您可以使用查詢服務API來針對執行排程查詢所進行的各種API呼叫。
+exl-id: 1e69b467-460a-41ea-900c-00348c3c923c
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '696'
 ht-degree: 2%
 
 ---
-
 
 # 排程查詢執行端點
 
@@ -46,7 +46,7 @@ GET /schedules/{SCHEDULE_ID}/runs?{QUERY_PARAMETERS}
 | `start` | 使用零編號來偏移響應清單。 例如，`start=2`將返回從第三個列出的查詢開始的清單。 (*預設值：0*) |
 | `property` | 根據欄位篩選結果。 篩選器&#x200B;**必須**&#x200B;為HTML逸出。 逗號可用來組合多組篩選器。 支援的欄位有`created`、`state`和`externalTrigger`。 支援的運算子清單包括`>`（大於）、`<`（小於）、`==`（等於）和`!=`（不等於）。 例如，`externalTrigger==true,state==SUCCESS,created>2019-04-20T13:37:00Z`將傳回在2019年4月20日之後手動建立、成功和建立的所有執行。 |
 
-**請求**
+**要求**
 
 下列請求會擷取指定之排程查詢的最後四個執行。
 
@@ -162,7 +162,7 @@ curl -X GET https://platform.adobe.io/data/foundation/query/schedules/e95186d65a
 POST /schedules/{SCHEDULE_ID}/runs
 ```
 
-**請求**
+**要求**
 
 ```shell
 curl -X POST https://platform.adobe.io/data/foundation/query/schedules/e95186d65a28abf00a495d82_28e74200-e3de-11e9-8f5d-7f27416c5f0d_sample_scheduled_query7omob151bm_birvwm/runs
@@ -185,7 +185,7 @@ curl -X POST https://platform.adobe.io/data/foundation/query/schedules/e95186d65
 
 ### 擷取特定排程查詢之執行的詳細資料
 
-通過向`/schedules/{SCHEDULE_ID}/runs/{RUN_ID}`端點發出GET請求，並同時提供計畫查詢的ID和請求路徑中的運行，可以檢索有關特定計畫查詢運行的詳細資訊。
+通過向`/schedules/{SCHEDULE_ID}/runs/{RUN_ID}`端點發出GET請求，並同時提供已調度查詢的ID和請求路徑中的運行，可以檢索有關特定已調度查詢的運行的詳細資訊。
 
 **API格式**
 
@@ -198,7 +198,7 @@ GET /schedules/{SCHEDULE_ID}/runs/{RUN_ID}
 | `{SCHEDULE_ID}` | 要檢索其運行的計畫查詢的`id`值。 |
 | `{RUN_ID}` | 您要擷取之執行的`id`值。 |
 
-**請求**
+**要求**
 
 ```shell
 curl -X GET https://platform.adobe.io/data/foundation/query/schedules/e95186d65a28abf00a495d82_28e74200-e3de-11e9-8f5d-7f27416c5f0d_sample_scheduled_query7omob151bm_birvwm/runs/c2NoZWR1bGVkX18yMDIwLTAxLTA4VDIwOjQ1OjAwKzAwOjAw
@@ -246,7 +246,7 @@ curl -X GET https://platform.adobe.io/data/foundation/query/schedules/e95186d65a
 
 ### 立即停止特定計畫查詢的運行
 
-通過向`/schedules/{SCHEDULE_ID}/runs/{RUN_ID}`端點發出PATCH請求並同時提供計畫查詢的ID和請求路徑中的運行，可以立即停止特定計畫查詢的運行。
+通過向`/schedules/{SCHEDULE_ID}/runs/{RUN_ID}`端點發出PATCH請求並提供已調度查詢的ID和請求路徑中的運行，可以立即停止特定已調度查詢的運行。
 
 **API格式**
 
@@ -259,7 +259,7 @@ PATCH /schedules/{SCHEDULE_ID}/runs/{RUN_ID}
 | `{SCHEDULE_ID}` | 要檢索其運行的計畫查詢的`id`值。 |
 | `{RUN_ID}` | 您要擷取之執行的`id`值。 |
 
-**請求**
+**要求**
 
 此API要求會使用JSON修補程式語法來處理其裝載。 如需JSON修補程式運作方式的詳細資訊，請閱讀API基礎檔案。
 
