@@ -1,30 +1,30 @@
 ---
-keywords: Experience Platform; home；熱門主題；Azure資料總管；azure資料總管；資料總管；資料總管
+keywords: Experience Platform；首頁；熱門主題；AzureData Explorer;azure資料瀏覽器；資料瀏覽器；Data Explorer
 solution: Experience Platform
-title: 在UI中建立Azure資料總管來源連線
-topic: overview
+title: 在UI中建立AzureData Explorer來源連線
+topic-legacy: overview
 type: Tutorial
-description: 瞭解如何使用Adobe Experience Platform UI建立Azure資料總管來源連線。
+description: 瞭解如何使用Adobe Experience PlatformUI建立AzureData Explorer來源連線。
+exl-id: 561bf948-fc92-4401-8631-e2a408667507
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '512'
-ht-degree: 0%
+source-wordcount: '493'
+ht-degree: 1%
 
 ---
-
 
 # 在UI中建立[!DNL Azure Data Explorer]來源連線
 
 >[!NOTE]
 >
-> [!DNL Azure Data Explorer]介面處於測試狀態。 有關使用beta標籤連接器的詳細資訊，請參閱[來源概觀](../../../../home.md#terms-and-conditions)。
+> [!DNL Azure Data Explorer]介面處於測試狀態。 有關使用beta標籤連接器的詳細資訊，請參閱[ Sources綜覽](../../../../home.md#terms-and-conditions)。
 
-Adobe Experience Platform中的來源連接器可讓您依計畫吸收外部來源的資料。 本教學課程提供使用[!DNL Platform]使用者介面建立[!DNL Azure Data Explorer]（以下稱為&quot;[!DNL Data Explorer]&quot;）來源連接器的步驟。
+Adobe Experience Platform的來源連接器提供按計畫接收外部來源資料的能力。 本教學課程提供使用[!DNL Platform]使用者介面建立[!DNL Azure Data Explorer]（以下稱為&quot;[!DNL Data Explorer]&quot;）來源連接器的步驟。
 
 ## 快速入門
 
-本教學課程需要對Adobe Experience Platform的下列元件有正確的認識：
+本教學課程需要對Adobe Experience Platform的下列部分有正確的理解：
 
 * [[!DNL Experience Data Model (XDM)] 系統](../../../../../xdm/home.md):組織客戶體驗資 [!DNL Experience Platform] 料的標準化架構。
    * [架構構成基礎](../../../../../xdm/schema/composition.md):瞭解XDM架構的基本建置區塊，包括架構組合的主要原則和最佳實務。
@@ -55,15 +55,15 @@ Adobe Experience Platform中的來源連接器可讓您依計畫吸收外部來�
 
 您可以從畫面左側的目錄中選取適當的類別。 或者，您也可以使用搜尋選項找到您要使用的特定來源。
 
-在&#x200B;**[!UICONTROL 資料庫]**&#x200B;類別下，選擇&#x200B;**[!UICONTROL Azure資料資源管理器]**。 如果這是您第一次使用此連接器，請選擇&#x200B;**[!UICONTROL Configure]**。 否則，請選擇&#x200B;**[!UICONTROL 添加資料]**&#x200B;以建立新的資料資源管理器連接器。
+在&#x200B;**[!UICONTROL Databases]**&#x200B;類別下，選擇&#x200B;**[!UICONTROL Azure Data Explorer]**。 如果這是您第一次使用此連接器，請選擇&#x200B;**[!UICONTROL Configure]**。 否則，請選擇&#x200B;**[!UICONTROL Add data]**&#x200B;以建立新的Data Explorer連接器。
 
 ![目錄](../../../../images/tutorials/create/data-explorer/catalog.png)
 
-此時將顯示&#x200B;**[!UICONTROL 連接到Azure資料資源管理器]**&#x200B;頁。 在此頁上，您可以使用新認證或現有認證。
+此時將顯示&#x200B;**[!UICONTROL Connect to Azure Data Explorer]**&#x200B;頁。 在此頁上，您可以使用新認證或現有認證。
 
 ### 新帳戶
 
-如果您使用新憑據，請選擇&#x200B;**[!UICONTROL 新建帳戶]**。 在顯示的輸入表單上，提供名稱、可選說明和您的[!DNL Data Explorer]憑證。 完成後，選擇&#x200B;**[!UICONTROL Connect]** ，然後為建立新連接留出一些時間。
+如果使用新憑據，請選擇&#x200B;**[!UICONTROL New account]**。 在顯示的輸入表單上，提供名稱、可選說明和您的[!DNL Data Explorer]憑證。 完成後，選擇&#x200B;**[!UICONTROL Connect]** ，然後允許一些時間建立新連接。
 
 ![連接](../../../../images/tutorials/create/data-explorer/new.png)
 
