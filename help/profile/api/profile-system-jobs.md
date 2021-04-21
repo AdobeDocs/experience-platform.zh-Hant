@@ -1,17 +1,17 @@
 ---
-keywords: Experience Platform;Profile；即時客戶配置檔案；故障排除；API
+keywords: Experience Platform；配置檔案；即時客戶配置檔案；故障排除；API
 title: 配置檔案系統作業API端點
-topic: guide
+topic-legacy: guide
 type: Documentation
 description: Adobe Experience Platform可讓您從描述檔商店刪除資料集或批次，以移除不再需要或錯誤新增的即時客戶描述檔資料。 這需要使用描述檔API來建立描述檔系統工作或刪除請求。
+exl-id: 75ddbf2f-9a54-424d-8569-d6737e9a590e
 translation-type: tm+mt
-source-git-commit: d2ace7cadb06f77bdf14b6a4ef83e879c4ca88fd
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '1321'
 ht-degree: 2%
 
 ---
-
 
 # 描述系統作業端點（刪除請求）
 
@@ -23,7 +23,7 @@ Adobe Experience Platform可讓您從多個來源擷取資料，並為個別客�
 
 ## 快速入門
 
-本指南中使用的API端點是[[!DNL Real-time Customer Profile API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml)的一部分。 在繼續之前，請先閱讀[快速入門手冊](getting-started.md)，以取得相關檔案的連結、閱讀本檔案中範例API呼叫的指南，以及成功呼叫任何Experience Platform API所需之必要標題的重要資訊。
+本指南中使用的API端點是[[!DNL Real-time Customer Profile API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml)的一部分。 在繼續之前，請先閱讀[快速入門手冊](getting-started.md)，以取得相關檔案的連結、閱讀本檔案中範例API呼叫的指南，以及成功呼叫任何Experience PlatformAPI所需之必要標題的重要資訊。
 
 ## 檢視刪除請求
 
@@ -40,12 +40,12 @@ GET /system/jobs?{QUERY_PARAMETERS}
 
 | 參數 | 說明 |
 |---|---|
-| `start` | 依照請求的建立時間，偏移傳回的結果頁面。 範例: `start=4` |
-| `limit` | 限制傳回的結果數。 範例: `limit=10` |
-| `page` | 依照請求的建立時間傳回特定的結果頁面。 範例: `page=2` |
-| `sort` | 依特定欄位的遞增(`asc`)或遞減(`desc`)順序排序結果。 傳回多頁結果時，排序參數無法運作。 範例: `sort=batchId:asc` |
+| `start` | 依照請求的建立時間，偏移傳回的結果頁面。 範例：`start=4` |
+| `limit` | 限制傳回的結果數。 範例：`limit=10` |
+| `page` | 依照請求的建立時間傳回特定的結果頁面。 範例：`page=2` |
+| `sort` | 依特定欄位的遞增(`asc`)或遞減(`desc`)順序排序結果。 傳回多頁結果時，排序參數無法運作。 範例：`sort=batchId:asc` |
 
-**請求**
+**要求**
 
 ```shell
 curl -X GET \
@@ -113,7 +113,7 @@ curl -X GET \
 POST /system/jobs
 ```
 
-**請求**
+**要求**
 
 ```shell
 curl -X POST \
@@ -169,7 +169,7 @@ curl -X POST \
 POST /system/jobs
 ```
 
-**請求**
+**要求**
 
 ```shell
 curl -X POST \
@@ -207,7 +207,7 @@ curl -X POST \
 | 屬性 | 說明 |
 |---|---|
 | `id` | 刪除請求的唯一、系統產生的唯讀ID。 |
-| `batchId` | 批次的ID，如POST請求中所指定。 |
+| `batchId` | 批的ID，如POST請求中指定。 |
 
 如果您嘗試為記錄資料集批次啟動刪除請求，將會遇到400級錯誤，類似下列：
 
@@ -239,7 +239,7 @@ GET /system/jobs/{DELETE_REQUEST_ID}
 |---|---|
 | `{DELETE_REQUEST_ID}` | **（必要）** 您要檢視之刪除請求的ID。 |
 
-**請求**
+**要求**
 
 ```shell
 curl -X POST \
@@ -277,7 +277,7 @@ curl -X POST \
 
 ## 刪除刪除請求
 
-[!DNL Experience Platform] 可讓您刪除先前的請求，這可能因為許多原因（包括刪除作業未完成或在處理階段卡住）而有用。為了刪除刪除請求，可以對`/system/jobs`端點執行DELETE請求，並包括要刪除到請求路徑的刪除請求的ID。
+[!DNL Experience Platform] 可讓您刪除先前的請求，這可能因為許多原因（包括刪除作業未完成或在處理階段卡住）而有用。為了刪除刪除請求，您可以對`/system/jobs`端點執行DELETE請求，並包括要刪除到請求路徑的刪除請求的ID。
 
 **API格式**
 
@@ -287,9 +287,9 @@ DELETE /system/jobs/{DELETE_REQUEST_ID}
 
 | 參數 | 說明 |
 |---|---|
-| {DELETE_REQUEST_ID} | 您要移除的刪除請求ID。 |
+| {DELETE_請求_ID} | 您要移除的刪除請求ID。 |
 
-**請求**
+**要求**
 
 ```shell
 curl -X POST \
