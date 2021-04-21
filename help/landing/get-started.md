@@ -1,11 +1,11 @@
 ---
-keywords: Experience Platform;home；熱門主題
+keywords: Experience Platform；首頁；熱門主題
 solution: Experience Platform
-title: Adobe Experience Platform快速入門
-topic: getting started
-description: 此影片提供Experience Platform的簡介，並概述它解決的商業挑戰。
+title: 開始使用Adobe Experience Platform
+topic-legacy: getting started
+description: 此視訊提供Experience Platform的簡介，並概述其解決的商業挑戰。
 translation-type: tm+mt
-source-git-commit: 5575d5e45bddcc007dcf78720cd7a7e20475f78c
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '49'
 ht-degree: 12%
