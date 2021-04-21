@@ -2,13 +2,13 @@
 keywords: Experience Platform; home；熱門主題；分段；分段；分段服務；流分段；流分段；連續評價；
 solution: Experience Platform
 title: '使用串流分段功能，即時評估事件 '
-topic: developer guide
+topic-legacy: developer guide
 description: 本檔案包含如何搭配Adobe Experience Platform分段服務API使用串流分段的範例。
 exl-id: 119508bd-5b2e-44ce-8ebf-7aef196abd7a
 translation-type: tm+mt
-source-git-commit: e1ae20412f449c991f53fdd0f095d0c3a6de262c
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '1377'
+source-wordcount: '1375'
 ht-degree: 1%
 
 ---
@@ -106,7 +106,7 @@ ht-degree: 1%
 GET /segment/definitions?evaluationInfo.continuous.enabled=true
 ```
 
-**請求**
+**要求**
 
 ```shell
 curl -X GET \
@@ -217,7 +217,7 @@ curl -X GET \
 POST /segment/definitions
 ```
 
-**請求**
+**要求**
 
 ```shell
 curl -X POST \
@@ -306,7 +306,7 @@ curl -X POST \
 POST /config/schedules
 ```
 
-**請求**
+**要求**
 
 以下請求會根據裝載中提供的規格建立新的排程。
 
@@ -376,7 +376,7 @@ curl -X POST \
 POST /config/schedules/{SCHEDULE_ID}
 ```
 
-**請求**
+**要求**
 
 以下請求使用[JSON修補程式格式](http://jsonpatch.com/)，以便將排程的`state`更新為`active`。
 
