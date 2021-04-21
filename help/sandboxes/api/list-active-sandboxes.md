@@ -2,16 +2,16 @@
 keywords: Experience Platform；首頁；熱門主題；列出活動的沙盒；列出沙盒
 solution: Experience Platform
 title: 在API中列出目前使用者的作用中沙盒
-topic: developer guide
+topic-legacy: developer guide
 description: 您可以向根端點提出GET請求，列出目前使用者的作用中沙盒。
+exl-id: 9b0719af-c1ca-439a-9c8b-86c7fa26a3b8
 translation-type: tm+mt
-source-git-commit: 62ce5ac92d03a6e85589fc92e8d953f7fc1d8f31
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '363'
+source-wordcount: '361'
 ht-degree: 2%
 
 ---
-
 
 # 在API中列出目前使用者的作用中沙盒
 
@@ -31,7 +31,7 @@ GET /{QUERY_PARAMS}
 | --------- | ----------- |
 | `{QUERY_PARAMS}` | 可選查詢參數，以篩選結果。 如需詳細資訊，請參閱[查詢參數](#query)一節。 |
 
-**請求**
+**要求**
 
 ```shell
 curl -X GET \
