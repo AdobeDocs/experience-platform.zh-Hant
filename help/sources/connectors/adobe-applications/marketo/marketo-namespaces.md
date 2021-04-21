@@ -5,9 +5,9 @@ title: 'Marketo命名空間 '
 topic-legacy: overview
 description: 本文檔概述了建立Marketo Engage源連接器時所需的自定義命名空間。
 translation-type: tm+mt
-source-git-commit: f12baaa9d4b37f1101792a4ae479b5a62893eb68
+source-git-commit: bea6b35627b0e913c894c38ba9553085ba0aa26f
 workflow-type: tm+mt
-source-wordcount: '1176'
+source-wordcount: '1215'
 ht-degree: 5%
 
 ---
@@ -50,6 +50,10 @@ ht-degree: 5%
 
 下表包含有關[!DNL Marketo]名稱空間的基礎設定的資訊。
 
+>[!NOTE]
+>
+>請向左／向右滾動以查看表的完整內容。
+
 | 顯示名稱 | 身分符號 | 身分類型 | 發行者類型 | 發行者實體類型 | Munchkin ID範例 |
 | --- | --- | --- | --- | --- | --- |
 | `marketo_person_{MUNCHKIN_ID}` | 自動產生 | `CROSS_DEVICE` | [!DNL Marketo] | `person` | `123-ABC-789` |
@@ -70,6 +74,10 @@ ht-degree: 5%
 
 下表包含有關[!DNL Salesforce]名稱空間的基礎設定的資訊。
 
+>[!NOTE]
+>
+>請向左／向右滾動以查看表的完整內容。
+
 | 顯示名稱 | 身分符號 | 身分類型 | 發行者類型 | 發行者實體類型 | [!DNL Salesforce] 訂閱組織ID範例 |
 | --- | --- | --- | --- | --- | --- |
 | `salesforce_person_{SALESFORCE_ORGANIZATION_ID}` | 自動產生 | `CROSS_DEVICE` | [!DNL Salesforce] | `person` | `00DA0000000Hz79` |
@@ -87,6 +95,10 @@ ht-degree: 5%
 
 下表包含有關[!DNL Dynamics]名稱空間的基礎設定的資訊。
 
+>[!NOTE]
+>
+>請向左／向右滾動以查看表的完整內容。
+
 | 顯示名稱 | 身分符號 | 身分類型 | 發行者類型 | 發行者實體類型 | [!DNL Salesforce] 訂閱組織ID範例 |
 | --- | --- | --- | --- | --- | --- |
 | `microsoft_person_{DYNAMICS_ID}` | 自動產生 | `CROSS_DEVICE` | [!DNL Microsoft] | `person` | `94cahe38-e51h-3d57-a9c6-2edklb7184mh` |
@@ -95,6 +107,8 @@ ht-degree: 5%
 | `microsoft_opportunity_contact_connection_{DYNAMICS_ID}` | 自動產生 | `B2B_OPPORTUNITY_PERSON` | [!DNL Microsoft] | `opportunity relationship` | `94cahe38-e51h-3d57-a9c6-2edklb7184mh` |
 | `microsoft_campaign_{DYNAMICS_ID}` | 自動產生 | `B2B_CAMPAIGN` | [!DNL Microsoft] | `campaign` | `94cahe38-e51h-3d57-a9c6-2edklb7184mh` |
 | `microsoft_campaign_member_{DYNAMICS_ID}` | 自動產生 | `B2B_CAMPAIGN_MEMBER` | [!DNL Microsoft] | `campaign member` | `94cahe38-e51h-3d57-a9c6-2edklb7184mh` |
+
+{style=&quot;table-layout:auto&quot;}
 
 ## [!DNL Marketo] 模式
 
