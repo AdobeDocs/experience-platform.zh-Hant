@@ -1,17 +1,17 @@
 ---
-keywords: Experience Platform;home；熱門主題；CRM;crm;crm流程服務
+keywords: Experience Platform；首頁；熱門主題；CRM;crm;crm流服務
 solution: Experience Platform
 title: 利用流服務API探索CRM系統
-topic: overview
+topic-legacy: overview
 description: 本教學課程使用Flow Service API來探索CRM系統。
+exl-id: 9a8c553a-a93d-4539-a9d2-5f76a3927d92
 translation-type: tm+mt
-source-git-commit: 62266187ed1f3ce2f0acca3f50487fb70cfa7307
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '589'
 ht-degree: 2%
 
 ---
-
 
 # 使用[!DNL Flow Service] API探索CRM系統
 
@@ -21,7 +21,7 @@ ht-degree: 2%
 
 ## 快速入門
 
-本指南需要有效瞭解Adobe Experience Platform的下列元件：
+本指南需要對Adobe Experience Platform的下列組成部分有切實的瞭解：
 
 * [來源](../../../home.md): [!DNL Experience Platform] 允許從各種來源接收資料，同時提供使用服務構建、標籤和增強傳入資料的 [!DNL Platform] 能力。
 * [沙盒](../../../../sandboxes/home.md): [!DNL Experience Platform] 提供虛擬沙盒，可將單一執行個體分 [!DNL Platform] 割為不同的虛擬環境，以協助開發和發展數位體驗應用程式。
@@ -51,13 +51,13 @@ ht-degree: 2%
 
 * `x-sandbox-name: {SANDBOX_NAME}`
 
-所有包含裝載(POST、PUT、PATCH)的請求都需要額外的媒體類型標題：
+所有包含裝載(POST、PUT、PATCH)的請求都需要附加的媒體類型標題：
 
 * `Content-Type: application/json`
 
 ## 探索您的資料表格
 
-使用CRM系統的連線ID，您可以執行GET請求來探索資料表格。 使用以下調用查找要檢查或裝入[!DNL Platform]的表的路徑。
+使用CRM系統的連線ID，您可以執行GET請求來探索資料表。 使用以下調用查找要檢查或裝入[!DNL Platform]的表的路徑。
 
 **API格式**
 
@@ -69,7 +69,7 @@ GET /connections/{BASE_CONNECTION_ID}/explore?objectType=root
 | --- | --- |
 | `{BASE_CONNECTION_ID}` | 您CRM系統的基本連線ID。 |
 
-**請求**
+**要求**
 
 ```shell
 curl -X GET \
@@ -110,9 +110,9 @@ curl -X GET \
 ]
 ```
 
-## 檢查表格結構
+## Inspect桌子的結構
 
-要從CRM系統檢查表的結構，請在指定表的路徑作為查詢參數時執行GET請求。
+要從CRM系統檢查表的結構，請在將表的路徑指定為查詢參數時執行GET請求。
 
 **API格式**
 
@@ -125,7 +125,7 @@ GET /connections/{BASE_CONNECTION_ID}/explore?objectType=table&object={TABLE_PAT
 | `{BASE_CONNECTION_ID}` | 您CRM系統的基本連線ID。 |
 | `{TABLE_PATH}` | 表的路徑。 |
 
-**請求**
+**要求**
 
 ```shell
 curl -X GET \
