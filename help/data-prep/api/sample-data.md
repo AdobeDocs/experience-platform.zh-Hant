@@ -2,12 +2,12 @@
 keywords: Experience Platform; home；熱門主題；資料準備；api指南；示例資料；
 solution: Experience Platform
 title: 範例資料API端點
-topic: sample data
+topic-legacy: sample data
 description: '您可以使用Adobe Experience PlatformAPI中的「/samples」端點，以程式設計方式擷取、建立、更新及驗證對應範例資料。 '
 translation-type: tm+mt
-source-git-commit: a2c966ae2401faa572cbba974ce6f572d5280a8f
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '403'
+source-wordcount: '401'
 ht-degree: 4%
 
 ---
@@ -34,7 +34,7 @@ GET /samples?limit={LIMIT}&start={START}
 | `{LIMIT}` | **必填**. 指定傳回的映射範例資料數。 |
 | `{START}` | **必填**. 指定結果頁的偏移。 若要取得第一頁的結果，請將值設定為`start=0`。 |
 
-**請求**
+**要求**
 
 下列請求將擷取您IMS組織內最後兩個對應範例資料。
 
@@ -94,7 +94,7 @@ curl -X GET https://platform.adobe.io/data/foundation/conversion/samples?limit=2
 POST /samples
 ```
 
-**請求**
+**要求**
 
 ```shell
 curl -X POST https://platform.adobe.io/data/foundation/conversion/samples \
@@ -137,7 +137,7 @@ curl -X POST https://platform.adobe.io/data/foundation/conversion/samples \
 POST /samples/upload
 ```
 
-**請求**
+**要求**
 
 ```shell
 curl -X POST https://platform.adobe.io/data/foundation/conversion/samples \
@@ -180,7 +180,7 @@ GET /samples/{SAMPLE_ID}
 | --------- | ----------- |
 | `{SAMPLE_ID}` | 您要擷取之範例資料物件的ID。 |
 
-**請求**
+**要求**
 
 ```shell
 curl -X GET https://platform.adobe.io/data/foundation/conversion/samples/1fc0b6c20bae49d8ab33209ed126bdcd \
@@ -221,7 +221,7 @@ PUT /samples/{SAMPLE_ID}
 | --------- | ----------- |
 | `{SAMPLE_ID}` | 您要更新之範例資料物件的ID。 |
 
-**請求**
+**要求**
 
 下列請求會更新指定的範例資料。 具體來說，它會將姓氏從&quot;Smith&quot;更新為&quot;Lee&quot;。
 
