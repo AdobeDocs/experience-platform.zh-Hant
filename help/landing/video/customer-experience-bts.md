@@ -1,24 +1,22 @@
 ---
-title: 幕後推手&#58;採用Adobe Experience Platform的客戶體驗
-description: 在上一段視訊中，我們看到範例品牌Luma如何建立豐富、有價值且相關的客戶體驗。 本影片說明如何使用Adobe Experience Platform來完成此旅程。
-feature: platform
-topics: null
+title: 幕後推手&#58;由Adobe Experience Platform推動的客戶體驗
+description: 在上一段視訊中，我們看到範例品牌Luma如何建立豐富、有價值且相關的客戶體驗。 這段視訊是如何運用Adobe Experience Platform完成這段旅程的。
 kt: 4340
 audience: all
 doc-type: video
 activity: understand
 thumbnail: 28144.jpg
+exl-id: 8562e0da-7aac-418a-8e93-f0339d3ffc66
 translation-type: tm+mt
-source-git-commit: 333b89ccf2365c04646df9dc0434036bdd6f12ac
+source-git-commit: f12baaa9d4b37f1101792a4ae479b5a62893eb68
 workflow-type: tm+mt
 source-wordcount: '85'
 ht-degree: 0%
 
 ---
 
+# 在Experience Platform支援下提供客戶體驗的幕後效果
 
-# Experience Platform提供的客戶體驗幕後秘辛
-
-在觀看視訊後 [，請幕後觀看Platform提供的客戶體驗](customer-experience.md)，瞭解Adobe Experience Platform如何為此體驗提供動力。
+在觀看顯示[由Platform提供的客戶體驗的影片後，請到幕後觀看如何使用Adobe Experience Platform來提供此體驗。](customer-experience.md)
 
 >[!VIDEO](https://video.tv.adobe.com/v/28144?quality=12&learn=on)
