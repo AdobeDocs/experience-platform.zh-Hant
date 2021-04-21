@@ -1,17 +1,17 @@
 ---
-keywords: Experience Platform; home；熱門主題；分段；分段；分段服務；pql;PQL；配置檔案查詢語言；陣列函式；array;
+keywords: Experience Platform;home；熱門主題；分段；分段；分段服務；pql;PQL；配置檔案查詢語言；陣列函式；array;
 solution: Experience Platform
 title: 陣列、清單和設定PQL函式
-topic: developer guide
+topic-legacy: developer guide
 description: 配置式查詢語言(PQL)提供一些功能，使與陣列、清單和字串的交互更加容易。
+exl-id: 5ff2b066-8857-4cde-9932-c8bf09e273d3
 translation-type: tm+mt
-source-git-commit: b3defc3e33a55855e307ab70b9797d985d5719e3
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '767'
 ht-degree: 5%
 
 ---
-
 
 # 陣列、清單和設定函式
 
@@ -21,7 +21,7 @@ ht-degree: 5%
 
 `in`函式用於確定項目是否是陣列或清單的成員。
 
-**Format**
+**格式**
 
 ```sql
 {VALUE} in {ARRAY}
