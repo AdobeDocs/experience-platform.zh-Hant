@@ -3,15 +3,15 @@ keywords: Experience Platform;home；熱門主題；api;API;XDM;XDM系統；體�
 solution: Experience Platform
 title: 範例資料API端點
 description: 方案註冊表API中的/sampledata端點允許您生成映射到任何現有XDM方案結構的示例資料。
-topic: developer guide
+topic-legacy: developer guide
+exl-id: 424d33ca-0624-4891-bf83-044ac2861579
 translation-type: tm+mt
-source-git-commit: 0727ffa0c72bcb6a85de1a13215b691b97889b70
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '321'
+source-wordcount: '319'
 ht-degree: 1%
 
 ---
-
 
 # 範例資料端點
 
@@ -39,7 +39,7 @@ GET /rpc/sampledata/{SCHEMA_ID}
 | --- | --- |
 | `{SCHEMA_ID}` | 要為其生成示例資料的方案的`meta:altId`或URL編碼的`$id`。 |
 
-**請求**
+**要求**
 
 以下請求會為忠誠度成員方案生成示例資料。
 
