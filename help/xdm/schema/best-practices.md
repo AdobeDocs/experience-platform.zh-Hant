@@ -1,33 +1,33 @@
 ---
-keywords: Experience Platform;home；熱門主題；架構；Schema;enum;primary identity;primary identity;XDM individual profile;Experience事件；XDM ExperienceEvent;experienceEvent;experienceevent;XDM Experienceevent；架構設計；最佳實踐
+keywords: Experience Platform;home；熱門主題；模式；方案；枚舉；主要標識；主要標識；XDM個人配置檔案；Experience事件；XDM ExperienceEvent;XDM ExperienceEvent;experienceevent;XDM Experienceevent；模式設計；最佳實踐
 solution: Experience Platform
 title: 資料建模的最佳實務
-topic: overview
-description: 本檔案提供Experience Data Model(XDM)架構的簡介，以及構成Adobe Experience Platform中要使用之架構的建置區塊、原則和最佳實務。
+topic-legacy: overview
+description: 本檔案介紹Experience Data Model(XDM)架構，以及組合要在Adobe Experience Platform使用的架構的構建區塊、原則和最佳實務。
+exl-id: 2455a04e-d589-49b2-a3cb-abb5c0b4e42f
 translation-type: tm+mt
-source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '2507'
+source-wordcount: '2502'
 ht-degree: 1%
 
 ---
 
-
 # 資料建模的最佳實務
 
-[!DNL Experience Data Model] (XDM)是核心架構，可透過提供用於下游Adobe Experience Platform服務的通用結構和定義，標準化客戶體驗資料。遵循XDM標準，所有客戶體驗資料都可以整合在通用的呈現方式中，讓您從客戶行動中獲得寶貴的見解，透過細分定義客戶受眾，並表達客戶屬性以利個人化。
+[!DNL Experience Data Model] (XDM)是核心架構，可透過提供用於下游Adobe Experience Platform服務的共同結構和定義，來標準化客戶體驗資料。遵循XDM標準，所有客戶體驗資料都可以整合在通用的呈現方式中，讓您從客戶行動中獲得寶貴的見解，透過細分定義客戶受眾，並表達客戶屬性以利個人化。
 
 由於XDM具備極強的通用性，而且可依設計自訂，因此在設計結構描述時，請務必遵循資料建模的最佳實務。 本檔案涵蓋將客戶體驗資料對應至XDM時，您必須做出的主要決策和考量。
 
 ## 快速入門
 
-在閱讀本指南之前，請先閱讀[XDM系統概觀](../home.md)，以瞭解XDM及其在Experience Platform中的角色。
+在閱讀本指南之前，請閱讀[XDM系統概述](../home.md)，以瞭解XDM及其在Experience Platform中的角色。
 
 此外，本指南專門針對架構設計的主要考量事項。 因此，強烈建議您參閱[架構構成基礎](./composition.md)，以取得本指南中提及之個別架構元素的詳細說明。
 
 ## 最佳做法摘要
 
-設計資料模型以用於Experience Platform的建議方法可總結如下：
+設計要用於Experience Platform的資料模型的建議方法可總結如下：
 
 1. 瞭解您資料的商業使用案例。
 1. 確定應引入[!DNL Platform]以解決這些使用案例的主要資料源。
@@ -75,7 +75,7 @@ ht-degree: 1%
 | --- | --- | --- | --- | --- |
 | 郵編：1234567 | 新增 | 郵遞區號275098 | 2 | 10月1日，上午10點32分 |
 | 郵編：1234567 | 移除 | 郵遞區號275098 | 1 | 10月1日，上午10點33分 |
-| 郵編：1234567 | 新增 | 郵編：486502 | 1 | 10月1日，上午10點41分 |
+| 郵編：1234567 | 新增 | 郵編：486502 | 3 | 10月1日，上午10點41分 |
 | 郵編：1234567 | 新增 | 郵編：910482 | 5 | 10月3日，下午2:15 |
 
 #### 區段使用案例
@@ -101,7 +101,7 @@ ht-degree: 1%
 
 >[!CAUTION]
 >
->Experience Platform目前不會執行自動值匯總，不過預計未來將推出此功能。 如果您選擇使用匯總值，則必須在外部執行計算，才能將資料發送到[!DNL Platform]。
+>Experience Platform目前不會執行自動值匯總，不過計畫在未來發行中執行。 如果您選擇使用匯總值，則必須在外部執行計算，才能將資料發送到[!DNL Platform]。
 
 #### 基數
 
@@ -189,34 +189,34 @@ ht-degree: 1%
 
 ### 身分欄位
 
-在Experience Platform中，標示為身分的XDM欄位可用來整合來自多個資料來源的個別客戶相關資訊。 雖然架構可以有多個欄位標籤為標識，但必須定義單個主標識，才能在[!DNL Real-time Customer Profile]中啟用該架構。 有關這些欄位的使用案例的詳細資訊，請參閱架構構成基礎中[標識欄位](./composition.md#identity)一節。
+在Experience Platform中，標示為身分的XDM欄位可用來拼湊來自多個資料來源的個別客戶資訊。 雖然架構可以有多個欄位標籤為標識，但必須定義單個主標識，才能在[!DNL Real-time Customer Profile]中啟用該架構。 有關這些欄位的使用案例的詳細資訊，請參閱架構構成基礎中[標識欄位](./composition.md#identity)一節。
 
 在設計方案時，關係資料庫表中的任何主鍵都可能是主標識的候選。 適用身分欄位的其他範例包括客戶電子郵件地址、電話號碼、帳戶ID和[ECID](../../identity-service/ecid.md)。
 
-### Adobe應用程式混合
+### Adobe應用混合
 
-Experience Platform提供數種現成可用的XDM混合，以擷取與下列Adobe應用程式相關的資料：
+Experience Platform提供數種現成可用的XDM混合，用於捕獲與以下Adobe應用程式相關的資料：
 
 * Adobe Analytics
 * Adobe Audience Manager
 * Adobe Campaign
 * Adobe Target
 
-例如，[[!UICONTROL Adobe Analytics ExperienceEvent範本Mixin]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/analytics/experienceevent-all.schema.json)可讓您將[!DNL Analytics]特定欄位對應至XDM結構。 根據您使用的Adobe應用程式，您應在結構描述中使用這些Adobe提供的混合程式。
+例如，[[!UICONTROL Adobe Analytics ExperienceEvent Template Mixin]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/analytics/experienceevent-all.schema.json)允許您將[!DNL Analytics]特定欄位映射到XDM結構。 根據您使用的Adobe應用程式，您應該在結構中使用這些Adobe提供的混合。
 
 <img src="../images/best-practices/analytics-mixin.png" width="700"><br>
 
-Adobe應用程式混合會透過使用`identityMap`欄位自動指派預設的主要身分識別，此欄位是系統產生的唯讀物件，可對應個別客戶的標準身分識別值。
+Adobe應用程式混合會通過使用`identityMap`欄位自動分配預設的主標識，該欄位是系統生成的只讀對象，用於映射單個客戶的標準標識值。
 
 對於Adobe Analytics,ECID是預設的主要身分識別。 如果客戶未提供ECID值，則主要身分會預設為AAID。
 
 >[!IMPORTANT]
 >
->使用Adobe應用程式混合時，不應將任何其他欄位標示為主要身分。 如果有其他屬性需要標示為身分，則這些欄位需改為指派為次要身分。
+>使用Adobe應用程式混合時，不應將任何其他欄位標籤為主標識。 如果有其他屬性需要標示為身分，則這些欄位需改為指派為次要身分。
 
 ## 後續步驟
 
-本檔案涵蓋針對Experience Platform設計資料模型的一般准則和最佳實務。 總結：
+本檔案涵蓋設計資料模型以進行Experience Platform的一般准則和最佳實務。 總結：
 
 * 使用自上而下的方法，在建構結構之前，先將資料表格排序為描述檔、查閱和事件類別。
 * 針對不同用途設計結構描述時，通常有多種方法和選項。
