@@ -1,16 +1,16 @@
 ---
 solution: Experience Platform
 title: 具有訂閱資料類型的一般行銷偏好設定欄位
-topic: overview
+topic-legacy: overview
 description: 本檔案提供「一般行銷偏好設定欄位」與「訂閱XDM」資料類型的概述。
+exl-id: 170ea6ca-77fc-4b0a-87f9-6d4b6f32d953
 translation-type: tm+mt
-source-git-commit: 8c5ab298bad69305358ae961ebaf7836a90a0eaa
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '712'
+source-wordcount: '711'
 ht-degree: 2%
 
 ---
-
 
 # [!UICONTROL Generic Marketing Preference Field with Subscriptions] 資料類型
 
