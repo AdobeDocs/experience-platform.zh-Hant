@@ -2,16 +2,16 @@
 keywords: 視覺相似性；視覺相似性； ccai api
 solution: Experience Platform, Intelligent Services
 title: 內容與商務AI API中的視覺相似性
-topic: Developer guide
+topic-legacy: Developer guide
 description: 視覺相似性服務在給定影像時，會自動從目錄中尋找視覺相似的影像。
+exl-id: fe31d9be-ee42-44fa-b83f-3b8a718cb4e3
 translation-type: tm+mt
-source-git-commit: d10c00694b0a3b2a9da693bd59615b533cfae468
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '510'
 ht-degree: 3%
 
 ---
-
 
 # 視覺相似性
 
@@ -21,7 +21,7 @@ ht-degree: 3%
 
 視覺相似性服務在給定影像時，會自動從目錄中尋找視覺相似的影像。
 
-本檔案所示的範例請求中使用了下列影像：
+本檔案所示的範例要求中使用了下列影像：
 
 ![測試影像](../images/Query_Image.jpeg)
 
@@ -31,7 +31,7 @@ ht-degree: 3%
 POST /services/v1/predict
 ```
 
-**請求**
+**要求**
 
 以下請求根據裝載中提供的輸入參數從目錄中檢索視覺上類似的影像。 請參閱範例裝載下表，以取得有關所示輸入參數的詳細資訊。
 
@@ -160,4 +160,3 @@ curl -i -X POST https://sensei.adobe.io/services/v1/predict \
   "error": []
 }
 ```
-
