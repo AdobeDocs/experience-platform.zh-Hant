@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home；熱門主題；監視器帳戶；監視器資料流；資料流；目的地
+keywords: Experience Platform、首頁、熱門主題、監視器帳戶、監視器資料流、資料流、目標
 description: 目的地是與目的地平台預先建立的整合，可以順暢地啟動來自Adobe Experience Platform的資料。 您可以使用目的地來啟用跨通道行銷宣傳、電子郵件宣傳、目標廣告和許多其他使用案例的已知和未知資料。
 solution: Experience Platform
 title: 監視資料流
@@ -7,7 +7,7 @@ topic-legacy: overview
 type: Tutorial
 exl-id: fbe35ee1-4ee8-4d67-976b-0c45f0168da4
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 63158e7322ae91d5b36a7b2aa22fd93512f9bebb
 workflow-type: tm+mt
 source-wordcount: '131'
 ht-degree: 0%
