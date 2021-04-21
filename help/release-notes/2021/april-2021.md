@@ -5,9 +5,9 @@ doc-type: release notes
 last-update: April 21, 2021
 author: ens72741
 translation-type: tm+mt
-source-git-commit: 875d3838e16a3b79fa9ab3ec61e4ffb15ea1cf20
+source-git-commit: 0c9b60fe0777286819841c520a41007634622578
 workflow-type: tm+mt
-source-wordcount: '728'
+source-wordcount: '729'
 ht-degree: 12%
 
 ---
@@ -65,7 +65,7 @@ Attribution AI 可將點數歸因到促成轉換事件的接觸點。行銷人�
 
 ## 劃分服務 {#segmentation}
 
-Adobe Experience Platform區段服務提供使用者介面和REST風格的API，可讓您建立區段並從您的[!DNL Real-time Customer Profile]資料產生觀眾。 這些區段是集中設定並維護在[!DNL Platform]上，讓任何Adobe應用程式都可輕鬆存取。
+Adobe Experience Platform區段服務提供使用者介面和REST風格的API，可讓您建立區段並從您的[!DNL Real-time Customer Profile]資料產生觀眾。 這些區段是在平台上集中設定和維護的，讓任何Adobe應用程式都可輕鬆存取。
 
 [!DNL Segmentation Service] 定義個人檔案的特定子集，方法是描述區分客戶群中有價人群的標準。區段可以根據記錄資料（例如人口統計資訊）或代表客戶與品牌互動的時間系列事件來劃分。
 
@@ -76,7 +76,6 @@ Adobe Experience Platform區段服務提供使用者介面和REST風格的API，
 | 其他聚合函式 | 「區段產生器」中已新增計數功能。 計數函式可讓您計算指定事件的完成次數。 有關計數函式的詳細資訊，請參閱[區段產生器指南](../../segmentation/ui/segment-builder.md#count-functions)的計數函式區段 |
 
 如需[!DNL Segmentation Service]的詳細資訊，請參閱[區段概述](../../segmentation/home.md)。
-
 
 ## [!DNL Sources] {#sources}
 
