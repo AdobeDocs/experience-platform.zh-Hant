@@ -1,18 +1,18 @@
 ---
-keywords: Experience Platform;home；熱門主題；API;XDM;XDM;XDM系統；體驗資料模型；資料模型；資料模型；模式註冊表；模式註冊表；ad-hoc;adhoc;Ad-hoc;Adhoc;Adhoc；教學課程；建立；模式；模式；模式
+keywords: Experience Platform;home；熱門主題；API;XDM;XDM;XDM系統；體驗資料模型；體驗資料模型；資料模型；資料模型；模式註冊；模式註冊表；ad-hoc;adhoc;Ad-hoc;Adhoc;Adhoc；教程；建立；模式；模式
 solution: Experience Platform
 title: 建立臨機結構
-description: 在特定情況下，可能需要建立Experience Data Model(XDM)架構，其中欄位的名稱僅限單一資料集使用。 這稱為「臨機」架構。 臨機結構描述用於Experience Platform的各種資料擷取工作流程，包括擷取CSV檔案並建立特定類型的來源連線。
-topic: tutorial
+description: 在特定情況下，可能需要建立Experience Data Model(XDM)架構，其中欄位的名稱僅限單一資料集使用。 這稱為「臨機」架構。 臨機結構描述用於各種資料擷取工作流程中，以進行Experience Platform，包括擷取CSV檔案並建立特定類型的來源連線。
+topic-legacy: tutorial
 type: Tutorial
+exl-id: bef01000-909a-4594-8cf4-b9dbe0b358d5
 translation-type: tm+mt
-source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '823'
 ht-degree: 2%
 
 ---
-
 
 # 建立臨機結構
 
@@ -39,7 +39,7 @@ XDM模式的資料行為由其基礎類確定。 建立臨機模式的第一步�
 POST /tenant/classes
 ```
 
-**請求**
+**要求**
 
 下列請求會建立新的XDM類別，由裝載中提供的屬性設定。 通過在`allOf`陣列中提供設定為`https://ns.adobe.com/xdm/data/adhoc`的`$ref`屬性，該類繼承了`adhoc`行為。 請求還定義`_adhoc`對象，該對象包含類的自定義欄位。
 
@@ -158,7 +158,7 @@ curl -X POST \
 POST /tenant/schemas
 ```
 
-**請求**
+**要求**
 
 下列請求會建立新模式，為先前建立的臨機類別在其裝載中的`$id`提供參考(`$ref`)。
 
@@ -227,7 +227,7 @@ curl -X POST \
 >
 >此步驟為選填。如果您不想檢查臨機架構的欄位結構，可以跳至本教學課程結束時的[後續步驟](#next-steps)區段。
 
-在建立臨機結構描述後，您就可以進行查詢(GET)請求，以擴充的形式檢視結構描述。 在GET請求中使用適當的「接受」標題即可完成，如下所示。
+在建立臨機架構後，您可以進行查詢(GET)要求，以其展開的形式檢視架構。 在GET請求中使用適當的「接受」標題即可完成，如下所示。
 
 **API格式**
 
@@ -239,7 +239,7 @@ GET /tenant/schemas/{SCHEMA_ID}
 | --- | --- |
 | `{SCHEMA_ID}` | 要訪問的臨機架構的URL編碼`$id` URI或`meta:altId`。 |
 
-**請求**
+**要求**
 
 以下請求使用Accept標題`application/vnd.adobe.xed-full+json; version=1`，該標題會傳回架構的擴充格式。 請注意，從[!DNL Schema Registry]檢索特定資源時，請求的「接受」標題必須包含相關資源的主要版本。
 
