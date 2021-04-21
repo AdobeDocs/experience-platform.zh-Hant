@@ -1,17 +1,17 @@
 ---
-keywords: Experience Platform; home；熱門主題；分段；分段；分段服務；pql;PQL；配置檔案查詢語言；布爾函式；布爾值；
+keywords: Experience Platform;home；熱門主題；分段；分段；分段服務；pql;PQL；配置檔案查詢語言；布爾函式；布林值；
 solution: Experience Platform
 title: PQL布爾函式
-topic: developer guide
+topic-legacy: developer guide
 description: 布林函式用於對配置檔案查詢語言(PQL)中的不同元素執行布爾邏輯。
+exl-id: 68a4a8cc-88ad-41b1-b9fc-c2b4ab7d0122
 translation-type: tm+mt
-source-git-commit: b3defc3e33a55855e307ab70b9797d985d5719e3
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '254'
 ht-degree: 5%
 
 ---
-
 
 # 布爾函式
 
@@ -21,7 +21,7 @@ ht-degree: 5%
 
 `and`函式用於建立邏輯連接。
 
-**Format**
+**格式**
 
 ```sql
 {QUERY} and {QUERY}
