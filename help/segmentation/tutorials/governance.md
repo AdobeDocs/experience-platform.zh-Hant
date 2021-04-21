@@ -2,17 +2,17 @@
 keywords: Experience Platform; home；熱門主題；資料使用合規性；強制；強制資料使用合規性；分段服務；分段；分段；
 solution: Experience Platform
 title: 使用API強制對象區段的資料使用符合性
-topic: tutorial
+topic-legacy: tutorial
 type: Tutorial
 description: 本教學課程涵蓋使用API強制「即時客戶個人檔案」受眾細分資料使用合規性的步驟。
+exl-id: 2299328c-d41a-4fdc-b7ed-72891569eaf2
 translation-type: tm+mt
-source-git-commit: b3defc3e33a55855e307ab70b9797d985d5719e3
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '1362'
 ht-degree: 1%
 
 ---
-
 
 # 使用API強制觀眾區隔的資料使用符合性
 
@@ -73,7 +73,7 @@ GET /segment/definitions/{SEGMENT_DEFINITION_ID}
 | -------- | ----------- |
 | `{SEGMENT_DEFINITION_ID}` | 您要尋找的區段定義ID。 |
 
-**請求**
+**要求**
 
 ```shell
 curl -X GET \
@@ -128,7 +128,7 @@ curl -X GET \
 
 ## 從合併策略{#datasets}中查找源資料集
 
-合併策略包含有關其源資料集的資訊，而源資料集又包含資料使用標籤。 您可以在GET請求中提供合併原則ID給[!DNL Profile] API，以查閱合併原則的詳細資訊。 有關合併策略的詳細資訊，請參閱[合併策略端點指南](../../profile/api/merge-policies.md)。
+合併策略包含有關其源資料集的資訊，而源資料集又包含資料使用標籤。 您可以在[!DNL Profile] API的GET請求中提供合併原則ID，以查閱合併原則的詳細資訊。 有關合併策略的詳細資訊，請參閱[合併策略端點指南](../../profile/api/merge-policies.md)。
 
 **API格式**
 
@@ -140,7 +140,7 @@ GET /config/mergePolicies/{MERGE_POLICY_ID}
 | -------- | ----------- |
 | `{MERGE_POLICY_ID}` | 在上一步[中獲得的合併策略的ID。](#merge-policy) |
 
-**請求**
+**要求**
 
 ```shell
 curl -X GET \
@@ -191,7 +191,7 @@ curl -X GET \
 
 在您取得合併原則來源資料集的ID後，就可使用[原則服務API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml)來評估這些資料集與特定行銷動作對應，以檢查資料使用原則違規情況。
 
-若要評估資料集，您必須在POST請求路徑中提供行銷動作的名稱，同時在請求內文中提供資料集ID，如下例所示。
+若要評估資料集，您必須在POST請求的路徑中提供行銷動作的名稱，同時在請求內文中提供資料集ID，如下例所示。
 
 **API格式**
 
@@ -202,9 +202,9 @@ POST /marketingActions/custom/{MARKETING_ACTION_NAME}/constraints
 
 | 參數 | 說明 |
 | --- | --- |
-| `{MARKETING_ACTION_NAME}` | 與您評估資料集依據的資料使用策略相關聯的行銷動作名稱。 根據策略是由Adobe還是您的組織定義，您必須分別使用`/marketingActions/core`或`/marketingActions/custom`。 |
+| `{MARKETING_ACTION_NAME}` | 與您評估資料集依據的資料使用策略相關聯的行銷動作名稱。 根據策略是由Adobe還是由您的組織定義，您必須分別使用`/marketingActions/core`或`/marketingActions/custom`。 |
 
-**請求**
+**要求**
 
 下列請求會針對在上一步[中取得的資料集測試`exportToThirdParty`行銷動作。 ](#datasets)請求裝載是包含每個資料集ID的陣列。
 
