@@ -1,22 +1,22 @@
 ---
-keywords: Experience Platform;home;popular topics;query service;Query service;experienceevent queries;experienceeventquery;Experience Event查詢；
+keywords: Experience Platform; home；熱門主題；查詢服務；查詢服務；體驗事件查詢；體驗事件查詢；體驗事件查詢；
 solution: Experience Platform
 title: 體驗事件的範例查詢
-topic: queries
+topic-legacy: queries
 type: Tutorial
-description: 以下檔案提供Adobe Experience Platform查詢服務中與Experience Events相關的查詢範例。
+description: 以下檔案提供Adobe Experience Platform查詢服務中涉及體驗事件的查詢範例。
+exl-id: e6793a03-e474-4ae4-acb2-a052ff1c6d68
 translation-type: tm+mt
-source-git-commit: 97dc0b5fb44f5345fd89f3f56bd7861668da9a6e
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '320'
 ht-degree: 0%
 
 ---
 
-
 # [!DNL Experience Events]的查詢範例
 
-除了標準SQL查詢外，Adobe Experience Platform [!DNL Query Service]還支援使用[!DNL Experience Events]編寫查詢。 「體驗事件」由「體驗資料模型」(XDM)ExperienceEvent類別表示，當使用者與網站或服務互動時，該類別會擷取系統的不可變和非匯總快照，因此可用於時域分析。
+除了標準SQL查詢外，Adobe Experience Platform[!DNL Query Service]還支援使用[!DNL Experience Events]編寫查詢。 「體驗事件」由「體驗資料模型」(XDM)ExperienceEvent類別表示，當使用者與網站或服務互動時，該類別會擷取系統的不可變和非匯總快照，因此可用於時域分析。
 
 有關XDM和[!DNL Experience Events]的更多資訊，請參閱[[!DNL XDM System] overview](../../xdm/home.md)。 透過將[!DNL Query Service]與[!DNL Experience Events]結合，您可以有效追蹤使用者的行為趨勢。 以下文檔提供了涉及[!DNL Experience Events]的查詢示例。
 
@@ -189,5 +189,4 @@ ORDER BY pageViews DESC;
 
 ## 後續步驟
 
-有關使用Adobe定義函式(ADF)的範例查詢的詳細資訊，請參閱Adobe定義函式指南。 有關查詢執行的一般指南，請閱讀[指南中查詢服務](./writing-queries.md)中的查詢執行。
-
+有關使用Adobe定義函式(ADF)的示例查詢的詳細資訊，請閱讀Adobe定義函式指南。 有關查詢執行的一般指南，請閱讀[指南中查詢服務](./writing-queries.md)中的查詢執行。
