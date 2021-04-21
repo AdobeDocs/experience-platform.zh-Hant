@@ -2,13 +2,13 @@
 keywords: Experience Platform;home；熱門主題；Marketo源連接器；Marketo連接器；Marketo源；Marketo
 solution: Experience Platform
 title: 在UI中建立Marketo Engage來源連接器
-topic: 概述
+topic-legacy: overview
 type: Tutorial
 description: 本教學課程提供在UI中建立Marketo Engage來源連接器以將B2B資料匯入Adobe Experience Platform的步驟。
 translation-type: tm+mt
-source-git-commit: 5d4d88f88ab184c679a4cf425283a71983c929f3
+source-git-commit: f12baaa9d4b37f1101792a4ae479b5a62893eb68
 workflow-type: tm+mt
-source-wordcount: '1318'
+source-wordcount: '1317'
 ht-degree: 0%
 
 ---
