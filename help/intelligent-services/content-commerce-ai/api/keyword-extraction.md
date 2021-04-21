@@ -1,17 +1,17 @@
 ---
-keywords: 體驗平台；快速入門；內容ai；商務ai；內容與商務ai；關鍵字提取；關鍵字提取
+keywords: Experience Platform；入門；內容ai；商務ai；內容與商務ai；關鍵字提取；關鍵字提取
 solution: Experience Platform, Intelligent Services
 title: 內容與商務AI API中的關鍵字擷取
-topic: Developer guide
+topic-legacy: Developer guide
 description: 當給定文字檔案時，關鍵字擷取服務會自動擷取最能說明檔案主題的關鍵字或關鍵片語。 為了提取關鍵字，採用了命名實體識別(NER)和無監督關鍵字提取算法的組合。
+exl-id: 56a2da96-5056-4702-9110-a1dfec56f0dc
 translation-type: tm+mt
-source-git-commit: d10c00694b0a3b2a9da693bd59615b533cfae468
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '1082'
 ht-degree: 3%
 
 ---
-
 
 # 關鍵字擷取
 
@@ -47,7 +47,7 @@ ht-degree: 3%
 POST /services/v1/predict
 ```
 
-**請求**
+**要求**
 
 以下請求根據在裝載中提供的輸入參數從文檔中提取關鍵字。
 
@@ -238,7 +238,7 @@ curl -w'\n' -i -X POST https://sensei.adobe.io/services/v1/predict \
 POST /services/v1/predict
 ```
 
-**請求**
+**要求**
 
 下列請求會根據裝載中提供的輸入參數，從PDF檔案擷取關鍵字。
 
@@ -359,7 +359,7 @@ curl -w'\n' -i -X POST https://sensei.adobe.io/services/v1/predict \
 }
 ```
 
-如需詳細資訊，以及使用PDF擷取的範例，其中包含如何設定、部署及與AEM雲端服務整合的指示。 請造訪[CCAI PDF擷取工作者github儲存庫](https://github.com/adobe/asset-compute-example-workers/tree/master/projects/worker-ccai-pdfextract)。
+如需詳細資訊，以及使用PDF擷取的範例，其中包含如何設定、部署以及與雲端服務整AEM合的指示。 請造訪[CCAI PDF擷取工作者github儲存庫](https://github.com/adobe/asset-compute-example-workers/tree/master/projects/worker-ccai-pdfextract)。
 
 ## 附錄 {#appendix}
 
