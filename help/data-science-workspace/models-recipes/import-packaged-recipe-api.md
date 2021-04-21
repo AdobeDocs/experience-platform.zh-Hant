@@ -1,24 +1,24 @@
 ---
-keywords: Experience Platform；匯入封裝配方；資料科學工作區；熱門主題；配方；api;sensei機器學習；建立引擎
+keywords: Experience Platform；導入打包的配方；資料科學工作區；熱門主題；配方；api;sensei機器學習；建立引擎
 solution: Experience Platform
 title: 使用Sensei Machine Learning API匯入封裝配方
-topic: tutorial
+topic-legacy: tutorial
 type: Tutorial
-description: '本教學課程使用Sensei Machine Learning API來建立引擎，在使用者介面中也稱為「配方」。 '
+description: 本教學課程使用Sensei Machine Learning API來建立引擎，在使用者介面中也稱為「配方」。
+exl-id: c8dde30b-5234-448d-a597-f1c8d32f23d4
 translation-type: tm+mt
-source-git-commit: f6cfd691ed772339c888ac34fcbd535360baa116
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '1007'
 ht-degree: 2%
 
 ---
 
-
 # 使用Sensei Machine Learning API匯入封裝的配方
 
 本教學課程使用[[!DNL Sensei Machine Learning API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml)來建立[Engine](../api/engines.md)，也稱為使用者介面中的方式。
 
-開始使用之前，請務必注意，Adobe Experience Platform [!DNL Data Science Workspace]使用不同的術語來參照API和UI中的類似元素。 本教學課程中使用API詞語，下表概述相關詞語：
+開始使用之前，請務必注意，Adobe Experience Platform[!DNL Data Science Workspace]使用不同的術語來參照API和UI中的類似元素。 本教學課程中使用API詞語，下表概述相關詞語：
 
 | UI詞語 | API期限 |
 | ---- | ---- |
@@ -37,15 +37,15 @@ ht-degree: 2%
 
 - `{DOCKER_URL}`:智慧服務的Docker影像的URL位址。
 
-本教學課程要求您完成[ Authentication to Adobe Experience Platform tutorial](https://www.adobe.com/go/platform-api-authentication-en)，才能成功呼叫[!DNL Platform] API。 完成驗證教學課程後，所有[!DNL Experience Platform] API呼叫中每個所需標題的值都會顯示在下面：
+本教學課程要求您完成[Adobe Experience Platform教學課程](https://www.adobe.com/go/platform-api-authentication-en)的驗證，才能成功呼叫[!DNL Platform] API。 完成驗證教學課程後，所有[!DNL Experience Platform] API呼叫中每個所需標題的值都會顯示在下面：
 
 - `{ACCESS_TOKEN}`:驗證後提供的您特定的載體Token值。
 - `{IMS_ORG}`:您的IMS組織認證可在您獨特的Adobe Experience Platform整合中找到。
-- `{API_KEY}`:您獨特的Adobe Experience Platform整合中提供您的特定API金鑰價值。
+- `{API_KEY}`:您在獨特的Adobe Experience Platform整合中找到的特定API金鑰值。
 
 ## 建立引擎
 
-對/engines端點發出POST請求可以建立引擎。 所建立的引擎是根據封裝的方式檔案的格式來設定，該檔案必須包含在API要求中。
+可以通過向/engines端點發出POST請求來建立引擎。 所建立的引擎是根據封裝的方式檔案的格式來設定，該檔案必須包含在API要求中。
 
 ### 使用Docker URL {#create-an-engine-with-a-docker-url}建立引擎
 
@@ -172,7 +172,7 @@ curl -X POST \
 
 **回應**
 
-成功的回應會傳回包含新建立之引擎之詳細資料（包括其唯一識別碼）的裝載。 `id`以下是[!DNL Python]引擎的範例回應。 `executionType`和`type`鍵根據提供的開機自檢而改變。
+成功的回應會傳回包含新建立之引擎之詳細資料（包括其唯一識別碼）的裝載。 `id`以下是[!DNL Python]引擎的範例回應。 `executionType`和`type`鍵會根據提供的POST而改變。
 
 ```json
 {
