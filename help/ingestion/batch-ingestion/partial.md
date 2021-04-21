@@ -2,26 +2,26 @@
 keywords: Experience Platform; home；熱門主題；批處理；批處理；部分處理；部分處理；檢索錯誤；檢索錯誤；部分批處理；部分處理；部分處理；攝取；
 solution: Experience Platform
 title: 部分批提取概述
-topic: overview
+topic-legacy: overview
 description: 本檔案提供管理部分批次擷取的教學課程。
+exl-id: 25a34da6-5b7c-4747-8ebd-52ba516b9dc3
 translation-type: tm+mt
-source-git-commit: 089a4d517476b614521d1db4718966e3ebb13064
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '945'
+source-wordcount: '886'
 ht-degree: 0%
 
 ---
 
-
 # 部分批次擷取
 
-部分批次擷取是指能夠擷取包含錯誤的資料，最高可達到特定臨界值。 透過這項功能，使用者可以成功將所有正確的資料內嵌至Adobe Experience Platform，而其所有不正確的資料都會個別批次處理，以及為何無效的詳細資訊。
+部分批次擷取是指能夠擷取包含錯誤的資料，最高可達到特定臨界值。 有了這項功能，使用者就可以在將所有正確資料單獨批次處理時，成功將其所有正確資料收錄至Adobe Experience Platform，並詳細瞭解其無效原因。
 
 本檔案提供管理部分批次擷取的教學課程。
 
 ## 快速入門
 
-本教學課程需要對部分批次擷取所涉及的各種Adobe Experience Platform服務有相關的使用知識。 在開始本教學課程之前，請先閱讀下列服務的檔案：
+本教學課程需要對涉及部分批次提取的各種Adobe Experience Platform服務有工作知識。 在開始本教學課程之前，請先閱讀下列服務的檔案：
 
 - [批次擷取](./overview.md):從資料檔 [!DNL Platform] 案（例如CSV和Parce）擷取和儲存資料的方法。
 - [[!DNL Experience Data Model (XDM)]](../../xdm/home.md):組織客戶體驗資 [!DNL Platform] 料的標準化架構。
@@ -56,7 +56,7 @@ ht-degree: 0%
 
 您可以建立啟用部分擷取的新批次。
 
-若要建立新批次，請依照[批次擷取開發人員指南](./api-overview.md)中的步驟進行。 在您達到&#x200B;**[!UICONTROL 建立批次]**&#x200B;步驟後，在請求內文中新增下列欄位：
+若要建立新批次，請依照[批次擷取開發人員指南](./api-overview.md)中的步驟進行。 到達&#x200B;**[!UICONTROL Create batch]**&#x200B;步驟後，請在請求正文中添加以下欄位：
 
 ```json
 {
@@ -77,21 +77,21 @@ ht-degree: 0%
 >
 >本節說明如何使用UI啟用批處理以進行部分批處理。 如果您已使用API啟用批次以擷取部分批次，則可跳至下一節。
 
-若要透過[!DNL Platform] UI啟用批次以進行部分擷取，您可以透過來源連線建立新批次、在現有資料集中建立新批次，或透過「[!UICONTROL 將CSV對應至XDM流程]」建立新批次。
+若要透過[!DNL Platform] UI啟用批次以進行部分擷取，您可以透過來源連線建立新批次、在現有資料集中建立新批次，或透過「[!UICONTROL Map CSV to XDM flow]」建立新批次。
 
 ### 建立新源連接{#new-source}
 
-要建立新源連接，請遵循[源概述](../../sources/home.md)中列出的步驟。 到達&#x200B;**[!UICONTROL Dataflow detail]**&#x200B;步驟後，請注意&#x200B;**[!UICONTROL Partial ingestion]**&#x200B;和&#x200B;**[!UICONTROL Error diagnostics]**&#x200B;欄位。
+要建立新源連接，請遵循[源概述](../../sources/home.md)中列出的步驟。 到達&#x200B;**[!UICONTROL Dataflow detail]**&#x200B;步驟後，記下&#x200B;**[!UICONTROL Partial ingestion]**&#x200B;和&#x200B;**[!UICONTROL Error diagnostics]**&#x200B;欄位。
 
 ![](../images/batch-ingestion/partial-ingestion/configure-batch.png)
 
-**[!UICONTROL 部分擷取]**&#x200B;切換可讓您啟用或停用部分批次擷取的使用。
+**[!UICONTROL Partial ingestion]**&#x200B;切換可讓您啟用或停用部分批次擷取的使用。
 
-**[!UICONTROL 錯誤診斷]**&#x200B;僅在&#x200B;**[!UICONTROL 部分攝取]**&#x200B;關閉時顯示。 此功能允許[!DNL Platform]生成有關所接收批處理的詳細錯誤消息。 如果&#x200B;**[!UICONTROL 部分擷取]**&#x200B;切換開啟，則會自動執行增強的錯誤診斷。
+只有當&#x200B;**[!UICONTROL Partial ingestion]**&#x200B;關閉時，才會顯示&#x200B;**[!UICONTROL Error diagnostics]**&#x200B;切換。 此功能允許[!DNL Platform]生成有關所接收批處理的詳細錯誤消息。 如果&#x200B;**[!UICONTROL Partial ingestion]**&#x200B;切換已開啟，則會自動強制執行增強的錯誤診斷。
 
 ![](../images/batch-ingestion/partial-ingestion/configure-batch-partial-ingestion-focus.png)
 
-**[!UICONTROL 錯誤閾值]**&#x200B;允許您在整個批失敗之前設定可接受錯誤的百分比。 依預設，此值會設為5%。
+**[!UICONTROL Error threshold]**&#x200B;允許您在整個批失敗之前設定可接受錯誤的百分比。 依預設，此值會設為5%。
 
 ### 使用現有資料集{#existing-dataset}
 
@@ -99,29 +99,29 @@ ht-degree: 0%
 
 ![](../images/batch-ingestion/partial-ingestion/monitor-dataset.png)
 
-**[!UICONTROL 部分擷取]**&#x200B;切換可讓您啟用或停用部分批次擷取的使用。
+**[!UICONTROL Partial ingestion]**&#x200B;切換可讓您啟用或停用部分批次擷取的使用。
 
-**[!UICONTROL 錯誤診斷]**&#x200B;僅在&#x200B;**[!UICONTROL 部分攝取]**&#x200B;關閉時顯示。 此功能允許[!DNL Platform]生成有關所接收批處理的詳細錯誤消息。 如果&#x200B;**[!UICONTROL 部分擷取]**&#x200B;切換開啟，則會自動執行增強的錯誤診斷。
+只有當&#x200B;**[!UICONTROL Partial ingestion]**&#x200B;關閉時，才會顯示&#x200B;**[!UICONTROL Error diagnostics]**&#x200B;切換。 此功能允許[!DNL Platform]生成有關所接收批處理的詳細錯誤消息。 如果&#x200B;**[!UICONTROL Partial ingestion]**&#x200B;切換已開啟，則會自動強制執行增強的錯誤診斷。
 
 ![](../images/batch-ingestion/partial-ingestion/monitor-dataset-partial-ingestion-focus.png)
 
-**[!UICONTROL 錯誤閾值]**&#x200B;允許您在整個批失敗之前設定可接受錯誤的百分比。 依預設，此值會設為5%。
+**[!UICONTROL Error threshold]**&#x200B;允許您在整個批失敗之前設定可接受錯誤的百分比。 依預設，此值會設為5%。
 
 現在，您可以使用&#x200B;**新增資料**&#x200B;按鈕來上傳資料，並會使用部分擷取來擷取資料。
 
-### 使用&quot;[!UICONTROL 將CSV映射到XDM模式]&quot;流{#map-flow}
+### 使用&quot;[!UICONTROL Map CSV to XDM schema]&quot;流{#map-flow}
 
-要使用「[!UICONTROL 將CSV映射到XDM架構]」流，請遵循[將CSV檔案教程](../tutorials/map-a-csv-file.md)中列出的步驟。 在到達&#x200B;**[!UICONTROL 添加資料]**&#x200B;步驟後，記下&#x200B;**[!UICONTROL 部分提取]**&#x200B;和&#x200B;**[!UICONTROL 錯誤診斷]**&#x200B;欄位。
+要使用「[!UICONTROL Map CSV to XDM schema]」流，請遵循[映射CSV檔案教程](../tutorials/map-a-csv-file.md)中列出的步驟。 到達&#x200B;**[!UICONTROL Add data]**&#x200B;步驟後，記下&#x200B;**[!UICONTROL Partial ingestion]**&#x200B;和&#x200B;**[!UICONTROL Error diagnostics]**&#x200B;欄位。
 
 ![](../images/batch-ingestion/partial-ingestion/xdm-csv-workflow.png)
 
-**[!UICONTROL 部分擷取]**&#x200B;切換可讓您啟用或停用部分批次擷取的使用。
+**[!UICONTROL Partial ingestion]**&#x200B;切換可讓您啟用或停用部分批次擷取的使用。
 
-**[!UICONTROL 錯誤診斷]**&#x200B;僅在&#x200B;**[!UICONTROL 部分攝取]**&#x200B;關閉時顯示。 此功能允許[!DNL Platform]生成有關所接收批處理的詳細錯誤消息。 如果&#x200B;**[!UICONTROL 部分擷取]**&#x200B;切換開啟，則會自動執行增強的錯誤診斷。
+只有當&#x200B;**[!UICONTROL Partial ingestion]**&#x200B;關閉時，才會顯示&#x200B;**[!UICONTROL Error diagnostics]**&#x200B;切換。 此功能允許[!DNL Platform]生成有關所接收批處理的詳細錯誤消息。 如果&#x200B;**[!UICONTROL Partial ingestion]**&#x200B;切換已開啟，則會自動強制執行增強的錯誤診斷。
 
 ![](../images/batch-ingestion/partial-ingestion/xdm-csv-workflow-partial-ingestion-focus.png)
 
-**[!UICONTROL 錯誤]** 閾值允許您在整個批失敗之前設定可接受錯誤的百分比。依預設，此值會設為5%。
+**[!UICONTROL Error threshold]** 允許您在整個批失敗之前設定可接受錯誤的百分比。依預設，此值會設為5%。
 
 ## 下一步 {#next-steps}
 
