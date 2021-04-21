@@ -2,16 +2,16 @@
 keywords: Experience Platform；首頁；熱門主題
 solution: Experience Platform
 title: Adobe Experience Platform辭彙表
-topic: getting started
+topic-legacy: getting started
 description: Experience Platform 重要術語表。
+exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
 translation-type: tm+mt
-source-git-commit: 5575d5e45bddcc007dcf78720cd7a7e20475f78c
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '7139'
+source-wordcount: '7131'
 ht-degree: 1%
 
 ---
-
 
 # Adobe Experience Platform 術語 {#adobe-experience-platform-glossary}
 
@@ -57,7 +57,7 @@ ht-degree: 1%
 
 **屬性**:屬性是指定的特徵，表示配置檔案。
 
-**屬性合併**:使用即時客戶描述檔API定義合併原則時，物件會 `attributeMerge` 指出在發生資料衝突時，合併原則將依何種方式來排列描述檔屬性的優先順序。它等同於在平台UI中定義合併策略時選擇[!UICONTROL 合併方法]。
+**屬性合併**:使用即時客戶描述檔API定義合併原則時，物件會 `attributeMerge` 指出在發生資料衝突時，合併原則將依何種方式來排列描述檔屬性的優先順序。它等同於在平台UI中定義合併策略時選擇[!UICONTROL Merge method]。
 
 **Attribution AI**: [!DNL Attribution AI] 是由Adobe Sensei提供的智慧型服務，可在整個客戶生命週期中提供演算法多通道歸因功能。
 
@@ -263,7 +263,7 @@ ht-degree: 1%
 
 **身分(「I」)標籤**:身分(「I」)資料使用標籤用於分類可識別或聯絡特定人員的資料。
 
-**身分圖**:身分圖表是個別客戶所存在、銜接與連結身分之間關係的地圖。每個識別圖都會隨客戶活動即時更新。 資料中身分關係的共同結構由[!UICONTROL 私用圖表]表示，此圖表是每個個別身分圖的結構藍圖。
+**身分圖**:身分圖表是個別客戶所存在、銜接與連結身分之間關係的地圖。每個識別圖都會隨客戶活動即時更新。 資料中身分關係的共同結構由[!UICONTROL Private Graph]表示，是每個個別身分圖的結構藍圖。
 
 **身分命名空間**:身分命名空間會定義識別碼的上下文，例如電子郵件地址或CRM ID。
 
@@ -349,7 +349,7 @@ ht-degree: 1%
 
 ## P
 
-**部分擷取**:部分擷取可擷取指定錯誤臨界值內之批次資料的有效記錄。在[!UICONTROL Monitoring]或[!UICONTROL Sources]資料流運行概述中，可以下載或訪問失敗記錄的錯誤診斷。
+**部分擷取**:部分擷取可擷取指定錯誤臨界值內之批次資料的有效記錄。在[!UICONTROL Monitoring]或[!UICONTROL Sources]資料流運行概述中可下載或訪問失敗記錄的錯誤診斷。
 
 **拼花檔案**:Parce檔案是具有複雜嵌套資料結構的柱形儲存檔案格式。新增資料以填入結構資料集時，需要使用拼花檔案。
 
