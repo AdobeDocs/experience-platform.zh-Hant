@@ -2,20 +2,20 @@
 keywords: Experience Platform; home；熱門主題；資料提取；batch;Batch；啟用資料集；批處理提取概述；概述；批處理提取概述；
 solution: Experience Platform
 title: 批次擷取概觀
-topic: overview
-description: Adobe Experience Platform Data Ingestion API可讓您將資料以批次檔案的形式內嵌至Platform。 所吸收的資料可以是CRM系統中平面檔案（例如Parce檔案）的描述檔資料，或是符合Experience Data Model(XDM)註冊表中已知架構的資料。
+topic-legacy: overview
+description: Adobe Experience Platform資料擷取API可讓您將資料以批次檔案的形式，收錄到平台中。 所吸收的資料可以是CRM系統中平面檔案（例如Parce檔案）的描述檔資料，或是符合Experience Data Model(XDM)註冊表中已知架構的資料。
+exl-id: ffd1dc2d-eff8-4ef7-a26b-f78988f050ef
 translation-type: tm+mt
-source-git-commit: a489ab248793a063295578943ad600d8eacab6a2
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '1222'
 ht-degree: 2%
 
 ---
 
-
 # 批次擷取概觀
 
-Adobe Experience Platform Data Ingestion API可讓您將資料以批次檔案的形式內嵌至Platform。 所吸收的資料可以是CRM系統中平面檔案（例如Parce檔案）的描述檔資料，或符合[!DNL Experience Data Model](XDM)註冊表中已知架構的資料。
+Adobe Experience Platform資料擷取API可讓您將資料以批次檔案的形式，收錄到平台中。 所吸收的資料可以是CRM系統中平面檔案（例如Parce檔案）的描述檔資料，或符合[!DNL Experience Data Model](XDM)註冊表中已知架構的資料。
 
 [資料擷取API參考](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml)提供這些API呼叫的其他資訊。
 
@@ -78,7 +78,7 @@ Adobe Experience Platform Data Ingestion API可讓您將資料以批次檔案的
 POST /batches
 ```
 
-**請求**
+**要求**
 
 ```shell
 curl -X POST "https://platform.adobe.io/data/foundation/import/batches" \
@@ -147,7 +147,7 @@ PUT /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 | `{DATASET_ID}` | 上傳檔案的資料集ID。 |
 | `{FILE_NAME}` | 資料集中會看到的檔案名稱。 |
 
-**請求**
+**要求**
 
 ```SHELL
 curl -X PUT "https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}.parquet" \
@@ -183,7 +183,7 @@ POST /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}?action=initiali
 | `{DATASET_ID}` | 收錄檔案的資料集ID。 |
 | `{FILE_NAME}` | 資料集中會看到的檔案名稱。 |
 
-**請求**
+**要求**
 
 ```SHELL
 curl -X POST "https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/datasets/{DATASET_ID}/files/part1=a/part2=b/{FILE_NAME}.parquet?action=initialize" \
@@ -201,7 +201,7 @@ curl -X POST "https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID
 
 ### 大型檔案上傳——上傳後續部件
 
-建立檔案後，可以通過重複的PATCH請求來上載所有後續的塊，該請求對檔案的每個部分各一個。
+在建立檔案後，可以透過重複的PATCH要求來上傳所有後續區塊，對檔案的每個區段各一個。
 
 ```http
 PATCH /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
@@ -213,7 +213,7 @@ PATCH /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 | `{DATASET_ID}` | 上傳檔案至的資料集ID。 |
 | `{FILE_NAME}` | 資料集中會看到的檔案名稱。 |
 
-**請求**
+**要求**
 
 ```SHELL
 curl -X PATCH "https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/datasets/{DATASET_ID}/files/part1=a/part2=b/{FILE_NAME}.parquet" \
@@ -240,7 +240,7 @@ curl -X PATCH "https://platform.adobe.io/data/foundation/import/batches/{BATCH_I
 
 將所有檔案上傳到批後，可以向批發出完成信號。 通過執行此操作，將為已完成的檔案建立[!DNL Catalog] DataSetFile條目，並與上面生成的批關聯。 然後，[!DNL Catalog]批次會標示為成功，這會觸發下游流量以擷取可用資料。
 
-**請求**
+**要求**
 
 ```http
 POST /batches/{BATCH_ID}?action=COMPLETE
@@ -278,7 +278,7 @@ GET /batch/{BATCH_ID}
 | -------- | ----------- |
 | `{BATCH_ID}` | 正在檢查的批的ID。 |
 
-**請求**
+**要求**
 
 ```shell
 curl GET "https://platform.adobe.io/data/foundation/catalog/batch/{BATCH_ID}" \
