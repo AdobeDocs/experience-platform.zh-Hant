@@ -2,16 +2,16 @@
 keywords: Experience Platform;home；熱門主題；FTP;ftp;
 solution: Experience Platform
 title: FTP來源連接器概述
-topic: overview
+topic-legacy: overview
 description: 瞭解如何使用API或使用者介面將FTP伺服器連線至Adobe Experience Platform。
+exl-id: a6186fad-8a7b-4103-80c7-a522ff69fe9e
 translation-type: tm+mt
-source-git-commit: 7fc99214272d2ce743b3666826c66f5d65e4d2ca
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '448'
+source-wordcount: '447'
 ht-degree: 0%
 
 ---
-
 
 # （測試版）FTP連接器
 
