@@ -3,12 +3,12 @@ keywords: Experience Platform;home；熱門主題；api;API;XDM;XDM;XDM系統；
 solution: Experience Platform
 title: 工會API端點
 description: 架構註冊表API中的/union端點可讓您以程式設計方式管理體驗應用程式中的XDM結合架構。
-topic: developer guide
+topic-legacy: developer guide
 exl-id: d0ece235-72e8-49d9-856b-5dba44e16ee7
 translation-type: tm+mt
-source-git-commit: 610ce5c6dca5e7375b941e7d6f550382da10ca27
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '902'
+source-wordcount: '900'
 ht-degree: 1%
 
 ---
@@ -47,7 +47,7 @@ ht-degree: 1%
 GET /tenant/unions
 ```
 
-**請求**
+**要求**
 
 ```SHELL
 curl -X GET \
@@ -108,7 +108,7 @@ GET /tenant/schemas/{UNION_ID}
 | --- | --- |
 | `{UNION_ID}` | 您要查找的聯合的URL編碼`$id` URI。 聯合結構描述的URI會附加&quot;__union&quot;。 |
 
-**請求**
+**要求**
 
 ```SHELL
 curl -X GET \
@@ -192,7 +192,7 @@ GET /tenant/schemas?property=meta:immutableTags==union&property=meta:class=={CLA
 | --- | --- |
 | `{CLASS_ID}` | 要列出其聯合啟用方案的類的`$id`。 |
 
-**請求**
+**要求**
 
 以下請求將檢索屬於[!DNL XDM Individual Profile]類聯合的所有方案的清單。
 
