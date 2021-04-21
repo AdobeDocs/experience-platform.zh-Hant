@@ -1,21 +1,21 @@
 ---
-keywords: Experience Platform；疑難排解；Data Science Workspace；熱門主題
+keywords: Experience Platform；疑難排解；資料科學工作區；熱門主題
 solution: Experience Platform
 title: Data Science Workspace疑難排解指南
-topic: Troubleshooting
-description: 本檔案提供有關Adobe Experience Platform Data Science Workspace常見問題的解答。
+topic-legacy: Troubleshooting
+description: 本檔案提供有關Adobe Experience Platform資料科學工作區的常見問題解答。
+exl-id: fbc5efdc-f166-4000-bde2-4aa4b0318b38
 translation-type: tm+mt
-source-git-commit: 10ccccf72ff7a2fd726066332b9771dff1929af6
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '925'
 ht-degree: 0%
 
 ---
 
-
 # [!DNL Data Science Workspace] 疑難排解指南
 
-本檔案提供有關Adobe Experience Platform [!DNL Data Science Workspace]的常見問題解答。 有關一般[!DNL Platform] API的問題和疑難排解，請參閱[ Adobe Experience Platform API疑難排解指南](../landing/troubleshooting.md)。
+本檔案提供有關Adobe Experience Platform[!DNL Data Science Workspace]的常見問題解答。 有關[!DNL Platform] API的一般問題和疑難排解，請參閱[Adobe Experience PlatformAPI疑難排解指南](../landing/troubleshooting.md)。
 
 ## [!DNL JupyterLab] 環境未載入  [!DNL Google Chrome]
 
@@ -23,7 +23,7 @@ ht-degree: 0%
 >
 >此問題已解決，但仍可能存在於Google Chrome 80.x瀏覽器中。 請確定您的Chrome瀏覽器是最新的。
 
-在[!DNL Google Chrome]瀏覽器版本80.x中，所有協力廠商Cookie都預設會遭到封鎖。 此政策可防止[!DNL JupyterLab]在Adobe Experience Platform中載入。
+在[!DNL Google Chrome]瀏覽器版本80.x中，所有協力廠商Cookie都預設會遭到封鎖。 此策略可防止[!DNL JupyterLab]在Adobe Experience Platform內載入。
 
 要解決此問題，請使用以下步驟：
 
@@ -53,7 +53,7 @@ ht-degree: 0%
 
 ## 為什麼我無法在Safari中存取[!DNL JupyterLab]?
 
-Safari預設會在Safari &lt; 12中停用協力廠商Cookie。 由於您的[!DNL Jupyter]虛擬機器實例位於與其父幀不同的域上，因此Adobe Experience Platform當前要求啟用第三方Cookie。 請啟用協力廠商Cookie或切換至不同的瀏覽器，例如[!DNL Google Chrome]。
+Safari預設會在Safari &lt; 12中停用協力廠商Cookie。 由於您的[!DNL Jupyter]虛擬機實例位於與其父幀不同的域上，因此Adobe Experience Platform當前要求啟用第三方Cookie。 請啟用協力廠商Cookie或切換至不同的瀏覽器，例如[!DNL Google Chrome]。
 
 對於Safari 12，您必須將使用者代理切換為「[!DNL Chrome]」或「[!DNL Firefox]」。 若要切換使用者代理，請先開啟&#x200B;*Safari*&#x200B;功能表，然後選取&#x200B;**偏好設定**。 出現首選項窗口。
 
@@ -89,7 +89,7 @@ Safari預設會在Safari &lt; 12中停用協力廠商Cookie。 由於您的[!DNL
 
 ## 我是否可安裝自訂PySpark程式庫？
 
-很遺憾，您無法為PySpark內核安裝其他庫。 不過，您可以聯絡您的Adobe客戶服務代表，以便為您安裝自訂PySpark程式庫。
+很遺憾，您無法為PySpark內核安裝其他庫。 不過，您可以聯絡Adobe客戶服務代表，以便為您安裝自訂PySpark程式庫。
 
 如需預先安裝的PySpark程式庫清單，請參閱JupyterLab使用指南的[附錄一節。](./jupyterlab/overview.md#supported-libraries)
 
