@@ -2,12 +2,12 @@
 keywords: Experience Platform；描述檔；即時客戶描述檔；疑難排解；API；同意；同意；偏好；偏好；privacyOptOuts;marketingPreferences;optOutType;basisOfProcessing；同意；同意
 title: 同意與偏好資料類型
 description: 「同意隱私權、個人化和行銷偏好」資料類型旨在支援收集「同意管理平台」(CMP)和其他來源自您資料作業產生的客戶權限和偏好。
-topic: guide
+topic-legacy: guide
 exl-id: cdcc7b04-eeb9-40d3-b0b5-f736a5472621
 translation-type: tm+mt
-source-git-commit: 4e9395b4551842cf75b0d1a4ec36c85930c42da5
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '1838'
+source-wordcount: '1837'
 ht-degree: 1%
 
 ---
