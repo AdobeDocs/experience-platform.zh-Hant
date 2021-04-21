@@ -2,17 +2,17 @@
 keywords: Experience Platform;home；熱門主題；策略實施；自動實施；基於API的實施；資料治理；測試
 solution: Experience Platform
 title: 使用原則服務API強制使用資料原則
-topic: guide
+topic-legacy: guide
 type: Tutorial
 description: 一旦您為資料建立了資料使用標籤，並針對這些標籤建立了行銷動作的使用原則，您就可以使用原則服務API來評估在資料集或任意標籤群組上執行的行銷動作是否構成原則違規。 然後，您可以設定自己的內部通訊協定，以根據API回應來處理原則違規。
+exl-id: 093db807-c49d-4086-a676-1426426b43fd
 translation-type: tm+mt
-source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '1006'
 ht-degree: 1%
 
 ---
-
 
 # 使用[!DNL Policy Service] API強制執行資料使用原則
 
@@ -51,7 +51,7 @@ GET /marketingActions/custom/{MARKETING_ACTION_NAME}/constraints?duleLabels={LAB
 | `{MARKETING_ACTION_NAME}` | 與您所評估的資料使用政策相關聯的行銷動作名稱。 |
 | `{LABEL_1}` | 用於測試行銷動作的資料使用標籤。 必須至少提供一個標籤。 提供多個標籤時，必須以逗號分隔。 |
 
-**請求**
+**要求**
 
 下列請求會針對標籤`C1`和`C3`測試`exportToThirdParty`行銷動作。 由於您在本教學課程中先前建立的資料使用原則將`C1`標籤定義為其原則運算式中的`deny`條件之一，因此行銷動作應觸發原則違規。
 
@@ -134,7 +134,7 @@ curl -X GET \
 
 ## 使用資料集進行評估
 
-您可以針對可收集標籤的一或多個資料集測試行銷動作，以評估資料使用策略。 若要這麼做，請向`/marketingActions/core/{MARKETING_ACTION_NAME}/constraints`提出POST要求，並在要求內文中提供資料集ID，如下例所示。
+您可以針對一或多個可收集標籤的資料集測試行銷動作，以評估資料使用策略。 若要這麼做，請向`/marketingActions/core/{MARKETING_ACTION_NAME}/constraints`提出POST請求，並在請求內文中提供資料集ID，如下例所示。
 
 **API格式**
 
@@ -147,7 +147,7 @@ POST /marketingActions/custom/{MARKETING_ACTION_NAME}/constraints
 | --- | --- |
 | `{MARKETING_ACTION_NAME}` | 與您所評估之原則相關聯的行銷動作名稱。 |
 
-**請求**
+**要求**
 
 下列請求會針對三個不同的資料集測試`exportToThirdParty`行銷動作。 資料集是由裝載中提供之陣列中的類型和ID所參考。
 
