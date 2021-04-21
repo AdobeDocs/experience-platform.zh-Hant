@@ -1,35 +1,35 @@
 ---
-keywords: Experience Platform；訓練與評估；Data Science Workspace；熱門主題；Sensei Machine Learning API
+keywords: Experience Platform；訓練和評估；資料科學工作區；熱門主題；Sensei機器學習API
 solution: Experience Platform
 title: 使用Sensei機器學習API來訓練和評估模型
-topic: tutorial
+topic-legacy: tutorial
 type: Tutorial
 description: 本教學課程將示範如何使用Sensei Machine Learning API呼叫建立、訓練和評估模型。
+exl-id: 8107221f-184c-426c-a33e-0ef55ed7796e
 translation-type: tm+mt
-source-git-commit: f6cfd691ed772339c888ac34fcbd535360baa116
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '1237'
 ht-degree: 1%
 
 ---
 
-
 # 使用[!DNL Sensei Machine Learning] API來訓練和評估模型
 
 
 本教學課程將示範如何使用API呼叫建立、訓練和評估模型。 請參閱[本檔案](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml)以取得API檔案的詳細清單。
 
-## 必要條件
+## 先決條件
 
 請遵循[使用API](./import-packaged-recipe-api.md)匯入封裝配方以建立引擎，此引擎是使用API來訓練和評估模型所需的。
 
-請依照[Experience Platform API驗證教學課程](https://www.adobe.com/go/platform-api-authentication-en)開始進行API呼叫。
+請依照[Experience PlatformAPI驗證教學課程](https://www.adobe.com/go/platform-api-authentication-en)開始進行API呼叫。
 
 在教學課程中，您現在應該有下列值：
 
 - `{ACCESS_TOKEN}`:驗證後提供的您特定的載體Token值。
 - `{IMS_ORG}`:您的IMS組織認證可在您獨特的Adobe Experience Platform整合中找到。
-- `{API_KEY}`:您獨特的Adobe Experience Platform整合中提供您的特定API金鑰價值。
+- `{API_KEY}`:您在獨特的Adobe Experience Platform整合中找到的特定API金鑰值。
 
 - 連結至智慧型服務的Docker影像
 
@@ -56,7 +56,7 @@ ht-degree: 1%
 
 您可使用下列請求來建立MLInstance。 您將使用從[使用API](./import-packaged-recipe-ui.md)教學課程匯入封裝配方建立引擎時傳回的`{ENGINE_ID}`。
 
-**請求**
+**要求**
 
 ```SHELL
 curl -X POST \
@@ -70,7 +70,7 @@ curl -X POST \
 
 `{ACCESS_TOKEN}`:驗證後提供的您特定的載體Token值。\
 `{IMS_ORG}`:您的IMS組織認證可在您獨特的Adobe Experience Platform整合中找到。\
-`{API_KEY}`:您獨特的Adobe Experience Platform整合中提供您的特定API金鑰價值。\
+`{API_KEY}`:您在獨特的Adobe Experience Platform整合中找到的特定API金鑰值。\
 `{JSON_PAYLOAD}`:MLInstance的配置。我們在教學課程中使用的範例如下所示：
 
 ```JSON
@@ -168,7 +168,7 @@ curl -X POST \
 
 資料科學家在訓練時使用實驗來獲得高效能模型。 多項實驗包括變更資料集、功能、學習參數和硬體。 以下是建立實驗的示例。
 
-**請求**
+**要求**
 
 ```SHELL
 curl -X POST \
@@ -182,7 +182,7 @@ curl -X POST \
 
 `{IMS_ORG}`:您的IMS組織認證可在您獨特的Adobe Experience Platform整合中找到。\
 `{ACCESS_TOKEN}`:驗證後提供的您特定的載體Token值。\
-`{API_KEY}`:您獨特的Adobe Experience Platform整合中提供您的特定API金鑰價值。\
+`{API_KEY}`:您在獨特的Adobe Experience Platform整合中找到的特定API金鑰值。\
 `{JSON_PAYLOAD}`:實驗所建立的物件。我們在教學課程中使用的範例如下所示：
 
 ```JSON
@@ -215,7 +215,7 @@ curl -X POST \
 }
 ```
 
-`{EXPERIMENT_ID}`:代表您剛建立之實驗的ID。`{INSTANCE_ID}`:代表MLInstance的ID。
+`{EXPERIMENT_ID}`:代表您剛建立的實驗的ID。`{INSTANCE_ID}`:代表MLInstance的ID。
 
 ### 建立計畫的訓練實驗
 
@@ -223,7 +223,7 @@ curl -X POST \
 
 若要指出已排程實驗的建立，我們必須在請求正文中新增`template`區段。 在`template`中，計畫執行的所有必要參數都包含在內，例如`tasks`（表示執行的動作）和`schedule`（表示排程執行的時間）。
 
-**請求**
+**要求**
 
 ```Shell
 curl -X POST \
@@ -237,7 +237,7 @@ curl -X POST \
 
 `{IMS_ORG}`:您的IMS組織認證可在您獨特的Adobe Experience Platform整合中找到。\
 `{ACCESS_TOKEN}`:驗證後提供的您特定的載體Token值。\
-`{API_KEY}`:您獨特的Adobe Experience Platform整合中提供您的特定API金鑰價值。\
+`{API_KEY}`:您在獨特的Adobe Experience Platform整合中找到的特定API金鑰值。\
 `{JSON_PAYLOAD}`:要張貼的資料集。我們在教學課程中使用的範例如下所示：
 
 ```JSON
@@ -310,7 +310,7 @@ curl -X POST \
 
 建立實驗實體後，就可使用下列呼叫建立並執行訓練執行。 您需要`{EXPERIMENT_ID}`，並在請求內文中指出您要觸發的`mode`。
 
-**請求**
+**要求**
 
 ```Shell
 curl -X POST \
@@ -325,7 +325,7 @@ curl -X POST \
 `{EXPERIMENT_ID}`:與您要定位的「實驗」對應的ID。這可在建立實驗時的回應中找到。\
 `{IMS_ORG}`:您的IMS組織認證可在您獨特的Adobe Experience Platform整合中找到。\
 `{ACCESS_TOKEN}`:驗證後提供的您特定的載體Token值。\
-`{API_KEY}`:您獨特的Adobe Experience Platform整合中提供您的特定API金鑰價值。\
+`{API_KEY}`:您在獨特的Adobe Experience Platform整合中找到的特定API金鑰值。\
 `{JSON_PAYLOAD}`:若要建立訓練執行，您必須將下列項目納入內文：
 
 ```JSON
@@ -381,7 +381,7 @@ curl -X POST \
 
 可以使用`{EXPERIMENT_RUN_ID}`查詢實驗運行的狀態。
 
-**請求**
+**要求**
 
 ```shell
 curl -X GET \
@@ -395,11 +395,11 @@ curl -X GET \
 `{EXPERIMENT_RUN_ID}`:代表「實驗執行」的ID。\
 `{ACCESS_TOKEN}`:驗證後提供的您特定的載體Token值。\
 `{IMS_ORG}`:您的IMS組織認證可在您獨特的Adobe Experience Platform整合中找到。\
-`{API_KEY}`:您獨特的Adobe Experience Platform整合中提供您的特定API金鑰價值。
+`{API_KEY}`:您在獨特的Adobe Experience Platform整合中找到的特定API金鑰值。
 
 **回應**
 
-GET呼叫將提供`state`參數中的狀態，如下所示：
+GET調用將提供`state`參數中的狀態，如下所示：
 
 ```JSON
 {
@@ -446,7 +446,7 @@ GET呼叫將提供`state`參數中的狀態，如下所示：
 
 為了在培訓期間獲得上面建立的培訓模型，我們提出以下請求：
 
-**請求**
+**要求**
 
 ```Shell
 curl -X GET \
@@ -491,9 +491,9 @@ curl -X GET \
 
 ### 停止和刪除排程的實驗
 
-如果要在計畫實驗的`endTime`之前停止執行，則可以通過向`{EXPERIMENT_ID}`查詢DELETE請求來完成此操作
+如果要在計畫實驗的`endTime`之前停止執行，可以通過查詢`{EXPERIMENT_ID}`的DELETE請求來完成此操作
 
-**請求**
+**要求**
 
 ```Shell
 curl -X DELETE \
