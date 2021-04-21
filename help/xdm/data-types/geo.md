@@ -1,27 +1,27 @@
 ---
-keywords: Experience Platform;home；熱門主題；模式；模式；XDM;fields；模式；Schemas;geo;datatype；資料類型；
+keywords: Experience Platform;home；熱門主題；模式；模式；XDM;fields;schemas;geo;datatype；資料類型；
 solution: Experience Platform
 title: 地理資料類型
-topic: overview
+topic-legacy: overview
 description: 本檔案提供Geo XDM資料類型的概觀。
+exl-id: d0eef943-ef86-4abd-8a51-dc45f2ed782d
 translation-type: tm+mt
-source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '196'
+source-wordcount: '192'
 ht-degree: 4%
 
 ---
 
+# [!UICONTROL Geo] 資料類型
 
-# [!UICONTROL 地] 理資料類型
-
-[!UICONTROL Geois] 是標準的XDM資料類型，可描述觀察到事件的地理區域。
+[!UICONTROL Geo] 是標準的XDM資料類型，可描述觀察到事件的地理區域。
 
 <img src="../images/data-types/geo.png" width="400" /><br />
 
 | 屬性 | 資料類型 | 說明 |
 | --- | --- | --- |
-| `_schema` | [[!UICONTROL 地理坐標]](./geo-coordinates.md) | 說明地理座標。 |
+| `_schema` | [[!UICONTROL Geo Coordinates]](./geo-coordinates.md) | 說明地理座標。 |
 | `_id` | 字串 | 坐標系的唯一系統生成ID。 |
 | `city` | 字串 | 城市名稱。 |
 | `countryCode` | 字串 | 國家／地區的雙字元<a href="https://datahub.io/core/country-list">ISO 3166-1 alpha-2</a>程式碼。 |
