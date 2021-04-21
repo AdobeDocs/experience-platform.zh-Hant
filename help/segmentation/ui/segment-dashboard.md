@@ -1,19 +1,19 @@
 ---
-keywords: Experience Platform;profile;segment;segmentation;user interface;UI;customization;segment dashboard;dashboard
+keywords: Experience Platform；配置檔案；段；段；分段；用戶介面；UI；定制；段儀表板；儀表板
 title: 區段控制面板
-description: 'Adobe Experience Platform UI提供控制面板，您可以透過此控制面板檢視與您組織建立和維護之區段相關的重要量度。 '
-topic: guide
+description: 'Adobe Experience PlatformUI提供控制面板，您可透過此控制面板檢視與您組織建立和維護之區段相關的重要量度。 '
+topic-legacy: guide
 type: Documentation
+exl-id: 4a45bc3a-be5e-42b5-abd1-f0fb5795f5f4
 translation-type: tm+mt
-source-git-commit: 77c94fb4654f7dcb0eb4ba9af6972be439eca55e
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '148'
+source-wordcount: '147'
 ht-degree: 6%
 
 ---
 
-
-# (Beta)[!UICONTROL 區段]控制面板{#segment-dashboard}
+# （測試版）[!UICONTROL Segments]控制面板{#segment-dashboard}
 
 >[!IMPORTANT]
 >
