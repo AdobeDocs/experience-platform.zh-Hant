@@ -1,17 +1,17 @@
 ---
-keywords: Experience Platform;home;popular topics;query service;Query service;sql;sql reference;
+keywords: Experience Platform;home；熱門主題；查詢服務；查詢服務；sql;sql參考；
 solution: Experience Platform
 title: 查詢服務SQL參考
-topic: reference
-description: Adobe Experience Platform Query Service提供使用標準ANSI SQL for SELECT語句和其他有限命令的能力。
+topic-legacy: reference
+description: Adobe Experience Platform查詢服務提供對SELECT語句和其他有限命令使用標準ANSI SQL的能力。
+exl-id: 81d7d440-c51b-46a8-8690-0c0637826077
 translation-type: tm+mt
-source-git-commit: 97dc0b5fb44f5345fd89f3f56bd7861668da9a6e
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '78'
 ht-degree: 0%
 
 ---
-
 
 # 查詢服務SQL參考
 
