@@ -1,17 +1,17 @@
 ---
-keywords: Experience Platform;home;popular topics;query service;api guide;connection parameters;Query service;
+keywords: Experience Platform; home；熱門主題；查詢服務；api指南；連接參數；查詢服務；
 solution: Experience Platform
 title: 連接參數API端點
-topic: connection parameters
-description: 通過向/connection_parameters端點發出GET請求，可以檢索連接參數以使用互動式服務。
+topic-legacy: connection parameters
+description: 通過向/connection_parameters端點發出GET請求，可檢索連接參數以使用互動式服務。
+exl-id: 1667f4a5-e6e5-41e9-8f9d-6d2c63c7d7d6
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '148'
 ht-degree: 1%
 
 ---
-
 
 # 連接參數端點
 
@@ -29,7 +29,7 @@ ht-degree: 1%
 GET /connection_parameters
 ```
 
-**請求**
+**要求**
 
 ```shell
 curl -X GET https://platform.adobe.io/data/foundation/query/connection_parameters
