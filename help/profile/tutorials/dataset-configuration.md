@@ -1,14 +1,14 @@
 ---
 keywords: Experience Platform；配置檔案；即時客戶配置檔案；故障排除；API；啟用資料集
 title: 使用API設定描述檔和身分服務的資料集
-topic: tutorial
+topic-legacy: tutorial
 type: Tutorial
 description: 本教學課程示範如何啟用資料集以搭配使用Adobe Experience PlatformAPI的即時客戶個人檔案和身分服務。
 exl-id: 142cb7df-072a-4f3a-8a9c-9a78afb35312
 translation-type: tm+mt
-source-git-commit: 87729e4996b0b2ac26e1a0abaa80af717825f9e6
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '1058'
+source-wordcount: '1057'
 ht-degree: 1%
 
 ---
