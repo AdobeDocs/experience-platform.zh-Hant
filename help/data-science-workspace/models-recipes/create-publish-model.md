@@ -2,17 +2,17 @@
 keywords: Experience Platform；機器學習模型；資料科學工作區；熱門主題；建立和發佈模型
 solution: Experience Platform
 title: 建立和發佈機器學習模型
-topic: tutorial
+topic-legacy: tutorial
 type: Tutorial
 description: Adobe Experience Platform資料科學工作區提供使用預先建立的產品Recommendations配方來達成目標的方式。 請依照本教學課程，瞭解如何存取和瞭解您的零售資料、建立和最佳化機器學習模型，以及在資料科學工作區中產生見解。
+exl-id: f71e5a17-9952-411e-8e6a-aab46bc4c006
 translation-type: tm+mt
-source-git-commit: b5d42c6a38a50d39e1ca46e18623dde59c33833b
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '1580'
+source-wordcount: '1531'
 ht-degree: 0%
 
 ---
-
 
 # 建立和發佈機器學習模型
 
@@ -58,11 +58,11 @@ ht-degree: 0%
 
 ### 探索資料並瞭解結構
 
-登入[Adobe Experience Platform](https://platform.adobe.com/)並選取&#x200B;**[!UICONTROL 資料集]**&#x200B;以列出所有現有資料集，並選取您要探索的資料集。 在此例中，[!DNL Analytics]資料集&#x200B;**Golden Data Set postValues**。
+登入[Adobe Experience Platform](https://platform.adobe.com/)並選取&#x200B;**[!UICONTROL Datasets]**&#x200B;以列出所有現有資料集，並選取您要探索的資料集。 在此例中，[!DNL Analytics]資料集&#x200B;**Golden Data Set postValues**。
 
 ![](../images/models-recipes/model-walkthrough/dataset-browse.png)
 
-資料集活動頁面隨即開啟，列出與資料集相關的資訊。 您可以選取右上角附近的&#x200B;**[!UICONTROL 預覽資料集]**&#x200B;來檢查範例記錄。 您也可以檢視所選資料集的架構。 在右側欄中選擇架構連結。 出現一個跳出窗口，選擇&#x200B;**[!UICONTROL 架構名稱]**&#x200B;下的連結將在新頁籤中開啟架構。
+資料集活動頁面隨即開啟，列出與資料集相關的資訊。 您可以選取右上角的&#x200B;**[!UICONTROL Preview Dataset]**&#x200B;來檢查範例記錄。 您也可以檢視所選資料集的架構。 在右側欄中選擇架構連結。 出現一個快顯視窗，選擇&#x200B;**[!UICONTROL schema name]**&#x200B;下方的連結會在新標籤中開啟架構。
 
 ![](../images/models-recipes/model-walkthrough/dataset-activity.png)
 
@@ -85,15 +85,15 @@ ht-degree: 0%
 
 ### 探索產品Recommendations配方
 
-在Experience Platform中，從左側導覽欄瀏覽至&#x200B;**[!UICONTROL Models]**，然後在頂端導覽中選取&#x200B;**[!UICONTROL Recipes]**，以檢視組織的可用配方清單。
+在Experience Platform中，從左側導覽欄導覽至&#x200B;**[!UICONTROL Models]**，然後在頂端導覽中選取&#x200B;**[!UICONTROL Recipes]**，以檢視組織的可用方式清單。
 
 ![](../images/models-recipes/model-walkthrough/recipe-tab.png)
 
-接著，選取提供的&#x200B;**[!UICONTROL Recommendations配方]**&#x200B;名稱，找出並開啟。 此時將顯示「配方概述」頁。
+接著，選取提供的&#x200B;**[!UICONTROL Recommendations Recipe]**&#x200B;名稱，找出並開啟它。 此時將顯示「配方概述」頁。
 
 ![](../images/models-recipes/model-walkthrough/Recipe-view.png)
 
-然後，在右側邊欄中，選擇&#x200B;**[!UICONTROL Recommendations輸入方案]**&#x200B;以查看為方式供電的方案。 架構欄位&quot;[!UICONTROL itemId]&quot;和&quot;[!UICONTROL userId]&quot;對應於該客戶在特定時間([!UICONTROL timestamp])購買的產品([!UICONTROL interactionType])。 請遵循相同的步驟，查看&#x200B;**[!UICONTROL Recommendations輸出方案]**&#x200B;的欄位。
+然後，在右側邊欄中，選擇&#x200B;**[!UICONTROL Recommendations Input Schema]**&#x200B;以查看為配方供電的模式。 模式欄位&quot;[!UICONTROL itemId]&quot;和&quot;[!UICONTROL userId]&quot;對應於該客戶在特定時間([!UICONTROL timestamp])購買的產品([!UICONTROL interactionType])。 請依照相同的步驟，檢閱&#x200B;**[!UICONTROL Recommendations Output Schema]**&#x200B;的欄位。
 
 ![](../images/models-recipes/model-walkthrough/input-output.png)
 
@@ -107,19 +107,19 @@ ht-degree: 0%
 
 「模型」是「方式」的例項，可讓您以規模來訓練和評分資料。
 
-在Experience Platform中，從左側導覽欄瀏覽至&#x200B;**[!UICONTROL Models]**，然後在頂端導覽中選取&#x200B;**[!UICONTROL Recipes]**。 這會顯示組織的可用方式清單。選擇產品建議方式。
+在Experience Platform中，從左側導覽欄導覽至&#x200B;**[!UICONTROL Models]**，然後在頂端導覽中選取&#x200B;**[!UICONTROL Recipes]**。 這會顯示組織的可用方式清單。選擇產品建議方式。
 
 ![](../images/models-recipes/model-walkthrough/recipe-tab.png)
 
-從配方頁面中，選擇&#x200B;**[!UICONTROL 建立模型]**。
+從配方頁面中，選擇&#x200B;**[!UICONTROL Create Model]**。
 
 ![建立模型](../images/models-recipes/model-walkthrough/create-model-recipe.png)
 
-建立模型工作流從選擇配方開始。 選擇&#x200B;**[!UICONTROL Recommendations配方]**，然後選擇右上角的&#x200B;**[!UICONTROL Next]**。
+建立模型工作流從選擇配方開始。 選擇&#x200B;**[!UICONTROL Recommendations Recipe]**，然後選擇右上角的&#x200B;**[!UICONTROL Next]**。
 
 ![](../images/models-recipes/model-walkthrough/create-model.png)
 
-接下來，提供模型名稱。 列出模型的可用配置，其中包含模型預設培訓和計分行為的設定。 查看配置並選擇&#x200B;**[!UICONTROL 完成]**。
+接下來，提供模型名稱。 列出模型的可用配置，其中包含模型預設培訓和計分行為的設定。 查看配置並選擇&#x200B;**[!UICONTROL Finish]**。
 
 ![](../images/models-recipes/model-walkthrough/configure-model.png)
 
@@ -131,7 +131,7 @@ ht-degree: 0%
 
 ### 使用自訂超參數訓練模型
 
-在&#x200B;**模型概述**&#x200B;頁面上，選擇右上角附近的&#x200B;**[!UICONTROL Train]**&#x200B;以建立新的訓練執行。 選擇建立模型時使用的相同輸入資料集，然後選擇&#x200B;**[!UICONTROL Next]**。
+在&#x200B;**模型概述**&#x200B;頁面上，選取右上角的&#x200B;**[!UICONTROL Train]**&#x200B;以建立新的訓練執行。 選擇建立模型時使用的相同輸入資料集，然後選擇&#x200B;**[!UICONTROL Next]**。
 
 ![](../images/models-recipes/model-walkthrough/select-train.png)
 
@@ -177,15 +177,15 @@ Data Science工作流程的最後一步是將您的模型實際運作，以便�
 
 ![選擇分數](../images/models-recipes/model-walkthrough/select-score.png)
 
-接著，選取&#x200B;**[!UICONTROL Recommendations輸入資料集]**&#x200B;作為計分輸入資料集，此資料集與您建立模型並執行其訓練執行時使用的資料集相同。 然後，選擇&#x200B;**[!UICONTROL Next]**。
+接著，選取&#x200B;**[!UICONTROL Recommendations Input Dataset]**&#x200B;作為計分輸入資料集，此資料集與您建立模型並執行其訓練執行時使用的資料集相同。 然後，選擇&#x200B;**[!UICONTROL Next]**。
 
 ![](../images/models-recipes/model-walkthrough/score-input.png)
 
-在您取得輸入資料集後，選取&#x200B;**[!UICONTROL Recommendations輸出資料集]**&#x200B;作為計分輸出資料集。 計分結果會以批次形式儲存在此資料集中。
+輸入資料集後，請選取&#x200B;**[!UICONTROL Recommendations Output Dataset]**&#x200B;作為計分輸出資料集。 計分結果會以批次形式儲存在此資料集中。
 
 ![](../images/models-recipes/model-walkthrough/score-output.png)
 
-最後，檢閱計分設定。 這些參數包含您先前選取的輸入和輸出資料集以及適當的結構描述。 選擇&#x200B;**[!UICONTROL 完成]**&#x200B;開始計分運行。 執行可能需要數分鐘才能完成。
+最後，檢閱計分設定。 這些參數包含您先前選取的輸入和輸出資料集以及適當的結構描述。 選擇&#x200B;**[!UICONTROL Finish]**&#x200B;開始計分運行。 執行可能需要數分鐘才能完成。
 
 ![](../images/models-recipes/model-walkthrough/score-finish.png)
 
@@ -193,11 +193,11 @@ Data Science工作流程的最後一步是將您的模型實際運作，以便�
 
 計分執行成功完成後，您就可以預覽結果並檢視產生的見解。
 
-在計分執行頁面上，選取已完成的計分執行，然後選取右側導軌上的「預覽計分結果資料集」。****
+在計分執行頁面上，選取已完成的計分執行，然後選取右側導軌上的&#x200B;**[!UICONTROL Preview Scoring Results Dataset]**。
 
 ![](../images/models-recipes/model-walkthrough/preview-scores.png)
 
-在預覽表格中，每一列包含特定客戶的產品建議，分別標示為[!UICONTROL recommendations]和[!UICONTROL userId]。 由於範例螢幕擷取畫面中的[!UICONTROL num_recommendations]超參數設為10，因此每列建議最多可包含10個產品身分識別碼(#)。
+在預覽表格中，每一列都包含特定客戶的產品建議，分別標示為[!UICONTROL recommendations]和[!UICONTROL userId]。 由於範例螢幕擷取畫面中的[!UICONTROL num_recommendations]超參數設為10，因此每列建議最多可包含10個產品識別碼，並以數字元號(#)分隔。
 
 ![](../images/models-recipes/model-walkthrough/preview_score_results.png)
 
