@@ -1,21 +1,21 @@
 ---
-keywords: Experience Platform;home；熱門主題；身份圖查看器；Identity Graph viewer;Graph viewer;Graph viewer;Identity namespace;Identity;Identity Service;identity service
+keywords: Experience Platform;home；熱門主題；身份圖查看器；身份圖查看器；圖形查看器；身份名稱空間；身份名稱空間；身份；身份服務；身份服務
 solution: Experience Platform
 title: Identity Graph檢視器概觀
-topic: tutorial
+topic-legacy: tutorial
 description: 身分圖是特定客戶不同身分之間關係的地圖，可讓您以視覺化方式呈現客戶如何透過不同通道與您的品牌互動。
+exl-id: ccd5f8d8-595b-4636-9191-553214e426bd
 translation-type: tm+mt
-source-git-commit: f4326c7a8bb8af90c092d3790e51c133744d498f
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '1038'
+source-wordcount: '995'
 ht-degree: 1%
 
 ---
 
-
 # 身分圖表檢視器概觀
 
-身分圖是特定客戶不同身分之間關係的地圖，可讓您以視覺化方式呈現客戶如何透過不同通道與您的品牌互動。 Adobe Experience Platform Identity Service會針對客戶活動，近乎即時地管理和更新所有客戶識別圖。
+身分圖是特定客戶不同身分之間關係的地圖，可讓您以視覺化方式呈現客戶如何透過不同通道與您的品牌互動。 所有客戶識別圖都由Adobe Experience Platform身分服務部門針對客戶活動進行近乎即時的集體管理和更新。
 
 平台使用者介面中的身分圖表檢視器可讓您視覺化並深入瞭解哪些客戶身份是結合在一起的，以及以哪些方式連結在一起。 檢視器可讓您拖曳圖形的不同部分並與之互動，讓您檢查複雜的身分關係、更有效率地進行除錯，並透過提高透明度來運用資訊。
 
@@ -27,7 +27,7 @@ ht-degree: 1%
 
 ## 快速入門
 
-使用身分圖檢視器需要瞭解所涉及的各種Adobe Experience Platform服務。 在開始使用身分圖檢視器之前，請先閱讀下列服務的檔案：
+使用身分圖表檢視器需要瞭解所涉及的各種Adobe Experience Platform服務。 在開始使用身分圖檢視器之前，請先閱讀下列服務的檔案：
 
 - [[!DNL Identity Service]](../home.md):跨裝置和系統橋接身分，以更全面地瞭解個別客戶及其行為。
 
@@ -39,13 +39,13 @@ ht-degree: 1%
 
 ## 存取身分圖表檢視器
 
-若要使用UI中的身分圖表檢視器，請在左側導覽中選取&#x200B;**[!UICONTROL Identity]**，然後選取&#x200B;**[!UICONTROL Identity圖表]**&#x200B;標籤。 在&#x200B;**[!UICONTROL Identity Namespace]**&#x200B;螢幕中，按一下&#x200B;**[!UICONTROL 選擇標識名稱空間]**&#x200B;表徵圖以搜索要使用的名稱空間。
+若要使用UI中的身分圖表檢視器，請在左側導覽中選取&#x200B;**[!UICONTROL Identities]**，然後選取&#x200B;**[!UICONTROL Identity graph]**&#x200B;標籤。 在&#x200B;**[!UICONTROL Identity Namespace]**&#x200B;畫面中，按一下&#x200B;**[!UICONTROL Select identity namespace]**&#x200B;圖示以搜尋您要使用的命名空間。
 
 ![namespace-screen](../images/identity-graph-viewer/identity-namespace.png)
 
-出現&#x200B;**[!UICONTROL 選擇身份名稱空間]**&#x200B;面板。 此螢幕包含可供組織使用的命名空間清單，包括有關命名空間的&#x200B;**[!UICONTROL 顯示名稱]**、**[!UICONTROL 標識符號]**、**[!UICONTROL 所有者]**、**[!UICONTROL 上次更新日期和**[!UICONTROL &#x200B;說明&#x200B;]**的資訊。]**&#x200B;只要您有有效的識別值連接到名稱空間，您就可以使用任何提供的名稱空間。
+出現&#x200B;**[!UICONTROL Select identity namespace]**&#x200B;面板。 此畫麵包含您組織可用的命名空間清單，包括有關命名空間&#x200B;**[!UICONTROL Display name]**、**[!UICONTROL Identity symbol]**、**[!UICONTROL Owner]**、**[!UICONTROL Last updated]**&#x200B;日期和&#x200B;**[!UICONTROL Description]**&#x200B;的資訊。 只要您有有效的識別值連接到名稱空間，您就可以使用任何提供的名稱空間。
 
-選擇要使用的命名空間，然後按一下&#x200B;**[!UICONTROL 選擇]**&#x200B;繼續。
+選擇要使用的命名空間，然後按一下&#x200B;**[!UICONTROL Select]**&#x200B;繼續。
 
 ![select-identity-namespace](../images/identity-graph-viewer/select-identity-namespace.png)
 
@@ -75,15 +75,15 @@ ht-degree: 1%
 
 ![身份圖](../images/identity-graph-viewer/graph-viewer.png)
 
-選擇標識以更新&#x200B;**[!UICONTROL Identities]**&#x200B;表上突出顯示的行，並更新右邊欄上提供的資訊，該資訊包括標識的&#x200B;**[!UICONTROL 值]**、**[!UICONTROL 批ID]**&#x200B;及其&#x200B;**[!UICONTROL 上次更新]**&#x200B;日期。
+選擇標識以更新&#x200B;**[!UICONTROL Identities]**&#x200B;表上突出顯示的行並更新右邊欄上提供的資訊，該資訊包括標識的&#x200B;**[!UICONTROL Value]**、**[!UICONTROL Batch ID]**&#x200B;及其&#x200B;**[!UICONTROL Last updated]**&#x200B;日期。
 
 ![select-identity](../images/identity-graph-viewer/select-identity.png)
 
-您可以使用&#x200B;**[!UICONTROL Identities]**&#x200B;表格上方的排序選項，篩選圖形並隔離特定的命名空間。 從下拉式選單中，選取您要反白顯示的命名空間。
+您可以使用&#x200B;**[!UICONTROL Identities]**&#x200B;表格上方的排序選項來篩選圖形並隔離特定命名空間。 從下拉式選單中，選取您要反白顯示的命名空間。
 
 ![filter-by-namespace](../images/identity-graph-viewer/filter-namespace.png)
 
-圖形檢視器會傳回，反白顯示您選取的命名空間。 篩選器選項也會更新&#x200B;**[!UICONTROL Identities]**&#x200B;表格，僅傳回您選取之命名空間的資訊。
+圖形檢視器會傳回，反白顯示您選取的命名空間。 篩選選項也會更新&#x200B;**[!UICONTROL Identities]**&#x200B;表格，僅傳回您選取之命名空間的資訊。
 
 ![篩選](../images/identity-graph-viewer/filtered.png)
 
@@ -91,7 +91,7 @@ ht-degree: 1%
 
 ![縮放](../images/identity-graph-viewer/zoom.png)
 
-通過從標題中選擇&#x200B;**[!UICONTROL 資料源]**，可以查看有關批的詳細資訊。 **[!UICONTROL 資料來源]**&#x200B;表格顯示與圖形相關的&#x200B;**[!UICONTROL 批次ID]**&#x200B;清單，以及其&#x200B;**[!UICONTROL 連結ID]**、來源架構和擷取日期。
+通過從題頭中選擇&#x200B;**[!UICONTROL Data source]**，可以查看有關批的詳細資訊。 **[!UICONTROL Data source]**&#x200B;表格顯示與圖形關聯的&#x200B;**[!UICONTROL Batch IDs]**&#x200B;清單，以及其&#x200B;**[!UICONTROL Linked IDs]**、來源架構和擷取日期。
 
 ![資料源](../images/identity-graph-viewer/data-source-table.png)
 
