@@ -2,16 +2,16 @@
 keywords: Experience Platform；首頁；熱門主題；Google雲端儲存空間；google雲端儲存空間
 solution: Experience Platform
 title: Google雲端儲存來源連接器概觀
-topic: overview
+topic-legacy: overview
 description: 瞭解如何使用API或使用者介面將Google雲端儲存空間連線至Adobe Experience Platform。
+exl-id: f7ebd213-f914-4c49-aebd-1df4514ffec0
 translation-type: tm+mt
-source-git-commit: 7fc99214272d2ce743b3666826c66f5d65e4d2ca
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '529'
+source-wordcount: '528'
 ht-degree: 0%
 
 ---
-
 
 # Google雲端儲存空間連接器
 
