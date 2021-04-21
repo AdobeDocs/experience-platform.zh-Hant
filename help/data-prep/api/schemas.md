@@ -2,12 +2,12 @@
 keywords: Experience Platform;home；熱門主題；資料準備；api指南；方案；
 solution: Experience Platform
 title: 方案API端點
-topic: schemas
+topic-legacy: schemas
 description: '您可以使用Adobe Experience PlatformAPI中的「/方案」端點，以寫程式方式檢索、建立和更新方案，以便與平台中的映射器一起使用。 '
 translation-type: tm+mt
-source-git-commit: 435d27f7187074c78209948c0e57b610b63d2055
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '614'
+source-wordcount: '613'
 ht-degree: 3%
 
 ---
@@ -43,7 +43,7 @@ GET /schemas?limit={LIMIT}&start={START}&orderBy={ORDER_BY}
 | `{NAME}` | 根據名稱篩選架構。 |
 | `{ORDER_BY}` | 對結果的順序進行排序。 支援的欄位有`modifiedDate`和`createdDate`。 您可以在屬性前加上`+`或`-`，分別依遞增或遞減順序來排序。 |
 
-**請求**
+**要求**
 
 下列請求會擷取您IMS組織的最後兩個已建立結構。
 
@@ -142,7 +142,7 @@ POST /schemas
 
 ### 使用JSON結構描述
 
-**請求**
+**要求**
 
 下列請求可讓您傳送[JSON結構描述](https://json-schema.org/)來建立結構描述。
 
@@ -181,7 +181,7 @@ curl -X POST https://platform.adobe.io/data/foundation/conversion/schemas \
 
 ### 使用樣本資料
 
-**請求**
+**要求**
 
 下列請求可讓您使用先前上傳的範例資料來建立結構。
 
@@ -246,7 +246,7 @@ curl -X POST https://platform.adobe.io/data/foundation/conversion/schemas \
 
 ### 請參閱XDM架構
 
-**請求**
+**要求**
 
 以下請求可讓您參考現有的XDM架構來建立架構。
 
@@ -304,7 +304,7 @@ curl -X POST https://platform.adobe.io/data/foundation/conversion/schemas \
 POST /schemas/upload
 ```
 
-**請求**
+**要求**
 
 下列請求可讓您從已上傳的JSON檔案建立結構描述。
 
@@ -348,7 +348,7 @@ GET /schemas/{SCHEMA_ID}
 | -------- | ----------- |
 | `{SCHEMA_ID}` | 您正在查找的架構的ID。 |
 
-**請求**
+**要求**
 
 以下請求將檢索有關指定方案的資訊。
 
