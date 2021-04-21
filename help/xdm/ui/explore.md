@@ -1,40 +1,40 @@
 ---
-keywords: 體驗平台；首頁；熱門主題；ui;UI;XDM;XDM系統；體驗資料模型；體驗資料模型；資料模型；資料模型；瀏覽；類；混合；資料類型；模式；
+keywords: Experience Platform;home；熱門主題；ui;UI;XDM;XDM系統；體驗資料模型；體驗資料模型；資料模型；資料模型；瀏覽；類；混合；資料類型；模式；
 solution: Experience Platform
 title: 在UI中探索XDM資源
 description: 瞭解如何在Experience Platform使用者介面中探索現有的架構、類別、混合和資料類型。
-topic: tutorial
+topic-legacy: tutorial
 type: Tutorial
+exl-id: b527b2a0-e688-4cfe-a176-282182f252f2
 translation-type: tm+mt
-source-git-commit: 62266187ed1f3ce2f0acca3f50487fb70cfa7307
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '941'
+source-wordcount: '912'
 ht-degree: 0%
 
 ---
 
-
 # 在UI中探索XDM資源
 
-在Adobe Experience Platform中，所有Experience Data Model(XDM)資源都儲存在[!DNL Schema Library]中，包括Adobe提供的標準資源以及貴組織定義的自訂資源。 在Experience Platform UI中，您可以在[!DNL Schema Library]中檢視任何現有架構、類別、混合或資料類型的結構和欄位。 當規劃和準備資料擷取時，這特別有用，因為UI會提供這些XDM資源所提供之每個欄位的預期資料類型和使用案例資訊。
+在Adobe Experience Platform，所有Experience Data Model(XDM)資源都儲存在[!DNL Schema Library]中，包括由Adobe提供的標準資源和您組織定義的自訂資源。 在Experience PlatformUI中，您可以在[!DNL Schema Library]中查看任何現有架構、類、混音或資料類型的結構和欄位。 當規劃和準備資料擷取時，這特別有用，因為UI會提供這些XDM資源所提供之每個欄位的預期資料類型和使用案例資訊。
 
-本教學課程涵蓋探索Experience Platform UI中現有結構、類別、混合和資料類型的步驟。
+本教學課程涵蓋在Experience PlatformUI中探索現有結構描述、類別、混合和資料類型的步驟。
 
 ## 查找XDM資源{#lookup}
 
-在平台UI中，選擇左側導航中的&#x200B;**[!UICONTROL 方案]**。 [!UICONTROL 結構描述]工作區提供&#x200B;**[!UICONTROL 瀏覽]**&#x200B;標籤，以探索組織中所有現有的XDM資源，以及用於特別探索&#x200B;**[!UICONTROL 類]**、**[!UICONTROL Mixins]**&#x200B;和&#x200B;**[!UICONTROL 資料類型]**&#x200B;的附加專用標籤。
+在平台UI中，選擇左側導覽中的&#x200B;**[!UICONTROL Schemas]**。 [!UICONTROL Schemas]工作區提供&#x200B;**[!UICONTROL Browse]**&#x200B;標籤，以探索組織中所有現有的XDM資源，以及其他專用標籤，以特別探索&#x200B;**[!UICONTROL Classes]**、**[!UICONTROL Mixins]**&#x200B;和&#x200B;**[!UICONTROL Data types]**。
 
 ![](../images/ui/explore/tabs.png)
 
 在[!UICONTROL Browse]標籤上，您可以使用篩選圖示（![篩選圖示影像](../images/ui/explore/icon.png)）來顯示左側導軌中的控制項，以縮小列出的結果。
 
-例如，若要篩選清單以僅顯示Adobe提供的標準資料類型，請分別在&#x200B;**[!UICONTROL Type]**&#x200B;和&#x200B;**[!UICONTROL Owner]**&#x200B;區段下選取&#x200B;**[!UICONTROL Datatype]**&#x200B;和&#x200B;**[!UICONTROL Adobe]**。
+例如，要篩選清單以僅顯示由Adobe提供的標準資料類型，請分別在&#x200B;**[!UICONTROL Type]**&#x200B;和&#x200B;**[!UICONTROL Owner]**&#x200B;節下選擇&#x200B;**[!UICONTROL Datatype]**&#x200B;和&#x200B;**[!UICONTROL Adobe]**。
 
-**[!UICONTROL 包含在Profile]**&#x200B;中的切換功能可讓您篩選結果，只顯示已啟用在[即時客戶配置檔案](../../profile/home.md)中使用的架構中使用的資源。
+**[!UICONTROL Included in Profile]**&#x200B;切換可讓您篩選結果，只顯示已啟用在[即時客戶設定檔](../../profile/home.md)中使用之結構中使用的資源。
 
 ![](../images/ui/explore/filter.png)
 
-您也可以使用搜尋列進一步縮小結果。 在搜尋詞語時，排名最前的項目代表名稱與搜尋查詢相符的資源。 在這些項下，在&#x200B;**[!UICONTROL 標準欄位]**&#x200B;下，將列出包含與查詢匹配的欄位的所有資源。 這樣，您就可以根據所包含的資料類型來搜索XDM資源，而無需事先知道該資源的名稱。
+您也可以使用搜尋列進一步縮小結果。 在搜尋詞語時，排名最前的項目代表名稱與搜尋查詢相符的資源。 在這些項目下，**[!UICONTROL Standard Fields]**&#x200B;下會列出包含與查詢相符之欄位的所有資源。 這樣，您就可以根據所包含的資料類型來搜索XDM資源，而無需事先知道該資源的名稱。
 
 ![](../images/ui/explore/search.png)
 
@@ -62,15 +62,15 @@ ht-degree: 0%
 
 ![](../images/ui/explore/data-types.png)
 
-附加方括弧(`[]`)的任何資料類型都表示該特定資料類型的陣列。 例如，**[!UICONTROL String]\[]**&#x200B;的資料類型表示欄位需要字串值的陣列。 **[!UICONTROL 付款項]\[]**&#x200B;的資料類型指示符合[!UICONTROL 付款項]資料類型的對象陣列。
+附加方括弧(`[]`)的任何資料類型都表示該特定資料類型的陣列。 例如，**[!UICONTROL String]\[]**&#x200B;的資料類型表示欄位需要字串值的陣列。 **[!UICONTROL Payment Item]\[]**&#x200B;的資料類型表示符合[!UICONTROL Payment Item]資料類型的對象陣列。
 
 如果陣列欄位基於對象類型，則可以在畫布中選擇其表徵圖以顯示每個陣列項的預期屬性。
 
 ![](../images/ui/explore/array-type.png)
 
-### [!UICONTROL 欄位屬性] {#field-properties}
+### [!UICONTROL Field properties] {#field-properties}
 
-當您選取畫布中任何欄位的名稱時，右側欄位會更新，以顯示&#x200B;**[!UICONTROL 欄位屬性]**&#x200B;下方該欄位的詳細資訊。 這可包含欄位預期使用案例、預設值、模式、格式的說明，以及欄位是否必要等等。
+當您選取畫布中任何欄位的名稱時，右側欄位會更新，以顯示&#x200B;**[!UICONTROL Field properties]**&#x200B;下方該欄位的詳細資訊。 這可包含欄位預期使用案例、預設值、模式、格式的說明，以及欄位是否必要等等。
 
 ![](../images/ui/explore/field-properties.png)
 
@@ -92,7 +92,7 @@ ht-degree: 0%
 
 ### 關係欄位{#relationship}
 
-如果您正在檢查包含關係欄位的方案，則該欄位將列在&#x200B;**[!UICONTROL Relations]**&#x200B;下的左側導軌中。 選取左側邊欄中的關係欄位名稱，以顯示畫布中的欄位，不論其巢狀的深度為何。
+如果您正在檢查包含關係欄位的方案，則該欄位將列在&#x200B;**[!UICONTROL Relationships]**&#x200B;下的左側導軌中。 選取左側邊欄中的關係欄位名稱，以顯示畫布中的欄位，不論其巢狀的深度為何。
 
 關係欄位也會在畫布中唯一反白標示，顯示欄位所參照之目標架構的名稱。 如果選擇關係欄位的名稱，則可以在右側欄中查看目標方案的主要標識的身份名稱空間。
 
@@ -100,8 +100,8 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->有關在XDM架構中使用關係的詳細資訊，請參閱[在UI](../tutorials/create-schema-ui.md)中建立關係的教程。
+>有關在XDM結構描述中使用關係的詳細資訊，請參閱[在UI](../tutorials/create-schema-ui.md)中建立關係的教程。
 
 ## 後續步驟
 
-本檔案說明如何在Experience Platform UI中探索現有的XDM資源。 有關[!UICONTROL 方案]工作區和[!DNL Schema Editor]的不同功能的詳細資訊，請參閱[[!UICONTROL 方案]工作區概述](./overview.md)。
+本檔案說明如何在Experience PlatformUI中探索現有的XDM資源。 有關[!UICONTROL Schemas]工作區和[!DNL Schema Editor]不同功能的詳細資訊，請參閱[[!UICONTROL Schemas]工作區概述](./overview.md)。
