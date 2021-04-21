@@ -1,17 +1,17 @@
 ---
-keywords: Experience Platform; home；熱門主題；廣告系統；廣告系統
+keywords: Experience Platform；首頁；熱門主題；廣告系統；廣告系統
 solution: Experience Platform
 title: 使用Flow Service API探索廣告系統
-topic: overview
+topic-legacy: overview
 description: Flow Service用於收集和集中Adobe Experience Platform內不同來源的客戶資料。 該服務提供用戶介面和REST風格的API，所有支援的源都可從中連接。 本教學課程使用Flow Service API來探索廣告系統。
+exl-id: 3016ce1e-12e6-47ce-a4c5-52f8d440f515
 translation-type: tm+mt
-source-git-commit: 62266187ed1f3ce2f0acca3f50487fb70cfa7307
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '633'
 ht-degree: 1%
 
 ---
-
 
 # 使用[!DNL Flow Service] API探索廣告系統
 
@@ -21,7 +21,7 @@ ht-degree: 1%
 
 ## 快速入門
 
-本指南需要有效瞭解Adobe Experience Platform的下列元件：
+本指南需要對Adobe Experience Platform的下列組成部分有切實的瞭解：
 
 * [來源](../../../home.md): [!DNL Experience Platform] 允許從各種來源接收資料，同時提供使用服務構建、標籤和增強傳入資料的 [!DNL Platform] 能力。
 * [沙盒](../../../../sandboxes/home.md): [!DNL Experience Platform] 提供虛擬沙盒，可將單一執行個體分 [!DNL Platform] 割為不同的虛擬環境，以協助開發和發展數位體驗應用程式。
@@ -48,13 +48,13 @@ ht-degree: 1%
 
 * `x-sandbox-name: {SANDBOX_NAME}`
 
-所有包含裝載(POST、PUT、PATCH)的請求都需要額外的媒體類型標題：
+所有包含裝載(POST、PUT、PATCH)的請求都需要附加的媒體類型標題：
 
 * `Content-Type: application/json`
 
 ## 探索您的資料表格
 
-使用廣告系統的基本連線，您可以執行GET請求來探索資料表。 使用以下調用查找要檢查或裝入[!DNL Platform]的表的路徑。
+使用廣告系統的基本連線，您可以執行GET要求來探索資料表。 使用以下調用查找要檢查或裝入[!DNL Platform]的表的路徑。
 
 **API格式**
 
@@ -66,7 +66,7 @@ GET /connections/{BASE_CONNECTION_ID}/explore?objectType=root
 | --- | --- |
 | `{BASE_CONNECTION_ID}` | 廣告系統的基本連線ID。 |
 
-**請求**
+**要求**
 
 ```shell
 curl -X GET \
@@ -114,7 +114,7 @@ curl -X GET \
 ]
 ```
 
-## 檢查表格結構
+## Inspect桌子的結構
 
 若要從廣告系統檢查表格的結構，請在指定表格路徑作為查詢參數時執行GET請求。
 
@@ -129,7 +129,7 @@ GET /connections/{BASE_CONNECTION_ID}/explore?objectType=table&object={TABLE_PAT
 | `{BASE_CONNECTION_ID}` | 廣告系統的連線ID。 |
 | `{TABLE_PATH}` | 廣告系統中表格的路徑。 |
 
-**請求**
+**要求**
 
 ```shell
 curl -X GET \
