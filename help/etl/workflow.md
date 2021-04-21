@@ -1,17 +1,17 @@
 ---
-keywords: Experience Platform; home；熱門主題；ETL;etl;etl工作流；ETL工作流
+keywords: Experience Platform;home；熱門主題；ETL;etl;etl工作流；ETL工作流
 solution: Experience Platform
 title: ETL工作流程
-topic: overview
+topic-legacy: overview
 description: 各種擷取、轉換和載入(ETL)工具的格式可能不同，但大部分都會公開類似的功能，以協助結合多個資料來源。
+exl-id: 09de6c50-ad04-4d7c-99e6-33784fb0dd58
 translation-type: tm+mt
-source-git-commit: f8186e467dc982003c6feb01886ed16d23572955
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '213'
 ht-degree: 0%
 
 ---
-
 
 # ETL工作流程
 
@@ -23,7 +23,7 @@ ht-degree: 0%
 
 [ETL整合指南](home.md)中概述的步驟說明了以下操作。 有些步驟會參照特定的「圖」，有些則會說明與此處顯示的工作流程類似的動作。
 
-### 圖1 —— 設定新的Adobe Experience Platform連接器：
+### 圖1 —— 配置新的Adobe Experience Platform介面：
 
 ![](images/image2.png)
 
