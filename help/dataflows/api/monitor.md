@@ -1,22 +1,22 @@
 ---
-keywords: Experience Platform; home；熱門主題；監控資料流；流服務api；流服務
+keywords: Experience Platform；首頁；熱門主題；監控資料流；流服務api；流服務
 solution: Experience Platform
 title: 使用流服務API監視資料流
-topic: overview
+topic-legacy: overview
 type: Tutorial
 description: 本教學課程涵蓋使用Flow Service API監控流程執行資料的完整性、錯誤和度量的步驟。
+exl-id: c4b2db97-eba4-460d-8c00-c76c666ed70e
 translation-type: tm+mt
-source-git-commit: f8186e467dc982003c6feb01886ed16d23572955
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '722'
 ht-degree: 1%
 
 ---
 
-
 # 使用流服務API監視資料流
 
-Adobe Experience Platform可讓您從外部來源擷取資料，同時讓您能夠使用[!DNL Platform]服務來建構、標示並增強傳入資料。 您可以從多種來源（例如Adobe應用程式、雲端儲存空間、資料庫等）擷取資料。 此外，Experience Platform還允許將資料啟動給外部合作夥伴。
+Adobe Experience Platform允許從外部來源接收資料，同時提供使用[!DNL Platform]服務構建、標籤和增強傳入資料的能力。 您可以從多種來源收錄資料，例如Adobe應用程式、雲端儲存空間、資料庫等。 此外，Experience Platform允許將資料激活給外部合作夥伴。
 
 [!DNL Flow Service] 用於收集和集中Adobe Experience Platform內不同來源的客戶資料。該服務提供用戶介面和REST風格的API，所有支援的源和目標都可從中連接。
 
@@ -26,7 +26,7 @@ Adobe Experience Platform可讓您從外部來源擷取資料，同時讓您能�
 
 本教程要求您具有有效資料流的ID值。 如果您沒有有效的資料流ID，請從[源概述](../../sources/home.md)或[目標概述](../../destinations/catalog/overview.md)中選擇所選的連接器，並遵循在嘗試本教程之前概述的步驟。
 
-本教學課程也要求您對Adobe Experience Platform的下列元件有正確的認識：
+本教學課程還要求您對Adobe Experience Platform的以下部分有切實的瞭解：
 
 - [目標](../../destinations/home.md):目標是與常用應用程式預先建立的整合，可讓跨通道行銷宣傳、電子郵件宣傳、目標廣告和許多其他使用案例的平台資料順暢啟動。
 - [來源](../../sources/home.md): [!DNL Experience Platform] 允許從各種來源接收資料，同時提供使用服務構建、標籤和增強傳入資料的 [!DNL Platform] 能力。
@@ -50,13 +50,13 @@ Adobe Experience Platform可讓您從外部來源擷取資料，同時讓您能�
 
 - `x-sandbox-name: {SANDBOX_NAME}`
 
-所有包含裝載(POST、PUT、PATCH)的請求都需要額外的媒體類型標題：
+所有包含裝載(POST、PUT、PATCH)的請求都需要附加的媒體類型標題：
 
 - `Content-Type: application/json`
 
 ## 監控流程執行
 
-建立資料流後，對[!DNL Flow Service] API執行GET請求。
+進行資料流後，請對[!DNL Flow Service] API執行GET請求。
 
 **API格式**
 
@@ -68,7 +68,7 @@ GET /runs?property=flowId=={FLOW_ID}
 | --------- | ----------- |
 | `{FLOW_ID}` | 要監視的資料流的唯一`id`值。 |
 
-**請求**
+**要求**
 
 以下請求將檢索現有資料流的規範。
 
