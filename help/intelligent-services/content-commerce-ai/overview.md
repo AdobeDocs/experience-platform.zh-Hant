@@ -1,17 +1,17 @@
 ---
-keywords: Experience Cloud；快速入門；內容與商務ai；熱門主題；智慧服務；ccai
+keywords: Experience Cloud；入門；內容與商務ai；熱門主題；智慧服務；ccai
 solution: Experience Cloud, Intelligent Services, Experience Platform
 title: 內容與商務AI概觀
-topic: Content and Commerce AI
+topic-legacy: Content and Commerce AI
 description: 內容與商務AI是一組AI服務，可讓您從內容中擷取智慧功能、組織、簡化內容流程，並為客戶提供更具影響力的個人化體驗。
+exl-id: 65c527d7-b1bd-414f-aba1-8445676a7052
 translation-type: tm+mt
-source-git-commit: eb163949f91b0d1e9cc23180bb372b6f94fc951f
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '419'
 ht-degree: 1%
 
 ---
-
 
 # 內容與商務AI概觀
 
@@ -54,4 +54,3 @@ ht-degree: 1%
 - 使用客戶的個人檔案，提供改善的個人化體驗、會議中的體驗，以及後續的體驗。
 - 使用內容功能獲取客戶行為的見解，從而推動KPI。
 - 使用內容見解改善內容建立、製作和選擇。
-
