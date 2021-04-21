@@ -2,16 +2,16 @@
 keywords: Experience Platform;home；熱門主題；策略實施；基於API的實施；資料治理
 solution: Experience Platform
 title: 策略API端點
-topic: developer guide
-description: 資料使用原則是貴組織採用的規則，可說明您在Experience Platform內對資料執行的行銷動作類型，或受其限制。 /policys端點用於與查看、建立、更新或刪除資料使用策略相關的所有API調用。
+topic-legacy: developer guide
+description: 資料使用原則是貴組織採用的規則，可說明您允許或限制對Experience Platform內資料執行的行銷動作類型。 /policys端點用於與查看、建立、更新或刪除資料使用策略相關的所有API調用。
+exl-id: 62a6f15b-4c12-4269-bf90-aaa04c147053
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '1817'
 ht-degree: 2%
 
 ---
-
 
 # 策略端點
 
@@ -23,7 +23,7 @@ ht-degree: 2%
 
 ## 檢索策略清單{#list}
 
-您可以分別對`/policies/core`或`/policies/custom`發出GET請求，以列出所有`core`或`custom`策略。
+您可以分別向`/policies/core`或`/policies/custom`發出GET請求，以列出所有`core`或`custom`策略。
 
 **API格式**
 
@@ -32,7 +32,7 @@ GET /policies/core
 GET /policies/custom
 ```
 
-**請求**
+**要求**
 
 下列請求會擷取您組織所定義的自訂原則清單。
 
@@ -149,7 +149,7 @@ curl -X GET \
 
 ## 查找策略{#look-up}
 
-您可以在GET請求的路徑中加入該策略的`id`屬性，以查找特定策略。
+您可以在請求路徑中加入該策略的`id`屬性，以查找特定策略。
 
 **API格式**
 
@@ -162,7 +162,7 @@ GET /policies/custom/{POLICY_ID}
 | --- | --- |
 | `{POLICY_ID}` | 您要查找的策略的`id`。 |
 
-**請求**
+**要求**
 
 ```shell
 curl -X GET \
@@ -279,7 +279,7 @@ curl -X GET \
 POST /policies/custom
 ```
 
-**請求**
+**要求**
 
 下列請求會建立新原則，限制對包含標籤`C1 OR (C3 AND C7)`的資料執行行銷動作`exportToThirdParty`。
 
@@ -324,7 +324,7 @@ curl -X POST \
 
 **回應**
 
-成功的響應返回新建立策略的詳細資訊，包括其`id`。 此值是唯讀的，在建立原則時會自動指派。
+成功的響應返回新建策略的詳細資訊，包括其`id`。 此值是唯讀的，在建立原則時會自動指派。
 
 ```JSON
 {
@@ -375,7 +375,7 @@ curl -X POST \
 >
 >您只能更新自訂原則。 如果要啟用或禁用核心策略，請參閱[中有關更新已啟用核心策略清單的章節](#update-enabled-core)。
 
-您可以在PUT請求路徑中提供現有自訂原則的ID，以包含完整原則的更新形式的裝載，借此更新現有自訂原則。 換句話說，PUT請求實際上重寫策略。
+您可以在PUT請求的路徑中提供現有自訂原則的ID，以更新包含完整原則更新形式的裝載。 換言之，PUT請求實質上會改寫策略。
 
 >[!NOTE]
 >
@@ -391,7 +391,7 @@ PUT /policies/custom/{POLICY_ID}
 | --- | --- |
 | `{POLICY_ID}` | 您要更新的策略的`id`。 |
 
-**請求**
+**要求**
 
 在此範例中，將資料匯出至第三方的條件已經變更，而且，如果`C1 AND C5`資料標籤存在，您現在需要建立的原則才能拒絕此行銷動作。
 
@@ -493,13 +493,13 @@ PATCH /policies/custom/{POLICY_ID}
 | --- | --- |
 | `{POLICY_ID}` | 要更新其屬性的策略的`id`。 |
 
-**請求**
+**要求**
 
 以下請求使用兩個`replace`操作將策略狀態從`DRAFT`更改為`ENABLED` ，並使用新說明更新`description`欄位。
 
 >[!IMPORTANT]
 >
->在單個請求中發送多個PATCH操作時，將按照它們在陣列中的顯示順序進行處理。 請務必視需要以正確順序傳送請求。
+>在單一請求中傳送多個PATCH作業時，會依其在陣列中的顯示順序加以處理。 請務必視需要以正確順序傳送請求。
 
 ```SHELL
 curl -X PATCH \
@@ -573,7 +573,7 @@ curl -X PATCH \
 
 ## 刪除自訂原則{#delete}
 
-您可以通過在DELETE請求的路徑中包括其`id`來刪除自定義策略。
+您可以刪除自訂原則，方法是將其`id`納入DELETE請求的路徑。
 
 >[!WARNING]
 >
@@ -589,7 +589,7 @@ DELETE /policies/custom/{POLICY_ID}
 | --- | --- |
 | `{POLICY_ID}` | 您要刪除之原則的ID。 |
 
-**請求**
+**要求**
 
 ```shell
 curl -X DELETE \
@@ -616,7 +616,7 @@ curl -X DELETE \
 GET /enabledCorePolicies
 ```
 
-**請求**
+**要求**
 
 ```shell
 curl -X GET \
@@ -672,7 +672,7 @@ curl -X GET \
 PUT /enabledCorePolicies
 ```
 
-**請求**
+**要求**
 
 下列請求會根據裝載中提供的ID更新已啟用核心原則的清單。
 
