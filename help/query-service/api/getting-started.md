@@ -1,25 +1,25 @@
 ---
-keywords: Experience Platform;home;popular topics;query service;Query service;query
+keywords: Experience Platform;home;popular topics;query service；查詢服務；query
 solution: Experience Platform
 title: 查詢服務API指南
-topic: query templates
-description: Query Service API可讓開發人員使用標準SQL來查詢其Adobe Experience Platform資料。 請依照本指南，瞭解如何使用API執行關鍵作業。
+topic-legacy: query templates
+description: Query Service API可讓開發人員使用標準SQL查詢其Adobe Experience Platform資料。 請依照本指南，瞭解如何使用API執行關鍵作業。
+exl-id: 2f4a156b-5623-419a-a9b2-72310f755708
 translation-type: tm+mt
-source-git-commit: e649ab3da077cdd8e98562199b8bdece6108a572
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '395'
 ht-degree: 1%
 
 ---
 
-
 # [!DNL Query Service] API指南
 
-本開發人員指南提供在Adobe Experience Platform [!DNL Query Service] API中執行各種作業的步驟。
+本開發人員指南提供在Adobe Experience Platform[!DNL Query Service] API中執行各種操作的步驟。
 
 ## 快速入門
 
-本指南需要對使用[!DNL Query Service]時涉及的各種Adobe Experience Platform服務有良好的瞭解。
+本指南要求對使用[!DNL Query Service]的Adobe Experience Platform各服務部門有切實的瞭解。
 
 - [[!DNL Query Service]](../home.md):提供查詢資料集並將生成的查詢捕獲為中的新資料集的能力 [!DNL Experience Platform]。
 - [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md):組織客戶體驗資 [!DNL Experience Platform] 料的標準化架構。
@@ -35,7 +35,7 @@ ht-degree: 1%
 
 若要呼叫[!DNL Experience Platform] API，您必須先完成[驗證教學課程](https://www.adobe.com/go/platform-api-authentication-en)。 完成驗證教學課程後，所有[!DNL Platform] API呼叫中每個所需標題的值都會顯示在下面：
 
-- 授權：`Bearer {ACCESS_TOKEN}`
+- Authorization: `Bearer {ACCESS_TOKEN}`
 - x-api-key:`{API_KEY}`
 - x-gw-ims-org-id:`{IMS_ORG}`
 
