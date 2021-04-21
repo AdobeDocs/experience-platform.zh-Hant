@@ -1,33 +1,33 @@
 ---
-keywords: Experience Platform; home；熱門主題；監視器帳戶；監視器資料流；資料流；目標
-description: 目標可讓您將Adobe Experience Platform中的資料啟動給無數外部合作夥伴。 本教學課程提供如何使用Experience Platform使用者介面監控目的地資料流的指示。
+keywords: Experience Platform；首頁；熱門主題；監視器帳戶；監視器資料流；資料流；目標
+description: 目的地可讓您將資料從Adobe Experience Platform啟動至無數外部合作夥伴。 本教程提供如何使用Experience Platform用戶介面監視目標的資料流的說明。
 solution: Experience Platform
 title: 在UI中監視目標的資料流
-topic: overview
+topic-legacy: overview
 type: Tutorial
+exl-id: 8eb7bb3c-f2dc-4dbc-9cf5-3d5d3224f5f1
 translation-type: tm+mt
-source-git-commit: f8186e467dc982003c6feb01886ed16d23572955
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '442'
+source-wordcount: '430'
 ht-degree: 1%
 
 ---
 
-
 # 在UI中監視目標的資料流
 
-目標可讓您將Adobe Experience Platform中的資料啟動給無數外部合作夥伴。 本教學課程提供如何使用Experience Platform使用者介面監控目的地資料流的指示。
+目的地可讓您將資料從Adobe Experience Platform啟動至無數外部合作夥伴。 本教程提供如何使用Experience Platform用戶介面監視目標的資料流的說明。
 
 ## 快速入門
 
-本教學課程需要對Adobe Experience Platform的下列元件有正確的認識：
+本教學課程需要對Adobe Experience Platform的下列部分有正確的理解：
 
 - [目標](../../destinations/home.md):目標是與常用應用程式預先建立的整合，可讓跨通道行銷宣傳、電子郵件宣傳、目標廣告和許多其他使用案例的平台資料順暢啟動。
 - [沙盒](../../sandboxes/home.md): [!DNL Experience Platform] 提供虛擬沙盒，可將單一執行個體分 [!DNL Platform] 割為不同的虛擬環境，以協助開發和發展數位體驗應用程式。
 
 ## 監視資料流
 
-在平台UI的&#x200B;**[!UICONTROL 目標]**&#x200B;工作區中，導覽至&#x200B;**[!UICONTROL 瀏覽]**&#x200B;標籤，並選取您要檢視的目標名稱。
+在平台UI的&#x200B;**[!UICONTROL Destinations]**&#x200B;工作區中，導覽至&#x200B;**[!UICONTROL Browse]**&#x200B;標籤，並選取您要檢視的目標名稱。
 
 ![](../assets/ui/monitor-destinations/select-destination.png)
 
@@ -42,12 +42,12 @@ ht-degree: 1%
 | 正在處理 | `Processing`狀態表示資料流尚未激活。 建立新資料流後，通常會立即出現此狀態。 |
 | 錯誤 | `Error`狀態表示資料流的激活過程已中斷。 |
 
-## [!UICONTROL 資料流運行]
+## [!UICONTROL Dataflow runs]
 
-[!UICONTROL 資料流運行]頁籤提供了資料流運行到批處理目標的度量資料。 會顯示個別執行及其特定度量的清單，以及下列描述檔記錄總計：
+[!UICONTROL Dataflow runs]頁籤提供資料流運行到批處理目標的度量資料。 會顯示個別執行及其特定度量的清單，以及下列描述檔記錄總計：
 
-- **[!UICONTROL 已激活配置檔案記錄]**:為啟動而建立或更新的描述檔記錄總計。
-- **[!UICONTROL 已略過描述檔記錄]**:根據描述檔退出或遺失屬性，跳過以進行啟動的描述檔記錄總計。
+- **[!UICONTROL Profile records activated]**:為啟動而建立或更新的描述檔記錄總計。
+- **[!UICONTROL Profile records skipped]**:根據描述檔退出或遺失屬性，跳過以進行啟動的描述檔記錄總計。
 
 ![](../assets/ui/monitor-destinations/dataflow-runs.png)
 
