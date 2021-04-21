@@ -1,21 +1,21 @@
 ---
-keywords: Experience Platform;profile;real-time customer profile;unified profile;Unified Profile;unified;Profile;rtcp;enable profile;Enable profile;Union schema;UNION PROFILE;union profile
+keywords: Experience Platform；配置檔案；即時客戶配置檔案；統一配置檔案；統一配置檔案；統一配置檔案；配置檔案；rtcp；啟用配置檔案；啟用配置檔案；聯合模式；聯合配置檔案；聯合配置檔案
 title: Union Schema UI指南
-topic: guide
+topic-legacy: guide
 type: Documentation
-description: 在Adobe Experience Platform使用者介面(UI)中，您可以輕鬆檢視組織內的任何聯合架構，並預覽特定類別的欄位、身分、關係和貢獻架構。 本指南提供如何使用平台UI檢視和探索聯合架構的詳細資訊。
+description: 在Adobe Experience Platform用戶介面(UI)中，您可以輕鬆查看組織內的任何聯合架構，並預覽特定類的欄位、身份、關係和貢獻架構。 本指南提供如何使用平台UI檢視和探索聯合架構的詳細資訊。
+exl-id: 52af0d77-e37d-4ed8-9dee-71a50b337b4e
 translation-type: tm+mt
-source-git-commit: e6ecc5dac1d09c7906aa7c7e01139aa194ed662b
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '1044'
+source-wordcount: '1028'
 ht-degree: 0%
 
 ---
 
+# [!UICONTROL Union schema] UI指南
 
-# [!UICONTROL Union架] 構UI指南
-
-在Adobe Experience Platform使用者介面(UI)中，您可以輕鬆檢視組織內的任何聯合架構，並預覽特定類別的欄位、身分、關係和貢獻架構。 本指南提供如何使用平台UI檢視和探索聯合架構的詳細資訊。
+在Adobe Experience Platform用戶介面(UI)中，您可以輕鬆查看組織內的任何聯合架構，並預覽特定類的欄位、身份、關係和貢獻架構。 本指南提供如何使用平台UI檢視和探索聯合架構的詳細資訊。
 
 ## 快速入門
 
@@ -27,7 +27,7 @@ ht-degree: 0%
 
 ## 瞭解聯合結構
 
-即時客戶個人檔案可讓您建立強穩、集中的個人檔案，其中包含客戶屬性和時間戳記事件，這些事件會在與Adobe Experience Platform整合的系統間進行客戶互動。 此資料的格式和結構由Experience Data Model(XDM)架構提供，每個架構都以XDM類別為基礎，並包含與該類別相容的欄位。
+即時客戶個人檔案可讓您建立強穩、集中的個人檔案，其中包含客戶屬性和時間戳記事件，每個客戶互動都跨與Adobe Experience Platform整合的系統。 此資料的格式和結構由Experience Data Model(XDM)架構提供，每個架構都以XDM類別為基礎，並包含與該類別相容的欄位。
 
 可以為多個使用案例建立結構描述，引用相同的類，但包含其使用的特定欄位。 為配置檔案啟用架構後，它將成為聯合架構的一部分。 換句話說，聯合方案由多個方案組成，這些方案共用相同的類，並且已啟用配置檔案。 聯合架構可讓您查看共用同一類的架構中包含的所有欄位的合併。 即時客戶個人檔案使用聯合架構來建立每個客戶的整體檢視。
 
@@ -35,13 +35,13 @@ ht-degree: 0%
 
 ## 查看聯合結構
 
-要導航到平台UI中的聯合架構，請從左側導航中選擇&#x200B;**[!UICONTROL 概要檔案]**，然後選擇&#x200B;**[!UICONTROL 聯合架構]**&#x200B;頁籤。 將開啟[!UICONTROL Union Schema]頁籤，以顯示當前所選類的union架構。
+若要導覽至平台UI內的聯合結構，請從左側導覽中選擇&#x200B;**[!UICONTROL Profiles]**，然後選擇&#x200B;**[!UICONTROL Union Schema]**&#x200B;標籤。 將開啟[!UICONTROL Union Schema]頁籤，以顯示當前所選類的聯合模式。
 
 ![](../images/union-schema/union-schema-landing.png)
 
 ## 選擇類
 
-要顯示特定XDM類的聯合模式，請從&#x200B;**[!UICONTROL Class]**&#x200B;下拉式清單中選擇類。 由於並非所有類都具有聯合方案，因此下拉清單中只有具有聯合方案的類（即具有已啟用配置檔案的方案的類）可用。
+要顯示特定XDM類的聯合模式，請從&#x200B;**[!UICONTROL Class]**&#x200B;下拉式清單中選擇該類。 由於並非所有類都具有聯合方案，因此下拉清單中只有具有聯合方案的類（即具有已啟用配置檔案的方案的類）可用。
 
 選擇類後，顯示的模式將更新以反映所選類的聯合模式。 例如，您可以選擇&#x200B;**[!UICONTROL XDM Individual Profile]**&#x200B;來查看該類的聯合模式。
 
@@ -65,7 +65,7 @@ ht-degree: 0%
 
 ## 檢視貢獻結構
 
-通過選擇&#x200B;**[!UICONTROL 所有提供方案]**&#x200B;以展開方案清單，還可以查看哪些特定方案對聯合方案有貢獻。 根據您選擇的類和您的組織在Platform中建立的方案數，此清單可以是包含單個方案的簡短清單或包含多個方案的長清單。
+通過選擇&#x200B;**[!UICONTROL All contributing schemas]**&#x200B;展開方案清單，還可以查看哪些特定方案將對聯合方案作出貢獻。 根據您選擇的類和您的組織在Platform中建立的方案數，此清單可以是包含單個方案的簡短清單或包含多個方案的長清單。
 
 ![](../images/union-schema/union-schema-contributing-schemas.png)
 
@@ -75,7 +75,7 @@ ht-degree: 0%
 
 ## 檢視身分
 
-通過UI，您可以通過選擇&#x200B;**[!UICONTROL Identitys]**&#x200B;展開清單來查看聯合架構中包含的身份清單。
+通過UI，您可以通過選擇&#x200B;**[!UICONTROL Identities]**&#x200B;展開清單來查看聯合架構中包含的身份清單。
 
 ![](../images/union-schema/union-schema-identities.png)
 
@@ -89,7 +89,7 @@ ht-degree: 0%
 
 聯合模式UI還允許您查看已基於所選模式類為模式定義的關係。 定義關係是連接屬於不同類別的兩個結構描述的一種方式，以便獲得更複雜的客戶資料見解。
 
-如果已為所選類建立關係，則選擇&#x200B;**[!UICONTROL Relations]**&#x200B;將顯示用於建立關係的欄位清單。 並非所有方案都使用或需要定義關係，因此關係部分通常不包含任何欄位。
+如果已為所選類建立關係，則選擇&#x200B;**[!UICONTROL Relationships]**&#x200B;將顯示用於建立關係的欄位清單。 並非所有方案都使用或需要定義關係，因此關係部分通常不包含任何欄位。
 
 若要進一步瞭解架構關係，包括如何使用UI定義它們，請造訪[本檔案，瞭解架構關係](../../xdm/tutorials/relationship-ui.md)。
 
