@@ -1,11 +1,10 @@
 ---
-product: experience-platform
 audience: user
 user-guide-title: 目錄與資料集指南
 user-guide-description: 在 Data Lake 中探索資料處理歷程、中繼資料、檔案說明、目錄和資料集。
-feature: Data Management
+feature: 資料管理
 translation-type: tm+mt
-source-git-commit: ac6935f09f620ea55cf8f612ff0a1fba503b5e17
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '108'
 ht-degree: 21%
@@ -17,7 +16,7 @@ ht-degree: 21%
 
 * [目錄服務概述](home.md)
 * 目錄服務API {#api}
-   * [快速入門](api/getting-started.md)
+   * [開始使用](api/getting-started.md)
    * [使用查詢參數篩選目錄資料](api/filter-data.md)
    * [清單對象](api/list-objects.md)
    * [查找對象](api/look-up-object.md)
