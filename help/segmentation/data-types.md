@@ -1,21 +1,21 @@
 ---
-keywords: Experience Platform; home；熱門主題；資料類型；資料類型；資料類型；資料類型；分段資料類型；分段；分段服務；分段服務資料類型；
+keywords: Experience Platform；主題；熱門話題；資料類型；資料類型；資料類型；資料類型；分段資料類型；分段；分段服務；分段服務資料類型；
 solution: Experience Platform
 title: 分段服務中支援的資料類型
-topic: overview
-description: Adobe Segmentation Service支援所有Experience Data Model(XDM)資料類型。 構成區段定義的規則會依下列資料類型來情境化。
+topic-legacy: overview
+description: Adobe分段服務支援所有體驗資料模型(XDM)資料類型。 構成區段定義的規則會依下列資料類型來情境化。
+exl-id: 73f932a7-f864-4566-ade7-c148a12dc83c
 translation-type: tm+mt
-source-git-commit: b3defc3e33a55855e307ab70b9797d985d5719e3
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '514'
 ht-degree: 3%
 
 ---
 
-
 # 區段服務中支援的資料類型
 
-Adobe Experience Platform劃分服務支援所有Experience Data Model(XDM)資料類型。 構成區段定義的規則會依下列資料類型來情境化。
+Adobe Experience Platform區段服務支援所有Experience Data Model(XDM)資料類型。 構成區段定義的規則會依下列資料類型來情境化。
 
 ## 字串資料
 
@@ -40,7 +40,7 @@ Adobe Experience Platform劃分服務支援所有Experience Data Model(XDM)資�
 
 ## 體驗事件
 
-[!DNL XDM ExperienceEvents]是Adobe Experience Platform架構，可記錄客戶與[!DNL Platform]整合式應用程式的明確和隱含互動，包括互動發生時系統的快照。 [!DNL ExperienceEvents] 是事實記錄。因此，它們是區段定義期間可供您使用的資料來源。
+作為Adobe Experience Platform模式，[!DNL XDM ExperienceEvents]記錄了與[!DNL Platform]整合應用程式的顯式和隱式客戶交互，包括交互發生時系統的快照。 [!DNL ExperienceEvents] 是事實記錄。因此，它們是區段定義期間可供您使用的資料來源。
 
 如下表所示，事件資料會使用有助於調整事件行為並指定事件屬性的關鍵字來呈現。
 
@@ -55,7 +55,7 @@ Adobe Experience Platform劃分服務支援所有Experience Data Model(XDM)資�
 
 外部對象也可以用作新區段定義的元件，將其屬性規則新增至新區段。
 
-目前，只有Adobe Audience Manager才支援做為外部觀眾，未來會啟用其他來源。 有關搭配平台使用Adobe Audience Manager觀眾的更多資訊，請參閱Adobe Audience Manager檔案](https://docs.adobe.com/content/help/en/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html)中的[觀眾分享指南。
+目前，只有Adobe Audience Manager作為外部受眾受到支援，未來將啟用其他來源。 有關搭配平台使用Adobe Audience Manager觀眾的更多資訊，請參閱Adobe Audience Manager檔案](https://docs.adobe.com/content/help/en/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html)中的[觀眾分享指南。
 
 ### 區段共用
 
