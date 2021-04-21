@@ -1,17 +1,17 @@
 ---
-keywords: Experience Platform；開發人員指南；端點；Data Science Workspace；熱門主題；mlservices;sensei機器學習api
+keywords: Experience Platform；開發人員指南；端點；資料科學工作區；熱門主題；mlservices;sensei機器學習api
 solution: Experience Platform
 title: MLServices API端點
-topic: Developer guide
+topic-legacy: Developer guide
 description: MLService是已發佈的訓練模型，可讓您的組織存取和重複使用先前開發的模型。 MLServices的主要功能是能夠依計畫自動化培訓與計分。 排程的訓練執行可協助維持模型的效率和正確性，而排程的計分執行則可確保產生一致的新見解。
+exl-id: cd236e0b-3bfc-4d37-83eb-432f6ad5c5b6
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '890'
 ht-degree: 2%
 
 ---
-
 
 # MLServices端點
 
@@ -21,7 +21,7 @@ MLService是已發佈的訓練模型，可讓您的組織存取和重複使用�
 
 ## 建立MLService {#create-an-mlservice}
 
-您可以執行POST請求和裝載來建立MLService，此裝載提供服務名稱和有效的MLInstance ID。 建立MLService時所使用的MLInstance不需要有現有的訓練實驗，但您可以提供對應的實驗ID和訓練執行ID，選擇使用現有的訓練模型來建立MLService。
+您可以執行POST請求和裝載來建立MLService，此裝載會提供服務名稱和有效的MLInstance ID。 建立MLService時所使用的MLInstance不需要有現有的訓練實驗，但您可以提供對應的實驗ID和訓練執行ID，選擇使用現有的訓練模型來建立MLService。
 
 **API格式**
 
@@ -29,7 +29,7 @@ MLService是已發佈的訓練模型，可讓您的組織存取和重複使用�
 POST /mlServices
 ```
 
-**請求**
+**要求**
 
 ```shell
 curl -X POST \
@@ -124,7 +124,7 @@ GET /mlServices?{QUERY_PARAMETER_1}={VALUE_1}&{QUERY_PARAMETER_2}={VALUE_2}
 | `{QUERY_PARAMETER}` | 用於篩選結果的[可用查詢參數](./appendix.md#query)之一。 |
 | `{VALUE}` | 前面查詢參數的值。 |
 
-**請求**
+**要求**
 
 下列請求包含查詢並擷取共用相同MLInstance ID(`{MLINSTANCE_ID}`)的MLServices清單。
 
@@ -168,7 +168,7 @@ curl -X GET \
 
 ## 檢索特定MLService {#retrieve-a-specific-mlservice}
 
-您可以執行GET請求，在請求路徑中包含所需的MLService ID來擷取特定實驗的詳細資訊。
+您可以執行請求，將所需的MLService ID包含在請求路徑中，以擷取特定實驗的詳細資訊。
 
 **API格式**
 
@@ -178,7 +178,7 @@ GET /mlServices/{MLSERVICE_ID}
 
 * `{MLSERVICE_ID}`:有效的MLService ID。
 
-**請求**
+**要求**
 
 ```shell
 curl -X GET \
@@ -212,11 +212,11 @@ curl -X GET \
 
 ## 更新MLService {#update-an-mlservice}
 
-您可以透過PUT請求覆寫現有MLService的屬性，以更新現有MLService，該PUT請求會在請求路徑中包含目標MLService的ID，並提供包含已更新屬性的JSON裝載。
+您可以透過PUT請求覆寫現有MLService的屬性，該請求在請求路徑中包含目標MLService的ID，並提供包含已更新屬性的JSON裝載，借此更新現有的MLService。
 
 >[!TIP]
 >
->為確保此PUT請求成功，建議您先執行GET請求，以[依ID](#retrieve-a-specific-mlservice)擷取MLService。 然後，修改並更新傳回的JSON物件，並套用已修改的JSON物件的完整內容作為PUT要求的裝載。
+>為確保此PUT請求成功，建議您先執行GET請求，以依ID](#retrieve-a-specific-mlservice)擷取MLService。 [然後，修改並更新傳回的JSON物件，並套用已修改的JSON物件作為PUT要求的裝載。
 
 **API格式**
 
@@ -226,7 +226,7 @@ PUT /mlServices/{MLSERVICE_ID}
 
 * `{MLSERVICE_ID}`:有效的MLService ID。
 
-**請求**
+**要求**
 
 ```shell
 curl -X PUT \
@@ -289,7 +289,7 @@ curl -X PUT \
 
 ## 刪除MLService
 
-您可以執行DELETE請求，將目標MLService的ID包含在請求路徑中，以刪除單一MLService。
+您可以執行DELETE請求，將目標MLService ID包含在請求路徑中，以刪除單一MLService。
 
 **API格式**
 
@@ -301,7 +301,7 @@ DELETE /mlServices/{MLSERVICE_ID}
 | --- | --- |
 | `{MLSERVICE_ID}` | 有效的MLService ID。 |
 
-**請求**
+**要求**
 
 ```shell
 curl -X DELETE \
@@ -336,7 +336,7 @@ DELETE /mlServices?mlInstanceId={MLINSTANCE_ID}
 | --- | --- |
 | `{MLINSTANCE_ID}` | 有效的MLInstance ID。 |
 
-**請求**
+**要求**
 
 ```shell
 curl -X DELETE \
