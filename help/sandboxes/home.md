@@ -2,16 +2,16 @@
 keywords: Experience Platform;home；熱門主題；沙盒；沙盒；測試；測試
 solution: Experience Platform
 title: 沙盒概觀
-topic: overview
+topic-legacy: overview
 description: 沙盒是單一Experience Platform例項中的虛擬分區，可讓您與數位體驗應用程式的開發流程順暢整合。
+exl-id: b760a979-8134-4a44-8433-ec6fb49bc508
 translation-type: tm+mt
-source-git-commit: 62ce5ac92d03a6e85589fc92e8d953f7fc1d8f31
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '755'
+source-wordcount: '754'
 ht-degree: 0%
 
 ---
-
 
 # 沙盒總覽
 
