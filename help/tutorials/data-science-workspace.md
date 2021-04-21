@@ -1,22 +1,22 @@
 ---
-keywords: Experience Platform;home；熱門主題；dsw;DSW
+keywords: Experience Platform；首頁；熱門主題；dsw;DSW
 solution: Experience Platform
 title: 資料科學工作區教學課程
-topic: tutorial
+topic-legacy: tutorial
 type: Tutorial
-description: Adobe Experience Platform Data Science Workspace運用機器學習和人工智慧，從您的資料建立見解。 Data Science Workspace整合至Adobe Experience Platform，可協助您透過Adobe解決方案使用內容和資料資產進行預測。
+description: Adobe Experience Platform資料科學工作區使用機器學習和人工智慧從您的資料中建立見解。 Data Science Workspace整合至Adobe Experience Platform，可協助您跨Adobe解決方案使用內容和資料資產進行預測。
+exl-id: 7cfd71b1-584f-4588-bbcd-bc42a08a0bc0
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '1304'
+source-wordcount: '1302'
 ht-degree: 0%
 
 ---
 
-
 # [!DNL Data Science Workspace] 教學課程
 
-Adobe Experience Platform [!DNL Data Science Workspace]使用機器學習和人工智慧從您的資料中建立見解。 [!DNL Data Science Workspace]已整合至Adobe Experience Platform，可協助您使用Adobe解決方案中的內容和資料資產進行預測。 所有技能等級的資料科學家都擁有複雜、簡單易用的工具，可支援快速開發、訓練和調整機器學習方式- AI技術的所有優點，而不需複雜。
+Adobe Experience Platform[!DNL Data Science Workspace]使用機器學習和人工智慧從您的資料中建立見解。 [!DNL Data Science Workspace]已整合至Adobe Experience Platform，可協助您跨Adobe解決方案使用內容和資料資產進行預測。 所有技能等級的資料科學家都擁有複雜、簡單易用的工具，可支援快速開發、訓練和調整機器學習方式- AI技術的所有優點，而不需複雜。
 
 若要進一步瞭解，請先閱讀[資料科學工作區概觀](../data-science-workspace/home.md)。
 
@@ -36,7 +36,7 @@ Adobe Experience Platform [!DNL Data Science Workspace]使用機器學習和人�
 
 ## 如何使用[!DNL JupyterLab]筆記本
 
-[!DNL JupyterLab] 是Web使用者介面，可 [!DNL Project Jupyter] 與Adobe Experience Platform緊密整合。它為資料科學家提供互動式開發環境，以便與[!DNL Jupyter Notebooks]、程式碼和資料搭配使用。 本檔案概述[!DNL JupyterLab]及其功能，以及執行常見動作的指示。
+[!DNL JupyterLab] 是網路使用者介面， [!DNL Project Jupyter] 與Adobe Experience Platform緊密整合。它為資料科學家提供互動式開發環境，以便與[!DNL Jupyter Notebooks]、程式碼和資料搭配使用。 本檔案概述[!DNL JupyterLab]及其功能，以及執行常見動作的指示。
 
 **本指南將幫助您：**
 - 訪問並瞭解[!DNL JupyterLab]介面。
@@ -73,7 +73,7 @@ Data Science Workspace中的JupyterLab目前支援[!DNL Python]、R、PySpark和
 >
 >本教學課程要求您具有[!DNL Docker]來源檔案URL。 如果您沒有[!DNL Docker]來源檔案URL，請造訪[將來源檔案封裝成配方教學課程](../data-science-workspace/models-recipes/package-source-files-recipe.md)。
 
-匯入方式教學課程提供如何設定和匯入封裝方式的深入資訊。 在本教學課程結束時，您可以在Adobe Experience Platform [!DNL Data Science Workspace]中建立、訓練和評估模型。
+匯入方式教學課程提供如何設定和匯入封裝方式的深入資訊。 在本教學課程結束時，您可以在Adobe Experience Platform[!DNL Data Science Workspace]中建立、訓練和評估模型。
 
 **本教學課程將協助您：**
 - 為方式建立一組設定。
@@ -83,7 +83,7 @@ Data Science Workspace中的JupyterLab目前支援[!DNL Python]、R、PySpark和
 
 ## 訓練和評估模型
 
-在Adobe Experience Platform [!DNL Data Science Workspace]中，機器學習模型是透過整合符合模型意圖的現有配方來建立的。 然後，對模型進行訓練和評估，通過微調其相關的超參數來優化其操作效率和效能。 方式可重複使用，這表示您可以使用單一方式，針對特定目的建立並量身打造多個模型。
+在Adobe Experience Platform[!DNL Data Science Workspace]中，機器學習模型是通過結合適合模型意圖的現有配方來建立的。 然後，對模型進行訓練和評估，通過微調其相關的超參數來優化其操作效率和效能。 方式可重複使用，這表示您可以使用單一方式，針對特定目的建立並量身打造多個模型。
 
 **本教學課程將協助您：**
 - 建立新模型。
@@ -94,7 +94,7 @@ Data Science Workspace中的JupyterLab目前支援[!DNL Python]、R、PySpark和
 
 ## 使用Model Insights框架優化模型
 
-模型洞察框架為資料科學家提供Adobe Experience Platform [!DNL Data Science Workspace]工具，讓他們快速且知情地選擇以實驗為基礎的最佳機器學習模型。 該框架將提高機器學習工作流程的速度和效率，並改善資料科學家的使用便利性。 這是透過為每個機器學習演算法類型提供預設範本來協助模型調整來完成。 最終結果使資料科學家和公民資料科學家能夠為其最終客戶做出更好的模型優化決策。
+模型洞察框架為資料科學家提供了Adobe Experience Platform[!DNL Data Science Workspace]的工具，以便快速、明智地選擇基於實驗的最佳機器學習模型。 該框架將提高機器學習工作流程的速度和效率，並改善資料科學家的使用便利性。 這是透過為每個機器學習演算法類型提供預設範本來協助模型調整來完成。 最終結果使資料科學家和公民資料科學家能夠為其最終客戶做出更好的模型優化決策。
 
 **本教學課程將協助您：**
 - 設定方式代碼。
@@ -105,7 +105,7 @@ Data Science Workspace中的JupyterLab目前支援[!DNL Python]、R、PySpark和
 
 ## 對模型評分
 
-在Adobe Experience Platform中，將輸入資料輸入現有的訓練模型，即可達到[!DNL Data Science Workspace]的評分。 然後，將計分結果儲存並作為新批在指定的輸出資料集中查看。
+將輸入資料輸入到現有的訓練模型中，可以在Adobe Experience Platform獲得[!DNL Data Science Workspace]評分。 然後，將計分結果儲存並作為新批在指定的輸出資料集中查看。
 
 **本教學課程將協助您：**
 - 建立新的計分執行。
@@ -115,17 +115,17 @@ Data Science Workspace中的JupyterLab目前支援[!DNL Python]、R、PySpark和
 
 ## 將模型發佈為服務
 
-Adobe Experience Platform [!DNL Data Science Workspace]可讓您將模型發佈為服務，讓IMS組織內的使用者可對資料評分，而不需建立自己的模型。 這可以使用[!DNL Platform]使用者介面或[!DNL Sensei Machine Learning] API來完成。
+Adobe Experience Platform[!DNL Data Science Workspace]可讓您將模型發佈為服務，讓IMS組織內的使用者可對資料進行分數，而不需建立自己的模型。 這可以使用[!DNL Platform]使用者介面或[!DNL Sensei Machine Learning] API來完成。
 
 **本教學課程將協助您：**
 - 將模型發佈為服務。
-- 使用透過[!DNL Platform] [!UICONTROL 服務庫]的服務對資料評分。
+- 使用透過[!DNL Platform] [!UICONTROL Service Gallery]的服務對資料進行分數。
 
-若要開始，請依照[API教學課程](../data-science-workspace/models-recipes/publish-model-service-api.md)或[UI教學課程](../data-science-workspace/models-recipes/publish-model-service-ui.md)的方式發佈模型。
+若要開始，請依照[API教學課程](../data-science-workspace/models-recipes/publish-model-service-api.md)或[UI教學課程](../data-science-workspace/models-recipes/publish-model-service-ui.md)的形式發佈模型。
 
 ## 排程模型的訓練和計分
 
-Adobe Experience Platform [!DNL Data Science Workspace]可讓您在機器學習服務上設定計畫的分數和訓練執行。 自動化培訓和計分流程有助於透過追蹤資料中的模式，持續維持並改善服務的效率。
+Adobe Experience Platform[!DNL Data Science Workspace]可讓您在機器學習服務上設定排程的分數和訓練執行。 自動化培訓和計分流程有助於透過追蹤資料中的模式，持續維持並改善服務的效率。
 
 **本教學課程將協助您：**
 - 設定排程計分
@@ -139,7 +139,7 @@ Adobe Experience Platform [!DNL Data Science Workspace]可讓您在機器學習�
 >
 >目前，功能管道僅能透過API使用。
 
-Adobe Experience Platform可讓您建立和建立自訂的功能管道，透過[!DNL Sensei Machine Learning Framework Runtime]大規模執行功能工程。
+Adobe Experience Platform允許您通過[!DNL Sensei Machine Learning Framework Runtime]構建和建立定制特徵管線，以大規模執行特徵工程。
 
 **本指南將幫助您：**
 - 實作功能管線類。
