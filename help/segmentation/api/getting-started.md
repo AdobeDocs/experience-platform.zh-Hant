@@ -2,20 +2,20 @@
 keywords: Experience Platform; home；熱門主題；分段；分段；分段服務；api;
 solution: Experience Platform
 title: 分段服務API快速入門
-topic: developer guide
+topic-legacy: developer guide
 description: 以下檔案提供您需要知道的其他資訊，以便成功使用區段API。
+exl-id: 41c0e50b-afed-45b8-85d7-a0c84ae090f5
 translation-type: tm+mt
-source-git-commit: b3defc3e33a55855e307ab70b9797d985d5719e3
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '329'
 ht-degree: 0%
 
 ---
 
-
 # 分段服務API {#getting-started}快速入門
 
-Adobe Experience Platform [!DNL Segmentation Service]可讓您在Adobe Experience Platform中建立細分，並從您的[!DNL Real-time Customer Profile]資料產生受眾。
+Adobe Experience Platform[!DNL Segmentation Service]可讓您建立區段，並從[!DNL Real-time Customer Profile]資料產生Adobe Experience Platform的觀眾。
 
 開發人員指南需要對使用[!DNL Segmentation Service]時涉及的各種[!DNL Experience Platform]服務有良好的瞭解。
 
@@ -34,7 +34,7 @@ Adobe Experience Platform [!DNL Segmentation Service]可讓您在Adobe Experienc
 
 API檔案也要求您完成[驗證教學課程](https://www.adobe.com/go/platform-api-authentication-en)，才能成功呼叫[!DNL Platform]端點。 完成驗證教學課程可為[!DNL Experience Platform] API呼叫中的每個必要標題提供值，如下所示：
 
-- 授權：`Bearer {ACCESS_TOKEN}`
+- Authorization: `Bearer {ACCESS_TOKEN}`
 - x-api-key:`{API_KEY}`
 - x-gw-ims-org-id:`{IMS_ORG}`
 
