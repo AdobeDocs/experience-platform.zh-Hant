@@ -1,17 +1,17 @@
 ---
-keywords: Experience Platform; home；熱門主題；有效策略；訪問控制api
+keywords: Experience Platform；首頁；熱門主題；有效策略；訪問控制API
 solution: Experience Platform
 title: 有效策略API端點
-topic: developer guide
-description: Adobe Experience Platform中的存取控制功能可讓您使用Adobe Admin Console管理各種平台功能的角色和權限。 本檔案是如何使用Adobe Experience Platform的存取控制API來檢視有效政策的指南。
+topic-legacy: developer guide
+description: Adobe Experience Platform的訪問控制允許您使用Adobe Admin Console來管理各種平台功能的角色和權限。 本檔案是如何使用Adobe Experience Platform的存取控制API來檢視有效政策的指南。
+exl-id: 555d73db-115d-4f4c-8bd2-b91477799591
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '320'
+source-wordcount: '317'
 ht-degree: 1%
 
 ---
-
 
 # 有效的策略端點
 
@@ -23,9 +23,9 @@ ht-degree: 1%
 POST /acl/effective-policies
 ```
 
-**請求**
+**要求**
 
-以下請求將檢索有關當前用戶的&quot;[!UICONTROL 管理資料集]&quot;權限和對&quot;[!UICONTROL 方案]&quot;資源類型的訪問的資訊。
+下列請求會擷取有關目前使用者之「[!UICONTROL Manage Datasets]」權限和「[!UICONTROL schemas]」資源類型存取權的資訊。
 
 ```shell
 curl -X POST \
@@ -74,7 +74,7 @@ curl -X POST \
 
 ### 接受的權限和資源類型
 
-以下是權限和資源類型的清單，您可以在到`/acl/active-permissions`端點的POST請求的裝載中包括這些權限和資源類型。
+以下是權限和資源類型的清單，您可以在`/acl/active-permissions`端點的POST請求的裝載中包括這些權限和資源類型。
 
 **權限**
 
