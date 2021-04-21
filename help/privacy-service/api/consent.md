@@ -1,17 +1,17 @@
 ---
-keywords: Experience Platform;home；熱門主題
+keywords: Experience Platform；首頁；熱門主題
 solution: Experience Platform
 title: 許可API端點
-topic: developer guide
-description: 瞭解如何使用隱私權服務API管理Experience Cloud應用程式的客戶同意請求。
+topic-legacy: developer guide
+description: 瞭解如何使用Experience CloudAPI管理Privacy Service應用程式的客戶同意要求。
+exl-id: ec505749-c0a9-4050-be56-4c0657807ec7
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '244'
 ht-degree: 1%
 
 ---
-
 
 # 許可端點
 
@@ -21,7 +21,7 @@ ht-degree: 1%
 
 ## 處理客戶同意請求
 
-對`/consent`端點發出POST請求，即可處理許可請求。
+對`/consent`端點發出POST請求，以處理許可請求。
 
 **API格式**
 
@@ -29,7 +29,7 @@ ht-degree: 1%
 POST /consent
 ```
 
-**請求**
+**要求**
 
 以下請求會為`entities`陣列中提供的用戶ID建立新的許可作業。
 
@@ -64,7 +64,7 @@ curl -X POST \
 | --- | --- |
 | `optOutOfSale` | 設為true時，表示`entities`下提供的使用者希望退出銷售或分享其個人資料。 |
 | `entities` | 一系列對象，用於指示對許可請求申請的用戶。 每個物件都包含`namespace`和`values`陣列，以搭配個別使用者與該命名空間。 |
-| `nameSpace` | `entities`陣列中的每個對象都必須包含由隱私服務API識別的[標準身份名稱空間](./appendix.md#standard-namespaces)中的一個。 |
+| `nameSpace` | `entities`陣列中的每個對象都必須包含Privacy ServiceAPI所識別的[標準身份名稱空間](./appendix.md#standard-namespaces)中的一個。 |
 | `values` | 每個用戶的值陣列，與提供的`nameSpace`相對應。 |
 
 >[!NOTE]
