@@ -1,23 +1,23 @@
 ---
-keywords: Experience Platform;home；熱門主題；api;API;XDM;XDM系統；體驗資料模型；體驗資料模型；資料模型；模式註冊；模式註冊；
+keywords: Experience Platform;home；熱門主題；api;API;XDM;XDM系統；體驗資料模型；體驗資料模型；資料模型；模式註冊；
 solution: Experience Platform
 title: 方案註冊表API指南
-description: 架構註冊表API可讓開發人員以程式設計方式管理Adobe Experience Platform中的所有架構和相關的Experience Data Model(XDM)資源。 請依照本指南，瞭解如何使用API執行關鍵作業。
-topic: developer guide
+description: 架構註冊表API可讓開發人員以程式設計方式管理Adobe Experience Platform境內的所有架構和相關的Experience Data Model(XDM)資源。 請依照本指南，瞭解如何使用API執行關鍵作業。
+topic-legacy: developer guide
+exl-id: 9e693d29-303e-462a-a1e2-93c0d517b8e3
 translation-type: tm+mt
-source-git-commit: e649ab3da077cdd8e98562199b8bdece6108a572
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '973'
 ht-degree: 0%
 
 ---
 
-
 # [!DNL Schema Registry] API指南
 
-[!DNL Schema Registry]用於存取Adobe Experience Platform中的架構程式庫，提供使用者介面和REST風格的API，讓所有可用的程式庫資源都可從中存取。
+[!DNL Schema Registry]用於訪問Adobe Experience Platform內的架構庫，提供用戶介面和RESTful API，可從中訪問所有可用的庫資源。
 
-架構註冊表API提供數個端點，可讓您以程式設計方式管理平台內所有架構及您可用的相關Experience Data Model(XDM)資源。 這包括由Adobe、[!DNL Experience Platform]合作夥伴及您所使用之應用程式的廠商所定義者。
+架構註冊表API提供數個端點，可讓您以程式設計方式管理平台內所有架構及您可用的相關Experience Data Model(XDM)資源。 這包括由Adobe、[!DNL Experience Platform]合作夥伴和您所使用之應用程式的廠商所定義。
 
 這些端點如下所示。 如需詳細資訊，請造訪個別端點指南，並參閱[快速入門手冊](./getting-started.md)，以取得必要標題、讀取範例API呼叫等重要資訊。
 
@@ -35,7 +35,7 @@ XDM模式表示並驗證了被引入平台的資料的結構和格式。 方案�
 
 ## 行為
 
-行為定義了模式描述的資料的性質。 每個XDM類都必須引用特定的行為，使用該類的所有方案都將繼承該行為。 請參閱[行為端點指南](./behaviors.md)，瞭解如何在API中檢視可用行為。
+行為定義模式描述的資料的性質。 每個XDM類都必須引用特定的行為，使用該類的所有方案都將繼承該行為。 請參閱[行為端點指南](./behaviors.md)，瞭解如何在API中檢視可用行為。
 
 ## 類別
 
