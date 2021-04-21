@@ -2,14 +2,14 @@
 keywords: Experience Platform;home；熱門主題；流連接；建立流連接；api指南；教學課程；建立流連接；流攝取；攝取；
 solution: Experience Platform
 title: 使用API建立串流連線
-topic: tutorial
+topic-legacy: tutorial
 type: Tutorial
 description: 本教學課程將協助您開始使用串流擷取API，這是Adobe Experience Platform資料擷取服務API的一部分。
 exl-id: 9f7fbda9-4cd3-4db5-92ff-6598702adc34
 translation-type: tm+mt
-source-git-commit: 69abc982c4a820b850096d83761552ca526bca29
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '884'
+source-wordcount: '883'
 ht-degree: 2%
 
 ---
@@ -68,7 +68,7 @@ Flow Service用於收集和集中Adobe Experience Platform內不同來源的客�
 POST /flowservice/connections
 ```
 
-**請求**
+**要求**
 
 為了建立串流連線，必須在POST請求中提供提供者ID和連線規格ID。 提供程式ID為`521eee4d-8cbe-4906-bb48-fb6bd4450033`，連接規範ID為`bc7b00d6-623a-4dfc-9fdb-f1240aeadaeb`。
 
@@ -131,7 +131,7 @@ curl -X POST https://platform.adobe.io/data/foundation/flowservice/connections \
 POST /flowservice/connections
 ```
 
-**請求**
+**要求**
 
 為了建立串流連線，必須在POST請求中提供提供者ID和連線規格ID。 提供程式ID為`521eee4d-8cbe-4906-bb48-fb6bd4450033`，連接規範ID為`bc7b00d6-623a-4dfc-9fdb-f1240aeadaeb`。
 
@@ -201,7 +201,7 @@ GET /flowservice/connections/{CONNECTION_ID}
 | --------- | ----------- |
 | `{CONNECTION_ID}` | 您先前建立的連接的`id`值。 |
 
-**請求**
+**要求**
 
 ```shell
 curl -X GET https://platform.adobe.io/data/foundation/flowservice/connections/{CONNECTION_ID} \
