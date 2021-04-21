@@ -6,18 +6,14 @@ topic-legacy: overview
 description: 瞭解如何使用API或使用者介面將Oracle連接至Adobe Experience Platform。
 exl-id: be422cf8-fb24-48c7-8369-34f0f2ec95fc
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: b2384bfe26fa3d111c342062b2d9bb37c4226857
 workflow-type: tm+mt
-source-wordcount: '207'
+source-wordcount: '190'
 ht-degree: 0%
 
 ---
 
-# （測試版）[!DNL Oracle]連接器
-
->[!NOTE]
->
->[!DNL Oracle]介面處於測試狀態。 有關使用beta標籤連接器的詳細資訊，請參閱[ Sources綜覽](../../home.md#terms-and-conditions)。
+# [!DNL Oracle] 連接器
 
 Adobe Experience Platform為[!DNL Microsoft]、MySQL和[!DNL Azure]等資料庫提供程式提供本機連接。 您可以將這些系統中的資料導入[!DNL Platform]。
 
