@@ -2,17 +2,17 @@
 keywords: Experience Platform;home；熱門主題；Google雲端儲存；google雲端儲存；google;Google
 solution: Experience Platform
 title: 使用流程服務API建立Google雲端儲存來源連線
-topic: overview
+topic-legacy: overview
 type: Tutorial
 description: 瞭解如何使用Flow Service API將Adobe Experience Platform連接至Google雲端儲存空間帳戶。
+exl-id: 321d15eb-82c0-45a7-b257-1096c6db6b18
 translation-type: tm+mt
-source-git-commit: f6a63ca1e21b3c3f6a55574f31fdf04038b7e5c4
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '597'
+source-wordcount: '595'
 ht-degree: 2%
 
 ---
-
 
 # 使用[!DNL Flow Service] API建立[!DNL Google Cloud Storage]來源連線
 
@@ -70,7 +70,7 @@ ht-degree: 2%
 POST /connections
 ```
 
-**請求**
+**要求**
 
 要建立[!DNL Google Cloud Storage]連接，必須在POST請求中提供其唯一連接規範ID。 [!DNL Google Cloud Storage]的連接規範ID為`32e8f412-cdf7-464c-9885-78184cb113fd`。
 
