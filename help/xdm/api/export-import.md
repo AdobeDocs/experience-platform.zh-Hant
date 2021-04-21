@@ -3,15 +3,15 @@ keywords: Experience Platform;home；熱門主題；api;API;XDM;XDM系統；體�
 solution: Experience Platform
 title: 匯出／匯入API端點
 description: 架構註冊表API中的/export和/import端點可讓您在IMS組織和沙盒之間共用XDM資源。
-topic: developer guide
+topic-legacy: developer guide
+exl-id: 33b62f75-2670-42f4-9aac-fa1540cd7d4a
 translation-type: tm+mt
-source-git-commit: 0727ffa0c72bcb6a85de1a13215b691b97889b70
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '502'
+source-wordcount: '500'
 ht-degree: 1%
 
 ---
-
 
 # 匯出／匯入端點
 
@@ -37,7 +37,7 @@ GET /rpc/export/{RESOURCE_ID}
 | --- | --- |
 | `{RESOURCE_ID}` | 要導出的XDM資源的`meta:altId`或URL編碼`$id`。 |
 
-**請求**
+**要求**
 
 下列請求會擷取`Restaurant`混音的匯出裝載。
 
@@ -205,7 +205,7 @@ curl -X GET \
 POST /rpc/import
 ```
 
-**請求**
+**要求**
 
 下列請求會將先前[匯出範例](#export)中傳回的裝載匯入新的IMS組織和沙盒中，分別由`x-gw-ims-org-id`和`x-sandbox-name`標題決定。`Restaurant`
 
