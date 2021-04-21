@@ -5,10 +5,10 @@ doc-type: release notes
 last-update: April 21, 2021
 author: ens72741
 translation-type: tm+mt
-source-git-commit: 0c9b60fe0777286819841c520a41007634622578
+source-git-commit: 1072b95469fac19a2e03ca4eacaae05250e11be8
 workflow-type: tm+mt
-source-wordcount: '729'
-ht-degree: 12%
+source-wordcount: '868'
+ht-degree: 10%
 
 ---
 
@@ -20,6 +20,7 @@ ht-degree: 12%
 Adobe Experience Platform 現有功能更新：
 
 - [[!DNL Data Prep]](#data-prep)
+- [[!DNL Experience Data Model (XDM)]](#xdm)
 - [[!DNL Intelligent Services]](#intelligent-services)
 - [[!DNL Segmentation Service]](#segmentation)
 - [[!DNL Sources]](#sources)
@@ -36,6 +37,14 @@ Adobe Experience Platform 現有功能更新：
 | 支援串流擷取 | 現在，您可以在建立串流來源連線時使用資料準備功能。 如需詳細資訊，請參閱UI](../../sources/tutorials/ui/create/streaming/http.md)中有關建立串流來源連線的教學課程。[ |
 
 如需詳細資訊，請參閱[[!DNL Data Prep] overview](../../data-prep/home.md)。
+
+## [!DNL Experience Data Model (XDM)] {#xdm}
+
+Experience Data Model(XDM)是開放原始碼規格，旨在提升數位體驗的威力。 它為與Adobe Experience Platform服務通訊的任何應用程式提供共同的架構和定義。 遵循XDM標準，所有客戶體驗資料都可以整合在共同的呈現方式中，以更快速、更整合的方式提供見解。 您可以從客戶行動中獲得寶貴見解，透過細分定義客戶受眾，並將客戶屬性用於個人化目的。
+
+| 功能 | 說明 |
+| --- | --- |
+| 依產業區分的方案建議 | 在架構編輯器UI中選取類別和混合時，您可以使用新的篩選器，根據您的特定產業檢視建議的標準元件。 有關這些元件在不同行業使用案例中如何相互關聯的詳細資訊，請參閱[行業資料模型](https://www.adobe.com/go/xdm-industry-erds-en)上的文檔。 |
 
 ## [!DNL Intelligent Services] {#intelligent-services}
 
