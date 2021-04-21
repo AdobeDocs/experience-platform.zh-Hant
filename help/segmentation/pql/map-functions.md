@@ -1,17 +1,17 @@
 ---
-keywords: Experience Platform; home；熱門主題；分段；分段；分段服務；pql;PQL；配置檔案查詢語言；映射函式；映射；
+keywords: Experience Platform;home；熱門主題；分段；分段；分段服務；pql;PQL；配置檔案查詢語言；映射函式；映射；
 solution: Experience Platform
 title: PQL映射函式
-topic: developer guide
+topic-legacy: developer guide
 description: 描述檔查詢語言(PQL)提供函式，讓與地圖的互動更輕鬆。
+exl-id: f23616f2-c0dd-40ce-8cfc-c757542fbd05
 translation-type: tm+mt
-source-git-commit: b3defc3e33a55855e307ab70b9797d985d5719e3
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '173'
 ht-degree: 5%
 
 ---
-
 
 # 地圖函式
 
@@ -21,7 +21,7 @@ ht-degree: 5%
 
 `get`函式用於檢索給定鍵的映射值。
 
-**Format**
+**格式**
 
 ```sql
 {MAP}.get({STRING})
