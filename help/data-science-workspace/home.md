@@ -1,25 +1,25 @@
 ---
-keywords: Experience Platform;home;Data Science Workspace；熱門主題；資料科學工作區；資料科學
+keywords: Experience Platform；首頁；資料科學工作區；熱門主題；資料科學工作區；資料科學
 solution: Experience Platform
 title: 資料科學工作區概觀
-topic: overview
-description: 本指南概述Adobe Experience Platform中與Data Science Workspace相關的主要概念。
+topic-legacy: overview
+description: 本指南概述與Adobe Experience Platform的Data Science Workspace相關的主要概念。
+exl-id: bef25073-0dfb-453d-8c32-7f44d917d62d
 translation-type: tm+mt
-source-git-commit: f6cfd691ed772339c888ac34fcbd535360baa116
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '2388'
 ht-degree: 0%
 
 ---
 
-
 # 資料科學工作區概觀
 
-Adobe Experience Platform [!DNL Data Science Workspace]使用機器學習和人工智慧，從資料中釋放見解。 [!DNL Data Science Workspace]已整合至Adobe Experience Platform，可協助您使用Adobe解決方案中的內容和資料資產進行預測。
+Adobe Experience Platform[!DNL Data Science Workspace]使用機器學習和人工智慧釋放您資料的見解。 [!DNL Data Science Workspace]已整合至Adobe Experience Platform，可協助您跨Adobe解決方案使用內容和資料資產進行預測。
 
 所有技能等級的資料科學家將會找到複雜、簡單易用的工具，以支援快速開發、訓練和調整機器學習方式——所有AI技術的優點，而不需複雜。
 
-有了[!DNL Data Science Workspace]，資料科學家就可輕鬆建立由機器學習提供支援的智慧服務API。 這些服務可與其他Adobe服務搭配使用，包括Adobe Target和Adobe Analytics Cloud，協助您在網頁、案頭和行動應用程式中自動化個人化、目標明確的數位體驗。
+有了[!DNL Data Science Workspace]，資料科學家就可輕鬆建立由機器學習提供支援的智慧服務API。 這些服務可與其他Adobe服務(包括Adobe Target和Adobe Analytics Cloud)搭配使用，協助您在網路、案頭和行動應用程式中自動化個人化、針對性的數位體驗。
 
 本指南概述與[!DNL Data Science Workspace]相關的主要概念。
 
@@ -28,9 +28,9 @@ Adobe Experience Platform [!DNL Data Science Workspace]使用機器學習和人�
 現今的企業非常重視挖掘大資料以取得預測和洞見，這些預測和洞見將協助他們個人化客戶體驗，並為客戶及業務提供更多價值。
 同樣重要的是，從資料獲取深入見解的成本很高。 它通常需要熟練的資料科學家進行密集且耗時的資料研究，以開發機器學習模型或配方，為智慧服務提供動力。 這個過程冗長，技術複雜，而熟練的資料科學家也很難找到。
 
-借助[!DNL Data Science Workspace],Adobe Experience Platform可讓您將以體驗為主的人工智慧帶入整個企業，簡化並加速資料轉化為洞見的編碼：
+借助[!DNL Data Science Workspace],Adobe Experience Platform可讓您將以體驗為主的人工智慧帶入整個企業，透過以下各項簡化並加速資料轉化為洞見的編碼：
 - 機器學習架構與執行時期
-- 整合存取Adobe Experience Platform中儲存的資料
+- 整合存取您儲存在Adobe Experience Platform的資料
 - 基於[!DNL Experience Data Model](XDM)構建的統一資料模式
 - 機器學習／人工智慧和管理大資料集的必備計算能力
 - 預先建立的機器學習方式，加速向人工智慧驅動體驗的飛躍
@@ -45,13 +45,13 @@ Adobe Experience Platform [!DNL Data Science Workspace]使用機器學習和人�
 
 | 詞語 | 定義 |
 |---------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [!DNL Data Science Workspace] | [!DNL Data Science Workspace] 內建 [!DNL Experience Platform] 功能可讓客戶運用資料建立機器學習模型， [!DNL Experience Platform] 並運用Adobe解決方案產生智慧見解和預測，以打造令人愉悅的使用者數位體驗。 |
+| [!DNL Data Science Workspace] | [!DNL Data Science Workspace] 內建 [!DNL Experience Platform] 可讓客戶運用跨Adobe解決方案的資料來建立機器 [!DNL Experience Platform] 學習模型，以產生智慧見解和預測，以打造令人愉悅的使用者數位體驗。 |
 | 人工智慧 | 人工智慧是電腦系統的理論和發展，能夠執行通常需要人類智慧的任務，如視覺感知、語音識別、決策和語言間的翻譯。 |
 | 機器學習 | 機器學習是一個研究領域，它讓電腦能夠學習，而不需明確寫程式。 |
-| [!DNL Sensei] ML Framework | [!DNL Sensei] ML Framework是跨Adobe的統一機器學習架構，可運用相關資料，讓資料科學家以更快速、可擴充且可重複使用的方式 [!DNL Experience Platform] ，開發機器學習導向的智慧服務。 |
-| [!DNL Experience Data Model] | [!DNL Experience Data Model] (XDM)是Adobe在為客戶體驗管理定義標準架構(例如 [!DNL Profile] 和 [!DNL ExperienceEvent])方面所牽頭的標準化工作。 |
+| [!DNL Sensei] ML Framework | [!DNL Sensei] ML Framework是跨Adobe的統一機器學習框架，可運用相關資料，讓資料科學家以更快速、可擴充且可重複使用的方式，開發機器學習導向的智慧服務。 [!DNL Experience Platform]  |
+| [!DNL Experience Data Model] | [!DNL Experience Data Model] (XDM)是Adobe為「客戶體驗管理」定義標準方案( [!DNL Profile] 如 [!DNL ExperienceEvent]and)而引導的標準化工作。 |
 | [!DNL JupyterLab] | [!DNL JupyterLab] 是Project Jupyter的開放原始碼Web介面，並緊密整合在其中 [!DNL Experience Platform]。 |
-| 配方 | 配方是Adobe的模型規格術語，是代表特定機器學習、AI演算法或整合演算法、處理邏輯和設定的頂層容器，用來建立並執行已訓練的模型，進而協助解決特定的商業問題。 |
+| 配方 | 配方是模型規格的Adobe術語，是代表特定機器學習、AI算法或整合演算法、處理邏輯和組態的頂層容器，用來建立並執行已訓練的模型，進而協助解決特定商業問題。 |
 | 模型 | 模型是機器學習方式的實例，使用歷史資料和配置進行訓練，以針對業務使用案例進行解決。 |
 | 培訓 | 培訓是學習模式和從標籤資料獲得見解的過程。 |
 | 訓練的模型 | 訓練模型表示模型訓練過程的可執行輸出，其中一組訓練資料被應用到模型實例。 經過訓練的模型將保留對任何由其建立的智慧Web服務的引用。 該訓練模型適用於計分和建立智慧Web服務。 可將訓練模型的修改視為新版本來追蹤。 |
@@ -70,7 +70,7 @@ Adobe Experience Platform [!DNL Data Science Workspace]使用機器學習和人�
 
 資料是人工智慧和機器學習的基石。
 
-[!DNL Data Science Workspace] 已與Adobe Experience Platform完全整合，包括Data Lake [!DNL Real-time Customer Profile]和 [!DNL Unified Edge]。一次探索您儲存在Adobe Experience Platform中的所有組織資料，以及常見的大資料和深入學習資料庫，例如[!DNL Spark] ML和[!DNL TensorFlow]。 如果您找不到所需，請使用XDM標準架構來收錄您自己的資料集。
+[!DNL Data Science Workspace] 已與Adobe Experience Platform完全整合，包括資料 [!DNL Real-time Customer Profile]湖和 [!DNL Unified Edge]。一次探索您儲存在Adobe Experience Platform的所有組織資料，以及常見的大資料和深入學習資料庫，例如[!DNL Spark] ML和[!DNL TensorFlow]。 如果您找不到所需，請使用XDM標準架構來收錄您自己的資料集。
 
 ### 預先建立的機器學習方式
 
@@ -86,9 +86,9 @@ Adobe Experience Platform [!DNL Data Science Workspace]使用機器學習和人�
 
 ### 資料探索
 
-尋找正確的資料並準備資料是建立有效配方最耗費人力的部分。 [!DNL Data Science Workspace] 而Adobe Experience Platform將協助您更快地從資料獲取見解。
+尋找正確的資料並準備資料是建立有效配方最耗費人力的部分。 [!DNL Data Science Workspace] 而Adobe Experience Platform將幫助您更快地從資料獲取見解。
 
-在Adobe Experience Platform上，跨通道資料會集中並儲存在XDM標準架構中，因此資料更容易找到、理解和清理。 以通用模式為基礎的單一資料存放區可為您節省無數的資料探索與準備時間。
+在Adobe Experience Platform，您的跨通道資料會集中並儲存在XDM標準架構中，因此資料更容易找到、瞭解和清理。 以通用模式為基礎的單一資料存放區可為您節省無數的資料探索與準備時間。
 
 在瀏覽時，使用R、[!DNL Python]或Scala搭配整合的代管[!DNL Jupyter Notebook]來瀏覽[!DNL Platform]上的資料目錄。 使用其中一種語言，您也可以利用[!DNL Spark] ML和TensorFlow。 從頭開始，或使用針對特定商業問題提供的其中一個筆記型電腦模板。
 
@@ -100,7 +100,7 @@ Adobe Experience Platform [!DNL Data Science Workspace]使用機器學習和人�
 
 - 瀏覽預先建立的方式，以符合您的業務需求，並依現狀使用或設定，以節省時間。
 - 從頭開始建立配方，使用Jupyter Notebook中的製作執行時期來開發和註冊配方。
-- 使用[!DNL Git]和[!DNL Data Science Workspace]之間的驗證和整合功能，將在Adobe Experience Platform以外撰寫的配方上傳至[!DNL Data Science Workspace]或從儲存庫匯入配方代碼，例如[!DNL Git]。
+- 使用[!DNL Git]和[!DNL Data Science Workspace]之間的驗證和整合，將在Adobe Experience Platform以外創作的配方上傳到[!DNL Data Science Workspace]或從儲存庫導入配方代碼，如[!DNL Git]。
 
 ### 實驗
 
@@ -108,7 +108,7 @@ Adobe Experience Platform [!DNL Data Science Workspace]使用機器學習和人�
 
 ### 操作化
 
-當您對食譜感到滿意時，只需按幾下滑鼠，就能建立智慧型服務。 不需撰寫程式碼——您可以自行完成，毋需請開發人員或工程師。 最後，將智慧型服務發佈至Adobe IO，讓您的數位體驗團隊可以使用。
+當您對食譜感到滿意時，只需按幾下滑鼠，就能建立智慧型服務。 不需撰寫程式碼——您可以自行完成，毋需請開發人員或工程師。 最後，將智慧型服務發佈至AdobeIO，讓您的數位體驗團隊可以使用。
 
 <!--You can also publish your intelligent service to the Service Gallery, where it's available to specific people, specific organizations, or everyone who develops data solutions on Adobe Experience Platform. You can even share it with your external partners, and they can share their intelligent service with you. And the next time you're starting a new recipe, you can check the Service Gallery to see if there's a similar intelligent service you can use to get started. -->
 
@@ -118,13 +118,13 @@ Adobe Experience Platform [!DNL Data Science Workspace]使用機器學習和人�
 
 ### 存取新功能和資料集
 
-資料科學家可在新技術和資料集一經透過Adobe服務推出，就能立即加以運用。 透過頻繁的更新，我們將資料集和技術整合到平台中，因此您不必再擔心。
+資料科學家可以在新技術和資料集透過Adobe服務推出時立即加以運用。 透過頻繁的更新，我們將資料集和技術整合到平台中，因此您不必再擔心。
 
 ### 安全與心安
 
-保護您的資料是Adobe的首要任務。 Adobe運用開發的安全程式和控制功能來保護您的資料，以協助符合業界公認的標準、法規和認證。
+保護您的資料是Adobe的首要任務。 Adobe利用為符合業界公認的標準、法規和認證而開發的安全流程和控制功能來保護您的資料。
 
-安全性內建在軟體和服務中，是Adobe安全產品生命週期的一部分。
+安全性內建在軟體和服務中，作為Adobe安全產品生命週期的一部分。
 若要瞭解Adobe資料和軟體安全性、合規性等，請造訪安全性網頁：https://www.adobe.com/security.html。
 
 ## [!DNL Data Science Workspace] 實際運作
@@ -150,9 +150,9 @@ Adobe Experience Platform [!DNL Data Science Workspace]使用機器學習和人�
 [//]: # (Your first step is to check the recipe gallery to see if an existing recipe meets your needs, or comes close. An alternative is to import a recipe you created outside of Adobe Experience Platform. Starting with an existing recipe often streamlines the data exploration phase and makes it easier for a data scientist.)
 
 如果您從頭開始或設定現有的方式，您就可以在組織的集中式標準化資料目錄中開始資料搜尋，如此可大幅簡化搜尋作業。 您甚至會發現，您組織中的另一位資料科學家已經識別出類似的資料集，並選擇微調該資料集，而非從頭開始。
-Adobe Experience Platform中的所有資料都符合標準化的XDM架構，毋需建立複雜的模型以加入資料或取得資料工程師的協助。
+Adobe Experience Platform的所有資料都符合標準的XDM模式，無需建立複雜的模型來連接資料或獲得資料工程師的幫助。
 
-如果您沒有立即找到所需的資料，但是它存在於Adobe Experience Platform之外，則收集其他資料集相對簡單，這也會轉化為標準化的XDM架構。\
+如果您不能立即找到所需的資料，但它存在於Adobe Experience Platform以外，那麼，收集更多資料集是一項相對簡單的任務，這也將轉化為標準化的XDM模式。\
 您可以使用[!DNL Jupyter Notebook]來簡化資料預處理——可能從您先前習慣購買的筆記型電腦範本或筆記型電腦開始。
 
 ![](./images/home/notebook_templates.png)
@@ -177,17 +177,17 @@ Adobe Experience Platform中的所有資料都符合標準化的XDM架構，毋�
 
 ### 實施模型
 
-當您選擇最佳的訓練方式來滿足您的業務需求時，您可以在[!DNL Data Science Workspace]中建立智慧型服務，毋需開發人員協助。 只需按幾下滑鼠，不需要撰寫程式碼。 發佈的智慧型服務可供組織的其他成員存取，而不需重新建立模型。
+當您選擇最佳的訓練方式來滿足您的業務需求時，您可以在[!DNL Data Science Workspace]中建立智慧型服務，毋需開發人員協助。 只需按幾下滑鼠，不需要撰寫程式碼。 發佈的智慧型服務可供貴組織的其他成員存取，而不需重新建立模型。
 
-已發佈的智慧型服務可設定為在新資料可用時，使用新資料自動不時進行培訓。 這可確保您的服務在時間持續時仍能維持其效率和效能。
+已發佈的智慧型服務可設定為在新資料可用時，使用新資料自動自動進行培訓。 這可確保您的服務在時間持續時仍能維持其效率和效能。
 
 ## 後續步驟
 
 [!DNL Data Science Workspace] 有助於簡化和簡化資料科學工作流程，從資料收集到演算法，到智慧服務，讓所有技能等級的資料科學家都能使用。使用[!DNL Data Science Workspace]提供的精密工具，您可以大幅縮短從資料到深入資訊的時間。
 
-更重要的是，[!DNL Data Science Workspace]將Adobe領先行銷平台的資料科學與演算法最佳化功能交由企業資料科學家負責。 企業首次將專屬的演算法帶入平台，運用Adobe強大的機器學習和人工智慧功能，大規模地提供高度個人化的客戶體驗。
+更重要的是，[!DNL Data Science Workspace]將Adobe領先行銷平台的資料科學與演算法最佳化功能交由企業資料科學家掌控。 企業首次將專屬的演算法帶入平台，運用Adobe強大的機器學習和人工智慧功能，大規模提供高度個人化的客戶體驗。
 
-在品牌專業知識與Adobe機器學習與AI技能的結合下，企業有能力在客戶要求之前，先提供他們想要的東西，進而提升商業價值與品牌忠誠度。
+隨著品牌專業知識與Adobe的機器學習與人工智慧的結合，企業有能力在客戶要求之前，先提供他們想要的東西，從而推動更多商業價值和品牌忠誠度。
 
 如需詳細資訊，例如完整的日常工作流程，請先閱讀[資料科學工作區逐步說明檔案](./walkthrough.md)。
 
@@ -196,4 +196,3 @@ Adobe Experience Platform中的所有資料都符合標準化的XDM架構，毋�
 以下視頻旨在支援您對[!DNL Data Science Workspace]的理解。
 
 >[!VIDEO](https://video.tv.adobe.com/v/30567?quality=12&amp;enable10seconds=on&amp;speedcontrol=on)
-
