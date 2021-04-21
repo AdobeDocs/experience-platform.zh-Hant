@@ -1,21 +1,21 @@
 ---
-keywords: Experience Platform;home；熱門主題；XDM;XDM系統；XDM個人資料；XDM ExperienceEvent;XDM ExperienceEvent;experienceEvent;XDM ExperienceEvent;XDM ExperienceEnt；體驗資料模型；體驗資料模型；資料模型；model;schema；疑難排解； FAQ;faq;Union schema;UNION PROFILE;union配置檔案
+keywords: Experience Platform；主題；熱門主題；XDM;XDM系統；XDM個人資料；XDM ExperienceEvent;XDM ExperienceEvent;experienceEvent;XDM ExperienceEvent;XDM ExperienceEvent；體驗資料模型；體驗資料模型；資料模型；方案；疑難排解；常見問題；常見問題；聯合方案；聯合概要檔案；聯合概要檔案
 solution: Experience Platform
 title: XDM系統故障排除指南
-description: 本檔案提供有關Adobe Experience Platform中Experience Data Model(XDM)和XDM System的常見問題解答，以及常見錯誤的疑難排解指南。
-topic: troubleshooting
+description: 本檔案提供有關Adobe Experience PlatformExperience Data Model(XDM)和XDM System的常見問題解答，以及常見錯誤的疑難排解指南。
+topic-legacy: troubleshooting
+exl-id: a0c7c661-bee8-4f66-ad5c-f669c52c9de3
 translation-type: tm+mt
-source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '1879'
+source-wordcount: '1869'
 ht-degree: 0%
 
 ---
 
-
 # XDM系統故障排除指南
 
-本檔案提供有關Adobe Experience Platform中[!DNL Experience Data Model](XDM)和XDM System的常見問題解答，以及常見錯誤的疑難排解指南。 有關其他平台服務的問題和疑難排解，請參閱[體驗平台疑難排解指南](../landing/troubleshooting.md)。
+本檔案提供有關Adobe Experience Platform[!DNL Experience Data Model](XDM)和XDM系統的常見問題解答，以及常見錯誤的疑難排解指南。 有關其他平台服務的問題和故障排除，請參閱[Experience Platform故障排除指南](../landing/troubleshooting.md)。
 
 **[!DNL Experience Data Model](XDM)是開** 放原始碼規格，可定義客戶體驗管理的標準架構。構建[!DNL Experience Platform]的方法&#x200B;**XDM系統**&#x200B;操作[!DNL Experience Data Model]方案，以便由[!DNL Platform]服務使用。 **[!DNL Schema Registry]**&#x200B;提供用戶介面和REST風格的API以訪問[!DNL Experience Platform]中的&#x200B;**[!DNL Schema Library]**。 如需詳細資訊，請參閱[XDM檔案](home.md)。
 
@@ -25,7 +25,7 @@ ht-degree: 0%
 
 ### 如何將欄位新增至架構？
 
-您可以使用mixin，將欄位添加到架構中。 每個混音都與一個或多個類相容，允許混音用於實現這些相容類之一的任何模式。 雖然Adobe Experience Platform提供數種業界混音及其預先定義的欄位，但您可以使用API或使用者介面建立新混音，將自己的欄位新增至架構。
+您可以使用mixin，將欄位添加到架構中。 每個混音都與一個或多個類相容，允許混音用於實現這些相容類之一的任何模式。 雖然Adobe Experience Platform提供數種業界混音及其預先定義的欄位，但您可以使用API或使用者介面建立新混音，將您自己的欄位新增至架構。
 
 有關在[!DNL Schema Registry] API中建立新混音的詳細資訊，請參閱[mixin端點指南](api/mixins.md#create)。 如果您使用UI，請參閱[架構編輯器教程](./tutorials/create-schema-ui.md)。
 
@@ -67,7 +67,7 @@ ht-degree: 0%
 
 #### 在UI中定義身份
 
-在模式編輯器中開啟模式時，在編輯器的&#x200B;**[!UICONTROL Structure]**&#x200B;部分中選擇要標籤為身份的欄位。 在右側的&#x200B;**[!UICONTROL 欄位屬性]**&#x200B;下，選擇&#x200B;**[!UICONTROL Identity]**&#x200B;複選框。
+在模式編輯器中開啟模式時，在編輯器的&#x200B;**[!UICONTROL Structure]**&#x200B;部分中選擇要標籤為身份的欄位。 在右側的&#x200B;**[!UICONTROL Field Properties]**&#x200B;下，選中&#x200B;**[!UICONTROL Identity]**&#x200B;複選框。
 
 有關在UI中管理身份的詳細資訊，請參閱方案編輯器教程中[定義身份欄位](./tutorials/create-schema-ui.md#identity-field)部分一節。
 
@@ -87,10 +87,10 @@ ht-degree: 0%
 
 #### 使用UI為[!DNL Profile]啟用現有模式
 
-在[!DNL Experience Platform]中，在左側導航中選擇&#x200B;**[!UICONTROL 方案]**，然後從方案清單中選擇要啟用的方案的名稱。 然後，在編輯器的右側，在&#x200B;**[!UICONTROL 方案屬性]**&#x200B;下，選擇&#x200B;**[!UICONTROL 描述檔]**&#x200B;以開啟它。
+在[!DNL Experience Platform]中，在左側導航中選擇&#x200B;**[!UICONTROL Schemas]**，然後從方案清單中選擇要啟用的方案名稱。 然後，在編輯器的右側&#x200B;**[!UICONTROL Schema Properties]**&#x200B;下，選擇&#x200B;**[!UICONTROL Profile]**&#x200B;以將其開啟。
 
 
-如需詳細資訊，請參閱[!UICONTROL 架構編輯器]教學課程中「即時客戶描述檔[使用」一節。](./tutorials/create-schema-ui.md#profile)
+如需詳細資訊，請參閱[!UICONTROL Schema Editor]教學課程中「即時客戶個人檔案](./tutorials/create-schema-ui.md#profile)使用」一節。[
 
 ### 我可以直接編輯聯合架構嗎？
 
@@ -118,7 +118,7 @@ ht-degree: 0%
 }
 ```
 
-當系統找不到特定資源時，將顯示此錯誤。 資源可能已刪除，或API呼叫中的路徑無效。 請確定您已輸入API呼叫的有效路徑，然後再次嘗試。 您可能想檢查是否已為資源輸入正確的ID，以及路徑是否與適當的容器（全域或租用戶）正確命名。
+當系統找不到特定資源時，將顯示此錯誤。 資源可能已刪除，或API呼叫中的路徑無效。 請確定您已輸入API呼叫的有效路徑，然後再次嘗試。 您可能想要檢查是否已為資源輸入正確的ID，以及路徑是否與適當的容器（全域或租用戶）正確命名。
 
 如需在API中建構查閱路徑的詳細資訊，請參閱[!DNL Schema Registry]開發人員指南中的[container](./api/getting-started.md#container)和[資源識別](api/getting-started.md#resource-identification)章節。
 
@@ -279,4 +279,4 @@ application/vnd.adobe.xed+json; version=1
 }
 ```
 
-如果您在列出(GET)資源時嘗試在「接受」標題中包含版本，您會收到此錯誤。 只有在單一資源上嘗試查閱請求時，才需要版本。 從「接受」標題移除版本以解決錯誤。
+如果您在列出(GET)資源時嘗試在「接受」標題中加入版本，將會收到此錯誤。 只有在單一資源上嘗試查閱請求時，才需要版本。 從「接受」標題移除版本以解決錯誤。
