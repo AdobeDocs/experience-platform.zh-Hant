@@ -1,15 +1,15 @@
 ---
-keywords: 廣告；貿易部門；
+keywords: 廣告；貿易部門；廣告交易台
 title: The Trade Desk connection
-description: '交易台是廣告購買者的自助服務平台，可跨展示廣告、視訊和行動庫存來源執行重新鎖定目標及受眾目標數位宣傳。 '
+description: 交易台是廣告購買者的自助服務平台，可跨展示廣告、視訊和行動庫存來源執行重新鎖定目標及受眾目標數位宣傳。
+exl-id: b8f638e8-dc45-4aeb-8b4b-b3fa2906816d
 translation-type: tm+mt
-source-git-commit: 24e0a274e61fcf6311c647067920686e4f25e840
+source-git-commit: 5b72433fcf2318f98538278c6d2650b366e391a2
 workflow-type: tm+mt
-source-wordcount: '592'
+source-wordcount: '595'
 ht-degree: 1%
 
 ---
-
 
 # [!DNL The Trade Desk] 連接
 
