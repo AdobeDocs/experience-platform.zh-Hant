@@ -1,18 +1,18 @@
 ---
-keywords: Experience Platform;JupyterLab；筆記型電腦；資料科學工作區；熱門主題；資料筆記本；eda；探索性資料分析；資料科學
+keywords: Experience Platform; JupyterLab；筆記本；資料科學工作區；熱門主題；分析資料筆記本；eda；探索性資料分析；資料科學
 solution: Experience Platform
 title: 探索性資料分析(EDA)筆記本
-topic: overview
+topic-legacy: overview
 type: Tutorial
 description: 本指南著重說明如何使用探索性資料分析(EDA)筆記型電腦來發現Web資料中的模式、以預測目標匯整事件、清理匯整資料，並瞭解預測者與目標之間的關係。
+exl-id: 48209326-0a07-4b5c-8b49-a2082a78fa47
 translation-type: tm+mt
-source-git-commit: 1d1a19c75d2972a6fce0d39aa508cca91fb4becd
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '2762'
+source-wordcount: '2760'
 ht-degree: 0%
 
 ---
-
 
 # 使用探索性資料分析(EDA)筆記型電腦來探索預測模型的網路資料
 
@@ -26,7 +26,7 @@ ht-degree: 0%
 
 在閱讀本指南之前，請先閱讀[[!DNL JupyterLab] 使用指南](./overview.md)，以取得[!DNL JupyterLab]及其在資料科學工作區中角色的高階簡介。 此外，如果您使用自己的資料，請查看 [!DNL Jupyterlab] 筆記本](./access-notebook-data.md)中[資料存取的文檔。 本指南包含有關筆記本資料限制的重要資訊。
 
-此筆記型電腦使用Adobe Analytics Experience Events資料格式的中值資料集，這些資料集位於Analytics Analysis工作區中。 為了使用EDA筆記本，需要使用以下值定義資料表`target_table`和`target_table_id`。 可使用任何中間值資料集。
+此筆記型電腦使用AnalyticsAnalysis Workspace中以「Adobe Analytics體驗事件」資料形式建立的中值資料集。 為了使用EDA筆記本，需要使用以下值定義資料表`target_table`和`target_table_id`。 可使用任何中間值資料集。
 
 要查找這些值，請按照JupyterLab資料存取指南的python](./access-notebook-data.md#write-python)部分中的[write中所述的步驟進行操作。 資料集名稱(`target_table`)位於資料集目錄中。 在您按一下右鍵資料集以瀏覽或寫入筆記本中的資料後，可執行代碼項中將提供資料集ID(`target_table_id`)。
 
@@ -64,7 +64,7 @@ pd.set_option('display.expand_frame_repr', False)
 pd.set_option('display.max_colwidth', -1)
 ```
 
-### 連線至Adobe Experience Platform [!DNL Query Service]
+### 連接到Adobe Experience Platform[!DNL Query Service]
 
 [!DNL JupyterLab] on Platform允許您在筆記本中使用SQL [!DNL Python] 來通過查詢 [服務訪問資料](https://www.adobe.com/go/query-service-home-en)。通過[!DNL Query Service]訪問資料對於處理大型資料集非常有用，因為它的運行時間很長。 請注意，使用[!DNL Query Service]查詢資料的處理時間限制為10分鐘。
 
@@ -830,6 +830,6 @@ Data = pd.concat([Data_categorical, Data_numerical, TARGET], axis = 1)
 
 ## 後續步驟
 
-在完成探索性資料分析後，您已準備好開始建立模型。 或者，您也可以使用衍生的資料和見解，使用Power BI等工具建立控制面板。
+在完成探索性資料分析後，您已準備好開始建立模型。 或者，您也可以使用衍生的資料和見解來建立具有工具(例如Power BI)的控制面板。
 
-Adobe Experience Platform將模型建立程式分為兩個不同的階段：Recipes（模型例項）和Models。 要開始建立配方過程，請訪問[在JupyerLab Notebooks](./create-a-recipe.md)中建立配方的文檔。 本檔案包含建立、訓練和計分的資訊和範例，[!DNL JupyterLab]筆記型電腦中的方式。
+Adobe Experience Platform將模型建立程式分為兩個不同階段：Recipes（模型例項）和Models。 要開始建立配方過程，請訪問[在JupyerLab Notebooks](./create-a-recipe.md)中建立配方的文檔。 本檔案包含建立、訓練和計分的資訊和範例，[!DNL JupyterLab]筆記型電腦中的方式。
