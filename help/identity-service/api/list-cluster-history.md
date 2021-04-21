@@ -1,17 +1,17 @@
 ---
-keywords: Experience Platform;home；熱門主題；identities；群集歷史記錄
+keywords: Experience Platform;home；熱門主題；身份；群集歷史
 solution: Experience Platform
 title: 獲取身份的集群歷史記錄
-topic: API guide
+topic-legacy: API guide
 description: 身分可在各種裝置圖表執行過程中移動叢集。 Identity Service可讓您隨時間檢視特定身分的叢集關聯。
+exl-id: e52edb15-e3d6-4085-83d5-212bbd952632
 translation-type: tm+mt
-source-git-commit: 73035aec86297cfc4ee9337cf922d599001379c3
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '337'
 ht-degree: 1%
 
 ---
-
 
 # 獲取身份的群集歷史記錄
 
@@ -30,7 +30,7 @@ ht-degree: 1%
 GET https://platform-{REGION}.adobe.io/data/core/identity/cluster/history
 ```
 
-**請求**
+**要求**
 
 選項1:將識別碼提供為命名空間（`nsId`，依ID）和ID值(`id`)。
 
@@ -106,7 +106,7 @@ POST https://platform-va7.adobe.io/data/core/identity/clusters/history
 }
 ```
 
-**請求**
+**要求**
 
 **存根請求**
 
