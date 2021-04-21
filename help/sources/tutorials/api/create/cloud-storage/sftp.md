@@ -2,17 +2,17 @@
 keywords: Experience Platform;home；熱門主題；SFTP;sftp；安全檔案傳輸協定；安全檔案傳輸協定
 solution: Experience Platform
 title: 使用流程服務API建立SFTP來源連線
-topic: overview
+topic-legacy: overview
 type: Tutorial
 description: 瞭解如何使用Flow Service API將Adobe Experience Platform連接至SFTP（安全檔案傳輸通訊協定）伺服器。
+exl-id: b965b4bf-0b55-43df-bb79-c89609a9a488
 translation-type: tm+mt
-source-git-commit: 0e11acc4a599d360cb3048445003f61848ad23d3
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '852'
-ht-degree: 2%
+source-wordcount: '850'
+ht-degree: 1%
 
 ---
-
 
 # 使用[!DNL Flow Service] API建立SFTP來源連線
 
@@ -77,7 +77,7 @@ ht-degree: 2%
 POST /connections
 ```
 
-**請求**
+**要求**
 
 若要建立SFTP連線，其唯一連線規格ID必須作為POST要求的一部分提供。 SFTP的連接規範ID為`b7bf2577-4520-42c9-bae9-cad01560f7bc`。
 
@@ -139,7 +139,7 @@ curl -X POST \
 POST /connections
 ```
 
-**請求**
+**要求**
 
 ```shell
 curl -X POST \
