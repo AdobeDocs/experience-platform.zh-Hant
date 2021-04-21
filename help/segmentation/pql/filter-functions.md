@@ -1,17 +1,17 @@
 ---
-keywords: Experience Platform; home；熱門主題；分段；分段；分段服務；pql;PQL；配置檔案查詢語言；過濾功能；過濾；
+keywords: Experience Platform;home；熱門主題；分段；分段；分段服務；pql;PQL；配置檔案查詢語言；過濾功能；過濾；
 solution: Experience Platform
 title: PQL過濾器函式
-topic: developer guide
+topic-legacy: developer guide
 description: 篩選函式用於篩選描述檔查詢語言(PQL)中陣列內的資料。
+exl-id: 09d66be3-30dc-4488-84a1-cfd09c44470d
 translation-type: tm+mt
-source-git-commit: b3defc3e33a55855e307ab70b9797d985d5719e3
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '220'
 ht-degree: 4%
 
 ---
-
 
 # 濾鏡函式
 
@@ -21,7 +21,7 @@ ht-degree: 4%
 
 `[]`(filter)函式允許將過濾器應用於陣列並返回與指定條件匹配的陣列子集。
 
-**Format**
+**格式**
 
 ```sql
 {ARRAY}[filter]
