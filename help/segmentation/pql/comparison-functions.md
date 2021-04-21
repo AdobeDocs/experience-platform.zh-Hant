@@ -1,17 +1,17 @@
 ---
-keywords: Experience Platform; home；熱門主題；分段；分段；分段服務；pql;PQL；配置檔案查詢語言；比較函式；比較；
+keywords: Experience Platform;home；熱門主題；分段；分段；分段服務；pql;PQL；配置檔案查詢語言；比較函式；比較；
 solution: Experience Platform
 title: PQL比較函式
-topic: developer guide
+topic-legacy: developer guide
 description: 比較函式可用來比較不同的運算式和值，並據以傳回"true"或"false"。
+exl-id: 15f106c7-b88b-4042-b925-703e2a309573
 translation-type: tm+mt
-source-git-commit: b3defc3e33a55855e307ab70b9797d985d5719e3
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '326'
 ht-degree: 9%
 
 ---
-
 
 # 比較函式
 
@@ -21,7 +21,7 @@ ht-degree: 9%
 
 `=`(equals)函式會檢查一個值或運算式是否等於另一個值或運算式。
 
-**Format**
+**格式**
 
 ```sql
 {EXPRESSION} = {VALUE}
