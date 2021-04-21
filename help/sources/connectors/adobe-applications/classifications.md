@@ -1,21 +1,21 @@
 ---
-keywords: Experience Platform;home；熱門主題；Adobe Analytics分類資料連接器
+keywords: Experience Platform；首頁；熱門主題；Adobe Analytics分類資料連接器
 solution: Experience Platform
-title: 分類資料的Adobe Analytics來源連接器
-topic: overview
+title: Adobe Analytics分類資料的來源連接器
+topic-legacy: overview
 description: 瞭解如何使用使用者介面將Analytics分類連結至平台
+exl-id: c26002df-dce4-415e-93e9-268e0efebc9f
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '181'
 ht-degree: 0%
 
 ---
 
+# Adobe Analytics分類資料的來源連接器
 
-# 分類資料的Adobe Analytics來源連接器
-
-Adobe Experience Platform可讓您從外部來源擷取資料，同時讓您能夠使用[!DNL Platform]服務來建構、標示並增強傳入資料。 您可以從多種來源（例如Adobe應用程式、雲端儲存空間、資料庫等）擷取資料。
+Adobe Experience Platform允許從外部來源接收資料，同時提供使用[!DNL Platform]服務構建、標籤和增強傳入資料的能力。 您可以從多種來源收錄資料，例如Adobe應用程式、雲端儲存空間、資料庫等。
 
 [!DNL Experience Platform] 支援將Analytics分類資料擷取至Adobe Experience Platform。
 
