@@ -1,21 +1,21 @@
 ---
 keywords: Experience Platform；配置檔案；即時客戶配置檔案；故障排除；API
 title: 邊緣投影API端點
-topic: guide
+topic-legacy: guide
 type: Documentation
 description: Adobe Experience Platform可讓您跨多個通道即時為客戶提供協調、一致且個人化的體驗，讓適當的資料隨時可用，並隨時隨地更新。 這是透過使用邊緣來完成的。邊緣是地理位置的伺服器，可儲存資料，讓應用程式更容易存取。
+exl-id: ce429164-8e87-412d-9a9d-e0d4738c7815
 translation-type: tm+mt
-source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '1966'
+source-wordcount: '1964'
 ht-degree: 2%
 
 ---
 
-
 # 邊緣投影配置和目標端點
 
-為即時跨多個通道為客戶提供協調、一致且個人化的體驗，需要隨時提供適當的資料，並在變更時持續更新。 Adobe Experience Platform使用戶能夠通過使用所謂的邊來即時訪問資料。 邊緣是地理位置優越的伺服器，可儲存資料，讓應用程式可輕鬆存取。 例如，Adobe應用程式(例如Adobe Target和Adobe Campaign)使用邊緣，以便即時提供個人化的客戶體驗。 資料通過投影被路由到邊，投影目的地定義資料要發送到的邊，投影配置定義將在邊上提供的特定資訊。 本指南提供使用[!DNL Real-time Customer Profile] API處理邊緣投影的詳細說明，包括目標和配置。
+為即時跨多個通道為客戶提供協調、一致且個人化的體驗，需要隨時提供適當的資料，並在變更時持續更新。 Adobe Experience Platform使用戶能夠通過使用所謂的邊來即時訪問資料。 邊緣是地理位置的伺服器，可儲存資料，讓應用程式可輕鬆存取。 例如，Adobe應用程式(例如Adobe Target和Adobe Campaign)使用邊緣，以便即時提供個人化的客戶體驗。 資料通過投影被路由到邊，投影目的地定義資料要發送到的邊，投影配置定義將在邊上提供的特定資訊。 本指南提供使用[!DNL Real-time Customer Profile] API處理邊緣投影的詳細說明，包括目標和配置。
 
 ## 快速入門
 
@@ -39,7 +39,7 @@ ht-degree: 2%
 GET /config/destinations
 ```
 
-**請求**
+**要求**
 
 ```shell
 curl -X GET \
@@ -120,7 +120,7 @@ curl -X GET \
 POST /config/destinations
 ```
 
-**請求**
+**要求**
 
 下列請求會建立新的邊緣目的地。
 
@@ -193,7 +193,7 @@ GET /config/destinations/{DESTINATION_ID}
 |---|---|
 | `{DESTINATION_ID}` | 您要檢視之投影目的地的唯一ID。 |
 
-**請求**
+**要求**
 
 下列請求會執行查閱(GET)，以檢視請求路徑中提供之ID的目的地。
 
@@ -244,7 +244,7 @@ PUT /config/destinations/{DESTINATION_ID}
 |---|---|
 | `{DESTINATION_ID}` | 您要更新的投影目的地的唯一ID。 |
 
-**請求**
+**要求**
 
 下列請求會更新現有目的地，以包含第二位置(`dataCenters`)。
 
@@ -315,7 +315,7 @@ DELETE /config/destinations/{DESTINATION_ID}
 | `{DESTINATION_ID}` | 要刪除的投影目標的唯一ID。 |
 
 
-**請求**
+**要求**
 
 ```shell
 curl -X DELETE \
@@ -355,7 +355,7 @@ GET /config/projections?schemaName={SCHEMA_NAME}&name={PROJECTION_NAME}
 >
 >`schemaName` 是使用參數時所需 `name` 的值，因為投影配置名稱在模式類的上下文中是唯一的。
 
-**請求**
+**要求**
 
 以下請求列出了與[!DNL Experience Data Model]方案類[!DNL XDM Individual Profile]關聯的所有投影配置。 有關XDM及其在[!DNL Platform]中的角色的詳細資訊，請從閱讀[XDM系統概述](../../xdm/home.md)開始。
 
@@ -434,7 +434,7 @@ POST /config/projections?schemaName={SCHEMA_NAME}
 |---|---|
 | `{SCHEMA_NAME}` | 與要訪問的投影配置相關聯的方案類的名稱。 |
 
-**請求**
+**要求**
 
 >[!NOTE]
 >
