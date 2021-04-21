@@ -2,17 +2,17 @@
 keywords: Experience Platform;home；常用主題；檢索失敗的批；失敗的批；批處理；失敗的批處理；失敗的批處理；獲取失敗的批處理；獲取失敗的批處理；下載失敗的批處理；下載失敗的批處理；
 solution: Experience Platform
 title: 使用Data Access API檢索失敗的批
-topic: tutorial
+topic-legacy: tutorial
 type: Tutorial
 description: 本教學課程涵蓋使用資料擷取API擷取失敗批次資訊的步驟。
+exl-id: 5fb9f28d-091e-4124-8d8e-b8a675938d3a
 translation-type: tm+mt
-source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '655'
+source-wordcount: '653'
 ht-degree: 2%
 
 ---
-
 
 # 使用Data Access API檢索失敗的批處理
 
@@ -92,7 +92,7 @@ GET /batches/{BATCH_ID}/failed
 | -------- | ----------- |
 | `{BATCH_ID}` | 您正在查找的批的ID。 |
 
-**請求**
+**要求**
 
 ```shell
 curl -X GET "https://platform.adobe.io/data/foundation/export/batches/{BATCH_ID}/failed" \
@@ -152,7 +152,7 @@ GET /batches/{BATCH_ID}/failed?path={FAILED_FILE}
 | `{BATCH_ID}` | 包含失敗檔案的批次的ID。 |
 | `{FAILED_FILE}` | 格式化失敗的檔案的名稱。 |
 
-**請求**
+**要求**
 
 下列要求可讓您下載有擷取錯誤的檔案。
 
