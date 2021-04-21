@@ -2,16 +2,16 @@
 keywords: Experience Platform；首頁；熱門主題；清單沙箱
 solution: Experience Platform
 title: 在API中列出支援的沙盒類型
-topic: developer guide
+topic-legacy: developer guide
 description: 您可以向/sandboxTypes端點提出GET請求，以擷取組織支援的沙盒類型清單。
+exl-id: eb5e1b44-37f5-4ed5-98f5-ac8db8792c7d
 translation-type: tm+mt
-source-git-commit: 62ce5ac92d03a6e85589fc92e8d953f7fc1d8f31
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '83'
+source-wordcount: '81'
 ht-degree: 2%
 
 ---
-
 
 # 在API中列出支援的沙盒類型
 
@@ -23,7 +23,7 @@ ht-degree: 2%
 GET /sandboxTypes
 ```
 
-**請求**
+**要求**
 
 ```shell
 curl -X GET \
