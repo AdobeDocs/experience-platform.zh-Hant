@@ -2,16 +2,16 @@
 keywords: Experience Platform；首頁；熱門主題
 solution: Experience Platform
 title: 量度API端點
-topic: developer guide
+topic-legacy: developer guide
 description: 瞭解如何使用可觀察分析API在Experience Platform中擷取可觀察度量。
+exl-id: 08d416f0-305a-44e2-a2b7-d563b2bdd2d2
 translation-type: tm+mt
-source-git-commit: 136c75f56c2ba4d61fef7981ff8a7889a0ade3d1
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '2056'
-ht-degree: 2%
+source-wordcount: '2054'
+ht-degree: 4%
 
 ---
-
 
 # 量度端點
 
@@ -50,7 +50,7 @@ GET /metrics?metric={METRIC}&metric={METRIC_2}&id={ID}&dateRange={DATE_RANGE}
 | `{ID}` | 要公開其度量的特定[!DNL Platform]資源的標識符。 此ID可能是選用、必要或不適用，視使用的量度而定。 如需可用度量的清單，包括每個度量的支援ID（必要和選用），請參閱[附錄](#available-metrics)。 |
 | `{DATE_RANGE}` | 您要公開的量度日期範圍，使用ISO 8601格式（例如`2018-10-01T07:00:00.000Z/2018-10-09T07:00:00.000Z`）。 |
 
-**請求**
+**要求**
 
 ```shell
 curl -X GET \
@@ -125,7 +125,7 @@ curl -X GET \
 POST /metrics
 ```
 
-**請求**
+**要求**
 
 ```sh
 curl -X POST \
@@ -293,22 +293,22 @@ curl -X POST \
 | 前瞻分析度量 | 說明 | ID查詢參數 |
 | ---- | ---- | ---- |
 | timeseries.ingestion.dataset.new.count | 建立的資料集總數。 | 不適用 |
-| timeseries.ingestion.dataset.size | 針對一個資料集或所有資料集所擷取的所有資料累積大小。 | 資料集ID |
-| timeseries.ingestion.dataset.dailysize | 針對一個資料集或所有資料集，依每日使用量而擷取的資料大小。 | 資料集ID |
-| timeseries.ingestion.dataset.batchfailed.count | 一個資料集或所有資料集的批處理失敗數。 | 資料集ID |
-| timeseries.ingestion.dataset.batchsuccess.count | 針對一個資料集或所有資料集所吸收的批次數。 | 資料集ID |
-| timeseries.ingestion.dataset.recordsuccess.count | 一個資料集或所有資料集所吸收的記錄數。 | 資料集ID |
-| **timeseries.data.collection.validation.total.messages.rate** | 一個資料集或所有資料集的消息總數。 | 資料集ID |
-| **timeseries.data.collection.validation.valid.messages.rate** | 一個資料集或所有資料集的有效消息總數。 | 資料集ID |
-| **timeseries.data.collection.validation.invalid.messages.rate** | 一個資料集或所有資料集的無效消息總數。 | 資料集ID |
-| **timeseries.data.collection.validation.category.type.count** | 一個資料集或所有資料集的無效「類型」消息總數。 | 資料集ID |
-| **timeseries.data.collection.validation.category.range.count** | 一個資料集或所有資料集的無效「範圍」消息總數。 | 資料集ID |
-| **timeseries.data.collection.validation.category.format.count** | 一個資料集或所有資料集的無效「格式」消息總數。 | 資料集ID |
-| **timeseries.data.collection.validation.category.pattern.count** | 一個資料集或所有資料集的無效「模式」消息總數。 | 資料集ID |
-| **timeseries.data.collection.validation.category.presence.count** | 一個資料集或所有資料集的無效「存在」消息總數。 | 資料集ID |
-| **timeseries.data.collection.validation.category.enum.count** | 一個資料集或所有資料集的無效「列舉」訊息總數。 | 資料集ID |
-| **timeseries.data.collection.validation.category.unclassified.count** | 一個資料集或所有資料集的無效「未分類」消息總數。 | 資料集ID |
-| **timeseries.data.collection.validation.category.unknown.count** | 一個資料集或所有資料集的無效「未知」消息總數。 | 資料集ID |
+| timeseries.ingestion.dataset.size | 針對一個資料集或所有資料集所擷取的所有資料累積大小。 | 資料集 ID |
+| timeseries.ingestion.dataset.dailysize | 針對一個資料集或所有資料集，依每日使用量而擷取的資料大小。 | 資料集 ID |
+| timeseries.ingestion.dataset.batchfailed.count | 一個資料集或所有資料集的批處理失敗數。 | 資料集 ID |
+| timeseries.ingestion.dataset.batchsuccess.count | 針對一個資料集或所有資料集所吸收的批次數。 | 資料集 ID |
+| timeseries.ingestion.dataset.recordsuccess.count | 一個資料集或所有資料集所吸收的記錄數。 | 資料集 ID |
+| **timeseries.data.collection.validation.total.messages.rate** | 一個資料集或所有資料集的消息總數。 | 資料集 ID |
+| **timeseries.data.collection.validation.valid.messages.rate** | 一個資料集或所有資料集的有效消息總數。 | 資料集 ID |
+| **timeseries.data.collection.validation.invalid.messages.rate** | 一個資料集或所有資料集的無效消息總數。 | 資料集 ID |
+| **timeseries.data.collection.validation.category.type.count** | 一個資料集或所有資料集的無效「類型」消息總數。 | 資料集 ID |
+| **timeseries.data.collection.validation.category.range.count** | 一個資料集或所有資料集的無效「範圍」消息總數。 | 資料集 ID |
+| **timeseries.data.collection.validation.category.format.count** | 一個資料集或所有資料集的無效「格式」消息總數。 | 資料集 ID |
+| **timeseries.data.collection.validation.category.pattern.count** | 一個資料集或所有資料集的無效「模式」消息總數。 | 資料集 ID |
+| **timeseries.data.collection.validation.category.presence.count** | 一個資料集或所有資料集的無效「存在」消息總數。 | 資料集 ID |
+| **timeseries.data.collection.validation.category.enum.count** | 一個資料集或所有資料集的無效「列舉」訊息總數。 | 資料集 ID |
+| **timeseries.data.collection.validation.category.unclassified.count** | 一個資料集或所有資料集的無效「未分類」消息總數。 | 資料集 ID |
+| **timeseries.data.collection.validation.category.unknown.count** | 一個資料集或所有資料集的無效「未知」消息總數。 | 資料集 ID |
 | **timeseries.data.collection.inlet.total.messages.received** | 為一個資料入口或所有資料入口接收的消息總數。 | 入口ID |
 | **timeseries.data.collection.inlet.total.messages.size.received** | 為一個資料入口或所有資料入口接收的資料的總大小。 | 入口ID |
 | **timeseries.data.collection.inlet.success** | 成功呼叫一個資料入口或所有資料入口的HTTP呼叫總數。 | 入口ID |
@@ -322,8 +322,8 @@ curl -X POST \
 
 | 前瞻分析度量 | 說明 | ID查詢參數 |
 | ---- | ---- | ---- |
-| timeseries.identity.dataset.recordsuccess.count | 對於一個資料集或所有資料集，按[!DNL Identity Service]寫入其資料源的記錄數。 | 資料集ID |
-| timeseries.identity.dataset.recordfailed.count | 對於一個資料集或所有資料集，[!DNL Identity Service]失敗的記錄數。 | 資料集ID |
+| timeseries.identity.dataset.recordsuccess.count | 對於一個資料集或所有資料集，按[!DNL Identity Service]寫入其資料源的記錄數。 | 資料集 ID |
+| timeseries.identity.dataset.recordfailed.count | 對於一個資料集或所有資料集，[!DNL Identity Service]失敗的記錄數。 | 資料集 ID |
 | timeseries.identity.dataset.namespacecode.recordsuccess.count | 成功接收命名空間的身份記錄數。 | 命名空間ID(**Required**) |
 | timeseries.identity.dataset.namespacecode.recordfailed.count | 名稱空間失敗的身份記錄數。 | 命名空間ID(**Required**) |
 | timeseries.identity.dataset.namespacecode.recordskipped.count | 命名空間跳過的身份記錄數。 | 命名空間ID(**Required**) |
@@ -367,11 +367,11 @@ curl -X POST \
 
 | 前瞻分析度量 | 說明 | ID查詢參數 |
 | ---- | ---- | ---- |
-| timeseries.profiles.dataset.recordread.count | [!DNL Profile]從[!DNL Data Lake]讀取的記錄數，用於一個資料集或所有資料集。 | 資料集ID |
-| timeseries.profiles.dataset.recordsuccess.count | 由[!DNL Profile]寫入其資料源、用於一個資料集或所有資料集的記錄數。 | 資料集ID |
-| timeseries.profiles.dataset.recordfailed.count | 對於一個資料集或所有資料集，[!DNL Profile]失敗的記錄數。 | 資料集ID |
-| timeseries.profiles.dataset.batchsuccess.count | 針對資料集或所有資料集所吸收的[!DNL Profile]批次數。 | 資料集ID |
-| timeseries.profiles.dataset.batchfailed.count | 一個資料集或所有資料集的[!DNL Profile]批次數失敗。 | 資料集ID |
+| timeseries.profiles.dataset.recordread.count | [!DNL Profile]從[!DNL Data Lake]讀取的記錄數，用於一個資料集或所有資料集。 | 資料集 ID |
+| timeseries.profiles.dataset.recordsuccess.count | 由[!DNL Profile]寫入其資料源、用於一個資料集或所有資料集的記錄數。 | 資料集 ID |
+| timeseries.profiles.dataset.recordfailed.count | 對於一個資料集或所有資料集，[!DNL Profile]失敗的記錄數。 | 資料集 ID |
+| timeseries.profiles.dataset.batchsuccess.count | 針對資料集或所有資料集所吸收的[!DNL Profile]批次數。 | 資料集 ID |
+| timeseries.profiles.dataset.batchfailed.count | 一個資料集或所有資料集的[!DNL Profile]批次數失敗。 | 資料集 ID |
 | platform.ups.ingest.streaming.request.m1_rate | 傳入請求率。 | IMS組織（**必填**） |
 | platform.ups.ingest.streaming.access.put.success.m1_rate | 擷取成功率。 | IMS組織（**必填**） |
 | platform.ups.ingest.streaming.records.created.m15_rate | 資料集新記錄的吸收率。 | 資料集ID(**Required**) |
