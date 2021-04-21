@@ -1,17 +1,17 @@
 ---
-keywords: Experience Platform；零售銷售配方； Data Science Workspace；熱門主題；配方；預建配方
+keywords: Experience Platform；零售銷售配方；資料科學工作區；熱門主題；配方；預建配方
 solution: Experience Platform
 title: 零售銷售方式
-topic: overview
+topic-legacy: overview
 description: 「零售銷售」方式使您能夠預測特定時段內所有系統初始商店的銷售預測。 透過精確的預測模型，零售商將能夠找出需求與定價政策之間的關係，並做出最佳化定價決策，以最大化銷售與收入。
+exl-id: ff01fcd1-fca6-4957-8470-a974fd1520aa
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '585'
 ht-degree: 2%
 
 ---
-
 
 # 零售銷售方式
 
@@ -34,7 +34,7 @@ ht-degree: 2%
 
 您可依照本[教學課程](../jupyterlab/create-a-recipe.md)開始使用。
 
-本教學課程將在Jupyter筆記型電腦中建立零售銷售配方，並使用筆記型電腦來配方工作流程，在Adobe Experience Platform中建立配方。
+本教學課程將在Jupyter Notebook中建立零售銷售配方，並使用筆記型電腦來配方工作流程，在Adobe Experience Platform建立配方。
 
 ## 資料架構
 
