@@ -1,17 +1,17 @@
 ---
-keywords: Experience Platform；開發人員指南；SDK；模型編寫；Data Science Workspace；熱門主題；測試
+keywords: Experience Platform；開發人員指南；SDK；模型編寫；資料科學工作區；熱門主題；測試
 solution: Experience Platform
 title: 模型編寫SDK
-topic: Overview
-description: 模型製作SDK可讓您開發自訂的機器學習方式和功能管道，這些方式和功能管道可用於Adobe Experience Platform Data Science Workspace，在PySpark和Spark(Scala)中提供可實作的範本。
+topic-legacy: Overview
+description: Model Authoring SDK可讓您開發自訂的機器學習方式和功能管道，可用於Adobe Experience Platform資料科學工作區，提供PySpark和Spark(Scala)中可實作的範本。
+exl-id: c7577f93-a64f-49b7-a76d-71f21d619052
 translation-type: tm+mt
-source-git-commit: f6cfd691ed772339c888ac34fcbd535360baa116
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '977'
 ht-degree: 1%
 
 ---
-
 
 # 模型編寫SDK
 
