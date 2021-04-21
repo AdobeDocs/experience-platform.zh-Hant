@@ -3,27 +3,27 @@ keywords: Experience Platform;home；熱門主題；api;API;XDM;XDM系統；體�
 solution: Experience Platform
 title: 在UI中定義列舉欄位
 description: 瞭解如何在Experience Platform使用者介面中定義列舉欄位。
-topic: user guide
+topic-legacy: user guide
+exl-id: 67ec5382-31de-4f8d-9618-e8919bb5a472
 translation-type: tm+mt
-source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '251'
+source-wordcount: '244'
 ht-degree: 0%
 
 ---
-
 
 # 在UI中定義列舉欄位
 
 在體驗資料模型(XDM)中，列舉欄位代表欄位，其受限於預先定義的可接受值清單。
 
-當[在Adobe Experience Platform使用者介面中定義新欄位](./overview.md#define)時，您可以選取右側導軌中的&#x200B;**[!UICONTROL Enum]**&#x200B;核取方塊，將其設為列舉欄位。
+當[在Adobe Experience Platform用戶介面中定義新欄位](./overview.md#define)時，可以通過選擇右邊欄中的&#x200B;**[!UICONTROL Enum]**&#x200B;複選框將其設定為枚舉欄位。
 
 ![](../../images/ui/fields/special/enum.png)
 
-選取核取方塊後，會出現其他控制項，讓您指定列舉的值限制。 在&#x200B;**[!UICONTROL Value]**&#x200B;欄下，您必須提供要限制欄位的精確值。 此值必須符合您為枚舉欄位選擇的[!UICONTROL Type]。 您也可以選擇為約束提供人工友好的&#x200B;**[!UICONTROL 標籤]**。
+選取核取方塊後，會出現其他控制項，讓您指定列舉的值限制。 在&#x200B;**[!UICONTROL Value]**&#x200B;欄下，您必須提供要限制欄位的精確值。 此值必須符合您為枚舉欄位選擇的[!UICONTROL Type]。 您也可以選擇為約束提供人性友好的&#x200B;**[!UICONTROL Label]**。
 
-要向枚舉添加其他約束，請選擇&#x200B;**[!UICONTROL 添加行]**。
+要向枚舉添加其他約束，請選擇&#x200B;**[!UICONTROL Add row]**。
 
 ![](../../images/ui/fields/special/enum-add-row.png)
 
