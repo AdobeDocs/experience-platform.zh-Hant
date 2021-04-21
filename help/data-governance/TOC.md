@@ -1,12 +1,11 @@
 ---
-product: experience-platform
 audience: user
 user-guide-title: Adobe Experience Platform 資料控管說明
 breadcrumb-title: 資料治理指南
 user-guide-description: 運用標籤、行銷動作和原則，強制執行資料使用限制。
-feature: Data Governance
+feature: 資料控管
 translation-type: tm+mt
-source-git-commit: ac6935f09f620ea55cf8f612ff0a1fba503b5e17
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '100'
 ht-degree: 34%
@@ -18,16 +17,16 @@ ht-degree: 34%
 
 * [資料治理概觀](home.md)
 * 資料使用標籤{#labels}
-   * [概述](labels/overview.md)
+   * [概覽](labels/overview.md)
    * [標籤辭彙表](labels/reference.md)
    * [管理UI中的標籤](labels/user-guide.md)
    * [使用API管理資料集的標籤](labels/dataset-api.md)
 * 資料使用策略{#policies}
-   * [概述](policies/overview.md)
+   * [概覽](policies/overview.md)
    * [在UI中管理原則](policies/user-guide.md)
    * [在API中建立原則](policies/create.md)
 * 策略實施{#enforcement}
-   * [概述](enforcement/overview.md)
+   * [概覽](enforcement/overview.md)
    * [自動強制](enforcement/auto-enforcement.md)
    * [以API為基礎的強制](enforcement/api-enforcement.md)
 * 策略服務API {#api}
