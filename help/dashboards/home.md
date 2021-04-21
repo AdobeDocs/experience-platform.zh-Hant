@@ -1,17 +1,17 @@
 ---
 solution: Experience Platform
 title: Experience Platform儀表板簡介
-topic: overview
+topic-legacy: overview
 type: Documentation
-description: '在Adobe Experience Platform中探索多個控制面板，以檢視在每日快照期間擷取的組織資料相關重要資訊。 '
+description: 探索Adobe Experience Platform的多個儀表板，以檢視在每日快照期間擷取的貴組織資料的重要資訊。
+exl-id: d56cb139-392d-4bbc-97ec-202a0c8a2863
 translation-type: tm+mt
-source-git-commit: d97fd09b382877608edf665d7559a684be00c0bb
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '274'
+source-wordcount: '273'
 ht-degree: 3%
 
 ---
-
 
 # （測試版）控制面板概述{#dashboards}
 
@@ -19,7 +19,7 @@ ht-degree: 3%
 >
 >儀表板功能目前處於測試階段，並非所有使用者都能使用。 文件和功能可能會有所變更。
 
-Adobe Experience Platform提供多種儀表板，您可透過這些儀表板檢視有關組織資料的重要資訊，如每日快照時所擷取的資訊。
+Adobe Experience Platform提供多個儀表板，您可以透過這些儀表板查看在每日快照期間捕獲的有關組織資料的重要資訊。
 
 ## 控制面板簡介
 
@@ -27,7 +27,7 @@ Adobe Experience Platform提供多種儀表板，您可透過這些儀表板檢�
 
 ## 儀表板快速入門
 
-若要存取控制面板，請導覽至「平台」使用者介面(UI)中的適當區段。 在區段中，選取&#x200B;**[!UICONTROL 概述]**&#x200B;標籤（如果未自動選取）以檢視控制面板。
+若要存取控制面板，請導覽至「平台」使用者介面(UI)中的適當區段。 在區段中，選取&#x200B;**[!UICONTROL Overview]**&#x200B;標籤（如果未自動選取）以檢視控制面板。
 
 快照中的資料與拍攝快照時在特定時間點顯示的資料完全相同。 換言之，快照不是資料的近似值或範例，而控制面板不會即時更新。
 
@@ -37,6 +37,6 @@ Adobe Experience Platform提供多種儀表板，您可透過這些儀表板檢�
 
 ## 可用控制面板
 
-Experience Platform目前提供多種儀表板，每種儀表板都能對組織的客戶資料保持透明。
+目前Experience Platform中有多個控制面板，每個控制面板都能對組織的客戶資料提供透明度。
 
 若要進一步瞭解這些控制面板及其可用度量，請從檔案導覽的可用控制面板清單中選取。
