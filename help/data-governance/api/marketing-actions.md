@@ -2,20 +2,20 @@
 keywords: Experience Platform;home；熱門主題；策略實施；行銷操作api；基於API的實施；資料治理
 solution: Experience Platform
 title: 行銷動作API端點
-topic: developer guide
-description: 在Adobe Experience Platform資料治理的背景下，行銷行動是Experience Platform資料消費者採取的行動，需要檢查資料使用政策是否違規。
+topic-legacy: developer guide
+description: 在「Adobe Experience Platform資料治理」的背景下，行銷行動是Experience Platform資料消費者採取的行動，需要檢查是否違反資料使用策略。
+exl-id: bc16b318-d89c-4fe6-bf5a-1a4255312f54
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '734'
 ht-degree: 2%
 
 ---
 
-
 # 行銷動作端點
 
-在Adobe Experience Platform [!DNL Data Governance]中，行銷動作是[!DNL Experience Platform]資料使用者採取的動作，需要檢查資料使用政策是否違規。
+在Adobe Experience Platform[!DNL Data Governance]中的行銷動作是[!DNL Experience Platform]資料使用者採取的動作，需要檢查資料使用政策是否違規。
 
 您可以使用原則服務API中的`/marketingActions`端點，管理組織的行銷動作。
 
@@ -34,7 +34,7 @@ GET /marketingActions/core
 GET /marketingActions/custom
 ```
 
-**請求**
+**要求**
 
 下列請求會擷取您組織維護的自訂行銷動作清單。
 
@@ -108,7 +108,7 @@ curl -X GET \
 
 ## 查找特定行銷動作{#lookup}
 
-您可在GET請求的路徑中加入行銷動作的`name`屬性，以查閱特定行銷動作的詳細資訊。
+您可以在請求路徑中加入行銷動作的`name`屬性，以查閱特定行銷動作的詳細資訊。
 
 **API格式**
 
@@ -121,7 +121,7 @@ GET /marketingActions/custom/{MARKETING_ACTION_NAME}
 | --- | --- |
 | `{MARKETING_ACTION_NAME}` | 您要尋找之行銷動作的`name`屬性。 |
 
-**請求**
+**要求**
 
 下列請求會擷取名為`combineData`的自訂行銷動作。
 
@@ -159,7 +159,7 @@ curl -X GET \
 
 ## 建立或更新自訂行銷動作{#create-update}
 
-您可以建立新的自訂行銷動作，或更新現有的行銷動作，方法是將行銷動作的現有或預期名稱加入PUT請求的路徑中。
+您可以建立新的自訂行銷動作，或更新現有的行銷動作，方法是將行銷動作的現有或預期名稱納入PUT請求的路徑。
 
 **API格式**
 
@@ -171,7 +171,7 @@ PUT /marketingActions/custom/{MARKETING_ACTION_NAME}
 | --- | --- |
 | `{MARKETING_ACTION_NAME}` | 要建立或更新之行銷動作的名稱。 如果系統中已存在具有提供名稱的行銷動作，則會更新該行銷動作。 如果不存在，則會為提供的名稱建立新的行銷動作。 |
 
-**請求**
+**要求**
 
 下列請求會建立名為`crossSiteTargeting`的新行銷動作，前提是系統中尚未有相同名稱的行銷動作。 如果`crossSiteTargeting`行銷動作確實存在，此呼叫會根據裝載中提供的屬性更新該行銷動作。
 
@@ -235,7 +235,7 @@ DELETE /marketingActions/custom/{MARKETING_ACTION_NAME}
 | --- | --- |
 | `{MARKETING_ACTION_NAME}` | 您要刪除之行銷動作的名稱。 |
 
-**請求**
+**要求**
 
 ```shell
 curl -X DELETE \
