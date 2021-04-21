@@ -2,16 +2,16 @@
 keywords: Experience Platform;home；熱門主題；資料位置；資料位置；資料管理；資料管理；世系；資料類型；資料類型；資料類型；資料類型
 solution: Experience Platform
 title: 資料集概述
-topic: datasets
+topic-legacy: datasets
 description: 本檔案提供Experience Platform中資料集的高階概觀。
+exl-id: 51ecefb0-a699-4b1a-80f1-26c6ba92fcbf
 translation-type: tm+mt
-source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '708'
+source-wordcount: '707'
 ht-degree: 2%
 
 ---
-
 
 # 資料集總覽
 
