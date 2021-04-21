@@ -7,18 +7,14 @@ type: Tutorial
 description: 瞭解如何使用Adobe Experience PlatformUI建立Oracle資料庫源連接。
 exl-id: 4ca6ecc6-0382-4cee-acc5-1dec7eeb9443
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: b2384bfe26fa3d111c342062b2d9bb37c4226857
 workflow-type: tm+mt
-source-wordcount: '464'
+source-wordcount: '448'
 ht-degree: 1%
 
 ---
 
 # 在UI中建立[!DNL Oracle DB]來源連線
-
->[!NOTE]
->
-> [!DNL Oracle DB]介面處於測試狀態。 有關使用beta標籤連接器的詳細資訊，請參閱[ Sources綜覽](../../../../home.md#terms-and-conditions)。
 
 Adobe Experience Platform的來源連接器提供按計畫接收外部來源資料的能力。 本教程提供使用[!DNL Platform]用戶介面建立[!DNL Oracle DB]源連接器的步驟。
 
