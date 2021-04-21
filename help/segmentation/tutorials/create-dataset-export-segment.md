@@ -1,18 +1,18 @@
 ---
-keywords: Experience Platform; home；熱門主題； Segmentation Service;Segmentation; Segmentation；建立資料集；導出受眾細分；導出細分；
+keywords: Experience Platform; home；熱門主題；分段服務；分段；建立資料集；導出受眾分段；導出分段；
 solution: Experience Platform
 title: 建立資料集以匯出觀眾區隔
-topic: tutorial
+topic-legacy: tutorial
 type: Tutorial
-description: 本教學課程將逐步說明建立資料集所需的步驟，以便使用Experience Platform UI匯出觀眾區隔。
+description: 本教學課程將逐步說明建立資料集所需的步驟，以便使用Experience PlatformUI匯出觀眾區段。
+exl-id: 1cd16e43-b050-42ba-a894-d7ea477b65f3
 translation-type: tm+mt
-source-git-commit: b3defc3e33a55855e307ab70b9797d985d5719e3
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '773'
+source-wordcount: '739'
 ht-degree: 1%
 
 ---
-
 
 # 建立資料集以匯出觀眾區隔
 
@@ -26,16 +26,16 @@ ht-degree: 1%
 
 若要匯出區段，資料集必須以[!DNL XDM Individual Profile Union Schema]為基礎。 聯合模式是系統生成的只讀模式，它聚合了共用相同類的所有模式的欄位（在本例中為[!DNL XDM Individual Profile]類）。 有關聯合視圖方案的詳細資訊，請參閱方案註冊表開發人員指南](../../xdm/schema/composition.md#union)的[即時客戶配置檔案部分。
 
-要在UI中查看聯合架構，請按一下左側導航中的&#x200B;**[!UICONTROL Profiles]** ，然後按一下&#x200B;**[!UICONTROL Union架構]**&#x200B;頁籤，如下所示。
+若要在UI中檢視聯合結構，請按一下左側導覽中的&#x200B;**[!UICONTROL Profiles]**，然後按一下&#x200B;**[!UICONTROL Union schema]**&#x200B;標籤，如下所示。
 
-![Experience Platform UI中的「結合架構」索引標籤](../images/tutorials/segment-export-dataset/union-schema-ui.png)
+![Experience PlatformUI中的聯合架構頁籤](../images/tutorials/segment-export-dataset/union-schema-ui.png)
 
 
 ## 資料集工作區
 
 [!DNL Experience Platform] UI中的資料集工作區可讓您檢視和管理IMS組織建立的所有資料集，並建立新的資料集。
 
-要查看資料集工作區，請按一下左側導航中的&#x200B;**[!UICONTROL Datasets]** ，然後按一下&#x200B;**[!UICONTROL Browse]**&#x200B;頁籤。 資料集工作區包含資料集的清單，包括顯示名稱、建立（日期和時間）、來源、結構、上次批次狀態的欄，以及上次更新資料集的日期和時間。 視每欄的寬度而定，您可能需要向左或向右捲動，才能查看所有欄。
+若要檢視資料集工作區，請按一下左側導覽中的&#x200B;**[!UICONTROL Datasets]**，然後按一下&#x200B;**[!UICONTROL Browse]**&#x200B;標籤。 資料集工作區包含資料集的清單，包括顯示名稱、建立（日期和時間）、來源、結構、上次批次狀態的欄，以及上次更新資料集的日期和時間。 視每欄的寬度而定，您可能需要向左或向右捲動，才能查看所有欄。
 
 >[!NOTE]
 >
@@ -45,42 +45,42 @@ ht-degree: 1%
 
 ## 建立資料集
 
-若要建立資料集，請按一下&#x200B;**[!UICONTROL Datasets]**&#x200B;工作區右上角的「建立資料集」****。
+若要建立資料集，請按一下&#x200B;**[!UICONTROL Datasets]**&#x200B;工作區右上角的&#x200B;**[!UICONTROL Create Dataset]**。
 
 ![按一下「建立資料集」](../images/tutorials/segment-export-dataset/dataset-click-create.png)
 
-在&#x200B;**[!UICONTROL 建立資料集]**&#x200B;畫面上，按一下&#x200B;**[!UICONTROL 從架構建立資料集]**&#x200B;以繼續。
+在&#x200B;**[!UICONTROL Create Dataset]**&#x200B;畫面上，按一下&#x200B;**[!UICONTROL Create Dataset from Schema]**&#x200B;繼續。
 
 ![選擇資料來源](../images/tutorials/segment-export-dataset/create-dataset.png)
 
 ## 選擇XDM單個配置式聯合模式
 
-要選擇[!DNL XDM Individual Profile Union Schema]以用於資料集，請在&#x200B;**[!UICONTROL 選擇方案]**&#x200B;螢幕上查找類型為&quot;[!UICONTROL Union]&quot;的「[!UICONTROL XDM Individual Profile]」模式。
+若要選擇[!DNL XDM Individual Profile Union Schema]以用於您的資料集，請在&#x200B;**[!UICONTROL Select Schema]**&#x200B;畫面上尋找類型為&quot;[!UICONTROL Union]&quot;的&quot;[!UICONTROL XDM Individual Profile]&quot;結構。
 
-已選擇&#x200B;**[!UICONTROL XDM Individual Profile]**&#x200B;旁邊的單選按鈕，然後按一下右上角的&#x200B;**[!UICONTROL Next]**。
+已選取&#x200B;**[!UICONTROL XDM Individual Profile]**&#x200B;旁的選項按鈕，然後按一下右上角的&#x200B;**[!UICONTROL Next]**。
 
 ![選擇方案](../images/tutorials/segment-export-dataset/select-schema.png)
 
 ## 設定資料集
 
-在&#x200B;**[!UICONTROL 設定資料集]**&#x200B;畫面上，您必須為資料集指定名稱，並且可能提供資料集的說明。
+在&#x200B;**[!UICONTROL Configure Dataset]**&#x200B;畫面上，您必須為資料集指定名稱，並且可能提供資料集的說明。
 
 **資料集名稱的附註：**
 - 資料集名稱應簡短且具說明性，以便稍後在資料庫中輕鬆找到資料集。
 - 資料集名稱必須是唯一的，這表示資料集名稱也應足夠具體，以免日後重複使用。
 - 最好使用說明欄位來提供資料集的其他相關資訊，因為這可協助其他使用者在未來區隔資料集。
 
-資料集有名稱和說明後，按一下&#x200B;**[!UICONTROL 完成]**。
+資料集有名稱和說明後，按一下&#x200B;**[!UICONTROL Finish]**。
 
 ![設定資料集](../images/tutorials/segment-export-dataset/configure-dataset.png)
 
 ## 資料集活動
 
-現在已建立空的資料集，您已返回至&#x200B;**[!UICONTROL Dataces]**&#x200B;工作區中的「資料集活動」標籤。 ****&#x200B;您應該會在工作區的左上角看到資料集名稱，以及「未新增任何批次」通知。 由於您尚未將任何批次新增至此資料集，因此預期會出現此情況。
+現在已建立空的資料集，您已返回至&#x200B;**[!UICONTROL Datasets]**&#x200B;工作區的&#x200B;**[!UICONTROL Dataset Activity]**&#x200B;標籤。 您應該會在工作區的左上角看到資料集名稱，以及「未新增任何批次」通知。 由於您尚未將任何批次新增至此資料集，因此預期會出現此情況。
 
-在「資料集」工作區的右側，您會看到&#x200B;**[!UICONTROL 資訊]**&#x200B;標籤，其中包含與新資料集相關的資訊，例如資料集ID、名稱、說明、表格名稱、架構、串流和來源。 **[!UICONTROL Info]**&#x200B;標籤也包含有關資料集建立時間及其上次修改日期的資訊。
+在「資料集」工作區的右側，您會看到&#x200B;**[!UICONTROL Info]**&#x200B;標籤，其中包含與新資料集相關的資訊，例如資料集ID、名稱、說明、表格名稱、架構、串流和來源。 **[!UICONTROL Info]**&#x200B;標籤也包含建立資料集的時間及其上次修改日期的相關資訊。
 
-請記下&#x200B;**[!UICONTROL 資料集ID]**，因為此值是完成觀眾區段匯出工作流程的必要值。
+請記下&#x200B;**[!UICONTROL Dataset ID]**，因為此值是完成觀眾區段匯出工作流程的必要值。
 
 ![資料集活動](../images/tutorials/segment-export-dataset/dataset-activity.png)
 
