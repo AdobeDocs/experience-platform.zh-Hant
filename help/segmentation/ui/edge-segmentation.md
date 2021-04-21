@@ -2,13 +2,13 @@
 keywords: Experience Platform; home；熱門主題；邊緣分割；分段服務；分段服務；ui指南；流媒體邊緣；
 solution: Experience Platform
 title: 邊緣區段UI指南
-topic: ui guide
+topic-legacy: ui guide
 description: 邊緣區段是指能夠即時在邊緣上評估平台中的區段，讓相同的頁面和下一頁個人化使用案例。
 exl-id: eae948e6-741c-45ce-8e40-73d10d5a88f1
 translation-type: tm+mt
-source-git-commit: 36169a42c7f6a73ca9cc165cd338d6a1cf245bfc
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '348'
+source-wordcount: '346'
 ht-degree: 4%
 
 ---
