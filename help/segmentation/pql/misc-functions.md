@@ -1,17 +1,17 @@
 ---
-keywords: Experience Platform; home；熱門主題；分段；分段；分段服務；pql;PQL；配置檔案查詢語言；其他函式；misc;
+keywords: Experience Platform;home；熱門主題；分段；分段；分段服務；pql;PQL；配置檔案查詢語言；雜項函式；misc;
 solution: Experience Platform
 title: PQL其他函式
-topic: developer guide
+topic-legacy: developer guide
 description: 以下函式是描述檔查詢語言(PQL)的其他函式。
+exl-id: a6ed31a2-a649-4dc8-89b1-48c1170b7f16
 translation-type: tm+mt
-source-git-commit: b3defc3e33a55855e307ab70b9797d985d5719e3
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '132'
 ht-degree: 3%
 
 ---
-
 
 # 其他函式
 
@@ -21,7 +21,7 @@ ht-degree: 3%
 
 `let`函式允許將表達式儲存為變數，以便以後在查詢中使用。
 
-**Format**
+**格式**
 
 ```sql
 let {VARIABLE} = {EXPRESSION}
