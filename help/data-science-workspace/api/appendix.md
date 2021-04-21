@@ -1,17 +1,17 @@
 ---
-keywords: Experience Platform；開發人員指南；端點； Data Science Workspace；熱門主題；
+keywords: Experience Platform；開發人員指南；端點；資料科學工作區；熱門主題；
 solution: Experience Platform
 title: Sensei Machine Learning API指南附錄
-topic: Developer guide
+topic-legacy: Developer guide
 description: 以下各節提供Sensei Machine Learning API各種功能的參考資訊。
+exl-id: 2c8d3ae8-7ad7-4ff6-8d6b-3a42d3eccdff
 translation-type: tm+mt
-source-git-commit: b395535cbe7e4030606ee2808eb173998f5c32e0
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '330'
 ht-degree: 3%
 
 ---
-
 
 # [!DNL Sensei Machine Learning] API指南附錄
 
