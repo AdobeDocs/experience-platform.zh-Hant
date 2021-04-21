@@ -2,17 +2,17 @@
 keywords: Experience Platform;home；熱門主題；流；流處理；流處理驗證；驗證；流處理驗證；驗證；同步驗證；同步驗證；非同步驗證；非同步驗證；
 solution: Experience Platform
 title: 串流擷取驗證
-topic: tutorial
+topic-legacy: tutorial
 type: Tutorial
 description: 串流擷取可讓您使用串流端點即時將資料上傳至Adobe Experience Platform。 串流擷取API支援同步和非同步兩種驗證模式。
+exl-id: 6e9ac943-6d73-44de-a13b-bef6041d3834
 translation-type: tm+mt
-source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '900'
+source-wordcount: '898'
 ht-degree: 3%
 
 ---
-
 
 # 串流擷取驗證
 
@@ -81,7 +81,7 @@ POST /collection/{CONNECTION_ID}?synchronousValidation=true
 | --------- | ----------- |
 | `{CONNECTION_ID}` | 先前建立的串流連接的`id`值。 |
 
-**請求**
+**要求**
 
 提交下列要求，透過同步驗證將資料收錄至您的資料匯入：
 
@@ -158,7 +158,7 @@ POST /collection/{CONNECTION_ID}
 | --------- | ----------- |
 | `{CONNECTION_ID}` | 先前建立的串流連接的`id`值。 |
 
-**請求**
+**要求**
 
 提交下列要求，透過非同步驗證將資料收錄至您的資料匯入：
 
