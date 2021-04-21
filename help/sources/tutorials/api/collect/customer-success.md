@@ -2,14 +2,14 @@
 keywords: Experience Platform；首頁；熱門主題；收集客戶成功；客戶成功
 solution: Experience Platform
 title: 使用來源連接器和API從客戶成功系統收集資料
-topic: overview
+topic-legacy: overview
 type: Tutorial
 description: 本教學課程涵蓋從客戶成功系統擷取資料，並使用來源連接器和API將其匯入平台的步驟。
 exl-id: 0fae04d0-164b-4113-a274-09677f4bbde5
 translation-type: tm+mt
-source-git-commit: 610ce5c6dca5e7375b941e7d6f550382da10ca27
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '1581'
+source-wordcount: '1579'
 ht-degree: 1%
 
 ---
@@ -75,7 +75,7 @@ ht-degree: 1%
 POST /sourceConnections
 ```
 
-**請求**
+**要求**
 
 ```shell
 curl -X POST \
@@ -163,7 +163,7 @@ curl -X POST \
 POST /tenant/schemas
 ```
 
-**請求**
+**要求**
 
 以下示例請求建立一個XDM模式，以擴展XDM Individual Profile類。
 
@@ -269,7 +269,7 @@ curl -X POST \
 POST catalog/dataSets
 ```
 
-**請求**
+**要求**
 
 ```shell
 curl -X POST \
@@ -371,7 +371,7 @@ curl -X POST \
 POST /mappingSets
 ```
 
-**請求**
+**要求**
 
 ```shell
 curl -X POST \
@@ -444,7 +444,7 @@ curl -X POST \
 GET /flowSpecs?property=name=="CRMToAEP"
 ```
 
-**請求**
+**要求**
 
 ```shell
 curl -X GET \
@@ -702,7 +702,7 @@ curl -X GET \
 POST /flows
 ```
 
-**請求**
+**要求**
 
 ```shell
 curl -X POST \
