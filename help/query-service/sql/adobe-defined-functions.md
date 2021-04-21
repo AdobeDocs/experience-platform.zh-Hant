@@ -1,23 +1,23 @@
 ---
-keywords: Experience Platform;home;popular topics;query service;Query service;adobe defined functions;sql;
+keywords: Experience Platform; home；熱門主題；查詢服務；查詢服務；adobe定義函式；sql;
 solution: Experience Platform
-title: 查詢服務中Adobe定義的SQL函式
-topic: functions
-description: 本檔案提供Adobe Experience Platform Query Service中Adobe定義功能的相關資訊。
+title: Adobe定義的查詢服務中的SQL函式
+topic-legacy: functions
+description: 本檔案提供Adobe Experience Platform查詢服務中可用的Adobe定義函式資訊。
+exl-id: 275aa14e-f555-4365-bcd6-0dd6df2456b3
 translation-type: tm+mt
-source-git-commit: 97dc0b5fb44f5345fd89f3f56bd7861668da9a6e
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '2913'
 ht-degree: 2%
 
 ---
 
+# Adobe定義的查詢服務中的SQL函式
 
-# Query Service中Adobe定義的SQL函式
+Adobe定義的函式（在此稱為ADF）是Adobe Experience Platform查詢服務中的預建函式，可幫助對[!DNL Experience Event]資料執行與業務相關的常見任務。 這些函式包括[Sessionization](https://experienceleague.adobe.com/docs/analytics/components/virtual-report-suites/vrs-mobile-visit-processing.html)和[Attribution](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/attribution/overview.html)的函式，如Adobe Analytics的函式。
 
-Adobe定義的函式（在此稱為ADF）是Adobe Experience Platform Query Service中預先建立的函式，可協助您對[!DNL Experience Event]資料執行常見的商業相關工作。 這些功能包括[Sessionization](https://experienceleague.adobe.com/docs/analytics/components/virtual-report-suites/vrs-mobile-visit-processing.html)和[Attribution](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/attribution/overview.html)的函式，如Adobe Analytics中的函式。
-
-本檔案提供[!DNL Query Service]中提供的Adobe定義函式資訊。
+本檔案提供[!DNL Query Service]中可用的Adobe定義函式資訊。
 
 ## 窗口函式{#window-functions}
 
@@ -45,7 +45,7 @@ OVER ({PARTITION} {ORDER} {FRAME})
 
 此資料分組或作業化有助於關聯事件，以發現客戶體驗的更多相關內容。
 
-如需Adobe Analytics中作業化的詳細資訊，請參閱[內容感應作業](https://experienceleague.adobe.com/docs/analytics/components/virtual-report-suites/vrs-mobile-visit-processing.html)的檔案。
+有關Adobe Analytics會話化的更多資訊，請參見[上下文感知會話](https://experienceleague.adobe.com/docs/analytics/components/virtual-report-suites/vrs-mobile-visit-processing.html)上的文檔。
 
 **查詢語法**
 
@@ -120,7 +120,7 @@ SESS_START_IF({TIMESTAMP}, {TEST_EXPRESSION}) OVER ({PARTITION} {ORDER} {FRAME})
 | 參數 | 說明 |
 | --------- | ----------- |
 | `{TIMESTAMP}` | 在資料集中找到的時間戳記欄位。 |
-| `{TEST_EXPRESSION}` | 要檢查資料欄位的表達式。 例如：`application.launches > 0`。 |
+| `{TEST_EXPRESSION}` | 要檢查資料欄位的表達式。 例如 `application.launches > 0`。 |
 
 有關`OVER()`函式中參數的說明，請參閱[窗口函式部分](#window-functions)。
 
@@ -185,7 +185,7 @@ SESS_END_IF({TIMESTAMP}, {TEST_EXPRESSION}) OVER ({PARTITION} {ORDER} {FRAME})
 | 參數 | 說明 |
 | --------- | ----------- |
 | `{TIMESTAMP}` | 在資料集中找到的時間戳記欄位。 |
-| `{TEST_EXPRESSION}` | 要檢查資料欄位的表達式。 例如：`application.launches > 0`。 |
+| `{TEST_EXPRESSION}` | 要檢查資料欄位的表達式。 例如 `application.launches > 0`。 |
 
 有關`OVER()`函式中參數的說明，請參閱[窗口函式部分](#window-functions)。
 
@@ -241,7 +241,7 @@ SELECT
 
 將客戶行動與成功聯繫起來，是瞭解影響客戶體驗的因素的重要部分。 下列ADF支援使用不同過期設定的首次接觸歸因和上次接觸歸因。
 
-如需Adobe Analytics中歸因的詳細資訊，請參閱[!DNL Analytics]歸因面板指南中的[歸因IQ概觀](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/panels/attribution.html)。
+如需Adobe Analytics歸因的詳細資訊，請參閱[!DNL Analytics]歸因面板指南中的[Attribution IQ概述](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/panels/attribution.html)。
 
 ### 首次接觸歸因
 
@@ -815,7 +815,7 @@ LIMIT 10
 (10 rows)
 ```
 
-對於給定的示例查詢，結果在`average_minutes_since_registration`列中給出。 `average_minutes_since_registration`欄中的值是目前和先前事件之間的時間差異。 時間單位先前在`{TIME_UNIT}`中定義。
+對於給定的示例查詢，結果在`average_minutes_since_registration`列中給出。 `average_minutes_since_registration`欄中的值是目前事件與先前事件之間的時間差異。 時間單位先前在`{TIME_UNIT}`中定義。
 
 ### 下次比對時間
 
@@ -885,6 +885,6 @@ LIMIT 10
 
 ## 其他資源
 
-以下視訊說明如何在Adobe Experience Platform介面和PSQL用戶端中執行查詢。 此外，視訊還使用XDM物件中涉及個別屬性的範例、使用Adobe定義的函式，以及使用CREATE TABLE AS SELECT(CTAS)。
+以下視頻介紹如何在Adobe Experience Platform介面和PSQL客戶端中運行查詢。 此外，該視頻還使用涉及XDM對象中各個屬性的示例、使用Adobe定義的函式以及使用CREATE TABLE AS SELECT(CTAS)。
 
 >[!VIDEO](https://video.tv.adobe.com/v/29796?quality=12&learn=on)
