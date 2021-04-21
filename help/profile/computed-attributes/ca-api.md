@@ -1,17 +1,17 @@
 ---
-keywords: Experience Platform;Profile；即時客戶配置檔案；故障排除；API
+keywords: Experience Platform；配置檔案；即時客戶配置檔案；故障排除；API
 title: 計算屬性API端點
-topic: guide
+topic-legacy: guide
 type: Documentation
-description: 在Adobe Experience Platform中，計算屬性是用來將事件層級資料匯整為描述檔層級屬性的函式。 這些函式會自動計算，以便跨區段、啟動和個人化使用。 本指南說明如何使用即時客戶描述檔API來建立、檢視、更新和刪除計算的屬性。
+description: 在Adobe Experience Platform，計算屬性是用於將事件級資料聚合到配置檔案級屬性的函式。 這些函式會自動計算，以便跨區段、啟動和個人化使用。 本指南說明如何使用即時客戶描述檔API來建立、檢視、更新和刪除計算的屬性。
+exl-id: 6b35ff63-590b-4ef5-ab39-c36c39ab1d58
 translation-type: tm+mt
-source-git-commit: 4ed2b80ebfd87f8920462ae0a918b01bb13d4210
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '2279'
+source-wordcount: '2277'
 ht-degree: 2%
 
 ---
-
 
 # (Alpha)計算屬性API端點
 
@@ -27,7 +27,7 @@ ht-degree: 2%
 
 本指南中使用的API端點是[即時客戶設定檔API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml)的一部分。
 
-在繼續之前，請先閱讀[描述檔API快速入門手冊](../api/getting-started.md)，以取得建議檔案的連結、閱讀本檔案中顯示之範例API呼叫的指南，以及成功呼叫任何Experience Platform API所需之必要標題的重要資訊。
+在繼續之前，請先閱讀[描述檔API快速入門手冊](../api/getting-started.md)，以取得建議檔案的連結、閱讀本檔案中顯示之範例API呼叫的指南，以及成功呼叫任何Experience PlatformAPI所需之必要標題的重要資訊。
 
 ## 配置計算屬性欄位
 
@@ -51,7 +51,7 @@ ht-degree: 2%
 POST /config/computedAttributes
 ```
 
-**請求**
+**要求**
 
 ```shell
 curl -X POST \
@@ -157,7 +157,7 @@ curl -X POST \
 POST /config/computedAttributes
 ```
 
-**請求**
+**要求**
 
 在此示例中，已建立了兩個計算屬性，並將用於定義第三個屬性。 現有的計算屬性包括：
 
@@ -294,7 +294,7 @@ curl -X POST \
 GET /config/computedAttributes
 ```
 
-**請求**
+**要求**
 
 ```shell
 curl -X GET \
@@ -436,7 +436,7 @@ GET /config/computedAttributes/{ATTRIBUTE_ID}
 |---|---|
 | `{ATTRIBUTE_ID}` | 要查看的計算屬性的ID。 |
 
-**請求**
+**要求**
 
 ```shell
 curl -X GET \
@@ -495,7 +495,7 @@ curl -X GET \
 
 ## 更新計算屬性
 
-如果您發現需要更新現有的計算屬性，可以通過向`/config/computedAttributes`端點發出PATCH請求並在請求路徑中包括要更新的計算屬性的ID來完成此操作。
+如果您發現需要更新現有的計算屬性，則可以通過向`/config/computedAttributes`端點發出PATCH請求並在請求路徑中包括要更新的計算屬性的ID來完成此操作。
 
 **API格式**
 
@@ -507,7 +507,7 @@ PATCH /config/computedAttributes/{ATTRIBUTE_ID}
 |---|---|
 | `{ATTRIBUTE_ID}` | 您要更新的計算屬性的ID。 |
 
-**請求**
+**要求**
 
 此請求使用[JSON修補程式格式](http://jsonpatch.com/)來更新「運算式」欄位的「值」。
 
@@ -539,7 +539,7 @@ curl -X PATCH \
 
 **回應**
 
-成功的更新會傳回HTTP狀態204（無內容）和空回應主體。 如果您想確認更新成功，可以執行GET請求，以依據其ID查看計算屬性。
+成功的更新會傳回HTTP狀態204（無內容）和空回應主體。 如果要確認更新成功，可以執行GET請求以按計算屬性的ID查看該屬性。
 
 ## 刪除計算屬性
 
@@ -547,7 +547,7 @@ curl -X PATCH \
 
 >[!NOTE]
 >
->刪除計算屬性時請小心，因為該屬性可能在多個方案中使用，且DELETE操作無法撤消。
+>刪除計算屬性時請小心，因為該屬性可能正在多個模式中使用，且DELETE操作無法撤消。
 
 **API格式**
 
@@ -559,7 +559,7 @@ DELETE /config/computedAttributes/{ATTRIBUTE_ID}
 |---|---|
 | `{ATTRIBUTE_ID}` | 要刪除的計算屬性的ID。 |
 
-**請求**
+**要求**
 
 ```shell
 curl -X DELETE \
@@ -576,11 +576,11 @@ curl -X DELETE \
 
 ## 建立引用計算屬性的段定義
 
-Adobe Experience Platform可讓您建立區段，從一組描述檔定義一組特定屬性或行為。 段定義包括用於封裝在PQL中寫入的查詢的表達式。 這些表達式還可以引用計算屬性。
+Adobe Experience Platform可讓您建立區段，從一組描述檔中定義一組特定屬性或行為。 段定義包括用於封裝在PQL中寫入的查詢的表達式。 這些表達式還可以引用計算屬性。
 
 下面的示例建立引用現有計算屬性的段定義。 若要進一步瞭解區段定義，以及如何在區段服務API中使用區段定義，請參閱[區段定義API端點指南](../../segmentation/api/segment-definitions.md)。
 
-首先，向`/segment/definitions`端點發出POST請求，在請求主體中提供計算屬性。
+首先，向`/segment/definitions`端點發出POST請求，在請求主體中提供計算的屬性。
 
 **API格式**
 
@@ -588,7 +588,7 @@ Adobe Experience Platform可讓您建立區段，從一組描述檔定義一組�
 POST /segment/definitions
 ```
 
-**請求**
+**要求**
 
 ```shell
 curl -X POST https://platform.adobe.io/data/core/ups/segment/definitions
