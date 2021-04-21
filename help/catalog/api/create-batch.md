@@ -1,17 +1,17 @@
 ---
-keywords: Experience Platform;home；熱門主題；create batch;catalog service;api
+keywords: Experience Platform;home；熱門主題；建立批處理；目錄服務；api
 solution: Experience Platform
 title: 在API中建立批次
-topic: developer guide
-description: 您可以通過對目錄API中的/batches端點發出POST請求來建立批。
+topic-legacy: developer guide
+description: 您可以通過向目錄API中的/batches端點發出POST請求來建立批。
+exl-id: 1d2cbca9-1cd6-4b89-9b77-3687268bd849
 translation-type: tm+mt
-source-git-commit: 8a213ac0ef1ac0f9c42e4b880b24157d28878bf1
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '117'
 ht-degree: 3%
 
 ---
-
 
 # 建立批次
 
@@ -23,7 +23,7 @@ ht-degree: 3%
 POST /batches
 ```
 
-**請求**
+**要求**
 
 ```SHELL
 curl -X POST 'https://platform.adobe.io/data/foundation/import/batches' \
