@@ -2,40 +2,40 @@
 solution: Experience Platform
 title: 在UI中匯出XDM結構描述
 description: 瞭解如何在Adobe Experience Platform使用者介面中將現有的架構匯出至不同的沙盒或IMS組織。
-topic: user guide
+topic-legacy: user guide
 type: Tutorial
+exl-id: c467666d-55bc-4134-b8f4-7758d49c4786
 translation-type: tm+mt
-source-git-commit: 8d6916890a94300dc68d018d56579df9616c177c
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '502'
+source-wordcount: '495'
 ht-degree: 0%
 
 ---
-
 
 # 在UI中匯出XDM結構
 
 架構程式庫中的所有資源都包含在IMS組織內的特定沙盒中。 在某些情況下，您可能會想在沙盒和IMS組織之間共用「體驗資料模型」(XDM)資源。
 
-為了滿足此需求，Adobe Experience Platform UI中的[!UICONTROL 結構描述]工作區可讓您為結構描述庫中的任何結構描述產生匯出裝載。 然後，此裝載可用於對架構註冊表API的呼叫，以將架構（及所有相依資源）匯入目標沙盒和IMS組織。
+為滿足此需求，Adobe Experience PlatformUI中的[!UICONTROL Schemas]工作區允許您為架構庫中的任何架構生成導出裝載。 然後，此裝載可用於對架構註冊表API的呼叫，以將架構（及所有相依資源）匯入目標沙盒和IMS組織。
 
 >[!NOTE]
 >
 >您也可以使用「方案註冊表API」來匯出其他資源，以及方案，包括類別、混合和資料類型。 如需詳細資訊，請參閱[匯出／匯入端點](../api/export-import.md)上的指南。
 
-## 必要條件
+## 先決條件
 
 雖然平台UI可讓您匯出XDM資源，但您必須使用架構註冊表API將這些資源匯入其他沙盒或IMS組織，以完成工作流程。 在遵循本指南之前，請參閱[快速入門手冊中的「架構註冊表API](../api/getting-started.md)」，以取得有關必要驗證標題的重要資訊。
 
 ## 產生匯出裝載
 
-在平台UI中，選擇左側導航中的&#x200B;**[!UICONTROL 方案]**。 在[!UICONTROL 方案]工作區中，找到要導出的方案並在[!DNL Schema Editor]中將其開啟。
+在平台UI中，選擇左側導覽中的&#x200B;**[!UICONTROL Schemas]**。 在[!UICONTROL Schemas]工作區中，找到要導出的方案，並在[!DNL Schema Editor]中將其開啟。
 
 >[!TIP]
 >
 >有關如何查找所查找的XDM資源的詳細資訊，請參見[中的指南。](./explore.md)
 
-當您開啟結構描述後，請選取畫布右上角的&#x200B;**[!UICONTROL 複製JSON]**&#x200B;圖示（![復製圖示](../images/ui/export/icon.png)）。
+在模式開啟後，選擇畫布右上角的&#x200B;**[!UICONTROL Copy JSON]**&#x200B;表徵圖（![複製表徵圖](../images/ui/export/icon.png)）。
 
 ![](../images/ui/export/copy-json.png)
 
@@ -209,8 +209,8 @@ ht-degree: 0%
 
 ## 使用API匯入資源
 
-複製結構的匯出JSON後，您就可將它當做POST要求的裝載，用於結構註冊表API的`/import`端點。 如需如何設定呼叫，將結構傳送至所需IMS組織與沙盒的詳細資訊，請參閱API](../api/export-import.md#import)中有關匯入XDM資源的章節。[
+在您複製結構的匯出JSON後，就可將它當做結構註冊表API中`/import`端點的POST要求的裝載。 如需如何設定呼叫，將結構傳送至所需IMS組織與沙盒的詳細資訊，請參閱API](../api/export-import.md#import)中有關匯入XDM資源的章節。[
 
 ## 後續步驟
 
-依照本指南，您已成功將XDM架構匯出至不同的IMS組織或沙盒。 有關[!UICONTROL 方案] UI功能的詳細資訊，請參閱[[!UICONTROL 方案] UI概述](./overview.md)。
+依照本指南，您已成功將XDM架構匯出至不同的IMS組織或沙盒。 有關[!UICONTROL Schemas] UI功能的詳細資訊，請參閱[[!UICONTROL Schemas] UI概述](./overview.md)。
