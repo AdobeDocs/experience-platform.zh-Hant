@@ -1,21 +1,21 @@
 ---
-keywords: Experience Platform;home；熱門主題；架構；Schema;XDM;fields;schemas;emailAddress;xdm:emailAddress;email;email address;datatype;datatype；資料類型；
+keywords: Experience Platform;home；常用主題；模式；模式；XDM;fields;schemas;emailAddress;xdm:emailAddress;email;email address;datatype;datatype；資料類型；
 solution: Experience Platform
 title: 電子郵件地址資料類型
-topic: overview
+topic-legacy: overview
 description: 本文檔概述「電子郵件地址XDM」資料類型。
+exl-id: 1364df42-f89f-4f48-bcda-5332f3828326
 translation-type: tm+mt
-source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '187'
+source-wordcount: '183'
 ht-degree: 1%
 
 ---
 
+# [!UICONTROL Email address] 資料類型
 
-# [!UICONTROL 電子郵件] 地址資料類型
-
-[!UICONTROL 電子] 郵件地址是一種標準的XDM資料類型，它描述了電子郵件地址的詳細資訊。
+[!UICONTROL Email address] 是一種標準的XDM資料類型，它描述了電子郵件地址的詳細資訊。
 
 <img src="../images/data-types/email-address.png" width="450" /><br />
 
