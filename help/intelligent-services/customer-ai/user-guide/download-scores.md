@@ -1,17 +1,17 @@
 ---
-keywords: Experience Platform；下載分數；客戶ai；熱門主題；導出；客戶ai下載；客戶ai分數
+keywords: Experience Platform；下載分數；客戶ai；熱門主題；導出；導出；客戶ai下載；客戶ai分數
 solution: Experience Platform, Intelligent Services, Real-time Customer Data Platform
 title: 在客戶人工智慧中下載分數
-topic: Downloading scores
+topic-legacy: Downloading scores
 description: 客戶AI可讓您下載Parce檔案格式的分數。
+exl-id: 08f05565-3fd4-4089-9c41-32467f0be751
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '961'
+source-wordcount: '959'
 ht-degree: 2%
 
 ---
-
 
 # 在客戶人工智慧中下載分數
 
@@ -30,13 +30,13 @@ ht-degree: 2%
 
 ## 尋找您的資料集ID {#dataset-id}
 
-在您的客戶AI見解服務例項中，按一下右上角導覽中的&#x200B;*更多動作*&#x200B;下拉式清單，然後選取&#x200B;**[!UICONTROL 存取分數]**。
+在您的客戶AI見解服務例項中，按一下右上角導覽的「更多動作&#x200B;*」下拉式清單，然後選取「**[!UICONTROL Access scores]**」。*
 
 ![更多動作](../images/insights/more-actions.png)
 
 此時會出現新對話方塊，其中包含下載分數檔案的連結以及目前例項的資料集ID。 將資料集ID複製至剪貼簿，然後繼續下一步驟。
 
-![資料集ID](../images/download-scores/access-scores.png)
+![資料集 ID](../images/download-scores/access-scores.png)
 
 ## 擷取您的批次ID {#retrieve-your-batch-id}
 
@@ -52,7 +52,7 @@ GET /batches?&dataSet={DATASET_ID}&createdClient=acp_foundation_push&status=succ
 | --------- | ----------- |
 | `{DATASET_ID}` | 「存取分數」對話方塊中提供的資料集ID。 |
 
-**請求**
+**要求**
 
 ```shell
 curl -X GET 'https://platform.adobe.io/data/foundation/catalog/batches?dataSet=5cd9146b31dae914b75f654f&createdClient=acp_foundation_push&status=success&orderBy=desc:created&limit=1' \
@@ -127,7 +127,7 @@ GET batches/{BATCH_ID}/files
 | --------- | ----------- |
 | `{BATCH_ID}` | 在上一步[中擷取的批次ID會擷取您的批次ID](#retrieve-your-batch-id)。 |
 
-**請求**
+**要求**
 
 使用您自己的批次ID，請提出下列要求。
 
@@ -181,7 +181,7 @@ GET files/{DATASETFILE_ID}
 | --------- | ----------- |
 | `{DATASETFILE_ID}` | dataSetFile ID會從[上一步](#retrieve-the-next-api-call-with-your-batch-id)的`href`值中傳回。 在`data`陣列中，對象類型`dataSetFileId`下也可以訪問它。 |
 
-**請求**
+**要求**
 
 ```shell
 curl -X GET 'https://platform.adobe.io:443/data/foundation/export/files/035e2520-5e69-11ea-b624-51ecfeba55d0-1' \
@@ -235,14 +235,14 @@ curl -X GET 'https://platform.adobe.io:443/data/foundation/export/files/035e2520
 
 | 參數 | 說明 |
 | --------- | ----------- |
-| `_links.self.href` | 用於下載目錄中檔案的GET要求URL。 |
+| `_links.self.href` | 用於下載目錄中檔案的GET請求URL。 |
 
 
 複製`data`陣列中任何檔案對象的`href`值，然後繼續執行下一步。
 
 ## 下載您的檔案資料
 
-要下載檔案資料，請對在上一步[檢索檔案](#retrieving-your-files)中複製的`"href"`值發出GET請求。
+若要下載檔案資料，請向您在上一步驟[中複製的`"href"`值提出GET要求，以擷取您的檔案](#retrieving-your-files)。
 
 >[!NOTE]
 >
@@ -259,7 +259,7 @@ GET files/{DATASETFILE_ID}?path={FILE_NAME}
 | `{DATASETFILE_ID}` | dataSetFile ID會從[上一步](#retrieve-the-next-api-call-with-your-batch-id)的`href`值中傳回。 |
 | `{FILE_NAME}` | 檔案的名稱。 |
 
-**請求**
+**要求**
 
 ```shell
 curl -X GET 'https://platform.adobe.io:443/data/foundation/export/files/035e2520-5e69-11ea-b624-51ecfeba55d0-1?path=part-00000-tid-7597930103898538622-a25f1890-efa9-40eb-a2cb-1b378e93d582-528-1-c000.snappy.parquet' \
@@ -272,7 +272,7 @@ curl -X GET 'https://platform.adobe.io:443/data/foundation/export/files/035e2520
 
 >[!TIP]
 >
->在您提出GET請求前，請確定您位於要儲存檔案的正確目錄或資料夾中。
+>在提出GET請求之前，請確定您位在您要儲存檔案的正確目錄或資料夾中。
 
 **回應**
 
