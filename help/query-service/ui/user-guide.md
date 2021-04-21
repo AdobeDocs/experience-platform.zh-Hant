@@ -1,21 +1,21 @@
 ---
-keywords: Experience Platform;home;popular topics；查詢編輯器；查詢編輯器；查詢服務；查詢服務；
+keywords: Experience Platform; home；熱門主題；查詢編輯器；查詢編輯器；查詢服務；查詢服務；
 solution: Experience Platform
 title: 查詢編輯器UI指南
-topic: query editor
-description: 查詢編輯器是Adobe Experience Platform Query Service提供的互動式工具，可讓您在Experience Platform使用者介面中編寫、驗證及執行客戶體驗資料的查詢。 Query Editor支援開發分析和資料探索的查詢，並可讓您執行互動式查詢以用於開發，以及非互動式查詢以填入Experience Platform中的資料集。
+topic-legacy: query editor
+description: 查詢編輯器是Adobe Experience Platform查詢服務提供的互動式工具，可讓您在Experience Platform使用者介面中編寫、驗證及執行客戶體驗資料查詢。 查詢編輯器支援開發用於分析和資料探索的查詢，並允許您運行用於開發目的的互動式查詢以及用於在Experience Platform中填充資料集的非互動式查詢。
+exl-id: d7732244-0372-467d-84e2-5308f42c5d51
 translation-type: tm+mt
-source-git-commit: 97dc0b5fb44f5345fd89f3f56bd7861668da9a6e
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '1082'
+source-wordcount: '1055'
 ht-degree: 1%
 
 ---
 
-
 # [!DNL Query Editor] UI指南
 
-[!DNL Query Editor] 是Adobe Experience Platform提供的互動式工具， [!DNL Query Service]可讓您在使用者介面中編寫、驗證及執行客戶體驗資 [!DNL Experience Platform] 料查詢。[!DNL Query Editor] 支援開發分析和資料探索的查詢，並可讓您執行互動式查詢以用於開發，以及非互動式查詢以填入資料集 [!DNL Experience Platform]。
+[!DNL Query Editor] 是Adobe Experience Platform提供的互動式工 [!DNL Query Service]具，可讓您在使用者介面中編寫、驗證及執行客戶體驗資 [!DNL Experience Platform] 料查詢。[!DNL Query Editor] 支援開發分析和資料探索的查詢，並可讓您執行互動式查詢以用於開發，以及非互動式查詢以填入資料集 [!DNL Experience Platform]。
 
 有關[!DNL Query Service]的概念和功能的詳細資訊，請參閱[查詢服務概述][query-service-overview]。 若要進一步瞭解如何導覽[!DNL Platform]上的查詢服務使用者介面，請參閱[查詢服務UI概觀][query-service-ui]。
 
@@ -39,13 +39,13 @@ ht-degree: 1%
 
 ### 存取 [!DNL Query Editor]
 
-在[!DNL Experience Platform] UI中，按一下左側導覽功能表中的&#x200B;**[!UICONTROL 查詢]**&#x200B;以開啟[!DNL Query Service]工作區。 接著，按一下畫面右上方的「建立查詢」，開始寫入查詢。 ****&#x200B;此連結可從[!DNL Query Service]工作區中的任意頁面使用。
+在[!DNL Experience Platform] UI中，按一下左側導覽功能表中的&#x200B;**[!UICONTROL Queries]**&#x200B;以開啟[!DNL Query Service]工作區。 接著，按一下畫面右上方的&#x200B;**[!UICONTROL Create Query]**，開始編寫查詢。 此連結可從[!DNL Query Service]工作區中的任意頁面使用。
 
 ![影像](../images/queries/query-editor-overview/create-query.png)
 
 ### 編寫查詢
 
-[!UICONTROL Query ] Editors組織起來，讓撰寫查詢變得盡可能簡單。下面的螢幕擷取顯示編輯器在UI中的顯示方式，並反白顯示&#x200B;**播放**&#x200B;按鈕和SQL項目欄位。
+[!UICONTROL Query Editor] 可讓撰寫查詢變得盡可能簡單。下面的螢幕擷取顯示編輯器在UI中的顯示方式，並反白顯示&#x200B;**播放**&#x200B;按鈕和SQL項目欄位。
 
 ![影像](../images/queries/query-editor-overview/editor.png)
 
@@ -77,19 +77,19 @@ ht-degree: 1%
 
 ### 查詢詳細資訊
 
-在[!DNL Query Editor]中查看查詢時，**[!UICONTROL 查詢詳細資訊]**&#x200B;面板提供了用於管理選定查詢的工具。
+在[!DNL Query Editor]中查看查詢時，**[!UICONTROL Query Details]**&#x200B;面板提供了管理選定查詢的工具。
 
 ![影像](../images/queries/query-editor-overview/query-details.png)
 
-此面板允許您直接從UI生成輸出資料集、刪除或命名顯示的查詢，並以易於複製的格式在&#x200B;**[!UICONTROL SQL Query]**&#x200B;頁籤上查看SQL代碼。 此面板還顯示有用的中繼資料，例如上次修改查詢的時間以及修改者（如果適用）。 若要產生資料集，請按一下「輸出資料集」。 ****&#x200B;出現&#x200B;**[!UICONTROL 輸出資料集]**&#x200B;對話框。 輸入名稱和說明，然後按一下「運行查詢」。 ****&#x200B;新資料集顯示在[!DNL Platform][!DNL Query Service]用戶介面的&#x200B;**[!UICONTROL Datasets]**&#x200B;頁籤中。
+此面板允許您直接從UI生成輸出資料集、刪除或命名顯示的查詢，並在&#x200B;**[!UICONTROL SQL Query]**&#x200B;頁籤上以易於複製的格式查看SQL代碼。 此面板還顯示有用的中繼資料，例如上次修改查詢的時間以及修改者（如果適用）。 要生成資料集，請按一下&#x200B;**[!UICONTROL Output Dataset]**。 出現&#x200B;**[!UICONTROL Output Dataset]**&#x200B;對話框。 輸入名稱和說明，然後按一下&#x200B;**[!UICONTROL Run Query]**。 新資料集顯示在[!DNL Platform]上[!DNL Query Service]用戶介面的&#x200B;**[!UICONTROL Datasets]**&#x200B;頁籤中。
 
 ### 保存查詢
 
-[!DNL Query Editor] 提供保存函式，允許您保存查詢並稍後處理。要保存查詢，請按一下[!DNL Query Editor]右上角的&#x200B;**[!UICONTROL 保存]**。 在保存查詢之前，必須使用&#x200B;**[!UICONTROL 查詢詳細資訊]**&#x200B;面板為查詢提供名稱。
+[!DNL Query Editor] 提供保存函式，允許您保存查詢並稍後處理。要保存查詢，請按一下[!DNL Query Editor]右上角的&#x200B;**[!UICONTROL Save]**。 在保存查詢之前，必須使用&#x200B;**[!UICONTROL Query Details]**&#x200B;面板為查詢提供名稱。
 
 ### 如何尋找先前的查詢
 
-從[!DNL Query Editor]執行的所有查詢都將捕獲到日誌表中。 您可以使用&#x200B;**[!UICONTROL Log]**&#x200B;標籤中的搜索功能來查找查詢執行。 保存的查詢列在&#x200B;**[!UICONTROL Browse]**&#x200B;頁籤中。
+從[!DNL Query Editor]執行的所有查詢都將捕獲到日誌表中。 您可以使用&#x200B;**[!UICONTROL Log]**&#x200B;標籤中的搜尋功能來尋找查詢執行。 保存的查詢列在&#x200B;**[!UICONTROL Browse]**&#x200B;頁籤中。
 
 如需詳細資訊，請參閱[查詢服務UI概觀][query-service-ui]。
 
@@ -99,7 +99,7 @@ ht-degree: 1%
 
 ## 使用查詢編輯器執行查詢
 
-要在[!DNL Query Editor]中運行查詢，可以在編輯器中輸入SQL或從&#x200B;**[!UICONTROL Log]**&#x200B;或&#x200B;**[!UICONTROL Browse]**&#x200B;頁籤載入以前的查詢，然後按一下&#x200B;**Play**。 查詢執行狀態顯示在下面的&#x200B;**[!UICONTROL 控制台]**&#x200B;頁籤中，輸出資料顯示在&#x200B;**[!UICONTROL 結果]**&#x200B;頁籤中。
+要在[!DNL Query Editor]中運行查詢，可以在編輯器中輸入SQL或從&#x200B;**[!UICONTROL Log]**&#x200B;或&#x200B;**[!UICONTROL Browse]**&#x200B;頁籤載入以前的查詢，然後按一下&#x200B;**播放**。 查詢執行狀態顯示在下面的&#x200B;**[!UICONTROL Console]**&#x200B;頁籤中，輸出資料顯示在&#x200B;**[!UICONTROL Results]**&#x200B;頁籤中。
 
 ### 控制台
 
@@ -113,13 +113,13 @@ ht-degree: 1%
 
 ### 查詢結果
 
-查詢完成後，結果將顯示在&#x200B;**[!UICONTROL 控制台]**&#x200B;頁籤旁的&#x200B;**[!UICONTROL 結果]**&#x200B;頁籤中。 此視圖顯示查詢的表格式輸出，最多顯示100行。 此視圖允許您驗證查詢是否生成了預期輸出。 若要使用查詢產生資料集，請移除傳回的列限制，然後使用`CREATE TABLE tablename AS SELECT`執行查詢，以產生含有輸出的資料集。 有關如何從[!DNL Query Editor]中的查詢結果生成資料集的說明，請參見[生成資料集教程][query-service-create-datasets]。
+查詢完成後，結果將顯示在&#x200B;**[!UICONTROL Console]**&#x200B;頁籤旁的&#x200B;**[!UICONTROL Results]**&#x200B;頁籤中。 此視圖顯示查詢的表格式輸出，最多顯示100行。 此視圖允許您驗證查詢是否生成了預期輸出。 若要使用查詢產生資料集，請移除傳回的列限制，然後使用`CREATE TABLE tablename AS SELECT`執行查詢，以產生含有輸出的資料集。 有關如何從[!DNL Query Editor]中的查詢結果生成資料集的說明，請參見[生成資料集教程][query-service-create-datasets]。
 
 ![影像](../images/queries/query-editor-overview/query-results.png)
 
 ## 使用[!DNL Query Service]教學課程影片執行查詢
 
-以下視訊說明如何在Adobe Experience Platform介面和PSQL用戶端中執行查詢。 此外，還演示了在XDM對象中使用單個屬性、使用Adobe定義的函式以及使用CREATE TABLE AS SELECT(CTAS)。
+以下視頻介紹如何在Adobe Experience Platform介面和PSQL客戶端中運行查詢。 此外，還演示了在XDM對象中使用單個屬性、使用Adobe定義函式以及使用CREATE TABLE AS SELECT(CTAS)。
 
 >[!VIDEO](https://video.tv.adobe.com/v/29796?quality=12&learn=on)
 
