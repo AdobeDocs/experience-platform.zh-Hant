@@ -1,33 +1,33 @@
 ---
-keywords: Experience Platform; home；熱門主題；串流擷取；擷取；串流多則訊息；多則訊息；
+keywords: Experience Platform; home；熱門主題；流處理；接收；流處理多個消息；多個消息；
 solution: Experience Platform
 title: 在單一HTTP請求中傳送多則訊息
-topic: tutorial
+topic-legacy: tutorial
 type: Tutorial
 description: 本檔案提供教學課程，可讓您使用串流擷取功能，在單一HTTP要求內傳送多則訊息至Adobe Experience Platform。
+exl-id: 04045090-8a2c-42b6-aefa-09c043ee414f
 translation-type: tm+mt
-source-git-commit: 089a4d517476b614521d1db4718966e3ebb13064
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '1497'
+source-wordcount: '1492'
 ht-degree: 1%
 
 ---
 
-
 # 在單一HTTP請求中傳送多則訊息
 
-將資料串流至Adobe Experience Platform時，進行大量HTTP呼叫的成本可能很高。 例如，建立1KB負載的200個HTTP請求，而不是建立1KB負載的200個HTTP請求，建立200個每個1KB訊息的1HTTP請求，而且單一負載為200KB，效率更高。 正確使用時，將多個訊息分組在單一要求中是最佳化傳送至[!DNL Experience Platform]資料的絕佳方式。
+將資料串流至Adobe Experience Platform時，進行大量HTTP呼叫可能會很昂貴。 例如，建立1KB負載的200個HTTP請求，而不是建立1KB負載的200個HTTP請求，建立200個每個1KB訊息的1HTTP請求，而且單一負載為200KB，效率更高。 正確使用時，將多個訊息分組在單一要求中是最佳化傳送至[!DNL Experience Platform]資料的絕佳方式。
 
 本檔案提供教學課程，可讓您使用串流擷取功能，在單一HTTP要求內傳送多則訊息至[!DNL Experience Platform]。
 
 ## 快速入門
 
-本教學課程需要對Adobe Experience Platform [!DNL Data Ingestion]有充份的瞭解。 在開始本教學課程之前，請先閱讀下列檔案：
+本教學課程需要對Adobe Experience Platform[!DNL Data Ingestion]有充分的瞭解。 在開始本教學課程之前，請先閱讀下列檔案：
 
 - [資料擷取概觀](../home.md):涵蓋核心概念， [!DNL Experience Platform Data Ingestion]包括擷取方法和資料連接器。
 - [串流擷取概觀](../streaming-ingestion/overview.md):串流擷取的工作流程和建立區塊，例如串流連線、資料集 [!DNL XDM Individual Profile]和 [!DNL XDM ExperienceEvent]。
 
-本教學課程也要求您完成[ Authentication to Adobe Experience Platform](https://www.adobe.com/go/platform-api-authentication-en)教學課程，才能成功呼叫[!DNL Platform] API。 完成驗證教學課程時，提供本教學課程中所有API呼叫所需之「授權」標題的值。 標題在範例呼叫中顯示如下：
+本教學課程還要求您完成[對Adobe Experience Platform](https://www.adobe.com/go/platform-api-authentication-en)的驗證教學課程，以便成功呼叫[!DNL Platform] API。 完成驗證教學課程時，提供本教學課程中所有API呼叫所需之「授權」標題的值。 標題在範例呼叫中顯示如下：
 
 - 授權：載體`{ACCESS_TOKEN}`
 
@@ -45,7 +45,7 @@ ht-degree: 1%
 
 下列範例說明如何在單一HTTP請求中傳送多則訊息至特定資料集。 將資料集ID插入訊息標題中，讓該訊息直接被收錄進來。
 
-您可以使用[!DNL Platform] UI或使用API中的清單操作來取得現有資料集的ID。 透過前往&#x200B;**[!UICONTROL Datasets]**&#x200B;標籤、按一下您要取得ID的資料集，並從&#x200B;**[!UICONTROL Info]**&#x200B;標籤上的資料集ID欄位複製字串，可在[Experience Platform](https://platform.adobe.com)上找到資料集ID。 有關如何使用API檢索資料集的資訊，請參見[目錄服務概述](../../catalog/home.md)。
+您可以使用[!DNL Platform] UI或使用API中的清單操作來取得現有資料集的ID。 在[Experience Platform](https://platform.adobe.com)上可找到資料集ID，方法是前往&#x200B;**[!UICONTROL Datasets]**&#x200B;標籤，按一下您要取得ID的資料集，然後從&#x200B;**[!UICONTROL Info]**&#x200B;標籤上的資料集ID欄位複製字串。 有關如何使用API檢索資料集的資訊，請參見[目錄服務概述](../../catalog/home.md)。
 
 您可以建立新資料集，而不是使用現有資料集。 請閱讀[使用API建立資料集](../../catalog/api/create-dataset.md)教學課程，以取得有關使用API建立資料集的詳細資訊。
 
@@ -59,7 +59,7 @@ POST /collection/batch/{CONNECTION_ID}
 | -------- | ----------- |
 | `{CONNECTION_ID}` | 已建立串流連線的ID。 |
 
-**請求**
+**要求**
 
 ```shell
 curl -X POST https://dcs.adobedc.net/collection/batch/{CONNECTION_ID} \
@@ -235,7 +235,7 @@ POST /collection/batch/{CONNECTION_ID}
 | -------- | ----------- |
 | `{CONNECTION_ID}` | 已建立資料引入的ID。 |
 
-**請求**
+**要求**
 
 ```shell
 curl -X POST https://dcs.adobedc.net/collection/batch/{CONNECTION_ID} \
@@ -525,7 +525,7 @@ curl -X POST https://dcs.adobedc.net/collection/batch/{CONNECTION_ID} \
 
 通過DCCS驗證的消息流式化到[!DNL Platform]。 在[!DNL Platform]上，批消息在被收錄到[!DNL Data Lake]之前，通過流驗證進行測試。 批次的狀態（無論是否成功）顯示在由`{DATASET_ID}`指定的資料集中。
 
-您可以使用[Experience Platform UI](https://platform.adobe.com)檢視成功串流至[!DNL Platform]的批次訊息狀態，方法是前往&#x200B;**[!UICONTROL Datasets]**&#x200B;標籤，按一下您串流至的資料集，並勾選&#x200B;**[!UICONTROL Dataset Activity]**&#x200B;標籤。
+您可以前往&#x200B;**[!UICONTROL Datasets]**&#x200B;標籤，按一下您要串流至的資料集，並勾選&#x200B;**[!UICONTROL Dataset Activity]**&#x200B;標籤，使用[Experience PlatformUI](https://platform.adobe.com)檢視成功串流至[!DNL Platform]的批次訊息狀態。
 
 在[!DNL Platform]上通過流驗證的批處理消息將被吸收到[!DNL Data Lake]中。 然後，這些訊息便可供分析或匯出。
 
