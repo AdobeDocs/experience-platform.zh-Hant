@@ -1,17 +1,17 @@
 ---
-keywords: Experience Platform；開發人員指南； Data Science Workspace；熱門主題；即時機器學習；
+keywords: Experience Platform；開發人員指南；資料科學工作區；熱門主題；即時機器學習；
 solution: Experience Platform
 title: 即時機器學習快速入門
-topic: Getting started
-description: 以下檔案概述在Adobe Experience Platform中建立即時機器學習模型所需的步驟。
+topic-legacy: Getting started
+description: 以下檔案概述在Adobe Experience Platform建立即時機器學習模型所需的步驟。
+exl-id: 90a1c580-f6e7-4517-aa1e-da5092fbc4a2
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '438'
 ht-degree: 0%
 
 ---
-
 
 # 即時機器學習快速入門(Alpha)
 
@@ -19,7 +19,7 @@ ht-degree: 0%
 >
 >目前尚未針對所有使用者提供即時機器學習。 此功能是alpha版，仍在測試中。 本檔案可能會有所變更。
 
-為了運用即時機器學習，您必須擁有對布建有Adobe Experience Platform和[!DNL Data Science Workspace]的組織的存取權。 此外，您需要有完整的資料集，才能用於訓練和計分。
+為運用即時機器學習，您必須擁有布建有Adobe Experience Platform和[!DNL Data Science Workspace]的組織的存取權。 此外，您需要有完整的資料集，才能用於訓練和計分。
 
 即時機器學習指南需要對Python 3、[Jupyter Notebooks](../jupyterlab/overview.md)、資料科學和機器學習有有效的瞭解。
 
@@ -27,10 +27,10 @@ ht-degree: 0%
 
 - **DSL：網** 域特定語言。
 - **Edge：即** 時機器學習計分服務可在離您的啟動和應用程式更近的Edge叢集上執行。
-- **集線器：** 目前的alpha版在Adobe Experience Platform Hub上執行即時機器學習計分服務，而Experience Edge網路正在開發中。
+- **集線器：** 當Experience Edge網路正在開發時，目前的alpha版會在Adobe Experience Platform集線器上執行即時機器學習計分服務。
 - **節點：** 節點是圖形的基本單元。每個節點都執行特定任務，並且可以使用連結將它們連結在一起，以形成表示ML管線的圖形。 由節點執行的任務表示對輸入資料的操作，如資料或模式的轉換或機器學習推理。 節點將變換或推斷的值輸出到下一個節點。
 
-## Adobe Experience Platform中的資料集
+## Adobe Experience Platform資料集
 
 若要開始使用即時機器學習，您必須擁有資料集的存取權。 您可以選擇使用外部資料集並將其上傳至您的[!DNL JupyterLab]環境，或在平台中建立新資料集（如果您尚未這麼做）。
 
@@ -52,4 +52,3 @@ ht-degree: 0%
 ## 下一步 {#next-steps}
 
 在您準備好Real-time Machine Learning的資料後，請先遵循[Real-time Machine Learning筆記型電腦使用指南](./rtml-authoring-notebook.md)開始，以瞭解如何建立ONNX模型並上傳至Real-time Machine Learning模型商店。
-
