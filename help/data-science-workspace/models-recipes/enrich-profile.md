@@ -1,22 +1,22 @@
 ---
-keywords: Experience Platform；機器學習模型；資料科學工作區；即時客戶個人檔案；熱門主題；機器學習見解
+keywords: Experience Platform；機器學習模型；資料科學工作區；即時客戶概要檔案；熱門主題；機器學習見解
 solution: Experience Platform
 title: 運用機器學習見解豐富即時客戶個人檔案
-topic: tutorial
+topic-legacy: tutorial
 type: Tutorial
 description: 本檔案提供如何運用機器學習見解豐富即時客戶個人檔案的指南。
+exl-id: 397023c9-383d-4a21-b58a-0f920631ac56
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '640'
 ht-degree: 0%
 
 ---
 
-
 # 運用機器學習見解豐富[!DNL Real-time Customer Profile]內容
 
-Adobe Experience Platform [!DNL Data Science Workspace]提供工具和資源，以建立、評估和運用機器學習模型，產生資料預測和見解。 當機器學習見解被收錄到啟用[!DNL Profile]的資料集時，相同的資料也會被收錄為[!DNL Profile]記錄，然後可使用[!DNL Adobe Experience Platform Segmentation Service]加以分段。 當擷取描述檔和時間系列資料時，即時客戶描述檔會自動決定透過稱為串流分段的持續程式，將該資料加入或排除區段中，然後將其與現有資料合併並更新聯合檢視。 因此，您可以即時執行計算並做出決策，以便客戶在與品牌互動時提供增強的個人化體驗。
+Adobe Experience Platform[!DNL Data Science Workspace]提供工具和資源來建立、評估和運用機器學習模型，以產生資料預測和洞見。 當機器學習見解被收錄到啟用[!DNL Profile]的資料集時，相同的資料也會被收錄為[!DNL Profile]記錄，然後可使用[!DNL Adobe Experience Platform Segmentation Service]加以分段。 當擷取描述檔和時間系列資料時，即時客戶描述檔會自動決定透過稱為串流分段的持續程式，將該資料加入或排除區段中，然後將其與現有資料合併並更新聯合檢視。 因此，您可以即時執行計算並做出決策，以便客戶在與品牌互動時提供增強的個人化體驗。
 
 本檔案提供教學課程的連結，讓您運用機器學習的見解豐富[!DNL Real-time Customer Profile]內容。
 
