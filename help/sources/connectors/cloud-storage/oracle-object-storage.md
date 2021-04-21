@@ -1,21 +1,21 @@
 ---
-keywords: Experience Platform;home；熱門主題；Oracle Object Storage;Oracle對象儲存
+keywords: Experience Platform；首頁；熱門主題；Oracle對象儲存；oracle對象儲存
 solution: Experience Platform
-title: Oracle對象儲存源連接器概覽
-topic: overview
-description: 瞭解如何使用API或使用者介面將Oracle Object Storage連接至Adobe Experience Platform。
+title: Oracle對象儲存源連接器概述
+topic-legacy: overview
+description: 瞭解如何使用API或使用者介面將Oracle物件儲存區連接至Adobe Experience Platform。
+exl-id: 5e8b85c8-9f01-49a6-9556-7b9c7518fb4b
 translation-type: tm+mt
-source-git-commit: 04c605aedd4c52b54d0f075c169ce919650cdee9
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '416'
+source-wordcount: '415'
 ht-degree: 0%
 
 ---
 
+# Oracle物件儲存連接器
 
-# Oracle對象儲存連接器
-
-Adobe Experience Platform為AWS、[!DNL Google Cloud Platform]等雲提供商提供原生連接，讓您將這些系統的資料匯入平台，以便用於下游服務和目標。
+Adobe Experience Platform為AWS、[!DNL Google Cloud Platform]等雲提供商提供了本機連接，使您能夠將這些系統的資料帶入平台，以便用於下游服務和目標。
 
 雲端儲存來源可將您的資料匯入平台，而不需下載、格式化或上傳。 收錄的資料可格式化為XDM JSON、XDM Parce或分隔。 流程的每個步驟都整合在來源工作流程中。 平台允許您從[!DNL Oracle Object Storage]通過批導入資料。
 
@@ -36,11 +36,11 @@ Adobe Experience Platform為AWS、[!DNL Google Cloud Platform]等雲提供商提
 
 ## 將[!DNL Oracle Object Storage]連接到平台
 
-以下檔案提供如何使用API或使用者介面將Oracle Object Storage連接至Adobe Experience Platform的資訊：
+以下文檔提供了如何使用API或用戶介面將Oracle對象儲存連接到Adobe Experience Platform的資訊：
 
 ### 使用API
 
-- [使用流服務API建立Oracle對象儲存源連接](../../tutorials/api/create/cloud-storage/oracle-object-storage.md)
+- [使用Flow Service API建立Oracle對象儲存源連接](../../tutorials/api/create/cloud-storage/oracle-object-storage.md)
 - [使用Flow Service API探索雲端儲存系統](../../tutorials/api/explore/cloud-storage.md)
 - [使用Flow Service API收集雲端儲存空間資料](../../tutorials/api/collect/cloud-storage.md)
 
