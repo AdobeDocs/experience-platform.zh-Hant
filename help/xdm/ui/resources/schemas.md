@@ -3,12 +3,12 @@ keywords: Experience Platform;home；熱門主題；api;API;XDM;XDM系統；體�
 solution: Experience Platform
 title: 在UI中建立和編輯結構描述
 description: 瞭解如何在Experience Platform使用者介面中建立和編輯結構描述的基本知識。
-topic: user guide
+topic-legacy: user guide
 exl-id: be83ce96-65b5-4a4a-8834-16f7ef9ec7d1
 translation-type: tm+mt
-source-git-commit: 90a0c4e8d47d9bce38c9e13272e4f41f78f46e35
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '1342'
+source-wordcount: '1340'
 ht-degree: 0%
 
 ---
