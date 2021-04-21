@@ -1,17 +1,17 @@
 ---
-keywords: Experience Platform; home；熱門主題；etl;ETL;etl轉換；ETL轉換
+keywords: Experience Platform;home；熱門主題；etl;ETL;etl轉換；ETL轉換
 solution: Experience Platform
 title: 範例ETL轉換
-topic: overview
+topic-legacy: overview
 description: 本文將示範擷取、轉換、載入(ETL)開發人員可能遇到的下列範例轉換。
+exl-id: 8084f5fd-b621-4515-a329-5a06c137d11c
 translation-type: tm+mt
-source-git-commit: f8186e467dc982003c6feb01886ed16d23572955
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '493'
 ht-degree: 1%
 
 ---
-
 
 # 範例ETL轉換
 
@@ -21,7 +21,7 @@ ht-degree: 1%
 
 ### 範例檔案
 
-Adobe維護的公開ETL參考[!DNL GitHub]回購中提供範例CSV和JSON檔案：
+範例CSV和JSON檔案可從公開ETL參考[!DNL GitHub]回購取得，由Adobe維護：
 
 - [CRM_profiles.csv](https://github.com/adobe/experience-platform-etl-reference/blob/master/example_files/CRM_profiles.csv)
 - [CRM_profiles.json](https://github.com/adobe/experience-platform-etl-reference/blob/master/example_files/CRM_profiles.json)
@@ -251,7 +251,7 @@ Dr  Cammi   Haslen  F   1973-12-17  chaslenqv@ehow.com  56059cd5-5006-ce5f-2f5f-
 ]
 ```
 
-在Adobe Experience Platform中建構要使用的資料框架時，請務必確保其階層結構與現有XDM架構的階層結構完全相符，以便欄位正確地對應。
+在構建資料幀以用於Adobe Experience Platform時，必須確保其分層結構與現有XDM模式的層次結構完全匹配，以便欄位能夠正確映射。
 
 ## 身分圖到身份圖
 
@@ -307,4 +307,3 @@ Dr  Cammi   Haslen  F   1973-12-17  chaslenqv@ehow.com  56059cd5-5006-ce5f-2f5f-
       }]
    }
 ```
-
