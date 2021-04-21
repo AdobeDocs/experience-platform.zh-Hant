@@ -1,25 +1,25 @@
 ---
-keywords: Experience Platform;home；熱門主題；couchbase;Couchbase
+keywords: Experience Platform；首頁；熱門主題；couchbase;Couchbase
 solution: Experience Platform
 title: Couchbase Source Connector概觀
-topic: overview
-description: 瞭解如何使用API或使用者介面將Couchbase連接至Adobe Experience Platform。
+topic-legacy: overview
+description: 瞭解如何使用API或使用者介面將Couchbase連線至Adobe Experience Platform。
+exl-id: 4b1cc352-3b1a-4015-baee-b1d42c15a400
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '207'
 ht-degree: 0%
 
 ---
 
-
 # （測試版）[!DNL Couchbase]連接器
 
 >[!NOTE]
 >
->[!DNL Couchbase]介面處於測試狀態。 有關使用beta標籤連接器的詳細資訊，請參閱[來源概觀](../../home.md#terms-and-conditions)。
+>[!DNL Couchbase]介面處於測試狀態。 有關使用beta標籤連接器的詳細資訊，請參閱[ Sources綜覽](../../home.md#terms-and-conditions)。
 
-Adobe Experience Platform為[!DNL Microsoft]、MySQL和[!DNL Azure]等資料庫提供者提供原生連接，讓您從這些系統取得資料。 支援不同類型的第三方資料庫，包括關聯式、NoSQL或資料倉庫。 支援資料庫提供者，包括[!DNL Couchbase]。
+Adobe Experience Platform為[!DNL Microsoft]、MySQL和[!DNL Azure]等資料庫提供者提供原生連接，使您能夠從這些系統中獲取資料。 支援不同類型的第三方資料庫，包括關聯式、NoSQL或資料倉庫。 支援資料庫提供者，包括[!DNL Couchbase]。
 
 ## IP位址允許清單
 
