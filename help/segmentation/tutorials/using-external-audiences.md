@@ -3,15 +3,15 @@ keywords: Experience Platform；首頁；熱門主題
 solution: Experience Platform
 title: 匯入和使用外部觀眾
 description: 請依照本教學課程學習如何搭配Adobe Experience Platform使用外部觀眾。
-topic: tutorial
+topic-legacy: tutorial
+exl-id: 56fc8bd3-3e62-4a09-bb9c-6caf0523f3fe
 translation-type: tm+mt
-source-git-commit: 400e4d9007212ed2693d031ae912a4f1cca97c57
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '630'
+source-wordcount: '629'
 ht-degree: 0%
 
 ---
-
 
 # 匯入和使用外部觀眾
 
@@ -53,7 +53,7 @@ Adobe Experience Platform支援匯入外部觀眾的能力，這些觀眾隨後�
 
 ![](../images/tutorials/external-audiences/schema-profile.png)
 
-現在，此架構已針對描述檔啟用，並將主要識別碼指派給您建立的非人員身分名稱空間。 因此，這表示使用此架構匯入至平台的區段中繼資料將會收錄至「描述檔」，而不會與其他人員相關的描述檔資料合併。
+現在，此架構已針對描述檔啟用，且主要識別碼已指派給您建立的非人員身分名稱空間。 因此，這表示使用此架構匯入至平台的區段中繼資料將會收錄至「描述檔」，而不會與其他人員相關的描述檔資料合併。
 
 ## 為模式建立資料集
 
