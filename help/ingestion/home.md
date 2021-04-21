@@ -2,16 +2,16 @@
 keywords: Experience Platform;home；熱門主題；資料提取；資料位置；資料管理；資料管理；世系；世系；批處理；提取的資料
 solution: Experience Platform
 title: 資料擷取概觀
-topic: overview
+topic-legacy: overview
 description: 本檔案介紹將資料收錄至Platform的三種主要方式，以及各自概述檔案的連結，以取得更詳細的資訊。
+exl-id: c189dd4a-5c59-4189-a18c-a3e45a9ff01d
 translation-type: tm+mt
-source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '462'
+source-wordcount: '461'
 ht-degree: 14%
 
 ---
-
 
 # 資料擷取概觀
 
@@ -29,7 +29,7 @@ Adobe Experience Platform 將來自多個來源的資料彙集在一起，以協
 
 ## 串流擷取
 
-串流擷取可讓您從用戶端和伺服器端裝置即時傳送資料至[!DNL Experience Platform]。 [!DNL Platform] 支援使用資料入口來串流傳入的體驗資料，這些資料會保存在資料湖內可串流化的資料集中。資料引入器可配置為自動驗證它們收集的資料，確保資料來自可信源。
+串流擷取可讓您從用戶端和伺服器端裝置即時傳送資料至[!DNL Experience Platform]。 [!DNL Platform] 支援使用資料入口來串流傳入的體驗資料，這些資料會保存在資料湖中啟用串流的資料集中。資料引入器可配置為自動驗證它們收集的資料，確保資料來自可信源。
 
 如需詳細資訊，請參閱[串流擷取概觀](./streaming-ingestion/overview.md)。
 
