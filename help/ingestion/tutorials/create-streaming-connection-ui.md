@@ -2,17 +2,17 @@
 keywords: Experience Platform;home；熱門主題；串流連接；建立流連接；ui指南；教學課程；建立流連接；流攝取；攝取；
 solution: Experience Platform
 title: 使用UI建立串流連線
-topic: tutorial
+topic-legacy: tutorial
 type: Tutorial
-description: 本UI指南將協助您使用Adobe Experience Platform建立串流連線。
+description: 本UI指南將幫助您使用Adobe Experience Platform建立串流連線。
+exl-id: af485890-61b1-4c83-8af9-a55e8ed6d69a
 translation-type: tm+mt
-source-git-commit: 17eb7b9cb715d7d8d0d7bce930ddec43259149cc
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '134'
 ht-degree: 0%
 
 ---
-
 
 # 使用UI建立串流連線
 
