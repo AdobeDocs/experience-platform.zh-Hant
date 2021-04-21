@@ -1,16 +1,16 @@
 ---
-keywords: Experience Platform; home；熱門主題；分段；分段；分段服務；API;api;
+keywords: Experience Platform;home；熱門主題；分段；分段；分段服務；API;api;
 title: 區段服務API指南
-topic: guide
-description: Segmentation Service API可讓開發人員以程式設計方式管理Adobe Experience Platform中的分段作業。 請依照本指南，瞭解如何使用API執行關鍵作業。
+topic-legacy: guide
+description: Segmentation Service API可讓開發人員以程式設計方式管理Adobe Experience Platform的分段作業。 請依照本指南，瞭解如何使用API執行關鍵作業。
+exl-id: cebecaf3-9746-4b0b-9c50-11789fba66c3
 translation-type: tm+mt
-source-git-commit: 8d403e73a804953f9584d6a72f945d4444e65d11
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '501'
 ht-degree: 0%
 
 ---
-
 
 # 區段服務API指南
 
