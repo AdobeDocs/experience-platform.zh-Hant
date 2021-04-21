@@ -2,13 +2,13 @@
 keywords: Experience Platform；見解；客戶智慧；熱門主題；客戶智慧
 solution: Experience Platform, Intelligent Services, Real-time Customer Data Platform
 title: 透過客戶人工智慧發掘見解
-topic: Discovering insights
+topic-legacy: Discovering insights
 description: 本檔案可做為在智慧型服務客戶AI使用者介面中與服務例項見解互動的指南。
 exl-id: 8aaae963-4029-471e-be9b-814147a5f160
 translation-type: tm+mt
-source-git-commit: ff953cf0aed2b9122b78126a87625e88f1ca4506
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '1572'
+source-wordcount: '1570'
 ht-degree: 1%
 
 ---
