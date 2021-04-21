@@ -2,28 +2,28 @@
 keywords: Experience Platform;home；熱門主題；策略實施；自動實施；基於API的實施；資料治理
 solution: Experience Platform
 title: 自動執行原則
-topic: guide
-description: 本檔案涵蓋在Experience Platform中啟動區段至目標時，資料使用原則的自動強制方式。
+topic-legacy: guide
+description: 本檔案涵蓋在啟用區段至Experience Platform中目標時，資料使用原則的自動執行方式。
+exl-id: c6695285-77df-48c3-9b4c-ccd226bc3f16
 translation-type: tm+mt
-source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '1128'
+source-wordcount: '1122'
 ht-degree: 0%
 
 ---
 
-
 # 自動執行原則
 
-在標籤資料並定義使用策略後，您就可以強制資料使用與策略相符。 在將觀眾區段啟動至目標時，Adobe Experience Platform會在發生任何違規時自動實施使用政策。
+在標籤資料並定義使用策略後，您就可以強制資料使用與策略相符。 在將受眾細分激活到目標時，Adobe Experience Platform會在發生任何違規時自動實施使用策略。
 
-## 必要條件
+## 先決條件
 
 本指南需要對參與自動執行的平台服務有良好的理解。 請參閱下列檔案以進一步瞭解，然後再繼續本指南：
 
 * [Adobe Experience Platform資料治理](../home.md):平台透過使用標籤和原則來強制執行資料使用合規性的架構。
 * [即時客戶個人檔案](../../profile/home.md):根據來自多個來源的匯整資料，提供統一、即時的消費者個人檔案。
-* [Adobe Experience Platform細分服務](../../segmentation/home.md):內部的分段引擎 [!DNL Platform] ，用於根據客戶行為和屬性，從客戶個人檔案建立受眾細分。
+* [Adobe Experience Platform區段服務](../../segmentation/home.md):內部的分段引擎， [!DNL Platform] 用於根據客戶行為和屬性，從客戶個人檔案建立受眾細分。
 * [目標](../../destinations/home.md):目標是與常用應用程式預先建立的整合，可讓跨通道行銷宣傳、電子郵件宣傳、目標廣告等的平台資料順暢啟動。
 
 ## 實施流{#flow}
@@ -51,7 +51,7 @@ ht-degree: 0%
 
 在[!DNL Data Governance]的上下文中，世系可讓資料使用標籤從資料集傳播到使用其資料的下游服務，例如即時客戶個人檔案和目標。 這可讓客戶在資料的平台歷程中的幾個關鍵點評估並執行政策，並提供資料消費者關於發生政策違規之原因的上下文。
 
-在Experience Platform中，政策執行涉及下列世系：
+在Experience Platform中，政策執行涉及以下血統：
 
 1. 資料會收錄到平台中，並儲存在&#x200B;**資料集**&#x200B;中。
 1. 根據&#x200B;**合併策略**&#x200B;合併資料片段，從這些資料集中識別和構建客戶概要檔案。
@@ -71,7 +71,7 @@ ht-degree: 0%
 
 ## 策略違規消息{#enforcement}
 
-如果發生違反原則的情況，無法嘗試啟用區段（或[對已啟用的區段](#policy-enforcement-for-activated-segments)進行編輯），則會防止動作，並出現提示已違反一或多個原則的快顯視窗。 一旦觸發違規，您正在修改的實體將禁用&#x200B;**[!UICONTROL 保存]**&#x200B;按鈕，直到更新相應元件以符合資料使用策略。
+如果發生違反原則的情況，無法嘗試啟用區段（或[對已啟用的區段](#policy-enforcement-for-activated-segments)進行編輯），則會防止動作，並出現提示已違反一或多個原則的快顯視窗。 一旦觸發違規，您正在修改的實體的&#x200B;**[!UICONTROL Save]**&#x200B;按鈕會停用，直到適當的元件更新為符合資料使用原則為止。
 
 在快顯的左欄中選取原則違規，以顯示該違規的詳細資料。
 
@@ -85,11 +85,11 @@ ht-degree: 0%
 
 ![](../images/enforcement/data-lineage.png)
 
-您也可以使用&#x200B;**[!UICONTROL Filter]**&#x200B;圖示(![](../images/enforcement/filter.png))依類別篩選顯示的實體。 至少必須選取兩個類別，才能顯示資料。
+您也可以使用&#x200B;**[!UICONTROL Filter]**&#x200B;圖示(![](../images/enforcement/filter.png))來依類別篩選顯示的實體。 至少必須選取兩個類別，才能顯示資料。
 
 ![](../images/enforcement/lineage-filter.png)
 
-選擇&#x200B;**[!UICONTROL 清單視圖]**&#x200B;以將資料世系顯示為清單。 要切換回可視圖形，請選擇&#x200B;**[!UICONTROL 路徑視圖]**。
+選擇&#x200B;**[!UICONTROL List view]**&#x200B;以將資料世系顯示為清單。 要切換回可視圖形，請選擇&#x200B;**[!UICONTROL Path view]**。
 
 ![](../images/enforcement/list-view.png)
 
@@ -106,4 +106,4 @@ ht-degree: 0%
 
 ## 後續步驟
 
-本檔案涵蓋自動執行原則在Experience Platform中的運作方式。 如需如何使用API呼叫以程式設計方式將原則實施整合至應用程式的步驟，請參閱[API-based enforcement](./api-enforcement.md)上的指南。
+本檔案涵蓋自動政策執行在Experience Platform中的運作方式。 如需如何使用API呼叫以程式設計方式將原則實施整合至應用程式的步驟，請參閱[API-based enforcement](./api-enforcement.md)上的指南。
