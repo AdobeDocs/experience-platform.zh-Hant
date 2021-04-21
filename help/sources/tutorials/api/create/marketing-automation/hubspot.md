@@ -2,23 +2,23 @@
 keywords: Experience Platform;home；熱門主題；hubspot;Hubspot
 solution: Experience Platform
 title: 使用Flow Service API建立HubSpot來源連線
-topic: overview
+topic-legacy: overview
 type: Tutorial
 description: 瞭解如何使用Flow Service API將Adobe Experience Platform連接至HubSpot。
+exl-id: a3e64215-a82d-4aa7-8e6a-48c84c056201
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '594'
 ht-degree: 1%
 
 ---
 
-
 # 使用[!DNL Flow Service] API建立[!DNL HubSpot]來源連線
 
 >[!NOTE]
 >
->[!DNL HubSpot]介面處於測試狀態。 有關使用beta標籤連接器的詳細資訊，請參閱[來源概觀](../../../../home.md#terms-and-conditions)。
+>[!DNL HubSpot]介面處於測試狀態。 有關使用beta標籤連接器的詳細資訊，請參閱[ Sources綜覽](../../../../home.md#terms-and-conditions)。
 
 [!DNL Flow Service] 用於收集和集中Adobe Experience Platform內不同來源的客戶資料。該服務提供用戶介面和REST風格的API，所有支援的源都可從中連接。
 
@@ -26,7 +26,7 @@ ht-degree: 1%
 
 ## 快速入門
 
-本指南需要有效瞭解Adobe Experience Platform的下列元件：
+本指南需要對Adobe Experience Platform的下列組成部分有切實的瞭解：
 
 * [來源](../../../../home.md): [!DNL Experience Platform] 允許從各種來源接收資料，同時提供使用服務構建、標籤和增強傳入資料的 [!DNL Platform] 能力。
 * [沙盒](../../../../../sandboxes/home.md): [!DNL Experience Platform] 提供虛擬沙盒，可將單一執行個體分 [!DNL Platform] 割為不同的虛擬環境，以協助開發和發展數位體驗應用程式。
@@ -63,7 +63,7 @@ ht-degree: 1%
 
 * `x-sandbox-name: {SANDBOX_NAME}`
 
-所有包含裝載(POST、PUT、PATCH)的請求都需要額外的媒體類型標題：
+所有包含裝載(POST、PUT、PATCH)的請求都需要附加的媒體類型標題：
 
 * `Content-Type: application/json`
 
@@ -77,7 +77,7 @@ ht-degree: 1%
 POST /connections
 ```
 
-**請求**
+**要求**
 
 要建立[!DNL HubSpot]連接，必須在POST請求中提供其唯一連接規範ID。 [!DNL HubSpot]的連接規範ID為`cc6a4487-9e91-433e-a3a3-9cf6626c1806`。
 
