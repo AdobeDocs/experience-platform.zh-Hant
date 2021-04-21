@@ -2,16 +2,16 @@
 keywords: Experience Platform;home；熱門主題；map csv;map csv;map csv file;map csv file to xdm;map csv to xdm;ui guide;mapper;mapping;data preparation;data preparation；準備資料；
 solution: Experience Platform
 title: 使用資料準備處理資料格式
-topic: overview
+topic-legacy: overview
 description: 本文檔概述了在「資料準備」中如何處理不同資料類型。
+exl-id: 4ad253b7-3f83-48cd-9c46-8b5ba627c09e
 translation-type: tm+mt
-source-git-commit: 41656d204f7227388ee1a0a7cad01f737fb96c4f
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '568'
+source-wordcount: '567'
 ht-degree: 13%
 
 ---
-
 
 # 使用資料準備處理資料格式
 
@@ -33,7 +33,7 @@ ht-degree: 13%
 
 日期函式將字串和日期時間對象轉換為ISO 8601格式的ZonedDateTime對象。
 
-**Format**
+**格式**
 
 ```http
 date({DATE}, {FORMAT}, {DEFAULT_DATE})
