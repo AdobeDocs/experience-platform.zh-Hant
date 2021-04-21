@@ -2,20 +2,20 @@
 keywords: Experience Platform; home；熱門主題；查詢服務；查詢服務； Aqua Data Studio; Aqua data studio；連接查詢服務；
 solution: Experience Platform
 title: 將Aqua Data Studio連接至查詢服務
-topic: connect
-description: 本檔案將逐步說明如何將Aqua Data Studio與Adobe Experience Platform Query Service連結。
+topic-legacy: connect
+description: 本檔案將逐步說明如何將Aqua Data Studio與Adobe Experience Platform查詢服務連接。
+exl-id: 4770e221-48a7-45d8-80a4-60b5cbc0ec33
 translation-type: tm+mt
-source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '300'
+source-wordcount: '298'
 ht-degree: 1%
 
 ---
 
-
 # 將[!DNL Aqua Data Studio]連接到查詢服務
 
-本檔案涵蓋連接[!DNL Aqua Data Studio]與Adobe Experience Platform [!DNL Query Service]的步驟。
+本文檔介紹將[!DNL Aqua Data Studio]與Adobe Experience Platform[!DNL Query Service]連接的步驟。
 
 >[!NOTE]
 >
@@ -34,7 +34,7 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->有關查找登錄憑據、主機、埠和資料庫名稱的詳細資訊，請訪問Platform](https://platform.adobe.com/query/configuration)上的[憑據頁。 要查找憑據，請登錄到[!DNL Platform]，然後選擇&#x200B;**[!UICONTROL 查詢]**，然後選擇&#x200B;**[!UICONTROL 憑據]**。
+>有關查找登錄憑據、主機、埠和資料庫名稱的詳細資訊，請訪問Platform](https://platform.adobe.com/query/configuration)上的[憑據頁。 若要尋找您的認證，請登入[!DNL Platform]，然後選取&#x200B;**[!UICONTROL Queries]**，後面接著&#x200B;**[!UICONTROL Credentials]**。
 
 ![](../images/clients/aqua-data-studio/register-server-general-tab.png)
 
