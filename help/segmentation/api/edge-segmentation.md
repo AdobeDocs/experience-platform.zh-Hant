@@ -2,13 +2,13 @@
 keywords: Experience Platform; home；熱門主題；分段；分段；分段服務；邊緣分段；邊緣分段；流邊緣；
 solution: Experience Platform
 title: '使用API進行邊緣區段 '
-topic: developer guide
+topic-legacy: developer guide
 description: 本檔案包含如何搭配Adobe Experience Platform分段服務API使用邊緣分段的範例。
 exl-id: effce253-3d9b-43ab-b330-943fb196180f
 translation-type: tm+mt
-source-git-commit: 36169a42c7f6a73ca9cc165cd338d6a1cf245bfc
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '653'
+source-wordcount: '651'
 ht-degree: 3%
 
 ---
@@ -66,7 +66,7 @@ ht-degree: 3%
 GET /segment/definitions?evaluationInfo.synchronous.enabled=true
 ```
 
-**請求**
+**要求**
 
 ```shell
 curl -X GET \
@@ -176,7 +176,7 @@ curl -X GET \
 POST /segment/definitions
 ```
 
-**請求**
+**要求**
 
 >[!NOTE]
 >
