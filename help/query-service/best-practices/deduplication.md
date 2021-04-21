@@ -2,21 +2,21 @@
 keywords: Experience Platform; home；熱門主題；查詢服務；查詢服務；重複資料消除；
 solution: Experience Platform
 title: 查詢服務中的重複資料消除
-topic: queries
+topic-legacy: queries
 type: Tutorial
 description: 本檔案概述了用於消除重複的三個常見使用案例：體驗事件、購買和度量的子選取和完整範例查詢範例。
+exl-id: 46ba6bb6-67d4-418b-8420-f2294e633070
 translation-type: tm+mt
-source-git-commit: 97dc0b5fb44f5345fd89f3f56bd7861668da9a6e
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '494'
 ht-degree: 0%
 
 ---
 
-
 # [!DNL Query Service]中的重複資料消除
 
-Adobe Experience Platform [!DNL Query Service]支援重複資料刪除。 當需要從計算中刪除整個行或忽略特定欄位集時，可以執行重複資料消除，因為行中只有一部分資料是重複資訊。
+Adobe Experience Platform[!DNL Query Service]支援重複資料消除。 當需要從計算中刪除整個行或忽略特定欄位集時，可以執行重複資料消除，因為行中只有一部分資料是重複資訊。
 
 重複資料刪除通常涉及在訂購時間內跨窗口使用`ROW_NUMBER()`函式來查找ID（或一對ID），這會返回一個新欄位，表示檢測到重複的次數。 該時間通常使用[!DNL Experience Data Model](XDM)`timestamp`欄位來表示。
 
@@ -34,9 +34,9 @@ Adobe Experience Platform [!DNL Query Service]支援重複資料刪除。 當需
 
 >[!CAUTION]
 >
->[!DNL Experience Platform]中的許多資料集（包括Adobe Analytics Data Connector產生的資料集）已套用「體驗事件」層級的去重複化。 因此，無需重新應用此級別的重複資料消除，並會減慢查詢速度。
+>[!DNL Experience Platform]中的許多資料集(包括由Adobe Analytics資料連接器生成的資料集)都已應用了「體驗——事件」級重複資料刪除。 因此，無需重新應用此級別的重複資料消除，並會減慢查詢速度。
 >
->請務必瞭解資料集的來源，並瞭解是否已在Experience-Event層級套用重複資料消除。 對於任何串流化的資料集（例如Adobe Target），您&#x200B;**將**&#x200B;需要套用體驗——事件層級的重複化，因為這些資料來源具有「至少一次」的語義。
+>請務必瞭解資料集的來源，並瞭解是否已在Experience-Event層級套用重複資料消除。 對於任何串流化的資料集(例如來自Adobe Target的資料集)，您&#x200B;**將**&#x200B;需要套用體驗——事件層級的去重複化，因為這些資料來源具有「至少一次」的語義。
 
 **範圍：全** 域
 
