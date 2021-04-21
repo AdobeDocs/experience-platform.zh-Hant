@@ -2,20 +2,20 @@
 keywords: Experience Platform;home；常用主題；模式；模式；XDM;fields;schemas;Schemas;phoneNumber;xdm:phoneNumber;datatype；資料類型；
 solution: Experience Platform
 title: 電話號碼資料類型
-topic: overview
+topic-legacy: overview
 description: 本文檔概述電話號碼XDM資料類型。
+exl-id: b84e48f9-bbb4-4b8b-9476-4bc1c455ecfd
 translation-type: tm+mt
-source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '208'
+source-wordcount: '204'
 ht-degree: 0%
 
 ---
 
+# [!UICONTROL Phone number] 資料類型
 
-# [!UICONTROL 電話] 號碼資料類型
-
-[!UICONTROL 電] 話號碼是標準XDM資料類型，用於描述電話號碼的詳細資訊。
+[!UICONTROL Phone number] 是一種標準的XDM資料類型，它描述了電話號碼的詳細資訊。
 
 <img src="../images/data-types/phone-number.png" width="600" /><br />
 
