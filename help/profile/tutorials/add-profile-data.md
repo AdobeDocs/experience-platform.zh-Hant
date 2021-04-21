@@ -1,17 +1,17 @@
 ---
-keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API;enable profile;Enable profile
+keywords: Experience Platform；配置檔案；即時客戶配置檔案；疑難排解；API；啟用配置檔案；啟用配置檔案
 title: 新增資料至即時客戶個人檔案
-topic: tutorial
+topic-legacy: tutorial
 type: Tutorial
 description: 本教學課程概述將資料新增至即時客戶個人檔案的必要步驟。
+exl-id: c2df224b-bf3d-4994-aa3a-9e9f4a6a726c
 translation-type: tm+mt
-source-git-commit: cad9c690be986961aea2969ef0ade975f33a8ee5
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '380'
 ht-degree: 0%
 
 ---
-
 
 # 將資料新增至[!DNL Real-time Customer Profile]
 
