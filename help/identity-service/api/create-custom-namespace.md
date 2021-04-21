@@ -1,17 +1,17 @@
 ---
-keywords: Experience Platform;home；常用主題；namespace;Namespace;namespaces;Namespaces;Identity namespace;Identity namespace;Identity
+keywords: Experience Platform;home；常用主題；namespace；命名空間；命名空間；標識命名空間；標識命名空間；標識名稱空間；標識
 solution: Experience Platform
 title: 在Identity Service API中建立自訂命名空間
-topic: API guide
+topic-legacy: API guide
 description: 使用Identity Namespace API，您可以建立自訂的身分名稱空間，該名稱空間僅供您的組織使用。
+exl-id: 6015a225-4508-49cc-9dda-fb9f73a8746c
 translation-type: tm+mt
-source-git-commit: 73035aec86297cfc4ee9337cf922d599001379c3
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '120'
 ht-degree: 3%
 
 ---
-
 
 # 在Identity Service API中建立自訂命名空間
 
@@ -29,7 +29,7 @@ ht-degree: 3%
 POST /idnamespace/identities
 ```
 
-**請求**
+**要求**
 
 ```shell
 curl -X POST \
