@@ -1,21 +1,21 @@
 ---
-keywords: Experience Platform;Profile；即時客戶配置檔案；故障排除；API
+keywords: Experience Platform；配置檔案；即時客戶配置檔案；故障排除；API
 title: 實體（描述檔存取）API端點
-topic: guide
+topic-legacy: guide
 type: Documentation
 description: Adobe Experience Platform可讓您使用REST風格的API或使用者介面存取即時客戶個人檔案資料。 本指南概述如何使用描述檔API存取實體（通常稱為「描述檔」）。
+exl-id: 06a1a920-4dc4-4468-ac15-bf4a6dc885d4
 translation-type: tm+mt
-source-git-commit: e6ecc5dac1d09c7906aa7c7e01139aa194ed662b
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '1737'
 ht-degree: 1%
 
 ---
 
-
 # 實體端點（配置檔案訪問）
 
-Adobe Experience Platform可讓您使用REST風格的API或使用者介面存取[!DNL Real-time Customer Profile]資料。 本指南概述如何使用API存取實體（通常稱為「設定檔」）。 有關使用[!DNL Platform] UI訪問配置式的詳細資訊，請參閱[Profile使用手冊](../ui/user-guide.md)。
+Adobe Experience Platform允許您使用RESTful API或用戶介面訪問[!DNL Real-time Customer Profile]資料。 本指南概述如何使用API存取實體（通常稱為「設定檔」）。 有關使用[!DNL Platform] UI訪問配置式的詳細資訊，請參閱[Profile使用手冊](../ui/user-guide.md)。
 
 ## 快速入門
 
@@ -33,7 +33,7 @@ Adobe Experience Platform可讓您使用REST風格的API或使用者介面存取
 GET /access/entities?{QUERY_PARAMETERS}
 ```
 
-**請求**
+**要求**
 
 下列請求會使用身分擷取客戶的電子郵件和名稱：
 
@@ -129,7 +129,7 @@ curl -X GET \
 POST /access/entities
 ```
 
-**請求**
+**要求**
 
 下列請求會依身分清單擷取數個客戶的姓名和電子郵件地址：
 
@@ -345,7 +345,7 @@ curl -X POST \
 GET /access/entities?{QUERY_PARAMETERS}
 ```
 
-**請求**
+**要求**
 
 以下請求按ID查找配置檔案實體，並檢索與該實體關聯的所有時間系列事件的`endUserIDs`、`web`和`channel`屬性的值。
 
@@ -415,7 +415,7 @@ curl -X GET \
 
 ### 存取後續的結果頁面
 
-在檢索時間系列事件時對結果進行編頁。 如果有後續的結果頁面，`_page.next`屬性將包含ID。 此外，`_links.next.href`屬性還提供檢索下一頁的請求URI。 要檢索結果，請向`/access/entities`端點發出另一個GET請求，但必須確保用提供的URI的值替換`/entities`。
+在檢索時間系列事件時對結果進行編頁。 如果有後續的結果頁面，`_page.next`屬性將包含ID。 此外，`_links.next.href`屬性還提供檢索下一頁的請求URI。 要檢索結果，請向`/access/entities`端點發出另一個GET請求，但必須確保將`/entities`替換為提供的URI的值。
 
 >[!NOTE]
 >
@@ -431,7 +431,7 @@ GET /access/{NEXT_URI}
 |---|---|
 | `{NEXT_URI}` | 取自`_links.next.href`的URI值。 |
 
-**請求**
+**要求**
 
 以下請求使用`_links.next.href` URI作為請求路徑來檢索下一頁結果。
 
@@ -505,7 +505,7 @@ curl -X GET \
 POST /access/entities
 ```
 
-**請求**
+**要求**
 
 下列請求會擷取與描述檔身分清單相關之時間系列事件的使用者ID、本機時間和國家代碼：
 
@@ -775,7 +775,7 @@ curl -X POST \
 
 在擷取時間序列事件時，可能會傳回許多結果，因此結果通常會進行編頁。 如果某個特定配置檔案有後續的結果頁，則該配置檔案的`_links.next.payload`值將包含一個裝載對象。
 
-在請求主體中使用此裝載，可以對`access/entities`端點執行附加的POST請求，以檢索該配置檔案的後續的時間序列資料頁。
+使用請求主體中的此裝載，您可以對`access/entities`端點執行附加POST請求，以檢索該配置檔案的後續時間序列資料頁。
 
 ## 訪問多個模式實體中的時間序列事件
 
@@ -789,7 +789,7 @@ curl -X POST \
 GET /access/entities?{QUERY_PARAMETERS}
 ```
 
-**請求**
+**要求**
 
 以下請求檢索包含先前建立的關係描述符的實體，以訪問不同方案的資訊。
 
@@ -897,7 +897,7 @@ curl -X GET \
 
 ### 查詢參數{#query-parameters}
 
-GET請求到`/access/entities`端點的路徑中使用以下參數。 它們可用來識別您要存取的描述檔實體，並篩選回應中傳回的資料。 必要參數會加上標籤，而其餘參數則是選用的。
+以下參數用於到`/access/entities`端點的GET請求路徑。 它們可用來識別您要存取的描述檔實體，並篩選回應中傳回的資料。 必要參數會加上標籤，而其餘參數則是選用的。
 
 | 參數 | 說明 | 範例 |
 |---|---|---|
