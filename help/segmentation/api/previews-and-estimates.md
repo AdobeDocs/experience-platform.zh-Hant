@@ -1,21 +1,21 @@
 ---
-keywords: Experience Platform; home；熱門主題；分段；分段；分段服務；預覽；估計；預覽和估計；估計和預覽；api;API;
+keywords: Experience Platform；首頁；熱門主題；分段；分段；分段服務；預覽；預覽和估計；估計和預覽；api;API;
 solution: Experience Platform
 title: 預覽和估計API端點
-topic: developer guide
-description: 在開發區段定義時，您可以使用Adobe Experience Platform中的估計和預覽工具來檢視摘要層級的資訊，以協助您隔離預期的觀眾。
+topic-legacy: developer guide
+description: 在開發區段定義時，您可以使用Adobe Experience Platform的預估和預覽工具來檢視摘要層級資訊，以協助您隔離預期的觀眾。
+exl-id: 2c204f29-825f-4a5e-a7f6-40fc69263614
 translation-type: tm+mt
-source-git-commit: eba6de210dcbc12b829b09ba6e7083d342517ba2
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '949'
 ht-degree: 2%
 
 ---
 
-
 # 預覽和估計端點
 
-當您開發區段定義時，可以使用Adobe Experience Platform中的估計和預覽工具來檢視摘要層級資訊，以協助您隔離預期的受眾。
+當您開發區段定義時，可以使用Adobe Experience Platform的預估和預覽工具來檢視摘要層級資訊，以協助您隔離預期的觀眾。
 
 * **預** 覽提供區段定義之合格描述檔的分頁清單，讓您比較結果與預期。
 
@@ -50,7 +50,7 @@ ht-degree: 2%
 
 ## 建立新的預覽{#create-preview}
 
-您可以通過向`/preview`端點發出POST請求來建立新預覽。
+您可以向`/preview`端點發出POST請求，以建立新預覽。
 
 >[!NOTE]
 >
@@ -62,7 +62,7 @@ ht-degree: 2%
 POST /preview
 ```
 
-**請求**
+**要求**
 
 ```shell
 curl -X POST https://platform.adobe.io/data/core/ups/preview \
@@ -118,7 +118,7 @@ GET /preview/{PREVIEW_ID}
 | --------- | ----------- |
 | `{PREVIEW_ID}` | 您要擷取之預覽的`previewId`值。 |
 
-**請求**
+**要求**
 
 ```shell
 curl -X GET https://platform.adobe.io/data/core/ups/preview/MDphcHAtMzJiZTAzMjgtM2YzMS00YjY0LThkODQtYWNkMGM0ZmJkYWQzOmU4OTAwNjhiLWY1Y2EtNGE4Zi1hNmI1LWFmODdmZjBjYWFjMzow \
@@ -183,7 +183,7 @@ curl -X GET https://platform.adobe.io/data/core/ups/preview/MDphcHAtMzJiZTAzMjgt
 
 ## 檢索特定估計作業的結果{#get-estimate}
 
-建立預覽工作後，您可在GET要求至`/estimate`端點的路徑中使用其`previewId`，以檢視區段定義的統計資訊，包括預計讀者大小、信賴區間和錯誤標準差。
+在建立預覽工作後，您可以在至`/estimate`端點的GET請求路徑中使用其`previewId`，以檢視區段定義的統計資訊，包括預計讀者大小、信賴區間和錯誤標準差。
 
 **API格式**
 
@@ -195,7 +195,7 @@ GET /estimate/{PREVIEW_ID}
 | --------- | ----------- |
 | `{PREVIEW_ID}` | 只有在建立預覽工作且兩個工作共用相同的ID值以供查閱時，才會觸發估計工作。 具體而言，這是建立預覽工作時傳回的`previewId`值。 |
 
-**請求**
+**要求**
 
 下列請求會擷取特定估計工作的結果。
 
