@@ -2,24 +2,24 @@
 keywords: Experience Platform;home；熱門主題；hubspot;Hubspot;HubSpot
 solution: Experience Platform
 title: HubSpot源連接器概述
-topic: overview
-description: 瞭解如何使用API或使用者介面將HubSpot連接至Adobe Experience Platform。
+topic-legacy: overview
+description: 瞭解如何使用API或使用者介面將HubSpot連線至Adobe Experience Platform。
+exl-id: 4bc279ac-9388-4bac-bfae-98878625a554
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '232'
 ht-degree: 0%
 
 ---
 
-
 # （測試版）[!DNL HubSpot]連接器
 
 >[!NOTE]
 >
->[!DNL HubSpot]介面處於測試狀態。 有關使用beta標籤連接器的詳細資訊，請參閱[來源概觀](../../home.md#terms-and-conditions)。
+>[!DNL HubSpot]介面處於測試狀態。 有關使用beta標籤連接器的詳細資訊，請參閱[ Sources綜覽](../../home.md#terms-and-conditions)。
 
-Adobe Experience Platform可讓您從外部來源擷取資料，同時讓您能夠使用[!DNL Platform]服務來建構、標示並增強傳入資料。 您可以從多種來源（例如Adobe應用程式、雲端儲存空間、資料庫等）擷取資料。
+Adobe Experience Platform允許從外部來源接收資料，同時提供使用[!DNL Platform]服務構建、標籤和增強傳入資料的能力。 您可以從多種來源收錄資料，例如Adobe應用程式、雲端儲存空間、資料庫等。
 
 [!DNL Experience Platform ]支援從協力廠商行銷自動化系統擷取資料。行銷自動化提供者的支援包括[!DNL HubSpot]。
 
