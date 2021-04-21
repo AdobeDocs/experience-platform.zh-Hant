@@ -2,29 +2,29 @@
 keywords: Experience Platform; home；熱門主題；檔案傳輸協定；檔案傳輸協定
 solution: Experience Platform
 title: 使用流程服務API建立FTP來源連線
-topic: overview
+topic-legacy: overview
 type: Tutorial
-description: 瞭解如何使用流程服務API將Adobe Experience Platform連接至FTP（檔案傳輸通訊協定）伺服器。
+description: 瞭解如何使用Flow Service API將Adobe Experience Platform連接至FTP（檔案傳輸通訊協定）伺服器。
+exl-id: a7bef346-b357-49bc-ac54-ac8b42adac50
 translation-type: tm+mt
-source-git-commit: a489ab248793a063295578943ad600d8eacab6a2
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '577'
 ht-degree: 2%
 
 ---
 
-
 # 使用[!DNL Flow Service] API建立FTP來源連線
 
 >[!NOTE]
 >
->FTP連接器處於測試階段。 功能和檔案可能會有所變更。 有關使用beta標籤連接器的詳細資訊，請參閱[來源概觀](../../../../home.md#terms-and-conditions)。
+>FTP連接器處於測試階段。 功能和檔案可能會有所變更。 有關使用beta標籤連接器的詳細資訊，請參閱[ Sources綜覽](../../../../home.md#terms-and-conditions)。
 
 本教學課程使用[!DNL Flow Service] API來引導您完成將[!DNL Experience Platform]連接至FTP（檔案傳輸通訊協定）伺服器的步驟。
 
 ## 快速入門
 
-本指南需要有效瞭解Adobe Experience Platform的下列元件：
+本指南需要對Adobe Experience Platform的下列組成部分有切實的瞭解：
 
 * [來源](../../../../home.md): [!DNL Experience Platform] 允許從各種來源接收資料，同時提供使用服務構建、標籤和增強傳入資料的 [!DNL Platform] 能力。
 * [沙盒](../../../../../sandboxes/home.md): [!DNL Experience Platform] 提供虛擬沙盒，可將單一執行個體分 [!DNL Platform] 割為不同的虛擬環境，以協助開發和發展數位體驗應用程式。
@@ -57,7 +57,7 @@ ht-degree: 2%
 
 * `x-sandbox-name: {SANDBOX_NAME}`
 
-所有包含裝載(POST、PUT、PATCH)的請求都需要額外的媒體類型標題：
+所有包含裝載(POST、PUT、PATCH)的請求都需要附加的媒體類型標題：
 
 * `Content-Type: application/json`
 
@@ -67,7 +67,7 @@ ht-degree: 2%
 
 ### 使用基本驗證建立FTP連線
 
-若要使用基本驗證建立FTP連線，請在提供連線`host`、`userName`和`password`的值時，向[!DNL Flow Service] API提出POST要求。
+若要使用基本驗證建立FTP連線，請向[!DNL Flow Service] API提出POST要求，同時提供連線的`host`、`userName`和`password`值。
 
 **API格式**
 
@@ -75,9 +75,9 @@ ht-degree: 2%
 POST /connections
 ```
 
-**請求**
+**要求**
 
-若要建立FTP連線，其唯一連線規格ID必須作為POST要求的一部分提供。 FTP的連接規範ID為`fb2e94c9-c031-467d-8103-6bd6e0a432f2`。
+若要建立FTP連線，其唯一的連線規格ID必須作為POST要求的一部分提供。 FTP的連接規範ID為`fb2e94c9-c031-467d-8103-6bd6e0a432f2`。
 
 ```shell
 curl -X POST \
