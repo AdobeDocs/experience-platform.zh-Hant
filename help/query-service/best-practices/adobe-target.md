@@ -1,21 +1,21 @@
 ---
-keywords: Experience Platform;home;popular topics;query service;Query service;sample query;sample query;adobe target;
+keywords: Experience Platform; home；熱門主題；查詢服務；查詢服務；示例查詢；示例查詢；adobe目標；
 solution: Experience Platform
-title: Adobe Target資料的範例查詢
-topic: queries
-description: 來自Adobe Target的資料會轉換為Experience Event XDM架構，並以資料集的形式匯入Experience Platform。 本檔案包含將Query Service與Adobe Target資料集搭配使用的範例查詢。
+title: Adobe Target資料的示例查詢
+topic-legacy: queries
+description: 來自Adobe Target的資料會轉換為Experience Event XDM架構，並以資料集的形式收錄到Experience Platform中。 本文檔包含將Query Service與您的Adobe Target資料集一起使用的示例查詢。
+exl-id: 0ab3cd6e-25ed-43dc-b8f0-a2b71621ae50
 translation-type: tm+mt
-source-git-commit: 97dc0b5fb44f5345fd89f3f56bd7861668da9a6e
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '328'
 ht-degree: 1%
 
 ---
 
+# Adobe Target資料的查詢示例
 
-# Adobe Target資料的範例查詢
-
-來自Adobe Target的資料會轉換為Experience Event XDM架構，並以資料集的形式匯入Adobe Experience Platform。 Adobe Experience Platform Query Service含有這些資料的使用案例很多，下列範例查詢應與您的Adobe Target資料集搭配使用。
+來自Adobe Target的資料會轉換成Experience Event XDM架構，並作為資料集收錄到Adobe Experience Platform。 Adobe Experience Platform查詢服務使用此資料的使用案例很多，以下示例查詢應用於您的Adobe Target資料集。
 
 在Experience Platform中，自動建立的資料集名稱為「Adobe Target體驗事件」。 使用此資料集和查詢時，應使用名稱`adobe_target_experience_events`。
 
@@ -39,7 +39,7 @@ ht-degree: 1%
 
 ## 範例查詢
 
-下列查詢顯示Adobe Target常用查詢的範例。
+以下查詢顯示了Adobe Target常用查詢的示例。
 
 在以下範例中，您需要編輯SQL，以根據您想要評估的資料集、變數或時間範圍，填寫您查詢的預期參數。 在SQL中看到`{ }`時提供參數。
 
