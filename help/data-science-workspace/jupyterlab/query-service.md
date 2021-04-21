@@ -2,17 +2,17 @@
 keywords: Experience Platform;JupyterLab；筆記型電腦；資料科學工作區；熱門主題；查詢服務
 solution: Experience Platform
 title: Jupyter筆記本中的查詢服務
-topic: tutorial
+topic-legacy: tutorial
 type: Tutorial
 description: Adobe Experience Platform允許您將查詢服務整合到JupyterLab中作為標準功能，在資料科學工作區中使用結構化查詢語言(SQL)。 本教程示範SQL查詢範例，以瞭解、轉換和分析Adobe Analytics資料的常見使用案例。
+exl-id: c5ac7d11-a3bd-4ef8-a650-9f496a8bbaa7
 translation-type: tm+mt
-source-git-commit: 9d84fc1eb898020ed4b154c091fcc9fc4933c7de
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '824'
+source-wordcount: '810'
 ht-degree: 1%
 
 ---
-
 
 # Jupyter筆記本中的查詢服務
 
@@ -36,13 +36,13 @@ ht-degree: 1%
 
 ## 訪問[!DNL JupyterLab]和[!DNL Query Service] {#access-jupyterlab-and-query-service}
 
-1. 在[[!DNL Experience Platform]](https://platform.adobe.com)中，從左側導航列導航至&#x200B;**[!UICONTROL Notebooks]**。 請讓JupyterLab載入。
+1. 在[[!DNL Experience Platform]](https://platform.adobe.com)中，從左側導覽欄導覽至&#x200B;**[!UICONTROL Notebooks]**。 請讓JupyterLab載入。
 
    ![](../images/jupyterlab/query/jupyterlab-launcher.png)
 
    >[!NOTE]
    >
-   >如果未自動顯示新的「啟動器」頁籤，請按一下&#x200B;**[!UICONTROL 檔案]** ，然後選擇&#x200B;**[!UICONTROL 新的啟動器]** ，開啟新的「啟動器」頁籤。
+   >如果未自動顯示新的「啟動器」頁籤，請按一下&#x200B;**[!UICONTROL File]** ，然後選擇&#x200B;**[!UICONTROL New Launcher]**&#x200B;以開啟新的「啟動器」頁籤。
 
 2. 在「啟動器」頁籤中，按一下Python 3環境中的&#x200B;**[!UICONTROL Blank]**&#x200B;表徵圖以開啟空的筆記本。
 
@@ -52,11 +52,11 @@ ht-degree: 1%
    >
    >Python 3目前是筆記型電腦中唯一支援查詢服務的環境。
 
-3. 在左選邊欄上，按一下&#x200B;**[!UICONTROL Data]**&#x200B;表徵圖，然後按兩下&#x200B;**[!UICONTROL Datasets]**&#x200B;目錄以列出所有資料集。
+3. 在左側選擇邊欄上，按一下&#x200B;**[!UICONTROL Data]**&#x200B;表徵圖並按兩下&#x200B;**[!UICONTROL Datasets]**&#x200B;目錄以列出所有資料集。
 
    ![](../images/jupyterlab/query/dataset.png)
 
-4. 查找要瀏覽的[!DNL Adobe Analytics]資料集並按一下右鍵清單，按一下&#x200B;**[!UICONTROL 筆記本中的查詢資料]**&#x200B;在空的筆記本中生成SQL查詢。
+4. 查找要瀏覽的[!DNL Adobe Analytics]資料集並按一下右鍵清單，按一下&#x200B;**[!UICONTROL Query Data in Notebook]**&#x200B;在空筆記本中生成SQL查詢。
 
 5. 按一下包含函式`qs_connect()`的第一個產生儲存格，然後按一下播放按鈕以執行它。 此函式在筆記本實例和[!DNL Query Service]之間建立連接。
 
