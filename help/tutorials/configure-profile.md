@@ -2,17 +2,17 @@
 keywords: Experience Platform; home；熱門主題；即時客戶概要；身份服務；
 solution: Experience Platform
 title: 即時客戶個人檔案教學課程
-topic: tutorial
+topic-legacy: tutorial
 type: Tutorial
 description: 本檔案概述了相關步驟，並提供教學課程連結，以完成個別工作流程。
+exl-id: cda6e7a7-9498-454c-94df-c6271a5a4fd4
 translation-type: tm+mt
-source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '796'
+source-wordcount: '793'
 ht-degree: 0%
 
 ---
-
 
 # 設定 [!DNL Real-time Customer Profile]
 
@@ -75,7 +75,7 @@ Adobe Experience Platform可讓您從多個來源匯整資料，並加以結合�
 
 ## 設定邊緣投影
 
-為即時跨多個通道為客戶提供協調、一致且個人化的體驗，需要隨時提供適當的資料，並在變更時持續更新。 Adobe[!DNL Experience Platform]可讓您透過使用稱為邊緣的功能，即時存取資料。 邊緣是地理位置優越的伺服器，可儲存資料，讓應用程式可輕鬆存取。 資料通過投影被路由到邊，投影目的地定義資料要發送到的邊，投影配置定義將在邊上提供的特定資訊。
+為即時跨多個通道為客戶提供協調、一致且個人化的體驗，需要隨時提供適當的資料，並在變更時持續更新。 Adobe[!DNL Experience Platform]可讓您透過使用稱為邊緣的功能，即時存取資料。 邊緣是地理位置的伺服器，可儲存資料，讓應用程式可輕鬆存取。 資料通過投影被路由到邊，投影目的地定義資料要發送到的邊，投影配置定義將在邊上提供的特定資訊。
 
 **本指南將幫助您：**
 - 列出、建立、查看、更新和刪除邊投影目標。
