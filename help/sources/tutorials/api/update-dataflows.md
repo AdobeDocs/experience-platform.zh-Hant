@@ -2,17 +2,17 @@
 keywords: Experience Platform;home；熱門主題；流服務；更新資料流
 solution: Experience Platform
 title: 使用流服務API更新資料流
-topic: overview
+topic-legacy: overview
 type: Tutorial
 description: 本教程介紹使用流服務API更新資料流的步驟，包括其名稱、說明和時間表。
+exl-id: 367a3a9e-0980-4144-a669-e4cfa7a9c722
 translation-type: tm+mt
-source-git-commit: e19b5b905a38c63b7dc47904c5af30dc2ed21e22
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '617'
-ht-degree: 2%
+source-wordcount: '615'
+ht-degree: 1%
 
 ---
-
 
 # 使用流服務API更新資料流
 
@@ -63,7 +63,7 @@ GET /flows/{FLOW_ID}
 | --------- | ----------- |
 | `{FLOW_ID}` | 要檢索的資料流的唯一`id`值。 |
 
-**請求**
+**要求**
 
 下列請求會擷取有關您流程ID的更新資訊。
 
@@ -204,7 +204,7 @@ curl -X GET \
 PATCH /flows/{FLOW_ID}
 ```
 
-**請求**
+**要求**
 
 以下請求會更新流運行計畫以及資料流的名稱和說明。
 
