@@ -1,21 +1,21 @@
 ---
-keywords: Experience Platform;Profile；即時客戶配置檔案；故障排除；API
+keywords: Experience Platform；配置檔案；即時客戶配置檔案；故障排除；API
 title: 合併策略API端點
-topic: guide
+topic-legacy: guide
 type: Documentation
-description: 'Adobe Experience Platform可讓您從多個來源匯整資料片段，並加以匯整，以全面瞭解每個客戶。 將這些資料整合在一起時，合併原則是平台用來決定資料的優先順序以及將哪些資料合併以建立統一檢視的規則。 '
+description: Adobe Experience Platform可讓您從多個來源匯整資料片段，並加以結合，以全面瞭解每個客戶。 將這些資料整合在一起時，合併原則是平台用來決定資料的優先順序以及將哪些資料合併以建立統一檢視的規則。
+exl-id: fb49977d-d5ca-4de9-b185-a5ac1d504970
 translation-type: tm+mt
-source-git-commit: e6ecc5dac1d09c7906aa7c7e01139aa194ed662b
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '2560'
 ht-degree: 1%
 
 ---
 
-
 # 合併策略端點
 
-Adobe Experience Platform可讓您從多個來源匯整資料片段，並加以匯整，以全面瞭解每個客戶。 合併策略是[!DNL Platform]用於確定資料的優先順序以及將哪些資料合併以建立統一視圖的規則。
+Adobe Experience Platform可讓您從多個來源匯整資料片段，並加以結合，以全面瞭解每個客戶。 合併策略是[!DNL Platform]用於確定資料的優先順序以及將哪些資料合併以建立統一視圖的規則。
 
 例如，如果客戶透過多個通道與您的品牌互動，您的組織將會在多個資料集中顯示與該單一客戶相關的多個描述檔片段。 當這些片段被收錄到Platform中時，會將它們合併在一起，以便為該客戶建立單一個人檔案。 當來自多個來源的資料發生衝突（例如，一個片段將客戶列為「單一」，而另一個片段將客戶列為「已婚」）時，合併原則會決定要包含在個人描述檔中的資訊。
 
@@ -99,7 +99,7 @@ Adobe Experience Platform可讓您從多個來源匯整資料片段，並加以�
 
 ### 身份圖{#identity-graph}
 
-[Adobe Experience Platform Identity ](../../identity-service/home.md) Service管理全球及每個組織使用的識別圖 [!DNL Experience Platform]。合併策略的`identityGraph`屬性定義了如何確定用戶的相關身份。
+[Adobe Experience Platform身](../../identity-service/home.md) 分服務管理全球及每個組織使用的身分圖表 [!DNL Experience Platform]。合併策略的`identityGraph`屬性定義了如何確定用戶的相關身份。
 
 **identityGraph物件**
 
@@ -184,7 +184,7 @@ Adobe Experience Platform可讓您從多個來源匯整資料片段，並加以�
     }
 ```
 
-若要進一步瞭解XDM並在Experience Platform中使用架構，請先閱讀[XDM系統概觀](../../xdm/home.md)。
+要瞭解有關XDM和在Experience Platform中使用架構的更多資訊，請首先閱讀[XDM系統概述](../../xdm/home.md)。
 
 ## 訪問合併策略{#access-merge-policies}
 
@@ -192,7 +192,7 @@ Adobe Experience Platform可讓您從多個來源匯整資料片段，並加以�
 
 ### 依ID存取單一合併原則
 
-通過向`/config/mergePolicies`端點發出GET請求並在請求路徑中包含`mergePolicyId`，可以通過其ID訪問單個合併策略。
+通過向`/config/mergePolicies`端點發出GET請求並在請求路徑中包括`mergePolicyId`，可以通過其ID訪問單個合併策略。
 
 **API格式**
 
@@ -204,7 +204,7 @@ GET /config/mergePolicies/{mergePolicyId}
 |---|---|
 | `{mergePolicyId}` | 要刪除的合併策略的標識符。 |
 
-**請求**
+**要求**
 
 ```shell
 curl -X GET \
@@ -250,7 +250,7 @@ curl -X GET \
 POST /config/mergePolicies/bulk-get
 ```
 
-**請求**
+**要求**
 
 請求主體包含一個「ids」陣列，其中包含您要擷取詳細資料之每個合併原則的「id」個別物件。
 
@@ -276,7 +276,7 @@ curl -X POST \
 
 **回應**
 
-成功的回應會傳回HTTP狀態207（多重狀態），以及POST請求中提供其ID的合併原則詳細資訊。
+成功的回應會傳回「HTTP狀態207」（多重狀態），以及合併原則的詳細資訊，這些原則的ID已在POST請求中提供。
 
 ```json
 { 
@@ -339,7 +339,7 @@ curl -X POST \
 
 ### 按標準列出多個合併策略
 
-您可以在IMS組織內，透過向`/config/mergePolicies`端點發出GET請求，並使用選用的查詢參數來篩選、排序和分頁回應，列出多個合併原則。 可包含多個參數，以&amp;符號分隔。 在沒有參數的情況下呼叫此端點將會擷取組織所有可用的合併原則。
+您可以在IMS組織中，向`/config/mergePolicies`端點發出GET請求，並使用可選查詢參數來篩選、排序和分頁回應，以列出多個合併原則。 可包含多個參數，以&amp;符號分隔。 在沒有參數的情況下呼叫此端點將會擷取組織所有可用的合併原則。
 
 **API格式**
 
@@ -361,7 +361,7 @@ GET /config/mergePolicies?{QUERY_PARAMS}
 有關`schema.name`、`identityGraph.type`和`attributeMerge.type`的詳細資訊，請參閱本指南前面提供的[合併策略的元件](#components-of-merge-policies)部分。
 
 
-**請求**
+**要求**
 
 以下請求列出了給定方案的所有合併策略：
 
@@ -536,7 +536,7 @@ curl -X POST \
 
 ## 更新合併策略{#update}
 
-通過編輯單個屬性(PATCH)或用新屬性(PUT)覆寫整個合併策略，可以修改現有的合併策略。 各示例如下所示。
+您可以通過編輯單個屬性(PATCH)或用新屬性(PUT)覆寫整個合併策略來修改現有的合併策略。 各示例如下所示。
 
 ### 編輯個別合併原則欄位
 
@@ -552,7 +552,7 @@ PATCH /config/mergePolicies/{mergePolicyId}
 |---|---|
 | `{mergePolicyId}` | 要刪除的合併策略的標識符。 |
 
-**請求**
+**要求**
 
 以下請求通過將其`default`屬性的值更改為`true`來更新指定的合併策略：
 
@@ -573,7 +573,7 @@ curl -X PATCH \
 
 | 屬性 | 說明 |
 |---|---|
-| `op` | 指定要執行的操作。 其他PATCH操作的示例可在[JSON修補程式文檔](http://jsonpatch.com)中找到 |
+| `op` | 指定要執行的操作。 其他PATCH操作的範例可在[JSON修補程式檔案](http://jsonpatch.com)中找到 |
 | `path` | 要更新的欄位路徑。 接受的值為：&quot;/name&quot;、&quot;/identityGraph.type&quot;、&quot;/attributeMerge.type&quot;、&quot;/schema.name&quot;、&quot;/version&quot;、&quot;/default&quot; |
 | `value` | 將指定欄位設定為的值。 |
 
@@ -628,7 +628,7 @@ PUT /config/mergePolicies/{mergePolicyId}
 |---|---|
 | `{mergePolicyId}` | 您要覆寫之合併原則的識別碼。 |
 
-**請求**
+**要求**
 
 下列請求會覆寫指定的合併原則，將其屬性值取代為裝載中提供的屬性值。 由於此請求完全替換了現有的合併策略，因此您必須提供最初定義合併策略時所需的所有相同欄位。 但是，這次您要為要變更的欄位提供更新值。
 
@@ -721,7 +721,7 @@ DELETE /config/mergePolicies/{mergePolicyId}
 |---|---|
 | `{mergePolicyId}` | 要刪除的合併策略的標識符。 |
 
-**請求**
+**要求**
 
 以下請求會刪除合併策略。
 
@@ -740,7 +740,7 @@ curl -X DELETE \
 
 ## 後續步驟
 
-現在您知道如何為組織建立和設定合併原則，您可以使用這些原則來調整平台中客戶個人檔案的檢視，並從您的[!DNL Real-time Customer Profile]資料建立受眾區段。 請參閱[Adobe Experience Platform Segmentation Service檔案](../../segmentation/home.md)，開始定義和使用區段。
+現在您知道如何為組織建立和設定合併原則，您可以使用這些原則來調整平台中客戶個人檔案的檢視，並從您的[!DNL Real-time Customer Profile]資料建立受眾區段。 請參閱[Adobe Experience Platform區段服務檔案](../../segmentation/home.md)，開始定義和使用區段。
 
 ## 附錄
 
@@ -748,7 +748,7 @@ curl -X DELETE \
 
 ### 使用自訂時間戳記{#custom-timestamps}
 
-當記錄被收錄到Experience Platform中時，系統會在擷取時取得系統時間戳記並新增至記錄。 當`timestampOrdered`被選為合併策略的`attributeMerge`類型時，將根據系統時間戳合併配置檔案。 換言之，合併是根據記錄被收錄到平台的時間戳記進行。
+當記錄被吸收到Experience Platform中時，在吸收時獲得系統時間戳並添加到記錄中。 當`timestampOrdered`被選為合併策略的`attributeMerge`類型時，將根據系統時間戳合併配置檔案。 換言之，合併是根據記錄被收錄到平台的時間戳記進行。
 
 有時候，可能會有使用案例，例如回填資料，或在記錄未依順序擷取時，確保事件的正確順序，而需要提供自訂時間戳記，並讓合併原則遵守自訂時間戳記，而非系統時間戳記。
 
@@ -756,7 +756,7 @@ curl -X DELETE \
 
 >[!NOTE]
 >
->在同一記錄上發送PATCH時，必須確保已填充`xdm:lastUpdatedDate`時間戳。
+>在同一記錄上發送PATCH時，必須確保填入`xdm:lastUpdatedDate`時間戳。
 
 有關使用架構註冊表API處理架構的逐步說明，包括如何向架構添加混合的說明，請訪問[教程，以使用API](../../xdm/tutorials/create-schema-api.md)建立架構。
 
@@ -777,7 +777,3 @@ curl -X DELETE \
   "xdm:lastViewedDate": "2018-01-02T15:52:25+00:00"
  }
 ```
-
-
-
-
