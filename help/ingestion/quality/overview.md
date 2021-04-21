@@ -1,21 +1,21 @@
 ---
-keywords: Experience Platform; home；熱門主題；資料品質；品質；支援的驗證；支援的驗證；
+keywords: Experience Platform;home；熱門主題；資料質量；質量；支援的驗證；支援的驗證；
 solution: Experience Platform
 title: 資料品質
-topic: overview
-description: 以下檔案提供Adobe Experience Platform中批次和串流擷取支援的檢查與驗證行為摘要。
+topic-legacy: overview
+description: 以下檔案摘要說明在Adobe Experience Platform支援的批次和串流擷取檢查與驗證行為。
+exl-id: 7ef40859-235a-4759-9492-c63e5fd80c8e
 translation-type: tm+mt
-source-git-commit: 089a4d517476b614521d1db4718966e3ebb13064
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '317'
-ht-degree: 5%
+ht-degree: 6%
 
 ---
 
+# Adobe Experience Platform的資料質量
 
-# Adobe Experience Platform中的資料品質
-
-Adobe Experience Platform為透過批次或串流擷取上傳的任何資料，提供定義完善的保證，確保其完整性、正確性和一致性。 以下檔案提供[!DNL Experience Platform]中支援的批次和串流擷取檢查與驗證行為的摘要。
+Adobe Experience Platform為透過批次或串流擷取上傳的任何資料提供明確定義的完整性、正確性和一致性保證。 以下檔案提供[!DNL Experience Platform]中支援的批次和串流擷取檢查與驗證行為的摘要。
 
 ## 支援的檢查
 
@@ -54,6 +54,6 @@ Adobe Experience Platform為透過批次或串流擷取上傳的任何資料，�
 | IMS組織 | 確保列出的IMS組織為有效組織。 |
 | 來源名稱 | 確保指定資料源的名稱。 |
 | 資料集 | 確保指定、啟用和未刪除資料集。 |
-| Header | 確保標題已指定且有效。 |
+| 標頭 | 確保標題已指定且有效。 |
 
 有關[!DNL Platform]如何監視和驗證資料的詳細資訊，請參閱[監視資料流文檔](./monitor-data-ingestion.md)。
