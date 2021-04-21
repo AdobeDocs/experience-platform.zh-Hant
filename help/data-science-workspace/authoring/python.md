@@ -1,18 +1,18 @@
 ---
-keywords: Experience Platform;home；熱門主題；資料存取；python sdk；資料存取api;read python;write python
+keywords: Experience Platform；首頁；熱門主題；資料存取；python sdk；資料存取api;read python;write python
 solution: Experience Platform
 title: 在資料科學工作區中使用Python訪問資料
-topic: tutorial
+topic-legacy: tutorial
 type: Tutorial
 description: 以下檔案包含如何在Python中存取資料以用於資料科學工作區的範例。
+exl-id: 75aafd58-634a-4df3-a2f0-9311f93deae4
 translation-type: tm+mt
-source-git-commit: f6cfd691ed772339c888ac34fcbd535360baa116
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '420'
 ht-degree: 0%
 
 ---
-
 
 # 在資料科學工作區中使用Python存取資料
 
@@ -160,4 +160,4 @@ my_df = user_helper.read(path=<path_to_directory>, ref_dataset_id=<ref_dataset_i
 
 ## 後續步驟
 
-Adobe Experience Platform Data Science Workspace提供使用上述程式碼範例來讀取和寫入資料的方式範例。 如果您想要進一步瞭解如何使用Python存取您的資料，請參閱[資料科學工作區Python GitHub Repository](https://github.com/adobe/experience-platform-dsw-reference/tree/master/recipes/python/retail)。
+Adobe Experience Platform資料科學工作區提供方式範例，使用上述程式碼範例來讀取和寫入資料。 如果您想要進一步瞭解如何使用Python存取您的資料，請參閱[資料科學工作區Python GitHub Repository](https://github.com/adobe/experience-platform-dsw-reference/tree/master/recipes/python/retail)。
