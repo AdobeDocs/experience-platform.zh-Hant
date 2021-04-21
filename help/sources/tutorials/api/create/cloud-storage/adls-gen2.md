@@ -1,18 +1,18 @@
 ---
-keywords: Experience Platform; home；熱門主題；Azure Data Lake Storage Gen2;azure資料湖儲存；Azure
+keywords: Experience Platform；首頁；熱門主題；Azure資料湖儲存Gen2;azure資料湖儲存；Azure
 solution: Experience Platform
 title: 使用流式服務API建立Azure資料湖儲存Gen2來源連線
-topic: overview
+topic-legacy: overview
 type: Tutorial
 description: 瞭解如何使用Flow Service API將Adobe Experience Platform連接至Azure Data Lake Storage Gen2。
+exl-id: cad5e2a0-e27c-4130-9ad8-888352c92f04
 translation-type: tm+mt
-source-git-commit: a489ab248793a063295578943ad600d8eacab6a2
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '602'
 ht-degree: 1%
 
 ---
-
 
 # 使用[!DNL Flow Service] API建立[!DNL Azure] Data Lake Storage Gen2源連接
 
@@ -22,7 +22,7 @@ ht-degree: 1%
 
 ## 快速入門
 
-本指南需要有效瞭解Adobe Experience Platform的下列元件：
+本指南需要對Adobe Experience Platform的下列組成部分有切實的瞭解：
 
 * [來源](../../../../home.md): [!DNL Experience Platform] 允許從各種來源接收資料，同時提供使用服務構建、標籤和增強傳入資料的 [!DNL Platform] 能力。
 * [沙盒](../../../../../sandboxes/home.md): [!DNL Experience Platform] 提供虛擬沙盒，可將單一平台實例分割為獨立的虛擬環境，以協助開發和發展數位體驗應用程式。
@@ -58,7 +58,7 @@ ht-degree: 1%
 
 * `x-sandbox-name: {SANDBOX_NAME}`
 
-所有包含裝載(POST、PUT、PATCH)的請求都需要額外的媒體類型標題：
+所有包含裝載(POST、PUT、PATCH)的請求都需要附加的媒體類型標題：
 
 * `Content-Type: application/json`
 
@@ -72,9 +72,9 @@ ht-degree: 1%
 POST /connections
 ```
 
-**請求**
+**要求**
 
-要建立ADLS-Gen2連接，其唯一連接規範ID必須作為POST請求的一部分提供。 ADLS-Gen2的連接規範ID為`0ed90a81-07f4-4586-8190-b40eccef1c5a`。
+要建立ADLS-Gen2連接，必須在POST請求中提供其唯一連接規範ID。 ADLS-Gen2的連接規範ID為`0ed90a81-07f4-4586-8190-b40eccef1c5a`。
 
 ```shell
 curl -X POST \
