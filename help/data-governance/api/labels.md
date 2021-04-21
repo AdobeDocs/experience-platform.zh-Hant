@@ -1,17 +1,17 @@
 ---
-keywords: Experience Platform;home；熱門主題
+keywords: Experience Platform；首頁；熱門主題
 solution: Experience Platform
 title: 標籤API端點
-topic: developer guide
-description: 瞭解如何使用Policy Service API在Experience Platform中管理資料使用標籤。
+topic-legacy: developer guide
+description: 瞭解如何使用Policy Service API管理Experience Platform中的資料使用標籤。
+exl-id: 9a01f65c-01f1-4298-bdcf-b7e00ccfe9f2
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '510'
 ht-degree: 3%
 
 ---
-
 
 # 標籤端點
 
@@ -27,7 +27,7 @@ ht-degree: 3%
 
 ## 檢索標籤清單{#list}
 
-您可以分別對`/labels/core`或`/labels/custom`發出GET請求，以列出所有`core`或`custom`標籤。
+您可以分別向`/labels/core`或`/labels/custom`發出GET請求，以列出所有`core`或`custom`標籤。
 
 **API格式**
 
@@ -36,7 +36,7 @@ GET /labels/core
 GET /labels/custom
 ```
 
-**請求**
+**要求**
 
 下列請求會列出您組織下建立的所有自訂標籤。
 
@@ -109,7 +109,7 @@ curl -X GET \
 
 ## 查找標籤{#look-up}
 
-您可以在GET請求至[!DNL Policy Service] API的路徑中加入該標籤的`name`屬性，以尋找特定標籤。
+您可以在[!DNL Policy Service] API的GET請求路徑中加入該標籤的`name`屬性，以尋找特定標籤。
 
 **API格式**
 
@@ -122,7 +122,7 @@ GET /labels/custom/{LABEL_NAME}
 | --- | --- |
 | `{LABEL_NAME}` | 您要查找的自訂標籤的`name`屬性。 |
 
-**請求**
+**要求**
 
 下列請求會擷取自訂標籤`L2`，如路徑所示。
 
@@ -163,7 +163,7 @@ curl -X GET \
 
 ## 建立或更新自訂標籤{#create-update}
 
-若要建立或更新自訂標籤，您必須對[!DNL Policy Service] API提出PUT要求。
+若要建立或更新自訂標籤，您必須向[!DNL Policy Service] API提出PUT要求。
 
 **API格式**
 
@@ -175,7 +175,7 @@ PUT /labels/custom/{LABEL_NAME}
 | --- | --- |
 | `{LABEL_NAME}` | 自訂標籤的`name`屬性。 如果沒有具有此名稱的自訂標籤，則會建立新標籤。 如果存在，則會更新該標籤。 |
 
-**請求**
+**要求**
 
 下列請求會建立新標籤`L3`，其目的在於說明包含客戶所選付款計畫相關資訊的資料。
 
