@@ -1,17 +1,17 @@
 ---
-keywords: Experience Platform；開發人員指南；端點；Data Science Workspace；熱門主題；模型；sensei機器學習api
+keywords: Experience Platform；開發人員指南；端點；資料科學工作區；熱門主題；模型；sensei機器學習api
 solution: Experience Platform
 title: Models API端點
-topic: Developer guide
+topic-legacy: Developer guide
 description: 模型是機器學習方式的實例，使用歷史資料和配置進行訓練，以針對業務使用案例進行解決。
+exl-id: e66119a9-9552-497c-9b3a-b64eb3b51fcf
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '864'
 ht-degree: 4%
 
 ---
-
 
 # 模型端點
 
@@ -19,7 +19,7 @@ ht-degree: 4%
 
 ## 檢索模型清單
 
-通過對/models執行單個GET請求，可以檢索屬於所有模型的模型詳細資訊清單。 依預設，此清單會自行從最舊建立的模型排序，並將結果限制為25。 您可以選擇通過指定某些查詢參數來篩選結果。 有關可用查詢的清單，請參閱[資產檢索查詢參數](./appendix.md#query)的附錄部分。
+通過對/models執行單一GET請求，可以檢索屬於所有模型的模型詳細資訊清單。 依預設，此清單會自行從最舊建立的模型排序，並將結果限制為25。 您可以選擇通過指定某些查詢參數來篩選結果。 有關可用查詢的清單，請參閱[資產檢索查詢參數](./appendix.md#query)的附錄部分。
 
 **API格式**
 
@@ -27,7 +27,7 @@ ht-degree: 4%
 GET /models
 ```
 
-**請求**
+**要求**
 
 ```shell
 curl -X GET \
@@ -115,7 +115,7 @@ GET /models/?property=experimentRunID=={EXPERIMENT_RUN_ID}
 | `{MODEL_ID}` | 已訓練或已發佈模型的識別碼。 |
 | `{EXPERIMENT_RUN_ID}` | 實驗的識別碼會執行。 |
 
-**請求**
+**要求**
 
 下列請求包含查詢，並擷取共用相同enperityRunID({ENPERITY_RUN_ID})的已訓練模型清單。
 
@@ -173,7 +173,7 @@ curl -X GET \
 POST /models
 ```
 
-**請求**
+**要求**
 
 以下POST包含所需的`modelArtifact`檔案和`model`屬性值。 有關這些值的詳細資訊，請參見下表。
 
@@ -223,7 +223,7 @@ curl -X POST \
 
 >[!TIP]
 >
->為確保此PUT請求成功，建議您首先執行GET請求以按ID檢索模型。 然後，修改並更新傳回的JSON物件，並套用已修改的JSON物件的完整內容作為PUT要求的裝載。
+>為確保此PUT請求成功，建議您首先執行GET請求以按ID檢索模型。 然後，修改並更新傳回的JSON物件，並套用已修改的JSON物件作為PUT要求的裝載。
 
 **API格式**
 
@@ -235,7 +235,7 @@ PUT /models/{MODEL_ID}
 | --- | --- |
 | `{MODEL_ID}` | 已訓練或已發佈模型的識別碼。 |
 
-**請求**
+**要求**
 
 ```shell
 curl -X PUT \
@@ -294,7 +294,7 @@ DELETE /models/{MODEL_ID}
 | --- | --- |
 | `{MODEL_ID}` | 已訓練或已發佈模型的識別碼。 |
 
-**請求**
+**要求**
 
 ```shell
 curl -X DELETE \
@@ -331,7 +331,7 @@ POST /models/{MODEL_ID}/transcodings
 | --- | --- |
 | `{MODEL_ID}` | 已訓練或已發佈模型的識別碼。 |
 
-**請求**
+**要求**
 
 ```shell
 curl -X POST \
@@ -374,7 +374,7 @@ curl -X POST \
 
 ## 檢索模型{#retrieve-transcoded-model-list}的轉換清單
 
-通過對`{MODEL_ID}`執行GET請求，可以檢索已對模型執行的轉換的清單。
+通過對`{MODEL_ID}`執行GET請求，可以檢索已對模型執行的轉換清單。
 
 **API格式**
 
@@ -386,7 +386,7 @@ GET /models/{MODEL_ID}/transcodings
 | --- | --- |
 | `{MODEL_ID}` | 已訓練或已發佈模型的識別碼。 |
 
-**請求**
+**要求**
 
 ```shell
 curl -X GET \
@@ -447,7 +447,7 @@ GET /models/{MODEL_ID}/transcodings/{TRANSCODING_ID}
 | `{MODEL_ID}` | 已訓練或已發佈的模型的唯一識別碼。 |
 | `{TRANSCODING_ID}` | 轉碼模型的唯一識別碼。 |
 
-**請求**
+**要求**
 
 ```shell
 curl -X GET \
@@ -474,5 +474,3 @@ curl -X GET \
     "deprecated": false
 }
 ```
-
-
