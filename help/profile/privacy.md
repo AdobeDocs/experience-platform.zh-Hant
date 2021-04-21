@@ -1,22 +1,22 @@
 ---
-keywords: Experience Platform;home；熱門主題
+keywords: Experience Platform；首頁；熱門主題
 solution: Experience Platform
 title: 即時客戶個人檔案中的隱私權要求處理
-topic: overview
+topic-legacy: overview
 type: Documentation
-description: Adobe Experience Platform隱私權服務會處理客戶存取、選擇退出銷售或刪除其個人資料的要求，並符合許多隱私權法規的規定。 本檔案涵蓋處理即時客戶個人檔案隱私權要求的相關基本概念。
+description: Adobe Experience Platform Privacy Service公司處理客戶存取、選擇退出銷售或刪除其個人資料的要求，這些資料由許多隱私權法規所界定。 本檔案涵蓋處理即時客戶個人檔案隱私權要求的相關基本概念。
+exl-id: fba21a2e-aaf7-4aae-bb3c-5bd024472214
 translation-type: tm+mt
-source-git-commit: e6ecc5dac1d09c7906aa7c7e01139aa194ed662b
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '1102'
+source-wordcount: '1091'
 ht-degree: 0%
 
 ---
 
-
 # [!DNL Real-time Customer Profile]中的隱私權要求處理
 
-Adobe Experience Platform [!DNL Privacy Service]會處理客戶存取、選擇退出銷售或刪除其個人資料的要求，如一般資料保護規則(GDPR)和[!DNL California Consumer Privacy Act](CCPA)等隱私權法規所規定。
+Adobe Experience Platform[!DNL Privacy Service]處理客戶存取、選擇退出銷售或刪除其個人資料的要求，如一般資料保護規則(GDPR)和[!DNL California Consumer Privacy Act](CCPA)等隱私權法規所規定。
 
 本檔案涵蓋處理[!DNL Real-time Customer Profile]隱私權要求的相關基本概念。
 
@@ -30,7 +30,7 @@ Adobe Experience Platform [!DNL Privacy Service]會處理客戶存取、選擇�
 
 ## 瞭解身份名稱空間{#namespaces}
 
-Adobe Experience Platform [!DNL Identity Service]跨系統和裝置橋接客戶身分資料。 [!DNL Identity Service] 使用 **身** 分名稱，將身分值與其來源系統關聯，以提供其上下文。命名空間可以代表一般概念，例如電子郵件地址（「電子郵件」），或將身分識別與特定應用程式(例如Adobe Advertising Cloud ID(「AdCloud」)或Adobe Target ID(「TNTID」))建立關聯。
+Adobe Experience Platform[!DNL Identity Service]跨系統和設備橋接客戶身份資料。 [!DNL Identity Service] 使用 **身** 分名稱，將身分值與其來源系統關聯，以提供其上下文。命名空間可以代表一般概念，例如電子郵件地址（「電子郵件」），或將識別與特定應用程式(例如Adobe Advertising CloudID(「AdCloud」)或Adobe TargetID(「TNTID」))建立關聯。
 
 Identity Service會維護全域定義（標準）和使用者定義（自訂）身分名稱空間的儲存。 標準名稱空間適用於所有組織（例如「電子郵件」和「ECID」），而您的組織也可以建立自訂名稱空間以符合其特定需求。
 
@@ -38,11 +38,11 @@ Identity Service會維護全域定義（標準）和使用者定義（自訂）�
 
 ## 提交請求{#submit}
 
-以下各節概述如何使用[!DNL Privacy Service] API或UI對[!DNL Real-time Customer Profile]提出隱私權要求。 在閱讀這些章節之前，強烈建議您檢閱[隱私權服務API](../privacy-service/api/getting-started.md)或[隱私權服務UI](../privacy-service/ui/overview.md)檔案，以取得如何提交隱私權工作的完整步驟，包括如何在請求負載中正確格式化已提交的使用者身分資料。
+以下各節概述如何使用[!DNL Privacy Service] API或UI對[!DNL Real-time Customer Profile]提出隱私權要求。 在閱讀這些章節之前，強烈建議您檢閱[Privacy ServiceAPI](../privacy-service/api/getting-started.md)或[Privacy ServiceUI](../privacy-service/ui/overview.md)檔案，以取得如何提交隱私權工作的完整步驟，包括如何在請求負載中正確格式化提交的使用者身分資料。
 
 >[!IMPORTANT]
 >
->隱私權服務只能使用不執行身分聯繫的合併原則處理[!DNL Profile]資料。 如果您使用UI來確認是否正在處理您的隱私權要求，請確定您使用的原則是「[!DNL None]」作為其[!UICONTROL ID拼接]類型。 換言之，您無法使用將[!UICONTROL ID supting]設為&quot;[!UICONTROL 私用圖表]&quot;的合併原則。
+>Privacy Service只能使用不執行身分拼接的合併策略處理[!DNL Profile]資料。 如果您使用UI來確認是否正在處理您的隱私權要求，請確定您使用的原則為&quot;[!DNL None]&quot;，作為其[!UICONTROL ID stitching]類型。 換言之，您無法使用將[!UICONTROL ID stitching]設為&quot;[!UICONTROL Private graph]&quot;的合併原則。
 >
 >![](./images/privacy/no-id-stitch.png)
 >
@@ -50,7 +50,7 @@ Identity Service會維護全域定義（標準）和使用者定義（自訂）�
 
 ### 使用API
 
-在API中建立工作請求時，`userIDs`中提供的任何ID都必須使用特定的`namespace`和`type`。 必須為`namespace`值提供由[!DNL Identity Service]識別名稱空間](#namespaces)的有效值，而`type`必須為`standard`或`unregistered`（對於標準名稱空間和自訂名稱空間，分別為）。[
+在API中建立工作請求時，`userIDs`中提供的任何ID都必須使用特定的`namespace`和`type`。 必須為`namespace`值提供由[!DNL Identity Service]識別名稱空間](#namespaces)的有效值，而`type`必須為`standard`或`unregistered`（對於標準名稱空間和自訂名稱空間分別）。[
 
 >[!NOTE]
 >
@@ -103,7 +103,7 @@ curl -X POST \
 
 ### 使用UI
 
-在UI中建立作業請求時，請務必在&#x200B;**[!UICONTROL 產品]**&#x200B;下選擇&#x200B;**[!UICONTROL AEP Data Lake]**&#x200B;和／或&#x200B;**[!UICONTROL Profile]**，以便分別處理儲存在[!DNL Data Lake]或[!DNL Real-time Customer Profile]中的資料的作業。
+在UI中建立作業請求時，請務必在&#x200B;**[!UICONTROL Products]**&#x200B;下選擇&#x200B;**[!UICONTROL AEP Data Lake]**&#x200B;和／或&#x200B;**[!UICONTROL Profile]**，以便分別處理儲存在[!DNL Data Lake]或[!DNL Real-time Customer Profile]中的資料的作業。
 
 <img src="images/privacy/product-value.png" width="450"><br>
 
