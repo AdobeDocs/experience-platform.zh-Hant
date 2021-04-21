@@ -2,17 +2,17 @@
 keywords: Experience Platform;home；常用主題；PostgreSQL;postgresql;PSQL;psql
 solution: Experience Platform
 title: 使用流服務API建立PostgreSQL源連接
-topic: overview
+topic-legacy: overview
 type: Tutorial
 description: 瞭解如何使用Flow Service API將Adobe Experience Platform連接至PostgreSQL。
+exl-id: 5225368a-08c1-421d-aec2-d50ad09ae454
 translation-type: tm+mt
-source-git-commit: 8851e11e956b393e56714d4d48870b7f68947c18
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '562'
+source-wordcount: '560'
 ht-degree: 2%
 
 ---
-
 
 # 使用[!DNL Flow Service] API建立[!DNL PostgreSQL]來源連線
 
@@ -70,7 +70,7 @@ ht-degree: 2%
 POST /connections
 ```
 
-**請求**
+**要求**
 
 要建立PSQL連接，必須在POST請求中提供其唯一連接規範ID。 PSQL的連接規範ID為`74a1c565-4e59-48d7-9d67-7c03b8a13137`。
 
