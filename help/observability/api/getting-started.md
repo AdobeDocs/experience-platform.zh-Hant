@@ -1,17 +1,17 @@
 ---
-keywords: Experience Platform;home；熱門主題；日期範圍
+keywords: Experience Platform；首頁；熱門主題；日期範圍
 solution: Experience Platform
 title: 可觀性洞察API快速入門
-topic: developer guide
+topic-legacy: developer guide
 description: 可觀測性洞察API可讓您擷取各種Adobe Experience Platform功能的量度資料。 本檔案提供您在嘗試呼叫Oncerbility Insights API之前，需要瞭解的核心概念。
+exl-id: 3b120bd6-155d-467e-b98e-05478f8a4cc5
 translation-type: tm+mt
-source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '253'
 ht-degree: 0%
 
 ---
-
 
 # [!DNL Observability Insights] API快速入門
 
@@ -19,7 +19,7 @@ ht-degree: 0%
 
 ## 讀取範例API呼叫
 
-[!DNL Observability Insights] API檔案提供範例API呼叫，以示範如何格式化您的請求。 這些包括路徑、必要標題和正確格式化的請求負載。 也提供API回應中傳回的範例JSON。 如需範例API呼叫檔案中使用之慣例的詳細資訊，請參閱[Experience Platform疑難排解指南](../../landing/troubleshooting.md)中有關如何讀取範例API呼叫的章節。
+[!DNL Observability Insights] API檔案提供範例API呼叫，以示範如何格式化您的請求。 這些包括路徑、必要標題和正確格式化的請求負載。 也提供API回應中傳回的範例JSON。 如需範例API呼叫檔案中所用慣例的詳細資訊，請參閱[Experience Platform疑難排解指南](../../landing/troubleshooting.md)中有關如何讀取範例API呼叫的章節。
 
 ## 必要的標題
 
