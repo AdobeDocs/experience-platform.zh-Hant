@@ -3,15 +3,15 @@ keywords: Experience Platform;home；熱門主題；api;API;XDM;XDM系統；體�
 solution: Experience Platform
 title: 審核日誌API端點
 description: 方案註冊表API中的/auditlog端點允許您檢索對現有XDM資源所做更改的時間順序清單。
-topic: developer guide
+topic-legacy: developer guide
+exl-id: 8d33ae7c-0aa4-4f38-a183-a2ff1801e291
 translation-type: tm+mt
-source-git-commit: 0727ffa0c72bcb6a85de1a13215b691b97889b70
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '398'
+source-wordcount: '396'
 ht-degree: 2%
 
 ---
-
 
 # 審計日誌端點
 
@@ -37,7 +37,7 @@ GET /rpc/auditlog/{RESOURCE_ID}
 | --- | --- |
 | `{RESOURCE_ID}` | 要檢索其審計日誌的資源的`meta:altId`或URL編碼`$id`。 |
 
-**請求**
+**要求**
 
 下列請求會擷取`Restaurant`混音的稽核記錄檔。
 
