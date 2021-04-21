@@ -1,18 +1,18 @@
 ---
-keywords: Experience Platform; home；熱門主題；資料存取；spark sdk；資料存取api;spark方式；讀取spark；寫入spark
+keywords: Experience Platform；首頁；熱門主題；資料存取； spark sdk；資料存取api; spark配方；讀取spark；寫入spark
 solution: Experience Platform
 title: 在資料科學工作區中使用Spark訪問資料
-topic: tutorial
+topic-legacy: tutorial
 type: Tutorial
 description: 以下檔案包含如何使用Spark存取資料以用於資料科學工作區的範例。
+exl-id: 9bffb52d-1c16-4899-b455-ce570d76d3b4
 translation-type: tm+mt
-source-git-commit: f6cfd691ed772339c888ac34fcbd535360baa116
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '450'
 ht-degree: 0%
 
 ---
-
 
 # 在資料科學工作區中使用Spark存取資料
 
@@ -151,7 +151,7 @@ df = df.limit(100)
 
 ## 寫入資料集
 
-使用`configProperties`對應，您可以使用`QSOption`在Experience Platform中寫入資料集。
+使用`configProperties`映射，可以使用`QSOption`在Experience Platform中寫入資料集。
 
 ```scala
 val userToken: String = sparkSession.sparkContext.getConf.get("ML_FRAMEWORK_IMS_TOKEN", "").toString
@@ -171,4 +171,4 @@ val sandboxName: String = sparkSession.sparkContext.getConf.get("sandboxName", "
 
 ## 後續步驟
 
-Adobe Experience Platform Data Science Workspace提供Scala(Spark)配方範例，使用上述程式碼範例來讀取和寫入資料。 如果您想要進一步瞭解如何使用Spark存取您的資料，請參閱[資料科學工作區Scala GitHub Repository](https://github.com/adobe/experience-platform-dsw-reference/tree/master/recipes/scala)。
+Adobe Experience Platform資料科學工作區提供Scala(Spark)方式範例，使用上述程式碼範例來讀取和寫入資料。 如果您想要進一步瞭解如何使用Spark存取您的資料，請參閱[資料科學工作區Scala GitHub Repository](https://github.com/adobe/experience-platform-dsw-reference/tree/master/recipes/scala)。
