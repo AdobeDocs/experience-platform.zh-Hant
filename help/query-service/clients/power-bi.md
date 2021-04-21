@@ -1,29 +1,29 @@
 ---
-keywords: Experience Platform; home；熱門主題；查詢服務；查詢服務； Power BI; power bi；連接查詢服務；
+keywords: Experience Platform; home；熱門主題；查詢服務；查詢服務；Power BI;power bi；連接到查詢服務；
 solution: Experience Platform
 title: 將Power BI連接到查詢服務
-topic: connect
-description: 本檔案將逐步說明如何將Power BI與Adobe Experience Platform Query Service連接。
+topic-legacy: connect
+description: 本檔案將逐步介紹如何連接Power BI與Adobe Experience Platform查詢服務。
+exl-id: 8fcd3056-aac7-4226-a354-ed7fb8fe9ad7
 translation-type: tm+mt
-source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '466'
+source-wordcount: '464'
 ht-degree: 0%
 
 ---
 
-
 # 將[!DNL Power BI]連接到查詢服務(PC)
 
-本檔案涵蓋將Power BI與Adobe Experience Platform Query Service連接的步驟。
+本檔案涵蓋連接Adobe Experience Platform查詢服務的Power BI步驟。
 
 >[!NOTE]
 >
 > 本指南假定您已經擁有[!DNL Power BI]的訪問權限，並熟悉如何導航其介面。 有關[!DNL Power BI]的更多資訊，請參閱[official [!DNL Power BI] 文檔](https://docs.looker.com/)。
 >
-> 此外，Power BI僅&#x200B;****&#x200B;可用於Windows設備。
+> 此外，Power BI在Windows裝置上僅&#x200B;**可用。**
 
-在安裝Power BI後，您需要安裝`Npgsql`，這是用於PostgreSQL的。NET驅動程式包。 有關Npgsql的詳細資訊，請參閱[Npgsql文檔](https://www.npgsql.org/doc/index.html)。
+安裝Power BI後，您需要安裝`Npgsql`，這是用於PostgreSQL的。NET驅動程式包。 有關Npgsql的詳細資訊，請參閱[Npgsql文檔](https://www.npgsql.org/doc/index.html)。
 
 >[!IMPORTANT]
 >
@@ -43,7 +43,7 @@ ht-degree: 0%
 
 ![](../images/clients/power-bi/get-data.png)
 
-您現在可以輸入伺服器和資料庫的值。 有關查找資料庫名稱、主機、埠和登錄憑據的詳細資訊，請訪問Platform](https://platform.adobe.com/query/configuration)上的[ credentials頁。 要查找憑據，請登錄到[!DNL Platform]，然後選擇&#x200B;**[!UICONTROL 查詢]**，然後選擇&#x200B;**[!UICONTROL 憑據]**。
+您現在可以輸入伺服器和資料庫的值。 有關查找資料庫名稱、主機、埠和登錄憑據的詳細資訊，請訪問Platform](https://platform.adobe.com/query/configuration)上的[ credentials頁。 若要尋找您的認證，請登入[!DNL Platform]，然後選取&#x200B;**[!UICONTROL Queries]**，後面接著&#x200B;**[!UICONTROL Credentials]**。
 
 **[!DNL Server]** 是在連接詳細資訊下找到的主機。對於生產環境，請將埠`:80`添加到主機字串的末尾。 **[!DNL Database]** 可以是「all」或資料集表格名稱。
 
@@ -63,7 +63,7 @@ ht-degree: 0%
 
 ![](../images/clients/power-bi/preview-table.png)
 
-此表現在已導入Power BI。
+表格現在會匯入到Power BI。
 
 ![](../images/clients/power-bi/import-table.png)
 
