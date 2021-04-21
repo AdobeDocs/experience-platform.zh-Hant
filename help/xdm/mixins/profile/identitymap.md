@@ -1,25 +1,25 @@
 ---
-keywords: Experience Platform;home；熱門主題；架構；架構；XDM；個人配置檔案；欄位；架構；Schemas;identityMap;IdentityMap;Schema設計；Map;Union架構；union
+keywords: Experience Platform;home；熱門主題；模式；模式；XDM；個人配置檔案；欄位；模式；模式；標識圖；標識圖；標識圖；模式設計；映射；聯合模式；聯合模式
 solution: Experience Platform
 title: IdentityMap Mixin
-topic: overview
+topic-legacy: overview
 description: 本文檔概述了XDM Individual Profile類。
+exl-id: c9928e85-ef1e-4739-ba1d-80505a9e60c3
 translation-type: tm+mt
-source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '138'
+source-wordcount: '136'
 ht-degree: 0%
 
 ---
 
-
-# [!UICONTROL IdentityMapmixin] 
+# [!UICONTROL IdentityMap] mixin
 
 >[!NOTE]
 >
 >幾個混音的名字已經改變。 如需詳細資訊，請參閱[mixin name updates](../name-updates.md)上的檔案。
 
- IdentityMap是類別的標準混 [[!DNL XDM Individual Profile] 合檔](../../classes/individual-profile.md)。mixin提供單一映射欄位，其中包含由namespace鍵入的一組使用者身分識別。
+[!UICONTROL IdentityMap] 是班級的標準混音 [[!DNL XDM Individual Profile] 詞](../../classes/individual-profile.md)。mixin提供單一映射欄位，其中包含由namespace鍵入的一組使用者身分識別。
 
 >[!WARNING]
 >
