@@ -6,9 +6,9 @@ topic-legacy: overview
 description: Adobe Experience Platform允許從外部來源接收資料，同時提供使用平台服務構建、標籤和增強傳入資料的能力。 您可以從多種來源收錄資料，例如Adobe應用程式、雲端儲存空間、資料庫等。
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
 translation-type: tm+mt
-source-git-commit: 412d7c247353bfd30e134656140ba13f55d2ca07
+source-git-commit: 8edcb3697337edd0043f26553b92c31e52d3c87c
 workflow-type: tm+mt
-source-wordcount: '922'
+source-wordcount: '945'
 ht-degree: 0%
 
 ---
@@ -115,6 +115,13 @@ Experience Platform支援從協力廠商行銷自動化系統擷取資料。 有
 Experience Platform支援從第三方付款系統擷取資料。 有關特定來源連接器的詳細資訊，請參閱下列相關檔案：
 
 - [[!DNL PayPal] 連接器](connectors/payments/paypal.md)
+
+### 串流
+
+Experience Platform支援從串流來源擷取資料。 有關特定來源連接器的詳細資訊，請參閱下列相關檔案：
+
+- [[!DNL HTTP API]](connectors/streaming/http.md)
+
 
 ### 通訊協定
 
