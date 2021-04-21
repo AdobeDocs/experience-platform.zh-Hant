@@ -2,12 +2,12 @@
 keywords: Experience Platform；首頁；熱門主題；Marketo Engage；行銷人員；行銷人員
 solution: Experience Platform
 title: 驗證您的Marketo源介面
-topic: 概述
+topic-legacy: overview
 description: 本檔案提供如何產生您的Marketo驗證認證的資訊。
 translation-type: tm+mt
-source-git-commit: 2563b413ec35cb4c5f05a54bce6f7271917e51f3
+source-git-commit: f12baaa9d4b37f1101792a4ae479b5a62893eb68
 workflow-type: tm+mt
-source-wordcount: '620'
+source-wordcount: '619'
 ht-degree: 0%
 
 ---
