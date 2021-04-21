@@ -2,17 +2,17 @@
 keywords: Experience Platform;home；熱門主題；MySQL;mysql
 solution: Experience Platform
 title: 使用流服務API建立MySQL源連接
-topic: overview
+topic-legacy: overview
 type: Tutorial
 description: 瞭解如何使用Flow Service API將Adobe Experience Platform連接至MySQL。
+exl-id: 273da568-84ed-4a3d-bfea-0f5b33f1551a
 translation-type: tm+mt
-source-git-commit: 8851e11e956b393e56714d4d48870b7f68947c18
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '565'
+source-wordcount: '563'
 ht-degree: 2%
 
 ---
-
 
 # 使用[!DNL Flow Service] API建立MySQL源連接
 
@@ -70,7 +70,7 @@ ht-degree: 2%
 POST /connections
 ```
 
-**請求**
+**要求**
 
 要建立MySQL連接，必須在POST請求中提供其唯一連接規範ID。 MySQL的連接規範ID為`26d738e0-8963-47ea-aadf-c60de735468a`。
 
