@@ -1,21 +1,21 @@
 ---
-keywords: Experience Platform;home；熱門主題；模式；模式；XDM;fields；模式；Schemas;identity;datatype；資料類型；
+keywords: Experience Platform;home；熱門主題；模式；模式；XDM;fields；模式；標識；資料類型；資料類型；
 solution: Experience Platform
 title: 身分資料類型
-topic: overview
+topic-legacy: overview
 description: 本文檔概述了Identity XDM資料類型。
+exl-id: fb02b6b4-255b-442f-895c-600022231a1c
 translation-type: tm+mt
-source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '283'
+source-wordcount: '280'
 ht-degree: 3%
 
 ---
 
+# [!UICONTROL Identity] 資料類型
 
-#  Identitydata type
-
-[!UICONTROL Identity] 是標準的XDM資料類型，用來清楚區分與數位體驗互動的使用者。身分由身分提供者建立，身分提供者本身在`namespace`屬性中參考。 在每個`namespace`中，身分是唯一的。
+[!UICONTROL Identity] 是標準的XDM資料類型，用來清楚區分與數位體驗互動的人。身分由身分提供者建立，身分提供者本身在`namespace`屬性中參考。 在每個`namespace`中，身分是唯一的。
 
 <img src="../images/data-types/identity.png" width="550" /><br />
 
