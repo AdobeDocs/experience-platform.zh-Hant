@@ -2,24 +2,24 @@
 keywords: Experience Platform;home；熱門主題；enable dataset;Dataset;dataset
 solution: Experience Platform
 title: 資料集UI指南
-topic: datasets
-description: 瞭解如何在Adobe Experience Platform使用者介面中處理資料集時執行常見動作。
+topic-legacy: datasets
+description: 瞭解如何在Adobe Experience Platform用戶介面中使用資料集時執行常見操作。
+exl-id: f0d59d4f-4ebd-42cb-bbc3-84f38c1bf973
 translation-type: tm+mt
-source-git-commit: fc493a207e305887e798238ba6883f4934c5cba5
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '1141'
+source-wordcount: '1083'
 ht-degree: 0%
 
 ---
 
-
 # 資料集UI指南
 
-本使用指南提供在Adobe Experience Platform使用者介面中使用資料集時執行常見動作的指示。
+本使用手冊提供在Adobe Experience Platform用戶介面中使用資料集時執行常見操作的說明。
 
 ## 快速入門
 
-本使用指南需要有效瞭解Adobe Experience Platform的下列元件：
+本使用手冊需要對Adobe Experience Platform的下列元件有正確的理解：
 
 * [資料集](overview.md):中用於資料持久性的儲存和管理結構 [!DNL Experience Platform]。
 * [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md):組織客戶體驗資 [!DNL Experience Platform] 料的標準化架構。
@@ -30,18 +30,18 @@ ht-degree: 0%
 
 ## 檢視資料集
 
-在[!DNL Experience Platform] UI中，按一下左側導覽中的&#x200B;**[!UICONTROL Dataces]**，以開啟&#x200B;**[!UICONTROL Dataces]**&#x200B;控制面板。 控制面板會列出您組織的所有可用資料集。 會針對每個列出的資料集顯示詳細資訊，包括其名稱、資料集所遵守的架構，以及最近擷取執行的狀態。
+在[!DNL Experience Platform] UI中，按一下左側導覽中的&#x200B;**[!UICONTROL Datasets]**&#x200B;以開啟&#x200B;**[!UICONTROL Datasets]**&#x200B;控制面板。 控制面板會列出您組織的所有可用資料集。 會針對每個列出的資料集顯示詳細資訊，包括其名稱、資料集所遵守的架構，以及最近擷取執行的狀態。
 
 ![](../images/datasets/user-guide/browse_datasets.png)
 
-按一下資料集的名稱以存取其&#x200B;**[!UICONTROL 資料集活動]**&#x200B;畫面，並查看您選取之資料集的詳細資料。 該活動頁籤包括圖形，該圖形可視化正在消耗的消息速率以及成功和失敗批的清單。
+按一下資料集的名稱以存取其&#x200B;**[!UICONTROL Dataset activity]**&#x200B;畫面，並查看您選取之資料集的詳細資訊。 該活動頁籤包括圖形，該圖形可視化正在消耗的消息速率以及成功和失敗批的清單。
 
 ![](../images/datasets/user-guide/dataset_activity_1.png)
 ![](../images/datasets/user-guide/dataset_activity_2.png)
 
 ## 預覽資料集
 
-在&#x200B;**[!UICONTROL Dataset activity]**&#x200B;畫面中，按一下畫面右上角的&#x200B;**[!UICONTROL Preview dataset]**，以預覽最多100列資料。 如果資料集為空，預覽連結將會停用，而會指出預覽不可用。
+在&#x200B;**[!UICONTROL Dataset activity]**&#x200B;畫面中，按一下畫面右上角的&#x200B;**[!UICONTROL Preview dataset]**&#x200B;以預覽最多100列資料。 如果資料集為空，預覽連結將會停用，而會指出預覽不可用。
 
 ![](../images/datasets/user-guide/click_to_preview.png)
 
@@ -56,7 +56,7 @@ ht-degree: 0%
 
 ## 建立資料集{#create}
 
-若要建立新資料集，請先按一下&#x200B;**[!UICONTROL 資料集]**&#x200B;控制面板中的&#x200B;**[!UICONTROL 建立資料集]**。
+若要建立新資料集，請先按一下&#x200B;**[!UICONTROL Datasets]**&#x200B;控制面板中的&#x200B;**[!UICONTROL Create dataset]**。
 
 ![](../images/datasets/user-guide/click_to_create.png)
 
@@ -67,11 +67,11 @@ ht-degree: 0%
 
 ### 使用現有模式{#schema}建立資料集
 
-在&#x200B;**[!UICONTROL 建立資料集]**&#x200B;畫面中，按一下&#x200B;**[!UICONTROL 從架構建立資料集]**&#x200B;以建立新的空資料集。
+在&#x200B;**[!UICONTROL Create dataset]**&#x200B;畫面中，按一下&#x200B;**[!UICONTROL Create dataset from schema]**&#x200B;以建立新的空資料集。
 
 ![](../images/datasets/user-guide/create_dataset_schema.png)
 
-將顯示&#x200B;**[!UICONTROL 選擇方案]**&#x200B;步驟。 在按一下&#x200B;**[!UICONTROL Next]**&#x200B;之前，瀏覽模式清單並選擇資料集將遵循的模式。
+出現&#x200B;**[!UICONTROL Select schema]**&#x200B;步驟。 在按一下&#x200B;**[!UICONTROL Next]**&#x200B;之前，瀏覽模式清單並選擇資料集將遵循的模式。
 
 ![](../images/datasets/user-guide/select_schema.png)
 
@@ -81,15 +81,15 @@ ht-degree: 0%
 
 ### 使用CSV檔案{#csv}建立資料集
 
-當使用CSV檔案建立資料集時，會建立臨機模式，以提供資料集符合所提供CSV檔案的結構。 在&#x200B;**[!UICONTROL 建立資料集]**&#x200B;畫面中，按一下「從CSV檔案建立資料集」方塊。****
+當使用CSV檔案建立資料集時，會建立臨機模式，以提供資料集符合所提供CSV檔案的結構。 在&#x200B;**[!UICONTROL Create dataset]**&#x200B;畫面中，按一下說明&#x200B;**[!UICONTROL Create dataset from CSV file]**&#x200B;的方塊。
 
 ![](../images/datasets/user-guide/create_dataset_csv.png)
 
-出現&#x200B;**[!UICONTROL Configure]**&#x200B;步驟。 為資料集提供名稱和選擇性說明，然後按一下「下一步」。****
+出現&#x200B;**[!UICONTROL Configure]**&#x200B;步驟。 為資料集提供名稱和選用說明，然後按一下&#x200B;**[!UICONTROL Next]**。
 
 ![](../images/datasets/user-guide/configure_dataset_csv.png)
 
-將顯示&#x200B;**[!UICONTROL 添加資料]**&#x200B;步驟。 將CSV檔案拖放至畫面中央，或按一下「瀏覽」以瀏覽您的檔案目錄。 ****&#x200B;該檔案最大可以有10GB的大小。 上傳CSV檔案後，按一下「儲存」以建立資料集。****
+出現&#x200B;**[!UICONTROL Add data]**&#x200B;步驟。 將CSV檔案拖放至畫面中央，或按一下&#x200B;**[!UICONTROL Browse]**&#x200B;來瀏覽檔案目錄，即可上傳該檔案。 該檔案最大可以有10GB的大小。 上傳CSV檔案後，按一下&#x200B;**[!UICONTROL Save]**&#x200B;以建立資料集。
 
 >[!NOTE]
 >
@@ -120,11 +120,11 @@ ht-degree: 0%
 
 ## 刪除資料集
 
-您可以先存取其&#x200B;**[!UICONTROL Dataset活動]**&#x200B;畫面，以刪除資料集。 然後，按一下「刪除資料集&#x200B;**[!UICONTROL 」以刪除資料集。]**
+您可以先存取資料集的&#x200B;**[!UICONTROL Dataset activity]**&#x200B;畫面，以刪除資料集。 然後，按一下&#x200B;**[!UICONTROL Delete dataset]**&#x200B;將其刪除。
 
 >[!NOTE]
 >
->Adobe應用程式和服務（例如Adobe Analytics、Adobe Audience Manager或[!DNL Offer Decisioning]）所建立和使用的資料集無法刪除。
+>無法刪除由Adobe應用程式和服務(如Adobe Analytics、Adobe Audience Manager或[!DNL Offer Decisioning])建立和使用的資料集。
 
 ![](../images/datasets/user-guide/delete_dataset.png)
 
@@ -140,15 +140,15 @@ ht-degree: 0%
 
 ## 監控資料擷取
 
-在[!DNL Experience Platform] UI中，按一下左側導航中的&#x200B;**[!UICONTROL 監視]**。 **[!UICONTROL 監控]**&#x200B;控制面板可讓您檢視來自批次或串流擷取的傳入資料狀態。 要查看單個批的狀態，請按一下&#x200B;**[!UICONTROL 批端到端]**&#x200B;或&#x200B;**[!UICONTROL 流端到端]**。 控制面板會列出所有批次或串流擷取執行，包括成功、失敗或仍在進行中的執行。 每個清單都會提供批次的詳細資訊，包括批次ID、目標資料集的名稱，以及所擷取的記錄數。 如果[!DNL Profile]啟用目標資料集，則也會顯示所擷取的身分和描述檔記錄數。
+在[!DNL Experience Platform] UI中，按一下左側導覽中的&#x200B;**[!UICONTROL Monitoring]**。 **[!UICONTROL Monitoring]**&#x200B;控制面板可讓您檢視來自批次或串流擷取的傳入資料狀態。 要查看單個批的狀態，請按一下&#x200B;**[!UICONTROL Batch end-to-end]**&#x200B;或&#x200B;**[!UICONTROL Streaming end-to-end]**。 控制面板會列出所有批次或串流擷取執行，包括成功、失敗或仍在進行中的執行。 每個清單都會提供批次的詳細資訊，包括批次ID、目標資料集的名稱，以及所擷取的記錄數。 如果[!DNL Profile]啟用目標資料集，則也會顯示所擷取的身分和描述檔記錄數。
 
 ![](../images/datasets/user-guide/batch_listing.png)
 
-您可以按一下個別的&#x200B;**[!UICONTROL 批次ID]**&#x200B;以存取&#x200B;**[!UICONTROL 批次概述]**&#x200B;控制面板，並查看批次的詳細資訊，包括批次無法收錄的錯誤記錄。
+您可以按一下個別的&#x200B;**[!UICONTROL Batch ID]**&#x200B;來存取&#x200B;**[!UICONTROL Batch overview]**&#x200B;控制面板，並查看批次的詳細資訊，包括批次無法收錄的錯誤記錄。
 
 ![](../images/datasets/user-guide/batch_overview.png)
 
-如果要刪除批，可按一下儀表板右上角附近的&#x200B;**[!UICONTROL 刪除批]**&#x200B;來執行此操作。 這麼做也會從批次原本擷取到的資料集中移除其記錄。
+如果要刪除批，可按一下儀表板右上角附近的&#x200B;**[!UICONTROL Delete batch]**&#x200B;進行刪除。 這麼做也會從批次原本擷取到的資料集中移除其記錄。
 
 ![](../images/datasets/user-guide/delete_batch.png)
 
