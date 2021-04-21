@@ -2,13 +2,13 @@
 keywords: Experience Platform；首頁；熱門主題；來源；擷取；疑難排解；來源疑難排解；來源常見問答；來源連接器；來源連接器；來源連接器；來源連接器常見問題；來源連接器疑難排解；
 solution: Experience Platform
 title: 來源疑難排解
-topic: troubleshooting
+topic-legacy: troubleshooting
 description: 本檔案提供有關Adobe Experience Platform消息來源的常見問題解答。
 exl-id: 94875121-7d4d-4eb2-8760-aa795933dd7e
 translation-type: tm+mt
-source-git-commit: 827a593c046530edba701edf26d9a47918cfd8f8
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '663'
+source-wordcount: '662'
 ht-degree: 0%
 
 ---
