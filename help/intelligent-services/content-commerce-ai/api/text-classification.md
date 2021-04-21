@@ -2,16 +2,16 @@
 keywords: 文本分類；文本分類
 solution: Experience Platform, Intelligent Services
 title: 內容與商務AI API中的文字分類
-topic: Developer guide
+topic-legacy: Developer guide
 description: 文字分類服務在給定文字片段時，可將其分類為一或多個標籤。 分類可以是單一標籤、多標籤或階層式。
+exl-id: f240519a-0d83-4309-91e4-4e48be7955a1
 translation-type: tm+mt
-source-git-commit: d10c00694b0a3b2a9da693bd59615b533cfae468
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '441'
 ht-degree: 4%
 
 ---
-
 
 # 文字分類
 
@@ -27,7 +27,7 @@ ht-degree: 4%
 POST /services/v1/predict
 ```
 
-**請求**
+**要求**
 
 以下請求根據有效載荷中提供的輸入參數對片段中的文本進行分類。 請參閱範例裝載下表，以取得有關所示輸入參數的詳細資訊。
 
