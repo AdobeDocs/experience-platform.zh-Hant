@@ -2,12 +2,12 @@
 keywords: Experience Platform；首頁；熱門主題；Marketo Engage；行銷活動；Marketo；映射
 solution: Experience Platform
 title: Marketo Engage源的映射欄位
-topic: 概述
+topic-legacy: overview
 description: 下表包含Marketo資料集中各欄位與其對應的XDM欄位之間的映射。
 translation-type: tm+mt
-source-git-commit: 2563b413ec35cb4c5f05a54bce6f7271917e51f3
+source-git-commit: f12baaa9d4b37f1101792a4ae479b5a62893eb68
 workflow-type: tm+mt
-source-wordcount: '426'
+source-wordcount: '425'
 ht-degree: 3%
 
 ---
