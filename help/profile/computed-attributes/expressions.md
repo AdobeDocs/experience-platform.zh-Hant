@@ -1,17 +1,17 @@
 ---
-keywords: Experience Platform;Profile；即時客戶配置檔案；故障排除；API
+keywords: Experience Platform；配置檔案；即時客戶配置檔案；故障排除；API
 title: 計算屬性的PQL表達式示例
-topic: guide
+topic-legacy: guide
 type: Documentation
 description: 計算屬性是用於將事件級別資料聚合到配置檔案級別屬性的函式。 這些函式需要使用有效的配置檔案查詢語言(PQL)表達式。 本指南概述了一些最常用於計算屬性的PQL表達式。
+exl-id: 7c80e2d3-919a-47f9-a59f-833a70f02a8f
 translation-type: tm+mt
-source-git-commit: 92533f732cc14b57d2a0a34ce9afe99554f9af04
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '967'
+source-wordcount: '965'
 ht-degree: 1%
 
 ---
-
 
 # (Alpha)計算屬性的PQL表達式示例
 
@@ -19,7 +19,7 @@ ht-degree: 1%
 >
 >計算屬性功能目前位於alpha值中，並非所有使用者都能使用。 文件和功能可能會有所變更。
 
-在Adobe Experience Platform中，計算屬性是用來將事件層級資料匯整為描述檔層級屬性的函式。 這些函式會自動計算，以便跨區段、啟動和個人化使用。 每個計算屬性都定義了基本資訊，如名稱和說明、模式類和到值所在欄位的路徑，以及一個表達式，其計算值是要儲存在計算屬性中的值。
+在Adobe Experience Platform，計算屬性是用於將事件級資料聚合到配置檔案級屬性的函式。 這些函式會自動計算，以便跨區段、啟動和個人化使用。 每個計算屬性都定義了基本資訊，如名稱和說明、模式類和到值所在欄位的路徑，以及一個表達式，其計算值是要儲存在計算屬性中的值。
 
 運算屬性中使用的表達式是使用[!DNL Profile Query Language](PQL)建立的，該表達式是與體驗資料模型(XDM)相容的查詢語言，旨在支援即時客戶概要檔案資料的查詢的定義和執行。
 
