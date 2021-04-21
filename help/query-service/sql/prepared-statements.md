@@ -1,21 +1,21 @@
 ---
-keywords: Experience Platform;home;popular topics;query service;Query service;prepared陳述式；prepared;sql;
+keywords: Experience Platform; home；熱門主題；查詢服務；查詢服務；預準備語句；prepared;sql;
 solution: Experience Platform
 title: 查詢服務中的準備語句
-topic: prepared statements
-description: 在SQL中，預準備語句用於模板類似的查詢或更新。 Adobe Experience Platform Query Service支援使用參數化查詢來準備陳述式。
+topic-legacy: prepared statements
+description: 在SQL中，預準備語句用於模板類似的查詢或更新。 Adobe Experience Platform查詢服務使用參數化查詢支援預準備的語句。
+exl-id: 7ee4a10e-2bfe-487f-a8c5-f03b5b1d77e3
 translation-type: tm+mt
-source-git-commit: 8d403e73a804953f9584d6a72f945d4444e65d11
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '381'
 ht-degree: 9%
 
 ---
 
-
 # 準備的陳述
 
-在SQL中，預準備語句用於模擬類似的查詢或更新。 Adobe Experience Platform [!DNL Query Service]支援使用參數化查詢來準備陳述式。 這可用來最佳化效能，因為您將不再需要反複重新剖析查詢。
+在SQL中，預準備語句用於模擬類似的查詢或更新。 Adobe Experience Platform[!DNL Query Service]使用參數化查詢支援預準備語句。 這可用來最佳化效能，因為您將不再需要反複重新剖析查詢。
 
 ## 使用預準備的語句
 
