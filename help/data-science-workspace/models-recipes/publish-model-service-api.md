@@ -1,18 +1,18 @@
 ---
-keywords: Experience Platform；發佈模型；Data Science Workspace；熱門主題；sensei機器學習api
+keywords: Experience Platform；發佈模型；資料科學工作區；熱門主題；敏感機器學習api
 solution: Experience Platform
 title: 使用Sensei機器學習API將模型發佈為服務
-topic: tutorial
+topic-legacy: tutorial
 type: Tutorial
 description: 本教學課程涵蓋使用Sensei Machine Learning API將模型發佈為服務的程式。
+exl-id: f78b1220-0595-492d-9f8b-c3a312f17253
 translation-type: tm+mt
-source-git-commit: f6cfd691ed772339c888ac34fcbd535360baa116
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '1516'
 ht-degree: 1%
 
 ---
-
 
 # 使用[!DNL Sensei Machine Learning API]將模型發佈為服務
 
@@ -30,7 +30,7 @@ ht-degree: 1%
 - `{IMS_ORG}`
 - `{API_KEY}`
 
-所有POST、PUT和PATCH請求都需要附加標題：
+所有POST、PUT和PATCH請求都需要額外的標題：
 
 - 內容類型：application/json
 
@@ -58,7 +58,7 @@ ht-degree: 1%
 POST /mlServices
 ```
 
-**請求**
+**要求**
 
 ```SHELL
 curl -X POST 
@@ -139,7 +139,7 @@ curl -X POST
 POST /mlServices
 ```
 
-**請求**
+**要求**
 
 ```SHELL
 curl -X POST 
@@ -212,7 +212,7 @@ curl -X POST
 POST /mlServices
 ```
 
-**請求**
+**要求**
 
 ```SHELL
 curl -X POST 'https://platform-int.adobe.io/data/sensei/mlServices' 
@@ -299,7 +299,7 @@ GET /mlServices/{SERVICE_ID}
 | --- | --- |
 | `{SERVICE_ID}` | 您正在查找的ML服務的唯一`id`。 |
 
-**請求**
+**要求**
 
 ```SHELL
 curl -X GET 'https://platform.adobe.io/data/sensei/mlServices/{SERVICE_ID}' 
@@ -359,7 +359,7 @@ PUT /mlServices/{SERVICE_ID}
 | --- | --- |
 | `{SERVICE_ID}` | 您正在更新的ML服務的唯一`id`。 |
 
-**請求**
+**要求**
 
 下列請求會新增`trainingSchedule`和`scoringSchedule`鍵及其各自的`startTime`、`endTime`和`cron`鍵，以排程現有ML服務的訓練和計分。
 
