@@ -2,16 +2,16 @@
 keywords: Experience Platform；首頁；熱門主題；雲儲存；雲儲存
 solution: Experience Platform
 title: 使用Flow Service API探索Cloud儲存系統
-topic: overview
+topic-legacy: overview
 description: 本教學課程使用Flow Service API來探索協力廠商雲端儲存系統。
+exl-id: ba1a9bff-43a6-44fb-a4e7-e6a45b7eeebd
 translation-type: tm+mt
-source-git-commit: 457fc9e1b0c445233f0f574fefd31bc1fc3bafc8
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '821'
-ht-degree: 2%
+source-wordcount: '820'
+ht-degree: 1%
 
 ---
-
 
 # 使用[!DNL Flow Service] API探索雲端儲存系統
 
@@ -83,7 +83,7 @@ GET /connections/{CONNECTION_ID}/explore?objectType=folder&object={PATH}
 | `{CONNECTION_ID}` | 雲端儲存空間來源連接器的連線ID。 |
 | `{PATH}` | 目錄的路徑。 |
 
-**請求**
+**要求**
 
 ```shell
 curl -X GET \
@@ -145,7 +145,7 @@ GET /connections/{CONNECTION_ID}/explore?objectType=file&object={FILE_PATH}&prev
 | `{FILE_TYPE}` | 檔案的類型。 支援的檔案類型包括：<ul><li>分隔字元</code>:分隔字元分隔值。 DSV檔案必須以逗號分隔。</li><li>JSON</code>:JavaScript物件符號。 JSON檔案必須符合XDM規範</li><li>PARCE</code>:阿帕奇鑲木地板。 拼花檔案必須與XDM相容。</li></ul> |
 | `{QUERY_PARAMS}` | 可用於篩選結果的可選查詢參數。 如需詳細資訊，請參閱[查詢參數](#query)一節。 |
 
-**請求**
+**要求**
 
 ```shell
 curl -X GET \
