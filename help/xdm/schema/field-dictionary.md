@@ -2,16 +2,16 @@
 keywords: Experience Platform;home；常用主題；模式；模式；欄位；標準欄位；標準欄位；字典；Dictionary;map;Map
 solution: Experience Platform
 title: 體驗資料模型(XDM)欄位字典
-topic: overviews
+topic-legacy: overviews
 description: Experience Data Model(XDM)定義一組標準欄位，可在合成Adobe Experience Platform架構時使用。 使用這些欄位可讓平台服務的行為一致，因為使用XDM的所有服務都會明確瞭解這些欄位提供的特定定義。
+exl-id: 9e183305-cd6c-444d-bd0b-f0cba3bcbe4d
 translation-type: tm+mt
-source-git-commit: cc1fa21df0bb2d49106775c75a0cb3c4f4d73941
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '25239'
+source-wordcount: '25238'
 ht-degree: 3%
 
 ---
-
 
 # XDM欄位字典
 
@@ -198,7 +198,7 @@ ht-degree: 3%
 | xdm:faxPhone | 傳真電話 | 傳真電話號碼。 | 物件 |  | 物件 | https://ns.adobe.com/experience/campaign/experienceevent-profile-personal-details, https://ns.adobe.com/xdm/context/profile-personal-details |
 | xdm:featureUsages | 功能使用實例 | 正在測量的應用程式功能的啟動。 | 物件 |  | 物件 | https://ns.adobe.com/experience/adcloud-experienceevent、https://ns.adobe.com/experience/analytics-experienceevent、https://ns.adobe.com/experience/campaign-experienceevent、https://ns.adobe.com/experience/campaign/experienceevent-all、https://ns.adobe.com/experience/campaign/experienceevent-profile-push-details、https://ns.adobe.com/experience/campaign/profile-snapshot、https://ns.adobe.com/experience/target-experienceevent、https://ns.adobe.com/xdm/context/experienceevent-application、https://ns.adobe.com/xdm/context/profile-push-details、、、 |
 | xdm:federated | 同盟 | 表示體驗事件是透過資料聯盟建立（資料共用）。 | 物件 |  | 物件 | https://ns.adobe.com/experience/adcloud-experienceevent、https://ns.adobe.com/experience/analytics-experienceevent、https://ns.adobe.com/experience/campaign-experienceevent、https://ns.adobe.com/experience/target-experienceevent、https://ns.adobe.com/xdm/context/advertising、https://ns.adobe.com/xdm/context/experienceevent-advertising、https://ns.adobe.com/xdm/context/experienceevent-media、 |
-| xdm:feedId | 摘要ID | 發佈者、廣告交換及其他功能的複合ID。 | 字串 |  | 字串 | https://ns.adobe.com/experience/adcloud-experienceevent、https://ns.adobe.com/experience/adcloud/experienceevent-all、https://ns.adobe.com/experience/adcloud/inventory |
+| xdm:feedId | 動態消息ID | 發佈者、廣告交換及其他功能的複合ID。 | 字串 |  | 字串 | https://ns.adobe.com/experience/adcloud-experienceevent、https://ns.adobe.com/experience/adcloud/experienceevent-all、https://ns.adobe.com/experience/adcloud/inventory |
 | xdm:filter | 選件篩選 | 對篩選器的參考，該篩選器在做出決策時應用於庫存，並作為此活動的上下文。 此值是參考之選件篩選器的URI(@id)。 請參閱架構https://ns.adobe.com/experience/offer-management/offer-filter | 字串 | uri-reference | 字串 | https://ns.adobe.com/experience/campaign-experienceevent、https://ns.adobe.com/experience/campaign/experienceevent-all、https://ns.adobe.com/experience/campaign/offer-proposition-detail |
 | xdm:firstLaunches | 首次啟動 | 在安裝後首次啟動時觸發。 | 物件 |  | 物件 | https://ns.adobe.com/experience/adcloud-experienceevent、https://ns.adobe.com/experience/analytics-experienceevent、https://ns.adobe.com/experience/campaign-experienceevent、https://ns.adobe.com/experience/campaign/experienceevent-all、https://ns.adobe.com/experience/campaign/experienceevent-profile-push-details、https://ns.adobe.com/experience/campaign/profile-snapshot、https://ns.adobe.com/experience/target-experienceevent、https://ns.adobe.com/xdm/context/experienceevent-application、https://ns.adobe.com/xdm/context/profile-push-details、、、 |
 | xdm:firstName | 名字 | 名稱的第一段，其書寫順序最常用的名稱語言。 在許多文化中，這是首選的個人名稱或給定名稱。`firstName`和`lastName`屬性已引入，以保持與現有系統的相容性，該系統以簡化、非語義和不可國際化的方式對名稱進行建模。 使用`xdm:fullName`總是較好。 | 字串 |  | 字串 | https://ns.adobe.com/experience/campaign-experienceevent、https://ns.adobe.com/experience/campaign/experienceevent-all、https://ns.adobe.com/experience/campaign/experienceevent-profile-subscriptions、https://ns.adobe.com/experience/campaign/profile-snapshot、https://ns.adobe.com/xdm/context/profile-person-details、https://ns.adobe.com/xdm/context/profile-subscriptions、 |
@@ -467,7 +467,7 @@ ht-degree: 3%
 | xdm：訂閱 | 訂閱 | 此設定檔有權納入已終止、已到期或已用盡之訂閱的訂閱。 | 陣列 |  | 陣列 | https://ns.adobe.com/experience/campaign/experienceevent-profile-subscriptions, https://ns.adobe.com/xdm/context/profile-subscriptions |
 | xdm:supplierName | 供應商名稱 | 產品的分銷商。 | 字串 |  | 字串 | https://ns.adobe.com/xdm/context/product |
 | xdm:syncedRemarketingAudiences | 同步化區段 | 已與[!DNL adCloud]合作夥伴同步以在平台上建立觀眾的搜尋重新定位實體清單，例如[!DNL Google]的RLSA或Facebook的WCA | 陣列 |  | 陣列 | https://ns.adobe.com/experience/adcloud-profile, https://ns.adobe.com/experience/adcloud/profile-all |
-| xdm:tags | 標籤 | 標籤用於指示使用這些別名的應用程式應如何解釋給定資料源表示的別名。示例：* `isAVID`:代表[!DNL Analytics]訪客ID的資料來源。* `isCRSKey`:表示別名的資料源在建立資料源時應用作鍵。標籤在建立資料源時設定，但在引用給定資料源時也包括在管線消息中。 | 陣列 |  | 陣列 | https://ns.adobe.com/experience/adcloud-experienceevent、https://ns.adobe.com/experience/analytics-experienceevent、https://ns.adobe.com/experience/campaign-experienceevent、https://ns.adobe.com/experience/campaign/experienceevent-all、https://ns.adobe.com/experience/campaign/offer-detail、https://ns.adobe.com/experience/target-experienceevent、https://ns.adobe.com/xdm/context/experienceevent-technical-details、 |
+| xdm:tags | 標記 | 標籤用於指示使用這些別名的應用程式應如何解釋給定資料源表示的別名。示例：* `isAVID`:代表[!DNL Analytics]訪客ID的資料來源。* `isCRSKey`:表示別名的資料源在建立資料源時應用作鍵。標籤在建立資料源時設定，但在引用給定資料源時也包括在管線消息中。 | 陣列 |  | 陣列 | https://ns.adobe.com/experience/adcloud-experienceevent、https://ns.adobe.com/experience/analytics-experienceevent、https://ns.adobe.com/experience/campaign-experienceevent、https://ns.adobe.com/experience/campaign/experienceevent-all、https://ns.adobe.com/experience/campaign/offer-detail、https://ns.adobe.com/experience/target-experienceevent、https://ns.adobe.com/xdm/context/experienceevent-technical-details、 |
 | xdm:templateID | 範本的識別碼 | 用於初始化此傳送的傳送範本ID。可使用`messageClass`來識別Adobe Campaign中使用的範本類型。* `messageClass` = `oneTime`:範本為標準傳送範本。* `messageClass` = `continuous`:範本是循環傳送。* `messageClass` = `transactional`:模板是事務性消息模板。 | 整數 |  | int | https://ns.adobe.com/experience/campaign-experienceevent, https://ns.adobe.com/experience/campaign/experienceevent-all |
 | xdm:templateName | 傳送範本的內部名稱 | 產生此訊息之促銷活動之父實體（在事件型或連續訊息類別中）的易用識別碼。 | 字串 |  | 字串 | https://ns.adobe.com/experience/campaign-experienceevent, https://ns.adobe.com/experience/campaign/experienceevent-all |
 | xdm:term | 詞語 | 詞語的數值。 | 整數 |  | int | https://ns.adobe.com/experience/campaign/experienceevent-profile-subscriptions、https://ns.adobe.com/xdm/context/profile-subscriptions、https://ns.adobe.com/xdm/context/subscription |
