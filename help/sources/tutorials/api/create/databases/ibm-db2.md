@@ -2,23 +2,23 @@
 keywords: Experience Platform;home；熱門主題；IBM DB2;IBM;ibm db2;db2;DB2
 solution: Experience Platform
 title: 使用流服務API建立IBM DB2源連接
-topic: overview
+topic-legacy: overview
 type: Tutorial
-description: 瞭解如何使用Flow Service API將IBM DB2連線至Adobe Experience Platform。
+description: 瞭解如何使用Flow Service API將IBM DB2連接至Adobe Experience Platform。
+exl-id: 83c1dbe6-975f-4e3b-a7bf-166eb5106dd2
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '598'
 ht-degree: 2%
 
 ---
 
-
 # 使用[!DNL Flow Service] API建立IBM DB2源連接
 
 >[!NOTE]
 >
->IBM DB2連接器處於測試階段。 有關使用beta標籤連接器的詳細資訊，請參閱[來源概觀](../../../../home.md#terms-and-conditions)。
+>IBM DB2連接器處於測試階段。 有關使用beta標籤連接器的詳細資訊，請參閱[ Sources綜覽](../../../../home.md#terms-and-conditions)。
 
 [!DNL Flow Service] 用於收集和集中Adobe Experience Platform內不同來源的客戶資料。該服務提供用戶介面和REST風格的API，所有支援的源都可從中連接。
 
@@ -26,7 +26,7 @@ ht-degree: 2%
 
 ## 快速入門
 
-本指南需要有效瞭解Adobe Experience Platform的下列元件：
+本指南需要對Adobe Experience Platform的下列組成部分有切實的瞭解：
 
 * [來源](../../../../home.md): [!DNL Experience Platform] 允許從各種來源接收資料，同時提供使用服務構建、標籤和增強傳入資料的 [!DNL Platform] 能力。
 * [沙盒](../../../../../sandboxes/home.md): [!DNL Experience Platform] 提供虛擬沙盒，可將單一執行個體分 [!DNL Platform] 割為不同的虛擬環境，以協助開發和發展數位體驗應用程式。
@@ -59,7 +59,7 @@ ht-degree: 2%
 
 * `x-sandbox-name: {SANDBOX_NAME}`
 
-所有包含裝載(POST、PUT、PATCH)的請求都需要額外的媒體類型標題：
+所有包含裝載(POST、PUT、PATCH)的請求都需要附加的媒體類型標題：
 
 * `Content-Type: application/json`
 
@@ -73,7 +73,7 @@ ht-degree: 2%
 POST /connections
 ```
 
-**請求**
+**要求**
 
 要建立DB2連接，必須在POST請求中提供其唯一連接規範ID。 DB2的連接規範ID為`09182899-b429-40c9-a15a-bf3ddbc8ced7`。
 
