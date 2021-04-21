@@ -1,21 +1,21 @@
 ---
-keywords: Experience Platform;home；熱門主題；crm架構；CRM;CRM;salesforce;Salesforce
+keywords: Experience Platform；首頁；熱門主題；crm架構；CRM;salesforce;Salesforce
 solution: Experience Platform
 title: Salesforce來源連接器概觀
-topic: overview
-description: 瞭解如何使用API或使用者介面將Salesforce連接至Adobe Experience Platform。
+topic-legacy: overview
+description: 瞭解如何使用API或使用者介面將Salesforce連線至Adobe Experience Platform。
+exl-id: 597778ad-3cf8-467c-ad5b-e2850967fdeb
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '213'
 ht-degree: 0%
 
 ---
 
-
 # [!DNL Salesforce] 連接器
 
-Adobe Experience Platform可讓您從外部來源擷取資料，同時讓您能夠使用[!DNL Platform]服務來建構、標示並增強傳入資料。 您可以從多種來源（例如Adobe應用程式、雲端儲存空間、資料庫等）擷取資料。
+Adobe Experience Platform允許從外部來源接收資料，同時提供使用[!DNL Platform]服務構建、標籤和增強傳入資料的能力。 您可以從多種來源收錄資料，例如Adobe應用程式、雲端儲存空間、資料庫等。
 
 [!DNL Experience Platform] 支援從協力廠商CRM系統擷取資料。支援CRM提供者包括[!DNL Salesforce]。
 
