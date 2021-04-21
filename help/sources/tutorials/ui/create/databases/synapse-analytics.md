@@ -1,30 +1,30 @@
 ---
-keywords: Experience Platform;home；熱門主題；Azure Synapse Analytics;Synapse;synapse;azure synapse分析
+keywords: Experience Platform;home；熱門主題；Azure synapse分析；Synapse;synapse;azure synapse分析
 solution: Experience Platform
-title: 在UI中建立Azure突觸分析來源連線
-topic: overview
+title: 在UI中建立Azure synapse分析來源連線
+topic-legacy: overview
 type: Tutorial
-description: 瞭解如何使用Adobe Experience Platform UI建立Azure Synapse Analytics（以下稱為「Synapse」）來源連線。
+description: 瞭解如何使用Adobe Experience PlatformUI建立Azure synapse分析（以下稱為「突觸」）來源連線。
+exl-id: 1f1ce317-eaaf-4ad2-a5fb-236983220bd7
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '478'
+source-wordcount: '459'
 ht-degree: 1%
 
 ---
-
 
 # 在UI中建立[!DNL Azure Synapse Analytics]源連接
 
 >[!NOTE]
 >
-> [!DNL Azure Synapse Analytics]介面處於測試狀態。 有關使用beta標籤連接器的詳細資訊，請參閱[來源概觀](../../../../home.md#terms-and-conditions)。
+> [!DNL Azure Synapse Analytics]介面處於測試狀態。 有關使用beta標籤連接器的詳細資訊，請參閱[ Sources綜覽](../../../../home.md#terms-and-conditions)。
 
-Adobe Experience Platform中的來源連接器可讓您依計畫吸收外部來源的資料。 本教學課程提供使用[!DNL Platform]使用者介面建立[!DNL Azure Synapse Analytics]（以下稱為&quot;[!DNL Synapse]&quot;）來源連接器的步驟。
+Adobe Experience Platform的來源連接器提供按計畫接收外部來源資料的能力。 本教學課程提供使用[!DNL Platform]使用者介面建立[!DNL Azure Synapse Analytics]（以下稱為&quot;[!DNL Synapse]&quot;）來源連接器的步驟。
 
 ## 快速入門
 
-本教學課程需要對Adobe Experience Platform的下列元件有正確的認識：
+本教學課程需要對Adobe Experience Platform的下列部分有正確的理解：
 
 * [[!DNL Experience Data Model (XDM)] 系統](../../../../../xdm/home.md):組織客戶體驗資 [!DNL Experience Platform] 料的標準化架構。
    * [架構構成基礎](../../../../../xdm/schema/composition.md):瞭解XDM架構的基本建置區塊，包括架構組合的主要原則和最佳實務。
@@ -47,19 +47,19 @@ Adobe Experience Platform中的來源連接器可讓您依計畫吸收外部來�
 
 收集完所需憑證後，您可以按照以下步驟將[!DNL Synapse]帳戶連結至[!DNL Platform]。
 
-登入[Adobe Experience Platform](https://platform.adobe.com)，然後從左側導覽列選擇&#x200B;**[!UICONTROL Sources]**&#x200B;以存取&#x200B;**[!UICONTROL Sources]**&#x200B;工作區。 **[!UICONTROL Catalog]**&#x200B;畫面會顯示多種來源，您可以用來建立帳戶。
+登入[Adobe Experience Platform](https://platform.adobe.com)，然後從左側導覽列選擇&#x200B;**[!UICONTROL Sources]**&#x200B;以存取&#x200B;**[!UICONTROL Sources]**&#x200B;工作區。 **[!UICONTROL Catalog]**&#x200B;畫面會顯示各種來源，您可以用來建立帳戶。
 
 您可以從畫面左側的目錄中選取適當的類別。 或者，您也可以使用搜尋選項找到您要使用的特定來源。
 
-在&#x200B;**[!UICONTROL Databases]**&#x200B;類別下，選擇&#x200B;**[!UICONTROL Azure Synapse Analytics]**。 如果這是您第一次使用此連接器，請選擇&#x200B;**[!UICONTROL Configure]**。 否則，選擇「添加資料」(**[!UICONTROL Add data]**)以建立新的[!DNL Synapse]連接器。
+在&#x200B;**[!UICONTROL Databases]**&#x200B;類別下，選擇&#x200B;**[!UICONTROL Azure Synapse Analytics]**。 如果這是您第一次使用此連接器，請選擇&#x200B;**[!UICONTROL Configure]**。 否則，請選擇&#x200B;**[!UICONTROL Add data]**&#x200B;以建立新的[!DNL Synapse]連接器。
 
 ![](../../../../images/tutorials/create/azure-synapse-analytics/catalog.png)
 
-此時會顯示&#x200B;**[!UICONTROL 連線至Azure突觸分析]**&#x200B;頁面。 在此頁上，您可以使用新認證或現有認證。
+此時將顯示&#x200B;**[!UICONTROL Connect to Azure Synapse Analytics]**&#x200B;頁。 在此頁上，您可以使用新認證或現有認證。
 
 ### 新帳戶
 
-如果您使用新憑據，請選擇&#x200B;**[!UICONTROL 新建帳戶]**。 在顯示的輸入表單上，提供名稱、可選說明和您的[!DNL Synapse]憑證。 完成後，選擇&#x200B;**[!UICONTROL Connect]** ，然後為建立新連接留出一些時間。
+如果使用新憑據，請選擇&#x200B;**[!UICONTROL New account]**。 在顯示的輸入表單上，提供名稱、可選說明和您的[!DNL Synapse]憑證。 完成後，選擇&#x200B;**[!UICONTROL Connect]** ，然後允許一些時間建立新連接。
 
 ![](../../../../images/tutorials/create/azure-synapse-analytics/new.png)
 
