@@ -2,16 +2,16 @@
 keywords: Experience Platform;home；熱門主題；資料準備；api指南；映射集；
 solution: Experience Platform
 title: 映射集API端點
-topic: mapping sets
-description: '您可以使用Adobe Experience PlatformAPI中的「/mappingSets」端點，以程式設計方式擷取、建立、更新及驗證對應集。 '
+topic-legacy: mapping sets
+description: 您可以使用Adobe Experience PlatformAPI中的「/mappingSets」端點，以程式設計方式擷取、建立、更新及驗證對應集。
+exl-id: a4e4ddcd-164e-42aa-b7d1-ba59d70da142
 translation-type: tm+mt
-source-git-commit: 73bf6abb143c0866a400aafe984f9a553ffc1abf
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '809'
+source-wordcount: '807'
 ht-degree: 3%
 
 ---
-
 
 # 映射集端點
 
@@ -40,7 +40,7 @@ GET /mappingSets?limit={LIMIT}&start={START}&expandSchema={EXPAND_SCHEMA}
 | `{ORDER_BY}` | 對結果的順序進行排序。 唯一支援的欄位是`createdDate`和`updatedDate`。 您可以在屬性前加上`+`或`-`，分別依遞增或遞減順序來排序。 |
 | `{EXPAND_SCHEMA}` | 一個布爾值，它確定是否返回作為響應一部分的完整輸出模式。 |
 
-**請求**
+**要求**
 
 下列請求將擷取您IMS組織內的最後兩個對應集。
 
@@ -175,7 +175,7 @@ curl -X GET https://platform.adobe.io/data/foundation/conversion/mappingSets?lim
 POST /mappingSets
 ```
 
-**請求**
+**要求**
 
 下列請求會建立新的對應集，由裝載中提供的參數設定。
 
@@ -249,7 +249,7 @@ curl -X POST https://platform.adobe.io/data/foundation/conversion/mappingSets \
 POST /mappingSets/validate
 ```
 
-**請求**
+**要求**
 
 下列請求會驗證裝載中提供的映射。
 
@@ -323,7 +323,7 @@ curl -X POST https://platform.adobe.io/data/foundation/conversion/mappingSets/va
 POST /mappingSets/preview
 ```
 
-**請求**
+**要求**
 
 ```shell
 curl -X POST https://platform.adobe.io/data/foundation/conversion/mappingSets/preview \
@@ -410,7 +410,7 @@ GET /mappingSets/{MAPPING_SET_ID}?version={VERSION}
 | `{EXPAND_SCHEMA}` | 一個布爾查詢參數，它確定是否返回作為響應一部分的輸出方案。 |
 | `{VERSION}` | 一個整數查詢參數，它確定要檢索的映射集的版本。 |
 
-**請求**
+**要求**
 
 下列請求會擷取指定對應集的詳細資訊。
 
@@ -597,7 +597,7 @@ PUT /mappingSets/{MAPPING_SET_ID}
 | --------- | ----------- |
 | `{MAPPING_SET_ID}` | 您要更新的映射集的ID。 |
 
-**請求**
+**要求**
 
 ```shell
 curl -X PUT https://platform.adobe.io/data/foundation/conversion/mappingSets/e7c80e4c0d8f4a98a7d400b4e178b635 \
@@ -824,7 +824,7 @@ GET /mappingSets/{MAPPING_SET_ID}/mappings
 | --------- | ----------- |
 | `{MAPPING_SET_ID}` | 要為其檢索映射的映射集的ID。 |
 
-**請求**
+**要求**
 
 以下請求返回指定映射集中的所有映射。
 
@@ -928,7 +928,7 @@ GET /mappingSets/{MAPPING_SET_ID}/mappings/{MAPPING_ID}
 | `{MAPPING_SET_ID}` | 您要查找有關映射資訊的映射集的ID。 |
 | `{MAPPING_ID}` | 您要尋找之對應的ID。 |
 
-**請求**
+**要求**
 
 下列請求會擷取指定對應集中特定對應的資訊。
 
