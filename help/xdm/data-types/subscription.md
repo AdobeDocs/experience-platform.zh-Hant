@@ -1,32 +1,32 @@
 ---
-keywords: Experience Platform;home；熱門主題；模式；模式；XDM;fields；模式；Schemas;subscription;datatype;datatype；資料類型；
+keywords: Experience Platform;home；熱門主題；模式；模式；XDM;fields；模式；Schemas;subscription;datatype；資料類型；
 solution: Experience Platform
 title: 訂閱資料類型
-topic: overview
+topic-legacy: overview
 description: 本檔案提供訂閱體驗資料模型(XDM)資料類型的概觀。
+exl-id: 6fd1e073-441b-45f0-bb4f-54f51ab18694
 translation-type: tm+mt
-source-git-commit: 8ccf0a53f231c9f59cd87735126b180c6b678e51
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '416'
+source-wordcount: '411'
 ht-degree: 9%
 
 ---
 
+# [!UICONTROL Subscription] 資料類型
 
-# [!UICONTROL 訂閱] 資料類型
-
-[!UICONTROL 訂] 閱是標準的「體驗資料模型」(XDM)資料類型，可說明依時間或用途使用之軟體、服務或商品的授權權利。
+[!UICONTROL Subscription] 是標準的Experience Data Model(XDM)資料類型，可說明軟體、服務或商品的授權權利（根據時間或使用情形而使用）。
 
 <img src="../images/data-types/subscription-data-type.png" width="500" /><br />
 
 | 屬性 | 資料類型 | 說明 |
 | --- | --- | --- |
-| `device` | [[!UICONTROL 裝置]](./device.md) | 說明連結至訂閱之裝置的詳細資訊。 |
-| `environment` | [[!UICONTROL 環境]](./environment.md) | 包含事件觀察發生的周圍情況的相關資訊，特別詳細說明網路或軟體版本等暫存性資訊。 |
-| `subscriber` | [[!UICONTROL 「人」]](./person.md) | 說明個人。 這也可以代表擔任不同角色的人員，例如客戶、連絡人或擁有者。 |
+| `device` | [[!UICONTROL Device]](./device.md) | 說明連結至訂閱之裝置的詳細資訊。 |
+| `environment` | [[!UICONTROL Environment]](./environment.md) | 包含事件觀察發生的周圍情況的相關資訊，特別詳細說明網路或軟體版本等暫存性資訊。 |
+| `subscriber` | [[!UICONTROL Person]](./person.md) | 說明個人。 這也可以代表擔任不同角色的人員，例如客戶、連絡人或擁有者。 |
 | `SKU` | 字串 | 庫存保留單位(SKU)，產品的唯一識別碼。 |
 | `billingPeriod` | 字串 | 付款之間的期間。 |
-| `billingStartDate` | 日期 | 第一張票據到期的日期。 日期格式（無時間）應遵循[RFC 3339，第5.6節](https://tools.ietf.org/html/rfc3339#section-5.6)標準。 |
+| `billingStartDate` | Date | 第一張票據到期的日期。 日期格式（無時間）應遵循[RFC 3339，第5.6節](https://tools.ietf.org/html/rfc3339#section-5.6)標準。 |
 | `category` | 字串 | 此類訂閱的主要頂層分類。 |
 | `chargeMethod` | 字串 | 對客戶收費的計費方式。 |
 | `contractID` | 字串 | 控制此訂閱之合約的唯一ID。 |
