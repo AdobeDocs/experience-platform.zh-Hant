@@ -1,17 +1,17 @@
 ---
-keywords: Experience Platform;home；熱門主題；Segmentation;Segmentation Service;pql;PQL;Profile Query Language；日期和時間函式；datetime函式；datetime;datetime;time;
+keywords: Experience Platform;home；熱門主題；分段；分段；分段服務；pql;PQL；配置檔案查詢語言；日期和時間函式；日期時間函式；日期時間；時間；
 solution: Experience Platform
 title: PQL日期和時間函式
-topic: developer guide
+topic-legacy: developer guide
 description: 日期和時間函式用於對配置檔案查詢語言(PQL)中的值執行日期和時間操作。
+exl-id: 8cbffcb6-1c25-454f-8f02-eca602318e5e
 translation-type: tm+mt
-source-git-commit: b3defc3e33a55855e307ab70b9797d985d5719e3
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '508'
 ht-degree: 3%
 
 ---
-
 
 # 日期和時間函式
 
@@ -21,7 +21,7 @@ ht-degree: 3%
 
 `currentMonth`函式會以整數傳回目前月份。
 
-**Format**
+**格式**
 
 ```sql
 currentMonth()
