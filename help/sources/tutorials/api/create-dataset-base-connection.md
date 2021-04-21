@@ -1,18 +1,18 @@
 ---
-keywords: Experience Platform; home；熱門主題；資料集連接流服務；流服務；流服務連接
+keywords: Experience Platform;home；熱門主題；資料集連接流服務；流服務；流服務連接
 solution: Experience Platform
 title: 使用Flow Service API建立Adobe Experience Platform資料集基本連線
-topic: overview
+topic-legacy: overview
 type: Tutorial
-description: 瞭解如何使用Flow Service API建立Adobe Experience Platform的資料集基礎連線。
+description: 瞭解如何使用Flow Service API建立與Adobe Experience Platform的資料集基礎連線。
+exl-id: 5e829f4a-954b-4011-a003-c42c7a0d5617
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '721'
 ht-degree: 1%
 
 ---
-
 
 # 使用[!DNL Flow Service] API建立[!DNL Experience Platform]資料集基本連線
 
@@ -24,7 +24,7 @@ ht-degree: 1%
 
 ## 快速入門
 
-本教學課程需要對Adobe Experience Platform的下列元件有正確的認識：
+本教學課程需要對Adobe Experience Platform的下列部分有正確的理解：
 
 * [體驗資料模型(XDM)系統](../../../xdm/home.md):組織客戶體驗資 [!DNL Experience Platform] 料的標準化架構。
    * [架構構成基礎](../../../xdm/schema/composition.md):瞭解XDM架構的基本建置區塊，包括架構組合的主要原則和最佳實務。
@@ -51,7 +51,7 @@ ht-degree: 1%
 
 * `x-sandbox-name: {SANDBOX_NAME}`
 
-所有包含裝載(POST、PUT、PATCH)的請求都需要額外的媒體類型標題：
+所有包含裝載(POST、PUT、PATCH)的請求都需要附加的媒體類型標題：
 
 * `Content-Type: application/json`
 
@@ -63,14 +63,14 @@ ht-degree: 1%
 
 每個可用源都有其唯一的連接規範集，用於描述連接器屬性（如驗證要求）。 您可以執行GET請求並使用查詢參數來查找資料集基本連接的連接規範。
 
-傳送不含查詢參數的GET請求時，會傳回所有可用來源的連線規格。 您可以包含查詢`property=id=="c604ff05-7f1a-43c0-8e18-33bf874cb11c"`，以取得資料集基本連線的資訊。
+傳送不含查詢參數的GET請求時，將傳回所有可用來源的連線規格。 您可以包含查詢`property=id=="c604ff05-7f1a-43c0-8e18-33bf874cb11c"`，以取得資料集基本連線的資訊。
 
 ```http
 GET /connectionSpecs
 GET /connectionSpecs?property=id=="c604ff05-7f1a-43c0-8e18-33bf874cb11c"
 ```
 
-**請求**
+**要求**
 
 下列請求會擷取資料集基礎連線的連線規格。
 
@@ -147,7 +147,7 @@ curl -X GET \
 POST /connections
 ```
 
-**請求**
+**要求**
 
 ```shell
 curl -X POST \
