@@ -3,12 +3,12 @@ keywords: Experience Platform;home；熱門主題；api;API;XDM;XDM系統；體�
 solution: Experience Platform
 title: 架構註冊表API快速入門
 description: 本文檔介紹了在嘗試調用方案註冊表API之前需要知道的核心概念。
-topic: developer guide
+topic-legacy: developer guide
 exl-id: 7daebb7d-72d2-4967-b4f7-1886736db69f
 translation-type: tm+mt
-source-git-commit: 610ce5c6dca5e7375b941e7d6f550382da10ca27
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '1365'
+source-wordcount: '1363'
 ht-degree: 0%
 
 ---
@@ -64,7 +64,7 @@ XDM使用JSON結構描述格式來說明並驗證所擷取客戶體驗資料的�
 GET /stats
 ```
 
-**請求**
+**要求**
 
 ```SHELL
 curl -X GET \
@@ -257,8 +257,8 @@ XDM資源以URI形式使用`$id`屬性進行標識，例如：
 * 欄位物件的名稱可能包含英數字元、破折號或底線字元，但&#x200B;**不得**&#x200B;以底線開頭。
    * **正確：** `fieldName`、 `field_name2`、 `Field-Name`、  `field-name_3`
    * **錯誤：** `_fieldName`
-* camelCase是欄位對象名稱的首選參數。 範例: `fieldName`
-* 欄位應包含`title`，寫在「標題大小寫」中。 範例: `Field Name`
+* camelCase是欄位對象名稱的首選參數。 範例：`fieldName`
+* 欄位應包含`title`，寫在「標題大小寫」中。 範例：`Field Name`
 * 欄位需要`type`。
    * 定義某些類型可能需要選擇`format`。
    * 如果需要特定的資料格式，可以將`examples`添加為陣列。
