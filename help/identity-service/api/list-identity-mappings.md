@@ -2,16 +2,16 @@
 keywords: Experience Platform;home；熱門主題；identity;Identity
 solution: Experience Platform
 title: 清單標識映射
-topic: API guide
+topic-legacy: API guide
 description: 映射是群集中所有標識的集合，用於指定的命名空間。
+exl-id: db80c783-620b-4ba3-b55c-75c1fd6e90b1
 translation-type: tm+mt
-source-git-commit: 73035aec86297cfc4ee9337cf922d599001379c3
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '270'
 ht-degree: 1%
 
 ---
-
 
 # 清單標識映射
 
@@ -27,7 +27,7 @@ ht-degree: 1%
 GET https://platform-{REGION}.adobe.io/data/core/identity/mapping
 ```
 
-**請求**
+**要求**
 
 選項1:將識別碼提供為命名空間（`nsId`，依ID）和ID值(`id`)。
 
@@ -104,7 +104,7 @@ POST https://platform.adobe.io/data/core/identity/mappings
 }
 ```
 
-**請求**
+**要求**
 
 **使用XID**
 
