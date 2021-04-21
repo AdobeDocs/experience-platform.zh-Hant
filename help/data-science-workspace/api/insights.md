@@ -1,17 +1,17 @@
 ---
-keywords: Experience Platform；開發人員指南；端點；Data Science Workspace；熱門主題；見解；sensei機器學習api
+keywords: Experience Platform；開發人員指南；端點；資料科學工作區；熱門主題；見解；sensei機器學習api
 solution: Experience Platform
 title: 前瞻分析API端點
-topic: Developer guide
+topic-legacy: Developer guide
 description: 前瞻分析包含度量，可讓資料科學家透過顯示相關評估度量來評估和選擇最佳ML模型。
+exl-id: 603546d6-5686-4b59-99a7-90ecc0db8de3
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '515'
 ht-degree: 3%
 
 ---
-
 
 # 前瞻分析端點
 
@@ -27,7 +27,7 @@ ht-degree: 3%
 GET /insights
 ```
 
-**請求**
+**要求**
 
 ```shell
 curl -X GET \
@@ -121,7 +121,7 @@ GET /insights/{INSIGHT_ID}
 | --- | --- |
 | `{INSIGHT_ID}` | Sensei分析的唯一識別碼。 |
 
-**請求**
+**要求**
 
 ```shell
 curl -X GET \
@@ -172,7 +172,7 @@ curl -X GET \
 
 ## 新增模型分析
 
-您可以執行POST請求和裝載，為新模型分析提供上下文、事件和度量，以建立新的模型分析。 建立新模型分析時，不需要使用內容欄位來附加現有服務，但您可以提供一或多個對應的ID，選擇使用現有服務建立新模型分析：
+您可以執行POST請求和裝載，為新模型分析提供上下文、事件和度量，以建立新模型分析。 建立新模型分析時，不需要使用內容欄位來附加現有服務，但您可以提供一或多個對應的ID，選擇使用現有服務建立新模型分析：
 
 ```json
 "context": {
@@ -193,7 +193,7 @@ curl -X GET \
 POST /insights
 ```
 
-**請求**
+**要求**
 
 ```shell
 curl -X POST \
@@ -261,11 +261,11 @@ curl -X POST \
 
 | 屬性 | 說明 |
 | --- | --- |
-| `insightId` | 在發出成功的POST請求時，為此特定洞察力建立的唯一ID。 |
+| `insightId` | 在發出成功的POST請求時，為此特定分析建立的唯一ID。 |
 
 ## 擷取演算法的預設度量清單
 
-您可以透過對度量端點執行單一GET請求，擷取演算法和預設度量的清單。 若要查詢特定量度進行GET請求，並在請求路徑中提供有效的`{ALGORITHM}`。
+您可以透過對量度端點執行單一GET請求，擷取演算法的所有量度和預設量度清單。 若要查詢特定量度進行GET請求，並在請求路徑中提供有效的`{ALGORITHM}`。
 
 **API格式**
 
@@ -278,9 +278,9 @@ GET /insights/metrics?algorithm={ALGORITHM}
 | --- | --- |
 | `{ALGORITHM}` | 演算法類型的識別碼。 |
 
-**請求**
+**要求**
 
-下列請求包含查詢，並使用演算法識別碼`{ALGORITHM}`擷取特定度量
+下列請求包含查詢，並使用演算法識別碼`{ALGORITHM}`擷取特定量度
 
 ```shell
 curl -X GET \
