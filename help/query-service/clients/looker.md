@@ -2,20 +2,20 @@
 keywords: Experience Platform; home；熱門主題；查詢服務；查詢服務； Looker;looker；連接到查詢服務；
 solution: Experience Platform
 title: 將Looker連接到查詢服務
-topic: connect
-description: 本檔案將逐步說明如何將Looker與Adobe Experience Platform Query Service連接。
+topic-legacy: connect
+description: 本檔案將逐步說明如何將Looker與Adobe Experience Platform查詢服務連接。
+exl-id: 806e9077-533a-4546-b5ca-8124751957f5
 translation-type: tm+mt
-source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '244'
+source-wordcount: '242'
 ht-degree: 0%
 
 ---
 
-
 # 將[!DNL Looker]連接到查詢服務
 
-本檔案涵蓋連接[!DNL Looker]與Adobe Experience Platform [!DNL Query Service]的步驟。
+本文檔介紹將[!DNL Looker]與Adobe Experience Platform[!DNL Query Service]連接的步驟。
 
 >[!NOTE]
 >
@@ -41,7 +41,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->有關查找主機和埠、資料庫名和登錄憑據的詳細資訊，請訪問Platform](https://platform.adobe.com/query/configuration)上的[憑據頁。 要查找憑據，請登錄到[!DNL Platform]，然後選擇&#x200B;**[!UICONTROL 查詢]**，然後選擇&#x200B;**[!UICONTROL 憑據]**。
+>有關查找主機和埠、資料庫名和登錄憑據的詳細資訊，請訪問Platform](https://platform.adobe.com/query/configuration)上的[憑據頁。 若要尋找您的認證，請登入[!DNL Platform]，然後選取&#x200B;**[!UICONTROL Queries]**，後面接著&#x200B;**[!UICONTROL Credentials]**。
 
 在輸入連線詳細資訊後，請選取&#x200B;**[!DNL Test These Settings]**&#x200B;以確保憑證正常運作。 如果有，則會在下方顯示一則訊息，指出您可以連線。 如果連接確實成功，請選擇&#x200B;**[!DNL Add Connection]**&#x200B;以建立連接。
 
