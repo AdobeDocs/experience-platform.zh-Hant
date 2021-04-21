@@ -2,16 +2,16 @@
 keywords: Experience Platform;home；熱門主題；策略實施；自動實施；基於API的實施；資料治理
 solution: Experience Platform
 title: 策略評估API端點
-topic: developer guide
+topic-legacy: developer guide
 description: 建立行銷動作並定義原則後，您就可以使用「原則服務API」來評估是否有某些動作違反了任何原則。 傳回的限制採用一組原則的形式，這些原則會因嘗試對包含資料使用標籤的指定資料執行行銷動作而遭到違反。
+exl-id: f9903939-268b-492c-aca7-63200bfe4179
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '1544'
 ht-degree: 1%
 
 ---
-
 
 # 策略評估端點
 
@@ -42,10 +42,10 @@ GET /marketingActions/custom/{MARKETING_ACTION_NAME}/constraints?duleLabels={LAB
 
 | 參數 | 說明 |
 | --- | --- |
-| `{MARKETING_ACTION_NAME}` | 要針對一組資料使用標籤進行測試的行銷動作名稱。 您可以透過向行銷動作端點發出[GET請求來擷取可用行銷動作的清單。](./marketing-actions.md#list) |
+| `{MARKETING_ACTION_NAME}` | 要針對一組資料使用標籤進行測試的行銷動作名稱。 您可以透過向行銷動作端點[提出](./marketing-actions.md#list)的GET請求，擷取可用行銷動作的清單。 |
 | `{LABELS_LIST}` | 以逗號分隔的資料使用標籤名稱清單，以測試其行銷動作。 例如：`duleLabels=C1,C2,C3`<br><br>請注意，標籤名稱區分大小寫。 在`duleLabels`參數中列出這些參數時，請務必使用正確的大小寫。 |
 
-**請求**
+**要求**
 
 以下的範例請求會評估標籤C1和C3的行銷動作。
 
@@ -135,9 +135,9 @@ POST /marketingActions/custom/{MARKETING_ACTION_NAME}/constraints
 
 | 參數 | 說明 |
 | --- | --- |
-| `{MARKETING_ACTION_NAME}` | 針對一或多個資料集進行測試的行銷動作名稱。 您可以透過向行銷動作端點發出[GET請求來擷取可用行銷動作的清單。](./marketing-actions.md#list) |
+| `{MARKETING_ACTION_NAME}` | 針對一或多個資料集進行測試的行銷動作名稱。 您可以透過向行銷動作端點[提出](./marketing-actions.md#list)的GET請求，擷取可用行銷動作的清單。 |
 
-**請求**
+**要求**
 
 以下請求對一組三個資料集執行`crossSiteTargeting`行銷操作，以評估是否有任何策略違規。
 
@@ -366,9 +366,9 @@ POST /marketingActions/custom/{MARKETING_ACTION_NAME}/constraints
 
 | 參數 | 說明 |
 | --- | --- |
-| `{MARKETING_ACTION_NAME}` | 要針對資料集欄位子集進行測試的行銷動作名稱。 您可以透過向行銷動作端點發出[GET請求來擷取可用行銷動作的清單。](./marketing-actions.md#list) |
+| `{MARKETING_ACTION_NAME}` | 要針對資料集欄位子集進行測試的行銷動作名稱。 您可以透過向行銷動作端點[提出](./marketing-actions.md#list)的GET請求，擷取可用行銷動作的清單。 |
 
-**請求**
+**要求**
 
 下列請求會測試屬於三個資料集的特定欄位集上的行銷動作`crossSiteTargeting`。 裝載類似於僅涉及資料集](#datasets)的[評估請求，為每個資料集添加特定欄位以收集標籤。
 
@@ -533,7 +533,7 @@ curl -X POST \
 POST /bulk-eval
 ```
 
-**請求**
+**要求**
 
 批量評估請求的有效載荷應是一組對象；每個評估作業各執行一個。 對於基於資料集和欄位進行評估的作業，必須提供`entityList`陣列。 對於根據資料使用標籤評估的作業，必須提供`labels`陣列。
 
