@@ -2,24 +2,24 @@
 keywords: Experience Platform;home；熱門主題；api;API;XDM;XDM系統；體驗資料模型；ui;workspace;array;field;
 solution: Experience Platform
 title: 在UI中定義陣列欄位
-description: 瞭解如何在Experience Platform使用者介面中定義陣列欄位。
-topic: user guide
+description: 瞭解如何在Experience Platform用戶介面中定義陣列欄位。
+topic-legacy: user guide
+exl-id: 9ac55554-c29b-40b2-9987-c8c17cc2c00c
 translation-type: tm+mt
-source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '363'
-ht-degree: 1%
+source-wordcount: '347'
+ht-degree: 0%
 
 ---
 
-
 # 在UI中定義陣列欄位
 
-在Adobe Experience Platform使用者介面中定義「體驗資料模型」(XDM)欄位時，您可以將該欄位指定為陣列。
+在Adobe Experience Platform用戶介面中定義「體驗資料模型」(XDM)欄位時，您可以將該欄位指定為陣列。
 
-陣列的內容取決於為該欄位選擇的[!UICONTROL 類型]。 例如，如果欄位的[!UICONTROL Type]設定為&quot;[!UICONTROL String]&quot;，將該欄位設定為陣列將將該欄位指定為字串陣列。 如果欄位的[!UICONTROL Type]被設定為多欄位資料類型，如&quot;[!UICONTROL 郵遞區號]&quot;，則該欄位將成為符合資料類型的郵遞區號對象陣列。
+陣列的內容取決於為該欄位選擇的[!UICONTROL Type]。 例如，如果欄位的[!UICONTROL Type]設定為&quot;[!UICONTROL String]&quot;，將該欄位設定為陣列將將該欄位指定為字串陣列。 如果欄位的[!UICONTROL Type]設為多欄位資料類型，例如&quot;[!UICONTROL Postal address]&quot;，則會變成符合資料類型的郵遞區址物件陣列。
 
-在UI](./overview.md#define)中定義了新欄位後，可以通過選中右邊欄中的&#x200B;**[!UICONTROL Array]**&#x200B;複選框將其設定為陣列欄位。[
+在UI](./overview.md#define)中定義了新欄位後，可以通過選擇右側導軌中的&#x200B;**[!UICONTROL Array]**&#x200B;複選框將其設定為陣列欄位。[
 
 ![](../../images/ui/fields/special/array.png)
 
@@ -29,9 +29,9 @@ ht-degree: 1%
 
 | 欄位屬性 | 說明 |
 | --- | --- |
-| [!UICONTROL 最小長度] | 陣列必須包含的最小項目數，以便成功接收。 |
-| [!UICONTROL 長度上限] | 陣列必須包含的項目數上限，以便接收成功。 |
-| [!UICONTROL 僅唯一項目] | 如果設定為&quot;[!UICONTROL True]&quot;，則陣列中的每個項目必須是唯一的，以便成功接收。 |
+| [!UICONTROL Minimum length] | 陣列必須包含的最小項目數，以便成功接收。 |
+| [!UICONTROL Maximum length] | 陣列必須包含的項目數上限，以便接收成功。 |
+| [!UICONTROL Unique items only] | 如果設定為&quot;[!UICONTROL True]&quot;，則陣列中的每個項目必須是唯一的，以便成功接收。 |
 
 完成欄位配置後，選擇&#x200B;**[!UICONTROL Apply]**&#x200B;將更改應用到模式。
 
