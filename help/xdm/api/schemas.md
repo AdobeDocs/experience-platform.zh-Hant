@@ -3,12 +3,12 @@ keywords: Experience Platform;home；熱門主題；api;API;XDM;XDM系統；體�
 solution: Experience Platform
 title: 方案API端點
 description: 架構註冊表API中的/schemas端點可讓您以程式設計方式管理體驗應用程式中的XDM架構。
-topic: developer guide
+topic-legacy: developer guide
 exl-id: d0bda683-9cd3-412b-a8d1-4af700297abf
 translation-type: tm+mt
-source-git-commit: 610ce5c6dca5e7375b941e7d6f550382da10ca27
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '1420'
+source-wordcount: '1418'
 ht-degree: 2%
 
 ---
@@ -40,7 +40,7 @@ GET /{CONTAINER_ID}/schemas?{QUERY_PARAMS}
 | `{CONTAINER_ID}` | 存放您要擷取之結構的容器：`global`代表Adobe建立的結構，或`tenant`代表您組織擁有的結構。 |
 | `{QUERY_PARAMS}` | 可選查詢參數，以篩選結果。 有關可用參數的清單，請參見[附錄文檔](./appendix.md#query)。 |
 
-**請求**
+**要求**
 
 以下請求從`tenant`容器中檢索方案清單，使用`orderby`查詢參數按其`title`屬性對結果進行排序。
 
@@ -110,7 +110,7 @@ GET /{CONTAINER_ID}/schemas/{SCHEMA_ID}
 | `{CONTAINER_ID}` | 存放您要擷取之結構的容器：`global`代表Adobe建立的架構，或`tenant`代表您組織擁有的架構。 |
 | `{SCHEMA_ID}` | 要查找的架構的`meta:altId`或URL編碼`$id`。 |
 
-**請求**
+**要求**
 
 以下請求檢索路徑中由其`meta:altId`值指定的架構。
 
@@ -201,7 +201,7 @@ curl -X GET \
 POST /tenant/schemas
 ```
 
-**請求**
+**要求**
 
 請求必須包含`allOf`屬性，該屬性引用類的`$id`。 此屬性定義了方案將實施的「基本類」。 在此範例中，基本類別是先前建立的「屬性資訊」類別。
 
@@ -288,7 +288,7 @@ PUT /tenant/schemas/{SCHEMA_ID}
 | --- | --- |
 | `{SCHEMA_ID}` | 要重寫的架構的`meta:altId`或URL編碼`$id`。 |
 
-**請求**
+**要求**
 
 下列請求會取代現有結構，變更其`title`、`description`和`allOf`屬性。
 
@@ -369,7 +369,7 @@ PATCH /tenant/schema/{SCHEMA_ID}
 | --- | --- |
 | `{SCHEMA_ID}` | 要更新的架構的URL編碼`$id` URI或`meta:altId`。 |
 
-**請求**
+**要求**
 
 下面的示例請求通過將mixin的`$id`值添加到`meta:extends`和`allOf`陣列中，將新的mixin添加到模式。
 
@@ -458,7 +458,7 @@ PATCH /tenant/schema/{SCHEMA_ID}
 | --- | --- |
 | `{SCHEMA_ID}` | 要啟用的方案的URL編碼`$id` URI或`meta:altId`。 |
 
-**請求**
+**要求**
 
 下面的示例請求將`meta:immutableTags`陣列添加到現有模式，為該陣列提供一個`union`的單字串值，以便在配置式中使用。
 
@@ -539,7 +539,7 @@ DELETE /tenant/schemas/{SCHEMA_ID}
 | --- | --- |
 | `{SCHEMA_ID}` | 要刪除的架構的URL編碼`$id` URI或`meta:altId`。 |
 
-**請求**
+**要求**
 
 ```shell
 curl -X DELETE \
