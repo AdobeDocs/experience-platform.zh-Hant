@@ -2,17 +2,17 @@
 keywords: Experience Platform;home；熱門主題；Shopify;shopify；電子商務
 solution: Experience Platform
 title: 使用Flow Service API建立Shopify連接器來源連線
-topic: overview
+topic-legacy: overview
 type: Tutorial
 description: 瞭解如何使用Flow Service API將Shopify連線至Adobe Experience Platform。
+exl-id: 36086c7f-813e-4fc5-9778-f9d55aba03b2
 translation-type: tm+mt
-source-git-commit: cc23228cb410dc4c70a56c5142be00c2ca1c40d3
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '551'
+source-wordcount: '549'
 ht-degree: 2%
 
 ---
-
 
 # 使用[!DNL Flow Service] API建立[!DNL Shopify]來源連線
 
@@ -71,7 +71,7 @@ ht-degree: 2%
 POST /connections
 ```
 
-**請求**
+**要求**
 
 要建立[!DNL Shopify]連接，必須在POST請求中提供其唯一連接規範ID。 [!DNL Shopify]的連接規範ID為`4f63aa36-bd48-4e33-bb83-49fbcd11c708`。
 
