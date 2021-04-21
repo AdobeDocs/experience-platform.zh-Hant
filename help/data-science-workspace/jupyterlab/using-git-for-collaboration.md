@@ -2,23 +2,23 @@
 keywords: Experience Platform;JupyterLab；筆記型電腦；資料科學工作區；熱門主題；Git;Github
 solution: Experience Platform
 title: 使用Git在JupyterLab中協作
-topic: tutorial
+topic-legacy: tutorial
 type: Tutorial
 description: Git是一種分佈式版本控制系統，用於跟蹤軟體開發過程中原始碼的更改。 Git已預先安裝在Data Science Workspace JupyterLab環境中。
+exl-id: d7b766f7-b97d-4007-bc53-b83742425047
 translation-type: tm+mt
-source-git-commit: f6cfd691ed772339c888ac34fcbd535360baa116
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '284'
+source-wordcount: '281'
 ht-degree: 1%
 
 ---
-
 
 # 使用[!DNL Git]在[!DNL JupyterLab]中協作
 
 [!DNL Git] 是一種分佈式版本控制系統，用於跟蹤軟體開發過程中原始碼的更改。Git已預安裝在[!DNL Data Science Workspace JupyterLab]環境中。
 
-## 必要條件
+## 先決條件
 
 >[!NOTE]
 >
@@ -30,7 +30,7 @@ ht-degree: 1%
 
 首先，啟動[!DNL Adobe Experience Platform]並導航到[[!DNL JupyterLabs Notebooks]](https://platform.adobe.com/notebooks/jupyterLab)環境。
 
-在[!DNL JupyterLab]中，選擇&#x200B;**[!UICONTROL 檔案]** ，然後將滑鼠暫留在&#x200B;**[!UICONTROL 新建]**&#x200B;上。 從出現的下拉式清單中，選擇&#x200B;**[!UICONTROL 終端]**。
+在[!DNL JupyterLab]中，選擇&#x200B;**[!UICONTROL File]**，然後將滑鼠暫留在&#x200B;**[!UICONTROL New]**&#x200B;上。 從出現的下拉式清單中，選擇&#x200B;**[!UICONTROL Terminal]**。
 
 ![JupyterLab Nav](../images/jupyterlab/tutorials/open-terminal.png)
 
