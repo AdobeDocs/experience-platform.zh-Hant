@@ -1,31 +1,31 @@
 ---
-keywords: Experience Platform;home;popular topics;query service;Query service;sample query;sample query;adobe analytics;
+keywords: Experience Platform; home；熱門主題；查詢服務；查詢服務；示例查詢；示例查詢；adobe分析；
 solution: Experience Platform
-title: Adobe Analytics資料的範例查詢
-topic: queries
-description: 從選取的Adobe Analytics報表套裝中取得的資料會轉換成XDM ExperienceEvents，並以資料集的形式匯入Adobe Experience Platform。 本檔案概述Adobe Experience Platform Query Service運用此資料的多種使用案例，其中所包含的範例查詢應與您的Adobe Analytics資料集搭配使用。
+title: Adobe Analytics資料的示例查詢
+topic-legacy: queries
+description: 從選取的Adobe Analytics報表套裝中取得的資料會轉換成XDM ExperienceEvents，並作為資料集匯入Adobe Experience Platform。 本檔案概述了Adobe Experience Platform查詢服務使用此資料的一些使用案例，其中包含的示例查詢應與您的Adobe Analytics資料集配合使用。
+exl-id: 96da3713-c7ab-41b3-9a9d-397756d9dd07
 translation-type: tm+mt
-source-git-commit: 97dc0b5fb44f5345fd89f3f56bd7861668da9a6e
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '1021'
 ht-degree: 1%
 
 ---
 
+# Adobe Analytics資料的查詢示例
 
-# Adobe Analytics資料的範例查詢
+來自選定Adobe Analytics報告套裝的資料被轉換為符合[!DNL XDM ExperienceEvent]類的資料，並作為資料集被收錄到Adobe Experience Platform。
 
-從選取的Adobe Analytics報表套裝中取得的資料會轉換成符合[!DNL XDM ExperienceEvent]類別的資料，並以資料集的形式匯入Adobe Experience Platform。
-
-本檔案概述Adobe Experience Platform [!DNL Query Service]運用此資料的多種使用案例，包括範例查詢應與Adobe Analytics資料集搭配使用。 如需映射至[!DNL Experience Events]的詳細資訊，請參閱[Analytics欄位對應](../../sources/connectors/adobe-applications/mapping/analytics.md)上的檔案。
+本檔案概述了Adobe Experience Platform[!DNL Query Service]使用此資料的一些使用案例，包括應使用Adobe Analytics資料集的示例查詢。 如需映射至[!DNL Experience Events]的詳細資訊，請參閱[Analytics欄位對應](../../sources/connectors/adobe-applications/mapping/analytics.md)上的檔案。
 
 ## 快速入門
 
-本文檔中的SQL示例要求您編輯SQL，並根據要評估的資料集、eVar、事件或時間範圍填充查詢的預期參數。 在後面的SQL示例中查看`{ }`時提供參數。
+本文檔中的SQL示例要求您編輯SQL，並根據要評估的資料集、eVar、事件或時間範圍填寫查詢的預期參數。 在後面的SQL示例中查看`{ }`時提供參數。
 
 ## 常用的SQL示例
 
-下列範例顯示常用的SQL查詢，以分析您的Adobe Analytics資料。
+以下示例顯示了常用的SQL查詢來分析Adobe Analytics資料。
 
 ### 指定日的每小時訪客計數
 
@@ -124,7 +124,7 @@ ORDER BY Hour;
 
 ### 產品語法
 
-在Adobe Analytics中，自訂產品層級資料可透過特殊設定的變數（稱為銷售變數）來收集。 這些事件是以eVar或自訂事件為基礎。 這些變數與其標準用途的差異在於，它們代表在點擊上找到的每個產品的個別值，而非僅代表點擊的單一值。
+在Adobe Analytics，自訂產品層級資料可透過特殊設定的變數（稱為銷售變數）來收集。 這些事件是以eVar或自訂事件為基礎。 這些變數與其標準用途的差異在於，它們代表在點擊上找到的每個產品的個別值，而非僅代表點擊的單一值。
 
 這些變數稱為產品語法銷售變數。 這可以收集資訊，例如每個產品的「折扣金額」，或客戶搜尋結果中有關產品「頁面位置」的資訊。
 
@@ -152,7 +152,7 @@ productListItems[#]._experience.analytics.event1to100.event#.value
 
 #### 範例查詢
 
-以下是在`productListItems`中傳回銷售eVar和第一個產品事件的範例查詢。
+以下是在`productListItems`中傳回第一個產品之銷售eVar和事件的範例查詢。
 
 ```sql
 SELECT
@@ -166,7 +166,7 @@ WHERE timestamp = to_timestamp('2019-07-23')
 LIMIT 10
 ```
 
-下一個查詢會展開`productListItems`陣列，並傳回每個產品的銷售eVar和事件。 包含`_id`欄位，以顯示與原始點擊的關係。 `_id`值是資料集的唯一主鍵。
+下一個查詢會展開`productListItems`陣列，並傳回每個產品的每個銷售eVar和事件。 包含`_id`欄位，以顯示與原始點擊的關係。 `_id`值是資料集的唯一主鍵。
 
 ```sql
 SELECT
@@ -197,26 +197,26 @@ LIMIT 20
 
 ### 轉換語法
 
-Adobe Analytics中另一種銷售變數類型是轉換語法。 使用產品語法時，值會與產品同時收集，但這要求資料必須顯示在相同的頁面上。 在轉換或與產品相關的感興趣事件之前，有些情形會在頁面上產生資料。 例如，請考慮產品尋找方法的使用案例。
+在Adobe Analytics找到的另一種銷售變數類型是轉換語法。 使用產品語法時，值會與產品同時收集，但這要求資料必須顯示在相同的頁面上。 在轉換或與產品相關的感興趣事件之前，有些情形會在頁面上產生資料。 例如，請考慮產品尋找方法的使用案例。
 
-1. 使用者會執行和內部搜尋「冬季帽」，將啟用「轉換語法」的銷售eVar6設為「內部搜尋：冬季帽」
+1. 使用者執行和內部搜尋「冬季帽」，將啟用「轉換語法」的銷售eVar6設為「內部搜尋：冬季帽」
 2. 使用者按一下「華夫餅」並進入產品詳細資訊頁面。\
    a.Landing here fore a `Product View` event for the &quot;waffle beanie&quot; for $12.99.\
-   b.由於`Product View`已設定為系結事件，因此產品「華夫餅乾」現在會系結至「內部搜尋：冬季帽」的eVar6值。 每當收集「華夫餅」產品時，它都會與「內部搜尋：冬季帽子」相關聯，直到(1)到期設定或(2)設定新的eVar6值，並再次與該產品發生系結事件為止。
+   b.由於`Product View`已設定為系結事件，因此產品「華夫餅」現在會系結至「internal search:winter hat」的eVar6值。 每當收集「華夫餅」產品時，它都會與「內部搜尋：冬季帽子」相關聯，直到(1)到期設定或(2)設定新的eVar6值，並再次與該產品發生系結事件為止。
 3. 使用者將產品新增至購物車，並引發`Cart Add`事件。
-4. 使用者對「夏季襯衫」執行另一個內部搜尋，其中將啟用「轉換語法」的銷售eVar6設定為「內部搜尋：夏季襯衫」
+4. 使用者對「夏季襯衫」執行另一項內部搜尋，其中將啟用「轉換語法」的「銷售eVar6」設定為「內部搜尋：夏季襯衫」
 5. 使用者按一下「sporty t-shirt」並進入產品詳情頁面。\
    a.Landing here for a `Product View` event for &quot;sporty t-shirt for $19.99.\
    b.`Product View`事件仍是我們的系結事件，因此現在產品「sporty t-shirt」已系結至「internal search:summer shirt」的eVar6值，而先前產品「華夫餅」仍系結至「internal search:waffle beanie」的eVar6值。
 6. 使用者將產品新增至購物車，並引發`Cart Add`事件。
 7. 使用者會簽出這兩個產品。
 
-在報告中，訂單、收入、產品檢視和購物車新增將會針對eVar6進行報告，並與綁定產品的活動一致。
+在報告中，訂單、收入、產品檢視和購物車新增將依eVar6報告，並與系結產品的活動一致。
 
 | eVar6（產品尋找方法） | 收入 | 訂單 | 產品檢視 | 購物車新增 |
 | ------------------------------ | ------- | ------ | ------------- | ----- |
 | 內部搜尋：夏季襯衫 | 十九點九九 | 1 | 1 | 1 |
-| 內部搜索：冬季帽 | 12塊9毛9 | 3 | 1 | 3 |
+| 內部搜索：冬季帽 | 12塊9毛9 | 1 | 1 | 1 |
 
 若要進一步瞭解使用轉換語法，請閱讀[使用轉換語法實作eVars的Adobe Analytics檔案](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/evar-merchandising.html?lang=en#implement-using-conversion-variable-syntax)。
 
