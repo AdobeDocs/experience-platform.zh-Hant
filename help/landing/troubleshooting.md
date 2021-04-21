@@ -4,13 +4,13 @@ solution: Experience Platform
 title: Adobe Experience Platform常見問答集與疑難排解指南
 description: 尋找常見問題的解答，以及針對 Experience Platform 中的常見錯誤進行疑難排解的指南。
 landing-page-description: 尋找常見問題的解答，以及針對 Experience Platform 中的常見錯誤進行疑難排解的指南。
-topic: 快速入門
+topic-legacy: getting started
 type: Documentation
 exl-id: 3e6d29aa-2138-421b-8bee-82b632962c01
 translation-type: tm+mt
-source-git-commit: e722d7598a558bcbc5c48d237d394f91c0803352
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '1717'
+source-wordcount: '1715'
 ht-degree: 4%
 
 ---
