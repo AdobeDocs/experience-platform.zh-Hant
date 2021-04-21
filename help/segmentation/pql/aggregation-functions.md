@@ -1,17 +1,17 @@
 ---
-keywords: Experience Platform; home；熱門主題；分段；分段；分段服務；pql;PQL；配置檔案查詢語言；聚合函式；聚合；
+keywords: Experience Platform;home；熱門主題；分段；分段；分段服務；pql;PQL；配置檔案查詢語言；聚合函式；聚合；
 solution: Experience Platform
 title: PQL聚合函式
-topic: developer guide
-description: '聚合函式用於將配置檔案查詢語言(PQL)陣列中的多個值組合在一起，以形成單個摘要值。 '
+topic-legacy: developer guide
+description: 聚合函式用於將配置檔案查詢語言(PQL)陣列中的多個值組合在一起，以形成單個摘要值。
+exl-id: 6c0c0f6d-98c5-4b5d-b440-3e5e18c0f34b
 translation-type: tm+mt
-source-git-commit: b3defc3e33a55855e307ab70b9797d985d5719e3
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '244'
-ht-degree: 5%
+ht-degree: 6%
 
 ---
-
 
 # 聚集函式
 
@@ -21,7 +21,7 @@ ht-degree: 5%
 
 `count`函式返回給定陣列中的元素數。
 
-**Format**
+**格式**
 
 ```sql
 {ARRAY}.count()
