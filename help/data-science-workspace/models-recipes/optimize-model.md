@@ -1,18 +1,18 @@
 ---
-keywords: Experience Platform;optimize;model;Data Science Workspace；熱門主題；模型洞察
+keywords: Experience Platform；優化；模型；資料科學工作區；熱門主題；模型洞察
 solution: Experience Platform
 title: 使用模型洞察框架優化模型
-topic: tutorial
+topic-legacy: tutorial
 type: Tutorial
 description: 模型洞察框架為資料科學家提供資料科學工作區中的工具，讓他們快速且知情地選擇以實驗為基礎的最佳機器學習模型。
+exl-id: f989a3f1-6322-47c6-b7d6-6a828766053f
 translation-type: tm+mt
-source-git-commit: f6cfd691ed772339c888ac34fcbd535360baa116
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '1265'
 ht-degree: 0%
 
 ---
-
 
 # 使用Model Insights框架優化模型
 
