@@ -2,17 +2,17 @@
 keywords: Experience Platform;home；熱門主題；驗證；訪問
 solution: Experience Platform
 title: 驗證和存取Experience PlatformAPI
-topic: tutorial
+topic-legacy: tutorial
 type: Tutorial
-description: '本文件逐步說明如何存取 Adobe Experience Platform 開發人員帳戶，進而呼叫 Experience Platform API。 '
+description: 本文件逐步說明如何存取 Adobe Experience Platform 開發人員帳戶，進而呼叫 Experience Platform API。
+exl-id: dfe8a7be-1b86-4d78-a27e-87e4ed8b3d42
 translation-type: tm+mt
-source-git-commit: ca5c8527b1b54856aa1e762a06ddbe404f30ec42
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '908'
+source-wordcount: '896'
 ht-degree: 4%
 
 ---
-
 
 # 驗證並存取[!DNL Experience Platform] API
 
@@ -40,7 +40,7 @@ ht-degree: 4%
 如果您沒有Adobe ID，則可使用下列步驟建立一個：
 
 1. 前往[Adobe開發人員主控台](https://console.adobe.io)
-2. 選擇&#x200B;**[!UICONTROL 建立新帳戶]**
+2. 選擇 **[!UICONTROL create a new account]**
 3. 完成註冊程式
 
 ## 成為組織[!DNL Experience Platform]的開發人員和使用者
@@ -89,11 +89,11 @@ ht-degree: 4%
 
 前往[Adobe開發人員主控台](https://www.adobe.com/go/devs_console_ui)並使用您的Adobe ID登入。 接下來，請依照[教學課程中描述的步驟，在「Adobe開發人員主控台」檔案中建立空白專案](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/projects-empty.md)。
 
-建立新專案後，請在&#x200B;**專案概述**&#x200B;畫面上選取&#x200B;**[!UICONTROL 新增API]**。
+建立新專案後，請在&#x200B;**專案概述**&#x200B;畫面上選取&#x200B;**[!UICONTROL Add API]**。
 
 ![](images/api-authentication/add-api-button.png)
 
-出現「**新增API**」畫面。 選擇Adobe Experience Platform的產品表徵圖，然後選擇&#x200B;**[!UICONTROL Experience PlatformAPI]**，然後選擇&#x200B;**[!UICONTROL Next]**。
+出現「**新增API**」畫面。 選擇Adobe Experience Platform的產品表徵圖，然後選擇&#x200B;**[!UICONTROL Experience Platform API]**，再選擇&#x200B;**[!UICONTROL Next]**。
 
 ![](images/api-authentication/add-platform-api.png)
 
@@ -122,7 +122,7 @@ ht-degree: 4%
 GET /global/classes
 ```
 
-**請求**
+**要求**
 
 ```SHELL
 curl -X GET https://platform.adobe.io/data/foundation/schemaregistry/global/classes \
