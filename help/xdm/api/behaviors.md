@@ -1,24 +1,24 @@
 ---
-keywords: Experience Platform;home；熱門主題；api;API;XDM;XDM系統；體驗資料模型；體驗資料模型；資料模型；模式註冊；模式註冊；行為；行為；行為；行為；行為；
+keywords: Experience Platform;home；熱門主題；api;API;XDM;XDM系統；體驗資料模型；體驗資料模型；資料模型；模式註冊；模式註冊；行為；行為；行為；行為；
 solution: Experience Platform
 title: 行為API端點
 description: 架構註冊表API中的/behaviors端點可讓您擷取全域容器中的所有可用行為。
-topic: developer guide
+topic-legacy: developer guide
+exl-id: 3b45431f-1d55-4279-8b62-9b27863885ec
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '425'
+source-wordcount: '423'
 ht-degree: 2%
 
 ---
-
 
 # 行為端點
 
 在Experience Data Model(XDM)中，行為會定義模式所描述的資料性質。 每個XDM類都必須引用特定的行為，使用該類的所有方案都將繼承該行為。 在Platform中，幾乎所有的使用案例中，有兩種可用的行為：
 
-* **[!UICONTROL 記錄]**:提供主題屬性的相關資訊。主題可以是組織或個人。
-* **[!UICONTROL 時間系列]**:提供記錄主體直接或間接採取操作時系統的快照。
+* **[!UICONTROL Record]**:提供主題屬性的相關資訊。主題可以是組織或個人。
+* **[!UICONTROL Time-series]**:提供記錄主體直接或間接採取操作時系統的快照。
 
 >[!NOTE]
 >
@@ -30,7 +30,7 @@ ht-degree: 2%
 
 ## 快速入門
 
-本指南中使用的端點是[[!DNL Schema Registry] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/behavior-registry.yaml)的一部分。 在繼續之前，請先閱讀[快速入門手冊](./getting-started.md)，以取得相關檔案的連結、閱讀本檔案中範例API呼叫的指南，以及成功呼叫任何Experience Platform API所需之必要標題的重要資訊。
+本指南中使用的端點是[[!DNL Schema Registry] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/behavior-registry.yaml)的一部分。 在繼續之前，請先閱讀[快速入門手冊](./getting-started.md)，以取得相關檔案的連結、閱讀本檔案中範例API呼叫的指南，以及成功呼叫任何Experience PlatformAPI所需之必要標題的重要資訊。
 
 ## 擷取行為清單{#list}
 
@@ -42,7 +42,7 @@ ht-degree: 2%
 GET /global/behaviors
 ```
 
-**請求**
+**要求**
 
 ```shell
 curl -X GET \
@@ -91,7 +91,7 @@ curl -X GET \
 
 ## 查找行為{#lookup}
 
-您可以在GET請求路徑中提供特定行為的ID至`/behaviors`端點，以尋找特定行為。
+您可在`/behaviors`端點的GET請求路徑中提供其ID，以查找特定行為。
 
 **API格式**
 
@@ -103,7 +103,7 @@ GET /global/behaviors/{BEHAVIOR_ID}
 | --- | --- |
 | `{BEHAVIOR_ID}` | 您要查看之行為的`meta:altId`或URL編碼`$id`。 |
 
-**請求**
+**要求**
 
 以下請求在請求路徑中提供記錄行為的`meta:altId`，以檢索記錄行為的詳細資訊。
 
