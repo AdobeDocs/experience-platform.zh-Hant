@@ -1,17 +1,17 @@
 ---
-keywords: Experience Platform；快速入門；內容ai；商務ai；內容和商務ai
+keywords: Experience Platform；入門；內容ai；商務ai；內容和商務ai
 solution: Experience Platform, Intelligent Services
 title: 內容與商務AI快速入門
-topic: Getting started 
-description: 內容與商務AI運用Adobe I/O API。 若要呼叫Adobe I/O API和I/O Console整合，您必須先完成驗證教學課程。
+topic-legacy: Getting started
+description: 內容與商務AI運用Adobe I/OAPI。 若要呼叫Adobe I/OAPI和I/O控制台整合，您必須先完成驗證教學課程。
+exl-id: e7b0e9bb-a1f1-479c-9e9b-46991f2942e2
 translation-type: tm+mt
-source-git-commit: eb163949f91b0d1e9cc23180bb372b6f94fc951f
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '596'
+source-wordcount: '591'
 ht-degree: 0%
 
 ---
-
 
 # 內容與商務AI快速入門
 
@@ -19,13 +19,13 @@ ht-degree: 0%
 >
 >內容與商務AI為測試版。 說明檔案可能會有所變更。
 
-[!DNL Content and Commerce AI] 運用Adobe I/O API。若要呼叫Adobe I/O API和I/O Console整合，您必須先完成[驗證教學課程](https://www.adobe.com/go/platform-api-authentication-en)。
+[!DNL Content and Commerce AI] 運用Adobe I/OAPI。為了調用Adobe I/OAPI和I/O控制台整合，您必須先完成[驗證教程](https://www.adobe.com/go/platform-api-authentication-en)。
 
-不過，當您進入「新增API」步驟時，API會位於Experience Cloud下方，而非Adobe Experience Platform，如下列螢幕擷取所示：****
+但是，當您進入「新增API」步驟時，API會位於「Experience Cloud」下，而非「Adobe Experience Platform」下，如下列螢幕擷取所示：****
 
 ![新增內容與商務AI](./images/add-api.png)
 
-完成驗證教學課程後，所有Adobe I/O API呼叫中每個必要標題的值都會顯示，如下所示：
+完成驗證教學課程後，將提供所有Adobe I/OAPI呼叫中每個必要標題的值，如下所示：
 
 - `Authorization: Bearer {ACCESS_TOKEN}`
 - `x-api-key: {API_KEY}`
@@ -33,7 +33,7 @@ ht-degree: 0%
 
 ## 建立郵遞員環境（可選）
 
-在Adobe Developer Console中設定專案和API後，您就可以選擇下載Postman的環境檔案。 在專案左側導軌的&#x200B;**[!UICONTROL API]**&#x200B;下，選取「內容與商務AI」。 ****&#x200B;隨即開啟新標籤，其中包含標示為&quot;[!DNL Try it out]&quot;的卡片。 選擇&#x200B;**Download for Postman**&#x200B;以下載用於配置郵遞員環境的JSON檔案。
+在Adobe開發人員主控台中設定專案和API後，您就可以選擇下載Postman的環境檔案。 在項目的左側邊欄&#x200B;**[!UICONTROL APIs]**&#x200B;下，選擇&#x200B;**[!UICONTROL Content and Commerce AI]**。 隨即開啟新標籤，其中包含標示為&quot;[!DNL Try it out]&quot;的卡片。 選擇&#x200B;**Download for Postman**&#x200B;以下載用於配置郵遞員環境的JSON檔案。
 
 ![下載為postman](./images/add-to-postman.png)
 
@@ -63,7 +63,7 @@ ht-degree: 0%
 
 ![示例](./images/select-environment.png)
 
-有關使用Postman使用Adobe I/O API的詳細資訊，請參閱[上的「使用Postman進行Adobe I/O](https://medium.com/adobetech/using-postman-for-jwt-authentication-on-adobe-i-o-7573428ffe7f)的JWT驗證的中篇貼文」。
+有關使用Postman使用Adobe I/OAPI的詳細資訊，請參閱[上的「使用Postman進行Adobe I/O](https://medium.com/adobetech/using-postman-for-jwt-authentication-on-adobe-i-o-7573428ffe7f)的JWT驗證的中」貼文。
 
 ## 讀取範例API呼叫
 
@@ -75,4 +75,4 @@ ht-degree: 0%
 
 若要進一步瞭解擴充性架構，請先閱讀extensibility](https://docs.adobe.com/content/help/en/asset-compute/using/extend/understand-extensibility.html)檔案的[簡介。 本檔案概述必要條件和布建需求。
 
-若要進一步瞭解如何為[!DNL Content and Commerce AI]設定環境，請先閱讀[設定開發人員環境](https://docs.adobe.com/content/help/en/asset-compute/using/extend/setup-environment.html)的指南。 本檔案提供設定指示，可讓您針對資產計算服務進行開發。
+若要進一步瞭解如何為[!DNL Content and Commerce AI]設定環境，請先閱讀[設定開發人員環境](https://docs.adobe.com/content/help/en/asset-compute/using/extend/setup-environment.html)的指南。 本檔案提供設定指示，讓您針對Asset compute服務進行開發。
