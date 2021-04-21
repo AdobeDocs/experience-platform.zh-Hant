@@ -1,17 +1,17 @@
 ---
-keywords: Experience Platform; home；熱門主題；分段；分段；分段服務；pql;PQL；配置檔案查詢語言；邏輯量詞；邏輯量詞；
+keywords: Experience Platform;home；熱門主題；分段；分段；分段服務；pql;PQL；配置檔案查詢語言；邏輯量詞；邏輯量詞；
 solution: Experience Platform
 title: PQL邏輯量詞
-topic: developer guide
+topic-legacy: developer guide
 description: 邏輯量詞可用於在配置檔案查詢語言(PQL)中用陣列來斷言條件。
+exl-id: 8b1c9560-02e2-46e0-9646-c64dd4a15df1
 translation-type: tm+mt
-source-git-commit: b3defc3e33a55855e307ab70b9797d985d5719e3
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '219'
 ht-degree: 4%
 
 ---
-
 
 # 邏輯量詞函式
 
@@ -21,7 +21,7 @@ ht-degree: 4%
 
 `exists`函式確定在滿足所提供條件的陣列中是否存在項。
 
-**Format**
+**格式**
 
 ```sql
 exists {VARIABLE} from {EXPRESSION} where {CONDITION}
