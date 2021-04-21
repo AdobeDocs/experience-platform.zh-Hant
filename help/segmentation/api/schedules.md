@@ -1,17 +1,17 @@
 ---
-keywords: Experience Platform;home；熱門主題；Segmentation;Segmentation;Segmentation Service;Schedules;schedule;api;API;
+keywords: Experience Platform; home；熱門主題；分段；分段；分段服務；調度；計畫；api;API;
 solution: Experience Platform
 title: 排程API端點
-topic: developer guide
+topic-legacy: developer guide
 description: 排程是一種工具，可用來每天自動執行一次批次分段工作。
+exl-id: 92477add-2e7d-4d7b-bd81-47d340998ff1
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '1203'
 ht-degree: 3%
 
 ---
-
 
 # 計畫端點
 
@@ -27,7 +27,7 @@ ht-degree: 3%
 
 **API格式**
 
-`/config/schedules`端點支援數個查詢參數，以協助篩選結果。 雖然這些參數是可選的，但強烈建議使用它們，以幫助降低昂貴的開銷。 在沒有參數的情況下呼叫此端點將檢索組織可用的所有計畫。 可以包括多個參數，用&amp;符號(`&`)分隔。
+`/config/schedules`端點支援數個查詢參數，以協助篩選結果。 雖然這些參數是可選的，但強烈建議使用這些參數以幫助降低昂貴的開銷。 在沒有參數的情況下呼叫此端點將檢索組織可用的所有計畫。 可以包括多個參數，用&amp;符號(`&`)分隔。
 
 ```http
 GET /config/schedules
@@ -40,7 +40,7 @@ GET /config/schedules?limit={LIMIT}
 | `{START}` | 指定偏移的起始頁。 依預設，此值為0。 |
 | `{LIMIT}` | 指定返回的調度數。 依預設，此值為100。 |
 
-**請求**
+**要求**
 
 下列請求將擷取IMS組織中張貼的最後十個排程。
 
@@ -106,7 +106,7 @@ curl -X GET https://platform.adobe.io/data/core/ups/config/schedules?limit=10 \
 
 ## 建立新計畫{#create}
 
-您可以通過向`/config/schedules`端點發出POST請求來建立新計畫。
+您可以通過向`/config/schedules`端點發出POST請求來建立新調度。
 
 **API格式**
 
@@ -114,7 +114,7 @@ curl -X GET https://platform.adobe.io/data/core/ups/config/schedules?limit=10 \
 POST /config/schedules
 ```
 
-**請求**
+**要求**
 
 ```shell
 curl -X POST https://platform.adobe.io/data/core/ups/config/schedules \
@@ -143,8 +143,8 @@ curl -X POST https://platform.adobe.io/data/core/ups/config/schedules \
 | `type` | **必填。** 作業的字串類型。支援的兩種類型為「batch_segmentation」和「export」。 |
 | `properties` | **必填。** 包含與調度相關的其他屬性的對象。 |
 | `properties.segments` | **等於「 `type` batch_segmentation」時為必要項目。** 使用 `["*"]` 可確保包含所有區段。 |
-| `schedule` | *選填.* 包含作業計畫的字串。作業只能排程為每天執行一次，這表示您無法排程作業在24小時期間執行多次。 有關cron計畫的更多資訊，請閱讀[cron表達式格式](http://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html)文檔。 在此範例中，&quot;0 0 1 * *&quot;表示此排程將在每月首日的午夜執行。 <br><br>如果未提供此字串，系統會自動產生排程。 |
-| `state` | *選填.* 包含計畫狀態的字串。兩個支援的狀態是「作用中」和「非作用中」。 依預設，狀態會設為「非作用中」。 |
+| `schedule` | *選擇性.* 包含作業計畫的字串。作業只能排程為每天執行一次，這表示您無法排程作業在24小時期間執行多次。 有關cron計畫的更多資訊，請閱讀[cron表達式格式](http://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html)文檔。 在此範例中，&quot;0 0 1 * *&quot;表示此排程將在每月首日的午夜執行。 <br><br>如果未提供此字串，系統會自動產生排程。 |
+| `state` | *選擇性.* 包含計畫狀態的字串。兩個支援的狀態是「作用中」和「非作用中」。 依預設，狀態會設為「非作用中」。 |
 
 **回應**
 
@@ -176,7 +176,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/config/schedules \
 
 ## 檢索特定計畫{#get}
 
-通過向`/config/schedules`端點發出GET請求，並在請求路徑中提供要檢索的計畫的ID，可以檢索有關特定計畫的詳細資訊。
+通過向`/config/schedules`端點發出GET請求，並在請求路徑中提供要檢索的調度的ID，可以檢索有關特定調度的詳細資訊。
 
 **API格式**
 
@@ -188,7 +188,7 @@ GET /config/schedules/{SCHEDULE_ID}
 | --------- | ----------- |
 | `{SCHEDULE_ID}` | 您要擷取之排程的`id`值。 |
 
-**請求**
+**要求**
 
 ```shell
 curl -X GET https://platform.adobe.io/data/core/ups/config/schedules/4e538382-dbd8-449e-988a-4ac639ebe72b
@@ -237,9 +237,9 @@ curl -X GET https://platform.adobe.io/data/core/ups/config/schedules/4e538382-db
 
 ## 更新特定計畫{#update}的詳細資料
 
-通過向`/config/schedules`端點發出PATCH請求，並提供您嘗試在請求路徑中更新的計畫的ID，可以更新特定計畫。
+您可以通過向`/config/schedules`端點發出PATCH請求並提供您嘗試在請求路徑中更新的計畫的ID來更新特定計畫。
 
-PATCH請求允許您針對單個計畫更新[state](#update-state)或[cron計畫](#update-schedule)。
+PATCH請求允許您更新個別計畫的[state](#update-state)或[cron計畫](#update-schedule)。
 
 ### 更新計畫狀態{#update-state}
 
@@ -255,7 +255,7 @@ PATCH /config/schedules/{SCHEDULE_ID}
 | --------- | ----------- |
 | `{SCHEDULE_ID}` | 您要更新的計畫的`id`值。 |
 
-**請求**
+**要求**
 
 ```shell
 curl -X DELETE https://platform.adobe.io/data/core/ups/config/schedules/4e538382-dbd8-449e-988a-4ac639ebe72b \
@@ -296,7 +296,7 @@ PATCH /config/schedules/{SCHEDULE_ID}
 | --------- | ----------- |
 | `{SCHEDULE_ID}` | 您要更新的計畫的`id`值。 |
 
-**請求**
+**要求**
 
 ```shell
 curl -X PATCH https://platform.adobe.io/data/core/ups/config/schedules/4e538382-dbd8-449e-988a-4ac639ebe72b \
@@ -317,7 +317,7 @@ curl -X PATCH https://platform.adobe.io/data/core/ups/config/schedules/4e538382-
 | 屬性 | 說明 |
 | -------- | ----------- |
 | `path` | 您要更新的值的路徑。 在這種情況下，由於您正在更新cron計畫，因此需要將`path`的值設定為`/schedule`。 |
-| `value` | cron計畫的更新值。 此值必須以cron計畫的形式。 在此範例中，排程將在每月的第二天執行。 |
+| `value` | cron計畫的更新值。 此值必須以cron排程的形式。 在此範例中，排程將在每月的第二天執行。 |
 
 **回應**
 
@@ -325,7 +325,7 @@ curl -X PATCH https://platform.adobe.io/data/core/ups/config/schedules/4e538382-
 
 ## 刪除特定計畫
 
-您可以向`/config/schedules`端點發出DELETE請求並在請求路徑中提供要刪除的計畫的ID，以請求刪除特定計畫。
+您可以向`/config/schedules`端點發出DELETE請求，並在請求路徑中提供要刪除的計畫ID，以請求刪除特定計畫。
 
 **API格式**
 
@@ -337,7 +337,7 @@ DELETE /config/schedules/{SCHEDULE_ID}
 | --------- | ----------- |
 | `{SCHEDULE_ID}` | 要刪除的計畫的`id`值。 |
 
-**請求**
+**要求**
 
 ```shell
 curl -X DELETE https://platform.adobe.io/data/core/ups/config/schedules/4e538382-dbd8-449e-988a-4ac639ebe72b \
