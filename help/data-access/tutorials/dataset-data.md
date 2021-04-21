@@ -1,18 +1,18 @@
 ---
-keywords: Experience Platform; home；熱門主題；資料存取；資料存取api；查詢資料存取
+keywords: Experience Platform;home；熱門主題；資料存取；資料存取api；查詢資料存取
 solution: Experience Platform
 title: 使用資料存取API檢視資料集資料
-topic: tutorial
+topic-legacy: tutorial
 type: Tutorial
-description: 瞭解如何使用Adobe Experience Platform中的資料存取API來尋找、存取及下載儲存在資料集中的資料。 您也將會瞭解資料存取API的一些獨特功能，例如分頁和部分下載。
+description: 瞭解如何使用Adobe Experience Platform的Data Access API來尋找、存取和下載儲存在資料集中的資料。 您也將會瞭解資料存取API的一些獨特功能，例如分頁和部分下載。
+exl-id: 1c1e5549-d085-41d5-b2c8-990876000f08
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '1398'
 ht-degree: 2%
 
 ---
-
 
 # 使用[!DNL Data Access] API檢視資料集資料
 
@@ -74,7 +74,7 @@ ht-degree: 2%
 GET /batches
 ```
 
-**請求**
+**要求**
 
 ```shell
 curl -X GET 'https://platform.adobe.io/data/foundation/catalog/batches/' \
@@ -123,7 +123,7 @@ GET /batches?createdAfter={START_TIMESTAMP}&dataSet={DATASET_ID}&sort={SORT_BY}
 | `{DATASET_ID}` | 資料集識別碼。 |
 | `{SORT_BY}` | 依提供的值排序回應。 例如，`desc:created`會依建立日期以遞減順序排序物件。 |
 
-**請求**
+**要求**
 
 ```shell
 curl -X GET 'https://platform.adobe.io/data/foundation/catalog/batches?createdAfter=1521053542579&dataSet=5cd9146b21dae914b71f654f&orderBy=desc:created' \
@@ -209,7 +209,7 @@ GET /batches/{BATCH_ID}/files
 | -------- | ----------- |
 | `{BATCH_ID}` | 您嘗試存取之批次的批次識別碼。 |
 
-**請求**
+**要求**
 
 ```shell
 curl -X GET 'https://platform.adobe.io/data/foundation/export/batches/5c6f332168966814cd81d3d3/files' \
@@ -266,7 +266,7 @@ GET /files/{FILE_ID}
 | -------- | ----------- |
 | `{FILE_ID}` | 您要存取之檔案的識別碼。 |
 
-**請求**
+**要求**
 
 ```shell
 curl -X GET 'https://platform.adobe.io/data/foundation/export/files/8dcedb36-1cb2-4496-9a38-7b2041114b56-1' \
@@ -369,7 +369,7 @@ HEAD /files/{FILE_ID}?path={FILE_NAME}
 | `{FILE_ID}` | 檔案的識別碼。 |
 | `{FILE_NAME}` | 檔案名稱（例如profiles.parce） |
 
-**請求**
+**要求**
 
 ```shell
 curl -I 'https://platform.adobe.io/data/foundation/export/files/8dcedb36-1cb2-4496-9a38-7b2041114b56-1?path=profiles.parquet' \
@@ -400,7 +400,7 @@ GET /files/{FILE_ID}?path={FILE_NAME}
 | `{FILE_ID}` | 檔案的識別碼。 |
 | `{FILE_NAME}` | 檔案名稱（例如profiles.parce）。 |
 
-**請求**
+**要求**
 
 ```shell
 curl -X GET 'https://platform.adobe.io/data/foundation/export/files/8dcedb36-1cb2-4496-9a38-7b2041114b56-1?path=profiles.parquet' \
@@ -431,7 +431,7 @@ GET /files/{FILE_ID}?path={FILE_NAME}
 | `{FILE_ID} ` | 檔案的識別碼。 |
 | `{FILE_NAME}` | 檔案名稱（例如profiles.parce） |
 
-**請求**
+**要求**
 
 ```shell
 curl -X GET 'https://platform.adobe.io/data/foundation/export/files/8dcedb36-1cb2-4496-9a38-7b2041114b56-1?path=profiles.parquet' \
@@ -476,7 +476,7 @@ GET /batches/{BATCH_ID}/files?start={OFFSET}&limit={LIMIT}
 | `{OFFSET}` | 啟動結果陣列的指定索引（例如，start=0） |
 | `{LIMIT}` | 控制在結果陣列中傳回多少結果（例如，limit=1） |
 
-**請求**
+**要求**
 
 ```shell
 curl -X GET 'https://platform.adobe.io/data/foundation/export/batches/5c102cac7c7ebc14cd6b098e/files?start=0&limit=1' \
