@@ -1,16 +1,16 @@
 ---
-keywords: Experience Platform；分段；分段服務；疑難排解；API;segment；分段；分段搜索；分段搜索；
+keywords: Experience Platform；分段；分段服務；故障排除； API;seg;segment；分段；搜索；分段搜索；
 title: 區段搜尋API端點
-topic: guide
-description: 在Adobe Experience Platform Segmentation Service API中，「區段搜尋」用於搜尋各資料來源所包含的欄位，並近乎即時地傳回這些欄位。 本指南提供相關資訊，以協助您進一步瞭解區段搜尋，並包含使用API執行基本動作的範例API呼叫。
+topic-legacy: guide
+description: 在Adobe Experience Platform區段服務API中，區段搜尋用於搜尋各資料來源所包含的欄位，並幾乎即時傳回。 本指南提供相關資訊，以協助您進一步瞭解區段搜尋，並包含使用API執行基本動作的範例API呼叫。
+exl-id: bcafbed7-e4ae-49c0-a8ba-7845d8ad663b
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '1201'
 ht-degree: 2%
 
 ---
-
 
 # 區段搜尋端點
 
@@ -42,7 +42,7 @@ GET /search/namespaces?schema.name={SCHEMA}&s={SEARCH_TERM}
 | `schema.name={SCHEMA}` | **（必要）** 其中{SCHEMA}表示與搜索對象關聯的方案類值。目前僅支援`_xdm.context.segmentdefinition`。 |
 | `s={SEARCH_TERM}` | *（可選）* 其中{SEARCH_TERM}代表符合Microsoft實作的 [Lucene搜尋語法的查詢](https://docs.microsoft.com/en-us/azure/search/query-lucene-syntax)。如果未指定搜尋詞，則會傳回與`schema.name`相關的所有記錄。 本檔案[附錄](#appendix)中提供更詳細的說明。 |
 
-**請求**
+**要求**
 
 ```shell
 curl -X GET \
@@ -107,7 +107,7 @@ GET /search/entities?schema.name={SCHEMA}&namespace={NAMESPACE}&entityId={ENTITY
 | `page={PAGE}` | *（可選）* 其中{PAGE}代表用於為所搜尋查詢結果編頁的頁碼。請注意，頁碼開始於&#x200B;**0**。 |
 
 
-**請求**
+**要求**
 
 ```shell
 curl -X GET \
@@ -174,7 +174,7 @@ GET /search/taxonomy?schema.name={SCHEMA}&namespace={NAMESPACE}&entityId={ENTITY
 | `namespace={NAMESPACE}` | **（必要）** 其中{NAMESPACE}包含您要在其中搜尋的命名空間。 |
 | `entityId={ENTITY_ID}` | **（必要）** 您要取得相關結構資訊的搜尋物件ID，以{ENTITY_ID}指定。 |
 
-**請求**
+**要求**
 
 ```shell
 curl -X GET \
@@ -225,7 +225,7 @@ curl -X GET \
 
 ## 附錄 {#appendix}
 
-以下各節提供搜尋詞如何運作的其他資訊。 搜索查詢的編寫方式如下：`s={FieldName}:{SearchExpression}`。 因此，例如，若要搜尋名為AAM或[!DNL Platform]的區段，請使用下列搜尋查詢：`s=segmentName:AAM%20OR%20Platform`。
+以下各節提供搜尋詞如何運作的其他資訊。 搜索查詢的編寫方式如下：`s={FieldName}:{SearchExpression}`。 因此，例如，要搜索名為或[!DNL Platform]AAM的段，您應使用以下搜索查詢：`s=segmentName:AAM%20OR%20Platform`。
 
 > !![NOTE] 為獲得最佳實務，搜尋運算式應採用HTML編碼，如上例所示。
 
