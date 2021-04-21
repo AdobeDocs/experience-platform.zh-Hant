@@ -1,18 +1,18 @@
 ---
-keywords: Experience Platform;Score a model;Data Science Workspace；熱門主題；sensei機器學習api
+keywords: Experience Platform；對模型評分；資料科學工作區；熱門主題；敏感機器學習api
 solution: Experience Platform
 title: 使用Sensei機器學習API為模型評分
-topic: tutorial
+topic-legacy: tutorial
 type: Tutorial
 description: 本教學課程將示範如何運用Sensei機器學習API來建立實驗和實驗執行。
+exl-id: 202c63b0-86d8-4a82-8ec8-d144a8911d08
 translation-type: tm+mt
-source-git-commit: f6cfd691ed772339c888ac34fcbd535360baa116
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '549'
 ht-degree: 1%
 
 ---
-
 
 # 使用[!DNL Sensei Machine Learning API]對模型評分
 
@@ -24,7 +24,7 @@ ht-degree: 1%
 
 以下是建立實驗的範例，該實驗將從`startTime`開始每20分鐘執行一次，直到`endTime`為止。
 
-**請求**
+**要求**
 
 ```Shell
 curl -X POST \
@@ -38,7 +38,7 @@ curl -X POST \
 
 `{IMS_ORG}`:您的IMS組織認證可在您獨特的Adobe Experience Platform整合中找到。\
 `{ACCESS_TOKEN}`:驗證後提供的您特定的載體Token值。\
-`{API_KEY}`:您獨特的Adobe Experience Platform整合中提供您的特定API金鑰價值。\
+`{API_KEY}`:您在獨特的Adobe Experience Platform整合中找到的特定API金鑰值。\
 `{JSON_PAYLOAD}`:要傳送的Enperity Run物件。我們在教學課程中使用的範例如下所示：
 
 ```JSON
@@ -110,9 +110,9 @@ curl -X POST \
 
 ### 建立實驗執行以進行計分
 
-現在，有了經過訓練的模型，我們可以建立一個「實驗運行」來進行計分。 `modelId`參數的值是上述GET Model請求中傳回的`id`參數。
+現在，有了經過訓練的模型，我們可以建立一個「實驗運行」來進行計分。 `modelId`參數的值是上述「GET模型」請求中傳回的`id`參數。
 
-**請求**
+**要求**
 
 ```Shell
 curl -X POST \
@@ -126,7 +126,7 @@ curl -X POST \
 
 `{IMS_ORG}`:您的IMS組織認證可在您獨特的Adobe Experience Platform整合中找到。\
 `{ACCESS_TOKEN}`:驗證後提供的您特定的載體Token值。\
-`{API_KEY}`:您獨特的Adobe Experience Platform整合中提供您的特定API金鑰價值。\
+`{API_KEY}`:您在獨特的Adobe Experience Platform整合中找到的特定API金鑰值。\
 `{EXPERIMENT_ID}`:與您要定位的「實驗」對應的ID。這可在建立實驗時的回應中找到。\
 `{JSON_PAYLOAD}`:要張貼的資料。我們在教學課程中使用的範例如下：
 
@@ -178,7 +178,7 @@ curl -X POST \
 
 若要取得排程實驗的實驗執行，查詢如下所示：
 
-**請求**
+**要求**
 
 ```Shell
 curl -X GET \
@@ -219,9 +219,9 @@ curl -X GET \
 
 ### 停止和刪除排程的實驗
 
-如果要在計畫實驗的`endTime`之前停止執行，則可以通過向`{EXPERIMENT_ID}`查詢DELETE請求來完成此操作
+如果要在計畫實驗的`endTime`之前停止執行，可以通過查詢`{EXPERIMENT_ID}`的DELETE請求來完成此操作
 
-**請求**
+**要求**
 
 ```Shell
 curl -X DELETE \
