@@ -2,16 +2,16 @@
 keywords: Experience Platform;home；熱門主題；模式；Schema;enum;mixin;Mixin;Mixin;Mixins；資料類型；資料類型；資料類型；資料類型；主標識；主標識；XDM個人配置檔案；XDM欄位；enum;Experience事件；XDM ExperienceEvent;experienceevent;XEVENTdm Experienceevent；模式設計；class;Class;Classes；資料類型；資料類型；Datatype;schemas;identityMap;identity map;Schema design;map;union模式；union
 solution: Experience Platform
 title: 架構構成基礎
-topic: overview
+topic-legacy: overview
 description: 本檔案介紹Experience Data Model(XDM)架構，以及組合要在Adobe Experience Platform使用的架構的構建區塊、原則和最佳實務。
+exl-id: d449eb01-bc60-4f5e-8d6f-ab4617878f7e
 translation-type: tm+mt
-source-git-commit: ae2c5f9fa4e732fefe55a8536894844986aea1e2
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '3461'
+source-wordcount: '3460'
 ht-degree: 0%
 
 ---
-
 
 # 架構構成基礎
 
