@@ -1,21 +1,21 @@
 ---
-keywords: Experience Platform; home；熱門主題；查詢服務；查詢服務；spark sql; Spark sql; spark sql函式；函式；
+keywords: Experience Platform; home；熱門主題；查詢服務；查詢服務；spark sql;Spark sql;spark sql函式；函式；
 solution: Experience Platform
 title: 查詢服務中的Spark SQL函式
-topic: spark sql functions
+topic-legacy: spark sql functions
 description: 本檔案包含有關可擴充SQL功能的Spark SQL函式的資訊。
+exl-id: 59e6d82b-3317-456d-8c56-3efd5978433a
 translation-type: tm+mt
-source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '3893'
 ht-degree: 1%
 
 ---
 
-
 # [!DNL Spark] SQL函式
 
-Adobe Experience Platform Query Service提供數種內建的Spark SQL函式，以擴充SQL功能。 本檔案列出查詢服務支援的Spark SQL函式。
+Adobe Experience Platform查詢服務提供數種內建的Spark SQL函式，以擴充SQL功能。 本檔案列出查詢服務支援的Spark SQL函式。
 
 有關函式的更多詳細資訊，包括其語法、用法和示例，請閱讀[Spark SQL函式文檔](https://spark.apache.org/docs/latest/api/sql/index.html)。
 
