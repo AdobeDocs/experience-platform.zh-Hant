@@ -3,12 +3,12 @@ keywords: Experience Platform;home；熱門主題；api;API;XDM;XDM系統；體�
 solution: Experience Platform
 title: Mixins API端點
 description: 架構註冊表API中的/mixins端點可讓您以程式設計方式管理體驗應用程式中的XDM混合。
-topic: developer guide
+topic-legacy: developer guide
 exl-id: 93ba2fe3-0277-4c06-acf6-f236cd33252e
 translation-type: tm+mt
-source-git-commit: 610ce5c6dca5e7375b941e7d6f550382da10ca27
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '1136'
+source-wordcount: '1134'
 ht-degree: 2%
 
 ---
@@ -40,7 +40,7 @@ GET /{CONTAINER_ID}/mixins?{QUERY_PARAMS}
 | `{CONTAINER_ID}` | 您要從以下位置擷取混合的容器：`global`代表Adobe建立的混音，或`tenant`代表您組織擁有的混音。 |
 | `{QUERY_PARAMS}` | 可選查詢參數，以篩選結果。 有關可用參數的清單，請參見[附錄文檔](./appendix.md#query)。 |
 
-**請求**
+**要求**
 
 下列請求會從`tenant`容器中擷取混音清單，使用`orderby`查詢參數依其`title`屬性來排序混音。
 
@@ -122,7 +122,7 @@ GET /{CONTAINER_ID}/mixins/{MIXIN_ID}
 | `{CONTAINER_ID}` | 儲存您要擷取之混合的容器：`global`代表Adobe建立的混音，或`tenant`代表您組織擁有的混音。 |
 | `{MIXIN_ID}` | 您要尋找的混音的`meta:altId`或URL編碼`$id`。 |
 
-**請求**
+**要求**
 
 以下請求通過路徑中提供的`meta:altId`值檢索混音。
 
@@ -219,7 +219,7 @@ curl -X GET \
 POST /tenant/mixins
 ```
 
-**請求**
+**要求**
 
 定義新混音時，它必須包含`meta:intendedToExtend`屬性，列出混音與之相容的類的`$id`。 在此範例中，mixin與先前定義的`Property`類別相容。 自訂欄位必須巢狀內嵌在`_{TENANT_ID}`下（如範例所示），以避免與類別和其他混音所提供的類似欄位產生衝突。
 
@@ -398,7 +398,7 @@ PUT /tenant/mixins/{MIXIN_ID}
 | --- | --- |
 | `{MIXIN_ID}` | 您要重寫的混音的`meta:altId`或URL編碼`$id`。 |
 
-**請求**
+**要求**
 
 下列請求會重新寫入現有的混音，並新增新的`propertyCountry`欄位。
 
@@ -581,7 +581,7 @@ PATCH /tenant/mixin/{MIXIN_ID}
 | --- | --- |
 | `{MIXIN_ID}` | 您要更新的混音的URL編碼`$id` URI或`meta:altId`。 |
 
-**請求**
+**要求**
 
 以下範例請求會更新現有混音的`description`，並新增新的`propertyCity`欄位。
 
@@ -718,7 +718,7 @@ DELETE /tenant/mixins/{MIXIN_ID}
 | --- | --- |
 | `{MIXIN_ID}` | 您要刪除之混音的URL編碼`$id` URI或`meta:altId`。 |
 
-**請求**
+**要求**
 
 ```shell
 curl -X DELETE \
