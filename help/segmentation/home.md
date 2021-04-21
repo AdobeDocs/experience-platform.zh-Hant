@@ -2,16 +2,16 @@
 keywords: Experience Platform；首頁；熱門主題；分段；分段；分段服務；分段；分段；分段；分段；分段；分段；分段；分段；分段；分段；分段；分段
 solution: Experience Platform
 title: 區段服務概觀
-topic: overview
+topic-legacy: overview
 description: 瞭解Adobe Experience Platform細分服務及其在平台生態系統中的作用。
+exl-id: 2c18a806-88ed-4659-bdfd-2377f5a09a1a
 translation-type: tm+mt
-source-git-commit: eff833f20eba4e51579a43fbb98c1e2333e326ef
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '1581'
+source-wordcount: '1580'
 ht-degree: 0%
 
 ---
-
 
 # [!DNL Segmentation Service] 概觀
 
