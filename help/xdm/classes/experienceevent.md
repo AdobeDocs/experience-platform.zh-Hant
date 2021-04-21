@@ -1,17 +1,17 @@
 ---
-keywords: Experience Platform;home；熱門主題；架構；架構；XDM；個人配置檔案；欄位；架構；Schemas;identityMap;IdentityMap;Schema設計；Map;Union架構；union
+keywords: Experience Platform;home；熱門主題；模式；模式；XDM；個人配置檔案；欄位；模式；模式；標識圖；標識圖；標識圖；模式設計；映射；聯合模式；聯合模式
 solution: Experience Platform
 title: XDM ExperienceEvent類別
-topic: overview
+topic-legacy: overview
 description: 本檔案提供XDM ExperienceEvent類別的概觀。
+exl-id: a8e59413-b52f-4ea5-867b-8d81088a3321
 translation-type: tm+mt
-source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '820'
+source-wordcount: '812'
 ht-degree: 1%
 
 ---
-
 
 # [!DNL XDM ExperienceEvent] class
 
@@ -37,14 +37,14 @@ ht-degree: 1%
 >
 >幾個混音的名字已經改變。 如需詳細資訊，請參閱[mixin name updates](../mixins/name-updates.md)上的檔案。
 
-Adobe提供數種標準混音，以搭配[!DNL XDM ExperienceEvent]類別使用。 以下是類別中常用混合詞的清單：
+Adobe提供數種標準混音，以便與[!DNL XDM ExperienceEvent]類一起使用。 以下是類別中常用混合詞的清單：
 
-* [[!UICONTROL 用戶ID詳細資訊]](../mixins/event/enduserids.md)
-* [[!UICONTROL 環境詳細資訊]](../mixins/event/environment-details.md)
+* [[!UICONTROL End User ID Details]](../mixins/event/enduserids.md)
+* [[!UICONTROL Environment Details]](../mixins/event/environment-details.md)
 
 ## 附錄
 
-下節包含有關[!UICONTROL XDM ExperienceEvent]類別的其他資訊。
+以下部分包含有關[!UICONTROL XDM ExperienceEvent]類別的其他資訊。
 
 ### xdm:eventType {#eventType}的接受值
 
