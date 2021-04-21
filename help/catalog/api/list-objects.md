@@ -1,17 +1,17 @@
 ---
-keywords: Experience Platform;home；熱門主題；filter;Filter;filter data;filter data
+keywords: Experience Platform;home；熱門主題；filter;Filter;filter data;filter data;filter data
 solution: Experience Platform
 title: 清單目錄對象
-topic: developer guide
+topic-legacy: developer guide
 description: 您可以透過單一API呼叫擷取特定類型所有可用物件的清單，最佳實務是納入限制回應大小的篩選。
+exl-id: 2c65e2bc-4ddd-445a-a52d-6ceb1153ccea
 translation-type: tm+mt
-source-git-commit: a1103bfbf79f9c87bac5b113c01386a6fb8950e7
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '242'
 ht-degree: 1%
 
 ---
-
 
 # 清單目錄對象
 
@@ -29,7 +29,7 @@ GET /{OBJECT_TYPE}?{FILTER}={VALUE}&{FILTER_2}={VALUE}
 | `{OBJECT_TYPE}` | 要列出的[!DNL Catalog]對象類型。 有效對象包括： <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
 | `{FILTER}` | 用於篩選在回應中傳回結果的查詢參數。 多個參數以&amp;符號(`&`)分隔。 如需詳細資訊，請參閱[篩選目錄資料](filter-data.md)指南。 |
 
-**請求**
+**要求**
 
 以下範例請求會擷取資料集清單，其中`limit`篩選器會減少對五個結果的回應，而`properties`篩選器則會限制每個資料集顯示的屬性。
 
