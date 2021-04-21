@@ -1,18 +1,18 @@
 ---
-keywords: Experience Platform;home;popular topics;map csv;map csv file;map csv file to xdm;map csv to xdm;ui guide;
+keywords: Experience Platform；首頁；熱門主題；map csv;map csv;map csv file;map csv file to xdm;map csv to xdm;ui指南；
 solution: Experience Platform
 title: 將CSV檔案對應至XDM架構
-topic: tutorial
+topic-legacy: tutorial
 type: Tutorial
-description: 本教學課程涵蓋如何使用Adobe Experience Platform使用者介面，將CSV檔案對應至XDM架構。
+description: 本教學課程介紹如何使用Adobe Experience Platform用戶介面將CSV檔案映射到XDM架構。
+exl-id: 15f55562-269d-421d-ad3a-5c10fb8f109c
 translation-type: tm+mt
-source-git-commit: 089a4d517476b614521d1db4718966e3ebb13064
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '882'
+source-wordcount: '828'
 ht-degree: 1%
 
 ---
-
 
 # 將CSV檔案對應至XDM架構
 
@@ -33,41 +33,41 @@ ht-degree: 1%
 
 登入[[!DNL Adobe Experience Platform]](https://platform.adobe.com)，然後從左側導覽列選擇&#x200B;**[!UICONTROL Workflows]**&#x200B;以存取&#x200B;**[!UICONTROL Workflows]**&#x200B;工作區。
 
-在&#x200B;**[!UICONTROL Workflows]**&#x200B;螢幕中，在&#x200B;**[!UICONTROL Data ingestion]**&#x200B;部分下選擇&#x200B;**[!UICONTROL Launch]**&#x200B;將CSV映射到XDM架構&#x200B;]**，然後選擇**[!UICONTROL  Launch。
+從&#x200B;**[!UICONTROL Workflows]**&#x200B;螢幕中，選擇&#x200B;**[!UICONTROL Data ingestion]**&#x200B;部分下的&#x200B;**[!UICONTROL Map CSV to XDM schema]** ，然後選擇&#x200B;**[!UICONTROL Launch]**。
 
 ![](../images/tutorials/map-a-csv-file/workflows.png)
 
-將顯示&#x200B;**[!UICONTROL 將CSV映射到XDM架構]**&#x200B;工作流，從&#x200B;**[!UICONTROL 目標]**&#x200B;步驟開始。 選擇要接收傳入資料的資料集。 您可以使用現有資料集或建立新資料集。
+將顯示&#x200B;**[!UICONTROL Map CSV to XDM schema]**&#x200B;工作流，從&#x200B;**[!UICONTROL Destination]**&#x200B;步驟開始。 選擇要接收傳入資料的資料集。 您可以使用現有資料集或建立新資料集。
 
 **使用現有資料集**
 
-若要將CSV資料內嵌至現有資料集，請選取「使用現有資料集&#x200B;**[!UICONTROL 」。]**&#x200B;您可以使用搜尋函式或捲動面板中現有資料集的清單來擷取現有資料集。
+若要將CSV資料內嵌至現有資料集，請選取&#x200B;**[!UICONTROL Use existing dataset]**。 您可以使用搜尋函式或捲動面板中現有資料集的清單來擷取現有資料集。
 
 ![](../images/tutorials/map-a-csv-file/use-existing-dataset.png)
 
-若要將CSV資料內嵌至新資料集，請選取&#x200B;**[!UICONTROL 「建立新資料集]**」，並在提供的欄位中輸入資料集的名稱和說明。 使用搜索函式或滾動提供的方案清單來選擇方案。 選擇&#x200B;**[!UICONTROL Next]**&#x200B;繼續。
+若要將CSV資料內嵌至新資料集，請選取&#x200B;**[!UICONTROL Create new dataset]**，然後在提供的欄位中輸入資料集的名稱和說明。 使用搜索函式或滾動提供的方案清單來選擇方案。 選擇&#x200B;**[!UICONTROL Next]**&#x200B;繼續。
 
 ![](../images/tutorials/map-a-csv-file/create-new-dataset.png)
 
 ## 新增資料
 
-將顯示&#x200B;**[!UICONTROL 添加資料]**&#x200B;步驟。 將CSV檔案拖放至提供的空間，或選取&#x200B;**[!UICONTROL 選擇檔案]**&#x200B;以手動輸入CSV檔案。
+出現&#x200B;**[!UICONTROL Add data]**&#x200B;步驟。 將CSV檔案拖放至提供的空間，或選取&#x200B;**[!UICONTROL Choose files]**&#x200B;以手動輸入CSV檔案。
 
 ![](../images/tutorials/map-a-csv-file/add-data.png)
 
-上傳檔案後，**[!UICONTROL 範例資料]**&#x200B;區段就會出現，顯示前10列資料。 確認資料已如預期上傳後，請選擇&#x200B;**[!UICONTROL Next]**。
+上傳檔案後，會出現&#x200B;**[!UICONTROL Sample data]**&#x200B;區段，顯示前10列資料。 確認資料已如預期上傳後，請選取&#x200B;**[!UICONTROL Next]**。
 
 ![](../images/tutorials/map-a-csv-file/sample-data.png)
 
 ## 將CSV欄位對應至XDM結構欄位
 
-將顯示&#x200B;**[!UICONTROL 映射]**&#x200B;步驟。 CSV檔案的列列列在&#x200B;**[!UICONTROL 源欄位]**&#x200B;下，其對應的XDM模式欄位列在&#x200B;**[!UICONTROL 目標欄位]**&#x200B;下。
+出現&#x200B;**[!UICONTROL Mapping]**&#x200B;步驟。 CSV檔案的列列列在&#x200B;**[!UICONTROL Source Field]**&#x200B;下，其對應的XDM模式欄位列在&#x200B;**[!UICONTROL Target Field]**&#x200B;下。
 
 [!DNL Platform] 根據您選取的目標架構或資料集，自動為自動映射欄位提供智慧建議。您可以手動調整對應規則，以符合您的使用案例。
 
 ![](../images/tutorials/map-a-csv-file/mapping-with-suggestions.png)
 
-要接受所有自動生成映射值，請選中標有「[!UICONTROL 接受所有目標欄位]」的複選框。
+要接受所有自動生成映射值，請選擇標有「[!UICONTROL Accept all target fields]」的複選框。
 
 ![](../images/tutorials/map-a-csv-file/filled-mapping-with-suggestions.png)
 
@@ -79,7 +79,7 @@ ht-degree: 1%
 
 ![](../images/tutorials/map-a-csv-file/mapping-with-suggestions-and-buttons.png)
 
-出現「**[!UICONTROL 將源映射到目標欄位]**」快顯窗口。 在此處，您可以選擇要映射的欄位，然後選擇&#x200B;**[!UICONTROL Save]**&#x200B;以添加新映射。
+出現&#x200B;**[!UICONTROL Map source to target field]**&#x200B;快顯視窗。 在此處，您可以選擇要映射的欄位，然後選擇&#x200B;**[!UICONTROL Save]**&#x200B;以添加新映射。
 
 ![](../images/tutorials/map-a-csv-file/manual-mapping.png)
 
@@ -89,11 +89,11 @@ ht-degree: 1%
 
 計算欄位允許根據輸入方案中的屬性建立值。 然後，這些值可以分配給目標方案中的屬性，並提供名稱和說明，以便更方便地引用。
 
-選擇&#x200B;**[!UICONTROL 添加計算欄位]**&#x200B;按鈕以繼續。
+選擇&#x200B;**[!UICONTROL Add calculated field]**&#x200B;按鈕繼續。
 
 ![](../images/tutorials/map-a-csv-file/add-calculated-field.png)
 
-出現&#x200B;**[!UICONTROL 建立計算欄位]**&#x200B;面板。 左側對話方塊包含計算欄位中支援的欄位、函式和運算子。 選擇一個頁籤，開始向表達式編輯器添加函式、欄位或運算子。
+出現&#x200B;**[!UICONTROL Create calculated field]**&#x200B;面板。 左側對話方塊包含計算欄位中支援的欄位、函式和運算子。 選擇一個頁籤，開始向表達式編輯器添加函式、欄位或運算子。
 
 ![](../images/tutorials/map-a-csv-file/create-calculated-fields.png)
 
@@ -107,9 +107,9 @@ ht-degree: 1%
 
 ![](../images/tutorials/map-a-csv-file/create-calculated-field.png)
 
-選擇&#x200B;**[!UICONTROL 保存]**&#x200B;繼續。
+選擇&#x200B;**[!UICONTROL Save]**&#x200B;繼續。
 
-映射螢幕將重新顯示，並顯示新建立的源欄位。 應用相應的目標欄位並選擇&#x200B;**[!UICONTROL 完成]**&#x200B;以完成映射。
+映射螢幕將重新顯示，並顯示新建立的源欄位。 應用相應的目標欄位並選擇&#x200B;**[!UICONTROL Finish]**&#x200B;以完成映射。
 
 ![](../images/tutorials/map-a-csv-file/new-calculated-field.png)
 
