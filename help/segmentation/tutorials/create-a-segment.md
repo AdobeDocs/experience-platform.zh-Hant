@@ -1,18 +1,18 @@
 ---
-keywords: Experience Platform; home；熱門主題；segment;Segment;Create segmentation;segmentation;create a segment;Segmentation Service;
+keywords: Experience Platform; home；熱門主題；segment;Segment;create segmentation;segmentation;create a segment; Segmentation Service;
 solution: Experience Platform
 title: 使用分段服務API建立分段
-topic: tutorial
+topic-legacy: tutorial
 type: Tutorial
-description: 請依照本教學課程，瞭解如何使用Adobe Experience Platform Segmentation Service API來開發、測試、預覽和儲存區段定義。
+description: 請依照本教學課程學習如何使用Adobe Experience Platform區段服務API來開發、測試、預覽和儲存區段定義。
+exl-id: 78684ae0-3721-4736-99f1-a7d1660dc849
 translation-type: tm+mt
-source-git-commit: b3defc3e33a55855e307ab70b9797d985d5719e3
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '924'
 ht-degree: 0%
 
 ---
-
 
 # 使用分段服務API建立區段
 
@@ -58,7 +58,7 @@ ht-degree: 0%
 
 分段的第一步是定義分段，在稱為分段定義的構造中表示。 段定義是一個對象，用於封裝寫入[!DNL Profile Query Language](PQL)中的查詢。 此對象也稱為PQL謂語。 PQL謂語根據與您提供給[!DNL Real-time Customer Profile]的任何記錄或時間系列資料相關的條件定義段規則。 有關編寫PQL查詢的詳細資訊，請參見[ PQL指南](../pql/overview.md)。
 
-您可以向[!DNL Segmentation] API中的`/segment/definitions`端點發出POST請求，以建立新的區段定義。 下列範例概述如何設定定義請求的格式，包括成功定義區段所需的資訊。
+您可以透過向[!DNL Segmentation] API中的`/segment/definitions`端點提出POST請求，建立新的區段定義。 下列範例概述如何設定定義請求的格式，包括成功定義區段所需的資訊。
 
 有關如何定義區段的詳細說明，請閱讀[區段定義開發人員指南](../api/segment-definitions.md#create)。
 
@@ -89,13 +89,13 @@ ht-degree: 0%
 
 ### 建立預覽工作
 
-您可以通過向`/preview`端點發出POST請求來建立新的預覽作業。
+您可以向`/preview`端點發出POST請求，以建立新的預覽作業。
 
 有關建立預覽作業的詳細說明，請參閱[預覽和估計端點指南](../api/previews-and-estimates.md#create-preview)。
 
 ### 檢視估計或預覽
 
-由於不同的查詢可能需要不同的時間才能完成，因此會以非同步方式執行估計和預覽程式。 一旦查詢啟動後，您就可以使用API呼叫來擷取(GET)估計或預覽的目前狀態。
+由於不同的查詢可能需要不同的時間才能完成，因此會以非同步方式執行估計和預覽程式。 一旦啟動查詢後，您就可以使用API呼叫來擷取(GET)估計或預覽的目前狀態。
 
 使用[!DNL Segmentation Service] API，您可以透過預覽工作的ID來尋找其目前狀態。 如果狀態為&quot;RESULT_READY&quot;，則可以查看結果。 要查找預覽作業的當前狀態，請閱讀預覽和估計端點指南中有關檢索預覽作業部分[的部分。 ](../api/previews-and-estimates.md#get-preview)要查找估計作業的當前狀態，請閱讀預覽和估計端點指南中有關檢索估計作業[的部分。](../api/previews-and-estimates.md#get-estimate)
 
