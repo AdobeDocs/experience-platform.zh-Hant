@@ -2,13 +2,13 @@
 keywords: Experience Platform；入門；客戶ai；熱門主題；客戶ai輸入；客戶ai輸出
 solution: Experience Platform, Intelligent Services, Real-time Customer Data Platform
 title: 客戶人工智慧的輸入與輸出
-topic: Getting started
+topic-legacy: Getting started
 description: 進一步瞭解客戶人工智慧所使用的必要事件、輸入和輸出。
 exl-id: 9b21a89c-bf48-4c45-9eb3-ace38368481d
 translation-type: tm+mt
-source-git-commit: 2ef2a6431865e8ffdc2abd6cf527249e8b5ca4d0
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '2867'
+source-wordcount: '2865'
 ht-degree: 1%
 
 ---
@@ -41,7 +41,7 @@ ht-degree: 1%
 | [Mixins](../../xdm/schema/composition.md) | 定義方案中一個或多個欄位的元件。 Mixins可強制其欄位在架構階層中的顯示方式，因此在每個架構中都會顯示與其所包含的相同結構。 Mixins僅與特定類相容，由其`meta:intendedToExtend`屬性所識別。 |
 | [資料類型](../../xdm/schema/composition.md) | 也可以為架構提供一個或多個欄位的元件。 但是，與mixin不同，資料類型不限於特定類別。 這使得資料類型成為更有彈性的選項，以說明可在具有潛在不同類別的多個結構中重複使用的常用資料結構。 CEE和Adobe Analytics模式都支援本文檔中概述的資料類型。 |
 | 客戶流失 | 取消或選擇不續約其訂閱之帳戶百分比的測量。 高流失率可能會對月度經常性收入(MRR)產生負面影響，也可能表示對產品或服務的不滿。 |
-| [即時客戶個人檔案](../../profile/home.md) | 即時客戶個人檔案提供集中的消費者個人檔案，以進行針對性的個人化體驗管理。 每個描述檔都包含匯總至所有系統的資料，以及與您使用Experience Platform的任何系統中發生之個人相關之事件的可操作時間戳記帳戶。 |
+| [即時客戶個人檔案](../../profile/home.md) | 即時客戶個人檔案提供集中化的消費者個人檔案，以進行針對性的個人化體驗管理。 每個描述檔都包含匯總至所有系統的資料，以及與您使用Experience Platform的任何系統中發生之個人相關之事件的可操作時間戳記帳戶。 |
 
 ## 客戶人工智慧輸入資料
 
