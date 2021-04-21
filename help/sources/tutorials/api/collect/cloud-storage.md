@@ -2,14 +2,14 @@
 keywords: Experience Platform；首頁；熱門主題；雲儲存資料
 solution: Experience Platform
 title: 使用來源連接器和API收集雲端儲存資料
-topic: overview
+topic-legacy: overview
 type: Tutorial
 description: 本教學課程涵蓋從協力廠商雲端儲存空間擷取資料，並使用來源連接器和API將其匯入平台的步驟。
 exl-id: 95373c25-24f6-4905-ae6c-5000bf493e6f
 translation-type: tm+mt
-source-git-commit: 610ce5c6dca5e7375b941e7d6f550382da10ca27
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '1806'
+source-wordcount: '1804'
 ht-degree: 1%
 
 ---
@@ -78,7 +78,7 @@ POST /sourceConnections
 
 ### 使用自訂分隔檔案{#using-custom-delimited-files}建立來源連線
 
-**請求**
+**要求**
 
 您可以指定`columnDelimiter`為屬性，以自訂分隔字元來內嵌分隔字元的檔案。 任何單一字元值都是允許的欄分隔字元。 如果未提供，則使用逗號`(,)`作為預設值。
 
@@ -132,7 +132,7 @@ curl -X POST \
 
 ### 使用壓縮檔案{#using-compressed-files}建立源連接
 
-**請求**
+**要求**
 
 您也可以透過指定壓縮的JSON或分隔檔案`compressionType`為屬性，來內嵌其檔案。 支援的壓縮檔案類型清單包括：
 
@@ -200,7 +200,7 @@ curl -X POST \
 POST /schemaregistry/tenant/schemas
 ```
 
-**請求**
+**要求**
 
 以下示例請求建立一個XDM模式，以擴展XDM Individual Profile類。
 
@@ -309,7 +309,7 @@ curl -X POST \
 POST /catalog/dataSets
 ```
 
-**請求**
+**要求**
 
 ```shell
 curl -X POST \
@@ -355,7 +355,7 @@ curl -X POST \
 POST /targetConnections
 ```
 
-**請求**
+**要求**
 
 ```shell
 curl -X POST \
@@ -416,7 +416,7 @@ curl -X POST \
 POST /conversion/mappingSets
 ```
 
-**請求**
+**要求**
 
 ```shell
 curl -X POST \
@@ -489,7 +489,7 @@ curl -X POST \
 GET /flowSpecs?property=name=="CloudStorageToAEP"
 ```
 
-**請求**
+**要求**
 
 ```shell
 curl -X GET \
@@ -651,7 +651,7 @@ curl -X GET \
 POST /flows
 ```
 
-**請求**
+**要求**
 
 ```shell
 curl -X POST \
