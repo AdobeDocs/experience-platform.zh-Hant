@@ -1,25 +1,25 @@
 ---
-keywords: Experience Platform;home；熱門主題；模式；模式；模式；XDM；個人配置檔案；欄位；模式；個人詳細資訊；模式設計；mixin;Mixin;
+keywords: Experience Platform;home；熱門主題；模式；模式；XDM；個人配置檔案；欄位；模式；個人詳細資訊；模式設計；mixin;Mixin;
 solution: Experience Platform
 title: Mixin個人聯絡人詳細資訊
-topic: overview
+topic-legacy: overview
 description: 本文檔提供個人聯繫人詳細資訊混合的概述。
+exl-id: a78d9aee-ecf6-45a9-b270-cdad5b800a86
 translation-type: tm+mt
-source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '152'
+source-wordcount: '146'
 ht-degree: 6%
 
 ---
 
-
-# [!UICONTROL 個人聯絡詳] 細資訊
+# [!UICONTROL Personal Contact Details] mixin
 
 >[!NOTE]
 >
 >幾個混音的名字已經改變。 如需詳細資訊，請參閱[mixin name updates](../name-updates.md)上的檔案。
 
-[!UICONTROL 個人聯] 絡詳細資訊是類別的標準 [[!DNL XDM Individual Profile] ](../../classes/individual-profile.md) 組合，可說明個人的聯絡資訊。
+[!UICONTROL Personal Contact Details] 是類別的標準組合， [[!DNL XDM Individual Profile] ](../../classes/individual-profile.md) 可說明個人的連絡資訊。
 
 <img src="../../images/mixins/profile-personal-details.png" width="700" /><br />
 
