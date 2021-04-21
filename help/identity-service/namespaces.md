@@ -2,16 +2,16 @@
 keywords: Experience Platform;home；常用主題；namespace；命名空間；命名空間；標識名稱空間；標識名稱空間；標識；標識服務；標識服務
 solution: Experience Platform
 title: Identity Namespace概觀
-topic: overview
-description: '身分識別命名空間是 Identity Service 的元件，用途是作為身分識別相關內容的指標。例如，他們會將"name@email.com"值區分為電子郵件地址或"443522"作為數值CRM ID。 '
+topic-legacy: overview
+description: 身分識別命名空間是 Identity Service 的元件，用途是作為身分識別相關內容的指標。例如，他們會將"name@email.com"值區分為電子郵件地址或"443522"作為數值CRM ID。
+exl-id: 86cfc7ae-943d-4474-90c8-e368afa48b7c
 translation-type: tm+mt
-source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '1475'
+source-wordcount: '1450'
 ht-degree: 2%
 
 ---
-
 
 # 身分命名空間概觀
 
@@ -74,13 +74,13 @@ Experience Platform提供多個身份名稱空間，可供所有組織使用。 
 | TNTID | 代表Adobe Target的命名空間。 如需詳細資訊，請參閱[Target](https://experienceleague.adobe.com/docs/target/using/target-home.html?lang=en)上的下列檔案。 |
 | Windows AID | 代表Windows廣告ID的命名空間。 如需詳細資訊，請參閱[Windows廣告ID](https://docs.microsoft.com/en-us/uwp/api/windows.system.userprofile.advertisingmanager.advertisingid?view=winrt-19041)上的下列檔案。 |
 
-若要在UI中檢視標準名稱空間，請在左側導覽器中選取&#x200B;**[!UICONTROL Identitys]**，然後選取&#x200B;**[!UICONTROL Browse]**&#x200B;標籤，以顯示組織可存取的標準身分名稱空間清單。 您可以按名稱空間的&#x200B;**[!UICONTROL 顯示名稱]**、**[!UICONTROL 識別符號]**&#x200B;或&#x200B;**[!UICONTROL 擁有者]**&#x200B;的字母順序對名稱空間進行排序。 或者，您也可以依名稱空間的最近更新日期，按時間順序排序名稱空間。
+若要在UI中檢視標準名稱空間，請在左側導覽中選取&#x200B;**[!UICONTROL Identities]**，然後選取&#x200B;**[!UICONTROL Browse]**&#x200B;標籤以顯示組織可存取的標準身分名稱空間清單。 您可以按名稱空間的&#x200B;**[!UICONTROL Display name]**、**[!UICONTROL Identity symbol]**&#x200B;或&#x200B;**[!UICONTROL Owner]**&#x200B;的字母順序對名稱空間進行排序。 或者，您也可以依名稱空間的最近更新日期，按時間順序排序名稱空間。
 
 選取名稱空間，以檢視右側邊欄上的更多特定資訊。
 
 >[!NOTE]
 >
->平台也提供名稱空間以進行整合。 這些名稱空間預設為隱藏，因為它們用於連接其他系統，而不是用於縫合標識。 要查看整合名稱空間，請選擇&#x200B;**[!UICONTROL 查看整合標識]**。
+>平台也提供名稱空間以進行整合。 這些名稱空間預設為隱藏，因為它們用於連接其他系統，而不是用於縫合標識。 要查看整合命名空間，請選擇&#x200B;**[!UICONTROL View integration identities]**。
 
 ![](./images/browse-namespaces.png)
 
@@ -92,7 +92,7 @@ Experience Platform提供多個身份名稱空間，可供所有組織使用。 
 
 ![](./images/create.png)
 
-此時將顯示&#x200B;**[!UICONTROL 建立標識名稱空間]**&#x200B;對話框。 提供唯一的&#x200B;**[!UICONTROL 顯示名稱]**&#x200B;和&#x200B;**[!UICONTROL 識別符號]**，然後選擇要建立的識別類型。 您也可以新增選擇性說明，以進一步瞭解命名空間。 完成後，選擇&#x200B;**[!UICONTROL Create]**。
+出現&#x200B;**[!UICONTROL Create identity namespace]**&#x200B;對話框。 提供唯一的&#x200B;**[!UICONTROL Display name]**&#x200B;和&#x200B;**[!UICONTROL Identity symbol]**，然後選擇要建立的身份類型。 您也可以新增選擇性說明，以進一步瞭解命名空間。 完成後，選擇&#x200B;**[!UICONTROL Create]**。
 
 >[!IMPORTANT]
 >
