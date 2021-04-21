@@ -1,21 +1,21 @@
 ---
-keywords: Experience Platform; home；熱門主題；分段；分段；分段服務；匯出工作；api;
+keywords: Experience Platform;home；熱門主題；分段；分段；分段服務；導出作業；api;
 solution: Experience Platform
 title: 匯出工作API端點
-topic: developer guide
-description: 匯出工作是非同步程式，用來將讀者區段成員持續存留至資料集。 您可以使用Adobe Experience Platform Segmentation Service API中的/export/jobs端點，此端點可讓您以程式設計方式擷取、建立和取消匯出工作。
+topic-legacy: developer guide
+description: 匯出工作是非同步程式，用來將讀者區段成員持續存留至資料集。 您可以使用Adobe Experience Platform分段服務API中的/export/jobs端點，此端點可讓您以程式設計方式擷取、建立和取消匯出工作。
+exl-id: 5b504a4d-291a-4969-93df-c23ff5994553
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '1680'
 ht-degree: 2%
 
 ---
 
-
 # 導出作業端點
 
-匯出工作是非同步程式，用來將讀者區段成員持續存留至資料集。 您可以使用Adobe Experience Platform Segmentation API中的`/export/jobs`端點，此端點可讓您以程式設計方式擷取、建立和取消匯出工作。
+匯出工作是非同步程式，用來將讀者區段成員持續存留至資料集。 您可以使用「Adobe Experience Platform分段API」中的`/export/jobs`端點，此端點可讓您以程式設計方式擷取、建立和取消匯出工作。
 
 >[!NOTE]
 >
@@ -27,11 +27,11 @@ ht-degree: 2%
 
 ## 檢索導出作業清單{#retrieve-list}
 
-您可以向`/export/jobs`端點提出GET請求，以擷取IMS組織所有匯出工作的清單。
+您可以向`/export/jobs`端點提出GET請求，以擷取IMS組織的所有匯出工作清單。
 
 **API格式**
 
-`/export/jobs`端點支援數個查詢參數，以協助篩選結果。 雖然這些參數是可選的，但強烈建議使用它們，以幫助降低昂貴的開銷。 在沒有參數的情況下呼叫此端點將會擷取組織所有可用的匯出工作。 可以包括多個參數，用&amp;符號(`&`)分隔。
+`/export/jobs`端點支援數個查詢參數，以協助篩選結果。 雖然這些參數是可選的，但強烈建議使用這些參數以幫助降低昂貴的開銷。 在沒有參數的情況下呼叫此端點將會擷取組織所有可用的匯出工作。 可以包括多個參數，用&amp;符號(`&`)分隔。
 
 ```http
 GET /export/jobs
@@ -46,7 +46,7 @@ GET /export/jobs?status={STATUS}
 | `{OFFSET}` | 指定結果頁的偏移。 |
 | `{STATUS}` | 根據狀態篩選結果。 支援的值為「NEW」、「SUCCEEDED」和「FAILED」。 |
 
-**請求**
+**要求**
 
 下列請求將擷取您IMS組織中最後兩個匯出工作。
 
@@ -219,7 +219,7 @@ curl -X GET https://platform.adobe.io/data/core/ups/export/jobs?limit=2 \
 POST /export/jobs
 ```
 
-**請求**
+**要求**
 
 下列請求會建立新的匯出工作，由裝載中提供的參數設定。
 
@@ -396,7 +396,7 @@ GET /export/jobs/{EXPORT_JOB_ID}
 | --------- | ----------- |
 | `{EXPORT_JOB_ID}` | 要訪問的導出作業的`id`。 |
 
-**請求**
+**要求**
 
 ```shell
 curl -X GET https://platform.adobe.io/data/core/ups/export/jobs/11037 \
@@ -492,7 +492,7 @@ DELETE /export/jobs/{EXPORT_JOB_ID}
 | --------- | ----------- |
 | `{EXPORT_JOB_ID}` | 要刪除的導出作業的`id`。 |
 
-**請求**
+**要求**
 
 ```shell
 curl -X DELETE https://platform.adobe.io/data/core/ups/export/jobs/{EXPORT_JOB_ID} \
