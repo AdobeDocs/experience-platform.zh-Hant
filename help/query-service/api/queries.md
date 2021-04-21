@@ -1,17 +1,17 @@
 ---
-keywords: Experience Platform;home;popular topics;query service;api guide;queries;query;Query service;
+keywords: Experience Platform; home；熱門主題；查詢服務；api指南；查詢；查詢服務；
 solution: Experience Platform
 title: 查詢API端點
-topic: queries
+topic-legacy: queries
 description: 以下各節將介紹您可以使用Query Service API中的/querys端點進行的調用。
+exl-id: d6273e82-ce9d-4132-8f2b-f376c6712882
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '676'
 ht-degree: 2%
 
 ---
-
 
 # 查詢端點
 
@@ -45,7 +45,7 @@ GET /queries?{QUERY_PARAMETERS}
 | `excludeSoftDeleted` | 指示是否應包括已軟刪除的查詢。 例如，`excludeSoftDeleted=false`將&#x200B;**包含**&#x200B;可刪除的查詢。 (*布林值，預設值：true*) |
 | `excludeHidden` | 指示是否應顯示非用戶驅動的查詢。 將此值設定為false時，**將包括非用戶驅動的查詢，如CURSOR定義、FETCH或元資料查詢。**(*布林值，預設值：true*) |
 
-**請求**
+**要求**
 
 下列請求會擷取為IMS組織建立的最新查詢。
 
@@ -128,7 +128,7 @@ curl -X GET https://platform.adobe.io/data/foundation/query/queries?limit=1 \
 POST /queries
 ```
 
-**請求**
+**要求**
 
 下列請求會建立新查詢，由裝載中提供的值設定：
 
@@ -215,7 +215,7 @@ GET /queries/{QUERY_ID}
 | -------- | ----------- |
 | `{QUERY_ID}` | 要檢索的查詢的`id`值。 |
 
-**請求**
+**要求**
 
 ```shell
 curl -X GET https://platform.adobe.io/data/foundation/query/queries/4d64cd49-cf8f-463a-a182-54bccb9954fc \
@@ -274,7 +274,7 @@ curl -X GET https://platform.adobe.io/data/foundation/query/queries/4d64cd49-cf8
 
 ### 取消查詢
 
-通過向`/queries`端點發出PATCH請求並在請求路徑中提供查詢的`id`值，可以請求刪除指定的查詢。
+您可以向`/queries`端點發出PATCH請求，並在請求路徑中提供查詢的`id`值，以請求刪除指定的查詢。
 
 **API格式**
 
@@ -287,7 +287,7 @@ PATCH /queries/{QUERY_ID}
 | `{QUERY_ID}` | 要取消的查詢的`id`值。 |
 
 
-**請求**
+**要求**
 
 此API要求會使用JSON修補程式語法來處理其裝載。 如需JSON修補程式運作方式的詳細資訊，請閱讀API基礎檔案。
 
