@@ -1,17 +1,17 @@
 ---
-keywords: Experience Platform; home；熱門主題；分段；分段；分段服務；pql;PQL；配置檔案查詢語言；算術函式；算術；
+keywords: Experience Platform;home；熱門話題；分段；分段；分段服務；pql;PQL；配置檔案查詢語言；算術函式；算術；
 solution: Experience Platform
 title: PAL算術函式
-topic: developer guide
+topic-legacy: developer guide
 description: 算術函式用於對配置檔案查詢語言(PQL)中的值執行基本計算。
+exl-id: 3540ef7c-dbe4-4302-a414-3cf85618f870
 translation-type: tm+mt
-source-git-commit: b3defc3e33a55855e307ab70b9797d985d5719e3
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '260'
 ht-degree: 5%
 
 ---
-
 
 # 算術函式
 
@@ -21,7 +21,7 @@ ht-degree: 5%
 
 `+`（加法）函式用於查找兩個引數表達式的總和。
 
-**Format**
+**格式**
 
 ```sql
 {NUMBER} + {NUMBER}
@@ -55,7 +55,7 @@ product.inventory * product.price
 
 ## 去除
 
-`-`（減法）函式用於查找兩個引數表達式的差異。
+`-`（減法）函式用於查找兩個參數表達式的差。
 
 **格式**
 
