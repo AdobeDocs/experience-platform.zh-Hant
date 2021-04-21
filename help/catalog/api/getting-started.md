@@ -2,16 +2,16 @@
 keywords: Experience Platform;home；熱門主題；目錄服務；目錄服務；目錄服務；目錄
 solution: Experience Platform
 title: 目錄服務API指南
-topic: developer guide
+topic-legacy: developer guide
 description: Catalog Service API可讓開發人員管理Adobe Experience Platform的資料集中繼資料。 請依照本指南，瞭解如何使用API執行關鍵作業。
+exl-id: 812fcdae-ed0e-4f2b-84d7-26f2f79e71b9
 translation-type: tm+mt
-source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '602'
+source-wordcount: '600'
 ht-degree: 0%
 
 ---
-
 
 # [!DNL Catalog Service] API指南
 
