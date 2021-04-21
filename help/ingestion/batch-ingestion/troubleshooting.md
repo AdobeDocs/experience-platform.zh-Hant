@@ -1,21 +1,21 @@
 ---
-keywords: Experience Platform; home；熱門主題；收錄資料；疑難排解；常見問題；擷取；批次擷取；批次擷取；批次擷取；
+keywords: Experience Platform;home；熱門主題；收錄資料；疑難排解；常見問題；擷取；批次擷取；批次擷取；批次擷取；
 solution: Experience Platform
 title: 批次擷取疑難排解指南
-topic: troubleshooting
-description: '本檔案將協助解答有關Adobe Experience Platform批次資料擷取API的常見問題。 '
+topic-legacy: troubleshooting
+description: 本檔案將協助解答有關Adobe Experience Platform批次資料擷取API的常見問題。
+exl-id: 0a750d7e-a4ee-4a79-a697-b4b732478b2b
 translation-type: tm+mt
-source-git-commit: 089a4d517476b614521d1db4718966e3ebb13064
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '1416'
 ht-degree: 1%
 
 ---
 
-
 # 批次擷取疑難排解指南
 
-本檔案將協助您解答有關Adobe Experience Platform [!DNL Batch Data Ingestion] API的常見問題。
+本檔案將幫助解答有關Adobe Experience Platform[!DNL Batch Data Ingestion] API的常見問題。
 
 ## 批次API呼叫
 
@@ -191,7 +191,7 @@ curl -X GET "https://platform.adobe.io/data/foundation/catalog/batches/{BATCH_ID
 | 非活動 | x | 批已成功升級，但已還原或過期。 批將不再可用於下游衝減，但基礎資料將保留在「主」中，直到保留、存檔或以其他方式刪除。 |
 | 正在載入 |  | 客戶端當前正在編寫批的資料。 此時，批處於&#x200B;**不**&#x200B;狀態，可供升級。 |
 | 已載入 |  | 客戶端已完成編寫批處理資料。 批已準備好升級。 |
-| 保留 |  | 資料已從Master中取出，並存放在Adobe Data Lake的指定封存中。 |
+| 保留 |  | 資料已從Master中取出，並在Adobe資料湖中的指定存檔中。 |
 | 預備 |  | 用戶端已成功發出批次促銷的信號，且資料正在儲存以供下游消費。 |
 | 重試 |  | 客戶端已發出批次升級的信號，但由於錯誤，批次正在由批次監控服務重試。 此狀態可用來告知用戶端在擷取資料時可能會有延遲。 |
 | 停止 |  | 客戶端已發出批次升級的信號，但在批次監控服務`n`重試後，批次升級已停止。 |
