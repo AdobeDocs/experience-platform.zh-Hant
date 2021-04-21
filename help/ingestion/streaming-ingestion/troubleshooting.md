@@ -1,23 +1,23 @@
 ---
-keywords: Experience Platform; home；熱門主題；串流；串流擷取；疑難排解；串流擷取疑難排解；串流擷取常見問答；常見問答；
+keywords: Experience Platform；首頁；熱門主題；串流；串流擷取；疑難排解；串流擷取疑難排解；串流擷取常見問答；常見問答；
 solution: Experience Platform
 title: 串流擷取疑難排解指南
-topic: troubleshooting
-description: 本檔案針對Adobe Experience Platform上串流擷取的常見問題提供解答。
+topic-legacy: troubleshooting
+description: 本檔案針對有關Adobe Experience Platform串流擷取的常問問題提供解答。
+exl-id: 5d5deccf-25b8-44c9-ae27-9a4713ced274
 translation-type: tm+mt
-source-git-commit: 089a4d517476b614521d1db4718966e3ebb13064
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '1025'
+source-wordcount: '1019'
 ht-degree: 0%
 
 ---
 
-
 # 串流擷取疑難排解指南
 
-本檔案針對Adobe Experience Platform上串流擷取的常見問題提供解答。 如需其他[!DNL Platform]服務的相關問題和疑難排解，包括所有[!DNL Platform] API中遇到的問題，請參閱[ Experience Platform疑難排解指南](../../landing/troubleshooting.md)。
+本檔案針對有關Adobe Experience Platform串流擷取的常問問題提供解答。 有關其他[!DNL Platform]服務的問題和疑難排解，包括所有[!DNL Platform] API中遇到的問題，請參閱[Experience Platform故障排解指南](../../landing/troubleshooting.md)。
 
-Adobe Experience Platform [!DNL Data Ingestion]提供REST風格的API，您可用來將資料內嵌至[!DNL Experience Platform]。 所擷取的資料可用來即時更新個別客戶個人檔案，讓您跨多個通道提供個人化、相關的體驗。 請閱讀[資料擷取概觀](../home.md)，以取得有關服務和不同擷取方法的詳細資訊。 有關如何使用串流擷取API的步驟，請閱讀[串流擷取概觀](../streaming-ingestion/overview.md)。
+Adobe Experience Platform[!DNL Data Ingestion]提供REST風格的API，您可用來將資料內嵌至[!DNL Experience Platform]。 所擷取的資料可用來即時更新個別客戶個人檔案，讓您跨多個通道提供個人化、相關的體驗。 請閱讀[資料擷取概觀](../home.md)，以取得有關服務和不同擷取方法的詳細資訊。 有關如何使用串流擷取API的步驟，請閱讀[串流擷取概觀](../streaming-ingestion/overview.md)。
 
 ## 常見問題集
 
@@ -43,7 +43,7 @@ Adobe Experience Platform [!DNL Data Ingestion]提供REST風格的API，您可�
 
 當請求的位置不支援同步驗證時，會傳回501錯誤回應。 如需同步驗證的詳細資訊，請參閱[串流驗證概觀](../quality/streaming-validation.md)。
 
-### 如何確保僅從受信任的來源收集資料？
+### 如何確保僅從受信任來源收集資料？
 
 [!DNL Experience Platform] 支援安全的資料收集。啟用驗證資料收集後，用戶端必須傳送JSON Web Token(JWT)及其IMS組織ID作為請求標題。 有關如何將已驗證資料發送到[!DNL Platform]的詳細資訊，請參閱[已驗證資料收集](../tutorials/create-authenticated-streaming-connection.md)上的指南。
 
@@ -59,7 +59,7 @@ Adobe Experience Platform [!DNL Data Ingestion]提供REST風格的API，您可�
 
 所有傳送至[!DNL Platform]（成功或否）的資料都會儲存為批次檔案，然後再保存在資料集中。 批次的處理狀態會顯示在傳送至的資料集中。
 
-您可以使用[Experience Platform使用者介面](https://platform.adobe.com)檢查資料集活動，以確認資料是否已成功擷取。 按一下左側導航中的&#x200B;**[!UICONTROL 資料集]**&#x200B;以顯示資料集清單。 從顯示的清單中選擇要流式處理的資料集，以開啟其&#x200B;**[!UICONTROL 資料集活動]**&#x200B;頁，顯示在選定時段內發送的所有批。 有關使用[!DNL Experience Platform]監控資料流的詳細資訊，請參閱[監控流資料流](../quality/monitor-data-ingestion.md)的指南。
+您可以使用[Experience Platform使用者介面](https://platform.adobe.com)檢查資料集活動，以確認資料是否已成功擷取。 按一下左側導覽中的&#x200B;**[!UICONTROL Datasets]**&#x200B;以顯示資料集清單。 從顯示的清單中選擇要流式處理的資料集以開啟其&#x200B;**[!UICONTROL Dataset activity]**&#x200B;頁，顯示選定時段內發送的所有批。 有關使用[!DNL Experience Platform]監控資料流的詳細資訊，請參閱[監控流資料流](../quality/monitor-data-ingestion.md)的指南。
 
 如果您的資料未能收錄，而您想從[!DNL Platform]中恢復，則可以通過將失敗的批次的ID發送到[!DNL Data Access API]來檢索失敗的批次。 有關詳細資訊，請參閱[檢索失敗批](../quality/retrieve-failed-batches.md)指南。
 
@@ -101,4 +101,4 @@ Adobe Experience Platform [!DNL Data Ingestion]提供REST風格的API，您可�
 
 身份名稱空間有兩種類型：預設值和自訂值。 使用自訂名稱空間時，請確定名稱空間已在[!DNL Identity Service]中註冊。 如需使用預設和自訂名稱空間的詳細資訊，請參閱[identity namespace綜覽](../../identity-service/namespaces.md)。
 
-您可以使用[[!DNL Experience Platform UI]](https://platform.adobe.com)來查看郵件擷取失敗原因的詳細資訊。 按一下左側導航中的&#x200B;**[!UICONTROL 監視]** ，然後查看&#x200B;**[!UICONTROL 端到端流]**&#x200B;頁籤以查看在選定時段內流化的消息批。
+您可以使用[[!DNL Experience Platform UI]](https://platform.adobe.com)來查看郵件擷取失敗原因的詳細資訊。 在左側導覽中按一下&#x200B;**[!UICONTROL Monitoring]**，然後檢視&#x200B;**[!UICONTROL Streaming end-to-end]**&#x200B;標籤，以檢視在選取時段內串流的訊息批次。
