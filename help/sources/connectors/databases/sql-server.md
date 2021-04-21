@@ -6,14 +6,14 @@ topic-legacy: overview
 description: 瞭解如何使用API或使用者介面將Microsoft SQL Server連接至Adobe Experience Platform。
 exl-id: 8a77f108-7e82-4e14-a470-a4ea97def89d
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: b2384bfe26fa3d111c342062b2d9bb37c4226857
 workflow-type: tm+mt
-source-wordcount: '298'
+source-wordcount: '297'
 ht-degree: 0%
 
 ---
 
-# （測試版）[!DNL Microsoft] SQL Server連接器
+# [!DNL Microsoft] SQL Server連接器
 
 Adobe Experience Platform允許從外部來源接收資料，同時提供使用[!DNL Platform]服務構建、標籤和增強傳入資料的能力。 您可以從多種來源收錄資料，例如Adobe應用程式、雲端儲存空間、資料庫等。
 
