@@ -1,18 +1,18 @@
 ---
-keywords: Experience Platform;home；熱門主題；Microsoft Dynamics;microsoft Dynamics;Dynamics
+keywords: Experience Platform；首頁；熱門主題；Microsoft Dynamics;microsoft dynamics;dynamics;Dynamics
 solution: Experience Platform
 title: 使用Flow Service API建立Microsoft Dynamics Source連線
-topic: overview
+topic-legacy: overview
 type: Tutorial
 description: 瞭解如何使用Flow Service API將Platform連線至Microsoft Dynamics帳戶。
+exl-id: 423c6047-f183-4d92-8d2f-cc8cc26647ef
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '739'
 ht-degree: 2%
 
 ---
-
 
 # 使用[!DNL Flow Service] API建立[!DNL Microsoft Dynamics]來源連線
 
@@ -22,10 +22,10 @@ ht-degree: 2%
 
 ## 快速入門
 
-本指南需要有效瞭解Adobe Experience Platform的下列元件：
+本指南需要對Adobe Experience Platform的下列組成部分有切實的瞭解：
 
-* [來源](../../../../home.md):Experience Platform可讓您從各種來源擷取資料，同時讓您能夠使用平台服務來建構、標示和增強傳入資料。
-* [沙盒](../../../../../sandboxes/home.md):Experience Platform提供虛擬沙盒，可將單一Platform實例分割為不同的虛擬環境，以協助開發和發展數位體驗應用程式。
+* [來源](../../../../home.md):Experience Platform可讓您從各種來源擷取資料，同時讓您能夠使用平台服務來建構、標示並增強傳入資料。
+* [沙盒](../../../../../sandboxes/home.md):Experience Platform提供虛擬沙盒，可將單一平台實例分割為獨立的虛擬環境，以協助開發和發展數位體驗應用程式。
 
 以下各節提供您需要瞭解的其他資訊，以便使用[!DNL Flow Service] API將平台成功連線至Dynamics帳戶。
 
@@ -49,17 +49,17 @@ ht-degree: 2%
 
 ### 收集必要標題的值
 
-若要呼叫平台API，您必須先完成[驗證教學課程](https://www.adobe.com/go/platform-api-authentication-en)。 完成驗證教學課程後，所有Experience Platform API呼叫中每個必要標題的值都會顯示在下方：
+若要呼叫平台API，您必須先完成[驗證教學課程](https://www.adobe.com/go/platform-api-authentication-en)。 完成驗證教學課程後，將提供所有Experience PlatformAPI呼叫中每個必要標題的值，如下所示：
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
 * `x-gw-ims-org-id: {IMS_ORG}`
 
-Experience Platform中的所有資源（包括[!DNL Flow Service]的資源）都隔離至特定的虛擬沙盒。 所有對平台API的請求都需要一個標題，該標題會指定要在中執行的操作的沙盒名稱：
+Experience Platform中的所有資源（包括屬於[!DNL Flow Service]的資源）都與特定虛擬沙盒隔離。 所有對平台API的請求都需要一個標題，該標題會指定要在中執行的操作的沙盒名稱：
 
 * `x-sandbox-name: {SANDBOX_NAME}`
 
-所有包含裝載(POST、PUT、PATCH)的請求都需要額外的媒體類型標題：
+所有包含裝載(POST、PUT、PATCH)的請求都需要附加的媒體類型標題：
 
 * `Content-Type: application/json`
 
@@ -69,7 +69,7 @@ Experience Platform中的所有資源（包括[!DNL Flow Service]的資源）都
 
 ### 使用基本驗證建立[!DNL Dynamics]連接
 
-若要使用基本驗證建立[!DNL Dynamics]連線，請向[!DNL Flow Service] API提出POST要求，同時提供連線的`serviceUri`、`username`和`password`值。
+要使用基本驗證建立[!DNL Dynamics]連接，請向[!DNL Flow Service] API發出POST請求，同時為連接的`serviceUri`、`username`和`password`提供值。
 
 **API格式**
 
@@ -77,7 +77,7 @@ Experience Platform中的所有資源（包括[!DNL Flow Service]的資源）都
 POST /connections
 ```
 
-**請求**
+**要求**
 
 要建立[!DNL Dynamics]連接，必須在POST請求中提供其唯一連接規範ID。 [!DNL Dynamics]的連接規範ID為`38ad80fe-8b06-4938-94f4-d4ee80266b07`。
 
@@ -127,7 +127,7 @@ curl -X POST \
 
 ### 使用基於服務主體密鑰的身份驗證建立[!DNL Dynamics]連接
 
-要使用基於服務主體密鑰的驗證建立[!DNL Dynamics]連接，請向[!DNL Flow Service] API發出POST請求，同時為連接的`serviceUri`、`servicePrincipalId`和`servicePrincipalKey`提供值。
+要使用基於服務主體密鑰的身份驗證建立[!DNL Dynamics]連接，請向[!DNL Flow Service] API發出POST請求，同時為連接的`serviceUri`、`servicePrincipalId`和`servicePrincipalKey`提供值。
 
 **API格式**
 
@@ -135,7 +135,7 @@ curl -X POST \
 POST /connections
 ```
 
-**請求**
+**要求**
 
 ```shell
 curl -X POST \
