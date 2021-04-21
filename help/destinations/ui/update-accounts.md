@@ -1,14 +1,14 @@
 ---
-keywords: 更新目標帳戶；目標帳戶；如何更新帳戶
+keywords: 更新目標帳戶，目標帳戶，如何更新帳戶，更新目標
 title: 更新目標帳戶
 type: Tutorial
 description: 本教學課程列出在Adobe Experience PlatformUI中更新目標帳戶的步驟
 exl-id: afb41878-4205-4c64-af4d-e2740f852785
 translation-type: tm+mt
-source-git-commit: e436d7147c613dad5b2ff596a412759fd60d228c
+source-git-commit: 5b72433fcf2318f98538278c6d2650b366e391a2
 workflow-type: tm+mt
-source-wordcount: '313'
-ht-degree: 1%
+source-wordcount: '314'
+ht-degree: 0%
 
 ---
 
