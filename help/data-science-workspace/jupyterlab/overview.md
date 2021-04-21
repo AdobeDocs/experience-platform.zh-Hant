@@ -2,16 +2,16 @@
 keywords: Experience Platform;JupyterLab；筆記型電腦；資料科學工作區；熱門主題；jupyterlab
 solution: Experience Platform
 title: JupyterLab UI概觀
-topic: Overview
+topic-legacy: Overview
 description: JupyterLab是Project Jupyter的基於Web的用戶介面，與Adobe Experience Platform緊密整合。 它為資料科學家提供互動式開發環境，以便與Jupyter Notebooks、程式碼和資料搭配使用。 本文檔概述了JupyterLab及其功能，以及執行常見操作的說明。
+exl-id: 13786fbd-ef16-49cd-8bcf-46320c33e902
 translation-type: tm+mt
-source-git-commit: 9d84fc1eb898020ed4b154c091fcc9fc4933c7de
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '1820'
+source-wordcount: '1813'
 ht-degree: 3%
 
 ---
-
 
 # [!DNL JupyterLab] UI概觀
 
@@ -64,7 +64,7 @@ Experience Platform公司的JupyterLab整合附帶了體系結構更改、設計
 
 ### 存取 [!DNL JupyterLab] {#access-jupyterlab}
 
-在[Adobe Experience Platform](https://platform.adobe.com)中，從左側導航列中選擇&#x200B;**[!UICONTROL Notebooks]**。 請讓[!DNL JupyterLab]稍候完全初始化。
+在[Adobe Experience Platform](https://platform.adobe.com)中，從左側導覽欄中選擇&#x200B;**[!UICONTROL Notebooks]**。 請讓[!DNL JupyterLab]稍候完全初始化。
 
 ![](../images/jupyterlab/user-guide/access_jupyterlab.png)
 
@@ -108,7 +108,7 @@ Experience Platform公司的JupyterLab整合附帶了體系結構更改、設計
 
 ### [!DNL Python]/R中的GPU和記憶體伺服器配置
 
-在[!DNL JupyterLab]中，選擇右上角的齒輪表徵圖以開啟&#x200B;*筆記本伺服器配置*。 您可以使用滑桿來切換GPU並分配所需的記憶體量。 可分配的記憶體量取決於您的組織已布建的記憶體量。 選擇&#x200B;**[!UICONTROL 更新配置]**&#x200B;以保存。
+在[!DNL JupyterLab]中，選擇右上角的齒輪表徵圖以開啟&#x200B;*筆記本伺服器配置*。 您可以使用滑桿來切換GPU並分配所需的記憶體量。 可分配的記憶體量取決於您的組織已布建的記憶體量。 選擇&#x200B;**[!UICONTROL Update configs]**&#x200B;以保存。
 
 >[!NOTE]
 >
@@ -118,9 +118,9 @@ Experience Platform公司的JupyterLab整合附帶了體系結構更改、設計
 
 ### 終止並重新啟動[!DNL JupyterLab]
 
-在[!DNL JupyterLab]中，您可以終止會話，以防止使用其他資源。 從選擇&#x200B;**電源表徵圖** ![電源表徵圖](../images/jupyterlab/user-guide/power_button.png)開始，然後從顯示的窗口中選擇&#x200B;**[!UICONTROL 關閉]**&#x200B;以終止您的會話。 筆記型電腦會話在12小時無活動後自動終止。
+在[!DNL JupyterLab]中，您可以終止會話，以防止使用其他資源。 首先，選擇&#x200B;**電源表徵圖** ![電源表徵圖](../images/jupyterlab/user-guide/power_button.png) ，然後從顯示的快顯窗口中選擇&#x200B;**[!UICONTROL Shut Down]**&#x200B;以終止您的會話。 筆記型電腦會話在12小時無活動後自動終止。
 
-要重新啟動[!DNL JupyterLab]，請選擇位於電源表徵圖左側的&#x200B;**重新啟動表徵圖** ![重新啟動表徵圖](../images/jupyterlab/user-guide/restart_button.png)，然後從顯示的快顯窗口中選擇&#x200B;**[!UICONTROL 重新啟動]**。
+要重新啟動[!DNL JupyterLab]，請選擇位於電源表徵圖左側的&#x200B;**重新啟動表徵圖** ![重新啟動表徵圖](../images/jupyterlab/user-guide/restart_button.png)，然後從顯示的快顯窗口中選擇&#x200B;**[!UICONTROL Restart]**。
 
 ![終止jupterlab](../images/jupyterlab/user-guide/shutdown-jupyterlab.gif)
 
