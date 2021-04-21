@@ -1,23 +1,23 @@
 ---
-keywords: Experience Platform;home;popular topics;DULE;dule
+keywords: Experience Platform;home；熱門主題；DULE;dule
 solution: Experience Platform
 title: 原則服務API快速入門
-topic: developer guide
-description: Policy Service API可讓您建立並管理與Adobe Experience Platform資料治理相關的各種資源。 本檔案提供您在嘗試呼叫Policy Service API之前，需要瞭解的核心概念的簡介。
+topic-legacy: developer guide
+description: Policy Service API可讓您建立和管理與Adobe Experience Platform資料治理相關的各種資源。 本檔案提供您在嘗試呼叫Policy Service API之前，需要瞭解的核心概念的簡介。
+exl-id: 5539976c-8433-45af-a147-2ab82ae308b2
 translation-type: tm+mt
-source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '438'
 ht-degree: 0%
 
 ---
 
-
 # [!DNL Policy Service] API快速入門
 
-[!DNL Policy Service] API可讓您建立並管理與Adobe Experience Platform [!DNL Data Governance]相關的各種資源。 本檔案提供您在嘗試呼叫[!DNL Policy Service] API之前，需要瞭解的核心概念的簡介。
+[!DNL Policy Service] API可讓您建立並管理與Adobe Experience Platform[!DNL Data Governance]相關的各種資源。 本檔案提供您在嘗試呼叫[!DNL Policy Service] API之前，需要瞭解的核心概念的簡介。
 
-## 必要條件
+## 先決條件
 
 使用開發人員指南需要對使用「資料治理」功能時涉及的各種[!DNL Experience Platform]服務有良好的瞭解。 在開始使用[!DNL Policy Service API]之前，請先閱讀以下服務的說明檔案：
 
@@ -54,7 +54,7 @@ API檔案也要求您完成[驗證教學課程](https://www.adobe.com/go/platfor
 
 在[!DNL Policy Service] API中，所有原則和行銷動作都稱為`core`或`custom`資源。
 
-`core` 資源是由Adobe定義和維護的資源，而 `custom` 資源則是由您的組織建立和維護的資源，因此，資源是您IMS組織唯一可見的。因此，清單和查閱操作(`GET`)是`core`資源所允許的唯一操作，而清單、查閱和更新操作（`POST`、`PUT`、`PATCH`和`DELETE`）可用於`custom`資源。
+`core` 資源是由Adobe定義和維護的資源，而 `custom` 資源則是由您的組織建立和維護的資源，因此它們是唯一的，僅對您的IMS組織可見。因此，清單和查閱操作(`GET`)是`core`資源所允許的唯一操作，而清單、查閱和更新操作（`POST`、`PUT`、`PATCH`和`DELETE`）可用於`custom`資源。
 
 ## 後續步驟
 
