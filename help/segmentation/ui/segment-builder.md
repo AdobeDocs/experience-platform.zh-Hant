@@ -2,13 +2,13 @@
 keywords: Experience Platform; home；熱門主題；分段服務；分段服務；使用手冊；ui指南；分段使用手冊；分段生成器；分段生成器；
 solution: Experience Platform
 title: 區段產生器UI指南
-topic: ui guide
+topic-legacy: ui guide
 description: Adobe Experience PlatformUI中的區段產生器提供豐富的工作區，可讓您與描述檔資料元素互動。 工作區提供建立和編輯規則的直覺式控制項，例如用來表示資料屬性的拖放圖格。
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
 translation-type: tm+mt
-source-git-commit: bad293cf25b955496897d895169ec494416e9787
+source-git-commit: 875d3838e16a3b79fa9ab3ec61e4ffb15ea1cf20
 workflow-type: tm+mt
-source-wordcount: '1942'
+source-wordcount: '1940'
 ht-degree: 0%
 
 ---
@@ -117,7 +117,7 @@ ht-degree: 0%
 
 ![](../images/ui/segment-builder/filled-aggregation.png)
 
-### 計數函式
+### 計數函式{#count-functions}
 
 「區段產生器」中的計數功能可用來尋找指定的事件並計算它們完成的次數。 「區段產生器」中支援的計數功能有「至少」、「最多」、「完全」、「介於」和「全部」。
 
