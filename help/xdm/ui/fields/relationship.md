@@ -1,17 +1,17 @@
 ---
-keywords: Experience Platform;home;popular topics;api;API;XDM;XDM系統；experience資料模型；資料模型；ui;workspace;relations;field;
+keywords: Experience Platform;home；熱門主題；api;API;XDM;XDM系統；體驗資料模型；ui;workspace;relations;field;
 solution: Experience Platform
 title: 在UI中定義關係欄位
 description: 瞭解如何在Experience Platform使用者介面中定義關係欄位。
-topic: user guide
+topic-legacy: user guide
+exl-id: 8a6be545-0edb-4b9c-b164-e44a7a5f54f5
 translation-type: tm+mt
-source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '249'
 ht-degree: 0%
 
 ---
-
 
 # 在UI中定義關係欄位
 
@@ -21,4 +21,4 @@ ht-degree: 0%
 
 由於聯合架構僅基於共用同一類的架構，因此僅啟用「Hotels」架構以便用於配置檔案時，將不包括其[!DNL XDM Individual Profile]的欄位聯合架構。 您必須改為定義「酒店」與屬於工會的其他結構之間的關係。 這包括在引用目標方案主標識的源方案中定義&#x200B;**關係欄位**。
 
-如需在Adobe Experience Platform UI中定義兩個結構之間關係的詳細步驟，請參閱[關係UI教學課程](../../tutorials/relationship-ui.md)。
+有關在Adobe Experience PlatformUI中定義兩個架構之間關係的詳細步驟，請參見[關係UI教程](../../tutorials/relationship-ui.md)。
