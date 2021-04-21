@@ -2,14 +2,14 @@
 keywords: Experience Platform；首頁；熱門主題；雲儲存資料；流資料；流
 solution: Experience Platform
 title: 使用來源連接器和API收集串流資料
-topic: overview
+topic-legacy: overview
 type: Tutorial
 description: 本教學課程涵蓋使用來源連接器和API擷取串流資料並將其匯入平台的步驟。
 exl-id: 898df7fe-37a9-4495-ac05-30029258a6f4
 translation-type: tm+mt
-source-git-commit: 727c9dbd87bacfd0094ca29157a2d0283c530969
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '1499'
+source-wordcount: '1498'
 ht-degree: 2%
 
 ---
