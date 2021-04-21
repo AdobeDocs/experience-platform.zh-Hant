@@ -2,16 +2,16 @@
 keywords: Experience Platform;home；熱門主題；標籤標識
 solution: Experience Platform
 title: 將欄位標示為身分
-topic: api guide
+topic-legacy: api guide
 description: 包含個人識別資訊(PII)的欄位可標示為識別欄位。 身分欄位中提供的值，由Identity Service解譯為身分。 標識的名稱空間指定為標籤欄位的一部分。
+exl-id: f0b3f18b-7302-4a0b-b444-2d4b59787681
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '196'
 ht-degree: 1%
 
 ---
-
 
 # 將欄位標示為身分
 
