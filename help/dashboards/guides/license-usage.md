@@ -2,16 +2,16 @@
 keywords: Experience Platform；用戶介面；UI；自定義；許可證使用儀表板；儀表板；許可證使用；權益；衝減
 title: 授權使用儀表板
 description: Adobe Experience Platform提供儀表板，您可透過儀表板檢視貴組織授權使用的重要資訊。
-topic: guide
+topic-legacy: guide
 type: Documentation
+exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
 translation-type: tm+mt
-source-git-commit: 6baf1fbff20a02cd599d9ad9102d56db5a9004c3
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '660'
+source-wordcount: '632'
 ht-degree: 2%
 
 ---
-
 
 # （測試版）授權使用控制面板{#license-usage-dashboard}
 
@@ -33,7 +33,7 @@ Adobe Experience Platform用戶介面(UI)提供一個儀表板，通過該儀表
 
 ## 探索授權使用儀表板
 
-若要導覽至平台UI中的授權使用控制面板，請在左側導軌中選取「**[!UICONTROL 授權使用]**」。 此時會開啟&#x200B;**[!UICONTROL 概述]**&#x200B;標籤，顯示控制面板。
+若要導覽至「平台UI」中的授權使用控制面板，請選取左側導軌中的&#x200B;**[!UICONTROL License usage]**。 此頁籤隨&#x200B;**[!UICONTROL Overview]**&#x200B;頁籤開啟，其中顯示控制面板。
 
 ![](../images/license-usage/dashboard-overview.png)
 
@@ -43,13 +43,13 @@ Adobe Experience Platform用戶介面(UI)提供一個儀表板，通過該儀表
 
 >[!NOTE]
 >
->相同類型的所有沙盒會累積沙盒的耗用量報告。 換言之，選擇[!UICONTROL Production]或[!UICONTROL Development]可分別針對所有生產或開發沙盒提供消費報表。
+>相同類型的所有沙盒會累積沙盒的耗用量報告。 換言之，選擇[!UICONTROL Production]或[!UICONTROL Development]可分別針對所有生產或開發沙盒提供消耗報表。
 
 ![](../images/license-usage/select-sandbox.png)
 
 ### 選擇日期範圍
 
-選取沙盒後，您可以使用日期範圍下拉式清單來選取要在控制面板中顯示的時段。 有三種可用選項：[!UICONTROL 最近30天]、[!UICONTROL 最近90天]和[!UICONTROL 最近12個月]。 預設會選取最近30天。
+選取沙盒後，您可以使用日期範圍下拉式清單來選取要在控制面板中顯示的時段。 有三種可用選項：[!UICONTROL Last 30 days]、[!UICONTROL Last 90 days]和[!UICONTROL Last 12 months]。 預設會選取最近30天。
 
 ![](../images/license-usage/select-date-range.png)
 
@@ -65,10 +65,10 @@ Adobe Experience Platform用戶介面(UI)提供一個儀表板，通過該儀表
 
 授權使用控制面板目前提供4個度量：
 
-* [!UICONTROL 可定址對象] （依描述檔數量測量）
-* [!UICONTROL 平均個人檔案豐富性]
-* [!UICONTROL 已消耗的儲存總量]
-* [!UICONTROL 每個區段的掃描資料]
+* [!UICONTROL Addressable Audience] （以描述檔數量衡量）
+* [!UICONTROL Average profile richness]
+* [!UICONTROL Total consumed storage]
+* [!UICONTROL Data scanned per segmentation ratio]
 
 這些量度的定義視貴組織已購買的授權而定。 如需每個度量的詳細定義，請參考適當的產品說明檔案：
 
