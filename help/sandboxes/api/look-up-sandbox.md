@@ -2,16 +2,16 @@
 keywords: Experience Platform;home；熱門主題；查找沙盒；查找沙盒
 solution: Experience Platform
 title: 在API中尋找沙盒
-topic: developer guide
+topic-legacy: developer guide
 description: 您可以提出GET請求，在請求路徑中包含沙盒的名稱屬性，以尋找個別沙盒。
+exl-id: de8d965c-ca58-436e-b5b1-05a492de70f5
 translation-type: tm+mt
-source-git-commit: 62ce5ac92d03a6e85589fc92e8d953f7fc1d8f31
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '245'
+source-wordcount: '243'
 ht-degree: 2%
 
 ---
-
 
 # 在API中尋找沙盒
 
@@ -27,7 +27,7 @@ GET /sandboxes/{SANDBOX_NAME}
 | --- | --- |
 | `{SANDBOX_NAME}` | 您要尋找的沙盒的`name`屬性。 |
 
-**請求**
+**要求**
 
 下列請求會擷取名為&quot;dev-2&quot;的沙盒。
 
