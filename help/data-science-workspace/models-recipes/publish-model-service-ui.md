@@ -2,17 +2,17 @@
 keywords: Experience Platform；發佈模型；資料科學工作區；熱門主題；為服務評分
 solution: Experience Platform
 title: 在資料科學工作區UI中以服務形式發佈模型
-topic: tutorial
+topic-legacy: tutorial
 type: Tutorial
 description: Adobe Experience Platform資料科學工作區可讓您將經過訓練和評估的模型發佈為服務，讓IMS組織內的使用者可對資料評分，而不需建立自己的模型。
+exl-id: ebbec1b1-20d3-43b5-82d3-89c79757625a
 translation-type: tm+mt
-source-git-commit: 13fa4af388c6f31768a6b7e1da05cb56c5635c9e
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '485'
-ht-degree: 1%
+source-wordcount: '483'
+ht-degree: 0%
 
 ---
-
 
 # 在Data Science Workspace UI中以服務形式發佈模型
 
