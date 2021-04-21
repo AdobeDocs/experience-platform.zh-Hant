@@ -1,13 +1,13 @@
 ---
 solution: Experience Platform
 title: 電信業資料模型ERD
-topic: overview
+topic-legacy: overview
 description: 檢視實體關係圖(ERD)，其中說明電信產業的標準化資料模型，並與在Adobe Experience Platform使用的體驗資料模型(XDM)相容。
 translation-type: tm+mt
-source-git-commit: ffc113c0c85c76e6645fb4276c174779682f2b60
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '74'
-ht-degree: 1%
+source-wordcount: '73'
+ht-degree: 0%
 
 ---
 
