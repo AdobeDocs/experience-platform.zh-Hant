@@ -1,20 +1,20 @@
 ---
-keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API;unified profile;Unified Profile;unified;Profile;rtcp;enable profile；啟用profile；啟用profile
+keywords: Experience Platform；配置檔案；即時客戶配置檔案；疑難排解；API；統一配置檔案；統一配置檔案；配置檔案；rtcp；啟用配置檔案；啟用配置檔案
 title: 即時客戶個人檔案API指南
-topic: guide
+topic-legacy: guide
 description: 即時客戶描述檔API可讓開發人員探索和使用描述檔資料，包括檢視描述檔、建立和更新合併原則、匯出或取樣描述檔資料，以及刪除不再需要或錯誤新增的描述檔資料。 請依照本指南，瞭解如何使用API執行關鍵作業。
+exl-id: ce39b95b-cff7-46cf-a14c-8203017c8826
 translation-type: tm+mt
-source-git-commit: 24a5af0440f58b4e1db639ec971c4e1611f107d8
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '895'
+source-wordcount: '894'
 ht-degree: 0%
 
 ---
 
-
 # [!DNL Real-time Customer Profile] API指南
 
-[!DNL Real-time Customer Profile] 讓您在Adobe Experience Platform中全面瞭解每一位客戶。[!DNL Profile] 可讓您將來自多個通道的零散客戶資料（例如線上、離線、CRM和第三方資料）整合為一個統一的檢視，為每個客戶互動提供可操作的時間戳記帳戶。
+[!DNL Real-time Customer Profile] 讓您全面瞭解Adobe Experience Platform地區的每位客戶。[!DNL Profile] 可讓您將來自多個通道的零散客戶資料（例如線上、離線、CRM和第三方資料）整合為一個統一的檢視，為每個客戶互動提供可操作的時間戳記帳戶。
 
 [!DNL Real-time Customer Profile] API包含多個端點，如下所述。 如需詳細資訊，請造訪個別端點指南，並參閱[快速入門手冊](getting-started.md)，以取得必要標題、讀取範例API呼叫等重要資訊。
 
@@ -36,11 +36,11 @@ ht-degree: 0%
 
 ## 邊緣投影{#edge-projections}
 
-Adobe Experience Platform讓資料可輕鬆在戰略性位置的伺服器（稱為「邊緣」）上存取，讓客戶體驗即時個人化。 [!DNL Real-time Customer Profile] API提供端點，以透過稱為「投影」的元件處理邊緣。 這包括確定應將哪些資料投影到每個邊的投影配置，以及定義投影路由位置的投影目標。 如需使用邊緣投影的詳細資訊，請造訪[投影組態和目標端點指南](edge-projections.md)。
+Adobe Experience Platform讓資料可輕鬆在戰略性位置的伺服器（稱為「邊緣」）上存取，借以即時個人化客戶體驗。 [!DNL Real-time Customer Profile] API提供端點，以透過稱為「投影」的元件處理邊緣。 這包括確定應將哪些資料投影到每個邊的投影配置，以及定義投影路由位置的投影目標。 如需使用邊緣投影的詳細資訊，請造訪[投影組態和目標端點指南](edge-projections.md)。
 
 ## 實體（[!DNL Profile]訪問）{#entities}
 
-透過Adobe Experience Platform，您可以使用REST風格的API或使用者介面存取[!DNL Real-time Customer Profile]資料。 要瞭解如何使用API訪問實體（更常稱為「配置式」），請遵循[實體端點指南](entities.md)中概述的步驟。 要使用[!DNL Platform] UI訪問配置檔案，請參閱[Profile使用手冊](../ui/user-guide.md)。
+通過Adobe Experience Platform，您可以使用REST風格的API或用戶介面訪問[!DNL Real-time Customer Profile]資料。 要瞭解如何使用API訪問實體（更常稱為「配置式」），請遵循[實體端點指南](entities.md)中概述的步驟。 要使用[!DNL Platform] UI訪問配置檔案，請參閱[Profile使用手冊](../ui/user-guide.md)。
 
 ## 匯出工作（[!DNL Profile]匯出）{#profile-export}
 
@@ -54,7 +54,7 @@ Adobe Experience Platform讓資料可輕鬆在戰略性位置的伺服器（稱�
 
 ## 預覽範例狀態（[!DNL Profile]預覽）{#profile-preview}
 
-當為描述檔啟用的資料已收錄到Experience Platform中時，它會儲存在描述檔資料儲存區中。 隨著描述檔儲存區中記錄數的增加或減少，會執行範例工作，其中包含資料儲存區中有多少描述檔片段和合併的描述檔的相關資訊。 使用描述檔API，您可以預覽最新成功的範例，以及依資料集和身分命名空間來列出描述檔散發。 要開始使用`/profilepreviewstatus`端點，請參閱[預覽示例狀態端點指南](preview-sample-status.md)。
+當為「描述檔」啟用的資料被吸收到「Experience Platform」中時，它會儲存在「描述檔」資料儲存區中。 隨著描述檔儲存區中記錄數的增加或減少，會執行範例工作，其中包含資料儲存區中有多少描述檔片段和合併的描述檔的相關資訊。 使用描述檔API，您可以預覽最新成功的範例，以及依資料集和身分命名空間來列出描述檔散發。 要開始使用`/profilepreviewstatus`端點，請參閱[預覽示例狀態端點指南](preview-sample-status.md)。
 
 ## 配置式系統作業{#profile-system-jobs}
 
