@@ -2,16 +2,16 @@
 keywords: Experience Platform;home；熱門主題；SFTP;sftp
 solution: Experience Platform
 title: SFTP來源連接器概述
-topic: overview
+topic-legacy: overview
 description: 瞭解如何使用API或使用者介面將SFTP伺服器連線至Adobe Experience Platform。
+exl-id: d5bced3d-cd33-40ea-bce0-32c76ecd2790
 translation-type: tm+mt
-source-git-commit: 0e11acc4a599d360cb3048445003f61848ad23d3
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '452'
+source-wordcount: '451'
 ht-degree: 0%
 
 ---
-
 
 # SFTP連接器
 
