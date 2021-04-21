@@ -2,16 +2,16 @@
 keywords: Experience Platform;home；熱門主題；清單標識；清單群集
 solution: Experience Platform
 title: 列出群集中的所有標識
-topic: API guide
+topic-legacy: API guide
 description: 在身分圖中相關的身分識別（無論名稱空間為何），都會被視為該身分圖中相同「叢集」的一部分。 以下選項提供訪問所有群整合員的方法。
+exl-id: 0fb9eac9-2dc2-4881-8598-02b3053d0b31
 translation-type: tm+mt
-source-git-commit: 73035aec86297cfc4ee9337cf922d599001379c3
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '359'
 ht-degree: 1%
 
 ---
-
 
 # 列出群集中的所有身份
 
@@ -32,7 +32,7 @@ ht-degree: 1%
 GET https://platform-{REGION}.adobe.io/data/core/identity/cluster/members?{PARAMETERS}
 ```
 
-**請求**
+**要求**
 
 選項1:將識別碼提供為命名空間（`nsId`，依ID）和ID值(`id`)。
 
@@ -81,7 +81,7 @@ curl -X GET \
 POST https://platform-{REGION}.adobe.io/data/core/identity/clusters/members
 ```
 
-**請求**
+**要求**
 
 以下請求演示提供要為其檢索群整合員的XID的清單。
 
