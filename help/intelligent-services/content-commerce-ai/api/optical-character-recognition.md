@@ -2,16 +2,16 @@
 keywords: OCR；文本存在；光學字元識別
 solution: Experience Platform, Intelligent Services
 title: 文本存在與光學字元識別
-topic: Developer guide
+topic-legacy: Developer guide
 description: 在「內容與商務AI API」中，文字存在／光學字元辨識(OCR)服務可指出特定影像中是否有文字。 如果存在文本，OCR可以返回文本。
+exl-id: 85b976a7-0229-43e9-b166-cdbd213b867f
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '525'
 ht-degree: 3%
 
 ---
-
 
 # 文本存在與光學字元識別
 
@@ -21,7 +21,7 @@ ht-degree: 3%
 
 文字存在／光學字元識別(OCR)服務在給定影像時，可指出影像中是否有文字。 如果存在文本，OCR可以返回文本。
 
-本檔案所示的範例請求中使用了下列影像：
+本檔案所示的範例要求中使用了下列影像：
 
 ![測試影像](../images/shef.jpeg)
 
@@ -31,7 +31,7 @@ ht-degree: 3%
 POST /services/v1/predict
 ```
 
-**請求**
+**要求**
 
 下列請求會根據裝載中提供的輸入影像來檢查文字是否存在。 請參閱範例裝載下表，以取得有關所示輸入參數的詳細資訊。
 
@@ -88,7 +88,7 @@ curl -w'\n' -i -X POST https://sensei.adobe.io/services/v1/predict \
 
 **回應**
 
-成功的響應返回在`feature_value`陣列中檢測到的文本。 文字會從左至右讀取並從上往下傳回。 這表示如果偵測到「I love Adobe」，您的裝載會在個別物件中傳回「I」、「love」和「Adobe」。 在物件中，您會得到包含單字的`feature_name`和包含該文字信賴度量的`feature_value`。
+成功的響應返回在`feature_value`陣列中檢測到的文本。 文字會從左至右讀取並從上往下傳回。 這表示如果偵測到「I loveAdobe」，您的裝載會在個別物件中傳回「I」、「love」和「Adobe」。 在物件中，您會得到包含單字的`feature_name`和包含該文字信賴度量的`feature_value`。
 
 ```json
 {
