@@ -2,20 +2,20 @@
 keywords: Experience Platform; home；熱門主題；查詢服務；查詢服務； RStudio;rstudio；連接查詢服務；
 solution: Experience Platform
 title: 將RStudio連接至查詢服務
-topic: connect
-description: 本檔案將逐步說明如何將R Studio與Adobe Experience Platform Query Service連接。
+topic-legacy: connect
+description: 本檔案將逐步介紹將R Studio與Adobe Experience Platform查詢服務連接的步驟。
+exl-id: 8dd82bad-6ffb-4536-9c27-223f471a49c6
 translation-type: tm+mt
-source-git-commit: f1b2fd7efd43f317a85c831cd64c09be29688f7a
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '368'
+source-wordcount: '365'
 ht-degree: 0%
 
 ---
 
-
 # 將[!DNL RStudio]連接到查詢服務
 
-本檔案將逐步說明如何連接[!DNL RStudio]與Adobe Experience Platform [!DNL Query Service]。
+本檔案將逐步介紹將[!DNL RStudio]與Adobe Experience Platform[!DNL Query Service]連接的步驟。
 
 >[!NOTE]
 >
@@ -51,7 +51,7 @@ qsconnection <- dbConnect(pgsql, "jdbc:postgresql://{HOSTNAME}:{PORT}/{DATABASE_
 
 >[!NOTE]
 >
->有關查找資料庫名稱、主機、埠和登錄憑據的詳細資訊，請訪問Platform](https://platform.adobe.com/query/configuration)上的[ credentials頁。 要查找憑據，請登錄到[!DNL Platform]，然後選擇&#x200B;**[!UICONTROL 查詢]**，然後選擇&#x200B;**[!UICONTROL 憑據]**。
+>有關查找資料庫名稱、主機、埠和登錄憑據的詳細資訊，請訪問Platform](https://platform.adobe.com/query/configuration)上的[ credentials頁。 若要尋找您的認證，請登入[!DNL Platform]，然後選取&#x200B;**[!UICONTROL Queries]**，後面接著&#x200B;**[!UICONTROL Credentials]**。
 
 ![](../images/clients/rstudio/connection-rjdbc.png)
 
