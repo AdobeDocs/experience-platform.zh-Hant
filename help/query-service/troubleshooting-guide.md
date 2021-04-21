@@ -1,17 +1,17 @@
 ---
-keywords: Experience Platform; home；熱門主題；查詢服務；查詢服務；疑難排解指南；常見問題；疑難排解；
+keywords: Experience Platform; home；熱門主題；查詢服務；查詢服務；故障排除指南；常見問題；故障排除；
 solution: Experience Platform
 title: 查詢服務疑難排解指南
-topic: troubleshooting
+topic-legacy: troubleshooting
 description: 本檔案包含您遇到的常見錯誤碼及可能原因的資訊。
+exl-id: 14cdff7a-40dd-4103-9a92-3f29fa4c0809
 translation-type: tm+mt
-source-git-commit: 97dc0b5fb44f5345fd89f3f56bd7861668da9a6e
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '177'
 ht-degree: 3%
 
 ---
-
 
 # [!DNL Query Service] 疑難排解指南
 
