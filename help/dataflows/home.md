@@ -1,21 +1,21 @@
 ---
-keywords: Experience Platform;home；熱門主題；資料流；資料流；資料；監控；監控資料流；監控資料流；監控資料流；監控資料流；監控資料流；流程服務；
+keywords: Experience Platform;home；熱門主題；資料流；資料流；資料；監控；監控資料流；監控資料流；監控資料流；監控資料流；監控資料流；流服務；
 solution: Experience Platform
 title: 資料流概述
-topic: overview
-description: 本檔案介紹資料流，以說明它們在Adobe Experience Platform中的使用方式。
+topic-legacy: overview
+description: 本檔案介紹了資料流，以說明它們在Adobe Experience Platform的使用方式。
+exl-id: 8fe08ffa-f095-4e9f-8bab-d060985f0236
 translation-type: tm+mt
-source-git-commit: 185c9c953a6ce923359e221d6f0f91b0f6614f05
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '238'
 ht-degree: 5%
 
 ---
 
-
 # 資料流概述
 
-在Adobe Experience Platform中，資料會從多種來源擷取，在Experience Platform中分析，並啟動至多種目的地。 平台提供資料流透明度，讓追蹤這種可能非線性的資料流程變得更輕鬆。
+在Adobe Experience Platform，資料是從各種來源中提取的，在Experience Platform中分析，並激活到各種目的地。 平台提供資料流透明度，讓追蹤這種可能非線性的資料流程變得更輕鬆。
 
 ## 使用資料流
 
@@ -32,4 +32,3 @@ ht-degree: 5%
 ## 監控資料流
 
 可使用平台API或平台UI來監控資料流。 要瞭解如何使用API監視資料流，請閱讀[監視資料流API教程](./api/monitor.md)。 要瞭解如何監視平台UI中的資料流，請閱讀有關[監視源的資料流](./ui/monitor-sources.md)和[監視目標資料流](./ui/monitor-destinations.md)的教程。
-
