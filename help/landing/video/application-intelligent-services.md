@@ -1,25 +1,23 @@
 ---
-title: 基於Experience Platform的應用程式與智慧服務
-description: 此視訊概述以Adobe Experience Platform為基礎的應用程式服務和智慧服務，以補充Experience Cloud Applications&mdash；即時客戶資料平台、歷程協調、客戶歷程分析、歸因人工智慧和客戶人工智慧。
-feature: platform
-topics: null
+title: 基於Experience Platform的應用和智慧服務
+description: 本視訊概述以Adobe Experience Platform為基礎的應用程式服務和智慧服務，以補充Experience Cloud應用程式&mdash；即時客戶資料平台、Journey Orchestration、Customer Journey Analytics、Attribution AI和客戶人工智慧。
 kt: 4333
 audience: all
 doc-type: video
 activity: understand
 thumbnail: 32554.jpg
+exl-id: d2f30bba-4b49-40b2-9f2a-80905894baa6
 translation-type: tm+mt
-source-git-commit: 5575d5e45bddcc007dcf78720cd7a7e20475f78c
+source-git-commit: f12baaa9d4b37f1101792a4ae479b5a62893eb68
 workflow-type: tm+mt
 source-wordcount: '118'
 ht-degree: 22%
 
 ---
 
+# 應用程式與以Experience Platform為基礎的智慧型服務
 
-# 以Experience Platform為基礎的應用程式與智慧服務
-
-此視訊概述以Experience Platform為基礎的應用程式與智慧型服務。
+此視訊概述以Experience Platform為基礎的應用程式和智慧型服務。
 
 若要進一步瞭解，請使用連結來造訪每個個別應用程式的檔案：
 
@@ -30,7 +28,3 @@ ht-degree: 22%
 * [[!DNL Real-time Customer Data Platform (Real-time CDP)]](../../rtcdp/overview.md)
 
 >[!VIDEO](https://video.tv.adobe.com/v/32554?quality=12&learn=on)
-
-
-
-
