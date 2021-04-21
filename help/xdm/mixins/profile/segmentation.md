@@ -1,25 +1,25 @@
 ---
-keywords: Experience Platform;home；熱門主題；架構；架構；XDM；個人配置檔案；欄位；架構；Schemas;segment;segmentMembership;segment成員資格；架構設計；map；映射；
+keywords: Experience Platform;home；熱門主題；架構；架構；XDM；個人配置檔案；欄位；架構；架構；segment;segmentMembership;segment成員資格；架構設計；map；映射；
 solution: Experience Platform
 title: 區段會籍詳細資訊混合
-topic: overview
+topic-legacy: overview
 description: 本檔案提供「區段成員資格詳細資料」混合檔的概觀。
+exl-id: 4d463f3a-2247-4307-8afe-9527e7fd72a7
 translation-type: tm+mt
-source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '406'
+source-wordcount: '400'
 ht-degree: 1%
 
 ---
 
-
-# [!UICONTROL 區段成員資格詳] 細資訊
+# [!UICONTROL Segment Membership Details] mixin
 
 >[!NOTE]
 >
 >幾個混音的名字已經改變。 如需詳細資訊，請參閱[mixin name updates](../name-updates.md)上的檔案。
 
-[!UICONTROL 區段會] 籍詳細資訊是類別的標準 [[!DNL XDM Individual Profile] 混合](../../classes/individual-profile.md)。混音提供單一地圖欄位，擷取關於區段成員資格的資訊，包括個人所屬的區段、最後的資格時間，以及會籍有效到的時間。
+[!UICONTROL Segment Membership Details] 是班級的標準混音 [[!DNL XDM Individual Profile] 詞](../../classes/individual-profile.md)。混音提供單一地圖欄位，擷取關於區段成員資格的資訊，包括個人所屬的區段、最後的資格時間，以及會籍有效到的時間。
 
 >[!WARNING]
 >
