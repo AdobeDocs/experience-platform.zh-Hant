@@ -2,16 +2,16 @@
 keywords: Experience Platform;home；熱門主題；選擇退出；分段；分段服務；分段服務；遵守退出；選擇退出；選擇退出；選擇退出；選擇退出；
 solution: Experience Platform
 title: 在區段中啟用退出請求
-topic: overview
-description: 'Adobe Experience Platform允許您的客戶在即時客戶個人檔案中傳送有關資料使用和儲存的退出要求]。 這些選擇退出要求是加州消費者隱私法(CCPA)的一部分，該法案賦予加州居民存取和刪除個人資料的權利，並可得知他們的個人資料是否被出售或披露（以及向誰）。 '
+topic-legacy: overview
+description: Adobe Experience Platform允許您的客戶在即時客戶個人檔案中傳送有關資料使用和儲存的退出要求]。 這些選擇退出要求是加州消費者隱私法(CCPA)的一部分，該法案賦予加州居民存取和刪除個人資料的權利，並可得知他們的個人資料是否被出售或披露（以及向誰）。
+exl-id: fe851ce3-60db-4984-a73c-f9c5964bfbad
 translation-type: tm+mt
-source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '1033'
+source-wordcount: '1013'
 ht-degree: 0%
 
 ---
-
 
 # 允許區段中的退出請求
 
@@ -112,15 +112,15 @@ Adobe Experience Platform允許您的客戶在[!DNL Real-time Customer Profile]�
 
 ### 一般退出
 
-[!DNL Segmentation] 自動接受包含「一般退出[!UICONTROL 」標幟的所有設定檔]，這表示這些設定檔預設不會包含在觀眾或匯出中。但是，最佳做法是新增適當欄位，以確保觀眾和行銷活動不包含選擇退出的個人檔案。
+[!DNL Segmentation] 自動接受包含「[!UICONTROL General Opt-Out]」標幟的所有描述檔，這表示這些描述檔預設不會包含在觀眾或匯出中。但是，最佳做法是新增適當欄位，以確保觀眾和行銷活動不包含選擇退出的個人檔案。
 
-這可透過新增&#x200B;**[!UICONTROL 隱私權退出]**&#x200B;屬性，使用使用者介面來完成。 在此例中，區段設為僅包含已選擇加入的群體（這表示他們的描述檔上沒有一般的選擇退出標幟）。 通過聲明&quot;[!UICONTROL 退出類型]&quot;等於&quot;[!UICONTROL 一般退出]&quot;和&quot;[!UICONTROL 退出值]&quot;等於&quot;[!UICONTROL 選擇加入]&quot;來完成此操作。
+這可以通過添加&#x200B;**[!UICONTROL Privacy Opt-Outs]**&#x200B;屬性來使用用戶介面完成。 在此例中，區段設為僅包含已選擇加入的群體（這表示他們的描述檔上沒有一般的選擇退出標幟）。 通過聲明&quot;[!UICONTROL Opt-Out Type]&quot;等於&quot;[!UICONTROL General Opt-Out]&quot;和&quot;[!UICONTROL Opt-Out Value]&quot;等於&quot;[!UICONTROL Opt-in]&quot;來完成此操作。
 
 ![](images/opt-outs/segment-general-opt-out.png)
 
 ### 銷售／分享選擇退出
 
-如果使用者的描述檔已設定銷售／分享選擇退出標幟，此描述檔不應再用於任何區段建立或行銷活動。 為確保遵守此標幟，「[!UICONTROL 選擇退出類型]」必須等於「[!UICONTROL 銷售分享選擇退出]」，而「[!UICONTROL 選擇退出值]」必須等於「[!UICONTROL 選擇加入]」。
+如果使用者的描述檔已設定銷售／分享選擇退出標幟，此描述檔不應再用於任何區段建立或行銷活動。 為確保遵守此標誌，&quot;[!UICONTROL Opt-Out Type]&quot;必須等於&quot;[!UICONTROL Sales Sharing Opt-Out]&quot;,&quot;[!UICONTROL Opt-Out Value]&quot;必須等於&quot;[!UICONTROL Opt-in]&quot;。
 
 ![](images/opt-outs/segment-sales-sharing-opt-out.png)
 
