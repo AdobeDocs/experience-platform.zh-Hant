@@ -1,17 +1,17 @@
 ---
-keywords: Experience Platform;home;popular topics;delete an object;catalog service;api
+keywords: Experience Platform;home；熱門主題；刪除對象；目錄服務；api
 solution: Experience Platform
 title: 刪除API中的物件
-topic: developer guide
-description: 可以通過在DELETE請求的路徑中提供目錄對象的ID來刪除目錄對象。
+topic-legacy: developer guide
+description: 您可以在DELETE請求的路徑中提供目錄物件的ID來刪除它。
+exl-id: 2ac9c378-2340-43e1-8279-7c365df652e4
 translation-type: tm+mt
-source-git-commit: b395535cbe7e4030606ee2808eb173998f5c32e0
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '207'
 ht-degree: 1%
 
 ---
-
 
 # 刪除API中的物件
 
@@ -36,7 +36,7 @@ DELETE /{OBJECT_TYPE}/{OBJECT_ID}
 | `{OBJECT_TYPE}` | 要刪除的[!DNL Catalog]對象類型。 有效對象包括： <ul><li>`accounts`</li><li>`connections`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
 | `{OBJECT_ID}` | 您要更新的特定物件的識別碼。 |
 
-**請求**
+**要求**
 
 下列請求會刪除在請求路徑中指定ID的資料集。
 
