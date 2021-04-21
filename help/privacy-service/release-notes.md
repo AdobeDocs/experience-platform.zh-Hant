@@ -1,21 +1,21 @@
 ---
-keywords: Experience Platform;home；熱門主題
+keywords: Experience Platform；首頁；熱門主題
 solution: Experience Platform
-title: 隱私權服務發行說明
-topic: release notes
+title: Privacy Service發行說明
+topic-legacy: release notes
 description: Adobe Experience Platform Privacy Service的最新發行說明。
+exl-id: 66ee38f1-f0d5-44ff-823d-d1b8a9765c6d
 translation-type: tm+mt
-source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '553'
 ht-degree: 6%
 
 ---
 
-
 # [!DNL Privacy Service] 發行說明
 
-本檔案包含有關Adobe Experience Platform [!DNL Privacy Service]新功能的資訊，以及增強功能和重大錯誤修正。
+本檔案包含有關Adobe Experience Platform[!DNL Privacy Service]的新功能，以及增強功能和重要錯誤修正的資訊。
 
 >[!NOTE]
 >
@@ -48,7 +48,7 @@ ht-degree: 6%
 | [!DNL Privacy Service] 品牌再造 | 由於服務已發展為支援除GDPR外的其他管理法規，原名為「GDPR服務」的品牌已重新命名為[!DNL Privacy Service]。 |
 | 新的API端點 | [!DNL Privacy Service] API的基本路徑已從`/data/privacy/gdpr`更新為`/data/core/privacy/jobs` |
 | 新的必需`regulation`屬性 | 在[!DNL Privacy Service] API中建立新作業時，請求裝載中必須提供`regulation`屬性，以指出要追蹤作業的規則。 接受的值為`gdpr`和`ccpa`。 如需詳細資訊，請參閱[!DNL Privacy Service]開發人員指南中有關[隱私權工作](api/privacy-jobs.md)的檔案。 |
-| 支援Adobe Primetime驗證 | [!DNL Privacy Service] 現在可接受Adobe Primetime驗證的存取／刪除要求， `primetimeAuthentication` 並視其產品價值而定。如需詳細資訊，請參閱[黃金時段驗證檔案](http://tve.helpdocsonline.com/how-to-make-a-privacy-request)。 |
+| 支援Adobe Primetime驗證 | [!DNL Privacy Service] 現在可接受來自Adobe Primetime驗證的存取／刪除請求，並 `primetimeAuthentication` 將其作為產品值。如需詳細資訊，請參閱[黃金時段驗證檔案](http://tve.helpdocsonline.com/how-to-make-a-privacy-request)。 |
 
 ### 增強功能
 
@@ -64,9 +64,9 @@ ht-degree: 6%
 | --- | --- |
 | 請求量度控制面板 | [!DNL Privacy Service] UI中的新量度控制面板可洞察已提交、已錯誤和已完成的GDPR請求。 |
 | 請求產生器 | 為了同時為技術和非技術使用者提交GDPR要求的組織提供服務，UI中已新增「建立要求」功能。 對於想要繼續使用JSON檔案的組織，[!DNL Privacy Service] UI中仍提供JSON檔案提交功能。 |
-| GDPR工作事件通知 | 有關GDPR工作狀態的事件通知是許多工作流程的重要元素。 雖然之前會使用個別電子郵件通知來傳送通知，但GDPR事件通知是運用Adobe I/O事件的訊息，這些事件會傳送至已設定的網頁掛接，以協助工作要求自動化。 [!DNL Privacy Service] UI使用者可訂閱Adobe I/O GDPR事件，以在產品或GDPR工作完成時收到更新。 |
+| GDPR工作事件通知 | 有關GDPR工作狀態的事件通知是許多工作流程的重要元素。 雖然之前會使用個別電子郵件通知來傳送通知，但GDPR事件通知是運用Adobe I/O事件的訊息，這些事件會傳送至已設定的網頁掛接，以協助工作要求自動化。 [!DNL Privacy Service] UI使用者可訂閱Adobe I/OGDPR事件，以在產品或GDPR工作完成時收到更新。 |
 
-## 2019 年 4 月 18 日
+## 2019 年 18 月 4 日
 
 ### 增強功能
 
@@ -96,7 +96,7 @@ ht-degree: 6%
 
 ### 增強功能
 
-* 在每次POST提交中強制執行`include`欄位。
+* 在每個POST提交中強制執行`include`欄位。
 * 上傳JSON時強制執行`include`欄位。
 
 ### 錯誤修正
