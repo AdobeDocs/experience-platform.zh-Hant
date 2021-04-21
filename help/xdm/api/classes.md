@@ -3,12 +3,12 @@ keywords: Experience Platform;home；熱門主題；api;API;XDM;XDM系統；體�
 solution: Experience Platform
 title: 類別API端點
 description: 方案註冊表API中的/classes端點允許您以寫程式方式管理體驗應用程式中的XDM類。
-topic: developer guide
+topic-legacy: developer guide
 exl-id: 7beddb37-0bf2-4893-baaf-5b292830f368
 translation-type: tm+mt
-source-git-commit: 610ce5c6dca5e7375b941e7d6f550382da10ca27
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '1497'
+source-wordcount: '1495'
 ht-degree: 1%
 
 ---
@@ -49,7 +49,7 @@ GET /{CONTAINER_ID}/classes?{QUERY_PARAMS}
 | `{CONTAINER_ID}` | 要從以下位置檢索類的容器：`global`代表Adobe建立的類別，或`tenant`代表您組織擁有的類別。 |
 | `{QUERY_PARAMS}` | 可選查詢參數，以篩選結果。 有關可用參數的清單，請參見[附錄文檔](./appendix.md#query)。 |
 
-**請求**
+**要求**
 
 以下請求從`tenant`容器中檢索類清單，使用`orderby`查詢參數按其`title`屬性對類進行排序。
 
@@ -125,7 +125,7 @@ GET /{CONTAINER_ID}/classes/{CLASS_ID}
 | `{CONTAINER_ID}` | 存放您要擷取之類別的容器：`global`代表Adobe建立的類別，或`tenant`代表您組織擁有的類別。 |
 | `{CLASS_ID}` | 您要尋找之類的`meta:altId`或URL編碼`$id`。 |
 
-**請求**
+**要求**
 
 以下請求通過路徑中提供的`meta:altId`值檢索類。
 
@@ -256,7 +256,7 @@ curl -X GET \
 POST /tenant/classes
 ```
 
-**請求**
+**要求**
 
 建立(POST)類的請求必須包含`allOf`屬性，該屬性包含`$ref`到以下兩個值之一：`https://ns.adobe.com/xdm/data/record`或`https://ns.adobe.com/xdm/data/time-series`。 這些值代表類別所依據的行為（分別是記錄或時間序列）。 有關記錄資料和時間序列資料之間差異的詳細資訊，請參閱[架構構成基礎](../schema/composition.md)中有關行為類型的部分。
 
@@ -400,7 +400,7 @@ PUT /tenant/classes/{CLASS_ID}
 | --- | --- |
 | `{CLASS_ID}` | 要重寫的類的`meta:altId`或URL編碼`$id`。 |
 
-**請求**
+**要求**
 
 以下請求重寫現有類，更改其`description`和其中一個欄位的`title`。
 
@@ -535,7 +535,7 @@ PATCH /tenant/class/{CLASS_ID}
 | --- | --- |
 | `{CLASS_ID}` | 要更新類的URL編碼`$id` URI或`meta:altId`。 |
 
-**請求**
+**要求**
 
 下面的範例請求會更新現有類別的`description`，以及其中一個欄位的`title`。
 
@@ -635,7 +635,7 @@ DELETE /tenant/classes/{CLASS_ID}
 | --- | --- |
 | `{CLASS_ID}` | 要刪除的類的URL編碼`$id` URI或`meta:altId`。 |
 
-**請求**
+**要求**
 
 ```shell
 curl -X DELETE \
