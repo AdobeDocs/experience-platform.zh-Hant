@@ -2,17 +2,17 @@
 keywords: Experience Platform; home；熱門主題；查詢服務；查詢服務；生成資料集；生成資料集；建立資料集；
 solution: Experience Platform
 title: 從查詢服務中的結果生成資料集
-topic: queries
+topic-legacy: queries
 type: Tutorial
-description: 'Adobe Experience Platform Query Service允許從UI建立資料集。 建立資料集後，可像Data Lake中的任何其他資料集一樣加以存取，並用於多種使用案例。 '
+description: Adobe Experience Platform查詢服務允許從UI建立資料集。 建立資料集後，可像Data Lake中的任何其他資料集一樣加以存取，並用於多種使用案例。
+exl-id: 6f6c049d-f19f-4161-aeb4-3a01eca7dc75
 translation-type: tm+mt
-source-git-commit: 97dc0b5fb44f5345fd89f3f56bd7861668da9a6e
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '327'
+source-wordcount: '323'
 ht-degree: 0%
 
 ---
-
 
 # 在查詢服務中從結果生成資料集
 
@@ -23,9 +23,9 @@ ht-degree: 0%
 1. 使用連接的客戶端編寫查詢並驗證輸出。
 2. 登入[!DNL Platform] UI並前往「查詢」。
 3. 在清單中尋找查詢，並將滑鼠指標暫留在列上。
-4. 按一下「建立資料集」。 ****![影像](../images/ui/output-dataset.png)
+4. 按一下「**[!UICONTROL Create Dataset]**」。![影像](../images/ui/output-dataset.png)
 5. 輸入資料集名稱，並加上您的LDAP ID(不必是唯一或SQL-safe;系統會根據此處提供的名稱生成「表名」)。
-6. 輸入資料集說明，然後按一下「執行查詢」。****![影像](../images/ui/run-query.png)
+6. 輸入資料集說明，然後按一下&#x200B;**[!UICONTROL Run Query]**。![影像](../images/ui/run-query.png)
 7. 觀看查詢完成，然後前往資料集清單頁面，查看您剛建立的資料集。
 
 建立資料集後，可像[!DNL Data Lake]中的任何其他資料集一樣加以存取，並用於多種使用案例。
