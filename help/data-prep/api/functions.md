@@ -2,16 +2,16 @@
 keywords: Experience Platform;home；熱門主題；資料準備；api指南；方案；
 solution: Experience Platform
 title: 方案API端點
-topic: schemas
-description: '您可以使用Adobe Experience PlatformAPI中的「/functions」端點來驗證映射表達式並列出可用的映射集函式。 '
+topic-legacy: schemas
+description: 您可以使用Adobe Experience PlatformAPI中的「/functions」端點來驗證映射表達式並列出可用的映射集函式。
+exl-id: dc24bfb4-2d96-4757-a610-0c2ee960d41d
 translation-type: tm+mt
-source-git-commit: 60c80a73deb8c77f19d5963cc3319d46143fb4c3
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '211'
+source-wordcount: '210'
 ht-degree: 2%
 
 ---
-
 
 # 函式端點
 
@@ -27,7 +27,7 @@ ht-degree: 2%
 POST /languages/el/validate
 ```
 
-**請求**
+**要求**
 
 ```shell
 curl -X POST https://platform.adobe.io/data/foundation/conversion/languages/el/validate \
@@ -63,7 +63,7 @@ curl -X POST https://platform.adobe.io/data/foundation/conversion/languages/el/v
 GET /languages/el/functions
 ```
 
-**請求**
+**要求**
 
 ```shell
 curl -X GET https://platform.adobe.io/data/foundation/conversion/languages/el/functions \
@@ -128,7 +128,7 @@ curl -X GET https://platform.adobe.io/data/foundation/conversion/languages/el/fu
 GET /languages/el/operators
 ```
 
-**請求**
+**要求**
 
 ```shell
 curl -X GET https://platform.adobe.io/data/foundation/conversion/languages/el/operators \
