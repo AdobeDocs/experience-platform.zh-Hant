@@ -2,16 +2,16 @@
 keywords: Experience Platform;home；熱門主題；分段；分段；分段服務；分段作業；分段作業；分段作業；API;api;
 solution: Experience Platform
 title: 區段作業API端點
-topic: developer guide
-description: Adobe Experience Platform Segmentation Service API中的區段工作端點可讓您以程式設計方式管理組織的區段工作。
+topic-legacy: developer guide
+description: 「Adobe Experience Platform分段服務API」中的分段作業端點可讓您以程式設計方式管理組織的分段作業。
+exl-id: 105481c2-1c25-4f0e-8fb0-c6577a4616b3
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '1168'
 ht-degree: 2%
 
 ---
-
 
 # 區段作業端點
 
@@ -29,7 +29,7 @@ ht-degree: 2%
 
 **API格式**
 
-`/segment/jobs`端點支援數個查詢參數，以協助篩選結果。 雖然這些參數是可選的，但強烈建議使用它們，以幫助降低昂貴的開銷。 在沒有參數的情況下呼叫此端點將會擷取組織所有可用的匯出工作。 可以包括多個參數，用&amp;符號(`&`)分隔。
+`/segment/jobs`端點支援數個查詢參數，以協助篩選結果。 雖然這些參數是可選的，但強烈建議使用這些參數以幫助降低昂貴的開銷。 在沒有參數的情況下呼叫此端點將會擷取組織所有可用的匯出工作。 可以包括多個參數，用&amp;符號(`&`)分隔。
 
 ```http
 GET /segment/jobs
@@ -46,7 +46,7 @@ GET /segment/jobs?{QUERY_PARAMETERS}
 | `sort` | 訂購傳回的區段工作。 以`[attributeName]:[desc|asc]`格式寫入。 | `sort=creationTime:desc` |
 | `property` | 篩選群體工作，並取得指定篩選的完全相符項目。 它可以以下列任一格式編寫： <ul><li>`[jsonObjectPath]==[value]` -對對象鍵進行篩選</li><li>`[arrayTypeAttributeName]~[objectKey]==[value]` -陣列內的篩選</li></ul> | `property=segments~segmentId==workInUS` |
 
-**請求**
+**要求**
 
 ```shell
 curl -X GET https://platform.adobe.io/data/core/ups/segment/jobs?status=SUCCEEDED \
@@ -190,7 +190,7 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/jobs?status=SUCCEEDE
 POST /segment/jobs
 ```
 
-**請求**
+**要求**
 
 ```shell
 curl -X POST https://platform.adobe.io/data/core/ups/segment/jobs \
@@ -276,7 +276,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/jobs \
 
 ## 檢索特定段作業{#get}
 
-您可以向`/segment/jobs`端點發出GET請求，並在請求路徑中提供您要檢索的段作業的ID，以檢索有關特定段作業的詳細資訊。
+您可以向`/segment/jobs`端點發出GET請求，並在請求路徑中提供要檢索的段作業的ID，以檢索有關特定段作業的詳細資訊。
 
 **API格式**
 
@@ -288,7 +288,7 @@ GET /segment/jobs/{SEGMENT_JOB_ID}
 | -------- | ----------- | 
 | `{SEGMENT_JOB_ID}` | 要檢索的段作業的`id`值。 |
 
-**請求**
+**要求**
 
 ```shell
 curl -X GET https://platform.adobe.io/data/core/ups/segment/jobs/d3b4a50d-dfea-43eb-9fca-557ea53771fd \
@@ -373,7 +373,7 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/jobs/d3b4a50d-dfea-4
 
 ## 批量檢索段作業{#bulk-get}
 
-通過向`/segment/jobs/bulk-get`端點發出POST請求並在請求主體中提供段作業的`id`值，可以檢索有關多個段作業的詳細資訊。
+通過向`/segment/jobs/bulk-get`端點發出POST請求並提供請求主體中段作業的`id`值，可以檢索有關多個段作業的詳細資訊。
 
 **API格式**
 
@@ -381,7 +381,7 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/jobs/d3b4a50d-dfea-4
 POST /segment/jobs/bulk-get
 ```
 
-**請求**
+**要求**
 
 ```shell
 curl -X POST https://platform.adobe.io/data/core/ups/segment/jobs/bulk-get \
@@ -479,7 +479,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/jobs/bulk-get \
 
 ## 取消或刪除特定區段工作{#delete}
 
-您可以對`/segment/jobs`端點發出DELETE請求，並在請求路徑中提供要刪除的段作業的ID，以刪除特定的段作業。
+您可以刪除特定的段作業，方法是向`/segment/jobs`端點發出DELETE請求，並在請求路徑中提供您要刪除的段作業ID。
 
 >[!NOTE]
 >
@@ -495,7 +495,7 @@ DELETE /segment/jobs/{SEGMENT_JOB_ID}
 | -------- | ----------- | 
 | `{SEGMENT_JOB_ID}` | 要刪除的段作業的`id`值。 |
 
-**請求**
+**要求**
 
 ```shell
 curl -X DELETE https://platform.adobe.io/data/core/ups/segment/jobs/d3b4a50d-dfea-43eb-9fca-557ea53771fd \
