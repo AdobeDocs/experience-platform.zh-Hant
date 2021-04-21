@@ -1,17 +1,17 @@
 ---
-keywords: Experience Platform;home;popular topics;dule;DULE
+keywords: Experience Platform;home；熱門主題；dule;DULE
 solution: Experience Platform
 title: 資料使用政策概觀
-topic: policies
-description: 為了讓資料使用標籤有效支援資料合規性，必須實作資料使用政策。 資料使用原則是描述您在Experience Platform內對資料執行的行銷動作類型或限制的規則。
+topic-legacy: policies
+description: 為了讓資料使用標籤有效支援資料合規性，必須實作資料使用政策。 資料使用原則是描述您允許或限制對Experience Platform內資料執行之行銷動作類型的規則。
+exl-id: 1b372aa5-3e49-4741-82dc-5701a4bc8469
 translation-type: tm+mt
-source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '1010'
 ht-degree: 0%
 
 ---
-
 
 # 資料使用政策概觀
 
@@ -32,13 +32,13 @@ ht-degree: 0%
 >
 >行銷動作本身並不限制資料使用。 必須將它們納入已啟用的資料使用策略中，才能針對策略違規評估這些操作。
 
-當組織的服務中發生資料使用情形時，應指出相關的行銷動作，以便識別任何違反政策的行為。 然後，您可以使用[原則服務API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml)來檢查整合中是否有違反原則的情況。
+當組織的服務中發生資料使用情形時，應指出相關的行銷動作，以便識別任何違反原則的行為。 然後，您可以使用[原則服務API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml)來檢查整合中是否有違反原則的情況。
 
 >[!NOTE]
 >
 >如果您使用[!DNL Real-time Customer Data Platform]，則可在目標上設定行銷使用案例，以自動執行原則。 有關詳細資訊，請參見[即時CDP中的資料治理文檔。](../../rtcdp/privacy/data-governance-overview.md)
 
-如需[可用的Adobe定義行銷動作清單，請參閱本檔案附錄。 ](#core-actions)您也可以使用[!DNL Policy Service] API或[!DNL Experience Platform ]使用者介面來定義您自己的自訂行銷動作。 有關使用行銷動作和政策的詳細資訊，請參閱下一節。
+有關[可用的Adobe定義行銷動作](#core-actions)的清單，請參閱本檔案附錄。 您也可以使用[!DNL Policy Service] API或[!DNL Experience Platform ]使用者介面來定義您自己的自訂行銷動作。 有關使用行銷動作和政策的詳細資訊，請參閱下一節。
 
 <!-- (Add after AAM DEC mapping doc is published)
 ### Inheritance from Adobe Audience Manager Data Export Controls
@@ -54,7 +54,7 @@ For a reference on how specific Data Export Controls map to marketing actions in
 
 >[!IMPORTANT]
 >
->預設會停用所有資料使用政策（包括Adobe提供的核心政策）。 若要考慮實施個別原則，您必須透過API或UI手動啟用該原則。
+>所有資料使用原則(包括Adobe提供的核心原則)預設會停用。 若要考慮實施個別原則，您必須透過API或UI手動啟用該原則。
 
 如需在API中使用行銷動作和資料使用原則的逐步指示，請參閱[建立和評估資料使用原則的教學課程](create.md)。 有關[!DNL Policy Service] API提供的關鍵操作的詳細資訊，請參閱[策略服務開發人員指南](../api/getting-started.md)。
 
@@ -70,7 +70,7 @@ For a reference on how specific Data Export Controls map to marketing actions in
 
 ### Adobe定義的行銷動作{#core-actions}
 
-下表說明Adobe現成可用的核心行銷動作。
+下表說明由Adobe提供的現成可用的核心行銷動作。
 
 >[!NOTE]
 >
