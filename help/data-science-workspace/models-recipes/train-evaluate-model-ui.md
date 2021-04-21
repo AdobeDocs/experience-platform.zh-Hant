@@ -2,17 +2,17 @@
 keywords: Experience Platform；訓練和評估；資料科學工作區；熱門主題；建立模型；建立培訓運行
 solution: Experience Platform
 title: 在資料科學工作區UI中訓練和評估模型
-topic: tutorial
+topic-legacy: tutorial
 type: Tutorial
 description: 在Adobe Experience Platform資料科學工作區中，機器學習模型是通過結合適合模型意圖的現有配方來建立的。 然後，對模型進行訓練和評估，通過微調其相關的超參數來優化其操作效率和效能。 方式可重複使用，這表示您可以使用單一方式，針對特定目的建立並量身打造多個模型。
+exl-id: 6f674cfa-c123-46a3-80e2-9342fe687976
 translation-type: tm+mt
-source-git-commit: 52415eb572a82f18f6daa3f45be1c670cae98b83
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '1085'
+source-wordcount: '1083'
 ht-degree: 1%
 
 ---
-
 
 # 在資料科學工作區UI中訓練和評估模型
 
