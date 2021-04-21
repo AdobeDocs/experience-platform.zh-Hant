@@ -2,20 +2,20 @@
 keywords: Experience Platform;home；熱門主題；模式；模式；XDM;fields；模式；Schemas;search;datatype；資料類型；
 solution: Experience Platform
 title: 搜尋資料類型
-topic: overview
+topic-legacy: overview
 description: 本檔案提供搜尋體驗資料模型(XDM)資料類型的概述。
+exl-id: 9893cb67-b0c7-4f91-a0d4-96f7b87d9510
 translation-type: tm+mt
-source-git-commit: d282ea5526a05b28c6a82470eabf23e44d1fb420
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '181'
+source-wordcount: '179'
 ht-degree: 4%
 
 ---
 
+# [!UICONTROL Search] 資料類型
 
-# [!UICONTROL Searchdata] 類型
-
-[!UICONTROL Search是] 標準的「體驗資料模型」(XDM)資料類型，包含Web搜尋活動的相關資訊。
+[!UICONTROL Search] 是標準的「體驗資料模型」(XDM)資料類型，包含Web搜尋活動的相關資訊。
 
 <img src="../images/data-types/search.PNG" width="500" /><br />
 
