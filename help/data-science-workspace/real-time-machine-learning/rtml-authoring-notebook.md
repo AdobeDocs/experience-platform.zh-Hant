@@ -1,17 +1,17 @@
 ---
-keywords: Experience Platform；開發人員指南； Data Science Workspace；熱門主題；即時機器學習；節點參考；
+keywords: Experience Platform；開發人員指南；資料科學工作區；熱門主題；即時機器學習；節點參考；
 solution: Experience Platform
 title: 管理即時機器學習筆記型電腦
-topic: Training and scoring a ML model
-description: 以下指南概述在Adobe Experience Platform JupyterLab中建立即時機器學習應用程式所需的步驟。
+topic-legacy: Training and scoring a ML model
+description: 以下指南概述在Adobe Experience PlatformJupyterLab中建立即時機器學習應用程式所需的步驟。
+exl-id: 604c4739-5a07-4b5a-b3b4-a46fd69e3aeb
 translation-type: tm+mt
-source-git-commit: f6cfd691ed772339c888ac34fcbd535360baa116
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '1669'
+source-wordcount: '1650'
 ht-degree: 0%
 
 ---
-
 
 # 管理即時機器學習筆記型電腦(Alpha)
 
@@ -19,15 +19,15 @@ ht-degree: 0%
 >
 >目前尚未針對所有使用者提供即時機器學習。 此功能是alpha版，仍在測試中。 本檔案可能會有所變更。
 
-以下指南概述建立即時機器學習應用程式所需的步驟。 本指南使用Adobe提供的&#x200B;**[!UICONTROL 即時ML]** Python筆記型電腦範本，涵蓋模型訓練、建立DSL、將DSL發佈至Edge，以及計分要求。 當您透過實作即時機器學習模型進行時，您應根據資料集的需求修改範本。
+以下指南概述建立即時機器學習應用程式所需的步驟。 使用&#x200B;**[!UICONTROL Real-time ML]** Python筆記型電腦範本的Adobe，本指南涵蓋培訓模型、建立DSL、將DSL發佈至Edge，以及計分要求。 當您透過實作即時機器學習模型進行時，您應根據資料集的需求修改範本。
 
 ## 建立即時機器學習筆記型電腦
 
-在Adobe Experience Platform UI中，從&#x200B;**Data Science**&#x200B;中選擇&#x200B;**[!UICONTROL Notebooks]**。 接著，選擇&#x200B;**[!UICONTROL JupyterLab]** ，並為環境提供一些載入時間。
+在Adobe Experience PlatformUI中，從&#x200B;**Data Science**&#x200B;中選擇&#x200B;**[!UICONTROL Notebooks]**。 接著，選擇&#x200B;**[!UICONTROL JupyterLab]**&#x200B;並為環境提供一些載入時間。
 
 ![open JupyterLab](../images/rtml/open-jupyterlab.png)
 
-出現[!DNL JupyterLab]啟動器。 向下滾動到&#x200B;*即時機器學習*&#x200B;並選擇&#x200B;**[!UICONTROL 即時ML]**&#x200B;筆記本。 範本開啟時，包含範例筆記型儲存格和範例資料集。
+出現[!DNL JupyterLab]啟動器。 向下滾動到&#x200B;*即時機器學習*&#x200B;並選擇&#x200B;**[!UICONTROL Real-time ML]**&#x200B;筆記本。 範本開啟時，包含範例筆記型儲存格和範例資料集。
 
 ![空白python](../images/rtml/authoring-notebook.png)
 
@@ -88,7 +88,7 @@ pprint(nf.discover_nodes())
 
 ![載入訓練資料](../images/rtml/load_training.png)
 
-如果您想要從Adobe Experience Platform內使用資料集，請取消下方儲存格的註解。 接下來，您需要將`DATASET_ID`取代為適當的值。
+如果您想從Adobe Experience Platform使用資料集，請取消下方的儲存格註解。 接下來，您需要將`DATASET_ID`取代為適當的值。
 
 ![rtml資料集](../images/rtml/rtml-dataset.png)
 
@@ -113,11 +113,11 @@ config_properties = {
 
 ### 準備您的模型
 
-使用&#x200B;**[!UICONTROL 即時ML]**&#x200B;範本，您需要分析、預處理、訓練和評估ML模型。 這是透過套用資料轉換和建立訓練管道來完成的。
+使用&#x200B;**[!UICONTROL Real-time ML]**&#x200B;範本，您需要分析、預處理、訓練和評估ML模型。 這是透過套用資料轉換和建立訓練管道來完成的。
 
 **資料轉換**
 
-**[!UICONTROL 即時ML]**&#x200B;範本&#x200B;**資料轉換**&#x200B;儲存格需要修改，才能與您自己的資料集搭配使用。 這通常涉及重新命名欄、資料統計以及資料準備／功能工程。
+**[!UICONTROL Real-time ML]**&#x200B;範本&#x200B;**資料轉換**&#x200B;儲存格需要修改，才能與您自己的資料集搭配使用。 這通常涉及重新命名欄、資料統計以及資料準備／功能工程。
 
 >[!NOTE]
 >
@@ -290,7 +290,7 @@ print("Model ID : ", model_id)
 >
 > 您可能會根據使用的資料類型擁有多個節點。 下面的示例僅概述&#x200B;*即時ML*&#x200B;模板中的單個節點。 請查看完整代碼單元格的&#x200B;*即時ML*&#x200B;模板&#x200B;*節點編寫*&#x200B;部分。
 
-下面的Apcoties節點使用`"import": "map"`將方法名稱作為字串輸入到參數中，然後將參數作為映射函式輸入。 以下範例使用`{'arg': {'dataLayerNull': 'notgiven', 'no': 'no', 'yes': 'yes', 'notgiven': 'notgiven'}}`執行此動作。 在對應到位後，您可以選擇將`inplace`設為`True`或`False`。 根據是否要就地應用轉換，將`inplace`設定為`True`或`False`。 預設情況下，`"inplace": False`會建立新列。 對提供新欄名稱的支援已設定為在後續版本中新增。 最後一行`cols`可以是單列名稱或列清單。 指定要應用轉換的列。 在此示例中指定了`leasing`。 有關可用節點以及如何使用這些節點的詳細資訊，請訪問[節點參考指南](./node-reference.md)。
+下面的Apcoties節點使用`"import": "map"`將方法名稱作為字串輸入到參數中，然後將參數作為映射函式輸入。 以下範例使用`{'arg': {'dataLayerNull': 'notgiven', 'no': 'no', 'yes': 'yes', 'notgiven': 'notgiven'}}`執行此動作。 在對應到位後，您可以選擇將`inplace`設為`True`或`False`。 根據是否要就地應用轉換，將`inplace`設定為`True`或`False`。 預設情況下，`"inplace": False`會建立新列。 對提供新欄名稱的支援已設定為在後續版本中新增。 最後一行`cols`可以是單列名稱或列清單。 指定要應用轉換的列。 在此示例中指定`leasing`。 有關可用節點以及如何使用這些節點的詳細資訊，請訪問[節點參考指南](./node-reference.md)。
 
 ```python
 # Renaming leasing column using Pandas Node
@@ -334,7 +334,7 @@ nodes = [json_df_node,
 
 >[!TIP]
 >
-> 由於節點彼此線性相依（每個節點都取決於前一個節點的輸出），因此您可以使用簡單的Python清單理解來建立連結。 如果節點依賴多個輸入，請添加您自己的連接。
+> 由於節點彼此線性相依（每個節點取決於前一個節點的輸出），因此您可以使用簡單的Python清單理解來建立連結。 如果節點依賴多個輸入，請添加您自己的連接。
 
 ```python
 edges = [(nodes[i], nodes[i+1]) for i in range(len(nodes)-1)]
@@ -355,7 +355,7 @@ pprint(json.loads(dsl))
 
 >[!NOTE]
 >
->即時機器學習會暫時部署至Adobe Experience Platform Hub並由其管理。 如需詳細資訊，請造訪[即時機器學習架構](./home.md#architecture)的概述章節。
+>即時機器學習暫時部署至Adobe Experience Platform中心並由其管理。 如需詳細資訊，請造訪[即時機器學習架構](./home.md#architecture)的概述章節。
 
 現在您已建立DSL圖形，您可將圖形部署至[!DNL Edge]。
 
@@ -410,7 +410,7 @@ print(f'Updated dsl: {updated_dsl}')
 
 ## 計分{#scoring}
 
-發佈至[!DNL Edge]後，計分由用戶端的POST要求完成。 通常，這可以從需要ML分數的用戶端應用程式完成。 您也可以從郵遞員處完成。 **[!UICONTROL 即時ML]**&#x200B;範本使用EdgeUtils來示範此程式。
+發佈至[!DNL Edge]後，計分由用戶端的POST要求完成。 通常，這可以從需要ML分數的用戶端應用程式完成。 您也可以從郵遞員處完成。 **[!UICONTROL Real-time ML]**&#x200B;範本使用EdgeUtils來示範此程式。
 
 >[!NOTE]
 >
