@@ -1,28 +1,28 @@
 ---
-keywords: Experience Platform; home；熱門主題；查詢服務；查詢服務；寫查詢；寫查詢；
+keywords: Experience Platform; home；熱門主題；查詢服務；查詢服務；寫入查詢；寫入查詢；
 solution: Experience Platform
 title: 查詢服務中查詢執行的一般指導
-topic: queries
+topic-legacy: queries
 type: Tutorial
-description: 本檔案詳細說明在Adobe Experience Platform Query Service中撰寫查詢時要知道的重要詳細資訊。
+description: 本檔案詳細說明在Adobe Experience Platform查詢服務中編寫查詢時要知道的重要細節。
+exl-id: a7076c31-8f7c-455e-9083-cbbb029c93bb
 translation-type: tm+mt
-source-git-commit: 97dc0b5fb44f5345fd89f3f56bd7861668da9a6e
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '976'
 ht-degree: 3%
 
 ---
 
-
 # [!DNL Query Service]中查詢執行的一般指南
 
-本檔案詳細說明在Adobe Experience Platform [!DNL Query Service]中撰寫查詢時要知道的重要詳細資訊。
+本文檔詳細介紹了在Adobe Experience Platform[!DNL Query Service]中編寫查詢時要知道的重要詳細資訊。
 
 有關[!DNL Query Service]中使用的SQL語法的詳細資訊，請閱讀[SQL語法文檔](../sql/syntax.md)。
 
 ## 查詢執行模型
 
-Adobe Experience Platform [!DNL Query Service]有兩種查詢執行模型：互動式和非互動式。 交互執行用於商業智慧工具中的查詢開發和報告生成，而非交互用於作為資料處理工作流的一部分的較大作業和操作查詢。
+Adobe Experience Platform[!DNL Query Service]有兩種查詢執行模型：互動式和非互動式。 交互執行用於商業智慧工具中的查詢開發和報告生成，而非交互用於作為資料處理工作流的一部分的較大作業和操作查詢。
 
 ### 互動式查詢執行
 
@@ -220,7 +220,7 @@ LIMIT 10
 
 ### 架構資訊
 
-要查看有關表內方案的詳細資訊，可以使用`\d {TABLE_NAME}`命令，其中`{TABLE_NAME}`是要查看其方案資訊的表的名稱。
+要查看有關表中方案的詳細資訊，可以使用`\d {TABLE_NAME}`命令，其中`{TABLE_NAME}`是要查看其方案資訊的表的名稱。
 
 以下示例顯示`luma_midvalues`表的架構資訊，該表可通過使用`\d luma_midvalues`來查看：
 
