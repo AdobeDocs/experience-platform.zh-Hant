@@ -1,17 +1,17 @@
 ---
-keywords: Experience Platform; home；熱門主題；分段；分段；分段服務；pql;PQL；配置檔案查詢語言；對象函式；對象；
+keywords: Experience Platform;home；熱門主題；分段；分段；分段服務；pql;PQL；配置檔案查詢語言；對象函式；對象；
 solution: Experience Platform
 title: PQL對象函式
-topic: developer guide
+topic-legacy: developer guide
 description: 描述檔查詢語言(PQL)提供多種功能，讓與物件的互動更簡單。
+exl-id: e65257d8-5bc8-46c8-8487-33bc7ce4059b
 translation-type: tm+mt
-source-git-commit: b3defc3e33a55855e307ab70b9797d985d5719e3
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '138'
 ht-degree: 4%
 
 ---
-
 
 # 物件函式
 
@@ -21,7 +21,7 @@ ht-degree: 4%
 
 `isNull`函式確定對象引用是否不存在。
 
-**Format**
+**格式**
 
 ```sql
 {OBJECT}.isNull()
