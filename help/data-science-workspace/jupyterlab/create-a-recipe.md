@@ -2,17 +2,17 @@
 keywords: Experience Platform;JupyterLab;recipe;notebooks;Data Science Workspace；熱門主題；建立配方
 solution: Experience Platform
 title: 使用Jupyter Notebooks建立配方
-topic: tutorial
+topic-legacy: tutorial
 type: Tutorial
 description: 本教學課程將涵蓋兩個主要部分。 首先，您將使用JupyterLab Notebook中的範本建立機器學習模型。 接下來，您將在JupyterLab中練習筆記本至配方工作流程，以便在Data Science Workspace中建立配方。
+exl-id: d3f300ce-c9e8-4500-81d2-ea338454bfde
 translation-type: tm+mt
-source-git-commit: 9d84fc1eb898020ed4b154c091fcc9fc4933c7de
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '2366'
+source-wordcount: '2345'
 ht-degree: 0%
 
 ---
-
 
 # 使用Jupyter Notebooks建立配方
 
@@ -27,9 +27,9 @@ ht-degree: 0%
 
 ## 開始使用[!DNL JupyterLab]筆記本環境
 
-您可在[!DNL Data Science Workspace]中從頭建立配方。 要開始，請導航至[Adobe Experience Platform](https://platform.adobe.com) ，然後按一下左側的&#x200B;**[!UICONTROL 筆記本]**&#x200B;頁籤。 從[!DNL JupyterLab Launcher]中選擇「方式產生器」範本，以建立新筆記型電腦。
+您可在[!DNL Data Science Workspace]中從頭建立配方。 若要開始，請導覽至[Adobe Experience Platform](https://platform.adobe.com)，然後按一下左側的&#x200B;**[!UICONTROL Notebooks]**&#x200B;標籤。 從[!DNL JupyterLab Launcher]中選擇「方式產生器」範本，以建立新筆記型電腦。
 
-[!UICONTROL Recipe Builder]筆記型電腦可讓您在筆記型電腦中執行訓練和計分。 這可讓您在訓練和計分資料上執行實驗之間，靈活地變更其`train()`和`score()`方法。 一旦您對培訓和計分的輸出感到滿意，您就可以使用筆記型電腦建立用於[!DNL Data Science Workspace]的配方，以便將配方功能內建在Recipe Builder筆記型電腦上。
+[!UICONTROL Recipe Builder]筆記型電腦允許您在筆記本內運行培訓和計分。 這可讓您在訓練和計分資料上執行實驗之間，靈活地變更其`train()`和`score()`方法。 一旦您對培訓和計分的輸出感到滿意，您就可以使用筆記型電腦建立用於[!DNL Data Science Workspace]的配方，以便將配方功能內建在Recipe Builder筆記型電腦上。
 
 >[!NOTE]
 >
@@ -39,7 +39,7 @@ ht-degree: 0%
 
 當您從啟動器按一下Recipe Builder筆記型電腦時，就會在標籤中開啟筆記型電腦。 筆記本中使用的模板是Python Retail Sales Forecasting Recipe，該方式也可在[此公共儲存庫](https://github.com/adobe/experience-platform-dsw-reference/tree/master/recipes/python/retail/)中找到
 
-您會注意到，在工具列中有三個額外的動作，即：**[!UICONTROL Train]**、**[!UICONTROL Score]**&#x200B;和&#x200B;**[!UICONTROL Create Recipe]**。 這些圖示僅出現在[!UICONTROL Recipe Builder]筆記本中。 在筆記型電腦中建立配方後，有關這些動作的詳細資訊，請參閱訓練與計分區段](#training-and-scoring)。[
+您會注意到，在工具列中有三個額外的動作，即- **[!UICONTROL Train]**、**[!UICONTROL Score]**&#x200B;和&#x200B;**[!UICONTROL Create Recipe]**。 這些表徵圖僅出現在[!UICONTROL Recipe Builder]筆記本中。 在筆記型電腦中建立配方後，有關這些動作的詳細資訊，請參閱訓練與計分區段](#training-and-scoring)。[
 
 ![](../images/jupyterlab/create-recipe/toolbar_actions.png)
 
@@ -460,13 +460,13 @@ def save(configProperties, prediction):
 
 當您變更筆記型電腦並想要訓練配方時，可以按一下列上方的相關按鈕，在儲存格中建立訓練執行。 按一下該按鈕後，培訓指令碼的命令和輸出日誌將顯示在筆記本中（位於`evaluator.py`單元格下）。 Conda首先安裝所有相依項，然後開始培訓。
 
-請注意，您必須至少執行一次培訓，才能執行計分。 按一下&#x200B;**[!UICONTROL 運行計分]**&#x200B;按鈕，將對培訓期間生成的受培訓模型進行分數。 計分指令碼將顯示在`datasaver.py`下。
+請注意，您必須至少執行一次培訓，才能執行計分。 按一下&#x200B;**[!UICONTROL Run Scoring]**&#x200B;按鈕將對培訓期間生成的已培訓模型進行分數。 計分指令碼將顯示在`datasaver.py`下。
 
 為進行除錯，如果您想查看隱藏的輸出，請將`debug`新增至輸出儲存格的結尾，然後重新執行。
 
 ## 建立方式{#create-recipe}
 
-編輯完配方並滿意培訓／計分輸出後，可以通過按右上角導航中的&#x200B;**[!UICONTROL 建立配方]**&#x200B;從筆記本建立配方。
+編輯完配方並滿意培訓／計分輸出後，可以通過按右上角導航中的&#x200B;**[!UICONTROL Create Recipe]**&#x200B;從筆記本建立配方。
 
 ![](../images/jupyterlab/create-recipe/create-recipe.png)
 
@@ -474,7 +474,7 @@ def save(configProperties, prediction):
 
 ![](../images/jupyterlab/create-recipe/enter_recipe_name.png)
 
-按&#x200B;**[!UICONTROL Ok]**&#x200B;後，您就可以瀏覽至[Adobe Experience Platform](https://platform.adobe.com/)上的新配方。 您可以按一下「檢視配方&#x200B;**[!UICONTROL 」按鈕，將您帶至「ML模型]**」下的「配方&#x200B;**[!UICONTROL Recipes]**」標籤&#x200B;]****[!UICONTROL 
+按&#x200B;**[!UICONTROL Ok]**&#x200B;後，您就可以瀏覽至[Adobe Experience Platform](https://platform.adobe.com/)上的新配方。 您可以按一下&#x200B;**[!UICONTROL View Recipes]**&#x200B;按鈕，將您帶至&#x200B;**[!UICONTROL ML Models]**&#x200B;下方的&#x200B;**[!UICONTROL Recipes]**&#x200B;標籤
 
 ![](../images/jupyterlab/create-recipe/recipe_creation_started.png)
 
@@ -500,5 +500,3 @@ def save(configProperties, prediction):
 以下影片旨在協助您瞭解建立和部署模型。
 
 >[!VIDEO](https://video.tv.adobe.com/v/30575?quality=12&enable10seconds=on&speedcontrol=on)
-
-
