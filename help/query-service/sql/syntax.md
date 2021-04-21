@@ -1,21 +1,21 @@
 ---
-keywords: Experience Platform;home;popular topics;query service;Query service;sql語法；sql;ctas;CTAS；以選項形式建立表
+keywords: Experience Platform;home；常用主題；查詢服務；查詢服務；sql語法；sql;ctas;CTAS；建立表作為選擇
 solution: Experience Platform
 title: 查詢服務中的SQL語法
-topic: syntax
-description: 本檔案顯示Adobe Experience Platform Query Service支援的SQL語法。
+topic-legacy: syntax
+description: 本文檔顯示Adobe Experience Platform查詢服務支援的SQL語法。
+exl-id: 2bd4cc20-e663-4aaa-8862-a51fde1596cc
 translation-type: tm+mt
-source-git-commit: 78707257c179101b29e68036bf9173d74f01e03a
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '1981'
 ht-degree: 1%
 
 ---
 
-
 # 查詢服務中的SQL語法
 
-Adobe Experience Platform Query Service提供對`SELECT`語句和其他有限命令使用標準ANSI SQL的能力。 本文檔介紹[!DNL Query Service]支援的SQL語法。
+Adobe Experience Platform查詢服務提供對`SELECT`語句和其他有限命令使用標準ANSI SQL的能力。 本文檔介紹[!DNL Query Service]支援的SQL語法。
 
 ## SELECT查詢{#select-queries}
 
