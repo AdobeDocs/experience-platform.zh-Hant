@@ -2,17 +2,17 @@
 keywords: Experience Platform;home；熱門主題；Azure;azure blob;blob;Blob
 solution: Experience Platform
 title: 使用流服務API建立Azure Blob源連接
-topic: overview
+topic-legacy: overview
 type: Tutorial
 description: 瞭解如何使用Flow Service API將Adobe Experience Platform連接至Azure Blob。
+exl-id: 4ab8033f-697a-49b6-8d9c-1aadfef04a04
 translation-type: tm+mt
-source-git-commit: a489ab248793a063295578943ad600d8eacab6a2
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '761'
 ht-degree: 2%
 
 ---
-
 
 # 使用[!DNL Flow Service] API建立[!DNL Azure Blob]來源連線
 
@@ -20,10 +20,10 @@ ht-degree: 2%
 
 ## 快速入門
 
-本指南需要有效瞭解Adobe Experience Platform的下列元件：
+本指南需要對Adobe Experience Platform的下列組成部分有切實的瞭解：
 
-* [來源](../../../../home.md):Experience Platform可讓您從各種來源擷取資料，同時讓您能夠使用平台服務來建構、標示和增強傳入資料。
-* [沙盒](../../../../../sandboxes/home.md):Experience Platform提供虛擬沙盒，可將單一Platform實例分割為不同的虛擬環境，以協助開發和發展數位體驗應用程式。
+* [來源](../../../../home.md):Experience Platform可讓您從各種來源擷取資料，同時讓您能夠使用平台服務來建構、標示並增強傳入資料。
+* [沙盒](../../../../../sandboxes/home.md):Experience Platform提供虛擬沙盒，可將單一平台實例分割為獨立的虛擬環境，以協助開發和發展數位體驗應用程式。
 
 以下各節提供您必須知道的其他資訊，以便使用[!DNL Flow Service] API成功建立[!DNL Blob]來源連線。
 
@@ -33,7 +33,7 @@ ht-degree: 2%
 
 | 憑證 | 說明 |
 | ---------- | ----------- |
-| `connectionString` | 包含驗證[!DNL Blob]至Experience Platform所需授權資訊的字串。 [!DNL Blob]連接字串模式是：`DefaultEndpointsProtocol=https;AccountName={ACCOUNT_NAME};AccountKey={ACCOUNT_KEY}`。 有關連接字串的詳細資訊，請參閱[配置連接字串](https://docs.microsoft.com/en-us/azure/storage/common/storage-configure-connection-string)上的[!DNL Blob]文檔。 |
+| `connectionString` | 包含驗證[!DNL Blob]到Experience Platform所需的授權資訊的字串。 [!DNL Blob]連接字串模式是：`DefaultEndpointsProtocol=https;AccountName={ACCOUNT_NAME};AccountKey={ACCOUNT_KEY}`。 有關連接字串的詳細資訊，請參閱[配置連接字串](https://docs.microsoft.com/en-us/azure/storage/common/storage-configure-connection-string)上的[!DNL Blob]文檔。 |
 | `sasUri` | 共用訪問簽名URI，可用作連接[!DNL Blob]帳戶的替代驗證類型。 [!DNL Blob] SAS URI模式為：`https://{ACCOUNT_NAME}.blob.core.windows.net/?sv=<storage version>&st={START_TIME}&se={EXPIRE_TIME}&sr={RESOURCE}&sp={PERMISSIONS}>&sip=<{IP_RANGE}>&spr={PROTOCOL}&sig={SIGNATURE}>`如需詳細資訊，請參閱[共用存取簽名URI](https://docs.microsoft.com/en-us/azure/data-factory/connector-azure-blob-storage#shared-access-signature-authentication)上的此[!DNL Blob]檔案。 |
 | `connectionSpec.id` | 建立連線所需的唯一識別碼。 [!DNL Blob]的連接規範ID為：`4c10e202-c428-4796-9208-5f1f5732b1cf` |
 
@@ -43,17 +43,17 @@ ht-degree: 2%
 
 ### 收集必要標題的值
 
-若要呼叫平台API，您必須先完成[驗證教學課程](https://www.adobe.com/go/platform-api-authentication-en)。 完成驗證教學課程後，所有Experience Platform API呼叫中每個必要標題的值都會顯示在下方：
+若要呼叫平台API，您必須先完成[驗證教學課程](https://www.adobe.com/go/platform-api-authentication-en)。 完成驗證教學課程後，將提供所有Experience PlatformAPI呼叫中每個必要標題的值，如下所示：
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
 * `x-gw-ims-org-id: {IMS_ORG}`
 
-Experience Platform中的所有資源（包括[!DNL Flow Service]的資源）都隔離至特定的虛擬沙盒。 所有對平台API的請求都需要一個標題，該標題會指定要在中執行的操作的沙盒名稱：
+Experience Platform中的所有資源（包括屬於[!DNL Flow Service]的資源）都與特定虛擬沙盒隔離。 所有對平台API的請求都需要一個標題，該標題會指定要在中執行的操作的沙盒名稱：
 
 * `x-sandbox-name: {SANDBOX_NAME}`
 
-所有包含裝載(POST、PUT、PATCH)的請求都需要額外的媒體類型標題：
+所有包含裝載(POST、PUT、PATCH)的請求都需要附加的媒體類型標題：
 
 * `Content-Type: application/json`
 
@@ -63,7 +63,7 @@ Experience Platform中的所有資源（包括[!DNL Flow Service]的資源）都
 
 ### 使用基於連接字串的驗證建立[!DNL Blob]連接
 
-若要使用以連線字串為基礎的驗證建立[!DNL Blob]連線，請在提供[!DNL Blob] `connectionString`時，向[!DNL Flow Service] API提出POST要求。
+若要使用以連線字串為基礎的驗證來建立[!DNL Blob]連線，請在提供[!DNL Blob] `connectionString`時，向[!DNL Flow Service] API提出POST要求。
 
 **API格式**
 
@@ -71,7 +71,7 @@ Experience Platform中的所有資源（包括[!DNL Flow Service]的資源）都
 POST /connections
 ```
 
-**請求**
+**要求**
 
 要建立[!DNL Blob]連接，必須在POST請求中提供其唯一連接規範ID。 [!DNL Blob]的連接規範ID為`4c10e202-c428-4796-9208-5f1f5732b1cf`。
 
@@ -119,7 +119,7 @@ curl -X POST \
 
 共用訪問簽名(SAS)URI允許對[!DNL Blob]帳戶進行安全委託授權。 您可以使用SAS來建立具有不同存取度的驗證憑證，因為以SAS為基礎的驗證可讓您設定權限、開始和到期日，以及特定資源的規定。
 
-若要使用共用存取簽名URI建立[!DNL Blob]連線，請在提供[!DNL Blob] `sasUri`值時，向[!DNL Flow Service] API提出POST要求。
+要使用共用訪問簽名URI建立[!DNL Blob]連接，請向[!DNL Flow Service] API發出POST請求，同時為[!DNL Blob] `sasUri`提供值。
 
 **API格式**
 
@@ -127,7 +127,7 @@ curl -X POST \
 POST /connections
 ```
 
-**請求**
+**要求**
 
 ```shell
 curl -X POST \
