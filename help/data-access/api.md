@@ -1,23 +1,23 @@
 ---
-keywords: Experience Platform;home；熱門主題；資料存取；python sdk;spark sdk；資料存取api；匯出；匯出
+keywords: Experience Platform；首頁；熱門主題；資料存取；python sdk;spark sdk；資料存取api；導出；導出
 solution: Experience Platform
 title: 資料存取API指南
-topic: developer guide
-description: Data Access API為開發人員提供REST風格的介面，以支援Adobe Experience Platform，主要針對Experience Platform內所擷取資料集的可探索性和可存取性。
+topic-legacy: developer guide
+description: Data Access API為Adobe Experience Platform公司提供REST風格的介面，主要針對在Experience Platform內蒐集到的資料集的可探索性和可存取性，為開發人員提供支援。
+exl-id: 278ec322-dafa-4e3f-ae45-2d20459c5653
 translation-type: tm+mt
-source-git-commit: e649ab3da077cdd8e98562199b8bdece6108a572
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '528'
 ht-degree: 4%
 
 ---
 
-
 # 資料存取API指南
 
-Data Access API為使用者提供REST風格的介面，以支援Adobe Experience Platform，其重點是[!DNL Experience Platform]內收錄資料集的可探索性和可存取性。
+Data Access API為Adobe Experience Platform提供REST風格的介面，主要針對[!DNL Experience Platform]內收錄資料集的可探索性和可存取性，為使用者提供支援。
 
-![Experience Platform上的資料存取](images/Data_Access_Experience_Platform.png)
+![Experience Platform時的資料存取](images/Data_Access_Experience_Platform.png)
 
 ## API規格參考
 
@@ -46,7 +46,7 @@ GET /batches/{BATCH_ID}/files
 | -------- | ----------- |
 | `{BATCH_ID}` | 指定批的ID。 |
 
-**請求**
+**要求**
 
 ```shell
 curl -X GET https://platform.adobe.io/data/foundation/export/batches/{BATCH_ID}/files \
@@ -118,7 +118,7 @@ GET /files/{FILE_ID}
 | -------- | ----------- |
 | `{FILE_ID}` | 等於`"dataSetFileId"`，即要訪問的檔案的ID。 |
 
-**請求**
+**要求**
 
 ```shell
 curl -X GET https://platform.adobe.io/data/foundation/export/files/{FILE_ID} \
@@ -216,7 +216,7 @@ GET /files/{dataSetFileId}?path={FILE_NAME}
 | -------- | ----------- |
 | `{FILE_NAME}` | 您嘗試存取的檔案名稱。 |
 
-**請求**
+**要求**
 
 ```shell
 curl -X GET https://platform.adobe.io/data/foundation/export/files/{FILE_ID}?path={FILE_NAME} \
@@ -241,4 +241,4 @@ curl -X GET https://platform.adobe.io/data/foundation/export/files/{FILE_ID}?pat
 
 ## 訂閱資料擷取事件
 
-[!DNL Platform] 透過 [Adobe Developer Console提供特定高價值事件供訂閱](https://www.adobe.com/go/devs_console_ui)。例如，您可以訂閱資料擷取事件，以通知您可能發生的延遲和失敗。 如需詳細資訊，請參閱[訂閱資料擷取通知的教學課程。](../ingestion/quality/subscribe-events.md)
+[!DNL Platform] 透過Adobe開發人員主控台提供特定的高價值 [事件供訂閱](https://www.adobe.com/go/devs_console_ui)。例如，您可以訂閱資料擷取事件，以通知您可能發生的延遲和失敗。 如需詳細資訊，請參閱[訂閱資料擷取通知的教學課程。](../ingestion/quality/subscribe-events.md)
