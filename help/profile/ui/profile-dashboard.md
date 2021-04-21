@@ -1,25 +1,25 @@
 ---
-keywords: Experience Platform;profile;real-time customer profile;user interface;UI;customization;profile dashboard;dashboard
+keywords: Experience Platform；配置檔案；即時客戶配置檔案；用戶介面；UI；自定義；配置檔案儀表板；儀表板
 title: 描述檔控制面板
-description: Adobe Experience Platform UI提供儀表板，您可透過儀表板檢視有關即時客戶個人檔案資料的重要資訊。
-topic: guide
+description: Adobe Experience PlatformUI提供儀表板，您可通過該儀表板查看有關即時客戶概要資訊的重要資訊。
+topic-legacy: guide
 type: Documentation
+exl-id: 2c99cbb3-515f-4982-9f2a-84e1ab14542e
 translation-type: tm+mt
-source-git-commit: 077525d597d457ab2c3b8733490920da89f15ebb
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '145'
+source-wordcount: '142'
 ht-degree: 6%
 
 ---
 
-
-# (Beta)[!UICONTROL 描述檔]控制面板{#profile-dashboard}
+# （測試版）[!UICONTROL Profiles]控制面板{#profile-dashboard}
 
 >[!IMPORTANT]
 >
 >儀表板功能目前處於測試階段，並非所有使用者都能使用。 文件和功能可能會有所變更。
 
-Adobe Experience Platform使用者介面(UI)提供控制面板，您可透過此控制面板檢視有關[!DNL Real-time Customer Profile]資料的重要資訊，如每日快照中所擷取。
+Adobe Experience Platform用戶介面(UI)提供一個儀表板，通過它可以查看有關[!DNL Real-time Customer Profile]資料的重要資訊（在每日快照中捕獲）。
 
 如需如何存取UI中的[!UICONTROL Profiles]控制面板並與之互動的詳細指示，以及如何進一步瞭解控制面板中顯示的可用度量，請造訪[[!UICONTROL Profiles]控制面板指南](../../dashboards/guides/profiles.md)。
 
