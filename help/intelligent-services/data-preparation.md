@@ -2,13 +2,13 @@
 keywords: Experience Platform；家庭；智慧服務；熱門主題；智慧服務；智慧服務
 solution: Experience Platform, Intelligent Services
 title: 準備資料以用於智慧型服務
-topic: Intelligent Services
+topic-legacy: Intelligent Services
 description: 為了讓智慧型服務能夠從行銷事件資料中發掘見解，資料必須以標準結構進行語義豐富和維護。 智慧型服務使用Experience Data Model(XDM)架構來達成此目的。
 exl-id: 17bd7cc0-da86-4600-8290-cd07bdd5d262
 translation-type: tm+mt
-source-git-commit: 867c97d58f3496cb9e9e437712f81bd8929ba99f
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '2387'
+source-wordcount: '2385'
 ht-degree: 0%
 
 ---
