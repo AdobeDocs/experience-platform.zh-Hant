@@ -2,20 +2,20 @@
 keywords: Experience Platform;home；熱門主題；模式；模式；XDM;fields；模式；付款項；資料類型；資料類型；
 solution: Experience Platform
 title: 付款項資料類型
-topic: overview
+topic-legacy: overview
 description: 此文檔概述了付款項體驗資料模型(XDM)資料類型。
+exl-id: d25a358b-73c1-468b-a9c5-808385689932
 translation-type: tm+mt
-source-git-commit: 8bbb062df47b6e94630626d0a89a179d759d922d
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '161'
+source-wordcount: '157'
 ht-degree: 5%
 
 ---
 
+# [!UICONTROL Payment Item] 資料類型
 
-# [!UICONTROL 付款項] 資料類型
-
-[!UICONTROL 付款] 項是標準的「體驗資料模型」(XDM)資料類型，它描述與訂單關聯的付款，該訂單定義付款類型、金額和關聯幣種。
+[!UICONTROL Payment Item] 是標準的「體驗資料模型」(XDM)資料類型，它描述與訂單相關的付款，該訂單定義付款類型、金額和相關貨幣。
 
 <img src="../images/data-types/payment-item.PNG" width="400" /><br />
 
