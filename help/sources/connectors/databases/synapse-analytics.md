@@ -2,16 +2,16 @@
 keywords: Experience Platform;home；熱門主題；Azure synapse分析；azure synapse分析；Synapse;synapse
 solution: Experience Platform
 title: azure synapse分析來源連接器概觀
-topic: overview
+topic-legacy: overview
 description: 瞭解如何使用API或使用者介面將Azure synapse分析連接至Adobe Experience Platform。
+exl-id: 5b94ae74-e5a7-40e9-a952-41eddf06dcde
 translation-type: tm+mt
-source-git-commit: 0fb97fcf5d3f8230ff86906aeef245e4a7f44f30
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '290'
+source-wordcount: '289'
 ht-degree: 0%
 
 ---
-
 
 # （測試版）[!DNL Azure Synapse Analytics]連接器
 
