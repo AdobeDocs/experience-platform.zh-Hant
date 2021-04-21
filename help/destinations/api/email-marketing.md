@@ -3,16 +3,16 @@ keywords: Experience Platform；首頁；熱門主題
 solution: Experience Platform
 title: 使用Flow Service API連線至電子郵件行銷目的地並啟用資料
 description: 本檔案涵蓋使用Adobe Experience PlatformAPI建立電子郵件行銷目的地
-topic: tutorial
+topic-legacy: tutorial
 type: Tutorial
+exl-id: 41fd295d-7cda-4ab1-a65e-b47e6c485562
 translation-type: tm+mt
-source-git-commit: 32cb198bcf2c142b50c4b7a60282f0c923be06b1
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '1707'
+source-wordcount: '1700'
 ht-degree: 1%
 
 ---
-
 
 # 使用Flow Service API連線至電子郵件行銷目的地並啟用資料
 
@@ -24,7 +24,7 @@ ht-degree: 1%
 
 如果您偏好使用平台中的使用者介面來連接目標並啟用資料，請參閱[連接目標](../ui/connect-destination.md)和[啟動描述檔和區段至目標](../ui/activate-destinations.md)教學課程。
 
-## 快速入門
+## 開始使用
 
 本指南需要對Adobe Experience Platform的下列組成部分有切實的瞭解：
 
@@ -81,7 +81,7 @@ ht-degree: 1%
 GET /connectionSpecs
 ```
 
-**請求**
+**要求**
 
 <!--
 
@@ -139,7 +139,7 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 POST /connections
 ```
 
-**請求**
+**要求**
 
 <!--
 
@@ -203,7 +203,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 POST /sourceConnections
 ```
 
-**請求**
+**要求**
 
 <!--
 
@@ -287,7 +287,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 POST /connections
 ```
 
-**請求**
+**要求**
 
 <!--
 
@@ -375,7 +375,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 POST /targetConnections
 ```
 
-**請求**
+**要求**
 
 <!--
 
@@ -472,7 +472,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 POST /flows
 ```
 
-**請求**
+**要求**
 
 ```shell
 curl -X POST \
@@ -542,7 +542,7 @@ curl -X POST \
 PATCH /flows
 ```
 
-**請求**
+**要求**
 
 ```shell
 curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flowservice/flows/{DATAFLOW_ID}' \
@@ -593,7 +593,7 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 
 * `{DATAFLOW_ID}`:使用您在上一步驟中取得的資料流。
 * `{ETAG}`:使用您在上一步驟中取得的標籤。
-* `{SEGMENT_ID}`:提供您要匯出至此目的地的區段ID。若要擷取您要啟用之區段的區段ID，請前往&#x200B;**https://www.adobe.io/apis/experienceplatform/home/api-reference.html#/**，在左側導覽功能表中選取&#x200B;**[!UICONTROL 分段服務API]**，並在&#x200B;**[!UICONTROL 區段定義]**&#x200B;中尋找`GET /segment/definitions`操作。
+* `{SEGMENT_ID}`:提供您要匯出至此目的地的區段ID。若要擷取您要啟用之區段的區段ID，請前往&#x200B;**https://www.adobe.io/apis/experienceplatform/home/api-reference.html#/**，在左側導覽功能表中選取&#x200B;**[!UICONTROL Segmentation Service API]**，並在&#x200B;**[!UICONTROL Segment Definitions]**&#x200B;中尋找`GET /segment/definitions`操作。
 * `{PROFILE_ATTRIBUTE}`: 例如, `"person.lastName"`
 
 **回應**
@@ -614,7 +614,7 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 GET /flows
 ```
 
-**請求**
+**要求**
 
 ```shell
 curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flowservice/flows/{DATAFLOW_ID}' \
