@@ -1,21 +1,21 @@
 ---
-keywords: Experience Platform;home；熱門主題
+keywords: Experience Platform；首頁；熱門主題
 solution: Experience Platform
-title: 隱私權服務疑難排解指南
-topic: troubleshooting
-description: 本檔案提供隱私權服務常見問題的解答，以及API中常見錯誤的相關資訊。
+title: Privacy Service故障排除指南
+topic-legacy: troubleshooting
+description: 本檔案提供有關Privacy Service的常見問題解答，以及API中常見錯誤的相關資訊。
+exl-id: 8afbb065-0f41-4048-9003-a22c0c839717
 translation-type: tm+mt
-source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '884'
+source-wordcount: '881'
 ht-degree: 0%
 
 ---
 
-
 # [!DNL Privacy Service] 疑難排解指南
 
-Adobe Experience Platform [!DNL Privacy Service]提供REST風格的API和使用者介面，可協助公司管理客戶資料隱私權要求。 有了[!DNL Privacy Service]，您可以提交存取和刪除私人或個人客戶資料的請求，以利自動符合組織和法律的隱私權規範。
+Adobe Experience Platform[!DNL Privacy Service]提供REST風格的API和使用者介面，協助公司管理客戶資料隱私權要求。 有了[!DNL Privacy Service]，您可以提交存取和刪除私人或個人客戶資料的請求，以利自動符合組織和法律的隱私權規範。
 
 本檔案提供有關[!DNL Privacy Service]的常見問題解答，以及API中常見錯誤的相關資訊。
 
@@ -67,7 +67,7 @@ Adobe Experience Platform [!DNL Privacy Service]提供REST風格的API和使用�
 
 ## 我可以使用[!DNL Privacy Service]清除意外傳送至[!DNL Platform]的資料嗎？
 
-Adobe不支援使用[!DNL Privacy Service]來清除意外提交至產品的資料。 [!DNL Privacy Service] 旨在協助您履行資料主體（或消費者）存取或刪除要求的義務。這些要求會對時間產生敏感影響，並且會根據適用的隱私權法完成。 提交不屬於資料主體／消費者訪問或刪除請求會影響所有[!DNL Privacy Service]客戶以及[!DNL Privacy Service]支援適當法律時間表的能力。
+Adobe不支援使用[!DNL Privacy Service]來清除意外提交到產品的資料。 [!DNL Privacy Service] 旨在協助您履行資料主體（或消費者）存取或刪除要求的義務。這些要求會對時間產生敏感影響，並且會根據適用的隱私權法完成。 提交不屬於資料主體／消費者訪問或刪除請求會影響所有[!DNL Privacy Service]客戶以及[!DNL Privacy Service]支援適當法律時間表的能力。
 
 請連絡您的客戶經理(CDM)，以協調並提供一定程度的努力，以移除任何PII或資料問題。
 
@@ -81,7 +81,7 @@ Adobe不支援使用[!DNL Privacy Service]來清除意外提交至產品的資�
 
 ### 使用UI
 
-所有作用中的作業請求都列在[!DNL Privacy Service] UI儀表板的&#x200B;**[!UICONTROL 作業請求]**&#x200B;介面工具集中。 每個作業請求的狀態顯示在&#x200B;**[!UICONTROL Status]**&#x200B;列下。 有關在UI中查看作業請求的詳細資訊，請參閱[隱私服務使用手冊](ui/user-guide.md)。
+所有作用中的工作請求都列在[!DNL Privacy Service] UI儀表板的&#x200B;**[!UICONTROL Job Requests]**&#x200B;介面工具集中。 每個作業請求的狀態顯示在&#x200B;**[!UICONTROL Status]**&#x200B;列下。 有關在UI中查看作業請求的詳細資訊，請參閱[Privacy Service使用手冊](ui/user-guide.md)。
 
 ## 如何下載完成的隱私權工作結果？
 
@@ -95,7 +95,7 @@ Adobe不支援使用[!DNL Privacy Service]來清除意外提交至產品的資�
 
 ### 使用UI
 
-在[!DNL Privacy Service] UI儀表板上，從&#x200B;**作業請求**&#x200B;介面工具集中找到要下載的作業。 選擇作業的ID以開啟「作業詳細資訊」頁。 從這裡，選擇右上角的&#x200B;**Download**&#x200B;以下載ZIP檔案。 如需詳細步驟，請參閱[隱私權服務使用指南](ui/user-guide.md)。
+在[!DNL Privacy Service] UI儀表板上，從&#x200B;**作業請求**&#x200B;介面工具集中找到要下載的作業。 選擇作業的ID以開啟「作業詳細資訊」頁。 從這裡，選擇右上角的&#x200B;**Download**&#x200B;以下載ZIP檔案。 有關詳細步驟，請參閱[Privacy Service使用手冊](ui/user-guide.md)。
 
 ## 常見錯誤訊息
 
@@ -104,7 +104,7 @@ Adobe不支援使用[!DNL Privacy Service]來清除意外提交至產品的資�
 | 錯誤訊息 | 說明 |
 | --- | --- |
 | 找不到用戶ID。 | 無法找到請求中提供的某些使用者ID，且已略過。 請確定您在請求裝載中使用正確的命名空間和ID值。 如需更詳細的說明，請參閱[提供身分資料](./identity-data.md)的檔案。 |
-| 無效的命名空間 | 提供的使用者ID識別名稱空間無效。 請參閱[!DNL Privacy Service]開發人員指南附錄中[標準身分名稱空間](./api/appendix.md#standard-namespaces)一節，以取得已接受的名稱空間清單。 如果您使用自訂命名空間，請確定您正將ID的`type`屬性設為&quot;custom&quot;。 |
+| 無效的命名空間 | 提供的使用者ID識別名稱空間無效。 請參閱[!DNL Privacy Service]開發人員指南附錄中[標準身分名稱空間](./api/appendix.md#standard-namespaces)一節，以取得已接受的名稱空間清單。 如果您使用自訂命名空間，請確定您正在將ID的`type`屬性設定為&quot;custom&quot;。 |
 | 部分完成 | 工作已成功完成，但有些資料不適用於指定的請求，且已略過。 |
 | 資料不是必要格式。 | 指定應用程式的一或多個資料值格式錯誤。 請查看工作詳細資訊以取得詳細資訊。 |
 | 尚未布建IMS組織。 | 當您的IMS組織尚未布建[!DNL Privacy Service]時，會出現此訊息。 如需詳細資訊，請洽詢您的管理員。 |
