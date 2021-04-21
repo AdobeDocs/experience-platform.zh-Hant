@@ -1,29 +1,29 @@
 ---
-keywords: Experience Platform；軟體包源檔案；Data Science Workspace；熱門主題；Docker;docker映像
+keywords: Experience Platform；包源檔案；資料科學工作區；熱門主題；Docker;docker影像
 solution: Experience Platform
 title: 將來源檔案封裝至配方
-topic: tutorial
+topic-legacy: tutorial
 type: Tutorial
-description: 本教學課程提供如何將提供的零售銷售範例來源檔案封裝成封存檔案的指示，此檔案可依循UI或API中的方式匯入工作流程，用來在Adobe Experience Platform Data Science Workspace中建立方式。
+description: 本教學課程提供如何將提供的零售銷售範例來源檔案封裝成封存檔案的指示，此檔案可依照UI或API中的方式匯入工作流程，用於在Adobe Experience Platform資料科學工作區中建立方式。
+exl-id: 199b8127-4f1b-43a4-82e6-58cb70fcdc08
 translation-type: tm+mt
-source-git-commit: f6cfd691ed772339c888ac34fcbd535360baa116
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '1159'
+source-wordcount: '1146'
 ht-degree: 0%
 
 ---
 
-
 # 將來源檔案封裝至配方
 
-本教學課程提供如何將提供的零售銷售範例來源檔案封裝成封存檔案的指示，此檔案可透過遵循UI中的方式匯入工作流程或使用API，在Adobe Experience Platform [!DNL Data Science Workspace]中建立方式。
+本教學課程提供如何將提供的零售銷售範例來源檔案封裝成封存檔案的指示，此檔案可依照UI或API中的方式匯入工作流程，用於在Adobe Experience Platform[!DNL Data Science Workspace]中建立方式。
 
 要瞭解的概念：
 
-- **方式**:配方是Adobe的模型規格術語，是代表特定機器學習、人工智慧演算法或整合演算法、處理邏輯和設定的頂層容器，以建立並執行已訓練的模型，進而協助解決特定商業問題。
+- **方式**:配方是「模型」規格的Adobe術語，是表示特定機器學習、人工智慧演算法或整合演算法、處理邏輯和組態的頂層容器，以建立並執行已訓練的模型，進而協助解決特定商業問題。
 - **來源檔案**:專案中包含方式邏輯的個別檔案。
 
-## 必要條件
+## 先決條件
 
 - [[!DNL Docker]](https://docs.docker.com/install/#supported-platforms)
 - [[!DNL Python 3 and pip]](https://docs.conda.io/en/latest/miniconda.html)
@@ -40,11 +40,11 @@ Docker映像允許開發人員將應用程式與其所需的所有部件（如�
 
 內建的Docker影像會使用在方式建立工作流程期間提供給您的認證，推送至Azure容器註冊表。
 
-若要取得Azure容器註冊表認證，請登入[Adobe Experience Platform](https://platform.adobe.com)。 在左邊導覽欄上，導覽至&#x200B;**[!UICONTROL Workflows]**。 選擇&#x200B;**[!UICONTROL 匯入配方]**，然後選擇&#x200B;**[!UICONTROL 啟動]**。 請參閱下方的螢幕擷取畫面以供參考。
+若要取得Azure容器註冊表憑證，請登入[Adobe Experience Platform](https://platform.adobe.com)。 在左邊導覽欄上，導覽至&#x200B;**[!UICONTROL Workflows]**。 選擇&#x200B;**[!UICONTROL Import Recipe]** ，然後選擇&#x200B;**[!UICONTROL Launch]**。 請參閱下方的螢幕擷取畫面以供參考。
 
 ![](../images/models-recipes/package-source-files/import.png)
 
-將開啟&#x200B;**[!UICONTROL Configure]**&#x200B;頁。 提供適當的&#x200B;**[!UICONTROL 配方名稱]**，例如「零售銷售配方」，並選擇性地提供說明或檔案URL。 完成後，按一下&#x200B;**[!UICONTROL Next]**。
+**[!UICONTROL Configure]**&#x200B;頁面隨即開啟。 提供適當的&#x200B;**[!UICONTROL Recipe Name]**，例如「零售銷售方式」，並選擇性地提供說明或檔案URL。 完成後，按一下&#x200B;**[!UICONTROL Next]**。
 
 ![](../images/models-recipes/package-source-files/configure.png)
 
@@ -57,9 +57,9 @@ Docker映像允許開發人員將應用程式與其所需的所有部件（如�
 >[!TIP]
 >
 >- 對於[!DNL Python]配方，請選擇&#x200B;**[!UICONTROL Python]**&#x200B;執行階段。
->- 對於R配方，請選擇&#x200B;**[!UICONTROL R]**&#x200B;運行時。
+>- 對於R方式，請選擇&#x200B;**[!UICONTROL R]**&#x200B;執行階段。
 >- 對於PySpark配方，請選取&#x200B;**[!UICONTROL PySpark]**&#x200B;執行時期。 對象類型自動填充。
->- 對於Scala配方，請選擇&#x200B;**[!UICONTROL Spark]**&#x200B;執行時期。 對象類型自動填充。
+>- 對於Scala配方，請選擇&#x200B;**[!UICONTROL Spark]**&#x200B;運行時。 對象類型自動填充。
 
 
 ![](../images/models-recipes/package-source-files/docker-creds.png)
@@ -72,7 +72,7 @@ Docker映像允許開發人員將應用程式與其所需的所有部件（如�
 
 ### 封裝來源檔案
 
-首先，取得<a href="https://github.com/adobe/experience-platform-dsw-reference" target="_blank">Experience Platform Data Science Workspace參考</a>儲存庫中的范常式式碼基底。
+首先，獲取<a href="https://github.com/adobe/experience-platform-dsw-reference" target="_blank">Experience Platform資料科學工作區參考</a>儲存庫中的示例代碼庫。
 
 - [建立Python Docker影像](#python-docker)
 - [構建R Docker映像](#r-docker)
