@@ -2,16 +2,16 @@
 keywords: Experience Platform;home；常用主題；PSQL;psql；查詢服務；查詢服務；元資料；命令；元資料命令；
 solution: Experience Platform
 title: 查詢服務中的元資料PostgreSQL命令
-topic: metadata
-description: Adobe Experience Platform Query Service中目前支援查詢中繼資料的PostgreSQL命令清單。
+topic-legacy: metadata
+description: 當前支援查詢Adobe Experience Platform查詢服務中元資料的PostgreSQL命令清單。
+exl-id: bfcbad55-3086-44c9-9938-6ba0504e747b
 translation-type: tm+mt
-source-git-commit: 97dc0b5fb44f5345fd89f3f56bd7861668da9a6e
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '338'
 ht-degree: 0%
 
 ---
-
 
 # 查詢服務中的元資料PostgreSQL命令
 
@@ -45,4 +45,3 @@ ht-degree: 0%
 所有以`\d`開頭的命令都可以合併。 例如，您可以發佈`\dtsn`來顯示所有表、序列和方案的清單。 `\d` 單獨顯示所有可見表、視圖、實體化視圖和序列。
 
 有關上述命令的其他資訊，請參閱[postgresql.org](https://www.postgresql.org/docs/10/app-psql.html)中的文檔。 但是，請注意，並非[!DNL Experience Platform]支援PostgreSQL文檔中顯示的所有選項。
-
