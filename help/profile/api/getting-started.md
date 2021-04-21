@@ -1,17 +1,17 @@
 ---
 keywords: Experience Platform；配置檔案；即時客戶配置檔案；故障排除；API
 title: 即時客戶個人檔案API快速入門
-topic: guide
+topic-legacy: guide
 type: Documentation
 description: 描述檔API快速入門手冊概述了使用即時客戶描述檔API端點，對描述檔資料執行基本CRUD作業時，您需要知道的主要概念和基本功能。
+exl-id: 7e30610a-a7e7-43ab-a45d-fd84ef6e36ef
 translation-type: tm+mt
-source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '413'
+source-wordcount: '411'
 ht-degree: 0%
 
 ---
-
 
 # [!DNL Real-time Customer Profile] API {#getting-started}快速入門
 
