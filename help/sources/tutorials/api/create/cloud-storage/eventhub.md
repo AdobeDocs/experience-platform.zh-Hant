@@ -7,18 +7,15 @@ type: Tutorial
 description: 瞭解如何使用Flow Service API將Adobe Experience Platform連接至Azure事件中樞帳戶。
 exl-id: a4d0662d-06e3-44f3-8cb7-4a829c44f4d9
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: d6f1521470b8dc630060584189690545c724de6b
 workflow-type: tm+mt
-source-wordcount: '566'
+source-wordcount: '550'
 ht-degree: 2%
 
 ---
 
-# 使用[!DNL Flow Service] API建立[!DNL Azure Event Hubs]來源連線
 
->[!NOTE]
->
-> [!DNL Azure Event Hubs]介面處於測試狀態。 有關使用beta標籤連接器的詳細資訊，請參閱[ Sources綜覽](../../../../home.md#terms-and-conditions)。
+# 使用[!DNL Flow Service] API建立[!DNL Azure Event Hubs]來源連線
 
 [!DNL Flow Service] 用於收集和集中Adobe Experience Platform內不同來源的客戶資料。該服務提供用戶介面和REST風格的API，所有支援的源都可從中連接。
 
