@@ -2,14 +2,14 @@
 keywords: Experience Platform; home；熱門主題；流處理；提取；時間序列資料；流時間序列資料；
 solution: Experience Platform
 title: 使用串流擷取API串流時間系列資料
-topic: tutorial
+topic-legacy: tutorial
 type: Tutorial
 description: 本教學課程將協助您開始使用串流擷取API，這是Adobe Experience Platform資料擷取服務API的一部分。
 exl-id: 720b15ea-217c-4c13-b68f-41d17b54d500
 translation-type: tm+mt
-source-git-commit: 727c9dbd87bacfd0094ca29157a2d0283c530969
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '1313'
+source-wordcount: '1312'
 ht-degree: 2%
 
 ---
