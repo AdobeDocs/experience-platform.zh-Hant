@@ -2,16 +2,16 @@
 keywords: Experience Platform;home;IAB;IAB 2.0；同意；同意
 solution: Experience Platform
 title: 建立用於捕獲IAB TCF 2.0許可資料的資料集
-topic: privacy events
+topic-legacy: privacy events
 description: 本文檔提供了設定兩個收集IAB TCF 2.0許可資料所需資料集的步驟。
+exl-id: 36b2924d-7893-4c55-bc33-2c0234f1120e
 translation-type: tm+mt
-source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '1648'
+source-wordcount: '1564'
 ht-degree: 0%
 
 ---
-
 
 # 建立資料集，以擷取IAB TCF 2.0同意資料
 
@@ -34,15 +34,15 @@ ht-degree: 0%
    * [身分名稱空間](../../../../identity-service/namespaces.md):客戶身分資料必須以Identity Service所識別的特定身分名稱空間提供。
 * [即時客戶個人檔案](../../../../profile/home.md):利用 [!DNL Identity Service] 這些工具，您可以即時從資料集建立詳細的客戶個人檔案。[!DNL Real-time Customer Profile] 從資料湖提取資料，並將客戶個人檔案保留在其個別的資料儲存中。
 
-## [!UICONTROL 隱私細] 節mixin結構  {#structure}
+## [!UICONTROL Privacy Details] 混合結構  {#structure}
 
-[!UICONTROL 隱私權詳細資訊] mixin提供TCF 2.0支援所需的客戶同意欄位。 此混音有兩種版本：一個與[!DNL XDM Individual Profile]類別相容，另一個與[!DNL XDM ExperienceEvent]類別相容。
+[!UICONTROL Privacy Details] mixin提供TCF 2.0支援所需的客戶同意欄位。 此混音有兩種版本：一個與[!DNL XDM Individual Profile]類別相容，另一個與[!DNL XDM ExperienceEvent]類別相容。
 
 以下各節說明每個混音的結構，包括擷取期間預期的資料。
 
 ### Profile mixin {#profile-mixin}
 
-對於基於[!DNL XDM Individual Profile]的方案，[!UICONTROL 隱私詳細資訊]混音提供單一映射類型欄位`xdm:identityPrivacyInfo`，該欄位將客戶身份映射到其TCF許可偏好。 以下JSON是資料擷取時`xdm:identityPrivacyInfo`所需資料類型的範例：
+對於基於[!DNL XDM Individual Profile]的方案，[!UICONTROL Privacy Details] mixin提供單一映射類型欄位`xdm:identityPrivacyInfo`，該欄位將客戶身份映射到其TCF同意偏好。 以下JSON是資料擷取時`xdm:identityPrivacyInfo`所需資料類型的範例：
 
 ```json
 {
@@ -80,7 +80,7 @@ ht-degree: 0%
 
 ### {#event-mixin}中的事件混音
 
-對於基於[!DNL XDM ExperienceEvent]的方案，[!UICONTROL 隱私詳細資訊]混音提供單個陣列類型欄位：`xdm:consentStrings`。 此陣列中的每個項目都必須是包含TCF許可字串必要屬性的對象，類似於配置檔案mixin中的`xdm:consentString`欄位。 有關這些子屬性的詳細資訊，請參閱[下一節](#consent-string)。
+對於基於[!DNL XDM ExperienceEvent]的方案，[!UICONTROL Privacy Details] mixin提供單個陣列類型欄位：`xdm:consentStrings`。 此陣列中的每個項目都必須是包含TCF許可字串必要屬性的對象，類似於配置檔案mixin中的`xdm:consentString`欄位。 有關這些子屬性的詳細資訊，請參閱[下一節](#consent-string)。
 
 ```json
 {
@@ -98,7 +98,7 @@ ht-degree: 0%
 
 ### 許可字串屬性{#consent-string}
 
-[!UICONTROL 隱私權詳細資訊]混合版本需要至少一個物件來擷取必要欄位，以說明客戶的TCF同意字串。 這些屬性說明如下：
+[!UICONTROL Privacy Details]混音的兩個版本都需要至少一個對象，該對象捕獲描述客戶TCF許可字串的必要欄位。 這些屬性說明如下：
 
 | 屬性 | 說明 |
 | --- | --- |
@@ -112,7 +112,7 @@ ht-degree: 0%
 
 為了建立捕獲許可資料的資料集，您必須首先建立XDM架構以基於這些資料集。
 
-在平台UI中，選擇左側導航中的&#x200B;**[!UICONTROL 方案]**&#x200B;以開啟[!UICONTROL 方案]工作區。 從這裡，請依照下列各節中的步驟建立每個必要的架構。
+在平台UI中，選擇左側導覽中的&#x200B;**[!UICONTROL Schemas]**&#x200B;以開啟[!UICONTROL Schemas]工作區。 從這裡，請依照下列各節中的步驟建立每個必要的架構。
 
 >[!NOTE]
 >
@@ -122,15 +122,15 @@ ht-degree: 0%
 
 ### 建立基於記錄的許可方案{#profile-schema}
 
-在&#x200B;**[!UICONTROL 結構描述]**&#x200B;工作區中，選擇&#x200B;**[!UICONTROL 建立結構描述]**，然後從下拉式清單中選擇&#x200B;**[!UICONTROL XDM單個結構描述]**。
+在&#x200B;**[!UICONTROL Schemas]**&#x200B;工作區中，選擇&#x200B;**[!UICONTROL Create schema]**，然後從下拉式清單中選擇&#x200B;**[!UICONTROL XDM Individual Profile]**。
 
 ![](../../../images/governance-privacy-security/consent/iab/dataset/create-schema-profile.png)
 
-出現[!DNL Schema Editor]，顯示畫布中的架構結構。 使用右側欄來提供架構的名稱和說明，然後在畫布左側的&#x200B;**[!UICONTROL Mixins]**&#x200B;區段下選擇&#x200B;**[!UICONTROL Add]**。
+出現[!DNL Schema Editor]，顯示畫布中的架構結構。 使用右側欄來提供架構的名稱和說明，然後在畫布左側的&#x200B;**[!UICONTROL Mixins]**&#x200B;區段下選取&#x200B;**[!UICONTROL Add]**。
 
 ![](../../../images/governance-privacy-security/consent/iab/dataset/add-mixin-profile.png)
 
-出現&#x200B;**[!UICONTROL 添加mixin]**&#x200B;對話框。 在此處，從清單中選擇&#x200B;**[!UICONTROL 隱私詳細資訊]**。 您可選擇使用搜尋列縮小結果，以更輕鬆地找到混音。 選擇混音後，選擇「添加混音」。****
+出現&#x200B;**[!UICONTROL Add mixin]**&#x200B;對話框。 從這裡，從清單中選擇&#x200B;**[!UICONTROL Privacy Details]**。 您可選擇使用搜尋列縮小結果，以更輕鬆地找到混音。 選擇混音後，選擇&#x200B;**[!UICONTROL Add mixin]**。
 
 ![](../../../images/governance-privacy-security/consent/iab/dataset/add-profile-privacy.png)
 
@@ -141,13 +141,13 @@ ht-degree: 0%
 從這裡，重複上述步驟，將下列其他混音新增至架構：
 
 * [!UICONTROL IdentityMap]
-* [!UICONTROL 描述檔的資料擷取區域]
-* [!UICONTROL 人口統計詳細資訊]
-* [!UICONTROL 個人聯絡資訊]
+* [!UICONTROL Data capture region for Profile]
+* [!UICONTROL Demographic Details]
+* [!UICONTROL Personal Contact Details]
 
 ![](../../../images/governance-privacy-security/consent/iab/dataset/profile-all-mixins.png)
 
-如果您正在編輯已啟用在[!DNL Real-time Customer Profile]中使用的現有模式，請選擇&#x200B;**[!UICONTROL 保存]**&#x200B;以確認您的更改，然後跳到[基於您的許可模式](#dataset)建立資料集的部分。 如果要建立新模式，請繼續遵循下面子部分中概述的步驟。
+如果您正在編輯已啟用在[!DNL Real-time Customer Profile]中使用的現有模式，請選擇&#x200B;**[!UICONTROL Save]**&#x200B;以確認您所做的更改，然後跳到[中基於您的同意模式](#dataset)建立資料集的部分。 如果要建立新模式，請繼續遵循下面子部分中概述的步驟。
 
 #### 啟用方案以用於[!DNL Real-time Customer Profile]
 
@@ -159,7 +159,7 @@ ht-degree: 0%
 >
 >有關如何為方案設定主標識欄位的步驟，請參見[方案建立教程](../../../../xdm/tutorials/create-schema-ui.md#identity-field)。
 
-要啟用[!DNL Profile]的架構，請在左側導軌中選擇架構的名稱，以開啟右側導軌中的&#x200B;**[!UICONTROL 架構屬性]**&#x200B;對話框。 在此處，選擇&#x200B;**[!UICONTROL Profile]**&#x200B;切換按鈕。
+要啟用[!DNL Profile]的架構，請在左側導軌中選擇架構的名稱，以開啟右側導軌中的&#x200B;**[!UICONTROL Schema properties]**&#x200B;對話框。 從這裡，選擇&#x200B;**[!UICONTROL Profile]**&#x200B;切換按鈕。
 
 ![](../../../images/governance-privacy-security/consent/iab/dataset/profile-enable-profile.png)
 
@@ -167,21 +167,21 @@ ht-degree: 0%
 
 ![](../../../images/governance-privacy-security/consent/iab/dataset/missing-primary-identity.png)
 
-最後，選擇&#x200B;**[!UICONTROL Save]**&#x200B;以確認您所做的更改。
+最後，選擇&#x200B;**[!UICONTROL Save]**&#x200B;以確認您所做的變更。
 
 ![](../../../images/governance-privacy-security/consent/iab/dataset/profile-save.png)
 
 ### 建立基於時間序列的許可方案{#event-schema}
 
-在&#x200B;**[!UICONTROL 方案]**&#x200B;工作區中，選擇&#x200B;**[!UICONTROL 建立方案]**，然後從下拉式清單中選擇&#x200B;**[!UICONTROL XDM ExperienceEvent]**。
+在&#x200B;**[!UICONTROL Schemas]**&#x200B;工作區中，選擇&#x200B;**[!UICONTROL Create schema]**，然後從下拉式清單中選擇&#x200B;**[!UICONTROL XDM ExperienceEvent]**。
 
 ![](../../../images/governance-privacy-security/consent/iab/dataset/create-schema-event.png)
 
-出現[!DNL Schema Editor]，顯示畫布中的架構結構。 使用右側欄來提供架構的名稱和說明，然後在畫布左側的&#x200B;**[!UICONTROL Mixins]**&#x200B;區段下選擇&#x200B;**[!UICONTROL Add]**。
+出現[!DNL Schema Editor]，顯示畫布中的架構結構。 使用右側欄來提供架構的名稱和說明，然後在畫布左側的&#x200B;**[!UICONTROL Mixins]**&#x200B;區段下選取&#x200B;**[!UICONTROL Add]**。
 
 ![](../../../images/governance-privacy-security/consent/iab/dataset/add-mixin-event.png)
 
-出現&#x200B;**[!UICONTROL 添加mixin]**&#x200B;對話框。 在此處，從清單中選擇&#x200B;**[!UICONTROL 隱私詳細資訊]**。 您可選擇使用搜尋列縮小結果，以更輕鬆地找到混音。 選擇混音後，選擇&#x200B;**[!UICONTROL 添加混音]**。
+出現&#x200B;**[!UICONTROL Add mixin]**&#x200B;對話框。 從這裡，從清單中選擇&#x200B;**[!UICONTROL Privacy Details]**。 您可選擇使用搜尋列縮小結果，以更輕鬆地找到混音。 選擇混音後，選擇&#x200B;**[!UICONTROL Add mixin]**。
 
 ![](../../../images/governance-privacy-security/consent/iab/dataset/add-event-privacy.png)
 
@@ -192,11 +192,11 @@ ht-degree: 0%
 從這裡，重複上述步驟，將下列其他混音新增至架構：
 
 * [!UICONTROL IdentityMap]
-* [!UICONTROL 環境詳細資訊]
-* [!UICONTROL 網頁詳細資訊]
-* [!UICONTROL 實作詳細資料]
+* [!UICONTROL Environment Details]
+* [!UICONTROL Web Details]
+* [!UICONTROL Implementation Details]
 
-添加混音後，通過選擇&#x200B;**[!UICONTROL 保存]**&#x200B;完成。
+添加混音後，通過選擇&#x200B;**[!UICONTROL Save]**&#x200B;完成。
 
 ![](../../../images/governance-privacy-security/consent/iab/dataset/event-all-mixins.png)
 
@@ -204,25 +204,25 @@ ht-degree: 0%
 
 對於上述每個必要的結構描述，您必須建立資料集，以最終收錄客戶的同意資料。 必須為[!DNL Real-time Customer Profile]啟用基於記錄模式的資料集，而基於時間序列模式&#x200B;**的資料集不應**&#x200B;啟用[!DNL Profile]。
 
-首先，在左側導覽中選擇&#x200B;**[!UICONTROL Datasets]**，然後在右上角選擇&#x200B;**[!UICONTROL Create dataset]**。
+若要開始，請在左側導覽中選取&#x200B;**[!UICONTROL Datasets]**，然後在右上角選取&#x200B;**[!UICONTROL Create dataset]**。
 
 ![](../../../images/governance-privacy-security/consent/iab/dataset/dataset-create.png)
 
-在下一頁，選擇&#x200B;**[!UICONTROL 從架構建立資料集]**。
+在下一頁，選擇&#x200B;**[!UICONTROL Create dataset from schema]**。
 
 ![](../../../images/governance-privacy-security/consent/iab/dataset/dataset-create-from-schema.png)
 
-將顯示&#x200B;**[!UICONTROL 從架構]**&#x200B;建立資料集，從&#x200B;**[!UICONTROL 選擇架構]**&#x200B;步驟開始。 在提供的清單中，找出您先前建立的其中一個同意方案。 您可以選擇使用搜尋列來縮小結果範圍，並更輕鬆地尋找結構。 選擇所需方案旁的單選按鈕，然後選擇&#x200B;**[!UICONTROL Next]**&#x200B;繼續。
+將顯示&#x200B;**[!UICONTROL Create dataset from schema]**&#x200B;工作流，從&#x200B;**[!UICONTROL Select schema]**&#x200B;步驟開始。 在提供的清單中，找出您先前建立的其中一個同意方案。 您可以選擇使用搜尋列來縮小結果範圍，並更輕鬆地尋找結構。 選擇所需方案旁的單選按鈕，然後選擇&#x200B;**[!UICONTROL Next]**&#x200B;以繼續。
 
 ![](../../../images/governance-privacy-security/consent/iab/dataset/dataset-select-schema.png)
 
-出現&#x200B;**[!UICONTROL Configure dataset]**&#x200B;步驟。 在選擇&#x200B;**[!UICONTROL 完成]**&#x200B;之前，為資料集提供唯一、可輕鬆識別的名稱和說明。
+出現&#x200B;**[!UICONTROL Configure dataset]**&#x200B;步驟。 在選擇&#x200B;**[!UICONTROL Finish]**&#x200B;之前，請為資料集提供唯一、可輕鬆識別的名稱和說明。
 
 ![](../../../images/governance-privacy-security/consent/iab/dataset/dataset-configure.png)
 
 此時會顯示新建立資料集的詳細資料頁面。 如果資料集是以您的時間序列模式為基礎，則程式已完成。 如果資料集是以您的記錄架構為基礎，則程式的最後步驟是啟用資料集以用於[!DNL Real-time Customer Profile]。
 
-在右側邊欄中，選擇&#x200B;**[!UICONTROL 描述檔]**&#x200B;切換，然後在確認快顯視窗中選擇&#x200B;**[!UICONTROL 啟用]**，以啟用[!DNL Profile]的架構。
+在右側邊欄中，選擇&#x200B;**[!UICONTROL Profile]**&#x200B;切換，然後在確認快顯視窗中選擇&#x200B;**[!UICONTROL Enable]**，以啟用[!DNL Profile]的方案。
 
 ![](../../../images/governance-privacy-security/consent/iab/dataset/dataset-enable-profile.png)
 
