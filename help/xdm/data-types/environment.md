@@ -1,25 +1,25 @@
 ---
-keywords: Experience Platform;home；熱門主題；模式；模式；XDM;fields；模式；環境；資料類型；資料類型；
+keywords: Experience Platform;home；常用主題；模式；模式；XDM;fields；模式；環境；資料類型；資料類型；
 solution: Experience Platform
 title: 環境資料類型
-topic: overview
+topic-legacy: overview
 description: 本文檔概述了環境XDM資料類型。
+exl-id: ec806ee5-ed65-4148-9dbe-e297d9e8cd73
 translation-type: tm+mt
-source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '464'
+source-wordcount: '461'
 ht-degree: 4%
 
 ---
 
+# [!UICONTROL Environment] 資料類型
 
-# [!UICONTROL 環] 境資料類型
-
-[!UICONTROL 環] 境是一種標準的XDM資料類型，它描述了觀察到的事件的周圍環境，具體詳述了網路和軟體版本等過渡資訊。
+[!UICONTROL Environment] 是標準的XDM資料類型，它描述了所觀察事件的周圍環境，具體詳述了諸如網路和軟體版本的過渡資訊。
 
 >[!IMPORTANT]
 >
->所有值都應與Adobe授權的[DeviceAtlas](https://deviceatlas.com)資料庫對齊。
+>所有值都應與[DeviceAtlas](https://deviceatlas.com)資料庫對齊，並由Adobe授權。
 
 <img src="../images/data-types/environment.png" width="400" /><br />
 
