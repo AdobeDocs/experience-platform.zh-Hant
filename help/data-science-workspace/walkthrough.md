@@ -1,26 +1,26 @@
 ---
-keywords: Experience Platform；逐步介紹；Data Science Workspace；熱門主題
+keywords: Experience Platform；逐步介紹；資料科學工作區；熱門主題
 solution: Experience Platform
 title: Data Science Workspace逐步說明
-topic: Walkthrough
-description: 本檔案提供Adobe Experience Platform Data Science Workspace的逐步說明。 尤其是資料科學家將透過的一般工作流程，來解決使用機器學習的問題。
+topic-legacy: Walkthrough
+description: 本檔案提供Adobe Experience Platform資料科學工作區的逐步說明。 尤其是資料科學家將透過的一般工作流程，來解決使用機器學習的問題。
+exl-id: d814846e-52a9-46c6-831a-3399241959f2
 translation-type: tm+mt
-source-git-commit: f6cfd691ed772339c888ac34fcbd535360baa116
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '1716'
+source-wordcount: '1709'
 ht-degree: 0%
 
 ---
 
-
 # [!DNL Data Science Workspace] 漫步
 
-本檔案提供Adobe Experience Platform [!DNL Data Science Workspace]的逐步說明。 本教學課程概述一般資料科學家的工作流程，以及他們如何運用機器學習來解決問題。
+本檔案提供Adobe Experience Platform[!DNL Data Science Workspace]的逐步解說。 本教學課程概述一般資料科學家的工作流程，以及他們如何運用機器學習來解決問題。
 
-## 必要條件
+## 先決條件
 
-- 已註冊的Adobe ID帳戶
-   - Adobe ID帳戶必須已新增至可存取Adobe Experience Platform和[!DNL Data Science Workspace]的組織。
+- 註冊的Adobe ID帳戶
+   - Adobe ID帳戶必須已添加到具有訪問Adobe Experience Platform和[!DNL Data Science Workspace]權限的組織。
 
 ## 零售使用案例
 
@@ -30,7 +30,7 @@ ht-degree: 0%
 
 資料科學家的解決方案是運用零售商提供的豐富歷史資訊，預測未來趨勢並最佳化定價決策。 本逐步介紹使用過去的銷售資料來訓練機器學習模型，並使用模型來預測未來的銷售趨勢。 有了這項功能，您就可以產生深入資訊，協助您進行最佳價格變更。
 
-此概述反映資料科學家在取得資料集並建立模型以預測每週銷售的步驟。 本教學課程涵蓋Adobe Experience Platform [!DNL Data Science Workspace]上「零售銷售筆記型電腦範例」的下列章節：
+此概述反映資料科學家在取得資料集和建立模型以預測每週銷售的步驟。 本教學課程在Adobe Experience Platform[!DNL Data Science Workspace]的「Sample Retail Sales Notebook」（零售銷售筆記本）中涵蓋以下各節：
 
 - [設定](#setup)
 - [探索資料](#exploring-data)
@@ -39,13 +39,13 @@ ht-degree: 0%
 
 ### [!DNL Data Science Workspace]中的筆記型電腦
 
-在Adobe Experience Platform UI中，從&#x200B;**[!UICONTROL Data Science]**&#x200B;標籤中選擇&#x200B;**[!UICONTROL Notebooks]**，將您帶到[!UICONTROL Notebooks]概觀頁面。 在此頁中，選擇[!DNL JupyterLab]頁籤以啟動[!DNL JupyterLab]環境。 [!DNL JupyterLab]的預設著陸頁面是&#x200B;**[!UICONTROL Launcher]**。
+在Adobe Experience PlatformUI中，從&#x200B;**[!UICONTROL Data Science]**&#x200B;標籤中選擇&#x200B;**[!UICONTROL Notebooks]**，將您帶到[!UICONTROL Notebooks]概述頁面。 在此頁中，選擇[!DNL JupyterLab]頁籤以啟動[!DNL JupyterLab]環境。 [!DNL JupyterLab]的預設著陸頁面為&#x200B;**[!UICONTROL Launcher]**。
 
 ![](./images/walkthrough/notebooks.png)
 
 ![](./images/walkthrough/jupyterlab_launcher.png)
 
-本教學課程使用[!DNL JupyterLab Notebooks]中的[!DNL Python] 3來顯示如何存取和探索資料。 在「啟動器」頁面中，提供了示例筆記本。 **[!UICONTROL 零售銷售]**&#x200B;示例筆記型電腦用於以下示例。
+本教學課程使用[!DNL JupyterLab Notebooks]中的[!DNL Python] 3來顯示如何存取和探索資料。 在「啟動器」頁面中，提供了示例筆記本。 **[!UICONTROL Retail Sales]**&#x200B;示例筆記型電腦用於以下示例。
 
 ### 設定 {#setup}
 
@@ -110,7 +110,7 @@ df.describe()
 
 單變數圖是個別變數的圖形。 用於視覺化資料的通用單變數圖形是方框圖和須條圖。
 
-使用您以前的零售資料集，您就可以為45家商店及其每週銷售量產生包裝盒和須條圖。 該出圖使用`seaborn.boxplot`函式生成。
+使用之前的零售資料集，您就可以為45家商店及其每週銷售量產生方塊和須條圖。 該出圖是使用`seaborn.boxplot`函式生成的。
 
 ![](./images/walkthrough/box_whisker.png)
 
@@ -167,7 +167,7 @@ df.describe()
 
 #### 預測每週下週的銷售情況
 
-現在，您想要將之前和未來的每週銷售新增至每個資料集。 您可以通過偏移`weeklySales`來執行此操作。 此外，還計算`weeklySales`差。 這是透過減去前一週的`weeklySales`而完成的。`weeklySales`
+現在，您想要將之前和未來每週銷售額新增至每個資料集。 您可以通過偏移`weeklySales`來執行此操作。 此外，還計算`weeklySales`差。 這是透過減去前一週的`weeklySales`而完成的。`weeklySales`
 
 ![](./images/walkthrough/weekly_past_future.png)
 
@@ -220,4 +220,4 @@ df.describe()
 - 接著，使用功能工程來修改零售資料集。
 - 最後，建立資料模型，並選擇哪個模型在預測未來銷售時表現最佳。
 
-準備好後，請先閱讀[JupyterLab使用指南](./jupyterlab/overview.md)，以快速概觀Adobe Experience Platform Data Science Workspace中的筆記型電腦。 此外，如果您有興趣瞭解模型和方式，請先閱讀[零售銷售模式和dataset](./models-recipes/create-retails-sales-dataset.md)教學課程。 本教學課程可讓您準備後續的Data Science Workspace教學課程，這些教學課程可在Data Science Workspace [教學課程頁面](../tutorials/data-science-workspace.md)中檢視。
+準備好後，請先閱讀[JupyterLab使用手冊](./jupyterlab/overview.md)以快速概述Adobe Experience Platform資料科學工作區中的筆記型電腦。 此外，如果您有興趣瞭解模型和方式，請先閱讀[零售銷售模式和dataset](./models-recipes/create-retails-sales-dataset.md)教學課程。 本教學課程可讓您準備後續的Data Science Workspace教學課程，這些教學課程可在Data Science Workspace [教學課程頁面](../tutorials/data-science-workspace.md)中檢視。
