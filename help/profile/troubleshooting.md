@@ -1,21 +1,21 @@
 ---
-keywords: Experience Platform;Profile；即時客戶配置檔案；故障排除；API
+keywords: Experience Platform；配置檔案；即時客戶配置檔案；故障排除；API
 title: 即時客戶個人檔案疑難排解指南
-topic: guide
+topic-legacy: guide
 type: Documentation
-description: 本檔案提供有關即時客戶個人檔案的常見問題解答，以及使用Adobe Experience Platform處理個人檔案資料時常見錯誤的疑難排解指南。
+description: 本檔案提供有關即時客戶個人檔案的常見問題解答，以及使用Adobe Experience Platform使用個人檔案資料時常見錯誤的疑難排解指南。
+exl-id: 0b340025-093b-41e4-8053-969a8e80e889
 translation-type: tm+mt
-source-git-commit: e6ecc5dac1d09c7906aa7c7e01139aa194ed662b
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '1007'
+source-wordcount: '1003'
 ht-degree: 0%
 
 ---
 
-
 # 即時客戶個人檔案疑難排解指南
 
-本檔案提供即時客戶個人檔案常見問題的解答，以及常見錯誤的疑難排解指南。 有關Adobe Experience Platform中其他服務的相關問題和疑難排解，請參閱[ Experience Platform疑難排解指南](../landing/troubleshooting.md)。
+本檔案提供即時客戶個人檔案常見問題的解答，以及常見錯誤的疑難排解指南。 有關Adobe Experience Platform其他服務的問題和故障排除，請參閱[Experience Platform故障排除指南](../landing/troubleshooting.md)。
 
 透過[!DNL Real-time Customer Profile]，您可以結合來自多個通道（包括線上、離線、CRM和協力廠商）的資料，全面瞭解每個客戶。 這可讓行銷人員跨多個通道為客戶提供協調、一致且相關的體驗。
 
@@ -29,7 +29,7 @@ ht-degree: 0%
 
 和所有平台服務一樣，描述檔要求其資料在體驗資料模型(XDM)架構下以語義結構化。 而此方案必須定義&#x200B;**主標識**，並啟用該標識以便在配置檔案中使用。
 
-如果您不熟悉XDM，請從[XDM概觀](../xdm/home.md)開始瞭解詳細內容。 接下來，請參閱XDM使用手冊，瞭解如何[設定標識欄位](../xdm/tutorials/create-schema-ui.md#identity-field)和[啟用配置檔案模式的步驟。](../xdm/tutorials/create-schema-ui.md#profile)
+如果您不熟悉XDM，請從[XDM概觀](../xdm/home.md)開始瞭解詳細內容。 接下來，請參閱XDM使用手冊，瞭解如何[設定身份欄位](../xdm/tutorials/create-schema-ui.md#identity-field)和[啟用配置檔案](../xdm/tutorials/create-schema-ui.md#profile)模式的步驟。
 
 ### 描述檔資料儲存在何處？
 
@@ -49,13 +49,13 @@ ht-degree: 0%
 
 如果您知道要存取的描述檔實體的ID，可使用描述檔API中的`/entities`（描述檔存取）端點來尋找這些實體。 如需詳細資訊，請參閱開發人員指南中[entities](./api/entities.md)一節。
 
-您也可以使用Adobe Experience Platform Segmentation Service API來存取符合區段會籍資格之客戶的個人個人檔案。 如需詳細資訊，請參閱[分段服務概觀](../segmentation/home.md)。
+您也可以使用Adobe Experience Platform區段服務API來存取符合區段會籍資格之客戶的個人個人檔案。 如需詳細資訊，請參閱[分段服務概觀](../segmentation/home.md)。
 
 #### 使用UI
 
-在Experience Platform UI中，**[!UICONTROL Profiles]**&#x200B;工作區中的&#x200B;**[!UICONTROL Browse]**&#x200B;標籤可讓您檢視描述檔總數並依其識別值搜尋個別描述檔。 如需詳細資訊，請參閱[Profile使用指南](./ui/user-guide.md)。
+在Experience PlatformUI中，**[!UICONTROL Profiles]**&#x200B;工作區中的&#x200B;**[!UICONTROL Browse]**&#x200B;標籤允許您查看配置檔案總數，並按其標識值搜索單個配置檔案。 如需詳細資訊，請參閱[Profile使用指南](./ui/user-guide.md)。
 
-您也可以在&#x200B;**[!UICONTROL 區段]**&#x200B;工作區的&#x200B;**[!UICONTROL 瀏覽]**&#x200B;標籤下檢視區段清單。 選取區段後，會顯示符合該區段的描述檔範例。 然後，您可以選取其中任何列出的描述檔來檢視其詳細資訊。 如需詳細資訊，請參閱[區段UI概觀](../segmentation/ui/overview.md)。
+您也可以在&#x200B;**[!UICONTROL Segments]**&#x200B;工作區的&#x200B;**[!UICONTROL Browse]**&#x200B;標籤下檢視區段清單。 選取區段後，會顯示符合該區段的描述檔範例。 然後，您可以選取其中任何列出的描述檔來檢視其詳細資訊。 如需詳細資訊，請參閱[區段UI概觀](../segmentation/ui/overview.md)。
 
 ## 錯誤代碼
 
@@ -147,11 +147,11 @@ ht-degree: 0%
 }
 ```
 
-傳送具有無效內容類型標題的POST或PUT請求時，會發生此錯誤。 再次檢查您是否為您使用的端點提供有效的「內容類型」值。
+傳送具有無效「內容類型」標題的POST或PUT請求時，會發生此錯誤。 再次檢查您是否為您使用的端點提供有效的「內容類型」值。
 
 大部分描述檔端點會接受「應用程式/json」做為其「內容類型」標題，但有下列例外：
 
-| 端點 | 內容類型 |
+| 端點 | Content-Type |
 | --- | --- |
 | `/config/projections` | application/vnd.adobe.platform.projectionConfig+json;version=1 |
 | `/config/destinations` | application/vnd.adobe.platform.projectionDestination+json;version=1 |
