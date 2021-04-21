@@ -1,22 +1,22 @@
 ---
-keywords: Experience Platform;home；熱門主題；API;XDM;XDM;XDM系統；體驗資料模型；資料模型；資料模型；模式註冊；模式註冊；模式；模式；模式；關係；關係描述符；關係描述符；參考標識；參考標識；
+keywords: Experience Platform;home；熱門主題；API;XDM;XDM;XDM系統；體驗資料模型；體驗資料模型；資料模型；資料模型；模式註冊；模式；模式；模式；模式；關係；關係描述符；關係描述符；參考標識；參考標識；
 solution: Experience Platform
 title: 使用方案註冊表API定義兩個方案之間的關係
 description: 本文檔提供了一個教程，用於定義由組織使用方案註冊表API定義的兩個方案之間的一對一關係。
-topic: tutorial
+topic-legacy: tutorial
 type: Tutorial
+exl-id: ef9910b5-2777-4d8b-a6fe-aee51d809ad5
 translation-type: tm+mt
-source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '1337'
 ht-degree: 1%
 
 ---
 
-
 # 使用[!DNL Schema Registry] API定義兩個結構之間的關係
 
-Adobe Experience Platform的重要部分，在於能夠跨不同通道瞭解客戶之間的關係以及客戶與品牌之間的互動。 在[!DNL Experience Data Model](XDM)結構中定義這些關係可讓您獲得客戶資料的複雜見解。
+瞭解客戶之間的關係以及客戶與品牌之間跨不同通道的互動是Adobe Experience Platform的重要組成部分。 在[!DNL Experience Data Model](XDM)結構中定義這些關係可讓您獲得客戶資料的複雜見解。
 
 雖然架構關係可以通過使用union架構和[!DNL Real-time Customer Profile]來推斷，但這僅適用於共用相同類的架構。 要在屬於不同類的兩個方案之間建立關係，必須將專用的關係欄位添加到源方案中，該源方案引用目標方案的標識。
 
@@ -51,7 +51,7 @@ Adobe Experience Platform的重要部分，在於能夠跨不同通道瞭解客�
 GET /tenant/schemas
 ```
 
-**請求**
+**要求**
 
 ```shell
 curl -X GET \
@@ -125,7 +125,7 @@ curl -X GET \
 
 ### 建立新的混音
 
-為了將新欄位添加到方案，必須首先在混合中定義該欄位。 您可以通過向`/tenant/mixins`端點發出POST請求來建立新混音。
+為了將新欄位添加到方案，必須首先在混合中定義該欄位。 您可以向`/tenant/mixins`端點發出POST請求，以建立新混音。
 
 **API格式**
 
@@ -133,7 +133,7 @@ curl -X GET \
 POST /tenant/mixins
 ```
 
-**請求**
+**要求**
 
 以下請求會建立新的混音，在其所新增至之任何架構的`_{TENANT_ID}`名稱空間下新增`favoriteHotel`欄位。
 
@@ -247,7 +247,7 @@ PATCH /tenant/schemas/{SCHEMA_ID}
 | --- | --- |
 | `{SCHEMA_ID}` | 源架構的URL編碼`$id` URI或`meta:altId`。 |
 
-**請求**
+**要求**
 
 以下請求將&quot;[!DNL Favorite Hotel]&quot; mixin添加到&quot;[!DNL Loyalty Members]&quot;模式。
 
@@ -349,7 +349,7 @@ curl -X PATCH \
 POST /tenant/descriptors
 ```
 
-**請求**
+**要求**
 
 以下請求為目標方案&quot;[!DNL Hotels]&quot;中的`hotelId`欄位建立引用描述符。
 
@@ -404,7 +404,7 @@ curl -X POST \
 POST /tenant/descriptors
 ```
 
-**請求**
+**要求**
 
 以下請求建立新的關係描述符，其中&quot;[!DNL Loyalty Members]&quot;作為源模式，&quot;[!DNL Legacy Loyalty Members]&quot;作為目標模式。
 
