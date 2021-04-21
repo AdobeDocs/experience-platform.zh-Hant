@@ -2,16 +2,16 @@
 keywords: Experience Platform;home；熱門主題；沙盒；沙盒
 solution: Experience Platform
 title: 在API中建立沙盒
-topic: developer guide
+topic-legacy: developer guide
 description: 您可以向「/沙盒」端點提出POST請求，以建立新沙盒。
+exl-id: 676c5de8-2c3a-4612-9dd8-93e01cafe90e
 translation-type: tm+mt
-source-git-commit: 62ce5ac92d03a6e85589fc92e8d953f7fc1d8f31
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '166'
+source-wordcount: '164'
 ht-degree: 2%
 
 ---
-
 
 # 在API中建立沙盒
 
@@ -23,7 +23,7 @@ ht-degree: 2%
 POST /sandboxes
 ```
 
-**請求**
+**要求**
 
 下列請求會建立名為&quot;dev-3&quot;的新開發沙盒。
 
