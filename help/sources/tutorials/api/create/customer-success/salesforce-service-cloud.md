@@ -2,17 +2,17 @@
 keywords: Experience Platform；首頁；熱門主題；ssc;SSC;Salesforce Service Cloud;salesforce Service Cloud
 solution: Experience Platform
 title: 使用流程服務API建立Salesforce Service Cloud來源連線
-topic: overview
+topic-legacy: overview
 type: Tutorial
 description: 瞭解如何使用Flow Service API將Adobe Experience Platform連接至Salesforce Service Cloud。
+exl-id: ed133bca-8e88-4c85-ae52-c3269b6bf3c9
 translation-type: tm+mt
-source-git-commit: a0b016e8adc519bc79701f9fd850b6ddf7d46127
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '580'
+source-wordcount: '578'
 ht-degree: 2%
 
 ---
-
 
 # 使用[!DNL Flow Service] API建立[!DNL Salesforce Service Cloud]來源連線
 
@@ -71,7 +71,7 @@ ht-degree: 2%
 POST /connections
 ```
 
-**請求**
+**要求**
 
 要建立SSC連接，必須在POST請求中提供其唯一連接規範ID。 SSC的連接規範ID為`b66ab34-8619-49cb-96d1-39b37ede86ea`。
 
