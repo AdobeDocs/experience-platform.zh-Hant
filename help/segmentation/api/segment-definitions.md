@@ -2,16 +2,16 @@
 keywords: Experience Platform;home；熱門主題；分段；分段；分段服務；分段定義；分段定義；api;API;
 solution: Experience Platform
 title: 區段定義API端點
-topic: developer guide
+topic-legacy: developer guide
 description: Adobe Experience Platform區段服務API中的區段定義端點可讓您以程式設計方式管理組織的區段定義。
+exl-id: e7811b96-32bf-4b28-9abb-74c17a71ffab
 translation-type: tm+mt
-source-git-commit: 4e4672f4101f92f035985d187512d917890aab6b
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '1174'
+source-wordcount: '1172'
 ht-degree: 3%
 
 ---
-
 
 # 區段定義端點
 
@@ -46,7 +46,7 @@ GET /segment/definitions?{QUERY_PARAMETERS}
 | `sort` | 指定要按哪個欄位對結果排序。 以下列格式編寫：`[attributeName]:[desc|asc]`。 | `sort=updateTime:desc` |
 | `evaluationInfo.continuous.enabled` | 指定區段定義是否啟用串流。 | `evaluationInfo.continuous.enabled=true` |
 
-**請求**
+**要求**
 
 下列請求將擷取IMS組織中張貼的最後兩個區段定義。
 
@@ -162,7 +162,7 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/definitions?limit=2 
 POST /segment/definitions
 ```
 
-**請求**
+**要求**
 
 ```shell
 curl -X POST https://platform.adobe.io/data/core/ups/segment/definitions
@@ -269,7 +269,7 @@ GET /segment/definitions/{SEGMENT_ID}
 | --------- | ----------- |
 | `{SEGMENT_ID}` | 要檢索的段定義的`id`值。 |
 
-**請求**
+**要求**
 
 ```shell
 curl -X GET https://platform.adobe.io/data/core/ups/segment/definitions/4afe34ae-8c98-4513-8a1d-67ccaa54bc05 \
@@ -347,7 +347,7 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/definitions/4afe34ae
 POST /segment/definitions/bulk-get
 ```
 
-**請求**
+**要求**
 
 ```shell
 curl -X POST https://platform.adobe.io/data/core/ups/segment/definitions/bulk-get \
@@ -484,7 +484,7 @@ DELETE /segment/definitions/{SEGMENT_ID}
 | --------- | ----------- |
 | `{SEGMENT_ID}` | 要刪除的區段定義的`id`值。 |
 
-**請求**
+**要求**
 
 ```shell
 curl -X DELETE https://platform.adobe.io/data/core/ups/segment/definitions/4afe34ae-8c98-4513-8a1d-67ccaa54bc05 \
@@ -512,7 +512,7 @@ PATCH /segment/definitions/{SEGMENT_ID}
 | --------- | ----------- |
 | `{SEGMENT_ID}` | 您要更新的區段定義的`id`值。 |
 
-**請求**
+**要求**
 
 下列要求會將工作地址國家／地區從美國更新至加拿大。
 
@@ -601,7 +601,7 @@ curl -X PATCH https://platform.adobe.io/data/core/ups/segment/definitions/4afe34
 POST /segment/conversion
 ```
 
-**請求**
+**要求**
 
 下列請求會將區段定義的格式從`pql/text`變更為`pql/json`。
 
