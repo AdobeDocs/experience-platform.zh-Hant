@@ -1,27 +1,27 @@
 ---
-keywords: Experience Platform; home；熱門主題；批處理提取；部分提取；部分提取；檢索錯誤；檢索錯誤；部分批處理提取；部分；提取；提取；錯誤診斷；檢索錯誤診斷；獲取錯誤診斷；獲取錯誤；獲取錯誤；檢索錯誤；
+keywords: Experience Platform；主題；熱門主題；批處理；批處理；部分提取；部分提取；檢索錯誤；檢索錯誤；部分批處理；部分批處理；提取；部分；提取；錯誤診斷；檢索錯誤診斷；獲取錯誤；獲取錯誤；檢索錯誤；
 solution: Experience Platform
 title: 檢索資料提取錯誤診斷
-topic: overview
+topic-legacy: overview
 description: 本文檔提供有關監控批處理提取、管理部分批處理提取錯誤的資訊，以及有關部分批處理提取類型的參考。
+exl-id: b885fb00-b66d-453b-80b7-8821117c2041
 translation-type: tm+mt
-source-git-commit: 089a4d517476b614521d1db4718966e3ebb13064
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '936'
 ht-degree: 2%
 
 ---
 
-
 # 檢索資料攝取錯誤診斷
 
-Adobe Experience Platform提供兩種上傳和接收資料的方法。 您可以使用批次擷取功能(可讓您使用各種檔案類型（例如CSV）插入資料)或串流擷取功能（可讓您使用串流端點將資料即時插入[!DNL Platform]）。
+Adobe Experience Platform提供兩種上傳和收錄資料的方法。 您可以使用批次擷取功能(可讓您使用各種檔案類型（例如CSV）插入資料)或串流擷取功能（可讓您使用串流端點將資料即時插入[!DNL Platform]）。
 
 本文檔提供有關監控批處理提取、管理部分批處理提取錯誤的資訊，以及有關部分批處理提取類型的參考。
 
 ## 快速入門
 
-本指南需要有效瞭解Adobe Experience Platform的下列元件：
+本指南需要對Adobe Experience Platform的下列組成部分有切實的瞭解：
 
 - [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md):組織客戶體驗資 [!DNL Experience Platform] 料的標準化架構。
 - [[!DNL Adobe Experience Platform Data Ingestion]](../home.md):可傳送資料的方法 [!DNL Experience Platform]。
@@ -48,7 +48,7 @@ Adobe Experience Platform提供兩種上傳和接收資料的方法。 您可以
 
 ## 下載錯誤診斷{#download-diagnostics}
 
-Adobe Experience Platform可讓使用者下載輸入檔案的錯誤診斷程式。 診斷程式將在[!DNL Platform]內保留30天。
+Adobe Experience Platform允許用戶下載輸入檔案的錯誤診斷程式。 診斷程式將在[!DNL Platform]內保留30天。
 
 ### 列出輸入檔案{#list-files}
 
@@ -64,7 +64,7 @@ GET /batches/{BATCH_ID}/meta?path=input_files
 | -------- | ----------- |
 | `{BATCH_ID}` | 您正在查找的批的ID。 |
 
-**請求**
+**要求**
 
 ```shell
 curl -X GET https://platform.adobe.io/data/foundation/export/batches/af838510-2233-11ea-acf0-f3edfcded2d2/meta?path=input_files \
@@ -122,7 +122,7 @@ GET /batches/{BATCH_ID}/meta?path=input_files/{FILE}
 | `{BATCH_ID}` | 您正在查找的批的ID。 |
 | `{FILE}` | 您正在訪問的檔案的名稱。 |
 
-**請求**
+**要求**
 
 ```shell
 curl -X GET https://platform.adobe.io/data/foundation/export/batches/af838510-2233-11ea-acf0-f3edfcded2d2/meta?path=input_files/fileMetaData1.json \
@@ -159,7 +159,7 @@ GET /catalog/batches/{BATCH_ID}
 | --------- | ----------- |
 | `{BATCH_ID}` | 要檢查狀態的批的`id`值。 |
 
-**請求**
+**要求**
 
 ```shell
 curl -X GET https://platform.adobe.io/data/foundation/catalog/batches/af838510-2233-11ea-acf0-f3edfcded2d2 \
@@ -331,7 +331,7 @@ GET /export/batches/{BATCH_ID}/meta?path=row_errors
 | --------- | ----------- |
 | `{BATCH_ID}` | 從中檢索錯誤資訊的批的`id`值。 |
 
-**請求**
+**要求**
 
 ```shell
 curl -X GET https://platform.adobe.io/data/foundation/export/batches/01EFZ7W203PEKSAMVJC3X99VHQ/meta?path=row_errors \
