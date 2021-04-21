@@ -2,16 +2,16 @@
 keywords: Experience Platform；首頁；熱門主題；Azure檔案儲存；azure檔案儲存
 solution: Experience Platform
 title: Azure檔案儲存來源連接器概觀
-topic: overview
+topic-legacy: overview
 description: 瞭解如何使用API或使用者介面將Azure檔案儲存空間連接至Adobe Experience Platform。
+exl-id: 0a5e9df6-9760-4eeb-86d5-d92d77df3d2b
 translation-type: tm+mt
-source-git-commit: 7fc99214272d2ce743b3666826c66f5d65e4d2ca
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '470'
+source-wordcount: '469'
 ht-degree: 0%
 
 ---
-
 
 # （測試版）Azure檔案儲存連接器
 
