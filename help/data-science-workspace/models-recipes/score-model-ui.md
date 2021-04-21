@@ -2,17 +2,17 @@
 keywords: Experience Platform；對模型評分；資料科學工作區；熱門主題；ui；評分運行；評分結果
 solution: Experience Platform
 title: 在資料科學工作區UI中為模型評分
-topic: tutorial
+topic-legacy: tutorial
 type: Tutorial
-description: '在Adobe Experience Platform資料科學工作區中，可通過將輸入資料輸入到現有的訓練模型中來獲得評分。 然後，將計分結果儲存並作為新批在指定的輸出資料集中查看。 '
+description: 在Adobe Experience Platform資料科學工作區中，可通過將輸入資料輸入到現有的訓練模型中來獲得評分。 然後，將計分結果儲存並作為新批在指定的輸出資料集中查看。
+exl-id: 00d6a872-d71a-47f4-8625-92621d4eed56
 translation-type: tm+mt
-source-git-commit: 7feda18351061600b05dc7be8afbbfb9a0fa7ec1
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '621'
+source-wordcount: '619'
 ht-degree: 0%
 
 ---
-
 
 # 在資料科學工作區UI中為模型評分
 
