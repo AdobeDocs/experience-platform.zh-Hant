@@ -2,17 +2,17 @@
 keywords: Experience Platform;home；熱門主題；流服務；更新帳戶
 solution: Experience Platform
 title: 使用流程服務API更新帳戶
-topic: overview
+topic-legacy: overview
 type: Tutorial
 description: 本教學課程涵蓋使用Flow Service API更新帳戶詳細資訊和認證的步驟。
+exl-id: a93385fd-ed36-457f-8882-41e37f6f209d
 translation-type: tm+mt
-source-git-commit: 37be5f5ffa4640d7d4442a24cc257069237f15cb
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '689'
+source-wordcount: '687'
 ht-degree: 2%
 
 ---
-
 
 # 使用流程服務API更新帳戶
 
@@ -65,7 +65,7 @@ GET /connections/{CONNECTION_ID}
 | --------- | ----------- |
 | `{CONNECTION_ID}` | 要檢索的連接的唯一`id`值。 |
 
-**請求**
+**要求**
 
 下列請求會擷取您連線的相關資訊。
 
@@ -134,7 +134,7 @@ PATCH /connections/{CONNECTION_ID}
 | --------- | ----------- |
 | `{CONNECTION_ID}` | 要更新的連接的唯一`id`值。 |
 
-**請求**
+**要求**
 
 以下請求提供新的名稱和說明，以及一組新的認證，以更新您的連線。
 
