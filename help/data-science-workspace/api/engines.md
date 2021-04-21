@@ -1,17 +1,17 @@
 ---
-keywords: Experience Platform；開發人員指南；端點；Data Science Workspace；熱門主題；引擎；sensei機器學習api
+keywords: Experience Platform；開發人員指南；端點；資料科學工作區；熱門主題；引擎；sensei機器學習api
 solution: Experience Platform
 title: 引擎API端點
-topic: Developer guide
+topic-legacy: Developer guide
 description: 引擎是資料科學工作區中機器學習模型的基礎。 它們包含可解決特定問題的機器學習演算法、可執行特徵工程的特徵管線，或兩者皆可。
+exl-id: 7c670abd-636c-47d8-bd8c-5ce0965ce82f
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '1165'
 ht-degree: 3%
 
 ---
-
 
 # 引擎端點
 
@@ -23,7 +23,7 @@ ht-degree: 3%
 >
 >如果您沒有Docker URL，請造訪[將來源檔案封裝至recipe](../models-recipes/package-source-files-recipe.md)教學課程，以取得建立Docker主機URL的逐步逐步說明。
 
-您的Docker註冊表憑證是上傳封裝的Recipe檔案（包括您的Docker主機URL、使用者名稱和密碼）的必要條件。 您可以執行下列GET請求來查閱此資訊：
+您的Docker註冊表憑證是上傳封裝的Recipe檔案（包括您的Docker主機URL、使用者名稱和密碼）的必要條件。 您可以執行下列GET要求來查閱此資訊：
 
 **API格式**
 
@@ -31,7 +31,7 @@ ht-degree: 3%
 GET /engines/dockerRegistry
 ```
 
-**請求**
+**要求**
 
 ```shell
 curl -X GET https://platform.adobe.io/data/sensei/engines/dockerRegistry \
@@ -59,7 +59,7 @@ curl -X GET https://platform.adobe.io/data/sensei/engines/dockerRegistry \
 
 ## 使用Docker URL {#docker-image}建立引擎
 
-您可以執行POST請求，同時提供中繼資料和Docker URL，以多部分表單引用Docker影像，以建立引擎。
+您可以建立引擎，方法是在提供中繼資料和參考多部分表單中Docker影像的Docker URL時，執行POST請求。
 
 **API格式**
 
@@ -138,8 +138,8 @@ curl -X POST \
 | `name` | 引擎的所需名稱。 與此引擎對應的配方將繼承此值，並以配方名稱顯示在UI中。 |
 | `description` | 引擎的選用說明。 與此引擎對應的方式將繼承此值，並以方式說明的形式顯示在UI中。 此為必要屬性。如果您不想提供說明，請將其值設為空字串。 |
 | `type` | 引擎的執行類型。 此值與Docker映像所基於的語言相對應。 此值可設為Spark或PySpark。 |
-| `mlLibrary` | 建立PySpark和Scala配方引擎時所需的欄位。 此欄位必須設定為`databricks-spark`。 |
-| `artifacts.default.image.location` | Docker映像的位置。 僅支援Azure ACR或Public（未驗證）Dockerhub。 |
+| `mlLibrary` | 建立PySpark和Scala配方的引擎時所需的欄位。 此欄位必須設定為`databricks-spark`。 |
+| `artifacts.default.image.location` | Docker映像的位置。 僅支ACR援Azure或Public（未驗證）Dockerhub。 |
 | `artifacts.default.image.executionType` | 引擎的執行類型。 此值與Docker映像所基於的語言相對應。 這可以是「Spark」或「PySpark」。 |
 
 **回應**
@@ -173,7 +173,7 @@ curl -X POST \
 
 ## 使用Docker URL {#feature-pipeline-docker}建立功能管線引擎
 
-您可以通過執行POST請求來建立功能管線引擎，同時提供其元資料和引用Docker影像的Docker URL。
+您可以執行POST請求，同時提供元資料和引用Docker影像的Docker URL，以建立功能管線引擎。
 
 **API格式**
 
@@ -181,7 +181,7 @@ curl -X POST \
 POST /engines
 ```
 
-**請求**
+**要求**
 
 ```shell
 curl -X POST \
@@ -219,7 +219,7 @@ curl -X POST \
 | `name` | 特徵管線引擎的所需名稱。 與此引擎對應的配方將繼承此值，並以配方名稱顯示在UI中。 |
 | `description` | 引擎的選用說明。 與此引擎對應的方式將繼承此值，並以方式說明的形式顯示在UI中。 此為必要屬性。如果您不想提供說明，請將其值設為空字串。 |
 | `mlLibrary` | 建立PySpark和Scala配方引擎時所需的欄位。 此欄位必須設定為`databricks-spark`。 |
-| `artifacts.default.image.location` | Docker映像的位置。 僅支援Azure ACR或Public（未驗證）Dockerhub。 |
+| `artifacts.default.image.location` | Docker映像的位置。 僅支ACR援Azure或Public（未驗證）Dockerhub。 |
 | `artifacts.default.image.executionType` | 引擎的執行類型。 此值與Docker映像所基於的語言相對應。 這可以是「Spark」或「PySpark」。 |
 | `artifacts.default.image.packagingType` | 引擎的封裝類型。 此值應設為`docker`。 |
 | `artifacts.default.defaultMLInstanceConfigs` | 您的`pipeline.json`配置檔案參數。 |
@@ -265,7 +265,7 @@ GET /engines?parameter_1=value_1
 GET /engines?parameter_1=value_1&parameter_2=value_2
 ```
 
-**請求**
+**要求**
 
 ```shell
 curl -X GET \
@@ -330,7 +330,7 @@ curl -X GET \
 
 ### 檢索特定引擎{#retrieve-specific}
 
-您可以執行GET請求，在請求路徑中包含所需引擎的ID，以擷取特定引擎的詳細資訊。
+您可以執行請求，將所需引擎的ID包含在請求路徑中，以擷取特定引擎的詳細資訊。
 
 **API格式**
 
@@ -342,7 +342,7 @@ GET /engines/{ENGINE_ID}
 | --- | --- |
 | `{ENGINE_ID}` | 現有引擎的ID。 |
 
-**請求**
+**要求**
 
 ```shell
 curl -X GET \
@@ -388,7 +388,7 @@ curl -X GET \
 
 >[!NOTE]
 >
->為確保此PUT請求成功，建議您先執行GET請求，以[依ID](#retrieve-specific)擷取引擎。 然後，修改並更新傳回的JSON物件，並套用已修改的JSON物件的完整內容作為PUT要求的裝載。
+>為確保此PUT請求成功，建議您先執行GET請求，以按ID](#retrieve-specific)擷取引擎。 [然後，修改並更新傳回的JSON物件，並套用已修改的JSON物件作為PUT要求的裝載。
 
 下列範例API呼叫會在最初具有這些屬性時更新引擎的名稱和說明：
 
@@ -419,7 +419,7 @@ PUT /engines/{ENGINE_ID}
 | --- | --- |
 | `{ENGINE_ID}` | 現有引擎的ID。 |
 
-**請求**
+**要求**
 
 ```shell
 curl -X PUT \
@@ -475,7 +475,7 @@ curl -X PUT \
 
 ## 刪除引擎
 
-您可以執行DELETE請求，同時在請求路徑中指定目標引擎的ID，以刪除引擎。 刪除引擎將級聯刪除引用該引擎的所有MLI實例，包括屬於這些MLI實例的任何實驗和實驗運行。
+您可以在執行DELETE請求時，在請求路徑中指定目標引擎的ID，以刪除引擎。 刪除引擎將級聯刪除引用該引擎的所有MLI實例，包括屬於這些MLI實例的任何實驗和實驗運行。
 
 **API格式**
 
@@ -487,7 +487,7 @@ DELETE /engines/{ENGINE_ID}
 | --- | --- |
 | `{ENGINE_ID}` | 現有引擎的ID。 |
 
-**請求**
+**要求**
 
 ```shell
 curl -X DELETE \
