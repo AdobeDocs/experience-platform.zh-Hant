@@ -1,12 +1,11 @@
 ---
-product: experience-platform
 audience: user
 user-guide-title: Adobe Experience Platform Segmentation Service
 breadcrumb-title: 分段服務指南
 user-guide-description: 從您的即時客戶設定檔資料建立區段並產生對象。
-feature: Segments
+feature: 區段
 translation-type: tm+mt
-source-git-commit: 5839ab36a7d8f992e92c7f9eff8c58459c4c3260
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '162'
 ht-degree: 21%
@@ -30,7 +29,7 @@ ht-degree: 21%
    - [區段搜尋](api/segment-search.md)
    - [串流區段](api/streaming-segmentation.md)
 - 區段UI {#ui}
-   - [概述](ui/overview.md)
+   - [概覽](ui/overview.md)
    - [區段控制面板](ui/segment-dashboard.md)
    - [區段產生器](ui/segment-builder.md)
    - [邊緣分割](ui/edge-segmentation.md)
@@ -40,7 +39,7 @@ ht-degree: 21%
 - [支援退出](honoring-opt-outs.md)
 - [多實體分段](multi-entity-segmentation.md)
 - 描述檔查詢語言{#pql}
-   - [概述](pql/overview.md)
+   - [概覽](pql/overview.md)
    - [布爾函式](pql/boolean-functions.md)
    - [比較函式](pql/comparison-functions.md)
    - [陣列、清單和設定函式](pql/array-functions.md)
