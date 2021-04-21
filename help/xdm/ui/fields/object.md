@@ -1,27 +1,27 @@
 ---
-keywords: Experience Platform;home;popular topics;api;API;XDM;XDM系統；experience資料模型；資料模型；ui;workspace;object;field;
+keywords: Experience Platform;home；熱門主題；api;API;XDM;XDM系統；體驗資料模型；ui;workspace;object;field;
 solution: Experience Platform
 title: 在UI中定義物件欄位
-description: 瞭解如何在Experience Platform使用者介面中定義物件類型欄位。
-topic: user guide
+description: 瞭解如何在Experience Platform用戶介面中定義對象類型欄位。
+topic-legacy: user guide
+exl-id: 5b7b3cf0-7f11-4e15-af87-09127f4423a5
 translation-type: tm+mt
-source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '306'
+source-wordcount: '301'
 ht-degree: 0%
 
 ---
 
-
 # 在UI中定義物件欄位
 
-Adobe Experience Platform可讓您完全自訂自訂Experience Data Model(XDM)類別、混合和資料類型的結構。 為了在自訂XDM資源中組織和巢狀內嵌相關欄位，您可以定義物件類型欄位，其中可包含其他子欄位。
+Adobe Experience Platform可讓您完全自訂自訂體驗資料模型(XDM)類別、混合和資料類型的結構。 為了在自訂XDM資源中組織和巢狀內嵌相關欄位，您可以定義物件類型欄位，其中可包含其他子欄位。
 
-當[在Adobe Experience Platform使用者介面中定義新欄位](./overview.md#define)時，請使用&#x200B;**[!UICONTROL Type]**&#x200B;下拉式清單，並從清單中選取「[!UICONTROL 物件]」。
+當[在Adobe Experience Platform用戶介面中定義新欄位](./overview.md#define)時，使用&#x200B;**[!UICONTROL Type]**&#x200B;下拉式清單並從清單中選擇&quot;[!UICONTROL Object]&quot;。
 
 ![](../../images/ui/fields/special/object.png)
 
-選擇&#x200B;**[!UICONTROL Apply]**&#x200B;將對象添加到模式。 畫布會更新，以顯示套用[!UICONTROL Object]資料類型的新欄位，包括編輯和新增子欄位至物件的控制項。
+選擇&#x200B;**[!UICONTROL Apply]**&#x200B;將對象添加到方案。 畫布會更新，顯示已套用[!UICONTROL Object]資料類型的新欄位，包括編輯和新增子欄位至物件的控制項。
 
 ![](../../images/ui/fields/special/object-applied.png)
 
