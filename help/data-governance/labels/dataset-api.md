@@ -1,21 +1,21 @@
 ---
-keywords: Experience Platform;home;popular topics;dataset api;manage data usage;data usage api
+keywords: Experience Platform;home；熱門主題；資料集api；管理資料使用；資料使用api
 solution: Experience Platform
 title: '使用API管理資料集的資料使用標籤 '
-topic: developer guide
-description: 資料集服務API可讓您套用和編輯資料集的使用標籤。 它是Adobe Experience Platform資料目錄功能的一部分，但與管理資料集中繼資料的Catalog Service API不同。
+topic-legacy: developer guide
+description: 資料集服務API可讓您套用和編輯資料集的使用標籤。 它是Adobe Experience Platform資料目錄功能的一部分，但與管理資料集元資料的目錄服務API不同。
+exl-id: 24a8d870-eb81-4255-8e47-09ae7ad7a721
 translation-type: tm+mt
-source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '961'
 ht-degree: 2%
 
 ---
 
-
 # 使用API管理資料集的資料使用標籤
 
-[[!DNL Dataset Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dataset-service.yaml)允許您應用和編輯資料集的使用標籤。 它是Adobe Experience Platform資料目錄功能的一部分，但與管理資料集中繼資料的[!DNL Catalog Service] API不同。
+[[!DNL Dataset Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dataset-service.yaml)允許您應用和編輯資料集的使用標籤。 它是Adobe Experience Platform資料目錄功能的一部分，但與管理資料集元資料的[!DNL Catalog Service] API不同。
 
 本文檔介紹如何使用[!DNL Dataset Service API]管理資料集和欄位的標籤。 如需如何使用API呼叫自行管理資料使用標籤的步驟，請參閱[!DNL Policy Service API]的[標籤端點指南](../api/labels.md)。
 
@@ -27,7 +27,7 @@ ht-degree: 2%
 
 ## 查找資料集{#look-up}的標籤
 
-您可以對[!DNL Dataset Service] API提出GET請求，以尋找已套用至現有資料集的資料使用標籤。
+您可以向[!DNL Dataset Service] API提出GET請求，以查找已應用到現有資料集的資料使用標籤。
 
 **API格式**
 
@@ -39,7 +39,7 @@ GET /datasets/{DATASET_ID}/labels
 | --- | --- |
 | `{DATASET_ID}` | 您要尋找其標籤的資料集的唯一`id`值。 |
 
-**請求**
+**要求**
 
 ```shell
 curl -X GET \
@@ -80,7 +80,7 @@ curl -X GET \
 
 ## 將標籤套用至資料集{#apply}
 
-您可以在POST或PUT請求的裝載中提供標籤給[!DNL Dataset Service] API，為資料集建立一組標籤。 使用其中一種方法會覆寫任何現有的標籤，並以裝載中提供的標籤來取代標籤。
+您可以在POST或PUT請求的裝載中提供標籤給[!DNL Dataset Service] API，為資料集建立標籤集。 使用其中一種方法會覆寫任何現有的標籤，並以裝載中提供的標籤來取代標籤。
 
 **API格式**
 
@@ -93,9 +93,9 @@ PUT /datasets/{DATASET_ID}/labels
 | --- | --- |
 | `{DATASET_ID}` | 您正在為其建立標籤的資料集的唯一`id`值。 |
 
-**請求**
+**要求**
 
-下列PUT請求會更新資料集的現有標籤以及該資料集內的特定欄位。 裝載中提供的欄位與POST要求所需的欄位相同。
+下列PUT請求會更新資料集的現有標籤，以及該資料集內的特定欄位。 裝載中提供的欄位與POST要求所需的欄位相同。
 
 >[!IMPORTANT]
 >
@@ -152,7 +152,7 @@ curl -X PUT \
 
 ## 從資料集{#remove}移除標籤
 
-您可以對[!DNL Dataset Service] API發出DELETE請求，以移除套用至資料集的標籤。
+您可以對[!DNL Dataset Service] API提出DELETE請求，以移除套用至資料集的標籤。
 
 **API格式**
 
@@ -164,7 +164,7 @@ DELETE /datasets/{DATASET_ID}/labels
 | --- | --- |
 | `{DATASET_ID}` | 您要移除其標籤的資料集的唯一`id`值。 |
 
-**請求**
+**要求**
 
 下列請求會移除路徑中指定之資料集的標籤。
 
@@ -202,10 +202,10 @@ curl -X DELETE \
 
 ### [!DNL If-Match] 標題  {#if-match}
 
-在進行更新資料集（PUT和DELETE）現有標籤的API呼叫時，必須包含`If-Match`標題，指出資料集服務中資料集標籤實體的目前版本。 為避免資料衝突，只有當包含的`If-Match`字串與系統為該資料集產生的最新版本標籤相符時，服務才會更新資料集實體。
+在進行更新資料集(PUT和DELETE)現有標籤的API呼叫時，必須包含`If-Match`標題，指出資料集服務中資料集標籤實體的目前版本。 為避免資料衝突，只有當包含的`If-Match`字串與系統為該資料集產生的最新版本標籤相符時，服務才會更新資料集實體。
 
 >[!NOTE]
 >
->如果目前沒有相關資料集的標籤，則只能透過POST要求新增新標籤，而不需要`If-Match`標題。 將標籤新增至資料集後，會指派`etag`值，供日後更新或移除標籤。
+>如果目前沒有相關資料集的標籤，則只能透過POST請求新增新標籤，而不需要`If-Match`標題。 將標籤新增至資料集後，會指派`etag`值，供日後更新或移除標籤。
 
 要檢索dataset-label實體的最新版本，請向`/datasets/{DATASET_ID}/labels`端點發出[GET請求](#look-up)。 在`etag`標題下的回應中傳回目前值。 更新現有資料集標籤時，最佳實務是先對資料集執行查閱請求，以便在後續PUT或DELETE請求的`If-Match`標題中使用該值前，先擷取其最新`etag`值。
