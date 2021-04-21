@@ -2,16 +2,16 @@
 keywords: Experience Platform;home；熱門主題；重置沙箱
 solution: Experience Platform
 title: 在API中重設沙盒
-topic: developer guide
+topic-legacy: developer guide
 description: 開發沙盒具有「工廠重設」功能，可從沙盒中刪除所有非預設資源。 您可以重設沙盒，方法是提出PUT請求，請求路徑中包含沙盒的名稱。
+exl-id: 3a82735d-a043-4fe4-9042-1eb373748d35
 translation-type: tm+mt
-source-git-commit: 62ce5ac92d03a6e85589fc92e8d953f7fc1d8f31
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '171'
+source-wordcount: '169'
 ht-degree: 3%
 
 ---
-
 
 # 在API中重設沙盒
 
@@ -27,7 +27,7 @@ PUT /sandboxes/{SANDBOX_NAME}
 | --- | --- |
 | `{SANDBOX_NAME}` | 您要重設沙盒的`name`屬性。 |
 
-**請求**
+**要求**
 
 下列請求會重設名為&quot;dev-2&quot;的沙盒。
 
