@@ -1,21 +1,21 @@
 ---
-keywords: Experience Platform;home；熱門主題
+keywords: Experience Platform；首頁；熱門主題
 solution: Experience Platform
 title: 原則服務API指南
-topic: developer guide
-description: Policy Service API可讓開發人員在Experience Platform中管理資料使用標籤和原則。 請依照本指南，瞭解如何使用API執行關鍵作業。
+topic-legacy: developer guide
+description: Policy Service API可讓開發人員管理Experience Platform中的資料使用標籤和原則。 請依照本指南，瞭解如何使用API執行關鍵作業。
+exl-id: 23c05670-7107-4b96-bc24-0a51b5d267b2
 translation-type: tm+mt
-source-git-commit: e649ab3da077cdd8e98562199b8bdece6108a572
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '504'
 ht-degree: 0%
 
 ---
 
-
 # [!DNL Policy Service] API指南
 
-Adobe Experience Platform [!DNL Data Governance]可讓您管理客戶資料，並確保符合資料使用適用的法規、限制和政策。 它在[!DNL Experience Platform]的不同層次中發揮關鍵作用，包括編目、資料承傳、資料使用標籤、資料使用政策，以及控制資料在行銷動作中的使用。
+Adobe Experience Platform[!DNL Data Governance]可讓您管理客戶資料，並確保符合適用於資料使用的法規、限制和政策。 它在[!DNL Experience Platform]的不同層次中發揮關鍵作用，包括編目、資料承傳、資料使用標籤、資料使用政策，以及控制資料在行銷動作中的使用。
 
 [!DNL Policy Service] API提供數個端點，可讓您以程式設計方式管理資料使用標籤和原則，並評估違反原則的行銷動作。 這些端點如下所示。 如需詳細資訊，請造訪個別端點指南，並參閱[快速入門手冊](./getting-started.md)，以取得必要標題、讀取範例API呼叫等重要資訊。
 
