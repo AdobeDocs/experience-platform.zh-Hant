@@ -1,25 +1,25 @@
 ---
-keywords: Experience Platform;home;popular topics;api;API;XDM;XDM系統；experience資料模型；資料模型；ui;workspace;field;
+keywords: Experience Platform; home；熱門主題；api;API;XDM;XDM系統；體驗資料模型；資料模型；ui;workspace;field;
 solution: Experience Platform
 title: 在UI中定義XDM欄位
 description: 瞭解如何在Experience Platform使用者介面中定義XDM欄位。
-topic: user guide
+topic-legacy: user guide
+exl-id: 2adb03d4-581b-420e-81f8-e251cf3d9fb9
 translation-type: tm+mt
-source-git-commit: a489ab248793a063295578943ad600d8eacab6a2
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '1311'
-ht-degree: 4%
+source-wordcount: '1236'
+ht-degree: 3%
 
 ---
 
-
 # 在UI中定義XDM欄位
 
-Adobe Experience Platform使用者介面中的[!DNL Schema Editor]可讓您在自訂的Experience Data Model(XDM)類別和混音中定義您自己的欄位。 本指南涵蓋在UI中定義XDM欄位的步驟，包括每個欄位類型的可用設定選項。
+Adobe Experience Platform用戶介面中的[!DNL Schema Editor]可讓您在自訂的體驗資料模型(XDM)類別和混音中定義自己的欄位。 本指南涵蓋在UI中定義XDM欄位的步驟，包括每個欄位類型的可用設定選項。
 
-## 必要條件
+## 先決條件
 
-本指南需要對XDM System有充分的瞭解。 請參閱[XDM概述](../../home.md)以瞭解XDM在Experience Platform生態系統中的角色，以及[架構構成基礎](../../schema/composition.md)，瞭解類別和混合如何將欄位貢獻至XDM架構。
+本指南需要對XDM System有充分的瞭解。 有關XDM在Experience Platform生態系統中的角色介紹，請參閱[XDM概述](../../home.md)和[架構構成基礎](../../schema/composition.md)，以瞭解類和混合如何將欄位貢獻到XDM架構。
 
 雖然本指南不是必要的，但建議您也要遵循在UI](../../tutorials/create-schema-ui.md)中構成架構的[教學課程，以熟悉[!DNL Schema Editor]的各種功能。
 
@@ -33,7 +33,7 @@ Adobe Experience Platform使用者介面中的[!DNL Schema Editor]可讓您在�
 
 >[!NOTE]
 >
->如果您選取的類別或混音是Adobe提供的核心資源，則無法編輯它，因此不會顯示上述控制項。 如果要向中添加欄位的方案基於核心XDM類，並且不包含任何自定義混音，則可以[建立新混音](../resources/mixins.md#create)以改為添加到方案。
+>如果您選擇的類或混合是Adobe提供的核心資源，則無法編輯它，因此將不顯示上述控制項。 如果要向中添加欄位的方案基於核心XDM類，並且不包含任何自定義混音，則可以[建立新混音](../resources/mixins.md#create)以改為添加到方案。
 
 要向資源添加新欄位，請在畫布中方案名稱旁選擇&#x200B;**加號(+)**&#x200B;表徵圖，或在要定義欄位的對象類型欄位旁選擇。
 
@@ -41,17 +41,17 @@ Adobe Experience Platform使用者介面中的[!DNL Schema Editor]可讓您在�
 
 ## 定義資源{#define}的欄位
 
-在選擇&#x200B;**plus(+)**&#x200B;圖示後，畫布中會顯示&#x200B;**[!UICONTROL 新欄位]**，位於與您唯一租用戶ID同名的根層級物件中（如下例中顯示為`_tenantId`）。 透過自訂類別和混音新增至架構的所有欄位都會自動置於此命名空間中，以避免與Adobe提供之類別和混音的其他欄位產生衝突。
+在選取&#x200B;**plus(+)**&#x200B;圖示後，畫布中會出現&#x200B;**[!UICONTROL New field]**，位於與您唯一租用戶ID同名的根層級物件內（如下例中顯示為`_tenantId`）。 透過自訂類別和混合新增至架構的所有欄位都會自動置於此命名空間中，以避免與Adobe提供類別和混合的其他欄位產生衝突。
 
 ![](../../images/ui/fields/overview/new-field.png)
 
-在&#x200B;**[!UICONTROL 欄位屬性]**&#x200B;下方的右側欄位中，您可以設定新欄位的詳細資訊。 每個欄位都需要下列資訊：
+在&#x200B;**[!UICONTROL Field properties]**&#x200B;下方的右邊欄中，您可以設定新欄位的詳細資料。 每個欄位都需要下列資訊：
 
 | 欄位屬性 | 說明 |
 | --- | --- |
-| [!UICONTROL 欄位名稱] | 欄位的唯一描述性名稱。 請注意，儲存結構後，欄位的名稱便無法變更。<br><br>最理想的情況是，名稱應以camelCase寫入。它可能包含英數字元、破折號或底線字元，但&#x200B;**不能**&#x200B;以底線開頭。<ul><li>**正確**:  `fieldName`</li><li>**可接受：** `field_name2`、 `Field-Name`、  `field-name_3`</li><li>**錯誤**:  `_fieldName`</li></ul> |
-| [!UICONTROL 顯示名稱] | 這個田地的人性化名稱。 |
-| [!UICONTROL 類型] | 欄位將包含的資料類型。 從此下拉菜單中，可以選擇XDM支援的[標準標量類型](../../schema/field-constraints.md)中的一種，或者選擇以前在[!DNL Schema Registry]中定義的多欄位[資料類型](../resources/data-types.md)中的一種。<br><br>您也可以選取「進 **[!UICONTROL 階類型搜]** 尋」，以搜尋和篩選現有的資料類型，並更輕鬆地尋找所需類型。 |
+| [!UICONTROL Field name] | 欄位的唯一描述性名稱。 請注意，儲存結構後，欄位的名稱便無法變更。<br><br>最理想的情況是，名稱應以camelCase寫入。它可能包含英數字元、破折號或底線字元，但&#x200B;**不能**&#x200B;以底線開頭。<ul><li>**正確**:  `fieldName`</li><li>**可接受：** `field_name2`、 `Field-Name`、  `field-name_3`</li><li>**錯誤**:  `_fieldName`</li></ul> |
+| [!UICONTROL Display name] | 這個田地的人性化名稱。 |
+| [!UICONTROL Type] | 欄位將包含的資料類型。 從此下拉菜單中，可以選擇XDM支援的[標準標量類型](../../schema/field-constraints.md)中的一種，或者選擇以前在[!DNL Schema Registry]中定義的多欄位[資料類型](../resources/data-types.md)中的一種。<br><br>您也可以選取以 **[!UICONTROL Advanced type search]** 搜尋和篩選現有的資料類型，並更輕鬆地找出所要的類型。 |
 
 您也可以為欄位提供可選的人讀&#x200B;**[!UICONTROL Description]**，以提供欄位預定使用案例的更多內容。
 
@@ -61,7 +61,7 @@ Adobe Experience Platform使用者介面中的[!DNL Schema Editor]可讓您在�
 >
 >右邊欄還提供用於指定特殊欄位類型的複選框。 如需詳細資訊，請參閱[特殊欄位類型](#special)一節。
 
-完成欄位配置後，選擇&#x200B;**[!UICONTROL Apply]**。
+完成欄位配置後，請選擇&#x200B;**[!UICONTROL Apply]**。
 
 ![](../../images/ui/fields/overview/field-details.png)
 
@@ -77,19 +77,19 @@ Adobe Experience Platform使用者介面中的[!DNL Schema Editor]可讓您在�
 
 ## 類型特定欄位屬性{#type-specific-properties}
 
-定義新欄位時，根據您為欄位選擇的&#x200B;**[!UICONTROL Type]**，其他配置選項可能出現在右側邊欄中。 下表概述了這些附加欄位屬性及其相容類型：
+定義新欄位時，可能會在右邊欄中顯示其他配置選項，具體取決於您為該欄位選擇的&#x200B;**[!UICONTROL Type]**。 下表概述了這些附加欄位屬性及其相容類型：
 
 | 欄位屬性 | 相容類型 | 說明 |
 | --- | --- | --- |
-| [!UICONTROL 預設值] | [!UICONTROL String] Double [!UICONTROL , Long], Short [!UICONTROL , ShortByte, Short], Boolean, ShortByte    [!UICONTROL , Boolean] | 如果擷取期間未提供其他值，則會指派給此欄位的預設值。 此值必須符合欄位的選定類型。 |
-| [!UICONTROL 圖樣] | [!UICONTROL 字串] | [規則運算式](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions)，此欄位的值必須符合，才能在擷取期間被接受。 |
-| [!UICONTROL Format] | [!UICONTROL 字串] | 從預先定義的字串格式清單中選取值必須符合的格式。 可用格式包括： <ul><li>[[!UICONTROL 日期——時間]](https://tools.ietf.org/html/rfc3339)</li><li>[[!UICONTROL 電子郵件]](https://tools.ietf.org/html/rfc2822)</li><li>[[!UICONTROL 主機名]](https://tools.ietf.org/html/rfc1123#page-13)</li><li>[[!UICONTROL ipv4]](https://tools.ietf.org/html/rfc791)</li><li>[[!UICONTROL ipv6]](https://tools.ietf.org/html/rfc2460)</li><li>[[!UICONTROL uri]](https://tools.ietf.org/html/rfc3986)</li><li>[[!UICONTROL uri-reference]](https://tools.ietf.org/html/rfc3986#section-4.1)</li><li>[[!UICONTROL url-template]](https://tools.ietf.org/html/rfc6570)</li><li>[[!UICONTROL json-pointer]](https://tools.ietf.org/html/rfc6901)</li></ul> |
-| [!UICONTROL 最小長度] | [!UICONTROL 字串] | 字串必須包含的字元數目下限，才能在擷取期間接受值。 |
-| [!UICONTROL 長度上限] | [!UICONTROL 字串] | 字串必須包含的字元數上限，才能在擷取期間接受值。 |
-| [!UICONTROL 最小值] | [!UICONTROL 雙倍] | 擷取期間接受Double的最小值。 如果收錄的值與此處輸入的值完全相符，則會接受該值。 使用此約束時，「[!UICONTROL 排除最小值]」約束必須留空。 |
-| [!UICONTROL 最大值] | [!UICONTROL 雙倍] | 擷取期間接受Double的最大值。 如果收錄的值與此處輸入的值完全相符，則會接受該值。 使用此約束時，&quot;[!UICONTROL 獨佔最大值]&quot;約束必須留空。 |
-| [!UICONTROL 獨佔最小值] | [!UICONTROL 雙倍] | 擷取期間接受Double的最大值。 如果收錄的值與此處輸入的值完全相符，則會拒絕該值。 使用此約束時，「[!UICONTROL 最小值]」（非獨佔）約束必須留空。 |
-| [!UICONTROL 獨佔最大值] | [!UICONTROL 雙倍] | 擷取期間接受Double的最大值。 如果收錄的值與此處輸入的值完全相符，則會拒絕該值。 使用此約束時，「[!UICONTROL 最大值]」（非獨佔）約束必須留空。 |
+| [!UICONTROL Default value] | [!UICONTROL String], [!UICONTROL Double], [!UICONTROL Long], [!UICONTROL Integer], [!UICONTROL Short], [!UICONTROL Byte], [!UICONTROL Boolean] | 如果擷取期間未提供其他值，則會指派給此欄位的預設值。 此值必須符合欄位的選定類型。 |
+| [!UICONTROL Pattern] | [!UICONTROL String] | [規則運算式](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions)，此欄位的值必須符合，才能在擷取期間被接受。 |
+| [!UICONTROL Format] | [!UICONTROL String] | 從預先定義的字串格式清單中選取值必須符合的格式。 可用格式包括： <ul><li>[[!UICONTROL date-time]](https://tools.ietf.org/html/rfc3339)</li><li>[[!UICONTROL email]](https://tools.ietf.org/html/rfc2822)</li><li>[[!UICONTROL hostname]](https://tools.ietf.org/html/rfc1123#page-13)</li><li>[[!UICONTROL ipv4]](https://tools.ietf.org/html/rfc791)</li><li>[[!UICONTROL ipv6]](https://tools.ietf.org/html/rfc2460)</li><li>[[!UICONTROL uri]](https://tools.ietf.org/html/rfc3986)</li><li>[[!UICONTROL uri-reference]](https://tools.ietf.org/html/rfc3986#section-4.1)</li><li>[[!UICONTROL url-template]](https://tools.ietf.org/html/rfc6570)</li><li>[[!UICONTROL json-pointer]](https://tools.ietf.org/html/rfc6901)</li></ul> |
+| [!UICONTROL Minimum length] | [!UICONTROL String] | 字串必須包含的字元數目下限，才能在擷取期間接受值。 |
+| [!UICONTROL Maximum length] | [!UICONTROL String] | 字串必須包含的字元數上限，才能在擷取期間接受值。 |
+| [!UICONTROL Minimum value] | [!UICONTROL Double] | 擷取期間接受Double的最小值。 如果收錄的值與此處輸入的值完全相符，則會接受該值。 使用此約束時，&quot;[!UICONTROL Exclusive minimum value]&quot;約束必須留空。 |
+| [!UICONTROL Maximum value] | [!UICONTROL Double] | 擷取期間接受Double的最大值。 如果收錄的值與此處輸入的值完全相符，則會接受該值。 使用此約束時，&quot;[!UICONTROL Exclusive maximum value]&quot;約束必須留空。 |
+| [!UICONTROL Exclusive minimum value] | [!UICONTROL Double] | 擷取期間接受Double的最大值。 如果收錄的值與此處輸入的值完全相符，則會拒絕該值。 使用此約束時，&quot;[!UICONTROL Minimum value]&quot;（非獨佔）約束必須留空。 |
+| [!UICONTROL Exclusive maximum value] | [!UICONTROL Double] | 擷取期間接受Double的最大值。 如果收錄的值與此處輸入的值完全相符，則會拒絕該值。 使用此約束時，&quot;[!UICONTROL Maximum value]&quot;（非獨佔）約束必須留空。 |
 
 ## 特殊欄位類型{#special}
 
@@ -97,11 +97,11 @@ Adobe Experience Platform使用者介面中的[!DNL Schema Editor]可讓您在�
 
 若要進一步瞭解這些特殊類型，請參閱下列檔案：
 
-* [[!UICONTROL 必填]](./required.md)
-* [[!UICONTROL 陣列]](./array.md)
+* [[!UICONTROL Required]](./required.md)
+* [[!UICONTROL Array]](./array.md)
 * [[!UICONTROL Enum]](./enum.md)
 * [[!UICONTROL Identity]](./identity.md) （僅適用於字串欄位）
-* [[!UICONTROL 關係]](./relationship.md) （僅適用於字串欄位）
+* [[!UICONTROL Relationship]](./relationship.md) （僅適用於字串欄位）
 
 雖然技術上不是特殊欄位類型，但建議您造訪[定義物件類型欄位](./object.md)的指南，以進一步瞭解如果架構結構，定義巢狀子欄位。
 
@@ -109,4 +109,4 @@ Adobe Experience Platform使用者介面中的[!DNL Schema Editor]可讓您在�
 
 本指南提供如何在UI中定義XDM欄位的概觀。 請記住，欄位只能透過使用類別和混合來新增至結構。 若要進一步瞭解如何在UI中管理這些資源，請參閱有關建立和編輯[類別](../resources/classes.md)和[mixins](../resources/mixins.md)的指南。
 
-有關[!UICONTROL 方案]工作區功能的詳細資訊，請參閱[[!UICONTROL 方案]工作區概述](../overview.md)。
+有關[!UICONTROL Schemas]工作區功能的詳細資訊，請參閱[[!UICONTROL Schemas]工作區概述](../overview.md)。
