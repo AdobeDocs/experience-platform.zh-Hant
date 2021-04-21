@@ -1,18 +1,18 @@
 ---
-keywords: Experience Platform；零售銷售配方；Data Science Workspace；熱門主題；配方
+keywords: Experience Platform；零售銷售配方；資料科學工作區；熱門主題；配方
 solution: Experience Platform
 title: 建立零售銷售結構和資料集
-topic: tutorial
+topic-legacy: tutorial
 type: Tutorial
-description: 本教學課程提供所有其他Adobe Experience Platform資料科學工作區教學課程的必要條件和必要資產。 完成後，您和您的IMS組織Experience Platform成員將可使用零售銷售架構和資料集。
+description: 本教學課程提供您其他Adobe Experience Platform資料科學工作區教學課程的必要條件和必要資產。 完成後，您和您的IMS組織成員將可使用零售銷售方案和資料集進行Experience Platform。
+exl-id: 1b868c8c-7c92-4f99-8486-54fd7aa1af48
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '554'
 ht-degree: 0%
 
 ---
-
 
 # 建立零售銷售結構和資料集
 
@@ -22,8 +22,8 @@ ht-degree: 0%
 
 開始本教學課程之前，您必須具備下列必要條件：
 - 存取[!DNL Adobe Experience Platform]。 如果您沒有[!DNL Experience Platform]中IMS組織的存取權，請在繼續之前先與系統管理員聯絡。
-- 進行[!DNL Experience Platform] API呼叫的授權。 完成[驗證及存取Adobe Experience Platform API](https://www.adobe.com/go/platform-api-authentication-en)教學課程，以取得下列值，以順利完成本教學課程：
-   - 授權：`{ACCESS_TOKEN}`
+- 進行[!DNL Experience Platform] API呼叫的授權。 完成[驗證並訪問Adobe Experience PlatformAPI](https://www.adobe.com/go/platform-api-authentication-en)教程，以獲取以下值，以成功完成本教程：
+   - Authorization: `{ACCESS_TOKEN}`
    - x-api-key:`{API_KEY}`
    - x-gw-ims-org-id:`{IMS_ORG}`
    - 用戶端密碼：`{CLIENT_SECRET}`
