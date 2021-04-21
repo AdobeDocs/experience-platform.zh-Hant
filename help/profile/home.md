@@ -1,18 +1,18 @@
 ---
 keywords: Experience Platform；配置檔案；即時客戶配置檔案；疑難排解；API；統一配置檔案；統一配置檔案；配置檔案；rtcp;XDM圖
 title: 即時客戶個人檔案概觀
-topic: guide
-description: 即時客戶描述檔是一般查閱實體儲存，可合併來自各種企業資料資產的資料，然後以個別客戶描述檔和相關時間系列事件的形式提供對該資料的存取。 此功能可讓行銷人員跨多個通道，推動與受眾的協調、一致且相關的體驗。
+topic-legacy: guide
+description: 即時客戶描述檔是一般查閱實體儲存，可合併來自各種企業資料資產的資料，然後以個別客戶描述檔和相關時間系列事件的形式提供對該資料的存取。 此功能可讓行銷人員跨多個通道，推動與受眾之間協調、一致且相關的體驗。
+exl-id: c93d8d78-b215-4559-a806-f019c602c4d2
 translation-type: tm+mt
-source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '1827'
+source-wordcount: '1826'
 ht-degree: 0%
 
 ---
 
-
-# [!DNL Real-time Customer Profile]概述
+# [!DNL Real-time Customer Profile] 概觀
 
 Adobe Experience Platform可讓您為客戶推動協調、一致且相關的體驗，不論客戶在何處或何時與您的品牌互動。 透過[!DNL Real-time Customer Profile]，您可以結合來自多個通道（包括線上、離線、CRM和協力廠商）的資料，全面瞭解每個客戶。 [!DNL Profile] 可讓您將客戶資料整合到統一的檢視中，提供每個客戶互動的可操作、時間戳記帳戶。本概述將幫助您瞭解[!DNL Experience Platform]中[!DNL Real-time Customer Profile]的角色和使用。
 
@@ -92,7 +92,7 @@ Adobe Experience Platform[!DNL Segmentation Service]為個別客戶提供體驗�
 
 ## 邊緣投影
 
-為即時跨多個通道為客戶提供協調、一致且個人化的體驗，需要隨時提供適當的資料，並在變更時持續更新。 Adobe Experience Platform使用戶能夠通過使用所謂的邊來即時訪問資料。 邊緣是地理位置優越的伺服器，可儲存資料，讓應用程式可輕鬆存取。 例如，Adobe應用程式(例如Adobe Target和Adobe Campaign)使用邊緣，以便即時提供個人化的客戶體驗。 資料通過投影被路由到邊，投影目的地定義資料要發送到的邊，投影配置定義將在邊上提供的特定資訊。 若要進一步瞭解並開始使用[!DNL Real-time Customer Profile] API處理投影，請參閱[邊緣投影端點指南](api/edge-projections.md)。
+為即時跨多個通道為客戶提供協調、一致且個人化的體驗，需要隨時提供適當的資料，並在變更時持續更新。 Adobe Experience Platform使用戶能夠通過使用所謂的邊來即時訪問資料。 邊緣是地理位置的伺服器，可儲存資料，讓應用程式可輕鬆存取。 例如，Adobe應用程式(例如Adobe Target和Adobe Campaign)使用邊緣，以便即時提供個人化的客戶體驗。 資料通過投影被路由到邊，投影目的地定義資料要發送到的邊，投影配置定義將在邊上提供的特定資訊。 若要進一步瞭解並開始使用[!DNL Real-time Customer Profile] API處理投影，請參閱[邊緣投影端點指南](api/edge-projections.md)。
 
 ## 將資料收錄到[!DNL Profile]
 
