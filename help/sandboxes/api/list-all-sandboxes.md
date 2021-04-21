@@ -2,16 +2,16 @@
 keywords: Experience Platform；首頁；熱門主題；清單沙箱
 solution: Experience Platform
 title: 在API中列出沙盒
-topic: developer guide
+topic-legacy: developer guide
 description: 若要列出屬於您IMS組織（活動或其他）的所有沙盒，請向/sandbox端點提出GET要求。
+exl-id: 5e7dc6e7-cb9c-41e0-a3ad-025b625f14ec
 translation-type: tm+mt
-source-git-commit: 62ce5ac92d03a6e85589fc92e8d953f7fc1d8f31
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '322'
+source-wordcount: '320'
 ht-degree: 2%
 
 ---
-
 
 # 列出API中的沙盒
 
@@ -27,7 +27,7 @@ GET /sandboxes?{QUERY_PARAMS}
 | --------- | ----------- |
 | `{QUERY_PARAMS}` | 可選查詢參數，以篩選結果。 如需詳細資訊，請參閱[查詢參數](#query)一節。 |
 
-**請求**
+**要求**
 
 ```shell
 curl -X GET \
