@@ -1,21 +1,21 @@
 ---
-keywords: Experience Platform;home；熱門主題；模式；模式；XDM;fields；模式；設備；資料類型；資料類型；
+keywords: Experience Platform;home；常用主題；模式；模式；XDM;fields；模式；設備；資料類型；資料類型；
 solution: Experience Platform
 title: 裝置資料類型
-topic: overview
+topic-legacy: overview
 description: 本文檔概述了Device XDM資料類型。
+exl-id: 049a2ca1-6bc3-4b9c-832a-77102e8a0ed2
 translation-type: tm+mt
-source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '325'
+source-wordcount: '322'
 ht-degree: 4%
 
 ---
 
+# [!UICONTROL Device] 資料類型
 
-# [!UICONTROL 設] 備資料類型
-
-[!UICONTROL Device] 是一種標準XDM資料類型，用於描述已識別的設備。裝置是應用程式或瀏覽器例項，可跨作業追蹤，通常由Cookie追蹤。
+[!UICONTROL Device] 是描述已識別設備的標準XDM資料類型。裝置是應用程式或瀏覽器例項，可跨作業追蹤，通常由Cookie追蹤。
 
 <img src="../images/data-types/device.png" width="450" /><br />
 
@@ -48,4 +48,4 @@ ht-degree: 4%
 | 值 | 說明 |
 | --- | --- |
 | `https://ns.adobe.com/xdm/external/deviceatlas` | 已使用DeviceAtlas識別裝置。 |
-| `https://ns.adobe.com/xdm/external/adobecampaign` | 裝置已使用Adobe Campaign加以識別。 |
+| `https://ns.adobe.com/xdm/external/adobecampaign` | 已使用Adobe Campaign識別此裝置。 |
