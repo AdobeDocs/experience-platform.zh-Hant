@@ -2,14 +2,14 @@
 keywords: Experience Platform;home；熱門主題；ui;UI;XDM;XDM系統；體驗資料模型；體驗資料模型；資料模型；模式編輯器；模式編輯器；模式；模式；模式；模式；模式；模式；建立模式
 solution: Experience Platform
 title: 使用架構編輯器建立架構
-topic: tutorial
+topic-legacy: tutorial
 type: Tutorial
 description: 本教學課程涵蓋以 Experience Platform 結構編輯器建立結構的相關步驟。
 exl-id: 3edeb879-3ce4-4adb-a0bd-8d7ad2ec6102
 translation-type: tm+mt
-source-git-commit: 53bf2ad757b24ad294af32101124e8047580807a
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '3533'
+source-wordcount: '3532'
 ht-degree: 0%
 
 ---
@@ -256,7 +256,7 @@ Adobe Experience Platform用戶介面允許您在稱為[!DNL Schema Editor]的�
 >
 >當顯示相符欄位時，搜尋函式會將任何選取的混合篩選納入考量。 如果搜尋查詢未顯示您預期的結果，您可能需要再次檢查您是否未篩選出任何相關混音。
 
-## 將架構欄位設定為標識欄位{#identity-field}
+## 將模式欄位設定為標識欄位{#identity-field}
 
 架構所提供的標準資料結構可用於跨多個來源識別屬於同一個人的資料，允許各種下游使用案例，例如分段、報告、資料科學分析等。 為了根據個別身分來接合資料，索引鍵欄位必須標示為適用結構圖中的[!UICONTROL Identity]欄位。
 
