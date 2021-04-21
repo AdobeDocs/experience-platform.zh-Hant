@@ -1,21 +1,21 @@
 ---
-keywords: Experience Platform;home；熱門主題；API;XDM;XDM;XDM系統；體驗資料模型；Experience資料模型；資料模型；資料模型；模式註冊；模式註冊；描述符；描述符；描述符；身份；身份；友好名稱；替代項目顯示資訊；參考；關係；關係
+keywords: Experience Platform;home；熱門主題；api;XDM;XDM;XDM系統；體驗資料模型；體驗資料模型；資料模型；資料模型；模式註冊；描述符；描述符；描述符；標識；身份；友好名稱；友好名稱；替代顯示資訊；參考；關係；關係
 solution: Experience Platform
 title: 描述符API端點
 description: 方案註冊表API中的／描述符端點允許您在體驗應用程式中以寫程式方式管理XDM描述符。
-topic: developer guide
+topic-legacy: developer guide
+exl-id: bda1aabd-5e6c-454f-a039-ec22c5d878d2
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '1613'
+source-wordcount: '1611'
 ht-degree: 1%
 
 ---
 
-
 # 描述符端點
 
-結構定義資料實體的靜態視圖，但不提供基於這些結構的資料（例如資料集）如何彼此關聯的具體詳細資訊。 Adobe Experience Platform可讓您使用描述子來描述這些關係以及關於架構的其他解釋性中繼資料。
+結構定義資料實體的靜態視圖，但不提供基於這些結構的資料（例如資料集）如何彼此關聯的具體詳細資訊。 Adobe Experience Platform允許您使用描述符描述這些關係和關於模式的其他解釋性元資料。
 
 架構描述子是租用戶層級的中繼資料，這表示它們對您的IMS組織是獨一無二的，所有描述子操作都發生在租用戶容器中。
 
@@ -25,7 +25,7 @@ ht-degree: 1%
 
 ## 快速入門
 
-本指南中使用的端點是[[!DNL Schema Registry] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/class-registry.yaml)的一部分。 在繼續之前，請先閱讀[快速入門手冊](./getting-started.md)，以取得相關檔案的連結、閱讀本檔案中範例API呼叫的指南，以及成功呼叫任何Experience Platform API所需之必要標題的重要資訊。
+本指南中使用的端點是[[!DNL Schema Registry] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/class-registry.yaml)的一部分。 在繼續之前，請先閱讀[快速入門手冊](./getting-started.md)，以取得相關檔案的連結、閱讀本檔案中範例API呼叫的指南，以及成功呼叫任何Experience PlatformAPI所需之必要標題的重要資訊。
 
 ## 檢索描述符{#list}的清單
 
@@ -37,7 +37,7 @@ ht-degree: 1%
 GET /tenant/descriptors
 ```
 
-**請求**
+**要求**
 
 ```SHELL
 curl -X GET \
@@ -86,7 +86,7 @@ curl -X GET \
 
 ## 查找描述符{#lookup}
 
-如果要查看特定描述符的詳細資訊，可使用其`@id`查找(GET)單個描述符。
+如果要查看特定描述符的詳細資訊，可以使用其`@id`查找(GET)單個描述符。
 
 **API格式**
 
@@ -98,7 +98,7 @@ GET /tenant/descriptors/{DESCRIPTOR_ID}
 | --- | --- |
 | `{DESCRIPTOR_ID}` | 要查找的描述符的`@id`。 |
 
-**請求**
+**要求**
 
 以下請求通過`@id`值檢索描述符。 描述符未版本化，因此查找請求中不需要`Accept`標題。
 
@@ -149,7 +149,7 @@ curl -X GET \
 POST /tenant/descriptors
 ```
 
-**請求**
+**要求**
 
 以下請求在示例方案的「電子郵件地址」欄位上定義身份描述符。 這會告訴[!DNL Experience Platform]使用電子郵件地址做為識別碼，以協助將個人的相關資訊結合在一起。
 
@@ -193,7 +193,7 @@ curl -X POST \
 
 ## 更新描述符{#put}
 
-通過在PUT請求的路徑中包括描述符`@id`，可以更新描述符。
+通過將描述符`@id`包含在PUT請求的路徑中，可以更新描述符。
 
 **API格式**
 
@@ -205,9 +205,9 @@ PUT /tenant/descriptors/{DESCRIPTOR_ID}
 | --- | --- |
 | `{DESCRIPTOR_ID}` | 要更新的描述符的`@id`。 |
 
-**請求**
+**要求**
 
-此請求實際上重寫描述符，因此請求主體必須包含定義該類型描述符所需的所有欄位。 換句話說，要更新描述符的請求裝載(PUT)與建立[類型相同的描述符](#create)的裝載相同。
+此請求實際上重寫描述符，因此請求主體必須包含定義該類型描述符所需的所有欄位。 換言之，用於更新(PUT)描述符的請求裝載與將[裝載建立(POST)同類型的描述符](#create)的裝載相同。
 
 >[!IMPORTANT]
 >
@@ -244,7 +244,7 @@ curl -X PUT \
 }
 ```
 
-執行[查閱(GET)請求](#lookup)以檢視描述子時，會顯示欄位已更新，以反映在PUT請求中傳送的變更。
+執行[查閱(GET)請求](#lookup)以檢視描述符時，會顯示欄位已更新，以反映在PUT請求中傳送的變更。
 
 ## 刪除描述符{#delete}
 
@@ -260,7 +260,7 @@ DELETE /tenant/descriptors/{DESCRIPTOR_ID}
 | --- | --- |
 | `{DESCRIPTOR_ID}` | 要刪除的描述符的`@id`。 |
 
-**請求**
+**要求**
 
 ```SHELL
 curl -X DELETE \
@@ -287,7 +287,7 @@ curl -X DELETE \
 
 #### 身份描述符
 
-身分描述符發出信號，「[!UICONTROL sourceSchema]」的「[!UICONTROL sourceProperty]」是[Adobe Experience Platform Identity Service](../../identity-service/home.md)所述的[!DNL Identity]欄位。
+身份描述符發出信號，表示&quot;[!UICONTROL sourceSchema]&quot;的&quot;[!UICONTROL sourceProperty]&quot;是[!DNL Identity]欄位，如[Adobe Experience Platform身份服務](../../identity-service/home.md)所述。
 
 ```json
 {
@@ -344,7 +344,7 @@ curl -X DELETE \
 | `xdm:sourceProperty` | 將作為身份的特定屬性的路徑。 路徑應以&quot;/&quot;開頭，而不以&quot;/&quot;結束。 路徑中不包含「屬性」（例如，使用「/personalEmail/address」而非「/properties/personalEmail/properties/address」） |
 | `xdm:title` | 您要為此欄位顯示的新標題，在「標題大小寫」中撰寫。 |
 | `xdm:description` | 可隨標題新增選擇性說明。 |
-| `meta:enum` | 如果`xdm:sourceProperty`所指示的欄位是字串欄位，`meta:enum`會決定[!DNL Experience Platform] UI中欄位的建議值清單。 請務必注意，`meta:enum`不聲明枚舉或為XDM欄位提供任何資料驗證。<br><br>這僅應用於Adobe定義的核心XDM欄位。如果源屬性是由您的組織定義的自定義欄位，則應通過對該欄位的父資源的PATCH請求直接編輯該欄位的`meta:enum`屬性。 |
+| `meta:enum` | 如果`xdm:sourceProperty`所指示的欄位是字串欄位，`meta:enum`會決定[!DNL Experience Platform] UI中欄位的建議值清單。 請務必注意，`meta:enum`不聲明枚舉或為XDM欄位提供任何資料驗證。<br><br>這僅應用於由Adobe定義的核心XDM欄位。如果source屬性是您組織定義的自訂欄位，則您應直接透過欄位父資源的PATCH請求編輯欄位的`meta:enum`屬性。 |
 
 #### 關係描述子
 
