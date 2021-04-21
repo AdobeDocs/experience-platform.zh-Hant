@@ -2,14 +2,14 @@
 keywords: Experience Platform; home；熱門主題；流處理；攝取；記錄資料；流記錄資料；
 solution: Experience Platform
 title: 使用串流擷取API來串流記錄資料
-topic: tutorial
+topic-legacy: tutorial
 type: Tutorial
 description: 本教學課程將協助您開始使用串流擷取API，這是Adobe Experience Platform資料擷取服務API的一部分。
 exl-id: 097dfd5a-4e74-430d-8a12-cac11b1603aa
 translation-type: tm+mt
-source-git-commit: 610ce5c6dca5e7375b941e7d6f550382da10ca27
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '1166'
+source-wordcount: '1164'
 ht-degree: 2%
 
 ---
@@ -64,7 +64,7 @@ ht-degree: 2%
 POST /schemaregistry/tenant/schemas
 ```
 
-**請求**
+**要求**
 
 ```shell
 curl -X POST https://platform.adobe.io/data/foundation/schemaregistry/tenant/schemas \
@@ -231,7 +231,7 @@ curl -X POST https://platform.adobe.io/data/foundation/schemaregistry/tenant/des
 POST /catalog/dataSets
 ```
 
-**請求**
+**要求**
 
 ```shell
 curl -X POST https://platform.adobe.io/data/foundation/catalog/dataSets \
@@ -279,7 +279,7 @@ POST /collection/{CONNECTION_ID}?synchronousValidation=true
 | `{CONNECTION_ID}` | 先前建立的串流連接的`id`值。 |
 | `synchronousValidation` | 可選的查詢參數，用於開發用途。 如果設為`true`，則可用於立即回饋，以判斷請求是否成功傳送。 依預設，此值會設為`false`。 |
 
-**請求**
+**要求**
 
 將記錄資料收錄到串流連接可以使用或不使用源名稱。
 
@@ -390,7 +390,7 @@ GET /access/entities?schema.name=_xdm.context.profile&entityId=janedoe@example.c
 | `entityId` | 實體的ID。 如果提供，您也必須提供實體名稱空間。 |
 | `entityIdNS` | 您嘗試擷取之ID的命名空間。 |
 
-**請求**
+**要求**
 
 您可以使用下列GET請求來檢閱先前收錄的記錄資料。
 
