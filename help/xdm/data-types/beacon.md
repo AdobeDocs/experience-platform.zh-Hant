@@ -1,21 +1,21 @@
 ---
-keywords: Experience Platform;home；熱門主題；模式；模式；XDM;fields；模式；模式；信標；交互詳細資訊；資料類型；資料類型；
+keywords: Experience Platform;home；熱門主題；模式；模式；XDM;fields;schemas;Schemas；信標；交互詳細資訊；datatype；資料類型；
 solution: Experience Platform
 title: 信標資料類型
-topic: overview
+topic-legacy: overview
 description: 本文檔概述了XDM Individual Profile類。
+exl-id: a3767c8d-a009-49b4-81a4-b084b6e5101a
 translation-type: tm+mt
-source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '248'
+source-wordcount: '245'
 ht-degree: 3%
 
 ---
 
+# [!UICONTROL Beacon] 資料類型
 
-# [!UICONTROL 信標] 資料類型
-
-[!UICONTROL Beaconis] 是標準的XDM資料類型，可說明當行動裝置在範圍內時，將身分資訊傳送至行動應用程式的無線裝置。
+[!UICONTROL Beacon] 是標準的XDM資料類型，可說明當行動裝置在範圍內時，可將身分資訊傳送至行動應用程式的無線裝置。
 
 <img src="../images/data-types/beacon.png" width="450" /><br />
 
