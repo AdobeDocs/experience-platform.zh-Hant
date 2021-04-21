@@ -1,23 +1,23 @@
 ---
-keywords: Experience Platform;home；熱門主題；GDPR;gdpr;CCPA;ccpa;PDPA;pdpa;LGPDP;lgpd;overview;Regulation;Regulation;Regulation;Regulations;Regulations;Privacy;Privacy;
+keywords: Experience Platform;home；熱門主題；GDPR;gdpr;CCPA;ccpa;PDPA;pdpa;LGPDP;lgpd;overview;regulation;Regulation;Regulation;Regulations;Regulations;Privacy;Privacy;
 solution: Experience Platform
 title: 隱私權法規概觀
-topic: troubleshooting
+topic-legacy: troubleshooting
 description: 本檔案概述Adobe Experience Cloud支援的不同隱私權規範。
+exl-id: 2ca946cf-94f8-4fd8-bb1a-7f06a5ab1256
 translation-type: tm+mt
-source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '428'
 ht-degree: 6%
 
 ---
 
-
 # 隱私權法規概觀
 
 本檔案概述Adobe Experience Cloud支援的不同隱私權規範。
 
-透過使用Adobe Experience Platform Privacy Service,Experience Cloud支援根據下列法規存取和刪除要求：
+通過使用Adobe Experience Platform Privacy Service,Experience Cloud支援根據以下法規訪問和刪除請求：
 
 | 法規 | 說明 |
 | --- | --- |
@@ -34,4 +34,4 @@ ht-degree: 6%
 * [隱私權規範常見問答集](./faq.md)
 * [隱私權規範術語](./terminology.md)
 
-如要瞭解如何支援客戶存取並刪除儲存在Experience Cloud應用程式中之資料的要求，請參閱[隱私權服務與Experience Cloud應用程式](../experience-cloud-apps.md)上的指南。
+要瞭解如何支援客戶訪問和刪除儲存在Experience Cloud應用程式上的資料請求，請參閱[Privacy Service和Experience Cloud應用程式](../experience-cloud-apps.md)上的指南。
