@@ -1,21 +1,21 @@
 ---
-keywords: Experience Platform;home;popular topics;catalog;api;replace an object
+keywords: Experience Platform;home；熱門主題；catalog;api；替換對象
 solution: Experience Platform
 title: 替換目錄對象
-topic: developer guide
-description: 您可以使用PUT請求覆寫目錄對象的內容，其中整個資源將替換為請求裝載。
+topic-legacy: developer guide
+description: 您可以使用PUT請求覆寫目錄對象的內容，其中將整個資源替換為請求裝載。
+exl-id: cd98d13c-5261-4bff-b5db-af5f06d093c9
 translation-type: tm+mt
-source-git-commit: a1103bfbf79f9c87bac5b113c01386a6fb8950e7
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '173'
 ht-degree: 2%
 
 ---
 
-
 # 替換目錄對象
 
-您可以使用PUT請求覆寫[!DNL Catalog]物件的內容，其中整個資源會被請求裝載所取代。
+您可以使用PUT請求覆寫[!DNL Catalog]對象的內容，其中整個資源被請求裝載替換。
 
 >[!NOTE]
 >
@@ -32,7 +32,7 @@ PUT /{OBJECT_TYPE}/{OBJECT_ID}
 | `{OBJECT_TYPE}` | 要替換的[!DNL Catalog]對象的類型。 有效對象包括： <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
 | `{OBJECT_ID}` | 您要更新的特定物件的識別碼。 |
 
-**請求**
+**要求**
 
 下列請求會以裝載中提供的值覆寫資料集。
 
@@ -59,7 +59,7 @@ curl -X PUT \
 
 **回應**
 
-成功的響應返回包含被覆蓋對象ID的陣列。 此ID應符合PUT請求中傳送的ID。 現在，對此對象執行GET請求時，會顯示其詳細資訊已被先前PUT請求的裝載中提供的詳細資訊替換。
+成功的響應返回包含被覆蓋對象ID的陣列。 此ID應符合在PUT請求中傳送的ID。 現在，對此對象執行GET請求時，會顯示其詳細資訊已被先前PUT請求的裝載中提供的詳細資訊替換。
 
 ```json
 [
