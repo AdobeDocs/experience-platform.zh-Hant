@@ -1,21 +1,21 @@
 ---
-keywords: Experience Platform;home；熱門主題；GDPR;gdpr;CCPA;ccpa;PDPA;pdpa;LGPD;lgpd;faq;FAQ；規則；規則；規則；規則；隱私；隱私；
+keywords: Experience Platform;home；熱門主題；GDPR;gdpr;CCPA;ccpa;PDPA;pdpa;LGPDP;lgpd;faq;FAQ；規則；規則；規則；規則；隱私；隱私；
 solution: Experience Platform
 title: 隱私權法規常見問答集
-topic: troubleshooting
-description: 本檔案針對有關支援的法律隱私權規範及其在Adobe Experience Cloud中實作的常見問題提供解答。
+topic-legacy: troubleshooting
+description: 本檔案針對有關支援的法律隱私權規範及其在Adobe Experience Cloud的實作的常見問題提供解答。
+exl-id: ec553e53-664b-4e18-abb1-4e4063fdd2c9
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '1599'
 ht-degree: 0%
 
 ---
 
-
 # 隱私權法規常見問答集
 
-本檔案針對有關支援的法律隱私權規範及其在Adobe Experience Cloud中實作的常見問題提供解答。
+本檔案針對有關支援的法律隱私權規範及其在Adobe Experience Cloud的實作的常見問題提供解答。
 
 >[!NOTE]
 >
@@ -27,13 +27,13 @@ ht-degree: 0%
 
 ### 受支援的隱私權法規對哪些人有影響？
 
-Experience Cloud](./overview.md)支援的[隱私權規定適用於所有儲存及處理法規轄區內公民個人資料的組織，不論組織的地理位置。
+[Experience Cloud](./overview.md)所支援的隱私權規定適用於所有儲存及處理相關管轄區內公民個人資料的組織，不論該組織的地理位置。
 
 ### 什麼是個人資料？
 
 個人資料是指與自然人或資料主體相關的任何資訊，可用來直接或間接識別該人。 它可以是姓名、像片、電子郵件地址、銀行細節、社交網路網站貼文、醫療資訊或電腦IP位址等任何項目。
 
-下列識別碼常用於Experience Cloud應用程式，可能會受隱私權法規要求的約束：
+下列識別碼常用於Experience Cloud應用程式，並可能受隱私權法規規定所限：
 
 * 名稱
 * 郵遞區號
@@ -49,7 +49,7 @@ Experience Cloud](./overview.md)支援的[隱私權規定適用於所有儲存�
 * 搜尋歷史記錄
 * 有關消費者與網站、應用程式或廣告互動的資訊
 
-雖然隱私權法規涵蓋廣泛的個人資訊，但Adobe的標準合約條款規定，機密個人資訊（例如SSN、駕照資訊、財務帳戶資訊和生物識別資料）一般禁止匯入和使用Experience Cloud應用程式。
+雖然隱私權法規涵蓋廣泛的個人資訊，但Adobe的標準合約條款規定一般禁止在Experience Cloud應用程式中匯入和使用機密個人資訊（例如SSN、駕照資訊、財務帳戶資訊和生物識別資料）。
 
 ### 資料控制器與資料處理器之間有何差異？
 
@@ -105,7 +105,7 @@ Experience Cloud](./overview.md)支援的[隱私權規定適用於所有儲存�
 
 ### 如果我維護隱私權法規涵蓋的資料，該如何支援消費者的隱私權要求？
 
-一旦您採取必要步驟來驗證屬於適當法律管轄區的消費者，Adobe Experience Platform Privacy Service可讓您將消費者隱私權要求提交至相容的Experience Cloud應用程式。 如需詳細資訊，請參閱[[!DNL Privacy Service] overview](../home.md)。 如需您特定Experience Cloud應用程式如何履行隱私權要求的詳細資訊，請參閱[隱私權服務與Experience Cloud應用程式](../experience-cloud-apps.md)上的指南。
+一旦您採取必要步驟來驗證屬於適當法律管轄區的消費者，Adobe Experience Platform Privacy Service允許您將消費者隱私權要求提交至相容的Experience Cloud應用程式。 如需詳細資訊，請參閱[[!DNL Privacy Service] overview](../home.md)。 有關您的特定Experience Cloud應用程式如何滿足隱私權要求的資訊，請參閱[Privacy Service與Experience Cloud應用程式](../experience-cloud-apps.md)上的指南。
 
 >[!NOTE]
 >
@@ -115,24 +115,24 @@ Experience Cloud](./overview.md)支援的[隱私權規定適用於所有儲存�
 
 以下問題與CCPA特別相關。
 
-### CCPA的不同角色和責任如何套用至Experience Cloud?
+### CCPA的不同角色和責任如何適用於Experience Cloud?
 
-如CCPA所定義，下列角色適用於Adobe及其客戶：
+如CCPA所定義，以下角色適用於Adobe及其客戶：
 
 * Adobe客戶（要求收集和使用加州居民個人資訊的一方）將被視為&#x200B;**Business**。
-* Adobe在提供服務時，將視為&#x200B;**服務提供者**。
+* Adobe在提供服務方面將被視為&#x200B;**服務提供商**。
 
-身為服務供應商，Adobe會代表企業收集及處理個人資訊，並受合約約束，僅將該資訊用於合約所載之特定用途。
+身為服務供應商，Adobe會代表企業收集和處理個人資訊，並受合約約束，僅將該資訊用於合約所載之特定用途。
 
-鑑於此關係及Adobe的合約語言，向Adobe披露的內容可能不會被視為「銷售」，企業需要提供通知並要求同意。
+鑒於這種關係和Adobe的合同語言，對Adobe的披露可能不會被視為「銷售」，企業需要提供通知並請求同意。
 
 但是，Adobe服務可用於啟用特定資料分享和傳輸至第三方。 這些第三方轉讓可視為「銷售」，並依法要求披露及同意。 客戶應與其法律顧問合作評估特定使用案例，以評估適用的要求。
 
-### Adobe是否提供其他有助於解決CCPA需求的工具？
+### Adobe是否提供其他有助於解決CCPA要求的工具？
 
-Adobe Experience Cloud應用程式提供資料管理和治理功能，可協助公司的隱私權需求。 這些工具包括資料使用標籤、角色存取控制、IP模糊化和雜湊功能。
+Adobe Experience Cloud的應用程式提供資料管理和管理功能，可協助公司的隱私權需求。 這些工具包括資料使用標籤、角色存取控制、IP模糊化和雜湊功能。
 
-Adobe已取得多項隱私權與安全性實務認證，例如ISO 27001認證和TrustArc GDPR驗證。
+Adobe已獲得多項隱私權與安全性實務認證，例如ISO 27001認證和TrustArc GDPR驗證。
 
 ## GDPR問題
 
