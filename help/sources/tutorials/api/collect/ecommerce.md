@@ -2,14 +2,14 @@
 keywords: Experience Platform;home；熱門主題；收集電子商務資料；電子商務資料
 solution: Experience Platform
 title: 使用來源連接器和API收集電子商務資料
-topic: overview
+topic-legacy: overview
 type: Tutorial
 description: 本教學課程涵蓋從協力廠商電子商務系統擷取資料，並使用來源連接器和API將其匯入平台的步驟。
 exl-id: 0952f037-5e20-4d84-a2e6-2c9470f168f5
 translation-type: tm+mt
-source-git-commit: 610ce5c6dca5e7375b941e7d6f550382da10ca27
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '1521'
+source-wordcount: '1519'
 ht-degree: 1%
 
 ---
@@ -75,7 +75,7 @@ ht-degree: 1%
 POST /sourceConnections
 ```
 
-**請求**
+**要求**
 
 ```shell
 curl -X POST \
@@ -141,7 +141,7 @@ curl -X POST \
 POST /tenant/schemas
 ```
 
-**請求**
+**要求**
 
 以下示例請求建立一個XDM模式以擴展XDM [!DNL Individual Profile]類。
 
@@ -249,7 +249,7 @@ curl -X POST \
 POST /dataSets
 ```
 
-**請求**
+**要求**
 
 ```shell
 curl -X POST \
@@ -295,7 +295,7 @@ curl -X POST \
 POST /targetConnections
 ```
 
-**請求**
+**要求**
 
 ```shell
 curl -X POST \
@@ -353,7 +353,7 @@ curl -X POST \
 POST /mappingSets
 ```
 
-**請求**
+**要求**
 
 ```shell
 curl -X POST \
@@ -414,7 +414,7 @@ curl -X POST \
 GET /flowSpecs?property=name=="CRMToAEP"
 ```
 
-**請求**
+**要求**
 
 ```shell
 curl -X GET \
@@ -674,7 +674,7 @@ curl -X GET \
 POST /flows
 ```
 
-**請求**
+**要求**
 
 ```shell
 curl -X POST \
