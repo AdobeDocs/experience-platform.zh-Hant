@@ -1,29 +1,29 @@
 ---
-keywords: Experience Platform;home；熱門主題；Oracle Object Storage;Oracle對象儲存
+keywords: Experience Platform；首頁；熱門主題；Oracle對象儲存；oracle對象儲存
 solution: Experience Platform
 title: 在UI中建立Oracle對象儲存源連接
-topic: overview
+topic-legacy: overview
 type: Tutorial
-description: 瞭解如何使用Adobe Experience Platform UI建立Oracle Object Storage來源連線。
+description: 瞭解如何使用Adobe Experience PlatformUI建立Oracle對象儲存源連接。
+exl-id: 32284163-5dde-4171-8977-f76ceeebcef2
 translation-type: tm+mt
-source-git-commit: c1453a9f0be42f834d35af871051324df8dadf80
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '464'
+source-wordcount: '446'
 ht-degree: 1%
 
 ---
 
-
 # 在UI中建立[!DNL Oracle Object Storage]源連接
 
-本教學課程提供使用Adobe Experience Platform UI建立[!DNL Oracle Object Storage]來源連線的步驟。
+本教學課程提供使用Adobe Experience PlatformUI建立[!DNL Oracle Object Storage]源連接的步驟。
 
 ## 快速入門
 
-本教學課程需要對Adobe Experience Platform的下列元件有正確的認識：
+本教學課程需要對Adobe Experience Platform的下列部分有正確的理解：
 
-* [來源](../../../../home.md):Experience Platform可讓您從各種來源擷取資料，同時讓您能夠使用平台服務來建構、標示和增強傳入資料。
-* [沙盒](../../../../../sandboxes/home.md):Experience Platform提供虛擬沙盒，可將單一Platform實例分割為不同的虛擬環境，以協助開發和發展數位體驗應用程式。
+* [來源](../../../../home.md):Experience Platform可讓您從各種來源擷取資料，同時讓您能夠使用平台服務來建構、標示並增強傳入資料。
+* [沙盒](../../../../../sandboxes/home.md):Experience Platform提供虛擬沙盒，可將單一平台實例分割為獨立的虛擬環境，以協助開發和發展數位體驗應用程式。
 
 ### 收集必要的認證
 
@@ -37,9 +37,9 @@ ht-degree: 1%
 | `bucketName` | 如果使用者有限制的存取權，則需要允許的儲存貯體名稱。 貯體名稱必須在3到63個字元之間，且必須以字母或數字開頭和結尾，且只能包含小寫字母、數字或連字型大小(`-`)。 貯體名稱的格式不能與IP位址相同。 |
 | `folderPath` | 如果使用者有限制存取權，則需要允許的資料夾路徑。 |
 
-有關如何獲取這些值的詳細資訊，請參閱[《Oracle Object Storage Authentication Guide》](https://docs.oracle.com/en-us/iaas/Content/Identity/Concepts/usercredentials.htm#User_Credentials)。
+有關如何獲取這些值的詳細資訊，請參閱[Oracle對象儲存身份驗證指南](https://docs.oracle.com/en-us/iaas/Content/Identity/Concepts/usercredentials.htm#User_Credentials)。
 
-收集到所需的憑據後，您可以按照以下步驟建立新的Oracle對象儲存帳戶以連接到平台。
+收集完所需的憑據後，您可以按照以下步驟建立新的Oracle對象儲存帳戶以連接到平台。
 
 ## 連接到Oracle對象儲存
 
@@ -47,7 +47,7 @@ ht-degree: 1%
 
 您可以從畫面左側的目錄中選取適當的類別。 或者，您也可以使用搜尋列，找到您要使用的特定來源。
 
-在[!UICONTROL 雲儲存]類別下，選擇&#x200B;**[!UICONTROL Oracle對象儲存]** ，然後選擇&#x200B;**[!UICONTROL 添加資料]**。
+在[!UICONTROL Cloud storage]類別下，選擇&#x200B;**[!UICONTROL Oracle Object Storage]**，然後選擇&#x200B;**[!UICONTROL Add data]**。
 
 ![目錄](../../../../images/tutorials/create/oracle-object-storage/catalog.png)
 
@@ -59,7 +59,7 @@ ht-degree: 1%
 
 ### 新帳戶
 
-如果要建立新帳戶，請選擇&#x200B;**[!UICONTROL 新建帳戶]**，然後提供名稱、可選說明和[!DNL Oracle Object Storage]憑據。 完成後，選擇&#x200B;**[!UICONTROL 連接到源]** ，然後允許新連接建立一段時間。
+如果要建立新帳戶，請選擇&#x200B;**[!UICONTROL New account]**，然後提供名稱、可選說明和[!DNL Oracle Object Storage]憑據。 完成後，選擇&#x200B;**[!UICONTROL Connect to source]** ，然後允許一些時間建立新連接。
 
 ![new](../../../../images/tutorials/create/oracle-object-storage/new.png)
 
