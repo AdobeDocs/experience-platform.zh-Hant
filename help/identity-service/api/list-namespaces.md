@@ -1,17 +1,17 @@
 ---
-keywords: Experience Platform;home；熱門主題；namespace list;list namespace
+keywords: Experience Platform;home；常用主題；namespace list;list namespace
 solution: Experience Platform
 title: 列出可用身份名稱空間
-topic: API guide
+topic-legacy: API guide
 description: 列出所有可用的名稱空間。
+exl-id: b65e5f86-143d-4ca5-8b3f-2c0a24433bbf
 translation-type: tm+mt
-source-git-commit: 73035aec86297cfc4ee9337cf922d599001379c3
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '83'
-ht-degree: 4%
+source-wordcount: '79'
+ht-degree: 5%
 
 ---
-
 
 # 列出可用的身份名稱空間
 
@@ -21,7 +21,7 @@ ht-degree: 4%
 GET /idnamespace/identities
 ```
 
-**請求**
+**要求**
 
 ```shell
 curl -X GET \
@@ -34,7 +34,7 @@ curl -X GET \
 
 **回應**
 
-響應包括對象陣列，每個對象表示可用的命名空間。 「[!UICONTROL custom]」值為「[!UICONTROL false]」的名稱空間是標準名稱空間，而「[!UICONTROL custom]」值為「[!UICONTROL true]」的名稱空間是貴組織已建立的名稱空間。
+響應包括對象陣列，每個對象表示可用的命名空間。 「[!UICONTROL custom]」值為「[!UICONTROL false]」的名稱空間是標準名稱空間，而「[!UICONTROL custom]」值為「[!UICONTROL true]」的名稱空間是您的組織已建立的名稱空間。
 
 >[!NOTE]
 >
