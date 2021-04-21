@@ -1,17 +1,17 @@
 ---
-keywords: Experience Platform；首頁；熱門主題；CJA；歷程分析；客戶歷程分析；宣傳協調；客戶歷程；歷程；歷程協調；功能；地區
+keywords: Experience Platform；首頁；熱門主題；CJA；歷程分析；客戶歷程分析；宣傳協調；客戶歷程；歷程協調；能力；地區
 solution: Experience Platform
 title: Experience Platform檔案語言支援
-topic: getting started
-description: Adobe Experience Platform可讓組織在套用資料科學和機器學習之前，集中化和標準化客戶資料，以大幅改善多樣化個人化體驗的設計和傳遞。
+topic-legacy: getting started
+description: Adobe Experience Platform讓組織在應用資料科學和機器學習之前，先將客戶資料集中化並標準化，以大幅改善多樣化個人化體驗的設計和提供。
+exl-id: 52acf8fb-8420-4fe3-8b8b-b7bfea465d25
 translation-type: tm+mt
-source-git-commit: 5575d5e45bddcc007dcf78720cd7a7e20475f78c
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '103'
 ht-degree: 0%
 
 ---
-
 
 # Experience Platform檔案語言支援
 
