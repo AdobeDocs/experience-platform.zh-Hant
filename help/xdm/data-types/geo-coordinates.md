@@ -2,20 +2,20 @@
 keywords: Experience Platform;home；熱門主題；模式；模式；XDM;fields;schemas;geo;coordinates;datatype；資料類型；
 solution: Experience Platform
 title: 地理坐標資料類型
-topic: overview
+topic-legacy: overview
 description: 本檔案概述「地理座標XDM」資料類型。
+exl-id: 3c80eb44-852f-4a95-bd13-b6197ffe62da
 translation-type: tm+mt
-source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '131'
+source-wordcount: '127'
 ht-degree: 5%
 
 ---
 
+# [!UICONTROL Geo Coordinates] 資料類型
 
-# [!UICONTROL 地理] 協調資料類型
-
-[!UICONTROL 地] 理坐標是一種標準的XDM資料類型，用於描述地理坐標。此資料類型基於[schema.org](https://schema.org/GeoCoordinates)上記載的公共規範。
+[!UICONTROL Geo Coordinates] 是一種標準的XDM資料類型，用於描述地理坐標。此資料類型基於[schema.org](https://schema.org/GeoCoordinates)上記載的公共規範。
 
 <img src="../images/data-types/geo-coordinates.png" width="400" /><br />
 
