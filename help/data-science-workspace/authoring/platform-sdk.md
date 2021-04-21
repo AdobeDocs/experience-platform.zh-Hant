@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform；開發人員指南；SDK;Data Access SDK;Data Science Workspace；熱門主題
 solution: Experience Platform
-title: 使用Adobe Experience Platform Platform SDK進行模型製作
-topic: SDK authoring
+title: 使用Adobe Experience Platform平台SDK進行模型製作
+topic-legacy: SDK authoring
 description: 本教學課程提供有關在Python和R中將data_access_sdk_python轉換為新Python平台_sdk的資訊。
+exl-id: 20909cae-5cd2-422b-8dbb-35bc63e69b2a
 translation-type: tm+mt
-source-git-commit: f6cfd691ed772339c888ac34fcbd535360baa116
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '495'
 ht-degree: 5%
 
 ---
 
-
-# 使用Adobe Experience Platform [!DNL Platform] SDK進行模型製作
+# 使用Adobe Experience Platform[!DNL Platform] SDK進行模型製作
 
 本教程提供有關在Python和R中將`data_access_sdk_python`轉換為新Python `platform_sdk`的資訊。本教學課程提供下列操作的相關資訊：
 
