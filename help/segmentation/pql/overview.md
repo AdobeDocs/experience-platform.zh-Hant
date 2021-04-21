@@ -1,17 +1,17 @@
 ---
-keywords: Experience Platform;home；熱門主題；PQL;pql；配置檔案查詢語言
+keywords: Experience Platform；首頁；熱門主題；PQL;pql；配置檔案查詢語言
 solution: Experience Platform
 title: 配置檔案查詢語言(PQL)概述
-topic: developer guide
+topic-legacy: developer guide
 description: 本指南提供PQL的一般概述，涵蓋格式准則並提供PQL表達式示例。
+exl-id: 4f7ab50e-89a3-42db-b74a-c6f2d86c9bcb
 translation-type: tm+mt
-source-git-commit: b3defc3e33a55855e307ab70b9797d985d5719e3
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '715'
 ht-degree: 2%
 
 ---
-
 
 # [!DNL Profile Query Language] (PQL)概述
 
@@ -65,7 +65,7 @@ PQL支援以下常值類型：
 | 布林值 | True或false的資料類型。 | `true`, `false` |
 | 整數 | 表示整數的資料類型。 可以是正面、負面或零。 | `-201`,  `0`  `412` |
 | 雙倍 | 表示任何實數的資料類型。 可以是正面、負面或零。 | `-51.24`,  `3.14`  `0.6942058` |
-| 日期 | 一種資料類型，可用來根據年、月和日建立日期作為整數參數。 格式為`date(year, month, day)` | `date(2020, 3, 14)` |
+| Date | 一種資料類型，可用來根據年、月和日建立日期作為整數參數。 格式為`date(year, month, day)` | `date(2020, 3, 14)` |
 | 陣列 | 作為一組其他常值組成的資料類型。 它使用方括弧來分組，使用逗號來分隔不同的值。<br> **注意：** 您無法直接存取陣列中項目的屬性。因此，如果您需要訪問陣列中的屬性，則支援的方法為`select X from array where X.item = ...`。 <br> PQL保留該字詞 `xEvent` 以引用連結至描述檔的體驗事件陣列。 | `[1, 4, 7]`的  `["US", "CA"]` |
 | 相對時間參考 | 可用於形成時間戳記和時間間隔引用的保留字。 <ul><li>現在，今天，昨天，明天</li><li>這個，最後一個，下一個</li><li>之前，之後，從</li><li>毫秒，秒，分鐘，小時，日，周，月，年，十年，世紀／世紀，千年／千年</li></ul> | `X.timestamp occurs before today`,  `X.timestamp occurs last month`  `X.timestamp occurs <= 3 days before now` |
 
