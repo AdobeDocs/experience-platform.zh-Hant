@@ -1,25 +1,25 @@
 ---
-keywords: Experience Platform;home；熱門主題；架構；架構；Schema;XDM;ExperienceEvent;fields;schemas;Schema設計；mixin;mixin;enduserids；最終用戶；IDS;
+keywords: Experience Platform;home；熱門主題；模式；模式；XDM;ExperienceEvent;fields;schemas；模式設計；mixin;mixin;enduserids；最終用戶；ids;
 solution: Experience Platform
 title: 最終用戶ID詳細資料混合
-topic: overview
+topic-legacy: overview
 description: 本檔案提供「使用者ID詳細資料」混合檔的概觀。
+exl-id: ff5b74f4-7700-4d10-821e-b50f80ea8c05
 translation-type: tm+mt
-source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '196'
+source-wordcount: '188'
 ht-degree: 1%
 
 ---
 
-
-# [!UICONTROL 使用者ID詳細資] 訊mixin
+# [!UICONTROL End User ID Details] mixin
 
 >[!NOTE]
 >
 >幾個混音的名字已經改變。 如需詳細資訊，請參閱[mixin name updates](../name-updates.md)上的檔案。
 
-[!UICONTROL 使用者ID詳] 細資訊是類別的標準混 [[!DNL XDM ExperienceEvent] 合檔](../../classes/individual-profile.md)，用來說明個人在數個Adobe應用程式中的身分資訊。mixin提供根級別`endUserIDs`物件，其本身包含唯讀`_experience`欄位，當擷取資料時，其值會自動更新。
+[!UICONTROL End User ID Details] 是類別的標準混合 [[!DNL XDM ExperienceEvent] 檔](../../classes/individual-profile.md)，用於描述個人在數個Adobe應用程式中的身分資訊。mixin提供根級別`endUserIDs`物件，其本身包含唯讀`_experience`欄位，當擷取資料時，其值會自動更新。
 
 <img src="../../images/mixins/enduserids.png" width="700" /><br />
 
@@ -30,7 +30,7 @@ ht-degree: 1%
 | `acid` | [身份](../../data-types/identity.md) | Adobe Campaign的使用者ID。 |
 | `adcloud` | [身份](../../data-types/identity.md) | Adobe Advertising Cloud的使用者ID。 |
 | `emailid` | [身份](../../data-types/identity.md) | 電子郵件地址ID。 |
-| `mcid` | [身份](../../data-types/identity.md) | Adobe Marketing Cloud ID。 |
+| `mcid` | [身份](../../data-types/identity.md) | Adobe Marketing CloudID。 |
 | `phonenumberid` | [身份](../../data-types/identity.md) | 電話號碼ID。 |
 | `tntid` | [身份](../../data-types/identity.md) | Adobe Target的使用者ID。 |
 
