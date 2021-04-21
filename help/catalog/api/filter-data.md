@@ -2,13 +2,13 @@
 keywords: Experience Platform;home；熱門主題；filter;Filter;filter data;filter data;date range
 solution: Experience Platform
 title: 使用查詢參數篩選目錄資料
-topic: developer guide
+topic-legacy: developer guide
 description: 目錄服務API允許透過使用請求查詢參數來篩選回應資料。 目錄的最佳實務是在所有API呼叫中使用篩選器，因為這些篩選器可減輕API的負載，並有助於改善整體效能。
 exl-id: 0cdb5a7e-527b-46be-9ad8-5337c8dc72b7
 translation-type: tm+mt
-source-git-commit: 610ce5c6dca5e7375b941e7d6f550382da10ca27
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '2123'
+source-wordcount: '2121'
 ht-degree: 1%
 
 ---
@@ -40,7 +40,7 @@ GET /{OBJECT_TYPE}?limit={LIMIT}
 | `{OBJECT_TYPE}` | 要檢索的[!DNL Catalog]對象的類型。 有效對象包括： <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
 | `{LIMIT}` | 一個整數，表示要返回的對象數，範圍從1到100。 |
 
-**請求**
+**要求**
 
 下列請求會擷取資料集清單，同時限制對三個物件的回應。
 
@@ -109,7 +109,7 @@ GET /{OBJECT_TYPE}/{OBJECT_ID}?properties={PROPERTY_1},{PROPERTY_2},{PROPERTY_3}
 | `{PROPERTY}` | 要包含在響應主體中的屬性的名稱。 |
 | `{OBJECT_ID}` | 要檢索的特定[!DNL Catalog]對象的唯一標識符。 |
 
-**請求**
+**要求**
 
 下列請求會擷取資料集清單。 在`properties`參數下提供的屬性名稱的逗號分隔清單會指出要在回應中傳回的屬性。 也包含`limit`參數，可限制傳回的資料集數目。 如果請求未包含`limit`參數，則回應最多會包含20個物件。
 
@@ -177,7 +177,7 @@ GET /{OBJECT_TYPE}?start={OFFSET}
 | `{OBJECT_TYPE}` | 要檢索的目錄對象的類型。 有效對象包括： <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
 | `{OFFSET}` | 一個整數，表示要偏移響應的對象數。 |
 
-**請求**
+**要求**
 
 以下請求檢索資料集清單，偏移到第五個對象(`start=4`)並限制對兩個返回資料集(`limit=2`)的響應。
 
@@ -270,7 +270,7 @@ GET /{OBJECT_TYPE}?tags={TAG_NAME}:*
 | `{TAG_NAME}` | 要篩選依據的標籤名稱。 |
 | `{TAG_VALUE}` | 要篩選依據的標籤值。 支援萬用字元(`*`)。 |
 
-**請求**
+**要求**
 
 下列請求會擷取資料集的清單，依具有特定值的一個標籤進行篩選，而第二個標籤存在。
 
@@ -349,7 +349,7 @@ GET /batches?createdAfter={TIMESTAMP_1}&createdBefore={TIMESTAMP_2}
 | --- | --- |
 | `{TIMESTAMP }` | Unix Epoch時間中的日期時間整數。 |
 
-**請求**
+**要求**
 
 以下請求會擷取在2019年4月建立的批清單。
 
@@ -417,7 +417,7 @@ GET /{OBJECT_TYPE}?orderBy={PROPERTY_NAME_1},desc:{PROPERTY_NAME_2}
 | `{OBJECT_TYPE}` | 要檢索的目錄對象的類型。 有效對象包括： <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
 | `{PROPERTY_NAME}` | 要按結果排序的屬性的名稱。 |
 
-**請求**
+**要求**
 
 以下請求檢索按其`name`屬性排序的資料集清單。 如果任何資料集共用相同的`name` ，則這些資料集依其`updated`屬性的降序排列。
 
@@ -505,7 +505,7 @@ GET /{OBJECT_TYPE}?{PROPERTY_NAME}=!{VALUE_1},{VALUE_2},{VALUE_3}
 | `{PROPERTY_NAME}` | 您要篩選其值的屬性名稱。 |
 | `{VALUE}` | 一個屬性值，它決定要包括（或排除，視查詢而定）哪些結果。 |
 
-**請求**
+**要求**
 
 下列請求會擷取資料集的清單，篩選為僅包含`name`屬性值為&quot;exampleName&quot;或&quot;anotherName&quot;的資料集。
 
@@ -598,7 +598,7 @@ GET /{OBJECT_TYPE}?property={CONDITION}
 >
 >`name`屬性支援使用萬用字元`*`作為整個搜尋字串或其一部分。 萬用字元會比對空字元，如此搜尋字串`te*st`就會比對值&quot;test&quot;。 星號加倍(`**`)即可逸出。 搜尋字串中的雙星號代表單一星號做為常值字串。
 
-**請求**
+**要求**
 
 以下請求將返回版本號大於1.0.3的任何資料集。
 
