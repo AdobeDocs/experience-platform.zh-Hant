@@ -1,21 +1,21 @@
 ---
-keywords: 體驗平台； home；熱門主題；查詢服務；查詢服務；postico; Postico；連接查詢服務；
+keywords: Experience Platform; home；熱門主題；查詢服務；查詢服務；postico; Postico；連接到查詢服務；
 solution: Experience Platform
 title: 將Postico連接至查詢服務
-topic: connect
-description: 本檔案包含安裝Adobe Experience Platform Query Service備份用戶端Postico的連結。
+topic-legacy: connect
+description: 本文檔包含用於安裝備份客戶端Postico forAdobe Experience Platform查詢服務的連結。
+exl-id: a19abfc8-b431-4e57-b44d-c6130041af4a
 translation-type: tm+mt
-source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '253'
+source-wordcount: '251'
 ht-degree: 0%
 
 ---
 
-
 # 將[!DNL Postico]連接到查詢服務(Mac)
 
-本檔案涵蓋連接[!DNL Postico]與Adobe Experience Platform [!DNL Query Service]的步驟。
+本文檔介紹將[!DNL Postico]與Adobe Experience Platform[!DNL Query Service]連接的步驟。
 
 >[!NOTE]
 >
@@ -29,7 +29,7 @@ ht-degree: 0%
 
 您現在可以輸入值以連接Adobe Experience Platform。
 
-有關查找資料庫名稱、主機、埠和登錄憑據的詳細資訊，請訪問Platform](https://platform.adobe.com/query/configuration)上的[ credentials頁。 要查找憑據，請登錄到[!DNL Platform]，然後選擇&#x200B;**[!UICONTROL 查詢]**，然後選擇&#x200B;**[!UICONTROL 憑據]**。
+有關查找資料庫名稱、主機、埠和登錄憑據的詳細資訊，請訪問Platform](https://platform.adobe.com/query/configuration)上的[ credentials頁。 若要尋找您的認證，請登入[!DNL Platform]，然後選取&#x200B;**[!UICONTROL Queries]**，後面接著&#x200B;**[!UICONTROL Credentials]**。
 
 插入憑據後，選擇&#x200B;**[!DNL Connect]**&#x200B;以連接查詢服務。
 
