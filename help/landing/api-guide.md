@@ -2,16 +2,16 @@
 keywords: Experience Platform；首頁；熱門主題；Adobe Experience Platform;api指南；平台api指南；平台簡介；開發人員指南
 solution: Experience Platform
 title: 開始使用Adobe Experience PlatformAPI
-topic: api guide
+topic-legacy: api guide
 description: Adobe Experience Platform提供彼此緊密連結的API服務。 本指南包含可用服務、CRUD作業所需標題、錯誤訊息、Postman系列和範例API呼叫的相關資訊。
+exl-id: a362bcb4-a908-43a8-abd3-0e1d21cb9117
 translation-type: tm+mt
-source-git-commit: 85d2ae5ccf1b27baaafe839f1d3f00d588abe4fc
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '1427'
+source-wordcount: '1425'
 ht-degree: 0%
 
 ---
-
 
 # 開始使用Adobe Experience PlatformAPI
 
@@ -71,7 +71,7 @@ API格式顯示所使用的操作(GET)和端點。 變數會以大括弧表示�
 GET /{CONTAINER_ID}/classes
 ```
 
-**請求**
+**要求**
 
 在此範例請求中，API格式的變數會在請求路徑中指定實際值。 此外，所有必要的標題都會顯示為範例標題值或變數，其中應包含敏感資訊（例如安全性Token和存取ID）。
 
@@ -147,4 +147,3 @@ curl -X GET \
 有關常見問題的解答，請參閱[平台疑難排解指南](troubleshooting.md)。
 
 要設定郵遞員環境並探索可用的郵遞員系列，請參閱[平台郵遞員指南](postman.md)。
-
