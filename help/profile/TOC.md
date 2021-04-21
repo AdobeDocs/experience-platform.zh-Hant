@@ -1,11 +1,10 @@
 ---
-product: experience-platform
 audience: user
 user-guide-title: 即時客戶設定檔指南
 user-guide-description: 合併客戶資料，以建立跨通道客戶互動的統一檢視。
-feature: Profiles
+feature: 設定檔
 translation-type: tm+mt
-source-git-commit: ac6935f09f620ea55cf8f612ff0a1fba503b5e17
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '123'
 ht-degree: 20%
@@ -15,7 +14,7 @@ ht-degree: 20%
 
 # [!DNL Real-time Customer Profile] {#profile}
 
-* [[!DNL Profile] 概述](home.md)
+* [[!DNL Profile] 概觀](home.md)
 * [描述檔概觀（視訊）](video/profile-overview.md)
 * [[!DNL Profile] 護欄](guardrails.md)
 * [!DNL Profile] API {#api}
@@ -36,7 +35,7 @@ ht-degree: 20%
    * [聯合架構UI指南](ui/union-schema.md)
    * [聯合架構概觀（視訊）](video/union-schemas-overview.md)
 * (Alpha)計算屬性{#computed-attributes}
-   * [概述](computed-attributes/overview.md)
+   * [概覽](computed-attributes/overview.md)
    * [計算屬性API](computed-attributes/ca-api.md)
    * [配置計算屬性欄位](computed-attributes/configure-api.md)
    * [範例運算式](computed-attributes/expressions.md)
