@@ -1,28 +1,28 @@
 ---
-keywords: Experience Platform;home；熱門主題；api;API;XDM;XDM系統；體驗資料模型；Experience資料模型；資料模型；模式註冊；模式註冊；模式；模式；模式；模式；模式；模式；模式；建立
+keywords: Experience Platform;home；熱門主題；api;API;XDM;XDM系統；體驗資料模型；體驗資料模型；資料模型；模式註冊；模式註冊；模式；模式；模式；模式；模式；模式；建立
 solution: Experience Platform
 title: 使用方案註冊表API建立方案
-topic: tutorial
+topic-legacy: tutorial
 type: Tutorial
 description: 本教程使用方案註冊表API來引導您完成使用標準類合成方案的步驟。
+exl-id: fa487a5f-d914-48f6-8d1b-001a60303f3d
 translation-type: tm+mt
-source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '2373'
 ht-degree: 1%
 
 ---
 
-
 # 使用[!DNL Schema Registry] API建立結構
 
-[!DNL Schema Registry]用於存取Adobe Experience Platform內的[!DNL Schema Library]。 [!DNL Schema Library]包含由Adobe、[!DNL Experience Platform]合作夥伴及您使用應用程式的廠商提供給您的資源。 註冊表提供用戶介面和REST風格的API，可從中訪問所有可用的庫資源。
+[!DNL Schema Registry]用於訪問Adobe Experience Platform內的[!DNL Schema Library]。 [!DNL Schema Library]包含您所使用應用程式的Adobe、[!DNL Experience Platform]合作夥伴和廠商所提供的資源。 註冊表提供用戶介面和REST風格的API，可從中訪問所有可用的庫資源。
 
 本教程使用[!DNL Schema Registry] API來引導您完成使用標準類來構建架構的步驟。 如果您希望使用[!DNL Experience Platform]中的用戶介面，[架構編輯器教程](create-schema-ui.md)將提供在架構編輯器中執行類似操作的逐步說明。
 
 ## 快速入門
 
-本指南需要有效瞭解Adobe Experience Platform的下列元件：
+本指南需要對Adobe Experience Platform的下列組成部分有切實的瞭解：
 
 * [[!DNL Experience Data Model (XDM) System]](../home.md):組織客戶體驗資 [!DNL Experience Platform] 料的標準化架構。
    * [架構構成基礎](../schema/composition.md):瞭解XDM架構的基本建置區塊，包括架構組合的主要原則和最佳實務。
@@ -41,7 +41,7 @@ ht-degree: 1%
 
 模式合成過程從選擇類開始。 該類定義了資料的關鍵行為方面（記錄與時間序列），以及描述將接收的資料所需的最小欄位。
 
-您在本教程中建立的架構使用[!DNL XDM Individual Profile]類別。 [!DNL XDM Individual Profile] 是Adobe提供的標準類別，用於定義記錄行為。有關行為的詳細資訊，請參閱[架構構成基礎](../schema/composition.md)。
+您在本教程中建立的架構使用[!DNL XDM Individual Profile]類別。 [!DNL XDM Individual Profile] 是Adobe提供的標準類，用於定義記錄行為。有關行為的詳細資訊，請參閱[架構構成基礎](../schema/composition.md)。
 
 若要指派類別，會進行API呼叫，以在租用戶容器中建立(POST)新架構。 此呼叫包含架構將實作的類別。 每個架構只能實現一個類。
 
@@ -51,7 +51,7 @@ ht-degree: 1%
 POST /tenant/schemas
 ```
 
-**請求**
+**要求**
 
 請求必須包含`allOf`屬性，該屬性引用類的`$id`。 此屬性定義了方案將實施的「基本類」。 在此示例中，基本類是[!DNL XDM Individual Profile]類。 [!DNL XDM Individual Profile]類的`$id`用作下面`allOf`陣列中`$ref`欄位的值。
 
@@ -117,7 +117,7 @@ curl -X POST \
 
 ### 查找架構
 
-若要檢視新建立的架構，請使用架構的`meta:altId`或URL編碼的`$id` URI來執行查閱(GET)請求。
+要查看新建立的架構，請使用架構的`meta:altId`或URL編碼的`$id` URI執行查找(GET)請求。
 
 **API格式**
 
@@ -125,7 +125,7 @@ curl -X POST \
 GET /tenant/schemas/{schema meta:altId or URL encoded $id URI}
 ```
 
-**請求**
+**要求**
 
 ```SHELL
 curl -X GET \
@@ -191,7 +191,7 @@ Mixins定義了「名稱」或「地址」等概念，這些概念可在任何�
 PATCH /tenant/schemas/{schema meta:altId or url encoded $id URI}
 ```
 
-**請求**
+**要求**
 
 此請求會更新(PATCH)「忠誠度成員」結構，以在「個人資料——人員——詳細資料」混合中包含欄位。
 
@@ -260,7 +260,7 @@ curl -X PATCH \
 
 >[!TIP]
 >
->請務必檢閱所有可用的混音，以熟悉每個混音中所包含的欄位。 您可以針對每個「全域」和「租用戶」容器執行請求，列出(GET)所有可用於特定類別的混音，只傳回「meta:intededToExtend」欄位符合您所使用類別的混音。 在這種情況下，它是[!DNL XDM Individual Profile]類，因此使用[!DNL XDM Individual Profile] `$id` :
+>請務必檢閱所有可用的混音，以熟悉每個混音中所包含的欄位。 您可以針對「全域」和「租用戶」容器執行請求，列出(GET)所有可與特定類別搭配使用的混音，只傳回「meta:intededToExtend」欄位符合您所使用類別的混音。 在這種情況下，它是[!DNL XDM Individual Profile]類，因此使用[!DNL XDM Individual Profile] `$id` :
 
 ```http
 GET /global/mixins?property=meta:intendedToExtend==https://ns.adobe.com/xdm/context/profile
@@ -273,7 +273,7 @@ GET /tenant/mixins?property=meta:intendedToExtend==https://ns.adobe.com/xdm/cont
 PATCH /tenant/schemas/{schema meta:altId or url encoded $id URI}
 ```
 
-**請求**
+**要求**
 
 此請求會更新(PATCH)「忠誠度成員」結構，以在「個人資料——個人詳細資料」混合中包含欄位，並新增「首頁位址」、「電子郵件地址」和「首頁電話」欄位至結構。
 
@@ -356,7 +356,7 @@ curl -X PATCH \
 POST /tenant/mixins
 ```
 
-**請求**
+**要求**
 
 此請求會建立新的混音，其中包含「忠誠度」物件，其中包含4個忠誠度方案特定欄位：&quot;loyaltyId&quot;、&quot;loyaltyLevel&quot;、&quot;loyaltyPoints&quot;和&quot;memberSince&quot;。
 
@@ -506,7 +506,7 @@ curl -X POST\
 PATCH /tenant/schemas/{schema meta:altId or url encoded $id URI}
 ```
 
-**請求**
+**要求**
 
 此請求會更新(PATCH)「忠誠度成員」結構，以在新的「忠誠度成員詳細資料」混合中包含欄位。
 
@@ -585,7 +585,7 @@ curl -X PATCH \
 GET /tenant/schemas/{schema meta:altId or URL encoded $id URI}
 ```
 
-**請求**
+**要求**
 
 ```SHELL
 curl -X GET \
@@ -703,7 +703,7 @@ curl -X GET \
 POST /tenant/datatypes
 ```
 
-**請求**
+**要求**
 
 定義資料類型不需要`meta:extends`或`meta:intendedToExtend`欄位，也不需要巢狀化欄位以避免衝突。
 
@@ -830,7 +830,7 @@ curl -X POST \
 PATCH /tenant/mixins/{mixin meta:altId or URL encoded $id URI}
 ```
 
-**請求**
+**要求**
 
 ```SHELL
 curl -X PATCH \
@@ -972,7 +972,7 @@ curl -X PATCH \
 POST /tenant/descriptors
 ```
 
-**請求**
+**要求**
 
 以下請求在&quot;loyaltyId&quot;欄位上定義身分描述符。 這會告訴[!DNL Experience Platform]使用唯一的忠誠度方案成員識別碼（在本例中為成員的電子郵件地址），以協助將個人相關資訊結合在一起。
 
@@ -1033,7 +1033,7 @@ curl -X POST \
 PATCH /tenant/schemas/{meta:altId or the url encoded $id URI}
 ```
 
-**請求**
+**要求**
 
 ```SHELL
 curl -X PATCH \
@@ -1105,7 +1105,7 @@ curl -X PATCH \
 
 ### 列出聯合中的結構
 
-您現在已成功將模式添加到[!DNL XDM Individual Profile]聯合。 為了查看屬於同一聯合的所有方案的清單，您可以使用查詢參數來執行GET請求以篩選響應。
+您現在已成功將模式添加到[!DNL XDM Individual Profile]聯合。 為了查看屬於同一聯合的所有方案的清單，您可以使用查詢參數來GET響應，以執行請求。
 
 使用`property`查詢參數，可以指定只返回包含`meta:immutableTags`欄位的方案，該欄位的`meta:class`等於[!DNL XDM Individual Profile]類的`$id`。
 
@@ -1115,7 +1115,7 @@ curl -X PATCH \
 GET /tenant/schemas?property=meta:immutableTags==union&property=meta:class=={CLASS_ID}
 ```
 
-**請求**
+**要求**
 
 下面的示例請求返回屬於[!DNL XDM Individual Profile]聯合的所有方案。
 
@@ -1171,11 +1171,11 @@ curl -X GET \
 
 ## 後續步驟
 
-在本教程中，您已成功使用定義的標準混音和混音合成了模式。 您現在可以使用此架構來建立資料集，並將記錄資料收錄到Adobe Experience Platform。
+在本教程中，您已成功使用定義的標準混音和混音合成了模式。 您現在可以使用此架構來建立資料集，並將記錄資料內嵌至Adobe Experience Platform。
 
 在本教學課程中建立的完整「忠誠會員」結構，可在下列附錄中取得。 當您檢視結構時，您可以看到混音對整體結構的貢獻，以及哪些欄位可用於資料擷取。
 
-建立多個模式後，可以通過使用關係描述符來定義它們之間的關係。 如需詳細資訊，請參閱[定義兩個架構之間關係的教學課程。 ](relationship-api.md)有關如何在註冊表中執行所有操作（GET、POST、PUT、PATCH和DELETE）的詳細示例，請在使用API時參閱[方案註冊表開發人員指南](../api/getting-started.md)。
+建立多個模式後，可以通過使用關係描述符來定義它們之間的關係。 如需詳細資訊，請參閱[定義兩個架構之間關係的教學課程。 ](relationship-api.md)有關如何在註冊表中執行所有操作(GET、POST、PUT、PATCH和DELETE)的詳細示例，請在使用API時參閱[方案註冊表開發人員指南](../api/getting-started.md)。
 
 ## 附錄 {#appendix}
 
