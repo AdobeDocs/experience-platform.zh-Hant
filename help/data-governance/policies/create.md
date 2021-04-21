@@ -1,18 +1,18 @@
 ---
-keywords: Experience Platform;home；熱門主題；資料治理；資料使用策略
+keywords: Experience Platform；首頁；熱門主題；資料治理；資料使用策略
 solution: Experience Platform
 title: 在API中建立資料使用原則
-topic: policies
+topic-legacy: policies
 type: Tutorial
 description: 「原則服務API」可讓您建立和管理資料使用原則，以決定對包含特定資料使用標籤的資料可採取哪些行銷動作。 本檔案提供使用Policy Service API建立原則的逐步教學課程。
+exl-id: 8483f8a1-efe8-4ebb-b074-e0577e5a81a4
 translation-type: tm+mt
-source-git-commit: 55a54463e918fc62378c660ef17f36e2ede471e0
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '1219'
 ht-degree: 2%
 
 ---
-
 
 # 在API中建立資料使用原則
 
@@ -42,7 +42,7 @@ ht-degree: 2%
 
 ### 尋找現有的行銷動作{#look-up}
 
-您可以對`/marketingActions`端點之一提出GET請求，以查找要由策略評估的現有行銷操作。
+您可以向`/marketingActions`端點之一提出GET請求，以尋找由策略評估的現有行銷動作。
 
 **API格式**
 
@@ -53,7 +53,7 @@ GET /marketingActions/core
 GET /marketingActions/custom
 ```
 
-**請求**
+**要求**
 
 下列請求使用`marketingActions/custom`端點，此端點會擷取IMS組織所定義之所有行銷動作的清單。
 
@@ -127,7 +127,7 @@ curl -X GET \
 
 ### 建立新的行銷動作{#create-new}
 
-您可以透過向`/marketingActions/custom/`端點提出PUT請求並在請求路徑結尾提供行銷動作的名稱，來建立新的行銷動作。
+您可以透過向`/marketingActions/custom/`端點提出PUT請求，並在請求路徑結尾提供行銷動作的名稱，來建立新的行銷動作。
 
 **API格式**
 
@@ -139,7 +139,7 @@ PUT /marketingActions/custom/{MARKETING_ACTION_NAME}
 | --- | --- |
 | `{MARKETING_ACTION_NAME}` | 您要建立之新行銷動作的名稱。 此名稱會當做行銷動作的主要識別碼，因此必須是唯一的。 最佳實務是為行銷動作指定描述性但簡明的名稱。 |
 
-**請求**
+**要求**
 
 下列請求會建立新的自訂行銷動作，稱為「exportToThirdParty」。 請注意，請求裝載中的`name`與請求路徑中提供的名稱相同。
 
@@ -231,7 +231,7 @@ curl -X PUT \
 POST /policies/custom
 ```
 
-**請求**
+**要求**
 
 下列請求會在請求裝載中提供行銷動作和原則運算式，以建立稱為「將資料匯出至第三方」的原則。
 
@@ -330,7 +330,7 @@ curl -X POST \
 >
 >如果您希望將策略保留為`DRAFT`狀態，則此步驟是可選的，但請注意，預設情況下，策略的狀態必須設定為`ENABLED`，才能參與評估。 有關如何對`DRAFT`狀態的策略進行例外的資訊，請參閱[策略實施](../enforcement/api-enforcement.md)指南。
 
-預設情況下，其`status`屬性設定為`DRAFT`的策略不參與評估。 通過向`/policies/custom/`端點發出PATCH請求並在請求路徑末尾為策略提供唯一標識符，可以啟用策略進行評估。
+預設情況下，其`status`屬性設定為`DRAFT`的策略不參與評估。 您可以通過向`/policies/custom/`端點發出PATCH請求並在請求路徑末尾提供策略的唯一標識符來啟用策略以進行評估。
 
 **API格式**
 
@@ -342,7 +342,7 @@ PATCH /policies/custom/{POLICY_ID}
 | --- | --- |
 | `{POLICY_ID}` | 要啟用的策略的`id`值。 |
 
-**請求**
+**要求**
 
 以下請求對策略的`status`屬性執行PATCH操作，將其值從`DRAFT`更改為`ENABLED`。
 
@@ -365,7 +365,7 @@ curl -X PATCH \
 
 | 屬性 | 說明 |
 | --- | --- |
-| `op` | 要執行的PATCH操作的類型。 此請求會執行「取代」操作。 |
+| `op` | 要執行的PATCH操作類型。 此請求會執行「取代」操作。 |
 | `path` | 要更新的欄位的路徑。 啟用策略時，值必須設定為「/status」。 |
 | `value` | 要分配給`path`中指定屬性的新值。 此請求將策略的`status`屬性設定為「ENABLED」。 |
 
