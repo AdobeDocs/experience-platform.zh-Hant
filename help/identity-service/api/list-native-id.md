@@ -2,16 +2,16 @@
 keywords: Experience Platform;home；熱門主題；identity xid;XID
 solution: Experience Platform
 title: 取得身分的原生ID
-topic: API guide
+topic-legacy: API guide
 description: 身分資料通常在所接收的XDM資料中以ID字串值和身分命名空間的形式提供，並在提供身分以供API呼叫使用時提供。 當身分識別保存在Identity Service中時，會產生ID並指派給該身分，稱為原生XID。 需要身分資料支援的平台API，使用這個更精簡的表單來匯整ID和命名空間。 XID是base64編碼字串。
+exl-id: e734f5d8-e00b-43fa-b06c-97c73e1f7c71
 translation-type: tm+mt
-source-git-commit: 73035aec86297cfc4ee9337cf922d599001379c3
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '231'
 ht-degree: 0%
 
 ---
-
 
 # 取得身分的原生ID
 
@@ -29,7 +29,7 @@ ht-degree: 0%
 GET https://platform-{REGION}.adobe.io/data/core/identity/identity?namespace={NAMESPACE}&id={ID_VALUE}
 ```
 
-**請求**
+**要求**
 
 ```shell
 curl -X GET \
