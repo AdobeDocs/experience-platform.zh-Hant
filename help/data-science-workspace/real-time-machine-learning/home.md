@@ -2,16 +2,16 @@
 keywords: Experience Platform；開發人員指南；資料科學工作區；熱門主題；即時機器學習；
 solution: Experience Platform
 title: 即時機器學習概觀
-topic: Overview
+topic-legacy: Overview
 description: 即時機器學習功能可大幅提升數位體驗內容對使用者的相關性。 透過在Experience Edge上運用即時參考和持續學習，您就能做到這一點。
+exl-id: 23eb1877-1bdf-4982-b58c-cfb58467035a
 translation-type: tm+mt
-source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '550'
-ht-degree: 2%
+source-wordcount: '547'
+ht-degree: 1%
 
 ---
-
 
 # 即時機器學習概觀(Alpha)
 
@@ -45,7 +45,7 @@ ht-degree: 2%
 
 ### 部署
 
-將模型部署至[!DNL Experience Edge]，以使用預測API端點在[!UICONTROL 服務收藏館]中建立即時機器學習服務。
+將模型部署至[!DNL Experience Edge]，以使用預測API端點在[!UICONTROL Service Gallery]中建立即時機器學習服務。
 
 ### 推理
 
@@ -81,4 +81,3 @@ ht-degree: 2%
 ## 後續步驟
 
 您可以從[快速入門](./getting-started.md)指南開始。 本指南會逐步引導您設定建立即時機器學習模型的所有必要先決條件。
-
