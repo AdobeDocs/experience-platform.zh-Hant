@@ -1,17 +1,17 @@
 ---
-keywords: Experience Platform;home；熱門主題
+keywords: Experience Platform；首頁；熱門主題
 solution: Experience Platform
 title: 隱私權工作API端點
-topic: developer guide
-description: 瞭解如何使用隱私權服務API管理Experience Cloud應用程式的隱私權工作。
+topic-legacy: developer guide
+description: 瞭解如何使用Experience CloudAPI管理Privacy Service應用程式的隱私權工作。
+exl-id: 74a45f29-ae08-496c-aa54-b71779eaeeae
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '1344'
 ht-degree: 1%
 
 ---
-
 
 # 隱私權工作端點
 
@@ -23,7 +23,7 @@ ht-degree: 1%
 
 ## 列出所有作業{#list}
 
-您可以向`/jobs`端點發出GET請求，以查看組織內所有可用隱私作業的清單。
+您可以向`/jobs`端點提出GET請求，以檢視組織內所有可用隱私權工作的清單。
 
 **API格式**
 
@@ -42,7 +42,7 @@ GET /jobs?regulation={REGULATION}&page={PAGE}&size={SIZE}
 | `{PAGE}` | 要顯示的資料頁，使用基於0的編號。 預設值為 `0`。 |
 | `{SIZE}` | 每個頁面上要顯示的結果數。 預設值為`1` ，最大值為`100`。 超過最大值會導致API傳回400碼錯誤。 |
 
-**請求**
+**要求**
 
 下列請求會從頁面大小為50的第三頁開始，擷取IMS組織內所有工作的編頁清單。
 
@@ -64,11 +64,11 @@ curl -X GET \
 
 ## 建立隱私權工作{#create-job}
 
-在建立新工作請求之前，您必須先收集您要存取、刪除或選擇退出銷售之資料主體的相關識別資訊。 在您擁有所需資料後，必須在POST要求的裝載中提供至`/jobs`端點。
+在建立新工作請求之前，您必須先收集您要存取、刪除或選擇退出銷售之資料主體的相關識別資訊。 在您取得所需資料後，必須在`/jobs`端點之POST要求的裝載中提供該資料。
 
 >[!NOTE]
 >
->相容的Adobe Experience Cloud應用程式使用不同的值來識別資料主體。 如需您應用程式所需識別碼的詳細資訊，請參閱[隱私權服務與Experience Cloud應用程式](../experience-cloud-apps.md)指南。 如需決定要傳送至[!DNL Privacy Service]的ID的更一般指引，請參閱隱私權要求中關於[身分資料的檔案](../identity-data.md)。
+>相容的Adobe Experience Cloud應用程式使用不同的值來識別資料主體。 有關應用程式所需標識符的詳細資訊，請參閱[Privacy Service和Experience Cloud應用程式](../experience-cloud-apps.md)上的指南。 如需決定要傳送至[!DNL Privacy Service]的ID的更一般指引，請參閱隱私權要求中關於[身分資料的檔案](../identity-data.md)。
 
 [!DNL Privacy Service] API支援兩種個人資料的工作要求：
 
@@ -89,7 +89,7 @@ curl -X GET \
 POST /jobs
 ```
 
-**請求**
+**要求**
 
 下列請求會建立新的工作請求，由裝載中提供的屬性設定，如下所述。
 
@@ -152,9 +152,9 @@ curl -X POST \
 
 | 屬性 | 說明 |
 | --- | --- |
-| `companyContexts` **(必填)** | 包含貴組織驗證資訊的陣列。 每個列出的識別碼都包含下列屬性： <ul><li>`namespace`:識別碼的名稱空間。</li><li>`value`:識別碼的值。</li></ul>其中一個識別碼使用`imsOrgId`作為`namespace`，其`value`包含IMS組織的唯一ID，這是&#x200B;**required**。 <br/><br/>其他識別碼可以是產品特定的公司限定詞(例如 `Campaign`)，可識別與您組織所屬的Adobe應用程式整合。潛在值包括帳戶名稱、用戶端代碼、租用戶ID或其他應用程式識別碼。 |
+| `companyContexts` **(必填)** | 包含貴組織驗證資訊的陣列。 每個列出的識別碼都包含下列屬性： <ul><li>`namespace`:識別碼的名稱空間。</li><li>`value`:識別碼的值。</li></ul>其中一個識別碼使用`imsOrgId`作為`namespace`，其`value`包含IMS組織的唯一ID，這是&#x200B;**required**。 <br/><br/>其他識別碼可以是特定於產品的公司限定詞(例如 `Campaign`)，用於標識與屬於您組織的Adobe應用程式的整合。潛在值包括帳戶名稱、用戶端代碼、租用戶ID或其他應用程式識別碼。 |
 | `users` **(必填)** | 包含至少一個用戶集合的陣列，您希望訪問或刪除其資訊。 在單一請求中最多可提供1000個使用者ID。 每個用戶對象都包含以下資訊： <ul><li>`key`:用於用戶的標識符，用於限定響應資料中的單獨作業ID。為此值選擇唯一、可輕鬆識別的字串是最佳實務，以便日後輕鬆參考或查閱。</li><li>`action`:列出對用戶資料採取所需操作的陣列。根據您要執行的操作，此陣列必須包括`access`、`delete`或兩者。</li><li>`userIDs`:使用者身分的集合。單一使用者可擁有的身分數目限制為9。 每個身分都由`namespace`、`value`和命名空間限定詞(`type`)組成。 如需這些必要屬性的詳細資訊，請參閱[附錄](appendix.md)。</li></ul> 如需`users`和`userIDs`的詳細說明，請參閱[疑難排解指南](../troubleshooting-guide.md#user-ids)。 |
-| `include` **(必填)** | 要納入您處理中的Adobe產品陣列。 如果此值遺失或空白，則會拒絕請求。 僅包含貴組織已整合的產品。 如需詳細資訊，請參閱附錄中[接受的產品值](appendix.md)一節。 |
+| `include` **(必填)** | 要包含在您處理中的一系列Adobe產品。 如果此值遺失或空白，則會拒絕請求。 僅包含貴組織已整合的產品。 如需詳細資訊，請參閱附錄中[接受的產品值](appendix.md)一節。 |
 | `expandIDs` | 當設為`true`時，此選用屬性代表處理應用程式中ID的最佳化（目前僅[!DNL Analytics]支援）。 若省略，此值預設為`false`。 |
 | `priority` | Adobe Analytics使用的可選屬性，可設定處理請求的優先順序。 接受的值為`normal`和`low`。 如果省略`priority`，則預設行為為`normal`。 |
 | `analyticsDeleteMethod` | 可選屬性，指定Adobe Analytics如何處理個人資料。 此屬性接受兩個可能的值： <ul><li>`anonymize`:指定使用者ID集合所參考的所有資料都會設為匿名。如果省略`analyticsDeleteMethod`，則此為預設行為。</li><li>`purge`:所有資料都會完全移除。</li></ul> |
@@ -230,7 +230,7 @@ GET /jobs/{JOB_ID}
 | --- | --- |
 | `{JOB_ID}` | 您要查詢的工作ID。 此ID在[建立工作](#create-job)和[列出所有工作](#list)的成功API回應中傳回在`jobId`下。 |
 
-**請求**
+**要求**
 
 以下請求將檢索在請求路徑中提供`jobId`的作業的詳細資訊。
 
@@ -343,4 +343,4 @@ curl -X GET \
 
 ## 後續步驟
 
-您現在知道如何使用[!DNL Privacy Service] API來建立和監控隱私權工作。 有關如何使用用戶介面執行相同任務的資訊，請參閱[隱私服務UI概述](../ui/overview.md)。
+您現在知道如何使用[!DNL Privacy Service] API來建立和監控隱私權工作。 有關如何使用用戶介面執行相同任務的資訊，請參閱[Privacy ServiceUI概述](../ui/overview.md)。
