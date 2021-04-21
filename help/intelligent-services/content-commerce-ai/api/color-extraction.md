@@ -1,17 +1,17 @@
 ---
-keywords: Experience Platform；快速入門；內容ai；商務ai；內容與商務ai；顏色提取；顏色提取
+keywords: Experience Platform；入門；內容ai；商務ai；內容與商務ai；顏色提取；顏色提取
 solution: Experience Platform, Intelligent Services
 title: 內容與商務AI API中的顏色提取
-topic: Developer guide
+topic-legacy: Developer guide
 description: 當給定影像時，顏色提取服務可以計算像素顏色的直方圖，並按主色排序到桶中。
+exl-id: 6b3b6314-cb67-404f-888c-4832d041f5ed
 translation-type: tm+mt
-source-git-commit: d10c00694b0a3b2a9da693bd59615b533cfae468
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '712'
 ht-degree: 2%
 
 ---
-
 
 # 色彩擷取
 
@@ -39,7 +39,7 @@ ht-degree: 2%
 POST /services/v1/predict
 ```
 
-**請求**
+**要求**
 
 下列範例要求使用完整影像方法進行色彩擷取。
 
@@ -153,4 +153,4 @@ curl -i -X POST https://sensei.adobe.io/services/v1/predict \
 | 屬性 | 說明 |
 | --- | --- |
 | `content_id` | 在您的POST請求中上傳的影像名稱。 |
-| `feature_value` | 其對象包含具有相同屬性名稱的鍵的陣列。 這些鍵包含一個字串，代表顏色名稱、此顏色相對於在`content_id`中傳送的影像以及顏色的RGB值所顯示的百分比。 |
+| `feature_value` | 其對象包含具有相同屬性名稱的鍵的陣列。 這些鍵包含一個字串，代表顏色名稱、此顏色相對於在`content_id`中傳送的影像顯示的百分比，以及顏色的RGB值。 |
