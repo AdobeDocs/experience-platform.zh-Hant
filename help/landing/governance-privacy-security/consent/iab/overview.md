@@ -2,16 +2,16 @@
 keywords: Experience Platform;home;IAB;IAB 2.0；同意；同意
 solution: Experience Platform
 title: IAB TCF 2.0Experience Platform支援
-topic: privacy events
+topic-legacy: privacy events
 description: 瞭解如何設定您的資料作業和結構，以在將區段啟動至Adobe Experience Platform的目的地時傳達客戶同意選擇。
+exl-id: af787adf-b46e-43cf-84ac-dfb0bc274025
 translation-type: tm+mt
-source-git-commit: a845ade0fc1e6e18c36b5f837fe7673a976f01c7
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '2472'
+source-wordcount: '2459'
 ht-degree: 0%
 
 ---
-
 
 # IAB TCF 2.0在Experience Platform方面的支援
 
@@ -21,7 +21,7 @@ ht-degree: 0%
 >
 >有關TCF 2.0的更多資訊可在[IAB歐洲網站](https://iabeurope.eu/tcf-2-0/)上找到，包括支援材料和技術規格。
 
-Adobe Experience Platform是註冊的[IAB TCF 2.0供應商清單](https://iabeurope.eu/vendor-list-tcf-v2-0/)的一部分，該清單位於ID **565**&#x200B;下。 根據TCF 2.0要求，Platform可讓您收集客戶同意資料，並將其整合到您儲存的客戶個人檔案中。 然後，視使用案例而定，可以將此同意資料納入匯出的受眾細分中。
+Adobe Experience Platform是已註冊[IAB TCF 2.0供應商清單](https://iabeurope.eu/vendor-list-tcf-v2-0/)的一部分，該清單位於ID **565**&#x200B;下。 根據TCF 2.0要求，Platform可讓您收集客戶同意資料，並將其整合到您儲存的客戶個人檔案中。 然後，視使用案例而定，可以將此同意資料納入匯出的受眾細分中。
 
 >[!IMPORTANT]
 >
@@ -126,10 +126,10 @@ Adobe Experience Platform是註冊的[IAB TCF 2.0供應商清單](https://iabeur
 
 | Edge configuration欄位 | 值 |
 | --- | --- |
-| [!UICONTROL 沙盒] | 平台[沙盒](../../../../sandboxes/home.md)的名稱，其中包含設定邊緣配置所需的串流連接和資料集。 |
-| [!UICONTROL 串流入口] | 有效的串流連線，以供Experience Platform。 如果您沒有現有的串流入口，請參閱有關建立串流連線的[教學課程。](../../../../ingestion/tutorials/create-streaming-connection-ui.md) |
-| [!UICONTROL 事件資料集] | 選擇在[上一步](#datasets)中建立的[!DNL XDM ExperienceEvent]資料集。 |
-| [!UICONTROL 描述檔資料集] | 選擇在[上一步](#datasets)中建立的[!DNL XDM Individual Profile]資料集。 |
+| [!UICONTROL Sandbox] | 平台[沙盒](../../../../sandboxes/home.md)的名稱，其中包含設定邊緣配置所需的串流連接和資料集。 |
+| [!UICONTROL Streaming Inlet] | 有效的串流連線，以供Experience Platform。 如果您沒有現有的串流入口，請參閱有關建立串流連線的[教學課程。](../../../../ingestion/tutorials/create-streaming-connection-ui.md) |
+| [!UICONTROL Event Dataset] | 選擇在[上一步](#datasets)中建立的[!DNL XDM ExperienceEvent]資料集。 |
+| [!UICONTROL Profile Dataset] | 選擇在[上一步](#datasets)中建立的[!DNL XDM Individual Profile]資料集。 |
 
 ![](../../../images/governance-privacy-security/consent/iab/overview/edge-config.png)
 
