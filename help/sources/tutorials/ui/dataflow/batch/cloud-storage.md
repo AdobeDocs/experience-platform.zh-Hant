@@ -2,17 +2,17 @@
 keywords: Experience Platform；首頁；熱門主題；資料流；資料流
 solution: Experience Platform
 title: 在UI中為雲儲存批處理連接器配置資料流
-topic: overview
+topic-legacy: overview
 type: Tutorial
 description: 資料流是從源中檢索資料並將資料帶入平台資料集的計畫任務。 本教學課程提供使用雲端儲存帳戶設定新資料流的步驟。
+exl-id: b327bbea-039d-4c04-afd3-f1d6a5f902a6
 translation-type: tm+mt
-source-git-commit: 1fb4a272a914bf4ce7653f3f4f7fff63f36f9a48
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '1924'
+source-wordcount: '1851'
 ht-degree: 0%
 
 ---
-
 
 # 在UI中為雲儲存批處理連接配置資料流
 
@@ -39,7 +39,7 @@ ht-degree: 0%
 
 ## 選擇資料
 
-在建立雲端儲存帳戶後，會出現「選取資料&#x200B;]**」步驟，提供介面供您探索雲端儲存檔案階層。**[!UICONTROL 
+建立雲端儲存帳戶後，會顯示&#x200B;**[!UICONTROL Select data]**&#x200B;步驟，提供介面供您探索雲端儲存檔案階層。
 
 * 介面的左側是目錄瀏覽器，顯示您的雲端儲存檔案和目錄。
 * 介面的右側部分可讓您從相容檔案中預覽最多100列資料。
@@ -48,17 +48,17 @@ ht-degree: 0%
 
 選擇列出的資料夾可讓您將資料夾層次結構遍歷到更深的資料夾中。 您可以選取單一檔案夾，以遞歸方式收錄檔案夾中的所有檔案。 在收錄整個資料夾時，必須確保資料夾中的所有檔案共用同一模式。
 
-選擇相容檔案或資料夾後，從[!UICONTROL 選擇資料格式]下拉菜單中選擇相應的資料格式。
+選擇相容檔案或資料夾後，從[!UICONTROL Select data format]下拉菜單中選擇相應的資料格式。
 
 下表顯示了支援的檔案類型的相應資料格式：
 
 | 檔案類型 | 資料格式 |
 | --- | --- |
-| CSV | [!UICONTROL 分隔字元] |
+| CSV | [!UICONTROL Delimited] |
 | JSON | [!UICONTROL JSON] |
-| 鑲木 | [!UICONTROL XDM Parce] |
+| 鑲木 | [!UICONTROL XDM Parquet] |
 
-選擇&#x200B;**[!UICONTROL JSON]**，然後等待幾秒鐘以填入預覽介面。
+選擇&#x200B;**[!UICONTROL JSON]**&#x200B;並等待幾秒鐘，讓預覽介面填入。
 
 ![select-data](../../../../images/tutorials/dataflow/cloud-storage/batch/select-data.png)
 
@@ -76,21 +76,21 @@ ht-degree: 0%
 
 ![select-folder](../../../../images/tutorials/dataflow/cloud-storage/batch/select-folder.png)
 
-如果希望選擇特定檔案，請選擇要收錄的檔案，然後選擇&#x200B;**[!UICONTROL Next]**。
+如果您想要選擇特定的檔案，請選擇要收錄的檔案，然後選擇&#x200B;**[!UICONTROL Next]**。
 
 ![select-file](../../../../images/tutorials/dataflow/cloud-storage/batch/select-file.png)
 
 ### 為分隔檔案設定自訂分隔字元
 
-在擷取分隔字元檔案時，您可以設定自訂分隔字元。 選擇&#x200B;**[!UICONTROL 分隔字元]**&#x200B;選項，然後從下拉式選單中選取分隔字元。 功能表顯示最常用於分隔字元的選項，包括逗號(`,`)、標籤(`\t`)和垂直號(`|`)。 如果您偏好使用自訂分隔字元，請選取&#x200B;**[!UICONTROL Custom]**，然後在快顯輸入列中輸入您選擇的單字元分隔字元。
+在擷取分隔字元檔案時，您可以設定自訂分隔字元。 選擇&#x200B;**[!UICONTROL Delimiter]**&#x200B;選項，然後從下拉式選單中選擇分隔字元。 功能表顯示最常用於分隔字元的選項，包括逗號(`,`)、標籤(`\t`)和垂直號(`|`)。 如果您偏好使用自訂分隔字元，請選取&#x200B;**[!UICONTROL Custom]**，然後在快顯輸入列中輸入您選擇的單字元分隔字元。
 
-在選擇資料格式並設定分隔符後，選擇&#x200B;**[!UICONTROL Next]**。
+在您選取資料格式並設定分隔字元後，請選取&#x200B;**[!UICONTROL Next]**。
 
 ![](../../../../images/tutorials/dataflow/cloud-storage/batch/delimiter.png)
 
 ## 將資料欄位對應至XDM架構
 
-出現&#x200B;**[!UICONTROL 映射]**&#x200B;步驟，提供互動式介面將源資料映射到[!DNL Platform]資料集。 以Parce格式化的來源檔案必須符合XDM規範，而不需要手動設定對應，而CSV檔案則要求您明確設定對應，但可讓您選擇要對應的來源資料欄位。 JSON檔案（如果標示為XDM問題）不需要手動設定。 但是，如果它未標籤為XDM相容，則需要顯式配置映射。
+出現&#x200B;**[!UICONTROL Mapping]**&#x200B;步驟，提供互動式介面，將來源資料對應至[!DNL Platform]資料集。 以Parce格式化的來源檔案必須符合XDM規範，而不需要手動設定對應，而CSV檔案則要求您明確設定對應，但可讓您選擇要對應的來源資料欄位。 JSON檔案（如果標示為XDM問題）不需要手動設定。 但是，如果它未標籤為XDM相容，則需要顯式配置映射。
 
 選擇要接收傳入資料的資料集。 您可以使用現有資料集或建立新資料集。
 
@@ -100,13 +100,13 @@ ht-degree: 0%
 
 ![](../../../../images/tutorials/dataflow/cloud-storage/batch/use-existing-data.png)
 
-出現&#x200B;**[!UICONTROL 選擇dataset]**&#x200B;對話框。 尋找您要使用的資料集，選取它，然後按一下&#x200B;**[!UICONTROL 繼續]**。
+出現&#x200B;**[!UICONTROL Select dataset]**&#x200B;對話框。 尋找您要使用的資料集，選取它，然後按一下&#x200B;**[!UICONTROL Continue]**。
 
 ![](../../../../images/tutorials/dataflow/cloud-storage/batch/select-existing-dataset.png)
 
 **使用新資料集**
 
-若要將資料內嵌至新資料集，請選取&#x200B;**[!UICONTROL 新資料集]**，並在提供的欄位中輸入資料集的名稱和說明。 要添加方案，可以在&#x200B;**[!UICONTROL 選擇方案]**&#x200B;對話框中輸入現有方案名稱。 或者，您可以選擇&#x200B;**[!UICONTROL 方案高級搜索]**&#x200B;以搜索適當的方案。
+若要將資料內嵌至新資料集，請選取&#x200B;**[!UICONTROL New dataset]**，並在提供的欄位中輸入資料集的名稱和說明。 要添加方案，可以在&#x200B;**[!UICONTROL Select schema]**&#x200B;對話框中輸入現有方案名稱。 或者，您可以選擇&#x200B;**[!UICONTROL Schema advanced search]**&#x200B;以搜索適當的方案。
 
 在此步驟中，您可以啟用[!DNL Real-time Customer Profile]的資料集，並建立實體屬性和行為的整體檢視。 所有啟用資料集的資料將包含在[!DNL Profile]中，並在保存資料流時應用更改。
 
@@ -114,7 +114,7 @@ ht-degree: 0%
 
 ![](../../../../images/tutorials/dataflow/cloud-storage/batch/new-dataset.png)
 
-將顯示&#x200B;**[!UICONTROL 選擇方案]**&#x200B;對話框。 選擇要應用於新資料集的模式，然後選擇&#x200B;**[!UICONTROL Done]**。
+出現&#x200B;**[!UICONTROL Select schema]**&#x200B;對話框。 選擇要應用於新資料集的模式，然後選擇&#x200B;**[!UICONTROL Done]**。
 
 ![](../../../../images/tutorials/dataflow/cloud-storage/batch/select-schema.png)
 
@@ -134,7 +134,7 @@ ht-degree: 0%
 >
 >[!DNL Platform] 根據您選取的目標架構或資料集，為自動映射欄位提供智慧建議。您可以手動調整對應規則，以符合您的使用案例。
 
-選擇&#x200B;**[!UICONTROL 預覽資料]**，以查看從所選資料集中最多100列樣本資料的映射結果。
+選擇&#x200B;**[!UICONTROL Preview data]**&#x200B;可查看從所選資料集中最多100行示例資料的映射結果。
 
 在預覽期間，身分欄會優先化為第一個欄位，因為這是驗證映射結果時所需的關鍵資訊。
 
@@ -144,40 +144,40 @@ ht-degree: 0%
 
 ## 排程擷取執行
 
-此時將顯示&#x200B;**[!UICONTROL 計畫]**&#x200B;步驟，允許您配置提取計畫以使用配置的映射自動提取選定的源資料。 下表概述了用於計畫的不同可配置欄位：
+出現&#x200B;**[!UICONTROL Scheduling]**&#x200B;步驟，允許您配置接收計畫，以使用配置的映射自動接收選定的源資料。 下表概述了用於計畫的不同可配置欄位：
 
 | 欄位 | 說明 |
 | --- | --- |
 | 頻率 | 可選頻率包括`Once`、`Minute`、`Hour`、`Day`和`Week`。 |
 | 間隔 | 一個整數，用於設定所選頻率的間隔。 |
 | 開始時間 | UTC時間戳記，指示何時設定進行第一次擷取。 |
-| 回填 | 一個布爾值，可決定最初收錄的資料。 如果&#x200B;**[!UICONTROL 回填]**&#x200B;已啟用，則指定路徑中的所有當前檔案將在第一次計畫提取期間被提取。 如果&#x200B;**[!UICONTROL 回填]**&#x200B;已停用，則只會收錄在第一次擷取執行和開始時間之間載入的檔案。 在開始時間之前載入的檔案將不會被收錄。 |
+| 回填 | 一個布爾值，可決定最初收錄的資料。 如果&#x200B;**[!UICONTROL Backfill]**&#x200B;已啟用，則指定路徑中的所有當前檔案將在第一次計畫接收期間被接收。 如果&#x200B;**[!UICONTROL Backfill]**&#x200B;已停用，則只會收錄在首次擷取執行和開始時間之間載入的檔案。 在開始時間之前載入的檔案將不會被收錄。 |
 
 資料流設計為在計畫基礎上自動收錄資料。 從選取擷取頻率開始。 接著，設定間隔，以指定兩個流程執行之間的期間。 間隔的值應為非零整數，且應設定為大於或等於15。
 
 若要設定擷取的開始時間，請調整顯示在開始時間方塊中的日期和時間。 或者，您也可以選取日曆圖示來編輯開始時間值。 開始時間必須大於或等於UTC中的當前時間。
 
-為調度提供值並選擇&#x200B;**[!UICONTROL Next]**。
+提供計畫值並選擇&#x200B;**[!UICONTROL Next]**。
 
 ![](../../../../images/tutorials/dataflow/cloud-storage/batch/scheduling-interval-on.png)
 
 ### 設定一次性提取資料流
 
-要設定一次性攝取，請選擇頻率下拉箭頭並選擇&#x200B;**[!UICONTROL 一次]**。 只要開始時間未來，您就可以繼續編輯資料流集以進行一次頻率接收。 一旦開始時間過去，就無法再編輯一次頻率值。 **[!UICONTROL 在設]** 置一次性 **** 提取資料流時，不會顯示Interval和Backfill。
+若要設定單次擷取，請選取頻率下拉箭頭並選取&#x200B;**[!UICONTROL Once]**。 只要開始時間未來，您就可以繼續編輯資料流集以進行一次頻率接收。 一旦開始時間過去，就無法再編輯一次頻率值。 **[!UICONTROL Interval]** 和 **[!UICONTROL Backfill]** 在設定一次性接收資料流時不可見。
 
 >[!IMPORTANT]
 >
 >強烈建議在使用[FTP連接器](../../../../connectors/cloud-storage/ftp.md)時，安排資料流進行一次性提取。
 
-在為調度提供適當值後，選擇&#x200B;**[!UICONTROL Next]**。
+為調度提供適當值後，請選擇&#x200B;**[!UICONTROL Next]**。
 
 ![](../../../../images/tutorials/dataflow/cloud-storage/batch/scheduling-once.png)
 
 ## 提供資料流詳細資訊
 
-將顯示&#x200B;**[!UICONTROL 資料流詳細資訊]**&#x200B;步驟，允許您命名新資料流並提供有關新資料流的簡要說明。
+出現&#x200B;**[!UICONTROL Dataflow detail]**&#x200B;步驟，允許您命名新資料流並提供有關新資料流的簡要說明。
 
-在此過程中，您還可以啟用&#x200B;**[!UICONTROL 部分攝取]**&#x200B;和&#x200B;**[!UICONTROL 錯誤診斷]**。 啟用&#x200B;**[!UICONTROL 部分擷取]**&#x200B;可讓您擷取包含錯誤的資料，最多可以設定特定臨界值。 啟用&#x200B;**[!UICONTROL 錯誤診斷]**&#x200B;將提供有關單獨批處理的任何不正確資料的詳細資訊。 如需詳細資訊，請參閱[部分批次擷取概觀](../../../../../ingestion/batch-ingestion/partial.md)。
+在此過程中，您也可以啟用&#x200B;**[!UICONTROL Partial ingestion]**&#x200B;和&#x200B;**[!UICONTROL Error diagnostics]**。 啟用&#x200B;**[!UICONTROL Partial ingestion]**&#x200B;可以接收包含錯誤的資料，最高可以設定某個閾值。 啟用&#x200B;**[!UICONTROL Error diagnostics]**&#x200B;將提供有關個別批次處理之任何不正確資料的詳細資訊。 如需詳細資訊，請參閱[部分批次擷取概觀](../../../../../ingestion/batch-ingestion/partial.md)。
 
 為資料流提供值並選擇&#x200B;**[!UICONTROL Next]**。
 
@@ -185,13 +185,13 @@ ht-degree: 0%
 
 ## 查看資料流
 
-將顯示&#x200B;**[!UICONTROL 查看]**&#x200B;步驟，允許您在建立新資料流之前對其進行查看。 詳細資訊會分組在下列類別中：
+出現&#x200B;**[!UICONTROL Review]**&#x200B;步驟，允許您在建立新資料流之前對其進行查看。 詳細資訊會分組在下列類別中：
 
-* **[!UICONTROL 連接]**:顯示源檔案的類型、所選源檔案的相關路徑，以及該源檔案中的列數。
-* **[!UICONTROL 指派資料集與地圖欄位]**:顯示源資料被吸收到的資料集，包括資料集所附的模式。
-* **[!UICONTROL 排程]**:顯示接收調度的活動期間、頻率和間隔。
+* **[!UICONTROL Connection]**:顯示源檔案的類型、所選源檔案的相關路徑，以及該源檔案中的列數。
+* **[!UICONTROL Assign dataset & map fields]**:顯示源資料被吸收到的資料集，包括資料集所附的模式。
+* **[!UICONTROL Scheduling]**:顯示接收調度的活動期間、頻率和間隔。
 
-複查資料流後，按一下&#x200B;**[!UICONTROL 完成]**&#x200B;並允許建立資料流一段時間。
+複查資料流後，按一下&#x200B;**[!UICONTROL Finish]** ，並為建立資料流留出一些時間。
 
 ![](../../../../images/tutorials/dataflow/cloud-storage/batch/review.png)
 
@@ -201,14 +201,14 @@ ht-degree: 0%
 
 ## 刪除資料流
 
-您可以使用&#x200B;**[!UICONTROL Dataflows]**&#x200B;工作區中的&#x200B;**[!UICONTROL Delete]**&#x200B;函式刪除不再需要或建立錯誤的資料流。 有關如何刪除資料流的詳細資訊，請參見UI](../../delete.md)中有關[刪除資料流的教程。
+您可以刪除不再需要或使用&#x200B;**[!UICONTROL Dataflows]**&#x200B;工作區中的&#x200B;**[!UICONTROL Delete]**&#x200B;函式錯誤建立的資料流。 有關如何刪除資料流的詳細資訊，請參見UI](../../delete.md)中有關[刪除資料流的教程。
 
 ## 後續步驟
 
 在本教程中，您成功建立了一個資料流，以便從外部雲儲存中導入資料，並獲得了對監控資料集的深入瞭解。 若要進一步瞭解建立資料流，您可以觀賞以下視訊來補充學習內容。 此外，下游[!DNL Platform]服務（例如[!DNL Real-time Customer Profile]和[!DNL Data Science Workspace]）現在可以使用傳入的資料。 如需詳細資訊，請參閱下列檔案：
 
-* [[!DNL Real-time Customer Profile] 概述](../../../../../profile/home.md)
-* [[!DNL Data Science Workspace] 概述](../../../../../data-science-workspace/home.md)
+* [[!DNL Real-time Customer Profile] 概觀](../../../../../profile/home.md)
+* [[!DNL Data Science Workspace] 概觀](../../../../../data-science-workspace/home.md)
 
 >[!WARNING]
 >
@@ -224,11 +224,11 @@ ht-degree: 0%
 
 建立資料流時，它會立即變為活動狀態，並根據給定的時間表收集資料。 您可以隨時按照以下說明禁用活動資料流。
 
-在&#x200B;**[!UICONTROL Sources]**&#x200B;工作區中，按一下&#x200B;**[!UICONTROL Browse]**&#x200B;標籤。 接著，按一下與要禁用的活動資料流關聯的帳戶的名稱。
+在&#x200B;**[!UICONTROL Sources]**&#x200B;工作區中，按一下&#x200B;**[!UICONTROL Browse]**&#x200B;頁籤。 接著，按一下與要禁用的活動資料流關聯的帳戶的名稱。
 
 ![](../../../../images/tutorials/dataflow/cloud-storage/batch/browse.png)
 
-此時將顯示&#x200B;**[!UICONTROL 源活動]**&#x200B;頁。 從清單中選擇活動資料流，以開啟螢幕右側的&#x200B;**[!UICONTROL 屬性]**&#x200B;列，該列包含&#x200B;**[!UICONTROL 啟用]**&#x200B;切換按鈕。 按一下切換以禁用資料流。 在禁用資料流後，可以使用相同的切換來重新啟用資料流。
+此時將顯示&#x200B;**[!UICONTROL Source activity]**&#x200B;頁。 從清單中選擇活動資料流，以在螢幕右側開啟其&#x200B;**[!UICONTROL Properties]**&#x200B;列，該列包含&#x200B;**[!UICONTROL Enabled]**&#x200B;切換按鈕。 按一下切換以禁用資料流。 在禁用資料流後，可以使用相同的切換來重新啟用資料流。
 
 ![](../../../../images/tutorials/dataflow/cloud-storage/batch/disable-source.png)
 
