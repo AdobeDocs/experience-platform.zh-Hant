@@ -2,16 +2,16 @@
 keywords: Experience Platform;home；熱門主題；刪除沙盒
 solution: Experience Platform
 title: 刪除API中的沙盒
-topic: developer guide
+topic-legacy: developer guide
 description: 您可以透過提出DELETE請求來刪除沙盒，請求路徑中包含沙盒的名稱。
+exl-id: c900325e-bc28-42f1-bc9a-eecb33fa9be4
 translation-type: tm+mt
-source-git-commit: 62ce5ac92d03a6e85589fc92e8d953f7fc1d8f31
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '118'
+source-wordcount: '116'
 ht-degree: 3%
 
 ---
-
 
 # 刪除API中的沙盒
 
@@ -31,7 +31,7 @@ DELETE /sandboxes/{SANDBOX_NAME}
 | --- | --- |
 | `{SANDBOX_NAME}` | 您要刪除的沙盒的`name`。 |
 
-**請求**
+**要求**
 
 下列請求會刪除名為&quot;dev-2&quot;的沙盒。
 
