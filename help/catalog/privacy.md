@@ -2,20 +2,20 @@
 keywords: Experience Platform;home；熱門主題；資料湖隱私；身份名稱空間；隱私；資料湖
 solution: Experience Platform
 title: 資料湖中的隱私權要求處理
-topic: overview
-description: Adobe Experience Platform隱私權服務會處理客戶存取、選擇退出銷售或刪除其個人資料的要求，並符合法律和組織的隱私權法規。 本檔案涵蓋處理儲存在資料湖中之客戶資料之隱私權要求的相關基本概念。
+topic-legacy: overview
+description: Adobe Experience Platform Privacy Service公司處理客戶存取、選擇退出銷售或刪除其個人資料的要求，這些要求由法律和組織的隱私權法規規定。 本檔案涵蓋處理儲存在資料湖中之客戶資料之隱私權要求的相關基本概念。
+exl-id: c06b0a44-be1a-4938-9c3e-f5491a3dfc19
 translation-type: tm+mt
-source-git-commit: a1103bfbf79f9c87bac5b113c01386a6fb8950e7
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '1285'
+source-wordcount: '1279'
 ht-degree: 0%
 
 ---
 
-
 # 在[!DNL Data Lake]中處理隱私權要求
 
-Adobe Experience Platform [!DNL Privacy Service]會處理客戶存取、選擇退出銷售或刪除其個人資料的要求，這些要求由法律和組織的隱私權法規規定。
+Adobe Experience Platform[!DNL Privacy Service]會處理客戶存取、選擇退出銷售或刪除其個人資料的要求，如法律和組織隱私權規定所述。
 
 本檔案涵蓋處理儲存在[!DNL Data Lake]中之客戶資料之隱私權要求的相關基本概念。
 
@@ -30,7 +30,7 @@ Adobe Experience Platform [!DNL Privacy Service]會處理客戶存取、選擇�
 
 ## 瞭解身份名稱空間{#namespaces}
 
-Adobe Experience Platform [!DNL Identity Service]跨系統和裝置橋接客戶身分資料。 [!DNL Identity Service] 使用身份名稱空間將身份值與其來源系統關聯，以提供上下文至身份值。命名空間可以代表一般概念，例如電子郵件地址（「電子郵件」），或將身分識別與特定應用程式(例如Adobe Advertising Cloud ID(「AdCloud」)或Adobe Target ID(「TNTID」))建立關聯。
+Adobe Experience Platform[!DNL Identity Service]跨系統和設備橋接客戶身份資料。 [!DNL Identity Service] 使用身份名稱空間將身份值與其來源系統關聯，以提供上下文至身份值。命名空間可以代表一般概念，例如電子郵件地址（「電子郵件」），或將識別與特定應用程式(例如Adobe Advertising CloudID(「AdCloud」)或Adobe TargetID(「TNTID」))建立關聯。
 
 [!DNL Identity Service] 維護全局定義（標準）和用戶定義（自定義）標識名稱空間的儲存。標準名稱空間適用於所有組織（例如「電子郵件」和「ECID」），而您的組織也可以建立自訂名稱空間以符合其特定需求。
 
@@ -57,7 +57,7 @@ Adobe Experience Platform [!DNL Identity Service]跨系統和裝置橋接客戶�
 
 ### 使用UI {#identity-ui}
 
-在[!DNL Experience Platform ]用戶介面中，**[!UICONTROL 方案]**&#x200B;工作區允許您編輯現有的XDM方案。 要向方案添加標識描述符，請從清單中選擇方案，並遵循[教程中將方案欄位設定為身份欄位[!DNL Schema Editor]的步驟。](../xdm/tutorials/create-schema-ui.md#identity-field)
+在[!DNL Experience Platform ]使用者介面中， **[!UICONTROL Schemas]**&#x200B;工作區可讓您編輯現有的XDM結構。 要向方案添加標識描述符，請從清單中選擇方案，並遵循[教程中將方案欄位設定為身份欄位[!DNL Schema Editor]的步驟。](../xdm/tutorials/create-schema-ui.md#identity-field)
 
 在將架構中的相應欄位設定為身份欄位後，您可以繼續下一節有關[提交隱私請求](#submit)的內容。
 
@@ -77,7 +77,7 @@ Adobe Experience Platform [!DNL Identity Service]跨系統和裝置橋接客戶�
 POST /descriptors
 ```
 
-**請求**
+**要求**
 
 以下請求在示例方案的「電子郵件地址」欄位上定義身份描述符。
 
@@ -143,7 +143,7 @@ curl -X POST \
 
 ### 使用UI
 
-在UI中建立作業請求時，請務必在&#x200B;**[!UICONTROL 產品]**&#x200B;下選擇&#x200B;**[!UICONTROL AEP Data Lake]**&#x200B;和／或&#x200B;**[!UICONTROL Profile]**，以便分別處理儲存在[!DNL Data Lake]或[!DNL Real-time Customer Profile]中的資料的作業。
+在UI中建立作業請求時，請務必在&#x200B;**[!UICONTROL Products]**&#x200B;下選擇&#x200B;**[!UICONTROL AEP Data Lake]**&#x200B;和／或&#x200B;**[!UICONTROL Profile]**，以便分別處理儲存在[!DNL Data Lake]或[!DNL Real-time Customer Profile]中的資料的作業。
 
 <img src="images/privacy/product-value.png" width="450"><br>
 
