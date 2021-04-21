@@ -1,32 +1,32 @@
 ---
-keywords: Experience Platform;home；熱門主題；Azure資料總管；資料總管；資料總管
+keywords: Experience Platform；首頁；熱門主題；AzureData Explorer；資料瀏覽器；Data Explorer
 solution: Experience Platform
-title: 使用Flow Service API建立Azure資料總管來源連線
-topic: overview
+title: 使用流程服務API建立AzureData Explorer來源連線
+topic-legacy: overview
 type: Tutorial
-description: 瞭解如何使用Flow Service API將Azure資料總管連線至Adobe Experience Platform。
+description: 瞭解如何使用Flow Service API將AzureData Explorer連接至Adobe Experience Platform。
+exl-id: 1b17bbb0-1f7b-4d89-a158-ad269e6edf30
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '632'
 ht-degree: 1%
 
 ---
 
-
 # 使用[!DNL Flow Service] API建立[!DNL Azure Data Explorer]來源連線
 
 >[!NOTE]
 >
->[!DNL Azure Data Explorer]介面處於測試狀態。 有關使用beta標籤連接器的詳細資訊，請參閱[來源概觀](../../../../home.md#terms-and-conditions)。
+>[!DNL Azure Data Explorer]介面處於測試狀態。 有關使用beta標籤連接器的詳細資訊，請參閱[ Sources綜覽](../../../../home.md#terms-and-conditions)。
 
 [!DNL Flow Service] 用於收集和集中Adobe Experience Platform內不同來源的客戶資料。該服務提供用戶介面和REST風格的API，所有支援的源都可從中連接。
 
-本教學課程使用[!DNL Flow Service] API來引導您完成將[!DNL Azure Data Explorer]（以下稱為「資料總管」）連接至[!DNL Experience Platform]的步驟。
+本教學課程使用[!DNL Flow Service] API來引導您完成將[!DNL Azure Data Explorer](以下稱為「Data Explorer」)連接至[!DNL Experience Platform]的步驟。
 
 ## 快速入門
 
-本指南需要有效瞭解Adobe Experience Platform的下列元件：
+本指南需要對Adobe Experience Platform的下列組成部分有切實的瞭解：
 
 * [來源](../../../../home.md): [!DNL Experience Platform] 允許從各種來源接收資料，同時提供使用服務構建、標籤和增強傳入資料的 [!DNL Platform] 能力。
 * [沙盒](../../../../../sandboxes/home.md): [!DNL Experience Platform] 提供虛擬沙盒，可將單一執行個體分 [!DNL Platform] 割為不同的虛擬環境，以協助開發和發展數位體驗應用程式。
@@ -46,7 +46,7 @@ ht-degree: 1%
 | `servicePrincipalKey` | 用於連接[!DNL Data Explorer]資料庫的唯一服務主體密鑰。 |
 | `connectionSpec.id` | 建立連線所需的唯一識別碼。 [!DNL Data Explorer]的連接規範ID為`0479cc14-7651-4354-b233-7480606c2ac3`。 |
 
-有關入門的詳細資訊，請參閱[此Data Explorer文檔](https://docs.microsoft.com/en-us/azure/data-explorer/kusto/management/access-control/how-to-authenticate-with-aad)。
+有關入門的詳細資訊，請參閱[本Data Explorer文檔](https://docs.microsoft.com/en-us/azure/data-explorer/kusto/management/access-control/how-to-authenticate-with-aad)。
 
 ### 讀取範例API呼叫
 
@@ -64,7 +64,7 @@ ht-degree: 1%
 
 * `x-sandbox-name: {SANDBOX_NAME}`
 
-所有包含裝載(POST、PUT、PATCH)的請求都需要額外的媒體類型標題：
+所有包含裝載(POST、PUT、PATCH)的請求都需要附加的媒體類型標題：
 
 * `Content-Type: application/json`
 
@@ -78,7 +78,7 @@ ht-degree: 1%
 POST /connections
 ```
 
-**請求**
+**要求**
 
 要建立[!DNL Data Explorer]連接，必須在POST請求中提供其唯一連接規範ID。 [!DNL Data Explorer]的連接規範ID為`0479cc14-7651-4354-b233-7480606c2ac3`。
 
