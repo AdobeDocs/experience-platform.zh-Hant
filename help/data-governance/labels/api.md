@@ -2,12 +2,12 @@
 keywords: Experience Platform；首頁；熱門主題；資料治理；資料使用標籤api；策略服務api
 solution: Experience Platform
 title: '使用API管理資料使用標籤 '
-topic: developer guide
+topic-legacy: developer guide
 description: 資料集服務API可讓您套用和編輯資料集的使用標籤。 它是Adobe Experience Platform資料目錄功能的一部分，但與管理資料集元資料的目錄服務API不同。
 translation-type: tm+mt
-source-git-commit: 4e75e3fbdcd480c384411c2f33bad5b2cdcc5c42
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '1147'
+source-wordcount: '1145'
 ht-degree: 2%
 
 ---
@@ -38,7 +38,7 @@ GET /labels/core
 GET /labels/custom
 ```
 
-**請求**
+**要求**
 
 下列請求會列出您組織下建立的所有自訂標籤。
 
@@ -124,7 +124,7 @@ GET /labels/custom/{LABEL_NAME}
 | --- | --- |
 | `{LABEL_NAME}` | 您要查找的自訂標籤的`name`屬性。 |
 
-**請求**
+**要求**
 
 下列請求會擷取自訂標籤`L2`，如路徑所示。
 
@@ -177,7 +177,7 @@ PUT /labels/custom/{LABEL_NAME}
 | --- | --- |
 | `{LABEL_NAME}` | 自訂標籤的`name`屬性。 如果沒有具有此名稱的自訂標籤，則會建立新標籤。 如果存在，則會更新該標籤。 |
 
-**請求**
+**要求**
 
 下列請求會建立新標籤`L3`，其目的在於說明包含客戶所選付款計畫相關資訊的資料。
 
@@ -243,7 +243,7 @@ GET /datasets/{DATASET_ID}/labels
 | --- | --- |
 | `{DATASET_ID}` | 您要尋找其標籤的資料集的唯一`id`值。 |
 
-**請求**
+**要求**
 
 ```shell
 curl -X GET \
@@ -301,7 +301,7 @@ PUT /datasets/{DATASET_ID}/labels
 | --- | --- |
 | `{DATASET_ID}` | 您正在為其建立標籤的資料集的唯一`id`值。 |
 
-**請求**
+**要求**
 
 下列POST請求會將一系列標籤新增至資料集，以及該資料集內的特定欄位。 裝載中提供的欄位與PUT要求所需的欄位相同。
 
@@ -367,7 +367,7 @@ DELETE /datasets/{DATASET_ID}/labels
 | --- | --- |
 | `{DATASET_ID}` | 您要移除其標籤的資料集的唯一`id`值。 |
 
-**請求**
+**要求**
 
 ```shell
 curl -X DELETE \
@@ -384,7 +384,7 @@ curl -X DELETE \
 
 ## 後續步驟
 
-閱讀本檔案後，您便瞭解如何使用API管理資料使用標籤。
+閱讀本檔案後，您就學會了如何使用API管理資料使用標籤。
 
 在資料集和欄位層級新增資料使用標籤後，您就可以開始將資料內嵌至[!DNL Experience Platform]。 若要進一步瞭解，請先閱讀[資料擷取檔案](../../ingestion/home.md)。
 
