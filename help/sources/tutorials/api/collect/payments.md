@@ -2,14 +2,14 @@
 keywords: Experience Platform；首頁；熱門主題；收集付款資料；付款資料
 solution: Experience Platform
 title: 使用來源連接器和API收集付款資料
-topic: overview
+topic-legacy: overview
 type: Tutorial
 description: 本教學課程涵蓋從付款應用程式擷取資料，並使用來源連接器和API將其匯入平台的步驟。
 exl-id: b75e2a3d-6590-4079-a261-fa4e9626e8dc
 translation-type: tm+mt
-source-git-commit: 610ce5c6dca5e7375b941e7d6f550382da10ca27
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '1600'
+source-wordcount: '1598'
 ht-degree: 1%
 
 ---
@@ -75,7 +75,7 @@ Experience Platform中的所有資源（包括屬於[!DNL Flow Service]的資源
 POST /sourceConnections
 ```
 
-**請求**
+**要求**
 
 ```shell
 curl -X POST \
@@ -164,7 +164,7 @@ curl -X POST \
 POST /tenant/schemas
 ```
 
-**請求**
+**要求**
 
 以下示例請求建立一個XDM模式以擴展XDM [!DNL Individual Profile]類。
 
@@ -277,7 +277,7 @@ curl -X POST \
 POST /dataSets
 ```
 
-**請求**
+**要求**
 
 ```shell
 curl -X POST \
@@ -323,7 +323,7 @@ curl -X POST \
 POST /targetConnections
 ```
 
-**請求**
+**要求**
 
 ```shell
 curl -X POST \
@@ -380,7 +380,7 @@ curl -X POST \
 POST /mappingSets
 ```
 
-**請求**
+**要求**
 
 ```shell
 curl -X POST \
@@ -461,7 +461,7 @@ curl -X POST \
 GET /flowSpecs?property=name=="CRMToAEP"
 ```
 
-**請求**
+**要求**
 
 ```shell
 curl -X GET \
@@ -721,7 +721,7 @@ curl -X GET \
 POST /flows
 ```
 
-**請求**
+**要求**
 
 ```shell
 curl -X POST \
