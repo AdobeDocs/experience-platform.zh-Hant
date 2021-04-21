@@ -1,17 +1,17 @@
 ---
-keywords: Experience Platform;home；熱門主題；Catalog service;catalog api；附錄
+keywords: Experience Platform;home；熱門主題；目錄服務；目錄api；附錄
 solution: Experience Platform
 title: 目錄服務API指南附錄
-topic: developer guide
-description: 本檔案包含其他資訊，可協助您使用Adobe Experience Platform中的目錄API。
+topic-legacy: developer guide
+description: 本檔案包含其他資訊，可協助您使用Adobe Experience Platform的Catalog API。
+exl-id: fafc8187-a95b-4592-9736-cfd9d32fd135
 translation-type: tm+mt
-source-git-commit: b395535cbe7e4030606ee2808eb173998f5c32e0
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '920'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
-
 
 # [!DNL Catalog Service] API指南附錄
 
@@ -33,7 +33,7 @@ GET {OBJECT_URI}
 | --- | --- |
 | `{OBJECT_URI}` | 由相關對象欄位（不包括`@`符號）提供的URI。 |
 
-**請求**
+**要求**
 
 下列請求使用範例資料集的`files`屬性提供的URI來擷取資料集相關聯檔案的清單。
 
@@ -103,7 +103,7 @@ curl -X GET \
 POST /
 ```
 
-**請求**
+**要求**
 
 下列請求會建立新資料集，然後建立該資料集的相關檢視。 此範例示範如何使用範本語言來存取先前呼叫中傳回的值，以便用於後續呼叫。
 
@@ -111,7 +111,7 @@ POST /
 
 >[!NOTE]
 >
->當執行的子請求僅返回對對象的引用（在目錄API中，對於大多數POST和PUT請求，此為預設值）時，此引用將被別名化為值`id`，並可用作`<<{OBJECT_ID}.id>>`。
+>當執行的子請求僅返回對對象的引用(在目錄API中，對於大多數POST和PUT請求，此為預設值)時，此引用將別名化為值`id`，並可用作`<<{OBJECT_ID}.id>>`。
 
 ```shell
 curl -X POST \
@@ -146,13 +146,13 @@ curl -X POST \
 | 屬性 | 說明 |
 | --- | --- |
 | `id` | 附加至回應物件的使用者提供ID，以便您將要求與回應相符。 [!DNL Catalog] 不會儲存此值，只會在回應中傳回該值，以供參考。 |
-| `resource` | 相對於[!DNL Catalog] API根的資源路徑。 協定和域不應是此值的一部分，並且應加上前置詞&quot;/&quot;。 <br/><br/> 使用PATCH或DELETE作為子請求時， `method`請在資源路徑中包含對象ID。不要與用戶提供的`id`混淆，資源路徑使用[!DNL Catalog]對象本身的ID（例如`resource: "/dataSets/1234567890"`）。 |
-| `method` | 與請求中發生的動作相關的方法名稱（GET、PUT、POST、PATCH或DELETE）。 |
-| `body` | 通常會在POST、PUT或PATCH請求中作為裝載傳遞的JSON檔案。 GET或DELETE請求不需要此屬性。 |
+| `resource` | 相對於[!DNL Catalog] API根的資源路徑。 協定和域不應是此值的一部分，並且應加上前置詞&quot;/&quot;。 <br/><br/> 當使用PATCH或DELETE作為子請求時， `method`請在資源路徑中包括對象ID。不要與用戶提供的`id`混淆，資源路徑使用[!DNL Catalog]對象本身的ID（例如`resource: "/dataSets/1234567890"`）。 |
+| `method` | 與請求中所發生動作相關的方法(GET、PUT、POST、PATCH或DELETE)名稱。 |
+| `body` | 通常會在POST、PUT或PATCH請求中作為裝載傳遞的JSON檔案。 此屬性不是GET或DELETE請求的必需屬性。 |
 
 **回應**
 
-成功的響應返回一組對象，這些對象包含您分配給每個請求的`id`、單個請求的HTTP狀態代碼和響應`body`。 由於三個示例請求都是為了建立新對象，因此每個對象的`body`都是一個僅包含新建立對象ID的陣列，而[!DNL Catalog]中最成功的POST響應的標準也是。
+成功的響應返回一組對象，這些對象包含您分配給每個請求的`id`、單個請求的HTTP狀態代碼和響應`body`。 由於三個示例請求都是為了建立新對象，因此每個對象的`body`都是一個僅包含新建立對象ID的陣列，而[!DNL Catalog]中最成功POST響應的標準陣列也是如此。
 
 ```json
 [
@@ -173,7 +173,7 @@ curl -X POST \
 ]
 ```
 
-檢查多重請求的回應時請務必小心，因為您需要驗證每個個別子請求的程式碼，而不要只依賴父POST請求的HTTP狀態程式碼。  單一子請求可能會傳回404（例如無效資源上的GET請求），而整體請求則會傳回200。
+檢查多重請求的回應時請務必小心，因為您需要驗證每個個別子請求的程式碼，而不要只依賴父POST請求的HTTP狀態程式碼。  單個子請求可以傳回404(例如對無效資源的GET請求)，而整體請求傳回200。
 
 ## 其他請求標題
 
@@ -183,16 +183,16 @@ curl -X POST \
 
 最好使用物件版本控制來防止多個使用者同時儲存物件時發生的資料損毀類型。
 
-更新物件時的最佳實務是先進行API呼叫以檢視(GET)要更新的物件。 包含在回應中（以及任何回應包含單一物件的呼叫）是包含物件版本的`E-Tag`標題。 在更新（PUT或PATCH）呼叫中將物件版本新增為名為`If-Match`的請求標題，只有在版本仍相同時，才會成功進行更新，有助於避免資料衝突。
+更新物件時的最佳實務是先進行API呼叫，以檢視(GET)要更新的物件。 包含在回應中（以及任何回應包含單一物件的呼叫）是包含物件版本的`E-Tag`標題。 在更新(PUT或PATCH)呼叫中將物件版本新增為名為`If-Match`的請求標題，只有在版本不變時，才會成功進行更新，有助於避免資料衝突。
 
 如果版本不匹配（自您檢索到該對象後，該對象被其他進程修改），則您將收到HTTP狀態412（先決條件失敗），表示對目標資源的訪問被拒絕。
 
 ### Pragma
 
-有時，您可能希望驗證對象而不保存資訊。 使用`Pragma`標題及值`validate-only`可讓您僅傳送POST或PUT要求以進行驗證，避免資料的任何變更持續存在。
+有時，您可能希望驗證對象而不保存資訊。 使用`Pragma`標題（其值為`validate-only`）可讓您僅傳送POST或PUT請求以進行驗證，避免對資料進行任何變更。
 
 ## 資料壓縮
 
-壓縮是一種[!DNL Experience Platform]服務，可將小檔案的資料合併為大檔案，而不會變更任何資料。 基於效能的考慮，將一組小型檔案合併為較大的檔案有時很有幫助，以便在查詢資料時能更快速地存取資料。
+壓縮是一種[!DNL Experience Platform]服務，可將小檔案的資料合併為大檔案，而不會變更任何資料。 出於效能原因，有時將一組小檔案合併為較大的檔案，以便在查詢時提供更快速的資料存取。
 
 當收錄批次中的檔案已壓縮時，會更新其相關的[!DNL Catalog]物件，以利監控。
