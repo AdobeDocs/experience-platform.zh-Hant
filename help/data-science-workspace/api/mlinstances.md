@@ -1,17 +1,17 @@
 ---
-keywords: Experience Platform；開發人員指南；端點；Data Science Workspace；熱門主題；mlinstances;sensei機器學習api
+keywords: Experience Platform；開發人員指南；端點；資料科學工作區；熱門主題；mlinstances;sensei機器學習api
 solution: Experience Platform
 title: MLInstances API端點
-topic: Developer guide
+topic-legacy: Developer guide
 description: MLInstance是現有引擎與一組適當的組態配對，這些組態定義任何訓練參數、計分參數或硬體資源組態。
+exl-id: e78cda69-1ff9-47ce-b25d-915de4633e11
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '619'
 ht-degree: 4%
 
 ---
-
 
 # MLInstances端點
 
@@ -19,7 +19,7 @@ MLInstance是現有[引擎](./engines.md)與定義任何訓練參數、計分參
 
 ## 建立MLInstance {#create-an-mlinstance}
 
-您可以在提供由有效引擎ID(`{ENGINE_ID}`)和一組適當預設組態組成的請求裝載時，執行POST請求來建立MLInstance。
+您可以在提供由有效引擎ID(`{ENGINE_ID}`)和一組適當的預設組態組成的請求裝載時，執行POST請求，以建立MLInstance。
 
 如果引擎ID參照PySpark或Spark引擎，則您可以設定計算資源量，例如內核數或記憶體量。 如果參考了Python引擎，則您可以選擇使用CPU或GPU進行訓練和計分。 如需詳細資訊，請參閱[PySpark和Spark資源組態](./appendix.md#resource-config)和[Python CPU和GPU組態](./appendix.md#cpu-gpu-config)的附錄部分。
 
@@ -29,7 +29,7 @@ MLInstance是現有[引擎](./engines.md)與定義任何訓練參數、計分參
 POST /mlInstances
 ```
 
-**請求**
+**要求**
 
 ```shell
 curl -X POST \
@@ -131,7 +131,7 @@ curl -X POST \
 
 ## 檢索MLInstances清單
 
-您可以執行單一GET請求來擷取MLInstances清單。 若要協助篩選結果，您可以在請求路徑中指定查詢參數。 有關可用查詢的清單，請參閱[資產檢索查詢參數](./appendix.md#query)的附錄部分。
+您可以執行單一GET請求來檢索MLInstances清單。 若要協助篩選結果，您可以在請求路徑中指定查詢參數。 有關可用查詢的清單，請參閱[資產檢索查詢參數](./appendix.md#query)的附錄部分。
 
 **API格式**
 
@@ -146,7 +146,7 @@ GET /mlInstances?{QUERY_PARAMETER_1}={VALUE_1}&{QUERY_PARAMETER_2}={VALUE_2}
 | `{QUERY_PARAMETER}` | 用於篩選結果的[可用查詢參數](./appendix.md#query)之一。 |
 | `{VALUE}` | 前面查詢參數的值。 |
 
-**請求**
+**要求**
 
 ```shell
 curl -X GET \
@@ -199,7 +199,7 @@ curl -X GET \
 
 ## 檢索特定MLInstance {#retrieve-specific}
 
-您可以執行GET請求，在請求路徑中包含所需MLInstance的ID，以擷取特定MLInstance的詳細資訊。
+您可以執行請求，將所需MLInstance的ID包含在請求路徑中，以擷取特定MLInstance的詳細資訊。
 
 **API格式**
 
@@ -211,7 +211,7 @@ GET /mlInstances/{MLINSTANCE_ID}
 | --- | --- |
 | `{MLINSTANCE_ID}` | 所要MLInstance的ID。 |
 
-**請求**
+**要求**
 
 ```shell
 curl -X GET \
@@ -272,11 +272,11 @@ curl -X GET \
 
 ## 更新MLInstance
 
-您可以透過PUT請求覆寫現有MLInstance的屬性，以更新其屬性，該PUT請求在請求路徑中包含目標MLInstance的ID，並提供包含更新屬性的JSON裝載。
+您可以透過PUT請求覆寫現有MLInstance的屬性，該請求在請求路徑中包含目標MLInstance的ID，並提供包含更新屬性的JSON裝載，借此更新現有MLInstance。
 
 >[!TIP]
 >
->為確保此PUT請求成功，建議您首先執行GET請求以[檢索MLInstance by ID](#retrieve-specific)。 然後，修改並更新傳回的JSON物件，並套用已修改的JSON物件的完整內容作為PUT要求的裝載。
+>為確保此PUT請求成功，建議您首先執行GET請求，以按ID](#retrieve-specific)檢索MLInstance。 [然後，修改並更新傳回的JSON物件，並套用已修改的JSON物件作為PUT要求的裝載。
 
 下列範例API呼叫會在初步擁有這些屬性的同時，更新MLInstance的訓練和計分參數：
 
@@ -323,7 +323,7 @@ PUT /mlInstances/{MLINSTANCE_ID}
 | --- | --- |
 | `{MLINSTANCE_ID}` | 有效的MLInstance ID。 |
 
-**請求**
+**要求**
 
 ```shell
 curl -X PUT \
@@ -418,7 +418,7 @@ DELETE /mlInstances?engineId={ENGINE_ID}
 | --- | --- |
 | `{ENGINE_ID}` | 有效的引擎ID。 |
 
-**請求**
+**要求**
 
 ```shell
 curl -X DELETE \
@@ -453,7 +453,7 @@ DELETE /mlInstances/{MLINSTANCE_ID}
 | --- | --- |
 | `{MLINSTANCE_ID}` | 有效的MLInstance ID。 |
 
-**請求**
+**要求**
 
 ```shell
 curl -X DELETE \
