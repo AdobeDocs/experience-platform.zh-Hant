@@ -1,18 +1,18 @@
 ---
-keywords: Experience Platform;home;popular topics;flow service;API;api;delete;delete dataflows
+keywords: Experience Platform;home；熱門主題；流服務；API;api;delete；刪除資料流
 solution: Experience Platform
 title: 使用流服務API刪除資料流
-topic: overview
+topic-legacy: overview
 type: Tutorial
 description: 瞭解如何使用Flow Service API刪除批處理和流資料流。
+exl-id: ea9040b1-3a40-493d-86f0-27deef09df07
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '480'
 ht-degree: 1%
 
 ---
-
 
 # 使用流服務API刪除資料流
 
@@ -24,7 +24,7 @@ ht-degree: 1%
 
 本教學課程要求您必須擁有有效的流程ID。 如果您沒有有效的流ID，請從[來源概觀](../../home.md)中選取您選擇的連接器，然後依照本教學課程嘗試前所述的步驟進行。
 
-本教學課程也要求您對Adobe Experience Platform的下列元件有正確的認識：
+本教學課程還要求您對Adobe Experience Platform的以下部分有切實的瞭解：
 
 * [來源](../../home.md): [!DNL Experience Platform] 允許從各種來源接收資料，同時提供使用服務構建、標籤和增強傳入資料的 [!DNL Platform] 能力。
 * [沙盒](../../../sandboxes/home.md): [!DNL Experience Platform] 提供虛擬沙盒，可將單一執行個體分 [!DNL Platform] 割為不同的虛擬環境，以協助開發和發展數位體驗應用程式。
@@ -47,7 +47,7 @@ ht-degree: 1%
 
 * `x-sandbox-name: {SANDBOX_NAME}`
 
-所有包含裝載(POST、PUT、PATCH)的請求都需要額外的媒體類型標題：
+所有包含裝載(POST、PUT、PATCH)的請求都需要附加的媒體類型標題：
 
 * `Content-Type: application/json`
 
@@ -65,7 +65,7 @@ DELETE /flows/{FLOW_ID}
 | --------- | ----------- |
 | `{FLOW_ID}` | 要刪除的資料流的唯一`id`值。 |
 
-**請求**
+**要求**
 
 ```shell
 curl -X DELETE \
@@ -78,7 +78,7 @@ curl -X DELETE \
 
 **回應**
 
-成功的回應會傳回HTTP狀態204（無內容）和空白的內文。 您可以嘗試對資料流執行查找(GET)請求，以確認刪除。 API將返回HTTP 404（找不到）錯誤，表示資料流已被刪除。
+成功的回應會傳回HTTP狀態204（無內容）和空白的內文。 您可以嘗試對資料流進行查找(GET)請求，以確認刪除。 API將返回HTTP 404（找不到）錯誤，表示資料流已被刪除。
 
 ## 後續步驟
 
