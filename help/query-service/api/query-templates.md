@@ -1,17 +1,17 @@
 ---
-keywords: Experience Platform;home;popular topics;query service;query templates;api guide;templates;Query service;
+keywords: Experience Platform; home；熱門主題；查詢服務；查詢模板；api指南；模板；查詢服務；
 solution: Experience Platform
 title: 查詢模板API端點
-topic: query templates
+topic-legacy: query templates
 description: 以下檔案將逐步介紹您可以使用查詢服務API的查詢範本進行的各種API呼叫。
+exl-id: 14cd7907-73d2-478f-8992-da3bdf08eacc
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '674'
 ht-degree: 3%
 
 ---
-
 
 # 查詢範本端點
 
@@ -45,7 +45,7 @@ GET /query-templates?{QUERY_PARAMETERS}
 | `start` | 使用零編號來偏移響應清單。 例如，`start=2`將返回從第三個列出的查詢開始的清單。 (*預設值：0*) |
 | `property` | 根據欄位篩選結果。 篩選器&#x200B;**必須**&#x200B;為HTML逸出。 逗號可用來組合多組篩選器。 支援的欄位有`name`和`userId`。 唯一支援的運算子是`==`（等於）。 例如，`name==my_template`將返回名稱為`my_template`的所有查詢模板。 |
 
-**請求**
+**要求**
 
 下列請求會擷取為IMS組織建立的最新查詢範本。
 
@@ -120,7 +120,7 @@ curl -X GET https://platform.adobe.io/data/foundation/query/query-templates?limi
 POST /query-templates
 ```
 
-**請求**
+**要求**
 
 ```shell
 curl -X POST https://platform.adobe.io/data/foundation/query/query-templates
@@ -187,7 +187,7 @@ GET /query-templates/{TEMPLATE_ID}
 | -------- | ----------- | 
 | `{TEMPLATE_ID}` | 要檢索的查詢模板的`id`值。 |
 
-**請求**
+**要求**
 
 ```shell
 curl -X GET https://platform.adobe.io/data/foundation/query/query-templates/0094d000-9062-4e6a-8fdb-05606805f08f
@@ -233,7 +233,7 @@ curl -X GET https://platform.adobe.io/data/foundation/query/query-templates/0094
 
 ### 更新指定的查詢模板
 
-通過向`/query-templates/{TEMPLATE_ID}`端點發出PUT請求並在請求路徑中提供查詢模板的ID，可以更新特定查詢模板。
+您可以通過向`/query-templates/{TEMPLATE_ID}`端點發出PUT請求並在請求路徑中提供查詢模板的ID來更新特定查詢模板。
 
 **API格式**
 
@@ -245,7 +245,7 @@ PUT /query-templates/{TEMPLATE_ID}
 | -------- | ----------- |
 | `{TEMPLATE_ID}` | 要檢索的查詢模板的`id`值。 |
 
-**請求**
+**要求**
 
 >[!NOTE]
 >
@@ -317,7 +317,7 @@ DELETE /query-templates/{TEMPLATE_ID}
 | -------- | ----------- |
 | `{TEMPLATE_ID}` | 要檢索的查詢模板的`id`值。 |
 
-**請求**
+**要求**
 
 ```shell
 curl -X DELETE https://platform.adobe.io/data/foundation/query/query-templates/0094d000-9062-4e6a-8fdb-05606805f08f
