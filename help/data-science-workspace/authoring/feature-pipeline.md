@@ -1,17 +1,17 @@
 ---
-keywords: Experience Platform；教學課程；功能管線；Data Science Workspace；熱門主題
+keywords: Experience Platform；教學課程；功能管線；資料科學工作區；熱門主題
 title: 使用模型編寫SDK建立功能管線
-topic: tutorial
+topic-legacy: tutorial
 type: Tutorial
-description: Adobe Experience Platform可讓您透過Sensei機器學習架構執行階段，建立並建立自訂功能管道，以大規模執行功能工程。 本檔案說明在功能管道中找到的各種類別，並提供使用PySpark中的「模型編寫SDK」建立自訂功能管道的逐步教學課程。
+description: Adobe Experience Platform允許您建立和建立自訂功能管道，以透過Sensei機器學習架構執行時期大規模執行功能工程。 本檔案說明在功能管道中找到的各種類別，並提供使用PySpark中的「模型編寫SDK」建立自訂功能管道的逐步教學課程。
+exl-id: c2c821d5-7bfb-4667-ace9-9566e6754f98
 translation-type: tm+mt
-source-git-commit: f6cfd691ed772339c888ac34fcbd535360baa116
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '1441'
 ht-degree: 0%
 
 ---
-
 
 # 使用「模型編寫SDK」建立功能管線
 
@@ -19,14 +19,14 @@ ht-degree: 0%
 >
 > 功能管道目前僅透過API提供。
 
-Adobe Experience Platform可讓您透過Sensei機器學習架構執行階段（以下稱為「執行階段」），建立並建立自訂功能管道，以大規模執行功能工程。
+Adobe Experience Platform可讓您建立和建立自訂功能管道，以透過Sensei機器學習架構執行時期（以下稱為「執行時期」）大規模執行功能工程。
 
 本檔案說明在功能管道中找到的各種類別，並提供使用PySpark中的[Model Authoring SDK](./sdk.md)建立自訂功能管道的逐步教學課程。
 
 在運行特徵管線時，會發生以下工作流：
 
 1. 方式會將資料集載入管線。
-2. 功能轉換是在資料集上完成，並回寫至Adobe Experience Platform。
+2. 在資料集上進行特徵轉換並寫回Adobe Experience Platform。
 3. 所轉換的資料被載入用於訓練。
 4. 特徵流水線以梯度提升回歸器為模型定義各階段。
 5. 該管道用於擬合訓練資料，並建立訓練模型。
@@ -41,7 +41,7 @@ Adobe Experience Platform可讓您透過Sensei機器學習架構執行階段（�
 - 轉換的模式和基於該模式的空資料集。
 - 輸出模式和基於該模式的空資料集。
 
-上述所有資料集都必須上傳至[!DNL Platform] UI。 若要設定此設定，請使用Adobe提供的[引導指令碼](https://github.com/adobe/experience-platform-dsw-reference/tree/master/bootstrap)。
+上述所有資料集都必須上傳至[!DNL Platform] UI。 要設定此設定，請使用Adobe提供的[引導指令碼](https://github.com/adobe/experience-platform-dsw-reference/tree/master/bootstrap)。
 
 ## 特徵管線類
 
@@ -401,7 +401,7 @@ https://www.postman.com/collections/c5fc0d1d5805a5ddd41a
 
 ### 建立特徵管線引擎{#create-engine-api}
 
-在您取得Docker影像位置後，您就可以透過對[!DNL Sensei Machine Learning]執行POST，使用[ API建立功能管線引擎](../api/engines.md#feature-pipeline-docker)。 `/engines`成功建立功能管線引擎可提供引擎唯一識別碼(`id`)。 請務必先儲存此值，再繼續。
+在您取得Docker影像位置後，您就可以透過對`/engines`執行POST，使用[!DNL Sensei Machine Learning] API建立功能管線引擎](../api/engines.md#feature-pipeline-docker)。 [成功建立功能管線引擎可提供引擎唯一識別碼(`id`)。 請務必先儲存此值，再繼續。
 
 ### 建立MLInstance {#create-mlinstance}
 
@@ -409,19 +409,19 @@ https://www.postman.com/collections/c5fc0d1d5805a5ddd41a
 
 ### 建立實驗{#create-experiment}
 
-接下來，您需要[建立實驗](../api/experiments.md#create-an-experiment)。 若要建立實驗，您必須擁有您的MLIstance唯一識別碼(`id`)，並對`/experiment`端點提出POST要求。 成功的回應會傳回包含新建立之實驗詳細資料的裝載，包括其唯一識別碼(`id`)，用於下一個API呼叫。
+接下來，您需要[建立實驗](../api/experiments.md#create-an-experiment)。 若要建立實驗，您必須擁有您的MLIstance唯一識別碼(`id`)，並向`/experiment`端點提出POST要求。 成功的回應會傳回包含新建立之實驗詳細資料的裝載，包括其唯一識別碼(`id`)，用於下一個API呼叫。
 
 ### 指定「實驗」運行功能管線任務{#specify-feature-pipeline-task}
 
-建立實驗後，必須將實驗的模式更改為`featurePipeline`。 要更改模式，請使用`EXPERIMENT_ID`對[`experiments/{EXPERIMENT_ID}/runs`](../api/experiments.md#experiment-training-scoring)進行附加的POST，並在主體中發送`{ "mode":"featurePipeline"}`以指定特徵管線「實驗」運行。
+建立實驗後，必須將實驗的模式更改為`featurePipeline`。 若要變更模式，請使用`EXPERIMENT_ID`對[`experiments/{EXPERIMENT_ID}/runs`](../api/experiments.md#experiment-training-scoring)進行額外POST，並在內文中傳送`{ "mode":"featurePipeline"}`以指定功能管線「實驗」執行。
 
-完成後，對`/experiments/{EXPERIMENT_ID}`至[的GET請求擷取實驗狀態](../api/experiments.md#retrieve-specific)，並等待實驗狀態更新完成。
+完成後，請向`/experiments/{EXPERIMENT_ID}`發出GET請求，以擷取實驗狀態](../api/experiments.md#retrieve-specific)，並等待實驗狀態更新完成。[
 
 ### 指定「實驗」運行培訓任務{#training}
 
-接下來，您需要[指定培訓執行任務](../api/experiments.md#experiment-training-scoring)。 將POST設定為`experiments/{EXPERIMENT_ID}/runs`，並在主體中將模式設定為`train`併發送包含培訓參數的一系列任務。 成功的回應會傳回包含所請求實驗詳細資料的裝載。
+接下來，您需要[指定培訓執行任務](../api/experiments.md#experiment-training-scoring)。 將POST設定為`experiments/{EXPERIMENT_ID}/runs`，並在主體中將模式設定為`train`，併發送包含培訓參數的一系列任務。 成功的回應會傳回包含所請求實驗詳細資料的裝載。
 
-完成後，對`/experiments/{EXPERIMENT_ID}`至[的GET請求擷取實驗狀態](../api/experiments.md#retrieve-specific)，並等待實驗狀態更新完成。
+完成後，請向`/experiments/{EXPERIMENT_ID}`發出GET請求，以擷取實驗狀態](../api/experiments.md#retrieve-specific)，並等待實驗狀態更新完成。[
 
 ### 指定「實驗」運行計分任務{#scoring}
 
@@ -431,7 +431,7 @@ https://www.postman.com/collections/c5fc0d1d5805a5ddd41a
 
 成功的訓練執行後，您需要[指定計分執行任務](../api/experiments.md#experiment-training-scoring)。 將POST設為`experiments/{EXPERIMENT_ID}/runs`，並在正文中將`mode`屬性設為&quot;score&quot;。 這會啟動您的計分實驗執行。
 
-完成後，對`/experiments/{EXPERIMENT_ID}`至[的GET請求擷取實驗狀態](../api/experiments.md#retrieve-specific)，並等待實驗狀態更新完成。
+完成後，請向`/experiments/{EXPERIMENT_ID}`發出GET請求，以擷取實驗狀態](../api/experiments.md#retrieve-specific)，並等待實驗狀態更新完成。[
 
 一旦計分完成，您的功能管道就應該可以運作。
 
