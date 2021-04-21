@@ -1,21 +1,21 @@
 ---
-keywords: Experience Platform;home；熱門主題；資料攝取通知；通知；訂閱事件；資料攝取狀態事件；狀態事件；subscribe；狀態通知；
+keywords: Experience Platform;home；熱門主題；資料提取通知；通知；訂閱事件；資料提取狀態事件；狀態事件；subscribe；狀態通知；
 solution: Experience Platform
 title: 資料擷取通知
-topic: overview
-description: 為協助監控擷取程式，Adobe Experience Platform可讓您訂閱流程每個步驟所發佈的一組事件，並通知您所擷取資料的狀態和任何可能的失敗。
+topic-legacy: overview
+description: 為協助監控擷取程式，Adobe Experience Platform可訂閱在程式每個步驟發佈的一組事件，並通知您所擷取資料的狀態和任何可能的失敗。
+exl-id: fd34e1ab-f6f6-44f0-88ee-7020e9322c39
 translation-type: tm+mt
-source-git-commit: 089a4d517476b614521d1db4718966e3ebb13064
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '681'
+source-wordcount: '672'
 ht-degree: 1%
 
 ---
 
-
 # 資料擷取通知
 
-將資料擷取至Adobe Experience Platform的程式由多個步驟組成。 在您識別需要收錄至[!DNL Platform]的資料檔案後，擷取程式就會開始，每個步驟都會連續進行，直到資料成功收錄或失敗為止。 您可使用[Adobe Experience Platform Data Ingestion API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml)或使用[!DNL Experience Platform]使用者介面來啟動擷取程式。
+將資料收錄到Adobe Experience Platform的過程由多個步驟組成。 在您識別需要收錄至[!DNL Platform]的資料檔案後，擷取程式就會開始，每個步驟都會連續進行，直到資料成功收錄或失敗為止。 可以使用[Adobe Experience Platform資料攝取API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml)或使用[!DNL Experience Platform]用戶介面來啟動攝取過程。
 
 載入到[!DNL Platform]中的資料必須經過多個步驟才能到達其目標、[!DNL Data Lake]或[!DNL Real-time Customer Profile]資料儲存。 每個步驟都包括處理資料、驗證資料，然後儲存資料，再傳遞至下一步驟。 視所擷取的資料量而定，這可能會變成耗時的程式，而且程式總會因為驗證、語義或處理錯誤而失敗。 發生故障時，需要修正資料問題，然後必須使用修正的資料檔案重新啟動整個擷取程式。
 
@@ -23,17 +23,17 @@ ht-degree: 1%
 
 ## 註冊網頁掛接以取得資料擷取通知
 
-若要接收資料擷取通知，您必須使用[Adobe Developer Console](https://www.adobe.com/go/devs_console_ui)來註冊網頁掛接至您的Experience Platform整合。
+若要接收資料擷取通知，您必須使用[Adobe開發人員主控台](https://www.adobe.com/go/devs_console_ui)來註冊網頁掛接至您的Experience Platform整合。
 
 請依照[訂閱 [!DNL Adobe I/O Event] 通知](../../observability/notifications/subscribe.md)的教學課程，瞭解如何完成此作業的詳細步驟。
 
 >[!IMPORTANT]
 >
->在訂閱程式中，請確定您選擇&#x200B;**[!UICONTROL 平台通知]**&#x200B;作為事件提供者，並在出現提示時選擇&#x200B;**[!UICONTROL 資料擷取通知]**&#x200B;事件訂閱。
+>在訂閱程式中，請確定您選擇&#x200B;**[!UICONTROL Platform notifications]**&#x200B;做為事件提供者，並在出現提示時選擇&#x200B;**[!UICONTROL Data ingestion notification]**&#x200B;事件訂閱。
 
 ## 接收資料擷取通知
 
-在您成功註冊網頁掛接且已收錄新資料後，您就可以開始接收事件通知。 這些事件可使用網頁掛接本身來檢視，或在Adobe Developer Console中，選取專案事件註冊概觀中的&#x200B;**[!UICONTROL 除錯追蹤]**&#x200B;標籤來檢視。
+在您成功註冊網頁掛接且已收錄新資料後，您就可以開始接收事件通知。 這些事件可使用網頁掛接本身來檢視，或在「Adobe開發人員主控台」中選取專案事件註冊概述中的&#x200B;**[!UICONTROL Debug Tracing]**&#x200B;標籤。
 
 下列JSON是通知裝載的範例，在批次擷取事件失敗時，會傳送至您的網頁掛接：
 
@@ -73,7 +73,7 @@ ht-degree: 1%
 
 ## 後續步驟
 
-在您將[!DNL Platform]通知註冊到您的專案後，您就可以檢視從[!UICONTROL 專案概述]收到的事件。 請參閱[描述Adobe I/O事件的指南](https://www.adobe.io/apis/experienceplatform/events/docs.html#!adobedocs/adobeio-events/master/support/tracing.md)，以取得如何追蹤事件的詳細指示。
+在您將[!DNL Platform]通知註冊到您的專案後，即可檢視從[!UICONTROL Project overview]收到的事件。 有關如何跟蹤事件的詳細說明，請參閱[跟蹤Adobe I/O事件](https://www.adobe.io/apis/experienceplatform/events/docs.html#!adobedocs/adobeio-events/master/support/tracing.md)上的指南。
 
 ## 附錄
 
