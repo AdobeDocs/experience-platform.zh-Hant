@@ -1,17 +1,17 @@
 ---
-keywords: Experience Platform；開發人員指南； Data Science Workspace；熱門主題；即時機器學習；節點參考；
+keywords: Experience Platform；開發人員指南；資料科學工作區；熱門主題；即時機器學習；節點參考；
 solution: Experience Platform
 title: 即時機器學習節點參考
-topic: Nodes reference
+topic-legacy: Nodes reference
 description: 節點是圖形形成的基礎單元。 每個節點都執行特定任務，並且可以使用連結將它們連結在一起，以形成表示ML管線的圖形。 由節點執行的任務表示對輸入資料的操作，如資料或模式的轉換或機器學習推理。 節點將變換或推斷的值輸出到下一個節點。
+exl-id: 67fe26b5-ce03-4a9a-ad45-783b2acf8d92
 translation-type: tm+mt
-source-git-commit: f6cfd691ed772339c888ac34fcbd535360baa116
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '678'
 ht-degree: 0%
 
 ---
-
 
 # 即時機器學習節點參考(Alpha)
 
@@ -59,7 +59,7 @@ pprint(nf.discover_nodes())
 
 ### ModelUpload
 
-ModelUpload節點是內部的Adobe節點，會採用model_path，並將模型從本機模型路徑上傳到Real-time Machine Learning Blob儲存。
+ModelUpload節點是內部Adobe節點，它採用model_path，並將模型從本地模型路徑上載到Real-time Machine Learning Blob儲存。
 
 ```python
 model = ModelUpload(params={'model_path': model_path})
@@ -71,7 +71,7 @@ model_id = msg_model.model['model_id']
 
 ### ONNode
 
-ONNXode是內部Adobe節點，會使用模型ID來提取預先訓練的ONNX模型，並使用它來對傳入的資料進行分數。
+ONNXode是內部Adobe節點，它使用模型ID提取預先訓練的ONNX模型，並使用它對傳入資料進行分數。
 
 >[!TIP]
 >
@@ -85,7 +85,7 @@ node_model_score = ONNXNode(params={"features": ['browser', 'device', 'login_pag
 
 下面的熊貓節點，可以匯入任何`pd.DataFrame`方法或任何普通熊貓的頂層功能。 要進一步瞭解熊貓方法，請訪問[熊貓方法文檔](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html)。 有關頂級函式的更多資訊，請訪問[Apcots API參考指南，以瞭解一般函式](https://pandas.pydata.org/pandas-docs/stable/reference/general_functions.html)。
 
-以下節點使用`"import": "map"`將方法名稱作為字串導入參數中，然後將參數作為映射函式輸入。 以下範例使用`{"arg": {"Desktop": 1, "Mobile": 0}, "na_action": 0}`執行此動作。 在對應到位後，您可以選擇將`inplace`設為`True`或`False`。 根據是否要就地應用轉換，將`inplace`設定為`True`或`False`。 預設情況下，`"inplace": False`會建立新列。 對提供新欄名稱的支援已設定為在後續版本中新增。 最後一行`cols`可以是單列名稱或列清單。 指定要應用轉換的列。 在此示例中指定了`device`。
+以下節點使用`"import": "map"`將方法名稱作為字串導入參數中，然後將參數作為映射函式輸入。 以下範例使用`{"arg": {"Desktop": 1, "Mobile": 0}, "na_action": 0}`執行此動作。 在對應到位後，您可以選擇將`inplace`設為`True`或`False`。 根據是否要就地應用轉換，將`inplace`設定為`True`或`False`。 預設情況下，`"inplace": False`會建立新列。 對提供新欄名稱的支援已設定為在後續版本中新增。 最後一行`cols`可以是單列名稱或列清單。 指定要應用轉換的列。 在此示例中指定`device`。
 
 ```python
 #  df["device"] = df["device"].map({"Desktop":1, "Mobile":0}, na_action=0)
