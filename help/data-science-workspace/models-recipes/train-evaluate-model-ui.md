@@ -7,9 +7,9 @@ type: Tutorial
 description: 在Adobe Experience Platform資料科學工作區中，機器學習模型是通過結合適合模型意圖的現有配方來建立的。 然後，對模型進行訓練和評估，通過微調其相關的超參數來優化其操作效率和效能。 方式可重複使用，這表示您可以使用單一方式，針對特定目的建立並量身打造多個模型。
 exl-id: 6f674cfa-c123-46a3-80e2-9342fe687976
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 441d7822f287fabf1b06cdf3f6982f9c910387a8
 workflow-type: tm+mt
-source-wordcount: '1083'
+source-wordcount: '1078'
 ht-degree: 1%
 
 ---
@@ -110,10 +110,10 @@ ht-degree: 1%
 超參數決定模型的訓練行為，修改超參數將影響模型的準確性和精度：
 
 | 超參數 | 說明 | 建議範圍 |
---- | --- | ---
-| learning_rate | 學習率會透過learning_rate縮減每棵樹的貢獻。 learning_rate和n_meativers之間存在取捨。 | 0.1 | [2 - 10] /估計數 |
-| n_mediators | 要執行的升級階段數。 漸層增強功能對過度調整相當穩健，因此，大量的漸層增強功能通常能產生較佳的效能。 | 100 | 100 - 1000 |
-| max_depth | 個別回歸估計的最大深度。 最大深度限制樹中的節點數。 調整此參數以獲得最佳效能；最佳值取決於輸入變數的互動。 | 3 | 4 - 10 |
+| --- | --- | --- |
+| learning_rate | 學習率會透過learning_rate縮減每棵樹的貢獻。 learning_rate和n_meativers之間存在取捨。 | 0.1 |
+| n_mediators | 要執行的升級階段數。 漸層增強功能對過度調整相當穩健，因此，大量的漸層增強功能通常能產生較佳的效能。 | 100 |
+| max_depth | 個別回歸估計的最大深度。 最大深度限制樹中的節點數。 調整此參數以獲得最佳效能；最佳值取決於輸入變數的互動。 | 3 |
 
 其他參數確定模型的技術屬性：
 
