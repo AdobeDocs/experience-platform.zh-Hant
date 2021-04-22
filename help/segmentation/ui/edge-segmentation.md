@@ -6,9 +6,9 @@ topic-legacy: ui guide
 description: 邊緣區段是指能夠即時在邊緣上評估平台中的區段，讓相同的頁面和下一頁個人化使用案例。
 exl-id: eae948e6-741c-45ce-8e40-73d10d5a88f1
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 5256c2a13fc75f7d46911f2ad368188d9e818921
 workflow-type: tm+mt
-source-wordcount: '346'
+source-wordcount: '349'
 ht-degree: 4%
 
 ---
@@ -41,7 +41,7 @@ ht-degree: 4%
 | 查詢類型 | 詳細資料 |
 | ---------- | ------- |
 | 相對時間窗口 | 如果查詢引用時間窗口，則無法使用邊緣分割來評估該查詢。 |
-| 否定 | 如果查詢包含否定，則無法使用邊緣分段來評估。 |
+| 否定 | 如果查詢包含否定或`not`事件，則無法使用邊緣分段來評估。 |
 | 多個事件 | 如果查詢包含多個事件，則無法使用邊緣分段來評估。 |
 
 ## 後續步驟
