@@ -6,7 +6,7 @@ topic-legacy: developer guide
 description: 本檔案包含使用Privacy ServiceAPI的其他資訊。
 exl-id: 7099e002-b802-486e-8863-0630d66e330f
 translation-type: tm+mt
-source-git-commit: 545ac984d9f9f540fc9121214d40719f9a254379
+source-git-commit: e226990fc84926587308077b32b128bfe334e812
 workflow-type: tm+mt
 source-wordcount: '0'
 ht-degree: 0%
@@ -25,15 +25,17 @@ ht-degree: 0%
 
 | 身分類型 | `namespace` | `namespaceId` |
 | --- | --- | --- |
-| 電子郵件 | 電子郵件 | 6 |
-| 電話 | 電話 | 7 |
-| Adobe Advertising CloudID | AdCloud | 411 |
-| Adobe Audience ManagerUUID | 核心 | 0 |
-| Adobe Experience CloudID | ECID | 4 |
-| Adobe TargetID | TNTID | 9 |
-| [!DNL Apple] 廣告商的ID | IDFA | 二零九一五年 |
-| [!DNL Google] 廣告 ID | GAID | 二零九一四年 |
-| [!DNL Windows] AID | WAID | 8 |
+| 電子郵件 | `Email` | `6` |
+| 電話 | `Phone` | `7` |
+| Adobe Advertising CloudID | `AdCloud` | `411` |
+| Adobe Audience ManagerUUID | `CORE` | `0` |
+| Adobe Experience CloudID | `ECID` | `4` |
+| Adobe TargetID | `TNTID` | `9` |
+| [!DNL Apple] 廣告商的ID | `IDFA` | `20915` |
+| [!DNL Google] 廣告 ID | `GAID` | `20914` |
+| [!DNL Windows] AID | `WAID` | `8` |
+
+{style=&quot;table-layout:auto&quot;}
 
 >[!NOTE]
 >
@@ -47,13 +49,15 @@ ht-degree: 0%
 
 | 限定詞 | 定義 |
 | --------- | ---------- |
-| 標準 | 其中一個標準名稱空間是全域定義的，不會系結至個別組織資料集（例如，電子郵件、電話號碼等）。 提供命名空間ID。 |
-| 自訂 | 在組織上下文中建立的唯一名稱空間，不在[!DNL Experience Cloud]中共用。 值代表要搜尋的好記名稱（&quot;name&quot;欄位）。 提供命名空間ID。 |
-| integrationCode | 整合代碼——類似「自訂」，但明確定義為要搜尋之資料來源的整合代碼。 提供命名空間ID。 |
-| namespaceId | 指出值是透過namespace服務建立或映射之namespace的實際ID。 |
-| 未註冊 | 未在namespace服務中定義且採用「原樣」的自由格式字串。 任何處理這些類型名稱空間的應用程式都會針對它們進行檢查，並處理（如果適合公司內容和資料集）。 未提供命名空間ID。 |
-| analytics | 在[!DNL Analytics]內部映射的自訂命名空間，而不是在namespace服務中。 這會直接依原始請求所指定的方式傳入，但沒有命名空間ID |
-| Target | [!DNL Target]在內部可理解的自訂命名空間，而不是在namespace服務中。 這會直接依原始請求所指定的方式傳入，但沒有命名空間ID |
+| `standard` | 其中一個標準名稱空間是全域定義的，不會系結至個別組織資料集（例如，電子郵件、電話號碼等）。 提供命名空間ID。 |
+| `custom` | 在組織上下文中建立的唯一名稱空間，不在[!DNL Experience Cloud]中共用。 值代表要搜尋的好記名稱（&quot;name&quot;欄位）。 提供命名空間ID。 |
+| `integrationCode` | 整合代碼——類似「自訂」，但明確定義為要搜尋之資料來源的整合代碼。 提供命名空間ID。 |
+| `namespaceId` | 指出值是透過namespace服務建立或映射之namespace的實際ID。 |
+| `unregistered` | 未在namespace服務中定義且採用「原樣」的自由格式字串。 任何處理這些類型名稱空間的應用程式都會針對它們進行檢查，並處理（如果適合公司內容和資料集）。 未提供命名空間ID。 |
+| `analytics` | 在[!DNL Analytics]內部映射的自訂命名空間，而不是在namespace服務中。 這會直接依原始請求所指定的方式傳入，但沒有命名空間ID |
+| `target` | [!DNL Target]在內部可理解的自訂命名空間，而不是在namespace服務中。 這會直接依原始請求所指定的方式傳入，但沒有命名空間ID |
+
+{style=&quot;table-layout:auto&quot;}
 
 ## 接受的產品值
 
@@ -70,3 +74,5 @@ ht-degree: 0%
 | Adobe Target | `Target` |
 | 客戶記錄服務 | `CRS` |
 | 即時客戶個人檔案 | `ProfileService` |
+
+{style=&quot;table-layout:auto&quot;}
