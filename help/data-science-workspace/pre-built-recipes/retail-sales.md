@@ -6,7 +6,7 @@ topic-legacy: overview
 description: 「零售銷售」方式使您能夠預測特定時段內所有系統初始商店的銷售預測。 透過精確的預測模型，零售商將能夠找出需求與定價政策之間的關係，並做出最佳化定價決策，以最大化銷售與收入。
 exl-id: ff01fcd1-fca6-4957-8470-a974fd1520aa
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 441d7822f287fabf1b06cdf3f6982f9c910387a8
 workflow-type: tm+mt
 source-wordcount: '585'
 ht-degree: 2%
@@ -41,7 +41,7 @@ ht-degree: 2%
 此方式使用[XDM結構](../../xdm/schema/field-dictionary.md)來建模資料。 此方式所用的架構如下所示：
 
 | 欄位名稱 | 類型 |
---- | ---
+| --- | --- |
 | 日期 | 字串 |
 | 商店 | 整數 |
 | storeType | 字串 |
