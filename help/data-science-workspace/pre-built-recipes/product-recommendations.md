@@ -6,7 +6,7 @@ topic-legacy: overview
 description: 「產品Recommendations配方」可讓您根據客戶的需求和興趣提供個人化產品建議。 透過精確的預測模型，客戶的購買記錄可讓您深入瞭解他們可能感興趣的產品。
 exl-id: 508d55af-c33b-4f1d-b1b6-f00ed5d12bf9
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 441d7822f287fabf1b06cdf3f6982f9c910387a8
 workflow-type: tm+mt
 source-wordcount: '477'
 ht-degree: 2%
@@ -39,7 +39,7 @@ ht-degree: 2%
 ### 輸入資料結構
 
 | 欄位名稱 | 類型 |
---- | ---
+| --- | --- |
 | itemId | 字串 |
 | interactionType | 字串 |
 | timestamp | 字串 |
@@ -48,7 +48,7 @@ ht-degree: 2%
 ### 輸出資料模式
 
 | 欄位名稱 | 類型 |
---- | ---
+| --- | --- |
 | 建議 | 字串 |
 | userId | 整數 |
 
