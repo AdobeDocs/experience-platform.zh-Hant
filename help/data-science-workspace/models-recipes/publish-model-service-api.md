@@ -7,7 +7,7 @@ type: Tutorial
 description: 本教學課程涵蓋使用Sensei Machine Learning API將模型發佈為服務的程式。
 exl-id: f78b1220-0595-492d-9f8b-c3a312f17253
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: a6d047d52dad085ba662bd684c896bdffe3eef2e
 workflow-type: tm+mt
 source-wordcount: '1516'
 ht-degree: 1%
@@ -39,7 +39,7 @@ ht-degree: 1%
 下表概述本教學課程中使用的一些常見術語：
 
 | 詞語 | 定義 |
---- | ---
+| --- | --- |
 | **機器學習實例（ML實例）** | 特定租用戶的[!DNL Sensei]引擎例項，包含特定資料、參數和[!DNL Sensei]程式碼。 |
 | **實驗** | 用於舉行培訓實驗運行、打分實驗運行或兩者的傘形實體。 |
 | **排程實驗** | 描述由使用者定義之排程管理之「實驗執行」訓練或計分自動化的術語。 |
@@ -83,7 +83,7 @@ curl -X POST
 ```
 
 | 屬性 | 說明 |
---- | ---
+| --- | --- |
 | `mlInstanceId` | 現有的ML實例標識、用於建立ML服務的培訓實驗運行應與此特定的ML實例相對應。 |
 | `trainingExperimentId` | 與ML實例標識對應的實驗標識。 |
 | `trainingExperimentRunId` | 用於發佈ML服務的特定訓練實驗執行。 |
