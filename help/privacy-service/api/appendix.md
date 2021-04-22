@@ -6,10 +6,10 @@ topic-legacy: developer guide
 description: 本檔案包含使用Privacy ServiceAPI的其他資訊。
 exl-id: 7099e002-b802-486e-8863-0630d66e330f
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 545ac984d9f9f540fc9121214d40719f9a254379
 workflow-type: tm+mt
-source-wordcount: '501'
-ht-degree: 9%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -60,13 +60,13 @@ ht-degree: 9%
 下表概述了在作業建立請求的`include`屬性中指定Adobe產品的接受值。
 
 | 產品 | 用於`include`屬性的值 |
---- | ---
-| Adobe Advertising Cloud | &quot;AdCloud&quot; |
-| Adobe Analytics | &quot;Analytics&quot; |
-| Adobe Audience Manager | &quot;AudienceManager&quot; |
-| Adobe Campaign | &quot;Campaign&quot; |
-| Adobe Experience Platform | &quot;aepDataLake&quot; |
-| Adobe Primetime認證 | &quot;primetimeAuthentication&quot; |
-| Adobe Target | &quot;Target&quot; |
-| 客戶記錄服務 | &quot;CRS&quot; |
-| 即時客戶個人檔案 | &quot;ProfileService&quot; |
+| --- | --- |
+| Adobe Advertising Cloud | `AdCloud` |
+| Adobe Analytics | `Analytics` |
+| Adobe Audience Manager | `AudienceManager` |
+| Adobe Campaign | `Campaign` |
+| Adobe Experience Platform | `aepDataLake` |
+| Adobe Primetime認證 | `primetimeAuthentication` |
+| Adobe Target | `Target` |
+| 客戶記錄服務 | `CRS` |
+| 即時客戶個人檔案 | `ProfileService` |
