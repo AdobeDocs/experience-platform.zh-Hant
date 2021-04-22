@@ -7,7 +7,7 @@ type: Tutorial
 description: 模型洞察框架為資料科學家提供資料科學工作區中的工具，讓他們快速且知情地選擇以實驗為基礎的最佳機器學習模型。
 exl-id: f989a3f1-6322-47c6-b7d6-6a828766053f
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 441d7822f287fabf1b06cdf3f6982f9c910387a8
 workflow-type: tm+mt
 source-wordcount: '1265'
 ht-degree: 0%
@@ -77,7 +77,7 @@ evaluation.metrics=com.adobe.platform.ml.impl.Constants.FSCORE
 下表列出每個類別的預設度量。 使用者也可以使用`evaluation.metric`欄中的值來啟用特定量度。
 
 | `evaluator.class` | 預設量度 | `evaluation.metric` |
---- | --- | ---
+| --- | --- | --- |
 | `DefaultBinaryClassificationEvaluator` | -Precision <br>-Recall <br>-Communsing Matrix <br>-F-Score <br>-Accuracy <br>-Receiver操作特性下的<br>-Area | -`PRECISION`<br>-`RECALL`<br>-`CONFUSION_MATRIX`-<br>-`FSCORE`<br>-`ACCURACY`-<br>-`ROC`<br>-`AUROC` |
 | `DefaultMultiClassificationEvaluator` | -Precision <br>-Recall <br>-Communsing Matrix <br>-F-Score <br>-Accuracy <br>-Receiver操作特性下的<br>-Area | -`PRECISION`<br>-`RECALL`<br>-`CONFUSION_MATRIX`-<br>-`FSCORE`<br>-`ACCURACY`-<br>-`ROC`<br>-`AUROC` |
 | `RecommendationsEvaluator` | -平均平均精確度(MAP)<br>-標準化的折扣累積增益<br>-平均倒數排名<br>-量度K | -`MEAN_AVERAGE_PRECISION` <br>-`NDCG` <br>-`MRR` <br>-`METRIC_K` |
@@ -161,7 +161,7 @@ class Evaluator(AbstractEvaluator):
 [!DNL Sensei Model Insights Framework]將支援每種機器學習演算法的一個預設範本。 下表顯示常見的高階機器學習演算法類別以及對應的評估度量和視覺化。
 
 | ML演算法類型 | 評估量度 | 視覺效果 |
---- | --- | ---
+| --- | --- | --- |
 | 回歸 | - RMSE<br>- MAPE<br>- MASE<br>- MAE | 預測與實際值覆蓋曲線 |
 | 二進位分類 | -混淆矩陣<br>- Precision-recall<br>- Accuracy<br>- F-score（具體為F1,F2）<br>- AUC<br>- ROC | ROC曲線與混淆矩陣 |
 | 多類別分類 | -混淆矩陣<br>-對於每個類：<br>- precision-recall準確度<br>- F-score（具體是F1, F2） | ROC曲線與混淆矩陣 |
