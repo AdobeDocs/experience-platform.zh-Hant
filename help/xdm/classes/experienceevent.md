@@ -6,9 +6,9 @@ topic-legacy: overview
 description: 本檔案提供XDM ExperienceEvent類別的概觀。
 exl-id: a8e59413-b52f-4ea5-867b-8d81088a3321
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 9b63b38e664e5776ca638f8ed407896f185bcab0
 workflow-type: tm+mt
-source-wordcount: '812'
+source-wordcount: '861'
 ht-degree: 1%
 
 ---
@@ -29,7 +29,7 @@ ht-degree: 1%
 | `eventMergeId` | 導致記錄建立的收錄批的ID。 系統會在擷取資料時自動填入此欄位。 |
 | `eventType` | 一個字串，它指示記錄的主要事件類型。 [附錄部分](#eventType)提供了接受的值及其定義。 |
 | `identityMap` | 映射欄位，包含事件所應用的個人的一組命名空間標識。 系統會在擷取身分資料時自動更新此欄位。 為了將此欄位正確用於[即時客戶概要檔案](../../profile/home.md)，請勿嘗試手動更新資料操作中的欄位內容。<br /><br />如需其使用案例的詳細資訊，請參 [閱架構構](../schema/composition.md#identityMap) 成基礎中有關身分映射的章節。 |
-| `timestamp` | 事件或觀察的發生時間，按照[RFC 3339第5.6](https://tools.ietf.org/html/rfc3339#section-5.6)節的格式設定。 |
+| `timestamp` | 事件發生時的ISO 8601時間戳記，格式為[RFC 3339第5.6節](https://tools.ietf.org/html/rfc3339#section-5.6)。<br><br>此時間戳 **** 記只能代表事件本身的觀察，且必須發生在過去。如果您的分段使用案例需要使用未來可能發生的時間戳記（例如啟程日期），這些值必須限制在您的「體驗事件」結構的其他位置。 |
 
 ## 相容混音{#mixins}
 
