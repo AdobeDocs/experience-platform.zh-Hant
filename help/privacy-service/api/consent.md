@@ -6,10 +6,10 @@ topic-legacy: developer guide
 description: 瞭解如何使用Experience CloudAPI管理Privacy Service應用程式的客戶同意要求。
 exl-id: ec505749-c0a9-4050-be56-4c0657807ec7
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: e226990fc84926587308077b32b128bfe334e812
 workflow-type: tm+mt
-source-wordcount: '244'
-ht-degree: 1%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -66,6 +66,8 @@ curl -X POST \
 | `entities` | 一系列對象，用於指示對許可請求申請的用戶。 每個物件都包含`namespace`和`values`陣列，以搭配個別使用者與該命名空間。 |
 | `nameSpace` | `entities`陣列中的每個對象都必須包含Privacy ServiceAPI所識別的[標準身份名稱空間](./appendix.md#standard-namespaces)中的一個。 |
 | `values` | 每個用戶的值陣列，與提供的`nameSpace`相對應。 |
+
+{style=&quot;table-layout:auto&quot;}
 
 >[!NOTE]
 >
