@@ -6,10 +6,10 @@ topic-legacy: developer guide
 description: 瞭解如何使用Experience CloudAPI管理Privacy Service應用程式的隱私權工作。
 exl-id: 74a45f29-ae08-496c-aa54-b71779eaeeae
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: e226990fc84926587308077b32b128bfe334e812
 workflow-type: tm+mt
-source-wordcount: '1344'
-ht-degree: 1%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -38,9 +38,11 @@ GET /jobs?regulation={REGULATION}&page={PAGE}&size={SIZE}
 
 | 參數 | 說明 |
 | --- | --- |
-| `{REGULATION}` | 要查詢的規則類型。 接受的值包括： <ul><li>`gdpr` （歐盟）</li><li>`ccpa` （加州）</li><li>`lgpd_bra` （巴西）</li><li>`nzpa_nzl` （紐西蘭）</li><li>`pdpa_tha` （泰國）</li></ul> |
+| `{REGULATION}` | 要查詢的規則類型。 接受的值包括： <ul><li>`gdpr` （歐盟）</li><li>`ccpa` （加州）</li><li>`lgpd_bra` (巴西)</li><li>`nzpa_nzl` (紐西蘭)</li><li>`pdpa_tha` (泰國)</li></ul> |
 | `{PAGE}` | 要顯示的資料頁，使用基於0的編號。 預設值為 `0`。 |
 | `{SIZE}` | 每個頁面上要顯示的結果數。 預設值為`1` ，最大值為`100`。 超過最大值會導致API傳回400碼錯誤。 |
+
+{style=&quot;table-layout:auto&quot;}
 
 **要求**
 
@@ -158,7 +160,9 @@ curl -X POST \
 | `expandIDs` | 當設為`true`時，此選用屬性代表處理應用程式中ID的最佳化（目前僅[!DNL Analytics]支援）。 若省略，此值預設為`false`。 |
 | `priority` | Adobe Analytics使用的可選屬性，可設定處理請求的優先順序。 接受的值為`normal`和`low`。 如果省略`priority`，則預設行為為`normal`。 |
 | `analyticsDeleteMethod` | 可選屬性，指定Adobe Analytics如何處理個人資料。 此屬性接受兩個可能的值： <ul><li>`anonymize`:指定使用者ID集合所參考的所有資料都會設為匿名。如果省略`analyticsDeleteMethod`，則此為預設行為。</li><li>`purge`:所有資料都會完全移除。</li></ul> |
-| `regulation` **(必填)** | 隱私權工作的法規。 接受下列值： <ul><li>`gdpr` （歐盟）</li><li>`ccpa` （加州）</li><li>`lgpd_bra` （巴西）</li><li>`nzpa_nzl` （紐西蘭）</li><li>`pdpa_tha` （泰國）</li></ul> |
+| `regulation` **(必填)** | 隱私權工作的法規。 接受下列值： <ul><li>`gdpr` （歐盟）</li><li>`ccpa` （加州）</li><li>`lgpd_bra` (巴西)</li><li>`nzpa_nzl` (紐西蘭)</li><li>`pdpa_tha` (泰國)</li></ul> |
+
+{style=&quot;table-layout:auto&quot;}
 
 **回應**
 
@@ -210,6 +214,8 @@ curl -X POST \
 | --- | --- |
 | `jobId` | 作業的唯讀唯一系統產生的ID。 此值用於查找特定作業的下一步。 |
 
+{style=&quot;table-layout:auto&quot;}
+
 成功提交作業請求後，您可以繼續下一步[檢查作業狀態](#check-status)。
 
 ## 檢查作業的狀態{#check-status}
@@ -229,6 +235,8 @@ GET /jobs/{JOB_ID}
 | 參數 | 說明 |
 | --- | --- |
 | `{JOB_ID}` | 您要查詢的工作ID。 此ID在[建立工作](#create-job)和[列出所有工作](#list)的成功API回應中傳回在`jobId`下。 |
+
+{style=&quot;table-layout:auto&quot;}
 
 **要求**
 
@@ -326,6 +334,8 @@ curl -X GET \
 | `productStatusResponse.results` | 對於某些狀態，某些產品可能會傳回`results`物件，提供`responseMsgDetail`未涵蓋的其他資訊。 |
 | `downloadURL` | 如果作業的狀態為`complete`，此屬性會提供URL，以ZIP檔案形式下載作業結果。 此檔案可在工作完成後60天內下載。 |
 
+{style=&quot;table-layout:auto&quot;}
+
 ### 作業狀態類別{#status-categories}
 
 下表列出了不同的可能作業狀態類別及其對應含義：
@@ -336,6 +346,8 @@ curl -X GET \
 | `processing` | 應用程式已確認作業，並且正在處理。 |
 | `submitted` | 工作會提交至每個適用的應用程式。 |
 | `error` | 處理作業時發生故障——檢索單個作業詳細資訊可以獲得更具體的資訊。 |
+
+{style=&quot;table-layout:auto&quot;}
 
 >[!NOTE]
 >
