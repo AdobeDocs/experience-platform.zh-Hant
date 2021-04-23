@@ -6,10 +6,10 @@ topic-legacy: developer guide
 description: 本檔案包含使用Privacy ServiceAPI的其他資訊。
 exl-id: 7099e002-b802-486e-8863-0630d66e330f
 translation-type: tm+mt
-source-git-commit: e226990fc84926587308077b32b128bfe334e812
+source-git-commit: a4f6801cc85624274716889bdda0146fa38eb4b7
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '478'
+ht-degree: 5%
 
 ---
 
@@ -65,14 +65,15 @@ ht-degree: 0%
 
 | 產品 | 用於`include`屬性的值 |
 | --- | --- |
-| Adobe Advertising Cloud | `AdCloud` |
-| Adobe Analytics | `Analytics` |
+| Adobe Advertising Cloud | `adCloud` |
+| Adobe Analytics | `analytics` |
 | Adobe Audience Manager | `AudienceManager` |
-| Adobe Campaign | `Campaign` |
-| Adobe Experience Platform | `aepDataLake` |
+| Adobe Campaign | `campaign` |
+| Adobe Experience Platform | `AdobeCloudPlatform` |
 | Adobe Primetime認證 | `primetimeAuthentication` |
-| Adobe Target | `Target` |
-| 客戶記錄服務 | `CRS` |
-| 即時客戶個人檔案 | `ProfileService` |
+| Adobe Target | `target` |
+| 自動化產品 | `automationProduct` |
+| 客戶屬性(CRS) | `CRS` |
+| 即時客戶個人檔案 | `profileService` |
 
 {style=&quot;table-layout:auto&quot;}
