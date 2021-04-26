@@ -6,7 +6,7 @@ topic-legacy: ui guide
 description: Adobe Experience Platform區段服務提供使用者介面，以建立和管理區段定義。
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: fa2f4e046c6210137aa3e98d9f18010c1058275a
 workflow-type: tm+mt
 source-wordcount: '1479'
 ht-degree: 0%
@@ -32,7 +32,7 @@ ht-degree: 0%
 
 ## 概述
 
-在[[!DNL Experience Platform] UI](http://platform.adobe.com/)中，選擇左側導覽器中的&#x200B;**[!UICONTROL Segments]**&#x200B;以開啟&#x200B;**[!UICONTROL Overview]**&#x200B;標籤。 此標籤提供檔案和影片的連結，以協助您瞭解並開始使用區段。
+在[[!DNL Experience Platform] UI](https://platform.adobe.com/)中，選擇左側導覽器中的&#x200B;**[!UICONTROL Segments]**&#x200B;以開啟&#x200B;**[!UICONTROL Overview]**&#x200B;標籤。 此標籤提供檔案和影片的連結，以協助您瞭解並開始使用區段。
 
 ![](../images/ui/overview/segment-overview.png)
 
@@ -44,14 +44,14 @@ ht-degree: 0%
 
 此檢視會列出區段定義的相關資訊，包括劃分、流失、描述檔計數、評估方法、建立日期和上次修改日期。
 
-劃分會顯示橫條圖，概述屬於下列各種狀態的描述檔百分比：[!UICONTROL Entered]、[!UICONTROL Realized]和[!UICONTROL Exiting]。
+劃分會顯示橫條圖，概述屬於下列各種狀態的描述檔百分比：[!UICONTROL Realized]、[!UICONTROL Existing]和[!UICONTROL Exiting]。
 
 ![](../images/ui/overview/segment-browse-breakdown.png)
 
 | 狀態 | 說明 |
 | ------ | ----------- |
-| 已輸入 | 區段中的新描述檔。 |
-| 已實現 | 保留在區段中的現有描述檔。 |
+| 已實現 | 區段中的新描述檔。 |
+| 現有 | 保留在區段中的現有描述檔。 |
 | 退出 | 離開區段的現有描述檔。 |
 
 流失率代表在區段定義中變更的設定檔與上次執行區段作業時的百分比，而設定檔計數則代表符合區段資格的設定檔總數。
