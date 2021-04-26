@@ -4,14 +4,14 @@ solution: Experience Platform
 title: Marketo Engage源的映射欄位
 topic-legacy: overview
 description: 下表包含Marketo資料集中各欄位與其對應的XDM欄位之間的映射。
+exl-id: 2b217bba-2748-4d6f-85ac-5f64d5e99d49
 translation-type: tm+mt
-source-git-commit: f12baaa9d4b37f1101792a4ae479b5a62893eb68
+source-git-commit: 8f03b2e8a10d57fcae77dedecdce0e0176ba04fd
 workflow-type: tm+mt
-source-wordcount: '425'
+source-wordcount: '453'
 ht-degree: 3%
 
 ---
-
 
 # （測試版）[!DNL Marketo Engage]欄位對應
 
@@ -158,6 +158,7 @@ ht-degree: 3%
 | `company` | `accountName` |
 | `companyNotes` | `accountDescription` |
 | `site` | `accountSite` |
+| `mktoCdpParentOrgId` | `accountParentID` |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -177,8 +178,8 @@ ht-degree: 3%
 
 | 來源資料集 | XDM目標欄位 | 附註 |
 | -------------- | ---------------- | ----- |
-| `marketingListMemberID` | `staticListMemberID` | 主要身分 |
-| `marketingListID` | `staticListID` | 關係 |
+| `staticListMemberID` | `marketingListMemberID` | 主要身分 |
+| `staticListID` | `marketingListID` | 關係 |
 | `personID` | `personID` | 關係 |
 | `createdAt` | `extSourceSystemAudit.createdDate` |
 
@@ -234,7 +235,7 @@ ht-degree: 3%
 | `isWon` | `isWon` |
 | `quantity` | `opportunityQuantity` |
 | `probability` | `probabilityPercentage` |
-| `Campaign-ID` | `campaignID` | 僅在您使用Salesforce整合時才建議使用。 |
+| `mktoCdpSourceCampaignId` | `campaignID` | 僅在您使用Salesforce整合時才建議使用。 |
 | `lastActivityDate` | `lastActivityDate` |
 | `leadSource` | `leadSource` |
 | `nextStep` | `nextStep` |
@@ -279,7 +280,7 @@ ht-degree: 3%
 | `mktoCdpCnvContactPersonId` | `b2b.convertedContactID` |
 | `mktoCdpIsConverted` | `b2b.isConverted` |
 | `mktoCdpConvertedDate` | `b2b.convertedDate` |
-| `sfdcId` | `extSourceSystemAudit.externalID` | 次要身份 |
+| `sfdcLeadId` | `extSourceSystemAudit.externalID` | 次要身份 |
 | `createdAt` | `extSourceSystemAudit.createdDate` |
 | `updatedAt` | `extSourceSystemAudit.lastUpdatedDate` |
 | `title` | `extendedWorkDetails.jobTitle` |
@@ -308,8 +309,13 @@ ht-degree: 3%
 | `id` | `personComponents.sourcePersonID` |
 | `email` | `personComponents.workEmail.address` |
 | `email` | `workEmail.address` |
+| `to_object('ECID',arrays_to_objects('id',explode(ecids)))` | `identityMap` |
 
 {style=&quot;table-layout:auto&quot;}
+
+>[!TIP]
+>
+>`to_object('ECID',arrays_to_objects('id',explode(ecids)))`來源欄位是計算欄位，必須使用「平台UI」中的[!UICONTROL Add calculated field]選項加入。 有關詳細資訊，請參閱[添加計算欄位](../../../../ingestion/tutorials/map-a-csv-file.md)的教程。
 
 ## 後續步驟
 
