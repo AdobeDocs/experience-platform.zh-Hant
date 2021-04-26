@@ -7,7 +7,7 @@ type: Tutorial
 description: 本教學課程介紹如何使用Adobe Experience Platform用戶介面將CSV檔案映射到XDM架構。
 exl-id: 15f55562-269d-421d-ad3a-5c10fb8f109c
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 0e79d339ddc0301486ea3e53a3fd52877ff6a2c8
 workflow-type: tm+mt
 source-wordcount: '828'
 ht-degree: 1%
@@ -85,7 +85,7 @@ ht-degree: 1%
 
 如果要移除其中一個映射，請將滑鼠指標暫留在該映射上，然後選取減號圖示。
 
-### 新增計算欄位
+### 新增計算欄位{#add-calculated-field}
 
 計算欄位允許根據輸入方案中的屬性建立值。 然後，這些值可以分配給目標方案中的屬性，並提供名稱和說明，以便更方便地引用。
 
