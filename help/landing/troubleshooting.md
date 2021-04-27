@@ -8,9 +8,9 @@ topic-legacy: getting started
 type: Documentation
 exl-id: 3e6d29aa-2138-421b-8bee-82b632962c01
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: a03d851f3e0037b8241ca1f1de890903b08feac4
 workflow-type: tm+mt
-source-wordcount: '1715'
+source-wordcount: '1768'
 ht-degree: 4%
 
 ---
@@ -179,6 +179,16 @@ GET /batches?createdAfter=1559775880000&orderBy=desc:created
 
 當POST、PUT或PATCH請求的標題無效或缺少`Content-Type`標題時，將顯示此錯誤消息。 請確定請求中包含標題，且其值為`application/json`。
 
+### 用戶區域缺失
+
+```json
+{
+    "error_code": "403027",
+    "message": "User region is missing"
+}
+```
+
+當您的帳戶（由提供的驗證憑證所代表）未與產品設定檔建立關聯以進行Experience Platform時，會顯示此錯誤訊息。 遵循平台API驗證教學課程中[產生存取認證](./api-authentication.md#authentication-for-each-session)的步驟，將平台新增至您的帳戶並相應更新驗證認證。
 
 ## 服務疑難排解目錄{#service-troubleshooting-directory}
 
