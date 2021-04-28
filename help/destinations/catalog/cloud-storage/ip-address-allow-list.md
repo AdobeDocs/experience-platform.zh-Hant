@@ -5,9 +5,9 @@ type: Documentation
 description: 此頁提供可添加到允許清單的IP範圍，以安全地將資料從Experience Platform導出到SFTP伺服器、AmazonS3或Azure Blob儲存。
 exl-id: 0b8086aa-786e-4244-b2a5-a3f57ad59a8b
 translation-type: tm+mt
-source-git-commit: ac62ebcc7b00a96f718a3c39725bcf21ce3d56cf
+source-git-commit: 4cc7fb2714f6df8065a0531f7e507983940d662c
 workflow-type: tm+mt
-source-wordcount: '212'
+source-wordcount: '206'
 ht-degree: 0%
 
 ---
@@ -22,7 +22,7 @@ ht-degree: 0%
 
 ## 概述 {#overview}
 
-本頁提供可添加到允許清單的IP範圍，以安全地將資料從Experience Platform導出到[SFTP伺服器](./sftp.md)、[AmazonS3](./amazon-s3.md)或[Azure Blob](./azure-blob.md)儲存。
+此頁提供可添加到允許清單的IP範圍，以安全地將資料從Experience Platform導出到[SFTP伺服器](./sftp.md)。
 
 您可以通過網路防火牆定義網路訪問控制。 通過指定適當的IP範圍，您可以允許資料傳輸服務的通信。
 
