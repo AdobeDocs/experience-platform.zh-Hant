@@ -2,14 +2,14 @@
 keywords: email;Email;e-mail;email destinations;adobe campaign;campaign
 title: Adobe Campaign連接
 description: Adobe Campaign是一套解決方案，可協助您跨所有線上及線下通道個人化並傳遞宣傳活動。
+exl-id: 0de91738-8f56-41f5-8745-9b14b15db76a
 translation-type: tm+mt
-source-git-commit: 02754055e2be8a45a0699386cb559dad8f25717c
+source-git-commit: 29b4eaca06e2f1032584a0b4720490934a6e1fa7
 workflow-type: tm+mt
-source-wordcount: '762'
+source-wordcount: '808'
 ht-degree: 0%
 
 ---
-
 
 # Adobe Campaign連接
 
@@ -22,6 +22,12 @@ Adobe Campaign是一套解決方案，可協助您跨所有線上及線下通道
 ## 導出類型{#export-type}
 
 **基於描述檔** -您要匯出區段的所有成員，以及所要的架構欄位(例如：電子郵件地址、電話號碼、姓氏)，如目標啟 **[!UICONTROL Select attributes]** 動工作流程 [中所選](../../ui/activate-destinations.md#select-attributes)。
+
+## IP位址允許清單{#allow-list}
+
+當使用SFTP儲存設定電子郵件行銷目標時，Adobe建議您將特定IP範圍新增至允許清單。
+
+如果您需要將AdobeIP新增至允許清單，請參閱雲端儲存空間目標的[IP位址允許清單。](../cloud-storage/ip-address-allow-list.md)
 
 ## 連接目標{#connect-destination}
 
