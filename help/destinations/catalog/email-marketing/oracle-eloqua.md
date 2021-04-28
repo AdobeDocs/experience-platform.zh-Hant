@@ -2,14 +2,14 @@
 keywords: 電子郵件；電子郵件；電子郵件；電子郵件目標；oracle雄辯；oracle
 title: Oracle雄辯聯繫
 description: Oracle口才是Oracle提供的行銷自動化軟體即服務(SaaS)平台，旨在協助B2B行銷人員和組織管理行銷活動和銷售潛在客戶開發。
+exl-id: 6eaa79ff-8874-423b-bdff-aa04f6101a53
 translation-type: tm+mt
-source-git-commit: 02754055e2be8a45a0699386cb559dad8f25717c
+source-git-commit: 29b4eaca06e2f1032584a0b4720490934a6e1fa7
 workflow-type: tm+mt
-source-wordcount: '576'
+source-wordcount: '622'
 ht-degree: 0%
 
 ---
-
 
 # [!DNL Oracle Eloqua] 連接
 
@@ -20,6 +20,12 @@ ht-degree: 0%
 ## 導出類型{#export-type}
 
 **基於描述檔** -您要匯出區段的所有成員，以及所要的架構欄位(例如：電子郵件地址、電話號碼、姓氏)，這是從目標啟動工作流程的「選取屬性」畫面 [中選擇的](../../ui/activate-destinations.md#select-attributes)。
+
+## IP位址允許清單{#allow-list}
+
+當使用SFTP儲存設定電子郵件行銷目標時，Adobe建議您將特定IP範圍新增至允許清單。
+
+如果您需要將AdobeIP新增至允許清單，請參閱雲端儲存空間目標的[IP位址允許清單。](../cloud-storage/ip-address-allow-list.md)
 
 ## 連接到目標{#connect-destination}
 
