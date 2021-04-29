@@ -4,9 +4,9 @@ title: Facebook連接
 description: 啟用您Facebook宣傳的個人檔案，根據雜湊的電子郵件鎖定受眾、個人化和抑制受眾。
 exl-id: 51e8c8f0-5e79-45b9-afbc-110bae127f76
 translation-type: tm+mt
-source-git-commit: 805cb72e91e6446f74cc3461d39841740eb576c7
+source-git-commit: 1e9e5831b19738285affeb0337985c7cb0d45ebf
 workflow-type: tm+mt
-source-wordcount: '1133'
+source-wordcount: '1089'
 ht-degree: 2%
 
 ---
@@ -36,12 +36,6 @@ ht-degree: 2%
 若要跨社交媒體鎖定客戶，他們可以將客戶資料從CRM載入Adobe Experience Platform，將電子郵件地址當做識別碼。
 
 接著，他們可以使用離線資料（包括相關的會籍ID和客戶層級）來建立新的受眾細分，以便透過[!DNL Facebook]目標鎖定。
-
-## [!DNL Facebook]目標{#data-governance}的資料控管
-
->[!IMPORTANT]
->
->傳送至[!DNL Facebook]的資料不能包含銜接身分。 您有責任履行此義務，並可確保選定進行啟動的區段不會在其合併政策中使用拼接選項來履行此義務。 進一步瞭解[合併策略](/help/profile/ui/merge-policies.md)。
 
 ## 支援的身分{#supported-identities}
 
