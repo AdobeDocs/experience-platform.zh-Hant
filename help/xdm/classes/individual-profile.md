@@ -6,9 +6,9 @@ topic-legacy: overview
 description: 本文檔概述了XDM Individual Profile類。
 exl-id: 83b22462-79ce-4024-aa50-a9bd800c0f81
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 81d96b629ce628f663a86701d8f076eb771fdf77
 workflow-type: tm+mt
-source-wordcount: '375'
+source-wordcount: '412'
 ht-degree: 0%
 
 ---
@@ -26,9 +26,10 @@ ht-degree: 0%
 | 屬性 | 說明 |
 | --- | --- |
 | `_repo` | 包含以下[!UICONTROL DateTime]欄位的對象： <ul><li>`createDate`:在資料儲存區中建立資源的日期和時間，例如首次擷取資料的時間。</li><li>`modifyDate`:上次修改資源的日期和時間。</li></ul> |
-| `_id` | 記錄的唯一、系統生成的字串標識符。 此欄位用於追蹤個別記錄的獨特性、防止重複資料，以及在下游服務中尋找該記錄。 由於此欄位是系統生成的，因此在資料接收期間不應提供顯式值。<br><br>請務必指出，此欄位不 **會** 呈現與個人相關的身分，而是資料本身的記錄。與人有關的身份資料應改為[身份欄位](../schema/composition.md#identity)。 |
+| `_id` | 記錄的唯一識別碼。 此欄位用於追蹤個別記錄的獨特性、防止重複資料，以及在下游服務中尋找該記錄。<br><br>請務必指出，此欄位不 **會** 呈現與個人相關的身分，而是資料本身的記錄。與人有關的身份資料應改為[身份欄位](../schema/composition.md#identity)。 |
 | `createdByBatchID` | 導致記錄建立的收錄批的ID。 |
 | `modifiedByBatchID` | 導致記錄更新的上次收錄批的ID。 |
+| `personID` | 此記錄相關之個人的唯一識別碼。 除非此欄位也指定為[識別欄位](../schema/composition.md#identity)，否則此欄位不一定代表與該人相關的識別。 |
 | `repositoryCreatedBy` | 建立記錄的用戶的ID。 |
 | `repositoryLastModifiedBy` | 上次修改記錄的用戶的ID。 |
 
@@ -38,10 +39,12 @@ ht-degree: 0%
 >
 >幾個混音的名字已經改變。 如需詳細資訊，請參閱[mixin name updates](../mixins/name-updates.md)上的檔案。
 
-Adobe提供數種標準混音，以便與[!DNL XDM Individual Profile]類一起使用。 以下是該類別最常使用的混音清單：
+Adobe提供數種標準混音，以便與[!DNL XDM Individual Profile]類一起使用。 以下是類別中常用混合詞的清單：
 
 * [[!UICONTROL IdentityMap]](../mixins/profile/identitymap.md)
 * [[!UICONTROL Demographic Details]](../mixins/profile/person-details.md)
 * [[!UICONTROL Personal Contact Details]](../mixins/profile/personal-details.md)
 * [[!UICONTROL Work Contact Details]](../mixins/profile/work-details.md)
 * [[!UICONTROL Segment Membership Details]](../mixins/profile/segmentation.md)
+
+有關[!DNL XDM Individual Profile]的所有相容混合的完整清單，請參閱[ XDM GitHub repo](https://github.com/adobe/xdm/tree/master/components/mixins/profile)。
