@@ -5,9 +5,9 @@ user-guide-description: 針對跨通路行銷活動、電子郵件宣傳、鎖�
 description: 本檔案列出了Adobe Experience Platform目的地的目錄
 feature: 目的地
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 020192469127e8f25f0d61e33b4b5dc60da6b57d
 workflow-type: tm+mt
-source-wordcount: '470'
+source-wordcount: '471'
 ht-degree: 10%
 
 ---
@@ -80,7 +80,7 @@ ht-degree: 10%
    * 雲端儲存空間目標{#cloud-storage}
       * [雲端儲存空間目標概觀](./catalog/cloud-storage/overview.md)
       * [建立雲端儲存空間目標](./catalog/cloud-storage/workflow.md)
-      * [AmazonKinesis連接](./catalog/cloud-storage/amazon-kinesis.md)
+      * [（測試版）AmazonKinesis連線](./catalog/cloud-storage/amazon-kinesis.md)
       * [AmazonS3連線](./catalog/cloud-storage/amazon-s3.md)
       * [Azure Blob連接](./catalog/cloud-storage/azure-blob.md)
       * [（測試版）Azure事件集線器連接](./catalog/cloud-storage/azure-event-hubs.md)
@@ -122,7 +122,7 @@ ht-degree: 10%
       * [建立社交目標](./catalog/social/workflow.md)
       * [AdobeLivefyre擴充功能](./catalog/social/adobe-livefyre.md)
       * [Facebook連接](./catalog/social/facebook.md)
-      * [Linkedin符合的觀眾連線](./catalog/social/linkedin.md)
+      * [linkedIn符合觀眾連線](./catalog/social/linkedin.md)
    * 調查目標{#survey}
       * [調查目標概觀](./catalog/survey/overview.md)
       * [Foresee extension destion](./catalog/survey/foresee.md)
