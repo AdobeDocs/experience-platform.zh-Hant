@@ -1,15 +1,15 @@
 ---
 keywords: Azure事件中樞目標；azure事件中樞；azure事件中樞
-title: （測試版）Azure事件集線器連接
-description: 建立Azure事件集線器儲存空間的即時出站連線，以串流來自Experience Platform的資料。
+title: （測試版）!DNL Azure事件集線器]連接
+description: 建立到！DNL Azure事件集線器]儲存的即時出站連接，以便從Experience Platform流資料。
+exl-id: f98a389a-bce3-4a80-9452-6c7293d01de3
 translation-type: tm+mt
-source-git-commit: 709908196bb5df665c7e7df10dc58ee9f3b0edbf
+source-git-commit: ce5001d0a1c95901089915ae9836fdd436f12297
 workflow-type: tm+mt
-source-wordcount: '532'
+source-wordcount: '534'
 ht-degree: 2%
 
 ---
-
 
 # （測試版）[!DNL Azure Event Hubs]連線
 
@@ -113,3 +113,4 @@ ht-degree: 2%
 >* [連線至Azure事件中樞，並使用Flow Service API啟用資料](../../api/streaming-destinations.md)
 >* [AWSKinesis目標](./amazon-kinesis.md)
 >* [目標類型和類別](../../destination-types.md)
+
