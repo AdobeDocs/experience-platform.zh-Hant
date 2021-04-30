@@ -6,9 +6,9 @@ topic-legacy: developer guide
 description: 本檔案包含如何搭配Adobe Experience Platform分段服務API使用串流分段的範例。
 exl-id: 119508bd-5b2e-44ce-8ebf-7aef196abd7a
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: b4a04b52ff9a2b7a36fda58d70a2286fea600ff1
 workflow-type: tm+mt
-source-wordcount: '1375'
+source-wordcount: '1389'
 ht-degree: 1%
 
 ---
@@ -79,7 +79,7 @@ ht-degree: 1%
 | 僅限描述檔 | 任何僅指描述檔屬性的區段定義。 |
 | 參照描述檔的傳入點擊 | 任何區段定義，是指單一傳入事件（無時間限制）以及一或多個描述檔屬性。 |
 | 在相對時間視窗內參照描述檔的傳入點擊 | 任何區段定義，指單一傳入事件和一或多個描述檔屬性。 |
-| 區段 | 包含一或多個批次或串流區段的任何區段定義。 |
+| 區段 | 包含一或多個批次或串流區段的任何區段定義。 **注意：如** 果使用區段，則每24小時就會發生描述 **檔取消資格**。 |
 | 參考描述檔的多個事件 | 在過去24小時內參照多個事件&#x200B;**且（可選）的區段定義具有一個或多個描述檔屬性。** |
 
 在下列情況下，區段定義將&#x200B;**not**&#x200B;啟用串流區段：
