@@ -1,17 +1,17 @@
 ---
 keywords: Experience Platform;home；常用主題；Marketo源連接器；命名空間；方案
 solution: Experience Platform
-title: 'Marketo命名空間 '
+title: Marketo命名空間
 topic-legacy: overview
 description: 本文檔概述了建立Marketo Engage源連接器時所需的自定義命名空間。
+exl-id: f1592be5-987e-41b8-9844-9dea5bd452b9
 translation-type: tm+mt
-source-git-commit: bea6b35627b0e913c894c38ba9553085ba0aa26f
+source-git-commit: 5322adb4b3a244de92300e7ce9d942ad4b968454
 workflow-type: tm+mt
-source-wordcount: '1215'
-ht-degree: 5%
+source-wordcount: '1161'
+ht-degree: 6%
 
 ---
-
 
 # （測試版）[!DNL Marketo Engage]名稱空間和結構描述
 
@@ -80,7 +80,7 @@ ht-degree: 5%
 
 | 顯示名稱 | 身分符號 | 身分類型 | 發行者類型 | 發行者實體類型 | [!DNL Salesforce] 訂閱組織ID範例 |
 | --- | --- | --- | --- | --- | --- |
-| `salesforce_person_{SALESFORCE_ORGANIZATION_ID}` | 自動產生 | `CROSS_DEVICE` | [!DNL Salesforce] | `person` | `00DA0000000Hz79` |
+| `salesforce_lead_{SALESFORCE_ORGANIZATION_ID}` | 自動產生 | `CROSS_DEVICE` | [!DNL Salesforce] | `lead` | `00DA0000000Hz79` |
 | `salesforce_account_{SALESFORCE_ORGANIZATION_ID}` | 自動產生 | `B2B_ACCOUNT` | [!DNL Salesforce] | `account` | `00DA0000000Hz79` |
 | `salesforce_opportunity_{SALESFORCE_ORGANIZATION_ID}` | 自動產生 | `B2B_OPPORTUNITY` | [!DNL Salesforce] | `opportunity` | `00DA0000000Hz79` |
 | `salesforce_opportunity_contact_role_{SALESFORCE_ORGANIZATION_ID}` | 自動產生 | `B2B_OPPORTUNITY_PERSON` | [!DNL Salesforce] | `opportunity contact role` | `00DA0000000Hz79` |
@@ -124,24 +124,20 @@ Experience Platform 會使用結構，以一致且可重複使用的方式說明
 >
 >請向左／向右滾動以查看表的完整內容。
 
-| 架構名稱 | 基本類 | Mixins | 主要身分 | 主要身分名稱空間 | 次要身份 | 次要身分名稱空間 | 關係 | 附註 |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| [!DNL Marketo] 公司{MUNCHKIN_ID} | XDM業務帳戶 | XDM業務帳戶詳細資訊 | `accountID` 在基本類中 | `marketo_company_{MUNCHKIN_ID}` | `extSourceSystemAudit.externalID` 在基本類中 | `salesforce_account_{SALESFORCE_ORGANIZATION_ID}` | <ul><li>`accountParentID` 在XDM商業帳戶詳細資料混合中</li><li>類型：一對一</li><li>參考結構：Marketo公司{MUNCHKIN_ID}</li><li>命名空間: `marketo_company_{MUNCHKIN_ID}`</li></ul> |
-| [!DNL Marketo] 人員{MUNCHKIN_ID} | XDM個人資料 | <ul><li>XDM業務人員詳細資訊</li><li>XDM業務人員元件</li></ul> | `personID` 在基本類中 | `marketo_person_{MUNCHKIN_ID}` | <ol><li>`extSourceSystemAudit.externalID` XDM企業人員詳細資料混合</li><li>`workEmail.address` XDM企業人員詳細資料混合</li><li>`identityMap` Identity Map混音</ol></li> | <ol><li>`salesforce_person_{SALESFORCE_ORGANIZATION_ID}`</li><li>電子郵件</li><li>ECID</li></ol> | <ul><li>`personComponents.sourceAccountID` XDM企業人員元件混合</li><li>類型：多對一</li><li>參考結構：Marketo公司{MUNCHKIN_ID}</li><li>命名空間: `marketo_company_{MUNCHKIN_ID}`</li><li>目標屬性：`accountID`</li><li>當前方案的關係名稱：帳戶</li><li>參考方案中的關係名稱：人物</li></ul> |
-| [!DNL Marketo] 機會{MUNCHKIN_ID} | XDM業務機會 | XDM業務機會詳細資訊 | `opportunityID` 在基本類中 | `marketo_opportunity_{MUNCHKIN_ID}` | `extSourceSystemAudit.externalID` 在基本類中 | `salesforce_opportunity_{SALESFORCE_ORGANIZATION_ID}` | <ul><li>`accountID` 在基本類中</li><li>類型：多對一</li><li>參考結構：Marketo公司{MUNCHKIN_ID}</li><li>命名空間: `marketo_company_{MUNCHKIN_ID}`</li><li>目標屬性：`accountID`</li><li>當前方案的關係名稱：帳戶</li><li>參考方案中的關係名稱：機會</li></ul> |
-| [!DNL Marketo] 業務機會聯繫人角色{MUNCHKIN_ID} | XDM業務機會人關係 | None | `opportunityPersonID` 在基本類中 | `marketo_opportunity_contact_role_{MUNCHKIN_ID}` | `extSourceSystemAudit.externalID` 在基本類中 | `salesforce_opportunity_contact_role_{SALESFORCE_ORGANIZATION_ID}` | 第一關係<ul><li>`personID` 在基本類中</li><li>類型：多對一</li><li>參考結構：Marketo人{MUNCHKIN_ID}</li><li>命名空間: `marketo_person_{MUNCHKIN_ID}`</li><li>目標屬性：`personID`</li><li>當前方案的關係名稱：人物</li><li>參考方案中的關係名稱：機會</li></ul>第二種關係<ul><li>`opportunityID` 在基本類中</li><li>類型：多對一</li><li>參考結構：Marketo機會{MUNCHKIN_ID}</li><li>命名空間: `marketo_opportunity_{MUNCHKIN_ID}`</li><li>目標屬性：`opportunityID`</li><li>當前方案的關係名稱：機會</li><li>參考方案中的關係名稱：人物</li></ul> |
-| [!DNL Marketo] 方案{MUNCHKIN_ID} | XDM Business Campaign | XDM Business Campaign詳細資訊 | `campaignID` 在基本類中 | `marketo_program_{MUNCHKIN_ID}` | `extSourceSystemAudit.externalID` 在基本類中 | `salesforce_campaign_SALESFORCE_ORGANIZATION_ID}` |
-| [!DNL Marketo] 方案成員{MUNCHKIN_ID} | XDM Business Campaign會員 | XDM Business Campaign成員詳細資訊 | `campaignMemberID` 在基本類中 | `marketo_program_member_{MUNCHKIN_ID}` | 無 | 無 | 第一關係<ul><li>`personID` 在基本類中</li><li>類型：多對一</li><li>參考結構：Marketo人{MUNCHKIN_ID}</li><li>命名空間: `marketo_person_{MUNCHKIN_ID}`</li><li>目標屬性：`personID`</li><li>當前方案的關係名稱：人物</li><li>參考方案中的關係名稱：計畫</li></ul>第二種關係<ul><li>`campaignID` 在基本類中</li><li>類型：多對一</li><li>參考結構：Marketo計畫{MUNCHKIN_ID}</li><li>命名空間: `marketo_program_{MUNCHKIN_ID}`</li><li>目標屬性：campaignID</li><li>當前方案的關係名稱：計畫</li><li>參考方案中的關係名稱：人物</li></ul> |
-| [!DNL Marketo] 靜態清單{MUNCHKIN_ID} | XDM業務營銷清單 | 無 | `marketingListID` 在基本類中 | `marketo_static_list_{MUNCHKIN_ID}` | 無 | 無 | 無 | 靜態清單與[!DNL Salesforce]不同步，因此沒有輔助標識 |
-| [!DNL Marketo] 靜態清單成員{MUNCHKIN_ID} | XDM Business Marketing List成員 | 無 | `marketingListMemberID` 在基本類中 | `marketo_static_list_member_{MUNCHKIN_ID}` | 無 | 無 | 第一關係<ul><li>`personID` 在基本類中</li><li>類型：多對一</li><li>參考結構：Marketo人{MUNCHKIN_ID}</li><li>命名空間: `marketo_person_{MUNCHKIN_ID}`</li><li>目標屬性：`personID`</li><li>當前方案的關係名稱：人物</li><li>參考方案中的關係名稱：清單</li></ul>第二種關係<ul><li>`marketingListID` 在基本類中</li><li>類型：多對一</li><li>參考結構：Marketo靜態清單{MUNCHKIN_ID}</li><li>命名空間: `marketo_static_list_{MUNCHKIN_ID}`</li><li>目標屬性：`marketingListID`</li><li>當前方案的關係名稱：清單</li><li>參考方案中的關係名稱：人物</li></ul> |
-| [!DNL Marketo] 命名帳戶{MUNCHKIN_ID} | XDM業務帳戶 | XDM業務帳戶詳細資訊 | `accountID` 在基本類中 | `marketo_named_account_{MUNCHKIN_ID}` | `extSourceSystemAudit.externalID` 在基本類中 | `salesforce_account_{SALESFORCE_ORGANIZATION_ID}` | <ul><li>`accountParentID` 在XDM商業帳戶詳細資料混合中</li><li>類型：一對一</li><li>參考結構：Marketo命名帳戶{MUNCHKIN_ID}</li><li>命名空間: `marketo_named_account_{MUNCHKIN_ID}` |
-| [!DNL Marketo] 活動{MUNCHKIN ID} | XDM體驗活動 | <ul><li>造訪網頁</li><li>新銷售線索</li><li>轉換銷售線索</li><li>新增至清單</li><li>從清單中移除</li><li>添加到業務機會</li><li>從銷售機會中刪除</li><li>填寫的表單</li><li>連結點按次數</li><li>電子郵件傳送</li><li>已開啟電子郵件</li><li>已點按電子郵件</li><li>電子郵件已退回</li><li>Email Roburced Soft</li><li>取消訂閱電子郵件</li><li>分數已變更</li><li>業務機會更新</li><li>促銷活動進展狀態已變更</li><li>人員識別碼</li><li>Marketo網址 | `personID` 人物識別碼混合 | marketo_person_{MUNCHKIN_ID} | 無 | 無 | 第一關係<ul><li>`listOperations.listID` 欄位</li><li>類型：一對一</li><li>參考結構：Marketo靜態清單{MUNCHKIN_ID}</li><li>命名空間: `marketo_static_list_{MUNCHKIN_ID}`</li></ul>第二種關係<ul><li>`opportunityEvent.opportunityID` 欄位</li><li>類型：一對一</li><li>參考結構：Marketo機會{MUNCHKIN_ID}</li><li>命名空間: `marketo_opportunity_{MUNCHKIN_ID}`</li></ul>第三種關係<ul><li>`leadOperation.campaignProgression.campaignID` 欄位</li><li>類型：一對一</li><li>參考結構：Marketo計畫{MUNCHKIN_ID}</li><li>命名空間: `marketo_program_{MUNCHKIN_ID}`</li></ul> |
+| 架構名稱 | 基本類 | Mixins | [!DNL Profile] 在架構中 | 主要身分 | 主要身分名稱空間 | 次要身份 | 次要身分名稱空間 | 關係 | 附註 |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| `[!DNL Marketo] Company {MUNCHKIN_ID}` | XDM業務帳戶 | XDM業務帳戶詳細資訊 | 啟用 | `accountID` 在基本類中 | `marketo_company_{MUNCHKIN_ID}` | `extSourceSystemAudit.externalID` 在基本類中 | `salesforce_account_{SALESFORCE_ORGANIZATION_ID}` | <ul><li>`accountParentID` 在XDM商業帳戶詳細資料混合中</li><li>類型：一對一</li><li>參考結構：`[!DNL Marketo] Company {MUNCHKIN_ID}`</li><li>命名空間: `marketo_company_{MUNCHKIN_ID}`</li></ul> |
+| `[!DNL Marketo] Person {MUNCHKIN_ID}` | XDM個人資料 | <ul><li>XDM業務人員詳細資訊</li><li>XDM業務人員元件</li><li>IdentityMap</li></ul> | 啟用 | `personID` 在基本類中 | `marketo_person_{MUNCHKIN_ID}` | <ol><li>`extSourceSystemAudit.externalID` XDM企業人員詳細資料混合</li><li>`workEmail.address` XDM企業人員詳細資料混合</li><li>`identityMap` Identity Map混音</ol></li> | <ol><li>`salesforce_lead_{SALESFORCE_ORGANIZATION_ID}`</li><li>電子郵件</li><li>ECID</li></ol> | <ul><li>`personComponents.sourceAccountID` XDM企業人員元件混合</li><li>類型：多對一</li><li>參考結構：`[!DNL Marketo] Company {MUNCHKIN_ID}`</li><li>命名空間: `marketo_company_{MUNCHKIN_ID}`</li><li>目標屬性：`accountID`</li><li>當前方案的關係名稱：帳戶</li><li>參考方案中的關係名稱：人物</li></ul> |
+| `[!DNL Marketo] Opportunity {MUNCHKIN_ID}` | XDM業務機會 | XDM業務機會詳細資訊 | 啟用 | `opportunityID` 在基本類中 | `marketo_opportunity_{MUNCHKIN_ID}` | `extSourceSystemAudit.externalID` 在基本類中 | `salesforce_opportunity_{SALESFORCE_ORGANIZATION_ID}` | <ul><li>`accountID` 在基本類中</li><li>類型：多對一</li><li>參考結構：`[!DNL Marketo] Company {MUNCHKIN_ID}`</li><li>命名空間: `marketo_company_{MUNCHKIN_ID}`</li><li>目標屬性：`accountID`</li><li>當前方案的關係名稱：帳戶</li><li>參考方案中的關係名稱：機會</li></ul> |
+| `[!DNL Marketo] Opportunity Contact Role {MUNCHKIN_ID}` | XDM業務機會人關係 | None | 啟用 | `opportunityPersonID` 在基本類中 | `marketo_opportunity_contact_role_{MUNCHKIN_ID}` | `extSourceSystemAudit.externalID` 在基本類中 | `salesforce_opportunity_contact_role_{SALESFORCE_ORGANIZATION_ID}` | 第一關係<ul><li>`personID` 在基本類中</li><li>類型：多對一</li><li>參考結構：`[!DNL Marketo] Person {MUNCHKIN_ID}`</li><li>命名空間: `marketo_person_{MUNCHKIN_ID}`</li><li>目標屬性：`personID`</li><li>當前方案的關係名稱：人物</li><li>參考方案中的關係名稱：機會</li></ul>第二種關係<ul><li>`opportunityID` 在基本類中</li><li>類型：多對一</li><li>參考結構：`[!DNL Marketo] Opportunity {MUNCHKIN_ID}`</li><li>命名空間: `marketo_opportunity_{MUNCHKIN_ID}`</li><li>目標屬性：`opportunityID`</li><li>當前方案的關係名稱：機會</li><li>參考方案中的關係名稱：人物</li></ul> |
+| `[!DNL Marketo] Program {MUNCHKIN_ID}` | XDM Business Campaign | XDM Business Campaign詳細資訊 | 啟用 | `campaignID` 在基本類中 | `marketo_program_{MUNCHKIN_ID}` | `extSourceSystemAudit.externalID` 在基本類中 | `salesforce_campaign_{SALESFORCE_ORGANIZATION_ID}` |
+| `[!DNL Marketo] Program Member {MUNCHKIN_ID}` | XDM Business Campaign會員 | XDM Business Campaign成員詳細資訊 | 啟用 | `campaignMemberID` 在基本類中 | `marketo_program_member_{MUNCHKIN_ID}` | 無 | 無 | 第一關係<ul><li>`personID` 在基本類中</li><li>類型：多對一</li><li>參考結構：Marketo人{MUNCHKIN_ID}</li><li>命名空間: `marketo_person_{MUNCHKIN_ID}`</li><li>目標屬性：`personID`</li><li>當前方案的關係名稱：人物</li><li>參考方案中的關係名稱：計畫</li></ul>第二種關係<ul><li>`campaignID` 在基本類中</li><li>類型：多對一</li><li>參考結構：`[!DNL Marketo] Program {MUNCHKIN_ID}`</li><li>命名空間: `marketo_program_{MUNCHKIN_ID}`</li><li>目標屬性：`campaignID`</li><li>當前方案的關係名稱：計畫</li><li>參考方案中的關係名稱：人物</li></ul> |
+| `[!DNL Marketo] Static List {MUNCHKIN_ID}` | XDM業務營銷清單 | 無 | 啟用 | `marketingListID` 在基本類中 | `marketo_static_list_{MUNCHKIN_ID}` | 無 | 無 | 無 | 靜態清單與[!DNL Salesforce]不同步，因此沒有次標識。 |
+| `[!DNL Marketo] Static List Member {MUNCHKIN_ID}` | XDM Business Marketing List成員 | 無 | 啟用 | `marketingListMemberID` 在基本類中 | `marketo_static_list_member_{MUNCHKIN_ID}` | 無 | 無 | 第一關係<ul><li>`personID` 在基本類中</li><li>類型：多對一</li><li>參考結構：`[!DNL Marketo] Person {MUNCHKIN_ID}`</li><li>命名空間: `marketo_person_{MUNCHKIN_ID}`</li><li>目標屬性：`personID`</li><li>當前方案的關係名稱：人物</li><li>參考方案中的關係名稱：清單</li></ul>第二種關係<ul><li>`marketingListID` 在基本類中</li><li>類型：多對一</li><li>參考結構：`[!DNL Marketo] Static List {MUNCHKIN_ID}`</li><li>命名空間: `marketo_static_list_{MUNCHKIN_ID}`</li><li>目標屬性：`marketingListID`</li><li>當前方案的關係名稱：清單</li><li>參考方案中的關係名稱：人物</li></ul> | 靜態清單成員與[!DNL Salesforce]不同步，因此沒有次標識。 |
+| `[!DNL Marketo] Named Account {MUNCHKIN_ID}` | XDM業務帳戶 | XDM業務帳戶詳細資訊 | 啟用 | `accountID` 在基本類中 | `marketo_named_account_{MUNCHKIN_ID}` | `extSourceSystemAudit.externalID` 在基本類中 | `salesforce_account_{SALESFORCE_ORGANIZATION_ID}` | <ul><li>`accountParentID` 在XDM商業帳戶詳細資料混合中</li><li>類型：一對一</li><li>參考結構：`[!DNL Marketo] Named Account {MUNCHKIN_ID}`</li><li>命名空間: `marketo_named_account_{MUNCHKIN_ID}` |
+| [!DNL Marketo] 活動 `{MUNCHKIN ID}` | XDM ExperienceEvent | <ul><li>造訪網頁</li><li>新銷售線索</li><li>轉換銷售線索</li><li>新增至清單</li><li>從清單中移除</li><li>添加到業務機會</li><li>從銷售機會中刪除</li><li>填寫的表單</li><li>連結點按次數</li><li>電子郵件傳送</li><li>已開啟電子郵件</li><li>已點按電子郵件</li><li>電子郵件已退回</li><li>Email Roburced Soft</li><li>取消訂閱電子郵件</li><li>分數已變更</li><li>業務機會更新</li><li>促銷活動進展狀態已變更</li><li>人員識別碼</li><li>Marketo網址 | 啟用 | `personID` 人物識別碼混合 | `marketo_person_{MUNCHKIN_ID}` | 無 | 無 | 第一關係<ul><li>`listOperations.listID` 欄位</li><li>類型：一對一</li><li>參考結構：`[!DNL Marketo] Static List {MUNCHKIN_ID}`</li><li>命名空間: `marketo_static_list_{MUNCHKIN_ID}`</li></ul>第二種關係<ul><li>`opportunityEvent.opportunityID` 欄位</li><li>類型：一對一</li><li>參考結構：`[!DNL Marketo] Opportunity {MUNCHKIN_ID}`</li><li>命名空間: `marketo_opportunity_{MUNCHKIN_ID}`</li></ul>第三種關係<ul><li>`leadOperation.campaignProgression.campaignID` 欄位</li><li>類型：一對一</li><li>參考結構：`[!DNL Marketo] Program {MUNCHKIN_ID}`</li><li>命名空間: `marketo_program_{MUNCHKIN_ID}`</li></ul> | `[!DNL Marketo] Activity {MUNCHKIN_ID}`架構的主要身份是`personID`，與`[!DNL Marketo] Person {MUNCHKIN_ID}`架構的主要身份相同。 |
 
 {style=&quot;table-layout:auto&quot;}
-
->[!NOTE]
->
->[!DNL Real-time Customer Profile]的所有方案都已啟用
 
 ## 後續步驟
 
