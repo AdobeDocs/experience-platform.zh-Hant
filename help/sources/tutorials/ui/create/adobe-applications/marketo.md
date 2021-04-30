@@ -5,14 +5,14 @@ title: 在UI中建立Marketo Engage來源連接器
 topic-legacy: overview
 type: Tutorial
 description: 本教學課程提供在UI中建立Marketo Engage來源連接器以將B2B資料匯入Adobe Experience Platform的步驟。
+exl-id: a6aa596b-9cfa-491e-86cb-bd948fb561a8
 translation-type: tm+mt
-source-git-commit: f12baaa9d4b37f1101792a4ae479b5a62893eb68
+source-git-commit: 5322adb4b3a244de92300e7ce9d942ad4b968454
 workflow-type: tm+mt
-source-wordcount: '1317'
+source-wordcount: '1324'
 ht-degree: 0%
 
 ---
-
 
 # （測試版）在UI中建立[!DNL Marketo Engage]來源連接器
 
@@ -75,25 +75,25 @@ ht-degree: 0%
 
 在建立[!DNL Marketo]帳戶後，下一步驟會提供介面，供您探索[!DNL Marketo]資料集。
 
-介面的左半部分是目錄瀏覽器，顯示10個[!DNL Marketo]資料集。 完整功能的[!DNL Marketo]源連接需要提取9個不同的資料集。 如果您也使用[!DNL Marketo's]帳戶型行銷(ABM)功能，則還必須建立第10個資料流，才能收錄[!UICONTROL Named Accounts]資料集。
+介面的左半部分是目錄瀏覽器，顯示10個[!DNL Marketo]資料集。 完整功能的[!DNL Marketo]源連接需要提取9個不同的資料集。 如果您也使用[!DNL Marketo]帳戶型行銷(ABM)功能，則還必須建立第10個資料流，才能收錄[!UICONTROL Named Accounts]資料集。
 
 >[!NOTE]
 >
->為簡略起見，以下教程以[!UICONTROL Named Acccounts]為例，但以下概述的步驟適用於10個[!DNL Marketo]資料集中的任何一個。
+>為簡略起見，以下教程以[!UICONTROL Named Accounts]為例，但以下概述的步驟適用於10個[!DNL Marketo]資料集中的任何一個。
 
 先選取您要收錄的資料集，然後選取&#x200B;**[!UICONTROL Next]**。
 
 ![select-data](../../../../images/tutorials/create/marketo/select-data.png)
 
-## 將資料欄位對應至XDM架構
+## 將[!DNL Marketo]結構映射到平台
 
-出現[!UICONTROL Mapping]步驟，提供將[!DNL Marketo]資料集映射至Platform資料集的介面。
+出現[!UICONTROL Mapping]步驟，提供將[!DNL Marketo]結構映射到平台的介面。
 
 選擇要接收傳入資料的資料集。 您可以使用現有資料集或建立新資料集。
 
 ### 使用現有資料集
 
-若要將資料內嵌至現有資料集，請選取&#x200B;**[!UICONTROL Use existing dataset]**，然後選取資料集圖示。
+若要將資料內嵌至現有資料集，請選取&#x200B;**[!UICONTROL Existing dataset]**，然後選取資料集圖示。
 
 ![existing-dataset](../../../../images/tutorials/create/marketo/existing-dataset.png)
 
@@ -103,7 +103,7 @@ ht-degree: 0%
 
 ### 使用新資料集
 
-若要將資料內嵌至新資料集，請選取&#x200B;**[!UICONTROL Create new dataset]**，並在提供的欄位中輸入資料集的名稱和說明。
+若要將資料內嵌至新資料集，請選取&#x200B;**[!UICONTROL New dataset]**，並在提供的欄位中輸入資料集的名稱和說明。
 
 您可以在&#x200B;**[!UICONTROL Select schema]**&#x200B;搜索欄中輸入方案名稱，以搜索方案。 您也可以選擇下拉式圖示，查看現有結構的清單。 或者，您可以選擇&#x200B;**[!UICONTROL Advanced search]**&#x200B;以訪問現有方案的頁，包括其各自的詳細資訊。
 
@@ -144,7 +144,7 @@ ht-degree: 0%
 
 ![dataflow-detail](../../../../images/tutorials/create/marketo/dataflow-detail.png)
 
-啟用&#x200B;**[!UICONTROL Error diagnostics]**&#x200B;切換，允許針對新接收的批次產生詳細的錯誤訊息，您可使用API下載。
+啟用&#x200B;**[!UICONTROL Error diagnostics]**&#x200B;切換，允許針對新接收的批次產生詳細的錯誤訊息，您可使用API下載。 有關詳細資訊，請參閱[檢索資料接收錯誤診斷](../../../../../ingestion/quality/error-diagnostics.md)的教程。
 
 ![錯誤](../../../../images/tutorials/create/marketo/errors.png)
 
@@ -160,7 +160,7 @@ ht-degree: 0%
 
 出現&#x200B;**[!UICONTROL Review]**&#x200B;步驟，允許您在建立新資料流之前對其進行查看。 詳細資訊會分組在下列類別中：
 
-* **[!UICONTROL Connection]**:顯示源檔案的類型、所選源檔案的相關路徑，以及該源檔案中的列數。
+* **[!UICONTROL Connection]**:顯示源類型、所選源實體的相關路徑以及該源實體中的列數。
 * **[!UICONTROL Assign dataset & map fields]**:顯示源資料被吸收到的資料集，包括資料集所附的模式。
 
 複查資料流後，請選擇&#x200B;**[!UICONTROL Finish]**&#x200B;並為建立資料流留出一些時間。
