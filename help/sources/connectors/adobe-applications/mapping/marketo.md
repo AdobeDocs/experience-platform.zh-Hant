@@ -6,10 +6,10 @@ topic-legacy: overview
 description: 下表包含Marketo資料集中各欄位與其對應的XDM欄位之間的映射。
 exl-id: 2b217bba-2748-4d6f-85ac-5f64d5e99d49
 translation-type: tm+mt
-source-git-commit: 8f03b2e8a10d57fcae77dedecdce0e0176ba04fd
+source-git-commit: 5d37c9664f60e9d962e866c6d480d2ef2e0bfff3
 workflow-type: tm+mt
-source-wordcount: '453'
-ht-degree: 3%
+source-wordcount: '330'
+ht-degree: 4%
 
 ---
 
@@ -259,10 +259,6 @@ ht-degree: 3%
 
 ## 人{#persons}
 
-在平台UI的[!DNL Profiles]控制面板中，如果您用來瀏覽的合併原則中ID接合值設為`None`，則連結的身分視窗將只會顯示主要身分屬性。
-
-因應措施是，您可以將ID拼接欄位從`None`更新為`Private graph`，以便查看所有連結到[!DNL Profile]的身分。 或者，您可以建立新的合併原則，或使用包含ID接合值設為`Private graph`的不同合併原則。 如果選擇建立新合併策略或使用不同的合併策略，則必須確保策略包含用於[!DNL Marketo]人員映射集的相同方案類型。 有關詳細資訊，請參閱[合併策略UI指南](../../../../profile/ui/merge-policies.md)。
-
 | 來源資料集 | XDM目標欄位 | 附註 |
 | -------------- | ---------------- | ----- |
 | `id` | `personID` | 主要身分 |
@@ -313,7 +309,7 @@ ht-degree: 3%
 
 {style=&quot;table-layout:auto&quot;}
 
->[!TIP]
+>[!NOTE]
 >
 >`to_object('ECID',arrays_to_objects('id',explode(ecids)))`來源欄位是計算欄位，必須使用「平台UI」中的[!UICONTROL Add calculated field]選項加入。 有關詳細資訊，請參閱[添加計算欄位](../../../../ingestion/tutorials/map-a-csv-file.md)的教程。
 
