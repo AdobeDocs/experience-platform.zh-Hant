@@ -2,12 +2,11 @@
 keywords: Experience Platform；首頁；熱門主題
 solution: Experience Platform
 title: 即時客戶個人檔案中的隱私權要求處理
-topic-legacy: overview
 type: Documentation
 description: Adobe Experience Platform Privacy Service公司處理客戶存取、選擇退出銷售或刪除其個人資料的要求，這些資料由許多隱私權法規所界定。 本檔案涵蓋處理即時客戶個人檔案隱私權要求的相關基本概念。
 exl-id: fba21a2e-aaf7-4aae-bb3c-5bd024472214
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 8d16a3030c663d40daed6c5105af07b2d2d5c7bf
 workflow-type: tm+mt
 source-wordcount: '1091'
 ht-degree: 0%
@@ -24,9 +23,9 @@ Adobe Experience Platform[!DNL Privacy Service]處理客戶存取、選擇退出
 
 建議您在閱讀本指南之前，先瞭解以下[!DNL Experience Platform]服務：
 
-* [[!DNL Privacy Service]](home.md):管理客戶在Adobe Experience Cloud應用程式中存取、選擇退出銷售或刪除其個人資料的要求。
+* [[!DNL Privacy Service]](../privacy-service/home.md):管理客戶在Adobe Experience Cloud應用程式中存取、選擇退出銷售或刪除其個人資料的要求。
 * [[!DNL Identity Service]](../identity-service/home.md):透過跨裝置和系統橋接身分，解決客戶體驗資料分散所帶來的根本挑戰。
-* [[!DNL Real-time Customer Profile]](../profile/home.md):根據來自多個來源的匯整資料，提供統一、即時的消費者個人檔案。
+* [[!DNL Real-time Customer Profile]](home.md):根據來自多個來源的匯整資料，提供統一、即時的消費者個人檔案。
 
 ## 瞭解身份名稱空間{#namespaces}
 
@@ -48,7 +47,7 @@ Identity Service會維護全域定義（標準）和使用者定義（自訂）�
 >
 >此外，請務必注意，無法保證隱私權要求完成所需的時間。 如果在請求仍在處理時您的[!DNL Profile]資料中發生變更，則無法保證這些記錄是否已處理。
 
-### 使用API
+### 使用 API
 
 在API中建立工作請求時，`userIDs`中提供的任何ID都必須使用特定的`namespace`和`type`。 必須為`namespace`值提供由[!DNL Identity Service]識別名稱空間](#namespaces)的有效值，而`type`必須為`standard`或`unregistered`（對於標準名稱空間和自訂名稱空間分別）。[
 
