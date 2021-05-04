@@ -7,9 +7,9 @@ type: Tutorial
 description: 本教學課程涵蓋使用來源連接器和API擷取串流資料並將其匯入平台的步驟。
 exl-id: 898df7fe-37a9-4495-ac05-30029258a6f4
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: f35c59843451267d0a054cfd594aea3e5d5ea8c6
 workflow-type: tm+mt
-source-wordcount: '1498'
+source-wordcount: '1526'
 ht-degree: 2%
 
 ---
@@ -202,7 +202,6 @@ curl -X GET https://platform.adobe.io/data/foundation/flowservice/sourceConnecti
 }
 ```
 
-
 ## 建立目標XDM模式{#target-schema}
 
 要使用[!DNL Platform]中的源資料，必須建立目標模式，以根據您的需要構建源資料。 然後，目標模式用於建立包含源資料的[!DNL Platform]資料集。 此目標XDM模式還擴展了XDM [!DNL Individual Profile]類。
@@ -334,6 +333,7 @@ curl -X POST \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d '{
+        "name": "Test streaming dataset",
         "schemaRef": {
             "id": "https://ns.adobe.com/{TENANT_ID}/schemas/e45dd983026ce0daec5185cfddd48cbc0509015d880d6186",
             "contentType": "application/vnd.adobe.xed-full-notext+json; version=1"
@@ -345,15 +345,15 @@ curl -X POST \
             "profile": [
             "enabled:true"
             ]
-        },
-        "name": "Test streaming dataset"
+        }
     }'
 ```
 
 | 屬性 | 說明 |
 | --- | --- |
-| `schemaRef.id` | 目標XDM架構的ID。 |
-| `schemaRef.contentType` | 架構的版本。 此值必須設定為`application/vnd.adobe.xed-full-notext+json;version=1` ，以返回方案的最新次要版本。 |
+| `name` | 要建立的資料集的名稱。 |
+| `schemaRef.id` | 資料集將基於的XDM模式的URI `$id`。 |
+| `schemaRef.contentType` | 架構的版本。 此值必須設定為`application/vnd.adobe.xed-full-notext+json;version=1` ，它將返回方案的最新次要版本。 如需詳細資訊，請參閱XDM API指南中有關[架構版本控制](../../../../xdm/api/getting-started.md#versioning)的章節。 |
 
 **回應**
 
