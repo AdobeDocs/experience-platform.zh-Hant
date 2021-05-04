@@ -6,9 +6,9 @@ topic-legacy: overview
 description: 本檔案提供「人口統計詳細資料」混合檔的概觀。
 exl-id: 588c044c-b80d-4cb9-9f97-92f040d54bb4
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 87b638df8a3b27fb6df5dee60b57d817d5e34a80
 workflow-type: tm+mt
-source-wordcount: '261'
+source-wordcount: '260'
 ht-degree: 3%
 
 ---
@@ -37,5 +37,4 @@ ht-degree: 3%
 有關混音的詳細資訊，請參閱公用XDM存放庫：
 
 * [填入的範例](https://github.com/adobe/xdm/blob/master/components/mixins/profile/profile-person-details.example.1.json)
-* [Full ](https://github.com/adobe/xdm/blob/master/components/mixins/profile/profile-person-details.schema.json)
-schemaå
+* [完整架構](https://github.com/adobe/xdm/blob/master/components/mixins/profile/profile-person-details.schema.json)
