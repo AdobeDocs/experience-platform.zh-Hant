@@ -1,11 +1,11 @@
 ---
 keywords: 平台；目標；目標工作區；工作區；ui；目標ui；目錄；目標目錄；
 title: 目標工作區
-description: 「目標」工作區包含4個部分：「目錄」、「瀏覽」、「帳戶」和「系統視圖」。 以下各節將說明這些問題。
+description: 「目標」工作區包含4個部分：「目錄」、「瀏覽」、「帳戶」和「系統視圖」。 以下各節將介紹這些功能。
 seo-description: 在Adobe Experience Platform，從左側導覽列選擇「目標」以存取目標工作區。
 exl-id: 0f46f08d-0fe3-441d-933a-86bc146c0f19
 translation-type: tm+mt
-source-git-commit: cc432f7c07f0f82deec653864154016638ec8138
+source-git-commit: eaa4a7efc248104d823267eca574f2eca16edc3f
 workflow-type: tm+mt
 source-wordcount: '742'
 ht-degree: 1%
@@ -38,7 +38,7 @@ ht-degree: 1%
 目標卡包含&#x200B;**[!UICONTROL Configure]**&#x200B;或&#x200B;**[!UICONTROL Activate]**&#x200B;控制項，以及可顯示更多選項的次要控制項。 這些控制項說明如下：
 
 | 控制 | 說明 |
----------|----------
+|---------|----------|
 | [!UICONTROL Configure] | 允許您建立到目標的連接。 |
 | [!UICONTROL Activate] | 一旦建立與目標的連線後，您就可以啟動區段。 |
 | [!UICONTROL View account] | 查看您已為目標連接的帳戶。 |
@@ -72,7 +72,7 @@ ht-degree: 1%
 ![瀏覽標籤](../assets/ui/workspace/browse-tab.png)
 
 | 元素 | 說明 |
----------|----------
+|---------|----------|
 | 名稱 | 您為啟動流程提供的名稱，會前往此目的地。 同一欄包含兩個控制項：[!UICONTROL Activate ]和[!UICONTROL Delete destination]。 |
 | [!UICONTROL Last Flow Run Status] | 上次資料流運行的狀態。 有關資料流運行的詳細資訊，請參見[查看目標詳細資訊](destination-details-page.md)。 |
 | [!UICONTROL Last Flow Run Date] | 上次資料流運行的時間和日期。 有關資料流運行的詳細資訊，請參見[查看目標詳細資訊](destination-details-page.md)。 |
