@@ -7,9 +7,9 @@ type: Tutorial
 description: 本教學課程將協助您開始使用串流擷取API，這是Adobe Experience Platform資料擷取服務API的一部分。
 exl-id: 9f7fbda9-4cd3-4db5-92ff-6598702adc34
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 96f400466366d8a79babc194bc2ba8bf19ede6bb
 workflow-type: tm+mt
-source-wordcount: '883'
+source-wordcount: '1090'
 ht-degree: 2%
 
 ---
@@ -27,6 +27,8 @@ Flow Service用於收集和集中Adobe Experience Platform內不同來源的客�
 
 - [[!DNL Experience Data Model (XDM)]](../../../../../xdm/home.md):組織體驗資料的 [!DNL Platform] 標準化架構。
 - [[!DNL Real-time Customer Profile]](../../../../../profile/home.md):根據來自多個來源的匯整資料，即時提供統一的消費者個人檔案。
+
+此外，建立串流連線需要您有目標XDM架構和資料集。 要瞭解如何建立這些資料，請閱讀有關[流記錄資料](../../../../../ingestion/tutorials/streaming-record-data.md)的教程，或有關[流時間系列資料](../../../../../ingestion/tutorials/streaming-time-series-data.md)的教程。
 
 以下章節提供您需要知道的其他資訊，以便成功呼叫串流擷取API。
 
@@ -54,9 +56,9 @@ Flow Service用於收集和集中Adobe Experience Platform內不同來源的客�
 
 - 內容類型：application/json
 
-## 建立連線
+## 建立基本連接
 
-連線會指定來源，並包含讓流與串流擷取API相容所需的資訊。 建立連接時，您可以選擇建立未驗證和已驗證的連接。
+基本連接指定源，並包含使流與流接收API相容所需的資訊。 建立基本連接時，您可以選擇建立未驗證和已驗證的連接。
 
 ### 非驗證連接
 
@@ -95,7 +97,7 @@ curl -X POST https://platform.adobe.io/data/foundation/flowservice/connections \
              "name": "Sample connection"
          }
      }
- }
+ }'
 ```
 
 | 屬性 | 說明 |
@@ -189,7 +191,7 @@ curl -X POST https://platform.adobe.io/data/foundation/flowservice/connections \
 
 ## 取得串流端點URL
 
-建立連線後，您現在可以擷取串流端點URL。
+建立基本連線後，您現在可以擷取串流端點URL。
 
 **API格式**
 
@@ -247,6 +249,142 @@ curl -X GET https://platform.adobe.io/data/foundation/flowservice/connections/{C
             "etag": "\"56008aee-0000-0200-0000-5e697e150000\""
         }
     ]
+}
+```
+
+## 建立源連接
+
+建立基本連接後，您需要建立源連接。 建立源連接時，您需要建立的基本連接的`id`值。
+
+**API格式**
+
+```http
+POST /flowservice/sourceConnections
+```
+
+**要求**
+
+```shell
+curl -X POST \
+  'https://platform.adobe.io/data/foundation/flowservice/sourceConnections' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'Content-Type: application/json' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -d '{
+    "name": "Sample source connection",
+    "description": "Sample source connection description",
+    "baseConnectionId": "{BASE_CONNECTION_ID}",
+    "connectionSpec": {
+        "id": "bc7b00d6-623a-4dfc-9fdb-f1240aeadaeb",
+        "version": "1.0"
+    }
+}'
+```
+
+**回應**
+
+成功的回應會傳回HTTP狀態201，並詳細列出新建立的來源連線，包括其唯一識別碼(`id`)。
+
+```json
+{
+    "id": "63070871-ec3f-4cb5-af47-cf7abb25e8bb",
+    "etag": "\"28000b90-0000-0200-0000-6091b0150000\""
+}
+```
+
+## 建立目標連接
+
+建立源連接後，可以建立目標連接。 建立目標連線時，您將需要先前建立之資料集的`id`值。
+
+**API格式**
+
+```http
+POST /flowservice/targetConnections
+```
+
+**要求**
+
+```shell
+curl -X POST \
+  'https://platform.adobe.io/data/foundation/flowservice/targetConnections' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'Content-Type: application/json' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -d '{
+    "name": "Sample target connection",
+    "description": "Sample target connection description",
+    "connectionSpec": {
+        "id": "c604ff05-7f1a-43c0-8e18-33bf874cb11c",
+        "version": "1.0"
+    },
+    "data": {
+        "format": "parquet_xdm"
+    },
+    "params": {
+        "dataSetId": "{DATASET_ID}"
+    }
+}'
+```
+
+**回應**
+
+成功的回應會傳回HTTP狀態201，其中包含新建立之目標連線的詳細資訊，包括其唯一識別碼(`id`)。
+
+```json
+{
+    "id": "98a2a72e-a80f-49ae-aaa3-4783cc9404c2",
+    "etag": "\"0500b73f-0000-0200-0000-6091b0b90000\""
+}
+```
+
+## 建立資料流
+
+建立源和目標連接後，您現在可以建立資料流。 資料流負責調度和收集源中的資料。 通過對`/flows`端點執行POST請求，可以建立資料流。
+
+**API格式**
+
+```http
+POST /flows
+```
+
+**要求**
+
+```shell
+curl -X POST \
+  'https://platform.adobe.io/data/foundation/flowservice/flows' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'Content-Type: application/json' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -d '{
+    "name": "Sample flow",
+    "description": "Sample flow description",
+    "flowSpec": {
+        "id": "d8a6f005-7eaf-4153-983e-e8574508b877",
+        "version": "1.0"
+    },
+    "sourceConnectionIds": [
+        "{SOURCE_CONNECTION_ID}"
+    ],
+    "targetConnectionIds": [
+        "{TARGET_CONNECTION_ID}"
+    ]
+}'
+```
+
+**回應**
+
+成功的響應返回HTTP狀態201，並返回新建立的資料流的詳細資訊，包括其唯一標識符(`id`)。
+
+```json
+{
+    "id": "ab03bde0-86f2-45c7-b6a5-ad8374f7db1f",
+    "etag": "\"1200c123-0000-0200-0000-6091b1730000\""
 }
 ```
 
