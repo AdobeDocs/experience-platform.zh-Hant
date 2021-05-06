@@ -7,9 +7,9 @@ type: Tutorial
 description: 本教學課程將協助您開始使用串流擷取API，這是Adobe Experience Platform資料擷取服務API的一部分。
 exl-id: 720b15ea-217c-4c13-b68f-41d17b54d500
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 544eeb3a27d0b218885e3000deb214f21c8e9fcd
 workflow-type: tm+mt
-source-wordcount: '1312'
+source-wordcount: '1349'
 ht-degree: 2%
 
 ---
@@ -290,9 +290,16 @@ curl -X POST https://platform.adobe.io/data/foundation/catalog/dataSets \
 ]
 ```
 
+
+## 建立串流連線
+
+在建立架構和資料集後，您將需要建立串流連線來收集資料。
+
+有關建立流連接的詳細資訊，請閱讀[建立流連接教程](./create-streaming-connection.md)。
+
 ## 將時間系列資料收錄至串流連線
 
-有了資料集和串流連線，您就可以內嵌XDM格式的JSON記錄，以內嵌[!DNL Platform]內的時間系列資料。
+在建立資料集、串流連線和資料流後，您可以內嵌XDM格式的JSON記錄，以內嵌[!DNL Platform]內的時間系列資料。
 
 **API格式**
 
@@ -326,7 +333,7 @@ curl -X POST https://dcs.adobedc.net/collection/{CONNECTION_ID}?synchronousValid
             "id": "{SCHEMA_REF_ID}",
             "contentType": "application/vnd.adobe.xed-full+json;version=1"
         },
-        "imsOrgId": "{IMS_ORG}",
+        "flowId": "{FLOW_ID}",
         "datasetId": "{DATASET_ID}"
     },
     "body": {
@@ -413,7 +420,7 @@ curl -X POST https://dcs.adobedc.net/collection/{CONNECTION_ID}?synchronousValid
 
 | 屬性 | 說明 |
 | -------- | ----------- |
-| `{CONNECTION_ID}` | 先前建立之串流連線的ID。 |
+| `{CONNECTION_ID}` | 先前建立的串流連接的`inletId`。 |
 | `xactionId` | 唯一識別碼是您剛傳送之記錄的伺服器端產生。 此ID有助於Adobe通過各種系統和調試跟蹤此記錄的生命週期。 |
 | `receivedTimeMs`:時間戳記（以毫秒為單位），顯示收到請求的時間。 |
 | `synchronousValidation.status` | 由於已添加查詢參數`synchronousValidation=true`，因此將顯示此值。 如果驗證成功，狀態將為`pass`。 |
@@ -445,7 +452,7 @@ GET /access/entities?schema.name=_xdm.context.experienceevent&relatedSchema.name
 
 ```shell
 curl -X GET \
-  https://platform-stage.adobe.io/data/core/ups/access/entities?schema.name=_xdm.context.experienceevent&relatedSchema.name=_xdm.context.profile&relatedEntityId=janedoe@example.com&relatedEntityIdNS=email \
+  https://platform.adobe.io/data/core/ups/access/entities?schema.name=_xdm.context.experienceevent&relatedSchema.name=_xdm.context.profile&relatedEntityId=janedoe@example.com&relatedEntityIdNS=email \
   -H "Authorization: Bearer {ACCESS_TOKEN}" \
   -H "x-api-key: {API_KEY}" \
   -H "x-gw-ims-org-id: {IMS_ORG}" \
