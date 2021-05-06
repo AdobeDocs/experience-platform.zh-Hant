@@ -5,9 +5,9 @@ user-guide-description: 針對跨通路行銷活動、電子郵件宣傳、鎖�
 description: 本檔案列出了Adobe Experience Platform目的地的目錄
 feature: 目的地
 translation-type: tm+mt
-source-git-commit: 020192469127e8f25f0d61e33b4b5dc60da6b57d
+source-git-commit: 9b383f09a3a73f785b0e3a415deda126b9ef6b39
 workflow-type: tm+mt
-source-wordcount: '471'
+source-wordcount: '474'
 ht-degree: 10%
 
 ---
@@ -104,9 +104,9 @@ ht-degree: 10%
       * [Adobe Experience Platform Launch分機總覽](./catalog/launch-extensions/overview.md)
    * 行動參與目標{#mobile-engagement}
       * [行動互動目標概觀](./catalog/mobile-engagement/overview.md)
-      * [飛艇屬性連接](./catalog/mobile-engagement/airship-attributes.md)
-      * [飛艇標籤連接](./catalog/mobile-engagement/airship-tags.md)
-      * [Braze連接](./catalog/mobile-engagement/braze.md)
+      * [（測試版）飛艇屬性連接](./catalog/mobile-engagement/airship-attributes.md)
+      * [（測試版）飛艇標籤連接](./catalog/mobile-engagement/airship-tags.md)
+      * [（測試版）Braze連線](./catalog/mobile-engagement/braze.md)
    * 個人化目標{#personalization}
       * [個人化目標概觀](./catalog/personalization/overview.md)
       * [Adobe Target 擴充功能](./catalog/personalization/adobe-target.md)
