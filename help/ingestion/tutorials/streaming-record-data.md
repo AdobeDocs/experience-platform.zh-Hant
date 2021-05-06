@@ -7,12 +7,13 @@ type: Tutorial
 description: 本教學課程將協助您開始使用串流擷取API，這是Adobe Experience Platform資料擷取服務API的一部分。
 exl-id: 097dfd5a-4e74-430d-8a12-cac11b1603aa
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 544eeb3a27d0b218885e3000deb214f21c8e9fcd
 workflow-type: tm+mt
-source-wordcount: '1164'
+source-wordcount: '1168'
 ht-degree: 2%
 
 ---
+
 
 # 使用串流擷取API來串流記錄資料
 
@@ -23,10 +24,8 @@ ht-degree: 2%
 本教學課程需要具備Adobe Experience Platform各項服務的相關知識。 在開始本教學課程之前，請先閱讀下列服務的檔案：
 
 - [[!DNL Experience Data Model (XDM)]](../../xdm/home.md):組織體驗資料的 [!DNL Platform] 標準化架構。
+   - [架構註冊開發人員指南](../../xdm/api/getting-started.md):完整的指南，涵蓋 [!DNL Schema Registry] API的每個可用端點，以及如何呼叫這些端點。這包括瞭解在本教學課程中的呼叫中出現的`{TENANT_ID}`，以及瞭解如何建立結構描述（用於建立資料集以擷取）。
 - [[!DNL Real-time Customer Profile]](../../profile/home.md):根據來自多個來源的匯整資料，即時提供統一的消費者個人檔案。
-- [架構註冊開發人員指南](../../xdm/api/getting-started.md):完整的指南，涵蓋 [!DNL Schema Registry] API的每個可用端點，以及如何呼叫這些端點。這包括瞭解在本教學課程中的呼叫中出現的`{TENANT_ID}`，以及瞭解如何建立結構描述（用於建立資料集以擷取）。
-
-此外，本教學課程要求您已建立串流連線。 有關建立流連接的詳細資訊，請閱讀[建立流連接教程](./create-streaming-connection.md)。
 
 以下章節提供您需要知道的其他資訊，以便成功呼叫串流擷取API。
 
@@ -264,6 +263,12 @@ curl -X POST https://platform.adobe.io/data/foundation/catalog/dataSets \
 ]
 ```
 
+## 建立串流連線
+
+在建立架構和資料集後，您可以建立串流連線
+
+有關建立流連接的詳細資訊，請閱讀[建立流連接教程](./create-streaming-connection.md)。
+
 ## 將記錄資料收錄到流連接{#ingest-data}
 
 有了資料集和串流連線，您就可以內嵌XDM格式的JSON記錄，將記錄資料內嵌至[!DNL Platform]。
@@ -276,7 +281,7 @@ POST /collection/{CONNECTION_ID}?synchronousValidation=true
 
 | 參數 | 說明 |
 | --------- | ----------- |
-| `{CONNECTION_ID}` | 先前建立的串流連接的`id`值。 |
+| `{CONNECTION_ID}` | 先前建立的串流連接的`inletId`值。 |
 | `synchronousValidation` | 可選的查詢參數，用於開發用途。 如果設為`true`，則可用於立即回饋，以判斷請求是否成功傳送。 依預設，此值會設為`false`。 |
 
 **要求**
