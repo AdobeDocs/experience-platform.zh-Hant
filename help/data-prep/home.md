@@ -6,9 +6,9 @@ topic-legacy: overview
 description: 本檔案介紹Adobe Experience Platform的資料準備。
 exl-id: f15eeb50-a531-4560-a524-1a670fbda706
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: daefd977cd09bd9cd7f8d6101b45be98f30d24ae
 workflow-type: tm+mt
-source-wordcount: '388'
+source-wordcount: '437'
 ht-degree: 0%
 
 ---
@@ -35,6 +35,8 @@ ht-degree: 0%
 ## 映射集
 
 將一個模式轉換為另一個模式的映射集統稱為映射集。 每個資料流都會建立單一對應集。 映射集是資料流的一個組成部分，並作為資料流的一部分建立、編輯和監控。
+
+要進一步瞭解映射集，包括如何使用映射集中的欄位，請閱讀[映射集指南](./mapping-set.md)。 要瞭解如何建立映射集並使用與映射集相關的其他API調用，請閱讀[開發人員指南](./api/mapping-set.md)中的映射集部分。
 
 ## 資料格式處理
 
