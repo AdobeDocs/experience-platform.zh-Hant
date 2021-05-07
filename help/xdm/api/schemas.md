@@ -6,16 +6,16 @@ description: 架構註冊表API中的/schemas端點可讓您以程式設計方�
 topic-legacy: developer guide
 exl-id: d0bda683-9cd3-412b-a8d1-4af700297abf
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
 workflow-type: tm+mt
-source-wordcount: '1418'
+source-wordcount: '1431'
 ht-degree: 2%
 
 ---
 
 # 方案端點
 
-架構可視為您要收錄至Adobe Experience Platform之資料的藍圖。 每個模式由類和零個或多個混合組成。 [!DNL Schema Registry] API中的`/schemas`端點可讓您以程式設計方式管理體驗應用程式中的架構。
+架構可視為您要收錄至Adobe Experience Platform之資料的藍圖。 每個模式由類和零個或多個模式欄位組組成。 [!DNL Schema Registry] API中的`/schemas`端點可讓您以程式設計方式管理體驗應用程式中的架構。
 
 ## 快速入門
 
@@ -154,7 +154,7 @@ curl -X GET \
           "meta:xdmType": "object"
       },
       {
-          "$ref": "https://ns.adobe.com/{TENANT_ID}/mixins/443fe51457047d958f4a97853e64e0eca93ef34d7990583b",
+          "$ref": "https://ns.adobe.com/{TENANT_ID}/fieldgroups/443fe51457047d958f4a97853e64e0eca93ef34d7990583b",
           "type": "object",
           "meta:xdmType": "object"
       }
@@ -163,7 +163,7 @@ curl -X GET \
   "meta:extensible": false,
   "meta:abstract": false,
   "meta:extends": [
-      "https://ns.adobe.com/{TENANT_ID}/mixins/443fe51457047d958f4a97853e64e0eca93ef34d7990583b",
+      "https://ns.adobe.com/{TENANT_ID}/fieldgroups/443fe51457047d958f4a97853e64e0eca93ef34d7990583b",
       "https://ns.adobe.com/xdm/common/auditable",
       "https://ns.adobe.com/xdm/data/record",
       "https://ns.adobe.com/xdm/context/profile"
@@ -193,7 +193,7 @@ curl -X GET \
 
 >[!NOTE]
 >
->以下範例呼叫僅是如何在API中建立架構的基準範例，其中類別的構圖需求最低，而無混音。 有關如何在API中建立架構的完整步驟，包括如何使用混合和資料類型分配欄位，請參見[架構建立教程](../tutorials/create-schema-api.md)。
+>以下範例呼叫只是如何在API中建立架構的基準範例，其中類別的構成需求最低，而無欄位群組。 有關如何在API中建立架構的完整步驟，包括如何使用欄位組和資料類型分配欄位，請參見[架構建立教程](../tutorials/create-schema-api.md)。
 
 **API格式**
 
@@ -227,7 +227,7 @@ curl -X POST \
 
 | 屬性 | 說明 |
 | --- | --- |
-| `allOf` | 對象陣列，每個對象引用模式實現其欄位的類或混合。 每個對象都包含一個屬性(`$ref`)，其值表示將實施的類的`$id`或混合。 必須提供一個類別，並附加零個或多個混音。 在上例中，`allOf`陣列中的單個對象是方案的類。 |
+| `allOf` | 對象的陣列，每個對象引用模式實施的欄位的類或欄位組。 每個對象都包含一個屬性(`$ref`)，其值代表新模式將實施的類或欄位組的`$id`。 必須提供一個類，並且包含零個或多個附加欄位組。 在上例中，`allOf`陣列中的單個對象是方案的類。 |
 
 **回應**
 
@@ -268,7 +268,7 @@ curl -X POST \
 
 執行[清單租用戶容器中所有結構](#list)的GET請求時，現在會包含新結構。 您可以使用URL編碼的`$id` URI來執行[查閱(GET)請求](#lookup)，以直接檢視新架構。
 
-要向架構添加其他欄位，可以執行[PATCH操作](#patch)以向架構的`allOf`和`meta:extends`陣列添加混頻。
+要向架構添加其他欄位，可以執行[PATCH操作](#patch)，以將欄位組添加到架構的`allOf`和`meta:extends`陣列。
 
 ## 更新架構{#put}
 
@@ -357,7 +357,7 @@ curl -X PUT \
 >
 >如果要用新值替換整個資源，而不是更新單個欄位，請參閱[中的「使用PUT操作替換方案」部分](#put)。
 
-最常見的PATCH操作之一是將先前定義的混合添加到模式，如下例所示。
+最常見的PATCH操作之一是將先前定義的欄位組添加到模式，如下例所示。
 
 **API格式**
 
@@ -371,7 +371,7 @@ PATCH /tenant/schema/{SCHEMA_ID}
 
 **要求**
 
-下面的示例請求通過將mixin的`$id`值添加到`meta:extends`和`allOf`陣列中，將新的mixin添加到模式。
+下面的示例請求通過將欄位組的`$id`值添加到`meta:extends`和`allOf`陣列中，將新欄位組添加到方案中。
 
 請求主體採用陣列的形式，每個列出的對象代表對單個欄位的特定更改。 每個對象包括要執行的操作(`op`)，該操作應在哪個欄位(`path`)上執行，以及該操作應包括哪些資訊(`value`)。
 
@@ -387,13 +387,13 @@ curl -X PATCH\
         { 
           "op": "add",
           "path": "/meta:extends/-",
-          "value":  "https://ns.adobe.com/{TENANT_ID}/mixins/e49cbb2eec33618f686b8344b4597ecf"
+          "value":  "https://ns.adobe.com/{TENANT_ID}/fieldgroups/e49cbb2eec33618f686b8344b4597ecf"
         },
         {
           "op": "add",
           "path": "/allOf/-",
           "value":  {
-            "$ref": "https://ns.adobe.com/{TENANT_ID}/mixins/e49cbb2eec33618f686b8344b4597ecf"
+            "$ref": "https://ns.adobe.com/{TENANT_ID}/fieldgroups/e49cbb2eec33618f686b8344b4597ecf"
           }
         }
       ]'
@@ -401,7 +401,7 @@ curl -X PATCH\
 
 **回應**
 
-響應顯示兩個操作均成功執行。 混音`$id`已被添加到`meta:extends`陣列中，而混音`$id`的參考(`$ref`)現在出現在`allOf`陣列中。
+響應顯示兩個操作均成功執行。 欄位組`$id`已添加到`meta:extends`陣列中，而欄位組`$id`的引用(`$ref`)現在顯示在`allOf`陣列中。
 
 ```JSON
 {
@@ -413,7 +413,7 @@ curl -X PATCH\
             "$ref": "https://ns.adobe.com/{TENANT_ID}/classes/19e1d8b5098a7a76e2c10a81cbc99590"
         },
         {
-            "$ref": "https://ns.adobe.com/{TENANT_ID}/mixins/e49cbb2eec33618f686b8344b4597ecf"
+            "$ref": "https://ns.adobe.com/{TENANT_ID}/fieldgroups/e49cbb2eec33618f686b8344b4597ecf"
         }
     ],
     "meta:class": "https://ns.adobe.com/{TENANT_ID}/classes/19e1d8b5098a7a76e2c10a81cbc99590",
@@ -422,7 +422,7 @@ curl -X PATCH\
     "meta:extends": [
         "https://ns.adobe.com/{TENANT_ID}/classes/19e1d8b5098a7a76e2c10a81cbc99590",
         "https://ns.adobe.com/xdm/data/record",
-        "https://ns.adobe.com/{TENANT_ID}/mixins/e49cbb2eec33618f686b8344b4597ecf"
+        "https://ns.adobe.com/{TENANT_ID}/fieldgroups/e49cbb2eec33618f686b8344b4597ecf"
     ],
     "meta:containerId": "tenant",
     "imsOrg": "{IMS_ORG}",
@@ -493,7 +493,7 @@ curl -X PATCH\
             "$ref": "https://ns.adobe.com/{TENANT_ID}/classes/19e1d8b5098a7a76e2c10a81cbc99590"
         },
         {
-            "$ref": "https://ns.adobe.com/{TENANT_ID}/mixins/e49cbb2eec33618f686b8344b4597ecf"
+            "$ref": "https://ns.adobe.com/{TENANT_ID}/fieldgroups/e49cbb2eec33618f686b8344b4597ecf"
         }
     ],
     "meta:class": "https://ns.adobe.com/{TENANT_ID}/classes/19e1d8b5098a7a76e2c10a81cbc99590",
@@ -502,7 +502,7 @@ curl -X PATCH\
     "meta:extends": [
         "https://ns.adobe.com/{TENANT_ID}/classes/19e1d8b5098a7a76e2c10a81cbc99590",
         "https://ns.adobe.com/xdm/data/record",
-        "https://ns.adobe.com/{TENANT_ID}/mixins/e49cbb2eec33618f686b8344b4597ecf"
+        "https://ns.adobe.com/{TENANT_ID}/fieldgroups/e49cbb2eec33618f686b8344b4597ecf"
     ],
     "meta:containerId": "tenant",
     "imsOrg": "{IMS_ORG}",
