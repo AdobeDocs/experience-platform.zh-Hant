@@ -6,7 +6,7 @@ topic-legacy: overview
 description: 標準化和互操作性是Adobe Experience Platform背後的關鍵概念。 Experience Data Model(XDM)是由Adobe驅動，旨在標準化客戶體驗資料並定義客戶體驗管理的架構。
 exl-id: 294d5f02-850f-47ea-9333-8b94a0bb291e
 translation-type: tm+mt
-source-git-commit: 58f6c5e3ac77070807f7486bf429493d14fdda9e
+source-git-commit: b70e693b4ffeda561de4d4c8dd8fd1adeec489f7
 workflow-type: tm+mt
 source-wordcount: '1694'
 ht-degree: 1%
@@ -17,7 +17,7 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->「mixin」一詞已更新為「架構欄位群組」，以增進瞭解。 欄位群組是可重複使用的欄位集，可支援商業使用案例。 此變更現在會反映在「架構註冊表API」、「Adobe Experience PlatformUI」和所有平台檔案中。
+>詞語&quot;mixin&quot;已更新為架構&quot;欄位群組&quot;，以增進瞭解。 欄位群組是可重複使用的欄位集，可支援商業使用案例。 此變更現在會反映在「架構註冊表API」、「Adobe Experience PlatformUI」和所有平台檔案中。
 
 標準化和互操作性是Adobe Experience Platform背後的關鍵概念。 [!DNL Experience Data Model] (XDM)由Adobe驅動，旨在標準化客戶體驗資料並定義客戶體驗管理的架構。
 
