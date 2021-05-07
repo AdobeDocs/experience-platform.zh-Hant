@@ -6,16 +6,16 @@ description: 此概述涵蓋Experience Platform中「方案」工作區的主要
 topic-legacy: user guide
 exl-id: b6e089ce-cf9e-4150-92ab-368382a75049
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
 workflow-type: tm+mt
-source-wordcount: '287'
-ht-degree: 2%
+source-wordcount: '291'
+ht-degree: 3%
 
 ---
 
 # [!UICONTROL Schemas] UI概觀
 
-Adobe Experience Platform使用者介面中的[!UICONTROL Schemas]工作區可讓您管理體驗資料模型(XDM)資源，包括結構、類別、混合和資料類型。 您可以檢視和探索Adobe所提供的核心資源，並為您的組織建立自訂資源和結構。
+Adobe Experience Platform用戶介面中的[!UICONTROL Schemas]工作區允許您管理Experience Data Model(XDM)資源，包括方案、類、方案欄位組和資料類型。 您可以檢視和探索Adobe所提供的核心資源，並為您的組織建立自訂資源和結構。
 
 若要存取平台UI中的工作區，請選取左側導軌中的&#x200B;**[!UICONTROL Schemas]**。
 
@@ -33,12 +33,12 @@ Adobe Experience Platform使用者介面中的[!UICONTROL Schemas]工作區可�
 
 * [結構描述](./resources/schemas.md)
 * [類別](./resources/classes.md)
-* [Mixins](./resources/mixins.md)
+* [欄位群組](./resources/field-groups.md)
 * [資料類型](./resources/data-types.md)
 
 ## 定義XDM欄位
 
-類別、混音和資料類型都會將欄位提供給架構。 在將欄位添加到這些資源時，可以從標準欄位類型清單中進行選擇，也可以為某些使用案例定義專用欄位。 有關詳細資訊，請參閱UI](./fields/overview.md)中[定義XDM欄位的指南。
+類別、欄位群組和資料類型都會將欄位提供給架構。 在將欄位添加到這些資源時，可以從標準欄位類型清單中進行選擇，也可以為某些使用案例定義專用欄位。 有關詳細資訊，請參閱UI](./fields/overview.md)中[定義XDM欄位的指南。
 
 ## 後續步驟
 
