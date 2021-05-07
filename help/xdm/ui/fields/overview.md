@@ -6,20 +6,20 @@ description: 瞭解如何在Experience Platform使用者介面中定義XDM欄位
 topic-legacy: user guide
 exl-id: 2adb03d4-581b-420e-81f8-e251cf3d9fb9
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
 workflow-type: tm+mt
-source-wordcount: '1236'
+source-wordcount: '1250'
 ht-degree: 3%
 
 ---
 
 # 在UI中定義XDM欄位
 
-Adobe Experience Platform用戶介面中的[!DNL Schema Editor]可讓您在自訂的體驗資料模型(XDM)類別和混音中定義自己的欄位。 本指南涵蓋在UI中定義XDM欄位的步驟，包括每個欄位類型的可用設定選項。
+Adobe Experience Platform用戶介面中的[!DNL Schema Editor]允許您在自定義Experience Data Model(XDM)類和模式欄位組中定義自己的欄位。 本指南涵蓋在UI中定義XDM欄位的步驟，包括每個欄位類型的可用設定選項。
 
 ## 先決條件
 
-本指南需要對XDM System有充分的瞭解。 有關XDM在Experience Platform生態系統中的角色介紹，請參閱[XDM概述](../../home.md)和[架構構成基礎](../../schema/composition.md)，以瞭解類和混合如何將欄位貢獻到XDM架構。
+本指南需要對XDM System有充分的瞭解。 有關XDM在Experience Platform生態系統中的角色介紹，請參閱[XDM概述](../../home.md)和[架構構成基礎](../../schema/composition.md)，以瞭解類和欄位組如何將欄位貢獻給XDM架構。
 
 雖然本指南不是必要的，但建議您也要遵循在UI](../../tutorials/create-schema-ui.md)中構成架構的[教學課程，以熟悉[!DNL Schema Editor]的各種功能。
 
@@ -27,13 +27,13 @@ Adobe Experience Platform用戶介面中的[!DNL Schema Editor]可讓您在自�
 
 要在UI中定義新的XDM欄位，必須首先在[!DNL Schema Editor]中開啟一個模式。 根據[!DNL Schema Library]中當前可用的方案，您可以選擇[建立新方案](../resources/schemas.md#create)或[選擇現有方案以編輯](../resources/schemas.md#edit)。
 
-開啟[!DNL Schema Editor]後，請使用左側導軌來選取您要定義欄位的類別或混音。 如果資源是由您的組織定義的自訂資源，則在畫布中會顯示新增或編輯欄位的控制項。 這些控制項會出現在方案名稱旁邊，以及已在所選類別或混合項下定義的任何物件類型欄位。
+開啟[!DNL Schema Editor]後，使用左側導軌選擇要為其定義欄位的類或欄位組。 如果資源是由您的組織定義的自訂資源，則在畫布中會顯示新增或編輯欄位的控制項。 這些控制項會顯示在方案名稱旁邊，以及已在選定類或欄位組下定義的任何對象類型欄位。
 
 ![](../../images/ui/fields/overview/select-resource.png)
 
 >[!NOTE]
 >
->如果您選擇的類或混合是Adobe提供的核心資源，則無法編輯它，因此將不顯示上述控制項。 如果要向中添加欄位的方案基於核心XDM類，並且不包含任何自定義混音，則可以[建立新混音](../resources/mixins.md#create)以改為添加到方案。
+>如果您選擇的類或欄位組是Adobe提供的核心資源，則無法編輯它，因此將不顯示上述控制項。 如果要向中添加欄位的方案基於核心XDM類，且不包含任何自定義欄位組，則可以[建立一個新欄位組](../resources/field-groups.md#create)以添加到方案。
 
 要向資源添加新欄位，請在畫布中方案名稱旁選擇&#x200B;**加號(+)**&#x200B;表徵圖，或在要定義欄位的對象類型欄位旁選擇。
 
@@ -41,7 +41,7 @@ Adobe Experience Platform用戶介面中的[!DNL Schema Editor]可讓您在自�
 
 ## 定義資源{#define}的欄位
 
-在選取&#x200B;**plus(+)**&#x200B;圖示後，畫布中會出現&#x200B;**[!UICONTROL New field]**，位於與您唯一租用戶ID同名的根層級物件內（如下例中顯示為`_tenantId`）。 透過自訂類別和混合新增至架構的所有欄位都會自動置於此命名空間中，以避免與Adobe提供類別和混合的其他欄位產生衝突。
+在選取&#x200B;**plus(+)**&#x200B;圖示後，畫布中會出現&#x200B;**[!UICONTROL New field]**，位於與您唯一租用戶ID同名的根層級物件內（如下例中顯示為`_tenantId`）。 透過自訂類別和欄位群組新增至架構的所有欄位都會自動置於此命名空間中，以避免與Adobe提供類別和欄位群組中的其他欄位產生衝突。
 
 ![](../../images/ui/fields/overview/new-field.png)
 
@@ -69,11 +69,11 @@ Adobe Experience Platform用戶介面中的[!DNL Schema Editor]可讓您在自�
 
 ![](../../images/ui/fields/overview/field-added.png)
 
-您可以繼續遵循上述步驟，將更多欄位新增至架構。 儲存架構後，如果對其進行任何變更，也會儲存其基本類別和混合。
+您可以繼續遵循上述步驟，將更多欄位新增至架構。 保存結構後，如果對結構進行了任何更改，則也會保存其基本類和欄位組。
 
 >[!NOTE]
 >
->您對某個架構的mixin或類所做的任何更改都將反映在所有採用它們的其他架構中。
+>對某個方案的欄位組或類所做的任何更改都將反映在所有採用它們的其他方案中。
 
 ## 類型特定欄位屬性{#type-specific-properties}
 
@@ -107,6 +107,6 @@ Adobe Experience Platform用戶介面中的[!DNL Schema Editor]可讓您在自�
 
 ## 後續步驟
 
-本指南提供如何在UI中定義XDM欄位的概觀。 請記住，欄位只能透過使用類別和混合來新增至結構。 若要進一步瞭解如何在UI中管理這些資源，請參閱有關建立和編輯[類別](../resources/classes.md)和[mixins](../resources/mixins.md)的指南。
+本指南提供如何在UI中定義XDM欄位的概觀。 請記住，欄位只能透過使用類別和欄位群組新增至結構。 若要進一步瞭解如何在UI中管理這些資源，請參閱有關建立和編輯[類](../resources/classes.md)和[欄位組](../resources/field-groups.md)的指南。
 
 有關[!UICONTROL Schemas]工作區功能的詳細資訊，請參閱[[!UICONTROL Schemas]工作區概述](../overview.md)。
