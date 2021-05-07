@@ -5,16 +5,16 @@ title: 資料類型API端點
 description: 架構註冊表API中的/datatypes端點可讓您以程式設計方式管理體驗應用程式中的XDM資料類型。
 exl-id: 2a58d641-c681-40cf-acc8-7ad842cd6243
 translation-type: tm+mt
-source-git-commit: 610ce5c6dca5e7375b941e7d6f550382da10ca27
+source-git-commit: 7d7502b238f96eda1a15b622ba10bbccc289b725
 workflow-type: tm+mt
-source-wordcount: '1147'
+source-wordcount: '1151'
 ht-degree: 2%
 
 ---
 
 # 資料類型端點
 
-資料類型與基本常值欄位的使用方式相同，可當成類別或混合的參考類型欄位，其主要差異在於資料類型可定義多個子欄位。 雖然與允許一致使用多欄位結構的混音類似，但資料類型更具彈性，因為它們可以包含在架構結構中的任何位置，而混音只能在根層級新增。 [!DNL Schema Registry] API中的`/datatypes`端點可讓您以程式設計方式管理體驗應用程式中的資料類型。
+資料類型與基本常值欄位使用的方式相同，在類或方案欄位組中用作參考類型欄位，其關鍵區別在於資料類型可以定義多個子欄位。 雖然與允許一致使用多欄位結構的欄位群組類似，但資料類型更有彈性，因為它們可以包含在架構結構中的任何位置，而欄位群組只能新增在根層級。 [!DNL Schema Registry] API中的`/datatypes`端點可讓您以程式設計方式管理體驗應用程式中的資料類型。
 
 ## 快速入門
 
@@ -39,7 +39,7 @@ GET /{CONTAINER_ID}/datatypes?{QUERY_PARAMS}
 | `{CONTAINER_ID}` | 您要從以下位置擷取資料類型的容器：`global`代表Adobe建立的資料類型，或`tenant`代表您組織擁有的資料類型。 |
 | `{QUERY_PARAMS}` | 可選查詢參數，以篩選結果。 有關可用參數的清單，請參見[附錄文檔](./appendix.md#query)。 |
 
-**請求**
+**要求**
 
 下列請求會從`tenant`容器中擷取資料類型清單，使用`orderby`查詢參數，依其`title`屬性來排序資料類型。
 
@@ -109,7 +109,7 @@ GET /{CONTAINER_ID}/datatypes/{DATA_TYPE_ID}
 | `{CONTAINER_ID}` | 儲存您要擷取之資料類型的容器：`global`代表Adobe建立的資料類型，或`tenant`代表您組織擁有的資料類型。 |
 | `{DATA_TYPE_ID}` | 您要查詢的資料類型的`meta:altId`或URL編碼`$id`。 |
 
-**請求**
+**要求**
 
 以下請求通過路徑中提供的`meta:altId`值檢索資料類型。
 
@@ -224,7 +224,7 @@ curl -X GET \
 POST /tenant/datatypes
 ```
 
-**請求**
+**要求**
 
 定義資料類型不需要`meta:extends`或`meta:intendedToExtend`欄位，也不需要巢狀化欄位以避免衝突。
 
@@ -344,7 +344,7 @@ PUT /tenant/datatypes/{DATA_TYPE_ID}
 | --- | --- |
 | `{DATA_TYPE_ID}` | 要重寫的資料類型的`meta:altId`或URL編碼`$id`。 |
 
-**請求**
+**要求**
 
 下列請求會重寫現有的資料類型，並新增一個`floorSize`欄位。
 
@@ -473,7 +473,7 @@ PATCH /tenant/data type/{DATA_TYPE_ID}
 | --- | --- |
 | `{DATA_TYPE_ID}` | 要更新的資料類型的URL編碼`$id` URI或`meta:altId`。 |
 
-**請求**
+**要求**
 
 下面的範例請求會更新現有資料類型的`description`，並新增一個`floorSize`欄位。
 
@@ -610,7 +610,7 @@ DELETE /tenant/datatypes/{DATA_TYPE_ID}
 | --- | --- |
 | `{DATA_TYPE_ID}` | 要刪除的資料類型的URL編碼`$id` URI或`meta:altId`。 |
 
-**請求**
+**要求**
 
 ```shell
 curl -X DELETE \
