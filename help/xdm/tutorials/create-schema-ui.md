@@ -7,9 +7,9 @@ type: Tutorial
 description: 本教學課程涵蓋以 Experience Platform 結構編輯器建立結構的相關步驟。
 exl-id: 3edeb879-3ce4-4adb-a0bd-8d7ad2ec6102
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: ab0798851e5f2b174d9f4241ad64ac8afa20a938
 workflow-type: tm+mt
-source-wordcount: '3532'
+source-wordcount: '3588'
 ht-degree: 0%
 
 ---
@@ -29,7 +29,7 @@ Adobe Experience Platform用戶介面允許您在稱為[!DNL Schema Editor]的�
 本教學課程需要對Adobe Experience Platform在模式建立中涉及的各個方面有深入的瞭解。 在開始本教學課程之前，請先閱讀說明檔案，瞭解下列概念：
 
 * [[!DNL Experience Data Model (XDM)]](../home.md):組織客戶體驗資 [!DNL Platform] 料的標準化架構。
-   * [架構構成基礎](../schema/composition.md):概述XDM結構描述及其構建塊，包括類、混合、資料類型和欄位。
+   * [架構構成基礎](../schema/composition.md):概述XDM架構及其構建塊，包括類別、架構欄位群組、資料類型和個別欄位。
 * [[!DNL Real-time Customer Profile]](../../profile/home.md):根據來自多個來源的匯整資料，提供統一、即時的消費者個人檔案。
 
 ## 開啟[!UICONTROL Schemas]工作區{#browse}
@@ -48,9 +48,9 @@ Adobe Experience Platform用戶介面允許您在稱為[!DNL Schema Editor]的�
 
 ![](../images/tutorials/create-schema/create_schema_button.png)
 
-由於您選擇了標準XDM類作為模式的基礎，因此將出現&#x200B;**[!UICONTROL Add mixin]**&#x200B;對話框，允許您立即開始向模式添加欄位。 目前，請選擇&#x200B;**[!UICONTROL Cancel]**&#x200B;退出對話方塊。
+由於您選擇了標準XDM類作為模式的基礎，因此將出現&#x200B;**[!UICONTROL Add field group]**&#x200B;對話框，允許您立即開始向模式添加欄位。 目前，請選擇&#x200B;**[!UICONTROL Cancel]**&#x200B;退出對話方塊。
 
-![](../images/tutorials/create-schema/cancel-mixin.png)
+![](../images/tutorials/create-schema/cancel-field-group.png)
 
 出現[!DNL Schema Editor]。 這是您將在其中構成架構的畫布。 當您進入編輯器時，未命名的架構會自動在畫布的&#x200B;**[!UICONTROL Structure]**&#x200B;區段中建立，並根據該類別在所有架構中包含的標準欄位。 在&#x200B;**[!UICONTROL Composition]**&#x200B;節的&#x200B;**[!UICONTROL Class]**&#x200B;下還列出了為模式分配的類。
 
@@ -58,7 +58,7 @@ Adobe Experience Platform用戶介面允許您在稱為[!DNL Schema Editor]的�
 
 >[!NOTE]
 >
->在保存模式之前的初始合成過程中，[可以在任意點更改模式](#change-class)的類，但應該非常小心。 Mixins僅與特定類別相容，因此變更類別會重設畫布和您新增的任何欄位。
+>在保存模式之前的初始合成過程中，[可以在任意點更改模式](#change-class)的類，但應該非常小心。 欄位群組僅與特定類別相容，因此變更類別將重設畫布和您新增的任何欄位。
 
 使用編輯器右側的欄位，提供架構的顯示名稱和選用說明。 輸入名稱后，畫布會更新以反映架構的新名稱。
 
@@ -72,35 +72,35 @@ Adobe Experience Platform用戶介面允許您在稱為[!DNL Schema Editor]的�
 
 本教程將構建一個方案，以便接收與忠誠度方案成員相關的資料，因此，該方案名為「忠誠度成員」。
 
-## 新增mixin {#mixin}
+## 新增欄位群組{#field-group}
 
-您現在可以新增mix，開始將欄位新增至您的架構。 混音是一組一個或多個欄位，通常一起用於描述特定概念。 本教學課程使用mixin來描述忠誠度計畫的成員，並擷取關鍵資訊，例如姓名、生日、電話號碼、地址等。
+您現在可以新增欄位群組，開始將欄位新增至您的架構。 欄位群組是一或多個欄位的群組，通常搭配使用以描述特定概念。 本教學課程使用欄位群組來說明忠誠度方案的成員，並擷取關鍵資訊，例如姓名、生日、電話號碼、地址等。
 
-要添加混音，請在&#x200B;**[!UICONTROL Mixins]**&#x200B;子部分中選擇&#x200B;**[!UICONTROL Add]**。
+要添加欄位組，請在&#x200B;**[!UICONTROL Field groups]**&#x200B;子部分中選擇&#x200B;**[!UICONTROL Add]**。
 
-![](../images/tutorials/create-schema/add_mixin_button.png)
+![](../images/tutorials/create-schema/add-field-group-button.png)
 
-隨即出現新對話方塊，顯示可用混音清單。 每個混音僅用於特定類，因此對話框僅列出與所選類（在本例中為[!DNL XDM Individual Profile]類）相容的混音。 如果您使用標準XDM類別，則會根據使用人氣，智慧地排序混合清單。
+隨即出現新對話方塊，顯示可用欄位群組的清單。 每個欄位組僅用於特定類，因此對話框僅列出與所選類（在本例中為[!DNL XDM Individual Profile]類）相容的欄位組。 如果您使用標準XDM類別，則會根據使用人氣，智慧地排序欄位群組清單。
 
-![](../images/tutorials/create-schema/mixin-popularity.png)
+![](../images/tutorials/create-schema/field-group-popularity.png)
 
-從清單中選取混音，會使混音出現在右側邊欄中。 您可以視需要選取多個混音，在確認前先將每個混音新增至右側邊欄的清單。 此外，目前選取混音的右側會出現一個圖示，可讓您預覽其提供的欄位結構。
+從清單中選取欄位群組，會使欄位群組出現在右側邊欄中。 您可以視需要選取多個欄位群組，在確認前先將每個欄位群組新增至右側欄位的清單。 此外，目前選取欄位群組的右側會出現一個圖示，可讓您預覽欄位的結構。
 
-![](../images/tutorials/create-schema/preview-mixin-button.png)
+![](../images/tutorials/create-schema/preview-field-group-button.png)
 
-在預覽混音時，在右側導軌中提供混音的結構的詳細描述。 您也可以瀏覽所提供畫布中的mixin欄位。 當您選取不同欄位時，右側欄位會更新，以顯示相關欄位的詳細資訊。 完成預覽後，選擇&#x200B;**[!UICONTROL Back]**&#x200B;以返回混合選擇對話框。
+在預覽欄位群組時，右側邊欄會提供欄位群組架構的詳細說明。 您也可以瀏覽所提供畫布中欄位群組的欄位。 當您選取不同欄位時，右側欄位會更新，以顯示相關欄位的詳細資訊。 完成預覽時選擇&#x200B;**[!UICONTROL Back]**&#x200B;以返回欄位組選擇對話框。
 
-![](../images/tutorials/create-schema/preview-mixin.png)
+![](../images/tutorials/create-schema/preview-field-group.png)
 
-在本教學課程中，選擇&#x200B;**[!UICONTROL Demographic Details]** mixin，然後選擇&#x200B;**[!UICONTROL Add mixin]**。
+在本教程中，選擇&#x200B;**[!UICONTROL Demographic Details]**&#x200B;欄位組，然後選擇&#x200B;**[!UICONTROL Add field group]**。
 
-![](../images/tutorials/create-schema/add_mixin_person_details.png)
+![](../images/tutorials/create-schema/demographic-details.png)
 
-結構畫布會重新出現。 **[!UICONTROL Mixins]**&#x200B;區段現在會列出&quot;[!UICONTROL Demographic Details]&quot;，而&#x200B;**[!UICONTROL Structure]**&#x200B;區段則包含mixin所貢獻的欄位。 您可以在&#x200B;**[!UICONTROL Mixins]**&#x200B;區段下選取mixin的名稱，以反白顯示它在畫布中提供的特定欄位。
+結構畫布會重新出現。 **[!UICONTROL Field groups]**&#x200B;區段現在會列出&quot;[!UICONTROL Demographic Details]&quot;，而&#x200B;**[!UICONTROL Structure]**&#x200B;區段則包含欄位群組貢獻的欄位。 您可以在&#x200B;**[!UICONTROL Field groups]**&#x200B;區段下選取欄位群組的名稱，以反白顯示它在畫布中提供的特定欄位。
 
-![](../images/tutorials/create-schema/person_details_structure.png)
+![](../images/tutorials/create-schema/demographic-details-structure.png)
 
-此混音在頂層名稱`person`下包含數個欄位，資料類型為&quot;[!UICONTROL Person]&quot;。 此欄位群組說明個人的相關資訊，包括姓名、出生日期和性別。
+此欄位組在頂級名稱`person`下提供數個欄位，資料類型為&quot;[!UICONTROL Person]&quot;。 此欄位群組說明個人的相關資訊，包括姓名、出生日期和性別。
 
 >[!NOTE]
 >
@@ -110,49 +110,49 @@ Adobe Experience Platform用戶介面允許您在稱為[!DNL Schema Editor]的�
 
 選擇畫布中的不同欄位，以顯示它們對架構結構所貢獻的其他欄位。
 
-## 添加另一個混音{#mixin-2}
+## 添加另一個欄位組{#field-group-2}
 
-您現在可以重複相同的步驟來新增另一個混音。 此時，當您檢視&#x200B;**[!UICONTROL Add mixin]**&#x200B;對話方塊時，請注意&quot;[!UICONTROL Demographic Details]&quot;混音已變灰，且旁邊的核取方塊無法選取。 這可防止意外複製您已包含在目前架構中的混音。
+您現在可以重複相同的步驟來新增另一個欄位群組。 此時，當您檢視&#x200B;**[!UICONTROL Add field group]**&#x200B;對話方塊時，請注意「[!UICONTROL Demographic Details]」欄位群組已變灰，且旁邊的核取方塊無法選取。 這可避免意外複製您已包含在目前架構中的欄位群組。
 
-在本教程中，從對話框中選擇&quot;[!DNL Personal Contact Details]&quot; mixin，然後選擇&#x200B;**[!UICONTROL Add mixin]**&#x200B;將其添加到模式。
+在本教程中，從對話框中選擇「[!DNL Personal Contact Details]」欄位組，然後選擇&#x200B;**[!UICONTROL Add field group]**&#x200B;將其添加到模式。
 
-![](../images/tutorials/create-schema/add_mixin_personal_details.png)
+![](../images/tutorials/create-schema/personal-contact-details.png)
 
-新增後，畫布會重新顯示。 &quot;[!UICONTROL Personal Contact Details]&quot;現在會列在&#x200B;**[!UICONTROL Composition]**&#x200B;區段的&#x200B;**[!UICONTROL Mixins]**&#x200B;下，而&#x200B;**[!UICONTROL Structure]**&#x200B;則會新增家庭位址、行動電話等欄位。
+新增後，畫布會重新顯示。 &quot;[!UICONTROL Personal Contact Details]&quot;現在會列在&#x200B;**[!UICONTROL Composition]**&#x200B;區段的&#x200B;**[!UICONTROL Field groups]**&#x200B;下，而&#x200B;**[!UICONTROL Structure]**&#x200B;則會新增家庭位址、行動電話等欄位。
 
 與`name`欄位類似，您剛新增的欄位代表多欄位概念。 例如，`homeAddress`的資料類型為&quot;[!UICONTROL Postal address]&quot;，而`mobilePhone`的資料類型為&quot;[!UICONTROL Phone number]&quot;。 您可以選取每個欄位以展開這些欄位，並查看資料類型中包含的其他欄位。
 
-![](../images/tutorials/create-schema/personal_details_structure.png)
+![](../images/tutorials/create-schema/personal-contact-details-structure.png)
 
-## 定義{#define-mixin}的自訂混音
+## 定義自訂欄位群組{#define-field-group}
 
 「[!UICONTROL Loyalty Members]」架構旨在擷取與忠誠度方案成員相關的資料，因此它需要某些特定的忠誠度相關欄位。
 
-您可以新增標準[!UICONTROL Loyalty Details]混音至結構，以擷取與忠誠度方案相關的常用欄位。 雖然我們強烈建議您使用標準混合來表示結構所擷取的概念，但標準忠誠度混合的結構可能無法擷取特定忠誠度計畫的所有相關資料。 在此案例中，您可以選擇定義新的自訂混音，以擷取這些欄位。
+您可以將標準[!UICONTROL Loyalty Details]欄位群組新增至結構，以擷取與忠誠度方案相關的常用欄位。 雖然強烈建議您使用標準欄位群組來表示方案所擷取的概念，但標準忠誠度欄位群組的結構可能無法擷取特定忠誠度方案的所有相關資料。 在此案例中，您可以選擇定義新的自訂欄位群組，以擷取這些欄位。
 
-再次開啟&#x200B;**[!UICONTROL Add Mixin]**&#x200B;對話框，但此次在頂部附近選擇&#x200B;**[!UICONTROL Create New Mixin]**。 然後系統會要求您提供混合音效的顯示名稱和說明。
+再次開啟&#x200B;**[!UICONTROL Add Field group]**&#x200B;對話框，但此次在頂部附近選擇&#x200B;**[!UICONTROL Create New Field group]**。 然後系統會要求您提供欄位群組的顯示名稱和說明。
 
-![](../images/tutorials/create-schema/mixin_create_new.png)
+![](../images/tutorials/create-schema/create-new-field-group.png)
 
-和類名一樣，混音名應簡短，說明混音對架構的貢獻。 這些名稱也是唯一的，因此您將無法重複使用名稱，因此必須確保它足夠具體。
+與類名一樣，欄位組名應簡短，說明欄位組將對架構的貢獻。 這些名稱也是唯一的，因此您將無法重複使用名稱，因此必須確保它足夠具體。
 
-在本教學課程中，請將新混音命名為「忠誠度詳細資訊」。
+在本教學課程中，將新欄位群組命名為「忠誠度詳細資料」。
 
-選擇&#x200B;**[!UICONTROL Add mixin]**&#x200B;返回[!DNL Schema Editor]。 &quot;[!UICONTROL Loyalty Details]&quot;現在應顯示在畫布左側的&#x200B;**[!UICONTROL Mixins]**&#x200B;下方，但目前尚無相關欄位，因此&#x200B;**[!UICONTROL Structure]**&#x200B;下方不會顯示新欄位。
+選擇&#x200B;**[!UICONTROL Add field group]**&#x200B;返回[!DNL Schema Editor]。 &quot;[!UICONTROL Loyalty Details]&quot;現在應顯示在畫布左側的&#x200B;**[!UICONTROL Field groups]**&#x200B;下方，但目前尚無相關欄位，因此&#x200B;**[!UICONTROL Structure]**&#x200B;下方不會顯示新欄位。
 
-## 新增欄位至mixin {#mixin-fields}
+## 將欄位添加到欄位組{#field-group-fields}
 
-現在您已建立「忠誠度詳細資料」混音，是時候定義混音將對結構貢獻的欄位了。
+現在您已建立「忠誠度詳細資料」欄位群組，是時候定義欄位群組將貢獻至結構的欄位了。
 
-若要開始，請在&#x200B;**[!UICONTROL Mixins]**&#x200B;區段中選取混音名稱。 執行此操作後，mixin的屬性會顯示在編輯器的右側，並且&#x200B;**[!UICONTROL Structure]**&#x200B;下方架構名稱旁會出現&#x200B;**加號(+)**&#x200B;圖示。
+若要開始，請在&#x200B;**[!UICONTROL Field groups]**&#x200B;區段中選取欄位群組名稱。 執行此操作後，欄位組的屬性將顯示在編輯器的右側，並且&#x200B;**[!UICONTROL Structure]**&#x200B;下方架構名稱旁會出現&#x200B;**加號(+)**&#x200B;表徵圖。
 
 ![](../images/tutorials/create-schema/loyalty_details_structure.png)
 
 選擇&quot;[!DNL Loyalty Members]&quot;旁邊的&#x200B;**加號(+)**&#x200B;表徵圖，在結構中建立新節點。 此節點（在此範例中稱為`_tenantId`）代表您的IMS組織的租用戶ID，前面有底線。 租用戶ID的存在表示您新增的欄位包含在您組織的命名空間中。
 
-換言之，您新增的欄位對您的組織而言是獨一無二的，而且會儲存在[!DNL Schema Registry]中，位於只有您的組織才能存取的特定區域。 您定義的欄位必須一律新增至您的租用戶名稱空間，以避免與其他標準類別、混合、資料類型和欄位的名稱產生衝突。
+換言之，您新增的欄位對您的組織而言是獨一無二的，而且會儲存在[!DNL Schema Registry]中，位於只有您的組織才能存取的特定區域。 您定義的欄位必須一律新增至您的租用戶名稱空間，以避免與其他標準類別、欄位群組、資料類型和欄位的名稱產生衝突。
 
-該命名空間節點內部是&quot;[!UICONTROL New Field]&quot;。 這是&quot;[!UICONTROL Loyalty Details]&quot;混音的開頭。
+該命名空間節點內部是&quot;[!UICONTROL New Field]&quot;。 這是&quot;[!UICONTROL Loyalty Details]&quot;欄位組的開頭。
 
 ![](../images/tutorials/create-schema/new_field_loyalty.png)
 
@@ -179,7 +179,7 @@ Adobe Experience Platform用戶介面允許您在稱為[!DNL Schema Editor]的�
 
 ![](../images/tutorials/create-schema/loyaltyId_field.png)
 
-## 將更多欄位新增至mixin {#mixin-fields-2}
+## 新增更多欄位至欄位群組{#field-group-fields-2}
 
 現在您已新增`loyaltyId`欄位，您可以新增其他欄位來擷取與忠誠度相關的資訊，例如：
 
@@ -192,7 +192,7 @@ Adobe Experience Platform用戶介面允許您在稱為[!DNL Schema Editor]的�
 
 ![](../images/tutorials/create-schema/loyalty_object_fields.png)
 
-## 將列舉欄位新增至mixin {#enum}
+## 新增列舉欄位至欄位群組{#enum}
 
 在[!DNL Schema Editor]中定義欄位時，有一些附加選項可以應用於基本欄位類型，以便對欄位可包含的資料提供進一步的約束。 下表說明了這些約束的使用案例：
 
@@ -226,7 +226,7 @@ Adobe Experience Platform用戶介面允許您在稱為[!DNL Schema Editor]的�
 
 `loyalty`物件現在包含數個特定於忠誠度的欄位，並代表通用的資料結構，可用於其他結構。 [!DNL Schema Editor]可讓您將這些物件的結構轉換為資料類型，以輕鬆套用可重複使用的多欄位物件。
 
-資料類型允許一致地使用多欄位結構，並提供比混音更大的靈活性，因為它們可以在架構中的任意位置使用。 這是通過將欄位的&#x200B;**[!UICONTROL Type]**&#x200B;值設定為[!DNL Schema Registry]中定義的任何資料類型的值來完成的。
+資料類型允許一致地使用多欄位結構，並提供比欄位組更大的靈活性，因為它們可以在架構中的任意位置使用。 這是通過將欄位的&#x200B;**[!UICONTROL Type]**&#x200B;值設定為[!DNL Schema Registry]中定義的任何資料類型的值來完成的。
 
 要將`loyalty`對象轉換為資料類型，請選擇&#x200B;**[!UICONTROL Structure]**&#x200B;下的`loyalty`欄位，然後選擇&#x200B;**[!UICONTROL Field properties]**&#x200B;下編輯器右側的&#x200B;**[!UICONTROL Convert to new data type]**。 出現綠色快顯，確認物件已成功轉換。
 
@@ -244,19 +244,19 @@ Adobe Experience Platform用戶介面允許您在稱為[!DNL Schema Editor]的�
 
 ## 搜尋和篩選結構欄位
 
-您的架構現在除了其基本類別提供的欄位外，還包含數個混音。 使用較大的結構時，您可以選擇左側導軌中混音名稱旁的核取方塊，將顯示的欄位篩選為您感興趣的混音所提供的欄位。
+您的架構現在除了基本類別提供的欄位外，還包含數個欄位群組。 使用較大的方案時，您可以選擇左側欄中欄位群組名稱旁的核取方塊，將顯示的欄位篩選為您感興趣的欄位群組所提供的欄位。
 
-![](../images/tutorials/create-schema/filter-by-mixin.png)
+![](../images/tutorials/create-schema/filter-by-field-group.png)
 
-如果您在架構中尋找特定欄位，也可以使用搜尋列來依名稱篩選顯示的欄位，而不論其下提供何種混音。
+如果您在架構中尋找特定欄位，也可以使用搜尋列來依名稱篩選顯示的欄位，不論欄位是在哪個欄位群組下提供。
 
 ![](../images/tutorials/create-schema/search.png)
 
 >[!IMPORTANT]
 >
->當顯示相符欄位時，搜尋函式會將任何選取的混合篩選納入考量。 如果搜尋查詢未顯示您預期的結果，您可能需要再次檢查您是否未篩選出任何相關混音。
+>搜尋函式在顯示相符欄位時會考慮任何選取的欄位群組篩選。 如果搜尋查詢未顯示您預期的結果，您可能需要再次檢查您是否未篩選任何相關欄位群組。
 
-## 將模式欄位設定為標識欄位{#identity-field}
+## 將架構欄位設定為標識欄位{#identity-field}
 
 架構所提供的標準資料結構可用於跨多個來源識別屬於同一個人的資料，允許各種下游使用案例，例如分段、報告、資料科學分析等。 為了根據個別身分來接合資料，索引鍵欄位必須標示為適用結構圖中的[!UICONTROL Identity]欄位。
 
@@ -334,7 +334,7 @@ Adobe Experience Platform用戶介面允許您在稱為[!DNL Schema Editor]的�
 
 >[!VIDEO](https://video.tv.adobe.com/v/27012?quality=12&learn=on)
 
-以下影片旨在強化您對使用混合與類別的瞭解。
+以下影片旨在加強您對使用欄位群組和課程的瞭解。
 
 >[!VIDEO](https://video.tv.adobe.com/v/27013?quality=12&learn=on)
 
@@ -352,6 +352,6 @@ Adobe Experience Platform用戶介面允許您在稱為[!DNL Schema Editor]的�
 
 >[!WARNING]
 >
->重新指派架構的類別時應格外小心。 Mixins僅與特定類別相容，因此變更類別會重設畫布和您新增的任何欄位。
+>重新指派架構的類別時應格外小心。 欄位群組僅與特定類別相容，因此變更類別將重設畫布和您新增的任何欄位。
 
 要瞭解如何更改架構類別，請參閱UI](../ui/resources/schemas.md)中[管理架構的指南。
