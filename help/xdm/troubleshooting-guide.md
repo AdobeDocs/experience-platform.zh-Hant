@@ -6,9 +6,9 @@ description: 本檔案提供有關Adobe Experience PlatformExperience Data Model
 topic-legacy: troubleshooting
 exl-id: a0c7c661-bee8-4f66-ad5c-f669c52c9de3
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 3985ba8f46a62e8d9ea8b1f084198b245318a24f
 workflow-type: tm+mt
-source-wordcount: '1869'
+source-wordcount: '1888'
 ht-degree: 0%
 
 ---
@@ -25,19 +25,19 @@ ht-degree: 0%
 
 ### 如何將欄位新增至架構？
 
-您可以使用mixin，將欄位添加到架構中。 每個混音都與一個或多個類相容，允許混音用於實現這些相容類之一的任何模式。 雖然Adobe Experience Platform提供數種業界混音及其預先定義的欄位，但您可以使用API或使用者介面建立新混音，將您自己的欄位新增至架構。
+可以使用架構欄位組將欄位添加到架構中。 每個欄位組都與一個或多個類相容，允許在實現其中一個相容類的任何方案中使用欄位組。 雖然Adobe Experience Platform提供數個產業欄位群組，其中包含其預先定義的欄位，但您可以使用API或使用者介面建立新欄位群組，將自己的欄位新增至架構。
 
-有關在[!DNL Schema Registry] API中建立新混音的詳細資訊，請參閱[mixin端點指南](api/mixins.md#create)。 如果您使用UI，請參閱[架構編輯器教程](./tutorials/create-schema-ui.md)。
+有關在[!DNL Schema Registry] API中建立新欄位組的詳細資訊，請參閱[欄位組端點指南](api/field-groups.md#create)。 如果您使用UI，請參閱[架構編輯器教程](./tutorials/create-schema-ui.md)。
 
-### 混音與資料類型的最佳用途為何？
+### 欄位群組與資料類型的最佳用途為何？
 
-[Mixinsare](./schema/composition.md#mixin) 是定義架構中一個或多個欄位的元件。Mixins可強制其欄位在架構階層中的顯示方式，因此在每個架構中都會顯示與其所包含的相同結構。 Mixins僅與特定類相容，由其`meta:intendedToExtend`屬性所識別。
+[欄位](./schema/composition.md#field-group) 組是定義方案中一個或多個欄位的元件。欄位群組強制其欄位在架構階層中的顯示方式，因此在每個架構中都會顯示與其所包含的相同結構。 欄位組僅與特定類相容，由其`meta:intendedToExtend`屬性標識。
 
-[資料](./schema/composition.md#data-type) 類型還可以為模式提供一個或多個欄位。但是，與mixin不同，資料類型不限於特定類別。 這使得資料類型成為更有彈性的選項，以說明可在具有潛在不同類別的多個結構中重複使用的常用資料結構。
+[資料](./schema/composition.md#data-type) 類型還可以為模式提供一個或多個欄位。但是，與欄位組不同，資料類型不限於特定類。 這使得資料類型成為更有彈性的選項，以說明可在具有潛在不同類別的多個結構中重複使用的常用資料結構。
 
 ### 架構的唯一ID是什麼？
 
-所有[!DNL Schema Registry]資源（結構、混合、資料類型、類別）都有URI，可當成參考和查閱用途的唯一ID。 在API中查看架構時，可在頂級`$id`和`meta:altId`屬性中找到。
+所有[!DNL Schema Registry]資源（結構、欄位群組、資料類型、類別）都有URI，可當成參考和查閱用途的唯一ID。 在API中查看架構時，可在頂級`$id`和`meta:altId`屬性中找到。
 
 如需詳細資訊，請參閱[!DNL Schema Registry] API開發人員指南中的[資源識別](api/getting-started.md#resource-identification)一節。
 
@@ -135,7 +135,7 @@ ht-degree: 0%
 }
 ```
 
-當您嘗試使用另一個資源已使用的標題建立資源時，將顯示此錯誤消息。 標題在所有資源類型中必須是唯一的。 例如，如果您嘗試建立包含已由架構使用之標題的混音，您會收到此錯誤。
+當您嘗試使用另一個資源已使用的標題建立資源時，將顯示此錯誤消息。 標題在所有資源類型中必須是唯一的。 例如，如果您嘗試建立標題已由架構使用的欄位群組，您會收到此錯誤。
 
 ### 自訂欄位必須使用頂層欄位
 
@@ -149,7 +149,7 @@ ht-degree: 0%
 }
 ```
 
-當您嘗試建立新混音時，會顯示此錯誤訊息，其中的欄位名稱不正確。 由IMS組織定義的Mixin必須使用`TENANT_ID`命名其欄位，以避免與其他產業和廠商資源產生衝突。 在[mixins端點指南](./api/mixins.md#create)中可找到混合的適當資料結構的詳細示例。
+當您嘗試建立新的欄位群組時，會顯示此錯誤訊息。 您的IMS組織所定義的欄位群組必須使用`TENANT_ID`命名其欄位，以避免與其他產業和廠商資源產生衝突。 有關欄位組的正確資料結構的詳細示例，請參見[欄位組端點指南](./api/field-groups.md#create)。
 
 
 ### [!DNL Real-time Customer Profile] 錯誤
