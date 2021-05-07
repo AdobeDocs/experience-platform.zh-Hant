@@ -6,9 +6,9 @@ topic-legacy: overview
 description: 本文檔概述了「瀏覽器詳細資訊」XDM資料類型。
 exl-id: c67ff8bc-0614-4422-9bb7-689b98d7086d
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
 workflow-type: tm+mt
-source-wordcount: '258'
+source-wordcount: '259'
 ht-degree: 6%
 
 ---
@@ -36,7 +36,7 @@ ht-degree: 6%
 | `viewportHeight` | 整數 | 事件顯示於視窗內的垂直大小（像素）。 對於Web檢視事件，此為瀏覽器檢視區高度。 |
 | `viewportWidth` | 整數 | 事件顯示於其中之視窗的水準大小（像素）。 對於Web檢視事件，此為瀏覽器檢視埠寬度。 |
 
-有關混音的詳細資訊，請參閱公用XDM存放庫：
+有關資料類型的詳細資訊，請參閱公共XDM儲存庫：
 
 * [填入的範例](https://github.com/adobe/xdm/blob/master/components/datatypes/browserdetails.example.1.json)
 * [完整架構](https://github.com/adobe/xdm/blob/master/components/datatypes/browserdetails.schema.json)
