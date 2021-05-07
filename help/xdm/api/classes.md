@@ -6,16 +6,16 @@ description: 方案註冊表API中的/classes端點允許您以寫程式方式�
 topic-legacy: developer guide
 exl-id: 7beddb37-0bf2-4893-baaf-5b292830f368
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 3985ba8f46a62e8d9ea8b1f084198b245318a24f
 workflow-type: tm+mt
-source-wordcount: '1495'
+source-wordcount: '1505'
 ht-degree: 1%
 
 ---
 
 # 類端點
 
-所有體驗資料模型(XDM)結構必須以類別為基礎。 類確定基於該類的所有方案必須包含的公共屬性的基本結構，以及哪些混合適用於這些方案。 此外，架構的類確定了架構將包含的資料的行為方面，其中有兩種類型：
+所有體驗資料模型(XDM)結構必須以類別為基礎。 類確定基於該類的所有方案必須包含的公共屬性的基本結構，以及哪些方案欄位組有資格在這些方案中使用。 此外，架構的類確定了架構將包含的資料的行為方面，其中有兩種類型：
 
 * **[!UICONTROL Record]**:提供主題屬性的相關資訊。主題可以是組織或個人。
 * **[!UICONTROL Time-series]**:提供記錄主體直接或間接採取操作時系統的快照。
@@ -246,7 +246,7 @@ curl -X GET \
 
 >[!IMPORTANT]
 >
->根據您定義的自訂類合成架構時，將無法使用標準混音。 每個mixin都定義了它們在其`meta:intendedToExtend`屬性中相容的類。 一旦開始定義與新類相容的混音（通過使用混音的`meta:intendedToExtend`欄位中新類的`$id`），您就可以在每次定義實現所定義類的方案時重複使用這些混音。 如需詳細資訊，請參閱[建立混合](./mixins.md#create)和[建立結構](./schemas.md#create)各自端點指南中的章節。
+>根據您定義的自定義類合成方案時，將無法使用標準欄位組。 每個欄位組都定義了與其`meta:intendedToExtend`屬性相容的類。 一旦開始定義與新類相容的欄位組（通過使用欄位組`meta:intendedToExtend`欄位中新類的`$id`），您就可以在每次定義實現定義的類的方案時重新使用這些欄位組。 有關詳細資訊，請參閱[建立欄位組](./field-groups.md#create)和[建立方案](./schemas.md#create)各自端點指南中的章節。
 >
 >如果您打算在即時客戶配置檔案中使用基於自定義類的方案，請務必記住，聯合方案僅基於共用同一類的方案構建。 如果要在聯合中為[!UICONTROL XDM Individual Profile]或[!UICONTROL XDM ExperienceEvent]等其他類包含自定義類模式，則必須與使用該類的其他模式建立關係。 如需詳細資訊，請參閱API](../tutorials/relationship-api.md)中關於建立兩個架構之間關係的[教學課程。
 
@@ -260,7 +260,7 @@ POST /tenant/classes
 
 建立(POST)類的請求必須包含`allOf`屬性，該屬性包含`$ref`到以下兩個值之一：`https://ns.adobe.com/xdm/data/record`或`https://ns.adobe.com/xdm/data/time-series`。 這些值代表類別所依據的行為（分別是記錄或時間序列）。 有關記錄資料和時間序列資料之間差異的詳細資訊，請參閱[架構構成基礎](../schema/composition.md)中有關行為類型的部分。
 
-在定義類時，您也可以在類定義中包含混合或自訂欄位。 這會導致新增的混音和欄位包含在實施類別的所有結構中。 下列範例請求定義名為&quot;Property&quot;的類別，可擷取公司擁有和經營之不同屬性的相關資訊。 它包含`propertyId`欄位，每次使用類別時都會包含此欄位。
+定義類時，您也可以在類定義中包括欄位組或自定義欄位。 這會導致新增的欄位群組和欄位包含在實施類別的所有結構中。 下列範例請求定義名為&quot;Property&quot;的類別，可擷取公司擁有和經營之不同屬性的相關資訊。 它包含`propertyId`欄位，每次使用類別時都會包含此欄位。
 
 ```SHELL
 curl -X POST \
@@ -623,7 +623,7 @@ curl -X PATCH \
 
 ## 刪除{#delete}類
 
-有時可能需要從架構註冊表中刪除類。 這是透過使用路徑中提供的類別ID來執行DELETE要求來完成的。
+有時可能需要從架構註冊表中刪除類。 這是透過使用路徑中提供的類別ID執行DELETE要求來完成的。
 
 **API格式**
 
