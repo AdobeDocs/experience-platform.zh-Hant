@@ -7,9 +7,9 @@ topic-legacy: tutorial
 type: Tutorial
 exl-id: ef9910b5-2777-4d8b-a6fe-aee51d809ad5
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
 workflow-type: tm+mt
-source-wordcount: '1337'
+source-wordcount: '1354'
 ht-degree: 1%
 
 ---
@@ -111,35 +111,35 @@ curl -X GET \
 
 ## 為源方案定義參考欄位
 
-在[!DNL Schema Registry]中，關係描述符的工作方式與關係資料庫表中的外鍵類似：源模式中的欄位用作對目標模式的主標識欄位的引用。 如果源架構沒有用於此目的的欄位，則可能需要使用新欄位建立混合併將其添加到架構中。 此新欄位必須具有`type`值&quot;[!DNL string]&quot;。
+在[!DNL Schema Registry]中，關係描述符的工作方式與關係資料庫表中的外鍵類似：源模式中的欄位用作對目標模式的主標識欄位的引用。 如果源模式沒有用於此目的的欄位，則可能需要使用新欄位建立模式欄位組並將其添加到模式。 此新欄位必須具有`type`值&quot;[!DNL string]&quot;。
 
 >[!IMPORTANT]
 >
 >與目標模式不同，源模式不能將其主標識用作參考欄位。
 
-在本教程中，目標方案&quot;[!DNL Hotels]&quot;包含一個`hotelId`欄位，該欄位用作方案的主要標識，因此也將用作其引用欄位。 但是，源模式&quot;[!DNL Loyalty Members]&quot;沒有專用欄位作為引用，必須給它一個新混音，為模式添加一個新欄位：`favoriteHotel`。
+在本教程中，目標方案&quot;[!DNL Hotels]&quot;包含一個`hotelId`欄位，該欄位用作方案的主要標識，因此也將用作其引用欄位。 但是，源模式&quot;[!DNL Loyalty Members]&quot;沒有專用欄位可用作參考，並且必須給出新欄位組，以向模式添加新欄位：`favoriteHotel`。
 
 >[!NOTE]
 >
 >如果源方案已有您打算用作參考欄位的專用欄位，則可跳至[建立參考描述符](#reference-identity)的步驟。
 
-### 建立新的混音
+### 建立新欄位群組
 
-為了將新欄位添加到方案，必須首先在混合中定義該欄位。 您可以向`/tenant/mixins`端點發出POST請求，以建立新混音。
+要向方案添加新欄位，必須首先在欄位組中定義該欄位。 您可以通過向`/tenant/fieldgroups`端點發出POST請求來建立新欄位組。
 
 **API格式**
 
 ```http
-POST /tenant/mixins
+POST /tenant/fieldgroups
 ```
 
 **要求**
 
-以下請求會建立新的混音，在其所新增至之任何架構的`_{TENANT_ID}`名稱空間下新增`favoriteHotel`欄位。
+以下請求將建立一個新欄位組，在`_{TENANT_ID}`名稱空間下添加`favoriteHotel`欄位，該名稱空間是所添加到的任何方案。
 
 ```shell
 curl -X POST\
-  https://platform.adobe.io/data/foundation/schemaregistry/tenant/mixins \
+  https://platform.adobe.io/data/foundation/schemaregistry/tenant/fieldgroups \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
@@ -149,7 +149,7 @@ curl -X POST\
         "type": "object",
         "title": "Favorite Hotel",
         "meta:intendedToExtend": ["https://ns.adobe.com/xdm/context/profile"],
-        "description": "Favorite hotel mixin for the Loyalty Members schema.",
+        "description": "Favorite hotel field group for the Loyalty Members schema.",
         "definitions": {
             "favoriteHotel": {
               "properties": {
@@ -176,20 +176,20 @@ curl -X POST\
 
 **回應**
 
-成功的回應會傳回新建立混合的詳細資料。
+成功的回應會傳回新建立欄位群組的詳細資料。
 
 ```json
 {
-    "$id": "https://ns.adobe.com/{TENANT_ID}/mixins/3387945212ad76ee59b6d2b964afb220",
-    "meta:altId": "_{TENANT_ID}.mixins.3387945212ad76ee59b6d2b964afb220",
-    "meta:resourceType": "mixins",
+    "$id": "https://ns.adobe.com/{TENANT_ID}/fieldgroups/3387945212ad76ee59b6d2b964afb220",
+    "meta:altId": "_{TENANT_ID}.fieldgroups.3387945212ad76ee59b6d2b964afb220",
+    "meta:resourceType": "fieldgroups",
     "version": "1.0",
     "type": "object",
     "title": "Favorite Hotel",
     "meta:intendedToExtend": [
         "https://ns.adobe.com/xdm/context/profile"
     ],
-    "description": "Favorite hotel mixin for the Loyalty Members schema.",
+    "description": "Favorite hotel field group for the Loyalty Members schema.",
     "definitions": {
         "favoriteHotel": {
             "properties": {
@@ -229,13 +229,13 @@ curl -X POST\
 
 | 屬性 | 說明 |
 | --- | --- |
-| `$id` | 唯讀系統生成新混音的唯一標識符。 以URI的形式。 |
+| `$id` | 唯讀系統生成新欄位組的唯一標識符。 以URI的形式。 |
 
-記錄mixin的`$id` URI，以便在將mixin添加到源模式的下一步中使用。
+記錄欄位組的`$id` URI，以便用於將欄位組添加到源模式的下一步。
 
-### 將混音添加到源模式
+### 將欄位組添加到源方案
 
-建立混音後，可以通過向`/tenant/schemas/{SCHEMA_ID}`端點發出PATCH請求將其添加到源模式。
+建立欄位組後，可通過向`/tenant/schemas/{SCHEMA_ID}`端點發出PATCH請求將其添加到源模式。
 
 **API格式**
 
@@ -249,7 +249,7 @@ PATCH /tenant/schemas/{SCHEMA_ID}
 
 **要求**
 
-以下請求將&quot;[!DNL Favorite Hotel]&quot; mixin添加到&quot;[!DNL Loyalty Members]&quot;模式。
+以下請求將&quot;[!DNL Favorite Hotel]&quot;欄位組添加到&quot;[!DNL Loyalty Members]&quot;模式。
 
 ```shell
 curl -X PATCH \
@@ -264,7 +264,7 @@ curl -X PATCH \
       "op": "add", 
       "path": "/allOf/-", 
       "value":  {
-        "$ref": "https://ns.adobe.com/{TENANT_ID}/mixins/3387945212ad76ee59b6d2b964afb220"
+        "$ref": "https://ns.adobe.com/{TENANT_ID}/fieldgroups/3387945212ad76ee59b6d2b964afb220"
       }
     }
   ]'
@@ -273,12 +273,12 @@ curl -X PATCH \
 | 屬性 | 說明 |
 | --- | --- |
 | `op` | 要執行的PATCH操作。 此請求使用`add`操作。 |
-| `path` | 將添加新資源的模式欄位的路徑。 將混合新增至結構描述時，值必須是&quot;/allOf/-&quot;。 |
-| `value.$ref` | 要添加的混音的`$id`。 |
+| `path` | 將添加新資源的模式欄位的路徑。 將欄位組添加到方案時，值必須是&quot;/allOf/-&quot;。 |
+| `value.$ref` | 要添加的欄位組的`$id`。 |
 
 **回應**
 
-成功的響應返回更新模式的詳細資訊，該模式現在在其`allOf`陣列下包含添加的混頻的`$ref`值。
+成功的響應返回更新模式的詳細資訊，該模式現在在其`allOf`陣列下包含添加欄位組的`$ref`值。
 
 ```json
 {
@@ -300,13 +300,13 @@ curl -X PATCH \
             "$ref": "https://ns.adobe.com/xdm/context/profile-personal-details"
         },
         {
-            "$ref": "https://ns.adobe.com/{TENANT_ID}/mixins/ec16dfa484358f80478b75cde8c430d3"
+            "$ref": "https://ns.adobe.com/{TENANT_ID}/fieldgroups/ec16dfa484358f80478b75cde8c430d3"
         },
         {
             "$ref": "https://ns.adobe.com/xdm/context/identitymap"
         },
         {
-            "$ref": "https://ns.adobe.com/{TENANT_ID}/mixins/3387945212ad76ee59b6d2b964afb220"
+            "$ref": "https://ns.adobe.com/{TENANT_ID}/fieldgroups/3387945212ad76ee59b6d2b964afb220"
         }
     ],
     "meta:containerId": "tenant",
@@ -323,8 +323,8 @@ curl -X PATCH \
         "https://ns.adobe.com/xdm/common/auditable",
         "https://ns.adobe.com/xdm/context/profile-person-details",
         "https://ns.adobe.com/xdm/context/profile-personal-details",
-        "https://ns.adobe.com/{TENANT_ID}/mixins/ec16dfa484358f80478b75cde8c430d3",
-        "https://ns.adobe.com/{TENANT_ID}/mixins/61969bc646b66a6230a7e8840f4a4d33"
+        "https://ns.adobe.com/{TENANT_ID}/fieldgroups/ec16dfa484358f80478b75cde8c430d3",
+        "https://ns.adobe.com/{TENANT_ID}/fieldgroups/61969bc646b66a6230a7e8840f4a4d33"
     ],
     "meta:xdmType": "object",
     "meta:registryMetadata": {
