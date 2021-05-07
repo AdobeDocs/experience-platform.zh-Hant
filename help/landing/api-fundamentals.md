@@ -6,9 +6,9 @@ topic-legacy: getting started
 description: 本文檔簡要概述了與Experience PlatformAPI相關的一些基礎技術和語法。
 exl-id: cd69ba48-f78c-4da5-80d1-efab5f508756
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
 workflow-type: tm+mt
-source-wordcount: '511'
+source-wordcount: '516'
 ht-degree: 1%
 
 ---
@@ -23,7 +23,7 @@ JSON指標是用於識別JSON檔案內特定值的標準字串語法([RFC 6901](
 
 ### 範例JSON結構描述物件
 
-下列JSON代表簡化的XDM結構描述，其欄位可使用JSON指針字串加以參考。 請注意，使用自訂混音新增的所有欄位（例如`loyaltyLevel`）都是在`_{TENANT_ID}`物件下面命名，而使用核心混音新增的欄位（例如`fullName`）則不是。
+下列JSON代表簡化的XDM結構描述，其欄位可使用JSON指針字串加以參考。 請注意，使用自訂架構欄位群組新增的所有欄位（例如`loyaltyLevel`）都是在`_{TENANT_ID}`物件下命名，而使用核心欄位群組新增的欄位（例如`fullName`）則不是。
 
 ```json
 {
@@ -87,8 +87,8 @@ JSON指標是用於識別JSON檔案內特定值的標準字串語法([RFC 6901](
 | JSON指標 | 解析為 |
 | --- | --- |
 | `"/title"` | `"Example schema"` |
-| `"/properties/person/properties/name/properties/fullName"` | （傳回由核心混音提供的`fullName`欄位參考。） |
-| `"/properties/_{TENANT_ID}/properties/loyaltyLevel"` | （傳回自訂混音所提供之`loyaltyLevel`欄位的參考）。 |
+| `"/properties/person/properties/name/properties/fullName"` | （傳回核心欄位群組所提供之`fullName`欄位的參考）。 |
+| `"/properties/_{TENANT_ID}/properties/loyaltyLevel"` | （傳回自訂欄位群組所提供之`loyaltyLevel`欄位的參考）。 |
 | `"/properties/_{TENANT_ID}/properties/loyaltyLevel/enum"` | `["platinum", "gold", "silver", "bronze"]` |
 | `"/properties/_{TENANT_ID}/properties/loyaltyLevel/enum/0"` | `"platinum"` |
 
