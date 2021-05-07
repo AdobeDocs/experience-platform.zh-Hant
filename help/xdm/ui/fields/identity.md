@@ -6,9 +6,9 @@ description: 瞭解如何在Experience Platform使用者介面中定義識別欄
 topic-legacy: user guide
 exl-id: 11a53345-4c3f-4537-b3eb-ee7a5952df2a
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
 workflow-type: tm+mt
-source-wordcount: '565'
+source-wordcount: '567'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 0%
 
 ## 先決條件
 
-身分欄位是在Platform中建構客戶身分圖形的重要元件，這最終會影響即時客戶個人檔案如何合併不同的資料片段，以獲得客戶的完整檢視。 在您的結構中定義身份欄位之前，請參閱以下文檔以瞭解與身份欄位相關的關鍵服務和概念：
+身分欄位是在Platform中建構客戶身分圖形的重要元件，這最終會影響即時客戶個人檔案如何合併不同的資料片段，以獲得客戶的完整檢視。 在您的架構中定義身份欄位之前，請參閱以下文檔以瞭解與身份欄位相關的關鍵服務和概念：
 
 * [Adobe Experience Platform身分服務](../../../identity-service/home.md):跨裝置和系統橋接身分識別，並根據資料集符合的XDM架構所定義的身分欄位，將資料集連結在一起。
    * [身分名稱空間](../../../identity-service/namespaces.md):身份名稱空間定義了與單個人員相關的不同類型的身份資訊，並且是每個身份欄位的必需元件。
@@ -43,7 +43,7 @@ ht-degree: 0%
 
 ![](../../images/ui/fields/special/identity-config.png)
 
-畫布會更新以反映變更，而選取的欄位會取得指紋符號(![](../../images/ui/fields/special/identity-symbol.png))以指定其為身分。 在左側導軌中，識別欄位現在會列在類別或混合名稱下，提供欄位給架構。
+畫布會更新以反映變更，而選取的欄位會取得指紋符號(![](../../images/ui/fields/special/identity-symbol.png))以指定其為身分。 在左側導軌中，識別欄位現在會列在類別或架構欄位群組的名稱下，該欄位會為架構提供欄位。
 
 由於所有身分欄位都預設為必填，因此欄位現在會列在左側導軌的&#x200B;**[!UICONTROL Required fields]**&#x200B;下方。 如果標識欄位在架構結構內嵌，則所有父欄位也將按需要列出。
 
