@@ -6,9 +6,9 @@ topic-legacy: overview
 description: 本檔案提供Geo XDM資料類型的概觀。
 exl-id: d0eef943-ef86-4abd-8a51-dc45f2ed782d
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
 workflow-type: tm+mt
-source-wordcount: '192'
+source-wordcount: '193'
 ht-degree: 4%
 
 ---
@@ -30,7 +30,7 @@ ht-degree: 4%
 | `postalCode` | 字串 | 位置的郵遞區號。 郵遞區號並非所有國家／地區皆可使用。 在某些國家，這只會包含部分郵遞區號。 |
 | `stateProvince` | 字串 | 觀察的州或省部分。 格式遵循[ISO 3166-2（國家／地區和細分）](http://www.unece.org/cefact/locode/subdivisions.html)標準。 |
 
-有關混音的詳細資訊，請參閱公用XDM存放庫：
+有關資料類型的詳細資訊，請參閱公共XDM儲存庫：
 
 * [填入的範例](https://github.com/adobe/xdm/blob/master/components/datatypes/geo.example.1.json)
 * [完整架構](https://github.com/adobe/xdm/blob/master/components/datatypes/geo.schema.json)
