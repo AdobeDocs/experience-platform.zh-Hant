@@ -4,9 +4,9 @@ description: Adobe Experience Platform Web SDK 最新版本注意事項。
 keywords: Adobe Experience Platform網頁SDK；平台網頁SDK；網頁SDK；發行說明；
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
 translation-type: tm+mt
-source-git-commit: d4ed6c8fa9c86eb2beec829ab24c381b665c2f03
+source-git-commit: ab0798851e5f2b174d9f4241ad64ac8afa20a938
 workflow-type: tm+mt
-source-wordcount: '500'
+source-wordcount: '502'
 ht-degree: 5%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 5%
 * SDK現在可以安裝為npm套件](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/installing-the-sdk.html)。[
 * 新增在[設定預設同意](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html#default-consent)時支援`out`選項，此選項會丟棄所有事件直到收到同意（現有的`pending`選項會將事件排入佇列，並在收到同意後傳送這些事件）。
 * [onBeforeEventSend回呼](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html#onbeforeeventsend)現在可用來防止傳送事件。
-* 現在，當傳送有關轉譯或點按之個人化內容的事件時，請使用XDM mixin而非`meta.personalization`。
+* 現在，當傳送有關呈現或點按的個人化內容的事件時，會使用XDM架構欄位群組，而非`meta.personalization`。
 * [getIdentity命令](https://experienceleague.adobe.com/docs/experience-platform/edge/identity/overview.html#retrieving-the-visitor-id)現在會傳回身分的邊緣區域ID。
 * 從伺服器收到的警告和錯誤已改善，並以更適當的方式處理。
 * 新增[Adobe同意2.0標準](https://experienceleague.adobe.com/docs/experience-platform/edge/consent/supporting-consent.html?communicating-consent-preferences-via-the-adobe-standard)的支援。
