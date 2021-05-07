@@ -6,9 +6,9 @@ type: Documentation
 description: 計算屬性是將事件級別資料聚合到配置檔案級別屬性的函式。 這些函式會自動計算，以便跨區段、啟動和個人化使用。
 exl-id: 13878363-589d-4a3c-811c-21d014a5f3c2
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
 workflow-type: tm+mt
-source-wordcount: '723'
+source-wordcount: '725'
 ht-degree: 1%
 
 ---
@@ -55,4 +55,4 @@ Adobe Experience Platform可讓您輕鬆匯入和合併多個來源的資料，�
 
 由於未偵測到相依性，因此每次評估區段定義時，Experience Platform不會自動評估相關的計算屬性。
 
-或者，可通過添加與現有屬性不衝突的新計算屬性的特定混合來管理計算屬性的建立。 另一種選擇是，只需使用新計算屬性的正確相關性追蹤重新建立區段。
+或者，可以通過添加與現有屬性不衝突的新計算屬性的特定模式欄位組來管理計算屬性的建立。 另一種選擇是，只需使用新計算屬性的正確相關性追蹤重新建立區段。
