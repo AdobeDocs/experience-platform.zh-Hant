@@ -6,9 +6,9 @@ topic-legacy: Intelligent Services
 description: 為了讓智慧型服務能夠從行銷事件資料中發掘見解，資料必須以標準結構進行語義豐富和維護。 智慧型服務使用Experience Data Model(XDM)架構來達成此目的。
 exl-id: 17bd7cc0-da86-4600-8290-cd07bdd5d262
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: ab0798851e5f2b174d9f4241ad64ac8afa20a938
 workflow-type: tm+mt
-source-wordcount: '2385'
+source-wordcount: '2397'
 ht-degree: 0%
 
 ---
@@ -35,7 +35,7 @@ ht-degree: 0%
 
 客戶人工智慧和Attribution AI本機支援Adobe Analytics資料。 若要使用Adobe Analytics資料，請依照說明檔案所述的步驟，設定[Analytics來源連接器](../sources/tutorials/ui/create/adobe-applications/analytics.md)。
 
-在來源連接器將您的資料串流至Experience Platform後，您就可以在執行個體設定期間選取Adobe Analytics做為資料來源，接著選取資料集。 在連線設定期間，會自動建立所有必要的架構欄位和混合。 您不需要將資料集（擷取、轉換、載入）ETL為CEE格式。
+在來源連接器將您的資料串流至Experience Platform後，您就可以在執行個體設定期間選取Adobe Analytics做為資料來源，接著選取資料集。 在連接設定期間，會自動建立所有必需的架構欄位組和各個欄位。 您不需要將資料集（擷取、轉換、載入）ETL為CEE格式。
 
 >[!IMPORTANT]
 >
@@ -45,7 +45,7 @@ ht-degree: 0%
 
 客戶人工智慧支援Adobe Audience Manager資料。 要使用Audience Manager資料，請按照文檔中介紹的步驟設定[Audience Manager源連接器](../sources/tutorials/ui/create/adobe-applications/audience-manager.md)。
 
-在來源連接器將您的資料串流至Experience Platform後，您就可以在客戶AI設定期間，選擇Adobe Audience Manager作為資料來源，接著選擇資料集。 在連線設定期間，會自動建立所有必要的架構欄位和混合。 您不需要將資料集（擷取、轉換、載入）ETL為CEE格式。
+在來源連接器將您的資料串流至Experience Platform後，您就可以在客戶AI設定期間，選擇Adobe Audience Manager作為資料來源，接著選擇資料集。 在連接設定期間，會自動建立所有模式欄位組和各個欄位。 您不需要將資料集（擷取、轉換、載入）ETL為CEE格式。
 
 >[!IMPORTANT]
 >
@@ -68,13 +68,13 @@ CEE架構與所有XDM ExperienceEvent架構一樣，會在發生事件（或事�
 
 ![](./images/data-preparation/schema-expansion.gif)
 
-與所有XDM模式一樣，CEE混合模式具有可擴充性。 換言之，CEE混音中可新增其他欄位，如有需要，可在多個結構中加入不同的變化。
+與所有XDM架構一樣，CEE架構欄位組是可擴展的。 換言之，CEE欄位群組可新增其他欄位，如有需要，多個架構中可包含不同的變數。
 
-在[public XDM repository](https://github.com/adobe/xdm/blob/797cf4930d5a80799a095256302675b1362c9a15/docs/reference/context/experienceevent-consumer.schema.md)中可找到混音的完整示例。 此外，您還可以檢視並複製下列[JSON檔案](https://github.com/AdobeDocs/experience-platform.en/blob/master/help/intelligent-services/assets/CEE_XDM_sample_rows.json)，以取得如何結構化資料以符合CEE架構的範例。 在瞭解以下章節中概述的關鍵欄位時，請參閱這兩個範例，以決定如何將您自己的資料對應至架構。
+在[public XDM repository](https://github.com/adobe/xdm/blob/797cf4930d5a80799a095256302675b1362c9a15/docs/reference/context/experienceevent-consumer.schema.md)中可找到欄位組的完整示例。 此外，您還可以檢視並複製下列[JSON檔案](https://github.com/AdobeDocs/experience-platform.en/blob/master/help/intelligent-services/assets/CEE_XDM_sample_rows.json)，以取得如何結構化資料以符合CEE架構的範例。 在瞭解以下章節中概述的關鍵欄位時，請參閱這兩個範例，以決定如何將您自己的資料對應至架構。
 
 ## 關鍵字欄位
 
-在CEE混音中，應使用幾個關鍵欄位，以便[!DNL Intelligent Services]產生有用的見解。 本節說明這些欄位的使用案例和預期資料，並提供參考檔案的連結，以取得更多範例。
+CEE欄位組中有幾個關鍵欄位，應使用這些欄位來生成有用的深入分析。 [!DNL Intelligent Services]本節說明這些欄位的使用案例和預期資料，並提供參考檔案的連結，以取得更多範例。
 
 ### 必填欄位
 
@@ -297,16 +297,16 @@ CEE架構與所有XDM ExperienceEvent架構一樣，會在發生事件（或事�
 
 #### 建立CEE架構和資料集
 
-當您準備開始準備擷取資料時，第一個步驟是建立採用CEE mixin的新XDM架構。 下列教學課程將逐步說明在UI或API中建立新架構的程式：
+當您準備開始準備擷取資料時，第一個步驟是建立採用CEE欄位群組的新XDM架構。 下列教學課程將逐步說明在UI或API中建立新架構的程式：
 
 * [在UI中建立結構](../xdm/tutorials/create-schema-ui.md)
 * [在API中建立結構](../xdm/tutorials/create-schema-api.md)
 
 >[!IMPORTANT]
 >
->上述教學課程會遵循建立架構的一般工作流程。 選擇架構的類時，必須使用&#x200B;**XDM ExperienceEvent類**。 選擇此類後，可以將CEE混合添加到模式。
+>上述教學課程會遵循建立架構的一般工作流程。 選擇架構的類時，必須使用&#x200B;**XDM ExperienceEvent類**。 選擇此類後，可以將CEE欄位組添加到架構中。
 
-將CEE混音新增至架構後，您就可以視資料中其他欄位的需要新增其他混音。
+將CEE欄位組添加到架構後，您可以根據資料中其他欄位的需要添加其他欄位組。
 
 建立並儲存架構後，您就可以根據該架構建立新的資料集。 下列教學課程將逐步說明在UI或API中建立新資料集的程式：
 
