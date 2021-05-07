@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform;home；熱門主題；模式；Schema;enum;mixin;Mixin;Mixin;Mixins；資料類型；資料類型；資料類型；資料類型；主標識；主標識；XDM個人配置檔案；XDM欄位；enum;Experience事件；XDM ExperienceEvent;experienceevent;XEVENTdm Experienceevent；模式設計；class;Class;Classes；資料類型；資料類型；Datatype;schemas;identityMap;identity map;Schema design;map;union模式；union
+keywords: Experience Platform;home；熱門主題；模式；Schema;enum;mixin；欄位組；欄位組；混合；資料類型；資料類型；資料類型；資料類型；主標識；主標識；XDM個人配置檔案；XDM欄位；enum;Experience事件；XDM ExperienceEvent;experienceevent;XDMdm Experienceevent；模式設計；class;Class;Classes；資料類型；資料類型；Datatype;schemas;identityMap;identity map;Schema design;map;union模式；union
 solution: Experience Platform
 title: 架構構成基礎
 topic-legacy: overview
 description: 本檔案介紹Experience Data Model(XDM)架構，以及組合要在Adobe Experience Platform使用的架構的構建區塊、原則和最佳實務。
 exl-id: d449eb01-bc60-4f5e-8d6f-ab4617878f7e
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: ab0798851e5f2b174d9f4241ad64ac8afa20a938
 workflow-type: tm+mt
-source-wordcount: '3460'
+source-wordcount: '3497'
 ht-degree: 0%
 
 ---
@@ -123,49 +123,49 @@ XDM模式最適合以獨立格式儲存大量複雜資料。 有關XDM如何做�
 
 方案使用下列公式組成：
 
-**類+混音(&amp;A);= XDM方案**
+**類+方案欄位組(&amp;A);= XDM方案**
 
-&amp;ast；模式由類和零個或多個混合組成。 這表示您完全不需使用mixin就可以合成資料集架構。
+&amp;ast；模式由類和零個或多個模式欄位組組成。 這表示您完全不需要使用欄位群組，就可以合成資料集架構。
 
 ### {#class}類
 
 構成模式的開始方法是分配類。 類定義模式將包含的資料的行為方面（記錄或時間序列）。 此外，類還描述了基於該類的所有方案需要包含的最小公共屬性數，並為合併多個相容資料集提供了一種方法。
 
-架構的類決定哪些混合符合在該架構中使用的資格。 這將在[下一節](#mixin)中詳細討論。
+架構的類決定哪些欄位組有資格在該架構中使用。 這將在[下一節](#field-group)中詳細討論。
 
 Adobe提供數種標準（「核心」）XDM類。 幾乎所有下游平台進程都需要其中兩個類[!DNL XDM Individual Profile]和[!DNL XDM ExperienceEvent]。 除了這些核心類別外，您也可以建立自己的自訂類別，以說明組織的更多特定使用案例。 當沒有Adobe定義的核心類可用於描述唯一使用案例時，自定義類由組織定義。
 
-下列螢幕擷取說明如何在平台UI中呈現類別。 由於顯示的示例架構不包含任何混音，所以所有顯示的欄位都由架構的類([!UICONTROL XDM Individual Profile])提供。
+下列螢幕擷取說明如何在平台UI中呈現類別。 由於顯示的示例方案不包含任何欄位組，所以所有顯示的欄位都由方案的類([!UICONTROL XDM Individual Profile])提供。
 
 ![](../images/schema-composition/class.png)
 
 有關可用標準XDM類的最新清單，請參閱[正式的XDM儲存庫](https://github.com/adobe/xdm/tree/master/components/classes)。 或者，如果希望在UI中查看資源，可參閱[瀏覽XDM元件](../ui/explore.md)上的指南。
 
-### Mixin {#mixin}
+### 欄位組{#field-group}
 
-混音是可重複使用的元件，其定義可實作特定功能（例如個人詳細資料、飯店偏好設定或位址）的一或多個欄位。 Mixin是作為實現相容類的模式的一部分而包括的。
+欄位群組是可重複使用的元件，可定義一或多個欄位，以實作特定功能，例如個人詳細資料、飯店偏好設定或地址。 欄位組將作為實現相容類的架構的一部分被包括。
 
-Mixins會根據所代表資料的行為（記錄或時間系列）來定義與哪些類別相容。 這表示並非所有混音都可用於所有類別。
+欄位群組會根據所代表資料的行為（記錄或時間系列）來定義與哪些類別相容。 這表示並非所有欄位組都可用於所有類。
 
-[!DNL Experience Platform] 包括許多標準的Adobe混搭，同時允許廠商為其使用者定義混搭，以及個別使用者為其特定概念定義混搭。
+[!DNL Experience Platform] 包括許多標準Adobe欄位群組，同時允許廠商為其使用者定義欄位群組，以及個別使用者為其特定概念定義欄位群組。
 
-例如，若要針對您的&quot;[!UICONTROL Loyalty Members]&quot;架構擷取詳細資訊，例如&quot;[!UICONTROL First Name]&quot;和&quot;[!UICONTROL Home Address]&quot;，您可以使用定義這些常見概念的標準混音。 但是，針對較不常見使用案例（例如&quot;[!UICONTROL Loyalty Program Level]&quot;）的概念通常沒有預先定義的混音。 在這種情況下，您必須定義自己的混音，才能擷取此資訊。
+例如，要為&quot;[!UICONTROL Loyalty Members]&quot;方案捕獲&quot;[!UICONTROL First Name]&quot;和&quot;[!UICONTROL Home Address]&quot;等詳細資訊，您可以使用定義這些常見概念的標準欄位組。 但是，針對較不常見使用案例（例如&quot;[!UICONTROL Loyalty Program Level]&quot;）的概念通常沒有預先定義的欄位群組。 在這種情況下，您必須定義自己的欄位群組，才能擷取此資訊。
 
-請記住，結構描述是由「零個或更多」混合組成，因此這表示您無需使用任何混合即可合成有效結構描述。
+請記住，結構由「零個或更多」欄位組成，因此這表示您無需使用任何欄位組即可合成有效結構。
 
-下列螢幕擷取說明mixin如何在平台UI中呈現。 在本例中，單個混音([!UICONTROL Demographic Details])被添加到模式，該模式為模式結構提供欄位分組。
+下列螢幕擷取顯示欄位群組在平台UI中的呈現方式。 在本示例中，單個欄位組([!UICONTROL Demographic Details])被添加到模式，該模式為模式結構提供欄位分組。
 
-![](../images/schema-composition/mixin.png)
+![](../images/schema-composition/field-group.png)
 
-有關可用標準XDM混合的最新清單，請參閱[正式的XDM儲存庫](https://github.com/adobe/xdm/tree/master/components/mixins)。 或者，如果希望在UI中查看資源，可參閱[瀏覽XDM元件](../ui/explore.md)上的指南。
+有關可用標準XDM欄位組的最新清單，請參閱[正式的XDM儲存庫](https://github.com/adobe/xdm/tree/master/components/mixins)。 或者，如果希望在UI中查看資源，可參閱[瀏覽XDM元件](../ui/explore.md)上的指南。
 
 ### 資料類型{#data-type}
 
-資料類型與基本常值欄位的使用方式相同，在類或方案中用作參考欄位類型。 關鍵區別在於資料類型可以定義多個子欄位。 與混音類似，資料類型允許一致地使用多欄位結構，但比混音更具靈活性，因為通過將資料類型添加為欄位的「資料類型」，資料類型可以包括在模式中的任意位置。
+資料類型與基本常值欄位的使用方式相同，在類或方案中用作參考欄位類型。 關鍵區別在於資料類型可以定義多個子欄位。 與欄位組類似，資料類型允許一致地使用多欄位結構，但比欄位組更靈活，因為通過將資料類型添加為欄位的「資料類型」，資料類型可以包括在模式中的任意位置。
 
 [!DNL Experience Platform] 提供了一些常用資料類型作為的一部分，以 [!DNL Schema Registry] 支援使用標準模式來描述常用資料結構。這在[!DNL Schema Registry]教學課程中有更詳細的說明，當您逐步定義資料類型時，會更清楚說明。
 
-下列螢幕擷取顯示資料類型在平台UI中的呈現方式。 [!UICONTROL Demographic Details] mixin提供的一個欄位使用「[!UICONTROL Person name]」資料類型，如欄位名稱旁的垂直號字元(`|`)後面的文本所示。 此特定資料類型提供了與個人姓名相關的多個子欄位，此構造可以重複用於需要捕獲人員姓名的其他欄位。
+下列螢幕擷取顯示資料類型在平台UI中的呈現方式。 [!UICONTROL Demographic Details]欄位組提供的欄位之一使用「[!UICONTROL Person name]」資料類型，如欄位名稱旁的垂直號字元(`|`)後面的文本所示。 此特定資料類型提供了與個人姓名相關的多個子欄位，此構造可以重複用於需要捕獲人員姓名的其他欄位。
 
 ![](../images/schema-composition/data-type.png)
 
@@ -220,13 +220,13 @@ Mixins會根據所代表資料的行為（記錄或時間系列）來定義與�
 
 ## 合成示例
 
-結構表示將被收錄到[!DNL Platform]中並使用構圖模型構建的資料的格式和結構。 如前所述，這些模式由類和與該類相容的零個或多個混合組成。
+結構表示將被收錄到[!DNL Platform]中並使用構圖模型構建的資料的格式和結構。 如前所述，這些方案由類和與該類相容的零個或多個欄位組組成。
 
-例如，描述在零售商店購買之商品的架構可能稱為「[!UICONTROL Store Transactions]」。 該模式實現與標準[!UICONTROL Commerce] mixin和用戶定義的[!UICONTROL Product Info] mixin組合的[!DNL XDM ExperienceEvent]類。
+例如，描述在零售商店購買之商品的架構可能稱為「[!UICONTROL Store Transactions]」。 方案實現了與標準[!UICONTROL Commerce]欄位組和用戶定義的[!UICONTROL Product Info]欄位組組合的[!DNL XDM ExperienceEvent]類。
 
-追蹤網站流量的另一個架構可能稱為「[!UICONTROL Web Visits]」。 它也實作[!DNL XDM ExperienceEvent]類別，但這次結合了標準[!UICONTROL Web] mixin。
+追蹤網站流量的另一個架構可能稱為「[!UICONTROL Web Visits]」。 它也實作[!DNL XDM ExperienceEvent]類別，但這次結合了標準[!UICONTROL Web]欄位群組。
 
-下圖顯示了這些方案以及每個混音所貢獻的欄位。 它還包含基於[!DNL XDM Individual Profile]類的兩個方案，包括本指南中前面提到的&quot;[!UICONTROL Loyalty Members]&quot;方案。
+下圖顯示了這些方案和每個欄位組貢獻的欄位。 它還包含基於[!DNL XDM Individual Profile]類的兩個方案，包括本指南中前面提到的&quot;[!UICONTROL Loyalty Members]&quot;方案。
 
 ![](../images/schema-composition/composition.png)
 
@@ -249,18 +249,18 @@ Mixins會根據所代表資料的行為（記錄或時間系列）來定義與�
 如果您要將外部系統的區段帶入平台，您必須使用下列元件，才能在您的架構中擷取這些區段：
 
 * [[!UICONTROL Segment definition] 類別](../classes/segment-definition.md):使用此標準類別來擷取外部區段定義的關鍵屬性。
-* [[!UICONTROL Segment Membership Details] mixin](../mixins/profile/segmentation.md):將此混音新增至您的 [!UICONTROL XDM Individual Profile] 結構，以便將客戶個人檔案與特定區段建立關聯。
+* [[!UICONTROL Segment Membership Details] 欄位組](../field-groups/profile/segmentation.md):將此欄位群組新增至您的 [!UICONTROL XDM Individual Profile] 結構，以便將客戶個人檔案與特定區段建立關聯。
 
 ## 後續步驟
 
 既然您瞭解架構構成的基本知識，就可以開始使用[!DNL Schema Registry]來探索和構建架構。
 
-要查看兩個核心XDM類及其常用相容混音的結構，請參見以下參考文檔：
+要查看兩個核心XDM類及其常用相容欄位組的結構，請參見以下參考文檔：
 
 * [[!DNL XDM Individual Profile]](../classes/individual-profile.md)
 * [[!DNL XDM ExperienceEvent]](../classes/experienceevent.md)
 
-[!DNL Schema Registry]用於訪問Adobe Experience Platform的[!DNL Schema Library]，並提供用戶介面和REST風格的API，可從中訪問所有可用的庫資源。 [!DNL Schema Library]包含由Adobe定義的行業資源、由[!DNL Experience Platform]合作夥伴定義的供應商資源，以及由組織成員組成的類、混合、資料類型和方案。
+[!DNL Schema Registry]用於訪問Adobe Experience Platform的[!DNL Schema Library]，並提供用戶介面和REST風格的API，可從中訪問所有可用的庫資源。 [!DNL Schema Library]包含由Adobe定義的行業資源、由[!DNL Experience Platform]合作夥伴定義的供應商資源，以及由組織成員組成的類、欄位組、資料類型和方案。
 
 要開始使用UI合成架構，請遵循[架構編輯器教程](../tutorials/create-schema-ui.md)來構建本文檔中提及的「忠誠成員」架構。
 
