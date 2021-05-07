@@ -6,9 +6,9 @@ topic-legacy: getting started
 description: 瞭解如何使用Adobe2.0標準處理Adobe Experience Platform的客戶同意信號。
 exl-id: cd76a3f6-ae55-4d75-9b30-900fadb4664f
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: ab0798851e5f2b174d9f4241ad64ac8afa20a938
 workflow-type: tm+mt
-source-wordcount: '1563'
+source-wordcount: '1565'
 ht-degree: 0%
 
 ---
@@ -77,7 +77,7 @@ Adobe Experience Platform允許您處理從客戶收集到的許可資料，並�
 >
 >如果沒有任何衝突的資料集，則應改為設定合併策略的時間戳優先順序。 這有助於確保客戶指定的最新同意是所使用的同意設定。
 
-有關如何使用合併策略的詳細資訊，請參閱[合併策略使用手冊](../../../../profile/ui/merge-policies.md)。 設定合併政策時，您必須確定您的個人檔案包含「同意與偏好」混合檔中提供的所有必要同意屬性，如[資料集準備](./dataset.md)指南中所述。
+有關如何使用合併策略的詳細資訊，請參閱[合併策略使用手冊](../../../../profile/ui/merge-policies.md)。 設定合併政策時，您必須確保您的設定檔包含「同意與偏好設定」方案欄位群組提供的所有必要同意屬性，如[資料集準備](./dataset.md)指南中所述。
 
 ## 將同意資料匯入平台
 
