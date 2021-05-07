@@ -5,9 +5,9 @@ topic-legacy: overview
 description: 本檔案概述Experience Data Model(XDM)中的「區段定義」類別。
 exl-id: c0f7b04c-2266-4d08-89a1-67ba758a51a7
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: ab0798851e5f2b174d9f4241ad64ac8afa20a938
 workflow-type: tm+mt
-source-wordcount: '378'
+source-wordcount: '379'
 ht-degree: 0%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->此類別僅用於擷取區段定義本身的相關資訊。 為了在您的描述檔資料中擷取區段成員資格資訊，您應在[!UICONTROL XDM Individual Profile]結構中使用混合](../mixins/profile/segmentation.md)的[區段成員資格詳細資訊。
+>此類別僅用於擷取區段定義本身的相關資訊。 為了在您的描述檔資料中擷取區段成員資格資訊，您應在[!UICONTROL XDM Individual Profile]結構中使用[區段成員資格詳細資訊欄位群組](../field-groups/profile/segmentation.md)。
 
 ![](../images/classes/segment-definition.png)
 
