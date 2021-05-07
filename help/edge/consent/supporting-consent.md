@@ -1,15 +1,15 @@
 ---
 title: 使用Adobe Experience PlatformWeb SDK支援客戶同意偏好
 description: 瞭解如何使用Adobe Experience Platform網頁SDK支援同意偏好設定。
-keywords: connence;defaultConnence;default connonce;setConnence;Profile Privacy Mixin; Experience Event Privacy Mixin; Privacy Mixin;
+keywords: connence;defaultConnence;default connence;setConnence；配置檔案隱私欄位組；體驗事件隱私欄位組；
+exl-id: 647e4a84-4a66-45d6-8b05-d78786bca63a
 translation-type: tm+mt
-source-git-commit: dd9101079a1093c109f43b268a78c07770221156
+source-git-commit: ab0798851e5f2b174d9f4241ad64ac8afa20a938
 workflow-type: tm+mt
-source-wordcount: '977'
+source-wordcount: '986'
 ht-degree: 0%
 
 ---
-
 
 # 支援客戶同意偏好
 
@@ -54,7 +54,7 @@ SDK支援1.0版和2.0版的Adobe Experience Platform同意標準。 目前，1.0
 
 ### 使用Adobe標準2.0版
 
-如果您使用Adobe Experience Platform，您需要在描述檔架構中加入隱私權混音。 如需Adobe標準2.0版的詳細資訊，請參閱Adobe Experience Platform的[治理、隱私權與安全性。您可以在下面的值對象中添加資料，該對象與「同意與首選項」配置檔案混合的`consents`欄位的模式相對應。](../../landing/governance-privacy-security/overview.md)
+如果您使用Adobe Experience Platform，則需要將隱私權架構欄位群組加入您的描述檔架構。 如需Adobe標準2.0版的詳細資訊，請參閱Adobe Experience Platform的[治理、隱私權與安全性。您可以在下面的值對象中添加資料，該對象與「同意與首選項」配置檔案欄位組的`consents`欄位的模式相對應。](../../landing/governance-privacy-security/overview.md)
 
 如果用戶選擇，請執行`setConsent`命令，並按如下方式將收集首選項設定為`y`:
 
@@ -147,7 +147,7 @@ alloy("setConsent", {
 });
 ```
 
-以此方式設定同意書時，即時客戶個人檔案會以同意書資訊進行更新。 要使此功能發揮作用，配置式XDM架構需要包含[配置式隱私混頻](https://github.com/adobe/xdm/blob/master/docs/reference/mixins/profile/profile-privacy.schema.md)。 在發送事件時，需要手動將IAB許可資訊添加到事件XDM對象。 SDK不會自動在事件中包含同意資訊。 若要在事件中傳送同意資訊，[體驗事件隱私權Mixin](https://github.com/adobe/xdm/blob/master/docs/reference/mixins/experience-event/experienceevent-privacy.schema.md)必須新增至「體驗事件」架構。
+以此方式設定同意書時，即時客戶個人檔案會以同意書資訊進行更新。 要使此功能發揮作用，配置式XDM架構需要包含[配置式隱私架構欄位組](https://github.com/adobe/xdm/blob/master/docs/reference/mixins/profile/profile-privacy.schema.md)。 在發送事件時，需要手動將IAB許可資訊添加到事件XDM對象。 SDK不會自動在事件中包含同意資訊。 若要在事件中傳送同意資訊，[體驗事件隱私欄位群組](https://github.com/adobe/xdm/blob/master/docs/reference/mixins/experience-event/experienceevent-privacy.schema.md)必須新增至「體驗事件」結構。
 
 ## 在單一請求中傳送多個標準
 
@@ -184,4 +184,3 @@ alloy("setConsent", {
 ## 同步身分並設定同意
 
 當預設同意擱置或結束時，`setConsent`可能是第一個送出並建立身分的要求。 因此，在第一個要求上同步身分可能很重要。 身分映射可以像`sendEvent`命令一樣添加到`setConsent`命令中。 請參閱[檢索Experience CloudID](../identity/overview.md)
-
