@@ -2,13 +2,13 @@
 audience: user
 user-guide-title: Experience Data Model (XDM) 系統說明
 breadcrumb-title: Experience Data Model (XDM) 指南
-user-guide-description: 使用 Experience Data Model (XDM) 類別和 mixin 將體驗資料標準化。
+user-guide-description: 使用體驗資料模型(XDM)類別和架構欄位群組來標準化體驗資料。
 feature: 結構描述
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: a19a89d347b9197ab2766bd8a57018f5ac4f058d
 workflow-type: tm+mt
-source-wordcount: '279'
-ht-degree: 21%
+source-wordcount: '291'
+ht-degree: 17%
 
 ---
 
@@ -30,18 +30,18 @@ ht-degree: 21%
    * [XDM個人資料](./classes/individual-profile.md)
    * [XDM ExperienceEvent](./classes/experienceevent.md)
    * [區段定義](./classes/segment-definition.md)
-* Mixins {#mixins}
-   * 描述檔混音{#profile}
-      * [IdentityMap](./mixins/profile/identitymap.md)
-      * [人口統計詳細資訊](./mixins/profile/person-details.md)
-      * [個人聯絡資訊](./mixins/profile/personal-details.md)
-      * [隱私權／個人化／行銷偏好設定（同意）](./mixins/profile/consents.md)
-      * [區段會籍詳細資訊](./mixins/profile/segmentation.md)
-      * [工作聯繫人詳細資訊](./mixins/profile/work-details.md)
-   * 事件混音{#event}
-      * [用戶ID詳細資訊](./mixins/event/enduserids.md)
-      * [環境詳細資訊](./mixins/event/environment-details.md)
-   * [Mixin名稱更新](./mixins/name-updates.md)
+* 方案欄位組{#field-groups}
+   * 配置檔案欄位組{#profile}
+      * [IdentityMap](./field-groups/profile/identitymap.md)
+      * [人口統計詳細資訊](./field-groups/profile/demographic-details.md)
+      * [個人聯絡資訊](./field-groups/profile/personal-contact-details.md)
+      * [區段會籍詳細資訊](./field-groups/profile/segmentation.md)
+      * [工作聯繫人詳細資訊](./field-groups/profile/work-contact-details.md)
+      * [隱私權／個人化／行銷偏好設定（同意）](./field-groups/profile/consents.md)
+   * 事件欄位組{#event}
+      * [用戶ID詳細資訊](./field-groups/event/enduserids.md)
+      * [環境詳細資訊](./field-groups/event/environment-details.md)
+   * [欄位群組名稱更新](./field-groups/name-updates.md)
 * 資料類型 {#data-types}
    * [應用程式](./data-types/application.md)
    * [信標](./data-types/beacon.md)
@@ -77,11 +77,11 @@ ht-degree: 21%
    * [網頁詳細資訊](./data-types/webpage-details.md)
 * [!UICONTROL Schemas] UI {#ui}
    * [概覽](./ui/overview.md)
-   * [探索XDM資源](./ui/explore.md)
+   * [探索 XDM 資源](./ui/explore.md)
    * 建立和編輯資源{#resources}
       * [結構描述](./ui/resources/schemas.md)
       * [類別](./ui/resources/classes.md)
-      * [Mixins](./ui/resources/mixins.md)
+      * [欄位群組](./ui/resources/field-groups.md)
       * [資料類型](./ui/resources/data-types.md)
    * 定義欄位{#fields}
       * [概覽](./ui/fields/overview.md)
@@ -99,7 +99,7 @@ ht-degree: 21%
    * [結構描述](api/schemas.md)
    * [行為](api/behaviors.md)
    * [類別](api/classes.md)
-   * [Mixins](api/mixins.md)
+   * [架構欄位組](api/field-groups.md)
    * [資料類型](api/data-types.md)
    * [描述符](api/descriptors.md)
    * [工會](api/unions.md)
@@ -107,6 +107,7 @@ ht-degree: 21%
    * [範例資料](api/sample-data.md)
    * [審計日誌](api/audit-log.md)
    * [臨機結構](api/ad-hoc.md)
+   * [Mixins（已過時）](api/mixins.md)
    * [附錄](api/appendix.md)
 * 教學課程 {#tutorials}
    * [建立結構(UI)](tutorials/create-schema-ui.md)
