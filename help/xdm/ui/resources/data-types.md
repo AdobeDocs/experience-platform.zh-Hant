@@ -7,16 +7,16 @@ type: Tutorial
 description: 瞭解如何在Experience Platform使用者介面中建立和編輯資料類型。
 exl-id: 2c917154-c425-463c-b8c8-04ba37d9247b
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
 workflow-type: tm+mt
-source-wordcount: '1106'
+source-wordcount: '1116'
 ht-degree: 0%
 
 ---
 
 # 使用UI建立和編輯資料類型
 
-在Experience Data Model(XDM)中，資料類型會以與基本常值欄位相同的方式，用作類別或混合的參考類型欄位，主要差異在於資料類型可定義多個子欄位。 雖然與允許一致使用多欄位結構的混音類似，但資料類型更具彈性，因為它們可以包含在架構結構中的任何位置，而混音只能在根層級新增。
+在Experience Data Model(XDM)中，資料類型與基本常值欄位的使用方式相同，可用作類別或架構欄位群組中的參考類型欄位，主要差異在於資料類型可定義多個子欄位。 雖然與允許一致使用多欄位結構的欄位群組類似，但資料類型更有彈性，因為它們可以包含在架構結構中的任何位置，而欄位群組只能新增在根層級。
 
 Adobe Experience Platform提供許多標準資料類型，可用於涵蓋各種常見的體驗管理使用案例。 不過，您也可以定義您自己的自訂資料類型，以滿足您獨特的業務需求。
 
@@ -85,21 +85,21 @@ Adobe Experience Platform提供許多標準資料類型，可用於涵蓋各種�
 
 在將欄位添加到資料類型後，選擇&#x200B;**[!UICONTROL Save]**&#x200B;以保存更改並將資料類型添加到[!DNL Schema Library]。
 
-## 將資料類型新增至類別或混音
+## 將資料類型添加到類或欄位組
 
-建立資料類型後，您就可以開始在結構中使用它。 由於XDM模式由類和零個或多個混合組成，因此不能直接將資料類型提供的欄位添加到模式。 而必須包含在類別或混音中。
+建立資料類型後，您就可以開始在結構中使用它。 由於XDM架構由類和零個或多個欄位組組成，因此不能直接將資料類型提供的欄位添加到架構中。 但是，必須將其包含在類或欄位組中。
 
-首先，遵循將欄位添加到類](./classes.md#add-fields)或[將欄位添加到mixin](./mixins.md#add-fields)中涉及的步驟。 [為新欄位選擇&#x200B;**[!UICONTROL Type]**&#x200B;時，請從下拉菜單中選擇資料類型的名稱。
+首先，執行將欄位添加到[類或[將欄位添加到欄位組](./field-groups.md#add-fields)中涉及的步驟。 ](./classes.md#add-fields)為新欄位選擇&#x200B;**[!UICONTROL Type]**&#x200B;時，請從下拉菜單中選擇資料類型的名稱。
 
 ## 將多欄位物件轉換為資料類型{#convert}
 
-在[!DNL Schema Editor]中建立具有多個子欄位的對象類型欄位時，可以將該欄位轉換為資料類型，以便在不同類或混合中使用相同的欄位結構。
+在[!DNL Schema Editor]中建立具有多個子欄位的對象類型欄位時，可以將該欄位轉換為資料類型，以便在不同的類或欄位組中使用相同的欄位結構。
 
 若要將物件類型欄位轉換為資料類型，請選取畫布中的欄位。 在轉換欄位之前，請確定&#x200B;**[!UICONTROL Display name]**&#x200B;是物件將包含的資料的描述性，因為這會成為資料類型的名稱。 當您準備好轉換欄位時，請選取右側邊欄中的&#x200B;**[!UICONTROL Convert to new data type]**。
 
 ![](../../images/ui/resources/data-types/convert-object.png)
 
-畫布會將欄位的資料類型從「[!UICONTROL Object]」更新為新的資料類型。 子欄位旁邊還有小的鎖定表徵圖，表示它們不再是單個欄位，而是多欄位資料類型的一部分。 現在，在定義新欄位時，可從&#x200B;**[!UICONTROL Type]**&#x200B;下拉式清單中選擇此資料類型，以在其他類和混合中重複使用此結構。
+畫布會將欄位的資料類型從「[!UICONTROL Object]」更新為新的資料類型。 子欄位旁邊還有小的鎖定表徵圖，表示它們不再是單個欄位，而是多欄位資料類型的一部分。 現在，在定義新欄位時，可從&#x200B;**[!UICONTROL Type]**&#x200B;下拉式清單中選擇此資料類型，以在其他類和欄位組中重複使用此結構。
 
 ![](../../images/ui/resources/data-types/converted.png)
 
