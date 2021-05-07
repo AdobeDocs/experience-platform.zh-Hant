@@ -6,9 +6,9 @@ description: 瞭解如何在Experience Platform使用者介面中建立和編輯
 topic-legacy: user guide
 exl-id: 1b4c3996-2319-45dd-9edd-a5bcad46578b
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: ab0798851e5f2b174d9f4241ad64ac8afa20a938
 workflow-type: tm+mt
-source-wordcount: '865'
+source-wordcount: '871'
 ht-degree: 0%
 
 ---
@@ -45,7 +45,7 @@ Adobe提供多種標準（「核心」）XDM類，包括[!DNL XDM Individual Pro
 
 >[!IMPORTANT]
 >
->當建立實作組織定義之類的架構時，請記住混合僅可用於相容類。 由於您定義的類別是新的，因此&#x200B;**[!UICONTROL Add mixin]**&#x200B;對話方塊中沒有列出相容的混音。 而是需要[建立新的mixins](./mixins.md#create)，以便與該類別搭配使用。 下次構建實施新類的模式時，您定義的混合將列出並可供使用。
+>在構建實現由組織定義的類的方案時，請記住，方案欄位組僅可用於相容類。 由於您定義的類是新的，因此&#x200B;**[!UICONTROL Add field group]**&#x200B;對話框中沒有列出相容的欄位組。 而是需要[建立新欄位群組](./field-groups.md#create)以搭配該類別使用。 下次構建實施新類的方案時，將列出您定義的欄位組並可供使用。
 
 您現在可以開始向類[添加欄位，該類將由採用該類的所有方案共用。](#add-fields)
 
@@ -77,7 +77,7 @@ Adobe提供多種標準（「核心」）XDM類，包括[!DNL XDM Individual Pro
 
 >[!IMPORTANT]
 >
->請記住，您新增至類別的任何欄位，都會用於採用該類別的所有結構中。 因此，您應仔細考慮哪些欄位在所有架構使用案例中都有用。 如果您正在考慮新增欄位，而該欄位可能只會在此類別下的某些結構中使用，則可能想要考慮透過[改為建立mixin](./mixins.md#create)將它新增至這些結構。
+>請記住，您新增至類別的任何欄位，都會用於採用該類別的所有結構中。 因此，您應仔細考慮哪些欄位在所有架構使用案例中都有用。 如果您考慮添加只能在此類下某些方案中使用的欄位，則可考慮通過[改為建立欄位組](./field-groups.md#create)將其添加到這些方案。
 
 畫布中會出現&#x200B;**[!UICONTROL New field]**，右側邊欄會更新，以顯示設定欄位屬性的控制項。 有關如何配置欄位並將其添加到類的具體步驟，請參閱UI](../fields/overview.md#define)中[定義欄位的指南。
 
