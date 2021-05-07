@@ -6,9 +6,9 @@ topic-legacy: overview
 description: 本檔案提供興趣點詳細資訊XDM資料類型的概觀。
 exl-id: cab5463b-97a0-400d-a00c-0cd8bf9301a5
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
 workflow-type: tm+mt
-source-wordcount: '188'
+source-wordcount: '189'
 ht-degree: 4%
 
 ---
@@ -30,7 +30,7 @@ ht-degree: 4%
 | `poiID` | 字串 | POI的唯一識別碼。 |
 | `type` | 字串 | POI的一般類型，使用由POI定義的管理員選擇的類型模式。 |
 
-有關混音的詳細資訊，請參閱公用XDM存放庫：
+有關資料類型的詳細資訊，請參閱公共XDM儲存庫：
 
 * [填入的範例](https://github.com/adobe/xdm/blob/master/components/datatypes/poi-detail.example.1.json)
 * [完整架構](https://github.com/adobe/xdm/blob/master/components/datatypes/poi-detail.schema.json)
