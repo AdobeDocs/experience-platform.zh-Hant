@@ -6,9 +6,9 @@ topic-legacy: user guide
 type: Tutorial
 exl-id: c467666d-55bc-4134-b8f4-7758d49c4786
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
 workflow-type: tm+mt
-source-wordcount: '495'
+source-wordcount: '498'
 ht-degree: 0%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->您也可以使用「方案註冊表API」來匯出其他資源，以及方案，包括類別、混合和資料類型。 如需詳細資訊，請參閱[匯出／匯入端點](../api/export-import.md)上的指南。
+>您還可以使用方案註冊表API導出除方案外的其他資源，包括類、方案欄位組和資料類型。 如需詳細資訊，請參閱[匯出／匯入端點](../api/export-import.md)上的指南。
 
 ## 先決條件
 
@@ -44,9 +44,9 @@ ht-degree: 0%
 ```json
 [
   {
-    "$id": "https://ns.adobe.com/<XDM_TENANTID_PLACEHOLDER>/mixins/9ecfd881d0053568d277b792e4d24c6b70ffa7782bd31265",
-    "meta:altId": "_<XDM_TENANTID_PLACEHOLDER>.mixins.9ecfd881d0053568d277b792e4d24c6b70ffa7782bd31265",
-    "meta:resourceType": "mixins",
+    "$id": "https://ns.adobe.com/<XDM_TENANTID_PLACEHOLDER>/fieldgroups/9ecfd881d0053568d277b792e4d24c6b70ffa7782bd31265",
+    "meta:altId": "_<XDM_TENANTID_PLACEHOLDER>.fieldgroups.9ecfd881d0053568d277b792e4d24c6b70ffa7782bd31265",
+    "meta:resourceType": "fieldgroups",
     "version": "1.0",
     "title": "Loyalty details",
     "type": "object",
@@ -171,12 +171,12 @@ ht-degree: 0%
         "meta:xdmType": "object"
       },
       {
-        "$ref": "https://ns.adobe.com/<XDM_TENANTID_PLACEHOLDER>/mixins/9ecfd881d0053568d277b792e4d24c6b70ffa7782bd31265",
+        "$ref": "https://ns.adobe.com/<XDM_TENANTID_PLACEHOLDER>/fieldgroups/9ecfd881d0053568d277b792e4d24c6b70ffa7782bd31265",
         "type": "object",
         "meta:xdmType": "object"
       },
       {
-        "$ref": "https://ns.adobe.com/xdm/mixins/profile-consents",
+        "$ref": "https://ns.adobe.com/xdm/fieldgroups/profile-consents",
         "type": "object",
         "meta:xdmType": "object"
       }
@@ -189,8 +189,8 @@ ht-degree: 0%
       "https://ns.adobe.com/xdm/common/auditable",
       "https://ns.adobe.com/xdm/data/record",
       "https://ns.adobe.com/xdm/context/profile",
-      "https://ns.adobe.com/<XDM_TENANTID_PLACEHOLDER>/mixins/9ecfd881d0053568d277b792e4d24c6b70ffa7782bd31265",
-      "https://ns.adobe.com/xdm/mixins/profile-consents"
+      "https://ns.adobe.com/<XDM_TENANTID_PLACEHOLDER>/fieldgroups/9ecfd881d0053568d277b792e4d24c6b70ffa7782bd31265",
+      "https://ns.adobe.com/xdm/fieldgroups/profile-consents"
     ],
     "meta:xdmType": "object",
     "meta:class": "https://ns.adobe.com/xdm/context/profile",
@@ -203,7 +203,7 @@ ht-degree: 0%
 ]
 ```
 
-裝載採用陣列的形式，每個陣列項都是表示要導出的自定義XDM資源的對象。 在上述範例中，「[!DNL Loyalty details]」自訂混音和「[!DNL Loyalty Members]」結構包含在內。 匯出中不會包含架構採用的任何核心資源，因為這些資源可用於所有沙盒和IMS組織。
+裝載採用陣列的形式，每個陣列項都是表示要導出的自定義XDM資源的對象。 在上述範例中，「[!DNL Loyalty details]」自訂欄位群組和「[!DNL Loyalty Members]」結構。 匯出中不會包含架構採用的任何核心資源，因為這些資源可用於所有沙盒和IMS組織。
 
 請注意，您組織的租用戶ID的每個例項在裝載中會顯示為`<XDM_TENANTID_PLACEHOLDER>`。 這些預留位置會自動取代為適當的租用戶ID值，這取決於您在下一步驟中匯入架構的位置。
 
