@@ -6,10 +6,10 @@ topic-legacy: overview
 description: Adobe隱私JavaScript程式庫可讓您擷取資料主體身分，以便用於Privacy Service。
 exl-id: 757bf69e-25bf-4ef9-9787-3e74b213908a
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: b70e693b4ffeda561de4d4c8dd8fd1adeec489f7
 workflow-type: tm+mt
-source-wordcount: '944'
-ht-degree: 6%
+source-wordcount: '953'
+ht-degree: 5%
 
 ---
 
@@ -47,7 +47,7 @@ ht-degree: 6%
 若要開始使用[!DNL Privacy JS Library]，您必須使用下列其中一種方法將它安裝到您的電腦上：
 
 * 運行以下命令，使用npm進行安裝：`npm install @adobe/adobe-privacy`
-* 使用名稱`AdobePrivacy`下的Adobe啟動副檔名
+* 使用[Adobe Experience Platform Launch](https://adobe.com/go/launch_help_en)的`AdobePrivacy`名稱安裝Adobe隱私擴展
 * 從[Experience CloudGitHub資料庫](https://github.com/Adobe-Marketing-Cloud/adobe-privacy)下載
 
 ## 實例化[!DNL Privacy JS Library]
@@ -67,7 +67,7 @@ var adobePrivacy = new AdobePrivacy({
 
 ## 程式碼範例
 
-下列程式碼範例說明如何在若干常見案例中使用[!DNL Privacy JS Library]，但您不使用[!DNL Launch]或DTM。
+下列程式碼範例說明如何在不使用[!DNL Platform Launch]的情況下，針對數個常見案例使用[!DNL Privacy JS Library]。
 
 ### 擷取身分
 
