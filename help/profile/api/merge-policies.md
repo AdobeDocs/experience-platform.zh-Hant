@@ -6,9 +6,9 @@ type: Documentation
 description: Adobe Experience Platform可讓您從多個來源匯整資料片段，並加以結合，以全面瞭解每個客戶。 將這些資料整合在一起時，合併原則是平台用來決定資料的優先順序以及將哪些資料合併以建立統一檢視的規則。
 exl-id: fb49977d-d5ca-4de9-b185-a5ac1d504970
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: ab0798851e5f2b174d9f4241ad64ac8afa20a938
 workflow-type: tm+mt
-source-wordcount: '2560'
+source-wordcount: '2569'
 ht-degree: 1%
 
 ---
@@ -752,19 +752,19 @@ curl -X DELETE \
 
 有時候，可能會有使用案例，例如回填資料，或在記錄未依順序擷取時，確保事件的正確順序，而需要提供自訂時間戳記，並讓合併原則遵守自訂時間戳記，而非系統時間戳記。
 
-為了使用自訂時間戳記，必須將[[!DNL External Source System Audit Details Mixin]](#mixin-details)新增至您的描述檔架構。 新增後，可使用`xdm:lastUpdatedDate`欄位填入自訂時間戳記。 在`xdm:lastUpdatedDate`欄位填入記錄時，Experience Platform會使用該欄位來合併資料集內或跨資料集的記錄或描述檔片段。 如果`xdm:lastUpdatedDate`不存在或未填入，平台將繼續使用系統時間戳記。
+要使用自定義時間戳，[[!DNL External Source System Audit Details] 架構欄位組](#field-group-details)必須添加到您的配置檔案架構中。 新增後，可使用`xdm:lastUpdatedDate`欄位填入自訂時間戳記。 在`xdm:lastUpdatedDate`欄位填入記錄時，Experience Platform會使用該欄位來合併資料集內或跨資料集的記錄或描述檔片段。 如果`xdm:lastUpdatedDate`不存在或未填入，平台將繼續使用系統時間戳記。
 
 >[!NOTE]
 >
 >在同一記錄上發送PATCH時，必須確保填入`xdm:lastUpdatedDate`時間戳。
 
-有關使用架構註冊表API處理架構的逐步說明，包括如何向架構添加混合的說明，請訪問[教程，以使用API](../../xdm/tutorials/create-schema-api.md)建立架構。
+有關使用方案註冊表API使用方案的逐步說明，包括如何向方案添加欄位組，請訪問[教程，以使用API](../../xdm/tutorials/create-schema-api.md)建立方案。
 
 要使用UI使用自訂時間戳記，請參閱[合併原則使用指南](../ui/merge-policies.md)中使用自訂時間戳記[一節。](../ui/merge-policies.md#custom-timestamps)
 
-#### [!DNL External Source System Audit Details Mixin] 詳細資訊  {#mixin-details}
+#### [!DNL External Source System Audit Details] 欄位組詳細資訊  {#field-group-details}
 
-以下範例顯示[!DNL External Source System Audit Details Mixin]中正確填入的欄位。 您也可以在GitHub的[public Experience Data Model(XDM)repo](https://github.com/adobe/xdm/blob/master/components/mixins/shared/external-source-system-audit-details.schema.json)中檢視完整的混合JSON。
+以下範例顯示[!DNL External Source System Audit Details]欄位群組中正確填入的欄位。 完整欄位群組JSON也可在GitHub上的[public Experience Data Model(XDM)repo](https://github.com/adobe/xdm/blob/master/components/mixins/shared/external-source-system-audit-details.schema.json)中檢視。
 
 ```json
 {
