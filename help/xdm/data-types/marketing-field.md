@@ -5,9 +5,9 @@ topic-legacy: overview
 description: 本檔案提供一般行銷偏好設定欄位XDM資料類型的概觀。
 exl-id: d4c53885-f34f-4721-aa34-1fe02dc7006f
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
 workflow-type: tm+mt
-source-wordcount: '521'
+source-wordcount: '522'
 ht-degree: 1%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->此資料類型旨在使用[[!UICONTROL Privacy/Personalization/Marketing Preferences (Consents)] mixin](../mixins/profile/consents.md)作為基準，自訂組織的同意結構。
+>此資料類型旨在使用[[!UICONTROL Privacy/Personalization/Marketing Preferences (Consents)]欄位群組](../field-groups/profile/consents.md)做為基準，自訂您組織的同意結構。
 >
 >如果您需要特定行銷偏好設定欄位的`subscriptions`對應，則必須改用[行銷欄位及訂閱資料類型](./marketing-field-subscriptions.md)。
 
