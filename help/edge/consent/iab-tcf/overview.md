@@ -1,15 +1,15 @@
 ---
 title: IAB TCF 2.0在Adobe Experience PlatformWeb SDK中的支援
 description: 瞭解如何使用Adobe Experience Platform網頁SDK支援IAB TCF 2.0同意偏好設定
-keywords: connence;setConnonce；描述檔隱私權Mixin；體驗事件隱私權Mixin；隱私權Mixin;IAB TCF 2.0；即時CDP；即時客戶資料概要檔案
+keywords: connence;setConnown;Profile Privacy Field group;Experience Event Privacy Field group;Privacy Field group;IAB TCF 2.0；即時CDP；即時客戶資料概要檔案
+exl-id: 78e728f4-1604-40bf-9e21-a056024bbc98
 translation-type: tm+mt
-source-git-commit: 1c6238a0cf72230e019fd10d9a72f30444bd9fb9
+source-git-commit: 7d7502b238f96eda1a15b622ba10bbccc289b725
 workflow-type: tm+mt
-source-wordcount: '878'
+source-wordcount: '883'
 ht-degree: 0%
 
 ---
-
 
 # Adobe Experience Platform網頁SDK中的IAB TCF 2.0支援
 
@@ -49,7 +49,7 @@ Adobe Audience Manager(AAM)包含IAB TCF 2.0支援，讓您評估、尊重客戶
 
 若要收集有關事件的同意資訊，請遵循下列規定：
 
-- 以[!DNL XDM Experience Event]類別為基礎、具有[!DNL Experience Event]隱私混音的資料集。
+- 基於[!DNL XDM Experience Event]類的資料集，具有[!DNL Experience Event]隱私模式欄位組。
 - 與上述[!DNL XDM Experience Event]資料集一起設定的邊緣設定。
 
 如需如何將XDM體驗事件轉換為Analytics點擊的詳細資訊，請先閱讀[Analytics overview](../../data-collection/adobe-analytics/analytics-overview.md)檔案。
