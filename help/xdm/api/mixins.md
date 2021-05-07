@@ -6,14 +6,21 @@ description: 架構註冊表API中的/mixins端點可讓您以程式設計方式
 topic-legacy: developer guide
 exl-id: 93ba2fe3-0277-4c06-acf6-f236cd33252e
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: a19a89d347b9197ab2766bd8a57018f5ac4f058d
 workflow-type: tm+mt
-source-wordcount: '1134'
+source-wordcount: '1193'
 ht-degree: 2%
 
 ---
 
-# Mixins端點
+
+# Mixins端點（已過時）
+
+>[!IMPORTANT]
+>
+>Mixin已重新命名為架構欄位群組，因此`/mixins`端點已過時，而偏向於`/fieldgroups`端點。
+>
+>雖然`/mixins`仍將維持為舊式端點，但強烈建議您使用`/fieldgroups`來建置體驗應用程式中的架構註冊表API。 有關詳細資訊，請參閱[欄位組端點指南](./field-groups.md)。
 
 Mixin是可重複使用的元件，它定義了表示特定概念的一個或多個欄位，例如個人、郵寄地址或Web瀏覽器環境。 Mixin將作為實現相容類的方案的一部分被包括，具體取決於它們所代表的資料（記錄或時間序列）的行為。 [!DNL Schema Registry] API中的`/mixins`端點可讓您以程式設計方式管理體驗應用程式中的混音。
 
@@ -154,7 +161,7 @@ curl -X GET \
 {
   "$id": "https://ns.adobe.com/{TENANT_ID}/mixins/8779fd45d6e4eb074300023a439862bbba359b60d451627a",
   "meta:altId": "_{TENANT_ID}.mixins.8779fd45d6e4eb074300023a439862bbba359b60d451627a",
-  "meta:resourceType": "mixins",
+  "meta:resourceType": "fieldgroups",
   "version": "1.2",
   "title": "Favorite Hotel",
   "type": "object",
@@ -300,7 +307,7 @@ curl -X POST \
 {
   "$id": "https://ns.adobe.com/{TENANT_ID}/mixins/8779fd45d6e4eb074300023a439862bbba359b60d451627a",
   "meta:altId": "_{TENANT_ID}.mixins.8779fd45d6e4eb074300023a439862bbba359b60d451627a",
-  "meta:resourceType": "mixins",
+  "meta:resourceType": "fieldgroups",
   "version": "1.2",
   "title": "Property Details",
   "type": "object",
@@ -480,7 +487,7 @@ curl -X PUT \
 {
   "$id": "https://ns.adobe.com/{TENANT_ID}/mixins/8779fd45d6e4eb074300023a439862bbba359b60d451627a",
   "meta:altId": "_{TENANT_ID}.mixins.8779fd45d6e4eb074300023a439862bbba359b60d451627a",
-  "meta:resourceType": "mixins",
+  "meta:resourceType": "fieldgroups",
   "version": "1.2",
   "title": "Property Details",
   "type": "object",
@@ -621,7 +628,7 @@ curl -X PATCH \
 {
   "$id": "https://ns.adobe.com/{TENANT_ID}/mixins/8779fd45d6e4eb074300023a439862bbba359b60d451627a",
   "meta:altId": "_{TENANT_ID}.mixins.8779fd45d6e4eb074300023a439862bbba359b60d451627a",
-  "meta:resourceType": "mixins",
+  "meta:resourceType": "fieldgroups",
   "version": "1.2",
   "title": "Property Details",
   "type": "object",
