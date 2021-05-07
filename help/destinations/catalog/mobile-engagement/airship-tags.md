@@ -2,14 +2,14 @@
 keywords: 飛艇標籤；飛艇目的地
 title: 飛艇標籤連接
 description: 順暢地將Adobe受眾資料傳遞至Anphish，作為Anphish中的目標受眾標籤。
+exl-id: 84cf5504-f0b5-48d8-8da1-ff91ee1dc171
 translation-type: tm+mt
-source-git-commit: 7d579d85d427c45f39d000288ed883c7ffd003bf
+source-git-commit: ab0798851e5f2b174d9f4241ad64ac8afa20a938
 workflow-type: tm+mt
-source-wordcount: '1134'
+source-wordcount: '1123'
 ht-degree: 1%
 
 ---
-
 
 # （測試版）[!DNL Airship Tags]連接{#airship-tags-destination}
 
@@ -43,7 +43,7 @@ ht-degree: 1%
 
 ## 標籤群組
 
-Adobe Experience Platform中區段的概念與Airship中的[Tags](https://docs.airship.com/guides/audience/tags/)類似，在實作上略有不同。 此整合會將Experience Platform區段](https://experienceleague.adobe.com/docs/experience-platform/xdm/mixins/profile/segmentation.html?lang=en#mixins)中使用者的[會籍狀態對應至[!DNL Airship]標籤的存在與否。 例如，在`xdm:status`變更為`realized`的「平台」區段中，標籤會新增至[!DNL Airship]頻道或此描述檔已映射至的指名用戶。 如果`xdm:status`變更為`exited`，則會移除標籤。
+Adobe Experience Platform中區段的概念與Airship中的[Tags](https://docs.airship.com/guides/audience/tags/)類似，在實作上略有不同。 此整合會將Experience Platform區段](../../../xdm/field-groups/profile/segmentation.md)中使用者的[會籍狀態對應至[!DNL Airship]標籤的存在與否。 例如，在`xdm:status`變更為`realized`的「平台」區段中，標籤會新增至[!DNL Airship]頻道或此描述檔已映射至的指名用戶。 如果`xdm:status`變更為`exited`，則會移除標籤。
 
 若要啟用此整合，請在[!DNL Airship]中建立名為`adobe-segments`的&#x200B;*標籤群組*。
 
@@ -157,4 +157,3 @@ Adobe Experience Platform中區段的概念與Airship中的[Tags](https://docs.a
 ## 資料使用與治理{#data-usage-governance}
 
 所有[!DNL Adobe Experience Platform]目標在處理資料時都符合資料使用原則。 有關[!DNL Adobe Experience Platform]如何實施資料治理的詳細資訊，請參閱[資料治理概述](../../../data-governance/home.md)。
-
