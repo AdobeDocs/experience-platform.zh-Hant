@@ -1,28 +1,28 @@
 ---
-keywords: Experience Platform;home；熱門主題；ui;UI;XDM;XDM系統；體驗資料模型；體驗資料模型；資料模型；資料模型；瀏覽；類；混合；資料類型；模式；
+keywords: Experience Platform;home；熱門主題；ui;UI;XDM;XDM系統；體驗資料模型；體驗資料模型；資料模型；資料模型；瀏覽；類；欄位組；資料類型；模式；
 solution: Experience Platform
 title: 在UI中探索XDM資源
-description: 瞭解如何在Experience Platform使用者介面中探索現有的架構、類別、混合和資料類型。
+description: 瞭解如何在Experience Platform用戶介面中探索現有方案、類、方案欄位組和資料類型。
 topic-legacy: tutorial
 type: Tutorial
 exl-id: b527b2a0-e688-4cfe-a176-282182f252f2
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: ab0798851e5f2b174d9f4241ad64ac8afa20a938
 workflow-type: tm+mt
-source-wordcount: '912'
+source-wordcount: '919'
 ht-degree: 0%
 
 ---
 
 # 在UI中探索XDM資源
 
-在Adobe Experience Platform，所有Experience Data Model(XDM)資源都儲存在[!DNL Schema Library]中，包括由Adobe提供的標準資源和您組織定義的自訂資源。 在Experience PlatformUI中，您可以在[!DNL Schema Library]中查看任何現有架構、類、混音或資料類型的結構和欄位。 當規劃和準備資料擷取時，這特別有用，因為UI會提供這些XDM資源所提供之每個欄位的預期資料類型和使用案例資訊。
+在Adobe Experience Platform，所有Experience Data Model(XDM)資源都儲存在[!DNL Schema Library]中，包括由Adobe提供的標準資源和您組織定義的自訂資源。 在Experience PlatformUI中，您可以在[!DNL Schema Library]中查看任何現有模式、類、模式欄位組或資料類型的結構和欄位。 當規劃和準備資料擷取時，這特別有用，因為UI會提供這些XDM資源所提供之每個欄位的預期資料類型和使用案例資訊。
 
-本教學課程涵蓋在Experience PlatformUI中探索現有結構描述、類別、混合和資料類型的步驟。
+本教學課程涵蓋在Experience PlatformUI中探索現有結構、類別、欄位群組和資料類型的步驟。
 
 ## 查找XDM資源{#lookup}
 
-在平台UI中，選擇左側導覽中的&#x200B;**[!UICONTROL Schemas]**。 [!UICONTROL Schemas]工作區提供&#x200B;**[!UICONTROL Browse]**&#x200B;標籤，以探索組織中所有現有的XDM資源，以及其他專用標籤，以特別探索&#x200B;**[!UICONTROL Classes]**、**[!UICONTROL Mixins]**&#x200B;和&#x200B;**[!UICONTROL Data types]**。
+在平台UI中，選擇左側導覽中的&#x200B;**[!UICONTROL Schemas]**。 [!UICONTROL Schemas]工作區提供&#x200B;**[!UICONTROL Browse]**&#x200B;標籤，以探索組織中所有現有的XDM資源，以及其他專用標籤，以特別探索&#x200B;**[!UICONTROL Classes]**、**[!UICONTROL Field groups]**&#x200B;和&#x200B;**[!UICONTROL Data types]**。
 
 ![](../images/ui/explore/tabs.png)
 
@@ -80,7 +80,7 @@ ht-degree: 0%
 
 ### 身份欄位{#identity}
 
-在檢查包含標識欄位的方案時，這些欄位將列在提供給方案的類或混合的左側導軌中。 選取左側欄中的識別欄位名稱，以顯示畫布中的欄位，不論欄位的巢狀有多深。
+在檢查包含標識欄位的方案時，這些欄位將列在提供給方案的類或欄位組的左側導軌中。 選取左側欄中的識別欄位名稱，以顯示畫布中的欄位，不論欄位的巢狀有多深。
 
 在畫布中，標識欄位會以指紋圖示（![指紋圖示影像](../images/ui/explore/identity-symbol.png)）反白顯示。 如果選擇標識欄位的名稱，則可以查看其他資訊，如[ identity namespace](../../identity-service/namespaces.md)，以及該欄位是否是架構的主標識。
 
