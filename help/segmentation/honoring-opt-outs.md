@@ -6,9 +6,9 @@ topic-legacy: overview
 description: Adobe Experience Platform允許您的客戶在即時客戶個人檔案中傳送有關資料使用和儲存的退出要求]。 這些選擇退出要求是加州消費者隱私法(CCPA)的一部分，該法案賦予加州居民存取和刪除個人資料的權利，並可得知他們的個人資料是否被出售或披露（以及向誰）。
 exl-id: fe851ce3-60db-4984-a73c-f9c5964bfbad
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: ab0798851e5f2b174d9f4241ad64ac8afa20a938
 workflow-type: tm+mt
-source-wordcount: '1013'
+source-wordcount: '1030'
 ht-degree: 0%
 
 ---
@@ -28,33 +28,33 @@ Adobe Experience Platform允許您的客戶在[!DNL Real-time Customer Profile]�
 - [[!DNL Experience Data Model (XDM)]](../xdm/home.md):平台組織客戶體驗資料的標準化架構。
 - [[!DNL Adobe Experience Platform Privacy Service]](../privacy-service/home.md):協助組織自動遵守與客戶資料相關的資料隱私權法規 [!DNL Platform]。
 
-## 選擇退出混音
+## 退出結構欄位群組
 
-為了滿足CCPA選擇退出請求，作為聯合模式一部分的方案之一必須包含必要的[!DNL Experience Data Model](XDM)選擇退出欄位。 有兩種混音可用來將選擇退出欄位新增至結構，每種混音在下列各節中會有更詳細的說明：
+為了滿足CCPA選擇退出請求，作為聯合模式一部分的方案之一必須包含必要的[!DNL Experience Data Model](XDM)選擇退出欄位。 有兩種架構欄位群組可用來將選擇退出欄位新增至架構，每個群組在下列各節中會有更詳細的說明：
 
 - [設定檔隱私權](#profile-privacy):用於擷取不同的退出類型（一般或銷售／共用）。
 - [描述檔偏好設定詳細資訊](#profile-preferences-details):用於擷取特定XDM頻道的退出要求。
 
-有關如何將混音新增至架構的逐步指示，請參閱下列XDM檔案中的「新增混音」一節：
+有關如何將欄位組添加到架構的逐步說明，請參閱以下XDM文檔中的「添加欄位組」部分：
 - [方案註冊表API教程](../xdm/api/getting-started.md)。:使用方案註冊表API構建方案。
 - [架構編輯器教程](../xdm/tutorials/create-schema-ui.md):使用平台使用者介面建立架構。
 
-以下是使用者介面中新增至架構的退出混音範例影像：
+以下是使用者介面中新增至架構的退出欄位群組範例影像：
 
-![](images/opt-outs/opt-out-mixins-user-interface.png)
+![](images/opt-outs/opt-out-field-groups-user-interface.png)
 
-以下各節將詳細說明每個混音的結構，以及它們對架構所貢獻的欄位說明。
+以下各節將更詳細地介紹每個欄位組的結構，以及它們對模式所貢獻的欄位的說明。
 
 ### [!DNL Profile Privacy] {#profile-privacy}
 
-[!DNL Profile Privacy] mixin可讓您擷取客戶的兩種CCPA退出要求：
+[!DNL Profile Privacy]欄位群組可讓您擷取客戶的兩種CCPA退出要求：
 
 1. 一般退出
 2. 銷售／分享選擇退出
 
 ![](images/opt-outs/profile-privacy.png)
 
-[!DNL Profile Privacy] mixin包含下列欄位：
+[!DNL Profile Privacy]欄位群組包含下列欄位：
 
 - 隱私權退出(`privacyOptOuts`):包含退出對象清單的陣列。
 - 退出類型(`optOutType`):選擇退出的類型。 此欄位是具有兩個可能值的列舉：
@@ -67,15 +67,15 @@ Adobe Experience Platform允許您的客戶在[!DNL Real-time Customer Profile]�
    - 選擇加入(`in`):客戶已選擇加入。
 - 退出時間戳記(`timestamp`):接收的選擇退出信號的時間戳。
 
-若要檢視[!DNL Profile Privacy] mixin的完整結構，請參閱[ XDM public GitHub存放庫](https://github.com/adobe/xdm/blob/master/schemas/context/profile-privacy.schema.json)，或使用Platform UI預覽mixin。
+若要檢視[!DNL Profile Privacy]欄位群組的完整結構，請參閱[ XDM public GitHub存放庫](https://github.com/adobe/xdm/blob/master/schemas/context/profile-privacy.schema.json)或使用平台UI預覽欄位群組。
 
 ### [!DNL Profile Preferences Details] {#profile-preferences-details}
 
-[!DNL Profile Preferences Details] mixin提供數個欄位，代表客戶個人檔案的偏好設定（例如電子郵件格式、偏好語言和時區）。 此混音中包含的其中一個欄位OptInOut(`optInOut`)可讓個別頻道設定選擇退出值。
+[!DNL Profile Preferences Details]欄位群組提供數個欄位，代表客戶個人檔案的偏好設定（例如電子郵件格式、偏好語言和時區）。 此欄位群組包含的其中一個欄位OptInOut(`optInOut`)可讓個別頻道設定選擇退出值。
 
 ![](images/opt-outs/profile-preferences-details.png)
 
-[!DNL Profile Preferences Details] mixin包含下列與退出相關的欄位：
+[!DNL Profile Preferences Details]欄位群組包含下列與退出相關的欄位：
 
 - OptInOut(`optInOut`):其中每個密鑰代表通信通道的有效和已知URI的對象，以及每個通道的退出的活動狀態。 每個渠道可能有四個可能值之一：
    - 未提供(`not_provided`):此渠道未提供選擇退出請求。
@@ -100,7 +100,7 @@ Adobe Experience Platform允許您的客戶在[!DNL Real-time Customer Profile]�
 }
 ```
 
-若要檢視「描述檔偏好設定詳細資料」混合檔的完整結構，請造訪[ XDM public GitHub存放庫](https://github.com/adobe/xdm/blob/master/schemas/context/profile-preferences-details.schema.json)，或使用[!DNL Platform] UI預覽混合檔。
+若要檢視「描述檔偏好設定詳細資料」欄位群組的完整結構，請造訪[ XDM public GitHub存放庫](https://github.com/adobe/xdm/blob/master/schemas/context/profile-preferences-details.schema.json)，或使用[!DNL Platform] UI預覽欄位群組。
 
 ## 處理區段中的退出選項
 
