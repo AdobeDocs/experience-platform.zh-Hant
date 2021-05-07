@@ -1,25 +1,25 @@
 ---
-title: 使用Adobe Experience Platform Web SDK收集商務和產品資訊
-description: 瞭解如何使用Adobe Experience Platform Web SDK新增與產品或購物車相關的資料。
+title: 使用Adobe Experience PlatformWeb SDK收集商務和產品資訊
+description: 瞭解如何使用Adobe Experience Platform網頁SDK新增與產品或購物車相關的資料。
 keywords: products;commerce;measures;measure;order;cartAdnabons；結帳；productListAdds;productListOpens;productListReopens;productListViews;productViews;purchases;saveForLaters;currencyCode;payments;paymentAmentType;transactionID;price;priceID;priceTotal;purchaseID;purchaseOrderNumber;
+exl-id: 3c79e776-89ef-494b-a2ea-3c23efce09ae
 translation-type: tm+mt
-source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
+source-git-commit: 7d7502b238f96eda1a15b622ba10bbccc289b725
 workflow-type: tm+mt
-source-wordcount: '1321'
+source-wordcount: '1324'
 ht-degree: 6%
 
 ---
 
-
 # 收集商務和產品資訊
 
-如果您的網站上有產品，則這是您可能想要傳送的預設項目集，以啟用Adobe的最多功能。 雖然這是一個建議，但它從一開始就提供了一組非常強大的資料。
+如果您的網站上有產品，則這是您可能想要傳送的預設項目集，以啟用來自Adobe的最多功能。 雖然這是一個建議，但它從一開始就提供了一組非常強大的資料。
 
-本檔案使用[ExperienceEvent Commerce Details](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/context/experienceevent-commerce.schema.md) mixin。 `commerce`混音分為兩部分：`commerce`物件和`productListItems`陣列。 `commerce`物件可讓您指出`productListItems`陣列正在發生哪些動作。
+本文檔使用[ExperienceEvent Commerce Details](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/context/experienceevent-commerce.schema.md)結構欄位群組。 `commerce`欄位群組分為兩部分：`commerce`物件和`productListItems`陣列。 `commerce`物件可讓您指出`productListItems`陣列正在發生哪些動作。
 
 >[!TIP]
 >
->如果您熟悉Adobe Analytics,`commerce`與`events`變數的關係最密切。 `productListItems`與`products`變數的關係更密切。
+>如果您熟悉Adobe Analytics,`commerce`與`events`變數的關聯最密切。 `productListItems`與`products`變數的關係更密切。
 
 ## 與產品相關的動作
 
