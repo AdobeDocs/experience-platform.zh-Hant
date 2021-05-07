@@ -6,9 +6,9 @@ topic-legacy: overview
 description: 本檔案提供XDM ExperienceEvent類別的概觀。
 exl-id: a8e59413-b52f-4ea5-867b-8d81088a3321
 translation-type: tm+mt
-source-git-commit: 9b63b38e664e5776ca638f8ed407896f185bcab0
+source-git-commit: ab0798851e5f2b174d9f4241ad64ac8afa20a938
 workflow-type: tm+mt
-source-wordcount: '861'
+source-wordcount: '867'
 ht-degree: 1%
 
 ---
@@ -31,16 +31,16 @@ ht-degree: 1%
 | `identityMap` | 映射欄位，包含事件所應用的個人的一組命名空間標識。 系統會在擷取身分資料時自動更新此欄位。 為了將此欄位正確用於[即時客戶概要檔案](../../profile/home.md)，請勿嘗試手動更新資料操作中的欄位內容。<br /><br />如需其使用案例的詳細資訊，請參 [閱架構構](../schema/composition.md#identityMap) 成基礎中有關身分映射的章節。 |
 | `timestamp` | 事件發生時的ISO 8601時間戳記，格式為[RFC 3339第5.6節](https://tools.ietf.org/html/rfc3339#section-5.6)。<br><br>此時間戳 **** 記只能代表事件本身的觀察，且必須發生在過去。如果您的分段使用案例需要使用未來可能發生的時間戳記（例如啟程日期），這些值必須限制在您的「體驗事件」結構的其他位置。 |
 
-## 相容混音{#mixins}
+## 相容模式欄位組{#field-groups}
 
 >[!NOTE]
 >
->幾個混音的名字已經改變。 如需詳細資訊，請參閱[mixin name updates](../mixins/name-updates.md)上的檔案。
+>數個欄位群組的名稱已變更。 如需詳細資訊，請參閱[欄位群組名稱updates](../field-groups/name-updates.md)上的檔案。
 
-Adobe提供數種標準混音，以便與[!DNL XDM ExperienceEvent]類一起使用。 以下是類別中常用混合詞的清單：
+Adobe提供多個標準欄位組，用於[!DNL XDM ExperienceEvent]類。 以下是類中一些常用欄位組的清單：
 
-* [[!UICONTROL End User ID Details]](../mixins/event/enduserids.md)
-* [[!UICONTROL Environment Details]](../mixins/event/environment-details.md)
+* [[!UICONTROL End User ID Details]](../field-groups/event/enduserids.md)
+* [[!UICONTROL Environment Details]](../field-groups/event/environment-details.md)
 
 ## 附錄
 
