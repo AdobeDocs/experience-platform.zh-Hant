@@ -6,16 +6,16 @@ description: 瞭解如何在Experience Platform用戶介面中定義對象類型
 topic-legacy: user guide
 exl-id: 5b7b3cf0-7f11-4e15-af87-09127f4423a5
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
 workflow-type: tm+mt
-source-wordcount: '301'
+source-wordcount: '304'
 ht-degree: 0%
 
 ---
 
 # 在UI中定義物件欄位
 
-Adobe Experience Platform可讓您完全自訂自訂體驗資料模型(XDM)類別、混合和資料類型的結構。 為了在自訂XDM資源中組織和巢狀內嵌相關欄位，您可以定義物件類型欄位，其中可包含其他子欄位。
+Adobe Experience Platform可讓您完全自訂自訂體驗資料模型(XDM)類別、結構欄位群組和資料類型的結構。 為了在自訂XDM資源中組織和巢狀內嵌相關欄位，您可以定義物件類型欄位，其中可包含其他子欄位。
 
 當[在Adobe Experience Platform用戶介面中定義新欄位](./overview.md#define)時，使用&#x200B;**[!UICONTROL Type]**&#x200B;下拉式清單並從清單中選擇&quot;[!UICONTROL Object]&quot;。
 
@@ -33,7 +33,7 @@ Adobe Experience Platform可讓您完全自訂自訂體驗資料模型(XDM)類�
 
 ![](../../images/ui/fields/special/object-nested.png)
 
-在完成物件建構後，您可能會發現想要在不同的類別和混合中重複使用其結構。 在這種情況下，您可以選擇將對象轉換為資料類型。 如需詳細資訊，請參閱資料類型UI指南中有關將物件轉換為資料類型](../resources/data-types.md#convert)的章節。[
+在完成對象構建後，您可能會發現要在不同的類和欄位組中重複使用其結構。 在這種情況下，您可以選擇將對象轉換為資料類型。 如需詳細資訊，請參閱資料類型UI指南中有關將物件轉換為資料類型](../resources/data-types.md#convert)的章節。[
 
 ## 後續步驟
 
