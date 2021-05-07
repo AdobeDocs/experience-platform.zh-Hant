@@ -6,9 +6,9 @@ description: 本文檔介紹了在嘗試調用方案註冊表API之前需要知�
 topic-legacy: developer guide
 exl-id: 7daebb7d-72d2-4967-b4f7-1886736db69f
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
 workflow-type: tm+mt
-source-wordcount: '1363'
+source-wordcount: '1367'
 ht-degree: 0%
 
 ---
@@ -85,16 +85,16 @@ curl -X GET \
   "tenantId":"{TENANT_ID}",
   "counts": {
     "schemas": 4,
-    "mixins": 3,
+    "fieldgroups": 3,
     "datatypes": 1,
     "classes": 2,
     "unions": 0,
   },
   "recentlyCreatedResources": [ 
     {
-      "title": "Sample Mixin",
-      "description": "New Sample Mixin.",
-      "meta:resourceType": "mixins",
+      "title": "Sample Field Group",
+      "description": "New Sample Field Group.",
+      "meta:resourceType": "fieldgroups",
       "meta:created": "Sat Feb 02 2019 00:24:30 GMT+0000 (UTC)",
       "version": "1.1"
     },
@@ -109,9 +109,9 @@ curl -X GET \
   ],
   "recentlyUpdatedResources": [
     {
-      "title": "Sample Mixin",
-      "description": "New Sample Mixin.",
-      "meta:resourceType": "mixins",
+      "title": "Sample Field Group",
+      "description": "New Sample Field Group.",
+      "meta:resourceType": "fieldgroups",
       "meta:updated": "Sat Feb 02 2019 00:34:06 GMT+0000 (UTC)",
       "version": "1.1"
     },
@@ -160,7 +160,7 @@ curl -X GET \
 
 ### 全域容器
 
-`global`容器包含所有標準Adobe和[!DNL Experience Platform]合作夥伴提供的類、混合、資料類型和方案。 您只能對`global`容器執行清單和查閱(GET)請求。
+`global`容器包含所有標準Adobe和[!DNL Experience Platform]合作夥伴提供的類、方案欄位組、資料類型和方案。 您只能對`global`容器執行清單和查閱(GET)請求。
 
 使用`global`容器的呼叫範例如下：
 
@@ -170,15 +170,15 @@ GET /global/classes
 
 ### 租用戶容器
 
-不要與您的唯一`TENANT_ID`混淆，`tenant`容器包含由IMS組織定義的所有類、混合、資料類型、方案和描述符。 這是每個組織所獨有的，也就是說，其他IMS組織無法看到或管理。 您可以對在`tenant`容器中建立的資源執行所有CRUD操作(GET、POST、PUT、PATCH、DELETE)。
+不要與您的唯一`TENANT_ID`混淆，`tenant`容器包含由IMS組織定義的所有類、欄位組、資料類型、方案和描述符。 這是每個組織所獨有的，也就是說，其他IMS組織無法看到或管理。 您可以對在`tenant`容器中建立的資源執行所有CRUD操作(GET、POST、PUT、PATCH、DELETE)。
 
 使用`tenant`容器的呼叫範例如下：
 
 ```http
-POST /tenant/mixins
+POST /tenant/fieldgroups
 ```
 
-在`tenant`容器中建立類、混音、模式或資料類型時，該類將保存到[!DNL Schema Registry]，並為其分配一個包含`TENANT_ID`的`$id` URI。 此`$id`用於整個API中以參考特定資源。 `$id`值的範例將在下一節中提供。
+在`tenant`容器中建立類、欄位組、方案或資料類型時，它將保存到[!DNL Schema Registry]，並分配一個包含`TENANT_ID`的`$id` URI。 此`$id`用於整個API中以參考特定資源。 `$id`值的範例將在下一節中提供。
 
 ## 資源標識{#resource-identification}
 
