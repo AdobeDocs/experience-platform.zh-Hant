@@ -6,9 +6,9 @@ last-update: April 21, 2021
 author: ens72741
 exl-id: 8f2c9bf8-1487-46e4-993b-bd9b63774cab
 translation-type: tm+mt
-source-git-commit: f0350be580394516016373b1754a49951b58e846
+source-git-commit: ab0798851e5f2b174d9f4241ad64ac8afa20a938
 workflow-type: tm+mt
-source-wordcount: '883'
+source-wordcount: '885'
 ht-degree: 10%
 
 ---
@@ -45,7 +45,7 @@ Experience Data Model(XDM)是開放原始碼規格，旨在提升數位體驗的
 
 | 功能 | 說明 |
 | --- | --- |
-| 依產業區分的方案建議 | 在架構編輯器UI中選取類別和混合時，您可以使用新的篩選器，根據您的特定產業檢視建議的標準元件。 有關這些元件在不同行業使用案例中如何相互關聯的詳細資訊，請參閱[行業資料模型](https://www.adobe.com/go/xdm-industry-erds-en)上的文檔。 |
+| 依產業區分的方案建議 | 在架構編輯器UI中選擇類和架構欄位組時，可以使用新篩選器根據您的特定行業查看建議的標準元件。 有關這些元件在不同行業使用案例中如何相互關聯的詳細資訊，請參閱[行業資料模型](https://www.adobe.com/go/xdm-industry-erds-en)上的文檔。 |
 
 ## [!DNL Intelligent Services] {#intelligent-services}
 
