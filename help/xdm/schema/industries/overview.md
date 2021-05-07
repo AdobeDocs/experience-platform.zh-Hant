@@ -5,9 +5,9 @@ topic-legacy: overview
 description: 瞭解各種產業的標準化資料模型，這些模型可使用標準的體驗資料模型(XDM)元件來建立。
 exl-id: 8fa9a610-36b5-470f-ad63-f2a4a060e0f1
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: ab0798851e5f2b174d9f4241ad64ac8afa20a938
 workflow-type: tm+mt
-source-wordcount: '511'
+source-wordcount: '514'
 ht-degree: 0%
 
 ---
@@ -29,7 +29,7 @@ Experience Data Model(XDM)可讓您建立高度可自訂的結構描述，以擷
 要閱讀本指南中引用的ERD，您必須瞭解XDM元件如何進行交互以形成模式，以及XDM模式如何在整個Experience Platform中運行。 請確定您已閱讀下列概述檔案，然後再繼續：
 
 * [XDM系統概述](../../home.md):瞭解XDM如何在平台生態系統中運作。
-* [架構構成基礎](../../schema/composition.md):瞭解XDM元件（例如混合、類別和資料類型）對架構結構以及身分欄位角色的貢獻。
+* [架構構成基礎](../../schema/composition.md):瞭解XDM元件（如架構欄位組、類和資料類型）對架構結構以及身份欄位的角色的貢獻。
 
 建議您檢閱[資料模型最佳實務指南](../../schema/best-practices.md)，以瞭解如何將資料對應至XDM的一般准則。
 
@@ -37,7 +37,7 @@ Experience Data Model(XDM)可讓您建立高度可自訂的結構描述，以擷
 
 以下ERD代表的業界垂直模型是以去標準化方式刻意建立的，並考量資料在平台中的儲存方式。
 
-對於給定的ERD，中顯示的每個實體都基於基礎的XDM類。 對於給定實體，在&#x200B;**bold**&#x200B;中標籤的每一行代表混音或資料類型，其提供的相關欄位以未加粗文本列出。 指定實體的最重要欄位會以紅色反白顯示。
+對於給定的ERD，中顯示的每個實體都基於基礎的XDM類。 對於給定實體，在&#x200B;**bold**&#x200B;中標籤的每一行代表欄位組或資料類型，其提供的相關欄位以未加粗文本列在下面。 指定實體的最重要欄位會以紅色反白顯示。
 
 >[!NOTE]
 >
