@@ -6,9 +6,9 @@ description: 瞭解如何在Experience Platform使用者介面中建立和編輯
 topic-legacy: user guide
 exl-id: be83ce96-65b5-4a4a-8834-16f7ef9ec7d1
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
 workflow-type: tm+mt
-source-wordcount: '1340'
+source-wordcount: '1370'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->XDM架構具有極強的可自訂性，因此，建立架構時涉及的步驟可能會因您希望架構捕獲的資料類型而異。 因此，本文檔僅涵蓋您可在UI中與結構描述進行的基本互動，並排除自訂類別、混合、資料類型和欄位等相關步驟。
+>XDM架構具有極強的可自訂性，因此，建立架構時涉及的步驟可能會因您希望架構捕獲的資料類型而異。 因此，本文檔僅涵蓋您可在UI中與結構描述進行的基本互動，並排除自訂類別、結構描述欄位群組、資料類型和欄位等相關步驟。
 >
 >有關模式建立過程的完整指南，請遵循[模式建立教程](../../tutorials/create-schema-ui.md)來建立完整的示例模式並熟悉[!DNL Schema Editor]的許多功能。
 
@@ -37,7 +37,7 @@ ht-degree: 0%
 
 ![](../../images/ui/resources/schemas/schema-details.png)
 
-您現在可以通過[添加mixins](#add-mixins)開始構建架構結構。
+現在，您可以通過[添加模式欄位組](#add-field-groups)開始構建模式結構。
 
 ## 編輯現有模式{#edit}
 
@@ -53,23 +53,23 @@ ht-degree: 0%
 >
 >您可以使用工作區的搜尋和篩選功能，協助您更輕鬆地尋找結構。 如需詳細資訊，請參閱[探索XDM資源](../explore.md)指南。
 
-選擇架構後，[!DNL Schema Editor]將顯示，其結構顯示在畫布中。 您現在可以在架構中加入[mixins](#add-mixins)、[編輯欄位顯示名稱](#display-names)或[，如果架構採用任何，則可編輯現有的自訂mixins](./mixins.md#edit)。
+選擇架構後，[!DNL Schema Editor]將顯示，其結構顯示在畫布中。 現在，如果方案採用任何方案，您可以[將欄位組](#add-field-groups)添加到方案中， [編輯欄位顯示名稱](#display-names)，或[編輯現有的自定義欄位組](./field-groups.md#edit)。
 
-## 將混合添加到架構{#add-mixins}
+## 將欄位組添加到方案{#add-field-groups}
 
 >[!NOTE]
 >
->本節介紹如何將現有混音新增至架構。 如果您想要建立新的自訂混音，請參閱[建立和編輯混音](./mixins.md#create)的指南。
+>本節介紹如何將現有欄位組添加到架構中。 如果要建立新的自定義欄位組，請參閱[建立和編輯欄位組](./field-groups.md#create)上的指南。
 
-在[!DNL Schema Editor]中開啟架構後，可以通過使用mixins將欄位添加到架構中。 若要開始，請選取左側導軌中&#x200B;**[!UICONTROL Mixins]**&#x200B;旁的&#x200B;**[!UICONTROL Add]**。
+在[!DNL Schema Editor]中開啟架構後，可以通過使用欄位組將欄位添加到架構中。 若要開始，請選取左側導軌中&#x200B;**[!UICONTROL Field groups]**&#x200B;旁的&#x200B;**[!UICONTROL Add]**。
 
-![](../../images/ui/resources/schemas/add-mixin-button.png)
+![](../../images/ui/resources/schemas/add-field-group-button.png)
 
-此時將出現一個對話框，其中顯示可為模式選擇的混音清單。 由於mixin只與一個類相容，因此將只列出與架構的所選類相關聯的mixin。 依預設，會根據所列出的混音在您組織中的使用人氣來排序。
+此時將顯示一個對話框，其中顯示可為架構選擇的欄位組清單。 由於欄位組只與一個類相容，因此將只列出與方案選定類關聯的那些欄位組。 依預設，列出的欄位群組會根據其在您組織中的使用人氣來排序。
 
-![](../../images/ui/resources/schemas/mixin-popularity.png)
+![](../../images/ui/resources/schemas/field-group-popularity.png)
 
-如果您知道要新增的混音欄位的一般活動或業務區域，請在左側導軌中選取一或多個產業垂直類別，以篩選顯示的混音清單。
+如果您知道要添加的欄位的一般活動或業務區，請在左側導軌中選擇一個或多個行業垂直類別，以過濾顯示的欄位組清單。
 
 ![](../../images/ui/resources/schemas/industry-filter.png)
 
@@ -77,25 +77,25 @@ ht-degree: 0%
 >
 >有關XDM中特定行業資料建模的最佳實踐的詳細資訊，請參閱[行業資料模型](../../schema/industries/overview.md)上的文檔。
 
-您也可以使用搜尋列來協助找出您想要的混音。 名稱與查詢相符的Mixin會出現在清單的頂端。 在&#x200B;**[!UICONTROL Standard Fields]**&#x200B;下方，會顯示包含描述所需資料屬性之欄位的混音。
+您也可以使用搜尋列來協助找出您所要的欄位群組。 名稱與查詢相符的欄位群組會出現在清單頂端。 在&#x200B;**[!UICONTROL Standard Fields]**&#x200B;下，會顯示包含描述所需資料屬性之欄位的欄位群組。
 
-![](../../images/ui/resources/schemas/mixin-search.png)
+![](../../images/ui/resources/schemas/field-group-search.png)
 
-選擇要添加到架構的混合名稱旁邊的複選框。 您可以從清單中選取多個混音，每個選取的混音都會出現在右側邊欄中。
+選擇要添加到方案的欄位組名稱旁的複選框。 您可以從清單中選取多個欄位群組，每個選取的欄位群組都會顯示在右側欄位中。
 
-![](../../images/ui/resources/schemas/add-mixin.png)
+![](../../images/ui/resources/schemas/add-field-group.png)
 
 >[!TIP]
 >
->對於任何列出的混音，您可以將滑鼠暫留或專注在資訊圖示(![](../../images/ui/resources/schemas/info-icon.png))上，以檢視混音所擷取之資料的簡短說明。 您也可以選擇預覽圖示(![](../../images/ui/resources/schemas/preview-icon.png))，以在您決定將其添加到架構之前，查看混音所提供欄位的結構。
+>對於任何列出的欄位組，您可以將滑鼠暫留在資訊表徵圖(![](../../images/ui/resources/schemas/info-icon.png))上查看欄位組捕獲的資料類型的簡要說明。 您也可以選擇預覽表徵圖(![](../../images/ui/resources/schemas/preview-icon.png))，在決定將欄位組添加到方案之前查看欄位組提供的欄位結構。
 
-選擇混合後，選擇&#x200B;**[!UICONTROL Add mixin]**&#x200B;將其添加到模式。
+選擇欄位組後，選擇&#x200B;**[!UICONTROL Add field groups]**&#x200B;將其添加到模式。
 
-![](../../images/ui/resources/schemas/add-mixin-finish.png)
+![](../../images/ui/resources/schemas/add-field-group-finish.png)
 
-[!DNL Schema Editor]會重新顯示，畫布中會顯示混合提供的欄位。
+[!DNL Schema Editor]會重新顯示，畫布中會顯示欄位群組提供的欄位。
 
-![](../../images/ui/resources/schemas/mixins-added.png)
+![](../../images/ui/resources/schemas/field-groups-added.png)
 
 ## 啟用即時客戶配置檔案{#profile}的方案
 
@@ -127,11 +127,11 @@ ht-degree: 0%
 
 ## 編輯架構欄位{#display-names}的顯示名稱
 
-一旦分配了類並將混音添加到架構後，您就可以編輯該架構的任何欄位的顯示名稱，而不管這些欄位是由標準還是自定義XDM資源提供。
+在為架構分配了類並添加了欄位組後，您可以編輯該架構的任何欄位的顯示名稱，而不管這些欄位是由標準還是自定義XDM資源提供。
 
 >[!NOTE]
 >
->請記住，屬於標準類或混合的欄位的顯示名稱只能在特定架構的上下文中編輯。 換句話說，更改一個方案中標準欄位的顯示名稱不會影響使用相同關聯類或混合的其他方案。
+>請記住，屬於標準類或欄位組的欄位的顯示名稱只能在特定方案的上下文中編輯。 換句話說，更改一個方案中標準欄位的顯示名稱不會影響使用相同關聯類或欄位組的其他方案。
 
 若要編輯結構欄位的顯示名稱，請選取畫布中的欄位。 在右邊欄中，在&#x200B;**[!UICONTROL Display name]**&#x200B;下提供新名稱。
 
@@ -147,7 +147,7 @@ ht-degree: 0%
 
 >[!WARNING]
 >
->重新指派架構的類別時應格外小心。 Mixins僅與特定類別相容，因此變更類別會重設畫布和您新增的任何欄位。
+>重新指派架構的類別時應格外小心。 欄位群組僅與特定類別相容，因此變更類別將重設畫布和您新增的任何欄位。
 
 要重新指派類，請在畫布左側選擇&#x200B;**[!UICONTROL Assign]**。
 
@@ -167,7 +167,7 @@ ht-degree: 0%
 
 ## 後續步驟
 
-本檔案涵蓋在平台UI中建立和編輯結構描述的基本知識。 強烈建議您檢閱[架構建立教學課程](../../tutorials/create-schema-ui.md)，以取得在UI中建立完整架構的完整工作流程，包括建立自訂混合和資料類型，以利獨特使用案例。
+本檔案涵蓋在平台UI中建立和編輯結構描述的基本知識。 強烈建議您檢閱[架構建立教學課程](../../tutorials/create-schema-ui.md)，以取得在UI中建立完整架構的完整工作流程，包括建立自訂欄位群組和資料類型，以利獨特使用案例。
 
 有關[!UICONTROL Schemas]工作區功能的詳細資訊，請參閱[[!UICONTROL Schemas]工作區概述](../overview.md)。
 
