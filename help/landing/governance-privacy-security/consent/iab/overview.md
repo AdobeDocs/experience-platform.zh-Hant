@@ -6,9 +6,9 @@ topic-legacy: privacy events
 description: 瞭解如何設定您的資料作業和結構，以在將區段啟動至Adobe Experience Platform的目的地時傳達客戶同意選擇。
 exl-id: af787adf-b46e-43cf-84ac-dfb0bc274025
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: ab0798851e5f2b174d9f4241ad64ac8afa20a938
 workflow-type: tm+mt
-source-wordcount: '2459'
+source-wordcount: '2466'
 ht-degree: 0%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 0%
 >
 >有關TCF 2.0的更多資訊可在[IAB歐洲網站](https://iabeurope.eu/tcf-2-0/)上找到，包括支援材料和技術規格。
 
-Adobe Experience Platform是已註冊[IAB TCF 2.0供應商清單](https://iabeurope.eu/vendor-list-tcf-v2-0/)的一部分，該清單位於ID **565**&#x200B;下。 根據TCF 2.0要求，Platform可讓您收集客戶同意資料，並將其整合到您儲存的客戶個人檔案中。 然後，視使用案例而定，可以將此同意資料納入匯出的受眾細分中。
+Adobe Experience Platform是註冊的[IAB TCF 2.0供應商清單](https://iabeurope.eu/vendor-list-tcf-v2-0/)的一部分，該清單位於ID **565**&#x200B;下。 根據TCF 2.0要求，Platform可讓您收集客戶同意資料，並將其整合到您儲存的客戶個人檔案中。 然後，視使用案例而定，可以將此同意資料納入匯出的受眾細分中。
 
 >[!IMPORTANT]
 >
@@ -104,7 +104,7 @@ Adobe Experience Platform是已註冊[IAB TCF 2.0供應商清單](https://iabeur
 
 在您建立[!DNL Profile]啟用的資料集以收集同意資料後，您必須確保您的合併政策已設定為一律在客戶個人檔案中包含TCF同意欄位。 這包括設定資料集優先順序，讓您的同意資料集優先順序高於其他可能衝突的資料集。
 
-有關如何使用合併策略的詳細資訊，請參閱[合併策略使用手冊](../../../../profile/ui/merge-policies.md)。 設定合併政策時，您必須確保區段包含[XDM隱私權mixin](./dataset.md#privacy-mixin)提供的所有必要同意屬性，如資料集準備指南所述。
+有關如何使用合併策略的詳細資訊，請參閱[合併策略使用手冊](../../../../profile/ui/merge-policies.md)。 設定合併政策時，您必須確定您的區段包含[XDM隱私權架構欄位群組](./dataset.md#privacy-field-group)提供的所有必要同意屬性，如資料集準備指南所述。
 
 ## 整合Experience PlatformWeb SDK以收集客戶同意資料{#sdk}
 
@@ -196,7 +196,7 @@ OneTrust.OnConsentChanged(function () {
 
 >[!NOTE]
 >
->若要使用此方法，您必須將[!DNL Experience Event Privacy mixin]新增至已啟用[!DNL Profile]的[!DNL XDM ExperienceEvent]架構。 請參閱資料集準備指南中有關[更新ExperienceEvent架構](./dataset.md#event-schema)的章節，以取得如何設定此架構的步驟。
+>若要使用此方法，您必須將「體驗事件隱私權」欄位群組新增至已啟用[!DNL Profile]的[!DNL XDM ExperienceEvent]架構。 請參閱資料集準備指南中有關[更新ExperienceEvent架構](./dataset.md#event-schema)的章節，以取得如何設定此架構的步驟。
 
 `sendEvent`命令應當用作您網站上適當事件監聽器的回呼。 該命令需要兩個參數：(1)指出命令類型的字串（在本例中為`sendEvent`），以及(2)包含`xdm`物件的裝載，以JSON形式提供必要的同意欄位：
 
