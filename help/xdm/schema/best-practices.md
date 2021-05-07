@@ -6,9 +6,9 @@ topic-legacy: overview
 description: 本檔案介紹Experience Data Model(XDM)架構，以及組合要在Adobe Experience Platform使用的架構的構建區塊、原則和最佳實務。
 exl-id: 2455a04e-d589-49b2-a3cb-abb5c0b4e42f
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: ab0798851e5f2b174d9f4241ad64ac8afa20a938
 workflow-type: tm+mt
-source-wordcount: '2502'
+source-wordcount: '2511'
 ht-degree: 1%
 
 ---
@@ -75,7 +75,7 @@ ht-degree: 1%
 | --- | --- | --- | --- | --- |
 | 郵編：1234567 | 新增 | 郵遞區號275098 | 2 | 10月1日，上午10點32分 |
 | 郵編：1234567 | 移除 | 郵遞區號275098 | 1 | 10月1日，上午10點33分 |
-| 郵編：1234567 | 新增 | 郵編：486502 | 3 | 10月1日，上午10點41分 |
+| 郵編：1234567 | 新增 | 郵編：486502 | 1 | 10月1日，上午10點41分 |
 | 郵編：1234567 | 新增 | 郵編：910482 | 5 | 10月3日，下午2:15 |
 
 #### 區段使用案例
@@ -193,26 +193,26 @@ ht-degree: 1%
 
 在設計方案時，關係資料庫表中的任何主鍵都可能是主標識的候選。 適用身分欄位的其他範例包括客戶電子郵件地址、電話號碼、帳戶ID和[ECID](../../identity-service/ecid.md)。
 
-### Adobe應用混合
+### Adobe應用程式架構欄位組
 
-Experience Platform提供數種現成可用的XDM混合，用於捕獲與以下Adobe應用程式相關的資料：
+Experience Platform提供幾個現成可用的XDM模式欄位組，用於捕獲與以下Adobe應用程式相關的資料：
 
 * Adobe Analytics
 * Adobe Audience Manager
 * Adobe Campaign
 * Adobe Target
 
-例如，[[!UICONTROL Adobe Analytics ExperienceEvent Template Mixin]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/analytics/experienceevent-all.schema.json)允許您將[!DNL Analytics]特定欄位映射到XDM結構。 根據您使用的Adobe應用程式，您應該在結構中使用這些Adobe提供的混合。
+例如，[[!UICONTROL Adobe Analytics ExperienceEvent Template]欄位組](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/analytics/experienceevent-all.schema.json)允許您將[!DNL Analytics]特定欄位映射到XDM方案。 根據您正在使用的Adobe應用程式，您應該在方案中使用這些Adobe提供的欄位組。
 
-<img src="../images/best-practices/analytics-mixin.png" width="700"><br>
+<img src="../images/best-practices/analytics-field-group.png" width="700"><br>
 
-Adobe應用程式混合會通過使用`identityMap`欄位自動分配預設的主標識，該欄位是系統生成的只讀對象，用於映射單個客戶的標準標識值。
+Adobe應用程式欄位組通過使用`identityMap`欄位自動分配預設的主標識，該欄位是系統生成的只讀對象，用於映射單個客戶的標準標識值。
 
 對於Adobe Analytics,ECID是預設的主要身分識別。 如果客戶未提供ECID值，則主要身分會預設為AAID。
 
 >[!IMPORTANT]
 >
->使用Adobe應用程式混合時，不應將任何其他欄位標籤為主標識。 如果有其他屬性需要標示為身分，則這些欄位需改為指派為次要身分。
+>使用Adobe應用程式欄位組時，不應將其他欄位標籤為主標識。 如果有其他屬性需要標示為身分，則這些欄位需改為指派為次要身分。
 
 ## 後續步驟
 
