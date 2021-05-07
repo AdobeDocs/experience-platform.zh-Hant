@@ -7,9 +7,9 @@ type: Tutorial
 description: 本檔案概述了相關步驟，並提供教學課程連結，以完成個別工作流程。
 exl-id: cda6e7a7-9498-454c-94df-c6271a5a4fd4
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
 workflow-type: tm+mt
-source-wordcount: '793'
+source-wordcount: '795'
 ht-degree: 0%
 
 ---
@@ -43,7 +43,7 @@ ht-degree: 0%
 **本指南將幫助您：**
 - 瀏覽現有結構。
 - 建立架構並命名。
-- 新增並定義XDM混音。
+- 添加和定義XDM架構欄位組。
 - 將您的架構欄位設為身分欄位。
 - 為您的架構啟用描述檔。
 
