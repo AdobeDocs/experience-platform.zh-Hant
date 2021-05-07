@@ -7,9 +7,9 @@ type: Tutorial
 description: 本教程使用方案註冊表API來引導您完成使用標準類合成方案的步驟。
 exl-id: fa487a5f-d914-48f6-8d1b-001a60303f3d
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: ab0798851e5f2b174d9f4241ad64ac8afa20a938
 workflow-type: tm+mt
-source-wordcount: '2373'
+source-wordcount: '2426'
 ht-degree: 1%
 
 ---
@@ -35,7 +35,7 @@ ht-degree: 1%
 
 ## 使用標準類合成方案
 
-架構可視為您要內嵌至[!DNL Experience Platform]之資料的藍圖。 每個模式由類和零個或多個混合組成。 換言之，您不必新增混音來定義結構，但在大多數情況下，至少會使用一個混音。
+架構可視為您要內嵌至[!DNL Experience Platform]之資料的藍圖。 每個模式由類和零個或多個模式欄位組組成。 換言之，您不必新增欄位群組來定義結構，但在大多數情況下，至少會使用一個欄位群組。
 
 ### 指派類別
 
@@ -177,13 +177,13 @@ curl -X GET \
 }
 ```
 
-### 新增mixin {#add-a-mixin}
+### 新增欄位群組{#add-a-field-group}
 
-現在已建立並確認「忠誠度成員」結構，可將混合新增至該結構。
+現在已建立並確認「忠誠成員」結構，可將欄位群組新增至該結構。
 
-可使用的標準混音不同，視所選的架構類別而定。 每個mixin都包含一個`intendedToExtend`欄位，該欄位定義了該mixin與其相容的類。
+根據所選方案的類別，有不同的標準欄位組可供使用。 每個欄位組都包含一個`intendedToExtend`欄位，該欄位定義了與該欄位組相容的類。
 
-Mixins定義了「名稱」或「地址」等概念，這些概念可在任何需要擷取相同資訊的架構中重複使用。
+欄位群組會定義概念，例如「名稱」或「位址」，這些概念可在任何需要擷取相同資訊的架構中重複使用。
 
 **API格式**
 
@@ -193,9 +193,9 @@ PATCH /tenant/schemas/{schema meta:altId or url encoded $id URI}
 
 **要求**
 
-此請求會更新(PATCH)「忠誠度成員」結構，以在「個人資料——人員——詳細資料」混合中包含欄位。
+此請求會更新(PATCH)「忠誠度成員」結構，以在「profile-person-details」欄位群組中包含欄位。
 
-透過新增「個人資料——人員——詳細資料」混合，「忠誠度會員」結構現在會擷取忠誠度方案成員的相關資訊，例如其名字、姓氏和生日。
+透過新增「描述檔——人員——詳細資料」欄位群組，「忠誠度成員」結構現在會擷取忠誠度方案成員的相關資訊，例如其名字、姓氏和生日。
 
 ```SHELL
 curl -X PATCH \
@@ -212,7 +212,7 @@ curl -X PATCH \
 
 **回應**
 
-響應顯示`meta:extends`陣列中新添加的混頻，並在`allOf`屬性中包含對混頻的`$ref`。
+響應顯示`meta:extends`陣列中新添加的欄位組，並在`allOf`屬性中包含`$ref`欄位組。
 
 ```JSON
 {
@@ -254,17 +254,17 @@ curl -X PATCH \
 }
 ```
 
-### 新增另一個混音
+### 新增其他欄位群組
 
-您現在可以使用另一個混音重複步驟，以新增另一個標準混音。
+您現在可以使用另一個欄位群組重複步驟，以新增另一個標準欄位群組。
 
 >[!TIP]
 >
->請務必檢閱所有可用的混音，以熟悉每個混音中所包含的欄位。 您可以針對「全域」和「租用戶」容器執行請求，列出(GET)所有可與特定類別搭配使用的混音，只傳回「meta:intededToExtend」欄位符合您所使用類別的混音。 在這種情況下，它是[!DNL XDM Individual Profile]類，因此使用[!DNL XDM Individual Profile] `$id` :
+>請務必檢閱所有可用的欄位群組，以熟悉各欄位中包含的欄位。 您可以針對「全域」和「租用戶」容器執行請求，列出(GET)所有可與特定類別搭配使用的欄位群組，只傳回「meta:intededToExtend」欄位符合您所使用類別的欄位群組。 在這種情況下，它是[!DNL XDM Individual Profile]類，因此使用[!DNL XDM Individual Profile] `$id` :
 
 ```http
-GET /global/mixins?property=meta:intendedToExtend==https://ns.adobe.com/xdm/context/profile
-GET /tenant/mixins?property=meta:intendedToExtend==https://ns.adobe.com/xdm/context/profile
+GET /global/fieldgroups?property=meta:intendedToExtend==https://ns.adobe.com/xdm/context/profile
+GET /tenant/fieldgroups?property=meta:intendedToExtend==https://ns.adobe.com/xdm/context/profile
 ```
 
 **API格式**
@@ -275,7 +275,7 @@ PATCH /tenant/schemas/{schema meta:altId or url encoded $id URI}
 
 **要求**
 
-此請求會更新(PATCH)「忠誠度成員」結構，以在「個人資料——個人詳細資料」混合中包含欄位，並新增「首頁位址」、「電子郵件地址」和「首頁電話」欄位至結構。
+此請求會更新(PATCH)「忠誠度成員」結構，以在「profile-personal-details」欄位群組中包含欄位，並新增「home address」、「email address」和「home phone」欄位至結構。
 
 ```SHELL
 curl -X PATCH \
@@ -292,7 +292,7 @@ curl -X PATCH \
 
 **回應**
 
-響應顯示`meta:extends`陣列中新添加的混頻，並在`allOf`屬性中包含對混頻的`$ref`。
+響應顯示`meta:extends`陣列中新添加的欄位組，並在`allOf`屬性中包含`$ref`欄位組。
 
 「忠誠度成員」結構現在應包含`allOf`陣列中的3個`$ref`值：「profile」、「profile-person-details」和「profile-personal-details」，如下所示。
 
@@ -340,29 +340,29 @@ curl -X PATCH \
 }
 ```
 
-### 定義新混音
+### 定義新欄位群組
 
-「忠誠會員」結構需要擷取忠誠度方案專屬的資訊。 這些資訊不包含在任何標準混音中。
+「忠誠會員」結構需要擷取忠誠度方案專屬的資訊。 此資訊不包含在任何標準欄位群組中。
 
-[!DNL Schema Registry]可讓您在租用戶容器中定義自己的混音，以解決此問題。 這些混音是貴組織獨有的，IMS組織以外的任何人都看不到或可編輯。
+[!DNL Schema Registry]可讓您在租用戶容器中定義自己的欄位群組，以解決此問題。 這些欄位群組是貴組織獨有的，IMS組織以外的任何人都看不到或可編輯。
 
-為了建立(POST)新混音，您的請求必須包含`meta:intendedToExtend`欄位，其中包含混音相容之基本類別的`$id`，以及混音將包含的屬性。
+要建立(POST)新欄位組，請求必須包含`meta:intendedToExtend`欄位，該欄位包含與欄位組相容的基本類的`$id` ，以及欄位組將包含的屬性。
 
-任何自訂屬性都必須巢狀內嵌在`TENANT_ID`下，以避免與其他混音或欄位衝突。
+任何自訂屬性都必須巢狀內嵌在`TENANT_ID`下，以避免與其他欄位群組或欄位衝突。
 
 **API格式**
 
 ```http
-POST /tenant/mixins
+POST /tenant/fieldgroups
 ```
 
 **要求**
 
-此請求會建立新的混音，其中包含「忠誠度」物件，其中包含4個忠誠度方案特定欄位：&quot;loyaltyId&quot;、&quot;loyaltyLevel&quot;、&quot;loyaltyPoints&quot;和&quot;memberSince&quot;。
+此請求會建立新的欄位群組，其中包含「忠誠度」物件，其中包含4個忠誠度方案特定欄位：&quot;loyaltyId&quot;、&quot;loyaltyLevel&quot;、&quot;loyaltyPoints&quot;和&quot;memberSince&quot;。
 
 ```SHELL
 curl -X POST\
-  https://platform.adobe.io/data/foundation/schemaregistry/tenant/mixins\
+  https://platform.adobe.io/data/foundation/schemaregistry/tenant/fieldgroups\
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
@@ -372,7 +372,7 @@ curl -X POST\
         "type": "object",
         "title": "Loyalty Member Details",
         "meta:intendedToExtend": ["https://ns.adobe.com/xdm/context/profile"],
-        "description": "Loyalty Program Mixin.",
+        "description": "Loyalty Program Field Group.",
         "definitions": {
             "loyalty": {
               "properties": {
@@ -419,7 +419,7 @@ curl -X POST\
 
 **回應**
 
-成功的請求會傳回HTTP回應狀態201（已建立），回應主體包含新建立之混音的詳細資料，包括`$id`、`meta:altIt`和`version`。 這些值是只讀的，由[!DNL Schema Registry]指定。
+成功的請求返回HTTP響應狀態201（已建立），其響應主體包含新建欄位組的詳細資訊，包括`$id`、`meta:altIt`和`version`。 這些值是只讀的，由[!DNL Schema Registry]指定。
 
 ```JSON
 {
@@ -428,7 +428,7 @@ curl -X POST\
     "meta:intendedToExtend": [
         "https://ns.adobe.com/xdm/context/profile"
     ],
-    "description": "Loyalty Program Mixin.",
+    "description": "Loyalty Program Field Group.",
     "definitions": {
         "loyalty": {
             "properties": {
@@ -482,11 +482,11 @@ curl -X POST\
     "meta:extensible": true,
     "meta:containerId": "tenant",
     "imsOrg": "{IMS_ORG}",
-    "meta:altId": "_{TENANT_ID}.mixins.bb118e507bb848fd85df68fedea70c62",
+    "meta:altId": "_{TENANT_ID}.fieldgroups.bb118e507bb848fd85df68fedea70c62",
     "meta:xdmType": "object",
-    "$id": "https://ns.adobe.com/{TENANT_ID}/mixins/bb118e507bb848fd85df68fedea70c62",
+    "$id": "https://ns.adobe.com/{TENANT_ID}/fieldgroups/bb118e507bb848fd85df68fedea70c62",
     "version": "1.1",
-    "meta:resourceType": "mixins",
+    "meta:resourceType": "fieldgroups",
     "meta:registryMetadata": {
         "repo:createDate": 1551838135803,
         "repo:lastModifiedDate": 1552078296885,
@@ -496,9 +496,9 @@ curl -X POST\
 }
 ```
 
-### 將自訂混音新增至架構
+### 將自訂欄位群組新增至架構
 
-現在，您可以依照[新增標準mixin](#add-a-mixin)的相同步驟，將此新建立的mixin新增至架構。
+現在，您可以按照[添加標準欄位組](#add-a-field-group)的相同步驟，將新建立的欄位組添加到架構中。
 
 **API格式**
 
@@ -508,7 +508,7 @@ PATCH /tenant/schemas/{schema meta:altId or url encoded $id URI}
 
 **要求**
 
-此請求會更新(PATCH)「忠誠度成員」結構，以在新的「忠誠度成員詳細資料」混合中包含欄位。
+此請求會更新(PATCH)「忠誠度成員」結構，以在新的「忠誠度成員詳細資訊」欄位組中包含欄位。
 
 ```SHELL
 curl -X PATCH \
@@ -519,13 +519,13 @@ curl -X PATCH \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '[
-        { "op": "add", "path": "/allOf/-", "value":  {"$ref": "https://ns.adobe.com/{TENANT_ID}/mixins/bb118e507bb848fd85df68fedea70c62"}}
+        { "op": "add", "path": "/allOf/-", "value":  {"$ref": "https://ns.adobe.com/{TENANT_ID}/fieldgroups/bb118e507bb848fd85df68fedea70c62"}}
       ]'
 ```
 
 **回應**
 
-您可以看到已成功添加混音，因為響應現在在`meta:extends`陣列中顯示新添加的混音，並在`allOf`屬性中包含`$ref`到混音。
+您可以看到欄位組已成功添加，因為響應現在顯示`meta:extends`陣列中新添加的欄位組，並在`allOf`屬性中包含`$ref`欄位組。
 
 ```JSON
 {
@@ -543,7 +543,7 @@ curl -X PATCH \
             "$ref": "https://ns.adobe.com/xdm/context/profile-personal-details"
         },
         {
-            "$ref": "https://ns.adobe.com/{TENANT_ID}/mixins/bb118e507bb848fd85df68fedea70c62"
+            "$ref": "https://ns.adobe.com/{TENANT_ID}/fieldgroups/bb118e507bb848fd85df68fedea70c62"
         }
     ],
     "meta:class": "https://ns.adobe.com/xdm/context/profile",
@@ -557,7 +557,7 @@ curl -X PATCH \
         "https://ns.adobe.com/xdm/common/auditable",
         "https://ns.adobe.com/xdm/context/profile-person-details",
         "https://ns.adobe.com/xdm/context/profile-personal-details",
-        "https://ns.adobe.com/{TENANT_ID}/mixins/bb118e507bb848fd85df68fedea70c62"
+        "https://ns.adobe.com/{TENANT_ID}/fieldgroups/bb118e507bb848fd85df68fedea70c62"
     ],
     "meta:containerId": "tenant",
     "imsOrg": "{IMS_ORG}",
@@ -577,7 +577,7 @@ curl -X PATCH \
 
 ### 查看當前方案
 
-您現在可以執行GET請求來檢視目前的架構，並查看新增的混音對架構整體結構的貢獻。
+您現在可以執行GET請求來檢視目前的架構，並查看新增的欄位群組對架構整體結構的貢獻。
 
 **API格式**
 
@@ -599,9 +599,9 @@ curl -X GET \
 
 **回應**
 
-使用`application/vnd.adobe.xed-full+json; version=1` Accept標題，您可以看到顯示所有屬性的完整架構。 這些屬性是類別和混合所貢獻的欄位，這些欄位已用來組成架構。 在此示例響應中，已最小化空間的個別屬性屬性。 您可以在本文檔末尾的[附錄](#appendix)中查看完整方案，包括所有屬性及其屬性。
+使用`application/vnd.adobe.xed-full+json; version=1` Accept標題，您可以看到顯示所有屬性的完整架構。 這些屬性是類別和欄位組貢獻的欄位，這些欄位組用於構成模式。 在此示例響應中，已最小化空間的個別屬性屬性。 您可以在本文檔末尾的[附錄](#appendix)中查看完整方案，包括所有屬性及其屬性。
 
-在`"properties"`下，您可以看到新增自訂混音時建立的`_{TENANT_ID}`命名空間。 在該名稱空間中是「忠誠度」物件，以及建立混音時定義的欄位。
+在`"properties"`下，您可以看到在新增自訂欄位群組時建立的`_{TENANT_ID}`命名空間。 在該名稱空間中是「忠誠度」物件，以及建立欄位群組時所定義的欄位。
 
 ```JSON
 {
@@ -619,7 +619,7 @@ curl -X GET \
         "https://ns.adobe.com/xdm/common/auditable",
         "https://ns.adobe.com/xdm/context/profile-person-details",
         "https://ns.adobe.com/xdm/context/profile-personal-details",
-        "https://ns.adobe.com/{TENANT_ID}/mixins/bb118e507bb848fd85df68fedea70c62"
+        "https://ns.adobe.com/{TENANT_ID}/fieldgroups/bb118e507bb848fd85df68fedea70c62"
     ],
     "meta:containerId": "tenant",
     "imsOrg": "{IMS_ORG}",
@@ -691,11 +691,11 @@ curl -X GET \
 
 ### 建立資料類型
 
-您所建立的「忠誠度」混合包含特定的忠誠度屬性，這些屬性可能在其他結構中有用。 例如，資料可能會作為體驗事件的一部分，或由實作不同類別的架構使用。 在此情況下，將物件階層儲存為資料類型是有意義的，以便更輕鬆地在其他地方重複使用定義。
+您建立的「忠誠度」欄位群組包含特定的忠誠度屬性，這些屬性可能在其他結構中有用。 例如，資料可能會作為體驗事件的一部分，或由實作不同類別的架構使用。 在此情況下，將物件階層儲存為資料類型是有意義的，以便更輕鬆地在其他地方重複使用定義。
 
 資料類型允許您定義對象層次一次，並在欄位中引用它，就像對任何其他標量類型一樣。
 
-換句話說，資料類型允許一致地使用多欄位結構，其靈活性比混音更大，因為通過將它們添加為欄位的「類型」，可以將它們包括在模式中的任意位置。
+換句話說，資料類型允許一致地使用多欄位結構，其靈活性比欄位組大，因為通過將它們添加為欄位的「類型」，可以將它們包括在架構中的任意位置。
 
 **API格式**
 
@@ -822,19 +822,19 @@ curl -X POST \
 
 ### 在架構中使用資料類型
 
-現在已建立「忠誠度詳細資料」資料類型，您可以更新(PATCH)您所建立的混音中的「忠誠度」欄位，以參照資料類型，取代先前所在的欄位。
+現在已建立「忠誠度詳細資料」資料類型，您可以更新(PATCH)您所建立之欄位群組中的「忠誠度」欄位，以參考資料類型，取代先前所在欄位。
 
 **API格式**
 
 ```http
-PATCH /tenant/mixins/{mixin meta:altId or URL encoded $id URI}
+PATCH /tenant/fieldgroups/{field group meta:altId or URL encoded $id URI}
 ```
 
 **要求**
 
 ```SHELL
 curl -X PATCH \
-  https://platform.adobe.io/data/foundation/schemaregistry/tenant/mixins/_{TENANT_ID}.mixins.bb118e507bb848fd85df68fedea70c62 \
+  https://platform.adobe.io/data/foundation/schemaregistry/tenant/fieldgroups/_{TENANT_ID}.fieldgroups.bb118e507bb848fd85df68fedea70c62 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \
@@ -867,7 +867,7 @@ curl -X PATCH \
     "meta:intendedToExtend": [
         "https://ns.adobe.com/xdm/context/profile"
     ],
-    "description": "Loyalty Program Mixin.",
+    "description": "Loyalty Program Field Group.",
     "definitions": {
         "loyalty": {
             "properties": {
@@ -896,11 +896,11 @@ curl -X PATCH \
     "meta:extensible": true,
     "meta:containerId": "tenant",
     "imsOrg": "{IMS_ORG}",
-    "meta:altId": "_{TENANT_ID}.mixins.bb118e507bb848fd85df68fedea70c62",
+    "meta:altId": "_{TENANT_ID}.fieldgroups.bb118e507bb848fd85df68fedea70c62",
     "meta:xdmType": "object",
-    "$id": "https://ns.adobe.com/{TENANT_ID}/mixins/bb118e507bb848fd85df68fedea70c62",
+    "$id": "https://ns.adobe.com/{TENANT_ID}/fieldgroups/bb118e507bb848fd85df68fedea70c62",
     "version": "1.2",
-    "meta:resourceType": "mixins",
+    "meta:resourceType": "fieldgroups",
     "meta:registryMetadata": {
         "repo:createDate": 1551838135803,
         "repo:lastModifiedDate": 1552080570051,
@@ -1068,7 +1068,7 @@ curl -X PATCH \
             "$ref": "https://ns.adobe.com/xdm/context/profile-personal-details"
         },
         {
-            "$ref": "https://ns.adobe.com/{TENANT_ID}/mixins/bb118e507bb848fd85df68fedea70c62"
+            "$ref": "https://ns.adobe.com/{TENANT_ID}/fieldgroups/bb118e507bb848fd85df68fedea70c62"
         }
     ],
     "meta:class": "https://ns.adobe.com/xdm/context/profile",
@@ -1082,7 +1082,7 @@ curl -X PATCH \
         "https://ns.adobe.com/xdm/common/auditable",
         "https://ns.adobe.com/xdm/context/profile-person-details",
         "https://ns.adobe.com/xdm/context/profile-personal-details",
-        "https://ns.adobe.com/{TENANT_ID}/mixins/bb118e507bb848fd85df68fedea70c62"
+        "https://ns.adobe.com/{TENANT_ID}/fieldgroups/bb118e507bb848fd85df68fedea70c62"
     ],
     "meta:containerId": "tenant",
     "imsOrg": "{IMS_ORG}",
@@ -1171,9 +1171,9 @@ curl -X GET \
 
 ## 後續步驟
 
-在本教程中，您已成功使用定義的標準混音和混音合成了模式。 您現在可以使用此架構來建立資料集，並將記錄資料內嵌至Adobe Experience Platform。
+在本教程之後，您已使用標準欄位組和定義的欄位組成功合成了模式。 您現在可以使用此架構來建立資料集，並將記錄資料內嵌至Adobe Experience Platform。
 
-在本教學課程中建立的完整「忠誠會員」結構，可在下列附錄中取得。 當您檢視結構時，您可以看到混音對整體結構的貢獻，以及哪些欄位可用於資料擷取。
+在本教學課程中建立的完整「忠誠會員」結構，可在下列附錄中取得。 在檢視結構時，您可以看到欄位群組對整體結構的貢獻，以及哪些欄位可用於資料擷取。
 
 建立多個模式後，可以通過使用關係描述符來定義它們之間的關係。 如需詳細資訊，請參閱[定義兩個架構之間關係的教學課程。 ](relationship-api.md)有關如何在註冊表中執行所有操作(GET、POST、PUT、PATCH和DELETE)的詳細示例，請在使用API時參閱[方案註冊表開發人員指南](../api/getting-started.md)。
 
@@ -1185,7 +1185,7 @@ curl -X GET \
 
 在本教學課程中，會合成一個結構描述零售忠誠度方案的成員。
 
-該模式實現了[!DNL XDM Individual Profile]類，並結合了多個混音；使用標準「人員詳細資料」和「個人詳細資料」混合，以及透過教學課程中定義的「忠誠度詳細資料」混合，引入有關忠誠度會員的資訊。
+該模式實現了[!DNL XDM Individual Profile]類並結合了多個欄位組；使用標準的「人員詳細資料」和「個人詳細資料」欄位群組，以及透過教學課程中定義的「忠誠度詳細資料」欄位群組，引入有關忠誠度會員的資訊。
 
 以下顯示JSON格式的已完成忠誠度成員結構描述：
 
@@ -1205,7 +1205,7 @@ curl -X GET \
         "https://ns.adobe.com/xdm/common/auditable",
         "https://ns.adobe.com/xdm/context/profile-person-details",
         "https://ns.adobe.com/xdm/context/profile-personal-details",
-        "https://ns.adobe.com/{TENANT_ID}/mixins/bb118e507bb848fd85df68fedea70c62"
+        "https://ns.adobe.com/{TENANT_ID}/fieldgroups/bb118e507bb848fd85df68fedea70c62"
     ],
     "meta:containerId": "tenant",
     "imsOrg": "{IMS_ORG}",
