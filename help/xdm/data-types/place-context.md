@@ -6,9 +6,9 @@ topic-legacy: overview
 description: 本文檔概述「置入上下文XDM」資料類型。
 exl-id: d7cf7366-0136-49ee-84d2-ec663db66eb4
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
 workflow-type: tm+mt
-source-wordcount: '169'
+source-wordcount: '170'
 ht-degree: 4%
 
 ---
@@ -27,7 +27,7 @@ ht-degree: 4%
 | `localTime` | DateTime | [RFC 3339](https://tools.ietf.org/html/rfc3339)格式的時間戳，指示使用指定時區偏移的本地時間。 格式模式為`yyyy-MM-dd'T'HH:mm:ssXXX`（例如`2001-07-04T12:08:56-07:00`）。 |
 | `localTimezoneOffset` | 整數 | 當前本地時區距離`localTime`值的UTC偏移（以分鐘為單位）。 這應包括目前的DST偏移（如果適用）。 |
 
-有關混音的詳細資訊，請參閱公用XDM存放庫：
+有關資料類型的詳細資訊，請參閱公共XDM儲存庫：
 
 * [填入的範例](https://github.com/adobe/xdm/blob/master/components/datatypes/placecontext.example.1.json)
 * [完整架構](https://github.com/adobe/xdm/blob/master/components/datatypes/placecontext.schema.json)
