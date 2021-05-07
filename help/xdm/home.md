@@ -1,19 +1,23 @@
 ---
-keywords: Experience Platform；主題；熱門主題；XDM;XDM系統；XDM個人配置檔案；XDM ExperienceEvent;XDM ExperienceEvent;XDM ExperienceEvent;experience事件；Mixin;mixin;Experience事件；XDM Experienceenevent;xdm Experienceevent;experience資料模型；Experience資料模型；Experience Data Model；資料模型；資料模型；模式註冊表；模式庫；模式庫；模式庫；模式庫；模式；記錄資料；時間序列；時間序列
+keywords: Experience Platform；主題；熱門主題；XDM;XDM系統；XDM個人配置檔案；XDM ExperienceEvent;XDM ExperienceEvent;XDM ExperienceEvent；體驗事件；欄位組；欄位組；欄位組；體驗事件；XDM ExperienceEvent;xdm Experienceevent;experience資料模型；Experience資料模型；Experience Data Model；資料模型；資料模型；模式註冊表；模式庫；模式庫；模式庫；模式庫；模式；記錄資料；時間序列；時間序列
 solution: Experience Platform
 title: XDM系統概述
 topic-legacy: overview
 description: 標準化和互操作性是Adobe Experience Platform背後的關鍵概念。 Experience Data Model(XDM)是由Adobe驅動，旨在標準化客戶體驗資料並定義客戶體驗管理的架構。
 exl-id: 294d5f02-850f-47ea-9333-8b94a0bb291e
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 58f6c5e3ac77070807f7486bf429493d14fdda9e
 workflow-type: tm+mt
-source-wordcount: '1642'
-ht-degree: 2%
+source-wordcount: '1694'
+ht-degree: 1%
 
 ---
 
 # XDM系統概述
+
+>[!NOTE]
+>
+>「mixin」一詞已更新為「架構欄位群組」，以增進瞭解。 欄位群組是可重複使用的欄位集，可支援商業使用案例。 此變更現在會反映在「架構註冊表API」、「Adobe Experience PlatformUI」和所有平台檔案中。
 
 標準化和互操作性是Adobe Experience Platform背後的關鍵概念。 [!DNL Experience Data Model] (XDM)由Adobe驅動，旨在標準化客戶體驗資料並定義客戶體驗管理的架構。
 
@@ -27,7 +31,7 @@ XDM是基礎性的框架，它讓[!DNL Experience Platform]的Adobe Experience C
 
 [!DNL Experience Platform] 會使用結構，以一致且可重複使用的方式說明資料結構。藉由定義跨系統的一致資料，將可輕易保留意義，而發揮資料應有的價值。
 
-在將資料收錄到[!DNL Platform]之前，必須構成一個模式，以說明資料的結構並為每個欄位中可包含的資料類型提供約束條件。 結構描述由基類和零個或多個混合組成。
+在將資料收錄到[!DNL Platform]之前，必須構成一個模式，以說明資料的結構並為每個欄位中可包含的資料類型提供約束條件。 方案由基本類和零個或多個方案欄位組組成。
 
 有關架構構成模型（包括設計原則和最佳實踐）的詳細資訊，請參閱[架構構成基礎](schema/composition.md)。
 
@@ -90,7 +94,7 @@ Adobe Experience Platform[!DNL Query Service]允許您使用標準SQL查詢[!DNL
 
 ### [!DNL Real-time Customer Profile]
 
-即時客戶個人檔案提供集中的消費者個人檔案，以進行針對性的個人化體驗管理。 每個描述檔都包含所有系統匯總的資料，以及與您使用[!DNL Experience Platform]的任何系統中發生的個別事件相關的可操作時間戳記帳戶。
+即時客戶個人檔案提供集中化的消費者個人檔案，以進行針對性的個人化體驗管理。 每個描述檔都包含所有系統匯總的資料，以及與您使用[!DNL Experience Platform]的任何系統中發生的個別事件相關的可操作時間戳記帳戶。
 
 [!DNL Real-time Customer Profile] 根據或類來使用模式格式 [!DNL XDM Individual Profile] 化 [!DNL XDM ExperienceEvent] 資料，並基於該資料響應查詢。[!DNL Profile] 不支援基於其他類的方案使用。
 
