@@ -6,9 +6,9 @@ topic-legacy: getting started
 description: 瞭解如何設定體驗資料模型(XDM)架構和資料集，以擷取Adobe Experience Platform的同意與偏好資料。
 exl-id: 61ceaa2a-c5ac-43f5-b118-502bdc432234
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 30a2ddb875b035b4509b4be3692b95d0d3ef50b3
 workflow-type: tm+mt
-source-wordcount: '1403'
+source-wordcount: '1424'
 ht-degree: 0%
 
 ---
@@ -23,11 +23,11 @@ ht-degree: 0%
 >
 >本指南中的範例使用一組標準化欄位來表示客戶同意值，如[同意與偏好XDM資料類型](../../../../xdm/data-types/consents.md)所定義。 這些欄位的結構旨在提供有效的資料模型，以涵蓋許多常見的同意收集使用案例。
 >
->不過，您也可以根據您自己的資料模型定義自己的混合，以表示同意。 請洽詢您的法律團隊，以取得符合您業務需求的同意資料模型的核准，請依下列選項進行：
+>不過，您也可以定義您自己的欄位群組，以根據您自己的資料模型來表示同意。 請洽詢您的法律團隊，以取得符合您業務需求的同意資料模型的核准，請依下列選項進行：
 >
->* 標準化的許可混合
->* 由貴組織建立的自訂同意混合
->* 標準化許可組合和由定制許可組合提供的附加欄位的組合
+>* 標準化許可現場小組
+>* 由貴組織建立的自訂同意欄位群組
+>* 標準化許可欄位組和自定義許可欄位組提供的附加欄位的組合
 
 
 ## 先決條件
@@ -42,11 +42,11 @@ ht-degree: 0%
 >
 >本教程假定您知道要用於捕獲客戶屬性資訊的平台中的[!DNL Profile]架構。 無論您使用何種方法收集同意資料，此結構必須啟用「即時客戶個人檔案」](../../../../xdm/ui/resources/schemas.md#profile)。 [此外，架構的主要身分識別不能是直接可識別的欄位，無法用於喜好式廣告，例如電子郵件地址。 如果您不確定哪些欄位受限制，請洽詢您的法律顧問。
 
-## 同意與偏好混合結構{#structure}
+## 同意與首選項欄位組結構{#structure}
 
-[!UICONTROL Privacy/Personalization/Marketing Preferences (Consents)]混合（以下稱為「同意與偏好混合」）為架構提供標準化的同意欄位。 目前，此混音僅與基於[!DNL XDM Individual Profile]類的架構相容。
+[!UICONTROL Privacy/Personalization/Marketing Preferences (Consents)]欄位群組（以下稱為「同意與偏好欄位群組」）為架構提供標準化的同意欄位。 目前，此欄位組僅與基於[!DNL XDM Individual Profile]類的方案相容。
 
-混合素提供單個對象類型欄位`consents`，其子屬性捕獲一組標準化許可欄位。 以下JSON是資料擷取時`consents`所需資料類型的範例：
+該欄位組提供單個對象類型欄位`consents`，其子屬性捕獲一組標準化許可欄位。 以下JSON是資料擷取時`consents`所需資料類型的範例：
 
 ```json
 {
@@ -95,7 +95,7 @@ ht-degree: 0%
 >
 >有關`consents`中子屬性的結構和含義的詳細資訊，請參閱[同意與首選項資料類型](../../../../xdm/data-types/consents.md)的概述。
 
-## 將「同意與首選項」混合添加到[!DNL Profile]方案{#add-mixin}
+## 將「同意與首選項」欄位組添加到[!DNL Profile]方案{#add-field-group}
 
 在平台UI中，在左側導覽中選擇&#x200B;**[!UICONTROL Schemas]**，然後選擇&#x200B;**[!UICONTROL Browse]**&#x200B;標籤以顯示現有結構的清單。 在此處，選擇要向其添加許可欄位的[!DNL Profile]啟用模式的名稱。 本節中的截屏使用[架構建立教程](../../../../xdm/tutorials/create-schema-ui.md)中構建的「Loyalty Members」架構作為示例。
 
@@ -105,15 +105,15 @@ ht-degree: 0%
 >
 >您可以使用工作區的搜尋和篩選功能，協助您更輕鬆地尋找結構。 如需詳細資訊，請參閱[探索XDM資源](../../../../xdm/ui/explore.md)指南。
 
-出現[!DNL Schema Editor]，顯示畫布中的架構結構。 在畫布的左側，選取&#x200B;**[!UICONTROL Mixins]**&#x200B;區段下的&#x200B;**[!UICONTROL Add]**。
+出現[!DNL Schema Editor]，顯示畫布中的架構結構。 在畫布的左側，選取&#x200B;**[!UICONTROL Field groups]**&#x200B;區段下的&#x200B;**[!UICONTROL Add]**。
 
-![](../../../images/governance-privacy-security/consent/adobe/dataset-prep/add-mixin.png)
+![](../../../images/governance-privacy-security/consent/adobe/dataset-prep/add-field-group.png)
 
-出現&#x200B;**[!UICONTROL Add mixin]**&#x200B;對話框。 從這裡，從清單中選擇&#x200B;**[!UICONTROL Privacy/Personalization/Marketing Preferences (Consents)]**。 您可選擇使用搜尋列縮小結果，以更輕鬆地找到混音。 選擇混音後，選擇&#x200B;**[!UICONTROL Add mixin]**。
+出現&#x200B;**[!UICONTROL Add field group]**&#x200B;對話框。 從這裡，從清單中選擇&#x200B;**[!UICONTROL Privacy/Personalization/Marketing Preferences (Consents)]**。 您可以選擇使用搜尋列縮小結果，以更輕鬆地找到欄位群組。 選擇欄位組後，選擇&#x200B;**[!UICONTROL Add field group]**。
 
-![](../../../images/governance-privacy-security/consent/adobe/dataset-prep/mixin-dialog.png)
+![](../../../images/governance-privacy-security/consent/adobe/dataset-prep/field-group-dialog.png)
 
-畫布會重新出現，顯示`consents`物件已新增至架構結構。 如果您需要其他未由標準混合擷取的同意和偏好設定欄位，請參閱[中的附錄章節，將自訂同意和偏好設定欄位新增至架構](#custom-consent)。 否則，選擇&#x200B;**[!UICONTROL Save]**&#x200B;以完成對架構的更改。
+畫布會重新出現，顯示`consents`物件已新增至架構結構。 如果您需要標準欄位群組未擷取的其他同意和偏好設定欄位，請參閱[中的附錄章節，將自訂同意和偏好設定欄位新增至架構](#custom-consent)。 否則，選擇&#x200B;**[!UICONTROL Save]**&#x200B;以完成對架構的更改。
 
 ![](../../../images/governance-privacy-security/consent/adobe/dataset-prep/save-schema.png)
 
@@ -165,17 +165,17 @@ ht-degree: 0%
 
 ### 將自訂同意和偏好設定欄位新增至架構{#custom-consent}
 
-如果您需要擷取標準[!DNL Consents & Preferences] mixin以外的其他同意信號，您可以使用自訂XDM元件來增強您的同意方案，以符合您的特定業務需求。 本節概述如何以符合Adobe Experience Platform行動與網頁SDK所做同意變更指令的方式自訂同意架構的基本原則。
+如果您需要擷取標準[!DNL Consents & Preferences]欄位群組以外的其他同意訊號，則可以使用自訂XDM元件來增強您的同意方案，以符合您的特定業務需求。 本節概述如何以符合Adobe Experience Platform行動與網頁SDK所做同意變更指令的方式自訂同意架構的基本原則。
 
 >[!IMPORTANT]
 >
->您必須使用[!DNL Consents & Preferences] mixin做為同意資料結構的基準，並視需要新增其他欄位，而不是嘗試從頭開始建立整個結構。
+>您必須使用[!DNL Consents & Preferences]欄位群組做為同意資料結構的基準，並視需要新增其他欄位，而不是嘗試從頭開始建立整個結構。
 
-若要將自訂欄位新增至標準混音的結構，您必須先建立自訂混音。 將[!DNL Consents & Preferences] mixin加入架構後，在&#x200B;**[!UICONTROL Mixins]**&#x200B;區段中選取&#x200B;**plus(+)**&#x200B;圖示，然後選取&#x200B;**[!UICONTROL Create new mixin]**。 提供混音的名稱和可選說明，然後選擇&#x200B;**[!UICONTROL Add mixin]**。
+若要將自訂欄位新增至標準欄位群組的結構，您必須先建立自訂欄位群組。 將[!DNL Consents & Preferences]欄位組添加到架構後，在&#x200B;**[!UICONTROL Field groups]**&#x200B;部分中選擇&#x200B;**plus(+)**&#x200B;表徵圖，然後選擇&#x200B;**[!UICONTROL Create new field group]**。 為欄位組提供名稱和可選說明，然後選擇&#x200B;**[!UICONTROL Add field group]**。
 
-![](../../../images/governance-privacy-security/consent/adobe/dataset-prep/add-custom-mixin.png)
+![](../../../images/governance-privacy-security/consent/adobe/dataset-prep/add-custom-field-group.png)
 
-[!DNL Schema Editor]會重新顯示，並在左側導軌中選取新的自訂混音。 在畫布中，會出現可讓您新增自訂欄位至架構結構的控制項。 要添加新的許可或首選項欄位，請選擇`consents`對象旁邊的&#x200B;**加號(+)**&#x200B;表徵圖。
+[!DNL Schema Editor]會重新出現，並在左側欄中選取新的自訂欄位群組。 在畫布中，會出現可讓您新增自訂欄位至架構結構的控制項。 要添加新的許可或首選項欄位，請選擇`consents`對象旁邊的&#x200B;**加號(+)**&#x200B;表徵圖。
 
 ![](../../../images/governance-privacy-security/consent/adobe/dataset-prep/add-custom-field.png)
 
