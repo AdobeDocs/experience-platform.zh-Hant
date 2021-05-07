@@ -7,9 +7,9 @@ topic-legacy: tutorial
 type: Tutorial
 exl-id: feed776b-bc8d-459b-9700-e5c9520788c0
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
 workflow-type: tm+mt
-source-wordcount: '915'
+source-wordcount: '921'
 ht-degree: 1%
 
 ---
@@ -54,23 +54,23 @@ ht-degree: 1%
 
 ![](../images/tutorials/relationship/hotels.png)
 
-## 建立關係混合
+## 建立關係結構域組
 
 >[!NOTE]
 >
 >僅當源架構沒有專用字串類型欄位用作目標架構的引用時，才需要此步驟。 如果此欄位已在源方案中定義，請跳至定義關係欄位](#relationship-field)的下一步。[
 
-為了定義兩個方案之間的關係，源方案必須具有專用欄位以用作目標方案的引用。 通過建立新混音，可以將此欄位添加到源模式。
+為了定義兩個方案之間的關係，源方案必須具有專用欄位以用作目標方案的引用。 通過建立新的架構欄位組，可以將此欄位添加到源架構。
 
-首先，在&#x200B;**[!UICONTROL Mixins]**&#x200B;部分中選擇&#x200B;**[!UICONTROL Add]**。
+首先，在&#x200B;**[!UICONTROL Field groups]**&#x200B;部分中選擇&#x200B;**[!UICONTROL Add]**。
 
-![](../images/tutorials/relationship/loyalty-add-mixin.png)
+![](../images/tutorials/relationship/loyalty-add-field-group.png)
 
-出現[!UICONTROL Add Mixin]對話框。 從此處選擇&#x200B;**[!UICONTROL Create new mixin]**。 在出現的文字欄位中，輸入新混音的顯示名稱和說明。 完成後選取「**[!UICONTROL Add mixin]**」。
+出現[!UICONTROL Add field group]對話框。 從此處選擇&#x200B;**[!UICONTROL Create new field group]**。 在顯示的文本欄位中，輸入新欄位組的顯示名稱和說明。 完成後選取「**[!UICONTROL Add field groups]**」。
 
-<img src="../images/tutorials/relationship/loyalty-create-new-mixin.png" width="750"><br>
+![](../images/tutorials/relationship/create-field-group.png)
 
-畫布會重新顯示，「[!DNL Favorite Hotel]」會出現在&#x200B;**[!UICONTROL Mixins]**&#x200B;區段中。 選擇混音名稱，然後選擇根級別`Loyalty Members`欄位旁的&#x200B;**[!UICONTROL Add field]**。
+畫布會重新顯示，「[!DNL Favorite Hotel]」會出現在&#x200B;**[!UICONTROL Field groups]**&#x200B;區段中。 選擇欄位組名，然後選擇根級別`Loyalty Members`欄位旁的&#x200B;**[!UICONTROL Add field]**。
 
 ![](../images/tutorials/relationship/loyalty-add-field.png)
 
