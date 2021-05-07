@@ -6,9 +6,9 @@ topic-legacy: Getting started
 description: 進一步瞭解客戶人工智慧所使用的必要事件、輸入和輸出。
 exl-id: 9b21a89c-bf48-4c45-9eb3-ace38368481d
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: ab0798851e5f2b174d9f4241ad64ac8afa20a938
 workflow-type: tm+mt
-source-wordcount: '2865'
+source-wordcount: '2878'
 ht-degree: 1%
 
 ---
@@ -36,10 +36,10 @@ ht-degree: 1%
 | 詞語 | 定義 |
 | --- | --- |
 | [體驗資料模型(XDM)](../../xdm/home.md) | XDM是基礎性的架構，可讓Adobe Experience Platform的Adobe Experience Cloud在正確的時間，在正確的通道上向正確的人傳遞正確的訊息。 建立Experience Platform的方法XDM System可操作Experience Data Model架構，供平台服務使用。 |
-| XDM 結構 | Experience Platform 會使用結構，以一致且可重複使用的方式說明資料結構。藉由定義跨系統的一致資料，將可輕易保留意義，而發揮資料應有的價值。在將資料匯入平台之前，必須先組合架構，以描述資料的結構，並為每個欄位中可包含的資料類型提供限制。 結構描述由基本XDM類和零個或多個混合組成。 |
+| XDM 結構 | Experience Platform 會使用結構，以一致且可重複使用的方式說明資料結構。藉由定義跨系統的一致資料，將可輕易保留意義，而發揮資料應有的價值。在將資料匯入平台之前，必須先組合架構，以描述資料的結構，並為每個欄位中可包含的資料類型提供限制。 架構由基本XDM類和零個或多個架構欄位組組成。 |
 | XDM類 | 所有XDM結構描述的資料可以分類為記錄或時間序列。 架構的資料行為由架構的類別定義，當初建立架構時，會指派給架構。 XDM類描述了模式必須包含的最小屬性數，以表示特定資料行為。 |
-| [Mixins](../../xdm/schema/composition.md) | 定義方案中一個或多個欄位的元件。 Mixins可強制其欄位在架構階層中的顯示方式，因此在每個架構中都會顯示與其所包含的相同結構。 Mixins僅與特定類相容，由其`meta:intendedToExtend`屬性所識別。 |
-| [資料類型](../../xdm/schema/composition.md) | 也可以為架構提供一個或多個欄位的元件。 但是，與mixin不同，資料類型不限於特定類別。 這使得資料類型成為更有彈性的選項，以說明可在具有潛在不同類別的多個結構中重複使用的常用資料結構。 CEE和Adobe Analytics模式都支援本文檔中概述的資料類型。 |
+| [欄位群組](../../xdm/schema/composition.md) | 定義方案中一個或多個欄位的元件。 欄位群組強制其欄位在架構階層中的顯示方式，因此在每個架構中都會顯示與其所包含的相同結構。 欄位組僅與特定類相容，由其`meta:intendedToExtend`屬性標識。 |
+| [資料類型](../../xdm/schema/composition.md) | 也可以為架構提供一個或多個欄位的元件。 但是，與欄位組不同，資料類型不限於特定類。 這使得資料類型成為更有彈性的選項，以說明可在具有潛在不同類別的多個結構中重複使用的常用資料結構。 CEE和Adobe Analytics模式都支援本文檔中概述的資料類型。 |
 | 客戶流失 | 取消或選擇不續約其訂閱之帳戶百分比的測量。 高流失率可能會對月度經常性收入(MRR)產生負面影響，也可能表示對產品或服務的不滿。 |
 | [即時客戶個人檔案](../../profile/home.md) | 即時客戶個人檔案提供集中化的消費者個人檔案，以進行針對性的個人化體驗管理。 每個描述檔都包含匯總至所有系統的資料，以及與您使用Experience Platform的任何系統中發生之個人相關之事件的可操作時間戳記帳戶。 |
 
@@ -49,7 +49,7 @@ ht-degree: 1%
 >
 > 客戶人工智慧會自動判斷哪些事件對預測有用，並在可用資料不足以產生品質預測時發出警告。
 
-客戶AI支援CEE、Adobe Analytics和Adobe Audience Manager資料集。 CEE架構要求您在架構建立過程中添加混合。 如果您使用Adobe Analytics或Adobe Audience Manager資料集，來源連接器會在連線程式中直接對應下列的標準事件（商務、網頁詳細資訊、應用程式和搜尋）。
+客戶AI支援CEE、Adobe Analytics和Adobe Audience Manager資料集。 CEE架構要求您在架構建立過程中添加欄位組。 如果您使用Adobe Analytics或Adobe Audience Manager資料集，來源連接器會在連線程式中直接對應下列的標準事件（商務、網頁詳細資訊、應用程式和搜尋）。
 
 有關映射Adobe Analytics資料或Audience Manager資料的詳細資訊，請訪問[Analytics欄位映射](../../sources/connectors/adobe-applications/analytics.md)或[Audience Manager欄位映射](../../sources/connectors/adobe-applications/mapping/audience-manager.md)指南。
 
@@ -57,18 +57,17 @@ ht-degree: 1%
 
 XDM體驗事件可用來判斷各種客戶行為。 根據您的資料結構，下列事件類型可能不包含客戶的所有行為。 您需要決定哪些欄位具備必要資料，才能清楚明確地識別Web使用者活動。 視您的預測目標而定，所需的必填欄位可能會變更。
 
-客戶人工智慧依賴不同的事件類型來建立模型功能。 這些事件類型會使用多個XDM混合自動新增至您的架構。
+客戶人工智慧依賴不同的事件類型來建立模型功能。 使用多個XDM欄位組，這些事件類型會自動添加到您的架構中。
 
 >[!NOTE]
 >
->如果您使用Adobe Analytics或Adobe Audience Manager資料，系統會自動建立結構，並包含擷取資料所需的標準事件。 如果您要建立自己的自訂CEE架構來擷取資料，則需要考慮擷取資料所需的混合。
+>如果您使用Adobe Analytics或Adobe Audience Manager資料，系統會自動建立結構，並包含擷取資料所需的標準事件。 如果您要建立自己的自訂CEE架構以擷取資料，則需要考慮擷取資料所需的欄位群組。
 
 您不需要針對下列每個標準事件提供資料，但某些情況需要特定事件。 如果您有任何可用的標準事件資料，建議您將其納入架構中。 例如，如果您想要建立用於預測購買事件的Customer AI應用程式，請務必從`Commerce`和`Web page details`資料類型取得資料。
 
-若要在平台UI中檢視混音，請選取左側導軌上的&#x200B;**[!UICONTROL Schemas]**&#x200B;標籤，然後選取&#x200B;**[!UICONTROL Mixins]**&#x200B;標籤。
+若要在平台UI中檢視欄位群組，請選取左側導軌上的&#x200B;**[!UICONTROL Schemas]**&#x200B;標籤，然後選取&#x200B;**[!UICONTROL Field groups]**&#x200B;標籤。
 
-
-| Mixin | 事件類型 | XDM欄位路徑 |
+| 欄位群組 | 事件類型 | XDM欄位路徑 |
 | --- | --- | --- |
 | [!UICONTROL Commerce Details] | 訂單 | <li> commerce.order.purchaseID </li> <li> productListItems.SKU </li> |
 |  | productListViews | <li> commerce.productListViews.value </li> <li> productListItems.SKU </li> |
@@ -118,7 +117,7 @@ XDM體驗事件可用來判斷各種客戶行為。 根據您的資料結構，�
 
 ### 範例藍本
 
-在本節中，說明客戶AI例項的不同藍本，以及所需和建議的事件類型。 有關mixin及其欄位路徑的詳細資訊，請參閱上面的[標準事件表](#standard-events)。
+在本節中，說明客戶AI例項的不同藍本，以及所需和建議的事件類型。 有關欄位組及其欄位路徑的詳細資訊，請參閱上面的[標準事件表](#standard-events)。
 
 >[!NOTE]
 >
@@ -249,7 +248,7 @@ XDM體驗事件可用來判斷各種客戶行為。 根據您的資料結構，�
 
 **必要的標準事件類型：**
 
-為了使用來自Adobe Audience Manager的特性，您需要使用[Audience Manager源連接器](../../sources/tutorials/ui/create/adobe-applications/audience-manager.md)建立源連接。 源連接器自動建立具有正確混音的模式。 您不需要手動添加其他事件類型，方案才能與客戶AI一起使用。
+為了使用來自Adobe Audience Manager的特性，您需要使用[Audience Manager源連接器](../../sources/tutorials/ui/create/adobe-applications/audience-manager.md)建立源連接。 源連接器自動建立具有正確欄位組的模式。 您不需要手動添加其他事件類型，方案才能與客戶AI一起使用。
 
 當您設定新客戶AI例項時，`audienceName`和`audienceID`可用於在定義目標時選取要計分的特定特徵。
 
