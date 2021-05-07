@@ -6,9 +6,9 @@ description: 本文檔提供與使用方案註冊表API有關的補充資訊。
 topic-legacy: developer guide
 exl-id: 2ddc7fe8-dd0b-4cf9-8561-e89fcdadbfce
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
 workflow-type: tm+mt
-source-wordcount: '772'
+source-wordcount: '775'
 ht-degree: 0%
 
 ---
@@ -52,7 +52,7 @@ ht-degree: 0%
 
 >[!TIP]
 >
->您可以使用`property`參數，依其相容類別篩選混音。 例如，`property=meta:intendedToExtend==https://ns.adobe.com/xdm/context/profile`僅傳回與[!DNL XDM Individual Profile]類別相容的混音。
+>您可以使用`property`參數，按照其相容類來過濾模式欄位組。 例如，`property=meta:intendedToExtend==https://ns.adobe.com/xdm/context/profile`僅返回與[!DNL XDM Individual Profile]類相容的欄位組。
 
 ## 相容模式
 
