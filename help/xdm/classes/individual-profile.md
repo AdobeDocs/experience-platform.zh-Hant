@@ -6,9 +6,9 @@ topic-legacy: overview
 description: 本文檔概述了XDM Individual Profile類。
 exl-id: 83b22462-79ce-4024-aa50-a9bd800c0f81
 translation-type: tm+mt
-source-git-commit: 81d96b629ce628f663a86701d8f076eb771fdf77
+source-git-commit: 612917b23d1841556a71f6378497e1d033bc3b62
 workflow-type: tm+mt
-source-wordcount: '412'
+source-wordcount: '420'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 0%
 
 描述檔可以包括匿名行為訊號（例如瀏覽器Cookie），以及包含詳細資訊（例如姓名、出生日期、位置和電子郵件地址）的高度識別描述檔。 隨著個人檔案的增長，它會成為個人資訊、身分、聯絡資訊和通訊偏好的強穩存放庫。 有關在平台生態系統中使用此類的更高級別資訊，請參閱[XDM概述](../home.md#data-behaviors)。
 
-[!DNL XDM Individual Profile]類別本身提供數個系統產生的值，這些值會在擷取資料時自動填入，而所有其他欄位則必須使用[相容的mixins](#mixins)加入：
+[!DNL XDM Individual Profile]類別本身提供數個系統產生的值，這些值在擷取資料時會自動填入，而所有其他欄位則必須透過使用[相容的架構欄位群組](#field-groups)來新增：
 
 ![](../images/classes/individual-profile.png)
 
@@ -33,18 +33,18 @@ ht-degree: 0%
 | `repositoryCreatedBy` | 建立記錄的用戶的ID。 |
 | `repositoryLastModifiedBy` | 上次修改記錄的用戶的ID。 |
 
-## 相容混音{#mixins}
+## 相容欄位群組{#field-groups}
 
 >[!NOTE]
 >
->幾個混音的名字已經改變。 如需詳細資訊，請參閱[mixin name updates](../mixins/name-updates.md)上的檔案。
+>數個欄位群組的名稱已變更。 如需詳細資訊，請參閱[欄位群組名稱updates](../field-groups/name-updates.md)上的檔案。
 
-Adobe提供數種標準混音，以便與[!DNL XDM Individual Profile]類一起使用。 以下是類別中常用混合詞的清單：
+Adobe提供多個標準欄位組，用於[!DNL XDM Individual Profile]類。 以下是類中一些常用欄位組的清單：
 
-* [[!UICONTROL IdentityMap]](../mixins/profile/identitymap.md)
-* [[!UICONTROL Demographic Details]](../mixins/profile/person-details.md)
-* [[!UICONTROL Personal Contact Details]](../mixins/profile/personal-details.md)
-* [[!UICONTROL Work Contact Details]](../mixins/profile/work-details.md)
-* [[!UICONTROL Segment Membership Details]](../mixins/profile/segmentation.md)
+* [[!UICONTROL IdentityMap]](../field-groups/profile/identitymap.md)
+* [[!UICONTROL Demographic Details]](../field-groups/profile/demographic-details.md)
+* [[!UICONTROL Personal Contact Details]](../field-groups/profile/personal-contact-details.md)
+* [[!UICONTROL Work Contact Details]](../field-groups/profile/work-contact-details.md)
+* [[!UICONTROL Segment Membership Details]](../field-groups/profile/segmentation.md)
 
-有關[!DNL XDM Individual Profile]的所有相容混合的完整清單，請參閱[ XDM GitHub repo](https://github.com/adobe/xdm/tree/master/components/mixins/profile)。
+有關[!DNL XDM Individual Profile]的所有相容欄位組的完整清單，請參閱[ XDM GitHub repo](https://github.com/adobe/xdm/tree/master/components/mixins/profile)。
