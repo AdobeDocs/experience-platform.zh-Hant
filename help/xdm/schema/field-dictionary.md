@@ -6,9 +6,9 @@ topic-legacy: overviews
 description: Experience Data Model(XDM)定義一組標準欄位，可在合成Adobe Experience Platform架構時使用。 使用這些欄位可讓平台服務的行為一致，因為使用XDM的所有服務都會明確瞭解這些欄位提供的特定定義。
 exl-id: 9e183305-cd6c-444d-bd0b-f0cba3bcbe4d
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
 workflow-type: tm+mt
-source-wordcount: '25238'
+source-wordcount: '25240'
 ht-degree: 3%
 
 ---
@@ -20,7 +20,7 @@ ht-degree: 3%
 
 有關架構構建塊的詳細資訊，包括定義[!DNL Experience Platform]架構的原則和最佳做法，請參見[架構構成的基本資訊](composition.md)。
 
-下表包含欄位名稱（並非所有XDM欄位都使用&quot;xdm&quot;命名），以及其標題和說明、類型和格式（視需要而定），以及其對應的XDM類型和可找到欄位的資源（混合、資料類型和結構）。
+下表包含欄位名稱（並非所有XDM欄位都使用&quot;xdm&quot;命名），以及其標題和說明、類型和格式（視需要而定），以及其對應的XDM類型和可找到欄位的資源（結構、架構欄位群組和資料類型）。
 
 您可以使用[!DNL Schema Editor]中的搜索功能來查看這些資源的詳細資訊，如[方案編輯器教程](../tutorials/create-schema-ui.md#browse)中所示。
 
@@ -198,7 +198,7 @@ ht-degree: 3%
 | xdm:faxPhone | 傳真電話 | 傳真電話號碼。 | 物件 |  | 物件 | https://ns.adobe.com/experience/campaign/experienceevent-profile-personal-details, https://ns.adobe.com/xdm/context/profile-personal-details |
 | xdm:featureUsages | 功能使用實例 | 正在測量的應用程式功能的啟動。 | 物件 |  | 物件 | https://ns.adobe.com/experience/adcloud-experienceevent、https://ns.adobe.com/experience/analytics-experienceevent、https://ns.adobe.com/experience/campaign-experienceevent、https://ns.adobe.com/experience/campaign/experienceevent-all、https://ns.adobe.com/experience/campaign/experienceevent-profile-push-details、https://ns.adobe.com/experience/campaign/profile-snapshot、https://ns.adobe.com/experience/target-experienceevent、https://ns.adobe.com/xdm/context/experienceevent-application、https://ns.adobe.com/xdm/context/profile-push-details、、、 |
 | xdm:federated | 同盟 | 表示體驗事件是透過資料聯盟建立（資料共用）。 | 物件 |  | 物件 | https://ns.adobe.com/experience/adcloud-experienceevent、https://ns.adobe.com/experience/analytics-experienceevent、https://ns.adobe.com/experience/campaign-experienceevent、https://ns.adobe.com/experience/target-experienceevent、https://ns.adobe.com/xdm/context/advertising、https://ns.adobe.com/xdm/context/experienceevent-advertising、https://ns.adobe.com/xdm/context/experienceevent-media、 |
-| xdm:feedId | 動態消息ID | 發佈者、廣告交換及其他功能的複合ID。 | 字串 |  | 字串 | https://ns.adobe.com/experience/adcloud-experienceevent、https://ns.adobe.com/experience/adcloud/experienceevent-all、https://ns.adobe.com/experience/adcloud/inventory |
+| xdm:feedId | 摘要ID | 發佈者、廣告交換及其他功能的複合ID。 | 字串 |  | 字串 | https://ns.adobe.com/experience/adcloud-experienceevent、https://ns.adobe.com/experience/adcloud/experienceevent-all、https://ns.adobe.com/experience/adcloud/inventory |
 | xdm:filter | 選件篩選 | 對篩選器的參考，該篩選器在做出決策時應用於庫存，並作為此活動的上下文。 此值是參考之選件篩選器的URI(@id)。 請參閱架構https://ns.adobe.com/experience/offer-management/offer-filter | 字串 | uri-reference | 字串 | https://ns.adobe.com/experience/campaign-experienceevent、https://ns.adobe.com/experience/campaign/experienceevent-all、https://ns.adobe.com/experience/campaign/offer-proposition-detail |
 | xdm:firstLaunches | 首次啟動 | 在安裝後首次啟動時觸發。 | 物件 |  | 物件 | https://ns.adobe.com/experience/adcloud-experienceevent、https://ns.adobe.com/experience/analytics-experienceevent、https://ns.adobe.com/experience/campaign-experienceevent、https://ns.adobe.com/experience/campaign/experienceevent-all、https://ns.adobe.com/experience/campaign/experienceevent-profile-push-details、https://ns.adobe.com/experience/campaign/profile-snapshot、https://ns.adobe.com/experience/target-experienceevent、https://ns.adobe.com/xdm/context/experienceevent-application、https://ns.adobe.com/xdm/context/profile-push-details、、、 |
 | xdm:firstName | 名字 | 名稱的第一段，其書寫順序最常用的名稱語言。 在許多文化中，這是首選的個人名稱或給定名稱。`firstName`和`lastName`屬性已引入，以保持與現有系統的相容性，該系統以簡化、非語義和不可國際化的方式對名稱進行建模。 使用`xdm:fullName`總是較好。 | 字串 |  | 字串 | https://ns.adobe.com/experience/campaign-experienceevent、https://ns.adobe.com/experience/campaign/experienceevent-all、https://ns.adobe.com/experience/campaign/experienceevent-profile-subscriptions、https://ns.adobe.com/experience/campaign/profile-snapshot、https://ns.adobe.com/xdm/context/profile-person-details、https://ns.adobe.com/xdm/context/profile-subscriptions、 |
