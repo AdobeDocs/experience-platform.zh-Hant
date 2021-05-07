@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform;home；熱門主題；模式；模式；混合；Mixin;Mixin;Mixins；資料類型；資料類型；資料類型；資料類型；模式設計；資料類型；資料類型；資料類型；資料類型；模式；模式；映射；映射；
+keywords: Experience Platform;home；熱門主題；模式；模式；欄位組；欄位組；欄位組；欄位組；資料類型；資料類型；資料類型；資料類型；資料類型；資料類型；資料類型；資料類型；資料類型；模式；模式；映射；
 solution: Experience Platform
 title: XDM欄位類型約束
 topic-legacy: overview
 description: Experience Data Model(XDM)中欄位類型限制的參考，包括其他可映射至的序列化格式，以及如何在API中定義您自己的欄位類型。
 exl-id: 63839a28-6d26-46f1-8bbf-b524e82ac4df
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 3985ba8f46a62e8d9ea8b1f084198b245318a24f
 workflow-type: tm+mt
-source-wordcount: '1054'
+source-wordcount: '1063'
 ht-degree: 1%
 
 ---
@@ -19,9 +19,9 @@ ht-degree: 1%
 
 ## 快速入門
 
-在使用本指南之前，請先閱讀[架構構成的基本說明](./composition.md)，以瞭解XDM架構、類和混合的簡介。
+在使用本指南之前，請先閱讀[架構構成的基本說明](./composition.md)，以瞭解XDM架構、類和架構欄位組的簡介。
 
-如果您打算在API中定義自己的欄位類型，強烈建議您從[方案註冊表開發人員指南](../api/getting-started.md)開始，以瞭解如何建立混合和資料類型以包含您的自訂欄位。 如果您使用Experience PlatformUI來建立結構，請參閱UI](../ui/fields/overview.md)中[定義欄位的指南，瞭解如何對自訂混合和資料類型中定義的欄位實施限制。
+如果您打算在API中定義自己的欄位類型，強烈建議您從[方案註冊表開發人員指南](../api/getting-started.md)開始，以瞭解如何建立欄位群組和資料類型，以包含您的自訂欄位。 如果您使用Experience PlatformUI來建立結構，請參閱UI](../ui/fields/overview.md)中[定義欄位的指南，瞭解如何對自訂欄位群組和資料類型中定義的欄位實施限制。
 
 ## 基本結構與範例
 
@@ -214,7 +214,7 @@ XDM建立在JSON結構描述之上，因此，在定義其類型時，XDM欄位�
 
 下表概述了定義不同欄位類型（包括具有可選屬性的欄位類型）的適當格式。 有關可選屬性和類型特定關鍵字的詳細資訊，請參閱[JSON結構描述檔案](https://json-schema.org/understanding-json-schema/reference/type.html)。
 
-若要開始，請尋找所需的欄位類型，並使用提供的范常式式碼來建立您的API要求，以建立[混合](../api/mixins.md#create)或[建立資料類型](../api/data-types.md#create)。
+若要開始，請尋找所需的欄位類型，並使用提供的范常式式碼來建立您的API要求，以建立欄位群組](../api/field-groups.md#create)或[以建立資料類型](../api/data-types.md#create)。[
 
 <table style="table-layout:auto">
   <tr>
