@@ -1,14 +1,14 @@
 ---
 title: 使用Platform launch和平台網頁SDK擴充功能整合IAB TCF 2.0支援
 description: 瞭解如何設定IAB TCF 2.0與Adobe Experience Platform Launch及Adobe Experience Platform網頁SDK擴充功能的同意。
+exl-id: dc0e6b68-8257-4862-9fc4-50b370ef204f
 translation-type: tm+mt
-source-git-commit: b9fb71ac7eca95c65165d6780b681ada3f16325b
+source-git-commit: 7d7502b238f96eda1a15b622ba10bbccc289b725
 workflow-type: tm+mt
-source-wordcount: '855'
+source-wordcount: '850'
 ht-degree: 0%
 
 ---
-
 
 # 使用Platform launch和平台網頁SDK擴充功能整合IAB TCF 2.0支援
 
@@ -73,13 +73,13 @@ addEventListener();
 
 ## 為體驗事件建立XDM資料元素
 
-同意字串應包含在XDM體驗事件中。 若要這麼做，請使用XDM物件資料元素。 首先，請建立新的XDM物件資料元素，或使用您已建立的元素來傳送事件。 如果您已將「體驗事件隱私權」混合新增至架構，XDM物件中應該有`consentStrings`金鑰。
+同意字串應包含在XDM體驗事件中。 若要這麼做，請使用XDM物件資料元素。 首先，請建立新的XDM物件資料元素，或使用您已建立的元素來傳送事件。 如果您已將「體驗事件隱私權架構」欄位群組新增至架構，XDM物件中應該有`consentStrings`金鑰。
 
-1. 選擇&#x200B;**[!UICONTROL conmenceStrings]**。
+1. 選擇「**[!UICONTROL consentStrings]**」。
 
-1. 選擇&#x200B;**[!UICONTROL 提供個別項目]**&#x200B;並選擇&#x200B;**[!UICONTROL 添加項目]**。
+1. 選擇&#x200B;**[!UICONTROL Provide individual items]**&#x200B;並選擇&#x200B;**[!UICONTROL Add Item]**。
 
-1. 展開&#x200B;**[!UICONTROL conmonceString]**&#x200B;標題，並展開第一個項目，然後填入下列值：
+1. 展開&#x200B;**[!UICONTROL consentString]**&#x200B;標題，並展開第一個項目，然後填入下列值：
 
 * `consentStandard`:IAB TCF
 * `consentStandardVersion`:2.0
