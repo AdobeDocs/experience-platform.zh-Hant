@@ -1,12 +1,12 @@
 ---
-keywords: Experience Platform；首頁；熱門主題；Adobe Analytics分類資料連接器
+keywords: Experience Platform;home；熱門主題；Adobe Analytics分類源連接器
 solution: Experience Platform
 title: Adobe Analytics分類資料的來源連接器
 topic-legacy: overview
 description: 瞭解如何使用使用者介面將Analytics分類連結至平台
 exl-id: c26002df-dce4-415e-93e9-268e0efebc9f
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 32a6d0311169486b1273129c0ee87c242bee1e47
 workflow-type: tm+mt
 source-wordcount: '181'
 ht-degree: 0%
