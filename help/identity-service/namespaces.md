@@ -6,9 +6,9 @@ topic-legacy: overview
 description: 身分識別命名空間是 Identity Service 的元件，用途是作為身分識別相關內容的指標。例如，他們會將"name@email.com"值區分為電子郵件地址或"443522"作為數值CRM ID。
 exl-id: 86cfc7ae-943d-4474-90c8-e368afa48b7c
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: ca092af61ac26fcfb6839b7ba0887178c899f89f
 workflow-type: tm+mt
-source-wordcount: '1450'
+source-wordcount: '1526'
 ht-degree: 2%
 
 ---
@@ -35,7 +35,7 @@ ht-degree: 2%
 
 ### 身分類型
 
-資料可由數種不同的身分類型識別。 在建立身份名稱空間時指定身份類型，並控制資料是否保存到身份圖以及如何處理該資料的任何特殊說明。
+資料可由數種不同的身分類型識別。 在建立身份名稱空間時指定身份類型，並控制資料是否保存到身份圖以及如何處理該資料的任何特殊說明。 除&#x200B;**非人員識別碼**&#x200B;之外的所有身份類型都遵循將命名空間及其對應ID值拼接到身份圖簇的相同行為。 使用&#x200B;**非人員識別碼**&#x200B;時，資料不會銜接在一起。
 
 [!DNL Platform]中提供以下身份類型：
 
@@ -92,7 +92,9 @@ Experience Platform提供多個身份名稱空間，可供所有組織使用。 
 
 ![](./images/create.png)
 
-出現&#x200B;**[!UICONTROL Create identity namespace]**&#x200B;對話框。 提供唯一的&#x200B;**[!UICONTROL Display name]**&#x200B;和&#x200B;**[!UICONTROL Identity symbol]**，然後選擇要建立的身份類型。 您也可以新增選擇性說明，以進一步瞭解命名空間。 完成後，選擇&#x200B;**[!UICONTROL Create]**。
+出現&#x200B;**[!UICONTROL Create identity namespace]**&#x200B;對話框。 提供唯一的&#x200B;**[!UICONTROL Display name]**&#x200B;和&#x200B;**[!UICONTROL Identity symbol]**，然後選擇要建立的身份類型。 您也可以新增選擇性說明，以進一步瞭解命名空間。 除&#x200B;**非人員識別碼**&#x200B;之外的所有識別類型都遵循相同的拼接行為。 如果您在建立命名空間時選擇「非人員識別碼&#x200B;**」作為識別類型，則不會進行拼接。**&#x200B;有關每個身份類型的具體資訊，請參閱[身份類型](#identity-types)上的表。
+
+完成後，選擇&#x200B;**[!UICONTROL Create]**。
 
 >[!IMPORTANT]
 >
