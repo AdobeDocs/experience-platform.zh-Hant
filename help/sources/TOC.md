@@ -5,9 +5,9 @@ breadcrumb-title: 來源連接器指南
 user-guide-description: 從多種來源或結構擷取資料、加標籤，以及增強已擷取的資料。
 feature: 資料擷取，來源
 translation-type: tm+mt
-source-git-commit: 121e2f410acdcd6de3953c6063a15901c853dd07
+source-git-commit: 32a6d0311169486b1273129c0ee87c242bee1e47
 workflow-type: tm+mt
-source-wordcount: '610'
+source-wordcount: '612'
 ht-degree: 11%
 
 ---
@@ -18,10 +18,10 @@ ht-degree: 11%
 - [來源連接器概觀](home.md)
 - 可用源連接器{#connectors}
    - Adobe應用程式{#adobe-applications}
-      - [Analytics分類資料連接器](connectors/adobe-applications/classifications.md)
-      - [Analytics資料連接器](connectors/adobe-applications/analytics.md)
-      - [Audience Manager連接器](connectors/adobe-applications/audience-manager.md)
-      - [客戶屬性連接器](connectors/adobe-applications/customer-attributes.md)
+      - [Analytics分類來源連接器](connectors/adobe-applications/classifications.md)
+      - [Analytics來源連接器](connectors/adobe-applications/analytics.md)
+      - [Audience Manager源連接器](connectors/adobe-applications/audience-manager.md)
+      - [客戶屬性來源連接器](connectors/adobe-applications/customer-attributes.md)
       - Adobe應用程式欄位映射{#mapping}
          - [Analytics欄位對應](connectors/adobe-applications/mapping/analytics.md)
          - [Audience Manager欄位映射](connectors/adobe-applications/mapping/audience-manager.md)
