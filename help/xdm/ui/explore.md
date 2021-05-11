@@ -7,9 +7,9 @@ topic-legacy: tutorial
 type: Tutorial
 exl-id: b527b2a0-e688-4cfe-a176-282182f252f2
 translation-type: tm+mt
-source-git-commit: ab0798851e5f2b174d9f4241ad64ac8afa20a938
+source-git-commit: ddf66ab277e5882afe7ffbdd87ee5df958c3e7b0
 workflow-type: tm+mt
-source-wordcount: '919'
+source-wordcount: '992'
 ht-degree: 0%
 
 ---
@@ -37,6 +37,12 @@ ht-degree: 0%
 您也可以使用搜尋列進一步縮小結果。 在搜尋詞語時，排名最前的項目代表名稱與搜尋查詢相符的資源。 在這些項目下，**[!UICONTROL Standard Fields]**&#x200B;下會列出包含與查詢相符之欄位的所有資源。 這樣，您就可以根據所包含的資料類型來搜索XDM資源，而無需事先知道該資源的名稱。
 
 ![](../images/ui/explore/search.png)
+
+搜索結果中顯示的資源首先按標題匹配排序，然後按說明匹配排序。 反過來，其中任一類別中的字詞匹配越多，資源在清單中的顯示越高。
+
+>[!NOTE]
+>
+>對於標準XDM資源，搜尋功能只會傳回包含`xdm`命名空間的個別欄位。 位於不同名稱空間（例如您的租用戶ID）下的欄位，只有在自訂資源中包含時，才會傳回。
 
 找到要瀏覽的資源後，請從清單中選擇其名稱，以在畫布中查看其結構。
 
@@ -100,7 +106,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->有關在XDM結構描述中使用關係的詳細資訊，請參閱[在UI](../tutorials/create-schema-ui.md)中建立關係的教程。
+>有關在XDM結構描述中使用關係的詳細資訊，請參閱[在UI](../tutorials/relationship-ui.md)中建立關係的教程。
 
 ## 後續步驟
 
