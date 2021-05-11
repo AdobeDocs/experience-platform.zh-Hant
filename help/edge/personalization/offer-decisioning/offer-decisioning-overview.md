@@ -1,23 +1,23 @@
 ---
-title: 搭配平台網頁SDK使用選件決策
-description: Adobe Experience Platform Web SDK可提供並轉譯選件決策中管理的個人化選件。 您可以使用選件決策UI或API來建立選件和其他相關物件。
-keywords: 選件決策；決策；Web SDK；平台Web SDK；個人化選件；傳遞選件；選件傳遞；選件個人化；
+title: 與平台網頁SDK搭配使用Offer decisioning
+description: Adobe Experience Platform網頁SDK可提供並轉譯以Offer decisioning管理的個人化優惠。 您可以使用Offer decisioningUI或API來建立選件和其他相關物件。
+keywords: offer decisioning；決策；Web SDK；平台Web SDK；個人化優惠；傳遞優惠；提供優惠；提供個人化；
+exl-id: 4ab51f9d-3c44-4855-b900-aa2cde673a9a
 translation-type: tm+mt
-source-git-commit: 0b9a92f006d1ec151a0bb11c10c607ea9362f729
+source-git-commit: 2113eb265020b1d1c2e73dba95554c8bf97acf13
 workflow-type: tm+mt
 source-wordcount: '849'
 ht-degree: 9%
 
 ---
 
-
-# 搭配平台網頁SDK使用選件決策
+# 與平台網頁SDK搭配使用Offer decisioning
 
 >[!NOTE]
 >
->Adobe Experience Platform Web SDK中的選件決策目前可供特定使用者提早存取。 並非所有IMS組織都可使用此功能。
+>Adobe Experience Platform網頁SDK中的Offer decisioning目前可供特定使用者提早存取。 並非所有IMS組織都可使用此功能。
 
-Adobe Experience Platform [!DNL Web SDK]可提供並轉譯在選件決策中管理的個人化選件。 您可以使用選件決策使用者介面(UI)或API來建立選件和其他相關物件。
+Adobe Experience Platform[!DNL Web SDK]可提供並轉譯以Offer decisioning管理的個人化優惠。 您可以使用Offer decisioning使用者介面(UI)或API來建立選件和其他相關物件。
 
 ## 先決條件
 
@@ -27,11 +27,11 @@ Adobe Experience Platform [!DNL Web SDK]可提供並轉譯在選件決策中管�
 
 ## 術語
 
-使用選件決策時，請務必瞭解下列術語。 如需詳細資訊及檢視其他條款，請造訪[選件決策辭彙表](https://experienceleague.adobe.com/docs/offer-decisioning/using/get-started/glossary.html)。
+使用Offer decisioning時，請務必瞭解下列術語。 如需詳細資訊及檢視其他詞語，請造訪[Offer decisioning辭彙表](https://experienceleague.adobe.com/docs/offer-decisioning/using/get-started/glossary.html)。
 
 * **容器：** 容器是隔離機制，可區隔不同的顧慮。容器ID是所有儲存庫API的第一個路徑元素。 所有決策物件都位於容器中。
 
-* **決策範圍：** 對於選件決策，這些是Base64編碼的JSON字串，包含您希望選件決策服務用來建議選件的活動和位置ID。
+* **決策範圍：** 對於Offer decisioning，這些是Base64編碼的JSON字串，包含您希望offer decisioning服務用來建議選件的活動和位置ID。
 
    *決策範圍JSON:*
 
@@ -58,14 +58,14 @@ Adobe Experience Platform [!DNL Web SDK]可提供並轉譯在選件決策中管�
 
 * **身份**:如需詳細資訊，請閱讀本檔案，說明 [Platform Web SDK如何運用Identity Service](../../identity/overview.md)。
 
-## 啟用選件決策
+## 啟用Offer decisioning
 
-若要啟用選件決策，您必須執行下列步驟：
+要啟用Offer decisioning，您需要執行以下步驟：
 
-1. 在您的[edge configuration](../../fundamentals/edge-configuration.md)中啟用Adobe Experience Platform，並勾選「選件決策」方塊
+1. 在[edge configuration](../../fundamentals/edge-configuration.md)中啟用Adobe Experience Platform並選中「Offer decisioning」框
    ![offer-decisioning-edge-config](./assets/offer-decisioning-edge-config.png)
-2. 請依照指示[安裝SDK](../../fundamentals/installing-the-sdk.md)(SDK可獨立安裝，或透過[Adobe Experience Platform Launch](http://launch.adobe.com/)安裝。 以下是Platform Launch](https://docs.adobe.com/content/help/zh-Hant/launch/using/intro/get-started/quick-start.html)的[快速入門手冊。
-3. [設定選件](../../fundamentals/configuring-the-sdk.md) 決策的SDK。下面提供其他優惠決策的特定步驟。
+2. 請依照指示[安裝SDK](../../fundamentals/installing-the-sdk.md)(SDK可獨立安裝，或透過[Adobe Experience Platform Launch](http://launch.adobe.com/)安裝。 以下是Platform launch[快速入門手冊。](https://docs.adobe.com/content/help/zh-Hant/launch/using/intro/get-started/quick-start.html)
+3. [設定](../../fundamentals/configuring-the-sdk.md) SDK以Offer decisioning。以下提供其他Offer decisioning特定步驟。
    * 獨立安裝的SDK
       1. 使用您的`decisionScopes`設定「sendEvent」動作
 
@@ -78,9 +78,10 @@ Adobe Experience Platform [!DNL Web SDK]可提供並轉譯在選件決策中管�
           ]
       })
       ```
-   * Platform Launch已安裝SDK
-      1. [建立平台啟動屬性](https://docs.adobe.com/content/help/zh-Hant/launch/using/reference/admin/companies-and-properties.html)
-      2. [新增平台啟動內嵌代碼](https://docs.adobe.com/content/help/en/core-services-learn/implementing-in-websites-with-launch/configure-launch/launch-add-embed.html)
+
+   * platform launch安裝的SDK
+      1. [建立Platform launch屬性](https://docs.adobe.com/content/help/zh-Hant/launch/using/reference/admin/companies-and-properties.html)
+      2. [新增Platform launch內嵌代碼](https://docs.adobe.com/content/help/en/core-services-learn/implementing-in-websites-with-launch/configure-launch/launch-add-embed.html)
       3. 從「Edge Configuration」（邊緣設定）下拉式清單中選取您剛建立的「Edge Configuration」（邊緣設定），安裝並設定平台網頁SDK擴充功能。 關於[extensions](https://docs.adobe.com/content/help/en/launch/using/reference/manage-resources/extensions/overview.html)的實用文檔。
          ![install-aep-web-sdk-extension](./assets/install-aep-web-sdk-extension.png)
 
@@ -95,11 +96,12 @@ Adobe Experience Platform [!DNL Web SDK]可提供並轉譯在選件決策中管�
       6. [建立並發佈包](https://docs.adobe.com/content/help/zh-Hant/launch/using/reference/publish/libraries.html) 含您所設定之所有相關規則、資料元素和擴充功能的資料庫
 
 
+
 ## 請求和回應範例
 
 ### 一個`decisionScopes`值
 
-**請求**
+**要求**
 
 ```json
 {
@@ -194,7 +196,7 @@ Adobe Experience Platform [!DNL Web SDK]可提供並轉譯在選件決策中管�
 
 ### 多個`decisionScopes`值
 
-**請求**
+**要求**
 
 ```json
 {
