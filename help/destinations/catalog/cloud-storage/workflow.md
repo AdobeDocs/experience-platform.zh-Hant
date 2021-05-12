@@ -5,10 +5,9 @@ type: Tutorial
 description: 連線至雲端儲存空間的指示
 seo-description: 連線至雲端儲存空間的指示
 exl-id: 58003c1e-2f70-4e28-8a38-3be00da7cc3c
-translation-type: tm+mt
-source-git-commit: ecda1f1c4a2829124aedaae2395a74e54929c7ad
+source-git-commit: 4dff8a95af79d14cf0c79fa1468df36f040ab1ad
 workflow-type: tm+mt
-source-wordcount: '595'
+source-wordcount: '594'
 ht-degree: 0%
 
 ---
@@ -27,7 +26,7 @@ ht-degree: 0%
 >
 >如果已存在與此目標的連接，則可以在目標卡上看到&#x200B;**[!UICONTROL Activate]**&#x200B;按鈕。 有關&#x200B;**[!UICONTROL Activate]**&#x200B;和&#x200B;**[!UICONTROL Configure]**&#x200B;之間差異的詳細資訊，請參閱目標工作區文檔的[目錄](../../ui/destinations-workspace.md#catalog)部分。
 
-## 帳戶步驟{#account}
+## 帳戶步驟 {#account}
 
 在&#x200B;**[!UICONTROL Account]**&#x200B;步驟中，如果您先前已設定到雲儲存目標的連接，請選擇&#x200B;**[!UICONTROL Existing Account]**&#x200B;並選擇現有連接。 或者，您可以選擇&#x200B;**[!UICONTROL New Account]**&#x200B;來設定到雲儲存目標的新連接。 填寫您的帳戶驗證憑證，然後選取&#x200B;**[!UICONTROL Connect to destination]**。 或者，您可以附加RSA格式的公鑰，以便將加密添加到導出的檔案。 您的公開金鑰必須寫入為[!DNL Base64]編碼字串。
 
@@ -39,7 +38,7 @@ ht-degree: 0%
 
 ![連線至雲端儲存空間目標——帳戶步驟](../../assets/catalog/cloud-storage/workflow/destination-account.png)
 
-## 驗證步驟{#authentication}
+## 驗證步驟 {#authentication}
 
 在&#x200B;**[!UICONTROL Authentication]**&#x200B;步驟中，輸入&#x200B;**[!UICONTROL Name]**&#x200B;和&#x200B;**[!UICONTROL Description]**&#x200B;作為啟動流程。
 
@@ -63,7 +62,7 @@ ht-degree: 0%
 
 您的目標現在已建立。 如果您想稍後啟動區段，可以選取&#x200B;**[!UICONTROL Save & Exit]**，或選取&#x200B;**[!UICONTROL Next]**&#x200B;以繼續工作流程，並選取要啟動的區段。 閱讀[啟用區段](#activate-segments)一節，以匯出工作流程的其餘部分。
 
-## 使用宏在儲存位置中建立資料夾{#use-macros}
+## 使用宏在儲存位置{#use-macros}中建立資料夾
 
 >[!NOTE]
 >
