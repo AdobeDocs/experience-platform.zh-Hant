@@ -3,10 +3,9 @@ title: 與平台網頁SDK搭配使用Offer decisioning
 description: Adobe Experience Platform網頁SDK可提供並轉譯以Offer decisioning管理的個人化優惠。 您可以使用Offer decisioningUI或API來建立選件和其他相關物件。
 keywords: offer decisioning；決策；Web SDK；平台Web SDK；個人化優惠；傳遞優惠；提供優惠；提供個人化；
 exl-id: 4ab51f9d-3c44-4855-b900-aa2cde673a9a
-translation-type: tm+mt
-source-git-commit: 2113eb265020b1d1c2e73dba95554c8bf97acf13
+source-git-commit: 20adb26fbd55302ac8005978968a0d69bdda8755
 workflow-type: tm+mt
-source-wordcount: '849'
+source-wordcount: '842'
 ht-degree: 9%
 
 ---
@@ -23,7 +22,7 @@ Adobe Experience Platform[!DNL Web SDK]可提供並轉譯以Offer decisioning管
 
 * IMS組織已啟用邊緣決策功能
 * 選件、建立的活動
-* 已發佈Edge組態
+* 資料流已發佈
 
 ## 術語
 
@@ -54,7 +53,7 @@ Adobe Experience Platform[!DNL Web SDK]可提供並轉譯以Offer decisioning管
 
    ![](assets/decision-scope-copy.png)
 
-* **Edge Configuration：如需** 詳細資訊，請閱讀 [Edge Configuration](../../fundamentals/edge-configuration.md) 檔案。
+* **資料串流：** 如需詳細資訊，請閱讀資料串 [](../../fundamentals/datastreams.md) 流檔案。
 
 * **身份**:如需詳細資訊，請閱讀本檔案，說明 [Platform Web SDK如何運用Identity Service](../../identity/overview.md)。
 
@@ -62,7 +61,7 @@ Adobe Experience Platform[!DNL Web SDK]可提供並轉譯以Offer decisioning管
 
 要啟用Offer decisioning，您需要執行以下步驟：
 
-1. 在[edge configuration](../../fundamentals/edge-configuration.md)中啟用Adobe Experience Platform並選中「Offer decisioning」框
+1. 在[datastream](../../fundamentals/datastreams.md)中啟用Adobe Experience Platform並選中「Offer decisioning」框
    ![offer-decisioning-edge-config](./assets/offer-decisioning-edge-config.png)
 2. 請依照指示[安裝SDK](../../fundamentals/installing-the-sdk.md)(SDK可獨立安裝，或透過[Adobe Experience Platform Launch](http://launch.adobe.com/)安裝。 以下是Platform launch[快速入門手冊。](https://docs.adobe.com/content/help/zh-Hant/launch/using/intro/get-started/quick-start.html)
 3. [設定](../../fundamentals/configuring-the-sdk.md) SDK以Offer decisioning。以下提供其他Offer decisioning特定步驟。
@@ -82,11 +81,11 @@ Adobe Experience Platform[!DNL Web SDK]可提供並轉譯以Offer decisioning管
    * platform launch安裝的SDK
       1. [建立Platform launch屬性](https://docs.adobe.com/content/help/zh-Hant/launch/using/reference/admin/companies-and-properties.html)
       2. [新增Platform launch內嵌代碼](https://docs.adobe.com/content/help/en/core-services-learn/implementing-in-websites-with-launch/configure-launch/launch-add-embed.html)
-      3. 從「Edge Configuration」（邊緣設定）下拉式清單中選取您剛建立的「Edge Configuration」（邊緣設定），安裝並設定平台網頁SDK擴充功能。 關於[extensions](https://docs.adobe.com/content/help/en/launch/using/reference/manage-resources/extensions/overview.html)的實用文檔。
+      3. 從「資料串流」下拉式清單中選取設定，以您剛建立的資料串流安裝並設定平台網頁SDK擴充功能。 請參閱[extensions](https://docs.adobe.com/content/help/en/launch/using/reference/manage-resources/extensions/overview.html)上的說明檔案。
          ![install-aep-web-sdk-extension](./assets/install-aep-web-sdk-extension.png)
 
          ![configure-aep-web-sdk-extension](./assets/configure-aep-web-sdk-extension.png)
-      4. 建立必要的[資料元素](https://docs.adobe.com/content/help/en/launch/using/reference/manage-resources/data-elements.html)。 至少，您需要建立平台網頁SDK識別圖和平台網頁SDK XDM物件資料元素。
+      4. 建立必要的[資料元素](https://docs.adobe.com/content/help/en/launch/using/reference/manage-resources/data-elements.html)。 您至少必須建立平台網頁SDK識別圖和平台網頁SDK XDM物件資料元素。
          ![identity-map-data-element](./assets/identity-map-data-element.png)
 
          ![xdm-object-data-element](./assets/xdm-object-data-element.png)
