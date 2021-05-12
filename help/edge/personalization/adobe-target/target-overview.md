@@ -3,10 +3,9 @@ title: 將Adobe Target與平台網頁SDK搭配使用
 description: 瞭解如何使用Adobe Target的Experience PlatformWeb SDK來呈現個人化內容
 keywords: target;adobe target;activity.id;experience.id;renderDecisions;decisionScopes;prehiding snippet;vec;Form-Based Experience Composer;xdm;audiences;decisions;scope;schema;
 exl-id: 021171ab-0490-4b27-b350-c37d2a569245
-translation-type: tm+mt
-source-git-commit: e12b1337c44095ee8731f99c5829ab83bba14889
+source-git-commit: 20adb26fbd55302ac8005978968a0d69bdda8755
 workflow-type: tm+mt
-source-wordcount: '659'
+source-wordcount: '658'
 ht-degree: 4%
 
 ---
@@ -29,7 +28,7 @@ Adobe Experience Platform[!DNL Web SDK]可將Adobe Target管理的個人化體�
 
 要啟用[!DNL Target]，請執行以下操作：
 
-1. 在[edge configuration](../../fundamentals/edge-configuration.md)中使用適當的用戶端程式碼啟用目標。
+1. 在[datastream](../../fundamentals/datastreams.md)中使用適當的用戶端代碼啟用Target。
 1. 將`renderDecisions`選項新增至事件。
 
 然後，您也可以選擇新增下列選項：
