@@ -5,8 +5,7 @@ title: 設定資料集以擷取同意和偏好資料
 topic-legacy: getting started
 description: 瞭解如何設定體驗資料模型(XDM)架構和資料集，以擷取Adobe Experience Platform的同意與偏好資料。
 exl-id: 61ceaa2a-c5ac-43f5-b118-502bdc432234
-translation-type: tm+mt
-source-git-commit: 30a2ddb875b035b4509b4be3692b95d0d3ef50b3
+source-git-commit: 20adb26fbd55302ac8005978968a0d69bdda8755
 workflow-type: tm+mt
 source-wordcount: '1424'
 ht-degree: 0%
@@ -42,7 +41,7 @@ ht-degree: 0%
 >
 >本教程假定您知道要用於捕獲客戶屬性資訊的平台中的[!DNL Profile]架構。 無論您使用何種方法收集同意資料，此結構必須啟用「即時客戶個人檔案」](../../../../xdm/ui/resources/schemas.md#profile)。 [此外，架構的主要身分識別不能是直接可識別的欄位，無法用於喜好式廣告，例如電子郵件地址。 如果您不確定哪些欄位受限制，請洽詢您的法律顧問。
 
-## 同意與首選項欄位組結構{#structure}
+## 「同意與偏好」欄位群組結構 {#structure}
 
 [!UICONTROL Privacy/Personalization/Marketing Preferences (Consents)]欄位群組（以下稱為「同意與偏好欄位群組」）為架構提供標準化的同意欄位。 目前，此欄位組僅與基於[!DNL XDM Individual Profile]類的方案相容。
 
@@ -121,7 +120,7 @@ ht-degree: 0%
 
 如果您尚未為此模式建立資料集，請遵循下一節中的步驟。
 
-## 根據您的同意方案{#dataset}建立資料集
+## 根據您的同意方案建立資料集 {#dataset}
 
 在建立具有同意欄位的架構後，您必須建立資料集，以便最終收錄客戶的同意資料。 必須為[!DNL Real-time Customer Profile]啟用此資料集。
 
@@ -151,7 +150,7 @@ ht-degree: 0%
 
 ![](../../../images/governance-privacy-security/consent/adobe/dataset-prep/enable-dataset.png)
 
-資料集現在已儲存並啟用，可用於[!DNL Profile]。 如果您打算使用平台網頁SDK將同意資料傳送至描述檔，則在設定[edge configuration](../../../../edge/fundamentals/edge-configuration.md)時，必須將此資料集選為[!UICONTROL Profile Dataset]。
+資料集現在已儲存並啟用，可用於[!DNL Profile]。 如果您打算使用平台網頁SDK將同意資料傳送至描述檔，則在設定[edge configuration](../../../../edge/fundamentals/datastreams.md)時，必須將此資料集選為[!UICONTROL Profile Dataset]。
 
 ## 後續步驟
 
