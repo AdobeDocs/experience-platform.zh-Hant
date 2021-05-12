@@ -3,14 +3,13 @@ title: Adobe Experience Platform網頁SDK擴充功能中的動作類型
 description: 瞭解Adobe Experience Platform LaunchAdobe Experience Platform網頁SDK擴充功能提供的不同動作類型。
 solution: Experience Platform
 feature: Web SDK
-translation-type: tm+mt
-source-git-commit: 9ce6dd5a290b55da04f4ae185cab96c120777775
+exl-id: a4bf0bb9-59b4-4c43-97e6-387768176517
+source-git-commit: 7e87f5b29d388b34681217e392c3f1ae8f2b67ee
 workflow-type: tm+mt
-source-wordcount: '548'
-ht-degree: 4%
+source-wordcount: '534'
+ht-degree: 8%
 
 ---
-
 
 # 動作類型
 
@@ -20,15 +19,15 @@ ht-degree: 4%
 
 ## 傳送事件
 
-傳送事件至Adobe[!DNL Experience Platform]，讓Adobe Experience Platform可以收集您傳送的資料，並對該資訊採取行動。 選取例項（如果您有多個例項）。 您要傳送的任何資料都可在&#x200B;**[!UICONTROL XDM資料]**&#x200B;欄位中傳送。 使用符合XDM結構的JSON物件。 此物件可在您的頁面上建立，或透過&#x200B;**[!UICONTROL 自訂代碼]** **[!UICONTROL 資料元素]**&#x200B;建立。
+傳送事件至Adobe[!DNL Experience Platform]，讓Adobe Experience Platform可以收集您傳送的資料，並對該資訊採取行動。 選取例項（如果您有多個例項）。 可在「**[!UICONTROL XDM Data]**」欄位中傳送您要傳送的任何資料。使用符合XDM結構的JSON物件。 您可在您的頁面上，或透過 **[!UICONTROL Custom Code]****[!UICONTROL Data Element]** 建立此物件。
 
 「傳送事件」動作類型中還有一些其他欄位，視您的實作而定，這些欄位也會很有用。 請注意，這些欄位都是選用的。
 
 - **類型：** 此欄位可讓您指定要記錄在XDM架構中的事件類型。如需預設事件類型的詳細資訊，請參閱[檔案](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/tracking-events.html?lang=en#using-the-sendbeacon-api)。
 - **合併ID:** 如果您想要為事件指 [定](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/merging-event-data.html?lang=en#fundamentals) 合併ID，可在此欄位中執行此動作。請注意，下游解決方案目前無法合併您的事件資料。
-- **資料集ID:** 如果您需要將資料傳送至邊緣設定中指定之資料集以外的資料集，您可以在此處指定該資料集ID。
-- **文檔將卸載：** 如果您希望確保事件到達伺服器，即使用戶從頁面導航離開，請選中「文檔將卸載」 **[!UICONTROL 複選框]** 。這可讓事件觸及伺服器，但會忽略回應。
-- **呈現視覺個人化決策：** 如果您想要在頁面上呈現個人化內容，請勾選「呈現視覺個人化 **[!UICONTROL 決策」]** 核取方塊。您也可以視需要指定決策範圍。 如需有關轉譯個人化內容的詳細資訊，請參閱[個人化檔案](https://experienceleague.adobe.com/docs/experience-platform/edge/personalization/rendering-personalization-content.html?lang=en#automatically-rendering-content)。
+- **資料集ID:** 如果您需要將資料傳送至資料流中指定以外的資料集，您可以在此處指定該資料集ID。
+- **檔案將卸載：** 如果您想確保事件到達伺服器，即使用戶從頁面導航，請選中該復 **[!UICONTROL Document will unload]** 選框。這可讓事件觸及伺服器，但會忽略回應。
+- **呈現視覺化個人化決策：** 如果您想要在頁面上呈現個人化內容，請勾選核取方 **[!UICONTROL Render visual personalization decisions]** 塊。您也可以視需要指定決策範圍。 如需有關轉譯個人化內容的詳細資訊，請參閱[個人化檔案](https://experienceleague.adobe.com/docs/experience-platform/edge/personalization/rendering-personalization-content.html?lang=en#automatically-rendering-content)。
 
 ## 設定同意
 
