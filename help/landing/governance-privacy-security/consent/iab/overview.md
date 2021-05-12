@@ -5,8 +5,7 @@ title: IAB TCF 2.0Experience Platform支援
 topic-legacy: privacy events
 description: 瞭解如何設定您的資料作業和結構，以在將區段啟動至Adobe Experience Platform的目的地時傳達客戶同意選擇。
 exl-id: af787adf-b46e-43cf-84ac-dfb0bc274025
-translation-type: tm+mt
-source-git-commit: ab0798851e5f2b174d9f4241ad64ac8afa20a938
+source-git-commit: 20adb26fbd55302ac8005978968a0d69bdda8755
 workflow-type: tm+mt
 source-wordcount: '2466'
 ht-degree: 0%
@@ -48,7 +47,7 @@ Adobe Experience Platform是註冊的[IAB TCF 2.0供應商清單](https://iabeur
 
 除了上述平台服務外，您還應熟悉[目標](../../../../data-governance/home.md)及其在平台生態系統中的角色。
 
-## 客戶同意流程摘要{#summary}
+## 客戶同意流程摘要 {#summary}
 
 以下各節說明在正確配置系統後如何收集和強制執行許可資料。
 
@@ -96,7 +95,7 @@ Adobe Experience Platform是註冊的[IAB TCF 2.0供應商清單](https://iabeur
 
 許可字串只能由在IAB TCF中註冊的CMP建立。 有關如何使用特定CMP生成許可字串的詳細資訊，請參閱IAB TCF GitHub repo中的[許可字串格式指南](https://github.com/InteractiveAdvertisingBureau/GDPR-Transparency-and-Consent-Framework/blob/master/TCFv2/IAB%20Tech%20Lab%20-%20Consent%20string%20and%20vendor%20list%20formats%20v2.md)。
 
-## 使用TCF許可欄位建立資料集{#datasets}
+## 使用TCF許可欄位建立資料集 {#datasets}
 
 客戶同意資料必須發送到方案包含TCF同意欄位的資料集。 請參閱[建立資料集以擷取TCF 2.0同意](./dataset.md)的教學課程，瞭解如何在繼續本指南之前建立兩個必要的資料集。
 
@@ -106,7 +105,7 @@ Adobe Experience Platform是註冊的[IAB TCF 2.0供應商清單](https://iabeur
 
 有關如何使用合併策略的詳細資訊，請參閱[合併策略使用手冊](../../../../profile/ui/merge-policies.md)。 設定合併政策時，您必須確定您的區段包含[XDM隱私權架構欄位群組](./dataset.md#privacy-field-group)提供的所有必要同意屬性，如資料集準備指南所述。
 
-## 整合Experience PlatformWeb SDK以收集客戶同意資料{#sdk}
+## 整合Experience PlatformWeb SDK以收集客戶同意資料 {#sdk}
 
 >[!NOTE]
 >
@@ -120,7 +119,7 @@ Adobe Experience Platform是註冊的[IAB TCF 2.0供應商清單](https://iabeur
 
 ### 建立新的邊緣設定
 
-為了讓SDK傳送資料至Experience Platform，您必須先在[!DNL Adobe Experience Platform Launch]中為平台建立新的邊緣設定。 如何建立新組態的特定步驟，請參閱[SDK檔案](../../../../edge/fundamentals/edge-configuration.md)。
+為了讓SDK傳送資料至Experience Platform，您必須先在[!DNL Adobe Experience Platform Launch]中為平台建立新的邊緣設定。 如何建立新組態的特定步驟，請參閱[SDK檔案](../../../../edge/fundamentals/datastreams.md)。
 
 為配置提供唯一名稱后，選擇&#x200B;**[!UICONTROL Adobe Experience Platform]**&#x200B;旁邊的切換按鈕。 接下來，請使用下列值來完成表單的其餘部分：
 
@@ -225,7 +224,7 @@ alloy("sendEvent", {
 
 所有[!DNL Platform SDK]命令都返回表示呼叫是成功還是失敗的承諾。 然後，您可以將這些回應用於其他邏輯，例如向客戶顯示確認訊息。 如需特定範例，請參閱執行SDK命令指南中有關[處理成功或失敗的章節。](../../../../edge/fundamentals/executing-commands.md#handling-success-or-failure)
 
-## 匯出區段{#export}
+## 匯出區段 {#export}
 
 >[!NOTE]
 >
