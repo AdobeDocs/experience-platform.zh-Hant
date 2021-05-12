@@ -3,10 +3,9 @@ keywords: AmazonS3;S3目標；s3;amazon s3
 title: AmazonS3連線
 description: 建立到您的AmazonWeb Services(AWS)S3儲存的即時出站連接，以定期從Adobe Experience Platform將Tab分隔或CSV資料檔案導出到您自己的S3儲存區。
 exl-id: 6a2a2756-4bbf-4f82-88e4-62d211cbbb38
-translation-type: tm+mt
-source-git-commit: 7780a2b3b518ab976ec14531892e0734a6342e4c
+source-git-commit: 49a59e5b081243679f5d94b03a63d30df22cdc6a
 workflow-type: tm+mt
-source-wordcount: '233'
+source-wordcount: '270'
 ht-degree: 0%
 
 ---
@@ -31,9 +30,13 @@ ht-degree: 0%
 
 * **[!DNL Amazon S3]訪問密鑰和 [!DNL Amazon S3] 密鑰**:在中 [!DNL Amazon S3]，產生一 `access key - secret access key` 對以授與您帳戶的平台存 [!DNL Amazon S3] 取權。請參閱[Amazon網站服務檔案](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html)瞭解更多資訊。
 
+>[!TIP]
+>
+>在連接目標工作流中，您可以在每個導出的段檔案的AmazonS3儲存中建立一個自定義資料夾。 有關說明，請閱讀[使用宏在儲存位置](./workflow.md#use-macros)中建立資料夾。
+
 ## 需要[!DNL Amazon S3]權限{#required-s3-permission}
 
-要成功將資料連接並導出到[!DNL Amazon S3]儲存位置，請在[!DNL Amazon S3]中為[!DNL Platform]建立IAM用戶，並為以下操作分配權限：
+要成功將資料連接並導出到[!DNL Amazon S3]儲存位置，請在[!DNL Amazon S3]中為[!DNL Platform]建立Identity and Access Management(IAM)用戶，並為以下操作分配權限：
 
 * `s3:DeleteObject`
 * `s3:GetBucketLocation`
