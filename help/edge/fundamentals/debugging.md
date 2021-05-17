@@ -1,15 +1,14 @@
 ---
-title: 在Adobe Experience Platform Web SDK中除錯
-description: 瞭解如何在Experience Platform Web SDK中切換除錯功能。
+title: 在Adobe Experience Platform網頁SDK中除錯
+description: 瞭解如何在Experience PlatformWeb SDK中切換除錯功能。
 keywords: 除錯網頁sdk；除錯；configure;configure命令；debug命令；edgeConfigId;setDebug;debugEnabled;debug;
-translation-type: tm+mt
-source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
+exl-id: 4e893af8-a48e-48dc-9737-4c61b3355f03
+source-git-commit: 0f671a967a67761e0cfef6fa0d022e3c3790c2d8
 workflow-type: tm+mt
-source-wordcount: '392'
+source-wordcount: '446'
 ht-degree: 0%
 
 ---
-
 
 # 為  除錯
 
@@ -79,4 +78,4 @@ alloy("getLibraryInfo").then(function(result) {
 
 目前，提供的`libraryInfo`物件包含下列屬性：
 
-* `version` 這是載入的程式庫版本。例如，如果要載入的程式庫版本為1.0.0，則值會是`1.0.0`。
+* `version` 這是載入的程式庫版本。例如，如果要載入的程式庫版本為1.0.0，則值會是`1.0.0`。 當程式庫在Adobe Experience Platform Launch擴充功能（名為「AEP Web SDK」）中執行時，版本為程式庫版本，而Platform launch擴充功能版本則以&quot;+&quot;符號連結。 例如，如果程式庫的版本為1.0.0，而Platform launch副檔名的版本為1.2.0，則值應為`1.0.0+1.2.0`。
