@@ -2,14 +2,13 @@
 title: 安裝Adobe Experience Platform網頁SDK
 description: 瞭解如何安裝Experience Platform網頁SDK。
 keywords: 網頁sdk安裝；安裝網頁sdk；網際網路瀏覽器；promise;npm套件
-translation-type: tm+mt
-source-git-commit: 63c0c5cae5ca2800b1f049b2b33e2a6f36ee7255
+exl-id: b1de7ca1-d0d2-4661-a273-a1acf29afcd5
+source-git-commit: 07f598a9fd7c0e5af7802fe979a44bbafa7afae4
 workflow-type: tm+mt
-source-wordcount: '901'
-ht-degree: 4%
+source-wordcount: '939'
+ht-degree: 3%
 
 ---
-
 
 # 安裝SDK {#installing-the-sdk}
 
@@ -72,7 +71,7 @@ URL結構：https://cdn1.adoberesources.net/alloy/[VERSION]/alloy.min.js OR allo
 
 ### 支援Internet Explorer {#support-internet-explore}
 
-本SDK使用承諾，這是傳達非同步工作完成情況的方法。 SDK使用的[Promise](https://developer.mozilla.org/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Promise)實作，在原生方式上受到除[!DNL Internet Explorer]以外的所有目標瀏覽器支援。 若要在[!DNL Internet Explorer]上使用SDK，您必須擁有`window.Promise` [polyfilled](https://remysharp.com/2010/10/08/what-is-a-polyfill)。
+本SDK使用承諾，這是傳達非同步工作完成的方法。 SDK使用的[Promise](https://developer.mozilla.org/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Promise)實作，在原生方式上受到除[!DNL Internet Explorer]以外的所有目標瀏覽器支援。 若要在[!DNL Internet Explorer]上使用SDK，您必須擁有`window.Promise` [polyfilled](https://remysharp.com/2010/10/08/what-is-a-polyfill)。
 
 要確定您是否已有`window.Promise`填充值：
 
@@ -130,6 +129,10 @@ const alloy = createInstance({ name: "alloy" });
 alloy("config", { ... });
 alloy("sendEvent", { ... });
 ```
+
+>[!NOTE]
+>
+>NPM包依賴CommonJS模組；因此，在使用bundler時，請確定bundler支援CommonJS模組。 有些捆綁程式（例如[Rollup](https://rollupjs.org)）需要[外掛程式](https://www.npmjs.com/package/@rollup/plugin-commonjs)來提供CommonJS支援。
 
 ### 將套件當做ECMAScript 5模組
 
