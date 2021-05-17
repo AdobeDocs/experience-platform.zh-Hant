@@ -4,25 +4,25 @@ user-guide-title: Experience Data Model (XDM) 系統說明
 breadcrumb-title: Experience Data Model (XDM) 指南
 user-guide-description: 使用體驗資料模型(XDM)類別和架構欄位群組來標準化體驗資料。
 feature: 結構描述
-translation-type: tm+mt
-source-git-commit: a19a89d347b9197ab2766bd8a57018f5ac4f058d
+source-git-commit: dcfdc9c479e8a77296f7cb0bf9f5bb36e9261b75
 workflow-type: tm+mt
-source-wordcount: '291'
+source-wordcount: '295'
 ht-degree: 17%
 
 ---
 
 
-# 體驗資料模型(XDM)系統{#xdm}
+# 體驗資料模型(XDM)系統 {#xdm}
 
 * [XDM系統概述](home.md)
 * 結構描述 {#schema}
    * [架構構成基礎](schema/composition.md)
    * [資料建模的最佳實務](schema/best-practices.md)
    * [XDM欄位類型約束](schema/field-constraints.md)
+   * [XDM中的命名空間](./schema/namespaces.md)
    * [XDM欄位字典](schema/field-dictionary.md)
    * 行業資料模型{#industries}
-      * [概覽](./schema/industries/overview.md)
+      * [概述](./schema/industries/overview.md)
       * [零售資料模型ERD](./schema/industries/retail.md)
       * [金融服務資料模型](./schema/industries/financial.md)
       * [旅行和接待服務資料模型](./schema/industries/travel-hospitality.md)
@@ -62,7 +62,7 @@ ht-degree: 17%
    * [地理形狀](./data-types/geo-shape.md)
    * [身份](./data-types/identity.md)
    * [測量](./data-types/measure.md)
-   * [訂單](./data-types/order.md)
+   * [訂購](./data-types/order.md)
    * [付款項](./data-types/payment-item.md)
    * [「人」](./data-types/person.md)
    * [人員姓名](./data-types/person-name.md)
@@ -75,8 +75,8 @@ ht-degree: 17%
    * [訂閱](./data-types/subscription.md)
    * [網路互動](./data-types/web-interactions.md)
    * [網頁詳細資訊](./data-types/webpage-details.md)
-* [!UICONTROL Schemas] UI {#ui}
-   * [概覽](./ui/overview.md)
+* [!UICONTROL 架構] UI  {#ui}
+   * [概述](./ui/overview.md)
    * [探索 XDM 資源](./ui/explore.md)
    * 建立和編輯資源{#resources}
       * [結構描述](./ui/resources/schemas.md)
@@ -84,7 +84,7 @@ ht-degree: 17%
       * [欄位群組](./ui/resources/field-groups.md)
       * [資料類型](./ui/resources/data-types.md)
    * 定義欄位{#fields}
-      * [概覽](./ui/fields/overview.md)
+      * [概述](./ui/fields/overview.md)
       * [必填欄位](./ui/fields/required.md)
       * [物件欄位](./ui/fields/object.md)
       * [陣列欄位](./ui/fields/array.md)
