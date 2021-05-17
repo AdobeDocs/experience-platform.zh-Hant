@@ -5,10 +5,9 @@ title: 架構構成基礎
 topic-legacy: overview
 description: 本檔案介紹Experience Data Model(XDM)架構，以及組合要在Adobe Experience Platform使用的架構的構建區塊、原則和最佳實務。
 exl-id: d449eb01-bc60-4f5e-8d6f-ab4617878f7e
-translation-type: tm+mt
-source-git-commit: ab0798851e5f2b174d9f4241ad64ac8afa20a938
+source-git-commit: 632ea4e2a94bfcad098a5fc5a5ed8985c0f41e0e
 workflow-type: tm+mt
-source-wordcount: '3497'
+source-wordcount: '3621'
 ht-degree: 0%
 
 ---
@@ -50,19 +49,23 @@ XDM模式最適合以獨立格式儲存大量複雜資料。 有關XDM如何做�
 
 記錄和時間序列模式都包含身份映射(`xdm:identityMap`)。 此欄位包含主題的身分表示法，其取自標示為「身分」的欄位，如下一節所述。
 
-### [!UICONTROL Identity] {#identity}
+### [!UICONTROL 身份] {#identity}
 
 結構用於將資料提取到[!DNL Experience Platform]中。 此資料可跨多個服務使用，以建立個別實體的單一統一檢視。 因此，在考慮結構時，請務必考慮客戶身分，以及哪些欄位可用來識別主題，而不論資料來自何處。
 
-為了協助此程式，您的架構中的關鍵欄位可標示為身分。 在擷取資料時，這些欄位中的資料會插入該個人的「[!UICONTROL Identity Graph]」。 然後，[[!DNL Real-time Customer Profile]](../../profile/home.md)和其他[!DNL Experience Platform]服務可以訪問圖表資料，以提供每個客戶的拼接視圖。
+為了協助此程式，您的架構中的關鍵欄位可標示為身分。 在擷取資料時，這些欄位中的資料會插入該個人的「[!UICONTROL 身分圖」。 ]然後，[[!DNL Real-time Customer Profile]](../../profile/home.md)和其他[!DNL Experience Platform]服務可以訪問圖表資料，以提供每個客戶的拼接視圖。
 
-通常標示為&quot;[!UICONTROL Identity]&quot;的欄位包括：電子郵件地址、電話號碼、[[!DNL Experience Cloud ID (ECID)]](https://experienceleague.adobe.com/docs/id-service/using/home.html)、CRM ID或其他唯一ID欄位。 您也應考慮組織專屬的任何唯一識別碼，因為這些識別碼可能也是好的「[!UICONTROL Identity]」欄位。
+通常標示為&quot;[!UICONTROL Identity]&quot;的欄位包括：電子郵件地址、電話號碼、[[!DNL Experience Cloud ID (ECID)]](https://experienceleague.adobe.com/docs/id-service/using/home.html)、CRM ID或其他唯一ID欄位。 您也應考慮組織專屬的任何唯一識別碼，因為這些識別碼可能也是好的&quot;[!UICONTROL Identity]&quot;欄位。
 
 在方案規劃階段，務必考慮客戶身份，以協助確保資料匯整在一起，以建立最強穩的個人檔案。 請參閱[Adobe Experience Platform身分服務](../../identity-service/home.md)的概觀，進一步瞭解身分資訊如何協助您為客戶提供數位體驗。
 
-#### `xdm:identityMap` {#identityMap}
+#### `identityMap` {#identityMap}
 
-`xdm:identityMap` 是映射類型欄位，它描述單個的各種標識值及其關聯的名稱空間。此欄位可用於為方案提供身份資訊，而不是在方案本身的結構中定義身份值。
+`identityMap` 是映射類型欄位，它描述單個的各種標識值及其關聯的名稱空間。此欄位可用於為方案提供身份資訊，而不是在方案本身的結構中定義身份值。
+
+使用`identityMap`的主要缺點是，身份會嵌入資料中，因此變得不那麼明顯。 如果您正在擷取原始資料，則應改為在實際架構結構中定義個別識別欄位。
+
+不過，如果您從儲存身分的來源(例如[!DNL Airship]或Adobe Audience Manager)匯入資料，則身分圖會特別有用。 此外，如果您使用[Adobe Experience Platform行動SDK](https://aep-sdks.gitbook.io/docs/)，則需要識別地圖。
 
 簡單身份映射的示例如下所示：
 
@@ -99,7 +102,7 @@ XDM模式最適合以獨立格式儲存大量複雜資料。 有關XDM如何做�
 >
 >也可以為每個標識值提供一個布爾值，用於該值是否為主標識(`primary`)。 僅需為[!DNL Real-time Customer Profile]中要使用的方案設定主標識。 如需詳細資訊，請參閱[union結構描述](#union)一節。
 
-### 模式演化原則{#evolution}
+### 模式演化原則 {#evolution}
 
 隨著數位體驗的性質不斷演變，用來代表體驗的架構也必須不斷演變。 因此，精心設計的架構能夠根據需要調整和演化，而不會對舊版架構造成破壞性的改變。
 
@@ -127,7 +130,7 @@ XDM模式最適合以獨立格式儲存大量複雜資料。 有關XDM如何做�
 
 &amp;ast；模式由類和零個或多個模式欄位組組成。 這表示您完全不需要使用欄位群組，就可以合成資料集架構。
 
-### {#class}類
+### 類別 {#class}
 
 構成模式的開始方法是分配類。 類定義模式將包含的資料的行為方面（記錄或時間序列）。 此外，類還描述了基於該類的所有方案需要包含的最小公共屬性數，並為合併多個相容資料集提供了一種方法。
 
@@ -149,11 +152,11 @@ Adobe提供數種標準（「核心」）XDM類。 幾乎所有下游平台進�
 
 [!DNL Experience Platform] 包括許多標準Adobe欄位群組，同時允許廠商為其使用者定義欄位群組，以及個別使用者為其特定概念定義欄位群組。
 
-例如，要為&quot;[!UICONTROL Loyalty Members]&quot;方案捕獲&quot;[!UICONTROL First Name]&quot;和&quot;[!UICONTROL Home Address]&quot;等詳細資訊，您可以使用定義這些常見概念的標準欄位組。 但是，針對較不常見使用案例（例如&quot;[!UICONTROL Loyalty Program Level]&quot;）的概念通常沒有預先定義的欄位群組。 在這種情況下，您必須定義自己的欄位群組，才能擷取此資訊。
+例如，若要針對您的&quot;[!UICONTROL 忠誠會員]&quot;結構擷取詳細資訊，例如&quot;[!UICONTROL 名字]&quot;和&quot;[!UICONTROL 首頁位址]&quot;，您可以使用定義這些常見概念的標準欄位群組。 但是，針對較不常見使用案例（例如&quot;[!UICONTROL 忠誠度方案等級]&quot;）的概念通常沒有預先定義的欄位群組。 在這種情況下，您必須定義自己的欄位群組，才能擷取此資訊。
 
 請記住，結構由「零個或更多」欄位組成，因此這表示您無需使用任何欄位組即可合成有效結構。
 
-下列螢幕擷取顯示欄位群組在平台UI中的呈現方式。 在本示例中，單個欄位組([!UICONTROL Demographic Details])被添加到模式，該模式為模式結構提供欄位分組。
+下列螢幕擷取顯示欄位群組在平台UI中的呈現方式。 在本例中，單個欄位組（[!UICONTROL 人口統計詳細資訊]）被添加到方案中，該方案為方案結構提供欄位分組。
 
 ![](../images/schema-composition/field-group.png)
 
@@ -165,7 +168,7 @@ Adobe提供數種標準（「核心」）XDM類。 幾乎所有下游平台進�
 
 [!DNL Experience Platform] 提供了一些常用資料類型作為的一部分，以 [!DNL Schema Registry] 支援使用標準模式來描述常用資料結構。這在[!DNL Schema Registry]教學課程中有更詳細的說明，當您逐步定義資料類型時，會更清楚說明。
 
-下列螢幕擷取顯示資料類型在平台UI中的呈現方式。 [!UICONTROL Demographic Details]欄位組提供的欄位之一使用「[!UICONTROL Person name]」資料類型，如欄位名稱旁的垂直號字元(`|`)後面的文本所示。 此特定資料類型提供了與個人姓名相關的多個子欄位，此構造可以重複用於需要捕獲人員姓名的其他欄位。
+下列螢幕擷取顯示資料類型在平台UI中的呈現方式。 [!UICONTROL 人口統計詳細資訊]欄位組提供的欄位之一使用「[!UICONTROL 人員名稱]」資料類型，該資料類型由欄位名稱旁的垂直號字元(`|`)後面的文本表示。 此特定資料類型提供了與個人姓名相關的多個子欄位，此構造可以重複用於需要捕獲人員姓名的其他欄位。
 
 ![](../images/schema-composition/data-type.png)
 
@@ -222,11 +225,11 @@ Adobe提供數種標準（「核心」）XDM類。 幾乎所有下游平台進�
 
 結構表示將被收錄到[!DNL Platform]中並使用構圖模型構建的資料的格式和結構。 如前所述，這些方案由類和與該類相容的零個或多個欄位組組成。
 
-例如，描述在零售商店購買之商品的架構可能稱為「[!UICONTROL Store Transactions]」。 方案實現了與標準[!UICONTROL Commerce]欄位組和用戶定義的[!UICONTROL Product Info]欄位組組合的[!DNL XDM ExperienceEvent]類。
+例如，描述在零售商店購買的方案可能稱為「[!UICONTROL 商店交易]」。 該架構實現與標準[!UICONTROL Commerce]欄位組和用戶定義的[!UICONTROL 產品資訊]欄位組組合的[!DNL XDM ExperienceEvent]類。
 
-追蹤網站流量的另一個架構可能稱為「[!UICONTROL Web Visits]」。 它也實作[!DNL XDM ExperienceEvent]類別，但這次結合了標準[!UICONTROL Web]欄位群組。
+追蹤網站流量的另一個架構可能稱為「[!UICONTROL Web瀏覽]」。 它也實作[!DNL XDM ExperienceEvent]類別，但這次結合了標準[!UICONTROL Web]欄位群組。
 
-下圖顯示了這些方案和每個欄位組貢獻的欄位。 它還包含基於[!DNL XDM Individual Profile]類的兩個方案，包括本指南中前面提到的&quot;[!UICONTROL Loyalty Members]&quot;方案。
+下圖顯示了這些方案和每個欄位組貢獻的欄位。 它還包含基於[!DNL XDM Individual Profile]類的兩個方案，包括本指南中前面提到的&quot;[!UICONTROL 忠誠成員]&quot;方案。
 
 ![](../images/schema-composition/composition.png)
 
@@ -248,8 +251,8 @@ Adobe提供數種標準（「核心」）XDM類。 幾乎所有下游平台進�
 
 如果您要將外部系統的區段帶入平台，您必須使用下列元件，才能在您的架構中擷取這些區段：
 
-* [[!UICONTROL Segment definition] 類別](../classes/segment-definition.md):使用此標準類別來擷取外部區段定義的關鍵屬性。
-* [[!UICONTROL Segment Membership Details] 欄位組](../field-groups/profile/segmentation.md):將此欄位群組新增至您的 [!UICONTROL XDM Individual Profile] 結構，以便將客戶個人檔案與特定區段建立關聯。
+* [[!UICONTROL 區段] 定義類別](../classes/segment-definition.md):使用此標準類別來擷取外部區段定義的關鍵屬性。
+* [[!UICONTROL 區段成員資] 格詳細資料群組](../field-groups/profile/segmentation.md):將此欄位組添加到 [!UICONTROL XDM Individual ] Profiles方案，以便將客戶配置檔案與特定段關聯。
 
 ## 後續步驟
 
@@ -270,7 +273,7 @@ Adobe提供數種標準（「核心」）XDM類。 幾乎所有下游平台進�
 
 以下各節包含有關模式組合原則的其他資訊。
 
-### 關係表與嵌入式對象{#embedded}
+### 關係表與嵌入對象 {#embedded}
 
 使用關係式資料庫時，最佳實務是標準化資料，或將實體分割為離散的部分，然後跨多個表格顯示。 為了整體讀取資料或更新實體，必須使用JOIN對許多單個表執行讀和寫操作。
 
