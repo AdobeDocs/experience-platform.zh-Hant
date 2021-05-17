@@ -5,8 +5,7 @@ title: 方案註冊表API指南附錄
 description: 本文檔提供與使用方案註冊表API有關的補充資訊。
 topic-legacy: developer guide
 exl-id: 2ddc7fe8-dd0b-4cf9-8561-e89fcdadbfce
-translation-type: tm+mt
-source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
+source-git-commit: dcfdc9c479e8a77296f7cb0bf9f5bb36e9261b75
 workflow-type: tm+mt
 source-wordcount: '775'
 ht-degree: 0%
@@ -17,7 +16,7 @@ ht-degree: 0%
 
 本檔案提供與使用[!DNL Schema Registry] API相關的補充資訊。
 
-## 使用查詢參數{#query}
+## 使用查詢參數 {#query}
 
 [!DNL Schema Registry]支援在列出資源時，使用查詢參數來篩選結果至頁面。
 
@@ -25,7 +24,7 @@ ht-degree: 0%
 >
 >組合多個查詢參數時，必須以&amp;符號(`&`)分隔。
 
-### 尋呼{#paging}
+### 分頁 {#paging}
 
 最常用於分頁的查詢參數包括：
 
@@ -54,7 +53,7 @@ ht-degree: 0%
 >
 >您可以使用`property`參數，按照其相容類來過濾模式欄位組。 例如，`property=meta:intendedToExtend==https://ns.adobe.com/xdm/context/profile`僅返回與[!DNL XDM Individual Profile]類相容的欄位組。
 
-## 相容模式
+## 相容模式 {#compatibility}
 
 [!DNL Experience Data Model] (XDM)是公開記載的規格，由Adobe所推動，以改善數位體驗的互用性、表現性和強大性。Adobe在GitHub](https://github.com/adobe/xdm/)上的[開放原始碼專案中維護原始碼和正式的XDM定義。 這些定義是以XDM標準記法撰寫，使用JSON-LD（連結資料的JavaScript物件記法）和JSON結構描述作為定義XDM結構描述的語法。
 
