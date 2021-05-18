@@ -2,14 +2,13 @@
 keywords: SFTP;sftp
 title: SFTP連線
 description: 建立與SFTP伺服器的即時對外連線，以定期從Adobe Experience Platform匯出分隔資料檔案。
-translation-type: tm+mt
-source-git-commit: 709908196bb5df665c7e7df10dc58ee9f3b0edbf
+exl-id: 27abfc38-ec19-4321-b743-169370d585a0
+source-git-commit: a21abb44bb9cbe6fefa0ff70a1ff19e31cc0c7de
 workflow-type: tm+mt
-source-wordcount: '232'
+source-wordcount: '230'
 ht-degree: 0%
 
 ---
-
 
 # SFTP連線
 
@@ -39,7 +38,7 @@ ht-degree: 0%
 
 ## 導出資料{#exported-data}
 
-對於SFTP目標，平台會在您提供的儲存位置中建立以Tab分隔的`.txt`或`.csv`檔案。 如需檔案的詳細資訊，請參閱區段啟動教學課程中的[電子郵件行銷目標和雲端儲存目標](../../ui/activate-destinations.md#esp-and-cloud-storage)。
+對於[!DNL SFTP]目標，平台會在您提供的儲存位置中建立以定位點分隔的`.csv`檔案。 如需檔案的詳細資訊，請參閱區段啟動教學課程中的[電子郵件行銷目標和雲端儲存目標](../../ui/activate-destinations.md#esp-and-cloud-storage)。
 
 ## IP位址允許清單
 
