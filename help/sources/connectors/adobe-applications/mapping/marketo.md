@@ -5,10 +5,9 @@ title: Marketo Engage源的映射欄位
 topic-legacy: overview
 description: 下表包含Marketo資料集中各欄位與其對應的XDM欄位之間的映射。
 exl-id: 2b217bba-2748-4d6f-85ac-5f64d5e99d49
-translation-type: tm+mt
-source-git-commit: e4823a2b787667fc181f8a4d474c7d2eb73c8eec
+source-git-commit: db7fde343b3ebf4428020c8256df2b9cfa1486ad
 workflow-type: tm+mt
-source-wordcount: '330'
+source-wordcount: '333'
 ht-degree: 4%
 
 ---
@@ -210,7 +209,7 @@ ht-degree: 4%
 
 {style=&quot;table-layout:auto&quot;}
 
-## 機會{#opportunities}
+## 機會 {#opportunities}
 
 | 來源資料集 | XDM目標欄位 | 附註 |
 | -------------- | ---------------- | ----- |
@@ -256,14 +255,11 @@ ht-degree: 4%
 
 {style=&quot;table-layout:auto&quot;}
 
-## 人{#persons}
+## 人物 {#persons}
 
 | 來源資料集 | XDM目標欄位 | 附註 |
 | -------------- | ---------------- | ----- |
 | `id` | `personID` | 主要身分 |
-| `emailSuspended` | `b2b.personOptInOut._channels.email` |
-| `emailSuspendedAt` | `b2b.personOptInOut.optOutDetails.email.optOutDate` |
-| `emailSuspendedCause` | `b2b.personOptInOut.optOutDetails.email.optOutReason` |
 | `contactCompany` | `b2b.accountID` |
 | `marketingSuspended` | `b2b.isMarketingSuspended` |
 | `marketingSuspendedCause` | `b2b.marketingSuspendedCause` |
@@ -310,7 +306,7 @@ ht-degree: 4%
 
 >[!NOTE]
 >
->`to_object('ECID',arrays_to_objects('id',explode(ecids)))`來源欄位是計算欄位，必須使用「平台UI」中的[!UICONTROL Add calculated field]選項加入。 有關詳細資訊，請參閱[添加計算欄位](../../../../ingestion/tutorials/map-a-csv-file.md)的教程。
+>`to_object('ECID',arrays_to_objects('id',explode(ecids)))`來源欄位是計算欄位，必須使用平台UI中的[!UICONTROL 新增計算欄位]選項來新增。 有關詳細資訊，請參閱[添加計算欄位](../../../../ingestion/tutorials/map-a-csv-file.md)的教程。
 
 ## 後續步驟
 
