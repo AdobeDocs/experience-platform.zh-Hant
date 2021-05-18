@@ -2,14 +2,13 @@
 keywords: AmazonKinesis；移動目標；
 title: AmazonKinesis連接
 description: 建立與AmazonKinesis儲存區的即時出站連線，以串流Adobe Experience Platform的資料。
-translation-type: tm+mt
-source-git-commit: 709908196bb5df665c7e7df10dc58ee9f3b0edbf
+exl-id: b40117ef-6ad0-48a9-bbcb-97c6f6d1dce3
+source-git-commit: 7f15da092928ed09f898c9197c4679e834b11779
 workflow-type: tm+mt
-source-wordcount: '505'
+source-wordcount: '507'
 ht-degree: 2%
 
 ---
-
 
 # （測試版）[!DNL Amazon Kinesis]連線
 
@@ -45,21 +44,21 @@ ht-degree: 2%
 
 對於[!DNL Amazon Kinesis]目標，請在建立目標工作流中輸入以下資訊：
 
-## 驗證步驟{#authentication-step}
+## 帳戶步驟{#account-step}
 
 * **[!DNL Amazon Web Services]訪問密鑰和密鑰**:在中 [!DNL Amazon Web Services]，產生一 `access key - secret access key` 對以授與您帳戶的平台存 [!DNL Amazon Kinesis] 取權。請參閱[Amazon網站服務檔案](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html)瞭解更多資訊。
 * **地區**:指出要 [!DNL Amazon Web Services] 將資料串流至的區域。
 
 ![帳戶步驟中的輸入欄位](../../assets/catalog/cloud-storage/amazon-kinesis/account.png)
 
-## 設定步驟{#setup-step}
+## 驗證步驟{#authentication-step}
 
 * **名稱**:提供您與  [!DNL Amazon Kinesis]
 * **說明**:提供您與的連線說明 [!DNL Amazon Kinesis]。
 * **stream**:提供帳戶中現有資料流的名 [!DNL Amazon Kinesis] 稱。平台會將資料匯出至此串流。
-* **[!UICONTROL Marketing actions]**:行銷動作會指出將資料匯出至目的地的方式。您可以從Adobe定義的行銷動作中選擇，也可以建立自己的行銷動作。 如需行銷動作的詳細資訊，請參閱「Adobe Experience Platform的資料治理」頁面。 [](../../../data-governance/policies/overview.md)如需個別Adobe定義之行銷動作的詳細資訊，請參閱[資料使用政策概述](../../../data-governance/policies/overview.md)。
+* **[!UICONTROL 行銷動作]**:行銷動作會指出將資料匯出至目的地的方式。您可以從Adobe定義的行銷動作中選擇，也可以建立自己的行銷動作。 如需行銷動作的詳細資訊，請參閱「Adobe Experience Platform的資料治理」頁面。 [](../../../data-governance/policies/overview.md)如需個別Adobe定義之行銷動作的詳細資訊，請參閱[資料使用政策概述](../../../data-governance/policies/overview.md)。
 
-![驗證步驟中的輸入欄位](../../assets/catalog/cloud-storage/amazon-kinesis/setup.png)
+![驗證步驟中的輸入欄位](../../assets/catalog/cloud-storage/amazon-kinesis/authentication.png)
 
 <!--
 
@@ -120,6 +119,6 @@ ht-degree: 2%
 >[!MORELIKETHIS]
 >
 >* [連線至AmazonKinesis，並使用Flow Service API啟動資料](../../api/streaming-destinations.md)
->* [Azure事件集線器目標](./azure-event-hubs.md)
->* [目標類型和類別](../../destination-types.md)
+* [Azure事件集線器目標](./azure-event-hubs.md)
+* [目標類型和類別](../../destination-types.md)
 
