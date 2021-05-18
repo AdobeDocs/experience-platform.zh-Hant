@@ -3,9 +3,9 @@ keywords: AmazonS3;S3目標；s3;amazon s3
 title: AmazonS3連線
 description: 建立到您的AmazonWeb Services(AWS)S3儲存的即時出站連接，以定期從Adobe Experience Platform將Tab分隔或CSV資料檔案導出到您自己的S3儲存區。
 exl-id: 6a2a2756-4bbf-4f82-88e4-62d211cbbb38
-source-git-commit: 49a59e5b081243679f5d94b03a63d30df22cdc6a
+source-git-commit: 70be44e919070df910d618af4507b600ad51123c
 workflow-type: tm+mt
-source-wordcount: '270'
+source-wordcount: '269'
 ht-degree: 0%
 
 ---
@@ -59,4 +59,4 @@ Commenting out this note, as write permissions are assigned through the s3:PutOb
 
 ## 導出資料{#exported-data}
 
-對於[!DNL Amazon S3]目標，[!DNL Platform]會在您提供的儲存位置中建立以定位點分隔的`.txt`或`.csv`檔案。 如需檔案的詳細資訊，請參閱區段啟動教學課程中的[電子郵件行銷目標和雲端儲存目標](../../ui/activate-destinations.md#esp-and-cloud-storage)。
+對於[!DNL Amazon S3]目標，[!DNL Platform]會在您提供的儲存位置中建立以定位點分隔的`.csv`檔案。 如需檔案的詳細資訊，請參閱區段啟動教學課程中的[電子郵件行銷目標和雲端儲存目標](../../ui/activate-destinations.md#esp-and-cloud-storage)。
