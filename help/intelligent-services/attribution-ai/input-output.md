@@ -5,10 +5,9 @@ title: 輸入與輸出在Attribution AI
 topic-legacy: Input and Output data for Attribution AI
 description: 以下檔案概述了Attribution AI中使用的不同輸入和輸出。
 exl-id: d6dbc9ee-0c1a-4a5f-b922-88c7a36a5380
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 91f586746c8d1db4e9219b261d7be36e572f1b50
 workflow-type: tm+mt
-source-wordcount: '2175'
+source-wordcount: '2230'
 ht-degree: 3%
 
 ---
@@ -48,7 +47,11 @@ Attribution AI的運作方式是分析下列其中一個資料集，以計算演
 | Marketing.campaigngroup | 觸點 |
 | 商務 | 轉換 |
 
-通常，歸因會在「商務」下的轉換欄（例如訂單、購買和結帳）上執行。 強烈建議使用「channel」和「marketing」欄來定義觸點，以獲得良好的見解。 不過，您可以隨附上述欄加入任何其他欄，以設定為轉換或接觸點定義。
+通常，歸因會在「商務」下的轉換欄（例如訂單、購買和結帳）上執行。 「channel」和「marketing」的欄可用來定義Attribution AI的觸點（例如`channel._type = 'https://ns.adobe.com/xdm/channel-types/email'`）。 為獲得最佳結果和見解，強烈建議您加入盡可能多的轉換和觸點欄。 此外，您不僅限於上述欄。 您可以加入任何其他建議或自訂欄作為轉換或觸點定義。
+
+>[!TIP]
+>
+>如果您在CEE架構中使用Adobe Analytics資料，Analytics的觸點資訊通常會儲存在`channel.typeAtSource`（例如`channel.typeAtSource = 'email'`）中。
 
 以下列不是必需的，但如果您有可用資訊，建議您將這些列包括在CEE方案中。
 
@@ -58,7 +61,7 @@ Attribution AI的運作方式是分析下列其中一個資料集，以計算演
 - web.webPageDetails
 - xdm:productListItems
 
-### 歷史資料 {#data-requirements}
+## 歷史資料 {#data-requirements}
 
 >[!IMPORTANT]
 >
@@ -145,11 +148,11 @@ Attribution AI會以最細微的層級輸出歸因分數，讓您可以依任何
 
 ### 檢視原始分數路徑(UI){#raw-score-path}
 
-您可以在UI中檢視原始分數的路徑。 首先，在「平台UI」中選擇&#x200B;**[!UICONTROL Schemas]**，然後從&#x200B;**[!UICONTROL Browse]**&#x200B;標籤中搜尋並選取您的歸因AI分數架構。
+您可以在UI中檢視原始分數的路徑。 首先，在平台UI中選擇&#x200B;**[!UICONTROL 結構描述]**，然後從&#x200B;**[!UICONTROL 瀏覽]**&#x200B;標籤中搜索並選擇您的歸因AI分數結構描述。
 
 ![選擇您的架構](./images/input-output/schemas_browse.png)
 
-接著，在UI的&#x200B;**[!UICONTROL Structure]**&#x200B;視窗中選取欄位，**[!UICONTROL Field properties]**&#x200B;標籤隨即開啟。 在&#x200B;**[!UICONTROL Field properties]**&#x200B;中是對應至原始分數的路徑欄位。
+接著，在UI的&#x200B;**[!UICONTROL Structure]**&#x200B;窗口中選擇一個欄位，**[!UICONTROL Field properties]**&#x200B;頁籤開啟。 在&#x200B;**[!UICONTROL 欄位屬性]**&#x200B;中是對應至原始分數的路徑欄位。
 
 ![挑選結構](./images/input-output/field_properties.png)
 
