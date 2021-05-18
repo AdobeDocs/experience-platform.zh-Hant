@@ -5,10 +5,9 @@ title: Marketo命名空間
 topic-legacy: overview
 description: 本文檔概述了建立Marketo Engage源連接器時所需的自定義命名空間。
 exl-id: f1592be5-987e-41b8-9844-9dea5bd452b9
-translation-type: tm+mt
-source-git-commit: 8dd7b1724f3de12bf6a3a1b77ee8050fd1a9eaf3
+source-git-commit: af728fb508c514db3d5871114f9a406c1ed428f2
 workflow-type: tm+mt
-source-wordcount: '1602'
+source-wordcount: '1670'
 ht-degree: 4%
 
 ---
@@ -56,6 +55,20 @@ ht-degree: 4%
 | `has_msi` | 一個布爾值，指示您是否被切換到[!DNL Marketo Sales Insight]。 | `false` |
 
 {style=&quot;table-layout:auto&quot;}
+
+### 運行指令碼
+
+在設定[!DNL Postman]系列和環境後，您現在可以透過[!DNL Postman]介面執行指令碼。
+
+在[!DNL Postman]介面中，選擇自動生成器實用程式的根資料夾，然後從頂部標題中選擇&#x200B;**[!DNL Run]**。
+
+![根資料夾](../images/marketo/root-folder.png)
+
+出現[!DNL Runner]介面。 在此處，確保選中所有複選框，然後選擇&#x200B;**[!DNL Run Adobe I/O Access Token Generation + Automate Namespace creation]**。
+
+![運行生成器](../images/marketo/run-generator.png)
+
+成功的請求會根據測試版規格建立B2B命名空間和結構。
 
 ## [!DNL Marketo] 命名空間
 
