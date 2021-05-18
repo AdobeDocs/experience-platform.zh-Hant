@@ -3,10 +3,9 @@ keywords: Azure事件中樞目標；azure事件中樞；azure事件中樞
 title: （測試版）!DNL Azure事件集線器]連接
 description: 建立到！DNL Azure事件集線器]儲存的即時出站連接，以便從Experience Platform流資料。
 exl-id: f98a389a-bce3-4a80-9452-6c7293d01de3
-translation-type: tm+mt
-source-git-commit: ce5001d0a1c95901089915ae9836fdd436f12297
+source-git-commit: 7f15da092928ed09f898c9197c4679e834b11779
 workflow-type: tm+mt
-source-wordcount: '534'
+source-wordcount: '545'
 ht-degree: 2%
 
 ---
@@ -45,21 +44,21 @@ ht-degree: 2%
 
 對於[!DNL Azure Event Hubs]目標，請在建立目標工作流中輸入以下資訊：
 
+## 帳戶步驟{#account-step}
+
+* **[!UICONTROL SAS密鑰]** 名稱 **[!UICONTROL 和SAS密鑰]**:填寫您的SAS密鑰名稱和密鑰。瞭解如何在[Microsoft文檔](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature)中使用SAS密鑰驗證[!DNL Azure Event Hubs]。
+* **[!UICONTROL 命名空間]**:填寫您的命名 [!DNL Azure Event Hubs] 空間。瞭解[Microsoft文檔](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hubs-namespace)中的[!DNL Azure Event Hubs]名稱空間。
+
+![帳戶步驟中需要的輸入](../../assets/catalog/cloud-storage/event-hubs/account.png)
+
 ## 驗證步驟{#authentication-step}
 
-* **[!UICONTROL SAS Key Name]** 和 **[!UICONTROL SAS Key]**:填寫您的SAS密鑰名稱和密鑰。瞭解如何在[Microsoft文檔](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature)中使用SAS密鑰驗證[!DNL Azure Event Hubs]。
-* **[!UICONTROL Namespace]**:填寫您的命名 [!DNL Azure Event Hubs] 空間。瞭解[Microsoft文檔](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hubs-namespace)中的[!DNL Azure Event Hubs]名稱空間。
-
-![驗證步驟中需要的輸入](../../assets/catalog/cloud-storage/event-hubs/authentication.png)
-
-## 設定步驟{#setup-step}
-
-* **[!UICONTROL Name]**:填寫連接的名稱 [!DNL Azure Event Hubs]。
-* **[!UICONTROL Description]**:提供連接的說明。範例：「Premium tier customers」、「Males intered to kitesurfing」。
+* **[!UICONTROL 名稱]**:填寫連接的名稱 [!DNL Azure Event Hubs]。
+* **[!UICONTROL 說明]**:提供連接的說明。範例：「Premium tier customers」、「Males intered to kitesurfing」。
 * **[!UICONTROL eventHubName]**:提供串流至您目的地的名 [!DNL Azure Event Hubs] 稱。
-* **[!UICONTROL Marketing actions]**:行銷動作會指出將資料匯出至目的地的方式。您可以從Adobe定義的行銷動作中選擇，也可以建立自己的行銷動作。 如需行銷動作的詳細資訊，請參閱「Adobe Experience Platform的資料治理」頁面。 [](../../../data-governance/policies/overview.md)如需個別Adobe定義之行銷動作的詳細資訊，請參閱[資料使用政策概述](../../../data-governance/policies/overview.md)。
+* **[!UICONTROL 行銷動作]**:行銷動作會指出將資料匯出至目的地的方式。您可以從Adobe定義的行銷動作中選擇，也可以建立自己的行銷動作。 如需行銷動作的詳細資訊，請參閱「Adobe Experience Platform的資料治理」頁面。 [](../../../data-governance/policies/overview.md)如需個別Adobe定義之行銷動作的詳細資訊，請參閱[資料使用政策概述](../../../data-governance/policies/overview.md)。
 
-![設定步驟中所需的資料](../../assets/catalog/cloud-storage/event-hubs/setup.png)
+![驗證步驟中需要的資料](../../assets/catalog/cloud-storage/event-hubs/authentication.png)
 
 ## 啟用區段{#activate-segments}
 
@@ -111,6 +110,6 @@ ht-degree: 2%
 >[!MORELIKETHIS]
 >
 >* [連線至Azure事件中樞，並使用Flow Service API啟用資料](../../api/streaming-destinations.md)
->* [AWSKinesis目標](./amazon-kinesis.md)
->* [目標類型和類別](../../destination-types.md)
+* [AWSKinesis目標](./amazon-kinesis.md)
+* [目標類型和類別](../../destination-types.md)
 
