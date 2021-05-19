@@ -1,11 +1,9 @@
 ---
 keywords: Experience Platform；配置檔案；即時客戶配置檔案；疑難排解；API；統一配置檔案；統一配置檔案；配置檔案；rtcp；啟用配置檔案；啟用配置檔案
 title: 即時客戶個人檔案API指南
-topic-legacy: guide
 description: 即時客戶描述檔API可讓開發人員探索和使用描述檔資料，包括檢視描述檔、建立和更新合併原則、匯出或取樣描述檔資料，以及刪除不再需要或錯誤新增的描述檔資料。 請依照本指南，瞭解如何使用API執行關鍵作業。
 exl-id: ce39b95b-cff7-46cf-a14c-8203017c8826
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 77bf6f4634987900bea1280290e8049120bb8856
 workflow-type: tm+mt
 source-wordcount: '894'
 ht-degree: 0%
@@ -38,7 +36,7 @@ ht-degree: 0%
 
 Adobe Experience Platform讓資料可輕鬆在戰略性位置的伺服器（稱為「邊緣」）上存取，借以即時個人化客戶體驗。 [!DNL Real-time Customer Profile] API提供端點，以透過稱為「投影」的元件處理邊緣。 這包括確定應將哪些資料投影到每個邊的投影配置，以及定義投影路由位置的投影目標。 如需使用邊緣投影的詳細資訊，請造訪[投影組態和目標端點指南](edge-projections.md)。
 
-## 實體（[!DNL Profile]訪問）{#entities}
+## 實體（[!DNL Profile]存取） {#entities}
 
 通過Adobe Experience Platform，您可以使用REST風格的API或用戶介面訪問[!DNL Real-time Customer Profile]資料。 要瞭解如何使用API訪問實體（更常稱為「配置式」），請遵循[實體端點指南](entities.md)中概述的步驟。 要使用[!DNL Platform] UI訪問配置檔案，請參閱[Profile使用手冊](../ui/user-guide.md)。
 
