@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home；熱門主題；模式；模式；XDM；個人配置檔案；欄位；模式；模式；標識圖；標識圖；標識圖；模式設計；映射；聯合模式；聯合模式
+keywords: Experience Platform;home；熱門主題；模式；模式；XDM;fields;schemas;Schemas;identityMap;Identity map;Schema design;map;Map；事件建模；最佳做法；event;event;
 solution: Experience Platform
 title: XDM ExperienceEvent類別
 topic-legacy: overview
-description: 本檔案提供XDM ExperienceEvent類別的概觀。
+description: 本檔案概述XDM ExperienceEvent類別，以及事件資料模型的最佳實務。
 exl-id: a8e59413-b52f-4ea5-867b-8d81088a3321
-source-git-commit: 9fbb40a401250496761dcce63a3f033a8746ae7e
+source-git-commit: 4f1fe7ca5f09bb1e8e1b913d1dee1cff347d6a24
 workflow-type: tm+mt
-source-wordcount: '1466'
+source-wordcount: '1476'
 ht-degree: 1%
 
 ---
