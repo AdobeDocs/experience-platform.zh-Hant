@@ -1,27 +1,20 @@
 ---
 keywords: Experience Platform；配置檔案；即時客戶配置檔案；疑難排解；API；預覽；示例
 title: 預覽範例狀態（描述檔預覽）API端點
-description: 使用「即時客戶描述檔API」的一部分預覽範例狀態端點，您可以預覽您描述檔資料的最新成功範例，以及依資料集和Adobe Experience Platform境內的身分命名空間來分發清單描述檔。
-topic-legacy: guide
+description: 使用「即時客戶描述檔API」的一部分預覽範例狀態端點，您可以預覽最新成功範例的描述檔資料、依資料集和身分列出描述檔分發，以及產生資料集重疊報表。
 exl-id: a90a601e-629e-417b-ac27-3d69379bb274
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 459eb626101b7382b8fe497835cc19f7d7adc6b2
 workflow-type: tm+mt
-source-wordcount: '1652'
+source-wordcount: '2066'
 ht-degree: 1%
 
 ---
 
 # 預覽範例狀態端點（描述檔預覽）
 
-Adobe Experience Platform可讓您從多個來源收集客戶資料，以便為個別客戶建立強穩的統一個人檔案。 當啟用「即時客戶描述檔」的資料被收錄到[!DNL Platform]時，它會儲存在「描述檔」資料儲存區中。
+Adobe Experience Platform可讓您從多個來源收集客戶資料，以便為每個客戶建立健全、統一的個人檔案。 當資料被收錄到平台時，會執行範例工作以更新描述檔計數和其他描述檔相關度量。
 
-當將記錄擷取至描述檔儲存區時，會觸發取樣工作以更新該計數，將總描述檔計數增加或減少超過5%。 觸發範例的方式取決於使用的擷取類型：
-
-* 對於&#x200B;**串流資料工作流程**，會每小時檢查一次，以判斷是否符合5%增加或減少臨界值。 如果已觸發，系統會自動觸發範例工作以更新計數。
-* 對於&#x200B;**批次提取**，在成功將批次提取到配置檔案儲存的15分鐘內，如果滿足5%增加或減少閾值，則運行作業以更新計數。 使用描述檔API，您可以預覽最新成功的範例工作，以及依資料集和身分命名空間來列出描述檔散發。
-
-這些量度也可在Experience PlatformUI的[!UICONTROL Profiles]區段中使用。 有關如何使用UI存取描述檔資料的資訊，請造訪[[!DNL Profile] 使用指南](../ui/user-guide.md)。
+此範例工作的結果可使用即時客戶設定檔API的`/previewsamplestatus`端點來檢視。 此端點也可用於依資料集和身分名稱空間列出描述檔分佈，以及產生資料集重疊報表，以便洞悉您組織的描述檔儲存的構成。 本指南逐步說明使用`/previewsamplestatus` API端點檢視這些量度的必要步驟。
 
 >[!NOTE]
 >
@@ -35,11 +28,26 @@ Adobe Experience Platform可讓您從多個來源收集客戶資料，以便為�
 
 本指南同時引用「描述檔片段」和「合併的描述檔」。 請務必先瞭解這些術語之間的差異，再繼續。
 
-每個客戶個人檔案都由多個已合併的個人檔案片段組成，以形成該客戶的單一檢視。 例如，如果客戶透過多個通道與您的品牌互動，您的組織將會在多個資料集中顯示與該單一客戶相關的多個描述檔片段。 當這些片段被收錄到Platform中時，它們會合併（根據合併原則），以便為該客戶建立單一個人檔案。 因此，由於每個描述檔由多個片段組成，因此描述檔片段的總數可能永遠高於合併描述檔的總數。
+每個客戶個人檔案都由多個已合併的個人檔案片段組成，以形成該客戶的單一檢視。 例如，如果客戶透過多個通道與您的品牌互動，您的組織可能會有多個與單一客戶相關的描述檔片段出現在多個資料集中。
+
+將描述檔片段匯入Platform時，會將它們合併（根據合併原則），以便為該客戶建立單一描述檔。 因此，由於每個描述檔由多個片段組成，因此描述檔片段的總數可能永遠高於合併描述檔的總數。
+
+若要進一步瞭解描述檔及其在Experience Platform中的角色，請先閱讀[即時客戶描述檔概觀](../home.md)。
+
+## 範例工作的觸發方式
+
+當啟用「即時客戶描述檔」的資料被收錄到[!DNL Platform]時，它會儲存在「描述檔」資料儲存區中。 當將記錄擷取至描述檔儲存區時，會觸發取樣工作以更新該計數，將總描述檔計數增加或減少超過5%。 觸發範例的方式取決於使用的擷取類型：
+
+* 對於&#x200B;**串流資料工作流程**，會每小時檢查一次，以判斷是否符合5%增加或減少臨界值。 如果已觸發，系統會自動觸發範例工作以更新計數。
+* 對於&#x200B;**批次提取**，在成功將批次提取到配置檔案儲存的15分鐘內，如果滿足5%增加或減少閾值，則運行作業以更新計數。 使用描述檔API，您可以預覽最新成功的範例工作，以及依資料集和身分命名空間來列出描述檔散發。
+
+在Experience PlatformUI的[!UICONTROL Profiles]區段中，也可使用依命名空間度量的描述檔計數和描述檔。 有關如何使用UI存取描述檔資料的資訊，請造訪[[!DNL Profile] UI指南](../ui/user-guide.md)。
 
 ## 查看最後一個示例狀態{#view-last-sample-status}
 
-您可以對`/previewsamplestatus`端點執行GET請求，以檢視您IMS組織上次成功執行範例工作的詳細資料。 這包括範例中的描述檔總數，以及描述檔計數量度，或您組織在Experience Platform中的描述檔總數。 描述檔計數是在合併一些描述檔片段後產生，以針對每個個別客戶形成單一描述檔。 換言之，您的組織可能有多個與跨不同通道與品牌互動的單一客戶相關的描述檔片段，但這些片段會合併在一起（根據預設合併政策），並會傳回「1」個描述檔計數，因為這些片段都與同一個人相關。
+您可以對`/previewsamplestatus`端點執行GET請求，以檢視您IMS組織上次成功執行範例工作的詳細資料。 這包括範例中的描述檔總數，以及描述檔計數量度，或您組織在Experience Platform中的描述檔總數。
+
+描述檔計數是在合併一些描述檔片段後產生，以針對每個個別客戶形成單一描述檔。 換言之，將描述檔片段合併在一起時，會傳回「1」個描述檔計數，因為這些片段都與同一個人相關。
 
 描述檔計數還包括具有屬性（記錄資料）的描述檔，以及僅包含時間系列（事件）資料的描述檔，例如Adobe Analytics描述檔。 當擷取描述檔資料時，系統會定期重新整理範例工作，以便提供平台內的最新描述檔總數。
 
@@ -62,7 +70,7 @@ curl -X GET \
 
 **回應**
 
-回應包含上次為IMS組織執行之成功範例工作的詳細資訊。
+回應包括為組織運行的最後一個成功示例作業的詳細資訊。
 
 >[!NOTE]
 >
@@ -137,7 +145,7 @@ curl -X GET \
 
 >[!NOTE]
 >
->如果日期存在多個報表，則只會傳回最新的報表。 如果資料集報表不存在於提供的日期，則會傳回HTTP狀態404（找不到）。
+>如果該日期存在多個報表，則只會傳回最新的報表。 如果資料集報表不存在於提供的日期，則會傳回HTTP狀態404（找不到）。
 
 ```json
 {
@@ -198,7 +206,9 @@ curl -X GET \
 
 ## 依命名空間列出描述檔分發
 
-您可以對`/previewsamplestatus/report/namespace`端點執行GET請求，以在您的描述檔商店中，依識別名稱空間檢視劃分。 身分名稱空間是Adobe Experience Platform身分服務的重要元件，可做為客戶資料相關內容的指標。 若要進一步瞭解，請造訪[identity namespace overview](../../identity-service/namespaces.md)。
+您可以對`/previewsamplestatus/report/namespace`端點執行GET請求，以在您的描述檔商店中，依識別名稱空間檢視劃分。
+
+身分名稱空間是Adobe Experience Platform身分服務的重要元件，可做為客戶資料相關內容的指標。 若要進一步瞭解，請先閱讀[identity namespace overview](../../identity-service/namespaces.md)。
 
 >[!NOTE]
 >
@@ -288,9 +298,75 @@ curl -X GET \
 | `fullIDsFragmentCount` | 命名空間中的描述檔片段總數。 |
 | `fullIDsCount` | 命名空間中合併的描述檔總數。 |
 | `fullIDsPercentage` | `fullIDsCount`佔合併描述檔總數的百分比（[最後一個範例狀態](#view-last-sample-status)中傳回的`totalRows`值），以小數格式表示。 |
-| `code` | namespace的`code`。 使用[Adobe Experience PlatformIdentity Service API](../../identity-service/api/list-namespaces.md)使用名稱空間時，可找到此點，也稱為Experience PlatformUI中的[!UICONTROL Identity symbol]。 若要進一步瞭解，請造訪[identity namespace overview](../../identity-service/namespaces.md)。 |
+| `code` | namespace的`code`。 使用[Adobe Experience PlatformIdentity Service API](../../identity-service/api/list-namespaces.md)使用命名空間時可找到此點，也稱為Experience PlatformUI中的[!UICONTROL Identity符號]。 若要進一步瞭解，請造訪[identity namespace overview](../../identity-service/namespaces.md)。 |
 | `value` | namespace的`id`值。 使用[Identity Service API](../../identity-service/api/list-namespaces.md)使用名稱空間時，可以找到此點。 |
+
+## 產生資料集重疊報表
+
+資料集重疊報表揭露對您可定址對象（個人檔案）貢獻最大的資料集，讓您能夠洞悉您組織的「個人檔案」商店組成。 除了提供資料的深入資訊外，此報告還可協助您採取行動以最佳化授權使用，例如為特定資料集設定TTL。
+
+您可以對`/previewsamplestatus/report/dataset/overlap`端點執行GET請求，以產生資料集重疊報告。
+
+如需說明如何使用命令列或Postman UI產生資料集重疊報表的逐步指示，請參閱[產生資料集重疊報表教學課程](../tutorials/dataset-overlap-report.md)。
+
+**API格式**
+
+```http
+GET /previewsamplestatus/report/dataset/overlap
+GET /previewsamplestatus/report/dataset/overlap?{QUERY_PARAMETERS}
+```
+
+| 參數 | 說明 |
+|---|---|
+| `date` | 指定要傳回的報表日期。 如果多個報表在相同日期執行，則會傳回該日期的最新報表。 如果報表在指定日期不存在，則會傳回404（找不到）錯誤。 如果未指定日期，則會傳回最近的報表。 格式：YYYY-MM-DD。 範例：`date=2024-12-31` |
+
+**要求**
+
+下列請求使用`date`參數，傳回指定日期的最新報表。
+
+```shell
+curl -X GET \
+  https://platform.adobe.io/data/core/ups/previewsamplestatus/report/dataset/overlap?date=2021-12-29 \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+```
+
+**回應**
+
+成功的請求會傳回HTTP狀態200（確定）和資料集重疊報表。
+
+```json
+{
+    "data": {
+        "5d92921872831c163452edc8,5da7292579975918a851db57,5eb2cdc6fa3f9a18a7592a98": 123,
+        "5d92921872831c163452edc8,5eb2cdc6fa3f9a18a7592a98": 454412,
+        "5eeda0032af7bb19162172a7": 107
+    },
+    "reportTimestamp": "2021-12-29T19:55:31.147"
+}
+```
+
+| 屬性 | 說明 |
+|---|---|
+| `data` | `data`物件包含以逗號分隔的資料集清單及其個別的描述檔計數。 |
+| `reportTimestamp` | 報表的時間戳記。 如果在請求期間提供`date`參數，則傳回的報表是提供日期。 如果未提供`date`參數，則會傳回最近的報表。 |
+
+報表結果可從回應中的資料集和描述檔計數來解讀。 請考慮以下範例報表`data`物件：
+
+```json
+  "5d92921872831c163452edc8,5da7292579975918a851db57,5eb2cdc6fa3f9a18a7592a98": 123,
+  "5d92921872831c163452edc8,5eb2cdc6fa3f9a18a7592a98": 454412,
+  "5eeda0032af7bb19162172a7": 107
+```
+
+此報表提供下列資訊：
+* 共有123個描述檔，包括來自下列資料集的資料：`5d92921872831c163452edc8`、`5da7292579975918a851db57`、`5eb2cdc6fa3f9a18a7592a98`。
+* 共有454,412個描述檔，由來自這兩個資料集的資料組成：`5d92921872831c163452edc8`和`5eb2cdc6fa3f9a18a7592a98`。
+* 有107個描述檔僅包含來自資料集`5eeda0032af7bb19162172a7`的資料。
+* 組織中共有454,642個個人檔案。
 
 ## 後續步驟
 
-現在您知道如何在描述檔儲存區中預覽範例資料，您也可以使用分段服務API的估計和預覽端點來檢視區段定義的摘要層級資訊。 這些資訊有助於確保您隔離區段中預期的觀眾。 若要進一步瞭解如何使用區段預覽和估計，請造訪[預覽和估計端點指南](../../segmentation/api/previews-and-estimates.md)。
+現在您知道如何在描述檔儲存區中預覽範例資料並執行資料集重疊報表，您也可以使用分段服務API的估計和預覽端點來檢視區段定義的摘要層級資訊。 這些資訊有助於確保您隔離區段中預期的觀眾。 若要進一步瞭解如何使用區段預覽和估計，請造訪[預覽和估計端點指南](../../segmentation/api/previews-and-estimates.md)。
+
