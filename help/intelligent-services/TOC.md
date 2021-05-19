@@ -5,10 +5,9 @@ user-guide-title: Intelligent Services 說明
 breadcrumb-title: Intelligent Services 指南
 user-guide-description: 利用智慧型人工智慧服務，從行銷事件資料產生分數、探索見解並建立區段。
 feature: Data Science Workspace
-translation-type: tm+mt
-source-git-commit: a26b07302a47ceb0ba2af5267e7995118b70683f
+source-git-commit: 31b584d3e28a6f15254cf60fa673cd0c5c16ea73
 workflow-type: tm+mt
-source-wordcount: '122'
+source-wordcount: '124'
 ht-degree: 25%
 
 ---
@@ -44,4 +43,5 @@ ht-degree: 25%
       - [探索見解](customer-ai/user-guide/discover-insights.md)
       - [使用客戶AI分數建立區段](customer-ai/user-guide/create-segment.md)
       - [下載分數](customer-ai/user-guide/download-scores.md)
+   - [錯誤疑難排解](customer-ai/troubleshooting.md)
 - [平台版本注意事項](https://www.adobe.com/go/platform-release-notes-en)
