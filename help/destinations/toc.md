@@ -4,10 +4,9 @@ user-guide-title: 目的地指南
 user-guide-description: 針對跨通路行銷活動、電子郵件宣傳、鎖定特定目標的行銷活動和其他諸多使用案例，啟用已知和未知的資料。
 description: 本檔案列出了Adobe Experience Platform目的地的目錄
 feature: 目的地
-translation-type: tm+mt
-source-git-commit: 9b383f09a3a73f785b0e3a415deda126b9ef6b39
+source-git-commit: d62b2df54357449f35894f9c8ab45f87d97363d2
 workflow-type: tm+mt
-source-wordcount: '474'
+source-wordcount: '476'
 ht-degree: 10%
 
 ---
@@ -15,8 +14,9 @@ ht-degree: 10%
 
 # 目的地 {#destinations}
 
-* [目的地概觀](./home.md)
+* [目的地概述](./home.md)
 * [目標類型和類別](./destination-types.md)
+* [目標常見問答集](./destinations-faq.md)
 * API教學課程{#api}
    * [使用Flow Service API連線至串流目的地並啟用資料](./api/streaming-destinations.md)
    * [使用Flow Service API連線至電子郵件行銷目的地並啟用資料](./api/email-marketing.md)
