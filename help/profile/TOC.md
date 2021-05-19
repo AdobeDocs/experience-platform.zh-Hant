@@ -3,11 +3,10 @@ audience: user
 user-guide-title: 即時客戶設定檔指南
 user-guide-description: 合併客戶資料，以建立跨通道客戶互動的統一檢視。
 feature: 設定檔
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 167407a8103acecb9846a6e0f8e38c66f3f3292d
 workflow-type: tm+mt
-source-wordcount: '123'
-ht-degree: 20%
+source-wordcount: '128'
+ht-degree: 19%
 
 ---
 
@@ -21,10 +20,10 @@ ht-degree: 20%
    * [概述](api/overview.md)
    * [快速入門](api/getting-started.md)
    * [邊緣投影](api/edge-projections.md)
-   * [實體([!DNL Profile] 存取)](api/entities.md)
-   * [匯出工作([!DNL Profile] 匯出)](api/export-jobs.md)
+   * [實體（[!DNL Profile]存取）](api/entities.md)
+   * [匯出工作（[!DNL Profile]匯出）](api/export-jobs.md)
    * [合併原則](api/merge-policies.md)
-   * [預覽範例狀態([!DNL Profile] 預覽)](api/preview-sample-status.md)
+   * [預覽範例狀態（[!DNL Profile]預覽）](api/preview-sample-status.md)
    * [[!DNL Profile] 系統作業（刪除請求）](api/profile-system-jobs.md)
 * 描述檔UI指南{#ui}
    * [[!DNL Profile] UI指南](ui/user-guide.md)
@@ -35,13 +34,14 @@ ht-degree: 20%
    * [聯合架構UI指南](ui/union-schema.md)
    * [聯合架構概觀（視訊）](video/union-schemas-overview.md)
 * (Alpha)計算屬性{#computed-attributes}
-   * [概覽](computed-attributes/overview.md)
+   * [概述](computed-attributes/overview.md)
    * [計算屬性API](computed-attributes/ca-api.md)
    * [配置計算屬性欄位](computed-attributes/configure-api.md)
    * [範例運算式](computed-attributes/expressions.md)
 * 教學課程 {#tutorials}
-   * [新增資料至 [!DNL Profile]](tutorials/add-profile-data.md)
-   * [為服務配置數 [!DNL Profile] & [!DNL Identity] 據集](tutorials/dataset-configuration.md)
+   * [將資料添加到 [!DNL Profile]](tutorials/add-profile-data.md)
+   * [為 [!DNL Profile] & [!DNL Identity] 服務配置資料集](tutorials/dataset-configuration.md)
+   * [產生資料集重疊報表](tutorials/dataset-overlap-report.md)
    * [更多教學課程](https://experienceleague.adobe.com/docs/platform-learn/tutorials/overview.html)
 * [隱私權要求處理](privacy.md)
 * [[!DNL Profile] 疑難排解指南](troubleshooting.md)
