@@ -4,9 +4,9 @@ title: 目標常見問答集
 seo-title: 目標常見問答集
 description: 關於Adobe Experience Platform目的地的常見問題解答
 seo-description: 關於Adobe Experience Platform目的地的常見問題解答
-source-git-commit: 117f0f82adb764cedaa048e718cd72fa033845a0
+source-git-commit: 61678c5a62980cdb81714420016b7c4b2093f5c6
 workflow-type: tm+mt
-source-wordcount: '598'
+source-wordcount: '597'
 ht-degree: 5%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 5%
 
 # 目標常見問答集 {#faq}
 
-## [!DNL Facebook Custom Audiences] (#facebook常見問答)
+## [!DNL Facebook Custom Audiences] {#facebook-faq}
 
 **在啟動受眾之前，我需要做什麼 [!DNL Facebook Custom Audiences]?**
 
