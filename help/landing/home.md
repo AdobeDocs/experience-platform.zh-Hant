@@ -1,23 +1,18 @@
 ---
 keywords: Experience Platform；首頁；熱門主題；CJA；歷程分析；客戶歷程分析；宣傳協調；客戶歷程；歷程協調；能力；地區
 solution: Experience Platform
-title: Adobe Experience Platform 概述
+title: Adobe Experience Platform 概觀
 topic-legacy: getting started
 description: Adobe Experience Platform讓組織在應用資料科學和機器學習之前，先將客戶資料集中化並標準化，以大幅改善多樣化個人化體驗的設計和提供。
 exl-id: edcce353-338a-440e-99eb-a64e2abca579
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 5fae56fcfc395984d29c74e90cb56b3964d99767
 workflow-type: tm+mt
-source-wordcount: '459'
-ht-degree: 8%
+source-wordcount: '437'
+ht-degree: 9%
 
 ---
 
 # Adobe Experience Platform總覽
-
->[!NOTE]
->
->Adobe Experience Platform的檔案最近被移走了。 請花點時間檢閱新的導覽功能，並更新任何現有的書籤。
 
 Adobe Experience Platform是市場上功能最強大、最靈活、最開放的系統，可協助您建立並管理能提升客戶體驗的完整解決方案。 [!DNL Experience Platform] 可讓組織集中和標準化來自任何系統的客戶資料與內容，並運用資料科學和機器學習技術大幅改善豐富個人化體驗的設計和傳遞。
 
