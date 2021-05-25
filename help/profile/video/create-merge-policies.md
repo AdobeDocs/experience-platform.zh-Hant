@@ -1,6 +1,6 @@
 ---
-title: 在Adobe Experience Platform中建立合併政策
-description: 本影片提供對Adobe Experience Platform中合併原則的基本瞭解，並說明如何使用Platform UI定義合併原則。
+title: 在Adobe Experience Platform中建立合併原則
+description: 本影片基本了解Adobe Experience Platform中的合併原則，並概述如何使用Platform UI定義合併原則。
 product: experience platform
 type: Documentation
 solution: Experience Platform
@@ -9,23 +9,20 @@ audience: all
 doc-type: video
 activity: understand
 thumbnail: null
-translation-type: tm+mt
-source-git-commit: cab7ba65cc62d8cab402bc23ea38c17d77841363
+exl-id: 4bb804f5-1ad7-47b0-bc38-ba22877490d4
+source-git-commit: 7283fcb2edde4598b1ef8e0ee1f1b002434ba492
 workflow-type: tm+mt
-source-wordcount: '141'
+source-wordcount: '111'
 ht-degree: 0%
 
 ---
 
+# 在Experience PlatformUI中建立合併原則
 
-# 在Experience Platform UI中建立合併原則
-
-本影片基本瞭解Adobe Experience Platform中的合併原則，並概述如何使用Platform使用者介面來定義合併原則。 若要進一步瞭解合併原則以及如何使用平台UI建立原則，請造訪[合併原則UI指南](../ui/merge-policies.md)。
-
-如果您想要使用即時客戶配置檔案API來使用合併策略，請訪問[合併策略端點指南](../api/merge-policies.md)。
+本影片主要說明如何基本了解Adobe Experience Platform中的合併原則，並概述如何使用Platform使用者介面定義合併原則。 要了解有關合併策略的詳細資訊，請從閱讀[合併策略概述](../merge-policies/overview.md)開始。
 
 >[!NOTE]
 >
->Experience Platform使用者介面經常更新，自錄制此視訊後可能已變更。 有關最新資訊，請參閱[合併策略UI指南](../ui/merge-policies.md)。
+>Experience Platform使用者介面經常更新，且自此視訊錄制以來可能已變更。 有關最新資訊，請參閱[合併策略UI指南](../merge-policies/ui-guide.md)。
 
 >[!VIDEO](https://video.tv.adobe.com/v/330433?quality=12&learn=on&captions=eng)
