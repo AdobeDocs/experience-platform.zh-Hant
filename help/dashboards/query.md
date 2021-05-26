@@ -3,9 +3,9 @@ solution: Experience Platform
 title: 探索和處理原始資料集支援Experience Platform控制面板
 type: Documentation
 description: 了解如何使用Query Service探索及處理原始資料集，在Experience Platform中支援設定檔、區段和目的地控制面板。
-source-git-commit: 743367431144e9714a967b0340c755bf2120559c
+source-git-commit: 1facf7079213918c2ef966b704319827eaa4a53d
 workflow-type: tm+mt
-source-wordcount: '592'
+source-wordcount: '614'
 ht-degree: 1%
 
 ---
@@ -29,27 +29,27 @@ Adobe Experience Platform Query Service可協助行銷人員運用標準SQL在�
 
 「即時客戶設定檔」中，每個作用中的合併原則都會有設定檔屬性資料集，可供資料湖使用。
 
-此資料集的命名慣例為&#x200B;**設定檔屬性**，後面接著英數字值。 例如︰`Profile Attribute 14adf268-2a20-4dee-bee6-a6b0e34616a9`
+這些資料集的命名慣例為&#x200B;**設定檔屬性**，後面接著英數字值。 例如︰`Profile Attribute 14adf268-2a20-4dee-bee6-a6b0e34616a9`
 
-若要了解資料集的完整結構，您可以使用Experience PlatformUI中的資料集檢視器來預覽和探索結構。
+若要了解每個資料集的完整結構，您可以使用Experience PlatformUI中的資料集檢視器來預覽和探索資料集。
 
 ### 區段中繼資料資料集
 
-資料湖中會提供您組織每個區段的區段中繼資料資料集。
+資料湖中有可用的區段中繼資料資料集，內含組織每個區段的中繼資料。
 
 此資料集的命名慣例為&#x200B;**設定檔區段定義**，後接英數字值。 例如︰`Profile Segment Definition 6591ba8f-1422-499d-822a-543b2f7613a3`
 
-下圖顯示區段中繼資料資料集的結構。
+若要了解資料集的完整結構，您可以使用Experience PlatformUI中的資料集檢視器來預覽和探索結構。
 
 ![](images/query/segment-metadata.png)
 
 ### 目的地中繼資料資料集
 
-您已啟動目的地的中繼資料會以資料湖的原始資料集形式提供。
+您組織所有啟動目的地的中繼資料都可作為資料湖的原始資料集使用。
 
 此資料集的命名慣例為&#x200B;**DIM_Destination**。
 
-下圖顯示目標中繼資料資料集的結構。
+若要了解資料集的完整結構，您可以使用Experience PlatformUI中的資料集檢視器來預覽和探索結構。
 
 ![](images/query/destinations-metadata.png)
 
@@ -102,8 +102,6 @@ Select
       group by
       segment_id
 ```
-
-### 所有目的地每個目的地啟用的區段計數
 
 ## 後續步驟
 
