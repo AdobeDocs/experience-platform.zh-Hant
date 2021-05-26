@@ -1,28 +1,22 @@
 ---
-keywords: Experience Platform；用戶介面；UI；自定義；許可證使用儀表板；儀表板；許可證使用；權益；衝減
-title: 目標控制面板
-description: 'Adobe Experience PlatformUI提供儀表板，您可以透過儀表板查看組織活動目標的重要資訊。 '
-topic-legacy: guide
+keywords: Experience Platform；使用者介面；UI；自訂；授權使用控制面板；控制面板；授權使用；權限；耗用
+title: 目的地控制面板
+description: 'Adobe Experience Platform UI提供控制面板，供您檢視組織作用中目的地的重要資訊。 '
 type: Documentation
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 998332007465c1f8457b5d8cf0e153d513505d39
 workflow-type: tm+mt
-source-wordcount: '143'
-ht-degree: 6%
+source-wordcount: '121'
+ht-degree: 0%
 
 ---
 
 
-# （測試版）[!UICONTROL Destinations]控制面板{#destinations-dashboard}
+#  Destinationsdk  {#destinations-dashboard}
 
->[!IMPORTANT]
->
->儀表板功能目前處於測試階段，並非所有使用者都能使用。 文件和功能可能會有所變更。
+Adobe Experience Platform使用者介面(UI)提供控制面板，可讓您檢視有關組織作用中目的地的重要資訊，如每日快照中所擷取。
 
-Adobe Experience Platform用戶介面(UI)提供一個儀表板，通過該儀表板可以查看有關組織活動目標的重要資訊（在每日快照中捕獲）。
+如需如何存取UI中的目的地控制面板並與其互動，以及進一步了解控制面板中顯示的可用量度的詳細指示，請造訪[目的地控制面板指南](../dashboards/guides/destinations.md)。
 
-如需有關如何存取UI中的目的地控制面板並與之互動的詳細指示，以及如何進一步瞭解控制面板中顯示的可用度量，請造訪[目的地控制面板指南](../dashboards/guides/destinations.md)。
-
-如需Experience Platform中所有控制面板功能的概述，請先閱讀[控制面板概述](../../dashboards/home.md)。
+如需Experience Platform中所有控制面板功能的概觀，請先閱讀[控制面板概觀](../../dashboards/home.md)開始。
 
 ![](images/destinations-dashboard/dashboard-overview.png)
