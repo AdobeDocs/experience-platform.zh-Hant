@@ -1,28 +1,22 @@
 ---
-keywords: Experience Platform；用戶介面；UI；自定義；許可證使用儀表板；儀表板；許可證使用；權益；衝減
-title: 授權使用儀表板
-description: 'Adobe Experience PlatformUI提供儀表板，您可以透過儀表板檢視貴組織授權使用的重要資訊。 '
-topic-legacy: guide
+keywords: Experience Platform；使用者介面；UI；自訂；授權使用控制面板；控制面板；授權使用；權限；耗用
+title: 授權使用控制面板
+description: 'Adobe Experience Platform UI提供控制面板，供您檢視有關組織授權使用的重要資訊。 '
 type: Documentation
 exl-id: 8cf34653-acf6-4af3-af7b-6c07e68bbc03
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 5b5acd22f2dbdeef704b3e790ca603901ebc882a
 workflow-type: tm+mt
-source-wordcount: '146'
-ht-degree: 6%
+source-wordcount: '125'
+ht-degree: 0%
 
 ---
 
-# （測試版）[!UICONTROL License usage]控制面板{#license-usage-dashboard}
+# [!UICONTROL 許可證] 用板  {#license-usage-dashboard}
 
->[!IMPORTANT]
->
->儀表板功能目前處於測試階段，並非所有使用者都能使用。 文件和功能可能會有所變更。
+Adobe Experience Platform使用者介面(UI)提供控制面板，您可透過控制面板檢視有關組織授權使用的重要資訊，如每日快照中所擷取。
 
-Adobe Experience Platform用戶介面(UI)提供一個儀表板，通過該儀表板可以查看有關組織許可證使用情況的重要資訊（在每日快照中捕獲）。
+如需如何存取UI中的授權使用量控制面板並與之互動，以及進一步了解控制面板中顯示的可用量度的詳細指示，請造訪[授權使用量控制面板指南](../dashboards/guides/license-usage.md)。
 
-如需如何存取UI中授權使用控制面板並與之互動的詳細指示，以及進一步瞭解控制面板中顯示的可用量度，請造訪[授權使用控制面板指南](../dashboards/guides/license-usage.md)。
+如需Experience Platform中所有控制面板功能的概觀，請先閱讀[控制面板概觀](../dashboards/home.md)開始。
 
-如需Experience Platform中所有控制面板功能的概述，請先閱讀[控制面板概述](../dashboards/home.md)。
-
-![](images/license-usage-dashboard/dashboard-overview.png)
+![](../dashboards/images/license-usage/dashboard-overview.png)
