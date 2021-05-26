@@ -4,10 +4,10 @@ title: 即時客戶個人檔案UI指南
 topic-legacy: guide
 description: 「即時客戶設定檔」可結合來自多個管道的資料，包括線上、離線、CRM和協力廠商資料，讓您全面了解每個客戶。 本檔案可做為在Adobe Experience Platform使用者介面中與即時客戶設定檔互動的指南。
 exl-id: 792a3a73-58a4-4163-9212-4d43d24c2770
-source-git-commit: 2696dab922d9c1992b61ffefe50a4e3155793282
+source-git-commit: db094aac82b1d0a6671c213f3e98824f828771ab
 workflow-type: tm+mt
-source-wordcount: '1327'
-ht-degree: 1%
+source-wordcount: '1303'
+ht-degree: 0%
 
 ---
 
@@ -29,11 +29,7 @@ ht-degree: 1%
 
 ![](../images/user-guide/profiles-overview.png)
 
-### (Alpha)設定檔控制面板
-
->[!IMPORTANT]
->
->控制面板功能目前為Alpha版，並非所有使用者都能使用。 文件和功能可能會有所變更。
+### 設定檔控制面板
 
 對於某些使用者，在左側導覽中選取&#x200B;**[!UICONTROL Profiles]**&#x200B;並開啟&#x200B;**[!UICONTROL Overview]**&#x200B;標籤時，會提供一個控制面板，概述與您的設定檔資料相關的關鍵量度。
 
