@@ -5,9 +5,9 @@ doc-type: release notes
 last-update: May 26, 2021
 author: ens72741
 exl-id: 8f2c9bf8-1487-46e4-993b-bd9b63774cab
-source-git-commit: 8508d213834bb21951df4fe118732b60465b6d73
+source-git-commit: d78f2d0fc8d1117614b0d8add0cada21619d8357
 workflow-type: tm+mt
-source-wordcount: '831'
+source-wordcount: '978'
 ht-degree: 4%
 
 ---
@@ -27,6 +27,7 @@ Adobe Experience Platform 現有功能更新：
 - [[!DNL Destinations]](#destinations)
 - [[!DNL Experience Data Model (XDM)]](#xdm)
 - [即時客戶個人檔案](#profile)
+- [來源](#sources)
 
 ## 儀表板 {#dashboards}
 
@@ -82,3 +83,15 @@ Adobe Experience Platform可讓您為客戶提供協調、一致且相關的體�
 | 資料集重疊報表 | 資料集重疊報表會顯示對可定址對象貢獻最大的資料集，讓您可清楚掌握設定檔存放區的組成。 除了提供設定檔資料的深入分析外，此報表還可協助使用者採取動作來最佳化授權使用，例如設定特定資料的有效期限限制。 若要深入了解，請依照[產生資料集重疊報表的教學課程](../../profile/tutorials/dataset-overlap-report.md)操作。 |
 
 如需「即時客戶設定檔」的詳細資訊，包括使用[!DNL Profile]資料的教學課程和最佳實務，請從閱讀[即時客戶設定檔概述](../../profile/home.md)開始。
+
+## [!DNL Sources] {#sources}
+
+Adobe Experience Platform可內嵌來自外部來源的資料，同時允許您使用Platform服務來建構、加標籤及增強該資料。 您可以內嵌來自各種來源的資料，例如Adobe應用程式、雲端儲存、協力廠商軟體和您的CRM系統。
+
+Experience Platform提供RESTful API和互動式UI，讓您輕鬆為各種資料提供者設定來源連線。 這些源連接允許您驗證並連接到外部儲存系統和CRM服務、設定獲取運行時間以及管理資料獲取吞吐量。
+
+| 功能 | 說明 |
+| ------- | ----------- |
+| 壓縮檔案擷取的UI支援 | 您現在可以在UI中使用雲端儲存空間來源，預覽並內嵌壓縮的JSON或分隔檔案。 如需詳細資訊，請參閱UI](../../sources/tutorials/ui/dataflow/batch/cloud-storage.md)中的[配置雲儲存源連接的資料流的教程。 |
+
+若要進一步了解來源，請參閱[來源概述](../../sources/home.md)。
