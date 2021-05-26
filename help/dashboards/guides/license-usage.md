@@ -1,87 +1,108 @@
 ---
-keywords: Experience Platform；用戶介面；UI；自定義；許可證使用儀表板；儀表板；許可證使用；權益；衝減
-title: 授權使用儀表板
-description: Adobe Experience Platform提供儀表板，您可透過儀表板檢視貴組織授權使用的重要資訊。
-topic-legacy: guide
+keywords: Experience Platform；使用者介面；UI；自訂；授權使用控制面板；控制面板；授權使用；權限；耗用
+title: 授權使用控制面板
+description: Adobe Experience Platform提供控制面板，讓您透過該控制面板檢視貴組織的授權使用情況重要資訊。
 type: Documentation
 exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 47c4113d45b0101a761fa7d703013609e8729dbb
 workflow-type: tm+mt
-source-wordcount: '632'
-ht-degree: 2%
+source-wordcount: '926'
+ht-degree: 0%
 
 ---
 
-# （測試版）授權使用控制面板{#license-usage-dashboard}
+# 許可證使用儀表板{#license-usage-dashboard}
 
->[!IMPORTANT]
->
->本檔案中概述的控制面板功能目前為測試版，並非所有使用者都能使用。 文件和功能可能會有所變更。
+Adobe Experience Platform使用者介面(UI)提供控制面板，您可透過控制面板檢視有關組織授權使用的重要資訊，如每日快照中所擷取。 本指南概述如何存取和使用UI中的授權使用情況控制面板，並提供控制面板中所顯示視覺效果的詳細資訊。
 
-Adobe Experience Platform用戶介面(UI)提供一個儀表板，通過該儀表板可以查看有關組織許可證使用情況的重要資訊（在每日快照中捕獲）。 本指南概述如何存取和使用UI中的授權使用控制面板，並提供有關控制面板中顯示視覺化的詳細資訊。
+如需Platform UI的一般概觀，請造訪[Experience PlatformUI指南](../../landing/ui-guide.md)。
 
-有關平台UI的一般概述，請訪問[Experience PlatformUI指南](../../landing/ui-guide.md)。
+## 許可證使用儀表板資料
 
-## 授權使用資料板資料
-
-授權使用控制面板會顯示貴組織授權相關資料的快照以供Experience Platform。 儀表板中的資料與拍攝快照時在特定時間點顯示的資料完全相同。 換言之，快照不是資料的近似值或範例，而且控制面板不會即時更新。
+許可證使用儀表板顯示貴組織與許可證相關的資料的快照，以便Experience Platform。 控制面板中的資料與拍攝快照時在特定時間點顯示的資料完全相同。 換言之，快照不是資料的近似值或樣本，控制面板不會即時更新。
 
 >[!NOTE]
 >
->自快照建立以來對資料所做的任何變更或更新，在下一個快照建立之前，不會反映在控制面板中。
+>自拍攝快照以來對資料所做的任何更改或更新都不會反映在儀表板中，直到拍攝下一個快照。
 
-## 探索授權使用儀表板
+## 探索授權使用控制面板
 
-若要導覽至「平台UI」中的授權使用控制面板，請選取左側導軌中的&#x200B;**[!UICONTROL License usage]**。 此頁籤隨&#x200B;**[!UICONTROL Overview]**&#x200B;頁籤開啟，其中顯示控制面板。
+若要導覽至Platform UI中的授權使用量控制面板，請在左側邊欄中選取&#x200B;**[!UICONTROL 授權使用量]**。 這會開啟顯示控制面板的&#x200B;**[!UICONTROL 概述]**&#x200B;標籤。
+
+>[!NOTE]
+>
+>預設不會啟用授權使用控制面板。 必須授予使用者「檢視授權使用量控制面板」權限，才能檢視控制面板。 有關授予訪問權限以查看許可證使用控制面板的步驟，請參閱[控制面板權限指南](../permissions.md)。
 
 ![](../images/license-usage/dashboard-overview.png)
 
-### 選取沙盒
+### 選取沙箱
 
-若要選擇要在儀表板中查看的沙盒，請選擇[!UICONTROL Production]或[!UICONTROL Development]。 選取的沙盒會以沙盒名稱旁的選項按鈕來指示。
+若要選擇要在控制面板中檢視的沙箱，請選取[!UICONTROL Production]或[!UICONTROL Development]。 選取的沙箱會以沙箱名稱旁的選項按鈕指出。
 
->[!NOTE]
->
->相同類型的所有沙盒會累積沙盒的耗用量報告。 換言之，選擇[!UICONTROL Production]或[!UICONTROL Development]可分別針對所有生產或開發沙盒提供消耗報表。
+相同類型的所有沙箱的耗用量報表都是累計的。 換句話說，選取[!UICONTROL Production]或[!UICONTROL Development]分別為所有生產或開發沙箱提供耗用量報表。
 
 ![](../images/license-usage/select-sandbox.png)
 
+>[!WARNING]
+>
+>必須在沙箱層級指定檢視授權使用情況控制面板的權限。 這表示檢視控制面板的權限必須新增至每個個別沙箱。 此限制將於未來版本中解決。 同時，提供下列因應措施：
+>
+>1. 在Adobe Admin Console中建立產品設定檔。
+>2. 在「沙箱」類別的「權限」下，新增您要在授權使用控制面板中檢視的所有沙箱。
+>3. 在「使用者控制面板權限」類別下，新增「檢視授權使用控制面板」權限。
+
+
 ### 選擇日期範圍
 
-選取沙盒後，您可以使用日期範圍下拉式清單來選取要在控制面板中顯示的時段。 有三種可用選項：[!UICONTROL Last 30 days]、[!UICONTROL Last 90 days]和[!UICONTROL Last 12 months]。 預設會選取最近30天。
+選取沙箱後，您可以使用日期範圍下拉式清單，選取要在控制面板中顯示的時段。 有多個可用選項，包括過去30天的預設值。
 
 ![](../images/license-usage/select-date-range.png)
 
+您也可以選取&#x200B;**[!UICONTROL 自訂日期]**&#x200B;以選擇顯示的時段。
+
+![](../images/license-usage/select-custom-date.png)
+
 ## 介面工具集
 
-授權使用控制面板由Widget組成，其中顯示唯讀量度，提供有關貴組織授權使用的重要資訊。 可見度量取決於您組織的特定授權（如需詳細資訊，請參閱[可用度量](#available-metrics)一節）。
+授權使用控制面板由Widget組成，Widget會顯示唯讀量度，提供貴組織授權使用的重要資訊。 可見的量度取決於貴組織的特定授權（如需詳細資訊，請參閱[可用量度](#available-metrics)區段）。
 
-每個介面工具集都會顯示折線圖，比較貴組織的實際數量與貴組織的授權可用總數，並提供總使用量的百分比。
+每個Widget都會顯示一個折線圖，比較貴組織的實際數量與貴組織授權時可用的總數，並提供總使用量的百分比。
 
 ![](../images/license-usage/widgets.png)
 
 ## 可用量度
 
-授權使用控制面板目前提供4個度量：
+授權使用控制面板會報告四個關鍵量度，並在後續版本中新增更多量度。 可用量度列於下方。
 
-* [!UICONTROL Addressable Audience] （以描述檔數量衡量）
-* [!UICONTROL Average profile richness]
-* [!UICONTROL Total consumed storage]
-* [!UICONTROL Data scanned per segmentation ratio]
+>[!NOTE]
+>
+>目前有三個可用量度處於測試狀態。
 
-這些量度的定義視貴組織已購買的授權而定。 如需每個度量的詳細定義，請參考適當的產品說明檔案：
+* [!UICONTROL 可定址對象]
+* [!UICONTROL 平均設定檔豐富度] （測試版）
+* [!UICONTROL 每個區段掃描的資料比率] （測試版）
+* [!UICONTROL 總消耗儲存] （測試版）
+
+>[!WARNING]
+>
+>[!UICONTROL 總消耗儲存量]量度的已知限制：刪除批資料時，該批資料會處於軟刪除狀態，為期7天，以支援資料恢復使用案例。 7天後，批次會移至硬刪除狀態。 在批處於硬刪除狀態之前，報告已消耗的儲存總量不會反映趨勢圖的任何更改。 此問題將在未來的版本中解決。
+
+這些量度的可用性和每個量度的特定定義會因貴組織已購買的授權而異。 如需每個量度的詳細定義，請參閱適當的產品說明檔案：
 
 | 授權 | 產品說明 |
 |---|---|
-| <ul><li>Adobe Experience Platform:OD LITE</li><li>Adobe Experience Platform:OD標準</li><li>Adobe Experience Platform:OD重</li></ul> | [Adobe Experience Platform](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-platform.html) |
-| <ul><li>Adobe Experience Platform:OD</li></ul> | [Experience Platform、應用程式服務與智慧型服務](https://helpx.adobe.com/legal/product-descriptions/exp-platform-app-svcs.html) |
-| <ul><li>RT客戶資料平台：OD</li><li>RT客戶資料平台：OD PRFL到10M</li><li>RT客戶資料平台：OD PRF到50M</li></ul> | [即時客戶資料平台](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html) |
-| <ul><li>AEP:OD啟動</li><li>AEP:OD啟動PRF至10M</li><li>AEP:OD啟動PRF最多50M</li></ul> | [Adobe Experience Platform啟動](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-platform0.html) |
+| <ul><li>Adobe Experience Platform:OD LITE</li><li>Adobe Experience Platform:OD STANDARD</li><li>Adobe Experience Platform:OD沈重</li></ul> | [Adobe Experience Platform](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-platform.html) |
+| <ul><li>Adobe Experience Platform:OD</li></ul> | [Experience Platform、應用程式服務與Intelligent Services](https://helpx.adobe.com/legal/product-descriptions/exp-platform-app-svcs.html) |
+| <ul><li>RT客戶資料平台：OD</li><li>RT客戶資料平台：OD PRFL至10M</li><li>RT客戶資料平台：OD PRFL至50M</li></ul> | [即時客戶資料平台](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html) |
+| <ul><li>AEP:OD啟用</li><li>AEP:OD激活PRFL至10米</li><li>AEP:OD激活PRFL最多50米</li></ul> | [Adobe Experience Platform Activation](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-platform0.html) |
 | <ul><li>AEP:OD INTELLIGENCE</li></ul> | [Adobe Experience Platform情報](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-platform-intelligence---product-description.html) |
+
+>[!WARNING]
+>
+>授權使用控制面板只會報告貴組織已布建的最新授權。 如果為貴組織布建的最新授權未出現在上表中，則可能無法正確顯示授權使用控制面板。 未來版本預計會支援單一組織中的其他授權和多個授權。
 
 ## 後續步驟
 
-閱讀本檔案後，您可以找到授權使用儀表板並選取要檢視的沙盒。 您也可以根據組織購買的授權，找到有關組織可用量度的更多資訊。
+閱讀本檔案後，您可以找到授權使用控制面板，並選取要檢視的沙箱。 您也可以根據組織已購買的授權，找到有關組織可用量度的詳細資訊。
 
-若要進一步瞭解Experience PlatformUI中的其他功能，請參閱[平台UI指南](../../landing/ui-guide.md)。
+若要進一步了解Experience PlatformUI中的其他可用功能，請參閱[平台UI指南](../../landing/ui-guide.md)。
