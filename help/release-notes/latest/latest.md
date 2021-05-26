@@ -1,101 +1,84 @@
 ---
 title: Adobe Experience Platform 發行說明
-description: 2021年4月21日的Experience Platform發行說明。
+description: Experience Platform2021年5月26日發行說明。
 doc-type: release notes
-last-update: April 21, 2021
+last-update: May 26, 2021
 author: ens72741
 exl-id: 8f2c9bf8-1487-46e4-993b-bd9b63774cab
-translation-type: tm+mt
-source-git-commit: ab0798851e5f2b174d9f4241ad64ac8afa20a938
+source-git-commit: 8508d213834bb21951df4fe118732b60465b6d73
 workflow-type: tm+mt
-source-wordcount: '885'
-ht-degree: 10%
+source-wordcount: '831'
+ht-degree: 4%
 
 ---
 
 
 # Adobe Experience Platform 發行說明
 
-**發行日期：2021 年 4 月 21 日**
+**發行日期：2021 年 5 月 26 日**
+
+Adobe Experience Platform的新功能：
+
+- [儀表板](#dashboards)
 
 Adobe Experience Platform 現有功能更新：
 
 - [[!DNL Data Prep]](#data-prep)
+- [[!DNL Destinations]](#destinations)
 - [[!DNL Experience Data Model (XDM)]](#xdm)
-- [[!DNL Intelligent Services]](#intelligent-services)
-- [[!DNL Segmentation Service]](#segmentation)
-- [[!DNL Sources]](#sources)
+- [即時客戶個人檔案](#profile)
 
-## [!DNL Data Prep] {#data-prep}
+## 儀表板 {#dashboards}
 
-[!DNL Data Prep] 可讓資料工程師將資料對應、轉換及驗證資料與Experience Data Model(XDM)。
-
-**新功能**
-
-| 功能 | 說明 |
-| ------- | ----------- |
-| 支援編輯現有資料流的對應 | 您現在可以更新現有資料流的映射集。 不能更新為一次性提取調度的資料流的映射集。 HTTP API、Adobe Analytics、Adobe Audience Manager和[!DNL Marketo Engage]不支援此功能。 如需詳細資訊，請參閱UI](../../sources/tutorials/ui/update-dataflows.md)中有關[更新來源資料流的教學課程。 |
-| 支援串流擷取 | 現在，您可以在建立串流來源連線時使用資料準備功能。 如需詳細資訊，請參閱UI](../../sources/tutorials/ui/create/streaming/http.md)中有關建立串流來源連線的教學課程。[ |
-
-如需詳細資訊，請參閱[[!DNL Data Prep] overview](../../data-prep/home.md)。
-
-## [!DNL Experience Data Model (XDM)] {#xdm}
-
-Experience Data Model(XDM)是開放原始碼規格，旨在提升數位體驗的威力。 它為與Adobe Experience Platform服務通訊的任何應用程式提供共同的架構和定義。 遵循XDM標準，所有客戶體驗資料都可以整合在共同的呈現方式中，以更快速、更整合的方式提供見解。 您可以從客戶行動中獲得寶貴見解，透過細分定義客戶受眾，並將客戶屬性用於個人化目的。
+Adobe Experience Platform提供多個控制面板，讓您透過這些控制面板檢視組織資料的重要深入分析（在每日快照中擷取）。
 
 | 功能 | 說明 |
 | --- | --- |
-| 依產業區分的方案建議 | 在架構編輯器UI中選擇類和架構欄位組時，可以使用新篩選器根據您的特定行業查看建議的標準元件。 有關這些元件在不同行業使用案例中如何相互關聯的詳細資訊，請參閱[行業資料模型](https://www.adobe.com/go/xdm-industry-erds-en)上的文檔。 |
+| 設定檔分析 | 設定檔控制面板提供每個組織合併原則Experience Platform的即時客戶設定檔量度的每日概覽。 所有能夠在Platform中存取及檢視設定檔資料的使用者，都能取得這些設定檔分析。 |
+| 對象分析 | 區段控制面板提供與受眾相關的深入分析，讓所有可存取Platform中檢視區段的使用者都能查看。 控制面板每日提供使用區段產生器UI建立或從Adobe Audience Manager匯入之對象的對象量度概觀。 |
+| 啟動分析 | 所有能存取和檢視目的地的使用者皆可使用目的地控制面板。 控制面板會提供所有目的地之啟用的啟用量度的每日概覽。 |
+| 使用者專屬分析 | 控制面板的外觀和風格可由每位使用者個人化，包括透過新增、移除、調整大小和重新排列小工具來修改控制面板版面的功能。 |
+| 介面工具集建立與管理 | 行銷人員可在集中式存放庫中存取所有標準和自訂Widget，以便將深入分析建立和共用大眾化：<br/><ul><li>標準標籤包含Adobe提供的小工具，可在控制面板上下文中存取。 </li><li>自訂索引標籤包含組織建立的自訂小工具，包括可在檢視中隱藏小工具的選項。</li><li>「設定檔和對象」深入分析中的介面工具集建立工作流程可讓您編輯、選取、預覽和發佈自訂介面工具集。</li></ul> |
+| 自訂分析 | 存取權限可讓資料工程師和行銷專家自訂可供Widget建立的設定檔屬性。 |
 
-## [!DNL Intelligent Services] {#intelligent-services}
+如需控制面板的詳細資訊，包括如何授與存取權限和建立自訂Widget，請從閱讀[控制面板概述](../../dashboards/home.md)開始。
 
-智慧型服務可讓行銷分析師和從業人員在客戶體驗使用案例中運用人工智慧和機器學習的強大功能。 這可讓行銷分析師使用商業層級的組態來設定特定公司需求的預測，而不需要資料科學的專業知識。
+## [!DNL Data Prep] {#data-prep}
 
-### 客戶人工智慧
-
-即時客戶資料平台中提供的客戶人工智慧可用來產生自訂傾向分數，例如大規模的個人個人檔案的流失和轉換。 不必將企業需求轉換為機器學習問題、挑選演算法、培訓或部署，就能達成上述目的。
-
-| 功能 | 說明 |
-| ------- | ----------- |
-| 支援Adobe Analytics資料 | 更新功能，可透過Analytics來源連接器支援Adobe Analytics資料集，而不需要ETL您的資料，以符合消費者體驗事件(CEE)架構。 |
-| 支援Adobe Audience Manager資料 | 更新功能，透過Audience Manager來源連接器支援Adobe Audience Manager資料集，毋需ETL您的資料，以符合消費者體驗事件(CEE)架構。 |
-| 模型效能摘要 | 客戶人工智慧現在在服務例項深入分析頁面中有[模型效能摘要標籤](../../intelligent-services/customer-ai/user-guide/discover-insights.md#performance-metrics)。 模型績效標籤會顯示所有實際的轉換率和流失率。 這可讓您解讀並瞭解每個傾向區間的情況。 |
-
-有關受支援資料集的詳細資訊，請參閱[[!DNL Intelligent Services] 資料準備文檔](../../intelligent-services/data-preparation.md)。
-
-### Attribution AI
-
-Attribution AI 可將點數歸因到促成轉換事件的接觸點。行銷人員可善用此工具，協助量化客戶歷程中各個獨立行銷接觸點對行銷的影響。
+[!DNL Data Prep] 可讓資料工程師將資料對應、轉換及驗證至Experience Data Model(XDM)。
 
 | 功能 | 說明 |
 | ------- | ----------- |
-| 支援Adobe Analytics資料 | 更新功能，可透過Analytics來源連接器支援Adobe Analytics資料集，而不需要ETL您的資料，以符合消費者體驗事件(CEE)架構。 |
+| 從寬錯誤警告 | 資料準備映射程式錯誤訊息現在會更加寬大，提供警告而非錯誤，以及部分轉換的列。 |
+| 新函式 | 新增函式來取得索引鍵、將元素附加至現有陣列、將多個陣列的元素附加至現有陣列、使用物件來建立陣列，以及將JSON物件的名稱作為字串文字使用。 |
 
-有關受支援資料集的詳細資訊，請參閱[[!DNL Intelligent Services] 資料準備文檔](../../intelligent-services/data-preparation.md)。
+如需詳細資訊，請參閱[[!DNL Data Prep] overview](../../data-prep/home.md)。
 
-## 劃分服務 {#segmentation}
+## [!DNL Destinations] {#destinations}
 
-Adobe Experience Platform區段服務提供使用者介面和REST風格的API，可讓您建立區段並從您的[!DNL Real-time Customer Profile]資料產生觀眾。 這些區段是在平台上集中設定和維護的，讓任何Adobe應用程式都可輕鬆存取。
-
-[!DNL Segmentation Service] 定義個人檔案的特定子集，方法是描述區分客戶群中有價人群的標準。區段可以根據記錄資料（例如人口統計資訊）或代表客戶與品牌互動的時間系列事件來劃分。
-
-**新功能**
+[!DNL Destinations] 是與目的地平台預先建置的整合，可順暢地從Adobe Experience Platform啟動資料。您可以使用目的地來針對跨通路行銷活動、電子郵件行銷活動、目標廣告和其他許多使用案例，啟用已知和未知的資料。
 
 | 功能 | 說明 |
 | ------- | ----------- |
-| 其他聚合函式 | 「區段產生器」中已新增計數功能。 計數函式可讓您計算指定事件的完成次數。 有關計數函式的詳細資訊，請參閱[區段產生器指南](../../segmentation/ui/segment-builder.md#count-functions)的計數函式區段 |
+| 改善監控（測試版） | 提高目的地的監控功能，包括批次和串流目的地的資訊 |
 
-如需[!DNL Segmentation Service]的詳細資訊，請參閱[區段概述](../../segmentation/home.md)。
+如需目的地的詳細一般資訊，請參閱[目的地概述](../../destinations/home.md)。
 
-## [!DNL Sources] {#sources}
+## [!DNL Experience Data Model (XDM)] {#xdm}
 
-Adobe Experience Platform可以從外部來源收集資料，同時允許您使用平台服務來建構、標籤和增強該資料。 您可以從多種來源收集資料，例如Adobe應用程式、雲端儲存空間、協力廠商軟體和您的CRM系統。
+Experience Data Model(XDM)是開放原始碼規格，旨在提升數位體驗的效能。 它為與Adobe Experience Platform上的服務通訊的任何應用程式提供共同的結構和定義。 遵循XDM標準，所有客戶體驗資料皆可整合至通用表示法，以更快速、更整合的方式提供深入分析。 您可以從客戶動作中獲得寶貴的深入分析、透過區段定義客戶受眾，以及將客戶屬性用於個人化目的。
 
-Experience Platform提供REST風格的API和互動式UI，讓您輕鬆地為各種資料提供者設定來源連線。 這些源連接允許您驗證並連接到外部儲存系統和CRM服務、設定接收運行的時間，以及管理資料接收吞吐量。
+| 功能 | 說明 |
+| --- | --- |
+| 架構欄位群組 | 「mixin」一詞已更新為「欄位群組」。 Adobe Experience Platform UI會反映此變更。 此外，Schema Registry API具有新的[欄位組端點](../../xdm/api/field-groups.md)，而mixin端點已作為舊式端點淘汰。 如需詳細資訊，請參閱[XDM檔案](../../xdm/home.md)。 |
+
+## 即時客戶個人檔案 {#profile}
+
+Adobe Experience Platform可讓您為客戶提供協調、一致且相關的體驗，無論客戶在何處或何時與您的品牌互動。 透過即時客戶個人檔案，您可以全面了解各個客戶，其中結合來自多個管道的資料，包括線上、離線、CRM和第三方資料。 [!DNL Profile] 可讓您將客戶資料併入統一檢視中，提供每個客戶互動的可操作、時間戳記帳戶。
 
 | 功能 | 說明 |
 | ------- | ----------- |
-| [!DNL Marketo Engage] （測試版） | 您現在可以使用UI建立[!DNL Marketo Engage]來源連線，將B2B資料帶入平台，並使用與平台連接的應用程式，讓此資料保持最新狀態。 有關詳細資訊，請參見[[!DNL Marketo Engage] 源連接器文檔](../../sources/connectors/adobe-applications/marketo/marketo.md)。 |
-| Beta版來源正在推出 | 下列來源已從測試版提升至正式發行： <ul><li>[[!DNL Amazon Kinesis]](../../sources/connectors/cloud-storage/kinesis.md)</li><li>[[!DNL Azure EventHubs]](../../sources/connectors/cloud-storage/eventhub.md)</li><li>[[!DNL HTTP API]](../../sources/connectors/streaming/http.md)</li><li>[[!DNL MariaDB]](../../sources/connectors/databases/mariadb.md)</li><li>[[!DNL Microsoft SQL Server]](../../sources/connectors/databases/sql-server.md)</li><li>[[!DNL Oracle]](../../sources/connectors/databases/oracle.md)</li></ul> |
+| 合併策略工作流更新 | 在UI中建立和更新合併原則時，使用者現在可以根據聯合結構預覽20個範例設定檔。 這可讓使用者在儲存合併原則設定前，預覽客戶設定檔的外觀。 有關詳細資訊，請參閱[合併策略UI指南](../../profile/merge-policies/ui-guide.md)。 |
+| 資料集重疊報表 | 資料集重疊報表會顯示對可定址對象貢獻最大的資料集，讓您可清楚掌握設定檔存放區的組成。 除了提供設定檔資料的深入分析外，此報表還可協助使用者採取動作來最佳化授權使用，例如設定特定資料的有效期限限制。 若要深入了解，請依照[產生資料集重疊報表的教學課程](../../profile/tutorials/dataset-overlap-report.md)操作。 |
 
-若要進一步瞭解來源，請參閱[來源概觀](../../sources/home.md)。
+如需「即時客戶設定檔」的詳細資訊，包括使用[!DNL Profile]資料的教學課程和最佳實務，請從閱讀[即時客戶設定檔概述](../../profile/home.md)開始。
