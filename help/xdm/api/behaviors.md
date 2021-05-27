@@ -1,40 +1,39 @@
 ---
-keywords: Experience Platform;home；熱門主題；api;API;XDM;XDM系統；體驗資料模型；體驗資料模型；資料模型；模式註冊；模式註冊；行為；行為；行為；行為；
+keywords: Experience Platform；首頁；熱門主題；API; XDM; XDM系統；體驗資料模型；體驗資料模型；資料模型；資料模型；結構註冊表；結構註冊表；行為；行為；行為；行為；行為；
 solution: Experience Platform
 title: 行為API端點
-description: 架構註冊表API中的/behaviors端點可讓您擷取全域容器中的所有可用行為。
+description: 架構註冊表API中的/behaviors端點可讓您擷取全域容器中所有可用的行為。
 topic-legacy: developer guide
 exl-id: 3b45431f-1d55-4279-8b62-9b27863885ec
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
 workflow-type: tm+mt
-source-wordcount: '423'
-ht-degree: 2%
+source-wordcount: '428'
+ht-degree: 3%
 
 ---
 
 # 行為端點
 
-在Experience Data Model(XDM)中，行為會定義模式所描述的資料性質。 每個XDM類都必須引用特定的行為，使用該類的所有方案都將繼承該行為。 在Platform中，幾乎所有的使用案例中，有兩種可用的行為：
+在Experience Data Model(XDM)中，行為會定義結構描述的資料性質。 每個XDM類別都必須參考特定行為，採用該類別的所有結構都將繼承該行為。 在Platform的幾乎所有使用案例中，有兩種可用的行為：
 
-* **[!UICONTROL Record]**:提供主題屬性的相關資訊。主題可以是組織或個人。
-* **[!UICONTROL Time-series]**:提供記錄主體直接或間接採取操作時系統的快照。
+* **[!UICONTROL 記錄]**:提供主題屬性的相關資訊。主題可以是組織或個人。
+* **[!UICONTROL 時間序列]**:提供記錄主體直接或間接執行操作時系統的快照。
 
 >[!NOTE]
 >
->在Platform中，有些使用案例需要使用不採用上述任一行為的架構。 針對這些情況，提供第三種「臨機」行為。 如需詳細資訊，請參閱[建立臨機架構](../tutorials/ad-hoc.md)的教學課程。
+>在Platform中，有些使用案例需要使用結構，而不採用上述任一行為。 針對這些情況，提供第三種「臨機」行為。 如需詳細資訊，請參閱[建立臨機架構](../tutorials/ad-hoc.md)的教學課程。
 >
->有關資料行為如何影響模式組合的更一般資訊，請參閱[架構組合基礎](../schema/composition.md)的指南。
+>有關資料行為如何影響架構組合的更一般資訊，請參閱[架構組合基礎](../schema/composition.md)的指南。
 
-[!DNL Schema Registry] API中的`/behaviors`端點可讓您在`global`容器中檢視可用行為。
+[!DNL Schema Registry] API中的`/behaviors`端點可讓您檢視`global`容器中的可用行為。
 
 ## 快速入門
 
-本指南中使用的端點是[[!DNL Schema Registry] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/behavior-registry.yaml)的一部分。 在繼續之前，請先閱讀[快速入門手冊](./getting-started.md)，以取得相關檔案的連結、閱讀本檔案中範例API呼叫的指南，以及成功呼叫任何Experience PlatformAPI所需之必要標題的重要資訊。
+本指南中使用的端點是[[!DNL Schema Registry] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/behavior-registry.yaml)的一部分。 繼續之前，請檢閱[快速入門手冊](./getting-started.md)，取得相關檔案的連結、閱讀本檔案中範例API呼叫的指南，以及成功呼叫任何Experience PlatformAPI所需的必要標頭的重要資訊。
 
-## 擷取行為清單{#list}
+## 擷取行為清單 {#list}
 
-通過向`/behaviors`端點發出GET請求，可以檢索所有可用行為的清單。
+您可以向`/behaviors`端點提出GET請求，以擷取所有可用行為的清單。
 
 **API格式**
 
@@ -89,9 +88,9 @@ curl -X GET \
 }
 ```
 
-## 查找行為{#lookup}
+## 查找行為 {#lookup}
 
-您可在`/behaviors`端點的GET請求路徑中提供其ID，以查找特定行為。
+您可以在`/behaviors`端點GET請求的路徑中提供其ID，以查找特定行為。
 
 **API格式**
 
@@ -101,11 +100,13 @@ GET /global/behaviors/{BEHAVIOR_ID}
 
 | 參數 | 說明 |
 | --- | --- |
-| `{BEHAVIOR_ID}` | 您要查看之行為的`meta:altId`或URL編碼`$id`。 |
+| `{BEHAVIOR_ID}` | 您要查詢之行為的`meta:altId`或URL編碼的`$id`。 |
+
+{style=&quot;table-layout:auto&quot;}
 
 **要求**
 
-以下請求在請求路徑中提供記錄行為的`meta:altId`，以檢索記錄行為的詳細資訊。
+下列請求會在請求路徑中提供其`meta:altId`，以擷取記錄行為的詳細資訊。
 
 ```shell
 curl -X GET \
@@ -119,7 +120,7 @@ curl -X GET \
 
 **回應**
 
-成功的響應返回行為的詳細資訊，包括其版本、說明以及行為提供給使用行為的類的屬性。
+成功的響應返回行為的詳細資訊，包括其版本、說明以及行為提供給採用它的類的屬性。
 
 ```json
 {
@@ -172,4 +173,4 @@ curl -X GET \
 
 ## 後續步驟
 
-本指南涵蓋[!DNL Schema Registry] API中`/behaviors`端點的使用。 要瞭解如何使用API為類指定行為，請參見[類端點指南](./classes.md)。
+本指南說明在[!DNL Schema Registry] API中使用`/behaviors`端點。 要了解如何使用API將行為指派給類，請參閱[classes終結點指南](./classes.md)。
