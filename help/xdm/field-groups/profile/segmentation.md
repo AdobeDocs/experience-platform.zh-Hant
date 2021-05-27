@@ -1,38 +1,39 @@
 ---
-keywords: Experience Platform;home；熱門主題；架構；架構；XDM；個人配置檔案；欄位；架構；架構；segment;segmentMembership;segment成員資格；架構設計；map；映射；
+keywords: Experience Platform；首頁；熱門主題；結構；結構；XDM；個別設定檔；欄位；結構；結構；區段；segmentMembership；區段成員資格；結構設計；對應；對應；
 solution: Experience Platform
-title: 區段成員資格詳細資料結構欄位群組
+title: 區段成員資格詳細資訊結構欄位群組
 topic-legacy: overview
-description: 本檔案提供「區段成員資格詳細資訊結構」欄位群組的概述。
+description: 本檔案概述「區段成員資訊詳細資料」結構欄位群組。
 exl-id: 4d463f3a-2247-4307-8afe-9527e7fd72a7
-translation-type: tm+mt
-source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
+source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
 workflow-type: tm+mt
-source-wordcount: '414'
-ht-degree: 1%
+source-wordcount: '426'
+ht-degree: 2%
 
 ---
 
 
-# [!UICONTROL Segment Membership Details] 方案欄位組
+# [!UICONTROL 區段成員資格] 詳細資訊結構欄位群組
 
 >[!NOTE]
 >
->多個架構欄位組的名稱已更改。 如需詳細資訊，請參閱[欄位群組名稱updates](../name-updates.md)上的檔案。
+>數個架構欄位組的名稱已變更。 有關詳細資訊，請參閱[欄位組名稱更新](../name-updates.md)上的文檔。
 
-[!UICONTROL Segment Membership Details] 是類的標準方案欄位 [[!DNL XDM Individual Profile] 組](../../classes/individual-profile.md)。欄位群組提供單一對應欄位，可擷取區段成員資格的相關資訊，包括個人所屬的區段、最後的資格時間，以及會籍的有效期到。
+[!UICONTROL 區段成] 員資格詳細資訊類別的標準結構 [[!DNL XDM Individual Profile] 欄位群組](../../classes/individual-profile.md)。欄位群組提供單一對應欄位，可擷取關於區段成員資格的資訊，包括個人所屬的區段、上次資格時間，以及成員資格有效到期的時間。
 
 >[!WARNING]
 >
->雖然`segmentMembership`欄位必須使用此欄位群組手動新增至您的描述檔架構，但您不應嘗試手動填入或更新此欄位。 當執行分段作業時，系統會自動更新每個描述檔的`segmentMembership`對應。
+>雖然必須使用此欄位組手動將`segmentMembership`欄位添加到您的配置檔案架構，但您不應嘗試手動填入或更新此欄位。 當執行分段作業時，系統會自動更新每個設定檔的`segmentMembership`對應。
 
 <img src="../../images/data-types/profile-segmentation.png" width="400" /><br />
 
 | 屬性 | 資料類型 | 說明 |
 | --- | --- | --- |
-| `segmentMembership` | 地圖 | 描述個人區段成員資格的映射對象。 此對象的結構將在下面詳細說明。 |
+| `segmentMembership` | 地圖 | 描述個人區段成員資格的映射物件。 此物件的結構將於下文詳細說明。 |
 
-以下是系統已為特定配置檔案填入的`segmentMembership`映射示例。 區段成員資格會依命名空間排序，如物件的根層級索引鍵所示。 反過來，每個名稱空間下的個別索引鍵代表描述檔所屬區段的ID。 每個區段物件包含數個子欄位，可提供成員資格的進一步詳細資訊：
+{style=&quot;table-layout:auto&quot;}
+
+以下是系統已針對特定設定檔填入的範例`segmentMembership`對應。 區段成員資格會依命名空間排序，如物件的根層級索引鍵所示。 而每個命名空間下的個別索引鍵則代表設定檔所屬區段的ID。 每個區段物件包含數個子欄位，可提供成員資格的進一步詳細資料：
 
 ```json
 {
@@ -73,13 +74,15 @@ ht-degree: 1%
 
 | 屬性 | 說明 |
 | --- | --- |
-| `xdm:version` | 此描述檔符合的區段版本。 |
-| `xdm:lastQualificationTime` | 此描述檔上次符合區段條件的時間戳記。 |
-| `xdm:validUntil` | 區段成員資格不再視為有效的時間戳記。 |
-| `xdm:status` | 指出區段成員資格是否已作為目前請求的一部分而實現。 接受下列值： <ul><li>`existing`:描述檔在要求之前已是區段的一部分，並會持續保留其會籍。</li><li>`realized`:描述檔會在目前請求中輸入區段。</li><li>`exited`:描述檔會退出區段作為目前請求的一部分。</li></ul> |
-| `xdm:payload` | 部分區段成員資格包含描述與會籍直接相關之其他值的裝載。 每個會籍只能提供一個指定類型的裝載。 `xdm:payloadType` 指出裝載的類型(`boolean`、 `number`、 `propensity` `string`或)，而其sibling屬性則提供裝載類型的值。 |
+| `xdm:version` | 此設定檔符合資格的區段版本。 |
+| `xdm:lastQualificationTime` | 此設定檔符合區段資格的上次時間時間戳記。 |
+| `xdm:validUntil` | 不應再假設區段成員資格有效的時間戳記。 |
+| `xdm:status` | 指出區段成員資格是否已在目前請求中實現。 接受下列值： <ul><li>`existing`:在請求前，設定檔已是區段的一部分，並會繼續保留其成員資格。</li><li>`realized`:設定檔會在目前請求中輸入區段。</li><li>`exited`:設定檔會隨著目前請求退出區段。</li></ul> |
+| `xdm:payload` | 某些區段成員資格包含描述與成員資格直接相關的其他值的裝載。 每個成員只能提供指定類型的一個有效負載。 `xdm:payloadType` 指出裝載的類型(`boolean`、  `number`、  `propensity`或 `string`)，而其同層級屬性則提供裝載類型的值。 |
 
-有關欄位組的詳細資訊，請參閱公用XDM儲存庫：
+{style=&quot;table-layout:auto&quot;}
 
-* [填入的範例](https://github.com/adobe/xdm/blob/master/components/mixins/profile/profile-personal-details.example.1.json)
-* [完整架構](https://github.com/adobe/xdm/blob/master/components/mixins/profile/profile-personal-details.schema.json)
+如需欄位群組的詳細資訊，請參閱公用XDM存放庫：
+
+* [填入範例](https://github.com/adobe/xdm/blob/master/components/mixins/profile/profile-personal-details.example.1.json)
+* [完整結構](https://github.com/adobe/xdm/blob/master/components/mixins/profile/profile-personal-details.schema.json)
