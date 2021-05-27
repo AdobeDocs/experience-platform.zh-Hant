@@ -1,31 +1,32 @@
 ---
-keywords: Experience Platform;home；熱門主題；模式；模式；XDM;fields;schemas;Schemas;poi;interaction；興趣點；興趣點；資料類型；資料類型；
+keywords: Experience Platform；首頁；熱門主題；結構；結構； XDM；欄位；結構；結構；poi；互動；地標；地標；資料類型；資料類型；
 solution: Experience Platform
 title: 興趣點互動資料類型
 topic-legacy: overview
-description: 本檔案提供興趣點互動XDM資料類型的概觀。
+description: 本檔案概述興趣點互動XDM資料類型。
 exl-id: 398f56d9-1802-458d-b565-4096beb5b014
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
 workflow-type: tm+mt
-source-wordcount: '171'
-ht-degree: 2%
+source-wordcount: '186'
+ht-degree: 3%
 
 ---
 
-# [!UICONTROL Point of interest interaction] 資料類型
+# [!UICONTROL 興趣點互] 動資料類型
 
-[!UICONTROL Point of interest interaction] 是標準的XDM資料類型，可說明當行動裝置在範圍內時，可將身分資訊傳送至行動應用程式的無線裝置。
+[!UICONTROL 興趣點交] 互是標準的XDM資料類型，描述當行動裝置在範圍內時，將身分資訊傳送給行動應用程式的無線裝置。
 
 <img src="../images/data-types/poi-interaction.png" width="400" /><br />
 
 | 屬性 | 資料類型 | 說明 |
 | --- | --- | --- |
-| `poiDetail` | [[!UICONTROL Point of interest details]](./poi-details.md) | 說明導致事件的POI的詳細資訊。 |
-| `poiEntries` | 物件 | 說明人員輸入POI的次數。 包含兩個屬性： <ul><li>`id`:度量的唯一標識符。</li><li>`value`:度量的可量化值。</li></ul> |
+| `poiDetail` | [[!UICONTROL 興趣點詳細資訊]](./poi-details.md) | 說明造成事件的POI詳細資訊。 |
+| `poiEntries` | 物件 | 說明使用者輸入POI的次數。 包含兩個屬性： <ul><li>`id`:度量的唯一標識符。</li><li>`value`:度量的可量化值。</li></ul> |
 | `poiExits` | 物件 | 說明人員退出POI的次數。 包含兩個屬性： <ul><li>`id`:度量的唯一標識符。</li><li>`value`:度量的可量化值。</li></ul> |
 
-有關資料類型的詳細資訊，請參閱公共XDM儲存庫：
+{style=&quot;table-layout:auto&quot;}
 
-* [填入的範例](https://github.com/adobe/xdm/blob/master/components/datatypes/poi-interaction.example.1.json)
-* [完整架構](https://github.com/adobe/xdm/blob/master/components/datatypes/poi-interaction.schema.json)
+如需資料類型的詳細資訊，請參閱公用XDM存放庫：
+
+* [填入範例](https://github.com/adobe/xdm/blob/master/components/datatypes/poi-interaction.example.1.json)
+* [完整結構](https://github.com/adobe/xdm/blob/master/components/datatypes/poi-interaction.schema.json)
