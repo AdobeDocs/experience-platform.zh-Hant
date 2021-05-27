@@ -1,37 +1,36 @@
 ---
-keywords: Experience Platform;home；熱門主題；API;XDM;XDM;XDM系統；體驗資料模型；體驗資料模型；資料模型；資料模型；模式註冊；模式註冊表；ad-hoc;adhoc;Ad-hoc;Adhoc;Adhoc；教程；建立；模式；模式
+keywords: Experience Platform；首頁；熱門主題；API; XDM; XDM系統；體驗資料模型；體驗資料模型；資料模型；結構登錄；結構註冊表；臨機；臨機；臨機；臨機；教學課程；教學課程；建立；結構；結構
 solution: Experience Platform
 title: 建立臨機結構
-description: 在特定情況下，可能需要建立Experience Data Model(XDM)架構，其中欄位的名稱僅限單一資料集使用。 這稱為「臨機」架構。 臨機結構描述用於各種資料擷取工作流程中，以進行Experience Platform，包括擷取CSV檔案並建立特定類型的來源連線。
+description: 在特定情況下，您可能需要建立Experience Data Model(XDM)結構，其中欄位的命名空間僅限單一資料集使用。 這稱為「臨機」結構。 臨機結構用於各種資料擷取工作流程中，以供Experience Platform使用，包括擷取CSV檔案和建立特定類型的來源連線。
 topic-legacy: tutorial
 type: Tutorial
 exl-id: bef01000-909a-4594-8cf4-b9dbe0b358d5
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
 workflow-type: tm+mt
-source-wordcount: '823'
-ht-degree: 2%
+source-wordcount: '832'
+ht-degree: 3%
 
 ---
 
-# 建立臨機結構
+# 建立隨選結構
 
-在特定情況下，可能需要建立[!DNL Experience Data Model](XDM)架構，其中欄位的名稱僅限單一資料集使用。 這稱為「臨機」架構。 臨機結構描述用於[!DNL Experience Platform]的各種資料擷取工作流程，包括擷取CSV檔案並建立特定類型的來源連線。
+在特定情況下，您可能需要建立[!DNL Experience Data Model](XDM)架構，其中的欄位命名空間僅限單一資料集使用。 這稱為「臨機」結構。 [!DNL Experience Platform]的各種資料擷取工作流程中會使用臨機結構，包括擷取CSV檔案和建立特定類型的來源連線。
 
-本文檔提供了使用[方案註冊表API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml)建立臨機方案的一般步驟。 它可與其他需要在其工作流程中建立臨機架構的[!DNL Experience Platform]教學課程搭配使用。 這些文檔中的每個文檔都提供了有關如何為特定使用案例正確配置臨時架構的詳細資訊。
+本檔案提供使用[Schema Registry API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml)建立臨機架構的一般步驟。 它旨在與其他需要建立隨選架構作為其工作流程一部分的[!DNL Experience Platform]教學課程搭配使用。 這些檔案都提供如何為其特定使用案例正確配置臨時架構的詳細資訊。
 
 ## 快速入門
 
-本教學課程需要對[!DNL Experience Data Model](XDM)系統有正確的理解。 開始本教學課程之前，請先閱讀下列XDM檔案：
+本教學課程需要妥善了解[!DNL Experience Data Model](XDM)系統。 開始本教學課程之前，請先檢閱下列XDM檔案：
 
-- [XDM系統概述](../home.md):XDM及其實施的高階概觀 [!DNL Experience Platform]。
-- [架構構成基礎](../schema/composition.md):概述XDM架構的基本元件。
+- [XDM系統概觀](../home.md):概略概述XDM及其實作於中 [!DNL Experience Platform]。
+- [結構構成基本概念](../schema/composition.md):概述XDM結構的基本元件。
 
-在開始本教學課程之前，請先閱讀[開發人員指南](../api/getting-started.md)，以取得成功呼叫[!DNL Schema Registry] API所需的重要資訊。 這包括您的`{TENANT_ID}`、&quot;containers&quot;的概念，以及提出要求時所需的標題（請特別注意「接受」標題及其可能的值）。
+開始本教學課程之前，請檢閱[開發人員指南](../api/getting-started.md)，以取得您需要了解的重要資訊，以便成功呼叫[!DNL Schema Registry] API。 這包括您的`{TENANT_ID}`、「容器」的概念，以及提出要求所需的標題（請特別注意「接受」標題及其可能的值）。
 
 ## 建立臨機類別
 
-XDM模式的資料行為由其基礎類確定。 建立臨機模式的第一步是基於`adhoc`行為建立類。 這是通過向`/tenant/classes`端點發出POST請求來完成的。
+XDM架構的資料行為由其基礎類別決定。 建立臨機架構的第一步是根據`adhoc`行為建立類。 這是透過向`/tenant/classes`端點提出POST要求來完成。
 
 **API格式**
 
@@ -41,11 +40,11 @@ POST /tenant/classes
 
 **要求**
 
-下列請求會建立新的XDM類別，由裝載中提供的屬性設定。 通過在`allOf`陣列中提供設定為`https://ns.adobe.com/xdm/data/adhoc`的`$ref`屬性，該類繼承了`adhoc`行為。 請求還定義`_adhoc`對象，該對象包含類的自定義欄位。
+下列請求會建立新的XDM類別，由裝載中提供的屬性設定。 通過在`allOf`陣列中提供設定為`https://ns.adobe.com/xdm/data/adhoc`的`$ref`屬性，該類繼承`adhoc`行為。 請求還定義了`_adhoc`對象，該對象包含類的自定義欄位。
 
 >[!NOTE]
 >
->在`_adhoc`下定義的自訂欄位會依臨機架構的使用案例而有所不同。 請參考適當教學課程中的特定工作流程，以根據使用案例，針對必要的自訂欄位。
+>`_adhoc`下定義的自訂欄位會依臨機架構的使用案例而有所不同。 請根據使用案例，針對必要的自訂欄位，參閱適當教學課程中的特定工作流程。
 
 ```shell
 curl -X POST \
@@ -85,11 +84,13 @@ curl -X POST \
 | 屬性 | 說明 |
 | --- | --- |
 | `$ref` | 新類的資料行為。 對於臨機類，此值必須設定為`https://ns.adobe.com/xdm/data/adhoc`。 |
-| `properties._adhoc` | 包含類自定義欄位的對象，表示為欄位名和資料類型的鍵值對。 |
+| `properties._adhoc` | 包含類別自訂欄位的物件，以欄位名稱和資料類型的索引鍵值組表示。 |
+
+{style=&quot;table-layout:auto&quot;}
 
 **回應**
 
-成功的響應返回新類的詳細資訊，用系統生成的唯讀類唯一標識符GUID替換`properties._adhoc`對象的名稱。 `meta:datasetNamespace`屬性也會自動產生並包含在回應中。
+成功的響應返回新類的詳細資訊，將`properties._adhoc`對象的名稱替換為系統生成的只讀類唯一標識符GUID。 也會自動產生`meta:datasetNamespace`屬性並包含在回應中。
 
 ```json
 {
@@ -146,11 +147,13 @@ curl -X POST \
 
 | 屬性 | 說明 |
 | --- | --- |
-| `$id` | 作為唯讀系統生成新臨機類唯一標識符的URI。 此值用於建立臨機結構的下一個步驟。 |
+| `$id` | 作為只讀、系統生成的新Ad-Hoc類唯一標識符的URI。 此值將用於建立臨機架構的下一個步驟。 |
 
-## 建立臨機結構
+{style=&quot;table-layout:auto&quot;}
 
-建立臨機類後，可以通過向`/tenant/schemas`端點發出POST請求來建立實現該類的新模式。
+## 建立隨選結構
+
+建立臨機類後，可通過向`/tenant/schemas`端點發出POST請求來建立實施該類的新架構。
 
 **API格式**
 
@@ -160,7 +163,7 @@ POST /tenant/schemas
 
 **要求**
 
-下列請求會建立新模式，為先前建立的臨機類別在其裝載中的`$id`提供參考(`$ref`)。
+下列請求會建立新結構，為先前建立之臨機類別的裝載中的`$id`提供參考(`$ref`)。
 
 ```shell
 curl -X POST \
@@ -184,7 +187,7 @@ curl -X POST \
 
 **回應**
 
-成功的響應返回新建立的架構的詳細資訊，包括其系統生成的只讀`$id`。
+成功的響應返回新建架構的詳細資訊，包括其系統生成的只讀`$id`。
 
 ```json
 {
@@ -221,13 +224,13 @@ curl -X POST \
 }
 ```
 
-## 檢視完整的臨機架構
+## 檢視完整的臨機結構
 
 >[!NOTE]
 >
->此步驟為選填。如果您不想檢查臨機架構的欄位結構，可以跳至本教學課程結束時的[後續步驟](#next-steps)區段。
+>此步驟為選填。如果您不想檢查臨機架構的欄位結構，可跳到本教學課程結尾的[下一步](#next-steps)區段。
 
-在建立臨機架構後，您可以進行查詢(GET)要求，以其展開的形式檢視架構。 在GET請求中使用適當的「接受」標題即可完成，如下所示。
+建立隨選結構後，您可以進行查詢(GET)請求，以展開形式檢視結構。 請在GET要求中使用適當的Accept標題來完成，如下所示。
 
 **API格式**
 
@@ -237,11 +240,13 @@ GET /tenant/schemas/{SCHEMA_ID}
 
 | 參數 | 說明 |
 | --- | --- |
-| `{SCHEMA_ID}` | 要訪問的臨機架構的URL編碼`$id` URI或`meta:altId`。 |
+| `{SCHEMA_ID}` | 要訪問的臨機架構的URL編碼的`$id` URI或`meta:altId`。 |
+
+{style=&quot;table-layout:auto&quot;}
 
 **要求**
 
-以下請求使用Accept標題`application/vnd.adobe.xed-full+json; version=1`，該標題會傳回架構的擴充格式。 請注意，從[!DNL Schema Registry]檢索特定資源時，請求的「接受」標題必須包含相關資源的主要版本。
+以下請求使用Accept標頭`application/vnd.adobe.xed-full+json; version=1`，其返回架構的擴展形式。 請注意，從[!DNL Schema Registry]擷取特定資源時，請求的Accept標題必須包含相關資源的主要版本。
 
 ```shell
 curl -X GET \
@@ -255,7 +260,7 @@ curl -X GET \
 
 **回應**
 
-成功的響應返回方案的詳細資訊，包括`properties`下嵌套的所有欄位。
+成功的響應返回架構的詳細資訊，包括`properties`下嵌套的所有欄位。
 
 ```json
 {
@@ -305,6 +310,6 @@ curl -X GET \
 
 ## 下一步 {#next-steps}
 
-遵循本教學課程，您已成功建立新的臨機結構。 如果您是作為另一個教學課程的一部分來到本檔案，您現在可以使用臨機架構的`$id`，依照指示完成工作流程。
+依照本教學課程，您已成功建立新的臨機結構。 如果您是作為其他教學課程的一部分帶到本檔案，您現在可以使用臨機架構的`$id`依照指示完成工作流程。
 
 有關使用[!DNL Schema Registry] API的詳細資訊，請參閱[開發人員指南](../api/getting-started.md)。
