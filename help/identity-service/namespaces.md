@@ -5,9 +5,9 @@ title: 身分命名空間概述
 topic-legacy: overview
 description: 身分識別命名空間是 Identity Service 的元件，用途是作為身分識別相關內容的指標。例如，他們會將「name@email.com」值區分為電子郵件地址，或將「443522」區分為數值CRM ID。
 exl-id: 86cfc7ae-943d-4474-90c8-e368afa48b7c
-source-git-commit: c2db929a96883607ea99f08bffc92a5a9bafd01a
+source-git-commit: 700012988fd46e835dcbc441c39f08e4c172ef0f
 workflow-type: tm+mt
-source-wordcount: '1635'
+source-wordcount: '1638'
 ht-degree: 2%
 
 ---
@@ -72,6 +72,8 @@ Experience Platform提供數個可供所有組織使用的身分識別命名空�
 | 電話(SHA256_E.164) | 表示需要同時使用SHA256和E.164格式雜湊的原始電話號碼的命名空間。 |
 | TNTID | 代表Adobe Target的命名空間。 如需詳細資訊，請參閱以下關於[Target](https://experienceleague.adobe.com/docs/target/using/target-home.html?lang=en)的檔案。 |
 | Windows AID | 代表Windows廣告ID的命名空間。 如需詳細資訊，請參閱[Windows廣告ID](https://docs.microsoft.com/en-us/uwp/api/windows.system.userprofile.advertisingmanager.advertisingid?view=winrt-19041)上的下列檔案。 |
+
+### 檢視身分識別命名空間
 
 若要在UI中檢視身分識別命名空間，請在左側導覽中選取&#x200B;**[!UICONTROL 身分識別]**，然後選取&#x200B;**[!UICONTROL 瀏覽]**。
 
