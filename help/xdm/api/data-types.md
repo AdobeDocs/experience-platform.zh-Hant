@@ -1,32 +1,31 @@
 ---
-keywords: Experience Platform;home；熱門主題；api;API;XDM;XDM系統；體驗資料模型；體驗資料模型；資料模型；資料類型註冊表；模式註冊表；資料類型；資料類型；資料類型；資料類型；建立
+keywords: Experience Platform；首頁；熱門主題；API; XDM; XDM系統；體驗資料模型；體驗資料模型；資料模型；資料類型註冊表；結構註冊表；資料類型；資料類型；資料類型；資料類型；資料類型；建立
 solution: Experience Platform
 title: 資料類型API端點
-description: 架構註冊表API中的/datatypes端點可讓您以程式設計方式管理體驗應用程式中的XDM資料類型。
+description: Schema Registry API中的/datatypes端點可讓您以程式設計方式管理體驗應用程式中的XDM資料類型。
 exl-id: 2a58d641-c681-40cf-acc8-7ad842cd6243
-translation-type: tm+mt
-source-git-commit: 7d7502b238f96eda1a15b622ba10bbccc289b725
+source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
 workflow-type: tm+mt
-source-wordcount: '1151'
-ht-degree: 2%
+source-wordcount: '1172'
+ht-degree: 4%
 
 ---
 
 # 資料類型端點
 
-資料類型與基本常值欄位使用的方式相同，在類或方案欄位組中用作參考類型欄位，其關鍵區別在於資料類型可以定義多個子欄位。 雖然與允許一致使用多欄位結構的欄位群組類似，但資料類型更有彈性，因為它們可以包含在架構結構中的任何位置，而欄位群組只能新增在根層級。 [!DNL Schema Registry] API中的`/datatypes`端點可讓您以程式設計方式管理體驗應用程式中的資料類型。
+在類或方案欄位組中，資料類型與基本常值欄位的使用方式相同，其關鍵區別在於資料類型可以定義多個子欄位。 雖然與中的欄位組類似，它們允許一致地使用多欄位結構，但資料類型更靈活，因為它們可以包含在架構結構中的任何位置，而欄位組只能在根級別添加。 [!DNL Schema Registry] API中的`/datatypes`端點可讓您以程式設計方式管理體驗應用程式中的資料類型。
 
 ## 快速入門
 
-本指南中使用的端點是[[!DNL Schema Registry] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml)的一部分。 在繼續之前，請先閱讀[快速入門手冊](./getting-started.md)，以取得相關檔案的連結、閱讀本檔案中範例API呼叫的指南，以及成功呼叫任何Experience PlatformAPI所需之必要標題的重要資訊。
+本指南中使用的端點是[[!DNL Schema Registry] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml)的一部分。 繼續之前，請檢閱[快速入門手冊](./getting-started.md)，取得相關檔案的連結、閱讀本檔案中範例API呼叫的指南，以及成功呼叫任何Experience PlatformAPI所需的必要標頭的重要資訊。
 
-## 檢索{#list}資料類型清單
+## 擷取資料類型清單 {#list}
 
 您可以分別向`/global/datatypes`或`/tenant/datatypes`發出GET請求，以列出`global`或`tenant`容器下的所有資料類型。
 
 >[!NOTE]
 >
->列出資源時，方案註冊表將結果集限制為300個項。 若要傳回超過此限制的資源，您必須使用分頁參數。 還建議您使用其他查詢參數來篩選結果並減少傳回的資源數。 如需詳細資訊，請參閱附錄檔案中有關[查詢參數](./appendix.md#query)的章節。
+>列出資源時，方案註冊表將結果集限制為300個項。 若要傳回超過此限制的資源，您必須使用分頁參數。 建議您使用其他查詢參數來篩選結果並減少傳回的資源數。 如需詳細資訊，請參閱附錄檔案中[查詢參數](./appendix.md#query)一節。
 
 **API格式**
 
@@ -36,12 +35,14 @@ GET /{CONTAINER_ID}/datatypes?{QUERY_PARAMS}
 
 | 參數 | 說明 |
 | --- | --- |
-| `{CONTAINER_ID}` | 您要從以下位置擷取資料類型的容器：`global`代表Adobe建立的資料類型，或`tenant`代表您組織擁有的資料類型。 |
-| `{QUERY_PARAMS}` | 可選查詢參數，以篩選結果。 有關可用參數的清單，請參見[附錄文檔](./appendix.md#query)。 |
+| `{CONTAINER_ID}` | 您要從中擷取資料類型的容器：`global`適用於Adobe建立的資料類型，或`tenant`適用於您組織擁有的資料類型。 |
+| `{QUERY_PARAMS}` | 可選的查詢參數，以依據篩選結果。 有關可用參數的清單，請參見[附錄文檔](./appendix.md#query)。 |
+
+{style=&quot;table-layout:auto&quot;}
 
 **要求**
 
-下列請求會從`tenant`容器中擷取資料類型清單，使用`orderby`查詢參數，依其`title`屬性來排序資料類型。
+下列請求會使用`orderby`查詢參數，從`tenant`容器中擷取資料類型清單，以依據其`title`屬性來排序資料類型。
 
 ```shell
 curl -X GET \
@@ -53,16 +54,18 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-回應格式取決於請求中傳送的`Accept`標題。 以下`Accept`標題可用於列出資料類型：
+回應格式取決於要求中傳送的`Accept`標題。 下列`Accept`標題可用於列出資料類型：
 
 | `Accept` 標題 | 說明 |
 | --- | --- |
-| `application/vnd.adobe.xed-id+json` | 返回每個資源的簡短摘要。 這是列出資源的建議標題。 (限制：300) |
+| `application/vnd.adobe.xed-id+json` | 傳回每個資源的簡短摘要。 這是列出資源的建議標題。 (限制：300) |
 | `application/vnd.adobe.xed+json` | 傳回每個資源的完整JSON資料類型，並包含原始的`$ref`和`allOf`。 (限制：300) |
+
+{style=&quot;table-layout:auto&quot;}
 
 **回應**
 
-上述請求使用`application/vnd.adobe.xed-id+json` `Accept`標題，因此回應僅包含每個資料類型的`title`、`$id`、`meta:altId`和`version`屬性。 使用其他`Accept`標題(`application/vnd.adobe.xed+json`)會傳回每個資料類型的所有屬性。 根據您在回應中需要的資訊，選擇適當的`Accept`標題。
+上述請求使用`application/vnd.adobe.xed-id+json` `Accept`標題，因此回應僅包含每個資料類型的`title`、`$id`、`meta:altId`和`version`屬性。 使用其他`Accept`標題(`application/vnd.adobe.xed+json`)會傳回每個資料類型的所有屬性。 根據您在回應中需要的資訊，選取適當的`Accept`標題。
 
 ```json
 {
@@ -94,9 +97,9 @@ curl -X GET \
 }
 ```
 
-## 查找資料類型{#lookup}
+## 查詢資料類型 {#lookup}
 
-您可以在請求的路徑中加入資料類型的ID，以尋找特定的資料類型。
+您可以在請求的路徑中加入資料類型的ID，以查詢特定資料類型。
 
 **API格式**
 
@@ -106,12 +109,14 @@ GET /{CONTAINER_ID}/datatypes/{DATA_TYPE_ID}
 
 | 參數 | 說明 |
 | --- | --- |
-| `{CONTAINER_ID}` | 儲存您要擷取之資料類型的容器：`global`代表Adobe建立的資料類型，或`tenant`代表您組織擁有的資料類型。 |
-| `{DATA_TYPE_ID}` | 您要查詢的資料類型的`meta:altId`或URL編碼`$id`。 |
+| `{CONTAINER_ID}` | 儲存您要擷取之資料類型的容器：`global`適用於Adobe建立的資料類型，或`tenant`適用於貴組織擁有的資料類型。 |
+| `{DATA_TYPE_ID}` | 要查詢的資料類型的`meta:altId`或URL編碼的`$id`。 |
+
+{style=&quot;table-layout:auto&quot;}
 
 **要求**
 
-以下請求通過路徑中提供的`meta:altId`值檢索資料類型。
+下列請求會依路徑中提供的`meta:altId`值擷取資料類型。
 
 ```shell
 curl -X GET \
@@ -123,19 +128,21 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-回應格式取決於請求中傳送的`Accept`標題。 所有查閱請求都要求`version`包含在`Accept`標題中。 以下`Accept`標題可用：
+回應格式取決於要求中傳送的`Accept`標題。 所有查詢請求都需要在`Accept`標題中包含`version`。 可使用下列`Accept`標題：
 
 | `Accept` 標題 | 說明 |
 | ------- | ------------ |
-| `application/vnd.adobe.xed+json; version=1` | Raw含`$ref`和`allOf`，有標題和說明。 |
-| `application/vnd.adobe.xed-full+json; version=1` | `$ref` 而且 `allOf` 有標題和說明。 |
-| `application/vnd.adobe.xed-notext+json; version=1` | Raw含`$ref`和`allOf`，無標題或說明。 |
-| `application/vnd.adobe.xed-full-notext+json; version=1` | `$ref` 並解 `allOf` 決，沒有標題或說明。 |
-| `application/vnd.adobe.xed-full-desc+json; version=1` | `$ref` 並解 `allOf` 決了包含的描述符。 |
+| `application/vnd.adobe.xed+json; version=1` | 具有`$ref`和`allOf`的原始檔案具有標題和說明。 |
+| `application/vnd.adobe.xed-full+json; version=1` | `$ref` 和 `allOf` 已解析，有標題和說明。 |
+| `application/vnd.adobe.xed-notext+json; version=1` | 原始格式包含`$ref`和`allOf`，沒有標題或說明。 |
+| `application/vnd.adobe.xed-full-notext+json; version=1` | `$ref` 和 `allOf` 解析，沒有標題或說明。 |
+| `application/vnd.adobe.xed-full-desc+json; version=1` | `$ref` 和已 `allOf` 解析的描述符。 |
+
+{style=&quot;table-layout:auto&quot;}
 
 **回應**
 
-成功的回應會傳回資料類型的詳細資料。 傳回的欄位取決於請求中傳送的`Accept`標題。 嘗試不同的`Accept`標題，以比較回應並判斷哪個標題最適合您的使用案例。
+成功的回應會傳回資料類型的詳細資訊。 傳回的欄位取決於請求中傳送的`Accept`標題。 請試驗不同的`Accept`標題，比較回應並判斷哪個標題最適合您的使用案例。
 
 ```json
 {
@@ -214,9 +221,9 @@ curl -X GET \
 }
 ```
 
-## 建立資料類型{#create}
+## 建立資料類型 {#create}
 
-您可以透過提出POST請求，在`tenant`容器下定義自訂資料類型。
+您可以提出POST要求，在`tenant`容器下定義自訂資料類型。
 
 **API格式**
 
@@ -226,7 +233,7 @@ POST /tenant/datatypes
 
 **要求**
 
-定義資料類型不需要`meta:extends`或`meta:intendedToExtend`欄位，也不需要巢狀化欄位以避免衝突。
+定義資料類型不需要`meta:extends`或`meta:intendedToExtend`欄位，也不需要巢狀欄位以避免衝突。
 
 ```SHELL
 curl -X POST \
@@ -267,7 +274,7 @@ curl -X POST \
 
 **回應**
 
-成功的回應會傳回HTTP狀態201（已建立）和包含新建立之資料類型詳細資料的裝載，包括`$id`、`meta:altId`和`version`。 這三個值是只讀的，由[!DNL Schema Registry]指定。
+成功的回應會傳回HTTP狀態201（已建立），以及包含新建立資料類型詳細資訊的裝載，包括`$id`、`meta:altId`和`version`。 這三個值為唯讀值，由[!DNL Schema Registry]指派。
 
 ```JSON
 {
@@ -324,15 +331,15 @@ curl -X POST \
 }
 ```
 
-執行[列出租用戶容器中所有資料類型](#list)的GET請求，現在會包含「屬性詳細資料」資料類型，或者，您可以[使用URL編碼的`$id` URI，執行查閱(GET)請求](#lookup)，以直接檢視新的資料類型。
+在租用戶容器中執行GET請求以列出[所有資料類型](#list)現在將包含「屬性詳細資料」資料類型，或者，您可以[使用URL編碼的`$id` URI執行查詢(GET)請求](#lookup)以直接查看新資料類型。
 
-## 更新資料類型{#put}
+## 更新資料類型 {#put}
 
-您可以通過PUT操作替換整個資料類型，實際上重寫資源。 當通過PUT請求更新資料類型時，主體必須包括[在POST請求中建立新資料類型](#create)時所需的所有欄位。
+您可以透過PUT操作取代整個資料類型，實際上是重新寫入資源。 透過PUT請求更新資料類型時，內文必須包含在POST請求中建立新資料類型[時所需的所有欄位。](#create)
 
 >[!NOTE]
 >
->如果您只想更新部分資料類型，而不是完全替換它，請參閱[中有關更新部分資料類型](#patch)的部分。
+>如果您只想更新部分資料類型而非完全替換，請參閱[上更新部分資料類型](#patch)的部分。
 
 **API格式**
 
@@ -342,11 +349,13 @@ PUT /tenant/datatypes/{DATA_TYPE_ID}
 
 | 參數 | 說明 |
 | --- | --- |
-| `{DATA_TYPE_ID}` | 要重寫的資料類型的`meta:altId`或URL編碼`$id`。 |
+| `{DATA_TYPE_ID}` | 要重寫的資料類型的`meta:altId`或URL編碼的`$id`。 |
+
+{style=&quot;table-layout:auto&quot;}
 
 **要求**
 
-下列請求會重寫現有的資料類型，並新增一個`floorSize`欄位。
+下列請求會重新寫入現有的資料類型，並新增`floorSize`欄位。
 
 ```SHELL
 curl -X PUT \
@@ -392,7 +401,7 @@ curl -X PUT \
 
 **回應**
 
-成功的回應會傳回更新資料類型的詳細資料。
+成功的回應會傳回更新資料類型的詳細資訊。
 
 ```JSON
 {
@@ -455,13 +464,13 @@ curl -X PUT \
 }
 ```
 
-## 更新{#patch}資料類型的一部分
+## 更新資料類型的一部分 {#patch}
 
-您可以使用PATCH請求來更新部分資料類型。 [!DNL Schema Registry]支援所有標準JSON修補程式作業，包括`add`、`remove`和`replace`。 如需JSON修補程式的詳細資訊，請參閱[API基礎指南](../../landing/api-fundamentals.md#json-patch)。
+您可以使用PATCH請求來更新部分資料類型。 [!DNL Schema Registry]支援所有標準JSON修補程式操作，包括`add`、`remove`和`replace`。 如需JSON修補程式的詳細資訊，請參閱[API基礎指南](../../landing/api-fundamentals.md#json-patch)。
 
 >[!NOTE]
 >
->如果要用新值替換整個資源，而不是更新單個欄位，請參閱[中有關使用PUT操作替換資料類型的部分](#put)。
+>如果您想用新值取代整個資源，而不是更新個別欄位，請參閱[上的區段，使用PUT操作](#put)取代資料類型。
 
 **API格式**
 
@@ -471,13 +480,15 @@ PATCH /tenant/data type/{DATA_TYPE_ID}
 
 | 參數 | 說明 |
 | --- | --- |
-| `{DATA_TYPE_ID}` | 要更新的資料類型的URL編碼`$id` URI或`meta:altId`。 |
+| `{DATA_TYPE_ID}` | 要更新的資料類型的URL編碼的`$id` URI或`meta:altId`。 |
+
+{style=&quot;table-layout:auto&quot;}
 
 **要求**
 
-下面的範例請求會更新現有資料類型的`description`，並新增一個`floorSize`欄位。
+以下範例要求會更新現有資料類型的`description`，並新增一個`floorSize`欄位。
 
-請求主體採用陣列的形式，每個列出的對象代表對單個欄位的特定更改。 每個對象包括要執行的操作(`op`)，該操作應在哪個欄位(`path`)上執行，以及該操作應包括哪些資訊(`value`)。
+要求內文採用陣列的形式，每個列出的物件代表個別欄位的特定變更。 每個對象包括要執行的操作(`op`)，該操作應在哪個欄位(`path`)上執行，以及該操作應包括哪些資訊(`value`)。
 
 ```SHELL
 curl -X PATCH \
@@ -507,7 +518,7 @@ curl -X PATCH \
 
 **回應**
 
-響應顯示兩個操作均成功執行。 `description`已更新，`floorSize`已在`definitions`下添加。
+響應顯示兩個操作均已成功執行。 `description`已更新，而`floorSize`已新增至`definitions`下。
 
 ```JSON
 {
@@ -596,9 +607,9 @@ curl -X PATCH \
 }
 ```
 
-## 刪除資料類型{#delete}
+## 刪除資料類型 {#delete}
 
-有時可能需要從架構註冊表中刪除資料類型。 這是透過使用路徑中提供的資料類型ID執行DELETE要求來完成的。
+有時可能需要從架構註冊表中刪除資料類型。 若要這麼做，請使用路徑中提供的資料類型ID執行DELETE要求。
 
 **API格式**
 
@@ -608,7 +619,9 @@ DELETE /tenant/datatypes/{DATA_TYPE_ID}
 
 | 參數 | 說明 |
 | --- | --- |
-| `{DATA_TYPE_ID}` | 要刪除的資料類型的URL編碼`$id` URI或`meta:altId`。 |
+| `{DATA_TYPE_ID}` | 要刪除的資料類型的URL編碼的`$id` URI或`meta:altId`。 |
+
+{style=&quot;table-layout:auto&quot;}
 
 **要求**
 
@@ -623,6 +636,6 @@ curl -X DELETE \
 
 **回應**
 
-成功的回應會傳回HTTP狀態204（無內容）和空白的內文。
+成功的回應會傳回HTTP狀態204（無內容）和空白內文。
 
-您可以嘗試對資料類型使用[查閱(GET)請求](#lookup)來確認刪除。 您需要在請求中包含`Accept`標題，但應接收HTTP狀態404（找不到），因為資料類型已從架構註冊表中移除。
+您可以嘗試將[查詢(GET)請求](#lookup)嘗試刪除資料類型，以確認刪除。 您需要在請求中加入`Accept`標題，但應該會收到HTTP狀態404（找不到），因為資料類型已從架構註冊表中移除。
