@@ -1,41 +1,42 @@
 ---
-keywords: Experience Platform;home；熱門主題；架構；架構；XDM；個人配置檔案；欄位；架構；架構設計；欄位組；欄位組；人員；人員詳細資訊；人員；
+keywords: Experience Platform；首頁；熱門主題；結構；結構； XDM；個別設定檔；欄位；結構；結構；結構設計；欄位群組；欄位群組；人員；人員詳細資訊；人員；
 solution: Experience Platform
-title: 人口統計詳細資料結構欄位群組
+title: 人口統計詳細資訊結構欄位組
 topic-legacy: overview
-description: 本檔案提供「人口統計詳細資料」結構欄位群組的概述。
+description: 本檔案提供「人口統計詳細資料」結構欄位群組的概觀。
 exl-id: 588c044c-b80d-4cb9-9f97-92f040d54bb4
-translation-type: tm+mt
-source-git-commit: f5beb57acf4cc1827bf08b549cd2b3a02fd82b18
+source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
 workflow-type: tm+mt
-source-wordcount: '275'
-ht-degree: 3%
+source-wordcount: '282'
+ht-degree: 4%
 
 ---
 
 
-# [!UICONTROL Demographic Details] 方案欄位組
+# [!UICONTROL 人口統] 計詳細資訊方案欄位組
 
 >[!NOTE]
 >
->多個架構欄位組的名稱已更改。 如需詳細資訊，請參閱[欄位群組名稱updates](../name-updates.md)上的檔案。
+>數個架構欄位組的名稱已變更。 有關詳細資訊，請參閱[欄位組名稱更新](../name-updates.md)上的文檔。
 
-[!UICONTROL Demographic Details] 是類的標準方案欄位 [[!DNL XDM Individual Profile] 組](../../classes/individual-profile.md)。欄位群組提供根層級`person`物件，其子欄位會說明個別人員的資訊。
+[!UICONTROL 人口] 統計詳細資料是類別的標準結構 [[!DNL XDM Individual Profile] 欄位群組](../../classes/individual-profile.md)。欄位組提供根級`person`對象，其子欄位描述有關個人的資訊。
 
 ![](../../images/field-groups/demographic-details.png)
 
 | 屬性 | 資料類型 | 說明 |
 | --- | --- | --- |
-| `person.name` | [人員姓名](../../data-types/person-name.md) | 子欄位描述人員姓名的各種元素的對象。 |
-| `person.birthDate` | Date | 以ISO 8601時間戳記形式出生的完整日期。 |
-| `person.birthDayAndMonth` | 字串 | 一個人出生的日月，格式為MM-DD。 當人的出生日期和月份已知時，應使用此欄位，但不應使用年份。 |
-| `person.birthYear` | 整數 | 一個人出生的年份，包括1989年的世紀。 當只知道該人的年齡，而不是完整出生日期時，應使用此欄位。 |
-| `person.gender` | 字串 | 人的性別身份。 |
-| `person.martialStatus` | 字串 | 說明人與重要人的關係。 |
-| `person.nationality` | 字串 | 使用ISO 3166-1 Alpha-2程式碼所代表之個人與其國家之法律關係。 |
-| `person.taxId` | 字串 | 人員的稅／會計ID，例如美國的TIN或西班牙的CIF/NIF。 |
+| `person.name` | [人員名稱](../../data-types/person-name.md) | 其子欄位描述人員名稱的各種元素的物件。 |
+| `person.birthDate` | Date | 以ISO 8601時間戳記的形式出生的完整日期。 |
+| `person.birthDayAndMonth` | 字串 | 一個人出生的日月，格式為MM-DD。 此欄位應在已知某人出生的日期和月份時使用，但不會在年份使用。 |
+| `person.birthYear` | 整數 | 一個人出生的年份，包括世紀（如1989年）。 只有在知道該人的年齡，而不是完整出生日期時，才應使用此欄位。 |
+| `person.gender` | 字串 | 人的性別認同。 |
+| `person.martialStatus` | 字串 | 描述一個人與另一個重要人的關係。 |
+| `person.nationality` | 字串 | 使用ISO 3166-1 Alpha-2代碼表示的個人與其國家之間的法律關係。 |
+| `person.taxId` | 字串 | 人員的稅/會計ID，例如美國的TIN或西班牙的CIF/NIF。 |
 
-有關欄位組的詳細資訊，請參閱公用XDM儲存庫：
+{style=&quot;table-layout:auto&quot;}
 
-* [填入的範例](https://github.com/adobe/xdm/blob/master/components/mixins/profile/profile-person-details.example.1.json)
-* [完整架構](https://github.com/adobe/xdm/blob/master/components/mixins/profile/profile-person-details.schema.json)
+如需欄位群組的詳細資訊，請參閱公用XDM存放庫：
+
+* [填入範例](https://github.com/adobe/xdm/blob/master/components/mixins/profile/profile-person-details.example.1.json)
+* [完整結構](https://github.com/adobe/xdm/blob/master/components/mixins/profile/profile-person-details.schema.json)
