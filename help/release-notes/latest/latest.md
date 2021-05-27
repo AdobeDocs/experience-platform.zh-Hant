@@ -5,9 +5,9 @@ doc-type: release notes
 last-update: May 26, 2021
 author: ens72741
 exl-id: 8f2c9bf8-1487-46e4-993b-bd9b63774cab
-source-git-commit: 0cef5f1a0033bed987799c26b99e71145a85c1a9
+source-git-commit: c608ee8360fd07d6f98b31eed3b4691dc7124e12
 workflow-type: tm+mt
-source-wordcount: '1070'
+source-wordcount: '1340'
 ht-degree: 3%
 
 ---
@@ -27,6 +27,7 @@ Adobe Experience Platform 現有功能更新：
 - [[!DNL Destinations]](#destinations)
 - [[!DNL Experience Data Model (XDM)]](#xdm)
 - [即時客戶個人檔案](#profile)
+- [沙盒](#sandboxes)
 - [來源](#sources)
 
 ## 儀表板 {#dashboards}
@@ -85,6 +86,22 @@ Adobe Experience Platform可讓您為客戶提供協調、一致且相關的體�
 | 資料集重疊報表 | 資料集重疊報表會顯示對可定址對象貢獻最大的資料集，讓您可清楚掌握設定檔存放區的組成。 除了提供設定檔資料的深入分析外，此報表還可協助使用者採取動作來最佳化授權使用，例如設定特定資料的有效期限限制。 若要深入了解，請依照[產生資料集重疊報表的教學課程](../../profile/tutorials/dataset-overlap-report.md)操作。 |
 
 如需「即時客戶設定檔」的詳細資訊，包括使用[!DNL Profile]資料的教學課程和最佳實務，請從閱讀[即時客戶設定檔概述](../../profile/home.md)開始。
+
+## [!DNL Sandboxes] {#sandboxes}
+
+Adobe Experience Platform的建置宗旨是在全球範圍豐富數位體驗應用程式。 公司通常並行運行多個數字型驗應用程式，需要滿足這些應用程式的開發、測試和部署，同時確保操作合規性。 為了滿足這項需求，Experience Platform提供沙箱，可將單一Platform執行個體分割成個別的虛擬環境，以協助開發及改進數位體驗應用程式。
+
+| 功能 | 說明 |
+| ------- | ----------- |
+| 多個生產沙箱 | 您現在可以在IMS組織中建立及管理多個生產沙箱，並將特定的生產沙箱專用於不同的業務、品牌、專案或地區。 如需詳細資訊，請參閱有關在UI](../../sandboxes/ui/user-guide.md)或[中使用API](../../sandboxes/api/overview.md)建立生產沙箱[的教學課程。 |
+
+### 已知限制
+
+- 每個Experience Cloud組織都會隨附預先建立的預設生產沙箱。 對於從其他Adobe應用程式或不符合沙箱的非Adobe應用程式傳送至Platform的每個請求，此沙箱都是預設目的地。 如果Adobe Analytics也在[跨裝置分析(CDA)](https://experienceleague.adobe.com/docs/analytics/components/cda/overview.html)功能使用其中托管的身分圖表，或如果Adobe Audience Manager也在[以人物為基礎的目的地(PBD)](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/people-based/people-based-destinations-overview.html)功能使用其中托管的身分圖表，則無法重設預設的生產沙箱。
+- 與Adobe Audience Manager或Audience Core Service雙向區段共用的生產沙箱，無法重設或刪除。
+- 除了預設的生產沙箱外，所有使用者建立的生產和開發沙箱都可刪除。
+
+如需沙箱的詳細資訊，請參閱[沙箱概述](../../sandboxes/home.md)。
 
 ## [!DNL Sources] {#sources}
 
