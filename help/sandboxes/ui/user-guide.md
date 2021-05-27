@@ -5,9 +5,9 @@ title: 沙箱UI指南
 topic-legacy: user guide
 description: 本檔案提供如何在Adobe Experience Platform使用者介面中執行與沙箱相關之各種作業的步驟。
 exl-id: b258c822-5182-4217-9d1b-8196d889740f
-source-git-commit: 8c1c7b6b01b55bd15c492b0f62d280c1e9a98070
+source-git-commit: ba03ec805d29a95ee7d0d1a23a756feaadcea407
 workflow-type: tm+mt
-source-wordcount: '699'
+source-wordcount: '833'
 ht-degree: 0%
 
 ---
@@ -84,6 +84,28 @@ ht-degree: 0%
 
 ![reset-confirm](../images/ui/reset-confirm.png)
 
+幾分鐘後，畫面底部會顯示確認方塊，以確認重設成功。
+
+![success](../images/ui/success.png)
+
+### 錯誤訊息
+
+包含CDA資料的預設生產沙箱無法重設，並傳回下列錯誤。
+
+![cda](../images/ui/cda.png)
+
+包含PBD資料的預設生產沙箱也無法重設，並傳回下列錯誤。
+
+![pbd](../images/ui/pbd.png)
+
+包含CDA和PBD資料的預設生產沙箱也無法重設，並傳回下列錯誤。
+
+![both](../images/ui/both.png)
+
+與Adobe Audience Manager或Audience Core Service雙向區段共用的生產沙箱也無法重設，且會傳回下列錯誤。
+
+![seg](../images/ui/seg.png)
+
 ## 刪除沙箱
 
 >[!IMPORTANT]
@@ -103,6 +125,10 @@ ht-degree: 0%
 在最終確認窗口中，在對話框中輸入沙箱的名稱，然後選擇&#x200B;**[!UICONTROL Continue]**
 
 ![delete-confirm](../images/ui/delete-confirm.png)
+
+無法刪除與Adobe Audience Manager或Audience Core Service雙向區段共用的生產沙箱，並傳回下列錯誤。
+
+![seg](../images/ui/seg.png)
 
 ## 後續步驟
 
