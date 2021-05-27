@@ -1,36 +1,37 @@
 ---
-keywords: Experience Platform;home；熱門主題；模式；模式；XDM;fields;schemas;geo;datatype；資料類型；
+keywords: Experience Platform；首頁；熱門主題；結構；結構；XDM；欄位；結構；地理；資料類型；資料類型；
 solution: Experience Platform
 title: 地理資料類型
 topic-legacy: overview
-description: 本檔案提供Geo XDM資料類型的概觀。
+description: 本檔案概述Geo XDM資料類型。
 exl-id: d0eef943-ef86-4abd-8a51-dc45f2ed782d
-translation-type: tm+mt
-source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
+source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
 workflow-type: tm+mt
-source-wordcount: '193'
-ht-degree: 4%
+source-wordcount: '200'
+ht-degree: 6%
 
 ---
 
-# [!UICONTROL Geo] 資料類型
+#  地理資料類型
 
-[!UICONTROL Geo] 是標準的XDM資料類型，可描述觀察到事件的地理區域。
+ Geo是標準XDM資料類型，可說明觀察到事件的地理區域。
 
 <img src="../images/data-types/geo.png" width="400" /><br />
 
 | 屬性 | 資料類型 | 說明 |
 | --- | --- | --- |
-| `_schema` | [[!UICONTROL Geo Coordinates]](./geo-coordinates.md) | 說明地理座標。 |
-| `_id` | 字串 | 坐標系的唯一系統生成ID。 |
-| `city` | 字串 | 城市名稱。 |
-| `countryCode` | 字串 | 國家／地區的雙字元<a href="https://datahub.io/core/country-list">ISO 3166-1 alpha-2</a>程式碼。 |
-| `dmaID` | 整數 | 尼爾森媒體研究指定了市場區域。 |
-| `msaID` | 整數 | 觀察發生地的美國都市統計區。 |
-| `postalCode` | 字串 | 位置的郵遞區號。 郵遞區號並非所有國家／地區皆可使用。 在某些國家，這只會包含部分郵遞區號。 |
-| `stateProvince` | 字串 | 觀察的州或省部分。 格式遵循[ISO 3166-2（國家／地區和細分）](http://www.unece.org/cefact/locode/subdivisions.html)標準。 |
+| `_schema` | [[!UICONTROL 地理座標]](./geo-coordinates.md) | 說明地理座標。 |
+| `_id` | 字串 | 座標的唯一、系統產生的ID。 |
+| `city` | 字串 | 城市的名字。 |
+| `countryCode` | 字串 | 國家/地區的兩字元<a href="https://datahub.io/core/country-list">ISO 3166-1alpha-2</a>代碼。 |
+| `dmaID` | 整數 | Nielsen媒體研究指定的市場區域。 |
+| `msaID` | 整數 | 觀察發生地的美國大都市統計區。 |
+| `postalCode` | 字串 | 位置的郵遞區號。 郵遞區號不適用於所有國家/地區。 在某些國家/地區，這只會包含部分郵遞區號。 |
+| `stateProvince` | 字串 | 觀察的州或省部分。 格式遵循[ISO 3166-2（國家/地區和細分）](http://www.unece.org/cefact/locode/subdivisions.html)標準。 |
 
-有關資料類型的詳細資訊，請參閱公共XDM儲存庫：
+{style=&quot;table-layout:auto&quot;}
 
-* [填入的範例](https://github.com/adobe/xdm/blob/master/components/datatypes/geo.example.1.json)
-* [完整架構](https://github.com/adobe/xdm/blob/master/components/datatypes/geo.schema.json)
+如需資料類型的詳細資訊，請參閱公用XDM存放庫：
+
+* [填入範例](https://github.com/adobe/xdm/blob/master/components/datatypes/geo.example.1.json)
+* [完整結構](https://github.com/adobe/xdm/blob/master/components/datatypes/geo.schema.json)
