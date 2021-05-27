@@ -1,15 +1,14 @@
 ---
-keywords: Experience Platform;home；熱門主題；Google PubSub;google pubsub
+keywords: Experience Platform；首頁；熱門主題；Google PubSub;Google Pubsub
 solution: Experience Platform
-title: 使用Flow Service API建立Google PubSub來源連線
+title: 使用流程服務API建立Google PubSub Source連線
 topic-legacy: overview
 type: Tutorial
-description: 瞭解如何使用Flow Service API將Adobe Experience Platform連接至Google PubSub帳戶。
+description: 了解如何使用流量服務API將Adobe Experience Platform連線至Google PubSub帳戶。
 exl-id: f5b8f9bf-8a6f-4222-8eb2-928503edb24f
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: f13afbd70db18e5faa1a101300f3dc7ec944baa3
 workflow-type: tm+mt
-source-wordcount: '611'
+source-wordcount: '744'
 ht-degree: 1%
 
 ---
@@ -18,57 +17,44 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->[!DNL Google PubSub]介面處於測試狀態。 有關使用beta標籤連接器的詳細資訊，請參閱[ Sources綜覽](../../../../home.md#terms-and-conditions)。
+>[!DNL Google PubSub]連接器為測試版。 有關使用測試版標籤連接器的詳細資訊，請參閱[來源概述](../../../../home.md#terms-and-conditions)。
 
-本教學課程使用[[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml)來引導您完成將[!DNL Google PubSub]（以下稱為&quot;[!DNL PubSub]&quot;）連接至Adobe Experience Platform的步驟。
+本教學課程會逐步帶您了解使用[[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml)將[!DNL Google PubSub]（以下稱為「[!DNL PubSub]」）連線至Experience Platform的步驟。
 
 ## 快速入門
 
-本指南需要對Adobe Experience Platform的下列組成部分有切實的瞭解：
+本指南需要妥善了解下列Adobe Experience Platform元件：
 
-* [來源](../../../../home.md):Experience Platform可讓您從各種來源擷取資料，同時讓您能夠使用平台服務來建構、標示並增強傳入資料。
-* [沙盒](../../../../../sandboxes/home.md):Experience Platform提供虛擬沙盒，可將單一平台實例分割為獨立的虛擬環境，以協助開發和發展數位體驗應用程式。
+* [來源](../../../../home.md):Experience Platform可讓您從各種來源擷取資料，同時使用Platform服務來建構、加標籤及增強傳入資料。
+* [沙箱](../../../../../sandboxes/home.md):Experience Platform提供可將單一Platform執行個體分割成個別虛擬環境的虛擬沙箱，以協助開發及改進數位體驗應用程式。
 
-以下各節提供您必須知道的其他資訊，以便使用[!DNL Flow Service] API成功建立[!DNL PubSub]來源連線。
+以下小節提供您需要知道的其他資訊，以便使用[!DNL Flow Service] API成功將[!DNL PubSub]連線至Platform。
 
-### 收集必要的認證
+### 收集所需憑據
 
 要使[!DNL Flow Service]連接到[!DNL PubSub]，必須為以下連接屬性提供值：
 
-| 憑證 | 說明 |
+| 憑據 | 說明 |
 | ---------- | ----------- |
 | `projectId` | 驗證[!DNL PubSub]所需的項目ID。 |
-| `credentials` | 驗證[!DNL PubSub]所需的憑證或金鑰。 |
+| `credentials` | 驗證[!DNL PubSub]所需的憑據或密鑰。 |
+| `connectionSpec.id` | 連接規範返回源的連接器屬性，包括與建立基本和源目標連接相關的驗證規範。 [!DNL PubSub]連接規範ID為：`70116022-a743-464a-bbfe-e226a7f8210c`。 |
 
-如需這些值的詳細資訊，請參閱下列[PubSub authentication](https://cloud.google.com/pubsub/docs/authentication)檔案。 如果您使用服務帳戶型驗證，請參閱以下[PubSub指南](https://cloud.google.com/docs/authentication/production#create_service_account)以取得如何產生認證的步驟。
+有關這些值的詳細資訊，請參閱此[[!DNL PubSub] authentication](https://cloud.google.com/pubsub/docs/authentication)文檔。 要使用基於服務帳戶的身份驗證，請參閱本[[!DNL PubSub] 建立服務帳戶的指南](https://cloud.google.com/docs/authentication/production#create_service_account)以了解如何生成憑據的步驟。
 
 >[!TIP]
 >
->如果您使用以服務帳戶為基礎的驗證，請確定您已授與足夠的使用者存取權給您的服務帳戶，而且在複製和貼上認證時，JSON中沒有額外的空格。
+>如果您使用服務帳戶型驗證，請確定您已授予您服務帳戶的足夠使用者存取權，且複製和貼上憑證時，JSON中沒有額外的空格。
 
-### 讀取範例API呼叫
+### 使用平台API
 
-本教學課程提供範例API呼叫，以示範如何設定請求的格式。 這些包括路徑、必要標題和正確格式化的請求負載。 也提供API回應中傳回的範例JSON。 如需範例API呼叫檔案中所用慣例的詳細資訊，請參閱Experience Platform疑難排解指南中[如何讀取範例API呼叫](../../../../../landing/troubleshooting.md#how-do-i-format-an-api-request)一節。
+如需如何成功呼叫Platform API的詳細資訊，請參閱[Platform API快速入門手冊](../../../../../landing/api-guide.md)。
 
-### 收集必要標題的值
+## 建立基本連接
 
-若要呼叫平台API，您必須先完成[驗證教學課程](https://www.adobe.com/go/platform-api-authentication-en)。 完成驗證教學課程後，將提供所有Experience PlatformAPI呼叫中每個必要標題的值，如下所示：
+建立源連接的第一步是驗證[!DNL PubSub]源並生成基本連接ID。 基本連線ID可讓您從來源探索和導覽檔案，並識別您要擷取的特定項目，包括其資料類型和格式的相關資訊。
 
-* `Authorization: Bearer {ACCESS_TOKEN}`
-* `x-api-key: {API_KEY}`
-* `x-gw-ims-org-id: {IMS_ORG}`
-
-Experience Platform中的所有資源（包括屬於[!DNL Flow Service]的資源）都與特定虛擬沙盒隔離。 所有對平台API的請求都需要一個標題，該標題會指定要在中執行的操作的沙盒名稱：
-
-* `x-sandbox-name: {SANDBOX_NAME}`
-
-所有包含裝載(POST、PUT、PATCH)的請求都需要附加的媒體類型標題：
-
-* `Content-Type: application/json`
-
-## 建立連線
-
-連接指定源，並包含該源的憑據。 每個[!DNL PubSub]帳戶只需要一個連接，因為它可用於建立多個資料流以導入不同的資料。
+若要建立基本連線ID，請在提供[!DNL PubSub]驗證憑證作為請求參數的一部分時，向`/connections`端點提出POST請求。
 
 **API格式**
 
@@ -77,14 +63,6 @@ POST /connections
 ```
 
 **要求**
-
-要建立[!DNL PubSub]連接，必須在POST請求中提供提供程式ID和連接規範ID。 提供程式ID為`521eee4d-8cbe-4906-bb48-fb6bd4450033`，連接規範ID為`70116022-a743-464a-bbfe-e226a7f8210c`。
-
-**API格式**
-
-```http
-POST /connections
-```
 
 ```shell
 curl -X POST \
@@ -97,7 +75,6 @@ curl -X POST \
     -d '{
         "name": "Google PubSub connection",
         "description": "Google PubSub connection",
-        "providerId": "521eee4d-8cbe-4906-bb48-fb6bd4450033",
         "auth": {
             "specName": "Google PubSub authentication credentials",
             "params": {
@@ -115,12 +92,12 @@ curl -X POST \
 | 屬性 | 說明 |
 | -------- | ----------- |
 | `auth.params.projectId` | 驗證[!DNL PubSub]所需的項目ID。 |
-| `auth.params.credentials` | 驗證[!DNL PubSub]所需的憑證或金鑰。 |
+| `auth.params.credentials` | 驗證[!DNL PubSub]所需的憑據或密鑰。 |
 | `connectionSpec.id` | [!DNL PubSub]連接規範ID:`70116022-a743-464a-bbfe-e226a7f8210c`。 |
 
 **回應**
 
-成功的響應返回新建立的[!DNL PubSub]連接的連接ID。 在下一個教學課程中，探索您的雲端儲存空間資料時，需要此ID。
+成功的響應返回新建立連接的詳細資訊，包括其唯一標識符(`id`)。 在下一步建立源連接時需要此基本連接ID。
 
 ```json
 {
@@ -129,6 +106,69 @@ curl -X POST \
 }
 ```
 
+## 建立源連接 {#source}
+
+來源連線會建立並管理資料擷取所在之外部來源的連線。 源連接由資料源、資料格式和建立資料流所需的源連接ID等資訊組成。 來源連線例項是租用戶和IMS組織專屬的。
+
+要建立源連接，請向[!DNL Flow Service] API的`/sourceConnections`端點發出POST請求。
+
+**API格式**
+
+```http
+POST /sourceConnections
+```
+
+**要求**
+
+```shell
+curl -X POST \
+    'https://platform.adobe.io/data/foundation/flowservice/sourceConnections' \
+    -H 'authorization: Bearer {ACCESS_TOKEN}' \
+    -H 'content-type: application/json' \
+    -H 'x-api-key: {API_KEY}' \
+    -H 'x-gw-ims-org-id: {IMS_Org}' \
+    -H 'x-sandbox-name: {SANDBOX_NAME}' \
+    -d '{
+        "name": "Google PubSub source connection",
+        "description": "A source connection for Google PubSub",
+        "baseConnectionId": "4cb0c374-d3bb-4557-b139-5712880adc55",
+        "connectionSpec": {
+            "id": "70116022-a743-464a-bbfe-e226a7f8210c",
+            "version": "1.0"
+        },
+        "data": {
+            "format": "json"
+        },
+        "params": {
+            "topicId": "{TOPIC_ID}",
+            "subscriptionId": "{SUBSCRIPTION_ID}",
+            "dataType": "raw"
+        }
+    }'
+```
+
+| 屬性 | 說明 |
+| --- | --- |
+| `name` | 源連接的名稱。 請確保源連接的名稱是描述性的，因為您可以使用此名稱查找有關源連接的資訊。 |
+| `description` | 可提供的選用值，用於包含來源連線的詳細資訊。 |
+| `baseConnectionId` | 在上一步中生成的[!DNL PubSub]源的基本連接ID。 |
+| `connectionSpec.id` | [!DNL PubSub]的固定連接規範ID。 此ID為：`70116022-a743-464a-bbfe-e226a7f8210c` |
+| `data.format` | 您要擷取的[!DNL PubSub]資料格式。 目前，唯一支援的資料格式是`json`。 |
+| `params.topicId` | 主題ID定義發佈者所傳送訊息的特定命名資源 |
+| `params.subscriptionId` | 訂閱ID定義特定命名資源，該資源代表來自單一特定主題的訊息流，要傳送至訂閱應用程式。 |
+| `params.dataType` | 此參數會定義正在擷取的資料類型。 支援的資料類型包括：`raw`和`xdm`。 |
+
+**回應**
+
+成功的響應返回新建源連接的唯一標識符(`id`)。 在下一個教程中建立資料流時需要此ID。
+
+```json
+{
+    "id": "e96d6135-4b50-446e-922c-6dd66672b6b2",
+    "etag": "\"66013508-0000-0200-0000-5f6e2ae70000\""
+}
+```
+
 ## 後續步驟
 
-在本教程中，您使用[!DNL Flow Service] API建立了[!DNL PubSub]連接並獲取了其唯一連接ID。 您可以使用此連線ID來使用Flow Service API](../../collect/streaming.md)收集串流資料。[
+依照本教學課程，您已使用[!DNL Flow Service] API建立[!DNL PubSub]來源連線。 您可以在[的下一個教程中使用此源連接ID，以使用 [!DNL Flow Service] API](../../collect/streaming.md)建立流資料流。
