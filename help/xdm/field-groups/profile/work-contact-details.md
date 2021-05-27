@@ -1,26 +1,25 @@
 ---
-keywords: Experience Platform;home；熱門主題；架構；架構；XDM；個人配置檔案；欄位；架構；架構設計；混合；混合；工作詳細資訊；描述檔案工作；
+keywords: Experience Platform；首頁；熱門主題；結構；結構；XDM；個別設定檔；欄位；結構；結構；結構設計；混合；混合；工作詳細資訊；設定檔工作；
 solution: Experience Platform
-title: 工作聯繫人詳細資訊結構域組
+title: 工作聯繫人詳細資訊結構欄位組
 topic-legacy: overview
-description: 本文檔提供「工作聯繫人詳細資訊」結構域組的概述。
+description: 本文檔提供「工作聯繫人詳細資訊」架構欄位組的概述。
 exl-id: 0133622c-e95f-4833-b2f8-3694d41751b4
-translation-type: tm+mt
-source-git-commit: 4755f9b7666efd8354a5f15aeed40a7da4a06efe
+source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
 workflow-type: tm+mt
-source-wordcount: '184'
-ht-degree: 3%
+source-wordcount: '193'
+ht-degree: 4%
 
 ---
 
 
-# [!UICONTROL Work Contact Details] 方案欄位組
+# [!UICONTROL 工作聯繫人詳] 細資訊架構欄位組
 
 >[!NOTE]
 >
->多個架構欄位組的名稱已更改。 如需詳細資訊，請參閱[欄位群組名稱updates](../name-updates.md)上的檔案。
+>數個架構欄位組的名稱已變更。 有關詳細資訊，請參閱[欄位組名稱更新](../name-updates.md)上的文檔。
 
-[!UICONTROL Work Contact Details] 是類的標準方案欄位 [[!DNL XDM Individual Profile] 組](../../classes/individual-profile.md)。現場組提供了幾個欄位，用於捕獲個人的職業資訊，如工作地址、工作電子郵件、工作電話號碼和人員所屬的組織。
+[!UICONTROL 工作聯] 系詳細資訊類的標準架構欄 [[!DNL XDM Individual Profile] 位組](../../classes/individual-profile.md)。欄位群組提供數個欄位，擷取個人的職業資訊，例如工作地址、工作電子郵件、工作電話號碼，以及該人員所屬的組織。
 
 ![](../../images/field-groups/work-contact-details.png)
 
@@ -31,7 +30,9 @@ ht-degree: 3%
 | `workPhone` | [電話號碼](../../data-types/phone-number.md) | 說明人員的工作電話號碼。 |
 | `organizations` | 字串（陣列） | 自由格式字串的陣列，代表人員所屬的組織。 |
 
-有關欄位組的詳細資訊，請參閱公用XDM儲存庫：
+{style=&quot;table-layout:auto&quot;}
 
-* [填入的範例](https://github.com/adobe/xdm/blob/master/components/mixins/profile/profile-work-details.example.1.json)
-* [完整架構](https://github.com/adobe/xdm/blob/master/components/mixins/profile/profile-work-details.schema.json)
+如需欄位群組的詳細資訊，請參閱公用XDM存放庫：
+
+* [填入範例](https://github.com/adobe/xdm/blob/master/components/mixins/profile/profile-work-details.example.1.json)
+* [完整結構](https://github.com/adobe/xdm/blob/master/components/mixins/profile/profile-work-details.schema.json)
