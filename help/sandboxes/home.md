@@ -1,57 +1,66 @@
 ---
-keywords: Experience Platform;home；熱門主題；沙盒；沙盒；測試；測試
+keywords: Experience Platform；首頁；熱門主題；沙箱；沙箱；測試；測試
 solution: Experience Platform
-title: 沙盒概觀
+title: 沙箱概述
 topic-legacy: overview
-description: 沙盒是單一Experience Platform例項中的虛擬分區，可讓您與數位體驗應用程式的開發流程順暢整合。
+description: 沙箱是單一Experience Platform例項中的虛擬分區，可與數位體驗應用程式的開發程式順暢整合。
 exl-id: b760a979-8134-4a44-8433-ec6fb49bc508
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: f00e6161d82f1fd7ba442be9f06283f3c866573f
 workflow-type: tm+mt
-source-wordcount: '754'
+source-wordcount: '1009'
 ht-degree: 0%
 
 ---
 
-# 沙盒總覽
+# 沙箱概述
 
-Adobe Experience Platform的設計宗旨是在全球範圍豐富數位體驗應用程式。 公司通常並行執行多種數位體驗應用程式，並需要滿足這些應用程式的開發、測試和部署需求，同時確保運作符合規範。
+Adobe Experience Platform的建置宗旨是在全球範圍豐富數位體驗應用程式。 公司通常並行運行多個數字型驗應用程式，需要滿足這些應用程式的開發、測試和部署，同時確保操作合規性。
 
-為瞭解決此需求，Experience Platform提供沙盒，可將單一平台執行個體分割為不同的虛擬環境，以協助開發和發展數位體驗應用程式。
+為了滿足這項需求，Experience Platform提供沙箱，可將單一Platform執行個體分割成個別的虛擬環境，以協助開發及改進數位體驗應用程式。
 
-本檔案提供Experience Platform沙盒的高階概觀。
+本檔案提供Experience Platform中沙箱的概觀。
 
-## 瞭解沙盒
+## 了解沙箱
 
-沙盒是單一Experience Platform例項中的虛擬分區，可讓您與數位體驗應用程式的開發流程順暢整合。 一個Experience Platform例項支援一個生產沙盒和多個非生產沙盒，每個沙盒會維護其獨立的平台資源庫（包括架構、資料集、設定檔等）。  在沙盒中執行的所有內容和動作都僅限於該沙盒，不會影響任何其他沙盒。
+沙箱是單一Experience Platform例項中的虛擬分區，可與數位體驗應用程式的開發程式順暢整合。 在沙箱內採取的所有內容和動作都只會限於該沙箱，不會影響任何其他沙箱。 Experience Platform支援兩種沙箱：
 
-非生產沙盒可讓您測試功能、執行實驗並建立自訂組態，而不會影響生產沙盒。 此外，非生產沙盒具有重設功能，可從沙盒移除所有客戶建立的資源。 非生產沙盒無法轉換為生產沙盒。 預設的Experience Platform授權會授與您五個沙盒（一個製作與四個非製作）。 您可新增10個非生產沙盒，最多可新增75個沙盒。 如需詳細資訊，請連絡您的IMS組織管理員或Adobe銷售代表。
+* **生產沙箱**:生產沙箱可用於生產環境中的設定檔。Platform可讓您建立多個生產沙箱，以便為資料提供適當的功能，同時仍維持運作的隔離。 此功能可讓您將特定的生產沙箱專用於不同的業務、品牌、專案或地區。 生產沙箱支援大量生產設定檔，直到您的授權[!DNL Profile]承諾（累計測量所有授權生產沙箱）。 您有權使用每個授權[!DNL Profile]的授權平均設定檔（累計測量所有授權生產沙箱）。
+* **開發沙箱**:開發沙箱是沙箱，可專門用於開發和測試非生產設定檔。開發沙箱支援大量非生產設定檔，最多可支援10%的授權[!DNL Profile]承諾（累計測量所有授權開發沙箱）。 您有權：
+   * 每個授權非生產設定檔的平均非生產設定檔豐富度為75 KB（累計測量於所有授權開發沙箱）;
+   * 每日根據開發沙箱執行一次批次分段工作；
+   * 每年平均120個[!DNL Profile] API呼叫（累計計為所有授權開發沙箱）。[!DNL Profile]
+
+Experience Platform例項支援多個生產與開發沙箱，每個沙箱都維護各自獨立的Platform資源資料庫（包括結構、資料集、設定檔等）。 此外，生產與開發沙箱都有重設功能，會從沙箱中移除所有客戶建立的資源。 開發沙箱無法轉換為生產沙箱。
+
+預設Experience Platform授權共授予您五個沙箱，您可將其分類為生產或開發。 您可以授權額外的10個沙箱套件，最多總共75個沙箱。 這些額外的沙箱可用來建立生產和開發沙箱。 如需詳細資訊，請聯絡您的IMS組織管理員或Adobe銷售代表。
+
+最後，預設的生產沙箱是首次建立IMS組織時建立的第一個生產沙箱。 預設的生產沙箱可讓您從Platform擷取或使用資料，以及接受不包含沙箱名稱或沙箱ID值的要求。
 
 >[!NOTE]
 >
->第一次建立沙盒時，沙盒不包含任何資料。 由於每個沙盒都會維護其獨立的資料儲存，因此它們也必須個別收錄資料。
+>第一次建立沙箱時，不會包含任何資料。 由於每個沙箱會維護各自的獨立資料存放區，因此它們也必須獨立擷取其資料。
 
-總之，沙盒提供下列優點：
+總之，沙箱提供下列優點：
 
-* **應用程式生命週期管理**:建立個別的虛擬環境，以開發和發展數位體驗應用程式。
-* **專案與品牌管理**:允許多個專案在相同的IMS組織內並行執行，同時提供隔離和存取控制。未來版本將支援在多個地區部署。
-* **有彈性的開發生態系統**:以順暢、可擴充且具成本效益的方式提供沙盒，以利探索、啟用和展示。
+* **應用程式生命週期管理**:建立獨立的虛擬環境，以開發和改進數位體驗應用程式。
+* **專案和品牌管理**:允許多個專案在相同的IMS組織內並行執行，同時提供隔離和存取控制。未來版本將提供在多個地區部署的支援。
+* **靈活的開發生態系統**:以順暢、可擴充且具成本效益的方式提供沙箱，以利探索、啟用和示範。
 
-## 沙盒的存取控制
+## 沙箱的存取控制
 
-依預設，組織的所有使用者都可存取生產沙盒。 系統管理員、產品管理員或產品設定檔管理員必須透過[Adobe Admin Console](https://adminconsole.adobe.com)授與非生產沙盒的存取權。
+依預設，組織的所有使用者都可存取生產沙箱。 系統管理員、產品管理員或產品設定檔管理員必須透過[Adobe Admin Console](https://adminconsole.adobe.com)授予非生產沙箱的存取權。
 
-為了檢視、建立、更新或刪除非生產沙盒，使用者也必須獲得沙盒管理權限。
+若要檢視、建立、更新或刪除非生產沙箱，使用者也必須獲得沙箱管理權限。
 
-有關管理沙盒角色和權限的詳細資訊，請參閱[訪問控制概述](../access-control/home.md)。
+如需管理沙箱角色和權限的詳細資訊，請參閱[存取控制概觀](../access-control/home.md)。
 
-## Experience PlatformUI中的沙盒
+## Experience PlatformUI中的沙箱
 
-在[Experience Platform使用者介面](https://platform.adobe.com)中，使用者可使用畫面左上角的&#x200B;**沙盒切換器**&#x200B;控制項，在他們可存取的沙盒之間切換。  具有「沙盒管理」權限的使用者也可存取左側導覽中的&#x200B;**[!UICONTROL Sandboxes]**&#x200B;標籤，以檢視和管理組織的沙盒。 如需如何在UI中使用沙盒的詳細資訊，請參閱[沙盒使用指南](ui/overview.md)。
+在[Experience Platform使用者介面](https://platform.adobe.com)中，使用者可使用畫面左上角的&#x200B;**沙箱切換器**&#x200B;控制項，在可存取的沙箱之間切換。  具有沙箱管理權限的使用者也可以存取左側導覽中的&#x200B;**[!UICONTROL 沙箱]**&#x200B;標籤，以便檢視及管理組織的沙箱。 如需如何在UI中使用沙箱的詳細資訊，請參閱[沙箱使用手冊](ui/overview.md)。
 
-## Experience PlatformAPI中的沙盒
+## Experience PlatformAPI中的沙箱
 
-呼叫Experience PlatformAPI時，必須在標題`x-sandbox-name`下提供沙盒名稱。 例如，當呼叫[[!DNL Catalog Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml)以檢視「生產」沙盒內的所有資料集時，沙盒的名稱(&quot;prod&quot;)會以標題的形式提供在API請求中：
+呼叫Experience PlatformAPI時，必須在標題`x-sandbox-name`下提供沙箱名稱。 例如，呼叫[[!DNL Catalog Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml)以檢視「生產」沙箱內的所有資料集時，沙箱的名稱(&quot;prod&quot;)會作為API請求的標題提供：
 
 ```shell
 curl -X GET \
@@ -62,14 +71,14 @@ curl -X GET \
   -H 'x-sandbox-name: prod'
 ```
 
-如果API呼叫中未包含`x-sandbox-name`，系統將改用預設沙盒。 不過，最佳實務是一律將此標題納入所有API呼叫中，即使使用預設沙盒亦然。 因此，Experience Platform的API檔案會將`x-sandbox-name`視為必要的標題。
+如果API呼叫中未包含`x-sandbox-name`，系統會改用預設沙箱。 不過，最佳實務是一律將此標題納入所有API呼叫，即使使用預設沙箱亦然。 因此，Experience Platform的API檔案會將`x-sandbox-name`視為必要的標題。
 
-### 沙盒API
+### 沙箱API
 
-「沙盒API」可讓您使用REST風格的API作業來管理沙盒。 請參閱[沙盒開發人員指南](api/getting-started.md)以取得如何使用API的詳細資訊，包括正確格式化的請求和範例回應。
+沙箱API可讓您使用RESTful API操作來管理沙箱。 如需如何使用API（包括格式正確的請求和範例回應）的詳細資訊，請參閱[沙箱開發人員指南](api/overview.md)。
 
 ## 後續步驟
 
-閱讀本檔案，您便瞭解了Experience Platform中沙盒的基本概念。 如需如何管理沙盒的詳細步驟，請參閱UI的[使用指南](ui/overview.md)或API的[開發人員指南](./api/getting-started.md)。
+閱讀本檔案後，您便了解Experience Platform中沙箱的基本概念。 如需如何管理沙箱的詳細步驟，請參閱UI的[使用手冊](ui/overview.md)，或API的[開發人員手冊](./api/getting-started.md)。
 
-沙盒雖然是您開發團隊隔離平台環境的重要工具，但您也可以使用Adobe Admin Console管理更精細的存取控制。 有關詳細資訊，請參閱[訪問控制概述](../access-control/home.md)。
+雖然沙箱是隔離Platform環境給開發團隊的寶貴工具，您也可以使用Adobe Admin Console管理更精細的存取控制。 有關詳細資訊，請參閱[訪問控制概述](../access-control/home.md)。
