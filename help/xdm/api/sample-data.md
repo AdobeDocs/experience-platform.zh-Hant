@@ -1,33 +1,32 @@
 ---
-keywords: Experience Platform;home；熱門主題；api;API;XDM;XDM系統；體驗資料模型；體驗資料模型；資料模型；資料模型；示例資料；rpc;
+keywords: Experience Platform；首頁；熱門主題；API; XDM; XDM系統；體驗資料模型；體驗資料模型；資料模型；資料模型；範例資料；範例資料；rpc;
 solution: Experience Platform
 title: 範例資料API端點
-description: 方案註冊表API中的/sampledata端點允許您生成映射到任何現有XDM方案結構的示例資料。
+description: Schema Registry API中的/sampledata端點可讓您產生對應至任何現有XDM架構結構的範例資料。
 topic-legacy: developer guide
 exl-id: 424d33ca-0624-4891-bf83-044ac2861579
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
 workflow-type: tm+mt
-source-wordcount: '319'
-ht-degree: 1%
+source-wordcount: '322'
+ht-degree: 2%
 
 ---
 
 # 範例資料端點
 
-為了將資料收錄至Adobe Experience Platform，資料的格式和結構必須符合現有的體驗資料模型(XDM)架構。 根據特定資料集的架構複雜性，很難判斷資料集在擷取時所需的確切資料形狀。
+若要將資料內嵌至Adobe Experience Platform，資料的格式和結構必須符合現有的Experience Data Model(XDM)結構。 根據特定資料集的結構複雜度，很難判斷資料集擷取時所需資料的確切形狀。
 
-使用[!DNL Schema Registry] API中的`/sampledata`端點，您可以為任何先前建立的方案生成示例提取對象。
+使用[!DNL Schema Registry] API中的`/sampledata`端點，您可以為先前建立的任何架構產生範例擷取物件。
 
 ## 快速入門
 
-本指南中使用的端點是[[!DNL Schema Registry] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml)的一部分。 在繼續之前，請先閱讀[快速入門手冊](./getting-started.md)，以取得相關檔案的連結、閱讀本檔案中範例API呼叫的指南，以及成功呼叫任何Experience PlatformAPI所需之必要標題的重要資訊。
+本指南中使用的端點是[[!DNL Schema Registry] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml)的一部分。 繼續之前，請檢閱[快速入門手冊](./getting-started.md)，取得相關檔案的連結、閱讀本檔案中範例API呼叫的指南，以及成功呼叫任何Experience PlatformAPI所需的必要標頭的重要資訊。
 
-示例資料端點是[!DNL Schema Registry]支援的遠程過程調用(RPC)的一部分。 與[!DNL Schema Registry] API中的其他端點不同，RPC端點不需要額外的標題，如`Accept`或`Content-Type`，也不使用`CONTAINER_ID`。 而必須改用`/rpc`命名空間，如下列API呼叫所示。
+示例資料端點是[!DNL Schema Registry]支援的遠程過程調用(RPC)的一部分。 與[!DNL Schema Registry] API中的其他端點不同，RPC端點不需要額外的標題，如`Accept`或`Content-Type`，也不使用`CONTAINER_ID`。 因此，他們必須使用`/rpc`命名空間，如下方API呼叫所示。
 
-## 檢索模式的示例資料
+## 擷取結構的範例資料
 
-通過在指向端點的GET請求路徑中指定方案的ID，可以檢索方案庫中任何方案的示例資料。
+您可以在向端點GET請求的路徑中指定架構的ID，以擷取架構程式庫內任何架構的範例資料。
 
 **API格式**
 
@@ -37,11 +36,13 @@ GET /rpc/sampledata/{SCHEMA_ID}
 
 | 參數 | 說明 |
 | --- | --- |
-| `{SCHEMA_ID}` | 要為其生成示例資料的方案的`meta:altId`或URL編碼的`$id`。 |
+| `{SCHEMA_ID}` | 要為其生成示例資料的架構的`meta:altId`或URL編碼的`$id`。 |
+
+{style=&quot;table-layout:auto&quot;}
 
 **要求**
 
-以下請求會為忠誠度成員方案生成示例資料。
+以下請求會為忠誠會員結構產生範例資料。
 
 ```shell
 curl -X GET \
@@ -54,7 +55,7 @@ curl -X GET \
 
 **回應**
 
-成功的響應返回指定方案的示例資料對象。
+成功的回應會傳回指定架構的範例資料物件。
 
 ```json
 {
