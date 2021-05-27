@@ -1,15 +1,14 @@
 ---
-keywords: Experience Platform;home；熱門主題；流連接；建立流連接；api指南；教學課程；建立流連接；流攝取；攝取；
+keywords: Experience Platform；首頁；熱門主題；串流連線；建立串流連線；api指南；教學課程；建立串流連線；串流內嵌；擷取；
 solution: Experience Platform
 title: 使用API建立串流連線
 topic-legacy: tutorial
 type: Tutorial
-description: 本教學課程將協助您開始使用串流擷取API，這是Adobe Experience Platform資料擷取服務API的一部分。
+description: 本教學課程將協助您開始使用Adobe Experience Platform資料擷取服務API中的串流擷取API。
 exl-id: 9f7fbda9-4cd3-4db5-92ff-6598702adc34
-translation-type: tm+mt
-source-git-commit: 96f400466366d8a79babc194bc2ba8bf19ede6bb
+source-git-commit: b672eab481a8286f92741a971991c7f83102acf7
 workflow-type: tm+mt
-source-wordcount: '1090'
+source-wordcount: '1206'
 ht-degree: 2%
 
 ---
@@ -17,40 +16,40 @@ ht-degree: 2%
 
 # 使用API建立串流連線
 
-Flow Service用於收集和集中Adobe Experience Platform內不同來源的客戶資料。 該服務提供用戶介面和REST風格的API，所有支援的源都可從中連接。
+流量服務用於收集和集中Adobe Experience Platform內各種不同來源的客戶資料。 該服務提供用戶介面和RESTful API，所有受支援的源都可從中連接。
 
-本教學課程使用[!DNL Flow Service] API來引導您逐步執行使用Flow Service API建立串流連線的步驟。
+本教學課程使用[!DNL Flow Service] API來引導您完成使用流程服務API建立串流連線的步驟。
 
 ## 快速入門
 
-本指南需要對Adobe Experience Platform的下列組成部分有切實的瞭解：
+本指南需要妥善了解下列Adobe Experience Platform元件：
 
 - [[!DNL Experience Data Model (XDM)]](../../../../../xdm/home.md):組織體驗資料的 [!DNL Platform] 標準化架構。
-- [[!DNL Real-time Customer Profile]](../../../../../profile/home.md):根據來自多個來源的匯整資料，即時提供統一的消費者個人檔案。
+- [[!DNL Real-time Customer Profile]](../../../../../profile/home.md):根據來自多個來源的匯總資料，即時提供統一的消費者設定檔。
 
-此外，建立串流連線需要您有目標XDM架構和資料集。 要瞭解如何建立這些資料，請閱讀有關[流記錄資料](../../../../../ingestion/tutorials/streaming-record-data.md)的教程，或有關[流時間系列資料](../../../../../ingestion/tutorials/streaming-time-series-data.md)的教程。
+此外，建立串流連線需要您具備目標XDM結構和資料集。 若要了解如何建立這些資料，請閱讀[串流記錄資料](../../../../../ingestion/tutorials/streaming-record-data.md)的教學課程，或閱讀[串流時間序列資料](../../../../../ingestion/tutorials/streaming-time-series-data.md)的教學課程。
 
-以下章節提供您需要知道的其他資訊，以便成功呼叫串流擷取API。
+以下小節提供您將需要知道的其他資訊，以便成功呼叫串流獲取API。
 
 ### 讀取範例API呼叫
 
-本指南提供範例API呼叫，以示範如何格式化您的請求。 這些包括路徑、必要標題和正確格式化的請求負載。 也提供API回應中傳回的範例JSON。 如需範例API呼叫檔案中所用慣例的詳細資訊，請參閱[!DNL Experience Platform]疑難排解指南中[如何讀取範例API呼叫](../../../../../landing/troubleshooting.md#how-do-i-format-an-api-request)一節。
+本指南提供範例API呼叫，以示範如何設定請求格式。 這些功能包括路徑、必要標題和格式正確的請求裝載。 也提供API回應中傳回的範例JSON。 如需範例API呼叫檔案中所使用慣例的資訊，請參閱[!DNL Experience Platform]疑難排解指南中[如何讀取範例API呼叫](../../../../../landing/troubleshooting.md#how-do-i-format-an-api-request)一節。
 
 ### 收集必要標題的值
 
-若要呼叫[!DNL Platform] API，您必須先完成[驗證教學課程](https://www.adobe.com/go/platform-api-authentication-en)。 完成驗證教學課程後，所有[!DNL Experience Platform] API呼叫中每個所需標題的值都會顯示在下面：
+若要呼叫[!DNL Platform] API，您必須先完成[authentication tutorial](https://www.adobe.com/go/platform-api-authentication-en)。 完成驗證教學課程後，將提供所有[!DNL Experience Platform] API呼叫中每個必要標題的值，如下所示：
 
-- 授權：載體`{ACCESS_TOKEN}`
-- x-api-key:`{API_KEY}`
+- 授權：承載`{ACCESS_TOKEN}`
+- x-api索引鍵：`{API_KEY}`
 - x-gw-ims-org-id:`{IMS_ORG}`
 
-[!DNL Experience Platform]中的所有資源（包括屬於[!DNL Flow Service]的資源）都隔離到特定的虛擬沙盒。 對[!DNL Platform] API的所有請求都需要一個標題，該標題指定要在中執行操作的沙盒的名稱：
+[!DNL Experience Platform]中的所有資源，包括屬於[!DNL Flow Service]的資源，都與特定虛擬沙箱隔離。 對[!DNL Platform] API的所有請求都需要標題，以指定作業將在下列位置進行的沙箱名稱：
 
 - x-sandbox-name:`{SANDBOX_NAME}`
 
 >[!NOTE]
 >
->如需[!DNL Platform]中沙盒的詳細資訊，請參閱[沙盒概述檔案](../../../../../sandboxes/home.md)。
+>如需[!DNL Platform]中沙箱的詳細資訊，請參閱[沙箱概觀檔案](../../../../../sandboxes/home.md)。
 
 所有包含裝載(POST、PUT、PATCH)的請求都需要額外的標題：
 
@@ -58,11 +57,11 @@ Flow Service用於收集和集中Adobe Experience Platform內不同來源的客�
 
 ## 建立基本連接
 
-基本連接指定源，並包含使流與流接收API相容所需的資訊。 建立基本連接時，您可以選擇建立未驗證和已驗證的連接。
+基本連線會指定來源，並包含讓流程與串流獲取API相容所需的資訊。 建立基本連線時，您可以選擇建立未驗證和已驗證的連線。
 
-### 非驗證連接
+### 未驗證的連接
 
-非驗證連線是您在要將資料串流至平台時，可建立的標準串流連線。
+未驗證的連線是您想要將資料串流至Platform時可建立的標準串流連線。
 
 **API格式**
 
@@ -72,7 +71,7 @@ POST /flowservice/connections
 
 **要求**
 
-為了建立串流連線，必須在POST請求中提供提供者ID和連線規格ID。 提供程式ID為`521eee4d-8cbe-4906-bb48-fb6bd4450033`，連接規範ID為`bc7b00d6-623a-4dfc-9fdb-f1240aeadaeb`。
+若要建立串流連線，必須在POST請求中提供提供者ID和連線規格ID。 提供程式ID為`521eee4d-8cbe-4906-bb48-fb6bd4450033`，連接規範ID為`bc7b00d6-623a-4dfc-9fdb-f1240aeadaeb`。
 
 ```shell
 curl -X POST https://platform.adobe.io/data/foundation/flowservice/connections \
@@ -105,11 +104,11 @@ curl -X POST https://platform.adobe.io/data/foundation/flowservice/connections \
 | `auth.params.sourceId` | 您要建立的串流連線ID。 |
 | `auth.params.dataType` | 串流連線的資料類型。 此值必須為`xdm`。 |
 | `auth.params.name` | 您要建立的串流連線名稱。 |
-| `connectionSpec.id` | 串流連接的連接規範`id`。 |
+| `connectionSpec.id` | 流連接的連接規範`id`。 |
 
 **回應**
 
-成功的回應會傳回HTTP狀態201，並包含新建連線的詳細資訊，包括其唯一識別碼(`id`)。
+成功的回應會傳回HTTP狀態201，並包含新建立連線的詳細資訊，包括其唯一識別碼(`id`)。
 
 ```json
 {
@@ -120,12 +119,12 @@ curl -X POST https://platform.adobe.io/data/foundation/flowservice/connections \
 
 | 屬性 | 說明 |
 | -------- | ----------- |
-| `id` | 新建立的連接的`id`。 這在這裡稱為`{CONNECTION_ID}`。 |
-| `etag` | 指派給連接的標識符，指定連接的修訂版本。 |
+| `id` | 新建立的連接的`id`。 此處稱為`{CONNECTION_ID}`。 |
+| `etag` | 分配給連接的標識符，指定連接的修訂。 |
 
-### 已驗證的連接
+### 已驗證的連線
 
-當您需要區分來自受信任來源和不受信任來源的記錄時，應使用已驗證的連線。 想要傳送包含個人識別資訊(PII)的資訊的使用者，在將資訊串流至平台時，應建立已驗證的連線。
+當您需要區分來自受信任和不受信任來源的記錄時，應使用已驗證的連線。 想要透過個人識別資訊(PII)傳送資訊的使用者，應在將資訊串流至Platform時建立已驗證的連線。
 
 **API格式**
 
@@ -135,7 +134,7 @@ POST /flowservice/connections
 
 **要求**
 
-為了建立串流連線，必須在POST請求中提供提供者ID和連線規格ID。 提供程式ID為`521eee4d-8cbe-4906-bb48-fb6bd4450033`，連接規範ID為`bc7b00d6-623a-4dfc-9fdb-f1240aeadaeb`。
+若要建立串流連線，必須在POST請求中提供提供者ID和連線規格ID。 提供程式ID為`521eee4d-8cbe-4906-bb48-fb6bd4450033`，連接規範ID為`bc7b00d6-623a-4dfc-9fdb-f1240aeadaeb`。
 
 ```shell
 curl -X POST https://platform.adobe.io/data/foundation/flowservice/connections \
@@ -170,12 +169,12 @@ curl -X POST https://platform.adobe.io/data/foundation/flowservice/connections \
 | `auth.params.sourceId` | 您要建立的串流連線ID。 |
 | `auth.params.dataType` | 串流連線的資料類型。 此值必須為`xdm`。 |
 | `auth.params.name` | 您要建立的串流連線名稱。 |
-| `auth.params.authenticationRequired` | 指定已建立的串流連接的參數 |
-| `connectionSpec.id` | 串流連接的連接規範`id`。 |
+| `auth.params.authenticationRequired` | 指定已建立串流連接的參數 |
+| `connectionSpec.id` | 流連接的連接規範`id`。 |
 
 **回應**
 
-成功的回應會傳回HTTP狀態201，並包含新建連線的詳細資訊，包括其唯一識別碼(`id`)。
+成功的回應會傳回HTTP狀態201，並包含新建立連線的詳細資訊，包括其唯一識別碼(`id`)。
 
 ```json
 {
@@ -186,8 +185,8 @@ curl -X POST https://platform.adobe.io/data/foundation/flowservice/connections \
 
 | 屬性 | 說明 |
 | -------- | ----------- |
-| `id` | 新建立的連接的`id`。 這在這裡稱為`{CONNECTION_ID}`。 |
-| `etag` | 指派給連接的標識符，指定連接的修訂版本。 |
+| `id` | 新建立的連接的`id`。 此處稱為`{CONNECTION_ID}`。 |
+| `etag` | 分配給連接的標識符，指定連接的修訂。 |
 
 ## 取得串流端點URL
 
@@ -201,7 +200,7 @@ GET /flowservice/connections/{CONNECTION_ID}
 
 | 參數 | 說明 |
 | --------- | ----------- |
-| `{CONNECTION_ID}` | 您先前建立的連接的`id`值。 |
+| `{CONNECTION_ID}` | 您先前建立之連線的`id`值。 |
 
 **要求**
 
@@ -215,7 +214,7 @@ curl -X GET https://platform.adobe.io/data/foundation/flowservice/connections/{C
 
 **回應**
 
-成功的響應返回HTTP狀態200，其中包含所請求連接的詳細資訊。 串流端點URL會自動與連線建立，並可使用`inletUrl`值來擷取。
+成功的響應返回HTTP狀態200，其中包含有關所請求連接的詳細資訊。 串流端點URL會透過連線自動建立，且可使用`inletUrl`值加以擷取。
 
 ```json
 {
@@ -254,7 +253,7 @@ curl -X GET https://platform.adobe.io/data/foundation/flowservice/connections/{C
 
 ## 建立源連接
 
-建立基本連接後，您需要建立源連接。 建立源連接時，您需要建立的基本連接的`id`值。
+建立基本連接後，您需要建立源連接。 建立源連接時，將需要建立的基連接中的`id`值。
 
 **API格式**
 
@@ -285,7 +284,7 @@ curl -X POST \
 
 **回應**
 
-成功的回應會傳回HTTP狀態201，並詳細列出新建立的來源連線，包括其唯一識別碼(`id`)。
+成功的響應返回HTTP狀態201，其中詳細列出了新建的源連接，包括其唯一標識符(`id`)。
 
 ```json
 {
@@ -294,9 +293,9 @@ curl -X POST \
 }
 ```
 
-## 建立目標連接
+## 建立目標連線
 
-建立源連接後，可以建立目標連接。 建立目標連線時，您將需要先前建立之資料集的`id`值。
+建立源連接後，可以建立目標連接。 建立目標連線時，您需要先前建立之資料集的`id`值。
 
 **API格式**
 
@@ -332,7 +331,7 @@ curl -X POST \
 
 **回應**
 
-成功的回應會傳回HTTP狀態201，其中包含新建立之目標連線的詳細資訊，包括其唯一識別碼(`id`)。
+成功的回應會傳回HTTP狀態201，並包含新建立目標連線的詳細資訊，包括其唯一識別碼(`id`)。
 
 ```json
 {
@@ -343,7 +342,7 @@ curl -X POST \
 
 ## 建立資料流
 
-建立源和目標連接後，您現在可以建立資料流。 資料流負責調度和收集源中的資料。 通過對`/flows`端點執行POST請求，可以建立資料流。
+建立源連接和目標連接後，您現在可以建立資料流。 資料流負責從源中調度和收集資料。 通過向`/flows`端點執行POST請求，可以建立資料流。
 
 **API格式**
 
@@ -379,7 +378,7 @@ curl -X POST \
 
 **回應**
 
-成功的響應返回HTTP狀態201，並返回新建立的資料流的詳細資訊，包括其唯一標識符(`id`)。
+成功的響應返回HTTP狀態201，其中包含新建立的資料流的詳細資訊，包括其唯一標識符(`id`)。
 
 ```json
 {
@@ -390,19 +389,19 @@ curl -X POST \
 
 ## 後續步驟
 
-在本教學課程中，您已建立串流HTTP連線，讓您使用串流端點將資料內嵌至平台。 有關在UI中建立流連接的說明，請閱讀[建立流連接教程](../../../ui/create/streaming/http.md)。
+依照本教學課程，您已建立串流HTTP連線，讓您能使用串流端點將資料內嵌至Platform。 有關在UI中建立流連接的說明，請參閱[建立流連接教程](../../../ui/create/streaming/http.md)。
 
-要瞭解如何將資料串流至平台，請閱讀有關[串流時間系列資料](../../../../../ingestion/tutorials/streaming-time-series-data.md)的教學課程，或有關[串流記錄資料](../../../../../ingestion/tutorials/streaming-record-data.md)的教學課程。
+若要了解如何將資料串流至Platform，請參閱[串流時間序列資料](../../../../../ingestion/tutorials/streaming-time-series-data.md)的教學課程，或[串流記錄資料](../../../../../ingestion/tutorials/streaming-record-data.md)的教學課程。
 
 ## 附錄
 
-本節提供有關使用API建立串流連線的補充資訊。
+本節提供使用API建立串流連線的補充資訊。
 
 ### 傳送訊息至已驗證的串流連線
 
-如果串流連線已啟用驗證，則用戶端需要將`Authorization`標題新增至其請求。
+如果串流連線已啟用驗證，則用戶端需要將`Authorization`標題新增至其要求。
 
-如果`Authorization`標題不存在，或傳送無效／過期的存取Token，則會傳回HTTP 401未授權回應，回應類似如下：
+如果`Authorization`標頭不存在，或者發送了無效/過期的訪問令牌，則將返回HTTP 401 Unauthorized響應，響應如下所示：
 
 **回應**
 
@@ -416,3 +415,59 @@ curl -X POST \
     }
 }
 ```
+
+### 將要擷取的原始資料張貼至Platform {#ingest-data}
+
+現在您已建立流程，可以將JSON訊息傳送至先前建立的串流端點。
+
+**API格式**
+
+```http
+POST /collection/{CONNECTION_ID}
+```
+
+| 參數 | 說明 |
+| --------- | ----------- |
+| `{CONNECTION_ID}` | 新建立的串流連線的`id`值。 |
+
+**要求**
+
+範例要求會將原始資料內嵌至先前建立的串流端點。
+
+```shell
+curl -X POST https://dcs.adobedc.net/collection/2301a1f761f6d7bf62c5312c535e1076bbc7f14d728e63cdfd37ecbb4344425b \
+  -H 'Content-Type: application/json' \
+  -H 'x-adobe-flow-id: 1f086c23-2ea8-4d06-886c-232ea8bd061d' \
+  -d '{
+      "name": "Johnson Smith",
+      "location": {
+          "city": "Seattle",
+          "country": "United State of America",
+          "address": "3692 Main Street"
+      },
+      "gender": "Male"
+      "birthday": {
+          "year": 1984
+          "month": 6
+          "day": 9
+      }
+  }'
+```
+
+**回應**
+
+成功的回應會傳回HTTP狀態200，並包含新擷取資訊的詳細資訊。
+
+```json
+{
+    "inletId": "{CONNECTION_ID}",
+    "xactionId": "1584479347507:2153:240",
+    "receivedTimeMs": 1584479347507
+}
+```
+
+| 屬性 | 說明 |
+| -------- | ----------- |
+| `{CONNECTION_ID}` | 先前建立的串流連線ID。 |
+| `xactionId` | 在伺服器端為您剛傳送的記錄產生唯一識別碼。 此ID有助於Adobe通過各種系統和調試跟蹤此記錄的生命週期。 |
+| `receivedTimeMs` | 顯示接收請求的時間的時間戳記（以毫秒為單位）。 |
