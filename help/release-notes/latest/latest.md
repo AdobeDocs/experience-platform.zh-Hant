@@ -5,9 +5,9 @@ doc-type: release notes
 last-update: May 26, 2021
 author: ens72741
 exl-id: 8f2c9bf8-1487-46e4-993b-bd9b63774cab
-source-git-commit: c608ee8360fd07d6f98b31eed3b4691dc7124e12
+source-git-commit: fb5d5e7ecb36d1caa70d5c2d2a4f467e3067de4a
 workflow-type: tm+mt
-source-wordcount: '1340'
+source-wordcount: '1355'
 ht-degree: 3%
 
 ---
@@ -112,5 +112,6 @@ Experience Platform提供RESTful API和互動式UI，讓您輕鬆為各種資料
 | 功能 | 說明 |
 | ------- | ----------- |
 | 壓縮檔案擷取的UI支援 | 您現在可以在UI中使用雲端儲存空間來源，預覽並內嵌壓縮的JSON或分隔檔案。 如需詳細資訊，請參閱UI](../../sources/tutorials/ui/dataflow/batch/cloud-storage.md)中的[配置雲儲存源連接的資料流的教程。 |
+| 測試版來源轉至GA | 下列來源已從測試版提升為正式發行： <ul><li>[[!DNL Azure File Storage]](../../sources/connectors/cloud-storage/azure-file-storage.md)</li><li>[[!DNL Azure Synapse Analytics]](../../sources/connectors/databases/synapse-analytics.md)</li><li>[[!DNL Greenplum]](../../sources/connectors/databases/greenplum.md)</li><li>[[!DNL HubSpot]](../../sources/connectors/marketing-automation/hubspot.md)</li><li>[[!DNL ServiceNow]](../../sources/connectors/customer-success/servicenow.md)</li></ul> |
 
 若要進一步了解來源，請參閱[來源概述](../../sources/home.md)。
