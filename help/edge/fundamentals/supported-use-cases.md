@@ -2,7 +2,7 @@
 title: Adobe Experience Platform Web SDK的支援使用案例
 description: 了解Adobe Experience Platform Web SDK支援哪些使用案例。
 keywords: 網頁sdk；使用案例
-source-git-commit: 245983363571bdc63ead992771c01b405c067b8a
+source-git-commit: b630a00f3985769243bd42ecd3c49f0d0ce60b07
 workflow-type: tm+mt
 source-wordcount: '528'
 ht-degree: 14%
