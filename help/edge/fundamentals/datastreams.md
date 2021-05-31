@@ -1,118 +1,118 @@
 ---
-title: 為Experience PlatformWeb SDK配置資料流
-description: '瞭解如何設定資料串流。 '
-keywords: configuration;datastreams;datastreamId;edge;configuration id;Environment Settings;edgeConfigId;id sync enabled;ID同步容器ID;Sandbox;Streaming Inlet；事件資料集；目標代碼；屬性Token；目標環境ID;Cookie目標；url目標；分析設定區塊報表套裝ID;
+title: 配置Experience PlatformWeb SDK的資料流
+description: '了解如何設定資料流。 '
+keywords: 設定；資料流；datastreamId;edge;edge;edge設定ID；環境設定；edgeConfigId；啟用身分；ID同步；ID同步容器ID；沙箱；串流入口；事件資料集；目標；用戶端代碼；屬性代號；目標環境ID;Cookie目的地；URL目的地；Analytics設定區塊報表套裝ID;
 exl-id: 736c75cb-e290-474e-8c47-2a031f215a56
-source-git-commit: 5642fa155d487982f01d25fa765bb36ad5c3bb21
+source-git-commit: c3d66e50f647c2203fcdd5ad36ad86ed223733e3
 workflow-type: tm+mt
-source-wordcount: '848'
-ht-degree: 1%
+source-wordcount: '904'
+ht-degree: 0%
 
 ---
 
 
 # 設定資料流
 
-Adobe Experience Platform網頁SDK的組態分為兩個部份。 SDK中的[configure命令](configuring-the-sdk.md)可控制必須在用戶端上處理的事項，例如`edgeDomain`。 資料串流會處理SDK的所有其他組態。 將請求發送到Adobe Experience Platform邊緣網路時，`edgeConfigId`用於引用伺服器端配置。 這可讓您更新設定，而不需在網站上變更程式碼。
+Adobe Experience Platform Web SDK的設定分為兩個位置。 SDK中的[configure命令](configuring-the-sdk.md)控制必須在用戶端上處理的項目，例如`edgeDomain`。 資料流會處理SDK的所有其他設定。 當請求傳送至Adobe Experience Platform邊緣網路時，會使用`edgeConfigId`參考伺服器端設定。 這可讓您更新設定，而無須在網站上變更程式碼。
 
-您的組織必須已布建此功能。 請連絡您的客戶成功經理(CSM)，以加入允許清單。
+您的組織必須布建此功能。 請連絡您的客戶成功經理(CSM)，以取得允許清單。
 
 ## 建立資料流配置
 
-使用資料流配置工具，可以在[!DNL Experience Platform Launch]Adobe中建立資料流。
+可使用資料流配置工具在Adobe[!DNL Experience Platform Launch]中建立資料流。
 
-![資料流工具導航](../../assets/datastreams_config.png)
+![datastreams工具導航](../../assets/datastreams_config.png)
 
 >[!NOTE]
 >
->無論客戶是否使用[!DNL Experience Platform Launch]做為標籤管理器，都可以在允許清單中使用資料流配置工具。 此外，使用者需要[!DNL Experience Platform Launch]中的「開發」權限。 如需詳細資訊，請參閱[!DNL Experience Platform Launch]檔案中的[使用者權限](https://docs.adobe.com/content/help/zh-Hant/launch/using/reference/admin/user-permissions.html)文章。
+>無論客戶是否使用[!DNL Experience Platform Launch]作為標籤管理器，資料流配置工具都可供允許清單上的客戶使用。 此外，使用者需要[!DNL Experience Platform Launch]中的開發權限。 如需詳細資訊，請參閱[!DNL Experience Platform Launch]檔案中的[使用者權限](https://experienceleague.adobe.com/docs/launch/using/reference/admin/user-permissions.html)文章。
 
-按一下畫面右上方區域的&#x200B;**[!UICONTROL New Datastream]**&#x200B;以建立資料流。 在您提供名稱和說明後，系統會要求您針對每個環境提供預設設定。 可用的設定詳細如下。
+按一下畫面右上方區域的&#x200B;**[!UICONTROL 新資料流]**，建立資料流。 提供名稱和說明後，系統會要求您提供每個環境的預設設定。 可用的設定將於下文詳細說明。
 
-當建立資料流時，會自動建立三個設定相同的環境。 這三個環境是&#x200B;*dev*、*stage*&#x200B;和&#x200B;*prod*。 它們與[!DNL Experience Platform Launch]中的三個預設環境相匹配。 當您建立[!DNL Experience Platform Launch]程式庫至開發環境時，程式庫會自動使用您設定中的開發環境。 您可以視需要編輯個別環境中的設定。
+建立資料流時，系統會以相同設定自動建立三個環境。 這三個環境分別是&#x200B;*dev*、*stage*&#x200B;和&#x200B;*prod*。 它們符合[!DNL Experience Platform Launch]中的三個預設環境。 當您建置[!DNL Experience Platform Launch]程式庫至開發環境時，程式庫會自動使用您設定中的開發環境。 您可以視需要編輯個別環境中的設定。
 
-SDK中用作`edgeConfigId`的ID是指定組態和環境（例如`1c86778b-cdba-4684-9903-750e52912ad1:stage`）的複合ID。 如果複合ID中沒有環境（例如，上例中`stage`），則使用生產環境。
+SDK中作為`edgeConfigId`使用的ID是指定設定和環境（例如`1c86778b-cdba-4684-9903-750e52912ad1:stage`）的複合ID。 如果複合ID中沒有任何環境（例如，上一個範例中的`stage`），則會使用生產環境。
 
-以下是每個配置環境的可用設定。 大部分區域都可以啟用或禁用。 停用時，您的設定會儲存，但並未作用中。
+以下是每個配置環境的可用設定。 大部分區段都可以啟用或停用。 停用時，會儲存您的設定，但未啟用。
 
-## [!UICONTROL Third Party ID] 設定
+## [!UICONTROL 第三方] IDSettings
 
-第三方ID區段是唯一永遠開啟的區段。 它有兩個可用的設定：&quot;[!UICONTROL Third Party ID Sync Enabled]&quot;和&quot;[!UICONTROL Third Party ID Sync Container ID]&quot;。
+第三方ID區段是唯一一律開啟的區段。 它有兩個可用的設定：&quot;[!UICONTROL 第三方ID同步已啟用]&quot;和&quot;[!UICONTROL 第三方ID同步容器ID]&quot;。
 
-![配置UI的標識部分](../../assets/edge_configuration_identity.png)
+![設定UI的身分區段](../../assets/edge_configuration_identity.png)
 
-### [!UICONTROL Third Party ID Sync Enabled]
+### [!UICONTROL 已啟用第三方ID同步]
 
-控制SDK是否與第三方合作夥伴執行身分同步。
+控制SDK是否執行與第三方合作夥伴的身分同步。
 
-### [!UICONTROL Third Party ID Sync Container ID]
+### [!UICONTROL 第三方ID同步容器ID]
 
-ID同步可分組至容器，以允許在不同時間執行不同的ID同步。 這會控制為指定的設定ID執行哪個ID同步的容器。
+ID同步可分組為容器，以便在不同時間執行不同的ID同步。 這會控制為指定的設定ID執行哪個ID同步的容器。
 
 ## Adobe Experience Platform設定
 
-此處列出的設定可讓您傳送資料至Adobe Experience Platform。 只有在您購買了Adobe Experience Platform時，您才應啟用本節。
+此處列出的設定可讓您將資料傳送至Adobe Experience Platform。 只有在您已購買Adobe Experience Platform時，才應啟用此區段。
 
-![Adobe Experience Platform設定塊](../../assets/edge_configuration_aep.png)
+![Adobe Experience Platform設定區塊](../../assets/edge_configuration_aep.png)
 
-### [!UICONTROL Sandbox]
+### [!UICONTROL 沙箱]
 
-沙盒是位於Adobe Experience Platform的位置，可讓客戶將資料和建置彼此隔離。 如需其運作方式的詳細資訊，請參閱[沙盒檔案](../../sandboxes/home.md)。
+沙箱是Adobe Experience Platform中的位置，可讓客戶將其資料和實作彼此隔離。 如需其運作方式的詳細資訊，請參閱[沙箱檔案](../../sandboxes/home.md)。
 
-### [!UICONTROL Streaming Inlet]
+### [!UICONTROL 串流入口]
 
-串流入口是Adobe Experience Platform的HTTP來源。 這些會在Adobe Experience Platform的「[!UICONTROL Sources]」標籤下建立為HTTP API。
+串流入口是Adobe Experience Platform中的HTTP來源。 這些ID會在Adobe Experience Platform的「[!UICONTROL Sources]」標籤下以HTTP API形式建立。
 
-### [!UICONTROL Event Dataset]
+### [!UICONTROL 事件資料集]
 
-資料流支援向具有[!UICONTROL Experience Event]類模式的資料集發送資料。
+資料流支援將資料傳送至具有[!UICONTROL 體驗事件]結構的資料集。
 
 ## Adobe Target設定
 
-若要設定Adobe Target，您必須提供用戶端代碼。 其他欄位則為選用。
+若要設定Adobe Target，您必須提供用戶端代碼。 其他欄位為選用。
 
-![Adobe Target設定塊](../../assets/edge_configuration_target.png)
+![Adobe Target設定區塊](../../assets/edge_configuration_target.png)
 
 >[!NOTE]
 >
->與客戶端代碼關聯的組織必須與建立配置ID的組織匹配。
+>與用戶端代碼相關聯的組織必須符合建立設定ID的組織。
 
-### [!UICONTROL Client Code]
+### [!UICONTROL 用戶端代碼]
 
-目標帳戶的唯一ID。 若要找到此問題，您可以導覽至[!UICONTROL at.js]或[!UICONTROL mbox.js]的[!UICONTROL download]按鈕旁的[!UICONTROL Adobe Target] > [!UICONTROL Setup]> [!UICONTROL Implementation] > [!UICONTROL edit settings]
+目標帳戶的唯一ID。 若要找到此資訊，您可以導覽至[!UICONTROL Adobe Target] > [!UICONTROL [!UICONTROL > ]實作] > [!UICONTROL 編輯]旁的設定[!UICONTROL ，適用於[!UICONTROL at.js]或[!UICONTROL mbox.js]]
 
-### [!UICONTROL Property Token]
+### [!UICONTROL 屬性代號]
 
-[!DNL Target] 可讓客戶透過使用屬性來控制權限。有關詳細資訊，請參閱[!DNL Target]文檔的[企業權限](https://docs.adobe.com/content/help/en/target/using/administer/manage-users/enterprise/properties-overview.html)部分。
+[!DNL Target] 可讓客戶透過使用屬性來控制權限。詳細資訊可在[!DNL Target]檔案的[企業權限](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/properties-overview.html)區段中找到。
 
-屬性Token可在[!UICONTROL Adobe Target] > [!UICONTROL setup] > [!UICONTROL Properties]中找到
+您可以在[!UICONTROL Adobe Target] > [!UICONTROL setup] > [!UICONTROL Properties]中找到屬性代號
 
-### [!UICONTROL Target Environment ID]
+### [!UICONTROL 目標環境ID]
 
-[Adobe Target](https://docs.adobe.com/content/help/en/target/using/administer/hosts.html) 的環境可協助您透過各個開發階段管理實作。此設定指定要與每個環境一起使用的環境。
+[](https://experienceleague.adobe.com/docs/target/using/administer/hosts.html) Adobe Target中的環境可協助您透過所有開發階段管理實作。此設定會指定您要與每個環境搭配使用的環境。
 
-Adobe建議您對`dev`、`stage`和`prod`資料流環境分別設定此設定，以保持簡單。 不過，如果您已定義了Adobe Target環境，則可使用這些環境。
+Adobe建議您針對`dev`、`stage`和`prod`資料流環境分別以不同方式設定此設定，以保持簡單。 不過，如果您已定義Adobe Target環境，則可使用這些環境。
 
 ## Adobe Audience Manager設定
 
-傳送資料至Adobe Audience Manager所需的一切，就是啟用本節。 其他設定是選擇性的，但建議使用。
+將資料傳送至Adobe Audience Manager所需的全部是啟用此區段。 其他設定為選用，但建議使用。
 
-![Adobe觀眾管理設定區塊](../../assets/edge_configuration_aam.png)
+![Adobe對象管理設定區塊](../../assets/edge_configuration_aam.png)
 
-### [!UICONTROL Cookie Destinations Enabled]
+### [!UICONTROL Cookie目的地已啟用]
 
-允許SDK透過[Cookie目標](https://docs.adobe.com/content/help/en/audience-manager/user-guide/features/destinations/custom-destinations/create-cookie-destination.html)從[!DNL Audience Manager]共用區段資訊。
+允許SDK透過[Cookie目的地](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/custom-destinations/create-cookie-destination.html)從[!DNL Audience Manager]共用區段資訊。
 
-### [!UICONTROL URL Destinations Enabled]
+### [!UICONTROL 已啟用URL目的地]
 
-允許SDK透過[URL目標](https://docs.adobe.com/content/help/en/audience-manager/user-guide/features/destinations/custom-destinations/create-url-destination.html)分享區段資訊。 這些配置在[!DNL Audience Manager]中。
+允許SDK透過[URL目的地](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/custom-destinations/create-url-destination.html)共用區段資訊。 這些設定在[!DNL Audience Manager]中。
 
 ## Adobe Analytics設定
 
-控制資料是否傳送至Adobe Analytics。 其他詳細資訊請參閱[Analytics概述](../data-collection/adobe-analytics/analytics-overview.md)。
+控制資料是否傳送至Adobe Analytics。 其他詳細資訊位於[Analytics概述](../data-collection/adobe-analytics/analytics-overview.md)中。
 
-![Adobe Analytics設定塊](../../assets/edge_configuration_aa.png)
+![Adobe Analytics設定區塊](../../assets/edge_configuration_aa.png)
 
-### [!UICONTROL Report Suite ID]
+### [!UICONTROL 報告套裝 ID]
 
-報表套裝位於[!UICONTROL Admin > ReportSuites]下的「Adobe Analytics管理」區段中。 如果指定多個報表套裝，則資料會複製到每個報表套裝。
+您可在「Adobe Analytics管理員」區段的「[!UICONTROL 管理員>報表套裝]」下找到報表套裝。 若指定多個報表套裝，則資料會複製到每個報表套裝。
