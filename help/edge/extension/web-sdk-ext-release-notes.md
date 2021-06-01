@@ -3,10 +3,10 @@ title: Adobe Experience Platform Web SDK擴充功能發行說明
 description: Adobe Experience Platform Launch 中的 Adobe Experience Platform Web SDK 擴充功能
 seo-description: Adobe Experience Platform Launch 中的 Adobe Experience Platform Web SDK 擴充功能
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: c3d66e50f647c2203fcdd5ad36ad86ed223733e3
+source-git-commit: ec841a028d2a6acbdb1c1406026bbd4574cbc2ee
 workflow-type: tm+mt
-source-wordcount: '1130'
-ht-degree: 78%
+source-wordcount: '1232'
+ht-degree: 73%
 
 ---
 
@@ -14,7 +14,17 @@ ht-degree: 78%
 
 本檔案涵蓋適用於Adobe Experience Platform Launch的Adobe Experience Platform Web SDK擴充功能發行說明。 如需SDK本身的最新發行說明，請參閱[平台Web SDK發行說明](https://experienceleague.adobe.com/docs/experience-platform/edge/release-notes.html)。
 
-## 2020 年 3 月 9 日
+## 2021 年 6 月 1 日
+
+### Adobe Experience Platform Web SDK 2.5.0
+
+包含 2.5.0 版的 Adobe Experience Platform Web SDK 程式庫。
+
+* 將`data`欄位新增至「傳送事件」動作。 近期檔案將說明如何在特定情況下使用此功能。
+* 在「XDM物件」資料元素檢視中，若使用者有Adobe Experience Platform沙箱的存取權，但未存取設定為組織預設的沙箱，則會擲回錯誤，此問題已獲修正。
+* 在XDM物件資料元素檢視中，修正即使父物件不含任何值，必要架構欄位仍會視為無效的問題。
+
+## 2021 年 3 月 9 日
 
 ### Adobe Experience Platform Web SDK 2.4.0
 
