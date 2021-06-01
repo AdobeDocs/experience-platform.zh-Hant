@@ -5,9 +5,9 @@ title: XDM ExperienceEvent類別
 topic-legacy: overview
 description: 本檔案概述XDM ExperienceEvent類別，以及事件資料模型的最佳實務。
 exl-id: a8e59413-b52f-4ea5-867b-8d81088a3321
-source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
+source-git-commit: c5b15cf23801457c3846499185d7dfd61cfa5291
 workflow-type: tm+mt
-source-wordcount: '1482'
+source-wordcount: '1567'
 ht-degree: 1%
 
 ---
@@ -24,9 +24,9 @@ ht-degree: 1%
 
 | 屬性 | 說明 |
 | --- | --- |
-| `_id` | 事件的唯一字串識別碼。 此欄位可用來追蹤個別事件的獨特性、防止資料重複，以及在下游服務中尋找該事件。<br><br>在某些情 `_id` 況下，可 [以是通用唯一識別碼(UUID)](https://tools.ietf.org/html/rfc4122) 或 [全域唯一識別碼(GUID)](https://docs.microsoft.com/en-us/dotnet/api/system.guid?view=net-5.0)。在Adobe Experience Platform資料準備中，此值可使用[`uuid`或`guid`對應函式](../../data-prep/functions.md#special-operations)產生。<br><br>如果您是從來源連線串流資料，或直接從Parquet檔案擷取資料，應串連特定組合欄位，讓即使是唯一的，例如主要ID、時間戳記、事件類型等，以產生此值。<br><br>請務必區分， **此欄位不代表與個人相關的身分**，而是資料本身的記錄。與人相關的身份資料應被降級為由相容的mixin提供的[身份欄位](../schema/composition.md#identity)。 |
+| `_id` | 事件的唯一字串識別碼。 此欄位可用來追蹤個別事件的獨特性、防止資料重複，以及在下游服務中尋找該事件。 在某些情況下，`_id`可以是[通用唯一識別碼(UUID)](https://tools.ietf.org/html/rfc4122)或[全域唯一識別碼(GUID)](https://docs.microsoft.com/en-us/dotnet/api/system.guid?view=net-5.0)。<br><br>如果您是從來源連線串流資料，或直接從Parquet檔案內嵌資料，應串連使事件唯一的特定欄位組合（例如主要ID、時間戳記、事件類型等），以產生此值。串連值必須是`uri-reference`格式字串，表示必須移除任何冒號字元。 之後，串連值應該會使用SHA-256或您選擇的其他演算法來雜湊。<br><br>請務必區分， **此欄位不代表與個人相關的身分**，而是資料本身的記錄。與人員相關的身份資料應降級為由相容欄位群組提供的[身分欄位](../schema/composition.md#identity)。 |
 | `eventMergeId` | 如果使用[Adobe Experience Platform Web SDK](../../edge/home.md)來內嵌資料，則此量度代表內嵌批次的ID，該批次會建立記錄。 資料擷取時，系統會自動填入此欄位。 不支援在Web SDK實作內容之外使用此欄位。 |
-| `eventType` | 指出事件類型或類別的字串。 如果您想要區分相同結構和資料集中的不同事件類型，例如區分零售公司的產品檢視事件與購物車附加事件，則可使用此欄位。<br><br>此屬性的標準值在附錄部分 [中提供](#eventType)，包括其預期使用案例的說明。此欄位是可擴充的列舉，這表示您也可以使用自己的事件類型字串，將您追蹤的事件分類。 |
+| `eventType` | 指出事件類型或類別的字串。 如果您想要區分相同結構和資料集中的不同事件類型，例如區分零售公司的產品檢視事件與購物車附加事件，則可使用此欄位。<br><br>此屬性的標準值在附錄部分 [中提供](#eventType)，包括其預期使用案例的說明。此欄位是可擴充的列舉，這表示您也可以使用自己的事件類型字串，將您追蹤的事件分類。<br><br>`eventType` 限制您在應用程式上每次點擊只使用單一事件，因此您必須使用計算欄位，讓系統知道最重要的事件。如需詳細資訊，請參閱[計算欄位](#calculated)最佳實務一節。 |
 | `producedBy` | 描述事件產生者或來源的字串值。 如果需要，此欄位可用來篩選特定事件產生器以用於細分。<br><br>附錄一節提供此屬性的一些建 [議值](#producedBy)。此欄位是可擴充的列舉，這表示您也可以使用自己的字串來代表不同的事件產生者。 |
 | `identityMap` | 一個地圖欄位，其中包含事件所套用之個人的命名空間身分識別集。 系統會在擷取身分資料時自動更新此欄位。 為了為[即時客戶配置檔案](../../profile/home.md)正確使用此欄位，請勿嘗試手動更新資料操作中欄位的內容。<br /><br />如需其使用案例的詳細資訊，請 [參閱結構組合基](../schema/composition.md#identityMap) 本概念中的身分對應區段。 |
 | `timestamp` | 事件發生時的ISO 8601時間戳記，格式為[RFC 3339第5.6節](https://tools.ietf.org/html/rfc3339#section-5.6)。 此時間戳記必須發生在過去。 如需使用此欄位的最佳實務，請參閱下方[時間戳記](#timestamps)的一節。 |
@@ -41,17 +41,17 @@ ht-degree: 1%
 
 事件架構的根`timestamp`欄位只能&#x200B;****&#x200B;代表事件本身的觀察，且必須發生在過去。 如果您的分段使用案例需要使用未來可能發生的時間戳記，這些值必須在體驗事件結構的其他位置受到限制。
 
-例如，如果旅行和旅館業中的企業正在建立航班預訂事件的模型，則班級`timestamp`欄位表示觀察預訂事件的時間。 與事件相關的其他時間戳記，例如旅行預訂的開始日期，應在標準或自訂混合提供的個別欄位中擷取。
+例如，如果旅行和旅館業中的企業正在建立航班預訂事件的模型，則班級`timestamp`欄位表示觀察預訂事件的時間。 與事件相關的其他時間戳記，例如旅行預訂的開始日期，應在標準或自訂欄位群組提供的個別欄位中擷取。
 
 ![](../images/classes/experienceevent/timestamps.png)
 
 通過將類級時間戳記與事件結構中的其他相關日期時間值分開，您可以實施靈活的分段使用案例，同時保留體驗應用程式中客戶歷程的時間戳記帳戶。
 
-### 使用計算欄位
+### 使用計算欄位 {#calculated}
 
-您的體驗應用程式中的某些互動可能會產生多個相關事件，技術上會共用相同的事件時間戳記，因此可以呈現為單一事件記錄。 例如，如果客戶在您的網站上檢視產品，則可能會產生一個事件記錄，其中包含「產品檢視」屬性以及重疊的一般「頁面檢視」屬性。 在這些情況下，您可以在記錄中擷取多個事件時，使用計算欄位來擷取最重要的屬性。
+您的體驗應用程式中的某些互動可能會產生多個相關事件，技術上會共用相同的事件時間戳記，因此可以呈現為單一事件記錄。 例如，如果客戶在您的網站上檢視產品，則可能會產生有兩個潛在`eventType`值的事件記錄：「產品檢視」事件(`commerce.productViews`)或一般「頁面檢視」事件(`web.webpagedetails.pageViews`)。 在這些情況下，當單一點擊中擷取多個事件時，您可以使用計算欄位來擷取最重要的屬性。
 
-[Adobe Experience Platform Data ](../../data-prep/home.md) Prepack可讓您將資料對應、轉換及驗證至XDM和從XDM。使用服務提供的可用[映射函式](../../data-prep/functions.md)，可以調用邏輯運算子，以在將資料內嵌到Experience Platform中時優先處理、轉換和/或合併來自多事件記錄的資料。
+[Adobe Experience Platform Data ](../../data-prep/home.md) Prepack可讓您將資料對應、轉換及驗證至XDM和從XDM。使用服務提供的可用[映射函式](../../data-prep/functions.md)，可以調用邏輯運算子，以在將資料內嵌到Experience Platform中時優先處理、轉換和/或合併來自多事件記錄的資料。 在上述範例中，您可以將`eventType`指定為計算欄位，在「產品檢視」和「頁面檢視」同時發生時，將「產品檢視」優先順序設定於「頁面檢視」之上。
 
 如果您要透過UI手動將資料內嵌至Platform，請參閱[將CSV檔案對應至XDM](../../ingestion/tutorials/map-a-csv-file.md)的指南，以了解如何建立計算欄位的特定步驟。
 
