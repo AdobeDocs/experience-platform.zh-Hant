@@ -1,22 +1,34 @@
 ---
 keywords: 目的地；問題；常問的問題；常見問題集；目的地常見問題集
-title: 常見問題集
-seo-title: 常見問題集
+title: 常見問答
+seo-title: 常見問答
 description: 關於Adobe Experience Platform目的地最常問問題的回答
 seo-description: 關於Adobe Experience Platform目的地最常問問題的回答
-source-git-commit: 47b3ef28281e3480e8b194486845f4fb4326b7d4
+source-git-commit: a01b53758f4ad42272c39f71a08021d30900e7af
 workflow-type: tm+mt
-source-wordcount: '636'
-ht-degree: 6%
+source-wordcount: '733'
+ht-degree: 5%
 
 ---
 
 
-# 常見問題集 {#faq}
+# 常見問答 {#faq}
 
 ## 概述 {#overview}
 
 本檔案提供Adobe Experience Platform目的地相關常見問題的解答。 有關其他[!DNL Platform]服務的問題和故障排除，包括在所有[!DNL Platform] API中遇到的問題，請參閱[Experience Platform故障排除指南](../landing/troubleshooting.md)。
+
+## 一般目的地問題 {#general}
+
+**為何在Experience PlatformUI和匯出的CSV檔案中看到不同的設定檔計數？**
+
+這是正常行為，因為Experience Platform執行分段的方式。
+
+串流區段會全天更新串流區段的設定檔計數，而批次區段則會每24小時更新一次批次區段的設定檔計數。
+
+當區段匯出排程與區段排程不同時，UI與匯出的[!DNL CSV]檔案之間的設定檔計數會不同，尤其是當涉及到串流區段時。
+
+如需詳細資訊，請參閱[分段服務檔案](../segmentation/home.md)。
 
 ## [!DNL Facebook Custom Audiences] {#facebook-faq}
 
