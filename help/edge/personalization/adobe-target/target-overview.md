@@ -3,9 +3,9 @@ title: 將Adobe Target與Platform Web SDK搭配使用
 description: 了解如何使用Adobe Target透過Experience PlatformWeb SDK轉譯個人化內容
 keywords: target;adobe target;activity.id;experience.id;renderDecisions;decisionScopes；預先隱藏程式碼片段；vec；表單式體驗撰寫器；xdm；對象；決策；範圍；結構；
 exl-id: 021171ab-0490-4b27-b350-c37d2a569245
-source-git-commit: 32bc4fc3c8a33c5ba91f6edb0d859691046bccaf
+source-git-commit: 835fbee335c1b125f22a33f1806680514dfd9a6f
 workflow-type: tm+mt
-source-wordcount: '816'
+source-wordcount: '822'
 ht-degree: 3%
 
 ---
@@ -138,6 +138,10 @@ alloy("sendEvent", {
 [!DNL Platform Web SDK]可讓您將設定檔更新為[!DNL Target]設定檔和[!DNL Platform Web SDK]，作為體驗事件。
 
 若要更新[!DNL Target]設定檔，請確定設定檔資料是以下列方式傳遞：
+
+* 在 `“data {“` 底下。
+* 在 `“__adobe”` 底下。
+* 前置詞`“profile.”`，例如，如下所示
 
 | 代碼 | 類型 | 說明 |
 | --- | --- | --- |
