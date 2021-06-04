@@ -6,16 +6,16 @@ topic-legacy: tutorial
 type: Tutorial
 description: 了解如何在Experience Platform使用者介面中建立和編輯資料類型。
 exl-id: 2c917154-c425-463c-b8c8-04ba37d9247b
-source-git-commit: bcacf2ebe99c3e397cfd5ceaf418a51bec74e659
+source-git-commit: 14128b247b003a54cb0d91167bb46fccf16ed799
 workflow-type: tm+mt
-source-wordcount: '1161'
+source-wordcount: '1162'
 ht-degree: 0%
 
 ---
 
 # 使用UI建立和編輯資料類型
 
-在Experience Data Model(XDM)中，資料類型可重複使用的欄位，其中包含多個子欄位。 雖然與中的架構欄位組類似，它們允許一致地使用多欄位結構，但資料類型更靈活，因為它們可以包含在架構結構中的任何位置，而欄位組只能在根級別添加。
+在Experience Data Model(XDM)中，資料類型是可重複使用的欄位，包含多個子欄位。 雖然與中的架構欄位組類似，它們允許一致地使用多欄位結構，但資料類型更靈活，因為它們可以包含在架構結構中的任何位置，而欄位組只能在根級別添加。
 
 Adobe Experience Platform提供許多標準資料類型，可用來涵蓋多種常見的體驗管理使用案例。 不過，您也可以定義自己的自訂資料類型，以符合您的獨特業務需求。
 
