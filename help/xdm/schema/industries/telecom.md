@@ -1,23 +1,31 @@
 ---
 solution: Experience Platform
-title: 電信業資料模型ERD
+title: 電信行業資料模型ERD
 topic-legacy: overview
-description: 檢視實體關係圖(ERD)，其中說明電信產業的標準化資料模型，並與在Adobe Experience Platform使用的體驗資料模型(XDM)相容。
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+description: 檢視描述電信業標準化資料模型的實體關係圖(ERD)，此模型與Experience Data Model(XDM)相容，可在Adobe Experience Platform中使用。
+source-git-commit: 88c17992a391b24a76c3e387d3033df4c75a6aa6
 workflow-type: tm+mt
-source-wordcount: '73'
+source-wordcount: '218'
 ht-degree: 0%
 
 ---
 
 
-# [!UICONTROL Telecommunications] 行業資料模型ERD
+#  電信業資料模型ERD
 
-下列實體關係圖(ERD)代表電信業的標準化資料模型。
+以下實體關係圖(ERD)代表電信行業的標準化資料模型。 ERD是刻意以非標準化方式呈現，並考慮資料在Adobe Experience Platform中的儲存方式。
+
+使用下列圖例來解釋此ERD:
+
+* 中顯示的每個實體都以基礎的[Experience Data Model(XDM)類別](../composition.md#class)為基礎。
+* 對於指定實體，在&#x200B;**bold**&#x200B;中標籤的每一行代表欄位組或資料類型，其下提供的相關欄位以未粗體文字列出。
+* 指定實體的最重要欄位會以紅色突出顯示。
+* 可用於識別個別客戶的所有屬性都會標示為「身分」，其中一個屬性會標示為「主要身分」。
+* 實體關係會標示為不相依，因為以Cookie為基礎的事件通常無法判斷進行交易的人員或個人。
+
+
+![](../../images/industries/telecom.png)
 
 >[!NOTE]
 >
->有關行業資料模型以及如何解釋此ERD的詳細資訊，請參閱[行業資料模型概述](./overview.md)。
-
-![](../../images/industries/telecom.png)
+>「體驗事件」實體包含「_ID」欄位，代表XDM ExperienceEvent類別所提供的唯一識別碼(`_id`)屬性。 如需此值預期內容的詳細資訊，請參閱[XDM ExperienceEvent](../../classes/experienceevent.md)上的參考檔案。
