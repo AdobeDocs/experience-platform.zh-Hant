@@ -5,7 +5,7 @@ title: 最終用戶ID詳細資訊架構欄位組
 topic-legacy: overview
 description: 本文檔概述了最終用戶ID詳細資訊架構欄位組。
 exl-id: ff5b74f4-7700-4d10-821e-b50f80ea8c05
-source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
+source-git-commit: b22dce52563d5f3bbd1796c11d7c7b2a49fa6d5f
 workflow-type: tm+mt
 source-wordcount: '214'
 ht-degree: 2%
@@ -19,7 +19,7 @@ ht-degree: 2%
 >
 >數個架構欄位組的名稱已變更。 有關詳細資訊，請參閱[欄位組名稱更新](../name-updates.md)上的文檔。
 
-[!UICONTROL 最終用戶] ID詳細資訊類別 [[!DNL XDM ExperienceEvent] 的標準架構欄](../../classes/individual-profile.md)位群組，用於描述跨多個Adobe應用程式的個人身分資訊。欄位組提供根級`endUserIDs`對象，該對象本身包含只讀`_experience`欄位，其值在資料被內嵌時自動更新。
+[!UICONTROL 最終用戶] ID詳細資訊類別 [[!DNL XDM ExperienceEvent] 的標準架構欄](../../classes/experienceevent.md)位群組，用於描述跨多個Adobe應用程式的個人身分資訊。欄位組提供根級`endUserIDs`對象，該對象本身包含只讀`_experience`欄位，其值在資料被內嵌時自動更新。
 
 <img src="../../images/field-groups/enduserids.png" width="700" /><br />
 
