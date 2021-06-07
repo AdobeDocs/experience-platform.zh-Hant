@@ -5,7 +5,7 @@ title: 網頁詳細資料資料類型
 topic-legacy: overview
 description: 本檔案概述網頁詳細資訊Experience Data Model(XDM)資料類型。
 exl-id: 31108e57-d416-485b-a6c3-4ebc4f5b1152
-source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
+source-git-commit: b22dce52563d5f3bbd1796c11d7c7b2a49fa6d5f
 workflow-type: tm+mt
 source-wordcount: '411'
 ht-degree: 3%
@@ -16,7 +16,7 @@ ht-degree: 3%
 
 [!UICONTROL 網頁詳] 細資訊是標準的Experience Data Model(XDM)資料類型，可說明剛載入並檢視之網頁的詳細資訊（由ExperienceEvent記錄）。
 
-資料類型適用於單頁Web應用程式(SPA)的完整頁面詳細資料和初始頁面載入。 對於在載入頁面上發生的未觸發新頁面載入的互動，請參閱[web互動](./web-interactions.md)資料類型。
+資料類型適用於單頁Web應用程式(SPA)的完整頁面詳細資料和初始頁面載入。 對於在載入頁面上發生的未觸發新頁面載入的互動，請參閱[web互動](./web-interaction.md)資料類型。
 
 <img src="../images/data-types/web-page-details.PNG" width="500" /><br />
 
