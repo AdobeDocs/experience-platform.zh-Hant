@@ -2,80 +2,89 @@
 audience: user
 user-guide-title: Experience Data Model (XDM) 系統說明
 breadcrumb-title: Experience Data Model (XDM) 指南
-user-guide-description: 使用體驗資料模型(XDM)類別和架構欄位群組來標準化體驗資料。
+user-guide-description: 使用Experience Data Model(XDM)類別和結構欄位群組，以標準化體驗資料。
 feature: 結構描述
-source-git-commit: dcfdc9c479e8a77296f7cb0bf9f5bb36e9261b75
+source-git-commit: 9b6352eec56cf32e58d49be4d72b2fb4cf933b89
 workflow-type: tm+mt
-source-wordcount: '295'
+source-wordcount: '305'
 ht-degree: 17%
 
 ---
 
 
-# 體驗資料模型(XDM)系統 {#xdm}
+# Experience Data Model(XDM)系統 {#xdm}
 
-* [XDM系統概述](home.md)
+* [XDM系統概觀](home.md)
 * 結構描述 {#schema}
-   * [架構構成基礎](schema/composition.md)
-   * [資料建模的最佳實務](schema/best-practices.md)
-   * [XDM欄位類型約束](schema/field-constraints.md)
-   * [XDM中的命名空間](./schema/namespaces.md)
+   * [結構構成基本概念](schema/composition.md)
+   * [資料模型最佳實務](schema/best-practices.md)
+   * [XDM欄位類型限制](schema/field-constraints.md)
+   * [XDM中的名稱步調](./schema/namespaces.md)
    * [XDM欄位字典](schema/field-dictionary.md)
    * 行業資料模型{#industries}
       * [概述](./schema/industries/overview.md)
-      * [零售資料模型ERD](./schema/industries/retail.md)
-      * [金融服務資料模型](./schema/industries/financial.md)
-      * [旅行和接待服務資料模型](./schema/industries/travel-hospitality.md)
+      * [零售](./schema/industries/retail.md)
+      * [金融服務](./schema/industries/financial.md)
+      * [旅行和招待](./schema/industries/travel-hospitality.md)
 * 類別 {#classes}
-   * [XDM個人資料](./classes/individual-profile.md)
+   * [XDM個別設定檔](./classes/individual-profile.md)
    * [XDM ExperienceEvent](./classes/experienceevent.md)
    * [區段定義](./classes/segment-definition.md)
-* 方案欄位組{#field-groups}
+* 架構欄位組{#field-groups}
    * 配置檔案欄位組{#profile}
+      * [人口統計詳細資料](./field-groups/profile/demographic-details.md)
       * [IdentityMap](./field-groups/profile/identitymap.md)
-      * [人口統計詳細資訊](./field-groups/profile/demographic-details.md)
-      * [個人聯絡資訊](./field-groups/profile/personal-contact-details.md)
-      * [區段會籍詳細資訊](./field-groups/profile/segmentation.md)
+      * [忠誠度詳細資料](./field-groups/profile/loyalty-details.md)
+      * [個人聯繫人詳細資訊](./field-groups/profile/personal-contact-details.md)
+      * [隱私權/個人化/行銷偏好設定（同意）](./field-groups/profile/consents.md)
+      * [區段成員資格詳細資料](./field-groups/profile/segmentation.md)
       * [工作聯繫人詳細資訊](./field-groups/profile/work-contact-details.md)
-      * [隱私權／個人化／行銷偏好設定（同意）](./field-groups/profile/consents.md)
    * 事件欄位組{#event}
-      * [用戶ID詳細資訊](./field-groups/event/enduserids.md)
+      * [促銷活動行銷詳細資料](./field-groups/event/campaign-marketing-details.md)
+      * [管道詳細資料](./field-groups/event/channel-details.md)
+      * [商務詳細資訊](./field-groups/event/commerce-details.md)
+      * [最終用戶ID詳細資訊](./field-groups/event/enduserids.md)
       * [環境詳細資訊](./field-groups/event/environment-details.md)
-   * [欄位群組名稱更新](./field-groups/name-updates.md)
+      * [Web詳細資訊](./field-groups/event/web-details.md)
+   * [欄位組名稱更新](./field-groups/name-updates.md)
 * 資料類型 {#data-types}
    * [應用程式](./data-types/application.md)
    * [信標](./data-types/beacon.md)
    * [瀏覽器詳細資訊](./data-types/browser-details.md)
    * [商務](./data-types/commerce.md)
-   * [同意與偏好](./data-types/consents.md)
+   * [同意與偏好設定](./data-types/consents.md)
    * [裝置](./data-types/device.md)
    * [電子郵件地址](./data-types/email-address.md)
    * [環境](./data-types/environment.md)
-   * [通用許可欄位](./data-types/consent-field.md)
+   * [體驗管道](./data-types/experience-channel.md)
+   * [一般同意欄位](./data-types/consent-field.md)
    * [一般行銷偏好設定欄位](./data-types/marketing-field.md)
    * [具有訂閱的一般行銷偏好設定欄位](./data-types/marketing-field-subscriptions.md)
    * [一般個人化偏好設定欄位](./data-types/personalization-field.md)
    * [地理](./data-types/geo.md)
-   * [地域社交圈](./data-types/geo-circle.md)
-   * [地理坐標](./data-types/geo-coordinates.md)
-   * [地理互動詳細資訊](./data-types/geo-interaction-details.md)
+   * [地理圈](./data-types/geo-circle.md)
+   * [地理座標](./data-types/geo-coordinates.md)
+   * [地理互動詳細資料](./data-types/geo-interaction-details.md)
    * [地理形狀](./data-types/geo-shape.md)
-   * [身份](./data-types/identity.md)
+   * [身分](./data-types/identity.md)
+   * [行銷](./data-types/marketing.md)
    * [測量](./data-types/measure.md)
    * [訂購](./data-types/order.md)
    * [付款項](./data-types/payment-item.md)
    * [「人」](./data-types/person.md)
-   * [人員姓名](./data-types/person-name.md)
+   * [人員名稱](./data-types/person-name.md)
    * [電話號碼](./data-types/phone-number.md)
-   * [置入內容](./data-types/place-context.md)
+   * [放置內容](./data-types/place-context.md)
    * [POI詳細資訊](./data-types/poi-details.md)
    * [POI互動](./data-types/poi-interaction.md)
    * [郵遞區號](./data-types/postal-address.md)
+   * [產品清單項目](./data-types/product-list-item.md)
    * [搜尋](./data-types/search.md)
    * [訂閱](./data-types/subscription.md)
-   * [網路互動](./data-types/web-interactions.md)
+   * [網路資訊](./data-types/web-information.md)
+   * [網路互動](./data-types/web-interaction.md)
    * [網頁詳細資訊](./data-types/webpage-details.md)
-* [!UICONTROL 架構] UI  {#ui}
+*  綱要UI  {#ui}
    * [概述](./ui/overview.md)
    * [探索 XDM 資源](./ui/explore.md)
    * 建立和編輯資源{#resources}
@@ -93,28 +102,28 @@ ht-degree: 17%
       * [關係欄位](./ui/fields/relationship.md)
    * [產生範例XDM資料](./ui/sample.md)
    * [匯出XDM結構](./ui/export.md)
-* 方案註冊表API {#api}
+* 架構註冊表API {#api}
    * [概述](api/overview.md)
    * [快速入門](api/getting-started.md)
    * [結構描述](api/schemas.md)
    * [行為](api/behaviors.md)
    * [類別](api/classes.md)
-   * [架構欄位組](api/field-groups.md)
+   * [架構欄位群組](api/field-groups.md)
    * [資料類型](api/data-types.md)
    * [描述符](api/descriptors.md)
    * [工會](api/unions.md)
-   * [匯出／匯入](api/export-import.md)
+   * [匯出/匯入](api/export-import.md)
    * [範例資料](api/sample-data.md)
-   * [審計日誌](api/audit-log.md)
+   * [稽核記錄](api/audit-log.md)
    * [臨機結構](api/ad-hoc.md)
-   * [Mixins（已過時）](api/mixins.md)
+   * [Mixin（已廢止）](api/mixins.md)
    * [附錄](api/appendix.md)
 * 教學課程 {#tutorials}
    * [建立結構(UI)](tutorials/create-schema-ui.md)
    * [建立結構(API)](tutorials/create-schema-api.md)
-   * [定義兩個結構描述(UI)之間的關係](tutorials/relationship-ui.md)
-   * [定義兩個結構描述(API)之間的關係](tutorials/relationship-api.md)
+   * [定義兩個結構(UI)之間的關係](tutorials/relationship-ui.md)
+   * [定義兩個結構(API)之間的關係](tutorials/relationship-api.md)
    * [建立臨機結構(API)](tutorials/ad-hoc.md)
 * [疑難排解指南](troubleshooting-guide.md)
 * [API 參考資料](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml)
-* [平台版本注意事項](https://www.adobe.com/go/platform-release-notes-en)
+* [平台發行說明](https://www.adobe.com/go/platform-release-notes-en)
