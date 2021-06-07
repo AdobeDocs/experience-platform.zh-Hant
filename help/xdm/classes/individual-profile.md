@@ -5,9 +5,9 @@ title: XDM個別設定檔類別
 topic-legacy: overview
 description: 本檔案概述XDM個別設定檔類別。
 exl-id: 83b22462-79ce-4024-aa50-a9bd800c0f81
-source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
+source-git-commit: eddaa7090af2d2c947f154272bb219dc2e3bca08
 workflow-type: tm+mt
-source-wordcount: '455'
+source-wordcount: '561'
 ht-degree: 1%
 
 ---
@@ -25,7 +25,7 @@ ht-degree: 1%
 | 屬性 | 說明 |
 | --- | --- |
 | `_repo` | 包含下列[!UICONTROL DateTime]欄位的對象： <ul><li>`createDate`:在資料存放區中建立資源的日期和時間，例如首次擷取資料的時間。</li><li>`modifyDate`:上次修改資源的日期和時間。</li></ul> |
-| `_id` | 記錄的唯一標識符。 此欄位用於追蹤個別記錄的獨特性、防止資料重複，以及在下游服務中尋找該記錄。<br><br>必須區分，此欄位 **不** 會呈現與個人相關的身分，而是資料本身的記錄。與人員相關的身分資料應降級為[身分欄位](../schema/composition.md#identity)。 |
+| `_id` | 記錄的唯一字串標識符。 此欄位可用來追蹤個別記錄的獨特性、防止資料重複，以及在下游服務中尋找該記錄。 在某些情況下，`_id`可以是[通用唯一識別碼(UUID)](https://tools.ietf.org/html/rfc4122)或[全域唯一識別碼(GUID)](https://docs.microsoft.com/en-us/dotnet/api/system.guid?view=net-5.0)。<br><br>如果您是從來源連線串流資料或直接從Parquet檔案擷取資料，應串連使記錄唯一的特定欄位組合（例如主要ID、時間戳記、記錄類型等），以產生此值。串連值必須是`uri-reference`格式字串，表示必須移除任何冒號字元。 之後，串連值應該會使用SHA-256或您選擇的其他演算法來雜湊。<br><br>請務必區分， **此欄位不代表與個人相關的身分**，而是資料本身的記錄。與人員相關的身份資料應降級為由相容欄位群組提供的[身分欄位](../schema/composition.md#identity)。 |
 | `createdByBatchID` | 導致建立記錄的所擷取批次ID。 |
 | `modifiedByBatchID` | 導致記錄更新的上次擷取批次的ID。 |
 | `personID` | 此記錄相關的個人的唯一標識符。 除非此欄位也指定為[identity欄位](../schema/composition.md#identity)，否則此欄位不一定代表與人員相關的身分。 |
