@@ -4,10 +4,10 @@ description: 了解如何使用Web SDK中的處理規則，手動將變數對應
 seo-description: 使用搭配Web SDK的處理規則，手動將變數對應至Adobe Analytics
 keywords: adobe analytics;analytics；變數；對應變數；對應變數；contextData；內容資料；處理規則；規則；xdm；結構；
 exl-id: 395050c1-8d39-4da8-acea-6e618ed662dd
-source-git-commit: c3d66e50f647c2203fcdd5ad36ad86ed223733e3
+source-git-commit: d67c8c0ada6dc4bf07b73547f9e571a8a7386b75
 workflow-type: tm+mt
-source-wordcount: '391'
-ht-degree: 17%
+source-wordcount: '395'
+ht-degree: 16%
 
 ---
 
@@ -17,7 +17,7 @@ Adobe Experience Platform [!DNL Web SDK]可以自動對應某些變數，但自�
 
 對於未自動對應至[!DNL Analytics]的XDM資料，您可以使用[內容資料](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/contextdata.html)來比對您的[結構](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/composition.html)。 然後，可使用[處理規則](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/processing-rules/processing-rules-configuration/t-processing-rules.html)將其對應至[!DNL Analytics]，以填入[!DNL Analytics]變數。
 
-此外，您也可以使用一組預設的動作和產品清單，以使用Adobe Experience Platform Web SDK傳送或擷取資料。 若要這麼做，請參閱[產品](https://experienceleague.adobe.com/docs/experience-platform/edge/implement/commerce.html)。
+此外，您也可以使用一組預設的動作和產品清單，以使用Adobe Experience Platform Web SDK傳送或擷取資料。 要執行此操作，請參閱[收集商務和產品資訊](https://experienceleague.adobe.com/docs/experience-platform/edge/data-collection/collect-commerce-data.html)。
 
 ## 內容資料
 
