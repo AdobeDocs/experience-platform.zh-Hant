@@ -5,7 +5,7 @@ title: 環境詳細資訊架構欄位組
 topic-legacy: overview
 description: 本檔案提供ExperienceEvent環境詳細資料結構欄位群組的概觀。
 exl-id: 1d25b98f-66ac-443f-9b1c-dfd20a168c59
-source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
+source-git-commit: b22dce52563d5f3bbd1796c11d7c7b2a49fa6d5f
 workflow-type: tm+mt
 source-wordcount: '215'
 ht-degree: 3%
@@ -19,7 +19,7 @@ ht-degree: 3%
 >
 >數個架構欄位組的名稱已變更。 有關詳細資訊，請參閱[欄位組名稱更新](../name-updates.md)上的文檔。
 
-[!UICONTROL 環境] 詳細資料是類別的標準結構欄 [[!DNL XDM ExperienceEvent] ](../../classes/individual-profile.md) 位群組，用來擷取與體驗事件相關的環境詳細資料資訊，例如裝置詳細資料、瀏覽器資訊、當地時間和其他地理位置資訊。
+[!UICONTROL 環境] 詳細資料是類別的標準結構欄 [[!DNL XDM ExperienceEvent] ](../../classes/experienceevent.md) 位群組，用來擷取與體驗事件相關的環境詳細資料資訊，例如裝置詳細資料、瀏覽器資訊、當地時間和其他地理位置資訊。
 
 <img src="../../images/field-groups/environment-details.png" width="500" /><br />
 
