@@ -5,9 +5,9 @@ title: XDM個別設定檔類別
 topic-legacy: overview
 description: 本檔案概述XDM個別設定檔類別。
 exl-id: 83b22462-79ce-4024-aa50-a9bd800c0f81
-source-git-commit: eddaa7090af2d2c947f154272bb219dc2e3bca08
+source-git-commit: ecb9c9a4158f3d2981ab60ee3bf419464ac7b8f1
 workflow-type: tm+mt
-source-wordcount: '561'
+source-wordcount: '568'
 ht-degree: 1%
 
 ---
@@ -42,10 +42,12 @@ ht-degree: 1%
 
 Adobe提供多個標準欄位組以用於[!DNL XDM Individual Profile]類。 以下是類別一些常用欄位群組的清單：
 
-* [[!UICONTROL IdentityMap]](../field-groups/profile/identitymap.md)
 * [[!UICONTROL 人口統計詳細資料]](../field-groups/profile/demographic-details.md)
+* [[!UICONTROL IdentityMap]](../field-groups/profile/identitymap.md)
+* [[!UICONTROL 忠誠度詳細資料]](../field-groups/profile/loyalty-details.md)
 * [[!UICONTROL 個人聯繫人詳細資訊]](../field-groups/profile/personal-contact-details.md)
-* [[!UICONTROL 工作聯繫人詳細資訊]](../field-groups/profile/work-contact-details.md)
+* [[!UICONTROL 隱私權/個人化/行銷偏好設定（同意）]](../field-groups/profile/consents.md)
 * [[!UICONTROL 區段成員資格詳細資料]](../field-groups/profile/segmentation.md)
+* [[!UICONTROL 工作聯繫人詳細資訊]](../field-groups/profile/work-contact-details.md)
 
 如需[!DNL XDM Individual Profile]所有相容欄位群組的完整清單，請參閱[ XDM GitHub repo](https://github.com/adobe/xdm/tree/master/components/mixins/profile)。
