@@ -5,10 +5,10 @@ title: 資料準備映射函式
 topic-legacy: overview
 description: 本文檔介紹與資料準備一起使用的映射函式。
 exl-id: e95d9329-9dac-4b54-b804-ab5744ea6289
-source-git-commit: 8193045079bbd8a61c4bc2aee0bf9412e4e2ae31
+source-git-commit: 1133580d6d4d8df352ab901d5106f0bb6c1f2a08
 workflow-type: tm+mt
-source-wordcount: '3934'
-ht-degree: 3%
+source-wordcount: '3935'
+ht-degree: 4%
 
 ---
 
@@ -115,7 +115,7 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 | now | 擷取目前時間。 |  | now() | now() | `2020-09-23T10:10:24.556-07:00[America/Los_Angeles]` |
 | timestamp | 檢索當前Unix時間。 |  | timestamp() | timestamp() | 1571850624571 |
 | 格式 | 根據指定的格式設定輸入日期的格式。 | <ul><li>日期：**必要**&#x200B;要格式化的輸入日期，作為ZonedDateTime對象。</li><li>格式：**必要**&#x200B;您要將日期變更為的格式。</li></ul> | 格式（日期，格式） | format(2019-10-23T11:24:00+00:00, &quot;yyyy-MM-dd HH:mm:ss&quot;) | &quot;2019-10-23 11:24:35&quot; |
-| dformat | 根據指定格式將時間戳轉換為日期字串。 | <ul><li>時間戳：**必要**&#x200B;您要格式化的時間戳記。 這會以毫秒為單位寫入。</li><li>格式：**必要**&#x200B;您希望將時間戳變更為的格式。</li></ul> | dformat&#x200B;(TIMESTAMP, FORMAT) | dformat(1571829875, &quot;dd-MMM-yyyy hh:mm&quot;) | 「2019年10月23日11:24」 |
+| dformat | 根據指定格式將時間戳轉換為日期字串。 | <ul><li>時間戳：**必要**&#x200B;您要格式化的時間戳記。 這會以毫秒為單位寫入。</li><li>格式：**必要**&#x200B;您希望將時間戳變更為的格式。</li></ul> | dformat&#x200B;(TIMESTAMP, FORMAT) | dformat(1571829875000, &quot;yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSX&quot;) | &quot;2019-10-23T11:24:35.000Z&quot; |
 | 日期 | 將日期字串轉換為ZonedDateTime對象（ISO 8601格式）。 | <ul><li>日期：**必要**&#x200B;代表日期的字串。</li><li>格式：**必要**&#x200B;代表日期格式的字串。</li><li>DEFAULT_DATE:**必要**&#x200B;如果提供的日期為空，則返回預設日期。</li></ul> | date(DATE, FORMAT, DEFAULT_DATE) | date(&quot;2019-10-23 11:24&quot;, &quot;yyyy-MM-dd HH:mm&quot;, now()) | &quot;2019-10-23T11:24Z&quot; |
 | 日期 | 將日期字串轉換為ZonedDateTime對象（ISO 8601格式）。 | <ul><li>日期：**必要**&#x200B;代表日期的字串。</li><li>格式：**必要**&#x200B;代表日期格式的字串。</li></ul> | 日期（日期，格式） | date(&quot;2019-10-23 11:24&quot;, &quot;yyyy-MM-dd HH:mm&quot;) | &quot;2019-10-23T11:24Z&quot; |
 | 日期 | 將日期字串轉換為ZonedDateTime對象（ISO 8601格式）。 | <ul><li>日期：**必要**&#x200B;代表日期的字串。</li></ul> | 日期（日期） | date(&quot;2019-10-23 11:24&quot;) | &quot;2019-10-23T11:24Z&quot; |
