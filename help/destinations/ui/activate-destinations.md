@@ -6,16 +6,16 @@ seo-title: 將設定檔和區段啟用至目的地
 description: 將區段對應至目的地，以啟動您在Adobe Experience Platform中的資料。 若要完成此操作，請遵循下列步驟。
 seo-description: 將區段對應至目的地，以啟動您在Adobe Experience Platform中的資料。 若要完成此操作，請遵循下列步驟。
 exl-id: c3792046-ffa8-4851-918f-98ced8b8a835
-source-git-commit: 27aafcbfc8f52491387561514e3b34313cc5d943
+source-git-commit: a8822d66443cc4cda761e1f0963b0e0251427911
 workflow-type: tm+mt
-source-wordcount: '2565'
+source-wordcount: '2688'
 ht-degree: 0%
 
 ---
 
 # 將設定檔和區段啟用至目的地
 
-## 概述 {#overview}
+## 概覽 {#overview}
 
 將區段對應至目的地，以啟動您在[!DNL Adobe Experience Platform]中擁有的資料。 若要完成此操作，請遵循下列步驟。
 
@@ -48,6 +48,11 @@ ht-degree: 0%
 ![區段至目的地](../assets/ui/activate-destinations/email-select-segments.png)
 
 ##  對應步驟 {#mapping}
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_activate_applytransformation"
+>title="套用轉換"
+>abstract="使用未雜湊的來源欄位時，請核取此選項，讓Adobe Experience Platform在啟動時自動雜湊這些欄位。"
 
 適用於：社交目的地和Google Customer Match廣告目的地
 
@@ -239,6 +244,12 @@ ht-degree: 0%
 
 ### 強制屬性{#mandatory-attributes}
 
+>[!CONTEXTUALHELP]
+>id="platform_destinations_activate_mandatorykey"
+>title="關於必要屬性"
+>abstract="選取所有匯出的設定檔都應包含的XDM結構屬性。 不含強制鍵的設定檔不會匯出至目的地。 不選取強制索引鍵會匯出所有符合資格的設定檔（無論其屬性為何）。"
+>additional-url="http://www.adobe.com/go/destinations-mandatory-attributes-en" text="進一步了解檔案"
+
 您可以將屬性標示為必填，以確保[!DNL Platform]僅匯出包含特定屬性的設定檔。 因此，它可作為額外的篩選形式使用。 將屬性標示為必要屬性是&#x200B;**不需要**。
 
 不選擇強制屬性會匯出所有符合資格的設定檔（無論其屬性為何）。
@@ -246,6 +257,12 @@ ht-degree: 0%
 建議您將結構中的一個屬性設為[唯一識別碼](../../destinations/catalog/email-marketing/overview.md#identity)。 如需強制屬性的詳細資訊，請參閱[電子郵件行銷目的地](../../destinations/catalog/email-marketing/overview.md#identity)檔案中的身分區段。
 
 ### 重複資料刪除鍵{#deduplication-keys}
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_activate_deduplicationkey"
+>title="關於重複資料刪除金鑰"
+>abstract="選取重複資料刪除金鑰，即可在匯出檔案中消除相同設定檔的多個記錄。 選取單一命名空間或最多兩個XDM架構屬性作為重複資料刪除索引鍵。 未選取重複資料刪除金鑰可能會導致匯出檔案中出現重複的設定檔項目。"
+>additional-url="http://www.adobe.com/go/destinations-deduplication-keys-en" text="進一步了解檔案"
 
 >[!IMPORTANT]
 >
