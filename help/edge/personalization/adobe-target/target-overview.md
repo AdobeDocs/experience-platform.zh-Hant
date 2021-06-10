@@ -3,10 +3,10 @@ title: 將Adobe Target與Platform Web SDK搭配使用
 description: 了解如何使用Adobe Target透過Experience PlatformWeb SDK轉譯個人化內容
 keywords: target;adobe target;activity.id;experience.id;renderDecisions;decisionScopes；預先隱藏程式碼片段；vec；表單式體驗撰寫器；xdm；對象；決策；範圍；結構；
 exl-id: 021171ab-0490-4b27-b350-c37d2a569245
-source-git-commit: 202a77e4f9e8c7d5515ea0a5004b1c339f1d58ba
+source-git-commit: e7f5074ef776fc6ccd4f9951722861d771a371de
 workflow-type: tm+mt
-source-wordcount: '822'
-ht-degree: 3%
+source-wordcount: '918'
+ht-degree: 5%
 
 ---
 
@@ -21,6 +21,7 @@ ht-degree: 3%
 * [Automated Personalization活動](https://experienceleague.adobe.com/docs/target/using/activities/automated-personalization/automated-personalization.html)
 * [體驗鎖定目標活動](https://experienceleague.adobe.com/docs/target/using/activities/automated-personalization/automated-personalization.html)
 * [多變數測試(MVT)](https://experienceleague.adobe.com/docs/target/using/activities/multivariate-test/multivariate-testing.html)
+* [Recommendations活動](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations.html)
 * [原生Target曝光和轉換報表](https://experienceleague.adobe.com/docs/target/using/reports/reports.html)
 * [VEC支援](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html)
 
@@ -176,13 +177,42 @@ alloy("sendEvent", {
     __adobe: {
       target: {
         "profile.gender": "female",
-        "profile.age": 30
+        "profile.age": 30,
+	"entity.id" : "123",
+	"entity.genre" : "Drama"
       }
     }
   }
 }) 
 .then(console.log);
 ```
+
+## 要求建議
+
+下表列出[!DNL Recommendations]屬性，以及是否透過[!DNL Platform Web SDK]支援每個屬性：
+
+| 類別 | 屬性 | 支援狀態 |
+| --- | --- | --- |
+| Recommendations — 預設實體屬性 | entity.id | 支援 |
+|  | entity.name | 支援 |
+|  | entity.categoryId | 支援 |
+|  | entity.pageUrl | 支援 |
+|  | entity.thumbnailUrl | 支援 |
+|  | entity.message | 支援 |
+|  | entity.value | 支援 |
+|  | entity.inventory | 支援 |
+|  | entity.brand | 支援 |
+|  | entity.margin | 支援 |
+|  | entity.event.detailsOnly | 支援 |
+| Recommendations — 自訂實體屬性 | entity.yourCustomAttributeName | 支援 |
+| Recommendations — 保留mbox/頁面參數 | excludedIds | 支援 |
+|  | cartIds | 支援 |
+|  | productPurchasedId | 支援 |
+| 類別相關性的頁面或項目類別 | user.categoryId | 支援 |
+
+## 為  除錯
+
+已棄用mboxTrace和mboxDebug。 使用[[!DNL Platform Web SDK] debugging](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/debugging.html)。
 
 ## 術語
 
