@@ -1,60 +1,59 @@
 ---
-keywords: Experience Platform；首頁；熱門主題；分段；分段；分段服務；預覽；預覽和估計；估計和預覽；api;API;
+keywords: Experience Platform；首頁；熱門主題；分段；分段；分段服務；預覽；估計；預覽和估計；估計和預覽；API;API;
 solution: Experience Platform
 title: 預覽和估計API端點
 topic-legacy: developer guide
-description: 在開發區段定義時，您可以使用Adobe Experience Platform的預估和預覽工具來檢視摘要層級資訊，以協助您隔離預期的觀眾。
+description: 在開發區段定義時，您可以使用Adobe Experience Platform中的預估和預覽工具來檢視摘要層級資訊，以協助您確保隔離預期的對象。
 exl-id: 2c204f29-825f-4a5e-a7f6-40fc69263614
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: a5cc688357e4750dee73baf3fc9af02a9f2e49e3
 workflow-type: tm+mt
-source-wordcount: '949'
+source-wordcount: '978'
 ht-degree: 2%
 
 ---
 
 # 預覽和估計端點
 
-當您開發區段定義時，可以使用Adobe Experience Platform的預估和預覽工具來檢視摘要層級資訊，以協助您隔離預期的觀眾。
+當您開發區段定義時，可以使用Adobe Experience Platform中的預估和預覽工具來檢視摘要層級資訊，以協助您確保隔離預期的對象。
 
-* **預** 覽提供區段定義之合格描述檔的分頁清單，讓您比較結果與預期。
+* **** 預覽提供區段定義之合格設定檔的編頁清單，讓您能比較結果與預期的結果。
 
-* **「估** 計」會提供區段定義的統計資訊，例如預測對象大小、信賴區間和錯誤標準差。
+* **** 預估值會提供區段定義的統計資訊，例如投影對象大小、信賴區間和錯誤標準差。
 
 >[!NOTE]
 >
->若要存取與即時客戶描述檔資料相關的類似度量，例如特定名稱空間或描述檔資料存放區中的描述檔片段和合併描述檔總數，請參閱描述檔API開發人員指南中的[描述檔預覽（預覽範例狀態）端點指南](../../profile/api/preview-sample-status.md)。
+>若要存取與即時客戶設定檔資料相關的類似量度，例如特定命名空間內的設定檔片段和合併設定檔總數，或整個設定檔資料存放區，請參閱「設定檔API開發人員指南」的[設定檔預覽（預覽範例狀態）端點指南](../../profile/api/preview-sample-status.md)。
 
 ## 快速入門
 
-本指南中使用的端點是[!DNL Adobe Experience Platform Segmentation Service] API的一部分。 在繼續之前，請參閱[快速入門手冊](./getting-started.md)，以取得成功呼叫API所需的重要資訊，包括必要的標題和如何讀取範例API呼叫。
+本指南中使用的端點是[!DNL Adobe Experience Platform Segmentation Service] API的一部分。 繼續之前，請檢閱[快速入門手冊](./getting-started.md)，以取得您需要了解的重要資訊，以成功呼叫API，包括必要的標題和如何讀取範例API呼叫。
 
 ## 如何產生估計
 
-當將記錄擷取至描述檔儲存區時，會觸發取樣工作以更新該計數，將總描述檔計數增加或減少超過5%。 觸發資料取樣的方式取決於擷取方法：
+當將記錄擷取至設定檔存放區時，總設定檔計數會增加或減少超過5%，就會觸發取樣工作以更新計數。 資料取樣的觸發方式取決於擷取方法：
 
-* **批次擷取：** 對於批次擷取，在成功將批次擷取至描述檔存放區的15分鐘內，如果達到5%增加或減少臨界值，則會執行工作以更新計數。
-* **串流擷取：** 對於串流資料工作流程，會每小時檢查一次，以判斷是否達到5%的增加或減少臨界值。如果已觸發，則會自動觸發作業以更新計數。
+* **批次內嵌：** 針對批次內嵌，在成功將批次內嵌至設定檔存放區後15分鐘內，如果符合5%的增加或減少臨界值，則會執行工作以更新計數。
+* **串流內嵌：** 針對串流資料工作流程，會每小時進行檢查，以判斷是否符合5%的增加或減少臨界值。如果已觸發，則會自動觸發工作以更新計數。
 
-掃描的樣本大小取決於配置檔案儲存中的實體總數。 下表列出了這些樣本大小：
+掃描的樣本大小取決於設定檔存放區中的整體數量。 下表顯示以下樣本大小：
 
-| 描述檔儲存中的實體 | 樣本大小 |
+| 設定檔存放區中的實體 | 樣本大小 |
 | ------------------------- | ----------- |
 | 不到100萬 | 完整資料集 |
-| 1000萬到2000萬 | 100萬 |
-| 超過2000萬 | 總共5% |
+| 1000至2000萬 | 100萬 |
+| 2000多萬 | 總共5% |
 
 >[!NOTE]
 >
->估計通常需要10到15秒才能執行，從粗略的估計開始，並隨著讀取更多記錄而調整。
+>估計通常需要10到15秒才能運行，從粗略估計開始，隨著記錄的讀取增加而細化。
 
-## 建立新的預覽{#create-preview}
+## 建立新預覽{#create-preview}
 
-您可以向`/preview`端點發出POST請求，以建立新預覽。
+您可以向`/preview`端點提出POST請求，以建立新預覽。
 
 >[!NOTE]
 >
->在建立預覽作業時自動建立估計作業。 這兩個工作將共用相同的ID。
+>建立預覽作業時，系統會自動建立預估作業。 這兩個工作會共用相同的ID。
 
 **API格式**
 
@@ -75,19 +74,21 @@ curl -X POST https://platform.adobe.io/data/core/ups/preview \
     {
         "predicateExpression": "xEvent.metrics.commerce.abandons.value > 0",
         "predicateType": "pql/text",
-        "predicateModel": "_xdm.context.profile"
+        "predicateModel": "_xdm.context.profile",
+        "graphType": "none"
     }'
 ```
 
 | 屬性 | 說明 |
 | -------- | ----------- |
 | `predicateExpression` | 用於查詢資料的PQL表達式。 |
-| `predicateType` | `predicateExpression`下查詢表達式的謂詞類型。 目前，此屬性唯一接受的值是`pql/text`。 |
-| `predicateModel` | 配置檔案資料所基於的[!DNL Experience Data Model](XDM)模式類的名稱。 |
+| `predicateType` | `predicateExpression`下查詢表達式的謂詞類型。 目前，此屬性唯一接受的值為`pql/text`。 |
+| `predicateModel` | 設定檔資料所根據的[!DNL Experience Data Model](XDM)架構類的名稱。 |
+| `graphType` | 要從中獲取群集的圖形類型。 支援的值為`none`（不執行身分匯整）和`pdg`（根據您的私人身分圖表執行身分匯整）。 |
 
 **回應**
 
-成功的回應會傳回HTTP狀態201（已建立），並包含您新建立之預覽的詳細資訊。
+成功的回應會傳回HTTP狀態201（已建立），並包含新建立預覽的詳細資訊。
 
 ```json
 {
@@ -101,12 +102,12 @@ curl -X POST https://platform.adobe.io/data/core/ups/preview \
 
 | 屬性 | 說明 |
 | -------- | ----------- |
-| `state` | 預覽作業的目前狀態。 最初建立時，它將處於「新」狀態。 隨後，它將處於「運行」狀態，直到處理完成，此時它將變為「RESULT_READY」或「FAILED」。 |
-| `previewId` | 預覽工作的ID，在檢視估計值或預覽時用於查閱目的，如下一節所述。 |
+| `state` | 預覽作業的目前狀態。 最初建立時，會處於「NEW」狀態。 隨後，它將處於「正在運行」狀態，直到處理完成，此時它將變為「RESULT_READY」或「FAILED」。 |
+| `previewId` | 預覽工作的ID，用於檢視預估或預覽時的查閱用途，如下一節所述。 |
 
-## 擷取特定預覽的結果{#get-preview}
+## 檢索特定預覽{#get-preview}的結果
 
-您可以向`/preview`端點提出GET請求，並在請求路徑中提供預覽ID，以擷取特定預覽的詳細資訊。
+您可以向`/preview`端點提出GET請求並在請求路徑中提供預覽ID，以擷取特定預覽的詳細資訊。
 
 **API格式**
 
@@ -130,7 +131,7 @@ curl -X GET https://platform.adobe.io/data/core/ups/preview/MDphcHAtMzJiZTAzMjgt
 
 **回應**
 
-成功的回應會傳回HTTP狀態200，其中包含指定預覽的詳細資訊。
+成功的回應會傳回HTTP狀態200，並包含指定預覽的詳細資訊。
 
 ```json
 {
@@ -179,11 +180,11 @@ curl -X GET https://platform.adobe.io/data/core/ups/preview/MDphcHAtMzJiZTAzMjgt
 
 | 屬性 | 說明 |
 | -------- | ----------- |
-| `results` | 實體ID的清單，以及其相關身分。 提供的連結可用於使用[配置檔案訪問API端點](../../profile/api/entities.md)查找指定實體。 |
+| `results` | 實體ID的清單，及其相關身分識別。 提供的連結可用於使用[設定檔存取API端點](../../profile/api/entities.md)查找指定的實體。 |
 
-## 檢索特定估計作業的結果{#get-estimate}
+## 檢索特定估計作業{#get-estimate}的結果
 
-在建立預覽工作後，您可以在至`/estimate`端點的GET請求路徑中使用其`previewId`，以檢視區段定義的統計資訊，包括預計讀者大小、信賴區間和錯誤標準差。
+建立預覽工作後，您就可以在`/estimate`端點的GET請求路徑中使用其`previewId`，檢視關於區段定義的統計資訊，包括預計對象大小、信賴區間和錯誤標準差。
 
 **API格式**
 
@@ -193,11 +194,11 @@ GET /estimate/{PREVIEW_ID}
 
 | 參數 | 說明 |
 | --------- | ----------- |
-| `{PREVIEW_ID}` | 只有在建立預覽工作且兩個工作共用相同的ID值以供查閱時，才會觸發估計工作。 具體而言，這是建立預覽工作時傳回的`previewId`值。 |
+| `{PREVIEW_ID}` | 只有在建立預覽作業，且兩個作業共用相同的ID值以進行查詢時，才會觸發預估作業。 具體來說，這是建立預覽作業時傳回的`previewId`值。 |
 
 **要求**
 
-下列請求會擷取特定估計工作的結果。
+下列請求會擷取特定預估工作的結果。
 
 ```shell
 curl -X GET https://platform.adobe.io/data/core/ups/estimate/MDoyOjRhNDVlODUzLWFjOTEtNGJiNy1hNDI2LTE1MDkzN2I2YWY1Yzo0Mg \
@@ -209,7 +210,7 @@ curl -X GET https://platform.adobe.io/data/core/ups/estimate/MDoyOjRhNDVlODUzLWF
 
 **回應**
 
-成功的回應會傳回HTTP狀態200，並包含估計工作的詳細資訊。
+成功的回應會傳回HTTP狀態200，並包含預估工作的詳細資訊。
 
 ```json
 {
@@ -243,10 +244,10 @@ curl -X GET https://platform.adobe.io/data/core/ups/estimate/MDoyOjRhNDVlODUzLWF
 
 | 屬性 | 說明 |
 | -------- | ----------- |
-| `estimatedNamespaceDistribution` | 顯示區段內依身分名稱空間劃分之描述檔數目的物件陣列。 依名稱空間劃分的描述檔總數（將每個名稱空間顯示的值加在一起）可能高於描述檔計數量度，因為一個描述檔可能與多個名稱空間相關聯。 例如，如果客戶在多個通道上與您的品牌互動，則多個名稱空間將與該個別客戶關聯。 |
+| `estimatedNamespaceDistribution` | 一個物件陣列，顯示依身分命名空間劃分之區段內的設定檔數量。 依命名空間的設定檔總數（將每個命名空間顯示的值加總）可能比設定檔計數量度高，因為一個設定檔可能與多個命名空間相關聯。 例如，如果客戶在多個管道上與您的品牌互動，則多個命名空間將會與該個別客戶相關聯。 |
 | `state` | 預覽作業的目前狀態。 狀態將為「RUNNING」，直到處理完成，此時狀態將變為「RESULT_READY」或「FAILED」。 |
-| `_links.preview` | 當`state`為&quot;RESULT_READY&quot;時，此欄位會提供URL以檢視估計值。 |
+| `_links.preview` | 當`state`為&quot;RESULT_READY&quot;時，此欄位會提供URL以檢視預估值。 |
 
 ## 後續步驟
 
-閱讀本指南後，您應更瞭解如何使用區段API來處理預覽和估計。 要瞭解如何存取與即時客戶個人檔案資料相關的度量，例如特定名稱空間或個人檔案資料存放區中的個人檔案片段和合併個人檔案總數，請造訪[個人檔案預覽(`/previewsamplestatus`)端點指南](../../profile/api/preview-sample-status.md)。
+閱讀本指南後，您應該能更清楚了解如何使用「細分API」來處理預覽和預估。 若要了解如何存取與您的即時客戶設定檔資料相關的量度，例如特定命名空間內的設定檔片段和合併設定檔總數，或整個設定檔資料存放區，請造訪[設定檔預覽(`/previewsamplestatus`)端點指南](../../profile/api/preview-sample-status.md)。
