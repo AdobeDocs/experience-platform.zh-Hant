@@ -1,9 +1,9 @@
 ---
 cloud: Experience Cloud
 product: adobe experience platform
-feature-set: Platform
+feature-set: Experience Platform
 solution-title: 平台概觀
-solution-hub-url: https://experienceleague.adobe.com/docs/experience-platform/landing/home.html
+solution-hub-url: https://experienceleague.adobe.com/docs/experience-platform/landing/home.html?lang=zh-Hant
 solution-image: assets/experience_cloud_appicon_32.png
 getting-started-title: 文件
 getting-started-url: https://experienceleague.adobe.com/docs/experience-platform.html
@@ -14,11 +14,10 @@ solution: Experience Platform
 type: Documentation
 index: true
 role: Architect, Developer, Data Architect, Data Engineer, Business Practitioner, Administrator, Leader
-translation-type: tm+mt
-source-git-commit: b3ab087a9cae13d2ff270916d88b8086a4122af6
+source-git-commit: 2068d84b5c512c4eec589ef0b89ac09d915f5be6
 workflow-type: tm+mt
-source-wordcount: '147'
-ht-degree: 74%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
