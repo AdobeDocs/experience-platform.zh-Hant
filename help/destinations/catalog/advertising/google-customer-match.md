@@ -3,7 +3,7 @@ keywords: Google客戶比對；Google客戶比對；Google客戶比對
 title: Google Customer Match連線
 description: Google Customer Match可讓您使用您的線上和離線資料，透過Google擁有且運作的屬性(例如Search、Shopping、Gmail及YouTube)，觸及客戶並與其重新互動。
 exl-id: 8209b5eb-b05c-4ef7-9fdc-22a528d5f020
-source-git-commit: 6c4e68e2f347cadaf3bf36de73c74e1240ed975b
+source-git-commit: da069c6c931bfd2af38b40fc061d5eb633aba9ea
 workflow-type: tm+mt
 source-wordcount: '1521'
 ht-degree: 0%
@@ -12,7 +12,7 @@ ht-degree: 0%
 
 # [!DNL Google Customer Match] 連接
 
-## 概述 {#overview}
+## 概覽 {#overview}
 
 [Google Customer ](https://support.google.com/google-ads/answer/6379332?hl=en) Match可讓您使用您的線上和離線資料，在Google擁有且運作的屬性中觸及客戶並與其重新互動，例如： [!DNL Search]、  [!DNL Shopping]、  [!DNL Gmail]和 [!DNL YouTube]。
 
@@ -34,7 +34,7 @@ ht-degree: 0%
 
 ## [!DNL Google Customer Match]目的地{#data-governance}的資料控管
 
-Experience Platform中的某些目的地對於傳送至目的地平台或從目的地平台接收的資料，有特定的規則和義務。 您有責任了解資料的限制和義務，以及如何在Adobe Experience Platform和目的地平台中使用該資料。 Adobe Experience Platform提供資料控管工具，可協助您管理其中部分資料使用義務。 [進一步](../../..//data-governance/labels/overview.md) 了解資料控管工具和原則。
+Experience Platform中的某些目的地對於傳送至目的地平台或從目的地平台接收的資料，有特定的規則和義務。 您有責任了解資料的限制和義務，以及如何在Adobe Experience Platform和目的地平台中使用該資料。 Adobe Experience Platform提供資料控管工具，可協助您管理其中部分資料使用義務。 [進一步](../../../data-governance/labels/overview.md) 了解資料控管工具和原則。
 
 ## 支援的身分{#supported-identities}
 
