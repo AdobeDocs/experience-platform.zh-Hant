@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 沙箱管理API端點
 topic-legacy: developer guide
 description: 沙箱API中的/沙箱端點可讓您以程式設計方式管理Adobe Experience Platform中的沙箱。
-source-git-commit: f84898a87a8a86783220af7f74e17f464a780918
+source-git-commit: 1ec141fa5a13bb4ca6a4ec57f597f38802a92b3f
 workflow-type: tm+mt
-source-wordcount: '1323'
+source-wordcount: '1440'
 ht-degree: 2%
 
 ---
@@ -348,11 +348,7 @@ curl -X PATCH \
 
 ## 重設沙箱 {#reset}
 
->[!IMPORTANT]
->
->如果Adobe Analytics也在[跨裝置分析(CDA)](https://experienceleague.adobe.com/docs/analytics/components/cda/overview.html)功能使用其中托管的身分圖表，或如果Adobe Audience Manager也在[以人物為基礎的目的地(PBD)](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/people-based/people-based-destinations-overview.html)功能使用其中托管的身分圖表，則無法重設預設的生產沙箱。
-
-開發沙箱具有「工廠重設」功能，可從沙箱中刪除所有非預設資源。 您可以提出PUT要求，將沙箱的`name`納入要求路徑，以重設沙箱。
+沙箱具有「工廠重設」功能，會從沙箱中刪除所有非預設資源。 您可以提出PUT要求，將沙箱的`name`納入要求路徑，以重設沙箱。
 
 **API格式**
 
@@ -363,6 +359,7 @@ PUT /sandboxes/{SANDBOX_NAME}
 | 參數 | 說明 |
 | --- | --- |
 | `{SANDBOX_NAME}` | 您要重設之沙箱的`name`屬性。 |
+| `validationOnly` | 此選用參數可讓您對沙箱重設作業執行預檢檢查，而無須提出實際請求。 將此參數設為`validationOnly=true` ，以檢查您要重設的沙箱是否包含任何Adobe Analytics、Adobe Audience Manager或區段共用資料。 |
 
 **要求**
 
@@ -370,7 +367,7 @@ PUT /sandboxes/{SANDBOX_NAME}
 
 ```shell
 curl -X PUT \
-  https://platform.adobe.io/data/foundation/sandbox-management/sandboxes/acme-dev \
+  https://platform.adobe.io/data/foundation/sandbox-management/sandboxes/acme-dev?validationOnly=true \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
@@ -386,6 +383,10 @@ curl -X PUT \
 
 **回應**
 
+>[!NOTE]
+>
+>重設沙箱後，系統需要大約30秒來布建。
+
 成功的回應會傳回更新沙箱的詳細資訊，顯示其`state`為「重設」。
 
 ```json
@@ -399,18 +400,76 @@ curl -X PUT \
 }
 ```
 
->[!NOTE]
->
->重設沙箱後，系統需要大約30秒來布建。 布建後，沙箱的`state`會變成「作用中」或「失敗」。
+如果Adobe Analytics也在[跨裝置分析(CDA)](https://experienceleague.adobe.com/docs/analytics/components/cda/overview.html)功能使用其中托管的身分圖表，或Adobe Audience Manager也在[以人物為基礎的目的地(PBD)](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/people-based/people-based-destinations-overview.html)功能使用其中托管的身分圖表，則無法重設預設的生產沙箱和使用者建立的生產沙箱。
 
-下表包含可能導致沙箱無法重設的例外狀況：
+以下是可能導致沙箱無法重設的例外清單：
 
-| 錯誤代碼 | 說明 |
+```json
+{
+    "status": 400,
+    "title": "Sandbox `{SANDBOX_NAME}` cannot be reset. The identity graph hosted in this sandbox is also being used by Adobe Analytics for the Cross Device Analytics (CDA) feature.",
+    "type": "http://ns.adobe.com/aep/errors/SMS-2074-400"
+},
+{
+    "status": 400,
+    "title": "Sandbox `{SANDBOX_NAME}` cannot be reset. The identity graph hosted in this sandbox is also being used by Adobe Audience Manager for the People Based Destinations (PBD) feature.",
+    "type": "http://ns.adobe.com/aep/errors/SMS-2075-400"
+},
+{
+    "status": 400,
+    "title": "Sandbox `{SANDBOX_NAME}` cannot be reset. The identity graph hosted in this sandbox is also being used by Adobe Audience Manager for the People Based Destinations (PBD) feature, as well by Adobe Analytics for the Cross Device Analytics (CDA) feature.",
+    "type": "http://ns.adobe.com/aep/errors/SMS-2076-400"
+},
+{
+    "status": 400,
+    "title": "Warning: Sandbox `{SANDBOX_NAME}` is used for bi-directional segment sharing with Adobe Audience Manager or Audience Core Service.",
+    "type": "http://ns.adobe.com/aep/errors/SMS-2077-400"
+}
+```
+
+您可以借由將`ignoreWarnings`參數新增至請求，繼續重設用於與[!DNL Audience Manager]或[!DNL Audience Core Service]共用雙向區段的生產沙箱。
+
+**API格式**
+
+```http
+PUT /sandboxes/{SANDBOX_NAME}?ignoreWarnings=true
+```
+
+| 參數 | 說明 |
 | --- | --- |
-| `2074-400` | 無法重設此沙箱，因為此沙箱中托管的身分圖表也正由Adobe Analytics用於跨裝置分析(CDA)功能。 |
-| `2075-400` | 無法重設此沙箱，因為此沙箱中托管的身分圖表也正由Adobe Audience Manager用於「以人物為基礎的目的地」(PBD)功能。 |
-| `2076-400` | 無法重設此沙箱，因為此沙箱中托管的身分圖表也供Adobe Audience Manager用於「以人物為基礎的目的地」(PBD)功能，以及Adobe Analytics用於跨裝置分析(CDA)功能。 |
-| `2077-400` | 警告：沙箱`{SANDBOX_NAME}`用於與Adobe Audience Manager或Audience Core Service進行雙向區段共用。 |
+| `{SANDBOX_NAME}` | 您要重設之沙箱的`name`屬性。 |
+| `ignoreWarnings` | 此選用參數可讓您略過驗證檢查，並強制重設用於與[!DNL Audience Manager]或[!DNL Audience Core Service]共用雙向區段的生產沙箱。 此參數無法套用至預設的生產沙箱。 |
+
+**要求**
+
+下列請求會重設名為「acme」的生產沙箱。
+
+```shell
+curl -X PUT \
+  https://platform.adobe.io/data/foundation/sandbox-management/sandboxes/acme?ignoreWarnings=true \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'Content-Type: application/json'
+  -d '{
+    "action": "reset"
+  }'
+```
+
+**回應**
+
+成功的回應會傳回更新沙箱的詳細資訊，顯示其`state`為「重設」。
+
+```json
+{
+    "id": "d8184350-dbf5-11e9-875f-6bf1873fec16",
+    "name": "acme",
+    "title": "Acme Business Group prod",
+    "state": "resetting",
+    "type": "production",
+    "region": "VA7"
+}
+```
 
 ## 刪除沙箱 {#delete}
 
@@ -433,14 +492,16 @@ DELETE /sandboxes/{SANDBOX_NAME}
 | 參數 | 說明 |
 | --- | --- |
 | `{SANDBOX_NAME}` | 您要刪除之沙箱的`name`。 |
+| `validationOnly` | 此選用參數可讓您對沙箱刪除作業執行預檢檢查，而無須提出實際請求。 將此參數設為`validationOnly=true` ，以檢查您要重設的沙箱是否包含任何Adobe Analytics、Adobe Audience Manager或區段共用資料。 |
+| `ignoreWarnings` | 此選用參數可讓您略過驗證檢查，並強制刪除使用者建立的生產沙箱，該沙箱用於與[!DNL Audience Manager]或[!DNL Audience Core Service]共用雙向區段。 此參數無法套用至預設的生產沙箱。 |
 
 **要求**
 
-下列請求會刪除名為「acme-dev」的沙箱。
+下列請求會刪除名為「acme」的生產沙箱。
 
 ```shell
 curl -X DELETE \
-  https://platform.adobe.io/data/foundation/sandbox-management/sandboxes/dev-2 \
+  https://platform.adobe.io/data/foundation/sandbox-management/sandboxes/acme?ignoreWarnings=true \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}'
@@ -452,8 +513,8 @@ curl -X DELETE \
 
 ```json
 {
-    "name": "acme-dev",
-    "title": "Acme Business Group dev",
+    "name": "acme",
+    "title": "Acme Business Group prod",
     "state": "deleted",
     "type": "development",
     "region": "VA7"
