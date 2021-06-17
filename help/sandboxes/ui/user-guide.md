@@ -5,9 +5,9 @@ title: 沙箱UI指南
 topic-legacy: user guide
 description: 本檔案提供如何在Adobe Experience Platform使用者介面中執行與沙箱相關之各種作業的步驟。
 exl-id: b258c822-5182-4217-9d1b-8196d889740f
-source-git-commit: ba03ec805d29a95ee7d0d1a23a756feaadcea407
+source-git-commit: 3b0f156d3d6a13fbad45a153749b81a0d6244283
 workflow-type: tm+mt
-source-wordcount: '833'
+source-wordcount: '779'
 ht-degree: 0%
 
 ---
@@ -68,7 +68,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->如果Adobe Analytics也在[跨裝置分析(CDA)](https://experienceleague.adobe.com/docs/analytics/components/cda/overview.html)功能使用其中托管的身分圖表，或如果Adobe Audience Manager也在[以人物為基礎的目的地(PBD)](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/people-based/people-based-destinations-overview.html)功能使用其中托管的身分圖表，則無法重設預設的生產沙箱。 您也無法重設用於與Adobe Audience Manager或Audience Core Service雙向區段共用的生產沙箱。
+>如果Adobe Analytics也在[跨裝置分析(CDA)](https://experienceleague.adobe.com/docs/analytics/components/cda/overview.html)功能使用其中托管的身分圖表，或如果Adobe Audience Manager也在[以人物為基礎的目的地(PBD)](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/people-based/people-based-destinations-overview.html)功能使用其中托管的身分圖表，則無法重設預設的生產沙箱。
 
 重設生產或開發沙箱會刪除與該沙箱（結構、資料集等）相關的所有資源，同時維護沙箱的名稱和相關權限。 對於具有存取權的使用者，這個「乾淨」的沙箱會繼續以相同名稱提供。
 
@@ -88,29 +88,29 @@ ht-degree: 0%
 
 ![success](../images/ui/success.png)
 
-### 錯誤訊息
+### 警告
 
-包含CDA資料的預設生產沙箱無法重設，並傳回下列錯誤。
+包含CDA資料的預設生產沙箱無法重設，並傳回下列警告。
 
 ![cda](../images/ui/cda.png)
 
-包含PBD資料的預設生產沙箱也無法重設，並傳回下列錯誤。
+包含PBD資料的預設生產沙箱也無法重設，並傳回下列警告。
 
 ![pbd](../images/ui/pbd.png)
 
-包含CDA和PBD資料的預設生產沙箱也無法重設，並傳回下列錯誤。
+包含CDA和PBD資料的預設生產沙箱也無法重設，並傳回下列警告。
 
 ![both](../images/ui/both.png)
 
-與Adobe Audience Manager或Audience Core Service雙向區段共用的生產沙箱也無法重設，且會傳回下列錯誤。
+您可以重設用於與[!DNL Audience Manager]或[!DNL Audience Core Service]共用雙向區段的生產沙箱。 選擇[!UICONTROL 繼續]以繼續重置。
 
-![seg](../images/ui/seg.png)
+![both](../images/ui/seg.png)
 
 ## 刪除沙箱
 
 >[!IMPORTANT]
 >
->無法刪除預設的生產沙箱，且用於與Adobe Audience Manager或Audience Core Service雙向區段共用的生產沙箱也無法刪除。
+>無法刪除預設的生產沙箱。
 
 刪除生產或開發沙箱會永久刪除與該沙箱相關聯的所有資源，包括權限。
 
@@ -126,9 +126,9 @@ ht-degree: 0%
 
 ![delete-confirm](../images/ui/delete-confirm.png)
 
-無法刪除與Adobe Audience Manager或Audience Core Service雙向區段共用的生產沙箱，並傳回下列錯誤。
+在下列警告後，仍可刪除使用者建立的生產沙箱，該沙箱用於與[!DNL Audience Manager]或[!DNL Audience Core Service]進行雙向區段共用。
 
-![seg](../images/ui/seg.png)
+![seg](../images/ui/delete-seg.png)
 
 ## 後續步驟
 
