@@ -4,7 +4,7 @@ title: 即時客戶個人檔案概觀
 topic-legacy: guide
 description: 即時客戶設定檔是一般查詢實體存放區，可合併來自各種企業資料資產的資料，然後以個別客戶設定檔和相關時間序列事件的形式提供對該資料的存取。 此功能可讓行銷人員跨多個管道，透過受眾推動協調、一致且相關的體驗。
 exl-id: c93d8d78-b215-4559-a806-f019c602c4d2
-source-git-commit: 598f86188bcd9bde22333ccafb85f3f566aaae44
+source-git-commit: f193787ac27e30c69d25418656ae9c59c89622dc
 workflow-type: tm+mt
 source-wordcount: '1813'
 ht-degree: 0%
@@ -120,7 +120,7 @@ Adobe Experience Platform [!DNL Segmentation Service]會產生支援個別客戶
 
 ### 處理選擇退出與資料隱私權請求
 
-[!DNL Experience Platform] 可讓客戶傳送與資料在內的使用和儲存相關的退出請求 [!DNL Real-time Customer Profile]。如需如何處理選擇退出請求的詳細資訊，請參閱[上的檔案，接受選擇退出請求](../segmentation/honoring-opt-outs.md)。
+[!DNL Experience Platform] 可讓客戶傳送與資料在內的使用和儲存相關的退出請求 [!DNL Real-time Customer Profile]。如需如何處理選擇退出請求的詳細資訊，請參閱[上的檔案，接受選擇退出請求](../segmentation/consents.md)。
 
 ## 後續步驟和其他資源
 
