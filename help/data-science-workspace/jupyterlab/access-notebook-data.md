@@ -5,9 +5,9 @@ title: Jupyterlab筆記型電腦中的資料存取
 topic-legacy: Developer Guide
 description: 本指南著重於如何使用Data Science Workspace內建的Jupyter Notebooks來存取您的資料。
 exl-id: 2035a627-5afc-4b72-9119-158b95a35d32
-source-git-commit: c2c2b1684e2c2c3c76dc23ad1df720abd6c4356c
+source-git-commit: 9e41db60580146fa90542ed00ceedd4eecb88b47
 workflow-type: tm+mt
-source-wordcount: '3290'
+source-wordcount: '3294'
 ht-degree: 8%
 
 ---
@@ -362,7 +362,7 @@ spark = SparkSession.builder.getOrCreate()
 **使用狀況**
 
 ```scala
-%dataset {action} --datasetId {id} --dataFrame {df}`
+%dataset {action} --datasetId {id} --dataFrame {df} --mode batch
 ```
 
 **說明**
@@ -373,8 +373,8 @@ spark = SparkSession.builder.getOrCreate()
 | --- | --- | --- |
 | `{action}` | 要在資料集上執行的動作類型。 「已讀」或「已寫」兩個動作。 | 是 |
 | `--datasetId {id}` | 用來提供要讀取或寫入的資料集ID。 | 是 |
-| `--dataFrame {df}` | 熊貓的資料框。 <ul><li> 當動作為「read」時，{df}為變數，資料集讀取操作的結果可用。 </li><li> 當動作為「write」時，此資料幀{df}會寫入資料集。 </li></ul> | 是 |
-| `--mode` | 變更資料讀取方式的其他參數。 允許的參數為「批次」和「互動式」。 預設情況下，模式會設為「互動式」。 在讀取大量資料時，建議使用「批次」模式。 | 無 |
+| `--dataFrame {df}` | 熊貓的資料框。 <ul><li> 當動作為「read」時，{df}為變數，資料集讀取操作的結果可供使用（例如資料幀）。 </li><li> 當動作為「write」時，此資料幀{df}會寫入資料集。 </li></ul> | 是 |
+| `--mode` | 變更資料讀取方式的其他參數。 允許的參數為「批次」和「互動式」。 預設情況下，模式設定為「batch」。<br> 建議您使用「互動式」模式，提高較小資料集的查詢效能。 | 是 |
 
 >[!TIP]
 >
@@ -382,8 +382,8 @@ spark = SparkSession.builder.getOrCreate()
 
 **範例**
 
-- **閱讀範例**:  `%dataset read --datasetId 5e68141134492718af974841 --dataFrame pd0`
-- **撰寫範例**:  `%dataset write --datasetId 5e68141134492718af974842 --dataFrame pd0`
+- **閱讀範例**:  `%dataset read --datasetId 5e68141134492718af974841 --dataFrame pd0 --mode batch`
+- **撰寫範例**:  `%dataset write --datasetId 5e68141134492718af974842 --dataFrame pd0 --mode batch`
 
 >[!IMPORTANT]
 >
@@ -449,7 +449,7 @@ sample_df = df.sample(fraction)
 from pyspark.sql import SparkSession
 spark = SparkSession.builder.getOrCreate()
 
-%dataset read --datasetId {DATASET_ID} --dataFrame df
+%dataset read --datasetId {DATASET_ID} --dataFrame df --mode batch
 
 df.createOrReplaceTempView("event")
 timepd = spark.sql("""
@@ -511,7 +511,7 @@ val df1 = spark.read.format("com.adobe.platform.query")
   .option("api-key", clientContext.getApiKey())
   .option("service-token", clientContext.getServiceToken())
   .option("sandbox-name", clientContext.getSandboxName())
-  .option("mode", "interactive")
+  .option("mode", "batch")
   .option("dataset-id", "5e68141134492718af974844")
   .load()
 
@@ -568,7 +568,7 @@ df1.write.format("com.adobe.platform.query")
   .option("ims-org", clientContext.getOrgId())
   .option("api-key", clientContext.getApiKey())
   .option("sandbox-name", clientContext.getSandboxName())
-  .option("mode", "interactive")
+  .option("mode", "batch")
   .option("dataset-id", "5e68141134492718af974844")
   .save()
 ```
