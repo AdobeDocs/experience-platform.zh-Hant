@@ -3,9 +3,9 @@ title: 將Adobe Target與Platform Web SDK搭配使用
 description: 了解如何使用Adobe Target透過Experience PlatformWeb SDK轉譯個人化內容
 keywords: target;adobe target;activity.id;experience.id;renderDecisions;decisionScopes；預先隱藏程式碼片段；vec；表單式體驗撰寫器；xdm；對象；決策；範圍；結構；
 exl-id: 021171ab-0490-4b27-b350-c37d2a569245
-source-git-commit: e7f5074ef776fc6ccd4f9951722861d771a371de
+source-git-commit: ed6f0891958670c3c5896c4c9cbefef2a245bc15
 workflow-type: tm+mt
-source-wordcount: '918'
+source-wordcount: '932'
 ht-degree: 5%
 
 ---
@@ -159,32 +159,24 @@ alloy("sendEvent", {
 alloy("sendEvent", {
    renderDecisions: true|false,
    xdm: { // Experience Event XDM data },
-   data: { // Freeform stuff (event & profile) }
+   data: { // Freeform data }
 });
 ```
 
-**程式碼範例**
+**如何傳送設定檔屬性至Adobe Target:**
 
 ```
 alloy("sendEvent", {
   renderDecisions: true,
-  xdm: {
-    device: {
-      screenWidth: 9999
-    }
-  },
   data: {
     __adobe: {
       target: {
         "profile.gender": "female",
-        "profile.age": 30,
-	"entity.id" : "123",
-	"entity.genre" : "Drama"
+        "profile.age": 30
       }
     }
   }
-}) 
-.then(console.log);
+});
 ```
 
 ## 要求建議
@@ -209,6 +201,22 @@ alloy("sendEvent", {
 |  | cartIds | 支援 |
 |  | productPurchasedId | 支援 |
 | 類別相關性的頁面或項目類別 | user.categoryId | 支援 |
+
+**如何將Recommendations屬性傳送至Adobe Target:**
+
+```
+alloy("sendEvent", {
+  renderDecisions: true,
+  data: {
+    __adobe: {
+      target: {
+        "entity.id" : "123",
+        "entity.genre" : "Drama"
+      }
+    }
+  }
+});
+```
 
 ## 為  除錯
 
