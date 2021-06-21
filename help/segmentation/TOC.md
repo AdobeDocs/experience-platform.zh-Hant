@@ -4,10 +4,10 @@ user-guide-title: Adobe Experience Platform Segmentation Service
 breadcrumb-title: 分段服務指南
 user-guide-description: 從您的即時客戶設定檔資料建立區段並產生對象。
 feature: 區段
-source-git-commit: 48ef54759ff62efa84aac493af3a7799e1b6d141
+source-git-commit: f193787ac27e30c69d25418656ae9c59c89622dc
 workflow-type: tm+mt
 source-wordcount: '164'
-ht-degree: 21%
+ht-degree: 27%
 
 ---
 
@@ -17,18 +17,18 @@ ht-degree: 21%
 - [區段服務概觀](home.md)
 - [區段資料類型](data-types.md)
 - 分段API {#api}
-   - [概述](api/overview.md)
+   - [概覽](api/overview.md)
    - [快速入門](api/getting-started.md)
    - [邊緣分割](api/edge-segmentation.md)
    - [匯出工作](api/export-jobs.md)
    - [預覽和估計](api/previews-and-estimates.md)
-   - [排程器](api/schedules.md)
+   - [排程](api/schedules.md)
    - [區段定義](api/segment-definitions.md)
    - [區段作業](api/segment-jobs.md)
    - [區段搜尋](api/segment-search.md)
    - [串流細分](api/streaming-segmentation.md)
 - 分段UI {#ui}
-   - [概述](ui/overview.md)
+   - [概覽](ui/overview.md)
    - [區段控制面板](ui/segment-dashboard.md)
    - [區段產生器](ui/segment-builder.md)
    - [區段符合](ui/segment-match.md)
@@ -36,10 +36,10 @@ ht-degree: 21%
    - [串流細分](ui/streaming-segmentation.md)
    - [串流細分（視訊）](video/streaming-segmentation-overview.md)
    - [時間限制重構](ui/segment-refactoring.md)
-- [接受選擇退出](honoring-opt-outs.md)
+- [履行同意](consents.md)
 - [多實體細分](multi-entity-segmentation.md)
 - 設定檔查詢語言{#pql}
-   - [概述](pql/overview.md)
+   - [概覽](pql/overview.md)
    - [布林函式](pql/boolean-functions.md)
    - [比較函式](pql/comparison-functions.md)
    - [陣列、清單和設定函式](pql/array-functions.md)
