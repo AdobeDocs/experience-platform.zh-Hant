@@ -4,9 +4,9 @@ title: 設定檔控制面板
 description: Adobe Experience Platform提供控制面板，讓您透過該控制面板檢視貴組織「即時客戶個人檔案」資料的重要資訊。
 type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
-source-git-commit: 36aaccddeb207e22a22d5124ec8592ac8dddf8bc
+source-git-commit: 2791c32abe582d51d05d4bf0488ba82dfadfd053
 workflow-type: tm+mt
-source-wordcount: '1150'
+source-wordcount: '1192'
 ht-degree: 0%
 
 ---
@@ -30,6 +30,10 @@ Adobe Experience Platform使用者介面(UI)提供控制面板，您可透過該
 ## 探索[!UICONTROL 設定檔]控制面板
 
 若要導覽至Platform UI中的[!UICONTROL Profiles]控制面板，請在左側邊欄中選取&#x200B;**[!UICONTROL Profiles]**，然後選取&#x200B;**[!UICONTROL Overview]**&#x200B;標籤以顯示控制面板。
+
+>[!NOTE]
+>
+>如果您的組織是初次使用Platform，且尚未建立作用中的設定檔資料集或合併原則，則不會顯示[!UICONTROL Profiles]控制面板。 相反地， [!UICONTROL 概述]標籤會顯示可協助您開始使用即時客戶設定檔的連結和檔案。
 
 ![](../images/profiles/dashboard-overview.png)
 
