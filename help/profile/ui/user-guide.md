@@ -4,9 +4,9 @@ title: 即時客戶個人檔案UI指南
 topic-legacy: guide
 description: 「即時客戶設定檔」可結合來自多個管道的資料，包括線上、離線、CRM和協力廠商資料，讓您全面了解每個客戶。 本檔案可做為在Adobe Experience Platform使用者介面中與即時客戶設定檔互動的指南。
 exl-id: 792a3a73-58a4-4163-9212-4d43d24c2770
-source-git-commit: db094aac82b1d0a6671c213f3e98824f828771ab
+source-git-commit: 2791c32abe582d51d05d4bf0488ba82dfadfd053
 workflow-type: tm+mt
-source-wordcount: '1303'
+source-wordcount: '1319'
 ht-degree: 0%
 
 ---
@@ -23,17 +23,21 @@ ht-degree: 0%
 * [[!DNL Identity Service]](../../identity-service/home.md):可在 [!DNL Real-time Customer Profile] 擷取不同資料來源的身分時，將其橋接至中，以 [!DNL Platform]啟用。
 * [[!DNL Experience Data Model (XDM)]](../../xdm/home.md):組織客戶體驗資 [!DNL Platform] 料的標準化架構。
 
-## 概述
+## 概覽
 
-在Experience PlatformUI中，在左側導覽中選取&#x200B;**[!UICONTROL Profiles]**&#x200B;以開啟&#x200B;**[!UICONTROL Overview]**&#x200B;標籤。 此標籤提供檔案和影片的連結，協助您了解並開始使用設定檔。
+在Experience PlatformUI中，在左側導覽中選取&#x200B;**[!UICONTROL Profiles]**&#x200B;以開啟顯示[!UICONTROL Profiles]控制面板的&#x200B;**[!UICONTROL Overview]**&#x200B;標籤。
 
-![](../images/user-guide/profiles-overview.png)
+>[!NOTE]
+>
+>如果您的組織是初次使用Platform，且尚未建立作用中的設定檔資料集或合併原則，則不會顯示[!UICONTROL Profiles]控制面板。 相反地， [!UICONTROL 概述]標籤會顯示可協助您開始使用即時客戶設定檔的連結和檔案。
 
-### 設定檔控制面板
+###  設定檔控制面板  {#profile-dashboard}
 
-對於某些使用者，在左側導覽中選取&#x200B;**[!UICONTROL Profiles]**&#x200B;並開啟&#x200B;**[!UICONTROL Overview]**&#x200B;標籤時，會提供一個控制面板，概述與您的設定檔資料相關的關鍵量度。
+**[!UICONTROL Profiles]**&#x200B;控制面板概述與貴組織的Profile資料相關的關鍵量度。
 
-若要深入了解，請造訪[設定檔控制面板指南](profile-dashboard.md)。
+若要深入了解，請造訪[設定檔控制面板指南](../../dashboards/guides/profiles.md)。
+
+![](../../dashboards/images/profiles/dashboard-overview.png)
 
 ## 瀏覽
 
@@ -79,7 +83,7 @@ ht-degree: 0%
 
 ![](../images/user-guide/profiles-search-filter.png)
 
-從&#x200B;**[!UICONTROL 選擇身份命名空間]**&#x200B;對話框中，選擇要搜索的命名空間，或使用對話框中的搜索欄開始鍵入命名空間的名稱。 您可以選擇一個命名空間以查看其他詳細資訊，在找到要使用的命名空間後，可以選擇單選按鈕，然後按&#x200B;**[!UICONTROL Select]**&#x200B;繼續。
+從&#x200B;**[!UICONTROL 選擇身份命名空間]**&#x200B;對話框中，選擇要搜索的命名空間，或使用對話框中的搜索欄開始鍵入命名空間的名稱。 您可以選擇一個命名空間以查看其他詳細資訊，在找到要使用的命名空間後，可以選擇單選按鈕，然後按&#x200B;**[!UICONTROL 選擇]**&#x200B;以繼續。
 
 ![](../images/user-guide/profiles-select-identity-namespace.png)
 
