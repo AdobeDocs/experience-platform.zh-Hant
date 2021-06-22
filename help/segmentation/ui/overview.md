@@ -5,9 +5,9 @@ title: 區段服務UI指南
 topic-legacy: ui guide
 description: Adobe Experience Platform區段服務提供建立和管理區段定義的使用者介面。
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: 998332007465c1f8457b5d8cf0e153d513505d39
+source-git-commit: 2791c32abe582d51d05d4bf0488ba82dfadfd053
 workflow-type: tm+mt
-source-wordcount: '1547'
+source-wordcount: '1561'
 ht-degree: 0%
 
 ---
@@ -29,17 +29,21 @@ ht-degree: 0%
 - **區段定義**:用於描述目標受眾的關鍵特徵或行為的規則集。
 - **對象**:符合區段定義條件的產生設定檔集。
 
-## 概述
+## 概覽
 
-在[[!DNL Experience Platform] UI](https://platform.adobe.com/)中，選取左側導覽中的&#x200B;**[!UICONTROL 區段]**&#x200B;以開啟&#x200B;**[!UICONTROL 概述]**&#x200B;標籤。 此標籤提供檔案和影片的連結，協助您了解及開始使用區段。
+在Experience PlatformUI中，在左側導覽中選取&#x200B;**[!UICONTROL 區段]**&#x200B;以開啟顯示[!UICONTROL 區段]控制面板的&#x200B;**[!UICONTROL 概述]**&#x200B;標籤。
 
-![](../images/ui/overview/segment-overview.png)
+>[!NOTE]
+>
+>如果您的組織是初次使用Platform，且尚未建立作用中的設定檔資料集或合併原則，則不會顯示[!UICONTROL Segments]控制面板。 反之， [!UICONTROL 概述]標籤會顯示可協助您開始使用區段的連結和檔案。
 
-### 區段控制面板
+###  區段控制面板  {#segments-dashboard}
 
-對於某些使用者，在左側導覽中選取&#x200B;**[!UICONTROL 區段]**&#x200B;並開啟&#x200B;**[!UICONTROL 概述]**&#x200B;標籤時，會提供控制面板，概述與區段資料相關的關鍵量度。
+**[!UICONTROL 區段]**&#x200B;控制面板概述與貴組織的區段資料相關的關鍵量度。
 
-若要深入了解，請造訪[區段控制面板指南](segment-dashboard.md)。
+若要深入了解，請造訪[區段控制面板指南](../../dashboards/guides/segments.md)。
+
+![](../../dashboards/images/segments/dashboard-overview.png)
 
 ## 瀏覽
 
