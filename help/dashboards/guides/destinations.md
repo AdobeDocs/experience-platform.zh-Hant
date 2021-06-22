@@ -4,9 +4,9 @@ title: 目的地控制面板
 description: Adobe Experience Platform提供控制面板，讓您透過該控制面板檢視組織作用中目的地的重要資訊。
 type: Documentation
 exl-id: 6a34a796-24a1-450a-af39-60113928873e
-source-git-commit: 8312d1523ab68dd0a4ba437dd826adde544838fe
+source-git-commit: 2791c32abe582d51d05d4bf0488ba82dfadfd053
 workflow-type: tm+mt
-source-wordcount: '744'
+source-wordcount: '792'
 ht-degree: 0%
 
 ---
@@ -28,6 +28,10 @@ Adobe Experience Platform使用者介面(UI)提供控制面板，可讓您檢視
 ## 探索目的地控制面板
 
 若要導覽至Platform UI中的目的地控制面板，請在左側邊欄中選取「**[!UICONTROL 目的地]**」，然後選取「**[!UICONTROL 概述]**」標籤以顯示控制面板。
+
+>[!NOTE]
+>
+>如果您的組織剛開始Experience Platform，且尚未有作用中的目的地，則不會顯示[!UICONTROL Destinations]控制面板和[!UICONTROL Overview]標籤。 相反地，從左側導覽中選取[!UICONTROL Destinations]會顯示[!UICONTROL Catalog]標籤。 若要進一步了解[!UICONTROL Catalog]標籤，請參閱[[!UICONTROL Destinations]工作區指南](../../destinations/ui/destinations-workspace.md)。
 
 ![](../images/destinations/dashboard-overview.png)
 
