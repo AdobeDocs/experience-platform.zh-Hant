@@ -1,52 +1,51 @@
 ---
 solution: Experience Platform
-title: 在UI中匯出XDM結構描述
-description: 瞭解如何在Adobe Experience Platform使用者介面中將現有的架構匯出至不同的沙盒或IMS組織。
+title: 在UI中匯出XDM結構
+description: 了解如何在Adobe Experience Platform使用者介面中，將現有結構匯出至不同的沙箱或IMS組織。
 topic-legacy: user guide
 type: Tutorial
 exl-id: c467666d-55bc-4134-b8f4-7758d49c4786
-translation-type: tm+mt
-source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
+source-git-commit: e4bf5bb77ac4186b24580329699d74d653310d93
 workflow-type: tm+mt
-source-wordcount: '498'
+source-wordcount: '505'
 ht-degree: 0%
 
 ---
 
 # 在UI中匯出XDM結構
 
-架構程式庫中的所有資源都包含在IMS組織內的特定沙盒中。 在某些情況下，您可能會想在沙盒和IMS組織之間共用「體驗資料模型」(XDM)資源。
+結構資料庫中的所有資源都包含在IMS組織內的特定沙箱中。 在某些情況下，您可能會想在沙箱與IMS組織之間共用Experience Data Model(XDM)資源。
 
-為滿足此需求，Adobe Experience PlatformUI中的[!UICONTROL Schemas]工作區允許您為架構庫中的任何架構生成導出裝載。 然後，此裝載可用於對架構註冊表API的呼叫，以將架構（及所有相依資源）匯入目標沙盒和IMS組織。
+為了滿足此需求，Adobe Experience Platform UI的[!UICONTROL 結構]工作區可讓您為結構資料庫中的任何結構產生匯出裝載。 接著，此裝載便可用於呼叫結構註冊表API，以將結構（以及所有相依資源）匯入目標沙箱和IMS組織。
 
 >[!NOTE]
 >
->您還可以使用方案註冊表API導出除方案外的其他資源，包括類、方案欄位組和資料類型。 如需詳細資訊，請參閱[匯出／匯入端點](../api/export-import.md)上的指南。
+>除了結構（包括類、結構欄位組和資料類型）外，您還可以使用結構註冊表API導出其他資源。 如需詳細資訊，請參閱[匯出/匯入端點](../api/export-import.md)上的指南。
 
 ## 先決條件
 
-雖然平台UI可讓您匯出XDM資源，但您必須使用架構註冊表API將這些資源匯入其他沙盒或IMS組織，以完成工作流程。 在遵循本指南之前，請參閱[快速入門手冊中的「架構註冊表API](../api/getting-started.md)」，以取得有關必要驗證標題的重要資訊。
+雖然Platform UI可讓您匯出XDM資源，但您必須使用「結構註冊表API」將這些資源匯入其他沙箱或IMS組織，才能完成工作流程。 在遵循本指南之前，請參閱[架構註冊表API](../api/getting-started.md)快速入門手冊，以取得有關必要驗證標題的重要資訊。
 
 ## 產生匯出裝載
 
-在平台UI中，選擇左側導覽中的&#x200B;**[!UICONTROL Schemas]**。 在[!UICONTROL Schemas]工作區中，找到要導出的方案，並在[!DNL Schema Editor]中將其開啟。
+在Platform UI中，選取左側導覽中的&#x200B;**[!UICONTROL 結構]**。 在[!UICONTROL 結構]工作區中，找出要匯出的結構，並在[!DNL Schema Editor]中開啟。
 
 >[!TIP]
 >
->有關如何查找所查找的XDM資源的詳細資訊，請參見[中的指南。](./explore.md)
+>如需如何尋找您正在尋找的XDM資源的詳細資訊，請參閱[探索XDM資源](./explore.md)的指南。
 
-在模式開啟後，選擇畫布右上角的&#x200B;**[!UICONTROL Copy JSON]**&#x200B;表徵圖（![複製表徵圖](../images/ui/export/icon.png)）。
+開啟結構後，請選取畫布右上角的&#x200B;**[!UICONTROL 複製JSON]**&#x200B;圖示（![復製圖示](../images/ui/export/icon.png)）。
 
 ![](../images/ui/export/copy-json.png)
 
-這會將JSON裝載複製至您的剪貼簿，並根據結構產生。 對於上述的&quot;[!DNL Loyalty Members]&quot;結構，會產生下列JSON:
+這會根據結構，將JSON裝載複製到剪貼簿。 針對上述「[!DNL Loyalty Members]」結構，會產生下列JSON:
 
 ```json
 [
   {
-    "$id": "https://ns.adobe.com/<XDM_TENANTID_PLACEHOLDER>/fieldgroups/9ecfd881d0053568d277b792e4d24c6b70ffa7782bd31265",
-    "meta:altId": "_<XDM_TENANTID_PLACEHOLDER>.fieldgroups.9ecfd881d0053568d277b792e4d24c6b70ffa7782bd31265",
-    "meta:resourceType": "fieldgroups",
+    "$id": "https://ns.adobe.com/<XDM_TENANTID_PLACEHOLDER>/mixins/9ecfd881d0053568d277b792e4d24c6b70ffa7782bd31265",
+    "meta:altId": "_<XDM_TENANTID_PLACEHOLDER>.mixins.9ecfd881d0053568d277b792e4d24c6b70ffa7782bd31265",
+    "meta:resourceType": "mixins",
     "version": "1.0",
     "title": "Loyalty details",
     "type": "object",
@@ -171,12 +170,12 @@ ht-degree: 0%
         "meta:xdmType": "object"
       },
       {
-        "$ref": "https://ns.adobe.com/<XDM_TENANTID_PLACEHOLDER>/fieldgroups/9ecfd881d0053568d277b792e4d24c6b70ffa7782bd31265",
+        "$ref": "https://ns.adobe.com/<XDM_TENANTID_PLACEHOLDER>/mixins/9ecfd881d0053568d277b792e4d24c6b70ffa7782bd31265",
         "type": "object",
         "meta:xdmType": "object"
       },
       {
-        "$ref": "https://ns.adobe.com/xdm/fieldgroups/profile-consents",
+        "$ref": "https://ns.adobe.com/xdm/mixins/profile-consents",
         "type": "object",
         "meta:xdmType": "object"
       }
@@ -189,8 +188,8 @@ ht-degree: 0%
       "https://ns.adobe.com/xdm/common/auditable",
       "https://ns.adobe.com/xdm/data/record",
       "https://ns.adobe.com/xdm/context/profile",
-      "https://ns.adobe.com/<XDM_TENANTID_PLACEHOLDER>/fieldgroups/9ecfd881d0053568d277b792e4d24c6b70ffa7782bd31265",
-      "https://ns.adobe.com/xdm/fieldgroups/profile-consents"
+      "https://ns.adobe.com/<XDM_TENANTID_PLACEHOLDER>/mixins/9ecfd881d0053568d277b792e4d24c6b70ffa7782bd31265",
+      "https://ns.adobe.com/xdm/mixins/profile-consents"
     ],
     "meta:xdmType": "object",
     "meta:class": "https://ns.adobe.com/xdm/context/profile",
@@ -203,14 +202,14 @@ ht-degree: 0%
 ]
 ```
 
-裝載採用陣列的形式，每個陣列項都是表示要導出的自定義XDM資源的對象。 在上述範例中，「[!DNL Loyalty details]」自訂欄位群組和「[!DNL Loyalty Members]」結構。 匯出中不會包含架構採用的任何核心資源，因為這些資源可用於所有沙盒和IMS組織。
+裝載會以陣列的形式呈現，而每個陣列項目都是代表要匯出之自訂XDM資源的物件。 在上述範例中，包含「[!DNL Loyalty details]」自訂欄位群組和「[!DNL Loyalty Members]」結構。 匯出中不包含結構採用的任何核心資源，因為這些資源可用於所有沙箱和IMS組織。
 
-請注意，您組織的租用戶ID的每個例項在裝載中會顯示為`<XDM_TENANTID_PLACEHOLDER>`。 這些預留位置會自動取代為適當的租用戶ID值，這取決於您在下一步驟中匯入架構的位置。
+請注意，貴組織的租用戶ID的每個例項在裝載中都顯示為`<XDM_TENANTID_PLACEHOLDER>`。 視您在下個步驟中匯入結構的位置而定，這些預留位置會自動取代為適當的租用戶ID值。
 
 ## 使用API匯入資源
 
-在您複製結構的匯出JSON後，就可將它當做結構註冊表API中`/import`端點的POST要求的裝載。 如需如何設定呼叫，將結構傳送至所需IMS組織與沙盒的詳細資訊，請參閱API](../api/export-import.md#import)中有關匯入XDM資源的章節。[
+複製結構的匯出JSON後，您就可以將其作為POST要求的裝載，複製到結構註冊表API的`/import`端點。 如需如何設定呼叫以將結構傳送至所需IMS組織與沙箱的詳細資訊，請參閱API](../api/export-import.md#import)中關於[匯入XDM資源的區段。
 
 ## 後續步驟
 
-依照本指南，您已成功將XDM架構匯出至不同的IMS組織或沙盒。 有關[!UICONTROL Schemas] UI功能的詳細資訊，請參閱[[!UICONTROL Schemas] UI概述](./overview.md)。
+依照本指南，您已成功將XDM結構匯出至不同的IMS組織或沙箱。 有關[!UICONTROL 結構] UI功能的詳細資訊，請參閱[[!UICONTROL 結構] UI概述](./overview.md)。
