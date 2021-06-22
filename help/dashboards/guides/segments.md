@@ -4,9 +4,9 @@ title: 區段控制面板
 description: 'Adobe Experience Platform提供控制面板，供您檢視貴組織已建立區段的重要資訊。 '
 type: Documentation
 exl-id: de5e07bc-2c44-416e-99db-7607059117cb
-source-git-commit: 36aaccddeb207e22a22d5124ec8592ac8dddf8bc
+source-git-commit: 2791c32abe582d51d05d4bf0488ba82dfadfd053
 workflow-type: tm+mt
-source-wordcount: '900'
+source-wordcount: '940'
 ht-degree: 0%
 
 ---
@@ -29,13 +29,17 @@ Adobe Experience Platform使用者介面(UI)提供控制面板，讓您透過控
 
 ## 探索區段控制面板
 
-若要導覽至Platform UI中的區段控制面板，請在左側邊欄中選取「**[!UICONTROL 區段]**」，然後選取「**[!UICONTROL 概述]**」標籤以顯示控制面板。
+若要導覽至Platform UI中的[!UICONTROL Segments]控制面板，請在左側邊欄中選取&#x200B;**[!UICONTROL Segments]**，然後選取&#x200B;**[!UICONTROL Overview]**&#x200B;標籤以顯示控制面板。
+
+>[!NOTE]
+>
+>如果您的組織是初次使用Platform，且尚未建立作用中的設定檔資料集或合併原則，則不會顯示[!UICONTROL Segments]控制面板。 相反地， [!UICONTROL 概述]標籤會顯示可協助您開始使用細分的連結和檔案。
 
 ![](../images/segments/dashboard-overview.png)
 
 ### 修改[!UICONTROL 區段]控制面板
 
-您可以選取&#x200B;**[!UICONTROL 修改控制面板]**&#x200B;來修改[!UICONTROL 區段]控制面板的外觀。 這可讓您從控制面板移動、新增和移除介面工具集，以及存取[!UICONTROL 介面工具集庫]以探索可用介面工具集，並為貴組織建立自訂介面工具集。
+您可以選取&#x200B;**[!UICONTROL 修改控制面板]**，以修改[!UICONTROL 區段]控制面板的外觀。 這可讓您從控制面板移動、新增和移除介面工具集，以及存取[!UICONTROL 介面工具集庫]以探索可用介面工具集，並為貴組織建立自訂介面工具集。
 
 請參閱[修改控制面板](../modify.md)和[介面工具集庫](../widget-library.md)檔案以深入了解。
 
