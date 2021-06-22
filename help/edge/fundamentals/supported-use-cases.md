@@ -2,10 +2,10 @@
 title: Adobe Experience Platform Web SDK的支援使用案例
 description: 了解Adobe Experience Platform Web SDK支援哪些使用案例。
 keywords: 網頁sdk；使用案例
-source-git-commit: b630a00f3985769243bd42ecd3c49f0d0ce60b07
+source-git-commit: da305a65a7d5fc3d8214f1d046181b463d324ee0
 workflow-type: tm+mt
-source-wordcount: '528'
-ht-degree: 14%
+source-wordcount: '574'
+ht-degree: 13%
 
 ---
 
@@ -40,7 +40,7 @@ ht-degree: 14%
 | --- | --- |
 | 傳送體驗事件 |  |
 | Offer Decisioning | [文件](https://experienceleague.adobe.com/docs/experience-platform/edge/personalization/offer-decisioning/offer-decisioning-overview.html?lang=en#personalization) |
-| 以低延遲將資料傳送至即時客戶資料設定檔 |
+| 如果資料集已啟用設定檔功能，則可即時傳送資料至「即時客戶資料設定檔」 |  |
 | 即時傳送資料至Customer Journey Analytics |  |
 | 將同意寫入設定檔 | [文件](https://experienceleague.adobe.com/docs/experience-platform/landing/governance-privacy-security/consent/adobe/sdk.html?lang=en) |
 | 將資料伺服器端即時轉送給第三方 | [文件](https://experienceleague.adobe.com/docs/launch/using/server-side-info/server-side-overview.html?lang=en) |
@@ -87,6 +87,10 @@ ht-degree: 14%
 | 訪客屬性支援 |  |
 | 設定檔指令碼 |  |
 | XDM變成mbox參數 |  |
+| A4T報表支援的重新導向選件 | [文件](https://experienceleague.adobe.com/docs/target/using/experiences/offers/offer-redirect.html?lang=en) |
+| 更新Target設定檔 | [文件](https://experienceleague.adobe.com/docs/experience-platform/edge/personalization/adobe-target/target-overview.html?lang=en#single-profile-update) |
+| 建議 |  |
+| mBox第三方ID |  |
 
 {style=&quot;table-layout:auto&quot;}
 
