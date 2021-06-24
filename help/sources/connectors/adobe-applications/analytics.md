@@ -5,9 +5,9 @@ title: Adobe Analytics報表套裝資料的來源連接器
 topic-legacy: overview
 description: 本檔案概述Analytics並說明Analytics資料的使用案例。
 exl-id: c4887784-be12-40d4-83bf-94b31eccdc2e
-source-git-commit: c3d66e50f647c2203fcdd5ad36ad86ed223733e3
+source-git-commit: 9defe1c3087c2f1284ceedede9d274a51cf97b96
 workflow-type: tm+mt
-source-wordcount: '511'
+source-wordcount: '542'
 ht-degree: 1%
 
 ---
@@ -44,6 +44,8 @@ XDM是公開記錄的規範，為應用程式提供通用結構和定義，以�
 
 ## 平台上Analytics資料的預期延遲為何？
 
+下表列出Platform上Analytics資料的預期延遲。 延遲會因客戶配置、資料量和消費者應用程式而異。 例如，如果Analytics實作設定了`A4T` ,Pipeline的延遲會增加至5-10分鐘。
+
 | Analytics 資料 | 預期延遲 |
 | -------------- | ---------------- |
 | 新資料至[!DNL Real-time Customer Profile]（A4T **未啟用**） | &lt; 2 分鐘 |
@@ -53,7 +55,7 @@ XDM是公開記錄的規範，為應用程式提供通用結構和定義，以�
 
 >[!NOTE]
 >
->延遲會因客戶配置、資料量和消費者應用程式而異。 例如，如果[!DNL Analytics]實作已設定`A4T` ,Pipeline的延遲將增加至5-10分鐘。
+>Analytics回填資料不會內嵌至[!DNL Profile]，因此不會計入授權設定檔中。
 
 ## [!DNL Analytics]資料中的主要標識符
 
