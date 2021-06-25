@@ -2,11 +2,11 @@
 keywords: Experience Platform；設定檔；即時客戶設定檔；疑難排解；API；統一設定檔；統一設定檔；統一；設定檔；rtcp;XDM圖表
 title: 即時客戶個人檔案概觀
 topic-legacy: guide
-description: 即時客戶設定檔是一般查詢實體存放區，可合併來自各種企業資料資產的資料，然後以個別客戶設定檔和相關時間序列事件的形式提供對該資料的存取。 此功能可讓行銷人員跨多個管道，透過受眾推動協調、一致且相關的體驗。
+description: 即時客戶設定檔可合併來自各種來源的資料，並以個別客戶設定檔和相關時間序列事件的形式提供對該資料的存取。 此功能可讓行銷人員跨多個管道，透過受眾推動協調、一致且相關的體驗。
 exl-id: c93d8d78-b215-4559-a806-f019c602c4d2
-source-git-commit: f193787ac27e30c69d25418656ae9c59c89622dc
+source-git-commit: 7ebd84f31161b45c2904545a2310c8b1f7831593
 workflow-type: tm+mt
-source-wordcount: '1813'
+source-wordcount: '1779'
 ht-degree: 0%
 
 ---
@@ -35,15 +35,11 @@ Adobe Experience Platform可讓您為客戶提供協調、一致且相關的體�
 
 Experience Platform提供一系列護欄，協助您避免建立「即時客戶設定檔」無法支援的[Experience Data Model(XDM)結構](../xdm/home.md)。 這包括會導致效能降低的軟限制，以及會導致錯誤和系統中斷的硬限制。 欲知更多資訊，包括指南清單和示例使用案例，請參閱[配置式護欄](guardrails.md)文檔。
 
-### （測試版）設定檔控制面板{#profile-dashboard}
-
->[!IMPORTANT]
->
->控制面板功能目前仍在測試中，且不適用於所有使用者。 文件和功能可能會有所變更。
+### 設定檔控制面板 {#profile-dashboard}
 
 Experience PlatformUI提供控制面板，您可透過控制面板檢視即時客戶個人檔案資料的重要資訊，如每日快照中所擷取。 若要了解如何存取和使用UI中的[!DNL Profile]控制面板，以及控制面板中顯示之量度的詳細資訊，請參閱[設定檔控制面板UI指南](ui/profile-dashboard.md)。
 
-### 設定檔片段與合併的設定檔{#profile-fragments-vs-merged-profiles}
+### 設定檔片段與合併的設定檔 {#profile-fragments-vs-merged-profiles}
 
 每個個別客戶設定檔都由多個已合併的設定檔片段組成，以形成該客戶的單一檢視。 例如，如果客戶跨多個管道與您的品牌互動，您的組織會在多個資料集中顯示與該單一客戶相關的多個設定檔片段。 將這些片段擷取至Platform時，會合併在一起，以便為該客戶建立單一設定檔。
 
@@ -69,7 +65,7 @@ Experience PlatformUI提供控制面板，您可透過控制面板檢視即時�
 
 要了解有關合併策略及其在Experience Platform中的角色的詳細資訊，請從閱讀[合併策略概述](merge-policies/overview.md)開始。
 
-### 聯合架構{#profile-fragments-and-union-schemas}
+### 聯合結構 {#profile-fragments-and-union-schemas}
 
 [!DNL Real-time Customer Profile]的一個關鍵特徵是能夠統一多通道資料。 使用[!DNL Real-time Customer Profile]存取實體時，可提供該實體跨資料集之所有設定檔片段的合併檢視（稱為「聯合檢視」），並透過所謂的聯合架構實現。
 
