@@ -6,10 +6,10 @@ topic-legacy: tutorial
 type: Tutorial
 description: 本教學課程將協助您開始使用Adobe Experience Platform資料擷取服務API中的串流擷取API。
 exl-id: 9f7fbda9-4cd3-4db5-92ff-6598702adc34
-source-git-commit: b672eab481a8286f92741a971991c7f83102acf7
+source-git-commit: 42b8710cf6c04fabf7df1f005fae6b3828eeee49
 workflow-type: tm+mt
 source-wordcount: '1206'
-ht-degree: 2%
+ht-degree: 3%
 
 ---
 
@@ -40,12 +40,12 @@ ht-degree: 2%
 若要呼叫[!DNL Platform] API，您必須先完成[authentication tutorial](https://www.adobe.com/go/platform-api-authentication-en)。 完成驗證教學課程後，將提供所有[!DNL Experience Platform] API呼叫中每個必要標題的值，如下所示：
 
 - 授權：承載`{ACCESS_TOKEN}`
-- x-api索引鍵：`{API_KEY}`
-- x-gw-ims-org-id:`{IMS_ORG}`
+- x-api-key: `{API_KEY}`
+- x-gw-ims-org-id: `{IMS_ORG}`
 
 [!DNL Experience Platform]中的所有資源，包括屬於[!DNL Flow Service]的資源，都與特定虛擬沙箱隔離。 對[!DNL Platform] API的所有請求都需要標題，以指定作業將在下列位置進行的沙箱名稱：
 
-- x-sandbox-name:`{SANDBOX_NAME}`
+- x-sandbox-name: `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
@@ -416,7 +416,7 @@ curl -X POST \
 }
 ```
 
-### 將要擷取的原始資料張貼至Platform {#ingest-data}
+### 張貼要擷取的原始資料至Platform {#ingest-data}
 
 現在您已建立流程，可以將JSON訊息傳送至先前建立的串流端點。
 
@@ -445,10 +445,10 @@ curl -X POST https://dcs.adobedc.net/collection/2301a1f761f6d7bf62c5312c535e1076
           "country": "United State of America",
           "address": "3692 Main Street"
       },
-      "gender": "Male"
+      "gender": "Male",
       "birthday": {
-          "year": 1984
-          "month": 6
+          "year": 1984,
+          "month": 6,
           "day": 9
       }
   }'
