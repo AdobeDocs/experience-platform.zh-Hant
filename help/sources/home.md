@@ -5,7 +5,7 @@ title: 來源連接器概述
 topic-legacy: overview
 description: Adobe Experience Platform可讓您從外部來源擷取資料，同時使用Platform服務來建構、加標籤及增強傳入資料。 您可以從多種來源(如Adobe應用程式、雲儲存、資料庫等)內嵌資料。
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: 9c8f19e8b5259bcef526273addbd7711ef6082fb
+source-git-commit: 8236fb3a5786a6990fe85482c2fee0eda48bcf1f
 workflow-type: tm+mt
 source-wordcount: '979'
 ht-degree: 0%
@@ -67,6 +67,7 @@ CRM系統提供的資料可協助建立客戶關係，進而建立忠誠度並�
 
 - [[!DNL Microsoft Dynamics] 連接器](connectors/crm/ms-dynamics.md)
 - [[!DNL Salesforce] 連接器](connectors/crm/salesforce.md)
+- [[!DNL Veeva CRM]](connectors/crm/veeva.md)
 
 ### 客戶成功
 
