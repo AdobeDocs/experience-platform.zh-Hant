@@ -6,16 +6,16 @@ seo-title: 將設定檔和區段啟用至目的地
 description: 將區段對應至目的地，以啟動您在Adobe Experience Platform中的資料。 若要完成此操作，請遵循下列步驟。
 seo-description: 將區段對應至目的地，以啟動您在Adobe Experience Platform中的資料。 若要完成此操作，請遵循下列步驟。
 exl-id: c3792046-ffa8-4851-918f-98ced8b8a835
-source-git-commit: a8822d66443cc4cda761e1f0963b0e0251427911
+source-git-commit: 694a647b9f268b84d55a960b360ce28527c6c652
 workflow-type: tm+mt
-source-wordcount: '2688'
+source-wordcount: '2826'
 ht-degree: 0%
 
 ---
 
 # 將設定檔和區段啟用至目的地
 
-## 概覽 {#overview}
+## 總覽 {#overview}
 
 將區段對應至目的地，以啟動您在[!DNL Adobe Experience Platform]中擁有的資料。 若要完成此操作，請遵循下列步驟。
 
@@ -23,11 +23,11 @@ ht-degree: 0%
 
 若要將資料激活到目標，必須已成功[連接目標](./connect-destination.md)。 如果尚未這麼做，請前往[目的地目錄](../catalog/overview.md)，瀏覽支援的目的地，並設定一或多個目的地。
 
-## 激活資料{#activate-data}
+## 啟動資料 {#activate-data}
 
 啟動工作流程中的步驟因目的地類型而異。 所有目標類型的完整工作流程概述如下。
 
-## 選擇要向{#select-destination}激活資料的目標
+## 選擇要激活資料的目標 {#select-destination}
 
 適用於：所有目的地
 
@@ -37,7 +37,7 @@ ht-degree: 0%
 
 請依照下一節中的步驟，選取您要啟用的區段。
 
-## [!UICONTROL 選取] 區段步驟  {#select-segments}
+## [!UICONTROL 選取] 區段步驟 {#select-segments}
 
 適用於：所有目的地
 
@@ -60,7 +60,7 @@ ht-degree: 0%
 
 對於社交目的地，您必須選取來源屬性或身分識別命名空間，以對應為目的地中的目標身分識別。
 
-## 範例：在[!DNL Facebook Custom Audience] {#example-facebook}中啟用受眾資料
+## 範例：在[!DNL Facebook Custom Audience]中啟用受眾資料 {#example-facebook}
 
 以下是在[!DNL Facebook]中啟用受眾資料時正確身分對應的範例。
 
@@ -90,7 +90,7 @@ ht-degree: 0%
 
  
 
-## 範例：在[!DNL Google Customer Match] {#example-gcm}中啟用受眾資料
+## 範例：在[!DNL Google Customer Match]中啟用受眾資料 {#example-gcm}
 
 以下是在[!DNL Google Customer Match]中啟用受眾資料時正確身分對應的範例。
 
@@ -136,7 +136,7 @@ ht-degree: 0%
 
 ![建立計畫按鈕](../assets/ui/activate-destinations/create-schedule-button.png)
 
-### 導出完整檔案{#export-full-files}
+### 導出完整檔案 {#export-full-files}
 
 選擇&#x200B;**[!UICONTROL 導出完整檔案]**&#x200B;以使導出的檔案包含所有符合該段資格的配置檔案的完整快照。
 
@@ -149,10 +149,15 @@ ht-degree: 0%
    >
    >在特定時間匯出檔案的選項目前為測試版，僅適用於特定數量的客戶。
 
+   >[!IMPORTANT]
+   >
+   >根據設定檔匯出作業完成執行以及目的地服務啟動區段啟用作業的時間，第一次增量或完整檔案匯出可能不會包含所有必要的回填資料。 為確保完整檔案和增量檔案都能匯出完整且最新的回填資料，建議您在次日中午12點(GMT)後設定第一次檔案匯出時間。 這是將在未來版本中解決的限制。
+
 3. 使用&#x200B;**[!UICONTROL Date]**&#x200B;選取器來選擇應進行匯出的日期或間隔。
 4. 選擇&#x200B;**[!UICONTROL 建立]**&#x200B;以保存計畫。
 
-### 導出增量檔案{#export-incremental-files}
+
+### 導出增量檔案 {#export-incremental-files}
 
 選擇「**[!UICONTROL 導出增量檔案]**」，使導出的檔案僅包含自上次導出後符合該段資格的配置檔案。
 
@@ -173,12 +178,16 @@ ht-degree: 0%
 
    >[!IMPORTANT]
    >
-   >為匯出選取一天中時間的選項，僅適用於選取數量的客戶。 非測試版客戶每天可以在UTC中午12:00（東部標準時間早上7:00）導出增量檔案一次。
+   >為匯出選取一天中時間的選項，僅適用於選取數量的客戶。
+
+   >[!IMPORTANT]
+   >
+   >根據設定檔匯出作業完成執行以及目的地服務啟動區段啟用作業的時間，第一次增量或完整檔案匯出可能不會包含所有必要的回填資料。 為確保完整檔案和增量檔案都能匯出完整且最新的回填資料，建議您在次日中午12點(GMT)後設定第一次檔案匯出時間。 這是將在未來版本中解決的限制。
 
 3. 使用&#x200B;**[!UICONTROL Date]**&#x200B;選取器來選擇應進行匯出的日期或間隔。
 4. 選擇&#x200B;**[!UICONTROL 建立]**&#x200B;以保存計畫。
 
-### 配置檔案名{#file-names}
+### 配置檔案名 {#file-names}
 
 預設檔案名稱包含目的地名稱、區段ID以及日期和時間指標。 例如，您可以編輯匯出的檔案名稱以區分不同的促銷活動，或將資料匯出時間附加至檔案。
 
@@ -204,7 +213,7 @@ ht-degree: 0%
 
 完成所有區段的設定後，請選取&#x200B;**[!UICONTROL Next]**&#x200B;以繼續。
 
-## **[!UICONTROL 區段排]** 程  {#segment-schedule}
+## **[!UICONTROL 區段排]** 程 {#segment-schedule}
 
 適用於：廣告目的地，社交目的地
 
@@ -224,7 +233,7 @@ ht-degree: 0%
 
 ![輸入應用程式id](../assets/catalog/advertising/google-customer-match/gcm-destination-appid.png)
 
-## **[!UICONTROL 選擇屬]** 性步驟  {#select-attributes}
+## **[!UICONTROL 選擇屬]** 性步驟 {#select-attributes}
 
 適用於：電子郵件行銷目的地和雲端儲存目的地
 
@@ -242,7 +251,7 @@ ht-degree: 0%
 
 ![建議的屬性](../assets/ui/activate-destinations/mandatory-deduplication.png)
 
-### 強制屬性{#mandatory-attributes}
+### 強制屬性 {#mandatory-attributes}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_mandatorykey"
@@ -256,7 +265,7 @@ ht-degree: 0%
 
 建議您將結構中的一個屬性設為[唯一識別碼](../../destinations/catalog/email-marketing/overview.md#identity)。 如需強制屬性的詳細資訊，請參閱[電子郵件行銷目的地](../../destinations/catalog/email-marketing/overview.md#identity)檔案中的身分區段。
 
-### 重複資料刪除鍵{#deduplication-keys}
+### 重複資料刪除密鑰 {#deduplication-keys}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_deduplicationkey"
@@ -282,7 +291,7 @@ ht-degree: 0%
 > 
 > 您無法使用身分命名空間和設定檔屬性的組合作為重複資料刪除索引鍵。
 
-### 重複資料刪除示例{#deduplication-example}
+### 重複資料刪除範例 {#deduplication-example}
 
 此示例說明重複資料消除的工作方式，具體取決於所選的重複資料消除密鑰。
 
@@ -425,9 +434,9 @@ Adobe建議選取身分命名空間（例如[!DNL CRM ID]或電子郵件地址�
 
 ![確認選取](../assets/ui/activate-destinations/confirm-selection.png)
 
-## 確認區段啟動成功{#verify-activation}
+## 確認區段啟動成功 {#verify-activation}
 
-### 電子郵件行銷目的地和雲端儲存目的地{#esp-and-cloud-storage}
+### 電子郵件行銷目的地和雲端儲存空間目的地 {#esp-and-cloud-storage}
 
 對於電子郵件行銷目的地和雲端儲存空間目的地，Adobe Experience Platform會在您提供的儲存位置中建立以定位點分隔的`.csv`檔案。 預期每天會在儲存位置中建立新檔案。 預設檔案格式為：
 `<destinationName>_segment<segmentID>_<timestamp-yyyymmddhhmmss>.csv`
@@ -454,7 +463,7 @@ Salesforce_Marketing_Cloud_segment12341e18-abcd-49c2-836d-123c88e76c39_202004100
 >
 >Adobe Experience Platform與[!DNL Facebook]之間的整合支援歷史受眾回填。 當您將區段啟用至目的地時，所有歷史區段資格都會傳送至[!DNL Facebook]。
 
-## 禁用激活{#disable-activation}
+## 停用啟用 {#disable-activation}
 
 若要停用現有的啟動流程，請遵循下列步驟：
 
