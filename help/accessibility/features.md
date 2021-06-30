@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform；設定檔；即時客戶設定檔；疑難排解；API；統一設定檔；統一設定檔；統一；設定檔；rtcp;XDM圖表
 title: Platform中的一般協助工具功能
-topic: 指南
+topic-legacy: guide
 type: Documentation
 description: 進一步了解Adobe Experience Platform支援的一般協助工具功能，包括鍵盤導覽、調色盤和對比，以及輔助技術支援。
-source-git-commit: 81db01c3e8d332e1fc8127d779c3a584bb498858
+source-git-commit: 97f803f649b2c42b0449a2f8f0cff370ed1aba93
 workflow-type: tm+mt
-source-wordcount: '485'
+source-wordcount: '484'
 ht-degree: 2%
 
 ---
