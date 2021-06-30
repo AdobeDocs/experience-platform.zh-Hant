@@ -6,9 +6,9 @@ seo-title: 將設定檔和區段啟用至目的地
 description: 將區段對應至目的地，以啟動您在Adobe Experience Platform中的資料。 若要完成此操作，請遵循下列步驟。
 seo-description: 將區段對應至目的地，以啟動您在Adobe Experience Platform中的資料。 若要完成此操作，請遵循下列步驟。
 exl-id: c3792046-ffa8-4851-918f-98ced8b8a835
-source-git-commit: 0f0a71d8c1c3f36d6966ab37bd9749a59bc4aecf
+source-git-commit: a670823139eab37d319e834de5e3025d44e9c9b4
 workflow-type: tm+mt
-source-wordcount: '2674'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -148,10 +148,7 @@ ht-degree: 0%
    >[!IMPORTANT]
    >
    >在特定時間匯出檔案的選項目前為測試版，僅適用於特定數量的客戶。
-
-   <!-- >[!IMPORTANT]
-      >
-      >Depending on when the profile export job finishes running and when the destination service starts the segment activation job, the first incremental or full file export may not contain all the necessary backfill data. To ensure a complete and most up-to-date backfill data export for both full and incremental files, we recommend setting the first file export time after 12 PM GMT of the following day. This is a limitation that will be addressed in future releases. -->
+   ><br> <br> 由於內部Experience Platform程式的設定方式，第一個增量或完整檔案匯出可能不包含所有必要的回填資料。  <br> <br> 為確保完整檔案和增量檔案都能匯出完整且最新的回填資料，建議您在次日中午12點(GMT)後設定第一次檔案匯出時間。這是將在未來版本中解決的限制。
 
 3. 使用&#x200B;**[!UICONTROL Date]**&#x200B;選取器來選擇應進行匯出的日期或間隔。
 4. 選擇&#x200B;**[!UICONTROL 建立]**&#x200B;以保存計畫。
@@ -178,11 +175,7 @@ ht-degree: 0%
 
    >[!IMPORTANT]
    >
-   >為匯出選取一天中時間的選項，僅適用於選取數量的客戶。
-
-   <!-- >[!IMPORTANT]
-     >
-     >Depending on when the profile export job finishes running and when the destination service starts the segment activation job, the first incremental or full file export may not contain all the necessary backfill data. To ensure a complete and most up-to-date backfill data export for both full and incremental files, we recommend setting the first file export time after 12 PM GMT of the following day. This is a limitation that will be addressed in future releases. -->
+   >為匯出選取一天中時間的選項，僅適用於選取數量的客戶。<br> <br> 由於內部Experience Platform程式的設定方式，第一個增量或完整檔案匯出可能不包含所有必要的回填資料。  <br> <br> 為確保完整檔案和增量檔案都能匯出完整且最新的回填資料，建議您在次日中午12點(GMT)後設定第一次檔案匯出時間。這是將在未來版本中解決的限制。
 
 3. 使用&#x200B;**[!UICONTROL Date]**&#x200B;選取器來選擇應進行匯出的日期或間隔。
 4. 選擇&#x200B;**[!UICONTROL 建立]**&#x200B;以保存計畫。
