@@ -1,23 +1,23 @@
 ---
 keywords: Experience Platform；首頁；熱門主題；綠梅；綠梅
 solution: Experience Platform
-title: 使用流服務API建立GreenPlum源連接
+title: 使用Flow Service API建立GreenPlum基本連接
 topic-legacy: overview
 type: Tutorial
 description: 了解如何使用Flow Service API將GreenPlum連線至Adobe Experience Platform。
 exl-id: c4ce452a-b4c5-46ab-83ab-61b296c271d0
-source-git-commit: e150f05df2107d7b3a2e95a55dc4ad072294279e
+source-git-commit: 5fb5f0ce8bd03ba037c6901305ba17f8939eb9ce
 workflow-type: tm+mt
-source-wordcount: '533'
+source-wordcount: '439'
 ht-degree: 2%
 
 ---
 
-# 使用[!DNL Flow Service] API建立[!DNL GreenPlum]源連接
+# 使用[!DNL Flow Service] API建立[!DNL GreenPlum]基本連線
 
-[!DNL Flow Service] 可用來收集和集中Adobe Experience Platform中各種不同來源的客戶資料。該服務提供用戶介面和RESTful API，所有受支援的源都可從中連接。
+基本連線代表來源和Adobe Experience Platform之間已驗證的連線。
 
-本教學課程使用[!DNL Flow Service] API來引導您完成將[!DNL GreenPlum]連線至[!DNL Experience Platform]的步驟。
+本教學課程會逐步引導您使用[[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml)建立[!DNL GreenPlum]基本連線的步驟。
 
 ## 快速入門
 
@@ -31,43 +31,29 @@ ht-degree: 2%
 | 憑據 | 說明 |
 | ---------- | ----------- |
 | `connectionString` | 用於連接到[!DNL GreenPlum]實例的連接字串。 [!DNL GreenPlum]的連接字串模式為`HOST={SERVER};PORT={PORT};DB={DATABASE};UID={USERNAME};PWD={PASSWORD}` |
-| `connectionSpec.id` | 建立連線所需的識別碼。 [!DNL GreenPlum]的固定連接規範ID為`37b6bf40-d318-4655-90be-5cd6f65d334b`。 |
+| `connectionSpec.id` | 連接規範返回源的連接器屬性，包括與建立基連接和源連接相關的驗證規範。 [!DNL GreenPlum]的連接規範ID為`37b6bf40-d318-4655-90be-5cd6f65d334b`。 |
 
 有關獲取連接字串的詳細資訊，請參閱[此GreenPlum文檔](https://gpdb.docs.pivotal.io/580/security-guide/topics/Authenticate.html#topic_fzv_wb2_jr__config_ssl_client_conn)。
 
-### 讀取範例API呼叫
+### 使用平台API
 
-本教學課程提供範例API呼叫，以示範如何設定要求格式。 這些功能包括路徑、必要標題和格式正確的請求裝載。 也提供API回應中傳回的範例JSON。 如需範例API呼叫檔案中所使用慣例的資訊，請參閱[!DNL Experience Platform]疑難排解指南中[如何讀取範例API呼叫](../../../../../landing/troubleshooting.md#how-do-i-format-an-api-request)一節。
+如需如何成功呼叫Platform API的詳細資訊，請參閱[Platform API快速入門手冊](../../../../../landing/api-guide.md)。
 
-### 收集必要標題的值
+## 建立基本連接
 
-若要呼叫[!DNL Platform] API，您必須先完成[authentication tutorial](https://www.adobe.com/go/platform-api-authentication-en)。 完成驗證教學課程後，將提供所有[!DNL Experience Platform] API呼叫中每個必要標題的值，如下所示：
+基本連接在源和平台之間保留資訊，包括源的驗證憑據、連接的當前狀態和唯一基本連接ID。 基本連線ID可讓您從來源探索和導覽檔案，並識別您要擷取的特定項目，包括其資料類型和格式的相關資訊。
 
-* `Authorization: Bearer {ACCESS_TOKEN}`
-* `x-api-key: {API_KEY}`
-* `x-gw-ims-org-id: {IMS_ORG}`
-
-[!DNL Experience Platform]中的所有資源，包括屬於[!DNL Flow Service]的資源，都會隔離至特定虛擬沙箱。 對[!DNL Platform] API的所有請求都需要標題，以指定作業將在下列位置進行的沙箱名稱：
-
-* `x-sandbox-name: {SANDBOX_NAME}`
-
-所有包含裝載(POST、PUT、PATCH)的請求都需要其他媒體類型標題：
-
-* `Content-Type: application/json`
-
-## 建立連線
-
-連接指定源，並包含該源的憑據。 每個[!DNL GreenPlum]帳戶只需一個連接器，因為它可用於建立多個源連接器以導入不同的資料。
+若要建立基本連線ID，請在提供[!DNL GreenPlum]驗證憑證作為請求參數的一部分時，向`/connections`端點提出POST請求。
 
 **API格式**
 
-```http
+```https
 POST /connections
 ```
 
 **要求**
 
-若要建立[!DNL GreenPlum]連線，必須在POST請求中提供其唯一的連線規格ID。 [!DNL GreenPlum]的連接規範ID為`37b6bf40-d318-4655-90be-5cd6f65d334b`。
+以下請求為[!DNL GreenPlum]建立基本連接：
 
 ```shell
 curl -X POST \
