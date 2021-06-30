@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform；設定檔；即時客戶設定檔；疑難排解；API；統一設定檔；統一設定檔；統一；設定檔；rtcp;XDM圖表
 title: 適用於Experience Platform的自訂協助工具解決方案
-topic: 指南
+topic-legacy: guide
 type: Documentation
 description: 進一步了解Adobe Experience Platform使用者介面中的自訂協助工具解決方案。
-source-git-commit: 81db01c3e8d332e1fc8127d779c3a584bb498858
+source-git-commit: 97f803f649b2c42b0449a2f8f0cff370ed1aba93
 workflow-type: tm+mt
-source-wordcount: '1532'
+source-wordcount: '1531'
 ht-degree: 0%
 
 ---
