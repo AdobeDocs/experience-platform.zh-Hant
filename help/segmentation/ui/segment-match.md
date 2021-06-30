@@ -2,11 +2,11 @@
 keywords: Experience Platform；首頁；熱門主題；分段；分段符合；區段符合
 solution: Experience Platform
 title: 區段符合概述
-topic: 概述
+topic-legacy: overview
 description: 區段比對是Adobe Experience Platform中的區段共用服務，可讓兩位或多位Platform使用者以安全、受控且符合隱私權的方式來交換區段資料。
-source-git-commit: 481160f83e82c80ea5b73e9b56003dc625a34b5e
+source-git-commit: 97f803f649b2c42b0449a2f8f0cff370ed1aba93
 workflow-type: tm+mt
-source-wordcount: '1901'
+source-wordcount: '1900'
 ht-degree: 1%
 
 ---
