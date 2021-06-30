@@ -1,33 +1,32 @@
 ---
-keywords: Experience Platform; home；熱門主題；shopify;Shopify;
+keywords: Experience Platform；首頁；熱門主題；Shopify;Shopify;
 solution: Experience Platform
-title: Shopify Source Connector概觀
+title: Shopify Source Connector概述
 topic-legacy: overview
-description: 瞭解如何使用API或使用者介面將Shopify連線至Adobe Experience Platform。
+description: 了解如何使用API或使用者介面將Shopify連線至Adobe Experience Platform。
 exl-id: 636b31a7-e5f9-434a-acd1-226096522495
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 9d21d83204941db2db69f6be0f20d4e8627fc2ff
 workflow-type: tm+mt
-source-wordcount: '155'
+source-wordcount: '168'
 ht-degree: 0%
 
 ---
 
 # [!DNL Shopify] 連接器
 
-Adobe Experience Platform允許從外部來源接收資料，同時提供使用[!DNL Platform]服務構建、標籤和增強傳入資料的能力。 您可以從多種來源收錄資料，例如Adobe應用程式、雲端儲存空間、資料庫等。
+Adobe Experience Platform可讓您從外部來源擷取資料，同時使用[!DNL Platform]服務來建構、加標籤及增強傳入資料。 您可以從多種來源(如Adobe應用程式、雲儲存、資料庫等)內嵌資料。
 
-[!DNL Experience Platform] 支援從協力廠商提供者擷取資 **[!UICONTROL eCommerce]** 料。支援&#x200B;**[!UICONTROL eCommerce]**&#x200B;提供者，包括[!DNL Shopify]。
+[!DNL Experience Platform] 提供從協力廠商eCommerceprovider擷取資料的 **** 支援。對&#x200B;**[!UICONTROL eCommerce]**&#x200B;提供程式的支援包括[!DNL Shopify]。
 
-下面的文檔提供了如何使用API或用戶介面將[!DNL Shopify]連接到[!DNL Platform]的資訊：
+以下檔案提供如何使用API或使用者介面將[!DNL Shopify]連線至[!DNL Platform]的資訊：
 
-## 使用API將[!DNL Shopify]連接至[!DNL Platform]
+## 使用API將[!DNL Shopify]連線至[!DNL Platform]
 
-- [使用Flow Service API建立Shopify來源連線](../../tutorials/api/create/ecommerce/shopify.md)
-- [使用Flow Service API探索電子商務連線](../../tutorials/api/explore/ecommerce.md)
-- [使用Flow Service API收集電子商務資料](../../tutorials/api/collect/ecommerce.md)
+- [使用流量服務API建立Shopify基礎連線](../../tutorials/api/create/ecommerce/shopify.md)
+- [使用流量服務API探索電子商務來源的資料結構和內容](../../tutorials/api/explore/ecommerce.md)
+- [使用流服務API為電子商務源建立資料流](../../tutorials/api/collect/ecommerce.md)
 
-## 使用UI將[!DNL Shopify]連接至[!DNL Platform]
+## 使用UI將[!DNL Shopify]連線至[!DNL Platform]
 
 - [在UI中建立Shopify來源連線](../../tutorials/ui/create/ecommerce/shopify.md)
-- [在UI中為電子商務連接配置資料流](../../tutorials/ui/dataflow/ecommerce.md)
+- [在UI中為電子商務源連接建立資料流](../../tutorials/ui/dataflow/ecommerce.md)
