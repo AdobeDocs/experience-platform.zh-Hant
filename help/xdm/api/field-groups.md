@@ -3,10 +3,10 @@ keywords: Experience Platform；首頁；熱門主題；API; XDM; XDM系統；�
 solution: Experience Platform
 title: 欄位群組API端點
 description: 架構註冊表API中的/fieldgroups端點可讓您以程式設計方式管理體驗應用程式中的XDM架構欄位群組。
-topic: 開發人員指南
-source-git-commit: e4bf5bb77ac4186b24580329699d74d653310d93
+topic-legacy: developer guide
+source-git-commit: 97f803f649b2c42b0449a2f8f0cff370ed1aba93
 workflow-type: tm+mt
-source-wordcount: '1217'
+source-wordcount: '1215'
 ht-degree: 3%
 
 ---
