@@ -1,23 +1,23 @@
 ---
 keywords: Experience Platform；首頁；熱門主題；Synapse;Synapse;Azure synapse分析
 solution: Experience Platform
-title: 使用流程服務API建立Azure synapseAnalytics來源連線
+title: 使用流程服務API建立Azure synapse分析基礎連線
 topic-legacy: overview
 type: Tutorial
 description: 了解如何使用流量服務API將Azure synapseAnalytics連線至Adobe Experience Platform。
 exl-id: 8944ac3f-366d-49c8-882f-11cd0ea766e4
-source-git-commit: e150f05df2107d7b3a2e95a55dc4ad072294279e
+source-git-commit: 5fb5f0ce8bd03ba037c6901305ba17f8939eb9ce
 workflow-type: tm+mt
-source-wordcount: '555'
-ht-degree: 2%
+source-wordcount: '470'
+ht-degree: 1%
 
 ---
 
-# 使用[!DNL Flow Service] API建立[!DNL Azure Synapse Analytics]源連接
+# 使用[!DNL Flow Service] API建立[!DNL Azure Synapse Analytics]基本連線
 
-[!DNL Flow Service] 可用來收集和集中Adobe Experience Platform中各種不同來源的客戶資料。該服務提供用戶介面和RESTful API，所有受支援的源都可從中連接。
+基本連線代表來源和Adobe Experience Platform之間已驗證的連線。
 
-了解如何將[!DNL Azure Synapse Analytics]（以下稱為「[!DNL Synapse]」）連接至[!DNL Experience Platform]。
+本教學課程會逐步帶您了解使用[[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml)建立[!DNL Azure Synapse Analytics]基本連線（以下稱為「[!DNL Synapse]」）的步驟。
 
 ## 快速入門
 
@@ -35,43 +35,29 @@ ht-degree: 2%
 | 憑據 | 說明 |
 | ---------- | ----------- |
 | `connectionString` | 用於連接到[!DNL Synapse]的連接字串。 [!DNL Synapse]連接字串模式為`Server=tcp:{SERVER_NAME}.database.windows.net,1433;Database={DATABASE};User ID={USERNAME}@{SERVER_NAME};Password={PASSWORD};Trusted_Connection=False;Encrypt=True;Connection Timeout=30`。 |
-| `connectionSpec.id` | 建立連線所需的唯一識別碼。 [!DNL Synapse]的連接規範ID為：`a49bcc7d-8038-43af-b1e4-5a7a089a7d79` |
+| `connectionSpec.id` | 連接規範返回源的連接器屬性，包括與建立基連接和源連接相關的驗證規範。 [!DNL Synapse]的連接規範ID為：`a49bcc7d-8038-43af-b1e4-5a7a089a7d79` |
 
 有關獲取連接字串的詳細資訊，請參閱[此Synapse文檔](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-aad-authentication-configure?toc=%2Fazure%2Fsynapse-analytics%2Fsql-data-warehouse%2Ftoc.json&amp;bc=%2Fazure%2Fsynapse-analytics%2Fsql-data-warehouse%2Fbreadcrumb%2Ftoc.json&amp;tabs=azure-powershell)。
 
-### 讀取範例API呼叫
+### 使用平台API
 
-本教學課程提供範例API呼叫，以示範如何設定要求格式。 這些功能包括路徑、必要標題和格式正確的請求裝載。 也提供API回應中傳回的範例JSON。 如需範例API呼叫檔案中所使用慣例的資訊，請參閱[!DNL Experience Platform]疑難排解指南中[如何讀取範例API呼叫](../../../../../landing/troubleshooting.md#how-do-i-format-an-api-request)一節。
+如需如何成功呼叫Platform API的詳細資訊，請參閱[Platform API快速入門手冊](../../../../../landing/api-guide.md)。
 
-### 收集必要標題的值
+## 建立基本連接
 
-若要呼叫[!DNL Platform] API，您必須先完成[authentication tutorial](https://www.adobe.com/go/platform-api-authentication-en)。 完成驗證教學課程後，將提供所有[!DNL Experience Platform] API呼叫中每個必要標題的值，如下所示：
+基本連接在源和平台之間保留資訊，包括源的驗證憑據、連接的當前狀態和唯一基本連接ID。 基本連線ID可讓您從來源探索和導覽檔案，並識別您要擷取的特定項目，包括其資料類型和格式的相關資訊。
 
-* `Authorization: Bearer {ACCESS_TOKEN}`
-* `x-api-key: {API_KEY}`
-* `x-gw-ims-org-id: {IMS_ORG}`
-
-[!DNL Experience Platform]中的所有資源，包括屬於[!DNL Flow Service]的資源，都會隔離至特定虛擬沙箱。 對[!DNL Platform] API的所有請求都需要標題，以指定作業將在下列位置進行的沙箱名稱：
-
-* `x-sandbox-name: {SANDBOX_NAME}`
-
-所有包含裝載(POST、PUT、PATCH)的請求都需要其他媒體類型標題：
-
-* `Content-Type: application/json`
-
-## 建立連線
-
-連接指定源，並包含該源的憑據。 每個[!DNL Synapse]帳戶只需一個連接，因為它可用於建立多個源連接器以導入不同的資料。
+若要建立基本連線ID，請在提供[!DNL Synapse]驗證憑證作為請求參數的一部分時，向`/connections`端點提出POST請求。
 
 **API格式**
 
-```http
+```https
 POST /connections
 ```
 
 **要求**
 
-若要建立[!DNL Synapse]連線，必須在POST請求中提供其唯一連線規格ID。 [!DNL Synapse]的連接規範ID為`a49bcc7d-8038-43af-b1e4-5a7a089a7d79`。
+以下請求為[!DNL Synapse]建立基本連接：
 
 ```shell
 curl -X POST \
