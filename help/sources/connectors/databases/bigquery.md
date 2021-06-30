@@ -5,9 +5,9 @@ title: Google BigQuery來源連接器概觀
 topic-legacy: overview
 description: 了解如何使用API或使用者介面將Google BigQuery連線至Adobe Experience Platform。
 exl-id: 35c61382-a909-47f4-a937-15cb725ecbe3
-source-git-commit: 9d68e54baa894ebeff4603c7df01a1fe42aa217f
+source-git-commit: 5821f9304a37c1a03d17f0113d09548799662a2e
 workflow-type: tm+mt
-source-wordcount: '386'
+source-wordcount: '395'
 ht-degree: 0%
 
 ---
@@ -49,11 +49,11 @@ Adobe Experience Platform可讓您從外部來源擷取資料，同時使用Plat
 
 ### 使用API
 
-- [使用流量服務API建立Google BigQuery來源連線](../../tutorials/api/create/databases/bigquery.md)
-- [使用流服務API探索資料庫系統](../../tutorials/api/explore/database-nosql.md)
-- [使用流服務API從資料庫收集資料](../../tutorials/api/collect/database-nosql.md)
+- [使用流量服務API建立Google BigQuery基本連線](../../tutorials/api/create/databases/bigquery.md)
+- [使用流服務API探索資料庫源的資料結構和內容](../../tutorials/api/explore/database-nosql.md)
+- [使用流服務API為資料庫源建立資料流](../../tutorials/api/collect/database-nosql.md)
 
 ### 使用UI
 
 - [在UI中建立Google BigQuery來源連線](../../tutorials/ui/create/databases/bigquery.md)
-- [在UI中為資料庫連接配置資料流](../../tutorials/ui/dataflow/databases.md)
+- [在UI中為資料庫源連接建立資料流](../../tutorials/ui/dataflow/databases.md)
