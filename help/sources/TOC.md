@@ -4,9 +4,9 @@ user-guide-title: Adobe Experience Platform 來源連接器說明
 breadcrumb-title: 來源連接器指南
 user-guide-description: 從多種來源或結構擷取資料、加標籤，以及增強已擷取的資料。
 feature: 資料擷取，來源
-source-git-commit: 2b2dcf51098f8263044d56bf65a00d1d48ceddd8
+source-git-commit: e04df6e2ffabac6e70164dfccbad8440976b2755
 workflow-type: tm+mt
-source-wordcount: '623'
+source-wordcount: '619'
 ht-degree: 12%
 
 ---
@@ -82,7 +82,7 @@ ht-degree: 12%
    - 串流{#streaming}
       - [HTTP API連接器](connectors/streaming/http.md)
 - API教學課程{#api-tutorials}
-   - 建立源連接{#create}
+   - 建立基本連接{#create}
       - 廣告{#advertising}
          - [Google AdWords](tutorials/api/create/advertising/ads.md)
       - 雲儲存{#cloud-storage}
@@ -138,7 +138,7 @@ ht-degree: 12%
       - [探索雲儲存資料](tutorials/api/explore/cloud-storage.md)
       - [探索CRM資料](tutorials/api/explore/crm.md)
       - [探索客戶成功資料](tutorials/api/explore/customer-success.md)
-      - [瀏覽資料庫或NoSQL資料](tutorials/api/explore/database-nosql.md)
+      - [瀏覽資料庫資料](tutorials/api/explore/database-nosql.md)
       - [探索電子商務資料](tutorials/api/explore/ecommerce.md)
       - [探索行銷自動化資料](tutorials/api/explore/marketing-automation.md)
       - [探索付款資料](tutorials/api/explore/payments.md)
@@ -148,7 +148,7 @@ ht-degree: 12%
       - [收集雲端儲存資料](tutorials/api/collect/cloud-storage.md)
       - [收集CRM資料](tutorials/api/collect/crm.md)
       - [收集客戶成功資料](tutorials/api/collect/customer-success.md)
-      - [收集資料庫或NoSQL資料](tutorials/api/collect/database-nosql.md)
+      - [收集資料庫資料](tutorials/api/collect/database-nosql.md)
       - [收集電子商務資料](tutorials/api/collect/ecommerce.md)
       - [收集行銷自動化資料](tutorials/api/collect/marketing-automation.md)
       - [收集付款資料](tutorials/api/collect/payments.md)
