@@ -1,80 +1,27 @@
 ---
 title: Adobe Experience Platform 發行說明
-description: Experience Platform2021年5月26日發行說明。
+description: 2021年6月30日的Experience Platform發行說明。
 doc-type: release notes
-last-update: May 26, 2021
-author: ens72741
+last-update: June 30, 2021
+author: ens60013
 exl-id: 8f2c9bf8-1487-46e4-993b-bd9b63774cab
-source-git-commit: 487d6dbef21459a7ce78cdc70215ad46e06ba892
+source-git-commit: fc916f87bf07e5eabf7d1681059406e2fea362e0
 workflow-type: tm+mt
-source-wordcount: '1306'
-ht-degree: 3%
+source-wordcount: '530'
+ht-degree: 6%
 
 ---
 
 
 # Adobe Experience Platform 發行說明
 
-**發行日期：2021 年 5 月 26 日**
-
-Adobe Experience Platform的新功能：
-
-- [儀表板](#dashboards)
+**發行日期：2021 年 6 月 30 日**
 
 Adobe Experience Platform 現有功能更新：
 
-- [[!DNL Data Prep]](#data-prep)
-- [[!DNL Destinations]](#destinations)
-- [[!DNL Experience Data Model (XDM)]](#xdm)
 - [即時客戶個人檔案](#profile)
 - [沙盒](#sandboxes)
 - [來源](#sources)
-
-## 儀表板 {#dashboards}
-
-Adobe Experience Platform提供多個控制面板，讓您透過這些控制面板檢視組織資料的重要深入分析（在每日快照中擷取）。
-
-| 功能 | 說明 |
-| --- | --- |
-| 設定檔分析 | 設定檔控制面板提供每個組織合併原則Experience Platform的即時客戶設定檔量度的每日概覽。 所有能夠在Platform中存取及檢視設定檔資料的使用者，都能取得這些設定檔分析。 |
-| 對象分析 | 區段控制面板提供與受眾相關的深入分析，讓所有可存取Platform中檢視區段的使用者都能查看。 控制面板每日提供使用區段產生器UI建立或從Adobe Audience Manager匯入之對象的對象量度概觀。 |
-| 啟動分析 | 所有能存取和檢視目的地的使用者皆可使用目的地控制面板。 控制面板會提供所有目的地之啟用的啟用量度的每日概覽。 |
-| 使用者專屬分析 | 控制面板的外觀和風格可由每位使用者個人化，包括透過新增、移除、調整大小和重新排列小工具來修改控制面板版面的功能。 |
-| 介面工具集建立與管理 | 行銷人員可在集中式存放庫中存取所有標準和自訂Widget，以便將深入分析建立和共用大眾化：<br/><ul><li>標準標籤包含Adobe提供的小工具，可在控制面板上下文中存取。 </li><li>自訂索引標籤包含組織建立的自訂小工具，包括可在檢視中隱藏小工具的選項。</li><li>「設定檔和對象」深入分析中的介面工具集建立工作流程可讓您編輯、選取、預覽和發佈自訂介面工具集。</li></ul> |
-| 自訂分析 | 存取權限可讓資料工程師和行銷專家自訂可供Widget建立的設定檔屬性。 |
-
-如需控制面板的詳細資訊，包括如何授與存取權限和建立自訂Widget，請從閱讀[控制面板概述](../../dashboards/home.md)開始。
-
-## [!DNL Data Prep] {#data-prep}
-
-[!DNL Data Prep] 可讓資料工程師將資料對應、轉換及驗證至Experience Data Model(XDM)。
-
-| 功能 | 說明 |
-| ------- | ----------- |
-| 從寬錯誤警告 | 資料準備映射程式錯誤訊息現在會更加寬大，提供警告而非錯誤，以及部分轉換的列。 |
-| 新函式 | 新增函式來取得索引鍵、將元素附加至現有陣列、將多個陣列的元素附加至現有陣列、使用物件來建立陣列，以及將JSON物件的名稱作為字串文字使用。 |
-
-如需詳細資訊，請參閱[[!DNL Data Prep] overview](../../data-prep/home.md)。
-
-## [!DNL Destinations] {#destinations}
-
-[!DNL Destinations] 預先建置與目的地平台的整合，可順暢地從Adobe Experience Platform啟動資料。您可以使用目的地來針對跨通路行銷活動、電子郵件行銷活動、目標廣告和其他許多使用案例，啟用已知和未知的資料。
-
-| 功能 | 說明 |
-| ------- | ----------- |
-| 改善監控（測試版） | 提高目的地的監控功能，包括批次和串流目的地的資訊 |
-| [更快的增量檔案導出（測試版）](../../destinations/ui/activate-destinations.md#export-incremental-files) | 新增每3、6、8或12小時將增量檔案匯出至目的地的功能。<br> <br>此功能目前為測試版，僅適用於特定數量的客戶。非測試版客戶每天可匯出一次增量檔案。 |
-| [重複資料刪除密鑰支援（測試版）](../../destinations/ui/activate-destinations.md#deduplication-keys) | 新增將身分識別命名空間或設定檔屬性設定為重複資料刪除索引鍵的功能。 重複資料刪除索引鍵消除了在一個匯出檔案中有多個相同設定檔記錄的可能性。<br> <br>此功能目前為測試版，僅適用於特定數量的客戶。 |
-
-如需目的地的詳細一般資訊，請參閱[目的地概述](../../destinations/home.md)。
-
-## [!DNL Experience Data Model (XDM)] {#xdm}
-
-Experience Data Model(XDM)是開放原始碼規格，旨在提升數位體驗的效能。 它為與Adobe Experience Platform上的服務通訊的任何應用程式提供共同的結構和定義。 遵循XDM標準，所有客戶體驗資料皆可整合至通用表示法，以更快速、更整合的方式提供深入分析。 您可以從客戶動作中獲得寶貴的深入分析、透過區段定義客戶受眾，以及將客戶屬性用於個人化目的。
-
-| 功能 | 說明 |
-| --- | --- |
-| 架構欄位群組 | 「mixin」一詞已更新為「欄位群組」。 Adobe Experience Platform UI會反映此變更。 此外，Schema Registry API具有新的[欄位組端點](../../xdm/api/field-groups.md)，而mixin端點已作為舊式端點淘汰。 如需詳細資訊，請參閱[XDM檔案](../../xdm/home.md)。 |
 
 ## 即時客戶個人檔案 {#profile}
 
@@ -82,27 +29,20 @@ Adobe Experience Platform可讓您為客戶提供協調、一致且相關的體�
 
 | 功能 | 說明 |
 | ------- | ----------- |
-| 資料集重疊報表 | 資料集重疊報表會顯示對可定址對象貢獻最大的資料集，讓您可清楚掌握設定檔存放區的組成。 除了提供設定檔資料的深入分析外，此報表還可協助使用者採取動作來最佳化授權使用，例如設定特定資料的有效期限限制。 若要深入了解，請依照[產生資料集重疊報表的教學課程](../../profile/tutorials/dataset-overlap-report.md)操作。 |
+| 合併策略工作流更新 | 在UI中建立和更新合併原則時，使用者現在可以根據聯合結構預覽20個範例設定檔。 這可讓使用者在儲存合併原則設定前，預覽客戶設定檔的外觀。 有關詳細資訊，請參閱[合併策略UI指南](../../profile/merge-policies/ui-guide.md)。 |
+| 身分重疊報表 | 身分重疊報表是即時客戶設定檔API的一部分，可顯示設定檔存放區的組成。 使用`/previewsamplestatus`端點，身分重疊報表會公開對可定址對象貢獻最大的身分。 若要深入了解，請造訪[預覽範例狀態API端點指南](../../profile/api/preview-sample-status.md)。 |
 
 如需「即時客戶設定檔」的詳細資訊，包括使用[!DNL Profile]資料的教學課程和最佳實務，請從閱讀[即時客戶設定檔概述](../../profile/home.md)開始。
 
-## [!DNL Sandboxes] {#sandboxes}
+## 沙盒 {#sandboxes}
 
 Adobe Experience Platform的建置宗旨是在全球範圍豐富數位體驗應用程式。 公司通常並行運行多個數字型驗應用程式，需要滿足這些應用程式的開發、測試和部署，同時確保操作合規性。 為了滿足這項需求，Experience Platform提供沙箱，可將單一Platform執行個體分割成個別的虛擬環境，以協助開發及改進數位體驗應用程式。
 
 | 功能 | 說明 |
 | ------- | ----------- |
-| 多個生產沙箱 | 您現在可以在IMS組織中建立及管理多個生產沙箱，並將特定的生產沙箱專用於不同的業務、品牌、專案或地區。 如需詳細資訊，請參閱有關在UI](../../sandboxes/ui/user-guide.md)或[中使用API](../../sandboxes/api/overview.md)建立生產沙箱[的教學課程。 |
+| 生產沙箱重設增強功能 | 您現在可以重設用於與Adobe Audience Manager或Audience Core Service雙向區段共用的生產沙箱。 您可以從UI或使用API中的新`validationOnly`和`ignoreWarnings`參數來完成此作業。 如需詳細資訊，請參閱UI](../../sandboxes/ui/user-guide.md)中的[重設沙箱和API](../../sandboxes/api/sandboxes.md)中的[重設沙箱的教學課程。 |
 
-### 已知限制
-
-- 每個Experience Cloud組織都會隨附預先建立的預設生產沙箱。 對於從其他Adobe應用程式或不符合沙箱的非Adobe應用程式傳送至Platform的每個請求，此沙箱都是預設目的地。 如果Adobe Analytics也在[跨裝置分析(CDA)](https://experienceleague.adobe.com/docs/analytics/components/cda/overview.html)功能使用其中托管的身分圖表，或如果Adobe Audience Manager也在[以人物為基礎的目的地(PBD)](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/people-based/people-based-destinations-overview.html)功能使用其中托管的身分圖表，則無法重設預設的生產沙箱。
-- 與Adobe Audience Manager或Audience Core Service雙向區段共用的生產沙箱，無法重設或刪除。
-- 除了預設的生產沙箱外，所有使用者建立的生產和開發沙箱都可刪除。
-
-如需沙箱的詳細資訊，請參閱[沙箱概述](../../sandboxes/home.md)。
-
-## [!DNL Sources] {#sources}
+## 來源 {#sources}
 
 Adobe Experience Platform可內嵌來自外部來源的資料，同時允許您使用Platform服務來建構、加標籤及增強該資料。 您可以內嵌來自各種來源的資料，例如Adobe應用程式、雲端儲存、協力廠商軟體和您的CRM系統。
 
@@ -110,7 +50,7 @@ Experience Platform提供RESTful API和互動式UI，讓您輕鬆為各種資料
 
 | 功能 | 說明 |
 | ------- | ----------- |
-| 壓縮檔案擷取的UI支援 | 您現在可以在UI中使用雲端儲存空間來源，預覽並內嵌壓縮的JSON或分隔檔案。 如需詳細資訊，請參閱UI](../../sources/tutorials/ui/dataflow/batch/cloud-storage.md)中的[配置雲儲存源連接的資料流的教程。 |
-| 測試版來源轉至GA | 下列來源已從測試版提升為正式發行： <ul><li>[[!DNL Azure File Storage]](../../sources/connectors/cloud-storage/azure-file-storage.md)</li><li>[[!DNL Azure Synapse Analytics]](../../sources/connectors/databases/synapse-analytics.md)</li><li>[[!DNL Greenplum]](../../sources/connectors/databases/greenplum.md)</li><li>[[!DNL HubSpot]](../../sources/connectors/marketing-automation/hubspot.md)</li><li>[[!DNL ServiceNow]](../../sources/connectors/customer-success/servicenow.md)</li></ul> |
+| [!DNL Veeva CRM] （測試版） | 您現在可以使用[!DNL Flow Service] API或UI將[!DNL Veeva CRM]連線至Experience Platform。 如需詳細資訊，請參閱[[!DNL Veeva CRM] 連接器概述](../../sources/connectors/crm/veeva.md) 。 |
+| 支援監控流資料流 | 您現在可以使用來源UI工作區，以透過對應的量度和狀態，監控來自串流來源的資料擷取活動。 有關詳細資訊，請參閱有關[監視流資料流](../../sources/tutorials/ui/monitor-streaming.md)的教程。 |
 
 若要進一步了解來源，請參閱[來源概述](../../sources/home.md)。
