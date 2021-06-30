@@ -1,9 +1,8 @@
 ---
-product: experience-platform
 audience: user
 user-guide-title: Adobe Experience Platform協助工具
 user-guide-description: Adobe Experience Platform致力於為所有個人提供無障礙且包容的功能。
-source-git-commit: 639f4d2c712c37e89a8ba795a9ce915d72b58bbf
+source-git-commit: 5cb041504a9bae8b0a9df3e50de7cd9ece8a3d4a
 workflow-type: tm+mt
 source-wordcount: '49'
 ht-degree: 4%
