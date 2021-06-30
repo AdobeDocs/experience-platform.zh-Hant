@@ -1,60 +1,43 @@
 ---
 keywords: Experience Platform；首頁；熱門主題；廣告系統；廣告系統
 solution: Experience Platform
-title: 使用Flow Service API探索廣告系統
+title: 使用流量服務API探索廣告系統
 topic-legacy: overview
-description: Flow Service用於收集和集中Adobe Experience Platform內不同來源的客戶資料。 該服務提供用戶介面和REST風格的API，所有支援的源都可從中連接。 本教學課程使用Flow Service API來探索廣告系統。
+description: 流量服務用於收集和集中Adobe Experience Platform內各種不同來源的客戶資料。 該服務提供用戶介面和RESTful API，所有受支援的源都可從中連接。 本教學課程使用流量服務API來探索廣告系統。
 exl-id: 3016ce1e-12e6-47ce-a4c5-52f8d440f515
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 8aa8dfcc4f8a36d0898a9cc079bd98b89e3589a1
 workflow-type: tm+mt
-source-wordcount: '633'
-ht-degree: 1%
+source-wordcount: '506'
+ht-degree: 2%
 
 ---
 
 # 使用[!DNL Flow Service] API探索廣告系統
 
-[!DNL Flow Service] 用於收集和集中Adobe Experience Platform內不同來源的客戶資料。該服務提供用戶介面和REST風格的API，所有支援的源都可從中連接。
+建立基本連線後，您現在可以使用唯一的基本連線ID來導覽及探索來源的資料結構和內容。 這可讓您在建立資料流並將其帶入Adobe Experience Platform之前，先識別特定項目及其各自的資料類型和格式。
 
-本教學課程使用[!DNL Flow Service] API來探索廣告系統。
+本教學課程使用[[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml)。 探索廣告系統。
 
 ## 快速入門
 
-本指南需要對Adobe Experience Platform的下列組成部分有切實的瞭解：
+>[!IMPORTANT]
 
-* [來源](../../../home.md): [!DNL Experience Platform] 允許從各種來源接收資料，同時提供使用服務構建、標籤和增強傳入資料的 [!DNL Platform] 能力。
-* [沙盒](../../../../sandboxes/home.md): [!DNL Experience Platform] 提供虛擬沙盒，可將單一執行個體分 [!DNL Platform] 割為不同的虛擬環境，以協助開發和發展數位體驗應用程式。
+本教學課程要求您擁有廣告來源的唯一基本連線ID。 如果您沒有此ID，請參閱有關[將廣告來源連接至Platform](../../api/create/advertising/ads.md)教學課程的教學課程。
 
-以下各節提供您必須知道的其他資訊，以便使用[!DNL Flow Service] API成功連線至廣告系統。
+本指南需要妥善了解下列Adobe Experience Platform元件：
 
-### 收集必要的認證
+* [來源](../../../home.md): [!DNL Experience Platform] 可讓您從各種來源擷取資料，同時使用服務來建構、加標籤及增強傳入 [!DNL Platform] 資料。
+* [沙箱](../../../../sandboxes/home.md): [!DNL Experience Platform] 提供可將單一執行個體分割成個 [!DNL Platform] 別虛擬環境的虛擬沙箱，以協助開發及改進數位體驗應用程式。
 
-本教學課程要求您必須與想要從中擷取資料的第三方廣告應用程式建立有效的連線。 有效連接涉及應用程式的連接規範ID和連接ID。 有關建立廣告連接和檢索這些值的詳細資訊，請參閱[將廣告源連接到Platform](../../api/create/advertising/ads.md)教程。
+以下各節提供您需要知道的其他資訊，以便使用[!DNL Flow Service] API成功連線至廣告系統。
 
-### 讀取範例API呼叫
+### 使用平台API
 
-本教學課程提供範例API呼叫，以示範如何設定請求的格式。 這些包括路徑、必要標題和正確格式化的請求負載。 也提供API回應中傳回的範例JSON。 如需範例API呼叫檔案中所用慣例的詳細資訊，請參閱[!DNL Experience Platform]疑難排解指南中[如何讀取範例API呼叫](../../../../landing/troubleshooting.md#how-do-i-format-an-api-request)一節。
+如需如何成功呼叫Platform API的詳細資訊，請參閱[Platform API快速入門手冊](../../../../landing/api-guide.md)。
 
-### 收集必要標題的值
+## 探索資料表
 
-若要呼叫[!DNL Platform] API，您必須先完成[驗證教學課程](https://www.adobe.com/go/platform-api-authentication-en)。 完成驗證教學課程後，所有[!DNL Experience Platform] API呼叫中每個所需標題的值都會顯示在下面：
-
-* `Authorization: Bearer {ACCESS_TOKEN}`
-* `x-api-key: {API_KEY}`
-* `x-gw-ims-org-id: {IMS_ORG}`
-
-[!DNL Experience Platform]中的所有資源（包括屬於[!DNL Flow Service]的資源）都隔離到特定的虛擬沙盒。 對[!DNL Platform] API的所有請求都需要一個標題，該標題指定要在中執行操作的沙盒的名稱：
-
-* `x-sandbox-name: {SANDBOX_NAME}`
-
-所有包含裝載(POST、PUT、PATCH)的請求都需要附加的媒體類型標題：
-
-* `Content-Type: application/json`
-
-## 探索您的資料表格
-
-使用廣告系統的基本連線，您可以執行GET要求來探索資料表。 使用以下調用查找要檢查或裝入[!DNL Platform]的表的路徑。
+使用廣告系統的基本連線，您可以執行GET請求來探索資料表。 使用以下調用查找要檢查或將其嵌入[!DNL Platform]的表的路徑。
 
 **API格式**
 
@@ -79,7 +62,7 @@ curl -X GET \
 
 **回應**
 
-成功的回應是從您的廣告系統傳送的表格陣列。 查找要帶入[!DNL Platform]的表，並記下其`path`屬性，因為在下一步中需要提供該表來檢查其結構。
+成功的回應是從到廣告系統的一組表格。 查找要帶入[!DNL Platform]的表，並記下其`path`屬性，因為您需要在下一步中提供該表來檢查其結構。
 
 ```json
 [
@@ -114,9 +97,9 @@ curl -X GET \
 ]
 ```
 
-## Inspect桌子的結構
+## Inspect表的結構
 
-若要從廣告系統檢查表格的結構，請在指定表格路徑作為查詢參數時執行GET請求。
+若要從廣告系統檢查表格的結構，請在指定表格路徑作為查詢參數時執行GET要求。
 
 **API格式**
 
@@ -127,7 +110,7 @@ GET /connections/{BASE_CONNECTION_ID}/explore?objectType=table&object={TABLE_PAT
 | 參數 | 說明 |
 | --- | --- |
 | `{BASE_CONNECTION_ID}` | 廣告系統的連線ID。 |
-| `{TABLE_PATH}` | 廣告系統中表格的路徑。 |
+| `{TABLE_PATH}` | 廣告系統內的表格路徑。 |
 
 **要求**
 
@@ -142,7 +125,7 @@ curl -X GET \
 
 **回應**
 
-成功的響應返回表的結構。 有關每個表列的詳細資訊位於`columns`陣列的元素中。
+成功的回應會傳回表格的結構。 有關表的每列的詳細資訊位於`columns`陣列的元素內。
 
 ```json
 {
@@ -188,4 +171,4 @@ curl -X GET \
 
 ## 後續步驟
 
-在本教學課程中，您已探索廣告系統，找到您要匯入[!DNL Platform]的表格路徑，並取得其結構的相關資訊。 您可以在下一個教學課程中使用此資訊，從您的廣告系統收集資料並匯入Platform](../collect/advertising.md)。[
+依照本教學課程，您已探索廣告系統、找到您要帶入[!DNL Platform]的表格路徑，並取得有關其結構的資訊。 您可以在下一個教學課程中使用此資訊，從您的廣告系統收集資料，並將其匯入Platform](../collect/advertising.md)。[
