@@ -1,69 +1,54 @@
 ---
-keywords: Experience Platform;home；熱門主題；Shopify;shopify；電子商務
+keywords: Experience Platform；首頁；熱門主題；Shopify;shopify；電子商務
 solution: Experience Platform
-title: 使用Flow Service API建立Shopify連接器來源連線
+title: 使用流量服務API建立Shopify連接器基本連線
 topic-legacy: overview
 type: Tutorial
-description: 瞭解如何使用Flow Service API將Shopify連線至Adobe Experience Platform。
+description: 了解如何使用Flow Service API將Shopify連線至Adobe Experience Platform。
 exl-id: 36086c7f-813e-4fc5-9778-f9d55aba03b2
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: e8c6620a6d2447a577bd56192030ff4353c62c62
 workflow-type: tm+mt
-source-wordcount: '549'
+source-wordcount: '448'
 ht-degree: 2%
 
 ---
 
-# 使用[!DNL Flow Service] API建立[!DNL Shopify]來源連線
+# 使用[!DNL Flow Service] API建立[!DNL Shopify]基本連線
 
-[!DNL Flow Service] 用於收集和集中Adobe Experience Platform內不同來源的客戶資料。該服務提供用戶介面和REST風格的API，所有支援的源都可從中連接。
+基本連線代表來源和Adobe Experience Platform之間已驗證的連線。
 
-本教學課程使用[[!DNL Flow Service]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) API來引導您完成將[!DNL Shopify]連接至[!DNL Experience Platform]的步驟。
+本教學課程會逐步帶您了解使用[[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml)建立[!DNL Shopify]基本連線（以下稱為「[!DNL Shopify]」）的步驟。
 
 ## 快速入門
 
-本指南需要對Adobe Experience Platform的下列組成部分有切實的瞭解：
+本指南需要妥善了解下列Adobe Experience Platform元件：
 
-* [[!DNL Sources]](../../../../home.md): [!DNL Experience Platform] 允許從各種來源接收資料，同時提供使用服務構建、標籤和增強傳入資料的 [!DNL Platform] 能力。
-* [[!DNL Sandboxes]](../../../../../sandboxes/home.md): [!DNL Experience Platform] 提供虛擬沙盒，可將單一執行個體分 [!DNL Platform] 割為不同的虛擬環境，以協助開發和發展數位體驗應用程式。
+* [[!DNL Sources]](../../../../home.md): [!DNL Experience Platform] 可讓您從各種來源擷取資料，同時使用服務來建構、加標籤及增強傳入 [!DNL Platform] 資料。
+* [[!DNL Sandboxes]](../../../../../sandboxes/home.md): [!DNL Experience Platform] 提供可將單一執行個體分割成個 [!DNL Platform] 別虛擬環境的虛擬沙箱，以協助開發及改進數位體驗應用程式。
 
-以下各節提供您必須知道的其他資訊，以便使用[!DNL Flow Service] API成功連線至[!DNL Shopify]。
+以下各節提供您需要知道的其他資訊，以便使用[!DNL Flow Service] API成功連接到[!DNL Shopify]。
 
-### 收集必要的認證
+### 收集所需憑據
 
 要使[!DNL Flow Service]與[!DNL Shopify]連接，必須為以下連接屬性提供值：
 
-| 憑證 | 說明 |
+| 憑據 | 說明 |
 | ---------- | ----------- |
 | `host` | [!DNL Shopify]伺服器的端點。 |
-| `accessToken` | 您[!DNL Shopify]使用者帳戶的存取Token。 |
-| `connectionSpec` | 建立連線所需的唯一識別碼。 [!DNL Shopify]的連接規範ID為：`4f63aa36-bd48-4e33-bb83-49fbcd11c708` |
+| `accessToken` | [!DNL Shopify]使用者帳戶的存取權杖。 |
+| `connectionSpec.id` | 連接規範返回源的連接器屬性，包括與建立基連接和源連接相關的驗證規範。 [!DNL Shopify]的連接規範ID為：`4f63aa36-bd48-4e33-bb83-49fbcd11c708`。 |
 
-有關快速入門的詳細資訊，請參閱[Shopify authentication document](https://shopify.dev/concepts/about-apis/authentication)。
+有關入門的詳細資訊，請參閱此[Shopify authentication document](https://shopify.dev/concepts/about-apis/authentication)。
 
-### 讀取範例API呼叫
+### 使用平台API
 
-本教學課程提供範例API呼叫，以示範如何設定請求的格式。 這些包括路徑、必要標題和正確格式化的請求負載。 也提供API回應中傳回的範例JSON。 如需範例API呼叫檔案中所用慣例的詳細資訊，請參閱Experience Platform疑難排解指南中[如何讀取範例API呼叫](../../../../../landing/troubleshooting.md#how-do-i-format-an-api-request)一節。
+如需如何成功呼叫Platform API的詳細資訊，請參閱[Platform API快速入門手冊](../../../../../landing/api-guide.md)。
 
-### 收集必要標題的值
+## 建立基本連接
 
-若要呼叫[!DNL Platform] API，您必須先完成[驗證教學課程](https://www.adobe.com/go/platform-api-authentication-en)。 完成驗證教學課程後，所有[!DNL Experience Platform] API呼叫中每個所需標題的值都會顯示在下面：
+基本連接在源和平台之間保留資訊，包括源的驗證憑據、連接的當前狀態和唯一基本連接ID。 基本連線ID可讓您從來源探索和導覽檔案，並識別您要擷取的特定項目，包括其資料類型和格式的相關資訊。
 
-* `Authorization: Bearer {ACCESS_TOKEN}`
-* `x-api-key: {API_KEY}`
-* `x-gw-ims-org-id: {IMS_ORG}`
-
-[!DNL Experience Platform]中的所有資源（包括屬於[!DNL Flow Service]的資源）都與特定虛擬沙盒隔離。 對[!DNL Platform] API的所有請求都需要一個標題，該標題指定要在中執行操作的沙盒的名稱：
-
-* `x-sandbox-name: {SANDBOX_NAME}`
-
-所有包含裝載(POST、PUT、PATCH)的請求都需要附加的媒體類型標題：
-
-* `Content-Type: application/json`
-
-## 建立連線
-
-連接指定源，並包含該源的憑據。 每個[!DNL Shopify]帳戶只需要一個連接，因為它可用於建立多個源連接器以導入不同的資料。
+若要建立基本連線ID，請在提供[!DNL Shopify]驗證憑證作為請求參數的一部分時，向`/connections`端點提出POST請求。
 
 **API格式**
 
@@ -73,7 +58,7 @@ POST /connections
 
 **要求**
 
-要建立[!DNL Shopify]連接，必須在POST請求中提供其唯一連接規範ID。 [!DNL Shopify]的連接規範ID為`4f63aa36-bd48-4e33-bb83-49fbcd11c708`。
+以下請求為[!DNL Shopify]建立基本連接：
 
 ```shell
 curl -X POST \
@@ -90,7 +75,7 @@ curl -X POST \
             "specName": "Basic Authentication",
             "params": {
                 "host": "{HOST}",
-                "accessToken": "{ACCCESS_TOKEN}"
+                "accessToken": "{ACCESS_TOKEN}"
             }
         },
         "connectionSpec": {
@@ -103,12 +88,12 @@ curl -X POST \
 | 屬性 | 說明 |
 | --------- | ----------- |
 | `auth.params.host` | [!DNL Shopify]伺服器的端點。 |
-| `auth.params.accessToken` | 您[!DNL Shopify]使用者帳戶的存取Token。 |
+| `auth.params.accessToken` | [!DNL Shopify]使用者帳戶的存取權杖。 |
 | `connectionSpec.id` | [!DNL Shopify]連接規範ID:`4f63aa36-bd48-4e33-bb83-49fbcd11c708`。 |
 
 **回應**
 
-成功的響應返回新建立的連接，包括其唯一連接標識符(`id`)。 在下一個教學課程中探索資料時，需要此ID。
+成功的響應返回新建立的連接，包括其唯一連接標識符(`id`)。 在下一個教學課程中探索資料時需要此ID。
 
 ```json
 {
@@ -119,4 +104,4 @@ curl -X POST \
 
 ## 後續步驟
 
-在本教程中，您使用[!DNL Flow Service] API建立了[!DNL Shopify]連接，並獲取了該連接的唯一ID值。 您可在下一個教學課程中使用此ID，同時學習如何使用Flow Service API](../../explore/ecommerce.md)來探索電子商務連線。[
+依照本教學課程，您已使用[!DNL Flow Service] API建立[!DNL Shopify]連線，並取得連線的唯一ID值。 在您了解如何使用流量服務API](../../explore/ecommerce.md)探索電子商務連線時，您可以在下一個教學課程中使用此ID。[
