@@ -1,23 +1,23 @@
 ---
 keywords: Experience Platform；首頁；熱門主題；Hubspot;Hubspot
 solution: Experience Platform
-title: 使用流服務API建立HubSpot源連接
+title: 使用流服務API建立HubSpot基礎連接
 topic-legacy: overview
 type: Tutorial
 description: 了解如何使用Flow Service API將Adobe Experience Platform連線至HubSpot。
 exl-id: a3e64215-a82d-4aa7-8e6a-48c84c056201
-source-git-commit: e150f05df2107d7b3a2e95a55dc4ad072294279e
+source-git-commit: 143f3b4a113c6f36cb1bb0c3624c8503f158a16d
 workflow-type: tm+mt
-source-wordcount: '578'
+source-wordcount: '486'
 ht-degree: 1%
 
 ---
 
-# 使用[!DNL Flow Service] API建立[!DNL HubSpot]源連接
+# 使用[!DNL Flow Service] API建立[!DNL HubSpot]基本連線
 
-[!DNL Flow Service] 可用來收集和集中Adobe Experience Platform中各種不同來源的客戶資料。該服務提供用戶介面和RESTful API，所有受支援的源都可從中連接。
+基本連線代表來源和Adobe Experience Platform之間已驗證的連線。
 
-本教學課程使用[!DNL Flow Service] API來引導您完成將[!DNL Experience Platform]連線至[!DNL HubSpot]的步驟。
+本教學課程會逐步引導您使用[[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml)建立[!DNL HubSpot]基本連線的步驟。
 
 ## 快速入門
 
@@ -38,33 +38,19 @@ ht-degree: 1%
 | `clientSecret` | 與您的[!DNL HubSpot]應用程式相關聯的用戶端密碼。 |
 | `accessToken` | 初次驗證OAuth整合時取得的存取權杖。 |
 | `refreshToken` | 初次驗證OAuth整合時取得的重新整理代號。 |
-| `connectionSpec` | 建立連線所需的唯一識別碼。 [!DNL HubSpot]的連接規範ID為：`cc6a4487-9e91-433e-a3a3-9cf6626c1806` |
+| `connectionSpec.id` | 連接規範返回源的連接器屬性，包括與建立基連接和源連接相關的驗證規範。 [!DNL HubSpot]的連接規範ID為：`cc6a4487-9e91-433e-a3a3-9cf6626c1806`。 |
 
 有關入門的詳細資訊，請參閱此[HubSpot文檔](https://developers.hubspot.com/docs/methods/oauth2/oauth2-overview)。
 
-### 讀取範例API呼叫
+### 使用平台API
 
-本教學課程提供範例API呼叫，以示範如何設定要求格式。 這些功能包括路徑、必要標題和格式正確的請求裝載。 也提供API回應中傳回的範例JSON。 如需範例API呼叫檔案中所使用慣例的資訊，請參閱Experience Platform疑難排解指南中[如何讀取範例API呼叫](../../../../../landing/troubleshooting.md#how-do-i-format-an-api-request)的區段。
+如需如何成功呼叫Platform API的詳細資訊，請參閱[Platform API快速入門手冊](../../../../../landing/api-guide.md)。
 
-### 收集必要標題的值
+## 建立基本連接
 
-若要呼叫[!DNL Platform] API，您必須先完成[authentication tutorial](https://www.adobe.com/go/platform-api-authentication-en)。 完成驗證教學課程後，將提供所有[!DNL Experience Platform] API呼叫中每個必要標題的值，如下所示：
+基本連接在源和平台之間保留資訊，包括源的驗證憑據、連接的當前狀態和唯一基本連接ID。 基本連線ID可讓您從來源探索和導覽檔案，並識別您要擷取的特定項目，包括其資料類型和格式的相關資訊。
 
-* `Authorization: Bearer {ACCESS_TOKEN}`
-* `x-api-key: {API_KEY}`
-* `x-gw-ims-org-id: {IMS_ORG}`
-
-[!DNL Experience Platform]中的所有資源，包括屬於[!DNL Flow Service]的資源，都會隔離至特定虛擬沙箱。 對[!DNL Platform] API的所有請求都需要標題，以指定作業將在下列位置進行的沙箱名稱：
-
-* `x-sandbox-name: {SANDBOX_NAME}`
-
-所有包含裝載(POST、PUT、PATCH)的請求都需要其他媒體類型標題：
-
-* `Content-Type: application/json`
-
-## 建立連線
-
-連接指定源，並包含該源的憑據。 每個[!DNL HubSpot]帳戶只需一個連接，因為它可用於建立多個源連接器以導入不同的資料。
+若要建立基本連線ID，請在提供[!DNL HubSpot]驗證憑證作為請求參數的一部分時，向`/connections`端點提出POST請求。
 
 **API格式**
 
@@ -74,7 +60,7 @@ POST /connections
 
 **要求**
 
-若要建立[!DNL HubSpot]連線，必須在POST請求中提供其唯一連線規格ID。 [!DNL HubSpot]的連接規範ID為`cc6a4487-9e91-433e-a3a3-9cf6626c1806`。
+以下請求為[!DNL HubSpot]建立基本連接：
 
 ```shell
 curl -X POST \
@@ -85,8 +71,8 @@ curl -X POST \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d '{
-        "name": "connection for hubspot",
-        "description": "connection for hubspot",
+        "name": "connection for HubSpot",
+        "description": "connection for HubSpot",
         "auth": {
             "specName": "Basic Authentication",
             "params": {
@@ -109,6 +95,7 @@ curl -X POST \
 | `auth.params.clientSecret` | 與您的[!DNL HubSpot]應用程式相關聯的用戶端密碼。 |
 | `auth.params.accessToken` | 初次驗證OAuth整合時取得的存取權杖。 |
 | `auth.params.refreshToken` | 初次驗證OAuth整合時取得的重新整理代號。 |
+| `connectionSpec.id` | [!DNL HubSpot]連接規範ID:`cc6a4487-9e91-433e-a3a3-9cf6626c1806`。 |
 
 **回應**
 
