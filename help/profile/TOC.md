@@ -3,10 +3,10 @@ audience: user
 user-guide-title: 即時客戶設定檔指南
 user-guide-description: 合併客戶資料，以建立跨通道客戶互動的統一檢視。
 feature: 設定檔
-source-git-commit: 1c2e4cd2b4070f3844a9848b5574e9d5b1688926
+source-git-commit: e56898542bc9cd305173fc2d7f3b6dd53dca7eb2
 workflow-type: tm+mt
-source-wordcount: '135'
-ht-degree: 19%
+source-wordcount: '139'
+ht-degree: 18%
 
 ---
 
@@ -17,8 +17,9 @@ ht-degree: 19%
 * [設定檔概述（影片）](video/profile-overview.md)
 * [[!DNL Profile] 和分段護欄](guardrails.md)
 * [[!DNL Profile] 儀表板](ui/profile-dashboard.md)
+* [資料集的存留時間(TTL)](apply-ttl.md)
 * [!DNL Profile] API {#api}
-   * [概述](api/overview.md)
+   * [總覽](api/overview.md)
    * [快速入門](api/getting-started.md)
    * [邊緣投影](api/edge-projections.md)
    * [實體（[!DNL Profile]訪問）](api/entities.md)
@@ -29,12 +30,12 @@ ht-degree: 19%
    * [[!DNL Profile] UI指南](ui/user-guide.md)
    * [[!DNL Profile] 詳細自訂](ui/profile-customization.md)
 * (Alpha)計算屬性{#computed-attributes}
-   * [概述](computed-attributes/overview.md)
+   * [總覽](computed-attributes/overview.md)
    * [計算屬性API](computed-attributes/ca-api.md)
    * [配置計算屬性欄位](computed-attributes/configure-api.md)
    * [範例運算式](computed-attributes/expressions.md)
 * 合併策略{#merge-policies}
-   * [概述](merge-policies/overview.md)
+   * [總覽](merge-policies/overview.md)
    * [合併策略API](api/merge-policies.md)
    * [合併策略UI指南](merge-policies/ui-guide.md)
    * [建立合併策略（影片）](video/create-merge-policies.md)
