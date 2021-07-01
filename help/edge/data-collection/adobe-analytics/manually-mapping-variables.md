@@ -4,10 +4,10 @@ description: 了解如何使用Web SDK中的處理規則，手動將變數對應
 seo-description: 使用搭配Web SDK的處理規則，手動將變數對應至Adobe Analytics
 keywords: adobe analytics;analytics；變數；對應變數；對應變數；contextData；內容資料；處理規則；規則；xdm；結構；
 exl-id: 395050c1-8d39-4da8-acea-6e618ed662dd
-source-git-commit: d67c8c0ada6dc4bf07b73547f9e571a8a7386b75
+source-git-commit: 9392a90b70699b79949095e178ea77dd34d313a3
 workflow-type: tm+mt
-source-wordcount: '395'
-ht-degree: 16%
+source-wordcount: '403'
+ht-degree: 25%
 
 ---
 
@@ -15,13 +15,13 @@ ht-degree: 16%
 
 Adobe Experience Platform [!DNL Web SDK]可以自動對應某些變數，但自訂變數必須手動對應。
 
-對於未自動對應至[!DNL Analytics]的XDM資料，您可以使用[內容資料](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/contextdata.html)來比對您的[結構](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/composition.html)。 然後，可使用[處理規則](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/processing-rules/processing-rules-configuration/t-processing-rules.html)將其對應至[!DNL Analytics]，以填入[!DNL Analytics]變數。
+對於未自動對應至[!DNL Analytics]的XDM資料，您可以使用[內容資料](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/contextdata.html?lang=zh-Hant)來比對您的[結構](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/composition.html?lang=zh-Hant)。 然後，可使用[處理規則](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/processing-rules/processing-rules-configuration/t-processing-rules.html?lang=zh-Hant)將其對應至[!DNL Analytics]，以填入[!DNL Analytics]變數。
 
 此外，您也可以使用一組預設的動作和產品清單，以使用Adobe Experience Platform Web SDK傳送或擷取資料。 要執行此操作，請參閱[收集商務和產品資訊](https://experienceleague.adobe.com/docs/experience-platform/edge/data-collection/collect-commerce-data.html)。
 
 ## 內容資料
 
-若要供[!DNL Analytics]使用，XDM資料會使用點標籤法扁平化，並成為`contextData`可用。 下列值配對清單顯示 `context data` 的範例：
+若要供[!DNL Analytics]使用，XDM資料會使用點標籤法扁平化，並成為`contextData`可用。 下列值組清單顯示`context data`平面化時的外觀範例：
 
 ```json
 {
@@ -59,7 +59,7 @@ Adobe Experience Platform [!DNL Web SDK]可以自動對應某些變數，但自�
 
 Adobe Experience Platform使用結構，以一致且可重複使用的方式說明資料結構。 借由定義跨系統的一致資料，將可更輕鬆保留意義，進而從資料中獲得價值。 [!DNL Analytics] 內容資料與架構定義的結構搭配使用。
 
-下列範例說明如何搭配[`event`命令](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/tracking-events.html)選項使用`xdm`，以使用Adobe Experience Platform Web SDK傳送和擷取資料。 在此範例中，`event` 命令與 [ExperienceEvent 商務詳細資料結構](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/context/experienceevent-commerce.schema.md)相符，因此會追蹤 productListItems `name` 和 `SKU` 值：
+下列範例說明如何搭配[`event`命令](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/tracking-events.html?lang=zh-Hant)選項使用`xdm`，以使用Adobe Experience Platform Web SDK傳送和擷取資料。 在此範例中，`event` 命令與 [ExperienceEvent 商務詳細資料結構](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/context/experienceevent-commerce.schema.md)相符，因此會追蹤 productListItems `name` 和 `SKU` 值：
 
 
 ```javascript
