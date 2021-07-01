@@ -3,9 +3,9 @@ title: 使用Adobe Experience Platform Web SDK追蹤事件
 description: 了解如何追蹤Adobe Experience Platform Web SDK事件。
 keywords: sendEvent;xdm;eventType;datasetId;sendBeacon;sendBeacon;documentUnloading；檔案卸載；onBeforeEventSend;
 exl-id: 8b221cae-3490-44cb-af06-85be4f8d280a
-source-git-commit: 3f5f17275e28ba35a302a42d66b151c4234bc79c
+source-git-commit: a6fca344e6b307e503e29ca7dda3534cdea62f53
 workflow-type: tm+mt
-source-wordcount: '1462'
+source-wordcount: '1460'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 0%
 傳送至Adobe Experience Cloud的資料分為兩個類別：
 
 * XDM資料
-* 非XDM資料（目前不支援）
+* 非XDM資料
 
 ## 傳送XDM資料
 
@@ -75,7 +75,7 @@ dataLayer.commerce = null;
 >XDM欄位中，每個事件中都可傳送資料的上限為32 KB。
 
 
-### 傳送非XDM資料
+## 傳送非XDM資料
 
 不符合XDM架構的資料應使用`sendEvent`命令的`data`選項進行傳送。 Web SDK 2.5.0版及更新版本支援此功能。
 
@@ -85,7 +85,7 @@ dataLayer.commerce = null;
 
 **如何將設定檔和Recommendations屬性傳送至Adobe Target:**
 
-```
+```javascript
 alloy("sendEvent", {
   data: {
     __adobe: {
@@ -231,7 +231,7 @@ alloy("sendEvent", {
   });
 ```
 
-## 全局修改事件{#modifying-events-globally}
+## 全域修改事件 {#modifying-events-globally}
 
 如果要從事件全域新增、移除或修改欄位，可以設定`onBeforeEventSend`回呼。  每次傳送事件時都會呼叫此回呼。  此回呼會在具有`xdm`欄位的事件物件中傳遞。  修改`content.xdm`以變更隨事件傳送的資料。
 
