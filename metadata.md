@@ -13,11 +13,11 @@ git-repo: https://git.corp.adobe.com/AdobeDocs/experience-platform.zh-Hant
 solution: Experience Platform
 type: Documentation
 index: true
-role: Architect, Developer, Data Architect, Data Engineer, Business Practitioner, Administrator, Leader
-source-git-commit: 2068d84b5c512c4eec589ef0b89ac09d915f5be6
+role: Architect, Developer, Data Architect, Data Engineer, User, Admin, Leader
+source-git-commit: 3dbf99bd25bb2e3983de2ca5f0e1f20e9020ba7e
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '136'
+ht-degree: 84%
 
 ---
 
