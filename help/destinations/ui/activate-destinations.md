@@ -6,9 +6,9 @@ seo-title: 將設定檔和區段啟用至目的地
 description: 將區段對應至目的地，以啟動您在Adobe Experience Platform中的資料。 若要完成此操作，請遵循下列步驟。
 seo-description: 將區段對應至目的地，以啟動您在Adobe Experience Platform中的資料。 若要完成此操作，請遵循下列步驟。
 exl-id: c3792046-ffa8-4851-918f-98ced8b8a835
-source-git-commit: a451e462ac38d157335568310e26cf6375699c6b
+source-git-commit: 4ad261c4ca5878f7ef5abb2c2957b5714cf3101a
 workflow-type: tm+mt
-source-wordcount: '2928'
+source-wordcount: '2888'
 ht-degree: 0%
 
 ---
@@ -154,7 +154,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->針對已匯出的區段，將檔案匯出排程從任何排程設定變更為完整檔案匯出，若將&#x200B;**[!UICONTROL Frequency]**&#x200B;設為&#x200B;**[!UICONTROL Once]**，則不會匯出新的回填檔案。 若要匯出具有不同排程的新回填檔案，您必須建立新的目的地例項。 這是將在未來版本中解決的限制。
+>目前不支援針對已匯出的區段變更檔案匯出排程。 若要使用不同排程重新匯出區段，您必須建立新的目的地例項。 這是將在未來版本中解決的限制。
 
 ### 導出增量檔案 {#export-incremental-files}
 
@@ -184,7 +184,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->針對已匯出的區段，將檔案匯出排程從任何排程設定變更為完整檔案匯出，若將&#x200B;**[!UICONTROL Frequency]**&#x200B;設為&#x200B;**[!UICONTROL Once]**，則不會匯出新的回填檔案。 若要匯出具有不同排程的新回填檔案，您必須建立新的目的地例項。 這是將在未來版本中解決的限制。
+>目前不支援針對已匯出的區段變更檔案匯出排程。 若要使用不同排程重新匯出區段，您必須建立新的目的地例項。 這是將在未來版本中解決的限制。
 
 ### 配置檔案名 {#file-names}
 
