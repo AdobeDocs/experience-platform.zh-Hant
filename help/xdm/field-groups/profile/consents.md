@@ -1,19 +1,19 @@
 ---
 solution: Experience Platform
-title: 隱私權/個人化/行銷偏好設定（同意）結構欄位群組
+title: 同意和首選項架構欄位組
 topic-legacy: overview
-description: 本檔案提供隱私權/個人化/行銷偏好設定（同意）結構欄位群組的概觀。
+description: 本文檔概述了「同意」和「首選項」架構欄位組。
 exl-id: ec592102-a9d3-4cac-8b94-58296a138573
-source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
+source-git-commit: bd312024a1a3fb6da840a38d6e9d19fcbd6eab5a
 workflow-type: tm+mt
-source-wordcount: '2304'
+source-wordcount: '2316'
 ht-degree: 2%
 
 ---
 
-# [!UICONTROL 隱私權/個人化/行銷偏好設定（同意）] 欄位群組
+# [!UICONTROL 同意和] 偏好欄位組
 
-[!UICONTROL 隱私權/個人化/行銷偏好設定（同意）] (以下稱為 [!DNL Privacy & Consents] 欄位群組)是類別 [[!DNL XDM Individual Profile] ](../../classes/individual-profile.md)的標準欄位群組，用來擷取客戶同意和偏好設定資訊。
+[!UICONTROL 同意和]偏好設定是類別 [[!DNL XDM Individual Profile] 的標準欄](../../classes/individual-profile.md)位群組，用來擷取客戶同意和偏好設定資訊。
 
 >[!NOTE]
 >
@@ -23,9 +23,9 @@ ht-degree: 2%
 
 >[!IMPORTANT]
 >
->[!DNL Consents & Preferences]欄位組旨在涵蓋一系列同意和偏好設定管理使用案例。 因此，本檔案以一般術語說明欄位群組欄位的使用，並僅就您應如何解讀這些欄位的使用提出建議。 請洽詢您的隱私權法律團隊，使欄位群組的結構與您的組織解讀方式一致，並向客戶呈現這些同意和偏好選擇。
+>「[!UICONTROL 同意」和「首選項」欄位組旨在涵蓋一系列同意和首選項管理使用案例。 ]因此，本檔案以一般術語說明欄位群組欄位的使用，並僅就您應如何解讀這些欄位的使用提出建議。 請洽詢您的隱私權法律團隊，使欄位群組的結構與您的組織解讀方式一致，並向客戶呈現這些同意和偏好選擇。
 
-[!DNL Consents & Preferences]欄位組提供幾個欄位，用於捕獲&#x200B;**consent**&#x200B;和&#x200B;**preference**&#x200B;資訊。
+「[!UICONTROL 同意」和「首選項」欄位組提供幾個欄位，用於捕獲&#x200B;**同意**&#x200B;和&#x200B;**首選項**&#x200B;資訊。]
 
 同意是可讓客戶指定其資料的使用方式的選項。 大部分同意都有法律層面，因為有些管轄區需要取得許可才能以特定方式使用資料，或要求客戶有權在不需要肯定同意的情況下停止該使用（選擇退出）。
 
@@ -42,7 +42,7 @@ ht-degree: 2%
 >
 >請參閱[探索XDM資源](../../ui/explore.md)的指南，了解如何在Platform UI中尋找任何XDM資源並檢查其結構的步驟。
 
-以下JSON顯示[!DNL Consents & Preferences]欄位組可處理的資料類型範例。 以下各節將提供有關這些欄位具體用途的資訊。
+以下JSON顯示[!UICONTROL 同意和偏好設定]欄位組可處理的資料類型範例。 以下各節將提供有關這些欄位具體用途的資訊。
 
 ```json
 {
@@ -343,12 +343,12 @@ ht-degree: 2%
 
 ## 使用欄位群組擷取資料 {#ingest}
 
-若要使用[!DNL Consents & Preferences]欄位群組從客戶擷取同意資料，您必鬚根據包含該欄位群組的結構建立資料集。
+若要使用[!UICONTROL 同意和偏好設定]欄位群組來內嵌客戶的同意資料，您必鬚根據包含該欄位群組的結構來建立資料集。
 
-有關如何將欄位群組指派至欄位的步驟，請參閱有關在UI](http://www.adobe.com/go/xdm-schema-editor-tutorial-en)中建立架構的[教學課程。 建立含有欄位（[!DNL Consents & Preferences]欄位群組）的架構後，請依照使用現有架構建立資料集的步驟，參閱資料集使用指南中[建立資料集](../../../catalog/datasets/user-guide.md#create)的區段。
+有關如何將欄位群組指派至欄位的步驟，請參閱有關在UI](http://www.adobe.com/go/xdm-schema-editor-tutorial-en)中建立架構的[教學課程。 建立含有欄位（[!UICONTROL 同意與偏好設定]欄位群組）的架構後，請依照使用現有架構建立資料集的步驟，參閱資料集使用指南中[建立資料集](../../../catalog/datasets/user-guide.md#create)的區段。
 
 >[!IMPORTANT]
-如果要將同意資料發送到[!DNL Real-time Customer Profile]，則需要根據包含[!DNL Consents & Preferences]欄位組的[!DNL XDM Individual Profile]類建立啟用[!DNL Profile]的架構。 您根據該架構建立的資料集也必須為[!DNL Profile]啟用。 如需結構和資料集[!DNL Real-time Customer Profile]需求的具體步驟，請參閱上述連結的教學課程。
+如果要將同意資料發送到[!DNL Real-time Customer Profile]，則需要根據[!DNL XDM Individual Profile]類建立啟用[!DNL Profile]的架構，該類包含[!UICONTROL 「同意」和「首選項」]欄位組。 您根據該架構建立的資料集也必須為[!DNL Profile]啟用。 如需結構和資料集[!DNL Real-time Customer Profile]需求的具體步驟，請參閱上述連結的教學課程。
 此外，您也必須確定合併原則的設定順序為包含最新同意和偏好設定資料的資料集優先順序，以便正確更新客戶設定檔。 有關詳細資訊，請參閱[合併策略](../../../rtcdp/profile/merge-policies.md)上的概述。
 
 ## 處理同意和偏好設定變更
@@ -357,9 +357,9 @@ ht-degree: 2%
 
 ## 附錄 {#appendix}
 
-以下各節提供了有關[!DNL Consents & Preferences]欄位組的附加參考資訊。
+以下各節提供了有關[!UICONTROL Consents and Preferences]欄位組的附加參考資訊。
 
-### `val` {#choice-values}的接受值
+### `val`的接受值 {#choice-values}
 
 下表概述`val`的接受值：
 
@@ -377,7 +377,7 @@ ht-degree: 2%
 
 {style=&quot;table-layout:auto&quot;}
 
-### `preferred` {#preferred-values}的接受值
+### `preferred`的接受值 {#preferred-values}
 
 下表概述`preferred`的接受值：
 
@@ -386,7 +386,7 @@ ht-degree: 2%
 | `email` | 電子郵件訊息. |
 | `push` | 推播通知. |
 | `inApp` | 應用程式內訊息. |
-| `sms` | SMS 訊息. |
+| `sms` | 簡訊訊息. |
 | `phone` | 電話呼叫互動。 |
 | `phyMail` | 實物郵件。 |
 | `inVehicle` | 車內資訊。 |
@@ -399,6 +399,6 @@ ht-degree: 2%
 
 {style=&quot;table-layout:auto&quot;}
 
-### 完整[!DNL Consents & Preferences]架構{#full-schema}
+### 完整[!UICONTROL 同意和偏好設定]架構 {#full-schema}
 
-若要檢視[!DNL Consents & Preferences]欄位群組的完整架構，請參閱[官方XDM存放庫](https://github.com/adobe/xdm/blob/master/components/datatypes/consent-preferences.schema.json)。
+若要檢視[!UICONTROL 同意和偏好設定]欄位群組的完整架構，請參閱[官方XDM存放庫](https://github.com/adobe/xdm/blob/master/components/datatypes/consent-preferences.schema.json)。
