@@ -4,9 +4,9 @@ user-guide-title: Experience Data Model (XDM) 系統說明
 breadcrumb-title: Experience Data Model (XDM) 指南
 user-guide-description: 使用Experience Data Model(XDM)類別和結構欄位群組，以標準化體驗資料。
 feature: 結構描述
-source-git-commit: 9b6352eec56cf32e58d49be4d72b2fb4cf933b89
+source-git-commit: bd312024a1a3fb6da840a38d6e9d19fcbd6eab5a
 workflow-type: tm+mt
-source-wordcount: '305'
+source-wordcount: '311'
 ht-degree: 17%
 
 ---
@@ -22,7 +22,7 @@ ht-degree: 17%
    * [XDM中的名稱步調](./schema/namespaces.md)
    * [XDM欄位字典](schema/field-dictionary.md)
    * 行業資料模型{#industries}
-      * [概述](./schema/industries/overview.md)
+      * [概覽](./schema/industries/overview.md)
       * [零售](./schema/industries/retail.md)
       * [金融服務](./schema/industries/financial.md)
       * [旅行和招待](./schema/industries/travel-hospitality.md)
@@ -33,10 +33,11 @@ ht-degree: 17%
 * 架構欄位組{#field-groups}
    * 配置檔案欄位組{#profile}
       * [人口統計詳細資料](./field-groups/profile/demographic-details.md)
+      * [IAB TCF 2.0同意](./field-groups/profile/iab.md)
       * [IdentityMap](./field-groups/profile/identitymap.md)
       * [忠誠度詳細資料](./field-groups/profile/loyalty-details.md)
       * [個人聯繫人詳細資訊](./field-groups/profile/personal-contact-details.md)
-      * [隱私權/個人化/行銷偏好設定（同意）](./field-groups/profile/consents.md)
+      * [同意和偏好設定](./field-groups/profile/consents.md)
       * [區段成員資格詳細資料](./field-groups/profile/segmentation.md)
       * [工作聯繫人詳細資訊](./field-groups/profile/work-contact-details.md)
    * 事件欄位組{#event}
@@ -45,6 +46,7 @@ ht-degree: 17%
       * [商務詳細資訊](./field-groups/event/commerce-details.md)
       * [最終用戶ID詳細資訊](./field-groups/event/enduserids.md)
       * [環境詳細資訊](./field-groups/event/environment-details.md)
+      * [IAB TCF 2.0同意](./field-groups/event/iab.md)
       * [Web詳細資訊](./field-groups/event/web-details.md)
    * [欄位組名稱更新](./field-groups/name-updates.md)
 * 資料類型 {#data-types}
@@ -52,6 +54,7 @@ ht-degree: 17%
    * [信標](./data-types/beacon.md)
    * [瀏覽器詳細資訊](./data-types/browser-details.md)
    * [商務](./data-types/commerce.md)
+   * [同意字串](./data-types/consent-string.md)
    * [同意與偏好設定](./data-types/consents.md)
    * [裝置](./data-types/device.md)
    * [電子郵件地址](./data-types/email-address.md)
@@ -85,7 +88,7 @@ ht-degree: 17%
    * [網路互動](./data-types/web-interaction.md)
    * [網頁詳細資訊](./data-types/webpage-details.md)
 *  綱要UI  {#ui}
-   * [概述](./ui/overview.md)
+   * [概覽](./ui/overview.md)
    * [探索 XDM 資源](./ui/explore.md)
    * 建立和編輯資源{#resources}
       * [結構描述](./ui/resources/schemas.md)
@@ -93,7 +96,7 @@ ht-degree: 17%
       * [欄位群組](./ui/resources/field-groups.md)
       * [資料類型](./ui/resources/data-types.md)
    * 定義欄位{#fields}
-      * [概述](./ui/fields/overview.md)
+      * [概覽](./ui/fields/overview.md)
       * [必填欄位](./ui/fields/required.md)
       * [物件欄位](./ui/fields/object.md)
       * [陣列欄位](./ui/fields/array.md)
@@ -103,7 +106,7 @@ ht-degree: 17%
    * [產生範例XDM資料](./ui/sample.md)
    * [匯出XDM結構](./ui/export.md)
 * 架構註冊表API {#api}
-   * [概述](api/overview.md)
+   * [概覽](api/overview.md)
    * [快速入門](api/getting-started.md)
    * [結構描述](api/schemas.md)
    * [行為](api/behaviors.md)
