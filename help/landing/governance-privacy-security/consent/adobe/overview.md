@@ -5,9 +5,9 @@ title: Adobe Experience Platform中的同意處理
 topic-legacy: getting started
 description: 了解如何使用Adobe2.0標準，在Adobe Experience Platform中處理客戶同意訊號。
 exl-id: cd76a3f6-ae55-4d75-9b30-900fadb4664f
-source-git-commit: 11e8acc3da7f7540421b5c7f3d91658c571fdb6f
+source-git-commit: bd312024a1a3fb6da840a38d6e9d19fcbd6eab5a
 workflow-type: tm+mt
-source-wordcount: '1570'
+source-wordcount: '1572'
 ht-degree: 0%
 
 ---
@@ -50,11 +50,11 @@ Adobe Experience Platform可讓您處理從客戶收集到的同意資料，並�
 
 >[!NOTE]
 >
->如需上述XDM同意欄位結構的詳細資訊，請參閱[同意與偏好設定資料類型](../../../../xdm/data-types/consents.md)上的指南。
+>有關上述XDM同意欄位結構的詳細資訊，請參閱[[!UICONTROL 同意與偏好設定]資料類型](../../../../xdm/data-types/consents.md)上的指南。
 
 完成系統設定後，Platform Web SDK會解譯目前使用者的資料收集同意值，以判斷資料應該傳送至Adobe Experience Platform邊緣網路、從用戶端刪除或保存，直到資料收集權限設為是或否為止。
 
-## 決定如何在CMP {#consent-data}中產生客戶同意資料
+## 決定如何在CMP中產生客戶同意資料 {#consent-data}
 
 由於每個CMP系統都是獨一無二的，因此您必須決定讓客戶在與您的服務互動時提供同意的最佳方式。 達成此目的的常見方式是使用類似下列範例的Cookie同意對話方塊：
 
@@ -68,7 +68,7 @@ Adobe Experience Platform可讓您處理從客戶收集到的同意資料，並�
 
 有關如何在繼續使用本指南之前，先將這些必填欄位新增至啟用[!DNL Profile]的資料集的詳細步驟，請參閱[設定資料集以擷取同意資料](./dataset.md)的教學課程。
 
-## 更新[!DNL Profile]合併原則以包含同意資料{#merge-policies}
+## 更新[!DNL Profile]合併原則以包含同意資料 {#merge-policies}
 
 建立[!DNL Profile]已啟用的資料集以處理同意資料後，您必須確定您的合併原則已設定為一律在每個客戶設定檔中加入同意欄位。 這需要設定資料集優先順序，讓同意資料集優先順序高於其他可能發生衝突的資料集。
 
@@ -76,7 +76,7 @@ Adobe Experience Platform可讓您處理從客戶收集到的同意資料，並�
 >
 >如果沒有任何衝突的資料集，則應為合併策略設定時間戳優先順序。 這有助於確保客戶指定的最新同意為使用的同意設定。
 
-有關如何使用合併策略的詳細資訊，請從閱讀[合併策略概述](../../../../profile/merge-policies/overview.md)開始。 設定合併原則時，您必須如[資料集準備](./dataset.md)指南所述，確認設定檔包含「同意與偏好設定」結構欄位群組提供的所有必要同意屬性。
+有關如何使用合併策略的詳細資訊，請從閱讀[合併策略概述](../../../../profile/merge-policies/overview.md)開始。 設定合併原則時，您必須確保設定檔包含[!UICONTROL 同意和偏好設定]結構欄位群組提供的所有必要同意屬性，如[資料集準備](./dataset.md)的指南所述。
 
 ## 將同意資料帶入Platform
 
@@ -86,11 +86,11 @@ Adobe Experience Platform可讓您處理從客戶收集到的同意資料，並�
 
 以下各小節將提供這些方法的詳細資訊。
 
-### 配置Experience PlatformWeb SDK以處理同意資料{#web-sdk}
+### 配置Experience PlatformWeb SDK以處理同意資料 {#web-sdk}
 
 一旦您將CMP設定為監聽網站上的同意變更事件，您就可以整合Experience PlatformWeb SDK以接收更新的同意設定，並在每次載入頁面時以及每當同意變更事件發生時將其傳送至Platform。 如需詳細資訊，請參閱[設定Web SDK以處理客戶同意資料的指南](./sdk.md) 。
 
-### 設定Experience PlatformMobile SDK以處理同意資料{#mobile-sdk}
+### 設定Experience Platform行動SDK以處理同意資料 {#mobile-sdk}
 
 如果您的行動應用程式需要Experience Platform同意偏好設定，您可以整合客戶行動SDK以擷取和更新同意設定，並在呼叫同意API時將其傳送至Platform。
 
@@ -102,7 +102,7 @@ Adobe Experience Platform可讓您處理從客戶收集到的同意資料，並�
 
 請依照[將CSV檔案對應至XDM](../../../../ingestion/tutorials/map-a-csv-file.md)的教學課程，了解如何將資料欄位轉換為XDM，並將其內嵌至Platform。 為對應選取[!UICONTROL 目標]時，請確定您選取&#x200B;**[!UICONTROL 使用現有資料集]**&#x200B;選項，然後選取您先前建立的已啟用[!DNL Profile]的同意資料集。
 
-## 測試您的實作{#test-implementation}
+## 測試您的實作 {#test-implementation}
 
 將客戶同意資料內嵌至啟用[!DNL Profile]的資料集後，您可以檢查更新的設定檔，查看其是否包含同意屬性。
 
