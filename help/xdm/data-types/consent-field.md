@@ -4,9 +4,9 @@ title: 通用同意欄位資料類型
 topic-legacy: overview
 description: 本檔案概述「一般同意欄位」XDM資料類型。
 exl-id: f1f14eb7-21dd-45ca-8fb4-68f397cfa697
-source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
+source-git-commit: bd312024a1a3fb6da840a38d6e9d19fcbd6eab5a
 workflow-type: tm+mt
-source-wordcount: '480'
+source-wordcount: '478'
 ht-degree: 3%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 3%
 
 >[!NOTE]
 >
->此資料類型旨在使用[[!UICONTROL 隱私權/個人化/行銷偏好設定（同意）]欄位群組](../field-groups/profile/consents.md)作為基準，自訂組織同意結構。
+>此資料類型旨在使用[[!UICONTROL 同意和偏好設定]欄位群組](../field-groups/profile/consents.md)作為基線，自訂組織同意結構。
 
 ![](../images/data-types/consent-field.png)
 
