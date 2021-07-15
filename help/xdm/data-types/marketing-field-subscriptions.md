@@ -4,9 +4,9 @@ title: 具有訂閱資料類型的一般行銷偏好設定欄位
 topic-legacy: overview
 description: 本檔案概述「一般行銷偏好設定」欄位與「訂閱XDM」資料類型。
 exl-id: 170ea6ca-77fc-4b0a-87f9-6d4b6f32d953
-source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
+source-git-commit: bd312024a1a3fb6da840a38d6e9d19fcbd6eab5a
 workflow-type: tm+mt
-source-wordcount: '738'
+source-wordcount: '736'
 ht-degree: 3%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 3%
 
 >[!NOTE]
 >
->此資料類型旨在使用[[!UICONTROL 隱私權/個人化/行銷偏好設定（同意）]欄位群組](../field-groups/profile/consents.md)作為基準，自訂組織同意結構。
+>此資料類型旨在使用[[!UICONTROL 同意和偏好設定]欄位群組](../field-groups/profile/consents.md)作為基線，自訂組織同意結構。
 >
 >若您不需要特定行銷偏好欄位的`subscriptions`對應，則可改用[基本行銷欄位資料類型](./marketing-field.md)。
 
