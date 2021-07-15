@@ -4,9 +4,9 @@ title: 一般個人化偏好設定欄位資料類型
 topic-legacy: overview
 description: 本檔案提供一般個人化偏好設定欄位XDM資料類型的概觀。
 exl-id: 3f6a3c31-19f3-4bad-921e-9ad33c6b9ac9
-source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
+source-git-commit: bd312024a1a3fb6da840a38d6e9d19fcbd6eab5a
 workflow-type: tm+mt
-source-wordcount: '485'
+source-wordcount: '483'
 ht-degree: 3%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 3%
 
 >[!NOTE]
 >
->此資料類型旨在使用[[!UICONTROL 隱私權/個人化/行銷偏好設定（同意）]欄位群組](../field-groups/profile/consents.md)作為基準，自訂組織同意結構。
+>此資料類型旨在使用[[!UICONTROL 同意和偏好設定]欄位群組](../field-groups/profile/consents.md)作為基線，自訂組織同意結構。
 
 ![](../images/data-types/personalization-field.png)
 
