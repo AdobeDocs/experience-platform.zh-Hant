@@ -5,9 +5,9 @@ title: 遵循區段中的同意
 topic-legacy: overview
 description: 了解如何遵循客戶同意偏好設定，以收集個人資料並在區段作業中共用。
 exl-id: fe851ce3-60db-4984-a73c-f9c5964bfbad
-source-git-commit: 6d11a94d45b4a089ca6960aaf1ce78ae654ebc3f
+source-git-commit: bd312024a1a3fb6da840a38d6e9d19fcbd6eab5a
 workflow-type: tm+mt
-source-wordcount: '677'
+source-wordcount: '675'
 ht-degree: 0%
 
 ---
@@ -28,7 +28,7 @@ ht-degree: 0%
 
 ## 同意結構欄位
 
-為了遵守客戶同意和偏好設定，屬於[!UICONTROL XDM個別設定檔]聯合結構的其中一個結構必須包含標準欄位群組&#x200B;**[!UICONTROL 隱私權/個人化/行銷偏好設定（同意）]**。
+為了遵守客戶同意和偏好設定，[!UICONTROL XDM個別設定檔]聯合架構的其中一個結構必須包含標準欄位群組&#x200B;**[!UICONTROL 同意和偏好設定]**。
 
 有關欄位組提供的每個屬性的結構和預期使用案例的詳細資訊，請參閱[同意和首選項參考指南](../xdm/field-groups/profile/consents.md)。 有關如何將欄位組添加到架構的逐步說明，請參閱[XDM UI指南](../xdm/ui/resources/schemas.md#add-field-groups)。
 
