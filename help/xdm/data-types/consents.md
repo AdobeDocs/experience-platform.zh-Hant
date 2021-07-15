@@ -4,18 +4,18 @@ title: 同意和首選項資料類型
 description: 「隱私權」、「個人化」和「行銷偏好設定」的同意資料類型，旨在支援收集同意管理平台(CMP)和其他來源從您的資料操作產生的客戶權限和偏好設定。
 topic-legacy: guide
 exl-id: cdcc7b04-eeb9-40d3-b0b5-f736a5472621
-source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
+source-git-commit: bd312024a1a3fb6da840a38d6e9d19fcbd6eab5a
 workflow-type: tm+mt
-source-wordcount: '1868'
+source-wordcount: '1904'
 ht-degree: 2%
 
 ---
 
-# [!DNL Consents & Preferences] 資料類型
+# [!UICONTROL 同意和] 偏好資料類型
 
-[!UICONTROL 隱私權、個人化和行銷偏好設定的同意]資料類型（以下稱為「[!DNL Consents & Preferences]資料類型」）是[!DNL Experience Data Model](XDM)資料類型，其用途是支援收集同意管理平台(CMP)和您資料作業的其他來源產生的客戶權限和偏好設定。
+[!UICONTROL 隱私權、個人化和行銷偏好設定的同意]資料類型（以下稱為「[!UICONTROL 同意和偏好設定]資料類型」）是[!DNL Experience Data Model](XDM)資料類型，其用途是支援收集同意管理平台(CMP)和資料操作中其他來源產生的客戶權限和偏好設定。
 
-本檔案涵蓋[!DNL Consents & Preferences]資料類型所提供欄位的結構和用途。
+本文檔涵蓋[!UICONTROL 同意和首選項]資料類型提供的欄位的結構和用途。
 
 ## 先決條件 {#prerequisites}
 
@@ -28,9 +28,9 @@ ht-degree: 2%
 
 >[!IMPORTANT]
 >
->[!DNL Consents & Preferences]資料類型旨在涵蓋一系列同意和偏好設定管理使用案例。 因此，本檔案以一般術語說明資料類型欄位的使用，並僅就您應如何解讀這些欄位提供建議。 請洽詢您的隱私權法律團隊，將資料類型的結構與貴組織解譯及向客戶提供這些同意和偏好選擇的方式一致。
+>[!UICONTROL 同意和偏好設定]資料類型旨在涵蓋一系列同意和偏好設定管理使用案例。 因此，本檔案以一般術語說明資料類型欄位的使用，並僅就您應如何解讀這些欄位提供建議。 請洽詢您的隱私權法律團隊，將資料類型的結構與貴組織解譯及向客戶提供這些同意和偏好選擇的方式一致。
 
-[!DNL Consents & Preferences]資料類型提供了幾個欄位，用於捕獲&#x200B;**consent**&#x200B;和&#x200B;**preference**&#x200B;資訊。
+[!UICONTROL 同意和偏好設定]資料類型提供幾個欄位，用於擷取&#x200B;**同意**&#x200B;和&#x200B;**偏好設定**&#x200B;資訊。
 
 同意是可讓客戶指定其資料的使用方式的選項。 大部分同意都有法律層面，因為有些管轄區需要取得許可才能以特定方式使用資料，或要求客戶有權在不需要肯定同意的情況下停止該使用（選擇退出）。
 
@@ -47,7 +47,7 @@ ht-degree: 2%
 >
 >請參閱[探索XDM資源](../ui/explore.md)的指南，了解如何在Platform UI中尋找任何XDM資源並檢查其結構的步驟。
 
-以下JSON顯示[!DNL Consents & Preferences]資料類型可處理的資料類型範例。 以下各節將提供有關這些欄位具體用途的資訊。
+以下JSON顯示[!UICONTROL Consensts and Preferences]資料類型可處理的資料類型範例。 以下各節將提供有關這些欄位具體用途的資訊。
 
 ```json
 {
@@ -251,12 +251,12 @@ ht-degree: 2%
 
 ## 使用資料類型擷取資料 {#ingest}
 
-若要使用[!DNL Consents & Preferences]資料類型從客戶擷取同意資料，您必鬚根據包含該資料類型的結構建立資料集。
+若要使用[!UICONTROL 同意和偏好設定]資料類型從客戶擷取同意資料，您必鬚根據包含該資料類型的結構建立資料集。
 
-有關如何將資料類型指派給欄位的步驟，請參閱有關在UI](http://www.adobe.com/go/xdm-schema-editor-tutorial-en)中建立架構的[教學課程。 建立含有[!DNL Consents & Preferences]資料類型欄位的架構後，請依照使用現有架構建立資料集的步驟，參閱資料集使用指南中[建立資料集](../../catalog/datasets/user-guide.md#create)的區段。
+有關如何將資料類型指派給欄位的步驟，請參閱有關在UI](http://www.adobe.com/go/xdm-schema-editor-tutorial-en)中建立架構的[教學課程。 建立包含欄位（[!UICONTROL 同意和偏好設定]資料類型）的架構後，請依照使用現有架構建立資料集的步驟，參閱資料集使用指南中[建立資料集](../../catalog/datasets/user-guide.md#create)的區段。
 
 >[!IMPORTANT]
-如果要將同意資料發送到[!DNL Real-time Customer Profile]，則需要根據包含[!DNL Consents & Preferences]資料類型的[!DNL XDM Individual Profile]類建立啟用[!DNL Profile]的架構。 您根據該架構建立的資料集也必須為[!DNL Profile]啟用。 如需結構和資料集[!DNL Real-time Customer Profile]需求的具體步驟，請參閱上述連結的教學課程。
+如果要將同意資料發送到[!DNL Real-time Customer Profile]，則需要根據[!DNL XDM Individual Profile]類別建立啟用[!DNL Profile]的架構，該類別包含[!UICONTROL 同意和首選項]資料類型。 您根據該架構建立的資料集也必須為[!DNL Profile]啟用。 如需結構和資料集[!DNL Real-time Customer Profile]需求的具體步驟，請參閱上述連結的教學課程。
 此外，您也必須確定合併原則的設定順序為包含最新同意和偏好設定資料的資料集優先順序，以便正確更新客戶設定檔。 有關詳細資訊，請參閱[合併策略](../../rtcdp/profile/merge-policies.md)上的概述。
 
 ## 處理同意和偏好設定變更
@@ -265,9 +265,9 @@ ht-degree: 2%
 
 ## 附錄 {#appendix}
 
-以下各節提供了有關[!DNL Consents & Preferences]資料類型的附加參考資訊。
+以下各節提供了有關[!UICONTROL Consents and Preferences]資料類型的附加參考資訊。
 
-### `val` {#choice-values}的接受值
+### `val`的接受值 {#choice-values}
 
 下表概述`val`的接受值：
 
@@ -285,7 +285,7 @@ ht-degree: 2%
 
 {style=&quot;table-layout:auto&quot;}
 
-### `preferred` {#preferred-values}的接受值
+### `preferred`的接受值 {#preferred-values}
 
 下表概述`preferred`的接受值：
 
@@ -294,7 +294,7 @@ ht-degree: 2%
 | `email` | 電子郵件訊息. |
 | `push` | 推播通知. |
 | `inApp` | 應用程式內訊息. |
-| `sms` | SMS 訊息. |
+| `sms` | 簡訊訊息. |
 | `phone` | 電話呼叫互動。 |
 | `phyMail` | 實物郵件。 |
 | `inVehicle` | 車內資訊。 |
@@ -307,6 +307,6 @@ ht-degree: 2%
 
 {style=&quot;table-layout:auto&quot;}
 
-### 完整[!DNL Consents & Preferences]架構{#full-schema}
+### 完整[!UICONTROL 同意和偏好設定]架構 {#full-schema}
 
-若要檢視[!DNL Consents & Preferences]資料類型的完整架構，請參閱[官方XDM存放庫](https://github.com/adobe/xdm/blob/master/components/datatypes/consent-preferences.schema.json)。
+若要檢視[!UICONTROL 同意和偏好設定]資料類型的完整結構，請參閱[官方XDM存放庫](https://github.com/adobe/xdm/blob/master/components/datatypes/consent-preferences.schema.json)。
