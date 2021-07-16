@@ -2,10 +2,10 @@
 title: Adobe Experience Platform Web SDK的支援使用案例
 description: 了解Adobe Experience Platform Web SDK支援哪些使用案例。
 keywords: 網頁sdk；使用案例
-source-git-commit: da305a65a7d5fc3d8214f1d046181b463d324ee0
+source-git-commit: 7a6bec77895458cf1735bc7a00d16b78df9776a5
 workflow-type: tm+mt
-source-wordcount: '574'
-ht-degree: 13%
+source-wordcount: '565'
+ht-degree: 14%
 
 ---
 
@@ -43,7 +43,7 @@ ht-degree: 13%
 | 如果資料集已啟用設定檔功能，則可即時傳送資料至「即時客戶資料設定檔」 |  |
 | 即時傳送資料至Customer Journey Analytics |  |
 | 將同意寫入設定檔 | [文件](https://experienceleague.adobe.com/docs/experience-platform/landing/governance-privacy-security/consent/adobe/sdk.html?lang=en) |
-| 將資料伺服器端即時轉送給第三方 | [文件](https://experienceleague.adobe.com/docs/launch/using/server-side-info/server-side-overview.html?lang=en) |
+| 將資料伺服器端即時轉送給第三方 | [文件](../../tags/ui/event-forwarding/overview.md) |
 | 身分命名空間支援 |  |
 
 {style=&quot;table-layout:auto&quot;}
