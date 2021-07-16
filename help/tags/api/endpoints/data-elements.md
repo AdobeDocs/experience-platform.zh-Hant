@@ -1,0 +1,1530 @@
+---
+title: 資料元素端點
+description: 了解如何在Reactor API中呼叫/data_elements端點。
+source-git-commit: 39d9468e5d512c75c9d540fa5d2bcba4967e2881
+workflow-type: tm+mt
+source-wordcount: '1415'
+ht-degree: 6%
+
+---
+
+# 資料元素端點
+
+資料元素的作用是變數，指向應用程式內的重要資料片段。 資料元素用於[rules](./rules.md)和[extension](./extensions.md)設定中。 在瀏覽器或應用程式的執行階段觸發規則時，會解析資料元素的值，並在規則內使用。 擴充功能設定的資料元素功能相同。
+
+一起使用數個資料元素會產生資料字典或資料地圖。 此字典代表Adobe Experience Platform所知及可使用的資料。
+
+資料元素只屬於一個[property](./properties.md)。 屬性可以有許多資料元素。
+
+如需資料元素及其在標籤中使用的詳細資訊，請參閱UI檔案中的[資料元素指南](../../ui/managing-resources/data-elements.md)。
+
+## 快速入門
+
+本指南中使用的端點是[Reactor API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/reactor.yaml)的一部分。 繼續操作之前，請參閱[快速入門手冊](../getting-started.md)，了解如何驗證API的重要資訊。
+
+## 擷取資料元素清單 {#list}
+
+您可以在GET請求的路徑中加入屬性的ID，以擷取屬性的資料元素清單。
+
+**API格式**
+
+```http
+GET /properties/{PROPERTY_ID}/data_elements
+```
+
+| 參數 | 說明 |
+| --- | --- |
+| `PROPERTY_ID` | 擁有資料元素的屬性的`id`。 |
+
+{style=&quot;table-layout:auto&quot;}
+
+>[!NOTE]
+>
+>您可以使用查詢參數，根據下列屬性來篩選列出的資料元素：<ul><li>`created_at`</li><li>`dirty`</li><li>`enabled`</li><li>`name`</li><li>`origin_id`</li><li>`published`</li><li>`published_at`</li><li>`revision_number`</li><li>`updated_at`</li></ul>如需詳細資訊，請參閱[篩選回應](../guides/filtering.md)的指南。
+
+**要求**
+
+```shell
+curl -X GET \
+  https://reactor.adobe.io/properties/PR97d92a379a5f48758947cdf44f607a0d/data_elements \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'Accept: application/vnd.api+json;revision=1'
+```
+
+**回應**
+
+成功的回應會傳回指定屬性的資料元素清單。
+
+```json
+{
+  "data": [
+    {
+      "id": "DE5d11b3ed301d4ce99b530a5121e392b2",
+      "type": "data_elements",
+      "attributes": {
+        "created_at": "2020-12-14T17:36:09.045Z",
+        "deleted_at": null,
+        "dirty": true,
+        "enabled": true,
+        "name": "My Data Element 2020-12-14 17:36:08 +0000",
+        "published": false,
+        "published_at": null,
+        "revision_number": 0,
+        "updated_at": "2020-12-14T17:36:09.045Z",
+        "clean_text": false,
+        "default_value": null,
+        "delegate_descriptor_id": "kessel-test::dataElements::dom-attribute",
+        "force_lower_case": false,
+        "review_status": "unsubmitted",
+        "storage_duration": null,
+        "settings": "{\"elementProperty\":\"html\",\"elementSelector\":\".target-element\"}"
+      },
+      "relationships": {
+        "libraries": {
+          "links": {
+            "related": "https://reactor.adobe.io/data_elements/DE5d11b3ed301d4ce99b530a5121e392b2/libraries"
+          }
+        },
+        "revisions": {
+          "links": {
+            "related": "https://reactor.adobe.io/data_elements/DE5d11b3ed301d4ce99b530a5121e392b2/revisions"
+          }
+        },
+        "notes": {
+          "links": {
+            "related": "https://reactor.adobe.io/data_elements/DE5d11b3ed301d4ce99b530a5121e392b2/notes"
+          }
+        },
+        "property": {
+          "links": {
+            "related": "https://reactor.adobe.io/data_elements/DE5d11b3ed301d4ce99b530a5121e392b2/property"
+          },
+          "data": {
+            "id": "PR97d92a379a5f48758947cdf44f607a0d",
+            "type": "properties"
+          }
+        },
+        "origin": {
+          "links": {
+            "related": "https://reactor.adobe.io/data_elements/DE5d11b3ed301d4ce99b530a5121e392b2/origin"
+          },
+          "data": {
+            "id": "DE5d11b3ed301d4ce99b530a5121e392b2",
+            "type": "data_elements"
+          }
+        },
+        "extension": {
+          "links": {
+            "related": "https://reactor.adobe.io/data_elements/DE5d11b3ed301d4ce99b530a5121e392b2/extension"
+          },
+          "data": {
+            "id": "EX0348d463358c4c89afe726245576f112",
+            "type": "extensions"
+          }
+        },
+        "updated_with_extension_package": {
+          "links": {
+            "related": "https://reactor.adobe.io/data_elements/DE5d11b3ed301d4ce99b530a5121e392b2/updated_with_extension_package"
+          },
+          "data": {
+            "id": "EP75db2452065b44e2b8a38ca883ce369a",
+            "type": "extension_packages"
+          }
+        },
+        "updated_with_extension": {
+          "links": {
+            "related": "https://reactor.adobe.io/data_elements/DE5d11b3ed301d4ce99b530a5121e392b2/updated_with_extension"
+          },
+          "data": {
+            "id": "EX1cc78b39339242da82a0e0752fa53375",
+            "type": "extensions"
+          }
+        }
+      },
+      "links": {
+        "property": "https://reactor.adobe.io/properties/PR97d92a379a5f48758947cdf44f607a0d",
+        "origin": "https://reactor.adobe.io/data_elements/DE5d11b3ed301d4ce99b530a5121e392b2",
+        "self": "https://reactor.adobe.io/data_elements/DE5d11b3ed301d4ce99b530a5121e392b2",
+        "extension": "https://reactor.adobe.io/extensions/EX0348d463358c4c89afe726245576f112"
+      },
+      "meta": {
+        "latest_revision_number": 0
+      }
+    }
+  ],
+  "meta": {
+    "pagination": {
+      "current_page": 1,
+      "next_page": null,
+      "prev_page": null,
+      "total_pages": 1,
+      "total_count": 1
+    }
+  }
+}
+```
+
+## 查詢資料元素 {#lookup}
+
+您可以在資料元素的請求路徑中提供其ID，以便查找GET元素。
+
+>[!NOTE]
+>
+>刪除資料元素時，資料元素會標示為已刪除，但實際上不會從系統中移除。 因此，可以查找已刪除的資料元素。 刪除的資料元素可以通過`data.meta.deleted_at`屬性的存在來識別。
+
+**API格式**
+
+```http
+GET /data_elements/{DATA_ELEMENT_ID}
+```
+
+| 參數 | 說明 |
+| --- | --- |
+| `DATA_ELEMENT_ID` | 您要查詢的資料元素的`id`。 |
+
+{style=&quot;table-layout:auto&quot;}
+
+**要求**
+
+```shell
+curl -X GET \
+  https://reactor.adobe.io/data_elements/DE8097636264104451ac3a18c95d5ff833 \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'Accept: application/vnd.api+json;revision=1'
+```
+
+**回應**
+
+成功的回應會傳回資料元素的詳細資訊。
+
+```json
+{
+  "data": {
+    "id": "DE8097636264104451ac3a18c95d5ff833",
+    "type": "data_elements",
+    "attributes": {
+      "created_at": "2020-12-14T17:35:54.956Z",
+      "deleted_at": null,
+      "dirty": true,
+      "enabled": true,
+      "name": "My Data Element 2020-12-14 17:35:54 +0000",
+      "published": false,
+      "published_at": null,
+      "revision_number": 0,
+      "updated_at": "2020-12-14T17:35:54.956Z",
+      "clean_text": false,
+      "default_value": null,
+      "delegate_descriptor_id": "kessel-test::dataElements::dom-attribute",
+      "force_lower_case": false,
+      "review_status": "unsubmitted",
+      "storage_duration": null,
+      "settings": "{\"elementProperty\":\"html\",\"elementSelector\":\".target-element\"}"
+    },
+    "relationships": {
+      "libraries": {
+        "links": {
+          "related": "https://reactor.adobe.io/data_elements/DE8097636264104451ac3a18c95d5ff833/libraries"
+        }
+      },
+      "revisions": {
+        "links": {
+          "related": "https://reactor.adobe.io/data_elements/DE8097636264104451ac3a18c95d5ff833/revisions"
+        }
+      },
+      "notes": {
+        "links": {
+          "related": "https://reactor.adobe.io/data_elements/DE8097636264104451ac3a18c95d5ff833/notes"
+        }
+      },
+      "property": {
+        "links": {
+          "related": "https://reactor.adobe.io/data_elements/DE8097636264104451ac3a18c95d5ff833/property"
+        },
+        "data": {
+          "id": "PRa5621686159f44c880557e12af412a95",
+          "type": "properties"
+        }
+      },
+      "origin": {
+        "links": {
+          "related": "https://reactor.adobe.io/data_elements/DE8097636264104451ac3a18c95d5ff833/origin"
+        },
+        "data": {
+          "id": "DE8097636264104451ac3a18c95d5ff833",
+          "type": "data_elements"
+        }
+      },
+      "extension": {
+        "links": {
+          "related": "https://reactor.adobe.io/data_elements/DE8097636264104451ac3a18c95d5ff833/extension"
+        },
+        "data": {
+          "id": "EX085a465793b54be39b5408d13b50b46e",
+          "type": "extensions"
+        }
+      },
+      "updated_with_extension_package": {
+        "links": {
+          "related": "https://reactor.adobe.io/data_elements/DE8097636264104451ac3a18c95d5ff833/updated_with_extension_package"
+        },
+        "data": {
+          "id": "EP75db2452065b44e2b8a38ca883ce369a",
+          "type": "extension_packages"
+        }
+      },
+      "updated_with_extension": {
+        "links": {
+          "related": "https://reactor.adobe.io/data_elements/DE8097636264104451ac3a18c95d5ff833/updated_with_extension"
+        },
+        "data": {
+          "id": "EXf9a32699efde42e9b9410b43bd660848",
+          "type": "extensions"
+        }
+      }
+    },
+    "links": {
+      "property": "https://reactor.adobe.io/properties/PRa5621686159f44c880557e12af412a95",
+      "origin": "https://reactor.adobe.io/data_elements/DE8097636264104451ac3a18c95d5ff833",
+      "self": "https://reactor.adobe.io/data_elements/DE8097636264104451ac3a18c95d5ff833",
+      "extension": "https://reactor.adobe.io/extensions/EX085a465793b54be39b5408d13b50b46e"
+    },
+    "meta": {
+      "latest_revision_number": 0
+    }
+  }
+}
+```
+
+## 建立資料元素 {#create}
+
+您可以提出POST要求，以建立新資料元素。
+
+**API格式**
+
+```http
+POST /properties/{PROPERTY_ID}/data_elements
+```
+
+| 參數 | 說明 |
+| --- | --- |
+| `PROPERTY_ID` | 您要定義下的資料元素的[property](./properties.md)的`id`。 |
+
+{style=&quot;table-layout:auto&quot;}
+
+**要求**
+
+下列請求會為指定的屬性建立新的資料元素。 呼叫也會透過`relationships`屬性將資料元素與現有擴充功能建立關聯。 有關詳細資訊，請參閱[relationships](../guides/relationships.md)上的指南。
+
+```shell
+curl -X POST \
+  https://reactor.adobe.io/properties/PR97d92a379a5f48758947cdf44f607a0d/data_elements \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+        "data": {
+          "attributes": {
+            "name": "My Data Element 2020-12-14 17:33:21 +0000",
+            "delegate_descriptor_id": "kessel-test::dataElements::dom-attribute",
+            "settings": "{\"elementSelector\":\".target-element\",\"elementProperty\":\"html\"}",
+            "default_value": "general_label",
+            "enabled": true,
+            "force_lower_case": true,
+            "clean_text": true,
+          },
+          "relationships": {
+            "extension": {
+              "data": {
+                "id": "EX28788723a8e24a2f927fce1b55eb7ffc",
+                "type": "extensions"
+              }
+            }
+          },
+          "type": "data_elements"
+        }
+      }'
+```
+
+| 屬性 | 說明 |
+| --- | --- |
+| `attributes.name` | **（必要）** 資料元素的人類看得懂的名稱。 |
+| `attributes.delegate_descriptor_id` | **（必要）** 將資料元素與擴充功能套件建立關聯的格式化字串。所有資料元素在首次建立時都必須與擴充功能套件相關聯，因為每個擴充功能套件都會定義其委派資料元素的相容類型，以及其預期行為。 如需詳細資訊，請參閱[委派描述元ID](../guides/delegate-descriptor-ids.md)上的指南。 |
+| `attributes.settings` | 以字串表示的設定JSON物件。 |
+| `attributes.default_value` | 若資料元素評估為`undefined`，則傳回的預設值。 |
+| `attributes.enabled` | 指示資料元素是否已啟用的布林值。 |
+| `attributes.force_lower_case` | 指示資料元素值在儲存之前是否應轉換為小寫的布林值。 |
+| `attributes.clean_text` | 一個布林值，指示在儲存前是否應從資料元素值中移除前導和尾隨空白字元。 |
+| `type` | 要更新的資源類型。 對於此端點，值必須為`data_elements`。 |
+
+{style=&quot;table-layout:auto&quot;}
+
+**回應**
+
+成功的回應會傳回新建立資料元素的詳細資訊。
+
+```json
+{
+  "data": {
+    "id": "DE8667bc64ceba4b599e8458ea4ab58b8f",
+    "type": "data_elements",
+    "attributes": {
+      "created_at": "2020-12-14T17:33:21.774Z",
+      "deleted_at": null,
+      "dirty": true,
+      "enabled": true,
+      "name": "My Data Element 2020-12-14 17:33:21 +0000",
+      "published": false,
+      "published_at": null,
+      "revision_number": 0,
+      "updated_at": "2020-12-14T17:33:21.774Z",
+      "clean_text": false,
+      "default_value": null,
+      "delegate_descriptor_id": "kessel-test::dataElements::dom-attribute",
+      "force_lower_case": false,
+      "review_status": "unsubmitted",
+      "storage_duration": null,
+      "settings": "{\"elementSelector\":\".target-element\",\"elementProperty\":\"html\"}"
+    },
+    "relationships": {
+      "libraries": {
+        "links": {
+          "related": "https://reactor.adobe.io/data_elements/DE8667bc64ceba4b599e8458ea4ab58b8f/libraries"
+        }
+      },
+      "revisions": {
+        "links": {
+          "related": "https://reactor.adobe.io/data_elements/DE8667bc64ceba4b599e8458ea4ab58b8f/revisions"
+        }
+      },
+      "notes": {
+        "links": {
+          "related": "https://reactor.adobe.io/data_elements/DE8667bc64ceba4b599e8458ea4ab58b8f/notes"
+        }
+      },
+      "property": {
+        "links": {
+          "related": "https://reactor.adobe.io/data_elements/DE8667bc64ceba4b599e8458ea4ab58b8f/property"
+        },
+        "data": {
+          "id": "PR05ad70a8078f44c1a229ecf0da2802f2",
+          "type": "properties"
+        }
+      },
+      "origin": {
+        "links": {
+          "related": "https://reactor.adobe.io/data_elements/DE8667bc64ceba4b599e8458ea4ab58b8f/origin"
+        },
+        "data": {
+          "id": "DE8667bc64ceba4b599e8458ea4ab58b8f",
+          "type": "data_elements"
+        }
+      },
+      "extension": {
+        "links": {
+          "related": "https://reactor.adobe.io/data_elements/DE8667bc64ceba4b599e8458ea4ab58b8f/extension"
+        },
+        "data": {
+          "id": "EX28788723a8e24a2f927fce1b55eb7ffc",
+          "type": "extensions"
+        }
+      },
+      "updated_with_extension_package": {
+        "links": {
+          "related": "https://reactor.adobe.io/data_elements/DE8667bc64ceba4b599e8458ea4ab58b8f/updated_with_extension_package"
+        },
+        "data": {
+          "id": "EP75db2452065b44e2b8a38ca883ce369a",
+          "type": "extension_packages"
+        }
+      },
+      "updated_with_extension": {
+        "links": {
+          "related": "https://reactor.adobe.io/data_elements/DE8667bc64ceba4b599e8458ea4ab58b8f/updated_with_extension"
+        },
+        "data": {
+          "id": "EXd6bf04b143e64fe0ae7efe55a6655fa9",
+          "type": "extensions"
+        }
+      }
+    },
+    "links": {
+      "property": "https://reactor.adobe.io/properties/PR05ad70a8078f44c1a229ecf0da2802f2",
+      "origin": "https://reactor.adobe.io/data_elements/DE8667bc64ceba4b599e8458ea4ab58b8f",
+      "self": "https://reactor.adobe.io/data_elements/DE8667bc64ceba4b599e8458ea4ab58b8f",
+      "extension": "https://reactor.adobe.io/extensions/EX28788723a8e24a2f927fce1b55eb7ffc"
+    },
+    "meta": {
+      "latest_revision_number": 0
+    }
+  }
+}
+```
+
+## 更新資料元素 {#update}
+
+您可以在PATCH請求的路徑中加入資料元素ID，以更新資料元素。
+
+**API格式**
+
+```http
+PATCH /data_elements/{DATA_ELEMENT_ID}
+```
+
+| 參數 | 說明 |
+| --- | --- |
+| `DATA_ELEMENT_ID` | 要更新的資料元素的`id`。 |
+
+{style=&quot;table-layout:auto&quot;}
+
+**要求**
+
+下列請求會更新現有資料元素的`name`。
+
+```shell
+curl -X PUT \
+  https://reactor.adobe.io/data_elements/DE3fab176ccf8641838b3da59f716fc42b \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+        "data": {
+          "attributes": {
+            "name": "New Data Element Name"
+          },
+          "id": "DE3fab176ccf8641838b3da59f716fc42b",
+          "type": "data_elements"
+        }
+      }'
+```
+
+| 屬性 | 說明 |
+| --- | --- |
+| `attributes` | 一個物件，其屬性代表要為資料元素更新的屬性。 可更新所有資料元素屬性。 如需屬性清單及其使用案例，請參閱[建立資料元素](#create)的範例呼叫。 |
+| `id` | 您要更新之資料元素的`id`。 這應符合要求路徑中提供的`{DATA_ELEMENT_ID}`值。 |
+| `type` | 要更新的資源類型。 對於此端點，值必須為`data_elements`。 |
+
+{style=&quot;table-layout:auto&quot;}
+
+**回應**
+
+成功的回應會傳回更新資料元素的詳細資訊。
+
+```json
+{
+  "data": {
+    "id": "DE3fab176ccf8641838b3da59f716fc42b",
+    "type": "data_elements",
+    "attributes": {
+      "created_at": "2020-12-14T17:36:24.552Z",
+      "deleted_at": null,
+      "dirty": true,
+      "enabled": true,
+      "name": "New Data Element Name",
+      "published": false,
+      "published_at": null,
+      "revision_number": 0,
+      "updated_at": "2020-12-14T17:36:25.578Z",
+      "clean_text": false,
+      "default_value": null,
+      "delegate_descriptor_id": "kessel-test::dataElements::dom-attribute",
+      "force_lower_case": false,
+      "review_status": "unsubmitted",
+      "storage_duration": null,
+      "settings": "{\"elementSelector\":\".target-element-b\",\"elementProperty\":\"html\"}"
+    },
+    "relationships": {
+      "libraries": {
+        "links": {
+          "related": "https://reactor.adobe.io/data_elements/DE3fab176ccf8641838b3da59f716fc42b/libraries"
+        }
+      },
+      "revisions": {
+        "links": {
+          "related": "https://reactor.adobe.io/data_elements/DE3fab176ccf8641838b3da59f716fc42b/revisions"
+        }
+      },
+      "notes": {
+        "links": {
+          "related": "https://reactor.adobe.io/data_elements/DE3fab176ccf8641838b3da59f716fc42b/notes"
+        }
+      },
+      "property": {
+        "links": {
+          "related": "https://reactor.adobe.io/data_elements/DE3fab176ccf8641838b3da59f716fc42b/property"
+        },
+        "data": {
+          "id": "PR85e261fb61ce44c9b2498807a6e6410b",
+          "type": "properties"
+        }
+      },
+      "origin": {
+        "links": {
+          "related": "https://reactor.adobe.io/data_elements/DE3fab176ccf8641838b3da59f716fc42b/origin"
+        },
+        "data": {
+          "id": "DE3fab176ccf8641838b3da59f716fc42b",
+          "type": "data_elements"
+        }
+      },
+      "extension": {
+        "links": {
+          "related": "https://reactor.adobe.io/data_elements/DE3fab176ccf8641838b3da59f716fc42b/extension"
+        },
+        "data": {
+          "id": "EX71f31a3eeec249dfb77fedd6c5ce6387",
+          "type": "extensions"
+        }
+      },
+      "updated_with_extension_package": {
+        "links": {
+          "related": "https://reactor.adobe.io/data_elements/DE3fab176ccf8641838b3da59f716fc42b/updated_with_extension_package"
+        },
+        "data": {
+          "id": "EP75db2452065b44e2b8a38ca883ce369a",
+          "type": "extension_packages"
+        }
+      },
+      "updated_with_extension": {
+        "links": {
+          "related": "https://reactor.adobe.io/data_elements/DE3fab176ccf8641838b3da59f716fc42b/updated_with_extension"
+        },
+        "data": {
+          "id": "EX1f4df32a850c48a4930fb3e1dfa83536",
+          "type": "extensions"
+        }
+      }
+    },
+    "links": {
+      "property": "https://reactor.adobe.io/properties/PR85e261fb61ce44c9b2498807a6e6410b",
+      "origin": "https://reactor.adobe.io/data_elements/DE3fab176ccf8641838b3da59f716fc42b",
+      "self": "https://reactor.adobe.io/data_elements/DE3fab176ccf8641838b3da59f716fc42b",
+      "extension": "https://reactor.adobe.io/extensions/EX71f31a3eeec249dfb77fedd6c5ce6387"
+    },
+    "meta": {
+      "latest_revision_number": 0
+    }
+  }
+}
+```
+
+## 修訂資料元素 {#revise}
+
+修訂資料元素時，會使用目前（標題）修訂建立資料元素的新修訂。 資料元素的每個修訂版本都有其專屬的ID。 原始資料元素可通過原始連結被發現。
+
+您可以在PATCH請求內文中提供`meta.action`屬性，其值為`revise`，以修訂資料元素。
+
+**API格式**
+
+```http
+PATCH /data_elements/{DATA_ELEMENT_ID}
+```
+
+| 參數 | 說明 |
+| --- | --- |
+| `DATA_ELEMENT_ID` | 要修訂的資料元素的`id`。 |
+
+{style=&quot;table-layout:auto&quot;}
+
+**要求**
+
+```shell
+curl -X PUT \
+  https://reactor.adobe.io/data_elements/DE3fab176ccf8641838b3da59f716fc42b \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+        "data": {
+          "attributes": {
+            "name": "New Data Element Name"
+          },
+          "meta": {
+            "action": "revise"
+          },
+          "id": "DE7d7284657ee540ee8f402277860e9f8a",
+          "type": "data_elements"
+        }
+      }'
+```
+
+| 屬性 | 說明 |
+| --- | --- |
+| `attributes` | 一個物件，其屬性代表要為資料元素更新的屬性。 可更新所有資料元素屬性。 如需屬性清單及其使用案例，請參閱[建立資料元素](#create)的範例呼叫。 |
+| `meta.action` | 當包含`revise`值時，此屬性表示應為資料元素建立新修訂。 |
+| `id` | 要修訂的資料元素的`id`。 這應符合要求路徑中提供的`{DATA_ELEMENT_ID}`值。 |
+| `type` | 要修訂的資源類型。 對於此端點，值必須為`data_elements`。 |
+
+{style=&quot;table-layout:auto&quot;}
+
+**回應**
+
+成功的回應會傳回資料元素的新修訂的詳細資訊，如遞增的`meta.latest_revision_number`屬性所示。
+
+```json
+{
+  "data": {
+    "id": "DE3fab176ccf8641838b3da59f716fc42b",
+    "type": "data_elements",
+    "attributes": {
+      "created_at": "2020-12-14T17:36:24.552Z",
+      "deleted_at": null,
+      "dirty": true,
+      "enabled": true,
+      "name": "New Data Element Name",
+      "published": false,
+      "published_at": null,
+      "revision_number": 0,
+      "updated_at": "2020-12-14T17:36:25.578Z",
+      "clean_text": false,
+      "default_value": null,
+      "delegate_descriptor_id": "kessel-test::dataElements::dom-attribute",
+      "force_lower_case": false,
+      "review_status": "unsubmitted",
+      "storage_duration": null,
+      "settings": "{\"elementSelector\":\".target-element-b\",\"elementProperty\":\"html\"}"
+    },
+    "relationships": {
+      "libraries": {
+        "links": {
+          "related": "https://reactor.adobe.io/data_elements/DE3fab176ccf8641838b3da59f716fc42b/libraries"
+        }
+      },
+      "revisions": {
+        "links": {
+          "related": "https://reactor.adobe.io/data_elements/DE3fab176ccf8641838b3da59f716fc42b/revisions"
+        }
+      },
+      "notes": {
+        "links": {
+          "related": "https://reactor.adobe.io/data_elements/DE3fab176ccf8641838b3da59f716fc42b/notes"
+        }
+      },
+      "property": {
+        "links": {
+          "related": "https://reactor.adobe.io/data_elements/DE3fab176ccf8641838b3da59f716fc42b/property"
+        },
+        "data": {
+          "id": "PR85e261fb61ce44c9b2498807a6e6410b",
+          "type": "properties"
+        }
+      },
+      "origin": {
+        "links": {
+          "related": "https://reactor.adobe.io/data_elements/DE3fab176ccf8641838b3da59f716fc42b/origin"
+        },
+        "data": {
+          "id": "DE3fab176ccf8641838b3da59f716fc42b",
+          "type": "data_elements"
+        }
+      },
+      "extension": {
+        "links": {
+          "related": "https://reactor.adobe.io/data_elements/DE3fab176ccf8641838b3da59f716fc42b/extension"
+        },
+        "data": {
+          "id": "EX71f31a3eeec249dfb77fedd6c5ce6387",
+          "type": "extensions"
+        }
+      },
+      "updated_with_extension_package": {
+        "links": {
+          "related": "https://reactor.adobe.io/data_elements/DE3fab176ccf8641838b3da59f716fc42b/updated_with_extension_package"
+        },
+        "data": {
+          "id": "EP75db2452065b44e2b8a38ca883ce369a",
+          "type": "extension_packages"
+        }
+      },
+      "updated_with_extension": {
+        "links": {
+          "related": "https://reactor.adobe.io/data_elements/DE3fab176ccf8641838b3da59f716fc42b/updated_with_extension"
+        },
+        "data": {
+          "id": "EX1f4df32a850c48a4930fb3e1dfa83536",
+          "type": "extensions"
+        }
+      }
+    },
+    "links": {
+      "property": "https://reactor.adobe.io/properties/PR85e261fb61ce44c9b2498807a6e6410b",
+      "origin": "https://reactor.adobe.io/data_elements/DE3fab176ccf8641838b3da59f716fc42b",
+      "self": "https://reactor.adobe.io/data_elements/DE3fab176ccf8641838b3da59f716fc42b",
+      "extension": "https://reactor.adobe.io/extensions/EX71f31a3eeec249dfb77fedd6c5ce6387"
+    },
+    "meta": {
+      "latest_revision_number": 1
+    }
+  }
+}
+```
+
+## 刪除資料元素
+
+您可以在DELETE請求的路徑中加入資料元素ID，以刪除該資料元素。
+
+**API格式**
+
+```http
+DELETE /data_elements/{DATA_ELEMENT_ID}
+```
+
+| 參數 | 說明 |
+| --- | --- |
+| `DATA_ELEMENT_ID` | 要刪除的資料元素的`id`。 |
+
+{style=&quot;table-layout:auto&quot;}
+
+**要求**
+
+```shell
+curl -X DELETE \
+  https://reactor.adobe.io/data_elements/DE3fab176ccf8641838b3da59f716fc42b \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}'
+```
+
+**回應**
+
+成功的回應會傳回HTTP狀態204（無內容），但沒有回應內文，表示資料元素已刪除。
+
+## 管理資料元素的附註 {#notes}
+
+資料元素是「顯著」資源，這表示您可以針對每個個別資源建立和擷取文字型附註。 有關如何管理資料元素和其他相容資源的附註的詳細資訊，請參閱[附註端點指南](./notes.md)。
+
+## 擷取資料元素的相關資源 {#related}
+
+下列呼叫示範如何擷取資料元素的相關資源。 當[查找資料元素](#lookup)時，這些關係將列在`relationships`屬性下。
+
+有關Reactor API中關係的詳細資訊，請參閱[關係指南](../guides/relationships.md)。
+
+### 列出資料元素的相關程式庫 {#libraries}
+
+您可以將`/libraries`附加至查詢請求的路徑，以列出使用資料元素的程式庫。
+
+**API格式**
+
+```http
+GET  /data_elements/{DATA_ELEMENT_ID}/libraries
+```
+
+| 參數 | 說明 |
+| --- | --- |
+| `{DATA_ELEMENT_ID}` | 您要列出其程式庫的資料元素的`id`。 |
+
+{style=&quot;table-layout:auto&quot;}
+
+**要求**
+
+```shell
+curl -X GET \
+  https://reactor.adobe.io/data_elements/DE3fab176ccf8641838b3da59f716fc42b/libraries \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'Accept: application/vnd.api+json;revision=1'
+```
+
+**回應**
+
+成功的回應會傳回使用指定資料元素的程式庫清單。
+
+```json
+{
+  "data": [
+    {
+      "id": "LB62d20ad807a949e6b13b0a2c7299eb65",
+      "type": "libraries",
+      "attributes": {
+        "created_at": "2020-12-14T17:50:19.589Z",
+        "name": "My Library",
+        "published_at": null,
+        "state": "development",
+        "updated_at": "2020-12-14T17:50:19.589Z",
+        "build_required": true
+      },
+      "relationships": {
+        "builds": {
+          "links": {
+            "related": "https://reactor.adobe.io/libraries/LB62d20ad807a949e6b13b0a2c7299eb65/builds"
+          }
+        },
+        "environment": {
+          "links": {
+            "self": "https://reactor.adobe.io/libraries/LB62d20ad807a949e6b13b0a2c7299eb65/relationships/environment"
+          },
+          "data": null
+        },
+        "data_elements": {
+          "links": {
+            "related": "https://reactor.adobe.io/libraries/LB62d20ad807a949e6b13b0a2c7299eb65/data_elements",
+            "self": "https://reactor.adobe.io/libraries/LB62d20ad807a949e6b13b0a2c7299eb65/relationships/data_elements"
+          }
+        },
+        "extensions": {
+          "links": {
+            "related": "https://reactor.adobe.io/libraries/LB62d20ad807a949e6b13b0a2c7299eb65/extensions",
+            "self": "https://reactor.adobe.io/libraries/LB62d20ad807a949e6b13b0a2c7299eb65/relationships/extensions"
+          }
+        },
+        "notes": {
+          "links": {
+            "related": "https://reactor.adobe.io/libraries/LB62d20ad807a949e6b13b0a2c7299eb65/notes"
+          }
+        },
+        "rules": {
+          "links": {
+            "related": "https://reactor.adobe.io/libraries/LB62d20ad807a949e6b13b0a2c7299eb65/rules",
+            "self": "https://reactor.adobe.io/libraries/LB62d20ad807a949e6b13b0a2c7299eb65/relationships/rules"
+          }
+        },
+        "upstream_library": {
+          "data": null
+        },
+        "property": {
+          "links": {
+            "related": "https://reactor.adobe.io/libraries/LB62d20ad807a949e6b13b0a2c7299eb65/property"
+          },
+          "data": {
+            "id": "PR241ba9cd56324ac192de68d658f20cb0",
+            "type": "properties"
+          }
+        },
+        "last_build": {
+          "links": {
+            "related": "https://reactor.adobe.io/libraries/LB62d20ad807a949e6b13b0a2c7299eb65/last_build"
+          },
+          "data": null
+        }
+      },
+      "links": {
+        "property": "https://reactor.adobe.io/properties/PR241ba9cd56324ac192de68d658f20cb0",
+        "self": "https://reactor.adobe.io/libraries/LB62d20ad807a949e6b13b0a2c7299eb65"
+      },
+      "meta": {
+        "build_status": null,
+        "build_required_detail": "No build found since last state change"
+      }
+    }
+  ],
+  "meta": {
+    "pagination": {
+      "current_page": 1,
+      "next_page": null,
+      "prev_page": null,
+      "total_pages": 1,
+      "total_count": 1
+    }
+  }
+}
+```
+
+### 列出資料元素的相關修訂 {#revisions}
+
+您可以將`/revisions`附加至查詢請求的路徑，以列出資料元素的先前修訂版本。
+
+**API格式**
+
+```http
+GET  /data_elements/{DATA_ELEMENT_ID}/revisions
+```
+
+| 參數 | 說明 |
+| --- | --- |
+| `{DATA_ELEMENT_ID}` | 要列出其修訂版本的資料元素的`id`。 |
+
+{style=&quot;table-layout:auto&quot;}
+
+**要求**
+
+```shell
+curl -X GET \
+  https://reactor.adobe.io/data_elements/DE3fab176ccf8641838b3da59f716fc42b/revisions \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'Accept: application/vnd.api+json;revision=1'
+```
+
+**回應**
+
+成功的回應會傳回指定資料元素的修訂清單。
+
+```json
+{
+  "data": [
+    {
+      "id": "DEaeceb5164d494c768c18e37ec6f3b091",
+      "type": "data_elements",
+      "attributes": {
+        "created_at": "2020-12-14T17:37:06.488Z",
+        "deleted_at": null,
+        "dirty": false,
+        "enabled": true,
+        "name": "My Data Element 2020-12-14 17:37:05 +0000",
+        "published": false,
+        "published_at": null,
+        "revision_number": 1,
+        "updated_at": "2020-12-14T17:37:06.488Z",
+        "clean_text": false,
+        "default_value": null,
+        "delegate_descriptor_id": "kessel-test::dataElements::dom-attribute",
+        "force_lower_case": false,
+        "review_status": "unsubmitted",
+        "storage_duration": null,
+        "settings": "{\"elementProperty\":\"html\",\"elementSelector\":\".target-element\"}"
+      },
+      "relationships": {
+        "libraries": {
+          "links": {
+            "related": "https://reactor.adobe.io/data_elements/DEaeceb5164d494c768c18e37ec6f3b091/libraries"
+          }
+        },
+        "revisions": {
+          "links": {
+            "related": "https://reactor.adobe.io/data_elements/DEaeceb5164d494c768c18e37ec6f3b091/revisions"
+          }
+        },
+        "notes": {
+          "links": {
+            "related": "https://reactor.adobe.io/data_elements/DEaeceb5164d494c768c18e37ec6f3b091/notes"
+          }
+        },
+        "property": {
+          "links": {
+            "related": "https://reactor.adobe.io/data_elements/DEaeceb5164d494c768c18e37ec6f3b091/property"
+          },
+          "data": {
+            "id": "PR52072581500b44cd808e03e36c38e005",
+            "type": "properties"
+          }
+        },
+        "origin": {
+          "links": {
+            "related": "https://reactor.adobe.io/data_elements/DEaeceb5164d494c768c18e37ec6f3b091/origin"
+          },
+          "data": {
+            "id": "DE5172417ff56e43d2a99ca149021bf65a",
+            "type": "data_elements"
+          }
+        },
+        "extension": {
+          "links": {
+            "related": "https://reactor.adobe.io/data_elements/DEaeceb5164d494c768c18e37ec6f3b091/extension"
+          },
+          "data": {
+            "id": "EXdd53073348ef467683365286a33ade02",
+            "type": "extensions"
+          }
+        },
+        "updated_with_extension_package": {
+          "links": {
+            "related": "https://reactor.adobe.io/data_elements/DEaeceb5164d494c768c18e37ec6f3b091/updated_with_extension_package"
+          },
+          "data": {
+            "id": "EP75db2452065b44e2b8a38ca883ce369a",
+            "type": "extension_packages"
+          }
+        },
+        "updated_with_extension": {
+          "links": {
+            "related": "https://reactor.adobe.io/data_elements/DEaeceb5164d494c768c18e37ec6f3b091/updated_with_extension"
+          },
+          "data": {
+            "id": "EXf9d7d1ca8e6f436b900659ce499c09ce",
+            "type": "extensions"
+          }
+        }
+      },
+      "links": {
+        "property": "https://reactor.adobe.io/properties/PR52072581500b44cd808e03e36c38e005",
+        "origin": "https://reactor.adobe.io/data_elements/DE5172417ff56e43d2a99ca149021bf65a",
+        "self": "https://reactor.adobe.io/data_elements/DEaeceb5164d494c768c18e37ec6f3b091",
+        "extension": "https://reactor.adobe.io/extensions/EXdd53073348ef467683365286a33ade02"
+      },
+      "meta": {
+        "latest_revision_number": 1
+      }
+    },
+    {
+      "id": "DE5172417ff56e43d2a99ca149021bf65a",
+      "type": "data_elements",
+      "attributes": {
+        "created_at": "2020-12-14T17:37:05.920Z",
+        "deleted_at": null,
+        "dirty": false,
+        "enabled": true,
+        "name": "My Data Element 2020-12-14 17:37:05 +0000",
+        "published": false,
+        "published_at": null,
+        "revision_number": 0,
+        "updated_at": "2020-12-14T17:37:05.920Z",
+        "clean_text": false,
+        "default_value": null,
+        "delegate_descriptor_id": "kessel-test::dataElements::dom-attribute",
+        "force_lower_case": false,
+        "review_status": "unsubmitted",
+        "storage_duration": null,
+        "settings": "{\"elementProperty\":\"html\",\"elementSelector\":\".target-element\"}"
+      },
+      "relationships": {
+        "libraries": {
+          "links": {
+            "related": "https://reactor.adobe.io/data_elements/DE5172417ff56e43d2a99ca149021bf65a/libraries"
+          }
+        },
+        "revisions": {
+          "links": {
+            "related": "https://reactor.adobe.io/data_elements/DE5172417ff56e43d2a99ca149021bf65a/revisions"
+          }
+        },
+        "notes": {
+          "links": {
+            "related": "https://reactor.adobe.io/data_elements/DE5172417ff56e43d2a99ca149021bf65a/notes"
+          }
+        },
+        "property": {
+          "links": {
+            "related": "https://reactor.adobe.io/data_elements/DE5172417ff56e43d2a99ca149021bf65a/property"
+          },
+          "data": {
+            "id": "PR52072581500b44cd808e03e36c38e005",
+            "type": "properties"
+          }
+        },
+        "origin": {
+          "links": {
+            "related": "https://reactor.adobe.io/data_elements/DE5172417ff56e43d2a99ca149021bf65a/origin"
+          },
+          "data": {
+            "id": "DE5172417ff56e43d2a99ca149021bf65a",
+            "type": "data_elements"
+          }
+        },
+        "extension": {
+          "links": {
+            "related": "https://reactor.adobe.io/data_elements/DE5172417ff56e43d2a99ca149021bf65a/extension"
+          },
+          "data": {
+            "id": "EXdd53073348ef467683365286a33ade02",
+            "type": "extensions"
+          }
+        },
+        "updated_with_extension_package": {
+          "links": {
+            "related": "https://reactor.adobe.io/data_elements/DE5172417ff56e43d2a99ca149021bf65a/updated_with_extension_package"
+          },
+          "data": {
+            "id": "EP75db2452065b44e2b8a38ca883ce369a",
+            "type": "extension_packages"
+          }
+        },
+        "updated_with_extension": {
+          "links": {
+            "related": "https://reactor.adobe.io/data_elements/DE5172417ff56e43d2a99ca149021bf65a/updated_with_extension"
+          },
+          "data": {
+            "id": "EXf9d7d1ca8e6f436b900659ce499c09ce",
+            "type": "extensions"
+          }
+        }
+      },
+      "links": {
+        "property": "https://reactor.adobe.io/properties/PR52072581500b44cd808e03e36c38e005",
+        "origin": "https://reactor.adobe.io/data_elements/DE5172417ff56e43d2a99ca149021bf65a",
+        "self": "https://reactor.adobe.io/data_elements/DE5172417ff56e43d2a99ca149021bf65a",
+        "extension": "https://reactor.adobe.io/extensions/EXdd53073348ef467683365286a33ade02"
+      },
+      "meta": {
+        "latest_revision_number": 1
+      }
+    }
+  ],
+  "meta": {
+    "pagination": {
+      "current_page": 1,
+      "next_page": null,
+      "prev_page": null,
+      "total_pages": 1,
+      "total_count": 2
+    }
+  }
+}
+```
+
+### 查詢資料元素的相關擴充功能 {#extension}
+
+您可以借由將`/extension`附加至GET請求的路徑，來尋找使用資料元素的擴充功能。
+
+**API格式**
+
+```http
+GET  /data_elements/{DATA_ELEMENT_ID}/extension
+```
+
+| 參數 | 說明 |
+| --- | --- |
+| `{DATA_ELEMENT_ID}` | 您要查詢其擴充功能的資料元素的`id`。 |
+
+{style=&quot;table-layout:auto&quot;}
+
+**要求**
+
+```shell
+curl -X GET \
+  https://reactor.adobe.io/data_elements/DE3fab176ccf8641838b3da59f716fc42b/extension \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'Accept: application/vnd.api+json;revision=1'
+```
+
+**回應**
+
+成功的回應會傳回使用指定資料元素之擴充功能的詳細資料。
+
+```json
+{
+  "data": {
+    "id": "EX9c7f9f1e826149978f2dadaf4c639679",
+    "type": "extensions",
+    "attributes": {
+      "created_at": "2020-12-14T17:37:31.952Z",
+      "deleted_at": null,
+      "dirty": false,
+      "enabled": true,
+      "name": "kessel-test",
+      "published": false,
+      "published_at": null,
+      "revision_number": 0,
+      "updated_at": "2020-12-14T17:37:31.952Z",
+      "delegate_descriptor_id": null,
+      "display_name": "Kessel Test",
+      "review_status": "unsubmitted",
+      "version": "1.2.0",
+      "settings": "{}"
+    },
+    "relationships": {
+      "libraries": {
+        "links": {
+          "related": "https://reactor.adobe.io/extensions/EX9c7f9f1e826149978f2dadaf4c639679/libraries"
+        }
+      },
+      "revisions": {
+        "links": {
+          "related": "https://reactor.adobe.io/extensions/EX9c7f9f1e826149978f2dadaf4c639679/revisions"
+        }
+      },
+      "notes": {
+        "links": {
+          "related": "https://reactor.adobe.io/extensions/EX9c7f9f1e826149978f2dadaf4c639679/notes"
+        }
+      },
+      "property": {
+        "links": {
+          "related": "https://reactor.adobe.io/extensions/EX9c7f9f1e826149978f2dadaf4c639679/property"
+        },
+        "data": {
+          "id": "PR5c15543ef7bb403abc79d65fee0bf1f9",
+          "type": "properties"
+        }
+      },
+      "origin": {
+        "links": {
+          "related": "https://reactor.adobe.io/extensions/EX9c7f9f1e826149978f2dadaf4c639679/origin"
+        },
+        "data": {
+          "id": "EX9c7f9f1e826149978f2dadaf4c639679",
+          "type": "extensions"
+        }
+      },
+      "updated_with_extension_package": {
+        "links": {
+          "related": "https://reactor.adobe.io/extensions/EX9c7f9f1e826149978f2dadaf4c639679/updated_with_extension_package"
+        },
+        "data": {
+          "id": "EP75db2452065b44e2b8a38ca883ce369a",
+          "type": "extension_packages"
+        }
+      },
+      "extension_package": {
+        "links": {
+          "related": "https://reactor.adobe.io/extensions/EX9c7f9f1e826149978f2dadaf4c639679/extension_package"
+        },
+        "data": {
+          "id": "EP75db2452065b44e2b8a38ca883ce369a",
+          "type": "extension_packages"
+        }
+      }
+    },
+    "links": {
+      "property": "https://reactor.adobe.io/properties/PR5c15543ef7bb403abc79d65fee0bf1f9",
+      "origin": "https://reactor.adobe.io/extensions/EX9c7f9f1e826149978f2dadaf4c639679",
+      "self": "https://reactor.adobe.io/extensions/EX9c7f9f1e826149978f2dadaf4c639679",
+      "extension_package": "https://reactor.adobe.io/extension_packages/EP75db2452065b44e2b8a38ca883ce369a",
+      "latest_extension_package": "https://reactor.adobe.io/extension_packages/EP75db2452065b44e2b8a38ca883ce369a"
+    },
+    "meta": {
+      "latest_revision_number": 1
+    }
+  }
+}
+```
+
+### 查找資料元素的相關來源 {#origin}
+
+您可以將`/origin`附加至GET請求的路徑，以尋找資料元素的來源。 資料元素的來源是先前為建立當前修訂而更新的修訂。
+
+**API格式**
+
+```http
+GET  /data_elements/{DATA_ELEMENT_ID}/origin
+```
+
+| 參數 | 說明 |
+| --- | --- |
+| `{DATA_ELEMENT_ID}` | 您要查找其來源的資料元素的`id`。 |
+
+{style=&quot;table-layout:auto&quot;}
+
+**要求**
+
+```shell
+curl -X GET \
+  https://reactor.adobe.io/data_elements/DE3fab176ccf8641838b3da59f716fc42b/origin \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'Accept: application/vnd.api+json;revision=1'
+```
+
+**回應**
+
+成功的回應會傳回指定資料元素來源的詳細資訊。
+
+```json
+{
+  "data": {
+    "id": "DE790cb76f91594c2082a727b9f97024f6",
+    "type": "data_elements",
+    "attributes": {
+      "created_at": "2020-12-14T17:37:19.891Z",
+      "deleted_at": null,
+      "dirty": false,
+      "enabled": true,
+      "name": "My Data Element 2020-12-14 17:37:19 +0000",
+      "published": false,
+      "published_at": null,
+      "revision_number": 0,
+      "updated_at": "2020-12-14T17:37:19.891Z",
+      "clean_text": false,
+      "default_value": null,
+      "delegate_descriptor_id": "kessel-test::dataElements::dom-attribute",
+      "force_lower_case": false,
+      "review_status": "unsubmitted",
+      "storage_duration": null,
+      "settings": "{\"elementProperty\":\"html\",\"elementSelector\":\".target-element\"}"
+    },
+    "relationships": {
+      "libraries": {
+        "links": {
+          "related": "https://reactor.adobe.io/data_elements/DE790cb76f91594c2082a727b9f97024f6/libraries"
+        }
+      },
+      "revisions": {
+        "links": {
+          "related": "https://reactor.adobe.io/data_elements/DE790cb76f91594c2082a727b9f97024f6/revisions"
+        }
+      },
+      "notes": {
+        "links": {
+          "related": "https://reactor.adobe.io/data_elements/DE790cb76f91594c2082a727b9f97024f6/notes"
+        }
+      },
+      "property": {
+        "links": {
+          "related": "https://reactor.adobe.io/data_elements/DE790cb76f91594c2082a727b9f97024f6/property"
+        },
+        "data": {
+          "id": "PRf1ac400fb1e04c689e28d5efcd675c94",
+          "type": "properties"
+        }
+      },
+      "origin": {
+        "links": {
+          "related": "https://reactor.adobe.io/data_elements/DE790cb76f91594c2082a727b9f97024f6/origin"
+        },
+        "data": {
+          "id": "DE790cb76f91594c2082a727b9f97024f6",
+          "type": "data_elements"
+        }
+      },
+      "extension": {
+        "links": {
+          "related": "https://reactor.adobe.io/data_elements/DE790cb76f91594c2082a727b9f97024f6/extension"
+        },
+        "data": {
+          "id": "EX2345dba2c8b34d1cbe2795e29c62bf27",
+          "type": "extensions"
+        }
+      },
+      "updated_with_extension_package": {
+        "links": {
+          "related": "https://reactor.adobe.io/data_elements/DE790cb76f91594c2082a727b9f97024f6/updated_with_extension_package"
+        },
+        "data": {
+          "id": "EP75db2452065b44e2b8a38ca883ce369a",
+          "type": "extension_packages"
+        }
+      },
+      "updated_with_extension": {
+        "links": {
+          "related": "https://reactor.adobe.io/data_elements/DE790cb76f91594c2082a727b9f97024f6/updated_with_extension"
+        },
+        "data": {
+          "id": "EXad7ebb72d721478483b741eebfffda6a",
+          "type": "extensions"
+        }
+      }
+    },
+    "links": {
+      "property": "https://reactor.adobe.io/properties/PRf1ac400fb1e04c689e28d5efcd675c94",
+      "origin": "https://reactor.adobe.io/data_elements/DE790cb76f91594c2082a727b9f97024f6",
+      "self": "https://reactor.adobe.io/data_elements/DE790cb76f91594c2082a727b9f97024f6",
+      "extension": "https://reactor.adobe.io/extensions/EX2345dba2c8b34d1cbe2795e29c62bf27"
+    },
+    "meta": {
+      "latest_revision_number": 1
+    }
+  }
+}
+```
+
+### 查詢資料元素的相關屬性 {#property}
+
+您可以將`/property`附加至GET請求的路徑，以尋找擁有資料元素的屬性。
+
+**API格式**
+
+```http
+GET  /data_elements/{DATA_ELEMENT_ID}/property
+```
+
+| 參數 | 說明 |
+| --- | --- |
+| `{DATA_ELEMENT_ID}` | 您要查詢其屬性的資料元素的`id`。 |
+
+{style=&quot;table-layout:auto&quot;}
+
+**要求**
+
+```shell
+curl -X GET \
+  https://reactor.adobe.io/data_elements/DE3fab176ccf8641838b3da59f716fc42b/property \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'Accept: application/vnd.api+json;revision=1'
+```
+
+**回應**
+
+成功的回應會傳回擁有指定資料元素之屬性的詳細資訊。
+
+```json
+{
+  "data": {
+    "id": "PRae9440b0f3234c4286569485f2b7a6a2",
+    "type": "properties",
+    "attributes": {
+      "created_at": "2020-12-14T17:52:40.829Z",
+      "enabled": true,
+      "name": "Kessel Example Property",
+      "updated_at": "2020-12-14T17:52:40.829Z",
+      "platform": "web",
+      "development": false,
+      "token": "42daac072e1e",
+      "domains": [
+        "example.com"
+      ],
+      "undefined_vars_return_empty": false,
+      "rule_component_sequencing_enabled": false
+    },
+    "relationships": {
+      "company": {
+        "links": {
+          "related": "https://reactor.adobe.io/properties/PRae9440b0f3234c4286569485f2b7a6a2/company"
+        },
+        "data": {
+          "id": "CO2bf094214ffd4785bb4bcf88c952a7c1",
+          "type": "companies"
+        }
+      },
+      "callbacks": {
+        "links": {
+          "related": "https://reactor.adobe.io/properties/PRae9440b0f3234c4286569485f2b7a6a2/callbacks"
+        }
+      },
+      "hosts": {
+        "links": {
+          "related": "https://reactor.adobe.io/properties/PRae9440b0f3234c4286569485f2b7a6a2/hosts"
+        }
+      },
+      "environments": {
+        "links": {
+          "related": "https://reactor.adobe.io/properties/PRae9440b0f3234c4286569485f2b7a6a2/environments"
+        }
+      },
+      "libraries": {
+        "links": {
+          "related": "https://reactor.adobe.io/properties/PRae9440b0f3234c4286569485f2b7a6a2/libraries"
+        }
+      },
+      "data_elements": {
+        "links": {
+          "related": "https://reactor.adobe.io/properties/PRae9440b0f3234c4286569485f2b7a6a2/data_elements"
+        }
+      },
+      "extensions": {
+        "links": {
+          "related": "https://reactor.adobe.io/properties/PRae9440b0f3234c4286569485f2b7a6a2/extensions"
+        }
+      },
+      "rules": {
+        "links": {
+          "related": "https://reactor.adobe.io/properties/PRae9440b0f3234c4286569485f2b7a6a2/rules"
+        }
+      },
+      "notes": {
+        "links": {
+          "related": "https://reactor.adobe.io/properties/PRae9440b0f3234c4286569485f2b7a6a2/notes"
+        }
+      }
+    },
+    "links": {
+      "company": "https://reactor.adobe.io/companies/CO2bf094214ffd4785bb4bcf88c952a7c1",
+      "data_elements": "https://reactor.adobe.io/properties/PRae9440b0f3234c4286569485f2b7a6a2/data_elements",
+      "environments": "https://reactor.adobe.io/properties/PRae9440b0f3234c4286569485f2b7a6a2/environments",
+      "extensions": "https://reactor.adobe.io/properties/PRae9440b0f3234c4286569485f2b7a6a2/extensions",
+      "rules": "https://reactor.adobe.io/properties/PRae9440b0f3234c4286569485f2b7a6a2/rules",
+      "self": "https://reactor.adobe.io/properties/PRae9440b0f3234c4286569485f2b7a6a2"
+    },
+    "meta": {
+      "rights": [
+        "approve",
+        "develop",
+        "manage_environments",
+        "manage_extensions",
+        "publish"
+      ]
+    }
+  }
+}
+```
