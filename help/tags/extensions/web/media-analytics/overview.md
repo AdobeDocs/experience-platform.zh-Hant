@@ -1,9 +1,9 @@
 ---
 title: Adobe MediumAnalytics for Audio and Video擴充功能概述
 description: 了解Adobe Experience Platform中的Adobe MediumAnalytics for Audio and Video標籤擴充功能。
-source-git-commit: 573c13f5136a4efc3accf2838783a91ea914e949
+source-git-commit: 12c3f440319046491054b3ef3ec404798bb61f06
 workflow-type: tm+mt
-source-wordcount: '1015'
+source-wordcount: '991'
 ht-degree: 80%
 
 ---
@@ -52,7 +52,7 @@ Media Analytics (MA) 擴充功能新增核心的 JavaScript Media SDK (Media 2.x
 | Export APIs to Window Object | 啟用或停用將 Media Analytics API 匯出至全域範圍 |
 | Variable Name | 用來匯出 `window` 物件下 Media Analytics API 的變數 |
 
-**提醒：** MA 擴充功能需有 [ Analytics](../analytics/overview.md) 和 [Experience Cloud ID](https://experienceleague.adobe.com/docs/launch/using/extensions-ref/adobe-extension/id-service-extension/overview.html?lang=zh-Hant) 擴充功能，才能正常運作。您也必須將這些擴充功能新增至擴充功能屬性並加以設定。
+**提醒：** MA 擴充功能需有 [ Analytics](../analytics/overview.md) 和 [Experience Cloud ID](../id-service/overview.md) 擴充功能，才能正常運作。您也必須將這些擴充功能新增至擴充功能屬性並加以設定。
 
 ## 使用 MA 擴充功能
 
@@ -176,7 +176,7 @@ MA 擴充功能會將 `get-instance` 模組和 `media-heartbeat` 共用模組公
 
 >[!NOTE]
 >
->**測試：**&#x200B;若要在這個版本中測試擴充功能，您必須將其上傳至 [ Platform ](https://github.com/Adobe-Marketing-Cloud/reactor-user-docs/tree/73a73bd5ff53162339ce5ded3f4bba4712146d20/extension-reference/launch.adobe.com)以便在其中存取所有相依的擴充功能。
+>**測試：**&#x200B;若要在這個版本中測試擴充功能，您必須將其上傳至 [ Platform ](../../../extension-dev/submit/upload-and-test.md)以便在其中存取所有相依的擴充功能。
 
 
 <!--
