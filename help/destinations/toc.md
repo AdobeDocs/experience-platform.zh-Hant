@@ -4,9 +4,9 @@ user-guide-title: 目的地指南
 user-guide-description: 針對跨通路行銷活動、電子郵件宣傳、鎖定特定目標的行銷活動和其他諸多使用案例，啟用已知和未知的資料。
 description: 本檔案列出Adobe Experience Platform目的地的目錄
 feature: 目的地
-source-git-commit: 47b3ef28281e3480e8b194486845f4fb4326b7d4
+source-git-commit: 3ab15ceaf33a33f8bbda80cbf09228d16ce5a374
 workflow-type: tm+mt
-source-wordcount: '477'
+source-wordcount: '481'
 ht-degree: 11%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 11%
 
 # 目的地 {#destinations}
 
-* [目的地概述](./home.md)
+* [目的地概觀](./home.md)
 * [目的地類型和類別](./destination-types.md)
 * API教學課程{#api}
    * [使用流量服務API連線至串流目的地並啟用資料](./api/streaming-destinations.md)
@@ -33,6 +33,7 @@ ht-degree: 11%
    * [ (Alpha)HTTP連線](./catalog/http-destination.md)
    * Adobe目的地{#adobe}
       * [Adobe目的地概觀](./catalog/adobe/overview.md)
+      * [（測試版）Marketo Engage連線](./catalog/adobe/marketo-engage.md)
       * [Experience Platform區段共用](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html)
    * 廣告目的地{#advertising}
       * [廣告目的地概觀](./catalog/advertising/overview.md)
@@ -134,5 +135,5 @@ ht-degree: 11%
       * [無效標籤擴展](./catalog/voice/invoca.md)
       * [Medallia擴充功能](./catalog/voice/medallia.md)
       * [通話URL收件箱擴展](./catalog/voice/talkurl.md)
-* [常見問題集](./destinations-faq.md)
+* [常見問答](./destinations-faq.md)
 * [平台發行說明](https://www.adobe.com/go/platform-release-notes-en)
