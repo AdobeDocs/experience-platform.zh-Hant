@@ -1,9 +1,9 @@
 ---
 title: 發行說明
 description: Adobe Experience Platform中標籤的最新發行說明。
-source-git-commit: 7a6bec77895458cf1735bc7a00d16b78df9776a5
+source-git-commit: f1e6741de9aa00652e9af290a89f73788e0f1d83
 workflow-type: tm+mt
-source-wordcount: '400'
+source-wordcount: '498'
 ht-degree: 2%
 
 ---
@@ -13,6 +13,14 @@ ht-degree: 2%
 >[!NOTE]
 >
 >Adobe Experience Platform Launch已重新命名為Experience Platform中的資料收集技術套件。 因此，產品檔案中已推出數個術語變更。 有關術語更改的綜合參考，請參閱以下[document](../term-updates.md)。
+
+## 2021 年 7 月 19 日
+
+**對「管理屬性」權利的調整**  — 「管理屬性」權利遇到以下問題：用戶有權建立新屬性，但在建立後無法看到該屬性(如此處的社群執行緒 [所述](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-launch/technical-advisory-adjustments-to-the-manage-properties/ba-p/399176))。修正現在會如文章所述，與正在執行的權限一起上線。
+
+>[!NOTE]
+>
+>如果您將新的「編輯屬性」指派給使用者群組，UI將不會更新以啟用屬性設定畫面中的欄位。 此問題的修正將在即將發行的版本中實施。
 
 ## 2021 年 5 月 17 日
 
