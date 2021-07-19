@@ -4,9 +4,9 @@ title: 同意和首選項資料類型
 description: 「隱私權」、「個人化」和「行銷偏好設定」的同意資料類型，旨在支援收集同意管理平台(CMP)和其他來源從您的資料操作產生的客戶權限和偏好設定。
 topic-legacy: guide
 exl-id: cdcc7b04-eeb9-40d3-b0b5-f736a5472621
-source-git-commit: bd312024a1a3fb6da840a38d6e9d19fcbd6eab5a
+source-git-commit: 12c3f440319046491054b3ef3ec404798bb61f06
 workflow-type: tm+mt
-source-wordcount: '1904'
+source-wordcount: '1905'
 ht-degree: 2%
 
 ---
@@ -309,4 +309,4 @@ ht-degree: 2%
 
 ### 完整[!UICONTROL 同意和偏好設定]架構 {#full-schema}
 
-若要檢視[!UICONTROL 同意和偏好設定]資料類型的完整結構，請參閱[官方XDM存放庫](https://github.com/adobe/xdm/blob/master/components/datatypes/consent-preferences.schema.json)。
+若要檢視[!UICONTROL 同意和偏好設定]資料類型的完整結構，請參閱[官方XDM存放庫](https://github.com/adobe/xdm/blob/master/components/datatypes/consent/consent-preferences.schema.json)。
