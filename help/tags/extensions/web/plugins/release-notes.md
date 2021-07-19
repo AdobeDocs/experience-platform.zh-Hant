@@ -1,14 +1,22 @@
 ---
 title: 常見Analytics外掛程式擴充功能的發行說明
 description: Adobe Experience Platform中常見Analytics外掛程式標籤擴充功能的最新發行說明。
-source-git-commit: 5f810ada57eeb12a56de603d974a091b888dc9d2
+source-git-commit: cce218d984bae92428c7d48aefcd0f57dab837ea
 workflow-type: tm+mt
-source-wordcount: '297'
-ht-degree: 58%
+source-wordcount: '314'
+ht-degree: 57%
 
 ---
 
 # 常見Analytics外掛程式發行說明
+
+## 2021 年 6 月 23 日
+
+### 常見 Analytics 外掛程式擴充功能 3.0.6
+
+#### 錯誤修正
+
+* 修正使用特殊字元時getPercentPageViewed會中斷的問題
 
 ## 2021 年 5 月 20 日
 
