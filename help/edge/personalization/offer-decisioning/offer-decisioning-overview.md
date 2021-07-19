@@ -3,9 +3,9 @@ title: 搭配Platform Web SDK使用Offer decisioning
 description: Adobe Experience Platform Web SDK可提供及呈現以Offer decisioning管理的個人化優惠方案。 您可以使用Offer decisioningUI或API來建立選件和其他相關物件。
 keywords: offer decisioning；決策；Web SDK;Platform Web SDK；個人化優惠方案；傳送優惠方案；優惠方案傳送；優惠方案個人化；
 exl-id: 4ab51f9d-3c44-4855-b900-aa2cde673a9a
-source-git-commit: 6b3548e2db596d56aeacec8f2d5cdd29ddc09bf2
+source-git-commit: 12c3f440319046491054b3ef3ec404798bb61f06
 workflow-type: tm+mt
-source-wordcount: '828'
+source-wordcount: '779'
 ht-degree: 3%
 
 ---
@@ -65,7 +65,7 @@ Adobe Experience Platform [!DNL Web SDK]可傳送及呈現以Offer decisioning�
 
    ![offer-decisioning-edge-config](./assets/offer-decisioning-edge-config.png)
 
-1. 請依照[安裝SDK](../../fundamentals/installing-the-sdk.md)的指示操作(SDK可獨立安裝，或透過[Adobe Experience Platform Launch](http://launch.adobe.com/)安裝。 以下是Platform launch[快速入門手冊](https://experienceleague.adobe.com/docs/launch/using/intro/get-started/quick-start.html))。
+1. 請依照[安裝SDK](../../fundamentals/installing-the-sdk.md)的指示操作(SDK可獨立安裝，或透過[Adobe Experience Platform Launch](http://launch.adobe.com/)安裝。 以下是Platform launch[快速入門手冊](../../../tags/quick-start/quick-start.md))。
 1. [配置](../../fundamentals/configuring-the-sdk.md) SDK以Offer decisioning。以下提供其他Offer decisioning特定步驟。
 
    * 獨立安裝的SDK
@@ -83,26 +83,26 @@ Adobe Experience Platform [!DNL Web SDK]可傳送及呈現以Offer decisioning�
          ```
    * platform launch已安裝SDK
 
-      1. [建立Platform launch屬性](https://experienceleague.adobe.com/docs/launch/using/reference/admin/companies-and-properties.html)
+      1. [建立Platform launch屬性](../../../tags/ui/administration/companies-and-properties.md)
       1. [新增Platform launch內嵌程式碼](https://experienceleague.adobe.com/docs/core-services-learn/implementing-in-websites-with-launch/configure-launch/launch-add-embed.html)
-      1. 從「Datastream」下拉式清單中選取設定，使用您剛建立的Datastream安裝及設定Platform Web SDK擴充功能。 請參閱[擴充功能](https://experienceleague.adobe.com/docs/launch/using/reference/manage-resources/extensions/overview.html)上的檔案。
+      1. 從「Datastream」下拉式清單中選取設定，使用您剛建立的Datastream安裝及設定Platform Web SDK擴充功能。 請參閱[擴充功能](../../../tags/ui/managing-resources/extensions/overview.md)上的檔案。
 
          ![install-aep-web-sdk-extension](./assets/install-aep-web-sdk-extension.png)
 
          ![configure-aep-web-sdk-extension](./assets/configure-aep-web-sdk-extension.png)
 
-      1. 建立必要的[資料元素](https://experienceleague.adobe.com/docs/launch/using/reference/manage-resources/data-elements.html)。 您至少必須建立Platform Web SDK身分對應和Platform Web SDK XDM物件資料元素。
+      1. 建立必要的[資料元素](../../../tags/ui/managing-resources/data-elements.md)。 您至少必須建立Platform Web SDK身分對應和Platform Web SDK XDM物件資料元素。
 
          ![identity-map-data-element](./assets/identity-map-data-element.png)
 
          ![xdm-object-data-element](./assets/xdm-object-data-element.png)
 
-      1. 建立[規則](https://experienceleague.adobe.com/docs/launch/using/reference/manage-resources/rules.html)。
+      1. 建立[規則](../../../tags/ui/managing-resources/rules.md)。
 
          * 新增Platform Web SDK傳送事件動作，並將相關的`decisionScopes`新增至該動作的設定
 
             ![send-event-action-decisionScopes](./assets/send-event-action-decisionScopes.png)
-      1. [建立並發佈包含](https://experienceleague.adobe.com/docs/launch/using/reference/publish/libraries.html) 您已設定之所有相關規則、資料元素和擴充功能的程式庫
+      1. [建立並發佈包含](../../../tags/ui/publishing/libraries.md) 您已設定之所有相關規則、資料元素和擴充功能的程式庫
 
 
 
