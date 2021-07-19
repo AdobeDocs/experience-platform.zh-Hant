@@ -5,10 +5,10 @@ title: 地理資料類型
 topic-legacy: overview
 description: 本檔案概述Geo XDM資料類型。
 exl-id: d0eef943-ef86-4abd-8a51-dc45f2ed782d
-source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
+source-git-commit: 12c3f440319046491054b3ef3ec404798bb61f06
 workflow-type: tm+mt
-source-wordcount: '200'
-ht-degree: 6%
+source-wordcount: '202'
+ht-degree: 5%
 
 ---
 
@@ -33,5 +33,5 @@ ht-degree: 6%
 
 如需資料類型的詳細資訊，請參閱公用XDM存放庫：
 
-* [填入範例](https://github.com/adobe/xdm/blob/master/components/datatypes/geo.example.1.json)
-* [完整結構](https://github.com/adobe/xdm/blob/master/components/datatypes/geo.schema.json)
+* [填入範例](https://github.com/adobe/xdm/blob/master/components/datatypes/demographic/geo.example.1.json)
+* [完整結構](https://github.com/adobe/xdm/blob/master/components/datatypes/demographic/geo.schema.json)
