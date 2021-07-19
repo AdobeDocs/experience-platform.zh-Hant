@@ -1,9 +1,9 @@
 ---
 title: 標籤Satellite物件參考
 description: 了解用戶端_satellite物件，以及您可在Adobe Experience Platform中執行的各種函式。
-source-git-commit: 39d9468e5d512c75c9d540fa5d2bcba4967e2881
+source-git-commit: 12c3f440319046491054b3ef3ec404798bb61f06
 workflow-type: tm+mt
-source-wordcount: '1131'
+source-wordcount: '1123'
 ht-degree: 48%
 
 ---
@@ -86,7 +86,7 @@ _satellite.getVisitorId() => Object
 var visitorIdInstance = _satellite.getVisitorId();
 ```
 
-[!DNL Adobe Experience Cloud ID] 如果此擴充功能已安裝在屬性上，則此方法會傳回 Visitor ID 例項。如需詳細資訊，請參閱 [Experience Cloud ID 服務文件](https://forums.adobe.com/external-link.jspa?url=https%3A%2F%2Fmarketing.adobe.com%2Fresources%2Fhelp%2Fen_US%2Fmcvid%2F)。
+[!DNL Adobe Experience Cloud ID] 如果此擴充功能已安裝在屬性上，則此方法會傳回 Visitor ID 例項。如需詳細資訊，請參閱 [Experience Cloud ID 服務文件](https://experienceleague.adobe.com/docs/id-service/using/home.html?lang=zh-Hant)。
 
 ## `logger`
 
