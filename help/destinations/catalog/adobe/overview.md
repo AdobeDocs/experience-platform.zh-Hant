@@ -1,44 +1,44 @@
 ---
-keywords: 目的地；體驗雲解決方案；目標；目標；廣告雲；廣告雲；觀眾經理；adobe目標；目標；觀眾管理者目標；
-title: Adobe目標概觀
-description: 將Platform中的資料連結至其他Adobe Experience Cloud解決方案，以利廣告鎖定、個人化、行銷自動化等，以管理客戶體驗
-translation-type: tm+mt
-source-git-commit: 48c5f6d6a45de5f7982543f7a43cb4ece8cf3a9f
+keywords: 目的地；experience cloud解決方案；目標；目標目的地；廣告雲端；advertising cloud;audience manager;adobe target目的地；目標；audience manager目的地；
+title: Adobe目的地概觀
+description: 將您在Platform中的資料連結至其他Adobe Experience Cloud解決方案，以進行廣告鎖定、個人化、行銷自動化等作業，借此管理客戶體驗
+exl-id: 15a22a93-b4d6-4b94-bc6c-3634920c7689
+source-git-commit: d42756bcfaa4c420362e60672b097ae667a8782b
 workflow-type: tm+mt
-source-wordcount: '220'
+source-wordcount: '223'
 ht-degree: 12%
 
 ---
 
+# Adobe目的地概觀 {#adobe-destinations}
 
-# Adobe目標概觀{#adobe-destinations}
-
-將Adobe Experience Platform中的資料連結至其他Adobe Experience Cloud解決方案，以利廣告鎖定、個人化、行銷自動化等，以管理客戶體驗。
+將您在Adobe Experience Platform中的資料連結至其他Adobe Experience Cloud解決方案，以利進行廣告鎖定目標、個人化、行銷自動化等作業，借此管理客戶體驗。
 
 ## 連線
 
-要瞭解連接和擴展之間的差異，請參閱「目標類型和類別」頁中的[連接](../../destination-types.md#connections)。
+若要了解連線和擴充功能之間的差異，請參閱目標類型和類別頁面中的[連線](../../destination-types.md#connections)。
 
 - [Adobe Campaign連線](../email-marketing/adobe-campaign.md)
+- [Marketo Engage連線](/help/destinations/catalog/adobe/marketo-engage.md)
 
 ## 擴充功能
 
-要瞭解連接和擴展之間的差異，請參閱「目標類型和類別」頁中的[擴展](../../destination-types.md#extensions)。
+若要了解連線和擴充功能之間的差異，請參閱目標類型和類別頁面中的[擴充功能](../../destination-types.md#extensions)。
 
 - [Adobe Advertising Cloud擴充功能](../advertising/adobe-advertising-cloud.md)
 - [Adobe Analytics 擴充功能](../analytics/adobe-analytics.md)
-- [Adobe Livefyre擴充功能](../social/adobe-livefyre.md)
+- [AdobeLivefyre擴充功能](../social/adobe-livefyre.md)
 - [Adobe Media Analytics for Audio and Video 擴充功能](../analytics/adobe-video-analytics.md)
 - [Adobe Target 擴充功能](../personalization/adobe-target.md)
 - [Adobe Target v2 擴充功能](../personalization/adobe-target-v2.md)
-- [Audience Manager DIL擴充功能](../data-management/aam-dil-extension.md)
+- [Audience ManagerDIL擴充功能](../data-management/aam-dil-extension.md)
 - [Experience Cloud ID 服務擴充功能](../personalization/adobe-ecid.md)
-- [Marketo延伸功能](../email/marketo.md)
+- [Marketo擴充功能](../email/marketo.md)
 - [Marketo Munchkin 擴充功能](../email/marketo-munchkin.md)
 - [Marketo Web Personalization擴充功能](../personalization/marketo-web-personalization.md)
 
-## 體驗平台區隔分享
+## Experience Platform區段共用
 
-使用Experience Platform區段共用功能，將您的Experience Platform區段共用至其他Adobe目的地。 請參閱以下頁面以取得詳細資訊（在Audience Manager檔案入口網站中開啟）:
+使用Experience Platform區段共用功能，將您的Experience Platform區段共用至其他Adobe目的地。 如需詳細資訊，請參閱下列頁面(在Audience Manager檔案入口網站中開啟):
 
-- [透過核心服務整合，與Adobe Audience Manager、Adobe Advertising Cloud和Adobe Target分享Experience Platform細分](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html)
+- [Experience Platform區段透過核心服務整合與Adobe Audience Manager、Adobe Advertising Cloud和Adobe Target共用](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html)
