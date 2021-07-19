@@ -3,9 +3,9 @@ title: 安裝Adobe Experience Platform Web SDK
 description: 了解如何安裝Experience PlatformWeb SDK。
 keywords: 網頁sdk安裝；安裝網頁sdk;internet explorer;Promise;npm套件
 exl-id: b1de7ca1-d0d2-4661-a273-a1acf29afcd5
-source-git-commit: fccad34ad4ad028c7b34356dec7bb34892396317
+source-git-commit: 12c3f440319046491054b3ef3ec404798bb61f06
 workflow-type: tm+mt
-source-wordcount: '937'
+source-wordcount: '928'
 ht-degree: 2%
 
 ---
@@ -20,7 +20,7 @@ ht-degree: 2%
 
 ## 選項1:安裝Adobe Experience Platform Launch擴充功能
 
-如需Adobe Experience Platform Launch擴充功能的檔案，請參閱[launch檔案](https://experienceleague.adobe.com/docs/launch/using/extensions-ref/adobe-extension/aep-extension/overview.html)
+如需Adobe Experience Platform Launch擴充功能的檔案，請參閱[launch檔案](../../tags/extensions/web/sdk/overview.md)
 
 ## 選項2:安裝預先建置的獨立版本
 
@@ -35,7 +35,7 @@ URL結構：https://cdn1.adoberesources.net/alloy/[VERSION]/alloy.min.js或alloy
 * 未縮制：[https://cdn1.adoberesources.net/alloy/2.5.0/alloy.js](https://cdn1.adoberesources.net/alloy/2.5.0/alloy.js)
 
 
-### 新增程式碼{#adding-the-code}
+### 新增程式碼 {#adding-the-code}
 
 預先建立的獨立版本需要直接新增至頁面的「基本程式碼」。 盡可能將下列「基本程式碼」複製並貼到HTML的`<head>`標籤中高處：
 
@@ -93,7 +93,7 @@ URL結構：https://cdn1.adoberesources.net/alloy/[VERSION]/alloy.min.js或alloy
 >
 >如果您選擇載入不同的Promise實作，請確定其支援`Promise.prototype.finally`。
 
-### 同步載入JavaScript檔案{#loading-javascript-synchronously}
+### 同步載入JavaScript檔案 {#loading-javascript-synchronously}
 
 如[新增程式碼](#adding-the-code)一節中所述，您複製並貼上至網站HTML的基本程式碼會載入外部檔案。 外部檔案包含SDK的核心功能。 在此檔案載入時，您嘗試執行的任何命令都會排入佇列，然後在檔案載入後處理。 非同步載入檔案是最高效能的安裝方法。
 
