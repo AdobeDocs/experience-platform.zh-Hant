@@ -1,10 +1,10 @@
 ---
 title: Adobe Target v2擴充功能發行說明
 description: Adobe Experience Platform中Adobe Target v2標籤擴充功能的最新發行說明。
-source-git-commit: 573c13f5136a4efc3accf2838783a91ea914e949
+source-git-commit: 12c3f440319046491054b3ef3ec404798bb61f06
 workflow-type: tm+mt
-source-wordcount: '452'
-ht-degree: 53%
+source-wordcount: '438'
+ht-degree: 55%
 
 ---
 
@@ -24,7 +24,7 @@ ht-degree: 53%
 
 ### Adobe Target v2 擴充功能 0.14 版
 
-- 新增具有[裝置上決策](https://experienceleague.adobe.com/docs/launch/using/extensions-ref/adobe-extension/targetv2-extension/adobe-target-extension-v2.html?lang=en#load-target-with-on-device-decisioning)的新動作「載入Target」，其可載入at.js 2.5與裝置上決策功能
+- 新增具有[裝置上決策](./overview.md#load-target-with-on-device-decisioning)的新動作「載入Target」，其可載入at.js 2.5與裝置上決策功能
 - 將at.js更新至2.5
 
 
