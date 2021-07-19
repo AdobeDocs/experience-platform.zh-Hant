@@ -1,10 +1,10 @@
 ---
 title: 事件轉送快速入門
 description: 請依照此逐步教學課程，開始使用Adobe Experience Platform中的事件轉送。
-source-git-commit: 1d3415146335d3011963c969d5b6aeea1f1a51d0
+source-git-commit: 12c3f440319046491054b3ef3ec404798bb61f06
 workflow-type: tm+mt
-source-wordcount: '915'
-ht-degree: 28%
+source-wordcount: '906'
+ht-degree: 27%
 
 ---
 
@@ -109,7 +109,7 @@ ht-degree: 28%
 
 1. 選取邊緣網域。
 
-如需更多組態選項，請參閱 [Web SDK 擴充功能文件](https://experienceleague.adobe.com/docs/launch/using/extensions-ref/adobe-extension/aep-extension/overview.html?lang=zh-Hant)。
+如需更多組態選項，請參閱 [Web SDK 擴充功能文件](../../extensions/web/sdk/overview.md)。
 
 ## 建立標籤規則以將資料傳送至Platform Web SDK
 
