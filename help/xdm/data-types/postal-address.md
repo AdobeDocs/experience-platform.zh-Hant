@@ -5,9 +5,9 @@ title: 郵遞區號資料類型
 topic-legacy: overview
 description: 本檔案概述「郵遞區號」XDM資料類型。
 exl-id: 94457fe5-80bc-4822-9f6c-48f77d56c89b
-source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
+source-git-commit: 12c3f440319046491054b3ef3ec404798bb61f06
 workflow-type: tm+mt
-source-wordcount: '339'
+source-wordcount: '341'
 ht-degree: 1%
 
 ---
@@ -44,5 +44,5 @@ ht-degree: 1%
 
 如需郵遞區號資料類型的詳細資訊，請參閱公用XDM存放庫：
 
-* [填入範例](https://github.com/adobe/xdm/blob/master/components/datatypes/address.example.1.json)
-* [完整結構](https://github.com/adobe/xdm/blob/master/components/datatypes/address.schema.json)
+* [填入範例](https://github.com/adobe/xdm/blob/master/components/datatypes/demographic/address.example.1.json)
+* [完整結構](https://github.com/adobe/xdm/blob/master/components/datatypes/demographic/address.schema.json)
