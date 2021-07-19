@@ -1,9 +1,9 @@
 ---
 title: 核心擴充功能發行說明
 description: Adobe Experience Platform核心擴充功能的最新發行說明。
-source-git-commit: 5f810ada57eeb12a56de603d974a091b888dc9d2
+source-git-commit: 12c3f440319046491054b3ef3ec404798bb61f06
 workflow-type: tm+mt
-source-wordcount: '1219'
+source-wordcount: '1211'
 ht-degree: 74%
 
 ---
@@ -103,7 +103,7 @@ v1.6.2
 
 v1.6.1
 
-* **支援 CSP Nonce** - 核心擴充功能現起提供選用的設定參數。您可以新增參照 Nonce 的資料元素。如果已設定，標籤新增至頁面的所有內嵌指令碼都會使用您所設定的Nonce。 這項變更可支援使用具備 Nonce 的內容安全性原則，即使是 CSP 環境也仍能載入 Platform Launch 指令碼。您可以在[這裡](https://experienceleague.adobe.com/docs/launch/using/reference/client-side-info/content-security-policy.html)閱讀更多有關搭配使用 Platform Launch 和 CSP 的資訊。
+* **支援 CSP Nonce** - 核心擴充功能現起提供選用的設定參數。您可以新增參照 Nonce 的資料元素。如果已設定，標籤新增至頁面的所有內嵌指令碼都會使用您所設定的Nonce。 這項變更可支援使用具備 Nonce 的內容安全性原則，即使是 CSP 環境也仍能載入 Platform Launch 指令碼。您可以在[這裡](../../../ui/client-side/content-security-policy.md)閱讀更多有關搭配使用 Platform Launch 和 CSP 的資訊。
 
 ## 2019 年 6 月 18 日
 
