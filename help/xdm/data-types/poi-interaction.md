@@ -5,9 +5,9 @@ title: 興趣點互動資料類型
 topic-legacy: overview
 description: 本檔案概述興趣點互動XDM資料類型。
 exl-id: 398f56d9-1802-458d-b565-4096beb5b014
-source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
+source-git-commit: 12c3f440319046491054b3ef3ec404798bb61f06
 workflow-type: tm+mt
-source-wordcount: '186'
+source-wordcount: '188'
 ht-degree: 3%
 
 ---
@@ -28,5 +28,5 @@ ht-degree: 3%
 
 如需資料類型的詳細資訊，請參閱公用XDM存放庫：
 
-* [填入範例](https://github.com/adobe/xdm/blob/master/components/datatypes/poi-interaction.example.1.json)
-* [完整結構](https://github.com/adobe/xdm/blob/master/components/datatypes/poi-interaction.schema.json)
+* [填入範例](https://github.com/adobe/xdm/blob/master/components/datatypes/deprecated/poi-interaction.example.1.json)
+* [完整結構](https://github.com/adobe/xdm/blob/master/components/datatypes/deprecated/poi-interaction.schema.json)
