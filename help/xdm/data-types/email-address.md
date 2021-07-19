@@ -5,9 +5,9 @@ title: 電子郵件地址資料類型
 topic-legacy: overview
 description: 本檔案概述「電子郵件地址XDM」資料類型。
 exl-id: 1364df42-f89f-4f48-bcda-5332f3828326
-source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
+source-git-commit: 12c3f440319046491054b3ef3ec404798bb61f06
 workflow-type: tm+mt
-source-wordcount: '190'
+source-wordcount: '192'
 ht-degree: 2%
 
 ---
@@ -32,5 +32,5 @@ ht-degree: 2%
 
 如需電子郵件地址資料類型的詳細資訊，請參閱公用XDM存放庫：
 
-* [填入範例](https://github.com/adobe/xdm/blob/master/components/datatypes/emailaddress.example.1.json)
-* [完整結構](https://github.com/adobe/xdm/blob/master/components/datatypes/emailaddress.schema.json)
+* [填入範例](https://github.com/adobe/xdm/blob/master/components/datatypes/demographic/emailaddress.example.1.json)
+* [完整結構](https://github.com/adobe/xdm/blob/master/components/datatypes/demographic/emailaddress.schema.json)
