@@ -5,9 +5,9 @@ title: 信標資料類型
 topic-legacy: overview
 description: 本檔案概述XDM個別設定檔類別。
 exl-id: a3767c8d-a009-49b4-81a4-b084b6e5101a
-source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
+source-git-commit: 12c3f440319046491054b3ef3ec404798bb61f06
 workflow-type: tm+mt
-source-wordcount: '251'
+source-wordcount: '253'
 ht-degree: 4%
 
 ---
@@ -29,8 +29,8 @@ ht-degree: 4%
 
 如需資料類型的詳細資訊，請參閱公用XDM存放庫：
 
-* [填入範例](https://github.com/adobe/xdm/blob/master/components/datatypes/beacon-interaction-details.example.1.json)
-* [完整結構](https://github.com/adobe/xdm/blob/master/components/datatypes/beacon-interaction-details.schema.json)
+* [填入範例](https://github.com/adobe/xdm/blob/master/components/datatypes/deprecated/beacon-interaction-details.example.1.json)
+* [完整結構](https://github.com/adobe/xdm/blob/master/components/datatypes/deprecated/beacon-interaction-details.schema.json)
 
 ## 附錄
 
