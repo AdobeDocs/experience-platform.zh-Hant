@@ -1,9 +1,9 @@
 ---
 title: Adobe Analytics Product String擴充功能概述
 description: 了解Adobe Experience Platform中的Adobe Analytics Product String標籤擴充功能。
-source-git-commit: 8dfb7bdc16d0654ee1d76dc5f5af50938b122d33
+source-git-commit: 12c3f440319046491054b3ef3ec404798bb61f06
 workflow-type: tm+mt
-source-wordcount: '533'
+source-wordcount: '524'
 ht-degree: 84%
 
 ---
@@ -93,4 +93,4 @@ digitalData.transaction.item.productInfo.productName
 ### 需求
 
 * 變數的物件[資料層](https://theblog.adobe.com/data-layers-buzzword-best-practice/)需具有適用於所有產品相關資料 (例如產品 ID、數量、價格)。此擴充功能不適用於陣列資料層。
-* 需先安裝 [Adobe Analytics](https://experienceleague.adobe.com/docs/launch/using/extensions-ref/adobe-extension/analytics-extension/overview.html?lang=zh-Hant) 擴充功能。
+* 需先安裝 [Adobe Analytics](../analytics/overview.md) 擴充功能。
