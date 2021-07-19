@@ -4,9 +4,9 @@ title: 同意和首選項架構欄位組
 topic-legacy: overview
 description: 本文檔概述了「同意」和「首選項」架構欄位組。
 exl-id: ec592102-a9d3-4cac-8b94-58296a138573
-source-git-commit: bd312024a1a3fb6da840a38d6e9d19fcbd6eab5a
+source-git-commit: 12c3f440319046491054b3ef3ec404798bb61f06
 workflow-type: tm+mt
-source-wordcount: '2316'
+source-wordcount: '2317'
 ht-degree: 2%
 
 ---
@@ -401,4 +401,4 @@ ht-degree: 2%
 
 ### 完整[!UICONTROL 同意和偏好設定]架構 {#full-schema}
 
-若要檢視[!UICONTROL 同意和偏好設定]欄位群組的完整架構，請參閱[官方XDM存放庫](https://github.com/adobe/xdm/blob/master/components/datatypes/consent-preferences.schema.json)。
+若要檢視[!UICONTROL 同意和偏好設定]欄位群組的完整架構，請參閱[官方XDM存放庫](https://github.com/adobe/xdm/blob/master/components/datatypes/consent/consent-preferences.schema.json)。
