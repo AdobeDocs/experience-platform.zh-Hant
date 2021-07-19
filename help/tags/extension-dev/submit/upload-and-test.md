@@ -1,7 +1,7 @@
 ---
 title: 上傳並實作擴充功能的端對端測試
 description: 了解如何在Adobe Experience Platform中驗證、上傳和測試您的擴充功能。
-source-git-commit: 39d9468e5d512c75c9d540fa5d2bcba4967e2881
+source-git-commit: 12c3f440319046491054b3ef3ec404798bb61f06
 workflow-type: tm+mt
 source-wordcount: '2391'
 ht-degree: 33%
@@ -228,9 +228,3 @@ npx @adobe/reactor-uploader
 1. 修改資源 — 如果任何擴充功能元件的設定已變更，您需要在資料收集UI中更新這些資源。
 1. 將您的最新變更新增至程式庫，然後重新建置.
 1. 完成另一輪測試。
-
-<!--
-## Document {#document}
-
-Your [exchange listing](./create-listing.md) is a great place for marketing and support information for your extension, but our tags [Help Docs](https://experienceleague.adobe.com/docs/launch/using/overview.html) are used every day by our customers. We encourage you to submit a pull request to [add your extension documentation](https://github.com/AdobeDocs/launch.en/blob/master/help/extension-reference/3rd-party-extensions.md) into the tags user docs. Open source docs for the win! 🚀
--->
