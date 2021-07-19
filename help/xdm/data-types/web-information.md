@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Web資訊資料類型
 topic-legacy: overview
 description: 本檔案概述Experience Data Model(XDM)資料類型的網頁資訊。
-source-git-commit: b22dce52563d5f3bbd1796c11d7c7b2a49fa6d5f
+source-git-commit: 12c3f440319046491054b3ef3ec404798bb61f06
 workflow-type: tm+mt
-source-wordcount: '192'
+source-wordcount: '190'
 ht-degree: 3%
 
 ---
@@ -27,5 +27,5 @@ ht-degree: 3%
 
 如需資料類型的詳細資訊，請參閱公用XDM存放庫：
 
-* [填入範例](https://github.com/adobe/xdm/blob/master/components/datatypes/web/webinfo.example.1.json)
-* [完整結構](https://github.com/adobe/xdm/blob/master/components/datatypes/web/webinfo.schema.json)
+* [填入範例](https://github.com/adobe/xdm/blob/master/components/datatypes/webinfo.example.1.json)
+* [完整結構](https://github.com/adobe/xdm/blob/master/components/datatypes/webinfo.schema.json)
