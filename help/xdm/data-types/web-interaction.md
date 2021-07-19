@@ -5,7 +5,7 @@ title: Web交互資料類型
 topic-legacy: overview
 description: 本檔案概略介紹Web互動Experience Data Model(XDM)資料類型。
 exl-id: 772d96c5-9fa3-4fed-8b38-16b8e7101743
-source-git-commit: e31f92146deade8132965667e7d09e01f627be7a
+source-git-commit: 12c3f440319046491054b3ef3ec404798bb61f06
 workflow-type: tm+mt
 source-wordcount: '190'
 ht-degree: 4%
@@ -29,5 +29,5 @@ ht-degree: 4%
 
 如需資料類型的詳細資訊，請參閱公用XDM存放庫：
 
-* [填入範例](https://github.com/adobe/xdm/blob/master/components/datatypes/web/webinteraction.example.1.json)
-* [完整結構](https://github.com/adobe/xdm/blob/master/components/datatypes/web/webinteraction.schema.json)
+* [填入範例](https://github.com/adobe/xdm/blob/master/components/datatypes/deprecated/webinteraction.example.1.json)
+* [完整結構](https://github.com/adobe/xdm/blob/master/components/datatypes/deprecated/webinteraction.schema.json)
