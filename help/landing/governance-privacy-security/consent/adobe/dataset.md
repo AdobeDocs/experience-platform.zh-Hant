@@ -5,9 +5,9 @@ title: 設定資料集以擷取同意和偏好設定資料
 topic-legacy: getting started
 description: 了解如何設定Experience Data Model(XDM)結構和資料集，以在Adobe Experience Platform中擷取同意和偏好設定資料。
 exl-id: 61ceaa2a-c5ac-43f5-b118-502bdc432234
-source-git-commit: ff793c207a181ca6d2486e7fd6ef5c4f57744fba
+source-git-commit: da7696d288543abd21ff8a1402e81dcea32efbc2
 workflow-type: tm+mt
-source-wordcount: '1482'
+source-wordcount: '1480'
 ht-degree: 0%
 
 ---
@@ -116,7 +116,7 @@ ht-degree: 0%
 
 ![](../../../images/governance-privacy-security/consent/adobe/dataset-prep/save-schema.png)
 
-如果您在Platform Web SDK邊緣設定中指定的[!UICONTROL 設定檔資料集]使用您編輯的結構，該資料集現在會包含新的同意欄位。 您現在可以返回[同意處理指南](./overview.md#merge-policies)，繼續設定Experience Platform以處理同意資料的程式。
+如果您在Platform Web SDK資料流中指定的[!UICONTROL 設定檔資料集]使用您編輯的結構，該資料集現在會包含新的同意欄位。 您現在可以返回[同意處理指南](./overview.md#merge-policies)，繼續設定Experience Platform以處理同意資料的程式。
 
 如果您尚未為此結構建立資料集，請依照下一節中的步驟操作。
 
@@ -150,7 +150,7 @@ ht-degree: 0%
 
 ![](../../../images/governance-privacy-security/consent/adobe/dataset-prep/enable-dataset.png)
 
-資料集現在已儲存並啟用，以用於[!DNL Profile]。 如果您打算使用Platform Web SDK將同意資料傳送至設定檔，在設定[邊緣設定](../../../../edge/fundamentals/datastreams.md)時，必須將此資料集選取為[!UICONTROL 設定檔資料集]。
+資料集現在已儲存並啟用，以用於[!DNL Profile]。 如果您打算使用Platform Web SDK將同意資料傳送至設定檔，在設定[datastream](../../../../edge/fundamentals/datastreams.md)時，必須將此資料集選取為[!UICONTROL 設定檔資料集]。
 
 ## 後續步驟
 
