@@ -1,11 +1,11 @@
 ---
 title: 配置Experience PlatformWeb SDK的資料流
 description: '了解如何設定資料流。 '
-keywords: 設定；資料流；datastreamId;edge;edge;edge設定ID；環境設定；edgeConfigId；啟用身分；ID同步；ID同步容器ID；沙箱；串流入口；事件資料集；目標；用戶端代碼；屬性代號；目標環境ID;Cookie目的地；URL目的地；Analytics設定區塊報表套裝ID;
+keywords: 設定；資料流；datastreamId;edge；資料流ID；環境設定；edgeConfigId；啟用身分；ID同步；ID同步容器ID；沙箱；串流入口；事件資料集；目標；用戶端代碼；屬性代號；目標環境ID;Cookie目的地；URL目的地；Analytics設定區塊報表套裝ID;
 exl-id: 736c75cb-e290-474e-8c47-2a031f215a56
-source-git-commit: 12c3f440319046491054b3ef3ec404798bb61f06
+source-git-commit: da7696d288543abd21ff8a1402e81dcea32efbc2
 workflow-type: tm+mt
-source-wordcount: '896'
+source-wordcount: '895'
 ht-degree: 0%
 
 ---
