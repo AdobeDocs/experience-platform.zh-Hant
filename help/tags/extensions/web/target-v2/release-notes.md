@@ -1,10 +1,10 @@
 ---
 title: Adobe Target v2擴充功能發行說明
 description: Adobe Experience Platform中Adobe Target v2標籤擴充功能的最新發行說明。
-source-git-commit: 12c3f440319046491054b3ef3ec404798bb61f06
+source-git-commit: ae6b69ecea54942c1bbf8a2765768bac50a8b930
 workflow-type: tm+mt
-source-wordcount: '438'
-ht-degree: 55%
+source-wordcount: '572'
+ht-degree: 44%
 
 ---
 
@@ -13,6 +13,30 @@ ht-degree: 55%
 >[!NOTE]
 >
 >Adobe Experience Platform Launch已重新命名為Experience Platform中的資料收集技術套件。 因此，產品檔案中已推出數個術語變更。 有關術語更改的綜合參考，請參閱以下[document](../../../term-updates.md)。
+
+## 2021 年 7 月 20 日
+
+### Adobe Target v2 擴充功能 0.15.1 版
+
+- 修正`stringify`函式名稱衝突，導致`sessionId`、`requestId`等產生錯誤UUID值的問題。
+
+## 2021 年 7 月 16 日
+
+### Adobe Target v2 擴充功能 0.15.0 版
+
+- 每當at.js設定secureOnly設為true時，將安全屬性新增至Cookie
+- 現在使用`triggerView()`時可使用回應Token
+- 修正`CONTENT_RENDERING_NO_OFFERS`事件的相關錯誤。 現在，只要沒有從Target傳回內容，就會正確觸發
+- 使用預先擷取請求時，可正確傳回A4T點按量度詳細資料
+- UUID產生不再使用`Math.random()`，而是仰賴`window.crypto`
+- `sessionId` 每個網路呼叫的Cookie過期時間皆正確延長
+- SPA檢視快取初始化現在已正確處理，且會執行`viewsEnable`設定
+
+## 2021 年 6 月 2 日
+
+### Adobe Target v2 擴充功能 0.14.2 版
+
+- 修正最終Launch套件組合包含兩個at.js版本的錯誤，一個具有On-Device Decisioning，另一個沒有。
 
 ## 2021 年 5 月 19 日
 
