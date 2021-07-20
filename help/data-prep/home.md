@@ -1,47 +1,50 @@
 ---
-keywords: Experience Platform;home；熱門主題；map csv;map csv;map csv file;map csv file to xdm;map csv to xdm;ui guide;mapper;mapping;data preparation;data preparation；準備資料；
+keywords: Experience Platform；首頁；熱門主題；對應csv；對應csv檔案；對應csv檔案至xdm；將csv對應至xdm;ui指南；對應程式；資料準備；資料準備；準備資料；
 solution: Experience Platform
 title: 資料準備概述
 topic-legacy: overview
-description: 本檔案介紹Adobe Experience Platform的資料準備。
+description: 本檔案介紹Adobe Experience Platform中的資料準備。
 exl-id: f15eeb50-a531-4560-a524-1a670fbda706
-translation-type: tm+mt
-source-git-commit: daefd977cd09bd9cd7f8d6101b45be98f30d24ae
+source-git-commit: 764b8e8a120ab53e7d39202b47d7c6f0195193a2
 workflow-type: tm+mt
-source-wordcount: '437'
+source-wordcount: '492'
 ht-degree: 0%
 
 ---
 
 
-# 資料準備概觀
+# 資料準備概述
 
-資料準備可讓資料工程師將資料對應、轉換及驗證至Experience Data Model(XDM)。 「資料準備」會以「地圖」步驟顯示在「資料擷取」程式中，包括「CSV擷取」工作流程。 資料工程師可使用資料準備，在擷取期間執行下列資料操作：
+資料準備可讓資料工程師將資料對應、轉換及驗證至Experience Data Model(XDM)。 資料準備會在資料擷取程式（包括CSV擷取工作流程）中顯示為「對應」步驟。 資料工程師可以使用資料準備在擷取期間執行下列資料操作：
 
-- 定義簡單的直通映射，以將輸入屬性分配給XDM屬性
-- 建立計算欄位以執行可分配給XDM屬性的行內計算
-- 透過套用字串、數值或日期處理函式來轉換資料
-- 使用層次函式構造XDM層次
-- 在「資料準備」中處理資料時預覽資料
+- 定義簡單傳遞對應，以將輸入屬性指派給XDM屬性
+- 建立計算欄位以執行可指派給XDM屬性的列內計算
+- 套用字串、數值或日期操作函式來轉換資料
+- 使用階層函式建構XDM階層
+- 在資料準備中操作資料時預覽資料
 
-「資料準備」還應用多個內部資料驗證，以確保資料在接收時保持完整性。 如果可能，「資料準備」會自動將傳入的資料架構映射到XDM。 資料工程師可以變更、修正和刪除建議的映射，並視需要以映射取代它們。
+資料準備還應用多種內在資料驗證，以確保資料完整性在被擷取時得到維護。 如有可能，資料準備會自動將傳入的資料結構對應至XDM。 資料工程師可以更改、更正和刪除建議的映射，並根據需要用映射替換它們。
+
+>[!NOTE]
+>
+>除非產生的訊息是無效的XDM，否則資料準備中的任何轉換錯誤都會導致這些屬性設為`null`，而其餘的列將會擷取。 如果該列確實解析為無效的XDM，則會擷取該列&#x200B;**not**。 在這兩種情況下，都會記錄錯誤。
 
 ## 映射
 
-映射是輸入屬性或計算欄位與一個XDM屬性的關聯。 單一屬性可建立個別的映射，以映射至多個XDM屬性。
+映射是輸入屬性或計算欄位與一個XDM屬性的關聯。 單一屬性可透過建立個別對應來對應至多個XDM屬性。
 
-若要進一步瞭解不同的映射函式，請閱讀[映射函式指南](./functions.md)。
+要進一步了解不同的映射函式，請參閱[映射函式指南](./functions.md)。
 
 ## 映射集
 
-將一個模式轉換為另一個模式的映射集統稱為映射集。 每個資料流都會建立單一對應集。 映射集是資料流的一個組成部分，並作為資料流的一部分建立、編輯和監控。
+將一個架構轉換為另一個架構的一組映射統稱為映射集。 每個資料流都會建立單一對應集。 映射集是資料流的一個組成部分，並作為資料流的一部分被建立、編輯和監視。
 
-要進一步瞭解映射集，包括如何使用映射集中的欄位，請閱讀[映射集指南](./mapping-set.md)。 要瞭解如何建立映射集並使用與映射集相關的其他API調用，請閱讀[開發人員指南](./api/mapping-set.md)中的映射集部分。
+要了解有關映射集的詳細資訊，包括如何使用映射集中的欄位，請閱讀[映射集指南](./mapping-set.md)。 若要了解如何建立對應集並使用與對應集相關的其他API呼叫，請參閱[開發人員指南](./api/mapping-set.md)中的對應集一節。
 
 ## 資料格式處理
 
-「資料準備」可強穩地處理傳入Platform的不同格式資料。 若要進一步瞭解資料準備如何處理不同的資料類型，請閱讀[資料格式處理概述](./data-handling.md)。
+資料準備可穩健處理匯入Platform的不同格式資料。 要了解有關資料準備如何處理不同資料類型的詳細資訊，請閱讀[資料格式處理概述](./data-handling.md)。
 
 ## 後續步驟
 
-本文檔介紹了有關Adobe Experience Platform資料準備的基本知識。 若要進一步瞭解不同的映射函式，請閱讀[映射函式指南](./functions.md)。 若要進一步瞭解資料準備如何處理不同的資料類型，請閱讀[資料格式處理指南](./data-handling.md#dates)。 要瞭解如何使用資料準備API，請閱讀[資料準備開發人員指南](api/overview.md)。
+本檔案說明Adobe Experience Platform中資料準備的基本知識。 要進一步了解不同的映射函式，請參閱[映射函式指南](./functions.md)。 要了解有關資料準備如何處理不同資料類型的詳細資訊，請閱讀[資料格式處理指南](./data-handling.md#dates)。 若要了解如何使用資料準備API，請閱讀[資料準備開發人員指南](api/overview.md)。
