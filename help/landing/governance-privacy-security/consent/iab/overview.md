@@ -5,9 +5,9 @@ title: IAB TCF 2.0支援Experience Platform
 topic-legacy: privacy events
 description: 了解如何設定資料操作和結構，以在Adobe Experience Platform中的目的地啟用區段時傳達客戶同意選擇。
 exl-id: af787adf-b46e-43cf-84ac-dfb0bc274025
-source-git-commit: a3468d55d95b89c075abf91391bd7dfaa974742c
+source-git-commit: da7696d288543abd21ff8a1402e81dcea32efbc2
 workflow-type: tm+mt
-source-wordcount: '2564'
+source-wordcount: '2559'
 ht-degree: 1%
 
 ---
@@ -117,15 +117,15 @@ Platform可讓您透過下列程式收集客戶同意資料：
 
 **SDK不會與任何現成可用的CMP進行介面**。您可自行決定如何將SDK整合至您的網站、接聽CMP中的同意變更，並呼叫適當的命令。
 
-### 建立新的邊緣配置
+### 建立新資料流
 
-若要讓SDK將資料傳送至Experience Platform，您必須先在[!DNL Adobe Experience Platform Launch]中為Platform建立新的Edge設定。 [ SDK檔案](../../../../edge/fundamentals/datastreams.md)中提供如何建立新設定的特定步驟。
+若要讓SDK將資料傳送至Experience Platform，您必須先在[!DNL Adobe Experience Platform Launch]中為Platform建立新的資料流。 [ SDK檔案](../../../../edge/fundamentals/datastreams.md)中提供如何建立新設定的特定步驟。
 
 為設定提供唯一名稱后，請選取&#x200B;**[!UICONTROL Adobe Experience Platform]**&#x200B;旁的切換按鈕。 接下來，使用下列值來完成表單的其餘部分：
 
-| 邊緣配置欄位 | 值 |
+| 資料流欄位 | 值 |
 | --- | --- |
-| [!UICONTROL 沙箱] | 平台[sandbox](../../../../sandboxes/home.md)的名稱，其中包含設定Edge設定所需的串流連線和資料集。 |
+| [!UICONTROL 沙箱] | 平台[sandbox](../../../../sandboxes/home.md)的名稱，其中包含設定資料流所需的串流連線和資料集。 |
 | [!UICONTROL 串流入口] | 有效的串流連線，用於Experience Platform。 如果您沒有現有的串流入口，請參閱有關[建立串流連接](../../../../ingestion/tutorials/create-streaming-connection-ui.md)的教程。 |
 | [!UICONTROL 事件資料集] | 選取在[上一步驟](#datasets)中建立的[!DNL XDM ExperienceEvent]資料集。 如果您在此資料集的結構中包含[[!UICONTROL  IAB TCF 2.0同意]欄位群組](../../../../xdm/field-groups/event/iab.md)，則可使用[`sendEvent`](#sendEvent)命令追蹤隨時間變更的事件，將該資料儲存在此資料集中。 請記得，儲存在此資料集中的同意值是用於自動執行工作流程的&#x200B;**not**。 |
 | [!UICONTROL 設定檔資料集] | 選取在[上一步驟](#datasets)中建立的[!DNL XDM Individual Profile]資料集。 使用[`setConsent`](#setConsent)命令回應CMP同意變更鈎點時，收集的資料會儲存在此資料集中。 由於此資料集已啟用設定檔，因此儲存在此資料集中的同意值會在自動執行工作流程期間執行。 |
@@ -136,7 +136,7 @@ Platform可讓您透過下列程式收集客戶同意資料：
 
 ### 執行同意更改命令
 
-建立前一節所述的邊緣設定後，您就可以開始使用SDK命令將同意資料傳送至Platform。 以下各節提供如何在不同案例中使用各個SDK命令的範例。
+建立前一節所述的資料流後，您就可以開始使用SDK命令將同意資料傳送至Platform。 以下各節提供如何在不同案例中使用各個SDK命令的範例。
 
 >[!NOTE]
 >
