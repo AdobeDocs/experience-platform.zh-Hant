@@ -1,66 +1,65 @@
 ---
-keywords: Experience Platform; home；熱門主題；分段；分段；分段服務；邊緣分段；邊緣分段；流邊緣；
+keywords: Experience Platform；首頁；熱門主題；分段；分段；分段服務；邊緣分段；邊緣分段；串流邊緣；
 solution: Experience Platform
-title: '使用API進行邊緣區段 '
+title: '使用API進行邊緣劃分 '
 topic-legacy: developer guide
-description: 本檔案包含如何搭配Adobe Experience Platform分段服務API使用邊緣分段的範例。
+description: 本檔案包含如何搭配Adobe Experience Platform區段服務API使用邊緣區段的範例。
 exl-id: effce253-3d9b-43ab-b330-943fb196180f
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 3de00fb9ae5348b129a499cfd81d8db6dbac2d46
 workflow-type: tm+mt
-source-wordcount: '651'
-ht-degree: 3%
+source-wordcount: '616'
+ht-degree: 4%
 
 ---
 
-# 邊緣分段（測試版）
+# 邊緣區段（測試版）
 
 >[!NOTE]
 >
->下列檔案說明如何使用API執行邊緣分段。 如需使用UI執行邊緣分段的資訊，請閱讀[邊緣分段UI指南](../ui/edge-segmentation.md)。 此外，邊緣區段目前也在測試中。 文件和功能可能會有所變更。
+>下列檔案說明如何使用API執行邊緣分段。 如需使用UI執行邊緣分段的資訊，請參閱[邊緣分段UI指南](../ui/edge-segmentation.md)。 此外，邊緣區段目前仍在測試中。 文件和功能可能會有所變更。
 
-邊緣區段是指能夠即時評估Adobe Experience Platform邊緣區段的能力，讓相同的頁面和下一頁個人化使用案例。
+邊緣分段是即時評估Adobe Experience Platform中邊緣區段的功能，可啟用相同的頁面和下一頁個人化使用案例。
 
 ## 快速入門
 
-本開發人員指南需要對邊緣區隔相關的各種[!DNL Adobe Experience Platform]服務有良好的瞭解。 在開始本教學課程之前，請先閱讀下列服務的檔案：
+本開發人員指南需要妥善了解與邊緣細分相關的各種[!DNL Adobe Experience Platform]服務。 開始本教學課程之前，請先檢閱下列服務的檔案：
 
-- [[!DNL Real-time Customer Profile]](../../profile/home.md):根據來自多個來源的匯總資料，即時提供統一的消費者個人檔案。
-- [[!DNL Segmentation]](../home.md):提供從資料建立區段和觀眾的 [!DNL Real-time Customer Profile] 能力。
+- [[!DNL Real-time Customer Profile]](../../profile/home.md):根據來自多個來源的匯總資料，即時提供統一的消費者設定檔。
+- [[!DNL Segmentation]](../home.md):提供從資料建立區段和對象的 [!DNL Real-time Customer Profile] 功能。
 - [[!DNL Experience Data Model (XDM)]](../../xdm/home.md):組織客戶體驗資 [!DNL Platform] 料的標準化架構。
 
-為了成功呼叫[!DNL Data Prep] API端點，請閱讀[平台API](../../landing/api-guide.md)快速入門手冊，以瞭解必要標題以及如何讀取範例API呼叫。
+若要成功呼叫[!DNL Data Prep] API端點，請參閱[平台API快速入門手冊](../../landing/api-guide.md)，以了解所需標題及如何讀取範例API呼叫。
 
-## 邊緣分段查詢類型{#query-types}
+## 邊緣分段查詢類型 {#query-types}
 
-若要使用邊緣分段來評估區段，查詢必須符合下列准則：
+為了使用邊緣分段來評估區段，查詢必須符合下列准則：
 
 | 查詢類型 | 詳細資料 |
 | ---------- | ------- |
 | 傳入點擊 | 任何區段定義，是指沒有時間限制的單一傳入事件。 |
-| 參照描述檔的傳入點擊 | 任何區段定義，是指單一傳入事件（無時間限制）以及一或多個描述檔屬性。 |
-| 頻率查詢 | 任何區段定義，指發生至少特定次數之事件。 |
-| 參照描述檔的頻率查詢 | 任何區段定義，是指發生至少特定次數且具有一或多個描述檔屬性的事件。 |
+| 參照設定檔的傳入點擊 | 任何區段定義，是指沒有時間限制的單一傳入事件，以及一或多個設定檔屬性。 |
+| 頻率查詢 | 任何區段定義，是指至少發生特定次數之事件。 |
+| 參考設定檔的頻率查詢 | 任何區段定義，是指發生至少特定次數的事件，且具有一或多個設定檔屬性。 |
 
 {style=&quot;table-layout:auto&quot;}
 
-下列查詢類型為&#x200B;**not**，目前受邊緣分段支援：
+下列查詢類型是邊緣分段目前支援的&#x200B;**not**:
 
 | 查詢類型 | 詳細資料 |
 | ---------- | ------- |
-| 相對時間窗口 | 如果查詢引用時間窗口，則無法使用邊緣分割來評估該查詢。 |
+| 相對時間窗口 | 如果查詢引用時間視窗，則無法使用邊緣分段來評估。 |
 | 否定 | 如果查詢包含否定或`not`事件，則無法使用邊緣分段來評估。 |
 | 多個事件 | 如果查詢包含多個事件，則無法使用邊緣分段來評估。 |
 
 {style=&quot;table-layout:auto&quot;}
 
-## 擷取所有啟用邊緣區段的區段
+## 擷取為邊緣細分啟用的所有區段
 
-您可以向`/segment/definitions`端點提出GET請求，以擷取IMS組織內啟用邊緣分段的所有區段清單。
+您可以向`/segment/definitions`端點提出GET請求，以擷取IMS組織內已啟用邊緣分段的所有區段清單。
 
 **API格式**
 
-若要擷取啟用邊緣分段的區段，您必須在請求路徑中加入查詢參數`evaluationInfo.synchronous.enabled=true`。
+若要擷取已啟用邊緣分段功能的區段，您必須在請求路徑中加入查詢參數`evaluationInfo.synchronous.enabled=true`。
 
 ```http
 GET /segment/definitions?evaluationInfo.synchronous.enabled=true
@@ -79,7 +78,7 @@ curl -X GET \
 
 **回應**
 
-成功的回應會傳回IMS組織中已啟用邊緣分段的區段陣列。 有關返回的段定義的詳細資訊，請參閱[段定義端點指南](./segment-definitions.md)。
+成功的回應會傳回IMS組織中已啟用邊緣分段的區段陣列。 有關返回的段定義的詳細資訊，請參見[段定義終結點指南](./segment-definitions.md)。
 
 ```json
 {
@@ -166,9 +165,9 @@ curl -X GET \
 }
 ```
 
-## 建立已啟用邊緣區段的區段
+## 建立已啟用邊緣分段的區段
 
-您可以建立區段，並透過向`/segment/definitions`端點提出POST要求來啟用邊緣區段。 除了匹配上述](#query-types)所列的[邊緣分段查詢類型之外，您還必須將裝載中的`evaluationInfo.synchronous.enabled`標幟設為true。
+您可以向`/segment/definitions`端點提出符合上方所列[邊緣分段查詢類型之一的POST請求，以建立已啟用邊緣分段的區段。](#query-types)
 
 **API格式**
 
@@ -180,7 +179,7 @@ POST /segment/definitions
 
 >[!NOTE]
 >
->以下範例是建立區段的標準請求。 如需建立區段定義的詳細資訊，請閱讀有關建立區段[的教學課程。](../tutorials/create-a-segment.md)
+>以下範例是建立區段的標準請求。 如需建立區段定義的詳細資訊，請參閱關於[建立區段](../tutorials/create-a-segment.md)的教學課程。
 
 ```shell
 curl -X POST \
@@ -201,22 +200,13 @@ curl -X POST \
         "type": "PQL",
         "format": "pql/text",
         "value": "select var1 from xEvent where var1._experience.analytics.endUser.firstWeb.webPageDetails.isHomePage = true"
-    },
-    "evaluationInfo": {
-        "synchronous": {
-            "enabled": true
-        }
     }
 }'
 ```
 
-| 屬性 | 說明 |
-| -------- | ----------- |
-| `evaluationInfo.synchronous.enabled` | `evaluationInfo`物件會決定區段定義將要進行的評估類型。 若要使用邊緣分段，請設定`evaluationInfo.synchronous.enabled`值`true`。 |
-
 **回應**
 
-成功的回應會傳回新建立的區段定義的詳細資料，此定義可用於邊緣分段。
+成功的回應會傳回新建立的區段定義的詳細資訊，此定義已啟用邊緣分段功能。
 
 ```json
 {
@@ -258,6 +248,6 @@ curl -X POST \
 
 ## 後續步驟
 
-現在您知道如何建立啟用邊緣區段的區段，您可以使用這些區段來啟用相同頁面和下一頁的個人化使用案例。
+現在您知道如何建立啟用邊緣分段的區段，可以使用它們來啟用相同頁面和下一頁個人化的使用案例。
 
-若要瞭解如何使用Adobe Experience Platform使用者介面執行類似動作及使用區段，請造訪[區段產生器使用指南](../ui/segment-builder.md)。
+若要了解如何使用Adobe Experience Platform使用者介面執行類似動作及使用區段，請造訪[區段產生器使用指南](../ui/segment-builder.md)。
