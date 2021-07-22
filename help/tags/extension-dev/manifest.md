@@ -1,9 +1,9 @@
 ---
 title: 擴充功能資訊清單
 description: 了解如何設定JSON資訊清單檔案，通知Adobe Experience Platform如何正確使用您的擴充功能。
-source-git-commit: 39d9468e5d512c75c9d540fa5d2bcba4967e2881
+source-git-commit: 421d1d0660c4c9c7280974f8a812a8f0e4f7cbea
 workflow-type: tm+mt
-source-wordcount: '2647'
+source-wordcount: '2646'
 ht-degree: 75%
 
 ---
@@ -22,7 +22,7 @@ ht-degree: 75%
 
 | 屬性 | 說明 |
 | --- | --- |
-| `name` | 擴充功能的名稱。此名稱在所有其他 Reator 擴充功能間必須是唯一的，且必須符合[命名規則](#naming-rules)。**標籤會以此名稱作為識別碼，您發佈擴充功能後不應加以變更。** |
+| `name` | 擴充功能的名稱。此名稱在所有其他擴充功能中必須是唯一的，且必須符合[命名規則](#naming-rules)。 **標籤會以此名稱作為識別碼，您發佈擴充功能後不應加以變更。** |
 | `platform` | 擴充功能的平台。目前唯一接受的值是 `web`。 |
 | `version` | 擴充功能的版本。此版本必須依循 [semver](http://semver.org/) 版本設定格式。這與 [npm 版本欄位](https://docs.npmjs.com/files/package.json#version)一致。 |
 | `displayName` | 清楚易懂的擴充功能名稱。這會向Platform使用者顯示。 不需提及「標籤」或「擴充功能」；使用者已經知道他們在查看標籤擴充功能。 |
