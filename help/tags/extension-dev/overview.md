@@ -1,7 +1,7 @@
 ---
 title: 擴充功能開發概述
 description: 了解不同標籤擴充功能類型的主要元件，以及Adobe Experience Platform中的擴充功能開發程式。
-source-git-commit: 39d9468e5d512c75c9d540fa5d2bcba4967e2881
+source-git-commit: 421d1d0660c4c9c7280974f8a812a8f0e4f7cbea
 workflow-type: tm+mt
 source-wordcount: '1888'
 ht-degree: 67%
@@ -14,7 +14,7 @@ ht-degree: 67%
 >
 >Adobe Experience Platform Launch已重新命名為Experience Platform中的資料收集技術套件。 因此，產品檔案中已推出數個術語變更。 有關術語更改的綜合參考，請參閱以下[document](../term-updates.md)。
 
-Adobe Experience Platform的主要目標之一，是建立開放的生態系統，讓核心工程團隊以外的工程師能透過標籤公開其他功能。 這可透過 Reactor 擴充功能來完成。當使用者將擴充功能安裝在標籤屬性上後，該擴充功能的功能便可供屬性的所有使用者使用。
+Adobe Experience Platform的主要目標之一，是建立開放的生態系統，讓核心工程團隊以外的工程師能透過標籤公開其他功能。 這可透過標籤擴充功能來完成。 當使用者將擴充功能安裝在標籤屬性上後，該擴充功能的功能便可供屬性的所有使用者使用。
 
 本檔案概述不同擴充功能類型的主要元件，並提供進一步檔案的連結，以引導您進行擴充功能開發程式。
 
