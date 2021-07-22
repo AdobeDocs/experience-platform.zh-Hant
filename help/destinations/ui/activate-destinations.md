@@ -6,7 +6,7 @@ seo-title: 將設定檔和區段啟用至目的地
 description: 將區段對應至目的地，以啟動您在Adobe Experience Platform中的資料。 若要完成此操作，請遵循下列步驟。
 seo-description: 將區段對應至目的地，以啟動您在Adobe Experience Platform中的資料。 若要完成此操作，請遵循下列步驟。
 exl-id: c3792046-ffa8-4851-918f-98ced8b8a835
-source-git-commit: 0162ec101c820c4870dea0f2c2bc09523eca862a
+source-git-commit: a28dc64cfe7f352a023aa2a5bd1156307bbad39f
 workflow-type: tm+mt
 source-wordcount: '3054'
 ht-degree: 0%
@@ -169,7 +169,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->目前不支援針對已匯出的區段變更檔案匯出排程。 若要使用不同排程重新匯出區段，您必須建立新的目的地例項。 這是將在未來版本中解決的限制。
+>目前不支援針對已儲存的區段變更檔案匯出排程。 若要使用不同排程重新匯出區段，您必須建立新的目的地例項。 這是將在未來版本中解決的限制。
 
 ### 導出增量檔案 {#export-incremental-files}
 
@@ -215,7 +215,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->目前不支援針對已匯出的區段變更檔案匯出排程。 若要使用不同排程重新匯出區段，您必須建立新的目的地例項。 這是將在未來版本中解決的限制。
+>目前不支援針對已儲存的區段變更檔案匯出排程。 若要使用不同排程重新匯出區段，您必須建立新的目的地例項。 這是將在未來版本中解決的限制。
 
 ### 配置檔案名 {#file-names}
 
