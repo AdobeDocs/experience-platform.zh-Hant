@@ -4,14 +4,14 @@ title: 區段控制面板
 description: 'Adobe Experience Platform提供控制面板，供您檢視貴組織已建立區段的重要資訊。 '
 type: Documentation
 exl-id: de5e07bc-2c44-416e-99db-7607059117cb
-source-git-commit: 2791c32abe582d51d05d4bf0488ba82dfadfd053
+source-git-commit: 41ef7a6e6d3b0ee9afe762b19c8c286ceb361dbb
 workflow-type: tm+mt
-source-wordcount: '940'
+source-wordcount: '982'
 ht-degree: 0%
 
 ---
 
-# 區段控制面板{#segment-dashboard}
+# 區段控制面板 {#segment-dashboard}
 
 Adobe Experience Platform使用者介面(UI)提供控制面板，讓您透過控制面板檢視每日快照擷取之區段的重要資訊。 本指南概述如何存取和使用UI中的區段控制面板，並提供控制面板中所顯示視覺效果的詳細資訊。
 
@@ -39,9 +39,9 @@ Adobe Experience Platform使用者介面(UI)提供控制面板，讓您透過控
 
 ### 修改[!UICONTROL 區段]控制面板
 
-您可以選取&#x200B;**[!UICONTROL 修改控制面板]**，以修改[!UICONTROL 區段]控制面板的外觀。 這可讓您從控制面板移動、新增和移除介面工具集，以及存取[!UICONTROL 介面工具集庫]以探索可用介面工具集，並為貴組織建立自訂介面工具集。
+您可以選取&#x200B;**[!UICONTROL 修改控制面板]**，以修改[!UICONTROL 區段]控制面板的外觀。 這可讓您從控制面板移動、新增和移除介面工具集，以及存取&#x200B;**[!UICONTROL 介面工具集庫]**&#x200B;以探索可用介面工具集，並為貴組織建立自訂介面工具集。
 
-請參閱[修改控制面板](../modify.md)和[介面工具集庫](../widget-library.md)檔案以深入了解。
+請參閱[修改控制面板](../customize/modify.md)和[介面工具集程式庫概述](../customize/widget-library.md)檔案以深入了解。
 
 ## 選取區段
 
@@ -61,9 +61,11 @@ Adobe Experience Platform使用者介面(UI)提供控制面板，讓您透過控
 
 ![](../images/segments/widget-timestamp.png)
 
-## 可用介面工具集
+## 標準介面工具集
 
-Experience Platform提供多個小工具集，可用來視覺化與區段相關的不同量度。 選取下方介面工具集的名稱以深入了解：
+Adobe提供多個標準Widget，您可用來視覺化與區段相關的不同量度。 您也可以使用[!UICONTROL Widget庫]建立要與組織共用的自訂Widget。 若要進一步了解建立自訂Widget，請先閱讀[Widget程式庫概述](../customize/widget-library.md)開始。
+
+若要進一步了解每個可用的標準介面工具集，請從下列清單中選取介面工具集的名稱：
 
 * [[!UICONTROL 對象大小]](#audience-size)
 * [[!UICONTROL 對象大小趨勢]](#audience-size-trend)
