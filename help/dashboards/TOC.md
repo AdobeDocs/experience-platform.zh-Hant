@@ -4,10 +4,10 @@ user-guide-title: Adobe Experience Platform 儀表板說明
 breadcrumb-title: 儀表板指南
 user-guide-description: 在可自訂儀表板上呈現視覺化的 Experience Platform 資料。
 feature: 資料管理
-source-git-commit: a07658709f28783612cf9d53b2be65bc127c866e
+source-git-commit: bf09332681d309b41a924c4c29ee8f66078816f9
 workflow-type: tm+mt
-source-wordcount: '46'
-ht-degree: 36%
+source-wordcount: '56'
+ht-degree: 37%
 
 ---
 
@@ -21,7 +21,12 @@ ht-degree: 36%
    * [區段](guides/segments.md)
    * [目的地](guides/destinations.md)
    * [授權使用](guides/license-usage.md)
-* [修改控制面板](modify.md)
-* [介面工具集程式庫](widget-library.md)
+* 自訂控制面板{#customize}
+   * [自訂概觀](customize/overview.md)
+   * [修改控制面板](customize/modify.md)
+   * [介面工具集程式庫](customize/widget-library.md)
+   * [標準介面工具集](customize/standard-widgets.md)
+   * [自訂小工具](customize/custom-widgets.md)
+   * [編輯方案](customize/edit-schema.md)
 * [查詢控制面板資料集](query.md)
 * [平台發行說明](https://www.adobe.com/go/platform-release-notes-en)
