@@ -4,9 +4,9 @@ title: 目的地控制面板
 description: Adobe Experience Platform提供控制面板，讓您透過該控制面板檢視組織作用中目的地的重要資訊。
 type: Documentation
 exl-id: 6a34a796-24a1-450a-af39-60113928873e
-source-git-commit: 2791c32abe582d51d05d4bf0488ba82dfadfd053
+source-git-commit: 41ef7a6e6d3b0ee9afe762b19c8c286ceb361dbb
 workflow-type: tm+mt
-source-wordcount: '792'
+source-wordcount: '895'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ Adobe Experience Platform使用者介面(UI)提供控制面板，可讓您檢視
 
 如需目的地的概觀，以及Experience Platform內所有可用目的地的目錄，請造訪[目的地檔案](../../destinations/home.md)。
 
-##  Destinationsdkboard資料  {#destinations-dashboard-data}
+##  Destinationsdkboard資料 {#destinations-dashboard-data}
 
 [!UICONTROL 目標]控制面板會顯示您的組織已在體驗設定檔中啟用的目標快照。 快照中的資料與建立快照時在特定時間點顯示的資料完全相同。 換句話說，快照不是資料的近似值或樣本，目標控制面板不會即時更新。
 
@@ -35,9 +35,17 @@ Adobe Experience Platform使用者介面(UI)提供控制面板，可讓您檢視
 
 ![](../images/destinations/dashboard-overview.png)
 
-## 可用介面工具集
+### 修改目標控制面板
 
-Experience Platform提供多個Widget，您可用來視覺化與目的地相關的不同量度。 選取下方介面工具集的名稱以深入了解：
+您可以通過選擇&#x200B;**[!UICONTROL Modify dashboard]**&#x200B;來修改目標控制面板的外觀。 這可讓您從控制面板移動、新增和移除介面工具集，以及存取&#x200B;**[!UICONTROL 介面工具集庫]**&#x200B;以探索可用介面工具集，並為貴組織建立自訂介面工具集。
+
+請參閱[修改控制面板](../customize/modify.md)和[介面工具集程式庫概述](../customize/widget-library.md)檔案以深入了解。
+
+## 標準介面工具集
+
+Adobe提供多個標準Widget，您可用來視覺化與目的地相關的不同量度。 您也可以使用[!UICONTROL Widget庫]建立要與組織共用的自訂Widget。 若要進一步了解建立自訂Widget，請先閱讀[Widget程式庫概述](../customize/widget-library.md)開始。
+
+若要進一步了解每個可用的標準介面工具集，請從下列清單中選取介面工具集的名稱：
 
 * [[!UICONTROL 最常使用的目的地]](#most-used-destinations)
 * [[!UICONTROL 最近建立的目的地]](#recently-created-destinations)
