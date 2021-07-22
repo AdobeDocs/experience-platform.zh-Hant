@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 區段符合概述
 topic-legacy: overview
 description: 區段比對是Adobe Experience Platform中的區段共用服務，可讓兩位或多位Platform使用者以安全、受控且符合隱私權的方式來交換區段資料。
-source-git-commit: 12c3f440319046491054b3ef3ec404798bb61f06
+source-git-commit: d6eefc8c10a44fd31eaed00f22d09ee8a300db83
 workflow-type: tm+mt
 source-wordcount: '1901'
 ht-degree: 1%
@@ -12,11 +12,11 @@ ht-degree: 1%
 ---
 
 
-# (Alpha)[!DNL Segment Match]概述
+# (Beta)[!DNL Segment Match]概觀
 
 >[!IMPORTANT]
 >
->[!DNL Segment Match] 目前位於alpha中。文件和功能可能會有所變更。
+>[!DNL Segment Match] 目前處於測試版。文件和功能可能會有所變更。
 
 Adobe Experience Platform區段比對是區段共用服務，可讓兩位或多位Platform使用者以安全、受控且符合隱私權的方式交換區段資料。 [!DNL Segment Match] 使用平台隱私標準和個人識別碼，例如雜湊電子郵件、雜湊電話號碼，以及IDFA和GAID等裝置識別碼。
 
