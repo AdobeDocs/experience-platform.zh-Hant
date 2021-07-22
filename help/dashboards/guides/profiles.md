@@ -4,9 +4,9 @@ title: 設定檔控制面板
 description: Adobe Experience Platform提供控制面板，讓您透過該控制面板檢視貴組織「即時客戶個人檔案」資料的重要資訊。
 type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
-source-git-commit: 2791c32abe582d51d05d4bf0488ba82dfadfd053
+source-git-commit: 41ef7a6e6d3b0ee9afe762b19c8c286ceb361dbb
 workflow-type: tm+mt
-source-wordcount: '1192'
+source-wordcount: '1234'
 ht-degree: 0%
 
 ---
@@ -39,9 +39,9 @@ Adobe Experience Platform使用者介面(UI)提供控制面板，您可透過該
 
 ### 修改[!UICONTROL 設定檔]控制面板
 
-您可以通過選擇&#x200B;**[!UICONTROL 修改儀表板]**&#x200B;來修改[!UICONTROL 配置檔案]儀表板的外觀。 這可讓您從控制面板移動、新增和移除介面工具集，以及存取[!UICONTROL 介面工具集庫]以探索可用介面工具集，並為貴組織建立自訂介面工具集。
+您可以通過選擇&#x200B;**[!UICONTROL 修改儀表板]**&#x200B;來修改[!UICONTROL 配置檔案]儀表板的外觀。 這可讓您從控制面板移動、新增和移除介面工具集，以及存取&#x200B;**[!UICONTROL 介面工具集庫]**&#x200B;以探索可用介面工具集，並為貴組織建立自訂介面工具集。
 
-請參閱[修改控制面板](../modify.md)和[介面工具集庫](../widget-library.md)檔案以深入了解。
+請參閱[修改控制面板](../customize/modify.md)和[介面工具集程式庫概述](../customize/widget-library.md)檔案以深入了解。
 
 ## 合併策略
 
@@ -63,9 +63,11 @@ Adobe Experience Platform使用者介面(UI)提供控制面板，您可透過該
 
 介面工具集上的「上次更新」日期和時間會顯示資料的最後快照拍攝時間。 快照的日期和時間以UTC提供；不在個別使用者或IMS組織的時區。
 
-## 可用介面工具集
+## 標準介面工具集
 
-Experience Platform提供多個小工具集，可用來視覺化與您的設定檔資料相關的不同量度。 選取下方介面工具集的名稱以深入了解：
+Adobe提供多個標準Widget，您可用來視覺化與設定檔資料相關的不同量度。 您也可以使用[!UICONTROL Widget庫]建立要與組織共用的自訂Widget。 若要進一步了解建立自訂Widget，請先閱讀[Widget程式庫概述](../customize/widget-library.md)開始。
+
+若要進一步了解每個可用的標準介面工具集，請從下列清單中選取介面工具集的名稱：
 
 * [[!UICONTROL 設定檔計數]](#profile-count)
 * [[!UICONTROL 新增的設定檔]](#profiles-added)
