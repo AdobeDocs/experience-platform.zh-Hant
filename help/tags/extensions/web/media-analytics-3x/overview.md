@@ -1,9 +1,9 @@
 ---
 title: Adobe MediumAnalytics(3.x SDK)for Audio and Video擴充功能概述
 description: 了解Adobe Experience Platform中的Adobe MediumAnalytics(3.x SDK)for Audio and Video標籤擴充功能。
-source-git-commit: 12c3f440319046491054b3ef3ec404798bb61f06
+source-git-commit: 7f694310b17ab257eae459003bb820f7221bb55e
 workflow-type: tm+mt
-source-wordcount: '768'
+source-wordcount: '763'
 ht-degree: 73%
 
 ---
@@ -84,7 +84,7 @@ MA擴充功能會啟用[!UICONTROL Configuration]頁面中的「將API匯出至�
 
 ### 從其他擴充功能使用
 
-MA擴充功能會公開`media`，作為其他擴充功能的共用模組。 (如需共用模組的其他資訊，請參閱[共用模組文件](https://developer.adobelaunch.com/extensions/shared_modules/))。
+MA擴充功能會公開`media`，作為其他擴充功能的共用模組。 (如需共用模組的其他資訊，請參閱[共用模組文件](../../../extension-dev/web/shared.md))。
 
 >[!IMPORTANT]
 >
