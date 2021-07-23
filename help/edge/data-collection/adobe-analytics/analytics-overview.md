@@ -1,33 +1,32 @@
 ---
-title: 使用Adobe Experience Platform Web SDK傳送資料至Adobe Analytics
-description: 瞭解如何使用Adobe Experience Platform Web SDK將資料傳送至Adobe Analytics。
-keywords: adobe analytics;analytics；映射資料；映射變數；
-translation-type: tm+mt
-source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
+title: 使用Adobe Experience Platform Web SDK將資料傳送至Adobe Analytics
+description: 了解如何使用Adobe Experience Platform Web SDK將資料傳送至Adobe Analytics。
+keywords: adobe analytics;analytics；對應資料；對應的var;
+exl-id: b18d1163-9edf-4a9c-b247-cd1aa7dfca50
+source-git-commit: 3a1d08a4ea87ee3db7a2a8b048d5721fa679c372
 workflow-type: tm+mt
 source-wordcount: '192'
 ht-degree: 7%
 
 ---
 
-
 # 傳送資料至Adobe Analytics
 
-Adobe Experience Platform [!DNL Web SDK]可傳送資料至Adobe Analytics。 這可將`xdm`轉譯為Adobe Analytics可使用的格式。
+Adobe Experience Platform [!DNL Web SDK]可將資料傳送至Adobe Analytics。 將`xdm`轉譯為Adobe Analytics可使用的格式即可。
 
 ## 設定
 
-如果您在「客戶設定」使用者介面中對應了報表套裝，Adobe Analytics會自動擷取您要傳送的資料。 您可以在這裡將一或多個報表對應至指定的設定。 報表套裝映射後，資料會自動開始流動。
+如果客戶設定UI中已對應報表套裝，Adobe Analytics會自動擷取您傳送的資料。 您可以在此將一或多個報表對應至指定的設定。 報表套裝對應後，資料會自動開始流動。
 
 ## 自動映射的資料
 
-Adobe Experience Platform [!DNL Edge Network]會自動映射許多XDM變數。 這些變數的完整清單列於[這裡](automatically-mapped-vars.md)。
+Adobe Experience Platform [!DNL Edge Network]會自動對應許多XDM變數。 這些變數的完整清單列於[此處](automatically-mapped-vars.md)。
 
-## 手動映射的資料
+## 手動對應資料
 
-邊緣網路收集的所有資料都可透過處理規則來存取。資料會使用點記號平面化，並可用作contextData。
+邊緣網路收集的所有資料都可透過處理規則來存取。資料會使用點標籤法扁平化，並可作為contextData使用。
 
-如果你有這樣的架構的話。
+如果你有這樣的架構。
 
 ```javascript
 {
@@ -52,7 +51,7 @@ Adobe Experience Platform [!DNL Edge Network]會自動映射許多XDM變數。 �
 }
 ```
 
-然後，這些將是可供您使用的上下文資料索引鍵。
+然後這些就是可供您使用的內容資料索引鍵。
 
 ```javascript
 a.x.key //value
@@ -65,6 +64,6 @@ a.x.arrayofobjects.0.obj1key //objval0
 a.x.arrayofobjects.1.obj2key //objval1
 ```
 
-以下是會使用此資料的處理規則範例。
+以下是會使用此資料的處理規則的範例。
 
-![處理規則介面](../../../assets/edge_analytics_processing_rules.png)
+![處理規則介面](./assets/edge_analytics_processing_rules.png)
