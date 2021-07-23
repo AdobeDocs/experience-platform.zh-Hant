@@ -5,9 +5,9 @@ title: 電話號碼資料類型
 topic-legacy: overview
 description: 本檔案概述電話號碼XDM資料類型。
 exl-id: b84e48f9-bbb4-4b8b-9476-4bc1c455ecfd
-source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
+source-git-commit: 7f694310b17ab257eae459003bb820f7221bb55e
 workflow-type: tm+mt
-source-wordcount: '211'
+source-wordcount: '213'
 ht-degree: 2%
 
 ---
@@ -31,5 +31,5 @@ ht-degree: 2%
 
 如需電話號碼資料類型的詳細資訊，請參閱公用XDM存放庫：
 
-* [填入範例](https://github.com/adobe/xdm/blob/master/components/datatypes/phonenumber.example.1.json)
-* [完整結構](https://github.com/adobe/xdm/blob/master/components/datatypes/phonenumber.schema.json)
+* [填入範例](https://github.com/adobe/xdm/blob/master/components/datatypes/demographic/phonenumber.example.1.json)
+* [完整結構](https://github.com/adobe/xdm/blob/master/components/datatypes/demographic/phonenumber.schema.json)
