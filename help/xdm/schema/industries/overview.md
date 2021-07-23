@@ -4,9 +4,9 @@ title: 產業資料模型概觀
 topic-legacy: overview
 description: 了解可使用標準Experience Data Model(XDM)元件來建構的各種垂直產業的標準化資料模型。
 exl-id: 8fa9a610-36b5-470f-ad63-f2a4a060e0f1
-source-git-commit: 4ff97408659559174110a2234b24e9433007c9dc
+source-git-commit: e44da39dcdd4af4ab883b3ff8f61ca2fd44adb0b
 workflow-type: tm+mt
-source-wordcount: '353'
+source-wordcount: '354'
 ht-degree: 1%
 
 ---
@@ -38,6 +38,7 @@ ERD適用於以下行業：
 
 * [[!UICONTROL 零售業]](./retail.md)
 * [[!UICONTROL 金融服務]](./financial.md)
+* [[!UICONTROL 電信]](./telecom.md)
 * [[!UICONTROL 旅行和招待]](./travel-hospitality.md)
 
 ## 後續步驟
