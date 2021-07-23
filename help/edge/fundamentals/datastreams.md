@@ -3,7 +3,7 @@ title: 配置Experience PlatformWeb SDK的資料流
 description: '了解如何設定資料流。 '
 keywords: 設定；資料流；datastreamId;edge；資料流ID；環境設定；edgeConfigId；啟用身分；ID同步；ID同步容器ID；沙箱；串流入口；事件資料集；目標；用戶端代碼；屬性代號；目標環境ID;Cookie目的地；URL目的地；Analytics設定區塊報表套裝ID;
 exl-id: 736c75cb-e290-474e-8c47-2a031f215a56
-source-git-commit: da7696d288543abd21ff8a1402e81dcea32efbc2
+source-git-commit: 3a1d08a4ea87ee3db7a2a8b048d5721fa679c372
 workflow-type: tm+mt
 source-wordcount: '895'
 ht-degree: 0%
@@ -21,7 +21,7 @@ Adobe Experience Platform Web SDK的設定分為兩個位置。 SDK中的[config
 
 可使用資料流配置工具在Adobe[!DNL Experience Platform Launch]中建立資料流。
 
-![datastreams工具導航](../../assets/datastreams_config.png)
+![datastreams工具導航](../images/datastreams/config.png)
 
 >[!NOTE]
 >
@@ -39,7 +39,7 @@ SDK中作為`edgeConfigId`使用的ID是指定設定和環境（例如`1c86778b-
 
 第三方ID區段是唯一一律開啟的區段。 它有兩個可用的設定：&quot;[!UICONTROL 第三方ID同步已啟用]&quot;和&quot;[!UICONTROL 第三方ID同步容器ID]&quot;。
 
-![設定UI的身分區段](../../assets/edge_configuration_identity.png)
+![設定UI的身分區段](../images/datastreams/edge_configuration_identity.png)
 
 ### [!UICONTROL 已啟用第三方ID同步]
 
@@ -53,7 +53,7 @@ ID同步可分組為容器，以便在不同時間執行不同的ID同步。 這
 
 此處列出的設定可讓您將資料傳送至Adobe Experience Platform。 只有在您已購買Adobe Experience Platform時，才應啟用此區段。
 
-![Adobe Experience Platform設定區塊](../../assets/edge_configuration_aep.png)
+![Adobe Experience Platform設定區塊](../images/datastreams/edge_configuration_aep.png)
 
 ### [!UICONTROL 沙箱]
 
@@ -71,7 +71,7 @@ ID同步可分組為容器，以便在不同時間執行不同的ID同步。 這
 
 若要設定Adobe Target，您必須提供用戶端代碼。 其他欄位為選用。
 
-![Adobe Target設定區塊](../../assets/edge_configuration_target.png)
+![Adobe Target設定區塊](../images/datastreams/edge_configuration_target.png)
 
 >[!NOTE]
 >
@@ -97,7 +97,7 @@ Adobe建議您針對`dev`、`stage`和`prod`資料流環境分別以不同方式
 
 將資料傳送至Adobe Audience Manager所需的全部是啟用此區段。 其他設定為選用，但建議使用。
 
-![Adobe對象管理設定區塊](../../assets/edge_configuration_aam.png)
+![Adobe對象管理設定區塊](../images/datastreams/edge_configuration_aam.png)
 
 ### [!UICONTROL Cookie目的地已啟用]
 
@@ -111,7 +111,7 @@ Adobe建議您針對`dev`、`stage`和`prod`資料流環境分別以不同方式
 
 控制資料是否傳送至Adobe Analytics。 其他詳細資訊位於[Analytics概述](../data-collection/adobe-analytics/analytics-overview.md)中。
 
-![Adobe Analytics設定區塊](../../assets/edge_configuration_aa.png)
+![Adobe Analytics設定區塊](../images/datastreams/edge_configuration_aa.png)
 
 ### [!UICONTROL 報告套裝 ID]
 
