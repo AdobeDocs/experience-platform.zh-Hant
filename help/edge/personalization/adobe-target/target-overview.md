@@ -1,11 +1,11 @@
 ---
 title: 將Adobe Target與Platform Web SDK搭配使用
 description: 了解如何使用Adobe Target透過Experience PlatformWeb SDK轉譯個人化內容
-keywords: target;adobe target;activity.id;experience.id;renderDecisions;decisionScopes；預先隱藏程式碼片段；vec；表單式體驗撰寫器；xdm；對象；決策；範圍；結構；
+keywords: target;adobe target;activity.id;experience.id;renderDecisions;decisionScopes；預先隱藏程式碼片段；vec；表單式體驗撰寫器；xdm；對象；決策；範圍；結構；系統圖表；圖表
 exl-id: 021171ab-0490-4b27-b350-c37d2a569245
-source-git-commit: c83b6ea336cfe5d6d340a2dbbfb663b6bec84312
+source-git-commit: c99bc94226b296463e92340723d1318e0775f6a7
 workflow-type: tm+mt
-source-wordcount: '1220'
+source-wordcount: '1223'
 ht-degree: 5%
 
 ---
