@@ -4,9 +4,9 @@ title: 旅宿業資料模型ERD
 topic-legacy: overview
 description: 檢視實體關係圖(ERD)，此圖表說明旅行與旅宿業的標準化資料模型，與Adobe Experience Platform中使用的Experience Data Model(XDM)相容。
 exl-id: 4d454160-9066-4702-815b-9509942f709e
-source-git-commit: 88c17992a391b24a76c3e387d3033df4c75a6aa6
+source-git-commit: 38fa2345cb87e50bd4c8788996f03939fb199cf9
 workflow-type: tm+mt
-source-wordcount: '226'
+source-wordcount: '278'
 ht-degree: 0%
 
 ---
@@ -14,6 +14,10 @@ ht-degree: 0%
 # [!UICONTROL 旅行與住] 宿業資料模型ERD
 
 以下實體關係圖(ERD)代表旅行和旅館業的標準化資料模型。 ERD是刻意以非標準化方式呈現，並考慮資料在Adobe Experience Platform中的儲存方式。
+
+>[!NOTE]
+>
+>ERD是建議，您應如何為此行業使用案例建立資料模型。 若要在Platform中使用此資料模型，您必須自行建立建議的結構描述及其關係。 如需詳細資訊，請參閱UI中管理[結構](../../ui/resources/schemas.md)和[關係](../../tutorials/relationship-ui.md)的指南。
 
 使用下列圖例來解釋此ERD:
 
