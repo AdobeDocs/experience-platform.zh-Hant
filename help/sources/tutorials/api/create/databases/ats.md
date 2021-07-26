@@ -6,7 +6,7 @@ topic-legacy: overview
 type: Tutorial
 description: 了解如何使用流量服務API將Azure表格儲存連線至Adobe Experience Platform。
 exl-id: 8ebd5d77-ed1f-47e1-8212-efb6c5e84ec1
-source-git-commit: 5fb5f0ce8bd03ba037c6901305ba17f8939eb9ce
+source-git-commit: 7af79b9e0d6ed29b796ac7c98b4df1dda09f3513
 workflow-type: tm+mt
 source-wordcount: '472'
 ht-degree: 1%
@@ -39,7 +39,7 @@ ht-degree: 1%
 | 憑據 | 說明 |
 | ---------- | ----------- |
 | `connectionString` | 用於連接到[!DNL Azure Table Storage]實例的連接字串。 [!DNL Azure Table Storage]的連接字串模式為：`DefaultEndpointsProtocol=https;AccountName={ACCOUNT_NAME};AccountKey={ACCOUNT_KEY}`。 |
-| 連接規範返回源的連接器屬性，包括與建立基連接和源連接相關的驗證規範。 [!DNL Azure Table Storage]的連接規範ID為`ecde33f2-c56f-46cc-bdea-ad151c16cd69`。 |
+| `connectionSpec.id` | 連接規範返回源的連接器屬性，包括與建立基連接和源連接相關的驗證規範。 [!DNL Azure Table Storage]的連接規範ID為`ecde33f2-c56f-46cc-bdea-ad151c16cd69`。 |
 
 有關獲取連接字串的詳細資訊，請參閱[this [!DNL Azure Table Storage] document](https://docs.microsoft.com/en-us/azure/storage/common/storage-introduction)。
 
