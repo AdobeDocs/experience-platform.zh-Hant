@@ -3,9 +3,9 @@ title: 將Adobe Target與Platform Web SDK搭配使用
 description: 了解如何使用Adobe Target透過Experience PlatformWeb SDK轉譯個人化內容
 keywords: target;adobe target;activity.id;experience.id;renderDecisions;decisionScopes；預先隱藏程式碼片段；vec；表單式體驗撰寫器；xdm；對象；決策；範圍；結構；
 exl-id: 021171ab-0490-4b27-b350-c37d2a569245
-source-git-commit: ed6f0891958670c3c5896c4c9cbefef2a245bc15
+source-git-commit: c83b6ea336cfe5d6d340a2dbbfb663b6bec84312
 workflow-type: tm+mt
-source-wordcount: '932'
+source-wordcount: '1220'
 ht-degree: 5%
 
 ---
@@ -17,13 +17,29 @@ ht-degree: 5%
 下列功能已通過測試，目前在[!DNL Target]中受支援：
 
 * [A/B測試](https://experienceleague.adobe.com/docs/target/using/activities/abtest/test-ab.html)
-* [A4T曝光和轉換報表](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html)
+* [A4T曝光和轉換報表](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html?lang=zh-Hant)
 * [Automated Personalization活動](https://experienceleague.adobe.com/docs/target/using/activities/automated-personalization/automated-personalization.html)
 * [體驗鎖定目標活動](https://experienceleague.adobe.com/docs/target/using/activities/automated-personalization/automated-personalization.html)
 * [多變數測試(MVT)](https://experienceleague.adobe.com/docs/target/using/activities/multivariate-test/multivariate-testing.html)
 * [Recommendations活動](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations.html)
 * [原生Target曝光和轉換報表](https://experienceleague.adobe.com/docs/target/using/reports/reports.html)
 * [VEC支援](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html)
+
+## [!DNL Platform Web SDK] 系統圖
+
+下圖可協助您了解[!DNL Target]和[!DNL Platform Web SDK]邊緣決策的工作流程。
+
+![Adobe Target Web SDK邊緣決策圖](./assets/target-platform-web-sdk.png)
+
+| 呼叫 | 詳細資料 |
+| --- | --- |
+| 1 | 設備載入[!DNL Platform Web SDK]。 [!DNL Platform Web SDK]會使用XDM資料、資料流環境ID、傳入參數和客戶ID（選用），傳送要求至邊緣網路。 頁面（或容器）已預先隱藏。 |
+| 2 | 邊緣網路會傳送要求至邊緣服務，以便透過訪客ID、同意及其他訪客內容資訊（例如地理位置和裝置易記名稱）豐富該請求。 |
+| 3 | 邊緣網路會使用訪客ID和傳入的參數，將擴充的個人化請求傳送至[!DNL Target]邊緣。 |
+| 4 | 設定檔指令碼執行，然後饋入至[!DNL Target]設定檔儲存。 設定檔儲存區會從[!UICONTROL 對象庫]擷取區段（例如，從[!DNL Adobe Analytics]、[!DNL Adobe Audience Manager]、[!DNL Adobe Experience Platform]共用的區段）。 |
+| 5 | [!DNL Target]會根據URL要求參數和設定檔資料，決定要針對訪客顯示哪些活動和體驗，以供目前的頁面檢視和未來預先擷取的檢視使用。 [!DNL Target] 然後將這個傳回至edge網路。 |
+| 6 | a.邊緣網路會將個人化回應傳回至頁面，選擇性地包括其他個人化的設定檔值。 目前頁面上的個人化內容會盡快出現，不會有忽隱忽現的預設內容。<br>b.因單頁應用程式(SPA)中的使用者動作而顯示的檢視個人化內容會經過快取，以便在觸發檢視時立即套用，不需額外的伺服器呼叫&#x200B;。<br>c.邊緣網路會傳送訪客ID和Cookie中的其他值，例如同意、工作階段ID、身分、Cookie檢查、個人化等。 |
+| 7 | 邊緣網路會將[!UICONTROL Analytics for Target](A4T)詳細資訊（活動、體驗和轉換中繼資料）轉送至[!DNL Analytics]邊緣&#x200B;。 |
 
 ## 啟用[!DNL Adobe Target]
 
