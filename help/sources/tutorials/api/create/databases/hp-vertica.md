@@ -6,10 +6,10 @@ topic-legacy: overview
 type: Tutorial
 description: 了解如何使用Flow Service API將HP Vertica連線至Adobe Experience Platform。
 exl-id: 37f831c1-7c82-462a-8338-a0bcaaf08cd1
-source-git-commit: 5fb5f0ce8bd03ba037c6901305ba17f8939eb9ce
+source-git-commit: 3506e8307d5f6dbdb11a04911ddbd6dc81b8278f
 workflow-type: tm+mt
-source-wordcount: '484'
-ht-degree: 3%
+source-wordcount: '476'
+ht-degree: 1%
 
 ---
 
@@ -27,8 +27,8 @@ ht-degree: 3%
 
 本指南需要妥善了解下列Adobe Experience Platform元件：
 
-* [來源](https://experienceleague.adobe.com/docs/experience-platform/source-connectors/home.html): [!DNL Experience Platform] 可讓您從各種來源擷取資料，同時使用服務來建構、對應及增強傳入 [!DNL Platform] 資料。
-* [沙箱](https://experienceleague.adobe.com/docs/experience-platform/sandbox/home.html): [!DNL Experience Platform] 提供可將單一執行個體分割成個 [!DNL Platform] 別虛擬環境的虛擬沙箱，以協助開發及改進數位體驗應用程式。
+* [來源](../../../../home.md):Experience Platform可讓您從各種來源擷取資料，同時使用服務來建構、加標籤及增強傳入 [!DNL Platform] 資料。
+* [沙箱](../../../../../sandboxes/home.md):Experience Platform提供可將單一執行個體分割成個 [!DNL Platform] 別虛擬環境的虛擬沙箱，以協助開發及改進數位體驗應用程式。
 
 以下各節提供您需要知道的其他資訊，以便使用[!DNL Flow Service] API成功連接到[!DNL HP Vertica]。
 
