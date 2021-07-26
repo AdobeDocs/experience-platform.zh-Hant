@@ -4,9 +4,9 @@ user-guide-title: Experience Data Model (XDM) 系統說明
 breadcrumb-title: Experience Data Model (XDM) 指南
 user-guide-description: 使用Experience Data Model(XDM)類別和結構欄位群組，以標準化體驗資料。
 feature: 結構描述
-source-git-commit: e44da39dcdd4af4ab883b3ff8f61ca2fd44adb0b
+source-git-commit: 2592d4f494d4d3dcfba63eb539498416fbdf6707
 workflow-type: tm+mt
-source-wordcount: '312'
+source-wordcount: '320'
 ht-degree: 17%
 
 ---
@@ -40,11 +40,13 @@ ht-degree: 17%
       * [個人聯繫人詳細資訊](./field-groups/profile/personal-contact-details.md)
       * [同意和偏好設定](./field-groups/profile/consents.md)
       * [區段成員資格詳細資料](./field-groups/profile/segmentation.md)
+      * [電信訂閱](./field-groups/profile/telecom-subscription.md)
       * [工作聯繫人詳細資訊](./field-groups/profile/work-contact-details.md)
    * 事件欄位組{#event}
       * [促銷活動行銷詳細資料](./field-groups/event/campaign-marketing-details.md)
       * [管道詳細資料](./field-groups/event/channel-details.md)
       * [商務詳細資訊](./field-groups/event/commerce-details.md)
+      * [設備更換詳細資訊](./field-groups/event/device-trade-in-details.md)
       * [最終用戶ID詳細資訊](./field-groups/event/enduserids.md)
       * [環境詳細資訊](./field-groups/event/environment-details.md)
       * [IAB TCF 2.0同意](./field-groups/event/iab.md)
@@ -57,6 +59,7 @@ ht-degree: 17%
    * [商務](./data-types/commerce.md)
    * [同意字串](./data-types/consent-string.md)
    * [同意與偏好設定](./data-types/consents.md)
+   * [貨幣](./data-types/currency.md)
    * [裝置](./data-types/device.md)
    * [電子郵件地址](./data-types/email-address.md)
    * [環境](./data-types/environment.md)
@@ -85,6 +88,7 @@ ht-degree: 17%
    * [產品清單項目](./data-types/product-list-item.md)
    * [搜尋](./data-types/search.md)
    * [訂閱](./data-types/subscription.md)
+   * [電信訂閱](./data-types/telecom-subscription.md)
    * [網路資訊](./data-types/web-information.md)
    * [網路互動](./data-types/web-interaction.md)
    * [網頁詳細資訊](./data-types/webpage-details.md)
