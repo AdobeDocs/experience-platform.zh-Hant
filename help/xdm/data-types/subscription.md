@@ -5,9 +5,9 @@ title: 訂閱資料類型
 topic-legacy: overview
 description: 本檔案概述訂閱體驗資料模型(XDM)資料類型。
 exl-id: 6fd1e073-441b-45f0-bb4f-54f51ab18694
-source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
+source-git-commit: d99ddc65849a88350bf61977b399b07989554426
 workflow-type: tm+mt
-source-wordcount: '419'
+source-wordcount: '420'
 ht-degree: 10%
 
 ---
@@ -27,7 +27,7 @@ ht-degree: 10%
 | `billingPeriod` | 字串 | 付款之間的持續時間。 |
 | `billingStartDate` | Date | 第一張賬單到期的日期。 日期格式（沒有時間）應遵循[RFC 3339，第5.6節](https://tools.ietf.org/html/rfc3339#section-5.6)標準。 |
 | `category` | 字串 | 此類訂閱的主要頂級分類。 |
-| `chargeMethod` | 字串 | 帳單設定方式，用於向客戶收費。 |
+| `chargeMethod` | 字串 | 帳單設定方式，以向客戶收費。 |
 | `contractID` | 字串 | 管轄此訂閱之合約的唯一ID。 |
 | `country` | 字串 | 訂購合同和協定條款根源所在的國家。 |
 | `endDate` | 日期 | 目前訂閱期限的結束日期。 日期格式（沒有時間）應遵循[RFC 3339，第5.6節](https://tools.ietf.org/html/rfc3339#section-5.6)標準。 |
