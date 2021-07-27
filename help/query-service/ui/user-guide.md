@@ -5,9 +5,9 @@ title: 查詢編輯器UI指南
 topic-legacy: query editor
 description: 查詢編輯器是Adobe Experience Platform Query Service提供的互動式工具，可讓您在Experience Platform使用者介面中撰寫、驗證及執行客戶體驗資料的查詢。 查詢編輯器支援開發查詢以進行分析和探索資料，並可讓您執行互動式查詢以供開發之用，以及非互動式查詢，以在Experience Platform中填入資料集。
 exl-id: d7732244-0372-467d-84e2-5308f42c5d51
-source-git-commit: 483bcea231ed5f25c76771d0acba7e0c62dfed16
+source-git-commit: 7eaa808ecc644fdb9bc6b3fe1347c7651d54a33b
 workflow-type: tm+mt
-source-wordcount: '1082'
+source-wordcount: '1572'
 ht-degree: 1%
 
 ---
@@ -80,7 +80,57 @@ ht-degree: 1%
 
 ![影像](../images/ui/query-editor/query-details.png)
 
-此面板允許您直接從UI生成輸出資料集、刪除顯示的查詢或為其命名，以及在&#x200B;**[!UICONTROL SQL查詢]**&#x200B;頁簽上以易於複製的格式查看SQL代碼。 此面板也顯示有用的中繼資料，例如上次修改查詢的時間以及修改查詢的人員（如果適用）。 若要產生資料集，請選取「**[!UICONTROL 輸出資料集]**」。 此時將顯示&#x200B;**[!UICONTROL 輸出資料集]**&#x200B;對話框。 輸入名稱和說明，然後選擇&#x200B;**[!UICONTROL 運行查詢]**。 新資料集顯示在[!DNL Platform][!DNL Query Service]使用者介面的&#x200B;**[!UICONTROL 資料集]**&#x200B;標籤中。
+此面板可讓您直接從UI產生輸出資料集、刪除或命名顯示的查詢，以及將排程新增至查詢。
+
+此面板也顯示有用的中繼資料，例如上次修改查詢的時間以及修改查詢的人員（如果適用）。 若要產生資料集，請選取「**[!UICONTROL 輸出資料集]**」。 此時將顯示&#x200B;**[!UICONTROL 輸出資料集]**&#x200B;對話框。 輸入名稱和說明，然後選擇&#x200B;**[!UICONTROL 運行查詢]**。 新資料集顯示在[!DNL Platform][!DNL Query Service]使用者介面的&#x200B;**[!UICONTROL 資料集]**&#x200B;標籤中。
+
+### 排程查詢 {#scheduled-queries}
+
+>[!NOTE]
+>
+> 您只能將排程新增至已建立、儲存及執行的查詢。 此外，您將&#x200B;**not**&#x200B;能將排程新增至參數化查詢。
+
+要向查詢添加調度，請選擇&#x200B;**[!UICONTROL 添加調度]**。
+
+![影像](../images/ui/query-editor/add-schedule.png)
+
+此時將顯示「**[!UICONTROL 調度詳細資訊]**」頁。 在此頁上，您可以選擇排程查詢的頻率、排程查詢的執行日期，以及要匯出查詢的資料集。
+
+![影像](../images/ui/query-editor/schedule-details.png)
+
+您可以為&#x200B;**[!UICONTROL Frequency]**&#x200B;選擇下列選項：
+
+- **[!UICONTROL 每小時]**:在您選取的日期期間，排程查詢將每小時執行一次。
+- **[!UICONTROL 每日]**:排程查詢會在您選取的時間和日期期間，每X天執行一次。請注意，選擇的時間在&#x200B;**UTC**&#x200B;中，而不是您的本地時區。
+- **[!UICONTROL 每週]**:選定的查詢將在您選擇的一週天數、時間和日期期間運行。請注意，選擇的時間在&#x200B;**UTC**&#x200B;中，而不是您的本地時區。
+- **[!UICONTROL 每月]**:選定的查詢將在您選擇的日、時和日期期間每月運行。請注意，選擇的時間在&#x200B;**UTC**&#x200B;中，而不是您的本地時區。
+- **[!UICONTROL 每年]**:選定的查詢將每年在您選擇的日、月、時間和日期期間運行。請注意，選擇的時間在&#x200B;**UTC**&#x200B;中，而不是您的本地時區。
+
+針對資料集，您可以選擇使用現有資料集或建立新資料集。
+
+>[!IMPORTANT]
+>
+> 由於您使用現有資料集或建立新資料集，因為資料集已設定，所以&#x200B;**not**&#x200B;必須在查詢中包含`INSERT INTO`或`CREATE TABLE AS SELECT`。 將`INSERT INTO`或`CREATE TABLE AS SELECT`納入排程查詢中將會導致錯誤。
+
+確認所有這些詳細資訊後，請選取&#x200B;**[!UICONTROL 儲存]**&#x200B;以建立排程。
+
+查詢詳細資訊頁面會重新顯示，現在會顯示新建立排程的詳細資訊，包括排程ID、排程本身和排程的輸出資料集。 您可以使用排程ID來查詢有關排程查詢本身執行的詳細資訊。 若要進一步了解，請閱讀[排程查詢執行端點指南](../api/runs-scheduled-queries.md)。
+
+>[!NOTE]
+>
+> 您只能使用UI排程&#x200B;**一個**&#x200B;查詢範本。 如果您想要將其他排程新增至查詢範本，則需使用API。 如果已使用API新增排程，您將使用UI新增&#x200B;**not**&#x200B;其他排程。 如果已將多個計畫附加到查詢模板，則只會顯示最舊的計畫。 若要了解如何使用API新增排程，請參閱[已排程查詢端點指南](../api/scheduled-queries.md)。
+>
+> 此外，如果您想要確定您檢視的排程擁有最新狀態，則應重新整理頁面。
+
+#### 刪除排程
+
+您可以選擇「刪除調度」**[!UICONTROL 以刪除調度]**&#x200B;來刪除調度。
+
+![影像](../images/ui/query-editor/delete-schedule.png)
+
+>[!IMPORTANT]
+>
+> 如果要刪除查詢的排程，必須先停用該排程。
 
 ### 保存查詢
 
