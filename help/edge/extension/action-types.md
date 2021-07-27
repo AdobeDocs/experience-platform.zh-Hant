@@ -4,9 +4,9 @@ description: 了解Adobe Experience Platform Launch中Adobe Experience Platform 
 solution: Experience Platform
 feature: Web SDK
 exl-id: a4bf0bb9-59b4-4c43-97e6-387768176517
-source-git-commit: 17ebf50965136f2c075f21eb3ecdcb1ce6da0b7d
+source-git-commit: 53864097af7d3278f56a3f23186de4eb405bcb51
 workflow-type: tm+mt
-source-wordcount: '595'
+source-wordcount: '585'
 ht-degree: 3%
 
 ---
@@ -25,7 +25,7 @@ ht-degree: 3%
 
 - **類型：** 此欄位可讓您指定要記錄在XDM架構中的事件類型。如需預設事件類型的詳細資訊，請參閱[檔案](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/tracking-events.html?lang=en#using-the-sendbeacon-api)。
 - **資料：** 不符合XDM架構的資料，可使用此欄位傳送。如果您嘗試更新Adobe Target設定檔或傳送Target Recommendations屬性，此欄位就十分實用。 如需範例，請檢視我們的[檔案](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/tracking-events.html?lang=en)。
-- **合併ID:** 若要為事件 [指](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/merging-event-data.html?lang=en#fundamentals) 定合併ID，可在此欄位中執行。請注意，下游解決方案目前無法合併您的事件資料。
+- **合併ID:** 若要指定事件的合併ID，可在此欄位中指定。請注意，下游解決方案目前無法合併您的事件資料。
 - **資料集ID:** 如果您需要將資料傳送至資料流中指定之資料以外的資料集，可在此指定該資料集ID。
 - **文檔將卸載：** 如果要確保事件到達伺服器，即使用戶從頁面進行導航，請選中「文檔將卸載」 **[!UICONTROL 複選框]** 。這可讓事件到達伺服器，但會忽略回應。
 - **呈現視覺個人化決策：** 如果您想要在頁面上呈現個人化內容，請核取「呈現視覺個 **[!UICONTROL 人化決策]** 」核取方塊。您也可以視需要指定決策範圍。 如需轉譯個人化內容的詳細資訊，請參閱[個人化檔案](https://experienceleague.adobe.com/docs/experience-platform/edge/personalization/rendering-personalization-content.html?lang=en#automatically-rendering-content)。
