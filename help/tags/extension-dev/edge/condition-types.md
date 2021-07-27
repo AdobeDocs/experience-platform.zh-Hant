@@ -1,10 +1,10 @@
 ---
 title: 邊緣擴充功能的條件類型
 description: 了解如何為Adobe Experience Platform中的邊緣擴充功能定義條件類型程式庫模組。
-source-git-commit: 39d9468e5d512c75c9d540fa5d2bcba4967e2881
+source-git-commit: 99780f64c8f09acea06e47ebf5cabc762e05cab2
 workflow-type: tm+mt
-source-wordcount: '277'
-ht-degree: 45%
+source-wordcount: '407'
+ht-degree: 44%
 
 ---
 
@@ -14,13 +14,22 @@ ht-degree: 45%
 >
 > Adobe Experience Platform Launch已重新命名為Experience Platform中的資料收集技術套件。 因此，產品檔案中已推出數個術語變更。 有關術語更改的綜合參考，請參閱以下[document](../../term-updates.md)。
 
-條件類型程式庫模組會評估某個值是否為true或false，並傳回布林值。
+在標籤規則中，會在事件發生後評估條件。 所有條件都必須傳回 true，才會繼續處理規則。條件類型由擴充功能提供，並評估某項為true或false，傳回布林值。
+
+例如，擴充功能可提供「檢視區包含」條件類型，讓 使用者可在其中指定 CSS 選擇器。在用戶端的網站上評估條件時，擴充功能將可尋找符合 CSS 選擇器的元素，並傳回結果指出其中是否有任何元素包含在使用者的檢視區中。
+
+本檔案說明如何在Adobe Experience Platform中定義邊緣擴充功能的條件類型。
 
 >[!IMPORTANT]
 >
->本文介紹邊緣擴充功能的條件類型。如果您正在開發 Web 擴充功能，請改為參閱 [Web 擴充功能的條件類型](../web/condition-types.md)指南。
+>如果您正在開發 Web 擴充功能，請改為參閱 [Web 擴充功能的條件類型](../web/condition-types.md)指南。
 >
->本檔案也假設您熟悉程式庫模組，以及這些模組如何整合至標籤擴充功能中。 如果需要相關說明，請先參閱[程式庫模組格式化](./format.md)的概述文章，再返回閱讀本指南。
+>本檔案也假設您熟悉程式庫模組，以及這些模組如何整合至邊緣擴充功能。 如果需要相關說明，請先參閱[程式庫模組格式化](./format.md)的概述文章，再返回閱讀本指南。
+
+條件類型通常包含下列項目：
+
+1. 資料收集UI中顯示的檢視，可讓使用者修改條件的設定。
+2. 在標籤執行階段程式庫內發出的程式庫模組，用於解譯設定及評估條件。
 
 例如，如果要評估用戶是否在主機`example.com`上，您的模組可能如下所示。
 
