@@ -3,9 +3,9 @@ title: 使用Adobe Experience Platform Web SDK處理客戶同意資料
 topic-legacy: getting started
 description: 了解如何整合Adobe Experience Platform Web SDK，以使用Adobe2.0標準在Adobe Experience Platform中處理客戶同意資料。
 exl-id: 3a53d908-fc61-452b-bec3-af519dfefa41
-source-git-commit: da7696d288543abd21ff8a1402e81dcea32efbc2
+source-git-commit: 8b58bb60ae40f224433f3513060f4ae7ddc7d5b3
 workflow-type: tm+mt
-source-wordcount: '1237'
+source-wordcount: '1285'
 ht-degree: 2%
 
 ---
@@ -15,6 +15,15 @@ ht-degree: 2%
 Adobe Experience Platform Web SDK可讓您擷取同意管理平台(CMP)產生的客戶同意訊號，並在同意變更事件發生時將其傳送至Adobe Experience Platform。
 
 **SDK不會與任何現成可用的CMP進行介面**。您可自行決定如何將SDK整合至您的網站、接聽CMP中的同意變更，並呼叫適當的命令。 本檔案提供如何將CMP與Platform Web SDK整合的一般指引。
+
+>[!NOTE]
+>
+>本指南會逐步說明如何透過資料收集UI中的標籤擴充功能整合SDK。 如果您想改用獨立版SDK，請參閱下列檔案：
+>
+>* [設定資料流](../../../../edge/fundamentals/datastreams.md)
+* [安裝SDK](../../../../edge/fundamentals/installing-the-sdk.md)
+* [為同意命令配置SDK](../../../../edge/consent/supporting-consent.md)
+
 
 ## 先決條件
 
@@ -44,7 +53,7 @@ Adobe Experience Platform Web SDK可讓您擷取同意管理平台(CMP)產生的
 完成後，在螢幕底部選擇&#x200B;**[!UICONTROL Save]**，然後繼續執行任何其他提示以完成配置。
 
 
-## 安裝及設定Platform Web SDK擴充功能
+## 安裝及配置Platform Web SDK
 
 依照前一節所述建立資料流後，您必須設定最終要部署在網站上的Platform Web SDK擴充功能。 如果您的Platform launch屬性上未安裝SDK擴充功能，請在左側導覽中選取&#x200B;**[!UICONTROL 擴充功能]**，後面接著&#x200B;**[!UICONTROL 目錄]**&#x200B;標籤。 接著，在可用擴充功能清單的Platform SDK擴充功能下方，選取&#x200B;**[!UICONTROL 安裝]**。
 
@@ -86,7 +95,7 @@ Adobe Experience Platform Web SDK可讓您擷取同意管理平台(CMP)產生的
 
 完成擴充功能的設定後，即可將其整合至您的網站。 請參閱Platform launch檔案中的[發佈指南](https://experienceleague.adobe.com/docs/launch/using/publish/overview.html) ，了解如何部署更新的程式庫組建的詳細資訊。
 
-## 執行同意更改命令
+## 執行同意更改命令 {#commands}
 
 將SDK擴充功能整合至網站後，您就可以開始使用Platform Web SDK `setConsent`命令，將同意資料傳送至Platform。
 
@@ -96,8 +105,7 @@ Adobe Experience Platform Web SDK可讓您擷取同意管理平台(CMP)產生的
 1. 做為CMP連結或事件接聽程式的一部分，可偵測同意設定中的變更
 
 >[!NOTE]
->
->如需Platform SDK命令的常見語法簡介，請參閱[執行命令](../../../../edge/fundamentals/executing-commands.md)的相關檔案。
+如需Platform SDK命令的常見語法簡介，請參閱[執行命令](../../../../edge/fundamentals/executing-commands.md)的相關檔案。
 
 `setConsent`命令需要兩個參數：
 
@@ -138,8 +146,7 @@ alloy("setConsent", {
 | `value` | 客戶更新的同意資訊，以XDM物件提供，且符合已啟用設定檔之資料集的同意欄位結構。 |
 
 >[!NOTE]
->
->如果您搭配使用其他同意標準和`Adobe`（例如`IAB TCF`），則可為每個標準將其他物件新增至`consent`陣列。 每個物件必須包含`standard`、`version`和`value`的適當值，才能代表同意標準。
+如果您搭配使用其他同意標準和`Adobe`（例如`IAB TCF`），則可為每個標準將其他物件新增至`consent`陣列。 每個物件必須包含`standard`、`version`和`value`的適當值，才能代表同意標準。
 
 以下JavaScript提供函式的範例，該函式可處理網站上的同意偏好設定變更，以作為事件接聽程式或CMP連結中的回呼：
 
