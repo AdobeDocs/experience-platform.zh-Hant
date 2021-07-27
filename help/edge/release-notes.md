@@ -3,25 +3,29 @@ title: Adobe Experience Platform Web SDK 發行說明
 description: Adobe Experience Platform Web SDK 最新版本注意事項。
 keywords: Adobe Experience Platform Web SDK;Platform Web SDK;Web SDK；發行說明；
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: fccad34ad4ad028c7b34356dec7bb34892396317
+source-git-commit: e158b8129fe5afe71af48b7c64ca34b00e79965c
 workflow-type: tm+mt
-source-wordcount: '562'
-ht-degree: 4%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
 # 發行說明
 
-## 2.5.0版，2021年6月
+## 版本2.6.0 - 2021年7月27日
+
+* 在`sendEvent`解析的Promise中提供更多個人化內容，包括Adobe Target回應Token。 執行`sendEvent`命令時，會傳回Promise，最終以`result`物件解析，該物件包含從伺服器收到的資訊。 此結果對象包含名為`decisions`的屬性。 此`decisions`屬性已過時。 已新增新屬性`propositions`。 這個新屬性可讓客戶存取更多個人化內容，包括回應Token。 即將推出更多檔案。
+
+## 版本2.5.0 - 2021年6月
 
 * 新增對重新導向個人化選件的支援。
 * 自動收集的作為負值的檢視區寬度和高度將不再傳送至伺服器。
 * 從`onBeforeEventSend`回呼傳回`false`來取消事件時，現在會記錄訊息。
 * 修正多個事件中，包含特定單一事件專用XDM資料片段的問題。
 
-## 2.4.0版，2021年3月
+## 版本2.4.0 - 2021年3月
 
-* SDK現在可以[安裝為npm套件](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/installing-the-sdk.html)。
+* SDK現在可以[安裝為npm套件](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/installing-the-sdk.html?lang=zh-Hant)。
 * 新增[設定預設同意](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html#default-consent)時`out`選項的支援，這會在收到同意前捨棄所有事件（現有的`pending`選項會讓事件進入佇列，並在收到同意後傳送事件）。
 * [onBeforeEventSend回呼](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html#onbeforeeventsend)現在可用來防止傳送事件。
 * 現在傳送呈現或點按之個人化內容的相關事件時，會使用XDM結構欄位群組，而非`meta.personalization`。
@@ -33,7 +37,7 @@ ht-degree: 4%
 * 錯誤修正：當使用者導覽至新的單頁應用程式檢視、返回原始檢視，然後按一下符合轉換資格的元素時，個人化互動通知事件會包含相同活動的重複資訊。
 * 錯誤修正：如果SDK傳送的第一個事件`documentUnloading`設為`true`，則會使用[`sendBeacon`](https://developer.mozilla.org/zh-TW/docs/Web/API/Navigator/sendBeacon)來傳送事件，導致未建立身分的錯誤。
 
-## 2.3.0版，2020年11月
+## 版本2.3.0 - 2020年11月
 
 * 新增Nonce支援，以允許更嚴格的內容安全性原則。
 * 新增單頁應用程式的個人化支援。
@@ -43,12 +47,12 @@ ht-degree: 4%
 * 錯誤修正：包含唯讀`message`屬性的某些瀏覽器錯誤未得到適當處理，導致向客戶公開不同錯誤。
 * 錯誤修正：如果在iframe內執行SDK，若iframe的HTML頁面來自父視窗的HTML頁面以外的子網域，則會導致錯誤。
 
-## 2.2.0版，2020年10月
+## 版本2.2.0 - 2020年10月
 
 * 錯誤修正：當`idMigrationEnabled`為`true`時，選擇加入物件會阻擋Alloy進行呼叫。
 * 錯誤修正：讓Alloy知道應傳回個人化選件的請求，以避免發生忽隱忽現的問題。
 
-## 2.1.0版，2020年8月
+## 版本2.1.0 - 2020年8月
 
 * 移除`syncIdentity`命令，並支援在`sendEvent`命令中傳遞這些ID。
 * 支援IAB 2.0同意標準。
