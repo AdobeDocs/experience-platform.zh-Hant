@@ -1,10 +1,10 @@
 ---
 title: 網頁擴充功能的動作類型
 description: 了解如何為Web屬性中的標籤擴充功能定義動作類型程式庫模組。
-source-git-commit: 39d9468e5d512c75c9d540fa5d2bcba4967e2881
+source-git-commit: 99780f64c8f09acea06e47ebf5cabc762e05cab2
 workflow-type: tm+mt
-source-wordcount: '338'
-ht-degree: 54%
+source-wordcount: '407'
+ht-degree: 44%
 
 ---
 
@@ -14,13 +14,22 @@ ht-degree: 54%
 >
 >Adobe Experience Platform Launch已重新命名為Experience Platform中的資料收集技術套件。 因此，產品檔案中已推出數個術語變更。 有關術語更改的綜合參考，請參閱以下[document](../../term-updates.md)。
 
-動作類型程式庫模組旨在執行預先定義的動作。 此動作的功用完全由您決定。想傳送信標、顯示優惠活動、感謝使用者造訪、儲存 Cookie，或開啟線上交談支援功能嗎？
+在資料收集標籤的內容中，動作是在發生規則事件且所有條件都通過評估後所執行的動作。
+
+例如，擴充功能可提供「顯示支援聊天」動作類型，其中可顯示支援聊天對話方塊，協助可能在結帳時遇到問題的使用者。
+
+本檔案說明如何在Adobe Experience Platform中定義網頁擴充功能的動作類型。
 
 >[!IMPORTANT]
 >
 >本文介紹 Web 擴充功能的動作類型。如果您正在開發邊緣擴充功能，請改為參閱[邊緣擴充功能的動作類型](../edge/action-types.md)指南。
 >
->本檔案也假設您熟悉程式庫模組，以及這些模組如何整合至標籤擴充功能中。 如果需要相關說明，請先參閱[程式庫模組格式化](./format.md)的概述文章，再返回閱讀本指南。
+>本檔案也假設您熟悉程式庫模組，以及這些模組如何整合至網頁擴充功能。 如果需要相關說明，請先參閱[程式庫模組格式化](./format.md)的概述文章，再返回閱讀本指南。
+
+動作類型通常包含下列項目：
+
+1. 資料收集UI中顯示的[view](./views.md)，可讓使用者修改動作的設定。
+2. 在標籤執行階段程式庫內發出的程式庫模組，用於解譯設定並執行動作。
 
 ```js
 module.exports = function(settings) {
