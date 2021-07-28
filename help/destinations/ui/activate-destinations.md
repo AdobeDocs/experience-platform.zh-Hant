@@ -6,9 +6,9 @@ seo-title: 將設定檔和區段啟用至目的地
 description: 將區段對應至目的地，以啟動您在Adobe Experience Platform中的資料。 若要完成此操作，請遵循下列步驟。
 seo-description: 將區段對應至目的地，以啟動您在Adobe Experience Platform中的資料。 若要完成此操作，請遵循下列步驟。
 exl-id: c3792046-ffa8-4851-918f-98ced8b8a835
-source-git-commit: a28dc64cfe7f352a023aa2a5bd1156307bbad39f
+source-git-commit: 1b750f0dc51983251d39515de15cd0286f5b51c1
 workflow-type: tm+mt
-source-wordcount: '3054'
+source-wordcount: '2957'
 ht-degree: 0%
 
 ---
@@ -162,7 +162,7 @@ ht-degree: 0%
 
    >[!IMPORTANT]
    >
-   >在一天的某個時間導出檔案的選項當前處於測試狀態，僅適用於特定數量的客戶。<br> <br> 由於內部Experience Platform進程的配置方式，第一個增量或完整檔案導出可能不包含所有回填資料。  <br> <br> 為確保完整檔案和增量檔案都能匯出完整且最新的回填資料，Adobe建議在次日中午12點後設定第一次檔案匯出時間。這是將在未來版本中解決的限制。
+   >由於內部Experience Platform進程的配置方式，第一個增量或完整檔案導出可能不包含所有回填資料。<br> <br> 為確保完整檔案和增量檔案都能匯出完整且最新的回填資料，Adobe建議在次日中午12點後設定第一次檔案匯出時間。這是將在未來版本中解決的限制。
 
 3. 使用&#x200B;**[!UICONTROL Date]**&#x200B;選取器來選擇應進行匯出的日期或間隔。
 4. 選擇&#x200B;**[!UICONTROL 建立]**&#x200B;以保存計畫。
@@ -199,19 +199,15 @@ ht-degree: 0%
 
    * 選擇&#x200B;**[!UICONTROL 每小時]**&#x200B;時，使用&#x200B;**[!UICONTROL Every]**&#x200B;選擇器在&#x200B;**[!UICONTROL 3]**、**[!UICONTROL 6]**、**[!UICONTROL 8]**&#x200B;和&#x200B;**[!UICONTROL 12]**&#x200B;小時選項之間進行選擇。
 
-      >[!IMPORTANT]
-      >
-      >每3、6、8或12小時導出增量檔案的選項當前處於測試狀態，並且僅對特定數量的客戶可用。 非測試版客戶每天可匯出一次增量檔案。
 
-
-2. 使用&#x200B;**[!UICONTROL Time]**&#x200B;選擇器，選擇應在何時進行導出的[!DNL UTC]格式。
+1. 使用&#x200B;**[!UICONTROL Time]**&#x200B;選擇器，選擇應在何時進行導出的[!DNL UTC]格式。
 
    >[!IMPORTANT]
    >
-   >為匯出選取一天中時間的選項，僅適用於選取數量的客戶。<br> <br> 由於內部Experience Platform進程的配置方式，第一個增量或完整檔案導出可能不包含所有回填資料。  <br> <br> 為確保完整檔案和增量檔案都能匯出完整且最新的回填資料，Adobe建議在次日中午12點後設定第一次檔案匯出時間。這是將在未來版本中解決的限制。
+   >由於內部Experience Platform進程的配置方式，第一個增量或完整檔案導出可能不包含所有回填資料。<br> <br> 為確保完整檔案和增量檔案都能匯出完整且最新的回填資料，Adobe建議在次日中午12點後設定第一次檔案匯出時間。這是將在未來版本中解決的限制。
 
-3. 使用&#x200B;**[!UICONTROL Date]**&#x200B;選取器來選擇應進行匯出的日期或間隔。
-4. 選擇&#x200B;**[!UICONTROL 建立]**&#x200B;以保存計畫。
+1. 使用&#x200B;**[!UICONTROL Date]**&#x200B;選取器來選擇應進行匯出的日期或間隔。
+1. 選擇&#x200B;**[!UICONTROL 建立]**&#x200B;以保存計畫。
 
 >[!IMPORTANT]
 >
@@ -302,10 +298,6 @@ ht-degree: 0%
 >title="關於重複資料刪除金鑰"
 >abstract="選取重複資料刪除金鑰，即可在匯出檔案中消除相同設定檔的多個記錄。 選取單一命名空間或最多兩個XDM架構屬性作為重複資料刪除索引鍵。 未選取重複資料刪除金鑰可能會導致匯出檔案中出現重複的設定檔項目。"
 >additional-url="http://www.adobe.com/go/destinations-deduplication-keys-en" text="進一步了解檔案"
-
->[!IMPORTANT]
->
->使用重複資料刪除金鑰的選項目前處於測試階段，僅適用於特定數量的客戶。
 
 重複資料刪除索引鍵消除了在一個匯出檔案中有多個相同設定檔記錄的可能性。
 
