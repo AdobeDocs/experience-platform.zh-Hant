@@ -1,46 +1,51 @@
 ---
 title: Adobe Experience Platform 發行說明
-description: 2021年6月30日的Experience Platform發行說明。
+description: 2021年7月28日的Experience Platform發行說明。
 doc-type: release notes
-last-update: June 30, 2021
+last-update: July 28, 2021
 author: ens60013
 exl-id: 8f2c9bf8-1487-46e4-993b-bd9b63774cab
-source-git-commit: fc916f87bf07e5eabf7d1681059406e2fea362e0
+source-git-commit: dc01e03975fdda375b31f44edc8459fa32b5a61b
 workflow-type: tm+mt
-source-wordcount: '530'
-ht-degree: 6%
+source-wordcount: '387'
+ht-degree: 10%
 
 ---
 
 
 # Adobe Experience Platform 發行說明
 
-**發行日期：2021 年 6 月 30 日**
+**發行日期：2021 年 7 月 28 日**
 
 Adobe Experience Platform 現有功能更新：
 
-- [即時客戶個人檔案](#profile)
-- [沙盒](#sandboxes)
+- [Data Science Workspace](#dsw)
+- [Experience Data Model(XDM)](#xdm)
 - [來源](#sources)
 
-## 即時客戶個人檔案 {#profile}
+## Data Science Workspace {#dsw}
 
-Adobe Experience Platform可讓您為客戶提供協調、一致且相關的體驗，無論客戶在何處或何時與您的品牌互動。 透過即時客戶個人檔案，您可以全面了解各個客戶，其中結合來自多個管道的資料，包括線上、離線、CRM和第三方資料。 [!DNL Profile] 可讓您將客戶資料併入統一檢視中，提供每個客戶互動的可操作、時間戳記帳戶。
+Data Science Workspace使用機器學習和人工智慧，從您的資料建立深入分析。 整合至Adobe Experience Platform的Data Science Workspace可協助您跨Adobe解決方案，使用內容和資料資產進行預測。
 
-| 功能 | 說明 |
-| ------- | ----------- |
-| 合併策略工作流更新 | 在UI中建立和更新合併原則時，使用者現在可以根據聯合結構預覽20個範例設定檔。 這可讓使用者在儲存合併原則設定前，預覽客戶設定檔的外觀。 有關詳細資訊，請參閱[合併策略UI指南](../../profile/merge-policies/ui-guide.md)。 |
-| 身分重疊報表 | 身分重疊報表是即時客戶設定檔API的一部分，可顯示設定檔存放區的組成。 使用`/previewsamplestatus`端點，身分重疊報表會公開對可定址對象貢獻最大的身分。 若要深入了解，請造訪[預覽範例狀態API端點指南](../../profile/api/preview-sample-status.md)。 |
-
-如需「即時客戶設定檔」的詳細資訊，包括使用[!DNL Profile]資料的教學課程和最佳實務，請從閱讀[即時客戶設定檔概述](../../profile/home.md)開始。
-
-## 沙盒 {#sandboxes}
-
-Adobe Experience Platform的建置宗旨是在全球範圍豐富數位體驗應用程式。 公司通常並行運行多個數字型驗應用程式，需要滿足這些應用程式的開發、測試和部署，同時確保操作合規性。 為了滿足這項需求，Experience Platform提供沙箱，可將單一Platform執行個體分割成個別的虛擬環境，以協助開發及改進數位體驗應用程式。
+**新功能**
 
 | 功能 | 說明 |
-| ------- | ----------- |
-| 生產沙箱重設增強功能 | 您現在可以重設用於與Adobe Audience Manager或Audience Core Service雙向區段共用的生產沙箱。 您可以從UI或使用API中的新`validationOnly`和`ignoreWarnings`參數來完成此作業。 如需詳細資訊，請參閱UI](../../sandboxes/ui/user-guide.md)中的[重設沙箱和API](../../sandboxes/api/sandboxes.md)中的[重設沙箱的教學課程。 |
+| --- | --- |
+| 程式庫和作業系統更新 | Data Science Workspace已對程式庫和作業系統進行重大更新，以改善功能和可用性。 這包括JupyterLab 1.2.20、Python 3.7、Pancits 1.2.4、Tensorflow 2.4.1（支援CUDA 11和CUDNN 8）等。 若要了解如何在JupyterLab中檢視可用的程式庫，請造訪JupyterLab筆記型電腦概述檔案中的[支援的程式庫](../../data-science-workspace/jupyterlab/overview.md#supported-libraries)區段。 |
+
+如需Data Science Workspace的更多一般資訊，請參閱[Data Science Workspace概述](../../data-science-workspace/home.md)。
+
+## Experience Data Model(XDM) {#xdm}
+
+Experience Data Model(XDM)是開放原始碼規格，旨在提升數位體驗的效能。 它以結構形式提供資料的通用結構和定義，可讓任何應用程式與Platform服務通訊。
+
+**新功能**
+
+| 功能 | 說明 |
+| --- | --- |
+| 電信工業過濾器 | 現在，在UI中將欄位群組新增至結構時，您可以依電信產業進行篩選。 請參閱[電信行業實體關係圖(ERD)](../../xdm/schema/industries/telecom.md) ，查看電信使用案例的建議資料模型。 |
+
+如需Platform中XDM的更多一般資訊，請參閱[XDM系統概述](../../xdm/home.md)。
 
 ## 來源 {#sources}
 
@@ -50,7 +55,7 @@ Experience Platform提供RESTful API和互動式UI，讓您輕鬆為各種資料
 
 | 功能 | 說明 |
 | ------- | ----------- |
-| [!DNL Veeva CRM] （測試版） | 您現在可以使用[!DNL Flow Service] API或UI將[!DNL Veeva CRM]連線至Experience Platform。 如需詳細資訊，請參閱[[!DNL Veeva CRM] 連接器概述](../../sources/connectors/crm/veeva.md) 。 |
-| 支援監控流資料流 | 您現在可以使用來源UI工作區，以透過對應的量度和狀態，監控來自串流來源的資料擷取活動。 有關詳細資訊，請參閱有關[監視流資料流](../../sources/tutorials/ui/monitor-streaming.md)的教程。 |
+| 測試版來源轉至GA | 下列來源已從測試版提升為正式發行： <ul><li>[[!DNL Amazon Redshift]](../../sources/connectors/databases/redshift.md)</li><li>[[!DNL Azure Table Storage]](../../sources/connectors/databases/ats.md)</li><li>[[!DNL PayPal]](../../sources/connectors/payments/paypal.md)</li></ul> |
+| [!DNL Salesforce Marketing Cloud] （測試版） | 您現在可以使用[!DNL Flow Service] API或UI將[!DNL Salesforce Marketing Cloud]連線至Experience Platform。 如需詳細資訊，請參閱[[!DNL Salesforce Marketing Cloud] 連接器概述](../../sources/connectors/marketing-automation/salesforce-marketing-cloud.md) 。 |
 
 若要進一步了解來源，請參閱[來源概述](../../sources/home.md)。
