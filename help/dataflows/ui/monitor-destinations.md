@@ -6,7 +6,7 @@ title: 在UI中監視目標的資料流
 topic-legacy: overview
 type: Tutorial
 exl-id: 8eb7bb3c-f2dc-4dbc-9cf5-3d5d3224f5f1
-source-git-commit: 029e990f5b30713ceea5da80ace8002368ac5652
+source-git-commit: 96855ec4e42e7adb17dc36a734561f63f926693b
 workflow-type: tm+mt
 source-wordcount: '1733'
 ht-degree: 0%
@@ -117,7 +117,7 @@ ht-degree: 0%
 
 ![](../assets/ui/monitor-destinations/dataflow-records-batch.png)
 
-## 監控目標控制面板
+## 監控目標控制面板 {#monitoring-destinations-dashboard}
 
 要訪問[!UICONTROL 監視]儀表板，請選擇&#x200B;**[!UICONTROL 監視]**(![監視表徵圖](../assets/ui/monitor-destinations/monitoring-icon.png)
 )。 在[!UICONTROL 監視]頁面上，選擇[!UICONTROL 目標]。 [!UICONTROL 監視]控制面板包含目標運行作業的度量和資訊。
