@@ -4,10 +4,10 @@ user-guide-title: Adobe Experience Platform 儀表板說明
 breadcrumb-title: 儀表板指南
 user-guide-description: 在可自訂儀表板上呈現視覺化的 Experience Platform 資料。
 feature: 資料管理
-source-git-commit: bf09332681d309b41a924c4c29ee8f66078816f9
+source-git-commit: 168960692605b96324533ca295544c2f855481b1
 workflow-type: tm+mt
-source-wordcount: '56'
-ht-degree: 37%
+source-wordcount: '60'
+ht-degree: 35%
 
 ---
 
@@ -16,6 +16,7 @@ ht-degree: 37%
 
 * [控制面板概觀](home.md)
 * [控制面板存取權限](permissions.md)
+* [將控制面板下載為PDF](download.md)
 * 可用控制面板{#guides}
    * [設定檔](guides/profiles.md)
    * [區段](guides/segments.md)
