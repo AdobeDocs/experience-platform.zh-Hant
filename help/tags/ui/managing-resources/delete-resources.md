@@ -1,9 +1,9 @@
 ---
 title: 刪除資源
 description: 了解如何刪除Adobe Experience Platform中的標籤資源。
-source-git-commit: 39d9468e5d512c75c9d540fa5d2bcba4967e2881
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '549'
+source-wordcount: '550'
 ht-degree: 75%
 
 ---
@@ -12,7 +12,7 @@ ht-degree: 75%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch已重新命名為Experience Platform中的資料收集技術套件。 因此，產品檔案中已推出數個術語變更。 有關術語更改的綜合參考，請參閱以下[document](../../term-updates.md)。
+>Adobe Experience Platform Launch在Adobe Experience Platform中已重新命名為一套資料收集技術。 因此，產品檔案中已推出數個術語變更。 有關術語更改的綜合參考，請參閱以下[document](../../term-updates.md)。
 
 刪除資源是將該資源從Adobe Experience Platform中永久移除。 如果您仍希望資源顯示在資料收集UI中，但不顯示在標籤庫中，請參閱[從庫中移除資源](remove-resources-from-library.md)。
 
