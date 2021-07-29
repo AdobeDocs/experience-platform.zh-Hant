@@ -1,9 +1,9 @@
 ---
 title: 發佈流程
 description: 了解在Adobe Experience Platform中建立程式庫、測試組建及核准以供生產的程式。
-source-git-commit: 39d9468e5d512c75c9d540fa5d2bcba4967e2881
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '1498'
+source-wordcount: '1499'
 ht-degree: 7%
 
 ---
@@ -12,7 +12,7 @@ ht-degree: 7%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch已重新命名為Experience Platform中的資料收集技術套件。 因此，產品檔案中已推出數個術語變更。 有關術語更改的綜合參考，請參閱以下[document](../../term-updates.md)。
+>Adobe Experience Platform Launch在Adobe Experience Platform中已重新命名為一套資料收集技術。 因此，產品檔案中已推出數個術語變更。 有關術語更改的綜合參考，請參閱以下[document](../../term-updates.md)。
 
 Adobe Experience Platform中的標籤發佈流程是指建立程式庫、測試組建以及核准以供生產的程式。
 
@@ -63,7 +63,7 @@ Adobe Experience Platform中的標籤發佈流程是指建立程式庫、測試�
 | [!UICONTROL 提交並建置到測試環境] | 這只能由同時具有開發和核准權限的使用者執行。 此動作會從開發環境中取消指派程式庫，將程式庫移動至[!UICONTROL Submitted]狀態，並將程式庫建置至測試環境。 程式庫的最新組建必須成功，才能啟用此選項。 |
 | [!UICONTROL 核准以發佈] | 這只能由同時具有開發和核准權限的使用者執行。 此動作會從開發環境中取消指派程式庫，並將其移至[!UICONTROL 已核准]狀態 — 略過測試環境，而完全跳過[!UICONTROL 已提交]狀態。 程式庫的最新組建必須成功，才能啟用此選項。 |
 | [!UICONTROL 核准並發佈至生產環境] | 這只能由具有開發、核准和發佈權限的使用者執行。 此動作會從開發環境中取消指派程式庫，將其移至[!UICONTROL 已核准]狀態，然後發佈至生產環境。 生產組建完成後，程式庫會移至[!UICONTROL Published]狀態。 程式庫的最新組建必須成功，才能啟用此選項。 |
-| [!UICONTROL 刪除] | 將程式庫從Platform launch中移除。 這不會從環境中移除組建。 |
+| [!UICONTROL 刪除] | 從系統中刪除庫。 這不會從環境中移除組建。 |
 
 ### [!UICONTROL 已提交] {#submitted}
 
