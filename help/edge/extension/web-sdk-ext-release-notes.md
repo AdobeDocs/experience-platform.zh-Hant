@@ -2,10 +2,10 @@
 title: Adobe Experience Platform Web SDK擴充功能發行說明
 description: Adobe Experience Platform Web SDK標籤擴充功能
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+source-git-commit: c6feab3c9cda479c7dabdbf0533145fdcaa36ab1
 workflow-type: tm+mt
-source-wordcount: '1071'
-ht-degree: 52%
+source-wordcount: '1093'
+ht-degree: 53%
 
 ---
 
@@ -13,7 +13,13 @@ ht-degree: 52%
 
 本檔案涵蓋Adobe Experience Platform Web SDK標籤擴充功能的發行說明。 如需SDK本身的最新發行說明，請參閱[平台Web SDK發行說明](https://experienceleague.adobe.com/docs/experience-platform/edge/release-notes.html)。
 
+## 版本2.6.1 - 2021年7月29日
+
+包含 2.6.1 版的 Adobe Experience Platform Web SDK 程式庫。
+
 ## 版本2.6.0 - 2021年7月27日
+
+包含 2.6.0 版的 Adobe Experience Platform Web SDK 程式庫。
 
 * 使用「邊緣設定」一詞的標籤、說明和錯誤訊息已變更為使用「datastream」一詞，以符合最新的Adobe Experience Platform術語。
 * 在擴充功能組態檢視中，已新增處理大量資料流和資料流環境的支援。
