@@ -1,9 +1,9 @@
 ---
 title: 邊緣擴充功能的資料元素類型
 description: 了解如何為Edge屬性中的標籤擴充功能定義資料元素類型程式庫模組。
-source-git-commit: 99780f64c8f09acea06e47ebf5cabc762e05cab2
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '434'
+source-wordcount: '435'
 ht-degree: 18%
 
 ---
@@ -12,7 +12,7 @@ ht-degree: 18%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch已重新命名為Experience Platform中的資料收集技術套件。 因此，產品檔案中已推出數個術語變更。 有關術語更改的綜合參考，請參閱以下[document](../../term-updates.md)。
+>Adobe Experience Platform Launch在Adobe Experience Platform中已重新命名為一套資料收集技術。 因此，產品檔案中已推出數個術語變更。 有關術語更改的綜合參考，請參閱以下[document](../../term-updates.md)。
 
 在標籤中，資料元素是網頁或行動頁面上資料片段的別名，無論該資料在伺服器收到的事件內的何處找到。 資料元素可供規則參照，並可作為據以存取這些資料片段的抽象概念。當資料的位置在未來變更時（例如變更包含值的事件索引鍵），單一資料元素可重新設定，而所有參考該資料元素的規則可能維持不變。
 
