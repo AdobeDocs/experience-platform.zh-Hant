@@ -1,9 +1,9 @@
 ---
 title: 網頁擴充功能的條件類型
 description: 了解如何為Web屬性中的標籤擴充功能定義條件類型程式庫模組。
-source-git-commit: 99780f64c8f09acea06e47ebf5cabc762e05cab2
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '497'
+source-wordcount: '498'
 ht-degree: 60%
 
 ---
@@ -12,7 +12,7 @@ ht-degree: 60%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch已重新命名為Experience Platform中的資料收集技術套件。 因此，產品檔案中已推出數個術語變更。 有關術語更改的綜合參考，請參閱以下[document](../../term-updates.md)。
+>Adobe Experience Platform Launch在Adobe Experience Platform中已重新命名為一套資料收集技術。 因此，產品檔案中已推出數個術語變更。 有關術語更改的綜合參考，請參閱以下[document](../../term-updates.md)。
 
 在規則的內容中，會在事件發生後評估條件。 所有條件都必須傳回 true，才會繼續處理規則。例外情況是使用者將條件明確放入「例外」貯體中時，該貯體中的所有條件都必須傳回false，規則才能繼續處理。
 
