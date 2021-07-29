@@ -1,9 +1,9 @@
 ---
 title: Adobe Analytics Product String擴充功能概述
 description: 了解Adobe Experience Platform中的Adobe Analytics Product String標籤擴充功能。
-source-git-commit: 12c3f440319046491054b3ef3ec404798bb61f06
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '524'
+source-wordcount: '525'
 ht-degree: 84%
 
 ---
@@ -12,7 +12,7 @@ ht-degree: 84%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch已重新命名為Experience Platform中的資料收集技術套件。 因此，產品檔案中已推出數個術語變更。 有關術語更改的綜合參考，請參閱以下[document](../../../term-updates.md)。
+>Adobe Experience Platform Launch在Adobe Experience Platform中已重新命名為一套資料收集技術。 因此，產品檔案中已推出數個術語變更。 有關術語更改的綜合參考，請參閱以下[document](../../../term-updates.md)。
 
 `products` 變數會追蹤使用者在您的網站上與產品的互動情形。例如，`products` 變數可追蹤某項產品被檢視、新增至購物車、結帳和購買的次數。此外也可追蹤您的網站上各種商品銷售類別的相對成效。
 
