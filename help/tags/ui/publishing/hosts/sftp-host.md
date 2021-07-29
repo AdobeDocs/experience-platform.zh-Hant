@@ -1,9 +1,9 @@
 ---
 title: SFTP 主機
 description: 了解如何在Adobe Experience Platform中設定標籤，將程式庫組建傳送至安全、自行托管的SFTP伺服器。
-source-git-commit: 39d9468e5d512c75c9d540fa5d2bcba4967e2881
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '526'
+source-wordcount: '527'
 ht-degree: 39%
 
 ---
@@ -12,7 +12,7 @@ ht-degree: 39%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch已重新命名為Experience Platform中的資料收集技術套件。 因此，產品檔案中已推出數個術語變更。 有關術語更改的綜合參考，請參閱以下[document](../../../term-updates.md)。
+>Adobe Experience Platform Launch在Adobe Experience Platform中已重新命名為一套資料收集技術。 因此，產品檔案中已推出數個術語變更。 有關術語更改的綜合參考，請參閱以下[document](../../../term-updates.md)。
 
 若您不希望讓 Adobe 管理您的託管程式庫，另一個選項是讓 Adobe Experience Platform 將組建傳送至您自行託管的安全 SFTP 伺服器。
 
