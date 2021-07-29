@@ -1,11 +1,11 @@
 ---
 title: Adobe Experience Platform Web SDK設定
-description: 了解適用於Adobe Experience Platform Launch的Adobe Experience Platform Web SDK擴充功能
+description: 了解Adobe Experience Platform Web SDK標籤擴充功能。
 exl-id: 96d32db8-0c9a-49f0-91f3-0244522d66df
-source-git-commit: e5b43a65bb9907f333f1ffedfbeed00f02f8ef39
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '1043'
-ht-degree: 7%
+source-wordcount: '1034'
+ht-degree: 8%
 
 ---
 
@@ -13,11 +13,11 @@ ht-degree: 7%
 
 Adobe Experience Platform Web SDK擴充功能會透過Adobe Experience Platform邊緣網路，將資料從Web屬性傳送至Adobe Experience Cloud。 擴充功能可讓您將資料串流至Platform、同步身分、處理客戶同意訊號，以及自動收集內容資料。
 
-本檔案說明如何在Adobe Experience Platform Launch使用者介面中設定擴充功能。
+本檔案說明如何在資料收集UI中設定擴充功能。
 
 ## 設定擴充功能
 
-如果已為屬性安裝Platform Web SDK擴充功能，請開啟Platform launchUI中的屬性，然後選取&#x200B;**[!UICONTROL Extensions]**&#x200B;標籤。 在「平台Web SDK」下，選擇「**[!UICONTROL 配置]**」。
+如果已為屬性安裝Platform Web SDK擴充功能，請開啟資料收集UI中的屬性，然後選取&#x200B;**[!UICONTROL Extensions]**&#x200B;標籤。 在「平台Web SDK」下，選擇「**[!UICONTROL 配置]**」。
 
 ![](../images/extension/overview/configure.png)
 
@@ -35,7 +35,7 @@ Adobe Experience Platform Web SDK擴充功能會透過Adobe Experience Platform�
 
 ### [!UICONTROL 名稱]
 
-Adobe Experience Platform Web SDK擴充功能支援頁面上的多個執行個體。 名稱可用來透過單一Platform launch設定將資料傳送至多個組織。
+Adobe Experience Platform Web SDK擴充功能支援頁面上的多個執行個體。 名稱可用來透過標籤設定將資料傳送至多個組織。
 
 擴充功能的名稱預設為「[!DNL alloy]」。 不過您可將例項名稱變更為任何有效的 JavaScript 物件名稱。
 
