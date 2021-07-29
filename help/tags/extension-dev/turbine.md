@@ -1,10 +1,10 @@
 ---
 title: Turbine自由變數
 description: 了解Turbine物件，此自由變數可提供Adobe Experience Platform標籤執行階段的特定資訊和公用程式。
-source-git-commit: 39d9468e5d512c75c9d540fa5d2bcba4967e2881
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '590'
-ht-degree: 52%
+source-wordcount: '577'
+ht-degree: 48%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 52%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch已重新命名為Experience Platform中的資料收集技術套件。 因此，產品檔案中已推出數個術語變更。 有關術語更改的綜合參考，請參閱以下[document](../term-updates.md)。
+>Adobe Experience Platform Launch在Adobe Experience Platform中已重新命名為一套資料收集技術。 因此，產品檔案中已推出數個術語變更。 有關術語更改的綜合參考，請參閱以下[document](../term-updates.md)。
 
 `turbine` 物件是您擴充功能的程式庫模組範圍內的「自由變數」。它提供Adobe Experience Platform標籤執行階段的特定資訊和公用程式，且程式庫模組一律可使用，而不需使用`require()`。
 
@@ -90,7 +90,7 @@ var mcidInstance = turbine.getSharedModule('adobe-mcid', 'mcid-instance');
 turbine.logger.error('Error!');
 ```
 
-記錄公用程式可用來將訊息記錄到主控台。 只有在使用者開啟除錯功能時，訊息才會顯示在主控台中。開啟除錯功能的建議方式，是使用 [Adobe Experience Cloud Debugger](https://chrome.google.com/webstore/detail/adobe-experience-cloud-de/ocdmogmohccmeicdhlhhgepeaijenapj?src=propaganda) 或 [ Launch and DTM Switch](https://chrome.google.com/webstore/detail/adobe-dtm-switch/nlgdemkdapolikbjimjajpmonpbpmipk) Chrome 擴充功能。或者，使用者可在瀏覽器開發人員主控台內執行下列命令`_satellite.setDebug(true)`。 記錄器具有下列方法：
+記錄公用程式可用來將訊息記錄到主控台。 只有在使用者開啟除錯功能時，訊息才會顯示在主控台中。開啟偵錯功能的建議方式是使用[Adobe Experience Cloud Debugger](https://chrome.google.com/webstore/detail/adobe-experience-cloud-de/ocdmogmohccmeicdhlhhgepeaijenapj?src=propaganda)。 或者，使用者可在瀏覽器開發人員主控台內執行下列命令`_satellite.setDebug(true)`。 記錄器具有下列方法：
 
 * `logger.log(message: string)`：將訊息記錄到主控台。
 * `logger.info(message: string)`：將資訊性訊息記錄到主控台。
