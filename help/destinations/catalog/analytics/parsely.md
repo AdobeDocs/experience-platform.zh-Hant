@@ -3,9 +3,9 @@ keywords: 剖析。 ly;parsely;parsely;parse.ly;Parse.ly
 title: Parse.ly Analytics擴充功能
 description: Parse.ly Analytics擴充功能是Adobe Experience Platform中的分析目的地。 如需擴充功能的詳細資訊，請參閱Exchange上的擴充功能頁面。
 exl-id: 84d98e74-3e34-406c-9b80-81100c766dc8
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+source-git-commit: 6bbccf6751240637c861c2962b64e5247d8abb43
 workflow-type: tm+mt
-source-wordcount: '453'
+source-wordcount: '454'
 ht-degree: 3%
 
 ---
@@ -26,7 +26,7 @@ Parse.ly是Adobe Experience Platform中的分析擴充功能。 如需擴充功�
 
 [!DNL Destinations]目錄中提供此擴充功能，供已購買Platform的所有客戶使用。
 
-若要使用此擴充功能，您需要存取Adobe Experience Platform中的標籤。 以隨附的加值功能形式提供給Adobe Experience Cloud客戶的標籤。 請連絡您的組織管理員以取得標籤的存取權，並要求他們授予您&#x200B;**[!UICONTROL manage_properties]**&#x200B;權限，以便您安裝擴充功能。 並要求他們授予您&#x200B;**[!UICONTROL manage_properties]**&#x200B;權限，以便您安裝擴充功能。
+若要使用此擴充功能，您需要存取Adobe Experience Platform中的標籤。 標籤以隨附的加值功能形式提供給Adobe Experience Cloud客戶。 請連絡您的組織管理員以取得標籤的存取權，並要求他們授予您&#x200B;**[!UICONTROL manage_properties]**&#x200B;權限，以便您安裝擴充功能。 並要求他們授予您&#x200B;**[!UICONTROL manage_properties]**&#x200B;權限，以便您安裝擴充功能。
 
 ## 安裝擴充功能 {#install-extension}
 
