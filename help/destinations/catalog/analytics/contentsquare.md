@@ -3,9 +3,9 @@ keywords: contentsquare擴展；contentsquare目標；contentsquare
 title: Contentsquare擴展
 description: Contentsquare擴充功能是Adobe Experience Platform中的分析目的地。 如需擴充功能的詳細資訊，請參閱Exchange上的擴充功能頁面。
 exl-id: bf836a15-b87c-4a4b-a3fc-92d3cf9bc90e
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+source-git-commit: 6bbccf6751240637c861c2962b64e5247d8abb43
 workflow-type: tm+mt
-source-wordcount: '493'
+source-wordcount: '494'
 ht-degree: 5%
 
 ---
@@ -27,7 +27,7 @@ ht-degree: 5%
 
 [!DNL Destinations]目錄中提供此擴充功能，供已購買Platform的所有客戶使用。
 
-若要使用此擴充功能，您需要存取Adobe Experience Platform中的標籤。 以隨附的加值功能形式提供給Adobe Experience Cloud客戶的標籤。 請連絡您的組織管理員以取得標籤的存取權，並要求他們授予您&#x200B;**[!UICONTROL manage_properties]**&#x200B;權限，以便您安裝擴充功能。 並要求他們授予您&#x200B;**[!UICONTROL manage_properties]**&#x200B;權限，以便您安裝擴充功能。
+若要使用此擴充功能，您需要存取Adobe Experience Platform中的標籤。 標籤以隨附的加值功能形式提供給Adobe Experience Cloud客戶。 請連絡您的組織管理員以取得標籤的存取權，並要求他們授予您&#x200B;**[!UICONTROL manage_properties]**&#x200B;權限，以便您安裝擴充功能。 並要求他們授予您&#x200B;**[!UICONTROL manage_properties]**&#x200B;權限，以便您安裝擴充功能。
 
 ## 安裝擴充功能 {#install-extension}
 
