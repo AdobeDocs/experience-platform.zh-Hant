@@ -3,9 +3,9 @@ title: Adobe Experience Platform Web SDK中的IAB TCF 2.0支援
 description: 了解如何使用Adobe Experience Platform Web SDK支援IAB TCF 2.0同意偏好設定
 keywords: 同意；setConsent；設定檔隱私權欄位群組；體驗事件隱私權欄位群組；隱私權欄位群組；IAB TCF 2.0；即時CDP；即時客戶資料設定檔
 exl-id: 78e728f4-1604-40bf-9e21-a056024bbc98
-source-git-commit: da7696d288543abd21ff8a1402e81dcea32efbc2
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '879'
+source-wordcount: '864'
 ht-degree: 0%
 
 ---
@@ -14,10 +14,10 @@ ht-degree: 0%
 
 Adobe Experience Platform Web SDK支援互動式廣告局透明與同意架構2.0版(IAB TCF 2.0)。 本指南說明透過Adobe Experience Platform Web SDK支援IAB TCF 2.0的需求，這些IAB TCF 2.0與即時客戶資料平台、Audience Manager、體驗事件、Adobe Analytics和Experience Edge整合。
 
-此外，下列指南也可協助學習如何將IAB TCF 2.0與Adobe Experience Platform Launch整合，以及不使用Analytics。
+此外，也提供下列指南，協助學習如何將IAB TCF 2.0與標籤整合，以及不使用標籤。
 
-- [使用Adobe Experience Platform Launch](./with-launch.md)
-- [不含Adobe Experience Platform Launch](./without-launch.md)
+- [帶標籤](./with-launch.md)
+- [無標籤](./without-launch.md)
 
 ## 快速入門
 
@@ -90,4 +90,4 @@ Adobe Experience Platform Web SDK有`sendEvent`命令，用於收集體驗事件
 
 ## 後續步驟
 
-現在您已基本了解IAB透明與同意架構2.0，請參閱有關搭配Adobe Experience Platform Launch](./with-launch.md)使用IAB TCF 2.0 [或不搭配Adobe Experience Platform Launch](./without-launch.md)使用[的指南。
+現在您已基本了解IAB透明與同意架構2.0，請參閱使用IAB TCF 2.0 [搭配標籤](./with-launch.md)或[搭配標籤](./without-launch.md)的相關指南。
