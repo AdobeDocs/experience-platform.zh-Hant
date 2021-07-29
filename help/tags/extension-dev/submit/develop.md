@@ -1,10 +1,10 @@
 ---
 title: 開發擴充功能
 description: 本檔案提供標籤擴充功能開發程式的一般概述，其中提供進一步檔案的連結，以取得更詳細的程式。
-source-git-commit: 39d9468e5d512c75c9d540fa5d2bcba4967e2881
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '530'
-ht-degree: 40%
+source-wordcount: '531'
+ht-degree: 39%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 40%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch已重新命名為Experience Platform中的資料收集技術套件。 因此，產品檔案中已推出數個術語變更。 有關術語更改的綜合參考，請參閱以下[document](../../term-updates.md)。
+>Adobe Experience Platform Launch在Adobe Experience Platform中已重新命名為一套資料收集技術。 因此，產品檔案中已推出數個術語變更。 有關術語更改的綜合參考，請參閱以下[document](../../term-updates.md)。
 
 標籤擴充功能應視為具有自身需求的（小型）產品。 判斷 Adobe Experience Platform 使用者將如何使用您的擴充功能，可協助您將功能分類為您的擴充功能所應提供的事件類型、條件類型、動作類型和資料元素類型。
 
