@@ -3,9 +3,9 @@ title: 安裝Adobe Experience Platform Web SDK
 description: 了解如何安裝Experience PlatformWeb SDK。
 keywords: 網頁sdk安裝；安裝網頁sdk;internet explorer;Promise;npm套件
 exl-id: b1de7ca1-d0d2-4661-a273-a1acf29afcd5
-source-git-commit: 12c3f440319046491054b3ef3ec404798bb61f06
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '928'
+source-wordcount: '920'
 ht-degree: 2%
 
 ---
@@ -14,13 +14,13 @@ ht-degree: 2%
 
 有三種支援的使用Adobe Experience Platform Web SDK方式：
 
-1. 使用Adobe Experience Platform Web SDK的慣用方式為透過[Adobe Experience Platform Launch](https://launch.adobe.com/tw/)。
+1. 使用Adobe Experience Platform Web SDK的慣用方式是透過資料收集UI。
 1. Adobe Experience Platform Web SDK也可在內容傳遞網路(CDN)上提供，供您使用。
 1. 使用NPM程式庫，此程式庫會匯出EcmaScript 5和EcmaScript 2015(ES6)模組。
 
-## 選項1:安裝Adobe Experience Platform Launch擴充功能
+## 選項1:安裝標籤擴充功能
 
-如需Adobe Experience Platform Launch擴充功能的檔案，請參閱[launch檔案](../../tags/extensions/web/sdk/overview.md)
+如需標籤擴充功能的相關檔案，請參閱[launch檔案](../../tags/extensions/web/sdk/overview.md)
 
 ## 選項2:安裝預先建置的獨立版本
 
