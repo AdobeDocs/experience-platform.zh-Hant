@@ -1,9 +1,9 @@
 ---
 title: 屬性
 description: 了解在Adobe Experience Platform中，如何為您的組織組織組織和分組擴充功能、環境和程式庫。
-source-git-commit: 39d9468e5d512c75c9d540fa5d2bcba4967e2881
+source-git-commit: 010e05968f1d7ad5675b0f0af43d9cfcc1f3a2ff
 workflow-type: tm+mt
-source-wordcount: '1186'
+source-wordcount: '1178'
 ht-degree: 56%
 
 ---
@@ -12,7 +12,7 @@ ht-degree: 56%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch已重新命名為Experience Platform中的資料收集技術套件。 因此，產品檔案中已推出數個術語變更。 有關術語更改的綜合參考，請參閱以下[document](../../term-updates.md)。
+>Adobe Experience Platform Launch在Adobe Experience Platform中已重新命名為一套資料收集技術。 因此，產品檔案中已推出數個術語變更。 有關術語更改的綜合參考，請參閱以下[document](../../term-updates.md)。
 
 ## Web 屬性
 
@@ -21,8 +21,6 @@ Web 屬性是規則、資料元素、設定的擴充功能、環境和程式庫�
 ## 行動屬性
 
 行動屬性類型可包含多個應用程式。例如，在行動屬性中，您可以在多個 iOS 和 Android 應用程式中，管理相同的規則集和擴充功能集。
-
-如需影片教學課程，請見[建立您的第一個屬性](../../quick-start/videos.md)。
 
 ## 屬性規劃的最佳作法 {#best-practices-for-planning-properties}
 
