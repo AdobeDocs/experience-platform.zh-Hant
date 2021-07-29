@@ -3,9 +3,9 @@ keywords: demandbase擴充功能；demandbase;demandbase目的地
 title: Demandbase擴充功能
 description: Demandbase擴充功能是Adobe Experience Platform中的分析目的地。 如需擴充功能的詳細資訊，請參閱Exchange上的擴充功能頁面。
 exl-id: 112a9575-4527-4a32-9610-a9d18ffd84f1
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+source-git-commit: 6bbccf6751240637c861c2962b64e5247d8abb43
 workflow-type: tm+mt
-source-wordcount: '475'
+source-wordcount: '476'
 ht-degree: 5%
 
 ---
@@ -26,7 +26,7 @@ ht-degree: 5%
 
 所有已購買Platform的客戶，皆可在「目標」目錄中取得此擴充功能。
 
-若要使用此擴充功能，您需要存取Adobe Experience Platform中的標籤。 以隨附的加值功能形式提供給Adobe Experience Cloud客戶的標籤。 請連絡您的組織管理員以取得標籤的存取權，並要求他們授予您&#x200B;**[!UICONTROL manage_properties]**&#x200B;權限，以便您安裝擴充功能。
+若要使用此擴充功能，您需要存取Adobe Experience Platform中的標籤。 標籤以隨附的加值功能形式提供給Adobe Experience Cloud客戶。 請連絡您的組織管理員以取得標籤的存取權，並要求他們授予您&#x200B;**[!UICONTROL manage_properties]**&#x200B;權限，以便您安裝擴充功能。
 
 ## 安裝擴充功能 {#install-extension}
 
