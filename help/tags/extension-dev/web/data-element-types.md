@@ -1,9 +1,9 @@
 ---
 title: 網頁擴充功能的資料元素類型
 description: 了解如何為Web屬性中的標籤擴充功能定義資料元素類型程式庫模組。
-source-git-commit: 99780f64c8f09acea06e47ebf5cabc762e05cab2
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '595'
+source-wordcount: '596'
 ht-degree: 56%
 
 ---
@@ -12,7 +12,7 @@ ht-degree: 56%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch已重新命名為Experience Platform中的資料收集技術套件。 因此，產品檔案中已推出數個術語變更。 有關術語更改的綜合參考，請參閱以下[document](../../term-updates.md)。
+>Adobe Experience Platform Launch在Adobe Experience Platform中已重新命名為一套資料收集技術。 因此，產品檔案中已推出數個術語變更。 有關術語更改的綜合參考，請參閱以下[document](../../term-updates.md)。
 
 在資料收集標籤中，資料元素實質上是頁面上資料片段的別名。 可在查詢字串參數、Cookie、DOM元素或其他位置中找到此資料。 資料元素可供規則參照，並可作為據以存取這些資料片段的抽象概念。
 
