@@ -3,7 +3,7 @@ title: 搭配Platform Web SDK使用Offer decisioning
 description: Adobe Experience Platform Web SDK可提供及呈現以Offer decisioning管理的個人化優惠方案。 您可以使用Offer decisioningUI或API來建立選件和其他相關物件。
 keywords: offer decisioning；決策；Web SDK;Platform Web SDK；個人化優惠方案；傳送優惠方案；優惠方案傳送；優惠方案個人化；
 exl-id: 4ab51f9d-3c44-4855-b900-aa2cde673a9a
-source-git-commit: 12c3f440319046491054b3ef3ec404798bb61f06
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
 source-wordcount: '779'
 ht-degree: 3%
@@ -65,10 +65,10 @@ Adobe Experience Platform [!DNL Web SDK]可傳送及呈現以Offer decisioning�
 
    ![offer-decisioning-edge-config](./assets/offer-decisioning-edge-config.png)
 
-1. 請依照[安裝SDK](../../fundamentals/installing-the-sdk.md)的指示操作(SDK可獨立安裝，或透過[Adobe Experience Platform Launch](http://launch.adobe.com/)安裝。 以下是Platform launch[快速入門手冊](../../../tags/quick-start/quick-start.md))。
+1. 請依照[安裝SDK](../../fundamentals/installing-the-sdk.md)的指示操作(SDK可獨立安裝，或透過[資料收集UI](https://experience.adobe.com/#/data-collection/)安裝。 如需詳細資訊，請參閱[標籤快速入門手冊](../../../tags/quick-start/quick-start.md)。
 1. [配置](../../fundamentals/configuring-the-sdk.md) SDK以Offer decisioning。以下提供其他Offer decisioning特定步驟。
 
-   * 獨立安裝的SDK
+   * 安裝獨立SDK
 
       1. 使用`decisionScopes`設定「sendEvent」動作
 
@@ -81,10 +81,10 @@ Adobe Experience Platform [!DNL Web SDK]可傳送及呈現以Offer decisioning�
              ]
           })
          ```
-   * platform launch已安裝SDK
+   * 透過標籤安裝SDK
 
-      1. [建立Platform launch屬性](../../../tags/ui/administration/companies-and-properties.md)
-      1. [新增Platform launch內嵌程式碼](https://experienceleague.adobe.com/docs/core-services-learn/implementing-in-websites-with-launch/configure-launch/launch-add-embed.html)
+      1. [建立標籤屬性](../../../tags/ui/administration/companies-and-properties.md)
+      1. [新增內嵌程式碼](https://experienceleague.adobe.com/docs/core-services-learn/implementing-in-websites-with-launch/configure-launch/launch-add-embed.html)
       1. 從「Datastream」下拉式清單中選取設定，使用您剛建立的Datastream安裝及設定Platform Web SDK擴充功能。 請參閱[擴充功能](../../../tags/ui/managing-resources/extensions/overview.md)上的檔案。
 
          ![install-aep-web-sdk-extension](./assets/install-aep-web-sdk-extension.png)
