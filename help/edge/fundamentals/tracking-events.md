@@ -3,9 +3,9 @@ title: 使用Adobe Experience Platform Web SDK追蹤事件
 description: 了解如何追蹤Adobe Experience Platform Web SDK事件。
 keywords: sendEvent;xdm;eventType;datasetId;sendBeacon;sendBeacon;documentUnloading；檔案卸載；onBeforeEventSend;
 exl-id: 8b221cae-3490-44cb-af06-85be4f8d280a
-source-git-commit: a6fca344e6b307e503e29ca7dda3534cdea62f53
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '1460'
+source-wordcount: '1451'
 ht-degree: 0%
 
 ---
@@ -68,7 +68,7 @@ alloy("sendEvent", {
 dataLayer.commerce = null;
 ```
 
-在此範例中，資料層會先序列化為JSON，然後反序列化為複製區。 接下來，克隆的結果將傳遞到`sendEvent`命令中。 這樣可確保`sendEvent`命令的`sendEvent`快照與執行命令時資料層的快照一樣，以便以後對原始資料層對象的修改不會反映在發送到伺服器的資料中。 如果您使用事件導向資料層，複製資料很可能已自動處理。 例如，如果您使用[Adobe客戶端資料層](https://github.com/adobe/adobe-client-data-layer/wiki),`getState()`方法將提供先前所有更改的計算克隆快照。 如果您在Adobe Experience Platform Launch中使用Adobe Experience Platform Web SDK擴充功能，系統也會自動為您處理此問題。
+在此範例中，資料層會先序列化為JSON，然後反序列化為複製區。 接下來，克隆的結果將傳遞到`sendEvent`命令中。 這樣可確保`sendEvent`命令的`sendEvent`快照與執行命令時資料層的快照一樣，以便以後對原始資料層對象的修改不會反映在發送到伺服器的資料中。 如果您使用事件導向資料層，複製資料很可能已自動處理。 例如，如果您使用[Adobe客戶端資料層](https://github.com/adobe/adobe-client-data-layer/wiki),`getState()`方法將提供先前所有更改的計算克隆快照。 如果您使用Adobe Experience Platform Web SDK標籤擴充功能，系統也會自動處理此問題。
 
 >[!NOTE]
 >
@@ -132,7 +132,7 @@ alloy("sendEvent", {
 | delivery.feedback | 傳遞的意見事件。 電子郵件傳送的意見回饋事件範例 |
 
 
-如果使用Adobe Experience Platform Launch擴充功能，或您隨時可以傳入這些事件類型，而不需Experience Platform Launch，這些事件類型會顯示在下拉式清單中。 可在`xdm`選項中傳遞。
+如果使用標籤擴充功能，或您隨時可以不使用標籤將這些事件類型傳入，這些事件類型會顯示在下拉式清單中。 可在`xdm`選項中傳遞。
 
 
 ```javascript
