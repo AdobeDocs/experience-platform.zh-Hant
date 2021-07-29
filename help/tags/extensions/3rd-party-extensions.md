@@ -1,10 +1,10 @@
 ---
 title: 協力廠商擴充功能
 description: 了解Adobe Experience Platform的協力廠商擴充功能。
-source-git-commit: 5b8ef30b1d0e6d682c94453117677c806eba1e02
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '140'
-ht-degree: 5%
+source-wordcount: '141'
+ht-degree: 4%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 5%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch已重新命名為Experience Platform中的資料收集技術套件。 因此，產品檔案中已推出數個術語變更。 有關術語更改的綜合參考，請參閱以下[document](../term-updates.md)。
+>Adobe Experience Platform Launch在Adobe Experience Platform中已重新命名為一套資料收集技術。 因此，產品檔案中已推出數個術語變更。 有關術語更改的綜合參考，請參閱以下[document](../term-updates.md)。
 
 除了Adobe解決方案提供的擴充功能外，也提供Adobe Experience Platform的協力廠商擴充功能。
 
