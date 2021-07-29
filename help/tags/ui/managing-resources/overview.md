@@ -1,9 +1,9 @@
 ---
 title: 管理資源
 description: 了解如何在Adobe Experience Platform中管理各種資源，包括擴充功能、資料元素和規則。
-source-git-commit: 39d9468e5d512c75c9d540fa5d2bcba4967e2881
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '182'
+source-wordcount: '183'
 ht-degree: 55%
 
 ---
@@ -12,7 +12,7 @@ ht-degree: 55%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch已重新命名為Experience Platform中的資料收集技術套件。 因此，產品檔案中已推出數個術語變更。 有關術語更改的綜合參考，請參閱以下[document](../../term-updates.md)。
+>Adobe Experience Platform Launch在Adobe Experience Platform中已重新命名為一套資料收集技術。 因此，產品檔案中已推出數個術語變更。 有關術語更改的綜合參考，請參閱以下[document](../../term-updates.md)。
 
 在Experience Platform中的標籤內容中，「資源」一詞指的是下列任一項：
 
