@@ -1,7 +1,7 @@
 ---
 title: 為擴充功能建立Exchange清單
 description: 了解如何將您的擴充功能新增至Adobe Experience Platform中的公開目錄。
-source-git-commit: 39d9468e5d512c75c9d540fa5d2bcba4967e2881
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
 source-wordcount: '1162'
 ht-degree: 28%
@@ -12,7 +12,7 @@ ht-degree: 28%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch已重新命名為Experience Platform中的資料收集技術套件。 因此，產品檔案中已推出數個術語變更。 有關術語更改的綜合參考，請參閱以下[document](../../term-updates.md)。
+>Adobe Experience Platform Launch在Adobe Experience Platform中已重新命名為一套資料收集技術。 因此，產品檔案中已推出數個術語變更。 有關術語更改的綜合參考，請參閱以下[document](../../term-updates.md)。
 
 Adobe Experience Platform有單一統一目錄，供使用者檢視可供安裝的標籤擴充功能。 此目錄可在產品中使用，並包含三種類型的擴充功能：
 
@@ -44,7 +44,6 @@ Adobe Experience Platform有單一統一目錄，供使用者檢視可供安裝�
    >[!NOTE]
    >
    >這是與您在擴充功能程式碼中使用的檔案格式不同。 擴充功能本身將包含 svg 檔案作為[圖示](../manifest.md)。
-   
    - **精選影像**  — 使用獨一無二且能顯示您的品牌和突顯應用程式的影像，吸引眾人目光。 「精選影像」是當某人分享您的Exchange清單連結或在社交媒體上發佈相關貼文時顯示的影像。 因此，它必須是您品牌的模型表示。
    - **App Publisher 的標誌** - 這是您的公司標誌，請確保圖示具有適當尺寸；png 格式請使用 1280 x 720，jpg 格式請使用 2560 x 1440 (16:9)。
    - **設定指示**  — 通知客戶如何設定您的Adobe Experience Platform擴充功能。請確定他們在屬性中安裝您的擴充功能後而隨即看到[組態檢視](../configuration.md)時，了解必須執行哪些必要設定和後續步驟。
@@ -69,4 +68,4 @@ Adobe Experience Platform有單一統一目錄，供使用者檢視可供安裝�
 
 ## 將您的擴充功能套件連結至清單
 
-在您的清單獲得核准並可供公開後，我們建議您在擴充功能套件內`extension.json`檔案的`exchange_url`欄位中，提供公開清單的連結。  這會在Platform launch擴充功能目錄中建立「更多資訊」連結，讓產品中的使用者能找到您的清單，並找到額外的資訊。
+在您的清單獲得核准並可供公開後，我們建議您在擴充功能套件內`extension.json`檔案的`exchange_url`欄位中，提供公開清單的連結。  這會在標籤擴充功能目錄中建立「更多資訊」連結，讓產品中的使用者可以找到您的清單，並取得額外資訊。
