@@ -3,10 +3,10 @@ title: 使用Adobe Experience Platform Web SDK處理客戶同意資料
 topic-legacy: getting started
 description: 了解如何整合Adobe Experience Platform Web SDK，以使用Adobe2.0標準在Adobe Experience Platform中處理客戶同意資料。
 exl-id: 3a53d908-fc61-452b-bec3-af519dfefa41
-source-git-commit: 8b58bb60ae40f224433f3513060f4ae7ddc7d5b3
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '1285'
-ht-degree: 2%
+source-wordcount: '1254'
+ht-degree: 1%
 
 ---
 
@@ -29,15 +29,15 @@ Adobe Experience Platform Web SDK可讓您擷取同意管理平台(CMP)產生的
 
 本教學課程假設您已決定如何在CMP中產生同意資料，並已建立包含同意欄位的資料集（已啟用「即時客戶個人檔案」）。 若要進一步了解這些步驟，請在返回本指南之前，先參閱Experience Platform](./overview.md)中[同意處理的概述。
 
-此外，本指南還需要妥善了解Adobe Experience Platform Launch擴充功能，以及這些擴充功能在網頁應用程式中的安裝方式。 如需詳細資訊，請參閱下列檔案：
+此外，本指南還要求您妥善了解標籤擴充功能，以及這些擴充功能在網頁應用程式中的安裝方式。 如需詳細資訊，請參閱下列檔案：
 
-* [platform launch概述](https://experienceleague.adobe.com/docs/launch/using/home.html?lang=zh-Hant)
-* [快速入門手冊](https://experienceleague.adobe.com/docs/launch/using/get-started/quick-start.html?lang=zh-Hant)
-* [發佈概觀](https://experienceleague.adobe.com/docs/launch/using/publish/overview.html?lang=zh-Hant)
+* [標籤概述](../../../../tags/home.md)
+* [快速入門手冊](../../../../tags/quick-start/quick-start.md)
+* [發佈概觀](../../../../tags/ui/publishing/overview.md)
 
 ## 設定資料流
 
-若要讓SDK將資料傳送至Experience Platform，您必須有Adobe Experience Platform Launch中設定的Platform現有資料流。 此外，您為設定選取的[!UICONTROL 設定檔資料集]必須包含標準化同意欄位。
+若要讓SDK將資料傳送至Experience Platform，您必須在資料收集UI中設定Platform的現有資料流。 此外，您為設定選取的[!UICONTROL 設定檔資料集]必須包含標準化同意欄位。
 
 建立新配置或選擇要編輯的現有配置後，選擇&#x200B;**[!UICONTROL Adobe Experience Platform]**&#x200B;旁的切換按鈕。 接下來，使用下列值填寫表單。
 
@@ -55,7 +55,7 @@ Adobe Experience Platform Web SDK可讓您擷取同意管理平台(CMP)產生的
 
 ## 安裝及配置Platform Web SDK
 
-依照前一節所述建立資料流後，您必須設定最終要部署在網站上的Platform Web SDK擴充功能。 如果您的Platform launch屬性上未安裝SDK擴充功能，請在左側導覽中選取&#x200B;**[!UICONTROL 擴充功能]**，後面接著&#x200B;**[!UICONTROL 目錄]**&#x200B;標籤。 接著，在可用擴充功能清單的Platform SDK擴充功能下方，選取&#x200B;**[!UICONTROL 安裝]**。
+依照前一節所述建立資料流後，您必須設定最終要部署在網站上的Platform Web SDK擴充功能。 如果您的標籤屬性上未安裝SDK擴充功能，請在左側導覽中選取「**[!UICONTROL 擴充功能]**」，然後按一下「**[!UICONTROL 目錄]**」標籤。 接著，在可用擴充功能清單的Platform SDK擴充功能下方，選取&#x200B;**[!UICONTROL 安裝]**。
 
 ![](../../../images/governance-privacy-security/consent/adobe/sdk/install.png)
 
@@ -72,16 +72,16 @@ Adobe Experience Platform Web SDK可讓您擷取同意管理平台(CMP)產生的
 在此使用案例中，您可實作下列項目，以根據使用者的地區設定預設同意：
 
 1. 確定Web伺服器上的用戶區域。
-1. 在網頁上的Platform launch指令碼標籤（內嵌程式碼）之前，請轉譯個別的指令碼標籤，以根據使用者的地區設定`adobeDefaultConsent`變數。
+1. 在網頁上的`script`標籤（內嵌程式碼）之前，轉譯個別的`script`標籤，該標籤會根據使用者的地區設定`adobeDefaultConsent`變數。
 1. 設定使用`adobeDefaultConsent` JavaScript變數的資料元素，並將此資料元素設為使用者的預設同意值。
 
 如果使用者的地區由CMP決定，您可以改用下列步驟：
 
 1. 處理頁面上的「CMP已載入」事件。
-1. 在事件處理常式中，根據使用者的地區設定`adobeDefaultConsent`變數，然後使用JavaScript載入Platform launch程式庫指令碼。
+1. 在事件處理常式中，根據使用者的地區設定`adobeDefaultConsent`變數，然後使用JavaScript載入標籤程式庫指令碼。
 1. 設定使用`adobeDefaultConsent` JavaScript變數的資料元素，並將此資料元素設為使用者的預設同意值。
 
-若要在Platform launchUI中建立資料元素，請在左側導覽中選取&#x200B;**[!UICONTROL 資料元素]**，然後選取&#x200B;**[!UICONTROL 新增資料元素]**&#x200B;以導覽至資料元素建立對話方塊。
+若要在資料收集UI中建立資料元素，請在左側導覽中選取&#x200B;**[!UICONTROL 資料元素]**，然後選取&#x200B;**[!UICONTROL 新增資料元素]**&#x200B;以導覽至資料元素建立對話方塊。
 
 您必須在此建立以`adobeDefaultConsent`為基礎的[!UICONTROL  JavaScript變數]資料元素。 完成後，選擇&#x200B;**[!UICONTROL Save]**。
 
@@ -93,7 +93,7 @@ Adobe Experience Platform Web SDK可讓您擷取同意管理平台(CMP)產生的
 
 ### 在您的網站上部署擴充功能
 
-完成擴充功能的設定後，即可將其整合至您的網站。 請參閱Platform launch檔案中的[發佈指南](https://experienceleague.adobe.com/docs/launch/using/publish/overview.html) ，了解如何部署更新的程式庫組建的詳細資訊。
+完成擴充功能的設定後，即可將其整合至您的網站。 如需如何部署更新的程式庫組建的詳細資訊，請參閱標籤檔案中的[發佈指南](https://experienceleague.adobe.com/docs/launch/using/publish/overview.html?lang=zh-Hant) 。
 
 ## 執行同意更改命令 {#commands}
 
