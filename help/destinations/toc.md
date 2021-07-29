@@ -4,9 +4,9 @@ user-guide-title: 目的地指南
 user-guide-description: 針對跨通路行銷活動、電子郵件宣傳、鎖定特定目標的行銷活動和其他諸多使用案例，啟用已知和未知的資料。
 description: 本檔案列出Adobe Experience Platform目的地的目錄
 feature: 目的地
-source-git-commit: 3ab15ceaf33a33f8bbda80cbf09228d16ce5a374
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '481'
+source-wordcount: '476'
 ht-degree: 11%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 11%
 
 # 目的地 {#destinations}
 
-* [目的地概觀](./home.md)
+* [目的地概述](./home.md)
 * [目的地類型和類別](./destination-types.md)
 * API教學課程{#api}
    * [使用流量服務API連線至串流目的地並啟用資料](./api/streaming-destinations.md)
@@ -100,8 +100,8 @@ ht-degree: 11%
       * [OracleEloqua連線](./catalog/email-marketing/oracle-eloqua.md)
       * [OracleResponsys連線](./catalog/email-marketing/oracle-responsys.md)
       * [SalesforceMarketing Cloud連接](./catalog/email-marketing/salesforce-marketing-cloud.md)
-   * Experience Platform Launch擴展{#launch-extensions}
-      * [Adobe Experience Platform Launch擴充功能概觀](./catalog/launch-extensions/overview.md)
+   * 標籤副檔名{#launch-extensions}
+      * [標籤擴充功能概觀](./catalog/launch-extensions/overview.md)
    * 行動參與目的地{#mobile-engagement}
       * [行動參與目的地概觀](./catalog/mobile-engagement/overview.md)
       * [（測試版）Airship屬性連接](./catalog/mobile-engagement/airship-attributes.md)
