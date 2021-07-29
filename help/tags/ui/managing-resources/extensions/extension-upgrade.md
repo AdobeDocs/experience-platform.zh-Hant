@@ -1,9 +1,9 @@
 ---
 title: 擴充功能升級
 description: 了解擴充功能升級的封裝與呈現方式在擴充功能目錄中。
-source-git-commit: 39d9468e5d512c75c9d540fa5d2bcba4967e2881
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '681'
+source-wordcount: '682'
 ht-degree: 68%
 
 ---
@@ -12,7 +12,7 @@ ht-degree: 68%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch已重新命名為Experience Platform中的資料收集技術套件。 因此，產品檔案中已推出數個術語變更。 有關術語更改的綜合參考，請參閱以下[document](../../../term-updates.md)。
+>Adobe Experience Platform Launch在Adobe Experience Platform中已重新命名為一套資料收集技術。 因此，產品檔案中已推出數個術語變更。 有關術語更改的綜合參考，請參閱以下[document](../../../term-updates.md)。
 
 擴充功能開發人員不斷新增功能至其擴充功能，也經常修正錯誤。這些更新會封裝成新版本的擴充功能，並可在擴充功能目錄中提供作為升級版本。
 
