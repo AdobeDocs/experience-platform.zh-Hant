@@ -1,9 +1,9 @@
 ---
 title: 附註
 description: 了解如何在Adobe Experience Platform中為特定標籤資源新增文字注釋。
-source-git-commit: 39d9468e5d512c75c9d540fa5d2bcba4967e2881
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '308'
+source-wordcount: '309'
 ht-degree: 56%
 
 ---
@@ -12,7 +12,7 @@ ht-degree: 56%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch已重新命名為Experience Platform中的資料收集技術套件。 因此，產品檔案中已推出數個術語變更。 有關術語更改的綜合參考，請參閱以下[document](../../term-updates.md)。
+>Adobe Experience Platform Launch在Adobe Experience Platform中已重新命名為一套資料收集技術。 因此，產品檔案中已推出數個術語變更。 有關術語更改的綜合參考，請參閱以下[document](../../term-updates.md)。
 
 附註是可新增至Adobe Experience Platform中特定標籤資源的文字注釋。 您可為以下資源加上附註：
 
