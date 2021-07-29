@@ -1,7 +1,7 @@
 ---
 title: 使用者權限
 description: 了解Adobe Experience Platform使用者的不同可用標籤權限。
-source-git-commit: 39d9468e5d512c75c9d540fa5d2bcba4967e2881
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
 source-wordcount: '2397'
 ht-degree: 66%
@@ -12,7 +12,7 @@ ht-degree: 66%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch已重新命名為Experience Platform中的資料收集技術套件。 因此，產品檔案中已推出數個術語變更。 有關術語更改的綜合參考，請參閱以下[document](../../term-updates.md)。
+>Adobe Experience Platform Launch在Adobe Experience Platform中已重新命名為一套資料收集技術。 因此，產品檔案中已推出數個術語變更。 有關術語更改的綜合參考，請參閱以下[document](../../term-updates.md)。
 
 ## 權限類型
 
@@ -76,7 +76,7 @@ Enterprise組織管理員不會繼承Platform中標籤的任何權利。 如果�
 
 * **管理屬性：** 這可讓您在資料收集UI中建立新屬性，以及在屬性層級修改中繼資料和設定。您也可以刪除屬性。如需詳細資訊，請參閱[屬性檔案](companies-and-properties.md)。 管理員通常會執行此角色。
 * 
-* 授予在[!DNL Platform Launch]中建立新屬性以及在屬性級別修改元資料和設定的能力。 您也可以刪除屬性。您可以前往[這裡](companies-and-properties.md)，深入閱讀有關屬性的資訊。管理員通常會執行此角色。
+* 授予在屬性層級建立新屬性及修改中繼資料和設定的能力。 您也可以刪除屬性。您可以前往[這裡](companies-and-properties.md)，深入閱讀有關屬性的資訊。管理員通常會執行此角色。
 * **開發擴充功能：**&#x200B;授予建立及修改公司擁有的擴充功能套件的能力，包括私人發行和公開發行要求。
 * **管理應用程式設定：** 這僅適用於已授權Adobe Journey Optimizer的客戶，或其他可讓他們存取行動應用程式內及推送訊息的解決方案。這可讓您管理Experience Cloud所知的應用程式，以及與Firebase雲端訊息服務和Apple推播通知服務通訊所需的必要推播憑證。
 
