@@ -1,9 +1,9 @@
 ---
 title: 比較資源修訂版本
 description: 了解如何在Adobe Experience Platform中檢視標籤資源修訂版本的歷史記錄。
-source-git-commit: 39d9468e5d512c75c9d540fa5d2bcba4967e2881
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '909'
+source-wordcount: '910'
 ht-degree: 83%
 
 ---
@@ -12,7 +12,7 @@ ht-degree: 83%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch已重新命名為Experience Platform中的資料收集技術套件。 因此，產品檔案中已推出數個術語變更。 有關術語更改的綜合參考，請參閱以下[document](../../term-updates.md)。
+>Adobe Experience Platform Launch在Adobe Experience Platform中已重新命名為一套資料收集技術。 因此，產品檔案中已推出數個術語變更。 有關術語更改的綜合參考，請參閱以下[document](../../term-updates.md)。
 
 比較資源修訂版本以查看個別資源的歷程記錄。您可以將資源的目前狀態與舊版進行比較，或將目前發佈的資源版本與最新一組已儲存的變更進行比較。
 
