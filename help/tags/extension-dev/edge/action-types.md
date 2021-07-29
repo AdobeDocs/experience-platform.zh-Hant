@@ -1,9 +1,9 @@
 ---
 title: 邊緣擴充功能的動作類型
 description: 了解如何為Edge屬性中的標籤擴充功能定義動作類型程式庫模組。
-source-git-commit: 99780f64c8f09acea06e47ebf5cabc762e05cab2
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '381'
+source-wordcount: '382'
 ht-degree: 36%
 
 ---
@@ -12,7 +12,7 @@ ht-degree: 36%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch已重新命名為Experience Platform中的資料收集技術套件。 因此，產品檔案中已推出數個術語變更。 有關術語更改的綜合參考，請參閱以下[document](../../term-updates.md)。
+>Adobe Experience Platform Launch在Adobe Experience Platform中已重新命名為一套資料收集技術。 因此，產品檔案中已推出數個術語變更。 有關術語更改的綜合參考，請參閱以下[document](../../term-updates.md)。
 
 在標籤規則中，動作是在規則條件通過評估後執行的動作。 動作類型由擴充功能提供，其效果由擴充功能作者完全定義。
 
