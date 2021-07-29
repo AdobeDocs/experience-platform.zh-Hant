@@ -1,9 +1,9 @@
 ---
 title: 資料元素
 description: 資料元素是資料字典 (或資料地圖) 的建置組塊。使用資料元素，在行銷和廣告技術之間收集、組織和傳遞資料。
-source-git-commit: 39d9468e5d512c75c9d540fa5d2bcba4967e2881
+source-git-commit: 010e05968f1d7ad5675b0f0af43d9cfcc1f3a2ff
 workflow-type: tm+mt
-source-wordcount: '1637'
+source-wordcount: '1631'
 ht-degree: 72%
 
 ---
@@ -12,7 +12,7 @@ ht-degree: 72%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch已重新命名為Experience Platform中的資料收集技術套件。 因此，產品檔案中已推出數個術語變更。 有關術語更改的綜合參考，請參閱以下[document](../../term-updates.md)。
+>Adobe Experience Platform Launch在Adobe Experience Platform中已重新命名為一套資料收集技術。 因此，產品檔案中已推出數個術語變更。 有關術語更改的綜合參考，請參閱以下[document](../../term-updates.md)。
 
 資料元素是資料字典 (或資料地圖) 的建置組塊。使用資料元素，在行銷和廣告技術之間收集、組織和傳遞資料。
 
@@ -38,8 +38,6 @@ ht-degree: 72%
 
 1. [建立資料元素性](#create-a-data-element) (如果尚未這麼做的話)。
 1. 在[規則](./rules.md)或自訂指令碼中使用資料元素。
-
-如需入門影片，請參閱[資料元素](../../quick-start/videos.md)。
 
 ## 資料元素用途
 
