@@ -1,9 +1,9 @@
 ---
 title: 實作協力廠商程式庫
 description: 了解在Adobe Experience Platform標籤擴充功能中托管協力廠商程式庫的不同方法。
-source-git-commit: 39d9468e5d512c75c9d540fa5d2bcba4967e2881
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '1329'
+source-wordcount: '1330'
 ht-degree: 66%
 
 ---
@@ -12,7 +12,7 @@ ht-degree: 66%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch已重新命名為Experience Platform中的資料收集技術套件。 因此，產品檔案中已推出數個術語變更。 有關術語更改的綜合參考，請參閱以下[document](../term-updates.md)。
+>Adobe Experience Platform Launch在Adobe Experience Platform中已重新命名為一套資料收集技術。 因此，產品檔案中已推出數個術語變更。 有關術語更改的綜合參考，請參閱以下[document](../term-updates.md)。
 
 Adobe Experience Platform中標籤擴充功能的主要用途之一，是讓您輕鬆將現有行銷技術（程式庫）實作至您的網站。 只要使用擴充功能，您就能實作協力廠商內容傳遞網路 (CDN) 提供的程式庫，不必手動編輯網站的 HTML。
 
