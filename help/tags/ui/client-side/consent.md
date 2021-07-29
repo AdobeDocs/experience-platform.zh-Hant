@@ -1,9 +1,9 @@
 ---
 title: 部署JavaScript標籤以管理客戶同意
 description: 了解如何在Adobe Experience Platform中管理各種Adobe解決方案的客戶選擇加入和選擇退出訊號。
-source-git-commit: 39d9468e5d512c75c9d540fa5d2bcba4967e2881
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '650'
+source-wordcount: '651'
 ht-degree: 77%
 
 ---
@@ -12,7 +12,7 @@ ht-degree: 77%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch已重新命名為Experience Platform中的資料收集技術套件。 因此，產品檔案中已推出數個術語變更。 有關術語更改的綜合參考，請參閱以下[document](../../term-updates.md)。
+>Adobe Experience Platform Launch在Adobe Experience Platform中已重新命名為一套資料收集技術。 因此，產品檔案中已推出數個術語變更。 有關術語更改的綜合參考，請參閱以下[document](../../term-updates.md)。
 
 歐盟[一般資料保護規定 (GDPR)](https://gdpr-info.eu/art-7-gdpr/) 與 [ePrivacy](https://medium.com/mydata/consent-lost-gdpr-and-found-eprivacy-e85cf881ffb) 法規共同要求公司必須能夠管理其使用者的同意聲明。Adobe客戶可能會要求Adobe者選擇加入，才能針對任何特定訪客執行客戶解決方案。 訪客應該要能管理自己的選擇加入和選擇退出狀態。
 
