@@ -1,19 +1,19 @@
 ---
 title: Adobe Experience Platform Web SDK擴充功能中的動作類型
-description: 了解Adobe Experience Platform Launch中Adobe Experience Platform Web SDK擴充功能提供的不同動作類型。
+description: 了解Adobe Experience Platform Web SDK標籤擴充功能提供的不同動作類型。
 solution: Experience Platform
 feature: Web SDK
 exl-id: a4bf0bb9-59b4-4c43-97e6-387768176517
-source-git-commit: 53864097af7d3278f56a3f23186de4eb405bcb51
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '585'
-ht-degree: 3%
+source-wordcount: '573'
+ht-degree: 4%
 
 ---
 
 # 動作類型
 
-為[Adobe Experience Platform Launch](https://experienceleague.adobe.com/docs/launch.html)設定[Adobe Experience Platform Web SDK擴充功能](web-sdk-extension-configuration.md)後，請設定您的動作類型。
+設定[Adobe Experience Platform Web SDK標籤擴充功能](web-sdk-extension-configuration.md)後，請設定您的動作類型。
 
 本頁面說明可用的動作類型。
 
