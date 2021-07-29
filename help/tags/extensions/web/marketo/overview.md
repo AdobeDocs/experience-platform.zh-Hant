@@ -1,9 +1,9 @@
 ---
 title: Marketo Munchkin 擴充功能 概覽
 description: 了解Adobe Experience Platform中的Marketo Munchkin標籤擴充功能。
-source-git-commit: 5f810ada57eeb12a56de603d974a091b888dc9d2
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '213'
+source-wordcount: '214'
 ht-degree: 62%
 
 ---
@@ -12,7 +12,7 @@ ht-degree: 62%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch已重新命名為Experience Platform中的資料收集技術套件。 因此，產品檔案中已推出數個術語變更。 有關術語更改的綜合參考，請參閱以下[document](../../../term-updates.md)。
+>Adobe Experience Platform Launch在Adobe Experience Platform中已重新命名為一套資料收集技術。 因此，產品檔案中已推出數個術語變更。 有關術語更改的綜合參考，請參閱以下[document](../../../term-updates.md)。
 
 此擴充功能可整合 [!DNL Marketo Munchkin] JavaScript 追蹤程式碼與您的屬性。[!DNL Marketo Munchkin] JavaScript 可追蹤一般使用者頁面瀏覽次數，以及您 Marketo 登陸頁面和外部網頁的導覽次數。
 
