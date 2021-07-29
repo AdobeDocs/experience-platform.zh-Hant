@@ -1,9 +1,9 @@
 ---
 title: 檢視 在網頁擴充功能中
 description: 了解如何為Adobe Experience Platform Web擴充功能中的程式庫模組定義檢視。
-source-git-commit: 39d9468e5d512c75c9d540fa5d2bcba4967e2881
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '2062'
+source-wordcount: '2063'
 ht-degree: 74%
 
 ---
@@ -12,7 +12,7 @@ ht-degree: 74%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch已重新命名為Experience Platform中的資料收集技術套件。 因此，產品檔案中已推出數個術語變更。 有關術語更改的綜合參考，請參閱以下[document](../../term-updates.md)。
+>Adobe Experience Platform Launch在Adobe Experience Platform中已重新命名為一套資料收集技術。 因此，產品檔案中已推出數個術語變更。 有關術語更改的綜合參考，請參閱以下[document](../../term-updates.md)。
 
 每個事件、條件、動作或資料元素類型都可提供一個檢視，讓使用者提供設定。擴充功能也可以有頂層[擴充功能組態檢視](../configuration.md)，讓使用者為整個擴充功能提供全域設定。所有檢視類型的檢視建置程序均相同。
 
