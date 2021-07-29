@@ -1,9 +1,9 @@
 ---
 title: 擴充功能開發快速入門
 description: 開始在Adobe Experience Platform中開發您自己的標籤擴充功能。
-source-git-commit: 39d9468e5d512c75c9d540fa5d2bcba4967e2881
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '429'
+source-wordcount: '430'
 ht-degree: 85%
 
 ---
@@ -12,7 +12,7 @@ ht-degree: 85%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch已重新命名為Experience Platform中的資料收集技術套件。 因此，產品檔案中已推出數個術語變更。 有關術語更改的綜合參考，請參閱以下[document](../term-updates.md)。
+>Adobe Experience Platform Launch在Adobe Experience Platform中已重新命名為一套資料收集技術。 因此，產品檔案中已推出數個術語變更。 有關術語更改的綜合參考，請參閱以下[document](../term-updates.md)。
 
 為協助您著手展開擴充功能的建置，我們將使用 Adobe 工程師提供的開放原始碼架構工具，為您的擴充功能套件建立必要的檔案和檔案結構，您只需負責最重要的工作，也就是撰寫程式碼。
 
