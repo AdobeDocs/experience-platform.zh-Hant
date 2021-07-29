@@ -3,14 +3,18 @@ title: Adobe Experience Platform Web SDK 發行說明
 description: Adobe Experience Platform Web SDK 最新版本注意事項。
 keywords: Adobe Experience Platform Web SDK;Platform Web SDK;Web SDK；發行說明；
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: e158b8129fe5afe71af48b7c64ca34b00e79965c
+source-git-commit: c6feab3c9cda479c7dabdbf0533145fdcaa36ab1
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '670'
+ht-degree: 5%
 
 ---
 
 # 發行說明
+
+## 版本2.6.1 - 2021年7月29日
+
+* 修正針對沒有個人化內容的單頁應用程式檢視呈現個人化內容時，會擲回錯誤，並導致從`sendEvent`命令傳回的Promise遭拒的問題。
 
 ## 版本2.6.0 - 2021年7月27日
 
