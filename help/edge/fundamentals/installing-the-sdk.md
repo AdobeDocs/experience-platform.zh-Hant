@@ -3,7 +3,7 @@ title: 安裝Adobe Experience Platform Web SDK
 description: 了解如何安裝Experience PlatformWeb SDK。
 keywords: 網頁sdk安裝；安裝網頁sdk;internet explorer;Promise;npm套件
 exl-id: b1de7ca1-d0d2-4661-a273-a1acf29afcd5
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+source-git-commit: 69f0be4f596b34548078b4fddd053abc62b610c4
 workflow-type: tm+mt
 source-wordcount: '920'
 ht-degree: 2%
@@ -31,8 +31,8 @@ URL結構：https://cdn1.adoberesources.net/alloy/[VERSION]/alloy.min.js或alloy
 例如：
 
 
-* 縮制：[https://cdn1.adoberesources.net/alloy/2.5.0/alloy.min.js](https://cdn1.adoberesources.net/alloy/2.5.0/alloy.min.js)
-* 未縮制：[https://cdn1.adoberesources.net/alloy/2.5.0/alloy.js](https://cdn1.adoberesources.net/alloy/2.5.0/alloy.js)
+* 縮制：[https://cdn1.adoberesources.net/alloy/2.6.1/alloy.min.js](https://cdn1.adoberesources.net/alloy/2.6.1/alloy.min.js)
+* 未縮制：[https://cdn1.adoberesources.net/alloy/2.6.1/alloy.js](https://cdn1.adoberesources.net/alloy/2.6.1/alloy.js)
 
 
 ### 新增程式碼 {#adding-the-code}
@@ -46,7 +46,7 @@ URL結構：https://cdn1.adoberesources.net/alloy/[VERSION]/alloy.min.js或alloy
   function(i,l){n[o].q.push([i,l,u])})},n[o].q=[])})}
   (window,["alloy"]);
 </script>
-<script src="https://cdn1.adoberesources.net/alloy/2.5.0/alloy.min.js" async></script>
+<script src="https://cdn1.adoberesources.net/alloy/2.6.1/alloy.min.js" async></script>
 ```
 
 &quot;base code&quot;建立名為`alloy`的全局函式。 使用此函式與SDK互動。 如果要將全局函式命名為其他名稱，請按如下方式更改`alloy`名稱：
@@ -58,7 +58,7 @@ URL結構：https://cdn1.adoberesources.net/alloy/[VERSION]/alloy.min.js或alloy
   function(i,l){n[o].q.push([i,l,u])})},n[o].q=[])})}
   (window,["mycustomname"]);
 </script>
-<script src="https://cdn1.adoberesources.net/alloy/2.5.0/alloy.min.js" async></script>
+<script src="https://cdn1.adoberesources.net/alloy/2.6.1/alloy.min.js" async></script>
 ```
 
 在此範例中，全域函式已重新命名為`mycustomname`，而非`alloy`。
@@ -108,7 +108,7 @@ URL結構：https://cdn1.adoberesources.net/alloy/[VERSION]/alloy.min.js或alloy
   function(i,l){n[o].q.push([i,l,u])})},n[o].q=[])})}
   (window,["alloy"]);
 </script>
-<script src="https://cdn1.adoberesources.net/alloy/2.5.0/alloy.min.js"></script>
+<script src="https://cdn1.adoberesources.net/alloy/2.6.1/alloy.min.js"></script>
 ```
 
 ## 選項3:使用NPM套件
