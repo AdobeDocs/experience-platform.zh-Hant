@@ -1,10 +1,10 @@
 ---
 title: 擴充功能
 description: 了解標籤擴充功能在Adobe Experience Platform中的運作方式。
-source-git-commit: 5b8ef30b1d0e6d682c94453117677c806eba1e02
+source-git-commit: 010e05968f1d7ad5675b0f0af43d9cfcc1f3a2ff
 workflow-type: tm+mt
-source-wordcount: '496'
-ht-degree: 61%
+source-wordcount: '497'
+ht-degree: 57%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 61%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch已重新命名為Experience Platform中的資料收集技術套件。 因此，產品檔案中已推出數個術語變更。 有關術語更改的綜合參考，請參閱以下[document](../../../term-updates.md)。
+>Adobe Experience Platform Launch在Adobe Experience Platform中已重新命名為一套資料收集技術。 因此，產品檔案中已推出數個術語變更。 有關術語更改的綜合參考，請參閱以下[document](../../../term-updates.md)。
 
 擴充功能是一組封裝程式碼，可擴充標籤或事件轉送所提供的功能。
 
@@ -26,15 +26,13 @@ ht-degree: 61%
 
 使用擴充功能清單頂端的連結，檢視已安裝的擴充功能、擴充功能目錄或更新。
 
-選取擴充功能，然後選取[!UICONTROL 設定]以檢視並變更擴充功能的設定。 如需擴充功能選項的詳細資訊，請參閱[新增擴充功能](#add-a-new-extension) 。
+選取擴充功能，然後選取[!UICONTROL 設定]以檢視並變更擴充功能的設定。 如需詳細資訊，請參閱[新增新擴充功能](#add-a-new-extension)上的區段，了解擴充功能選項的相關資訊。
 
 >[!IMPORTANT]
 >
-> 變更項目會等到[發佈](../../publishing/overview.md)後才生效。
+>變更項目會等到[發佈](../../publishing/overview.md)後才生效。
 
 依預設，Adobe提供支援一般整合的擴充功能。 擴充功能可使用自訂組態加以修改。設定是透過擴充功能提供。要建立配置，請選擇擴展卡，然後選擇&#x200B;**[!UICONTROL 添加新配置]**。
-
-如需影片簡介，請參閱[擴充功能](../../../quick-start/videos.md)。
 
 ## 擴充功能目錄
 
