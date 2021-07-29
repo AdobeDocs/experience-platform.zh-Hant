@@ -3,9 +3,9 @@ title: 配置Experience PlatformWeb SDK的資料流
 description: '了解如何設定資料流。 '
 keywords: 設定；資料流；datastreamId;edge；資料流ID；環境設定；edgeConfigId；啟用身分；ID同步；ID同步容器ID；沙箱；串流入口；事件資料集；目標；用戶端代碼；屬性代號；目標環境ID;Cookie目的地；URL目的地；Analytics設定區塊報表套裝ID;
 exl-id: 736c75cb-e290-474e-8c47-2a031f215a56
-source-git-commit: 3a1d08a4ea87ee3db7a2a8b048d5721fa679c372
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '895'
+source-wordcount: '901'
 ht-degree: 0%
 
 ---
@@ -19,17 +19,17 @@ Adobe Experience Platform Web SDK的設定分為兩個位置。 SDK中的[config
 
 ## 建立資料流配置
 
-可使用資料流配置工具在Adobe[!DNL Experience Platform Launch]中建立資料流。
+您可以使用資料流配置工具在資料收集UI中建立資料流。
 
 ![datastreams工具導航](../images/datastreams/config.png)
 
 >[!NOTE]
 >
->無論客戶是否使用[!DNL Experience Platform Launch]作為標籤管理器，資料流配置工具都可供允許清單上的客戶使用。 此外，使用者需要[!DNL Experience Platform Launch]中的開發權限。 如需詳細資訊，請參閱[!DNL Experience Platform Launch]檔案中的[使用者權限](../../tags/ui/administration/user-permissions.md)文章。
+>無論客戶是否使用Platform作為標籤管理員，資料流設定工具都可供允許清單上的客戶使用。 此外，使用者需要開發權限。 如需詳細資訊，請參閱標籤檔案中的[使用者權限](../../tags/ui/administration/user-permissions.md)文章。
 
 按一下畫面右上方區域的&#x200B;**[!UICONTROL 新資料流]**，建立資料流。 提供名稱和說明後，系統會要求您提供每個環境的預設設定。 可用的設定將於下文詳細說明。
 
-建立資料流時，系統會以相同設定自動建立三個環境。 這三個環境分別是&#x200B;*dev*、*stage*&#x200B;和&#x200B;*prod*。 它們符合[!DNL Experience Platform Launch]中的三個預設環境。 當您建置[!DNL Experience Platform Launch]程式庫至開發環境時，程式庫會自動使用您設定中的開發環境。 您可以視需要編輯個別環境中的設定。
+建立資料流時，系統會以相同設定自動建立三個環境。 這三個環境分別是&#x200B;*dev*、*stage*&#x200B;和&#x200B;*prod*。 它們符合標籤的三個預設環境。 當您建置標籤程式庫至開發環境時，程式庫會自動使用您設定中的開發環境。 您可以視需要編輯個別環境中的設定。
 
 SDK中作為`edgeConfigId`使用的ID是指定設定和環境（例如`1c86778b-cdba-4684-9903-750e52912ad1:stage`）的複合ID。 如果複合ID中沒有任何環境（例如，上一個範例中的`stage`），則會使用生產環境。
 
