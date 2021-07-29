@@ -1,10 +1,10 @@
 ---
 title: 擴充功能資訊清單
 description: 了解如何設定JSON資訊清單檔案，通知Adobe Experience Platform如何正確使用您的擴充功能。
-source-git-commit: 421d1d0660c4c9c7280974f8a812a8f0e4f7cbea
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '2646'
-ht-degree: 75%
+source-wordcount: '2647'
+ht-degree: 74%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 75%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch已重新命名為Experience Platform中的資料收集技術套件。 因此，產品檔案中已推出數個術語變更。 有關術語更改的綜合參考，請參閱以下[document](../term-updates.md)。
+>Adobe Experience Platform Launch在Adobe Experience Platform中已重新命名為一套資料收集技術。 因此，產品檔案中已推出數個術語變更。 有關術語更改的綜合參考，請參閱以下[document](../term-updates.md)。
 
 在擴充功能的基礎目錄中，您必須建立名為 `extension.json` 的檔案。其中包含與您的擴充功能有關，而讓 Adobe Experience Platform 能夠正確加以使用的重要詳細資訊。部分內容是以 [npm `package.json`](https://docs.npmjs.com/files/package.json) 的形式構成的。
 
