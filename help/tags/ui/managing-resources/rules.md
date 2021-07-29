@@ -1,9 +1,9 @@
 ---
 title: 規則
 description: 了解標籤擴充功能在Adobe Experience Platform中的運作方式。
-source-git-commit: 5f810ada57eeb12a56de603d974a091b888dc9d2
+source-git-commit: 010e05968f1d7ad5675b0f0af43d9cfcc1f3a2ff
 workflow-type: tm+mt
-source-wordcount: '1983'
+source-wordcount: '1977'
 ht-degree: 77%
 
 ---
@@ -12,13 +12,11 @@ ht-degree: 77%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch已重新命名為Experience Platform中的資料收集技術套件。 因此，產品檔案中已推出數個術語變更。 有關術語更改的綜合參考，請參閱以下[document](../../term-updates.md)。
+>Adobe Experience Platform Launch在Adobe Experience Platform中已重新命名為一套資料收集技術。 因此，產品檔案中已推出數個術語變更。 有關術語更改的綜合參考，請參閱以下[document](../../term-updates.md)。
 
 Adobe Experience Platform中的標籤會遵循規則型系統。 它們會尋找使用者互動和相關資料。 當符合列於您規則中的準則時，規則會觸發您識別的擴充功能、指令黨指令檔或用戶端代碼。
 
 建置規則來整合行銷和廣告技術的資料和功能，將不同的產品整合為單一解決方案。
-
-如需簡介影片，請見[規則產生器](../../quick-start/videos.md)。
 
 ## 規則結構
 
