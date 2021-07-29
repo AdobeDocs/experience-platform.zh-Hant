@@ -5,10 +5,10 @@ title: 資料收集概觀
 topic-legacy: overview
 description: 了解在Adobe Experience Platform中收集客戶體驗資料所涉及的各種技術。
 exl-id: 03ce5339-e68d-4adf-8c3c-82846a626dad
-source-git-commit: da7696d288543abd21ff8a1402e81dcea32efbc2
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '312'
-ht-degree: 3%
+source-wordcount: '304'
+ht-degree: 2%
 
 ---
 
@@ -25,7 +25,8 @@ Adobe Experience Platform提供一套技術，可讓您從用戶端來源收集�
 Experience Platform提供的資料收集技術著重於所擷取資料集的可探索性和協助功能。 這些技術包括下列內容：
 
 * [Adobe Experience Platform Edge Network](https://experienceleague.adobe.com/docs/web-sdk-learn/tutorials/introduction-to-web-sdk-and-edge-network.html)
-* [Adobe Experience Platform Launch](https://adobe.com/go/launch_help_en)
+* [標籤](../tags/home.md)
+* [事件轉送](../tags/ui/event-forwarding/overview.md)
 * [Adobe Experience Platform Web SDK](../edge/home.md)
 * [Experience Data Model(XDM)](../xdm/home.md)
 
@@ -37,7 +38,7 @@ Adobe Experience Platform Web和Mobile SDK會折疊所有Adobe產品程式庫，
 
 ## 切換過程以部署Adobe技術
 
-Platform Edge Network是一個全球分佈、快速、可靠的伺服器網路，能夠以大規模接收和處理資料。 使用Platform launch，您可以為Adobe Target、Adobe Audience Manager和Adobe Analytics等產品設定[datastreams](../edge/fundamentals/datastreams.md)，這可讓您在伺服器端啟動這些產品，而不需變更用戶端代碼。
+Platform Edge Network是一個全球分佈、快速、可靠的伺服器網路，能夠以大規模接收和處理資料。 您可以使用標籤，為Adobe Target、Adobe Audience Manager和Adobe Analytics等產品設定[datastreams](../edge/fundamentals/datastreams.md)，這可讓您在伺服器端啟動這些產品，而不需變更用戶端代碼。
 
 ![](./images/deploy.png)
 
