@@ -1,9 +1,9 @@
 ---
 title: 快速入門手冊
 description: 了解如何在Adobe Experience Platform中快速上手並執行標籤。
-source-git-commit: 12c3f440319046491054b3ef3ec404798bb61f06
+source-git-commit: 010e05968f1d7ad5675b0f0af43d9cfcc1f3a2ff
 workflow-type: tm+mt
-source-wordcount: '1533'
+source-wordcount: '1532'
 ht-degree: 41%
 
 ---
@@ -12,7 +12,7 @@ ht-degree: 41%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch已重新命名為Experience Platform中的資料收集技術套件。 因此，產品檔案中已推出數個術語變更。 有關術語更改的綜合參考，請參閱以下[document](../term-updates.md)。
+>Adobe Experience Platform Launch在Adobe Experience Platform中已重新命名為一套資料收集技術。 因此，產品檔案中已推出數個術語變更。 有關術語更改的綜合參考，請參閱以下[document](../term-updates.md)。
 
 標籤是Adobe Experience Platform新一代的標籤管理技術。 這套技術從頭開始打造，以支援開放且永續的生態系統，讓任何人都能自行建立整合功能，供Adobe客戶部署至其網站。 這是 API 優先的應用程式，所以您可以透過 UI 完成的任何工作，也可以透過 API 以程式設計方式完成。
 
@@ -26,8 +26,6 @@ ht-degree: 41%
 6. 在您的開發環境中測試。
 7. 提升至生產環境。
 
-如需入門影片，請參閱[入門影片](videos.md)檔案。
-
 ## 1. 設定群組和使用者
 
 標籤已與您的Adobe ID完全整合。 使用者權限是透過Admin Console，以[!DNL Creative Cloud]、[!DNL Document Cloud]和Experience Cloud中的其他Adobe產品和解決方案來管理。
@@ -38,7 +36,7 @@ ht-degree: 41%
 
 ## 2. 登入
 
-將標籤權限新增至Adobe ID後，您必須登入資料收集UI。 您可以直接導覽至[Experience Cloud登入畫面](https://experiencecloud.adobe.com)，然後從「快速存取」標籤中選取&#x200B;**[!UICONTROL Launch / Data Collection]**，即可完成此作業。
+將標籤權限新增至Adobe ID後，您必須登入資料收集UI。 您可以直接導覽至[Experience Cloud登入畫面](https://experiencecloud.adobe.com)，然後從「快速存取」標籤中選取「資料收集UI」 ，即可執行此作業。
 
 >[!NOTE]
 >
@@ -56,7 +54,7 @@ ht-degree: 41%
 
 所有全新屬性都會隨[核心擴充功能](../extensions/web/core/overview.md)一併安裝。行動屬性會隨其他擴充功能提供。核心擴充功能是由Adobe建立，可為您資料層的資料元素類型和規則的事件類型，提供強大的預設集合。 大部分您希望執行的動作 (取得 ECID、傳送 [!DNL Adobe Analytics] 信標、載入 [!DNL Target] 全域 mbox 等) 會來自您從目錄安裝的擴充功能。
 
-讓Platform中的標籤真正獨一無二的，是任何人都能建立這些擴充功能。 您是否需要將 Facebook 再行銷像素放置在您的網站上？試試看 Facebook 建立的擴充功能。您是否要在 Twitter 或 LinkedIn 提供相同體驗？請使用這些擴充功能。您需要執行調查嗎？您需要的是 Question Pro 或 Foresee。您是否需要管理最終用戶的隱私和同意以幫助[!DNL GDPR]? 請深入了解 Evidon 和 Trust Arc。是否希望對網站上個別使用者的行為有詳細的深入分析？ 也許您可以了解一下 Clicktale。如需詳細資訊，請參閱[新增擴充功能](../ui/managing-resources/extensions/overview.md#add-a-new-extension)。
+讓Platform中的標籤真正獨一無二的，是任何人都能建立這些擴充功能。 您是否需要將 Facebook 再行銷像素放置在您的網站上？試試看 Facebook 建立的擴充功能。您是否要在 Twitter 或 LinkedIn 提供相同體驗？請使用這些擴充功能。您需要執行調查嗎？您需要的是 Question Pro 或 Foresee。您是否需要管理最終用戶的隱私和同意以幫助[!DNL GDPR]? 請深入了解 Evidon 和 Trust Arc。是否希望對網站上個別使用者的行為有詳細的深入分析？ 也許您可以了解一下 Clicktale。如需詳細資訊，請參閱[新增新擴充功能](../ui/managing-resources/extensions/overview.md#add-a-new-extension)的相關區段。
 
 ## 5. 建立資料元素和規則
 
