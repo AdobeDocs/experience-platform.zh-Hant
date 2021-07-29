@@ -1,9 +1,9 @@
 ---
 title: 重新發佈程式庫
 description: 了解如何在Adobe Experience Platform中重新發佈先前的標籤程式庫。
-source-git-commit: 39d9468e5d512c75c9d540fa5d2bcba4967e2881
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '649'
+source-wordcount: '650'
 ht-degree: 54%
 
 ---
@@ -12,7 +12,7 @@ ht-degree: 54%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch已重新命名為Experience Platform中的資料收集技術套件。 因此，產品檔案中已推出數個術語變更。 有關術語更改的綜合參考，請參閱以下[document](../../term-updates.md)。
+>Adobe Experience Platform Launch在Adobe Experience Platform中已重新命名為一套資料收集技術。 因此，產品檔案中已推出數個術語變更。 有關術語更改的綜合參考，請參閱以下[document](../../term-updates.md)。
 
 最新以 Web 屬性發佈至生產環境的五個程式庫，發佈後仍可擷取。若在生產程式庫中發現錯誤，且需立即回復至已知的良好狀態，則這項功能會很有幫助。
 
