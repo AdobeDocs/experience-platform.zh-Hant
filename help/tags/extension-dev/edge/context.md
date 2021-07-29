@@ -1,9 +1,9 @@
 ---
 title: 邊緣擴充功能模組中的內容
 description: 了解內容物件，及其在邊緣屬性標籤延伸模組與程式庫模組互動中所扮演的角色。
-source-git-commit: 39d9468e5d512c75c9d540fa5d2bcba4967e2881
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '746'
+source-wordcount: '747'
 ht-degree: 74%
 
 ---
@@ -12,7 +12,7 @@ ht-degree: 74%
 
 >[!NOTE]
 >
-> Adobe Experience Platform Launch已重新命名為Experience Platform中的資料收集技術套件。 因此，產品檔案中已推出數個術語變更。 有關術語更改的綜合參考，請參閱以下[document](../../term-updates.md)。
+> Adobe Experience Platform Launch在Adobe Experience Platform中已重新命名為一套資料收集技術。 因此，產品檔案中已推出數個術語變更。 有關術語更改的綜合參考，請參閱以下[document](../../term-updates.md)。
 
 邊緣擴充功能中的所有程式庫模組執行時，系統都會為其提供 `context` 物件。本文介紹 `context` 物件所提供的屬性，並說明這些屬性在程式庫模組中扮演的角色。
 
