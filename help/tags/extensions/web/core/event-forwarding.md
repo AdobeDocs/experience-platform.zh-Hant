@@ -1,9 +1,9 @@
 ---
 title: 核心事件轉送擴充功能概觀
 description: 了解Adobe Experience Platform中的核心事件轉送擴充功能。
-source-git-commit: 5f810ada57eeb12a56de603d974a091b888dc9d2
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '1725'
+source-wordcount: '1724'
 ht-degree: 90%
 
 ---
@@ -12,7 +12,7 @@ ht-degree: 90%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch已重新命名為Experience Platform中的資料收集技術套件。 因此，產品檔案中已推出數個術語變更。 有關術語更改的綜合參考，請參閱以下[document](../../../term-updates.md)。
+>Adobe Experience Platform Launch在Adobe Experience Platform中已重新命名為一套資料收集技術。 因此，產品檔案中已推出數個術語變更。 有關術語更改的綜合參考，請參閱以下[document](../../../term-updates.md)。
 
 核心事件轉送擴充功能提供Adobe Experience Platform中事件轉送的預設事件、條件和資料類型。
 
@@ -165,7 +165,7 @@ module.exports = (context) => {
 getDataElementValue('productName') 
 ```
 
-Platform Launch Server Side 動作會依序執行。自訂程式碼也可以在一個動作中傳回可用於後續動作的值。傳回的值可能來自該動作中的程式碼，或來自呼叫外部來源的回應內文。若要參照使用核心擴充功能之單一規則中先前執行動作的資料，請建立 `Path` 類型資料元素，並使用以下路徑來參照核心擴充功能中自訂程式碼定義之 `productCategory` 變數的值：
+事件轉送動作會依序執行。 自訂程式碼也可以在一個動作中傳回可用於後續動作的值。傳回的值可能來自該動作中的程式碼，或來自呼叫外部來源的回應內文。若要參照使用核心擴充功能之單一規則中先前執行動作的資料，請建立 `Path` 類型資料元素，並使用以下路徑來參照核心擴充功能中自訂程式碼定義之 `productCategory` 變數的值：
 
 ```javascript
 arc.ruleStash.[Extension-Name].[key-as-defined-by-action] 
