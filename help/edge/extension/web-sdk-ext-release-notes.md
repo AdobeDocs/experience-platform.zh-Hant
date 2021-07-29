@@ -1,18 +1,17 @@
 ---
 title: Adobe Experience Platform Web SDK擴充功能發行說明
-description: Adobe Experience Platform Launch 中的 Adobe Experience Platform Web SDK 擴充功能
-seo-description: Adobe Experience Platform Launch 中的 Adobe Experience Platform Web SDK 擴充功能
+description: Adobe Experience Platform Web SDK標籤擴充功能
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: dfcfdf90ae857e6a6ff0ddc7810cb6a6939c9758
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '1071'
+ht-degree: 52%
 
 ---
 
 # Adobe Experience Platform Web SDK擴充功能發行說明
 
-本檔案涵蓋適用於Adobe Experience Platform Launch的Adobe Experience Platform Web SDK擴充功能發行說明。 如需SDK本身的最新發行說明，請參閱[平台Web SDK發行說明](https://experienceleague.adobe.com/docs/experience-platform/edge/release-notes.html)。
+本檔案涵蓋Adobe Experience Platform Web SDK標籤擴充功能的發行說明。 如需SDK本身的最新發行說明，請參閱[平台Web SDK發行說明](https://experienceleague.adobe.com/docs/experience-platform/edge/release-notes.html)。
 
 ## 版本2.6.0 - 2021年7月27日
 
@@ -102,14 +101,14 @@ ht-degree: 0%
 * ID 移轉期間提出的要求會傳送至 demdex 端點，以便在未設定 demdex Cookie 時提升跨網域識別能力
 * ID 移轉期間提出的要求一律會要求回應，以確保身分識別 Cookie 正確設定
 * 執行無效命令時，控制台中會記錄有效命令名稱清單
-* 已新增切換協力廠商 Cookie 支援的核取方塊至 Adobe Experience Platform Launch 擴充功能。這會停用對 demdex.net 的呼叫
+* 新增切換協力廠商Cookie支援的核取方塊至標籤擴充功能。 這會停用對 demdex.net 的呼叫
 
 ## 0.0.5版 — 2019年12月20日
 
-* 新增活動追蹤器設定至 Platform Launch 擴充功能
+* 新增活動追蹤器設定至標籤擴充功能
 * 在事件命令上公開 EventType 和 EventMergeId
-* 新增 onBeforeEventSend 至 Platform Launch 擴充功能
-* 新增 edgeBasePath 至 Platform Launch 擴充功能
+* 新增onBeforeEventSend至標籤擴充功能的設定
+* 將edgeBasePath配置添加到標籤擴展
 
 ## 0.0.3版 — 2019年11月25日
 
