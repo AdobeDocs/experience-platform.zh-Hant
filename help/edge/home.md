@@ -3,22 +3,22 @@ title: Adobe Experience Platform Web SDK概述
 description: 了解如何使用Adobe Experience Platform Web SDK將Platform功能整合至您的網站。
 keywords: Adobe Experience Platform Web SDK;Platform Web SDK;Web SDK;Edge;Visitor.js;AppMeasurement.js;AT.js;DIL.js;Web SDK;SDK;Web SDK;Launch；啟動
 exl-id: 1348144a-7d25-4c27-bc40-3daee2f043a6
-source-git-commit: 12c3f440319046491054b3ef3ec404798bb61f06
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '665'
+source-wordcount: '664'
 ht-degree: 1%
 
 ---
 
 # Adobe Experience Platform Web SDK概述
 
-Adobe Experience Platform Web SDK是用戶端JavaScript程式庫，可讓Adobe Experience Cloud的客戶透過Adobe Experience Platform邊緣網路與[!DNL Experience Cloud]中的各種服務互動。 除了JavaScript程式庫，還提供[Experience Platform Launch擴充功能](../tags/extensions/web/sdk/overview.md)以協助您進行Web SDK設定。
+Adobe Experience Platform Web SDK是用戶端JavaScript程式庫，可讓Adobe Experience Cloud的客戶透過Adobe Experience Platform邊緣網路與[!DNL Experience Cloud]中的各種服務互動。 除了JavaScript程式庫，還有[標籤擴充功能](../tags/extensions/web/sdk/overview.md)可協助您進行Web SDK設定。
 
 ## Experience Edge
 
 [!DNL Adobe Experience Platform Web SDK] 是組成Experience Edge的集合的一部分。Experience Edge包含三種技術：
 
-* **[!DNL Adobe Experience Platform Web SDK]:** JavaScript SDK和擴充功能可 [!DNL Experience Platform Launch] 大幅簡化技術部署 [!DNL Adobe] 工作
+* **[!DNL Adobe Experience Platform Web SDK]:** JavaScript SDK和標籤擴充功能可大幅簡化技術部 [!DNL Adobe] 署
 * **Adobe Experience Platform Mobile SDK:** v5行動SDK的擴充功能，可讓客戶使用新的部署方法
 * **[!DNL Adobe Experience Platform Edge Network]:** 全球分散式伺服器網路，可提供部署產品的新方 [!DNL Adobe] 法
 
