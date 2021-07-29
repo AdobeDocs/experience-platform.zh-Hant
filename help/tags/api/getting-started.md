@@ -1,9 +1,9 @@
 ---
 title: Reactor API快速入門
 description: 了解如何開始使用Reactor API，包括產生必要存取憑證的步驟。
-source-git-commit: 6a1728bd995137a7cd6dc79313762ae6e665d416
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '1070'
+source-wordcount: '1064'
 ht-degree: 1%
 
 ---
@@ -60,7 +60,7 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->產品設定檔由貴組織透過Adobe Admin Console管理，並包含Adobe Experience Platform Launch中精細功能的特定權限集。 產品設定檔及其權限只能由組織內具有管理員權限的使用者管理。 如果您不確定要為API選取哪些產品設定檔，請聯絡管理員。
+>產品設定檔由貴組織透過Adobe Admin Console管理，並包含精細功能的特定權限集。 產品設定檔及其權限只能由組織內具有管理員權限的使用者管理。 如果您不確定要為API選取哪些產品設定檔，請聯絡管理員。
 
 從清單中選取所需的產品設定檔，然後選取&#x200B;**儲存已設定的API**&#x200B;以完成API註冊。
 
@@ -98,7 +98,7 @@ ht-degree: 1%
 
 #### 以程式設計方式產生存取權杖 {#program}
 
-如果您將Launch整合用於應用程式，可以利用程式設計方式透過API請求產生存取權杖。 若要完成此操作，您必須取得下列值：
+如果您將整合用於應用程式，則可透過API請求以程式設計方式產生存取權杖。 若要完成此操作，您必須取得下列值：
 
 * 用戶端ID(`{API_KEY}`)
 * 用戶端密碼(`{SECRET}`)
