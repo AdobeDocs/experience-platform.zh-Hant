@@ -1,9 +1,9 @@
 ---
 title: 程式庫
 description: 了解標籤程式庫的概念，以及它們在Adobe Experience Platform中的運作方式。
-source-git-commit: 39d9468e5d512c75c9d540fa5d2bcba4967e2881
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '790'
+source-wordcount: '791'
 ht-degree: 59%
 
 ---
@@ -12,7 +12,7 @@ ht-degree: 59%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch已重新命名為Experience Platform中的資料收集技術套件。 因此，產品檔案中已推出數個術語變更。 有關術語更改的綜合參考，請參閱以下[document](../../term-updates.md)。
+>Adobe Experience Platform Launch在Adobe Experience Platform中已重新命名為一套資料收集技術。 因此，產品檔案中已推出數個術語變更。 有關術語更改的綜合參考，請參閱以下[document](../../term-updates.md)。
 
 程式庫是擴充功能、資料元素和規則部署後彼此間互動方式的一組指示。建立程式庫時，您需指定要對程式庫進行的變更。在建置期間，這些變更會與先前程式庫中已提交、核准或發佈的所有內容結合。
 
