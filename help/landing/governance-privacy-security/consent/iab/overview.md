@@ -5,9 +5,9 @@ title: IAB TCF 2.0支援Experience Platform
 topic-legacy: privacy events
 description: 了解如何設定資料操作和結構，以在Adobe Experience Platform中的目的地啟用區段時傳達客戶同意選擇。
 exl-id: af787adf-b46e-43cf-84ac-dfb0bc274025
-source-git-commit: da7696d288543abd21ff8a1402e81dcea32efbc2
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '2559'
+source-wordcount: '2563'
 ht-degree: 1%
 
 ---
@@ -119,9 +119,9 @@ Platform可讓您透過下列程式收集客戶同意資料：
 
 ### 建立新資料流
 
-若要讓SDK將資料傳送至Experience Platform，您必須先在[!DNL Adobe Experience Platform Launch]中為Platform建立新的資料流。 [ SDK檔案](../../../../edge/fundamentals/datastreams.md)中提供如何建立新設定的特定步驟。
+若要讓SDK將資料傳送至Experience Platform，您必須先在資料收集UI中為Platform建立新的資料流。 [ SDK檔案](../../../../edge/fundamentals/datastreams.md)中提供如何建立新資料流的特定步驟。
 
-為設定提供唯一名稱后，請選取&#x200B;**[!UICONTROL Adobe Experience Platform]**&#x200B;旁的切換按鈕。 接下來，使用下列值來完成表單的其餘部分：
+為資料流提供唯一名稱后，請選取&#x200B;**[!UICONTROL Adobe Experience Platform]**&#x200B;旁的切換按鈕。 接下來，使用下列值來完成表單的其餘部分：
 
 | 資料流欄位 | 值 |
 | --- | --- |
