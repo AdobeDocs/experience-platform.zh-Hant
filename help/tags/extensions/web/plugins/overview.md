@@ -1,9 +1,9 @@
 ---
 title: 常見Analytics擴充功能概觀
 description: 了解Adobe Experience Platform中的常見Analytics標籤擴充功能。
-source-git-commit: 5f810ada57eeb12a56de603d974a091b888dc9d2
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '548'
+source-wordcount: '549'
 ht-degree: 57%
 
 ---
@@ -12,7 +12,7 @@ ht-degree: 57%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch已重新命名為Experience Platform中的資料收集技術套件。 因此，產品檔案中已推出數個術語變更。 有關術語更改的綜合參考，請參閱以下[document](../../../term-updates.md)。
+>Adobe Experience Platform Launch在Adobe Experience Platform中已重新命名為一套資料收集技術。 因此，產品檔案中已推出數個術語變更。 有關術語更改的綜合參考，請參閱以下[document](../../../term-updates.md)。
 
 此參考資料會說明設定常見 Analytics 外掛程式擴充功能的相關資訊，以及使用此擴充功能擴大 [!DNL Adobe Analytics] 擴充功能時可用的選項。
 
