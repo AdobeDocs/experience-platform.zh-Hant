@@ -1,17 +1,17 @@
 ---
 title: Adobe Experience Platform Web SDK擴充功能中的資料元素類型
-description: 了解Adobe Experience Platform Launch中Adobe Experience Platform Web SDK擴充功能提供的不同資料元素類型。
+description: 了解Adobe Experience Platform Web SDK標籤擴充功能所提供的不同資料元素類型。
 exl-id: 3c2c257f-1fbc-4722-8040-61ad19aa533f
-source-git-commit: 5a295a1f6e64c33ac4a48e1d74253d0527f495f9
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '305'
-ht-degree: 47%
+source-wordcount: '293'
+ht-degree: 49%
 
 ---
 
 # 資料元素類型
 
-在您為[Adobe Experience Platform Launch](https://experienceleague.adobe.com/docs/launch.html)在[Adobe Experience Platform Web SDK擴充功能](web-sdk-extension-configuration.md)中設定[動作類型](action-types.md)後，請設定您的資料元素類型。
+在您於[Adobe Experience Platform Web SDK標籤擴充功能](web-sdk-extension-configuration.md)中設定[動作類型](action-types.md)後，請設定您的資料元素類型。
 
 此頁面說明可用的資料元素類型。
 
