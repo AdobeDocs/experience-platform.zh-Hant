@@ -1,9 +1,9 @@
 ---
 title: 授予使用者存取權
 description: 在Adobe Experience Platform中設定團隊成員的標籤使用者帳戶和權限。
-source-git-commit: 39d9468e5d512c75c9d540fa5d2bcba4967e2881
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '737'
+source-wordcount: '738'
 ht-degree: 20%
 
 ---
@@ -12,7 +12,7 @@ ht-degree: 20%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch已重新命名為Experience Platform中的資料收集技術套件。 因此，產品檔案中已推出數個術語變更。 有關術語更改的綜合參考，請參閱以下[document](../../term-updates.md)。
+>Adobe Experience Platform Launch在Adobe Experience Platform中已重新命名為一套資料收集技術。 因此，產品檔案中已推出數個術語變更。 有關術語更改的綜合參考，請參閱以下[document](../../term-updates.md)。
 
 開始使用 extension_package 之前，您必須先以使用者帳戶和權限來設定團隊成員。此作業可在 [Adobe Admin Console](https://adminconsole.adobe.com/tw/) 中完成。
 
@@ -39,7 +39,7 @@ ht-degree: 20%
 
 產品設定檔是群組。 個人權限會指派給產品設定檔，而設定檔中的任何使用者都會繼承這些權限。
 
-選擇頂部的&#x200B;**[!UICONTROL Products]**&#x200B;連結，左側的&#x200B;**[!UICONTROL Experience Cloud]**。 若您未列出Adobe Experience Platform Launch，客戶應聯絡其客戶團隊，而合作夥伴應傳送電子郵件至<ExchangeTechEC@adobe.com>。
+選擇頂部的&#x200B;**[!UICONTROL Products]**&#x200B;連結，左側的&#x200B;**[!UICONTROL Experience Cloud]**。 如果您未列出資料收集UI，客戶應聯絡其客戶團隊，而合作夥伴應將電子郵件傳送至<ExchangeTechEC@adobe.com>。
 
 ![Admin Console產品索引標籤](../images/getting-started/admin-console-products-launch.png)
 
