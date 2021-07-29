@@ -1,9 +1,9 @@
 ---
 title: 內容安全性原則(CSP)支援
 description: 了解在Adobe Experience Platform中整合您的網站與標籤時，如何處理內容安全性原則(CSP)限制。
-source-git-commit: 12c3f440319046491054b3ef3ec404798bb61f06
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '1079'
+source-wordcount: '1080'
 ht-degree: 54%
 
 ---
@@ -12,7 +12,7 @@ ht-degree: 54%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch已重新命名為Experience Platform中的資料收集技術套件。 因此，產品檔案中已推出數個術語變更。 有關術語更改的綜合參考，請參閱以下[document](../../term-updates.md)。
+>Adobe Experience Platform Launch在Adobe Experience Platform中已重新命名為一套資料收集技術。 因此，產品檔案中已推出數個術語變更。 有關術語更改的綜合參考，請參閱以下[document](../../term-updates.md)。
 
 內容安全性原則 (CSP) 這項安全性功能有助於防止跨網站指令碼攻擊 (XSS)。當瀏覽器遭到誘騙而執行似乎是來自信任來源但其實是來自其他位置的惡意內容時，就會發生此情況。 CSP 能讓瀏覽器 (代表使用者) 驗證指令碼是否的確來自信任的來源。
 
