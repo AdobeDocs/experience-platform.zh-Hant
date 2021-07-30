@@ -3,9 +3,9 @@ keywords: Marketo Web Personalization;marketo Web個人化；Marketo Web Persona
 title: Marketo Web Personalization擴充功能
 description: Marketo Web Personalization擴充功能是Adobe Experience Platform中的個人化目的地。 如需擴充功能的詳細資訊，請參閱Exchange上的擴充功能頁面。
 exl-id: 2f194a5e-13b7-460a-a968-29131771efca
-source-git-commit: 6bbccf6751240637c861c2962b64e5247d8abb43
+source-git-commit: 967a287852ce4f479f658900593aed1f1f2bc0ad
 workflow-type: tm+mt
-source-wordcount: '532'
+source-wordcount: '516'
 ht-degree: 3%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 3%
 
 此擴充功能會部署[!DNL Marketo’s] Web個人化和ContentAI應用程式的指令碼。 [!DNL Marketo] Web個人化可唯一識別並個人化網站訪客特徵的內容，例如匿名訪客的首頁圖形，以及已知訪客的參與平台中 [!DNL Marketo] 廣泛的行為屬性。[!DNL Marketo] ContentAI包含針對B2B客戶專屬之網頁和電子郵件促銷活動，以AI支援的建議和個人化功能。
 
-[!DNL Marketo Web Personalization] 是Adobe Experience Platform中的個人化擴充功能。如需擴充功能的詳細資訊，請參閱[AdobeExchange](https://exchange.adobe.com/experiencecloud.details.101232.marketo-web-personalization.html)上的擴充功能頁面。
+[!DNL Marketo Web Personalization] 是Adobe Experience Platform中的個人化擴充功能。如需Marketo中Web個人化和ContentAI的詳細資訊，請參閱[Web個人化概述](https://experienceleague.adobe.com/docs/marketo/using/product-docs/web-personalization/understanding-web-personalization/web-personalization-overview.html?lang=en)。
 
 此目的地是標籤擴充功能。 如需有關標籤擴充功能在Platform中如何運作的詳細資訊，請參閱[標籤擴充功能概述](../launch-extensions/overview.md)。
 
@@ -41,8 +41,6 @@ ht-degree: 3%
 選取您要安裝擴充功能的屬性。 您也可以選擇建立新屬性。 屬性是規則、資料元素、設定的擴充功能、環境和程式庫的集合。了解標籤檔案中[的「屬性」頁面區段](../../../tags/ui/administration/companies-and-properties.md#properties-page)中的屬性。
 
 工作流程會逐步帶您完成安裝的步驟。
-
-如需擴充功能設定選項和安裝支援的相關資訊，請參閱AdobeExchange](https://exchange.adobe.com/experiencecloud.details.101232.marketo-web-personalization.html)上的[Marketo Web個人化頁面。
 
 您也可以直接在[資料收集UI](https://experience.adobe.com/#/data-collection/)中安裝擴充功能。 如需詳細資訊，請參閱標籤檔案中的[新增新擴充功能](../../../tags/ui/managing-resources/extensions/overview.md#add-a-new-extension)一節。
 
