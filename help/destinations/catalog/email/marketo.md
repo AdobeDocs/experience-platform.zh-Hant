@@ -3,7 +3,7 @@ keywords: Marketo;marketo;Marketo擴充功能；marketo擴充功能
 title: Marketo擴充功能
 description: Marketo擴充功能是Adobe Experience Platform中的電子郵件目的地。 如需擴充功能的詳細資訊，請參閱Exchange上的擴充功能頁面。
 exl-id: 3841eb19-a17e-4c28-a101-7332d178af34
-source-git-commit: 6bbccf6751240637c861c2962b64e5247d8abb43
+source-git-commit: 967a287852ce4f479f658900593aed1f1f2bc0ad
 workflow-type: tm+mt
 source-wordcount: '471'
 ht-degree: 3%
@@ -16,7 +16,7 @@ ht-degree: 3%
 
 [!DNL Marketo]強大的行銷自動化軟體可協助行銷人員掌握數位行銷的藝術與科學，以吸引客戶和潛在客戶。
 
-[!DNL Marketo] 是Adobe Experience Platform中的電子郵件擴充功能。如需擴充功能的詳細資訊，請參閱AdobeExchange](https://exchange.adobe.com/experiencecloud.details.101071.marketo-for-adobe-launch.html)上的[擴充功能頁面。
+[!DNL Marketo] 是Adobe Experience Platform中的電子郵件擴充功能。如需擴充功能的詳細資訊，請參閱AdobeExchange](https://exchange.adobe.com/experiencecloud.details.106250.bounteous-extension-for-adobe-launch-and-marketo.html)上的[擴充功能頁面。
 
 此目的地是標籤擴充功能。 如需有關標籤擴充功能在Platform中如何運作的詳細資訊，請參閱[標籤擴充功能概述](../launch-extensions/overview.md)。
 
@@ -38,7 +38,7 @@ ht-degree: 3%
 4. 選取您要安裝擴充功能的屬性。 您也可以選擇建立新屬性。 屬性是規則、資料元素、設定的擴充功能、環境和程式庫的集合。了解標籤檔案中[的「屬性」頁面區段](../../../tags/ui/administration/companies-and-properties.md#properties-page)中的屬性。
 5. 工作流程會逐步帶您完成安裝的步驟。
 
-有關擴充功能配置選項和安裝支援的資訊，請參閱AdobeExchange](https://exchange.adobe.com/experiencecloud.details.101071.marketo-for-adobe-launch.html)上的[Marketo頁面。
+有關擴充功能配置選項和安裝支援的資訊，請參閱AdobeExchange](https://exchange.adobe.com/experiencecloud.details.106250.bounteous-extension-for-adobe-launch-and-marketo.html)上的[Marketo頁面。
 
 您也可以直接在[資料收集UI](https://experience.adobe.com/#/data-collection/)中安裝擴充功能。 如需詳細資訊，請參閱標籤檔案中的[新增新擴充功能](../../../tags/ui/managing-resources/extensions/overview.md#add-a-new-extension)一節。
 
