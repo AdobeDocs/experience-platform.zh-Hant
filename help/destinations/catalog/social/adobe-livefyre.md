@@ -3,10 +3,10 @@ keywords: livefyre;livefyre擴充功能
 title: AdobeLivefyre擴充功能
 description: AdobeLivefyre擴充功能是Adobe Experience Platform的社交目的地。 如需擴充功能的詳細資訊，請參閱Exchange上的擴充功能頁面。
 exl-id: a134c144-e7b8-4d48-8c90-5999e5ceb8a0
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+source-git-commit: 967a287852ce4f479f658900593aed1f1f2bc0ad
 workflow-type: tm+mt
-source-wordcount: '472'
-ht-degree: 5%
+source-wordcount: '452'
+ht-degree: 3%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 5%
 
 AdobeLivefyre可讓您探索、組織及發佈使用者產生的內容不斷流向您的網站，以建立真實且高度個人化的體驗。
 
-AdobeLivefyre是Adobe Experience Platform中的社交擴充功能。 如需擴充功能的詳細資訊，請參閱[AdobeExchange](https://exchange.adobe.com/experiencecloud.details.100464.html)上的擴充功能頁面。
+AdobeLivefyre是Adobe Experience Platform中的社交擴充功能。 如需LivefyreAdobe的詳細資訊，請參閱[Livefyre實作指南](https://experienceleague.adobe.com/docs/livefyre/implementation/home.html?lang=en)。
 
 此目的地是標籤擴充功能。 如需標籤擴充功能在Platform中如何運作的詳細資訊，請參閱[標籤擴充功能概述](../launch-extensions/overview.md)。
 
@@ -42,10 +42,7 @@ AdobeLivefyre是Adobe Experience Platform中的社交擴充功能。 如需擴�
 
 工作流程會帶您前往資料收集UI以完成安裝。
 
-如需擴充功能組態選項和安裝支援的相關資訊，請參閱AdobeExchange](https://exchange.adobe.com/experiencecloud.details.100464.html)上的[AdobeLivefyre頁面。
-
 您也可以直接在[資料收集UI](https://experience.adobe.com/#/data-collection/)中安裝擴充功能。 如需詳細資訊，請參閱[新增新擴充功能](../../../tags/ui/managing-resources/extensions/overview.md#add-a-new-extension)的指南。
-
 
 ## 如何使用擴充功能 {#how-to-use}
 
