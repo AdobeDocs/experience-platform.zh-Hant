@@ -3,9 +3,9 @@ keywords: twitter;Twitter;twitter通用網站標籤；Twitter通用網站標籤�
 title: Twitter通用網站標籤擴充功能
 description: twitter通用網站標籤擴充功能是Adobe Experience Platform中的廣告目的地。 如需擴充功能的詳細資訊，請參閱Exchange上的擴充功能頁面。
 exl-id: 51ee94f7-e44a-4192-b684-3d7838af4359
-source-git-commit: 6bbccf6751240637c861c2962b64e5247d8abb43
+source-git-commit: 967a287852ce4f479f658900593aed1f1f2bc0ad
 workflow-type: tm+mt
-source-wordcount: '460'
+source-wordcount: '462'
 ht-degree: 3%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 3%
 
 [!DNL Twitter Universal Website Tag] 提供將信標傳送至Twitter UWT標籤的動作。
 
-[!DNL Twitter Universal Website Tag] 是Adobe Experience Platform中的廣告擴充功能。如需擴充功能的詳細資訊，請參閱[進階轉換追蹤](https://business.twitter.com/en/solutions/twitter-ads/website-clicks/advanced-conversion-tracking.html)。
+[!DNL Twitter Universal Website Tag] 是Adobe Experience Platform中的廣告擴充功能。如需擴充功能的詳細資訊，請參閱Twitter檔案中的[轉換追蹤](https://business.twitter.com/en/help/campaign-measurement-and-analytics/conversion-tracking-for-websites.html)。
 
 此目的地是標籤擴充功能。 如需有關標籤擴充功能在Platform中如何運作的詳細資訊，請參閱[標籤擴充功能概述](../launch-extensions/overview.md)。
 
