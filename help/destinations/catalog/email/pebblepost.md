@@ -3,9 +3,9 @@ keywords: PebblePost;Pebblepost;PebblePost程式直接郵件；Pebblepost程式�
 title: PebblePost擴展
 description: PebblePost擴充功能是Adobe Experience Platform的電子郵件目的地。 如需擴充功能的詳細資訊，請參閱Exchange上的擴充功能頁面。
 exl-id: 2d0308db-9d75-4cd1-97de-70ce3837369d
-source-git-commit: 6bbccf6751240637c861c2962b64e5247d8abb43
+source-git-commit: 967a287852ce4f479f658900593aed1f1f2bc0ad
 workflow-type: tm+mt
-source-wordcount: '507'
+source-wordcount: '485'
 ht-degree: 3%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 3%
 
 [!DNL PebblePost's Programmatic Direct Mail®] 解決方案可協助數位行銷人員將線上興趣和意圖連結至可轉換的離線、有形媒體。行銷人員現在可以運用在Adobe中建立的自訂資料區段，針對具有相關、更長久、內部媒體曝光的消費者。 根據回應路徑活動和站上轉換即時分析效能。
 
-[!DNL PebblePost] 是Adobe Experience Platform中的電子郵件擴充功能。如需擴充功能的詳細資訊，請參閱[AdobeExchange](https://exchange.adobe.com/experiencecloud.details.100315.programmatic-direct-mail.html)上的擴充功能頁面。
+[!DNL PebblePost] 是Adobe Experience Platform中的電子郵件擴充功能。如需PebblePost的詳細資訊，請參閱[整合部落格文章](https://blog.adobe.com/en/publish/2017/11/16/pebblepost-builds-integration-launch-adobe.html#gs.7lejiq)。
 
 此目的地是標籤擴充功能。 如需有關標籤擴充功能在Platform中如何運作的詳細資訊，請參閱[標籤擴充功能概述](../launch-extensions/overview.md)。
 
@@ -41,8 +41,6 @@ ht-degree: 3%
 選取您要安裝擴充功能的屬性。 您也可以選擇建立新屬性。 屬性是規則、資料元素、設定的擴充功能、環境和程式庫的集合。了解標籤檔案中[的「屬性」頁面區段](../../../tags/ui/administration/companies-and-properties.md#properties-page)中的屬性。
 
 工作流程會逐步帶您完成安裝的步驟。
-
-有關擴展配置選項和安裝支援的資訊，請參閱AdobeExchange](https://exchange.adobe.com/experiencecloud.details.100315.programmatic-direct-mail.html)上的[PebblePost頁。
 
 您也可以直接在[資料收集UI](https://experience.adobe.com/#/data-collection/)中安裝擴充功能。 如需詳細資訊，請參閱標籤檔案中的[新增新擴充功能](../../../tags/ui/managing-resources/extensions/overview.md#add-a-new-extension)一節。
 
