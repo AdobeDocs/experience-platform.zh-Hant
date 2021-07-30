@@ -3,9 +3,9 @@ keywords: bizible;bizible extension;bizible destination
 title: Bizible擴充功能
 description: Bizible擴充功能是Adobe Experience Platform中的電子郵件目的地。 如需擴充功能的詳細資訊，請參閱Exchange上的擴充功能頁面。
 exl-id: 9e45416d-b951-411c-a59f-34f84529f721
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+source-git-commit: 967a287852ce4f479f658900593aed1f1f2bc0ad
 workflow-type: tm+mt
-source-wordcount: '462'
+source-wordcount: '446'
 ht-degree: 3%
 
 ---
@@ -14,9 +14,9 @@ ht-degree: 3%
 
 ## 概覽 {#overview}
 
-[!DNL Bizible] 是領先業界的B2B歸因解決方案，可讓您無法平行地查看資料，以便您做出可促進增長的明智決策。
+[!DNL Bizible] 是領先業界的B2B歸因解決方案，可讓您無可比擬地掌握資料，以便做出可促進增長的明智決策。
 
-[!DNL Bizible] 是Adobe Experience Platform中的電子郵件擴充功能。如需擴充功能的詳細資訊，請參閱[AdobeExchange](https://exchange.adobe.com/experiencecloud.details.101055.bizible-analytics.html)上的擴充功能頁面。
+[!DNL Bizible] 是Adobe Experience Platform中的電子郵件擴充功能。如需Bizible的詳細資訊，請參閱Bizible概述資源中的[行銷歸因](https://experienceleague.adobe.com/docs/bizible/using/introduction-to-bizible/overview-resources/marketing-attribution.html?lang=en) 。
 
 此目的地是標籤擴充功能。 如需標籤擴充功能在Platform中如何運作的詳細資訊，請參閱[標籤擴充功能概述](../launch-extensions/overview.md)。
 
@@ -41,8 +41,6 @@ ht-degree: 3%
 選取您要安裝擴充功能的標籤屬性。 您也可以選擇建立新屬性。 屬性是規則、資料元素、設定的擴充功能、環境和程式庫的集合。了解[標籤檔案](../../../tags/ui/administration/companies-and-properties.md)中的屬性。
 
 工作流程會帶您前往資料收集UI以完成安裝。
-
-有關擴充功能配置選項和安裝支援的資訊，請參閱AdobeExchange](https://exchange.adobe.com/experiencecloud.details.101055.bizible-analytics.html)上的[Bizible頁。
 
 您也可以直接在[資料收集UI](https://experience.adobe.com/#/data-collection/)中安裝擴充功能。 如需詳細資訊，請參閱[新增新擴充功能](../../../tags/ui/managing-resources/extensions/overview.md#add-a-new-extension)的指南。
 
