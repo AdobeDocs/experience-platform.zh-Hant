@@ -4,7 +4,7 @@ description: 了解Adobe Experience Platform Web SDK標籤擴充功能提供的�
 solution: Experience Platform
 feature: Web SDK
 exl-id: a4bf0bb9-59b4-4c43-97e6-387768176517
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+source-git-commit: 2f9ff95529c907cfc28bc98198eca9fcfc21e9b9
 workflow-type: tm+mt
 source-wordcount: '573'
 ht-degree: 4%
@@ -16,6 +16,7 @@ ht-degree: 4%
 設定[Adobe Experience Platform Web SDK標籤擴充功能](web-sdk-extension-configuration.md)後，請設定您的動作類型。
 
 本頁面說明可用的動作類型。
+
 
 ## 傳送事件
 
