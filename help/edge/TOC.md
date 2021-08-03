@@ -5,9 +5,9 @@ user-guide-title: Adobe Experience Platform 網頁 SDK 說明
 breadcrumb-title: Web SDK 指南
 user-guide-description: 透過 Edge 網路與 Experience Cloud 服務互動。
 feature: 資料管理
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+source-git-commit: 2f9ff95529c907cfc28bc98198eca9fcfc21e9b9
 workflow-type: tm+mt
-source-wordcount: '139'
+source-wordcount: '144'
 ht-degree: 36%
 
 ---
@@ -44,6 +44,7 @@ ht-degree: 36%
    * Adobe Target {#adobe-target}
       * [概覽](personalization/adobe-target/target-overview.md)
       * [實作單頁應用程式](personalization/adobe-target/spa-implementation.md)
+      * [存取回應Token](personalization/adobe-target/accessing-response-tokens.md)
    * Offer Decisioning {#offer-decisioning}
       * [概覽](personalization/offer-decisioning/offer-decisioning-overview.md)
 * 同意{#consent}
@@ -54,6 +55,7 @@ ht-degree: 36%
       * [不使用標籤整合](consent/iab-tcf/without-launch.md)
 * Web SDK標籤擴展{#extension}
    * [Web SDK擴充功能](extension/web-sdk-extension-configuration.md)
+   * [事件類型](extension/event-types.md)
    * [動作類型](extension/action-types.md)
    * [資料元素類型](extension/data-element-types.md)
    * [存取ECID](extension/accessing-the-ecid.md)
