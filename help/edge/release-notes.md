@@ -3,14 +3,18 @@ title: Adobe Experience Platform Web SDK 發行說明
 description: Adobe Experience Platform Web SDK 最新版本注意事項。
 keywords: Adobe Experience Platform Web SDK;Platform Web SDK;Web SDK；發行說明；
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: c6feab3c9cda479c7dabdbf0533145fdcaa36ab1
+source-git-commit: 165c9bce5dabce9704202ebab6b97a4a30e4ca00
 workflow-type: tm+mt
-source-wordcount: '670'
-ht-degree: 5%
+source-wordcount: '714'
+ht-degree: 4%
 
 ---
 
 # 發行說明
+
+## 版本2.6.2 - 2021年8月4日
+
+* 修正即使未存取`result.decisions`屬性，`sendEvent`命令提供的`result.decisions`淘汰警告仍會記錄到主控台的問題。 存取`result.decisions`屬性時不會記錄任何警告，但該屬性仍被取代。
 
 ## 版本2.6.1 - 2021年7月29日
 
