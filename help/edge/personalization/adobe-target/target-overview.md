@@ -3,9 +3,9 @@ title: 將Adobe Target與Platform Web SDK搭配使用
 description: 了解如何使用Adobe Target透過Experience PlatformWeb SDK轉譯個人化內容
 keywords: target;adobe target;activity.id;experience.id;renderDecisions;decisionScopes；預先隱藏程式碼片段；vec；表單式體驗撰寫器；xdm；對象；決策；範圍；結構；系統圖表；圖表
 exl-id: 021171ab-0490-4b27-b350-c37d2a569245
-source-git-commit: 1d2f1651dc9d9ab41507e65fd4b2bb84e9660187
+source-git-commit: 930756b4e10c42edf2d58be16c51d71df207d1af
 workflow-type: tm+mt
-source-wordcount: '1256'
+source-wordcount: '1273'
 ht-degree: 5%
 
 ---
@@ -42,8 +42,8 @@ ht-degree: 5%
 | 3 | 邊緣網路會使用訪客ID和傳入的參數，將擴充的個人化請求傳送至[!DNL Target]邊緣。 |
 | 4 | 設定檔指令碼執行，然後饋入至[!DNL Target]設定檔儲存。 設定檔儲存區會從[!UICONTROL 對象庫]擷取區段（例如，從[!DNL Adobe Analytics]、[!DNL Adobe Audience Manager]、[!DNL Adobe Experience Platform]共用的區段）。 |
 | 5 | [!DNL Target]會根據URL要求參數和設定檔資料，決定要針對訪客顯示哪些活動和體驗，以供目前的頁面檢視和未來預先擷取的檢視使用。 [!DNL Target] 然後將這個傳回至edge網路。 |
-| 6 | a.邊緣網路會將個人化回應傳回至頁面，選擇性地包括其他個人化的設定檔值。 目前頁面上的個人化內容會盡快出現，不會有忽隱忽現的預設內容。<br>b.因單頁應用程式(SPA)中的使用者動作而顯示的檢視個人化內容會經過快取，以便在觸發檢視時立即套用，不需額外的伺服器呼叫&#x200B;。<br>c.邊緣網路會傳送訪客ID和Cookie中的其他值，例如同意、工作階段ID、身分、Cookie檢查、個人化等。 |
-| 7 | 邊緣網路會將[!UICONTROL Analytics for Target](A4T)詳細資訊（活動、體驗和轉換中繼資料）轉送至[!DNL Analytics]邊緣&#x200B;。 |
+| 6 | a.邊緣網路會將個人化回應傳回至頁面，選擇性地包括其他個人化的設定檔值。 目前頁面上的個人化內容會盡快出現，不會有忽隱忽現的預設內容。<br>b.因單頁應用程式(SPA)中的使用者動作而顯示的檢視個人化內容會經過快取，以便在觸發檢視時立即套用，不需額外的伺服器呼叫。<br>c.邊緣網路會傳送訪客ID和Cookie中的其他值，例如同意、工作階段ID、身分、Cookie檢查、個人化等。 |
+| 7 | 邊緣網路會將[!UICONTROL Analytics for Target](A4T)詳細資訊（活動、體驗和轉換中繼資料）轉送至[!DNL Analytics]邊緣。 |
 
 ## 啟用[!DNL Adobe Target]
 
@@ -63,79 +63,9 @@ ht-degree: 5%
 
 如需詳細資訊，請參閱&#x200B;*Adobe Target指南*&#x200B;中的[可視化體驗撰寫器Helper擴充功能](https://experienceleague.adobe.com/docs/target/using/experiences/vec/troubleshoot-composer/vec-helper-browser-extension.html)。
 
-## 自動呈現VEC活動
+## 轉譯個人化內容
 
-[!DNL Adobe Experience Platform Web SDK]可以自動呈現透過[!DNL Adobe Target]的VEC在網路上為使用者定義的體驗。 為了指出[!DNL Experience Platform Web SDK]要自動呈現VEC活動，請傳送包含`renderDecisions = true`的事件：
-
-```javascript
-alloy
-("sendEvent", 
-  { 
-  "renderDecisions": true, 
-  "xdm": {
-    "commerce": { 
-      "order": {
-        "purchaseID": "a8g784hjq1mnp3", 
-         "purchaseOrderNumber": "VAU3123", 
-         "currencyCode": "USD", 
-         "priceTotal": 999.98 
-         } 
-      } 
-    }
-  }
-);
-```
-
-## 使用表單式撰寫器
-
-[表單式體驗撰寫器](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html)是非視覺化介面，適合用來設定[!UICONTROL A/B測試]、[!UICONTROL 體驗鎖定目標]、[!UICONTROL Automated Personalization]和[!UICONTROL Recommendations]活動，其回應類型不同，例如JSON、HTML、影像等。 根據[!DNL Target]傳回的回應類型或決策，您的核心業務邏輯可執行。 若要擷取表單式撰寫器活動的決策，請傳送包含您要擷取決策的所有「decisionScopes」的事件。
-
-```javascript
-alloy
-  ("sendEvent", { 
-    decisionScopes: [
-      "foo", "bar"], 
-      "xdm": {
-        "commerce": { 
-          "order": { 
-            "purchaseID": "a8g784hjq1mnp3", 
-            "purchaseOrderNumber": "VAU3123", 
-            "currencyCode": "USD", 
-            "priceTotal": 999.98 
-          } 
-        } 
-      } 
-    }
-  );
-```
-
-## 決策範圍
-
-`decisionScopes` 定義您要呈現個人化體驗之頁面的區段、位置或部分。這些`decisionScopes`可自訂且由使用者定義。 若為目前的[!DNL Target]客戶，`decisionScopes`也稱為「mboxes」。 在[!DNL Target] UI中， `decisionScopes`顯示為&quot;locations&quot;。
-
-## `__view__`範圍
-
-[!DNL Experience Platform Web SDK]提供擷取VEC動作的功能，而不依賴SDK為您轉譯VEC動作。 傳送定義為`decisionScopes`的`__view__`事件。
-
-```javascript
-alloy("sendEvent", {
-      "decisionScopes": ["__view__", "foo", "bar"], 
-      "xdm": { 
-        "web": { 
-          "webPageDetails": { 
-            "name": "Home Page"
-          }
-        } 
-      }
-    }
-  ).then(function(results) {
-    for (decision of results.decisions) {
-      if (decision.decisionScope === "__view__") {
-        console.log(decision.content)
-      }
-    }
-  });
-```
+如需詳細資訊，請參閱[轉譯個人化內容](../rendering-personalization-content.md) 。
 
 ## XDM中的對象
 
@@ -153,6 +83,86 @@ alloy("sendEvent", {
 * 時間段
 
 如需詳細資訊，請參閱&#x200B;*Adobe Target指南*&#x200B;中的[對象的類別](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/target-rules.html?lang=en)。
+
+### 回應 Token
+
+回應Token主要用來傳送中繼資料給Google、Facebook等協力廠商。 傳回回應Token
+在`propositions` -> `items`內的`meta`欄位中。 範例如下：
+
+```
+{
+  "id": "AT:eyJhY3Rpdml0eUlkIjoiMTI2NzM2IiwiZXhwZXJpZW5jZUlkIjoiMCJ9",
+  "scope": "__view__",
+  "scopeDetails": ...,
+  "renderAttempted": true,
+  "items": [
+    {
+      "id": "0",
+      "schema": "https://ns.adobe.com/personalization/dom-action",
+      "meta": {
+        "experience.id": "0",
+        "activity.id": "126736",
+        "offer.name": "Default Content",
+        "offer.id": "0"
+      }
+    }
+  ]
+}
+```
+
+若要收集回應Token，您必須訂閱`alloy.sendEvent` Promise，逐一瀏覽`propositions`
+並從`items` -> `meta`提取詳細資訊。 每個`proposition`都有一個`renderAttempted`布林欄位
+指示是否呈現`proposition`。 請參閱下列範例：
+
+```
+alloy("sendEvent",
+  {
+    renderDecisions: true,
+    decisionScopes: [
+      "hero-container"
+    ]
+  }).then(result => {
+    const { propositions } = result;
+
+    // filter rendered propositions
+    const renderedPropositions = propositions.filter(proposition => proposition.renderAttempted === true);
+
+    // collect the item metadata that represents the response tokens
+    const collectMetaData = (items) => {
+      return items.filter(item => item.meta !== undefined).map(item => item.meta);
+    }
+
+    const pageLoadResponseTokens = renderedPropositions
+      .map(proposition => collectMetaData(proposition.items))
+      .filter(e => e.length > 0)
+      .flatMap(e => e);
+  });
+  
+```
+
+啟用自動呈現時，命題陣列包含：
+
+#### 頁面載入時：
+
+* 以`renderAttempted`為標幟且設為`false`的表單式撰寫器為基礎的`propositions`
+* 以`renderAttempted`標幟設為`true`的可視化體驗撰寫器為基礎的主張
+* 針對將`renderAttempted`標幟設為`true`的單頁應用程式檢視，以可視化體驗撰寫器為基礎的主張
+
+#### 檢視時 — 變更（針對快取檢視）:
+
+* 針對將`renderAttempted`標幟設為`true`的單頁應用程式檢視，以可視化體驗撰寫器為基礎的主張
+
+禁用自動呈現時，命題陣列包含：
+
+#### 頁面載入時：
+
+* 以`renderAttempted`為`false`設定的表單式撰寫器為基礎`propositions`
+* 以`renderAttempted`標幟設為`false`的可視化體驗撰寫器為基礎的主張
+* 針對將`renderAttempted`標幟設為`false`的單頁應用程式檢視，以可視化體驗撰寫器為基礎的主張
+
+#### 檢視時 — 變更（針對快取檢視）:
+
+* 針對將`renderAttempted`標幟設為`false`的單頁應用程式檢視，以可視化體驗撰寫器為基礎的主張
 
 ### 單一設定檔更新
 
@@ -244,7 +254,7 @@ alloy("sendEvent", {
 
 ## 術語
 
-__決策：__ 在 [!DNL Target]中，決策與從活動中選取的體驗產生關聯。
+__命題：__ 在中 [!DNL Target]，命題與從活動中選擇的體驗相關。
 
 __結構：__ 決策的結構是中的選件類 [!DNL Target]型。
 
