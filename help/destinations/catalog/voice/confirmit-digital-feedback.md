@@ -3,7 +3,7 @@ keywords: 確認數位意見；確認擴充功能；確認
 title: 確認數位意見擴充功能
 description: 確認數位意見擴充功能是Adobe Experience Platform中客戶目的地之聲。 如需擴充功能的詳細資訊，請參閱Exchange上的擴充功能頁面。
 exl-id: b45efd1f-318c-42c4-8a88-02f25fc31319
-source-git-commit: 6bbccf6751240637c861c2962b64e5247d8abb43
+source-git-commit: c8d6c156b3351324fe1be11144afeae91f7a2a59
 workflow-type: tm+mt
 source-wordcount: '515'
 ht-degree: 3%
@@ -39,7 +39,7 @@ ht-degree: 3%
 
 若要安裝[!DNL Confirmit]數位意見擴充功能：
 
-在[Platform interface](http://platform.adobe.com/)中，前往&#x200B;**[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**。
+在[Platform interface](https://platform.adobe.com/)中，前往&#x200B;**[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**。
 
 從目錄中選取擴充功能，或使用搜尋列。
 
