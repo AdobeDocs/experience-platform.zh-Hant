@@ -3,22 +3,22 @@ keywords: Google客戶比對；Google客戶比對；Google客戶比對
 title: Google Customer Match連線
 description: Google Customer Match可讓您使用您的線上和離線資料，透過Google擁有且運作的屬性(例如Search、Shopping、Gmail及YouTube)，觸及客戶並與其重新互動。
 exl-id: 8209b5eb-b05c-4ef7-9fdc-22a528d5f020
-source-git-commit: 4fed44edb3e201422f765493c9019be1cddffccc
+source-git-commit: 8a521b2b846c953b74b8e48fb76b94966a652318
 workflow-type: tm+mt
-source-wordcount: '1548'
+source-wordcount: '1568'
 ht-degree: 0%
 
 ---
 
 # [!DNL Google Customer Match] 連接
 
-## 總覽 {#overview}
+## 概覽 {#overview}
 
 [Google Customer ](https://support.google.com/google-ads/answer/6379332?hl=en) Match可讓您使用您的線上和離線資料，在Google擁有且運作的屬性中觸及客戶並與其重新互動，例如： [!DNL Search]、  [!DNL Shopping]、  [!DNL Gmail]和 [!DNL YouTube]。
 
 ![Adobe Experience Platform UI中的Google Customer Match目的地](../../assets/catalog/advertising/google-customer-match/catalog.png)
 
-## 使用個案
+## 使用案例
 
 為協助您更清楚了解使用[!DNL Google Customer Match]目的地的方式和時機，以下是Adobe Experience Platform客戶可透過此功能解決的範例使用案例。
 
@@ -108,7 +108,7 @@ Attribute source data is not automatically hashed. When your source field contai
 
 ## 設定目的地 — 視訊逐步說明 {#video}
 
-以下影片示範設定[!DNL Google Customer Match]目的地和啟用區段的步驟。 步驟也按順序排列在下幾節中。
+以下影片示範設定社交目的地和啟用區段的步驟。 影片以LinkedIn為範例，但各社交目的地（包括[!DNL Google Customer Match]）的步驟相似。 視頻中的步驟也在後幾節中按順序排列。
 
 >[!VIDEO](https://video.tv.adobe.com/v/332599/?quality=12&learn=on&captions=eng)
 
