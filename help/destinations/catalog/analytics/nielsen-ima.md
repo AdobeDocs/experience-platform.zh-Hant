@@ -3,7 +3,7 @@ keywords: Nielsen IMA處理常式；Nielsenima處理常式；Nielsen;Nielsenima;
 title: Nielsen IMA處理常式擴充功能
 description: Nielsen IMA處理常式擴充功能是Adobe Experience Platform中的分析目的地。 如需擴充功能的詳細資訊，請參閱Exchange上的擴充功能頁面。
 exl-id: a6f8260b-063d-4784-9f26-8b3dacd4ba58
-source-git-commit: 6bbccf6751240637c861c2962b64e5247d8abb43
+source-git-commit: c8d6c156b3351324fe1be11144afeae91f7a2a59
 workflow-type: tm+mt
 source-wordcount: '425'
 ht-degree: 4%
@@ -30,7 +30,7 @@ ht-degree: 4%
 
 要安裝[!DNL Nielsen IMA Handler]擴展，請執行以下操作：
 
-在[Platform interface](http://platform.adobe.com/)中，前往&#x200B;**[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**。
+在[Platform interface](https://platform.adobe.com/)中，前往&#x200B;**[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**。
 
 從目錄中選取擴充功能，或使用搜尋列。
 
