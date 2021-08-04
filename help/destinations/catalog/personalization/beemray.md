@@ -3,7 +3,7 @@ keywords: beemray,beemray延伸功能
 title: Beemray擴充功能
 description: Bemray擴充功能是Adobe Experience Platform中的個人化目的地。 如需擴充功能的詳細資訊，請參閱Exchange上的擴充功能頁面。
 exl-id: 5bb639f5-42b5-48ae-a3e9-7585595ab925
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+source-git-commit: c8d6c156b3351324fe1be11144afeae91f7a2a59
 workflow-type: tm+mt
 source-wordcount: '496'
 ht-degree: 3%
@@ -32,7 +32,7 @@ Beemray是Adobe Experience Platform中的個人化擴充功能。 如需擴充�
 
 要安裝[!DNL Beemray]擴展，請執行以下操作：
 
-在[Platform interface](http://platform.adobe.com/)中，前往&#x200B;**[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**。
+在[Platform interface](https://platform.adobe.com/)中，前往&#x200B;**[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**。
 
 從目錄中選取擴充功能，或使用搜尋列。
 
