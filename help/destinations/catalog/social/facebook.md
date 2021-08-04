@@ -3,16 +3,16 @@ keywords: facebook連線；facebook連線；facebook目的地；facebook;instagr
 title: Facebook連線
 description: 根據雜湊電子郵件啟用Facebook促銷活動的設定檔，以鎖定對象、個人化和隱藏。
 exl-id: 51e8c8f0-5e79-45b9-afbc-110bae127f76
-source-git-commit: 41cfa5b30d8816baf55b8b4e1609ca724e9efe24
+source-git-commit: 32da733eda61049738e87bce48978196a1fea96d
 workflow-type: tm+mt
-source-wordcount: '1160'
+source-wordcount: '1176'
 ht-degree: 2%
 
 ---
 
 # [!DNL Facebook] 連接
 
-## 概述 {#overview}
+## 概覽 {#overview}
 
 根據雜湊電子郵件，啟用[!DNL Facebook]促銷活動的設定檔，以鎖定對象、個人化和隱藏。
 
@@ -20,7 +20,7 @@ ht-degree: 2%
 
 ![FacebookAdobe Experience Platform UI中的目的地](../../assets/catalog/social/facebook/catalog.png)
 
-## 使用個案
+## 使用案例
 
 為協助您更清楚了解使用[!DNL Facebook]目的地的方式和時機，以下是Adobe Experience Platform客戶可透過此功能解決的兩個範例使用案例。
 
@@ -36,7 +36,7 @@ ht-degree: 2%
 
 接下來，他們可以使用離線資料（包括相關的成員資格ID和客戶層級）建立新的受眾區段，並透過[!DNL Facebook]目的地鎖定這些受眾區段。
 
-## 支援的身分{#supported-identities}
+## 支援的身分 {#supported-identities}
 
 [!DNL Facebook Custom Audiences] 支援啟用下表所述的身分。深入了解[identities](/help/identity-service/namespaces.md)。
 
@@ -48,11 +48,11 @@ ht-degree: 2%
 | email_lc_sha256 | 使用SHA256演算法雜湊的電子郵件地址 | Adobe Experience Platform支援純文字和SHA256雜湊電子郵件地址。 請依照[ID符合需求](#id-matching-requirements-id-matching-requirements)一節中的指示，並分別將適當的命名空間用於純文字和雜湊電子郵件地址。 當源欄位包含未雜湊屬性時，請核取&#x200B;**[!UICONTROL Apply transformation]**&#x200B;選項，讓[!DNL Platform]在啟動時自動雜湊資料。 |
 | extern_id | 自訂使用者ID | 當源標識為自定義命名空間時，選擇此目標標識。 |
 
-## 導出類型{#export-type}
+## 匯出類型 {#export-type}
 
 **區段匯出**  — 您要匯出區段（對象）的所有成員，以及Facebook目的地所使用的識別碼（名稱、電話號碼或其他）。
 
-## Facebook帳戶必要條件{#facebook-account-prerequisites}
+## Facebook帳戶必要條件 {#facebook-account-prerequisites}
 
 將對象區段傳送至[!DNL Facebook]之前，請確定您符合下列需求：
 
@@ -63,13 +63,13 @@ ht-degree: 2%
    > 設定Adobe Experience Cloud的權限時，您必須啟用&#x200B;**管理促銷活動**&#x200B;權限。 [!DNL Adobe Experience Platform]整合需要權限。
 - 閱讀並簽署[!DNL Facebook Custom Audiences]服務條款。 若要這麼做，請前往`https://business.facebook.com/ads/manage/customaudiences/tos/?act=[accountID]`，其中`accountID`是您的[!DNL Facebook Ad Account ID]。
 
-## ID匹配要求{#id-matching-requirements}
+## ID比對需求 {#id-matching-requirements}
 
 [!DNL Facebook] 需要清楚傳送任何個人識別資訊(PII)。因此，對[!DNL Facebook]啟動的對象可以被去除&#x200B;*雜湊*&#x200B;識別碼，例如電子郵件地址或電話號碼。
 
 視您擷取至Adobe Experience Platform的ID類型而定，您必須遵守其對應要求。
 
-## 電話號碼雜湊要求{#phone-number-hashing-requirements}
+## 電話號碼雜湊要求 {#phone-number-hashing-requirements}
 
 在[!DNL Facebook]中激活電話號碼有兩種方法：
 
@@ -81,7 +81,7 @@ ht-degree: 2%
 >無法在[!DNL Facebook]中激活被錄入`Phone`命名空間的電話號碼。
 
 
-## 電子郵件雜湊要求{#email-hashing-requirements}
+## 電子郵件雜湊要求 {#email-hashing-requirements}
 
 您可以在將電子郵件地址擷取至Adobe Experience Platform之前先雜湊電子郵件地址，或在Experience Platform中清楚使用電子郵件地址，並在啟用時讓[!DNL Platform]雜湊這些地址。
 
@@ -104,15 +104,15 @@ ht-degree: 2%
 
 ![身分對應轉換](../../assets/ui/activate-destinations/identity-mapping-transformation.png)
 
-## 使用自訂命名空間{#custom-namespaces}
+## 使用自訂命名空間 {#custom-namespaces}
 
 使用`Extern_ID`命名空間將資料發送到[!DNL Facebook]之前，請務必使用[!DNL Facebook Pixel]同步您自己的標識符。 如需詳細資訊，請參閱[Facebook官方檔案](https://developers.facebook.com/docs/marketing-api/audiences/guides/custom-audiences/#external_identifiers)。
 
-## 連接到目標{#connect-destination}
+## 連接到目標 {#connect-destination}
 
 若要連線至[!DNL Facebook]目的地，請參閱[社交目的地驗證工作流程](./workflow.md)。
 
-以下影片也示範設定[!DNL Facebook]目的地和啟用區段的步驟。
+以下影片也示範設定社交目的地和啟用區段的步驟。 影片以LinkedIn為例，但各社交目的地的步驟相似。
 
 >[!VIDEO](https://video.tv.adobe.com/v/332599/?quality=12&learn=on&captions=eng)
 
@@ -124,7 +124,7 @@ ht-degree: 2%
 
 ![Facebook受眾來源](../../assets/catalog/social/facebook/facebook-origin-audience.png)
 
-## 導出的資料{#exported-data}
+## 匯出的資料 {#exported-data}
 
 對於[!DNL Facebook]，成功啟動表示將以程式設計方式在[[!DNL Facebook Ads Manager]](https://www.facebook.com/adsmanager/manage/)中建立[!DNL Facebook]自訂對象。 當使用者符合已啟動區段的資格或取消資格時，會新增及移除對象中的區段成員資格。
 
@@ -134,7 +134,7 @@ ht-degree: 2%
 
 ## 疑難排解 {#troubleshooting}
 
-### 400錯誤請求錯誤消息{#bad-request}
+### 400錯誤請求錯誤消息 {#bad-request}
 
 將區段啟用至[!DNL Facebook]時，您可能會收到下列錯誤：
 
