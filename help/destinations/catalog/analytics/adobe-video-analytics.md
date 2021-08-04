@@ -3,7 +3,7 @@ keywords: media analytics擴充功能；media analytics；音訊和視訊擴充�
 title: Adobe Media Analytics for Audio and Video 擴充功能
 description: 「Adobe MediumAnalytics for Audio and Video」擴充功能是Adobe Experience Platform中的分析目的地。 如需擴充功能的詳細資訊，請參閱Exchange上的擴充功能頁面。
 exl-id: bf33e3e8-a95b-47e3-a1dc-c8f68f80b080
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+source-git-commit: c8d6c156b3351324fe1be11144afeae91f7a2a59
 workflow-type: tm+mt
 source-wordcount: '505'
 ht-degree: 8%
@@ -32,7 +32,7 @@ Adobe MediumAnalytics for Audio and Video是Adobe Experience Platform中的Analy
 
 若要安裝Adobe Analytics for Video擴充功能：
 
-在[Platform interface](http://platform.adobe.com/)中，前往&#x200B;**[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**。
+在[Platform interface](https://platform.adobe.com/)中，前往&#x200B;**[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**。
 
 從目錄中選取擴充功能，或使用搜尋列。
 
