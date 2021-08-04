@@ -3,9 +3,9 @@ title: Adobe Experience Platform Web SDK 發行說明
 description: Adobe Experience Platform Web SDK 最新版本注意事項。
 keywords: Adobe Experience Platform Web SDK;Platform Web SDK;Web SDK；發行說明；
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: 165c9bce5dabce9704202ebab6b97a4a30e4ca00
+source-git-commit: f3821176b0cbc4ad07fbd2e0e20caa1205324a44
 workflow-type: tm+mt
-source-wordcount: '714'
+source-wordcount: '717'
 ht-degree: 4%
 
 ---
@@ -22,7 +22,7 @@ ht-degree: 4%
 
 ## 版本2.6.0 - 2021年7月27日
 
-* 在`sendEvent`解析的Promise中提供更多個人化內容，包括Adobe Target回應Token。 執行`sendEvent`命令時，會傳回Promise，最終以`result`物件解析，該物件包含從伺服器收到的資訊。 此結果對象包含名為`decisions`的屬性。 此`decisions`屬性已過時。 已新增新屬性`propositions`。 這個新屬性可讓客戶存取更多個人化內容，包括回應Token。 即將推出更多檔案。
+* 在`sendEvent`解析的Promise中提供更多個人化內容，包括Adobe Target回應Token。 執行`sendEvent`命令時，會傳回Promise，最終以`result`物件解析，該物件包含從伺服器收到的資訊。 以前，此結果對象包含名為`decisions`的屬性。 此`decisions`屬性已過時。 已新增新屬性`propositions`。 這個新屬性可讓客戶存取更多個人化內容，包括[回應Token](https://experienceleague.adobe.com/docs/experience-platform/edge/personalization/adobe-target/accessing-response-tokens.html)。
 
 ## 版本2.5.0 - 2021年6月
 
