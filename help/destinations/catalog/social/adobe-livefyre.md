@@ -3,7 +3,7 @@ keywords: livefyre;livefyre擴充功能
 title: AdobeLivefyre擴充功能
 description: AdobeLivefyre擴充功能是Adobe Experience Platform的社交目的地。 如需擴充功能的詳細資訊，請參閱Exchange上的擴充功能頁面。
 exl-id: a134c144-e7b8-4d48-8c90-5999e5ceb8a0
-source-git-commit: 967a287852ce4f479f658900593aed1f1f2bc0ad
+source-git-commit: c8d6c156b3351324fe1be11144afeae91f7a2a59
 workflow-type: tm+mt
 source-wordcount: '452'
 ht-degree: 3%
@@ -32,7 +32,7 @@ AdobeLivefyre是Adobe Experience Platform中的社交擴充功能。 如需Livef
 
 若要安裝AdobeLivefyre擴充功能：
 
-在[Platform interface](http://platform.adobe.com/)中，前往&#x200B;**[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**。
+在[Platform interface](https://platform.adobe.com/)中，前往&#x200B;**[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**。
 
 從目錄中選取擴充功能，或使用搜尋列。
 
