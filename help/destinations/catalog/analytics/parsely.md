@@ -3,7 +3,7 @@ keywords: 剖析。 ly;parsely;parsely;parse.ly;Parse.ly
 title: Parse.ly Analytics擴充功能
 description: Parse.ly Analytics擴充功能是Adobe Experience Platform中的分析目的地。 如需擴充功能的詳細資訊，請參閱Exchange上的擴充功能頁面。
 exl-id: 84d98e74-3e34-406c-9b80-81100c766dc8
-source-git-commit: 6bbccf6751240637c861c2962b64e5247d8abb43
+source-git-commit: c8d6c156b3351324fe1be11144afeae91f7a2a59
 workflow-type: tm+mt
 source-wordcount: '454'
 ht-degree: 3%
@@ -32,7 +32,7 @@ Parse.ly是Adobe Experience Platform中的分析擴充功能。 如需擴充功�
 
 要安裝[!DNL Parse.ly]擴展，請執行以下操作：
 
-在[Platform interface](http://platform.adobe.com/)中，前往&#x200B;**[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**。
+在[Platform interface](https://platform.adobe.com/)中，前往&#x200B;**[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**。
 
 從目錄中選取擴充功能，或使用搜尋列。
 
