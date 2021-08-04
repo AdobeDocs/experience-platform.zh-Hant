@@ -3,9 +3,9 @@ keywords: TMMData;TMM資料；TMMDATA;TMM資料
 title: TMMData擴充功能
 description: TMMData擴充功能是Adobe Experience Platform中的分析目的地。 如需擴充功能的詳細資訊，請參閱Exchange上的擴充功能頁面。
 exl-id: 9f4ad50e-d964-41b0-b58e-71611bff3ead
-source-git-commit: c8d6c156b3351324fe1be11144afeae91f7a2a59
+source-git-commit: b90428845412613d59f3c5091ad7c1398ead9f6a
 workflow-type: tm+mt
-source-wordcount: '496'
+source-wordcount: '500'
 ht-degree: 3%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 3%
 
 [!DNL TMMData's] Adobe Marketing Cloud的Foundation平台為行銷團隊提供存取及混合其所有重要資料來源的工具，包括內部/外部及線上/離線資料，以便進行自信且全面的跨管道分析，並自動設定行銷活動，並將匯入匯入Adobe和其他分析與BI工具。
 
-[!DNL TMMData] 是Adobe Experience Platform中的analytics擴充功能。如需擴充功能的詳細資訊，請參閱[AdobeExchange](hhttps://exchange.adobe.com/experiencecloud.details.100148.tmmdata-foundation-platform.html)上的擴充功能頁面。
+[!DNL TMMData] 是Adobe Experience Platform中的analytics擴充功能。如需擴充功能的詳細資訊，請參閱[AdobeExchange](https://exchange.adobe.com/experiencecloud.details.100148.tmmdata-foundation-platform.html)上的擴充功能頁面。
 
 此目的地是標籤擴充功能。 如需有關標籤擴充功能在Platform中如何運作的詳細資訊，請參閱[標籤擴充功能概述](../launch-extensions/overview.md)。
 
