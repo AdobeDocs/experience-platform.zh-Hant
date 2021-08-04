@@ -3,7 +3,7 @@ keywords: 分貝擴充功能；分貝；分貝目的地
 title: Decibel擴充功能
 description: Decibel擴充功能是Adobe Experience Platform中的分析目的地。 如需擴充功能的詳細資訊，請參閱Exchange上的擴充功能頁面。
 exl-id: 0508f8f8-d512-48f1-b2ea-1429f59079db
-source-git-commit: 6bbccf6751240637c861c2962b64e5247d8abb43
+source-git-commit: c8d6c156b3351324fe1be11144afeae91f7a2a59
 workflow-type: tm+mt
 source-wordcount: '473'
 ht-degree: 5%
@@ -32,7 +32,7 @@ ht-degree: 5%
 
 要安裝[!DNL Decibel]擴展，請執行以下操作：
 
-在[Platform interface](http://platform.adobe.com/)中，前往&#x200B;**[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**。
+在[Platform interface](https://platform.adobe.com/)中，前往&#x200B;**[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**。
 
 從目錄中選取擴充功能，或使用搜尋列。
 
