@@ -3,7 +3,7 @@ keywords: 分支；分支延伸模組；分支目的地
 title: 分支擴充功能
 description: Branch擴充功能是Adobe Experience Platform的廣告目的地。 如需擴充功能的詳細資訊，請參閱Exchange上的擴充功能頁面。
 exl-id: 19cbd410-e1c9-4510-8b04-b4c0bf7ff6a7
-source-git-commit: 6bbccf6751240637c861c2962b64e5247d8abb43
+source-git-commit: c8d6c156b3351324fe1be11144afeae91f7a2a59
 workflow-type: tm+mt
 source-wordcount: '450'
 ht-degree: 3%
@@ -32,7 +32,7 @@ Branch是Adobe Experience Platform中的廣告擴充功能。 如需擴充功能
 
 要安裝[!DNL Branch]擴展，請執行以下操作：
 
-在[Platform interface](http://platform.adobe.com/)中，前往&#x200B;**[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**。
+在[Platform interface](https://platform.adobe.com/)中，前往&#x200B;**[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**。
 
 從目錄中選取擴充功能，或使用搜尋列。
 
