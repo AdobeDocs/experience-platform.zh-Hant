@@ -3,7 +3,7 @@ keywords: Analytics擴充功能；Analytics擴充功能；目的地分析
 title: Adobe Analytics 擴充功能
 description: Adobe Analytics擴充功能是Adobe Experience Platform中的分析目的地。 如需擴充功能的詳細資訊，請參閱Exchange上的擴充功能頁面。
 exl-id: 95b6e079-09a6-4262-bd01-11f155286aa9
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+source-git-commit: c8d6c156b3351324fe1be11144afeae91f7a2a59
 workflow-type: tm+mt
 source-wordcount: '474'
 ht-degree: 10%
@@ -32,7 +32,7 @@ Adobe Analytics是Adobe Experience Platform中的analytics擴充功能。 如需
 
 若要安裝Adobe Analytics擴充功能：
 
-在[Platform interface](http://platform.adobe.com/)中，前往&#x200B;**[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**。
+在[Platform interface](https://platform.adobe.com/)中，前往&#x200B;**[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**。
 
 從目錄中選取擴充功能，或使用搜尋列。
 
