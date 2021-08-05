@@ -1,10 +1,10 @@
 ---
 title: 標籤Satellite物件參考
 description: 了解用戶端_satellite物件，以及您可在Adobe Experience Platform中執行的各種函式。
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+source-git-commit: 309a2f4de25eeb174f6ac50996bd735ccdc2393d
 workflow-type: tm+mt
-source-wordcount: '1124'
-ht-degree: 48%
+source-wordcount: '1258'
+ht-degree: 42%
 
 ---
 
@@ -130,7 +130,13 @@ _satellite.logger.deprecation('This method is no longer supported, please use [n
 
 這會將警告記錄到瀏覽器主控台。 無論使用者是否啟用標籤偵錯，都會顯示訊息。
 
-## `cookie`
+## `cookie` {#cookie}
+
+`_satellite.cookie` 包含讀取和寫入cookie的函式。這是公開的協力廠商程式庫js-cookie復本。 如需此程式庫更進階使用的詳細資訊，請檢閱[js-cookie檔案](https://www.npmjs.com/package/js-cookie#basic-usage)。
+
+### 設定Cookie {#cookie-set}
+
+若要設定Cookie，請使用`_satellite.cookie.set()`。
 
 **程式碼**
 
@@ -138,9 +144,41 @@ _satellite.logger.deprecation('This method is no longer supported, please use [n
 _satellite.cookie.set(name: string, value: string[, attributes: Object])
 ```
 
+>[!NOTE]
+>
+>在設定Cookie的舊[`setCookie`](#setCookie)方法中，此函式呼叫的第三個（選用）引數為整數，以天為單位表示Cookie的存留時間(TTL)。 在這個新方法中，「屬性」物件會改為接受為第三個引數。 若要使用新方法來設定Cookie的TTL，您必須在屬性物件中提供`expires`屬性，並將其設為所需值。 這在以下範例中說明。
+
+**範例**
+
+下列函式呼叫會寫入一週後到期的Cookie。
+
+```javascript
+_satellite.cookie.set('product', 'Circuit Pro', { expires: 7 });
+```
+
+### 擷取Cookie {#cookie-get}
+
+若要擷取Cookie，請使用`_satellite.cookie.get()`。
+
+**程式碼**
+
 ```javascript
 _satellite.cookie.get(name: string) => string
 ```
+
+**範例**
+
+下列函式呼叫會讀取先前設定的Cookie。
+
+```javascript
+var product = _satellite.cookie.get('product');
+```
+
+### 移除Cookie {#cookie-remove}
+
+若要移除Cookie，請使用`_satellite.cookie.remove()`。
+
+**程式碼**
 
 ```javascript
 _satellite.cookie.remove(name: string)
@@ -148,22 +186,11 @@ _satellite.cookie.remove(name: string)
 
 **範例**
 
-```javascript
-// Writing a cookie that expires in one week.
-_satellite.cookie.set('product', 'Circuit Pro', { expires: 7 });
-```
+下列函式呼叫會移除先前設定的Cookie。
 
 ```javascript
-// Reading a previously set cookie.
-var product = _satellite.cookie.get('product');
-```
-
-```javascript
-// Removing a previously set cookie.
 _satellite.cookie.remove('product');
 ```
-
-這是讀取和寫入Cookie的公用程式。 這是公開的協力廠商程式庫js-cookie復本。 如需進階用法，請參閱 [js-cookie 用法文件](https://www.npmjs.com/package/js-cookie#basic-usage) (外部連結)。
 
 ## `buildInfo`
 
@@ -236,11 +263,11 @@ _satellite.notify('Hello world!');
 
 如果您未提供記錄層級或傳遞任何其他層級值，訊息會記錄為一般訊息。
 
-## `setCookie`
+## `setCookie` {#setCookie}
 
->[!NOTE]
+>[!IMPORTANT]
 >
->此方法已淘汰。請改用 `_satellite.cookie.set()`。
+>此方法已淘汰。請改用 [`_satellite.cookie.set()`](#cookie-set)。
 
 **程式碼**
 
@@ -258,9 +285,9 @@ _satellite.setCookie('product', 'Circuit Pro', 3);
 
 ## `readCookie`
 
->[!NOTE]
+>[!IMPORTANT]
 >
->此方法已淘汰。請改用 `_satellite.cookie.get()`。
+>此方法已淘汰。請改用 [`_satellite.cookie.get()`](#cookie-get)。
 
 **程式碼**
 
@@ -280,7 +307,7 @@ var product = _satellite.readCookie('product');
 
 >[!NOTE]
 >
->此方法已淘汰。請改用 `_satellite.cookie.remove()`。
+>此方法已淘汰。請改用 [`_satellite.cookie.remove()`](#cookie-remove)。
 
 **程式碼**
 
