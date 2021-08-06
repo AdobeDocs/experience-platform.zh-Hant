@@ -1,14 +1,14 @@
 ---
-title: 標籤Satellite物件參考
-description: 了解用戶端_satellite物件，以及您可在Adobe Experience Platform中執行的各種函式。
-source-git-commit: 309a2f4de25eeb174f6ac50996bd735ccdc2393d
+title: 衛星對象參考
+description: 了解用戶端_satellite物件，以及您可以在標籤中使用物件執行的各種功能。
+source-git-commit: 5adb3ed403bddd3b985d0a790eca117fb2f39288
 workflow-type: tm+mt
-source-wordcount: '1258'
+source-wordcount: '1251'
 ht-degree: 42%
 
 ---
 
-# Adobe Experience Platform標籤Satellite物件參考
+# 衛星對象參考
 
 >[!NOTE]
 >
