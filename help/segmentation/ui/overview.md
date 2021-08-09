@@ -5,9 +5,9 @@ title: 區段服務UI指南
 topic-legacy: ui guide
 description: Adobe Experience Platform區段服務提供建立和管理區段定義的使用者介面。
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: 2791c32abe582d51d05d4bf0488ba82dfadfd053
+source-git-commit: 265607b3b21fda48a92899ec3d750058ca48868a
 workflow-type: tm+mt
-source-wordcount: '1561'
+source-wordcount: '1577'
 ht-degree: 0%
 
 ---
@@ -37,7 +37,7 @@ ht-degree: 0%
 >
 >如果您的組織是初次使用Platform，且尚未建立作用中的設定檔資料集或合併原則，則不會顯示[!UICONTROL Segments]控制面板。 反之， [!UICONTROL 概述]標籤會顯示可協助您開始使用區段的連結和檔案。
 
-###  區段控制面板  {#segments-dashboard}
+###  區段控制面板 {#segments-dashboard}
 
 **[!UICONTROL 區段]**&#x200B;控制面板概述與貴組織的區段資料相關的關鍵量度。
 
@@ -83,9 +83,13 @@ ht-degree: 0%
 
 選取區段定義的列可提供區段定義的摘要，包括可編輯或刪除區段的選項、區段的合格對象、總對象大小，以及區段的名稱、說明、評估方法、建立日期和上次修改日期。
 
+>[!NOTE]
+>
+> 您將能夠刪除目標啟動中使用的區段&#x200B;**not**。
+
 ![](../images/ui/overview/segment-browse-details.png)
 
-## 區段定義詳細資料{#segment-details}
+## 區段定義詳細資料 {#segment-details}
 
 若要查看有關特定區段定義的詳細資訊，請在&#x200B;**[!UICONTROL Browse]**&#x200B;標籤內選取區段名稱。
 
@@ -149,13 +153,13 @@ ht-degree: 0%
 
 ![](../images/ui/overview/segment-builder.png)
 
-## 排程分段{#scheduled-segmentation}
+## 排程分段 {#scheduled-segmentation}
 
 建立區段定義後，您就可以依需求或排程（持續）評估來評估它們。 評估是指透過區段定義來移動[!DNL Real-time Customer Profile]資料，以產生對應的受眾。 建立後，會儲存和儲存對象，以便使用[!DNL Experience Platform] API匯出對象。
 
 隨需評估包括視需要使用API來執行評估並建立受眾，而排程評估（也稱為「已排程區段」）可讓您建立週期性排程，以在特定時間（最多每天一次）評估區段定義。
 
-### 啟用計劃分段{#enable-scheduled-segmentation}
+### 啟用排程的細分 {#enable-scheduled-segmentation}
 
 您可以使用UI或API，為排程評估啟用區段定義。 在UI中，返回&#x200B;**[!UICONTROL Segments]**&#x200B;內的&#x200B;**[!UICONTROL Browse]**&#x200B;標籤，並開啟&#x200B;**[!UICONTROL 新增所有區段至排程]**。 這會導致根據貴組織設定的排程評估所有區段。
 
@@ -167,7 +171,7 @@ ht-degree: 0%
 
 ![](../images/ui/overview/segment-browse-scheduled.png)
 
-## 串流區段{#streaming-segmentation}
+## 串流細分 {#streaming-segmentation}
 
 串流細分是即時對[!DNL Platform]執行近乎即時的細分，同時專注於資料的豐富度。 透過串流細分，區段資格現在會在資料進入[!DNL Platform]時進行，以緩解排程和執行區段工作的需求。
 
@@ -177,7 +181,7 @@ ht-degree: 0%
 >
 >為了讓串流區段正常運作，您需要為組織啟用已排程的區段。 如需啟用排程分段的詳細資訊，請參閱本使用手冊中的[串流分段區段](#scheduled-segmentation)。
 
-## 邊緣分段{#edge-segmentation}
+## 邊緣分割 {#edge-segmentation}
 
 邊緣分段是即時在邊緣上評估Platform中區段的功能，可啟用相同的頁面和下一頁個人化使用案例。
 
@@ -193,7 +197,7 @@ ht-degree: 0%
 
 ![](../images/ui/overview/segment-dule-policy-violations.png)
 
-## 後續步驟和其他資源{#next-steps}
+## 後續步驟和其他資源 {#next-steps}
 
 [!DNL Segmentation Service] UI提供豐富的工作流程，可讓您將有價對象與[!DNL Real-time Customer Profile]資料隔離。
 
