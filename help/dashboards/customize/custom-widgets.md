@@ -3,9 +3,9 @@ keywords: Experience Platform；使用者介面；UI；控制面板；控制面�
 title: 建立控制面板的自訂Widget
 description: '本指南提供建立自訂Widget以用於Adobe Experience Platform控制面板的逐步指示。 '
 exl-id: 1d33e3ea-a8a8-4a09-8bd9-2e04ecedebdc
-source-git-commit: a07eb2baec48ad514ff0afc0548f53baf34da561
+source-git-commit: 4a578721cfc5e6e35179bec82886808fd6e18b53
 workflow-type: tm+mt
-source-wordcount: '589'
+source-wordcount: '902'
 ht-degree: 0%
 
 ---
@@ -41,11 +41,11 @@ ht-degree: 0%
 
 ## 建立自訂介面工具集
 
-若要建立自訂介面工具集，請從介面工具集庫的中心選擇「**[!UICONTROL 建立]**」，或如果已建立自訂介面工具集，請從介面工具集庫的右上角選擇「**[!UICONTROL 建立介面工具集]**」。
+若要建立自訂Widget，請從Widget資料庫的右上角選取「**[!UICONTROL 建立Widget]**」，或如果這是您組織的第一個自訂Widget，請從Widget資料庫的中心選取「**[!UICONTROL 建立]**」。
 
 ![](../images/customization/create-widget.png)
 
-在&#x200B;**[!UICONTROL 建立Widget]**&#x200B;對話方塊中，您可以提供新Widget的標題和說明，並選擇要顯示該Widget的屬性。
+在&#x200B;**[!UICONTROL 建立Widget]**&#x200B;對話方塊中，提供新Widget的標題和說明，並選擇您希望Widget顯示的屬性。
 
 >[!NOTE]
 >
@@ -59,23 +59,59 @@ ht-degree: 0%
 
 ![](../images/customization/create-widget-dialog.png)
 
-## 預覽自訂介面工具集
+## 選取視覺效果
 
-對話方塊中會顯示新介面工具集的預覽，其中會顯示包含模擬資料的水準長條圖。
+選取屬性後，新介面工具集的預覽會顯示在對話方塊中。 人工智慧可用來自動選取最適合屬性資料的視覺效果，以及提供其他可手動選取的視覺效果選項。
+
+根據屬性，AI建議不同的視覺效果選項。 視覺效果的完整清單包括：
+
+* 橫條圖：水準線用於表示值。
+* 垂直條圖：垂直線用於表示值。
+* 環圈圖：與圓形圖類似，值以整體的部分或部分顯示。
+* 散點圖：使用水準和垂直軸來指示值。
+* 折線圖：值會使用單一行來顯示一段時間內的變更。
+* 號碼卡：顯示表示單鍵值的摘要數字。
+* 資料表：值在表格中顯示為行。
 
 >[!NOTE]
 >
->目前所有屬性唯一支援的量度是設定檔計數，而自訂Widget目前唯一支援的視覺效果是水準長條圖。
+>目前所有屬性唯一支援的量度是設定檔計數。
 >
 >範例介面工具集中顯示的資料僅供說明之用。 預覽不會顯示貴組織的實際資料。
 
+若要儲存新介面工具集並返回[!UICONTROL Custom]標籤，請選取&#x200B;**[!UICONTROL Create]**。
+
 ![](../images/customization/create-widget-select-attribute.png)
 
-若要儲存新介面工具集並返回[!UICONTROL Custom]標籤，請選取&#x200B;**[!UICONTROL Create]**。 您的新介面工具集現在可從資料庫選擇介面工具集，然後選取&#x200B;**[!UICONTROL 「新增介面工具集」]**，即可新增至控制面板。
+您的新介面工具集現在可從資料庫選擇介面工具集，然後選取&#x200B;**[!UICONTROL 「新增介面工具集」]**，即可新增至控制面板。
 
-## 封存自訂Widget
+![](../images/customization/custom-widgets-new.png)
 
-將介面工具集新增至程式庫後，可使用&#x200B;**[!UICONTROL Archive]**&#x200B;按鈕進行封存。 您也可以編輯介面工具集以更新標題或說明欄位。
+## 隱藏自訂介面工具集
+
+將介面工具集新增至程式庫後，請在介面工具集卡上選取點(`...`)，然後選取&#x200B;**[!UICONTROL 隱藏介面工具集]**，即可隱藏介面工具集。 您也可以從相同的下拉式清單預覽及編輯介面工具集。
+
+要查看已隱藏的小部件，請從小部件庫的右上角選擇「顯示隱藏的小部件」]**。**[!UICONTROL 
+
+>[!WARNING]
+>
+>在資料庫中隱藏介面工具集並不會從個別使用者的控制面板中移除介面工具集。 如果貴組織中不應再使用介面工具集，請務必將此介面工具集直接傳送給所有Platform使用者，因為他們需要從控制面板中移除介面工具集。
+
+![](../images/customization/hide-widget.png)
+
+## 編輯自訂介面工具集
+
+您可以在介面工具集卡上選取點(`...`)，然後從下拉式選單中選取&#x200B;**[!UICONTROL Edit]**，以編輯介面工具集庫中的自訂介面工具集。
+
+![](../images/customization/custom-widget-edit.png)
+
+在&#x200B;**[!UICONTROL 編輯介面工具集]**&#x200B;對話方塊中，您可以編輯介面工具集的標題和說明，以及預覽和選取不同的視覺效果。 完成編輯後，選擇&#x200B;**[!UICONTROL Save]**&#x200B;以保存更改並返回到自定義小部件頁簽。
+
+>[!WARNING]
+>
+>在資料庫中編輯介面工具集時不會更新個別使用者的介面工具集。 如果Widget已更新，請務必直接向所有Platform使用者傳達此資訊，因為他們需要從控制面板中移除過時的Widget，然後從Widget資料庫中選取並新增更新的Widget。
+
+![](../images/customization/edit-widget.png)
 
 ## 後續步驟
 
