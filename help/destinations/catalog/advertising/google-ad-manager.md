@@ -3,16 +3,16 @@ keywords: google廣告管理員；google廣告；doubleclick;DoubleClick AdX;Dou
 title: Google Ad Manager連線
 description: Google Ad Manager（原稱為DoubleClick for Publishers或DoubleClick AdX）是谷歌的一個廣告服務平台，它讓出版商能夠通過視頻和移動應用管理其網站上的廣告顯示。
 exl-id: e93f1bd5-9d29-43a1-a9a6-8933f9d85150
-source-git-commit: 4df2e7ce9c7e94da4ea0be50ba21232c639e2587
+source-git-commit: 7e2f6f54e754c52c8de7f98372d041b2a6520d46
 workflow-type: tm+mt
-source-wordcount: '754'
-ht-degree: 0%
+source-wordcount: '732'
+ht-degree: 2%
 
 ---
 
 # [!DNL Google Ad Manager] 連接
 
-## 概述 {#overview}
+## 概覽 {#overview}
 
 [!DNL Google Ad Manager](先前稱為( [!DNL DoubleClick for Publishers] DFP)或 [!DNL DoubleClick AdX])是的廣告服務平台，可讓 [!DNL Google] 發佈商管理其網站、透過視訊和行動應用程式中的廣告顯示。
 
@@ -23,7 +23,7 @@ ht-degree: 0%
 * 在[!DNL Google]平台中以程式設計方式建立已啟用的對象。
 * [!DNL Platform] 目前不包含驗證是否成功啟用的測量量度。請參考Google中的對象計數，以驗證整合併了解對象鎖定目標大小。
 
-## 支援的身分{#supported-identities}
+## 支援的身分 {#supported-identities}
 
 [!DNL Google Ad Manager] 支援啟用下表所述的身分。
 
@@ -37,7 +37,7 @@ ht-degree: 0%
 | 女傭 | Microsoft Advertising ID。 此ID可唯一識別執行Windows 10的裝置。 |  |
 | Amazon Fire TV ID | 此ID可唯一識別Amazon Fire TV。 |  |
 
-## 導出類型{#export-type}
+## 匯出類型 {#export-type}
 
 **區段匯出**  — 您正在將區段（對象）的所有成員匯出至Google目的地。
 
@@ -53,8 +53,8 @@ ht-degree: 0%
 
 在Platform中建立[!DNL Google Ad Manager]目的地之前，您必須聯絡[!DNL Google]，才能將Adobe加入允許的資料提供者清單中，並將您的帳戶新增至允許清單中。 聯繫[!DNL Google]並提供以下資訊：
 
-* **帳戶ID** :這是Adobe的帳戶ID，具 [!DNL Google]有請連絡Adobe客戶服務或您的Adobe代表以取得此ID。
-* **客戶ID** :這是Adobe的客戶帳戶ID，具 [!DNL Google]有請連絡Adobe客戶服務或您的Adobe代表以取得此ID。
+* **帳戶ID**:Adobe的帳戶ID與Google。帳戶ID:87933855。
+* **客戶ID**:Adobe的客戶帳戶ID與Google。客戶ID:89690775。
 * **網路ID** :這是你的帳戶  [!DNL Google Ad Manager]
 * **對象連結ID** :這是你的帳戶  [!DNL Google Ad Manager]
 * 您的帳戶類型。 Google或AdX購買者提供的DFP。
