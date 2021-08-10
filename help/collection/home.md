@@ -5,9 +5,9 @@ title: 資料收集概觀
 topic-legacy: overview
 description: 了解在Adobe Experience Platform中收集客戶體驗資料所涉及的各種技術。
 exl-id: 03ce5339-e68d-4adf-8c3c-82846a626dad
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+source-git-commit: f61a845b915df3d803085fbf528e014c8acd9dbd
 workflow-type: tm+mt
-source-wordcount: '304'
+source-wordcount: '332'
 ht-degree: 2%
 
 ---
@@ -36,11 +36,15 @@ Experience Platform提供的資料收集技術著重於所擷取資料集的可�
 
 Adobe Experience Platform Web和Mobile SDK會折疊所有Adobe產品程式庫，並壓縮為適用於網頁或行動平台的單一開發套件。 壓縮這些程式庫可加快資料收集速度，並將操作整合為從用戶端裝置到Adobe Experience Platform邊緣網路的單一資料流。
 
-## 切換過程以部署Adobe技術
+## 切換過程以部署Adobe技術 {#edge}
 
 Platform Edge Network是一個全球分佈、快速、可靠的伺服器網路，能夠以大規模接收和處理資料。 您可以使用標籤，為Adobe Target、Adobe Audience Manager和Adobe Analytics等產品設定[datastreams](../edge/fundamentals/datastreams.md)，這可讓您在伺服器端啟動這些產品，而不需變更用戶端代碼。
 
 ![](./images/deploy.png)
+
+>[!NOTE]
+>
+>如需Platform Edge Network的高階簡介，請參閱下列[互動式產品導覽](https://adobe-ideacloud.forgedx.com/adobe-adobe-edge-collection/adobe-experience-edge/public/mx?SUID=hgb1a48ICSCpbM6MzBYHbxnsh9DgjUy1)。
 
 ## 快速、安全地轉換、豐富和發送資料
 
