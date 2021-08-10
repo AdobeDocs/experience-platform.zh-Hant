@@ -3,7 +3,7 @@ title: 使用Adobe Experience Platform Web SDK追蹤連結
 description: 了解如何使用Web SDK將連結資料傳送至Adobe Analytics
 keywords: adobe analytics;analytics;sendEvent;s.t();s.tl();webPageDetails;pageViews;webInteraction；網頁互動；頁面檢視；連結追蹤；連結；追蹤連結；clickCollection；點擊集合；
 exl-id: d5a1804c-8f91-4083-a46e-ea8f7edf36b6
-source-git-commit: b22eccb34e98ca2da47fe849492ee464d679d2a0
+source-git-commit: d6460e442a136bf9bd26582f228017a6fb52138c
 workflow-type: tm+mt
 source-wordcount: '340'
 ht-degree: 0%
@@ -24,12 +24,12 @@ alloy("sendEvent", {
     "web": {
       "webInteraction": {
         "linkClicks": {
-            "value":1
+            "value": 1
+        }
       },
-      "name":"My Custom Link", // Name that shows up in the custom links report
-      "URL":"https://myurl.com", // The URL of the link
-      "type":"other", // values: other, download, exit
-      }
+      "name": "My Custom Link", // Name that shows up in the custom links report
+      "URL": "https://myurl.com", // The URL of the link
+      "type": "other" // values: other, download, exit
     }
   }
 });
