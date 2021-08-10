@@ -4,9 +4,9 @@ user-guide-title: 標籤說明
 breadcrumb-title: 標籤
 user-guide-description: 了解如何部署及管理分析、行銷和廣告標籤，以強化客戶體驗。
 feature: 資料收集
-source-git-commit: bddad4476d6943c7549028e93c84c8ca29059dc0
+source-git-commit: 3658384ec39226f457fd9cea86d1838613a9508c
 workflow-type: tm+mt
-source-wordcount: '385'
+source-wordcount: '378'
 ht-degree: 67%
 
 ---
@@ -88,9 +88,6 @@ ht-degree: 67%
       * Adobe Experience Manager Asset Insights {#asset-insights}
          * [概覽](./extensions/web/asset-insights/overview.md)
          * [發行說明](./extensions/web/asset-insights/release-notes.md)
-      * Adobe Experience Manager Forms {#forms}
-         * [概覽](./extensions/web/forms/overview.md)
-         * [發行說明](./extensions/web/forms/release-notes.md)
       * Adobe Medium音訊和視訊分析{#media-analytics}
          * [概覽](./extensions/web/media-analytics/overview.md)
          * [發行說明](./extensions/web/media-analytics/release-notes.md)
