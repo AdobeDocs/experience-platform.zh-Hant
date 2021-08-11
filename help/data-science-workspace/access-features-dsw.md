@@ -5,9 +5,9 @@ title: Data Science Workspace存取與功能
 topic-legacy: Access and features for data science workspace
 description: 以下檔案概述Data Science Workspace權限和功能存取權。
 exl-id: 6759fea4-adb9-4e4e-9f3d-e0e8c885b1dd
-source-git-commit: 319cdb13c965010062aa9179b197d6f5b6a20287
+source-git-commit: 2ff2721f5420483ddc5caffd1eb0532df729e01b
 workflow-type: tm+mt
-source-wordcount: '685'
+source-wordcount: '684'
 ht-degree: 2%
 
 ---
@@ -63,7 +63,7 @@ Experience Platform的存取控制是透過[Adobe Admin Console](https://adminco
 
 ## 沙箱支援
 
-沙箱是單一Experience Platform例項中的虛擬分區。 每個Platform例項都支援多個生產沙箱和非生產沙箱，每個沙箱都會維護自己的Platform資源程式庫。 非生產沙箱可讓您測試功能、執行實驗及進行自訂設定，而不會影響生產沙箱。 如需沙箱的詳細資訊，請參閱[沙箱概述](../sandboxes/home.md)。
+沙箱是單一Experience Platform例項中的虛擬分區。 每個Platform例項都支援多個生產和非生產沙箱，每個沙箱都會維護其專屬的Platform資源程式庫。 非生產沙箱可讓您測試功能、執行實驗及進行自訂設定，而不會影響生產沙箱。 如需沙箱的詳細資訊，請參閱[沙箱概述](../sandboxes/home.md)。
 
 Data Science Workspace目前有下列沙箱限制：
 
