@@ -6,9 +6,9 @@ seo-title: 將設定檔和區段啟用至目的地
 description: 將區段對應至目的地，以啟動您在Adobe Experience Platform中的資料。 若要完成此操作，請遵循下列步驟。
 seo-description: 將區段對應至目的地，以啟動您在Adobe Experience Platform中的資料。 若要完成此操作，請遵循下列步驟。
 exl-id: c3792046-ffa8-4851-918f-98ced8b8a835
-source-git-commit: bbb33287b82d348811852f4ad17a9c7b24a33b44
+source-git-commit: dd9e822fd485d26d5101e12e241465c354db5ad3
 workflow-type: tm+mt
-source-wordcount: '2960'
+source-wordcount: '2957'
 ht-degree: 0%
 
 ---
@@ -52,7 +52,7 @@ ht-degree: 0%
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_applytransformation"
 >title="套用轉換"
->abstract="使用未雜湊的來源欄位時（例如&#x200B;*personalEmail.address* **personalEmail.address** `personalEmail.address`），請核取此選項，讓Adobe Experience Platform在啟動時自動雜湊這些欄位。"
+>abstract="使用未雜湊的來源欄位時，請核取此選項，讓Adobe Experience Platform在啟動時自動雜湊這些欄位。"
 
 適用於：社交目的地和Google Customer Match廣告目的地
 
