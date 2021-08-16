@@ -1,83 +1,86 @@
 ---
-keywords: 刪除目標，如何刪除目標，刪除目標
-title: 刪除目標
+keywords: 刪除目的地，如何刪除目的地，刪除目的地
+title: 刪除目的地
 type: Tutorial
-description: 本教學課程列出刪除Adobe Experience PlatformUI中現有目標的步驟
+description: 本教學課程列出刪除Adobe Experience Platform UI中現有目的地的步驟
 exl-id: 7b672859-e61a-4b3c-9db9-62048258f0aa
-translation-type: tm+mt
-source-git-commit: 5b72433fcf2318f98538278c6d2650b366e391a2
+source-git-commit: 84deb9d1eecee8ec4369915a0b3c1eb810fd7c9b
 workflow-type: tm+mt
-source-wordcount: '393'
+source-wordcount: '430'
 ht-degree: 0%
 
 ---
 
-# 刪除目標{#delete-destinations}
+# 刪除目的地 {#delete-destinations}
 
-## 概述 {#overview}
+## 概覽 {#overview}
 
-在Adobe Experience Platform用戶介面中，您可以刪除與目標的現有連接。
+在Adobe Experience Platform使用者介面中，您可以刪除與目的地的現有連線。
 
-刪除目標將刪除該目標的任何現有資料流。 在刪除資料流之前，所有激活到您刪除的目標的段都將被取消映射。
+刪除目標會刪除該目標的任何現有資料流。 在刪除資料流之前，激活到您刪除的目標的所有段都未映射。
 
-有兩種方法可以從[!DNL Platform] [!DNL UI]中刪除目標。 您可以：
+有兩種方式可從[!DNL Platform] [!DNL UI]中刪除目標。 您可以：
 
-* [從頁籤中刪除目 [!UICONTROL Browse] 標](#delete-browse-tab)
-* [從目標詳細資訊頁刪除目標](#delete-destination-details-page)
+* [從[!UICONTROL Browse]標籤中刪除目標](#delete-browse-tab)
+* [從目的地詳細資訊頁面刪除目的地](#delete-destination-details-page)
 
-## 從「瀏覽」頁籤{#delete-browse-tab}刪除目標
+>[!IMPORTANT]
+>
+>雖然如本文所述，您可以刪除目的地的現有&#x200B;*連線*，但Platform目前不允許您刪除現有的&#x200B;*[目的地帳戶](/help/destinations/ui/destinations-workspace.md#accounts)*。
 
-請遵循下列步驟，從[!UICONTROL Browse]標籤中刪除目標。
+## 從「瀏覽」索引標籤刪除目標{#delete-browse-tab}
 
-1. 登入[Experience PlatformUI](https://platform.adobe.com/)並從左導覽列選擇&#x200B;**[!UICONTROL Destinations]**。 要查看現有目標，請從頂部標題中選擇&#x200B;**[!UICONTROL Browse]**。
+請依照下列步驟從[!UICONTROL Browse]標籤中刪除目標。
 
-   ![瀏覽目標](../assets/ui/delete-destinations/browse-destinations.png)
+1. 登入[Experience PlatformUI](https://platform.adobe.com/)並從左側導覽列選取&#x200B;**[!UICONTROL 目的地]**。 若要檢視您現有的目的地，請從頂端標題選取&#x200B;**[!UICONTROL Browse]**。
 
-2. 選擇左上角的篩選器表徵圖![Filter-icon](../assets/ui/delete-destinations/filter.png)以啟動排序面板。 排序面板提供您所有目的地的清單。 您可以從清單中選擇多個目標，以查看與所選目標相關聯的資料流的篩選選擇。
+   ![瀏覽目的地](../assets/ui/delete-destinations/browse-destinations.png)
 
-   ![篩選目標](../assets/ui/delete-destinations/filter-destinations.png)
+2. 選擇左上角的篩選表徵圖![Filter-icon](../assets/ui/delete-destinations/filter.png)以啟動排序面板。 排序面板會提供所有目的地的清單。 您可以從清單中選擇多個目標，以查看與所選目標關聯的資料流的篩選選擇。
 
-3. 在&#x200B;**[!UICONTROL Platform]**&#x200B;欄中選擇![刪除按鈕](../assets/ui/delete-destinations/delete-icon.png) **[!UICONTROL Delete]**按鈕以刪除現有目標。
-   ![刪除目標](../assets/ui/delete-destinations/delete-destinations.png)
+   ![篩選目的地](../assets/ui/delete-destinations/filter-destinations.png)
+
+3. 在&#x200B;**[!UICONTROL Platform]**&#x200B;欄中選擇![刪除按鈕](../assets/ui/delete-destinations/delete-icon.png) **[!UICONTROL 刪除]**按鈕，以刪除現有目標。
+   ![刪除目的地](../assets/ui/delete-destinations/delete-destinations.png)
 
 4. 選擇&#x200B;**[!UICONTROL Delete]**&#x200B;以確認目標的刪除。
 
    ![確認刪除目標](../assets/ui/delete-destinations/delete-destinations-confirm.png)
 
 
-## 從目標詳細資訊頁面刪除目標{#delete-destination-details-page}
+## 從目的地詳細資訊頁面刪除目的地{#delete-destination-details-page}
 
-請遵循下列步驟，從目標詳細資料頁面刪除目標。
+請依照下列步驟，從目的地詳細資訊頁面刪除目的地。
 
-1. 登入[Experience PlatformUI](https://platform.adobe.com/)並從左導覽列選擇&#x200B;**[!UICONTROL Destinations]**。 要查看現有目標，請從頂部標題中選擇&#x200B;**[!UICONTROL Browse]**。
+1. 登入[Experience PlatformUI](https://platform.adobe.com/)並從左側導覽列選取&#x200B;**[!UICONTROL 目的地]**。 若要檢視您現有的目的地，請從頂端標題選取&#x200B;**[!UICONTROL Browse]**。
 
-   ![瀏覽目標](../assets/ui/delete-destinations/browse-destinations.png)
+   ![瀏覽目的地](../assets/ui/delete-destinations/browse-destinations.png)
 
-2. 選擇左上角的篩選器表徵圖![Filter-icon](../assets/ui/delete-destinations/filter.png)以啟動排序面板。 排序面板提供您所有目的地的清單。 您可以從清單中選擇多個目標，以查看與所選目標相關聯的資料流的篩選選擇。
+2. 選擇左上角的篩選表徵圖![Filter-icon](../assets/ui/delete-destinations/filter.png)以啟動排序面板。 排序面板會提供所有目的地的清單。 您可以從清單中選擇多個目標，以查看與所選目標關聯的資料流的篩選選擇。
 
-   ![篩選目標](../assets/ui/delete-destinations/filter-destinations.png)
+   ![篩選目的地](../assets/ui/delete-destinations/filter-destinations.png)
 
-3. 選擇要刪除的目標名稱。
+3. 選取您要刪除的目的地名稱。
 
    ![選擇目標](../assets/ui/delete-destinations/delete-destination-select.png)
 
-   * 如果目標有現有資料流，則將轉至[!UICONTROL Dataflow runs]頁籤。
+   * 如果目標中有現有資料流，則會將您帶到[!UICONTROL 資料流運行]頁簽。
 
-      ![「資料流運行」頁籤](../assets/ui/delete-destinations/destination-details-dataflows.png)
+      ![資料流運行頁簽](../assets/ui/delete-destinations/destination-details-dataflows.png)
 
-   * 如果目標沒有現有的資料流，則會將您帶到一個空頁面，您可以在其中開始激活對象。
+   * 如果目的地沒有現有資料流，則會將您帶至空白頁面，讓您開始啟用對象。
 
-      ![目標詳細資訊](../assets/ui/delete-destinations/destination-details-empty.png)
+      ![目的地詳細資訊](../assets/ui/delete-destinations/destination-details-empty.png)
 
 
-4. 在右邊欄中選擇&#x200B;**[!UICONTROL Delete]**。
+4. 在右側邊欄中選取&#x200B;**[!UICONTROL Delete]**。
 
    ![刪除目標](../assets/ui/delete-destinations/delete-destinations-button.png)
 
-5. 在確認對話框中選擇&#x200B;**[!UICONTROL Delete]**&#x200B;以刪除目標。
+5. 在確認對話方塊中選取&#x200B;**[!UICONTROL Delete]**&#x200B;以移除目的地。
 
    ![刪除目標確認](..//assets/ui/delete-destinations/delete-destinations-delete.png)
 
    >[!NOTE]
    >
-   >視伺服器負載而定，[!DNL Platform]刪除目標可能需要幾分鐘的時間。
+   >根據伺服器負載，[!DNL Platform]刪除目標可能需要幾分鐘的時間。
