@@ -1,10 +1,10 @@
 ---
 title: 擴充功能套件端點
 description: 了解如何在Reactor API中呼叫/extension_packages端點。
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+source-git-commit: 53612919dc040a8a3ad35a3c5c0991554ffbea7c
 workflow-type: tm+mt
-source-wordcount: '741'
-ht-degree: 6%
+source-wordcount: '955'
+ht-degree: 5%
 
 ---
 
@@ -23,6 +23,32 @@ ht-degree: 6%
 ## 快速入門
 
 本指南中使用的端點是[Reactor API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/reactor.yaml)的一部分。 繼續操作之前，請參閱[快速入門手冊](../getting-started.md)，了解如何驗證API的重要資訊。
+
+除了了解如何呼叫Reactor API外，還請務必了解擴充功能套件的`status`和`availability`屬性如何影響您可以對其執行的動作。 以下各節將說明這些內容。
+
+### 狀態
+
+擴充功能套件有三種可能狀態：`pending`、`succeeded`和`failed`。
+
+| 狀態 | 說明 |
+| --- | --- |
+| `pending` | 建立擴充功能套件時，其`status`會設為`pending`。 這表示系統已收到擴充功能套件的資訊，並將開始處理。 狀態為`pending`的擴充功能套件無法使用。 |
+| `succeeded` | 如果成功完成處理，則擴充功能套件的狀態會更新為`succeeded`。 |
+| `failed` | 如果未成功完成處理，則擴充功能套件的狀態會更新為`failed`。 狀態為`failed`的擴充功能套件可以更新，直到處理成功為止。 狀態為`failed`的擴充功能套件無法使用。 |
+
+### 可用性
+
+擴充功能套件的可用性層級如下：`development`、`private`和`public`。
+
+| 可用性 | 說明 |
+| --- | --- |
+| `development` | `development`中的擴充功能套件只會顯示給擁有該套件的公司，並在其中提供。 此外，它只能用於設定為擴充功能開發的屬性。 |
+| `private` | `private`擴充功能套件只會顯示給擁有該套件的公司，且只能安裝在公司擁有的屬性上。 |
+| `public` | `public`擴充功能套件可見，可供所有公司和屬性使用。 |
+
+>[!NOTE]
+>
+>建立擴充功能套件時，`availability`會設為`development`。 測試完成後，您可以將擴充功能套件轉換為`private`或`public`。
 
 ## 擷取擴充功能套件清單 {#list}
 
@@ -46,6 +72,7 @@ curl -X GET \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
 
@@ -231,6 +258,7 @@ curl -X GET \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
 
@@ -441,11 +469,11 @@ curl -X GET \
 }
 ```
 
-## 建立或更新擴充功能套件 {#create}
+## 建立擴充功能套件 {#create}
 
 擴充功能套件是使用Node.js架構工具建立，並先儲存在本機電腦上，再提交至Reactor API。 如需設定擴充功能套件的詳細資訊，請參閱[擴充功能開發快速入門手冊](../../extension-dev/getting-started.md)。
 
-建立擴充功能套件檔案後，您就可以透過POST請求將其提交至Reactor API。 如果API中已存在擴充功能套件，此呼叫會將套件更新至新版本。
+建立擴充功能套件檔案後，您就可以透過POST請求將其提交至Reactor API。
 
 **API格式**
 
@@ -676,12 +704,12 @@ curl -X POST \
 
 ## 更新擴充功能套件 {#update}
 
-您可以在POST請求的路徑中加入擴充功能套件ID，以更新其ID。
+您可以在PATCH請求的路徑中加入擴充功能套件ID，以更新其ID。
 
 **API格式**
 
 ```http
-POST /extension_packages/{EXTENSION_PACKAGE_ID}
+PATCH /extension_packages/{EXTENSION_PACKAGE_ID}
 ```
 
 | 參數 | 說明 |
@@ -695,7 +723,7 @@ POST /extension_packages/{EXTENSION_PACKAGE_ID}
 與[建立擴充功能套件一樣，更新套件的本機版本必須透過表單資料上傳。](#create)
 
 ```shell
-curl -X POST \
+curl -X PATCH \
   https://reactor.adobe.io/extension_packages/EP10bb503178694d73bc0cd84387b82172 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
@@ -934,7 +962,7 @@ PATCH /extension_packages/{EXTENSION_PACKAGE_ID}
 通過在請求資料的`meta`中提供`action`值`release_private`來實現私有釋放。
 
 ```shell
-curl -X POST \
+curl -X PATCH \
   https://reactor.adobe.io/extension_packages/EP10bb503178694d73bc0cd84387b82172 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
@@ -1179,7 +1207,7 @@ PATCH /extension_packages/{EXTENSION_PACKAGE_ID}
 通過在請求資料的`meta`中提供`action`值`release_private`來實現私有釋放。
 
 ```shell
-curl -X POST \
+curl -X PATCH \
   https://reactor.adobe.io/extension_packages/EP10bb503178694d73bc0cd84387b82172 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
@@ -1275,6 +1303,7 @@ curl -X GET \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
 
