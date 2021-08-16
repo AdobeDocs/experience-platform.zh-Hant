@@ -2,16 +2,24 @@
 title: Adobe Experience Platform Web SDK擴充功能發行說明
 description: Adobe Experience Platform Web SDK標籤擴充功能
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: 7c30df7ea126ec7c7c794b8daaf3d2b813873b98
+source-git-commit: 40d280eb1d9810d679428ffd42c88035459f2b7d
 workflow-type: tm+mt
-source-wordcount: '1105'
-ht-degree: 53%
+source-wordcount: '1173'
+ht-degree: 51%
 
 ---
 
 # Adobe Experience Platform Web SDK擴充功能發行說明
 
 本檔案涵蓋Adobe Experience Platform Web SDK標籤擴充功能的發行說明。 如需SDK本身的最新發行說明，請參閱[平台Web SDK發行說明](https://experienceleague.adobe.com/docs/experience-platform/edge/release-notes.html)。
+
+## 版本2.7.0 - 2021年8月16日
+
+包含 2.6.3 版的 Adobe Experience Platform Web SDK 程式庫。
+
+* 使用「身分對應」資料元素類型時，其ID會解析為未填入字串之值的識別碼，現在會自動從身分對應中移除。
+* 修正嘗試使用XDM物件資料元素類型儲存資料元素時，未選取結構的錯誤。
+* 改善使用者介面印刷樣式。
 
 ## 版本2.6.2 - 2021年8月4日
 
