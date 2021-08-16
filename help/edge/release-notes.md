@@ -3,14 +3,18 @@ title: Adobe Experience Platform Web SDK 發行說明
 description: Adobe Experience Platform Web SDK 最新版本注意事項。
 keywords: Adobe Experience Platform Web SDK;Platform Web SDK;Web SDK；發行說明；
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: f3821176b0cbc4ad07fbd2e0e20caa1205324a44
+source-git-commit: 2be9d262a699861c01011c59358751e6406f3770
 workflow-type: tm+mt
-source-wordcount: '717'
+source-wordcount: '738'
 ht-degree: 4%
 
 ---
 
 # 發行說明
+
+## 版本2.6.3 - 2021年8月16日
+
+* 修正非公用物件透過`configure`命令所解析的Promise公開的問題。
 
 ## 版本2.6.2 - 2021年8月4日
 
