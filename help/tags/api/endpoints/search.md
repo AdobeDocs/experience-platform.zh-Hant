@@ -1,10 +1,10 @@
 ---
 title: 搜尋端點
 description: 了解如何在Reactor API中呼叫/search端點。
-source-git-commit: 6a1728bd995137a7cd6dc79313762ae6e665d416
+source-git-commit: 53612919dc040a8a3ad35a3c5c0991554ffbea7c
 workflow-type: tm+mt
-source-wordcount: '709'
-ht-degree: 2%
+source-wordcount: '662'
+ht-degree: 1%
 
 ---
 
@@ -43,25 +43,15 @@ Reactor API中的`/search`端點提供尋找符合所需條件的資源的方式
 
 本指南中使用的端點是[Reactor API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/reactor.yaml)的一部分。 繼續操作之前，請參閱[快速入門手冊](../getting-started.md)，了解如何驗證API的重要資訊。
 
-## 擷取規則清單 {#list}
+## 執行搜尋 {#perform}
 
-您可以透過提出GET要求，借此包含來擷取屬於屬性的規則清單。
+您可以提出POST請求來執行搜尋。
 
 **API格式**
 
 ```http
-GET /properties/{PROPERTY_ID}/rules
+POST /search
 ```
-
-| 參數 | 說明 |
-| --- | --- |
-| `PROPERTY_ID` | 要列出其元件的屬性的`id`。 |
-
-{style=&quot;table-layout:auto&quot;}
-
->[!NOTE]
->
->您可以使用查詢參數，根據下列屬性來篩選列出的規則：<ul><li>`created_at`</li><li>`dirty`</li><li>`enabled`</li><li>`name`</li><li>`origin_id`</li><li>`published`</li><li>`published_at`</li><li>`revision_number`</li><li>`updated_at`</li></ul>如需詳細資訊，請參閱[篩選回應](../guides/filtering.md)的指南。
 
 **要求**
 
@@ -71,6 +61,7 @@ curl -X POST \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1' \
   -d '{
         "data" : {
