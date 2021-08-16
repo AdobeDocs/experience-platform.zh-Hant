@@ -1,10 +1,10 @@
 ---
 title: 核心擴充功能發行說明
 description: Adobe Experience Platform核心擴充功能的最新發行說明。
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+source-git-commit: cef9f9e403328418d26935bf3ee45e9068b7177e
 workflow-type: tm+mt
-source-wordcount: '1210'
-ht-degree: 71%
+source-wordcount: '1293'
+ht-degree: 67%
 
 ---
 
@@ -13,6 +13,16 @@ ht-degree: 71%
 >[!NOTE]
 >
 >Adobe Experience Platform Launch在Adobe Experience Platform中已重新命名為一套資料收集技術。 因此，產品檔案中已推出數個術語變更。 有關術語更改的綜合參考，請參閱以下[document](../../../term-updates.md)。
+
+## 2021 年 8 月 11 日
+
+v3.0.0
+
+* PDCL-6153:新增支援，以可靠地提取快取自訂程式碼動作的完整限定URL。
+
+核心擴充功能的v3.0.0與Turbine Web執行階段[v27.2.0的變更結合，如果使用者的公司支援Premium CDN，此變更可讓使用者在許多Adobe管理的托管區域中載入其程式庫。](https://github.com/adobe/reactor-turbine/releases/tag/v27.2.0)
+
+若使用者沒有Premium CDN，此升級為選用且回溯相容，若客戶的公司已啟用Premium CDN，則此升級為強制。
 
 ## 2021 年 5 月 20 日
 
