@@ -1,24 +1,24 @@
 ---
-keywords: Experience Platform；首頁；熱門主題；Marketo Engage；行銷活動；Marketo；映射
+keywords: Experience Platform；首頁；熱門主題；Marketo Engage;marketo engage;Marketo；對應
 solution: Experience Platform
-title: Marketo Engage源的映射欄位
+title: 映射Marketo Engage源的欄位
 topic-legacy: overview
-description: 下表包含Marketo資料集中各欄位與其對應的XDM欄位之間的映射。
+description: 下表包含Marketo資料集中欄位與其對應XDM欄位之間的對應。
 exl-id: 2b217bba-2748-4d6f-85ac-5f64d5e99d49
-source-git-commit: 178c0c4079d620b9a8380fcfcdd90cb74eb24bbb
+source-git-commit: 0af9290a3143b85311fbbd8d194f4799b0c9a873
 workflow-type: tm+mt
 source-wordcount: '333'
-ht-degree: 4%
+ht-degree: 13%
 
 ---
 
-# （測試版）[!DNL Marketo Engage]欄位對應
+# (Beta)[!DNL Marketo Engage]欄位對應
 
 >[!IMPORTANT]
 >
->[!DNL Marketo Engage]來源目前處於測試階段。 其功能和說明檔案可能會有所變更。
+>[!DNL Marketo Engage]源當前處於測試版。 其功能和檔案可能會有所變更。
 
-下表包含9個[!DNL Marketo]資料集中欄位與其對應的「體驗資料模型」(XDM)欄位之間的映射。
+下表包含九個[!DNL Marketo]資料集中欄位與其對應的Experience Data Model(XDM)欄位之間的對應。
 
 ## 活動 {#activities}
 
@@ -95,7 +95,7 @@ ht-degree: 4%
 | 來源資料集 | XDM目標欄位 | 附註 |
 | -------------- | ---------------- | ----- |
 | `id` | `campaignID` | 主要身分 |
-| `sfdcId` | `extSourceSystemAudit.externalID` | 次要識別 |
+| `sfdcId` | `extSourceSystemAudit.externalID` | 次要身分 |
 | `name` | `campaignName` |
 | `description` | `campaignDescription` |
 | `type` | `campaignType` |
@@ -111,7 +111,7 @@ ht-degree: 4%
 
 {style=&quot;table-layout:auto&quot;}
 
-## 方案成員資格{#program-memberships}
+## 方案成員資格 {#program-memberships}
 
 | 來源資料集 | XDM目標欄位 | 附註 |
 | -------------- | ---------------- | ----- |
@@ -143,7 +143,7 @@ ht-degree: 4%
 | 來源資料集 | XDM目標欄位 | 附註 |
 | -------------- | ---------------- | ----- |
 | `id` | `accountID` | 主要身分 |
-| `mktoCdpExternalId` | `extSourceSystemAudit.externalID` | 次要識別 |
+| `mktoCdpExternalId` | `extSourceSystemAudit.externalID` | 次要身分 |
 | `createdAt` | `extSourceSystemAudit.createdDate` |
 | `updatedAt` | `extSourceSystemAudit.lastUpdatedDate` |
 | `billingCity` | `accountBillingAddress.city` |
@@ -164,7 +164,7 @@ ht-degree: 4%
 
 {style=&quot;table-layout:auto&quot;}
 
-## 靜態清單{#static-lists}
+## 靜態清單 {#static-lists}
 
 | 來源資料集 | XDM目標欄位 | 附註 |
 | -------------- | ---------------- | ----- |
@@ -176,7 +176,7 @@ ht-degree: 4%
 
 {style=&quot;table-layout:auto&quot;}
 
-## 靜態清單成員資格{#static-list-memnberships}
+## 靜態清單成員資格 {#static-list-memnberships}
 
 | 來源資料集 | XDM目標欄位 | 附註 |
 | -------------- | ---------------- | ----- |
@@ -187,16 +187,16 @@ ht-degree: 4%
 
 {style=&quot;table-layout:auto&quot;}
 
-## 命名帳戶{#named-accounts}
+## 已命名帳戶 {#named-accounts}
 
 >[!IMPORTANT]
 >
->指名的帳戶資料集只有在Marketo的帳戶型行銷(ABM)功能中才必要。 如果您未使用ABM，則無需為命名帳戶設定映射。
+>只有Marketo的帳戶型行銷(ABM)功能才需要指定帳戶資料集。 如果您未使用ABM，則無需為指定帳戶設定映射。
 
 | 來源資料集 | XDM目標欄位 | 附註 |
 | -------------- | ---------------- | ----- |
 | `id` | `accountID` | 主要身分 |
-| `crmGuid` | `extSourceSystemAudit.externalID` | 次要識別 |
+| `crmGuid` | `extSourceSystemAudit.externalID` | 次要身分 |
 | `createdAt` | `extSourceSystemAudit.createdDate` |
 | `updatedAt` | `extSourceSystemAudit.lastUpdatedDate` |
 | `city` | `accountBillingAddress.city` |
@@ -218,7 +218,7 @@ ht-degree: 4%
 | 來源資料集 | XDM目標欄位 | 附註 |
 | -------------- | ---------------- | ----- |
 | `id` | `opportunityID` | 主要身分 |
-| `externalOpportunityId` | `extSourceSystemAudit.externalID` | 次要識別 |
+| `externalOpportunityId` | `extSourceSystemAudit.externalID` | 次要身分 |
 | `mktoCdpAccountOrgId` | `accountID` | 關係 |
 | `description` | `opportunityDescription` |
 | `name` | `opportunityName` |
@@ -237,19 +237,19 @@ ht-degree: 4%
 | `isWon` | `isWon` |
 | `quantity` | `opportunityQuantity` |
 | `probability` | `probabilityPercentage` |
-| `mktoCdpSourceCampaignId` | `campaignID` | 僅在您使用Salesforce整合時才建議使用。 |
+| `mktoCdpSourceCampaignId` | `campaignID` | 僅當您使用Salesforce整合時才建議。 |
 | `lastActivityDate` | `lastActivityDate` |
 | `leadSource` | `leadSource` |
 | `nextStep` | `nextStep` |
 
 {style=&quot;table-layout:auto&quot;}
 
-## 業務機會聯繫人角色{#opportunity-contact-roles}
+## 機會聯繫人角色 {#opportunity-contact-roles}
 
 | 來源資料集 | XDM目標欄位 | 附註 |
 | -------------- | ---------------- | ----- |
 | `id` | `opportunityPersonID` | 主要身分 |
-| `mktoCdpSfdcId` | `extSourceSystemAudit.externalID` | 次要識別 |
+| `mktoCdpSfdcId` | `extSourceSystemAudit.externalID` | 次要身分 |
 | `mktoCdpOpptyId` | `opportunityID` | 關係 |
 | `leadId` | `personID` | 關係 |
 | `role` | `personRole` |
@@ -259,7 +259,7 @@ ht-degree: 4%
 
 {style=&quot;table-layout:auto&quot;}
 
-## 人物 {#persons}
+## 人員 {#persons}
 
 | 來源資料集 | XDM目標欄位 | 附註 |
 | -------------- | ---------------- | ----- |
@@ -275,7 +275,7 @@ ht-degree: 4%
 | `mktoCdpCnvContactPersonId` | `b2b.convertedContactID` |
 | `mktoCdpIsConverted` | `b2b.isConverted` |
 | `mktoCdpConvertedDate` | `b2b.convertedDate` |
-| `sfdcLeadId` | `extSourceSystemAudit.externalID` | 次要身份 |
+| `sfdcLeadId` | `extSourceSystemAudit.externalID` | 次要身分 |
 | `createdAt` | `extSourceSystemAudit.createdDate` |
 | `updatedAt` | `extSourceSystemAudit.lastUpdatedDate` |
 | `title` | `extendedWorkDetails.jobTitle` |
@@ -300,7 +300,7 @@ ht-degree: 4%
 | `leadPartitionId` | `personComponents.personGroupID` |
 | `mktoCdpCnvContactPersonId` | `personComponents.sourceConvertedContactID` |
 | `contactCompany` | `personComponents.sourceAccountID` |
-| `sfdcContactId` | `personComponents.sourceExternalID` | 僅在您使用Salesforce整合時才建議使用。 |
+| `sfdcContactId` | `personComponents.sourceExternalID` | 僅當您使用Salesforce整合時才建議。 |
 | `id` | `personComponents.sourcePersonID` |
 | `email` | `personComponents.workEmail.address` |
 | `email` | `workEmail.address` |
@@ -310,8 +310,8 @@ ht-degree: 4%
 
 >[!NOTE]
 >
->`to_object('ECID',arrays_to_objects('id',explode(ecids)))`來源欄位是計算欄位，必須使用平台UI中的[!UICONTROL 新增計算欄位]選項來新增。 有關詳細資訊，請參閱[添加計算欄位](../../../../ingestion/tutorials/map-a-csv-file.md)的教程。
+>`to_object('ECID',arrays_to_objects('id',explode(ecids)))`來源欄位是必須使用Platform UI中的[!UICONTROL 新增計算欄位]選項新增的計算欄位。 如需詳細資訊，請參閱[新增計算欄位](../../../../data-prep/calculated-fields.md)的教學課程。
 
 ## 後續步驟
 
-閱讀本文檔，您就[!DNL Marketo]資料集及其對應的XDM欄位之間的映射關係獲得了深入見解。 請參見有關建立 [!DNL Marketo] 源連接](../../../tutorials/ui/create/adobe-applications/marketo.md)以完成[!DNL Marketo]資料流的教程。[
+閱讀本檔案後，您就能深入了解[!DNL Marketo]資料集與其對應XDM欄位之間的對應關係。 請參閱有關[建立 [!DNL Marketo] 源連接](../../../tutorials/ui/create/adobe-applications/marketo.md)以完成[!DNL Marketo]資料流的教程。
