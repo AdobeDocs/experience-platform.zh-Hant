@@ -1,37 +1,36 @@
 ---
-keywords: 編輯啟動、編輯目的地、編輯目的地
+keywords: 編輯激活，編輯目標，編輯目標
 title: 編輯啟動流程
 type: Tutorial
 seo-title: 編輯啟動流程
-description: 請依照本文中的步驟，編輯Adobe Experience Platform現有的啟動流程。
-seo-description: 請依照本文中的步驟，編輯Adobe Experience Platform現有的啟動流程。
+description: 請依照本文中的步驟，編輯Adobe Experience Platform中現有的啟動流程。
+seo-description: 請依照本文中的步驟，編輯Adobe Experience Platform中現有的啟動流程。
 exl-id: 0d79fbff-bfde-4109-8353-c7530e9719fb
-translation-type: tm+mt
-source-git-commit: 5b72433fcf2318f98538278c6d2650b366e391a2
+source-git-commit: a619227de30513bb06a22ce7b4f2fc13847c1ab6
 workflow-type: tm+mt
-source-wordcount: '193'
+source-wordcount: '191'
 ht-degree: 0%
 
 ---
 
-# 編輯啟動流程{#edit-activation-flows}
+# 編輯啟動流程 {#edit-activation-flows}
 
-請依照下列步驟編輯Adobe Experience Platform現有的啟動流程：
+請依照下列步驟，編輯Adobe Experience Platform中現有的啟動流程：
 
-1. 登入[Experience PlatformUI](https://platform.adobe.com/)並從左導覽列選擇&#x200B;**[!UICONTROL Destinations]**。 從頂部標題中選擇&#x200B;**[!UICONTROL Browse]**&#x200B;以查看現有目標。
+1. 登入[Experience PlatformUI](https://platform.adobe.com/)並從左側導覽列選取&#x200B;**[!UICONTROL 目的地]**。 從頂端標題選取&#x200B;**[!UICONTROL Browse]**&#x200B;以檢視您現有的目的地。
 
-   ![瀏覽目標](../assets/ui/edit-activation/browse-destinations.png)
+   ![瀏覽目的地](../assets/ui/edit-activation/browse-destinations.png)
 
-2. 選擇左上角的篩選器表徵圖![Filter-icon](../assets/ui/edit-activation/filter.png)以啟動排序面板。 排序面板提供您所有目的地的清單。 您可以從清單中選擇多個目標，以查看與所選目標相關聯的資料流的篩選選擇。
+2. 選擇左上角的篩選表徵圖![Filter-icon](../assets/ui/edit-activation/filter.png)以啟動排序面板。 排序面板會提供所有目的地的清單。 您可以從清單中選擇多個目標，以查看與所選目標關聯的資料流的篩選選擇。
 
-   ![篩選目標](../assets/ui/edit-activation/filter-destinations.png)
+   ![篩選目的地](../assets/ui/edit-activation/filter-destinations.png)
 
-3. 選擇要編輯的目標名稱。
+3. 選取您要編輯的目的地名稱。
 
    ![選擇目標](../assets/ui/edit-activation/destination-select.png)
 
-4. 此時會顯示目標的詳細資料頁面，顯示其可用控制項。 選取右側導軌中的&#x200B;**[!UICONTROL Activate]**&#x200B;以變更要傳送至目的地的區段。
+4. 目的地的詳細資訊頁面隨即顯示，並顯示其可用的控制項。 選取右側邊欄中的&#x200B;**[!UICONTROL 啟動]**&#x200B;以變更要傳送至目的地的區段。
 
-   ![目標詳細資訊](../assets/ui/edit-activation/destination-details.png)
+   ![目的地詳細資訊](../assets/ui/edit-activation/destination-details.png)
 
-5. 如需如何啟用新區段的詳細資訊，請參閱[啟用描述檔和區段至目標](activate-destinations.md)。
+5. 如需如何啟用新區段的詳細資訊，請參閱[啟用概述](activation-overview.md)。
