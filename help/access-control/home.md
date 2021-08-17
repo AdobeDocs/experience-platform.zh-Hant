@@ -2,17 +2,17 @@
 keywords: Experience Platform；首頁；熱門主題；存取控制；adobe admin console
 solution: Experience Platform
 topic-legacy: overview
-title: 存取控制概觀
+title: 存取控制概覽
 description: Adobe Experience Platform的存取控制可透過Adobe Admin Console提供。 此功能會運用Admin Console中的產品設定檔，將使用者與權限和沙箱連結。
 exl-id: 591d59ad-2784-4ae4-a509-23649ce712c9
-source-git-commit: 36aaccddeb207e22a22d5124ec8592ac8dddf8bc
+source-git-commit: f340ecfb850ef50504938a5db136e70b8bede61a
 workflow-type: tm+mt
-source-wordcount: '1307'
+source-wordcount: '1320'
 ht-degree: 2%
 
 ---
 
-# 存取控制概觀
+# 存取控制概覽
 
 [!DNL Experience Platform]的訪問控制通過[Adobe Admin Console](https://adminconsole.adobe.com)提供。 此功能會運用[!DNL Admin Console]中的產品設定檔，將使用者與權限和沙箱連結。
 
@@ -49,7 +49,7 @@ Adobe Admin Console提供管理Adobe產品權益和組織存取權限的集中�
 
 [!DNL Experience Platform] 隨附兩個預先設定的預設產品設定檔。下表概述每個預設設定檔中提供的內容，包括其所授與的存取沙箱，以及其在該沙箱範圍內所授予的權限。
 
-| 產品設定檔 | 沙箱存取 | 權限 |
+| 產品個人資料 | 沙箱存取 | 權限 |
 | --- | --- | --- |
 | 預設生產全部訪問 | 生產 | 適用於[!DNL Experience Platform]的所有權限，但沙箱管理權限除外。 |
 | 沙箱管理員 | 不適用 | 僅提供對沙箱管理權限的存取。 |
@@ -109,6 +109,7 @@ Adobe Admin Console提供管理Adobe產品權益和組織存取權限的集中�
 | [!DNL Data Governance] | [!UICONTROL 套用資料使用量標籤] | 讀取、建立和刪除使用標籤的存取權。 |
 | [!DNL Data Governance] | [!UICONTROL 管理資料使用策略] | 存取讀取、建立、編輯和刪除資料使用原則。 |
 | [!DNL Data Governance] | [!UICONTROL 查看資料使用策略] | 屬於貴組織的資料使用原則的唯讀存取。 |
+| [!DNL Data Governance] | [!UICONTROL 查看審核日誌] | 以唯讀方式存取Platform活動的檢視記錄[稽核記錄](../landing/governance-privacy-security/audit-logs/overview.md)。 |
 | [!DNL Dashboards] | [!UICONTROL 查看許可證使用情況儀表板] | 以唯讀存取權檢視授權使用控制面板。 |
 | [!DNL Dashboards] | [!UICONTROL 管理標準控制面板] | 新增尚未在Data Warehouse中的自訂屬性。 |
 | [!DNL Query Service] | [!UICONTROL 管理查詢] | 存取讀取、建立、編輯和刪除Platform資料的結構化SQL查詢。 |
