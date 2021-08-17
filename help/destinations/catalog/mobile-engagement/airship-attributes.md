@@ -3,9 +3,9 @@ keywords: 飛艇屬性；飛艇目的地
 title: Airship屬性連接
 description: 流暢地將Adobe對象資料傳遞至Airship，作為對象屬性，以在Airship內鎖定目標。
 exl-id: bfc1b52f-2d68-40d6-9052-c2ee1e877961
-source-git-commit: 15ea3ab9370541c35b874414a8753e8812eea9c6
+source-git-commit: 3aac1e7c7fe838201368379da8504efc8e316e1c
 workflow-type: tm+mt
-source-wordcount: '720'
+source-wordcount: '726'
 ht-degree: 1%
 
 ---
@@ -69,7 +69,7 @@ Adobe Experience Platform設定檔屬性類似於[!DNL Airship]屬性，而且�
 
 ## 連接到目標 {#connect}
 
-要連接到此目標，請按照[目標配置教程](../../ui/connect-destination.md)中所述的步驟操作。
+請參閱[對串流區段匯出目的地啟用受眾資料](../../ui/activate-segment-streaming-destinations.md) ，以取得對此目的地啟用受眾區段的指示。
 
 ### 連線參數 {#parameters}
 
@@ -82,7 +82,7 @@ Adobe Experience Platform設定檔屬性類似於[!DNL Airship]屬性，而且�
 
 ## 啟用此目的地的區段 {#activate}
 
-請參閱[將設定檔和區段啟用至目的地](../../ui/activate-destinations.md) ，以取得將對象區段啟用至目的地的指示。
+請參閱[對串流區段匯出目的地啟用受眾資料](../../ui/activate-segment-streaming-destinations.md) ，以取得對此目的地啟用受眾區段的指示。
 
 ## 對應考量事項 {#mapping-considerations}
 
