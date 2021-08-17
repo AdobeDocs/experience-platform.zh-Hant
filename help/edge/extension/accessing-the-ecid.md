@@ -1,9 +1,9 @@
 ---
 title: '存取ECID '
 description: Adobe Experience Platform Web SDK擴充功能運用標籤中的ECID
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+source-git-commit: befe1efa884706165b8d65803d06f6370a8a60f2
 workflow-type: tm+mt
-source-wordcount: '134'
+source-wordcount: '124'
 ht-degree: 5%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 5%
 
 若要在標籤中存取ECID,Adobe建議：
 
-1. 請確定屬性已設定為已啟用[規則元件排序](https://experienceleague.adobe.com/docs/launch/using/ui/rules.html?lang=en#rule-component-sequencing)。
+1. 請確定屬性已設定為已啟用[規則元件排序](../../tags/ui/managing-resources/rules.md#sequencing)。
 1. 建立新規則。
 1. 將[!UICONTROL 程式庫已載入]事件新增至規則。
 1. 使用下列程式碼將[!UICONTROL 自訂條件]動作新增至規則（假設您為SDK例項設定的名稱為`alloy`）:
