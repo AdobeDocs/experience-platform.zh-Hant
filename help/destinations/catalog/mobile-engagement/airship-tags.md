@@ -3,9 +3,9 @@ keywords: 飛艇標籤；飛艇目的地
 title: Airship標籤連接
 description: 流暢地將Adobe對象資料傳遞至Airship，作為對象標籤，以在Airship內鎖定目標。
 exl-id: 84cf5504-f0b5-48d8-8da1-ff91ee1dc171
-source-git-commit: 15ea3ab9370541c35b874414a8753e8812eea9c6
+source-git-commit: e413933920028e3239f6044111d9cf215c865eba
 workflow-type: tm+mt
-source-wordcount: '703'
+source-wordcount: '705'
 ht-degree: 1%
 
 ---
@@ -92,7 +92,7 @@ Adobe Experience Platform中的區段概念類似於Airship中的[Tags](https://
 
 ## 啟用此目的地的區段 {#activate}
 
-請參閱[將設定檔和區段啟用至目的地](../../ui/activate-destinations.md) ，以取得將對象區段啟用至目的地的指示。
+請參閱[對串流區段匯出目的地啟用受眾資料](../../ui/activate-segment-streaming-destinations.md) ，以取得對此目的地啟用受眾區段的指示。
 
 ## 對應考量事項 {#mapping-considerations}
 
