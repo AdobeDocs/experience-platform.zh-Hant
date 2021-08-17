@@ -5,9 +5,9 @@ title: XDM ExperienceEvent類別
 topic-legacy: overview
 description: 本檔案概述XDM ExperienceEvent類別，以及事件資料模型的最佳實務。
 exl-id: a8e59413-b52f-4ea5-867b-8d81088a3321
-source-git-commit: ecb9c9a4158f3d2981ab60ee3bf419464ac7b8f1
+source-git-commit: 0af9290a3143b85311fbbd8d194f4799b0c9a873
 workflow-type: tm+mt
-source-wordcount: '1576'
+source-wordcount: '1573'
 ht-degree: 1%
 
 ---
@@ -53,11 +53,11 @@ ht-degree: 1%
 
 [Adobe Experience Platform Data ](../../data-prep/home.md) Prepack可讓您將資料對應、轉換及驗證至XDM和從XDM。使用服務提供的可用[映射函式](../../data-prep/functions.md)，可以調用邏輯運算子，以在將資料內嵌到Experience Platform中時優先處理、轉換和/或合併來自多事件記錄的資料。 在上述範例中，您可以將`eventType`指定為計算欄位，在「產品檢視」和「頁面檢視」同時發生時，將「產品檢視」優先順序設定於「頁面檢視」之上。
 
-如果您要透過UI手動將資料內嵌至Platform，請參閱[將CSV檔案對應至XDM](../../ingestion/tutorials/map-a-csv-file.md)的指南，以了解如何建立計算欄位的特定步驟。
+如果您要透過UI手動將資料內嵌至Platform，請參閱[計算欄位指南](../../data-prep/calculated-fields.md)上的指南，以了解如何建立計算欄位的特定步驟。
 
 如果您使用來源連線將資料串流至Platform，您可以設定來源，改為使用計算欄位。 有關配置連接時如何實施計算欄位的說明，請參閱特定源](../../sources/home.md)的[文檔。
 
-## 相容架構欄位組{#field-groups}
+## 相容的架構欄位組 {#field-groups}
 
 >[!NOTE]
 >
