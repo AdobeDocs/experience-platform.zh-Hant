@@ -1,9 +1,9 @@
 ---
 title: Marketo Engage目標
 description: Marketo Engage是唯一適用於行銷、廣告、分析和商務的端對端客戶體驗管理(CXM)解決方案。 它可讓您自動化和管理活動，從CRM銷售機會管理、客戶參與，到以帳戶為基礎的行銷和收入歸因。
-source-git-commit: 9b1c805f0717d0ed2c5759420d20abf5dcdeaabc
+source-git-commit: 15ea3ab9370541c35b874414a8753e8812eea9c6
 workflow-type: tm+mt
-source-wordcount: '286'
+source-wordcount: '325'
 ht-degree: 1%
 
 ---
@@ -36,6 +36,14 @@ Marketo Engage是唯一適用於行銷、廣告、分析和商務的端對端客
 
 有關如何設定目標[的說明，請參見此處](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/smart-lists-and-static-lists/static-lists/push-an-adobe-experience-cloud-segment-to-a-marketo-static-list.html?lang=en)。
 
+## 連接到目標 {#connect}
+
+要連接到此目標，請按照[目標配置教程](../../ui/connect-destination.md)中所述的步驟操作。
+
 ## 資料使用與控管 {#data-usage-governance}
 
 處理資料時，所有[!DNL Adobe Experience Platform]目標都符合資料使用策略。 有關[!DNL Adobe Experience Platform]如何實施資料控管的詳細資訊，請參閱[資料控管概述](https://experienceleague.adobe.com/docs/experience-platform/data-governance/home.html)。
+
+## 啟用此目的地的區段 {#activate}
+
+請參閱[將設定檔和區段啟用至目的地](../../ui/activate-destinations.md) ，以取得將對象區段啟用至目的地的指示。
