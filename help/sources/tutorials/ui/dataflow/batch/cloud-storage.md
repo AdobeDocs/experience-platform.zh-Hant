@@ -6,9 +6,9 @@ topic-legacy: overview
 type: Tutorial
 description: 資料流是一個排程任務，可從源中檢索資料並將資料內嵌到Platform資料集。 本教學課程提供使用雲儲存帳戶配置新資料流的步驟。
 exl-id: b327bbea-039d-4c04-afd3-f1d6a5f902a6
-source-git-commit: 5478143e681257c6885d99d83380a35de263ed3d
+source-git-commit: df6ddf52f5cab7e5faae591594f060d641977783
 workflow-type: tm+mt
-source-wordcount: '1999'
+source-wordcount: '2001'
 ht-degree: 0%
 
 ---
@@ -128,7 +128,7 @@ ht-degree: 0%
 
 ![](../../../../images/tutorials/dataflow/cloud-storage/batch/select-schema.png)
 
-您可以視需要選擇直接映射欄位，或使用映射器函式來轉換源資料，以導出計算值或計算值。 如需資料對應和映射器函式的詳細資訊，請參閱有關將CSV資料對應至XDM架構欄位](../../../../../ingestion/tutorials/map-a-csv-file.md)的教學課程。[
+您可以視需要選擇直接映射欄位，或使用資料準備函式來轉換源資料，以導出計算值或計算值。 有關映射器函式和計算欄位的詳細資訊，請參閱[資料準備函式指南](../../../../../data-prep/functions.md)或[計算欄位指南](../../../../../data-prep/calculated-fields.md)。
 
 ![](../../../../images/tutorials/dataflow/cloud-storage/batch/mapping.png)
 
