@@ -3,9 +3,9 @@ keywords: '廣告；bing; '
 title: Microsoft Bing連接
 description: 使用Microsoft Bing連線目的地，您可以在Microsoft Display Advertising中執行重新定位和對象鎖定的數位促銷活動。
 exl-id: e1c0273b-7e3c-4d77-ae14-d1e528ca0294
-source-git-commit: 15ea3ab9370541c35b874414a8753e8812eea9c6
+source-git-commit: 3aac1e7c7fe838201368379da8504efc8e316e1c
 workflow-type: tm+mt
-source-wordcount: '382'
+source-wordcount: '384'
 ht-degree: 1%
 
 ---
@@ -56,9 +56,9 @@ ht-degree: 1%
 
 ## 啟用此目的地的區段 {#activate}
 
-請參閱[將設定檔和區段啟用至目的地](../../ui/activate-destinations.md) ，以取得將對象區段啟用至目的地的指示。
+請參閱[對串流區段匯出目的地啟用受眾資料](../../ui/activate-segment-streaming-destinations.md) ，以取得對此目的地啟用受眾區段的指示。
 
-在[區段排程](../../ui/activate-destinations.md#segment-schedule)步驟中，您必須手動將區段對應至目的地中的對應ID或好記名稱。
+在[區段排程](../../ui/activate-segment-streaming-destinations.md#scheduling)步驟中，您必須手動將區段對應至目的地中的對應ID或好記名稱。
 
 對應區段時，建議您使用[!DNL Platform]區段名稱或更短的名稱，以方便使用。 不過，您目的地的區段ID或名稱不需要與[!DNL Platform]帳戶中的ID或名稱相符。 您在對應欄位中插入的任何值都會由目的地反映。
 
