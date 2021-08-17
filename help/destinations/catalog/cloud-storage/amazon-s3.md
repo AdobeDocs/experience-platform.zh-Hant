@@ -3,9 +3,9 @@ keywords: Amazon S3;S3目的地；s3;Amazon s3
 title: Amazon S3連線
 description: 建立與Amazon Web Services(AWS)S3儲存的即時傳出連線，以定期從Adobe Experience Platform將以定位點分隔或CSV資料檔案匯出至您自己的S3儲存貯體。
 exl-id: 6a2a2756-4bbf-4f82-88e4-62d211cbbb38
-source-git-commit: 8d1594aeb1d6671eec187643245d940ed3ff74cd
+source-git-commit: 3aac1e7c7fe838201368379da8504efc8e316e1c
 workflow-type: tm+mt
-source-wordcount: '363'
+source-wordcount: '366'
 ht-degree: 0%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 0%
 
 ## 匯出類型 {#export-type}
 
-**以設定檔為基礎**  — 您要匯出區段的所有成員，以及所需的結構欄位(例如：電子郵件地址、電話號碼、姓氏)，從目的地啟用工作流程的「選取屬性」畫面 [中選取](../../ui/activate-destinations.md#select-attributes)。
+**以設定檔為基礎**  — 您要匯出區段的所有成員，以及所需的結構欄位(例如：電子郵件地址、電話號碼、姓氏)，從目的地啟用工作流程的「選取屬性」畫面 [中選取](../../ui/activate-segment-streaming-destinations.md#mapping)。
 
 ![Amazon S3設定檔匯出類型](../../assets/catalog/cloud-storage/amazon-s3/catalog.png)
 
@@ -65,8 +65,8 @@ Commenting out this note, as write permissions are assigned through the s3:PutOb
 
 ## 啟用此目的地的區段 {#activate}
 
-請參閱[將設定檔和區段啟用至目的地](../../ui/activate-destinations.md) ，以取得將對象區段啟用至目的地的指示。
+請參閱[將受眾資料啟用至批次設定檔匯出目的地](../../ui/activate-batch-profile-destinations.md) ，以取得關於將受眾區段啟用至此目的地的指示。
 
 ## 匯出的資料 {#exported-data}
 
-對於[!DNL Amazon S3]目標， [!DNL Platform]會在您提供的儲存位置中建立以Tab分隔的`.csv`檔案。 如需檔案的詳細資訊，請參閱區段啟用教學課程中的[電子郵件行銷目的地和雲端儲存目的地](../../ui/activate-destinations.md#esp-and-cloud-storage)。
+對於[!DNL Amazon S3]目標， [!DNL Platform]會在您提供的儲存位置中建立以Tab分隔的`.csv`檔案。 如需檔案的詳細資訊，請參閱區段啟用教學課程中的[啟動對象資料以批次設定檔匯出目的地](../../ui/activate-batch-profile-destinations.md)。
