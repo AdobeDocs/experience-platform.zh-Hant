@@ -6,9 +6,9 @@ description: 本檔案說明如何使用Adobe Experience Platform API建立串�
 topic-legacy: tutorial
 type: Tutorial
 exl-id: 3e8d2745-8b83-4332-9179-a84d8c0b4400
-source-git-commit: 0bc85d79bab690d433dc29d558a4d9caf086586d
+source-git-commit: 02c22453470d55236d4235c479742997e8407ef3
 workflow-type: tm+mt
-source-wordcount: '2024'
+source-wordcount: '2025'
 ht-degree: 1%
 
 ---
@@ -25,7 +25,7 @@ ht-degree: 1%
 
 ![概述 — 建立串流目的地和啟用區段的步驟](../assets/api/streaming-destination/overview.png)
 
-如果您偏好使用Platform中的使用者介面來連線至目的地並啟用資料，請參閱[連線目的地](../ui/connect-destination.md)和[啟用設定檔和區段至目的地](../ui/activate-destinations.md)教學課程。
+如果您偏好使用Platform中的使用者介面來連線至目的地並啟用資料，請參閱[連線目的地](../ui/connect-destination.md)和[啟用對象資料至串流區段匯出目的地](../ui/activate-segment-streaming-destinations.md)教學課程。
 
 ## 開始使用
 
