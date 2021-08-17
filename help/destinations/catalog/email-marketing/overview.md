@@ -4,9 +4,9 @@ title: 電子郵件行銷目的地概觀
 type: Tutorial
 description: 電子郵件服務提供者(ESP)可讓您管理電子郵件行銷活動，例如傳送促銷電子郵件行銷活動。
 exl-id: e07f8c5a-0424-4de5-810f-3d5711ef4606
-source-git-commit: 802b1844bec1e577e978da5d5a69de87278c04b9
+source-git-commit: 3aac1e7c7fe838201368379da8504efc8e316e1c
 workflow-type: tm+mt
-source-wordcount: '382'
+source-wordcount: '387'
 ht-degree: 4%
 
 ---
@@ -70,9 +70,9 @@ Adobe建議您從[union結構](../../../profile/home.md#profile-fragments-and-un
 
 ## 啟用區段至電子郵件行銷目的地 {#activate}
 
-如需如何啟用區段至電子郵件行銷目的地的指示，請參閱[啟用設定檔和區段至目的地](../../ui/activate-destinations.md)。
+如需如何啟用區段至電子郵件行銷目的地的指示，請參閱[啟用對象資料以批次設定檔匯出目的地](../../ui/activate-batch-profile-destinations.md)。
 
 ## 其他資源
 
-* [對目的地啟用資料](../../ui/activate-destinations.md)
+* [啟用受眾資料以批次設定檔匯出目的地](../../ui/activate-batch-profile-destinations.md)
 * [使用流量服務API建立電子郵件行銷目的地和啟用資料](../../api/email-marketing.md)
