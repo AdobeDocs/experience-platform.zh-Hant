@@ -5,9 +5,9 @@ title: 資料準備概述
 topic-legacy: overview
 description: 本檔案介紹Adobe Experience Platform中的資料準備。
 exl-id: f15eeb50-a531-4560-a524-1a670fbda706
-source-git-commit: 764b8e8a120ab53e7d39202b47d7c6f0195193a2
+source-git-commit: f8ad7ce2ed5a45fa0200715a2b961d75f17d192c
 workflow-type: tm+mt
-source-wordcount: '492'
+source-wordcount: '547'
 ht-degree: 0%
 
 ---
@@ -34,6 +34,12 @@ ht-degree: 0%
 映射是輸入屬性或計算欄位與一個XDM屬性的關聯。 單一屬性可透過建立個別對應來對應至多個XDM屬性。
 
 要進一步了解不同的映射函式，請參閱[映射函式指南](./functions.md)。
+
+### 計算欄位
+
+計算欄位允許根據輸入架構中的屬性建立值。 然後，可將這些值指派給目標架構中的屬性，並提供名稱和說明，以便更輕鬆參考。
+
+若要進一步了解計算欄位，請參閱[計算欄位指南](./functions.md#calculated-fields)。
 
 ## 映射集
 
