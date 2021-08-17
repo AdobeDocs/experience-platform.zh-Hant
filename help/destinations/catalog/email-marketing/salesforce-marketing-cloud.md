@@ -3,9 +3,9 @@ keywords: 電子郵件；電子郵件；電子郵件；電子郵件目的地；s
 title: SalesforceMarketing Cloud連接
 seo-description: SalesforceMarketing Cloud是舊稱ExactTarget的數位行銷套裝，可讓您建立和自訂歷程，供訪客和客戶個人化其體驗。
 exl-id: e85049a7-eaed-4f8a-b670-9999d56928f8
-source-git-commit: 15ea3ab9370541c35b874414a8753e8812eea9c6
+source-git-commit: 3aac1e7c7fe838201368379da8504efc8e316e1c
 workflow-type: tm+mt
-source-wordcount: '496'
+source-wordcount: '490'
 ht-degree: 0%
 
 ---
@@ -20,7 +20,7 @@ ht-degree: 0%
 
 ## 匯出類型 {#export-type}
 
-**以設定檔為基礎**  — 您要匯出區段的所有成員，以及所需的結構欄位(例如：電子郵件地址、電話號碼、姓氏)，從目的地啟用工作流程的「選取屬性」畫面 [中選取](../../ui/activate-destinations.md#select-attributes)。
+**以設定檔為基礎**  — 您要匯出區段的所有成員，以及所需的結構欄位(例如：電子郵件地址、電話號碼、姓氏)，從對象啟用工作流程的「選取屬性」畫面 [中選取](../../ui/activate-batch-profile-destinations.md#select-attributes)。
 
 ## IP位址允許清單 {#allow-list}
 
@@ -68,15 +68,15 @@ Commenting out Amazon S3 bucket part for now until support is clarified
 
 ## 啟用此目的地的區段 {#activate}
 
-請參閱[將設定檔和區段啟用至目的地](../../ui/activate-destinations.md) ，以取得將對象區段啟用至目的地的指示。
+請參閱[將受眾資料啟用至批次設定檔匯出目的地](../../ui/activate-batch-profile-destinations.md) ，以取得關於將受眾區段啟用至此目的地的指示。
 
-## 目標屬性 {#destination-attributes}
+### 目標屬性 {#destination-attributes}
 
-當[啟用區段](../../ui/activate-destinations.md)至此目的地時，Adobe建議您從[聯合架構](../../../profile/home.md#profile-fragments-and-union-schemas)中選取唯一識別碼。 選取唯一識別碼，以及您要匯出至目的地的任何其他XDM欄位。 有關詳細資訊，請參閱[選擇要在導出的檔案](./overview.md#destination-attributes)中用作目標屬性的架構欄位。
+啟用此目的地的區段時，Adobe建議您從[聯合架構](../../../profile/home.md#profile-fragments-and-union-schemas)中選取唯一識別碼。 選取唯一識別碼，以及您要匯出至目的地的任何其他XDM欄位。 如需詳細資訊，請參閱[啟用對象至電子郵件行銷目的地時的最佳實務](overview.md#best-practices)。
 
 ## 匯出的資料 {#exported-data}
 
-對於[!DNL Salesforce Marketing Cloud]目的地，Platform會在您提供的儲存位置中建立以Tab分隔的`.csv`檔案。 如需檔案的詳細資訊，請參閱區段啟用教學課程中的[電子郵件行銷目的地和雲端儲存目的地](../../ui/activate-destinations.md#esp-and-cloud-storage)。
+對於[!DNL Salesforce Marketing Cloud]目的地，Platform會在您提供的儲存位置中建立以Tab分隔的`.csv`檔案。 如需檔案的詳細資訊，請參閱區段啟動教學課程中的[verify segment activation](../../ui/activate-batch-profile-destinations.md#verify) 。
 
 ## 將資料導入[!DNL Salesforce Marketing Cloud] {#import-data-into-salesforce}
 
