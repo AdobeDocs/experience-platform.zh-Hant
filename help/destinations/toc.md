@@ -4,9 +4,9 @@ user-guide-title: 目的地指南
 user-guide-description: 針對跨通路行銷活動、電子郵件宣傳、鎖定特定目標的行銷活動和其他諸多使用案例，啟用已知和未知的資料。
 description: 本檔案列出Adobe Experience Platform目的地的目錄
 feature: 目的地
-source-git-commit: f73598224d527535aaf9ecb2aa1c26786cae2d82
+source-git-commit: 0fef443c1979fec0c0d239a0b630cb3a0a134402
 workflow-type: tm+mt
-source-wordcount: '467'
+source-wordcount: '492'
 ht-degree: 11%
 
 ---
@@ -21,9 +21,13 @@ ht-degree: 11%
    * [使用流量服務API連線至電子郵件行銷目的地並啟用資料](./api/email-marketing.md)
 * UI指南{#ui}
    * [目的地工作區](./ui/destinations-workspace.md)
-   * [連接到目標](./ui/connect-destination.md)
+   * [建立新的目的地連線](./ui/connect-destination.md)
+   * 對目的地啟用受眾資料{#activate}
+      * [Activation 總覽](./ui/activation-overview.md)
+      * [對串流區段匯出目的地啟用受眾資料](./ui/activate-segment-streaming-destinations.md)
+      * [對串流設定檔匯出目的地啟用受眾資料](./ui/activate-streaming-profile-destinations.md)
+      * [啟用受眾資料以批次設定檔匯出目的地](./ui/activate-batch-profile-destinations.md)
    * [查看目標詳細資訊](./ui/destination-details-page.md)
-   * [將設定檔和區段啟用至目的地](./ui/activate-destinations.md)
    * [更新目標帳戶](./ui/update-accounts.md)
    * [編輯啟動流程](./ui/edit-activation.md)
    * [刪除目的地](./ui/delete-destinations.md)
