@@ -4,9 +4,9 @@ user-guide-title: 目的地指南
 user-guide-description: 針對跨通路行銷活動、電子郵件宣傳、鎖定特定目標的行銷活動和其他諸多使用案例，啟用已知和未知的資料。
 description: 本檔案列出Adobe Experience Platform目的地的目錄
 feature: 目的地
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+source-git-commit: f73598224d527535aaf9ecb2aa1c26786cae2d82
 workflow-type: tm+mt
-source-wordcount: '476'
+source-wordcount: '467'
 ht-degree: 11%
 
 ---
@@ -79,7 +79,6 @@ ht-degree: 11%
       * [文字轉換追蹤擴充功能](./catalog/analytics/yext.md)
    * 雲儲存目標{#cloud-storage}
       * [雲端儲存目的地概觀](./catalog/cloud-storage/overview.md)
-      * [建立雲端儲存空間目的地](./catalog/cloud-storage/workflow.md)
       * [（測試版）Amazon Kinesis連線](./catalog/cloud-storage/amazon-kinesis.md)
       * [Amazon S3連線](./catalog/cloud-storage/amazon-s3.md)
       * [Azure Blob連接](./catalog/cloud-storage/azure-blob.md)
@@ -119,7 +118,6 @@ ht-degree: 11%
       * [Marketo Web Personalization擴充功能](./catalog/personalization/marketo-web-personalization.md)
    * 社交目的地{#social}
       * [社交目的地概觀](./catalog/social/overview.md)
-      * [建立社交目的地](./catalog/social/workflow.md)
       * [AdobeLivefyre擴充功能](./catalog/social/adobe-livefyre.md)
       * [Facebook連線](./catalog/social/facebook.md)
       * [linkedIn相符的對象連線](./catalog/social/linkedin.md)
