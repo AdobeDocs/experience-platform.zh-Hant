@@ -3,9 +3,9 @@ keywords: Azure Blob;Blob目的地；s3;Azure Blob目的地
 title: Azure Blob連接
 description: 建立與Azure Blob儲存的即時傳出連線，以定期從Adobe Experience Platform匯出以Tab分隔或CSV資料檔案。
 exl-id: 8099849b-e3d2-48a5-902a-ca5a5ec88207
-source-git-commit: 8d1594aeb1d6671eec187643245d940ed3ff74cd
+source-git-commit: 3aac1e7c7fe838201368379da8504efc8e316e1c
 workflow-type: tm+mt
-source-wordcount: '416'
+source-wordcount: '400'
 ht-degree: 1%
 
 ---
@@ -25,13 +25,13 @@ ht-degree: 1%
    * [結構編輯器教學課程](../../../xdm/tutorials/create-schema-ui.md):了解如何使用結構編輯器UI建立自訂結構。
 * [[!DNL Real-time Customer Profile]](../../../profile/home.md):根據來自多個來源的匯總資料，提供統一的即時消費者設定檔。
 
-如果您已有有效的[!DNL Blob]目標，則可跳過本文檔的其餘部分，並繼續參閱有關[激活目標](../../ui/activate-destinations.md)的段的教程。
+如果您已有有效的[!DNL Blob]目標，則可跳過本文檔的其餘部分，並繼續參閱有關[激活目標](../../ui/activate-batch-profile-destinations.md)的段的教程。
 
 ## 支援的檔案格式 {#file-formats}
 
 [!DNL Experience Platform] 支援以下要匯出的檔案格 [!DNL Blob]式：
 
-* 分隔字元分隔值(DSV):目前，對DSV格式化資料檔案的支援僅限於逗號分隔值。 今後將提供對一般DSV檔案的支援。 如需支援檔案的詳細資訊，請參閱[啟用目的地](../../ui/activate-destinations.md#esp-and-cloud-storage)教學課程中的雲端儲存區段。
+* 分隔字元分隔值(DSV):目前，對DSV格式化資料檔案的支援僅限於逗號分隔值。 今後將提供對一般DSV檔案的支援。
 
 ## 連接到目標 {#connect}
 
@@ -54,4 +54,4 @@ ht-degree: 1%
 
 ## 啟用此目的地的區段 {#activate}
 
-請參閱[將設定檔和區段啟用至目的地](../../ui/activate-destinations.md) ，以取得將對象區段啟用至目的地的指示。
+請參閱[將受眾資料啟用至批次設定檔匯出目的地](../../ui/activate-batch-profile-destinations.md) ，以取得關於將受眾區段啟用至此目的地的指示。
