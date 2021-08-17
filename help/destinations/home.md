@@ -5,10 +5,10 @@ seo-title: 目的地概觀
 description: 了解如何針對跨通路行銷宣傳、電子郵件、目標廣告等目的地啟用Adobe Experience Platform資料。
 seo-description: 目的地是預先建置與目的地平台的整合，可順暢地從Adobe Experience Platform啟動資料。 您可以使用Adobe Experience Platform中的目的地，針對跨通路行銷活動、電子郵件行銷活動、目標廣告和其他許多使用案例，啟用已知和未知的資料。
 exl-id: afd07ddc-652e-4e22-b298-feba27332462
-source-git-commit: f73598224d527535aaf9ecb2aa1c26786cae2d82
+source-git-commit: b7392596c7ed96032dc8ad6bb8e423640f562394
 workflow-type: tm+mt
-source-wordcount: '488'
-ht-degree: 1%
+source-wordcount: '507'
+ht-degree: 0%
 
 ---
 
@@ -25,7 +25,7 @@ Platform的其中一項核心功能是擷取您的第一方資料，並根據您
 ## 目的地步驟 {#steps}
 
 * 從Platform中所有可用目的地的[自助目錄](./catalog/overview.md)中選擇。
-* 使用目的地來[啟用](./ui/activate-destinations.md)，並將設定檔或區段傳送至行銷自動化平台、數位廣告平台等。
+* 使用目的地將設定檔或區段傳送至行銷自動化平台、數位廣告平台等。
 * 定期排程匯出至您偏好目的地的資料。
 
 ## 控制項 {#controls}
@@ -66,4 +66,8 @@ Platform目的地的資料控管會透過下列方式強制執行：
 * [電子郵件行銷目的地](./catalog/email-marketing/overview.md)
 * [社交目的地](./catalog/social/overview.md)
 
-如需區段啟動工作流程中違反資料原則的詳細資訊，請參閱[啟動設定檔和區段至目的地](./ui/activate-destinations.md#review)中的檢閱步驟。
+如需區段啟動工作流程中違反資料原則的詳細資訊，請參閱下列指南中的檢閱步驟：
+
+* [對串流區段匯出目的地啟用受眾資料](./ui/activate-segment-streaming-destinations.md#review)
+* [對串流設定檔匯出目的地啟用受眾資料](./ui/activate-streaming-profile-destinations.md#review)
+* [啟用受眾資料以批次設定檔匯出目的地](./ui/activate-batch-profile-destinations.md#review)
