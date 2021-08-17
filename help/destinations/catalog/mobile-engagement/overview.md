@@ -1,20 +1,21 @@
 ---
-keywords: 移動消息；移動消息傳送目標； Braze;飛艇
-title: 行動互動目標概觀
-description: 瞭解Adobe Experience Platform支援的不同行動互動目標。
-translation-type: tm+mt
-source-git-commit: 48c5f6d6a45de5f7982543f7a43cb4ece8cf3a9f
+keywords: 行動訊息；行動訊息目的地；Braze;飛艇
+title: 行動參與目的地概觀
+description: 了解Adobe Experience Platform支援的不同行動參與目的地。
+exl-id: bb5852c0-a47a-42c7-9fae-ec7d80dc3bcf
+source-git-commit: f73598224d527535aaf9ecb2aa1c26786cae2d82
 workflow-type: tm+mt
-source-wordcount: '42'
+source-wordcount: '46'
 ht-degree: 0%
 
 ---
 
+# 行動參與目的地概觀 {#mobile-destinations}
 
-# 行動參與目標概觀{#mobile-destinations}
+## 支援的行動參與目的地 {#supported-destinations}
 
-[!DNL Adobe Experience Platform] 目前支援下列行動參與目標：
+[!DNL Adobe Experience Platform] 目前支援下列行動參與目的地：
 
-* [飛艇屬性連接](./airship-attributes.md)
-* [飛艇標籤連接](./airship-tags.md)
-* [Braze連接](./braze.md)
+* [Airship屬性連接](airship-attributes.md)
+* [Airship標籤連接](airship-tags.md)
+* [Braze連接](braze.md)
