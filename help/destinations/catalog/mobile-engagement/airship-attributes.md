@@ -1,148 +1,113 @@
 ---
 keywords: 飛艇屬性；飛艇目的地
-title: 飛艇屬性連接
-description: 順暢地將Adobe受眾資料傳遞至飛艇，作為在飛艇內定位的受眾屬性。
-translation-type: tm+mt
-source-git-commit: 709908196bb5df665c7e7df10dc58ee9f3b0edbf
+title: Airship屬性連接
+description: 流暢地將Adobe對象資料傳遞至Airship，作為對象屬性，以在Airship內鎖定目標。
+exl-id: bfc1b52f-2d68-40d6-9052-c2ee1e877961
+source-git-commit: 15ea3ab9370541c35b874414a8753e8812eea9c6
 workflow-type: tm+mt
-source-wordcount: '1143'
+source-wordcount: '720'
 ht-degree: 1%
 
 ---
 
-
-# （測試版）[!DNL Airship Attributes]連接{#airship-attributes-destination}
+# (Beta)[!DNL Airship Attributes]連接 {#airship-attributes-destination}
 
 >[!IMPORTANT]
 >
->Adobe Experience Platform的[!DNL Airship Attributes]目的地目前為beta。 文件和功能可能會有所變更。
+>Adobe Experience Platform中的[!DNL Airship Attributes]目的地目前為測試版。 文件和功能可能會有所變更。
 
-## 概述 {#overview}
+## 概覽 {#overview}
 
-[!DNL Airship] 是領先的客戶互動平台，可協助您在客戶生命週期的每個階段，為您的使用者提供有意義的個人化全通道訊息。
+[!DNL Airship] 是領先的客戶參與平台，可協助您在客戶生命週期的每個階段，為使用者提供有意義的個人化全通路訊息。
 
-此整合會將Adobe描述檔資料以[屬性](https://docs.airship.com/guides/audience/attributes/)的形式傳遞至[!DNL Airship]，以進行定位或觸發。
+此整合會將Adobe設定檔資料以[Attributes](https://docs.airship.com/guides/audience/attributes/)傳遞至[!DNL Airship]，以鎖定目標或觸發。
 
-若要進一步瞭解[!DNL Airship]，請參閱[飛艇檔案](https://docs.airship.com)。
-
+若要深入了解[!DNL Airship]，請參閱[Airship檔案](https://docs.airship.com)。
 
 >[!TIP]
 >
->此文檔頁面由[!DNL Airship]團隊建立。 如需任何查詢或更新要求，請直接與[support.airship.com](https://support.airship.com/)聯絡。
+>此檔案頁面由[!DNL Airship]團隊建立。 有關任何查詢或更新請求，請直接聯繫[support.airship.com](https://support.airship.com/)。
 
 ## 先決條件 {#prerequisites}
 
-您必須先執行下列動作，才能將對象區段傳送至[!DNL Airship]:
+您必須先：[!DNL Airship]
 
 * 在[!DNL Airship]專案中啟用屬性。
-* 產生用於驗證的承載Token。
+* 生成用於驗證的承載令牌。
 
 >[!TIP]
 >
->如果您尚未透過[此註冊連結](https://go.airship.eu/accounts/register/plan/starter/)建立[!DNL Airship]帳戶。
+>若尚未透過[此註冊連結](https://go.airship.eu/accounts/register/plan/starter/)建立[!DNL Airship]帳戶。
 
-## 啟用屬性{#enable-attributes}
+## 啟用屬性 {#enable-attributes}
 
-Adobe Experience Platform描述檔屬性類似於[!DNL Airship]屬性，使用本頁下面進一步說明的對應工具，可在平台中輕鬆地彼此對應。
+Adobe Experience Platform設定檔屬性類似於[!DNL Airship]屬性，而且使用本頁面下方所示的對應工具，即可在Platform中輕鬆相互對應。
 
-[!DNL Airship] 專案有數個預先定義和預設屬性。如果您有自訂屬性，則必須先在[!DNL Airship]中定義。 如需詳細資訊，請參閱[設定和管理屬性](https://docs.airship.com/tutorials/audience/attributes/)。
+[!DNL Airship] 專案有數個預先定義和預設屬性。如果您有自訂屬性，則必須先在[!DNL Airship]中定義它。 有關詳細資訊，請參閱[設定和管理屬性](https://docs.airship.com/tutorials/audience/attributes/)。
 
-## 產生記載性Token {#bearer-token}
+## 生成承載令牌 {#bearer-token}
 
-前往[飛艇儀表板](https://go.airship.com)中的&#x200B;**[!UICONTROL Settings]**&quot; **[!UICONTROL APIs & Integrations]**，然後在左側菜單中選擇&#x200B;**[!UICONTROL Tokens]**。
+前往[Airship控制面板](https://go.airship.com)中的&#x200B;**[!UICONTROL 設定]**&quot; **[!UICONTROL API與整合]**，然後在左側功能表中選取&#x200B;**[!UICONTROL Token]**。
 
-按一下「**[!UICONTROL Create Token]**」。
+按一下「**[!UICONTROL 建立代號]**」。
 
-為您的Token提供好記的名稱，例如「Adobe屬性目標」，並選取角色的「完整存取權」。
+為代號提供好記的名稱，例如「Adobe屬性目的地」，並為角色選取「完全存取」。
 
-按一下&#x200B;**[!UICONTROL Create Token]**&#x200B;並將詳細資訊儲存為機密。
+按一下「**[!UICONTROL 建立代號]**」並將詳細資訊儲存為機密。
 
 ## 使用案例 {#use-cases}
 
-為協助您進一步瞭解應如何及何時使用[!DNL Airship Attributes]目標，以下是Adobe Experience Platform客戶可使用此目標解決的範例使用案例。
+為協助您更清楚了解您應如何及何時使用[!DNL Airship Attributes]目的地，以下是Adobe Experience Platform客戶可借由使用此目的地解決的範例使用案例。
 
 ### 使用案例#1
 
-利用在Adobe Experience Platform收集的個人檔案資料，在[!DNL Airship]的任何通道中個人化訊息和豐富內容。 例如，利用[!DNL Experience Platform]描述檔資料來設定[!DNL Airship]中的位置屬性。 這可讓酒店品牌針對每位使用者顯示最近的酒店位置影像。
+運用在Adobe Experience Platform中收集的設定檔資料，以個人化任何[!DNL Airship]管道中的訊息和豐富內容。 例如，利用[!DNL Experience Platform]配置檔案資料在[!DNL Airship]內設定位置屬性。 這可讓酒店品牌顯示每位使用者最近酒店位置的影像。
 
 ### 使用案例#2
 
-運用Adobe Experience Platform的屬性進一步豐富[!DNL Airship]描述檔，並將其與SDK或[!DNL Airship]預測資料結合。 例如，零售商可以建立包含忠誠度狀態和位置資料（來自平台的屬性）和[!DNL Airship]預測會流失資料的區段，以傳送高針對性訊息給居住在內華達州拉斯維加斯的黃金忠誠度狀態使用者，而且攪動的可能性很高。
+運用Adobe Experience Platform的屬性，進一步擴充[!DNL Airship]設定檔，並將其與SDK或[!DNL Airship]預測資料結合。 例如，零售商可以建立一個區段，其中包含忠誠度狀態和位置資料（來自Platform的屬性）及[!DNL Airship]預計會流失資料，以傳送目標高度明確的訊息給居住在內華達州拉斯維加斯、且很可能轉譯的黃金忠誠度狀態使用者。
 
-## 連接到[!DNL Airship Attributes] {#connect-airship-attributes}
+## 連接到目標 {#connect}
 
-在&#x200B;**[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**&#x200B;中，滾動到&#x200B;**[!UICONTROL Mobile Engagement]**&#x200B;類別。 選擇&#x200B;**[!DNL Airship Attributes]**，然後選擇&#x200B;**[!UICONTROL Configure]**。
+要連接到此目標，請按照[目標配置教程](../../ui/connect-destination.md)中所述的步驟操作。
 
->[!NOTE]
->
->如果已存在與此目標的連接，則可以在目標卡上看到&#x200B;**[!UICONTROL Activate]**&#x200B;按鈕。 有關&#x200B;**[!UICONTROL Activate]**&#x200B;和&#x200B;**[!UICONTROL Configure]**&#x200B;之間差異的詳細資訊，請參閱目標工作區文檔的[目錄](../../ui/destinations-workspace.md#catalog)部分。
+### 連線參數 {#parameters}
 
-![連接至飛艇屬性](../../assets/catalog/mobile-engagement/airship/catalog.png)
+在[設定](../../ui/connect-destination.md)此目標時，您必須提供下列資訊：
 
-在&#x200B;**Account**&#x200B;步驟中，如果您先前已設定到[!DNL Airship Attributes]目標的連接，請選擇&#x200B;**[!UICONTROL Existing Account]**&#x200B;並選擇現有連接。 或者，您可以選擇&#x200B;**[!UICONTROL New Account]**&#x200B;來設定到[!DNL Airship Attributes]的新連接。 選擇&#x200B;**[!UICONTROL Connect to destination]**&#x200B;以使用您從[!DNL Airship]儀表板生成的承載令牌將Adobe Experience Platform連接到您的[!DNL Airship]項目。
+* **[!UICONTROL 承載權杖]**:您從控制面板產生的承載代 [!DNL Airship] 號。
+* **[!UICONTROL 名稱]**:輸入有助於您識別此目的地的名稱。
+* **[!UICONTROL 說明]**:輸入此目標的說明。
+* **[!UICONTROL 網域]**:選擇美國或歐盟資料中心，具體取決於 [!DNL Airship] 哪個資料中心適用於此目的地。
 
->[!NOTE]
->
->Adobe Experience Platform支援驗證程式中的認證驗證，如果您在[!DNL Airship]帳戶中輸入錯誤的認證，則會顯示錯誤訊息。 這可確保您不會以不正確的憑證完成工作流程。
+## 啟用此目的地的區段 {#activate}
 
-![連接至飛艇屬性](../../assets/catalog/mobile-engagement/airship/connect.png)
+請參閱[將設定檔和區段啟用至目的地](../../ui/activate-destinations.md) ，以取得將對象區段啟用至目的地的指示。
 
-在確認您的憑據並將Adobe Experience Platform連接到[!DNL Airship]項目後，您可以選擇&#x200B;**[!UICONTROL Next]**&#x200B;繼續&#x200B;**[!UICONTROL Setup]**&#x200B;步驟。
+## 對應考量事項 {#mapping-considerations}
 
-在&#x200B;**[!UICONTROL Authentication]**&#x200B;步驟中，輸入&#x200B;**[!UICONTROL Name]**&#x200B;和&#x200B;**[!UICONTROL Description]**&#x200B;作為啟動流程。
+[!DNL Airship] 屬性可在代表裝置例項（例如iPhone）的頻道上設定，或是指名使用者，可將使用者的所有裝置對應至通用識別碼（例如客戶ID）。如果您的結構中有純文字（未雜湊）電子郵件地址作為主要身分，請在&#x200B;**[!UICONTROL 來源屬性]**&#x200B;中選取電子郵件欄位，並在&#x200B;**[!UICONTROL 目標身分]**&#x200B;下方右欄中對應至[!DNL Airship]指名的使用者，如下所示。
 
-此外，在此步驟中，您可以選擇美國或歐盟的資料中心，具體取決於哪個[!DNL Airship]資料中心適用於此目標。 最後，選擇要將資料導出到目標的一個或多個&#x200B;**[!UICONTROL Marketing Actions]**。 您可以從Adobe定義的行銷動作中選擇，也可以自行建立。 如需行銷動作的詳細資訊，請參閱[資料使用政策概述](../../../data-governance/policies/overview.md)。
+![命名用戶映射](../../assets/catalog/mobile-engagement/airship/mapping.png)
 
-在填寫上述欄位後，請選取&#x200B;**[!UICONTROL Create Destination]**。
+對於應映射到通道（即設備）的標識符，根據源映射到相應的通道。 下圖顯示如何建立兩個對應：
 
-![連接至飛艇屬性](../../assets/catalog/mobile-engagement/airship/select-domain.png)
-
-您的目標現在已建立。 如果您想稍後啟動區段，可以選取&#x200B;**[!UICONTROL Save & Exit]**，或選取&#x200B;**[!UICONTROL Next]**&#x200B;以繼續工作流程，並選取要啟動的區段。 在這兩種情況下，請參閱工作流程的下一節[啟動區段](#activate-segments)。
-
-## 啟用區段{#activate-segments}
-
-若要將區段啟用至[!DNL Airship Attributes]，請遵循下列步驟：
-
-在&#x200B;**[!UICONTROL Destinations > Browse]**&#x200B;中，選取您要啟用區段的[!DNL Airship Attributes]目標。
-
-![activate-flow](../../assets/catalog/mobile-engagement/airship/browse.png)
-
-按一下目標的名稱。 這會帶您進入「啟動」流程。
-
-請注意，如果目的地已有啟動流程，您可以看到目前傳送至目的地的區段。 在右側導軌中選擇&#x200B;**[!UICONTROL Edit activation]**，然後依照下列步驟修改啟動詳細資訊。
-
-![activate-flow](../../assets/catalog/mobile-engagement/airship/activate.png)
-
-選擇「**[!UICONTROL Activate]**」。在&#x200B;**[!UICONTROL Activate destination]**&#x200B;工作流程的&#x200B;**[!UICONTROL Select Segments]**&#x200B;頁面上，選取要傳送至[!DNL Airship Attributes]的區段。
-
-![區段到目的地](../../assets/catalog/mobile-engagement/airship/select-segments.png)
-
-在&#x200B;**[!UICONTROL Mapping]**&#x200B;步驟中，從[XDM](../../../xdm/home.md)架構中選擇要映射到目標架構的屬性和標識。 選擇&#x200B;**[!UICONTROL Add new mapping]**&#x200B;以瀏覽您的架構並將它們映射到相應的目標標識。
-
-![身份映射初始螢幕](../../assets/catalog/mobile-engagement/airship/identity-mapping.png)
-
-[!DNL Airship] 屬性可以在代表裝置例項（例如iPhone）的頻道上設定，或指名用戶（其將使用者的所有裝置對應至通用識別碼，例如客戶ID）上。如果您的架構中有純文字檔案（未散列）電子郵件地址作為主要標識，請在&#x200B;**[!UICONTROL Source Attributes]**&#x200B;中選擇電子郵件欄位，並映射到&#x200B;**[!UICONTROL Target Identities]**&#x200B;右列中[!DNL Airship]的指名用戶，如下所示。
-
-![指名用戶映射](../../assets/catalog/mobile-engagement/airship/mapping.png)
-
-對於應映射到頻道（即設備）的標識符，請根據源映射到相應的頻道。 下圖顯示如何建立兩個映射：
-
-* IDFA iOS廣告ID至[!DNL Airship] iOS頻道
+* IDFA iOS廣告ID至[!DNL Airship] iOS通道
 * Adobe`fullName`屬性至[!DNL Airship] &quot;Full Name&quot;屬性
 
 >[!NOTE]
 >
->在為屬性映射選擇目標欄位時，使用[!DNL Airship]儀表板中顯示的用戶友好名稱。
+>為屬性對應選取目標欄位時，請使用[!DNL Airship]控制面板中顯示的好記名稱。
 
-**地圖識別**
+**對應身分**
 
 選擇源欄位：
 
-![連接至飛艇屬性](../../assets/catalog/mobile-engagement/airship/select-source-identity.png)
+![連接到Airship屬性](../../assets/catalog/mobile-engagement/airship/select-source-identity.png)
 
 選擇目標欄位：
 
-![連接至飛艇屬性](../../assets/catalog/mobile-engagement/airship/select-target-identity.png)
+![連接到Airship屬性](../../assets/catalog/mobile-engagement/airship/select-target-identity.png)
 
 **地圖屬性**
 
@@ -152,28 +117,13 @@ Adobe Experience Platform描述檔屬性類似於[!DNL Airship]屬性，使用�
 
 選擇目標屬性：
 
-![選取目標欄位](../../assets/catalog/mobile-engagement/airship/select-target-attribute.png)
+![選擇目標欄位](../../assets/catalog/mobile-engagement/airship/select-target-attribute.png)
 
 驗證映射：
 
-![頻道對應](../../assets/catalog/mobile-engagement/airship/mapping.png)
+![通道對應](../../assets/catalog/mobile-engagement/airship/mapping.png)
 
-在&#x200B;**[!UICONTROL Segment schedule]**&#x200B;頁面上，計畫目前停用。 按一下&#x200B;**[!UICONTROL Next]**&#x200B;繼續查看步驟。
 
-![目前已停用排程](../../assets/catalog/mobile-engagement/airship/scheduling.png)
+## 資料使用與控管 {#data-usage-governance}
 
-在&#x200B;**[!UICONTROL Review]**&#x200B;頁面上，您可以看到您所選內容的摘要。 選擇&#x200B;**[!UICONTROL Cancel]**&#x200B;以劃分流程，選擇&#x200B;**[!UICONTROL Back]**&#x200B;以修改設定，或選擇&#x200B;**[!UICONTROL Finish]**&#x200B;以確認選擇並開始向目標發送資料。
-
->[!IMPORTANT]
->
->在此步驟中，Adobe Experience Platform會檢查資料使用政策違規。 以下是違反原則的範例。 除非您解決違規問題，否則無法完成區段啟動工作流程。 有關如何解決策略違規的資訊，請參見資料治理文檔部分中的[策略實施](../../../data-governance/enforcement/auto-enforcement.md)。
-
-![確認選擇](../../assets/common/data-policy-violation.png)
-
-如果未檢測到任何違反策略的情況，請選擇&#x200B;**[!UICONTROL Finish]**&#x200B;以確認選擇並開始向目標發送資料。
-
-![審查](../../assets/catalog/mobile-engagement/airship/review.png)
-
-## 資料使用與治理{#data-usage-governance}
-
-所有[!DNL Adobe Experience Platform]目標在處理資料時都符合資料使用原則。 有關[!DNL Adobe Experience Platform]如何實施資料治理的詳細資訊，請參閱[資料治理概述](../../../data-governance/home.md)。
+處理資料時，所有[!DNL Adobe Experience Platform]目標都符合資料使用策略。 有關[!DNL Adobe Experience Platform]如何實施資料控管的詳細資訊，請參閱[資料控管概述](../../../data-governance/home.md)。
