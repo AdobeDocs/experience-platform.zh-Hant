@@ -3,9 +3,9 @@ keywords: Amazon Kinesis;kinesis目的地；kinesis
 title: Amazon Kinesis連線
 description: 建立與Amazon Kinesis儲存體的即時傳出連線，以串流來自Adobe Experience Platform的資料。
 exl-id: b40117ef-6ad0-48a9-bbcb-97c6f6d1dce3
-source-git-commit: 4febcef82c6da4534051cbe68820984814786224
+source-git-commit: 15ea3ab9370541c35b874414a8753e8812eea9c6
 workflow-type: tm+mt
-source-wordcount: '624'
+source-wordcount: '550'
 ht-degree: 2%
 
 ---
@@ -34,11 +34,11 @@ ht-degree: 2%
 
 例如，潛在客戶下載了白皮書，將其歸類為「高傾向轉換」區段。 將潛在客戶所屬的區段對應至[!DNL Amazon Kinesis]目的地後，您會在[!DNL Amazon Kinesis]中收到此事件。 在那裡，您可以採用自己動手做的方法，在活動之上描述業務邏輯，因為您認為最適合您的企業IT系統。
 
-## 導出類型{#export-type}
+## 匯出類型 {#export-type}
 
 **以設定檔為基礎**  — 您要匯出區段的所有成員，以及所需的結構欄位(例如：電子郵件地址、電話號碼、姓氏)，從目的地啟用工作流程的「選取屬性」畫面 [中選取](../../ui/activate-destinations.md#select-attributes)。
 
-## 必要的[!DNL Amazon Kinesis]權限{#required-kinesis-permission}
+## 必要的[!DNL Amazon Kinesis]權限 {#required-kinesis-permission}
 
 若要成功將資料連線並匯出至[!DNL Amazon Kinesis]資料流，Experience Platform需要下列動作的權限：
 
@@ -77,27 +77,19 @@ ht-degree: 2%
 
 有關控制[!DNL Kinesis]資料流訪問的詳細資訊，請閱讀以下[[!DNL Kinesis] document](https://docs.aws.amazon.com/streams/latest/dev/controlling-access.html)。
 
-## 連接目標{#connect-destination}
+## 連接到目標 {#connect}
 
-如需如何連線至雲端儲存目標（包括[!DNL Amazon]支援的目標）的指示，請參閱[雲端儲存目標工作流程](./workflow.md)。
+要連接到此目標，請按照[目標配置教程](../../ui/connect-destination.md)中所述的步驟操作。
 
-對於[!DNL Amazon Kinesis]目標，在建立目標工作流中輸入以下資訊：
+### 連線參數 {#parameters}
 
-## 帳戶步驟{#account-step}
+在[設定](../../ui/connect-destination.md)此目標時，您必須提供下列資訊：
 
 * **[!DNL Amazon Web Services]存取金鑰和機密金鑰**:在中 [!DNL Amazon Web Services]產生一組 `access key - secret access key` 以授與Platform對您帳戶的存 [!DNL Amazon Kinesis] 取權。如需詳細資訊，請參閱[Amazon網站服務檔案](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html)。
 * **地區**:指定要 [!DNL Amazon Web Services] 將資料流到哪個區域。
-
-![帳戶步驟中的輸入欄位](../../assets/catalog/cloud-storage/amazon-kinesis/account.png)
-
-## 驗證步驟{#authentication-step}
-
 * **名稱**:提供連線的名稱  [!DNL Amazon Kinesis]
 * **說明**:提供與的連線說明 [!DNL Amazon Kinesis]。
 * **資料流**:提供帳戶中現有資料流的名 [!DNL Amazon Kinesis] 稱。Platform會將資料匯出至此資料流。
-* **[!UICONTROL 行銷動作]**:行銷動作會指出要將資料匯出至目的地的目的。您可以從Adobe定義的行銷動作中選取，或者您可以建立自己的行銷動作。 如需行銷動作的詳細資訊，請參閱Adobe Experience Platform](../../../data-governance/policies/overview.md)中的[資料控管頁面。 如需個別Adobe定義行銷動作的相關資訊，請參閱[資料使用原則概述](../../../data-governance/policies/overview.md)。
-
-![驗證步驟中的輸入欄位](../../assets/catalog/cloud-storage/amazon-kinesis/authentication.png)
 
 <!--
 
@@ -107,11 +99,11 @@ ht-degree: 2%
 
 -->
 
-## 啟動區段{#activate-segments}
+## 啟用此目的地的區段 {#activate}
 
-如需區段啟動工作流程的相關資訊，請參閱[將設定檔和區段啟用至目的地](../../ui/activate-destinations.md)。
+請參閱[將設定檔和區段啟用至目的地](../../ui/activate-destinations.md) ，以取得將對象區段啟用至目的地的指示。
 
-## 導出的資料{#exported-data}
+## 匯出的資料 {#exported-data}
 
 您匯出的[!DNL Experience Platform]資料會以JSON格式連結至[!DNL Amazon Kinesis]。 例如，以下事件包含已符合特定區段資格並退出其他區段之對象的電子郵件地址設定檔屬性。 此潛在客戶的身分識別為ECID和電子郵件。
 
