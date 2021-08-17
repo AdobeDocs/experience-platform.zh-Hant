@@ -3,9 +3,9 @@ keywords: facebook連線；facebook連線；facebook目的地；facebook;instagr
 title: Facebook連線
 description: 根據雜湊電子郵件啟用Facebook促銷活動的設定檔，以鎖定對象、個人化和隱藏。
 exl-id: 51e8c8f0-5e79-45b9-afbc-110bae127f76
-source-git-commit: 32da733eda61049738e87bce48978196a1fea96d
+source-git-commit: 15ea3ab9370541c35b874414a8753e8812eea9c6
 workflow-type: tm+mt
-source-wordcount: '1176'
+source-wordcount: '1257'
 ht-degree: 2%
 
 ---
@@ -56,12 +56,12 @@ ht-degree: 2%
 
 將對象區段傳送至[!DNL Facebook]之前，請確定您符合下列需求：
 
-- 您的[!DNL Facebook]使用者帳戶必須為您打算使用的Ad帳戶啟用&#x200B;**[!DNL Manage campaigns]**&#x200B;權限。
-- 必須將&#x200B;**Adobe Experience Cloud**&#x200B;商業帳戶新增為[!DNL Facebook Ad Account]中的廣告合作夥伴。 使用 `business ID=206617933627973`。如需詳細資訊，請參閱Facebook檔案中的[將合作夥伴新增至您的Business Manager](https://www.facebook.com/business/help/1717412048538897) 。
+* 您的[!DNL Facebook]使用者帳戶必須為您打算使用的Ad帳戶啟用&#x200B;**[!DNL Manage campaigns]**&#x200B;權限。
+* 必須將&#x200B;**Adobe Experience Cloud**&#x200B;商業帳戶新增為[!DNL Facebook Ad Account]中的廣告合作夥伴。 使用 `business ID=206617933627973`。如需詳細資訊，請參閱Facebook檔案中的[將合作夥伴新增至您的Business Manager](https://www.facebook.com/business/help/1717412048538897) 。
    >[!IMPORTANT]
    >
    > 設定Adobe Experience Cloud的權限時，您必須啟用&#x200B;**管理促銷活動**&#x200B;權限。 [!DNL Adobe Experience Platform]整合需要權限。
-- 閱讀並簽署[!DNL Facebook Custom Audiences]服務條款。 若要這麼做，請前往`https://business.facebook.com/ads/manage/customaudiences/tos/?act=[accountID]`，其中`accountID`是您的[!DNL Facebook Ad Account ID]。
+* 閱讀並簽署[!DNL Facebook Custom Audiences]服務條款。 若要這麼做，請前往`https://business.facebook.com/ads/manage/customaudiences/tos/?act=[accountID]`，其中`accountID`是您的[!DNL Facebook Ad Account ID]。
 
 ## ID比對需求 {#id-matching-requirements}
 
@@ -73,8 +73,8 @@ ht-degree: 2%
 
 在[!DNL Facebook]中激活電話號碼有兩種方法：
 
-- **擷取原始電話號碼**:您可以將格式的原始電話號碼 [!DNL E.164] 內嵌至 [!DNL Platform]。啟動時會自動雜湊。 如果選擇此選項，請務必始終將原始電話號碼嵌入`Phone_E.164`命名空間。
-- **擷取雜湊電話號碼**:您可以先預先雜湊電話號碼，再擷取至 [!DNL Platform]中。如果選擇此選項，請務必始終將雜湊電話號碼內嵌到`Phone_SHA256`命名空間中。
+* **擷取原始電話號碼**:您可以將格式的原始電話號碼 [!DNL E.164] 內嵌至 [!DNL Platform]。啟動時會自動雜湊。 如果選擇此選項，請務必始終將原始電話號碼嵌入`Phone_E.164`命名空間。
+* **擷取雜湊電話號碼**:您可以先預先雜湊電話號碼，再擷取至 [!DNL Platform]中。如果選擇此選項，請務必始終將雜湊電話號碼內嵌到`Phone_SHA256`命名空間中。
 
 >[!NOTE]
 >
@@ -89,12 +89,12 @@ ht-degree: 2%
 
 如果您選取自行雜湊電子郵件地址，請務必符合下列要求：
 
-- 修剪電子郵件字串中的所有開頭和結尾空格；範例：`johndoe@example.com`，而不是`<space>johndoe@example.com<space>`;
-- 對電子郵件字串進行雜湊處理時，請務必將小寫字串雜湊；
-   - 範例：`example@email.com`，而不是`EXAMPLE@EMAIL.COM`;
-- 確認雜湊字串全部為小寫
-   - 範例：`55e79200c1635b37ad31a378c39feb12f120f116625093a19bc32fff15041149`，而不是`55E79200C1635B37AD31A378C39FEB12F120F116625093A19bC32FFF15041149`;
-- 別給繩子加鹽。
+* 修剪電子郵件字串中的所有開頭和結尾空格；範例：`johndoe@example.com`，而不是`<space>johndoe@example.com<space>`;
+* 對電子郵件字串進行雜湊處理時，請務必將小寫字串雜湊；
+   * 範例：`example@email.com`，而不是`EXAMPLE@EMAIL.COM`;
+* 確認雜湊字串全部為小寫
+   * 範例：`55e79200c1635b37ad31a378c39feb12f120f116625093a19bc32fff15041149`，而不是`55E79200C1635B37AD31A378C39FEB12F120F116625093A19bC32FFF15041149`;
+* 別給繩子加鹽。
 
 >[!NOTE]
 >
@@ -108,17 +108,29 @@ ht-degree: 2%
 
 使用`Extern_ID`命名空間將資料發送到[!DNL Facebook]之前，請務必使用[!DNL Facebook Pixel]同步您自己的標識符。 如需詳細資訊，請參閱[Facebook官方檔案](https://developers.facebook.com/docs/marketing-api/audiences/guides/custom-audiences/#external_identifiers)。
 
-## 連接到目標 {#connect-destination}
+## 連接到目標 {#connect}
 
-若要連線至[!DNL Facebook]目的地，請參閱[社交目的地驗證工作流程](./workflow.md)。
+要連接到此目標，請按照[目標配置教程](../../ui/connect-destination.md)中所述的步驟操作。
 
-以下影片也示範設定社交目的地和啟用區段的步驟。 影片以LinkedIn為例，但各社交目的地的步驟相似。
+以下影片也示範設定[!DNL Facebook]目的地和啟用區段的步驟。
 
 >[!VIDEO](https://video.tv.adobe.com/v/332599/?quality=12&learn=on&captions=eng)
 
-## 將區段啟用至[!DNL Facebook] {#activate-segments}
+>[!NOTE]
+>
+>Experience Platform使用者介面經常更新，且自此視訊錄制以來可能已變更。 有關最新資訊，請參閱[目標配置教程](../../ui/connect-destination.md)。
 
-如需如何將區段啟用至[!DNL Facebook]的指示，請參閱[將資料啟用至目的地](../../ui/activate-destinations.md)。
+### 連線參數 {#parameters}
+
+在[設定](../../ui/connect-destination.md)此目標時，您必須提供下列資訊：
+
+* **[!UICONTROL 名稱]**:日後您將透過此名稱識別此目的地。
+* **[!UICONTROL 說明]**:未來可協助您識別此目的地的說明。
+* **[!UICONTROL 帳戶ID]**:您的 [!DNL Facebook Ad Account ID]。您可以在[!DNL Facebook Ads Manager]帳戶中找到此ID。 輸入此ID時，請一律在前置詞為`act_`。
+
+## 啟用此目的地的區段 {#activate}
+
+請參閱[將設定檔和區段啟用至目的地](../../ui/activate-destinations.md) ，以取得將對象區段啟用至目的地的指示。
 
 在&#x200B;**[!UICONTROL 區段排程]**&#x200B;步驟中，將區段傳送至[!DNL Facebook Custom Audiences]時，您必須提供[!UICONTROL 對象來源]。
 
