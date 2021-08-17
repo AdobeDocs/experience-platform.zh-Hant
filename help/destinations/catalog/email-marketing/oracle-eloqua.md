@@ -1,60 +1,60 @@
 ---
-keywords: 電子郵件；電子郵件；電子郵件；電子郵件目標；oracle雄辯；oracle
-title: Oracle雄辯聯繫
-description: Oracle口才是Oracle提供的行銷自動化軟體即服務(SaaS)平台，旨在協助B2B行銷人員和組織管理行銷活動和銷售潛在客戶開發。
+keywords: 電子郵件；電子郵件；電子郵件目的地；oracle雄辯；oracle
+title: OracleEloqua連線
+description: OracleEloqua是Oracle提供的軟體即服務(SaaS)平台，用於實現行銷自動化，旨在幫助B2B行銷人員和組織管理行銷活動和銷售機會的產生。
 exl-id: 6eaa79ff-8874-423b-bdff-aa04f6101a53
-source-git-commit: 70be44e919070df910d618af4507b600ad51123c
+source-git-commit: 15ea3ab9370541c35b874414a8753e8812eea9c6
 workflow-type: tm+mt
-source-wordcount: '672'
+source-wordcount: '500'
 ht-degree: 0%
 
 ---
 
 # [!DNL Oracle Eloqua] 連接
 
-[[!DNL Oracle Eloqua]](https://www.oracle.com/cx/marketing/automation/) 是由B2B行銷人員和組織提供的行銷自動化軟體即服務(SaaS) [!DNL Oracle] 平台，旨在協助B2B行銷人員和組織管理行銷活動和銷售機會開發。
+[[!DNL Oracle Eloqua]](https://www.oracle.com/cx/marketing/automation/) 是軟體即服務(SaaS)平台，提供行銷自動化功能， [!DNL Oracle] 旨在協助B2B行銷人員和組織管理行銷活動和銷售機會開發。
 
-若要將區段資料傳送至[!DNL Oracle Eloqua]，您必須先[連接Adobe Experience Platform的目的地](#connect-destination)，然後[設定從儲存位置匯入[!DNL Oracle Eloqua]的資料。](#import-data-into-eloqua)
+若要將區段資料傳送至[!DNL Oracle Eloqua]，您必須先[連接Adobe Experience Platform中的目標](#connect-destination)，然後[設定從儲存位置匯入](#import-data-into-eloqua)的資料。[!DNL Oracle Eloqua]
 
-## 導出類型{#export-type}
+## 匯出類型 {#export-type}
 
-**基於描述檔** -您要匯出區段的所有成員，以及所要的架構欄位(例如：電子郵件地址、電話號碼、姓氏)，這是從目標啟動工作流程的「選取屬性」畫面 [中選擇的](../../ui/activate-destinations.md#select-attributes)。
+**以設定檔為基礎**  — 您要匯出區段的所有成員，以及所需的結構欄位(例如：電子郵件地址、電話號碼、姓氏)，從目的地啟用工作流程的「選取屬性」畫面 [中選取](../../ui/activate-destinations.md#select-attributes)。
 
-## IP位址允許清單{#allow-list}
+## IP位址允許清單 {#allow-list}
 
-當使用SFTP儲存設定電子郵件行銷目標時，Adobe建議您將特定IP範圍新增至允許清單。
+使用SFTP儲存設定電子郵件行銷目的地時，Adobe建議您將特定IP範圍新增至允許清單。
 
-如果您需要將AdobeIP新增至允許清單，請參閱雲端儲存空間目標的[IP位址允許清單。](../cloud-storage/ip-address-allow-list.md)
+如果您需要將AdobeIP新增至允許清單，請參閱雲端儲存目的地的[IP位址允許清單](../cloud-storage/ip-address-allow-list.md)。
 
-## 連接到目標{#connect-destination}
+## 連接到目標 {#connect}
 
-在&#x200B;**[!UICONTROL 連接]** > **[!UICONTROL 目標]**&#x200B;中，選擇[!DNL Oracle Eloqua] ，然後選擇&#x200B;**[!UICONTROL 配置]**。
+要連接到此目標，請按照[目標配置教程](../../ui/connect-destination.md)中所述的步驟操作。
 
->[!NOTE]
->
->如果已存在與此目標的連接，您可以在目標卡上看到&#x200B;**[!UICONTROL 激活]**&#x200B;按鈕。 有關[!UICONTROL Activate]和[!UICONTROL Configure]之間差異的詳細資訊，請參閱目標工作區文檔的[Catalog](../../ui/destinations-workspace.md#catalog)部分。
+此目的地支援以下連接類型：
 
-![連線Exola](../../assets/catalog/email-marketing/oracle-eloqua/catalog.png)
+* **[!UICONTROL 含密碼的SFTP]**
+* **[!UICONTROL 具有SSH金鑰的SFTP]**
 
-在&#x200B;**[!UICONTROL Account]**&#x200B;步驟中，如果您先前已設定雲端儲存空間目的地的連線，請選取&#x200B;**[!UICONTROL Existing Account]**&#x200B;並選取您現有的連線。 或者，您可以選擇&#x200B;**[!UICONTROL 新帳戶]**&#x200B;來設定新連接。 填寫您的帳戶驗證憑證，然後選擇&#x200B;**[!UICONTROL 連接到目標]**。 對於[!DNL Oracle Eloqua]，可以在&#x200B;**[!UICONTROL 使用密碼]**&#x200B;的SFTP和&#x200B;**[!UICONTROL 使用SSH密鑰]**&#x200B;的SFTP之間進行選擇。
+### 連線參數 {#parameters}
 
-![Connect Exola帳戶](../../assets/catalog/email-marketing/oracle-eloqua/connection-type.png)
+在[設定](../../ui/connect-destination.md)此目標時，您必須提供下列資訊：
 
-根據您的連接類型填寫以下資訊，然後選擇&#x200B;**[!UICONTROL 連接到目標]**。
+* 對於&#x200B;**[!UICONTROL 使用密碼]**&#x200B;連接的SFTP，必須提供：
+   * [!UICONTROL 網域]
+   * [!UICONTROL 埠]
+   * [!UICONTROL 使用者名稱]
+   * [!UICONTROL 密碼]
+* 對於&#x200B;**[!UICONTROL 具有SSH金鑰的SFTP]**&#x200B;連線，您必須提供：
+   * [!UICONTROL 網域]
+   * [!UICONTROL 埠]
+   * [!UICONTROL 使用者名稱]
+   * [!UICONTROL SSH金鑰]
 
-- 對於具有密碼&#x200B;]**連接的**[!UICONTROL  SFTP，必須提供[!UICONTROL 域]、[!UICONTROL 埠]、[!UICONTROL 用戶名]和[!UICONTROL 密碼]。
-- 對於具有SSH密鑰&#x200B;]**連接的**[!UICONTROL  SFTP，必須提供[!UICONTROL 域]、[!UICONTROL 埠]、[!UICONTROL 用戶名]和[!UICONTROL SSH密鑰]。
-
-或者，您可以將RSA格式的公鑰附加到&#x200B;**[!UICONTROL 密鑰]**&#x200B;部分下的導出檔案中，以添加PGP/GPG加密。 您的公開金鑰必須寫入為[!DNL Base64]編碼字串。
-
-![與目的地的雄辯連接](../../assets/catalog/email-marketing/oracle-eloqua/account-info.png)
-
-在&#x200B;**[!UICONTROL 驗證]**&#x200B;步驟中，填寫目標的相關資訊，如下所示：
-- **[!UICONTROL 名稱]**:為目的地選擇相關名稱。
-- **[!UICONTROL 說明]**:輸入目標的說明。
-- **[!UICONTROL 資料夾路徑]**:在您的儲存位置提供路徑，讓Platform將匯出資料儲存為CSV或Tab分隔檔案。
-- **[!UICONTROL 檔案格式]**: **CSV** 或 **TAB_DELIMITED**。選擇要導出到儲存位置的檔案格式。
-- **[!UICONTROL 行銷動作]**:行銷動作會指出將資料匯出至目的地的方式。您可以從Adobe定義的行銷動作中選擇，也可以建立自己的行銷動作。 如需行銷動作的詳細資訊，請參閱[資料使用政策概述](../../../data-governance/policies/overview.md)。
+* 或者，您可以附加RSA格式的公鑰，以在&#x200B;**[!UICONTROL Key]**&#x200B;部分下嚮導出的檔案中添加PGP/GPG加密。 您的公開金鑰必須寫入為[!DNL Base64]編碼字串。
+* **[!UICONTROL 名稱]**:為目的地選擇相關名稱。
+* **[!UICONTROL 說明]**:輸入目的地的說明。
+* **[!UICONTROL 資料夾路徑]**:在您的儲存位置中提供路徑，讓Platform將匯出資料存放為CSV或以Tab分隔的檔案。
+* **[!UICONTROL 檔案格式]**: **** CSV或 **TAB_DELIMITED**。選擇要導出到儲存位置的檔案格式。
 
 <!--
 
@@ -64,22 +64,18 @@ Commenting out Amazon S3 bucket part for now until support is clarified
 
 -->
 
-![雄辯基本資訊](../../assets/catalog/email-marketing/oracle-eloqua/basic-information.png)
+## 啟用此目的地的區段 {#activate}
 
-填寫上述欄位後，按一下「建立目標」。 ****&#x200B;您的目標現在已建立，您可以[啟用區段](../../ui/activate-destinations.md)至目標。
+請參閱[將設定檔和區段啟用至目的地](../../ui/activate-destinations.md) ，以取得將對象區段啟用至目的地的指示。
 
-## 啟用區段{#activate-segments}
+## 目標屬性 {#destination-attributes}
 
-如需區段啟動工作流程的相關資訊，請參閱[啟用設定檔和區段至目標](../../ui/activate-destinations.md)。
+當[啟用區段](../../ui/activate-destinations.md)至此目的地時，Adobe建議您從[聯合架構](../../../profile/home.md#profile-fragments-and-union-schemas)中選取唯一識別碼。 選取唯一識別碼，以及您要匯出至目的地的任何其他XDM欄位。 有關詳細資訊，請參閱[選擇要在導出的檔案](./overview.md#destination-attributes)中用作目標屬性的架構欄位。
 
-## 目標屬性{#destination-attributes}
+## 匯出的資料 {#exported-data}
 
-當[將段](../../ui/activate-destinations.md)激活到[!DNL Oracle Eloqua]目標時，Adobe建議您從[union架構](../../../profile/home.md#profile-fragments-and-union-schemas)中選擇唯一標識符。 選擇要導出到目標的唯一標識符和任何其他XDM欄位。 有關詳細資訊，請參閱[選擇在導出檔案中用作目標屬性的架構欄位](./overview.md#destination-attributes)。
+對於[!DNL Oracle Eloqua]目的地，Platform會在您提供的儲存位置中建立以Tab分隔的`.csv`檔案。 如需檔案的詳細資訊，請參閱區段啟用教學課程中的[電子郵件行銷目的地和雲端儲存目的地](../../ui/activate-destinations.md#esp-and-cloud-storage)。
 
-## 導出資料{#exported-data}
+## 將資料導入[!DNL Oracle Eloqua] {#import-data-into-eloqua}
 
-對於[!DNL Oracle Eloqua]目標，平台會在您提供的儲存位置中建立以定位點分隔的`.csv`檔案。 如需檔案的詳細資訊，請參閱區段啟動教學課程中的[電子郵件行銷目標和雲端儲存目標](../../ui/activate-destinations.md#esp-and-cloud-storage)。
-
-## 將資料導入設定為[!DNL Oracle Eloqua] {#import-data-into-eloqua}
-
-將[!DNL Platform]連接到[!DNL SFTP]儲存後，必須將資料從儲存位置導入[!DNL Oracle Eloqua]。 要瞭解如何完成此操作，請參閱[!DNL Oracle Eloqua Help Center]中的[導入聯繫人或帳戶](https://docs.oracle.com/cloud/latest/marketingcs_gs/OMCAA/Help/DataImportExport/Tasks/ImportingContactsOrAccounts.htm)。
+將[!DNL Platform]連接到[!DNL SFTP]儲存後，必須將資料從儲存位置導入[!DNL Oracle Eloqua]。 要了解如何完成此操作，請參閱[!DNL Oracle Eloqua Help Center]中的[導入聯繫人或帳戶](https://docs.oracle.com/cloud/latest/marketingcs_gs/OMCAA/Help/DataImportExport/Tasks/ImportingContactsOrAccounts.htm)。
