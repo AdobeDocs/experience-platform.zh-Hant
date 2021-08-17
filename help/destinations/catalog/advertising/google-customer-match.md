@@ -3,9 +3,9 @@ keywords: Google客戶比對；Google客戶比對；Google客戶比對
 title: Google Customer Match連線
 description: Google Customer Match可讓您使用您的線上和離線資料，透過Google擁有且運作的屬性(例如Search、Shopping、Gmail及YouTube)，觸及客戶並與其重新互動。
 exl-id: 8209b5eb-b05c-4ef7-9fdc-22a528d5f020
-source-git-commit: 8a521b2b846c953b74b8e48fb76b94966a652318
+source-git-commit: 15ea3ab9370541c35b874414a8753e8812eea9c6
 workflow-type: tm+mt
-source-wordcount: '1568'
+source-wordcount: '1250'
 ht-degree: 0%
 
 ---
@@ -106,54 +106,32 @@ Google會自動允許帳戶符合規範的客戶列出。
 Attribute source data is not automatically hashed. When your source field contains unhashed attributes, check the **[!UICONTROL Apply transformation]** option, to have [!DNL Platform] automatically hash the data on activation.
 ![Identity mapping transformation](../../assets/ui/activate-destinations/identity-mapping-transformation.png) -->
 
-## 設定目的地 — 視訊逐步說明 {#video}
+<!-- ## Configure destination - video walkthrough {#video}
 
-以下影片示範設定社交目的地和啟用區段的步驟。 影片以LinkedIn為範例，但各社交目的地（包括[!DNL Google Customer Match]）的步驟相似。 視頻中的步驟也在後幾節中按順序排列。
+The video below demonstrates the steps to configure a [!DNL Google Customer Match] destination and activate segments. The steps are also laid out sequentially in the next sections.
 
->[!VIDEO](https://video.tv.adobe.com/v/332599/?quality=12&learn=on&captions=eng)
+>[!VIDEO](https://video.tv.adobe.com/v/332599/?quality=12&learn=on&captions=eng) -->
 
-## 連接到目標 {#connect-destination}
+## 連接到目標 {#connect}
 
-在&#x200B;**[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**&#x200B;中，捲動至&#x200B;**[!UICONTROL Advertising]**&#x200B;類別。 選擇[!DNL Google Customer Match]，然後選擇&#x200B;**[!UICONTROL 配置]**。
+要連接到此目標，請按照[目標配置教程](../../ui/connect-destination.md)中所述的步驟操作。
 
-![連線至Google Customer Match目的地](../../assets/catalog/advertising/google-customer-match/connect.png)
+### 連線參數 {#parameters}
 
->[!NOTE]
->
->如果與此目的地的連線存在，您可以在目的地卡片上看到&#x200B;**[!UICONTROL 啟動]**&#x200B;按鈕。 有關&#x200B;**[!UICONTROL Activate]**&#x200B;和&#x200B;**[!UICONTROL Configure]**&#x200B;之間差異的詳細資訊，請參閱目標工作區檔案的[Catalog](../../ui/destinations-workspace.md#catalog)區段。
+在[設定](../../ui/connect-destination.md)此目標時，您必須提供下列資訊：
 
-在&#x200B;**帳戶**&#x200B;步驟中，如果您先前已設定到[!DNL Google Customer Match]目的地的連線，請選擇&#x200B;**[!UICONTROL 現有帳戶]**&#x200B;並選擇您的現有連線。 或者，您可以選擇&#x200B;**[!UICONTROL 新帳戶]**&#x200B;以設定與[!DNL Google Customer Match]的新連接。 若要登入Adobe Experience Cloud並將其連線至您的[!DNL Google Ad]帳戶，請選取「**[!UICONTROL 連線至目的地]**」。
-
->[!NOTE]
->
->Experience Platform支援驗證過程中的憑據驗證。 如果您為[!DNL Google Ad]帳戶輸入了錯誤的憑證，以確保您沒有使用錯誤的憑證完成工作流程，則會顯示錯誤訊息。
-
-![連線至Google Customer Match目的地 — 驗證步驟](../../assets/catalog/advertising/google-customer-match/connection.png)
-
-確認憑證並將Adobe Experience Cloud連線至您的Google帳戶後，您可以選取&#x200B;**[!UICONTROL Next]**&#x200B;以繼續&#x200B;**[!UICONTROL Authentication]**&#x200B;步驟。
-
-![確認憑據](../../assets/catalog/advertising/google-customer-match/connection-success.png)
-
-在&#x200B;**[!UICONTROL Authentication]**&#x200B;步驟中，輸入激活流的&#x200B;**[!UICONTROL Name]**&#x200B;和&#x200B;**[!UICONTROL Description]**，並填寫Google **[!UICONTROL Account ID]**。
-
-在此步驟中，您也可以選取套用至此目的地的任何&#x200B;**[!UICONTROL 行銷動作]**。 行銷動作會指出資料匯出至目的地的目的。 您可以從Adobe定義的行銷動作中選取，或者您可以建立自己的行銷動作。 如需行銷動作的詳細資訊，請參閱[資料使用原則概述](../../../data-governance/policies/overview.md)。
-
-在填寫上述欄位後，選擇&#x200B;**[!UICONTROL 建立目標]**。
+* **[!UICONTROL 名稱]**:提供此目標連接的名稱
+* **[!UICONTROL 說明]**:提供此目標連接的說明
+* **[!UICONTROL 帳戶ID]**:您的Google客戶用戶端ID。ID的格式為xxx-xxx-xxxx。
 
 >[!IMPORTANT]
 >
 > * 預設會為[!DNL Google Customer Match]目的地選取&#x200B;**[!UICONTROL 結合PII]**&#x200B;行銷動作，且無法移除。
-> * 針對[!DNL Google Customer Match]目的地。 **[!UICONTROL 帳]** 戶ID是您使用Google的客戶用戶端ID。ID的格式為xxx-xxx-xxxx。
 
 
-![連接Google Customer Match — 驗證步驟](../../assets/catalog/advertising/google-customer-match/authentication.png)
+## 啟用此目的地的區段 {#activate}
 
-您的目的地現在已建立。 如果您想稍後啟動區段，可以選取&#x200B;**[!UICONTROL 儲存並退出]**，或選取&#x200B;**[!UICONTROL 下一步]**&#x200B;以繼續工作流程並選取要啟動的區段。 無論是哪種情況，請參閱工作流程其餘部分的下一節「將區段啟用至 [!DNL Google Customer Match]](#activate-segments)」。[
-
-## 將區段啟用至[!DNL Google Customer Match] {#activate-segments}
-
-如需如何將區段啟用至[!DNL Google Customer Match]的指示，請參閱[將資料啟用至目的地](../../ui/activate-destinations.md)。
-
+請參閱[將設定檔和區段啟用至目的地](../../ui/activate-destinations.md) ，以取得將對象區段啟用至目的地的指示。
 
 在&#x200B;**[!UICONTROL 區段排程]**&#x200B;步驟中，傳送[!DNL IDFA]或[!DNL GAID]區段至[!DNL Google Customer Match]時，您必須提供[!UICONTROL 應用程式ID]。
 
