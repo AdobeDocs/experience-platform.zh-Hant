@@ -5,7 +5,7 @@ doc-type: release notes
 last-update: July 28, 2021
 author: ens60013
 exl-id: 8f2c9bf8-1487-46e4-993b-bd9b63774cab
-source-git-commit: c06e7b5c70613dc560fb5c0dcc28590206fc1734
+source-git-commit: 3aac1e7c7fe838201368379da8504efc8e316e1c
 workflow-type: tm+mt
 source-wordcount: '802'
 ht-degree: 7%
@@ -60,8 +60,8 @@ Data Science Workspace使用機器學習和人工智慧，從您的資料建立�
 
 | 功能 | 說明 |
 | --- | --- |
-| [更快的增量檔案導出](../../destinations/ui/activate-destinations.md#export-incremental-files) | 您現在可以每3、6、8和12小時為基於檔案的目的地安排增量檔案導出時間。 目前不支援針對已儲存的區段變更檔案匯出排程。 若要使用不同排程重新匯出區段，您必須建立新的目的地例項。 這是將在未來版本中解決的限制。 |
-| [支援重複資料刪除金鑰](../../destinations/ui/activate-destinations.md#deduplication-keys) | 選取重複資料刪除金鑰，即可在匯出檔案中消除相同設定檔的多個記錄。 您可以選取單一命名空間或最多兩個XDM架構屬性作為重複資料刪除索引鍵。 |
+| [更快的增量檔案導出](../../destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) | 您現在可以每3、6、8和12小時為基於檔案的目的地安排增量檔案導出時間。 目前不支援針對已儲存的區段變更檔案匯出排程。 若要使用不同排程重新匯出區段，您必須建立新的目的地例項。 這是將在未來版本中解決的限制。 |
+| [支援重複資料刪除金鑰](../../destinations/ui/activate-batch-profile-destinations.md#deduplication-keys) | 選取重複資料刪除金鑰，即可在匯出檔案中消除相同設定檔的多個記錄。 您可以選取單一命名空間或最多兩個XDM架構屬性作為重複資料刪除索引鍵。 |
 
 ## Experience Data Model(XDM) {#xdm}
 
