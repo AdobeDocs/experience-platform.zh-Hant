@@ -3,9 +3,9 @@ keywords: google廣告管理員；google廣告；doubleclick;DoubleClick AdX;Dou
 title: Google Ad Manager連線
 description: Google Ad Manager（原稱為DoubleClick for Publishers或DoubleClick AdX）是谷歌的一個廣告服務平台，它讓出版商能夠通過視頻和移動應用管理其網站上的廣告顯示。
 exl-id: e93f1bd5-9d29-43a1-a9a6-8933f9d85150
-source-git-commit: 7e2f6f54e754c52c8de7f98372d041b2a6520d46
+source-git-commit: 802b1844bec1e577e978da5d5a69de87278c04b9
 workflow-type: tm+mt
-source-wordcount: '732'
+source-wordcount: '651'
 ht-degree: 2%
 
 ---
@@ -59,19 +59,13 @@ ht-degree: 2%
 * **對象連結ID** :這是你的帳戶  [!DNL Google Ad Manager]
 * 您的帳戶類型。 Google或AdX購買者提供的DFP。
 
-## 設定目的地
+## 連接到目標 {#connect}
 
-在&#x200B;**[!UICONTROL 連接]** > **[!UICONTROL 目標]**&#x200B;中，選擇&#x200B;**[!DNL Google Ad Manager]**，然後選擇&#x200B;**[!UICONTROL 配置]**。
+要連接到此目標，請按照[目標配置教程](../../ui/connect-destination.md)中所述的步驟操作。
 
-![連線Google Ad Manager目的地](../../assets/catalog/advertising/google-ad-manager/catalog.png)
+### 連線參數 {#parameters}
 
->[!NOTE]
->
->如果與此目的地的連線已存在，您可以在目標卡上看到&#x200B;**[!UICONTROL 啟動]**&#x200B;按鈕。 有關&#x200B;**[!UICONTROL Activate]**&#x200B;和&#x200B;**[!UICONTROL Configure]**&#x200B;之間差異的詳細資訊，請參閱目標工作區檔案的[Catalog](../../ui/destinations-workspace.md#catalog)區段。
-
-在建立目標工作流的&#x200B;**設定**&#x200B;步驟中，填寫目標的[!UICONTROL 基本資訊]。
-
-![基本資訊Google Ad Manager](../../assets/catalog/advertising/google-ad-manager/setup.png)
+在[設定](../../ui/connect-destination.md)此目標時，您必須提供下列資訊：
 
 * **[!UICONTROL 名稱]**:填寫此目的地的首選名稱。
 * **[!UICONTROL 說明]**:選填。例如，您可以提及您使用此目的地的促銷活動。
@@ -79,15 +73,14 @@ ht-degree: 2%
    * 對於[!DNL DoubleClick]，請使用`DFP by Google`對於發佈者
    * 對[!DNL Google AdX]使用`AdX buyer`
 * **[!UICONTROL 帳戶ID]**:用填入您的帳戶ID  [!DNL Google]。這可以是您的網路ID或對象連結ID。 通常為8位數的ID。
-* **[!UICONTROL 行銷動作]**:行銷動作會指出要將資料匯出至目的地的目的。您可以從Adobe定義的行銷動作中選取，或者您可以建立自己的行銷動作。 如需行銷動作的詳細資訊，請參閱[資料使用原則概述](../../../data-governance/policies/overview.md)。
 
 >[!NOTE]
 >
->設定[!DNL Google Ad Manager]目標時，請與[!DNL Google Account Manager]或Adobe代表合作，了解您擁有的帳戶類型。
+>設定[!DNL Google Ad Manager]目的地時，請與您的[!DNL Google Account Manager]或Adobe代表合作，了解您擁有的帳戶類型。
 
-## 將區段啟用至[!DNL Google Ad Manager]
+## 啟用此目的地的區段 {#activate}
 
-如需如何將區段啟用至[!DNL Google Ad Manager]的指示，請參閱[將資料啟用至目的地](../../ui/activate-destinations.md)。
+請參閱[將設定檔和區段啟用至目的地](../../ui/activate-destinations.md) ，以取得將對象區段啟用至目的地的指示。
 
 ## 匯出的資料
 
