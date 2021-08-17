@@ -4,14 +4,14 @@ title: 目的地工作區
 description: 「目的地」工作區包含四個區段：目錄、瀏覽、帳戶和系統檢視。 以下各節將說明這些規則。
 seo-description: 在Adobe Experience Platform中，從左側導覽列選取「目的地」 ，以存取目的地工作區。
 exl-id: 0f46f08d-0fe3-441d-933a-86bc146c0f19
-source-git-commit: 2791c32abe582d51d05d4bf0488ba82dfadfd053
+source-git-commit: a619227de30513bb06a22ce7b4f2fc13847c1ab6
 workflow-type: tm+mt
-source-wordcount: '869'
+source-wordcount: '861'
 ht-degree: 2%
 
 ---
 
-# 目標工作區{#destinations-workspace}
+# 目的地工作區 {#destinations-workspace}
 
 在Adobe Experience Platform中，從左側導覽列選取&#x200B;**[!UICONTROL 目標]**&#x200B;以存取[!UICONTROL 目標]工作區。
 
@@ -72,7 +72,7 @@ ht-degree: 2%
 
 >[!TIP]
 >
-> * 使用&#x200B;**[!UICONTROL Name]**&#x200B;欄中的![新增區段按鈕](../assets/ui/workspace/add-data-symbol.png)按鈕，將[啟動](activate-destinations.md)更多區段至該目的地。
+> * 使用&#x200B;**[!UICONTROL Name]**&#x200B;欄中的![新增區段按鈕](../assets/ui/workspace/add-data-symbol.png)按鈕，將區段傳送至該目的地。
 > * 使用&#x200B;**[!UICONTROL Name]**&#x200B;列中的![刪除目標按鈕](../assets/ui/workspace/delete-destination-symbol.png)按鈕，將[刪除](delete-destinations.md)與目標的現有連接。
 
 
@@ -88,7 +88,7 @@ ht-degree: 2%
 | [!UICONTROL 使用者名稱] | 您為目的地流程選擇的帳戶憑據。 |
 | [!UICONTROL 啟動資料] | 指出要啟動至此目的地的區段數。 選取此控制項，即可進一步了解已啟用的區段。 如需已啟動區段的詳細資訊，請參閱目標詳細資訊頁面中的[啟動資料](/help/destinations/ui/destination-details-page.md#activation-data)。 |
 | [!UICONTROL 已建立] | 建立至目的地的啟動流程的日期和UTC時間。 |
-| [!UICONTROL 狀態] | `Active` 或 `Inactive`. 指示是否正在將資料激活到此目標。 要編輯狀態，請參閱[禁用激活](./activate-destinations.md#disable-activation)。 |
+| [!UICONTROL 狀態] | `Active` 或 `Inactive`. 指示是否正在將資料激活到此目標。 |
 
 按一下目的地列，在右側邊欄中顯示有關目的地的詳細資訊。
 
