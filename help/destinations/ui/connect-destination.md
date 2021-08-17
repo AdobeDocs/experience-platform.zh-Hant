@@ -4,7 +4,7 @@ title: 建立新的目的地連線
 type: Tutorial
 description: 本教學課程列出連線至Adobe Experience Platform中目的地的步驟
 exl-id: 56d7799a-d1da-4727-ae79-fb2c775fe5a5
-source-git-commit: 1c67d9eb1b7762ecfcad5b0b7db5c317621f144e
+source-git-commit: 3aac1e7c7fe838201368379da8504efc8e316e1c
 workflow-type: tm+mt
 source-wordcount: '430'
 ht-degree: 0%
@@ -65,4 +65,4 @@ ht-degree: 0%
 
    ![連接到目標](../assets/ui/connect-destinations/connect-destination.png)
 
-1. 選取&#x200B;**[!UICONTROL 儲存並退出]**&#x200B;以儲存目的地設定，或選取&#x200B;**[!UICONTROL 下一個]**&#x200B;以繼續處理對象資料[啟動流程](activate-destinations.md)。
+1. 選取&#x200B;**[!UICONTROL 儲存並退出]**&#x200B;以儲存目的地設定，或選取&#x200B;**[!UICONTROL 下一個]**&#x200B;以繼續處理對象資料[啟動流程](activation-overview.md)。
