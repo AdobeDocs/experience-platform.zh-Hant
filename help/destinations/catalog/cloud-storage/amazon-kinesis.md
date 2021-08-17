@@ -3,9 +3,9 @@ keywords: Amazon Kinesis;kinesis目的地；kinesis
 title: Amazon Kinesis連線
 description: 建立與Amazon Kinesis儲存體的即時傳出連線，以串流來自Adobe Experience Platform的資料。
 exl-id: b40117ef-6ad0-48a9-bbcb-97c6f6d1dce3
-source-git-commit: 15ea3ab9370541c35b874414a8753e8812eea9c6
+source-git-commit: 3aac1e7c7fe838201368379da8504efc8e316e1c
 workflow-type: tm+mt
-source-wordcount: '550'
+source-wordcount: '552'
 ht-degree: 2%
 
 ---
@@ -36,7 +36,7 @@ ht-degree: 2%
 
 ## 匯出類型 {#export-type}
 
-**以設定檔為基礎**  — 您要匯出區段的所有成員，以及所需的結構欄位(例如：電子郵件地址、電話號碼、姓氏)，從目的地啟用工作流程的「選取屬性」畫面 [中選取](../../ui/activate-destinations.md#select-attributes)。
+**以設定檔為基礎**  — 您要匯出區段的所有成員，以及所需的結構欄位(例如：電子郵件地址、電話號碼、姓氏)，從對象啟用工作流程的「選取屬性」畫面 [中選取](../../ui/activate-streaming-profile-destinations.md#select-attributes)。
 
 ## 必要的[!DNL Amazon Kinesis]權限 {#required-kinesis-permission}
 
@@ -101,7 +101,7 @@ ht-degree: 2%
 
 ## 啟用此目的地的區段 {#activate}
 
-請參閱[將設定檔和區段啟用至目的地](../../ui/activate-destinations.md) ，以取得將對象區段啟用至目的地的指示。
+請參閱[將受眾資料啟用至串流設定檔匯出目的地](../../ui/activate-streaming-profile-destinations.md) ，以取得關於將受眾區段啟用至此目的地的指示。
 
 ## 匯出的資料 {#exported-data}
 
