@@ -3,10 +3,10 @@ keywords: DoubleClick競標管理器；DoubleClick競標管理器；DoubleClick�
 title: Google Display & Video 360連線
 description: Display & Video 360（先前稱為DoubleClick競標管理器）是一種工具，用於在顯示、視訊和行動詳細目錄來源間執行重新定位和對象鎖定目標的數位促銷活動。
 exl-id: bdd3b3fd-891f-44ec-bd47-daf7f3289f92
-source-git-commit: 7e2f6f54e754c52c8de7f98372d041b2a6520d46
+source-git-commit: 802b1844bec1e577e978da5d5a69de87278c04b9
 workflow-type: tm+mt
-source-wordcount: '764'
-ht-degree: 1%
+source-wordcount: '671'
+ht-degree: 2%
 
 ---
 
@@ -59,19 +59,13 @@ ht-degree: 1%
 * **客戶ID**:Adobe的客戶帳戶ID與Google。客戶ID:89690775。
 * **您的帳戶類型**:使 **[!DNL Invite advertiser]** 用僅可讓受眾共用至您的Display &amp; Video 360帳戶中的特定品牌，或使用 **[!DNL Invite partner]** 讓受眾共用至您的Display &amp; Video 360帳戶中的所有品牌。
 
-## 設定目的地
+## 連接到目標 {#connect}
 
-在&#x200B;**[!UICONTROL 連接]** > **[!UICONTROL 目標]**&#x200B;中，選擇[!DNL Google Display & Video 360]，然後選擇&#x200B;**[!UICONTROL 配置]**。
+要連接到此目標，請按照[目標配置教程](../../ui/connect-destination.md)中所述的步驟操作。
 
-![連接Google Display &amp; Video 360目的地](../../assets/catalog/advertising/google-dv360/catalog.png)
+### 連線參數 {#parameters}
 
->[!NOTE]
->
->如果與此目的地的連線已存在，您可以在目標卡上看到&#x200B;**[!UICONTROL 啟動]**&#x200B;按鈕。 有關[!UICONTROL Activate]和[!UICONTROL Configure]之間差異的詳細資訊，請參閱目標工作區檔案的[Catalog](../../ui/destinations-workspace.md#catalog)區段。
-
-在建立目標工作流的&#x200B;**設定**&#x200B;步驟中，填入目標的[!UICONTROL 基本資訊]以及應套用至此目標的行銷動作。
-
-![基本資訊Google Display &amp; Video 360](../../assets/catalog/advertising/google-dv360/setup.png)
+在[設定](../../ui/connect-destination.md)此目標時，您必須提供下列資訊：
 
 * **[!UICONTROL 名稱]**:填寫此目的地的首選名稱。
 * **[!UICONTROL 說明]**:選填。例如，您可以提及您使用此目的地的促銷活動。
@@ -79,15 +73,14 @@ ht-degree: 1%
    * 使用`Invite Advertiser`只允許將對象共用至您的Display &amp; Video 360帳戶中的特定品牌。
    * 使用`Invite Partner`允許將受眾共用至您的Display &amp; Video 360帳戶中的所有品牌。
 * **[!UICONTROL 帳戶ID]**:使用Google填 **[!DNL Invite partner]** 入 **[!DNL Invite advertiser]** 或帳戶ID。通常是6或7位數的ID。
-* **[!UICONTROL 行銷動作]**:行銷動作會指出要將資料匯出至目的地的目的。您可以從Adobe定義的行銷動作中選取，或者您可以建立自己的行銷動作。 如需行銷動作的詳細資訊，請參閱[資料使用原則概述](../../../data-governance/policies/overview.md)。
 
 >[!NOTE]
 >
->設定[!DNL Google Display & Video 360]目標時，請與[!DNL Google Account Manager]或Adobe代表合作，了解您擁有的帳戶類型。
+>設定[!DNL Google Display & Video 360]目的地時，請與您的[!DNL Google Account Manager]或Adobe代表合作，了解您擁有的帳戶類型。
 
-## 將區段啟用至[!DNL Google Display & Video 360]
+## 啟用此目的地的區段 {#activate}
 
-如需如何將區段啟用至[!DNL Google Display & Video 360]的指示，請參閱[將資料啟用至目的地](../../ui/activate-destinations.md)。
+請參閱[將設定檔和區段啟用至目的地](../../ui/activate-destinations.md) ，以取得將對象區段啟用至目的地的指示。
 
 ## 匯出的資料
 
