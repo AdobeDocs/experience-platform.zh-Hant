@@ -3,10 +3,10 @@ title: 使用Adobe Experience Platform Web SDK處理客戶同意資料
 topic-legacy: getting started
 description: 了解如何整合Adobe Experience Platform Web SDK，以使用Adobe2.0標準在Adobe Experience Platform中處理客戶同意資料。
 exl-id: 3a53d908-fc61-452b-bec3-af519dfefa41
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+source-git-commit: 272cf2906b44ccfeca041d9620ac0780e24ad1ae
 workflow-type: tm+mt
-source-wordcount: '1254'
-ht-degree: 1%
+source-wordcount: '1247'
+ht-degree: 0%
 
 ---
 
@@ -93,7 +93,7 @@ Adobe Experience Platform Web SDK可讓您擷取同意管理平台(CMP)產生的
 
 ### 在您的網站上部署擴充功能
 
-完成擴充功能的設定後，即可將其整合至您的網站。 如需如何部署更新的程式庫組建的詳細資訊，請參閱標籤檔案中的[發佈指南](https://experienceleague.adobe.com/docs/launch/using/publish/overview.html?lang=zh-Hant) 。
+完成擴充功能的設定後，即可將其整合至您的網站。 如需如何部署更新的程式庫組建的詳細資訊，請參閱標籤檔案中的[發佈指南](../../../../tags/ui/publishing/overview.md) 。
 
 ## 執行同意更改命令 {#commands}
 
