@@ -3,9 +3,9 @@ keywords: Google廣告；Google廣告；Google廣告；Google AdWords;Google AdW
 title: Google Ads連線
 description: Google Ads（舊稱Google AdWords）是線上廣告服務，可讓企業在文字搜尋、圖形顯示、YouTube視訊和應用程式內行動顯示器間，按點付費廣告。
 exl-id: 7143f476-49a8-42aa-bfb4-b11fc2b8f5c3
-source-git-commit: 7e2f6f54e754c52c8de7f98372d041b2a6520d46
+source-git-commit: ca388912d6634f72cab15a6bfb3e9f92264e52db
 workflow-type: tm+mt
-source-wordcount: '716'
+source-wordcount: '637'
 ht-degree: 2%
 
 ---
@@ -66,29 +66,22 @@ ht-degree: 2%
 * 您的帳戶類型：**AdWords**
 * **Google AdWords ID**:這是您的ID  [!DNL Google]。ID格式通常為123-456-7890。
 
-## 設定目的地
+## 連接到目標 {#connect}
 
-在&#x200B;**[!UICONTROL 連接]** > **[!UICONTROL 目標]**&#x200B;中，選擇[!DNL Google Ads]，然後選擇&#x200B;**[!UICONTROL 配置]**。
+要連接到此目標，請按照[目標配置教程](../../ui/connect-destination.md)中所述的步驟操作。
 
-![連接Google Ads目的地](../../assets/catalog/advertising/google-ads-destination/catalog.png)
+### 連線參數 {#parameters}
 
->[!NOTE]
->
->如果與此目的地的連線已存在，您可以在目標卡上看到&#x200B;**[!UICONTROL 啟動]**&#x200B;按鈕。 有關&#x200B;**[!UICONTROL Activate]**&#x200B;和&#x200B;**[!UICONTROL Configure]**&#x200B;之間差異的詳細資訊，請參閱目標工作區檔案的[Catalog](../../ui/destinations-workspace.md#catalog)區段。
-
-在建立目標工作流的&#x200B;**設定**&#x200B;步驟中，填寫目標的[!UICONTROL 基本資訊]。
-
-![Google Ads基本資訊](../../assets/catalog/advertising/google-ads-destination/setup.png)
+在[設定](../../ui/connect-destination.md)此目標時，您必須提供下列資訊：
 
 * **[!UICONTROL 名稱]**:填寫此目的地的首選名稱。
 * **[!UICONTROL 說明]**:選填。例如，您可以提及您使用此目的地的促銷活動。
 * **[!UICONTROL 帳戶類型]**:AdWords是唯一可用的選項。
 * **[!UICONTROL 帳戶ID]**:用填入您的帳戶ID  [!DNL Google Ads]。ID格式通常為123-456-7890。
-* **[!UICONTROL 行銷動作]**:行銷動作會指出要將資料匯出至目的地的目的。您可以從Adobe定義的行銷動作中選取，或者您可以建立自己的行銷動作。 如需行銷動作的詳細資訊，請參閱[資料使用原則概述](../../../data-governance/policies/overview.md)。
 
-## 將區段啟用至[!DNL Google Ads]
+## 啟用此目的地的區段 {#activate}
 
-如需如何將區段啟用至[!DNL Google Ads]的指示，請參閱[將資料啟用至目的地](../../ui/activate-destinations.md)。
+請參閱[將設定檔和區段啟用至目的地](../../ui/activate-destinations.md) ，以取得將對象區段啟用至目的地的指示。
 
 ## 匯出的資料
 
