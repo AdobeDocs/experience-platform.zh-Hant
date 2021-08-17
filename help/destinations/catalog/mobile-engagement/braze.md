@@ -3,9 +3,9 @@ keywords: 行動；佈雷茲；報文傳送；
 title: Braze連接
 description: Braze是一個全面的客戶參與平台，可為客戶與其喜愛的品牌之間提供相關且難忘的體驗。
 exl-id: 508e79ee-7364-4553-b153-c2c00cc85a73
-source-git-commit: 15ea3ab9370541c35b874414a8753e8812eea9c6
+source-git-commit: 3aac1e7c7fe838201368379da8504efc8e316e1c
 workflow-type: tm+mt
-source-wordcount: '789'
+source-wordcount: '791'
 ht-degree: 2%
 
 ---
@@ -65,7 +65,7 @@ ht-degree: 2%
 
 ## 啟用此目的地的區段 {#activate}
 
-請參閱[將設定檔和區段啟用至目的地](../../ui/activate-destinations.md) ，以取得將對象區段啟用至目的地的指示。
+請參閱[對串流區段匯出目的地啟用受眾資料](../../ui/activate-segment-streaming-destinations.md) ，以取得對此目的地啟用受眾區段的指示。
 
 ## 對應考量事項 {#mapping-considerations}
 
