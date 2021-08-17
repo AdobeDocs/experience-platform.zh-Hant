@@ -3,10 +3,10 @@ keywords: 行動；佈雷茲；報文傳送；
 title: Braze連接
 description: Braze是一個全面的客戶參與平台，可為客戶與其喜愛的品牌之間提供相關且難忘的體驗。
 exl-id: 508e79ee-7364-4553-b153-c2c00cc85a73
-source-git-commit: 66c3e81dfdbf6f6c3ff9a127fbca8943c0e32279
+source-git-commit: 15ea3ab9370541c35b874414a8753e8812eea9c6
 workflow-type: tm+mt
-source-wordcount: '953'
-ht-degree: 1%
+source-wordcount: '789'
+ht-degree: 2%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 1%
 >
 >Adobe Experience Platform中的Braze目的地目前為測試版。 文件和功能可能會有所變更。
 
-## 概述 {#overview}
+## 概覽 {#overview}
 
 [!DNL Braze]目的地可協助您將設定檔資料傳送至[!DNL Braze]。
 
@@ -38,7 +38,7 @@ ht-degree: 1%
 
 身為行銷人員，我想要將目標鎖定在行動參與目的地的使用者，並在[!DNL Adobe Experience Platform]中內建區段。 此外，我也想在[!DNL Adobe Experience Platform]中更新區段和設定檔時，根據其[!DNL Adobe Experience Platform]設定檔的屬性，為他們提供個人化體驗。
 
-## 支援的身分{#supported-identities}
+## 支援的身分 {#supported-identities}
 
 [!DNL Braze] 支援啟用下表所述的身分。
 
@@ -46,41 +46,28 @@ ht-degree: 1%
 |---|---|---|
 | external_id | 支援任何身分對應的自訂[!DNL Braze]識別碼。 | 只要將任何[identity](../../../identity-service/namespaces.md)對應至[!DNL Braze] [`external_id`](https://www.braze.com/docs/api/basics/#external-user-id-explanation)目的地，即可將其傳送至[!DNL Braze]目的地。 |
 
-## 導出類型{#export-type}
+## 匯出類型 {#export-type}
 
 **[!DNL Profile-based]**  — 您要匯出區段的所有成員，以及所需的架構欄位(例如：根據您的欄位對應，以電子郵件地址、電話號碼、姓氏)和/或身分識別。[!DNL Adobe Experience Platform] 區段會匯出 [!DNL Braze] 至屬 `AdobeExperiencePlatformSegments` 性下。
 
-## 連接到目標{#connect-destination}
+## 連接到目標 {#connect}
 
-在&#x200B;**[!UICONTROL 連接]** > **[!UICONTROL 目標]**&#x200B;中，選擇[!DNL Braze]，然後選擇&#x200B;**[!UICONTROL 配置]**。
+要連接到此目標，請按照[目標配置教程](../../ui/connect-destination.md)中所述的步驟操作。
 
-![配置Braze目標](../../assets/catalog/mobile-engagement/braze/configure.png)
+### 連線參數 {#parameters}
 
->[!NOTE]
->
->如果與此目的地的連線已存在，您可以在目標卡上看到&#x200B;**[!UICONTROL 啟動]**&#x200B;按鈕。 有關&#x200B;**[!UICONTROL Activate]**&#x200B;和&#x200B;**[!UICONTROL Configure]**&#x200B;之間差異的詳細資訊，請參閱目標工作區檔案的[Catalog](../../ui/destinations-workspace.md#catalog)區段。
->
->![激活Braze目標](../../assets/catalog/mobile-engagement/braze/activate.png)
+在[設定](../../ui/connect-destination.md)此目標時，您必須提供下列資訊：
 
-在[!UICONTROL 帳戶]步驟中，您需要提供[!DNL Braze]帳戶代號。 這是您的[!DNL Braze] [!DNL API]鍵。 您可以在此處找到有關如何獲取[!DNL API]鍵的詳細說明：[REST API密鑰概述](https://www.braze.com/docs/api/api_key/)。 輸入令牌，然後按一下&#x200B;**[!UICONTROL 連接到目標]**。
-
-![Braze目標帳戶步驟](../../assets/catalog/mobile-engagement/braze/account.png)
-
-按&#x200B;**[!UICONTROL 「下一步」]**。在[!UICONTROL Authentication]步驟中，您需要輸入[!DNL Braze]連接詳細資訊：
+* **[!UICONTROL Braze帳戶代號]**:這是你的 [!DNL Braze] [!DNL API] 鑰匙。您可以在此處找到有關如何獲取[!DNL API]鍵的詳細說明：[REST API密鑰概述](https://www.braze.com/docs/api/api_key/)。
 * **[!UICONTROL 名稱]**:輸入一個名稱，以便您將來識別此目標。
 * **[!UICONTROL 說明]**:輸入說明，以便您在未來識別此目的地。
 * **[!UICONTROL 端點實例]**:請洽詢您 [!DNL Braze] 的代表您應使用哪個端點執行個體。
-* **[!UICONTROL 行銷動作]**:行銷動作會指出要將資料匯出至目的地的目的。您可以從Adobe定義的行銷動作中選取，或者您可以建立自己的行銷動作。 如需行銷動作的詳細資訊，請參閱Adobe Experience Platform](../../../data-governance/policies/overview.md)中的[資料控管頁面。 如需個別Adobe定義行銷動作的相關資訊，請參閱[資料使用原則概述](../../../data-governance/policies/overview.md)。
 
-![Braze驗證步驟](../../assets/catalog/mobile-engagement/braze/authentication.png)
+## 啟用此目的地的區段 {#activate}
 
-按一下&#x200B;**[!UICONTROL 建立目標]**。 您的目的地現在已建立。 如果您想稍後啟動區段，可以按一下「**[!UICONTROL 儲存並退出]**」，或選取「**[!UICONTROL 下一步]**」以繼續工作流程並選取要啟動的區段。 無論是哪種情況，請參閱工作流程其餘部分的下一節[啟用區段](#activate-segments)。
+請參閱[將設定檔和區段啟用至目的地](../../ui/activate-destinations.md) ，以取得將對象區段啟用至目的地的指示。
 
-## 啟動區段{#activate-segments}
-
-如需區段啟動工作流程的相關資訊，請參閱[將設定檔和區段啟用至目的地](../../ui/activate-destinations.md#select-attributes)。
-
-## 欄位映射{#field-mapping}
+## 對應考量事項 {#mapping-considerations}
 
 若要將您的對象資料從[!DNL Adobe Experience Platform]正確傳送至[!DNL Braze]目的地，您必須執行欄位對應步驟。
 
@@ -127,7 +114,7 @@ ht-degree: 1%
 
 若要新增更多對應，請重複先前的步驟。
 
-## 映射示例{#mapping-example}
+## 對應範例 {#mapping-example}
 
 假設您的XDM設定檔結構和[!DNL Braze]例項包含下列屬性和身分：
 
@@ -140,10 +127,10 @@ ht-degree: 1%
 
 ![佈雷茲目標對應範例](../../assets/catalog/mobile-engagement/braze/mapping-example.png)
 
-## 導出的資料{#exported-data}
+## 匯出的資料 {#exported-data}
 
 要驗證資料是否已成功導出到[!DNL Braze]目標，請檢查[!DNL Braze]帳戶。 [!DNL Adobe Experience Platform] 區段會匯出 [!DNL Braze] 至屬 `AdobeExperiencePlatformSegments` 性下。
 
-## 資料使用與控管{#data-usage-governance}
+## 資料使用與控管 {#data-usage-governance}
 
 處理資料時，所有[!DNL Adobe Experience Platform]目標都符合資料使用策略。 有關[!DNL Adobe Experience Platform]如何實施資料控管的詳細資訊，請參閱[資料控管概述](../../../data-governance/home.md)。
