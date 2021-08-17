@@ -3,9 +3,9 @@ keywords: linkedin連線；linkedin連線；linkedin目的地；linkedin;
 title: Linkedin相符的對象連線
 description: 根據雜湊電子郵件，啟用LinkedIn行銷活動的設定檔，以鎖定對象、個人化和隱藏。
 exl-id: 74c233e9-161a-4e4a-98ef-038a031feff0
-source-git-commit: 15ea3ab9370541c35b874414a8753e8812eea9c6
+source-git-commit: 3aac1e7c7fe838201368379da8504efc8e316e1c
 workflow-type: tm+mt
-source-wordcount: '766'
+source-wordcount: '768'
 ht-degree: 0%
 
 ---
@@ -71,7 +71,7 @@ ht-degree: 0%
 >啟動後，[!DNL Platform]會自動雜湊來自未雜湊命名空間的資料。
 > 屬性來源資料不會自動雜湊。
 > 
-> 在[身分對應](../../ui/activate-destinations.md#mapping)步驟中，當您的來源欄位包含未雜湊屬性時，請核取&#x200B;**[!UICONTROL 套用轉換]**&#x200B;選項，讓[!DNL Platform]在啟動時自動雜湊資料。
+> 在[身分對應](../../ui/activate-segment-streaming-destinations.md#mapping)步驟中，當您的來源欄位包含未雜湊屬性時，請核取&#x200B;**[!UICONTROL 套用轉換]**&#x200B;選項，讓[!DNL Platform]在啟動時自動雜湊資料。
 > 
 > 只有在選擇屬性作為源欄位時，才會顯示&#x200B;**[!UICONTROL 應用轉換]**&#x200B;選項。 當您選擇命名空間時，不會顯示。
 
@@ -99,7 +99,7 @@ ht-degree: 0%
 
 ## 啟用此目的地的區段 {#activate}
 
-請參閱[將設定檔和區段啟用至目的地](../../ui/activate-destinations.md) ，以取得將對象區段啟用至目的地的指示。
+請參閱[對串流區段匯出目的地啟用受眾資料](../../ui/activate-segment-streaming-destinations.md) ，以取得對此目的地啟用受眾區段的指示。
 
 ## 匯出的資料 {#exported-data}
 
