@@ -3,9 +3,9 @@ keywords: 流；
 title: HTTP連線
 description: Adobe Experience Platform中的HTTP目的地可讓您將設定檔資料傳送至協力廠商HTTP端點。
 exl-id: 165a8085-c8e6-4c9f-8033-f203522bb288
-source-git-commit: 802b1844bec1e577e978da5d5a69de87278c04b9
+source-git-commit: 3aac1e7c7fe838201368379da8504efc8e316e1c
 workflow-type: tm+mt
-source-wordcount: '361'
+source-wordcount: '357'
 ht-degree: 3%
 
 ---
@@ -56,11 +56,11 @@ ht-degree: 3%
 
 ## 啟用此目的地的區段 {#activate}
 
-請參閱[將設定檔和區段啟用至目的地](../ui/activate-destinations.md#select-attributes) ，以取得將對象區段啟用至目的地的指示。
+請參閱[將受眾資料啟用至串流設定檔匯出目的地](../ui/activate-streaming-profile-destinations.md) ，以取得關於將受眾區段啟用至此目的地的指示。
 
-## 目標屬性 {#attributes}
+### 目標屬性 {#attributes}
 
-在[[!UICONTROL 選擇屬性]](../ui/activate-destinations.md#select-attributes)步驟中，當[將區段](../ui/activate-destinations.md)激活到[!DNL HTTP]目標時，Adobe建議您從[聯合架構](../../profile/home.md#profile-fragments-and-union-schemas)中選擇唯一標識符。 選取唯一識別碼，以及您要匯出至目的地的任何其他XDM欄位。
+在[[!UICONTROL 選擇屬性]](../ui/activate-streaming-profile-destinations.md#select-attributes)步驟中，Adobe建議您從[聯合架構](../../profile/home.md#profile-fragments-and-union-schemas)中選擇唯一標識符。 選取唯一識別碼，以及您要匯出至目的地的任何其他XDM欄位。
 
 ## 匯出的資料 {#exported-data}
 
