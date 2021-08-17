@@ -6,9 +6,9 @@ topic-legacy: overview
 type: Tutorial
 description: 了解如何在UI中建立Adobe Analytics來源連線，將消費者資料匯入Adobe Experience Platform。
 exl-id: 5ddbaf63-feaa-44f5-b2f2-2d5ae507f423
-source-git-commit: 952b2caa6983b331c046618aff255131a6480e67
+source-git-commit: 0af9290a3143b85311fbbd8d194f4799b0c9a873
 workflow-type: tm+mt
-source-wordcount: '1450'
+source-wordcount: '1441'
 ht-degree: 1%
 
 ---
@@ -134,7 +134,7 @@ Platform會自動偵測您的對應集，以找出任何好記的名稱衝突。
 
 * [資料準備概述](../../../../../data-prep/home.md)
 * [資料準備映射函式](../../../../../data-prep/functions.md)
-* [將CSV檔案對應至XDM結構並新增計算欄位](../../../../../ingestion/tutorials/map-a-csv-file.md#add-calculated-field)
+* [新增計算欄位](../../../../../data-prep/calculated-fields.md)
 
 ### 提供資料流詳細資訊
 
