@@ -3,10 +3,10 @@ keywords: 標籤延伸模組；標籤延伸模組；launch目的地；平台標�
 title: 在Adobe Experience Platform中標籤擴充功能
 description: Adobe Experience Platform提供新一代的標籤管理功能，來自Adobe。 Platform可讓您透過簡單的方式部署及管理所有必要的分析、行銷及廣告標籤功能，以便支援相關客戶體驗。
 exl-id: 54fca635-0e37-460e-abb3-5da294d4e0cf
-source-git-commit: 010e05968f1d7ad5675b0f0af43d9cfcc1f3a2ff
+source-git-commit: 272cf2906b44ccfeca041d9620ac0780e24ad1ae
 workflow-type: tm+mt
-source-wordcount: '514'
-ht-degree: 1%
+source-wordcount: '508'
+ht-degree: 0%
 
 ---
 
@@ -16,7 +16,7 @@ Adobe Experience Platform提供新一代的標籤管理功能，來自Adobe。 P
 
 如需標籤的簡介，請參閱下列資源：
 
-- [標籤概述](https://experienceleague.adobe.com/docs/launch/using/home.html?lang=zh-Hant)
+- [標籤概述](../../../tags/home.md)
 - [快速入門手冊](../../../tags/quick-start/quick-start.md)
 
 ## 如何在Platform介面中尋找標籤擴充功能 {#how-to-find-extensions-in-interface}
