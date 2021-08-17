@@ -1,7 +1,7 @@
 ---
 title: 規則
 description: 了解標籤擴充功能在Adobe Experience Platform中的運作方式。
-source-git-commit: 010e05968f1d7ad5675b0f0af43d9cfcc1f3a2ff
+source-git-commit: 272cf2906b44ccfeca041d9620ac0780e24ad1ae
 workflow-type: tm+mt
 source-wordcount: '1977'
 ht-degree: 77%
@@ -168,7 +168,7 @@ Adobe 無法保證會實際觸發其他任何規則，且會需要規則的動�
 * **JavaScript：** JavaScript 會從伺服器載入為一般文字、以指令碼標記包住，並使用 PostScribe 新增至文件中。如果規則有多個 JavaScript 自訂指令碼，則會從伺服器同時載入，不過會依照規則中所設定的相同順序執行。
 * **HTML：** HTML 已從伺服器載入，並已使用 Postscribe 新增到文件。如果規則有多個自訂 HTML 指令碼，則會從伺服器同時載入，不過會依照規則中所設定的相同順序執行。
 
-## 規則元件排序
+## 規則元件排序 {#sequencing}
 
 標籤執行階段環境的行為取決於序列&#x200B;]**的「執行規則元件」是否針對屬性開啟。**[!UICONTROL 
 
