@@ -6,9 +6,9 @@ description: 本檔案說明如何使用Adobe Experience Platform API建立電�
 topic-legacy: tutorial
 type: Tutorial
 exl-id: 41fd295d-7cda-4ab1-a65e-b47e6c485562
-source-git-commit: 0bc85d79bab690d433dc29d558a4d9caf086586d
+source-git-commit: 02c22453470d55236d4235c479742997e8407ef3
 workflow-type: tm+mt
-source-wordcount: '1704'
+source-wordcount: '1705'
 ht-degree: 1%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 1%
 
 ![概述 — 建立目的地和啟用區段的步驟](../assets/api/email-marketing/overview.png)
 
-如果您偏好使用Platform中的使用者介面來連線目的地和啟用資料，請參閱[連線目的地](../ui/connect-destination.md)和[啟用設定檔和區段至目的地](../ui/activate-destinations.md)教學課程。
+如果您偏好使用Platform中的使用者介面來連線目的地並啟用資料，請參閱[連線目的地](../ui/connect-destination.md)和[啟用對象資料至批次設定檔匯出目的地](../ui/activate-batch-profile-destinations.md)教學課程。
 
 ## 開始使用
 
