@@ -1,51 +1,56 @@
 ---
-keywords: 廣告目標；目標；平台目標
-title: 廣告目標概觀
-seo-title: 廣告目標概觀
-description: 將Adobe Experience Platform連接至第三方廣告平台（例如DSP、廣告網路、SSP），並與這些平台共用假受眾。
-seo-description: 將Adobe Experience Platform連接至第三方廣告平台（例如DSP、廣告網路、SSP），並與這些平台共用假受眾。
-translation-type: tm+mt
-source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
+keywords: 廣告目的地；目的地；平台目的地
+title: 廣告目的地概觀
+seo-title: 廣告目的地概觀
+description: 將Adobe Experience Platform連線至協力廠商廣告平台(例如DSP、廣告網路、SSP)，並與這些平台共用假名受眾。
+seo-description: 將Adobe Experience Platform連線至協力廠商廣告平台(例如DSP、廣告網路、SSP)，並與這些平台共用假名受眾。
+exl-id: 072743a4-fc62-4a61-92ec-8f9640a47ab2
+source-git-commit: 802b1844bec1e577e978da5d5a69de87278c04b9
 workflow-type: tm+mt
-source-wordcount: '233'
-ht-degree: 0%
+source-wordcount: '248'
+ht-degree: 1%
 
 ---
 
+# 廣告目的地概觀 {#advertising-destinations}
 
-# 廣告目標概觀{#advertising-destinations}
+## 概覽 {#overview}
 
-將Adobe Experience Platform連接至第三方廣告平台（例如DSP、廣告網路、SSP），並與這些平台共用假受眾。
+將Adobe Experience Platform連線至第三方廣告平台，例如需求端平台(DSP)、供應端平台(SSP)、廣告網路，並與這些平台共用假名的受眾。
 
-連線至廣告目標時，您的觀眾會以ID的形式傳送至目標平台，在此平台，觀眾會對應至目標平台已知的ID。
+連線至廣告目的地時，您的對象會以ID的形式傳送至目的地平台，並在目的地平台將其對應至已知的ID。
 
-目前，平台支援下列廣告目標。 如需如何連線至這些目的地的詳細資訊，請參閱個別連結：
+## 支援的廣告目的地 {#supported-destinations}
 
-## 連線
+目前，Experience Platform支援下列廣告目的地。
 
-要瞭解連接和擴展之間的差異，請參閱「目標類型和類別」頁中的[連接](../../destination-types.md#connections)。
+若要了解連線和擴充功能之間的差異，請參閱目標類型和類別頁面中的[連線](../../destination-types.md#connections)。
 
-- [Google Display &amp; Video 360連線](./google-dv360.md)
-- [Google Ads連線](./google-ads-destination.md)
-- [Google廣告管理員連線](./google-ad-manager.md)
-- [Google客戶符合連線](./google-customer-match.md)
-- [Microsoft Bing連線](./bing.md)
-- [The Trade Desk connection](./tradedesk.md)
+### 連線
 
-## 擴充功能
+* [Google Display &amp; Video 360連線](google-dv360.md)
+* [Google Ads連線](google-ads-destination.md)
+* [Google Ad Manager連線](google-ad-manager.md)
+* [Google Customer Match連線](google-customer-match.md)
+* [Microsoft Bing連接](bing.md)
+* [貿易台連接](tradedesk.md)
 
-要瞭解連接和擴展之間的差異，請參閱「目標類型和類別」頁中的[擴展](../../destination-types.md#extensions)。
+### 擴充功能
 
-- [Adobe Advertising Cloud擴充功能](./adobe-advertising-cloud.md)
-- [Awin廣告轉換標籤擴充功能](./awin-conversiontag.md)
-- [Awin Advertising Mastertag擴充功能](./awin-mastertag.md)
-- [Bing Ads通用事件追蹤擴充功能](./bing-ads.md)
-- [分支擴充功能](./branch.md)
-- [DoubleClick Floodlight擴充功能](./doubleclick-floodlight.md)
-- [Facebook Pixel擴充功能](./facebook-pixel.md)
-- [Flashtalking OneTag擴充功能](./flashtalking.md)
-- [Google Ads擴充功能](./google-ads-extension.md)
-- [Google gtag擴充功能](./gtag-advertising.md)
-- [LinkedIn In Insight標籤擴充功能](./linkedin.md)
-- [Pinterest轉換追蹤擴充功能](./pinterest.md)
-- [Twitter通用網站標籤擴充功能](./twitter-uwt.md)
+* [Adobe Advertising Cloud擴充功能](adobe-advertising-cloud.md)
+* [Awin Advertising Conversion Tag擴充功能](awin-conversiontag.md)
+* [Awin Advertising Mastertag擴充功能](awin-mastertag.md)
+* [Bing Ads通用事件追蹤擴充功能](bing-ads.md)
+* [分支擴充功能](branch.md)
+* [DoubleClick Floodlight擴充功能](doubleclick-floodlight.md)
+* [Facebook Pixel擴充功能](facebook-pixel.md)
+* [Flashtalking OneTag擴展](flashtalking.md)
+* [Google Ads擴充功能](google-ads-extension.md)
+* [Google Gtag擴充功能](gtag-advertising.md)
+* [linkedIn Insight Tag擴充功能](linkedin.md)
+* [Pinterest轉換追蹤擴充功能](pinterest.md)
+* [Twitter通用網站標籤擴充功能](twitter-uwt.md)
+
+## 連線至新的廣告目的地 {#connect-destination}
+
+若要將區段傳送至行銷活動的廣告目的地，Platform必須先連線至目的地。 有關設定新目標的詳細資訊，請參閱[目標建立教程](../../ui/connect-destination.md)。
