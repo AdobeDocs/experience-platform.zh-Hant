@@ -3,9 +3,9 @@ keywords: Google客戶比對；Google客戶比對；Google客戶比對
 title: Google Customer Match連線
 description: Google Customer Match可讓您使用您的線上和離線資料，透過Google擁有且運作的屬性(例如Search、Shopping、Gmail及YouTube)，觸及客戶並與其重新互動。
 exl-id: 8209b5eb-b05c-4ef7-9fdc-22a528d5f020
-source-git-commit: 15ea3ab9370541c35b874414a8753e8812eea9c6
+source-git-commit: 3aac1e7c7fe838201368379da8504efc8e316e1c
 workflow-type: tm+mt
-source-wordcount: '1250'
+source-wordcount: '1252'
 ht-degree: 0%
 
 ---
@@ -131,7 +131,7 @@ The video below demonstrates the steps to configure a [!DNL Google Customer Matc
 
 ## 啟用此目的地的區段 {#activate}
 
-請參閱[將設定檔和區段啟用至目的地](../../ui/activate-destinations.md) ，以取得將對象區段啟用至目的地的指示。
+請參閱[對串流區段匯出目的地啟用受眾資料](../../ui/activate-segment-streaming-destinations.md) ，以取得對此目的地啟用受眾區段的指示。
 
 在&#x200B;**[!UICONTROL 區段排程]**&#x200B;步驟中，傳送[!DNL IDFA]或[!DNL GAID]區段至[!DNL Google Customer Match]時，您必須提供[!UICONTROL 應用程式ID]。
 
