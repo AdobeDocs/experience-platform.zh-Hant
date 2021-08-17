@@ -1,9 +1,9 @@
 ---
 title: 環境
 description: 了解標籤環境的概念，以及它們在Adobe Experience Platform中的運作方式。
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+source-git-commit: 272cf2906b44ccfeca041d9620ac0780e24ad1ae
 workflow-type: tm+mt
-source-wordcount: '1483'
+source-wordcount: '1468'
 ht-degree: 71%
 
 ---
@@ -128,7 +128,7 @@ ht-degree: 71%
 
 #### 同步部署
 
-當瀏覽器使用同步部署讀取內嵌程式碼時，會擷取並執行標籤程式庫，再繼續載入頁面。 這也是 [Dynamic Tag Management (DTM)](https://experienceleague.adobe.com/docs/dtm/using/dtm-home.html?lang=zh-Hant) 的運作方式。
+當瀏覽器使用同步部署讀取內嵌程式碼時，會擷取並執行標籤程式庫，再繼續載入頁面。
 
 同步內嵌程式碼有兩個必須放置在網站 HTML 中的 `<script>` 標記。一個 `<script>` 標記必須放在文件 `<head>` 中，另一個標記則必須放在結束 `</body>` 標記之前。
 
