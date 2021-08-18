@@ -5,9 +5,9 @@ type: Tutorial
 seo-title: 對串流設定檔匯出目的地啟用受眾資料
 description: 了解如何將區段傳送至以設定檔為基礎的串流目的地，以啟動Adobe Experience Platform中您擁有的受眾資料。
 seo-description: 了解如何將區段傳送至以設定檔為基礎的串流目的地，以啟動Adobe Experience Platform中您擁有的受眾資料。
-source-git-commit: 02c22453470d55236d4235c479742997e8407ef3
+source-git-commit: f0c854e1b6b89d499c720328fa5054611147772f
 workflow-type: tm+mt
-source-wordcount: '577'
+source-wordcount: '532'
 ht-degree: 0%
 
 ---
@@ -86,16 +86,42 @@ ht-degree: 0%
 
 ## 驗證區段啟用 {#verify}
 
+匯出的[!DNL Experience Platform]資料會以JSON格式登陸目標目的地。 例如，以下事件包含已符合特定區段資格並退出其他區段之對象的電子郵件地址設定檔屬性。 此潛在客戶的身分識別為ECID和電子郵件。
 
-對於電子郵件行銷目的地和雲端儲存空間目的地，Adobe Experience Platform會在您提供的儲存位置中建立以定位點分隔的`.csv`檔案。 預期每天會在儲存位置中建立新檔案。 預設檔案格式為：
-`<destinationName>_segment<segmentID>_<timestamp-yyyymmddhhmmss>.csv`
-
-您連續三天收到的檔案可能如下所示：
-
-```console
-Salesforce_Marketing_Cloud_segment12341e18-abcd-49c2-836d-123c88e76c39_20200408061804.csv
-Salesforce_Marketing_Cloud_segment12341e18-abcd-49c2-836d-123c88e76c39_20200409052200.csv
-Salesforce_Marketing_Cloud_segment12341e18-abcd-49c2-836d-123c88e76c39_20200410061130.csv
+```json
+{
+  "person": {
+    "email": "yourstruly@adobe.con"
+  },
+  "segmentMembership": {
+    "ups": {
+      "7841ba61-23c1-4bb3-a495-00d3g5fe1e93": {
+        "lastQualificationTime": "2020-05-25T21:24:39Z",
+        "status": "exited"
+      },
+      "59bd2fkd-3c48-4b18-bf56-4f5c5e6967ae": {
+        "lastQualificationTime": "2020-05-25T23:37:33Z",
+        "status": "existing"
+      }
+    }
+  },
+  "identityMap": {
+    "ecid": [
+      {
+        "id": "14575006536349286404619648085736425115"
+      },
+      {
+        "id": "66478888669296734530114754794777368480"
+      }
+    ],
+    "email_lc_sha256": [
+      {
+        "id": "655332b5fa2aea4498bf7a290cff017cb4"
+      },
+      {
+        "id": "66baf76ef9de8b42df8903f00e0e3dc0b7"
+      }
+    ]
+  }
+}
 ```
-
-儲存位置中是否存在這些檔案是成功激活的確認。 若要了解匯出的檔案的結構，您可以[下載範例.csv檔案](../assets/common/sample_export_file_segment12341e18-abcd-49c2-836d-123c88e76c39_20200408061804.csv)。 此範例檔案包含設定檔屬性`person.firstname`、`person.lastname`、`person.gender`、`person.birthyear`和`personalEmail.address`。
