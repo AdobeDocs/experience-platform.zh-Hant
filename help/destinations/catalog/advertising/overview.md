@@ -5,7 +5,7 @@ seo-title: 廣告目的地概觀
 description: 將Adobe Experience Platform連線至協力廠商廣告平台(例如DSP、廣告網路、SSP)，並與這些平台共用假名受眾。
 seo-description: 將Adobe Experience Platform連線至協力廠商廣告平台(例如DSP、廣告網路、SSP)，並與這些平台共用假名受眾。
 exl-id: 072743a4-fc62-4a61-92ec-8f9640a47ab2
-source-git-commit: 802b1844bec1e577e978da5d5a69de87278c04b9
+source-git-commit: 9c9ea0d9e8247dbc4a1a4078dbdba2ae80ed70ef
 workflow-type: tm+mt
 source-wordcount: '248'
 ht-degree: 1%
@@ -48,7 +48,7 @@ ht-degree: 1%
 * [Google Ads擴充功能](google-ads-extension.md)
 * [Google Gtag擴充功能](gtag-advertising.md)
 * [linkedIn Insight Tag擴充功能](linkedin.md)
-* [Pinterest轉換追蹤擴充功能](pinterest.md)
+* [Pinterest轉換追蹤擴充功能](pinterest-extension.md)
 * [Twitter通用網站標籤擴充功能](twitter-uwt.md)
 
 ## 連線至新的廣告目的地 {#connect-destination}
