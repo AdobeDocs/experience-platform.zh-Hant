@@ -4,9 +4,9 @@ title: 刪除目的地
 type: Tutorial
 description: 本教學課程列出刪除Adobe Experience Platform UI中現有目的地的步驟
 exl-id: 7b672859-e61a-4b3c-9db9-62048258f0aa
-source-git-commit: 84deb9d1eecee8ec4369915a0b3c1eb810fd7c9b
+source-git-commit: a97b235e2d8834f6be002923be9cdbca5f08495b
 workflow-type: tm+mt
-source-wordcount: '430'
+source-wordcount: '437'
 ht-degree: 0%
 
 ---
@@ -40,10 +40,10 @@ ht-degree: 0%
 
    ![篩選目的地](../assets/ui/delete-destinations/filter-destinations.png)
 
-3. 在&#x200B;**[!UICONTROL Platform]**&#x200B;欄中選擇![刪除按鈕](../assets/ui/delete-destinations/delete-icon.png) **[!UICONTROL 刪除]**按鈕，以刪除現有目標。
+3. 在「名稱」列中選擇![More按鈕](../assets/ui/delete-destinations/more-icon.png)按鈕，然後選擇![Delete按鈕](../assets/ui/delete-destinations/delete-icon.png) **[!UICONTROL Delete]**以刪除現有目標連接。
    ![刪除目的地](../assets/ui/delete-destinations/delete-destinations.png)
 
-4. 選擇&#x200B;**[!UICONTROL Delete]**&#x200B;以確認目標的刪除。
+4. 選擇&#x200B;**[!UICONTROL Delete]**&#x200B;以確認目標連接的刪除。
 
    ![確認刪除目標](../assets/ui/delete-destinations/delete-destinations-confirm.png)
 
