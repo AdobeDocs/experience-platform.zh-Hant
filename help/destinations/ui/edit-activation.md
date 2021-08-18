@@ -6,9 +6,9 @@ seo-title: 編輯啟動流程
 description: 請依照本文中的步驟，編輯Adobe Experience Platform中現有的啟動流程。
 seo-description: 請依照本文中的步驟，編輯Adobe Experience Platform中現有的啟動流程。
 exl-id: 0d79fbff-bfde-4109-8353-c7530e9719fb
-source-git-commit: a619227de30513bb06a22ce7b4f2fc13847c1ab6
+source-git-commit: a97b235e2d8834f6be002923be9cdbca5f08495b
 workflow-type: tm+mt
-source-wordcount: '191'
+source-wordcount: '204'
 ht-degree: 0%
 
 ---
@@ -29,8 +29,10 @@ ht-degree: 0%
 
    ![選擇目標](../assets/ui/edit-activation/destination-select.png)
 
-4. 目的地的詳細資訊頁面隨即顯示，並顯示其可用的控制項。 選取右側邊欄中的&#x200B;**[!UICONTROL 啟動]**&#x200B;以變更要傳送至目的地的區段。
+4. 此時將顯示目標的&#x200B;**[!UICONTROL 資料流運行]**&#x200B;頁，其中顯示其可用控制項。 選取右側邊欄中的&#x200B;**[!UICONTROL 啟動]**&#x200B;以變更要傳送至目的地的區段。
+
+   此外，您也可以編輯目的地名稱和說明。
 
    ![目的地詳細資訊](../assets/ui/edit-activation/destination-details.png)
 
-5. 如需如何啟用新區段的詳細資訊，請參閱[啟用概述](activation-overview.md)。
+5. 如需如何對目的地啟用新區段的詳細資訊，請參閱[啟用概述](activation-overview.md)。
