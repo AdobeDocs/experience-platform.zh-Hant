@@ -1,7 +1,7 @@
 ---
 title: 上傳並實作擴充功能的端對端測試
 description: 了解如何在Adobe Experience Platform中驗證、上傳和測試您的擴充功能。
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+source-git-commit: 41a394974153883dc300bdd8a00fc3106c4f0ac6
 workflow-type: tm+mt
 source-wordcount: '2392'
 ht-degree: 33%
