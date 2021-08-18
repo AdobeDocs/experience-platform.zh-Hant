@@ -5,9 +5,9 @@ type: Tutorial
 seo-title: 啟用受眾資料以批次設定檔匯出目的地
 description: 了解如何將區段傳送至批次設定檔式型目的地，以啟動Adobe Experience Platform中的受眾資料。
 seo-description: 了解如何將區段傳送至批次設定檔式型目的地，以啟動Adobe Experience Platform中的受眾資料。
-source-git-commit: 02c22453470d55236d4235c479742997e8407ef3
+source-git-commit: f814f11db0a258d1c5265206d6ec61c27ad2ee7d
 workflow-type: tm+mt
-source-wordcount: '2011'
+source-wordcount: '2008'
 ht-degree: 0%
 
 ---
@@ -270,7 +270,7 @@ ht-degree: 0%
 }
 ```
 
-### 重複資料刪除使用案例1:無重複資料消除
+### 重複資料刪除使用案例1:無重複資料消除 {#deduplication-use-case-1}
 
 若不使用重複資料刪除，匯出檔案將包含下列項目。
 
@@ -280,7 +280,7 @@ ht-degree: 0%
 | johndoe@example.com | 約翰 | D |
 
 
-### 重複資料刪除使用案例2:基於身份命名空間的重複資料消除
+### 重複資料刪除使用案例2:基於身份命名空間的重複資料消除 {#deduplication-use-case-2}
 
 假設使用[!DNL Email]命名空間執行重複資料刪除，則匯出檔案將包含下列項目。 設定檔B是符合區段資格的最新一個，因此是唯一一個匯出的設定檔。
 
@@ -289,7 +289,7 @@ ht-degree: 0%
 | johndoe_1@example.com | johndoe@example.com | 約翰 | D |
 | johndoe_2@example.com | johndoe@example.com | 約翰 | D |
 
-### 重複資料刪除使用案例3:基於單一設定檔屬性的重複資料刪除
+### 重複資料刪除使用案例3:基於單一設定檔屬性的重複資料刪除 {#deduplication-use-case-3}
 
 假設使用`personal Email`屬性重複資料刪除，則匯出檔案將包含下列項目。 設定檔B是符合區段資格的最新一個，因此是唯一一個匯出的設定檔。
 
@@ -298,7 +298,7 @@ ht-degree: 0%
 | johndoe@example.com | 約翰 | D |
 
 
-### 重複資料刪除使用案例4:基於兩個配置檔案屬性的重複資料消除（複合重複資料消除密鑰）
+### 重複資料刪除使用案例4:基於兩個配置檔案屬性的重複資料消除 {#deduplication-use-case-4}
 
 假設複合鍵`personalEmail + lastName`重複資料刪除，則導出檔案將包含以下項。
 
