@@ -4,9 +4,9 @@ title: 目的地工作區
 description: 「目的地」工作區包含四個區段：目錄、瀏覽、帳戶和系統檢視。 以下各節將說明這些規則。
 seo-description: 在Adobe Experience Platform中，從左側導覽列選取「目的地」 ，以存取目的地工作區。
 exl-id: 0f46f08d-0fe3-441d-933a-86bc146c0f19
-source-git-commit: a619227de30513bb06a22ce7b4f2fc13847c1ab6
+source-git-commit: a97b235e2d8834f6be002923be9cdbca5f08495b
 workflow-type: tm+mt
-source-wordcount: '861'
+source-wordcount: '873'
 ht-degree: 2%
 
 ---
@@ -72,8 +72,8 @@ ht-degree: 2%
 
 >[!TIP]
 >
-> * 使用&#x200B;**[!UICONTROL Name]**&#x200B;欄中的![新增區段按鈕](../assets/ui/workspace/add-data-symbol.png)按鈕，將區段傳送至該目的地。
-> * 使用&#x200B;**[!UICONTROL Name]**&#x200B;列中的![刪除目標按鈕](../assets/ui/workspace/delete-destination-symbol.png)按鈕，將[刪除](delete-destinations.md)與目標的現有連接。
+> * 在[!UICONTROL Name]欄上選取三個點，然後使用![Add segments按鈕](../assets/ui/workspace/add-data-symbol.png)**[!UICONTROL Activate ]**按鈕將區段傳送至該目的地。
+> * 在[!UICONTROL Name]列上選擇三個點，然後使用![Delete destinations按鈕](../assets/ui/workspace/delete-destination-symbol.png)**[!UICONTROL Delete ]**按鈕[Remove](delete-destinations.md)與目標的現有連接。
 
 
 ![瀏覽頁簽](../assets/ui/workspace/browse-tab.png)
@@ -102,6 +102,6 @@ ht-degree: 2%
 
 ![資料流1](../assets/ui/workspace/data-flows1.png)
 
-選擇頁面上顯示的任何目標，然後按一下&#x200B;**[!UICONTROL View flows]**&#x200B;以查看您為每個目標設定的所有連接的資訊。
+選擇頁面上顯示的任何目標，然後按一下&#x200B;**[!UICONTROL 查看資料流]**&#x200B;以查看您為每個目標設定的所有連接的資訊。
 
 ![資料流2](../assets/ui/workspace/data-flows2.png)
