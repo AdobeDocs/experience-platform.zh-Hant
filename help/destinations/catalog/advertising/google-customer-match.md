@@ -3,9 +3,9 @@ keywords: Google客戶比對；Google客戶比對；Google客戶比對
 title: Google Customer Match連線
 description: Google Customer Match可讓您使用您的線上和離線資料，透過Google擁有且運作的屬性(例如Search、Shopping、Gmail及YouTube)，觸及客戶並與其重新互動。
 exl-id: 8209b5eb-b05c-4ef7-9fdc-22a528d5f020
-source-git-commit: 3aac1e7c7fe838201368379da8504efc8e316e1c
+source-git-commit: 183aff5a3b6bcc1635ae7b4b0e503a9d4b6d4d31
 workflow-type: tm+mt
-source-wordcount: '1252'
+source-wordcount: '1494'
 ht-degree: 0%
 
 ---
@@ -138,6 +138,35 @@ The video below demonstrates the steps to configure a [!DNL Google Customer Matc
 ![Google客戶比對應用程式ID](../../assets/catalog/advertising/google-customer-match/gcm-destination-appid.png)
 
 有關如何查找[!DNL App ID]的詳細資訊，請參閱[Google官方檔案](https://developers.google.com/adwords/api/docs/reference/v201809/AdwordsUserListService.CrmBasedUserList#appid)。
+
+### 對應範例：在[!DNL Google Customer Match]中啟用受眾資料 {#example-gcm}
+
+以下是在[!DNL Google Customer Match]中啟用受眾資料時正確身分對應的範例。
+
+選擇源欄位：
+
+* 如果您使用的電子郵件地址未雜湊，請選取`Email`命名空間作為來源身分。
+* 如果您根據[!DNL Google Customer Match] [電子郵件雜湊要求](#hashing-requirements)將客戶電子郵件地址雜湊到[!DNL Platform]中，請選取`Email_LC_SHA256`命名空間作為來源身分。
+* 如果您的資料包含非雜湊電話號碼，請選取`PHONE_E.164`命名空間作為來源身分。 [!DNL Platform] 會雜湊電話號碼以符合 [!DNL Google Customer Match] 要求。
+* 如果您根據[!DNL Facebook] [電話號碼雜湊要求](#phone-number-hashing-requirements)將資料擷取時的電話號碼雜湊至[!DNL Platform]，請選取`Phone_SHA256_E.164`命名空間作為來源身分。
+* 如果您的資料包含[!DNL Apple]裝置ID，請選取`IDFA`命名空間作為來源識別。
+* 如果您的資料包含[!DNL Android]裝置ID，請選取`GAID`命名空間作為來源識別。
+* 如果您的資料包含其他類型的識別碼，請選取`Custom`命名空間作為來源識別碼。
+
+選擇目標欄位：
+
+* 當來源命名空間為`Email`或`Email_LC_SHA256`時，請選取`Email_LC_SHA256`命名空間作為目標身分。
+* 當來源命名空間為`PHONE_E.164`或`Phone_SHA256_E.164`時，請選取`Phone_SHA256_E.164`命名空間作為目標身分。
+* 當來源命名空間為`IDFA`或`GAID`時，請選取`IDFA`或`GAID`命名空間作為目標身分識別。
+* 如果源命名空間是自定義命名空間，請選擇`User_ID`命名空間作為目標標識。
+
+![身分對應](../../assets/ui/activate-segment-streaming-destinations/identity-mapping-gcm.png)
+
+啟動後，[!DNL Platform]會自動雜湊來自未雜湊命名空間的資料。
+
+屬性來源資料不會自動雜湊。 當源欄位包含未雜湊屬性時，請核取&#x200B;**[!UICONTROL Apply transformation]**&#x200B;選項，讓[!DNL Platform]在啟動時自動雜湊資料。
+
+![身分對應轉換](../../assets/ui/activate-segment-streaming-destinations/identity-mapping-gcm-transformation.png)
 
 ## 確認區段啟動成功 {#verify-activation}
 
