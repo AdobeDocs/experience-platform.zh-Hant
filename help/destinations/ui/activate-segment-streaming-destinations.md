@@ -5,9 +5,9 @@ type: Tutorial
 seo-title: 對串流區段匯出目的地啟用受眾資料
 description: 了解如何將區段對應至區段串流目的地，以啟動您在Adobe Experience Platform中擁有的受眾資料。
 seo-description: 了解如何將區段對應至區段串流目的地，以啟動您在Adobe Experience Platform中擁有的受眾資料。
-source-git-commit: 65e74041aeb285cb80c67e47ccdaca18de9889fa
+source-git-commit: 0d5e0d57d209e4cf9a832531676e836add4256d0
 workflow-type: tm+mt
-source-wordcount: '1165'
+source-wordcount: '684'
 ht-degree: 0%
 
 ---
@@ -76,63 +76,9 @@ ht-degree: 0%
 
 1. 要添加更多映射，請重複步驟1到5。
 
-### 對應範例：在[!DNL Facebook Custom Audience]中啟用受眾資料 {#example-facebook}
 
-以下是在[!DNL Facebook Custom Audience]中啟用受眾資料時正確身分對應的範例。
 
-選擇源欄位：
 
-* 如果您使用的電子郵件地址未雜湊，請選取`Email`命名空間作為來源身分。
-* 如果您根據[!DNL Facebook] [電子郵件雜湊要求](../catalog/social/facebook.md#email-hashing-requirements)將客戶電子郵件地址雜湊到[!DNL Platform]中，請選取`Email_LC_SHA256`命名空間作為來源身分。
-* 如果您的資料包含非雜湊電話號碼，請選取`PHONE_E.164`命名空間作為來源身分。 [!DNL Platform] 會雜湊電話號碼以符合 [!DNL Facebook] 要求。
-* 如果您根據[!DNL Facebook] [電話號碼雜湊要求](../catalog/social/facebook.md#phone-number-hashing-requirements)將資料擷取時的電話號碼雜湊至[!DNL Platform]，請選取`Phone_SHA256`命名空間作為來源身分。
-* 如果您的資料包含[!DNL Apple]裝置ID，請選取`IDFA`命名空間作為來源識別。
-* 如果您的資料包含[!DNL Android]裝置ID，請選取`GAID`命名空間作為來源識別。
-* 如果您的資料包含其他類型的識別碼，請選取`Custom`命名空間作為來源識別碼。
-
-選擇目標欄位：
-
-* 當來源命名空間為`Email`或`Email_LC_SHA256`時，請選取`Email_LC_SHA256`命名空間作為目標身分。
-* 當來源命名空間為`PHONE_E.164`或`Phone_SHA256`時，請選取`Phone_SHA256`命名空間作為目標身分。
-* 當來源命名空間為`IDFA`或`GAID`時，請選取`IDFA`或`GAID`命名空間作為目標身分識別。
-* 如果源命名空間是自定義命名空間，請選擇`Extern_ID`命名空間作為目標標識。
-
->[!IMPORTANT]
->
->啟動後，[!DNL Platform]會自動雜湊來自未雜湊命名空間的資料。
-> 
->屬性來源資料不會自動雜湊。 當源欄位包含未雜湊屬性時，請核取&#x200B;**[!UICONTROL Apply transformation]**&#x200B;選項，讓[!DNL Platform]在啟動時自動雜湊資料。
-
-![身分對應](../assets/ui/activate-segment-streaming-destinations/mapping-summary.png)
-
-### 對應範例：在[!DNL Google Customer Match]中啟用受眾資料 {#example-gcm}
-
-以下是在[!DNL Google Customer Match]中啟用受眾資料時正確身分對應的範例。
-
-選擇源欄位：
-
-* 如果您使用的電子郵件地址未雜湊，請選取`Email`命名空間作為來源身分。
-* 如果您根據[!DNL Google Customer Match] [電子郵件雜湊要求](../catalog/social/../advertising/google-customer-match.md)將客戶電子郵件地址雜湊到[!DNL Platform]中，請選取`Email_LC_SHA256`命名空間作為來源身分。
-* 如果您的資料包含非雜湊電話號碼，請選取`PHONE_E.164`命名空間作為來源身分。 [!DNL Platform] 會雜湊電話號碼以符合 [!DNL Google Customer Match] 要求。
-* 如果您根據[!DNL Facebook] [電話號碼雜湊要求](../catalog/social/../advertising/google-customer-match.md)將資料擷取時的電話號碼雜湊至[!DNL Platform]，請選取`Phone_SHA256_E.164`命名空間作為來源身分。
-* 如果您的資料包含[!DNL Apple]裝置ID，請選取`IDFA`命名空間作為來源識別。
-* 如果您的資料包含[!DNL Android]裝置ID，請選取`GAID`命名空間作為來源識別。
-* 如果您的資料包含其他類型的識別碼，請選取`Custom`命名空間作為來源識別碼。
-
-選擇目標欄位：
-
-* 當來源命名空間為`Email`或`Email_LC_SHA256`時，請選取`Email_LC_SHA256`命名空間作為目標身分。
-* 當來源命名空間為`PHONE_E.164`或`Phone_SHA256_E.164`時，請選取`Phone_SHA256_E.164`命名空間作為目標身分。
-* 當來源命名空間為`IDFA`或`GAID`時，請選取`IDFA`或`GAID`命名空間作為目標身分識別。
-* 如果源命名空間是自定義命名空間，請選擇`User_ID`命名空間作為目標標識。
-
-![身分對應](../assets/ui/activate-segment-streaming-destinations/identity-mapping-gcm.png)
-
-啟動後，[!DNL Platform]會自動雜湊來自未雜湊命名空間的資料。
-
-屬性來源資料不會自動雜湊。 當源欄位包含未雜湊屬性時，請核取&#x200B;**[!UICONTROL Apply transformation]**&#x200B;選項，讓[!DNL Platform]在啟動時自動雜湊資料。
-
-![身分對應轉換](../assets/ui/activate-segment-streaming-destinations/identity-mapping-gcm-transformation.png)
 
 ## 排程區段匯出 {#scheduling}
 
