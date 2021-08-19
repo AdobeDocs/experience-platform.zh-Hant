@@ -4,9 +4,9 @@ user-guide-title: 標籤說明
 breadcrumb-title: 標籤
 user-guide-description: 了解如何部署及管理分析、行銷和廣告標籤，以強化客戶體驗。
 feature: 資料收集
-source-git-commit: 3658384ec39226f457fd9cea86d1838613a9508c
+source-git-commit: d2df8ac5edca32ac9228cb7db1810763c57de0b3
 workflow-type: tm+mt
-source-wordcount: '378'
+source-wordcount: '380'
 ht-degree: 67%
 
 ---
@@ -58,6 +58,7 @@ ht-degree: 67%
    * [概覽](./ui/administration/overview.md)
    * [公司和屬性](./ui/administration/companies-and-properties.md)
    * [使用者權限](./ui/administration/user-permissions.md)
+   * [管理權限](./ui/administration/manage-permissions.md)
 * 擴充功能 {#extensions}
    * [概覽](./extensions/overview.md)
    * Adobe 擴充功能 {#adobe}
