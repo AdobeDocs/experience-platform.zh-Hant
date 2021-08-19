@@ -5,9 +5,9 @@ type: Tutorial
 seo-title: 啟用受眾資料以批次設定檔匯出目的地
 description: 了解如何將區段傳送至批次設定檔式型目的地，以啟動Adobe Experience Platform中的受眾資料。
 seo-description: 了解如何將區段傳送至批次設定檔式型目的地，以啟動Adobe Experience Platform中的受眾資料。
-source-git-commit: b1d9b03af1d5266a03d0f16c6a9803a08f19b7bd
+source-git-commit: eebebcdc5e5f94d90eceb291dfe487fcd0f8c254
 workflow-type: tm+mt
-source-wordcount: '1990'
+source-wordcount: '1933'
 ht-degree: 0%
 
 ---
@@ -64,10 +64,10 @@ ht-degree: 0%
 
 1. 使用&#x200B;**[!UICONTROL Frequency]**&#x200B;選擇器選擇導出頻率：
 
-   * **[!UICONTROL 一次]**:排程一次性的隨需檔案匯出。
-   * **[!UICONTROL 每日]**:排程完整檔案的匯出，從開始日期到結束日期的每天一次（東部標準時間早上7:00）。
+   * **[!UICONTROL 一次]**:排程一次性的隨選完整檔案匯出。
+   * **[!UICONTROL 每日]**:在您指定的時間，每天排程完整檔案匯出一次。
 
-1. 使用&#x200B;**[!UICONTROL Time]**&#x200B;選擇器，選擇應在何時進行導出的[!DNL UTC]格式。 匯出檔案&#x200B;**[!UICONTROL Daily]**&#x200B;會每天將檔案從開始日期匯出到您選取的結束日期。
+1. 使用&#x200B;**[!UICONTROL Time]**&#x200B;選擇器，選擇應在何時進行導出的[!DNL UTC]格式。
 
    >[!IMPORTANT]
    >
@@ -89,14 +89,14 @@ ht-degree: 0%
 
 1. 使用&#x200B;**[!UICONTROL Frequency]**&#x200B;選擇器選擇導出頻率：
 
-   * **[!UICONTROL 每日]**:排程每天從開始日期到結束日期的增量檔案匯出一次（東部標準時間早上7:00）。
+   * **[!UICONTROL 每日]**:在您指定的時間，每天計劃一次增量檔案導出。
    * **[!UICONTROL 每小時]**:計畫每3、6、7或12小時導出增量檔案。
 
 2. 使用&#x200B;**[!UICONTROL Time]**&#x200B;選擇器，選擇應在何時進行導出的[!DNL UTC]格式。
 
    >[!IMPORTANT]
    >
-   >為匯出選取一天中時間的選項，僅適用於選取數量的客戶。<br> <br> 由於內部Experience Platform進程的配置方式，第一個增量或完整檔案導出可能不包含所有回填資料。  <br> <br> 為確保完整檔案和增量檔案都能匯出完整且最新的回填資料，Adobe建議在次日中午12點後設定第一次檔案匯出時間。這是將在未來版本中解決的限制。
+   >由於內部Experience Platform進程的配置方式，第一個增量或完整檔案導出可能不包含所有回填資料。<br> <br> 為確保完整檔案和增量檔案都能匯出完整且最新的回填資料，Adobe建議在次日中午12點後設定第一次檔案匯出時間。這是將在未來版本中解決的限制。
 
 3. 使用&#x200B;**[!UICONTROL Date]**&#x200B;選取器來選擇應進行匯出的日期或間隔。
 4. 選擇&#x200B;**[!UICONTROL 建立]**&#x200B;以保存計畫。
