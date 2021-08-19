@@ -5,9 +5,9 @@ type: Tutorial
 seo-title: 啟用受眾資料以批次設定檔匯出目的地
 description: 了解如何將區段傳送至批次設定檔式型目的地，以啟動Adobe Experience Platform中的受眾資料。
 seo-description: 了解如何將區段傳送至批次設定檔式型目的地，以啟動Adobe Experience Platform中的受眾資料。
-source-git-commit: f814f11db0a258d1c5265206d6ec61c27ad2ee7d
+source-git-commit: b1d9b03af1d5266a03d0f16c6a9803a08f19b7bd
 workflow-type: tm+mt
-source-wordcount: '2008'
+source-wordcount: '1990'
 ht-degree: 0%
 
 ---
@@ -58,24 +58,28 @@ ht-degree: 0%
 
 ### 導出完整檔案 {#export-full-files}
 
-選擇&#x200B;**[!UICONTROL 導出完整檔案]**&#x200B;以使導出的檔案包含所有符合該段資格的配置檔案的完整快照。
+選擇&#x200B;**[!UICONTROL 導出完整檔案]**&#x200B;以觸發導出包含選定段所有配置檔案資格的完整快照的檔案。
 
 ![導出完整檔案](../assets/ui/activate-batch-profile-destinations/export-full-files.png)
 
-1. 使用&#x200B;**[!UICONTROL Frequency]**&#x200B;選擇器在一次性(**[!UICONTROL Once]**)或&#x200B;**[!UICONTROL Daily]**&#x200B;匯出之間進行選擇。 匯出完整檔案&#x200B;**[!UICONTROL Daily]**&#x200B;會每天從開始日期到結束日期的12:00 AM UTC（東部標準時間晚上7:00）匯出檔案。
-2. 使用&#x200B;**[!UICONTROL Time]**&#x200B;選擇器，選擇應在何時進行導出的[!DNL UTC]格式。 匯出檔案&#x200B;**[!UICONTROL Daily]**&#x200B;會每天將檔案從開始日期匯出到您選取的結束日期。
+1. 使用&#x200B;**[!UICONTROL Frequency]**&#x200B;選擇器選擇導出頻率：
+
+   * **[!UICONTROL 一次]**:排程一次性的隨需檔案匯出。
+   * **[!UICONTROL 每日]**:排程完整檔案的匯出，從開始日期到結束日期的每天一次（東部標準時間早上7:00）。
+
+1. 使用&#x200B;**[!UICONTROL Time]**&#x200B;選擇器，選擇應在何時進行導出的[!DNL UTC]格式。 匯出檔案&#x200B;**[!UICONTROL Daily]**&#x200B;會每天將檔案從開始日期匯出到您選取的結束日期。
 
    >[!IMPORTANT]
    >
-   >在一天的某個時間導出檔案的選項當前處於測試狀態，僅適用於特定數量的客戶。<br> <br> 由於內部Experience Platform進程的配置方式，第一個增量或完整檔案導出可能不包含所有回填資料。  <br> <br> 為確保完整檔案和增量檔案都能匯出完整且最新的回填資料，Adobe建議在次日中午12點後設定第一次檔案匯出時間。這是將在未來版本中解決的限制。
+   >由於內部Experience Platform進程的配置方式，第一個增量或完整檔案導出可能不包含所有回填資料。<br> <br> 為確保完整檔案和增量檔案都能匯出完整且最新的回填資料，Adobe建議在次日中午12點後設定第一次檔案匯出時間。這是將在未來版本中解決的限制。
 
-3. 使用&#x200B;**[!UICONTROL Date]**&#x200B;選取器來選擇應進行匯出的日期或間隔。
-4. 選擇&#x200B;**[!UICONTROL 建立]**&#x200B;以保存計畫。
+1. 使用&#x200B;**[!UICONTROL Date]**&#x200B;選取器來選擇應進行匯出的日期或間隔。
+1. 選擇&#x200B;**[!UICONTROL 建立]**&#x200B;以保存計畫。
 
 
 ### 導出增量檔案 {#export-incremental-files}
 
-選擇「**[!UICONTROL 導出增量檔案]**」，使導出的檔案僅包含自上次導出後符合該段資格的配置檔案。
+選擇&#x200B;**[!UICONTROL 導出增量檔案]**&#x200B;以觸發導出，其中第一個檔案是選定段的所有配置檔案資格的完整快照，而後續檔案是自上次導出以來的增量配置檔案資格。
 
 >[!IMPORTANT]
 >
@@ -83,12 +87,10 @@ ht-degree: 0%
 
 ![導出增量檔案](../assets/ui/activate-batch-profile-destinations/export-incremental-files.png)
 
-1. 使用&#x200B;**[!UICONTROL Frequency]**&#x200B;選擇器，在&#x200B;**[!UICONTROL Daily]**&#x200B;或&#x200B;**[!UICONTROL Hourly]**&#x200B;匯出之間進行選擇。 導出增量檔案&#x200B;**[!UICONTROL Daily]**&#x200B;每天從開始日期到結束日期（UTC時）12:00 PM（EST時間7:00 AM）導出檔案。
-   * 選擇&#x200B;**[!UICONTROL 每小時]**&#x200B;時，使用&#x200B;**[!UICONTROL Every]**&#x200B;選擇器在&#x200B;**[!UICONTROL 3]**、**[!UICONTROL 6]**、**[!UICONTROL 8]**&#x200B;和&#x200B;**[!UICONTROL 12]**&#x200B;小時選項之間進行選擇。
+1. 使用&#x200B;**[!UICONTROL Frequency]**&#x200B;選擇器選擇導出頻率：
 
-      >[!IMPORTANT]
-      >
-      >每3、6、8或12小時導出增量檔案的選項當前處於測試狀態，並且僅對特定數量的客戶可用。 非測試版客戶每天可匯出一次增量檔案。
+   * **[!UICONTROL 每日]**:排程每天從開始日期到結束日期的增量檔案匯出一次（東部標準時間早上7:00）。
+   * **[!UICONTROL 每小時]**:計畫每3、6、7或12小時導出增量檔案。
 
 2. 使用&#x200B;**[!UICONTROL Time]**&#x200B;選擇器，選擇應在何時進行導出的[!DNL UTC]格式。
 
@@ -164,6 +166,8 @@ ht-degree: 0%
 >abstract="選取所有匯出的設定檔都應包含的XDM結構屬性。 不含強制鍵的設定檔不會匯出至目的地。 不選取強制索引鍵會匯出所有符合資格的設定檔（無論其屬性為何）。"
 >additional-url="http://www.adobe.com/go/destinations-mandatory-attributes-en" text="進一步了解檔案"
 
+強制屬性是使用者啟用的核取方塊，可確保所有設定檔記錄都包含選取的屬性。 例如：所有匯出的設定檔都包含電子郵件地址&#x200B;。
+
 您可以將屬性標示為必填，以確保[!DNL Platform]僅匯出包含特定屬性的設定檔。 因此，它可作為額外的篩選形式使用。 將屬性標示為必要屬性是&#x200B;**不需要**。
 
 不選擇強制屬性會匯出所有符合資格的設定檔（無論其屬性為何）。
@@ -178,9 +182,7 @@ ht-degree: 0%
 >abstract="選取重複資料刪除金鑰，即可在匯出檔案中消除相同設定檔的多個記錄。 選取單一命名空間或最多兩個XDM架構屬性作為重複資料刪除索引鍵。 未選取重複資料刪除金鑰可能會導致匯出檔案中出現重複的設定檔項目。"
 >additional-url="http://www.adobe.com/go/destinations-deduplication-keys-en" text="進一步了解檔案"
 
->[!IMPORTANT]
->
->使用重複資料刪除金鑰的選項目前處於測試階段，僅適用於特定數量的客戶。
+重複資料刪除金鑰是使用者定義的主要金鑰，可決定使用者要依此身分對其設定檔進行重複資料刪除的&#x200B;身分。
 
 重複資料刪除索引鍵消除了在一個匯出檔案中有多個相同設定檔記錄的可能性。
 
