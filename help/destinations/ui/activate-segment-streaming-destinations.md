@@ -5,9 +5,9 @@ type: Tutorial
 seo-title: 對串流區段匯出目的地啟用受眾資料
 description: 了解如何將區段對應至區段串流目的地，以啟動您在Adobe Experience Platform中擁有的受眾資料。
 seo-description: 了解如何將區段對應至區段串流目的地，以啟動您在Adobe Experience Platform中擁有的受眾資料。
-source-git-commit: 0d5e0d57d209e4cf9a832531676e836add4256d0
+source-git-commit: c3e273c66ffe0542258e5418104e0bcf154f5235
 workflow-type: tm+mt
-source-wordcount: '684'
+source-wordcount: '740'
 ht-degree: 0%
 
 ---
@@ -43,11 +43,6 @@ ht-degree: 0%
 
 ## 對應屬性和身分 {#mapping}
 
->[!CONTEXTUALHELP]
->id="platform_destinations_activate_applytransformation"
->title="套用轉換"
->abstract="使用未雜湊的來源欄位時，請核取此選項，讓Adobe Experience Platform在啟動時自動雜湊這些欄位。"
-
 >[!IMPORTANT]
 >
 >此步驟僅適用於某些區段串流目的地。 如果您的目的地沒有&#x200B;**[!UICONTROL 對應]**&#x200B;步驟，請跳至[排程區段匯出](#scheduling)。
@@ -76,8 +71,17 @@ ht-degree: 0%
 
 1. 要添加更多映射，請重複步驟1到5。
 
+### 套用轉換 {#apply-transformation}
 
+>[!CONTEXTUALHELP]
+>id="platform_destinations_activate_applytransformation"
+>title="套用轉換"
+>abstract="使用未雜湊的來源欄位時，請核取此選項，讓Adobe Experience Platform在啟動時自動雜湊這些欄位。"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations.html?lang=en#apply-transformation" text="進一步了解檔案"
 
+將非雜湊來源屬性對應至目標預期雜湊的目標屬性時(例如：`email_lc_sha256`或`phone_sha256`)，勾選「**套用轉換**」選項，讓Adobe Experience Platform在啟動時自動雜湊來源屬性。
+
+![身分對應](/help/destinations/assets/ui/activate-segment-streaming-destinations/mapping-summary.png)
 
 
 ## 排程區段匯出 {#scheduling}
