@@ -1,10 +1,10 @@
 ---
-title: 常見問題集
+title: 標籤疑難排解指南
 description: 取得Adobe Experience Platform中標籤常見問題的解答。
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+source-git-commit: dc957372e5e8c6f034f2e0cd0283e0e997501ba8
 workflow-type: tm+mt
-source-wordcount: '904'
-ht-degree: 29%
+source-wordcount: '1055'
+ht-degree: 25%
 
 ---
 
@@ -92,6 +92,16 @@ Tags已開啟幾近全自助的入口網站，擴充功能開發人員可透過�
 ## 標籤是否適用於原生行動應用程式？
 
 是！標籤現在支援新Adobe Experience Platform [行動SDK](https://sdkdocs.com)的行動屬性和設定，以在原生行動應用程式環境中實作資料收集和傳送。 請參閱[文件](https://sdkdocs.com)以深入了解。
+
+## UI為何說載入我的帳戶時發生錯誤？
+
+如果您收到訊息指出載入帳戶時發生錯誤，表示您的帳戶不屬於任何標籤的產品設定檔。 請參閱[管理權限](./ui/administration/manage-permissions.md)的指南，了解如何在Adobe Admin Console中設定產品設定檔，以授與資料收集UI的存取權。
+
+## 為何無法在UI中新增任何屬性？
+
+如果您在登入資料收集UI時無法建立任何新屬性，這表示您的帳戶不屬於具有管理屬性權限的產品設定檔。
+
+請參閱[managing permissions](./ui/administration/manage-permissions.md)的指南，了解如何在Adobe Admin Console中設定產品設定檔，以授與「管理屬性」權限。 如需標籤不同權限的詳細資訊，請參閱標籤](./ui/administration/user-permissions.md)的[使用者權限概觀。
 
 ## 若我有其他問題該怎麼辦？
 
