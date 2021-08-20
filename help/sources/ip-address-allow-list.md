@@ -1,23 +1,22 @@
 ---
-keywords: Experience Platform; home；熱門主題；ip address;ip address;ip address allow list;允許清單
-description: 在使用源連接器之前，必須將IP地址添加到允許清單。
+keywords: Experience Platform；首頁；熱門主題；IP位址；IP位址；IP位址允許清單；允許清單
+description: 使用來源連接器前，必須將IP位址新增至允許清單。
 solution: Experience Platform
-title: IP地址允許源連接清單
+title: 源連接的IP地址允許清單
 topic-legacy: overview
 exl-id: 40093c80-dbdb-4dc1-97bb-81a8200b731f
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: fcdf6209ef3fa7c4685fadd3322f631b608e4605
 workflow-type: tm+mt
-source-wordcount: '116'
-ht-degree: 0%
+source-wordcount: '107'
+ht-degree: 2%
 
 ---
 
 # IP位址允許清單
 
-您可以通過網路防火牆定義網路訪問控制。 通過指定適當的源IP範圍，可以允許資料傳輸服務的通信。 在使用源連接器之前，必須將下列IP位址新增至允許清單。 若未將您地區專屬的IP位址新增至您的允許清單，在使用來源時可能會導致錯誤或效能不佳。
+您可以通過網路防火牆定義網路訪問控制。 通過指定適當的源IP範圍，您可以允許資料傳輸服務的通信。 使用來源連接器之前，必須將下列IP位址新增至允許清單。 若未將您地區專屬的IP位址新增至允許清單，在使用來源時可能會導致錯誤或效能不佳。
 
-## 美國東部地區
+## VA7
 
 - `20.42.2.0/23`
 - `20.42.4.0/26`
@@ -25,9 +24,6 @@ ht-degree: 0%
 - `20.49.111.0/29`
 - `40.71.14.32/28`
 - `40.78.229.96/28`
-
-## 美國東部2區
-
 - `20.41.2.0/23`
 - `20.41.4.0/26`
 - `20.44.17.80/28`
@@ -35,7 +31,7 @@ ht-degree: 0%
 - `40.70.148.160/28`
 - `52.167.107.224/28`
 
-## 西歐地區
+## NLD2
 
 - `13.69.67.192/28`
 - `13.69.107.112/28`
@@ -45,7 +41,7 @@ ht-degree: 0%
 - `40.113.176.232/29`
 - `52.236.187.112/28`
 
-## 澳洲東區
+## 澳大利亞5
 
 - `13.70.74.144/28`
 - `20.37.193.0/25`
