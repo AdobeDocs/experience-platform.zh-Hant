@@ -4,9 +4,9 @@ user-guide-title: Adobe Experience Platform 來源連接器說明
 breadcrumb-title: 來源連接器指南
 user-guide-description: 從多種來源或結構擷取資料、加標籤，以及增強已擷取的資料。
 feature: 資料擷取，來源
-source-git-commit: 031849fcc351794e7eb1da691bd4015368a043b6
+source-git-commit: 5f5e4f91862fe4ec8840224a9bdb5dc6d7338288
 workflow-type: tm+mt
-source-wordcount: '628'
+source-wordcount: '639'
 ht-degree: 12%
 
 ---
@@ -73,6 +73,8 @@ ht-degree: 12%
       - [PostgreSQL連接器](connectors/databases/postgres.md)
    - 電子商務 {#ecommerce}
       - [Shopify連接器](connectors/ecommerce/shopify.md)
+   - 本地系統{#local-system}
+      - [本機檔案上傳連接器](connectors/local-system/local-file-upload.md)
    - 行銷自動化{#marketing-automation}
       - [HubSpot連接器](connectors/marketing-automation/hubspot.md)
       - [SalesforceMarketing Cloud](connectors/marketing-automation/salesforce-marketing-cloud.md)
@@ -214,6 +216,8 @@ ht-degree: 12%
          - [PostgreSQL](tutorials/ui/create/databases/postgres.md)
       - 電子商務 {#ecommerce}
          - [Shopify](tutorials/ui/create/ecommerce/shopify.md)
+      - 本地系統{#local-system}
+         - [本機檔案上傳](tutorials/ui/create/local-system/local-file-upload.md)
       - 行銷自動化{#marketing-automation}
          - [HubSpot](tutorials/ui/create/marketing-automation/hubspot.md)
          - [SalesforceMarketing Cloud](tutorials/ui/create/marketing-automation/salesforce-marketing-cloud.md)
