@@ -5,9 +5,9 @@ topic-legacy: guide
 type: Documentation
 description: Adobe Experience Platform可讓您從多個來源將資料片段匯整在一起，並加以結合，以便查看每個客戶的完整檢視。 將這些資料整合在一起時，Platform會使用合併原則來判斷資料的優先順序，以及將哪些資料合併以建立統一檢視。
 exl-id: fb49977d-d5ca-4de9-b185-a5ac1d504970
-source-git-commit: afe748d443aad7b6da5b348cd569c9e806e4419b
+source-git-commit: acf88ba3c4181fce85ffec3b0041a30b7bb14cef
 workflow-type: tm+mt
-source-wordcount: '2590'
+source-wordcount: '2263'
 ht-degree: 1%
 
 ---
@@ -30,7 +30,7 @@ Adobe Experience Platform可讓您從多個來源將資料片段匯整在一起�
 
 合併原則是IMS組織專用的，可讓您建立不同的原則，以便以您需要的特定方式合併結構。 任何存取[!DNL Profile]資料的API都需要合併原則，但若未明確提供，則會使用預設原則。 [!DNL Platform] 為組織提供預設的合併原則，或者您可以為特定Experience Data Model(XDM)結構類別建立合併原則，並將其標示為組織的預設值。
 
-While each organization can potentially have multiple merge policies per schema class, each class can have only one default merge policy. 如果提供架構類名稱，但需要但未提供合併策略，則將使用任何設定為預設的合併策略。
+雖然每個組織可能具有每個架構類的多個合併策略，但每個類只能有一個預設的合併策略。 如果提供架構類名稱，但需要但未提供合併策略，則將使用任何設定為預設的合併策略。
 
 >[!NOTE]
 >
@@ -40,7 +40,7 @@ While each organization can potentially have multiple merge policies per schema 
 
 完整的合併策略對象表示一組控制合併配置檔案片段方面的首選項。
 
-**Merge policy object**
+**合併策略對象**
 
 ```json
     {
@@ -64,7 +64,7 @@ While each organization can potentially have multiple merge policies per schema 
 
 | 屬性 | 說明 |
 |---|---|
-| `id` | The system generated unique identifier assigned at creation time |
+| `id` | 系統生成在建立時分配的唯一標識符 |
 | `name` | 可在清單檢視中識別合併原則的易記名稱。 |
 | `imsOrgId` | 此合併策略所屬的組織ID |
 | `identityGraph` | [身](#identity-graph) 分圖形物件，指出將從中取得相關身分的身分圖。所有相關身分識別的設定檔片段將會合併。 |
@@ -96,9 +96,9 @@ While each organization can potentially have multiple merge policies per schema 
     }
 ```
 
-### Identity graph {#identity-graph}
+### 身分圖 {#identity-graph}
 
-[Adobe Experience Platform Identity Service](../../identity-service/home.md) manages the identity graphs used globally and for each organization on [!DNL Experience Platform]. 合併策略的`identityGraph`屬性定義如何確定用戶的相關身份。
+[Adobe Experience Platform Identity ](../../identity-service/home.md) Service會管理全域及上每個組織的身分圖 [!DNL Experience Platform]表。合併策略的`identityGraph`屬性定義如何確定用戶的相關身份。
 
 **identityGraph物件**
 
@@ -108,7 +108,7 @@ While each organization can potentially have multiple merge policies per schema 
     }
 ```
 
-Where `{IDENTITY_GRAPH_TYPE}` is one of the following:
+其中`{IDENTITY_GRAPH_TYPE}`是以下項之一：
 
 * **「無」：** 不執行身分匯整。
 * **&quot;pdg&quot;:** 根據您的私人身分圖表執行身分匯整。
@@ -135,11 +135,11 @@ Where `{IDENTITY_GRAPH_TYPE}` is one of the following:
 
 其中`{ATTRIBUTE_MERGE_TYPE}`是以下項之一：
 
-* **`timestampOrdered`**: (default) Give priority to the profile which was updated last. 使用此合併類型，不需要`data`屬性。 `timestampOrdered` 也支援自訂時間戳記，在資料集內或跨資料集合併設定檔片段時，會優先選擇此時間戳記。若要深入了解，請參閱[上使用自訂時間戳記](#custom-timestamps)的附錄一節。
+* **`timestampOrdered`**:（預設）將優先順序設為上次更新的設定檔。使用此合併類型，不需要`data`屬性。
 * **`dataSetPrecedence`** :根據設定檔片段的來源資料集，為其指定優先順序。當一個資料集中的資訊比另一個資料集中的資料更偏好或更受信任時，即可使用此方法。 使用此合併類型時，需要`order`屬性，因為它按優先順序列出資料集。
-   * **`order`**:使用「dataSetPrecerance」時，必須 `order` 為陣列提供資料集清單。清單中未包含的任何資料集都不會合併。 換言之，必須明確列出資料集，才能合併至設定檔中。 The `order` array lists the IDs of the datasets in order of priority.
+   * **`order`**:使用「dataSetPrecerance」時，必須 `order` 為陣列提供資料集清單。清單中未包含的任何資料集都不會合併。 換言之，必須明確列出資料集，才能合併至設定檔中。 `order`陣列會依優先順序列出資料集的ID。
 
-#### Example `attributeMerge` object using `dataSetPrecedence` type
+#### 使用`dataSetPrecedence`類型的`attributeMerge`物件範例
 
 ```json
     "attributeMerge": {
@@ -161,7 +161,7 @@ Where `{IDENTITY_GRAPH_TYPE}` is one of the following:
     }
 ```
 
-### 結構 {#schema}
+### 方案 {#schema}
 
 架構物件會指定要建立此合併原則的Experience Data Model(XDM)架構類別。
 
@@ -239,9 +239,9 @@ curl -X GET \
 
 有關組成合併策略的每個元素的詳細資訊，請參閱本文檔開頭的[合併策略的元件](#components-of-merge-policies)部分。
 
-### Retrieve multiple merge policies by their IDs
+### 通過其ID檢索多個合併策略
 
-You can retrieve multiple merge policies by making a POST request to the `/config/mergePolicies/bulk-get` endpoint and including the IDs of the merge policies you wish to retrieve in the request body.
+通過向`/config/mergePolicies/bulk-get`端點發出POST請求，並在請求正文中包括要檢索的合併策略的ID，可以檢索多個合併策略。
 
 **API格式**
 
@@ -334,9 +334,9 @@ curl -X POST \
 }
 ```
 
-See the [components of merge policies](#components-of-merge-policies) section at the beginning of this document for details on each of the individual elements that make up a merge policy.
+有關組成合併策略的每個元素的詳細資訊，請參閱本文檔開頭的[合併策略的元件](#components-of-merge-policies)部分。
 
-### List multiple merge policies by criteria
+### 按條件列出多個合併策略
 
 您可以向`/config/mergePolicies`端點發出GET請求，並使用選用的查詢參數來篩選、排序和分頁回應，借此列出IMS組織內的多個合併原則。 可包含多個參數，以&amp;符號分隔。 對此端點進行無參數呼叫將檢索組織可用的所有合併策略。
 
@@ -353,9 +353,9 @@ GET /config/mergePolicies?{QUERY_PARAMS}
 | `orderBy` | 指定按`orderBy=name`或`orderBy=+name`排序結果的欄位，以按名稱升序排序，或按降序排序`orderBy=-name`。 省略此值會導致預設的`name`排序依遞增順序。 |
 | `schema.name` | 要為其檢索可用合併策略的架構的名稱。 |
 | `identityGraph.type` | 依身分圖表類型篩選結果。 可能的值包括「無」和「pdg」（專用圖表）。 |
-| `attributeMerge.type` | 按使用的屬性合併類型篩選結果。 Possible values include &quot;timestampOrdered&quot; and &quot;dataSetPrecedence&quot;. |
-| `start` | 頁面偏移 — 指定要擷取資料的起始ID。 Default value: 0 |
-| `version` | 如果要使用合併策略的特定版本，請指定此選項。 By default, the latest version will be used. |
+| `attributeMerge.type` | 按使用的屬性合併類型篩選結果。 可能的值包括「timestampOrdered」和「dataSetPrecerance」。 |
+| `start` | 頁面偏移 — 指定要擷取資料的起始ID。 預設值：0 |
+| `version` | 如果要使用合併策略的特定版本，請指定此選項。 依預設，會使用最新版本。 |
 
 有關`schema.name`、`identityGraph.type`和`attributeMerge.type`的詳細資訊，請參閱本指南前面提供的合併策略的[元件](#components-of-merge-policies)部分。
 
@@ -445,20 +445,20 @@ curl -X GET \
 
 | 屬性 | 說明 |
 |---|---|
-| `_links.next.href` | 結果下一頁的URI地址。 Use this URI as the request parameter for another API call to the same endpoint to view the page. 如果沒有下一頁存在，則此值將為空字串。 |
+| `_links.next.href` | 結果下一頁的URI地址。 使用此URI作為向同一端點進行的另一個API調用的請求參數，以查看該頁。 如果沒有下一頁存在，則此值將為空字串。 |
 
 ## 建立合併策略
 
 您可以向`/config/mergePolicies`端點提出POST請求，以建立組織的新合併策略。
 
-**API format**
+**API格式**
 
 ```http
 POST /config/mergePolicies
 ```
 
-**Request**
-The following request creates a new merge policy, which is configured by the attribute values provided in the payload:
+****
+請求以下請求會建立新的合併策略，該策略由裝載中提供的屬性值配置：
 
 ```shell
 curl -X POST \
@@ -489,7 +489,7 @@ curl -X POST \
 
 | 屬性 | 說明 |
 |---|---|
-| `name` | A human-friendly name by which the merge policy can be identified in list views. |
+| `name` | 一個好記的名稱，可在清單檢視中識別合併政策。 |
 | `identityGraph.type` | 要從中獲取要合併的相關身份的標識圖類型。 可能的值：「無」或「pdg」（專用圖表）。 |
 | `attributeMerge` | 在發生資料衝突時，設定檔屬性值優先順序的方式。 |
 | `schema` | 與合併策略關聯的XDM架構類。 |
@@ -537,7 +537,7 @@ curl -X POST \
 
 通過編輯單個屬性(PATCH)或用新屬性(PUT)覆蓋整個合併策略，可以修改現有合併策略。 各個範例如下所示。
 
-### Edit individual merge policy fields
+### 編輯單個合併策略欄位
 
 通過向`/config/mergePolicies/{mergePolicyId}`端點發出PATCH請求，可以編輯合併策略的各個欄位：
 
@@ -573,8 +573,8 @@ curl -X PATCH \
 | 屬性 | 說明 |
 |---|---|
 | `op` | 指定要執行的操作。 若需其他PATCH操作的範例，請參閱[JSON修補程式檔案](http://jsonpatch.com) |
-| `path` | The path of the field to update. Accepted values are: &quot;/name&quot;, &quot;/identityGraph.type&quot;, &quot;/attributeMerge.type&quot;, &quot;/schema.name&quot;, &quot;/version&quot;, &quot;/default&quot; |
-| `value` | The value to set the specified field to. |
+| `path` | 要更新的欄位路徑。 接受的值為：&quot;/name&quot;, &quot;/identityGraph.type&quot;, &quot;/attributeMerge.type&quot;, &quot;/schema.name&quot;, &quot;/version&quot;, &quot;/default&quot; |
+| `value` | 將指定欄位設為的值。 |
 
 有關詳細資訊，請參閱合併策略的[元件](#components-of-merge-policies)部分。
 
@@ -617,7 +617,7 @@ curl -X PATCH \
 
 修改合併策略的另一種方法是使用PUT請求，該請求會覆蓋整個合併策略。
 
-**API format**
+**API格式**
 
 ```http
 PUT /config/mergePolicies/{mergePolicyId}
@@ -625,11 +625,11 @@ PUT /config/mergePolicies/{mergePolicyId}
 
 | 參數 | 說明 |
 |---|---|
-| `{mergePolicyId}` | The identifier of the merge policy you want to overwrite. |
+| `{mergePolicyId}` | 要覆蓋的合併策略的標識符。 |
 
 **要求**
 
-The following request overwrites the specified merge policy, replacing its attribute values with those supplied in the payload. 由於此請求完全替換了現有的合併策略，因此您必須提供最初定義合併策略時所需的所有相同欄位。 However, this time you are providing updated values for the fields you want to change.
+以下請求會覆寫指定的合併策略，將其屬性值替換為有效負載中提供的屬性值。 由於此請求完全替換了現有的合併策略，因此您必須提供最初定義合併策略時所需的所有相同欄位。 不過，這次您會提供您要變更之欄位的更新值。
 
 ```shell
 curl -X PUT \
@@ -666,10 +666,10 @@ curl -X PUT \
 | `name` | 一個好記的名稱，可在清單檢視中識別合併政策。 |
 | `identityGraph` | 要從中獲取要合併的相關標識的標識圖。 |
 | `attributeMerge` | 在發生資料衝突時，設定檔屬性值優先順序的方式。 |
-| `schema` | The XDM schema class associated with the merge policy. |
+| `schema` | 與合併策略關聯的XDM架構類。 |
 | `default` | 指定此合併策略是否為架構的預設策略。 |
 
-Refer to the [components of merge policies](#components-of-merge-policies) section for more information.
+有關詳細資訊，請參閱合併策略的[元件](#components-of-merge-policies)部分。
 
 
 **回應**
@@ -708,7 +708,7 @@ Refer to the [components of merge policies](#components-of-merge-policies) secti
 
 ## 刪除合併策略
 
-A merge policy can be deleted by making a DELETE request to the `/config/mergePolicies` endpoint and including the ID of the merge policy that you wish to delete in the request path.
+通過向`/config/mergePolicies`端點發出DELETE請求並在請求路徑中包括要刪除的合併策略的ID，可以刪除合併策略。
 
 **API格式**
 
@@ -739,40 +739,6 @@ curl -X DELETE \
 
 ## 後續步驟
 
-現在您知道如何為組織建立和設定合併原則，可以使用這些原則來調整Platform中客戶設定檔的檢視，並從[!DNL Real-time Customer Profile]資料建立受眾區段。 Please see the [Adobe Experience Platform Segmentation Service documentation](../../segmentation/home.md) to begin defining and working with segments.
+現在您知道如何為組織建立和設定合併原則，可以使用這些原則來調整Platform中客戶設定檔的檢視，並從[!DNL Real-time Customer Profile]資料建立受眾區段。
 
-## 附錄
-
-本節提供與使用合併政策相關的補充資訊。
-
-### 使用自訂時間戳記 {#custom-timestamps}
-
-當記錄被Experience Platform時，系統時間戳在獲取時獲得並添加到記錄中。 當選擇`timestampOrdered`作為合併策略的`attributeMerge`類型時，將根據系統時間戳合併配置檔案。 換言之，合併會根據記錄擷取至Platform時的時間戳記完成。
-
-有時候，可能會出現使用案例，例如回填資料，或在未依序擷取記錄時確保事件的正確順序，此時需要提供自訂時間戳記，且合併政策必須遵循自訂時間戳記，而非系統時間戳記。
-
-若要使用自訂時間戳記，必須將[[!DNL External Source System Audit Details] 架構欄位群組](#field-group-details)新增至您的設定檔架構。 新增後，可使用`xdm:lastUpdatedDate`欄位填入自訂時間戳記。 擷取記錄並填入`xdm:lastUpdatedDate`欄位時，Experience Platform會使用該欄位來合併資料集內和跨資料集的記錄或設定檔片段。 如果`xdm:lastUpdatedDate`不存在或未填入，Platform將繼續使用系統時間戳記。
-
->[!NOTE]
->
->在相同記錄上傳送PATCH時，您必須確保填入`xdm:lastUpdatedDate`時間戳記。
-
-有關使用架構註冊表API來使用架構的逐步指示，包括如何將欄位群組新增至架構，請參閱[使用API](../../xdm/tutorials/create-schema-api.md)建立架構的教學課程。
-
-若要使用UI使用自訂時間戳記，請參閱[合併原則概述](../merge-policies/overview.md)中使用自訂時間戳記](../merge-policies/overview.md#custom-timestamps)的區段。[
-
-#### [!DNL External Source System Audit Details] field group details {#field-group-details}
-
-下列範例顯示[!DNL External Source System Audit Details]欄位群組中正確填入的欄位。 The complete field group JSON can also be viewed in the [public Experience Data Model (XDM) repo](https://github.com/adobe/xdm/blob/master/components/fieldgroups/shared/external-source-system-audit-details.schema.json) on GitHub.
-
-```json
-{
-  "xdm:createdBy": "{CREATED_BY}",
-  "xdm:createdDate": "2018-01-02T15:52:25+00:00",
-  "xdm:lastUpdatedBy": "{LAST_UPDATED_BY}",
-  "xdm:lastUpdatedDate": "2018-01-02T15:52:25+00:00",
-  "xdm:lastActivityDate": "2018-01-02T15:52:25+00:00",
-  "xdm:lastReferencedDate": "2018-01-02T15:52:25+00:00",
-  "xdm:lastViewedDate": "2018-01-02T15:52:25+00:00"
- }
-```
+請參閱[Adobe Experience Platform分段服務檔案](../../segmentation/home.md)，開始定義及使用區段。
