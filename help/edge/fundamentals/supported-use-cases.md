@@ -2,9 +2,9 @@
 title: Adobe Experience Platform Web SDK的支援使用案例
 description: 了解Adobe Experience Platform Web SDK支援哪些使用案例。
 keywords: 網頁sdk；使用案例
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+source-git-commit: e012e12a8cadb8c13781b0380d84652c23567180
 workflow-type: tm+mt
-source-wordcount: '552'
+source-wordcount: '565'
 ht-degree: 14%
 
 ---
@@ -91,6 +91,7 @@ ht-degree: 14%
 | 更新Target設定檔 | [文件](https://experienceleague.adobe.com/docs/experience-platform/edge/personalization/adobe-target/target-overview.html?lang=en#single-profile-update) |
 | 建議 |  |
 | mBox第三方ID |  |
+| 回應 Token | [文件](https://experienceleague.adobe.com/docs/experience-platform/edge/personalization/adobe-target/accessing-response-tokens.html?lang=en) |
 
 {style=&quot;table-layout:auto&quot;}
 
