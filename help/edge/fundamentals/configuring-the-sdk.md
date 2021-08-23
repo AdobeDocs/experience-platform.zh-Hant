@@ -4,9 +4,9 @@ description: 了解如何配置Adobe Experience Platform Web SDK。
 seo-description: 了解如何配置Experience PlatformWeb SDK
 keywords: 設定；設定；SDK；邊緣；Web SDK；設定；edgeConfigId；內容；網頁；裝置；環境；placeContext;debugEnabled;edgeDomain;orgId;clickCollectionEnabled;onBeforeEventSend;defaultConsent；網頁設定；prehidingStyle；不透明度；cookieDestinationsEnabled;urlDesitionsEnabled;idMigrationEnabled；第三方CookiesEnabled
 exl-id: d1e95afc-0b8a-49c0-a20e-e2ab3d657e45
-source-git-commit: 4b04f02a7a8843e667ea05b000bc93ebb065babd
+source-git-commit: 549203c8ddc94e00cf4e4ba432f367ddc371cb27
 workflow-type: tm+mt
-source-wordcount: '839'
+source-wordcount: '856'
 ht-degree: 14%
 
 ---
@@ -31,6 +31,10 @@ alloy("configure", {
 ## 一般選項
 
 ### `edgeConfigId`
+
+>[!NOTE]
+>
+>**Edge Configurations已重新命名為Datastreams。資料流ID與配置ID相同。**
 
 | **類型** | **必填** | **預設值** |
 | -------- | ------------ | ----------------- |
