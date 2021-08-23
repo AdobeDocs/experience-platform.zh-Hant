@@ -4,7 +4,7 @@ title: 合併策略UI指南
 type: Documentation
 description: 在Experience Platform中將多個來源的資料匯整在一起時，Platform會使用合併原則來判斷資料的優先順序，以及將哪些資料合併以建立統一檢視。 本指南提供使用Adobe Experience Platform使用者介面處理合併原則的逐步指示。
 exl-id: 0489217a-6a53-428c-a531-fd0a0e5bb71f
-source-git-commit: 2696dab922d9c1992b61ffefe50a4e3155793282
+source-git-commit: a6a49b4cf9c89b5c6b4679f36daede93590ffb3c
 workflow-type: tm+mt
 source-wordcount: '2193'
 ht-degree: 0%
@@ -28,7 +28,7 @@ Adobe Experience Platform可讓您從多個來源將資料片段匯整在一起�
 * [Adobe Experience Platform Identity Service](../../identity-service/home.md):借由橋接從擷取到的不同資料來源的身分識別，來啟用即時客戶設 [!DNL Platform]定檔。
 * [Experience Data Model(XDM)](../../xdm/home.md):組織客戶體驗資 [!DNL Platform] 料的標準化架構。
 
-## 查看合併策略{#view-merge-policies}
+## 查看合併策略 {#view-merge-policies}
 
 在[!DNL Experience Platform] UI中，您可以通過在左側導航中選擇&#x200B;**[!UICONTROL Profiles]**，然後選擇&#x200B;**[!UICONTROL Merge Policies]**&#x200B;頁簽，開始使用合併策略。 此頁簽包含貴組織的所有現有合併策略的清單，以及每個合併策略的詳細資訊，包括策略名稱、合併策略是否為預設合併策略以及合併策略相關的架構類。
 
@@ -38,7 +38,7 @@ Adobe Experience Platform可讓您從多個來源將資料片段匯整在一起�
 
 ![](../images/merge-policies/adjust-view.png)
 
-## 建立合併策略{#create-a-merge-policy}
+## 建立合併策略 {#create-a-merge-policy}
 
 要建立新合併策略，請在合併策略頁簽上選擇&#x200B;**[!UICONTROL 建立合併策略]**&#x200B;以輸入新的合併策略工作流。
 
@@ -84,7 +84,7 @@ Adobe Experience Platform可讓您從多個來源將資料片段匯整在一起�
 
 有關合併方法的詳細資訊，請參閱[合併策略概述](overview.md)。
 
-### 排序的時間戳{#timestamp-ordered-profile}
+### 已訂購時間戳 {#timestamp-ordered-profile}
 
 選擇&#x200B;**[!UICONTROL 按順序排列的時間戳]**&#x200B;作為合併方法，表示將優先於最近更新資料集中的屬性。 這適用於所有設定檔資料集。
 
@@ -94,7 +94,7 @@ Adobe Experience Platform可讓您從多個來源將資料片段匯整在一起�
 
 ![](../images/merge-policies/timestamp-ordered.png)
 
-### 資料集優先順序{#dataset-precedence-profile}
+### 資料集優先順序 {#dataset-precedence-profile}
 
 選取&#x200B;**[!UICONTROL 資料集優先順序]**&#x200B;作為合併方法時，您必須選取「設定檔」資料集，並手動排定其優先順序。 列出的每個資料集也包含上次批次擷取的狀態，或會顯示通知，告知尚未將任何批次擷取至該資料集。
 
@@ -114,7 +114,7 @@ Adobe Experience Platform可讓您從多個來源將資料片段匯整在一起�
 
 工作流程的下一步需要您選取ExperienceEvent資料集。 此畫面會受您在[[!UICONTROL 選取設定檔資料集]](#select-profile-datasets)畫面上選取的合併方法影響。
 
-### 排序的時間戳{#timestamp-ordered-experienceevent}
+### 已訂購時間戳 {#timestamp-ordered-experienceevent}
 
 如果您選取&#x200B;**[!UICONTROL 已排序時間戳記]**&#x200B;作為設定檔資料集的合併方法，此處也會優先使用最近更新之ExperienceEvent資料集的屬性。
 
@@ -124,7 +124,7 @@ Adobe Experience Platform可讓您從多個來源將資料片段匯整在一起�
 
 ![](../images/merge-policies/timestamp-experienceevent.png)
 
-### 資料集優先順序{#dataset-precedence-experienceevent}
+### 資料集優先順序 {#dataset-precedence-experienceevent}
 
 如果您選取&#x200B;**[!UICONTROL 資料集優先順序]**&#x200B;作為設定檔資料集的合併方法，則需要選取要包含的ExperienceEvent資料集。 從資料集清單中最多可選取50個ExperienceEvent資料集。
 
@@ -148,7 +148,7 @@ Adobe Experience Platform可讓您從多個來源將資料片段匯整在一起�
 
 在選擇&#x200B;**[!UICONTROL 完成]**&#x200B;以完成建立工作流之前，請確保仔細檢查合併策略配置並預覽資料。
 
-### 排序的時間戳{#timestamp-ordered-review}
+### 已訂購時間戳 {#timestamp-ordered-review}
 
 如果您選擇&#x200B;**[!UICONTROL 按順序排列的時間戳]**&#x200B;作為合併策略的合併方法，則配置檔案資料集清單將按時間戳順序包括貴組織建立的與架構類相關的所有資料集。 ExperienceEvent資料集清單包含貴組織針對所選結構類別建立的所有資料集，且這些資料集將附加至設定檔資料集。
 
@@ -156,7 +156,7 @@ Adobe Experience Platform可讓您從多個來源將資料片段匯整在一起�
 
 ![](../images/merge-policies/timestamp-review.png)
 
-### 資料集優先順序{#dataset-precedence-review}
+### 資料集優先順序 {#dataset-precedence-review}
 
 如果您選取&#x200B;**[!UICONTROL 資料集優先順序]**&#x200B;作為合併原則的合併方法，則設定檔和ExperienceEvent資料集清單只會包含您在建立工作流程期間分別選取的設定檔和ExperienceEvent資料集。 設定檔資料集的順序應與您在建立期間指定的優先順序相符。 如果沒有，請使用[!UICONTROL Back]按鈕返回到以前的工作流步驟並調整優先順序。
 
@@ -164,7 +164,7 @@ Adobe Experience Platform可讓您從多個來源將資料片段匯整在一起�
 
 ![](../images/merge-policies/dataset-precedence-review.png)
 
-### 更新合併策略清單{#updated-list}
+### 更新合併策略清單 {#updated-list}
 
 完成建立新合併策略的工作流後，您將返回到&#x200B;**[!UICONTROL Merge Policies]**&#x200B;頁簽。 貴組織的合併原則清單現在應包含您剛建立的合併原則。
 
