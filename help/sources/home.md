@@ -5,9 +5,9 @@ title: 來源連接器概述
 topic-legacy: overview
 description: Adobe Experience Platform可讓您從外部來源擷取資料，同時使用Platform服務來建構、加標籤及增強傳入資料。 您可以從多種來源(如Adobe應用程式、雲儲存、資料庫等)內嵌資料。
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+source-git-commit: 5f5e4f91862fe4ec8840224a9bdb5dc6d7338288
 workflow-type: tm+mt
-source-wordcount: '979'
+source-wordcount: '1007'
 ht-degree: 0%
 
 ---
@@ -104,6 +104,12 @@ Experience Platform支援從協力廠商電子商務系統擷取資料。 有關
 
 - [[!DNL Shopify]](connectors/ecommerce/shopify.md)
 
+### 本地系統
+
+Experience Platform支援從本機系統擷取資料。 有關特定源連接器的詳細資訊，請參閱以下相關文檔：
+
+- [本機檔案上傳](connectors/local-system/local-file-upload.md)
+
 ### 行銷自動化
 
 Experience Platform支援從協力廠商行銷自動化系統擷取資料。 有關特定源連接器的詳細資訊，請參閱以下相關文檔：
@@ -122,7 +128,6 @@ Experience Platform支援從第三方支付系統擷取資料。 有關特定源
 Experience Platform支援從串流來源擷取資料。 有關特定源連接器的詳細資訊，請參閱以下相關文檔：
 
 - [[!DNL HTTP API]](connectors/streaming/http.md)
-
 
 ### 通訊協定
 
