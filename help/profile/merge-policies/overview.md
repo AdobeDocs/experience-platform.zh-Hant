@@ -3,9 +3,9 @@ keywords: Experience Platform；設定檔；即時客戶設定檔；合併原則
 title: 合併策略概述
 type: Documentation
 description: Adobe Experience Platform可讓您從多個來源將資料片段匯整在一起，並加以結合，以便了解個別客戶的完整檢視。 將這些資料整合在一起時，Platform會使用合併原則來判斷資料的優先順序，以及將結合哪些資料來建立統一檢視。
-source-git-commit: c2cc1428e3a70cf987adab583e9f9fb5d5140c74
+source-git-commit: a6a49b4cf9c89b5c6b4679f36daede93590ffb3c
 workflow-type: tm+mt
-source-wordcount: '1492'
+source-wordcount: '1252'
 ht-degree: 0%
 
 ---
@@ -35,7 +35,7 @@ Adobe Experience Platform可讓您從多個來源將資料片段匯整在一起�
 
 合併原則是IMS組織專用的，可讓您建立不同的原則，以便以您需要的特定方式合併結構。 您也可以指定預設合併策略，該策略將在未明確提供時使用。 請參閱本檔案稍後的[預設合併原則](#default-merge-policy)一節，了解更多資訊。
 
-## 合併方法{#merge-methods}
+## 合併方法 {#merge-methods}
 
 每個設定檔片段僅包含一個身分的資訊，而該身分的總數為個人可能存在的身分。 將資料合併以形成客戶設定檔時，該資訊可能會發生衝突，必須指定優先順序。
 
@@ -44,36 +44,19 @@ Adobe Experience Platform可讓您從多個來源將資料片段匯整在一起�
 合併策略有兩種可能的合併方法。 以下各方法的摘要如下，其他詳細資訊將提供於下列章節：
 
 * **[!UICONTROL 資料集優先順序]:** 發生衝突時，請根據設定檔片段的來源資料集，為其指定優先順序。選取此選項時，您必須選擇相關資料集及其優先順序。 深入了解[資料集優先順序](#dataset-precedence)合併方法。
-* **[!UICONTROL 按時間戳記排序]:** 發生衝突時，會為最近更新的設定檔片段指定優先順序。進一步了解[時間戳記順序](#timestamp-ordered)合併方法。
-   * **自訂時間戳記：** 排序的時間戳記合併方法也支援自訂時間戳記，在合併相同資料集（多個身分）或跨資料集的資料時，其優先順序會高於系統時間戳記。若要深入了解，請參閱關於使用自訂時間戳記](#custom-timestamps)的區段。[
+* **[!UICONTROL 按時間戳記排序]:** 發生衝突時，會為最近更新的設定檔片段指定優先順序。進一步了解[timestamp ordered](#timestamp-ordered)合併方法。
 
-### 資料集優先順序{#dataset-precedence}
+### 資料集優先順序 {#dataset-precedence}
 
 選取&#x200B;**[!UICONTROL 資料集優先順序]**&#x200B;作為合併原則的合併方法時，您可以根據設定檔片段的來源資料集，為其指定優先順序。 如果您的組織在一個資料集中有偏好或信任的資訊，而不是其他資料集的資料，則會是範例使用案例。
 
 若要使用&#x200B;**[!UICONTROL 資料集優先順序]**&#x200B;建立合併原則，您必須選取包含的設定檔和ExperienceEvent資料集，然後您可以手動排序設定檔資料集以優先順序。 選取並排序資料集後，優先順序最高的資料集、次要資料集會排在第二位，以此類推。
 
-### 排序的時間戳{#timestamp-ordered}
+### 已訂購時間戳 {#timestamp-ordered}
 
 當將設定檔記錄擷取至Experience Platform時，擷取時會取得系統時間戳記，並新增至記錄。 當選擇&#x200B;**[!UICONTROL 有序時間戳]**&#x200B;作為合併策略的合併方法時，將根據系統時間戳合併配置檔案。 換言之，合併會根據記錄擷取至Platform時的時間戳記完成。
 
-#### 使用自訂時間戳記{#custom-timestamps}
-
-有時，在使用情況下，可能需要提供自定義時間戳，並且合併策略會採用自定義時間戳，而不是系統時間戳。 其範例包括回填資料，或在未依順序擷取記錄時，確保事件的正確順序。
-
-若要使用自訂時間戳記，必須將&#x200B;**[!UICONTROL 外部源系統審核詳細資訊]架構欄位組**&#x200B;添加到您的配置檔案架構。 新增後，可使用`lastUpdatedDate`欄位填入自訂時間戳記。 擷取記錄並填入`lastUpdatedDate`欄位時，Experience Platform會使用該欄位來合併資料集的記錄。 如果`lastUpdatedDate`不存在或未填入，Platform將繼續使用系統時間戳記。
-
->[!NOTE]
->
->在同一記錄上擷取更新時，您必須確保填入`lastUpdatedDate`時間戳記。
-
-以下螢幕截圖顯示[!UICONTROL 外部源系統審核詳細資訊]欄位組中的欄位。 有關使用Platform UI使用結構的逐步指示，包括如何將欄位群組新增至結構，請參閱[教學課程，了解如何使用UI](../../xdm/tutorials/create-schema-ui.md)建立結構。
-
-![](../images/merge-policies/custom-timestamp-field-group.png)
-
-若要使用API使用自訂時間戳記，請參閱使用自訂時間戳記](../api/merge-policies.md#custom-timestamps)的[合併原則端點指南一節。
-
-## 身分拼接{#id-stitching}
+## 身分識別匯整 {#id-stitching}
 
 身分拼接（[!UICONTROL ID拼接]）是識別資料片段並將它們合併以形成完整設定檔記錄的程式。 為了說明不同的拼接行為，請考慮使用兩個不同電子郵件地址與品牌互動的單一客戶。
 
@@ -82,7 +65,7 @@ Adobe Experience Platform可讓您從多個來源將資料片段匯整在一起�
 
 若要進一步了解身分及其在產生設定檔和區段方面的作用，請先閱讀[Identity服務概述](../../identity-service/home.md)開始。
 
-## 預設合併策略{#default-merge-policy}
+## 預設合併策略 {#default-merge-policy}
 
 組織可建立預設合併原則，供其組織在合併設定檔片段時使用。 這可讓使用者在執行Experience Platform中的動作（例如檢視客戶設定檔或建立區段）時，輕鬆選取預設原則。 在大多數情況下，除非指定其他合併策略，否則將使用預設合併策略。
 
