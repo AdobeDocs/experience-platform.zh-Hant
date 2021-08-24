@@ -4,10 +4,10 @@ description: 2021年8月25日的Experience Platform發行說明。
 doc-type: release notes
 last-update: August 25, 2021
 author: ens28527
-source-git-commit: 17d4e91aeeca988f5b047007f87062872f36365c
+source-git-commit: bd3d60e1960b1f4c32ade8c4070d7c1b01e5ba07
 workflow-type: tm+mt
-source-wordcount: '300'
-ht-degree: 12%
+source-wordcount: '457'
+ht-degree: 9%
 
 ---
 
@@ -20,6 +20,7 @@ Adobe Experience Platform 現有功能更新：
 
 - [可觀察性深入分析](#observability)
 - [即時客戶個人檔案](#profile)
+- [來源](#sources)
 
 ## 可觀察性深入分析 {#observability}
 
@@ -42,3 +43,15 @@ Adobe Experience Platform可讓您為客戶提供協調、一致且相關的體�
 | 按合併策略或標識瀏覽配置檔案 | 在Experience Platform中瀏覽設定檔時，您現在可以依合併原則瀏覽，以根據選取的合併原則預覽20個範例設定檔。 您也可以依身分瀏覽，以使用身分命名空間和相關身分值來搜尋特定設定檔。 如需詳細資訊，請參閱[即時客戶設定檔UI指南](../../profile/ui/user-guide.md)。 |
 
 若要深入了解即時客戶設定檔，包括使用設定檔資料的教學課程和最佳實務，請先閱讀[即時客戶設定檔概述](../../profile/home.md)開始。
+
+## 來源 {#sources}
+
+Adobe Experience Platform可內嵌來自外部來源的資料，同時允許您使用Platform服務來建構、加標籤及增強該資料。 您可以內嵌來自各種來源的資料，例如Adobe應用程式、雲端儲存、協力廠商軟體和您的CRM系統。
+
+Experience Platform提供RESTful API和互動式UI，讓您輕鬆為各種資料提供者設定來源連線。 這些源連接允許您驗證並連接到外部儲存系統和CRM服務、設定獲取運行時間以及管理資料獲取吞吐量。
+
+| 功能 | 說明 |
+| ------- | ----------- |
+| 本機檔案上傳來源連接器 | 檔案擷取類別已重新命名為本機系統，可讓您使用本機檔案上傳連接器，將本機檔案直接帶入Platform。 透過此連接器擷取的資料可透過「監控控制面板」進行監控。 如需詳細資訊，請參閱[本機檔案上傳來源概述](../../sources/connectors/local-system/local-file-upload.md) 。 |
+
+若要進一步了解來源，請參閱[來源概述](../../sources/home.md)。
