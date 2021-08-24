@@ -3,10 +3,10 @@ audience: user
 user-guide-title: 檢視範圍指南
 user-guide-description: 透過使用統計量度和事件通知來監控 Platform 活動。
 feature: 資料管理
-source-git-commit: 39fc8712cdaf64ee15a4e1bf65b74846d77f5477
+source-git-commit: 905d364796911f35111d42c46c91744bc18304f2
 workflow-type: tm+mt
-source-wordcount: '57'
-ht-degree: 47%
+source-wordcount: '60'
+ht-degree: 45%
 
 ---
 
@@ -20,7 +20,8 @@ ht-degree: 47%
    * [量度](./api/metrics.md)
 * 警報 {#alerts}
    * [概覽](./alerts/overview.md)
-   * [訂閱I/O事件通知](./alerts/subscribe.md)
+   * [標準警報規則](./alerts/rules.md)
    * [UI指南](./alerts/ui.md)
+   * [訂閱I/O事件通知](./alerts/subscribe.md)
 * [API 參考資料](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/observability-insights.yaml)
 * [平台發行說明](https://www.adobe.com/go/platform-release-notes-en)
