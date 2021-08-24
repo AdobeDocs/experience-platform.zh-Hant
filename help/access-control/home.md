@@ -5,9 +5,9 @@ topic-legacy: overview
 title: 存取控制概覽
 description: Adobe Experience Platform的存取控制可透過Adobe Admin Console提供。 此功能會運用Admin Console中的產品設定檔，將使用者與權限和沙箱連結。
 exl-id: 591d59ad-2784-4ae4-a509-23649ce712c9
-source-git-commit: f340ecfb850ef50504938a5db136e70b8bede61a
+source-git-commit: 4425f7d61aa5ff357c7ba25cf986201fefeacd67
 workflow-type: tm+mt
-source-wordcount: '1320'
+source-wordcount: '1347'
 ht-degree: 2%
 
 ---
@@ -105,6 +105,8 @@ Adobe Admin Console提供管理Adobe產品權益和組織存取權限的集中�
 | [!DNL Destinations] | [!UICONTROL 啟動目的地] | 可將資料啟用至已建立的作用中目的地。 此權限需要授予將啟用目的地的使用者「檢視目的地」或「管理[!UICONTROL 目的地」]。 |
 | [!DNL Data Ingestion] | [!UICONTROL 管理來源] | 讀取、建立、編輯和禁用源的訪問權。 |
 | [!DNL Data Ingestion] | [!UICONTROL 查看源] | 對&#x200B;**[!UICONTROL Catalog]**&#x200B;標籤中可用源和&#x200B;**[!UICONTROL Browse]**&#x200B;標籤中已驗證源的只讀訪問。 |
+| [!DNL Data Ingestion] | [!DNL Manage Audience Share Connections] | 存取建立、接受和拒絕合作夥伴握手，以連接兩個IMS組織並啟用[!DNL Segment Match]流程。 |
+| [!DNL Data Ingestion] | [!DNL Manage Audience Share] | 與作用中合作夥伴一起存取[!DNL Segment Match]摘要，以讀取、建立、編輯及發佈。 |
 | [!DNL Data Science Workspace] | [!UICONTROL 管理Data Science Workspace] | 在[!DNL Data Science Workspace]中讀取、建立、編輯和刪除的權限。 |
 | [!DNL Data Governance] | [!UICONTROL 套用資料使用量標籤] | 讀取、建立和刪除使用標籤的存取權。 |
 | [!DNL Data Governance] | [!UICONTROL 管理資料使用策略] | 存取讀取、建立、編輯和刪除資料使用原則。 |
