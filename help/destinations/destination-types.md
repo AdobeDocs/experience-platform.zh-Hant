@@ -4,9 +4,9 @@ title: 目的地類型和類別
 seo-title: 目的地類型和類別
 description: 了解Adobe Experience Platform中不同的目的地類型和類別。
 exl-id: 7826d1e2-bd6b-4f65-9da9-0a3b3e8bb93b
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+source-git-commit: 5a6f14ba65584a6bd61d62c4fb0b46e8f9e8e96d
 workflow-type: tm+mt
-source-wordcount: '504'
+source-wordcount: '534'
 ht-degree: 0%
 
 ---
@@ -23,15 +23,26 @@ ht-degree: 0%
 
 ## 連線 {#connections}
 
-**[!UICONTROL Adobe Experience Platform]** 的設 **[!UICONTROL 定檔匯]** 出和區段匯出目的地擷取事件資料，將其與其他資料來源結合以形成 [即時客戶設定檔](../profile/home.md)、套用區段，以及將區段和合格設定檔匯出至目的地。
+**[!UICONTROL 設定]** 檔匯 **[!UICONTROL 出與串]** 流區段匯出Adobe Experience Platform中的目標會擷取事件資料，將其與其他資料來源結合以形成即 [時客戶設定檔](../profile/home.md)、套用區段，以及將區段與合格設定檔匯出至目標。
 
 ## 設定檔匯出目的地
 
-設定檔匯出目的地會產生包含設定檔和/或屬性的檔案。 這些目的地使用原始資料，通常以電子郵件地址作為主要金鑰。 [Amazon S3雲端儲存目的地](./catalog/cloud-storage/amazon-s3.md)是您可以存放包含設定檔匯出之檔案的目的地範例。
+設定檔匯出目的地會接收原始資料，通常以電子郵件地址作為主要金鑰。 Experience Platform目前支援兩種類型的設定檔匯出目的地：
 
-## 區段匯出目的地
+* [串流設定檔匯出目的地](#streaming-profile-export)
+* [檔案型目的地](#file-based)
 
-區段匯出目的地會將設定檔及其符合目的地平台資格的區段傳送至目的地平台。 這些目的地使用區段ID或使用者ID。 [[!DNL Google Display & Video 360]](./catalog/advertising/google-dv360.md)或[[!DNL Google Ads]](./catalog/advertising/google-ads-destination.md)之類的廣告目的地就是這類目的地的範例。
+### 串流設定檔匯出目的地 {#streaming-profile-export}
+
+串流描述檔匯出目的地會以Experience Platform資料流的形式接收區段和描述檔資料。 [Amazon](catalog/cloud-storage/amazon-kinesis.md) 運動 [和Azure活](catalog/cloud-storage/azure-event-hubs.md) 動輪廓是這類目的地的範例。
+
+### 檔案型目的地 {#file-based}
+
+以檔案為基礎的目的地會接收包含設定檔和/或屬性的`.csv`檔案。 [Amazon S3](catalog/cloud-storage/amazon-s3.md) 是目的地的範例，您可以存放包含設定檔匯出的檔案。
+
+## 串流區段匯出目的地
+
+區段匯出目的地會接收Experience Platform區段資料。 這些目的地使用區段ID或使用者ID。 [[!DNL Google Display & Video 360]](catalog/advertising/google-dv360.md) 和 [[!DNL Google Ads]](catalog/advertising/google-ads-destination.md) 這類目的地。
 
 ## 設定檔匯出和區段匯出目的地 — 影片概觀
 
