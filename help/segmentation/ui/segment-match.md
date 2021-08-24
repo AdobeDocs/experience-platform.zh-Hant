@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 區段符合概述
 topic-legacy: overview
 description: 區段比對是Adobe Experience Platform中的區段共用服務，可讓兩位或多位Platform使用者以安全、受控且符合隱私權的方式來交換區段資料。
-source-git-commit: d6eefc8c10a44fd31eaed00f22d09ee8a300db83
+source-git-commit: ee59da6c075573af366403e1059b5318fb924d21
 workflow-type: tm+mt
-source-wordcount: '1901'
+source-wordcount: '1982'
 ht-degree: 1%
 
 ---
@@ -74,6 +74,17 @@ Adobe Experience Platform區段比對是區段共用服務，可讓兩位或多�
 [!DNL Segment Match] 使用C11標籤，此合約標籤專供您 [!DNL Segment Match] 手動新增至任何資料集或屬性，以確保這些資料集或屬性不會列入合作 [!DNL Segment Match] 夥伴共用程式。C11標籤表示不應在[!DNL Segment Match]進程中使用的資料。 在您決定要從[!DNL Segment Match]排除的資料集和/或欄位，並據此新增C11標籤後， [!DNL Segment Match]工作流程會自動強制執行標籤。 [!DNL Segment Match] 自動啟用「限 [!UICONTROL 制資料共] 用」核心原則。如需如何將資料使用量標籤套用至資料集的特定指示，請參閱UI](../../data-governance/labels/user-guide.md)中[管理資料使用量標籤的教學課程。
 
 如需資料使用量標籤及其定義的清單，請參閱[資料使用量標籤字彙表](../../data-governance/labels/reference.md)。 有關資料使用策略的資訊，請參閱[資料使用策略概述](../../data-governance/policies/overview.md)。
+
+### 了解[!DNL Segment Match]權限
+
+有兩個權限與[!DNL Segment Match]相關聯：
+
+| 權限 | 說明 |
+| --- | --- |
+| 管理對象共用連線 | 此權限可讓您完成合作夥伴交握程式，此程式會連接兩個IMS組織以啟用[!DNL Segment Match]流程。 |
+| 管理受眾分享 | 此權限可讓您與作用中合作夥伴（管理員使用者已透過&#x200B;**[!UICONTROL Audience Share連線]**&#x200B;存取權連線的合作夥伴）建立、編輯及發佈摘要（用於[!DNL Segment Match]的資料套件）。 |
+
+有關訪問控制和權限的詳細資訊，請參閱[訪問控制概述](../../access-control/home.md)。
 
 ## [!DNL Segment Match] 端對端工作流程
 
