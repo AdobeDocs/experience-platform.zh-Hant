@@ -4,10 +4,10 @@ description: 2021年8月25日的Experience Platform發行說明。
 doc-type: release notes
 last-update: August 25, 2021
 author: ens28527
-source-git-commit: 94933392fafdf645a44a2702780ac1f02ea8760b
+source-git-commit: 17d4e91aeeca988f5b047007f87062872f36365c
 workflow-type: tm+mt
-source-wordcount: '196'
-ht-degree: 14%
+source-wordcount: '300'
+ht-degree: 12%
 
 ---
 
@@ -18,7 +18,20 @@ ht-degree: 14%
 
 Adobe Experience Platform 現有功能更新：
 
+- [可觀察性深入分析](#observability)
 - [即時客戶個人檔案](#profile)
+
+## 可觀察性深入分析 {#observability}
+
+可觀察性前瞻分析可讓您透過使用統計量度和事件通知來監控Platform活動。
+
+**新特性**
+
+| 功能 | 說明 |
+| --- | --- |
+| 警報 | 您現在可以訂閱與Platform上執行的工作流程相關的重要警報。 訂閱特定警報規則後，當重要的生命週期事件（例如成功的資料擷取），或有需要您注意的問題（例如擷取流程失敗或區段工作花費的時間超過預期）時，您將會收到UI內通知和電子郵件。 如需詳細資訊，請參閱[警報概述](../../observability/alerts/overview.md)。 |
+
+如需服務的詳細資訊，請參閱[可觀察性前瞻分析概述](../../observability/home.md) 。
 
 ## 即時客戶個人檔案 {#profile}
 
@@ -26,6 +39,6 @@ Adobe Experience Platform可讓您為客戶提供協調、一致且相關的體�
 
 | 功能 | 說明 |
 | ------- | ----------- |
-| 按合併策略或標識瀏覽配置檔案 | 在Experience Platform中瀏覽設定檔時，使用者現在可以依合併原則瀏覽，以根據選取的合併原則預覽20個範例設定檔。 使用者也可以依身分瀏覽，以使用身分命名空間和相關身分值來搜尋特定設定檔。 如需詳細資訊，請參閱[即時客戶設定檔UI指南](../../profile/ui/user-guide.md)。 |
+| 按合併策略或標識瀏覽配置檔案 | 在Experience Platform中瀏覽設定檔時，您現在可以依合併原則瀏覽，以根據選取的合併原則預覽20個範例設定檔。 您也可以依身分瀏覽，以使用身分命名空間和相關身分值來搜尋特定設定檔。 如需詳細資訊，請參閱[即時客戶設定檔UI指南](../../profile/ui/user-guide.md)。 |
 
 若要深入了解即時客戶設定檔，包括使用設定檔資料的教學課程和最佳實務，請先閱讀[即時客戶設定檔概述](../../profile/home.md)開始。
