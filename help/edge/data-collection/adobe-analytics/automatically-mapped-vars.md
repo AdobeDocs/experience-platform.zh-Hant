@@ -1,12 +1,12 @@
 ---
 title: 在Adobe Experience Platform Web SDK中自動對應Adobe Analytics變數
 description: 了解哪些變數會透過Experience PlatformWeb SDK在Adobe Analytics中自動對應
-seo-description: 了解哪些變數會透過Adobe Experience Platform Web SDK自動對應於Adobe Analytics中
+seo-description: Learn which variables are automatically mapped in Adobe Analytics with the Adobe Experience Platform Web SDK
 keywords: adobe analytics；變數；analytics；自動對應；自動對應；
 exl-id: 856fada7-b62c-4fd2-9372-a19ae1cdec33
-source-git-commit: 2e004fdd87c8a74eb161ef7af93c7102953ea85c
+source-git-commit: 09c6986fcd3682377725ded389496d5076e9e1e2
 workflow-type: tm+mt
-source-wordcount: '708'
+source-wordcount: '698'
 ht-degree: 0%
 
 ---
@@ -89,7 +89,8 @@ ht-degree: 0%
 | `placeContext.geo.postalCode` | `zip` | AppMeasurement查詢參數ZIP對應。 |
 | `placeContext.geo.stateProvince` | `state` | AppMeasurement查詢參數STATE對應。 |
 | `productlistitems.[N]._[NAME_SPACE].*` | `products` | AppMeasurement查詢參數產品商品事件/ Evars對應。 |
-| `productlistitems.[N].name` | `products` | AppMeasurement查詢參數產品名稱對應。 |
+| `productListItems[N].lineItemId` | `products` | AppMeasurement查詢參數產品名稱對應。 |
+| `productlistitems.[N].name` | `products` | AppMeasurement查詢參數產品類別對應。 |
 | `productlistitems.[N].priceTotal` | `products` | AppMeasurement查詢參數產品價格對應。 |
 | `productlistitems.[N].quantity` | `products` | AppMeasurement查詢參數產品數量對應。 |
 | `web.webInteraction.URL` | `pev1` | AppMeasurement查詢參數PAGE_EVENT_VAR1對應。 |
