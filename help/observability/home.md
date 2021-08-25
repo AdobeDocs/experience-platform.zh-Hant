@@ -5,9 +5,9 @@ title: 可觀察性前瞻分析概述
 topic-legacy: overview
 description: Adobe Experience Platform可觀察性前瞻分析是RESTful API，可讓您公開Platform活動的關鍵量度。 這些量度可提供Platform使用統計資料、Platform服務運作狀況檢查、歷史趨勢和各種Platform功能效能指標的分析。
 exl-id: ad9fcd1b-b649-47d8-93f3-4a3752480129
-source-git-commit: 0a64737c805f5e1a4856aa49084a61e64e401ed6
+source-git-commit: 444f63054c1e4e429498c95c7bba8c4ddd612799
 workflow-type: tm+mt
-source-wordcount: '290'
+source-wordcount: '262'
 ht-degree: 1%
 
 ---
@@ -22,11 +22,7 @@ Adobe Experience Platform [!DNL Observability Insights]可讓您透過使用統�
 
 如需使用API的詳細資訊，請參閱[[!DNL Observability Insights]  API開發人員指南](./api/overview.md)。
 
-## 警報（測試版）
-
->[!IMPORTANT]
->
->Adobe Experience Platform中的警報尚未提供給所有使用者使用。 此功能正在測試中，仍在測試中。 本節內容可能有所變更。
+## 警報
 
 Experience Platform可讓您在達到Platform作業中的特定條件集時，根據特定的可觀察性量度來訂閱警報。 警報可以採用一次性通知的形式，也可以在預先定義的時間間隔內重複，直到觸發警報的條件得到解決為止。
 
