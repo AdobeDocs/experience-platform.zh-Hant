@@ -2,12 +2,12 @@
 keywords: 啟用設定檔目的地；啟用目的地；啟用資料；啟用電子郵件行銷目的地；啟用雲端儲存目的地
 title: 啟用受眾資料以批次設定檔匯出目的地
 type: Tutorial
-seo-title: 啟用受眾資料以批次設定檔匯出目的地
+seo-title: Activate audience data to batch profile export destinations
 description: 了解如何將區段傳送至批次設定檔式型目的地，以啟動Adobe Experience Platform中的受眾資料。
-seo-description: 了解如何將區段傳送至批次設定檔式型目的地，以啟動Adobe Experience Platform中的受眾資料。
-source-git-commit: eebebcdc5e5f94d90eceb291dfe487fcd0f8c254
+seo-description: Learn how to activate the audience data you have in Adobe Experience Platform by sending segments to batch profile-based destinations.
+source-git-commit: bd93c21ae439a8802218b8d664b7109467f8a013
 workflow-type: tm+mt
-source-wordcount: '1933'
+source-wordcount: '1905'
 ht-degree: 0%
 
 ---
@@ -90,7 +90,7 @@ ht-degree: 0%
 1. 使用&#x200B;**[!UICONTROL Frequency]**&#x200B;選擇器選擇導出頻率：
 
    * **[!UICONTROL 每日]**:在您指定的時間，每天計劃一次增量檔案導出。
-   * **[!UICONTROL 每小時]**:計畫每3、6、7或12小時導出增量檔案。
+   * **[!UICONTROL 每小時]**:計畫每3、6、8或12小時導出增量檔案。
 
 2. 使用&#x200B;**[!UICONTROL Time]**&#x200B;選擇器，選擇應在何時進行導出的[!DNL UTC]格式。
 
@@ -320,8 +320,7 @@ Adobe建議選取身分命名空間（例如[!DNL CRM ID]或電子郵件地址�
 >* 欄位會設定為目標目的地的預計屬性。
 
 >
-> 
-例如，如果欄位`person.name.firstName`具有與目的地的行銷動作相衝突的特定資料使用標籤，則在審核步驟中將顯示資料使用策略違規。 如需詳細資訊，請參閱Adobe Experience Platform中的[資料控管](../../rtcdp/privacy/data-governance-overview.md#destinations)。
+> 例如，如果欄位`person.name.firstName`具有與目的地的行銷動作相衝突的特定資料使用標籤，則在審核步驟中將顯示資料使用策略違規。 如需詳細資訊，請參閱Adobe Experience Platform中的[資料控管](../../rtcdp/privacy/data-governance-overview.md#destinations)。
 
 ## 檢閱 {#review}
 
