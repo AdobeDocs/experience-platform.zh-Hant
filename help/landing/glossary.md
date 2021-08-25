@@ -5,7 +5,7 @@ title: Adobe Experience Platform字彙表
 topic-legacy: getting started
 description: Experience Platform 重要術語表。
 exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
-source-git-commit: 83efc9f3c203cf4743514dc4b7a480715dadb19a
+source-git-commit: bd93c21ae439a8802218b8d664b7109467f8a013
 workflow-type: tm+mt
 source-wordcount: '7386'
 ht-degree: 1%
@@ -262,7 +262,7 @@ ht-degree: 1%
 
 **主機**:在標籤內容中，主機會指定系統傳送組建所需的位置、網域和使用者憑證。
 
-**每小時**:在排程檔案匯出的內容中，每3、6、7或12小時排程增量檔案匯出。
+**每小時**:在排程檔案匯出的內容中，每3、6、8或12小時排程增量檔案匯出。
 
 ## I
 
