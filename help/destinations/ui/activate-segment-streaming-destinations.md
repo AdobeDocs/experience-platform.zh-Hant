@@ -2,12 +2,12 @@
 keywords: 啟動區段串流目的地；啟動區段串流目的地；啟動資料
 title: 對串流區段匯出目的地啟用受眾資料
 type: Tutorial
-seo-title: 對串流區段匯出目的地啟用受眾資料
+seo-title: Activate audience data to streaming segment export destinations
 description: 了解如何將區段對應至區段串流目的地，以啟動您在Adobe Experience Platform中擁有的受眾資料。
-seo-description: 了解如何將區段對應至區段串流目的地，以啟動您在Adobe Experience Platform中擁有的受眾資料。
-source-git-commit: c3e273c66ffe0542258e5418104e0bcf154f5235
+seo-description: Learn how to activate the audience data you have in Adobe Experience Platform by mapping segments to segment streaming destinations.
+source-git-commit: f4721d3f114357b25517e4e66f1f626f82621c34
 workflow-type: tm+mt
-source-wordcount: '740'
+source-wordcount: '781'
 ht-degree: 0%
 
 ---
@@ -25,13 +25,17 @@ ht-degree: 0%
 
 ## 選取您的目的地 {#select-destination}
 
-1. 前往&#x200B;**[!UICONTROL 連線>目的地]**，然後選取&#x200B;**[!UICONTROL 瀏覽]**&#x200B;標籤。
+1. 前往&#x200B;**[!UICONTROL 連線>目的地]**，然後選取&#x200B;**[!UICONTROL 目錄]**&#x200B;標籤。
 
-   ![目標瀏覽頁簽](../assets/ui/activate-segment-streaming-destinations/browse-tab.png)
+   ![目標目錄索引標籤](../assets/ui/activate-segment-streaming-destinations/catalog-tab.png)
 
-1. 選取與您要啟用區段的目的地對應的&#x200B;**[!UICONTROL 新增區段]**&#x200B;按鈕，如下圖所示。
+1. 在與您要啟用區段的目的地對應的卡片上，選取「啟用區段」**[!UICONTROL ，如下圖所示。]**
 
-   ![激活按鈕](../assets/ui/activate-segment-streaming-destinations/activate-buttons-browse.png)
+   ![激活按鈕](../assets/ui/activate-segment-streaming-destinations/activate-segments-button.png)
+
+1. 選取您要用來啟用區段的目的地連線，然後選取&#x200B;**[!UICONTROL Next]**。
+
+   ![選擇目標](../assets/ui/activate-segment-streaming-destinations/select-destination.png)
 
 1. 移至下一個區段至[選取您的區段](#select-segments)。
 
@@ -81,10 +85,17 @@ ht-degree: 0%
 
 將非雜湊來源屬性對應至目標預期雜湊的目標屬性時(例如：`email_lc_sha256`或`phone_sha256`)，勾選「**套用轉換**」選項，讓Adobe Experience Platform在啟動時自動雜湊來源屬性。
 
-![身分對應](/help/destinations/assets/ui/activate-segment-streaming-destinations/mapping-summary.png)
-
+![身分對應](../assets/ui/activate-segment-streaming-destinations/mapping-summary.png)
 
 ## 排程區段匯出 {#scheduling}
+
+依預設，「[!UICONTROL 區段排程]」頁面只會顯示您在目前啟動流程中選取的新區段。
+
+![新區段](../assets/ui/activate-segment-streaming-destinations/new-segments.png)
+
+若要查看所有要啟動至您目的地的區段，請使用篩選選項並停用&#x200B;**[!UICONTROL 僅顯示新區段]**&#x200B;篩選。
+
+![所有區段](../assets/ui/activate-segment-streaming-destinations/all-segments.png)
 
 1. 在&#x200B;**[!UICONTROL 區段排程]**&#x200B;頁面上，選取每個區段，然後使用&#x200B;**[!UICONTROL 開始日期]**&#x200B;和&#x200B;**[!UICONTROL 結束日期]**&#x200B;選取器來設定將資料傳送至目的地的時間間隔。
 
@@ -120,7 +131,7 @@ ht-degree: 0%
 
 ## 驗證區段啟用 {#verify}
 
-檢查您的目的地帳戶。 如果啟動成功，則會在您的目的地平台中填入對象。
+請查看[目標監視文檔](../../dataflows/ui/monitor-destinations.md)，了解如何監視到目標的資料流的詳細資訊。
 
 <!-- 
 For [!DNL Facebook Custom Audience], a successful activation means that a [!DNL Facebook] custom audience would be created programmatically in [[!UICONTROL Facebook Ads Manager]](https://www.facebook.com/adsmanager/manage/). Segment membership in the audience would be added and removed as users are qualified or disqualified for the activated segments.
