@@ -5,9 +5,9 @@ title: 區段服務UI指南
 topic-legacy: ui guide
 description: Adobe Experience Platform區段服務提供建立和管理區段定義的使用者介面。
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: b7392596c7ed96032dc8ad6bb8e423640f562394
+source-git-commit: fc59ad026a746bc75192fc6b314989894f8f6c45
 workflow-type: tm+mt
-source-wordcount: '1570'
+source-wordcount: '1613'
 ht-degree: 0%
 
 ---
@@ -81,7 +81,7 @@ ht-degree: 0%
 
 ![](../images/ui/overview/segment-browse-segment-info.png)
 
-選取區段定義的列可提供區段定義的摘要，包括可編輯或刪除區段的選項、區段的合格對象、總對象大小，以及區段的名稱、說明、評估方法、建立日期和上次修改日期。
+選取區段定義的列可提供區段定義的摘要，包括可編輯或刪除區段、啟動區段至目的地、區段的合格對象、總對象大小的選項，以及區段的名稱、說明、評估方法、建立日期和上次修改日期。
 
 >[!NOTE]
 >
@@ -101,7 +101,13 @@ ht-degree: 0%
 
 **[!UICONTROL 區段摘要]**&#x200B;區段提供諸如屬性的ID、名稱、說明和詳細資訊。
 
-此外，您也可以選擇編輯區段。 選擇&#x200B;**[!UICONTROL 編輯段]**&#x200B;將帶您進入[!DNL Segment Builder]。 有關使用[!DNL Segment Builder]工作區的更多詳細資訊，請參閱[[!DNL Segment Builder] 使用手冊](./segment-builder.md)。
+此外，您也可以選擇啟用目的地區段或編輯區段。 選取&#x200B;**[!UICONTROL 啟動至目的地]**&#x200B;可讓您啟動至目的地的區段。 如需將區段啟用至目的地的詳細資訊，請參閱[啟用概述](../../destinations/ui/activation-overview.md)。
+
+![](../images/ui/overview/segment-details-activate.png)
+
+選擇&#x200B;**[!UICONTROL 編輯段]**&#x200B;將帶您進入[!DNL Segment Builder]。 有關使用[!DNL Segment Builder]工作區的更多詳細資訊，請參閱[[!DNL Segment Builder] 使用手冊](./segment-builder.md)。
+
+![](../images/ui/overview/segment-details-edit-segment.png)
 
 ### 區段中的總受眾
 
