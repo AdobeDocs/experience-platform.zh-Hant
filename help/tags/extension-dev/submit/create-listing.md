@@ -1,10 +1,10 @@
 ---
 title: 為擴充功能建立Exchange清單
 description: 了解如何將您的擴充功能新增至Adobe Experience Platform中的公開目錄。
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+source-git-commit: c8705cfa65cb1d3a738610821ece827c2af33615
 workflow-type: tm+mt
 source-wordcount: '1162'
-ht-degree: 28%
+ht-degree: 30%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 28%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch在Adobe Experience Platform中已重新命名為一套資料收集技術。 因此，產品檔案中已推出數個術語變更。 有關術語更改的綜合參考，請參閱以下[document](../../term-updates.md)。
+>Adobe Experience Platform Launch在Adobe Experience Platform中已重新命名為一套資料收集技術。 因此，所有產品文件中出現了幾項術語變更。 如需術語變更的彙整參考資料，請參閱以下[文件](../../term-updates.md)。
 
 Adobe Experience Platform有單一統一目錄，供使用者檢視可供安裝的標籤擴充功能。 此目錄可在產品中使用，並包含三種類型的擴充功能：
 
@@ -41,9 +41,9 @@ Adobe Experience Platform有單一統一目錄，供使用者檢視可供安裝�
 1. 提供您的清單資訊。如需 App Manager 的詳細資訊，請參閱完整[文章](https://adobeexchangeec.zendesk.com/hc/en-us/articles/360024197931)。清單資訊應清楚說明擴充功能的用途及其用途。 清單可作為應用程式的行銷空間。 使用清楚的說明、網站登陸頁面的連結、說明檔案的連結或支援電子郵件地址等，在這裡促銷您的擴充功能。 雖然擴充功能檢視的空間有限，但Exchange清單仍提供機會，可推廣您的擴充功能和公司。 以下是改善擴充功能的建議：
    - **應用程式圖示** - 請確保 Exchange 清單的圖示具有適當尺寸；png 請使用 512 x 512，jpg 請使用 1:1 外觀比例。
 
-   >[!NOTE]
-   >
-   >這是與您在擴充功能程式碼中使用的檔案格式不同。 擴充功能本身將包含 svg 檔案作為[圖示](../manifest.md)。
+      >[!NOTE]
+      >
+      >這是與您在擴充功能程式碼中使用的檔案格式不同。 擴充功能本身將包含 svg 檔案作為[圖示](../manifest.md)。
 
    - **精選影像**  — 使用獨一無二且能顯示您的品牌和突顯應用程式的影像，吸引眾人目光。 「精選影像」是當某人分享您的Exchange清單連結或在社交媒體上發佈相關貼文時顯示的影像。 因此，它必須是您品牌的模型表示。
    - **App Publisher 的標誌** - 這是您的公司標誌，請確保圖示具有適當尺寸；png 格式請使用 1280 x 720，jpg 格式請使用 2560 x 1440 (16:9)。
