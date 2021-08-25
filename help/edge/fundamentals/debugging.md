@@ -3,16 +3,16 @@ title: 在Adobe Experience Platform Web SDK中除錯
 description: 了解如何切換Experience PlatformWeb SDK中的除錯功能。
 keywords: 偵錯web sdk；除錯；設定；設定命令；除錯命令；edgeConfigId;setDebug;debugEnabled；除錯；
 exl-id: 4e893af8-a48e-48dc-9737-4c61b3355f03
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+source-git-commit: c0e2d01bd21405f07f4857e1ccf45dd0e4d0f414
 workflow-type: tm+mt
-source-wordcount: '441'
+source-wordcount: '422'
 ht-degree: 0%
 
 ---
 
 # 為  除錯
 
-啟用除錯時，SDK會將訊息輸出至瀏覽器主控台，有助於除錯實作及了解SDK的行為方式。 除錯也會導致伺服器端同步驗證根據您設定的架構所收集的資料。
+啟用除錯時，SDK會將訊息輸出至瀏覽器主控台，有助於除錯實作及了解SDK的行為方式。
 
 預設會停用除錯，但可透過三種不同方式開啟：
 
