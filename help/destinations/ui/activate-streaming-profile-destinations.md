@@ -2,12 +2,12 @@
 keywords: 啟用設定檔目的地；啟用目的地；啟用資料；啟用電子郵件行銷目的地；啟用雲端儲存目的地
 title: 對串流設定檔匯出目的地啟用受眾資料
 type: Tutorial
-seo-title: 對串流設定檔匯出目的地啟用受眾資料
+seo-title: Activate audience data to streaming profile export destinations
 description: 了解如何將區段傳送至以設定檔為基礎的串流目的地，以啟動Adobe Experience Platform中您擁有的受眾資料。
-seo-description: 了解如何將區段傳送至以設定檔為基礎的串流目的地，以啟動Adobe Experience Platform中您擁有的受眾資料。
-source-git-commit: f0c854e1b6b89d499c720328fa5054611147772f
+seo-description: Learn how to activate the audience data you have in Adobe Experience Platform by sending segments to streaming profile-based destinations.
+source-git-commit: d13920250fafd2ba4ff37dd5d4a45d417ed3ecc7
 workflow-type: tm+mt
-source-wordcount: '532'
+source-wordcount: '524'
 ht-degree: 0%
 
 ---
@@ -25,13 +25,17 @@ ht-degree: 0%
 
 ## 選取您的目的地 {#select-destination}
 
-1. 前往&#x200B;**[!UICONTROL 連線>目的地]**，然後選取&#x200B;**[!UICONTROL 瀏覽]**&#x200B;標籤。
+1. 前往&#x200B;**[!UICONTROL 連線>目的地]**，然後選取&#x200B;**[!UICONTROL 目錄]**&#x200B;標籤。
 
-   ![目標瀏覽頁簽](../assets/ui/activate-streaming-profile-destinations/browse-tab.png)
+   ![目標目錄索引標籤](../assets/ui/activate-streaming-profile-destinations/catalog-tab.png)
 
-1. 選取與您要啟用區段的目的地對應的&#x200B;**[!UICONTROL 新增區段]**&#x200B;按鈕，如下圖所示。
+1. 在與您要啟用區段的目的地對應的卡片上，選取「啟用區段」**[!UICONTROL ，如下圖所示。]**
 
-   ![激活按鈕](../assets/ui/activate-streaming-profile-destinations/activate-buttons-browse.png)
+   ![「啟用區段」按鈕](../assets/ui/activate-streaming-profile-destinations/activate-segments-button.png)
+
+1. 選取您要用來啟用區段的目的地連線，然後選取&#x200B;**[!UICONTROL Next]**。
+
+   ![選擇目標](../assets/ui/activate-streaming-profile-destinations/select-destination.png)
 
 1. 移至下一個區段至[選取您的區段](#select-segments)。
 
