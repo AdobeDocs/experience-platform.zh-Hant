@@ -1,12 +1,12 @@
 ---
 title: 配置Adobe Experience Platform Web SDK
 description: 了解如何配置Adobe Experience Platform Web SDK。
-seo-description: 了解如何配置Experience PlatformWeb SDK
+seo-description: Learn how to configure the Experience Platform Web SDK
 keywords: 設定；設定；SDK；邊緣；Web SDK；設定；edgeConfigId；內容；網頁；裝置；環境；placeContext;debugEnabled;edgeDomain;orgId;clickCollectionEnabled;onBeforeEventSend;defaultConsent；網頁設定；prehidingStyle；不透明度；cookieDestinationsEnabled;urlDesitionsEnabled;idMigrationEnabled；第三方CookiesEnabled
 exl-id: d1e95afc-0b8a-49c0-a20e-e2ab3d657e45
-source-git-commit: 549203c8ddc94e00cf4e4ba432f367ddc371cb27
+source-git-commit: c0e2d01bd21405f07f4857e1ccf45dd0e4d0f414
 workflow-type: tm+mt
-source-wordcount: '856'
+source-wordcount: '826'
 ht-degree: 14%
 
 ---
@@ -66,7 +66,6 @@ alloy("configure", {
 
 | **功能** | **函數** |
 | ---------------------- | ------------------ |
-| 同步驗證 | 驗證根據結構收集的資料，並在回應中以下列標籤傳回錯誤：`collect:error OR success` |
 | 主控台記錄 | 啟用偵錯訊息，以顯示在瀏覽器的JavaScript主控台中 |
 
 {style=&quot;table-layout:auto&quot;}
