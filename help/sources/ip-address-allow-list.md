@@ -5,10 +5,10 @@ solution: Experience Platform
 title: 源連接的IP地址允許清單
 topic-legacy: overview
 exl-id: 40093c80-dbdb-4dc1-97bb-81a8200b731f
-source-git-commit: fcdf6209ef3fa7c4685fadd3322f631b608e4605
+source-git-commit: d6926fb32a5c14ef7c6eec4c7c28c2fd46d52f3a
 workflow-type: tm+mt
-source-wordcount: '107'
-ht-degree: 2%
+source-wordcount: '111'
+ht-degree: 0%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 2%
 
 您可以通過網路防火牆定義網路訪問控制。 通過指定適當的源IP範圍，您可以允許資料傳輸服務的通信。 使用來源連接器之前，必須將下列IP位址新增至允許清單。 若未將您地區專屬的IP位址新增至允許清單，在使用來源時可能會導致錯誤或效能不佳。
 
-## VA7
+## VA7:北美
 
 - `20.42.2.0/23`
 - `20.42.4.0/26`
@@ -31,7 +31,7 @@ ht-degree: 2%
 - `40.70.148.160/28`
 - `52.167.107.224/28`
 
-## NLD2
+## NLD2:歐洲
 
 - `13.69.67.192/28`
 - `13.69.107.112/28`
@@ -41,7 +41,7 @@ ht-degree: 2%
 - `40.113.176.232/29`
 - `52.236.187.112/28`
 
-## 澳大利亞5
+## 澳大利亞5:澳大利亞
 
 - `13.70.74.144/28`
 - `20.37.193.0/25`
