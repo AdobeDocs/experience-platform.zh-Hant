@@ -5,7 +5,7 @@ title: 排程查詢API端點
 topic-legacy: scheduled queries
 description: 以下小節將逐步說明您可使用Query Service API針對已排程查詢所進行的各種API呼叫。
 exl-id: f57dbda5-da50-4812-a924-c8571349f1cd
-source-git-commit: 0b1afcb23e070209006383d27eb68edcf92d02cd
+source-git-commit: 34a3b71ace2f9ece02e4368b6bd7eab716330ee1
 workflow-type: tm+mt
 source-wordcount: '1113'
 ht-degree: 2%
@@ -161,7 +161,7 @@ curl -X POST https://platform.adobe.io/data/foundation/query/schedules
 | `query.dbName` | 要為建立計畫查詢的資料庫的名稱。 |
 | `query.sql` | 要建立的SQL查詢。 |
 | `query.name` | 排程查詢的名稱。 |
-| `schedule.schedule` | 查詢的cron排程。 如需cron排程的詳細資訊，請參閱[cron運算式格式](http://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html)檔案。 在此範例中，「30 * * * *」表示查詢將在30分鐘標籤下每小時執行一次。<br><br>或者，您也可以使用下列速記運算式：<ul><li>`@once`:查詢只會執行一次。</li><li>`@hourly`:查詢在小時的開始時每小時運行一次。這等同於cron運算式`0 * * * *`。</li><li>`@daily`:查詢會在午夜執行一次。這等同於cron運算式`0 0 * * *`。</li><li>`@weekly`:查詢每週在星期日午夜執行一次。這等同於cron運算式`0 0 * * 0`。</li><li>`@monthly`:查詢每月在當月第一天午夜執行一次。這等同於cron運算式`0 0 1 * *`。</li><li>`@yearly`:查詢每年在1月1日午夜執行一次。這等同於cron運算式`1 0 0 1 1 *`。 |
+| `schedule.schedule` | 查詢的cron排程。 如需cron排程的詳細資訊，請參閱[cron運算式格式](https://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html)檔案。 在此範例中，「30 * * * *」表示查詢將在30分鐘標籤下每小時執行一次。<br><br>或者，您也可以使用下列速記運算式：<ul><li>`@once`:查詢只會執行一次。</li><li>`@hourly`:查詢在小時的開始時每小時運行一次。這等同於cron運算式`0 * * * *`。</li><li>`@daily`:查詢會在午夜執行一次。這等同於cron運算式`0 0 * * *`。</li><li>`@weekly`:查詢每週在星期日午夜執行一次。這等同於cron運算式`0 0 * * 0`。</li><li>`@monthly`:查詢每月在當月第一天午夜執行一次。這等同於cron運算式`0 0 1 * *`。</li><li>`@yearly`:查詢每年在1月1日午夜執行一次。這等同於cron運算式`1 0 0 1 1 *`。 |
 | `schedule.startDate` | 排程查詢的開始日期，以UTC時間戳記撰寫。 |
 
 **回應**
@@ -364,7 +364,7 @@ curl -X PATCH https://platform.adobe.io/data/foundation/query/schedules/e95186d6
 
 ### 更新排程查詢排程
 
-您可以使用`/schedule/schedule`來更新已排程查詢的cron排程。 如需cron排程的詳細資訊，請參閱[cron運算式格式](http://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html)檔案。
+您可以使用`/schedule/schedule`來更新已排程查詢的cron排程。 如需cron排程的詳細資訊，請參閱[cron運算式格式](https://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html)檔案。
 
 **API格式**
 
