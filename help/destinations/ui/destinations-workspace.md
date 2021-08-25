@@ -2,11 +2,11 @@
 keywords: 平台；目的地；目的地工作區；工作區；ui；目的地ui；目錄；目的地目錄；
 title: 目的地工作區
 description: 「目的地」工作區包含四個區段：目錄、瀏覽、帳戶和系統檢視。 以下各節將說明這些規則。
-seo-description: 在Adobe Experience Platform中，從左側導覽列選取「目的地」 ，以存取目的地工作區。
+seo-description: In Adobe Experience Platform, select Destinations from the left navigation bar to access the destinations workspace.
 exl-id: 0f46f08d-0fe3-441d-933a-86bc146c0f19
-source-git-commit: a97b235e2d8834f6be002923be9cdbca5f08495b
+source-git-commit: f4721d3f114357b25517e4e66f1f626f82621c34
 workflow-type: tm+mt
-source-wordcount: '873'
+source-wordcount: '858'
 ht-degree: 2%
 
 ---
@@ -40,14 +40,14 @@ ht-degree: 2%
 * 在[!UICONTROL 所有目標]和[!UICONTROL 我的目標]之間切換。 選擇&#x200B;**[!UICONTROL 所有目標]**&#x200B;時，將顯示所有可用的[!DNL Platform]目標。 選擇&#x200B;**[!UICONTROL 我的目標]**&#x200B;時，您只能查看已建立連接的目標。
 * 選擇以查看&#x200B;**[!UICONTROL Connections]**&#x200B;和/或&#x200B;**[!UICONTROL Extensions]**。 若要了解這兩個類別之間的差異，請參閱[目標類型和類別](../destination-types.md)。
 
-![目的地篩選和搜尋示範](../assets/ui/workspace/destinations-search-and-filter.gif)
+![目錄](../assets/ui/workspace/catalog.png)
 
-目標卡包含&#x200B;**[!UICONTROL Configure]**&#x200B;或&#x200B;**[!UICONTROL Activate]**&#x200B;控制項，以及帶有更多選項的輔助控制項。 以下說明這些控制項：
+目標卡包含&#x200B;**[!UICONTROL Set up]**&#x200B;或&#x200B;**[!UICONTROL Activate segments]**&#x200B;控制項，以及帶有更多選項的輔助控制項。 以下說明這些控制項：
 
 | 控制 | 說明 |
 |---------|----------|
 | [!UICONTROL 設定] | 可讓您建立與目的地的連線。 |
-| [!UICONTROL 啟動] | 建立與目的地的連線後，您就可以啟用區段。 |
+| [!UICONTROL 啟用區段] | 建立與目的地的連線後，您就可以啟用區段。 |
 | [!UICONTROL 查看帳戶] | 查看已為目標連接的帳戶。 |
 | [!UICONTROL 查看資料流] | 檢視目的地的資料啟動流程。 |
 | [!UICONTROL 檢視檔案] | 開啟該特定目的地的檔案頁面連結，以取得詳細資訊並協助您進行設定。 |
@@ -72,7 +72,7 @@ ht-degree: 2%
 
 >[!TIP]
 >
-> * 在[!UICONTROL Name]欄上選取三個點，然後使用![Add segments按鈕](../assets/ui/workspace/add-data-symbol.png)**[!UICONTROL Activate ]**按鈕將區段傳送至該目的地。
+> * 在[!UICONTROL Name]欄上選取三個點，然後使用![Add segments按鈕](../assets/ui/workspace/add-data-symbol.png)**[!UICONTROL Activate segments ]**按鈕將區段傳送至該目的地。
 > * 在[!UICONTROL Name]列上選擇三個點，然後使用![Delete destinations按鈕](../assets/ui/workspace/delete-destination-symbol.png)**[!UICONTROL Delete ]**按鈕[Remove](delete-destinations.md)與目標的現有連接。
 
 
