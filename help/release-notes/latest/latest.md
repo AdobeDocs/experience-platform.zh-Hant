@@ -2,10 +2,10 @@
 title: Adobe Experience Platform 發行說明
 description: Adobe Experience Platform的最新發行說明。
 exl-id: 8f2c9bf8-1487-46e4-993b-bd9b63774cab
-source-git-commit: 3d6402a35e1813b94af866d7aaea975d4f103906
+source-git-commit: b1dca51264582788ccbde005b063c57e2f3edc8f
 workflow-type: tm+mt
-source-wordcount: '459'
-ht-degree: 9%
+source-wordcount: '536'
+ht-degree: 8%
 
 ---
 
@@ -16,9 +16,22 @@ ht-degree: 9%
 
 Adobe Experience Platform 現有功能更新：
 
+- [目的地](#destinations)
 - [可觀察性深入分析](#observability)
 - [即時客戶個人檔案](#profile)
 - [來源](#sources)
+
+## 目的地 {#destinations}
+
+目的地是預先建置與目的地平台的整合，可順暢地從Adobe Experience Platform啟動資料。 您可以使用目的地來針對跨通路行銷活動、電子郵件行銷活動、目標廣告和其他許多使用案例，啟用已知和未知的資料。
+
+**新功能**
+
+| 功能 | 說明 |
+| --- | --- |
+| [目的地的可用性改善](../../destinations/ui/activation-overview.md) | 目的地的可用性改善可讓行銷人員對現有目的地順暢地啟用區段。 |
+
+如需目的地的詳細一般資訊，請參閱[目的地概述](../../destinations/home.md)。
 
 ## 可觀察性深入分析 {#observability}
 
