@@ -2,10 +2,10 @@
 title: Adobe Experience Platform Web SDK擴充功能中的資料元素類型
 description: 了解Adobe Experience Platform Web SDK標籤擴充功能所提供的不同資料元素類型。
 exl-id: 3c2c257f-1fbc-4722-8040-61ad19aa533f
-source-git-commit: 2f9ff95529c907cfc28bc98198eca9fcfc21e9b9
+source-git-commit: 4caab19e1f58fc5cec5a3c56c43e47786d49c3dc
 workflow-type: tm+mt
-source-wordcount: '292'
-ht-degree: 43%
+source-wordcount: '511'
+ht-degree: 19%
 
 ---
 
@@ -22,7 +22,19 @@ ht-degree: 43%
 
 ## 身分對應
 
-身分對應資料元素可讓您以指定的其他資料元素或其他值建立身分。您建立的所有身分都必須連回相對應的命名空間。此資料元素提供下拉式清單，顯示所有預設命名空間以及您建立的任何命名空間。
+身分對應可讓您為網頁的訪客建立身分。 身分對應包含命名空間，例如&#x200B;_phone_&#x200B;或&#x200B;_email_，每個命名空間包含一或多個識別碼。 例如，若您網站上的個人已提供兩個電話號碼，您的電話命名空間應包含兩個識別碼。
+
+在[!UICONTROL Identity map]資料元素中，您將提供每個識別碼的下列資訊片段：
+
+* **[!UICONTROL ID]**:識別訪客的值。例如，如果識別碼屬於&#x200B;_phone_&#x200B;命名空間，[!UICONTROL ID]可能為&#x200B;_555-555-5555_。 此值通常衍生自JavaScript變數或您頁面上的其他資料片段，因此最好建立參考頁面資料的資料元素，然後參考[!UICONTROL Identity map]資料元素內[!UICONTROL ID]欄位中的資料元素。 如果在您的頁面上執行時，ID值不是填入的字串，則識別碼會自動從身分對應中移除。
+* **[!UICONTROL 驗證狀態]**:指出訪客是否已驗證的選取項目。
+* **[!UICONTROL 主要]**:指示是否應將標識符用作個人的主要標識符的選擇。如果未將任何識別碼標示為主要識別碼，系統會將ECID設為主要識別碼。
+
+建立身分對應時，您不應提供ECID。 使用SDK時，系統會自動在伺服器上產生ECID，並包含在身分對應中。
+
+身分對應資料元素通常與[[!UICONTROL XDM物件]資料元素類型](#xdm-object)和[[!UICONTROL 設定同意]動作類型](action-types.md#set-consent)搭配使用。
+
+深入了解[Adobe Experience Platform Identity Service](https://experienceleague.adobe.com/docs/experience-platform/identity/home.html?lang=zh-Hant)。
 
 ![](./assets/identity-map-data-element.png)
 
