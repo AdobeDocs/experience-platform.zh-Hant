@@ -5,9 +5,9 @@ title: 查詢服務中的SQL語法
 topic-legacy: syntax
 description: 本檔案顯示Adobe Experience Platform Query Service支援的SQL語法。
 exl-id: 2bd4cc20-e663-4aaa-8862-a51fde1596cc
-source-git-commit: 26bd2abc998320245091b0917fb6f236ed09b95c
+source-git-commit: 8dceab8cdba1ac6b4a649f0e01b2bbda5f025bef
 workflow-type: tm+mt
-source-wordcount: '2066'
+source-wordcount: '2154'
 ht-degree: 1%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 1%
 
 Adobe Experience Platform Query Service提供了對`SELECT`語句和其他有限命令使用標準ANSI SQL的功能。 本文檔涵蓋[!DNL Query Service]支援的SQL語法。
 
-## 選擇查詢{#select-queries}
+## 選擇查詢 {#select-queries}
 
 以下語法定義[!DNL Query Service]支援的`SELECT`查詢：
 
@@ -117,6 +117,15 @@ SELECT * FROM Customers SNAPSHOT SINCE 123 INNER JOIN Inventory AS OF 789 ON Cus
 請注意，`SNAPSHOT`子句與表或表別名一起使用，但不在子查詢或視圖的頂端。 `SNAPSHOT`子句在可以應用表上的`SELECT`查詢的任何位置都有效。
 
 此外，還可以使用`HEAD`和`TAIL`作為快照子句的特殊偏移值。 使用`HEAD`表示第一個快照前的偏移，而使用`TAIL`表示上次快照後的偏移。
+
+>[!NOTE]
+>
+>如果在兩個快照ID之間進行查詢且啟動快照已過期，則可能會出現以下兩種情況，具體取決於是否設定了可選的回退行為標誌(`resolve_fallback_snapshot_on_failure`):
+>
+>- 如果設定了可選的回退行為標誌，Query Service將選擇最早可用快照，將其設定為開始快照，並在最早可用快照和指定的結束快照之間返回資料。 此資料是最早可用快照的&#x200B;**inclusive**。
+>
+>- 如果未設定選用的後援行為標幟，則會傳回錯誤。
+
 
 ### WHERE子句
 
