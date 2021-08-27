@@ -5,9 +5,9 @@ topic-legacy: guide
 type: Documentation
 description: 即時客戶設定檔可讓您將來自多個來源的資料（包括屬性資料和行為資料）整合在一起，以建立Adobe Experience Platform中個別客戶的單一檢視。 接著，可將設定檔資料匯出至資料集以進一步處理。
 exl-id: d51b1d1c-ae17-4945-b045-4001e4942b67
-source-git-commit: 453e120fa20232533289ee5ff34821ce8c0c310b
+source-git-commit: 4c544170636040b8ab58780022a4c357cfa447de
 workflow-type: tm+mt
-source-wordcount: '1526'
+source-wordcount: '1521'
 ht-degree: 2%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 2%
 
 [!DNL Real-time Customer Profile] 可讓您將來自多個來源的資料（包括屬性資料和行為資料）集合在一起，以建立個別客戶的單一檢視。接著，可將設定檔資料匯出至資料集以進一步處理。 例如，[!DNL Profile]資料中的受眾區段可匯出為啟用，而設定檔屬性可匯出為報告。
 
-本檔案提供使用[設定檔API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml)建立和管理匯出作業的逐步指示。
+本檔案提供使用[設定檔API](https://www.adobe.com/go/profile-apis-en)建立和管理匯出作業的逐步指示。
 
 >[!NOTE]
 >

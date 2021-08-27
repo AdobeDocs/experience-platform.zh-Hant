@@ -5,9 +5,9 @@ topic-legacy: guide
 type: Documentation
 description: Adobe Experience Platform可讓您從多個來源將資料片段匯整在一起，並加以結合，以便查看每個客戶的完整檢視。 將這些資料整合在一起時，Platform會使用合併原則來判斷資料的優先順序，以及將哪些資料合併以建立統一檢視。
 exl-id: fb49977d-d5ca-4de9-b185-a5ac1d504970
-source-git-commit: acf88ba3c4181fce85ffec3b0041a30b7bb14cef
+source-git-commit: 4c544170636040b8ab58780022a4c357cfa447de
 workflow-type: tm+mt
-source-wordcount: '2263'
+source-wordcount: '2258'
 ht-degree: 1%
 
 ---
@@ -24,7 +24,7 @@ Adobe Experience Platform可讓您從多個來源將資料片段匯整在一起�
 
 ## 快速入門
 
-本指南中使用的API端點是[[!DNL Real-time Customer Profile API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml)的一部分。 繼續之前，請檢閱[快速入門手冊](getting-started.md)，取得相關檔案的連結、閱讀本檔案中範例API呼叫的指南，以及成功呼叫任何[!DNL Experience Platform] API所需的重要標題資訊。
+本指南中使用的API端點是[[!DNL Real-time Customer Profile API]](https://www.adobe.com/go/profile-apis-en)的一部分。 繼續之前，請檢閱[快速入門手冊](getting-started.md)，取得相關檔案的連結、閱讀本檔案中範例API呼叫的指南，以及成功呼叫任何[!DNL Experience Platform] API所需的重要標題資訊。
 
 ## 合併策略的元件 {#components-of-merge-policies}
 
