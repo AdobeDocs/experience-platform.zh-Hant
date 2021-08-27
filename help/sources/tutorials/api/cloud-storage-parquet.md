@@ -6,9 +6,9 @@ topic-legacy: overview
 type: Tutorial
 description: 本教學課程使用流量服務API，逐步引導您完成從協力廠商雲端儲存系統內嵌Apache Parquet資料的步驟。
 exl-id: fb1b19d6-16bb-4a5f-9e81-f537bac95041
-source-git-commit: d3e1bc9bc075117dcc96c85b8b9c81d6ee617d29
+source-git-commit: 5160bc8057a7f71e6b0f7f2d594ba414bae9d8f6
 workflow-type: tm+mt
-source-wordcount: '1099'
+source-wordcount: '1095'
 ht-degree: 2%
 
 ---
@@ -266,7 +266,7 @@ curl -X POST \
 
 ## 建立目標資料集
 
-目標資料集的建立方式，是對[目錄服務API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml)執行POST請求，提供裝載內目標架構的ID。
+目標資料集的建立方式，是對[目錄服務API](https://www.adobe.io/experience-platform-apis/references/catalog/)執行POST請求，提供裝載內目標架構的ID。
 
 **API格式**
 
@@ -428,7 +428,7 @@ curl -X POST \
 
 ## 後續步驟
 
-依照本教學課程，您已建立來源連接器，以排程從協力廠商雲端儲存系統收集Parquet資料。 下游[!DNL Platform]服務（如[!DNL Real-time Customer Profile]和[!DNL Data Science Workspace]）現在可以使用傳入資料。 如需詳細資訊，請參閱下列檔案：
+依照本教學課程，您已建立來源連接器，以排程從協力廠商雲端儲存系統收集Parquet資料。 下游[!DNL Platform]服務（如[!DNL Real-time Customer Profile]和[!DNL Data Science Workspace]）現在可以使用傳入的資料。 如需詳細資訊，請參閱下列檔案：
 
 - [即時客戶個人檔案概觀](../../../profile/home.md)
 - [Data Science Workspace概觀](../../../data-science-workspace/home.md)

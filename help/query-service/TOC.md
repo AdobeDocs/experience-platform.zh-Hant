@@ -3,43 +3,42 @@ audience: user
 user-guide-title: Adobe Experience Platform 查詢服務說明
 breadcrumb-title: 查詢服務指南
 user-guide-description: 使用標準 SQL 在 Platform Data Lake 中查詢資料。
-feature: 查詢
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+feature: Queries
+source-git-commit: 5160bc8057a7f71e6b0f7f2d594ba414bae9d8f6
 workflow-type: tm+mt
-source-wordcount: '136'
-ht-degree: 18%
+source-wordcount: '131'
+ht-degree: 19%
 
 ---
 
 
-# Adobe Experience Platform查詢服務{#query}
+# Adobe Experience Platform查詢服務 {#query}
 
 - [查詢服務概述](home.md)
 - [快速入門手冊](quickstart.md)
 - 查詢服務API {#api}
-   - [開始使用](api/getting-started.md)
+   - [快速入門](api/getting-started.md)
    - [查詢](api/queries.md)
-   - [連接參數](api/connection-parameters.md)
+   - [連線參數](api/connection-parameters.md)
    - [排程查詢](api/scheduled-queries.md)
    - [針對排程查詢執行](api/runs-scheduled-queries.md)
    - [查詢範本](api/query-templates.md)
 - 查詢服務UI {#ui}
-   - [UI概觀](ui/overview.md)
+   - [UI概述](ui/overview.md)
    - [查詢編輯器使用手冊](ui/user-guide.md)
-   - [從查詢結果生成資料集](ui/create-datasets.md)
-- 最佳作法 {#best-practices}
+   - [從查詢結果產生資料集](ui/create-datasets.md)
+- 最佳做法 {#best-practices}
    - [查詢執行的一般指南](best-practices/writing-queries.md)
-   - [重複資料消除](best-practices/deduplication.md)
+   - [重複資料刪除](best-practices/deduplication.md)
    - [體驗事件查詢範例](best-practices/experience-event-queries.md)
    - [範例Adobe Analytics查詢](best-practices/adobe-analytics.md)
    - [範例Adobe Target查詢](best-practices/adobe-target.md)
-- SQL參考{#sql}
+- SQL引用{#sql}
    - [SQL概述](sql/overview.md)
    - [SQL語法](sql/syntax.md)
-   - [Adobe定義函式](sql/adobe-defined-functions.md)
+   - [Adobe定義的函式](sql/adobe-defined-functions.md)
    - [Spark SQL函式](sql/spark-sql-functions.md)
-   - [中繼資料命令](sql/metadata.md)
+   - [元資料命令](sql/metadata.md)
    - [準備的陳述](sql/prepared-statements.md)
 - 將客戶端連接到查詢服務{#clients}
    - [用戶端連線概觀](clients/overview.md)
@@ -49,7 +48,7 @@ ht-degree: 18%
    - [Power BI(PC)](clients/power-bi.md)
    - [PSQL](clients/psql.md)
    - [RStudio](clients/rstudio.md)
-   - [Tableau](clients/tableau.md)
+   - [塔布洛](clients/tableau.md)
 - [疑難排解指南](troubleshooting-guide.md)
-- [API 參考資料](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/qs-api.yaml)
-- [平台版本注意事項](https://www.adobe.com/go/platform-release-notes-en)
+- [API 參考資料](https://www.adobe.io/experience-platform-apis/references/query-service/)
+- [平台發行說明](https://www.adobe.com/go/platform-release-notes-en)

@@ -6,9 +6,9 @@ topic-legacy: overview
 type: Tutorial
 description: 本教學課程涵蓋擷取串流資料，以及使用來源連接器和API將其匯入Platform的步驟。
 exl-id: 898df7fe-37a9-4495-ac05-30029258a6f4
-source-git-commit: b672eab481a8286f92741a971991c7f83102acf7
+source-git-commit: 5160bc8057a7f71e6b0f7f2d594ba414bae9d8f6
 workflow-type: tm+mt
-source-wordcount: '1111'
+source-wordcount: '1107'
 ht-degree: 2%
 
 ---
@@ -40,7 +40,7 @@ ht-degree: 2%
 - [[!DNL Azure Event Hubs]](../create/cloud-storage/eventhub.md)
 - [[!DNL Google PubSub]](../create/cloud-storage/google-pubsub.md)
 
-## 建立目標XDM架構{#target-schema}
+## 建立目標XDM結構 {#target-schema}
 
 為了在Platform中使用來源資料，必須建立目標架構，以根據您的需求來建構來源資料。 然後，目標架構會用來建立包含來源資料的Platform資料集。 此目標XDM架構也會擴充XDM [!DNL Individual Profile]類別。
 
@@ -152,7 +152,7 @@ curl -X POST \
 
 ## 建立目標資料集
 
-建立目標XDM結構並使其唯一`$id`後，您現在可以建立目標資料集以包含您的來源資料。 若要建立目標資料集，請向[目錄服務API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml)的`dataSets`端點提出POST請求，同時在裝載中提供目標架構的ID。
+建立目標XDM結構並使其唯一`$id`後，您現在可以建立目標資料集以包含您的來源資料。 若要建立目標資料集，請向[目錄服務API](https://www.adobe.io/experience-platform-apis/references/catalog/)的`dataSets`端點提出POST請求，同時在裝載中提供目標架構的ID。
 
 **API格式**
 
@@ -203,7 +203,7 @@ curl -X POST \
 ]
 ```
 
-## 建立目標連接{#target-connection}
+## 建立目標連線 {#target-connection}
 
 Target連線會建立和管理到Platform或傳輸資料將著陸的任何位置的目的地連線。 目標連接包含有關資料目標、資料格式以及建立資料流所需的目標連接ID的資訊。 Target連線例項是租用戶和IMS組織專屬的。
 

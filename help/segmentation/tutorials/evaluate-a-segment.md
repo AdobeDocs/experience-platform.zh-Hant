@@ -6,9 +6,9 @@ topic-legacy: tutorial
 type: Tutorial
 description: 請依照本教學課程，了解如何使用Adobe Experience Platform區段服務API評估區段並存取區段結果。
 exl-id: 47702819-f5f8-49a8-a35d-034ecac4dd98
-source-git-commit: 453e120fa20232533289ee5ff34821ce8c0c310b
+source-git-commit: 5160bc8057a7f71e6b0f7f2d594ba414bae9d8f6
 workflow-type: tm+mt
-source-wordcount: '1552'
+source-wordcount: '1548'
 ht-degree: 0%
 
 ---
@@ -223,7 +223,7 @@ curl -X POST \
 
 ## 後續步驟
 
-匯出成功後，您的資料即可在[!DNL Experience Platform]的[!DNL Data Lake]內使用。 然後，您可以使用[[!DNL Data Access API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-access-api.yaml)，使用與匯出相關聯的`batchId`存取資料。 根據區段的大小，資料可能是區塊，而批次可能包含數個檔案。
+匯出成功後，您的資料即可在[!DNL Experience Platform]的[!DNL Data Lake]內使用。 然後，您可以使用[[!DNL Data Access API]](https://www.adobe.io/experience-platform-apis/references/data-access/)，使用與匯出相關聯的`batchId`存取資料。 根據區段的大小，資料可能是區塊，而批次可能包含數個檔案。
 
 有關如何使用[!DNL Data Access] API訪問和下載批處理檔案的逐步說明，請遵循[資料訪問教程](../../data-access/tutorials/dataset-data.md)。
 

@@ -6,9 +6,9 @@ description: 本檔案說明如何使用Adobe Experience Platform API建立串�
 topic-legacy: tutorial
 type: Tutorial
 exl-id: 3e8d2745-8b83-4332-9179-a84d8c0b4400
-source-git-commit: 02c22453470d55236d4235c479742997e8407ef3
+source-git-commit: 5160bc8057a7f71e6b0f7f2d594ba414bae9d8f6
 workflow-type: tm+mt
-source-wordcount: '2025'
+source-wordcount: '2021'
 ht-degree: 1%
 
 ---
@@ -70,7 +70,7 @@ Experience Platform中的資源可以隔離至特定虛擬沙箱。 在向Platfo
 
 ### Swagger檔案 {#swagger-docs}
 
-您可以在Swagger中找到本教學課程中所有API呼叫的隨附參考檔案。 請參閱[Adobe I/O](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml)上的流量服務API檔案。 建議您同時使用本教學課程和Swagger檔案頁面。
+您可以在Swagger中找到本教學課程中所有API呼叫的隨附參考檔案。 請參閱[Adobe I/O](https://www.adobe.io/experience-platform-apis/references/flow-service/)上的流量服務API檔案。 建議您同時使用本教學課程和Swagger檔案頁面。
 
 ## 取得可用串流目的地的清單 {#get-the-list-of-available-streaming-destinations}
 

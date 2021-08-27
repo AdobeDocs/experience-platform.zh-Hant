@@ -3,10 +3,10 @@ audience: user
 user-guide-title: Adobe Experience Platform Segmentation Service
 breadcrumb-title: 分段服務指南
 user-guide-description: 從您的即時客戶設定檔資料建立區段並產生對象。
-feature: 區段
-source-git-commit: f193787ac27e30c69d25418656ae9c59c89622dc
+feature: Segments
+source-git-commit: 5160bc8057a7f71e6b0f7f2d594ba414bae9d8f6
 workflow-type: tm+mt
-source-wordcount: '164'
+source-wordcount: '159'
 ht-degree: 27%
 
 ---
@@ -22,7 +22,7 @@ ht-degree: 27%
    - [邊緣分割](api/edge-segmentation.md)
    - [匯出工作](api/export-jobs.md)
    - [預覽和估計](api/previews-and-estimates.md)
-   - [排程](api/schedules.md)
+   - [排程器](api/schedules.md)
    - [區段定義](api/segment-definitions.md)
    - [區段作業](api/segment-jobs.md)
    - [區段搜尋](api/segment-search.md)
@@ -61,5 +61,5 @@ ht-degree: 27%
    - [匯入和使用外部對象](tutorials/using-external-audiences.md)
    - [建立資料集以匯出資料](tutorials/create-dataset-export-segment.md)
    - [強制區段符合資料使用情形](tutorials/governance.md)
-- [API 參考資料](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/segmentation.yaml)
+- [API 參考資料](https://www.adobe.io/experience-platform-apis/references/segmentation/)
 - [平台發行說明](https://www.adobe.com/go/platform-release-notes-en)

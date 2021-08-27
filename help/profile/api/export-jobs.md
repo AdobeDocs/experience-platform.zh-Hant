@@ -5,9 +5,9 @@ topic-legacy: guide
 type: Documentation
 description: 即時客戶設定檔可讓您將來自多個來源的資料（包括屬性資料和行為資料）整合在一起，以建立Adobe Experience Platform中個別客戶的單一檢視。 接著，可將設定檔資料匯出至資料集以進一步處理。
 exl-id: d51b1d1c-ae17-4945-b045-4001e4942b67
-source-git-commit: 4c544170636040b8ab58780022a4c357cfa447de
+source-git-commit: b47a52920f82a962ff044a0dacf9777b6eeae447
 workflow-type: tm+mt
-source-wordcount: '1521'
+source-wordcount: '1517'
 ht-degree: 2%
 
 ---
@@ -433,7 +433,7 @@ curl -X POST \
 
 ## 後續步驟
 
-匯出成功後，您的資料即可在Data Lake中Experience Platform。 然後，您可以使用[資料存取API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-access-api.yaml)，使用與匯出相關聯的`batchId`存取資料。 視匯出的大小而定，資料可能是區塊，而批次可能包含數個檔案。
+匯出成功後，您的資料即可在Data Lake中Experience Platform。 然後，您可以使用[資料存取API](https://www.adobe.io/experience-platform-apis/references/data-access/)，使用與匯出相關聯的`batchId`存取資料。 視匯出的大小而定，資料可能是區塊，而批次可能包含數個檔案。
 
 如需如何使用資料存取API來存取和下載批次檔案的逐步指示，請遵循[資料存取教學課程](../../data-access/tutorials/dataset-data.md)。
 

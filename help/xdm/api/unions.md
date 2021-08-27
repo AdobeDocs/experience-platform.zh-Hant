@@ -5,9 +5,9 @@ title: Union API端點
 description: Schema Registry API中的/union端點可讓您以程式設計方式管理體驗應用程式中的XDM聯合結構。
 topic-legacy: developer guide
 exl-id: d0ece235-72e8-49d9-856b-5dba44e16ee7
-source-git-commit: e4bf5bb77ac4186b24580329699d74d653310d93
+source-git-commit: 5160bc8057a7f71e6b0f7f2d594ba414bae9d8f6
 workflow-type: tm+mt
-source-wordcount: '915'
+source-wordcount: '911'
 ht-degree: 3%
 
 ---
@@ -32,7 +32,7 @@ ht-degree: 3%
 
 ### 區段成員資格對應
 
-`segmentMembership`地圖會儲存區段評估的結果。 使用[分段API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/segmentation.yaml)成功執行區段作業時，會更新對映。 `segmentMembership` 也會儲存擷取至Platform的任何預先評估對象區段，以便與Adobe Audience Manager等其他解決方案整合。如需詳細資訊，請參閱[使用API建立區段的教學課程。](../../segmentation/tutorials/create-a-segment.md)
+`segmentMembership`地圖會儲存區段評估的結果。 使用[分段API](https://www.adobe.io/experience-platform-apis/references/segmentation/)成功執行區段作業時，會更新對映。 `segmentMembership` 也會儲存擷取至Platform的任何預先評估對象區段，以便與Adobe Audience Manager等其他解決方案整合。如需詳細資訊，請參閱[使用API建立區段的教學課程。](../../segmentation/tutorials/create-a-segment.md)
 
 ## 檢索聯合清單 {#list}
 
@@ -183,7 +183,7 @@ curl -X GET \
 
 若要將架構納入其類別的聯合中，必須將`union`標籤新增至架構的`meta:immutableTags`屬性。 您可以發出PATCH要求，將單字串值`union`的`meta:immutableTags`陣列新增至相關架構，以達到此目的。 如需詳細範例，請參閱[綱要端點指南](./schemas.md#union)。
 
-## 聯合{#list-schemas}中的架構清單
+## 列出聯合的結構 {#list-schemas}
 
 若要查看哪些結構屬於特定聯合的一部分，您可以對`/tenant/schemas`端點執行GET請求。 使用`property`查詢參數，可以將響應配置為僅返回包含`meta:immutableTags`欄位和`meta:class`等於您正在訪問其聯合的類的架構。
 

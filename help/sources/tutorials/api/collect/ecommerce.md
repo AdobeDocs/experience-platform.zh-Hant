@@ -1,73 +1,72 @@
 ---
-keywords: Experience Platform;home；熱門主題；收集電子商務資料；電子商務資料
+keywords: Experience Platform；首頁；熱門主題；收集電子商務資料；電子商務資料
 solution: Experience Platform
 title: 使用來源連接器和API收集電子商務資料
 topic-legacy: overview
 type: Tutorial
-description: 本教學課程涵蓋從協力廠商電子商務系統擷取資料，並使用來源連接器和API將其匯入平台的步驟。
+description: 本教學課程涵蓋從協力廠商電子商務系統擷取資料，以及使用來源連接器和API擷取資料至Platform的步驟。
 exl-id: 0952f037-5e20-4d84-a2e6-2c9470f168f5
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 5160bc8057a7f71e6b0f7f2d594ba414bae9d8f6
 workflow-type: tm+mt
-source-wordcount: '1519'
+source-wordcount: '1523'
 ht-degree: 1%
 
 ---
 
 # 使用來源連接器和API收集電子商務資料
 
-本教學課程涵蓋從協力廠商&#x200B;**[!UICONTROL eCommerce]**&#x200B;系統擷取資料，並透過來源連接器和[[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml)將其內嵌至[!DNL Platform]的步驟。
+本教學課程涵蓋從協力廠商&#x200B;**[!UICONTROL eCommerce]**&#x200B;系統擷取資料，並透過來源連接器和[[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml)擷取資料至[!DNL Platform]的步驟。
 
 ## 快速入門
 
-本教程要求您通過有效連接訪問&#x200B;**[!UICONTROL eCommerce]**&#x200B;系統，以及有關要導入[!DNL Platform]的檔案（包括檔案的路徑和結構）的資訊。 如果您沒有此資訊，請先參閱[教學課程，瞭解如何使用Flow Service API](../explore/ecommerce.md)來探索電子商務系統，然後再嘗試本教學課程。
+本教學課程要求您透過有效連線存取&#x200B;**[!UICONTROL eCommerce]**&#x200B;系統，以及您要帶入[!DNL Platform]之檔案的相關資訊（包括檔案的路徑和結構）。 如果您沒有此資訊，請在嘗試本教學課程之前，先參閱[使用流程服務API](../explore/ecommerce.md)探索電子商務系統的教學課程。
 
-本教學課程還要求您對Adobe Experience Platform的以下部分有切實的瞭解：
+本教學課程也需要您妥善了解下列Adobe Experience Platform元件：
 
 * [[!DNL Experience Data Model (XDM) System]](../../../../xdm/home.md):Experience Platform組織客戶體驗資料的標準化架構。
-   * [架構構成基礎](../../../../xdm/schema/composition.md):瞭解XDM架構的基本建置區塊，包括架構組合的主要原則和最佳實務。
-   * [方案註冊表API](../../../../xdm/api/getting-started.md):瞭解如何成功執行對架構註冊表API的呼叫。這包括您的`{TENANT_ID}`、&quot;containers&quot;的概念，以及提出要求時所需的標題（請特別注意「接受」標題及其可能的值）。
-* [[!DNL Catalog Service]](../../../../catalog/home.md):目錄是記錄資料位置和世系的系統 [!DNL Experience Platform]。
-* [[!DNL Batch ingestion]](../../../../ingestion/batch-ingestion/overview.md):「批次擷取API」可讓您將資料以批次檔 [!DNL Experience Platform] 案的形式擷取。
-* [[!DNL Sandboxes]](../../../../sandboxes/home.md): [!DNL Experience Platform] 提供虛擬沙盒，可將單一執行個體分 [!DNL Platform] 割為不同的虛擬環境，以協助開發和發展數位體驗應用程式。
+   * [結構構成基本概念](../../../../xdm/schema/composition.md):了解XDM結構描述的基本建置組塊，包括結構描述的主要原則和最佳實務。
+   * [結構註冊表API](../../../../xdm/api/getting-started.md):了解如何成功執行對結構註冊表API的呼叫。這包括您的`{TENANT_ID}`、「容器」的概念，以及提出要求所需的標題（請特別注意「接受」標題及其可能的值）。
+* [[!DNL Catalog Service]](../../../../catalog/home.md):目錄是記錄資料位置和內世系的系 [!DNL Experience Platform]統。
+* [[!DNL Batch ingestion]](../../../../ingestion/batch-ingestion/overview.md):批次內嵌API可讓您將資料內嵌至批 [!DNL Experience Platform] 次檔案中。
+* [[!DNL Sandboxes]](../../../../sandboxes/home.md): [!DNL Experience Platform] 提供可將單一執行個體分割成個 [!DNL Platform] 別虛擬環境的虛擬沙箱，以協助開發及改進數位體驗應用程式。
 
-以下各節提供您必須知道的其他資訊，以便使用[!DNL Flow Service] API成功連線至&#x200B;**[!UICONTROL eCommerce]**&#x200B;系統。
+以下各節提供您需要了解的其他資訊，以便使用[!DNL Flow Service] API成功連接到&#x200B;**[!UICONTROL eCommerce]**&#x200B;系統。
 
 ### 讀取範例API呼叫
 
-本教學課程提供範例API呼叫，以示範如何設定請求的格式。 這些包括路徑、必要標題和正確格式化的請求負載。 也提供API回應中傳回的範例JSON。 如需範例API呼叫檔案中所用慣例的詳細資訊，請參閱[!DNL Experience Platform]疑難排解指南中[如何讀取範例API呼叫](../../../../landing/troubleshooting.md#how-do-i-format-an-api-request)一節。
+本教學課程提供範例API呼叫，以示範如何設定要求格式。 這些功能包括路徑、必要標題和格式正確的請求裝載。 也提供API回應中傳回的範例JSON。 如需範例API呼叫檔案中所使用慣例的資訊，請參閱[!DNL Experience Platform]疑難排解指南中[如何讀取範例API呼叫](../../../../landing/troubleshooting.md#how-do-i-format-an-api-request)一節。
 
 ### 收集必要標題的值
 
-若要呼叫[!DNL Platform] API，您必須先完成[驗證教學課程](https://www.adobe.com/go/platform-api-authentication-en)。 完成驗證教學課程後，所有[!DNL Experience Platform] API呼叫中每個所需標題的值都會顯示在下面：
+若要呼叫[!DNL Platform] API，您必須先完成[authentication tutorial](https://www.adobe.com/go/platform-api-authentication-en)。 完成驗證教學課程後，將提供所有[!DNL Experience Platform] API呼叫中每個必要標題的值，如下所示：
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
 * `x-gw-ims-org-id: {IMS_ORG}`
 
-[!DNL Experience Platform]中的所有資源（包括屬於[!DNL Flow Service]的資源）都隔離到特定的虛擬沙盒。 對[!DNL Platform] API的所有請求都需要一個標題，該標題指定要在中執行操作的沙盒的名稱：
+[!DNL Experience Platform]中的所有資源，包括屬於[!DNL Flow Service]的資源，都與特定虛擬沙箱隔離。 對[!DNL Platform] API的所有請求都需要標題，以指定作業將在下列位置進行的沙箱名稱：
 
 * `x-sandbox-name: {SANDBOX_NAME}`
 
-所有包含裝載(POST、PUT、PATCH)的請求都需要附加的媒體類型標題：
+所有包含裝載(POST、PUT、PATCH)的請求都需要其他媒體類型標題：
 
 * `Content-Type: application/json`
 
-## 建立源連接{#source}
+## 建立源連接 {#source}
 
-您可以通過向[!DNL Flow Service] API發出POST請求來建立源連接。 源連接由連接ID、源資料檔案的路徑和連接規範ID組成。
+您可以向[!DNL Flow Service] API發出POST請求，以建立來源連線。 源連接由連接ID、源資料檔案的路徑和連接規範ID組成。
 
-要建立源連接，還必須為資料格式屬性定義枚舉值。
+要建立源連接，您還必須為資料格式屬性定義枚舉值。
 
-對基於檔案的連接器使用以下列舉值：
+為檔案連接器使用下列列舉值：
 
 | 資料格式 | 列舉值 |
 | ----------- | ---------- |
-| 分隔字元 | `delimited` |
+| 分隔 | `delimited` |
 | JSON | `json` |
 | 鑲木 | `parquet` |
 
-對於所有基於表的連接器，請將值設定為`tabular`。
+對於所有基於表的連接器，將值設定為`tabular`。
 
 **API格式**
 
@@ -114,13 +113,13 @@ curl -X POST \
 
 | 屬性 | 說明 |
 | -------- | ----------- |
-| `baseConnectionId` | **[!UICONTROL eCommerce]**&#x200B;源的連接ID。 |
+| `baseConnectionId` | **[!UICONTROL eCommerce]**&#x200B;來源的連線ID。 |
 | `params.path` | 源檔案的路徑。 |
 | `connectionSpec.id` | **[!UICONTROL eCommerce]**&#x200B;源的連接規範ID。 |
 
 **回應**
 
-成功的響應返回新建源連接的唯一標識符(`id`)。 在後續步驟中需要此ID才能建立目標連線。
+成功的響應返回新建源連接的唯一標識符(`id`)。 在後續步驟中，建立目標連線需要此ID。
 
 ```json
 {
@@ -129,11 +128,11 @@ curl -X POST \
 }
 ```
 
-## 建立目標XDM模式{#target-schema}
+## 建立目標XDM結構 {#target-schema}
 
-要使用[!DNL Platform]中的源資料，必須建立目標模式，以根據您的需要構建源資料。 然後，目標模式用於建立包含源資料的[!DNL Platform]資料集。 此目標XDM模式還擴展了XDM [!DNL Individual Profile]類。
+為了在[!DNL Platform]中使用源資料，必須建立目標架構，以根據您的需要構建源資料。 然後，目標架構將用於建立包含源資料的[!DNL Platform]資料集。 此目標XDM架構也會擴充XDM [!DNL Individual Profile]類別。
 
-通過對[方案註冊表API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml)執行POST請求，可以建立目標XDM方案。
+通過對[Schema Registry API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml)執行POST請求，可以建立目標XDM架構。
 
 **API格式**
 
@@ -143,7 +142,7 @@ POST /tenant/schemas
 
 **要求**
 
-以下示例請求建立一個XDM模式以擴展XDM [!DNL Individual Profile]類。
+下列範例要求會建立可擴充XDM [!DNL Individual Profile]類別的XDM架構。
 
 ```shell
 curl -X POST \
@@ -177,7 +176,7 @@ curl -X POST \
 
 **回應**
 
-成功的響應返回新建立的架構的詳細資訊，包括其唯一標識符(`$id`)。 在後續步驟中需要此ID，才能建立目標資料集、對應和資料流。
+成功的響應返回新建立的架構的詳細資訊，包括其唯一標識符(`$id`)。 在後續步驟中，需要此ID才能建立目標資料集、對應和資料流。
 
 ```json
 {
@@ -241,7 +240,7 @@ curl -X POST \
 
 ## 建立目標資料集
 
-通過對[目錄服務API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml)執行POST請求，提供裝載內目標方案的ID，可以建立目標資料集。
+目標資料集的建立方式，是對[目錄服務API](https://www.adobe.io/experience-platform-apis/references/catalog/)執行POST請求，提供裝載內目標架構的ID。
 
 **API格式**
 
@@ -271,11 +270,11 @@ curl -X POST \
 | 屬性 | 說明 |
 | -------- | ----------- |
 | `schemaRef.id` | 目標XDM架構的`$id`。 |
-| `schemaRef.contentType` | 架構的版本。 此值必須設定為`application/vnd.adobe.xed-full-notext+json;version=1` ，以返回方案的最新次要版本。 |
+| `schemaRef.contentType` | 結構的版本。 此值必須設定`application/vnd.adobe.xed-full-notext+json;version=1`，這會傳回架構的最新次要版本。 |
 
 **回應**
 
-成功的響應返回一個陣列，該陣列包含以`"@/datasets/{DATASET_ID}"`格式新建立的資料集的ID。 資料集ID是唯讀、系統產生的字串，用於在API呼叫中參考資料集。 在後續步驟中，依需要儲存目標資料集ID以建立目標連線和資料流。
+成功的回應會傳回一個陣列，內含新建立資料集的ID，格式為`"@/datasets/{DATASET_ID}"`。 資料集ID是唯讀、系統產生的字串，用於在API呼叫中參考資料集。 在後續步驟建立目標連線和資料流時，視需要儲存目標資料集ID。
 
 ```json
 [
@@ -283,11 +282,11 @@ curl -X POST \
 ]
 ```
 
-## 建立目標連接{#target-connection}
+## 建立目標連線 {#target-connection}
 
-目標連接表示到所收錄資料所在目的地的連接。 要建立目標連接，必須提供與「資料湖」關聯的固定連接規範ID。 此連接規範ID為：`c604ff05-7f1a-43c0-8e18-33bf874cb11c`。
+目標連線代表所擷取資料所登陸之目的地的連線。 要建立目標連接，必須提供與Data Lake關聯的固定連接規範ID。 此連接規範ID為：`c604ff05-7f1a-43c0-8e18-33bf874cb11c`。
 
-您現在擁有目標資料集的唯一識別碼、目標模式，以及與資料湖的連線規範ID。 使用[!DNL Flow Service] API，您可以指定這些識別碼以及包含傳入來源資料的資料集來建立目標連線。
+您現在擁有目標架構、目標資料集以及資料湖連線規格ID的唯一識別碼。 使用[!DNL Flow Service] API，您可以指定這些識別碼以及將包含入站來源資料的資料集，以建立目標連線。
 
 **API格式**
 
@@ -328,13 +327,13 @@ curl -X POST \
 | 屬性 | 說明 |
 | -------- | ----------- |
 | `data.schema.id` | 目標XDM架構的`$id`。 |
-| `data.schema.version` | 架構的版本。 此值必須設定為`application/vnd.adobe.xed-full+json;version=1` ，以返回方案的最新次要版本。 |
+| `data.schema.version` | 結構的版本。 此值必須設定`application/vnd.adobe.xed-full+json;version=1`，這會傳回架構的最新次要版本。 |
 | `params.dataSetId` | 目標資料集的ID。 |
 | `connectionSpec.id` | 用於連接到資料湖的連接規範ID。 此ID為：`c604ff05-7f1a-43c0-8e18-33bf874cb11c`。 |
 
 **回應**
 
-成功的響應返回新目標連接的唯一標識符(`id`)。 在後續步驟中需要此值才能建立資料流。
+成功的響應返回新目標連接的唯一標識符(`id`)。 在以後的步驟中需要此值才能建立資料流。
 
 ```json
 {
@@ -343,9 +342,9 @@ curl -X POST \
 }
 ```
 
-## 建立映射{#mapping}
+## 建立對應 {#mapping}
 
-為了將源資料引入目標資料集，必須首先將其映射到目標資料集所遵守的目標模式。 這是通過對[轉換服務API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/mapping-service-api.yaml)執行POST請求，並在請求裝載中定義資料映射來實現的。
+若要將來源資料內嵌至目標資料集，必須先將其對應至目標資料集所遵守的目標架構。 這是透過對[轉換服務API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/mapping-service-api.yaml)執行POST要求，並在要求裝載中定義資料對應而達成。
 
 **API格式**
 
@@ -391,7 +390,7 @@ curl -X POST \
 
 **回應**
 
-成功的響應返回新建立映射的詳細資訊，包括其唯一標識符(`id`)。 在後續步驟中需要此ID才能建立資料流。
+成功的響應返回新建立的映射的詳細資訊，包括其唯一標識符(`id`)。 在後續步驟中需要此ID才能建立資料流。
 
 ```json
 {
@@ -404,7 +403,7 @@ curl -X POST \
 }
 ```
 
-## 查找資料流規範{#specs}
+## 查找資料流規範 {#specs}
 
 資料流負責從源收集資料並將其導入[!DNL Platform]。 要建立資料流，必須首先通過對[!DNL Flow Service] API執行GET請求來獲取資料流規範。 資料流規範負責從&#x200B;**[!UICONTROL eCommerce]**&#x200B;源收集資料。
 
@@ -426,7 +425,7 @@ curl -X GET \
 
 **回應**
 
-成功的響應返回負責將源資料帶入平台的資料流規範的詳細資訊。 響應包括建立新資料流所需的唯一流規範`id`。
+成功的響應返回負責將源資料帶入平台的資料流規範的詳細資訊。 響應包含建立新資料流所需的唯一流規範`id`。
 
 ```json
 {
@@ -660,13 +659,13 @@ curl -X GET \
 收集資料的最後一步是建立資料流。 此時，您應準備下列必要值：
 
 * [源連接ID](#source)
-* [目標連線ID](#target)
+* [Target連線ID](#target)
 * [對應ID](#mapping)
 * [資料流規範ID](#specs)
 
-資料流負責調度和收集源中的資料。 您可以在執行POST請求的同時在請求裝載中提供先前提到的值，從而建立資料流。
+資料流負責從源中調度和收集資料。 您可以在請求裝載中提供先前提及的值時，執行POST請求以建立資料流。
 
-若要排程擷取，您必須先將開始時間值設定為以秒為單位的紀元時間。 然後，您必須將頻率值設為以下五個選項之一：`once`、`minute`、`hour`、`day`或`week`。 間隔值指定兩個連續的提取之間的期間，並且建立一次性提取不需要設定間隔。 對於所有其它頻率，間隔值必須設定為等於或大於`15`。
+若要排程擷取，您必須先將開始時間值設為紀元時間（以秒為單位）。 然後，您必須將頻率值設定為以下五個選項之一：`once`、`minute`、`hour`、`day`或`week`。 間隔值指定兩個連續擷取之間的期間，並建立一次性擷取不需要設定間隔。 對於所有其他頻率，間隔值必須設定為等於或大於`15`。
 
 **API格式**
 
@@ -714,14 +713,14 @@ curl -X POST \
 
 | 屬性 | 說明 |
 | -------- | ----------- |
-| `flowSpec.id` | 在上一步驟中檢索的[流規範ID](#specs)。 |
-| `sourceConnectionIds` | 在先前步驟中檢索的[源連接ID](#source)。 |
-| `targetConnectionIds` | 在先前步驟中擷取的[目標連線ID](#target-connection)。 |
-| `transformations.params.mappingId` | 在先前步驟中檢索的[映射ID](#mapping)。 |
-| `transformations.params.mappingId` | 與&#x200B;**[!UICONTROL eCommerce]**&#x200B;源關聯的映射ID。 |
-| `scheduleParams.startTime` | 資料流在時代時間中的開始時間。 |
+| `flowSpec.id` | 在上一步中檢索的[流規格ID](#specs)。 |
+| `sourceConnectionIds` | 先前步驟中擷取的[來源連線ID](#source)。 |
+| `targetConnectionIds` | 先前步驟中擷取的[目標連線ID](#target-connection)。 |
+| `transformations.params.mappingId` | 先前步驟中擷取的[對應ID](#mapping)。 |
+| `transformations.params.mappingId` | 與您的&#x200B;**[!UICONTROL eCommerce]**&#x200B;來源相關聯的對應ID。 |
+| `scheduleParams.startTime` | 資料流的開始時間（以Epoch時間表示）。 |
 | `scheduleParams.frequency` | 資料流將收集資料的`frequency`。 可接受的值包括：`once`、`minute`、`hour`、`day`或`week`。 |
-| `scheduleParams.interval` | 該間隔用於指定兩個連續流運行之間的期間。 間隔的值應為非零整數。 當`frequency`設為`once`時，不需要間隔，對於其他`frequency`值，間隔應大於或等於`15`。 |
+| `scheduleParams.interval` | 該間隔指定兩個連續流運行之間的週期。 間隔的值應為非零整數。 當`frequency`設定為`once`時，不需要間隔，對於其他`frequency`值，間隔應大於或等於`15`。 |
 
 **回應**
 
@@ -734,13 +733,13 @@ curl -X POST \
 }
 ```
 
-## 監控資料流
+## 監視資料流
 
-建立資料流後，您可以監視通過其接收的資料，以查看有關流運行、完成狀態和錯誤的資訊。 有關如何監視資料流的詳細資訊，請參見API ](../monitor.md)中有關[監視資料流的教程
+建立資料流後，您可以監視正在通過資料流進行內嵌的資料，以查看有關流運行、完成狀態和錯誤的資訊。 有關如何監視資料流的詳細資訊，請參閱API ](../monitor.md)中有關[監視資料流的教程
 
 ## 後續步驟
 
-在本教程中，您建立了源連接器，以按計畫收集資料&#x200B;**[!UICONTROL eCommerce]**。 現在，下游[!DNL Platform]服務（例如[!DNL Real-time Customer Profile]和[!DNL Data Science Workspace]）可以使用傳入的資料。 如需詳細資訊，請參閱下列檔案：
+依照本教學課程，您已建立來源連接器，以排程收集資料&#x200B;**[!UICONTROL eCommerce]**。 下游[!DNL Platform]服務（如[!DNL Real-time Customer Profile]和[!DNL Data Science Workspace]）現在可以使用傳入的資料。 如需詳細資訊，請參閱下列檔案：
 
-* [即時客戶個人檔案總覽](../../../../profile/home.md)
-* [資料科學工作區概觀](../../../../data-science-workspace/home.md)
+* [即時客戶個人檔案概觀](../../../../profile/home.md)
+* [Data Science Workspace概觀](../../../../data-science-workspace/home.md)
