@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 沙箱API指南附錄
 description: 本檔案提供與使用沙箱API相關的補充資訊。
 topic-legacy: developer guide
-source-git-commit: e4067f79e9da106fe2d2a86fa0024c2e5fe5d0ba
+source-git-commit: f5ce7b7f09c624c53065757bb8a9b09f989dce0a
 workflow-type: tm+mt
-source-wordcount: '128'
+source-wordcount: '124'
 ht-degree: 1%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 1%
 
 ## 使用查詢參數 {#query}
 
-[[!DNL Sandbox] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sandbox-api.yaml)支援在列出沙箱時，使用查詢參數來篩選結果。
+[[!DNL Sandbox] API](https://www.adobe.io/experience-platform-apis/references/sandbox)支援在列出沙箱時，使用查詢參數來篩選結果。
 
 >[!NOTE]
 >
