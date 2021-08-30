@@ -1,10 +1,10 @@
 ---
 title: Adobe Analytics擴充功能概述
 description: 了解Adobe Experience Platform中的Adobe Analytics標籤擴充功能。
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+source-git-commit: 90dece1054cf54d40a62093990a034ee5f3bccaf
 workflow-type: tm+mt
 source-wordcount: '2202'
-ht-degree: 83%
+ht-degree: 84%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 83%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch在Adobe Experience Platform中已重新命名為一套資料收集技術。 因此，產品檔案中已推出數個術語變更。 有關術語更改的綜合參考，請參閱以下[document](../../../term-updates.md)。
+>Adobe Experience Platform Launch在Adobe Experience Platform中已重新命名為一套資料收集技術。 因此，所有產品文件中出現了幾項術語變更。 如需術語變更的彙整參考資料，請參閱以下[文件](../../../term-updates.md)。
 
 請使用此參考資料來了解有關設定 Adobe Analytics 擴充功能的資訊，以及使用此擴充功能建立規則時可用的選項。
 
@@ -366,7 +366,7 @@ Analytics 擴充功能提供下列動作：
 
 選取是否要遞增頁面檢視。
 
-#### 不要遞增頁面檢視 - s.t()
+#### 請勿遞增頁面檢視 — s.tl()
 
 選取是否不要增加頁面檢視。
 
