@@ -1,49 +1,48 @@
 ---
-keywords: Experience Platform; home；熱門主題；查詢服務；查詢服務； RStudio;rstudio；連接查詢服務；
+keywords: Experience Platform；首頁；熱門主題；查詢服務；查詢服務；RStudio;rstudio；連線至查詢服務；
 solution: Experience Platform
-title: 將RStudio連接至查詢服務
+title: 將RStudio連接到查詢服務
 topic-legacy: connect
-description: 本檔案將逐步介紹將R Studio與Adobe Experience Platform查詢服務連接的步驟。
+description: 本檔案將逐步說明將R Studio與Adobe Experience Platform Query Service連接的步驟。
 exl-id: 8dd82bad-6ffb-4536-9c27-223f471a49c6
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 910a38ccb556ec427584d9b522e29f6877d1c987
 workflow-type: tm+mt
-source-wordcount: '365'
+source-wordcount: '362'
 ht-degree: 0%
 
 ---
 
 # 將[!DNL RStudio]連接到查詢服務
 
-本檔案將逐步介紹將[!DNL RStudio]與Adobe Experience Platform[!DNL Query Service]連接的步驟。
+本檔案將逐步說明將[!DNL RStudio]與Adobe Experience Platform [!DNL Query Service]連接的步驟。
 
 >[!NOTE]
 >
-> 本指南假設您已擁有[!DNL RStudio]的存取權，並熟悉如何使用它。 有關[!DNL RStudio]的更多資訊，請參閱[official [!DNL RStudio] 文檔](https://rstudio.com/products/rstudio/)。
+> 本指南假設您已擁有[!DNL RStudio]的存取權，且熟悉如何使用。 有關[!DNL RStudio]的更多資訊，請參閱[official [!DNL RStudio] documentation](https://rstudio.com/products/rstudio/)。
 > 
-> 此外，要將RStudio與查詢服務一起使用，需要安裝PostgreSQL JDBC 4.2驅動程式。 您可以從[PostgreSQL正式站點](https://jdbc.postgresql.org/download.html)下載JDBC驅動程式。
+> 此外，要將RStudio與Query Service一起使用，需要安裝PostgreSQL JDBC 4.2驅動程式。 您可以從[PostgreSQL官方站點](https://jdbc.postgresql.org/download.html)下載JDBC驅動程式。
 
 ## 在[!DNL RStudio]介面中建立[!DNL Query Service]連接
 
-安裝[!DNL RStudio]後，需要安裝RJDBC包。 前往&#x200B;**[!DNL Packages]**&#x200B;窗格，然後選擇&#x200B;**[!DNL Install]**。
+安裝[!DNL RStudio]後，需要安裝RJDBC包。 轉至&#x200B;**[!DNL Packages]**&#x200B;窗格，然後選擇&#x200B;**[!DNL Install]**。
 
 ![](../images/clients/rstudio/install-package.png)
 
-此時會出現一個彈出畫面，顯示&#x200B;**[!DNL Install Packages]**&#x200B;畫面。 請確定&#x200B;**[!DNL Install from]**&#x200B;區段已選取&#x200B;**[!DNL Repository (CRAN)]**。 **[!DNL Packages]**&#x200B;的值應為`RJDBC`。 確保已選擇&#x200B;**[!DNL Install dependencies]**。 確認所有值都正確後，選擇&#x200B;**[!DNL Install]**&#x200B;以安裝軟體包。
+出現快顯視窗，顯示&#x200B;**[!DNL Install Packages]**&#x200B;畫面。 確保為&#x200B;**[!DNL Install from]**&#x200B;部分選擇&#x200B;**[!DNL Repository (CRAN)]**。 **[!DNL Packages]**&#x200B;的值應為`RJDBC`。 確保已選取&#x200B;**[!DNL Install dependencies]**。 確認所有值均正確後，選擇&#x200B;**[!DNL Install]**&#x200B;以安裝包。
 
 ![](../images/clients/rstudio/install-jrdbc.png)
 
-現在已安裝RJDBC包，請重新啟動RStudio以完成安裝程式。
+現在RJDBC包已安裝，請重新啟動RStudio以完成安裝過程。
 
-在RStudio重新啟動後，您現在可以連線至查詢服務。 在&#x200B;**[!DNL Packages]**&#x200B;窗格中選擇&#x200B;**[!DNL RJDBC]**&#x200B;軟體包，然後在控制台中輸入以下命令：
+RStudio重新啟動後，您現在可以連線至查詢服務。 在&#x200B;**[!DNL Packages]**&#x200B;窗格中選擇&#x200B;**[!DNL RJDBC]**&#x200B;包，然後在控制台中輸入以下命令：
 
 ```console
 pgsql <- JDBC("org.postgresql.Driver", "{PATH TO THE POSTGRESQL JDBC JAR}", "`")
 ```
 
-其中{PATH TO THE POSTGRESQL JDBC JAR}代表您電腦上安裝的PostgreSQL JDBC JAR的路徑。
+其中{PATH TO POSTGRESQL JDBC JAR}表示安裝在電腦上的PostgreSQL JDBC JAR的路徑。
 
-現在，您可以在控制台中輸入以下命令來建立與查詢服務的連接：
+現在，您可以在主控台中輸入下列命令，以建立與Query Service的連線：
 
 ```console
 qsconnection <- dbConnect(pgsql, "jdbc:postgresql://{HOSTNAME}:{PORT}/{DATABASE_NAME}?user={USERNAME}&password={PASSWORD}&sslmode=require")
@@ -51,15 +50,15 @@ qsconnection <- dbConnect(pgsql, "jdbc:postgresql://{HOSTNAME}:{PORT}/{DATABASE_
 
 >[!NOTE]
 >
->有關查找資料庫名稱、主機、埠和登錄憑據的詳細資訊，請訪問Platform](https://platform.adobe.com/query/configuration)上的[ credentials頁。 若要尋找您的認證，請登入[!DNL Platform]，然後選取&#x200B;**[!UICONTROL Queries]**，後面接著&#x200B;**[!UICONTROL Credentials]**。
+>有關查找資料庫名稱、主機、埠和登錄憑據的詳細資訊，請參閱[憑據指南](../ui/credentials.md)。 要查找憑據，請登錄[!DNL Platform]，然後選擇&#x200B;**[!UICONTROL 查詢]**，後跟&#x200B;**[!UICONTROL 憑據]**。
 
 ![](../images/clients/rstudio/connection-rjdbc.png)
 
-## 編寫查詢
+## 寫入查詢
 
-現在，您已連接到[!DNL Query Service]，您可以編寫查詢以執行和編輯SQL陳述式。 例如，您可以使用`dbGetQuery(con, sql)`來執行查詢，其中`sql`是您要運行的SQL查詢。
+現在您已連接到[!DNL Query Service]，可以編寫查詢以執行和編輯SQL陳述式。 例如，您可以使用`dbGetQuery(con, sql)`執行查詢，其中`sql`是您要執行的SQL查詢。
 
-下列查詢使用包含[Experience Events](../best-practices/experience-event-queries.md)的資料集，並根據裝置的螢幕高度建立網站頁面檢視的色階分佈圖。
+下列查詢使用包含[體驗事件](../best-practices/experience-event-queries.md)的資料集，並根據裝置的螢幕高度建立網站頁面檢視的色階分佈圖。
 
 ```sql
 df_pageviews <- dbGetQuery(con,
@@ -96,4 +95,4 @@ df_pageviews
 
 ## 後續步驟
 
-有關如何寫入和運行查詢的詳細資訊，請閱讀[運行查詢](../best-practices/writing-queries.md)的指南。
+有關如何編寫和運行查詢的詳細資訊，請閱讀[運行查詢](../best-practices/writing-queries.md)的指南。

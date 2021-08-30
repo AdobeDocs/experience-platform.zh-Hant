@@ -5,9 +5,9 @@ title: 將Power BI連接到查詢服務
 topic-legacy: connect
 description: 本檔案會逐步說明將Power BI與Adobe Experience Platform Query Service連線的步驟。
 exl-id: 8fcd3056-aac7-4226-a354-ed7fb8fe9ad7
-source-git-commit: 2109abd02b9c6c321c21a8fe3826509d22b1c2e2
+source-git-commit: 910a38ccb556ec427584d9b522e29f6877d1c987
 workflow-type: tm+mt
-source-wordcount: '468'
+source-wordcount: '463'
 ht-degree: 1%
 
 ---
@@ -42,7 +42,7 @@ ht-degree: 1%
 
 ![](../images/clients/power-bi/get-data.png)
 
-您現在可以輸入伺服器和資料庫的值。 有關查找資料庫名稱、主機、埠和登錄憑據的詳細資訊，請訪問Platform](https://platform.adobe.com/query/configuration)上的[憑據頁。 要查找憑據，請登錄[!DNL Platform]，然後選擇&#x200B;**[!UICONTROL 查詢]**，後跟&#x200B;**[!UICONTROL 憑據]**。
+您現在可以輸入伺服器和資料庫的值。 有關查找資料庫名稱、主機、埠和登錄憑據的詳細資訊，請參閱[憑據指南](../ui/credentials.md)。 要查找憑據，請登錄[!DNL Platform]，然後選擇&#x200B;**[!UICONTROL 查詢]**，後跟&#x200B;**[!UICONTROL 憑據]**。
 
 **[!DNL Server]** 是在連接詳細資訊下找到的主機。對於生產環境，將埠`:80`添加到主機字串的末尾。 **[!DNL Database]** 可以是「all」或資料集表格名稱。
 

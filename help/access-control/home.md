@@ -5,9 +5,9 @@ topic-legacy: overview
 title: 存取控制概覽
 description: Adobe Experience Platform的存取控制可透過Adobe Admin Console提供。 此功能會運用Admin Console中的產品設定檔，將使用者與權限和沙箱連結。
 exl-id: 591d59ad-2784-4ae4-a509-23649ce712c9
-source-git-commit: 4425f7d61aa5ff357c7ba25cf986201fefeacd67
+source-git-commit: 6ecfad588f97474988b86199c008953714a3bed8
 workflow-type: tm+mt
-source-wordcount: '1347'
+source-wordcount: '1363'
 ht-degree: 2%
 
 ---
@@ -115,6 +115,7 @@ Adobe Admin Console提供管理Adobe產品權益和組織存取權限的集中�
 | [!DNL Dashboards] | [!UICONTROL 查看許可證使用情況儀表板] | 以唯讀存取權檢視授權使用控制面板。 |
 | [!DNL Dashboards] | [!UICONTROL 管理標準控制面板] | 新增尚未在Data Warehouse中的自訂屬性。 |
 | [!DNL Query Service] | [!UICONTROL 管理查詢] | 存取讀取、建立、編輯和刪除Platform資料的結構化SQL查詢。 |
+| [!DNL Query Service] | [!UICONTROL 管理查詢服務整合] | 有權建立、更新和刪除「查詢服務」存取的未到期憑證。 |
 
 ## 後續步驟
 

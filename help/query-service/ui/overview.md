@@ -5,10 +5,10 @@ title: Query Service UI指南
 topic-legacy: guide
 description: Adobe Experience Platform查詢服務提供可用來撰寫和執行查詢、檢視先前執行的查詢，以及存取由您IMS組織內的使用者儲存的查詢的使用者介面。
 exl-id: 99ad25e4-0ca4-4bd1-b701-ab463197930b
-source-git-commit: 483bcea231ed5f25c76771d0acba7e0c62dfed16
+source-git-commit: 30c3ca4aa3e8f42140566c8fdf9fbc855ec72e1b
 workflow-type: tm+mt
-source-wordcount: '628'
-ht-degree: 2%
+source-wordcount: '614'
+ht-degree: 3%
 
 ---
 
@@ -37,7 +37,7 @@ Adobe Experience Platform [!DNL Query Service]提供可用來撰寫和執行查�
 | 名稱 | 用戶建立的查詢名。 您可以在名稱上選取以在[!DNL Query Editor]中開啟查詢。 您也可以使用搜尋列來搜尋查詢的名稱。 搜尋會區分大小寫。 |
 | SQL | SQL查詢的前幾個字元。 暫留在程式碼上會顯示完整查詢。 |
 | 修改者 | 修改查詢的最後一個用戶。 您組織中任何具有[!DNL Query Service]存取權的使用者都可以修改查詢。 |
-| 上次修改時間 | 瀏覽器時區中上次修改查詢的日期和時間。 |
+| 上次修改日期 | 瀏覽器時區中上次修改查詢的日期和時間。 |
 
 ## 記錄檔
 
@@ -57,7 +57,7 @@ Adobe Experience Platform [!DNL Query Service]提供可用來撰寫和執行查�
 
 ## 憑證
 
-**[!UICONTROL Credentials]**&#x200B;標籤顯示您的[!DNL Postgres]憑證。 選取任何欄位旁的&#x200B;**[!UICONTROL 複製]**&#x200B;圖示，將其內容儲存在鍵盤緩衝區中。 有關如何使用這些憑據與外部客戶端連接的詳細資訊，請閱讀[connect with clients guide](../clients/overview.md)。
+**[!UICONTROL Credentials]**&#x200B;標籤會同時顯示過期和未到期的憑證。 有關如何使用這些憑據與外部客戶端連接的詳細資訊，請參閱[憑據指南](../clients/overview.md)。
 
 ![影像](../images/ui/overview/credentials.png)
 
