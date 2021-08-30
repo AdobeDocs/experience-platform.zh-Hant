@@ -5,9 +5,9 @@ type: Tutorial
 seo-title: Activate audience data to batch profile export destinations
 description: 了解如何將區段傳送至批次設定檔式型目的地，以啟動Adobe Experience Platform中的受眾資料。
 seo-description: Learn how to activate the audience data you have in Adobe Experience Platform by sending segments to batch profile-based destinations.
-source-git-commit: 7c10f39e7452481a00fb4269925c80aab34a7319
+source-git-commit: 99835d0b3d8ab64422be7f878cf556ac8890b123
 workflow-type: tm+mt
-source-wordcount: '1925'
+source-wordcount: '1959'
 ht-degree: 0%
 
 ---
@@ -75,9 +75,12 @@ ht-degree: 0%
 
    >[!IMPORTANT]
    >
-   >由於內部Experience Platform進程的配置方式，第一個增量或完整檔案導出可能不包含所有回填資料。<br> <br> 為確保完整檔案和增量檔案都能匯出完整且最新的回填資料，Adobe建議在次日中午12點後設定第一次檔案匯出時間。這是將在未來版本中解決的限制。
+   >由於內部Experience Platform進程的配置方式，第一個增量或完整檔案導出可能不包含所有回填資料。<br> <br> 為確保完整檔案和增量檔案都能匯出完整且最新的回填資料，Adobe建議在次日中午12點後設定第一次檔案匯出時間。未來版本將會解決此限制。
 
 1. 使用&#x200B;**[!UICONTROL Date]**&#x200B;選取器來選擇應進行匯出的日期或間隔。
+   >[!TIP]
+   >
+   > 若是每日匯出，請設定您的開始和結束日期，以符合下游平台中促銷活動的持續時間。
 1. 選擇&#x200B;**[!UICONTROL 建立]**&#x200B;以保存計畫。
 
 
@@ -96,14 +99,17 @@ ht-degree: 0%
    * **[!UICONTROL 每日]**:在您指定的時間，每天計劃一次增量檔案導出。
    * **[!UICONTROL 每小時]**:計畫每3、6、8或12小時導出增量檔案。
 
-2. 使用&#x200B;**[!UICONTROL Time]**&#x200B;選擇器，選擇應在何時進行導出的[!DNL UTC]格式。
+1. 使用&#x200B;**[!UICONTROL Time]**&#x200B;選擇器，選擇應在何時進行導出的[!DNL UTC]格式。
 
    >[!IMPORTANT]
    >
-   >由於內部Experience Platform進程的配置方式，第一個增量或完整檔案導出可能不包含所有回填資料。<br> <br> 為確保完整檔案和增量檔案都能匯出完整且最新的回填資料，Adobe建議在次日中午12點後設定第一次檔案匯出時間。這是將在未來版本中解決的限制。
+   >由於內部Experience Platform進程的配置方式，第一個增量或完整檔案導出可能不包含所有回填資料。<br> <br> 為確保完整檔案和增量檔案都能匯出完整且最新的回填資料，Adobe建議在次日中午12點後設定第一次檔案匯出時間。未來版本將會解決此限制。
 
-3. 使用&#x200B;**[!UICONTROL Date]**&#x200B;選取器來選擇應進行匯出的日期或間隔。
-4. 選擇&#x200B;**[!UICONTROL 建立]**&#x200B;以保存計畫。
+1. 使用&#x200B;**[!UICONTROL Date]**&#x200B;選取器來選擇應進行匯出的日期或間隔。
+   >[!TIP]
+   >
+   >設定您的開始和結束日期，以符合下游平台中促銷活動的持續時間。
+1. 選擇&#x200B;**[!UICONTROL 建立]**&#x200B;以保存計畫。
 
 ### 配置檔案名 {#file-names}
 
@@ -184,7 +190,7 @@ ht-degree: 0%
 >abstract="選取重複資料刪除金鑰，即可在匯出檔案中消除相同設定檔的多個記錄。 選取單一命名空間或最多兩個XDM架構屬性作為重複資料刪除索引鍵。 未選取重複資料刪除金鑰可能會導致匯出檔案中出現重複的設定檔項目。"
 >additional-url="http://www.adobe.com/go/destinations-deduplication-keys-en" text="進一步了解檔案"
 
-重複資料刪除金鑰是使用者定義的主要金鑰，可決定使用者要依此身分對其設定檔進行重複資料刪除的&#x200B;身分。
+重複資料刪除金鑰是使用者定義的主金鑰，可決定使用者要依此身分對其設定檔進行重複資料刪除的&#x200B;身分。
 
 重複資料刪除索引鍵消除了在一個匯出檔案中有多個相同設定檔記錄的可能性。
 
