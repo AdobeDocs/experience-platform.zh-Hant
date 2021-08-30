@@ -6,9 +6,9 @@ topic-legacy: tutorial
 type: Tutorial
 description: 本教學課程使用Schema Registry API來引導您完成使用標準類別撰寫架構的步驟。
 exl-id: fa487a5f-d914-48f6-8d1b-001a60303f3d
-source-git-commit: e4bf5bb77ac4186b24580329699d74d653310d93
+source-git-commit: f269a7b1584a6e4a0e1820a0c587a647c0c8f7b5
 workflow-type: tm+mt
-source-wordcount: '2426'
+source-wordcount: '2422'
 ht-degree: 1%
 
 ---
@@ -176,7 +176,7 @@ curl -X GET \
 }
 ```
 
-### 添加欄位組{#add-a-field-group}
+### 新增欄位群組 {#add-a-field-group}
 
 現在已建立並確認「忠誠會員」結構，可將欄位群組新增至該結構。
 
@@ -957,7 +957,7 @@ curl -X PATCH \
 
 結構用於將資料內嵌至[!DNL Experience Platform]。 這些資料最終會用於多項服務，以建立個人的單一統一檢視。 為協助進行此程式，關鍵欄位可標示為「身分」，在資料擷取時，這些欄位中的資料會插入該個人的「身分圖表」中。 然後，[[!DNL Real-time Customer Profile]](../../profile/home.md)和其他[!DNL Experience Platform]服務便可存取圖形資料，以提供每個個別客戶的匯整視圖。
 
-通常標示為「身分」的欄位包括：電子郵件地址、電話號碼、[[!DNL Experience Cloud ID (ECID)]](https://experienceleague.adobe.com/docs/id-service/using/home.html)、CRM ID或其他唯一ID欄位。
+通常標示為「身分」的欄位包括：電子郵件地址、電話號碼、[[!DNL Experience Cloud ID (ECID)]](https://experienceleague.adobe.com/docs/id-service/using/home.html?lang=zh-Hant)、CRM ID或其他唯一ID欄位。
 
 請考量貴組織專屬的任何唯一識別碼，因為這些識別碼也可能是良好的身分欄位。
 
@@ -996,7 +996,7 @@ curl -X POST \
 
 >[!NOTE]
 >
->您可以列出可用的&quot;xdm:namespace&quot;值，或使用[[!DNL Identity Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/id-service-api.yaml)建立新值。 「xdm:property」的值可以是「xdm:code」或「xdm:id」，視使用的「xdm:namespace」而定。
+>您可以列出可用的&quot;xdm:namespace&quot;值，或使用[[!DNL Identity Service API]](https://www.adobe.io/experience-platform-apis/references/identity-service)建立新值。 「xdm:property」的值可以是「xdm:code」或「xdm:id」，視使用的「xdm:namespace」而定。
 
 **回應**
 
@@ -1180,7 +1180,7 @@ curl -X GET \
 
 以下資訊補充了API教學課程。
 
-## 完整忠誠會員架構{#complete-schema}
+## 完整忠誠會員結構 {#complete-schema}
 
 在本教學課程中，會撰寫描述零售忠誠計畫成員的結構描述。
 

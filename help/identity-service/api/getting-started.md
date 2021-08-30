@@ -1,51 +1,50 @@
 ---
-keywords: Experience Platform；首頁；熱門主題；身份服務api；身份服務開發人員指南；地區
+keywords: Experience Platform；首頁；熱門主題；identity service api;identity service開發人員指南；地區
 solution: Experience Platform
-title: Identity Service API指南
+title: Identity服務API指南
 topic-legacy: API guide
-description: Identity Service API可讓開發人員使用Adobe Experience Platform的身分圖表，管理客戶的跨裝置、跨通道和近乎即時的身分識別。 請依照本指南，瞭解如何使用API執行關鍵作業。
+description: Identity服務API可讓開發人員使用Adobe Experience Platform中的身分圖表，管理客戶的跨裝置、跨通道和近乎即時的身分識別。 請依照本指南，了解如何使用API執行重要作業。
 exl-id: d612af38-4648-4c3e-8cfd-3f306c9370e1
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: f269a7b1584a6e4a0e1820a0c587a647c0c8f7b5
 workflow-type: tm+mt
-source-wordcount: '771'
-ht-degree: 0%
+source-wordcount: '767'
+ht-degree: 1%
 
 ---
 
 # [!DNL Identity Service] API指南
 
-Adobe Experience Platform[!DNL Identity Service]管理跨裝置、跨通道和近乎即時的客戶識別，在Adobe Experience Platform稱為身份圖。
+Adobe Experience Platform [!DNL Identity Service]在Adobe Experience Platform內稱為身分圖表，管理客戶的跨裝置、跨通道及近乎即時身分識別。
 
 ## 快速入門
 
-本指南需要對Adobe Experience Platform的下列組成部分有切實的瞭解：
+本指南需要妥善了解下列Adobe Experience Platform元件：
 
-- [[!DNL Identity Service]](../home.md):解決客戶個人檔案資料分散所帶來的根本挑戰。它可跨裝置和系統橋接身分，讓客戶與您的品牌互動。
-- [[!DNL Real-time Customer Profile]](../../profile/home.md):根據來自多個來源的匯整資料，即時提供統一的消費者個人檔案。
+- [[!DNL Identity Service]](../home.md):解決了客戶設定檔資料分散帶來的根本難題。它可跨裝置和系統橋接身分，讓客戶與您的品牌互動。
+- [[!DNL Real-time Customer Profile]](../../profile/home.md):根據來自多個來源的匯總資料，即時提供統一的消費者設定檔。
 - [[!DNL Experience Data Model (XDM)]](../../xdm/home.md):組織客戶體驗資 [!DNL Platform] 料的標準化架構。
 
-以下各節提供您必須知道或掌握的額外資訊，才能成功呼叫[!DNL Identity Service] API。
+以下各節提供您需要知道或掌握的其他資訊，以便成功呼叫[!DNL Identity Service] API。
 
 ### 讀取範例API呼叫
 
-本指南提供範例API呼叫，以示範如何格式化您的請求。 這些包括路徑、必要標題和正確格式化的請求負載。 也提供API回應中傳回的範例JSON。 如需範例API呼叫檔案中所用慣例的詳細資訊，請參閱[!DNL Experience Platform]疑難排解指南中[如何讀取範例API呼叫](../../landing/troubleshooting.md#how-do-i-format-an-api-request)一節。
+本指南提供範例API呼叫，以示範如何設定請求格式。 這些功能包括路徑、必要標題和格式正確的請求裝載。 也提供API回應中傳回的範例JSON。 如需範例API呼叫檔案中所使用慣例的資訊，請參閱[!DNL Experience Platform]疑難排解指南中[如何讀取範例API呼叫](../../landing/troubleshooting.md#how-do-i-format-an-api-request)一節。
 
 ### 收集必要標題的值
 
-若要呼叫[!DNL Platform] API，您必須先完成[驗證教學課程](https://www.adobe.com/go/platform-api-authentication-en)。 完成驗證教學課程後，所有[!DNL Experience Platform] API呼叫中每個所需標題的值都會顯示在下面：
+若要呼叫[!DNL Platform] API，您必須先完成[authentication tutorial](https://www.adobe.com/go/platform-api-authentication-en)。 完成驗證教學課程後，將提供所有[!DNL Experience Platform] API呼叫中每個必要標題的值，如下所示：
 
-- 授權：載體`{ACCESS_TOKEN}`
-- x-api-key:`{API_KEY}`
-- x-gw-ims-org-id:`{IMS_ORG}`
+- 授權：承載`{ACCESS_TOKEN}`
+- x-api-key: `{API_KEY}`
+- x-gw-ims-org-id: `{IMS_ORG}`
 
-[!DNL Experience Platform]中的所有資源都隔離到特定的虛擬沙盒。 對[!DNL Platform] API的所有請求都需要一個標題，該標題指定要在中執行操作的沙盒的名稱：
+[!DNL Experience Platform]中的所有資源都與特定虛擬沙箱隔離。 對[!DNL Platform] API的所有請求都需要標題，以指定作業將在下列位置進行的沙箱名稱：
 
-- x-sandbox-name:`{SANDBOX_NAME}`
+- x-sandbox-name: `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
->如需[!DNL Platform]中沙盒的詳細資訊，請參閱[沙盒概述檔案](../../sandboxes/home.md)。
+>如需[!DNL Platform]中沙箱的詳細資訊，請參閱[沙箱概觀檔案](../../sandboxes/home.md)。
 
 所有包含裝載(POST、PUT、PATCH)的請求都需要額外的標題：
 
@@ -53,11 +52,11 @@ Adobe Experience Platform[!DNL Identity Service]管理跨裝置、跨通道和�
 
 ### 基於區域的路由
 
-[!DNL Identity Service] API採用區域特定端點，要求在請求路徑中加入`{REGION}`。 在IMS組織布建期間，會決定地區並儲存在IMS組織描述檔中。 使用每個端點的正確區域可確保使用[!DNL Identity Service] API提出的所有請求都路由到適當的區域。
+[!DNL Identity Service] API採用區域特定端點，這些端點需要在請求路徑中加入`{REGION}`。 在布建您的IMS組織期間，會決定某個地區並儲存在您的IMS組織設定檔中。 使用每個端點的正確區域可確保使用[!DNL Identity Service] API提出的所有請求都路由至適當的區域。
 
 [!DNL Identity Service] API目前支援兩個地區：VA7和NLD2。
 
-下表顯示了使用區域的示例路徑：
+下表顯示使用區域的路徑範例：
 
 | 服務 | 地區：VA7 | 地區：NLD2 |
 | ------ | -------- |--------- |
@@ -66,26 +65,26 @@ Adobe Experience Platform[!DNL Identity Service]管理跨裝置、跨通道和�
 
 >[!NOTE]
 >
->未指定區域的請求可能導致呼叫路由到錯誤區域，或導致呼叫意外失敗。
+>未指定區域的請求可能會導致呼叫路由到不正確的區域，或導致呼叫意外失敗。
 
-如果您無法在IMS組織設定檔中找到地區，請聯絡您的系統管理員以取得支援。
+如果您無法在IMS組織設定檔中找到地區，請聯絡系統管理員以尋求支援。
 
 ## 使用[!DNL Identity Service] API
 
 這些服務中使用的身份參數可以用兩種方式之一表示；複合或XID。
 
-複合身份是包括ID值和命名空間的構造。 使用複合身份時，可以通過名稱(`namespace.code`)或ID(`namespace.id`)提供命名空間。
+複合身分是包含ID值和命名空間的建構。 使用複合身分識別時，命名空間可由名稱(`namespace.code`)或ID(`namespace.id`)提供。
 
-當身分持續存在時，[!DNL Identity Service]會產生ID並指派給該身分，稱為原生ID或XID。 所有群集和映射API的變體在其請求和響應中都支援組合身份和XID。 其中一個參數是必需的- `xid`或[`ns`或`nsid`]和`id`的組合才能使用這些API。
+當身分持續存在時，[!DNL Identity Service]會產生ID，並將其指派給該身分，稱為原生ID或XID。 叢集和對應API的所有變數，在其要求和回應中都支援複合身分和XID。 若要使用這些API，需要其中一個參數 — `xid`或[`ns`或`nsid`]和`id`的組合。
 
-為了限制回應中的負載，API會根據使用的身分建構類型來調整其回應。 也就是說，如果您傳遞XID，您的回應會有XID，如果您傳遞複合身分，則回應會遵循請求中使用的結構。
+為了限制回應中的裝載，API會調整其回應，使其符合使用的身分建構類型。 也就是說，如果您傳遞XID，您的回應就會有XID，如果您傳遞複合身分，回應就會遵循要求中使用的結構。
 
-本文中的範例不涵蓋[!DNL Identity Service] API的完整功能。 如需完整的API，請參閱[Swagger API參考](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/id-service-api.yaml)。
+本檔案中的範例不涵蓋[!DNL Identity Service] API的完整功能。 如需完整API，請參閱[Swagger API參考](https://www.adobe.io/experience-platform-apis/references/identity-service)。
 
 >[!NOTE]
 >
->在請求中使用原生XID時，傳回的所有身分都會以原生XID格式。 建議使用ID/namespace表單。 如需詳細資訊，請參閱[取得身分識別的XID一節。](./create-custom-namespace.md)
+>請求中使用原生XID時，傳回的所有身分都會以原生XID形式。 建議使用ID/命名空間表單。 如需詳細資訊，請參閱[取得身分](./create-custom-namespace.md)之XID的區段。
 
 ## 後續步驟
 
-現在您已收集到必要的認證，您可以繼續閱讀其餘的開發人員指南。 每個區段都提供其端點的重要資訊，並示範執行CRUD作業的範例API呼叫。 每個呼叫都包含一般API格式、顯示必要標題和正確格式化負載的範例要求，以及成功呼叫的範例回應。
+現在您已收集必要的認證，您可以繼續閱讀開發人員指南的其餘部分。 每個區段都提供其端點的重要資訊，並示範執行CRUD作業的範例API呼叫。 每個呼叫都包含一般API格式、顯示必要標題和格式正確之裝載的範例要求，以及成功呼叫的範例回應。

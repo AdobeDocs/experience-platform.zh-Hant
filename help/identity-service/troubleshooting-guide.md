@@ -5,9 +5,9 @@ title: Identity服務疑難排解指南
 topic-legacy: troubleshooting
 description: 本檔案提供Adobe Experience Platform Identity Service常見問題的解答，以及常見錯誤的疑難排解指南。
 exl-id: dac31bc3-7003-46d6-9d41-9f6fd3645c2c
-source-git-commit: 5160bc8057a7f71e6b0f7f2d594ba414bae9d8f6
+source-git-commit: f269a7b1584a6e4a0e1820a0c587a647c0c8f7b5
 workflow-type: tm+mt
-source-wordcount: '2185'
+source-wordcount: '2177'
 ht-degree: 0%
 
 ---
@@ -78,11 +78,11 @@ ht-degree: 0%
 
 ## 我可以在哪裡找到組織可用的身分識別命名空間清單？
 
-使用[Identity Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/id-service-api.yaml)，您可以向`/idnamespace/identities`端點提出GET要求，以列出貴組織的所有可用身分識別命名空間。 如需詳細資訊，請參閱Identity服務API概覽中[列出可用命名空間](./api/list-namespaces.md)的區段。
+使用[Identity Service API](https://www.adobe.io/experience-platform-apis/references/identity-service)，您可以向`/idnamespace/identities`端點提出GET要求，以列出貴組織的所有可用身分識別命名空間。 如需詳細資訊，請參閱Identity服務API概覽中[列出可用命名空間](./api/list-namespaces.md)的區段。
 
 ## 如何為組織建立自訂命名空間？
 
-使用[Identity服務API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/id-service-api.yaml)，您可以向`/idnamespace/identities`端點提出POST請求，以建立組織的自訂身分命名空間。 如需詳細資訊，請參閱Identity服務API概覽中關於[建立自訂命名空間](./api/create-custom-namespace.md)的區段。
+使用[Identity服務API](https://www.adobe.io/experience-platform-apis/references/identity-service)，您可以向`/idnamespace/identities`端點提出POST請求，以建立組織的自訂身分命名空間。 如需詳細資訊，請參閱Identity服務API概覽中關於[建立自訂命名空間](./api/create-custom-namespace.md)的區段。
 
 ## 什麼是複合身份和XID?
 

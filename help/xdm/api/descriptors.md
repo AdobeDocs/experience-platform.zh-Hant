@@ -5,10 +5,10 @@ title: 描述符API端點
 description: Schema Registry API中的/descriptors端點可讓您以程式設計方式管理體驗應用程式中的XDM描述元。
 topic-legacy: developer guide
 exl-id: bda1aabd-5e6c-454f-a039-ec22c5d878d2
-source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
+source-git-commit: f269a7b1584a6e4a0e1820a0c587a647c0c8f7b5
 workflow-type: tm+mt
-source-wordcount: '1634'
-ht-degree: 2%
+source-wordcount: '1630'
+ht-degree: 3%
 
 ---
 
@@ -288,7 +288,7 @@ curl -X DELETE \
 
 下節提供了有關在[!DNL Schema Registry] API中使用描述符的其他資訊。
 
-### 定義描述符{#defining-descriptors}
+### 定義描述符 {#defining-descriptors}
 
 以下各節提供了可用描述符類型的概述，包括定義每種類型描述符所需的欄位。
 
@@ -315,7 +315,7 @@ curl -X DELETE \
 | `xdm:sourceSchema` | 定義描述符的架構的`$id` URI。 |
 | `xdm:sourceVersion` | 源架構的主要版本。 |
 | `xdm:sourceProperty` | 將作為身分的特定屬性的路徑。 路徑應以「/」開頭，而非以「/」結尾。 請勿在路徑中加入「屬性」（例如使用「/personalEmail/address」而非「/properties/personalEmail/properties/address」） |
-| `xdm:namespace` | 身分識別命名空間的`id`或`code`值。 可使用[[!DNL Identity Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/id-service-api.yaml)找到命名空間清單。 |
+| `xdm:namespace` | 身分識別命名空間的`id`或`code`值。 可使用[[!DNL Identity Service API]](https://www.adobe.io/experience-platform-apis/references/identity-service)找到命名空間清單。 |
 | `xdm:property` | 視使用的`xdm:namespace`而定，可以是`xdm:id`或`xdm:code`。 |
 | `xdm:isPrimary` | 選用的布林值。 若為true，則將欄位指示為主要身分。 結構只能包含一個主要身分。 |
 
