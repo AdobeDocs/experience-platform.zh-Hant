@@ -2,10 +2,10 @@
 keywords: Experience Platform；首頁；熱門主題；日期範圍
 title: 標準警報規則
 description: '本檔案涵蓋由Experience Platform提供的預先定義警報規則。 '
-source-git-commit: 8c00fb98a213b578f6970c1e1978f0159f8f38df
+source-git-commit: de8d8d92622abc75f2d09f4bb771dbe4268d0b38
 workflow-type: tm+mt
-source-wordcount: '359'
-ht-degree: 13%
+source-wordcount: '148'
+ht-degree: 12%
 
 ---
 
@@ -16,19 +16,22 @@ Adobe Experience Platform提供數個預先定義的警報規則，您可為組�
 
 | 規則 | 說明 | 評估頻率 | 重複窗口 |
 | --- | --- | --- | --- |
-| 超出權限閾值 | 當建立的設定檔數量超過組織權限的80%時，就會觸發此警報。 | 30秒 | 不適用 |
-| 過去24小時內沒有擷取活動 | 過去24小時期間內未擷取任何新資料時，就會觸發此警報。 | 1 天 | 1 天 |
-| SFTP來源尚未內嵌資料 | 當[SFTP來源](../../sources/connectors/cloud-storage/sftp.md)未在特定時段內擷取任何資料時，就會觸發此警報。 | 1 天 | 1 天 |
-| 已超出擷取錯誤率 | 資料擷取的錯誤率超過20%時，就會觸發此警報。 | 30秒 | 30秒 |
-| 摘要訊息 | 使用[區段符合](../../segmentation/ui/segment-match.md)將身分共用摘要訊息傳送給使用者時，此警報。 | 不適用 | 不適用 |
-| 摘要存取權遭撤銷 | 當其他Platform使用者透過[區段符合](../../segmentation/ui/segment-match.md)撤銷身分共用摘要的存取權時，就會觸發此警報。 | 不適用 | 不適用 |
-| 修改的摘要 | 當使用者使用[區段符合](../../segmentation/ui/segment-match.md)修改身分共用摘要時，就會觸發此警報。 | 不適用 | 不適用 |
-| 共用的摘要 | 當使用者在[區段符合](../../segmentation/ui/segment-match.md)中共用新摘要時，就會觸發此警報。 | 不適用 | 不適用 |
-| 連結要求 | 當使用者請求連線以進行合作夥伴共用時，就會觸發此警報。 | 不適用 | 不適用 |
-| 連結動作 | 當使用者接受連線以進行合作夥伴共用的請求時，就會觸發此警報。 | 不適用 | 不適用 |
-| 區段定義已停用 | 區段定義停用時，就會觸發此警報。 | 不適用 | 不適用 |
-| 區段工作延遲 | 當區段作業完成時間超過150分鐘時，就會觸發此警報。 | 30秒 | 3 小時 |
-| 源流運行失敗 | 從來源連線擷取資料時發生錯誤時，就會觸發此警報。 | 不適用 | 不適用 |
 | 源流運行成功 | 從來源連線成功擷取資料時，就會觸發此警報。 | 不適用 | 不適用 |
+| 源流運行失敗 | 從來源連線擷取資料時發生錯誤時，就會觸發此警報。 | 不適用 | 不適用 |
+| 區段工作延遲 | 當區段作業完成時間超過150分鐘時，就會觸發此警報。 | 30秒 | 3 小時 |
+| 區段定義已停用 | 區段定義停用時，就會觸發此警報。 | 不適用 | 不適用 |
 
 {style=&quot;table-layout:auto&quot;}
+
+<!-- (Definitions to be added once available)
+| Entitlement Threshold Exceeded | This alert triggers when the number of created profiles exceeds 80% of your organization's entitlement. | 30 seconds | N/A |
+| No ingestion activity in past 24 hours | This alert triggers when no new data has been ingested in the last 24-hour period. | 1 day | 1 day |
+| SFTP source has not ingested data | This alert triggers when an [SFTP source](../../sources/connectors/cloud-storage/sftp.md) has not ingested any data within a certain time period. | 1 day | 1 day |
+| Ingestion error rate exceeded | This alert triggers when the error rate for data ingestion exceeds 20%. | 30 seconds | 30 seconds |
+| Feed Message | This alert when an identity sharing feed message has been sent to a user using [Segment Match](../../segmentation/ui/segment-match.md). | N/A | N/A |
+| Feed Access Revoked | This alert triggers when another Platform user revokes access to an identity sharing feed using [Segment Match](../../segmentation/ui/segment-match.md). | N/A | N/A |
+| Feed Modified | This alert triggers when an identity sharing feed is modified by a user using [Segment Match](../../segmentation/ui/segment-match.md). | N/A | N/A |
+| Feed Shared | This alert triggers when a user shares a new feed in [Segment Match](../../segmentation/ui/segment-match.md). | N/A | N/A |
+| Link Request | This alert triggers when a user requests to connect for partner sharing. | N/A | N/A |
+| Link Action | This alert triggers when a user accepts a request to connect for partner sharing. | N/A | N/A |
+-->
