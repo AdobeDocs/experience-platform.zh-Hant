@@ -6,9 +6,9 @@ description: 本檔案提供教學課程，說明如何使用Schema Registry API
 topic-legacy: tutorial
 type: Tutorial
 exl-id: ef9910b5-2777-4d8b-a6fe-aee51d809ad5
-source-git-commit: e4bf5bb77ac4186b24580329699d74d653310d93
+source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
 workflow-type: tm+mt
-source-wordcount: '1369'
+source-wordcount: '1365'
 ht-degree: 2%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 2%
 
 雖然可透過使用聯合架構和[!DNL Real-time Customer Profile]來推斷架構關係，但這隻適用於共用相同類別的架構。 要在屬於不同類的兩個架構之間建立關係，必須將專用的關係欄位添加到源架構中，該源架構引用目標架構的標識。
 
-本檔案提供教學課程，說明如何使用[[!DNL Schema Registry API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml)來定義貴組織所定義的兩個結構之間的一對一關係。
+本檔案提供教學課程，說明如何使用[[!DNL Schema Registry API]](https://www.adobe.io/experience-platform-apis/references/schema-registry/)來定義貴組織所定義的兩個結構之間的一對一關係。
 
 ## 快速入門
 
@@ -32,7 +32,7 @@ ht-degree: 2%
 
 開始本教學課程之前，請檢閱[開發人員指南](../api/getting-started.md)，以取得您需要了解的重要資訊，以便成功呼叫[!DNL Schema Registry] API。 這包括您的`{TENANT_ID}`、「容器」的概念，以及提出請求所需的標題（請特別注意[!DNL Accept]標題及其可能的值）。
 
-## 定義源和目標架構{#define-schemas}
+## 定義源和目標架構 {#define-schemas}
 
 您應已建立將在關係中定義的兩個結構。 本教學課程會在組織的目前忠誠計畫（在「[!DNL Loyalty Members]」架構中定義）的成員與其最喜愛的酒店（在「[!DNL Hotels]」架構中定義）之間建立關係。
 
@@ -342,7 +342,7 @@ curl -X PATCH \
 }
 ```
 
-## 建立引用標識描述符{#reference-identity}
+## 建立引用標識描述符 {#reference-identity}
 
 如果方案欄位用作關係中其他方案的引用，則必須將引用標識描述符應用到它們。 由於「[!DNL Loyalty Members]」中的`favoriteHotel`欄位將引用「[!DNL Hotels]」中的`hotelId`欄位，因此`hotelId`必須獲得引用標識描述符。
 
@@ -401,7 +401,7 @@ curl -X POST \
 }
 ```
 
-## 建立關係描述符{#create-descriptor}
+## 建立關係描述符 {#create-descriptor}
 
 關係描述符在源模式和目標模式之間建立一對一關係。 為目標架構定義了引用描述符後，可以通過向`/tenant/descriptors`端點發出POST請求來建立新的關係描述符。
 

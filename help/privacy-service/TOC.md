@@ -3,24 +3,23 @@ audience: user
 user-guide-title: Adobe Experience Platform 隱私權服務說明
 breadcrumb-title: 隱私權服務指南
 user-guide-description: 管理客戶資料要求，以符合 GDPR 和 CCPA 等法律隱私權法規。
-feature: 隱私權
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+feature: Privacy
+source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
 workflow-type: tm+mt
-source-wordcount: '87'
-ht-degree: 48%
+source-wordcount: '82'
+ht-degree: 50%
 
 ---
 
 
 # Adobe Experience Platform 隱私權服務 {#privacy}
 
-* [Privacy Service概觀](home.md)
-* [Privacy Service與Experience Cloud應用程式](experience-cloud-apps.md)
+* [Privacy Service概述](home.md)
+* [Privacy Service和Experience Cloud應用程式](experience-cloud-apps.md)
 * [隱私權要求的身分資料](identity-data.md)
 * [隱私權JS程式庫概觀](js-library.md)
 * Privacy ServiceAPI {#api}
-   * [開始使用](api/getting-started.md)
+   * [快速入門](api/getting-started.md)
    * [隱私權工作](api/privacy-jobs.md)
    * [同意](api/consent.md)
    * [附錄](api/appendix.md)
@@ -33,5 +32,5 @@ ht-degree: 48%
    * [常見問題集](regulations/faq.md)
    * [術語](regulations/terminology.md)
 * [疑難排解指南](troubleshooting-guide.md)
-* [API 參考資料](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/privacy-service.yaml)
+* [API 參考資料](https://www.adobe.io/experience-platform-apis/references/privacy-service/)
 * [發行說明](release-notes.md)

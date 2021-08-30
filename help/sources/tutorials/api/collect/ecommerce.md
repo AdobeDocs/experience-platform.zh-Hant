@@ -6,9 +6,9 @@ topic-legacy: overview
 type: Tutorial
 description: 本教學課程涵蓋從協力廠商電子商務系統擷取資料，以及使用來源連接器和API擷取資料至Platform的步驟。
 exl-id: 0952f037-5e20-4d84-a2e6-2c9470f168f5
-source-git-commit: 5160bc8057a7f71e6b0f7f2d594ba414bae9d8f6
+source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
 workflow-type: tm+mt
-source-wordcount: '1523'
+source-wordcount: '1519'
 ht-degree: 1%
 
 ---
@@ -132,7 +132,7 @@ curl -X POST \
 
 為了在[!DNL Platform]中使用源資料，必須建立目標架構，以根據您的需要構建源資料。 然後，目標架構將用於建立包含源資料的[!DNL Platform]資料集。 此目標XDM架構也會擴充XDM [!DNL Individual Profile]類別。
 
-通過對[Schema Registry API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml)執行POST請求，可以建立目標XDM架構。
+通過對[Schema Registry API](https://www.adobe.io/experience-platform-apis/references/schema-registry/)執行POST請求，可以建立目標XDM架構。
 
 **API格式**
 

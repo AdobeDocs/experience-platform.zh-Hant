@@ -6,9 +6,9 @@ description: 在特定情況下，您可能需要建立Experience Data Model(XDM
 topic-legacy: tutorial
 type: Tutorial
 exl-id: bef01000-909a-4594-8cf4-b9dbe0b358d5
-source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
+source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
 workflow-type: tm+mt
-source-wordcount: '832'
+source-wordcount: '828'
 ht-degree: 3%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 3%
 
 在特定情況下，您可能需要建立[!DNL Experience Data Model](XDM)架構，其中的欄位命名空間僅限單一資料集使用。 這稱為「臨機」結構。 [!DNL Experience Platform]的各種資料擷取工作流程中會使用臨機結構，包括擷取CSV檔案和建立特定類型的來源連線。
 
-本檔案提供使用[Schema Registry API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml)建立臨機架構的一般步驟。 它旨在與其他需要建立隨選架構作為其工作流程一部分的[!DNL Experience Platform]教學課程搭配使用。 這些檔案都提供如何為其特定使用案例正確配置臨時架構的詳細資訊。
+本檔案提供使用[Schema Registry API](https://www.adobe.io/experience-platform-apis/references/schema-registry/)建立臨機架構的一般步驟。 它旨在與其他需要建立隨選架構作為其工作流程一部分的[!DNL Experience Platform]教學課程搭配使用。 這些檔案都提供如何為其特定使用案例正確配置臨時架構的詳細資訊。
 
 ## 快速入門
 
@@ -308,7 +308,7 @@ curl -X GET \
 }
 ```
 
-## 下一步 {#next-steps}
+## 後續步驟 {#next-steps}
 
 依照本教學課程，您已成功建立新的臨機結構。 如果您是作為其他教學課程的一部分帶到本檔案，您現在可以使用臨機架構的`$id`依照指示完成工作流程。
 

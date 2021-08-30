@@ -3,10 +3,10 @@ audience: user
 user-guide-title: Experience Data Model (XDM) 系統說明
 breadcrumb-title: Experience Data Model (XDM) 指南
 user-guide-description: 使用Experience Data Model(XDM)類別和結構欄位群組，以標準化體驗資料。
-feature: 結構描述
-source-git-commit: 2592d4f494d4d3dcfba63eb539498416fbdf6707
+feature: Schemas
+source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
 workflow-type: tm+mt
-source-wordcount: '320'
+source-wordcount: '315'
 ht-degree: 17%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 17%
 # Experience Data Model(XDM)系統 {#xdm}
 
 * [XDM系統概觀](home.md)
-* 結構描述 {#schema}
+* 方案 {#schema}
    * [結構構成基本概念](schema/composition.md)
    * [資料模型最佳實務](schema/best-practices.md)
    * [XDM欄位類型限制](schema/field-constraints.md)
@@ -96,7 +96,7 @@ ht-degree: 17%
    * [概覽](./ui/overview.md)
    * [探索 XDM 資源](./ui/explore.md)
    * 建立和編輯資源{#resources}
-      * [結構描述](./ui/resources/schemas.md)
+      * [方案](./ui/resources/schemas.md)
       * [類別](./ui/resources/classes.md)
       * [欄位群組](./ui/resources/field-groups.md)
       * [資料類型](./ui/resources/data-types.md)
@@ -113,7 +113,7 @@ ht-degree: 17%
 * 架構註冊表API {#api}
    * [概覽](api/overview.md)
    * [快速入門](api/getting-started.md)
-   * [結構描述](api/schemas.md)
+   * [方案](api/schemas.md)
    * [行為](api/behaviors.md)
    * [類別](api/classes.md)
    * [架構欄位群組](api/field-groups.md)
@@ -133,5 +133,5 @@ ht-degree: 17%
    * [定義兩個結構(API)之間的關係](tutorials/relationship-api.md)
    * [建立臨機結構(API)](tutorials/ad-hoc.md)
 * [疑難排解指南](troubleshooting-guide.md)
-* [API 參考資料](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml)
+* [API 參考資料](https://www.adobe.io/experience-platform-apis/references/schema-registry/)
 * [平台發行說明](https://www.adobe.com/go/platform-release-notes-en)

@@ -5,9 +5,9 @@ title: 資料使用原則概述
 topic-legacy: policies
 description: 為了讓資料使用標籤有效支援資料合規性，必須實施資料使用策略。 資料使用原則是描述您可對Experience Platform內的資料執行或限制執行之行銷動作類型的規則。
 exl-id: 1b372aa5-3e49-4741-82dc-5701a4bc8469
-source-git-commit: 4aeb12aec026ab2dc29133dd44e54b453fb71fe3
+source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
 workflow-type: tm+mt
-source-wordcount: '1077'
+source-wordcount: '1073'
 ht-degree: 0%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 0%
 
 本檔案提供資料使用原則的概觀，並提供在UI或API中使用原則的進一步檔案連結。
 
-## 行銷動作{#marketing-actions}
+## 行銷動作 {#marketing-actions}
 
 在資料控管架構內容中，行銷動作（又稱為行銷使用案例）是[!DNL Experience Platform]資料消費者可採取的動作，而您的組織想要針對此動作限制資料使用。 因此，資料使用策略由以下項定義：
 
@@ -31,7 +31,7 @@ ht-degree: 0%
 >
 >行銷動作本身並不會限制資料使用。 必須將它們包含在啟用的資料使用策略中，以便針對違反策略的情況評估這些操作。
 
-當貴組織的服務中發生資料使用情形時，應指出相關的行銷動作，以便識別任何違反政策的行為。 然後，您可以使用[原則服務API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml)檢查整合中是否有違反原則的情況。
+當貴組織的服務中發生資料使用情形時，應指出相關的行銷動作，以便識別任何違反政策的行為。 然後，您可以使用[原則服務API](https://www.adobe.io/experience-platform-apis/references/policy-service/)檢查整合中是否有違反原則的情況。
 
 >[!NOTE]
 >
@@ -67,7 +67,7 @@ For a reference on how specific Data Export Controls map to marketing actions in
 
 以下章節提供資料使用原則的其他資訊。
 
-### Adobe定義的行銷動作{#core-actions}
+### Adobe定義的行銷動作 {#core-actions}
 
 下表說明由Adobe提供的現成核心行銷動作。
 

@@ -5,9 +5,9 @@ title: Schema Registry API指南
 description: Schema Registry API可讓開發人員以程式設計方式管理Adobe Experience Platform中的所有結構描述和相關Experience Data Model(XDM)資源。 請依照本指南，了解如何使用API執行重要作業。
 topic-legacy: developer guide
 exl-id: 9e693d29-303e-462a-a1e2-93c0d517b8e3
-source-git-commit: c2ca679e046f59d05e2d12ca83bc1b2496b2288f
+source-git-commit: 6ba8da07a4fb36c6e8bd2ede8ac415edaabe0ef6
 workflow-type: tm+mt
-source-wordcount: '987'
+source-wordcount: '983'
 ht-degree: 0%
 
 ---
@@ -24,7 +24,7 @@ Schema Registry API提供數個端點，可讓您以程式設計方式管理Plat
 >
 >XDM使用JSON結構描述格式來說明和驗證擷取的客戶體驗資料結構。 使用結構註冊表API之前，強烈建議您檢閱[官方JSON結構描述檔案](https://json-schema.org/)，以深入了解此基礎技術。
 
-若要檢視所有可用端點和CRUD作業，請造訪[Schema Registry API參考](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml)。
+若要檢視所有可用端點和CRUD作業，請造訪[Schema Registry API參考](https://www.adobe.io/experience-platform-apis/references/schema-registry/)。
 
 ## 方案
 

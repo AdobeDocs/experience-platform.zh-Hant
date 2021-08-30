@@ -1,16 +1,16 @@
 ---
 title: Reactor API快速入門
 description: 了解如何開始使用Reactor API，包括產生必要存取憑證的步驟。
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
 workflow-type: tm+mt
-source-wordcount: '1064'
+source-wordcount: '1060'
 ht-degree: 1%
 
 ---
 
 # Reactor API快速入門
 
-若要使用[Reactor API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/reactor.yaml)，每個要求都必須包含下列驗證標題：
+若要使用[Reactor API](https://www.adobe.io/experience-platform-apis/references/reactor/)，每個要求都必須包含下列驗證標題：
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`

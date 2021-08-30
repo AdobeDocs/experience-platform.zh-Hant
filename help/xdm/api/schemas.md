@@ -5,9 +5,9 @@ title: 結構API端點
 description: Schema Registry API中的/schemas端點可讓您以程式設計方式管理體驗應用程式中的XDM結構。
 topic-legacy: developer guide
 exl-id: d0bda683-9cd3-412b-a8d1-4af700297abf
-source-git-commit: e4bf5bb77ac4186b24580329699d74d653310d93
+source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
 workflow-type: tm+mt
-source-wordcount: '1458'
+source-wordcount: '1454'
 ht-degree: 4%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 4%
 
 ## 快速入門
 
-本指南中使用的API端點是[[!DNL Schema Registry] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml)的一部分。 繼續之前，請檢閱[快速入門手冊](./getting-started.md)，取得相關檔案的連結、閱讀本檔案中範例API呼叫的指南，以及成功呼叫任何Experience PlatformAPI所需的必要標頭的重要資訊。
+本指南中使用的API端點是[[!DNL Schema Registry] API](https://www.adobe.io/experience-platform-apis/references/schema-registry/)的一部分。 繼續之前，請檢閱[快速入門手冊](./getting-started.md)，取得相關檔案的連結、閱讀本檔案中範例API呼叫的指南，以及成功呼叫任何Experience PlatformAPI所需的必要標頭的重要資訊。
 
 ## 擷取結構清單 {#list}
 
@@ -194,7 +194,7 @@ curl -X GET \
 }
 ```
 
-## 建立結構 {#create}
+## 建立方案 {#create}
 
 架構合成過程從分配類開始。 類別會定義資料（記錄或時間序列）的關鍵行為方面，以及描述將擷取的資料所需的最小欄位。
 

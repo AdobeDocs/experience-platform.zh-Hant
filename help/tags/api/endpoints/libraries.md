@@ -1,9 +1,9 @@
 ---
 title: 程式庫端點
 description: 了解如何在Reactor API中呼叫/libraries端點。
-source-git-commit: 53612919dc040a8a3ad35a3c5c0991554ffbea7c
+source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
 workflow-type: tm+mt
-source-wordcount: '1588'
+source-wordcount: '1584'
 ht-degree: 8%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 8%
 
 ## 快速入門
 
-本指南中使用的端點是[Reactor API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/reactor.yaml)的一部分。 繼續操作之前，請參閱[快速入門手冊](../getting-started.md)，了解如何驗證API的重要資訊。
+本指南中使用的端點是[Reactor API](https://www.adobe.io/experience-platform-apis/references/reactor/)的一部分。 繼續操作之前，請參閱[快速入門手冊](../getting-started.md)，了解如何驗證API的重要資訊。
 
 在Reactor API中使用程式庫之前，請務必了解程式庫狀態和環境在決定您可以對特定程式庫執行哪些動作時所扮演的角色。 如需詳細資訊，請參閱[程式庫發佈流程](../../ui/publishing/publishing-flow.md)上的指南。
 
