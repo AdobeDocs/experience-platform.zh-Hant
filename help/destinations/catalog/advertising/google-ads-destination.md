@@ -3,9 +3,9 @@ keywords: Google廣告；Google廣告；Google廣告；Google AdWords;Google AdW
 title: Google Ads連線
 description: Google Ads（舊稱Google AdWords）是線上廣告服務，可讓企業在文字搜尋、圖形顯示、YouTube視訊和應用程式內行動顯示器間，按點付費廣告。
 exl-id: 7143f476-49a8-42aa-bfb4-b11fc2b8f5c3
-source-git-commit: 3aac1e7c7fe838201368379da8504efc8e316e1c
+source-git-commit: d0112cb26fcb85ad91ba403f81ee7f11d0889046
 workflow-type: tm+mt
-source-wordcount: '639'
+source-wordcount: '698'
 ht-degree: 2%
 
 ---
@@ -53,7 +53,7 @@ ht-degree: 2%
 >
 > [!DNL Google] 已棄用與協 [!DNL Google Ads] 力廠商的新cookie整合。若要在下一節中執行允許清單步驟，您必須具備與[!DNL Google Ads]的現有整合。 因此，使用[!DNL Google Ads]的建議方法是設定[!DNL Google Customer Match]整合。 有關建立[!DNL Google Customer Match]整合的詳細資訊，請閱讀有關建立[[!DNL Google Customer Match]](./google-customer-match.md)連接的教程。
 
-### 允許清單
+### 允許清單 {#allow-listing}
 
 >[!NOTE]
 >
@@ -83,7 +83,20 @@ ht-degree: 2%
 
 請參閱[對串流區段匯出目的地啟用受眾資料](../../ui/activate-segment-streaming-destinations.md) ，以取得對此目的地啟用受眾區段的指示。
 
-
 ## 匯出的資料
 
 要驗證資料是否已成功導出到[!DNL Google Ads]目標，請檢查[!DNL Google Ads]帳戶。 如果啟動成功，則會在您的帳戶中填入對象。
+
+## 疑難排解 {#troubleshooting}
+
+### 400錯誤請求錯誤消息 {#bad-request}
+
+設定此目的地時，您可能會收到下列錯誤：
+
+`{"message":"Google Error: AuthorizationError.USER_PERMISSION_DENIED","code":"400 BAD_REQUEST"}`
+
+當客戶嘗試配置沒有現有[!DNL Google Ads]帳戶的目標時，就會發生此錯誤。
+
+[!DNL Google] 已棄用與協 [!DNL Google Ads] 力廠商的新cookie整合。若要執行[allow-list](#allow-listing)步驟，您必須有與[!DNL Google Ads]的現有整合。
+
+使用[!DNL Google Ads]的建議方法是設定[[!DNL Google Customer Match]](google-customer-match.md)整合。

@@ -3,9 +3,9 @@ keywords: DoubleClick競標管理器；DoubleClick競標管理器；DoubleClick�
 title: Google Display & Video 360連線
 description: Display & Video 360（先前稱為DoubleClick競標管理器）是一種工具，用於在顯示、視訊和行動詳細目錄來源間執行重新定位和對象鎖定目標的數位促銷活動。
 exl-id: bdd3b3fd-891f-44ec-bd47-daf7f3289f92
-source-git-commit: 3aac1e7c7fe838201368379da8504efc8e316e1c
+source-git-commit: d0112cb26fcb85ad91ba403f81ee7f11d0889046
 workflow-type: tm+mt
-source-wordcount: '673'
+source-wordcount: '709'
 ht-degree: 2%
 
 ---
@@ -45,13 +45,13 @@ ht-degree: 2%
 
 **區段匯出**  — 您正在將區段（對象）的所有成員匯出至Google目的地。
 
-## 先決條件
+## 先決條件 {#prerequisites}
 
 ### 允許清單
 
 >[!NOTE]
 >
->在Platform中設定您的第一個[!DNL Google Display & Video 360]目的地前，允許清單是必填的。 建立目的地之前，請確定Google已完成下述的允許清單程式。
+>在Platform中設定您的第一個[!DNL Google Display & Video 360]目的地前，允許清單是必填欄位。 建立目的地之前，請確定Google已完成下列說明的允許清單程式。
 
 在Platform中建立[!DNL Google Display & Video 360]目的地之前，您必須聯絡Google，要求將Adobe加入允許的資料提供者清單中，並將您的帳戶新增至允許清單中。 請連絡Google並提供下列資訊：
 
@@ -85,3 +85,13 @@ ht-degree: 2%
 ## 匯出的資料
 
 要驗證資料是否已成功導出到[!DNL Google Display & Video 360]目標，請檢查[!DNL Google Display & Video 360]帳戶。 如果啟動成功，則會在您的帳戶中填入對象。
+
+## 疑難排解 {#troubleshooting}
+
+### 400錯誤請求錯誤消息 {#bad-request}
+
+設定此目的地時，您可能會收到下列錯誤：
+
+`{"message":"Google Error: AuthorizationError.USER_PERMISSION_DENIED","code":"400 BAD_REQUEST"}`
+
+當客戶帳戶不符合[必要條件](#prerequisites)時，就會發生此錯誤。 若要修正此問題，請連絡Google並確認您的帳戶已列入允許清單。

@@ -3,9 +3,9 @@ keywords: Google客戶比對；Google客戶比對；Google客戶比對
 title: Google Customer Match連線
 description: Google Customer Match可讓您使用您的線上和離線資料，透過Google擁有且運作的屬性(例如Search、Shopping、Gmail及YouTube)，觸及客戶並與其重新互動。
 exl-id: 8209b5eb-b05c-4ef7-9fdc-22a528d5f020
-source-git-commit: 183aff5a3b6bcc1635ae7b4b0e503a9d4b6d4d31
+source-git-commit: d0112cb26fcb85ad91ba403f81ee7f11d0889046
 workflow-type: tm+mt
-source-wordcount: '1494'
+source-wordcount: '1557'
 ht-degree: 0%
 
 ---
@@ -56,7 +56,7 @@ Experience Platform中的某些目的地對於傳送至目的地平台或從目�
 
 在Experience Platform中設定[!DNL Google Customer Match]目的地之前，請務必閱讀並遵循[!DNL Customer Match]中概述的Google支援檔案](https://support.google.com/google-ads/answer/6299717)中的使用[原則。
 
-接下來，請確定您的[!DNL Google]帳戶已針對[!DNL Standard]或更高的存取層級進行配置。 如需詳細資訊，請參閱[Google Ads檔案](https://support.google.com/google-ads/answer/9978556?visit_id=637611563637058259-4176462731&amp;rd=1)。
+接下來，請確定您的[!DNL Google]帳戶已針對[!DNL Standard]或更高權限級別進行配置。 如需詳細資訊，請參閱[Google Ads檔案](https://support.google.com/google-ads/answer/9978556?visit_id=637611563637058259-4176462731&amp;rd=1)。
 
 ### 允許清單 {#allowlist}
 
@@ -174,6 +174,17 @@ The video below demonstrates the steps to configure a [!DNL Google Customer Matc
 
 將區段對應至[!DNL IDFA]和[!DNL GAID]行動ID時， [!DNL Google Customer Match]會為每個ID對應建立個別的區段。 您的[!DNL Google Ads]帳戶會顯示兩個不同的區段，一個用於[!DNL IDFA]，另一個用於[!DNL GAID]對應。
 
+## 疑難排解 {#troubleshooting}
+
+### 400錯誤請求錯誤消息 {#bad-request}
+
+設定此目的地時，您可能會收到下列錯誤：
+
+`{"message":"Google Customer Match Error: OperationAccessDenied.ACTION_NOT_PERMITTED","code":"400 BAD_REQUEST"}`
+
+當客戶帳戶不符合[必要條件](#google-account-prerequisites)時，就會發生此錯誤。 若要修正此問題，請連絡Google，確認您的帳戶已列入允許清單，且已設定[!DNL Standard]或更高的權限層級。 如需詳細資訊，請參閱[Google Ads檔案](https://support.google.com/google-ads/answer/9978556?visit_id=637611563637058259-4176462731&amp;rd=1)。
+
 ## 額外資源 {#additional-resources}
 
 * [整合Google Customer Match — 教學課程影片](https://experienceleague.adobe.com/docs/platform-learn/tutorials/rtcdp/integrate-with-google-customer-match.html)
+

@@ -3,7 +3,7 @@ keywords: facebook連線；facebook連線；facebook目的地；facebook;instagr
 title: Facebook連線
 description: 根據雜湊電子郵件啟用Facebook促銷活動的設定檔，以鎖定對象、個人化和隱藏。
 exl-id: 51e8c8f0-5e79-45b9-afbc-110bae127f76
-source-git-commit: 183aff5a3b6bcc1635ae7b4b0e503a9d4b6d4d31
+source-git-commit: d0112cb26fcb85ad91ba403f81ee7f11d0889046
 workflow-type: tm+mt
 source-wordcount: '1498'
 ht-degree: 1%
@@ -177,7 +177,7 @@ ht-degree: 1%
 
 ### 400錯誤請求錯誤消息 {#bad-request}
 
-將區段啟用至[!DNL Facebook]時，您可能會收到下列錯誤：
+設定此目的地時，您可能會收到下列錯誤：
 
 `{"message":"Facebook Error: Permission error","code":"400 BAD_REQUEST"}`
 
