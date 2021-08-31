@@ -5,9 +5,9 @@ title: 建立資料集以擷取IAB TCF 2.0同意資料
 topic-legacy: privacy events
 description: 本檔案提供設定兩個必要資料集以收集IAB TCF 2.0同意資料的步驟。
 exl-id: 36b2924d-7893-4c55-bc33-2c0234f1120e
-source-git-commit: 9b75a69cc6e31ea0ad77048a6ec1541df2026f27
+source-git-commit: 656d772335c2f5ae58b471b31bfbd6dfa82490cd
 workflow-type: tm+mt
-source-wordcount: '1576'
+source-wordcount: '1655'
 ht-degree: 0%
 
 ---
@@ -39,19 +39,19 @@ ht-degree: 0%
 
 ## TCF 2.0欄位組 {#field-groups}
 
-[!UICONTROL IAB TCF 2.0同意]結構欄位群組提供TCF 2.0支援所需的客戶同意欄位。 此欄位群組有兩個版本：一個與[!DNL XDM Individual Profile]類相容，另一個與[!DNL XDM ExperienceEvent]類相容。
+[!UICONTROL IAB TCF 2.0同意詳細資料]結構欄位群組提供TCF 2.0支援所需的客戶同意欄位。 此欄位群組有兩個版本：一個與[!DNL XDM Individual Profile]類相容，另一個與[!DNL XDM ExperienceEvent]類相容。
 
 以下各節說明每個欄位群組的結構，包括擷取期間預期的資料。
 
 ### 設定檔欄位群組 {#profile-field-group}
 
-針對以[!DNL XDM Individual Profile]為基礎的結構， [!UICONTROL IAB TCF 2.0同意]欄位群組提供單一對應類型欄位`identityPrivacyInfo`，可將客戶身分對應至其TCF同意偏好設定。 此欄位群組必須包含在為「即時客戶設定檔」啟用的記錄型結構中，才能自動執行。
+針對以[!DNL XDM Individual Profile]為基礎的結構， [!UICONTROL  IAB TCF 2.0同意詳細資料]欄位群組提供單一對應類型欄位`identityPrivacyInfo`，可將客戶身分對應至其TCF同意偏好設定。 此欄位群組必須包含在為「即時客戶設定檔」啟用的記錄型結構中，才能自動執行。
 
 請參閱此欄位組的[參考指南](../../../../xdm/field-groups/profile/iab.md)以深入了解其結構和使用案例。
 
 ### 事件欄位組 {#event-field-group}
 
-如果您想要追蹤隨時間變化的同意變更事件，可將[!UICONTROL IAB TCF 2.0同意]欄位群組新增至您的[!UICONTROL XDM ExperienceEvent]結構。
+如果您想要追蹤隨時間變化的同意變更事件，可將「[!UICONTROL  IAB TCF 2.0同意詳細資料]」欄位群組新增至您的[!UICONTROL  XDM ExperienceEvent]結構。
 
 如果您不打算隨著時間追蹤同意變更事件，則不需要將此欄位群組納入事件結構。 自動強制執行TCF同意值時，Experience Platform只會使用擷取至[設定檔欄位群組](#profile-field-group)的最新同意資訊。 事件擷取的同意值不會參與自動執行工作流程。
 
@@ -60,6 +60,8 @@ ht-degree: 0%
 ## 建立客戶同意結構 {#create-schemas}
 
 若要建立擷取同意資料的資料集，您必須先建立XDM結構，才能將這些資料集建立在上。
+
+如前一節所述，若要在下游平台工作流程中強制執行同意，需要使用[!UICONTROL  XDM個別設定檔]類別的結構。 如果您想要追蹤隨時間的同意變更，也可以選擇根據[!UICONTROL XDM ExperienceEvent]建立個別結構。 兩個架構都必須包含`identityMap`欄位和適當的TCF 2.0欄位群組。
 
 在Platform UI中，選取左側導覽中的&#x200B;**[!UICONTROL 結構]**&#x200B;以開啟[!UICONTROL 結構]工作區。 從這裡，請依照以下各節中的步驟，建立每個必要的架構。
 
@@ -75,11 +77,15 @@ ht-degree: 0%
 
 ![](../../../images/governance-privacy-security/consent/iab/dataset/create-schema-profile.png)
 
-此時將顯示&#x200B;**[!UICONTROL 添加欄位組]**&#x200B;對話框，允許您立即開始向架構添加欄位組。 從此處，從清單中選取&#x200B;**[!UICONTROL IAB TCF 2.0同意]**。 您可以選擇使用搜尋列來縮小結果，以便更輕鬆地找出欄位群組。 選擇欄位組後，選擇&#x200B;**[!UICONTROL 添加欄位組]**。
+此時將顯示&#x200B;**[!UICONTROL 添加欄位組]**&#x200B;對話框，允許您立即開始向架構添加欄位組。 從此處，從清單中選取&#x200B;**[!UICONTROL IAB TCF 2.0同意詳細資料]**。 您可以選擇使用搜尋列來縮小結果，以便更輕鬆地找出欄位群組。
 
 ![](../../../images/governance-privacy-security/consent/iab/dataset/add-profile-privacy.png)
 
-畫布會重新顯示，顯示`identityPrivacyInfo`欄位已新增至架構結構。
+接下來，從清單中查找&#x200B;**[!UICONTROL IdentityMap]**&#x200B;欄位組，並選擇它。 在右側邊欄中列出兩個欄位群組後，選取「**[!UICONTROL 新增欄位群組]**」。
+
+![](../../../images/governance-privacy-security/consent/iab/dataset/add-profile-identitymap.png)
+
+畫布會重新顯示，顯示`identityPrivacyInfo`和`identityMap`欄位已新增至架構結構。
 
 ![](../../../images/governance-privacy-security/consent/iab/dataset/profile-privacy-structure.png)
 
@@ -87,18 +93,9 @@ ht-degree: 0%
 
 ![](../../../images/governance-privacy-security/consent/iab/dataset/schema-details-profile.png)
 
-提供名稱和說明後，請在畫布左側的&#x200B;**[!UICONTROL 欄位群組]**&#x200B;區段下選取&#x200B;**[!UICONTROL 新增]**。
+提供名稱和說明後，您可以選擇在畫布左側的&#x200B;**[!UICONTROL 欄位群組]**&#x200B;區段下選取&#x200B;**[!UICONTROL 新增]**，以新增更多欄位至架構。
 
 ![](../../../images/governance-privacy-security/consent/iab/dataset/add-field-group-profile.png)
-
-從此處，使用對話框將以下其他欄位組添加到架構中：
-
-* [!UICONTROL IdentityMap]
-* [!UICONTROL 設定檔的資料擷取區域]
-* [!UICONTROL 人口統計詳細資料]
-* [!UICONTROL 個人聯繫人詳細資訊]
-
-![](../../../images/governance-privacy-security/consent/iab/dataset/profile-all-field-groups.png)
 
 如果您正在編輯已啟用在[!DNL Real-time Customer Profile]中使用的現有架構，請選擇&#x200B;**[!UICONTROL Save]**&#x200B;以確認更改，然後跳到[基於您的同意架構](#dataset)建立資料集的部分。 如果要建立新架構，請繼續執行以下小節中概述的步驟。
 
@@ -110,7 +107,7 @@ ht-degree: 0%
 >
 >本節中顯示的範例架構使用其`identityMap`欄位作為其主要身分。 如果您想要將另一個欄位設為主要身分，請確定您使用的是間接識別碼，如Cookie ID，而非不得在以興趣為基礎的廣告（例如電子郵件地址）中使用的直接識別欄位。 如果您不確定哪些欄位受限，請洽詢您的法律顧問。
 >
->有關如何為架構設定主要身份欄位的步驟，請參見[架構建立教程](../../../../xdm/tutorials/create-schema-ui.md#identity-field)。
+>有關如何為架構設定主要身份欄位的步驟，請參見[[!UICONTROL Schemas] UI指南](../../../../xdm/ui/fields/identity.md)。
 
 若要啟用[!DNL Profile]的架構，請在左側邊欄中選取該架構的名稱，以開啟&#x200B;**[!UICONTROL Schema properties]**&#x200B;區段。 從此處，選擇&#x200B;**[!UICONTROL Profile]**&#x200B;切換按鈕。
 
@@ -126,19 +123,24 @@ ht-degree: 0%
 
 ### 建立事件同意結構 {#event-schema}
 
+>[!NOTE]
+>
+>事件同意結構僅用於追蹤一段時間內的同意變更事件，不參與下游實施工作流程。 如果您不想追蹤隨時間的同意變更，可以跳至[建立同意資料集](#datasets)的下一節。
+
 在&#x200B;**[!UICONTROL 結構]**&#x200B;工作區中，選擇&#x200B;**[!UICONTROL 建立結構]**，然後從下拉式清單中選擇&#x200B;**[!UICONTROL XDM ExperienceEvent]**。
 
 ![](../../../images/governance-privacy-security/consent/iab/dataset/create-schema-event.png)
 
-此時將顯示&#x200B;**[!UICONTROL 添加欄位組]**&#x200B;對話框。 從此處，從清單中選取&#x200B;**[!UICONTROL IAB TCF 2.0同意]**。 您可以選擇使用搜尋列來縮小結果，以便更輕鬆地找出欄位群組。 選擇欄位組後，選擇&#x200B;**[!UICONTROL 添加欄位組]**。
+此時將顯示&#x200B;**[!UICONTROL 添加欄位組]**&#x200B;對話框。 從此處，從清單中選取&#x200B;**[!UICONTROL IAB TCF 2.0同意詳細資料]**。 您可以選擇使用搜尋列來縮小結果，以便更輕鬆地找出欄位群組。
 
->[!NOTE]
->
->只有在您打算隨時間追蹤同意變更事件時，才需要在事件結構中加入此欄位群組。 若您不想追蹤這些事件，可在設定Web SDK時，使用不含這些欄位的事件結構。
 
 ![](../../../images/governance-privacy-security/consent/iab/dataset/add-event-privacy.png)
 
-畫布會重新顯示，顯示`consentStrings`欄位已新增至架構結構。
+接下來，從清單中查找&#x200B;**[!UICONTROL IdentityMap]**&#x200B;欄位組，並選擇它。 在右側邊欄中列出兩個欄位群組後，選取「**[!UICONTROL 新增欄位群組]**」。
+
+![](../../../images/governance-privacy-security/consent/iab/dataset/add-event-identitymap.png)
+
+畫布會重新顯示，顯示`consentStrings`和`identityMap`欄位已新增至架構結構。
 
 ![](../../../images/governance-privacy-security/consent/iab/dataset/event-privacy-structure.png)
 
@@ -146,18 +148,11 @@ ht-degree: 0%
 
 ![](../../../images/governance-privacy-security/consent/iab/dataset/schema-details-event.png)
 
-提供名稱和說明後，請在畫布左側的&#x200B;**[!UICONTROL 欄位群組]**&#x200B;區段下選取&#x200B;**[!UICONTROL 新增]**。
+提供名稱和說明後，您可以選擇在畫布左側的&#x200B;**[!UICONTROL 欄位群組]**&#x200B;區段下選取&#x200B;**[!UICONTROL 新增]**，以新增更多欄位至架構。
 
 ![](../../../images/governance-privacy-security/consent/iab/dataset/add-field-group-event.png)
 
-在此，重複上述步驟，將下列其他欄位群組新增至架構：
-
-* [!UICONTROL IdentityMap]
-* [!UICONTROL 環境詳細資訊]
-* [!UICONTROL Web詳細資訊]
-* [!UICONTROL 實作詳細資料]
-
-新增欄位群組後，請選取&#x200B;**[!UICONTROL Save]**&#x200B;以完成。
+新增您需要的欄位群組後，請選取&#x200B;**[!UICONTROL Save]**&#x200B;以完成。
 
 ![](../../../images/governance-privacy-security/consent/iab/dataset/event-all-field-groups.png)
 
@@ -187,13 +182,13 @@ ht-degree: 0%
 
 ![](../../../images/governance-privacy-security/consent/iab/dataset/dataset-enable-profile.png)
 
-請再次遵循上述步驟，建立符合TCF 2.0規範的其他必要資料集。
+如果您已建立事件型資料集的結構，請再按照上述步驟建立資料集。
 
 ## 後續步驟
 
-依照本教學課程，您已建立兩個資料集，現在可用來收集客戶同意資料：
+依照本教學課程，您至少已建立一個資料集，現在可用來收集客戶同意資料：
 
-* 以記錄為基礎的資料集，可在「即時客戶個人檔案」中使用。
-* 未為[!DNL Profile]啟用的時間序列資料集。
+* 以記錄為基礎的資料集，可在「即時客戶個人檔案」中使用。 **(必填)**
+* 未為[!DNL Profile]啟用的時間序列資料集。 (選填)
 
 您現在可以返回[IAB TCF 2.0概述](./overview.md#merge-policies)以繼續設定符合TCF 2.0的平台程式。

@@ -5,7 +5,7 @@ title: Adobe Experience Platform中的同意處理
 topic-legacy: getting started
 description: 了解如何使用Adobe2.0標準，在Adobe Experience Platform中處理客戶同意訊號。
 exl-id: cd76a3f6-ae55-4d75-9b30-900fadb4664f
-source-git-commit: bd312024a1a3fb6da840a38d6e9d19fcbd6eab5a
+source-git-commit: 1c398cdac45141b4886d984db32fbac7ca60265c
 workflow-type: tm+mt
 source-wordcount: '1572'
 ht-degree: 0%
@@ -88,7 +88,7 @@ Adobe Experience Platform可讓您處理從客戶收集到的同意資料，並�
 
 ### 配置Experience PlatformWeb SDK以處理同意資料 {#web-sdk}
 
-一旦您將CMP設定為監聽網站上的同意變更事件，您就可以整合Experience PlatformWeb SDK以接收更新的同意設定，並在每次載入頁面時以及每當同意變更事件發生時將其傳送至Platform。 如需詳細資訊，請參閱[設定Web SDK以處理客戶同意資料的指南](./sdk.md) 。
+一旦您將CMP設定為監聽網站上的同意變更事件，您就可以整合Experience PlatformWeb SDK以接收更新的同意設定，並在每次載入頁面時以及每當同意變更事件發生時將其傳送至Platform。 如需詳細資訊，請參閱[設定Web SDK以處理客戶同意資料的指南](../sdk.md) 。
 
 ### 設定Experience Platform行動SDK以處理同意資料 {#mobile-sdk}
 

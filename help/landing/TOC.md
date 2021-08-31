@@ -3,7 +3,7 @@ audience: user
 user-guide-title: Adobe Experience Platform 概觀
 breadcrumb-title: Experience Platform 概觀
 user-guide-description: 了解 Experience Platform 如何協助您即時為客戶傳遞個人化體驗。
-source-git-commit: a0f4e49192a54075ce7c48620c9729e61ecdfdac
+source-git-commit: a154ff9dd2a2091a427f7e650a9cb6bc57cbdfb5
 workflow-type: tm+mt
 source-wordcount: '197'
 ht-degree: 23%
@@ -46,10 +46,10 @@ ht-degree: 23%
       * Adobe標準{#adobe}
          * [概覽](./governance-privacy-security/consent/adobe/overview.md)
          * [設定資料集以擷取同意和偏好設定資料](./governance-privacy-security/consent/adobe/dataset.md)
-         * [整合Platform Web SDK以處理同意和偏好設定資料](./governance-privacy-security/consent/adobe/sdk.md)
       * IAB TCF 2.0 {#iab}
          * [概覽](./governance-privacy-security/consent/iab/overview.md)
          * [設定資料集以擷取同意和偏好設定資料](./governance-privacy-security/consent/iab/dataset.md)
+      * [整合Platform Web SDK以處理同意和偏好設定資料](./governance-privacy-security/consent/sdk.md)
    * 稽核記錄（測試版）{#audit-logs}
       * [概覽](./governance-privacy-security/audit-logs/overview.md)
 * [授權使用控制面板](license-usage-dashboard.md)
