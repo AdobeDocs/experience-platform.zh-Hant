@@ -6,9 +6,9 @@ topic-legacy: overview
 type: Tutorial
 description: 了解如何使用Flow Service API將Platform連線至Microsoft Dynamics帳戶。
 exl-id: 423c6047-f183-4d92-8d2f-cc8cc26647ef
-source-git-commit: 8035539321f5016521208aa110a4ee2881cb5d1e
+source-git-commit: b4291b4f13918a1f85d73e0320c67dd2b71913fc
 workflow-type: tm+mt
-source-wordcount: '637'
+source-wordcount: '633'
 ht-degree: 2%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 2%
 
 基本連線代表來源和Adobe Experience Platform之間已驗證的連線。
 
-本教學課程會逐步帶您了解使用[[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml)建立[!DNL Microsoft Dynamics]基本連線（以下稱為「[!DNL Dynamics]」）的步驟。
+本教學課程會逐步帶您了解使用[[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/)建立[!DNL Microsoft Dynamics]基本連線（以下稱為「[!DNL Dynamics]」）的步驟。
 
 ## 快速入門
 

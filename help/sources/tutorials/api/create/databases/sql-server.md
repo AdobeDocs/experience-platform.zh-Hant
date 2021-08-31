@@ -6,9 +6,9 @@ topic-legacy: overview
 type: Tutorial
 description: 了解如何使用流服務API將Adobe Experience Platform連接到Microsoft SQL Server。
 exl-id: 00455a61-c8c1-42f4-a962-fc16f7370cbd
-source-git-commit: 5fb5f0ce8bd03ba037c6901305ba17f8939eb9ce
+source-git-commit: b4291b4f13918a1f85d73e0320c67dd2b71913fc
 workflow-type: tm+mt
-source-wordcount: '461'
+source-wordcount: '457'
 ht-degree: 1%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 1%
 
 基本連線代表來源和Adobe Experience Platform之間已驗證的連線。
 
-本教學課程會逐步引導您使用[[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml)建立[!DNL Microsoft SQL Server]基本連線的步驟。
+本教學課程會逐步引導您使用[[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/)建立[!DNL Microsoft SQL Server]基本連線的步驟。
 
 ## 快速入門
 

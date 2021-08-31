@@ -6,16 +6,16 @@ topic-legacy: overview
 type: Tutorial
 description: 本教學課程涵蓋擷取串流資料，以及使用來源連接器和API將其匯入Platform的步驟。
 exl-id: 898df7fe-37a9-4495-ac05-30029258a6f4
-source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
+source-git-commit: b4291b4f13918a1f85d73e0320c67dd2b71913fc
 workflow-type: tm+mt
-source-wordcount: '1103'
+source-wordcount: '1099'
 ht-degree: 2%
 
 ---
 
 # 使用[!DNL Flow Service] API為原始資料建立流資料流
 
-本教學課程涵蓋從串流來源連接器擷取原始資料，以及使用[[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml)將其帶入Experience Platform的步驟。
+本教學課程涵蓋從串流來源連接器擷取原始資料，以及使用[[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/)將其帶入Experience Platform的步驟。
 
 ## 快速入門
 

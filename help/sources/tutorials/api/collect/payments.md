@@ -6,16 +6,16 @@ topic-legacy: overview
 type: Tutorial
 description: 本教學課程涵蓋從支付應用程式擷取資料，以及使用來源連接器和API擷取資料至Platform的步驟。
 exl-id: b75e2a3d-6590-4079-a261-fa4e9626e8dc
-source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
+source-git-commit: b4291b4f13918a1f85d73e0320c67dd2b71913fc
 workflow-type: tm+mt
-source-wordcount: '1590'
+source-wordcount: '1586'
 ht-degree: 1%
 
 ---
 
 # 使用來源連接器和API收集付款資料
 
-本教學課程涵蓋從協力廠商支付應用程式擷取資料，並透過來源連接器和[[!DNL Flow Service]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) API擷取資料至Platform的步驟。
+本教學課程涵蓋從協力廠商支付應用程式擷取資料，並透過來源連接器和[[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/)擷取資料至Platform的步驟。
 
 ## 快速入門
 

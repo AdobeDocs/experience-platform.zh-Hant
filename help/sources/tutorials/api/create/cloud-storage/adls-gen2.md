@@ -6,9 +6,9 @@ topic-legacy: overview
 type: Tutorial
 description: 了解如何使用流量服務API將Adobe Experience Platform連線至Azure Data Lake Storage Gen2。
 exl-id: cad5e2a0-e27c-4130-9ad8-888352c92f04
-source-git-commit: 59a8e2aa86508e53f181ac796f7c03f9fcd76158
+source-git-commit: b4291b4f13918a1f85d73e0320c67dd2b71913fc
 workflow-type: tm+mt
-source-wordcount: '524'
+source-wordcount: '520'
 ht-degree: 1%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 1%
 
 基本連線代表來源和Adobe Experience Platform之間已驗證的連線。
 
-本教學課程會逐步帶您了解使用[[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml)為[!DNL Azure Data Lake Storage Gen2]建立基本連線（以下稱為「ADLS Gen2」）的步驟。
+本教學課程會逐步帶您了解使用[[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/)為[!DNL Azure Data Lake Storage Gen2]建立基本連線（以下稱為「ADLS Gen2」）的步驟。
 
 ## 快速入門
 

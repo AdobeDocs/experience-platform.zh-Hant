@@ -6,9 +6,9 @@ topic-legacy: overview
 type: Tutorial
 description: 了解如何使用Flow Service API將Adobe Experience Platform連線至Google AdWords。
 exl-id: 4658e392-1bd9-4e74-aa05-96109f9b62a0
-source-git-commit: ff0f6bc6b8a57b678b329fe2b47c53919e0e2d64
+source-git-commit: b4291b4f13918a1f85d73e0320c67dd2b71913fc
 workflow-type: tm+mt
-source-wordcount: '529'
+source-wordcount: '525'
 ht-degree: 1%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 1%
 
 基本連線代表來源和Adobe Experience Platform之間已驗證的連線。
 
-本教學課程會逐步帶您了解使用[[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml)建立[!DNL Google AdWords]基本連線（以下稱為「[!DNL AdWords]」）的步驟。
+本教學課程會逐步帶您了解使用[[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/)建立[!DNL Google AdWords]基本連線（以下稱為「[!DNL AdWords]」）的步驟。
 
 ## 快速入門
 

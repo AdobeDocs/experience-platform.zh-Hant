@@ -1,64 +1,63 @@
 ---
-keywords: Experience Platform;home；熱門主題；流服務；刪除帳戶；delete;api
+keywords: Experience Platform；首頁；熱門主題；流程服務；刪除帳戶；刪除；API
 solution: Experience Platform
-title: 使用流程服務API刪除帳戶
+title: 使用流量服務API刪除帳戶
 topic-legacy: overview
 type: Tutorial
-description: 瞭解如何使用Flow Service API刪除帳戶。
+description: 了解如何使用流量服務API刪除帳戶。
 exl-id: 3d07ab7d-c012-472e-8db4-b19e3936dcba
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: b4291b4f13918a1f85d73e0320c67dd2b71913fc
 workflow-type: tm+mt
-source-wordcount: '592'
+source-wordcount: '589'
 ht-degree: 2%
 
 ---
 
-# 使用流程服務API刪除帳戶
+# 使用流量服務API刪除帳戶
 
-Adobe Experience Platform允許從外部來源接收資料，同時提供使用[!DNL Platform]服務構建、標籤和增強傳入資料的能力。 您可以從多種來源收錄資料，例如Adobe應用程式、雲端儲存空間、資料庫等。
+Adobe Experience Platform可讓您從外部來源擷取資料，同時使用[!DNL Platform]服務來建構、加標籤及增強傳入資料。 您可以從多種來源(如Adobe應用程式、雲儲存、資料庫等)內嵌資料。
 
-[!DNL Flow Service] 用於收集和集中Adobe Experience Platform內不同來源的客戶資料。該服務提供用戶介面和REST風格的API，所有支援的源都可從中連接。
+[!DNL Flow Service] 可用來收集和集中Adobe Experience Platform中各種不同來源的客戶資料。該服務提供用戶介面和RESTful API，所有受支援的源都可從中連接。
 
-本教學課程涵蓋使用[[!DNL Flow Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml)進行刪除的步驟。
+本教學課程涵蓋使用[[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/)刪除的步驟。
 
 ## 快速入門
 
-本教學課程要求您必須有有效的連線ID。 如果您沒有有效的連線ID，請從[來源概觀](../../home.md)中選取您選擇的連接器，然後依照本教學課程嘗試前所述的步驟進行。
+本教學課程要求您具備有效的連線ID。 如果您沒有有效的連接ID，請從[sources overview](../../home.md)中選擇您選擇的連接器，並遵循在嘗試本教程之前概述的步驟。
 
-本教學課程還要求您對Adobe Experience Platform的以下部分有切實的瞭解：
+本教學課程也需要您妥善了解下列Adobe Experience Platform元件：
 
-* [來源](../../home.md): [!DNL Experience Platform] 允許從各種來源接收資料，同時提供使用服務構建、標籤和增強傳入資料的 [!DNL Platform] 能力。
-* [沙盒](../../../sandboxes/home.md): [!DNL Experience Platform] 提供虛擬沙盒，可將單一執行個體分 [!DNL Platform] 割為不同的虛擬環境，以協助開發和發展數位體驗應用程式。
+* [來源](../../home.md): [!DNL Experience Platform] 可讓您從各種來源擷取資料，同時使用服務來建構、加標籤及增強傳入 [!DNL Platform] 資料。
+* [沙箱](../../../sandboxes/home.md): [!DNL Experience Platform] 提供可將單一執行個體分割成個 [!DNL Platform] 別虛擬環境的虛擬沙箱，以協助開發及改進數位體驗應用程式。
 
-以下各節提供您需要瞭解的其他資訊，以便使用[!DNL Flow Service] API成功刪除連線。
+以下各節提供您需要知道的其他資訊，以便使用[!DNL Flow Service] API成功刪除連接。
 
 ### 讀取範例API呼叫
 
-本教學課程提供範例API呼叫，以示範如何設定請求的格式。 這些包括路徑、必要標題和正確格式化的請求負載。 也提供API回應中傳回的範例JSON。 如需範例API呼叫檔案中所用慣例的詳細資訊，請參閱[!DNL Experience Platform]疑難排解指南中[如何讀取範例API呼叫](../../../landing/troubleshooting.md#how-do-i-format-an-api-request)一節。
+本教學課程提供範例API呼叫，以示範如何設定要求格式。 這些功能包括路徑、必要標題和格式正確的請求裝載。 也提供API回應中傳回的範例JSON。 如需範例API呼叫檔案中所使用慣例的資訊，請參閱[!DNL Experience Platform]疑難排解指南中[如何讀取範例API呼叫](../../../landing/troubleshooting.md#how-do-i-format-an-api-request)一節。
 
 ### 收集必要標題的值
 
-若要呼叫[!DNL Platform] API，您必須先完成[驗證教學課程](https://www.adobe.com/go/platform-api-authentication-en)。 完成驗證教學課程後，所有[!DNL Experience Platform] API呼叫中每個所需標題的值都會顯示在下面：
+若要呼叫[!DNL Platform] API，您必須先完成[authentication tutorial](https://www.adobe.com/go/platform-api-authentication-en)。 完成驗證教學課程後，將提供所有[!DNL Experience Platform] API呼叫中每個必要標題的值，如下所示：
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
 * `x-gw-ims-org-id: {IMS_ORG}`
 
-[!DNL Experience Platform]中的所有資源（包括屬於[!DNL Flow Service]的資源）都隔離到特定的虛擬沙盒。 對[!DNL Platform] API的所有請求都需要一個標題，該標題指定要在中執行操作的沙盒的名稱：
+[!DNL Experience Platform]中的所有資源，包括屬於[!DNL Flow Service]的資源，都與特定虛擬沙箱隔離。 對[!DNL Platform] API的所有請求都需要標題，以指定作業將在下列位置進行的沙箱名稱：
 
 * `x-sandbox-name: {SANDBOX_NAME}`
 
-所有包含裝載(POST、PUT、PATCH)的請求都需要附加的媒體類型標題：
+所有包含裝載(POST、PUT、PATCH)的請求都需要其他媒體類型標題：
 
 * `Content-Type: application/json`
 
 ## 查找連接詳細資訊
 
 >[!NOTE]
->本教學課程以[Azure Blob源連接器](../../connectors/cloud-storage/blob.md)為例，但概述的步驟適用於[可用源連接器](../../home.md)中的任何一個。
+>本教學課程以[Azure Blob來源連接器](../../connectors/cloud-storage/blob.md)為例，但概述的步驟適用於任何可用來源連接器[。](../../home.md)
 
-更新連線資訊的第一步是使用連線ID擷取連線詳細資訊。
+更新連線資訊的第一步，是使用連線ID擷取連線詳細資訊。
 
 **API格式**
 
@@ -72,7 +71,7 @@ GET /connections/{CONNECTION_ID}
 
 **要求**
 
-以下內容會擷取您連線ID的相關資訊。
+以下項目會擷取您連線ID的相關資訊。
 
 ```shell
 curl -X GET \
@@ -85,7 +84,7 @@ curl -X GET \
 
 **回應**
 
-成功的回應會傳回連線的目前詳細資料，包括其認證、唯一識別碼(`id`)和版本。
+成功的響應返回連接的當前詳細資訊，包括其憑據、唯一標識符(`id`)和版本。
 
 ```json
 {
@@ -122,7 +121,7 @@ curl -X GET \
 
 ## 刪除連接
 
-擁有現有連接ID後，請對[!DNL Flow Service] API執行DELETE請求。
+擁有現有連線ID後，請對[!DNL Flow Service] API執行DELETE請求。
 
 **API格式**
 
@@ -147,12 +146,12 @@ curl -X DELETE \
 
 **回應**
 
-成功的回應會傳回HTTP狀態204（無內容）和空白的內文。
+成功的回應會傳回HTTP狀態204（無內容）和空白內文。
 
-您可以嘗試對連線進行查閱(GET)請求，以確認刪除。
+您可以嘗試對連線進行查詢(GET)以確認刪除。
 
 ## 後續步驟
 
-在本教學課程中，您已成功使用[!DNL Flow Service] API刪除現有帳戶。
+依照本教學課程，您已成功使用[!DNL Flow Service] API刪除現有帳戶。
 
 有關如何使用用戶介面執行這些操作的步驟，請參閱有關在UI](../../tutorials/ui/delete-accounts.md)中刪除帳戶的[教程

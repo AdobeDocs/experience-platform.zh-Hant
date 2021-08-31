@@ -5,9 +5,9 @@ solution: Experience Platform
 title: 流運行通知
 topic-legacy: overview
 exl-id: 0f1cde97-3030-4b8e-be08-21f64e78b794
-source-git-commit: a455134a45137b171636d6525ce9124bc95f4335
+source-git-commit: b4291b4f13918a1f85d73e0320c67dd2b71913fc
 workflow-type: tm+mt
-source-wordcount: '785'
+source-wordcount: '782'
 ht-degree: 1%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 1%
 
 Adobe Experience Platform可讓您從外部來源擷取資料，同時使用[!DNL Platform]服務來建構、加標籤及增強傳入資料。 您可以從多種來源(如Adobe應用程式、雲儲存、資料庫等)內嵌資料。
 
-[[!DNL Adobe Experience Platform Flow Service]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) 用於收集和集中來自內不同來源的客戶資料 [!DNL Platform]。該服務提供用戶介面和RESTful API，所有受支援的源都可從中連接。
+[[!DNL Flow Service] ](https://www.adobe.io/experience-platform-apis/references/flow-service/) API用來收集和集中來自內不同來源的客戶資料 [!DNL Platform]。該服務提供用戶介面和RESTful API，所有受支援的源都可從中連接。
 
 使用Adobe I/O事件，您可以訂閱事件，並使用Webhook接收有關流程執行狀態的通知。 這些通知包含關於流程執行成功或導致執行失敗的錯誤的資訊。
 

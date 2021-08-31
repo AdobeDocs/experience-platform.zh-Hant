@@ -6,16 +6,16 @@ topic-legacy: overview
 type: Tutorial
 description: 本教學課程涵蓋從資料庫擷取資料，以及使用來源連接器和API將資料擷取至Platform的步驟。
 exl-id: 1e1f9bbe-eb5e-40fb-a03c-52df957cb683
-source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
+source-git-commit: b4291b4f13918a1f85d73e0320c67dd2b71913fc
 workflow-type: tm+mt
-source-wordcount: '1641'
+source-wordcount: '1619'
 ht-degree: 1%
 
 ---
 
 # 使用來源連接器和API從資料庫收集資料
 
-本教學課程涵蓋從協力廠商資料庫擷取資料，並透過來源連接器和[[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml)擷取資料至Platform的步驟。
+本教學課程涵蓋從協力廠商資料庫擷取資料，並透過來源連接器和[[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/)擷取資料至Platform的步驟。
 
 ## 快速入門
 
@@ -30,7 +30,7 @@ ht-degree: 1%
 * [[!DNL Batch ingestion]](../../../../ingestion/batch-ingestion/overview.md):批次內嵌API可讓您將資料以批次檔案的形式內嵌至Experience Platform。
 * [沙箱](../../../../sandboxes/home.md):Experience Platform提供可將單一Platform執行個體分割成個別虛擬環境的虛擬沙箱，以協助開發及改進數位體驗應用程式。
 
-以下各節提供您需要了解的其他資訊，以便使用[[!DNL Flow Service]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) API成功連接到第三方資料庫。
+以下各節提供您需要知道的其他資訊，以便使用[!DNL Flow Service] API成功連接到第三方資料庫。
 
 ### 讀取範例API呼叫
 
@@ -431,7 +431,7 @@ curl -X POST \
 
 ## 檢索資料流規範 {#specs}
 
-資料流負責從源收集資料並將其導入Platform。 要建立資料流，必須首先通過對[[!DNL Flow Service]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) API執行GET請求來獲取資料流規範。 資料流規範負責從外部資料庫或NoSQL系統收集資料。
+資料流負責從源收集資料並將其導入Platform。 要建立資料流，必須首先通過對[!DNL Flow Service] API執行GET請求來獲取資料流規範。 資料流規範負責從外部資料庫或NoSQL系統收集資料。
 
 **API格式**
 

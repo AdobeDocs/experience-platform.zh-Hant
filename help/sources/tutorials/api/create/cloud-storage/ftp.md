@@ -6,9 +6,9 @@ topic-legacy: overview
 type: Tutorial
 description: 了解如何使用流量服務API將Adobe Experience Platform連線至FTP（檔案傳輸通訊協定）伺服器。
 exl-id: a7bef346-b357-49bc-ac54-ac8b42adac50
-source-git-commit: 59a8e2aa86508e53f181ac796f7c03f9fcd76158
+source-git-commit: b4291b4f13918a1f85d73e0320c67dd2b71913fc
 workflow-type: tm+mt
-source-wordcount: '489'
+source-wordcount: '485'
 ht-degree: 1%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 1%
 
 基本連線代表來源和Adobe Experience Platform之間已驗證的連線。
 
-本教學課程會逐步帶您了解使用[[!DNL Flow Service]  API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml)為[!DNL FTP]（檔案傳輸通訊協定）建立基本連線的步驟。
+本教學課程會逐步帶您了解使用[[!DNL Flow Service]  API](https://www.adobe.io/experience-platform-apis/references/flow-service/)為[!DNL FTP]（檔案傳輸通訊協定）建立基本連線的步驟。
 
 ## 快速入門
 

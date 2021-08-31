@@ -1,34 +1,33 @@
 ---
-keywords: Experience Platform；首頁；熱門主題；雲儲存；雲儲存
+keywords: Experience Platform；首頁；熱門主題；雲端儲存空間；雲端儲存空間
 solution: Experience Platform
-title: 使用Flow Service API探索Cloud儲存系統
+title: 使用流服務API探索Cloud儲存系統
 topic-legacy: overview
-description: 本教學課程使用Flow Service API來探索協力廠商雲端儲存系統。
+description: 本教學課程使用流量服務API來探索協力廠商雲端儲存系統。
 exl-id: ba1a9bff-43a6-44fb-a4e7-e6a45b7eeebd
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: b4291b4f13918a1f85d73e0320c67dd2b71913fc
 workflow-type: tm+mt
-source-wordcount: '820'
+source-wordcount: '812'
 ht-degree: 1%
 
 ---
 
-# 使用[!DNL Flow Service] API探索雲端儲存系統
+# 使用[!DNL Flow Service] API探索雲儲存系統
 
-本教學課程使用[[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml)來探索協力廠商雲端儲存系統。
+本教學課程使用[[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/)來探索協力廠商雲端儲存系統。
 
 ## 快速入門
 
-本指南需要對Adobe Experience Platform的下列組成部分有切實的瞭解：
+本指南需要妥善了解下列Adobe Experience Platform元件：
 
-* [來源](../../../home.md): [!DNL Experience Platform] 允許從各種來源接收資料，同時提供使用服務構建、標籤和增強傳入資料的 [!DNL Platform] 能力。
-* [沙盒](../../../../sandboxes/home.md): [!DNL Experience Platform] 提供虛擬沙盒，可將單一執行個體分 [!DNL Platform] 割為不同的虛擬環境，以協助開發和發展數位體驗應用程式。
+* [來源](../../../home.md): [!DNL Experience Platform] 可讓您從各種來源擷取資料，同時使用服務來建構、加標籤及增強傳入 [!DNL Platform] 資料。
+* [沙箱](../../../../sandboxes/home.md): [!DNL Experience Platform] 提供可將單一執行個體分割成個 [!DNL Platform] 別虛擬環境的虛擬沙箱，以協助開發及改進數位體驗應用程式。
 
-以下各節提供您需要瞭解的其他資訊，以便使用[!DNL Flow Service] API成功連線至雲端儲存系統。
+以下各節提供您需要了解的其他資訊，以便使用[!DNL Flow Service] API成功連接到雲儲存系統。
 
 ### 取得連線ID
 
-若要使用[!DNL Platform] API來探索第三方雲端儲存空間，您必須擁有有效的連線ID。 如果您尚未連接要使用的儲存，則可以通過以下教程建立一個：
+若要使用[!DNL Platform] API探索第三方雲端儲存空間，您必須擁有有效的連線ID。 如果您尚未連接要使用的儲存，則可以通過以下教程建立連接：
 
 * [[!DNL Amazon S3]](../create/cloud-storage/s3.md)
 * [[!DNL Azure Blob]](../create/cloud-storage/blob.md)
@@ -42,34 +41,34 @@ ht-degree: 1%
 
 ### 讀取範例API呼叫
 
-本教學課程提供範例API呼叫，以示範如何設定請求的格式。 這些包括路徑、必要標題和正確格式化的請求負載。 也提供API回應中傳回的範例JSON。 如需範例API呼叫檔案中所用慣例的詳細資訊，請參閱[!DNL Experience Platform]疑難排解指南中[如何讀取範例API呼叫](../../../../landing/troubleshooting.md#how-do-i-format-an-api-request)一節。
+本教學課程提供範例API呼叫，以示範如何設定要求格式。 這些功能包括路徑、必要標題和格式正確的請求裝載。 也提供API回應中傳回的範例JSON。 如需範例API呼叫檔案中所使用慣例的資訊，請參閱[!DNL Experience Platform]疑難排解指南中[如何讀取範例API呼叫](../../../../landing/troubleshooting.md#how-do-i-format-an-api-request)一節。
 
 ### 收集必要標題的值
 
-若要呼叫[!DNL Platform] API，您必須先完成[驗證教學課程](https://www.adobe.com/go/platform-api-authentication-en)。 完成驗證教學課程後，所有[!DNL Experience Platform] API呼叫中每個所需標題的值都會顯示在下面：
+若要呼叫[!DNL Platform] API，您必須先完成[authentication tutorial](https://www.adobe.com/go/platform-api-authentication-en)。 完成驗證教學課程後，將提供所有[!DNL Experience Platform] API呼叫中每個必要標題的值，如下所示：
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
 * `x-gw-ims-org-id: {IMS_ORG}`
 
-[!DNL Experience Platform]中的所有資源（包括屬於[!DNL Flow Service]的資源）都隔離到特定的虛擬沙盒。 對[!DNL Platform] API的所有請求都需要一個標題，該標題指定要在中執行操作的沙盒的名稱：
+[!DNL Experience Platform]中的所有資源，包括屬於[!DNL Flow Service]的資源，都與特定虛擬沙箱隔離。 對[!DNL Platform] API的所有請求都需要標題，以指定作業將在下列位置進行的沙箱名稱：
 
 * `x-sandbox-name: {SANDBOX_NAME}`
 
-所有包含裝載(POST、PUT、PATCH)的請求都需要附加的媒體類型標題：
+所有包含裝載(POST、PUT、PATCH)的請求都需要其他媒體類型標題：
 
 * `Content-Type: application/json`
 
-## 探索您的雲端儲存空間
+## 探索雲端儲存空間
 
-使用雲端儲存空間的連線ID，您可以執行GET要求來探索檔案和目錄。 執行GET請求以探索雲端儲存空間時，您必須包含下表所列的查詢參數：
+使用雲端儲存空間的連線ID，您可以執行GET請求來探索檔案和目錄。 執行GET請求以探索雲端儲存空間時，您必須包含下表所列的查詢參數：
 
 | 參數 | 說明 |
 | --------- | ----------- |
-| `objectType` | 您要探索的物件類型。 將此值設定為： <ul><li>`folder`:探索特定目錄</li><li>`root`:探索根目錄。</li></ul> |
-| `object` | 僅當查看特定目錄時才需要此參數。 其值表示要瀏覽的目錄的路徑。 |
+| `objectType` | 要瀏覽的對象類型。 將此值設定為： <ul><li>`folder`:探索特定目錄</li><li>`root`:瀏覽根目錄。</li></ul> |
+| `object` | 只有在查看特定目錄時，才需要此參數。 其值表示要瀏覽的目錄的路徑。 |
 
-使用以下調用可查找要導入[!DNL Platform]的檔案路徑：
+使用以下調用查找要帶入[!DNL Platform]的檔案的路徑：
 
 **API格式**
 
@@ -80,7 +79,7 @@ GET /connections/{CONNECTION_ID}/explore?objectType=folder&object={PATH}
 
 | 參數 | 說明 |
 | --- | --- |
-| `{CONNECTION_ID}` | 雲端儲存空間來源連接器的連線ID。 |
+| `{CONNECTION_ID}` | 雲端儲存來源連接器的連線ID。 |
 | `{PATH}` | 目錄的路徑。 |
 
 **要求**
@@ -96,7 +95,7 @@ curl -X GET \
 
 **回應**
 
-成功的響應返回查詢目錄內找到的檔案和資料夾陣列。 請注意您要上傳之檔案的`path`屬性，因為您必須在下一步驟中提供它以檢查其結構。
+成功的響應返回在查詢的目錄中找到的檔案和資料夾陣列。 記下您要上傳之檔案的`path`屬性，因為您必須在下一個步驟中提供該屬性以檢查其結構。
 
 ```json
 [
@@ -126,9 +125,9 @@ curl -X GET \
 
 ## Inspect檔案結構
 
-若要從雲端儲存空間檢查資料檔案的結構，請執行GET要求，同時提供檔案的路徑和類型作為查詢參數。
+若要從雲端儲存體檢查資料檔案的結構，請執行GET要求，同時提供檔案的路徑和類型作為查詢參數。
 
-您可以在提供檔案路徑和類型的同時，執行GET要求，從雲端儲存來源檢查資料檔案的結構。 您也可以透過指定檔案類型作為查詢參數的一部分，來檢查不同的檔案類型，例如CSV、TSV或壓縮的JSON和分隔檔案。
+您可以在提供檔案路徑和類型的同時，執行GET請求，以檢查雲端儲存來源中的資料檔案結構。 您也可以在查詢參數中指定不同的檔案類型，以檢查不同的檔案類型，例如CSV、TSV或壓縮的JSON和分隔檔案。
 
 **API格式**
 
@@ -140,10 +139,10 @@ GET /connections/{CONNECTION_ID}/explore?objectType=file&object={FILE_PATH}&prev
 
 | 參數 | 說明 |
 | --------- | ----------- |
-| `{CONNECTION_ID}` | 雲端儲存空間來源連接器的連線ID。 |
+| `{CONNECTION_ID}` | 雲儲存源連接器的連接ID。 |
 | `{FILE_PATH}` | 要檢查的檔案的路徑。 |
-| `{FILE_TYPE}` | 檔案的類型。 支援的檔案類型包括：<ul><li>分隔字元</code>:分隔字元分隔值。 DSV檔案必須以逗號分隔。</li><li>JSON</code>:JavaScript物件符號。 JSON檔案必須符合XDM規範</li><li>PARCE</code>:阿帕奇鑲木地板。 拼花檔案必須與XDM相容。</li></ul> |
-| `{QUERY_PARAMS}` | 可用於篩選結果的可選查詢參數。 如需詳細資訊，請參閱[查詢參數](#query)一節。 |
+| `{FILE_TYPE}` | 檔案的類型。 支援的檔案類型包括：<ul><li>分隔字元</code>:分隔字元分隔值。 DSV檔案必須以逗號分隔。</li><li>JSON</code>:JavaScript物件標籤法。 JSON檔案必須符合XDM</li><li>PARQUET</code>:阿帕奇拼花。 拼花檔案必須符合XDM標準。</li></ul> |
+| `{QUERY_PARAMS}` | 可用於篩選結果的選用查詢參數。 如需詳細資訊，請參閱[查詢參數](#query)上的一節。 |
 
 **要求**
 
@@ -158,7 +157,7 @@ curl -X GET \
 
 **回應**
 
-成功的響應返回查詢檔案的結構，包括表名和資料類型。
+成功的響應返回查詢的檔案的結構，包括表名和資料類型。
 
 ```json
 [
@@ -185,15 +184,15 @@ curl -X GET \
 ]
 ```
 
-## 使用查詢參數{#query}
+## 使用查詢參數 {#query}
 
-[[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml)支援使用查詢參數來預覽和檢查不同的檔案類型。
+[[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/)支援使用查詢參數來預覽和檢查不同的檔案類型。
 
 | 參數 | 說明 |
 | --------- | ----------- |
-| `columnDelimiter` | 您指定為欄分隔字元的單一字元值，用來檢查CSV或TSV檔案。 如果未提供參數，則值預設為逗號`(,)`。 |
-| `compressionType` | 預覽壓縮分隔字元或JSON檔案的必要查詢參數。 支援的壓縮檔案包括： <ul><li>`bzip2`</li><li>`gzip`</li><li>`deflate`</li><li>`zipDeflate`</li><li>`tarGzip`</li><li>`tar`</li></ul> |
+| `columnDelimiter` | 您指定為欄分隔字元以檢查CSV或TSV檔案的單一字元值。 如果未提供參數，值預設為逗號`(,)`。 |
+| `compressionType` | 預覽壓縮的分隔字元或JSON檔案所需的查詢參數。 支援的壓縮檔案包括： <ul><li>`bzip2`</li><li>`gzip`</li><li>`deflate`</li><li>`zipDeflate`</li><li>`tarGzip`</li><li>`tar`</li></ul> |
 
 ## 後續步驟
 
-通過本教程，您已探索了雲儲存系統，找到了要導入[!DNL Platform]的檔案的路徑，並查看了其結構。 您可以在下一個教學課程中使用這些資訊，從您的雲端儲存空間收集資料，並將其匯入Platform](../collect/cloud-storage.md)。[
+依照本教程，您已探索雲儲存系統，找到要帶入[!DNL Platform]的檔案路徑，並檢視其結構。 您可以在下一個教學課程中使用此資訊，以從您的雲端儲存空間收集資料，並將其匯入Platform](../collect/cloud-storage.md)。[

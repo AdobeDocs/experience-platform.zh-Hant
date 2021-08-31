@@ -6,9 +6,9 @@ topic-legacy: overview
 type: Tutorial
 description: 了解如何使用Flow Service API將Azure HDInsights上的Apache Hive連線至Adobe Experience Platform。
 exl-id: e1469a29-6f61-47ba-995e-39f06ee4a4a4
-source-git-commit: 5fb5f0ce8bd03ba037c6901305ba17f8939eb9ce
+source-git-commit: b4291b4f13918a1f85d73e0320c67dd2b71913fc
 workflow-type: tm+mt
-source-wordcount: '483'
+source-wordcount: '479'
 ht-degree: 1%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 1%
 
 基本連線代表來源和Adobe Experience Platform之間已驗證的連線。
 
-本教學課程會逐步帶您了解如何使用[[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml)，在[!DNL Azure HDInsights]（以下稱為「[!DNL Hive]」）上建立[!DNL Apache Hive]基本連線。
+本教學課程會逐步帶您了解如何使用[[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/)，在[!DNL Azure HDInsights]（以下稱為「[!DNL Hive]」）上建立[!DNL Apache Hive]基本連線。
 
 ## 快速入門
 
