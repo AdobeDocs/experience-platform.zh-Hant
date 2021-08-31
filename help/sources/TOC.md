@@ -3,10 +3,10 @@ audience: user
 user-guide-title: Adobe Experience Platform 來源連接器說明
 breadcrumb-title: 來源連接器指南
 user-guide-description: 從多種來源或結構擷取資料、加標籤，以及增強已擷取的資料。
-feature: 資料擷取，來源
-source-git-commit: 5f5e4f91862fe4ec8840224a9bdb5dc6d7338288
+feature: Data Ingestion, Sources
+source-git-commit: ebe620b078096349c514420746902ce406a910d1
 workflow-type: tm+mt
-source-wordcount: '639'
+source-wordcount: '643'
 ht-degree: 12%
 
 ---
@@ -248,4 +248,5 @@ ht-degree: 12%
 - [流運行通知](notifications.md)
 - [IP位址允許清單](ip-address-allow-list.md)
 - [常見問答](./troubleshooting.md)
+- [API 參考資料](https://www.adobe.io/experience-platform-apis/references/flow-service/)
 - [平台發行說明](https://www.adobe.com/go/platform-release-notes-en)
