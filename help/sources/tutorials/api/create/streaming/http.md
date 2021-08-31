@@ -6,10 +6,10 @@ topic-legacy: tutorial
 type: Tutorial
 description: 本教學課程將協助您開始使用Adobe Experience Platform資料擷取服務API中的串流擷取API。
 exl-id: 9f7fbda9-4cd3-4db5-92ff-6598702adc34
-source-git-commit: 42b8710cf6c04fabf7df1f005fae6b3828eeee49
+source-git-commit: 0ff93d580482f44954321089659bd2fc062f3f61
 workflow-type: tm+mt
-source-wordcount: '1206'
-ht-degree: 3%
+source-wordcount: '1268'
+ht-degree: 2%
 
 ---
 
@@ -18,7 +18,7 @@ ht-degree: 3%
 
 流量服務用於收集和集中Adobe Experience Platform內各種不同來源的客戶資料。 該服務提供用戶介面和RESTful API，所有受支援的源都可從中連接。
 
-本教學課程使用[!DNL Flow Service] API來引導您完成使用流程服務API建立串流連線的步驟。
+本教學課程使用[[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/)逐步引導您完成使用流量服務API建立串流連線的步驟。
 
 ## 快速入門
 
@@ -295,7 +295,9 @@ curl -X POST \
 
 ## 建立目標連線
 
-建立源連接後，可以建立目標連接。 建立目標連線時，您需要先前建立之資料集的`id`值。
+目標連線代表所擷取資料所登陸之目的地的連線。 要建立目標連接，必須提供與Data Lake關聯的固定連接規範ID。 此連接規範ID為：`c604ff05-7f1a-43c0-8e18-33bf874cb11c`。
+
+您現在擁有目標結構的唯一識別碼、目標資料集，以及Data Lake的連線規格ID。 使用這些識別碼，您可以使用[!DNL Flow Service] API建立目標連線，以指定將包含傳入來源資料的資料集。
 
 **API格式**
 
