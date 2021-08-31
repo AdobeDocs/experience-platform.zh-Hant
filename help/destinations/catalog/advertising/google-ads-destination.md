@@ -3,9 +3,9 @@ keywords: Google廣告；Google廣告；Google廣告；Google AdWords;Google AdW
 title: Google Ads連線
 description: Google Ads（舊稱Google AdWords）是線上廣告服務，可讓企業在文字搜尋、圖形顯示、YouTube視訊和應用程式內行動顯示器間，按點付費廣告。
 exl-id: 7143f476-49a8-42aa-bfb4-b11fc2b8f5c3
-source-git-commit: d0112cb26fcb85ad91ba403f81ee7f11d0889046
+source-git-commit: f04ea9aed586c8582286de82bfeee3f6f04cc360
 workflow-type: tm+mt
-source-wordcount: '698'
+source-wordcount: '708'
 ht-degree: 2%
 
 ---
@@ -45,7 +45,7 @@ ht-degree: 2%
 
 **區段匯出**  — 您正在將區段（對象）的所有成員匯出至Google目的地。
 
-## 先決條件
+## 先決條件 {#prerequisites}
 
 ### 現有[!DNL Google Ads]帳戶
 
@@ -95,7 +95,7 @@ ht-degree: 2%
 
 `{"message":"Google Error: AuthorizationError.USER_PERMISSION_DENIED","code":"400 BAD_REQUEST"}`
 
-當客戶嘗試配置沒有現有[!DNL Google Ads]帳戶的目標時，就會發生此錯誤。
+當客戶帳戶不符合[必要條件](#prerequisites)時，或當客戶嘗試在沒有現有[!DNL Google Ads]帳戶的情況下配置目標時，即會發生此錯誤。
 
 [!DNL Google] 已棄用與協 [!DNL Google Ads] 力廠商的新cookie整合。若要執行[allow-list](#allow-listing)步驟，您必須有與[!DNL Google Ads]的現有整合。
 
