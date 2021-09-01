@@ -3,9 +3,9 @@ keywords: facebook連線；facebook連線；facebook目的地；facebook;instagr
 title: Facebook連線
 description: 根據雜湊電子郵件啟用Facebook促銷活動的設定檔，以鎖定對象、個人化和隱藏。
 exl-id: 51e8c8f0-5e79-45b9-afbc-110bae127f76
-source-git-commit: d0112cb26fcb85ad91ba403f81ee7f11d0889046
+source-git-commit: 2faf27495c3785a27613db917c7416e1d7b08c4d
 workflow-type: tm+mt
-source-wordcount: '1498'
+source-wordcount: '1521'
 ht-degree: 1%
 
 ---
@@ -62,6 +62,9 @@ ht-degree: 1%
    >
    > 設定Adobe Experience Cloud的權限時，您必須啟用&#x200B;**管理促銷活動**&#x200B;權限。 [!DNL Adobe Experience Platform]整合需要權限。
 * 閱讀並簽署[!DNL Facebook Custom Audiences]服務條款。 若要這麼做，請前往`https://business.facebook.com/ads/manage/customaudiences/tos/?act=[accountID]`，其中`accountID`是您的[!DNL Facebook Ad Account ID]。
+   >[!IMPORTANT]
+   >
+   >簽署[!DNL Facebook Custom Audiences]服務條款時，請務必使用您在Facebook API中用來驗證的相同使用者帳戶。
 
 ## ID比對需求 {#id-matching-requirements}
 
