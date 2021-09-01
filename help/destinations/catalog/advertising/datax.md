@@ -1,15 +1,15 @@
 ---
-title: Verizon MediaYahoo DataX整合
+title: Verizon MediaYahoo DataX連線
 description: DataX是Verizon Media/Yahoo的聚合基礎架構，它承載各種元件，使Verizon Media/Yahoo能夠以安全、自動化和可擴展的方式與其外部合作夥伴交換資料。
-source-git-commit: 07c8a7afaf6cd2af249ad52eabfbc5f8cd6689ae
+source-git-commit: 09bae0d24eead5f0b6533ba5b89e1fc87c8c71b5
 workflow-type: tm+mt
-source-wordcount: '585'
+source-wordcount: '586'
 ht-degree: 2%
 
 ---
 
 
-# Verizon Media/Yahoo DataX
+# Verizon Media/Yahoo DataX連線
 
 ## 概覽 {#overview}
 
