@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform；設定檔；即時客戶設定檔；疑難排解；API；預覽；範例
 title: 預覽範例狀態（設定檔預覽）API端點
-description: 使用「即時客戶設定檔API」的預覽範例狀態端點，您可以預覽設定檔資料的最新成功範例、依資料集和身分列出設定檔分送，以及產生資料集重疊報表。
+description: 使用「即時客戶設定檔API」的一部分，預覽範例狀態端點、依資料集和身分分送的設定檔清單，以及產生顯示資料集重疊、身分重疊和未知設定檔的報表，可預覽最新成功的設定檔範例。
 exl-id: a90a601e-629e-417b-ac27-3d69379bb274
-source-git-commit: 0c7dc02ed0bacf7e0405b836f566149a872fc31a
+source-git-commit: 8b1ba51f1f59b88a85d103cc40c18ac15d8648f6
 workflow-type: tm+mt
-source-wordcount: '2450'
+source-wordcount: '2882'
 ht-degree: 1%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 1%
 
 Adobe Experience Platform可讓您內嵌來自多個來源的客戶資料，以便為每個個別客戶建立強大且統一的設定檔。 將資料內嵌至Platform時，會執行範例工作以更新設定檔計數和其他與即時客戶設定檔資料相關的量度。
 
-此範例工作的結果可使用「即時客戶設定檔API」的`/previewsamplestatus`端點來檢視。 此端點也可用來列出依資料集和身分命名空間的設定檔分配，以及產生資料集重疊報表和身分重疊報表，以便洞察組織的設定檔存放區組成。 本指南會逐步說明使用`/previewsamplestatus` API端點檢視這些量度所需的步驟。
+此範例工作的結果可使用「即時客戶設定檔API」的`/previewsamplestatus`端點來檢視。 此端點也可用來列出資料集和身分命名空間的設定檔分配，以及產生多個報表，以便洞察組織的設定檔存放區組成。 本指南會逐步說明使用`/previewsamplestatus` API端點檢視這些量度所需的步驟。
 
 >[!NOTE]
 >
@@ -39,11 +39,11 @@ Adobe Experience Platform可讓您內嵌來自多個來源的客戶資料，以�
 當為「即時客戶設定檔」啟用的資料內嵌至[!DNL Platform]時，資料會儲存在設定檔資料存放區中。 當將記錄擷取至設定檔存放區時，總設定檔計數會增加或減少超過5%，就會觸發取樣工作以更新計數。 觸發範例的方式取決於使用的擷取類型：
 
 * 對於&#x200B;**串流資料工作流**，每小時進行一次檢查，以確定是否達到5%的增減閾值。 若已觸發，則會自動觸發範例工作以更新計數。
-* 對於&#x200B;**批次內嵌**，在成功將批次內嵌至設定檔存放區後15分鐘內，若符合5%增加或減少臨界值，則執行工作以更新計數。 使用設定檔API，您可以預覽最新成功的範例工作，以及依資料集和身分命名空間列出設定檔分送。
+* 對於&#x200B;**批次內嵌**，在成功將批次內嵌至設定檔存放區後15分鐘內，若符合5%的增加或減少臨界值，則會執行工作以更新計數。 使用設定檔API，您可以預覽最新成功的範例工作，以及依資料集和身分命名空間列出設定檔分送。
 
 您也可以在Experience PlatformUI的[!UICONTROL Profiles]區段中使用依命名空間量度的設定檔計數和設定檔。 有關如何使用UI存取設定檔資料的資訊，請參閱[[!DNL Profile]  UI指南](../ui/user-guide.md)。
 
-## 查看最後一個示例狀態{#view-last-sample-status}
+## 查看最後一個示例狀態 {#view-last-sample-status}
 
 您可以對`/previewsamplestatus`端點執行GET要求，以檢視上次為IMS組織執行的成功範例工作詳細資訊。 這包括範例中的設定檔總數，以及設定檔計數量度，或您的組織在Experience Platform內的設定檔總數。
 
@@ -206,7 +206,7 @@ curl -X GET \
 
 ## 按身份命名空間列出配置檔案分發
 
-您可以對`/previewsamplestatus/report/namespace`端點執行GET要求，以在您的設定檔存放區中所有合併的設定檔中，檢視依身分命名空間劃分的劃分。 這包括Adobe提供的標準身分識別，以及貴組織定義的自訂身分識別。
+您可以對`/previewsamplestatus/report/namespace`端點執行GET請求，以在您的設定檔存放區中所有合併的設定檔中，依身分命名空間檢視劃分。 這包括Adobe提供的標準身分識別，以及貴組織定義的自訂身分識別。
 
 身分識別命名空間是Adobe Experience Platform Identity Service的重要元件，可作為客戶資料相關內容的指標。 若要深入了解，請先閱讀[身分命名空間概述](../../identity-service/namespaces.md)。
 
@@ -303,7 +303,7 @@ curl -X GET \
 
 ## 產生資料集重疊報表
 
-資料集重疊報表會顯示對可定址對象（合併的設定檔）貢獻最大的資料集，讓您清楚掌握組織的設定檔存放區組成。 除了提供資料的深入分析外，此報表還可協助您採取動作，以最佳化授權使用情形，例如為特定資料集設定TTL。
+資料集重疊報表會顯示對可定址對象（合併的設定檔）貢獻最大的資料集，讓您掌握組織的設定檔存放區組成。 除了提供資料的深入分析外，此報表還可協助您採取動作，以最佳化授權使用情形，例如為特定資料集設定TTL。
 
 您可以對`/previewsamplestatus/report/dataset/overlap`端點執行GET請求，以產生資料集重疊報表。
 
@@ -363,22 +363,23 @@ curl -X GET \
 ```
 
 此報告提供下列資訊：
+
 * 有123個設定檔，由來自下列資料集的資料組成：`5d92921872831c163452edc8`、`5da7292579975918a851db57`、`5eb2cdc6fa3f9a18a7592a98`。
 * 來自這兩個資料集的資料共454,412個設定檔：`5d92921872831c163452edc8`和`5eb2cdc6fa3f9a18a7592a98`。
 * 有107個設定檔僅由資料集`5eeda0032af7bb19162172a7`中的資料組成。
 * 組織中共有454,642個設定檔。
 
-## 產生身分重疊報表
+## 產生身分命名空間重疊報表
 
-身分重疊報表會公開對可定址對象（合併的設定檔）貢獻最大的身分，讓您可洞察組織的設定檔存放區構成。 這包括Adobe提供的標準身分識別，以及貴組織定義的自訂身分識別。
+身分命名空間重疊報表會公開對可定址對象（合併的設定檔）貢獻最大的身分命名空間，讓您可洞察組織的設定檔存放區組成。 這包括Adobe提供的標準身分識別命名空間，以及貴組織定義的自訂身分識別命名空間。
 
-您可以對`/previewsamplestatus/report/identity/overlap`端點執行GET請求，以產生身分重疊報表。
+您可以對`/previewsamplestatus/report/namespace/overlap`端點執行GET請求，以產生身分命名空間重疊報表。
 
 **API格式**
 
 ```http
-GET /previewsamplestatus/report/identity/overlap
-GET /previewsamplestatus/report/identity/overlap?{QUERY_PARAMETERS}
+GET /previewsamplestatus/report/namespace/overlap
+GET /previewsamplestatus/report/namespace/overlap?{QUERY_PARAMETERS}
 ```
 
 | 參數 | 說明 |
@@ -391,7 +392,7 @@ GET /previewsamplestatus/report/identity/overlap?{QUERY_PARAMETERS}
 
 ```shell
 curl -X GET \
-  https://platform.adobe.io/data/core/ups/previewsamplestatus/report/identity/overlap?date=2021-12-29 \
+  https://platform.adobe.io/data/core/ups/previewsamplestatus/report/namespace/overlap?date=2021-12-29 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
@@ -399,7 +400,7 @@ curl -X GET \
 
 **回應**
 
-成功的要求會傳回HTTP狀態200（確定）和身分重疊報表。
+成功的要求會傳回HTTP狀態200（確定）和身分命名空間重疊報表。
 
 ```json
 {
@@ -446,7 +447,7 @@ curl -X GET \
 | 命名空間代碼 | `code`是每個身分命名空間名稱的簡短形式。 您可以使用[Adobe Experience Platform Identity Service API](../../identity-service/api/list-namespaces.md)找到每個`code`與其`name`的對應。 `code`在Experience PlatformUI中也稱為[!UICONTROL 身分符號]。 若要深入了解，請造訪[身分命名空間概述](../../identity-service/namespaces.md)。 |
 | `reportTimestamp` | 報表的時間戳記。 若在請求期間提供了`date`參數，則傳回的報表為提供的日期。 若未提供`date`參數，則會傳回最近的報表。 |
 
-### 解譯身分重疊報表
+### 解譯身分命名空間重疊報表
 
 報表的結果可從回應中的身分和設定檔計數來解讀。 每一列的數值會告訴您有多少個設定檔是由標準與自訂身分命名空間的精確組合所組成。
 
@@ -459,11 +460,137 @@ curl -X GET \
 ```
 
 此報告提供下列資訊：
+
 * 有142個設定檔，由`AAID`、`ECID`和`Email`標準身分識別以及自訂`crmid`身分命名空間所組成。
 * 有24個設定檔，由`AAID`和`ECID`身分識別命名空間組成。
 * 有6,565個設定檔僅包含`ECID`身分。
 
+## 產生未知的設定檔報表
+
+您可以透過未知的設定檔報表，進一步洞察組織的設定檔存放區組成。 「未知的設定檔」是指指定時段內未拼接和非使用中的任何設定檔。 「未拼接」的設定檔是只包含一個設定檔片段的設定檔，而「非使用中」設定檔是指任何在指定時段內未新增事件的設定檔。 未知的設定檔報表提供7、30、60、90和120天期間的設定檔劃分。
+
+您可以對`/previewsamplestatus/report/unknownProfiles`端點執行GET請求，以產生未知的設定檔報表。
+
+**API格式**
+
+```http
+GET /previewsamplestatus/report/unknownProfiles
+```
+
+**要求**
+
+下列請求會傳回未知的設定檔報表。
+
+```shell
+curl -X GET \
+  https://platform.adobe.io/data/core/ups/previewsamplestatus/report/unknownProfiles \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+```
+
+**回應**
+
+成功的要求會傳回HTTP狀態200(OK)和未知的設定檔報表。
+
+>[!NOTE]
+>
+>在本指南中，報表已截斷，僅包含`"120days"`和&quot;`7days`&quot;時段。 完整未知的設定檔報表提供7、30、60、90和120天期間的設定檔劃分。
+
+```json
+{
+  "data": {
+      "totalNumberOfProfiles": 63606,
+      "totalNumberOfEvents": 130977,
+      "unknownProfiles": {
+          "120days": {
+              "countOfProfiles": 1644,
+              "eventsAssociated": 26824,
+              "nsDistribution": {
+                  "Email": {
+                      "countOfProfiles": 18,
+                      "eventsAssociated": 95
+                  },
+                  "loyal": {
+                      "countOfProfiles": 26,
+                      "eventsAssociated": 71
+                  },
+                  "ECID": {
+                      "countOfProfiles": 1600,
+                      "eventsAssociated": 26658
+                  }
+              }
+          },
+          "7days": {
+              "countOfProfiles": 1782,
+              "eventsAssociated": 29151,
+              "nsDistribution": {
+                  "Email": {
+                      "countOfProfiles": 19,
+                      "eventsAssociated": 97
+                  },
+                  "ECID": {
+                      "countOfProfiles": 1734,
+                      "eventsAssociated": 28591
+                  },
+                  "loyal": {
+                      "countOfProfiles": 29,
+                      "eventsAssociated": 463
+                  }
+              }
+          }
+      }
+  },
+  "reportTimestamp": "2025-08-25T22:14:55.186"
+}
+```
+
+| 屬性 | 說明 |
+|---|---|
+| `data` | `data`物件包含針對未知設定檔報表傳回的資訊。 |
+| `totalNumberOfProfiles` | 設定檔存放區中不重複設定檔的總數。 這等同於可定址的受眾計數。 它包含已知和未知的設定檔。 |
+| `totalNumberOfEvents` | 設定檔存放區中的ExperienceEvents總數。 |
+| `unknownProfiles` | 包含依時段劃分未知設定檔（未拼接和非使用中）的物件。 未知的設定檔報表提供7、30、60、90和120天時段的設定檔劃分。 |
+| `countOfProfiles` | 該時段的未知設定檔計數，或該命名空間的未知設定檔計數。 |
+| `eventsAssociated` | 時間範圍的ExperienceEvents數量或命名空間的事件數。 |
+| `nsDistribution` | 一個物件，包含個別身分識別命名空間，以及每個命名空間之未知設定檔和事件的分佈。 注意：將`nsDistribution`物件中每個身分命名空間的總計`countOfProfiles`加總後，等於該時段的`countOfProfiles`。 每個命名空間的`eventsAssociated`和每個時段的總計`eventsAssociated`也是相同的情況。 |
+| `reportTimestamp` | 報表的時間戳記。 |
+
+### 解譯未知的設定檔報表
+
+報表結果可讓您深入分析您的組織在其設定檔存放區中有多少未連結和非使用中的設定檔。
+
+請考量下列摘自`data`物件：
+
+```json
+  "7days": {
+    "countOfProfiles": 1782,
+    "eventsAssociated": 29151,
+    "nsDistribution": {
+      "Email": {
+        "countOfProfiles": 19,
+        "eventsAssociated": 97
+      },
+      "ECID": {
+        "countOfProfiles": 1734,
+        "eventsAssociated": 28591
+      },
+      "loyal": {
+        "countOfProfiles": 29,
+        "eventsAssociated": 463
+      }
+    }
+  }
+```
+
+此報告提供下列資訊：
+
+* 有1,782個設定檔僅包含一個設定檔片段，且過去七天內沒有新事件。
+* 有29,151個ExperienceEvents與1,782個未知的設定檔相關聯。
+* 有1,734個未知的設定檔，包含ECID身分命名空間中的單一設定檔片段。
+* 有28,591個事件與1,734個未知的設定檔相關聯，這些設定檔包含來自ECID身分識別命名空間的單一設定檔片段。
+
 ## 後續步驟
 
-現在您知道如何在設定檔存放區中預覽範例資料並執行多個重疊報表，您也可以使用分段服務API的預估和預覽端點來檢視關於區段定義的摘要層級資訊。 此資訊可協助確保您隔離區段中預期的對象。 若要進一步了解如何使用區段API來處理區段預覽和估計，請造訪[預覽和估計端點指南](../../segmentation/api/previews-and-estimates.md)。
+現在您知道如何在設定檔存放區中預覽範例資料，並對資料執行多個報表，您也可以使用分段服務API的預估和預覽端點來檢視關於區段定義的摘要層級資訊。 此資訊可協助確保您隔離區段中預期的對象。 若要進一步了解如何使用區段API來處理區段預覽和估計，請造訪[預覽和估計端點指南](../../segmentation/api/previews-and-estimates.md)。
 

@@ -3,9 +3,9 @@ keywords: Experience Platform；設定檔；即時客戶設定檔；疑難排解
 title: 即時客戶個人檔案API指南
 description: 即時客戶設定檔API可讓開發人員探索及使用設定檔資料，包括檢視設定檔、建立和更新合併原則、匯出或範例設定檔資料，以及刪除不再需要或有錯誤新增的設定檔資料。 請依照本指南，了解如何使用API執行重要作業。
 exl-id: ce39b95b-cff7-46cf-a14c-8203017c8826
-source-git-commit: 4c544170636040b8ab58780022a4c357cfa447de
+source-git-commit: b2ae2b4ca2efe606aa148e06ca988a6285bedfee
 workflow-type: tm+mt
-source-wordcount: '886'
+source-wordcount: '890'
 ht-degree: 0%
 
 ---
@@ -52,7 +52,7 @@ Adobe Experience Platform可讓資料在策略性位置的伺服器（稱為「�
 
 ## 預覽範例狀態（[!DNL Profile]預覽） {#profile-preview}
 
-當為設定檔啟用的資料擷取至Experience Platform時，資料會儲存在設定檔資料存放區中。 隨著設定檔存放區中記錄數的增加或減少，會執行範例工作，其中包含關於資料存放區中有多少設定檔片段和合併的設定檔的資訊。 使用設定檔API，您可以預覽最新成功的範例，以及依資料集和身分命名空間列出設定檔分送。 若要開始使用`/profilepreviewstatus`端點，請參閱[預覽範例狀態端點指南](preview-sample-status.md)。
+將資料內嵌至Platform時，會執行範例工作以更新設定檔計數和其他與即時客戶設定檔資料相關的量度。 此範例工作的結果可使用「即時客戶設定檔API」的`/previewsamplestatus`端點來檢視。 此端點也可用來列出資料集和身分命名空間的設定檔分配，以及產生多個報表，以便洞察組織的設定檔存放區組成。  若要開始使用`/profilepreviewstatus`端點，請參閱[預覽範例狀態端點指南](preview-sample-status.md)。
 
 ## 配置檔案系統作業 {#profile-system-jobs}
 
