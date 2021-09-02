@@ -5,9 +5,9 @@ title: 結構構成基本概念
 topic-legacy: overview
 description: 本檔案介紹Experience Data Model(XDM)結構，以及合成結構以用於Adobe Experience Platform的結構的建置組塊、原則和最佳實務。
 exl-id: d449eb01-bc60-4f5e-8d6f-ab4617878f7e
-source-git-commit: 7d05b5d57ec4597b168be0261e75da5f243cb660
+source-git-commit: 2bd7c12209a1944aa954ba4490bb0c57f2a5ea61
 workflow-type: tm+mt
-source-wordcount: '3629'
+source-wordcount: '3684'
 ht-degree: 0%
 
 ---
@@ -55,7 +55,7 @@ XDM結構非常適合以獨立格式儲存大量複雜資料。 請參閱本檔�
 
 若要協助進行此程式，您結構中的關鍵欄位可標示為身分。 資料內嵌時，這些欄位中的資料會插入該個人的「[!UICONTROL 身分圖表]」中。 然後，[[!DNL Real-time Customer Profile]](../../profile/home.md)和其他[!DNL Experience Platform]服務便可存取圖形資料，以提供每個個別客戶的匯整檢視。
 
-通常標示為「[!UICONTROL Identity]」的欄位包括：電子郵件地址、電話號碼、[[!DNL Experience Cloud ID (ECID)]](https://experienceleague.adobe.com/docs/id-service/using/home.html?lang=zh-Hant)、CRM ID或其他唯一ID欄位。 您也應考慮組織專屬的任何唯一識別碼，因為這些識別碼可能也是正確的「[!UICONTROL Identity]」欄位。
+通常標示為「[!UICONTROL Identity]」的欄位包括：電子郵件地址、電話號碼、[[!DNL Experience Cloud ID (ECID)]](https://experienceleague.adobe.com/docs/id-service/using/home.html)、CRM ID或其他唯一ID欄位。 您也應考慮組織專屬的任何唯一識別碼，因為這些識別碼可能也是正確的「[!UICONTROL Identity]」欄位。
 
 在結構規劃階段期間請務必考量客戶身分，以協助確保資料匯整在一起，盡可能建立最健全的設定檔。 請參閱[Adobe Experience Platform Identity Service](../../identity-service/home.md)的概觀，深入了解身分資訊如何協助您為客戶提供數位體驗。
 
@@ -68,7 +68,11 @@ XDM結構非常適合以獨立格式儲存大量複雜資料。 請參閱本檔�
 
 `identityMap` 是地圖類型欄位，可說明個人的各種身分值及其相關聯的命名空間。此欄位可用來提供結構的身分資訊，而非在結構本身的結構內定義身分值。
 
-使用`identityMap`的主要缺點是身分會嵌入資料中，因此變得不太可見。 如果您擷取原始資料，則應改為在實際架構結構中定義個別身分欄位。 使用`identityMap`的結構也不能參與關係。
+使用`identityMap`的主要缺點是身分會嵌入資料中，因此變得不太可見。 如果您擷取原始資料，則應改為在實際架構結構中定義個別身分欄位。
+
+>[!NOTE]
+>
+>使用`identityMap`的架構可以用作關係中的源架構，但不能用作目標架構。 這是因為所有目標架構必須具有可在源架構的參考欄位中映射的可見標識。 有關源和目標架構需求的詳細資訊，請參閱[relationshipsions](../tutorials/relationship-ui.md)上的UI指南。
 
 不過，如果您要從將身分儲存在一起的來源(例如[!DNL Airship]或Adobe Audience Manager)匯入資料，或當結構的身分數量變數時，身分對應將特別有用。 此外，如果您使用[Adobe Experience Platform Mobile SDK](https://aep-sdks.gitbook.io/docs/)，則需要身分對應。
 
