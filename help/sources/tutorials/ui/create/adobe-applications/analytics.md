@@ -6,9 +6,9 @@ topic-legacy: overview
 type: Tutorial
 description: 了解如何在UI中建立Adobe Analytics來源連線，將消費者資料匯入Adobe Experience Platform。
 exl-id: 5ddbaf63-feaa-44f5-b2f2-2d5ae507f423
-source-git-commit: 0af9290a3143b85311fbbd8d194f4799b0c9a873
+source-git-commit: e28158bbd4e89e5fcf19f4dc89f266d737b34e65
 workflow-type: tm+mt
-source-wordcount: '1441'
+source-wordcount: '1493'
 ht-degree: 1%
 
 ---
@@ -30,7 +30,7 @@ ht-degree: 1%
 請務必了解本檔案中使用的下列主要術語：
 
 * **標準屬性**:標準屬性是Adobe預先定義的任何屬性。它們對所有客戶都包含相同的含義，可在[!DNL Analytics]源資料和[!DNL Analytics]架構欄位組中使用。
-* **自訂屬性**:自訂屬性是中自訂維度階層中的任何 [!DNL Analytics]屬性。它們也屬於Adobe定義的結構，但可由不同客戶以不同方式加以解譯。 自訂屬性包括eVar、prop和清單。 如需eVar的詳細資訊，請參閱以下轉換變數的[[!DNL Analytics] 檔案](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/conversion-variables/conversion-var-admin.html?lang=en)。
+* **自訂屬性**:自訂屬性是中自訂變數階層中的任何 [!DNL Analytics]屬性。自訂屬性用於Adobe Analytics實作中，以將特定資訊擷取至報表套裝中，而且在不同報表套裝的使用方式上可能有所不同。 自訂屬性包括eVar、prop和清單。 如需eVar的詳細資訊，請參閱以下轉換變數的[[!DNL Analytics] 檔案](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/conversion-variables/conversion-var-admin.html?lang=en)。
 * **自訂欄位群組中的任何屬性**:源自客戶建立的欄位群組的屬性皆為使用者定義，不視為標準或自訂屬性。
 * **易記名稱**:好記名稱是人為提供的標籤，用於實作中的自訂 [!DNL Analytics] 變數。如需好記名稱的詳細資訊，請參閱以下轉換變數](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/conversion-variables/conversion-var-admin.html?lang=en)的相關檔案。[[!DNL Analytics] 
 
@@ -46,15 +46,15 @@ ht-degree: 1%
 
 ### 選擇資料
 
-此時會出現&#x200B;**[!UICONTROL Analytics來源新增資料]**&#x200B;步驟。 選取&#x200B;**[!UICONTROL 報表套裝]**&#x200B;以開始建立Analytics報表套裝資料的來源連線，然後選取您要擷取的報表套裝。 選擇&#x200B;**[!UICONTROL Next]**&#x200B;以繼續。
+此時會出現&#x200B;**[!UICONTROL Analytics來源新增資料]**&#x200B;步驟。 選取&#x200B;**[!UICONTROL 報表套裝]**&#x200B;以開始建立Analytics報表套裝資料的來源連線，然後選取您要擷取的報表套裝。 無法選取的報表套裝已擷取，位於此沙箱或不同沙箱中。 選擇&#x200B;**[!UICONTROL Next]**&#x200B;以繼續。
 
 >[!NOTE]
 >
->可進行多個與來源的內部連線，以匯入不同的資料。
+>可以建立多個內部連線以帶入多個報表套裝，但一次只能與即時客戶資料平台搭配使用一個報表套裝。
 
 ![](../../../../images/tutorials/create/analytics/add-data.png)
 
-<!---Analytics report suites can be configured for one sandbox at a time. To import the same report suite into a different sandbox, the dataset flow will have to be deleted and instantiated again via configuration for a different sandbox.--->
+<!---Analytics Report Suites can be configured for one sandbox at a time. To import the same Report Suite into a different sandbox, the dataset flow will have to be deleted and instantiated again via configuration for a different sandbox.--->
 
 ### 映射
 
@@ -66,7 +66,7 @@ ht-degree: 1%
 
 >[!TIP]
 >
->只有具有[!DNL Analytics]模板欄位組的架構才會顯示在架構選擇菜單中。 會忽略其他結構。 如果報表套裝資料沒有適當的結構，則您必須建立新的結構。 有關建立結構的詳細步驟，請參閱UI](../../../../../xdm/ui/resources/schemas.md)中[建立和編輯結構的指南。
+>只有具有[!DNL Analytics]模板欄位組的架構才會顯示在架構選擇菜單中。 會忽略其他結構。 如果您的報表套裝資料沒有適當的結構，則必須建立新的結構。 有關建立結構的詳細步驟，請參閱UI](../../../../../xdm/ui/resources/schemas.md)中[建立和編輯結構的指南。
 
 ![select-schema](../../../../images/tutorials/create/analytics/select-schema.png)
 
@@ -74,9 +74,9 @@ ht-degree: 1%
 
 | 映射標準欄位 | 說明 |
 | --- | --- |
-| [!UICONTROL 套用標準對應] | 套用的[!UICONTROL 標準對應]面板會顯示已對應標準屬性的總數。 標準映射指源[!DNL Analytics]資料中的標準屬性和[!DNL Analytics]欄位組中的標準屬性之間的映射集。 這些項目已預先對應，且無法編輯。 |
-| [!UICONTROL 非匹配標準映射] | [!UICONTROL 非匹配標準映射]面板表示包含易記名稱衝突的映射標準屬性的數量。 當您重新使用已填入一組欄位描述元的架構時，會出現這些衝突。 即使名稱衝突友好，您也可以繼續[!DNL Analytics]資料流。 |
-| [!UICONTROL 自訂對應] | [!UICONTROL 自訂對應]面板顯示對應的自訂屬性數量，包括eVar、prop和清單。 自定義映射指源[!DNL Analytics]資料中的自定義屬性和[!DNL Analytics]欄位組中的自定義屬性之間的映射集。 自訂屬性可對應至其他自訂屬性，以及標準屬性。 |
+| [!UICONTROL 套用標準對應] | 套用的[!UICONTROL 標準對應]面板會顯示已對應屬性的總數。 標準映射指源[!DNL Analytics]資料中所有屬性和[!DNL Analytics]欄位組中相應屬性之間的映射集。 這些項目已預先對應，且無法編輯。 |
+| [!UICONTROL 非匹配標準映射] | [!UICONTROL 非匹配標準映射]面板表示包含好記名稱衝突的映射屬性數。 當您重新使用已從不同報表套裝填入一組欄位描述元的架構時，會出現這些衝突。 即使名稱衝突友好，您也可以繼續[!DNL Analytics]資料流。 |
+| [!UICONTROL 自訂對應] | [!UICONTROL 自訂對應]面板顯示對應的自訂屬性數量，包括eVar、prop和清單。 自定義映射是指源[!DNL Analytics]資料中的自定義屬性和所選架構中包含的自定義欄位組中的屬性之間的映射集。 |
 
 ![map-standard-fields](../../../../images/tutorials/create/analytics/map-standard-fields.png)
 
@@ -92,7 +92,7 @@ Platform會自動偵測您的對應集，以找出任何好記的名稱衝突。
 
 ![映射](../../../../images/tutorials/create/analytics/mapping.png)
 
-如果映射集中存在易記名稱衝突，您仍然可以繼續[!DNL Analytics]資料流，確認欄位描述符將相同。 或者，您也可以選擇使用一組空白描述符建立新架構。
+如果源報表套裝與所選架構之間存在易記名稱衝突，您仍然可以繼續使用[!DNL Analytics]資料流，同時確認欄位描述符不會更改。 或者，您也可以選擇使用一組空白描述符建立新架構。
 
 選擇&#x200B;**[!UICONTROL Next]**&#x200B;以繼續。
 
@@ -181,7 +181,7 @@ Platform會自動偵測您的對應集，以找出任何好記的名稱衝突。
 
 ## 後續步驟和其他資源
 
-建立連接後，將自動建立目標架構和資料流以包含傳入的資料。 此外，還會進行資料回填，以及內嵌長達 13 個月的歷史資料。初始內嵌完成時，[!DNL Analytics]資料供下游Platform服務（例如[!DNL Real-time Customer Profile]和分段服務）使用。 如需詳細資訊，請參閱下列檔案：
+建立連線後，會自動建立資料流以包含傳入的資料，並將您選取的架構填入資料集。 此外，還會進行資料回填，以及內嵌長達 13 個月的歷史資料。初始內嵌完成時，[!DNL Analytics]資料供下游Platform服務（例如[!DNL Real-time Customer Profile]和分段服務）使用。 如需詳細資訊，請參閱下列檔案：
 
 * [[!DNL Real-time Customer Profile] 概觀](../../../../../profile/home.md)
 * [[!DNL Segmentation Service] 概觀](../../../../../segmentation/home.md)
