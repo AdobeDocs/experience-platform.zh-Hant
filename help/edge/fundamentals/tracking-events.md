@@ -3,9 +3,9 @@ title: 使用Adobe Experience Platform Web SDK追蹤事件
 description: 了解如何追蹤Adobe Experience Platform Web SDK事件。
 keywords: sendEvent;xdm;eventType;datasetId;sendBeacon;sendBeacon;documentUnloading；檔案卸載；onBeforeEventSend;
 exl-id: 8b221cae-3490-44cb-af06-85be4f8d280a
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+source-git-commit: 53a14b2b7d7ca8bdd278f2aeec2c2e8a30fdac7b
 workflow-type: tm+mt
-source-wordcount: '1451'
+source-wordcount: '1082'
 ht-degree: 0%
 
 ---
@@ -103,34 +103,7 @@ alloy("sendEvent", {
 
 ### 設定 `eventType` {#event-types}
 
-在XDM體驗事件中，有選用的`eventType`欄位。 這保留記錄的主要事件類型。 設定事件類型可協助您區分要傳入的不同事件。 XDM提供數種預先定義的事件類型，供您使用，或您隨時針對您的使用案例建立自己的自訂事件類型。 以下是XDM提供的所有預先定義事件類型的清單。 [深入了解XDM公開存放庫](https://github.com/adobe/xdm/blob/master/docs/reference/behaviors/time-series.schema.md#xdmeventtype-known-values)。
-
-
-| **事件類型:** | **定義:** |
-| ---------------------------------- | ------------ |
-| advertising.completes | 指出計時媒體資產是否已觀看至完成 — 這不一定表示檢視者已觀看整個視訊；觀眾可能提前跳過 |
-| advertising.timePlayed | 說明使用者在特定計時媒體資產上所花的時間量 |
-| advertising.federated | 指出體驗事件是否是透過資料同盟建立（客戶之間的資料共用） |
-| advertising.clicks | 廣告上的點按動作 |
-| advertising.conversions | 客戶預先定義的動作，可觸發事件以進行績效評估 |
-| advertising.firstQuartiles | 數位視訊廣告以正常速度播放了25%的持續時間 |
-| advertising.impressions | 廣告對可能被觀看的使用者的曝光數 |
-| advertising.midpoints | 數位視訊廣告以正常速度播放了50%的持續時間 |
-| advertising.starts | 數字視頻廣告已開始播放 |
-| advertising.thirdQuartiles | 數位視訊廣告以正常速度播放了75%的持續時間 |
-| web.webpagedetails.pageViews | 已發生網頁的視圖 |
-| web.webinteraction.linkClicks | 發生點按Web連結的情況 |
-| commerce.checkouts | 產品清單的結帳程式期間的動作，如果結帳程式中有多個步驟，則可能會有多個結帳事件。 如果有多個步驟，則會使用事件時間資訊和參考的頁面或體驗來識別個別事件依序代表的步驟 |
-| commerce.productListAdds | 將產品新增至產品清單。 範例將產品新增至購物車 |
-| commerce.productListOpens | 新產品清單的初始化。 建立購物車的範例 |
-| commerce.productListRemovals | 從產品清單中移除產品項目。 從購物車移除產品的範例 |
-| commerce.productListReopens | 使用者已重新啟動無法再存取（已放棄）的產品清單。 透過再行銷活動的範例 |
-| commerce.productListViews | 已發生產品清單的視圖 |
-| commerce.productViews | 已發生產品檢視 |
-| commerce.purchases | 已接受命令。 購買是商務轉換中唯一的必要動作。 購買必須參考產品清單 |
-| commerce.saveForLaters | 產品清單會儲存以供日後使用。 產品願望清單範例 |
-| delivery.feedback | 傳遞的意見事件。 電子郵件傳送的意見回饋事件範例 |
-
+在XDM ExperienceEvent結構中，有選用的`eventType`欄位。 這保留記錄的主要事件類型。 設定事件類型可協助您區分要傳入的不同事件。 XDM提供數種預先定義的事件類型，供您使用，或您隨時針對您的使用案例建立自己的自訂事件類型。 如需所有預先定義事件類型](../../xdm/classes/experienceevent.md#eventType)的清單，請參閱XDM檔案。[
 
 如果使用標籤擴充功能，或您隨時可以不使用標籤將這些事件類型傳入，這些事件類型會顯示在下拉式清單中。 可在`xdm`選項中傳遞。
 

@@ -5,9 +5,9 @@ title: XDM ExperienceEvent類別
 topic-legacy: overview
 description: 本檔案概述XDM ExperienceEvent類別，以及事件資料模型的最佳實務。
 exl-id: a8e59413-b52f-4ea5-867b-8d81088a3321
-source-git-commit: 0af9290a3143b85311fbbd8d194f4799b0c9a873
+source-git-commit: ff446e2b9a2573889bcd1a5ab0933f60e871c353
 workflow-type: tm+mt
-source-wordcount: '1573'
+source-wordcount: '1745'
 ht-degree: 1%
 
 ---
@@ -82,18 +82,18 @@ Adobe提供多個標準欄位組以用於[!DNL XDM ExperienceEvent]類。 以下
 
 | 值 | 定義 |
 | --- | --- |
-| `advertising.completes` | 已觀看計時媒體資產至完成。 這並不代表觀看者已觀看了整個影片，因為觀看者可能已提前略過。 |
-| `advertising.timePlayed` | 說明使用者在特定計時媒體資產上所花的時間量。 |
-| `advertising.federated` | 指出體驗事件是否是透過資料同盟建立（客戶之間的資料共用）。 |
 | `advertising.clicks` | 按一下廣告上的動作。 |
+| `advertising.completes` | 已觀看計時媒體資產至完成。 這並不代表觀看者已觀看了整個影片，因為觀看者可能已提前略過。 |
 | `advertising.conversions` | 由客戶執行的預先定義動作，會觸發事件進行績效評估。 |
+| `advertising.federated` | 指出體驗事件是否是透過資料同盟建立（客戶之間的資料共用）。 |
 | `advertising.firstQuartiles` | 數位視訊廣告以正常速度播放了25%的持續時間。 |
 | `advertising.impressions` | 廣告給可能被檢視的客戶的曝光次數。 |
 | `advertising.midpoints` | 數位視訊廣告以正常速度播放了50%的持續時間。 |
 | `advertising.starts` | 數位視訊廣告已開始播放。 |
 | `advertising.thirdQuartiles` | 數位視訊廣告以正常速度播放了75%的持續時間。 |
-| `web.webpagedetails.pageViews` | 網頁已接收到一個或多個視圖。 |
-| `web.webinteraction.linkClicks` | 連結已選取一或多次。 |
+| `advertising.timePlayed` | 說明使用者在特定計時媒體資產上所花的時間量。 |
+| `application.close` | 應用程式已關閉或發送到後台。 |
+| `application.launch` | 應用程式已啟動或帶入前景。 |
 | `commerce.checkouts` | 產品清單已發生結帳事件。 如果結帳過程中有多個步驟，則可能會有多個結帳事件。 如果有多個步驟，則會使用每個事件的時間戳記和參考頁面/體驗，以依序識別每個個別事件（步驟）。 |
 | `commerce.productListAdds` | 產品已新增至產品清單或購物車。 |
 | `commerce.productListOpens` | 新產品清單（購物車）已初始化或建立。 |
@@ -103,9 +103,32 @@ Adobe提供多個標準欄位組以用於[!DNL XDM ExperienceEvent]類。 以下
 | `commerce.productViews` | 產品已收到一或多個檢視。 |
 | `commerce.purchases` | 已接受命令。 這是商務轉換中唯一的必要動作。 購買事件必須有參考的產品清單。 |
 | `commerce.saveForLaters` | 已保存產品清單以供將來使用，例如產品願望清單。 |
+| `decisioning.propositionDisplay` | 決策主張會顯示給人員。 |
+| `decisioning.propositionInteract` | 人員與決策建議互動。 |
 | `delivery.feedback` | 傳遞的意見事件，例如電子郵件傳遞。 |
+| `directMarketing.emailBounced` | 已退信給人員的電子郵件。 |
+| `directMarketing.emailBouncedSoft` | 傳送給人員的電子郵件已軟退信。 |
+| `directMarketing.emailClicked` | 有人點按了行銷電子郵件中的連結。 |
+| `directMarketing.emailDelivered` | 已成功將電子郵件傳送至人員的電子郵件服務 |
+| `directMarketing.emailOpened` | 有人開啟了行銷電子郵件。 |
+| `directMarketing.emailUnsubscribed` | 從行銷電子郵件取消訂閱的人員。 |
+| `leadOperation.convertLead` | 銷售機會已轉換。 |
+| `leadOperation.interestingMoment` | 錄下了一個有趣的時刻。 |
+| `leadOperation.newLead` | 已建立銷售機會。 |
+| `leadOperation.scoreChanged` | 銷售機會的分數屬性值已更改。 |
+| `leadOperation.statusInCampaignProgressionChanged` | 促銷活動中的銷售機會狀態已變更。 |
+| `listOperation.addToList` | 已將人員新增至行銷清單。 |
+| `listOperation.removeFromList` | 從行銷清單中移除人員。 |
 | `message.feedback` | 傳送給客戶之訊息的意見事件，例如傳送/退回/錯誤。 |
 | `message.tracking` | 對傳送給客戶的訊息追蹤事件，例如開啟/點按/自訂動作。 |
+| `opportunityEvent.addToOpportunity` | 將人員新增至機會。 |
+| `opportunityEvent.opportunityUpdated` | 更新了機會。 |
+| `opportunityEvent.removeFromOpportunity` | 某人被從機會中刪除。 |
+| `pushTracking.applicationOpened` | 使用者從推播通知開啟應用程式。 |
+| `pushTracking.customAction` | 使用者在推播通知中按一下自訂動作。 |
+| `web.formFilledOut` | 有人在WEP頁上填寫了表格。 |
+| `web.webinteraction.linkClicks` | 連結已選取一或多次。 |
+| `web.webpagedetails.pageViews` | 網頁已接收到一個或多個視圖。 |
 
 {style=&quot;table-layout:auto&quot;}
 
