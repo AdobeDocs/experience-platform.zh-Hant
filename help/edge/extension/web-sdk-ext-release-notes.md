@@ -2,16 +2,20 @@
 title: Adobe Experience Platform Web SDK擴充功能發行說明
 description: Adobe Experience Platform Web SDK標籤擴充功能
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: 40d280eb1d9810d679428ffd42c88035459f2b7d
+source-git-commit: a4a41a91429104b302e223034bf15f9839ddb5ad
 workflow-type: tm+mt
-source-wordcount: '1173'
-ht-degree: 51%
+source-wordcount: '1185'
+ht-degree: 49%
 
 ---
 
 # Adobe Experience Platform Web SDK擴充功能發行說明
 
 本檔案涵蓋Adobe Experience Platform Web SDK標籤擴充功能的發行說明。 如需SDK本身的最新發行說明，請參閱[平台Web SDK發行說明](https://experienceleague.adobe.com/docs/experience-platform/edge/release-notes.html)。
+
+## 版本2.7.1 - 2021年9月7日
+
+包含 2.6.4 版的 Adobe Experience Platform Web SDK 程式庫。
 
 ## 版本2.7.0 - 2021年8月16日
 
@@ -70,7 +74,7 @@ ht-degree: 51%
 ## 版本2.2.0 - 2020年10月1日
 
 * 客戶嘗試以沙盒結構描述建立 XDM 物件時，遇到驗證問題。呼叫Platform的API現在可感知環境，因此使用者只會看到他們有權編輯的結構描述。
-* 使用 `identityMap` 資料元素時，下拉式清單現在會預先填入命名空間，因此您不必手動填寫。
+* 使用`identityMap`資料元素時，下拉式清單現在會預先填入命名空間，因此您不必手動填入。
 * `xdmObject` 資料元素的 UI 已改版。在新的 UI 中，您可以看到哪些欄位已填入，不必在物件中輸入每個項目。
 
 ## 版本2.1.1 - 2020年8月26日

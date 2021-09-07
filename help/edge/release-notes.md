@@ -3,14 +3,18 @@ title: Adobe Experience Platform Web SDK 發行說明
 description: Adobe Experience Platform Web SDK 最新版本注意事項。
 keywords: Adobe Experience Platform Web SDK;Platform Web SDK;Web SDK；發行說明；
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: 2be9d262a699861c01011c59358751e6406f3770
+source-git-commit: f5d3c5911357d4b76e4d38564bf637e2549469d6
 workflow-type: tm+mt
-source-wordcount: '738'
+source-wordcount: '771'
 ht-degree: 4%
 
 ---
 
 # 發行說明
+
+## 版本2.6.4 - 2021年9月7日
+
+* 修正設定套用至`head`元素的HTML Adobe Target動作會取代整個`head`內容的問題。 現在已變更套用至`head`元素的HTML動作，以附加HTML。
 
 ## 版本2.6.3 - 2021年8月16日
 
