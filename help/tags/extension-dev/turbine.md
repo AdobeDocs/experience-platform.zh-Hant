@@ -1,10 +1,11 @@
 ---
 title: Turbine自由變數
 description: 了解Turbine物件，此自由變數可提供Adobe Experience Platform標籤執行階段的特定資訊和公用程式。
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+exl-id: 1664ab2e-8704-4a56-8b6b-acb71534084e
+source-git-commit: 57b4d11d0a7fd587dc45066737726a52533e33f0
 workflow-type: tm+mt
-source-wordcount: '577'
-ht-degree: 48%
+source-wordcount: '598'
+ht-degree: 51%
 
 ---
 
@@ -12,7 +13,7 @@ ht-degree: 48%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch在Adobe Experience Platform中已重新命名為一套資料收集技術。 因此，產品檔案中已推出數個術語變更。 有關術語更改的綜合參考，請參閱以下[document](../term-updates.md)。
+>Adobe Experience Platform Launch在Adobe Experience Platform中已重新命名為一套資料收集技術。 因此，所有產品文件中出現了幾項術語變更。 如需術語變更的彙整參考資料，請參閱以下[文件](../term-updates.md)。
 
 `turbine` 物件是您擴充功能的程式庫模組範圍內的「自由變數」。它提供Adobe Experience Platform標籤執行階段的特定資訊和公用程式，且程式庫模組一律可使用，而不需使用`require()`。
 
@@ -28,8 +29,7 @@ console.log(turbine.buildInfo.turbineBuildDate);
 {
     turbineVersion: "14.0.0",
     turbineBuildDate: "2016-07-01T18:10:34Z",
-    buildDate: "2016-03-30T16:27:10Z",
-    environment: "development"
+    buildDate: "2016-03-30T16:27:10Z"
 }
 ```
 
@@ -38,7 +38,27 @@ console.log(turbine.buildInfo.turbineBuildDate);
 | `turbineVersion` | 目前程式庫內使用的 [Turbine](https://www.npmjs.com/package/@adobe/reactor-turbine) 版本。 |
 | `turbineBuildDate` | 建置容器內使用的 [Turbine](https://www.npmjs.com/package/@adobe/reactor-turbine) 版本時的 ISO 8601 日期。 |
 | `buildDate` | 建置目前程式庫時的 ISO 8601 日期。 |
-| `environment` | 建置此程式庫的環境。接受的值為 `development`、`staging` 和 `production`。 |
+
+
+## [!DNL environment]
+
+```js
+console.log(turbine.environment.stage);
+```
+
+`turbine.environment` 是一個物件，其中包含有關程式庫所部署環境的資訊。
+
+```js
+{
+    id: "EN123456...",
+    stage: "development"
+}
+```
+
+| 屬性 | 說明 |
+| --- | --- |
+| `id` | 環境的id。 |
+| `stage` | 建置此程式庫的環境。接受的值為 `development`、`staging` 和 `production`。 |
 
 
 ## [!DNL debugEnabled]

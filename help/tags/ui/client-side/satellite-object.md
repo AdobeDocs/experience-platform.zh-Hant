@@ -1,10 +1,11 @@
 ---
 title: 衛星對象參考
 description: 了解用戶端_satellite物件，以及您可以在標籤中使用物件執行的各種功能。
-source-git-commit: 5adb3ed403bddd3b985d0a790eca117fb2f39288
+exl-id: f8b31c23-409b-471e-bbbc-b8f24d254761
+source-git-commit: 57b4d11d0a7fd587dc45066737726a52533e33f0
 workflow-type: tm+mt
-source-wordcount: '1251'
-ht-degree: 42%
+source-wordcount: '1285'
+ht-degree: 44%
 
 ---
 
@@ -12,7 +13,7 @@ ht-degree: 42%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch在Adobe Experience Platform中已重新命名為一套資料收集技術。 因此，產品檔案中已推出數個術語變更。 有關術語更改的綜合參考，請參閱以下[document](../../term-updates.md)。
+>Adobe Experience Platform Launch在Adobe Experience Platform中已重新命名為一套資料收集技術。 因此，所有產品文件中出現了幾項術語變更。 如需術語變更的彙整參考資料，請參閱以下[文件](../../term-updates.md)。
 
 本檔案可作為用戶端`_satellite`物件的參考，以及您可用它執行的各種函式。
 
@@ -86,7 +87,7 @@ _satellite.getVisitorId() => Object
 var visitorIdInstance = _satellite.getVisitorId();
 ```
 
-[!DNL Adobe Experience Cloud ID] 如果此擴充功能已安裝在屬性上，則此方法會傳回 Visitor ID 例項。如需詳細資訊，請參閱 [Experience Cloud ID 服務文件](https://experienceleague.adobe.com/docs/id-service/using/home.html?lang=zh-Hant)。
+[!DNL Adobe Experience Cloud ID] 如果此擴充功能已安裝在屬性上，則此方法會傳回 Visitor ID 例項。如需詳細資訊，請參閱 [Experience Cloud ID 服務文件](https://experienceleague.adobe.com/docs/id-service/using/home.html)。
 
 ## `logger`
 
@@ -214,7 +215,31 @@ _satellite.buildInfo
 
 建置目前程式庫時的 ISO 8601 日期。
 
-### `environment`
+此範例示範物件值：
+
+```javascript
+{
+  turbineVersion: "14.0.0",
+  turbineBuildDate: "2016-07-01T18:10:34Z",
+  buildDate: "2016-03-30T16:27:10Z"
+}
+```
+
+## `environment`
+
+**程式碼**
+
+```javascript
+_satellite.environment
+```
+
+此物件包含有關目前標籤執行階段程式庫部署所在環境的資訊。 此物件包含下列屬性：
+
+### `id`
+
+環境的id。
+
+### `stage`
 
 建置此程式庫的環境。可能的值包括：
 
@@ -226,10 +251,8 @@ _satellite.buildInfo
 
 ```javascript
 {
-  turbineVersion: "14.0.0",
-  turbineBuildDate: "2016-07-01T18:10:34Z",
-  buildDate: "2016-03-30T16:27:10Z",
-  environment: "development"
+  id: "EN123456...",
+  stage: "development"
 }
 ```
 
