@@ -1,9 +1,10 @@
 ---
-description: 'Destination SDK中包含Adobe，提供開發人員工具，協助您設定和測試目的地。 本頁面說明如何測試您的目的地設定。 '
+description: Destination SDK中包含Adobe，提供開發人員工具，協助您設定和測試目的地。 本頁面說明如何測試您的目的地設定。
 title: 測試您的目標配置
-source-git-commit: cf6c6adf128ec867cd67af609a40b04d2c632bf9
+exl-id: 21e4d647-1168-4cb4-a2f8-22d201e39bba
+source-git-commit: 3d7151645bc90a2dcbd6b31251ed459029ab77c9
 workflow-type: tm+mt
-source-wordcount: '482'
+source-wordcount: '484'
 ht-degree: 1%
 
 ---
@@ -228,4 +229,4 @@ curl --location --request POST 'https://platform.adobe.io/data/core/activation/a
 
 ## 後續步驟
 
-確認您的目的地已正確設定後，請使用Adobe[自助檔案程式](./docs-framework/documentation-instructions.md)為您的目的地建立檔案頁面。
+測試您的目的地並確認其設定正確後，請使用[目的地發佈API](./destination-publish-api.md)將您的設定提交至Adobe以供審核。

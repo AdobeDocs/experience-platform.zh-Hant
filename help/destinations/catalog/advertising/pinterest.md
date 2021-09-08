@@ -1,15 +1,15 @@
 ---
 title: Pinterest客戶清單連線
 description: 從您的客戶清單、造訪過您網站的人員或已在Pinterest上與您的內容互動的人員建立對象。
-source-git-commit: 9bd309ae9d9edf56de855422abd109af1a10cffc
+exl-id: e601f75f-0d40-4cd0-93ca-54d7439f1db7
+source-git-commit: 3d7151645bc90a2dcbd6b31251ed459029ab77c9
 workflow-type: tm+mt
-source-wordcount: '532'
+source-wordcount: '516'
 ht-degree: 2%
 
 ---
 
-
-# Pinterest客戶清單連線
+# [!DNL Pinterest Customer List] 連接
 
 ## 概覽 {#overview}
 
@@ -21,20 +21,20 @@ ht-degree: 2%
 
 ## 先決條件 {#prerequisites}
 
-* 使用者需要使用Pinterest帳戶進行驗證，該帳戶可存取他們要新增受眾的廣告商帳戶。 如需共用廣告商帳戶的詳細資訊，請前往：https://help.pinterest.com/en/business/article/share-and-manage-access-to-your-ad-accounts。 具體而言，使用者需要「對象」存取層級。
-* 有關客戶清單標識格式的詳細資訊，請參見：https://help.pinterest.com/en/business/article/audience-targeting。
+* 使用者需要使用Pinterest帳戶進行驗證，該帳戶可存取他們要新增受眾的廣告商帳戶。 有關共用廣告商帳戶的詳細資訊，請參閱[此處](https://help.pinterest.com/en/business/article/share-and-manage-access-to-your-ad-accounts)。 具體而言，使用者需要「對象」存取層級。
+* 有關客戶清單標識格式的詳細資訊，請參見[此處](https://help.pinterest.com/en/business/article/audience-targeting)。
 
 
 ## 支援的身分 {#supported-identities}
 
-pinterest客戶清單目的地支援啟用下表所述的身分識別。 深入了解[identities](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=en#getting-started)。
+[!DNL Pinterest Customer List]目的地支援下表所述的身分識別的啟用。 深入了解[identities](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=en#getting-started)。
 
 在目標啟動工作流程的[對應步驟](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping)中，將所需身分對應至目標欄位&#x200B;*pinterest_audience*。 身分識別會在資料擷取至Pinterest時加以區分和解析。
 
 | Target身分 | 說明 | 考量事項 |
 |---|---|---|
-| GAID | Google廣告ID | 將&#x200B;*GAID*&#x200B;來源身分命名空間對應至目標身分欄位&#x200B;*pinterest_audience*。 身分識別會在資料擷取至Pinterest時加以區分和解析。 |
-| IDFA | 廣告商專用的Apple ID | 將&#x200B;*IDFA*&#x200B;來源身分命名空間對應至目標身分欄位&#x200B;*pinterest_audience*。 身分識別會在資料擷取至Pinterest時加以區分和解析。 |
+| GAID | [!DNL Google Advertising ID] | 將&#x200B;*GAID*&#x200B;來源身分命名空間對應至目標身分欄位&#x200B;*pinterest_audience*。 身分識別會在資料擷取至Pinterest時加以區分和解析。 |
+| IDFA | [!DNL Apple ID for Advertisers] | 將&#x200B;*IDFA*&#x200B;來源身分命名空間對應至目標身分欄位&#x200B;*pinterest_audience*。 身分識別會在資料擷取至Pinterest時加以區分和解析。 |
 | 電子郵件 | 電子郵件地址（清除文字或使用SHA256演算法雜湊） | Adobe Experience Platform支援純文字和SHA256雜湊電子郵件地址。 <br> 將Emailor  ** Email_ *LC_SHA256* 來源身分識別命名空間對應至目標身分欄 *位pinterest_audience*。 |
 
 {style=&quot;table-layout:auto&quot;}
@@ -45,7 +45,7 @@ pinterest客戶清單目的地支援啟用下表所述的身分識別。 深入�
 
 ## 使用案例 {#use-cases}
 
-為協助您更清楚了解應如何及何時使用Pinterest客戶清單目的地，以下是Adobe Experience Platform客戶可透過此目的地解決的範例使用案例。
+為協助您更清楚了解您應如何及何時使用[!DNL Pinterest Customer List]目的地，以下是Adobe Experience Platform客戶可借由使用此目的地解決的範例使用案例。
 
 
 ### 使用案例#1
@@ -76,4 +76,4 @@ pinterest客戶清單目的地支援啟用下表所述的身分識別。 深入�
 
 ## 其他資源 {#additional-resources}
 
-如需詳細資訊，請參閱Pinterest說明中心頁面(https://help.pinterest.com/en/business/article/audience-targeting)。
+如需詳細資訊，請參閱[Pinterest說明中心頁面](https://help.pinterest.com/en/business/article/audience-targeting)。

@@ -3,18 +3,14 @@ keywords: 行動；佈雷茲；報文傳送；
 title: Braze連接
 description: Braze是一個全面的客戶參與平台，可為客戶與其喜愛的品牌之間提供相關且難忘的體驗。
 exl-id: 508e79ee-7364-4553-b153-c2c00cc85a73
-source-git-commit: 3aac1e7c7fe838201368379da8504efc8e316e1c
+source-git-commit: 3d7151645bc90a2dcbd6b31251ed459029ab77c9
 workflow-type: tm+mt
-source-wordcount: '791'
-ht-degree: 2%
+source-wordcount: '757'
+ht-degree: 0%
 
 ---
 
-# (Beta)[!DNL Braze]連接
-
->[!IMPORTANT]
->
->Adobe Experience Platform中的Braze目的地目前為測試版。 文件和功能可能會有所變更。
+# [!DNL Braze] 連接
 
 ## 概覽 {#overview}
 
@@ -98,11 +94,9 @@ ht-degree: 2%
 
 ![佈雷茲目標對應](../../assets/catalog/mobile-engagement/braze/mapping-target.png)
 
-在[!UICONTROL 選擇目標欄位]窗口中，您可以在三個目標欄位類別之間進行選擇：
-* [!UICONTROL 選擇屬性]:使用此選項將XDM屬性對應至標準 [!DNL Braze] 屬性。
+在[!UICONTROL 選擇目標欄位]窗口中，您可以在兩個目標欄位類別之間進行選擇：
 * [!UICONTROL 選取身分命名空間]:使用此選項可將身分識別命 [!DNL Platform] 名空間對應至身 [!DNL Braze] 分識別命名空間。
-* [!UICONTROL 選取自訂屬性]:使用此選項可將XDM屬性對應至您在 [!DNL Braze] 帳戶中定義的自訂 [!DNL Braze] 屬性。
-* 您也可以使用此選項將現有的XDM屬性重新命名為[!DNL Braze]。 例如，將`lastName` XDM屬性對應至[!DNL Braze]中的自訂`Last_Name`屬性，將在[!DNL Braze]中建立`Last_Name`屬性（如果尚未存在），並將`lastName` XDM屬性對應至該屬性。
+* [!UICONTROL 選取自訂屬性]:使用此選項可將XDM屬性對應至您在 [!DNL Braze] 帳戶中定義的自訂 [!DNL Braze] 屬性。<br> 您也可以使用此選項，將現有的XDM屬性重新命名為 [!DNL Braze]。例如，將`lastName` XDM屬性對應至[!DNL Braze]中的自訂`Last_Name`屬性，將在[!DNL Braze]中建立`Last_Name`屬性（如果尚未存在），並將`lastName` XDM屬性對應至該屬性。
 
 ![佈雷茲目標對應欄位](../../assets/catalog/mobile-engagement/braze/mapping-target-fields.png)
 
