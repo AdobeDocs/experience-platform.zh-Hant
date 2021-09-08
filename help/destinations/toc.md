@@ -4,10 +4,10 @@ user-guide-title: 目的地指南
 user-guide-description: 針對跨通路行銷活動、電子郵件宣傳、鎖定特定目標的行銷活動和其他諸多使用案例，啟用已知和未知的資料。
 description: 本檔案列出Adobe Experience Platform目的地的目錄
 feature: Destinations
-source-git-commit: 09bae0d24eead5f0b6533ba5b89e1fc87c8c71b5
+source-git-commit: 834814cc2929c618b9f41c0fcf3ef79a831a969d
 workflow-type: tm+mt
-source-wordcount: '495'
-ht-degree: 11%
+source-wordcount: '627'
+ht-degree: 10%
 
 ---
 
@@ -58,6 +58,7 @@ ht-degree: 11%
       * [linkedIn Insight Tag擴充功能](./catalog/advertising/linkedin.md)
       * [Microsoft Bing連接](./catalog/advertising/bing.md)
       * [Pinterest轉換追蹤擴充功能](./catalog/advertising/pinterest-extension.md)
+      * [Pinterest客戶清單連線](./catalog/advertising/pinterest.md)
       * [貿易台連接](./catalog/advertising/tradedesk.md)
       * [Twitter通用網站標籤擴充功能](./catalog/advertising/twitter-uwt.md)
       * [Yahoo/Verizon DataX連線](./catalog/advertising/datax.md)
@@ -108,9 +109,9 @@ ht-degree: 11%
       * [標籤擴充功能概觀](./catalog/launch-extensions/overview.md)
    * 行動參與目的地{#mobile-engagement}
       * [行動參與目的地概觀](./catalog/mobile-engagement/overview.md)
-      * [（測試版）Airship屬性連接](./catalog/mobile-engagement/airship-attributes.md)
-      * [(Beta)Airship標籤連接](./catalog/mobile-engagement/airship-tags.md)
-      * [（測試版）Braze連接](./catalog/mobile-engagement/braze.md)
+      * [Airship屬性連接](./catalog/mobile-engagement/airship-attributes.md)
+      * [Airship標籤連接](./catalog/mobile-engagement/airship-tags.md)
+      * [Braze連接](./catalog/mobile-engagement/braze.md)
    * 個人化目的地{#personalization}
       * [個人化目的地概觀](./catalog/personalization/overview.md)
       * [Adobe Target 擴充功能](./catalog/personalization/adobe-target.md)
@@ -138,5 +139,38 @@ ht-degree: 11%
       * [無效標籤擴展](./catalog/voice/invoca.md)
       * [Medallia擴充功能](./catalog/voice/medallia.md)
       * [通話URL收件箱擴展](./catalog/voice/talkurl.md)
+* 目標SDK {#destination-sdk}
+   * [概覽](./destination-sdk/overview.md)
+   * [整合必要條件](./destination-sdk/integration-prerequisites.md)
+   * [快速入門](./destination-sdk/getting-started.md)
+   * 目標SDK功能{#functionality}
+      * [設定選項](./destination-sdk/configuration-options.md)
+      * [目標配置](./destination-sdk/destination-configuration.md)
+      * [伺服器和模板規格](./destination-sdk/server-and-template-configuration.md)
+      * [訊息格式](./destination-sdk/message-format.md)
+      * [對象中繼資料管理](./destination-sdk/audience-metadata-management.md)
+      * [驗證配置](./destination-sdk/credentials-configuration.md)
+      * [OAuth 2驗證](./destination-sdk/oauth2-authentication.md)
+      * 開發人員工具{#developer-tools}
+         * [建立並測試訊息轉換範本](./destination-sdk/create-template.md)
+         * [測試您的目標配置](./destination-sdk/test-destination.md)
+   * API 參考資料 {#api-reference}
+      * [目的地端點API作業](./destination-sdk/destination-configuration-api.md)
+      * [目標伺服器端點API操作](./destination-sdk/destination-server-api.md)
+      * [對象中繼資料端點API操作](./destination-sdk/audience-metadata-api.md)
+      * [憑證端點API操作](./destination-sdk/credentials-configuration-api.md)
+      * [發佈端點API操作](./destination-sdk/destination-publish-api.md)
+      * 開發人員工具參考{#developer-tools-reference}
+         * [取得範本API操作範例](./destination-sdk/sample-template-api.md)
+         * [呈現範本API操作](./destination-sdk/render-template-api.md)
+         * [目的地測試API操作](./destination-sdk/destination-testing-api.md)
+         * [設定檔產生API操作範例](./destination-sdk/sample-profile-generation-api.md)
+   * 指南 {#guides}
+      * [使用目的地SDK來設定您的目的地](./destination-sdk/configure-destination-instructions.md)
+   * 記錄目標{#document-destination}
+      * [在Adobe Experience Platform中記錄您的目的地](./destination-sdk/docs-framework/documentation-instructions.md)
+      * [使用GitHub網頁介面建立目的地檔案頁面](./destination-sdk/docs-framework/use-github-interface-to-create-documentation.md)
+      * [在本機環境中使用文字編輯器來建立目的地檔案頁面](./destination-sdk/docs-framework/work-in-local-environment.md)
+      * [檔案自助服務範本](./destination-sdk/docs-framework/self-service-template.md)
 * [常見問答](./destinations-faq.md)
 * [平台發行說明](https://www.adobe.com/go/platform-release-notes-en)
