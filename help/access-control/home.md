@@ -5,9 +5,9 @@ topic-legacy: overview
 title: 存取控制概覽
 description: Adobe Experience Platform的存取控制可透過Adobe Admin Console提供。 此功能會運用Admin Console中的產品設定檔，將使用者與權限和沙箱連結。
 exl-id: 591d59ad-2784-4ae4-a509-23649ce712c9
-source-git-commit: 6ecfad588f97474988b86199c008953714a3bed8
+source-git-commit: 13055c9b569a67b5b44a90ac2b40776e271db008
 workflow-type: tm+mt
-source-wordcount: '1363'
+source-wordcount: '1375'
 ht-degree: 2%
 
 ---
@@ -103,6 +103,7 @@ Adobe Admin Console提供管理Adobe產品權益和組織存取權限的集中�
 | [!DNL Destinations] | [!UICONTROL 管理目的地] | 讀取、建立、編輯和停用目的地的存取權。 |
 | [!DNL Destinations] | [!UICONTROL 檢視目的地] | 對&#x200B;**[!UICONTROL Catalog]**&#x200B;標籤中可用目的地和&#x200B;**[!UICONTROL Browse]**&#x200B;標籤中已驗證目的地的唯讀存取。 |
 | [!DNL Destinations] | [!UICONTROL 啟動目的地] | 可將資料啟用至已建立的作用中目的地。 此權限需要授予將啟用目的地的使用者「檢視目的地」或「管理[!UICONTROL 目的地」]。 |
+| [!DNL Destinations] | [!UICONTROL 目標編寫] | 可使用[Adobe Experience Platform目標SDK](../destinations/destination-sdk/overview.md)製作目標。 |
 | [!DNL Data Ingestion] | [!UICONTROL 管理來源] | 讀取、建立、編輯和禁用源的訪問權。 |
 | [!DNL Data Ingestion] | [!UICONTROL 查看源] | 對&#x200B;**[!UICONTROL Catalog]**&#x200B;標籤中可用源和&#x200B;**[!UICONTROL Browse]**&#x200B;標籤中已驗證源的只讀訪問。 |
 | [!DNL Data Ingestion] | [!DNL Manage Audience Share Connections] | 存取建立、接受和拒絕合作夥伴握手，以連接兩個IMS組織並啟用[!DNL Segment Match]流程。 |
