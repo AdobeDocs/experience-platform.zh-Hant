@@ -1,7 +1,7 @@
 ---
 title: Pinterest客戶清單連線
 description: 從您的客戶清單、造訪過您網站的人員或已在Pinterest上與您的內容互動的人員建立對象。
-source-git-commit: dc7e43a16923cb17a39a8ddb4ba114c0e9c0cc39
+source-git-commit: 9bd309ae9d9edf56de855422abd109af1a10cffc
 workflow-type: tm+mt
 source-wordcount: '532'
 ht-degree: 2%
@@ -21,8 +21,8 @@ ht-degree: 2%
 
 ## 先決條件 {#prerequisites}
 
-* 使用者需要使用Pinterest帳戶進行驗證，該帳戶可存取他們要新增受眾的廣告商帳戶。 有關共用廣告商帳戶的詳細資訊，請參閱[此處](https://help.pinterest.com/en/business/article/share-and-manage-access-to-your-ad-accounts)。 具體而言，使用者需要「對象」存取層級。
-* 有關客戶清單標識格式的詳細資訊，請參見[此處](https://help.pinterest.com/en/business/article/audience-targeting)。
+* 使用者需要使用Pinterest帳戶進行驗證，該帳戶可存取他們要新增受眾的廣告商帳戶。 如需共用廣告商帳戶的詳細資訊，請前往：https://help.pinterest.com/en/business/article/share-and-manage-access-to-your-ad-accounts。 具體而言，使用者需要「對象」存取層級。
+* 有關客戶清單標識格式的詳細資訊，請參見：https://help.pinterest.com/en/business/article/audience-targeting。
 
 
 ## 支援的身分 {#supported-identities}
@@ -76,4 +76,4 @@ pinterest客戶清單目的地支援啟用下表所述的身分識別。 深入�
 
 ## 其他資源 {#additional-resources}
 
-如需詳細資訊，請參閱[Pinterest說明中心頁面](https://help.pinterest.com/en/business/article/audience-targeting)。
+如需詳細資訊，請參閱Pinterest說明中心頁面(https://help.pinterest.com/en/business/article/audience-targeting)。
