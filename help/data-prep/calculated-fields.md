@@ -4,8 +4,7 @@ solution: Experience Platform
 title: 資料準備概述
 topic-legacy: overview
 description: 本檔案介紹Adobe Experience Platform中的資料準備。
-exl-id: f15eeb50-a531-4560-a524-1a670fbda706
-source-git-commit: 2cc72708b77396e70d006ecd1e21fd2d495ddf61
+source-git-commit: 3235c48ec1f449e45b3f4b096585b67e14600407
 workflow-type: tm+mt
 source-wordcount: '241'
 ht-degree: 2%

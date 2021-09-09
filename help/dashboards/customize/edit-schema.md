@@ -2,8 +2,7 @@
 keywords: Experience Platform；使用者介面；UI；控制面板；控制面板；設定檔；區段；目的地；授權使用
 title: 編輯結構以建立自訂控制面板小工具
 description: '本指南提供選取屬性和設定組織結構以建立Adobe Experience Platform控制面板自訂Widget的逐步指示。 '
-exl-id: 1d33e3ea-a8a8-4a09-8bd9-2e04ecedebdc
-source-git-commit: 16a8764fd27e6b1ae32bc37b3abcd521aaf88887
+source-git-commit: 3235c48ec1f449e45b3f4b096585b67e14600407
 workflow-type: tm+mt
 source-wordcount: '467'
 ht-degree: 0%
