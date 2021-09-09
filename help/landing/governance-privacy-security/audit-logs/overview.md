@@ -1,9 +1,10 @@
 ---
 title: 稽核記錄概述
 description: 了解稽核記錄如何讓您查看誰在Adobe Experience Platform中執行了哪些動作。
-source-git-commit: 937225ff08e2e02c5840f86d6ed50644e05bdfe5
+exl-id: 00baf615-5b71-4e0a-b82a-ca0ce8566e7f
+source-git-commit: df269a30251cb17e337ec25787d6a1eed41e9c0b
 workflow-type: tm+mt
-source-wordcount: '463'
+source-wordcount: '469'
 ht-degree: 4%
 
 ---
@@ -36,7 +37,7 @@ ht-degree: 4%
 
 為您的組織啟用功能時，稽核記錄會隨著活動發生而自動收集。 您不需要手動啟用記錄檔收集。
 
-要查看和導出審核日誌，您必須授予「查看審核日誌」訪問控制權限。 若要了解如何管理Platform功能的個別權限，請參閱[存取控制檔案](../../../access-control/home.md)。
+若要檢視和匯出稽核記錄檔，您必須已授與「檢視稽核記錄檔」存取控制權限（可在「資料控管」類別下找到）。 若要了解如何管理Platform功能的個別權限，請參閱[存取控制檔案](../../../access-control/home.md)。
 
 ## 在UI中管理稽核記錄
 
