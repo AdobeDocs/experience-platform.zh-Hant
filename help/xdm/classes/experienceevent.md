@@ -5,9 +5,9 @@ title: XDM ExperienceEvent類別
 topic-legacy: overview
 description: 本檔案概述XDM ExperienceEvent類別，以及事件資料模型的最佳實務。
 exl-id: a8e59413-b52f-4ea5-867b-8d81088a3321
-source-git-commit: ff446e2b9a2573889bcd1a5ab0933f60e871c353
+source-git-commit: 5405a2e2312e81db210a97a759681f66faa8b1fa
 workflow-type: tm+mt
-source-wordcount: '1745'
+source-wordcount: '1759'
 ht-degree: 1%
 
 ---
@@ -68,8 +68,14 @@ Adobe提供多個標準欄位組以用於[!DNL XDM ExperienceEvent]類。 以下
 * [[!UICONTROL 促銷活動行銷詳細資料]](../field-groups/event/campaign-marketing-details.md)
 * [[!UICONTROL 管道詳細資料]](../field-groups/event/channel-details.md)
 * [[!UICONTROL 商務詳細資訊]](../field-groups/event/commerce-details.md)
+* [[!UICONTROL 設備更換詳細資訊]](../field-groups/event/device-trade-in-details.md)
+* [[!UICONTROL 餐廳預訂]](../field-groups/event/dining-reservation.md)
 * [[!UICONTROL 最終用戶ID詳細資訊]](../field-groups/event/enduserids.md)
 * [[!UICONTROL 環境詳細資訊]](../field-groups/event/environment-details.md)
+* [[!UICONTROL 航班預訂]](../field-groups/event/flight-reservation.md)
+* [[!UICONTROL IAB TCF 2.0同意]](../field-groups/event/iab.md)
+* [[!UICONTROL 住宿預訂]](../field-groups/event/lodging-reservation.md)
+* [[!UICONTROL 保留詳細資訊]](../field-groups/event/reservation-details.md)
 * [[!UICONTROL Web詳細資訊]](../field-groups/event/web-details.md)
 
 ## 附錄

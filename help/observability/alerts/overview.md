@@ -2,13 +2,14 @@
 keywords: Experience Platform；首頁；熱門主題；日期範圍
 title: 警報概述
 description: 了解Adobe Experience Platform中的警報，包括如何定義警報規則的結構。
-source-git-commit: 5fabf5fa12f0a117a50bf694dea5118e5ea03500
+feature: Alerts
+exl-id: c38a93c6-1618-4ef9-8f94-41c7ab4af43c
+source-git-commit: d82487f34c0879ed27ac55e42d70346f45806131
 workflow-type: tm+mt
-source-wordcount: '718'
+source-wordcount: '740'
 ht-degree: 3%
 
 ---
-
 
 # 警報概觀
 
@@ -56,6 +57,10 @@ Adobe Experience Platform可讓您訂閱Adobe Experience Platform活動的事件
 警報可傳送至已設定的WebHook，以有效自動化活動監控。 若要透過Webhook接收警報，您必須在「Adobe開發人員控制台」中註冊Platform警報的Webhook。 有關具體步驟，請參閱[訂閱Adobe I/O事件通知](./subscribe.md)的指南。
 
 ### 平台UI {#ui}
+
+平台UI可讓您檢視收到的警報，並管理警報規則。 以下影片會介紹這些功能。
+
+>[!VIDEO](https://video.tv.adobe.com/v/336218?quality=12&learn=on)
 
 若要在Platform UI中處理警報，您必須透過Adobe Admin Console啟用下列存取控制權限：
 

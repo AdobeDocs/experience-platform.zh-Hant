@@ -1,14 +1,15 @@
 ---
 keywords: Experience Platform；首頁；熱門主題；日期範圍
 title: 標準警報規則
-description: '本檔案涵蓋由Experience Platform提供的預先定義警報規則。 '
-source-git-commit: de8d8d92622abc75f2d09f4bb771dbe4268d0b38
+description: 本檔案涵蓋由Experience Platform提供的預先定義警報規則。
+feature: Alerts
+exl-id: b4af1c15-b1bc-4e4b-a447-09cc17a63988
+source-git-commit: d82487f34c0879ed27ac55e42d70346f45806131
 workflow-type: tm+mt
 source-wordcount: '148'
 ht-degree: 12%
 
 ---
-
 
 # 標準警報規則
 
