@@ -4,10 +4,10 @@ user-guide-title: Experience Data Model (XDM) 系統說明
 breadcrumb-title: Experience Data Model (XDM) 指南
 user-guide-description: 使用Experience Data Model(XDM)類別和結構欄位群組，以標準化體驗資料。
 feature: Schemas
-source-git-commit: 6b3a1cc4cfba5475aba781a1d0511a59e399135f
+source-git-commit: 295dc040f3af7342226e3d78d0ae21e73db58d57
 workflow-type: tm+mt
-source-wordcount: '315'
-ht-degree: 17%
+source-wordcount: '324'
+ht-degree: 16%
 
 ---
 
@@ -47,9 +47,13 @@ ht-degree: 17%
       * [管道詳細資料](./field-groups/event/channel-details.md)
       * [商務詳細資訊](./field-groups/event/commerce-details.md)
       * [設備更換詳細資訊](./field-groups/event/device-trade-in-details.md)
+      * [餐廳預訂](./field-groups/event/dining-reservation.md)
       * [最終用戶ID詳細資訊](./field-groups/event/enduserids.md)
       * [環境詳細資訊](./field-groups/event/environment-details.md)
+      * [航班預訂](./field-groups/event/flight-reservation.md)
       * [IAB TCF 2.0同意](./field-groups/event/iab.md)
+      * [住宿預訂](./field-groups/event/lodging-reservation.md)
+      * [保留詳細資訊](./field-groups/event/reservation-details.md)
       * [Web詳細資訊](./field-groups/event/web-details.md)
    * [欄位組名稱更新](./field-groups/name-updates.md)
 * 資料類型 {#data-types}
@@ -89,6 +93,7 @@ ht-degree: 17%
    * [搜尋](./data-types/search.md)
    * [訂閱](./data-types/subscription.md)
    * [電信訂閱](./data-types/telecom-subscription.md)
+   * [交易](./data-types/transaction.md)
    * [網路資訊](./data-types/web-information.md)
    * [網路互動](./data-types/web-interaction.md)
    * [網頁詳細資訊](./data-types/webpage-details.md)
