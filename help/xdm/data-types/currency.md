@@ -4,9 +4,10 @@ solution: Experience Platform
 title: 貨幣資料類型
 topic-legacy: overview
 description: 本檔案概述貨幣XDM資料類型。
-source-git-commit: 2592d4f494d4d3dcfba63eb539498416fbdf6707
+exl-id: eaf4812e-32ec-4b07-82ef-60777f03623d
+source-git-commit: 5e92b288bb8c996cfcf343d8ac1ab1665b0d3ad0
 workflow-type: tm+mt
-source-wordcount: '130'
+source-wordcount: '127'
 ht-degree: 5%
 
 ---
@@ -19,9 +20,9 @@ ht-degree: 5%
 
 | 屬性 | 資料類型 | 說明 |
 | --- | --- | --- |
-| `amount` | 雙倍 | 顯示可表示的顏色數。 |
-| `conversionDate` | DateTime | 顯示可表示的顏色數。 |
-| `currencyCode` | 字串 | 顯示可表示的顏色數。 |
+| `amount` | 雙倍 | 由`currencyCode`定義的貨幣量。 |
+| `conversionDate` | DateTime | 貨幣轉換時間的時間戳記。 |
+| `currencyCode` | 字串 | ISO 4217代碼，用於指示`amount`代表的貨幣類型。 |
 
 {style=&quot;table-layout:auto&quot;}
 
