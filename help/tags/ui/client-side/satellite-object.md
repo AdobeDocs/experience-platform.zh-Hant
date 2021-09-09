@@ -2,9 +2,9 @@
 title: 衛星對象參考
 description: 了解用戶端_satellite物件，以及您可以在標籤中使用物件執行的各種功能。
 exl-id: f8b31c23-409b-471e-bbbc-b8f24d254761
-source-git-commit: 57b4d11d0a7fd587dc45066737726a52533e33f0
+source-git-commit: 814f853d16219021d9151458d93fc5bdc6c860fb
 workflow-type: tm+mt
-source-wordcount: '1285'
+source-wordcount: '1279'
 ht-degree: 44%
 
 ---
@@ -117,7 +117,7 @@ _satellite.logger.error('No product ID found.');
 
 `logger`物件可讓訊息記錄至瀏覽器主控台。 只有在使用者已啟用標籤除錯（方法是呼叫`_satellite.setDebug(true)`或使用適當的瀏覽器擴充功能）時，才會顯示訊息。
 
-### 記錄淘汰警告
+### 記錄取代警告
 
 ```javascript
 _satellite.logger.deprecation(message: string)
@@ -227,34 +227,27 @@ _satellite.buildInfo
 
 ## `environment`
 
+此物件包含有關目前標籤執行階段程式庫部署所在環境的資訊。
+
 **程式碼**
 
 ```javascript
 _satellite.environment
 ```
 
-此物件包含有關目前標籤執行階段程式庫部署所在環境的資訊。 此物件包含下列屬性：
-
-### `id`
-
-環境的id。
-
-### `stage`
-
-建置此程式庫的環境。可能的值包括：
-
-* development
-* staging
-* production
-
-此範例示範物件值：
+此物件包含下列屬性：
 
 ```javascript
 {
-  id: "EN123456...",
+  id: "ENbe322acb4fc64dfdb603254ffe98b5d3",
   stage: "development"
 }
 ```
+
+| 屬性 | 說明 |
+| --- | --- |
+| `id` | 環境的id。 |
+| `stage` | 建置此程式庫的環境。可能的值為`development`、`staging`和`production`。 |
 
 ## `notify`
 

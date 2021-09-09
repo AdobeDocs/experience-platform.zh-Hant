@@ -3,18 +3,14 @@ keywords: 飛艇屬性；飛艇目的地
 title: Airship屬性連接
 description: 流暢地將Adobe對象資料傳遞至Airship，作為對象屬性，以在Airship內鎖定目標。
 exl-id: bfc1b52f-2d68-40d6-9052-c2ee1e877961
-source-git-commit: 3aac1e7c7fe838201368379da8504efc8e316e1c
+source-git-commit: a765f6829f08f36010e0e12a7186bf5552dfe843
 workflow-type: tm+mt
-source-wordcount: '726'
-ht-degree: 1%
+source-wordcount: '706'
+ht-degree: 0%
 
 ---
 
-# (Beta)[!DNL Airship Attributes]連接 {#airship-attributes-destination}
-
->[!IMPORTANT]
->
->Adobe Experience Platform中的[!DNL Airship Attributes]目的地目前為測試版。 文件和功能可能會有所變更。
+# [!DNL Airship Attributes] 連接 {#airship-attributes-destination}
 
 ## 概覽 {#overview}
 

@@ -3,18 +3,14 @@ keywords: 飛艇標籤；飛艇目的地
 title: Airship標籤連接
 description: 流暢地將Adobe對象資料傳遞至Airship，作為對象標籤，以在Airship內鎖定目標。
 exl-id: 84cf5504-f0b5-48d8-8da1-ff91ee1dc171
-source-git-commit: e413933920028e3239f6044111d9cf215c865eba
+source-git-commit: a765f6829f08f36010e0e12a7186bf5552dfe843
 workflow-type: tm+mt
-source-wordcount: '705'
-ht-degree: 1%
+source-wordcount: '685'
+ht-degree: 0%
 
 ---
 
-# (Beta)[!DNL Airship Tags]連接 {#airship-tags-destination}
-
->[!IMPORTANT]
->
->Adobe Experience Platform中的[!DNL Airship Tags]目的地目前為測試版。 文件和功能可能會有所變更。
+# [!DNL Airship Tags] 連接 {#airship-tags-destination}
 
 ## 概覽
 
