@@ -1,10 +1,11 @@
 ---
 title: 擴充功能
 description: 了解標籤擴充功能在Adobe Experience Platform中的運作方式。
-source-git-commit: 010e05968f1d7ad5675b0f0af43d9cfcc1f3a2ff
+exl-id: e911bedd-6c67-4339-91d7-839c8b00c153
+source-git-commit: f7edfa05e25c17f9ace34287c8a2d8426d0f36d4
 workflow-type: tm+mt
 source-wordcount: '497'
-ht-degree: 57%
+ht-degree: 63%
 
 ---
 
@@ -12,7 +13,7 @@ ht-degree: 57%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch在Adobe Experience Platform中已重新命名為一套資料收集技術。 因此，產品檔案中已推出數個術語變更。 有關術語更改的綜合參考，請參閱以下[document](../../../term-updates.md)。
+>Adobe Experience Platform Launch在Adobe Experience Platform中已重新命名為一套資料收集技術。 因此，所有產品文件中出現了幾項術語變更。 如需術語變更的彙整參考資料，請參閱以下[文件](../../../term-updates.md)。
 
 擴充功能是一組封裝程式碼，可擴充標籤或事件轉送所提供的功能。
 
@@ -61,7 +62,7 @@ ht-degree: 57%
 1. 從屬性的概觀頁面，開啟&#x200B;**[!UICONTROL Extensions]**&#x200B;標籤。
 1. 選取擴充功能。
 
-   ![]()../../../images/extensions.png)
+   ![核心擴充功能](../../../images/extensions.png)
 
    * 如果擴充功能存在，請從擴充功能目錄中選取它。
    * 將滑鼠移到清單中的擴充功能上方，以進行設定或加以停用。
