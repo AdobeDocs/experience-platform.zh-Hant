@@ -2,10 +2,10 @@
 title: Turbine自由變數
 description: 了解Turbine物件，此自由變數可提供Adobe Experience Platform標籤執行階段的特定資訊和公用程式。
 exl-id: 1664ab2e-8704-4a56-8b6b-acb71534084e
-source-git-commit: 814f853d16219021d9151458d93fc5bdc6c860fb
+source-git-commit: 86a009fd5c633ff45943d86b16c34a779d4141be
 workflow-type: tm+mt
-source-wordcount: '602'
-ht-degree: 50%
+source-wordcount: '619'
+ht-degree: 49%
 
 ---
 
@@ -117,6 +117,7 @@ turbine.logger.error('Error!');
 * `logger.warn(message: string)`：將警告訊息記錄到主控台。
 * `logger.error(message: string)`：將錯誤訊息記錄到主控台。
 * `logger.debug(message: string)`：將除錯訊息記錄到主控台。(只有在您的瀏覽器主控台內啟用 `verbose` 記錄時才可見。)
+* `logger.deprecation(message: string)`:無論使用者是否啟用標籤偵錯，都會將警告訊息記錄到主控台。
 
 ### `onDebugChanged`
 
