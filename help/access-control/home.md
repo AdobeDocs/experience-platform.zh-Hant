@@ -5,7 +5,7 @@ topic-legacy: overview
 title: 存取控制概覽
 description: Adobe Experience Platform的存取控制可透過Adobe Admin Console提供。 此功能會運用Admin Console中的產品設定檔，將使用者與權限和沙箱連結。
 exl-id: 591d59ad-2784-4ae4-a509-23649ce712c9
-source-git-commit: 13055c9b569a67b5b44a90ac2b40776e271db008
+source-git-commit: 88593d921d6ad97fc4dfb059f0272817caee06c7
 workflow-type: tm+mt
 source-wordcount: '1375'
 ht-degree: 2%
@@ -68,7 +68,7 @@ Adobe Admin Console提供管理Adobe產品權益和組織存取權限的集中�
 
 「沙箱管理」權限可讓使用者管理、檢視或重設沙箱。
 
-### 權限
+### 權限 {#permissions}
 
 產品設定檔中的權限標籤會顯示該設定檔作用中的沙箱和權限：
 

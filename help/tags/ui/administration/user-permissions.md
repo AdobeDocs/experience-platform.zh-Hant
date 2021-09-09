@@ -1,10 +1,11 @@
 ---
 title: 標籤的使用者權限
 description: 了解標籤可用的不同權限類型，以及不同業務使用案例的一些基本實作策略。
-source-git-commit: acef25fe46f0ac0c45c18d4590be4af95ad5e0ab
+exl-id: 9b48847a-6133-4dbd-b17d-e7b88152ad7d
+source-git-commit: 88593d921d6ad97fc4dfb059f0272817caee06c7
 workflow-type: tm+mt
 source-wordcount: '1307'
-ht-degree: 15%
+ht-degree: 17%
 
 ---
 
@@ -12,7 +13,7 @@ ht-degree: 15%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch在Adobe Experience Platform中已重新命名為一套資料收集技術。 因此，產品檔案中已推出數個術語變更。 有關術語更改的綜合參考，請參閱以下[document](../../term-updates.md)。
+>Adobe Experience Platform Launch在Adobe Experience Platform中已重新命名為一套資料收集技術。 因此，所有產品文件中出現了幾項術語變更。 如需術語變更的彙整參考資料，請參閱以下[文件](../../term-updates.md)。
 
 Adobe Experience Platform中標籤的使用者權限會透過Adobe Admin Console指派給使用者。 不同的權限集會以產品設定檔的形式個別設定，而非指派給個別使用者。 接著，會將使用者指派給這些產品設定檔，以授予他們已設定的權限。
 
@@ -39,7 +40,7 @@ Adobe Experience Platform中標籤的使用者權限會透過Adobe Admin Console
 
 依預設，產品設定檔會授予您公司中目前和未來所有屬性的存取權。 使用此權限類型，您可以依名稱限制或授予特定現有屬性的存取權。
 
-### 屬性權利
+### 屬性權利 {#property-rights}
 
 您在資料收集UI中建立的任何屬性都可在Admin Console中使用，讓您可將屬性以相同產品設定檔中的特定屬性權限分組。
 
