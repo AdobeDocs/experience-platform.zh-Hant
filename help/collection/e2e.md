@@ -1,16 +1,16 @@
 ---
-title: Adobe Experience Platform資料收集端對端概述
-description: 概略說明如何使用Adobe Experience Cloud資料收集，將事件資料傳送至Adobe Experience Platform解決方案。
-source-git-commit: b14d592c8beb5fc545ae0682000e4e05b6dac3a0
+title: 資料收集端對端概述
+description: 概略說明如何使用Adobe Experience Platform提供的資料收集技術，將事件資料傳送至Adobe Experience Cloud解決方案。
+source-git-commit: 2bcb42b83020a9ce620cb8162b7fc072b72ff23e
 workflow-type: tm+mt
-source-wordcount: '2569'
+source-wordcount: '2568'
 ht-degree: 0%
 
 ---
 
-# Adobe Experience Platform資料收集端對端概觀
+# 資料收集端對端概述
 
-Adobe Experience Platform資料收集提供多種技術，可共同收集將您的資料傳輸至其他Adobe產品或協力廠商目的地。 若要將事件資料從您的應用程式傳送至Adobe Experience Platform邊緣網路，請務必了解這些核心技術，以及如何設定這些技術，以便在您需要時將資料傳送至所需的目的地。
+在Adobe Experience Platform中，資料收集是指可共同收集將資料傳輸至其他Adobe產品或第三方目的地的數種技術。 若要將事件資料從您的應用程式傳送至Adobe Experience Platform邊緣網路，請務必了解這些核心技術，以及如何設定這些技術，以便在您需要時將資料傳送至所需的目的地。
 
 本指南提供高階教學課程，說明如何使用資料收集技術透過邊緣網路傳送事件。 具體來說，本教學課程會逐步說明在資料收集UI中安裝和設定Adobe Experience Platform Web SDK標籤擴充功能的步驟。
 
