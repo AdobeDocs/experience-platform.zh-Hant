@@ -2,9 +2,9 @@
 title: 資料收集端對端概述
 description: 概略說明如何使用Adobe Experience Platform提供的資料收集技術，將事件資料傳送至Adobe Experience Cloud解決方案。
 exl-id: 01ddbb19-40bb-4cb5-bfca-b272b88008b3
-source-git-commit: 1b2c0c2e5b05e30b6cf0e284f15f28989c580efe
+source-git-commit: 3f5a05068a24432237a5241dd20680d2f8ed0b55
 workflow-type: tm+mt
-source-wordcount: '2619'
+source-wordcount: '2618'
 ht-degree: 0%
 
 ---
@@ -39,7 +39,7 @@ ht-degree: 0%
 
 ## 流程摘要
 
-為您的網站配置邊緣網路的程式概述如下：
+為您的網站設定資料收集的程式摘要如下：
 
 1. [建立](#schema) 架構，以決定傳送至邊緣網路時資料的結構。
 1. [建立資](#datastream) 料流，以設定您要將資料傳送至哪些目的地。
