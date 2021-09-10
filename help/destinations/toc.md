@@ -4,9 +4,9 @@ user-guide-title: 目的地指南
 user-guide-description: 針對跨通路行銷活動、電子郵件宣傳、鎖定特定目標的行銷活動和其他諸多使用案例，啟用已知和未知的資料。
 description: 本檔案列出Adobe Experience Platform目的地的目錄
 feature: Destinations
-source-git-commit: 834814cc2929c618b9f41c0fcf3ef79a831a969d
+source-git-commit: 9ec7bd591af6c76a794f83d5a984017330328238
 workflow-type: tm+mt
-source-wordcount: '627'
+source-wordcount: '628'
 ht-degree: 10%
 
 ---
@@ -127,6 +127,7 @@ ht-degree: 10%
       * [AdobeLivefyre擴充功能](./catalog/social/adobe-livefyre.md)
       * [Facebook連線](./catalog/social/facebook.md)
       * [linkedIn相符的對象連線](./catalog/social/linkedin.md)
+      * [[!DNL Twitter Custom Audiences] 連接](./catalog/social/twitter.md)
    * 調查目的地{#survey}
       * [調查目的地概觀](./catalog/survey/overview.md)
       * [Foresee擴展目的地](./catalog/survey/foresee.md)
