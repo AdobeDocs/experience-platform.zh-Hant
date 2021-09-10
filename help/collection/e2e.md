@@ -1,9 +1,10 @@
 ---
 title: 資料收集端對端概述
 description: 概略說明如何使用Adobe Experience Platform提供的資料收集技術，將事件資料傳送至Adobe Experience Cloud解決方案。
-source-git-commit: 2bcb42b83020a9ce620cb8162b7fc072b72ff23e
+exl-id: 01ddbb19-40bb-4cb5-bfca-b272b88008b3
+source-git-commit: 1b2c0c2e5b05e30b6cf0e284f15f28989c580efe
 workflow-type: tm+mt
-source-wordcount: '2568'
+source-wordcount: '2619'
 ht-degree: 0%
 
 ---
@@ -12,7 +13,7 @@ ht-degree: 0%
 
 在Adobe Experience Platform中，資料收集是指可共同收集將資料傳輸至其他Adobe產品或第三方目的地的數種技術。 若要將事件資料從您的應用程式傳送至Adobe Experience Platform邊緣網路，請務必了解這些核心技術，以及如何設定這些技術，以便在您需要時將資料傳送至所需的目的地。
 
-本指南提供高階教學課程，說明如何使用資料收集技術透過邊緣網路傳送事件。 具體來說，本教學課程會逐步說明在資料收集UI中安裝和設定Adobe Experience Platform Web SDK標籤擴充功能的步驟。
+本指南提供高階教學課程，說明如何使用資料收集技術透過邊緣網路傳送事件。 具體來說，本教學課程會逐步說明在資料收集UI(原稱為Adobe Experience Platform Launch)中安裝和設定Adobe Experience Platform Web SDK標籤擴充功能的步驟。
 
 >[!NOTE]
 >
@@ -96,7 +97,7 @@ ht-degree: 0%
 >
 >如果您想使用[事件轉送](../tags/ui/event-forwarding/overview.md)（假設貴組織已授權使用功能），則必須以啟用Adobe產品的相同方式為資料流啟用它。 [稍後部分](#event-forwarding)將介紹有關此過程的詳細資訊。
 
-在資料收集UI中，選擇&#x200B;**[!UICONTROL Datastreams]**。 從此處，您可以從清單中選擇要編輯的現有資料流，或者也可以通過選擇&#x200B;**[!UICONTROL 新建資料流]**&#x200B;來建立新配置。
+在資料收集UI中，選擇&#x200B;**[!UICONTROL Datastreams]**。 從此處，您可以從清單中選擇要編輯的現有資料流，或者通過選擇&#x200B;**[!UICONTROL 新建資料流]**&#x200B;來建立新配置。
 
 ![資料流](./images/e2e/datastreams.png)
 
@@ -179,9 +180,26 @@ XDM對象類型的配置對話框隨即出現。 對話方塊會自動選取您�
 
 儲存資料元素後，下一步是建立規則，當網站上發生特定事件時（例如客戶新增產品至購物車時），將其傳送至Edge Network。
 
-例如，本節說明如何建立當客戶新增項目至購物車時觸發的規則。 不過，您幾乎可以為網站上可能發生的任何事件設定規則。
+您幾乎可以為網站上可能發生的任何事件設定規則。 例如，本節說明如何建立客戶提交表單時觸發的規則。 以下HTML代表具有「新增至購物車」表單的簡單網頁，此表單將是規則的主題：
 
-在左側導覽中選取&#x200B;**[!UICONTROL 規則]**，然後選取&#x200B;**[!UICONTROL 建立新規則]**。
+```html
+<!DOCTYPE html>
+<html>
+<body>
+
+  <form id="add-to-cart-form">
+    <label for="item">Product:</label><br>
+    <input type="text" id="item" name="item"><br>
+    <label for="amount">Amount:</label><br>
+    <input type="number" id="amount" name="amount" value="1"><br><br>
+    <input type="submit" value="Add to Cart">
+  </form> 
+
+</body>
+</html>
+```
+
+在資料收集UI中，在左側導覽中選取&#x200B;**[!UICONTROL 規則]**，然後選取&#x200B;**[!UICONTROL 建立新規則]**。
 
 ![規則](./images/e2e/rules.png)
 
@@ -189,13 +207,13 @@ XDM對象類型的配置對話框隨即出現。 對話方塊會自動選取您�
 
 ![名稱規則](./images/e2e/name-rule.png)
 
-此時將顯示事件配置頁。 若要設定事件，您必須先選取事件類型。 事件類型由擴充功能提供。 例如，若要設定「表單提交」事件，請選取&#x200B;**[!UICONTROL Core]**&#x200B;擴充功能，然後選取&#x200B;**[!UICONTROL Form]**&#x200B;類別下的&#x200B;**[!UICONTROL Submit]**&#x200B;事件類型。 在顯示的設定對話方塊中，您可以提供您要觸發此規則的特定表單的CSS選取器。
+此時將顯示事件配置頁。 若要設定事件，您必須先選取事件類型。 事件類型由擴充功能提供。 例如，若要設定「表單提交」事件，請選取&#x200B;**[!UICONTROL Core]**&#x200B;擴充功能，然後選取&#x200B;**[!UICONTROL Form]**&#x200B;類別下的&#x200B;**[!UICONTROL Submit]**&#x200B;事件類型。
 
 >[!NOTE]
 >
 >如需Adobe網頁擴充功能所提供不同事件類型的詳細資訊，包括如何設定這些類型，請參閱標籤檔案中的[Adobe擴充功能參考](../tags/extensions/web/overview.md)。
 
-選取&#x200B;**[!UICONTROL 保留變更]**&#x200B;以將事件新增至規則。
+表單提交事件可讓您使用[CSS選取器](https://www.w3schools.com/css/css_selectors.asp)來參照要觸發規則的特定元素。 在以下範例中，使用ID `add-to-cart-form`，使此規則僅針對「新增至購物車」表單觸發。 選取&#x200B;**[!UICONTROL 保留變更]**&#x200B;以將事件新增至規則。
 
 ![事件設定](./images/e2e/event-config.png)
 
