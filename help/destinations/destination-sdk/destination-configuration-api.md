@@ -1,9 +1,10 @@
 ---
 description: 本頁列出並說明您可使用「/authoring/destinations」 API端點執行的所有API操作。
 title: 目的地API端點作業
-source-git-commit: 19307fba8f722babe5b6d57e80735ffde00fc851
+exl-id: 96755e9d-be62-432f-b985-91330575b395
+source-git-commit: 9be8636b02a15c8f16499172289413bc8fb5b6f0
 workflow-type: tm+mt
-source-wordcount: '2360'
+source-wordcount: '2381'
 ht-degree: 3%
 
 ---
@@ -383,7 +384,7 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/destination
 | `uiAttributes.connectionType` | 字串 | `Server-to-server` 是目前唯一可用的選項。 |
 | `uiAttributes.frequency` | 字串 | `Streaming` 是目前唯一可用的選項。 |
 | `identityNamespaces.externalId.acceptsAttributes` | 布林值 | 指出目的地是否接受標準設定檔屬性。 通常，合作夥伴的檔案會強調顯示這些屬性。 |
-| `identityNamespaces.externalId.acceptsCustomNamespaces` | 布林值 | 指出客戶是否可在您的目的地中設定自訂命名空間。 |
+| `identityNamespaces.externalId.acceptsCustomNamespaces` | 布林值 | 指出客戶是否可在您的目的地中設定自訂命名空間。 閱讀更多有關Adobe Experience Platform中[自訂命名空間](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=en#manage-namespaces)的資訊。 |
 | `identityNamespaces.externalId.allowedAttributesTransformation` | 字串 | _範例設定中未顯示_。例如，當[!DNL Platform]客戶有純電子郵件地址作為屬性，且您的平台僅接受雜湊電子郵件時，就會使用。 您可在此提供需要套用的轉換（例如，將電子郵件轉換為小寫，然後雜湊）。 |
 | `identityNamespaces.externalId.acceptedGlobalNamespaces` | - | _範例設定中未顯示_。用於您的平台接受[標準身分識別命名空間](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=en#standard-namespaces)（例如IDFA）時的情況，因此您可以限制Platform使用者僅選取這些身分識別命名空間。 |
 | `destinationDelivery.authenticationRule` | 字串 | 指示[!DNL Platform]客戶如何連接到目標。 接受的值為`CUSTOMER_AUTHENTICATION`、`PLATFORM_AUTHENTICATION`、`NONE`。 <br> <ul><li>如果Platform客戶透過使用者名稱和密碼、承載權杖或其他驗證方法登入您的系統，請使用`CUSTOMER_AUTHENTICATION`。 例如，如果您也在`customerAuthenticationConfigurations`中選取了`authType: OAUTH2`或`authType:BEARER`，則可以選取此選項。 </li><li> 如果Adobe和目標之間存在全局身份驗證系統，並且[!DNL Platform]客戶不需要提供任何身份驗證憑據來連接到目標，請使用`PLATFORM_AUTHENTICATION`。 在這種情況下，必須使用[Credentials](./credentials-configuration.md)配置建立憑據對象。 </li><li>如果不需要任何身份驗證才能將資料發送到目標平台，請使用`NONE`。 </li></ul> |
@@ -396,6 +397,7 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/destination
 | `segmentMappingConfig.mapExperiencePlatformSegmentName` | 布林值 | 控制目標啟動工作流程中的區段對應ID是否為Experience Platform區段名稱。 |
 | `segmentMappingConfig.audienceTemplateId` | 布林值 | 用於此目的地的[對象中繼資料範本](./audience-metadata-management.md)的`instanceId`。 若要設定對象中繼資料範本，請閱讀[對象中繼資料API參考](./audience-metadata-api.md)。 |
 
+{style=&quot;table-layout:auto&quot;}
 
 ## 更新現有目標配置 {#update}
 

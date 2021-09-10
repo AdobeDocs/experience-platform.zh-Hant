@@ -3,10 +3,11 @@ description: Adobe Experience Platform中的目的地服務使用多個元件的
 seo-description: The destinations service in Adobe Experience Platform uses configuration templates for several components that build up the destinations functionality. Combined, these components allow Experience Platform to connect to destination partners, send custom messages, and activate profile data across the digital ecosystem.
 seo-title: Configuration options in Destination SDK
 title: 目標SDK中的設定選項
-source-git-commit: d2452bf0e59866d3deca57090001c4c5a0935525
+exl-id: 8890c70a-cdb9-4b9d-aa81-affe72b1fdc5
+source-git-commit: 9be8636b02a15c8f16499172289413bc8fb5b6f0
 workflow-type: tm+mt
-source-wordcount: '342'
-ht-degree: 1%
+source-wordcount: '345'
+ht-degree: 2%
 
 ---
 
@@ -39,3 +40,5 @@ Adobe Experience Platform中的目的地服務使用多個元件的設定範本�
 | [訊息格式](./message-format.md) | - |
 | [目的地測試](./test-destination.md) | [目的地測試API操作](./destination-testing-api.md) |
 | [目的地發佈](./configure-destination-instructions.md#publish-destination) | [目的地發佈API作業](./destination-publish-api.md) |
+
+{style=&quot;table-layout:auto&quot;}

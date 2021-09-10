@@ -1,10 +1,11 @@
 ---
 description: 本頁列出並說明了所有可使用「/authoring/sample-profiles」 API端點來執行的API操作，以產生要用於目標測試的範例設定檔。
 title: 設定檔產生API操作範例
-source-git-commit: 19307fba8f722babe5b6d57e80735ffde00fc851
+exl-id: 5f1cd00a-8eee-4454-bcae-07b05afa54af
+source-git-commit: 9be8636b02a15c8f16499172289413bc8fb5b6f0
 workflow-type: tm+mt
-source-wordcount: '796'
-ht-degree: 1%
+source-wordcount: '805'
+ht-degree: 2%
 
 ---
 
@@ -47,6 +48,8 @@ GET authoring/sample-profiles?destinationInstanceId={DESTINATION_INSTANCE_ID}&co
 | -------- | ----------- |
 | `{DESTINATION_INSTANCE_ID}` | 您要根據其產生範例設定檔的目的地例項ID。 |
 | `{COUNT}` | *可選*. 您要產生的範例設定檔數目。 參數可採用介於`1 - 1000`之間的值。 <br> 如果未指定計數參數，則預設產生的設定檔數量由目標伺 `maxUsersPerRequest` 服器設定 [中的值決定](./destination-server-api.md#create)。如果此屬性未定義，Adobe將產生一個範例設定檔。 |
+
+{style=&quot;table-layout:auto&quot;}
 
 
 **要求**
@@ -170,6 +173,7 @@ curl --location --request GET 'https://platform.adobe.io/data/core/activation/au
 | `xdm:status` | 指出區段成員資格是否已在目前請求中實現。 接受下列值： <ul><li>`existing`:在請求前，設定檔已是區段的一部分，並會繼續保留其成員資格。</li><li>`realized`:設定檔會在目前請求中輸入區段。</li><li>`exited`:設定檔會隨著目前請求退出區段。</li></ul> |
 | `identityMap` | 一種地圖類型欄位，說明個人的各種身分值及其相關聯的命名空間。 有關`identityMap`的詳細資訊，請閱讀[架構組合基礎](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/composition.html?lang=en#identityMap)。 |
 
+{style=&quot;table-layout:auto&quot;}
 
 ## 根據目標架構產生範例設定檔 {#generate-sample-profiles-target-schema}
 
@@ -191,6 +195,8 @@ GET authoring/sample-profiles?destinationId={DESTINATION_ID}&count={COUNT}
 | -------- | ----------- |
 | `{DESTINATION_ID}` | 您要根據其產生範例設定檔的目的地設定的ID。 |
 | `{COUNT}` | *可選*. 您要產生的範例設定檔數目。 參數可採用介於`1 - 1000`之間的值。 <br> 如果未指定計數參數，則預設產生的設定檔數量由目標伺 `maxUsersPerRequest` 服器設定 [中的值決定](./destination-server-api.md#create)。如果此屬性未定義，Adobe將產生一個範例設定檔。 |
+
+{style=&quot;table-layout:auto&quot;}
 
 **要求**
 

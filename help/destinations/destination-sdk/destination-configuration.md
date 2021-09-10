@@ -1,10 +1,11 @@
 ---
 description: 此設定可讓您指出基本資訊，例如目的地名稱、類別、說明、標誌等。 此設定中的設定也會決定Experience Platform使用者如何驗證您的目的地、Experience Platform使用者介面中的顯示方式，以及可匯出至您目的地的身分識別。
 title: 目標SDK的目標配置選項
-source-git-commit: d2452bf0e59866d3deca57090001c4c5a0935525
+exl-id: b7e4db67-2981-4f18-b202-3facda5c8f0b
+source-git-commit: 9be8636b02a15c8f16499172289413bc8fb5b6f0
 workflow-type: tm+mt
-source-wordcount: '1506'
-ht-degree: 3%
+source-wordcount: '1527'
+ht-degree: 4%
 
 ---
 
@@ -123,6 +124,8 @@ ht-degree: 3%
 | `description` | 字串 | 提供說明，供Adobe用於目的地卡的Experience Platform目的地目錄。 目標不超過4-5句。 |
 | `status` | 字串 | 指示目標卡的生命週期狀態。 接受的值為 `TEST`、`PUBLISHED` 和 `DELETED`。首次配置目標時，請使用`TEST`。 |
 
+{style=&quot;table-layout:auto&quot;}
+
 ## 客戶驗證設定 {#customer-authentication-configurations}
 
 此區段會在Experience Platform使用者介面中產生帳戶頁面，使用者可在此將Experience Platform連線至其與您目的地的帳戶。 根據您在`authType`欄位中指出的驗證選項，系統會為使用者產生Experience Platform頁面，如下所示：
@@ -145,6 +148,8 @@ ht-degree: 3%
 | `customerAuthenticationConfigurations` | 字串 | 指示用於驗證Experience Platform客戶到伺服器的配置。 如需接受的值，請參閱下方的`authType`。 |
 | `authType` | 字串 | 接受的值為`OAUTH2, BEARER`。 <br><ul><li> 如果您的目的地支援OAuth 2驗證，請選取`OAUTH2`值並新增OAuth 2的必要欄位，如「目的地SDK OAuth 2驗證」頁面所示。 此外，您應在[目標傳送區段](./destination-configuration.md)中選取`authenticationRule=CUSTOMER_AUTHENTICATION`。 </li><li>對於承載身份驗證，請選擇`BEARER`並在[目標傳送部分](./destination-configuration.md)中選擇`authenticationRule=CUSTOMER_AUTHENTICATION`。</li></ul> |
 
+{style=&quot;table-layout:auto&quot;}
+
 ## 客戶資料欄位 {#customer-data-fields}
 
 本節可讓合作夥伴導入自訂欄位。 在上述範例設定中， `customerDataFields`要求使用者在驗證流程中選取端點，並使用目的地指出其客戶ID。 設定會反映在驗證流程中，如下所示：
@@ -161,6 +166,8 @@ ht-degree: 3%
 | `enum` | 字串 | 將自訂欄位轉譯為下拉式功能表，並列出使用者可用的選項。 |
 | `pattern` | 字串 | 視需要為自訂欄位強制使用模式。 使用規則運算式來強制模式。 例如，若您的客戶ID未包含數字或底線，請在此欄位中輸入`^[A-Za-z]+$`。 |
 
+{style=&quot;table-layout:auto&quot;}
+
 ## UI屬性 {#ui-attributes}
 
 本節說明上述設定中，Adobe應用於Adobe Experience Platform使用者介面中目的地的UI元素。 請參閱下列內容：
@@ -171,6 +178,8 @@ ht-degree: 3%
 | `category` | 字串 | 是指指派給Adobe Experience Platform中目的地的類別。 如需詳細資訊，請參閱[目標類別](https://experienceleague.adobe.com/docs/experience-platform/destinations/destination-types.html)。 使用下列其中一個值：`adobeSolutions, advertising, analytics, cdp, cloudStorage, crm, customerSuccess, database, dmp, ecommerce, email, emailMarketing, enrichment, livechat, marketingAutomation, mobile, personalization, protocols, social, streaming, subscriptions, surveys, tagManagers, voc, warehouses, payments`。 |
 | `connectionType` | 字串 | `Server-to-server` 是目前唯一可用的選項。 |
 | `frequency` | 字串 | `Streaming` 是目前唯一可用的選項。 |
+
+{style=&quot;table-layout:auto&quot;}
 
 ## 對應步驟中的架構配置 {#schema-configuration}
 
@@ -184,6 +193,8 @@ ht-degree: 3%
 | `profileRequired` | 布林值 | 如果使用者應能將設定檔屬性從Experience Platform對應至目的地端的自訂屬性，請使用`true` ，如上方的範例設定所示。 |
 | `segmentRequired` | 布林值 | 請一律使用`segmentRequired:true`。 |
 | `identityRequired` | 布林值 | 如果使用者應能將身分識別命名空間從Experience Platform對應至您想要的架構，請使用`true`。 |
+
+{style=&quot;table-layout:auto&quot;}
 
 ## 身分和屬性 {#identities-and-attributes}
 
@@ -205,6 +216,8 @@ Adobe需要知道哪些[!DNL Platform]身分識別客戶將能夠匯出至您的
 | `allowedAttributesTransformation` | 字串 | *範例設定中未顯示*。例如，當[!DNL Platform]客戶有純電子郵件地址作為屬性，且您的平台僅接受雜湊電子郵件時，就會使用。 您可在此提供需要套用的轉換（例如，將電子郵件轉換為小寫，然後雜湊）。 |
 | `acceptedGlobalNamespaces` | - | *範例設定中未顯示*。用於您的平台接受[標準身分識別命名空間](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=en#standard-namespaces)（例如IDFA）時的情況，因此您可以限制Platform使用者僅選取這些身分識別命名空間。 |
 
+{style=&quot;table-layout:auto&quot;}
+
 ## 目的地傳送 {#destination-delivery}
 
 | 參數 | 類型 | 說明 |
@@ -212,6 +225,8 @@ Adobe需要知道哪些[!DNL Platform]身分識別客戶將能夠匯出至您的
 | `authenticationRule` | 字串 | 指示[!DNL Platform]客戶如何連接到目標。 接受的值為`CUSTOMER_AUTHENTICATION`、`PLATFORM_AUTHENTICATION`、`NONE`。 <br> <ul><li>如果Platform客戶透過使用者名稱和密碼、承載權杖或其他驗證方法登入您的系統，請使用`CUSTOMER_AUTHENTICATION`。 例如，如果您也在`customerAuthenticationConfigurations`中選取了`authType: OAUTH2`或`authType:BEARER`，則可以選取此選項。 </li><li> 如果Adobe和目標之間存在全局身份驗證系統，並且[!DNL Platform]客戶不需要提供任何身份驗證憑據來連接到目標，請使用`PLATFORM_AUTHENTICATION`。 在這種情況下，必須使用[Credentials](./credentials-configuration.md)配置建立憑據對象。 </li><li>如果不需要任何身份驗證才能將資料發送到目標平台，請使用`NONE`。 </li></ul> |
 | `destinationServerId` | 字串 | 用於此目標的[目標伺服器配置](./destination-server-api.md)的`instanceId`。 |
 | `backfillHistoricalProfileData` | 布林值 | 控制在將區段啟動至目的地時，是否匯出歷史設定檔資料。<br> <ul><li> `true`: [!DNL Platform] 傳送在啟用區段之前符合區段資格的歷史使用者設定檔。 </li><li> `false`: [!DNL Platform] 僅包含區段啟動後符合區段資格的使用者設定檔。 </li></ul> |
+
+{style=&quot;table-layout:auto&quot;}
 
 ## 區段對應設定 {#segment-mapping}
 

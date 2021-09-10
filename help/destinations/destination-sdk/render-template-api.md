@@ -1,10 +1,11 @@
 ---
 description: 本頁列出並說明了您可使用「/authoring/testing/template/render」 API端點來執行的所有API操作，以便根據您的訊息轉換範本，呈現目的地的匯出資料。
 title: 呈現範本API操作
-source-git-commit: 19307fba8f722babe5b6d57e80735ffde00fc851
+exl-id: e64ea89e-6064-4a05-9730-e0f7d7a3e1db
+source-git-commit: 9be8636b02a15c8f16499172289413bc8fb5b6f0
 workflow-type: tm+mt
-source-wordcount: '520'
-ht-degree: 1%
+source-wordcount: '523'
+ht-degree: 2%
 
 ---
 
@@ -42,6 +43,8 @@ POST authoring/testing/template/render
 | `destinationId` | 要為其呈現導出資料的目標配置的ID。 |
 | `template` | 根據要呈現導出資料的模板的字元逸出版本。 |
 | `profiles` | 如果您想要將設定檔新增至呼叫的內文，可以使用[範例設定檔產生API](./sample-profile-generation-api.md)來產生一些設定檔。 |
+
+{style=&quot;table-layout:auto&quot;}
 
 
 您可以呈現匯出的資料，如下列範例所示：
