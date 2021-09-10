@@ -2,9 +2,9 @@
 description: Adobe Experience Platform目標SDK是一組設定API，可讓您設定目標整合模式，讓Experience Platform根據您選擇的資料和驗證格式，將對象和設定檔資料傳送至端點。 設定會儲存在Experience Platform中，並可透過API擷取以取得其他更新。
 title: Adobe Experience Platform目的地SDK
 exl-id: 7aca9f40-98c8-47c2-ba88-4308fc2b1798
-source-git-commit: 2841adc0ce212a945c35ba38209d4c00c519ad7b
+source-git-commit: bd65cfa557fb42d23022578b98bc5482e8bd50b1
 workflow-type: tm+mt
-source-wordcount: '691'
+source-wordcount: '702'
 ht-degree: 2%
 
 ---
@@ -63,8 +63,8 @@ This documentation set provides you with all the necessary information to add yo
 ---------|----------|
 | 獨立軟體供應商(ISV) | 加入[AdobeExchange程式](https://partners.adobe.com/exchangeprogram/experiencecloud.html)並請求取得布建的Experience Platform沙箱以存取目的地SDK。 |
 | 系統整合商(SI) | 您必須處於[Adobe解決方案合作夥伴計畫](https://solutionpartners.adobe.com/home.html)的金級或白金級，且您將會獲得布建的Experience Platform沙箱，並可存取目的地SDK。 |
-| Experience Platform客戶啟動套件 | 依預設，您可存取Experience Platform沙箱和目的地SDK。 |
-| Experience PlatformReal-time CDP軟體包的客戶 | 您無權存取目的地SDK，但可存取其他使用目的地SDK的公司所設定並發佈至Experience Platform組織的所有已產品化目的地。 |
+| Experience Platform[激活包](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-platform0.html)上的客戶 | 依預設，您可存取Experience Platform沙箱和目的地SDK。 |
+| Experience Platform[Real-time CDP包上的客戶](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html) | 您無權存取目的地SDK，但可存取其他使用目的地SDK的公司所設定並發佈至Experience Platform組織的所有已產品化目的地。 |
 
 {style=&quot;table-layout:auto&quot;}
 

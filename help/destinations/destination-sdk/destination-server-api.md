@@ -1,7 +1,8 @@
 ---
 description: 本頁列出並說明所有可使用「/authoring/destination-servers」 API端點執行的API操作。 您可在Adobe Experience Platform目的地SDK中，透過通用端點「/authoring/destination-servers」設定目的地的伺服器和範本規格。
 title: 目標伺服器端點API操作
-source-git-commit: 19307fba8f722babe5b6d57e80735ffde00fc851
+exl-id: a144b0fb-d34f-42d1-912b-8576296e59d2
+source-git-commit: bd65cfa557fb42d23022578b98bc5482e8bd50b1
 workflow-type: tm+mt
 source-wordcount: '938'
 ht-degree: 4%
@@ -49,7 +50,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
    "urlBasedDestination":{
       "url":{
          "templatingStrategy":"PEBBLE_V1",
-         "value":"https://api.moviestar.com/data/{{endpoint.region}}/items"
+         "value":"https://api.moviestar.com/data/{{customerData.region}}/items"
       }
    },
    "httpTemplate":{
@@ -67,7 +68,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 | -------- | ----------- | ----------- |
 | `name` | 字串 | 代表您伺服器的好記名稱，只顯示給Adobe。 合作夥伴或客戶看不到此名稱。 範例 `Moviestar destination server`. |
 | `destinationServerType` | 字串 | `URL_BASED` 是目前唯一可用的選項。 |
-| `urlBasedDestination.url.templatingStrategy` | 字串 | <ul><li>如果Adobe需要轉換下方`value`欄位中的URL，請使用`PEBBLE_V1`。 如果您的端點如下所示，請使用此選項：`https://api.moviestar.com/data/{{endpoint.region}}/items`。 </li><li> 如果Adobe端不需要轉換，例如，如果您有如下的端點，請使用`NONE`:`https://api.moviestar.com/data/items`。</li></ul> |
+| `urlBasedDestination.url.templatingStrategy` | 字串 | <ul><li>如果Adobe需要轉換下方`value`欄位中的URL，請使用`PEBBLE_V1`。 如果您的端點如下所示，請使用此選項：`https://api.moviestar.com/data/{{customerData.region}}/items`。 </li><li> 如果Adobe端不需要轉換，例如，如果您有如下的端點，請使用`NONE`:`https://api.moviestar.com/data/items`。</li></ul> |
 | `urlBasedDestination.url.value` | 字串 | 填入Experience Platform應連線之API端點的位址。 |
 | `urlBasedDestination.maxUsersPerRequest` | 整數 | Adobe可以在單一HTTP呼叫中匯總多個匯出的設定檔。 指定端點在單一HTTP呼叫中應接收的設定檔數上限。 請注意，這是最佳的匯總方式。 例如，如果您指定值100,Adobe可能會在呼叫時傳送小於100的任何設定檔數量。 <br> 如果您的伺服器不接受每個請求有多個使用者，請將此值設為1。 |
 | `urlBasedDestination.splitUserById` | 布林值 | 如果目標的呼叫應依身分分割，請使用此標幟。 如果您的伺服器在指定的命名空間中每次呼叫僅接受一個身分識別，請將此標幟設為`true`。 |
@@ -216,7 +217,7 @@ curl -X PUT https://platform.adobe.io/data/core/activation/authoring/destination
    "urlBasedDestination":{
       "url":{
          "templatingStrategy":"PEBBLE_V1",
-         "value":"https://api.moviestar.com/data/{{endpoint.region}}/items"
+         "value":"https://api.moviestar.com/data/{{customerData.region}}/items"
       }
    },
    "httpTemplate":{
@@ -270,7 +271,7 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/destination
    "urlBasedDestination":{
       "url":{
          "templatingStrategy":"PEBBLE_V1",
-         "value":"https://api.moviestar.com/data/{{endpoint.region}}/items"
+         "value":"https://api.moviestar.com/data/{{customerData.region}}/items"
       }
    },
    "httpTemplate":{
