@@ -6,7 +6,7 @@ topic-legacy: tutorial
 type: Tutorial
 description: 本教學課程將協助您開始使用Adobe Experience Platform資料擷取服務API中的串流擷取API。
 exl-id: 9f7fbda9-4cd3-4db5-92ff-6598702adc34
-source-git-commit: 0ff93d580482f44954321089659bd2fc062f3f61
+source-git-commit: 4ceeac5a7ae4a57787b37f6758851c49e02aa909
 workflow-type: tm+mt
 source-wordcount: '1268'
 ht-degree: 2%
@@ -82,7 +82,6 @@ curl -X POST https://platform.adobe.io/data/foundation/flowservice/connections \
  -H 'x-sandbox-name: {SANDBOX_NAME}' \
  -d '{
      "name": "Sample streaming connection",
-     "providerId": "521eee4d-8cbe-4906-bb48-fb6bd4450033",
      "description": "Sample description",
      "connectionSpec": {
          "id": "bc7b00d6-623a-4dfc-9fdb-f1240aeadaeb",
@@ -145,7 +144,6 @@ curl -X POST https://platform.adobe.io/data/foundation/flowservice/connections \
  -H 'x-sandbox-name: {SANDBOX_NAME}' \
  -d '{
      "name": "Sample streaming connection",
-     "providerId": "521eee4d-8cbe-4906-bb48-fb6bd4450033",
      "description": "Sample description",
      "connectionSpec": {
          "id": "bc7b00d6-623a-4dfc-9fdb-f1240aeadaeb",
