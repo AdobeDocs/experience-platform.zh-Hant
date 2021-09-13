@@ -3,9 +3,9 @@ keywords: 確認數位意見；確認擴充功能；確認
 title: 確認數位意見擴充功能
 description: 確認數位意見擴充功能是Adobe Experience Platform中客戶目的地之聲。 如需擴充功能的詳細資訊，請參閱Exchange上的擴充功能頁面。
 exl-id: b45efd1f-318c-42c4-8a88-02f25fc31319
-source-git-commit: c8d6c156b3351324fe1be11144afeae91f7a2a59
+source-git-commit: b4e869f9bc29122db4fc66ccda752a50c7db729f
 workflow-type: tm+mt
-source-wordcount: '515'
+source-wordcount: '500'
 ht-degree: 3%
 
 ---
@@ -33,7 +33,7 @@ ht-degree: 3%
 
 [!DNL Destinations]目錄中提供此擴充功能，供已購買Platform的所有客戶使用。
 
-若要使用此擴充功能，您需要存取Adobe Experience Platform中的標籤。 標籤以隨附的加值功能形式提供給Adobe Experience Cloud客戶。 請連絡您的組織管理員以取得標籤的存取權，並要求他們授予您&#x200B;**[!UICONTROL manage_properties]**&#x200B;權限，以便您安裝擴充功能。 並要求他們授予您&#x200B;**[!UICONTROL manage_properties]**&#x200B;權限，以便您安裝擴充功能。
+若要使用此擴充功能，您需要存取Adobe Experience Platform中的標籤。 標籤以隨附的加值功能形式提供給Adobe Experience Cloud客戶。 請連絡您的組織管理員以取得標籤的存取權，並要求他們授予您&#x200B;**[!UICONTROL manage_properties]**&#x200B;權限，以便您安裝擴充功能。
 
 ## 安裝擴充功能 {#install-extension}
 
