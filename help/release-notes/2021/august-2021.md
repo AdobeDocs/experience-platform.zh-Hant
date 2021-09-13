@@ -4,13 +4,13 @@ description: 2021年8月25日的Experience Platform發行說明。
 doc-type: release notes
 last-update: August 25, 2021
 author: ens28527
-source-git-commit: b1dca51264582788ccbde005b063c57e2f3edc8f
+exl-id: 0513b9dc-b16c-43b3-8e17-4be4499308d4
+source-git-commit: e9d5f24bec8cd2793ce30245b46c1d912bf17cc7
 workflow-type: tm+mt
-source-wordcount: '534'
-ht-degree: 8%
+source-wordcount: '709'
+ht-degree: 7%
 
 ---
-
 
 # Adobe Experience Platform 發行說明
 
@@ -27,10 +27,22 @@ Adobe Experience Platform 現有功能更新：
 
 目的地是預先建置與目的地平台的整合，可順暢地從Adobe Experience Platform啟動資料。 您可以使用目的地來針對跨通路行銷活動、電子郵件行銷活動、目標廣告和其他許多使用案例，啟用已知和未知的資料。
 
+**新目的地**
+
+| 目的地 | 說明 |
+| ----------- | ----------- |
+| [[!DNL Airship Attributes]](../../destinations/catalog/mobile-engagement/airship-attributes.md) | 先前為測試版的Airship屬性目的地現在已可供使用。 |
+| [[!DNL Airship Tags]](../../destinations/catalog/mobile-engagement/airship-tags.md) | 先前為測試版的Airship標籤目的地現已正式推出。 |
+| [[!DNL Braze]](../../destinations/catalog/mobile-engagement/braze.md) | Braze目的地先前是測試版，現已正式推出。 |
+| [[!DNL Pinterest Customer List]](../../destinations/catalog/advertising/pinterest.md) | pinterest客戶清單目的地可讓您從客戶清單、造訪過您網站的人員或已在Pinterest上與您的內容互動的人員建立對象。 |
+| [[!DNL Twitter Custom Audiences]](../../destinations/catalog/social/twitter.md) | 鎖定Twitter中現有的追隨者和客戶，並啟用Adobe Experience Platform中建置的對象，以建立相關的再行銷活動。 |
+| [[!DNL Verizon Media/Yahoo DataX]](../../destinations/catalog/advertising/datax.md) | DataX是Verizon Media/Yahoo的聚合基礎架構，它承載各種元件，使Verizon Media/Yahoo能夠以安全、自動化和可擴展的方式與其外部合作夥伴交換資料。 |
+
 **新功能**
 
 | 功能 | 說明 |
 | --- | --- |
+| [[!DNL Destination SDK]](../../destinations/destination-sdk/overview.md) | Adobe Experience Platform目的地SDK是一組設定API，可讓您設定目的地整合模式，讓Experience Platform根據您選擇的資料和驗證格式，將對象和設定檔資料傳送至端點。 設定會儲存在Experience Platform中，並可透過API擷取以取得其他更新。 |
 | [目的地的可用性改善](../../destinations/ui/activation-overview.md) | 目的地的可用性改善可讓行銷人員對現有目的地順暢地啟用區段。 |
 
 如需目的地的詳細一般資訊，請參閱[目的地概述](../../destinations/home.md)。
