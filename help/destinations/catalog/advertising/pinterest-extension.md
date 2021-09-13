@@ -1,11 +1,9 @@
 ---
-keywords: Pinterest;pinterest;Pinterest轉換追蹤；筆尖轉換追蹤
 title: Pinterest轉換追蹤擴充功能
 description: pinterest轉換追蹤擴充功能是Adobe Experience Platform中的廣告目的地。 如需擴充功能的詳細資訊，請參閱Exchange上的擴充功能頁面。
-exl-id: e601f75f-0d40-4cd0-93ca-54d7439f1db7
-source-git-commit: b4e869f9bc29122db4fc66ccda752a50c7db729f
+source-git-commit: e6fa353c74c652f82ff187692de8784463d0fd01
 workflow-type: tm+mt
-source-wordcount: '473'
+source-wordcount: '465'
 ht-degree: 4%
 
 ---
