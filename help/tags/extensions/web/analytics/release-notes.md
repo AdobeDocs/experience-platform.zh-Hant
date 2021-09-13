@@ -1,9 +1,10 @@
 ---
 title: Adobe Analytics擴充功能發行說明
 description: Adobe Experience Platform中Adobe Analytics標籤擴充功能的最新發行說明。
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+exl-id: 3c7b4ec0-4b81-4ef4-b15f-6ad102525840
+source-git-commit: cf0f8022e0a9ea115b1312d9988b3abb804d9b80
 workflow-type: tm+mt
-source-wordcount: '1221'
+source-wordcount: '1249'
 ht-degree: 89%
 
 ---
@@ -12,7 +13,16 @@ ht-degree: 89%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch在Adobe Experience Platform中已重新命名為一套資料收集技術。 因此，產品檔案中已推出數個術語變更。 有關術語更改的綜合參考，請參閱以下[document](../../../term-updates.md)。
+>Adobe Experience Platform Launch在Adobe Experience Platform中已重新命名為一套資料收集技術。 因此，所有產品文件中出現了幾項術語變更。 如需術語變更的彙整參考資料，請參閱以下[文件](../../../term-updates.md)。
+
+## 2021 年 8 月 24 日
+
+### Adobe Analytics 擴充功能 1.8.6 版
+
+#### 錯誤修正
+
+* 將[AppMeasurement升級至v2.22.1](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html)。
+* 更新後援linkName以鏡像Activity Map邏輯，而非使用innerHTML。
 
 ## 2020 年 8 月 6 日
 
