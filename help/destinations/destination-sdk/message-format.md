@@ -4,9 +4,9 @@ seo-description: Use the content on this page together with the rest of the conf
 seo-title: Message format
 title: 訊息格式
 exl-id: 1212c1d0-0ada-4ab8-be64-1c62a1158483
-source-git-commit: 91228b5f2008e55b681053296e8b3ff4448c92db
+source-git-commit: add6c7c4f3a60bd9ee2c2b77a8a242c4df03377b
 workflow-type: tm+mt
-source-wordcount: '1972'
+source-wordcount: '2056'
 ht-degree: 2%
 
 ---
@@ -775,17 +775,22 @@ Adobe使用類似[Jinja](https://jinja.palletsprojects.com/en/2.11.x/)的範本�
 }
 ```
 
-### 在您的範本中包含匯總金鑰，以依照各種條件將匯出的設定檔分組 {#template-aggregation-key}
+### 在您的範本中包含匯總金鑰，以存取依各種准則分組的匯出設定檔 {#template-aggregation-key}
 
-在目標配置中使用[可配置聚合](./destination-configuration.md#configurable-aggregation)時，可以編輯消息轉換模板，以根據諸如段ID、段別名、段成員資格或標識命名空間等標準將導出到目標的配置檔案分組，如下例所示。
+在目標配置中使用[可配置的聚合](./destination-configuration.md#configurable-aggregation)時，可以根據諸如段ID、段別名、段成員資格或標識命名空間等標準對導出到目標的配置檔案進行分組。
+
+在訊息轉換範本中，您可以存取上述的匯總索引鍵，如下節的範例所示。 這可協助您將匯出的HTTP訊息格式化為非Experience Platform，以符合目的地預期的格式。
 
 #### 在範本中使用區段ID匯總金鑰 {#aggregation-key-segment-id}
 
-如果您使用[可配置聚合](./destination-configuration.md#configurable-aggregation)並將`includeSegmentId`設定為true，則可以在模板中使用`segmentId`將導出到目標的HTTP消息中的配置檔案分組：
+如果您使用[可設定的匯總](./destination-configuration.md#configurable-aggregation)並將`includeSegmentId`設為true，則匯出至您目的地的HTTP訊息中的設定檔會依區段ID分組。 請參閱下方範本中如何存取區段ID。
 
 **輸入**
 
-請考量下列四個設定檔，前兩個是區段ID為`788d8874-8007-4253-92b7-ee6b6c20c6f3`的區段的一部分，另外兩個是區段ID為`8f812592-3f06-416b-bd50-e7831848a31a`的區段的一部分。
+請考量下列四個設定檔，其中：
+* 前兩者是區段ID為`788d8874-8007-4253-92b7-ee6b6c20c6f3`的一部分
+* 第三個設定檔是區段的一部分，區段ID為`8f812592-3f06-416b-bd50-e7831848a31a`
+* 第四個設定檔是上述兩個區段的一部分。
 
 配置檔案1:
 
@@ -873,6 +878,10 @@ Adobe使用類似[Jinja](https://jinja.palletsprojects.com/en/2.11.x/)的範本�
          "8f812592-3f06-416b-bd50-e7831848a31a":{
             "lastQualificationTime":"2021-02-20T12:00:00Z",
             "status":"existing"
+         },
+         "788d8874-8007-4253-92b7-ee6b6c20c6f3":{
+            "lastQualificationTime":"2020-11-20T13:15:49Z",
+            "status":"existing"
          }
       }
    }
@@ -885,24 +894,18 @@ Adobe使用類似[Jinja](https://jinja.palletsprojects.com/en/2.11.x/)的範本�
 >
 >對於您使用的所有模板，在[目標伺服器配置](./server-and-template-configuration.md#template-specs)中插入模板之前，必須先逸出非法字元，如雙引號`""`。 如需逸出雙引號的詳細資訊，請參閱[JSON standard](http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf)中的第9章。
 
+請注意以下範本中如何使用`audienceId`來存取區段ID。 這假設您在目標分類法中使用`audienceId`作為區段成員資格。 您可以根據自己的分類法，改用任何其他欄位名稱。
+
 ```python
 {
+    "audienceId": "{{ input.aggregationKey.segmentId }}",
     "profiles": [
         {% for profile in input.profiles %}
         {
-            {% for attribute in profile.attributes %}
-            "{{ attribute.key }}":
-                {% if attribute.value is empty %}
-                    null
-                {% else %}
-                    "{{ attribute.value.value }}"
-                {% endif %}
-            {% if not loop.last %},{% endif %}
-            {% endfor %}
+            "first_name": "{{ profile.attributes.firstName.value }}"
         }{% if not loop.last %},{% endif %}
         {% endfor %}
     ]
-    "audienceId": "{{input.aggregationKey.segmentId}}"
 }
 ```
 
@@ -912,49 +915,53 @@ Adobe使用類似[Jinja](https://jinja.palletsprojects.com/en/2.11.x/)的範本�
 
 ```json
 {
-    "profiles": [
-        {
-            "firstName": "Hermione",
-            "birthDate": null
-        },
-        {
-            "firstName": "Harry",
-            "birthDate": "1980/07/31"
-        }
-    ],
-    "audienceId": "788d8874-8007-4253-92b7-ee6b6c20c6f3"
+   "audienceId":"788d8874-8007-4253-92b7-ee6b6c20c6f3",
+   "profiles":[
+      {
+         "firstName":"Hermione",
+         "birthDate":null
+      },
+      {
+         "firstName":"Harry",
+         "birthDate":"1980/07/31"
+      },
+      {
+         "firstName":"Jerry",
+         "birthDate":"1940/01/01"
+      }
+   ]
 }
 ```
 
 ```json
 {
-    "profiles": [
-        {
-            "firstName": "Tom",
-            "birthDate": null
-        },
-        {
-            "firstName": "Jerry",
-            "birthDate": "1940/01/01"
-        }
-    ],
-    "audienceId": "8f812592-3f06-416b-bd50-e7831848a31a"
+   "audienceId":"8f812592-3f06-416b-bd50-e7831848a31a",
+   "profiles":[
+      {
+         "firstName":"Tom",
+         "birthDate":null
+      },
+      {
+         "firstName":"Jerry",
+         "birthDate":"1940/01/01"
+      }
+   ]
 }
 ```
 
 #### 在範本中使用區段別名匯總金鑰 {#aggregation-key-segment-alias}
 
-如果您使用[可配置聚合](./destination-configuration.md#configurable-aggregation)並將`includeSegmentId`設定為true，則可以在模板中使用段別名來將導出到目標的HTTP消息中的配置檔案分組。
+如果使用[可配置聚合](./destination-configuration.md#configurable-aggregation)並將`includeSegmentId`設定為true，則還可以訪問模板中的段別名。
 
-將下方的行新增至範本，以根據區段別名來分組匯出的設定檔。
+將下面的行新增至範本，以存取依區段別名分組的匯出設定檔。
 
 ```python
-"customerList={{input.aggregationKey.segmentAlias}}"
+customerList={{input.aggregationKey.segmentAlias}}
 ```
 
 #### 在範本中使用區段狀態匯總金鑰 {#aggregation-key-segment-status}
 
-如果您使用[可設定的匯總](./destination-configuration.md#configurable-aggregation)並將`includeSegmentId`和`includeSegmentStatus`設為true，則可以使用範本中的區段狀態，根據是否應新增或從區段移除設定檔，將匯出至目的地的HTTP訊息中的設定檔分組。
+如果您使用[可設定的匯總](./destination-configuration.md#configurable-aggregation)並將`includeSegmentId`和`includeSegmentStatus`設為true，則可以存取範本中的區段狀態，以根據是否應新增或從區段移除設定檔，將匯出至目的地的HTTP訊息中的設定檔分組。
 
 可能的值包括：
 
@@ -962,10 +969,10 @@ Adobe使用類似[Jinja](https://jinja.palletsprojects.com/en/2.11.x/)的範本�
 * 現有
 * 退出
 
-將下方的行新增至範本，以根據上述值，從區段新增或移除設定檔。：
+將下列行新增至範本，以根據上述值從區段新增或移除設定檔：
 
 ```python
-"action={% if input.aggregationKey.segmentStatus == "exited" %}REMOVE{% else %}ADD{% endif%}"
+action={% if input.aggregationKey.segmentStatus == "exited" %}REMOVE{% else %}ADD{% endif%}
 ```
 
 #### 在範本中使用身分命名空間匯總金鑰 {#aggregation-key-identity}
@@ -1024,6 +1031,8 @@ Adobe使用類似[Jinja](https://jinja.palletsprojects.com/en/2.11.x/)的範本�
 >
 >對於您使用的所有模板，在[目標伺服器配置](./server-and-template-configuration.md#template-specs)中插入模板之前，必須先逸出非法字元，如雙引號`""`。 如需逸出雙引號的詳細資訊，請參閱[JSON standard](http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf)中的第9章。
 
+請注意，以下範本中使用`input.aggregationKey.identityNamespaces`
+
 ```python
 {
             "profiles": [
@@ -1071,7 +1080,7 @@ Adobe使用類似[Jinja](https://jinja.palletsprojects.com/en/2.11.x/)的範本�
 }
 ```
 
-#### 在URL範本中使用匯總索引鍵
+#### 在URL範本中使用匯總索引鍵 {#aggregation-key-url-template}
 
 請注意，根據您的使用案例，您也可以在URL中使用此處所述的匯總索引鍵，如下所示：
 
