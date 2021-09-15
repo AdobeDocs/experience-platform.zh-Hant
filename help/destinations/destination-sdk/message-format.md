@@ -3,10 +3,11 @@ description: 將本頁的內容與合作夥伴目的地的其他設定選項搭�
 seo-description: Use the content on this page together with the rest of the configuration options for partner destinations. This page addresses the messaging format of data exported from Adobe Experience Platform to destinations, while the other page addresses specifics about connecting and authenticating to your destination.
 seo-title: Message format
 title: 訊息格式
-source-git-commit: d60933d2083b7befcfa8beba4b1630f372c08cfa
+exl-id: 1212c1d0-0ada-4ab8-be64-1c62a1158483
+source-git-commit: 63fe3b7cc429a1c18cebe998bc82fdea99a6679b
 workflow-type: tm+mt
-source-wordcount: '1505'
-ht-degree: 3%
+source-wordcount: '1982'
+ht-degree: 2%
 
 ---
 
@@ -93,17 +94,15 @@ Adobe使用類似[Jinja](https://jinja.palletsprojects.com/en/2.11.x/)的範本�
 
 1. 簡單的轉換範例。 了解模板如何處理[配置檔案屬性](./message-format.md#attributes)、[段成員資格](./message-format.md#segment-membership)和[標識](./message-format.md#identities)欄位的簡單轉換。
 2. 結合上述欄位的範本，其複雜度增加範例：[建立傳送區段和身分的範本](./message-format.md#segments-and-identities)及[建立傳送區段、身分和設定檔屬性的範本](./message-format.md#segments-identities-attributes)。
-3. 深入探討，展示產業合作夥伴的兩個範本範例。
+3. 模板包括聚合鍵。 當您在目標配置中使用[可配置的聚合](./destination-configuration.md#configurable-aggregation)時，Experience Platform會根據段ID、段狀態或標識命名空間等標準對導出到目標的配置檔案進行分組。
 
 ### 設定檔屬性 {#attributes}
 
 若要轉換匯出至目的地的設定檔屬性，請參閱下方的JSON和程式碼範例。
 
-
 >[!IMPORTANT]
 >
 >如需Adobe Experience Platform中所有可用設定檔屬性的清單，請參閱[XDM欄位字典](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/field-dictionary.html?lang=en)。
-
 
 
 **輸入**
@@ -776,7 +775,311 @@ Adobe使用類似[Jinja](https://jinja.palletsprojects.com/en/2.11.x/)的範本�
 }
 ```
 
-### 參考資料：轉換範本中使用的內容和函式
+### 在您的範本中包含匯總金鑰，以依照各種條件將匯出的設定檔分組 {#template-aggregation-key}
+
+在目標配置中使用[可配置聚合](./destination-configuration.md#configurable-aggregation)時，可以編輯消息轉換模板，以根據諸如段ID、段別名、段成員資格或標識命名空間等標準將導出到目標的配置檔案分組，如下例所示。
+
+#### 在範本中使用區段ID匯總金鑰的範例 {#aggregation-key-segment-id}
+
+如果您使用[可配置聚合](./destination-configuration.md#configurable-aggregation)並將`includeSegmentId`設定為true，則可以在模板中使用`segmentId`將導出到目標的HTTP消息中的配置檔案分組：
+
+**輸入**
+
+請考量下列四個設定檔，前兩個是區段ID為`788d8874-8007-4253-92b7-ee6b6c20c6f3`的區段的一部分，另外兩個是區段ID為`8f812592-3f06-416b-bd50-e7831848a31a`的區段的一部分。
+
+配置檔案1:
+
+```json
+{
+   "attributes":{
+      "firstName":{
+         "value":"Hermione"
+      },
+      "birthDate":{
+         
+      }
+   },
+   "segmentMembership":{
+      "ups":{
+         "788d8874-8007-4253-92b7-ee6b6c20c6f3":{
+            "lastQualificationTime":"2020-11-20T13:15:49Z",
+            "status":"existing"
+         }
+      }
+   }
+}
+```
+
+配置檔案2:
+
+```json
+{
+   "attributes":{
+      "firstName":{
+         "value":"Harry"
+      },
+      "birthDate":{
+         "value":"1980/07/31"
+      }
+   },
+   "segmentMembership":{
+      "ups":{
+         "788d8874-8007-4253-92b7-ee6b6c20c6f3":{
+            "lastQualificationTime":"2020-11-20T13:15:49Z",
+            "status":"existing"
+         }
+      }
+   }
+}
+```
+
+配置檔案3:
+
+```json
+{
+   "attributes":{
+      "firstName":{
+         "value":"Tom"
+      },
+      "birthDate":{
+         
+      }
+   },
+   "segmentMembership":{
+      "ups":{
+         "8f812592-3f06-416b-bd50-e7831848a31a":{
+            "lastQualificationTime":"2021-02-20T12:00:00Z",
+            "status":"existing"
+         }
+      }
+   }
+}
+```
+
+配置檔案4:
+
+```json
+{
+   "attributes":{
+      "firstName":{
+         "value":"Jerry"
+      },
+      "birthDate":{
+         "value":"1940/01/01"
+      }
+   },
+   "segmentMembership":{
+      "ups":{
+         "8f812592-3f06-416b-bd50-e7831848a31a":{
+            "lastQualificationTime":"2021-02-20T12:00:00Z",
+            "status":"existing"
+         }
+      }
+   }
+}
+```
+
+**範本**
+
+>[!IMPORTANT]
+>
+>對於您使用的所有模板，在[目標伺服器配置](./server-and-template-configuration.md#template-specs)中插入模板之前，必須先逸出非法字元，如雙引號`""`。 如需逸出雙引號的詳細資訊，請參閱[JSON standard](http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf)中的第9章。
+
+```python
+{
+    "profiles": [
+        {% for profile in input.profiles %}
+        {
+            {% for attribute in profile.attributes %}
+            "{{ attribute.key }}":
+                {% if attribute.value is empty %}
+                    null
+                {% else %}
+                    "{{ attribute.value.value }}"
+                {% endif %}
+            {% if not loop.last %},{% endif %}
+            {% endfor %}
+        }{% if not loop.last %},{% endif %}
+        {% endfor %}
+    ]
+    "audienceId": "{{input.aggregationKey.segmentId}}"
+}
+```
+
+**結果**
+
+將設定檔匯出至目的地時，會根據其區段ID分割為兩個群組。
+
+```json
+{
+    "profiles": [
+        {
+            "firstName": "Hermione",
+            "birthDate": null
+        },
+        {
+            "firstName": "Harry",
+            "birthDate": "1980/07/31"
+        }
+    ],
+    "audienceId": "788d8874-8007-4253-92b7-ee6b6c20c6f3"
+}
+```
+
+```json
+{
+    "profiles": [
+        {
+            "firstName": "Tom",
+            "birthDate": null
+        },
+        {
+            "firstName": "Jerry",
+            "birthDate": "1940/01/01"
+        }
+    ],
+    "audienceId": "8f812592-3f06-416b-bd50-e7831848a31a"
+}
+```
+
+#### 在範本中使用區段別名匯總金鑰的範例 {#aggregation-key-segment-alias}
+
+如果您使用[可配置聚合](./destination-configuration.md#configurable-aggregation)並將`includeSegmentId`設定為true，則可以在模板中使用段別名來將導出到目標的HTTP消息中的配置檔案分組。
+
+將下方的行新增至範本，以根據區段別名來分組匯出的設定檔。
+
+```python
+"customerList={{input.aggregationKey.segmentAlias}}"
+```
+
+#### 在範本中使用區段狀態匯總索引鍵的範例 {#aggregation-key-segment-status}
+
+如果您使用[可設定的匯總](./destination-configuration.md#configurable-aggregation)並將`includeSegmentId`和`includeSegmentStatus`設為true，則可以使用範本中的區段狀態，根據是否應新增或從區段移除設定檔，將匯出至目的地的HTTP訊息中的設定檔分組。
+
+可能的值包括：
+
+* 實現
+* 現有
+* 退出
+
+將下方的行新增至範本，以根據上述值，從區段新增或移除設定檔。：
+
+```python
+"action={% if input.aggregationKey.segmentStatus == "exited" %}REMOVE{% else %}ADD{% endif%}"
+```
+
+#### 在範本中使用身分命名空間匯總索引鍵的範例 {#aggregation-key-identity}
+
+以下是目標配置中的[可配置聚合](./destination-configuration.md#configurable-aggregation)設定為按標識命名空間聚合導出的配置檔案的示例，格式為`"identityNamespaces": ["email", "phone"]`
+
+**輸入**
+
+配置檔案1:
+
+```json
+{
+   "identityMap":{
+      "email":[
+         {
+            "id":"e1@example.com"
+         },
+         {
+            "id":"e2@example.com"
+         }
+      ],
+      "phone":[
+         {
+            "id":"+40744111222"
+         }
+      ]
+   }
+}
+```
+
+配置檔案2:
+
+```json
+{
+   "identityMap":{
+      "email":[
+         {
+            "id":"e3@example.com"
+         }
+      ],
+      "phone":[
+         {
+            "id":"+40744333444"
+         },
+         {
+            "id":"+40744555666"
+         }
+      ]
+   }
+}
+```
+
+**範本**
+
+>[!IMPORTANT]
+>
+>對於您使用的所有模板，在[目標伺服器配置](./server-and-template-configuration.md#template-specs)中插入模板之前，必須先逸出非法字元，如雙引號`""`。 如需逸出雙引號的詳細資訊，請參閱[JSON standard](http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf)中的第9章。
+
+```python
+{
+            "profiles": [
+            {% for profile in input.profiles %}
+            {
+                {% for ns in input.aggregationKey.identityNamespaces %}
+                "{{ns}}": [
+                    {% for id in profile.identityMap[ns] %}
+                    "{{id.id}}"{% if not loop.last %},{% endif %}
+                    {% endfor %}
+                ]{% if not loop.last %},{% endif %}
+                {% endfor %}
+            }{% if not loop.last %},{% endif %}
+            {% endfor %}
+        ]
+}
+```
+
+**結果**
+
+以下`json`代表從Adobe Experience Platform匯出的資料。
+
+```json
+{
+   "profiles":[
+      {
+         "email":[
+            "e1@example.com",
+            "e2@example.com"
+         ],
+         "phone":[
+            "+40744111222"
+         ]
+      },
+      {
+         "email":[
+            "e3@example.com"
+         ],
+         "phone":[
+            "+40744333444",
+            "+40744555666"
+         ]
+      }
+   ]
+}
+```
+
+#### 在URL範本中使用匯總索引鍵的範例
+
+請注意，根據您的使用案例，您也可以在URL中使用此處所述的匯總索引鍵，如下所示：
+
+```python
+https://api.example.com/audience/{{input.aggregationKey.segmentId}}
+```
+
+### 參考資料：轉換範本中使用的內容和函式 {#reference}
 
 提供給範本的內容包含`input`（此呼叫中匯出的設定檔/資料）和`destination`(關於Adobe正將資料傳送至哪個目的地的資料，對所有設定檔有效)。
 

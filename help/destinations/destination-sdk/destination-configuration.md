@@ -2,9 +2,9 @@
 description: 此設定可讓您指出基本資訊，例如目的地名稱、類別、說明、標誌等。 此設定中的設定也會決定Experience Platform使用者如何驗證您的目的地、Experience Platform使用者介面中的顯示方式，以及可匯出至您目的地的身分識別。
 title: 目標SDK的目標配置選項
 exl-id: b7e4db67-2981-4f18-b202-3facda5c8f0b
-source-git-commit: 9be8636b02a15c8f16499172289413bc8fb5b6f0
+source-git-commit: 63fe3b7cc429a1c18cebe998bc82fdea99a6679b
 workflow-type: tm+mt
-source-wordcount: '1527'
+source-wordcount: '1557'
 ht-degree: 4%
 
 ---
@@ -247,6 +247,8 @@ Adobe需要知道哪些[!DNL Platform]身分識別客戶將能夠匯出至您的
 匯總原則可決定匯出的設定檔在資料匯出中如何結合。 可選擇下列選項：
 * 最佳成果匯總
 * 可配置聚合（如上面的配置所示）
+
+閱讀有關[使用模板](./message-format.md#using-templating)和[聚合鍵示例](./message-format.md#template-aggregation-key)的部分，了解如何根據所選聚合策略將聚合策略包含在消息轉換模板中。
 
 ### 最佳成果匯總 {#best-effort-aggregation}
 
