@@ -4,9 +4,9 @@ seo-description: Use the content on this page together with the rest of the conf
 seo-title: Message format
 title: 訊息格式
 exl-id: 1212c1d0-0ada-4ab8-be64-1c62a1158483
-source-git-commit: 63fe3b7cc429a1c18cebe998bc82fdea99a6679b
+source-git-commit: 91228b5f2008e55b681053296e8b3ff4448c92db
 workflow-type: tm+mt
-source-wordcount: '1982'
+source-wordcount: '1972'
 ht-degree: 2%
 
 ---
@@ -779,7 +779,7 @@ Adobe使用類似[Jinja](https://jinja.palletsprojects.com/en/2.11.x/)的範本�
 
 在目標配置中使用[可配置聚合](./destination-configuration.md#configurable-aggregation)時，可以編輯消息轉換模板，以根據諸如段ID、段別名、段成員資格或標識命名空間等標準將導出到目標的配置檔案分組，如下例所示。
 
-#### 在範本中使用區段ID匯總金鑰的範例 {#aggregation-key-segment-id}
+#### 在範本中使用區段ID匯總金鑰 {#aggregation-key-segment-id}
 
 如果您使用[可配置聚合](./destination-configuration.md#configurable-aggregation)並將`includeSegmentId`設定為true，則可以在模板中使用`segmentId`將導出到目標的HTTP消息中的配置檔案分組：
 
@@ -942,7 +942,7 @@ Adobe使用類似[Jinja](https://jinja.palletsprojects.com/en/2.11.x/)的範本�
 }
 ```
 
-#### 在範本中使用區段別名匯總金鑰的範例 {#aggregation-key-segment-alias}
+#### 在範本中使用區段別名匯總金鑰 {#aggregation-key-segment-alias}
 
 如果您使用[可配置聚合](./destination-configuration.md#configurable-aggregation)並將`includeSegmentId`設定為true，則可以在模板中使用段別名來將導出到目標的HTTP消息中的配置檔案分組。
 
@@ -952,7 +952,7 @@ Adobe使用類似[Jinja](https://jinja.palletsprojects.com/en/2.11.x/)的範本�
 "customerList={{input.aggregationKey.segmentAlias}}"
 ```
 
-#### 在範本中使用區段狀態匯總索引鍵的範例 {#aggregation-key-segment-status}
+#### 在範本中使用區段狀態匯總金鑰 {#aggregation-key-segment-status}
 
 如果您使用[可設定的匯總](./destination-configuration.md#configurable-aggregation)並將`includeSegmentId`和`includeSegmentStatus`設為true，則可以使用範本中的區段狀態，根據是否應新增或從區段移除設定檔，將匯出至目的地的HTTP訊息中的設定檔分組。
 
@@ -968,7 +968,7 @@ Adobe使用類似[Jinja](https://jinja.palletsprojects.com/en/2.11.x/)的範本�
 "action={% if input.aggregationKey.segmentStatus == "exited" %}REMOVE{% else %}ADD{% endif%}"
 ```
 
-#### 在範本中使用身分命名空間匯總索引鍵的範例 {#aggregation-key-identity}
+#### 在範本中使用身分命名空間匯總金鑰 {#aggregation-key-identity}
 
 以下是目標配置中的[可配置聚合](./destination-configuration.md#configurable-aggregation)設定為按標識命名空間聚合導出的配置檔案的示例，格式為`"identityNamespaces": ["email", "phone"]`
 
@@ -1071,7 +1071,7 @@ Adobe使用類似[Jinja](https://jinja.palletsprojects.com/en/2.11.x/)的範本�
 }
 ```
 
-#### 在URL範本中使用匯總索引鍵的範例
+#### 在URL範本中使用匯總索引鍵
 
 請注意，根據您的使用案例，您也可以在URL中使用此處所述的匯總索引鍵，如下所示：
 
