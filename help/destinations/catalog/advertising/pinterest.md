@@ -1,7 +1,7 @@
 ---
 title: Pinterest客戶清單連線
 description: 從您的客戶清單、造訪過您網站的人員或已在Pinterest上與您的內容互動的人員建立對象。
-source-git-commit: e6fa353c74c652f82ff187692de8784463d0fd01
+source-git-commit: a071aaaf5e9b8ef9223ef4f9ea204460f18bf95e
 workflow-type: tm+mt
 source-wordcount: '516'
 ht-degree: 2%
