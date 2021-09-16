@@ -1,10 +1,11 @@
 ---
 title: 核心擴充功能概述
 description: 了解Adobe Experience Platform中的核心標籤擴充功能。
-source-git-commit: 41a394974153883dc300bdd8a00fc3106c4f0ac6
+exl-id: 841f32ad-a6a8-49fb-a131-ef4faab47187
+source-git-commit: 9624b42f58384c1b54a6ee55e272a97d6fff5fde
 workflow-type: tm+mt
-source-wordcount: '4905'
-ht-degree: 70%
+source-wordcount: '5130'
+ht-degree: 68%
 
 ---
 
@@ -12,7 +13,7 @@ ht-degree: 70%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch在Adobe Experience Platform中已重新命名為一套資料收集技術。 因此，產品檔案中已推出數個術語變更。 有關術語更改的綜合參考，請參閱以下[document](../../../term-updates.md)。
+>Adobe Experience Platform Launch在Adobe Experience Platform中已重新命名為一套資料收集技術。 因此，所有產品文件中出現了幾項術語變更。 如需術語變更的彙整參考資料，請參閱以下[文件](../../../term-updates.md)。
 
 核心標籤擴充功能是隨Adobe Experience Platform發行的預設擴充功能。
 
@@ -222,7 +223,7 @@ DOM就緒時，事件就會觸發，使用者可與頁面互動。 此事件類�
 
 1. 選擇&#x200B;**[!UICONTROL 開啟編輯器]**。
 1. 輸入自訂程式碼。
-1. 選取&#x200B;**[!UICONTROL 「儲存」]**。
+1. 選取「**[!UICONTROL 儲存]**」。
 
 名為 `event` 的變數會自動開放使用，以便您在自訂程式碼中參照。`event` 物件將包含觸發規則之事件的實用資訊。要判斷哪些資料事件可供使用，最簡單的方式是將自訂程式碼中的 `event` 登錄到控制台：
 
@@ -774,3 +775,36 @@ CSS 選擇器鏈結：
 * 如果這是造訪的登陸頁面，請填入 Analytics 量度
 * 在 X 次工作階段計數後向訪客顯示新活動內容
 * 若為首次訪客，顯示電子報註冊
+
+### 條件值
+
+[值比較](#value-comparison-value-comparison)條件的包裝函式。 根據比較結果，將在表單中傳回兩個可用值的其中一個。 因此可以處理&quot;如果……然後……否則……」 不需要額外規則的情況。
+
+### 執行階段環境
+
+可讓您選取下列其中一個變數：
+
+* 環境階段 — 傳回`_satellite.environment.stage`以區分開發/測試/生產環境。
+* 程式庫建置日期 — 傳回`turbine.buildInfo.buildDate`，其中包含與`_satellite.buildInfo.buildDate`相同的值。
+* 屬性名稱 — 傳回`_satellite.property.name`以取得Launch屬性的名稱。
+* 屬性ID — 傳回`_satellite.property.id`以取得Launch屬性的ID
+* 規則名稱 — 傳回`event.$rule.name`，其中包含已執行規則的名稱。
+* 規則ID — 傳回`event.$rule.id`，其中包含已執行規則的ID。
+* 事件類型 — 傳回`event.$type`，其中包含觸發規則的事件類型。
+* 事件詳細資料裝載 — 傳回`event.detail`，其中包含自訂事件或直接呼叫規則的裝載。
+* 直接呼叫標識符 — 返回`event.identifier`，其中包含直接呼叫規則的標識符。
+
+### 裝置屬性
+
+傳回下列其中一個訪客裝置屬性：
+
+* 瀏覽器視窗大小
+* 螢幕大小
+
+### JavaScript工具
+
+它是常見JavaScript作業的包裝函式。 它接收一個資料元素作為輸入。 它會傳回下列資料元素值之一轉換的結果：
+
+* 基本字串操作（replace、substring、regex相符、第一個和最後一個索引、分割、切片）
+* 基本陣列操作（切片、聯接、彈出、移位）
+* 基本通用操作（切片、長度）

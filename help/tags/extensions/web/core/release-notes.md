@@ -1,10 +1,11 @@
 ---
 title: 核心擴充功能發行說明
 description: Adobe Experience Platform核心擴充功能的最新發行說明。
-source-git-commit: cef9f9e403328418d26935bf3ee45e9068b7177e
+exl-id: a049b2d5-7a00-435d-bcc7-112658a53a1e
+source-git-commit: 9624b42f58384c1b54a6ee55e272a97d6fff5fde
 workflow-type: tm+mt
-source-wordcount: '1293'
-ht-degree: 67%
+source-wordcount: '1417'
+ht-degree: 63%
 
 ---
 
@@ -12,7 +13,19 @@ ht-degree: 67%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch在Adobe Experience Platform中已重新命名為一套資料收集技術。 因此，產品檔案中已推出數個術語變更。 有關術語更改的綜合參考，請參閱以下[document](../../../term-updates.md)。
+>Adobe Experience Platform Launch在Adobe Experience Platform中已重新命名為一套資料收集技術。 因此，所有產品文件中出現了幾項術語變更。 如需術語變更的彙整參考資料，請參閱以下[文件](../../../term-updates.md)。
+
+## 2021 年 9 月 16 日
+
+v3.1.0
+
+已新增新資料元素：
+
+* 合併的對象 — 選擇多個資料元素，每個資料元素將提供一個對象。 這些對象將深度（遞歸）合併在一起以生成新對象。
+* 條件值 — 根據比較結果，傳回兩個值（conditionalValue或fallbackValue）之一。
+* 執行階段環境 — 傳回下列其中一個Launch環境變數：環境階段，程式庫建置日期，屬性名稱，屬性ID，規則名稱，規則ID，事件類型，事件詳細資料裝載，直接呼叫識別碼。
+* JavaScript工具 — 常用JavaScript操作的包裝函式：基本字串操作（replace、substring、regex匹配、第一個和最後一個索引、split、slice）、基本陣列操作(slice、join、pop、shift)和基本通用操作(slice、length)。
+* 裝置屬性 — 傳回裝置屬性，例如視窗大小或螢幕大小。
 
 ## 2021 年 8 月 11 日
 
