@@ -4,9 +4,9 @@ title: 即時客戶個人檔案UI指南
 topic-legacy: guide
 description: 「即時客戶設定檔」可結合來自多個管道的資料，包括線上、離線、CRM和協力廠商資料，讓您全面了解每個客戶。 本檔案可做為在Adobe Experience Platform使用者介面中與即時客戶設定檔互動的指南。
 exl-id: 792a3a73-58a4-4163-9212-4d43d24c2770
-source-git-commit: ad5690997b079dbc064775ef1c4fdbe3770ff424
+source-git-commit: b5e6376b54fe8b53fbabf85a2909293cebd93ccc
 workflow-type: tm+mt
-source-wordcount: '1553'
+source-wordcount: '1568'
 ht-degree: 0%
 
 ---
@@ -23,7 +23,7 @@ ht-degree: 0%
 * [[!DNL Identity Service]](../../identity-service/home.md):可在 [!DNL Real-time Customer Profile] 擷取不同資料來源的身分時，將其橋接至中，以 [!DNL Platform]啟用。
 * [[!DNL Experience Data Model (XDM)]](../../xdm/home.md):組織客戶體驗資 [!DNL Platform] 料的標準化架構。
 
-## [!UICONTROL 概覽]
+## [!UICONTROL 概觀]
 
 在Experience PlatformUI中，在左側導覽中選取&#x200B;**[!UICONTROL Profiles]**&#x200B;以開啟顯示設定檔控制面板的&#x200B;**[!UICONTROL Overview]**&#x200B;標籤。
 
@@ -75,15 +75,21 @@ ht-degree: 0%
 
 在&#x200B;**[!UICONTROL Browse]**&#x200B;標籤上，您可以使用合併原則檢視範例設定檔，或使用身分命名空間和值來尋找特定設定檔。
 
-![](../images/user-guide/browse-by-dropdown.png)
+![](../images/user-guide/browse-by-none-selected.png)
 
 ### 按[!UICONTROL 合併策略]瀏覽
 
-預設情況下，**[!UICONTROL Browse by]**&#x200B;選擇器設定為[!UICONTROL Merge policy]，所選&#x200B;**[!UICONTROL Merge policy]**&#x200B;是貴組織的預設合併策略。
+預設情況下，將&#x200B;**[!UICONTROL Browse]**&#x200B;頁簽設定為貴組織的預設合併策略。 要選擇不同的合併策略，請選擇合併策略名稱旁的`X`，然後使用選擇器開啟&#x200B;**[!UICONTROL 選擇合併策略]**&#x200B;對話框。
 
-若要進一步了解合併原則及其在Platform中的角色，請參閱[合併原則概述](../merge-policies/overview.md)。
+>[!NOTE]
+>
+>如果未選擇合併策略，請使用&#x200B;**[!UICONTROL Merge policy]**&#x200B;欄位旁邊的選擇器按鈕開啟選擇對話框。
 
 ![](../images/user-guide/browse-by-merge-policy.png)
+
+要從&#x200B;**[!UICONTROL 選擇合併策略]**&#x200B;對話框中選擇合併策略，請選擇策略名稱旁的單選按鈕，然後使用&#x200B;**[!UICONTROL 選擇]**&#x200B;返回[!UICONTROL 瀏覽]頁簽。 然後，您可以選擇&#x200B;**[!UICONTROL View]**&#x200B;以刷新示例配置檔案，並查看應用了新合併策略的配置檔案的抽樣。
+
+![](../images/user-guide/select-merge-policy-dialog.png)
 
 顯示的設定檔代表在套用選取的合併原則後，您組織的設定檔存放區中最多20個設定檔的範例。 將新資料新增至組織的設定檔存放區時，會重新整理所選合併原則的範例設定檔。
 
@@ -91,21 +97,16 @@ ht-degree: 0%
 
 ![](../images/user-guide/sample-profiles.png)
 
-要選擇不同的合併策略，請選擇合併策略名稱旁的`X`，然後使用選擇器開啟&#x200B;**[!UICONTROL 選擇合併策略]**&#x200B;對話框。
+若要進一步了解合併原則及其在Platform中的角色，請參閱[合併原則概述](../merge-policies/overview.md)。
 
-![](../images/user-guide/merge-policy-select.png)
-
-要從&#x200B;**[!UICONTROL 選擇合併策略]**&#x200B;對話框中選擇合併策略，請選擇策略名稱旁的單選按鈕，然後使用&#x200B;**[!UICONTROL 選擇]**&#x200B;返回[!UICONTROL 瀏覽]頁簽。 然後，您可以選擇&#x200B;**[!UICONTROL View]**&#x200B;以刷新示例配置檔案，並查看應用了新合併策略的配置檔案的抽樣。
-
-![](../images/user-guide/select-merge-policy-dialog.png)
 
 ### 按[!UICONTROL Identity]瀏覽
 
-使用&#x200B;**[!UICONTROL Browse by]**&#x200B;選擇器，您可以選擇[!UICONTROL Identity]，以便根據標識值查找特定配置檔案。 依身分瀏覽也需要您提供合併原則、身分命名空間和身分值。
+在&#x200B;**[!UICONTROL Browse]**&#x200B;標籤上，您可以使用身分命名空間，以便根據身分值查詢特定設定檔。 依身分瀏覽需要您提供合併原則、身分命名空間和身分值。
 
 ![](../images/user-guide/browse-by-identity.png)
 
-使用&#x200B;**[!UICONTROL 合併策略]**&#x200B;選擇器開啟&#x200B;**[!UICONTROL 選擇合併策略]**&#x200B;對話框，並選擇要使用的合併策略。
+如有必要，請使用&#x200B;**[!UICONTROL 合併策略]**&#x200B;選擇器開啟&#x200B;**[!UICONTROL 選擇合併策略]**&#x200B;對話框，並選擇要使用的合併策略。
 
 ![](../images/user-guide/select-merge-policy-dialog.png)
 
