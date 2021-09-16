@@ -1,7 +1,7 @@
 ---
 title: Pinterest轉換追蹤擴充功能
 description: pinterest轉換追蹤擴充功能是Adobe Experience Platform中的廣告目的地。 如需擴充功能的詳細資訊，請參閱Exchange上的擴充功能頁面。
-source-git-commit: e6fa353c74c652f82ff187692de8784463d0fd01
+source-git-commit: e7959e678ec7d086a50f3142e9e64b34adb57214
 workflow-type: tm+mt
 source-wordcount: '465'
 ht-degree: 4%
@@ -10,7 +10,7 @@ ht-degree: 4%
 
 # [!DNL Pinterest Conversion Tracking] 擴充功能 {#pinterest-extension}
 
-## 概覽 {#overview}
+## 總覽 {#overview}
 
 在檢視您的促銷釘後，追蹤您網站上的訪客動作。 測量廣告支出的回報並建立目標對象。 如需更多詳情，請參閱[此處](https://ads.pinterest.com/)。
 
