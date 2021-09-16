@@ -2,10 +2,10 @@
 title: 核心擴充功能概述
 description: 了解Adobe Experience Platform中的核心標籤擴充功能。
 exl-id: 841f32ad-a6a8-49fb-a131-ef4faab47187
-source-git-commit: 9624b42f58384c1b54a6ee55e272a97d6fff5fde
+source-git-commit: 3b023dde8189d3ca6f8525d1e3366874e4ea2c67
 workflow-type: tm+mt
-source-wordcount: '5130'
-ht-degree: 68%
+source-wordcount: '5257'
+ht-degree: 66%
 
 ---
 
@@ -708,6 +708,61 @@ CSS 選擇器鏈結：
 本機儲存讓瀏覽器能在頁面之間儲存資訊 ([https://www.w3schools.com/html/html5_webstorage.asp](https://www.w3schools.com/html/html5_webstorage.asp))。本機儲存的運作方式與 Cookie 類似，但更大也更有彈性。
 
 使用提供的欄位來指定您為本機儲存項目建立的值，例如 `lastProductViewed.`
+
+### 合併的對象
+
+選取多個資料元素，每個資料元素都會提供一個物件。 這些對象將深度（遞歸）合併在一起以生成新對象。 將不會修改源對象。 如果在多個源對象上的同一位置找到屬性，則將使用後一個對象的值。 如果源屬性值為`undefined`，則不會覆蓋前一個源對象的值。 如果在多個來源物件上的相同位置找到陣列，則會串連陣列。
+
+例如，假設您選取了提供下列物件的資料元素：
+
+```
+{
+  "sport": {
+    "name": "tennis"
+  },
+  "dessert": "ice cream",
+  "fruits": [
+    "apple",
+    "banana"
+  ]
+}
+```
+
+假設您也選取其他資料元素，提供下列物件：
+
+```
+{
+  "sport": {
+    "name": "volleyball"
+  },
+  "dessert": undefined,
+  "pet": "dog",
+  "instrument": undefined,
+  "fruits": [
+    "cherry",
+    "duku"
+  ]
+}
+```
+
+「合併的對象」資料元素的結果將是以下對象：
+
+```
+{
+  "sport": {
+    "name": "volleyball"
+  },
+  "dessert": "ice cream",
+  "pet": "dog",
+  "instrument": undefined,
+  "fruits": [
+    "apple",
+    "banana",
+    "cherry",
+    "duku"
+  ]
+}
+```
 
 ### 頁面資訊
 
