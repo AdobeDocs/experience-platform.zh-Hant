@@ -4,9 +4,9 @@ seo-description: Use the content on this page together with the rest of the conf
 seo-title: Message format
 title: 訊息格式
 exl-id: 1212c1d0-0ada-4ab8-be64-1c62a1158483
-source-git-commit: add6c7c4f3a60bd9ee2c2b77a8a242c4df03377b
+source-git-commit: a1e77520ba5555db42578eac261e01e77130aea2
 workflow-type: tm+mt
-source-wordcount: '2056'
+source-wordcount: '2090'
 ht-degree: 2%
 
 ---
@@ -23,7 +23,7 @@ ht-degree: 2%
 * **IdentityMap**。身分對應代表Adobe Experience Platform中所有一般使用者身分的對應。 請參閱[XDM欄位字典](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/field-dictionary.html?lang=en)中的`xdm:identityMap`。
 * **區段成員資格**。[segmentMembership](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/field-dictionary.html?lang=en) XDM屬性會通知設定檔是哪些區段的成員。 對於`status`欄位中的三個不同值，請閱讀[區段成員資格詳細資訊架構欄位群組](https://experienceleague.adobe.com/docs/experience-platform/xdm/field-groups/profile/segmentation.html)上的檔案。
 
-## 概覽 {#overview}
+## 總覽 {#overview}
 
 將此頁面上的內容與合作夥伴目標](./configuration-options.md)的其餘[配置選項一起使用。 本頁說明從Adobe Experience Platform匯出至目的地之資料的傳訊格式，而其他頁面則說明連線及驗證至目的地的詳細資訊。
 
@@ -799,9 +799,6 @@ Adobe使用類似[Jinja](https://jinja.palletsprojects.com/en/2.11.x/)的範本�
    "attributes":{
       "firstName":{
          "value":"Hermione"
-      },
-      "birthDate":{
-         
       }
    },
    "segmentMembership":{
@@ -822,9 +819,6 @@ Adobe使用類似[Jinja](https://jinja.palletsprojects.com/en/2.11.x/)的範本�
    "attributes":{
       "firstName":{
          "value":"Harry"
-      },
-      "birthDate":{
-         "value":"1980/07/31"
       }
    },
    "segmentMembership":{
@@ -845,9 +839,6 @@ Adobe使用類似[Jinja](https://jinja.palletsprojects.com/en/2.11.x/)的範本�
    "attributes":{
       "firstName":{
          "value":"Tom"
-      },
-      "birthDate":{
-         
       }
    },
    "segmentMembership":{
@@ -868,9 +859,6 @@ Adobe使用類似[Jinja](https://jinja.palletsprojects.com/en/2.11.x/)的範本�
    "attributes":{
       "firstName":{
          "value":"Jerry"
-      },
-      "birthDate":{
-         "value":"1940/01/01"
       }
    },
    "segmentMembership":{
@@ -918,16 +906,13 @@ Adobe使用類似[Jinja](https://jinja.palletsprojects.com/en/2.11.x/)的範本�
    "audienceId":"788d8874-8007-4253-92b7-ee6b6c20c6f3",
    "profiles":[
       {
-         "firstName":"Hermione",
-         "birthDate":null
+         "firstName":"Hermione"
       },
       {
-         "firstName":"Harry",
-         "birthDate":"1980/07/31"
+         "firstName":"Harry"
       },
       {
-         "firstName":"Jerry",
-         "birthDate":"1940/01/01"
+         "firstName":"Jerry"
       }
    ]
 }
@@ -938,12 +923,10 @@ Adobe使用類似[Jinja](https://jinja.palletsprojects.com/en/2.11.x/)的範本�
    "audienceId":"8f812592-3f06-416b-bd50-e7831848a31a",
    "profiles":[
       {
-         "firstName":"Tom",
-         "birthDate":null
+         "firstName":"Tom"
       },
       {
-         "firstName":"Jerry",
-         "birthDate":"1940/01/01"
+         "firstName":"Jerry"
       }
    ]
 }
@@ -977,7 +960,7 @@ action={% if input.aggregationKey.segmentStatus == "exited" %}REMOVE{% else %}AD
 
 #### 在範本中使用身分命名空間匯總金鑰 {#aggregation-key-identity}
 
-以下是目標配置中的[可配置聚合](./destination-configuration.md#configurable-aggregation)設定為按標識命名空間聚合導出的配置檔案的示例，格式為`"identityNamespaces": ["email", "phone"]`
+以下範例中，目標配置中的[可配置聚合](./destination-configuration.md#configurable-aggregation)設定為按標識命名空間聚合導出的配置檔案，形式為`"namespaces": ["email", "phone"]`和`"namespaces": ["GAID", "IDFA"]`。 請參閱[目的地設定API參考](./destination-configuration-api.md)中的`groups`參數，了解如何完成此作業。
 
 **輸入**
 
@@ -997,6 +980,16 @@ action={% if input.aggregationKey.segmentStatus == "exited" %}REMOVE{% else %}AD
       "phone":[
          {
             "id":"+40744111222"
+         }
+      ],
+      "IDFA":[
+         {
+            "id":"AEBE52E7-03EE-455A-B3C4-E57283966239"
+         }
+      ],
+      "GAID":[
+         {
+            "id":"e4fe9bde-caa0-47b6-908d-ffba3fa184f2"
          }
       ]
    }
@@ -1019,6 +1012,16 @@ action={% if input.aggregationKey.segmentStatus == "exited" %}REMOVE{% else %}AD
          },
          {
             "id":"+40744555666"
+         }
+      ],
+      "IDFA":[
+         {
+            "id":"134GHU45-34HH-GHJ7-K0H8-LHN665998NN0"
+         }
+      ],
+      "GAID":[
+         {
+            "id":"47bh00i9-8jv6-334n-lll8-nb7f24sghg76"
          }
       ]
    }
@@ -1053,7 +1056,7 @@ action={% if input.aggregationKey.segmentStatus == "exited" %}REMOVE{% else %}AD
 
 **結果**
 
-以下`json`代表從Adobe Experience Platform匯出的資料。
+將設定檔匯出至目的地時，會根據其身分識別命名空間（一個群組中的電子郵件和電話、另一個群組中的GAID和IDFA），分割為兩個群組。
 
 ```json
 {
@@ -1074,6 +1077,29 @@ action={% if input.aggregationKey.segmentStatus == "exited" %}REMOVE{% else %}AD
          "phone":[
             "+40744333444",
             "+40744555666"
+         ]
+      }
+   ]
+}
+```
+
+```json
+{
+   "profiles":[
+      {
+         "IDFA":[
+            "AEBE52E7-03EE-455A-B3C4-E57283966239"
+         ],
+         "GAID":[
+            "e4fe9bde-caa0-47b6-908d-ffba3fa184f2"
+         ]
+      },
+      {
+         "IDFA":[
+            "134GHU45-34HH-GHJ7-K0H8-LHN665998NN0"
+         ],
+         "GAID":[
+            "47bh00i9-8jv6-334n-lll8-nb7f24sghg76"
          ]
       }
    ]
