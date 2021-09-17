@@ -2,16 +2,16 @@
 description: 本頁說明Destination SDK支援的各種OAuth 2驗證流程，並提供為您的目的地設定OAuth 2驗證的指示。
 title: OAuth 2驗證
 exl-id: 280ecb63-5739-491c-b539-3c62bd74e433
-source-git-commit: 9be8636b02a15c8f16499172289413bc8fb5b6f0
+source-git-commit: e8625d6de7707b3a159f95d4471a73cbbed25d21
 workflow-type: tm+mt
-source-wordcount: '2119'
+source-wordcount: '2110'
 ht-degree: 5%
 
 ---
 
 # OAuth 2驗證
 
-## 概覽 {#overview}
+## 總覽 {#overview}
 
 使用Destination SDK可讓Adobe Experience Platform使用[OAuth 2驗證架構](https://tools.ietf.org/html/rfc6749)連線至您的目的地。
 
@@ -21,18 +21,15 @@ ht-degree: 5%
 
 ### 系統的必要條件 {#prerequisites}
 
-首先，您必須在系統中建立Adobe Experience Platform的應用程式，或在系統中註冊Experience Platform。 目標是產生用戶端ID和用戶端密碼，這是驗證Experience Platform至您目的地所需的工具。 在您的系統中進行此設定時，您需要Adobe Experience Platform OAuth 2重新導向/回呼URL，可從下表取得。
+首先，您必須在系統中建立Adobe Experience Platform的應用程式，或在系統中註冊Experience Platform。 目標是產生用戶端ID和用戶端密碼，這是驗證Experience Platform至您目的地所需的工具。 在您的系統中執行此設定時，您需要Adobe Experience Platform OAuth 2重新導向/回呼URL，可從下列清單取得。
+
+* `https://platform-va7.adobe.io/data/core/activation/oauth/api/v1/callback`
+* `https://platform-nld2.adobe.io/data/core/activation/oauth/api/v1/callback`
+* `https://platform-aus5.adobe.io/data/core/activation/oauth/api/v1/callback`
 
 >[!IMPORTANT]
 >
 >只有[OAuth 2具有授權代碼](./oauth2-authentication.md#authorization-code)授權類型時，才需要在您的系統中註冊Adobe Experience Platform的重新導向/回呼URL的步驟。 對於其他兩種支援的授權類型（密碼和客戶端憑據），您可以跳過此步驟。
-
-| 重新導向/回呼URL | 環境 |
-|---------|----------|
-| `https://platform.adobe.io/data/core/activation/oauth/api/v1/callback` | 生產 |
-| `https://platform-stage.adobe.io/data/core/activation/oauth/api/v1/callback` | 預備 |
-
-{style=&quot;table-layout:auto&quot;}
 
 在此步驟結束時，您應：
 * 用戶端ID;
@@ -466,7 +463,7 @@ Adobe已設計系統，可重新整理過期的存取權杖，而不要求使用
 | response.body | HTTP回應內文 | ``{{ response.body.access_token }}`` |
 | response.status | HTTP回應狀態 | ``{{ response.status }}`` |
 | response.headers | HTTP回應標題 | ``{{ response.headers.server[0] }}`` |
-| authContext | 訪問有關當前身份驗證嘗試的資訊 | <ul><li>`{{ authContext.sandboxName }} `</li><li>`{{ authContext.sandboxId }} `</li><li>`{{ authContext.imsOrgId }} `</li><li>`{{ authContext.client }} // the client executing the authentication attempt `</li></ul> |
+| userContext | 訪問有關當前身份驗證嘗試的資訊 | <ul><li>`{{ userContext.sandboxName }} `</li><li>`{{ userContext.sandboxId }} `</li><li>`{{ userContext.imsOrgId }} `</li><li>`{{ userContext.client }} // the client executing the authentication attempt `</li></ul> |
 
 {style=&quot;table-layout:auto&quot;}
 
