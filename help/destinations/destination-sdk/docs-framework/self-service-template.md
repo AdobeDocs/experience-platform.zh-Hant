@@ -2,7 +2,7 @@
 title: 檔案自助服務範本//以目的地名稱取代
 description: 使用此範本，在Adobe Experience Platform目錄中為您的目的地建立公開檔案。//將取代為概述區段中的段落
 exl-id: 99700474-8bf6-4176-acc1-38814e17c995
-source-git-commit: d2452bf0e59866d3deca57090001c4c5a0935525
+source-git-commit: 396b9a9ec1509abedba96797f68ad3e5aa2e5988
 workflow-type: tm+mt
 source-wordcount: '904'
 ht-degree: 1%
@@ -15,7 +15,7 @@ ht-degree: 1%
 
 *首先，請更新頁面頂端的中繼資料（標題和說明）。請忽略此頁上的所有UICONTROL實例。 這個標籤可協助我們的機器翻譯程式將頁面正確翻譯成我們支援的多種語言。 在您提交文檔後，我們將向其添加標籤。*
 
-## 概覽 {#overview}
+## 總覽 {#overview}
 
 *提供您公司的簡短概述，包括提供給客戶的價值。包含指向產品文檔首頁的連結，以便進一步閱讀。*
 
@@ -58,7 +58,6 @@ ht-degree: 1%
 ## 使用案例
 
 為協助您更清楚了解您應如何及何時使用&#x200B;*YOURDESTINATION*&#x200B;目的地，以下是Adobe Experience Platform客戶可借由使用此目的地解決的範例使用案例。
-
 
 ### 使用案例#1
 
