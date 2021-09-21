@@ -3,10 +3,10 @@ title: 在Adobe Experience Platform Web SDK中除錯
 description: 了解如何切換Experience PlatformWeb SDK中的除錯功能。
 keywords: 偵錯web sdk；除錯；設定；設定命令；除錯命令；edgeConfigId;setDebug;debugEnabled；除錯；
 exl-id: 4e893af8-a48e-48dc-9737-4c61b3355f03
-source-git-commit: c0e2d01bd21405f07f4857e1ccf45dd0e4d0f414
+source-git-commit: d0d7fe42827579c502be9de29d36f24c94259b5f
 workflow-type: tm+mt
-source-wordcount: '422'
-ht-degree: 0%
+source-wordcount: '492'
+ht-degree: 2%
 
 ---
 
@@ -14,11 +14,14 @@ ht-degree: 0%
 
 啟用除錯時，SDK會將訊息輸出至瀏覽器主控台，有助於除錯實作及了解SDK的行為方式。
 
-預設會停用除錯，但可透過三種不同方式開啟：
+預設會停用除錯，但可透過四種不同方式開啟：
 
 * `configure` 命令
 * `setDebug` 命令
 * 查詢字串參數
+* 在Adobe Experience Platform Debugger中開啟啟用除錯。 Adobe Experience Platform是一項功能強大的工具，可檢查您的網頁，並協助您偵錯Experience Cloud產品的實作問題。 Adobe Experience Platform Debugger可同時作為[Chrome](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob)和[Firefox](https://addons.mozilla.org/zh-TW/firefox/addon/adobe-experience-platform-dbg/)擴充功能使用。 您可以從AEP Web SDK區段的「設定」標籤啟用除錯功能。
+
+![](../images/enable-debugging.png)
 
 ## 使用Configure命令切換調試
 
