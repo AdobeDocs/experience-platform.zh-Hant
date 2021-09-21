@@ -5,9 +5,9 @@ title: 來源連接器概述
 topic-legacy: overview
 description: Adobe Experience Platform可讓您從外部來源擷取資料，同時使用Platform服務來建構、加標籤及增強傳入資料。 您可以從多種來源(如Adobe應用程式、雲儲存、資料庫等)內嵌資料。
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: 5f5e4f91862fe4ec8840224a9bdb5dc6d7338288
+source-git-commit: 048b3bbbe170a892eedc9f8ee0e130fcbfad6b86
 workflow-type: tm+mt
-source-wordcount: '1007'
+source-wordcount: '1008'
 ht-degree: 0%
 
 ---
@@ -97,6 +97,7 @@ Experience Platform支援從協力廠商資料庫擷取資料。 有關特定源
 - [[!DNL Oracle] 連接器](connectors/databases/oracle.md)
 - [[!DNL Phoenix] 連接器](connectors/databases/phoenix.md)
 - [[!DNL PostgreSQL] 連接器](connectors/databases/postgres.md)
+- [[!DNL Snowflake] 連接器](connectors/databases/snowflake.md)
 
 ### 電子商務
 

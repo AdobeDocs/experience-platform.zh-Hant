@@ -4,9 +4,9 @@ user-guide-title: Adobe Experience Platform 來源連接器說明
 breadcrumb-title: 來源連接器指南
 user-guide-description: 從多種來源或結構擷取資料、加標籤，以及增強已擷取的資料。
 feature: Data Ingestion, Sources
-source-git-commit: ebe620b078096349c514420746902ce406a910d1
+source-git-commit: e85980565889dd66f7dbd93749e013f77e434b74
 workflow-type: tm+mt
-source-wordcount: '643'
+source-wordcount: '647'
 ht-degree: 12%
 
 ---
@@ -71,6 +71,7 @@ ht-degree: 12%
       - [Oracle連接器](connectors/databases/oracle.md)
       - [鳳凰連接器](connectors/databases/phoenix.md)
       - [PostgreSQL連接器](connectors/databases/postgres.md)
+      - [Snowflake連接器](connectors/databases/snowflake.md)
    - 電子商務 {#ecommerce}
       - [Shopify連接器](connectors/ecommerce/shopify.md)
    - 本地系統{#local-system}
@@ -125,6 +126,7 @@ ht-degree: 12%
          - [Oracle](tutorials/api/create/databases/oracle.md)
          - [鳳凰城](tutorials/api/create/databases/phoenix.md)
          - [PostgreSQL](tutorials/api/create/databases/postgres.md)
+         - [Snowflake](tutorials/api/create/databases/snowflake.md)
          - [SQL Server](tutorials/api/create/databases/sql-server.md)
       - 電子商務 {#ecommerce}
          - [Shopify](tutorials/api/create/ecommerce/shopify.md)
@@ -214,6 +216,7 @@ ht-degree: 12%
          - [Oracle](tutorials/ui/create/databases/oracle.md)
          - [鳳凰城](tutorials/ui/create/databases/phoenix.md)
          - [PostgreSQL](tutorials/ui/create/databases/postgres.md)
+         - [Snowflake](tutorials/ui/create/databases/snowflake.md)
       - 電子商務 {#ecommerce}
          - [Shopify](tutorials/ui/create/ecommerce/shopify.md)
       - 本地系統{#local-system}

@@ -6,9 +6,9 @@ topic-legacy: overview
 type: Tutorial
 description: 資料流是一個排程任務，可從源中檢索資料並將資料內嵌到Platform資料集。 本教學課程提供使用資料庫帳戶配置新資料流的步驟。
 exl-id: 9fd8a7ec-bbd8-4890-9860-e6defc6cade3
-source-git-commit: 46fb08a10bc05dc758bdcb025693f819b980b41a
+source-git-commit: b0b993842b1015f5503fe2ae5a23d9188eeaad48
 workflow-type: tm+mt
-source-wordcount: '1450'
+source-wordcount: '1451'
 ht-degree: 0%
 
 ---
@@ -28,11 +28,11 @@ ht-degree: 0%
 
 此外，本教學課程要求您已建立資料庫帳戶。 若需在UI中建立不同資料庫連接器的教學課程清單，請參閱[來源連接器概述](../../../home.md)。
 
-## 選擇資料
+## 新增資料
 
-建立資料庫帳戶後，將顯示&#x200B;**[!UICONTROL 選擇資料]**&#x200B;步驟，提供交互介面供您瀏覽資料庫層次結構。
+建立資料庫帳戶後，將顯示&#x200B;**[!UICONTROL 添加資料]**&#x200B;步驟，提供交互介面供您瀏覽資料庫層次結構。
 
-- 介面的左半部是瀏覽器，顯示您的帳戶的資料庫清單。
+- 介面的左半部為瀏覽器，顯示您帳戶的資料表格清單。
 - 介面的右半部可讓您預覽最多100列資料。
 
 您可以使用頁面頂端的&#x200B;**[!UICONTROL 搜尋]**&#x200B;選項，快速識別您要使用的來源資料。
@@ -41,7 +41,7 @@ ht-degree: 0%
 >
 >搜尋來源資料選項可供所有表格式來源連接器使用，但不包括Analytics、分類、事件中心和Kinesis連接器。
 
-找到源資料後，選擇目錄，然後按一下&#x200B;**[!UICONTROL Next]**。
+找到源資料後，選擇表，然後選擇&#x200B;**[!UICONTROL Next]**。
 
 ![select-data](../../../images/tutorials/dataflow/databases/select-data.png)
 
