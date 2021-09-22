@@ -5,9 +5,9 @@ title: 方案註冊表API指南附錄
 description: 本檔案提供與使用Schema Registry API相關的補充資訊。
 topic-legacy: developer guide
 exl-id: 2ddc7fe8-dd0b-4cf9-8561-e89fcdadbfce
-source-git-commit: d70f297130ec04dd799d60c70b95777ee79bbfef
+source-git-commit: 403dcb75e43b5c7aa462495086e5a9e403ef6f5b
 workflow-type: tm+mt
-source-wordcount: '781'
+source-wordcount: '984'
 ht-degree: 1%
 
 ---
@@ -30,9 +30,9 @@ ht-degree: 1%
 
 | 參數 | 說明 |
 | --- | --- |
-| `start` | 指定列出的結果的開始位置。 此值可從清單回應的`_page.next`屬性中取得，並用於存取結果的下一頁。 如果`_page.next`值為null，則沒有其他頁可用。 |
-| `limit` | 限制傳回的資源數。 範例：`limit=5`將返回五個資源的清單。 |
 | `orderby` | 按特定屬性排序結果。 範例：`orderby=title`會依標題以升序(A-Z)排序結果。 在參數值(`orderby=-title`)前面新增`-`，會以降序(Z-A)依標題排序項目。 |
+| `limit` | 與`orderby`參數搭配使用時，`limit`會限制指定請求應傳回的項目數上限。 若沒有`orderby`參數，則無法使用此參數。<br><br>參 `limit` 數會指定一個正整數(介 `0` 於和之 `500`間)，作 ** 為應傳回項目數上限的提示。例如，`limit=5`在清單中只傳回5個資源。 但是，並未嚴格執行此值。 如果提供了一個參數，則實際響應大小可以根據提供`start`參數的可靠操作的需要而減小或增大。 |
+| `start` | 與`orderby`參數搭配使用時，`start`會指定項目子集清單的開始位置。 若沒有`orderby`參數，則無法使用此參數。 此值可從清單回應的`_page.next`屬性中取得，並用於存取結果的下一頁。 如果`_page.next`值為null，則沒有其他頁可用。<br><br>通常會忽略此參數，以取得結果的第一頁。之後，應將`start`設為上一頁中收到之`orderby`欄位之主要排序屬性的最大值。 然後，API回應會傳回以以下項目開頭的項目：主要排序屬性來自`orderby`，嚴格大於（用於遞增）或嚴格小於（用於遞減）指定值。<br><br>例如，如果參 `orderby` 數設為， `orderby=name,firstname`則參 `start` 數將包含屬性的 `name` 值。在此情況下，如果您想要在名稱「Miller」後立即顯示資源的後20個項目，則將使用：`?orderby=name,firstname&start=Miller&limit=20`。 |
 
 {style=&quot;table-layout:auto&quot;}
 
