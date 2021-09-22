@@ -3,9 +3,9 @@ title: 使用Adobe Experience Platform Web SDK處理客戶同意資料
 topic-legacy: getting started
 description: 了解如何整合Adobe Experience Platform Web SDK，以在Adobe Experience Platform中處理客戶同意資料。
 exl-id: 3a53d908-fc61-452b-bec3-af519dfefa41
-source-git-commit: 1780e08a9e45fd87891bbb1727c464aadb0e9b31
+source-git-commit: 69e510c9a0f477ad7cab530128c6728f68dfdab1
 workflow-type: tm+mt
-source-wordcount: '1270'
+source-wordcount: '1330'
 ht-degree: 0%
 
 ---
@@ -97,6 +97,10 @@ Adobe Experience Platform Web SDK可讓您擷取同意管理平台(CMP)產生的
 ## 執行同意更改命令 {#commands}
 
 將SDK擴充功能整合至網站後，您就可以開始使用Platform Web SDK `setConsent`命令，將同意資料傳送至Platform。
+
+>[!IMPORTANT]
+>
+>`setConsent`命令只會直接更新設定檔存放區中的資料，不會將任何資料傳送至資料湖。
 
 在以下兩種情況中，應在您的網站上呼叫`setConsent`:
 
@@ -194,6 +198,8 @@ var setConsent = function () {
 ## 處理SDK回應
 
 所有[!DNL Platform SDK]命令都返回指示調用是成功還是失敗的承諾。 然後，您可以將這些回應用於其他邏輯，例如向客戶顯示確認訊息。 如需特定範例，請參閱執行SDK命令指南中關於[處理成功或失敗](../../../edge/fundamentals/executing-commands.md#handling-success-or-failure)的一節。
+
+使用SDK成功進行`setConsent`呼叫後，您就可以使用平台UI中的設定檔檢視器，驗證資料是否正在設定檔存放區中著陸。 如需詳細資訊，請參閱[依身分瀏覽設定檔的區段](../../../profile/ui/user-guide.md#browse-identity)。
 
 ## 後續步驟
 

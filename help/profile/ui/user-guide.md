@@ -4,7 +4,7 @@ title: 即時客戶個人檔案UI指南
 topic-legacy: guide
 description: 「即時客戶設定檔」可結合來自多個管道的資料，包括線上、離線、CRM和協力廠商資料，讓您全面了解每個客戶。 本檔案可做為在Adobe Experience Platform使用者介面中與即時客戶設定檔互動的指南。
 exl-id: 792a3a73-58a4-4163-9212-4d43d24c2770
-source-git-commit: b5e6376b54fe8b53fbabf85a2909293cebd93ccc
+source-git-commit: 69e510c9a0f477ad7cab530128c6728f68dfdab1
 workflow-type: tm+mt
 source-wordcount: '1568'
 ht-degree: 0%
@@ -100,7 +100,7 @@ ht-degree: 0%
 若要進一步了解合併原則及其在Platform中的角色，請參閱[合併原則概述](../merge-policies/overview.md)。
 
 
-### 按[!UICONTROL Identity]瀏覽
+### 按[!UICONTROL Identity]瀏覽 {#browse-identity}
 
 在&#x200B;**[!UICONTROL Browse]**&#x200B;標籤上，您可以使用身分命名空間，以便根據身分值查詢特定設定檔。 依身分瀏覽需要您提供合併原則、身分命名空間和身分值。
 
