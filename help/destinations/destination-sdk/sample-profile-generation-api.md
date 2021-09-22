@@ -2,9 +2,9 @@
 description: 本頁列出並說明了所有可使用「/authoring/sample-profiles」 API端點來執行的API操作，以產生要用於目標測試的範例設定檔。
 title: 設定檔產生API操作範例
 exl-id: 5f1cd00a-8eee-4454-bcae-07b05afa54af
-source-git-commit: 9be8636b02a15c8f16499172289413bc8fb5b6f0
+source-git-commit: 2ed132cd16db64b5921c5632445956f750fead56
 workflow-type: tm+mt
-source-wordcount: '805'
+source-wordcount: '833'
 ht-degree: 2%
 
 ---
@@ -28,6 +28,10 @@ ht-degree: 2%
 繼續之前，請檢閱[快速入門手冊](./getting-started.md)，以取得成功呼叫API所需的重要資訊，包括如何取得必要的目的地編寫權限和必要的標題。
 
 ## 根據來源結構產生範例設定檔 {#generate-sample-profiles-source-schema}
+
+>[!IMPORTANT]
+>
+>在[測試您的目的地](./test-destination.md)時，將此處產生的範例設定檔新增至HTTP呼叫。
 
 您可以向`authoring/sample-profiles/`端點提出GET請求，並提供您根據要測試的目標配置建立的目標實例ID，從而根據源架構生成示例配置檔案。
 
@@ -176,6 +180,10 @@ curl --location --request GET 'https://platform.adobe.io/data/core/activation/au
 {style=&quot;table-layout:auto&quot;}
 
 ## 根據目標架構產生範例設定檔 {#generate-sample-profiles-target-schema}
+
+>[!IMPORTANT]
+>
+>在[呈現模板步驟](./render-template-api.md#multiple-profiles-with-body)中，使用在建立模板時在此處生成的示例配置檔案。
 
 您可以根據向`authoring/sample-profiles/`端點提出GET請求的目標架構生成示例配置檔案，並根據您建立模板的目標配置提供目標配置的目標ID。
 

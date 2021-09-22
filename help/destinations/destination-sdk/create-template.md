@@ -1,16 +1,17 @@
 ---
 description: Destination SDK中包含Adobe，提供開發人員工具，協助您設定和測試目的地。 本頁面說明如何建立和測試訊息轉換範本。
 title: 建立並測試訊息轉換範本
-source-git-commit: cf6c6adf128ec867cd67af609a40b04d2c632bf9
+exl-id: 15e7f436-4d33-4172-bd14-ad8dfbd5e4a8
+source-git-commit: 2ed132cd16db64b5921c5632445956f750fead56
 workflow-type: tm+mt
-source-wordcount: '895'
+source-wordcount: '909'
 ht-degree: 0%
 
 ---
 
 # 建立並測試訊息轉換範本 {#create-template}
 
-## 概覽 {#overview}
+## 總覽 {#overview}
 
 Destination SDK中包含Adobe，提供開發人員工具，協助您設定和測試目的地。 本頁面說明如何建立和測試訊息轉換範本。 有關如何測試目標的資訊，請參閱[測試目標配置](./test-destination.md)。
 
@@ -68,7 +69,7 @@ curl --location --request GET 'https://platform.adobe.io/data/core/activation/au
 --header 'x-sandbox-name: {SANDBOX_NAME}' \
 ```
 
-如果您提供的目標ID與具有`maxUsersPerRequest=1`的目標伺服器範本對應，則請求會傳回與以下範本類似的範例範本：
+如果您提供的目標ID與聚合策略中具有[盡力聚合](./destination-configuration.md#best-effort-aggregation)和`maxUsersPerRequest=1`的目標配置相對應，則請求將返回與以下類似的示例模板：
 
 ```python
 {#- THIS is an example template for a single profile -#}
@@ -101,7 +102,7 @@ curl --location --request GET 'https://platform.adobe.io/data/core/activation/au
 }
 ```
 
-如果您提供的目標ID與大於1的目標伺服器範本對應，則請求會傳回與以下範本類似的範例範本：`maxUsersPerRequest`
+如果您提供的目標ID與具有[可配置聚合](./destination-configuration.md#configurable-aggregation)或[最佳工作聚合](./destination-configuration.md#best-effort-aggregation)且`maxUsersPerRequest`大於1的目標伺服器模板相對應，則請求將返回與以下類似的示例模板：
 
 ```python
 {#- THIS is an example template for multiple profiles -#}

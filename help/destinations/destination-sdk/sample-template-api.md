@@ -1,9 +1,10 @@
 ---
 description: 本頁列出並說明了所有可使用「/authoring/testing/template/sample」 API端點來執行的API操作，以取得目的地的測試訊息轉換範本。
 title: 取得範本API操作範例
-source-git-commit: 19307fba8f722babe5b6d57e80735ffde00fc851
+exl-id: d18a06f7-0c3a-4b4d-a7d5-011690d00e2c
+source-git-commit: 2ed132cd16db64b5921c5632445956f750fead56
 workflow-type: tm+mt
-source-wordcount: '387'
+source-wordcount: '401'
 ht-degree: 1%
 
 ---
@@ -58,7 +59,7 @@ curl --location --request GET 'https://platform.adobe.io/data/core/activation/au
 
 成功的回應會傳回HTTP狀態200，並附上範例範本，您可以編輯該範本以符合預期的資料格式。
 
-如果您提供的目標ID與具有`maxUsersPerRequest=1`的目標伺服器範本對應，則請求會傳回與以下範本類似的範例範本：
+如果您提供的目標ID與聚合策略中具有[盡力聚合](./destination-configuration.md#best-effort-aggregation)和`maxUsersPerRequest=1`的目標配置相對應，則請求將返回與以下類似的示例模板：
 
 ```python
 {#- THIS is an example template for a single profile -#}
@@ -91,7 +92,7 @@ curl --location --request GET 'https://platform.adobe.io/data/core/activation/au
 }
 ```
 
-如果您提供的目標ID與大於1的目標伺服器範本對應，則請求會傳回與以下範本類似的範例範本：`maxUsersPerRequest`
+如果您提供的目標ID與具有[可配置聚合](./destination-configuration.md#configurable-aggregation)或[最佳工作聚合](./destination-configuration.md#best-effort-aggregation)且`maxUsersPerRequest`大於1的目標伺服器模板相對應，則請求將返回與以下類似的示例模板：
 
 ```python
 {#- THIS is an example template for multiple profiles -#}
