@@ -3,9 +3,9 @@ title: 搭配Platform Web SDK使用Offer decisioning
 description: Adobe Experience Platform Web SDK可提供及呈現以Offer decisioning管理的個人化優惠方案。 您可以使用Offer decisioningUI或API來建立選件和其他相關物件。
 keywords: offer decisioning；決策；Web SDK;Platform Web SDK；個人化優惠方案；傳送優惠方案；優惠方案傳送；優惠方案個人化；
 exl-id: 4ab51f9d-3c44-4855-b900-aa2cde673a9a
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+source-git-commit: 5a688fed26a8f641347ed1c625bfe448004f75b0
 workflow-type: tm+mt
-source-wordcount: '779'
+source-wordcount: '826'
 ht-degree: 3%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 3%
 
 >[!NOTE]
 >
->Adobe Experience Platform Web SDK中目前可提前存取特定使用者，以使用Offer decisioning。 並非所有IMS組織都能使用此功能。
+>Adobe Experience Platform Web SDK中可提前存取特定使用者，以使用Offer decisioning。 並非所有IMS組織都能使用此功能。
 
 Adobe Experience Platform [!DNL Web SDK]可傳送及呈現以Offer decisioning管理的個人化優惠方案。 您可以使用Offer decisioning使用者介面(UI)或API來建立選件和其他相關物件。
 
@@ -30,7 +30,7 @@ Adobe Experience Platform [!DNL Web SDK]可傳送及呈現以Offer decisioning�
 
 * **容器：** 容器是隔離機制，可區分不同的關注。容器ID是所有存放庫API的第一個路徑元素。 所有決策物件都位於容器中。
 
-* **決策範圍：** 若為Offer decisioning，這些是Base64編碼的JSON字串，其中包含您要讓offer decisioning服務用來建議優惠方案的活動和位置ID。
+* **決策範圍：** 若為Offer decisioning，決策範圍是JSON的Base64編碼字串，其中包含您要offer decisioning服務用來建議優惠方案的活動和位置ID。
 
    *決策範圍JSON:*
 
@@ -55,11 +55,11 @@ Adobe Experience Platform [!DNL Web SDK]可傳送及呈現以Offer decisioning�
 
 * **資料流：** 如需詳細資訊，請參閱資料流 [](../../fundamentals/datastreams.md) 檔案。
 
-* **身分**:如需詳細資訊，請閱讀本檔案，概述 [Platform Web SDK如何運用Identity服務](../../identity/overview.md)。
+* **身分**:如需詳細資訊，請閱讀本檔案，概述 [Platform Web SDK如何使用Identity Service](../../identity/overview.md)。
 
 ## 啟用Offer decisioning
 
-若要啟用Offer decisioning，您必須執行下列步驟：
+要啟用Offer decisioning，請執行以下步驟：
 
 1. 在[datastream](../../fundamentals/datastreams.md)中啟用Adobe Experience Platform，並勾選「Offer decisioning」方塊
 
@@ -85,7 +85,7 @@ Adobe Experience Platform [!DNL Web SDK]可傳送及呈現以Offer decisioning�
 
       1. [建立標籤屬性](../../../tags/ui/administration/companies-and-properties.md)
       1. [新增內嵌程式碼](https://experienceleague.adobe.com/docs/core-services-learn/implementing-in-websites-with-launch/configure-launch/launch-add-embed.html)
-      1. 從「Datastream」下拉式清單中選取設定，使用您剛建立的Datastream安裝及設定Platform Web SDK擴充功能。 請參閱[擴充功能](../../../tags/ui/managing-resources/extensions/overview.md)上的檔案。
+      1. 從「Datastream」下拉式清單中選取設定，使用您建立的Datastream安裝並設定Platform Web SDK擴充功能。 請參閱[擴充功能](../../../tags/ui/managing-resources/extensions/overview.md)上的檔案。
 
          ![install-aep-web-sdk-extension](./assets/install-aep-web-sdk-extension.png)
 
@@ -329,3 +329,7 @@ Adobe Experience Platform [!DNL Web SDK]可傳送及呈現以Offer decisioning�
 | `content` | 以字串格式與建議的選件相關聯的內容。 | `"content": "<p style="color:red;">20% Off on shipping</p>"` |
 | `deliveryUrl` | 以URL格式與建議的選件相關聯的影像內容。 | `"deliveryURL": "https://image.jpeg"` |
 | `characteristics` | 與建議的選件相關聯的特性，為JSON物件格式。 | `"characteristics": { "foo": "bar", "foo1": "bar1" }` |
+
+## 限制
+
+行動體驗邊緣工作流程目前不支援某些選件限制，例如限定上限。 「限定」欄位值會指定可向所有使用者呈現選件的次數。 如需詳細資訊，請參閱[優惠方案適用性規則與限制檔案](https://experienceleague.adobe.com/docs/offer-decisioning/using/managing-offers-in-the-offer-library/creating-personalized-offers.html#eligibility)。
