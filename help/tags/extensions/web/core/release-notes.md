@@ -2,10 +2,10 @@
 title: 核心擴充功能發行說明
 description: Adobe Experience Platform核心擴充功能的最新發行說明。
 exl-id: a049b2d5-7a00-435d-bcc7-112658a53a1e
-source-git-commit: 29a238c517b6bd5a95284b4d6954fd14a1668f0e
+source-git-commit: 693da9aa012baa26dcff93f085dd6e763816e247
 workflow-type: tm+mt
-source-wordcount: '1434'
-ht-degree: 62%
+source-wordcount: '1522'
+ht-degree: 59%
 
 ---
 
@@ -14,6 +14,22 @@ ht-degree: 62%
 >[!NOTE]
 >
 >Adobe Experience Platform Launch在Adobe Experience Platform中已重新命名為一套資料收集技術。 因此，所有產品文件中出現了幾項術語變更。 如需術語變更的彙整參考資料，請參閱以下[文件](../../../term-updates.md)。
+
+## 2021 年 9 月 23 日
+
+v3.2.1
+
+* 修正欄位值為0時，條件值資料元素檢視初始化無法正常運作的錯誤。
+
+## 2021 年 9 月 23 日
+
+v3.2.0
+
+「條件值」資料元素中導入了下列變更：
+
+* 為條件和後援值新增核取方塊，讓使用者可選擇是否要將未定義設為傳回值。
+* 數字值在設定物件中以數字形式公開。
+* 條件值不再是必要值，因此其行為可能與備援值相同。
 
 ## 2021 年 9 月 17 日
 
