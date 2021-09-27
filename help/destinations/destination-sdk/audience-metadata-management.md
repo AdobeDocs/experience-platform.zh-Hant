@@ -1,7 +1,8 @@
 ---
 description: 使用對象中繼資料範本，以程式設計方式建立、更新或刪除您目的地的對象。 Adobe提供可擴充的受眾中繼資料範本，您可根據行銷API的規格進行設定。 在您定義、測試和提交範本後，Adobe就會使用該範本來建構傳至您目的地的API呼叫。
 title: 對象中繼資料管理
-source-git-commit: d2452bf0e59866d3deca57090001c4c5a0935525
+exl-id: 795e8adb-c595-4ac5-8d1a-7940608d01cd
+source-git-commit: 397c49284c30c648695a7a186d3f3e76a2675807
 workflow-type: tm+mt
 source-wordcount: '1012'
 ht-degree: 0%
@@ -10,7 +11,7 @@ ht-degree: 0%
 
 # 對象中繼資料管理 {#audience-metadata-management}
 
-## 概覽 {#overview}
+## 總覽 {#overview}
 
 使用對象中繼資料範本，以程式設計方式建立、更新或刪除您目的地的對象。 Adobe提供可擴充的受眾中繼資料範本，您可根據行銷API的規格進行設定。 在您定義、測試和提交設定後，Adobe會使用該設定來建構傳至您目的地的API呼叫。
 
@@ -54,7 +55,7 @@ ht-degree: 0%
 
 如果您的使用案例需要自訂欄位，Adobe工程團隊可與您合作展開通用範本。
 
-## 範本範例 {#template-examples}
+## 設定範例 {#configuration-examples}
 
 本節包含三個通用對象中繼資料設定範例供參考，以及設定主要區段的說明。 請注意，三個範例設定之間的url、標題、要求和回應內文有何不同。 這是因為三個範例平台行銷API的規格不同。
 
