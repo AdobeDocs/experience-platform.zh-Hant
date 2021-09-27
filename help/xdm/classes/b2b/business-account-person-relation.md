@@ -1,9 +1,9 @@
 ---
 title: XDM業務帳戶人員關係類
 description: 本檔案概述Experience Data Model(XDM)中的XDM商業帳戶人員關係類別。
-source-git-commit: 19bb39b66f3a3eb93fd0138ac021568021d77b0f
+source-git-commit: 5fd82b02eb25f3d575de695c2f2b14a5e5b18400
 workflow-type: tm+mt
-source-wordcount: '288'
+source-wordcount: '324'
 ht-degree: 2%
 
 ---
@@ -12,7 +12,7 @@ ht-degree: 2%
 
 >[!NOTE]
 >
->此類別僅適用於可存取B2B版即時客戶資料平台的組織。
+>此類別僅適用於可存取即時客戶資料平台B2B版的組織。
 
 [!UICONTROL XDM企業帳戶人] 員關係是標準的體驗資料模型(XDM)類別，可擷取與企業帳戶相關聯的人員所需的最低屬性。
 
@@ -35,3 +35,5 @@ ht-degree: 2%
 | `personRole` | 字串 | 人員在帳戶 — 人員關係中的角色。 |
 | `relationEndDate` | DateTime | 帳戶與人員之間的關係結束的日期。 |
 | `relationStartDate` | DateTime | 帳戶與人員之間的關係開始的日期。 |
+
+請參閱即時CDP B2B版本](../../tutorials/relationship-b2b.md)中的[架構關係指南，了解此類別在概念上如何與其他B2B類別相關，以及如何在Adobe Experience Platform UI中建立這些關係。

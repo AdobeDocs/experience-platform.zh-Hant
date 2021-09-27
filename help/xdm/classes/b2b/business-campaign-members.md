@@ -1,10 +1,10 @@
 ---
 title: XDM Business Campaign成員類別
 description: 本檔案概述Experience Data Model(XDM)中的XDM Business Campaign Members類別。
-source-git-commit: 19bb39b66f3a3eb93fd0138ac021568021d77b0f
+source-git-commit: 5fd82b02eb25f3d575de695c2f2b14a5e5b18400
 workflow-type: tm+mt
-source-wordcount: '184'
-ht-degree: 3%
+source-wordcount: '220'
+ht-degree: 2%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 3%
 
 >[!NOTE]
 >
->此類別僅適用於可存取B2B版即時客戶資料平台的組織。
+>此類別僅適用於可存取即時客戶資料平台B2B版的組織。
 
 [!UICONTROL XDM Business Campaign會] 籍是標準的Experience Data Model(XDM)類別，可說明與業務促銷活動相關聯的聯絡人或潛在客戶。
 
@@ -28,3 +28,5 @@ ht-degree: 3%
 | `campaignID` | 字串 | 相關促銷活動的唯一ID。 |
 | `campaignMemberID` | 字串 | 促銷活動成員資格實體的唯一ID。 |
 | `personId` | 字串 | 屬於相關促銷活動成員之人員的唯一ID。 |
+
+請參閱即時CDP B2B版本](../../tutorials/relationship-b2b.md)中的[架構關係指南，了解此類別在概念上如何與其他B2B類別相關，以及如何在Adobe Experience Platform UI中建立這些關係。

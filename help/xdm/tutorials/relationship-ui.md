@@ -6,14 +6,18 @@ description: 本檔案提供一個教學課程，用於使用Experience Platform
 topic-legacy: tutorial
 type: Tutorial
 exl-id: feed776b-bc8d-459b-9700-e5c9520788c0
-source-git-commit: 497a515a872efdeeda270d0aa90b1fc99898ad4d
+source-git-commit: 2118dc175b421e856c6b0a33a83a7238f01b7ee3
 workflow-type: tm+mt
-source-wordcount: '1000'
+source-wordcount: '1020'
 ht-degree: 0%
 
 ---
 
 # 使用[!DNL Schema Editor]定義兩個結構之間的關係
+
+>[!NOTE]
+>
+>如果您使用即時客戶資料平台B2B版，請參閱[建立B2B關係](./relationship-b2b.md)的指南。
 
 了解客戶之間的關係，以及客戶在不同管道與品牌互動的能力，是Adobe Experience Platform的重要一環。 在[!DNL Experience Data Model](XDM)結構內定義這些關係，可讓您對客戶資料獲得複雜的深入分析。
 
