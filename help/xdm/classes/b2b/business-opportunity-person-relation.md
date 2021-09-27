@@ -1,18 +1,18 @@
 ---
 title: XDM業務機會人員關係類
 description: 本檔案概述Experience Data Model(XDM)中的XDM Business Opportunity Person Relation類別。
-source-git-commit: 5fd82b02eb25f3d575de695c2f2b14a5e5b18400
+source-git-commit: d83ad2870b6099d3c6359dcc7cd000ecad8a238f
 workflow-type: tm+mt
-source-wordcount: '257'
+source-wordcount: '267'
 ht-degree: 2%
 
 ---
 
-# [!UICONTROL XDM Business Opportunity Person關] 系類
+# [!UICONTROL XDM業務機會人] 員關係類（測試版）
 
->[!NOTE]
+>[!IMPORTANT]
 >
->此類別僅適用於可存取即時客戶資料平台B2B版的組織。
+>此類別屬於目前測試版的即時客戶資料平台B2B版。 檔案和功能可能會有所變更。
 
 [!UICONTROL XDM Business Opportunity Person Relationship] 是一種標準的Experience Data Model(XDM)類，它捕獲與業務機會關聯的人員的最低必需屬性。
 

@@ -1,18 +1,18 @@
 ---
 title: XDM業務機會類
 description: 本檔案概述Experience Data Model(XDM)中的XDM Business Opportunity類別。
-source-git-commit: 5fd82b02eb25f3d575de695c2f2b14a5e5b18400
+source-git-commit: d83ad2870b6099d3c6359dcc7cd000ecad8a238f
 workflow-type: tm+mt
-source-wordcount: '212'
+source-wordcount: '222'
 ht-degree: 4%
 
 ---
 
-# [!UICONTROL XDM Business ] Popityclass
+# [!UICONTROL XDM Business ] Popityclass（測試版）
 
->[!NOTE]
+>[!IMPORTANT]
 >
->此類別僅適用於可存取即時客戶資料平台B2B版的組織。
+>此類別屬於目前測試版的即時客戶資料平台B2B版。 檔案和功能可能會有所變更。
 
 [!UICONTROL XDM Business Optimity是] 標準的Experience Data Model(XDM)類別，可擷取業務機會的最低必要屬性。
 

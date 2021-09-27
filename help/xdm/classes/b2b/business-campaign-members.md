@@ -1,18 +1,18 @@
 ---
 title: XDM Business Campaign成員類別
 description: 本檔案概述Experience Data Model(XDM)中的XDM Business Campaign Members類別。
-source-git-commit: 5fd82b02eb25f3d575de695c2f2b14a5e5b18400
+source-git-commit: d83ad2870b6099d3c6359dcc7cd000ecad8a238f
 workflow-type: tm+mt
-source-wordcount: '220'
+source-wordcount: '230'
 ht-degree: 2%
 
 ---
 
-# [!UICONTROL XDM Business Campaign會籍] 類別
+# [!UICONTROL XDM Business Campaign會] 籍類別（測試版）
 
->[!NOTE]
+>[!IMPORTANT]
 >
->此類別僅適用於可存取即時客戶資料平台B2B版的組織。
+>此類別屬於目前測試版的即時客戶資料平台B2B版。 檔案和功能可能會有所變更。
 
 [!UICONTROL XDM Business Campaign會] 籍是標準的Experience Data Model(XDM)類別，可說明與業務促銷活動相關聯的聯絡人或潛在客戶。
 

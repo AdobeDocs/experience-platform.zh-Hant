@@ -1,18 +1,18 @@
 ---
 title: XDM商業行銷清單類別
 description: 本檔案概述Experience Data Model(XDM)中的XDM Business Marketing List類別。
-source-git-commit: 5fd82b02eb25f3d575de695c2f2b14a5e5b18400
+source-git-commit: d83ad2870b6099d3c6359dcc7cd000ecad8a238f
 workflow-type: tm+mt
-source-wordcount: '200'
-ht-degree: 3%
+source-wordcount: '210'
+ht-degree: 2%
 
 ---
 
-# [!UICONTROL XDM Business Marketing清] 單類
+# [!UICONTROL XDM Business Marketing ] Listclass（測試版）
 
->[!NOTE]
+>[!IMPORTANT]
 >
->此類別僅適用於可存取即時客戶資料平台B2B版的組織。
+>此類別屬於目前測試版的即時客戶資料平台B2B版。 檔案和功能可能會有所變更。
 
 [!UICONTROL XDM Business Marketing List] 是標準的Experience Data Model(XDM)類別，可擷取行銷清單的最低必要屬性。行銷清單可讓您針對最可能購買您產品的潛在客戶進行優先排序。
 

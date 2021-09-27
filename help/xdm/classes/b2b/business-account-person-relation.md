@@ -1,18 +1,18 @@
 ---
 title: XDM業務帳戶人員關係類
 description: 本檔案概述Experience Data Model(XDM)中的XDM商業帳戶人員關係類別。
-source-git-commit: 5fd82b02eb25f3d575de695c2f2b14a5e5b18400
+source-git-commit: d83ad2870b6099d3c6359dcc7cd000ecad8a238f
 workflow-type: tm+mt
-source-wordcount: '324'
+source-wordcount: '334'
 ht-degree: 2%
 
 ---
 
-# [!UICONTROL XDM業務客戶人員關] 系類
+# [!UICONTROL XDM業務客戶人] 員關係類別（測試版）
 
->[!NOTE]
+>[!IMPORTANT]
 >
->此類別僅適用於可存取即時客戶資料平台B2B版的組織。
+>此類別屬於目前測試版的即時客戶資料平台B2B版。 檔案和功能可能會有所變更。
 
 [!UICONTROL XDM企業帳戶人] 員關係是標準的體驗資料模型(XDM)類別，可擷取與企業帳戶相關聯的人員所需的最低屬性。
 

@@ -4,9 +4,9 @@ user-guide-title: Experience Data Model (XDM) 系統說明
 breadcrumb-title: Experience Data Model (XDM) 指南
 user-guide-description: 使用Experience Data Model(XDM)類別和結構欄位群組，以標準化體驗資料。
 feature: Schemas
-source-git-commit: 50ca41ac5adba60e4abb484c8689372d0de77571
+source-git-commit: d83ad2870b6099d3c6359dcc7cd000ecad8a238f
 workflow-type: tm+mt
-source-wordcount: '383'
+source-wordcount: '391'
 ht-degree: 14%
 
 ---
@@ -31,7 +31,7 @@ ht-degree: 14%
    * [XDM個別設定檔](./classes/individual-profile.md)
    * [XDM ExperienceEvent](./classes/experienceevent.md)
    * [區段定義](./classes/segment-definition.md)
-   * B2B類{#b2b}
+   * B2B類(Beta){#b2b}
       * [XDM商業帳戶](./classes/b2b/business-account.md)
       * [XDM企業帳戶人員關係](./classes/b2b/business-account-person-relation.md)
       * [XDM商業宣傳](./classes/b2b/business-campaign.md)
@@ -145,11 +145,11 @@ ht-degree: 14%
    * [Mixin（已廢止）](api/mixins.md)
    * [附錄](api/appendix.md)
 * 教學課程 {#tutorials}
-   * [建立結構(UI)](tutorials/create-schema-ui.md)
-   * [建立結構(API)](tutorials/create-schema-api.md)
-   * [定義兩個結構(UI)之間的關係](tutorials/relationship-ui.md)
-   * [定義兩個結構(API)之間的關係](tutorials/relationship-api.md)
-   * [定義兩個結構(B2B)之間的關係](tutorials/relationship-b2b.md)
+   * [在UI中建立結構](tutorials/create-schema-ui.md)
+   * [在API中建立結構](tutorials/create-schema-api.md)
+   * [在UI中定義結構關係](tutorials/relationship-ui.md)
+   * [在API中定義結構關係](tutorials/relationship-api.md)
+   * [在Real-time CDP B2B Edition(Beta)中定義架構關係](tutorials/relationship-b2b.md)
    * [建立臨機結構(API)](tutorials/ad-hoc.md)
 * [疑難排解指南](troubleshooting-guide.md)
 * [API 參考資料](https://www.adobe.io/experience-platform-apis/references/schema-registry/)
