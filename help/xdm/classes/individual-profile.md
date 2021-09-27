@@ -5,9 +5,9 @@ title: XDM個別設定檔類別
 topic-legacy: overview
 description: 本檔案概述XDM個別設定檔類別。
 exl-id: 83b22462-79ce-4024-aa50-a9bd800c0f81
-source-git-commit: bd312024a1a3fb6da840a38d6e9d19fcbd6eab5a
+source-git-commit: 319d508925d22e76a3d75ae473f6ea000b5c655b
 workflow-type: tm+mt
-source-wordcount: '567'
+source-wordcount: '597'
 ht-degree: 1%
 
 ---
@@ -42,12 +42,17 @@ ht-degree: 1%
 
 Adobe提供多個標準欄位組以用於[!DNL XDM Individual Profile]類。 以下是類別一些常用欄位群組的清單：
 
+* [[!UICONTROL 同意和偏好設定]](../field-groups/profile/consents.md)
 * [[!UICONTROL 人口統計詳細資料]](../field-groups/profile/demographic-details.md)
 * [[!UICONTROL IdentityMap]](../field-groups/profile/identitymap.md)
 * [[!UICONTROL 忠誠度詳細資料]](../field-groups/profile/loyalty-details.md)
 * [[!UICONTROL 個人聯繫人詳細資訊]](../field-groups/profile/personal-contact-details.md)
-* [[!UICONTROL 同意和偏好設定]](../field-groups/profile/consents.md)
 * [[!UICONTROL 區段成員資格詳細資料]](../field-groups/profile/segmentation.md)
+* [[!UICONTROL 電信訂閱]](../field-groups/profile/telecom-subscription.md)
 * [[!UICONTROL 工作聯繫人詳細資訊]](../field-groups/profile/work-contact-details.md)
+* [[!UICONTROL XDM企業人員元件]](../field-groups/profile/business-person-components.md)\*
+* [[!UICONTROL XDM企業人員詳細資訊]](../field-groups/profile/business-person-details.md)\*
+
+*\*此欄位群組僅適用於可存取B2B版即時客戶資料平台的組織。*
 
 如需[!DNL XDM Individual Profile]所有相容欄位群組的完整清單，請參閱[ XDM GitHub repo](https://github.com/adobe/xdm/tree/master/components/fieldgroups/profile)。
