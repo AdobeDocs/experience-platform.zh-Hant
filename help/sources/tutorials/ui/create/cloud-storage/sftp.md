@@ -1,84 +1,63 @@
 ---
-keywords: Experience Platform;home；熱門主題；SFTP;sftp
+keywords: Experience Platform；首頁；熱門主題；SFTP;sftp
 solution: Experience Platform
 title: 在UI中建立SFTP來源連線
 topic-legacy: overview
 type: Tutorial
-description: 瞭解如何使用Adobe Experience PlatformUI建立SFTP來源連線。
+description: 了解如何使用Adobe Experience Platform UI建立SFTP來源連線。
 exl-id: 1a00ed27-3c95-4e57-9f94-45ff256bf75c
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: ade0da445b18108a7f8720404cc7a65139ed42b1
 workflow-type: tm+mt
-source-wordcount: '676'
+source-wordcount: '680'
 ht-degree: 0%
 
 ---
 
-# 在UI中建立SFTP來源連線
+# 在UI中建立[!DNL SFTP]源連接
 
-本教學課程提供使用Adobe Experience PlatformUI建立SFTP來源連線的步驟。
+本教學課程提供使用Adobe Experience Platform UI建立[!DNL SFTP]來源連線的步驟。
 
 ## 快速入門
 
-本教學課程需要對Adobe Experience Platform的下列部分有正確的理解：
+本教學課程需要妥善了解Platform的下列元件：
 
 * [[!DNL Experience Data Model (XDM)] 系統](../../../../../xdm/home.md):Experience Platform組織客戶體驗資料的標準化架構。
-   * [架構構成基礎](../../../../../xdm/schema/composition.md):瞭解XDM架構的基本建置區塊，包括架構組合的主要原則和最佳實務。
-   * [架構編輯器教程](../../../../../xdm/tutorials/create-schema-ui.md):瞭解如何使用架構編輯器UI建立自訂架構。
-* [[!DNL Real-time Customer Profile]](../../../../../profile/home.md):根據來自多個來源的匯整資料，提供統一、即時的消費者個人檔案。
+   * [結構構成基本概念](../../../../../xdm/schema/composition.md):了解XDM結構描述的基本建置組塊，包括結構描述的主要原則和最佳實務。
+   * [結構編輯器教學課程](../../../../../xdm/tutorials/create-schema-ui.md):了解如何使用結構編輯器UI建立自訂結構。
+* [[!DNL Real-time Customer Profile]](../../../../../profile/home.md):根據來自多個來源的匯總資料，提供統一的即時消費者設定檔。
 
 >[!IMPORTANT]
 >
->建議在使用SFTP來源連線來收錄JSON物件時，避免新行或回車。 若要解決限制，請每行使用單一JSON物件，並使用多行來建立後續檔案。
+>建議您在使用[!DNL SFTP]來源連線擷取JSON物件時，避免使用新的行或回車。 若要解決限制，請每行使用單一JSON物件，然後使用多行來建立後續檔案。
 
-如果您已經有有效的SFTP連接，則可跳過本文檔的其餘部分，繼續[配置資料流](../../dataflow/batch/cloud-storage.md)的教程。
+如果已經有有效的[!DNL SFTP]連接，則可以跳過本文檔的其餘部分，並繼續進行[配置資料流](../../dataflow/batch/cloud-storage.md)的教程。
 
-### 收集必要的認證
+### 收集所需憑據
 
-要連接到SFTP，必須為以下連接屬性提供值：
+要連接到[!DNL SFTP]，必須為以下連接屬性提供值：
 
-| 憑證 | 說明 |
+| 憑據 | 說明 |
 | ---------- | ----------- |
-| `host` | 與您的SFTP伺服器相關聯的名稱或IP位址。 |
-| `username` | 可存取您SFTP伺服器的使用者名稱。 |
-| `password` | SFTP伺服器的密碼。 |
-| `privateKeyContent` | Base64編碼的SSH私鑰內容。 OpenSSH密鑰的類型必須分類為RSA或DSA。 |
-| `passPhrase` | 如果密鑰檔案或密鑰內容受密碼片語保護，則解密密鑰的密碼或密碼。 如果PrivateKeyContent受到密碼保護，則此參數必須與PrivateKeyContent的密碼短語一起使用，作為值。 |
+| `host` | 與[!DNL SFTP]伺服器相關聯的名稱或IP地址。 |
+| `port` | 要連接的[!DNL SFTP]伺服器埠。 若未提供，則值預設為`22`。 |
+| `username` | 可訪問[!DNL SFTP]伺服器的用戶名。 |
+| `password` | [!DNL SFTP]伺服器的密碼。 |
+| `privateKeyContent` | Base64編碼的SSH私密金鑰內容。 OpenSSH金鑰的類型必須分類為RSA或DSA。 |
+| `passPhrase` | 如果密鑰檔案或密鑰內容受密碼短語保護，則解密私鑰的密碼短語或密碼。 如果PrivateKeyContent受密碼保護，則此參數需要與PrivateKeyContent的密碼短語一起使用，作為值。 |
 
-收集完所需憑證後，您可依照下列步驟建立新的SFTP帳戶以連線至平台。
+收集完所需憑證後，您可以依照下列步驟建立新的[!DNL SFTP]帳戶以連線至Platform。
 
-## 連線至您的SFTP伺服器
+## 連接到您的[!DNL SFTP]伺服器
 
-登入[Adobe Experience Platform](https://platform.adobe.com)，然後從左側導覽列選擇&#x200B;**[!UICONTROL Sources]**&#x200B;以存取[!UICONTROL Sources]工作區。 [!UICONTROL Catalog]畫面會顯示各種來源，您可以為其建立傳入帳戶。
+在平台UI中，從左側導覽列選取&#x200B;**[!UICONTROL Sources]**&#x200B;以存取[!UICONTROL Sources]工作區。 [!UICONTROL 目錄]螢幕顯示各種來源，您可以用這些來源建立入站帳戶。
 
 您可以從畫面左側的目錄中選取適當的類別。 或者，您也可以使用搜尋選項找到您要使用的特定來源。
 
-在[!UICONTROL Cloud storage]類別下，選擇&#x200B;**[!UICONTROL SFTP]**。 如果這是您第一次使用此連接器，請選擇&#x200B;**[!UICONTROL Configure]**。 否則，請選擇&#x200B;**[!UICONTROL Add data]**&#x200B;以建立新的SFTP連接。
+在[!UICONTROL 雲儲存]類別下，選擇&#x200B;**[!UICONTROL SFTP]**，然後選擇&#x200B;**[!UICONTROL 添加資料]**。
 
 ![目錄](../../../../images/tutorials/create/sftp/catalog.png)
 
-此時將顯示&#x200B;**[!UICONTROL Connect to SFTP]**&#x200B;頁。 在此頁上，您可以使用新認證或現有認證。
-
-### 新帳戶
-
-如果使用新憑據，請選擇&#x200B;**[!UICONTROL New account]**。 在出現的輸入表單上，提供名稱、選用說明和您的認證。 完成後，選擇&#x200B;**[!UICONTROL Connect]** ，然後允許一些時間建立新連接。
-
-SFTP連接器提供您不同的存取驗證類型。 在&#x200B;**[!UICONTROL Account authentication]**&#x200B;下，選擇&#x200B;**[!UICONTROL Password]**&#x200B;以使用基於密碼的憑據。
-
-![connect-password](../../../../images/tutorials/create/sftp/password.png)
-
-或者，您也可以選擇&#x200B;**[SSH公鑰]**，並使用[!UICONTROL Private key content]和[!UICONTROL Passphrase]的組合連接SFTP帳戶。
-
->[!IMPORTANT]
->
->SFTP連接器支援RSA或DSA類型的OpenSSH金鑰。 請確定您的關鍵檔案內容以`"-----BEGIN [RSA/DSA] PRIVATE KEY-----"`開頭，以`"-----END [RSA/DSA] PRIVATE KEY-----"`結尾。 如果私密金鑰檔案是PPK格式檔案，請使用PuTTY工具從PPK轉換為OpenSSH格式。
-
-![connect-ssh](../../../../images/tutorials/create/sftp/ssh.png)
-
-| 憑證 | 說明 |
-| ---------- | ----------- |
-| 私密金鑰內容 | Base64編碼的SSH私鑰內容。 OpenSSH密鑰的類型必須分類為RSA或DSA。 |
-| 密碼短語 | 指定密鑰檔案或密鑰內容受密碼片語保護時解密密鑰的密碼或密碼。 如果PrivateKeyContent受到密碼保護，則此參數必須與PrivateKeyContent的密碼短語一起使用，作為值。 |
+此時會出現「**[!UICONTROL 連線至SFTP]**」頁面。 在此頁面上，您可以使用新憑證或現有憑證。
 
 ### 現有帳戶
 
@@ -86,6 +65,32 @@ SFTP連接器提供您不同的存取驗證類型。 在&#x200B;**[!UICONTROL Ac
 
 ![現有](../../../../images/tutorials/create/sftp/existing.png)
 
+### 新帳戶
+
+如果要建立新帳戶，請選擇&#x200B;**[!UICONTROL 新帳戶]**，然後為新[!DNL SFTP]帳戶提供名稱和可選說明。
+
+#### 使用密碼進行驗證
+
+[!DNL SFTP] 支援不同的身份驗證類型進行訪問。在&#x200B;**[!UICONTROL 帳戶驗證]**&#x200B;下，選擇&#x200B;**[!UICONTROL 密碼]**，然後提供要連接的主機和埠值，以及您的用戶名和密碼。
+
+![connect-password](../../../../images/tutorials/create/sftp/password.png)
+
+#### 使用SSH公開金鑰進行驗證
+
+若要使用基於SSH公鑰的憑據，請選擇&#x200B;**[!UICONTROL SSH公鑰]**，然後提供主機和埠值，以及私鑰內容和密碼短語組合。
+
+>[!IMPORTANT]
+>
+>SFTP支援RSA或DSA類型OpenSSH金鑰。 確保密鑰檔案內容的開頭為`"-----BEGIN [RSA/DSA] PRIVATE KEY-----"`，結尾為`"-----END [RSA/DSA] PRIVATE KEY-----"`。 如果私鑰檔案是PPK格式檔案，請使用PuTTY工具從PPK格式轉換為OpenSSH格式。
+
+![connect-ssh](../../../../images/tutorials/create/sftp/ssh-public-key.png)
+
+| 憑據 | 說明 |
+| ---------- | ----------- |
+| 私密金鑰內容 | Base64編碼的SSH私密金鑰內容。 OpenSSH金鑰的類型必須分類為RSA或DSA。 |
+| 密碼短語 | 如果密鑰檔案或密鑰內容受密碼短語保護，則指定密碼短語或密碼以解密私鑰。 如果PrivateKeyContent受密碼保護，則此參數需要與PrivateKeyContent的密碼短語一起使用，作為其值。 |
+
+
 ## 後續步驟
 
-在本教學課程中，您已建立與FTP或SFTP帳戶的連線。 您現在可以繼續下一個教學課程，並[設定資料流，將雲端儲存空間的資料匯入Platform](../../dataflow/batch/cloud-storage.md)。
+依照本教學課程，您已建立與SFTP帳戶的連線。 您現在可以繼續下一個教學課程，並[配置資料流，將雲儲存中的資料帶入Platform](../../dataflow/batch/cloud-storage.md)。
