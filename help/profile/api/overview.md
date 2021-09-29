@@ -3,9 +3,9 @@ keywords: Experience Platform；設定檔；即時客戶設定檔；疑難排解
 title: 即時客戶個人檔案API指南
 description: 即時客戶設定檔API可讓開發人員探索及使用設定檔資料，包括檢視設定檔、建立和更新合併原則、匯出或範例設定檔資料，以及刪除不再需要或有錯誤新增的設定檔資料。 請依照本指南，了解如何使用API執行重要作業。
 exl-id: ce39b95b-cff7-46cf-a14c-8203017c8826
-source-git-commit: b2ae2b4ca2efe606aa148e06ca988a6285bedfee
+source-git-commit: 3b34cf37182ae98545651a7b54f586df7d811f34
 workflow-type: tm+mt
-source-wordcount: '890'
+source-wordcount: '963'
 ht-degree: 0%
 
 ---
@@ -57,6 +57,10 @@ Adobe Experience Platform可讓資料在策略性位置的伺服器（稱為「�
 ## 配置檔案系統作業 {#profile-system-jobs}
 
 內嵌至[!DNL Platform]的已啟用設定檔的資料會儲存在[!DNL Data Lake]和[!DNL Real-time Customer Profile]資料存放區中。 有時可能需要從[!DNL Profile]儲存區中刪除資料集或批次，以移除您不再需要或因錯誤新增的資料。 這需要使用API來建立[!DNL Profile System Job]（也稱為「[!DNL delete request]」），如有需要，可加以修改、監控或刪除。 若要了解如何使用[!DNL Real-time Customer Profile] API中的`/system/jobs`端點處理刪除請求，請遵循[設定檔系統作業端點指南](profile-system-jobs.md)中概述的步驟。
+
+## 更新設定檔屬性 {#update-profile}
+
+有時候，您可能需要更新組織的設定檔存放區中的資料。 例如，您可能需要更正記錄或更改屬性值。 您可以透過批次或串流內嵌完成此操作，且需要已啟用設定檔的資料集搭配上新插入標籤。 有關如何配置資料集進行屬性更新的詳細資訊，請參閱[啟用資料集進行配置檔案和更新](../../catalog/datasets/enable-upsert.md)的教程。
 
 ## 後續步驟 {#next-steps}
 

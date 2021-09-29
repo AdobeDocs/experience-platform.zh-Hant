@@ -4,9 +4,9 @@ title: 即時客戶個人檔案概觀
 topic-legacy: guide
 description: 即時客戶設定檔可合併來自各種來源的資料，並以個別客戶設定檔和相關時間序列事件的形式提供對該資料的存取。 此功能可讓行銷人員跨多個管道，透過受眾推動協調、一致且相關的體驗。
 exl-id: c93d8d78-b215-4559-a806-f019c602c4d2
-source-git-commit: 93a4cd5c86a715cd04cd2a553866bbb4e19f951a
+source-git-commit: 2eac45cd4b053753f954bbaae999fc321c75bd9b
 workflow-type: tm+mt
-source-wordcount: '1810'
+source-wordcount: '1884'
 ht-degree: 0%
 
 ---
@@ -104,6 +104,10 @@ Adobe Experience Platform [!DNL Segmentation Service]會產生支援個別客戶
 ### 設定檔擷取量度
 
 可觀察性前瞻分析可讓您公開Adobe Experience Platform中的關鍵量度。 除了各種[!DNL Platform]功能的[!DNL Experience Platform]使用統計資料和效能指標外，還有特定的設定檔相關量度，可讓您深入分析傳入的請求率、成功的擷取率、擷取的記錄大小等。 若要深入了解，請先閱讀[可觀察性前瞻分析API概述](../observability/api/overview.md)，並參閱[可用量度](../observability/api/metrics.md#available-metrics)的相關檔案，以取得即時客戶設定檔量度的完整清單。
+
+## 更新設定檔存放區資料
+
+有時候，您可能需要更新組織的設定檔存放區中的資料。 例如，您可能需要更正記錄或更改屬性值。 您可以透過批次或串流內嵌完成此操作，且需要已啟用設定檔的資料集搭配上新插入標籤。 有關如何配置資料集進行屬性更新的詳細資訊，請參閱[啟用資料集進行配置檔案和更新](../catalog/datasets/enable-upsert.md)的教程。
 
 ## [!DNL Data governance] 和 [!DNL Privacy]
 

@@ -2,90 +2,26 @@
 keywords: Experience Platform；首頁；熱門主題；批次內嵌；批次內嵌；內嵌；開發人員指南；api指南；上傳；內嵌Parquet；內嵌json;
 solution: Experience Platform
 title: 批次內嵌API指南
-topic-legacy: developer guide
-description: 本檔案提供使用批次擷取API的完整概述。
+description: 本檔案為開發人員提供使用適用於Adobe Experience Platform的批次擷取API的完整指南。
 exl-id: 4ca9d18d-1b65-4aa7-b608-1624bca19097
-source-git-commit: 5160bc8057a7f71e6b0f7f2d594ba414bae9d8f6
+source-git-commit: 087a714c579c4c3b95feac3d587ed13589b6a752
 workflow-type: tm+mt
-source-wordcount: '2552'
-ht-degree: 6%
+source-wordcount: '2373'
+ht-degree: 4%
 
 ---
 
-# 批次內嵌API指南
+# 批次內嵌開發人員指南
 
-本檔案提供使用[批次擷取API](https://www.adobe.io/experience-platform-apis/references/data-ingestion/)的完整概述。
+本檔案提供在Adobe Experience Platform中使用[批次擷取API端點](https://www.adobe.io/experience-platform-apis/references/data-ingestion/#tag/Batch-Ingestion)的完整指南。 如需批次擷取API的概觀，包括必要條件和最佳實務，請從閱讀[批次擷取API概觀](overview.md)開始。
 
 本檔案附錄提供用於擷取](#data-transformation-for-batch-ingestion)之[格式化資料的資訊，包括範例CSV和JSON資料檔案。
 
 ## 快速入門
 
-資料擷取提供RESTful API，您可透過此API對支援的物件類型執行基本CRUD作業。
+本指南中使用的API端點屬於[資料擷取API](https://www.adobe.io/experience-platform-apis/references/data-ingestion/)的一部分。 資料擷取提供RESTful API，您可透過此API對支援的物件類型執行基本CRUD作業。
 
-以下小節提供您需要知道或已有的其他資訊，以便成功呼叫批次擷取API。
-
-本指南需要妥善了解下列Adobe Experience Platform元件：
-
-- [批次內嵌](./overview.md):可讓您將資料以批次檔案的形式內嵌至Adobe Experience Platform。
-- [[!DNL Experience Data Model (XDM)] 系統](../../xdm/home.md):組織客戶體驗資 [!DNL Experience Platform] 料的標準化架構。
-- [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform] 提供可將單一執行個體分割成個 [!DNL Platform] 別虛擬環境的虛擬沙箱，以協助開發及改進數位體驗應用程式。
-
-### 讀取範例API呼叫
-
-本指南提供範例API呼叫，以示範如何設定請求格式。 這些功能包括路徑、必要標題和格式正確的請求裝載。 也提供API回應中傳回的範例JSON。 如需範例API呼叫檔案中所使用慣例的資訊，請參閱[!DNL Experience Platform]疑難排解指南中[如何讀取範例API呼叫](../../landing/troubleshooting.md#how-do-i-format-an-api-request)一節。
-
-### 收集必要標題的值
-
-若要呼叫[!DNL Platform] API，您必須先完成[authentication tutorial](https://www.adobe.com/go/platform-api-authentication-en)。 完成驗證教學課程後，將提供所有[!DNL Experience Platform] API呼叫中每個必要標題的值，如下所示：
-
-- `Authorization: Bearer {ACCESS_TOKEN}`
-- `x-api-key: {API_KEY}`
-- `x-gw-ims-org-id: {IMS_ORG}`
-
-[!DNL Experience Platform]中的所有資源都與特定虛擬沙箱隔離。 對[!DNL Platform] API的所有請求都需要標題，以指定作業將在下列位置進行的沙箱名稱：
-
-- `x-sandbox-name: {SANDBOX_NAME}`
-
->[!NOTE]
->
->如需[!DNL Platform]中沙箱的詳細資訊，請參閱[沙箱概觀檔案](../../sandboxes/home.md)。
-
-包含裝載(POST、PUT、PATCH)的請求可能需要額外的`Content-Type`標題。 每個呼叫的接受值都會在呼叫參數中提供。
-
-## 類型
-
-擷取資料時，請務必了解[!DNL Experience Data Model](XDM)結構的運作方式。 有關XDM欄位類型如何映射到不同格式的詳細資訊，請參閱[Schema Registry開發人員指南](../../xdm/api/getting-started.md)。
-
-擷取資料時有一些彈性 — 如果類型與目標架構中的內容不符，則資料會轉換為表示的目標類型。 如果無法，則會以`TypeCompatibilityException`失敗批次處理。
-
-例如，JSON或CSV都沒有日期或日期時間類型。 因此，這些值是使用[ISO 8061格式化字串](https://www.iso.org/iso-8601-date-and-time-format.html)(&quot;2018-07-10T15:05:59.000-08:00&quot;)或Unix時間(以毫秒(1531263959000)為格式)表示，並在擷取時轉換為目標XDM類型。
-
-下表顯示擷取資料時支援的轉換。
-
-| 入站（列）與目標（列） | 字串 | 位元組 | 簡短 | 整數 | 長 | 雙倍 | Date | 日期時間 | 物件 | 地圖 |
-|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-| 字串 | X | X | X | X | X | X | X | X |  |  |
-| 位元組 | X | X | X | X | X | X |  |  |  |  |
-| 簡短 | X | X | X | X | X | X |  |  |  |  |
-| 整數 | X | X | X | X | X | X |  |  |  |  |
-| 長 | X | X | X | X | X | X | X | X |  |  |
-| 雙倍 | X | X | X | X | X | X |  |  |  |  |
-| 日期 |  |  |  |  |  |  | X |  |  |  |
-| 日期時間 |  |  |  |  |  |  |  | X |  |  |
-| 物件 |  |  |  |  |  |  |  |  | X | X |
-| 地圖 |  |  |  |  |  |  |  |  | X | X |
-
->[!NOTE]
->
->布林值和陣列無法轉換為其他類型。
-
-## 擷取限制
-
-批次資料內嵌有一些限制：
-- 每批檔案的最大數量：1500
-- 最大批大小：100 GB
-- 每列的屬性或欄位數上限：10000
-- 每用戶每分鐘的最大批次數：138
+繼續操作之前，請查看[批次擷取API概述](overview.md)和[快速入門手冊](getting-started.md)。
 
 ## 內嵌JSON檔案
 
@@ -157,7 +93,7 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches \
 
 ### 上傳檔案
 
-現在您已建立批處理，可以使用之前的`batchId`將檔案上載到該批處理。 您可以上傳多個檔案至批次。
+現在您已建立批處理，可以使用批處理建立響應中的批處理ID將檔案上載到批處理。 您可以上傳多個檔案至批次。
 
 >[!NOTE]
 >
@@ -231,7 +167,7 @@ curl -X POST "https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID
 200 OK
 ```
 
-## 內嵌鑲木檔案
+## 內嵌鑲木檔案 {#ingest-parquet-files}
 
 >[!NOTE]
 >
@@ -728,7 +664,7 @@ curl -X PUT https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/
 
 ### 完成批
 
-上傳完檔案的所有不同部分後，您需要發出信號，指出資料已完全上傳，且批次已準備好升級。
+上傳完檔案的所有不同部分後，您需要發出資料已完全上傳，且批次已準備好升級的信號。
 
 **API格式**
 
@@ -811,6 +747,21 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}
 ```http
 200 OK
 ```
+
+## 修補批次
+
+有時候，您可能需要更新組織的設定檔存放區中的資料。 例如，您可能需要更正記錄或更改屬性值。 Adobe Experience Platform支援透過更新動作或「修補批次」來更新或修補設定檔存放區資料。
+
+>[!NOTE]
+>
+>只允許設定檔記錄進行這些更新，不允許體驗事件。
+
+要修補批處理，需要以下操作：
+
+- **啟用設定檔和屬性更新的資料集。** 這需透過資料集標籤完成，且需要將 `isUpsert:true` 特定標籤新增至 `unifiedProfile` 陣列。如需如何建立資料集或設定現有資料集以供上傳的詳細步驟，請依照[啟用資料集以進行設定檔更新](../../catalog/datasets/enable-upsert.md)的教學課程進行。
+- **包含要修補的欄位和配置檔案標識欄位的Parquet檔案。** 用於修補批的資料格式與常規批處理獲取過程類似。所需的輸入為Parquet檔案，除了要更新的欄位外，上傳的資料還必須包含身分欄位，才能符合設定檔存放區中的資料。
+
+在為「配置檔案」和「上插」啟用資料集，並且包含要修補的欄位和必要標識欄位的Parquet檔案後，您可以按照[內嵌Parquet檔案](#ingest-parquet-files)的步驟操作，通過批次內嵌完成修補。
 
 ## 重播批
 
@@ -963,6 +914,8 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}
 ```
 
 ## 附錄
+
+以下章節包含使用批次內嵌在Experience Platform中擷取資料的其他資訊。
 
 ### 批次內嵌的資料轉換
 

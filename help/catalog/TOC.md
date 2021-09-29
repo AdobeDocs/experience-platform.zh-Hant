@@ -3,10 +3,10 @@ audience: user
 user-guide-title: 目錄與資料集指南
 user-guide-description: 在 Data Lake 中探索資料處理歷程、中繼資料、檔案說明、目錄和資料集。
 feature: Data Management
-source-git-commit: 5160bc8057a7f71e6b0f7f2d594ba414bae9d8f6
+source-git-commit: 3eea0a1ecbe7db202f56f326e7b9b1300b37d236
 workflow-type: tm+mt
-source-wordcount: '102'
-ht-degree: 22%
+source-wordcount: '116'
+ht-degree: 19%
 
 ---
 
@@ -31,6 +31,8 @@ ht-degree: 22%
    * [資料集概觀](datasets/overview.md)
    * [資料集使用手冊](datasets/user-guide.md)
    * [使用API建立和填入資料集](datasets/create.md)
+   * [啟用設定檔與身分資料集](datasets/enable-for-profile.md)
+   * [啟用設定檔更新的資料集（插入）](datasets/enable-upsert.md)
 * [資料湖的隱私權要求處理](privacy.md)
 * [Experience Platform中的資料保護](data-protection.md)
 * [API 參考資料](https://www.adobe.io/experience-platform-apis/references/catalog/)
