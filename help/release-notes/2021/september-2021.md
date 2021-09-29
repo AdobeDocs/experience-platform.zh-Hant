@@ -2,10 +2,10 @@
 title: Adobe Experience Platform 發行說明
 description: Adobe Experience Platform的最新發行說明。
 exl-id: 96375409-803f-45af-805e-900207d972e4
-source-git-commit: b616a0c0d49d980644f82bc3af5995b3b17b4c80
+source-git-commit: 4959b5227f777a2c8cab1317d67795678d1a6eea
 workflow-type: tm+mt
-source-wordcount: '290'
-ht-degree: 10%
+source-wordcount: '381'
+ht-degree: 9%
 
 ---
 
@@ -15,8 +15,21 @@ ht-degree: 10%
 
 Adobe Experience Platform 現有功能更新：
 
+- [資料擷取](#ingestion)
 - [[!DNL Data Prep]](#data-prep)
 - [來源](#sources)
+
+## 資料擷取 {#ingestion}
+
+Adobe Experience Platform資料擷取代表Platform擷取各種來源資料的多種方法，以及該資料如何保存在Data Lake中，以供下游Platform服務使用。
+
+**新功能**
+
+| 功能 | 說明 |
+|------- | -----------|
+| 使用批次內嵌功能來插入或修補設定檔記錄 | 即時客戶設定檔現在允許透過批次內嵌更新個別設定檔記錄資料中的設定檔屬性。 若要深入了解，請參閱[批次內嵌開發人員指南](../../ingestion/batch-ingestion/api-overview.md)。 |
+
+若要進一步了解如何將資料擷取至Platform，請造訪[資料擷取檔案](../../ingestion/home.md)。
 
 ## [!DNL Data Prep] {#data-prep}
 
