@@ -4,9 +4,9 @@ user-guide-title: Adobe Experience Platform 來源連接器說明
 breadcrumb-title: 來源連接器指南
 user-guide-description: 從多種來源或結構擷取資料、加標籤，以及增強已擷取的資料。
 feature: Data Ingestion, Sources
-source-git-commit: e85980565889dd66f7dbd93749e013f77e434b74
+source-git-commit: bc94d85ecd2ae33d8ef18dd1dfa7fca39ccaefea
 workflow-type: tm+mt
-source-wordcount: '647'
+source-wordcount: '656'
 ht-degree: 12%
 
 ---
@@ -40,6 +40,7 @@ ht-degree: 12%
       - [Azure Blob連接器](connectors/cloud-storage/blob.md)
       - [Azure事件集線器連接器](connectors/cloud-storage/eventhub.md)
       - [Azure檔案儲存連接器](connectors/cloud-storage/azure-file-storage.md)
+      - [資料登陸區](connectors/cloud-storage/data-landing-zone.md)
       - [FTP連接器](connectors/cloud-storage/ftp.md)
       - [Google雲端儲存空間連接器](connectors/cloud-storage/google-cloud-storage.md)
       - [Google PubSub](connectors/cloud-storage/google-pubsub.md)
@@ -97,6 +98,7 @@ ht-degree: 12%
          - [Azure資料湖儲存Gen2](tutorials/api/create/cloud-storage/adls-gen2.md)
          - [Azure事件中心](tutorials/api/create/cloud-storage/eventhub.md)
          - [Azure檔案儲存](tutorials/api/create/cloud-storage/azure-file-storage.md)
+         - [資料登陸區](tutorials/api/create/cloud-storage/data-landing-zone.md)
          - [FTP](tutorials/api/create/cloud-storage/ftp.md)
          - [Google雲端儲存空間](tutorials/api/create/cloud-storage/google.md)
          - [Google PubSub](tutorials/api/create/cloud-storage/google-pubsub.md)
@@ -185,6 +187,7 @@ ht-degree: 12%
          - [Azure Blob](tutorials/ui/create/cloud-storage/blob.md)
          - [Azure事件中心](tutorials/ui/create/cloud-storage/eventhub.md)
          - [Azure檔案儲存](tutorials/ui/create/cloud-storage/azure-file-storage.md)
+         - [資料登陸區](tutorials/ui/create/cloud-storage/data-landing-zone.md)
          - [FTP](tutorials/ui/create/cloud-storage/ftp.md)
          - [Google雲端儲存空間](tutorials/ui/create/cloud-storage/google-cloud-storage.md)
          - [Google PubSub](tutorials/ui/create/cloud-storage/google-pubsub.md)

@@ -1,10 +1,11 @@
 ---
 title: XDM業務帳戶類別
 description: 本檔案概述Experience Data Model(XDM)中的XDM商業帳戶類別。
-source-git-commit: d83ad2870b6099d3c6359dcc7cd000ecad8a238f
+exl-id: abe4c919-a680-4aad-918e-6e56cae8bd4d
+source-git-commit: b5cdd72238f7b4519de1c789f4294b9698415327
 workflow-type: tm+mt
-source-wordcount: '172'
-ht-degree: 2%
+source-wordcount: '175'
+ht-degree: 4%
 
 ---
 
@@ -24,5 +25,7 @@ ht-degree: 2%
 | `extSourceSystemAudit` | [[!UICONTROL 外部源系統審核屬性]](../../data-types/external-source-system-audit-attributes.md) | 如果帳戶來自外部源系統，則此對象將捕獲該系統的審核屬性。 |
 | `_id` | 字串 | 記錄的唯一標識符。 這是系統產生的值，與`accountID`分開。 |
 | `accountID` | 字串 | 帳戶實體的唯一識別碼。 |
+
+{style=&quot;table-layout:auto&quot;}
 
 請參閱即時CDP B2B版本](../../tutorials/relationship-b2b.md)中的[架構關係指南，了解此類別在概念上如何與其他B2B類別相關，以及如何在Adobe Experience Platform UI中建立這些關係。

@@ -1,10 +1,11 @@
 ---
 title: XDM商業行銷清單類別
 description: 本檔案概述Experience Data Model(XDM)中的XDM Business Marketing List類別。
-source-git-commit: d83ad2870b6099d3c6359dcc7cd000ecad8a238f
+exl-id: 510c5608-054d-4bed-91eb-22d84b5dc625
+source-git-commit: b5cdd72238f7b4519de1c789f4294b9698415327
 workflow-type: tm+mt
-source-wordcount: '210'
-ht-degree: 2%
+source-wordcount: '213'
+ht-degree: 4%
 
 ---
 
@@ -26,5 +27,7 @@ ht-degree: 2%
 | `marketingListDescription` | 字串 | 行銷清單的說明。 |
 | `marketingListID` | 字串 | 行銷清單實體的唯一ID。 |
 | `marketingListName` | 字串 | 行銷清單的名稱。 |
+
+{style=&quot;table-layout:auto&quot;}
 
 請參閱即時CDP B2B版本](../../tutorials/relationship-b2b.md)中的[架構關係指南，了解此類別在概念上如何與其他B2B類別相關，以及如何在Adobe Experience Platform UI中建立這些關係。

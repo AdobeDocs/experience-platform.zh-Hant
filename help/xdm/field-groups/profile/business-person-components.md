@@ -1,19 +1,19 @@
 ---
 title: XDM企業人員元件結構欄位組
 description: 本檔案概述「XDM企業人員元件」結構欄位群組。
-source-git-commit: 319d508925d22e76a3d75ae473f6ea000b5c655b
+exl-id: 965b89f4-59f5-43f4-8778-3549e15b44d4
+source-git-commit: b5cdd72238f7b4519de1c789f4294b9698415327
 workflow-type: tm+mt
-source-wordcount: '435'
+source-wordcount: '441'
 ht-degree: 3%
 
 ---
 
+# [!UICONTROL XDM企業人員] 元件結構欄位群組（測試版）
 
-# [!UICONTROL XDM業務人員元] 件結構欄位組
-
->[!NOTE]
+>[!IMPORTANT]
 >
->此欄位組僅適用於可存取B2B版即時客戶資料平台(Real-time CDP)的組織。
+>此欄位群組屬於目前測試版的即時客戶資料平台B2B版。 檔案和功能可能會有所變更。
 
 [!UICONTROL XDM業務人] 員元件是類別的標準結構欄 [[!DNL XDM Individual Profile] ](../../classes/individual-profile.md) 位群組，可擷取人員的多個來源記錄，以及人員細分所需的其他屬性。
 

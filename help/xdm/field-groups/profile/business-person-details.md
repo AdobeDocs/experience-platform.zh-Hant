@@ -1,19 +1,19 @@
 ---
 title: XDM業務人員詳細資訊結構欄位組
 description: 本檔案提供「 XDM業務人員詳細資訊」結構欄位群組的概觀。
-source-git-commit: 319d508925d22e76a3d75ae473f6ea000b5c655b
+exl-id: e9da5c1c-5a30-4cbc-beb2-cc5efe57cab0
+source-git-commit: 57370e4ed0807bcebf30c73af629671b5390d90d
 workflow-type: tm+mt
-source-wordcount: '554'
+source-wordcount: '562'
 ht-degree: 6%
 
 ---
 
+# [!UICONTROL XDM業務人員詳] 細資訊架構欄位群組（測試版）
 
-# [!UICONTROL XDM業務人員詳] 細資訊架構欄位組
-
->[!NOTE]
+>[!IMPORTANT]
 >
->此欄位群組僅適用於可存取B2B版即時客戶資料平台的組織。
+>此欄位群組屬於目前測試版的即時客戶資料平台B2B版。 檔案和功能可能會有所變更。
 
 [!UICONTROL XDM業務人] 員詳細資訊類別的標準結構 [[!DNL XDM Individual Profile] ](../../classes/individual-profile.md) 欄位群組，可擷取企業對企業(B2B)企業情境中個別人員的相關資訊。
 

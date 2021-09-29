@@ -5,9 +5,9 @@ title: 身分命名空間概述
 topic-legacy: overview
 description: 身分識別命名空間是 Identity Service 的元件，用途是作為身分識別相關內容的指標。例如，他們會將「name@email.com」值區分為電子郵件地址，或將「443522」區分為數值CRM ID。
 exl-id: 86cfc7ae-943d-4474-90c8-e368afa48b7c
-source-git-commit: 700012988fd46e835dcbc441c39f08e4c172ef0f
+source-git-commit: 5373b8fcd84cee749a85bdb755a23eb7292cf352
 workflow-type: tm+mt
-source-wordcount: '1638'
+source-wordcount: '1598'
 ht-degree: 2%
 
 ---
@@ -79,7 +79,7 @@ Experience Platform提供數個可供所有組織使用的身分識別命名空�
 
 ![瀏覽](./images/browse.png)
 
-頁面的主介面中會顯示身份命名空間清單，顯示其名稱、身份符號、上次更新日期的相關資訊，以及這些命名空間是標準命名空間還是自定義命名空間。 右側邊欄包含關於[!UICONTROL 唯一身分]和[!UICONTROL 身分圖表強度]的資訊。 [!UICONTROL 獨] 特身分是指您所使用之特定沙箱中存在的身分識別數量，而身分 [!UICONTROL 圖] 表強度則會顯示沙箱中Cookie和非Cookie ID數量的相關資訊。
+頁面的主介面中會顯示身份命名空間清單，顯示其名稱、身份符號、上次更新日期的相關資訊，以及這些命名空間是標準命名空間還是自定義命名空間。 右側邊欄包含[!UICONTROL 身分圖表強度]的相關資訊。
 
 ![身分](./images/identities.png)
 
@@ -91,7 +91,7 @@ Platform也提供命名空間以供整合之用。 這些命名空間預設會�
 
 ![select-namespace](./images/select-namespace.png)
 
-## 管理自訂命名空間{#manage-namespaces}
+## 管理自訂命名空間 {#manage-namespaces}
 
 視您的組織資料和使用案例而定，您可能需要自訂命名空間。 可使用[[!DNL Identity Service]](./api/create-custom-namespace.md) API或透過UI建立自訂命名空間。
 

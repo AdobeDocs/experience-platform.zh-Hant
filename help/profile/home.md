@@ -4,9 +4,9 @@ title: 即時客戶個人檔案概觀
 topic-legacy: guide
 description: 即時客戶設定檔可合併來自各種來源的資料，並以個別客戶設定檔和相關時間序列事件的形式提供對該資料的存取。 此功能可讓行銷人員跨多個管道，透過受眾推動協調、一致且相關的體驗。
 exl-id: c93d8d78-b215-4559-a806-f019c602c4d2
-source-git-commit: 7ebd84f31161b45c2904545a2310c8b1f7831593
+source-git-commit: 93a4cd5c86a715cd04cd2a553866bbb4e19f951a
 workflow-type: tm+mt
-source-wordcount: '1779'
+source-wordcount: '1810'
 ht-degree: 0%
 
 ---
@@ -43,13 +43,15 @@ Experience PlatformUI提供控制面板，您可透過控制面板檢視即時�
 
 每個個別客戶設定檔都由多個已合併的設定檔片段組成，以形成該客戶的單一檢視。 例如，如果客戶跨多個管道與您的品牌互動，您的組織會在多個資料集中顯示與該單一客戶相關的多個設定檔片段。 將這些片段擷取至Platform時，會合併在一起，以便為該客戶建立單一設定檔。
 
-當來自多個來源的資料發生衝突時（例如，一個片段將客戶列為「單一」，而另一個片段將客戶列為「已婚」）,[合併策略](#merge-policies)會決定要優先排列哪些資訊，並將哪些資訊包含在個人的設定檔中。 因此，Platform內的設定檔片段總數可能一律高於已合併設定檔的總數，因為每個設定檔都由多個片段組成。
+換言之，設定檔片段代表唯一的主要身分，以及指定資料集內該ID的對應[record](#record-data)或[event](#time-series-events)資料。
 
-### 記錄資料
+當來自多個資料集的資料發生衝突時（例如，一個片段將客戶列為「單一」，而另一個片段將客戶列為「已婚」）,[合併原則](#merge-policies)會決定要排定個人優先順序並納入個人設定檔中的資訊。 因此，Platform內的設定檔片段總數可能一律高於已合併設定檔的總數，因為每個設定檔通常由多個資料集的多個片段組成。
+
+### 記錄資料 {#record-data}
 
 設定檔是由許多屬性（也稱為記錄資料）所組成的主體、組織或個人的表示。 例如，產品的設定檔可能包含SKU和說明，而人員的設定檔則包含名字、姓氏和電子郵件地址等資訊。 使用[!DNL Experience Platform]，您可以自訂設定檔，以使用與業務相關的特定資料。 標準[!DNL Experience Data Model](XDM)類[!DNL XDM Individual Profile]是在描述客戶記錄資料時建立架構的首選類，並為Platform服務之間的許多交互提供整合的資料。 有關使用[!DNL Experience Platform]中架構的詳細資訊，請從閱讀[XDM系統概述](../xdm/home.md)開始。
 
-### 時間序列事件
+### 時間序列事件 {#time-series-events}
 
 時間序列資料提供了在主題直接或間接地採取某個動作時系統的快照，以及詳細說明事件本身的資料。 以標準結構類別XDM ExperienceEvent表示，時間系列資料可說明事件，例如新增至購物車的項目、點按的連結，以及檢視的視訊。 時間序列資料可用來建立區段規則的基礎，而事件則可在設定檔的內容中個別存取。
 
@@ -108,6 +110,7 @@ Adobe Experience Platform [!DNL Segmentation Service]會產生支援個別客戶
 [!DNL Data governance] 是一系列策略和技術，用於管理客戶資料並確保符合適用於資料使用的法規、限制和政策。
 
 由於資料控管與存取資料相關，因此在[!DNL Experience Platform]的各個層級中，資料控管都扮演著關鍵角色：
+
 * 資料使用標籤
 * 資料存取原則
 * 對行銷動作資料的存取控制
@@ -120,4 +123,4 @@ Adobe Experience Platform [!DNL Segmentation Service]會產生支援個別客戶
 
 ## 後續步驟和其他資源
 
-若要進一步了解如何使用Experience PlatformUI或設定檔API來處理[!DNL Real-time Customer Profile]資料，請先分別閱讀[設定檔UI指南](ui/user-guide.md)或[API開發人員指南](api/overview.md)。
+若要進一步了解如何使用Experience PlatformUI或設定檔API來處理即時客戶設定檔資料，請先分別閱讀[設定檔UI指南](ui/user-guide.md)或[API開發人員指南](api/overview.md)。

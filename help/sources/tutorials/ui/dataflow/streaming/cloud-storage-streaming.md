@@ -1,108 +1,142 @@
 ---
-keywords: Experience Platform；首頁；熱門主題；雲儲存連接器；雲儲存
+keywords: Experience Platform；首頁；熱門主題；串流；雲端儲存連接器；雲端儲存
 solution: Experience Platform
-title: 在UI中為雲儲存流連接器配置資料流
+title: 在UI中為雲儲存源建立流資料流
 topic-legacy: overview
 type: Tutorial
-description: 資料流是從源中檢索資料並將資料帶入平台資料集的計畫任務。 本教學課程提供使用雲端儲存空間連接器來設定新資料流的步驟。
+description: 資料流是一個排程任務，可從源中檢索資料並將資料內嵌到Platform資料集。 本教學課程提供使用雲儲存基礎連接器設定新資料流的步驟。
 exl-id: 75deead6-ef3c-48be-aed2-c43d1f432178
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 4a2d82fd6aec25f2570082ebc54f826251bc0a51
 workflow-type: tm+mt
-source-wordcount: '680'
-ht-degree: 1%
+source-wordcount: '1060'
+ht-degree: 0%
 
 ---
 
-# 在UI中為雲儲存流連接配置資料流
+# 在UI中為雲儲存源建立流資料流
 
-資料流是從源中檢索資料並將資料帶入[!DNL Platform]資料集的計畫任務。 本教學課程提供使用雲端儲存空間連接器來設定新資料流的步驟。
+資料流是一項排程任務，可從來源擷取資料，並內嵌至Adobe Experience Platform資料集。 本教學課程提供在UI中為雲儲存來源建立串流資料流的步驟。
+
+在嘗試本教學課程之前，您必須先在雲端儲存帳戶與平台之間建立有效且經過驗證的連線。 如果您尚未驗證連線，請參閱下列其中一個教學課程，以取得驗證串流雲端儲存空間帳戶的相關資訊：
+
+- [[!DNL Amazon Kinesis]](../../../ui/create/cloud-storage/kinesis.md)
+- [[!DNL Azure Event Hubs]](../../../ui/create/cloud-storage/eventhub.md)
+- [[!DNL Google PubSub]](../../../ui/create/cloud-storage/google-pubsub.md)
 
 ## 快速入門
 
-本教學課程需要對Adobe Experience Platform的下列部分有正確的理解：
+本教學課程需要妥善了解下列Adobe Experience Platform元件：
 
+- [資料流](../../../../../dataflows/home.md):資料流是跨平台移動資料的資料作業的表示。資料流配置在不同的服務中，從源到[!DNL Identity Service]、到[!DNL Profile]和到[!DNL Destinations]。
+- [資料準備](../../../../../data-prep/home.md):資料準備可讓資料工程師將資料對應、轉換及驗證至Experience Data Model(XDM)。資料準備會在資料擷取程式（包括CSV擷取工作流程）中顯示為「對應」步驟。
 - [[!DNL Experience Data Model (XDM)] 系統](../../../../../xdm/home.md):組織客戶體驗資 [!DNL Experience Platform] 料的標準化架構。
-   - [架構構成基礎](../../../../../xdm/schema/composition.md):瞭解XDM架構的基本建置區塊，包括架構組合的主要原則和最佳實務。
-   - [架構編輯器教程](../../../../../xdm/tutorials/create-schema-ui.md):瞭解如何使用架構編輯器UI建立自訂架構。
-- [[!DNL Real-time Customer Profile]](../../../../../profile/home.md):根據來自多個來源的匯整資料，提供統一、即時的消費者個人檔案。
+   - [結構構成基本概念](../../../../../xdm/schema/composition.md):了解XDM結構描述的基本建置組塊，包括結構描述的主要原則和最佳實務。
+   - [結構編輯器教學課程](../../../../../xdm/tutorials/create-schema-ui.md):了解如何使用結構編輯器UI建立自訂結構。
+- [[!DNL Real-time Customer Profile]](../../../../../profile/home.md):根據來自多個來源的匯總資料，提供統一的即時消費者設定檔。
 
-此外，本教學課程要求您已建立雲端儲存空間連接器。 有關在UI中建立不同雲端儲存空間連接器的教學課程清單，請參閱[來源連接器概述](../../../../home.md)。
+## 新增資料
 
-## 選擇資料
+建立串流雲端儲存空間帳戶的驗證後，會出現「**[!UICONTROL 選取資料]**」步驟，提供介面供您選取要將哪些資料流帶入Platform。
 
-在建立雲端儲存連接器後，會出現「選取資料&#x200B;*」步驟，提供介面供您選取要從哪個串流串流傳送資料。*
+- 介面的左側是瀏覽器，可讓您檢視帳戶內可用的資料流；
+- 介面的右側可讓您從JSON檔案預覽最多100列資料。
 
-![](../../../../images/tutorials/dataflow/cloud-storage/streaming/select-data.png)
+![介面](../../../../images/tutorials/dataflow/cloud-storage/streaming/interface.png)
 
-## 將資料欄位對應至XDM架構
+選擇要使用的資料流，然後選擇&#x200B;**[!UICONTROL 選擇檔案]**&#x200B;以上載示例架構。
 
-出現&#x200B;**[!UICONTROL Mapping]**&#x200B;步驟，提供互動式介面，將來源資料對應至[!DNL Platform]資料集。
+>[!TIP]
+>
+>如果您的資料符合XDM標準，您可以略過上傳範例架構，然後選取&#x200B;**[!UICONTROL Next]**&#x200B;以繼續。
 
-選擇要接收傳入資料的資料集。 您可以使用現有資料集或建立新資料集。
+![select-stream](../../../../images/tutorials/dataflow/cloud-storage/streaming/select-stream.png)
 
-**使用現有資料集**
+上傳架構後，預覽介面會更新，以顯示您上傳之架構的預覽。 預覽介面可讓您檢查檔案的內容和結構。 您也可以使用[!UICONTROL 搜尋欄位]公用程式，從架構中存取特定項目。
 
-若要將資料內嵌至現有資料集，請選取&#x200B;**[!UICONTROL Use existing dataset]**，然後按一下資料集圖示。
+完成後，選擇&#x200B;**[!UICONTROL Next]**。
 
-![](../../../../images/tutorials/dataflow/cloud-storage/streaming/use-existing-data.png)
+![綱要預覽](../../../../images/tutorials/dataflow/cloud-storage/streaming/schema-preview.png)
 
-出現&#x200B;**[!UICONTROL Select dataset]**&#x200B;對話框。 尋找您要使用的資料集，選取它，然後按一下&#x200B;**[!UICONTROL Continue]**。
+## 映射
 
-![](../../../../images/tutorials/dataflow/cloud-storage/streaming/select-existing-data.png)
+此時會顯示&#x200B;**[!UICONTROL 對應]**&#x200B;步驟，提供介面將來源資料對應至Platform資料集。
 
-**使用新資料集**
+選擇要內嵌入的傳入資料的資料集。 您可以使用現有資料集或建立新資料集。
 
-若要將資料內嵌至新資料集，請選取&#x200B;**[!UICONTROL Create new dataset]**，並在提供的欄位中輸入資料集的名稱和說明。 然後，在下拉式清單下選擇您要使用的架構。
+### 新資料集
 
-![](../../../../images/tutorials/dataflow/cloud-storage/streaming/use-new-dataset.png)
+若要將資料內嵌至新資料集，請選取「**[!UICONTROL 新資料集]**」，然後在提供的欄位中輸入資料集的名稱和說明。 要添加架構，可以在&#x200B;**[!UICONTROL 選擇架構]**&#x200B;對話框中輸入現有架構名稱。 或者，您也可以選擇&#x200B;**[!UICONTROL 架構高級搜索]**&#x200B;以搜索相應的架構。
 
-## 命名資料流
+![新資料集](../../../../images/tutorials/dataflow/cloud-storage/streaming/new-dataset.png)
 
-出現&#x200B;**[!UICONTROL Dataflow detail]**&#x200B;步驟，允許您命名新資料流並提供有關新資料流的簡要說明。
+此時將出現「[!UICONTROL 選擇架構]」窗口，提供可供選擇的可用架構清單。 從清單中選擇一個架構以更新右欄，以顯示您所選架構的特定詳細資訊，包括是否為[!DNL Profile]啟用該架構的資訊。
 
-提供資料流的值，然後按一下&#x200B;**[!UICONTROL Next]**。
+在確定並選擇要使用的架構後，選擇&#x200B;**[!UICONTROL Done]**。
 
-![](../../../../images/tutorials/dataflow/cloud-storage/streaming/name-your-dataflow.png)
+![select-schema](../../../../images/tutorials/dataflow/cloud-storage/streaming/select-schema.png)
 
-### 查看資料流
+[!UICONTROL Target資料集]頁面會以您的選定結構更新，並顯示為資料集的一部分。 在此步驟中，您可以為[!DNL Profile]啟用資料集，並建立實體屬性和行為的整體檢視。 [!DNL Profile]中將包含所有已啟用資料集的資料，並在保存資料流時應用更改。
 
-出現&#x200B;**[!UICONTROL Review]**&#x200B;步驟，允許您在建立新資料流之前對其進行查看。 詳細資訊會分組在下列類別中：
+切換&#x200B;**[!UICONTROL 設定檔資料集]**&#x200B;按鈕，為[!DNL Profile]啟用目標資料集。
 
-- **[!UICONTROL Source details]**:顯示源類型和有關源的其他相關詳細資訊。
-- **[!UICONTROL Target details]**:顯示源資料被吸收到的資料集，包括資料集所附的模式。
+![新設定檔](../../../../images/tutorials/dataflow/cloud-storage/streaming/new-profile.png)
 
-複查資料流後，按一下&#x200B;**[!UICONTROL Finish]** ，並為建立資料流留出一些時間。
+### 現有資料集
 
-![](../../../../images/tutorials/dataflow/cloud-storage/streaming/review.png)
+若要將資料內嵌至現有資料集，請選取「**[!UICONTROL 現有資料集]**」，然後選取資料集圖示。
+
+![現有資料集](../../../../images/tutorials/dataflow/cloud-storage/streaming/existing-dataset.png)
+
+此時會出現「**[!UICONTROL 選取資料集]**」對話方塊，提供您可選擇的可用資料集清單。 從清單中選取資料集，以更新右側邊欄，顯示您選取之資料集的特定詳細資料，包括是否可為[!DNL Profile]啟用資料集的相關資訊。
+
+識別並選取您要使用的資料集後，請選取&#x200B;**[!UICONTROL Done]**。
+
+![select-dataset](../../../../images/tutorials/dataflow/cloud-storage/streaming/select-dataset.png)
+
+選取資料集後，選取[!DNL Profile]切換，為[!DNL Profile]啟用資料集。
+
+![現有配置檔案](../../../../images/tutorials/dataflow/cloud-storage/streaming/existing-profile.png)
+
+### 映射標準欄位
+
+建立資料集和結構後，會顯示&#x200B;**[!UICONTROL 映射標準欄位]**&#x200B;介面，讓您手動配置資料的映射欄位。
+
+>[!TIP]
+>
+>Platform會根據您選取的目標結構或資料集，為自動對應欄位提供智慧型建議。 您可以手動調整對應規則以符合您的使用案例。
+
+您可以視需要選擇直接映射欄位，或使用資料準備函式來轉換源資料，以導出計算值或計算值。 有關映射器函式和計算欄位的詳細資訊，請參閱[資料準備函式指南](../../../../../data-prep/functions.md)或[計算欄位指南](../../../../../data-prep/calculated-fields.md)。
+
+映射源資料後，選擇&#x200B;**[!UICONTROL Next]**。
+
+![映射](../../../../images/tutorials/dataflow/cloud-storage/streaming/mapping.png)
+
+## 資料流詳細資訊
+
+此時將顯示&#x200B;**[!UICONTROL 資料流詳細資訊]**&#x200B;步驟，允許您命名新資料流並提供有關新資料流的簡要說明。
+
+為資料流提供值，然後選擇&#x200B;**[!UICONTROL Next]**。
+
+![dataflow detail](../../../../images/tutorials/dataflow/cloud-storage/streaming/dataflow-detail.png)
+
+### 檢閱
+
+此時將顯示&#x200B;**[!UICONTROL 查看]**&#x200B;步驟，允許您在建立新資料流之前查看該資料流。 詳細資料會分組為下列類別：
+
+- **[!UICONTROL 連線]**:顯示您的帳戶名稱、來源類型，以及您所使用串流雲端儲存空間來源的其他特定資訊。
+- **[!UICONTROL 指派資料集和對應欄位]**:顯示您用於資料流的目標資料集和架構。
+
+審核資料流後，請選擇&#x200B;**[!UICONTROL 完成]**&#x200B;並允許建立資料流的一些時間。
+
+![審查](../../../../images/tutorials/dataflow/cloud-storage/streaming/review.png)
 
 ## 監視和刪除資料流
 
-建立雲儲存資料流後，您可以監視通過其獲取的資料。 有關監視和刪除資料流的詳細資訊，請參見[監視資料流](../../../../../ingestion/quality/monitor-data-ingestion.md)的教程。
+建立流雲儲存資料流後，您就可以監視正在通過它接收的資料。 有關監視和刪除流資料流的詳細資訊，請參閱有關[監視流資料流](../../monitor-streaming.md)的教程。
 
 ## 後續步驟
 
-在本教程中，您成功建立了一個資料流，以便從外部雲儲存中導入資料，並獲得了對監控資料集的深入瞭解。 現在，下游[!DNL Platform]服務（例如[!DNL Real-time Customer Profile]和[!DNL Data Science Workspace]）可以使用傳入的資料。 如需詳細資訊，請參閱下列檔案：
+依照本教學課程，您已成功建立資料流以從雲儲存源流資料。 下游Platform服務（例如[!DNL Real-time Customer Profile]和[!DNL Data Science Workspace]）現在可以使用傳入的資料。 如需詳細資訊，請參閱下列檔案：
 
 - [[!DNL Real-time Customer Profile] 概觀](../../../../../profile/home.md)
 - [[!DNL Data Science Workspace] 概觀](../../../../../data-science-workspace/home.md)
-
-## 附錄
-
-以下各節提供了使用源連接器的附加資訊。
-
-### 禁用資料流
-
-建立資料流時，它會立即變為活動狀態，並根據給定的時間表收集資料。 您可以隨時按照以下說明禁用活動資料流。
-
-在&#x200B;**[!UICONTROL Sources]**&#x200B;工作區中，按一下&#x200B;**[!UICONTROL Browse]**&#x200B;頁籤。 接著，按一下與要禁用的活動資料流關聯的連接的名稱。
-
-![](../../../../images/tutorials/dataflow/cloud-storage/streaming/browse.png)
-
-此時將顯示&#x200B;**[!UICONTROL Source activity]**&#x200B;頁。 從清單中選擇活動資料流，以在螢幕右側開啟其&#x200B;**[!UICONTROL Properties]**&#x200B;列，該列包含&#x200B;**[!UICONTROL Enabled]**&#x200B;切換按鈕。 按一下切換以禁用資料流。 在禁用資料流後，可以使用相同的切換來重新啟用資料流。
-
-![](../../../../images/tutorials/dataflow/cloud-storage/streaming/disable-source.png)
-
-### 啟用[!DNL Profile]人口的傳入資料
-
-來自源連接器的入站資料可用於豐富和填充[!DNL Real-time Customer Profile]資料。 如需填入[!DNL Real-time Customer Profile]資料的詳細資訊，請參閱[描述檔填入](../../profile.md)的教學課程。

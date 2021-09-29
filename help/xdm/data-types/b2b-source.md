@@ -1,18 +1,19 @@
 ---
 title: B2B源資料類型
 description: 本檔案概述B2B來源Experience Data Model(XDM)資料類型。
-source-git-commit: 19bb39b66f3a3eb93fd0138ac021568021d77b0f
+exl-id: 01b7d41c-1ab6-4cbc-b9b3-77b6af69faf3
+source-git-commit: b5cdd72238f7b4519de1c789f4294b9698415327
 workflow-type: tm+mt
-source-wordcount: '294'
-ht-degree: 3%
+source-wordcount: '302'
+ht-degree: 2%
 
 ---
 
-# [!UICONTROL B2B源資] 料類型
+# [!UICONTROL B2B源資] 料類型（測試版）
 
->[!NOTE]
+>[!IMPORTANT]
 >
->此資料類型僅適用於可存取B2B版即時客戶資料平台的組織。
+>此資料類型屬於目前測試版的即時客戶資料平台B2B版。 檔案和功能可能會有所變更。
 
 [!UICONTROL B2B來] 源是標準的Experience Data Model(XDM)資料類型，代表B2B實體(例如帳戶 [](../classes/b2b/business-account.md)、機 [會](../classes/b2b/business-opportunity.md)或促銷活 [動](../classes/b2b/business-campaign.md))的複合識別碼。
 

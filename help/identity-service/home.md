@@ -5,9 +5,9 @@ title: Identity服務概述
 topic-legacy: overview
 description: Adobe Experience Platform Identity Service可協助您跨裝置和系統橋接身分，以便即時提供具影響力的個人數位體驗，進而更全面了解客戶及其行為。
 exl-id: a22dc3f0-3b7d-4060-af3f-fe4963b45f18
-source-git-commit: 947d8803416cee584b35a8d480929e2684d0057f
+source-git-commit: 5373b8fcd84cee749a85bdb755a23eb7292cf352
 workflow-type: tm+mt
-source-wordcount: '1807'
+source-wordcount: '1792'
 ht-degree: 0%
 
 ---
@@ -35,7 +35,6 @@ Adobe Experience Platform Identity Service可跨裝置和系統橋接身分，�
 | 身分命名空間 | 身分命名空間可用來區分身分的內容或類型。 例如，身分識別會將「name<span>@email.com」區分為電子郵件地址，或將「443522」區分為數值CRM ID。 身分識別命名空間可用來尋找個別身分識別，並提供身分值的內容。 這可讓您判斷包含不同主要ID、但共用`email`身分命名空間相同值的兩個[!DNL Profile]片段，實際上是相同的個體。 如需詳細資訊，請參閱[身分命名空間概述](./namespaces.md) 。 |
 | 身分圖 | 身分圖表是不同身分之間關係的地圖，可讓您以視覺化方式呈現並更清楚了解哪些客戶身分識別會匯整在一起，以及匯整方式。 如需詳細資訊，請參閱關於[使用身分圖檢視器](./ui/identity-graph-viewer.md)的教學課程。 |
 | 個人識別資訊(PII) | PII是可直接識別客戶的資訊，例如電子郵件地址或電話號碼。 PII值常用來比對。 不同系統間客戶的多重身分識別。 |
-| 唯一身分 | 唯一身分是僅存在於特定沙箱中的身分。 |
 | 未知或匿名身份 | 未知或匿名的身分是指示器，可隔離裝置，而不識別使用裝置的實際人員。 未知和匿名身分識別包含訪客的IP位址和Cookie ID等資訊。 雖然未知和匿名的身分可提供行為資料，但在客戶提供其PII前，這些身分資料有限。 |
 
 ## 什麼是 [!DNL Identity Service]？

@@ -6,9 +6,9 @@ topic-legacy: overview
 type: Tutorial
 description: 資料流是一個排程任務，可從源中檢索資料並將資料內嵌到Platform資料集。 本教學課程提供使用雲儲存帳戶配置新資料流的步驟。
 exl-id: b327bbea-039d-4c04-afd3-f1d6a5f902a6
-source-git-commit: df6ddf52f5cab7e5faae591594f060d641977783
+source-git-commit: e980ca69517d6e51ce00f102492829aabaa52976
 workflow-type: tm+mt
-source-wordcount: '2001'
+source-wordcount: '2002'
 ht-degree: 0%
 
 ---
@@ -142,7 +142,7 @@ ht-degree: 0%
 
 >[!TIP]
 >
->[!DNL Platform] 根據您選取的目標結構或資料集，為自動對應欄位提供智慧型建議。您可以手動調整對應規則以符合您的使用案例。
+>Platform會根據您選取的目標結構或資料集，為自動對應欄位提供智慧型建議。 您可以手動調整對應規則以符合您的使用案例。
 
 選取「**[!UICONTROL 預覽資料]**」 ，即可查看所選資料集中最多100列範例資料的對應結果。
 

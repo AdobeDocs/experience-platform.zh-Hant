@@ -5,7 +5,7 @@ title: Edge Segmentation UI指南
 topic-legacy: ui guide
 description: 邊緣分段是即時在邊緣上評估Platform中區段的功能，可啟用相同的頁面和下一頁個人化使用案例。
 exl-id: eae948e6-741c-45ce-8e40-73d10d5a88f1
-source-git-commit: 8f2540902cdcff99627393429424dbfe1de2d3da
+source-git-commit: c1dc75d94774eff8ad9a7374b1fa158f737dd5a4
 workflow-type: tm+mt
 source-wordcount: '362'
 ht-degree: 3%
@@ -18,13 +18,13 @@ ht-degree: 3%
 >
 >邊緣區段目前仍在測試階段。 文件和功能可能會有所變更。
 
-邊緣分段是即時評估Adobe Experience Platform中邊緣區段的功能，可啟用相同的頁面和下一頁個人化使用案例。
+邊緣分段是在Edge](../../edge/home.md)上即時評估Adobe Experience Platform中區段的功能，可啟用相同的頁面和下一頁個人化使用案例。[
 
 ## 邊緣分段查詢類型
 
 如果查詢符合下列任何條件，則可使用邊緣分段來評估該查詢：
 
-| 查詢類型 | 詳細資料 | 範例 |
+| 查詢類型 | 詳細資訊 | 範例 |
 | ---------- | ------- | ------- |
 | 傳入點擊 | 任何區段定義，是指沒有時間限制的單一傳入事件。 | ![](../images/ui/edge-segmentation/incoming-hit.png) |
 | 參照設定檔的傳入點擊 | 任何區段定義，是指沒有時間限制的單一傳入事件，以及一或多個設定檔屬性。 | ![](../images/ui/edge-segmentation/profile-hit.png) |
@@ -35,7 +35,7 @@ ht-degree: 3%
 
 下列查詢類型目前支援邊緣分段&#x200B;**not**:
 
-| 查詢類型 | 詳細資料 |
+| 查詢類型 | 詳細資訊 |
 | ---------- | ------- |
 | 多個事件 | 如果查詢包含多個事件，則無法使用邊緣分段來評估。 |
 | 頻率查詢 | 任何區段定義，是指至少發生特定次數之事件。 |  |

@@ -5,9 +5,9 @@ title: '使用API進行邊緣劃分 '
 topic-legacy: developer guide
 description: 本檔案包含如何搭配Adobe Experience Platform區段服務API使用邊緣區段的範例。
 exl-id: effce253-3d9b-43ab-b330-943fb196180f
-source-git-commit: f92b12d343584f33870dd42288977e7b6e446b0f
+source-git-commit: c1dc75d94774eff8ad9a7374b1fa158f737dd5a4
 workflow-type: tm+mt
-source-wordcount: '633'
+source-wordcount: '636'
 ht-degree: 3%
 
 ---
@@ -28,13 +28,13 @@ ht-degree: 3%
 - [[!DNL Segmentation]](../home.md):提供從資料建立區段和對象的 [!DNL Real-time Customer Profile] 功能。
 - [[!DNL Experience Data Model (XDM)]](../../xdm/home.md):組織客戶體驗資 [!DNL Platform] 料的標準化架構。
 
-若要成功呼叫[!DNL Data Prep] API端點，請參閱[平台API快速入門手冊](../../landing/api-guide.md)，以了解所需標題及如何讀取範例API呼叫。
+若要成功呼叫任何Experience PlatformAPI端點，請參閱[平台API快速入門手冊](../../landing/api-guide.md)，了解所需標題及如何讀取範例API呼叫。
 
 ## 邊緣分段查詢類型 {#query-types}
 
 為了使用邊緣分段來評估區段，查詢必須符合下列准則：
 
-| 查詢類型 | 詳細資料 |
+| 查詢類型 | 詳細資訊 |
 | ---------- | ------- |
 | 傳入點擊 | 任何區段定義，是指沒有時間限制的單一傳入事件。 |
 | 參照設定檔的傳入點擊 | 任何區段定義，是指沒有時間限制的單一傳入事件，以及一或多個設定檔屬性。 |
@@ -45,7 +45,7 @@ ht-degree: 3%
 
 下列查詢類型是邊緣分段目前支援的&#x200B;**not**:
 
-| 查詢類型 | 詳細資料 |
+| 查詢類型 | 詳細資訊 |
 | ---------- | ------- |
 | 多個事件 | 如果查詢包含多個事件，則無法使用邊緣分段來評估。 |
 | 頻率查詢 | 任何區段定義，是指至少發生特定次數之事件。 |
