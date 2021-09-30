@@ -2,9 +2,9 @@
 title: '使用GitHub網頁介面建立目的地檔案頁面 '
 description: 本頁指示會示範如何使用GitHub網頁介面，為您的Experience Platform目的地製作檔案頁面並提交以供審核。
 exl-id: 4780e05e-3d1d-4f1b-8441-df28d09c1a88
-source-git-commit: 83539a9aa2fddcae0c9a44302d8bfa9d9f56de0c
+source-git-commit: 1bbff0fa54f1b7ef1ee70efd2a85cd43b34b2f5a
 workflow-type: tm+mt
-source-wordcount: '768'
+source-wordcount: '780'
 ht-degree: 1%
 
 ---
@@ -24,7 +24,7 @@ ht-degree: 1%
 ## 設定您的GitHub製作環境 {#set-up-environment}
 
 1. 在您的瀏覽器中，導覽至`https://github.com/AdobeDocs/experience-platform.en`。
-2. 若要取用存放庫[取用](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html?lang=en#fork-the-repository)，請按一下&#x200B;**取用**，如下圖所示。
+2. 若要取用存放庫[取用](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html?lang=en#fork-the-repository)，請按一下&#x200B;**取用**，如下所示。 如此會在您自己的GitHub帳戶中建立Experience Platform存放庫復本。
 
    ![分支Adobe檔案存放庫](./assets/ssd-fork-repository.gif)
 
@@ -61,7 +61,7 @@ ht-degree: 1%
 >
 >請注意，這裡沒有什麼可以打破的。 依照本節中的指示，您只是建議進行檔案更新。 您建議的更新將由Adobe Experience Platform檔案團隊核准或編輯。
 
-1. 儲存檔案並上傳所需影像後，您可以開啟提取請求(PR)，將工作分支合併至Adobe檔案存放庫的主分支。 請確定已選取您所處理的分支，並選取&#x200B;**Contribute > Pull request**。
+1. 儲存檔案並上傳所需影像後，您可以開啟提取請求(PR)，將工作分支合併至Adobe檔案存放庫的主分支。 請確定已選取您所處理的分支，並選取&#x200B;**Contribute > Open pull request**。
 
 ![建立提取請求](./assets/ssd-create-pull-request-1.gif)
 

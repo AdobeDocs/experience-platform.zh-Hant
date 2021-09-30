@@ -2,9 +2,9 @@
 title: 在本機環境中使用文字編輯器來建立目的地檔案頁面
 description: 本頁的說明會示範如何使用文字編輯器在本機環境中運作，為您的Experience Platform目的地製作檔案頁面並提交以供審核。
 exl-id: 125f2d10-0190-4255-909c-5bd5bb59fcba
-source-git-commit: 83539a9aa2fddcae0c9a44302d8bfa9d9f56de0c
+source-git-commit: 1bbff0fa54f1b7ef1ee70efd2a85cd43b34b2f5a
 workflow-type: tm+mt
-source-wordcount: '871'
+source-wordcount: '885'
 ht-degree: 2%
 
 ---
@@ -24,7 +24,7 @@ ht-degree: 2%
 ## 連線至GitHub並設定本機製作環境 {#set-up-environment}
 
 1. 在您的瀏覽器中，導覽至`https://github.com/AdobeDocs/experience-platform.en`
-2. 若要取用存放庫[fork](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html?lang=en#fork-the-repository)，請按一下&#x200B;**Fork** ，如螢幕擷取所示。
+2. 若要取用存放庫[取用](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html?lang=en#fork-the-repository)，請按一下&#x200B;**取用**，如下所示。 如此會在您自己的GitHub帳戶中建立Experience Platform存放庫復本。
 
    ![分支Adobe檔案存放庫](./assets/ssd-fork-repository.gif)
 
@@ -61,7 +61,7 @@ ht-degree: 2%
 
    ![推送您的提交](./assets/push-local-to-remote.png)
 
-1. 在GitHub網頁介面中，開啟提取請求(PR)，將您的工作分支合併至Adobe檔案存放庫的主分支。 請確定已選取您所使用的分支，並選取&#x200B;**提取請求**。
+1. 在GitHub網頁介面中，開啟提取請求(PR)，將您的工作分支合併至Adobe檔案存放庫的主分支。 請確定已選取您所使用的分支，並選取&#x200B;**Contribute > Open pull request**。
 
    ![建立提取請求](./assets/ssd-create-pull-request-1.gif)
 
