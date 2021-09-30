@@ -5,7 +5,7 @@ topic-legacy: overview
 title: 存取控制概覽
 description: Adobe Experience Platform的存取控制可透過Adobe Admin Console提供。 此功能會運用Admin Console中的產品設定檔，將使用者與權限和沙箱連結。
 exl-id: 591d59ad-2784-4ae4-a509-23649ce712c9
-source-git-commit: 88593d921d6ad97fc4dfb059f0272817caee06c7
+source-git-commit: 584461d3da5c5c39b9702b5d1dc1d1319568f695
 workflow-type: tm+mt
 source-wordcount: '1375'
 ht-degree: 2%
@@ -41,7 +41,7 @@ ht-degree: 2%
 
 Adobe Admin Console提供管理Adobe產品權益和組織存取權限的集中位置。 透過主控台，您可以為各種[!DNL Platform]功能（例如「[!UICONTROL 管理資料集]」、「[!UICONTROL 檢視資料集]」或「[!UICONTROL 管理設定檔]」）授予使用者群組存取權限。
 
-### 產品設定檔
+### 產品基本資料
 
 在[!DNL Admin Console]中，權限會透過使用產品設定檔指派給使用者。 產品設定檔可讓您授予一或多個使用者的權限，也可包含使用者對透過產品設定檔指派給他們的沙箱範圍的存取。 可將使用者指派給屬於您組織的一或多個產品設定檔。
 
@@ -49,7 +49,7 @@ Adobe Admin Console提供管理Adobe產品權益和組織存取權限的集中�
 
 [!DNL Experience Platform] 隨附兩個預先設定的預設產品設定檔。下表概述每個預設設定檔中提供的內容，包括其所授與的存取沙箱，以及其在該沙箱範圍內所授予的權限。
 
-| 產品個人資料 | 沙箱存取 | 權限 |
+| 產品描述檔 | 沙箱存取 | 權限 |
 | --- | --- | --- |
 | 預設生產全部訪問 | 生產 | 適用於[!DNL Experience Platform]的所有權限，但沙箱管理權限除外。 |
 | 沙箱管理員 | 不適用 | 僅提供對沙箱管理權限的存取。 |
@@ -72,7 +72,7 @@ Adobe Admin Console提供管理Adobe產品權益和組織存取權限的集中�
 
 產品設定檔中的權限標籤會顯示該設定檔作用中的沙箱和權限：
 
-![權限 — 概觀](./images/permissions-overview.png)
+![權限 — 概觀](./images/permissions.png)
 
 透過[!DNL Admin Console]授予的權限會依類別排序，有些權限會授予對數個低階功能的存取權。
 
