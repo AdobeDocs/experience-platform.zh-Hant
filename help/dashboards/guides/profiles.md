@@ -4,9 +4,9 @@ title: 設定檔控制面板
 description: Adobe Experience Platform提供控制面板，讓您透過該控制面板檢視貴組織「即時客戶個人檔案」資料的重要資訊。
 type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
-source-git-commit: a63969075215a8f9884d2f41485194bd732694f1
+source-git-commit: d5c69972426008809c3fd0ac03be995efcc2f541
 workflow-type: tm+mt
-source-wordcount: '1496'
+source-wordcount: '1513'
 ht-degree: 0%
 
 ---
@@ -95,7 +95,9 @@ Adobe提供多個標準Widget，您可用來視覺化與設定檔資料相關的
 
 >[!NOTE]
 >
->新增的[!UICONTROL 設定檔]介面工具集會反映在組織初始設定後新增至系統的設定檔數量。 例如，如果在設定期間新增400萬個設定檔，而您在過去30天內新增100萬個設定檔，則新增的[!UICONTROL 設定檔]介面工具集會顯示「1,000,000」，而[!UICONTROL 設定檔計數]介面工具集會顯示「5,000,000」。
+>新增的[!UICONTROL 設定檔]介面工具集會反映在組織初始設定後新增至系統的設定檔數量。 若要進一步了解將設定檔新增至設定檔存放區，請參閱[即時客戶設定檔檔案](../../profile/home.md)。
+>
+>例如，如果在設定期間新增400萬個設定檔，而您在過去30天內新增100萬個設定檔，則新增的[!UICONTROL 設定檔]介面工具集會顯示「1,000,000」，而[!UICONTROL 設定檔計數]介面工具集會顯示「5,000,000」。
 
 ![](../images/profiles/profiles-added.png)
 
