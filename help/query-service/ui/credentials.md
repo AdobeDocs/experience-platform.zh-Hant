@@ -5,10 +5,10 @@ title: Query Service UI指南
 topic-legacy: guide
 description: Adobe Experience Platform查詢服務提供可用來撰寫和執行查詢、檢視先前執行的查詢，以及存取由您IMS組織內的使用者儲存的查詢的使用者介面。
 exl-id: ea25fa32-809c-429c-b855-fcee5ee31b3e
-source-git-commit: af122e5064fc5618266948d46c438d1776cdd0cf
+source-git-commit: 696db8081ab8225d79cd468b7435770d407d3e3d
 workflow-type: tm+mt
-source-wordcount: '1310'
-ht-degree: 0%
+source-wordcount: '1148'
+ht-degree: 1%
 
 ---
 
@@ -36,77 +36,32 @@ Adobe Experience Platform查詢服務可讓您與外部用戶端連線。 您可
 
 您可以使用非到期憑證來設定與外部用戶端的更永久連線。
 
-您必須先為您的組織設定&#x200B;**沙箱**&#x200B;和&#x200B;**管理查詢服務整合**&#x200B;權限，才能建立未到期的憑證。
+### 先決條件
 
-登入[Adobe Admin Console](https://adminconsole.adobe.com/)並從頂端導覽列選取相關組織。
+您必須先在Adobe Admin Console中完成下列步驟，才能產生非到期憑證：
 
-在[!UICONTROL 概述]的[!UICONTROL 產品和服務]區段中，選取&#x200B;**Adobe Experience Platform**。
-
-![Adobe Admin Console儀表板](../images/ui/credentials/adobe-admin-console-dashboard.png)
-
-此時會顯示「Adobe Experience Platform詳細資料」頁面。 接下來，建立新的配置檔案。 選擇&#x200B;[!UICONTROL **新建配置檔案**]。
-
-![Adobe Experience Platform詳細資料頁面](../images/ui/credentials/aep-details.png)
-
-將顯示配置檔案建立對話框。 輸入新配置檔案的描述性名稱，然後選擇&#x200B;[!UICONTROL **Save**]。 此時將顯示新配置檔案的[!UICONTROL 設定]頁。 從可用選項中選擇&#x200B;[!UICONTROL **Permissions**]&#x200B;頁簽。
-
-### 啟用查詢服務權限
-
-若要確保為您的組織啟用正確的查詢服務權限，請從清單中尋找並選取&#x200B;[!UICONTROL **查詢服務**]&#x200B;類別。
-
-![突出顯示權限頁簽查詢服務類別](../images/ui/credentials/permissions-tab-query-service-category.png)
-
-此時將顯示「查詢服務」的[!UICONTROL 編輯權限]工作區。 為&#x200B;[!UICONTROL **管理查詢**]&#x200B;和&#x200B;[!UICONTROL **管理查詢服務整合**]&#x200B;選擇加號(**+**)表徵圖，將它們添加到[!UICONTROL 包含的權限項]列中。 接下來，選擇&#x200B;[!UICONTROL **Save**]&#x200B;以確認更改。
-
-![儲存包含的權限項目](../images/ui/credentials/edit-permissions-for-query-service-profile.png)
-
-這會將您返回「設定>權限」標籤。
-
-### 啟用沙箱權限
-
-若要確保為您的組織選取正確的沙箱，請從清單中尋找並選取&#x200B;[!UICONTROL **沙箱**]&#x200B;類別。
-
-![權限索引標籤沙箱類別反白顯示](../images/ui/credentials/permissions-tab-sandboxes-category.png)
-
-「沙箱」工作區隨即出現。 從[!UICONTROL 可用權限項目]中，找到相關沙箱，在此影像中，它是生產沙箱。 選取加號(**+**)圖示，將其新增至[!UICONTROL 包含的權限項目]。 接下來，選擇&#x200B;[!UICONTROL **Save**]&#x200B;以確認更改。
-
-![新增生產沙箱權限](../images/ui/credentials/prod-sandbox.png)
-
-這會將您返回「設定>權限」標籤。
-
-若要讓使用者存取非即將到期的帳戶功能，還需要另外三個步驟。
-
-- 新增新使用者以將新建立的權限授予。 選擇&#x200B;[!UICONTROL **Users**]&#x200B;頁簽，然後選擇&#x200B;[!UICONTROL **Add User**]。
-
-![「用戶」頁簽「添加用戶」按鈕突出顯示](../images/ui/credentials/users-tab-new-user.png)
-
-將出現「建立用戶」對話框。 輸入新用戶的名稱和電子郵件，然後選擇&#x200B;[!UICONTROL **Save**]。
-
-- 然後，必須將使用者新增為管理員，才能允許為任何作用中的產品設定檔建立帳戶。 將新建立的使用者新增為管理員。 選擇「[!UICONTROL **管理員**]」頁簽，然後選擇「[!UICONTROL **添加管理員**]」。
-
-![「管理」頁簽「添加管理」按鈕突出顯示](../images/ui/credentials/admins-tab-add-admin.png)
-
-將顯示「添加管理」對話框。 將新管理員的詳細資訊輸入到文本欄位中，然後選擇&#x200B;[!UICONTROL **Save**]。
-
-- 之後，必須將使用者新增為開發人員，才能建立整合。 選擇&#x200B;**Developers**&#x200B;標籤，後跟&#x200B;**Add Developer**。
-
-![「開發人員」頁簽突出顯示「添加開發人員」按鈕](../images/ui/credentials/developers-tab-add-developer.png)
-
-將顯示「添加開發人員」對話框。 將新開發人員的詳細資訊輸入到文本欄位中，然後選擇&#x200B;**Save**。
+1. 登入[Adobe Admin Console](https://adminconsole.adobe.com/)並從頂端導覽列選取相關組織。
+2. [選取產品設定檔。](../../access-control/ui/browse.md)
+3. [為產品設定 **** 檔設定 **沙箱和管** ](../../access-control/ui/permissions.md) 理查詢服務整合權限。
+4. [將新使用者新增至產品設](../../access-control/ui/users.md) 定檔，這些使用者即會獲得其設定的權限。
+5. [將使用者新增為產品設定檔管](https://helpx.adobe.com/enterprise/using/manage-product-profiles.html) 理員，以允許為任何作用中的產品設定檔建立帳戶。
+6. [將使用者新增為產品設定檔開](https://helpx.adobe.com/tw/enterprise/using/manage-developers.html) 發人員，以建立整合。
 
 若要進一步了解如何指派權限，請參閱[存取控制](../../access-control/home.md)上的檔案。
 
-所有必要權限現在都會在「Adobe開發人員控制台」中設定，供使用者使用即將到期的憑證功能。
+所有必要權限現在都已在「Adobe開發人員控制台」中設定，供使用者使用即將到期的憑證功能。
 
-要建立一組非到期憑據，請在「查詢憑據」工作區中選擇「**[!UICONTROL 生成憑據]**」。
+### 生成憑據
+
+若要建立一組非到期憑證，請返回Platform UI，並從左側導覽中選取&#x200B;**[!UICONTROL Queries]**&#x200B;以存取[!UICONTROL Queries]工作區。 接下來，選擇&#x200B;**[!UICONTROL Credentials]**&#x200B;頁簽，後跟&#x200B;**[!UICONTROL Generate credentials]**。
 
 ![](../images/ui/credentials/generate-credentials.png)
 
-出現「Generate credentials modal（生成憑據模式）」。 若要建立非到期憑證，您必須提供下列詳細資料：
+此時將顯示一個對話框，允許您生成憑據。 若要建立未到期的憑證，您必須提供下列詳細資料：
 
 - **[!UICONTROL 名稱]**:您正在生成的憑據的名稱。
 - **[!UICONTROL 說明]**:（選用）您要產生的憑證說明。
-- **[!UICONTROL 指派給]**:將分配給憑據的用戶。此值應為建立憑證之使用者的電子郵件地址。
+- **[!UICONTROL 指派給]**:將為其分配憑據的用戶。此值應為建立憑證之使用者的電子郵件地址。
 - **[!UICONTROL 密碼]** （選用）您憑證的選用密碼。如果未設定密碼，Adobe將自動為您生成密碼。
 
 提供所有所需詳細資訊後，請選擇&#x200B;**[!UICONTROL 生成憑據]**&#x200B;以生成憑據。
@@ -115,9 +70,9 @@ Adobe Experience Platform查詢服務可讓您與外部用戶端連線。 您可
 
 >[!IMPORTANT]
 >
->選擇&#x200B;**[!UICONTROL 生成憑據]**&#x200B;按鈕後，配置JSON檔案將下載到本地電腦。 由於Adobe **不**&#x200B;記錄生成的憑據，因此您&#x200B;**必須**&#x200B;安全地儲存下載的檔案並保留憑據的記錄。
+>選擇&#x200B;**[!UICONTROL 生成憑據]**&#x200B;按鈕後，配置JSON檔案將下載到本地電腦。 由於Adobe **不**&#x200B;記錄生成的憑據，因此您必須安全地儲存下載的檔案並保留憑據的記錄。
 >
->此外，如果90天內未使用憑證，則會剪下憑證。
+>此外，如果90天內未使用憑證，則會清除憑證。
 
 設定JSON檔案包含技術帳戶名稱、技術帳戶ID和憑證等資訊。 以下列格式提供。
 
@@ -125,7 +80,7 @@ Adobe Experience Platform查詢服務可讓您與外部用戶端連線。 您可
 {"technicalAccountName":"9F0A21EE-B8F3-4165-9871-846D3C8BC49E@TECHACCT.ADOBE.COM","credential":"3d184fa9e0b94f33a7781905c05203ee","technicalAccountId":"4F2611B8613AA3670A495E55"}
 ```
 
-現在您已儲存產生的憑證，請選取&#x200B;**[!UICONTROL Close]**。 您現在可以看到所有未到期憑證的清單。
+保存生成的憑據後，選擇&#x200B;**[!UICONTROL Close]**。 您現在可以看到所有未到期憑證的清單。
 
 ![](../images/ui/credentials/list-credentials.png)
 
@@ -135,7 +90,7 @@ Adobe Experience Platform查詢服務可讓您與外部用戶端連線。 您可
 
 - **[!UICONTROL 名稱]**:您正在生成的憑據的名稱。
 - **[!UICONTROL 說明]**:（選用）您要產生的憑證說明。
-- **[!UICONTROL 指派給]**:將分配給憑據的用戶。此值應為建立憑證之使用者的電子郵件地址。
+- **[!UICONTROL 指派給]**:將為其分配憑據的用戶。此值應為建立憑證之使用者的電子郵件地址。
 
 ![](../images/ui/credentials/update-credentials.png)
 
@@ -143,21 +98,25 @@ Adobe Experience Platform查詢服務可讓您與外部用戶端連線。 您可
 
 ## 使用憑據連接到外部客戶端
 
-您可以使用即將到期或未到期的憑據來連接外部客戶端，如Aqua Data Studio、Looker或Power BI。
+您可以使用即將到期或未到期的憑據來連接外部客戶端，如Aqua Data Studio、Looker或Power BI。 這些憑證的輸入方法會因外部用戶端而異。 請參閱外部客戶端的文檔，以了解有關使用這些憑據的具體說明。
 
-下表包含參數清單及其說明，通常是連線至外部用戶端所需的。
+影像會指出UI中找到之每個參數的位置，但非即將到期憑證的密碼除外。 雖然非到期憑證是由其JSON組態檔提供，您可以在UI的&#x200B;**Credentials**&#x200B;標籤下檢視未到期憑證。
+
+![](../images/ui/credentials/expiring-credentials.png)
+
+下表概述了連接到外部客戶端通常所需的參數。
 
 >[!NOTE]
 >
->使用非過期憑據連接到主機時，仍需使用[!UICONTROL EXPINING CREDENTIALS]部分中列出的除密碼之外的所有參數。
+>使用非到期憑據連接到主機時，仍需使用[!UICONTROL 即將到期憑據]部分中列出的所有參數，但密碼和用戶名除外。
 
 | 參數 | 說明 |
 |---|---|
-| **伺服器/主機** | 要連接的伺服器/主機的名稱。 此值的形式為`server.adobe.io`，可在&#x200B;**[!UICONTROL Host]**&#x200B;下找到。 |
-| **埠** | 要連接的伺服器/主機的埠。 此值可在&#x200B;**[!UICONTROL Port]**&#x200B;下找到。 埠的範例值為`80`。 |
-| **資料庫** | 您要連接的資料庫。 可在&#x200B;**[!UICONTROL Database]**&#x200B;下找到此值。 資料庫的範例值為`prod:all`。 |
-| **使用者名稱** | 連接到外部客戶端的用戶的用戶名。 其形式為`@AdobeOrg`之前的英數字串。 此值位於&#x200B;**[!UICONTROL Username]**&#x200B;下。 |
-| **密碼** | 連接到外部客戶端的用戶的密碼。 <ul><li>如果您使用即將到期的憑證，可在即將到期的憑證區段的&#x200B;**[!UICONTROL Password]**&#x200B;下找到。</li><li>如果您使用的是非過期的憑證，此值由technicalAccountID的引數和從設定JSON檔案取得的憑證組成。 密碼值採用以下形式：`{technicalAccountId}:{credential}`。</li></ul> |
+| 伺服器/主機 | 要連接的伺服器/主機的名稱。 <ul><li>此值用於即將到期的憑證和非即將到期的憑證，其形式為`server.adobe.io`。 該值位於[!UICONTROL EXPINING CREDENTIALS]部分的&#x200B;**[!UICONTROL Host]**&#x200B;下。</ul></li> |
+| 埠 | 要連接的伺服器/主機的埠。 <ul><li>此值用於即將到期的憑據和非即將到期的憑據，可在[!UICONTROL EXPINING CREDENTIALS]部分的&#x200B;**[!UICONTROL Port]**&#x200B;下找到。 埠的範例值為`80`。</ul></li> |
+| 資料庫 | 您要連接的資料庫。 <ul><li>此值用於到期憑據和非到期憑證，可在[!UICONTROL 到期憑據]區段的&#x200B;**[!UICONTROL Database]**&#x200B;下找到。 資料庫的範例值為`prod:all`。</ul></li> |
+| 使用者名稱 | 連接到外部客戶端的用戶的用戶名。 <ul><li>如果您使用即將到期的憑證，其形式會是`@AdobeOrg`之前的英數字串。 此值位於&#x200B;**[!UICONTROL Username]**&#x200B;下。</li><li>如果您使用的是非到期憑證，這是您選擇的字串，但它&#x200B;**不能**&#x200B;與設定JSON檔案中找到的`technicalAccountID`值相同。</li></ul> |
+| 密碼 | 連接到外部客戶端的用戶的密碼。 <ul><li>如果您使用即將到期的憑證，可在[!UICONTROL 即將到期的憑證]區段的&#x200B;**[!UICONTROL 密碼]**&#x200B;下找到。</li><li>如果您使用的是未到期的憑證，此值是來自technicalAccountID的串連引數，以及來自設定JSON檔案的憑證。 密碼值採用以下形式：`{technicalAccountId}:{credential}`。</li></ul> |
 
 ## 後續步驟
 
