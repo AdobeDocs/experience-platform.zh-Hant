@@ -1,14 +1,15 @@
 ---
 title: 定義即時客戶資料平台B2B版本中兩個結構之間的關係
 description: 了解如何在即時客戶資料平台B2B版本中定義兩個結構之間的多對一關係。
-source-git-commit: d83ad2870b6099d3c6359dcc7cd000ecad8a238f
+exl-id: 14032754-c7f5-46b6-90e6-c6e99af1efba
+source-git-commit: 2ad20a4c7a9d1cc71fc4e589de90d7eabf8c87b7
 workflow-type: tm+mt
-source-wordcount: '1220'
+source-wordcount: '1221'
 ht-degree: 0%
 
 ---
 
-# 定義即時客戶資料平台B2B版本中兩個結構之間的關係
+# 在即時客戶資料平台B2B版（測試版）中定義兩個結構之間的關係
 
 >[!IMPORTANT]
 >
