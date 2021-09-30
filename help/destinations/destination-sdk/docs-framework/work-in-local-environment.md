@@ -1,13 +1,11 @@
 ---
 title: 在本機環境中使用文字編輯器來建立目的地檔案頁面
-seo-title: Use a text editor in your local environment to create a destination documentation page
-description: 本頁的指示會示範如何使用文字編輯器，在本機環境中運作，以編寫檔案並提交提取請求。
-seo-description: The instructions on this page show you how to use a text editor to work in your local environment to author documentation and submit a pull request.
+description: 本頁的說明會示範如何使用文字編輯器在本機環境中運作，為您的Experience Platform目的地製作檔案頁面並提交以供審核。
 exl-id: 125f2d10-0190-4255-909c-5bd5bb59fcba
-source-git-commit: e1e7d2f70c032d02f96b3999e4fca736070c6ca9
+source-git-commit: 83539a9aa2fddcae0c9a44302d8bfa9d9f56de0c
 workflow-type: tm+mt
-source-wordcount: '826'
-ht-degree: 3%
+source-wordcount: '871'
+ht-degree: 2%
 
 ---
 
@@ -28,7 +26,7 @@ ht-degree: 3%
 1. 在您的瀏覽器中，導覽至`https://github.com/AdobeDocs/experience-platform.en`
 2. 若要取用存放庫[fork](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html?lang=en#fork-the-repository)，請按一下&#x200B;**Fork** ，如螢幕擷取所示。
 
-   ![分支Adobe檔案存放庫](./assets/ssd-fork-repo.png)
+   ![分支Adobe檔案存放庫](./assets/ssd-fork-repository.gif)
 
 3. 將存放庫複製到本機電腦. 選取「**代碼> HTTPS >使用GitHub Desktop**&#x200B;開啟」，如下所示。 請確定您已安裝[GitHub Desktop](https://desktop.github.com/)。 如需進一步參考，請參閱Adobe貢獻者指南中的[建立存放庫的本機複製](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html?lang=en#create-a-local-clone-of-the-repository) 。
 
@@ -47,6 +45,10 @@ ht-degree: 3%
 
 ## 提交您的檔案以供審核 {#submit-review}
 
+>[!TIP]
+>
+>請注意，這裡沒有什麼可以打破的。 依照本節中的指示，您只是建議進行檔案更新。 您建議的更新將由Adobe Experience Platform檔案團隊核准或編輯。
+
 1. 在GitHub Desktop中，為您的更新建立工作分支，並選取&#x200B;**發佈分支**&#x200B;以將分支發佈至GitHub。
 
 ![本地新建分支](./assets/new-branch-local.gif)
@@ -61,7 +63,7 @@ ht-degree: 3%
 
 1. 在GitHub網頁介面中，開啟提取請求(PR)，將您的工作分支合併至Adobe檔案存放庫的主分支。 請確定已選取您所使用的分支，並選取&#x200B;**提取請求**。
 
-   ![建立提取請求](./assets/ssd-create-pull-request-1.png)
+   ![建立提取請求](./assets/ssd-create-pull-request-1.gif)
 
 1. 請確定基分支和比較分支正確。 新增附註至PR，說明您的更新，並選取&#x200B;**建立提取請求**。 這會開啟PR，將復本的工作分支合併至Adobe存放庫的主分支。
    >[!TIP]

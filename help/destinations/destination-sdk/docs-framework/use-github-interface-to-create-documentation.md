@@ -1,13 +1,11 @@
 ---
 title: '使用GitHub網頁介面建立目的地檔案頁面 '
-seo-title: Use the GitHub web interface to create a destination documentation page
-description: 本頁的指示會示範如何使用GitHub網頁介面來撰寫檔案及提交提取請求。
-seo-description: The instructions on this page show you how to use the GitHub web interface to author documentation and submit a pull request.
+description: 本頁指示會示範如何使用GitHub網頁介面，為您的Experience Platform目的地製作檔案頁面並提交以供審核。
 exl-id: 4780e05e-3d1d-4f1b-8441-df28d09c1a88
-source-git-commit: d2452bf0e59866d3deca57090001c4c5a0935525
+source-git-commit: 83539a9aa2fddcae0c9a44302d8bfa9d9f56de0c
 workflow-type: tm+mt
-source-wordcount: '694'
-ht-degree: 2%
+source-wordcount: '768'
+ht-degree: 1%
 
 ---
 
@@ -28,7 +26,7 @@ ht-degree: 2%
 1. 在您的瀏覽器中，導覽至`https://github.com/AdobeDocs/experience-platform.en`。
 2. 若要取用存放庫[取用](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html?lang=en#fork-the-repository)，請按一下&#x200B;**取用**，如下圖所示。
 
-   ![分支Adobe檔案存放庫](./assets/ssd-fork-repo.png)
+   ![分支Adobe檔案存放庫](./assets/ssd-fork-repository.gif)
 
 3. 在存放庫的復本中，為專案建立新分支，如下所示。 使用這個新分支進行工作。
 
@@ -44,6 +42,10 @@ ht-degree: 2%
 
 1. 您將根據[檔案自助服務範本](./self-service-template.md)建立目的地頁面的內容。 **[](assets/yourdestination-template.zip)** 下載範本並將其解壓縮以解壓縮 `.md` 檔案範本。
 2. 線上上Markdown編輯器中，貼上並編輯範本的內容，其中包含您目的地的相關資訊，例如[dillinger.io](https://dillinger.io/)。 請依照範本中的指示，詳細了解您應填入的內容，以及可以移除哪些段落。
+
+   >[!TIP]
+   >
+   >您可以隨時關閉瀏覽器視窗，稍後重新開啟。 您的工作會自動儲存，當您重新開啟瀏覽器時，將會等候您。
 3. 將Markdown編輯器中的內容複製到GitHub的新檔案中。
 4. 對於您打算使用的任何螢幕擷取畫面或影像，請使用GitHub介面將檔案上傳至`experience-platform.en/help/destinations/assets/catalog/[...]`，其中`[...]`是您目的地的所需類別。 例如，如果您要新增個人化目的地以Experience Platform，請選取`personalization`類別。 您必須從編寫頁面連結至影像。 請參閱[指示如何連結至影像](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/linking.html?lang=en#link-to-images)。
 
@@ -55,9 +57,13 @@ ht-degree: 2%
 
 ## 提交您的檔案以供審核 {#submit-review}
 
-1. 儲存檔案並上傳所需影像後，您可以開啟提取請求(PR)，將工作分支合併至Adobe檔案存放庫的主分支。 請確定已選取您所處理的分支，並選取&#x200B;**提取請求**。
+>[!TIP]
+>
+>請注意，這裡沒有什麼可以打破的。 依照本節中的指示，您只是建議進行檔案更新。 您建議的更新將由Adobe Experience Platform檔案團隊核准或編輯。
 
-![建立提取請求](./assets/ssd-create-pull-request-1.png)
+1. 儲存檔案並上傳所需影像後，您可以開啟提取請求(PR)，將工作分支合併至Adobe檔案存放庫的主分支。 請確定已選取您所處理的分支，並選取&#x200B;**Contribute > Pull request**。
+
+![建立提取請求](./assets/ssd-create-pull-request-1.gif)
 
 1. 請確定基分支和比較分支正確。 新增附註至PR，說明您的更新，並選取&#x200B;**建立提取請求**。 這會開啟PR，將復本的工作分支合併至Adobe存放庫的主分支。
 
