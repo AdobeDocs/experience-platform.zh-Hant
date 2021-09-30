@@ -4,10 +4,10 @@ solution: Experience Platform, Real-time Customer Data Platform
 audience: user
 user-guide-title: 即時客戶資料平台指南
 user-guide-description: 將來自多個企業來源的已知和匿名資料放在一起，以建立客戶設定檔，從這些設定檔建立對象區段，並對協力廠商目的地啟動這些區段。
-source-git-commit: 89cd5a89bb33e4ea8b3412adebee49921e788ebd
+source-git-commit: db61b8b1ea7f39578769a195ac13f83bde3eaf43
 workflow-type: tm+mt
-source-wordcount: '113'
-ht-degree: 48%
+source-wordcount: '120'
+ht-degree: 45%
 
 ---
 
@@ -42,5 +42,6 @@ ht-degree: 48%
    * [Real-time CDP B2B Edition中的結構描述](schemas/b2b.md)
 * 來源 {#sources}
    * [來源概觀](sources/sources-overview.md)
+   * [即時CDP B2B版中的源](sources/b2b.md)
 * [Experience Platform發行說明](https://www.adobe.com/go/platform-release-notes-en)
 * [Experience Platform 詞彙表](https://www.adobe.com/go/platform-glossary-en)
