@@ -1,10 +1,10 @@
 ---
 keywords: 目標個人化；目的地；experience platform target目的地；adobe target目的地；
-title: Adobe Target連線
+title: Adobe Target連線（測試版）
 description: Adobe Target是一款應用程式，可在網站、行動應用程式等所有傳入客戶互動中，提供即時、1:1和AI支援的個人化和實驗。
-source-git-commit: caccd096c9165139d9b966bbfcb311456276192a
+source-git-commit: 0635828cf3f637e67d2cabda860ca452e61892d4
 workflow-type: tm+mt
-source-wordcount: '391'
+source-wordcount: '392'
 ht-degree: 1%
 
 ---

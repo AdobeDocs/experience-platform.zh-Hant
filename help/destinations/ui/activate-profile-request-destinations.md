@@ -1,13 +1,13 @@
 ---
 keywords: 啟用設定檔要求目的地；啟用資料；設定檔要求目的地
-title: 對設定檔要求目的地啟用受眾資料
+title: 對設定檔請求目的地啟用受眾資料（測試版）
 type: Tutorial
 seo-title: Activate audience data to profile request destinations
 description: 了解如何將區段對應至設定檔要求目的地，以啟動您在Adobe Experience Platform中擁有的對象資料。
 seo-description: Learn how to activate the audience data you have in Adobe Experience Platform by mapping segments to profile request destinations.
-source-git-commit: caccd096c9165139d9b966bbfcb311456276192a
+source-git-commit: 0635828cf3f637e67d2cabda860ca452e61892d4
 workflow-type: tm+mt
-source-wordcount: '490'
+source-wordcount: '474'
 ht-degree: 0%
 
 ---
@@ -28,7 +28,7 @@ ht-degree: 0%
 
 ### 區段合併原則 {#merge-policy}
 
-設定檔要求目的地目前僅支援啟用使用預設合併原則的區段。 嘗試使用不同的合併策略激活段會導致「[[!UICONTROL 查看]](#review)」頁中出現錯誤。
+目前，設定檔要求目的地僅支援啟用使用[預設合併原則](../../segmentation/ui/segment-builder.md#merge-policies)的區段。
 
 ## 選取您的目的地 {#select-destination}
 

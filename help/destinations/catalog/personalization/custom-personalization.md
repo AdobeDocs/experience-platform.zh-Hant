@@ -1,10 +1,10 @@
 ---
 keywords: 自訂個人化；目的地；experience platform自訂目的地；
-title: 自訂個人化目的地
+title: 自訂個人化連線（測試版）
 description: 此目的地提供外部個人化、內容管理系統、廣告伺服器，以及網站上執行的其他應用程式，以從Adobe Experience Platform擷取區段資訊。 此目的地會根據使用者設定檔的區段成員資格提供即時1:1和個人化。
-source-git-commit: 6c21398a3f2fb26cc925ca1f5dcbe92b306a8325
+source-git-commit: 0635828cf3f637e67d2cabda860ca452e61892d4
 workflow-type: tm+mt
-source-wordcount: '573'
+source-wordcount: '578'
 ht-degree: 0%
 
 ---
@@ -25,7 +25,7 @@ ht-degree: 0%
 
 ## 匯出類型 {#export-type}
 
-**設定檔請求**  — 您正在為單一設定檔請求在自訂個人化目的地中對應的所有區段。可以為不同的Adobe資料收集資料流設定不同的自訂個人化目的地。
+**設定檔請求**  — 您正在為單一設定檔請求在自訂個人化目的地中對應的所有區段。可針對不同的[Adobe資料收集資料流](../../../edge/fundamentals/datastreams.md)設定不同的自訂個人化目的地。
 
 ## 使用案例 {#use-cases}
 
@@ -62,7 +62,7 @@ ht-degree: 0%
 
 如果您使用[Adobe標籤](../../../tags/home.md)來部署Experience PlatformWeb SDK，請使用[傳送事件完成](../../../edge/extension/event-types.md)功能，而您的自訂程式碼動作將會有`event.destinations`變數，您可使用該變數來查看匯出的資料。
 
-如果您未使用[Adobe標籤](../../../tags/home.md)來部署Experience PlatformWeb SDK，請使用[處理事件的回應](../../../edge/fundamentals/tracking-events.md#handling-responses-from-events)功能。
+如果您未使用[Adobe標籤](../../../tags/home.md)來部署Experience PlatformWeb SDK，請使用[處理事件的回應](../../../edge/fundamentals/tracking-events.md#handling-responses-from-events)功能來查看匯出的資料。
 
 可剖析Adobe Experience Platform的JSON回應，以尋找您要與Adobe Experience Platform整合之應用程式的對應整合別名。 區段ID可作為定位參數傳遞至應用程式的程式碼中。 以下是特定於目的地回應的顯示範例。
 
