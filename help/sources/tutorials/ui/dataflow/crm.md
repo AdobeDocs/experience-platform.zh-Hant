@@ -6,16 +6,16 @@ topic-legacy: overview
 type: Tutorial
 description: 資料流是一個排程任務，可從源中檢索資料並將資料內嵌到Platform資料集。 本教學課程提供使用您的CRM帳戶設定新資料流的步驟。
 exl-id: e14eafa7-6594-48e6-ab7a-f6c928d1e5fb
-source-git-commit: 46fb08a10bc05dc758bdcb025693f819b980b41a
+source-git-commit: cd9b28c66f6cc841e46e797b39db838a83e727e3
 workflow-type: tm+mt
-source-wordcount: '1524'
+source-wordcount: '1387'
 ht-degree: 0%
 
 ---
 
 # 在UI中為CRM連線設定資料流
 
-資料流是從源中檢索資料並將資料內嵌到[!DNL Platform]資料集的計畫任務。 本教學課程提供使用您的CRM帳戶設定新資料流的步驟。
+資料流是一個排程任務，可從源中檢索資料並將資料內嵌到Platform資料集。 本教學課程提供使用您的CRM帳戶設定新資料流的步驟。
 
 ## 快速入門
 
@@ -30,9 +30,9 @@ ht-degree: 0%
 
 ## 選擇資料
 
-建立CRM帳戶後，會出現&#x200B;*選取資料*&#x200B;步驟，提供互動式介面供您探索檔案階層。
+建立CRM帳戶後，會出現[!UICONTROL 選取資料]步驟，提供介面供您探索檔案階層。
 
-* 介面的左半部是目錄瀏覽器，顯示伺服器的檔案和目錄。
+* 介面的左半部是目錄瀏覽器，顯示您的CRM檔案和目錄。
 * 介面的右半部分可讓您從相容的檔案中預覽最多100列資料。
 
 您可以使用頁面頂端的&#x200B;**[!UICONTROL 搜尋]**&#x200B;選項，快速識別您要使用的來源資料。
@@ -41,29 +41,29 @@ ht-degree: 0%
 >
 >搜尋來源資料選項可供所有表格式來源連接器使用，但不包括Analytics、分類、事件中心和Kinesis連接器。
 
-找到源資料後，選擇目錄，然後按一下&#x200B;**[!UICONTROL Next]**。
+找到源資料後，選擇目錄，然後選擇&#x200B;**[!UICONTROL Next]**。
 
 ![select-data](../../../images/tutorials/dataflow/all-tabular/select-data.png)
 
 ## 將資料欄位對應至XDM結構
 
-此時會顯示&#x200B;**[!UICONTROL 映射]**&#x200B;步驟，提供互動式介面將源資料映射到[!DNL Platform]資料集。
+此時會顯示&#x200B;**[!UICONTROL 對應]**&#x200B;步驟，提供介面將來源資料對應至Platform資料集。
 
 選擇要內嵌入的傳入資料的資料集。 您可以使用現有資料集或建立新資料集。
 
 ### 使用現有資料集
 
-若要將資料內嵌至現有資料集，請選取「**[!UICONTROL 使用現有資料集]**」，然後按一下資料集圖示。
+若要將資料內嵌至現有資料集，請選取「**[!UICONTROL 現有資料集]**」，然後選取輸入列旁的資料圖示![data](../../../images/tutorials/dataflow/crm/data.png)。
 
-![use-existing-dataset](../../../images/tutorials/dataflow/crm/use-existing-dataset.png)
+![現有資料集](../../../images/tutorials/dataflow/crm/existing-dataset.png)
 
 此時會出現「**[!UICONTROL 選取資料集]**」對話方塊。 找到您要使用的資料集，選擇該資料集，然後按一下&#x200B;**[!UICONTROL Continue]**。
 
-![select-existing-dataset](../../../images/tutorials/dataflow/crm/select-existing-dataset.png)
+![select-dataset](../../../images/tutorials/dataflow/crm/select-dataset.png)
 
 ### 使用新資料集
 
-若要將資料內嵌至新資料集，請選取「**[!UICONTROL 建立新資料集]**」，然後在提供的欄位中輸入資料集的名稱和說明。
+若要將資料內嵌至新資料集，請選取「**[!UICONTROL 新資料集]**」，然後在提供的欄位中輸入資料集的名稱和說明。
 
 您可以在&#x200B;**[!UICONTROL 選擇架構]**&#x200B;搜索欄中輸入架構名稱，以附加架構欄位。 您也可以選取下拉式圖示，以查看現有結構的清單。 或者，您也可以選取&#x200B;**[!UICONTROL 進階搜尋]**&#x200B;來存取現有結構的畫面，包括其各自的詳細資訊。
 
@@ -79,19 +79,27 @@ ht-degree: 0%
 
 您可以視需要選擇直接映射欄位，或使用資料準備函式來轉換源資料，以導出計算值或計算值。 有關映射器函式和計算欄位的詳細資訊，請參閱[資料準備函式指南](../../../../data-prep/functions.md)或[計算欄位指南](../../../../data-prep/calculated-fields.md)。
 
+<!--
 >[!TIP]
 >
->[!DNL Platform] 根據您選取的目標結構或資料集，為自動對應欄位提供智慧型建議。您可以手動調整對應規則以符合您的使用案例。
+>If you are using the [!DNL Salesforce] source as part of B2B CDP, refer to the [[!DNL Salesforce] field mapping tables](../../../connectors/adobe-applications/mapping/salesforce.md) for a guide on the appropriate mapping sets between [!DNL Salesforce] source fields and XDM target fields.
+-->
 
-![](../../../images/tutorials/dataflow/all-tabular/mapping.png)
+Platform會根據您選取的目標結構或資料集，為自動對應欄位提供智慧型建議。 您可以手動調整對應規則以符合您的使用案例。
 
 選取「**[!UICONTROL 預覽資料]**」 ，即可查看所選資料集中最多100列範例資料的對應結果。
 
+![](../../../images/tutorials/dataflow/crm/preview-data.png)
+
 在預覽期間，身分欄會優先順序排列為第一個欄位，因為這是驗證對應結果時所需的關鍵資訊。
 
-![](../../../images/tutorials/dataflow/all-tabular/mapping-preview.png)
-
 映射源資料後，選擇&#x200B;**[!UICONTROL Close]**。
+
+![](../../../images/tutorials/dataflow/crm/preview.png)
+
+接下來，從[!UICONTROL Mapping]螢幕中，選擇&#x200B;**[!UICONTROL Next]**&#x200B;以繼續。
+
+![](../../../images/tutorials/dataflow/crm/mapping.png)
 
 ## 排程擷取執行
 
@@ -111,7 +119,7 @@ ht-degree: 0%
 
 選擇&#x200B;**[!UICONTROL 按]**&#x200B;載入增量資料以分配增量列。 此欄位可區分新資料和現有資料。
 
-![](../../../images/tutorials/dataflow/databases/schedule-interval-on.png)
+![](../../../images/tutorials/dataflow/crm/scheduling.png)
 
 ### 設定一次性內嵌資料流
 
@@ -123,7 +131,7 @@ ht-degree: 0%
 
 在為調度提供適當值後，選擇&#x200B;**[!UICONTROL Next]**。
 
-![排程一次](../../../images/tutorials/dataflow/databases/schedule-once.png)
+![排程一次](../../../images/tutorials/dataflow/crm/one-time-ingestion.png)
 
 ## 提供資料流詳細資訊
 
@@ -133,15 +141,15 @@ ht-degree: 0%
 
 為資料流提供值，然後選擇&#x200B;**[!UICONTROL Next]**。
 
-![dataflow-details](../../../images/tutorials/dataflow/all-tabular/dataflow-detail.png)
+![dataflow-details](../../../images/tutorials/dataflow/crm/dataflow-detail.png)
 
 ## 查看資料流
 
 此時將顯示&#x200B;*查看*&#x200B;步驟，允許您在建立新資料流之前查看該資料流。 詳細資料會分組為下列類別：
 
-* **[!UICONTROL 連接詳細資訊]**:顯示源類型、所選源檔案的相關路徑以及該源檔案中的列數。
-* **[!UICONTROL 映射詳細資訊]**:顯示要擷取來源資料的資料集，包括資料集所遵守的結構。
-* **[!UICONTROL 排程詳細資料]**:顯示擷取排程的作用中期間、頻率和間隔。
+* **[!UICONTROL 連線]**:顯示源帳戶名、源平台、所選源檔案的相關路徑以及該源檔案中的列數。
+* **[!UICONTROL 指派資料集和對應欄位]**:顯示要擷取來源資料的目標資料集，包括資料集所遵守的結構。
+* **[!UICONTROL 排程]**:顯示資料流的開始時間和頻率速率。
 
 審核資料流後，按一下&#x200B;**[!UICONTROL 完成]**&#x200B;並允許建立資料流的一些時間。
 
@@ -157,33 +165,13 @@ ht-degree: 0%
 
 ## 後續步驟
 
-依照本教學課程，您已成功建立資料流，以從CRM匯入資料，並深入了解監控資料集。 要了解有關建立資料流的詳細資訊，您可以觀看下面的視頻來補充學習內容。 此外，下游[!DNL Platform]服務（如[!DNL Real-time Customer Profile]和[!DNL Data Science Workspace]）現在可以使用傳入資料。 如需詳細資訊，請參閱下列檔案：
+依照本教學課程，您已成功建立資料流，以從CRM匯入資料，並深入了解監控資料集。 要了解有關建立資料流的詳細資訊，您可以觀看下面的視頻來補充學習內容。 此外，下游Platform服務（例如[!DNL Real-time Customer Profile]和[!DNL Data Science Workspace]）現在可以使用傳入資料。 如需詳細資訊，請參閱下列檔案：
 
 * [即時客戶個人檔案概觀](../../../../profile/home.md)
 * [Data Science Workspace概觀](../../../../data-science-workspace/home.md)
 
 >[!WARNING]
 >
-> 以下影片中顯示的[!DNL Platform] UI已過期。 請參閱上述檔案，了解最新的UI螢幕擷取畫面和功能。
-
+> 下列影片中顯示的Platform UI已過期。 請參閱上述檔案，了解最新的UI螢幕擷取畫面和功能。
+>
 >[!VIDEO](https://video.tv.adobe.com/v/29711?quality=12&learn=on)
-
-## 附錄
-
-以下各節提供使用源連接器的其他資訊。
-
-### 禁用資料流
-
-建立資料流時，它會立即變為活動狀態，並根據給定的時間表內嵌資料。 您可以隨時按照以下說明禁用活動資料流。
-
-在&#x200B;**[!UICONTROL authentication]**&#x200B;螢幕中，選擇與要禁用的資料流關聯的連接名稱。
-
-![](../../../images/tutorials/dataflow/crm/monitor.png)
-
-此時將顯示&#x200B;**源活動**&#x200B;頁。 從清單中選擇活動資料流，以在螢幕右側開啟其&#x200B;**[!UICONTROL 屬性]**&#x200B;列，該列包含&#x200B;**[!UICONTROL 啟用]**&#x200B;切換按鈕。 按一下切換按鈕以禁用資料流。 禁用資料流後，可以使用相同的切換按鈕重新啟用資料流。
-
-![disable](../../../images/tutorials/dataflow/crm/disable.png)
-
-### 啟用[!DNL Profile]母體的入站資料
-
-來自來源連接器的傳入資料可用於擴充和填入[!DNL Real-time Customer Profile]資料。 如需填入[!DNL Real-time Customer Profile]資料的詳細資訊，請參閱[設定檔填入](../profile.md)的教學課程。
