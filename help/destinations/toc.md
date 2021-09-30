@@ -4,9 +4,9 @@ user-guide-title: 目的地指南
 user-guide-description: 針對跨通路行銷活動、電子郵件宣傳、鎖定特定目標的行銷活動和其他諸多使用案例，啟用已知和未知的資料。
 description: 本檔案列出Adobe Experience Platform目的地的目錄
 feature: Destinations
-source-git-commit: 9ec7bd591af6c76a794f83d5a984017330328238
+source-git-commit: 6c21398a3f2fb26cc925ca1f5dcbe92b306a8325
 workflow-type: tm+mt
-source-wordcount: '628'
+source-wordcount: '644'
 ht-degree: 10%
 
 ---
@@ -27,6 +27,7 @@ ht-degree: 10%
       * [對串流區段匯出目的地啟用受眾資料](./ui/activate-segment-streaming-destinations.md)
       * [對串流設定檔匯出目的地啟用受眾資料](./ui/activate-streaming-profile-destinations.md)
       * [啟用受眾資料以批次設定檔匯出目的地](./ui/activate-batch-profile-destinations.md)
+      * [對設定檔請求目的地啟用受眾資料（測試版）](./ui/activate-profile-request-destinations.md)
    * [查看目標詳細資訊](./ui/destination-details-page.md)
    * [更新目標帳戶](./ui/update-accounts.md)
    * [編輯啟動流程](./ui/edit-activation.md)
@@ -114,9 +115,11 @@ ht-degree: 10%
       * [Braze連接](./catalog/mobile-engagement/braze.md)
    * 個人化目的地{#personalization}
       * [個人化目的地概觀](./catalog/personalization/overview.md)
+      * [Adobe Target連線（測試版）](./catalog/personalization/adobe-target-connection.md)
       * [Adobe Target 擴充功能](./catalog/personalization/adobe-target.md)
       * [Adobe Target v2 擴充功能](./catalog/personalization/adobe-target-v2.md)
       * [Beemray擴充功能](./catalog/personalization/beemray.md)
+      * [自訂個人化連線（測試版）](./catalog/personalization/custom-personalization.md)
       * [D&amp;B Visitor Intelligence擴充功能](./catalog/personalization/dnb.md)
       * [Experience Cloud ID 服務擴充功能](./catalog/personalization/adobe-ecid.md)
       * [Gainsight擴充功能](./catalog/personalization/gainsight.md)
@@ -141,7 +144,7 @@ ht-degree: 10%
       * [Medallia擴充功能](./catalog/voice/medallia.md)
       * [通話URL收件箱擴展](./catalog/voice/talkurl.md)
 * 目標SDK {#destination-sdk}
-   * [概覽](./destination-sdk/overview.md)
+   * [總覽](./destination-sdk/overview.md)
    * [整合必要條件](./destination-sdk/integration-prerequisites.md)
    * [快速入門](./destination-sdk/getting-started.md)
    * 目標SDK功能{#functionality}
