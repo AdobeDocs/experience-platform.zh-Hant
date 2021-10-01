@@ -5,9 +5,9 @@ title: 在Adobe Admin Console中建立新產品設定檔
 topic-legacy: user guide
 description: 本檔案說明在Adobe Admin Console中建立新產品設定檔所需的必要步驟。 若要開始建立新設定檔，請導覽至產品設定檔標籤，然後按一下新設定檔。
 exl-id: 47558f03-c3f7-4ead-affb-fcbfd7f1e918
-source-git-commit: 6228f499a42e61583abd1f7ff1e1af1fb90640c6
+source-git-commit: 2844ffd7270ffcc2fba4da08dda1aea238cf6c9f
 workflow-type: tm+mt
-source-wordcount: '315'
+source-wordcount: '322'
 ht-degree: 1%
 
 ---
@@ -30,7 +30,7 @@ ht-degree: 1%
 
 有權使用B2B或B2P版本的客戶可存取B2B UI。 可透過[!UICONTROL 啟用服務功能表]為使用者布建B2B UI。 選取[!UICONTROL B2B UI]旁的切換按鈕，以啟用特定產品設定檔的服務，然後選取&#x200B;**[!UICONTROL 儲存]**。
 
-B2B UI切換可讓使用者檢視與管理帳戶和機會相關的B2B工作流程，以及建立B2B相關區段。
+B2B UI切換可讓使用者檢視與管理帳戶和機會相關的B2B工作流程，以及建立B2B相關區段。 如需詳細資訊，請參閱[[!DNL Real-time Customer Data Platform B2B Edition]](../../rtcdp/b2b-overview.md)上的檔案。
 
 ![enable-b2b](../images/enable-b2b.png)
 
