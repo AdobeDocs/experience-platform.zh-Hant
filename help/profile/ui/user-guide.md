@@ -4,9 +4,9 @@ title: 即時客戶個人檔案UI指南
 topic-legacy: guide
 description: 「即時客戶設定檔」可結合來自多個管道的資料，包括線上、離線、CRM和協力廠商資料，讓您全面了解每個客戶。 本檔案可做為在Adobe Experience Platform使用者介面中與即時客戶設定檔互動的指南。
 exl-id: 792a3a73-58a4-4163-9212-4d43d24c2770
-source-git-commit: 69e510c9a0f477ad7cab530128c6728f68dfdab1
+source-git-commit: 771be1f5939066295c01eb573a13dbb740e8c776
 workflow-type: tm+mt
-source-wordcount: '1568'
+source-wordcount: '1774'
 ht-degree: 0%
 
 ---
@@ -136,9 +136,33 @@ ht-degree: 0%
 
 ![](../images/user-guide/profiles-profile-detail.png)
 
-您可以選取其他可用標籤，以檢視與個別設定檔相關的其他資訊。 這些標籤包含屬性、事件，以及顯示設定檔目前合格之區段的區段成員資格標籤。
+您可以選取其他可用標籤，以檢視與個別客戶設定檔相關的其他資訊。 這些標籤包含屬性、事件，以及顯示設定檔目前合格之區段的區段成員資格標籤。
 
 ![](../images/user-guide/profiles-attributes-events-segments.png)
+
+### 「屬性」索引標籤
+
+**[!UICONTROL Attributes]**&#x200B;頁簽提供一個清單視圖，在應用指定的合併策略後匯總與單個配置檔案相關的所有屬性。
+
+選取&#x200B;**[!UICONTROL 檢視JSON]**，也可將這些屬性視為JSON物件。 如有使用者希望進一步了解設定檔屬性擷取至Platform的方式，此功能將有所幫助。
+
+![](../images/user-guide/profiles-attributes.png)
+
+### 事件索引標籤
+
+**[!UICONTROL Events]**&#x200B;標籤包含與客戶相關聯的ExperienceEvents相關的資料。 這可能包括電子郵件開啟、購物車活動、頁面檢視等。 為任何個別事件選取&#x200B;**[!UICONTROL 檢視全部]**，會提供其他欄位和作為事件一部分擷取的值。
+
+選取&#x200B;**[!UICONTROL 檢視JSON]**，也可將事件視為JSON物件。 這有助於了解Platform中擷取事件的方式。
+
+![](../images/user-guide/profiles-events.png)
+
+### 區段成員資格標籤
+
+**[!UICONTROL 區段成員資格]**&#x200B;索引標籤會顯示清單，其中包含個別客戶設定檔目前所屬區段的名稱和說明。 當設定檔符合區段的資格或過期時，此清單會自動更新。 目前符合設定檔資格的區段總數會顯示在索引標籤的右側。
+
+如需Experience Platform中分段的詳細資訊，請參閱[AdobeExperience Platform分段服務檔案](../../segmentation/home.md)。
+
+![](../images/user-guide/profiles-segment-membership.png)
 
 ## 合併策略
 
