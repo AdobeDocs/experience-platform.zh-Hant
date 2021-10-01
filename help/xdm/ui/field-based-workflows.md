@@ -1,16 +1,20 @@
 ---
-title: 結構編輯器中的欄位型工作流程
-description: 了解如何個別將標準欄位從Adobe定義的欄位群組新增至Experience Data Model(XDM)結構。
+title: 結構編輯器（測試版）中的欄位型工作流程
+description: 了解如何將現有欄位群組的欄位個別新增至Experience Data Model(XDM)結構。
 hide: true
 hidefromtoc: true
-source-git-commit: 8947fbb815f3eda97fb218be6791cb67e6e66719
+source-git-commit: 139d453c3758f4f137cd1b31307b61dc777fc1c1
 workflow-type: tm+mt
-source-wordcount: '848'
+source-wordcount: '867'
 ht-degree: 0%
 
 ---
 
-# 結構編輯器中的欄位型工作流程
+# 結構編輯器（測試版）中的欄位型工作流程
+
+>[!IMPORTANT]
+>
+>本檔案所述的工作流程目前仍在測試中。 功能和檔案可能會有所變更。
 
 Adobe Experience Platform提供一組完善的標準化[欄位群組](../schema/composition.md#field-group)，以用於Experience Data Model(XDM)結構。 這些欄位群組背後的結構和語義都經過精心定制，以滿足Platform中各種不同的細分使用案例和其他下游應用程式。 您也可以定義自己的自訂欄位群組，以滿足獨特的業務需求。
 
