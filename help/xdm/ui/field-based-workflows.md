@@ -3,9 +3,10 @@ title: 結構編輯器（測試版）中的欄位型工作流程
 description: 了解如何將現有欄位群組的欄位個別新增至Experience Data Model(XDM)結構。
 hide: true
 hidefromtoc: true
-source-git-commit: 139d453c3758f4f137cd1b31307b61dc777fc1c1
+exl-id: 0499ff30-a602-419b-b9d3-2defdd4354a7
+source-git-commit: b7c6f37d3e6d824465713647b624473cff188378
 workflow-type: tm+mt
-source-wordcount: '867'
+source-wordcount: '1175'
 ht-degree: 0%
 
 ---
@@ -50,6 +51,26 @@ Adobe Experience Platform提供一組完善的標準化[欄位群組](../schema/
 
 ![新增欄位](../images/ui/field-based-workflows/fields-added.png)
 
+## 直接將標準欄位新增至結構
+
+您可以直接將標準欄位群組中的欄位新增至結構，而不需要預先知道其對應的欄位群組。 若要將標準欄位新增至架構，請在畫布中選取架構名稱旁的加號(**+**)圖示。 架構結構中會顯示&#x200B;**[!UICONTROL 未命名欄位]**&#x200B;預留位置，而右側邊欄會更新，顯示用以設定欄位的控制項。
+
+![欄位預留位置](../images/ui/field-based-workflows/root-custom-field.png)
+
+在&#x200B;**[!UICONTROL 欄位名稱]**&#x200B;下，開始鍵入要添加的欄位的名稱。 系統會自動搜尋符合查詢的標準欄位，並在&#x200B;**[!UICONTROL 建議標準欄位]**&#x200B;下列出，包括其所屬的欄位群組。
+
+![建議的標準欄位](../images/ui/field-based-workflows/standard-field-search.png)
+
+雖然某些標準欄位具有相同名稱，但其結構可能會因其來源欄位群組而異。 如果在欄位組結構中的父對象內嵌套了標準欄位，則如果添加了子欄位，則父欄位也將包含在架構中。
+
+選取標準欄位旁的預覽圖示（![預覽圖示](../images/ui/field-based-workflows/preview-icon.png)），以檢視其欄位群組的結構，並更清楚了解其可能巢狀內嵌的方式。 若要將標準欄位新增至架構，請選取加號圖示（![加號圖示](../images/ui/field-based-workflows/add-icon.png)）。
+
+![新增標準欄位](../images/ui/field-based-workflows/add-standard-field.png)
+
+畫布會更新，顯示新增至架構的標準欄位，包括欄位群組結構內巢狀的任何父欄位。 欄位群組的名稱也會列在左側邊欄的&#x200B;**[!UICONTROL 欄位群組]**&#x200B;底下。 如果您想從相同欄位群組新增更多欄位，請選取右側欄位中的「管理相關欄位&#x200B;]**」 。**[!UICONTROL 
+
+![新增標準欄位](../images/ui/field-based-workflows/standard-field-added.png)
+
 ## 直接將自訂欄位新增至結構
 
 如果您先前已建立[自訂欄位群組](./resources/field-groups.md#create)，則可直接將自訂欄位新增至架構，而無須預先將自訂欄位個別新增至自訂欄位群組。
@@ -62,7 +83,11 @@ Adobe Experience Platform提供一組完善的標準化[欄位群組](../schema/
 
 ![根自訂欄位](../images/ui/field-based-workflows/root-custom-field.png)
 
-使用右側邊欄中的控制項來提供欄位的名稱、顯示名稱和資料類型。 在&#x200B;**[!UICONTROL 分配欄位組]**&#x200B;下，選擇要與新欄位關聯的自定義欄位組。
+開始在要添加的自定義欄位的名稱中鍵入內容，系統會自動開始搜索匹配的標準欄位。 若要改為建立新自訂欄位，請選取附加&#x200B;**（[!UICONTROL 新欄位]）**&#x200B;的上層選項。
+
+![新欄位](../images/ui/field-based-workflows/custom-field-search.png)
+
+從此處，提供欄位的顯示名稱和資料類型。 在&#x200B;**[!UICONTROL 分配欄位組]**&#x200B;下，選擇要與新欄位關聯的自定義欄位組。
 
 ![選擇欄位組](../images/ui/field-based-workflows/select-field-group.png)
 
@@ -78,7 +103,7 @@ Adobe Experience Platform提供一組完善的標準化[欄位群組](../schema/
 >
 >依預設，所選自訂欄位群組提供的其餘欄位會從架構中移除。 如果要將其中一些欄位添加到架構中，請選擇屬於該組的欄位，然後在右側欄位中選擇&#x200B;**[!UICONTROL 管理相關欄位]**。
 
-### 將欄位添加到標準欄位組的結構
+### 將自訂欄位新增至標準欄位群組的結構
 
 如果您正在處理的結構具有標準欄位組提供的對象類型欄位，則您可以將自己的自定義欄位添加到該標準對象。 選取物件根目錄旁的加號(**+**)圖示，並在右側邊欄中提供自訂欄位的詳細資訊。
 
