@@ -2,16 +2,16 @@
 description: 此設定可讓您指出基本資訊，例如目的地名稱、類別、說明、標誌等。 此設定中的設定也會決定Experience Platform使用者如何驗證您的目的地、Experience Platform使用者介面中的顯示方式，以及可匯出至您目的地的身分識別。
 title: 目標SDK的目標配置選項
 exl-id: b7e4db67-2981-4f18-b202-3facda5c8f0b
-source-git-commit: 63fe3b7cc429a1c18cebe998bc82fdea99a6679b
+source-git-commit: 0d5cb5e47b3507cbbd5c34d1ae1fe99d81c67ffc
 workflow-type: tm+mt
-source-wordcount: '1557'
+source-wordcount: '1552'
 ht-degree: 4%
 
 ---
 
 # 目標配置 {#destination-configuration}
 
-## 概覽 {#overview}
+## 總覽 {#overview}
 
 此設定可讓您指出基本資訊，例如目的地名稱、類別、說明、標誌等。 此設定中的設定也會決定Experience Platform使用者如何驗證您的目的地、Experience Platform使用者介面中的顯示方式，以及可匯出至您目的地的身分識別。
 
@@ -63,7 +63,12 @@ ht-degree: 4%
    "identityNamespaces":{
       "external_id":{
          "acceptsAttributes":true,
-         "acceptsCustomNamespaces":true
+         "acceptsCustomNamespaces":true,
+         "acceptedGlobalNamespaces":{
+            "Email":{
+               
+            }
+         }
       },
       "another_id":{
          "acceptsAttributes":true,
@@ -214,7 +219,7 @@ Adobe需要知道哪些[!DNL Platform]身分識別客戶將能夠匯出至您的
 | `acceptsAttributes` | 布林值 | 指出目的地是否接受標準設定檔屬性。 通常，合作夥伴的檔案會強調顯示這些屬性。 |
 | `acceptsCustomNamespaces` | 布林值 | 指出客戶是否可在您的目的地中設定自訂命名空間。 |
 | `allowedAttributesTransformation` | 字串 | *範例設定中未顯示*。例如，當[!DNL Platform]客戶有純電子郵件地址作為屬性，且您的平台僅接受雜湊電子郵件時，就會使用。 您可在此提供需要套用的轉換（例如，將電子郵件轉換為小寫，然後雜湊）。 |
-| `acceptedGlobalNamespaces` | - | *範例設定中未顯示*。用於您的平台接受[標準身分識別命名空間](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=en#standard-namespaces)（例如IDFA）時的情況，因此您可以限制Platform使用者僅選取這些身分識別命名空間。 |
+| `acceptedGlobalNamespaces` | - | 用於您的平台接受[標準身分識別命名空間](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=en#standard-namespaces)（例如IDFA）時的情況，因此您可以限制Platform使用者僅選取這些身分識別命名空間。 |
 
 {style=&quot;table-layout:auto&quot;}
 

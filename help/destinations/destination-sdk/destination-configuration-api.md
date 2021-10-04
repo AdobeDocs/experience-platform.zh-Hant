@@ -2,9 +2,9 @@
 description: 本頁列出並說明您可使用「/authoring/destinations」 API端點執行的所有API操作。
 title: 目的地API端點作業
 exl-id: 96755e9d-be62-432f-b985-91330575b395
-source-git-commit: 9be8636b02a15c8f16499172289413bc8fb5b6f0
+source-git-commit: 0d5cb5e47b3507cbbd5c34d1ae1fe99d81c67ffc
 workflow-type: tm+mt
-source-wordcount: '2381'
+source-wordcount: '2352'
 ht-degree: 3%
 
 ---
@@ -77,7 +77,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
       }
    ],
    "uiAttributes":{
-      "documentationLink":"http://www.adobe.com/go/destinations-moviestar-en",
+      "documentationLink":"https://www.adobe.com/go/destinations-moviestar-en",
       "category":"mobile",
       "connectionType":"Server-to-server",
       "frequency":"Streaming"
@@ -85,7 +85,11 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
    "identityNamespaces":{
       "external_id":{
          "acceptsAttributes":true,
-         "acceptsCustomNamespaces":true
+         "acceptsCustomNamespaces":true,
+         "acceptedGlobalNamespaces":{
+            "Email":{
+            }
+         }
       },
       "another_id":{
          "acceptsAttributes":true,
@@ -172,14 +176,14 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 | `customerDataFields.isRequired` | 布林值 | 指示目標設定工作流中是否需要此欄位。 |
 | `customerDataFields.enum` | 字串 | 將自訂欄位轉譯為下拉式功能表，並列出使用者可用的選項。 |
 | `customerDataFields.pattern` | 字串 | 視需要為自訂欄位強制使用模式。 使用規則運算式來強制模式。 例如，若您的客戶ID未包含數字或底線，請在此欄位中輸入`^[A-Za-z]+$`。 |
-| `uiAttributes.documentationLink` | 字串 | 指您目的地的[目的地目錄](https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/overview.html?lang=en#catalog)中的檔案頁面。 使用`http://www.adobe.com/go/destinations-YOURDESTINATION-en`，其中`YOURDESTINATION`是目的地的名稱。 對於名為Moviestar的目標，請使用`http://www.adobe.com/go/destinations-moviestar-en`。 |
+| `uiAttributes.documentationLink` | 字串 | 指您目的地的[目的地目錄](https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/overview.html?lang=en#catalog)中的檔案頁面。 使用`https://www.adobe.com/go/destinations-YOURDESTINATION-en`，其中`YOURDESTINATION`是目的地的名稱。 對於名為Moviestar的目標，請使用`https://www.adobe.com/go/destinations-moviestar-en`。 |
 | `uiAttributes.category` | 字串 | 是指指派給Adobe Experience Platform中目的地的類別。 如需詳細資訊，請參閱[目標類別](https://experienceleague.adobe.com/docs/experience-platform/rtcdp/destinations/destination-types.html?lang=en#destination-categories)。 使用下列其中一個值：`adobeSolutions, advertising, analytics, cdp, cloudStorage, crm, customerSuccess, database, dmp, ecommerce, email, emailMarketing, enrichment, livechat, marketingAutomation, mobile, personalization, protocols, social, streaming, subscriptions, surveys, tagManagers, voc, warehouses, payments`。 |
 | `uiAttributes.connectionType` | 字串 | `Server-to-server` 是目前唯一可用的選項。 |
 | `uiAttributes.frequency` | 字串 | `Streaming` 是目前唯一可用的選項。 |
 | `identityNamespaces.externalId.acceptsAttributes` | 布林值 | 指出目的地是否接受標準設定檔屬性。 通常，合作夥伴的檔案會強調顯示這些屬性。 |
 | `identityNamespaces.externalId.acceptsCustomNamespaces` | 布林值 | 指出客戶是否可在您的目的地中設定自訂命名空間。 |
 | `identityNamespaces.externalId.allowedAttributesTransformation` | 字串 | _範例設定中未顯示_。例如，當[!DNL Platform]客戶有純電子郵件地址作為屬性，且您的平台僅接受雜湊電子郵件時，就會使用。 您可在此提供需要套用的轉換（例如，將電子郵件轉換為小寫，然後雜湊）。 |
-| `identityNamespaces.externalId.acceptedGlobalNamespaces` | - | _範例設定中未顯示_。用於您的平台接受[標準身分識別命名空間](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=en#standard-namespaces)（例如IDFA）時的情況，因此您可以限制Platform使用者僅選取這些身分識別命名空間。 <br> 使用時， `acceptedGlobalNamespaces`您可以使用小寫 `"requiredTransformation":"sha256(lower($))"` 和雜湊電子郵件地址或電話號碼。若要查看此參數的使用方式，請查看[更新目標配置](./destination-configuration-api.md#update)下一節中的配置。 |
+| `identityNamespaces.externalId.acceptedGlobalNamespaces` | - | 用於您的平台接受[標準身分識別命名空間](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=en#standard-namespaces)（例如IDFA）時的情況，因此您可以限制Platform使用者僅選取這些身分識別命名空間。 <br> 使用時， `acceptedGlobalNamespaces`您可以使用小寫 `"requiredTransformation":"sha256(lower($))"` 和雜湊電子郵件地址或電話號碼。 |
 | `destinationDelivery.authenticationRule` | 字串 | 指示[!DNL Platform]客戶如何連接到目標。 接受的值為`CUSTOMER_AUTHENTICATION`、`PLATFORM_AUTHENTICATION`、`NONE`。 <br> <ul><li>如果Platform客戶透過使用者名稱和密碼、承載權杖或其他驗證方法登入您的系統，請使用`CUSTOMER_AUTHENTICATION`。 例如，如果您也在`customerAuthenticationConfigurations`中選取了`authType: OAUTH2`或`authType:BEARER`，則可以選取此選項。 </li><li> 如果Adobe和目標之間存在全局身份驗證系統，並且[!DNL Platform]客戶不需要提供任何身份驗證憑據來連接到目標，請使用`PLATFORM_AUTHENTICATION`。 在這種情況下，必須使用[Credentials](./credentials-configuration.md)配置建立憑據對象。 </li><li>如果不需要任何身份驗證才能將資料發送到目標平台，請使用`NONE`。 </li></ul> |
 | `destinationDelivery.destinationServerId` | 字串 | 用於此目標的[目標伺服器模板](./destination-server-api.md)的`instanceId`。 |
 | `backfillHistoricalProfileData` | 布林值 | 控制在將區段啟動至目的地時，是否匯出歷史設定檔資料。<br> <ul><li> `true`: [!DNL Platform] 傳送在啟用區段之前符合區段資格的歷史使用者設定檔。 </li><li> `false`: [!DNL Platform] 僅包含區段啟動後符合區段資格的使用者設定檔。 </li></ul> |
@@ -279,7 +283,7 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/destination
             }
          ],
          "uiAttributes":{
-            "documentationLink":"http://www.adobe.com/go/destinations-moviestar-en",
+            "documentationLink":"https://www.adobe.com/go/destinations-moviestar-en",
             "category":"mobile",
             "connectionType":"Server-to-server",
             "frequency":"Streaming"
@@ -287,7 +291,12 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/destination
          "identityNamespaces":{
             "external_id":{
                "acceptsAttributes":true,
-               "acceptsCustomNamespaces":true
+               "acceptsCustomNamespaces":true,
+               "acceptedGlobalNamespaces":{
+                  "Email":{
+                     
+                  }
+               }
             },
             "another_id":{
                "acceptsAttributes":true,
@@ -379,14 +388,14 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/destination
 | `customerDataFields.isRequired` | 布林值 | 指示目標設定工作流中是否需要此欄位。 |
 | `customerDataFields.enum` | 字串 | 將自訂欄位轉譯為下拉式功能表，並列出使用者可用的選項。 |
 | `customerDataFields.pattern` | 字串 | 視需要為自訂欄位強制使用模式。 使用規則運算式來強制模式。 例如，若您的客戶ID未包含數字或底線，請在此欄位中輸入`^[A-Za-z]+$`。 |
-| `uiAttributes.documentationLink` | 字串 | 指您目的地的[目的地目錄](https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/overview.html?lang=en#catalog)中的檔案頁面。 使用`http://www.adobe.com/go/destinations-YOURDESTINATION-en`，其中`YOURDESTINATION`是目的地的名稱。 對於名為Moviestar的目標，您將使用`http://www.adobe.com/go/destinations-moviestar-en` |
+| `uiAttributes.documentationLink` | 字串 | 指您目的地的[目的地目錄](https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/overview.html?lang=en#catalog)中的檔案頁面。 使用`https://www.adobe.com/go/destinations-YOURDESTINATION-en`，其中`YOURDESTINATION`是目的地的名稱。 對於名為Moviestar的目標，您將使用`https://www.adobe.com/go/destinations-moviestar-en` |
 | `uiAttributes.category` | 字串 | 是指指派給Adobe Experience Platform中目的地的類別。 如需詳細資訊，請參閱[目標類別](https://experienceleague.adobe.com/docs/experience-platform/rtcdp/destinations/destination-types.html?lang=en#destination-categories)。 使用下列其中一個值：`adobeSolutions, advertising, analytics, cdp, cloudStorage, crm, customerSuccess, database, dmp, ecommerce, email, emailMarketing, enrichment, livechat, marketingAutomation, mobile, personalization, protocols, social, streaming, subscriptions, surveys, tagManagers, voc, warehouses, payments` |
 | `uiAttributes.connectionType` | 字串 | `Server-to-server` 是目前唯一可用的選項。 |
 | `uiAttributes.frequency` | 字串 | `Streaming` 是目前唯一可用的選項。 |
 | `identityNamespaces.externalId.acceptsAttributes` | 布林值 | 指出目的地是否接受標準設定檔屬性。 通常，合作夥伴的檔案會強調顯示這些屬性。 |
 | `identityNamespaces.externalId.acceptsCustomNamespaces` | 布林值 | 指出客戶是否可在您的目的地中設定自訂命名空間。 閱讀更多有關Adobe Experience Platform中[自訂命名空間](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=en#manage-namespaces)的資訊。 |
 | `identityNamespaces.externalId.allowedAttributesTransformation` | 字串 | _範例設定中未顯示_。例如，當[!DNL Platform]客戶有純電子郵件地址作為屬性，且您的平台僅接受雜湊電子郵件時，就會使用。 您可在此提供需要套用的轉換（例如，將電子郵件轉換為小寫，然後雜湊）。 |
-| `identityNamespaces.externalId.acceptedGlobalNamespaces` | - | _範例設定中未顯示_。用於您的平台接受[標準身分識別命名空間](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=en#standard-namespaces)（例如IDFA）時的情況，因此您可以限制Platform使用者僅選取這些身分識別命名空間。 |
+| `identityNamespaces.externalId.acceptedGlobalNamespaces` | - | 用於您的平台接受[標準身分識別命名空間](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=en#standard-namespaces)（例如IDFA）時的情況，因此您可以限制Platform使用者僅選取這些身分識別命名空間。 |
 | `destinationDelivery.authenticationRule` | 字串 | 指示[!DNL Platform]客戶如何連接到目標。 接受的值為`CUSTOMER_AUTHENTICATION`、`PLATFORM_AUTHENTICATION`、`NONE`。 <br> <ul><li>如果Platform客戶透過使用者名稱和密碼、承載權杖或其他驗證方法登入您的系統，請使用`CUSTOMER_AUTHENTICATION`。 例如，如果您也在`customerAuthenticationConfigurations`中選取了`authType: OAUTH2`或`authType:BEARER`，則可以選取此選項。 </li><li> 如果Adobe和目標之間存在全局身份驗證系統，並且[!DNL Platform]客戶不需要提供任何身份驗證憑據來連接到目標，請使用`PLATFORM_AUTHENTICATION`。 在這種情況下，必須使用[Credentials](./credentials-configuration.md)配置建立憑據對象。 </li><li>如果不需要任何身份驗證才能將資料發送到目標平台，請使用`NONE`。 </li></ul> |
 | `destinationDelivery.destinationServerId` | 字串 | 用於此目標的[目標伺服器模板](./destination-server-api.md)的`instanceId`。 |
 | `inputSchemaId` | 字串 | 此欄位會自動產生，不需要您輸入。 |
@@ -465,7 +474,7 @@ curl -X PUT https://platform.adobe.io/data/core/activation/authoring/destination
       }
    ],
    "uiAttributes":{
-      "documentationLink":"http://www.adobe.com/go/destinations-moviestar-en",
+      "documentationLink":"https://www.adobe.com/go/destinations-moviestar-en",
       "category":"mobile",
       "connectionType":"Server-to-server",
       "frequency":"Streaming"
@@ -473,7 +482,11 @@ curl -X PUT https://platform.adobe.io/data/core/activation/authoring/destination
    "identityNamespaces":{
       "external_id":{
          "acceptsAttributes":true,
-         "acceptsCustomNamespaces":true
+         "acceptsCustomNamespaces":true,
+         "acceptedGlobalNamespaces":{
+            "Email":{
+            }
+         }
       },
       "another_id":{
          "acceptsAttributes":true,
@@ -647,7 +660,7 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/destination
       }
    ],
    "uiAttributes":{
-      "documentationLink":"http://www.adobe.com/go/destinations-moviestar-en",
+      "documentationLink":"https://www.adobe.com/go/destinations-moviestar-en",
       "category":"mobile",
       "connectionType":"Server-to-server",
       "frequency":"Streaming"
@@ -655,7 +668,12 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/destination
    "identityNamespaces":{
       "external_id":{
          "acceptsAttributes":true,
-         "acceptsCustomNamespaces":true
+         "acceptsCustomNamespaces":true,
+         "acceptedGlobalNamespaces":{
+            "Email":{
+               
+            }
+         }
       },
       "another_id":{
          "acceptsAttributes":true,

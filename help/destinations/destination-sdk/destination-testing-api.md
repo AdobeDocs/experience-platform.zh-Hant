@@ -2,9 +2,9 @@
 description: 本頁列出並說明您可使用「/authoring/testing/destinationInstance/」 API端點來執行的所有API操作，以測試您的目的地是否已正確設定，以及驗證資料流向您所設定目的地的完整性。
 title: 目的地測試API操作
 exl-id: 2b54250d-ec30-4ad7-a8be-b86b14e4f074
-source-git-commit: 9be8636b02a15c8f16499172289413bc8fb5b6f0
+source-git-commit: 45cff6f0c4d4fd63a17108087edec0184cbf9703
 workflow-type: tm+mt
-source-wordcount: '657'
+source-wordcount: '664'
 ht-degree: 1%
 
 ---
@@ -20,6 +20,8 @@ ht-degree: 1%
 您可以使用或不將設定檔新增至呼叫，向測試端點提出請求。 如果您未在請求上傳送任何設定檔，Adobe會在內部為您產生這些設定檔，並將其新增至請求。
 
 您可以使用[範例設定檔產生API](./sample-profile-generation-api.md)來建立要在目標測試API的請求中使用的設定檔。
+
+## 如何取得目的地執行個體ID {#get-destination-instance-id}
 
 >[!IMPORTANT]
 >
