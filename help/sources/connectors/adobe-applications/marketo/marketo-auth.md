@@ -5,14 +5,18 @@ title: 驗證您的Marketo來源連接器
 topic-legacy: overview
 description: 本檔案提供如何產生Marketo驗證憑證的相關資訊。
 exl-id: 594dc8b6-cd6e-49ec-9084-b88b1fe8167a
-source-git-commit: 50e92ac8c1eccc9ccfb6b078ad8b996817a6d693
+source-git-commit: 0661d124ffe520697a1fc8e2cae7b0b61ef4edfc
 workflow-type: tm+mt
-source-wordcount: '603'
+source-wordcount: '622'
 ht-degree: 0%
 
 ---
 
-# 驗證[!DNL Marketo Engage]源連接器
+# （測試版）驗證[!DNL Marketo Engage]源連接器
+
+>[!IMPORTANT]
+>
+>Adobe Experience Platform中的[!DNL Marketo Engage]來源目前為Beta版。 檔案和功能可能會有所變更。
 
 在建立[!DNL Marketo Engage]（下稱為「[!DNL Marketo]」）源連接器之前，您必須先通過[!DNL Marketo]介面設定自定義服務，並檢索Munchkin ID、客戶端ID和客戶端密碼的值。
 
