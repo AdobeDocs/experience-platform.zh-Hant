@@ -2,9 +2,9 @@
 title: 稽核記錄概述
 description: 了解稽核記錄如何讓您查看誰在Adobe Experience Platform中執行了哪些動作。
 exl-id: 00baf615-5b71-4e0a-b82a-ca0ce8566e7f
-source-git-commit: 4dc49c7219ebb613c74e5960f1f8d477dc1b7605
+source-git-commit: d4beb7691c8fb38359425509a40572ea9b09fd26
 workflow-type: tm+mt
-source-wordcount: '598'
+source-wordcount: '608'
 ht-degree: 5%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 5%
 
 >[!IMPORTANT]
 >
->Adobe Experience Platform中的稽核記錄功能目前仍在測試中。 本檔案所述的功能可能會有所變更。
+>Adobe Experience Platform中的稽核記錄功能目前處於測試階段，而您的組織可能尚未取得存取權。 本檔案所述的功能可能會有所變更。
 
 為了提高系統中執行活動的透明度和可見度，Adobe Experience Platform可讓您以「稽核記錄」的形式，稽核各種服務和功能的使用者活動。 這些日誌形成了審核跟蹤，可以幫助Platform上的問題進行故障排除，並幫助您的企業有效遵守公司資料管理策略和法規要求。
 
