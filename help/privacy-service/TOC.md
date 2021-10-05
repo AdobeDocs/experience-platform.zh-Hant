@@ -4,10 +4,10 @@ user-guide-title: Adobe Experience Platform 隱私權服務說明
 breadcrumb-title: 隱私權服務指南
 user-guide-description: 管理客戶資料要求，以符合 GDPR 和 CCPA 等法律隱私權法規。
 feature: Privacy
-source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
+source-git-commit: dfe9c1ef826bc769a82938223029cd41c066c221
 workflow-type: tm+mt
-source-wordcount: '82'
-ht-degree: 50%
+source-wordcount: '86'
+ht-degree: 47%
 
 ---
 
@@ -24,13 +24,14 @@ ht-degree: 50%
    * [同意](api/consent.md)
    * [附錄](api/appendix.md)
 * Privacy ServiceUI {#ui}
-   * [概覽](ui/overview.md)
+   * [總覽](ui/overview.md)
    * [管理隱私權工作](ui/user-guide.md)
 * [訂閱隱私權事件](privacy-events.md)
 * 隱私權法規 {#regulations}
-   * [概覽](regulations/overview.md)
+   * [總覽](regulations/overview.md)
    * [常見問題集](regulations/faq.md)
    * [術語](regulations/terminology.md)
+* [資料衛生API(Alpha)](data-hygiene-api.md)
 * [疑難排解指南](troubleshooting-guide.md)
 * [API 參考資料](https://www.adobe.io/experience-platform-apis/references/privacy-service/)
 * [發行說明](release-notes.md)
