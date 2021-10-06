@@ -5,10 +5,10 @@ title: 查詢服務疑難排解指南
 topic-legacy: troubleshooting
 description: 本文檔包含有關您遇到的常見錯誤代碼和可能原因的資訊。
 exl-id: 14cdff7a-40dd-4103-9a92-3f29fa4c0809
-source-git-commit: 2b118228473a5f07ab7e2c744b799f33a4c44c98
+source-git-commit: 42288ae7db6fb19bc0a0ee8e4ecfa50b7d63d017
 workflow-type: tm+mt
-source-wordcount: '525'
-ht-degree: 6%
+source-wordcount: '699'
+ht-degree: 4%
 
 ---
 
@@ -60,6 +60,10 @@ LIMIT 100;
 
 使用時間序列資料進行查詢時，您應盡可能使用時間戳記篩選器，以進行更精確的分析。
 
+>[!NOTE]
+>
+> 日期字串&#x200B;**必須**&#x200B;為`yyyy-mm-ddTHH24:MM:SS`格式。
+
 以下是使用時間戳記篩選的範例：
 
 ```sql
@@ -74,6 +78,60 @@ WHERE  timestamp >= To_timestamp('2021-01-21 12:00:00')
 ### 我是否應使用萬用字元（例如*），從資料集中取得所有列？
 
 您無法使用萬用字元(*)來從您的列取得所有資料，因為「查詢服務」應被視為&#x200B;**欄位式存放區**，而非傳統的以列為基礎的存放系統。
+
+### 我是否應在SQL查詢中使用`NOT IN`?
+
+`NOT IN`運算子通常用於檢索在其他表或SQL陳述式中找不到的行。 如果要比較的列接受`NOT NULL`，或您有大量記錄，此運算子可能會降低效能，並且可能返回意外結果。
+
+您可以使用`NOT EXISTS`或`LEFT OUTER JOIN`，而不使用`NOT IN`。
+
+例如，如果您已建立下清單格：
+
+```sql
+CREATE TABLE T1 (ID INT)
+CREATE TABLE T2 (ID INT)
+INSERT INTO T1 VALUES (1)
+INSERT INTO T1 VALUES (2)
+INSERT INTO T1 VALUES (3)
+INSERT INTO T2 VALUES (1)
+INSERT INTO T2 VALUES (2)
+```
+
+如果您使用`NOT EXISTS`運算子，則可使用`NOT IN`運算子，使用下列查詢進行複製：
+
+```sql
+SELECT ID FROM T1
+WHERE NOT EXISTS
+(SELECT ID FROM T2 WHERE T1.ID = T2.ID)
+```
+
+或者，如果您使用`LEFT OUTER JOIN`運算子，則可使用`NOT IN`運算子，使用以下查詢進行複製：
+
+```sql
+SELECT T1.ID FROM T1
+LEFT OUTER JOIN T2 ON T1.ID = T2.ID
+WHERE T2.ID IS NULL
+```
+
+### `OR`和`UNION`運算子的正確用法是什麼？
+
+### 如何在SQL查詢中正確使用`CAST`運算子來轉換我的時間戳？
+
+使用`CAST`運算子轉換時間戳記時，您需要同時包含日期&#x200B;**和**&#x200B;時間。
+
+例如，遺失時間元件（如下所示）將導致錯誤：
+
+```sql
+SELECT * FROM ABC
+WHERE timestamp = CAST('07-29-2021' AS timestamp)
+```
+
+`CAST`運算子的正確用法如下所示：
+
+```sql
+SELECT * FROM ABC
+WHERE timestamp = CAST('07-29-2021 00:00:00' AS timestamp)
+```
 
 ## REST API錯誤
 
