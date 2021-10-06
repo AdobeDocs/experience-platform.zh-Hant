@@ -4,15 +4,15 @@ solution: Experience Platform, Real-time Customer Data Platform
 audience: user
 user-guide-title: 即時客戶資料平台指南
 user-guide-description: 將來自多個企業來源的已知和匿名資料放在一起，以建立客戶設定檔，從這些設定檔建立對象區段，並對協力廠商目的地啟動這些區段。
-source-git-commit: 30a4d2b27092f4706bb4f3f986a190502b184034
+source-git-commit: 8e7ceaa5f62ee7647b5a53c494c9b3acb43c14c7
 workflow-type: tm+mt
-source-wordcount: '147'
-ht-degree: 37%
+source-wordcount: '160'
+ht-degree: 34%
 
 ---
 
 
-# 即時客戶資料平台說明 {#rtcdp}
+# Real-time Customer Data Platform說明 {#rtcdp}
 
 * [Real-time CDP概述](overview.md)
 * [Real-time CDP B2B Edition概述](b2b-overview.md)
@@ -24,19 +24,24 @@ ht-degree: 37%
       * [開始使用Real-time CDP B2B Edition](./b2b-use-case.md)
 * 管理 {#admin}
    * [管理概述](administration/admin-overview.md)
+* 帳戶配置檔案{#account}
+   * [帳戶設定檔概觀](accounts/account-profile-overview.md)
+   * [帳戶設定檔UI指南](accounts/account-profile-ui-guide.md)
 * 資料集 {#datasets}
    * [資料集](datasets/dataset.md)
    * [Platform上的資料品質](datasets/data-quality.md)
 * 目的地 {#destinations}
    * [目的地概觀](destinations/overview.md)
+* 身分{#identity}
+   * [身分與身分識別命名空間](profile/identities-overview.md)
 * 隱私權與資料控管{#privacy}
    * [隱私權概觀](privacy/privacy-overview.md)
    * [資料控管概觀](privacy/data-governance-overview.md)
+* 合併策略{#merge-policies}
+   * [合併策略概述](profile/merge-policies.md)
 * 設定檔 {#profile}
    * [設定檔概觀](profile/profile-overview.md)
-   * [身分與身分識別命名空間](profile/identities-overview.md)
-   * [合併策略](profile/merge-policies.md)
-   * [設定檔檢視器](profile/profile-viewer.md)
+   * [設定檔瀏覽](profile/profile-browse.md)
 * 區段 {#segmentation}
    * [區段概觀](segmentation/segmentation-overview.md)
    * [區段產生器指南](segmentation/segment-builder-guide.md)

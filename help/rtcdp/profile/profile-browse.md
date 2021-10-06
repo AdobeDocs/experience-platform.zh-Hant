@@ -1,0 +1,60 @@
+---
+keywords: 檢視設定檔rtcdp;rtcdp設定檔檢視；rtcdp設定檔
+title: 在Real-time Customer Data Platform中瀏覽設定檔
+description: Real-time Customer Data Platform可讓您使用Adobe Experience Platform使用者介面來瀏覽即時客戶個人檔案資料。
+exl-id: 8481e286-2ff0-484f-85d2-a8db9b08d8d3
+source-git-commit: 6579e371a8729e926b7061418c786150a27d4876
+workflow-type: tm+mt
+source-wordcount: '552'
+ht-degree: 0%
+
+---
+
+
+# 在Real-time Customer Data Platform中瀏覽設定檔
+
+「即時客戶設定檔」可結合來自多個管道的資料，包括線上、離線、CRM和協力廠商資料，讓您全面了解每個客戶。 當個別設定檔會根據從各種來源匯入系統的資料進行匯總時，每個設定檔都會成為客戶與您品牌每次互動的可操作時間戳記帳戶。
+
+在Adobe Experience Platform使用者介面中，您可以檢視這些唯讀設定檔，並查看有關每個個別客戶的重要資訊，包括其偏好設定、過去事件、互動，以及個人所屬的區段。
+
+Real-time Customer Data Platform建置在Adobe Experience Platform上，因此可以使用Experience PlatformUI中的設定檔檢視功能。 如需在Platform使用者介面中檢視客戶設定檔的詳細指南，請參閱[即時客戶設定檔使用指南](../../profile/ui/user-guide.md)。
+
+## Real-time CDP B2B Edition的配置檔案增強功能
+
+>[!IMPORTANT]
+>
+>Real-time Customer Data Platform B2B版目前仍在測試中。 檔案和功能可能會有所變更。
+
+除了Adobe Experience Platform支援的設定檔瀏覽功能外，Real-time CDP B2B Edition使用者還可分別在[!UICONTROL Attributes]和[!UICONTROL Events]標籤上存取客戶設定檔中的B2B屬性和事件。 B2B資料也可用來執行分段，這些區段出現在客戶的[!UICONTROL 區段成員資格]標籤下，以及非B2B區段下。
+
+Real-time CDP, B2B Edition還允許您從與單個客戶關聯的企業源瀏覽[!UICONTROL 帳戶]、[!UICONTROL Opportunity]和[!UICONTROL 源記錄]。
+
+若要探索這些增強功能，請先依照[即時客戶設定檔使用手冊](../../profile/ui/user-guide.md)中概述的步驟，依合併原則或身分命名空間來瀏覽設定檔。
+
+![](images/b2b-browse-profile.png)
+
+配置檔案詳細資訊包括對[!UICONTROL 帳戶]、[!UICONTROL 機會]和[!UICONTROL 源記錄]頁簽的訪問，以及在客戶配置檔案中提供的標準資訊，這些資訊也已通過B2B事件和屬性得到增強。
+
+![](images/b2b-profile-detail.png)
+
+### 帳戶索引標籤
+
+選擇&#x200B;**[!UICONTROL 帳戶]**&#x200B;以查看與配置檔案相關的帳戶清單。 此清單包含帳戶設定檔的基本資訊，例如帳戶的名稱、網站和產業，以及帳戶設定檔的連結。
+
+如需檢視和探索帳戶設定檔的詳細資訊，請從閱讀[帳戶設定檔概述](../accounts/account-profile-overview.md)開始。
+
+![](images/b2b-profile-accounts.png)
+
+### 「機會」頁簽
+
+**[!UICONTROL Opportunity]**&#x200B;頁簽提供與帳戶相關的未結和已結業務機會的詳細資訊。 這些機會可能會從多個來源Experience Platform，但即時CDP B2B Edition可讓行銷人員輕鬆在一個地方一起查看所有這些機會。
+
+每個機會都包括以下資訊：機會的名稱、其金額、階段，以及該機會是開啟、關閉、成功還是丟失。
+
+![](images/b2b-profile-opportunities.png)
+
+### 源記錄頁簽
+
+**[!UICONTROL 源記錄]**&#x200B;頁簽使您能夠輕鬆查看來自企業源的多個源記錄，這些源記錄對單個客戶配置檔案有貢獻。 除了[!UICONTROL 人員源密鑰]和電子郵件地址之外，每個源記錄還提供記錄類型（例如，「聯繫人」或「潛在客戶」記錄）以及源。
+
+![](images/b2b-profile-source-records.png)

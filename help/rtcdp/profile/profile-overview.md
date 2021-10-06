@@ -1,38 +1,45 @@
 ---
-keywords: rtcdp描述檔；描述檔rtcdp;rtcdp身份；rtcdp合併策略；即時客戶描述檔
-title: 即時客戶個人檔案概觀
-seo-title: 即時客戶資料平台中的即時客戶個人檔案
-description: 瞭解即時客戶資料平台如何讓您使用即時客戶個人檔案，為客戶提供協調一致的相關體驗。
-seo-description: 即時客戶資料平台、個人檔案、資料、體驗、通道
-translation-type: tm+mt
-source-git-commit: 36f63cecd49e6a6b39367359d50252612ea16d7a
+keywords: rtcdp設定檔；設定檔rtcdp;rtcdp身分；rtcdp合併原則；即時客戶設定檔
+title: 了解Real-time CDP中的即時客戶個人檔案
+description: 了解Real-time Customer Data Platform如何讓您使用即時客戶個人檔案，為客戶提供協調一致的相關體驗。
+exl-id: de70948c-ffc1-49d3-a57c-25ad415752ff
+source-git-commit: 6579e371a8729e926b7061418c786150a27d4876
 workflow-type: tm+mt
-source-wordcount: '404'
+source-wordcount: '475'
 ht-degree: 0%
 
 ---
 
+# 即時客戶個人檔案概觀
 
-# [!DNL Real-time Customer Profile]概述
-
-[!DNL Real-time Customer Profile] 透過結合來自多個通道（包括線上、離線、CRM和協力廠商資料）的資料，您可以全面瞭解每個客戶。[!DNL Profile] 可讓您將分散的客戶資料整合為統一的檢視，提供每個客戶互動的可操作、時間戳記帳戶。
+「即時客戶個人檔案」可讓您結合來自多個管道的資料，包括線上、離線、CRM和協力廠商資料，以全面了解每個客戶。 每個個別客戶設定檔都可讓您將不同的客戶資料併入統一檢視中，為每個客戶互動提供可操作的時間戳記帳戶。
 
 ## [!DNL Real-time Customer Data Platform]中的配置檔案
 
-[!DNL Real-time Customer Data Platform] 讓您無論客戶在何處或何時與您的品牌互動，都能為客戶帶來協調一致的體驗。提供這些個人化體驗，讓體驗更貼切、更及時，絕非易事，但您可以透過使用Adobe Experience Platform的[!DNL Real-time Customer Profile]來達成。 即時CDP建立在[!DNL Experience Platform]之上，並利用許多[!DNL Experience Platform]服務和功能，包括建立配置檔案。 這些匯整的個別客戶視圖匯集了來自您許多行銷通道的資料，以及貴組織目前用來儲存客戶資料的不同系統。
+[!DNL Real-time Customer Data Platform] 可讓您為客戶推動協調一致的體驗，無論客戶在何處或何時與您的品牌互動。提供這些個人化體驗，讓使用者感到相關且及時，並非易事，但可透過使用Adobe Experience Platform的「即時客戶個人檔案」來達成。
 
-## 身分與身分名稱空間
+Real-time CDP是以Experience Platform為基礎構建的，利用了許多核心Experience Platform特性和功能，包括建立配置檔案。 這些個別客戶的匯總檢視會匯集來自許多行銷管道的資料，以及貴組織目前用來儲存客戶資料的不同系統。
 
-當客戶資料匯集在一起時，它會透過使用身分識別功能併入單一個人檔案中，而且當每位客戶的相關資訊越來越多時，能夠將這些身分識別整合在一起。 若要進一步瞭解身分識別和身分識別名稱空間，請參閱[identitys overview](/help/rtcdp/profile/identities-overview.md)。
+## Real-time CDP B2B Edition的配置檔案增強功能
 
-## 合併原則
+>[!IMPORTANT]
+>
+>Real-time Customer Data Platform B2B版目前仍在測試中。 檔案和功能可能會有所變更。
 
-將客戶資料整合在一起時，合併原則是[!DNL Platform]用來決定資料優先順序以及將哪些資料合併以建立該統一檢視的規則。 有關合併策略的詳細資訊，請參閱[合併策略概述](/help/rtcdp/profile/merge-policies.md)。
+除了Real-time CDP支援的配置檔案功能外，您還可以使用Real-time CDP B2B Edition來瀏覽與個人相關的重要資訊，如帳戶和銷售機會。 要了解有關Real-time CDP B2B Edition的配置檔案增強功能的更多資訊，請從閱讀[配置檔案瀏覽指南](profile-browse.md)開始。
+
+## 身分識別與身分識別命名空間
+
+當客戶資料匯整在一起時，會透過使用身分資料，並合併為單一設定檔，而且當每個客戶的詳細資訊都已知時，就能將這些身分資料匯整在一起。 若要進一步了解身分和身分識別命名空間，請參閱[身分概述](identities-overview.md)。
+
+## 合併策略
+
+將客戶資料匯整在一起時，Platform會使用合併原則來判斷資料的優先順序，以及將結合哪些資料來建立該統一檢視。 有關合併策略的詳細資訊，請參閱[合併策略概述](merge-policies.md)。
 
 ## 設定檔檢視器
 
-[!DNL Platform] 可讓您輕鬆檢視客戶個人檔案，並使用各種屬性搜尋特定個人檔案。如需如何在[!DNL Platform]中檢視描述檔的詳細資訊，請參閱[描述檔檢視器概觀](/help/rtcdp/profile/profile-viewer.md)。
+Platform可讓您輕鬆檢視客戶設定檔，並使用各種屬性搜尋特定設定檔。 有關如何在Platform中檢視設定檔的詳細資訊，請參閱[設定檔瀏覽概述](profile-browse.md)。
 
 ## 後續步驟
 
-閱讀本概述後，您現在應該瞭解即時CDP如何利用[!DNL Real-time Customer Profile]大規模實現跨通道個人化。 透過將不同來源的身分識別結合在一起，您可以看到每個個別客戶的完整圖景，讓您的行銷宣傳更上一層樓。 如需詳細資訊，包括在使用者介面和透過API處理[!DNL Real-time Customer Profile]資料的最佳實務和教學課程，請參閱[即時客戶設定檔檔案](../../profile/home.md)。
+將不同來源的資料匯整在一起，您就可以看到每個客戶的完整圖片，讓您的行銷活動提升到全新的境界。 如需詳細資訊，包括在使用者介面和透過API使用即時客戶設定檔資料的最佳實務和教學課程，請參閱[即時客戶設定檔檔案檔案](../../profile/home.md)。
