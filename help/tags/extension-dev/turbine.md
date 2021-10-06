@@ -2,9 +2,9 @@
 title: Turbine自由變數
 description: 了解Turbine物件，此自由變數可提供Adobe Experience Platform標籤執行階段的特定資訊和公用程式。
 exl-id: 1664ab2e-8704-4a56-8b6b-acb71534084e
-source-git-commit: 86a009fd5c633ff45943d86b16c34a779d4141be
+source-git-commit: 27dd38cc509040ea9dc40fc7030dcdec9a182d55
 workflow-type: tm+mt
-source-wordcount: '619'
+source-wordcount: '625'
 ht-degree: 49%
 
 ---
@@ -39,6 +39,7 @@ console.log(turbine.buildInfo.turbineBuildDate);
 | `turbineBuildDate` | 建置容器內使用的 [Turbine](https://www.npmjs.com/package/@adobe/reactor-turbine) 版本時的 ISO 8601 日期。 |
 | `buildDate` | 建置目前程式庫時的 ISO 8601 日期。 |
 
+{style=&quot;table-layout:auto&quot;}
 
 ## `environment`
 
@@ -60,6 +61,7 @@ console.log(turbine.environment.stage);
 | `id` | 環境ID。 |
 | `stage` | 建置此程式庫的環境。可能的值為`development`、`staging`和`production`。 |
 
+{style=&quot;table-layout:auto&quot;}
 
 ## `debugEnabled`
 
@@ -67,7 +69,7 @@ console.log(turbine.environment.stage);
 
 如果您只是要記錄訊息，則不太可能需要使用此功能。請一律使用`turbine.logger`記錄訊息，以確保您的訊息只會在啟用標籤偵錯時列印至主控台。
 
-### `getDataElementValue`
+## `getDataElementValue`
 
 ```js
 console.log(turbine.getDataElementValue(dataElementName));
@@ -75,7 +77,7 @@ console.log(turbine.getDataElementValue(dataElementName));
 
 傳回資料元素的值。
 
-### `getExtensionSettings` {#get-extension-settings}
+## `getExtensionSettings` {#get-extension-settings}
 
 ```js
 var extensionSettings = turbine.getExtensionSettings();
@@ -85,7 +87,7 @@ var extensionSettings = turbine.getExtensionSettings();
 
 請注意，傳回的設定物件中包含的值可能來自資料元素。因此，如果資料元素的值已變更，則在不同時間呼叫 `getExtensionSettings()` 可能會產生不同的結果。若要取得最新的值，請盡可能等候再呼叫`getExtensionSettings()`。
 
-### `getHostedLibFileUrl` {#get-hosted-lib-file}
+## `getHostedLibFileUrl` {#get-hosted-lib-file}
 
 ```js
 var loadScript = require('@adobe/reactor-load-script');
@@ -96,7 +98,7 @@ loadScript(turbine.getHostedLibFileUrl('AppMeasurement.js')).then(function() {
 
 [hostedLibFiles](./manifest.md)屬性可定義在擴充功能資訊清單中，以便與標籤執行階段程式庫一起托管各種檔案。 此模組會傳回指定的程式庫檔案託管所在的 URL。
 
-### `getSharedModule` {#shared}
+## `getSharedModule` {#shared}
 
 ```js
 var mcidInstance = turbine.getSharedModule('adobe-mcid', 'mcid-instance');
@@ -104,7 +106,7 @@ var mcidInstance = turbine.getSharedModule('adobe-mcid', 'mcid-instance');
 
 擷取已從其他擴充功能共用的模組。 若未找到相符的模組，將會傳回 `undefined`。如需關於共用模組的詳細資訊，請參閱[實作共用模組](./web/shared.md)。
 
-### `logger`
+## `logger`
 
 ```js
 turbine.logger.error('Error!');
@@ -119,13 +121,13 @@ turbine.logger.error('Error!');
 * `logger.debug(message: string)`：將除錯訊息記錄到主控台。(只有在您的瀏覽器主控台內啟用 `verbose` 記錄時才可見。)
 * `logger.deprecation(message: string)`:無論使用者是否啟用標籤偵錯，都會將警告訊息記錄到主控台。
 
-### `onDebugChanged`
+## `onDebugChanged`
 
 將回呼函式傳入`turbine.onDebugChanged`後，每當切換除錯功能時，標籤就會呼叫您的回呼。 標籤會將布林值傳遞至回呼函式，若已啟用除錯，則為true；若停用除錯，則為false。
 
 如果您只是要記錄訊息，則不太可能需要使用此功能。請一律使用`turbine.logger`記錄訊息，而標籤將確保您的訊息只會在啟用標籤除錯時列印至主控台。
 
-### `propertySettings` {#property-settings}
+## `propertySettings` {#property-settings}
 
 ```js
 console.log(turbine.propertySettings.domains);
