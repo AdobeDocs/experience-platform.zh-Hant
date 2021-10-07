@@ -2,9 +2,9 @@
 description: 此設定可讓您指出基本資訊，例如目的地名稱、類別、說明、標誌等。 此設定中的設定也會決定Experience Platform使用者如何驗證您的目的地、Experience Platform使用者介面中的顯示方式，以及可匯出至您目的地的身分識別。
 title: 目標SDK的目標配置選項
 exl-id: b7e4db67-2981-4f18-b202-3facda5c8f0b
-source-git-commit: 32b61276f3fe81ffa82fec1debf335ea51020ccd
+source-git-commit: 76a596166edcdbf141b5ce5dc01557d2a0b4caf3
 workflow-type: tm+mt
-source-wordcount: '1552'
+source-wordcount: '1727'
 ht-degree: 4%
 
 ---
@@ -13,13 +13,15 @@ ht-degree: 4%
 
 ## 總覽 {#overview}
 
-此設定可讓您指出基本資訊，例如目的地名稱、類別、說明、標誌等。 此設定中的設定也會決定Experience Platform使用者如何驗證您的目的地、Experience Platform使用者介面中的顯示方式，以及可匯出至您目的地的身分識別。
+此設定可讓您指出必要資訊，例如目的地名稱、類別、說明、標誌等。 此設定中的設定也會決定Experience Platform使用者如何驗證您的目的地、Experience Platform使用者介面中的顯示方式，以及可匯出至您目的地的身分識別。
+
+此設定也會將目的地運作所需的其他設定（目的地伺服器和對象中繼資料）連線至此設定。 請參閱](./destination-configuration.md#connecting-all-configurations)下方[一節中，如何參考這兩項設定。
 
 您可以使用`/authoring/destinations` API端點來設定本檔案所述的功能。 如需可在端點上執行的完整操作清單，請參閱[目標API端點操作](./destination-configuration-api.md) 。
 
 ## 組態範例 {#example-configuration}
 
-以下是虛構目的地Moviestar的設定範例，該目的地在全球的四個位置有端點。 目的地屬於行動目的地類別。 以下各節將劃分此設定的建構方式。
+以下是虛構目的地Moviestar的範例設定，該目的地在全球的四個位置有端點。 目的地屬於行動目的地類別。 以下各節將劃分此設定的建構方式。
 
 ```json
 {
@@ -118,14 +120,15 @@ ht-degree: 4%
             ]
          }
       }
-   }
+   },
+   "backfillHistoricalProfileData":true
 }
 ```
 
 | 參數 | 類型 | 說明 |
 |---------|----------|------|
 | `name` | 字串 | 指出Experience Platform目錄中的目的地標題。 |
-| `description` | 字串 | 提供說明，供Adobe用於目的地卡的Experience Platform目的地目錄。 目標不超過4-5句。 |
+| `description` | 字串 | 在Experience Platform目的地目錄中提供目的地卡片的說明。 目標不超過4-5句。 |
 | `status` | 字串 | 指示目標卡的生命週期狀態。 接受的值為 `TEST`、`PUBLISHED` 和 `DELETED`。首次配置目標時，請使用`TEST`。 |
 
 {style=&quot;table-layout:auto&quot;}
@@ -193,7 +196,7 @@ ht-degree: 4%
 
 | 參數 | 類型 | 說明 |
 |---------|----------|------|
-| `profileFields` | 陣列 | *上述範例設定中未顯示。* 新增預先定義 `profileFields`的Experience Platform時，使用者可以選擇將目標屬性對應至目的地端的預先定義屬性。 |
+| `profileFields` | 陣列 | *上述範例設定中未顯示。* 新增預先定義 `profileFields`的時候，Experience Platform使用者可以選擇將Platform屬性對應至目的地端的預先定義屬性。 |
 | `profileRequired` | 布林值 | 如果使用者應能將設定檔屬性從Experience Platform對應至目的地端的自訂屬性，請使用`true` ，如上方的範例設定所示。 |
 | `segmentRequired` | 布林值 | 請一律使用`segmentRequired:true`。 |
 | `identityRequired` | 布林值 | 如果使用者應能將身分識別命名空間從Experience Platform對應至您想要的架構，請使用`true`。 |
@@ -204,7 +207,7 @@ ht-degree: 4%
 
 本節中的參數決定在Experience Platform使用者介面的對應步驟中如何填入目標身分和屬性，使用者可在此將其XDM結構對應至目的地的結構。
 
-Adobe需要知道哪些[!DNL Platform]身分識別客戶將能夠匯出至您的目的地。 有些範例包括[!DNL Experience Cloud ID]、雜湊電子郵件、裝置ID([!DNL IDFA]、[!DNL GAID])。 這些值是[!DNL Platform]身分識別命名空間，客戶可將其對應至您目的地的身分識別命名空間。
+您必須指出哪些[!DNL Platform]身分識別客戶能夠匯出至您的目的地。 有些範例包括[!DNL Experience Cloud ID]、雜湊電子郵件、裝置ID([!DNL IDFA]、[!DNL GAID])。 這些值是[!DNL Platform]身分識別命名空間，客戶可將其對應至您目的地的身分識別命名空間。
 
 身分識別命名空間不需要[!DNL Platform]與目的地之間的1對1通信。
 例如，客戶可以將[!DNL Platform] [!DNL IDFA]命名空間從您的目的地對應到[!DNL IDFA]命名空間，或將相同的[!DNL Platform] [!DNL IDFA]命名空間對應到您目的地的[!DNL Customer ID]命名空間。
@@ -215,9 +218,9 @@ Adobe需要知道哪些[!DNL Platform]身分識別客戶將能夠匯出至您的
 
 | 參數 | 類型 | 說明 |
 |---------|----------|------|
-| `acceptsAttributes` | 布林值 | 指出目的地是否接受標準設定檔屬性。 通常，合作夥伴的檔案會強調顯示這些屬性。 |
+| `acceptsAttributes` | 布林值 | 指出目的地是否接受標準設定檔屬性。 通常，合作夥伴檔案會強調顯示這些屬性。 |
 | `acceptsCustomNamespaces` | 布林值 | 指出客戶是否可在您的目的地中設定自訂命名空間。 |
-| `allowedAttributesTransformation` | 字串 | *範例設定中未顯示*。例如，當[!DNL Platform]客戶有純電子郵件地址作為屬性，且您的平台僅接受雜湊電子郵件時，就會使用。 您可在此提供需要套用的轉換（例如，將電子郵件轉換為小寫，然後雜湊）。 |
+| `allowedAttributesTransformation` | 字串 | *範例設定中未顯示*。例如，當[!DNL Platform]客戶有純電子郵件地址作為屬性，且您的平台僅接受雜湊電子郵件時，就會使用。 在此物件中，您可以套用需要的轉換（例如，將電子郵件轉換為小寫，然後雜湊）。 如需範例，請參閱[目的地設定API參考](./destination-configuration-api.md#update)中的`requiredTransformation`。 |
 | `acceptedGlobalNamespaces` | - | 用於您的平台接受[標準身分識別命名空間](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=en#standard-namespaces)（例如IDFA）時的情況，因此您可以限制Platform使用者僅選取這些身分識別命名空間。 |
 
 {style=&quot;table-layout:auto&quot;}
@@ -242,13 +245,21 @@ Adobe需要知道哪些[!DNL Platform]身分識別客戶將能夠匯出至您的
 
 上述設定中顯示的參數在[目的地端點API參考](./destination-configuration-api.md)中有說明。
 
+## 此設定如何連接目的地的所有必要資訊 {#connecting-all-configurations}
+
+您可透過目的地伺服器或對象中繼資料端點來設定目的地的某些設定。 目標配置終結點通過引用配置來連接所有這些設定，如下所示：
+
+* 使用`destinationServerId`參考為目標設定的目標伺服器和模板配置。
+* 使用`audienceMetadataId`參照為目的地設定的對象中繼資料設定。
+
+
 ## 聚合策略 {#aggregation}
 
 ![配置模板中的聚合策略](./assets/aggregation-configuration.png)
 
-此部分允許您設定將資料導出到目標時Experience Platform將使用的聚合策略。
+此部分允許您設定將資料導出到目標時Experience Platform應使用的聚合策略。
 
-匯總原則可決定匯出的設定檔在資料匯出中如何結合。 可選擇下列選項：
+匯總策略確定導出的配置檔案在資料導出中的組合方式。 可選擇下列選項：
 * 最佳成果匯總
 * 可配置聚合（如上面的配置所示）
 
@@ -277,10 +288,10 @@ Adobe需要知道哪些[!DNL Platform]身分識別客戶將能夠匯出至您的
 
 有關聚合參數的詳細解釋，請參閱[目標API端點操作](./destination-configuration-api.md)參考頁，其中描述了每個參數。
 
-<!--
+## 歷史設定檔資格
 
-commenting out the `backfillHistoricalProfileData` parameter, which will only be used after an April release
+您可以在目的地設定中使用`backfillHistoricalProfileData`參數，判斷是否應將歷史設定檔資格匯出至您的目的地。
 
-|`backfillHistoricalProfileData` | Boolean | Controls whether historical profile data is exported when segments are activated to the destination. <br> <ul><li> `true`: [!DNL Platform] sends the historical user profiles that qualified for the segment before the segment is activated. </li><li> `false`: [!DNL Platform] only includes user profiles that qualify for the segment after the segment is activated. </li></ul> |
-
--->
+| 參數 | 類型 | 說明 |
+|---------|----------|------|
+| `backfillHistoricalProfileData` | 布林值 | 控制在將區段啟動至目的地時，是否匯出歷史設定檔資料。<br> <ul><li> `true`: [!DNL Platform] 傳送在啟用區段之前符合區段資格的歷史使用者設定檔。 </li><li> `false`: [!DNL Platform] 僅包含區段啟動後符合區段資格的使用者設定檔。 </li></ul> |
