@@ -4,9 +4,9 @@ user-guide-title: Experience Data Model (XDM) 系統說明
 breadcrumb-title: Experience Data Model (XDM) 指南
 user-guide-description: 使用Experience Data Model(XDM)類別和結構欄位群組，以標準化體驗資料。
 feature: Schemas
-source-git-commit: 05d5a599b3ed101fab7ab96e4f218592f7e923ef
+source-git-commit: 4a74faad811d9b13f93799686df44f04a8d1b784
 workflow-type: tm+mt
-source-wordcount: '393'
+source-wordcount: '398'
 ht-degree: 14%
 
 ---
@@ -65,6 +65,8 @@ ht-degree: 14%
       * [IAB TCF 2.0同意](./field-groups/event/iab.md)
       * [住宿預訂](./field-groups/event/lodging-reservation.md)
       * [保留詳細資訊](./field-groups/event/reservation-details.md)
+      * [升級詳細資訊](./field-groups/event/upgrade-details.md)
+      * [向上銷售詳細資訊](./field-groups/event/upsell-details.md)
       * [Web詳細資訊](./field-groups/event/web-details.md)
    * [欄位組名稱更新](./field-groups/name-updates.md)
 * 資料類型 {#data-types}
@@ -91,6 +93,7 @@ ht-degree: 14%
    * [地理互動詳細資料](./data-types/geo-interaction-details.md)
    * [地理形狀](./data-types/geo-shape.md)
    * [身分](./data-types/identity.md)
+   * [曝光數](./data-types/impressions.md)
    * [行銷](./data-types/marketing.md)
    * [測量](./data-types/measure.md)
    * [訂購](./data-types/order.md)
