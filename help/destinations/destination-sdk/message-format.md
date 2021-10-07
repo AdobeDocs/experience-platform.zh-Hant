@@ -4,9 +4,9 @@ seo-description: Use the content on this page together with the rest of the conf
 seo-title: Message format
 title: 訊息格式
 exl-id: 1212c1d0-0ada-4ab8-be64-1c62a1158483
-source-git-commit: a1e77520ba5555db42578eac261e01e77130aea2
+source-git-commit: c328293cf710ad8a2ddd2e52cb01c86d29c0b569
 workflow-type: tm+mt
-source-wordcount: '2090'
+source-wordcount: '1995'
 ht-degree: 2%
 
 ---
@@ -19,7 +19,6 @@ ht-degree: 2%
 
 * **Experience Data Model(XDM)**。[XDM概](https://experienceleague.adobe.com/docs/experience-platform/xdm/home.html?lang=zh-Hant) 述及  [如何在Adobe Experience Platform中建立XDM結構](https://experienceleague.adobe.com/docs/experience-platform/xdm/tutorials/create-schema-ui.html?lang=en)。
 * **類別**。[在UI中建立和編輯類](https://experienceleague.adobe.com/docs/experience-platform/xdm/ui/resources/classes.html?lang=en)。
-* **欄位群組**。[欄位群組](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/composition.html?lang=en#field-group) 定義， [以及欄位群組的詳細資訊](https://experienceleague.adobe.com/docs/experience-platform/xdm/tutorials/create-schema-ui.html?lang=en#field-group)。
 * **IdentityMap**。身分對應代表Adobe Experience Platform中所有一般使用者身分的對應。 請參閱[XDM欄位字典](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/field-dictionary.html?lang=en)中的`xdm:identityMap`。
 * **區段成員資格**。[segmentMembership](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/field-dictionary.html?lang=en) XDM屬性會通知設定檔是哪些區段的成員。 對於`status`欄位中的三個不同值，請閱讀[區段成員資格詳細資訊架構欄位群組](https://experienceleague.adobe.com/docs/experience-platform/xdm/field-groups/profile/segmentation.html)上的檔案。
 
@@ -27,24 +26,28 @@ ht-degree: 2%
 
 將此頁面上的內容與合作夥伴目標](./configuration-options.md)的其餘[配置選項一起使用。 本頁說明從Adobe Experience Platform匯出至目的地之資料的傳訊格式，而其他頁面則說明連線及驗證至目的地的詳細資訊。
 
-Adobe Experience Platform會以各種資料格式將資料匯出至大量目的地。 目的地類型的一些範例包括廣告平台(Google)、社交網路(Facebook)、雲端儲存位置(Amazon S3、Azure事件中心)。
+Adobe Experience Platform會以各種資料格式將資料匯出至大量目的地。 目的地類型的一些範例包括廣告平台(Google)、社交網路(Facebook)、雲端儲存位置(Amazon S3、Azure事件中樞)。
 
 Experience Platform可調整匯出的訊息格式，以符合您旁邊的預期格式。 若要了解此自訂，下列概念非常重要：
 * Adobe Experience Platform中的來源(1)和目標(2)XDM結構
-* 合作夥伴端(3)的訊息格式，以及
-* 兩個之間的轉換層，可通過建立[消息轉換模板](./message-format.md#using-templating)來定義。
+* 合作夥伴端(3)的預期訊息格式，以及
+* XDM架構與預期訊息格式之間的轉換層，您可以建立[訊息轉換範本](./message-format.md#using-templating)來定義。
 
 ![結構轉換為JSON](./assets/transformations-3-steps.png)
 
-Experience Platform 會使用結構，以一致且可重複使用的方式說明資料結構。
+Experience Platform使用XDM結構，以一致且可重複使用的方式說明資料結構。
 
-想要將資料啟用至您目的地的使用者，必須將其Experience Platform中資料集所使用的欄位，對應至將轉譯為您目的地預期格式的結構。 Adobe會為您的公司建立自訂欄位群組，以新增至目標結構。 欄位群組中的欄位取決於您可接收的設定檔屬性欄位。
+<!--
 
-**源XDM架構(1)**:這是指客戶在Experience Platform中使用的結構。在Experience Platform中，在啟動目標工作流的[映射步驟](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations.html?lang=en#mapping)中，客戶將從其源架構將欄位映射到目標的目標架構(2)。
+Users who want to activate data to your destination need to map the fields in their Experience Platform datasets to a schema that translates to your destination's expected format. Adobe will create a custom field group for your company to add to the target schema. The fields in the field group depend on the profile attribute fields that you can receive.
 
-**Target XDM結構(2)**:根據您與Adobe共用的JSON標準結構(3),Adobe的團隊將為您的目的地建立自訂結構。請注意，在專案](./overview.md#phased-approach)的未來階段中，您將能自行建立目的地的自訂架構。[
+-->
 
-**目的地設定檔屬性的JSON標準結構(3)**:請與我們共用您 [的](https://json-schema.org/learn/miscellaneous-examples.html) 平台支援的所有設定檔屬性及其類型的JSON結構(例如：物件、字串、陣列)。目標可支援的範例欄位可以是`firstName`、`lastName`、`gender`、`email`、`phone`、`productId`、`productName`等。
+**源XDM架構(1)**:此項目指客戶在Experience Platform中使用的結構。在Experience Platform中，在啟動目標工作流的[映射步驟](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations.html?lang=en#mapping)中，客戶將從其源架構將欄位映射到目標的目標架構(2)。
+
+**Target XDM結構(2)**:您可以根據目的地預期格式的JSON標準結構(3)，在目標XDM結構中定義設定檔屬性和身分。您可以在目標設定中的[schemaConfig](./destination-configuration.md#schema-configuration)和[identityNamespaces](./destination-configuration.md#identities-and-attributes)物件中執行此操作。
+
+**目的地設定檔屬性的JSON標準結構(3)**:此項目代表您 [的](https://json-schema.org/learn/miscellaneous-examples.html) 平台支援的所有設定檔屬性及其類型的JSON結構(例如：物件、字串、陣列)。目標可支援的範例欄位可以是`firstName`、`lastName`、`gender`、`email`、`phone`、`productId`、`productName`等。 您需要[訊息轉換範本](./message-format.md#using-templating)，將匯出的非Experience Platform資料量身打造為預期格式。
 
 根據上述架構轉換，以下說明來源XDM架構與合作夥伴端範例架構之間訊息結構的變更方式：
 
@@ -59,7 +62,7 @@ Experience Platform 會使用結構，以一致且可重複使用的方式說明
 
 >[!NOTE]
 >
->客戶將屬性從來源XDM結構對應至Adobe Experience Platform UI中&#x200B;**啟動目標工作流程](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate-destinations.html#mapping)之[對應**&#x200B;步驟的合作夥伴XDM結構。
+>客戶將屬性從來源XDM結構對應至Adobe Experience Platform UI中&#x200B;**啟動目標工作流程](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping)之[對應**&#x200B;步驟的合作夥伴XDM結構。
 
 假設您的平台可接收如下的訊息格式：
 
@@ -94,7 +97,7 @@ Adobe使用類似[Jinja](https://jinja.palletsprojects.com/en/2.11.x/)的範本�
 
 1. 簡單的轉換範例。 了解模板如何處理[配置檔案屬性](./message-format.md#attributes)、[段成員資格](./message-format.md#segment-membership)和[標識](./message-format.md#identities)欄位的簡單轉換。
 2. 結合上述欄位的範本，其複雜度增加範例：[建立傳送區段和身分的範本](./message-format.md#segments-and-identities)及[建立傳送區段、身分和設定檔屬性的範本](./message-format.md#segments-identities-attributes)。
-3. 模板包括聚合鍵。 當您在目標配置中使用[可配置的聚合](./destination-configuration.md#configurable-aggregation)時，Experience Platform會根據段ID、段狀態或標識命名空間等標準對導出到目標的配置檔案進行分組。
+3. 包含聚合鍵的模板。 當您在目標配置中使用[可配置的聚合](./destination-configuration.md#configurable-aggregation)時，Experience Platform會根據段ID、段狀態或標識命名空間等標準對導出到目標的配置檔案進行分組。
 
 ### 設定檔屬性 {#attributes}
 
@@ -139,7 +142,7 @@ Adobe使用類似[Jinja](https://jinja.palletsprojects.com/en/2.11.x/)的範本�
 
 >[!IMPORTANT]
 >
->對於您使用的所有模板，在[目標伺服器配置](./server-and-template-configuration.md#template-specs)中插入模板之前，必須先逸出非法字元，如雙引號`""`。 如需逸出雙引號的詳細資訊，請參閱[JSON standard](http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf)中的第9章。
+>對於您使用的所有模板，在[目標伺服器配置](./server-and-template-configuration.md#template-specs)中插入模板之前，必須先逸出非法字元，如雙引號`""`。 如需逸出雙引號的詳細資訊，請參閱[JSON standard](https://www.ecma-international.org/publications-and-standards/standards/ecma-404/)中的第9章。
 
 ```python
 {
@@ -237,7 +240,7 @@ Adobe使用類似[Jinja](https://jinja.palletsprojects.com/en/2.11.x/)的範本�
 
 >[!IMPORTANT]
 >
->對於您使用的所有模板，在[目標伺服器配置](./server-and-template-configuration.md#template-specs)中插入模板之前，必須先逸出非法字元，如雙引號`""`。 如需逸出雙引號的詳細資訊，請參閱[JSON standard](http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf)中的第9章。
+>對於您使用的所有模板，在[目標伺服器配置](./server-and-template-configuration.md#template-specs)中插入模板之前，必須先逸出非法字元，如雙引號`""`。 如需逸出雙引號的詳細資訊，請參閱[JSON standard](https://www.ecma-international.org/publications-and-standards/standards/ecma-404/)中的第9章。
 
 ```python
 {
@@ -341,7 +344,7 @@ Adobe使用類似[Jinja](https://jinja.palletsprojects.com/en/2.11.x/)的範本�
 
 >[!IMPORTANT]
 >
->對於您使用的所有模板，在[目標伺服器配置](./server-and-template-configuration.md#template-specs)中插入模板之前，必須先逸出非法字元，如雙引號`""`。 如需逸出雙引號的詳細資訊，請參閱[JSON standard](http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf)中的第9章。
+>對於您使用的所有模板，在[目標伺服器配置](./server-and-template-configuration.md#template-specs)中插入模板之前，必須先逸出非法字元，如雙引號`""`。 如需逸出雙引號的詳細資訊，請參閱[JSON standard](https://www.ecma-international.org/publications-and-standards/standards/ecma-404/)中的第9章。
 
 ```python
 {
@@ -479,7 +482,7 @@ Adobe使用類似[Jinja](https://jinja.palletsprojects.com/en/2.11.x/)的範本�
 
 >[!IMPORTANT]
 >
->對於您使用的所有模板，在[目標伺服器配置](./server-and-template-configuration.md#template-specs)中插入模板之前，必須先逸出非法字元，如雙引號`""`。 如需逸出雙引號的詳細資訊，請參閱[JSON standard](http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf)中的第9章。
+>對於您使用的所有模板，在[目標伺服器配置](./server-and-template-configuration.md#template-specs)中插入模板之前，必須先逸出非法字元，如雙引號`""`。 如需逸出雙引號的詳細資訊，請參閱[JSON standard](https://www.ecma-international.org/publications-and-standards/standards/ecma-404/)中的第9章。
 
 ```python
 {
@@ -661,7 +664,7 @@ Adobe使用類似[Jinja](https://jinja.palletsprojects.com/en/2.11.x/)的範本�
 
 >[!IMPORTANT]
 >
->對於您使用的所有模板，在[目標伺服器配置](./server-and-template-configuration.md#template-specs)中插入模板之前，必須先逸出非法字元，如雙引號`""`。 如需逸出雙引號的詳細資訊，請參閱[JSON standard](http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf)中的第9章。
+>對於您使用的所有模板，在[目標伺服器配置](./server-and-template-configuration.md#template-specs)中插入模板之前，必須先逸出非法字元，如雙引號`""`。 如需逸出雙引號的詳細資訊，請參閱[JSON standard](https://www.ecma-international.org/publications-and-standards/standards/ecma-404/)中的第9章。
 
 ```python
 {
@@ -779,7 +782,7 @@ Adobe使用類似[Jinja](https://jinja.palletsprojects.com/en/2.11.x/)的範本�
 
 在目標配置中使用[可配置的聚合](./destination-configuration.md#configurable-aggregation)時，可以根據諸如段ID、段別名、段成員資格或標識命名空間等標準對導出到目標的配置檔案進行分組。
 
-在訊息轉換範本中，您可以存取上述的匯總索引鍵，如下節的範例所示。 這可協助您將匯出的HTTP訊息格式化為非Experience Platform，以符合目的地預期的格式。
+在訊息轉換範本中，您可以存取上述的匯總索引鍵，如下節的範例所示。 使用匯總金鑰來結構匯出為非Experience Platform的HTTP訊息，以符合目的地預期的格式和速率限制。
 
 #### 在範本中使用區段ID匯總金鑰 {#aggregation-key-segment-id}
 
@@ -880,9 +883,9 @@ Adobe使用類似[Jinja](https://jinja.palletsprojects.com/en/2.11.x/)的範本�
 
 >[!IMPORTANT]
 >
->對於您使用的所有模板，在[目標伺服器配置](./server-and-template-configuration.md#template-specs)中插入模板之前，必須先逸出非法字元，如雙引號`""`。 如需逸出雙引號的詳細資訊，請參閱[JSON standard](http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf)中的第9章。
+>對於您使用的所有模板，在[目標伺服器配置](./server-and-template-configuration.md#template-specs)中插入模板之前，必須先逸出非法字元，如雙引號`""`。 如需逸出雙引號的詳細資訊，請參閱[JSON standard](https://www.ecma-international.org/publications-and-standards/standards/ecma-404/)中的第9章。
 
-請注意以下範本中如何使用`audienceId`來存取區段ID。 這假設您在目標分類法中使用`audienceId`作為區段成員資格。 您可以根據自己的分類法，改用任何其他欄位名稱。
+請注意以下範本中如何使用`audienceId`來存取區段ID。 此範例假設您在目的地分類法中使用`audienceId`作為區段成員資格。 您可以根據自己的分類法，改用任何其他欄位名稱。
 
 ```python
 {
@@ -944,7 +947,7 @@ customerList={{input.aggregationKey.segmentAlias}}
 
 #### 在範本中使用區段狀態匯總金鑰 {#aggregation-key-segment-status}
 
-如果您使用[可設定的匯總](./destination-configuration.md#configurable-aggregation)並將`includeSegmentId`和`includeSegmentStatus`設為true，則可以存取範本中的區段狀態，以根據是否應新增或從區段移除設定檔，將匯出至目的地的HTTP訊息中的設定檔分組。
+如果使用[可配置聚合](./destination-configuration.md#configurable-aggregation)並將`includeSegmentId`和`includeSegmentStatus`設定為true，則可以訪問模板中的段狀態。 如此一來，您就可以根據是否應新增或移除區段的設定檔，將匯出至目的地的HTTP訊息中的設定檔分組。
 
 可能的值包括：
 
@@ -960,7 +963,7 @@ action={% if input.aggregationKey.segmentStatus == "exited" %}REMOVE{% else %}AD
 
 #### 在範本中使用身分命名空間匯總金鑰 {#aggregation-key-identity}
 
-以下範例中，目標配置中的[可配置聚合](./destination-configuration.md#configurable-aggregation)設定為按標識命名空間聚合導出的配置檔案，形式為`"namespaces": ["email", "phone"]`和`"namespaces": ["GAID", "IDFA"]`。 請參閱[目的地設定API參考](./destination-configuration-api.md)中的`groups`參數，了解如何完成此作業。
+以下範例中，目標配置中的[可配置聚合](./destination-configuration.md#configurable-aggregation)設定為按標識命名空間聚合導出的配置檔案，形式為`"namespaces": ["email", "phone"]`和`"namespaces": ["GAID", "IDFA"]`。 如需此分組的詳細資訊，請參閱[目標配置API參考](./destination-configuration-api.md)中的`groups`參數。
 
 **輸入**
 
@@ -1032,7 +1035,7 @@ action={% if input.aggregationKey.segmentStatus == "exited" %}REMOVE{% else %}AD
 
 >[!IMPORTANT]
 >
->對於您使用的所有模板，在[目標伺服器配置](./server-and-template-configuration.md#template-specs)中插入模板之前，必須先逸出非法字元，如雙引號`""`。 如需逸出雙引號的詳細資訊，請參閱[JSON standard](http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf)中的第9章。
+>對於您使用的所有模板，在[目標伺服器配置](./server-and-template-configuration.md#template-specs)中插入模板之前，必須先逸出非法字元，如雙引號`""`。 如需逸出雙引號的詳細資訊，請參閱[JSON standard](https://www.ecma-international.org/publications-and-standards/standards/ecma-404/)中的第9章。
 
 請注意，以下範本中使用`input.aggregationKey.identityNamespaces`
 
@@ -1056,7 +1059,7 @@ action={% if input.aggregationKey.segmentStatus == "exited" %}REMOVE{% else %}AD
 
 **結果**
 
-將設定檔匯出至目的地時，會根據其身分識別命名空間（一個群組中的電子郵件和電話、另一個群組中的GAID和IDFA），分割為兩個群組。
+將設定檔匯出至目的地時，會根據其身分識別命名空間，分割為兩個群組。 電子郵件和電話位於一個群組，而GAID和IDFA位於另一個群組。
 
 ```json
 {
@@ -1108,7 +1111,7 @@ action={% if input.aggregationKey.segmentStatus == "exited" %}REMOVE{% else %}AD
 
 #### 在URL範本中使用匯總索引鍵 {#aggregation-key-url-template}
 
-請注意，根據您的使用案例，您也可以在URL中使用此處所述的匯總索引鍵，如下所示：
+您也可以根據您的使用案例，在URL中使用此處所述的匯總索引鍵，如下所示：
 
 ```python
 https://api.example.com/audience/{{input.aggregationKey.segmentId}}
