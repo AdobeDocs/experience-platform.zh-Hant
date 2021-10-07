@@ -5,26 +5,22 @@ title: Azure檔案儲存源連接器概述
 topic-legacy: overview
 description: 了解如何使用API或使用者介面將Azure檔案儲存連接至Adobe Experience Platform。
 exl-id: 0a5e9df6-9760-4eeb-86d5-d92d77df3d2b
-source-git-commit: 1f9948d6e419ee5d6a021a589378f7aa990b7291
+source-git-commit: 446436346e3368d98eb990dba1000ac0974b84dc
 workflow-type: tm+mt
-source-wordcount: '459'
+source-wordcount: '409'
 ht-degree: 0%
 
 ---
 
 # Azure檔案儲存連接器
 
-Adobe Experience Platform為AWS、[!DNL Google Cloud Platform]和[!DNL Azure]等雲提供商提供本機連接，允許您從這些系統中帶來資料。
+Adobe Experience Platform為AWS、[!DNL Google Cloud Platform]和[!DNL Azure]等雲端提供者提供原生連線，讓您從這些系統帶入資料。
 
 雲端儲存來源可將您自己的資料帶入[!DNL Platform]，而無需下載、格式化或上傳。 擷取的資料可格式化為XDM JSON、XDM Parquet或分隔字元。 流程的每個步驟都整合至來源工作流程中。 [!DNL Platform] 可讓您透過批次匯入 [!DNL Azure File Storage] 資料。
 
 ## IP位址允許清單
 
 使用來源連接器前，必須將IP位址清單新增至允許清單。 若未將您地區專屬的IP位址新增至允許清單，在使用來源時可能會導致錯誤或效能不佳。 如需詳細資訊，請參閱[IP位址允許清單](../../ip-address-allow-list.md)頁面。
-
->[!IMPORTANT]
->
->[!DNL Azure File Storage]源連接器當前不支援與Platform的相同區域連接。 這表示，如果您的Azure執行個體使用與Platform相同的網路區域，則無法建立與Platform來源的連線。 目前僅支援跨地區連線。 如需詳細資訊，請連絡您的Adobe客戶經理。
 
 ## 檔案和目錄的命名限制
 

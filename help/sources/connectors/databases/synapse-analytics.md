@@ -5,9 +5,9 @@ title: azure synapseAnalytics來源連接器概觀
 topic-legacy: overview
 description: 了解如何使用API或使用者介面將Azure synapseAnalytics連線至Adobe Experience Platform。
 exl-id: 5b94ae74-e5a7-40e9-a952-41eddf06dcde
-source-git-commit: 5821f9304a37c1a03d17f0113d09548799662a2e
+source-git-commit: 446436346e3368d98eb990dba1000ac0974b84dc
 workflow-type: tm+mt
-source-wordcount: '297'
+source-wordcount: '247'
 ht-degree: 0%
 
 ---
@@ -21,10 +21,6 @@ Adobe Experience Platform可讓您從外部來源擷取資料，同時使用[!DN
 ## IP位址允許清單
 
 使用來源連接器前，必須將IP位址清單新增至允許清單。 若未將您地區專屬的IP位址新增至允許清單，在使用來源時可能會導致錯誤或效能不佳。 如需詳細資訊，請參閱[IP位址允許清單](../../ip-address-allow-list.md)頁面。
-
->[!IMPORTANT]
->
->[!DNL Azure Synapse Analytics]源連接器當前不支援與Platform的相同區域連接。 這表示，如果您的Azure執行個體使用與Platform相同的網路區域，則無法建立與Platform來源的連線。 目前僅支援跨地區連線。 如需詳細資訊，請連絡您的Adobe客戶經理。
 
 以下檔案提供如何使用API或使用者介面將[!DNL Azure Synapse Analytics]連線至[!DNL Platform]的資訊：
 

@@ -5,9 +5,9 @@ title: Azure表儲存源連接器概述
 topic-legacy: overview
 description: 了解如何使用API或使用者介面將Azure表格儲存連接至Adobe Experience Platform。
 exl-id: 096e01b1-7e95-4e30-87de-d0976f8b438a
-source-git-commit: 7af79b9e0d6ed29b796ac7c98b4df1dda09f3513
+source-git-commit: 446436346e3368d98eb990dba1000ac0974b84dc
 workflow-type: tm+mt
-source-wordcount: '304'
+source-wordcount: '254'
 ht-degree: 0%
 
 ---
@@ -21,10 +21,6 @@ Experience Platform支援從協力廠商資料庫擷取資料。 平台可以連
 ## IP位址允許清單
 
 使用來源連接器前，必須將IP位址清單新增至允許清單。 若未將您地區專屬的IP位址新增至允許清單，在使用來源時可能會導致錯誤或效能不佳。 如需詳細資訊，請參閱[IP位址允許清單](../../ip-address-allow-list.md)頁面。
-
->[!IMPORTANT]
->
->[!DNL Azure Table Storage]源連接器當前不支援與Platform的相同區域連接。 這表示，如果您的Azure執行個體使用與Platform相同的網路區域，則無法建立與Platform來源的連線。 目前僅支援跨地區連線。 如需詳細資訊，請連絡您的Adobe客戶經理。
 
 以下檔案提供如何使用API或使用者介面將[!DNL Azure Table Storage]連線至Platform的資訊：
 
