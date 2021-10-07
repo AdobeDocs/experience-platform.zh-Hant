@@ -3,9 +3,10 @@ title: 資料衛生API(Alpha)
 description: 了解如何以程式設計方式修正或刪除客戶在Adobe Experience Platform中儲存的個人資料。
 hide: true
 hidefromtoc: true
-source-git-commit: dd8978566730975f0bde36f3af490cd33362b3ba
+exl-id: 78c8b15b-b433-4168-a1e8-c97b96e4bf85
+source-git-commit: f956a8191614cc8e0eeaadaa55277abfbc5be106
 workflow-type: tm+mt
-source-wordcount: '525'
+source-wordcount: '535'
 ht-degree: 1%
 
 ---
@@ -17,6 +18,8 @@ ht-degree: 1%
 >資料衛生API目前位於Alpha中，而您的組織可能尚未取得存取權。 本檔案所述的功能可能會有所變更。
 
 資料衛生API可讓您以程式設計方式修正或刪除客戶儲存在Adobe Experience Platform中的個人資料。 與Privacy ServiceAPI不同，這些操作不需要與法律隱私權法規相關聯，而且可單純用於保持資料乾淨和準確。
+
+您可以透過下列根路徑存取API:`https://platform.adobe.io/data/core/hygiene/`
 
 ## 快速入門
 
