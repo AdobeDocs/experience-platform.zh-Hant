@@ -3,9 +3,9 @@ title: 資料衛生API(Alpha)
 description: 了解如何以程式設計方式修正或刪除客戶在Adobe Experience Platform中儲存的個人資料。
 hide: true
 hidefromtoc: true
-source-git-commit: dfe9c1ef826bc769a82938223029cd41c066c221
+source-git-commit: dd8978566730975f0bde36f3af490cd33362b3ba
 workflow-type: tm+mt
-source-wordcount: '522'
+source-wordcount: '525'
 ht-degree: 1%
 
 ---
@@ -106,6 +106,8 @@ curl -X POST \
 | --- | --- |
 | `companyContexts` | 包含貴組織驗證資訊的陣列。 它必須包含具有下列屬性的單一物件： <ul><li>`namespace`:必須設為 `imsOrgID`。</li><li>`value`:您的IMS組織ID。這與`x-gw-ims-org-id`標題中提供的值相同。</li></ul> |
 | `users` | 一個陣列，其中包含至少一個要刪除其資訊的用戶的集合。 每個使用者物件包含下列資訊： <ul><li>`key`:用來限定回應資料中個別作業ID的使用者識別碼。最佳實務是為此值選擇可輕鬆識別的唯一字串，以便日後參考或查閱。</li><li>`action`:列出對使用者資料採取之所需動作的陣列。必須包含單一字串值：`delete`。</li><li>`userIDs`:使用者的身分集合。單一使用者可擁有的身分數目上限為九。 每個身分包含下列屬性： <ul><li>`namespace`:與 [ID](../identity-service/namespaces.md) 相關聯的身分名稱。這可以是Platform所識別的[標準命名空間](./api/appendix.md#standard-namespaces)，也可以是您的組織所定義的自訂命名空間。 使用的命名空間類型必須反映在`type`屬性中。</li><li>`value`:身分值。</li><li>`type`:如果使用全域 `standard` 辨識的命名空間，或使用 `custom` 組織定義的命名空間，則必須設為。</li></ul></li></ul> |
+
+{style=&quot;table-layout:auto&quot;}
 
 **回應**
 
