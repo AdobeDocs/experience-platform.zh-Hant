@@ -1,14 +1,15 @@
 ---
 title: 即時CDP B2B Edition的區段使用案例概觀
-description: 概述可用的各種即時CDP B2B Edition使用案例。
-source-git-commit: e85d4b108e2d4a6a88772c071d9281603b695ada
+description: 概述各種可用的即時CDP B2B Edition使用案例。
+exl-id: 2a99b85e-71b3-4781-baf7-a4d5436339d3
+source-git-commit: cc4bd6f3b70a90b53aaaf6a4c31d23fddd8a3f44
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '1122'
+ht-degree: 1%
 
 ---
 
-# 即時客戶資料平台B2B版（測試版）區段使用案例概觀
+# Real-time Customer Data Platform B2B版（測試版）的區段使用案例概觀
 
 <!-- This document relates to this [ticket](https://jira.corp.adobe.com/browse/PLAT-100468) -->
 
@@ -20,7 +21,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->這些區段使用案例所需的屬性僅適用於即時客戶資料平台B2B版客戶。 若要深入了解即時CDP，包括每種許可證類型可用的功能，請從閱讀[Real-time CDP overview](../overview.md)開始。
+>這些區段使用案例所需的屬性僅供Real-time Customer Data Platform B2B Edition客戶使用。 若要深入了解即時CDP，包括每種許可證類型可用的功能，請從閱讀[Real-time CDP overview](../overview.md)開始。
 
 ## 先決條件
 
@@ -37,7 +38,7 @@ ht-degree: 0%
 
 一旦B2B類別的聯合結構建立關係並用於內嵌資料後，其屬性即可在區段產生器的左側邊欄中使用。
 
-B2B類別及其屬性會在「細分」工作區中附加`B2B`標籤，以區別於即時客戶資料平台中標準可用類別。
+B2B類別及其屬性會在「細分」工作區中附加`B2B`標籤，以區分它們與Real-time Customer Data Platform中標準可用類別。
 
 為了有效建立B2B使用案例的區段，請務必熟悉結構，並了解資料模型的外觀。 另外，您也應留意資料從一個資料物件取往另一個資料物件的路徑。
 
@@ -55,7 +56,7 @@ B2B類別及其屬性會在「細分」工作區中附加`B2B`標籤，以區別
 
 ![來源索引鍵範例，在區段工作區中使用區段產生器](../assets/segmentation/source-key-segmentation-example.png)
 
-如需可用B2B類別的詳細資訊，請參閱即時客戶資料平台B2B版本檔案](../schemas/b2b.md)中的[結構。
+如需可用B2B類別的詳細資訊，請參閱Real-time Customer Data Platform B2B版本檔案](../schemas/b2b.md)中的[結構。
 
 下面的使用案例提供了資訊，說明使用哪些類來建立不同架構之間的關係，以實現這些結果。 這些範例可協助您建立自己的區段。
 

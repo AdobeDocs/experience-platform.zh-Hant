@@ -1,25 +1,25 @@
 ---
-keywords: RTCDP; CDP;Real-time Customer Data Platform；即時客戶資料平台；即時CDP; CDP; RTCDP
-title: 即時客戶資料平台B2B版的使用案例範例
-description: 此範例案例提供您實作即時客戶資料平台B2B版的設定範例。
-source-git-commit: 30a4d2b27092f4706bb4f3f986a190502b184034
+keywords: RTCDP; CDP;Real-time Customer Data Platform；即時客戶資料平台；real time cdp;cdp;rtcdp
+title: Real-time Customer Data Platform B2B版的範例使用案例
+description: 此範例案例提供您實作Real-time Customer Data Platform B2B Edition的設定範例。
+exl-id: 15505980-ac33-44b2-8989-c08cbabd212b
+source-git-commit: 4ebc3ef813c3c44aa2b8a7aab5ccabbcc3c332b2
 workflow-type: tm+mt
-source-wordcount: '1140'
+source-wordcount: '1144'
 ht-degree: 1%
 
 ---
 
-# 即時客戶資料平台B2B版的使用案例範例
+# Real-time Customer Data Platform B2B版的範例使用案例
 
 >[!IMPORTANT]
 >
 >Real-time CDP Business to Business Edition目前處於測試版。 文件和功能可能會有所變更。
 
-Real-time Customer Data Platform B2B Edition擴展了現有的即時CDP和Adobe Experience Platform產品，以支援B2B資料和工作流。 本檔案提供範例使用案例，示範B2B版本提供的其他優點。 包括:
+Real-time Customer Data Platform B2B Edition擴充了現有的即時CDP和Adobe Experience Platform產品，以支援B2B資料和工作流程。 本檔案提供範例使用案例，示範B2B版本提供的其他優點。 包括:
 
 - 結合來自不同獨立資料來源的人員和帳戶資料，以產生全面的檢視，讓您更清楚了解客戶，並更精確地劃分區段。 如需詳細資訊，請參閱有關[建立XDM架構關係](./schemas/b2b.md)的檔案，以便與各種B2B來源搭配使用。
-- 根據相關實體的屬性劃分受眾。 這包括帳戶、機會、行銷活動和行銷清單。 區段不再僅限於人員屬性和體驗事件。 如需建立B2B特定對象的更多範例，請參閱B2B區段檔案。
-   <!-- PLACEHOLDER [B2B segmentation documentation]()  -->
+- 根據相關實體的屬性劃分受眾。 這包括帳戶、機會、行銷活動和行銷清單。 區段不再僅限於人員屬性和體驗事件。 如需建立B2B特定對象的詳細範例，請參閱[B2B區段檔案](./segmentation/b2b.md)。
 - 原生支援一個人員與多個帳戶相關的使用案例。
 
 ## 使用案例
@@ -97,12 +97,10 @@ CRM1的B2B資料（人員、帳戶、機會和活動）會同步至Marketo 1。 
 
 建議您參考下列檔案，以進一步了解B2B特定功能：
 
-<!-- - [Marketo connector]() -->
-- [即時客戶資料平台B2B版中的結構](./schemas/b2b.md)
-- [Marketo Engage目的地檔案](https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/adobe/marketo-engage.html)
-- [設定LinkedIn相符的對象目的地](https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/social/linkedin.html#connect)
-
-<!-- PLACEHOLDER -->
-<!-- - [Account Profiles]() -->
-<!-- - [B2B Segmentation examples]() -->
-<!-- PLACEHOLDERS to tutorial / account profiles / B2B connectors / segmentation examples -->
+<!-- PLACEHOLDER Link to B2B tutorial required  -->
+- [Real-time Customer Data Platform B2B版中的來源](./sources/b2b.md)
+- [Real-time Customer Data Platform B2B版中的結構描述](./schemas/b2b.md)
+- [B2B區段範例](./segmentation/b2b.md)
+- [帳戶設定檔概述](./accounts/account-profile-overview.md)
+- [Real-time Customer Data Platform B2B版目的地](./destinations/b2b.md)
+- [設定LinkedIn相符的對象目的地](../destinations/catalog/social/linkedin.md)
