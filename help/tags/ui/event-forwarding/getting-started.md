@@ -1,10 +1,11 @@
 ---
 title: 事件轉送快速入門
 description: 請依照此逐步教學課程，開始使用Adobe Experience Platform中的事件轉送。
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+exl-id: f82bfac9-dc2d-44de-a308-651300f107df
+source-git-commit: 406c7e90c315c1807f5f3dd2b32462868b312197
 workflow-type: tm+mt
 source-wordcount: '907'
-ht-degree: 27%
+ht-degree: 30%
 
 ---
 
@@ -12,7 +13,7 @@ ht-degree: 27%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch在Adobe Experience Platform中已重新命名為一套資料收集技術。 因此，產品檔案中已推出數個術語變更。 有關術語更改的綜合參考，請參閱以下[document](../../term-updates.md)。
+>Adobe Experience Platform Launch在Adobe Experience Platform中已重新命名為一套資料收集技術。 因此，所有產品文件中出現了幾項術語變更。 如需術語變更的彙整參考資料，請參閱以下[文件](../../term-updates.md)。
 
 若要在Adobe Experience Platform中使用事件轉送，必須使用下列三個選項之一或多個，將資料傳送至Adobe Experience Platform邊緣網路：
 
@@ -60,7 +61,7 @@ ht-degree: 27%
 
 1. 選擇「邊緣」平台類型。
 
-1. 選取&#x200B;**[!UICONTROL 「儲存」]**。
+1. 選取「**[!UICONTROL 儲存]**」。
 
 建立屬性後，前往新屬性的&#x200B;**[!UICONTROL Environments]**標籤，然後建立
 環境ID的備注。 如果資料流中使用的Adobe組織與事件轉送中使用的Adobe組織不同，您可以從**[!UICONTROL Environments]**&#x200B;標籤複製環境ID，並在建立資料流時貼上它。 或者，您也可以從下拉式選單中選取環境。
@@ -75,7 +76,7 @@ ht-degree: 27%
 
 1. 為組態命名並選擇是否填寫相關說明。說明可協助您在組態清單中識別各個組態。
 
-1. 選取&#x200B;**[!UICONTROL 「儲存」]**。
+1. 選取「**[!UICONTROL 儲存]**」。
 
 
 
@@ -97,7 +98,7 @@ ht-degree: 27%
 
 完成設定後，記下新屬性的環境 ID。
 
-## 設定標籤Web SDK擴充功能，將資料傳送至先前建立的資料流
+## 設定Platform Web SDK擴充功能，將資料傳送至先前建立的資料流
 
 在資料收集UI中建立屬性，然後使用Adobe Experience Platform Web SDK擴充功能進行設定。
 
