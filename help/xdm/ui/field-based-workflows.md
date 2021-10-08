@@ -4,9 +4,9 @@ description: 了解如何將現有欄位群組的欄位個別新增至Experience
 hide: true
 hidefromtoc: true
 exl-id: 0499ff30-a602-419b-b9d3-2defdd4354a7
-source-git-commit: b7c6f37d3e6d824465713647b624473cff188378
+source-git-commit: 0bac76ce754468bd7e5396b6f68fbcfc3d6e4aed
 workflow-type: tm+mt
-source-wordcount: '1175'
+source-wordcount: '1199'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->本檔案所述的工作流程目前仍在測試中。 功能和檔案可能會有所變更。
+>本檔案所述的工作流程目前為測試版，而您的組織可能尚未取得這些工作流程的存取權。 本檔案所述的功能可能會有所變更。
 
 Adobe Experience Platform提供一組完善的標準化[欄位群組](../schema/composition.md#field-group)，以用於Experience Data Model(XDM)結構。 這些欄位群組背後的結構和語義都經過精心定制，以滿足Platform中各種不同的細分使用案例和其他下游應用程式。 您也可以定義自己的自訂欄位群組，以滿足獨特的業務需求。
 
@@ -43,7 +43,7 @@ Adobe Experience Platform提供一組完善的標準化[欄位群組](../schema/
 
 ![管理相關欄位](../images/ui/field-based-workflows/manage-related-fields.png)
 
-將出現一個對話框，顯示有關欄位組的結構。 從這裡，您可以使用提供的核取方塊來選取或取消選取您需要的欄位。 滿足後，選擇&#x200B;**[!UICONTROL 添加欄位]**。
+將出現一個對話框，顯示有關欄位組的結構。 從這裡，您可以使用提供的核取方塊來選取或取消選取您需要的欄位。 滿足後，選擇&#x200B;**[!UICONTROL 確認]**。
 
 ![從欄位組中選擇欄位](../images/ui/field-based-workflows/select-fields.png)
 
@@ -73,23 +73,23 @@ Adobe Experience Platform提供一組完善的標準化[欄位群組](../schema/
 
 ## 直接將自訂欄位新增至結構
 
-如果您先前已建立[自訂欄位群組](./resources/field-groups.md#create)，則可直接將自訂欄位新增至架構，而無須預先將自訂欄位個別新增至自訂欄位群組。
-
->[!WARNING]
->
->將自訂欄位新增至結構時，您仍必須選取現有的自訂欄位群組，才能與其關聯。 這表示若要直接將自訂欄位新增至結構，您至少必須先在您目前使用的沙箱中定義一個自訂欄位群組。 此外，使用該自訂欄位群組的任何其他結構也會在您儲存變更後繼承新新增的欄位。
+與標準欄位的工作流程類似，您也可以將自己的自訂欄位直接新增至結構。
 
 若要將欄位新增至架構的根層級，請在畫布中選取架構名稱旁的加號(**+**)圖示。 架構結構中會顯示&#x200B;**[!UICONTROL 未命名欄位]**&#x200B;預留位置，而右側邊欄會更新，顯示用以設定欄位的控制項。
 
 ![根自訂欄位](../images/ui/field-based-workflows/root-custom-field.png)
 
-開始在要添加的自定義欄位的名稱中鍵入內容，系統會自動開始搜索匹配的標準欄位。 若要改為建立新自訂欄位，請選取附加&#x200B;**（[!UICONTROL 新欄位]）**&#x200B;的上層選項。
+開始在要添加的欄位名稱中鍵入，系統會自動開始搜索匹配的標準欄位。 若要改為建立新自訂欄位，請選取附加&#x200B;**（[!UICONTROL 新欄位]）**&#x200B;的上層選項。
 
 ![新欄位](../images/ui/field-based-workflows/custom-field-search.png)
 
-從此處，提供欄位的顯示名稱和資料類型。 在&#x200B;**[!UICONTROL 分配欄位組]**&#x200B;下，選擇要與新欄位關聯的自定義欄位組。
+從此處，提供欄位的顯示名稱和資料類型。 在&#x200B;**[!UICONTROL 分配欄位組]**&#x200B;下，必須為要關聯的新欄位選擇一個欄位組。 開始鍵入欄位組的名稱，如果先前已建立了自定義欄位組](./resources/field-groups.md#create)，則它們將出現在下拉清單中。 [或者，您也可以在欄位中輸入唯一名稱，以改為建立新欄位群組。
 
 ![選擇欄位組](../images/ui/field-based-workflows/select-field-group.png)
+
+>[!WARNING]
+>
+>如果您選取現有的自訂欄位群組，則使用該欄位群組的任何其他結構也會在您儲存變更後繼承新新增的欄位。 因此，如果要此傳播類型，則僅選擇現有欄位組。 否則，您應該選擇建立新的自訂欄位群組。
 
 完成後，選擇&#x200B;**[!UICONTROL Apply]**。
 
@@ -110,6 +110,8 @@ Adobe Experience Platform提供一組完善的標準化[欄位群組](../schema/
 ![將欄位新增至標準物件](../images/ui/field-based-workflows/add-field-to-standard-object.png)
 
 套用變更後，新欄位會顯示在標準物件的租用戶ID命名空間底下。 此巢狀命名空間可防止欄位群組本身內的欄位名稱衝突，以避免在使用相同欄位群組的其他結構中中斷變更。
+
+![新增至標準物件的欄位](../images/ui/field-based-workflows/added-to-standard-object.png)
 
 ## 後續步驟
 
