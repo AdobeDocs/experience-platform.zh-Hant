@@ -2,13 +2,13 @@
 keywords: rtcdp設定檔；設定檔rtcdp;rtcdp身分；rtcdp合併原則；即時客戶設定檔
 title: 帳戶設定檔UI指南
 description: 透過使用帳戶設定檔，Real-time Customer Data Platform B2B Edition可讓您統一來自多個來源的帳戶資訊。 本指南提供與Adobe Experience Platform使用者介面中帳戶設定檔互動的詳細資訊。
-source-git-commit: 5301cf870052f537a34913beb0b814212bdaadaa
+exl-id: a05e8b84-026e-4482-a288-aa25b441bd69
+source-git-commit: 5bd2afcc594d96878ee51af2e9e99d74b764009e
 workflow-type: tm+mt
-source-wordcount: '1153'
+source-wordcount: '1191'
 ht-degree: 0%
 
 ---
-
 
 # 帳戶設定檔UI指南
 
@@ -24,17 +24,17 @@ ht-degree: 0%
 
 ## 瀏覽帳戶設定檔
 
-若要瀏覽帳戶設定檔，請從左側導覽的「帳戶」下選取&#x200B;**[!UICONTROL Profiles]**&#x200B;開始。
+若要瀏覽帳戶設定檔，請從左側導覽的[!UICONTROL Accounts]下選取&#x200B;**[!UICONTROL Profiles]**&#x200B;開始。
 
 ![](images/b2b-account-browse.png)
 
-在&#x200B;**[!UICONTROL Browse]**&#x200B;標籤上，您可以使用來自所連接企業源的帳戶ID或直接輸入源詳細資訊來瀏覽帳戶配置檔案。
+在&#x200B;**[!UICONTROL Browse]**&#x200B;標籤中，您可以使用來自所連接企業源的帳戶ID或直接輸入源詳細資訊來瀏覽帳戶配置檔案。
 
 ![](images/b2b-account-browse-by.png)
 
 ### 按[!UICONTROL 連接的企業源瀏覽]
 
-要按連接的企業源瀏覽帳戶配置檔案，必須先使用&#x200B;**[!UICONTROL Source]**&#x200B;欄位旁的選擇器按鈕選擇連接的源。
+要按連接的企業源瀏覽帳戶配置檔案，請從&#x200B;**[!UICONTROL Browse by]**&#x200B;下拉清單中選擇&#x200B;**[!UICONTROL Connected enterprise source]**，然後使用&#x200B;**[!UICONTROL Source]**&#x200B;欄位旁的選擇器按鈕選擇連接的源。
 
 ![](images/b2b-account-browse.png)
 
@@ -50,7 +50,7 @@ ht-degree: 0%
 
 通過選擇連接名稱旁的單選按鈕，然後使用&#x200B;**[!UICONTROL Select]**&#x200B;返回[!UICONTROL Browse]頁簽，可以選擇源。
 
-在選擇源後，您現在必須輸入與源相關的&#x200B;**[!UICONTROL 帳戶id]**。 例如，選擇Salesforce源將要求您從Salesforce實例中輸入帳戶ID，以便查看與該ID綁定的帳戶配置檔案。
+在選擇源後，您現在必須輸入與源相關的&#x200B;**[!UICONTROL 帳戶ID]**。 例如，選擇Salesforce源將要求您從Salesforce實例中輸入帳戶ID，以便查看與該ID綁定的帳戶配置檔案。
 
 >[!NOTE]
 >
@@ -60,13 +60,15 @@ ht-degree: 0%
 
 ![](images/b2b-account-browse-id.png)
 
-### 按[!UICONTROL 其他]瀏覽
+### 按[!UICONTROL Others]瀏覽
 
-即時CDP B2B Edition支援執行直接查詢的功能，它允許您為要查看的帳戶輸入&#x200B;**[!UICONTROL 源名稱]**、**[!UICONTROL 源實例]**&#x200B;和&#x200B;**[!UICONTROL 帳戶id]**。 通過直接輸入源名稱和實例，您可以提供Experience Platform搜索和顯示正確帳戶配置檔案資料所需的上下文。
+即時CDP B2B Edition支援執行直接查詢的功能，它允許您為要查看的帳戶輸入&#x200B;**[!UICONTROL 源名稱]**、**[!UICONTROL 源實例]**&#x200B;和&#x200B;**[!UICONTROL 帳戶ID]**。 通過直接輸入源名稱和實例，您可以提供Experience Platform搜索和顯示正確帳戶配置檔案資料所需的上下文。
 
 在無法直接連線至資料的來源情況下，執行直接查閱的功能相當實用。 例如，如果貴組織已制定資料控管原則，防止直接連線至CRM，您可以將該資料匯出至雲端儲存系統，然後內嵌至Experience Platform。
 
 另一個範例可能是，您在資料離開系統並進入Platform之間執行轉換。 您可以使用直接查詢功能來提供資料的內容(例如，指定該資料為Marketo資料，儘管事實上該資料來自Amazon S3儲存貯體)，讓系統知道要尋找的位置，以及如何正確轉譯資料。
+
+若要開始直接查閱，請從&#x200B;**[!UICONTROL Browse by]**&#x200B;下拉式清單中選取&#x200B;**[!UICONTROL Others]**，然後針對您要檢視的帳戶輸入&#x200B;**[!UICONTROL Source name]**、**[!UICONTROL Source instance]**&#x200B;和&#x200B;**[!UICONTROL Account ID]**。
 
 ![](images/b2b-account-browse-adhoc.png)
 
