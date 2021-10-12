@@ -5,7 +5,7 @@ title: 查詢服務中的SQL語法
 topic-legacy: syntax
 description: 本檔案顯示Adobe Experience Platform Query Service支援的SQL語法。
 exl-id: 2bd4cc20-e663-4aaa-8862-a51fde1596cc
-source-git-commit: 8dceab8cdba1ac6b4a649f0e01b2bbda5f025bef
+source-git-commit: 6f697bb249c50e58f9e8a5821fa71f2d4c9a7aac
 workflow-type: tm+mt
 source-wordcount: '2154'
 ht-degree: 1%
@@ -332,7 +332,7 @@ SET property_key = property_value
 
 ### 開始
 
-`BEGIN`命令或`BEGIN WORK`或`BEGIN TRANSACTION`命令可起始事務塊。 在開始命令之後輸入的任何語句將在單個事務中執行，直到給出顯式COMMIT或ROLLBACK命令。 此命令與`START TRANSACTION`相同。
+`BEGIN`命令或`BEGIN WORK`或`BEGIN TRANSACTION`命令可起始事務塊。 在開始命令之後輸入的任何語句將在單個事務中執行，直到給出顯式COMMIT或ROLLBACK命令為止。 此命令與`START TRANSACTION`相同。
 
 ```sql
 BEGIN

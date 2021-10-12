@@ -3,16 +3,17 @@ title: Adobe Experience Platform Web SDK擴充功能中的事件類型
 description: 了解如何使用Adobe Experience Platform Launch中Adobe Experience Platform Web SDK擴充功能提供的事件類型。
 solution: Experience Platform
 feature: Web SDK
-source-git-commit: 4bddd9f23ae885468148d1592af219290d6fafd9
+exl-id: b3162406-c5ce-42ec-ab01-af8ac8c63560
+source-git-commit: 8f714933e23e281772cd8633d27096021de14c56
 workflow-type: tm+mt
-source-wordcount: '1026'
+source-wordcount: '1024'
 ht-degree: 1%
 
 ---
 
 # 事件類型
 
-本頁說明Adobe Experience Platform Web SDK標籤擴充功能提供的Adobe Experience Platform事件類型。 這些變數會用於[建置規則](https://experienceleague.adobe.com/docs/launch-learn/tutorials/fundamentals/building-rules-in-launch.html)，且不應與XDM](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/tracking-events.html?lang=zh-Hant)中的[`eventType`欄位混淆。
+本頁說明Adobe Experience Platform Web SDK標籤擴充功能提供的Adobe Experience Platform事件類型。 這些變數會用於[建置規則](https://experienceleague.adobe.com/docs/platform-learn/data-collection/tags/build-rules.html)，且不應與XDM](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/tracking-events.html?lang=zh-Hant)中的[`eventType`欄位混淆。
 
 ## [!UICONTROL 傳送事件完成]
 
@@ -169,7 +170,7 @@ var propositions = event.propositions;
 ]
 ```
 
-此時，您可以視需要呈現主張內容。 在此範例中，符合`discount`範圍的主張是使用Adobe Target的表單式體驗撰寫器建置的HTML主張。 假設您的頁面上有一個ID為`daily-special`的元素，並想將`discount`主張中的內容呈現至`daily-special`元素。 請執行下列動作：
+此時，您可以視需要呈現主張內容。 在此範例中，符合`discount`範圍的主張是使用Adobe Target的表單式體驗撰寫器建立的HTML主張。 假設您的頁面上有一個ID為`daily-special`的元素，並想將`discount`主張中的內容呈現至`daily-special`元素。 請執行下列動作：
 
 1. 從`event`對象中提取命題。
 1. 循環瀏覽每個主張，以`discount`範圍查找主張。
@@ -260,8 +261,3 @@ if (propositions) {
   // them in some other way.
 }
 ```
-
-
-
-
-
