@@ -5,9 +5,9 @@ title: 資料準備映射函式
 topic-legacy: overview
 description: 本文檔介紹與資料準備一起使用的映射函式。
 exl-id: e95d9329-9dac-4b54-b804-ab5744ea6289
-source-git-commit: 1133580d6d4d8df352ab901d5106f0bb6c1f2a08
+source-git-commit: ed14e0745ef105a35477f933b2ec435162f847de
 workflow-type: tm+mt
-source-wordcount: '3935'
+source-wordcount: '3933'
 ht-degree: 4%
 
 ---
@@ -100,11 +100,11 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 | get_url_host | 傳回指定URL的主機。 如果輸入無效，則返回null。 | <ul><li>URL:**必要**&#x200B;需要擷取主機的URL。</li></ul> | get_url_host&#x200B;(URL) | get_url_host(&#x200B;&quot;https://platform &#x200B; .adobe.com/home&quot;) | platform.adobe.com |
 | get_url_port | 傳回指定URL的連接埠。 如果輸入無效，則返回null。 | <ul><li>URL:**必要**&#x200B;需要提取埠的URL。</li></ul> | get_url_port(URL) | get_url_port(&#x200B;&quot;sftp://example.com//home/ &#x200B; joe/employee.csv&quot;) | 22 |
 | get_url_path | 傳回指定URL的路徑。 依預設，會傳回完整路徑。 | <ul><li>URL:**必要**&#x200B;需要擷取路徑的URL。</li><li>完整路徑(_P):*選用*&#x200B;一個布林值，確定是否返回完整路徑。 若設為false，則只會傳迴路徑的結尾。</li></ul> | get_url_path&#x200B;(URL, FULL_PATH) | get_url_path&#x200B;(&quot;sftp://example.com// &#x200B; home/joe/employee.csv&quot;) | &quot;/home/joe/&#x200B; employee.csv&quot; |
-| get_url_query_str | 傳回指定URL的查詢字串。 | <ul><li>URL:**必要**&#x200B;您嘗試從中取得查詢字串的URL。</li><li>錨點：**必要**&#x200B;決定將對查詢字串中的錨點執行什麼操作。 可以是三個值的其中之一：&quot;retain&quot;、&quot;remove&quot;或&quot;append&quot;。<br><br>如果值為「retain」，則錨點會附加至傳回的值。<br>如果值為「remove」，則會從傳回值中移除錨點。<br>如果值為「append」，則錨點會以個別值傳回。</li></ul> | get_url_query_str(&#x200B;URL，錨點) | get_url_query&#x200B;_url_query_url&#x200B;(&quot;foo://example.com:8042/over/there?name= &#x200B; ferret#nose&quot;, &quot;retain&quot;)<br>get_query_rose&quot;&#x200B;, &quot;retain&quot;,get_query_ret#nose&quot;, foo://example.com:8042 &#x200B;/over?name= ferrret#nose&quot;)<br>get_query_url&quot;foo://example.com:80 42/opend/oped42/over/theret?neret?name=ferret?name=ferrerenene?name=&quot;, &quot;) | `{"name": "ferret#nose"}`<br>`{"name": "ferret"}`<br>`{"name": "ferret", "_anchor_": "nose"}` |
+| get_url_query_str | 傳回指定URL的查詢字串。 | <ul><li>URL:**必要**&#x200B;您嘗試從中取得查詢字串的URL。</li><li>錨點：**必要**&#x200B;決定將對查詢字串中的錨點執行什麼操作。 可以是三個值的其中之一：&quot;retain&quot;、&quot;remove&quot;或&quot;append&quot;。<br><br>如果值為「retain」，則錨點會附加至傳回的值。<br>如果值為「remove」，則會從傳回值中移除錨點。<br>如果值為「append」，則錨點會以個別值傳回。</li></ul> | get_url_query_str(&#x200B;URL，錨點) | get_url_query&#x200B;_url_query_url&#x200B;(&quot;foo://example.com:8042/over/there?name= &#x200B; ferret#nose&quot;, &quot;retain&quot;)<br>get_query_rose&quot;&#x200B;, &quot;retain&quot;,get_query_ret#nose&quot;, foo://example.com:8042 &#x200B;/over?name= ferrret#nose&quot;)<br>get_query_url_url(foo://example.com:80 42/opeped/opend42/opend/oreterere4/erere42/opet?neret?name=opet?nerere=ferret?name=ferret?name=ferrene=ferret名稱， &quot;) | `{"name": "ferret#nose"}`<br>`{"name": "ferret"}`<br>`{"name": "ferret", "_anchor_": "nose"}` |
 
 {style=&quot;table-layout:auto&quot;}
 
-### 日期和時間函式{#date-and-time}
+### 日期和時間函式 {#date-and-time}
 
 >[!NOTE]
 >
@@ -120,7 +120,7 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 | 日期 | 將日期字串轉換為ZonedDateTime對象（ISO 8601格式）。 | <ul><li>日期：**必要**&#x200B;代表日期的字串。</li><li>格式：**必要**&#x200B;代表日期格式的字串。</li></ul> | 日期（日期，格式） | date(&quot;2019-10-23 11:24&quot;, &quot;yyyy-MM-dd HH:mm&quot;) | &quot;2019-10-23T11:24Z&quot; |
 | 日期 | 將日期字串轉換為ZonedDateTime對象（ISO 8601格式）。 | <ul><li>日期：**必要**&#x200B;代表日期的字串。</li></ul> | 日期（日期） | date(&quot;2019-10-23 11:24&quot;) | &quot;2019-10-23T11:24Z&quot; |
 | date_part | 擷取日期的部分。 支援下列元件值：<br><br>&quot;year&quot;<br>&quot;yyyy&quot;<br>&quot;yy&quot;<br><br>&quot;quarter&quot;<br>&quot;q&quot;<br>&quot;q&quot;<br><br>&quot;month&quot;<br>&quot;mm&quot;<br>&quot;m&quot;<br><br>&quot;dayofyear&quot;<br>&quot;y&quot;<br><br>&quot;day&quot;<br>&quot;a14/>&quot;dd&quot;&lt;a4/&lt;a5&quot;16/>&quot;ww&quot;<br>&quot;w&quot;<br><br>&quot;weekday&quot;<br>&quot;dw&quot;<br>&quot;w&quot;<br><br>&quot;hour&quot;<br>&quot;hh&quot;<br>&quot;hh24&quot;<br>&quot;hh12&quot;<br><br>&quot;minute&quot;<br>&quot;<br>&quot;a29/>&quot;ss&quot;<br>&quot;s&quot;<br><br>&quot;毫秒&quot;<br>&quot;ms&quot;<br><br><br><br><br><br><br><br> | <ul><li>元件：**必要**&#x200B;代表日期部分的字串。 </li><li>日期：**必要**&#x200B;日期，採用標準格式。</li></ul> | date_part(&#x200B;元件，日期) | date_part(&quot;MM&quot;, date(&quot;2019-10-17 11:55:12&quot;)) | 10 |
-| set_date_part | 在指定日期中取代元件。 接受下列元件：<br><br>&quot;year&quot;<br>&quot;yyyy&quot;<br>&quot;yy&quot;<br><br>&quot;month&quot;<br>&quot;mm&quot;<br>&quot;m&quot;<br><br>&quot;day&quot;<br>&quot;dd&quot;<br>&quot;d&quot;<br><br>&quot;hour&quot;<br>&quot;hh&quot;<br><br>&quot;mi&quot;<br>&quot;mi&quot;<br>&quot;n&quot;<br><br>&quot;&lt;a&lt;s15/>&quot;6/>&quot;s&quot;<br><br> | <ul><li>元件：**必要**&#x200B;代表日期部分的字串。 </li><li>值：**必要**&#x200B;為指定日期的元件設定的值。</li><li>日期：**必要**&#x200B;日期，採用標準格式。</li></ul> | set_date_part(&#x200B;元件，值，日期) | set_date_part(&quot;m&quot;, 4, date(&quot;2016-11-09T11:44:44.797&quot;) | 「2016-04-09T11:44:44.797」 |
+| set_date_part | 在指定日期中取代元件。 接受下列元件：<br><br>&quot;year&quot;<br>&quot;yyyy&quot;<br>&quot;yy&quot;<br><br>&quot;month&quot;<br>&quot;mm&quot;<br>&quot;m&quot;<br><br>&quot;day&quot;<br>&quot;dd&quot;<br>&quot;d&quot;<br><br>&quot;hour&quot;<br>&quot;hh&quot;<br><br>&quot;mi&quot;<br>&quot;mi&quot;<br>&quot;n&quot;<br><br>&quot;&lt;a&lt;s15/>&quot;6/>&quot;s&quot;<br><br> | <ul><li>元件：**必要**&#x200B;代表日期部分的字串。 </li><li>值：**必要**&#x200B;為指定日期的元件設定的值。</li><li>日期：**必要**&#x200B;日期，採用標準格式。</li></ul> | set_date_part(&#x200B;元件，值，日期) | set_date_part(&quot;m&quot;, 4, date(&quot;2016-11-09T11:44:44.797&quot;) | &quot;2016-04-09T11:44:44.797&quot; |
 | make_date_time | 從零件建立日期。 您也可以使用make_timestamp來誘導此函式。 | <ul><li>年：**必要**&#x200B;年份，以四位數字寫。</li><li>月：**必要**&#x200B;月份。 允許的值是1到12。</li><li>日：**必要**&#x200B;日。 允許的值是1到31。</li><li>小時：**必要**&#x200B;小時。 允許的值為0到23。</li><li>分鐘：**必要**&#x200B;分鐘。 允許的值為0到59。</li><li>納秒：**必要**&#x200B;納秒值。 允許的值為0到999999999。</li><li>時區：**必要**&#x200B;日期時間的時區。</li></ul> | make_date_time(&#x200B;年、月、日、小時、分鐘、秒、納秒、時區) | make_date_time(&#x200B;2019, 10, 17, 11, 55, 12, 999, &quot;America/Los_Angeles&quot;) | `2019-10-17T11:55:12.0&#x200B;00000999-07:00[America/Los_Angeles]` |
 | zone_date_to_utc | 將任何時區的日期轉換為UTC的日期。 | <ul><li>日期：**必要**&#x200B;您嘗試轉換的日期。</li></ul> | zone_date_to_utc(&#x200B;DATE) | `zone_date_to_utc&#x200B;(2019-10-17T11:55:&#x200B;12.000000999-&#x200B;07:00[America/Los_Angeles])` | `2019-10-17T18:55:12.000000999Z[UTC]` |
 | zone_date_to_zone | 將日期從一個時區轉換為另一個時區。 | <ul><li>日期：**必要**&#x200B;您嘗試轉換的日期。</li><li>區域：**必要**&#x200B;您嘗試將日期轉換為的時區。</li></ul> | zone_date_to_zone(&#x200B;DATE, ZONE) | `zone_date_to_utc&#x200B;(2019-10-17T11:55:12&#x200B;.000000999-07:00&#x200B;[America/Los_Angeles], "Europe/Paris")` | `2019-10-17T20:55:12.000000999+02:00[Europe/Paris]` |
@@ -141,7 +141,7 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 | arrays_to_object | 建立對象清單。 | <ul><li>輸入：**必要**&#x200B;密鑰對和陣列對的分組。</li></ul> | arrays_to_object(INPUT) | 需要樣本 | 需要樣本 |
 | to_object | 根據給定的平面索引鍵/值配對建立對象。 | <ul><li>輸入：**必要**&#x200B;索引鍵/值組的平面清單。</li></ul> | to_object(INPUT) | to_object&#x200B;(&quot;firstName&quot;, &quot;John&quot;, &quot;lastName&quot;, &quot;Doe&quot;) | `{"firstName": "John", "lastName": "Doe"}` |
 | str_to_object | 從輸入字串建立物件。 | <ul><li>字串：**必要**&#x200B;正在剖析以建立物件的字串。</li><li>VALUE_DELIMITER:*選用*&#x200B;將欄位與值分隔的分隔字元。 預設分隔字元為`:`。</li><li>FIELD_DELIMITER:*選用*&#x200B;分隔欄位值組的分隔字元。 預設分隔字元為`,`。</li></ul> | str_to_object(&#x200B;字串， VALUE_DELIMITER, FIELD_DELIMITER) | str_to_object(&quot;firstName - John | lastName - | 電話 — 123 456 7890&quot;, &quot;-&quot;, &quot; | &quot;) | `{"firstName": "John", "lastName": "Doe", "phone": "123 456 7890"}` |
-| is_set | 檢查對象是否存在於源資料中。 | <ul><li>輸入：**必要**&#x200B;要檢查的路徑（如果它存在於源資料中）。</li></ul> | is_set(INPUT) | is_set&#x200B;(&quot;evars.evar.field1&quot;) | true |
+| contains_key | 檢查對象是否存在於源資料中。 | <ul><li>輸入：**必要**&#x200B;要檢查的路徑（如果它存在於源資料中）。</li></ul> | contains_key(INPUT) | contains_key(&quot;evars.evar.field1&quot;) | true |
 | 取消 | 將屬性的值設定為`null`。 當您不想將欄位複製到目標架構時，應使用此欄位。 |  | nullify() | nullify() | `null` |
 | get_keys | 剖析索引鍵/值組並傳回所有索引鍵。 | <ul><li>對象：**必要**&#x200B;將從中提取鍵的對象。</li></ul> | get_keys(OBJECT) | get_keys({&quot;book1&quot;):《傲慢與偏見》、《書2》：《1984年》) | `["book1", "book2"]` |
 | get_values | 分析索引鍵/值配對，並根據指定索引鍵傳回字串的值。 | <ul><li>字串：**必要**&#x200B;您要剖析的字串。</li><li>索引鍵：**必要**&#x200B;必須擷取值的鍵。</li><li>VALUE_DELIMITER:**必要**&#x200B;分隔欄位和值的分隔字元。 若提供`null`或空字串，則此值為`:`。</li><li>FIELD_DELIMITER:*選用*&#x200B;分隔欄位和值組的分隔字元。 若提供`null`或空字串，則此值為`,`。</li></ul> | get_values(STRING, KEY, VALUE_DELIMITER, FIELD_DELIMITER) | get_values(\&quot;firstName - John , lastName - Cena , phone - 555 420 8692\&quot;, \&quot;firstName\&quot;, \&quot;-\&quot;, \&quot;,\&quot;) | 約翰 |
@@ -165,7 +165,7 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 
 {style=&quot;table-layout:auto&quot;}
 
-### 邏輯運算子{#logical-operators}
+### 邏輯運算子 {#logical-operators}
 
 >[!NOTE]
 >
@@ -191,7 +191,7 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 
 {style=&quot;table-layout:auto&quot;}
 
-### 類型轉換{#type-conversions}
+### 類型轉換 {#type-conversions}
 
 >[!NOTE]
 >
@@ -218,7 +218,7 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 
 {style=&quot;table-layout:auto&quot;}
 
-### 特別操作{#special-operations}
+### 特別行動 {#special-operations}
 
 >[!NOTE]
 >
@@ -230,7 +230,7 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 
 {style=&quot;table-layout:auto&quot;}
 
-### 用戶代理函式{#user-agent}
+### 用戶代理函式 {#user-agent}
 
 >[!NOTE]
 >
@@ -238,13 +238,13 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 
 | 函數 | 說明 | 參數 | 語法 | 運算式 | 範例輸出 |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
-| ua_os_name | 從用戶代理字串中提取作業系統名稱。 | <ul><li>USER_AGENT:**必要**&#x200B;使用者代理字串。</li></ul> | ua_os_name&#x200B;(USER_AGENT) | ua_os_name(&#x200B;&quot;Mozilla/5.0(iPhone;CPU iPhone OS 5_1_1（如Mac OS X）AppleWebKit/534.46（KHTML如Gecko）版本/5.1 Mobile/9B206 Safari/7534.48.3」) | iOS |
-| ua_os_version_major | 從使用者代理字串中擷取作業系統的主要版本。 | <ul><li>USER_AGENT:**必要**&#x200B;使用者代理字串。</li></ul> | ua_os_version_major&#x200B;(USER_AGENT) | ua_os_version_major &#x200B;s(&quot;Mozilla/5.0(iPhone;CPU iPhone OS 5_1_1（如Mac OS X）AppleWebKit/534.46（KHTML如Gecko）版本/5.1 Mobile/9B206 Safari/7534.48.3」) | iOS 5 |
-| ua_os_version | 從使用者代理字串中擷取作業系統的版本。 | <ul><li>USER_AGENT:**必要**&#x200B;使用者代理字串。</li></ul> | ua_os_version&#x200B;(USER_AGENT) | ua_os_version(&#x200B;&quot;Mozilla/5.0(iPhone;CPU iPhone OS 5_1_1（如Mac OS X）AppleWebKit/534.46（KHTML如Gecko）版本/5.1 Mobile/9B206 Safari/7534.48.3」) | 5.1.1 |
-| ua_os_name_version | 從用戶代理字串中提取作業系統的名稱和版本。 | <ul><li>USER_AGENT:**必要**&#x200B;使用者代理字串。</li></ul> | ua_os_name_version&#x200B;(USER_AGENT) | ua_os_name_version(&#x200B;&quot;Mozilla/5.0(iPhone;CPU iPhone OS 5_1_1（如Mac OS X）AppleWebKit/534.46（KHTML如Gecko）版本/5.1 Mobile/9B206 Safari/7534.48.3」) | iOS 5.1.1 |
-| ua_agent_version | 從用戶代理字串中提取代理版本。 | <ul><li>USER_AGENT:**必要**&#x200B;使用者代理字串。</li></ul> | ua_agent_version&#x200B;(USER_AGENT) | ua_agent_version&#x200B;(&quot;Mozilla/5.0(iPhone;CPU iPhone OS 5_1_1（如Mac OS X）AppleWebKit/534.46（KHTML如Gecko）版本/5.1 Mobile/9B206 Safari/7534.48.3」) | 5.1 |
-| ua_agent_version_major | 從用戶代理字串中提取代理名稱和主版本。 | <ul><li>USER_AGENT:**必要**&#x200B;使用者代理字串。</li></ul> | ua_agent_version_major&#x200B;(USER_AGENT) | ua_agent_version_major(&#x200B;&quot;Mozilla/5.0(iPhone;CPU iPhone OS 5_1_1（如Mac OS X）AppleWebKit/534.46（KHTML如Gecko）版本/5.1 Mobile/9B206 Safari/7534.48.3」) | Safari 5 |
-| ua_agent_name | 從用戶代理字串中提取代理名。 | <ul><li>USER_AGENT:**必要**&#x200B;使用者代理字串。</li></ul> | ua_agent_name&#x200B;(USER_AGENT) | ua_agent_name&#x200B;(&quot;Mozilla/5.0(iPhone;CPU iPhone OS 5_1_1（如Mac OS X）AppleWebKit/534.46（KHTML如Gecko）版本/5.1 Mobile/9B206 Safari/7534.48.3」) | Safari |
-| ua_device_class | 從用戶代理字串中提取設備類。 | <ul><li>USER_AGENT:**必要**&#x200B;使用者代理字串。</li></ul> | ua_device_class&#x200B;(USER_AGENT) | ua_device_class(&#x200B;&quot;Mozilla/5.0(iPhone;CPU iPhone OS 5_1_1（如Mac OS X）AppleWebKit/534.46（KHTML如Gecko）版本/5.1 Mobile/9B206 Safari/7534.48.3」) | 電話 |
+| ua_os_name | 從用戶代理字串中提取作業系統名稱。 | <ul><li>USER_AGENT:**必要**&#x200B;使用者代理字串。</li></ul> | ua_os_name&#x200B;(USER_AGENT) | ua_os_name(&#x200B;&quot;Mozilla/5.0(iPhone;CPU iPhone OS 5_1_1(如Mac OS X)AppleWebKit/534.46（KHTML如Gecko）Version/5.1 Mobile/9B206 Safari/7534.48.3」) | iOS |
+| ua_os_version_major | 從使用者代理字串中擷取作業系統的主要版本。 | <ul><li>USER_AGENT:**必要**&#x200B;使用者代理字串。</li></ul> | ua_os_version_major&#x200B;(USER_AGENT) | ua_os_version_major &#x200B;s(&quot;Mozilla/5.0(iPhone;CPU iPhone OS 5_1_1(如Mac OS X)AppleWebKit/534.46（KHTML如Gecko）Version/5.1 Mobile/9B206 Safari/7534.48.3」) | iOS 5 |
+| ua_os_version | 從使用者代理字串中擷取作業系統的版本。 | <ul><li>USER_AGENT:**必要**&#x200B;使用者代理字串。</li></ul> | ua_os_version&#x200B;(USER_AGENT) | ua_os_version&#x200B;(&quot;Mozilla/5.0(iPhone;CPU iPhone OS 5_1_1(如Mac OS X)AppleWebKit/534.46（KHTML如Gecko）Version/5.1 Mobile/9B206 Safari/7534.48.3」) | 5.1.1 |
+| ua_os_name_version | 從用戶代理字串中提取作業系統的名稱和版本。 | <ul><li>USER_AGENT:**必要**&#x200B;使用者代理字串。</li></ul> | ua_os_name_version&#x200B;(USER_AGENT) | ua_os_name_version(&#x200B;&quot;Mozilla/5.0(iPhone;CPU iPhone OS 5_1_1(如Mac OS X)AppleWebKit/534.46（KHTML如Gecko）Version/5.1 Mobile/9B206 Safari/7534.48.3」) | iOS 5.1.1 |
+| ua_agent_version | 從用戶代理字串中提取代理版本。 | <ul><li>USER_AGENT:**必要**&#x200B;使用者代理字串。</li></ul> | ua_agent_version&#x200B;(USER_AGENT) | ua_agent_version&#x200B;(&quot;Mozilla/5.0(iPhone;CPU iPhone OS 5_1_1(如Mac OS X)AppleWebKit/534.46（KHTML如Gecko）Version/5.1 Mobile/9B206 Safari/7534.48.3」) | 5.1 |
+| ua_agent_version_major | 從用戶代理字串中提取代理名稱和主版本。 | <ul><li>USER_AGENT:**必要**&#x200B;使用者代理字串。</li></ul> | ua_agent_version_major&#x200B;(USER_AGENT) | ua_agent_version_major(&#x200B;&quot;Mozilla/5.0(iPhone;CPU iPhone OS 5_1_1(如Mac OS X)AppleWebKit/534.46（KHTML如Gecko）Version/5.1 Mobile/9B206 Safari/7534.48.3」) | Safari 5 |
+| ua_agent_name | 從用戶代理字串中提取代理名。 | <ul><li>USER_AGENT:**必要**&#x200B;使用者代理字串。</li></ul> | ua_agent_name&#x200B;(USER_AGENT) | ua_agent_name&#x200B;(&quot;Mozilla/5.0(iPhone;CPU iPhone OS 5_1_1(如Mac OS X)AppleWebKit/534.46（KHTML如Gecko）Version/5.1 Mobile/9B206 Safari/7534.48.3」) | Safari |
+| ua_device_class | 從用戶代理字串中提取設備類。 | <ul><li>USER_AGENT:**必要**&#x200B;使用者代理字串。</li></ul> | ua_device_class&#x200B;(USER_AGENT) | ua_device_class(&#x200B;&quot;Mozilla/5.0(iPhone;CPU iPhone OS 5_1_1(如Mac OS X)AppleWebKit/534.46（KHTML如Gecko）Version/5.1 Mobile/9B206 Safari/7534.48.3」) | 電話 |
 
 {style=&quot;table-layout:auto&quot;}
