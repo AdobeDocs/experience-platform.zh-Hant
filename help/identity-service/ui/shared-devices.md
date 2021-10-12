@@ -6,9 +6,9 @@ topic-legacy: tutorial
 description: 「共用裝置偵測」可識別相同裝置的不同已驗證使用者，讓客戶資料在身分圖表中的呈現更準確
 hide: true
 hidefromtoc: true
-source-git-commit: 205d9a8d0d5759e978604bef2b05664b1376d835
+source-git-commit: 9c0d360b39bf69a44ac6298724dbab0f8456dc90
 workflow-type: tm+mt
-source-wordcount: '655'
+source-wordcount: '656'
 ht-degree: 0%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 0%
 
 Adobe Experience Platform [!DNL Identity Service]可協助您跨裝置和系統橋接身分，以便即時提供具影響力的個人數位體驗，進而更全面了解客戶及其行為。
 
-[!DNL Shared Device Detection] 指由多個個人使用的裝置。共用裝置的範例包括平板電腦、程式庫電腦和資訊站。 通過[!DNL Shared Device Detection]可以防止同一設備的不同用戶合併為單個身份，從而可以更精確地表示。
+[!DNL Shared Device] 是指多個個人使用的裝置。共用裝置的範例包括平板電腦、程式庫電腦和資訊站。 透過[!DNL Shared Device Detection]功能，可防止將同一裝置的不同使用者合併為單一身分，以提供更精確的表示方式。
 
 使用[!DNL Shared Device Detection]，您可以：
 
@@ -31,7 +31,7 @@ Adobe Experience Platform [!DNL Identity Service]可協助您跨裝置和系統�
 
 >[!TIP]
 >
->[!DNL Shared Device Detection]的設定必須在啟用資料集的[!DNL Profile]之前完成，因為一旦資料開始流入[!DNL Identity Service]，您便不再修訂設定。
+>在為資料集啟用[!DNL Profile]之前，必須完成[!DNL Shared Device Detection]的配置，因為一旦在[!DNL Identity Service]中生成圖形，您就不再修改設定。
 
 ## 快速入門
 
