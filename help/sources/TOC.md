@@ -3,8 +3,8 @@ audience: user
 user-guide-title: Adobe Experience Platform 來源連接器說明
 breadcrumb-title: 來源連接器指南
 user-guide-description: 從多種來源或結構擷取資料、加標籤，以及增強已擷取的資料。
-feature: Data Ingestion, Sources
-source-git-commit: fe024675e6337ebf9a401f65db939440f435053f
+feature: Sources
+source-git-commit: 5218e6cf82b74efbbbcf30495395a4fe2ad9fe14
 workflow-type: tm+mt
 source-wordcount: '653'
 ht-degree: 12%
@@ -42,7 +42,7 @@ ht-degree: 12%
       - [Azure檔案儲存連接器](connectors/cloud-storage/azure-file-storage.md)
       - [資料登陸區](connectors/cloud-storage/data-landing-zone.md)
       - [FTP連接器](connectors/cloud-storage/ftp.md)
-      - [Google雲端儲存空間連接器](connectors/cloud-storage/google-cloud-storage.md)
+      - [Google雲端儲存連接器](connectors/cloud-storage/google-cloud-storage.md)
       - [Google PubSub](connectors/cloud-storage/google-pubsub.md)
       - [Oracle對象儲存](connectors/cloud-storage/oracle-object-storage.md)
       - [SFTP連接器](connectors/cloud-storage/sftp.md)

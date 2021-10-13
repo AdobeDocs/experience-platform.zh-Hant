@@ -1,10 +1,12 @@
 ---
 title: 核心事件轉送擴充功能概觀
 description: 了解Adobe Experience Platform中的核心事件轉送擴充功能。
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+feature: Event Forwarding
+exl-id: b5ee4ccf-6fa5-4472-be04-782930f07e20
+source-git-commit: 5218e6cf82b74efbbbcf30495395a4fe2ad9fe14
 workflow-type: tm+mt
 source-wordcount: '1724'
-ht-degree: 90%
+ht-degree: 91%
 
 ---
 
@@ -12,7 +14,7 @@ ht-degree: 90%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch在Adobe Experience Platform中已重新命名為一套資料收集技術。 因此，產品檔案中已推出數個術語變更。 有關術語更改的綜合參考，請參閱以下[document](../../../term-updates.md)。
+>Adobe Experience Platform Launch在Adobe Experience Platform中已重新命名為一套資料收集技術。 因此，所有產品文件中出現了幾項術語變更。 如需術語變更的彙整參考資料，請參閱以下[文件](../../../term-updates.md)。
 
 核心事件轉送擴充功能提供Adobe Experience Platform中事件轉送的預設事件、條件和資料類型。
 
@@ -28,7 +30,7 @@ ht-degree: 90%
 
 1. 選擇&#x200B;**[!UICONTROL 開啟編輯器]**。
 1. 輸入自訂程式碼。
-1. 選取&#x200B;**[!UICONTROL 「儲存」]**。
+1. 選取「**[!UICONTROL 儲存]**」。
 
 若要存取自訂程式碼中資料元素的值，請使用 `getDataElementValue` 方法。舉例來說，若要擷取資料元素 `productName` 的值，請編寫以下內容：
 

@@ -4,11 +4,11 @@ audience: user
 user-guide-title: Adobe Experience Platform 網頁 SDK 說明
 breadcrumb-title: Web SDK 指南
 user-guide-description: 透過 Edge 網路與 Experience Cloud 服務互動。
-feature: 資料管理
-source-git-commit: 2f9ff95529c907cfc28bc98198eca9fcfc21e9b9
+feature: Web SDK
+source-git-commit: 5218e6cf82b74efbbbcf30495395a4fe2ad9fe14
 workflow-type: tm+mt
-source-wordcount: '144'
-ht-degree: 36%
+source-wordcount: '142'
+ht-degree: 35%
 
 ---
 

@@ -1,10 +1,12 @@
 ---
 title: 事件轉送概述
 description: 了解Adobe Experience Platform中的事件轉送功能，讓您不須變更標籤實作，即可使用Platform Edge Network執行工作。
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+feature: Event Forwarding
+exl-id: 18e76b9c-4fdd-4eff-a515-a681bc78d37b
+source-git-commit: 5218e6cf82b74efbbbcf30495395a4fe2ad9fe14
 workflow-type: tm+mt
 source-wordcount: '547'
-ht-degree: 37%
+ht-degree: 42%
 
 ---
 
@@ -12,7 +14,7 @@ ht-degree: 37%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch在Adobe Experience Platform中已重新命名為一套資料收集技術。 因此，產品檔案中已推出數個術語變更。 有關術語更改的綜合參考，請參閱以下[document](../../term-updates.md)。
+>Adobe Experience Platform Launch在Adobe Experience Platform中已重新命名為一套資料收集技術。 因此，所有產品文件中出現了幾項術語變更。 如需術語變更的彙整參考資料，請參閱以下[文件](../../term-updates.md)。
 
 Adobe Experience Platform中的事件轉送功能可讓Adobe Experience Platform邊緣網路執行用戶端上正常執行的工作，減少網頁和應用程式的重量。 事件轉送規則可以轉換資料，並將資料傳送至新目的地，而不會變更用戶端實作。
 

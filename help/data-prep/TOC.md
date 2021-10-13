@@ -2,11 +2,11 @@
 audience: user
 user-guide-title: 資料準備指南
 user-guide-description: 準備您的資料以擷取至 Adobe Experience Platform。
-feature: 資料管理，資料擷取
-source-git-commit: 0af9290a3143b85311fbbd8d194f4799b0c9a873
+feature: Data Prep
+source-git-commit: 5218e6cf82b74efbbbcf30495395a4fe2ad9fe14
 workflow-type: tm+mt
-source-wordcount: '48'
-ht-degree: 37%
+source-wordcount: '44'
+ht-degree: 40%
 
 ---
 
@@ -18,7 +18,7 @@ ht-degree: 37%
 - 映射服務API {#api}
    - [概覽](./api/overview.md)
    - [快速入門](./api/getting-started.md)
-   - [函數](./api/functions.md)
+   - [函式](./api/functions.md)
    - [映射集](./api/mapping-set.md)
 - [新增計算欄位](./calculated-fields.md)
 - [處理資料格式](./data-handling.md)
