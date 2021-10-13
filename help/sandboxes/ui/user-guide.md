@@ -5,10 +5,10 @@ title: 沙箱UI指南
 topic-legacy: user guide
 description: 本檔案提供如何在Adobe Experience Platform使用者介面中執行與沙箱相關之各種作業的步驟。
 exl-id: b258c822-5182-4217-9d1b-8196d889740f
-source-git-commit: 3b0f156d3d6a13fbad45a153749b81a0d6244283
+source-git-commit: a43dd851a5c7ec722e792a0f43d1bb42777f0c15
 workflow-type: tm+mt
-source-wordcount: '779'
-ht-degree: 0%
+source-wordcount: '832'
+ht-degree: 1%
 
 ---
 
@@ -43,6 +43,10 @@ ht-degree: 0%
 ![](../images/ui/sandbox-search.png)
 
 ## 建立新沙箱
+
+>[!NOTE]
+>
+>建立新沙箱時，您必須先將該新沙箱新增至您的產品設定檔(位於[Adobe Admin Console](https://adminconsole.adobe.com/))，才能開始使用新沙箱。 如需如何將沙箱布建至產品設定檔的資訊，請參閱[管理產品設定檔權限的相關檔案](../../access-control/ui/permissions.md)。
 
 使用下列影片快速概述如何在Experience Platform中使用沙箱。
 

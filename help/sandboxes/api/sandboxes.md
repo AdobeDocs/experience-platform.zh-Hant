@@ -4,10 +4,11 @@ solution: Experience Platform
 title: 沙箱管理API端點
 topic-legacy: developer guide
 description: 沙箱API中的/沙箱端點可讓您以程式設計方式管理Adobe Experience Platform中的沙箱。
-source-git-commit: f5ce7b7f09c624c53065757bb8a9b09f989dce0a
+exl-id: 0ff653b4-3e31-4ea5-a22e-07e18795f73e
+source-git-commit: a43dd851a5c7ec722e792a0f43d1bb42777f0c15
 workflow-type: tm+mt
-source-wordcount: '1436'
-ht-degree: 2%
+source-wordcount: '1489'
+ht-degree: 3%
 
 ---
 
@@ -190,6 +191,10 @@ curl -X GET \
 | `eTag` | 沙箱特定版本的識別碼。 用於版本控制和快取效率，此值會在每次對沙箱進行變更時更新。 |
 
 ## 建立沙箱 {#create}
+
+>[!NOTE]
+>
+>建立新沙箱時，您必須先將該新沙箱新增至您的產品設定檔(位於[Adobe Admin Console](https://adminconsole.adobe.com/))，才能開始使用新沙箱。 如需如何將沙箱布建至產品設定檔的資訊，請參閱[管理產品設定檔權限的相關檔案](../../access-control/ui/permissions.md)。
 
 您可以向`/sandboxes`端點提出POST要求，以建立新的開發或生產沙箱。
 
