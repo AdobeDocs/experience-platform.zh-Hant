@@ -3,8 +3,7 @@ audience: user
 user-guide-title: Adobe Experience Platform ETL 指南
 breadcrumb-title: ETL 指南
 user-guide-description: 了解建立安全、高效能連接器以將資料擷取至 Platform 的一般步驟。
-feature: Data Ingestion
-source-git-commit: d1f50cc228cc6bc31a94981edb3109d07378911f
+source-git-commit: c3320f040383980448135371ad9fae583cfca344
 workflow-type: tm+mt
 source-wordcount: '43'
 ht-degree: 48%

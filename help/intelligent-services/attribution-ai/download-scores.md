@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform；歸因ai；存取分數；熱門主題；下載分數；歸因ai分數；匯出；匯出
-solution: Experience Platform, Intelligent Services
+feature: Attribution AI
 title: 下載分數(以Attribution AI表示)
 topic-legacy: Downloading scores
 description: 本檔案可供下載Attribution AI分數的指南。
 exl-id: 8821e3fb-c520-4933-8eb7-0b0aa10db916
-source-git-commit: 7219c44e1d8812506ee97367f27076b55a40203b
+source-git-commit: c3320f040383980448135371ad9fae583cfca344
 workflow-type: tm+mt
 source-wordcount: '1053'
 ht-degree: 2%
