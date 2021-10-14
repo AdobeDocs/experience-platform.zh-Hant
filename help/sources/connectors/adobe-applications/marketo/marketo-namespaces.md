@@ -5,9 +5,9 @@ title: B2B命名空間和結構
 topic-legacy: overview
 description: 本檔案概述建立B2B來源連接器時所需的自訂命名空間。
 exl-id: f1592be5-987e-41b8-9844-9dea5bd452b9
-source-git-commit: 0661d124ffe520697a1fc8e2cae7b0b61ef4edfc
+source-git-commit: 15fd870565d50bd4e320a1acf61413f45c1f537c
 workflow-type: tm+mt
-source-wordcount: '1588'
+source-wordcount: '1679'
 ht-degree: 4%
 
 ---
@@ -87,6 +87,7 @@ B2B命名空間用於實體的主要身分識別中。
 | B2B促銷活動成員 | `b2b_campaign_member` | `B2B_CAMPAIGN_MEMBER` |
 | B2B行銷清單 | `b2b_marketing_list` | `B2B_MARKETING_LIST` |
 | B2B行銷清單成員 | `b2b_marketing_list_member` | `B2B_MARKETING_LIST_MEMBER` |
+| B2B帳戶人員關係 | `b2b_account_person_relation` | `B2B_ACCOUNT_PERSON` |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -115,6 +116,7 @@ Experience Platform 會使用結構，以一致且可重複使用的方式說明
 | B2B行銷清單 | XDM商業行銷清單 | 無 | 啟用 | `marketingListKey.sourceKey` 在基類中 | B2B行銷清單 | 無 | 無 | 無 | 靜態清單未從[!DNL Salesforce]同步，因此沒有次要身份。 |
 | B2B行銷清單成員 | XDM商業行銷清單成員 | 無 | 啟用 | `marketingListMemberKey.sourceKey` 在基類中 | B2B行銷清單成員 | 無 | 無 | **第一關係**<ul><li>`PersonKey.sourceKey` 在基類中</li><li>類型：多對一</li><li>參考結構：B2B人員</li><li>命名空間：B2B人員</li><li>目標屬性：`b2b.personKey.sourceKey`</li><li>當前架構的關係名稱：人員</li><li>引用架構的關係名稱：行銷清單</li></ul>**第二關係**<ul><li>`marketingListKey.sourceKey` 在基類中</li><li>類型：多對一</li><li>參考結構：B2B行銷清單</li><li>命名空間：B2B行銷清單</li><li>目標屬性：`marketingListKey.sourceKey`</li><li>當前架構的關係名稱：行銷清單</li><li>引用架構的關係名稱：人員</li></ul> | 靜態清單成員未從[!DNL Salesforce]同步，因此沒有輔助標識。 |
 | B2B活動 | XDM ExperienceEvent | <ul><li>造訪網頁</li><li>新銷售機會</li><li>轉換銷售機會</li><li>添加到清單</li><li>從清單中刪除</li><li>添加到機會</li><li>從銷售機會中刪除</li><li>已填寫表單</li><li>連結點按次數</li><li>電子郵件傳送</li><li>已開啟電子郵件</li><li>已點按電子郵件</li><li>電子郵件已退信</li><li>電子郵件已跳出軟體</li><li>取消訂閱電子郵件</li><li>分數已變更</li><li>已更新銷售機會</li><li>促銷活動進展中的狀態已變更</li><li>人員識別碼</li><li>Marketo Web URL</li><li>有趣的時刻</li></ul> | 啟用 | `personKey.sourceKey` 人員標識符欄位組 | B2B人員 | 無 | 無 | **第一關係**<ul><li>`listOperations.listKey.sourceKey` 欄位</li><li>類型：一對一</li><li>參考結構：B2B行銷清單</li><li>命名空間：B2B行銷清單</li></ul>**第二關係**<ul><li>`opportunityEvent.opportunityKey.sourceKey` 欄位</li><li>類型：一對一</li><li>參考結構：B2B機會</li><li>命名空間：B2B機會</li></ul>**第三種關係**<ul><li>`leadOperation.campaignProgression.campaignKey.sourceKey` 欄位</li><li>類型：一對一</li><li>參考結構：B2B行銷活動</li><li>命名空間：B2B行銷活動</li></ul> | `ExperienceEvent` 與實體不同。體驗事件的身分是執行活動的人員。 |
+| B2B帳戶人員關係 | XDM企業帳戶人員關係 | 身分對應 | 啟用 | `accountPersonKey.sourceKey` 在基類中 | B2B帳戶人員關係 | 無 | 無 | **第一關係**<ul><li>`personKey.sourceKey` 在基類中</li><li>類型：多對一</li><li>參考結構：B2B人員</li><li>命名空間：B2B人員</li><li>目標屬性：`b2b.personKey.SourceKey`</li><li>當前架構的關係名稱：人員</li><li>引用架構的關係名稱：帳戶</li></ul>**第二關係**<ul><li>`accountKey.sourceKey` 在基類中</li><li>類型：多對一</li><li>參考結構：B2B帳戶</li><li>命名空間：B2B帳戶</li><li>目標屬性：`accountKey.sourceKey`</li><li>當前架構的關係名稱：帳戶</li><li>引用架構的關係名稱：人員</li></ul> |
 
 {style=&quot;table-layout:auto&quot;}
 
