@@ -1,9 +1,10 @@
 ---
-description: 此設定決定Adobe Experience Platform使用者如何向您的目的地端點進行驗證，以啟用資料。
-title: 目標SDK中憑證的設定選項
-source-git-commit: 11f6421665acc2041aa9483b1e0efb6fe48b6dfb
+description: 使用Adobe Experience Platform Destination SDK中支援的驗證設定，驗證使用者並啟用資料至您的目的地端點。
+title: 驗證配置
+exl-id: 33eaab24-f867-4744-b424-4ba71727373c
+source-git-commit: 485c1359f8ef5fef0c5aa324cd08de00b0b4bb2f
 workflow-type: tm+mt
-source-wordcount: '200'
+source-wordcount: '202'
 ht-degree: 0%
 
 ---
@@ -12,7 +13,7 @@ ht-degree: 0%
 
 ## 支援的驗證類型 {#supported-authentication-types}
 
-Adobe Experience Platform支援數種驗證類型：
+Adobe Experience Platform目標SDK支援數種驗證類型：
 
 * 承載驗證
 * OAuth 2，含授權碼

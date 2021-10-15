@@ -1,12 +1,10 @@
 ---
-description: 將本頁的內容與合作夥伴目的地的其他設定選項搭配使用。 本頁說明從Adobe Experience Platform匯出至目的地之資料的傳訊格式，而其他頁面則說明連線及驗證至目的地的詳細資訊。
-seo-description: Use the content on this page together with the rest of the configuration options for partner destinations. This page addresses the messaging format of data exported from Adobe Experience Platform to destinations, while the other page addresses specifics about connecting and authenticating to your destination.
-seo-title: Message format
+description: 本頁面說明從Adobe Experience Platform匯出至目的地之資料中的訊息格式和設定檔轉換。
 title: 訊息格式
 exl-id: 1212c1d0-0ada-4ab8-be64-1c62a1158483
-source-git-commit: c328293cf710ad8a2ddd2e52cb01c86d29c0b569
+source-git-commit: 485c1359f8ef5fef0c5aa324cd08de00b0b4bb2f
 workflow-type: tm+mt
-source-wordcount: '1995'
+source-wordcount: '1981'
 ht-degree: 2%
 
 ---
@@ -15,20 +13,20 @@ ht-degree: 2%
 
 ## 必要條件 — Adobe Experience Platform概念 {#prerequisites}
 
-若要了解Adobe端的程式，請熟悉下列Experience Platform概念：
+若要了解訊息格式以及Adobe端的設定檔設定和轉換程式，請熟悉下列Experience Platform概念：
 
 * **Experience Data Model(XDM)**。[XDM概](https://experienceleague.adobe.com/docs/experience-platform/xdm/home.html?lang=zh-Hant) 述及  [如何在Adobe Experience Platform中建立XDM結構](https://experienceleague.adobe.com/docs/experience-platform/xdm/tutorials/create-schema-ui.html?lang=en)。
 * **類別**。[在UI中建立和編輯類](https://experienceleague.adobe.com/docs/experience-platform/xdm/ui/resources/classes.html?lang=en)。
 * **IdentityMap**。身分對應代表Adobe Experience Platform中所有一般使用者身分的對應。 請參閱[XDM欄位字典](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/field-dictionary.html?lang=en)中的`xdm:identityMap`。
 * **區段成員資格**。[segmentMembership](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/field-dictionary.html?lang=en) XDM屬性會通知設定檔是哪些區段的成員。 對於`status`欄位中的三個不同值，請閱讀[區段成員資格詳細資訊架構欄位群組](https://experienceleague.adobe.com/docs/experience-platform/xdm/field-groups/profile/segmentation.html)上的檔案。
 
-## 總覽 {#overview}
+## 概覽 {#overview}
 
-將此頁面上的內容與合作夥伴目標](./configuration-options.md)的其餘[配置選項一起使用。 本頁說明從Adobe Experience Platform匯出至目的地之資料的傳訊格式，而其他頁面則說明連線及驗證至目的地的詳細資訊。
+將此頁面上的內容與合作夥伴目標](./configuration-options.md)的其餘[配置選項一起使用。 本頁面說明從Adobe Experience Platform匯出至目的地之資料中的訊息格式和設定檔轉換。 其他頁面則說明連線及驗證目的地的詳細資訊。
 
-Adobe Experience Platform會以各種資料格式將資料匯出至大量目的地。 目的地類型的一些範例包括廣告平台(Google)、社交網路(Facebook)、雲端儲存位置(Amazon S3、Azure事件中樞)。
+Adobe Experience Platform會以各種資料格式將資料匯出至大量目的地。 目的地類型的一些範例包括廣告平台(Google)、社交網路(Facebook)和雲端儲存位置(Amazon S3、Azure事件中樞)。
 
-Experience Platform可調整匯出的訊息格式，以符合您旁邊的預期格式。 若要了解此自訂，下列概念非常重要：
+Experience Platform可以調整匯出設定檔的訊息格式，以符合您這邊的預期格式。 若要了解此自訂，下列概念非常重要：
 * Adobe Experience Platform中的來源(1)和目標(2)XDM結構
 * 合作夥伴端(3)的預期訊息格式，以及
 * XDM架構與預期訊息格式之間的轉換層，您可以建立[訊息轉換範本](./message-format.md#using-templating)來定義。
@@ -49,7 +47,7 @@ Users who want to activate data to your destination need to map the fields in th
 
 **目的地設定檔屬性的JSON標準結構(3)**:此項目代表您 [的](https://json-schema.org/learn/miscellaneous-examples.html) 平台支援的所有設定檔屬性及其類型的JSON結構(例如：物件、字串、陣列)。目標可支援的範例欄位可以是`firstName`、`lastName`、`gender`、`email`、`phone`、`productId`、`productName`等。 您需要[訊息轉換範本](./message-format.md#using-templating)，將匯出的非Experience Platform資料量身打造為預期格式。
 
-根據上述架構轉換，以下說明來源XDM架構與合作夥伴端範例架構之間訊息結構的變更方式：
+根據上述結構轉換，以下是來源XDM結構與合作夥伴端範例結構之間的設定檔組態變更方式：
 
 ![轉換消息示例](./assets/transformations-with-examples.png)
 
@@ -58,7 +56,7 @@ Users who want to activate data to your destination need to map the fields in th
 
 ## 快速入門 — 轉換三個基本屬性 {#getting-started}
 
-為了示範轉換程式，下列範例在Adobe Experience Platform中使用三個常見的設定檔屬性：**名字**、**姓氏**&#x200B;和&#x200B;**電子郵件地址**。
+為了示範設定檔轉換程式，下列範例在Adobe Experience Platform中使用三個常見的設定檔屬性：**名字**、**姓氏**&#x200B;和&#x200B;**電子郵件地址**。
 
 >[!NOTE]
 >
@@ -93,7 +91,7 @@ Authorization: Bearer YOUR_REST_API_KEY
 
 Adobe使用類似[Jinja](https://jinja.palletsprojects.com/en/2.11.x/)的範本語言，將XDM結構的欄位轉換為目的地支援的格式。
 
-本節提供幾個範例，說明如何從輸入XDM架構、透過範本進行這些轉換，以及將輸出為目的地接受的裝載格式。 以下範例依複雜度增加排序，如下所示：
+本節提供幾個進行這些轉換的範例：從輸入XDM架構、透過範本，以及輸出為目的地接受的裝載格式。 以下範例以日益複雜的方式呈現，如下所示：
 
 1. 簡單的轉換範例。 了解模板如何處理[配置檔案屬性](./message-format.md#attributes)、[段成員資格](./message-format.md#segment-membership)和[標識](./message-format.md#identities)欄位的簡單轉換。
 2. 結合上述欄位的範本，其複雜度增加範例：[建立傳送區段和身分的範本](./message-format.md#segments-and-identities)及[建立傳送區段、身分和設定檔屬性的範本](./message-format.md#segments-identities-attributes)。

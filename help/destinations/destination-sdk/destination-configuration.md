@@ -2,18 +2,18 @@
 description: 此設定可讓您指出基本資訊，例如目的地名稱、類別、說明、標誌等。 此設定中的設定也會決定Experience Platform使用者如何驗證您的目的地、Experience Platform使用者介面中的顯示方式，以及可匯出至您目的地的身分識別。
 title: 目標SDK的目標配置選項
 exl-id: b7e4db67-2981-4f18-b202-3facda5c8f0b
-source-git-commit: 76a596166edcdbf141b5ce5dc01557d2a0b4caf3
+source-git-commit: fd025932b9210d61e986b252e8d977ce4b83f6ff
 workflow-type: tm+mt
-source-wordcount: '1727'
+source-wordcount: '1757'
 ht-degree: 4%
 
 ---
 
 # 目標配置 {#destination-configuration}
 
-## 總覽 {#overview}
+## 概覽 {#overview}
 
-此設定可讓您指出必要資訊，例如目的地名稱、類別、說明、標誌等。 此設定中的設定也會決定Experience Platform使用者如何驗證您的目的地、Experience Platform使用者介面中的顯示方式，以及可匯出至您目的地的身分識別。
+此設定可讓您指出必要資訊，例如目的地名稱、類別、說明等。 此設定中的設定也會決定Experience Platform使用者如何驗證您的目的地、Experience Platform使用者介面中的顯示方式，以及可匯出至您目的地的身分識別。
 
 此設定也會將目的地運作所需的其他設定（目的地伺服器和對象中繼資料）連線至此設定。 請參閱](./destination-configuration.md#connecting-all-configurations)下方[一節中，如何參考這兩項設定。
 
@@ -135,17 +135,17 @@ ht-degree: 4%
 
 ## 客戶驗證設定 {#customer-authentication-configurations}
 
-此區段會在Experience Platform使用者介面中產生帳戶頁面，使用者可在此將Experience Platform連線至其與您目的地的帳戶。 根據您在`authType`欄位中指出的驗證選項，系統會為使用者產生Experience Platform頁面，如下所示：
+目標配置中的此部分會在Experience Platform用戶介面中生成[配置新目標](/help/destinations/ui/connect-destination.md)頁，用戶在此將Experience Platform連接到其與目標的帳戶。 根據您在`authType`欄位中指出的驗證選項，系統會為使用者產生Experience Platform頁面，如下所示：
 
 **承載驗證**
 
-使用者必須輸入從您的目的地取得的不記名Token。
+當您配置承載身份驗證類型時，用戶需要輸入從您的目標獲取的承載令牌。
 
 ![使用承載驗證呈現UI](./assets/bearer-authentication-ui.png)
 
 **OAuth 2驗證**
 
-使用者選取&#x200B;**[!UICONTROL 連線至目的地]**&#x200B;以觸發OAuth 2驗證流程至您的目的地。
+使用者選取&#x200B;**[!UICONTROL 連線至目的地]**&#x200B;以觸發OAuth 2驗證流程至您的目的地，如下列Twitter Tailored Audiences目的地範例所示。 如需將OAuth 2驗證設定至您的目的地端點的詳細資訊，請參閱專用的[ Destination SDK OAuth 2驗證頁面](./oauth2-authentication.md)。
 
 ![UI以OAuth 2驗證呈現](./assets/oauth2-authentication-ui.png)
 
@@ -153,7 +153,7 @@ ht-degree: 4%
 | 參數 | 類型 | 說明 |
 |---------|----------|------|
 | `customerAuthenticationConfigurations` | 字串 | 指示用於驗證Experience Platform客戶到伺服器的配置。 如需接受的值，請參閱下方的`authType`。 |
-| `authType` | 字串 | 接受的值為`OAUTH2, BEARER`。 <br><ul><li> 如果您的目的地支援OAuth 2驗證，請選取`OAUTH2`值並新增OAuth 2的必要欄位，如「目的地SDK OAuth 2驗證」頁面所示。 此外，您應在[目標傳送區段](./destination-configuration.md)中選取`authenticationRule=CUSTOMER_AUTHENTICATION`。 </li><li>對於承載身份驗證，請選擇`BEARER`並在[目標傳送部分](./destination-configuration.md)中選擇`authenticationRule=CUSTOMER_AUTHENTICATION`。</li></ul> |
+| `authType` | 字串 | 接受的值為`OAUTH2, BEARER`。 <br><ul><li> 如果您的目的地支援OAuth 2驗證，請選取`OAUTH2`值並新增OAuth 2的必要欄位，如[ Destination SDK OAuth 2驗證頁面](./oauth2-authentication.md)所示。 此外，您應在[目標傳送區段](./destination-configuration.md)中選取`authenticationRule=CUSTOMER_AUTHENTICATION`。 </li><li>對於承載身份驗證，請選擇`BEARER`並在[目標傳送部分](./destination-configuration.md)中選擇`authenticationRule=CUSTOMER_AUTHENTICATION`。</li></ul> |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -205,9 +205,9 @@ ht-degree: 4%
 
 ## 身分和屬性 {#identities-and-attributes}
 
-本節中的參數決定在Experience Platform使用者介面的對應步驟中如何填入目標身分和屬性，使用者可在此將其XDM結構對應至目的地的結構。
+本節中的參數決定您的目的地接受的身分。 此設定也會填入Experience Platform使用者介面的[對應步驟](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping)中的目標身分和屬性，使用者會將身分和屬性從其XDM結構對應至您目的地的結構。
 
-您必須指出哪些[!DNL Platform]身分識別客戶能夠匯出至您的目的地。 有些範例包括[!DNL Experience Cloud ID]、雜湊電子郵件、裝置ID([!DNL IDFA]、[!DNL GAID])。 這些值是[!DNL Platform]身分識別命名空間，客戶可將其對應至您目的地的身分識別命名空間。
+您必須指出哪些[!DNL Platform]身分識別客戶能夠匯出至您的目的地。 有些範例包括[!DNL Experience Cloud ID]、雜湊電子郵件、裝置ID([!DNL IDFA]、[!DNL GAID])。 這些值是[!DNL Platform]身分識別命名空間，客戶可將其對應至您目的地的身分識別命名空間。 您也可以指出客戶是否可將自訂命名空間對應至您目的地支援的身分識別。
 
 身分識別命名空間不需要[!DNL Platform]與目的地之間的1對1通信。
 例如，客戶可以將[!DNL Platform] [!DNL IDFA]命名空間從您的目的地對應到[!DNL IDFA]命名空間，或將相同的[!DNL Platform] [!DNL IDFA]命名空間對應到您目的地的[!DNL Customer ID]命名空間。
@@ -231,7 +231,6 @@ ht-degree: 4%
 |---------|----------|------|
 | `authenticationRule` | 字串 | 指示[!DNL Platform]客戶如何連接到目標。 接受的值為`CUSTOMER_AUTHENTICATION`、`PLATFORM_AUTHENTICATION`、`NONE`。 <br> <ul><li>如果Platform客戶透過使用者名稱和密碼、承載權杖或其他驗證方法登入您的系統，請使用`CUSTOMER_AUTHENTICATION`。 例如，如果您也在`customerAuthenticationConfigurations`中選取了`authType: OAUTH2`或`authType:BEARER`，則可以選取此選項。 </li><li> 如果Adobe和目標之間存在全局身份驗證系統，並且[!DNL Platform]客戶不需要提供任何身份驗證憑據來連接到目標，請使用`PLATFORM_AUTHENTICATION`。 在這種情況下，必須使用[Credentials](./credentials-configuration.md)配置建立憑據對象。 </li><li>如果不需要任何身份驗證才能將資料發送到目標平台，請使用`NONE`。 </li></ul> |
 | `destinationServerId` | 字串 | 用於此目標的[目標伺服器配置](./destination-server-api.md)的`instanceId`。 |
-| `backfillHistoricalProfileData` | 布林值 | 控制在將區段啟動至目的地時，是否匯出歷史設定檔資料。<br> <ul><li> `true`: [!DNL Platform] 傳送在啟用區段之前符合區段資格的歷史使用者設定檔。 </li><li> `false`: [!DNL Platform] 僅包含區段啟動後符合區段資格的使用者設定檔。 </li></ul> |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -244,14 +243,6 @@ ht-degree: 4%
 透過`audienceTemplateId`，本區段也將此設定與[對象中繼資料設定](./audience-metadata-management.md)連結在一起。
 
 上述設定中顯示的參數在[目的地端點API參考](./destination-configuration-api.md)中有說明。
-
-## 此設定如何連接目的地的所有必要資訊 {#connecting-all-configurations}
-
-您可透過目的地伺服器或對象中繼資料端點來設定目的地的某些設定。 目標配置終結點通過引用配置來連接所有這些設定，如下所示：
-
-* 使用`destinationServerId`參考為目標設定的目標伺服器和模板配置。
-* 使用`audienceMetadataId`參照為目的地設定的對象中繼資料設定。
-
 
 ## 聚合策略 {#aggregation}
 
@@ -280,18 +271,25 @@ ht-degree: 4%
 如果您想要大批次執行，同一呼叫上有數千個設定檔，此選項最適合使用。 此選項也可讓您根據複雜的匯總規則匯總匯出的設定檔。
 
 此選項可讓您：
-* 在對您的目的地發出API呼叫之前，設定要匯總的設定檔最大時間和數量。
+* 在對您的目的地發出API呼叫之前，設定要匯總的設定檔最大時間和最大數量。
 * 根據以下項目匯總對應至目的地的匯出設定檔：
-   * 區段ID
-   * 區段狀態
-   * 身分或身分群組
+   * 區段ID;
+   * 區段狀態；
+   * 身分或身分群組。
 
 有關聚合參數的詳細解釋，請參閱[目標API端點操作](./destination-configuration-api.md)參考頁，其中描述了每個參數。
 
-## 歷史設定檔資格
+## 歷史設定檔資格 {#profile-backfill}
 
 您可以在目的地設定中使用`backfillHistoricalProfileData`參數，判斷是否應將歷史設定檔資格匯出至您的目的地。
 
 | 參數 | 類型 | 說明 |
 |---------|----------|------|
 | `backfillHistoricalProfileData` | 布林值 | 控制在將區段啟動至目的地時，是否匯出歷史設定檔資料。<br> <ul><li> `true`: [!DNL Platform] 傳送在啟用區段之前符合區段資格的歷史使用者設定檔。 </li><li> `false`: [!DNL Platform] 僅包含區段啟動後符合區段資格的使用者設定檔。 </li></ul> |
+
+## 此設定如何連接目的地的所有必要資訊 {#connecting-all-configurations}
+
+您的某些目的地設定必須透過[目的地伺服器](./server-and-template-configuration.md)或[對象中繼資料設定](./audience-metadata-management.md)來設定。 此處描述的目的地設定會參照下列其他兩種設定，以連接所有這些設定：
+
+* 使用`destinationServerId`參考為目標設定的目標伺服器和模板配置。
+* 使用`audienceMetadataId`參照為目的地設定的對象中繼資料設定。
