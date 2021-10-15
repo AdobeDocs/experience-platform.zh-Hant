@@ -5,7 +5,7 @@ title: 來源連接器概述
 topic-legacy: overview
 description: Adobe Experience Platform可讓您從外部來源擷取資料，同時使用Platform服務來建構、加標籤及增強傳入資料。 您可以從多種來源(如Adobe應用程式、雲儲存、資料庫等)內嵌資料。
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: bc94d85ecd2ae33d8ef18dd1dfa7fca39ccaefea
+source-git-commit: 333cca4ac451745ac457c8d66fa8b5fe14531c9e
 workflow-type: tm+mt
 source-wordcount: '1008'
 ht-degree: 0%
@@ -46,9 +46,9 @@ Experience Platform支援從協力廠商廣告系統擷取資料。 有關特定
 
 ### 雲端儲存空間
 
-雲端儲存來源可將您自己的資料匯入Platform，而無須下載、格式化或上傳。 擷取的資料可格式化為XDM JSON、XDM Parquet或分隔字元。 程式的每個步驟都會使用使用者介面整合至來源工作流程中。 如需詳細資訊，請參閱下列相關檔案：
+Cloud storage sources can bring your own data into Platform without the need to download, format, or upload. 擷取的資料可格式化為XDM JSON、XDM Parquet或分隔字元。 程式的每個步驟都會使用使用者介面整合至來源工作流程中。 如需詳細資訊，請參閱下列相關檔案：
 
-- [[!DNL Azure Data Lake Storage Gen2] 連接器](connectors/cloud-storage/adls-gen2.md)
+- [[!DNL Azure Data Lake Storage Gen2] connector](connectors/cloud-storage/adls-gen2.md)
 - [[!DNL Azure Blob] 連接器](connectors/cloud-storage/blob.md)
 - [[!DNL Amazon Kinesis] 連接器](connectors/cloud-storage/kinesis.md)
 - [[!DNL Amazon S3] 連接器](connectors/cloud-storage/s3.md)
@@ -117,6 +117,8 @@ Experience Platform支援從本機系統擷取資料。 有關特定源連接器
 Experience Platform支援從協力廠商行銷自動化系統擷取資料。 有關特定源連接器的詳細資訊，請參閱以下相關文檔：
 
 - [[!DNL HubSpot] 連接器](connectors/marketing-automation/hubspot.md)
+- [[!DNL MailChimp Campaign]](./tutorials/api/create/marketing-automation/mailchimp-campaign.md)
+- [[!DNL MailChimp Members]](./tutorials/api/create/marketing-automation/mailchimp-members.md)
 - [[!DNL Salesforce Marketing Cloud]](connectors/marketing-automation/salesforce-marketing-cloud.md)
 
 ### 付款
@@ -133,13 +135,13 @@ Experience Platform支援從串流來源擷取資料。 有關特定源連接器
 
 ### 通訊協定
 
-Experience Platform支援從協力廠商通訊協定系統擷取資料。 有關特定源連接器的詳細資訊，請參閱以下相關文檔：
+Experience Platform支援從協力廠商通訊協定系統擷取資料。 See the following related documents for more information on specific source connectors:
 
 - [[!DNL Generic OData] 連接器](connectors/protocols/odata.md)
 
 ## 資料擷取中來源的存取控制
 
-資料擷取中來源的權限可在Adobe Admin Console中管理。 您可以透過特定產品設定檔中的&#x200B;**[!UICONTROL Permissions]**&#x200B;標籤來存取權限。 從&#x200B;**[!UICONTROL 編輯權限]**&#x200B;面板，您可以透過&#x200B;**[!UICONTROL 資料擷取]**&#x200B;功能表項目存取與來源相關的權限。 **[!UICONTROL 查看源]**&#x200B;權限授予對&#x200B;**[!UICONTROL 目錄]**&#x200B;頁簽中可用源和&#x200B;**[!UICONTROL 瀏覽]**&#x200B;頁簽中已驗證源的只讀訪問權，而&#x200B;**[!UICONTROL 管理源]**&#x200B;權限授予對源的讀取、建立、編輯和禁用的完全訪問權。
+Permissions for sources in data ingestion can be managed within the Adobe Admin Console. You can access permissions through the **[!UICONTROL Permissions]** tab in a particular product profile. 從&#x200B;**[!UICONTROL 編輯權限]**&#x200B;面板，您可以透過&#x200B;**[!UICONTROL 資料擷取]**&#x200B;功能表項目存取與來源相關的權限。 **[!UICONTROL 查看源]**&#x200B;權限授予對&#x200B;**[!UICONTROL 目錄]**&#x200B;頁簽中可用源和&#x200B;**[!UICONTROL 瀏覽]**&#x200B;頁簽中已驗證源的只讀訪問權，而&#x200B;**[!UICONTROL 管理源]**&#x200B;權限授予對源的讀取、建立、編輯和禁用的完全訪問權。
 
 下表概述UI根據這些權限的不同組合而執行的操作方式：
 
@@ -155,8 +157,8 @@ Experience Platform支援從協力廠商通訊協定系統擷取資料。 有關
 
 使用任何標示為測試版（「測試版」）的來源，即表示您承認測試版是按&#x200B;***「原樣」提供的，不提供任何類型的擔保***。
 
-Adobe無義務維護、更正、更新、變更、修改或以其他方式支援測試版。 建議您小心，不要依賴這類測試版和/或隨附材料的正確功能或效能。 測試版被視為Adobe的機密資訊。
+Adobe shall have no obligation to maintain, correct, update, change, modify, or otherwise support the Beta. 建議您小心，不要依賴這類測試版和/或隨附材料的正確功能或效能。 測試版被視為Adobe的機密資訊。
 
-您提供給Adobe的任何「意見」（關於測試版的資訊，包括但不限於使用測試版時遇到的問題或缺陷、建議、改進和建議），特此指派給Adobe，包括對此意見的所有權利、標題和興趣。
+Any “Feedback” (information regarding the Beta including but not limited to problems or defects you encounter while using the Beta, suggestions, improvements, and recommendations) provided by You to Adobe is hereby assigned to Adobe including all rights, title, and interest in and to such Feedback.
 
 提交開放意見或建立支援票證以分享您的建議或回報錯誤、尋求功能增強功能。

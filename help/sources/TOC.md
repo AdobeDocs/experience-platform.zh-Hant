@@ -4,9 +4,9 @@ user-guide-title: Adobe Experience Platform 來源連接器說明
 breadcrumb-title: 來源連接器指南
 user-guide-description: 從多種來源或結構擷取資料、加標籤，以及增強已擷取的資料。
 feature: Sources
-source-git-commit: 5218e6cf82b74efbbbcf30495395a4fe2ad9fe14
+source-git-commit: 333cca4ac451745ac457c8d66fa8b5fe14531c9e
 workflow-type: tm+mt
-source-wordcount: '653'
+source-wordcount: '657'
 ht-degree: 12%
 
 ---
@@ -134,6 +134,8 @@ ht-degree: 12%
          - [Shopify](tutorials/api/create/ecommerce/shopify.md)
       - 行銷自動化{#marketing-automation}
          - [HubSpot](tutorials/api/create/marketing-automation/hubspot.md)
+         - [MailChimp行銷活動](tutorials/api/create/marketing-automation/mailchimp-campaign.md)
+         - [MailChimp成員](tutorials/api/create/marketing-automation/mailchimp-members.md)
          - [SalesforceMarketing Cloud](tutorials/api/create/marketing-automation/salesforce-marketing-cloud.md)
       - 付款{#payments}
          - [PayPal](tutorials/api/create/payments/paypal.md)
