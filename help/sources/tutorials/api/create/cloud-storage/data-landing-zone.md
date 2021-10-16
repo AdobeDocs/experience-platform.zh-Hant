@@ -6,16 +6,16 @@ topic-legacy: overview
 type: Tutorial
 description: 了解如何使用流量服務API將Adobe Experience Platform連線至資料登陸區。
 exl-id: bdb60ed3-7c63-4a69-975a-c6f1508f319e
-source-git-commit: ca7197036283ee15dbf60c113d361a5ea34d65c1
+source-git-commit: 57089cc9aa9c586f5fae70e2a7154d48ebd62447
 workflow-type: tm+mt
-source-wordcount: '951'
+source-wordcount: '935'
 ht-degree: 3%
 
 ---
 
 # 使用流量服務API將[!DNL Data Landing Zone]連線至Adobe Experience Platform
 
-[!DNL Data Landing Zone] 是雲端資料儲存設施，適用於布建有Adobe Experience Platform的暫存檔案儲存。[!DNL Data Landing Zone] 僅用於資料進出Platform的入口和出口。7天後，資料會從[!DNL Data Landing Zone]中自動刪除。
+[!DNL Data Landing Zone] 是雲端資料儲存設施，適用於布建有Adobe Experience Platform的暫存檔案儲存。7天後，資料會從[!DNL Data Landing Zone]中自動刪除。
 
 本教學課程會逐步引導您了解如何使用[[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/)建立[!DNL Data Landing Zone]來源連線。 本教學課程也提供如何擷取[!DNL Data Landing Zone]，以及檢視和重新整理憑證的指示。
 

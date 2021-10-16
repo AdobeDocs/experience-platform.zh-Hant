@@ -6,16 +6,16 @@ topic-legacy: overview
 type: Tutorial
 description: 了解如何使用Platform使用者介面建立資料著陸區來源連接器。
 exl-id: 653c9958-5d89-4b0c-af3d-a3e74aa47a08
-source-git-commit: ca7197036283ee15dbf60c113d361a5ea34d65c1
+source-git-commit: 57089cc9aa9c586f5fae70e2a7154d48ebd62447
 workflow-type: tm+mt
-source-wordcount: '434'
+source-wordcount: '418'
 ht-degree: 0%
 
 ---
 
 # 使用UI將[!DNL Data Landing Zone]連線至Platform
 
-[!DNL Data Landing Zone] 是雲端資料儲存設施，適用於布建有Adobe Experience Platform的暫存檔案儲存。[!DNL Data Landing Zone] 僅用於資料進出Platform的入口和出口。7天後，資料會從[!DNL Data Landing Zone]中自動刪除。
+[!DNL Data Landing Zone] 是雲端資料儲存設施，適用於布建有Adobe Experience Platform的暫存檔案儲存。7天後，資料會從[!DNL Data Landing Zone]中自動刪除。
 
 本教學課程提供使用Platform使用者介面建立[!DNL Data Landing Zone]來源連線的步驟。
 

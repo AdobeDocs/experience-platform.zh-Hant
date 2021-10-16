@@ -2,9 +2,9 @@
 title: Adobe Experience Platform 發行說明
 description: Adobe Experience Platform的最新發行說明。
 exl-id: 8f2c9bf8-1487-46e4-993b-bd9b63774cab
-source-git-commit: 4959b5227f777a2c8cab1317d67795678d1a6eea
+source-git-commit: 57089cc9aa9c586f5fae70e2a7154d48ebd62447
 workflow-type: tm+mt
-source-wordcount: '381'
+source-wordcount: '376'
 ht-degree: 9%
 
 ---
@@ -51,7 +51,7 @@ Experience Platform提供RESTful API和互動式UI，讓您輕鬆為各種資料
 
 | 功能 | 說明 |
 | --- | --- |
-| [!DNL Data Landing Zone] | 您現在可以使用[[!DNL Flow Service] API](../../sources/tutorials/api/create/cloud-storage/data-landing-zone.md)或[使用者介面](../../sources/tutorials/ui/create/cloud-storage/data-landing-zone.md)來建立[!DNL Data Landing Zone]來源連線。 [!DNL Data Landing Zone] 是由 [!DNL Azure Blob] Platform布建的儲存介面，可授予您存取安全、雲端檔案儲存設施，以在Platform中內嵌和輸出檔案。如需詳細資訊，請參閱[[!DNL Data Landing Zone] 概述](../../sources/connectors/cloud-storage/data-landing-zone.md) 。 |
+| [!DNL Data Landing Zone] | 您現在可以使用[[!DNL Flow Service] API](../../sources/tutorials/api/create/cloud-storage/data-landing-zone.md)或[使用者介面](../../sources/tutorials/ui/create/cloud-storage/data-landing-zone.md)來建立[!DNL Data Landing Zone]來源連線。 [!DNL Data Landing Zone] 是由 [!DNL Azure Blob] Platform布建的儲存介面，可授予您存取安全、雲端式檔案儲存設施，將檔案匯入Platform。如需詳細資訊，請參閱[[!DNL Data Landing Zone] 概述](../../sources/connectors/cloud-storage/data-landing-zone.md) 。 |
 | [!DNL Snowflake] | 您現在可以使用[[!DNL Flow Service] API](../../sources/tutorials/api/create/databases/snowflake.md)或[使用者介面](../../sources/tutorials/ui/create/databases/snowflake.md)建立[!DNL Snowflake]來源連線，將資料從您的[!DNL Snowflake]資料庫帶入Platform。 如需詳細資訊，請參閱[[!DNL Snowflake] 概述](../../sources/connectors/databases/snowflake.md) 。 |
 | [!DNL SFTP] 來源增強功能 | 建立[!DNL SFTP]源連接時，可以手動設定自定義埠號。 如需詳細資訊，請參閱[[!DNL SFTP] 概述](../../sources/connectors/cloud-storage/sftp.md) 。 |
 
