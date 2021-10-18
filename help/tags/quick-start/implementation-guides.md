@@ -1,20 +1,24 @@
 ---
-title: 實施指南
-description: 了解如何使用標籤實作Adobe Experience Cloud解決方案。
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+title: 標籤和事件轉送的實作指南
+description: 了解如何使用標籤和事件轉送，在您的網站和行動應用程式中實作Adobe Experience Cloud產品。
+exl-id: fe39cff2-2b0a-405b-aa89-0a3330f40ca1
+source-git-commit: 885a8d4fb0bcc82d23b040cf5c44d0ecd4887686
 workflow-type: tm+mt
-source-wordcount: '115'
-ht-degree: 46%
+source-wordcount: '186'
+ht-degree: 14%
 
 ---
 
-# 實施指南
+# 標籤和事件轉送的實作指南
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch在Adobe Experience Platform中已重新命名為一套資料收集技術。 因此，產品檔案中已推出數個術語變更。 有關術語更改的綜合參考，請參閱以下[document](../term-updates.md)。
+>Adobe Experience Platform Launch在Adobe Experience Platform中已重新命名為一套資料收集技術。 因此，所有產品文件中出現了幾項術語變更。 如需術語變更的彙整參考資料，請參閱以下[文件](../term-updates.md)。
 
-我們提供兩種實施指南。這兩者是為前端開發人員與技術行銷人員設計，協助他們瞭解如何在網站和行動應用程式中實施 [!DNL Adobe Experience Cloud] 解決方案的指南。
+以下為標籤和事件轉送的端對端實作指南清單。 這些指南是為前端開發人員和技術行銷人員所設計，協助他們了解如何在其網站和行動應用程式中實作Adobe Experience Cloud產品。
 
-* [瀏覽器中的 JavaScript 實施指南](https://experienceleague.adobe.com/docs/experience-cloud/implementing-in-websites-with-launch/index.html)
-* [在原生應用程式中使用 Adobe Experience Platform Mobile SDK 實作](https://aep-sdks.gitbook.io/docs/)
+* [為網站實作標籤](https://experienceleague.adobe.com/docs/platform-learn/implement-in-websites/overview.html)
+* [為Android應用程式實作標籤](https://experienceleague.adobe.com/docs/platform-learn/implement-in-mobile-android-apps/overview.html)
+* [為iOS Objective-C應用程式實作標籤](https://experienceleague.adobe.com/docs/platform-learn/implement-in-mobile-ios-objective-c-apps/overview.html)
+* [為iOS Swift應用程式實作標籤](https://experienceleague.adobe.com/docs/platform-learn/implement-in-mobile-ios-swift-apps/overview.html)
+* [實作事件轉送(原稱Adobe Experience Platform Launch伺服器端)](https://experienceleague.adobe.com/docs/platform-learn/data-collection/event-forwarding/overview.html)
