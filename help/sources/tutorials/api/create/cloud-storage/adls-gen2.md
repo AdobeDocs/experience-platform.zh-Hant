@@ -6,51 +6,51 @@ topic-legacy: overview
 type: Tutorial
 description: 了解如何使用流量服務API將Adobe Experience Platform連線至Azure Data Lake Storage Gen2。
 exl-id: cad5e2a0-e27c-4130-9ad8-888352c92f04
-source-git-commit: b4291b4f13918a1f85d73e0320c67dd2b71913fc
+source-git-commit: 13bd1254dfe89004465174a7532b4f6aaef54c09
 workflow-type: tm+mt
-source-wordcount: '520'
+source-wordcount: '511'
 ht-degree: 1%
 
 ---
 
-# 使用[!DNL Flow Service] API建立[!DNL Azure Data Lake Storage Gen2]基本連線
+# 建立 [!DNL Azure Data Lake Storage Gen2] 基本連接使用 [!DNL Flow Service] API
 
 基本連線代表來源和Adobe Experience Platform之間已驗證的連線。
 
-本教學課程會逐步帶您了解使用[[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/)為[!DNL Azure Data Lake Storage Gen2]建立基本連線（以下稱為「ADLS Gen2」）的步驟。
+本教學課程會逐步引導您完成建立基礎連線的步驟 [!DNL Azure Data Lake Storage Gen2] （以下稱「ADLS Gen2」）使用 [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## 快速入門
 
 本指南需要妥善了解下列Adobe Experience Platform元件：
 
-* [來源](../../../../home.md): [!DNL Experience Platform] 可讓您從各種來源擷取資料，同時使用服務來建構、加標籤及增強傳入 [!DNL Platform] 資料。
+* [來源](../../../../home.md): [!DNL Experience Platform] 可讓您從各種來源擷取資料，同時使用來建構、加標籤及增強傳入資料 [!DNL Platform] 服務。
 * [沙箱](../../../../../sandboxes/home.md): [!DNL Experience Platform] 提供可將單一Platform執行個體分割成個別虛擬環境的虛擬沙箱，以協助開發及改進數位體驗應用程式。
 
-以下各節提供您需要了解的其他資訊，以便使用[!DNL Flow Service] API成功建立ADLS Gen2源連接。
+以下章節提供您需要了解的其他資訊，以便使用成功建立ADLS Gen2來源連線 [!DNL Flow Service] API。
 
 ### 收集所需憑據
 
-為了使[!DNL Flow Service]連接到ADLS Gen2，必須為以下連接屬性提供值：
+為了 [!DNL Flow Service] 要連接到ADLS Gen2，必須為以下連接屬性提供值：
 
 | 憑據 | 說明 |
 | ---------- | ----------- |
-| `url` | ADLS Gen2的端點。 端點模式為：`https://<accountname>.dfs.core.windows.net`。 |
+| `url` | ADLS Gen2的端點。 端點模式為： `https://<accountname>.dfs.core.windows.net`. |
 | `servicePrincipalId` | 應用程式的用戶端ID。 |
 | `servicePrincipalKey` | 應用程式的密鑰。 |
 | `tenant` | 包含您應用程式的租用戶資訊。 |
-| `connectionSpec.id` | 連接規範返回源的連接器屬性，包括與建立基連接和源連接相關的驗證規範。 ADLS Gen2的連接規範ID為：`0ed90a81-07f4-4586-8190-b40eccef1c5a`。 |
+| `connectionSpec.id` | 連接規範返回源的連接器屬性，包括與建立基連接和源連接相關的驗證規範。 ADLS Gen2的連接規範ID為： `0ed90a81-07f4-4586-8190-b40eccef1c5a`. |
 
-如需這些值的詳細資訊，請參閱[此ADLS Gen2檔案](https://docs.microsoft.com/en-us/azure/data-factory/connector-azure-data-lake-storage)。
+如需這些值的詳細資訊，請參閱 [此ADLS第2代文檔](https://docs.microsoft.com/en-us/azure/data-factory/connector-azure-data-lake-storage).
 
 ### 使用平台API
 
-如需如何成功呼叫Platform API的詳細資訊，請參閱[Platform API快速入門手冊](../../../../../landing/api-guide.md)。
+如需如何成功呼叫Platform API的詳細資訊，請參閱 [Platform API快速入門](../../../../../landing/api-guide.md).
 
 ## 建立基本連接
 
 基本連接在源和平台之間保留資訊，包括源的驗證憑據、連接的當前狀態和唯一基本連接ID。 基本連線ID可讓您從來源探索和導覽檔案，並識別您要擷取的特定項目，包括其資料類型和格式的相關資訊。
 
-若要建立基本連線ID，請在提供ADLS Gen2驗證憑證作為請求參數的一部分時，向`/connections`端點提出POST請求。
+若要建立基本連線ID，請向 `/connections` 端點，同時提供您的ADLS Gen2驗證憑證，作為請求參數的一部分。
 
 **API格式**
 
@@ -95,11 +95,11 @@ curl -X POST \
 | `auth.params.servicePrincipalId` | 您ADLS Gen2帳戶的服務主體ID。 |
 | `auth.params.servicePrincipalKey` | ADLS Gen2帳戶的服務主體密鑰。 |
 | `auth.params.tenant` | ADLS Gen2帳戶的租用戶資訊。 |
-| `connectionSpec.id` | ADLS Gen2連接規範ID:`0ed90a81-07f4-4586-8190-b40eccef1c5a1`。 |
+| `connectionSpec.id` | ADLS Gen2連接規範ID: `0ed90a81-07f4-4586-8190-b40eccef1c5a1`. |
 
 **回應**
 
-成功的響應返回新建立的基本連接的詳細資訊，包括其唯一標識符(`id`)。 在下一步建立源連接時需要此ID。
+成功的回應會傳回新建立之基本連線的詳細資訊，包括其唯一識別碼(`id`)。 在下一步建立源連接時需要此ID。
 
 ```json
 {
@@ -110,4 +110,4 @@ curl -X POST \
 
 ## 後續步驟
 
-依照本教學課程，您已使用API建立ADLS Gen2連線，且在回應內文中已取得唯一ID。 您可以使用此連線ID來使用流量服務API](../../explore/cloud-storage.md)或[使用流量服務API](../../cloud-storage-parquet.md)內嵌Parquet資料，以探索雲儲存空間。[
+依照本教學課程，您已使用API建立ADLS Gen2連線，且在回應內文中已取得唯一ID。 您可將此連線ID用於 [使用流量服務API探索雲端儲存空間](../../explore/cloud-storage.md).

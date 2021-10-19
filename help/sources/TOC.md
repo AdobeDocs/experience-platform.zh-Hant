@@ -4,9 +4,9 @@ user-guide-title: Adobe Experience Platform 來源連接器說明
 breadcrumb-title: 來源連接器指南
 user-guide-description: 從多種來源或結構擷取資料、加標籤，以及增強已擷取的資料。
 feature: Sources
-source-git-commit: 333cca4ac451745ac457c8d66fa8b5fe14531c9e
+source-git-commit: 21a536d80f854a9e98452c78a8014df4cc43e125
 workflow-type: tm+mt
-source-wordcount: '657'
+source-wordcount: '644'
 ht-degree: 12%
 
 ---
@@ -15,13 +15,13 @@ ht-degree: 12%
 # 源連接器 {#sources}
 
 - [來源連接器概觀](home.md)
-- 可用源連接器{#connectors}
-   - Adobe應用程式{#adobe-applications}
+- 可用源連接器 {#connectors}
+   - Adobe應用程式 {#adobe-applications}
       - [Analytics分類來源連接器](connectors/adobe-applications/classifications.md)
       - [Analytics來源連接器](connectors/adobe-applications/analytics.md)
       - [Audience Manager源連接器](connectors/adobe-applications/audience-manager.md)
       - [客戶屬性來源連接器](connectors/adobe-applications/customer-attributes.md)
-      - 欄位映射{#mapping}
+      - 欄位對應 {#mapping}
          - [Analytics欄位對應](connectors/adobe-applications/mapping/analytics.md)
          - [Audience Manager欄位對應](connectors/adobe-applications/mapping/audience-manager.md)
          - [目標欄位對應](connectors/adobe-applications/mapping/target.md)
@@ -32,7 +32,7 @@ ht-degree: 12%
          - [B2B命名空間和結構](connectors/adobe-applications/marketo/marketo-namespaces.md)
    - Advertising {#advertising}
       - [Google AdWords連接器](connectors/advertising/ads.md)
-   - 雲儲存{#cloud-storage}
+   - 雲端儲存空間 {#cloud-storage}
       - [Amazon Kinesis連接器](connectors/cloud-storage/kinesis.md)
       - [Amazon S3連接器](connectors/cloud-storage/s3.md)
       - [Apache HDFS連接器](connectors/cloud-storage/hdfs.md)
@@ -51,10 +51,10 @@ ht-degree: 12%
       - [Microsoft Dynamics 連接器](connectors/crm/ms-dynamics.md)
       - [Salesforce連接器](connectors/crm/salesforce.md)
       - [Veva CRM連接器](connectors/crm/veeva.md)
-   - 客戶成功{#customer-success}
+   - 客戶成功 {#customer-success}
       - [Salesforce Service Cloud連接器](connectors/customer-success/salesforce-service-cloud.md)
       - [ServiceNow連接器](connectors/customer-success/servicenow.md)
-   - 資料庫{#databases}
+   - 資料庫 {#databases}
       - [Amazon紅移連接器](connectors/databases/redshift.md)
       - [Azure HDInsights連接器上的Apache Hive](connectors/databases/hive.md)
       - [Azure HDInsights連接器上的Apache Spark](connectors/databases/spark.md)
@@ -75,22 +75,22 @@ ht-degree: 12%
       - [Snowflake連接器](connectors/databases/snowflake.md)
    - 電子商務 {#ecommerce}
       - [Shopify連接器](connectors/ecommerce/shopify.md)
-   - 本地系統{#local-system}
+   - 本地系統 {#local-system}
       - [本機檔案上傳連接器](connectors/local-system/local-file-upload.md)
-   - 行銷自動化{#marketing-automation}
+   - 行銷自動化 {#marketing-automation}
       - [HubSpot連接器](connectors/marketing-automation/hubspot.md)
       - [SalesforceMarketing Cloud](connectors/marketing-automation/salesforce-marketing-cloud.md)
-   - 付款{#payments}
+   - 付款 {#payments}
       - [PayPal連接器](connectors/payments/paypal.md)
-   - 協定{#protocols}
+   - 通訊協定 {#protocols}
       - [通用OData連接器](connectors/protocols/odata.md)
-   - 串流{#streaming}
+   - 串流 {#streaming}
       - [HTTP API連接器](connectors/streaming/http.md)
-- API教學課程{#api-tutorials}
-   - 建立基本連接{#create}
-      - 廣告{#advertising}
+- API教學課程 {#api-tutorials}
+   - 建立基本連接 {#create}
+      - 廣告 {#advertising}
          - [Google AdWords](tutorials/api/create/advertising/ads.md)
-      - 雲儲存{#cloud-storage}
+      - 雲端儲存空間 {#cloud-storage}
          - [AmazonKinesis](tutorials/api/create/cloud-storage/kinesis.md)
          - [Amazon S3](tutorials/api/create/cloud-storage/s3.md)
          - [Apache HDFS](tutorials/api/create/cloud-storage/hdfs.md)
@@ -108,10 +108,10 @@ ht-degree: 12%
          - [Microsoft Dynamics](tutorials/api/create/crm/ms-dynamics.md)
          - [Salesforce](tutorials/api/create/crm/salesforce.md)
          - [Veva CRM](tutorials/api/create/crm/veeva.md)
-      - 客戶成功{#customer-success}
+      - 客戶成功 {#customer-success}
          - [Salesforce Service Cloud](tutorials/api/create/customer-success/salesforce-service-cloud.md)
          - [ServiceNow](tutorials/api/create/customer-success/servicenow.md)
-      - 資料庫{#databases}
+      - 資料庫 {#databases}
          - [Amazon Redshift](tutorials/api/create/databases/redshift.md)
          - [Azure HDInsights上的Apache Hive](tutorials/api/create/databases/hive.md)
          - [Azure HDInsights上的Apache Spark](tutorials/api/create/databases/spark.md)
@@ -132,18 +132,18 @@ ht-degree: 12%
          - [SQL Server](tutorials/api/create/databases/sql-server.md)
       - 電子商務 {#ecommerce}
          - [Shopify](tutorials/api/create/ecommerce/shopify.md)
-      - 行銷自動化{#marketing-automation}
+      - 行銷自動化 {#marketing-automation}
          - [HubSpot](tutorials/api/create/marketing-automation/hubspot.md)
          - [MailChimp行銷活動](tutorials/api/create/marketing-automation/mailchimp-campaign.md)
          - [MailChimp成員](tutorials/api/create/marketing-automation/mailchimp-members.md)
          - [SalesforceMarketing Cloud](tutorials/api/create/marketing-automation/salesforce-marketing-cloud.md)
-      - 付款{#payments}
+      - 付款 {#payments}
          - [PayPal](tutorials/api/create/payments/paypal.md)
-      - 協定{#protocols}
+      - 通訊協定 {#protocols}
          - [通用OData](tutorials/api/create/protocols/odata.md)
-      - 串流{#streaming}
+      - 串流 {#streaming}
          - [HTTP API](tutorials/api/create/streaming/http.md)
-   - 探索資料{#explore}
+   - 探索資料 {#explore}
       - [探索廣告資料](tutorials/api/explore/advertising.md)
       - [探索雲儲存資料](tutorials/api/explore/cloud-storage.md)
       - [探索CRM資料](tutorials/api/explore/crm.md)
@@ -153,7 +153,7 @@ ht-degree: 12%
       - [探索行銷自動化資料](tutorials/api/explore/marketing-automation.md)
       - [探索付款資料](tutorials/api/explore/payments.md)
       - [探索協定資料](tutorials/api/explore/protocols.md)
-   - 收集資料{#collect}
+   - 收集資料 {#collect}
       - [收集廣告資料](tutorials/api/collect/advertising.md)
       - [收集雲端儲存資料](tutorials/api/collect/cloud-storage.md)
       - [收集CRM資料](tutorials/api/collect/crm.md)
@@ -164,24 +164,22 @@ ht-degree: 12%
       - [收集付款資料](tutorials/api/collect/payments.md)
       - [收集協定資料](tutorials/api/collect/protocols.md)
       - [收集串流資料](tutorials/api/collect/streaming.md)
-   - [從第三方雲儲存系統內嵌Parquet資料](tutorials/api/cloud-storage-parquet.md)
-   - [建立資料集連線](tutorials/api/create-dataset-base-connection.md)
    - [監視資料流](tutorials/api/monitor.md)
    - [更新帳戶](tutorials/api/update.md)
    - [更新資料流](tutorials/api/update-dataflows.md)
    - [刪除帳戶](tutorials/api/delete.md)
    - [刪除資料流](tutorials/api/delete-dataflows.md)
-- UI教學課程{#ui-tutorials}
-   - 建立源連接{#create}
-      - Adobe應用程式{#adobe-applications}
+- UI教學課程 {#ui-tutorials}
+   - 建立源連接 {#create}
+      - Adobe應用程式 {#adobe-applications}
          - [Adobe Analytics（報表套裝資料）](tutorials/ui/create/adobe-applications/analytics.md)
          - [Adobe Analytics（分類資料）](tutorials/ui/create/adobe-applications/classifications.md)
          - [Adobe Audience Manager](tutorials/ui/create/adobe-applications/audience-manager.md)
          - [客戶屬性](tutorials/ui/create/adobe-applications/customer-attributes.md)
          - [Marketo Engage](tutorials/ui/create/adobe-applications/marketo.md)
-      - 廣告{#create}
+      - 廣告 {#create}
          - [Google AdWords](tutorials/ui/create/advertising/ads.md)
-      - 雲儲存{#cloud-storage}
+      - 雲端儲存空間 {#cloud-storage}
          - [AmazonKinesis](tutorials/ui/create/cloud-storage/kinesis.md)
          - [Amazon S3](tutorials/ui/create/cloud-storage/s3.md)
          - [Apache HDFS](tutorials/ui/create/cloud-storage/hdfs.md)
@@ -200,10 +198,10 @@ ht-degree: 12%
          - [Microsoft Dynamics](tutorials/ui/create/crm/dynamics.md)
          - [Salesforce](tutorials/ui/create/crm/salesforce.md)
          - [Veva CRM](tutorials/ui/create/crm/veeva.md)
-      - 客戶成功{#customer-success}
+      - 客戶成功 {#customer-success}
          - [Salesforce Service Cloud](tutorials/ui/create/customer-success/salesforce-service-cloud.md)
          - [ServiceNow](tutorials/ui/create/customer-success/servicenow.md)
-      - 資料庫{#databases}
+      - 資料庫 {#databases}
          - [Amazon紅移](tutorials/ui/create/databases/redshift.md)
          - [Azure HDInsights上的Apache Hive](tutorials/ui/create/databases/hive.md)
          - [Azure HDInsights上的Apache Spark](tutorials/ui/create/databases/spark.md)
@@ -224,18 +222,18 @@ ht-degree: 12%
          - [Snowflake](tutorials/ui/create/databases/snowflake.md)
       - 電子商務 {#ecommerce}
          - [Shopify](tutorials/ui/create/ecommerce/shopify.md)
-      - 本地系統{#local-system}
+      - 本地系統 {#local-system}
          - [本機檔案上傳](tutorials/ui/create/local-system/local-file-upload.md)
-      - 行銷自動化{#marketing-automation}
+      - 行銷自動化 {#marketing-automation}
          - [HubSpot](tutorials/ui/create/marketing-automation/hubspot.md)
          - [SalesforceMarketing Cloud](tutorials/ui/create/marketing-automation/salesforce-marketing-cloud.md)
-      - 付款{#payments}
+      - 付款 {#payments}
          - [PayPal](tutorials/ui/create/payments/paypal.md)
-      - 協定{#protocols}
+      - 通訊協定 {#protocols}
          - [通用OData](tutorials/ui/create/protocols/odata.md)
-      - 串流{#streaming}
+      - 串流 {#streaming}
          - [HTTP API](tutorials/ui/create/streaming/http.md)
-   - 配置資料流{#dataflow}
+   - 配置資料流 {#dataflow}
       - [Advertising連接資料流](tutorials/ui/dataflow/advertising.md)
       - [批處理雲儲存連接資料流](tutorials/ui/dataflow/batch/cloud-storage.md)
       - [流雲儲存連接資料流](tutorials/ui/dataflow/streaming/cloud-storage-streaming.md)
