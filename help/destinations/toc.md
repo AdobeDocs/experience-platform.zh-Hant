@@ -4,9 +4,9 @@ user-guide-title: 目的地指南
 user-guide-description: 針對跨通路行銷活動、電子郵件宣傳、鎖定特定目標的行銷活動和其他諸多使用案例，啟用已知和未知的資料。
 description: 本檔案列出Adobe Experience Platform目的地的目錄
 feature: Destinations
-source-git-commit: 6c21398a3f2fb26cc925ca1f5dcbe92b306a8325
+source-git-commit: a7c36f1a157b6020fede53e5c1074d966f26cf3d
 workflow-type: tm+mt
-source-wordcount: '644'
+source-wordcount: '645'
 ht-degree: 10%
 
 ---
@@ -16,10 +16,10 @@ ht-degree: 10%
 
 * [目的地概述](./home.md)
 * [目的地類型和類別](./destination-types.md)
-* API教學課程{#api}
+* API教學課程 {#api}
    * [使用流量服務API連線至串流目的地並啟用資料](./api/streaming-destinations.md)
    * [使用流量服務API連線至電子郵件行銷目的地並啟用資料](./api/email-marketing.md)
-* UI指南{#ui}
+* UI指南 {#ui}
    * [目的地工作區](./ui/destinations-workspace.md)
    * [建立新的目的地連線](./ui/connect-destination.md)
    * 對目的地啟用受眾資料{#activate}
@@ -33,7 +33,7 @@ ht-degree: 10%
    * [編輯啟動流程](./ui/edit-activation.md)
    * [刪除目的地](./ui/delete-destinations.md)
    * [監視資料流](./ui/monitor-dataflows.md)
-* 目標目錄{#catalog}
+* 目的地目錄 {#catalog}
    * [目的地目錄概觀](./catalog/overview.md)
    * [ (Alpha)HTTP連線](./catalog/http-destination.md)
    * Adobe目的地{#adobe}
@@ -55,15 +55,15 @@ ht-degree: 10%
       * [Google Ad Manager連線](./catalog/advertising/google-ad-manager.md)
       * [Google Customer Match連線](./catalog/advertising/google-customer-match.md)
       * [Google Display &amp; Video 360連線](./catalog/advertising/google-dv360.md)
-      * [Google Gtag擴充功能](./catalog/advertising/gtag-advertising.md)
+      * [Google gtag擴充功能](./catalog/advertising/gtag-advertising.md)
       * [linkedIn Insight Tag擴充功能](./catalog/advertising/linkedin.md)
-      * [Microsoft Bing連接](./catalog/advertising/bing.md)
+      * [Microsoft Bing連線](./catalog/advertising/bing.md)
       * [Pinterest轉換追蹤擴充功能](./catalog/advertising/pinterest-extension.md)
       * [Pinterest客戶清單連線](./catalog/advertising/pinterest.md)
       * [貿易台連接](./catalog/advertising/tradedesk.md)
       * [Twitter通用網站標籤擴充功能](./catalog/advertising/twitter-uwt.md)
       * [Yahoo/Verizon DataX連線](./catalog/advertising/datax.md)
-   * Analytics目的地{#analytics}
+   * Analytics目的地 {#analytics}
       * [Analytics目的地概觀](./catalog/analytics/overview.md)
       * [Adform網站追蹤擴充功能](./catalog/analytics/adform.md)
       * [Adobe Analytics 擴充功能](./catalog/analytics/adobe-analytics.md)
@@ -84,7 +84,7 @@ ht-degree: 10%
       * [SessionCam擴充功能](./catalog/analytics/sessioncam.md)
       * [TMMData擴充功能](./catalog/analytics/tmmdata.md)
       * [文字轉換追蹤擴充功能](./catalog/analytics/yext.md)
-   * 雲儲存目標{#cloud-storage}
+   * 雲端儲存目的地 {#cloud-storage}
       * [雲端儲存目的地概觀](./catalog/cloud-storage/overview.md)
       * [（測試版）Amazon Kinesis連線](./catalog/cloud-storage/amazon-kinesis.md)
       * [Amazon S3連線](./catalog/cloud-storage/amazon-s3.md)
@@ -92,28 +92,28 @@ ht-degree: 10%
       * [（測試版）Azure事件集線器連接](./catalog/cloud-storage/azure-event-hubs.md)
       * [SFTP連線](./catalog/cloud-storage/sftp.md)
       * [IP位址允許清單](./catalog/cloud-storage/ip-address-allow-list.md)
-   * 資料管理平台目標{#data-management}
+   * 資料管理平台目的地 {#data-management}
       * [資料管理平台(DMP)目的地概觀](./catalog/data-management/overview.md)
       * [Audience ManagerDIL擴充功能](./catalog/data-management/aam-dil-extension.md)
-   * 電子郵件目的地{#email}
+   * 電子郵件目的地 {#email}
       * [Bizible擴充功能](./catalog/email/bizible.md)
       * [Marketo擴充功能](./catalog/email/marketo.md)
       * [Marketo Munchkin 擴充功能](./catalog/email/marketo-munchkin.md)
       * [PebblePost擴展](./catalog/email/pebblepost.md)
-   * 電子郵件行銷目的地{#email-marketing}
+   * 電子郵件行銷目的地 {#email-marketing}
       * [電子郵件行銷目的地概觀](./catalog/email-marketing/overview.md)
       * [Adobe Campaign連線](./catalog/email-marketing/adobe-campaign.md)
       * [OracleEloqua連線](./catalog/email-marketing/oracle-eloqua.md)
       * [OracleResponsys連線](./catalog/email-marketing/oracle-responsys.md)
       * [SalesforceMarketing Cloud連接](./catalog/email-marketing/salesforce-marketing-cloud.md)
-   * 標籤副檔名{#launch-extensions}
+   * 標籤擴充功能 {#launch-extensions}
       * [標籤擴充功能概觀](./catalog/launch-extensions/overview.md)
-   * 行動參與目的地{#mobile-engagement}
+   * 行動參與目的地 {#mobile-engagement}
       * [行動參與目的地概觀](./catalog/mobile-engagement/overview.md)
       * [Airship屬性連接](./catalog/mobile-engagement/airship-attributes.md)
       * [Airship標籤連接](./catalog/mobile-engagement/airship-tags.md)
       * [Braze連接](./catalog/mobile-engagement/braze.md)
-   * 個人化目的地{#personalization}
+   * 個人化目的地 {#personalization}
       * [個人化目的地概觀](./catalog/personalization/overview.md)
       * [Adobe Target連線（測試版）](./catalog/personalization/adobe-target-connection.md)
       * [Adobe Target 擴充功能](./catalog/personalization/adobe-target.md)
@@ -131,23 +131,23 @@ ht-degree: 10%
       * [Facebook連線](./catalog/social/facebook.md)
       * [linkedIn相符的對象連線](./catalog/social/linkedin.md)
       * [[!DNL Twitter Custom Audiences] 連接](./catalog/social/twitter.md)
-   * 調查目的地{#survey}
+   * 調查目的地 {#survey}
       * [調查目的地概觀](./catalog/survey/overview.md)
       * [Foresee擴展目的地](./catalog/survey/foresee.md)
       * [InMoment擴充功能](./catalog/survey/inmoment.md)
       * [Qualtrics網站意見回饋擴充功能](./catalog/survey/qualtrics.md)
       * [QuestionPro截距調查擴充功能](./catalog/survey/web-intercept-surveys.md)
-   * 客戶目的地的聲音{#voice}
+   * 客戶目的地之聲 {#voice}
       * [客戶之聲目的地概述](./catalog/voice/overview.md)
       * [確認數位意見擴充功能](./catalog/voice/confirmit-digital-feedback.md)
       * [無效標籤擴展](./catalog/voice/invoca.md)
       * [Medallia擴充功能](./catalog/voice/medallia.md)
       * [通話URL收件箱擴展](./catalog/voice/talkurl.md)
-* 目標SDK {#destination-sdk}
+* 目的地SDK {#destination-sdk}
    * [總覽](./destination-sdk/overview.md)
    * [整合必要條件](./destination-sdk/integration-prerequisites.md)
    * [快速入門](./destination-sdk/getting-started.md)
-   * 目標SDK功能{#functionality}
+   * 目的地SDK功能 {#functionality}
       * [設定選項](./destination-sdk/configuration-options.md)
       * [目標配置](./destination-sdk/destination-configuration.md)
       * [伺服器和模板規格](./destination-sdk/server-and-template-configuration.md)
@@ -155,7 +155,7 @@ ht-degree: 10%
       * [對象中繼資料管理](./destination-sdk/audience-metadata-management.md)
       * [驗證配置](./destination-sdk/credentials-configuration.md)
       * [OAuth 2驗證](./destination-sdk/oauth2-authentication.md)
-      * 開發人員工具{#developer-tools}
+      * 開發人員工具 {#developer-tools}
          * [建立並測試訊息轉換範本](./destination-sdk/create-template.md)
          * [測試您的目標配置](./destination-sdk/test-destination.md)
    * API 參考資料 {#api-reference}
@@ -164,14 +164,14 @@ ht-degree: 10%
       * [對象中繼資料端點API操作](./destination-sdk/audience-metadata-api.md)
       * [憑證端點API操作](./destination-sdk/credentials-configuration-api.md)
       * [發佈端點API操作](./destination-sdk/destination-publish-api.md)
-      * 開發人員工具參考{#developer-tools-reference}
+      * 開發人員工具參考 {#developer-tools-reference}
          * [取得範本API操作範例](./destination-sdk/sample-template-api.md)
          * [呈現範本API操作](./destination-sdk/render-template-api.md)
          * [目的地測試API操作](./destination-sdk/destination-testing-api.md)
          * [設定檔產生API操作範例](./destination-sdk/sample-profile-generation-api.md)
    * 指南 {#guides}
-      * [使用目的地SDK來設定您的目的地](./destination-sdk/configure-destination-instructions.md)
-   * 記錄目標{#document-destination}
+      * [使用目的地SDK來設定串流目的地](./destination-sdk/configure-destination-instructions.md)
+   * 記錄您的目的地 {#document-destination}
       * [在Adobe Experience Platform中記錄您的目的地](./destination-sdk/docs-framework/documentation-instructions.md)
       * [使用GitHub網頁介面建立目的地檔案頁面](./destination-sdk/docs-framework/use-github-interface-to-create-documentation.md)
       * [在本機環境中使用文字編輯器來建立目的地檔案頁面](./destination-sdk/docs-framework/work-in-local-environment.md)

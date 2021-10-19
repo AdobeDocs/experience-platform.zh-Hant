@@ -1,25 +1,27 @@
 ---
-description: 本頁說明如何使用目標SDK的設定選項中的參考資訊，以使用目標SDK設定您的目標。
-seo-description: This page describes how to use the reference information in Configuration options for the Destinations SDK to configure your destination using Destination SDK.
-seo-title: How to use Destination SDK to configure your destination
-title: 如何使用目的地SDK來設定您的目的地
+description: 本頁列出並說明使用Destination SDK設定串流目的地的步驟。
+title: 如何使用Destination SDK設定串流目的地
 exl-id: d8aa7353-ba55-4a0d-81c4-ea2762387638
-source-git-commit: 15626393bd69173195dd924c8817073b75df5a1e
+source-git-commit: a7c36f1a157b6020fede53e5c1074d966f26cf3d
 workflow-type: tm+mt
-source-wordcount: '655'
+source-wordcount: '670'
 ht-degree: 0%
 
 ---
 
-# 如何使用目的地SDK來設定您的目的地
+# 如何使用Destination SDK設定串流目的地
 
 ## 總覽 {#overview}
 
-本頁說明如何使用目標SDK](./configuration-options.md)中的[設定選項中的參考資訊來設定您的目標。 步驟依序排列如下。
+本頁面說明如何使用 [目的地SDK中的設定選項](./configuration-options.md) 和其他目的地SDK功能和API參考檔案，以設定 [串流目的地](/help/destinations/destination-types.md#streaming-destinations). 步驟依序排列如下。
+
+>[!NOTE]
+>
+>目前不支援透過目的地SDK設定批次目的地。
 
 ## 先決條件 {#prerequisites}
 
-在前進至下列步驟之前，請參閱[目標SDK快速入門](./getting-started.md)頁面，以取得使用目標SDK API的必要Adobe I/O驗證憑證和其他必要條件的相關資訊。
+在前進到下面所示的步驟之前，請閱讀 [目標SDK快速入門](./getting-started.md) 取得必要Adobe I/O驗證憑證以及使用目標SDK API之其他必要條件的相關資訊。
 
 ## 使用目標SDK中設定選項來設定目標的步驟 {#steps}
 
@@ -27,9 +29,9 @@ ht-degree: 0%
 
 ## 步驟1:建立伺服器和範本配置 {#create-server-template-configuration}
 
-首先，使用`/destinations-server`端點建立伺服器和範本配置（讀取[API參考](./destination-server-api.md)）。 有關伺服器和模板配置的詳細資訊，請參閱參考部分的[伺服器和模板規格](./configuration-options.md#server-and-template)。
+首先，使用 `/destinations-server` 端點（讀取） [API參考](./destination-server-api.md))。 有關伺服器和模板配置的詳細資訊，請參閱 [伺服器和模板規格](./configuration-options.md#server-and-template) 在參考區段中。
 
-以下是設定範例。 請注意，`requestBody.value`參數中的訊息轉換範本在步驟3, [建立轉換範本](./configure-destination-instructions.md#create-transformation-template)中定址。
+以下是設定範例。 請注意， `requestBody.value` 參數在步驟3中處理， [建立轉換範本](./configure-destination-instructions.md#create-transformation-template).
 
 ```json
 POST platform.adobe.io/data/core/activation/authoring/destination-servers
@@ -56,9 +58,9 @@ POST platform.adobe.io/data/core/activation/authoring/destination-servers
 
 ## 步驟2:建立目標配置 {#create-destination-configuration}
 
-以下是使用`/destinations` API端點建立之目標範本的設定範例。 有關此模板的詳細資訊，請參閱[目標配置](./destination-configuration.md)。
+以下是目標範本的設定範例，建立方法為使用 `/destinations` API端點。 如需此範本的詳細資訊，請參閱 [目標配置](./destination-configuration.md).
 
-要將步驟1中的伺服器和模板配置連接到此目標配置，請在此處將伺服器和模板配置的實例ID添加為`destinationServerId`。
+要將步驟1中的伺服器和模板配置連接到此目標配置，請將伺服器和模板配置的實例ID添加為 `destinationServerId` 這裡。
 
 ```json
 POST platform.adobe.io/data/core/activation/authoring/destinations
@@ -144,37 +146,36 @@ POST platform.adobe.io/data/core/activation/authoring/destinations
 
 ## 步驟3:建立消息轉換模板 — 使用模板語言指定消息輸出格式 {#create-transformation-template}
 
-您必鬚根據目的地支援的裝載，建立範本，將匯出資料的格式從AdobeXDM格式轉換為目的地支援的格式。 請參閱[使用模板語言進行身份、屬性和段成員轉換](./message-format.md#using-templating)中的模板示例，並使用Adobe提供的[模板創作工具](./create-template.md)。
+您必鬚根據目的地支援的裝載，建立範本，將匯出資料的格式從AdobeXDM格式轉換為目的地支援的格式。 請參閱區段中的範本範例 [使用範本語言進行身分、屬性和區段成員資格轉換](./message-format.md#using-templating) 並使用 [範本製作工具](./create-template.md) 由Adobe提供。
 
 在您精心編製了適用於您的消息轉換模板後，將其添加到您在步驟1中建立的伺服器和模板配置中。
 
 ## 步驟4:建立對象中繼資料設定 {#create-audience-metadata-configuration}
 
-對於某些目的地，目的地SDK需要您設定對象中繼資料設定，以程式設計方式建立、更新或刪除您目的地的對象。 如需您何時需要設定此設定以及如何設定的相關資訊，請參閱[對象中繼資料管理](./audience-metadata-management.md)。
+對於某些目的地，目的地SDK需要您設定對象中繼資料設定，以程式設計方式建立、更新或刪除您目的地的對象。 請參閱 [對象中繼資料管理](./audience-metadata-management.md) 以了解您何時需要設定此設定及如何設定。
 
-如果您使用對象中繼資料設定，則必須將其連線至您在步驟2建立的目的地設定。 將對象中繼資料設定的例項ID新增至目的地設定，作為`audienceTemplateId`。
+如果您使用對象中繼資料設定，則必須將其連線至您在步驟2建立的目的地設定。 將對象中繼資料設定的例項ID新增至目的地設定，作為 `audienceTemplateId`.
 
 ## 步驟5:建立憑據配置/設定身份驗證 {#set-up-authentication}
 
-根據您是在上述目標配置中指定`"authenticationRule": "CUSTOMER_AUTHENTICATION"`還是`"authenticationRule": "PLATFORM_AUTHENTICATION"`，您可以使用`/destination`或`/credentials`端點來設定目標的驗證。
+視您是否指定 `"authenticationRule": "CUSTOMER_AUTHENTICATION"` 或 `"authenticationRule": "PLATFORM_AUTHENTICATION"` 在上述的目的地設定中，您可以使用 `/destination` 或 `/credentials` 端點。
 
-* **最常見的案例**:如果您在目 `"authenticationRule": "CUSTOMER_AUTHENTICATION"` 的地設定中選取，而您的目的地支援OAuth 2驗證方法，請閱讀 [OAuth 2驗證](./oauth2-authentication.md)。
-* 如果您選取了`"authenticationRule": "PLATFORM_AUTHENTICATION"`，請參閱參考檔案中的[憑證設定](./credentials-configuration.md)。
+* **最常見的案例**:如果您選取 `"authenticationRule": "CUSTOMER_AUTHENTICATION"` 在目的地設定中，且您的目的地支援OAuth 2驗證方法，請參閱 [OAuth 2驗證](./oauth2-authentication.md).
+* 如果您選取 `"authenticationRule": "PLATFORM_AUTHENTICATION"`，請參閱 [憑據配置](./credentials-configuration.md) 在參考檔案中。
 
 ## 步驟6:測試您的目的地 {#test-destination}
 
-使用先前步驟中的設定端點設定您的目的地後，您可以使用[目的地測試工具](./create-template.md)來測試Adobe Experience Platform與您目的地之間的整合。
+使用前述步驟中的設定端點設定目的地後，您可以使用 [目的地測試工具](./create-template.md) 來測試Adobe Experience Platform與目的地之間的整合。
 
 在測試目的地的程式中，您必須使用Experience PlatformUI來建立區段，以便您對目的地啟用區段。 如需如何在Experience Platform中建立區段的指示，請參閱以下兩個資源：
 
 * [建立區段檔案頁面](https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/overview.html?lang=en#create-segment)
 * [建立區段視訊逐步說明](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=en)
 
-
 ## 步驟7:發佈您的目的地 {#publish-destination}
 
-設定並測試您的目的地後，請使用[目的地發佈API](./destination-publish-api.md)將您的設定提交給Adobe以供審核。
+設定並測試您的目的地後，請使用 [目的地發佈API](./destination-publish-api.md) 將配置提交到Adobe以供審核。
 
 ## 步驟8:記錄您的目的地 {#document-destination}
 
-如果您是建立[產品化整合](./overview.md#productized-custom-integrations)的獨立軟體供應商(ISV)或系統整合商(SI)，請使用[自助文檔流程](./docs-framework/documentation-instructions.md)為[Experience League目標目錄](/help/destinations/catalog/overview.md)中的目標建立產品文檔頁。
+如果您是獨立軟體供應商(ISV)或系統整合商(SI)，則建立 [產品化整合](./overview.md#productized-custom-integrations)，請使用 [自助服務檔案程式](./docs-framework/documentation-instructions.md) 若要為您的目的地建立產品檔案頁面，請在 [Experience League目的地目錄](/help/destinations/catalog/overview.md).
