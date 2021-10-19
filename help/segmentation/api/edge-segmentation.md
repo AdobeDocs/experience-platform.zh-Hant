@@ -5,10 +5,10 @@ title: '使用API進行邊緣劃分 '
 topic-legacy: developer guide
 description: 本檔案包含如何搭配Adobe Experience Platform區段服務API使用邊緣區段的範例。
 exl-id: effce253-3d9b-43ab-b330-943fb196180f
-source-git-commit: c1dc75d94774eff8ad9a7374b1fa158f737dd5a4
+source-git-commit: c89971668839555347e9b84c7c0a4ff54a394c1a
 workflow-type: tm+mt
-source-wordcount: '636'
-ht-degree: 3%
+source-wordcount: '917'
+ht-degree: 2%
 
 ---
 
@@ -16,50 +16,47 @@ ht-degree: 3%
 
 >[!NOTE]
 >
->下列檔案說明如何使用API執行邊緣分段。 如需使用UI執行邊緣分段的資訊，請參閱[邊緣分段UI指南](../ui/edge-segmentation.md)。 此外，邊緣區段目前仍在測試中。 文件和功能可能會有所變更。
+>下列檔案說明如何使用API執行邊緣分段。 如需使用UI執行邊緣分段的資訊，請參閱 [邊緣劃分UI指南](../ui/edge-segmentation.md). 此外，邊緣區段目前仍在測試中。 文件和功能可能會有所變更。
 
 邊緣分段是即時評估Adobe Experience Platform中邊緣區段的功能，可啟用相同的頁面和下一頁個人化使用案例。
 
 ## 快速入門
 
-本開發人員指南需要妥善了解與邊緣細分相關的各種[!DNL Adobe Experience Platform]服務。 開始本教學課程之前，請先檢閱下列服務的檔案：
+本開發人員指南需要妥善了解 [!DNL Adobe Experience Platform] 與邊緣細分相關的服務。 開始本教學課程之前，請先檢閱下列服務的檔案：
 
 - [[!DNL Real-time Customer Profile]](../../profile/home.md):根據來自多個來源的匯總資料，即時提供統一的消費者設定檔。
-- [[!DNL Segmentation]](../home.md):提供從資料建立區段和對象的 [!DNL Real-time Customer Profile] 功能。
-- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md):組織客戶體驗資 [!DNL Platform] 料的標準化架構。
+- [[!DNL Segmentation]](../home.md):提供從 [!DNL Real-time Customer Profile] 資料。
+- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md):標準化框架 [!DNL Platform] 組織客戶體驗資料。
 
-若要成功呼叫任何Experience PlatformAPI端點，請參閱[平台API快速入門手冊](../../landing/api-guide.md)，了解所需標題及如何讀取範例API呼叫。
+若要成功呼叫任何Experience PlatformAPI端點，請參閱 [Platform API快速入門](../../landing/api-guide.md) 以了解必要標題及如何讀取範例API呼叫。
 
 ## 邊緣分段查詢類型 {#query-types}
 
 為了使用邊緣分段來評估區段，查詢必須符合下列准則：
 
-| 查詢類型 | 詳細資訊 |
-| ---------- | ------- |
-| 傳入點擊 | 任何區段定義，是指沒有時間限制的單一傳入事件。 |
-| 參照設定檔的傳入點擊 | 任何區段定義，是指沒有時間限制的單一傳入事件，以及一或多個設定檔屬性。 |
-| 時間窗口為24小時的傳入點擊 | 任何在24小時內參照單一傳入事件的區段定義 |
-| 傳入點擊是指時間窗為24小時的設定檔 | 任何區段定義，是指24小時內單一傳入事件，以及一或多個設定檔屬性 |
-
-{style=&quot;table-layout:auto&quot;}
-
-下列查詢類型是邊緣分段目前支援的&#x200B;**not**:
-
-| 查詢類型 | 詳細資訊 |
-| ---------- | ------- |
-| 多個事件 | 如果查詢包含多個事件，則無法使用邊緣分段來評估。 |
-| 頻率查詢 | 任何區段定義，是指至少發生特定次數之事件。 |
-| 參考設定檔的頻率查詢 | 任何區段定義，是指發生至少特定次數的事件，且具有一或多個設定檔屬性。 |
+| 查詢類型 | 詳細資訊 | 範例 |
+| ---------- | ------- | ------- |
+| 單一事件 | 任何區段定義，是指沒有時間限制的單一傳入事件。 | 已將項目新增至購物車的使用者。 |
+| 參照設定檔的單一事件 | 任何區段定義，是指一或多個設定檔屬性以及沒有時間限制的單一傳入事件。 | 訪問首頁的美國居民。 |
+| 使用設定檔屬性否定單一事件 | 任何區段定義，是指否定的單一傳入事件和一或多個設定檔屬性 | 住在美國並擁有 **not** 造訪首頁。 |
+| 24小時時段內的單一事件 | 任何區段定義，是指24小時內單一傳入事件。 | 過去24小時內造訪首頁的人。 |
+| 具有24小時時段之設定檔屬性的單一事件 | 在24小時內參照一或多個設定檔屬性以及否定單一傳入事件的任何區段定義。 | 過去24小時內造訪首頁的美國人。 |
+| 在24小時時間範圍內否定具有設定檔屬性的單一事件 | 在24小時內參照一或多個設定檔屬性以及否定單一傳入事件的任何區段定義。 | 住在美國並擁有 **not** 在過去24小時內瀏覽了首頁。 |
+| 24小時時段內的頻率事件 | 任何區段定義，是指在24小時的時間範圍內發生特定次數的事件。 | 造訪首頁的人員 **至少** 24小時內五次。 |
+| 在24小時時段內具有設定檔屬性的頻率事件 | 任何區段定義，指的是一或多個設定檔屬性，以及在24小時的時間範圍內發生特定次數的事件。 | 訪問首頁的美國人 **至少** 24小時內五次。 |
+| 在24小時時間範圍內使用設定檔否定頻率事件 | 任何區段定義，指的是一或多個設定檔屬性，以及在24小時的時間範圍內發生特定次數的否定事件。 | 未訪問首頁的人 **更多** 在過去的24小時里不過5次。 |
+| 在24小時的時間設定檔內傳入多個點擊 | 任何區段定義，是指在24小時的時間範圍內發生的多個事件。 | 瀏覽首頁的人員 **或** 在過去24小時內瀏覽了結帳頁面。 |
+| 在24小時時段內使用設定檔執行多個事件 | 任何區段定義，是指在24小時的時間範圍內發生的一或多個設定檔屬性和多個事件。 | 訪問首頁的美國人 **和** 在過去24小時內瀏覽了結帳頁面。 |
 
 {style=&quot;table-layout:auto&quot;}
 
 ## 擷取為邊緣細分啟用的所有區段
 
-您可以向`/segment/definitions`端點提出GET請求，以擷取IMS組織內已啟用邊緣分段的所有區段清單。
+您可以向 `/segment/definitions` 端點。
 
 **API格式**
 
-若要擷取已啟用邊緣分段功能的區段，您必須在請求路徑中加入查詢參數`evaluationInfo.synchronous.enabled=true`。
+若要擷取已啟用邊緣分段功能的區段，您必須包含查詢參數 `evaluationInfo.synchronous.enabled=true` 在請求路徑中。
 
 ```http
 GET /segment/definitions?evaluationInfo.synchronous.enabled=true
@@ -78,7 +75,7 @@ curl -X GET \
 
 **回應**
 
-成功的回應會傳回IMS組織中已啟用邊緣分段的區段陣列。 有關返回的段定義的詳細資訊，請參見[段定義終結點指南](./segment-definitions.md)。
+成功的回應會傳回IMS組織中已啟用邊緣分段的區段陣列。 如需傳回之區段定義的詳細資訊，請參閱 [區段定義端點指南](./segment-definitions.md).
 
 ```json
 {
@@ -167,7 +164,7 @@ curl -X GET \
 
 ## 建立已啟用邊緣分段的區段
 
-您可以向`/segment/definitions`端點提出符合上方所列[邊緣分段查詢類型之一的POST請求，以建立已啟用邊緣分段的區段。](#query-types)
+您可以向 `/segment/definitions` 符合其中一個端點 [上面列出的邊緣細分查詢類型](#query-types).
 
 **API格式**
 
@@ -179,7 +176,7 @@ POST /segment/definitions
 
 >[!NOTE]
 >
->以下範例是建立區段的標準請求。 如需建立區段定義的詳細資訊，請參閱關於[建立區段](../tutorials/create-a-segment.md)的教學課程。
+>以下範例是建立區段的標準請求。 如需建立區段定義的詳細資訊，請參閱 [建立區段](../tutorials/create-a-segment.md).
 
 ```shell
 curl -X POST \
@@ -250,4 +247,4 @@ curl -X POST \
 
 現在您知道如何建立啟用邊緣分段的區段，可以使用它們來啟用相同頁面和下一頁個人化的使用案例。
 
-若要了解如何使用Adobe Experience Platform使用者介面執行類似動作及使用區段，請造訪[區段產生器使用指南](../ui/segment-builder.md)。
+若要了解如何使用Adobe Experience Platform使用者介面執行類似動作及使用區段，請造訪 [區段產生器使用手冊](../ui/segment-builder.md).
