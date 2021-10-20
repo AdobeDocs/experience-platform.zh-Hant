@@ -5,9 +5,9 @@ title: 區段服務UI指南
 topic-legacy: ui guide
 description: Adobe Experience Platform區段服務提供建立和管理區段定義的使用者介面。
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: fc59ad026a746bc75192fc6b314989894f8f6c45
+source-git-commit: d65bcf62f0de29dc293a1a1313178a408613a024
 workflow-type: tm+mt
-source-wordcount: '1613'
+source-wordcount: '1667'
 ht-degree: 0%
 
 ---
@@ -18,42 +18,42 @@ ht-degree: 0%
 
 ## 快速入門
 
-使用區段定義需要了解與區段相關的各種[!DNL Experience Platform]服務。 閱讀本使用手冊之前，請查閱以下服務的文檔：
+使用區段定義需要了解 [!DNL Experience Platform] 與區段相關的服務。 閱讀本使用手冊之前，請查閱以下服務的文檔：
 
-- [[!DNL Segmentation Service]](../home.md): [!DNL Segmentation Service] 可讓您將儲存在中、與 [!DNL Experience Platform] 個人（例如客戶、潛在客戶、使用者或組織）相關的資料分割為較小的群組。
+- [[!DNL Segmentation Service]](../home.md): [!DNL Segmentation Service] 可讓您將儲存在 [!DNL Experience Platform] 與個人（例如客戶、潛在客戶、使用者或組織）相關而組成的較小群組。
 - [[!DNL Real-time Customer Profile]](../../profile/home.md):根據來自多個來源的匯總資料，提供統一的即時消費者設定檔。
-- [[!DNL Adobe Experience Platform Identity Service]](../../identity-service/home.md):可借由將擷取到的不同資料來源的身分橋接至，來建立客戶設 [!DNL Platform]定檔。
-- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md):組織客戶體驗資 [!DNL Platform] 料的標準化架構。
+- [[!DNL Adobe Experience Platform Identity Service]](../../identity-service/home.md):借由橋接從擷取至的不同資料來源的身分識別，來建立客戶設定檔 [!DNL Platform].
+- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md):標準化框架 [!DNL Platform] 組織客戶體驗資料。
 
 此外，還必須了解本檔案中使用的兩個重要術語，並了解它們之間的差異：
 - **區段定義**:用於描述目標受眾的關鍵特徵或行為的規則集。
 - **對象**:符合區段定義條件的產生設定檔集。
 
-## 概覽
+## 總覽
 
-在Experience PlatformUI中，在左側導覽中選取&#x200B;**[!UICONTROL 區段]**&#x200B;以開啟顯示[!UICONTROL 區段]控制面板的&#x200B;**[!UICONTROL 概述]**&#x200B;標籤。
+在Experience PlatformUI中，選取 **[!UICONTROL 區段]** 在左側導覽中，開啟 **[!UICONTROL 概述]** 標籤顯示 [!UICONTROL 區段] 控制面板。
 
 >[!NOTE]
 >
->如果您的組織是初次使用Platform，且尚未建立作用中的設定檔資料集或合併原則，則不會顯示[!UICONTROL Segments]控制面板。 反之， [!UICONTROL 概述]標籤會顯示可協助您開始使用區段的連結和檔案。
+>如果您的組織剛接觸Platform，且尚未建立作用中的設定檔資料集或合併原則，請 [!UICONTROL 區段] 控制面板未顯示。 反之， [!UICONTROL 概述] 索引標籤會顯示可協助您開始使用區段的連結和檔案。
 
-###  區段控制面板 {#segments-dashboard}
+### [!UICONTROL 區段] 儀表板 {#segments-dashboard}
 
-**[!UICONTROL 區段]**&#x200B;控制面板概述與貴組織的區段資料相關的關鍵量度。
+此 **[!UICONTROL 區段]** 控制面板概述與貴組織的區段資料相關的關鍵量度。
 
-若要深入了解，請造訪[區段控制面板指南](../../dashboards/guides/segments.md)。
+若要進一步了解，請造訪 [區段控制面板指南](../../dashboards/guides/segments.md).
 
 ![](../../dashboards/images/segments/dashboard-overview.png)
 
 ## 瀏覽
 
-選取&#x200B;**[!UICONTROL 瀏覽]**&#x200B;標籤，查看您IMS組織的所有區段定義清單。
+選取 **[!UICONTROL 瀏覽]** 標籤，查看IMS組織的所有區段定義清單。
 
 ![](../images/ui/overview/segment-browse-all.png)
 
 此檢視會列出區段定義的相關資訊，包括劃分、流失、設定檔計數、評估方法、建立日期和上次修改日期。
 
-劃分會顯示橫條圖，概述屬於下列各種狀態的設定檔百分比：[!UICONTROL 已實現]、[!UICONTROL 現有]和[!UICONTROL 正在退出]。
+劃分會顯示橫條圖，概述屬於下列各種狀態的設定檔百分比： [!UICONTROL 已實現], [!UICONTROL 現有]，和 [!UICONTROL 退出]. 此外， [!UICONTROL 瀏覽] 標籤是區段狀態最準確的劃分。 如果此數字與 [!UICONTROL 概述] 頁簽，您應使用 [!UICONTROL 瀏覽] 標籤作為正確的資訊源，因為 [!UICONTROL 概述] 標籤號每天只更新一次。
 
 ![](../images/ui/overview/segment-browse-breakdown.png)
 
@@ -71,9 +71,9 @@ ht-degree: 0%
 
 頁面頂端有選項可新增所有區段至排程和建立新區段。
 
-切換&#x200B;**[!UICONTROL 新增所有區段至排程]**&#x200B;將啟用排程的分段。 如需排程分段的詳細資訊，請參閱本使用手冊](#scheduled-segmentation)的「排程分段」區段。[
+切換 **[!UICONTROL 新增所有區段至排程]** 會啟用排程的分段。 如需排程分段的詳細資訊，請參閱 [本使用手冊的排程分段區段](#scheduled-segmentation).
 
-選取&#x200B;**[!UICONTROL 建立區段]**&#x200B;後，您就會前往區段產生器。 若要進一步了解如何建立區段，請閱讀使用手冊](#create-segment)中[建立區段的相關章節。
+選取 **[!UICONTROL 建立區段]** 會帶您前往「區段產生器」。 若要進一步了解建立區段，請參閱 [在使用手冊中建立區段](#create-segment).
 
 ![](../images/ui/overview/segment-browse-top.png)
 
@@ -85,13 +85,13 @@ ht-degree: 0%
 
 >[!NOTE]
 >
-> 您將能夠刪除目標啟動中使用的區段&#x200B;**not**。
+> 您會 **not** 能夠刪除目的地啟用中使用的區段。
 
 ![](../images/ui/overview/segment-browse-details.png)
 
 ## 區段定義詳細資料 {#segment-details}
 
-若要查看有關特定區段定義的詳細資訊，請在&#x200B;**[!UICONTROL Browse]**&#x200B;標籤內選取區段名稱。
+若要查看特定區段定義的詳細資訊，請在 **[!UICONTROL 瀏覽]** 標籤。
 
 區段詳細資料頁面隨即顯示。 頂端是區段定義的摘要、合格對象大小的相關資訊，以及區段已啟動的目的地。
 
@@ -99,33 +99,33 @@ ht-degree: 0%
 
 ### 區段摘要
 
-**[!UICONTROL 區段摘要]**&#x200B;區段提供諸如屬性的ID、名稱、說明和詳細資訊。
+此 **[!UICONTROL 區段摘要]** 一節提供ID、名稱、說明和屬性詳細資訊。
 
-此外，您也可以選擇啟用目的地區段或編輯區段。 選取&#x200B;**[!UICONTROL 啟動至目的地]**&#x200B;可讓您啟動至目的地的區段。 如需將區段啟用至目的地的詳細資訊，請參閱[啟用概述](../../destinations/ui/activation-overview.md)。
+此外，您也可以選擇啟用目的地區段或編輯區段。 選取 **[!UICONTROL 啟動至目的地]** 可讓您啟用目的地的區段。 如需將區段啟用至目的地的詳細資訊，請參閱 [啟用概述](../../destinations/ui/activation-overview.md).
 
 ![](../images/ui/overview/segment-details-activate.png)
 
-選擇&#x200B;**[!UICONTROL 編輯段]**&#x200B;將帶您進入[!DNL Segment Builder]。 有關使用[!DNL Segment Builder]工作區的更多詳細資訊，請參閱[[!DNL Segment Builder] 使用手冊](./segment-builder.md)。
+選取 **[!UICONTROL 編輯區段]** 會帶你去 [!DNL Segment Builder]. 如需使用的詳細資訊， [!DNL Segment Builder] 工作區，請閱讀 [[!DNL Segment Builder] 使用手冊](./segment-builder.md).
 
 ![](../images/ui/overview/segment-details-edit-segment.png)
 
 ### 區段中的總受眾
 
-區段&#x200B;]**中的**[!UICONTROL &#x200B;受眾總計區段會顯示符合區段資格的設定檔總數。
+此 **[!UICONTROL 區段中的總受眾]** 區段會顯示符合區段資格的設定檔總數。
 
-估計值是使用當天樣本資料的樣本大小產生。 如果您的設定檔存放區中實體少於100萬個，則會使用完整資料集；100萬至2000萬個實體使用100萬個實體；超過2,000萬個實體，佔實體總數的5%。 有關生成段估計的更多資訊，請參見段建立教程的[估計生成部分](../tutorials/create-a-segment.md#estimate-and-preview-an-audience)。
+估計值是使用當天樣本資料的樣本大小產生。 如果您的設定檔存放區中實體少於100萬個，則會使用完整資料集；100萬至2000萬個實體使用100萬個實體；超過2,000萬個實體，佔實體總數的5%。 有關產生區段估計的詳細資訊，請參閱 [估計生成部分](../tutorials/create-a-segment.md#estimate-and-preview-an-audience) 區段建立教學課程中的。
 
 ### 已啟動的目的地
 
-**[!UICONTROL 已啟用的目的地]**&#x200B;區段顯示已啟用此區段的目的地。
+此 **[!UICONTROL 已啟動的目的地]** 區段顯示啟用此區段的目的地。
 
 >[!NOTE]
 >
-> 目標是[!DNL Real-time Customer Data Platform]提供的功能，可讓您將資料匯出至外部平台。 如需目的地的詳細資訊，請參閱[目的地概述](../../destinations/home.md)。 若要了解如何對目的地啟用區段，請參閱[啟用概述](../../destinations/ui/activation-overview.md)。
+> 目的地是 [!DNL Real-time Customer Data Platform]，以及可讓您將資料匯出至外部平台。 如需目的地的詳細資訊，請參閱 [目的地概述](../../destinations/home.md). 若要了解如何啟用目的地的區段，請參閱 [啟用概述](../../destinations/ui/activation-overview.md).
 
 ### 設定檔範例
 
-底下是符合區段資格的設定檔取樣，其中詳細說明資訊，包括[!DNL Profile] ID、名字、姓氏和個人電子郵件。
+底下是符合區段資格的設定檔取樣，其詳細說明資訊包括 [!DNL Profile] ID、名字、姓氏和個人電子郵件。
 
 資料取樣的觸發方式取決於擷取方法。
 
@@ -141,57 +141,57 @@ ht-degree: 0%
 | 1000至2000萬 | 100萬 |
 | 2000多萬 | 總共5% |
 
-若要查看有關每個[!DNL Profile]的更多詳細資訊，請選取[!DNL Profile] ID。 若要進一步了解設定檔的詳細資訊，請參閱[[!DNL Real-time Customer Profile] 使用手冊](../../profile/ui/user-guide.md#profile-detail)。
+更詳細的資訊 [!DNL Profile] 可透過選取 [!DNL Profile] ID. 若要進一步了解設定檔的詳細資訊，請參閱 [[!DNL Real-time Customer Profile] 使用手冊](../../profile/ui/user-guide.md#profile-detail).
 
 ![](../images/ui/overview/segment-details-profiles.png)
 
 ## 建立區段 {#create-segment}
 
-選取右上角的&#x200B;**[!UICONTROL 建立區段]**&#x200B;會開啟[!DNL Segment Builder]工作區，您可在此處開始建立區段定義。
+選取 **[!UICONTROL 建立區段]** 在右上角開啟 [!DNL Segment Builder] 工作區，您可以開始建立區段定義。
 
 ![](../images/ui/overview/segment-browse-create.png)
 
 ### [!DNL Segment Builder] 工作區
 
-[!DNL Segment Builder] 提供豐富的工作區，可讓您與資料元素 [!DNL Profile] 互動。工作區提供建立和編輯規則的直覺式控制項，例如用來表示資料屬性的拖放圖磚。
+[!DNL Segment Builder] 提供豐富的工作區，可讓您與 [!DNL Profile] 資料元素。 工作區提供建立和編輯規則的直覺式控制項，例如用來表示資料屬性的拖放圖磚。
 
-有關使用[!DNL Segment Builder]工作區的更多詳細資訊，請參閱[[!DNL Segment Builder] 使用手冊](./segment-builder.md)。
+如需使用的詳細資訊， [!DNL Segment Builder] 工作區，請閱讀 [[!DNL Segment Builder] 使用手冊](./segment-builder.md).
 
 ![](../images/ui/overview/segment-builder.png)
 
 ## 排程分段 {#scheduled-segmentation}
 
-建立區段定義後，您就可以依需求或排程（持續）評估來評估它們。 評估是指透過區段定義來移動[!DNL Real-time Customer Profile]資料，以產生對應的受眾。 建立後，會儲存和儲存對象，以便使用[!DNL Experience Platform] API匯出對象。
+建立區段定義後，您就可以依需求或排程（持續）評估來評估它們。 評估手段 [!DNL Real-time Customer Profile] 資料，以產生對應的受眾。 建立後，會儲存對象，以便透過 [!DNL Experience Platform] API。
 
 隨需評估包括視需要使用API來執行評估並建立受眾，而排程評估（也稱為「已排程區段」）可讓您建立週期性排程，以在特定時間（最多每天一次）評估區段定義。
 
 ### 啟用排程的細分 {#enable-scheduled-segmentation}
 
-您可以使用UI或API，為排程評估啟用區段定義。 在UI中，返回&#x200B;**[!UICONTROL Segments]**&#x200B;內的&#x200B;**[!UICONTROL Browse]**&#x200B;標籤，並開啟&#x200B;**[!UICONTROL 新增所有區段至排程]**。 這會導致根據貴組織設定的排程評估所有區段。
+您可以使用UI或API，為排程評估啟用區段定義。 在UI中，返回 **[!UICONTROL 瀏覽]** 標籤 **[!UICONTROL 區段]** 開啟 **[!UICONTROL 新增所有區段至排程]**. 這會導致根據貴組織設定的排程評估所有區段。
 
 >[!NOTE]
 >
->對於[!DNL XDM Individual Profile]，最多可為五(5)個合併原則的沙箱啟用排程評估。 如果貴組織在單一沙箱環境中有超過五個[!DNL XDM Individual Profile]的合併原則，則無法使用排程的評估。
+>可針對最多五(5)個合併原則的沙箱啟用排程評估 [!DNL XDM Individual Profile]. 如果貴組織有五個以上的合併政策 [!DNL XDM Individual Profile] 在單一沙箱環境中，您將無法使用排程的評估。
 
-目前只能使用API建立排程。 有關使用API建立、編輯和使用排程的詳細步驟，請參閱評估和存取區段結果的教學課程，尤其是使用API](../tutorials/evaluate-a-segment.md#scheduled-evaluation)排程評估的[區段。
+目前只能使用API建立排程。 如需使用API建立、編輯及使用排程的詳細步驟，請依照教學課程來評估和存取區段結果，尤其是 [使用API進行排程評估](../tutorials/evaluate-a-segment.md#scheduled-evaluation).
 
 ![](../images/ui/overview/segment-browse-scheduled.png)
 
 ## 串流細分 {#streaming-segmentation}
 
-串流細分是即時對[!DNL Platform]執行近乎即時的細分，同時專注於資料的豐富度。 透過串流細分，區段資格現在會在資料進入[!DNL Platform]時進行，以緩解排程和執行區段工作的需求。
+串流細分是在 [!DNL Platform] 近乎即時，同時專注於資料豐富度。 透過串流細分，區段資格現在會在資料進入 [!DNL Platform]，可緩解排程及執行分段作業的需求。
 
-如需串流分段的詳細資訊，請參閱[串流分段使用手冊](./streaming-segmentation.md)。
+如需串流細分的詳細資訊，請參閱 [串流細分使用手冊](./streaming-segmentation.md).
 
 >[!NOTE]
 >
->為了讓串流區段正常運作，您需要為組織啟用已排程的區段。 如需啟用排程分段的詳細資訊，請參閱本使用手冊中的[串流分段區段](#scheduled-segmentation)。
+>為了讓串流區段正常運作，您需要為組織啟用已排程的區段。 如需啟用排程分段的詳細資訊，請參閱 [本使用手冊中的串流細分區段](#scheduled-segmentation).
 
 ## 邊緣分割 {#edge-segmentation}
 
 邊緣分段是即時在邊緣上評估Platform中區段的功能，可啟用相同的頁面和下一頁個人化使用案例。
 
-如需邊緣劃分的詳細資訊，請參閱[邊緣劃分UI指南](./edge-segmentation.md)
+如需邊緣分段的詳細資訊，請參閱 [邊緣劃分UI指南](./edge-segmentation.md)
 
 ## 違反策略
 
@@ -199,12 +199,12 @@ ht-degree: 0%
 >
 >只有當您建立已指派給目的地的區段時，才會套用原則違規。
 
-建立完區段後，Adobe Experience Platform資料控管會分析區段，以確保區段內沒有違反政策的情況。 如需詳細資訊，請參閱[[!DNL Data Governance] 概述](../../data-governance/home.md) 。
+建立完區段後，Adobe Experience Platform資料控管會分析區段，以確保區段內沒有違反政策的情況。 請參閱 [[!DNL Data Governance] 概述](../../data-governance/home.md) 以取得更多資訊。
 
 ![](../images/ui/overview/segment-dule-policy-violations.png)
 
 ## 後續步驟和其他資源 {#next-steps}
 
-[!DNL Segmentation Service] UI提供豐富的工作流程，可讓您將有價對象與[!DNL Real-time Customer Profile]資料隔離。
+此 [!DNL Segmentation Service] UI提供豐富的工作流程，可讓您將有價對象與 [!DNL Real-time Customer Profile] 資料。
 
-若要進一步了解[!DNL Segmentation Service]，請繼續閱讀本檔案。 若要了解如何使用[!DNL Segmentation Service] API，請參閱[[!DNL Segmentation Service] 開發人員指南](../api/overview.md)。
+若要深入了解 [!DNL Segmentation Service]，請繼續閱讀本檔案。 了解如何使用 [!DNL Segmentation Service] API，請閱讀 [[!DNL Segmentation Service] 開發人員指南](../api/overview.md).
