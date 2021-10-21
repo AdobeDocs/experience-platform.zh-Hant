@@ -1,9 +1,10 @@
 ---
 title: Notes端點
 description: 了解如何在Reactor API中呼叫/notes端點。
-source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
+exl-id: fa3bebc0-215e-4515-87b9-d195c9ab76c1
+source-git-commit: 7e4bc716e61b33563e0cb8059cb9f1332af7fd36
 workflow-type: tm+mt
-source-wordcount: '526'
+source-wordcount: '527'
 ht-degree: 7%
 
 ---
@@ -18,7 +19,7 @@ ht-degree: 7%
 * 向其他團隊成員提供指示
 * 記錄歷史內容
 
-Reactor API中的`/notes`端點可讓您以程式設計方式管理這些附註。
+此 `/notes` reactor API中的端點可讓您以程式設計方式管理這些附註。
 
 附註可套用至下列資源：
 
@@ -28,6 +29,7 @@ Reactor API中的`/notes`端點可讓您以程式設計方式管理這些附註�
 * [屬性](./properties.md)
 * [規則元件](./rule-components.md)
 * [規則](./rules.md)
+* [秘密](./secrets.md)
 
 這六種類型統稱為「顯著」資源。 刪除顯著資源時，也會刪除其相關附註。
 
@@ -39,11 +41,11 @@ Reactor API中的`/notes`端點可讓您以程式設計方式管理這些附註�
 
 ## 快速入門
 
-本指南中使用的端點是[Reactor API](https://www.adobe.io/experience-platform-apis/references/reactor/)的一部分。 繼續操作之前，請參閱[快速入門手冊](../getting-started.md)，了解如何驗證API的重要資訊。
+本指南中使用的端點屬於 [Reactor API](https://www.adobe.io/experience-platform-apis/references/reactor/). 繼續之前，請檢閱 [快速入門手冊](../getting-started.md) 以取得如何驗證API的重要資訊。
 
 ## 擷取附註清單 {#list}
 
-您可以將`/notes`附加至相關資源的GET請求的路徑，以擷取資源的附註清單。
+您可以借由附加 `/notes` 至相關資源的GET請求的路徑。
 
 **API格式**
 
@@ -54,7 +56,7 @@ GET /{RESOURCE_TYPE}/{RESOURCE_ID}/notes
 | 參數 | 說明 |
 | --- | --- |
 | `RESOURCE_TYPE` | 您為擷取附註的資源類型。 必須是下列其中一個值： <ul><li>`data_elements`</li><li>`extensions`</li><li>`libraries`</li><li>`properties`</li><li>`rule_components`</li><li>`rules`</li></ul> |
-| `RESOURCE_ID` | 要列出其注釋的特定資源的`id`。 |
+| `RESOURCE_ID` | 此 `id` 要列出其附註的特定資源。 |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -129,7 +131,7 @@ GET /notes/{NOTE_ID}
 
 | 參數 | 說明 |
 | --- | --- |
-| `NOTE_ID` | 要查找的注釋的`id`。 |
+| `NOTE_ID` | 此 `id` 你想查的那張紙條。 |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -185,7 +187,7 @@ curl -X GET \
 >
 >建立新附註之前，請記住附註不可編輯，刪除附註的唯一方式是刪除其對應的資源。
 
-您可以將`/notes`附加至相關資源的POST請求的路徑，以建立新附註。
+可通過附加 `/notes` 至相關資源的POST請求的路徑。
 
 **API格式**
 
@@ -196,7 +198,7 @@ POST /{RESOURCE_TYPE}/{RESOURCE_ID}/notes
 | 參數 | 說明 |
 | --- | --- |
 | `RESOURCE_TYPE` | 要為建立備注的資源類型。 必須是下列其中一個值： <ul><li>`data_elements`</li><li>`extensions`</li><li>`libraries`</li><li>`properties`</li><li>`rule_components`</li><li>`rules`</li></ul> |
-| `RESOURCE_ID` | 要為其建立注釋的特定資源的`id`。 |
+| `RESOURCE_ID` | 此 `id` 要為其建立備注的特定資源。 |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -223,8 +225,8 @@ curl -X POST \
 
 | 屬性 | 說明 |
 | --- | --- |
-| `type` | **（必要）** 要更新的資源類型。對於此端點，值必須為`notes`。 |
-| `attributes.text` | **（必要）** 包含附註的文字。每個注釋最多只能有512個Unicode字元。 |
+| `type` | **（必要）** 要更新的資源類型。 對於此端點，值必須是 `notes`. |
+| `attributes.text` | **（必要）** 包含注釋的文本。 每個注釋最多只能有512個Unicode字元。 |
 
 {style=&quot;table-layout:auto&quot;}
 
