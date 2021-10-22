@@ -1,27 +1,26 @@
 ---
 keywords: Experience Platform；首頁；熱門主題
 solution: Experience Platform
-title: 許可API端點
+title: 同意API端點
 topic-legacy: developer guide
-description: 瞭解如何使用Experience CloudAPI管理Privacy Service應用程式的客戶同意要求。
+description: 了解如何使用Experience CloudAPI管理Privacy Service應用程式的客戶同意請求。
 exl-id: ec505749-c0a9-4050-be56-4c0657807ec7
-translation-type: tm+mt
-source-git-commit: e226990fc84926587308077b32b128bfe334e812
+source-git-commit: 82dea48c732b3ddea957511c22f90bbd032ed9b7
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '247'
+ht-degree: 2%
 
 ---
 
-# 許可端點
+# 同意端點
 
-某些法規要求客戶明確同意才能收集其個人資料。 [!DNL Privacy Service] API中的`/consent`端點可讓您處理客戶同意請求，並將它們整合到您的隱私權工作流程中。
+某些法規需要客戶明確同意，才能收集其個人資料。 此 `/consent` 端點 [!DNL Privacy Service] API可讓您處理客戶同意請求，並將它們整合至您的隱私權工作流程中。
 
-在使用本指南之前，請參閱[快速入門](./getting-started.md)一節，以取得以下範例API呼叫中所需驗證標題的相關資訊。
+使用本指南之前，請參閱 [快速入門](./getting-started.md) 指南，取得以下範例API呼叫中所呈現之必要驗證標題的相關資訊。
 
 ## 處理客戶同意請求
 
-對`/consent`端點發出POST請求，以處理許可請求。
+向發出POST要求以處理同意要求 `/consent` 端點。
 
 **API格式**
 
@@ -31,7 +30,7 @@ POST /consent
 
 **要求**
 
-以下請求會為`entities`陣列中提供的用戶ID建立新的許可作業。
+下列要求會針對 `entities` 陣列。
 
 ```shell
 curl -X POST \
@@ -62,17 +61,17 @@ curl -X POST \
 
 | 屬性 | 說明 |
 | --- | --- |
-| `optOutOfSale` | 設為true時，表示`entities`下提供的使用者希望退出銷售或分享其個人資料。 |
-| `entities` | 一系列對象，用於指示對許可請求申請的用戶。 每個物件都包含`namespace`和`values`陣列，以搭配個別使用者與該命名空間。 |
-| `nameSpace` | `entities`陣列中的每個對象都必須包含Privacy ServiceAPI所識別的[標準身份名稱空間](./appendix.md#standard-namespaces)中的一個。 |
-| `values` | 每個用戶的值陣列，與提供的`nameSpace`相對應。 |
+| `optOutOfSale` | 設為true時，表示底下提供的使用者 `entities` 想要退出個人資料的銷售或分享。 |
+| `entities` | 一系列物件，指出同意請求適用的使用者。 每個物件都包含 `namespace` 和 `values` 以便讓個別使用者與該命名空間相符。 |
+| `nameSpace` | 中的每個物件 `entities` 陣列必須包含其中一個 [標準身分命名空間](./appendix.md#standard-namespaces) 由Privacy ServiceAPI辨識。 |
+| `values` | 每個使用者的值陣列，與提供的 `nameSpace`. |
 
 {style=&quot;table-layout:auto&quot;}
 
 >[!NOTE]
 >
->有關如何確定要發送到[!DNL Privacy Service]的客戶身份值的詳細資訊，請參閱[提供身份資料](../identity-data.md)的指南。
+>如需如何判斷要傳送至哪些客戶身分值的詳細資訊 [!DNL Privacy Service]，請參閱 [提供身分資料](../identity-data.md).
 
 **回應**
 
-成功的回應會傳回沒有裝載的HTTP狀態202（已接受），指出[!DNL Privacy Service]已接受請求，且正在處理中。
+成功的回應會傳回HTTP狀態202（已接受），但沒有裝載，表示已接受要求 [!DNL Privacy Service] 和正在處理中。
