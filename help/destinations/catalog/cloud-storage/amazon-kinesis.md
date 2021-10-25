@@ -3,52 +3,52 @@ keywords: Amazon Kinesis;kinesis目的地；kinesis
 title: Amazon Kinesis連線
 description: 建立與Amazon Kinesis儲存體的即時傳出連線，以串流來自Adobe Experience Platform的資料。
 exl-id: b40117ef-6ad0-48a9-bbcb-97c6f6d1dce3
-source-git-commit: 3aac1e7c7fe838201368379da8504efc8e316e1c
+source-git-commit: 2b1cde9fc913be4d3bea71e7d56e0e5fe265a6be
 workflow-type: tm+mt
 source-wordcount: '552'
 ht-degree: 2%
 
 ---
 
-# (Beta)[!DNL Amazon Kinesis]連接
+# （測試版） [!DNL Amazon Kinesis] 連接
 
-## 概覽 {#overview}
+## 總覽 {#overview}
 
 >[!IMPORTANT]
 >
->Platform中的[!DNL Amazon Kinesis]目標目前為測試版。 文件和功能可能會有所變更。
+>此 [!DNL Amazon Kinesis] Platform中的目的地目前為測試版。 文件和功能可能會有所變更。
 
-[!DNL Amazon Web Services]提供的[!DNL Kinesis Data Streams]服務允許您即時收集和處理大資料記錄流。
+此 [!DNL Kinesis Data Streams] 服務依據 [!DNL Amazon Web Services] 可讓您即時收集和處理大量資料記錄。
 
-您可以建立與[!DNL Amazon Kinesis]儲存的即時傳出連線，以便串流來自Adobe Experience Platform的資料。
+您可以建立與 [!DNL Amazon Kinesis] 儲存以從Adobe Experience Platform串流資料。
 
-* 如需[!DNL Amazon Kinesis]的詳細資訊，請參閱[Amazon檔案](https://docs.aws.amazon.com/streams/latest/dev/introduction.html)。
-* 若要以程式設計方式連線至[!DNL Amazon Kinesis]，請參閱[串流目的地API教學課程](../../api/streaming-destinations.md)。
-* 若要使用Platform使用者介面連線至[!DNL Amazon Kinesis]，請參閱以下各節。
+* 如需 [!DNL Amazon Kinesis]，請參閱 [Amazon檔案](https://docs.aws.amazon.com/streams/latest/dev/introduction.html).
+* 連線至 [!DNL Amazon Kinesis] 以程式設計方式，請參閱 [串流目的地API教學課程](../../api/streaming-destinations.md).
+* 連線至 [!DNL Amazon Kinesis] 使用Platform使用者介面，請參閱以下各節。
 
 ![Amazon Kinesis在UI中](../../assets/catalog/cloud-storage/amazon-kinesis/catalog.png)
 
 ## 使用案例 {#use-cases}
 
-透過使用[!DNL Amazon Kinesis]等串流目的地，您可以輕鬆將高價值分段事件和相關設定檔屬性饋送至您所選擇的系統。
+使用串流目的地，例如 [!DNL Amazon Kinesis]，您可以輕鬆將高價值細分事件和相關設定檔屬性饋送至您所選擇的系統。
 
-例如，潛在客戶下載了白皮書，將其歸類為「高傾向轉換」區段。 將潛在客戶所屬的區段對應至[!DNL Amazon Kinesis]目的地後，您會在[!DNL Amazon Kinesis]中收到此事件。 在那裡，您可以採用自己動手做的方法，在活動之上描述業務邏輯，因為您認為最適合您的企業IT系統。
+例如，潛在客戶下載了白皮書，將其歸類為「高傾向轉換」區段。 通過映射潛在客戶所在的段 [!DNL Amazon Kinesis] 目的地，您會在 [!DNL Amazon Kinesis]. 在那裡，您可以採用自己動手做的方法，在活動之上描述業務邏輯，因為您認為最適合您的企業IT系統。
 
 ## 匯出類型 {#export-type}
 
-**以設定檔為基礎**  — 您要匯出區段的所有成員，以及所需的結構欄位(例如：電子郵件地址、電話號碼、姓氏)，從對象啟用工作流程的「選取屬性」畫面 [中選取](../../ui/activate-streaming-profile-destinations.md#select-attributes)。
+**設定檔**  — 您要匯出區段的所有成員，以及所需的架構欄位(例如：電子郵件地址、電話號碼、姓氏)，如「選取屬性」畫面中所選 [對象啟用工作流程](../../ui/activate-streaming-profile-destinations.md#select-attributes).
 
-## 必要的[!DNL Amazon Kinesis]權限 {#required-kinesis-permission}
+## 必填 [!DNL Amazon Kinesis] 權限 {#required-kinesis-permission}
 
-若要成功將資料連線並匯出至[!DNL Amazon Kinesis]資料流，Experience Platform需要下列動作的權限：
+若要成功連線並將資料匯出至 [!DNL Amazon Kinesis] 串流，Experience Platform需要下列動作的權限：
 
 * `kinesis:ListStreams`
 * `kinesis:PutRecord`
 * `kinesis:PutRecords`
 
-這些權限會透過[!DNL Kinesis]主控台排列，當您在Platform使用者介面中設定Kinesis目的地時，Platform就會加以檢查。
+這些權限會透過 [!DNL Kinesis] 在Platform使用者介面中設定Kinesis目的地後，Platform會檢查主控台和。
 
-以下示例顯示成功將資料導出到[!DNL Kinesis]目標所需的最低訪問權限。
+以下範例顯示成功將資料匯出至 [!DNL Kinesis] 目的地。
 
 ```json
 {
@@ -75,21 +75,21 @@ ht-degree: 2%
 | `kinesis:PutRecord` | 將單一資料記錄寫入Kinesis資料流的動作。 |
 | `kinesis:PutRecords` | 在單一呼叫中將多個資料記錄寫入Kinesis資料流的動作。 |
 
-有關控制[!DNL Kinesis]資料流訪問的詳細資訊，請閱讀以下[[!DNL Kinesis] document](https://docs.aws.amazon.com/streams/latest/dev/controlling-access.html)。
+有關控制訪問的詳細資訊 [!DNL Kinesis] 資料流，請讀取以下內容 [[!DNL Kinesis] 檔案](https://docs.aws.amazon.com/streams/latest/dev/controlling-access.html).
 
 ## 連接到目標 {#connect}
 
-要連接到此目標，請按照[目標配置教程](../../ui/connect-destination.md)中所述的步驟操作。
+若要連線至此目的地，請依照 [目的地設定教學課程](../../ui/connect-destination.md).
 
 ### 連線參數 {#parameters}
 
-在[設定](../../ui/connect-destination.md)此目標時，您必須提供下列資訊：
+同時 [設定](../../ui/connect-destination.md) 此目的地時，您必須提供下列資訊：
 
-* **[!DNL Amazon Web Services]存取金鑰和機密金鑰**:在中 [!DNL Amazon Web Services]產生一組 `access key - secret access key` 以授與Platform對您帳戶的存 [!DNL Amazon Kinesis] 取權。如需詳細資訊，請參閱[Amazon網站服務檔案](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html)。
-* **地區**:指定要 [!DNL Amazon Web Services] 將資料流到哪個區域。
-* **名稱**:提供連線的名稱  [!DNL Amazon Kinesis]
-* **說明**:提供與的連線說明 [!DNL Amazon Kinesis]。
-* **資料流**:提供帳戶中現有資料流的名 [!DNL Amazon Kinesis] 稱。Platform會將資料匯出至此資料流。
+* **[!DNL Amazon Web Services]訪問密鑰和密鑰**:在 [!DNL Amazon Web Services]，產生 `access key - secret access key` 配對，以授與 [!DNL Amazon Kinesis] 帳戶。 了解更多 [Amazon Web Services檔案](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html).
+* **地區**:指出 [!DNL Amazon Web Services] 資料流到的區域。
+* **名稱**:提供連線的名稱 [!DNL Amazon Kinesis]
+* **說明**:提供與 [!DNL Amazon Kinesis].
+* **流**:提供您 [!DNL Amazon Kinesis] 帳戶。 Platform會將資料匯出至此資料流。
 
 <!--
 
@@ -101,16 +101,16 @@ ht-degree: 2%
 
 ## 啟用此目的地的區段 {#activate}
 
-請參閱[將受眾資料啟用至串流設定檔匯出目的地](../../ui/activate-streaming-profile-destinations.md) ，以取得關於將受眾區段啟用至此目的地的指示。
+請參閱 [對串流設定檔匯出目的地啟用受眾資料](../../ui/activate-streaming-profile-destinations.md) 以取得啟用受眾區段至此目的地的指示。
 
 ## 匯出的資料 {#exported-data}
 
-您匯出的[!DNL Experience Platform]資料會以JSON格式連結至[!DNL Amazon Kinesis]。 例如，以下事件包含已符合特定區段資格並退出其他區段之對象的電子郵件地址設定檔屬性。 此潛在客戶的身分識別為ECID和電子郵件。
+已導出 [!DNL Experience Platform] 資料登陸 [!DNL Amazon Kinesis] 格式。 例如，以下事件包含已符合特定區段資格並退出其他區段之對象的電子郵件地址設定檔屬性。 此潛在客戶的身分識別為ECID和電子郵件。
 
 ```json
 {
   "person": {
-    "email": "yourstruly@adobe.con"
+    "email": "yourstruly@adobe.com"
   },
   "segmentMembership": {
     "ups": {
@@ -150,6 +150,6 @@ ht-degree: 2%
 >[!MORELIKETHIS]
 >
 >* [連線至Amazon Kinesis並使用流量服務API啟用資料](../../api/streaming-destinations.md)
-* [Azure事件中心目標](./azure-event-hubs.md)
-* [目的地類型和類別](../../destination-types.md)
+>* [Azure事件中心目標](./azure-event-hubs.md)
+>* [目的地類型和類別](../../destination-types.md)
 

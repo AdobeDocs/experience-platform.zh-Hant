@@ -2,7 +2,7 @@
 title: 檔案自助服務範本//以目的地名稱取代
 description: 使用此範本，在Adobe Experience Platform目錄中為您的目的地建立公開檔案。//將取代為概述區段中的段落
 exl-id: 99700474-8bf6-4176-acc1-38814e17c995
-source-git-commit: 396b9a9ec1509abedba96797f68ad3e5aa2e5988
+source-git-commit: 2b1cde9fc913be4d3bea71e7d56e0e5fe265a6be
 workflow-type: tm+mt
 source-wordcount: '904'
 ht-degree: 1%
@@ -13,19 +13,19 @@ ht-degree: 1%
 
 *瀏覽此模板時，替換或刪除所有斜體段落（從此模板開始）。*
 
-*首先，請更新頁面頂端的中繼資料（標題和說明）。請忽略此頁上的所有UICONTROL實例。 這個標籤可協助我們的機器翻譯程式將頁面正確翻譯成我們支援的多種語言。 在您提交文檔後，我們將向其添加標籤。*
+*首先，請更新頁面頂端的中繼資料（標題和說明）。 請忽略此頁上的所有UICONTROL實例。 這個標籤可協助我們的機器翻譯程式將頁面正確翻譯成我們支援的多種語言。 在您提交檔案後，我們會為其新增標籤。*
 
 ## 總覽 {#overview}
 
-*提供您公司的簡短概述，包括提供給客戶的價值。包含指向產品文檔首頁的連結，以便進一步閱讀。*
+*提供您公司的簡短概述，包括提供給客戶的價值。 加入產品檔案首頁的連結，以供進一步閱讀。*
 
 >[!IMPORTANT]
 >
->此檔案頁面由&#x200B;*YOURDESTINATION*&#x200B;團隊建立。 有關任何查詢或更新請求，請直接聯繫他們，聯繫地址為&#x200B;*插入連結或電子郵件地址，您可以在此處獲取更新*
+>本檔案頁面由 *您的目的地* 團隊。 如有任何查詢或更新請求，請直接與他們聯繫，地址為 *插入可以聯繫您獲取更新的連結或電子郵件地址*
 
 ## 先決條件 {#prerequisites}
 
-*在本節中新增客戶開始在Adobe Experience Platform使用者介面中設定目的地前，需要注意之事項的相關資訊。這可以是：*
+*在本節中新增客戶開始在Adobe Experience Platform使用者介面中設定目的地前，需要注意之事項的相關資訊。 這可以是：*
 
 * *需要添加到允許清單*
 * *電子郵件雜湊要求*
@@ -36,54 +36,54 @@ ht-degree: 1%
 
 ## 支援的身分 {#supported-identities}
 
-*在本節中新增目的地所支援身分的相關資訊。我們已預先填入一些標準值。 刪除未應用於目標的值和未預填的值。*
+*在本節中新增目的地所支援身分的相關資訊。 我們已預先填入一些標準值。 刪除未套用至您目的地的值，以及任何未預填的值。*
 
-** YOURDESTINATION支援下表所述的身分識別的啟用。深入了解[identities](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=en#getting-started)。
+*您的目的地* 支援啟用下表所述的身分。 深入了解 [身分](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=en#getting-started).
 
 | Target身分 | 說明 | 考量事項 |
 |---|---|---|
-| GAID | Google廣告ID | 當源標識為GAID命名空間時，選擇GAID目標標識。 |
-| IDFA | 廣告商專用的Apple ID | 如果來源識別為IDFA命名空間，請選取IDFA目標識別。 |
-| ECID | Experience Cloud ID | 代表ECID的命名空間。 此命名空間也可由下列別名引用：&quot;Adobe Marketing Cloud ID&quot;、&quot;Adobe Experience Cloud ID&quot;、&quot;Adobe Experience Platform ID&quot;。 如需詳細資訊，請參閱以下關於[ECID](https://experienceleague.adobe.com/docs/experience-platform/identity/ecid.html)的檔案。 |
-| phone_sha256 | 使用SHA256演算法雜湊的電話號碼 | Adobe Experience Platform支援純文字和SHA256雜湊電話號碼。 當源欄位包含未雜湊屬性時，請核取&#x200B;**[!UICONTROL Apply transformation]**&#x200B;選項，讓[!DNL Platform]在啟動時自動雜湊資料。 |
-| email_lc_sha256 | 使用SHA256演算法雜湊的電子郵件地址 | Adobe Experience Platform支援純文字和SHA256雜湊電子郵件地址。 當源欄位包含未雜湊屬性時，請核取&#x200B;**[!UICONTROL Apply transformation]**&#x200B;選項，讓[!DNL Platform]在啟動時自動雜湊資料。 |
+| GAID | Google Advertising ID | 當源標識為GAID命名空間時，選擇GAID目標標識。 |
+| IDFA | Apple ID for Advertisers | 如果來源識別為IDFA命名空間，請選取IDFA目標識別。 |
+| ECID | Experience Cloud ID | 代表ECID的命名空間。 此命名空間也可由下列別名引用：&quot;Adobe Marketing Cloud ID&quot;、&quot;Adobe Experience Cloud ID&quot;、&quot;Adobe Experience Platform ID&quot;。 請參閱下列檔案，內容如下 [ECID](https://experienceleague.adobe.com/docs/experience-platform/identity/ecid.html) 以取得更多資訊。 |
+| phone_sha256 | 使用SHA256演算法雜湊的電話號碼 | Adobe Experience Platform支援純文字和SHA256雜湊電話號碼。 當來源欄位包含未雜湊屬性時，請檢查 **[!UICONTROL 套用轉換]** 選項，必須 [!DNL Platform] 啟動時自動雜湊資料。 |
+| email_lc_sha256 | 使用SHA256演算法雜湊的電子郵件地址 | Adobe Experience Platform支援純文字和SHA256雜湊電子郵件地址。 當來源欄位包含未雜湊屬性時，請檢查 **[!UICONTROL 套用轉換]** 選項，必須 [!DNL Platform] 啟動時自動雜湊資料。 |
 | extern_id | 自訂使用者ID | 當源標識為自定義命名空間時，選擇此目標標識。 |
 
 {style=&quot;table-layout:auto&quot;}
 
 ## 匯出類型 {#export-type}
 
-**區段匯出**  — 您會匯出區段（對象）的所有成員，並匯出YOURDESTINATIONdestination中使用的識別碼(名稱、電話號碼或其 ** 他)。
+**區段匯出**  — 您會匯出區段（對象）的所有成員，並使用 *您的目的地* 目的地。
 
 ## 使用案例
 
-為協助您更清楚了解您應如何及何時使用&#x200B;*YOURDESTINATION*&#x200B;目的地，以下是Adobe Experience Platform客戶可借由使用此目的地解決的範例使用案例。
+以協助您更清楚了解應如何及何時使用 *您的目的地* 目的地，以下是Adobe Experience Platform客戶可透過此目的地解決的範例使用案例。
 
 ### 使用案例#1
 
 *針對行動訊息平台：*
 
-*一個房屋租賃和銷售平台想要向客戶的Android和iOS設備推播移動通知，讓他們知道，他們之前在尋找租房的地區有100個更新清單。*
+*一個房屋租賃與銷售平台想要向客戶的Android和iOS裝置推播行動通知，讓他們知道，他們之前在尋找租房的地區有100個更新清單。*
 
 ### 使用案例#2
 
 *針對社交網路平台：*
 
-*運動服裝品牌想透過其社交媒體帳戶觸及現有客戶。服飾品牌可將其CRM的電子郵件地址內嵌至Adobe Experience Platform、從其離線資料建立區段，並將這些區段傳送至YOURDESTINATION，以在其客戶的社交媒體摘要中顯示廣告。*
+*運動服裝品牌想透過其社交媒體帳戶觸及現有客戶。 服飾品牌可將其CRM的電子郵件地址擷取至Adobe Experience Platform、從其離線資料建立區段，並將這些區段傳送至您的目的地，以在其客戶的社交媒體摘要中顯示廣告。*
 
 ## 連接到目標 {#connect}
 
-要連接到此目標，請按照[目標配置教程](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html)中所述的步驟操作。
+若要連線至此目的地，請依照 [目的地設定教學課程](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html).
 
 ### 連線參數 {#parameters}
 
-在[設定](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html)此目標時，您必須提供下列資訊：
+同時 [設定](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html) 此目的地時，您必須提供下列資訊：
 
-*新增客戶在設定新目的地時必須填入的欄位。這些欄位是目的地專屬欄位，視您在目的地SDK中的設定而定。 目標的欄位可能與下面列出的欄位不同。*
+*新增客戶在設定新目的地時必須填入的欄位。 這些欄位是目的地專屬欄位，視您在目的地SDK中的設定而定。 您目的地的欄位可能與下列欄位不同。*
 
 * **[!UICONTROL 名稱]**:日後您將透過此名稱識別此目的地。
 * **[!UICONTROL 說明]**:未來可協助您識別此目的地的說明。
-* **[!UICONTROL 帳戶ID]**:您 ** 的DESTINATION帳戶ID。
+* **[!UICONTROL 帳戶ID]**:您的 *您的目的地* 帳戶ID。
 
 
 <!--
@@ -117,7 +117,7 @@ ht-degree: 1%
 
 ## 啟用此目的地的區段 {#activate}
 
-請參閱[啟動設定檔和區段至串流區段匯出目的地](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations.html?lang=en) ，以取得啟動受眾區段至此目的地的指示。
+閱讀 [啟動設定檔和區段至串流區段匯出目的地](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations.html?lang=en) 以取得啟用受眾區段至此目的地的指示。
 
 <!--
 
@@ -152,12 +152,12 @@ If no policy violations have been detected, select **[!UICONTROL Finish]** to co
 
 ## 匯出的資料 {#exported-data}
 
-*新增資料如何匯出至目的地的附註。這可協助客戶確定他們已正確與您的目的地整合。 例如，您可以提供範例JSON，如下所示。*
+*新增資料如何匯出至目的地的附註。 這可協助客戶確定他們已正確與您的目的地整合。 例如，您可以提供範例JSON，如下所示。*
 
 ```
 {
   "person": {
-    "email": "yourstruly@adobe.con"
+    "email": "yourstruly@adobe.com"
   },
   "segmentMembership": {
     "ups": {
@@ -194,7 +194,7 @@ If no policy violations have been detected, select **[!UICONTROL Finish]** to co
 
 ## 資料使用與控管 {#data-usage-governance}
 
-處理資料時，所有[!DNL Adobe Experience Platform]目標都符合資料使用策略。 有關[!DNL Adobe Experience Platform]如何實施資料控管的詳細資訊，請參閱[資料控管概述](https://experienceleague.adobe.com/docs/experience-platform/data-governance/home.html)。
+全部 [!DNL Adobe Experience Platform] 處理資料時，目的地符合資料使用原則。 有關如何 [!DNL Adobe Experience Platform] 強制實施資料治理，讀取 [資料控管概觀](https://experienceleague.adobe.com/docs/experience-platform/data-governance/home.html).
 
 ## 其他資源 {#additional-resources}
 
