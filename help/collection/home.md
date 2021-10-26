@@ -5,9 +5,9 @@ title: 資料彙集概觀
 topic-legacy: overview
 description: 了解在Adobe Experience Platform中收集客戶體驗資料所涉及的各種技術。
 exl-id: 03ce5339-e68d-4adf-8c3c-82846a626dad
-source-git-commit: bbaf272313d5a8afe33178598063164792f4d8c0
+source-git-commit: 0926f0a6dc005b1bf278e7a0fa0afe4296d8ad80
 workflow-type: tm+mt
-source-wordcount: '357'
+source-wordcount: '458'
 ht-degree: 4%
 
 ---
@@ -26,6 +26,7 @@ Experience Platform提供的資料收集技術著重於所擷取資料集的可�
 
 * [Adobe Experience Platform Edge Network](https://experienceleague.adobe.com/docs/web-sdk-learn/tutorials/introduction-to-web-sdk-and-edge-network.html)
 * [標籤](../tags/home.md)
+* [資料流](../edge/fundamentals/datastreams.md)
 * [事件轉送](../tags/ui/event-forwarding/overview.md)
 * [Adobe Experience Platform Web SDK](../edge/home.md)
 * [Adobe Experience Platform Mobile SDK](https://aep-sdks.gitbook.io/docs/)
@@ -33,30 +34,36 @@ Experience Platform提供的資料收集技術著重於所擷取資料集的可�
 * [Experience Data Model(XDM)](../xdm/home.md)
 * [Adobe Experience Platform Identity Service](../identity-service/home.md)
 
-<!-- (Outdated terminology)
-![](./images/Collection.png)
--->
+本指南提供資料收集架構的高階簡介，以及如何透過Platform Edge Network將資料傳送至Adobe Experience Cloud產品和非Adobe應用程式。
 
-## 更簡單的實施，更快的用戶端效能
+## 標籤、Web SDK和行動SDK
 
-Adobe Experience Platform Web和Mobile SDK會折疊所有Adobe產品程式庫，並壓縮為適用於網頁或行動平台的單一開發套件。 壓縮這些程式庫可加快資料收集速度，並將操作整合為從用戶端裝置到Adobe Experience Platform邊緣網路的單一資料流。
+Platform Web SDK和Platform Mobile SDK會分別將所有Adobe產品程式庫折疊並壓縮為適用於Web和行動平台的單一開發套件。 這些可使用原始程式碼來實作，或使用 [標籤](../tags/home.md) 透過資料收集UI。
 
-## 切換過程以部署Adobe技術 {#edge}
+壓縮這些庫可加快資料收集速度，並將操作整合到從客戶端設備到Platform Edge Network的單個流中。
+
+![標籤， Web SDK，行動SDK](./images/home/tags-sdks.png)
+
+## 平台邊緣網路和資料流 {#edge}
 
 Platform Edge Network是一個全球分佈、快速、可靠的伺服器網路，能夠以大規模接收和處理資料。 使用標籤時，您可以設定 [資料流](../edge/fundamentals/datastreams.md) 針對Adobe Target、Adobe Audience Manager和Adobe Analytics等產品，這可讓您在伺服器端啟用這些產品，而不需變更用戶端代碼。
 
-<!-- (Outdated terminology)
-![](./images/deploy.png)
--->
+![資料流和Adobe解決方案](./images/home/adobe-solutions.png)
 
 >[!NOTE]
 >
 >如需Platform Edge Network的概要介紹，請參閱以下內容 [互動產品導覽](https://adobe-ideacloud.forgedx.com/adobe-adobe-edge-collection/adobe-experience-edge/public/mx?SUID=hgb1a48ICSCpbM6MzBYHbxnsh9DgjUy1).
 
-## 快速、安全地轉換、豐富和發送資料
+## 事件轉送
 
-[Adobe Experience Platform中的事件轉送](../tags/ui/event-forwarding/overview.md) 可點選任何Platform資料流。 您可以以極低的延遲轉換、擴充及傳送資料至任何非Adobe目的地，而無須將任何協力廠商代碼新增至用戶端裝置，提供更快速且安全的資料收集與發佈。
+[事件轉送](../tags/ui/event-forwarding/overview.md) 可點選任何Experience Platform資料流，讓您以極低的延遲轉換、擴充及傳送資料至任何非Adobe目的地，而無須將任何協力廠商程式碼新增至用戶端裝置。
 
-<!-- (Outdated terminology)
-![](./images/launch.png)
--->
+![事件轉送](./images/home/event-forwarding.png)
+
+## 後續步驟
+
+本檔案概略介紹Platform的資料收集技術如何運作，以自動化將您收集的客戶體驗資料傳送至Adobe產品和協力廠商目的地的程式。
+
+![資料收集框架](./images/home/collection.png)
+
+如需透過邊緣網路傳送事件資料所涉及之一般工作流程的詳細資訊，請參閱 [資料收集的端對端概觀](./e2e.md).
