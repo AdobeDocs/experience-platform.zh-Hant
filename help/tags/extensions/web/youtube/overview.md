@@ -1,10 +1,11 @@
 ---
 title: YouTube影片追蹤擴充功能概述
 description: 了解Adobe Experience Platform中的YouTube視訊追蹤標籤擴充功能。
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+exl-id: 703f7b04-f72f-415f-80d6-45583fa661bc
+source-git-commit: bbaf272313d5a8afe33178598063164792f4d8c0
 workflow-type: tm+mt
 source-wordcount: '891'
-ht-degree: 37%
+ht-degree: 40%
 
 ---
 
@@ -12,7 +13,7 @@ ht-degree: 37%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch在Adobe Experience Platform中已重新命名為一套資料收集技術。 因此，產品檔案中已推出數個術語變更。 有關術語更改的綜合參考，請參閱以下[document](../../../term-updates.md)。
+>Adobe Experience Platform Launch在Adobe Experience Platform中已重新命名為一套資料收集技術。 因此，所有產品文件中出現了幾項術語變更。 如需術語變更的彙整參考資料，請參閱以下[文件](../../../term-updates.md)。
 
 **先決條件**
 
@@ -22,13 +23,13 @@ Adobe Experience Platform中的每個標籤屬性都需要從「擴充功能」�
 * Experience Cloud 訪客 ID 服務
 * 核心擴充功能
 
-在影片播放器要呈現的每個網頁的HTML中，使用[「使用\&lt;iframe\>標籤&quot;](https://developers.google.com/youtube/player_parameters#Manual_IFrame_Embeds)程式碼片段內嵌播放器」，此程式碼片段來自Google開發人員檔案。
+使用 [&quot;使用\嵌入播放器&lt;iframe> tag&quot;](https://developers.google.com/youtube/player_parameters#Manual_IFrame_Embeds) 來自Google開發人員檔案的程式碼片段，位於影片播放器要呈現之每個網頁的HTML中。
 
-此2.0.1版擴充功能可支援在單一網頁內嵌一或多部YouTube影片，方法是在iframe指令碼標籤中插入`id`屬性（值不可重複），並在`src`屬性值的結尾加上`enablejsapi=1`和`rel=0`（若未包含）。 例如：
+此2.0.1版擴充功能可支援透過插入 `id` 屬性（在iframe指令碼標籤中），並附加 `enablejsapi=1` 和 `rel=0` 到 `src` 屬性值（如果尚未包含）。 例如：
 
 `<iframe id="player1" width="560" height="315" src="https://www.youtube.com/embed/xpatB77BzYE?enablejsapi=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`
 
-此擴充功能也設計用來動態檢查唯一ID屬性值，例如`player1`，無論`enablejsapi`和`rel`查詢字串參數是否存在，以及其預期值是否正確。 因此，可將YouTube指令碼標籤新增至具有或不具有`id`屬性的網頁，以及是否包含`enablejsapi`和`rel`查詢字串參數。
+此擴充功能也可動態檢查唯一ID屬性值，例如 `player1`，無論 `enablejsapi` 和 `rel` 查詢字串參數存在，且其預期值正確時。 因此，YouTube指令碼標籤可以新增至網頁，且不論是否有 `id` 屬性，以及 `enablejsapi` 和 `rel` 查詢字串參數是否包含。
 
 >[!NOTE]
 >
@@ -47,7 +48,7 @@ document.onreadystatechange = function () {
 
 擴充功能中有6個可用的資料元素，且皆無需設定。
 
-* **播放點位置：** 在標籤規則呼叫時，記錄視訊時間軸上的播放點位置（以秒為單位）。
+* **播放點位置：** 在標籤規則呼叫時，記錄影片時間軸上播放點位置（以秒為單位）。
 * **影片 ID：**&#x200B;指定與影片相關聯的 YouTube ID。
 * **影片名稱：**&#x200B;指定描述影片的名稱或易記名稱。
 * **影片 URL：**&#x200B;傳回目前所載入/播放影片的 YouTube.com URL。
@@ -85,7 +86,7 @@ document.onreadystatechange = function () {
 
 * **條件**：無
 
-* **動作**： 使用&#x200B;**Analytics擴充功能**&#x200B;來「設定變數」動作，以對應：
+* **動作**： 使用 **Analytics擴充功能** 若要「設定變數」動作，請對應：
 
    * 視訊開始事件，
    * 「影片長度」資料元素的 prop/eVar
@@ -93,16 +94,16 @@ document.onreadystatechange = function () {
    * 「影片名稱」資料元素的 prop/eVar
    * 「影片 URL」資料元素的 prop/eVar
 
-   接著加入「傳送信標」動作(`s.tl`)，其連結名稱為「視訊開始」，後面接著「清除變數」動作。
+   然後加入「傳送信標」動作(`s.tl`)，連結名稱為「視訊開始」，後面接著「清除變數」動作。
 
 >[!TIP]
 > 
->若實作中無法使用每個影片元素的多個eVar或prop，可在Platform中串連資料元素值，並以Classification Rule Builder工具將值剖析為分類報告(相關說明請參閱[https://experienceleague.adobe.com/docs/analytics/components/classifications/classifications-rulebuilder/classification-rule-builder.html](https://experienceleague.adobe.com/docs/analytics/components/classifications/classifications-rulebuilder/classification-rule-builder.html))，接著在Analysis Workspace中以區段形式套用。
+>若實作中無法使用每個影片元素的多個eVar或prop，可在Platform中串連資料元素值，並使用Classification Rule Builder工具剖析值並製成分類報告，相關說明請參閱 [https://experienceleague.adobe.com/docs/analytics/components/classifications/classifications-rulebuilder/classification-rule-builder.html](https://experienceleague.adobe.com/docs/analytics/components/classifications/classifications-rulebuilder/classification-rule-builder.html)，然後在Analysis Workspace中以區段形式套用。
 
 若要串連影片資訊的值，請建立名為「影片中繼資料」的新資料元素，並以程式導入所有影片資料元素 (如上所列)，將所有資料元素彙整起來。例如：
 
 ```javascript
-var r = ””;
+var r = [];
 
 r.push('YouTube'); //Player Name
 r.push(_satellite.getVar('Video ID'));

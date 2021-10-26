@@ -5,9 +5,9 @@ title: XDM系統概述
 topic-legacy: overview
 description: 標準化和互操作性是Adobe Experience Platform背後的重要概念。 由Adobe推動的Experience Data Model(XDM)，旨在標準化客戶體驗資料並定義客戶體驗管理的結構。
 exl-id: 294d5f02-850f-47ea-9333-8b94a0bb291e
-source-git-commit: 196147e7691010707953561c110a3934fec8ba1b
+source-git-commit: 18d245574ba771aa42776d8755a2c6681c8c8532
 workflow-type: tm+mt
-source-wordcount: '1947'
+source-wordcount: '2015'
 ht-degree: 2%
 
 ---
@@ -51,14 +51,19 @@ Experience Platform提供使用者介面和RESTful API，您可從中檢視及�
 
 ## XDM系統中的資料行為 {#data-behaviors}
 
-用於Experience Platform的資料分為兩種行為類型：
+用於Experience Platform的資料分為三種行為類型：
 
-* **記錄資料**:提供主題屬性的相關資訊。 主題可以是組織或個人。
-* **時間序列資料**:提供記錄主體直接或間接執行操作時系統的快照。
+* **記錄**:提供主題屬性的相關資訊。 主題可以是組織或個人。
+* **時間序列**:提供記錄主體直接或間接執行操作時系統的快照。
+* **臨機**:僅透過單一資料集擷取與使用命名相同的欄位。 臨機結構用於各種資料擷取工作流程中，以供Experience Platform使用，包括擷取CSV檔案和建立特定類型的來源連線。
 
 所有XDM結構都說明可分類為記錄或時間序列的資料。 架構的資料行為由架構的類定義，該類在首次建立時分配給架構。 XDM類別說明結構必須包含的屬性數量最小，才能代表特定資料行為。
 
-雖然您可以在 [!DNL Schema Registry]，建議您使用慣用類別 **[!UICONTROL XDM個別設定檔]** 和 **[!UICONTROL XDM ExperienceEvent]** 用於記錄資料和時間序列資料。 以下將更詳細地介紹這些類。
+雖然您可以在 [!DNL Schema Registry]，建議您使用標準類別 **[!UICONTROL XDM個別設定檔]** 和 **[!UICONTROL XDM ExperienceEvent]** 用於記錄資料和時間序列資料。 以下將更詳細地介紹這些類。
+
+>[!NOTE]
+>
+>沒有基於臨機行為的標準類。 採用臨機結構的平台程式會自動產生這些結構，但也可以 [使用方案註冊表API手動建立](./tutorials/ad-hoc.md).
 
 ### [!UICONTROL XDM個別設定檔] {#xdm-individual-profile}
 

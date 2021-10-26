@@ -1,14 +1,14 @@
 ---
 keywords: Experience Platform；首頁；熱門主題；資料收集；啟動；Web sdk
 solution: Experience Platform
-title: 資料收集概觀
+title: 資料彙集概觀
 topic-legacy: overview
 description: 了解在Adobe Experience Platform中收集客戶體驗資料所涉及的各種技術。
 exl-id: 03ce5339-e68d-4adf-8c3c-82846a626dad
-source-git-commit: f61a845b915df3d803085fbf528e014c8acd9dbd
+source-git-commit: bbaf272313d5a8afe33178598063164792f4d8c0
 workflow-type: tm+mt
-source-wordcount: '332'
-ht-degree: 2%
+source-wordcount: '357'
+ht-degree: 4%
 
 ---
 
@@ -28,9 +28,14 @@ Experience Platform提供的資料收集技術著重於所擷取資料集的可�
 * [標籤](../tags/home.md)
 * [事件轉送](../tags/ui/event-forwarding/overview.md)
 * [Adobe Experience Platform Web SDK](../edge/home.md)
+* [Adobe Experience Platform Mobile SDK](https://aep-sdks.gitbook.io/docs/)
+* [Adobe Experience Platform Debugger](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob?hl=en)
 * [Experience Data Model(XDM)](../xdm/home.md)
+* [Adobe Experience Platform Identity Service](../identity-service/home.md)
 
+<!-- (Outdated terminology)
 ![](./images/Collection.png)
+-->
 
 ## 更簡單的實施，更快的用戶端效能
 
@@ -38,16 +43,20 @@ Adobe Experience Platform Web和Mobile SDK會折疊所有Adobe產品程式庫，
 
 ## 切換過程以部署Adobe技術 {#edge}
 
-Platform Edge Network是一個全球分佈、快速、可靠的伺服器網路，能夠以大規模接收和處理資料。 您可以使用標籤，為Adobe Target、Adobe Audience Manager和Adobe Analytics等產品設定[datastreams](../edge/fundamentals/datastreams.md)，這可讓您在伺服器端啟動這些產品，而不需變更用戶端代碼。
+Platform Edge Network是一個全球分佈、快速、可靠的伺服器網路，能夠以大規模接收和處理資料。 使用標籤時，您可以設定 [資料流](../edge/fundamentals/datastreams.md) 針對Adobe Target、Adobe Audience Manager和Adobe Analytics等產品，這可讓您在伺服器端啟用這些產品，而不需變更用戶端代碼。
 
+<!-- (Outdated terminology)
 ![](./images/deploy.png)
+-->
 
 >[!NOTE]
 >
->如需Platform Edge Network的高階簡介，請參閱下列[互動式產品導覽](https://adobe-ideacloud.forgedx.com/adobe-adobe-edge-collection/adobe-experience-edge/public/mx?SUID=hgb1a48ICSCpbM6MzBYHbxnsh9DgjUy1)。
+>如需Platform Edge Network的概要介紹，請參閱以下內容 [互動產品導覽](https://adobe-ideacloud.forgedx.com/adobe-adobe-edge-collection/adobe-experience-edge/public/mx?SUID=hgb1a48ICSCpbM6MzBYHbxnsh9DgjUy1).
 
 ## 快速、安全地轉換、豐富和發送資料
 
-[Adobe Experience Platform中的事件轉](../tags/ui/event-forwarding/overview.md) 送功能可點選任何Platform資料流。您可以以極低的延遲轉換、擴充及傳送資料至任何非Adobe目的地，而無須將任何協力廠商代碼新增至用戶端裝置，提供更快速且安全的資料收集與發佈。
+[Adobe Experience Platform中的事件轉送](../tags/ui/event-forwarding/overview.md) 可點選任何Platform資料流。 您可以以極低的延遲轉換、擴充及傳送資料至任何非Adobe目的地，而無須將任何協力廠商代碼新增至用戶端裝置，提供更快速且安全的資料收集與發佈。
 
+<!-- (Outdated terminology)
 ![](./images/launch.png)
+-->
