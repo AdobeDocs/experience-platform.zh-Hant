@@ -2,22 +2,28 @@
 title: Adobe Experience Platform Web SDK擴充功能發行說明
 description: Adobe Experience Platform Web SDK標籤擴充功能
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: 07a280f906c5bcc69a0bffc529e1d1c8280f771a
+source-git-commit: e199553a2dcfd2d86d101f19d01e85556c90d05b
 workflow-type: tm+mt
-source-wordcount: '1192'
-ht-degree: 49%
+source-wordcount: '1244'
+ht-degree: 48%
 
 ---
 
 # Adobe Experience Platform Web SDK擴充功能發行說明
 
-本檔案涵蓋Adobe Experience Platform Web SDK標籤擴充功能的發行說明。 如需SDK本身的最新發行說明，請參閱[平台Web SDK發行說明](https://experienceleague.adobe.com/docs/experience-platform/edge/release-notes.html)。
+本檔案涵蓋Adobe Experience Platform Web SDK標籤擴充功能的發行說明。 如需SDK本身的最新發行說明，請參閱 [Platform Web SDK發行說明](https://experienceleague.adobe.com/docs/experience-platform/edge/release-notes.html).
+
+## 版本2.8.0 - 2021年10月26日
+
+包含 2.7.0 版的 Adobe Experience Platform Web SDK 程式庫。
+
+* 「傳送事件完成」事件中會提供來自Experience Edge的其他資訊，包括 `inferences` 和 `destinations`. 這些屬性的格式可能會有所變更，因為這些功能目前是測試版的一部分。 如需詳細資訊，請參閱 [追蹤事件。](../fundamentals/tracking-events.md)
 
 ## 版本2.7.3 - 2021年9月7日
 
 包含 2.6.4 版的 Adobe Experience Platform Web SDK 程式庫。
 
-* `container.buildInfo.environment.`不再有淘汰警告
+* 不再提供 `container.buildInfo.environment.`
 
 ## 版本2.7.0 - 2021年8月16日
 
@@ -50,7 +56,7 @@ ht-degree: 49%
 
 包含 2.5.0 版的 Adobe Experience Platform Web SDK 程式庫。
 
-* 將`data`欄位新增至「傳送事件」動作。 近期檔案將說明如何在特定情況下使用此功能。
+* 新增 `data` 欄位至「傳送事件」動作。 近期檔案將說明如何在特定情況下使用此功能。
 * 在「XDM物件」資料元素檢視中，若使用者有Adobe Experience Platform沙箱的存取權，但未存取設定為組織預設的沙箱，則會擲回錯誤，此問題已獲修正。
 * 在XDM物件資料元素檢視中，修正即使父物件不含任何值，必要架構欄位仍會視為無效的問題。
 
@@ -58,10 +64,10 @@ ht-degree: 49%
 
 包含 2.4.0 版的 Adobe Experience Platform Web SDK 程式庫。
 
-* 已新增[&quot;document unloading&quot;](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/tracking-events.html?lang=en#using-the-sendbeacon-api)核取方塊至「傳送事件」動作UI。
-* 新增[設定預設同意](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html#default-consent)時`out`選項的支援，該選項會在收到同意前捨棄所有事件（現有的`pending`選項會讓事件進入佇列，並在收到同意後傳送事件）。
+* 新增 [&quot;檔案卸載&quot;](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/tracking-events.html?lang=en#using-the-sendbeacon-api) 「傳送事件動作」UI的核取方塊。
+* 新增對 `out` 選項 [配置預設同意](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html#default-consent) 會捨棄所有事件，直到收到同意為止(現有 `pending` 選項會讓事件排入佇列，並在收到同意後傳送它們)。
 * 將工具提示新增至預設同意欄位。
-* 新增[Adobe同意2.0 standard](https://experienceleague.adobe.com/docs/experience-platform/edge/consent/supporting-consent.html?communicating-consent-preferences-via-the-adobe-standard)的支援。
+* 新增 [Adobe的同意2.0標準](https://experienceleague.adobe.com/docs/experience-platform/edge/consent/supporting-consent.html?communicating-consent-preferences-via-the-adobe-standard).
 * 如果使用者的存取權杖無效或布建不正確，XDM物件資料元素UI中現在會顯示更好的錯誤。
 * 修正檢視XDM物件資料元素時，瀏覽器開發人員主控台上顯示的跨原始錯誤（不影響擴充功能的操作）。
 
@@ -76,7 +82,7 @@ ht-degree: 49%
 ## 版本2.2.0 - 2020年10月1日
 
 * 客戶嘗試以沙盒結構描述建立 XDM 物件時，遇到驗證問題。呼叫Platform的API現在可感知環境，因此使用者只會看到他們有權編輯的結構描述。
-* 使用`identityMap`資料元素時，下拉式清單現在會預先填入命名空間，因此您不必手動填入。
+* 使用 `identityMap` 資料元素，現在會在下拉式清單中預先填入命名空間，因此您不必手動填入。
 * `xdmObject` 資料元素的 UI 已改版。在新的 UI 中，您可以看到哪些欄位已填入，不必在物件中輸入每個項目。
 
 ## 版本2.1.1 - 2020年8月26日
@@ -110,7 +116,7 @@ ht-degree: 49%
 * 修正每次參考資料元素時，「事件合併 ID」都會重設的問題。
 * 將 `setCustomerIds` 動作重新命名為 `syncIdentity`。
 * 新增 `getIdentity` 命令。目前僅能透過自訂程式碼使用。
-* 使用`_satellite`啟用除錯功能後，現在會在Adobe Experience Platform Web SDK中啟用除錯功能。
+* 使用啟用除錯 `_satellite` 現在會在Adobe Experience Platform Web SDK中啟用除錯。
 * 新增在 XDM 物件中輸入值的相關支援：布林值、數字和小數。
 
 ## 0.0.10版 — 2020年3月16日
