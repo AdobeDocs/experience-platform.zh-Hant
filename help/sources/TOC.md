@@ -4,10 +4,10 @@ user-guide-title: Adobe Experience Platform 來源連接器說明
 breadcrumb-title: 來源連接器指南
 user-guide-description: 從多種來源或結構擷取資料、加標籤，以及增強已擷取的資料。
 feature: Sources
-source-git-commit: f8cecdaaab3d98c7f6542b51dc764a019b04b0b1
+source-git-commit: 030789af0a049b54d6e271410836c08456a83441
 workflow-type: tm+mt
-source-wordcount: '651'
-ht-degree: 14%
+source-wordcount: '661'
+ht-degree: 13%
 
 ---
 
@@ -85,6 +85,7 @@ ht-degree: 14%
       - [PayPal連接器](connectors/payments/paypal.md)
    - 通訊協定 {#protocols}
       - [通用OData連接器](connectors/protocols/odata.md)
+      - [通用REST API連接器](connectors/protocols/generic-rest.md)
    - 串流 {#streaming}
       - [HTTP API連接器](connectors/streaming/http.md)
 - API教學課程 {#api-tutorials}
@@ -143,6 +144,7 @@ ht-degree: 14%
          - [PayPal](tutorials/api/create/payments/paypal.md)
       - 通訊協定 {#protocols}
          - [通用OData](tutorials/api/create/protocols/odata.md)
+         - [一般REST API](tutorials/api/create/protocols/generic-rest.md)
       - 串流 {#streaming}
          - [HTTP API](tutorials/api/create/streaming/http.md)
    - 探索資料 {#explore}
@@ -234,6 +236,7 @@ ht-degree: 14%
          - [PayPal](tutorials/ui/create/payments/paypal.md)
       - 通訊協定 {#protocols}
          - [通用OData](tutorials/ui/create/protocols/odata.md)
+         - [一般REST API](tutorials/ui/create/protocols/generic-rest.md)
       - 串流 {#streaming}
          - [HTTP API](tutorials/ui/create/streaming/http.md)
    - 配置資料流 {#dataflow}
