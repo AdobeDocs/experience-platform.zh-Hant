@@ -4,10 +4,10 @@ user-guide-title: Adobe Experience Platform 來源連接器說明
 breadcrumb-title: 來源連接器指南
 user-guide-description: 從多種來源或結構擷取資料、加標籤，以及增強已擷取的資料。
 feature: Sources
-source-git-commit: 21a536d80f854a9e98452c78a8014df4cc43e125
+source-git-commit: f8cecdaaab3d98c7f6542b51dc764a019b04b0b1
 workflow-type: tm+mt
-source-wordcount: '644'
-ht-degree: 12%
+source-wordcount: '651'
+ht-degree: 14%
 
 ---
 
@@ -40,7 +40,7 @@ ht-degree: 12%
       - [Azure Blob連接器](connectors/cloud-storage/blob.md)
       - [Azure事件集線器連接器](connectors/cloud-storage/eventhub.md)
       - [Azure檔案儲存連接器](connectors/cloud-storage/azure-file-storage.md)
-      - [資料登陸區](connectors/cloud-storage/data-landing-zone.md)
+      - [Data Landing Zone](connectors/cloud-storage/data-landing-zone.md)
       - [FTP連接器](connectors/cloud-storage/ftp.md)
       - [Google雲端儲存連接器](connectors/cloud-storage/google-cloud-storage.md)
       - [Google PubSub](connectors/cloud-storage/google-pubsub.md)
@@ -51,6 +51,7 @@ ht-degree: 12%
       - [Microsoft Dynamics 連接器](connectors/crm/ms-dynamics.md)
       - [Salesforce連接器](connectors/crm/salesforce.md)
       - [Veva CRM連接器](connectors/crm/veeva.md)
+      - [Zoho CRM連接器](connectors/crm/zoho.md)
    - 客戶成功 {#customer-success}
       - [Salesforce Service Cloud連接器](connectors/customer-success/salesforce-service-cloud.md)
       - [ServiceNow連接器](connectors/customer-success/servicenow.md)
@@ -108,6 +109,7 @@ ht-degree: 12%
          - [Microsoft Dynamics](tutorials/api/create/crm/ms-dynamics.md)
          - [Salesforce](tutorials/api/create/crm/salesforce.md)
          - [Veva CRM](tutorials/api/create/crm/veeva.md)
+         - [Zoho CRM](tutorials/api/create/crm/zoho.md)
       - 客戶成功 {#customer-success}
          - [Salesforce Service Cloud](tutorials/api/create/customer-success/salesforce-service-cloud.md)
          - [ServiceNow](tutorials/api/create/customer-success/servicenow.md)
@@ -198,6 +200,7 @@ ht-degree: 12%
          - [Microsoft Dynamics](tutorials/ui/create/crm/dynamics.md)
          - [Salesforce](tutorials/ui/create/crm/salesforce.md)
          - [Veva CRM](tutorials/ui/create/crm/veeva.md)
+         - [Zoho CRM](tutorials/ui/create/crm/zoho.md)
       - 客戶成功 {#customer-success}
          - [Salesforce Service Cloud](tutorials/ui/create/customer-success/salesforce-service-cloud.md)
          - [ServiceNow](tutorials/ui/create/customer-success/servicenow.md)
