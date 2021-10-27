@@ -5,9 +5,9 @@ title: Identity服務概述
 topic-legacy: overview
 description: Adobe Experience Platform Identity Service可協助您跨裝置和系統橋接身分，以便即時提供具影響力的個人數位體驗，進而更全面了解客戶及其行為。
 exl-id: a22dc3f0-3b7d-4060-af3f-fe4963b45f18
-source-git-commit: 5373b8fcd84cee749a85bdb755a23eb7292cf352
+source-git-commit: eb0fe2267416c5053cb589cc6d147324cc31c985
 workflow-type: tm+mt
-source-wordcount: '1792'
+source-wordcount: '1747'
 ht-degree: 0%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 0%
 
 Adobe Experience Platform Identity Service可跨裝置和系統橋接身分，提供客戶及其行為的全面檢視，讓您即時提供具影響力的個人數位體驗。
 
-使用[!DNL Identity Service]，您可以：
+使用 [!DNL Identity Service]，您可以：
 
 - 確保客戶透過每次互動獲得一致、個人化且相關的體驗。
 - 從不同的來源匯整數個不同的身分，並建立客戶的完整檢視。
@@ -26,14 +26,14 @@ Adobe Experience Platform Identity Service可跨裝置和系統橋接身分，�
 
 ## 快速入門
 
-在深入了解[!DNL Identity Service]的詳細資訊之前，以下是主要術語的簡要摘要：
+在了解 [!DNL Identity Service]，主要術語的摘要如下：
 
 | 詞語 | 定義 |
 | --- | --- |
 | 身分 | 身分是實體（通常為個人）專屬的資料。 身分識別（例如登入ID、ECID或忠誠度ID）也稱為「已知身分」。 |
-| ECID | Experience CloudID(ECID)是跨Experience Platform和Adobe Experience Cloud應用程式使用的共用身分命名空間。 ECID為客戶身分提供基礎，並作為裝置的主要ID，以及身分圖表的基節點。 如需詳細資訊，請參閱[ECID概述](./ecid.md) 。 |
-| 身分命名空間 | 身分命名空間可用來區分身分的內容或類型。 例如，身分識別會將「name<span>@email.com」區分為電子郵件地址，或將「443522」區分為數值CRM ID。 身分識別命名空間可用來尋找個別身分識別，並提供身分值的內容。 這可讓您判斷包含不同主要ID、但共用`email`身分命名空間相同值的兩個[!DNL Profile]片段，實際上是相同的個體。 如需詳細資訊，請參閱[身分命名空間概述](./namespaces.md) 。 |
-| 身分圖 | 身分圖表是不同身分之間關係的地圖，可讓您以視覺化方式呈現並更清楚了解哪些客戶身分識別會匯整在一起，以及匯整方式。 如需詳細資訊，請參閱關於[使用身分圖檢視器](./ui/identity-graph-viewer.md)的教學課程。 |
+| ECID | Experience CloudID(ECID)是跨Experience Platform和Adobe Experience Cloud應用程式使用的共用身分命名空間。 ECID為客戶身分提供基礎，並作為裝置的主要ID，以及身分圖表的基節點。 請參閱 [ECID概觀](./ecid.md) 以取得更多資訊。 |
+| 身分命名空間 | 身分命名空間可用來區分身分的內容或類型。 例如，身分會區分「name」<span>@email.com」作為電子郵件地址，或「443522」作為數值CRM ID。 身分識別命名空間可用來尋找個別身分識別，並提供身分值的內容。 這可讓您判斷 [!DNL Profile] 包含不同主要ID，但共用相同值的片段 `email` 身分命名空間實際上是同一個人。 請參閱 [身分命名空間概述](./namespaces.md) 以取得更多資訊。 |
+| 身分圖 | 身分圖表是不同身分之間關係的地圖，可讓您以視覺化方式呈現並更清楚了解哪些客戶身分識別會匯整在一起，以及匯整方式。 請參閱 [使用身分圖表檢視器](./ui/identity-graph-viewer.md) 以取得更多資訊。 |
 | 個人識別資訊(PII) | PII是可直接識別客戶的資訊，例如電子郵件地址或電話號碼。 PII值常用來比對。 不同系統間客戶的多重身分識別。 |
 | 未知或匿名身份 | 未知或匿名的身分是指示器，可隔離裝置，而不識別使用裝置的實際人員。 未知和匿名身分識別包含訪客的IP位址和Cookie ID等資訊。 雖然未知和匿名的身分可提供行為資料，但在客戶提供其PII前，這些身分資料有限。 |
 
@@ -47,16 +47,16 @@ Adobe Experience Platform Identity Service可跨裝置和系統橋接身分，�
 - 此時，Mary的活動會以兩個不同的設定檔顯示：
    - 她的電子商務登錄
    - 她的平板電腦，可能由裝置ID識別
-- Mary稍後會繼續其平板電腦工作階段，並在訂閱電子報時提供其電子郵件地址。 執行此動作時，串流擷取會在其設定檔中新增新身分，作為記錄資料。 因此，[!DNL Identity Service]現在會將Mary的平板電腦裝置活動與其電子商務帳戶記錄產生關聯。
+- Mary稍後會繼續其平板電腦工作階段，並在訂閱電子報時提供其電子郵件地址。 執行此動作時，串流擷取會在其設定檔中新增新身分，作為記錄資料。 因此， [!DNL Identity Service] 現在，Mary的平板電腦裝置活動與其電子商務帳戶記錄有關。
 - 在下次點按她的平板電腦時，您的目標內容可能會反映Mary的完整設定檔和歷史記錄，而不只是未知購物者使用的平板電腦。
 
 ![Platform上的身分識別匯整](./images/identity-service-stitching.png)
 
-基本上，[!DNL Identity Service]允許您將客戶的完整圖片拼湊在一起，聚合可能分散在不同系統中的相關資料。 [!DNL Identity Service]定義和維護的身分關係會由「即時客戶設定檔」運用，以建立客戶及其與您品牌互動的完整圖片。 如需詳細資訊，請參閱[即時客戶設定檔概述](../profile/home.md)。
+基本上， [!DNL Identity Service] 可讓您將客戶的完整圖片拼湊在一起，匯總可能分散在不同系統的相關資料。 具有 [!DNL Identity Service] 「即時客戶個人檔案」會運用定義和維護功能，建立客戶及其與您品牌互動的完整圖片。 如需詳細資訊，請參閱 [即時客戶個人檔案概觀](../profile/home.md).
 
 ### 使用案例
 
-[!DNL Identity Service]實作範例包括：
+範例 [!DNL Identity Service] 實施包括：
 
 - 電信公司可能依賴「電話號碼」值，在該值中，電話號碼會指離線和線上資料集中感興趣的同一個人。
 - 零售公司可能會在離線資料集中使用「電子郵件地址」，並線上上資料集中使用ECID，因為匿名訪客的百分比很高。
@@ -70,19 +70,19 @@ Adobe Experience Platform Identity Service可跨裝置和系統橋接身分，�
 
 您的客戶可能會透過線上和離線管道的組合與您的品牌互動，導致如何將這些分散的互動協調為單一客戶身分的難題。
 
-從在多個裝置和管道中識別客戶開始，即可了解客戶。 Platform使用身分識別命名空間來達到此目的。 身分命名空間是識別碼，例如電子郵件或電話，用來提供客戶身分識別的其他內容。 身分識別命名空間可用來尋找或連結個別身分識別，以及提供身分值的內容。 如需詳細資訊，請參閱[身分命名空間概述](./namespaces.md) 。
+從在多個裝置和管道中識別客戶開始，即可了解客戶。 Platform使用身分識別命名空間來達到此目的。 身分命名空間是識別碼，例如電子郵件或電話，用來提供客戶身分識別的其他內容。 身分識別命名空間可用來尋找或連結個別身分識別，以及提供身分值的內容。 請參閱 [身分命名空間概述](./namespaces.md) 以取得更多資訊。
 
 ## 身分圖
 
-身分圖表是不同身分識別命名空間之間關係的地圖，可讓您以視覺化方式呈現並更清楚了解將哪些客戶身分識別連結在一起，以及連結方式。 如需詳細資訊，請參閱關於[使用身分圖檢視器](./ui/identity-graph-viewer.md)的教學課程。
+身分圖表是不同身分識別命名空間之間關係的地圖，可讓您以視覺化方式呈現並更清楚了解將哪些客戶身分識別連結在一起，以及連結方式。 請參閱 [使用身分圖表檢視器](./ui/identity-graph-viewer.md) 以取得更多資訊。
 
-以下影片旨在支援您對身分和身分圖表的了解。 其中涵蓋身分收集、身分圖表和API的三項功能。 此外，也說明如何使用確定性和可能性演算法來建構私密身分圖，並討論其角色與協力廠商圖及Adobe Experience Platform Identity Service Co-Op Graph。
+以下影片旨在支援您對身分和身分圖表的了解。
 
 >[!VIDEO](https://video.tv.adobe.com/v/27841?quality=12&learn=on)
 
-## 向[!DNL Identity Service]提供身份資料
+## 提供身分資料給 [!DNL Identity Service]
 
-本節說明在[!DNL Identity Service]使用前，如何處理提供給Adobe Experience Platform的資料，以便為每個客戶建立身分圖表。
+本節說明在使用前，如何處理提供給Adobe Experience Platform的資料 [!DNL Identity Service] 為每個客戶建立身分圖。
 
 ### 決定身分欄位
 
@@ -94,53 +94,53 @@ Adobe Experience Platform Identity Service可跨裝置和系統橋接身分，�
 
 ### 建立其他身分識別命名空間
 
-雖然Experience Platform提供多種標準命名空間，但您可能需要建立其他命名空間，才能正確地為您的身分分類。 如需詳細資訊，請參閱身分命名空間概觀中的[檢視及建立組織的命名空間一節。](./namespaces.md)
+雖然Experience Platform提供多種標準命名空間，但您可能需要建立其他命名空間，才能正確地為您的身分分類。 如需詳細資訊，請參閱 [檢視和建立組織的命名空間](./namespaces.md) 在「身分命名空間」概述中。
 
 >[!NOTE]
 >
 >身分識別命名空間是身分識別的限定符。 因此，一旦建立了命名空間，就無法刪除它。
 
-### 在[!DNL Experience Data Model](XDM)中包含身分資料
+### 在中包含身分資料 [!DNL Experience Data Model] (XDM)
 
-[!DNL Platform]組織客戶資料的標準化架構[!DNL Experience Data Model](XDM)可讓資料在與[!DNL Platform]互動的Experience Platform和其他服務之間共用和理解。 如需詳細資訊，請參閱[XDM系統概述](../xdm/home.md)。
+作為標準化框架， [!DNL Platform] 組織客戶資料， [!DNL Experience Data Model] (XDM)可讓您在與互動的Experience Platform和其他服務之間共用及了解資料 [!DNL Platform]. 如需詳細資訊，請參閱 [XDM系統概觀](../xdm/home.md).
 
 記錄和時間序列結構都提供了包含身份資料的方法。 擷取資料時，如果發現來自不同命名空間的資料片段可共用共同身分資料，則身分圖表將建立這些片段之間的新關係。
 
 ### 將XDM欄位標示為身分
 
-架構中實作記錄或時間序列XDM類的任何類型`string`欄位都可標示為身分欄位。 因此，擷取至該欄位的所有資料都會視為身分資料。
+任何類型的欄位 `string` 在實作記錄或時間序列XDM類別的結構中，可以將標示為身分欄位。 因此，擷取至該欄位的所有資料都會視為身分資料。
 
 >[!NOTE]
 >
 >不支援陣列和映射類型欄位，不能標籤為標識欄位並標籤為標識欄位。
 
 如果身分欄位共用通用PII資料，也允許連結身分。
-例如，[!DNL Identity Service]通過將電話號碼欄位標籤為標識欄位，自動繪製與發現使用相同電話號碼的其他個人之間的關係圖。
+例如，通過將電話號碼欄位標籤為身份欄位， [!DNL Identity Service] 自動繪製與發現使用相同電話號碼的其他個人的關係圖。
 
 >[!NOTE]
 >
 >在標示欄位時，會提供產生身分的命名空間。
 
-### 為[!DNL Identity Service]配置資料集
+### 設定資料集 [!DNL Identity Service]
 
-在串流擷取程式期間， [!DNL Identity Service ]會自動從記錄和時間序列資料中擷取身分資料。 不過，在可以內嵌資料之前，必須先為[!DNL Identity Service]啟用。 如需詳細資訊，請參閱有關使用API](../profile/tutorials/dataset-configuration.md)為即時客戶設定檔與身分服務設定資料集的教學課程。[
+在串流擷取程式期間， [!DNL Identity Service ]從記錄和時間序列資料中自動提取身份資料。 不過，在可擷取資料之前，必須為 [!DNL Identity Service]. 請參閱  [使用API為即時客戶個人檔案和身分服務設定資料集](../profile/tutorials/dataset-configuration.md) 以取得更多資訊。
 
-### 將資料內嵌至[!DNL Identity Service]
+### 將資料內嵌至 [!DNL Identity Service]
 
-[!DNL Identity Service] 會透過批次內嵌或串流內嵌 [方式](../ingestion/batch-ingestion/overview.md) 取 [用傳送至Experience Platform](../ingestion/streaming-ingestion/overview.md)。
+[!DNL Identity Service] 使用發送到Experience Platform的XDM相容資料，由 [批次內嵌](../ingestion/batch-ingestion/overview.md) 或 [串流內嵌](../ingestion/streaming-ingestion/overview.md).
 
 以下影片旨在支援您對Identity Service的了解。 此影片會示範如何將資料欄位標示為身分、擷取身分資料，然後確認資料已送至Adobe Experience Platform Identity Service私人圖表。
 
 >[!WARNING]
 >
->以下影片中顯示的[!DNL Platform] UI已過期。 請參閱檔案，了解最新的UI螢幕擷取畫面和功能。
+>此 [!DNL Platform] 下列影片中顯示的UI已過期。 請參閱檔案，了解最新的UI螢幕擷取畫面和功能。
 
 >[!VIDEO](https://video.tv.adobe.com/v/28167?quality=12&learn=on)
 
 ## 資料控管
 
-Adobe Experience Platform的建置秉承隱私權，並包含資料控管架構，以保護客戶PII資料。 「電子郵件」或「電話」命名空間下的身分資料預設會加密，但為了確保敏感資料在持續保存前經過加密，資料使用標籤可在資料被擷取時或在[!DNL Platform]送達時套用至資料。 如需詳細資訊，請參閱[資料控管概述](../data-governance/home.md)。
+Adobe Experience Platform的建置秉承隱私權，並包含資料控管架構，以保護客戶PII資料。 「電子郵件」或「電話」命名空間下的身分資料預設會加密，但為了確保敏感資料在持續保存前經過加密，資料使用標籤可在資料擷取時或送達時套用至資料 [!DNL Platform]. 欲知更多資訊，請閱讀 [資料控管概觀](../data-governance/home.md).
 
 ## 後續步驟
 
-現在您已了解[!DNL Identity Service]的重要概念及其在Experience Platform中的角色，接下來可以開始了解如何使用[[!DNL Identity Service API]](./api/getting-started.md)使用您的身分圖。
+既然您了解 [!DNL Identity Service] 及其在Experience Platform中的角色，您可以開始了解如何使用您的身分圖表 [[!DNL Identity Service API]](./api/getting-started.md).
