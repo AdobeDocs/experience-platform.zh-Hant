@@ -4,20 +4,18 @@ solution: Experience Platform
 title: HTTP API來源連接器概述
 description: 了解如何建立串流連接器，以使用API或使用者介面與Adobe Experience Platform連線。
 exl-id: 41e079f3-75b2-4033-8138-73162c31461a
-source-git-commit: 6122a704aff23c3ac762563628859e141e7bfa45
+source-git-commit: 1127e85852b56cc9db3d1d0d483c1780c961b0bc
 workflow-type: tm+mt
-source-wordcount: '156'
+source-wordcount: '165'
 ht-degree: 0%
 
 ---
 
-# HTTP API連接器
-
->[!IMPORTANT]
->
->HTTP API來源的映射器函式目前僅支援API，不支援使用者介面。
+# [!DNL HTTP API] 連接器
 
 Adobe Experience Platform可讓您從外部來源擷取資料，同時使用來建構、加標籤及增強傳入資料 [!DNL Platform] 服務。 您可以從多種來源(如Adobe應用程式、雲儲存、資料庫等)內嵌資料。
+
+您可以使用 [!DNL HTTP API] 來將您的資料串流至Platform的來源連接器。 此 [!DNL HTTP API] 來源支援 [!DNL Data Prep] 功能，可讓您將任何不符合XDM的資料對應至符合XDM的資料集。
 
 以下檔案提供如何建立HTTP API串流連接器以連線的資訊 [!DNL Platform] 使用API或使用者介面：
 
