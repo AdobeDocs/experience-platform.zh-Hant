@@ -1,106 +1,105 @@
 ---
-keywords: Experience Platform; home；熱門主題；分段；分段；分段服務；流分段；流分段；連續評價；
+keywords: Experience Platform；首頁；熱門主題；分段；分段服務；串流分段；串流分段；持續評估；
 solution: Experience Platform
-title: '使用串流分段功能，即時評估事件 '
+title: '透過串流細分即時評估事件 '
 topic-legacy: developer guide
-description: 本檔案包含如何搭配Adobe Experience Platform分段服務API使用串流分段的範例。
+description: 本檔案包含如何搭配Adobe Experience Platform區段服務API使用串流區段的範例。
 exl-id: 119508bd-5b2e-44ce-8ebf-7aef196abd7a
-translation-type: tm+mt
-source-git-commit: b4a04b52ff9a2b7a36fda58d70a2286fea600ff1
+source-git-commit: bb5a56557ce162395511ca9a3a2b98726ce6c190
 workflow-type: tm+mt
-source-wordcount: '1389'
+source-wordcount: '1411'
 ht-degree: 1%
 
 ---
 
-# 使用串流分段功能，即時評估事件
+# 透過串流細分以近乎即時的方式評估事件
 
 >[!NOTE]
 >
->下列檔案說明如何使用API使用串流分段。 有關使用UI使用串流分段的資訊，請閱讀[串流分段UI指南](../ui/streaming-segmentation.md)。
+>下列檔案說明如何使用API使用串流分段。 如需使用UI使用串流分段的詳細資訊，請參閱 [串流劃分UI指南](../ui/streaming-segmentation.md).
 
-[!DNL Adobe Experience Platform]上的串流分段可讓客戶近乎即時地進行分段，同時專注於資料的豐富性。 透過串流分段，現在當串流資料進入[!DNL Platform]時，會進行分段資格設定，以減輕排程和執行分段工作的需求。 有了這項功能，現在可評估大部分區段規則，因為資料會傳入[!DNL Platform]，這表示區段成員資格會保持最新，而不會執行排程的區段工作。
+在 [!DNL Adobe Experience Platform] 可讓客戶以近乎即時的方式執行細分，同時專注於資料豐富性。 透過串流細分，區段資格現在會在串流資料進入 [!DNL Platform]，可緩解排程及執行分段作業的需求。 透過此功能，現在當資料傳入時，即可評估大部分的區段規則 [!DNL Platform]，這表示區段成員資格會保持最新，而不會執行已排程的分段工作。
 
 ![](../images/api/streaming-segment-evaluation.png)
 
 >[!NOTE]
 >
->串流區段只能用來評估串流至Platform的資料。 換言之，透過批次擷取所擷取的資料不會透過串流分段來評估，而且會與每夜排程的分段工作一起評估。
+>串流區段只能用來評估串流至Platform的資料。 換言之，透過批次內嵌擷取擷取的資料將不會透過串流分段評估，而會與夜間排程的分段工作一起評估。
 
 ## 快速入門
 
-本開發人員指南要求您對串流區段相關的各種[!DNL Adobe Experience Platform]服務有正確的瞭解。 在開始本教學課程之前，請先閱讀下列服務的檔案：
+本開發人員指南需要妥善了解 [!DNL Adobe Experience Platform] 與串流細分相關的服務。 開始本教學課程之前，請先檢閱下列服務的檔案：
 
-- [[!DNL Real-time Customer Profile]](../../profile/home.md):根據來自多個來源的匯總資料，即時提供統一的消費者個人檔案。
-- [[!DNL Segmentation]](../home.md):提供從資料建立區段和觀眾的 [!DNL Real-time Customer Profile] 能力。
-- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md):組織客戶體驗資 [!DNL Platform] 料的標準化架構。
+- [[!DNL Real-time Customer Profile]](../../profile/home.md):根據來自多個來源的匯總資料，即時提供統一的消費者設定檔。
+- [[!DNL Segmentation]](../home.md):提供從 [!DNL Real-time Customer Profile] 資料。
+- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md):標準化框架 [!DNL Platform] 組織客戶體驗資料。
 
-以下各節提供您必須知道的其他資訊，以便成功呼叫[!DNL Platform] API。
+以下小節提供您需要知道的其他資訊，以便成功對 [!DNL Platform] API。
 
 ### 讀取範例API呼叫
 
-本開發人員指南提供範例API呼叫，以示範如何格式化您的請求。 這些包括路徑、必要標題和正確格式化的請求負載。 也提供API回應中傳回的範例JSON。 如需範例API呼叫檔案中所用慣例的詳細資訊，請參閱[!DNL Experience Platform]疑難排解指南中[如何讀取範例API呼叫](../../landing/troubleshooting.md#how-do-i-format-an-api-request)一節。
+本開發人員指南提供範例API呼叫，以示範如何格式化您的請求。 這些功能包括路徑、必要標題和格式正確的請求裝載。 也提供API回應中傳回的範例JSON。 如需範例API呼叫檔案中所使用慣例的相關資訊，請參閱 [如何閱讀API呼叫範例](../../landing/troubleshooting.md#how-do-i-format-an-api-request) 在 [!DNL Experience Platform] 疑難排解指南。
 
 ### 收集必要標題的值
 
-若要呼叫[!DNL Platform] API，您必須先完成[驗證教學課程](https://www.adobe.com/go/platform-api-authentication-en)。 完成驗證教學課程後，所有[!DNL Experience Platform] API呼叫中每個所需標題的值都會顯示在下面：
+若要對 [!DNL Platform] API，您必須先完成 [驗證教學課程](https://www.adobe.com/go/platform-api-authentication-en). 完成驗證教學課程會提供所有 [!DNL Experience Platform] API呼叫，如下所示：
 
-- 授權：載體`{ACCESS_TOKEN}`
-- x-api-key:`{API_KEY}`
-- x-gw-ims-org-id:`{IMS_ORG}`
+- 授權：承載 `{ACCESS_TOKEN}`
+- x-api-key: `{API_KEY}`
+- x-gw-ims-org-id: `{IMS_ORG}`
 
-[!DNL Experience Platform]中的所有資源都隔離到特定的虛擬沙盒。 對[!DNL Platform] API的所有請求都需要一個標題，該標題指定要在中執行操作的沙盒的名稱：
+中的所有資源 [!DNL Experience Platform] 與特定虛擬沙箱隔離。 所有請求 [!DNL Platform] API需要標頭，以指定要在中執行操作的沙箱名稱：
 
-- x-sandbox-name:`{SANDBOX_NAME}`
+- x-sandbox-name: `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
->如需[!DNL Platform]中沙盒的詳細資訊，請參閱[沙盒概述檔案](../../sandboxes/home.md)。
+>如需中沙箱的詳細資訊，請參閱 [!DNL Platform]，請參閱 [沙箱概述檔案](../../sandboxes/home.md).
 
 所有包含裝載(POST、PUT、PATCH)的請求都需要額外的標題：
 
 - 內容類型：application/json
 
-完成特定要求可能需要額外的標題。 本檔案的每個範例都會顯示正確的標題。 請特別注意範例要求，以確保包含所有必要的標題。
+完成特定請求可能需要其他標題。 本檔案的每個範例都會顯示正確的標題。 請特別注意範例要求，以確保納入所有必要的標題。
 
-### 啟用串流分段的查詢類型{#streaming-segmentation-query-types}
+### 啟用串流分段的查詢類型 {#streaming-segmentation-query-types}
 
 >[!NOTE]
 >
->您需要為組織啟用排程的分段，才能使串流分段正常運作。 有關啟用計劃分段的資訊，請參閱[啟用計劃分段區段](#enable-scheduled-segmentation)
+>您需要為組織啟用排程的分段，才能讓串流分段運作。 如需啟用排程分段的相關資訊，請參閱 [啟用排程分段區段](#enable-scheduled-segmentation)
 
-若要使用串流分段來評估區段，查詢必須符合下列准則。
+為了使用串流分段來評估區段，查詢必須符合下列准則。
 
-| 查詢類型 | 詳細資料 |
+| 查詢類型 | 詳細資訊 |
 | ---------- | ------- |
-| 傳入點擊 | 任何區段定義，是指沒有時間限制的單一傳入事件。 |
-| 在相對時間視窗內傳入點擊 | 任何參照單一傳入事件的區段定義。 |
-| 含時間視窗的傳入點擊 | 任何區段定義，是指具有時間視窗的單一傳入事件。 |
-| 僅限描述檔 | 任何僅指描述檔屬性的區段定義。 |
-| 參照描述檔的傳入點擊 | 任何區段定義，是指單一傳入事件（無時間限制）以及一或多個描述檔屬性。 |
-| 在相對時間視窗內參照描述檔的傳入點擊 | 任何區段定義，指單一傳入事件和一或多個描述檔屬性。 |
-| 區段 | 包含一或多個批次或串流區段的任何區段定義。 **注意：如** 果使用區段，則每24小時就會發生描述 **檔取消資格**。 |
-| 參考描述檔的多個事件 | 在過去24小時內參照多個事件&#x200B;**且（可選）的區段定義具有一個或多個描述檔屬性。** |
+| 單一事件 | 任何區段定義，是指沒有時間限制的單一傳入事件。 |
+| 相對時間範圍內的單一事件 | 任何指單一傳入事件的區段定義。 |
+| 具有時間窗口的單個事件 | 任何區段定義，指的是具有時間視窗的單一傳入事件。 |
+| 僅限設定檔 | 只參考設定檔屬性的任何區段定義。 |
+| 具有設定檔屬性的單一事件 | 任何區段定義，是指沒有時間限制的單一傳入事件，以及一或多個設定檔屬性。 **注意：** 事件發生時會立即評估查詢。 但是，若是設定檔事件，則必須等待24小時才能納入。 |
+| 相對時間窗口內具有配置檔案屬性的單個事件 | 任何區段定義，指的是單一傳入事件和一或多個設定檔屬性。 |
+| 區段 | 包含一或多個批次或串流區段的任何區段定義。 **注意：** 如果使用區段，將會發生設定檔取消資格 **每24小時**. |
+| 具有設定檔屬性的多個事件 | 任何參照多個事件的區段定義 **過去24小時內** 和（可選）有一或多個設定檔屬性。 |
 
-在下列情況下，區段定義將&#x200B;**not**&#x200B;啟用串流區段：
+區段定義將 **not** 可在下列情況下啟用串流分段：
 
 - 區段定義包含Adobe Audience Manager(AAM)區段或特徵。
 - 區段定義包括多個實體（多實體查詢）。
 
-此外，執行串流區段時，也會套用一些准則：
+此外，執行串流細分時也會套用一些准則：
 
-| 查詢類型 | 准則 |
+| 查詢類型 | 指引 |
 | ---------- | -------- |
-| 單一事件查詢 | 回顧視窗沒有限制。 |
-| 具有事件歷史記錄的查詢 | <ul><li>回顧視窗限制為&#x200B;**一天**。</li><li>事件之間存在嚴格的時間順序條件&#x200B;**必須**。</li><li>支援具有至少一個否定事件的查詢。 但是，整個事件&#x200B;**cannot**&#x200B;是否定。</li></ul> |
+| 單一事件查詢 | 回顧期間沒有限制。 |
+| 具有事件歷史記錄的查詢 | <ul><li>回顧期間限制為 **一天**.</li><li>嚴格的時間排序條件 **必須** 存在於事件之間。</li><li>支援具有至少一個否定事件的查詢。 不過，整個事件 **不能** 是否定。</li></ul> |
 
-## 擷取所有啟用串流區段的區段
+## 擷取為串流細分啟用的所有區段
 
-您可以向`/segment/definitions`端點提出GET請求，以擷取IMS組織內啟用串流分段的所有區段清單。
+您可以向 `/segment/definitions` 端點。
 
 **API格式**
 
-若要擷取啟用串流的區段，您必須在請求路徑中包含查詢參數`evaluationInfo.continuous.enabled=true`。
+若要擷取啟用串流的區段，您必須包含查詢參數 `evaluationInfo.continuous.enabled=true` 在請求路徑中。
 
 ```http
 GET /segment/definitions?evaluationInfo.continuous.enabled=true
@@ -120,7 +119,7 @@ curl -X GET \
 
 **回應**
 
-成功的回應會傳回IMS組織中已啟用串流分段的區段陣列。
+成功的回應會傳回IMS組織中已啟用串流細分的區段陣列。
 
 ```json
 {
@@ -207,9 +206,9 @@ curl -X GET \
 }
 ```
 
-## 建立可串流化的區段
+## 建立啟用串流的區段
 
-如果區段符合上方所列的[串流區段類型之一，則會自動啟用串流。](#streaming-segmentation-query-types)
+如果區段符合下列其中一個 [上列的串流區段類型](#streaming-segmentation-query-types).
 
 **API格式**
 
@@ -244,11 +243,11 @@ curl -X POST \
 
 >[!NOTE]
 >
->這是標準的「建立區段」請求。 如需建立區段定義的詳細資訊，請閱讀有關建立區段[的教學課程。](../tutorials/create-a-segment.md)
+>這是標準的「建立區段」請求。 如需建立區段定義的詳細資訊，請參閱 [建立區段](../tutorials/create-a-segment.md).
 
 **回應**
 
-成功的回應會傳回新建立的啟用串流的區段定義詳細資料。
+成功的回應會傳回新建立、啟用串流的區段定義詳細資訊。
 
 ```json
 {
@@ -288,17 +287,17 @@ curl -X POST \
 }
 ```
 
-## 啟用計畫評估{#enable-scheduled-segmentation}
+## 啟用計畫評估 {#enable-scheduled-segmentation}
 
-在啟用串流評估後，必須建立基準（在此之後區段將永遠是最新的）。 必須先啟用計畫評估（也稱為計劃分段），系統才能自動執行基線。 透過排程的分段，您的IMS組織可以遵循循環排程，自動執行匯出工作以評估區段。
+啟用串流評估後，必須建立基線（在基線後區段一律為最新狀態）。 必須先啟用計畫評估（也稱為計劃分段），系統才能自動執行基線設定。 透過已排程的細分，您的IMS組織可以遵循循環排程，自動執行匯出工作以評估區段。
 
 >[!NOTE]
 >
->對於[!DNL XDM Individual Profile]最多可啟用五(5)個合併策略的沙盒，可啟用計畫評估。 如果您的組織在單一沙盒環境中有超過5個[!DNL XDM Individual Profile]的合併原則，您將無法使用排程的評估。
+>可針對最多五(5)個合併原則的沙箱啟用排程評估 [!DNL XDM Individual Profile]. 如果貴組織有五個以上的合併政策 [!DNL XDM Individual Profile] 在單一沙箱環境中，您將無法使用排程的評估。
 
 ### 建立排程
 
-通過向`/config/schedules`端點發出POST請求，可以建立一個調度並包括應觸發該調度的特定時間。
+向 `/config/schedules` 端點，您可以建立排程，並包含應觸發排程的特定時間。
 
 **API格式**
 
@@ -308,7 +307,7 @@ POST /config/schedules
 
 **要求**
 
-以下請求會根據裝載中提供的規格建立新的排程。
+下列要求會根據裝載中提供的規格，建立新排程。
 
 ```shell
 curl -X POST \
@@ -331,16 +330,16 @@ curl -X POST \
 
 | 屬性 | 說明 |
 | -------- | ----------- |
-| `name` | **（必要）** 排程的名稱。必須是字串。 |
-| `type` | **（必要）字** 串格式的作業類型。支援的類型有`batch_segmentation`和`export`。 |
-| `properties` | **（必要）包** 含與計畫相關的其他屬性的物件。 |
-| `properties.segments` | **(等於時需 `type` 要) `batch_segmentation`使** 用 `["*"]` 可確保包含所有區段。 |
-| `schedule` | **（必要）包** 含工作排程的字串。作業只能排程為每天執行一次，這表示您無法排程作業在24小時期間執行多次。 顯示的示例(`0 0 1 * * ?`)表示每天在1:00:00 UTC觸發作業。 如需詳細資訊，請參閱[cron運算式格式](http://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html)檔案。 |
-| `state` | *（選用）包* 含排程狀態的字串。可用值：`active`和`inactive`。 預設值為 `inactive`。IMS組織只能建立一個排程。 本教學課程稍後將提供更新排程的步驟。 |
+| `name` | **（必要）** 排程的名稱。 必須是字串。 |
+| `type` | **（必要）** 字串格式的作業類型。 支援的類型包括 `batch_segmentation` 和 `export`. |
+| `properties` | **（必要）** 包含與排程相關的其他屬性的物件。 |
+| `properties.segments` | **(必要時 `type` 等於 `batch_segmentation`)** 使用 `["*"]` 確保包含所有區段。 |
+| `schedule` | **（必要）** 包含作業計畫的字串。 作業只能排程為每天執行一次，這表示您無法排程作業在24小時期間執行多次。 顯示的範例(`0 0 1 * * ?`)表示每天1時觸發工作:00:00 UTC。 如需詳細資訊，請檢閱 [cron運算式格式](http://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html) 檔案。 |
+| `state` | *（可選）* 包含排程狀態的字串。 可用值： `active` 和 `inactive`. 預設值為 `inactive`。IMS組織只能建立一個排程。 更新排程的步驟將在本教學課程的稍後部分提供。 |
 
 **回應**
 
-成功的回應會傳回新建立之排程的詳細資料。
+成功的回應會傳回新建立之排程的詳細資訊。
 
 ```json
 {
@@ -368,7 +367,7 @@ curl -X POST \
 
 ### 啟用排程
 
-預設情況下，建立計畫時將處於非活動狀態，除非在建立(POST)請求主體中將`state`屬性設定為`active`。 通過向`/config/schedules`端點發出PATCH請求並在路徑中包括調度的ID，可以啟用調度（將`state`設定為`active`）。
+依預設，排程在建立時非作用中，除非 `state` 屬性設為 `active` 在建立(POST)請求內文中。 您可以啟用排程(設定 `state` to `active`)，向 `/config/schedules` 端點，並在路徑中納入排程的ID。
 
 **API格式**
 
@@ -378,7 +377,7 @@ POST /config/schedules/{SCHEDULE_ID}
 
 **要求**
 
-以下請求使用[JSON修補程式格式](http://jsonpatch.com/)，以便將排程的`state`更新為`active`。
+下列要求使用 [JSON修補程式格式](http://jsonpatch.com/) 以便更新 `state` 的 `active`.
 
 ```shell
 curl -X POST \
@@ -399,12 +398,12 @@ curl -X POST \
 
 **回應**
 
-成功的更新會傳回空回應主體和HTTP狀態204（無內容）。
+成功更新會傳回空的回應內文和HTTP狀態204（無內容）。
 
-使用相同的操作可以禁用調度，方法是將上一個請求中的&quot;value&quot;替換為&quot;inactive&quot;。
+同一個操作可用來停用排程，方法是將先前請求中的「值」取代為「非作用中」。
 
 ## 後續步驟
 
-現在您已啟用新區段和現有區段的串流區段，並啟用排程區段以建立基準並執行循環評估，您就可以開始為組織建立可串流化的區段。
+現在您已針對串流細分啟用新區段和現有區段，並啟用排程分段以建立基線並執行循環評估，您可以開始為組織建立已啟用串流的區段。
 
-若要瞭解如何使用Adobe Experience Platform使用者介面執行類似動作及使用區段，請造訪[區段產生器使用指南](../ui/segment-builder.md)。
+若要了解如何使用Adobe Experience Platform使用者介面執行類似動作及使用區段，請造訪 [區段產生器使用手冊](../ui/segment-builder.md).
