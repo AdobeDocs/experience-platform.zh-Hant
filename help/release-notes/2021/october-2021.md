@@ -1,10 +1,10 @@
 ---
 title: Adobe Experience Platform 發行說明
 description: Adobe Experience Platform的最新發行說明。
-source-git-commit: 0c507a26f551af1eb17889e8e77a036e3c106240
+source-git-commit: 231ce8405a752bd3e7e4ae590bb6aaf98fc6527b
 workflow-type: tm+mt
-source-wordcount: '235'
-ht-degree: 10%
+source-wordcount: '315'
+ht-degree: 9%
 
 ---
 
@@ -14,7 +14,21 @@ ht-degree: 10%
 
 Adobe Experience Platform 現有功能更新：
 
+- [[!DNL Data Prep]](#data-prep)
 - [來源](#sources)
+
+## [!DNL Data Prep] {#data-prep}
+
+[!DNL Data Prep] 可讓資料工程師將資料對應、轉換及驗證至Experience Data Model(XDM)。
+
+**更新功能**
+
+| 功能 | 說明 |
+| --- | --- |
+| `contains_key` 函數 | 此 `contains_key` 函式，可讓您檢查物件是否存在於來源中。 此函式會取代 `is_set` 函式，現已過時。 |
+| 錯誤訊息 | 由 `/mappingSets/preview` 資料準備API中的端點現在與執行階段產生的錯誤訊息一致。 |
+
+請參閱 [[!DNL Data Prep] 概述](../../data-prep/home.md) 以進一步了解此服務。
 
 ## 來源 {#sources}
 
