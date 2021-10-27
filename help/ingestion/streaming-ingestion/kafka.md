@@ -1,25 +1,28 @@
 ---
-keywords: Experience Platform; home；熱門話題； kafka; kafka連接器；
+keywords: Experience Platform；首頁；熱門主題；kafka;kafka連接器；Kafka;
 solution: Experience Platform
 title: Kafka Connector
 topic-legacy: overview
-description: Adobe Experience Platform的串流連接器是以Apache Kafka Connect為基礎。 此程式庫可用來將JSON事件從您資料中心的Kafka主題即時串流至Experience Platform。
+description: Adobe Experience Platform的串流連接器以Apache Kafka Connect為基礎。 此程式庫可用來將JSON事件從資料中心的Kafka主題直接串流至即時Experience Platform。
 exl-id: 062963e5-c727-4c2c-97db-8a9a5a7d903c
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 5a3aa74ca7319235c10902422abc0e897ad823b8
 workflow-type: tm+mt
-source-wordcount: '188'
+source-wordcount: '216'
 ht-degree: 0%
 
 ---
 
-# [!DNL Kafka] Adobe Experience Platform連接器
+# [!DNL Kafka] Adobe Experience Platform的連接器（已過時）
 
-Adobe Experience Platform的流連接器基於[!DNL Apache Kafka Connect]。 此程式庫可用來將資料中心的[!DNL Kafka]主題的JSON事件即時串流至[!DNL Experience Platform]。
+>[!IMPORTANT]
+>
+>Kafka連接器已淘汰。 若要建立串流連線並將資料帶入Adobe Experience Platform，請參閱 [建立HTTP API串流連線](../../sources/connectors/streaming/http.md)
 
-串流連接器是匯入器（單向）連接器，將資料從[!DNL Kafka]主題傳送至[!DNL Experience Platform]上的註冊端點。 若要使用此連接器，您必須下載程式庫，將其新增至您現有的[!DNL Kafka]部署，並將[!DNL Kafka]主題設定至Adobe串流HTTP URL。 其他代碼為&#x200B;**not**。 連接器支援以下功能：
+Adobe Experience Platform的資料流連接器以 [!DNL Apache Kafka Connect]. 此程式庫可用來串流JSON事件，從 [!DNL Kafka] 資料中心的主題直接 [!DNL Experience Platform] 即時。
 
-- 已驗證的資料收集
-- 對消息進行批次處理以減少網路呼叫並提高吞吐量
+流連接器是匯流器（單向）連接器，用於從 [!DNL Kafka] 主題到的註冊端點 [!DNL Experience Platform]. 若要使用此連接器，您必須下載程式庫，並將其新增至現有的 [!DNL Kafka] 部署，並配置 [!DNL Kafka] 主題至Adobe串流HTTP URL。 其他程式碼為 **not** 必填。 連接器支援下列功能：
 
-有關[!DNL Kafka]連接器的詳細資訊，包括如何設定連接器的說明，請閱讀[入門指南](https://github.com/adobe/experience-platform-streaming-connect)。 有關更詳細的工作流程，請閱讀[開發人員指南](https://www.adobe.com/go/kafka-connector-developer-guide)。
+- 已驗證的資料集合
+- 對報文進行批次處理，以減少網路呼叫並提高吞吐量
+
+如需 [!DNL Kafka] 連接器，包括如何設定連接器的說明，請閱讀 [快速入門手冊](https://github.com/adobe/experience-platform-streaming-connect). 如需更詳細的工作流程，請參閱 [開發人員指南](https://www.adobe.com/go/kafka-connector-developer-guide).
