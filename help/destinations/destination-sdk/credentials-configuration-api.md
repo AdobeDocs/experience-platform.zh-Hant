@@ -1,7 +1,8 @@
 ---
 description: 本頁面說明您可以使用「/authoring/credentials」 API端點執行的所有API操作。
 title: 憑證端點API操作
-source-git-commit: 19307fba8f722babe5b6d57e80735ffde00fc851
+exl-id: 89957f38-e7f4-452d-abc0-0940472103fe
+source-git-commit: 0bd57e226155ee68758466146b5d873dc4fdca29
 workflow-type: tm+mt
 source-wordcount: '730'
 ht-degree: 4%
@@ -12,17 +13,17 @@ ht-degree: 4%
 
 >[!IMPORTANT]
 >
->**API端點**:  `platform.adobe.io/data/core/activation/authoring/credentials`
+>**API端點**: `platform.adobe.io/data/core/activation/authoring/credentials`
 
-本頁列出並說明了所有可使用`/authoring/credentials` API端點執行的API操作。
+此頁面列出並說明您可使用 `/authoring/credentials` API端點。
 
-## 何時使用`/credentials` API端點 {#when-to-use}
+## 何時使用 `/credentials` API端點 {#when-to-use}
 
 >[!IMPORTANT]
 >
->在大多數情況下，您&#x200B;*不*&#x200B;需要使用`/credentials` API端點。 反之，您可以透過`/destinations`端點的`customerAuthenticationConfigurations`參數來設定目的地的驗證資訊。 如需詳細資訊，請參閱[憑據配置](./credentials-configuration.md)。
+>在大多數情況下，您 *不* 需要使用 `/credentials` API端點。 反之，您可以透過 `customerAuthenticationConfigurations` 參數 `/destinations` 端點。 閱讀 [驗證配置](./authentication-configuration.md#when-to-use) 以取得更多資訊。
 
-如果Adobe與目的地之間有全域驗證系統，且[!DNL Platform]客戶不需要提供任何驗證憑證來連線至您的目的地，請使用此API端點，並在[目的地設定](./destination-configuration.md#destination-delivery)中選取`PLATFORM_AUTHENTICATION`。 在此情況下，您必須使用`/credentials` API端點建立憑證物件。
+使用此API端點並選取 `PLATFORM_AUTHENTICATION` 在 [目的地配置](./destination-configuration.md#destination-delivery) 如果Adobe與目的地之間有全域驗證系統，則 [!DNL Platform] 客戶不需要提供任何驗證憑證來連線至您的目的地。 在此情況下，您必須使用 `/credentials` API端點。
 
 <!--
 
@@ -145,11 +146,11 @@ The sections below list out the necessary parameters for each authentication typ
 
 ## 憑證設定API操作快速入門 {#get-started}
 
-繼續之前，請檢閱[快速入門手冊](./getting-started.md)，以取得成功呼叫API所需的重要資訊，包括如何取得必要的目的地編寫權限和必要的標題。
+繼續之前，請檢閱 [快速入門手冊](./getting-started.md) 若要成功呼叫API，需知的重要資訊，包括如何取得必要的目的地編寫權限和必要的標題。
 
 ## 建立憑據配置 {#create}
 
-您可以向`/authoring/credentials`端點發出POST請求，以建立新的憑據配置。
+您可以向發出POST要求，以建立新憑證設定 `/authoring/credentials` 端點。
 
 **API格式**
 
@@ -160,7 +161,7 @@ POST /authoring/credentials
 
 **要求**
 
-下列請求會建立新的憑證設定，由裝載中提供的參數所設定。 以下裝載包含`/authoring/credentials`端點接受的所有參數。 請注意，您不必在呼叫上新增所有參數，且可根據您的API需求自訂範本。
+下列請求會建立新的憑證設定，由裝載中提供的參數所設定。 以下裝載包含接受的所有參數 `/authoring/credentials` 端點。 請注意，您不必在呼叫上新增所有參數，且可根據您的API需求自訂範本。
 
 ```shell
 curl -X POST https://platform.adobe.io/data/core/activation/authoring/credentials \
@@ -225,7 +226,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/credential
 
 ## 列出憑據配置 {#retrieve-list}
 
-您可以向`/authoring/credentials`端點提出GET要求，以擷取IMS組織的所有憑證設定清單。
+您可以向提出GET要求，以擷取IMS組織的所有認證設定清單 `/authoring/credentials` 端點。
 
 **API格式**
 
@@ -248,7 +249,7 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/credentials
 
 **回應**
 
-下列回應會根據您使用的IMS組織ID和沙箱名稱，傳回HTTP狀態200，並列出您有權存取的憑證設定。 一個`instanceId`對應於一個憑據配置的模板。 回應會為簡潔而截斷。
+下列回應會根據您使用的IMS組織ID和沙箱名稱，傳回HTTP狀態200，並列出您有權存取的憑證設定。 一 `instanceId` 與一個憑據配置的模板相對應。 回應會為簡潔而截斷。
 
 ```json
 {
@@ -275,7 +276,7 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/credentials
 
 ## 更新現有憑據配置 {#update}
 
-通過向`/authoring/credentials`端點發出PUT請求並提供要更新的憑據配置的實例ID，可以更新現有憑據配置。 在呼叫內文中，提供更新的憑證設定。
+您可以向發出PUT要求，以更新現有的憑證設定 `/authoring/credentials` 端點，並提供您要更新之憑證設定的執行個體ID。 在呼叫內文中，提供更新的憑證設定。
 
 **API格式**
 
@@ -323,7 +324,7 @@ curl -X PUT https://platform.adobe.io/data/core/activation/authoring/credentials
 
 ## 檢索特定憑據配置 {#get}
 
-通過向`/authoring/credentials`端點發出GET請求並提供要更新的憑據配置的實例ID，可以檢索有關特定憑據配置的詳細資訊。
+您可以向提出GET要求，以擷取特定憑證設定的詳細資訊 `/authoring/credentials` 端點，並提供您要更新之憑證設定的執行個體ID。
 
 **API格式**
 
@@ -371,7 +372,7 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/credentials
 
 ## 刪除特定憑據配置 {#delete}
 
-通過向`/authoring/credentials`端點發出DELETE請求並在請求路徑中提供要刪除的憑據配置的ID，可以刪除指定的憑據配置。
+您可以向發出DELETE要求，以刪除指定的憑證設定 `/authoring/credentials` 端點，並提供您要在請求路徑中刪除之憑證設定的ID。
 
 **API格式**
 
@@ -381,7 +382,7 @@ DELETE /authoring/credentials/{INSTANCE_ID}
 
 | 參數 | 說明 |
 | --------- | ----------- |
-| `{INSTANCE_ID}` | 要刪除的憑據配置的`id`。 |
+| `{INSTANCE_ID}` | 此 `id` 刪除的憑據配置。 |
 
 **要求**
 
@@ -399,8 +400,8 @@ curl -X DELETE https://platform.adobe.io/data/core/activation/authoring/credenti
 
 ## API錯誤處理
 
-目標SDK API端點會遵循一般Experience PlatformAPI錯誤訊息原則。 請參閱平台疑難排解指南中的[API狀態代碼](https://experienceleague.adobe.com/docs/experience-platform/landing/troubleshooting.html?lang=en#api-status-codes)和[要求標題錯誤](https://experienceleague.adobe.com/docs/experience-platform/landing/troubleshooting.html?lang=en#request-header-errors)。
+目標SDK API端點會遵循一般Experience PlatformAPI錯誤訊息原則。 請參閱 [API狀態代碼](https://experienceleague.adobe.com/docs/experience-platform/landing/troubleshooting.html?lang=en#api-status-codes) 和 [請求標題錯誤](https://experienceleague.adobe.com/docs/experience-platform/landing/troubleshooting.html?lang=en#request-header-errors) （位於平台疑難排解指南中）。
 
 ## 後續步驟
 
-閱讀本檔案後，您現在知道何時使用憑證端點，以及如何使用`/authoring/credentials` API端點或`/authoring/destinations`端點設定憑證設定。 請參閱[如何使用目標SDK來設定目標](./configure-destination-instructions.md) ，了解此步驟在設定目標程式中的適用位置。
+閱讀本檔案後，您現在知道何時應使用憑證端點，以及如何使用 `/authoring/credentials` API端點或 `/authoring/destinations` 端點。 閱讀 [如何使用目的地SDK來設定您的目的地](./configure-destination-instructions.md) 了解此步驟在設定目的地程式中的適用位置。

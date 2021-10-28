@@ -1,28 +1,29 @@
 ---
 description: 本頁說明如何驗證及開始使用Adobe Experience Platform Destination SDK。 其中包含如何取得Adobe I/O驗證憑證、沙箱名稱及目的地編寫存取控制權限的指示。
 title: 目標SDK快速入門
-source-git-commit: 19307fba8f722babe5b6d57e80735ffde00fc851
+exl-id: f22c37a8-202d-49ac-9af0-545dfa9af8fd
+source-git-commit: 0bd57e226155ee68758466146b5d873dc4fdca29
 workflow-type: tm+mt
-source-wordcount: '525'
+source-wordcount: '540'
 ht-degree: 2%
 
 ---
 
 # 快速入門
 
-## 概覽 {#overview}
+## 總覽 {#overview}
 
 本頁說明如何驗證及開始使用Adobe Experience Platform Destination SDK。 其中包含如何取得Adobe I/O驗證憑證、沙箱名稱及目的地編寫存取控制權限的指示。
 
 ## 術語 {#terminology}
 
-本指南使用平台專屬的概念，例如IMS組織和沙箱。 請參閱[Experience Platform字彙表](https://experienceleague.adobe.com/docs/experience-platform/landing/glossary.html)以了解這些字詞和其他字詞的定義。
+本指南使用平台專屬的概念，例如IMS組織和沙箱。 請參閱 [Experience Platform字彙表](https://experienceleague.adobe.com/docs/experience-platform/landing/glossary.html) 和其他術語的定義。
 
 ## 獲取所需的身份驗證憑據 {#obtain-authentication-credentials}
 
-目標SDK使用[Adobe I/O](https://www.adobe.io/)閘道進行驗證。 若要對目的地SDK端點進行API呼叫，您必須在API呼叫中提供特定標題。 與AdobeExchange團隊合作，為您設定[Adobe開發人員控制台](http://console.adobe.io/)的驗證。
+目的地SDK使用 [Adobe I/O](https://www.adobe.io/) 驗證的網關。 若要對目的地SDK端點進行API呼叫，您必須在API呼叫中提供特定標題。 與AdobeExchange團隊合作，為您設定驗證 [Adobe開發人員控制台](http://console.adobe.io/).
 
-若要成功呼叫目標SDK API端點，請遵循[Experience Platform驗證教學課程](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html)。 從「[產生API金鑰、IMS組織ID和用戶端密碼](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html#api-ims-secret)」步驟開始教學課程。 Adobe交換團隊將為您處理前述步驟。 完成驗證教學課程，可提供目標SDK API呼叫中每個必要標題的值，如下所示：
+若要成功呼叫目標SDK API端點，請遵循 [Experience Platform驗證教學課程](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html). 從「[產生API金鑰、IMS組織ID和用戶端密碼](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html#api-ims-secret)」步驟。 Adobe交換團隊將為您處理前述步驟。 完成驗證教學課程，可提供目標SDK API呼叫中每個必要標題的值，如下所示：
 
 * `x-api-key: {API_KEY}`，也稱為用戶端ID
 * `x-gw-ims-org-id: {IMS_ORG}`，又稱為組織ID
@@ -55,7 +56,7 @@ AdobeExchange團隊會提供您的沙箱名稱，您必須在呼叫目標SDK API
 
 ## 基於角色的訪問控制(RBAC) {#rbac}
 
-若要使用[參考檔案](./configuration-options.md)中所述的目標SDK API端點，您需要&#x200B;**[!UICONTROL 目標編寫]**&#x200B;存取控制權限。 與AdobeExchange團隊合作，在[Adobe Admin Console](https://adminconsole.adobe.com/)中取得指派給您的此權限。
+若要使用目的地SDK API端點，請參閱 [參考檔案](./configuration-options.md)，您需要 **[!UICONTROL 目標編寫]** 存取控制權限。 與AdobeExchange團隊合作，在 [Adobe Admin Console](https://adminconsole.adobe.com/).
 
 ![目標編寫權限](./assets/destination-authoring-permission.png)
 
@@ -72,4 +73,6 @@ AdobeExchange團隊會提供您的沙箱名稱，您必須在呼叫目標SDK API
 
 ## 後續步驟 {#next-steps}
 
-依照本文所述步驟操作，您可取得Adobe I/O的驗證憑證、沙箱名稱，以及目的地編寫存取控制權限。 接下來，您可以使用目的地SDK來設定目的地。 請參閱[使用目標SDK來設定後續步驟的目標](./configure-destination-instructions.md) 。
+依照本文所述步驟操作，您可取得Adobe I/O的驗證憑證、沙箱名稱，以及目的地編寫存取控制權限。 接下來，您可以使用目的地SDK來設定目的地。
+* 閱讀 [使用目的地SDK來設定您的目的地](./configure-destination-instructions.md) 以了解後續步驟。
+* 對於所有操作，請參閱 [Destination Authoring API檔案](https://www.adobe.io/experience-platform-apis/references/destination-authoring/).

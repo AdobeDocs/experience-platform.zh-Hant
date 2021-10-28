@@ -4,9 +4,9 @@ user-guide-title: 目的地指南
 user-guide-description: 針對跨通路行銷活動、電子郵件宣傳、鎖定特定目標的行銷活動和其他諸多使用案例，啟用已知和未知的資料。
 description: 本檔案列出Adobe Experience Platform目的地的目錄
 feature: Destinations
-source-git-commit: a7c36f1a157b6020fede53e5c1074d966f26cf3d
+source-git-commit: e6d922800c17312df8529061c56d8a2deac46662
 workflow-type: tm+mt
-source-wordcount: '645'
+source-wordcount: '657'
 ht-degree: 10%
 
 ---
@@ -143,7 +143,7 @@ ht-degree: 10%
       * [無效標籤擴展](./catalog/voice/invoca.md)
       * [Medallia擴充功能](./catalog/voice/medallia.md)
       * [通話URL收件箱擴展](./catalog/voice/talkurl.md)
-* 目的地SDK {#destination-sdk}
+* 目標 SDK {#destination-sdk}
    * [總覽](./destination-sdk/overview.md)
    * [整合必要條件](./destination-sdk/integration-prerequisites.md)
    * [快速入門](./destination-sdk/getting-started.md)
@@ -153,12 +153,14 @@ ht-degree: 10%
       * [伺服器和模板規格](./destination-sdk/server-and-template-configuration.md)
       * [訊息格式](./destination-sdk/message-format.md)
       * [對象中繼資料管理](./destination-sdk/audience-metadata-management.md)
-      * [驗證配置](./destination-sdk/credentials-configuration.md)
-      * [OAuth 2驗證](./destination-sdk/oauth2-authentication.md)
+      * 驗證 {#authentication}
+         * [驗證配置](./destination-sdk/authentication-configuration.md)
+         * [OAuth 2驗證](./destination-sdk/oauth2-authentication.md)
       * 開發人員工具 {#developer-tools}
          * [建立並測試訊息轉換範本](./destination-sdk/create-template.md)
          * [測試您的目標配置](./destination-sdk/test-destination.md)
-   * API 參考資料 {#api-reference}
+   * API操作 {#api}
+      * [目標SDK（目標編寫）API參考](https://www.adobe.io/experience-platform-apis/references/destination-authoring/)
       * [目的地端點API作業](./destination-sdk/destination-configuration-api.md)
       * [目標伺服器端點API操作](./destination-sdk/destination-server-api.md)
       * [對象中繼資料端點API操作](./destination-sdk/audience-metadata-api.md)

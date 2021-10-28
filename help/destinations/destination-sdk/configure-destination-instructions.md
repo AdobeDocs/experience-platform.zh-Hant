@@ -2,9 +2,9 @@
 description: 本頁列出並說明使用Destination SDK設定串流目的地的步驟。
 title: 如何使用Destination SDK設定串流目的地
 exl-id: d8aa7353-ba55-4a0d-81c4-ea2762387638
-source-git-commit: 2b1cde9fc913be4d3bea71e7d56e0e5fe265a6be
+source-git-commit: 0bd57e226155ee68758466146b5d873dc4fdca29
 workflow-type: tm+mt
-source-wordcount: '670'
+source-wordcount: '667'
 ht-degree: 0%
 
 ---
@@ -161,7 +161,7 @@ POST platform.adobe.io/data/core/activation/authoring/destinations
 視您是否指定 `"authenticationRule": "CUSTOMER_AUTHENTICATION"` 或 `"authenticationRule": "PLATFORM_AUTHENTICATION"` 在上述的目的地設定中，您可以使用 `/destination` 或 `/credentials` 端點。
 
 * **最常見的案例**:如果您選取 `"authenticationRule": "CUSTOMER_AUTHENTICATION"` 在目的地設定中，且您的目的地支援OAuth 2驗證方法，請參閱 [OAuth 2驗證](./oauth2-authentication.md).
-* 如果您選取 `"authenticationRule": "PLATFORM_AUTHENTICATION"`，請參閱 [憑據配置](./credentials-configuration.md) 在參考檔案中。
+* 如果您選取 `"authenticationRule": "PLATFORM_AUTHENTICATION"`，請參閱 [驗證配置](./authentication-configuration.md#when-to-use).
 
 ## 步驟6:測試您的目的地 {#test-destination}
 
