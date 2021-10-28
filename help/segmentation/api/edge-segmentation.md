@@ -5,9 +5,9 @@ title: '使用API進行邊緣劃分 '
 topic-legacy: developer guide
 description: 本檔案包含如何搭配Adobe Experience Platform區段服務API使用邊緣區段的範例。
 exl-id: effce253-3d9b-43ab-b330-943fb196180f
-source-git-commit: bb5a56557ce162395511ca9a3a2b98726ce6c190
+source-git-commit: 4d2c6385decd5b789a975165a87bc80f9b008cd7
 workflow-type: tm+mt
-source-wordcount: '918'
+source-wordcount: '942'
 ht-degree: 2%
 
 ---
@@ -48,7 +48,7 @@ ht-degree: 2%
 | 在24小時的時間設定檔內傳入多個點擊 | 任何區段定義，是指在24小時的時間範圍內發生的多個事件。 | 瀏覽首頁的人員 **或** 在過去24小時內瀏覽了結帳頁面。 |
 | 在24小時時段內使用設定檔執行多個事件 | 任何區段定義，是指在24小時的時間範圍內發生的一或多個設定檔屬性和多個事件。 | 訪問首頁的美國人 **和** 在過去24小時內瀏覽了結帳頁面。 |
 
-{style=&quot;table-layout:auto&quot;}
+此外，區段 **必須** 系結至邊緣上作用中的合併原則。 有關合併策略的詳細資訊，請閱讀 [合併策略指南](../../profile/api/merge-policies.md).
 
 ## 擷取為邊緣細分啟用的所有區段
 
