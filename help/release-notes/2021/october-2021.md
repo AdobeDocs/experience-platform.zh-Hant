@@ -1,10 +1,10 @@
 ---
 title: Adobe Experience Platform 發行說明
 description: Adobe Experience Platform的最新發行說明。
-source-git-commit: 231ce8405a752bd3e7e4ae590bb6aaf98fc6527b
+source-git-commit: 45c4486dc9860da13daa6984b23ef80038ea2f8d
 workflow-type: tm+mt
-source-wordcount: '315'
-ht-degree: 9%
+source-wordcount: '458'
+ht-degree: 7%
 
 ---
 
@@ -12,12 +12,30 @@ ht-degree: 9%
 
 **發行日期：2021 年 10 月 27 日**
 
+## 更新Experience Platform
+
+更新Experience Platform。
+
+### [使用者介面] {#ui}
+
+使用者介面已更新，並有下列變更：
+
+| 功能 | 說明 |
+| --- | --- |
+| 深色主題 | 使用深色主題切換，在Platform介面的淺色主題和深色主題之間切換。 交換機位於用戶名和電子郵件下的用戶配置檔案中。 |
+| 切換左側導覽 | 使用應用程式標題頂端改良的導覽切換按鈕，來顯示或隱藏顯示您的Experience Platform功能的功能表。 系統會記住您上次的選取，並只顯示您有權存取的功能。 |
+| 存取可見性 | 左側導覽列只顯示您可存取的功能。 在舊版Adobe Experience Platform中，即使您無法存取無法使用的項目，也會顯示這些項目。 |
+
+請參閱 [Platform UI指南](../../landing/ui-guide.md) 了解更多。
+
+## 更新現有功能
+
 Adobe Experience Platform 現有功能更新：
 
 - [[!DNL Data Prep]](#data-prep)
 - [來源](#sources)
 
-## [!DNL Data Prep] {#data-prep}
+### [!DNL Data Prep] {#data-prep}
 
 [!DNL Data Prep] 可讓資料工程師將資料對應、轉換及驗證至Experience Data Model(XDM)。
 
@@ -30,7 +48,7 @@ Adobe Experience Platform 現有功能更新：
 
 請參閱 [[!DNL Data Prep] 概述](../../data-prep/home.md) 以進一步了解此服務。
 
-## 來源 {#sources}
+### 來源 {#sources}
 
 Adobe Experience Platform可內嵌來自外部來源的資料，同時允許您使用Platform服務來建構、加標籤及增強該資料。 您可以內嵌來自各種來源的資料，例如Adobe應用程式、雲端儲存、協力廠商軟體和您的CRM系統。
 
