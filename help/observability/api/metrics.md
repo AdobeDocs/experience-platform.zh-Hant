@@ -5,9 +5,9 @@ title: 量度API端點
 topic-legacy: developer guide
 description: 了解如何使用可觀察性前瞻分析API在Experience Platform中擷取可觀察性量度。
 exl-id: 08d416f0-305a-44e2-a2b7-d563b2bdd2d2
-source-git-commit: 7dfc5115110ebdfa503e582b595191b17b0e46ed
+source-git-commit: 6c10413adf033d09a49088951c127fc6e6c5552f
 workflow-type: tm+mt
-source-wordcount: '1865'
+source-wordcount: '1864'
 ht-degree: 5%
 
 ---
@@ -83,7 +83,7 @@ curl -X POST \
 | `granularity` | 選用欄位，指出依量度資料劃分的時間間隔。 例如，值為 `DAY` 傳回之間每天的量度 `start` 和 `end` 日期，但 `MONTH` 會改為依月份將量度結果分組。 使用此欄位時，對應的 `downsample` 還必須提供屬性，以指明資料的分組函式。 |
 | `metrics` | 物件陣列，每個要擷取的量度各一個。 |
 | `name` | 可觀察性前瞻分析所識別的量度名稱。 請參閱 [附錄](#available-metrics) 以取得已接受量度名稱的完整清單。 |
-| `filters` | 選用欄位，可讓您依特定資料集篩選量度。 欄位是物件的陣列（每個篩選器各一個），每個物件包含下列屬性： <ul><li>`name`:要據以篩選量度的實體類型。 目前，僅 `dataSets` 支援。</li><li>`value`:一或多個資料集的ID。 多個資料集ID可設為單一字串，每個ID以垂直長條字元(`|`)。</li><li>`groupBy`:設為true時，表示對應的 `value` 代表應個別傳回其量度結果的多個資料集。 如果設為false，系統會將這些資料集的量度結果分組。</li></ul> |
+| `filters` | 選用欄位，可讓您依特定資料集篩選量度。 欄位是物件的陣列（每個篩選器各一個），每個物件包含下列屬性： <ul><li>`name`:要據以篩選量度的實體類型。 目前，僅 `dataSets` 支援。</li><li>`value`:一或多個資料集的ID。 多個資料集ID可設為單一字串，每個ID以垂直長條字元(`\|`)。</li><li>`groupBy`:設為true時，表示對應的 `value` 代表應個別傳回其量度結果的多個資料集。 如果設為false，系統會將這些資料集的量度結果分組。</li></ul> |
 | `aggregator` | 指定應用於將多個時間序列記錄分組為單個結果的聚合函式。 有關可用聚合器的詳細資訊，請參閱 [OpenTSDB檔案](http://opentsdb.net/docs/build/html/user_guide/query/aggregators.html). |
 | `downsample` | 選用欄位，可讓您指定匯總函式，透過將欄位排序為間隔（或「貯體」）來降低量度資料的取樣率。 縮減取樣的間隔由 `granularity` 屬性。 有關縮減取樣的詳細資訊，請參閱 [OpenTSDB檔案](http://opentsdb.net/docs/build/html/user_guide/query/downsampling.html). |
 
