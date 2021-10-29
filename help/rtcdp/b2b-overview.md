@@ -1,18 +1,18 @@
 ---
 keywords: RTCDP; CDP;B2B Edition;Real-time Customer Data Platform；即時客戶資料平台；即時cdp;b2b; CDP；客戶AI
-title: Real-time CDP B2B Edition概述
+title: Real-time CDP B2B版概述（測試版）
 seo-title: Real-time Customer Data Platform B2B Edition overview
 description: Real-time Customer Data Platform B2B版帳戶概觀
 seo-description: Overview of Real-time Customer Data Platform B2B Edition Account
 exl-id: 9b45bba4-fc46-4d69-b36a-5cb91f316612
-source-git-commit: 4130528800a9219e0c9e12639f292a7f55f86d5e
+source-git-commit: fef18389f8e64bdf11fe93d4077eb0474abc4981
 workflow-type: tm+mt
-source-wordcount: '1079'
+source-wordcount: '1092'
 ht-degree: 1%
 
 ---
 
-# Real-time Customer Data Platform B2B版概述
+# Real-time Customer Data Platform B2B版概述（測試版）
 
 >[!IMPORTANT]
 >
@@ -83,4 +83,15 @@ Experience Platform目的地(例如Google Customer Match、Facebook、LinkedIn�
 
 現在您更清楚了解即時CDP B2B Edition為行銷人員提供的優點，以及它與即時CDP之間的差異，便能了解如何將這些功能套用至您自己的IMS組織。
 
-要了解Real-time CDP B2B Edition如何使您的企業對企業服務模式受益，請參見 [Real-time CDP B2B Edition的示例使用案例](./b2b-use-case.md). 或者，您也可以參閱 [Real-time Customer Data Platform B2B版綱要](./schemas/b2b.md) 說明檔案，以取得建立結構和定義基本B2B資料實體關係的詳細指引。
+要了解即時CDP B2B Edition如何使您的企業對企業服務模型受益，請參閱以下文檔以幫助您開始：
+
+* [Real-time CDP B2B Edition的範例使用案例](./b2b-use-case.md)
+* [如何內嵌資料](./sources/b2b.md)
+* [如何存取設定檔](./profile/profile-overview.md)
+* [Real-time Customer Data Platform B2B版中的結構描述](./schemas/b2b.md)
+* [如何建立區段](./segmentation/b2b.md)
+* [如何對目的地啟用區段](./destinations/b2b.md)
+* [如何定義和實施資料控管政策](./privacy/data-governance-overview.md)
+
+<!-- PLACEHOLDER - page under construction -->
+<!-- * [Privacy in Real-time Customer Data Platform B2B Edition](./privacy/b2b.md) -->

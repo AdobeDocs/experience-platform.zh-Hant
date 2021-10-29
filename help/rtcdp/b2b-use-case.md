@@ -1,16 +1,16 @@
 ---
 keywords: RTCDP; CDP;Real-time Customer Data Platform；即時客戶資料平台；real time cdp;cdp;rtcdp
-title: Real-time Customer Data Platform B2B版的範例使用案例
+title: Real-time Customer Data Platform B2B版本（測試版）的使用案例範例
 description: 此範例案例提供您實作Real-time Customer Data Platform B2B Edition的設定範例。
 exl-id: 15505980-ac33-44b2-8989-c08cbabd212b
-source-git-commit: 4ebc3ef813c3c44aa2b8a7aab5ccabbcc3c332b2
+source-git-commit: 6f421a8ae77318ca2598d640cf7e27ea485ec9db
 workflow-type: tm+mt
-source-wordcount: '1144'
+source-wordcount: '1146'
 ht-degree: 1%
 
 ---
 
-# Real-time Customer Data Platform B2B版的範例使用案例
+# Real-time Customer Data Platform B2B版本（測試版）的使用案例範例
 
 >[!IMPORTANT]
 >
@@ -18,8 +18,8 @@ ht-degree: 1%
 
 Real-time Customer Data Platform B2B Edition擴充了現有的即時CDP和Adobe Experience Platform產品，以支援B2B資料和工作流程。 本檔案提供範例使用案例，示範B2B版本提供的其他優點。 包括:
 
-- 結合來自不同獨立資料來源的人員和帳戶資料，以產生全面的檢視，讓您更清楚了解客戶，並更精確地劃分區段。 如需詳細資訊，請參閱有關[建立XDM架構關係](./schemas/b2b.md)的檔案，以便與各種B2B來源搭配使用。
-- 根據相關實體的屬性劃分受眾。 這包括帳戶、機會、行銷活動和行銷清單。 區段不再僅限於人員屬性和體驗事件。 如需建立B2B特定對象的詳細範例，請參閱[B2B區段檔案](./segmentation/b2b.md)。
+- 結合來自不同獨立資料來源的人員和帳戶資料，以產生全面的檢視，讓您更清楚了解客戶，並更精確地劃分區段。 請參閱 [建立XDM架構關係](./schemas/b2b.md) 以用於各種B2B來源，以取得詳細資訊。
+- 根據相關實體的屬性劃分受眾。 這包括帳戶、機會、行銷活動和行銷清單。 區段不再僅限於人員屬性和體驗事件。 請參閱 [B2B區段檔案](./segmentation/b2b.md) 如需建立B2B特定對象的詳細範例。
 - 原生支援一個人員與多個帳戶相關的使用案例。
 
 ## 使用案例
@@ -42,7 +42,7 @@ Real-time Customer Data Platform B2B Edition擴充了現有的即時CDP和Adobe 
 
 為了進行整合及進行其他公司控制，Bodea還設有主資料管理(MDM)系統，其中維護記錄，指出Marketo 1中的帳戶1（和CRM 1）和Marketo 2中的帳戶2（和CRM 2）是同一家公司。
 
-在上個月，`p2@townsend.com`瀏覽了新產品頁面，而Marketo 1記錄了該網站瀏覽。
+上個月， `p2@townsend.com` 瀏覽了新產品頁面，而Marketo 1記錄了該網站瀏覽。
 
 ![帳戶資訊圖表](./assets/account-info.png)
 
@@ -64,7 +64,7 @@ Real-time Customer Data Platform B2B Edition擴充了現有的即時CDP和Adobe 
 
 - 將來自所有不同來源(多個Marketo和CRM執行個體，以及主資料管理)的資料結合到即時CDP B2B Edition中。
 
-透過RT-CDP B2B Edition,Bodea可使用Marketo Engage來源連接器，將Marketo 1和Marketo 2的B2B資料匯入Experience Platform，並透過與Platform連線的應用程式，讓此資料保持最新。 如需詳細資訊，請參閱[Marketo來源連接器](../sources/connectors/adobe-applications/marketo/marketo.md)檔案。
+透過RT-CDP B2B Edition,Bodea可使用Marketo Engage來源連接器，將Marketo 1和Marketo 2的B2B資料匯入Experience Platform，並透過與Platform連線的應用程式，讓此資料保持最新。 請參閱 [Marketo來源連接器](../sources/connectors/adobe-applications/marketo/marketo.md) 檔案以取得詳細資訊。
 
 CRM1的B2B資料（人員、帳戶、機會和活動）會同步至Marketo 1。 同樣地，來自CRM 2的所有B2B資料都會同步至Marketo 2。 它們會透過Marketo來源連接器同步至Adobe Experience Platform。 不過，如果Bodea想將CRM的其他資料帶入Experience Platform，他們可以使用現有的CRM連接器。
 
@@ -87,7 +87,7 @@ CRM1的B2B資料（人員、帳戶、機會和活動）會同步至Marketo 1。 
    - 和
    - 在上個月瀏覽過產品頁面
 
-- 建立受眾，成為Bodea新行銷活動最有效的收件者。 在此範例中，RT-CDP B2B Edition將可協助行銷人員將`p2@townsend.com`識別為此行銷活動的正確目標。
+- 建立受眾，成為Bodea新行銷活動最有效的收件者。 在此範例中， RT-CDP、B2B Edition將協助行銷人員識別 `p2@townsend.com` 作為此行銷活動的正確目標。
 
 借由使用Marketo Engage和LinkedIn目的地，Bodea為其行銷團隊提供端對端客戶體驗管理(CXM)解決方案。 在「Experience Platform」中建立的對象會推送至Marketo目的地，其會以靜態清單顯示。 然後，此對象會自動新增至Marketo行銷活動。 同時，RT-CDP B2B Edition也可將對象傳送至LinkedIn行銷活動。
 
