@@ -1,10 +1,11 @@
 ---
 title: Adobe Target v2擴充功能發行說明
 description: Adobe Experience Platform中Adobe Target v2標籤擴充功能的最新發行說明。
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+exl-id: c1a04e62-026d-4b16-aa70-bc6d5dbe6b2d
+source-git-commit: 42a1ceac3de2244bef858bf03eabe4910ae597f8
 workflow-type: tm+mt
-source-wordcount: '572'
-ht-degree: 44%
+source-wordcount: '589'
+ht-degree: 48%
 
 ---
 
@@ -12,25 +13,31 @@ ht-degree: 44%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch在Adobe Experience Platform中已重新命名為一套資料收集技術。 因此，產品檔案中已推出數個術語變更。 有關術語更改的綜合參考，請參閱以下[document](../../../term-updates.md)。
+>Adobe Experience Platform Launch在Adobe Experience Platform中已重新命名為一套資料收集技術。 因此，所有產品文件中出現了幾項術語變更。 如需術語變更的彙整參考資料，請參閱以下[文件](../../../term-updates.md)。
+
+## 2021 年 10 月 28 日
+
+### Adobe Target v2 擴充功能 0.16.0 版
+
+- 更新以支援at.js v2.7.0，現已可從Adobe Target下載。
 
 ## 2021 年 7 月 20 日
 
 ### Adobe Target v2 擴充功能 0.15.1 版
 
-- 修正`stringify`函式名稱衝突，導致`sessionId`、`requestId`等產生錯誤UUID值的問題。
+- 修正 `stringify` 函式名稱衝突，導致產生不正確的UUID值 `sessionId`, `requestId`等。
 
 ## 2021 年 7 月 16 日
 
 ### Adobe Target v2 擴充功能 0.15.0 版
 
 - 每當at.js設定secureOnly設為true時，將安全屬性新增至Cookie
-- 現在使用`triggerView()`時可使用回應Token
-- 修正`CONTENT_RENDERING_NO_OFFERS`事件的相關錯誤。 現在，只要沒有從Target傳回內容，就會正確觸發
+- 現在，回應Token可在使用 `triggerView()`
+- 修正 `CONTENT_RENDERING_NO_OFFERS` 事件。 現在，只要沒有從Target傳回內容，就會正確觸發
 - 使用預先擷取請求時，可正確傳回A4T點按量度詳細資料
-- UUID產生不再使用`Math.random()`，而是仰賴`window.crypto`
+- UUID產生不再使用 `Math.random()`，但需仰賴 `window.crypto`
 - `sessionId` 每個網路呼叫的Cookie過期時間皆正確延長
-- SPA檢視快取初始化現在已正確處理，且會執行`viewsEnable`設定
+- SPA檢視快取初始化現在已正確處理，並遵循 `viewsEnable` 設定
 
 ## 2021 年 6 月 2 日
 
@@ -48,7 +55,7 @@ ht-degree: 44%
 
 ### Adobe Target v2 擴充功能 0.14 版
 
-- 新增具有[裝置上決策](./overview.md#load-target-with-on-device-decisioning)的新動作「載入Target」，其可載入at.js 2.5與裝置上決策功能
+- 新增「載入Target」的新動作，其具有 [裝置上決策](./overview.md#load-target-with-on-device-decisioning)，會載入at.js 2.5和裝置決策功能
 - 將at.js更新至2.5
 
 
@@ -56,7 +63,7 @@ ht-degree: 44%
 
 ### Adobe Target v2 擴充功能 0.13.7 版
 
-- 已修正 `targetPageParams` 包含在 mbox 要求中的問題。 `targetPageParams` 只應包含在要 `pageLoad` 求中。
+- 已修正 `targetPageParams` 包含在 mbox 要求中的問題。 `targetPageParams` 只應包含在 `pageLoad` 要求。
 - 修正標籤擴充功能中的檔案和視窗全域物件問題，方法是以直接參照取代全域物件相依性。
 - 將at.js更新至2.4.1。
 
