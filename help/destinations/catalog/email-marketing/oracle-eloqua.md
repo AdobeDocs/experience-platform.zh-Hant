@@ -3,9 +3,9 @@ keywords: 電子郵件；電子郵件；電子郵件目的地；oracle雄辯；o
 title: OracleEloqua連線
 description: OracleEloqua是Oracle提供的軟體即服務(SaaS)平台，用於實現行銷自動化，旨在幫助B2B行銷人員和組織管理行銷活動和銷售機會的產生。
 exl-id: 6eaa79ff-8874-423b-bdff-aa04f6101a53
-source-git-commit: b4810dfef7b0d437744ca14a32bd4f5746e8d002
+source-git-commit: b0d6e02c67f2a62971332acb224c7422ea467e6c
 workflow-type: tm+mt
-source-wordcount: '491'
+source-wordcount: '487'
 ht-degree: 0%
 
 ---
@@ -54,7 +54,7 @@ ht-degree: 0%
 * **[!UICONTROL 名稱]**:為目的地選擇相關名稱。
 * **[!UICONTROL 說明]**:輸入目的地的說明。
 * **[!UICONTROL 資料夾路徑]**:在您的儲存位置中提供路徑，讓Platform將匯出資料存放為CSV檔案。
-* **[!UICONTROL 檔案格式]**: **CSV** 或 **TAB_DELIMITED**. 選擇要導出到儲存位置的檔案格式。
+* **[!UICONTROL 檔案格式]**:選擇 **CSV** 將CSV檔案匯出至儲存位置。
 
 <!--
 

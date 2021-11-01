@@ -3,9 +3,9 @@ keywords: 電子郵件；電子郵件；電子郵件；電子郵件目的地；a
 title: Adobe Campaign連線
 description: Adobe Campaign是一套解決方案，可協助您個人化所有線上和離線管道，並傳送行銷活動。
 exl-id: 0de91738-8f56-41f5-8745-9b14b15db76a
-source-git-commit: b4810dfef7b0d437744ca14a32bd4f5746e8d002
+source-git-commit: b0d6e02c67f2a62971332acb224c7422ea467e6c
 workflow-type: tm+mt
-source-wordcount: '717'
+source-wordcount: '713'
 ht-degree: 2%
 
 ---
@@ -55,7 +55,7 @@ Adobe Campaign支援下列連線類型：
 * **[!UICONTROL 貯體名稱]**: *S3連線*. 輸入S3儲存貯體的位置 [!DNL Platform] 會將您的匯出資料儲存為CSV檔案。
 * **[!UICONTROL 資料夾路徑]**:在儲存位置提供路徑，其中 [!DNL Platform] 會將您的匯出資料儲存為CSV檔案。
 * **[!UICONTROL 容器]**: *對於Blob連接*. 包含資料夾路徑的Blob的容器。
-* **[!UICONTROL 檔案格式]**: **CSV** 或 **TAB_DELIMITED**. 選擇要導出到儲存位置的檔案格式。
+* **[!UICONTROL 檔案格式]**:選擇 **CSV** 將CSV檔案匯出至儲存位置。
 
 ## 啟用此目的地的區段 {#activate}
 

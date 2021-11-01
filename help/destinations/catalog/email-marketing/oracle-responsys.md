@@ -3,9 +3,9 @@ keywords: 電子郵件；電子郵件；電子郵件目的地；oracleresponsys�
 title: OracleResponsys連線
 description: Responsys是企業電子郵件行銷工具，適用於Oracle提供的跨管道行銷活動，可個人化電子郵件、行動裝置、顯示器和社交的互動。
 exl-id: 70f2f601-afee-4315-bf7a-ed2c92397ebe
-source-git-commit: b4810dfef7b0d437744ca14a32bd4f5746e8d002
+source-git-commit: b0d6e02c67f2a62971332acb224c7422ea467e6c
 workflow-type: tm+mt
-source-wordcount: '475'
+source-wordcount: '471'
 ht-degree: 0%
 
 ---
@@ -55,7 +55,7 @@ ht-degree: 0%
 * **[!UICONTROL 名稱]**:為目的地選擇相關名稱。
 * **[!UICONTROL 說明]**:輸入目的地的說明。
 * **[!UICONTROL 資料夾路徑]**:在您的儲存位置中提供路徑，讓Platform將匯出資料存放為CSV檔案。
-* **[!UICONTROL 檔案格式]**: **CSV** 或 **TAB_DELIMITED**. 選擇要導出到儲存位置的檔案格式。
+* **[!UICONTROL 檔案格式]**:選擇 **CSV** 將CSV檔案匯出至儲存位置。
 
 <!--
 
