@@ -6,7 +6,7 @@ topic-legacy: overview
 type: Tutorial
 description: 了解如何使用流量服務API將Adobe Experience Platform連線至Azure Data Lake Storage Gen2。
 exl-id: cad5e2a0-e27c-4130-9ad8-888352c92f04
-source-git-commit: 13bd1254dfe89004465174a7532b4f6aaef54c09
+source-git-commit: f0bb779961e9387eab6a424461e35eba9ab48fe2
 workflow-type: tm+mt
 source-wordcount: '511'
 ht-degree: 1%
@@ -38,7 +38,7 @@ ht-degree: 1%
 | `servicePrincipalId` | 應用程式的用戶端ID。 |
 | `servicePrincipalKey` | 應用程式的密鑰。 |
 | `tenant` | 包含您應用程式的租用戶資訊。 |
-| `connectionSpec.id` | 連接規範返回源的連接器屬性，包括與建立基連接和源連接相關的驗證規範。 ADLS Gen2的連接規範ID為： `0ed90a81-07f4-4586-8190-b40eccef1c5a`. |
+| `connectionSpec.id` | 連接規範返回源的連接器屬性，包括與建立基連接和源連接相關的驗證規範。 ADLS Gen2的連接規範ID為： `b3ba5556-48be-44b7-8b85-ff2b69b46dc4`. |
 
 如需這些值的詳細資訊，請參閱 [此ADLS第2代文檔](https://docs.microsoft.com/en-us/azure/data-factory/connector-azure-data-lake-storage).
 
@@ -83,7 +83,7 @@ curl -X POST \
             }
         },
         "connectionSpec": {
-            "id": "0ed90a81-07f4-4586-8190-b40eccef1c5a",
+            "id": "b3ba5556-48be-44b7-8b85-ff2b69b46dc4",
             "version": "1.0"
         }
     }'
@@ -95,7 +95,7 @@ curl -X POST \
 | `auth.params.servicePrincipalId` | 您ADLS Gen2帳戶的服務主體ID。 |
 | `auth.params.servicePrincipalKey` | ADLS Gen2帳戶的服務主體密鑰。 |
 | `auth.params.tenant` | ADLS Gen2帳戶的租用戶資訊。 |
-| `connectionSpec.id` | ADLS Gen2連接規範ID: `0ed90a81-07f4-4586-8190-b40eccef1c5a1`. |
+| `connectionSpec.id` | ADLS Gen2連接規範ID: `b3ba5556-48be-44b7-8b85-ff2b69b46dc41`. |
 
 **回應**
 
