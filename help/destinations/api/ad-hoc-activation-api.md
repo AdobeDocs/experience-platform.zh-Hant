@@ -5,7 +5,7 @@ title: （測試版）透過Experience Platform臨機啟動API啟動對象區段
 description: 本文說明透過臨機啟動API來啟動區段的端對端工作流程，包括啟動前發生的區段工作。
 topic-legacy: tutorial
 type: Tutorial
-source-git-commit: d5b383ec4e9f6e2f05a0e5834e3998789a67ce32
+source-git-commit: 0c8fbaec9a592c9d5c20c077f31279f732ec2a0d
 workflow-type: tm+mt
 source-wordcount: '1056'
 ht-degree: 2%
@@ -124,9 +124,9 @@ Adobe Experience Platform每24小時執行一次已排程的分段工作。 臨�
 
 區段匯出工作完成後，您即可觸發啟動。
 
->[!WARNING]
+>[!NOTE]
 >
->每個臨機啟動工作最多可啟動50個區段。 嘗試啟用更多區段會導致作業失敗。
+>每個臨機啟動工作最多可啟動20個區段。 嘗試啟用更多區段會導致作業失敗。
 
 ### 請求
 
