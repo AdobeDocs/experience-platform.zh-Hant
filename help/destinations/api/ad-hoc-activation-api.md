@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform；目的地api；臨機啟動；啟動區段臨機
 solution: Experience Platform
-title: （測試版）透過Experience Platform臨機啟動API啟動對象區段
-description: 本文說明透過臨機啟動API來啟動區段的端對端工作流程，包括啟動前發生的區段工作。
+title: （測試版）透過臨機啟動API啟動對象區段以批次目的地
+description: 本文說明透過臨機啟動API來啟動對象區段的端對端工作流程，包括啟動前發生的區段工作。
 topic-legacy: tutorial
 type: Tutorial
-source-git-commit: 0c8fbaec9a592c9d5c20c077f31279f732ec2a0d
+source-git-commit: 8cac961e1566c48bacc0ec2ab3414132f81232e2
 workflow-type: tm+mt
-source-wordcount: '1056'
+source-wordcount: '1054'
 ht-degree: 2%
 
 ---
 
 
-# （測試版）透過Experience Platform臨機啟動API啟動對象區段
+# （測試版）透過臨機啟動API啟動對象區段以批次目的地
 
 >[!IMPORTANT]
 >
@@ -35,16 +35,16 @@ ht-degree: 2%
 
 ### Flash銷售或促銷
 
-一家線上零售商正在準備有限的快閃銷售，希望在短時間內通知客戶。 透過Experience Platform臨機啟動API，行銷團隊可以隨選匯出受眾區段，並快速傳送促銷電子郵件給客戶群。
+一家線上零售商正在準備有限的快閃銷售，希望在短時間內通知客戶。 透過Experience Platform臨機啟動API，行銷團隊可以隨選匯出區段，並快速傳送促銷電子郵件給客戶群。
 
 
 ### 最新事件或突發新聞
 
-酒店預計接下來幾天會有惡劣的天氣，團隊想要快速通知到達的客人，以便他們能據此進行規劃。 行銷團隊可使用Experience Platform臨機啟動API，依需求匯出受眾區段，並通知來賓。
+酒店預計接下來幾天會有惡劣的天氣，團隊想要快速通知到達的客人，以便他們能據此進行規劃。 行銷團隊可使用Experience Platform臨機啟動API，依需求匯出區段，並通知客人。
 
 ### 整合測試
 
-IT經理可以使用Experience Platform臨機啟動API，依需求匯出受眾區段，以便測試其與Adobe Experience Platform的自訂整合，並確保一切正常運作。
+IT經理可以使用Experience Platform臨機啟動API，依需求匯出區段，以便測試其與Adobe Experience Platform的自訂整合，並確保一切正常運作。
 
 
 ## 護欄 {#guardrails}
@@ -156,8 +156,8 @@ curl -X POST https://platform.adobe.io/data/core/activation/disflowprovider/adho
 
 | 屬性 | 說明 |
 | -------- | ----------- |
-| <ul><li>`destinationId1`</li><li>`destinationId2`</li></ul> | 您要啟用受眾區段的目的地例項ID。 |
-| <ul><li>`segmentId1`</li><li>`segmentId2`</li><li>`segmentId3`</li></ul> | 您要啟用至所選目的地之對象區段的ID。 |
+| <ul><li>`destinationId1`</li><li>`destinationId2`</li></ul> | 您要啟用區段的目的地例項ID。 |
+| <ul><li>`segmentId1`</li><li>`segmentId2`</li><li>`segmentId3`</li></ul> | 您要啟用至所選目的地之區段的ID。 |
 | <ul><li>`exportId1`</li></ul> | 回應中傳回的ID為 [區段匯出](../../segmentation/api/export-jobs.md#retrieve-list) 工作。 請參閱 [步驟4:取得最新的區段匯出工作ID](#segment-export-id) 以取得如何找到此ID的指示。 |
 
 ### 回應
