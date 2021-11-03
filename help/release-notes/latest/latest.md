@@ -1,7 +1,7 @@
 ---
 title: Adobe Experience Platform 發行說明
 description: Adobe Experience Platform的最新發行說明。
-source-git-commit: 45c4486dc9860da13daa6984b23ef80038ea2f8d
+source-git-commit: 0209d7ef1c82915bc11f07518194e3dd68c63de9
 workflow-type: tm+mt
 source-wordcount: '458'
 ht-degree: 7%
@@ -16,7 +16,7 @@ ht-degree: 7%
 
 更新Experience Platform。
 
-### [使用者介面] {#ui}
+### 使用者介面 {#ui}
 
 使用者介面已更新，並有下列變更：
 
