@@ -5,9 +5,9 @@ title: Privacy Service和Experience Cloud應用程式
 topic-legacy: overview
 description: 本檔案提供如何針對隱私權相關作業設定不同Experience Cloud應用程式的參考。
 exl-id: da21c15f-0b99-4eb7-ac9a-f0fe5e3ba842
-source-git-commit: f0dc33dcd4803f157e411d8baf3b2d2f96cea5e1
+source-git-commit: 0d20da1264c20a5684c241a725041dd009f77b58
 workflow-type: tm+mt
-source-wordcount: '600'
+source-wordcount: '617'
 ht-degree: 15%
 
 ---
@@ -37,6 +37,7 @@ Adobe Experience Platform [!DNL Privacy Service] 專為支援數個Adobe Experie
 | Adobe Experience Platform | ✓ | ✓ | <ul><li>[存取/刪除資料湖的檔案](../catalog/privacy.md)</li><li>[存取/刪除Identity Service的檔案](../identity-service/privacy.md)</li><li>[存取/刪除即時客戶個人檔案的檔案](../profile/privacy.md)</li><li>[!DNL Experience Platform] 榮譽 [對象區段的退出請求](../segmentation/consents.md).</li></ul> |
 | Adobe Primetime驗證 | ✓ | 不適用 | <ul><li>[存取/刪除檔案](http://tve.helpdocsonline.com/how-to-make-a-privacy-request)</li><li>[!DNL Primetime] 無法傳輸資料，因此選擇退出銷售請求不適用。</li></ul> |
 | Adobe Target | ✓ | 不適用 | <ul><li>[存取/刪除檔案](https://experienceleague.adobe.com/docs/target/using/implement-target/before-implement/privacy/cmp-privacy-and-general-data-protection-regulation.html)</li><li>[!DNL Target] 無法傳輸資料，因此選擇退出銷售請求不適用。</li></ul> |
+| Marketo Engage | ✓ | 不適用 | <ul><li>[存取/刪除檔案](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/miscellaneous/privacy-requests.html)</li><li>[!DNL Marketo] 無法傳輸資料，因此選擇退出銷售請求不適用。</li></ul> |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -50,7 +51,6 @@ Adobe Experience Platform [!DNL Privacy Service] 專為支援數個Adobe Experie
 | [Adobe Experience Manager](https://experienceleague.adobe.com/docs/experience-manager-64/managing/data-protection/data-protection-and-privacy.html) | 概述客戶隱私權管理員或AEM管理員如何處理GDPR請求。 |
 | [Adobe Experience Manager Livefyre](https://experienceleague.adobe.com/docs/livefyre/using/settings-other/privacy-requests/c-gdpr-compliance.html) | 使用Livefyre提出GDPR存取和刪除請求的步驟。 |
 | [Magento](https://devdocs.magento.com/compliance/industry-compliance.html) | 確保您的Magento Commerce安裝符合特定隱私權法規的要求。 |
-| [Marketo](https://www.marketo.com/company/trust/gdpr/) | 了解隱私權法規如何套用至Marketo。 |
 | [Adobe Experience Platform 中的標記](../tags/ui/client-side/consent.md) | 開發人員可如何使用擴充功能及規則建立器，以定義加入和退出解決方案。 |
 | [Workfront](https://www.workfront.com/privacy-notice) | 了解Workfront如何收集個人資料，以及資料主體如何透過表單提交隱私權請求。 |
 
