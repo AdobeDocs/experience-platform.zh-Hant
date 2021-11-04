@@ -4,9 +4,9 @@ title: 合併策略UI指南
 type: Documentation
 description: 在Experience Platform中將多個來源的資料匯整在一起時，Platform會使用合併原則來判斷資料的優先順序，以及將哪些資料合併以建立統一檢視。 本指南提供使用Adobe Experience Platform使用者介面處理合併原則的逐步指示。
 exl-id: 0489217a-6a53-428c-a531-fd0a0e5bb71f
-source-git-commit: e0a75a75e5dbb0318ec8785d887d7a156d28f5bd
+source-git-commit: 03e7863f38b882a2fbf6ba0de1755e1924e8e228
 workflow-type: tm+mt
-source-wordcount: '2317'
+source-wordcount: '2319'
 ht-degree: 0%
 
 ---
@@ -193,7 +193,7 @@ Adobe Experience Platform可讓您從多個來源將資料片段匯整在一起�
 
 ## 違反資料控管政策
 
-建立或更新合併原則時，會執行檢查，以判斷合併原則是否違反貴組織定義的任何資料使用原則。 資料使用原則是Adobe Experience Platform的一部分 [!DNL Data Governance] 和是描述您可在特定執行，或受限於特定執行之行銷動作種類的規則 [!DNL Platform] 資料。 例如，如果使用合併策略建立激活到第三方目標的段，並且您的組織具有阻止將特定資料導出到第三方的資料使用策略，則您將收到 **[!UICONTROL 檢測到資料控管策略違規]** 通知。
+建立或更新合併原則時，會執行檢查，以判斷合併原則是否違反貴組織定義的任何資料使用原則。 資料使用原則是Adobe Experience Platform資料控管的一部分，也是描述您可針對特定執行或限制執行之行銷動作種類的規則 [!DNL Platform] 資料。 例如，如果使用合併策略建立激活到第三方目標的段，並且您的組織具有阻止將特定資料導出到第三方的資料使用策略，則您將收到 **[!UICONTROL 檢測到資料控管策略違規]** 通知。
 
 此通知包括已違反的資料使用策略清單，允許您通過從清單中選擇策略來查看違規的詳細資訊。 選擇違反的策略時， **[!UICONTROL 資料處理]** 索引標籤提供違反和受影響啟用的原因，每個都提供資料使用原則遭違反的詳細資訊。
 

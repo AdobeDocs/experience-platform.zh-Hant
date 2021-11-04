@@ -1,70 +1,69 @@
 ---
-keywords: Experience Platform;home；熱門主題；資料位置；資料位置；資料管理；資料管理；世系；資料類型；資料類型；資料類型；資料類型
+keywords: Experience Platform；首頁；熱門主題；資料位置；資料位置；資料管理；資料管理；世系；世系；資料類型；資料類型；資料類型
 solution: Experience Platform
 title: 資料集概述
 topic-legacy: datasets
-description: 本檔案提供Experience Platform中資料集的高階概觀。
+description: 本檔案概略介紹Experience Platform中的資料集。
 exl-id: 51ecefb0-a699-4b1a-80f1-26c6ba92fcbf
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 03e7863f38b882a2fbf6ba0de1755e1924e8e228
 workflow-type: tm+mt
-source-wordcount: '707'
-ht-degree: 2%
+source-wordcount: '711'
+ht-degree: 6%
 
 ---
 
-# 資料集總覽
+# 資料集概觀
 
-成功收錄到Adobe Experience Platform的所有資料都會以資料集的形式保存在[!DNL Data Lake]中。 資料集是資料集合的儲存和管理結構，通常是包含結構（欄）和欄（列）的表格。 資料集也包含描述其儲存之資料各方面的中繼資料。
+成功擷取至Adobe Experience Platform的所有資料都會保存在 [!DNL Data Lake] 做為資料集。 資料集是資料集合的儲存和管理結構，通常是包含方案 (欄) 和欄 (列) 的表格。 資料集也包含中繼資料，可說明其儲存資料的各個層面。
 
-本文檔提供[!DNL Experience Platform]中資料集的高級概述。
+本檔案概略介紹 [!DNL Experience Platform].
 
 ## 建立資料集和追蹤中繼資料
 
-[!DNL Catalog Service] 是資料位置和世系的記錄系統， [!DNL Experience Platform]用於建立和管理資料集。[!DNL Catalog] 追蹤每個資料集的中繼資料，包括對資料集符合的 [!DNL Experience Data Model] (XDM)架構的參考（在下一節中說明）以及該資料集所吸收的記錄數。
+[!DNL Catalog Service] 是內用於資料位置和世系的記錄系統 [!DNL Experience Platform]，可用來建立和管理資料集。 [!DNL Catalog] 追蹤每個資料集的中繼資料，包括對 [!DNL Experience Data Model] (XDM)資料集符合（在下一節中說明）的資料集結構，以及擷取至該資料集的記錄數。
 
-如需詳細資訊，請參閱[目錄服務概觀](../home.md)。
+請參閱 [目錄服務概述](../home.md) 以取得更多資訊。
 
-## 對資料集資料強制限制
+## 強制限制資料集資料
 
-[!DNL Experience Data Model] (XDM)是組織客戶體驗資料的 [!DNL Platform] 標準化架構。所有被收錄到[!DNL Platform]的資料都必須符合預先定義的XDM架構，才能將它以資料集的形式保存在[!DNL Data Lake]中。
+[!DNL Experience Data Model] (XDM)為標準化架構，據以 [!DNL Platform] 組織客戶體驗資料。 擷取至的所有資料 [!DNL Platform] 必須符合預先定義的XDM架構，才能持續保存在 [!DNL Data Lake] 作為資料集。
 
-所有資料集都包含對XDM模式的引用，該引用限制了它們可以儲存的資料的格式和結構。 嘗試上傳不符合資料集XDM架構的資料集會導致擷取失敗。
+所有資料集都包含XDM結構的參考，這會限制其可儲存的資料格式和結構。 若嘗試將資料上傳至不符合資料集XDM結構的資料集，會導致擷取失敗。
 
-有關XDM的詳細資訊，請參見[XDM系統概述](../../xdm/home.md)。
+如需XDM的詳細資訊，請參閱 [XDM系統概觀](../../xdm/home.md).
 
 ## 將資料擷取至資料集
 
-Adobe Experience Platform資料擷取代表[!DNL Platform]從各種來源擷取資料的多種方法。 不論擷取方法為何，所有成功擷取的資料都會轉換為批次檔案。 批次是多個資料單位，由一或多個要作為一個單位進行內嵌的檔案所組成。然後，這些批處理檔案將添加到專用資料集並保存在[!DNL Data Lake]中。
+Adobe Experience Platform資料擷取代表 [!DNL Platform] 從各種來源擷取資料。 無論擷取方法為何，所有成功擷取的資料都會轉換為批次檔案。 批次是多個資料單位，由一或多個要作為一個單位進行內嵌的檔案所組成。這些批次檔案會新增至專用的資料集，並保存在 [!DNL Data Lake].
 
-如需詳細資訊，請參閱[資料擷取概觀](../../ingestion/home.md)。
+請參閱 [資料擷取概觀](../../ingestion/home.md) 以取得更多資訊。
 
-## 將使用情況標籤套用至資料集
+## 將使用量標籤套用至資料集
 
-Adobe Experience Platform[!DNL Data Governance]可讓您管理客戶資料，以確保符合資料使用適用的法規、限制和政策。 [!DNL Data Governance]框架允許您應用使用標籤，以根據應用於該資料的使用策略對資料進行分類。
+Adobe Experience Platform資料控管可讓您管理客戶資料，以確保符合適用於資料使用的法規、限制和政策。 資料控管架構可讓您套用使用標籤，以根據套用至該資料的使用原則來分類資料。
 
-資料使用標籤可套用至整個資料集或個別資料集欄位。 在資料集層級新增的標籤會由該資料集內的所有欄位繼承。
+資料使用量標籤可套用至整個資料集或個別資料集欄位。 在資料集層級新增的標籤，會由該資料集內的所有欄位繼承。
 
-有關服務的詳細資訊，請參閱[資料治理概述](../../data-governance/home.md)。 有關如何在[!DNL Platform]中使用使用標籤的步驟，請參閱以下指南：
+請參閱 [資料控管概觀](../../data-governance/home.md) 以取得服務的詳細資訊。 有關如何在 [!DNL Platform]，請參閱下列指南：
 
-* [管理UI中的標籤](../../data-governance/labels/user-guide.md)
+* [在UI中管理標籤](../../data-governance/labels/user-guide.md)
 * [在API中管理資料集標籤](../../data-governance/labels/dataset-api.md)
 
-## 下游[!DNL Platform]服務中的資料集
+## 下游資料集 [!DNL Platform] 服務
 
-一旦使用資料集來儲存收錄的資料，下游[!DNL Platform]服務就會使用這些資料集來更新客戶個人檔案、透過機器學習獲得深入資訊等。
+使用資料集來儲存擷取的資料後，下游就會使用這些資料集 [!DNL Platform] 更新客戶設定檔、透過機器學習獲得深入分析等服務。
 
-以下是使用資料集進行各種操作的下游服務的清單。 請檢視每項服務的檔案，以取得更多資訊。
+以下是將資料集用於各種作業的下游服務清單。 請查閱每項服務的檔案以取得詳細資訊。
 
-* [[!DNL Data Access API]](../../data-access/home.md):允許您訪問和下載儲存在資料集中的檔案的內容。
-* [Adobe Experience Platform身分服務](../../identity-service/home.md):跨裝置和系統橋接身分識別，並根據資料集符合的XDM架構所定義的身分欄位，將資料集連結在一起。
-* [[!DNL Real-time Customer Profile]](../../profile/home.md):利用 [!DNL Identity Service] 資料集即時建立詳細的客戶個人檔案。[!DNL Real-time Customer Profile] 從資料中提取資 [!DNL Data Lake] 料，並將客戶個人檔案保留在其個別的資料儲存中。
-* [Adobe Experience Platform區段服務](../../segmentation/home.md):可讓您建立區段並從資料產生 [!DNL Real-time Customer Profile] 觀眾。然後，這些對象可以導出到[!DNL Data Lake]中自己的資料集。
-* [Adobe Experience Platform資料科學工作區](../../data-science-workspace/home.md):使用機器學習和人工智慧發掘大型資料集的見解。
-* [Adobe Experience Platform查詢服務](../../query-service/home.md):允許您使用標準SQL來查詢中的資料、 [!DNL Experience Platform]連接中的任何資料 [!DNL Data Lake] 集，並將查詢結果捕獲為新資料集以用於報告、 [!DNL Data Science Workspace]或中 [!DNL Real-time Customer Profile]。
+* [[!DNL Data Access API]](../../data-access/home.md):可讓您存取和下載資料集中儲存的檔案內容。
+* [Adobe Experience Platform Identity Service](../../identity-service/home.md):橋接跨裝置和系統的身分，根據資料集所遵循的XDM結構所定義的身分欄位，將資料集連結在一起。
+* [[!DNL Real-time Customer Profile]](../../profile/home.md):利用 [!DNL Identity Service] 即時從資料集建立詳細的客戶設定檔。 [!DNL Real-time Customer Profile] 從 [!DNL Data Lake] 並將客戶設定檔保存在其自己的個別資料存放區中。
+* [Adobe Experience Platform區段服務](../../segmentation/home.md):可讓您建立區段，並從 [!DNL Real-time Customer Profile] 資料。 然後，這些對象可匯出至 [!DNL Data Lake].
+* [Adobe Experience Platform Data Science Workspace](../../data-science-workspace/home.md):使用機器學習和人工智慧發掘大型資料集的深入分析。
+* [Adobe Experience Platform查詢服務](../../query-service/home.md):允許使用標準SQL在中查詢資料 [!DNL Experience Platform]，在中加入任何資料集 [!DNL Data Lake] 將查詢結果擷取為新資料集以用於報表， [!DNL Data Science Workspace]，或 [!DNL Real-time Customer Profile].
 
 ## 後續步驟
 
-閱讀本文檔後，您將瞭解[!DNL Experience Platform]中資料集的核心用途，以及使用資料集的各種[!DNL Platform]服務。 有關[!DNL Platform]中使用資料集的多種方式的詳細資訊，請查看本概述中連結的服務文檔。
+閱讀本檔案後，您便了解中資料集的核心用途 [!DNL Experience Platform]，以及 [!DNL Platform] 利用資料集的服務。 如需中資料集使用方式的詳細資訊，請參閱 [!DNL Platform]，請參閱本概述中連結的服務檔案。
 
-有關如何與[!DNL Experience Platform] UI中的資料集交互的步驟，請參見[資料集使用手冊](user-guide.md)。
+如需如何在中與資料集互動的步驟 [!DNL Experience Platform] UI，請參閱 [資料集使用指南](user-guide.md).

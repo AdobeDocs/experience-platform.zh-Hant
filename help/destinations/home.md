@@ -1,13 +1,13 @@
 ---
 keywords: 目的地；adobe experience platform；平台；目的地概述；啟動資料；啟動；
 title: 目的地概觀
-seo-title: 目的地概觀
+seo-title: Destinations overview
 description: 了解如何針對跨通路行銷宣傳、電子郵件、目標廣告等目的地啟用Adobe Experience Platform資料。
-seo-description: 目的地是預先建置與目的地平台的整合，可順暢地從Adobe Experience Platform啟動資料。 您可以使用Adobe Experience Platform中的目的地，針對跨通路行銷活動、電子郵件行銷活動、目標廣告和其他許多使用案例，啟用已知和未知的資料。
+seo-description: Destinations are pre-built integrations with destination platforms that allow for the seamless activation of data from Adobe Experience Platform. You can use Destinations in the Adobe Experience Platform to activate your known and unknown data for cross-channel marketing campaigns, email campaigns, targeted advertising, and many other use cases.
 exl-id: afd07ddc-652e-4e22-b298-feba27332462
-source-git-commit: b7392596c7ed96032dc8ad6bb8e423640f562394
+source-git-commit: 03e7863f38b882a2fbf6ba0de1755e1924e8e228
 workflow-type: tm+mt
-source-wordcount: '507'
+source-wordcount: '461'
 ht-degree: 0%
 
 ---
@@ -16,46 +16,46 @@ ht-degree: 0%
 
 ![目的地概述橫幅](./assets/overview/destinations-overview-banner.png)
 
-**[!DNL Destinations]** 預先建置與目的地平台的整合，可順暢地從Adobe Experience Platform啟動資料。您可以使用目的地來針對跨通路行銷活動、電子郵件行銷活動、目標廣告和其他許多使用案例，啟用已知和未知的資料。
+**[!DNL Destinations]** 是與目的地平台預先建置的整合，可順暢地從Adobe Experience Platform啟動資料。 您可以使用目的地來針對跨通路行銷活動、電子郵件行銷活動、目標廣告和其他許多使用案例，啟用已知和未知的資料。
 
 ## 目的地和來源 {#destinations-and-sources}
 
-Platform的其中一項核心功能是擷取您的第一方資料，並根據您的業務需求加以啟用。 使用[sources](../sources/home.md)將資料內嵌至Platform和目的地，以便從Platform匯出資料。
+Platform的其中一項核心功能是擷取您的第一方資料，並根據您的業務需求加以啟用。 使用 [來源](../sources/home.md) 將資料內嵌至Platform和目的地，以便從Platform匯出資料。
 
 ## 目的地步驟 {#steps}
 
-* 從Platform中所有可用目的地的[自助目錄](./catalog/overview.md)中選擇。
+* 從 [自助式目錄](./catalog/overview.md) Platform中可用的所有目的地。
 * 使用目的地將設定檔或區段傳送至行銷自動化平台、數位廣告平台等。
 * 定期排程匯出至您偏好目的地的資料。
 
 ## 控制項 {#controls}
 
-[Destinations workspace](./ui/destinations-workspace.md)中的控制項可讓您：
+中的控制項 [目的地工作區](./ui/destinations-workspace.md) 允許您：
 
 * 瀏覽可啟用資料的目的地平台目錄；
 * 建立、編輯、啟用和停用流向目錄中目的地的資料流；
 * 在儲存位置中建立帳戶，或將Platform連結至目標平台中的帳戶；
 * 選取應將哪些區段啟動至目的地；
-* 在啟用區段至電子郵件行銷目的地時，選取要匯出的[體驗資料模型(XDM)欄位](../xdm/home.md)。
+* 選取 [Experience Data Model(XDM)欄位](../xdm/home.md) 若要在啟用區段至電子郵件行銷目的地時匯出。
 
 ## 目的地類型和類別 {#types-and-categories}
 
-如需詳細資訊，請參閱[目標類型和類別概述](./destination-types.md)。
+如需詳細資訊，請參閱 [目的地類型與類別概觀](./destination-types.md).
 
 ## 目的地和存取控制 {#access-controls}
 
-Platform中的目的地功能可與Adobe Experience Platform存取控制權限搭配使用。 您可以檢視、管理和啟用目的地，視使用者的權限層級而定。 如需個別權限的相關資訊，請參閱Adobe Experience Platform中的[存取控制項](../access-control/home.md)，然後向下捲動至頁面底部。
+Platform中的目的地功能可與Adobe Experience Platform存取控制權限搭配使用。 您可以檢視、管理和啟用目的地，視使用者的權限層級而定。 如需個別權限的相關資訊，請參閱 [Adobe Experience Platform中的存取控制](../access-control/home.md) 並向下捲動至頁面底部。
 
-有關訪問控制的詳細資訊，請參閱[訪問控制使用手冊](../access-control/ui/overview.md)。
+如需存取控制的詳細資訊，請參閱 [存取控制使用手冊](../access-control/ui/overview.md).
 
-## [!DNL Data Governance] 對目的地啟用資料的限制 {#data-governance}
+## 針對將資料啟用至目的地的資料控管限制 {#data-governance}
 
 Platform目的地的資料控管會透過下列方式強制執行：
 
-* *您可* 以在建立目標工作流程中選取的行銷動作；
-* *限制包含* 特定使用標籤的資料啟動至具有特定行銷動作的目的地的資料使用政策。
+* *行銷動作* （在「建立目標」工作流程中選取）;
+* *資料使用原則* 限制包含特定使用標籤的資料啟動至具有特定行銷動作的目的地。
 
-如需[行銷動作](../data-governance/policies/overview.md)和[解決資料原則違反](../data-governance/enforcement/auto-enforcement.md)的詳細資訊，請參閱Platform檔案中的[!DNL Data Governance]。
+如需詳細資訊，請參閱Platform中的資料控管檔案 [行銷動作](../data-governance/policies/overview.md) 和 [解決資料策略違規](../data-governance/enforcement/auto-enforcement.md).
 
 如需在建立目標工作流程中選取行銷動作的詳細資訊，請參閱下列頁面，了解Platform中不同目標類型的資訊：
 

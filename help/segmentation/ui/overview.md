@@ -5,9 +5,9 @@ title: 區段服務UI指南
 topic-legacy: ui guide
 description: Adobe Experience Platform區段服務提供建立和管理區段定義的使用者介面。
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: 8325ae6fd7d0013979e80d56eccd05b6ed6f5108
+source-git-commit: 03e7863f38b882a2fbf6ba0de1755e1924e8e228
 workflow-type: tm+mt
-source-wordcount: '1691'
+source-wordcount: '1693'
 ht-degree: 0%
 
 ---
@@ -199,7 +199,7 @@ ht-degree: 0%
 >
 >只有當您建立已指派給目的地的區段時，才會套用原則違規。
 
-建立完區段後，Adobe Experience Platform資料控管會分析區段，以確保區段內沒有違反政策的情況。 請參閱 [[!DNL Data Governance] 概述](../../data-governance/home.md) 以取得更多資訊。
+建立完區段後，Adobe Experience Platform資料控管會分析區段，以確保區段內沒有違反政策的情況。 請參閱 [資料控管概觀](../../data-governance/home.md) 以取得更多資訊。
 
 ![](../images/ui/overview/segment-dule-policy-violations.png)
 

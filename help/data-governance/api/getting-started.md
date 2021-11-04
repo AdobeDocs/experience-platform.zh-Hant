@@ -1,50 +1,49 @@
 ---
-keywords: Experience Platform;home；熱門主題；DULE;dule
+keywords: Experience Platform；首頁；熱門主題；DULE;DULE
 solution: Experience Platform
-title: 原則服務API快速入門
+title: 策略服務API快速入門
 topic-legacy: developer guide
-description: Policy Service API可讓您建立和管理與Adobe Experience Platform資料治理相關的各種資源。 本檔案提供您在嘗試呼叫Policy Service API之前，需要瞭解的核心概念的簡介。
+description: 原則服務API可讓您建立及管理與Adobe Experience Platform資料控管相關的各種資源。 本文檔介紹了在嘗試調用策略服務API之前需要知道的核心概念。
 exl-id: 5539976c-8433-45af-a147-2ab82ae308b2
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 03e7863f38b882a2fbf6ba0de1755e1924e8e228
 workflow-type: tm+mt
-source-wordcount: '438'
+source-wordcount: '444'
 ht-degree: 0%
 
 ---
 
-# [!DNL Policy Service] API快速入門
+# 開始使用 [!DNL Policy Service] API
 
-[!DNL Policy Service] API可讓您建立並管理與Adobe Experience Platform[!DNL Data Governance]相關的各種資源。 本檔案提供您在嘗試呼叫[!DNL Policy Service] API之前，需要瞭解的核心概念的簡介。
+此 [!DNL Policy Service] API可讓您建立及管理Adobe Experience Platform資料控管的各種資源。 本檔案簡介您在嘗試呼叫 [!DNL Policy Service] API。
 
 ## 先決條件
 
-使用開發人員指南需要對使用「資料治理」功能時涉及的各種[!DNL Experience Platform]服務有良好的瞭解。 在開始使用[!DNL Policy Service API]之前，請先閱讀以下服務的說明檔案：
+使用開發人員指南時，您必須妥善了解 [!DNL Experience Platform] 與資料控管功能搭配使用的服務。 開始使用之前 [!DNL Policy Service API]，請查閱以下服務的檔案：
 
-* [[!DNL Data Governance]](../home.md):強制執行資料使 [!DNL Experience Platform] 用合規性的框架。
-* [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md):組織客戶體驗資 [!DNL Experience Platform] 料的標準化架構。
-* [[!DNL Real-time Customer Profile]](../../profile/home.md):根據來自多個來源的匯整資料，提供統一、即時的消費者個人檔案。
-* [沙盒](../../sandboxes/home.md): [!DNL Experience Platform] 提供虛擬沙盒，可將單一執行個體分 [!DNL Platform] 割為不同的虛擬環境，以協助開發和發展數位體驗應用程式。
+* [資料控管](../home.md):框架 [!DNL Experience Platform] 強制資料使用合規性。
+* [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md):標準化框架 [!DNL Experience Platform] 組織客戶體驗資料。
+* [[!DNL Real-time Customer Profile]](../../profile/home.md):根據來自多個來源的匯總資料，提供統一的即時消費者設定檔。
+* [沙箱](../../sandboxes/home.md): [!DNL Experience Platform] 提供可分割單一沙箱的虛擬沙箱 [!DNL Platform] 例項放入個別的虛擬環境，以協助開發及改進數位體驗應用程式。
 
 ## 讀取範例API呼叫
 
-[!DNL Policy Service] API檔案提供範例API呼叫，以示範如何格式化您的請求。 這些包括路徑、必要標題和正確格式化的請求負載。 也提供API回應中傳回的範例JSON。 如需範例API呼叫檔案中所用慣例的詳細資訊，請參閱[!DNL Experience Platform]疑難排解指南中[如何讀取範例API呼叫](../../landing/troubleshooting.md#how-do-i-format-an-api-request)一節。
+此 [!DNL Policy Service] API檔案提供範例API呼叫，以示範如何設定請求格式。 這些功能包括路徑、必要標題和格式正確的請求裝載。 也提供API回應中傳回的範例JSON。 如需範例API呼叫檔案中所使用慣例的相關資訊，請參閱 [如何閱讀API呼叫範例](../../landing/troubleshooting.md#how-do-i-format-an-api-request) 在 [!DNL Experience Platform] 疑難排解指南。
 
-## 必要的標題
+## 必要標題
 
-API檔案也要求您完成[驗證教學課程](https://www.adobe.com/go/platform-api-authentication-en)，才能成功呼叫[!DNL Platform]端點。 完成驗證教學課程可為[!DNL Experience Platform] API呼叫中的每個必要標題提供值，如下所示：
+API檔案也要求您完成 [驗證教學課程](https://www.adobe.com/go/platform-api-authentication-en) 以便成功呼叫 [!DNL Platform] 端點。 完成驗證教學課程，可提供 [!DNL Experience Platform] API呼叫，如下所示：
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
 * `x-gw-ims-org-id: {IMS_ORG}`
 
-[!DNL Experience Platform]中的所有資源（包括屬於[!DNL Data Governance]的資源）都隔離到特定的虛擬沙盒。 對[!DNL Platform] API的所有請求都需要一個標題，該標題指定要在中執行操作的沙盒的名稱：
+中的所有資源 [!DNL Experience Platform]，包括屬於資料控管的，會隔離至特定的虛擬沙箱。 所有請求 [!DNL Platform] API需要標頭，以指定要在中執行操作的沙箱名稱：
 
 * `x-sandbox-name: {SANDBOX_NAME}`
 
 >[!NOTE]
 >
->如需[!DNL Platform]中沙盒的詳細資訊，請參閱[沙盒概述檔案](../../sandboxes/home.md)。
+>如需中沙箱的詳細資訊，請參閱 [!DNL Platform]，請參閱 [沙箱概述檔案](../../sandboxes/home.md).
 
 所有包含裝載(POST、PUT、PATCH)的請求都需要額外的標題：
 
@@ -52,10 +51,10 @@ API檔案也要求您完成[驗證教學課程](https://www.adobe.com/go/platfor
 
 ## 核心與自訂資源
 
-在[!DNL Policy Service] API中，所有原則和行銷動作都稱為`core`或`custom`資源。
+在 [!DNL Policy Service] API、所有原則和行銷動作皆可稱為 `core` 或 `custom` 資源。
 
-`core` 資源是由Adobe定義和維護的資源，而 `custom` 資源則是由您的組織建立和維護的資源，因此它們是唯一的，僅對您的IMS組織可見。因此，清單和查閱操作(`GET`)是`core`資源所允許的唯一操作，而清單、查閱和更新操作（`POST`、`PUT`、`PATCH`和`DELETE`）可用於`custom`資源。
+`core` 資源是指由Adobe定義和維護的資源，然而 `custom` 資源是由您的組織建立和維護的資源，因此只有您的IMS組織可看見。 因此，請列出和查閱操作(`GET`)是 `core` 資源，則列出、查詢和更新操作(`POST`, `PUT`, `PATCH`，和 `DELETE`)可供 `custom` 資源。
 
 ## 後續步驟
 
-若要開始使用Policy Service API進行呼叫，請選取其中一個可用的端點指南。
+要開始使用策略服務API進行調用，請選擇可用的終結點指南之一。
