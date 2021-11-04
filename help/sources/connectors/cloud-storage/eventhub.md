@@ -5,9 +5,9 @@ title: Azure事件集線器源連接器概述
 topic-legacy: overview
 description: 了解如何使用API或使用者介面將Azure事件中心連線至Adobe Experience Platform。
 exl-id: b4d4bc7f-2241-482d-a5c2-4422c31705bf
-source-git-commit: 481f72c5c630f6dbcbbfd3eee11c91787e780f3f
+source-git-commit: cda9ca9c560b1af2147c00ea4e89dff09b7428ba
 workflow-type: tm+mt
-source-wordcount: '174'
+source-wordcount: '326'
 ht-degree: 0%
 
 ---
@@ -15,20 +15,89 @@ ht-degree: 0%
 
 # [!DNL Azure Event Hubs] 連接器
 
-Adobe Experience Platform為AWS、[!DNL Google Cloud Platform]和[!DNL Azure]等雲端提供者提供原生連線。 您可以將資料從這些系統帶入[!DNL Platform]。
+Adobe Experience Platform為AWS等雲端提供者提供原生連線， [!DNL Google Cloud Platform]，和 [!DNL Azure]. 您可以將這些系統的資料匯入Platform。
 
-雲端儲存來源可將您自己的資料帶入[!DNL Platform]，而無需下載、格式化或上傳。 擷取的資料可格式化為XDM JSON、XDM Parquet或分隔字元。 流程的每個步驟都整合至來源工作流程中。 [!DNL Platform] 可讓您即時從匯 [!DNL Azure Event Hubs] 入資料。
+雲端儲存來源可將您自己的資料匯入Platform，而無須下載、格式化或上傳。 擷取的資料可格式化為XDM JSON、XDM Parquet或分隔字元。 流程的每個步驟都整合至來源工作流程中。 Platform可讓您將資料 [!DNL Event Hubs] 即時。
 
-## 將[!DNL Azure Event Hubs]連接到[!DNL Platform]
+## 使用虛擬網路連接到 [!DNL Event Hubs] 到平台
 
-以下檔案提供如何使用API或使用者介面將[!DNL Azure Event Hubs]連線至[!DNL Platform]的資訊：
+您可以設定要連接的虛擬網路 [!DNL Event Hubs] 啟用防火牆測量時傳送至Platform。 要設定虛擬網路，請轉到此 [[!DNL Event Hubs] 網路規則集文檔](https://docs.microsoft.com/en-us/rest/api/eventhub/preview/namespaces-network-rule-set/create-or-update-network-rule-set#code-try-0) 然後選取 **試試看** 從REST API面板。 接下來，驗證您的 [!DNL Azure] 帳戶，然後選取 [!DNL Event Hubs] 您要帶入Platform的命名空間、資源群組和訂閱。
+
+設定後，請更新 **要求內文** 從下列清單，使用與您的網路地區對應的JSON:
+
+>[!TIP]
+>
+>您必須備份現有的防火牆IP篩選規則，因為這些規則將在此呼叫後刪除。
+
+### VA7:北美
+
+```json
+{
+  "properties": {
+    "defaultAction": "Deny",
+    "virtualNetworkRules": [
+      {
+        "subnet": {
+          "id": "/subscriptions/93f21779-b1fd-49ee-8547-2cdbc979a44f/resourceGroups/ethos_12_prod_va7_network/providers/Microsoft.Network/virtualNetworks/ethos_12_prod_va7_network_10_19_144_0_22/subnets/ethos_12_prod_va7_network_10_19_144_0_22"
+        },
+        "ignoreMissingVnetServiceEndpoint": true
+      },
+    ],
+    "ipRules": []
+  }
+}
+```
+
+### NLD2:歐洲
+
+```json
+{
+  "properties": {
+    "defaultAction": "Deny",
+    "virtualNetworkRules": [
+      {
+        "subnet": {
+          "id": "/subscriptions/40bde086-46ad-44c3-afba-c306f54b64ec/resourceGroups/ethos_12_prod_va7_network/providers/Microsoft.Network/virtualNetworks/ethos_12_prod_nld2_network_10_20_40_0_23/subnets/ethos_12_prod_nld2_network_10_20_40_0_23"
+        },
+        "ignoreMissingVnetServiceEndpoint": true
+      },
+    ],
+    "ipRules": []
+  }
+}
+```
+
+### 澳大利亞5:澳大利亞
+
+```json
+{
+  "properties": {
+    "defaultAction": "Deny",
+    "virtualNetworkRules": [
+      {
+        "subnet": {
+          "id": "/subscriptions/1618ef18-9edc-48bf-88dd-61cc979629b5/resourceGroups/ethos_12_prod_aus5_network/providers/Microsoft.Network/virtualNetworks/ethos_12_prod_aus5_network_10_21_116_0_22/subnets/ethos_12_prod_aus5_network_10_21_116_0_22"
+        },
+        "ignoreMissingVnetServiceEndpoint": true
+      },
+    ],
+    "ipRules": []
+  }
+}
+```
+
+請參閱下列內容 [[!DNL Event Hubs] 檔案](https://docs.microsoft.com/en-us/rest/api/eventhub/preview/namespaces-network-rule-set/create-or-update-network-rule-set) ，了解有關網路規則集的詳細資訊。
+
+## Connect [!DNL Event Hubs] 到平台
+
+以下檔案提供如何連線的資訊 [!DNL Event Hubs] 若要使用API或使用者介面來建立平台：
 
 ### 使用API
 
-- [使用流服務API建立Azure事件集線器源連接](../../tutorials/api/create/cloud-storage/eventhub.md)
+- [使用流服務API建立事件中心源連接](../../tutorials/api/create/cloud-storage/eventhub.md)
 - [使用流量服務API收集串流資料](../../tutorials/api/collect/streaming.md)
 
 ### 使用UI
 
-- [在UI中建立Azure事件中心源連接](../../tutorials/ui/create/cloud-storage/eventhub.md)
+- [在UI中建立事件中心源連接](../../tutorials/ui/create/cloud-storage/eventhub.md)
 - [在UI中為雲儲存連接配置資料流](../../tutorials/ui/dataflow/streaming/cloud-storage-streaming.md)
