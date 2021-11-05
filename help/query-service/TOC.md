@@ -4,10 +4,10 @@ user-guide-title: Adobe Experience Platform 查詢服務說明
 breadcrumb-title: 查詢服務指南
 user-guide-description: 使用標準 SQL 在 Platform Data Lake 中查詢資料。
 feature: Queries
-source-git-commit: 6d1ece1e7920e8c182c84bf8b57bdb6c3f853a60
+source-git-commit: a41efa075d0fff5537eaf055635e346ac5ce677b
 workflow-type: tm+mt
-source-wordcount: '139'
-ht-degree: 17%
+source-wordcount: '141'
+ht-degree: 18%
 
 ---
 
@@ -35,14 +35,15 @@ ht-degree: 17%
    - [範例Adobe Analytics查詢](best-practices/adobe-analytics.md)
    - [範例Adobe Target查詢](best-practices/adobe-target.md)
    - [匿名塊查詢示例](best-practices/anonymous-block.md)
-- SQL引用{#sql}
+   - [增量載入](best-practices/incremental-load.md)
+- SQL參考 {#sql}
    - [SQL概述](sql/overview.md)
    - [SQL語法](sql/syntax.md)
    - [Adobe定義的函式](sql/adobe-defined-functions.md)
    - [Spark SQL函式](sql/spark-sql-functions.md)
    - [元資料命令](sql/metadata.md)
    - [準備的陳述](sql/prepared-statements.md)
-- 將客戶端連接到查詢服務{#clients}
+- 將客戶端連接到查詢服務 {#clients}
    - [用戶端連線概觀](clients/overview.md)
    - [Aqua Data Studio](clients/aqua-data-studio.md)
    - [Looker](clients/looker.md)
