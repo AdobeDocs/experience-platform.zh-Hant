@@ -4,18 +4,18 @@ title: 授權使用控制面板
 description: Adobe Experience Platform提供控制面板，讓您透過該控制面板檢視貴組織的授權使用情況重要資訊。
 type: Documentation
 exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
-source-git-commit: 47c4113d45b0101a761fa7d703013609e8729dbb
+source-git-commit: 87b6e12b33c49bdae49be45ce10f92b309a1e98e
 workflow-type: tm+mt
-source-wordcount: '926'
-ht-degree: 0%
+source-wordcount: '837'
+ht-degree: 1%
 
 ---
 
-# 許可證使用儀表板{#license-usage-dashboard}
+# 授權使用控制面板 {#license-usage-dashboard}
 
 Adobe Experience Platform使用者介面(UI)提供控制面板，您可透過控制面板檢視有關組織授權使用的重要資訊，如每日快照中所擷取。 本指南概述如何存取和使用UI中的授權使用情況控制面板，並提供控制面板中所顯示視覺效果的詳細資訊。
 
-如需Platform UI的一般概觀，請造訪[Experience PlatformUI指南](../../landing/ui-guide.md)。
+如需Platform UI的一般概觀，請造訪 [Experience PlatformUI指南](../../landing/ui-guide.md).
 
 ## 許可證使用儀表板資料
 
@@ -27,19 +27,19 @@ Adobe Experience Platform使用者介面(UI)提供控制面板，您可透過控
 
 ## 探索授權使用控制面板
 
-若要導覽至Platform UI中的授權使用量控制面板，請在左側邊欄中選取&#x200B;**[!UICONTROL 授權使用量]**。 這會開啟顯示控制面板的&#x200B;**[!UICONTROL 概述]**&#x200B;標籤。
+若要導覽至Platform UI中的授權使用控制面板，請選取 **[!UICONTROL 授權使用]** 在左側邊欄。 這會開啟 **[!UICONTROL 概述]** 標籤來顯示控制面板。
 
 >[!NOTE]
 >
->預設不會啟用授權使用控制面板。 必須授予使用者「檢視授權使用量控制面板」權限，才能檢視控制面板。 有關授予訪問權限以查看許可證使用控制面板的步驟，請參閱[控制面板權限指南](../permissions.md)。
+>預設不會啟用授權使用控制面板。 必須授予使用者「檢視授權使用量控制面板」權限，才能檢視控制面板。 有關授予訪問權限以查看許可證使用控制面板的步驟，請參閱 [控制面板權限指南](../permissions.md).
 
 ![](../images/license-usage/dashboard-overview.png)
 
 ### 選取沙箱
 
-若要選擇要在控制面板中檢視的沙箱，請選取[!UICONTROL Production]或[!UICONTROL Development]。 選取的沙箱會以沙箱名稱旁的選項按鈕指出。
+若要選擇要在控制面板中檢視的沙箱，請選取 [!UICONTROL 生產] 或 [!UICONTROL 開發]. 選取的沙箱會以沙箱名稱旁的選項按鈕指出。
 
-相同類型的所有沙箱的耗用量報表都是累計的。 換句話說，選取[!UICONTROL Production]或[!UICONTROL Development]分別為所有生產或開發沙箱提供耗用量報表。
+相同類型的所有沙箱的耗用量報表都是累計的。 換句話說，選取 [!UICONTROL 生產] 或 [!UICONTROL 開發] 分別為所有生產或開發沙箱提供耗用量報表。
 
 ![](../images/license-usage/select-sandbox.png)
 
@@ -58,13 +58,13 @@ Adobe Experience Platform使用者介面(UI)提供控制面板，您可透過控
 
 ![](../images/license-usage/select-date-range.png)
 
-您也可以選取&#x200B;**[!UICONTROL 自訂日期]**&#x200B;以選擇顯示的時段。
+您也可以選取 **[!UICONTROL 自訂日期]** 來選擇顯示的時段。
 
 ![](../images/license-usage/select-custom-date.png)
 
 ## 介面工具集
 
-授權使用控制面板由Widget組成，Widget會顯示唯讀量度，提供貴組織授權使用的重要資訊。 可見的量度取決於貴組織的特定授權（如需詳細資訊，請參閱[可用量度](#available-metrics)區段）。
+授權使用控制面板由Widget組成，Widget會顯示唯讀量度，提供貴組織授權使用的重要資訊。 可見的量度取決於貴組織的特定授權(請參閱 [可用量度](#available-metrics) 一節以取得詳細資訊)。
 
 每個Widget都會顯示一個折線圖，比較貴組織的實際數量與貴組織授權時可用的總數，並提供總使用量的百分比。
 
@@ -72,20 +72,12 @@ Adobe Experience Platform使用者介面(UI)提供控制面板，您可透過控
 
 ## 可用量度
 
-授權使用控制面板會報告四個關鍵量度，並在後續版本中新增更多量度。 可用量度列於下方。
-
->[!NOTE]
->
->目前有三個可用量度處於測試狀態。
+授權使用控制面板會報告四個關鍵量度，並在後續版本中新增更多量度。 可用的量度包括：
 
 * [!UICONTROL 可定址對象]
-* [!UICONTROL 平均設定檔豐富度] （測試版）
-* [!UICONTROL 每個區段掃描的資料比率] （測試版）
-* [!UICONTROL 總消耗儲存] （測試版）
-
->[!WARNING]
->
->[!UICONTROL 總消耗儲存量]量度的已知限制：刪除批資料時，該批資料會處於軟刪除狀態，為期7天，以支援資料恢復使用案例。 7天後，批次會移至硬刪除狀態。 在批處於硬刪除狀態之前，報告已消耗的儲存總量不會反映趨勢圖的任何更改。 此問題將在未來的版本中解決。
+* [!UICONTROL 平均設定檔豐富度]
+* [!UICONTROL 每個細分比例的掃描資料]
+* [!UICONTROL 總消耗儲存]
 
 這些量度的可用性和每個量度的特定定義會因貴組織已購買的授權而異。 如需每個量度的詳細定義，請參閱適當的產品說明檔案：
 
@@ -105,4 +97,4 @@ Adobe Experience Platform使用者介面(UI)提供控制面板，您可透過控
 
 閱讀本檔案後，您可以找到授權使用控制面板，並選取要檢視的沙箱。 您也可以根據組織已購買的授權，找到有關組織可用量度的詳細資訊。
 
-若要進一步了解Experience PlatformUI中的其他可用功能，請參閱[平台UI指南](../../landing/ui-guide.md)。
+若要進一步了解Experience PlatformUI中的其他可用功能，請參閱 [Platform UI指南](../../landing/ui-guide.md).
