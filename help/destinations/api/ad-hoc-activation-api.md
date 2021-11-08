@@ -1,8 +1,8 @@
 ---
 keywords: Experience Platform；目的地api；臨機啟動；啟動區段臨機
 solution: Experience Platform
-title: (Beta) Activate audience segments to batch destinations via the ad-hoc activation API
-description: This article illustrates the end-to-end workflow for activating audience segments via the ad-hoc activation API, including the segmentation jobs that take place before activation.
+title: （測試版）透過臨機啟動API啟動對象區段以批次目的地
+description: 本文說明透過臨機啟動API來啟動對象區段的端對端工作流程，包括啟動前發生的區段工作。
 topic-legacy: tutorial
 type: Tutorial
 source-git-commit: 749fa5dc1e8291382408d9b1a0391c4c7f2b2a46
@@ -13,7 +13,7 @@ ht-degree: 2%
 ---
 
 
-# (Beta) Activate audience segments to batch destinations via the ad-hoc activation API
+# （測試版）透過臨機啟動API啟動對象區段以批次目的地
 
 >[!IMPORTANT]
 >
@@ -47,24 +47,24 @@ ht-degree: 2%
 IT經理可以使用Experience Platform臨機啟動API，依需求匯出區段，以便測試其與Adobe Experience Platform的自訂整合，並確保一切正常運作。
 
 
-## Guardrails {#guardrails}
+## 護欄 {#guardrails}
 
-Keep in mind the following guardrails when using the ad-hoc activation API.
+使用臨機啟動API時，請記住下列護欄。
 
-* Currently, each ad-hoc activation job can activate up to 20 segments. 嘗試啟動每個作業超過20個區段會導致作業失敗。 此行為在未來版本中可能會有所變更。
+* 目前，每個臨機啟動工作最多可啟動20個區段。 嘗試啟動每個作業超過20個區段會導致作業失敗。 此行為在未來版本中可能會有所變更。
 * 臨機啟動作業無法與已排程的同時執行 [區段匯出作業](../../segmentation/api/export-jobs.md). 在執行臨機啟動工作之前，請確定排程的區段匯出工作已完成。 請參閱 [目標資料流監視](../../dataflows/ui/monitor-destinations.md) 以了解如何監控啟動流程的狀態。 例如，如果激活資料流顯示 **[!UICONTROL 處理]** 狀態，請等待它完成，再執行臨機啟動工作。
 * 每個區段請勿執行多個同時的臨機啟動工作。
 
-## Segmentation considerations {#segmentation-considerations}
+## 區段考量事項 {#segmentation-considerations}
 
-Adobe Experience Platform runs scheduled segmentation jobs once every 24 hours. 臨機啟動API會根據最新的細分結果執行。
+Adobe Experience Platform每24小時執行一次已排程的分段工作。 臨機啟動API會根據最新的細分結果執行。
 
 ## 步驟1:必要條件 {#prerequisites}
 
 呼叫Adobe Experience Platform API之前，請務必符合下列必要條件：
 
 * 您有可存取Adobe Experience Platform的IMS組織帳戶。
-* Your Experience Platform account has the `developer` and `user` roles enabled for the Adobe Experience Platform API product profile. 請連絡您的 [Admin Console](../../access-control/home.md) 管理員來為您的帳戶啟用這些角色。
+* 您的Experience Platform帳戶具有 `developer` 和 `user` 為Adobe Experience Platform API產品設定檔啟用的角色。 請連絡您的 [Admin Console](../../access-control/home.md) 管理員來為您的帳戶啟用這些角色。
 * 你有Adobe ID。 如果您沒有Adobe ID，請前往 [Adobe開發人員控制台](https://developer.adobe.com/console) 並建立新帳戶。
 
 ## 步驟2:收集憑據 {#credentials}
@@ -75,7 +75,7 @@ Adobe Experience Platform runs scheduled segmentation jobs once every 24 hours. 
 * x-api-key: `{API_KEY}`
 * x-gw-ims-org-id: `{IMS_ORG}`
 
-Resources in Experience Platform can be isolated to specific virtual sandboxes. 在向Platform API提出的請求中，您可以指定要執行操作之沙箱的名稱和ID。 這些是選用參數。
+Experience Platform中的資源可以隔離至特定虛擬沙箱。 在向Platform API提出的請求中，您可以指定要執行操作之沙箱的名稱和ID。 這些是選用參數。
 
 * x-sandbox-name: `{SANDBOX_NAME}`
 
@@ -83,7 +83,7 @@ Resources in Experience Platform can be isolated to specific virtual sandboxes. 
 >
 >如需Experience Platform中沙箱的詳細資訊，請參閱 [沙箱概述檔案](../../sandboxes/home.md).
 
-All requests that contain a payload (POST, PUT, PATCH) require an additional media type header:
+所有包含裝載(POST、PUT、PATCH)的請求都需要其他媒體類型標題：
 
 * Content-Type: `application/json`
 
@@ -99,11 +99,11 @@ All requests that contain a payload (POST, PUT, PATCH) require an additional med
 
 為批次目的地設定啟動流程後，排程的分段工作會每24小時自動開始執行。
 
-Before you can run the ad-hoc activation job, you must obtain the ID of the latest segment export job. You must pass this ID in the ad-hoc activation job request.
+您必須先取得最新區段匯出工作的ID，才能執行臨機啟動工作。 您必須在臨機啟動工作請求中傳遞此ID。
 
 請遵循說明 [此處](../../segmentation/api/export-jobs.md#retrieve-list) 以擷取所有區段匯出作業的清單。
 
-In the response, look for the first record that includes the schema property below.
+在回應中，尋找第一個包含下方結構屬性的記錄。
 
 ```
 "schema":{
@@ -116,17 +116,17 @@ In the response, look for the first record that includes the schema property bel
 ![區段匯出作業ID](../assets/api/ad-hoc-activation/segment-export-job-id.png)
 
 
-## Step 5: Run the ad-hoc activation job {#activation-job}
+## 步驟5:執行臨機啟動工作 {#activation-job}
 
-Adobe Experience Platform每24小時執行一次已排程的分段工作。 The ad-hoc activation API runs based on the latest segmentation results.
+Adobe Experience Platform每24小時執行一次已排程的分段工作。 臨機啟動API會根據最新的細分結果執行。
 
-Before running an ad-hoc activation job, make sure the scheduled segment export job for your segments has finished. 請參閱 [目標資料流監視](../../dataflows/ui/monitor-destinations.md) 以了解如何監控啟動流程的狀態。 For example, if your activation dataflow shows a **[!UICONTROL Processing]** status, wait for it to finish before running the ad-hoc activation job.
+在執行臨機啟動工作之前，請確定您區段的已排程區段匯出工作已完成。 請參閱 [目標資料流監視](../../dataflows/ui/monitor-destinations.md) 以了解如何監控啟動流程的狀態。 例如，如果激活資料流顯示 **[!UICONTROL 處理]** 狀態，請等待它完成，再執行臨機啟動工作。
 
 區段匯出工作完成後，您即可觸發啟動。
 
 >[!NOTE]
 >
->目前，每個臨機啟動工作最多可啟動20個區段。 Attempting to activate more than 20 segments per job will cause the job to fail. 此行為在未來版本中可能會有所變更。
+>目前，每個臨機啟動工作最多可啟動20個區段。 嘗試啟動每個作業超過20個區段會導致作業失敗。 此行為在未來版本中可能會有所變更。
 
 ### 請求
 
@@ -158,7 +158,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/disflowprovider/adho
 | -------- | ----------- |
 | <ul><li>`destinationId1`</li><li>`destinationId2`</li></ul> | 您要啟用區段的目的地例項ID。 |
 | <ul><li>`segmentId1`</li><li>`segmentId2`</li><li>`segmentId3`</li></ul> | 您要啟用至所選目的地之區段的ID。 |
-| <ul><li>`exportId1`</li></ul> | The ID returned in the response of the [segment export](../../segmentation/api/export-jobs.md#retrieve-list) job. 請參閱 [步驟4:取得最新的區段匯出工作ID](#segment-export-id) 以取得如何找到此ID的指示。 |
+| <ul><li>`exportId1`</li></ul> | 回應中傳回的ID為 [區段匯出](../../segmentation/api/export-jobs.md#retrieve-list) 工作。 請參閱 [步驟4:取得最新的區段匯出工作ID](#segment-export-id) 以取得如何找到此ID的指示。 |
 
 ### 回應
 
@@ -180,9 +180,9 @@ curl -X POST https://platform.adobe.io/data/core/activation/disflowprovider/adho
 | -------- | ----------- |
 | `segment` | 已啟用區段的ID。 |
 | `order` | 已啟動區段的目的地ID。 |
-| `statusURL` | The status URL of the activation flow. 您可以使用 [流量服務API](../../sources/tutorials/api/monitor.md). |
+| `statusURL` | 啟動流程的狀態URL。 您可以使用 [流量服務API](../../sources/tutorials/api/monitor.md). |
 
 
 ## API錯誤處理
 
-Destination SDK API endpoints follow the general Experience Platform API error message principles. 請參閱 [API狀態代碼](https://experienceleague.adobe.com/docs/experience-platform/landing/troubleshooting.html?lang=en#api-status-codes) 和 [請求標題錯誤](https://experienceleague.adobe.com/docs/experience-platform/landing/troubleshooting.html?lang=en#request-header-errors) （位於平台疑難排解指南中）。
+目標SDK API端點會遵循一般Experience PlatformAPI錯誤訊息原則。 請參閱 [API狀態代碼](https://experienceleague.adobe.com/docs/experience-platform/landing/troubleshooting.html?lang=en#api-status-codes) 和 [請求標題錯誤](https://experienceleague.adobe.com/docs/experience-platform/landing/troubleshooting.html?lang=en#request-header-errors) （位於平台疑難排解指南中）。
