@@ -6,7 +6,7 @@ topic-legacy: tutorial
 type: Tutorial
 description: 請依照本教學課程，了解如何使用Adobe Experience Platform區段服務API評估區段並存取區段結果。
 exl-id: 47702819-f5f8-49a8-a35d-034ecac4dd98
-source-git-commit: 8325ae6fd7d0013979e80d56eccd05b6ed6f5108
+source-git-commit: 44644d786842564c76234bacb1f19815741b92ae
 workflow-type: tm+mt
 source-wordcount: '1572'
 ht-degree: 0%
@@ -150,7 +150,7 @@ ht-degree: 0%
 匯出對象需要下列步驟：
 
 - [建立目標資料集](#create-a-target-dataset)  — 建立資料集以保留對象成員。
-- [在資料集中產生對象設定檔](#generate-profiles-for-audience-members)  — 根據區段工作的結果，以XDM個別設定檔填入資料集。
+- [在資料集中產生對象設定檔](#generate-profiles)  — 根據區段工作的結果，以XDM個別設定檔填入資料集。
 - [監視導出進度](#monitor-export-progress)  — 檢查導出過程的當前進度。
 - [讀取受眾資料](#next-steps)  — 擷取代表您對象成員的產生XDM個別設定檔。
 
@@ -163,9 +163,9 @@ ht-degree: 0%
 建立必要資料集的方式有兩種：
 
 - **使用API:** 本教學課程中後續的步驟將概述如何建立參考資料集 [!DNL XDM Individual Profile Union Schema] 使用 [!DNL Catalog] API。
-- **使用UI:** 若要使用 [!DNL Adobe Experience Platform] 使用者介面來建立參考聯合結構的資料集，請依照 [UI教學課程](../ui/overview.md) 接著，返回本教學課程以繼續進行 [產生對象設定檔](#generate-xdm-profiles-for-audience-members).
+- **使用UI:** 若要使用 [!DNL Adobe Experience Platform] 使用者介面來建立參考聯合結構的資料集，請依照 [UI教學課程](../ui/overview.md) 接著，返回本教學課程以繼續進行 [產生對象設定檔](#generate-profiles).
 
-如果您已有相容的資料集且知道其ID，可以直接繼續進行 [產生對象設定檔](#generate-xdm-profiles-for-audience-members).
+如果您已有相容的資料集且知道其ID，可以直接繼續進行 [產生對象設定檔](#generate-profiles).
 
 **API格式**
 
