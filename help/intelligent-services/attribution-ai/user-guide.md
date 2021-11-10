@@ -5,9 +5,9 @@ title: Attribution AIUI指南
 topic-legacy: User guide
 description: 本檔案可做為與Intelligent Services使用者介面中的Attribution AI互動的指南。
 exl-id: 32e1dd07-31a8-41c4-88df-8893ff773f79
-source-git-commit: c3320f040383980448135371ad9fae583cfca344
+source-git-commit: ca390f8cba05148ba39a57734c5172265dcfa5ce
 workflow-type: tm+mt
-source-wordcount: '1765'
+source-wordcount: '2281'
 ht-degree: 1%
 
 ---
@@ -20,25 +20,25 @@ Attribution AI是Intelligent Services的一部分，是多管道的演算法歸�
 
 ## 建立例項
 
-在[!DNL Adobe Experience Platform] UI中，按一下左側導覽中的&#x200B;**[!UICONTROL 服務]**。 出現&#x200B;**[!UICONTROL 服務]**&#x200B;瀏覽器，並顯示可用的Adobe智慧服務。 在Attribution AI容器中，按一下&#x200B;**[!UICONTROL 開啟]**。
+在 [!DNL Adobe Experience Platform] UI, select **[!UICONTROL 服務]** 的下一頁。 此 **[!UICONTROL 服務]** 瀏覽器隨即顯示，並顯示可用的Adobe智慧服務。 在Attribution AI的容器中，選取 **[!UICONTROL 開啟]**.
 
 ![存取您的執行個體](./images/user-guide/open_Attribution_ai.png)
 
 Attribution AI服務頁面隨即顯示。 此頁面會列出Attribution AI的服務例項，並顯示其相關資訊，包括例項名稱、轉換事件、執行例項的頻率，以及上次更新的狀態。
 
-您可以在&#x200B;**[!UICONTROL 建立例項]**&#x200B;容器右下方找到計分&#x200B;]**的轉換事件總數量度。**[!UICONTROL &#x200B;此量度會追蹤目前日曆年度中，依Attribution AI評分的轉換事件總數，包括所有沙箱環境和任何已刪除的服務例項。
+您可以找到 **[!UICONTROL 計分的轉換事件總數]** 位於 **[!UICONTROL 建立例項]** 容器。 此量度會追蹤目前日曆年度中，依Attribution AI評分的轉換事件總數，包括所有沙箱環境和任何已刪除的服務例項。
 
-![](./images/user-guide/total_conversions.png)
+![總計轉換](./images/user-guide/total_conversions.png)
 
-使用UI右側的控制項，即可編輯、複製及刪除服務例項。 若要顯示這些控制項，請從現有的&#x200B;**[!UICONTROL 服務實例]**&#x200B;中選擇一個實例。 控制項包含下列資訊：
+使用UI右側的控制項，即可編輯、複製及刪除服務例項。 若要顯示這些控制項，請從現有的 **[!UICONTROL 服務實例]**. 控制項包含下列資訊：
 
-- **[!UICONTROL 編輯]**:選擇 **** 「編輯」(Edit)可以修改現有服務實例。您可以編輯例項的名稱、說明、狀態和計分頻率。
-- **[!UICONTROL 原地複製]**:選擇 **** 克隆選定的服務實例。接著，您可以修改工作流程進行微幅調整，並重新命名為新例項。
+- **[!UICONTROL 編輯]**:選取 **[!UICONTROL 編輯]** 可讓您修改現有的服務執行個體。 您可以編輯例項的名稱、說明、狀態和計分頻率。
+- **[!UICONTROL 原地複製]**:選取 **[!UICONTROL 原地複製]** 複製所選服務實例。 接著，您可以修改工作流程進行微幅調整，並重新命名為新例項。
 - **[!UICONTROL 刪除]**:您可以刪除服務例項，包括任何歷史執行。
-- **[!UICONTROL 資料來源]**:此執行個體所使用資料集的連結。
-- **[!UICONTROL 上次執行詳細資料]**:唯有執行失敗時，才會顯示此選項。此處顯示執行失敗原因（例如錯誤代碼）的資訊。
+- **[!UICONTROL 資料來源]**:所使用資料集的連結。 如果Attribution AI使用多個資料集，系統會顯示「多個」，後面接著資料集數量。 選取超連結時，資料集預覽彈出視窗隨即顯示。
+- **[!UICONTROL 上次運行詳細資訊]**:唯有執行失敗時，才會顯示此選項。 此處顯示執行失敗原因（例如錯誤代碼）的資訊。
 
-![](./images/user-guide/side_panel.png)
+![側窗格](./images/user-guide/multiple-datasets-pane.png)
 
 - **[!UICONTROL 轉換事件]**:快速概述針對此執行個體設定的轉換事件。
 - **[!UICONTROL 回顧期間]**:您定義的時間範圍，指出包含轉換事件接觸點前的天數。
@@ -46,85 +46,127 @@ Attribution AI服務頁面隨即顯示。 此頁面會列出Attribution AI的服
 
 ![](./images/user-guide/side_panel_2.png)
 
-選擇&#x200B;**[!UICONTROL 建立實例]**&#x200B;以開始。
+選擇 **[!UICONTROL 建立例項]** 開始。
 
 ![建立例項](./images/user-guide/landing_page.png)
 
-接下來，會顯示Attribution AI的設定頁面，您可在其中提供基本資訊並指定執行個體的資料集。
-
-![設定頁面](./images/user-guide/setup_attribution.png)
-
-### 為例項命名
-
-在&#x200B;**[!UICONTROL 基本資訊]**&#x200B;下，提供服務實例的名稱和可選說明。
+接下來，將顯示Attribution AI的設定頁面，您可在其中提供服務執行個體的名稱和可選說明。
 
 ![命名例項](./images/user-guide/naming_instance.png)
 
-### 選取資料集
+## 選擇資料 {#select-data}
 
-填寫基本資訊後，按一下標示為&#x200B;**選取資料集**&#x200B;的下拉式清單，選取您的資料集。 資料集可用來訓練模型，並對其產生的後續資料評分。 從下拉式選取器中選取資料集時，只會列出與Attribution AI相容且符合Experience Data Model(XDM)結構的資料集。 選取資料集後，按一下右上角的&#x200B;**Next**&#x200B;以繼續前往定義事件頁面。
+<!-- https://www.adobe.com/go/aai-select-data -->
 
->[!TIP]
->
->Adobe Analytics資料集可透過Analytics Source Connector獲得支援。
+根據設計，Attribution AI可以使用Adobe Analytics、體驗事件和消費者體驗事件資料來計算歸因分數。 選取資料集時，僅會列出與Attribution AI相容的資料集。 若要選取資料集，請選取&#x200B;**+**)資料集名稱旁的符號，或選取核取方塊以一次新增多個資料集。 您也可以使用搜尋選項來快速找到您感興趣的資料集。
 
-![設定頁面](./images/user-guide/dataset_selector.png)
+選取您要使用的資料集後，請選取 **[!UICONTROL 新增]** 按鈕，將資料集新增至資料集預覽窗格。
 
-## 定義事件
+![選取資料集](./images/user-guide/select-datasets.png)
 
-定義事件時使用三種不同類型的輸入資料：
+選取資訊圖示 ![資訊圖示](./images/user-guide/info-icon.png) 資料集旁邊會開啟資料集預覽視窗。
 
-- **轉換事件：** 可識別行銷活動影響的業務目標，例如電子商務訂單、店內購買和網站造訪。
-- **回顧期間：** 提供一個時間範圍，指出應包含轉換事件接觸點前的幾天。
-- **接觸點：** 收件者、個人或Cookie層級行銷事件，用於評估轉換的數值或收入型影響。
+![選取和搜尋資料集](./images/user-guide/dataset-preview.png)
 
-### 定義轉換事件 {#define-conversion-events}
+資料集預覽包含上次更新時間、來源結構，以及前10欄的預覽等資料。
 
-若要定義轉換事件，您需要為事件指定名稱，並按一下&#x200B;**Enter Field Name**&#x200B;下拉式選單來選取事件類型。
+### 資料集完整性 {#dataset-completeness}
 
-![是下拉式清單](./images/user-guide/conversion_event_2.png)
+<!-- https://www.adobe.com/go/aai-dataset-completeness -->
 
-選取事件後，新的下拉式清單會顯示在其右側。 第二個下拉式清單可透過使用操作，為您的事件提供更多內容。 對於此轉換事件，會使用預設操作&#x200B;*exists*。
+在資料集預覽中，資料集的完整性百分比值為。 此值提供資料集中有多少欄為空/空的快速快照。 如果資料集包含許多遺失值，而這些值被擷取到其他位置，強烈建議您加入包含遺失值的資料集。
 
 >[!NOTE]
 >
->在您定義事件時，會更新&#x200B;*轉換名稱*&#x200B;底下的字串。
+>資料集完整性是使用Attribution AI的最大培訓期間（一年）計算。 這表示顯示資料集完整性值時，不會考慮超過一年的資料。
+
+![資料集完整性](./images/user-guide/dataset-completeness.png)
+
+### 選取身分 {#identity}
+
+若要讓多個資料集彼此連結，您必須選取身分類型（也稱為「身分命名空間」），以及該命名空間中的身分值。 如果您已在相同命名空間下將多個欄位指派為架構中的身分，所有指派的身分值都會出現在以命名空間為前置的身分下拉式清單中，例如 `EMAIL (personalEmail.address)` 或 `EMAIL (workEmail.address)`.
+
+>[!IMPORTANT]
+>
+>您選取的每個資料集都必須使用相同的身分類型（命名空間）。 身分欄中的身分類型旁會出現綠色勾號，指出資料集相容。 例如，使用Phone命名空間時，以及 `mobilePhone.number` 做為識別碼，其餘資料集的所有識別碼都必須包含並使用Phone命名空間。
+
+要選擇標識，請選擇位於標識列中的帶下划線的值。 此時會顯示「選取身分彈出視窗」。
+
+![選擇相同的命名空間](./images/user-guide/identity-type.png)
+
+如果命名空間中有多個身分可用，請務必為您的使用案例選取正確的身分欄位。 例如，電子郵件命名空間中提供兩個電子郵件身分識別：一個工作電子郵件，另一個是個人電子郵件。 根據使用案例，個人電子郵件更可能填入，且在個別預測中更有用。 這表示您會選取 `EMAIL (personalEmail.address)` 作為您的身份。
+
+![未選擇資料集密鑰](./images/user-guide/select-identity.png)
+
+>[!NOTE]
+>
+> 如果資料集沒有有效的身分類型（命名空間），您必須設定主要身分識別，並使用 [結構編輯器](../../xdm/schema/composition.md#identity). 若要進一步了解命名空間和身分識別，請造訪 [身分識別服務命名空間](../../identity-service/namespaces.md) 檔案。
+
+## 對應媒體頻道和行銷活動欄位 {#aai-mapping}
+
+<!-- https://www.adobe.com/go/aai-mapping -->
+
+選取並新增資料集後， **地圖** 設定步驟隨即顯示。 Attribution AI需要您對應上一步驟中選取之每個資料集的「媒體頻道」欄位。 這是因為若沒有資料集之間的媒體管道對應，衍生自Attribution AI的深入分析可能無法正確顯示，導致分析頁面難以解譯。 雖然只需要媒體管道，但強烈建議您對應一些選用欄位，例如媒體動作、促銷活動名稱、促銷活動群組和促銷活動標籤。 如此可讓Attribution AI提供更清楚的分析和最佳結果。
+
+![映射](./images/user-guide/mapping.png)
+
+## 定義事件 {#define-events}
+
+<!-- https://www.adobe.com/go/aai-define-events -->
+
+定義事件時使用三種不同類型的輸入資料：
+
+- **轉換事件：** 識別行銷活動影響的業務目標，例如電子商務訂單、店內購買和網站造訪。
+- **回顧期間：** 提供時間範圍，指出應包含轉換事件接觸點前的天數。
+- **接觸點：** 收件者、個人或cookie層級行銷事件，用於評估轉換的數值或收入型影響。
+
+### 定義轉換事件 {#define-conversion-events}
+
+若要定義轉換事件，您必須為事件指定名稱，並選取 **輸入欄位名稱** 下拉式功能表。
+
+![是下拉式清單](./images/user-guide/conversion_event_2.png)
+
+選取事件後，新的下拉式清單會顯示在其右側。 第二個下拉式清單可透過使用操作，為您的事件提供更多內容。 對於此轉換事件，為預設操作 *存在* 中所有規則的URL區段。
+
+>[!NOTE]
+>
+>您 *轉換名稱* 會在您定義事件時更新。
 
 ![無下拉式清單](./images/user-guide/conversion_event_1.png)
 
-**[!UICONTROL 新增事件]**&#x200B;和&#x200B;**[!UICONTROL 新增群組]**&#x200B;按鈕可用來進一步定義您的轉換。 根據您正在定義的轉換，您可能需要使用&#x200B;**[!UICONTROL Add event]**&#x200B;和&#x200B;**[!UICONTROL Add group]**&#x200B;按鈕來提供更多上下文。
+此 **[!UICONTROL 新增事件]** 和 **[!UICONTROL 新增群組]** 按鈕可用來進一步定義轉換。 視您定義的轉換而定，您可能需要使用 **[!UICONTROL 新增事件]** 和 **[!UICONTROL 新增群組]** 按鈕提供更多內容。
 
 ![新增事件](./images/user-guide/add_event.png)
 
-按一下「**[!UICONTROL 新增事件]**」會建立其他欄位，這些欄位可使用如上所述的相同方法填入。 這樣會在轉換名稱下方的字串定義中新增AND陳述式。 按一下&#x200B;**x**&#x200B;以移除已新增的事件。
+選取 **[!UICONTROL 新增事件]** 會建立其他欄位，使用上述相同的方法來填入。 這樣會在轉換名稱下方的字串定義中新增AND陳述式。 選取 **x** 移除已新增的事件。
 
 ![新增事件功能表](./images/user-guide/add_event_result.png)
 
-按一下「**[!UICONTROL 新增群組]**」，即可選擇建立與原始欄位不同的其他欄位。 加入群組後，會出現藍色的&#x200B;*And*&#x200B;按鈕。 按一下&#x200B;**And**&#x200B;提供將參數變更為包含「Or」的選項。 「Or」可用來定義多個成功的轉換路徑。 「和」延伸轉換路徑以包含其他條件。
+選取 **[!UICONTROL 新增群組]** 提供可建立與原始欄位不同之其他欄位的選項。 加上組，藍色 *和* 按鈕。 選取 **和** 提供將參數變更為包含「Or」的選項。 「Or」可用來定義多個成功的轉換路徑。 「和」延伸轉換路徑以包含其他條件。
 
 ![使用和](./images/user-guide/and_or.png)
 
-如果需要多個轉換，請按一下「**新增轉換**」以建立新的轉換卡。 您可以重複上述程式來定義多個轉換。
+如果您需要多個轉換，請選取 **新增轉換** 來建立新的轉換卡。 您可以重複上述程式來定義多個轉換。
 
 ![新增轉換](./images/user-guide/add_conversion.png)
 
 ### 定義回顧期間 {#lookback-window}
 
-定義完轉換後，您需要確認回顧期間。 使用方向鍵或按一下預設值(56)，指定您要加入接觸點的轉換事件前幾天。 接觸點會在下一個步驟中定義。
+定義完轉換後，您需要確認回顧期間。 使用方向鍵或選取預設值(56)，指定您要加入接觸點的轉換事件前幾天。 接觸點會在下一個步驟中定義。
 
 ![回顧](./images/user-guide/lookback_window.png)
 
 ### 定義接觸點
 
-定義接觸點會遵循類似於[定義轉換](#define-conversion-events)的工作流程。 起初，您需要為接觸點命名，並從&#x200B;*輸入欄位名稱*&#x200B;下拉式選單中選取接觸點值。 選取後，運算子下拉式清單就會顯示預設值「exists」。 按一下下拉式清單以顯示運算子清單。
+定義接觸點會遵循類似的工作流程， [定義轉換](#define-conversion-events). 起初，您需要為接觸點命名，並從 *輸入欄位名稱* 下拉式功能表。 選取後，運算子下拉式清單就會顯示預設值「exists」。 選取下拉式清單以顯示運算子清單。
 
 ![運算子](./images/user-guide/operators.png)
 
-為此接觸點的目的，請選取&#x200B;**等於**。
+為此接觸點的目的，請選取 **等於**.
 
 ![步驟1](./images/user-guide/touchpoint_step1.png)
 
-選取接觸點的運算子後，即可使用&#x200B;*輸入欄位值*。 *輸入欄位值*&#x200B;的下拉式清單值會根據您先前選取的運算子和接觸點值填入。 如果值未填入下拉式清單中，您可以手動在中輸入該值。 按一下下拉式清單，然後選取&#x200B;**按一下**。
+選取接觸點的運算子後， *輸入欄位值* 已可供使用。 的下拉式清單值 *輸入欄位值* 根據您先前選取的運算子和接觸點值填入。 如果值未填入下拉式清單中，您可以手動在中輸入該值。 選取下拉式清單，然後選取 **按一下**.
 
 >[!NOTE]
 >
@@ -132,45 +174,45 @@ Attribution AI服務頁面隨即顯示。 此頁面會列出Attribution AI的服
 
 ![接觸點下拉式清單](./images/user-guide/touchpoint_dropdown.png)
 
-*新增事件*&#x200B;和&#x200B;*新增群組*&#x200B;按鈕可用來進一步定義您的接觸點。 由於接觸點的周圍性質複雜，單一接觸點有多個事件和群組的現象並不少見。
+此 **新增事件** 和 **新增群組** 按鈕可用來進一步定義接觸點。 由於接觸點的周圍性質複雜，單一接觸點有多個事件和群組的現象並不少見。
 
-按一下後，**新增事件**&#x200B;允許新增其他欄位。 按一下&#x200B;**x**&#x200B;以移除已新增的事件。
+若選取， **新增事件** 允許新增其他欄位。 選取 **x** 移除已新增的事件。
 
 ![新增事件](./images/user-guide/touchpoint_add_event.png)
 
-按一下&#x200B;**新增群組**&#x200B;可讓您選擇建立與原始欄位不同的其他欄位。 加入群組後，會出現藍色的&#x200B;*And*&#x200B;按鈕。 按一下&#x200B;**And**&#x200B;以變更參數，新參數&quot;Or&quot;可用來定義多個成功路徑。 此特定接觸點只有一個成功路徑，因此不需要「Or」。
+選取 **新增群組** 可讓您選擇建立與原始欄位不同的其他欄位。 加上組，藍色 *和* 按鈕。 選擇 **和** 若要變更參數，新參數「Or」可用來定義多個成功路徑。 此特定接觸點只有一個成功路徑，因此不需要「Or」。
 
 ![接觸點概觀](./images/user-guide/add_group_touchpoint.png)
 
 >[!NOTE]
 >
->使用&#x200B;*接觸點名稱*&#x200B;下的字串，快速概述接觸點。 請注意，字串與接觸點的名稱相符。
+>使用下方的字串 *接觸點名稱* 以取得接觸點的快速概觀。 請注意，字串與接觸點的名稱相符。
 
 ![](./images/user-guide/touchpoint_string.png)
 
-您可以按一下「**新增接觸點**」並重複上述程式，以新增其他接觸點。
+您可以選取 **新增接觸點** 並重複上述程式。
 
 ![新增接觸點](./images/user-guide/add_touchpoint.png)
 
-定義完所有必要的接觸點後，向上捲動並按一下右上角的&#x200B;**Next**&#x200B;以繼續執行最後一步。
+定義完所有必要的接觸點後，向上捲動並選取 **下一個** ，以繼續執行最後一個步驟。
 
 ![完成定義](./images/user-guide/define_event_next.png)
 
 ## 高級培訓和評分設定
 
-Attribution AI中的最後一頁是用於設定訓練和分數的&#x200B;**[!UICONTROL Advanced]**&#x200B;頁面。
+Attribution AI中的最後一頁是 **[!UICONTROL 進階]** 用於設定訓練和分數的頁面。
 
 ![進階新頁面](./images/user-guide/advanced_settings.png)
 
 ### 計畫培訓
 
-使用&#x200B;*Schedule*，您可以選取要進行分數的一週中的日期和時間。
+使用 *排程*，您可以選取要進行分數的一週中的日期和時間。
 
-按一下&#x200B;*計分頻率*&#x200B;下的下拉式清單，在每日、每週和每月計分之間進行選擇。 接下來，選擇要進行分數的星期幾。 可選取多天。 第二次按一下某天來取消選取。
+選取下方的下拉式清單 *計分頻率* 以在每日、每週和每月評分之間進行選擇。 接下來，選擇要進行分數的星期幾。 可選取多天。 再次選取當天會取消選取。
 
 ![計畫培訓](./images/user-guide/schedule_training.png)
 
-要更改要進行計分的時間，請按一下時鐘錶徵圖。 在顯示的新覆蓋圖中，輸入要進行計分的時間。 按一下覆蓋圖外部以關閉它。
+要更改要進行計分的時間，請選擇時鐘錶徵圖。 在顯示的新覆蓋圖中，輸入要進行計分的時間。 在覆蓋圖外部選取以關閉它。
 
 >[!NOTE]
 >
@@ -180,7 +222,7 @@ Attribution AI中的最後一頁是用於設定訓練和分數的&#x200B;**[!UIC
 
 ### 其他分數資料集欄（選用）
 
-依預設，會為標準結構中的每個服務例項建立分數資料集。 您可以根據「轉換事件」和「接觸點」設定，選擇新增其他欄至分數資料集輸出。 首先，您可以從輸入資料集中選取欄，接著將滑鼠左鍵按住漢堡圖示上方，即可拖放欄以變更順序。
+依預設，會為標準結構中的每個服務例項建立分數資料集。 您可以根據「轉換事件」和「接觸點」設定，選擇新增其他欄至計分資料集輸出。 首先，您可以從輸入資料集中選取欄，接著將滑鼠左鍵按住漢堡圖示上方，即可拖放欄以變更順序。
 
 ![分數資料集欄加總](./images/user-guide/Add-score-dataset.png)
 
@@ -188,7 +230,7 @@ Attribution AI中的最後一頁是用於設定訓練和分數的&#x200B;**[!UIC
 
 客戶的行為可能因國家/地區和地理區域而大不相同。 對於全球企業而言，使用國家/地區或地區模型可提高歸因準確度。 新增的每個區域都會使用該區域的資料建立新模型。
 
-要定義新區域，請首先按一下&#x200B;**[!UICONTROL Add region]**。 在顯示的容器中，提供地區名稱。 從&#x200B;**[!UICONTROL 輸入欄位名稱]**&#x200B;下拉式清單只填入一個值(&quot;placeContext.geo.countryCode&quot;)。 選取此值。
+要定義新區域，請從選擇 **[!UICONTROL 新增地區]**. 在顯示的容器中，提供地區名稱。 只有一個值(「placeContext.geo.countryCode」)會從 **[!UICONTROL 輸入欄位名稱]** 下拉式清單。 選取此值。
 
 ![在中選擇區域](./images/user-guide/select_region_att.png)
 
@@ -196,11 +238,11 @@ Attribution AI中的最後一頁是用於設定訓練和分數的&#x200B;**[!UIC
 
 ![區域算子](./images/user-guide/region_operators.png)
 
-最後，在&#x200B;**[!UICONTROL 輸入欄位值]**&#x200B;下拉式清單中輸入國家/地區代碼。
+最後，在 **[!UICONTROL 輸入欄位值]** 下拉式清單。
 
 >[!NOTE]
 >
->國家/地區代碼為兩個字元長。 您可以在此處[ISO 3166-1 alpha-2](https://datahub.io/core/country-list)找到完整清單。
+>國家/地區代碼為兩個字元長。 您可以在此處找到完整清單 [ISO 3166-1alpha-2](https://datahub.io/core/country-list).
 
 ![地區](./images/user-guide/region-based.png)
 
@@ -214,13 +256,13 @@ Attribution AI中的最後一頁是用於設定訓練和分數的&#x200B;**[!UIC
 
 ![培訓窗口](./images/user-guide/training_window.png)
 
-選擇培訓窗口後，按一下右上角的&#x200B;**[!UICONTROL 完成]**。 讓資料有時間處理。 完成後，彈出視窗對話方塊隨即顯示，確認執行個體設定完成。 按一下&#x200B;**[!UICONTROL Ok]**&#x200B;以重新導向至&#x200B;**[!UICONTROL 服務例項]**&#x200B;頁面，您可在其中看到您的服務例項。
+選擇培訓窗口後，選擇 **[!UICONTROL 完成]** 在右上角。 讓資料有時間處理。 完成後，畫面會顯示彈出式對話方塊，確認執行個體設定完成。 選擇 **[!UICONTROL 確定]** 被重定向到 **[!UICONTROL 服務實例]** 頁面，您可在其中看到您的服務例項。
 
 ![安裝完成](./images/user-guide/instance_setup_complete.png)
 
 ## 後續步驟
 
-依照本教學課程，您已成功在Attribution AI中建立服務例項。 執行個體完成計分（最多允許24小時）後，您就可以[探索Attribution AI見解](./discover-insights.md)了。 此外，如果您想下載計分結果，請訪問[下載計分](./download-scores.md)文檔。
+依照本教學課程，您已成功在Attribution AI中建立服務例項。 執行個體完成計分（最多允許24小時）後，您就可以 [探索Attribution AI分析](./discover-insights.md). 此外，如果您想要下載計分結果，請造訪 [下載分數](./download-scores.md) 檔案。
 
 ## 其他資源
 
