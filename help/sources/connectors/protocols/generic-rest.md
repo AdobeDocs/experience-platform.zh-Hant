@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 一般REST API來源連接器概觀
 topic-legacy: overview
 description: 了解如何使用API或使用者介面將一般REST API連線至Adobe Experience Platform。
-source-git-commit: 127c2764b8414ee9b59d49ec04cbbd28269ca496
+source-git-commit: 0c7bb3d6f0a1bc4154bff0e4d79cc4c3c0b0ab71
 workflow-type: tm+mt
-source-wordcount: '261'
+source-wordcount: '235'
 ht-degree: 0%
 
 ---
@@ -34,10 +34,3 @@ Platform支援從通訊協定應用程式擷取資料，包括 [!DNL Generic RES
 - [使用流量服務API建立一般REST API基本連線](../../tutorials/api/create/protocols/generic-rest.md)
 - [使用流量服務API探索通訊協定來源的資料結構和內容](../../tutorials/api/explore/protocols.md)
 - [使用流服務API為協定源建立資料流](../../tutorials/api/collect/protocols.md)
-
-## Connect [!DNL Generic REST API] to [!DNL Platform] 使用UI
-
-- [在UI中建立一般REST API來源連線](../../tutorials/ui/create/protocols/generic-rest.md)
-- [在UI中為協定源連接建立資料流](../../tutorials/ui/dataflow/protocols.md)
-
-
