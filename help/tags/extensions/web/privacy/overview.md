@@ -1,10 +1,11 @@
 ---
 title: Adobe隱私權擴充功能概觀
 description: 了解Adobe Experience Platform中的Adobe隱私權標籤擴充功能。
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+exl-id: 8401861e-93ad-48eb-8796-b26ed8963c32
+source-git-commit: 285e7ff1a1cd6c9790c526ca27ffafc60e94218d
 workflow-type: tm+mt
-source-wordcount: '534'
-ht-degree: 75%
+source-wordcount: '909'
+ht-degree: 5%
 
 ---
 
@@ -12,98 +13,102 @@ ht-degree: 75%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch在Adobe Experience Platform中已重新命名為一套資料收集技術。 因此，產品檔案中已推出數個術語變更。 有關術語更改的綜合參考，請參閱以下[document](../../../term-updates.md)。
+>Adobe Experience Platform Launch在Adobe Experience Platform中已重新命名為一套資料收集技術。 因此，所有產品文件中出現了幾項術語變更。 如需術語變更的彙整參考資料，請參閱以下[文件](../../../term-updates.md)。
 
-Adobe 隱私權擴充功能能夠收集和/或移除由 Adobe 解決方案指派給使用者的使用者 ID。
+「Adobe隱私權」標籤擴充功能可讓您透過用戶端裝置上的Adobe解決方案，收集和移除指派給使用者的使用者ID。 接著，收集的ID便可傳送至 [Adobe Experience Platform Privacy Service](../../../../privacy-service/home.md) 存取或刪除受支援Adobe Experience Cloud應用程式中相關個人的個人資料。
 
-## 在安裝期間設定解決方案
+本指南說明如何在資料收集UI中安裝和設定Adobe隱私權擴充功能。
 
-當您從擴充功能目錄安裝 Adobe 隱私權擴充功能時，系統會提示您選取要更新的解決方案。目前可更新下列解決方案：
+>[!NOTE]
+>
+>如果您偏好不使用標籤來安裝這些功能，請參閱 [隱私權JavaScript程式庫概觀](../../../../privacy-service/js-library.md) 以取得如何使用原始程式碼實作的步驟。
 
-* Analytics (AA)
-* Audience Manager (AAM)
-* Target
-* 訪客服務
-* AdCloud
-* 選取一或多個解決方案，然後選取「更新」。
-* 選取並設定解決方案後，選取「儲存」。Adobe 隱私權擴充功能會新增至您已安裝的擴充功能清單中。
+## 安裝並設定 擴充功能
 
-   各個解決方案的選項如下所述。
+在資料收集UI中，選取 **[!UICONTROL 擴充功能]** 在左側導覽器中，後面是 **[!UICONTROL 目錄]** 標籤。 使用搜尋列來縮小可用擴充功能的清單，直到您找到Adobe隱私權為止。 選擇 **[!UICONTROL 安裝]** 繼續。
 
-### Analytics
+![安裝擴充功能](../../../images/extensions/privacy/install.png)
 
-![](../../../images/ext-privacy-aa.jpg)
+下一個畫面可讓您設定要擴充功能從中收集ID的來源和解決方案。 擴充功能支援下列解決方案：
 
-依預設，您必須輸入字串或選取資料元素，才能提供報表套裝。
+* Adobe Analytics(AA)
+* Adobe Audience Manager(AAM)
+* Adobe Target
+* Adobe Experience Cloud Identity Service（訪客或ECID）
+* Adobe Advertising Cloud(AdCloud)
 
-要配置其他項目，請選擇&#x200B;**[!UICONTROL 選擇項目]**，選擇要配置的項目，然後選擇&#x200B;**[!UICONTROL 添加]**&#x200B;並輸入請求的參數或資料元素。
+選取一或多個解決方案，然後選取 **[!UICONTROL 更新]**.
 
-### Audience Manager
+![選擇解決方案](../../../images/extensions/privacy/select-solutions.png)
 
-![](../../../images/ext-privacy-aam.jpg)
+畫面會更新，根據您選取的解決方案顯示所需設定參數的輸入。
 
-選擇&#x200B;**[!UICONTROL 選擇項目]**，選擇要配置的項目，然後選擇&#x200B;**[!UICONTROL 添加]**&#x200B;並輸入請求的參數或資料元素。 目前，您只能設定 `aamUUIDCookieName`。
+![必要屬性](../../../images/extensions/privacy/required-properties.png)
 
-### 目標
+您也可以使用下方的下拉式功能表，將其他解決方案專屬參數新增至設定。
 
-![](../../../images/ext-privacy-target.jpg)
+![可選屬性](../../../images/extensions/privacy/optional-properties.png)
 
-輸入 Target 用戶端代碼。
+>[!NOTE]
+>
+>請參閱 [配置參數](../../../../privacy-service/js-library.md#config-params) 在「隱私權JavaScript程式庫」概觀中，取得每個受支援解決方案之已接受設定值的詳細資訊。
 
-### 訪客服務
+完成為所選解決方案新增參數後，請選取 **[!UICONTROL 儲存]** 以儲存設定。
 
-![](../../../images/ext-privacy-visitor.jpg)
+![可選屬性](../../../images/extensions/privacy/save-config.png)
 
-輸入您的 IMS 組織 ID。
+## 使用擴充功能 {#using}
 
-### AdCloud
+Adobe隱私權擴充功能提供三種動作類型，可用於 [規則](../../../ui/managing-resources/rules.md) 當發生特定事件且符合條件時：
 
-![](../../../images/ext-privacy-adcloud.jpg)
+* **[!UICONTROL 擷取身分]**:檢索用戶儲存的身份資訊。
+* **[!UICONTROL 移除身分]**:移除使用者儲存的身分資訊。
+* **[!UICONTROL 擷取然後移除身分]**:檢索用戶儲存的身份資訊，然後刪除。
 
-沒有須為 AdCloud 設定的特定參數。
+對於上述每個動作，您必須提供回呼JavaScript函式，以接受並處理擷取的身分資料作為物件參數。 從這裡，您可以儲存、顯示身分，或將身分傳送至 [Privacy ServiceAPI](../../../../privacy-service/api/overview.md) 如您所需。
 
-## 設定 Adobe 隱私權擴充功能
+使用Adobe隱私權標籤擴充功能時，您必須以資料元素的形式提供必要的回呼函式。 如需如何設定此資料元素的步驟，請參閱下一節。
 
-安裝擴充功能後，您可以將其停用或加以刪除。在已安裝擴充功能的「Adobe隱私權」卡上，選取「**[!UICONTROL 設定]**」，然後選取「**[!UICONTROL 停用]**」或「**[!UICONTROL 解除安裝]**」。
+### 定義資料元素以處理身分
 
-## 動作
+在資料收集UI中，透過選取 **[!UICONTROL 資料元素]** 在左側導覽器中，隨後 **[!UICONTROL 新增資料元素]**. 進入設定畫面後，請選取 **[!UICONTROL 核心]** 擴充功能和 **[!UICONTROL 自訂程式碼]** （適用於資料元素類型）。 從此處，選擇 **[!UICONTROL 開啟編輯器]** 中。
 
-使用 Adobe 隱私權擴充功能設定規則時，可使用下列動作。
+![選取資料元素類型](../../../images/extensions/privacy/data-element-type.png)
 
-### 擷取身分
+在顯示的對話方塊中，定義將處理擷取身分的JavaScript函式。 回呼必須接受單一物件類型引數(`ids` 在以下範例中)。 然後，函式可以視需要處理ID，也可以叫用網站上全域可用的任何變數和函式，以供進一步處理。
 
-當事件和條件符合時，便擷取為訪客所儲存的身分資訊。
+>[!NOTE]
+>
+>如需的結構詳細資訊，請參閱 `ids` 回呼函式應處理的物件，請參閱 [程式碼範例](../../../../privacy-service/js-library.md#samples) 於隱私權JavaScript程式庫的概觀中提供。
 
-輸入資料傳遞目標的 JavaScript 函數名稱。此函數或方法會處理擷取的身分。不論您是儲存、顯示身分，還是將身分傳送至 Adobe GDPR API，都由您控制。
+完成後，請選取 **[!UICONTROL 儲存]**.
 
-### 移除身分
+![定義回呼函式](../../../images/extensions/privacy/define-custom-code.png)
 
-當事件和條件符合時，便移除為訪客所儲存的身分資訊。
+如果您需要不同事件的不同回呼，可以繼續建立其他自訂程式碼資料元素。
 
-輸入資料傳遞目標的 JavaScript 函數名稱。此函數或方法會處理擷取的身分。不論您是儲存、顯示身分，還是將身分傳送至 Adobe GDPR API，都由您控制。
+### 建立具有隱私權動作的規則
 
-### 擷取然後移除身分
+在設定回呼資料元素以處理擷取的ID後，您可以建立規則，每當網站上發生特定事件以及您需要的任何其他條件時，即叫用Adobe隱私權擴充功能。
 
-當事件和條件符合時，便擷取為訪客所儲存的身分資訊，隨後移除此等資訊。
+為規則設定動作時，請選取 **[!UICONTROL Adobe隱私]** ，以取得擴充功能。 針對動作類型，選取 [三函式](#using) 由擴充功能提供。
 
-## 教學課程：設定隱私權擴充功能
+![選擇操作類型](../../../images/extensions/privacy/action-type.png)
 
-以下是如何設定資料元素並搭配隱私權擴充功能使用的簡短範例。
+右側面板會提示您選取要作為動作回撥的資料元素。 選擇資料庫表徵圖(![資料庫表徵圖](../../../images/extensions/privacy/database.png))，然後從清單中選取您先前建立的資料元素。 選擇 **[!UICONTROL 保留變更]** 繼續。
 
-1. 建立資料元素 `privacyFunc`。
+![選取資料元素](../../../images/extensions/privacy/add-data-element.png)
 
-   ```JavaScript
-   window.privacyFunc = function(a,b){
-       console.log(a,b);
-   }
-   return window.privacyFunc
-   ```
+從這裡，您可以繼續設定規則，讓Adobe隱私權動作在您需要的事件和條件下引發。 滿足後，選擇 **[!UICONTROL 儲存]**.
 
-1. 建立規則以使用 Adobe 隱私權擴充功能的動作，在「程式庫負載」(頁面頂端) 上執行。資料元素請選取「`privacyFunc`」。
+![儲存規則](../../../images/extensions/privacy/save-rule.png)
 
-   * **擴充功能：** Adobe 隱私權
-   * **動作類型：**擷取身分
-此類動作會顯示已建立、已移除或未移除的身分。
-   * **名稱：**&#x200B;擷取身分
+您現在可以將規則新增至程式庫，以部署為網站上的組建以供測試。 請參閱 [標籤發佈流程](../../../ui/publishing/overview.md) 以取得更多資訊。
 
-1. 更新您的開發程式庫，然後發佈並測試。
+## 停用或解除安裝擴充功能
+
+安裝擴充功能後，您可以將其停用或加以刪除。選擇 **[!UICONTROL 設定]** 在已安裝擴充功能的「Adobe隱私權」卡上，選取 **[!UICONTROL 停用]** 或 **[!UICONTROL 解除安裝]**.
+
+## 後續步驟
+
+本指南說明如何在資料收集UI中使用Adobe隱私權標籤擴充功能。 如需擴充功能的詳細資訊，包括如何使用原始程式碼運用擴充功能的範例，請參閱 [隱私權JavaScript程式庫概觀](../../../../privacy-service/js-library.md) 在Privacy Service檔案中。
