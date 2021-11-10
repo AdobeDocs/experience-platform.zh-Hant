@@ -6,9 +6,9 @@ title: 設定Customer AI例項
 topic-legacy: Instance creation
 description: Intelligent Services將Customer AI提供為簡單易用的Adobe Sensei服務，可針對不同使用案例進行設定。 以下各節提供設定Customer AI例項的步驟。
 exl-id: 78353dab-ccb5-4692-81f6-3fb3f6eca886
-source-git-commit: c3320f040383980448135371ad9fae583cfca344
+source-git-commit: 52ab1527d3021500d934afe56cfc751116f784a4
 workflow-type: tm+mt
-source-wordcount: '1549'
+source-wordcount: '2299'
 ht-degree: 0%
 
 ---
@@ -21,90 +21,144 @@ Intelligent Services將Customer AI提供為簡單易用的Adobe Sensei服務，�
 
 ## 設定您的執行個體 {#set-up-your-instance}
 
-在Platform UI中，選取左側導覽中的&#x200B;**[!UICONTROL 服務]**。 出現&#x200B;**[!UICONTROL 服務]**&#x200B;瀏覽器，顯示您可支配的所有可用服務。 在Customer AI的容器中，選取&#x200B;**[!UICONTROL 開啟]**。
+在平台UI中，選取 **[!UICONTROL 服務]** 的下一頁。 此 **[!UICONTROL 服務]** 瀏覽器隨即顯示，並顯示您自己擁有的所有可用服務。 在Customer AI的容器中，選取 **[!UICONTROL 開啟]**.
 
 ![](../images/user-guide/navigate-to-service.png)
 
-**Customer AI** UI隨即顯示，並顯示您的所有服務例項。
+此 **Customer AI** UI隨即顯示，並顯示您的所有服務執行個體。
 
-- 您可以在&#x200B;**[!UICONTROL 建立例項]**&#x200B;容器右下方找到計分&#x200B;]**的設定檔總數量度。**[!UICONTROL &#x200B;此量度會追蹤Customer AI在目前日曆年度中得分的設定檔總數，包括所有沙箱環境和任何已刪除的服務例項。
+- 您可以找到 **[!UICONTROL 計分的設定檔總數]** 位於 **[!UICONTROL 建立例項]** 容器。 此量度會追蹤Customer AI在目前日曆年度中得分的設定檔總數，包括所有沙箱環境和任何已刪除的服務例項。
 
 ![](../images/user-guide/total-profiles.png)
 
-使用UI右側的控制項，即可編輯、複製及刪除服務例項。 若要顯示這些控制項，請從現有的&#x200B;**[!UICONTROL 服務實例]**&#x200B;中選擇一個實例。 控制項包含下列項目：
+使用UI右側的控制項，即可編輯、複製及刪除服務例項。 若要顯示這些控制項，請從現有的 **[!UICONTROL 服務實例]**. 控制項包含下列項目：
 
-- **[!UICONTROL 編輯]**:選擇 **** 「編輯」(Edit)可以修改現有服務實例。您可以編輯例項的名稱、說明和計分頻率。
-- **[!UICONTROL 原地複製]**:選擇 **** 克隆當前選擇的服務實例設定。接著，您可以修改工作流程進行微幅調整，並重新命名為新例項。
+- **[!UICONTROL 編輯]**:選取 **[!UICONTROL 編輯]** 可讓您修改現有的服務執行個體。 您可以編輯例項的名稱、說明和計分頻率。
+- **[!UICONTROL 原地複製]**:選取 **[!UICONTROL 原地複製]** 複製當前選擇的服務實例設定。 接著，您可以修改工作流程進行微幅調整，並重新命名為新例項。
 - **[!UICONTROL 刪除]**:您可以刪除服務例項，包括任何歷史執行。
-- **[!UICONTROL 資料來源]**:此例項所使用資料集的連結。
-- **[!UICONTROL 上次執行詳細資料]**:唯有執行失敗時，才會顯示此選項。此處顯示了執行失敗的原因，例如錯誤代碼。
+- **[!UICONTROL 資料來源]**:此例項所使用資料集的連結。 如果使用多個資料集，選取超連結文字會開啟資料集預覽彈出視窗。
+- **[!UICONTROL 上次運行詳細資訊]**:唯有執行失敗時，才會顯示此選項。 此處顯示了執行失敗的原因，例如錯誤代碼。
 - **[!UICONTROL 分數定義]**:快速概述您為此執行個體設定的目標。
 
 ![](../images/user-guide/service-instance-panel.png)
 
-要建立新實例，請選擇&#x200B;**[!UICONTROL Create instance]**。
+若要建立新例項，請選取 **[!UICONTROL 建立例項]**.
 
 ![](../images/user-guide/dashboard.png)
 
-執行個體建立工作流程隨即顯示，從&#x200B;**[!UICONTROL Setup]**&#x200B;步驟開始。
+## 設定
+
+執行個體建立工作流程隨即顯示，從 **[!UICONTROL 設定]** 步驟。
 
 以下是您必須為執行個體提供之值的重要資訊：
 
-- 在顯示Customer AI分數的所有位置中，都會使用例項的名稱。 因此，名稱應該描述預測分數代表什麼，例如「取消雜誌訂閱的可能性」。
+- **[!UICONTROL 名稱]:** 在顯示Customer AI分數的所有位置中，都會使用例項的名稱。 因此，名稱應該描述預測分數的代表。 例如「取消雜誌訂閱的可能性」。
 
-- 傾向類型決定分數和量度極性的目的。 您可以選擇&#x200B;**[!UICONTROL Churn]**&#x200B;或&#x200B;**[!UICONTROL Conversion]**。 請參閱探索見解檔案中[計分摘要](./discover-insights.md#scoring-summary)下方的附註，以取得關於傾向類型如何影響您執行個體的詳細資訊。
+- **[!UICONTROL 說明]:** 說明您要預測的內容。
 
-- 資料來源是資料的位置。 資料集是用來預測分數的輸入資料集。 Customer AI根據設計使用消費者體驗事件、Adobe Analytics和Adobe Audience Manager資料來計算傾向分數。 從下拉式選取器選取資料集時，系統只會列出與Customer AI相容的資料集。
+- **[!UICONTROL 傾向類型]:** 傾向類型決定分數和量度極性的目的。 您可以選擇 **[!UICONTROL 流失率]** 或 **[!UICONTROL 轉換]**. 請參閱 [計分摘要](./discover-insights.md#scoring-summary) 深入了解傾向類型對您執行個體有何影響的詳細資訊。
 
-- 依預設，除非指定合格母體，否則會為所有設定檔產生傾向分數。 您可以定義條件，根據事件包含或排除設定檔，以指定符合條件的母體。
+![設定畫面](../images/user-guide/create-instance.png)
 
-提供所需值，然後選擇&#x200B;**[!UICONTROL Next]**。
+提供所需值，然後選取 **[!UICONTROL 下一個]** 繼續。
 
-![](../images/user-guide/setup.png)
+## 選擇資料 {#select-data}
 
-### 定義目標 {#define-a-goal}
+Customer AI根據設計使用Adobe Analytics、Adobe Audience Manager、體驗事件和消費者體驗事件資料來計算傾向分數。 選取資料集時，僅會列出與Customer AI相容的資料集。 若要選取資料集，請選取&#x200B;**+**)資料集名稱旁的符號，或選取核取方塊以一次新增多個資料集。 使用搜尋選項快速找到您感興趣的資料集。
 
-**[!UICONTROL 定義目標]**&#x200B;步驟隨即出現，它提供互動式環境，供您以視覺化方式定義預測目標。 目標由一或多個事件組成，其中每個事件的發生取決於其保留的條件。 Customer AI例項的目標是決定在指定時間範圍內達成其目標的可能性。
+![選取和搜尋資料集](../images/user-guide/configure-dataset-page.png)
 
-要建立目標，請選擇&#x200B;**[!UICONTROL 輸入欄位名稱]**&#x200B;並從下拉清單中選擇欄位。 選擇第二個輸入，並為事件的條件選擇一個子句，然後提供目標值以完成事件。 可選擇&#x200B;**[!UICONTROL Add event]**&#x200B;來配置其他事件。 最後，通過應用以天數為單位的預測時間幀來完成目標，然後選擇&#x200B;**[!UICONTROL Next]**。
+選取您要使用的資料集後，請選取 **[!UICONTROL 新增]** 按鈕，將資料集新增至資料集預覽窗格。
 
-![](../images/user-guide/goal.png)
+![選取資料集](../images/user-guide/select-datasets.png)
 
-#### 將發生且不會發生
+選取資訊圖示 ![資訊圖示](../images/user-guide/info-icon.png) 資料集旁邊會開啟資料集預覽視窗。
 
-在定義目標時，您可以選擇&#x200B;**[!UICONTROL Will occur]**&#x200B;或&#x200B;**[!UICONTROL Will not cocur]**。 選取&#x200B;**[!UICONTROL 將會發生]**&#x200B;表示您定義的事件條件必須符合，客戶的事件資料才會納入前瞻分析UI中。
+![選取和搜尋資料集](../images/user-guide/dataset-info-2.png)
 
-例如，如果您想要設定應用程式以預測客戶是否會進行購買，您可以選取&#x200B;**[!UICONTROL Will occurr]**，後接&#x200B;**[!UICONTROL All of]**，然後輸入&#x200B;**commerce.purchases.id**&#x200B;和&#x200B;**exists**&#x200B;作為運算子。
+資料集預覽包含上次更新時間、來源結構，以及前10欄的預覽等資料。
+
+### 資料集完整性 {#dataset-completeness}
+
+資料集預覽中有資料集完整性百分比值。 此值提供資料集中有多少欄為空/空的快速快照。 如果資料集包含許多遺失值，而這些值被擷取到其他位置，強烈建議您加入包含遺失值的資料集。 在此範例中，人員ID為空，但人員ID會擷取至可包含的個別資料集中。
+
+>[!NOTE]
+>
+>使用Customer AI（一年）的最大培訓期間，即可計算資料集完整性。 這表示顯示資料集完整性值時，不會考慮超過一年的資料。
+<!-- training dataset completness needs to change -->
+![資料集完整性](../images/user-guide/dataset-info.png)
+
+### 選取身分 {#identity}
+
+若要讓多個資料集彼此連結，您必須選取身分類型（也稱為「身分命名空間」），以及該命名空間中的身分值。 如果您已在相同命名空間下將多個欄位指派為架構中的身分，所有指派的身分值都會出現在以命名空間為前置的身分下拉式清單中，例如 `EMAIL (personalEmail.address)` 或 `EMAIL (workEmail.address)`.
+
+>[!IMPORTANT]
+>
+>您選取的每個資料集都必須使用相同的身分類型（命名空間）。 身分欄中的身分類型旁會出現綠色勾號，指出資料集相容。 例如，使用Phone命名空間時，以及 `mobilePhone.number` 做為識別碼，其餘資料集的所有識別碼都必須包含並使用Phone命名空間。
+
+要選擇標識，請選擇位於標識列中的帶下划線的值。 此時會顯示「選取身分彈出視窗」。
+
+![選擇相同的命名空間](../images/user-guide/identity-type.png)
+
+如果命名空間中有多個身分可用，請務必為您的使用案例選取正確的身分欄位。 例如，電子郵件命名空間中提供兩個電子郵件身分識別：一個工作電子郵件，另一個是個人電子郵件。 根據使用案例，個人電子郵件更可能填入，且在個別預測中更有用。 這表示 `EMAIL (personalEmail.address)` 會被選為身分。
+
+![未選擇資料集密鑰](../images/user-guide/select-identity.png)
+
+>[!NOTE]
+>
+> 如果資料集沒有有效的身分類型（命名空間），您必須設定主要身分識別，並使用 [結構編輯器](../../../xdm/schema/composition.md#identity). 若要進一步了解命名空間和身分識別，請造訪 [身分識別服務命名空間](../../../identity-service/namespaces.md) 檔案。
+
+## 定義目標 {#define-a-goal}
+
+<!-- https://www.adobe.com/go/cai-define-a-goal -->
+
+此 **[!UICONTROL 定義目標]** 步驟隨即顯示，提供互動式環境，供您以視覺化方式定義預測目標。 目標由一或多個事件組成，其中每個事件的發生取決於其保留的條件。 Customer AI例項的目標是決定在指定時間範圍內達成其目標的可能性。
+
+若要建立目標，請選取 **[!UICONTROL 輸入欄位名稱]** 後接下拉式清單中的欄位。 選取第二個輸入、事件條件的子句，然後選擇性地提供目標值以完成事件。 您可以選取 **[!UICONTROL 新增事件]**. 最後，應用預測時間範圍以天數完成目標，然後選擇 **[!UICONTROL 下一個]**.
+
+![](../images/user-guide/define-a-goal.png)
+
+### 將發生且不會發生
+
+定義目標時，您有選取的選項 **[!UICONTROL 將會發生]** 或 **[!UICONTROL 不會發生]**. 選取 **[!UICONTROL 將會發生]** 表示您定義的事件條件必須符合，才能將客戶的事件資料納入前瞻分析UI中。
+
+例如，如果您想要設定應用程式以預測客戶是否要進行購買，您可以選取 **[!UICONTROL 將會發生]** 後跟 **[!UICONTROL 全部]** 然後輸入 **commerce.purchases.id** （或類似欄位）和 **[!UICONTROL 存在]** 作為運算子。
 
 ![將發生](../images/user-guide/occur.png)
 
-不過，在某些情況下，您可能會想要預測某個事件是否會在特定時間範圍內發生。 若要使用此選項設定目標，請從頂層下拉式清單中選取「**[!UICONTROL 不會發生]**」。
+不過，在某些情況下，您可能會想要預測某個事件是否會在特定時間範圍內發生。 若要使用此選項設定目標，請選取 **[!UICONTROL 不會發生]** 從頂層下拉式清單中。
 
-例如，如果您想要預測哪些客戶的參與度會降低，則不要在下個月造訪您的帳戶登入頁面。 選擇「**[!UICONTROL 將不發生]**」後跟「**[!UICONTROL 所有]**」，然後輸入&#x200B;**web.webInteraction.URL**&#x200B;和&#x200B;**[!UICONTROL 等於]**&#x200B;作為運算子，並以&#x200B;**account-login**&#x200B;作為值。
+例如，如果您想要預測哪些客戶的參與度會降低，則不要在下個月造訪您的帳戶登入頁面。 選擇 **[!UICONTROL 不會發生]** 後跟 **[!UICONTROL 全部]** 然後輸入 **web.webInteraction.URL** （或類似欄位）和 **[!UICONTROL 等於]** 作為運算元，搭配 **account-login** 作為值。
 
 ![不會發生](../images/user-guide/not-occur.png)
 
-#### 所有及任何
+### 所有及任何
 
-在某些情況下，您可能想要預測事件的組合是否會發生，而在其他情況下，您可能想要預測來自預先定義之集的任何事件的發生。 若要預測客戶是否會有事件組合，請從&#x200B;**[!UICONTROL 定義目標]**&#x200B;頁面的第二層下拉式清單中選取&#x200B;**[!UICONTROL 所有]**&#x200B;選項。
+在某些情況下，您可能想要預測事件的組合是否會發生，而在其他情況下，您可能想要預測來自預先定義之集的任何事件的發生。 若要預測客戶是否會有事件組合，請選取 **[!UICONTROL 全部]** 選項(位於 **[!UICONTROL 定義目標]** 頁面。
 
-例如，您可能想要預測客戶是否購買特定產品。 此預測目標由兩個條件定義：a `commerce.order.purchaseID` **exists**，且`productListItems.SKU` **等於**&#x200B;某些特定值。
+例如，您可能想要預測客戶是否購買特定產品。 此預測目標由兩個條件定義：a `commerce.order.purchaseID` **存在** 和 `productListItems.SKU` **等於** 某些特定值。
 
 ![所有範例](../images/user-guide/all-of.png)
 
-為了預測客戶是否將擁有來自指定集的任何事件，您可以使用&#x200B;**[!UICONTROL 任何]**&#x200B;選項。
+為了預測客戶是否會有來自指定集的任何事件，您可以使用 **[!UICONTROL 任何]** 選項。
 
-例如，您可能想要預測客戶是否造訪特定URL或具有特定名稱的網頁。 此預測目標由兩個條件定義：`web.webPageDetails.URL` **以**&#x200B;開頭，`web.webPageDetails.name` **以**&#x200B;開頭。
+例如，您可能想要預測客戶是否造訪特定URL或具有特定名稱的網頁。 此預測目標由兩個條件定義： `web.webPageDetails.URL` **開頭為** 特定值與 `web.webPageDetails.name` **開頭為** 特定值。
 
 ![任何範例](../images/user-guide/any-of.png)
 
-### 自訂事件(*optional*){#custom-events}
+### 合格人口 *（可選）*
 
-如果您除了Customer AI用來產生傾向分數的[標準事件欄位](../input-output.md#standard-events)以外，還有其他資訊，則會提供自訂事件選項。 如果您選取的資料集包含結構中定義的自訂事件，您可以將其新增至執行個體。
+依預設，除非指定合格母體，否則會為所有設定檔產生傾向分數。 您可以定義條件，根據事件包含或排除設定檔，以指定符合條件的母體。
+
+![合格人口](../images/user-guide/eligible-population.png)
+
+### 自訂事件(*可選*) {#custom-events}
+
+如果您除了 [標準事件欄位](../input-output.md#standard-events) 由Customer AI用來產生傾向分數，會提供自訂事件選項。 使用此選項可讓您新增您認為有影響力的其他事件，這可能會改善模型品質，並有助於提供更精確的結果。 如果您選取的資料集包含結構中定義的自訂事件，您可以將其新增至執行個體。
 
 ![事件功能](../images/user-guide/event-feature.png)
 
-若要新增自訂事件，請選取&#x200B;**[!UICONTROL 新增自訂事件]**。 接下來，輸入自訂事件名稱，然後將其對應至您結構中的事件欄位。 查看影響因素和其他深入分析時，會顯示自訂事件名稱，取代欄位值。 這表示使用者ID、保留ID、裝置資訊和其他自訂值會以自訂事件名稱列出，而非事件的ID/值。 Customer AI會使用這些額外的自訂事件來改善模型品質，並提供更精確的結果。
+若要新增自訂事件，請選取 **[!UICONTROL 新增自訂事件]**. 接下來，輸入自訂事件名稱，然後將其對應至您結構中的事件欄位。 查看影響因素和其他深入分析時，會顯示自訂事件名稱，取代欄位值。 這表示使用者ID、保留ID、裝置資訊和其他自訂值會以自訂事件名稱列出，而非事件的ID/值。 Customer AI會使用這些額外的自訂事件來改善模型品質，並提供更精確的結果。
 
 ![自訂事件欄位](../images/user-guide/custom-event.png)
 
@@ -116,27 +170,43 @@ Intelligent Services將Customer AI提供為簡單易用的Adobe Sensei服務，�
 
 ![自訂事件欄位值](../images/user-guide/custom-value.png)
 
-完成後，選擇右上角的&#x200B;**[!UICONTROL Next]**&#x200B;繼續。
+完成後，選取 **[!UICONTROL 下一個]** 在右上角繼續。
 
-### 配置計畫&#x200B;*（可選）* {#configure-a-schedule}
+### 自訂設定檔屬性(*可選*)
 
-出現&#x200B;**[!UICONTROL Advanced]**&#x200B;步驟。 此可選步驟允許您配置計畫以自動執行預測、定義預測排除以篩選某些事件，或者如果不需要，則選擇&#x200B;**[!UICONTROL 完成]**。
+除了 [標準事件欄位](../input-output.md#standard-events) 供客戶AI用來產生傾向分數。 使用此選項可讓您新增您認為有影響的其他設定檔屬性，這可能會改善模型品質，並提供更精確的結果。 此外，新增自訂設定檔屬性可讓客戶AI更妥善地展示特定設定檔在傾向貯體中的結果。
 
-通過配置&#x200B;**[!UICONTROL 計分頻率]**&#x200B;來設定計分計畫。 可排程每週或每月執行自動預測執行。
+>[!NOTE]
+>
+>新增自訂設定檔屬性的工作流程與新增自訂事件相同。
+
+![新增自訂設定檔屬性](../images/user-guide/profile-attributes.png)
+
+### 設定排程 *（可選）* {#configure-a-schedule}
+
+此 **[!UICONTROL 進階]** 步驟。 此選用步驟可讓您設定排程以自動執行預測、定義預測排除以篩選特定事件或選取 **[!UICONTROL 完成]** 如果不需要。
+
+通過配置 **[!UICONTROL 計分頻率]**. 可排程每週或每月執行自動預測執行。
 
 ![](../images/user-guide/schedule.png)
 
 ### 預測排除
 
-如果您的資料集包含任何新增為測試資料的欄，您可以選取&#x200B;**新增排除**，然後輸入您要排除的欄位，將該欄或事件新增至排除清單。 這可防止在產生分數時評估符合特定條件的事件。 此功能可用來篩選掉無關的資料輸入或特定促銷活動。
+如果您的資料集包含任何新增為測試資料的欄，您可以選取 **新增排除項目** 接著輸入您要排除的欄位。 這可防止在產生分數時評估符合特定條件的事件。 此功能可用來篩選掉無關的資料輸入或特定促銷活動。
 
-若要排除事件，請選取&#x200B;**[!UICONTROL 新增排除]**&#x200B;並定義事件。 若要移除排除項目，請選取點(**[!UICONTROL ...]**)，然後選取「移除容器」]**。**[!UICONTROL 
+若要排除事件，請選取 **[!UICONTROL 新增排除項目]** 和定義事件。 若要移除排除項目，請選取點(**[!UICONTROL ...]**)，然後選取「 」 **[!UICONTROL 移除容器]**.
 
 ![](../images/user-guide/exclusion.png)
 
-視需要排除事件，然後選取&#x200B;**[!UICONTROL Finish]**&#x200B;以建立例項。
+### 設定檔切換
 
-![](../images/user-guide/advanced.png)
+「設定檔」切換可讓Customer AI將計分結果匯出至「即時客戶設定檔」。 禁用此切換可防止將模型評分結果添加到「配置檔案」中。 停用此功能後，仍可使用Customer AI評分結果。
+
+首次使用Customer AI時，應將此功能關閉，直到您對模型輸出結果滿意為止。 這可防止您上傳多個計分資料集至「即時客戶設定檔」，同時微調您的模型。
+
+![設定檔切換](../images/user-guide/advanced-workflow.png)
+
+設定計分排程、納入預測排除後，以及切換您想要其所在位置的設定檔，請選取 **[!UICONTROL 完成]** ，以建立您的Customer AI例項。
 
 如果成功建立例項，則會立即觸發預測執行，並根據您定義的排程執行後續執行。
 
@@ -144,14 +214,18 @@ Intelligent Services將Customer AI提供為簡單易用的Adobe Sensei服務，�
 >
 >根據輸入資料的大小，預測執行最多可能需要24小時才能完成。
 
-依照本節所述，您已設定Customer AI的例項，且已執行預測執行。 執行成功完成後，分數的深入分析會自動填入預測的分數。 請等候最多24小時，再繼續進行本教學課程的下一節。
+依照本節所述，您已設定Customer AI的例項並執行預測執行。 當執行成功完成時，如果設定檔切換已啟用，則分數的深入分析會自動填入預測的分數。 請等候最多24小時，再繼續進行本教學課程的下一節。
 
 ## 後續步驟 {#next-steps}
 
-依照本教學課程，您已成功設定Customer AI例項並產生傾向分數。 您現在可以選擇使用區段產生器，以[建立具有預測分數](./create-segment.md)或[使用Customer AI](./discover-insights.md)探索見解的客戶區段。
+依照本教學課程，您已成功設定Customer AI例項並產生傾向分數。 您現在可以選擇使用區段產生器，以 [建立預測分數的客戶區段](./create-segment.md) 或 [透過Customer AI探索見解](./discover-insights.md).
 
 ## 其他資源
 
 以下影片旨在協助您了解Customer AI的設定工作流程。 此外，也提供最佳實務和使用案例範例。
+
+>[!IMPORTANT]
+>
+> 以下視訊已過期。 如需最新資訊，請參閱本檔案。
 
 >[!VIDEO](https://video.tv.adobe.com/v/32665?learn=on&quality=12)

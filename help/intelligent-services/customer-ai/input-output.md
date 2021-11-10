@@ -6,9 +6,9 @@ title: Customer AI中的輸入和輸出
 topic-legacy: Getting started
 description: 進一步了解Customer AI使用的必要事件、輸入和輸出。
 exl-id: 9b21a89c-bf48-4c45-9eb3-ace38368481d
-source-git-commit: c3320f040383980448135371ad9fae583cfca344
+source-git-commit: 6da41552811a458fc6cf66b54fc2e9ed448a859d
 workflow-type: tm+mt
-source-wordcount: '2971'
+source-wordcount: '3054'
 ht-degree: 1%
 
 ---
@@ -21,15 +21,18 @@ ht-degree: 1%
 
 Customer AI的運作方式是分析下列其中一個資料集，以預測流失率或轉換傾向分數：
 
+- Adobe Analytics資料使用 [Analytics來源連接器](../../sources/tutorials/ui/create/adobe-applications/analytics.md)
+- Adobe Audience Manager資料使用 [Audience Manager源連接器](../../sources/tutorials/ui/create/adobe-applications/audience-manager.md)
+- 體驗事件(EE)資料集
 - 消費者體驗事件(CEE)資料集
-- Adobe Analytics資料，使用[Analytics來源連接器](../../sources/tutorials/ui/create/adobe-applications/analytics.md)
-- Adobe Audience Manager資料，使用[Audience Manager來源連接器](../../sources/tutorials/ui/create/adobe-applications/audience-manager.md)
+
+如果每個資料集共用相同的身分類型（命名空間）（例如ECID），您可以從不同來源新增多個資料集。 如需新增多個資料集的詳細資訊，請造訪 [Customer AI使用手冊](./user-guide/configure.md#select-data)
 
 >[!IMPORTANT]
 >
->來源連接器回填資料最多需要四周時間。 如果您最近設定了連接器，應確認資料集具有Customer AI所需的最小資料長度。 請檢閱[歷史資料](#data-requirements)區段，確認您有足夠的資料用於預測目標。
+>來源連接器回填資料最多需要四周時間。 如果您最近設定了連接器，應確認資料集具有Customer AI所需的最小資料長度。 請查看 [歷史資料](#data-requirements) 區段來驗證您擁有足夠的資料用於預測目標。
 
-本文檔需要對CEE架構有基本的了解。 請先檢閱[Intelligent Services資料準備](../data-preparation.md)檔案，然後再繼續。
+本文檔需要對CEE架構有基本的了解。 請查看 [Intelligent Services資料準備](../data-preparation.md) 檔案，再繼續。
 
 下表概述本檔案中使用的一些常見術語：
 
@@ -38,7 +41,7 @@ Customer AI的運作方式是分析下列其中一個資料集，以預測流失
 | [Experience Data Model(XDM)](../../xdm/home.md) | XDM是基本架構，可讓Adobe Experience Cloud(由Adobe Experience Platform提供技術支援)在適當的時間，透過適當的管道向適當的人員傳遞適當的訊息。 建置Experience Platform的方法 — XDM系統可操作Experience Data Model結構，以供Platform服務使用。 |
 | XDM 結構 | Experience Platform 會使用結構，以一致且可重複使用的方式說明資料結構。藉由定義跨系統的一致資料，將可輕易保留意義，而發揮資料應有的價值。在將資料擷取至Platform之前，必須先建立結構以說明資料的結構，並對每個欄位中可包含的資料類型提供限制。 結構包含基本XDM類別和零個或多個結構欄位群組。 |
 | XDM類別 | 所有XDM結構都說明可分類為記錄或時間序列的資料。 架構的資料行為由架構的類定義，該類在首次建立時分配給架構。 XDM類別說明結構必須包含的屬性數量最小，才能代表特定資料行為。 |
-| [欄位群組](../../xdm/schema/composition.md) | 定義架構中一或多個欄位的元件。 欄位群組強制其欄位在架構階層中的顯示方式，因此在每個架構中呈現的結構都與其所包含的相同。 欄位組僅與特定類相容，由其`meta:intendedToExtend`屬性標識。 |
+| [欄位群組](../../xdm/schema/composition.md) | 定義架構中一或多個欄位的元件。 欄位群組強制其欄位在架構階層中的顯示方式，因此在每個架構中呈現的結構都與其所包含的相同。 欄位組僅與特定類相容，由其標識 `meta:intendedToExtend` 屬性。 |
 | [資料類型](../../xdm/schema/composition.md) | 也可為架構提供一或多個欄位的元件。 不過，與欄位群組不同，資料類型不會限制在特定類別。 這樣，資料類型就可更靈活地描述可跨具有潛在不同類別的多個架構重複使用的通用資料結構。 CEE和Adobe Analytics架構均支援本檔案中概述的資料類型。 |
 | 流失率 | 取消或選擇不續訂其訂閱的帳戶百分比的測量。 高流失率可能對每月經常性收入(MRR)造成負面影響，也可能表示對產品或服務的不滿。 |
 | [即時客戶個人檔案](../../profile/home.md) | 即時客戶設定檔提供集中化的消費者設定檔，以便進行目標式和個人化的體驗管理。 每個設定檔都包含所有系統中匯總的資料，以及涉及個人事件的可操作的時間戳記帳戶，這些事件發生在您搭配Experience Platform使用的任何系統中。 |
@@ -49,9 +52,9 @@ Customer AI的運作方式是分析下列其中一個資料集，以預測流失
 >
 > Customer AI會自動判斷哪些事件對預測有用，並在可用資料不足以產生品質預測時發出警告。
 
-Customer AI支援CEE、Adobe Analytics和Adobe Audience Manager資料集。 CEE架構要求您在架構建立過程中添加欄位組。 如果您使用Adobe Analytics或Adobe Audience Manager資料集，來源連接器會在連線程式期間直接對應下列的標準事件（商務、網頁詳細資料、應用程式和搜尋）。
+Customer AI支援Adobe Analytics、Adobe Audience Manager、Experience Event(EE)和Cunsomer Experience Event(CEE)資料集。 CEE架構要求您在架構建立過程中添加欄位組。 如果您使用Adobe Analytics或Adobe Audience Manager資料集，來源連接器會在連線程式期間直接對應下列的標準事件（商務、網頁詳細資料、應用程式和搜尋）。 如果每個資料集共用相同的身分類型（命名空間）（例如ECID），您可以從不同來源新增多個資料集。
 
-如需對應Adobe Analytics資料或Audience Manager資料的詳細資訊，請參閱[Analytics欄位對應](../../sources/connectors/adobe-applications/analytics.md)或[Audience Manager欄位對應](../../sources/connectors/adobe-applications/mapping/audience-manager.md)指南。
+如需對應Adobe Analytics資料或Audience Manager資料的詳細資訊，請造訪 [Analytics欄位對應](../../sources/connectors/adobe-applications/analytics.md) 或 [Audience Manager欄位對應](../../sources/connectors/adobe-applications/mapping/audience-manager.md) 指南。
 
 ### Customer AI使用的標準事件 {#standard-events}
 
@@ -61,11 +64,11 @@ Customer AI仰賴不同的事件類型來建立模型功能。 使用多個XDM�
 
 >[!NOTE]
 >
->如果您使用Adobe Analytics或Adobe Audience Manager資料，系統會自動建立結構並搭配擷取資料所需的標準事件。 如果要建立自己的自定義CEE架構以捕獲資料，則需要考慮捕獲資料所需的欄位組。
+>如果您使用Adobe Analytics或Adobe Audience Manager資料，系統會自動建立結構並搭配擷取資料所需的標準事件。 如果要建立自己的自定義CEE架構來捕獲資料，則需要考慮捕獲資料所需的欄位組。
 
-不需要為下列每個標準事件提供資料，但某些情況下需要特定事件。 如果您有任何可用的標準事件資料，建議您將其納入您的結構中。 例如，如果您想要建立用於預測購買事件的Customer AI應用程式，則有`Commerce`和`Web page details`資料類型的資料會很實用。
+不需要為下列每個標準事件提供資料，但某些情況下需要特定事件。 如果您有任何可用的標準事件資料，建議您將其納入您的結構中。 例如，如果您想要建立用於預測購買事件的Customer AI應用程式，最好使用 `Commerce` 和 `Web page details` 資料類型。
 
-若要在Platform UI中檢視欄位群組，請選取左側邊欄的&#x200B;**[!UICONTROL 結構]**&#x200B;標籤，然後選取&#x200B;**[!UICONTROL 欄位群組]**&#x200B;標籤。
+若要在Platform UI中檢視欄位群組，請選取 **[!UICONTROL 結構]** 標籤，然後選取 **[!UICONTROL 欄位群組]** 標籤。
 
 | 欄位組 | 事件類型 | XDM欄位路徑 |
 | --- | --- | --- |
@@ -87,13 +90,13 @@ Customer AI仰賴不同的事件類型來建立模型功能。 使用多個XDM�
 |  | applicationUpgrades | <li> application.upgrades.value </li> <li> application.name </li> |
 | [!UICONTROL 搜尋詳細資料] | 搜尋 | search.keywords |
 
-此外，Customer AI可使用訂閱資料來建立更理想的流失模型。 使用[[!UICONTROL Subscription]](../../xdm/data-types/subscription.md)資料類型格式的每個配置檔案都需要訂閱資料。 不過，大部分欄位都是選用的，為了建立最佳的流失模型，強烈建議您盡可能提供多個欄位的資料，例如`startDate`、`endDate`和任何其他相關詳細資料。
+此外，Customer AI可使用訂閱資料來建立更理想的流失模型。 每個設定檔都需要訂閱資料，使用 [[!UICONTROL 訂閱]](../../xdm/data-types/subscription.md) 資料類型格式。 不過，大部分欄位都是選用的，為了建立最佳的流失模型，強烈建議您盡可能提供多個欄位的資料，例如 `startDate`, `endDate`，以及任何其他相關詳細資訊。
 
-### 新增自訂欄位群組
+### 新增自訂事件和設定檔屬性
 
-如果您除了Customer AI使用的[標準事件欄位](#standard-events)以外，還有其他您想要包含的資訊。 在您的[執行個體設定](./user-guide/configure.md#custom-events)期間會提供自訂事件選項。
+如果您有除了 [標準事件欄位](#standard-events) 由Customer AI使用，在您的 [執行個體配置](./user-guide/configure.md#custom-events).
 
-如果您選取的資料集包含自訂事件，例如您的結構中定義的飯店或餐廳訂房，您就可以將這些事件新增至執行個體。 Customer AI會使用這些額外的自訂事件來改善模型品質，並提供更精確的結果。
+如果您選取的資料集包含自訂事件或設定檔屬性，例如您的結構中定義的「飯店訂房」或「X公司的員工」，您可以將它們新增至執行個體。 Customer AI會使用這些額外的自訂事件和設定檔屬性來改善模型品質，並提供更精確的結果。
 
 ### 歷史資料 {#data-requirements}
 
@@ -123,7 +126,7 @@ Customer AI需要模型訓練的歷史資料，但所需資料量是根據兩個
 
 ### 範例案例
 
-本節會說明Customer AI例項的不同案例，以及必要和建議的事件類型。 有關欄位群組及其欄位路徑的詳細資訊，請參閱上述的[標準事件表](#standard-events)。
+本節會說明Customer AI例項的不同案例，以及必要和建議的事件類型。 請參閱 [標準事件表](#standard-events) 以取得欄位群組及其欄位路徑的詳細資訊。
 
 >[!NOTE]
 >
@@ -145,7 +148,7 @@ Customer AI需要模型訓練的歷史資料，但所需資料量是根據兩個
 
 **其他建議的標準事件類型：**
 
-根據設定您的Customer AI例項時目標和合格母體的複雜性，可能需要其餘的[事件類型](#standard-events)中的任何類型。 如果資料可用於特定資料類型，建議將此資料包含在您的架構中。
+其餘任何 [事件類型](#standard-events) 設定Customer AI例項時，可能需要依目標和合格母體的複雜度而定。 如果資料可用於特定資料類型，建議將此資料包含在您的架構中。
 
 ### 方案2:媒體串流服務網站上的訂閱轉換
 
@@ -161,13 +164,13 @@ Customer AI需要模型訓練的歷史資料，但所需資料量是根據兩個
 - webVisit
 - 搜尋
 
-在此範例中， `order`、`checkouts`和`purchases`用於指出已購買訂閱及其類型。
+在此範例中， `order`, `checkouts`，和 `purchases` 可用來指出已購買訂閱及其類型。
 
-此外，為了精確模型，建議您使用[訂閱資料類型](../../xdm/data-types/subscription.md)中的一些可用屬性。
+此外，為了精確模型，建議您使用 [訂閱資料類型](../../xdm/data-types/subscription.md).
 
 **其他建議的標準事件類型：**
 
-根據設定您的Customer AI例項時目標和合格母體的複雜性，可能需要其餘的[事件類型](#standard-events)中的任何類型。 如果資料可用於特定資料類型，建議將此資料包含在您的架構中。
+其餘任何 [事件類型](#standard-events) 設定Customer AI例項時，可能需要依目標和合格母體的複雜度而定。 如果資料可用於特定資料類型，建議將此資料包含在您的架構中。
 
 ### 方案3:電子商務零售網站的流失率
 
@@ -185,11 +188,11 @@ Customer AI需要模型訓練的歷史資料，但所需資料量是根據兩個
 
 **其他建議的標準事件類型：**
 
-根據設定您的Customer AI例項時目標和合格母體的複雜性，可能需要其餘的[事件類型](#standard-events)中的任何類型。 如果資料可用於特定資料類型，建議將此資料包含在您的架構中。
+其餘任何 [事件類型](#standard-events) 設定Customer AI例項時，可能需要依目標和合格母體的複雜度而定。 如果資料可用於特定資料類型，建議將此資料包含在您的架構中。
 
 ### 方案4:電子商務零售網站上的向上銷售轉換
 
-**預測目標：** 預測已購買特定產品以購買新相關產品之母體的購買傾向。
+**預測目標：** 預測已購買特定產品以購買新相關產品的人口的購買傾向。
 
 **必要的標準事件類型：**
 
@@ -203,7 +206,7 @@ Customer AI需要模型訓練的歷史資料，但所需資料量是根據兩個
 
 **其他建議的標準事件類型：**
 
-根據設定您的Customer AI例項時目標和合格母體的複雜性，可能需要其餘的[事件類型](#standard-events)中的任何類型。 如果資料可用於特定資料類型，建議將此資料包含在您的架構中。
+其餘任何 [事件類型](#standard-events) 設定Customer AI例項時，可能需要依目標和合格母體的複雜度而定。 如果資料可用於特定資料類型，建議將此資料包含在您的架構中。
 
 ### 方案5:取消訂閱（流失率）
 
@@ -216,15 +219,15 @@ Customer AI需要模型訓練的歷史資料，但所需資料量是根據兩個
 - webVisit
 - 搜尋
 
-此外，為了精確模型，建議您使用[訂閱資料類型](../../xdm/data-types/subscription.md)中的一些可用屬性。
+此外，為了精確模型，建議您使用 [訂閱資料類型](../../xdm/data-types/subscription.md).
 
 **其他建議的標準事件類型：**
 
-根據設定您的Customer AI例項時目標和合格母體的複雜性，可能需要其餘的[事件類型](#standard-events)中的任何類型。 如果資料可用於特定資料類型，建議將此資料包含在您的架構中。
+其餘任何 [事件類型](#standard-events) 設定Customer AI例項時，可能需要依目標和合格母體的複雜度而定。 如果資料可用於特定資料類型，建議將此資料包含在您的架構中。
 
 ### 方案6:啟動行動應用程式
 
-**預測目標：** 預測合格設定檔在未來X天內啟動付費行動應用程式的傾向。這類似於預測「每月作用中使用者」的關鍵績效指標(KPI)。
+**預測目標：** 預測合格設定檔在未來X天內啟動付費行動應用程式的傾向。 這類似於預測「每月作用中使用者」的關鍵績效指標(KPI)。
 
 **必要的標準事件類型：**
 
@@ -242,11 +245,11 @@ Customer AI需要模型訓練的歷史資料，但所需資料量是根據兩個
 - applicationLaunches
 - applicationUpgrades
 
-在此範例中，需要購買行動應用程式時，會使用`order`、`checkouts`和`purchases`。
+在此範例中， `order`, `checkouts`，和 `purchases` 是在需要購買行動應用程式時使用。
 
 **其他建議的標準事件類型：**
 
-根據設定您的Customer AI例項時目標和合格母體的複雜性，可能需要其餘的[事件類型](#standard-events)中的任何類型。 如果資料可用於特定資料類型，建議將此資料包含在您的架構中。
+其餘任何 [事件類型](#standard-events) 設定Customer AI例項時，可能需要依目標和合格母體的複雜度而定。 如果資料可用於特定資料類型，建議將此資料包含在您的架構中。
 
 ### 方案7:已實現的特徵(Adobe Audience Manager)
 
@@ -254,13 +257,13 @@ Customer AI需要模型訓練的歷史資料，但所需資料量是根據兩個
 
 **必要的標準事件類型：**
 
-若要使用Adobe Audience Manager的特徵，您需要使用[Audience Manager來源連接器](../../sources/tutorials/ui/create/adobe-applications/audience-manager.md)建立來源連線。 源連接器會自動建立具有正確欄位組的架構。 您不需要手動新增其他事件類型，便能讓結構與Customer AI搭配使用。
+若要使用Adobe Audience Manager的特徵，您必須使用 [Audience Manager源連接器](../../sources/tutorials/ui/create/adobe-applications/audience-manager.md). 源連接器會自動建立具有正確欄位組的架構。 您不需要手動新增其他事件類型，便能讓結構與Customer AI搭配使用。
 
-當您設定新的客戶AI例項時，`audienceName`和`audienceID`可用來在定義目標時選取要計分的特定特徵。
+當您設定新的客戶AI例項時， `audienceName` 和 `audienceID` 可用來在定義目標時選取特定特徵以進行計分。
 
 ## Customer AI輸出資料
 
-Customer AI會為個別設定檔產生數個屬性，這些設定檔被認為符合資格。 根據您已布建的項目，有兩種方式可以取用分數（輸出）。 如果您有已啟用「即時客戶設定檔」的資料集，可在[區段產生器](../../segmentation/ui/segment-builder.md)中使用「即時客戶設定檔」的深入分析。 如果您沒有已啟用設定檔的資料集，可以[下載資料湖上可用的Customer AI輸出](./user-guide/download-scores.md)資料集。
+Customer AI會為個別設定檔產生數個屬性，這些設定檔被認為符合資格。 根據您已布建的項目，有兩種方式可以取用分數（輸出）。 如果您有已啟用「即時客戶設定檔」的資料集，您可以在 [區段產生器](../../segmentation/ui/segment-builder.md). 如果您沒有已啟用設定檔的資料集，您可以 [下載Customer AI輸出](./user-guide/download-scores.md) 資料湖上可用的資料集。
 
 >[!NOTE]
 >
@@ -279,4 +282,4 @@ Customer AI會為個別設定檔產生數個屬性，這些設定檔被認為符
 
 ## 後續步驟 {#next-steps}
 
-準備好資料並部署所有憑證和結構後，請依照[設定Customer AI例項](./user-guide/configure.md)指南開始。 本指南會逐步引導您建立Customer AI的例項。
+準備好資料並部署所有憑證和結構後，請先遵循 [設定Customer AI例項](./user-guide/configure.md) 指南。 本指南會逐步引導您建立Customer AI的例項。
