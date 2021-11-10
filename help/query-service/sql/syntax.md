@@ -5,20 +5,20 @@ title: 查詢服務中的SQL語法
 topic-legacy: syntax
 description: 本檔案顯示Adobe Experience Platform Query Service支援的SQL語法。
 exl-id: 2bd4cc20-e663-4aaa-8862-a51fde1596cc
-source-git-commit: 6f697bb249c50e58f9e8a5821fa71f2d4c9a7aac
+source-git-commit: b0cd372589be1db3d7ae571edaac68df9a3c493f
 workflow-type: tm+mt
-source-wordcount: '2154'
+source-wordcount: '2207'
 ht-degree: 1%
 
 ---
 
 # 查詢服務中的SQL語法
 
-Adobe Experience Platform Query Service提供了對`SELECT`語句和其他有限命令使用標準ANSI SQL的功能。 本文檔涵蓋[!DNL Query Service]支援的SQL語法。
+Adobe Experience Platform Query Service提供了使用標準ANSI SQL的功能 `SELECT` 語句和其他有限命令。 本檔案涵蓋支援的SQL語法 [!DNL Query Service].
 
 ## 選擇查詢 {#select-queries}
 
-以下語法定義[!DNL Query Service]支援的`SELECT`查詢：
+下列語法定義 `SELECT` 支援的查詢 [!DNL Query Service]:
 
 ```sql
 [ WITH with_query [, ...] ]
@@ -36,7 +36,7 @@ SELECT [ ALL | DISTINCT [( expression [, ...] ) ] ]
     [ OFFSET start ]
 ```
 
-其中`from_item`可以是下列選項之一：
+where `from_item` 可以是下列其中一個選項：
 
 ```sql
 table_name [ * ] [ [ AS ] alias [ ( column_alias [, ...] ) ] ]
@@ -54,7 +54,7 @@ with_query_name [ [ AS ] alias [ ( column_alias [, ...] ) ] ]
 from_item [ NATURAL ] join_type from_item [ ON join_condition | USING ( join_column [, ...] ) ]
 ```
 
-和`grouping_element`可以是下列選項之一：
+和 `grouping_element` 可以是下列其中一個選項：
 
 ```sql
 ( )
@@ -80,7 +80,7 @@ CUBE ( { expression | ( expression [, ...] ) } [, ...] )
 GROUPING SETS ( grouping_element [, ...] )
 ```
 
-和`with_query`是：
+和 `with_query` 為：
 
 ```sql
  with_query_name [ ( column_name [, ...] ) ] AS ( select | values )
@@ -90,7 +90,7 @@ GROUPING SETS ( grouping_element [, ...] )
 
 ### SNAPSHOT子句
 
-此子句可用於根據快照ID增量讀取表上的資料。 快照ID是一個檢查點標籤，用「長類型」號表示，每次向資料湖表寫入資料時，該號碼都會應用到資料湖表。 `SNAPSHOT`子句將自身附加到它旁邊使用的表關係。
+此子句可用於根據快照ID增量讀取表上的資料。 快照ID是一個檢查點標籤，用「長類型」號表示，每次向資料湖表寫入資料時，該號碼都會應用到資料湖表。 此 `SNAPSHOT` 子句將自身附加到它旁邊使用的表關係。
 
 ```sql
     [ SNAPSHOT { SINCE start_snapshot_id | AS OF end_snapshot_id | BETWEEN start_snapshot_id AND end_snapshot_id } ]
@@ -114,22 +114,22 @@ SELECT * FROM (SELECT id FROM CUSTOMERS BETWEEN 123 AND 345) C
 SELECT * FROM Customers SNAPSHOT SINCE 123 INNER JOIN Inventory AS OF 789 ON Customers.id = Inventory.id;
 ```
 
-請注意，`SNAPSHOT`子句與表或表別名一起使用，但不在子查詢或視圖的頂端。 `SNAPSHOT`子句在可以應用表上的`SELECT`查詢的任何位置都有效。
+請注意， `SNAPSHOT` 子句與表或表別名一起使用，但不在子查詢或視圖的頂部。 A `SNAPSHOT` 子句在a `SELECT` 可套用表格上的查詢。
 
-此外，還可以使用`HEAD`和`TAIL`作為快照子句的特殊偏移值。 使用`HEAD`表示第一個快照前的偏移，而使用`TAIL`表示上次快照後的偏移。
+此外，您也可以使用 `HEAD` 和 `TAIL` 作為快照子句的特殊偏移值。 使用 `HEAD` 是指第一個快照之前的偏移，而 `TAIL` 指上次快照後的偏移。
 
 >[!NOTE]
 >
->如果在兩個快照ID之間進行查詢且啟動快照已過期，則可能會出現以下兩種情況，具體取決於是否設定了可選的回退行為標誌(`resolve_fallback_snapshot_on_failure`):
+>如果在兩個快照ID之間進行查詢且啟動快照已過期，則可能會發生以下兩種情況，具體取決於可選的回退行為標誌(`resolve_fallback_snapshot_on_failure`)已設定：
 >
->- 如果設定了可選的回退行為標誌，Query Service將選擇最早可用快照，將其設定為開始快照，並在最早可用快照和指定的結束快照之間返回資料。 此資料是最早可用快照的&#x200B;**inclusive**。
+>- 如果設定了可選的回退行為標誌，Query Service將選擇最早可用快照，將其設定為開始快照，並在最早可用快照和指定的結束快照之間返回資料。 此資料為 **包容性** 最早可用快照。
 >
 >- 如果未設定選用的後援行為標幟，則會傳回錯誤。
 
 
 ### WHERE子句
 
-預設情況下，`SELECT`查詢上的`WHERE`子句產生的匹配項區分大小寫。 如果希望匹配項不區分大小寫，則可以使用關鍵字`ILIKE`，而不是`LIKE`。
+依預設，由 `WHERE` 子句 `SELECT` 查詢區分大小寫。 如果想要比對不區分大小寫，則可使用關鍵字 `ILIKE` 而非 `LIKE`.
 
 ```sql
     [ WHERE condition { LIKE | ILIKE | NOT LIKE | NOT ILIKE } pattern ]
@@ -137,7 +137,7 @@ SELECT * FROM Customers SNAPSHOT SINCE 123 INNER JOIN Inventory AS OF 789 ON Cus
 
 下表對LIKE和ILIKE子句的邏輯進行了說明：
 
-| 子句 | 運算元 |
+| 子句 | 運算子 |
 | ------ | -------- |
 | `WHERE condition LIKE pattern` | `~~` |
 | `WHERE condition NOT LIKE pattern` | `!~~` |
@@ -155,7 +155,7 @@ WHERE CustomerName ILIKE 'a%';
 
 ### 加入
 
-使用聯接的`SELECT`查詢具有以下語法：
+A `SELECT` 使用聯接的查詢具有以下語法：
 
 ```sql
 SELECT statement
@@ -166,7 +166,7 @@ ON join condition
 
 ### 聯合、交叉和除外
 
-`UNION`、`INTERSECT`和`EXCEPT`子句用於從兩個或多個表中組合或排除類似行：
+此 `UNION`, `INTERSECT`，和 `EXCEPT` 子句用於組合或排除兩個或多個表中的類似行：
 
 ```sql
 SELECT statement 1
@@ -176,7 +176,7 @@ SELECT statement 2
 
 ### 建立選取的表格
 
-以下語法定義`CREATE TABLE AS SELECT`(CTAS)查詢：
+下列語法定義 `CREATE TABLE AS SELECT` (CTAS)查詢：
 
 ```sql
 CREATE TABLE table_name [ WITH (schema='target_schema_title', rowvalidation='false') ] AS (select_query)
@@ -184,9 +184,9 @@ CREATE TABLE table_name [ WITH (schema='target_schema_title', rowvalidation='fal
 
 **參數**
 
-- `schema`:XDM架構的標題。只有在您想要對CTAS查詢建立的新資料集使用現有XDM架構時，才使用此子句。
-- `rowvalidation`:（選用）指定使用者是否想要對新建立的資料集擷取的每個新批次進行列層級驗證。預設值為 `true`。
-- `select_query`:一個 `SELECT` 聲明。在[SELECT查詢節](#select-queries)中可找到`SELECT`查詢的語法。
+- `schema`:XDM架構的標題。 只有在您想要對CTAS查詢建立的新資料集使用現有XDM架構時，才使用此子句。
+- `rowvalidation`:（選用）指定使用者是否想要對新建立的資料集擷取的每個新批次進行列層級驗證。 預設值為 `true`。
+- `select_query`:A `SELECT` 語句。 的語法 `SELECT` 查詢可在 [「選擇查詢」部分](#select-queries).
 
 **範例**
 
@@ -200,11 +200,11 @@ CREATE TABLE Chairs AS (SELECT color FROM Inventory SNAPSHOT SINCE 123)
 
 >[!NOTE]
 >
->`SELECT`陳述式必須具有匯總函式的別名，如`COUNT`、`SUM`、`MIN`等。 此外，`SELECT`語句可以帶括弧()或不帶括弧()。 您可以提供`SNAPSHOT`子句，將增量增量增量讀取到目標表中。
+>此 `SELECT` 語句必須具有匯總函式的別名，如 `COUNT`, `SUM`, `MIN`等。 此外， `SELECT` 語句可以帶括弧()或不帶括弧()。 您可以提供 `SNAPSHOT` 子句將增量增量增量讀取到目標表中。
 
 ## 插入
 
-`INSERT INTO`命令的定義如下：
+此 `INSERT INTO` 命令的定義如下：
 
 ```sql
 INSERT INTO table_name select_query
@@ -213,7 +213,7 @@ INSERT INTO table_name select_query
 **參數**
 
 - `table_name`:要插入查詢的表的名稱。
-- `select_query`:一個 `SELECT` 聲明。在[SELECT查詢節](#select-queries)中可找到`SELECT`查詢的語法。
+- `select_query`:A `SELECT` 語句。 的語法 `SELECT` 查詢可在 [「選擇查詢」部分](#select-queries).
 
 **範例**
 
@@ -224,11 +224,11 @@ INSERT INTO Customers AS (SELECT * from OnlineCustomers SNAPSHOT AS OF 345)
 ```
 
 >[!NOTE]
-> `SELECT`語句&#x200B;**不得**&#x200B;括在括弧()中。 此外，`SELECT`語句結果的模式必須符合`INSERT INTO`語句中定義的表的模式。 您可以提供`SNAPSHOT`子句，將增量增量增量讀取到目標表中。
+> 此 `SELECT` 語句 **不能** 括在括弧內()。 此外， `SELECT` 語句必須符合 `INSERT INTO` 語句。 您可以提供 `SNAPSHOT` 子句將增量增量增量讀取到目標表中。
 
 ## 拖放表
 
-`DROP TABLE`命令刪除現有表，並從檔案系統中刪除與表關聯的目錄（如果它不是外部表）。 如果表不存在，則會發生例外。
+此 `DROP TABLE` 命令刪除一個現有表，並從檔案系統刪除與該表關聯的目錄（如果該目錄不是外部表）。 如果表不存在，則會發生例外。
 
 ```sql
 DROP TABLE [IF EXISTS] [db_name.]table_name
@@ -236,11 +236,11 @@ DROP TABLE [IF EXISTS] [db_name.]table_name
 
 **參數**
 
-- `IF EXISTS`:如果指定此值，則如果表不列出，則不會引發 **** 異常。
+- `IF EXISTS`:如果已指定此值，則如果表已指定，則不會引發異常 **not** 存在。
 
 ## 刪除資料庫
 
-`DROP DATABASE`命令刪除現有資料庫。
+此 `DROP DATABASE` 命令刪除現有資料庫。
 
 ```sql
 DROP DATABASE [IF EXISTS] db_name
@@ -248,11 +248,11 @@ DROP DATABASE [IF EXISTS] db_name
 
 **參數**
 
-- `IF EXISTS`:如果指定了此值，則如果資料庫不列出此值，則不會引發 **** 異常。
+- `IF EXISTS`:如果已指定此值，則如果資料庫執行此操作，則不會引發異常 **not** 存在。
 
 ## 刪除架構
 
-`DROP SCHEMA`命令會刪除現有架構。
+此 `DROP SCHEMA` 命令會刪除現有架構。
 
 ```sql
 DROP SCHEMA [IF EXISTS] db_name.schema_name [ RESTRICT | CASCADE]
@@ -260,15 +260,15 @@ DROP SCHEMA [IF EXISTS] db_name.schema_name [ RESTRICT | CASCADE]
 
 **參數**
 
-- `IF EXISTS`:如果已指定，則如果架構不列入任何文字，則不會擲 **** 回例外。
+- `IF EXISTS`:如果已指定，則如果架構執行，則不會擲回例外 **not** 存在。
 
-- `RESTRICT`:模式的預設值。如果已指定，則只有當架構&#x200B;**不**&#x200B;包含任何表時，才會刪除該架構。
+- `RESTRICT`:模式的預設值。 如果已指定，則只有在指定時才會刪除架構 **does&#39;t** 包含任何表。
 
 - `CASCADE`:如果指定了此值，則將刪除架構以及架構中存在的所有表。
 
 ## 建立檢視
 
-以下語法定義`CREATE VIEW`查詢：
+下列語法定義 `CREATE VIEW` 查詢：
 
 ```sql
 CREATE VIEW view_name AS select_query
@@ -277,7 +277,7 @@ CREATE VIEW view_name AS select_query
 **參數**
 
 - `view_name`:要建立的視圖名稱。
-- `select_query`:一個 `SELECT` 聲明。在[SELECT查詢節](#select-queries)中可找到`SELECT`查詢的語法。
+- `select_query`:A `SELECT` 語句。 的語法 `SELECT` 查詢可在 [「選擇查詢」部分](#select-queries).
 
 **範例**
 
@@ -289,7 +289,7 @@ CREATE OR REPLACE VIEW V1 AS SELECT model, version FROM Inventory
 
 ## 拖放檢視
 
-以下語法定義`DROP VIEW`查詢：
+下列語法定義 `DROP VIEW` 查詢：
 
 ```sql
 DROP VIEW [IF EXISTS] view_name
@@ -297,7 +297,7 @@ DROP VIEW [IF EXISTS] view_name
 
 **參數**
 
-- `IF EXISTS`:如果指定此值，則如果視圖不顯示任何內容，則不會引發 **** 異常。
+- `IF EXISTS`:如果已指定此值，則如果檢視執行，則不會擲回例外 **not** 存在。
 - `view_name`:要刪除的視圖名稱。
 
 **範例**
@@ -307,13 +307,51 @@ DROP VIEW v1
 DROP VIEW IF EXISTS v1
 ```
 
+## 匿名塊
+
+匿名區塊包含兩個區段：可執行和異常處理部分。 在匿名塊中，執行檔部分是強制的。 不過，例外處理區段是選用項目。
+
+以下範例說明如何建立包含一或多個要一起執行的陳述式的區塊：
+
+```sql
+BEGIN
+  statementList
+[EXCEPTION exceptionHandler]
+END
+
+exceptionHandler:
+      WHEN OTHER
+      THEN statementList
+
+statementList:
+    : (statement (';')) +
+```
+
+以下是使用匿名區塊的範例。
+
+```sql
+$$
+BEGIN
+   SET @v_snapshot_from = select parent_id  from (select history_meta('email_tracking_experience_event_dataset') ) tab where is_current;
+   SET @v_snapshot_to = select snapshot_id from (select history_meta('email_tracking_experience_event_dataset') ) tab where is_current;
+   SET @v_log_id = select now();
+   CREATE TABLE tracking_email_id_incrementally
+     AS SELECT _id AS id FROM email_tracking_experience_event_dataset SNAPSHOT BETWEEN @v_snapshot_from AND @v_snapshot_to;
+
+EXCEPTION
+  WHEN OTHER THEN
+    DROP TABLE IF EXISTS tracking_email_id_incrementally;
+    SELECT 'ERROR';
+END$$;
+```
+
 ## [!DNL Spark] SQL命令
 
 以下子部分涵蓋查詢服務支援的Spark SQL命令。
 
 ### 設定
 
-`SET`命令設定一個屬性，並返回現有屬性的值或列出所有現有屬性。 如果為現有屬性鍵提供值，則覆蓋舊值。
+此 `SET` 命令設定屬性，返回現有屬性的值或列出所有現有屬性。 如果為現有屬性鍵提供值，則覆蓋舊值。
 
 ```sql
 SET property_key = property_value
@@ -324,7 +362,7 @@ SET property_key = property_value
 - `property_key`:要列出或更改的屬性的名稱。
 - `property_value`:您要將屬性設為的值。
 
-若要傳回任何設定的值，請使用`SET [property key]`而不使用`property_value`。
+若要傳回任何設定的值，請使用 `SET [property key]` 沒有 `property_value`.
 
 ## PostgreSQL命令
 
@@ -332,7 +370,7 @@ SET property_key = property_value
 
 ### 開始
 
-`BEGIN`命令或`BEGIN WORK`或`BEGIN TRANSACTION`命令可起始事務塊。 在開始命令之後輸入的任何語句將在單個事務中執行，直到給出顯式COMMIT或ROLLBACK命令為止。 此命令與`START TRANSACTION`相同。
+此 `BEGIN` 命令，或 `BEGIN WORK` 或 `BEGIN TRANSACTION` 命令，啟動事務塊。 在開始命令之後輸入的任何語句將在單個事務中執行，直到給出顯式COMMIT或ROLLBACK命令為止。 此命令與 `START TRANSACTION`.
 
 ```sql
 BEGIN
@@ -342,29 +380,29 @@ BEGIN TRANSACTION
 
 ### 關閉
 
-`CLOSE`命令釋放與開啟的游標相關聯的資源。 關閉游標後，不允許對游標執行後續操作。 游標不再需要時應關閉。
+此 `CLOSE` 命令可釋放與開啟的游標關聯的資源。 關閉游標後，不允許對游標執行後續操作。 游標不再需要時應關閉。
 
 ```sql
 CLOSE name
 CLOSE ALL
 ```
 
-如果使用`CLOSE name`,`name`表示需要關閉的開啟游標的名稱。 如果使用`CLOSE ALL`，則將關閉所有開啟的游標。
+若 `CLOSE name` , `name` 表示需要關閉的開啟游標的名稱。 若 `CLOSE ALL` 已使用，將關閉所有開啟的游標。
 
 ### 解除分配
 
-`DEALLOCATE`命令允許您取消分配以前準備的SQL陳述式。 如果未明確取消分配準備的語句，則會在會話結束時取消分配該語句。 有關已準備語句的詳細資訊，請參見[PREPARE命令](#prepare)部分。
+此 `DEALLOCATE` 命令允許您取消分配以前準備的SQL陳述式。 如果未明確取消分配準備的語句，則會在會話結束時取消分配該語句。 有關已準備語句的更多資訊，請參見 [PREPARE命令](#prepare) 區段。
 
 ```sql
 DEALLOCATE name
 DEALLOCATE ALL
 ```
 
-如果使用`DEALLOCATE name`，則`name`表示需要取消分配的預準備語句的名稱。 如果使用`DEALLOCATE ALL`，則將取消分配所有準備的語句。
+若 `DEALLOCATE name` , `name` 表示需要取消分配的預準備語句的名稱。 若 `DEALLOCATE ALL` 會使用，所有已準備的陳述式都會被取消分配。
 
 ### 宣告
 
-`DECLARE`命令允許用戶建立游標，該游標可用於從較大的查詢中檢索少量行。 建立游標後，使用`FETCH`從游標中提取行。
+此 `DECLARE` 命令允許用戶建立游標，該游標可用於從較大的查詢中檢索少量行。 建立游標後，使用 `FETCH`.
 
 ```sql
 DECLARE name CURSOR FOR query
@@ -373,13 +411,13 @@ DECLARE name CURSOR FOR query
 **參數**
 
 - `name`:要建立的游標的名稱。
-- `query`:提 `SELECT` 供游 `VALUES` 標要返回的行的或命令。
+- `query`:A `SELECT` 或 `VALUES` 提供游標返回的行的命令。
 
 ### 執行
 
-`EXECUTE`命令用於執行先前準備的語句。 由於準備語句僅存在於會話期間，因此準備語句必須由在當前會話早期執行的`PREPARE`語句建立。 有關使用預準備語句的更多資訊，請參見[`PREPARE`命令](#prepare)部分。
+此 `EXECUTE` 命令用於執行以前準備的語句。 由於準備的陳述式僅存在於屆會期間，因此準備的陳述式必須由 `PREPARE` 在當前會話中稍早執行的語句。 有關使用預準備語句的詳細資訊，請參見 [`PREPARE` 命令](#prepare) 區段。
 
-如果建立該語句的`PREPARE`語句指定了一些參數，則必須將一組相容的參數傳遞到`EXECUTE`語句。 若未傳入這些參數，則會產生錯誤。
+若 `PREPARE` 建立語句的語句指定了一些參數，必須將一組相容的參數傳遞到 `EXECUTE` 語句。 若未傳入這些參數，則會產生錯誤。
 
 ```sql
 EXECUTE name [ ( parameter ) ]
@@ -388,17 +426,17 @@ EXECUTE name [ ( parameter ) ]
 **參數**
 
 - `name`:要執行的準備語句的名稱。
-- `parameter`:參數對預準備語句的實際值。這必須是一個表達式，其值與此參數的資料類型相容，這是在建立準備語句時確定的。  如果準備語句有多個參數，則這些參數將以逗號分隔。
+- `parameter`:參數對預準備語句的實際值。 這必須是一個表達式，其值與此參數的資料類型相容，這是在建立準備語句時確定的。  如果準備語句有多個參數，則這些參數將以逗號分隔。
 
 ### 說明
 
-`EXPLAIN`命令顯示所提供語句的執行計畫。 執行計畫顯示如何掃描語句引用的表。  如果引用了多個表，它將顯示用於將每個輸入表中所需的行集合在一起的聯接算法。
+此 `EXPLAIN` 命令顯示提供語句的執行計畫。 執行計畫顯示如何掃描語句引用的表。  如果引用了多個表，它將顯示用於將每個輸入表中所需的行集合在一起的聯接算法。
 
 ```sql
 EXPLAIN option statement
 ```
 
-其中`option`可以是以下任一項：
+其中 `option` 可以是下列其中一項：
 
 ```sql
 ANALYZE
@@ -407,17 +445,17 @@ FORMAT { TEXT | JSON }
 
 **參數**
 
-- `ANALYZE`:如果包 `option` 含， `ANALYZE`則會顯示執行時間和其他統計資料。
-- `FORMAT`:如果包 `option` 含 `FORMAT`，則會指定輸出格式，其可 `TEXT` 以是或 `JSON`。非文本輸出包含與文本輸出格式相同的資訊，但對程式來說比較容易分析。 此參數預設為`TEXT`。
-- `statement`:您要查 `SELECT`看其執行計畫的 `INSERT`、  `UPDATE`、  `DELETE`、  `VALUES`、  `EXECUTE`、  `DECLARE`、  `CREATE TABLE AS`或 `CREATE MATERIALIZED VIEW AS` 陳述式。
+- `ANALYZE`:若 `option` 包含 `ANALYZE`，則會顯示執行時間和其他統計資料。
+- `FORMAT`:若 `option` 包含 `FORMAT`，它會指定輸出格式， `TEXT` 或 `JSON`. 非文本輸出包含與文本輸出格式相同的資訊，但對程式來說比較容易分析。 此參數預設為 `TEXT`.
+- `statement`:任何 `SELECT`, `INSERT`, `UPDATE`, `DELETE`, `VALUES`, `EXECUTE`, `DECLARE`, `CREATE TABLE AS`，或 `CREATE MATERIALIZED VIEW AS` 語句，您要查看其執行計畫。
 
 >[!IMPORTANT]
 >
->請記住，使用`ANALYZE`選項時，會實際執行陳述式。 雖然`EXPLAIN`會捨棄`SELECT`傳回的任何輸出，但語句的其他副作用仍如常發生。
+>請記住，陳述式實際執行於 `ANALYZE` 選項。 雖然 `EXPLAIN` 丟棄 `SELECT` 傳回，陳述式的其他副作用會照常發生。
 
 **範例**
 
-以下示例顯示了單列`integer`和10000行表上的簡單查詢計畫：
+以下示例顯示了單個 `integer` 列和10000行：
 
 ```sql
 EXPLAIN SELECT * FROM foo;
@@ -432,7 +470,7 @@ EXPLAIN SELECT * FROM foo;
 
 ### 擷取
 
-`FETCH`命令使用先前建立的游標檢索行。
+此 `FETCH` 命令使用先前建立的游標檢索行。
 
 ```sql
 FETCH num_of_rows [ IN | FROM ] cursor_name
@@ -445,7 +483,7 @@ FETCH num_of_rows [ IN | FROM ] cursor_name
 
 ### 準備 {#prepare}
 
-`PREPARE`命令可讓您建立準備的陳述式。 準備語句是伺服器端對象，可用於模擬類似的SQL陳述式。
+此 `PREPARE` 命令可讓您建立準備的陳述式。 準備語句是伺服器端對象，可用於模擬類似的SQL陳述式。
 
 預準備語句可以採用參數，這些參數是執行語句時被替換的值。 使用預準備的陳述式時，參數會以$1、$2等方式依位置參考。
 
@@ -458,11 +496,11 @@ PREPARE name [ ( data_type [, ...] ) ] AS SELECT
 **參數**
 
 - `name`:已準備語句的名稱。
-- `data_type`:準備語句參數的資料類型。如果未列出參數的資料類型，則可從內容推斷該類型。 如果您需要新增多個資料類型，可以以逗號分隔的清單新增。
+- `data_type`:準備語句參數的資料類型。 如果未列出參數的資料類型，則可從內容推斷該類型。 如果您需要新增多個資料類型，可以以逗號分隔的清單新增。
 
 ### 回滾
 
-`ROLLBACK`命令將取消當前事務，並丟棄該事務所做的所有更新。
+此 `ROLLBACK` 命令取消當前事務，並丟棄該事務所做的所有更新。
 
 ```sql
 ROLLBACK
@@ -471,7 +509,7 @@ ROLLBACK WORK
 
 ### 選擇
 
-`SELECT INTO`命令將建立新表，並用由查詢計算的資料填充該表。 資料不會返回給客戶端，因為它使用常規`SELECT`命令。 新表的列具有與`SELECT`命令的輸出列關聯的名稱和資料類型。
+此 `SELECT INTO` 命令將建立新表，並用查詢計算的資料填充該表。 資料不會傳回給用戶端，因為這是正常情況 `SELECT` 命令。 新表的列具有與輸出列關聯的名稱和資料類型 `SELECT` 命令。
 
 ```sql
 [ WITH [ RECURSIVE ] with_query [, ...] ]
@@ -493,15 +531,15 @@ SELECT [ ALL | DISTINCT [ ON ( expression [, ...] ) ] ]
 
 **參數**
 
-有關標準SELECT查詢參數的更多資訊，請參見[SELECT查詢節](#select-queries)。 此部分將僅列出`SELECT INTO`命令所獨有的參數。
+有關標準SELECT查詢參數的更多資訊，請參見 [選擇查詢節](#select-queries). 本節僅列出 `SELECT INTO` 命令。
 
-- `TEMPORARY` 或 `TEMP`:選用參數。如果指定，則建立的表將是臨時表。
-- `UNLOGGED`:選用參數。如果指定，則建立為的表將是未記錄的表。 有關未記錄表的更多資訊，請參見[PostgreSQL文檔](https://www.postgresql.org/docs/current/sql-createtable.html)。
+- `TEMPORARY` 或 `TEMP`:選用參數。 如果指定，則建立的表將是臨時表。
+- `UNLOGGED`:選用參數。 如果指定，則建立為的表將是未記錄的表。 如需未記錄表格的詳細資訊，請參閱 [PostgreSQL文檔](https://www.postgresql.org/docs/current/sql-createtable.html).
 - `new_table`:要建立的表的名稱。
 
 **範例**
 
-以下查詢建立一個新表`films_recent`，該表僅包含表`films`中最近的條目：
+以下查詢將建立新表 `films_recent` 僅包含表中的最近條目 `films`:
 
 ```sql
 SELECT * INTO films_recent FROM films WHERE date_prod >= '2002-01-01';
@@ -509,7 +547,7 @@ SELECT * INTO films_recent FROM films WHERE date_prod >= '2002-01-01';
 
 ### 顯示
 
-`SHOW`命令顯示運行時參數的當前設定。 這些變數可以使用`SET`語句設定，方法是編輯`postgresql.conf`配置檔案，通過`PGOPTIONS`環境變數（使用libpq或基於libpq的應用程式時），或在啟動Postgres伺服器時通過命令行標籤。
+此 `SHOW` 命令顯示運行時參數的當前設定。 這些變數可透過 `SET` 語句，通過編輯 `postgresql.conf` 設定檔案，透過 `PGOPTIONS` 環境變數（使用libpq或libpq型應用程式時），或在啟動Postgres伺服器時透過命令列標幟。
 
 ```sql
 SHOW name
@@ -518,7 +556,7 @@ SHOW ALL
 
 **參數**
 
-- `name`:要獲得相關資訊的運行時參數的名稱。運行時參數的可能值包括以下值：
+- `name`:要獲得相關資訊的運行時參數的名稱。 運行時參數的可能值包括以下值：
    - `SERVER_VERSION`:此參數會顯示伺服器的版本號碼。
    - `SERVER_ENCODING`:此參數會顯示伺服器端字元集編碼。
    - `LC_COLLATE`:此參數顯示資料庫的歸類（文本排序）區域設定。
@@ -528,7 +566,7 @@ SHOW ALL
 
 **範例**
 
-以下查詢顯示參數`DateStyle`的當前設定。
+以下查詢顯示參數的當前設定 `DateStyle`.
 
 ```sql
 SHOW DateStyle;
@@ -543,7 +581,7 @@ SHOW DateStyle;
 
 ### 複製
 
-`COPY`命令將任何`SELECT`查詢的輸出轉儲到指定位置。 用戶必須有權訪問此位置，此命令才能成功。
+此 `COPY` 命令轉儲任何 `SELECT` 查詢至指定位置。 用戶必須有權訪問此位置，此命令才能成功。
 
 ```sql
 COPY query
@@ -554,15 +592,15 @@ COPY query
 **參數**
 
 - `query`:要複製的查詢。
-- `format_name`:要在中複製查詢的格式。`format_name`可以是`parquet`、`csv`或`json`之一。 預設情況下，值為`parquet`。
+- `format_name`:要在中複製查詢的格式。 此 `format_name` 可以是 `parquet`, `csv`，或 `json`. 依預設，值為 `parquet`.
 
 >[!NOTE]
 >
->完整的輸出路徑為`adl://<ADLS_URI>/users/<USER_ID>/acp_foundation_queryService/folder_location/<QUERY_ID>`
+>完整的輸出路徑為 `adl://<ADLS_URI>/users/<USER_ID>/acp_foundation_queryService/folder_location/<QUERY_ID>`
 
 ### ALTER TABLE
 
-`ALTER TABLE`命令可讓您新增或刪除主要或外鍵限制，以及新增欄至表格。
+此 `ALTER TABLE` 命令可讓您添加或刪除主鍵或外鍵約束，以及向表中添加列。
 
 #### 添加或刪除約束
 
@@ -606,11 +644,11 @@ ALTER TABLE table_name ADD COLUMN column_name_1 data_type1, column_name_2 data_t
 
 - `table_name`:要編輯的表的名稱。
 - `column_name`:要添加的列的名稱。
-- `data_type`:要添加的列的資料類型。支援的資料類型包括：bigint, char, string, date, datetime, double, double precision，整數， smallint, tinyint, varchar。
+- `data_type`:要添加的列的資料類型。 支援的資料類型包括：bigint, char, string, date, datetime, double, double precision，整數， smallint, tinyint, varchar。
 
 ### 顯示主鍵
 
-`SHOW PRIMARY KEYS`命令列出給定資料庫的所有主鍵約束。
+此 `SHOW PRIMARY KEYS` 命令列出給定資料庫的所有主鍵約束。
 
 ```sql
 SHOW PRIMARY KEYS
@@ -625,7 +663,7 @@ SHOW PRIMARY KEYS
 
 ### 顯示外鍵
 
-`SHOW FOREIGN KEYS`命令列出給定資料庫的所有外鍵約束。
+此 `SHOW FOREIGN KEYS` 命令列出給定資料庫的所有外鍵約束。
 
 ```sql
 SHOW FOREIGN KEYS
