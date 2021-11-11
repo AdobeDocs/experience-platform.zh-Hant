@@ -4,9 +4,9 @@ user-guide-title: 目的地指南
 user-guide-description: 針對跨通路行銷活動、電子郵件宣傳、鎖定特定目標的行銷活動和其他諸多使用案例，啟用已知和未知的資料。
 description: 本檔案列出Adobe Experience Platform目的地的目錄
 feature: Destinations
-source-git-commit: 8cac961e1566c48bacc0ec2ab3414132f81232e2
+source-git-commit: 3e2382cf4b02ea4fd40e3638b52b4719938a2ea2
 workflow-type: tm+mt
-source-wordcount: '669'
+source-wordcount: '668'
 ht-degree: 9%
 
 ---
@@ -39,7 +39,7 @@ ht-degree: 9%
    * [ (Alpha)HTTP連線](./catalog/http-destination.md)
    * Adobe目的地{#adobe}
       * [Adobe目的地概觀](./catalog/adobe/overview.md)
-      * [（測試版）Marketo Engage連線](./catalog/adobe/marketo-engage.md)
+      * [Marketo Engage連線](./catalog/adobe/marketo-engage.md)
       * [Experience Platform區段共用](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html)
    * 廣告目的地{#advertising}
       * [廣告目的地概觀](./catalog/advertising/overview.md)
@@ -148,7 +148,7 @@ ht-degree: 9%
    * [總覽](./destination-sdk/overview.md)
    * [整合必要條件](./destination-sdk/integration-prerequisites.md)
    * [快速入門](./destination-sdk/getting-started.md)
-   * 目的地SDK功能 {#functionality}
+   * Destination SDK功能 {#functionality}
       * [設定選項](./destination-sdk/configuration-options.md)
       * [目標配置](./destination-sdk/destination-configuration.md)
       * [伺服器和模板規格](./destination-sdk/server-and-template-configuration.md)
@@ -161,7 +161,7 @@ ht-degree: 9%
          * [建立並測試訊息轉換範本](./destination-sdk/create-template.md)
          * [測試您的目標配置](./destination-sdk/test-destination.md)
    * API操作 {#api}
-      * [目標SDK（目標編寫）API參考](https://www.adobe.io/experience-platform-apis/references/destination-authoring/)
+      * [Destination SDK（目標編寫）API參考](https://www.adobe.io/experience-platform-apis/references/destination-authoring/)
       * [目的地端點API作業](./destination-sdk/destination-configuration-api.md)
       * [目標伺服器端點API操作](./destination-sdk/destination-server-api.md)
       * [對象中繼資料端點API操作](./destination-sdk/audience-metadata-api.md)
@@ -173,7 +173,7 @@ ht-degree: 9%
          * [目的地測試API操作](./destination-sdk/destination-testing-api.md)
          * [設定檔產生API操作範例](./destination-sdk/sample-profile-generation-api.md)
    * 指南 {#guides}
-      * [使用目的地SDK來設定串流目的地](./destination-sdk/configure-destination-instructions.md)
+      * [使用Destination SDK設定串流目的地](./destination-sdk/configure-destination-instructions.md)
    * 記錄您的目的地 {#document-destination}
       * [在Adobe Experience Platform中記錄您的目的地](./destination-sdk/docs-framework/documentation-instructions.md)
       * [使用GitHub網頁介面建立目的地檔案頁面](./destination-sdk/docs-framework/use-github-interface-to-create-documentation.md)
