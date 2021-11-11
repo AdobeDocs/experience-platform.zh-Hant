@@ -4,10 +4,10 @@ solution: Experience Platform, Real-time Customer Data Platform
 audience: user
 user-guide-title: 即時客戶資料平台指南
 user-guide-description: 將來自多個企業來源的已知和匿名資料放在一起，以建立客戶設定檔，從這些設定檔建立對象區段，並對協力廠商目的地啟動這些區段。
-source-git-commit: d83e51a5d45c92c9999c0f9ef469f83ffcf35d6e
+source-git-commit: 63d437db19c924bec05e7df99559b6bf2193ae5c
 workflow-type: tm+mt
-source-wordcount: '184'
-ht-degree: 29%
+source-wordcount: '192'
+ht-degree: 28%
 
 ---
 
@@ -21,7 +21,8 @@ ht-degree: 29%
       * [開始使用Real-time CDP](get-started.md)
       * [量度概觀](home-page-dashboards.md)
    * Real-time CDP B2B Edition {#rtcdpb2b-intro}
-      * [開始使用Real-time CDP B2B Edition(Beta)](./b2b-use-case.md)
+      * [Real-time CDP B2B Edition使用案例範例(Beta)](./b2b-use-case.md)
+      * [Real-time CDP B2B Edition端到端教程(Beta)](./b2b-tutorial.md)
       * [Real-time CDP B2B Edition護欄](b2b-guardrails.md)
 * 帳戶設定檔（測試版） {#account}
    * [帳戶設定檔概觀](accounts/account-profile-overview.md)
@@ -46,7 +47,7 @@ ht-degree: 29%
    * [設定檔瀏覽](profile/profile-browse.md)
 * 方案 {#schemas}
    * [結構概觀](schemas/overview.md)
-   * [即時CDP B2B版（測試版）中的結構描述](schemas/b2b.md)
+   * [即時CDP B2B版(Beta)中的結構描述](schemas/b2b.md)
 * 區段 {#segmentation}
    * [區段概觀](segmentation/segmentation-overview.md)
    * [區段產生器指南](segmentation/segment-builder-guide.md)
