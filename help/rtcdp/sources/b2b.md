@@ -2,9 +2,9 @@
 title: Real-time Customer Data Platform B2B版中的來源
 description: 概略說明來源在Real-time Customer Data Platform B2B版中的角色。
 exl-id: eeea4b2e-67c5-4491-9b8e-4b8987e44777
-source-git-commit: f4ca1efe9c728f50008d7fbaa17aa009dfc18393
+source-git-commit: ef3b9bb742b44aafc838b84a0076e7c8445ac84f
 workflow-type: tm+mt
-source-wordcount: '262'
+source-wordcount: '275'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 >
 >如果您未使用Real-time Customer Data Platform B2B Edition，請參閱 [來源概觀](./sources-overview.md) 。
 
-Real-time Customer Data Platform B2B版可讓您透過 [[!DNL Marketo Engage]](../../sources/connectors/adobe-applications/marketo/marketo.md) 來源連接器，同時讓您能使用服務來建構、加標籤及增強傳入的資料。
+Real-time Customer Data Platform B2B版可讓您透過各種來源帶入B2B資料，包括 [[!DNL Marketo Engage]](../../sources/connectors/adobe-applications/marketo/marketo.md) 來源連接器、Salesforce、Amazon S3和ADLS等。 此範圍的源允許您使用服務來構建、標籤和增強傳入資料。
 
 >[!TIP]
 >
