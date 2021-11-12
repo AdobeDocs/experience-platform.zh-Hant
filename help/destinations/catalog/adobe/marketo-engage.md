@@ -2,9 +2,9 @@
 title: Marketo Engage目標
 description: Marketo Engage是唯一適用於行銷、廣告、分析和商務的端對端客戶體驗管理(CXM)解決方案。 它可讓您自動化和管理活動，從CRM銷售機會管理、客戶參與，到以帳戶為基礎的行銷和收入歸因。
 exl-id: 5ae5f114-47ba-4ff6-8e42-f8f43eb079f7
-source-git-commit: 3e2382cf4b02ea4fd40e3638b52b4719938a2ea2
+source-git-commit: 9c5a5a49385baa7377ebdc806fd22918c39ad0b2
 workflow-type: tm+mt
-source-wordcount: '282'
+source-wordcount: '334'
 ht-degree: 1%
 
 ---
@@ -23,6 +23,10 @@ Marketo Engage是唯一適用於行銷、廣告、分析和商務的端對端客
 |---|---|
 | ECID | 代表ECID的命名空間。 此命名空間也可由下列別名引用：&quot;Adobe Marketing Cloud ID&quot;、&quot;Adobe Experience Cloud ID&quot;、&quot;Adobe Experience Platform ID&quot;。 請參閱下列檔案，內容如下 [ECID](/help/identity-service/ecid.md) 以取得更多資訊。 |
 | 電子郵件 | 代表電子郵件地址的命名空間。 此類型的命名空間通常與單一人員相關聯，因此可用於跨不同管道識別該人員。 |
+
+>[!NOTE]
+>
+>在 [對應步驟](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping) 啟動目標工作流程， *強制* 來對應身分和 *可選* 映射屬性。 從「身分命名空間」標籤對應電子郵件和/或ECID是確保人員在Marketo中符合的最重要動作。 對應電子郵件可確保最高的匹配率。
 
 ## 匯出類型 {#export-type}
 
