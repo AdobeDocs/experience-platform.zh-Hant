@@ -1,19 +1,15 @@
 ---
-title: Real-time Customer Data Platform B2B版（測試版）的結構描述
+title: Real-time Customer Data Platform B2B版中的結構描述
 description: 概略說明Real-time Customer Data Platform B2B版本中Experience Data Model(XDM)結構之角色。
 exl-id: 3b18d377-108f-443f-86ae-dc7537cf9013
-source-git-commit: 6f421a8ae77318ca2598d640cf7e27ea485ec9db
+source-git-commit: f4ca1efe9c728f50008d7fbaa17aa009dfc18393
 workflow-type: tm+mt
-source-wordcount: '219'
+source-wordcount: '198'
 ht-degree: 0%
 
 ---
 
-# Real-time Customer Data Platform B2B版（測試版）的結構描述
-
->[!IMPORTANT]
->
->Real-time Customer Data Platform B2B版目前仍在測試中。 檔案和功能可能會有所變更。
+# Real-time Customer Data Platform B2B版中的結構描述
 
 Real-time Customer Data Platform B2B版提供數種標準 [Experience Data Model(XDM)類別](../../xdm/schema/composition.md#class) 擷取關於基本B2B資料實體的詳細資訊，例如帳戶、機會、促銷活動等。 此外，即時CDP B2B Edition還允許您定義這些結構之間的多對一關係，以便它們能夠參與高級細分使用案例。
 

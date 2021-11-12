@@ -3,9 +3,9 @@ keywords: rtcdp設定檔；設定檔rtcdp;rtcdp身分；rtcdp合併原則；即�
 title: 了解Real-time CDP中的即時客戶個人檔案
 description: 了解Real-time Customer Data Platform如何讓您使用即時客戶個人檔案，為客戶提供協調一致的相關體驗。
 exl-id: de70948c-ffc1-49d3-a57c-25ad415752ff
-source-git-commit: c15f59de49c60f55b432a39f30fb5f1865fd4671
+source-git-commit: f4ca1efe9c728f50008d7fbaa17aa009dfc18393
 workflow-type: tm+mt
-source-wordcount: '476'
+source-wordcount: '456'
 ht-degree: 0%
 
 ---
@@ -20,17 +20,13 @@ ht-degree: 0%
 
 Real-time CDP是以Experience Platform為基礎構建的，利用了許多核心Experience Platform特性和功能，包括建立配置檔案。 這些個別客戶的匯總檢視會匯集來自許多行銷管道的資料，以及貴組織目前用來儲存客戶資料的不同系統。
 
-## 即時CDP B2B Edition(Beta)的設定檔增強功能
+## Real-time CDP B2B Edition的配置檔案增強功能
 
->[!IMPORTANT]
->
->Real-time Customer Data Platform B2B版目前仍在測試中。 檔案和功能可能會有所變更。
-
-除了Real-time CDP支援的配置檔案功能外，您還可以使用Real-time CDP B2B Edition來瀏覽與個人相關的重要資訊，如帳戶和銷售機會。 若要進一步了解Real-time CDP B2B Edition的設定檔增強功能，請先閱讀 [設定檔瀏覽指南](profile-browse.md).
+除了Real-time CDP支援的配置檔案功能外，您還可以使用Real-time CDP B2B Edition來瀏覽與個人相關的重要資訊，如帳戶和銷售機會。 要了解有關Real-time CDP B2B Edition的配置檔案增強功能的更多資訊，請首先閱讀 [設定檔瀏覽指南](profile-browse.md).
 
 ## 身分識別與身分識別命名空間
 
-當客戶資料匯整在一起時，會透過使用身分資料，並合併為單一設定檔，而且當每個客戶的詳細資訊都已知時，就能將這些身分資料匯整在一起。 若要進一步了解身分和身分識別命名空間，請參閱 [身分識別概述](identities-overview.md).
+當客戶資料匯整在一起時，會透過使用身分資料，合併為單一設定檔，並且能夠隨著每個客戶的詳細資訊得知，將這些身分資料匯整在一起。 若要進一步了解身分和身分識別命名空間，請參閱 [身分識別概述](identities-overview.md).
 
 ## 合併策略
 

@@ -4,10 +4,10 @@ solution: Experience Platform, Real-time Customer Data Platform
 audience: user
 user-guide-title: 即時客戶資料平台指南
 user-guide-description: 將來自多個企業來源的已知和匿名資料放在一起，以建立客戶設定檔，從這些設定檔建立對象區段，並對協力廠商目的地啟動這些區段。
-source-git-commit: 63d437db19c924bec05e7df99559b6bf2193ae5c
+source-git-commit: d0a1c6f198a8eb3e442168b6a2d2a2475fbf8fee
 workflow-type: tm+mt
-source-wordcount: '192'
-ht-degree: 28%
+source-wordcount: '184'
+ht-degree: 29%
 
 ---
 
@@ -15,16 +15,16 @@ ht-degree: 28%
 # Real-time Customer Data Platform說明 {#rtcdp}
 
 * [Real-time CDP概述](overview.md)
-* [Real-time CDP B2B Edition概述(Beta)](b2b-overview.md)
+* [Real-time CDP B2B Edition概述](b2b-overview.md)
 * 快速入門 {#intro}
    * Real-time CDP {#rtcdp-intro}
       * [開始使用Real-time CDP](get-started.md)
       * [量度概觀](home-page-dashboards.md)
    * Real-time CDP B2B Edition {#rtcdpb2b-intro}
-      * [Real-time CDP B2B Edition使用案例範例(Beta)](./b2b-use-case.md)
-      * [Real-time CDP B2B Edition端到端教程(Beta)](./b2b-tutorial.md)
+      * [Real-time CDP B2B Edition示例使用案例](./b2b-use-case.md)
+      * [Real-time CDP B2B Edition端到端教程](./b2b-tutorial.md)
       * [Real-time CDP B2B Edition護欄](b2b-guardrails.md)
-* 帳戶設定檔（測試版） {#account}
+* 帳戶設定檔 {#account}
    * [帳戶設定檔概觀](accounts/account-profile-overview.md)
    * [帳戶設定檔UI指南](accounts/account-profile-ui-guide.md)
 * 管理 {#admin}
@@ -34,7 +34,7 @@ ht-degree: 28%
    * [Platform上的資料品質](datasets/data-quality.md)
 * 目的地 {#destinations}
    * [目的地概觀](destinations/overview.md)
-   * [即時CDP B2B版(Beta)中的目的地](destinations/b2b.md)
+   * [Real-time CDP B2B Edition中的目標](destinations/b2b.md)
 * 身分 {#identity}
    * [身分與身分識別命名空間](profile/identities-overview.md)
 * 合併策略 {#merge-policies}
@@ -47,14 +47,14 @@ ht-degree: 28%
    * [設定檔瀏覽](profile/profile-browse.md)
 * 方案 {#schemas}
    * [結構概觀](schemas/overview.md)
-   * [即時CDP B2B版(Beta)中的結構描述](schemas/b2b.md)
+   * [Real-time CDP B2B Edition中的結構描述](schemas/b2b.md)
 * 區段 {#segmentation}
    * [區段概觀](segmentation/segmentation-overview.md)
    * [區段產生器指南](segmentation/segment-builder-guide.md)
-   * [即時CDP B2B版（測試版）中的細分](segmentation/b2b.md)
+   * [即時CDP B2B版中的分段](segmentation/b2b.md)
    * [Customer AI](segmentation/customer-ai.md)
 * 來源 {#sources}
    * [來源概觀](sources/sources-overview.md)
-   * [即時CDP B2B版（測試版）中的源](sources/b2b.md)
+   * [即時CDP B2B版中的源](sources/b2b.md)
 * [Experience Platform發行說明](https://www.adobe.com/go/platform-release-notes-en)
 * [Experience Platform 詞彙表](https://www.adobe.com/go/platform-glossary-en)

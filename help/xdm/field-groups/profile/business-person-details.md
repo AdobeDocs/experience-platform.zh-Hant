@@ -2,20 +2,16 @@
 title: XDM業務人員詳細資訊結構欄位組
 description: 本檔案提供「 XDM業務人員詳細資訊」結構欄位群組的概觀。
 exl-id: e9da5c1c-5a30-4cbc-beb2-cc5efe57cab0
-source-git-commit: 57370e4ed0807bcebf30c73af629671b5390d90d
+source-git-commit: edf7afc5db219430232a3226dc691570b50a32bd
 workflow-type: tm+mt
-source-wordcount: '562'
+source-wordcount: '533'
 ht-degree: 6%
 
 ---
 
-# [!UICONTROL XDM業務人員詳] 細資訊架構欄位群組（測試版）
+# [!UICONTROL XDM業務人員詳細資訊] 方案欄位組
 
->[!IMPORTANT]
->
->此欄位群組屬於目前測試版的即時客戶資料平台B2B版。 檔案和功能可能會有所變更。
-
-[!UICONTROL XDM業務人] 員詳細資訊類別的標準結構 [[!DNL XDM Individual Profile] ](../../classes/individual-profile.md) 欄位群組，可擷取企業對企業(B2B)企業情境中個別人員的相關資訊。
+[!UICONTROL XDM業務人員詳細資訊] 是的標準架構欄位組 [[!DNL XDM Individual Profile] 類](../../classes/individual-profile.md) 擷取企業對企業(B2B)企業情境中個人的相關資訊。
 
 ![](../../images/field-groups/business-person-details.png)
 
@@ -56,7 +52,7 @@ ht-degree: 6%
 | `workAddress` | [郵遞區號](../../data-types/postal-address.md) | 該人的工作地址。 |
 | `workEmail` | [電子郵件地址](../../data-types/email-address.md) | 人員的工作電子郵件地址。 |
 | `workPhone` | [電話號碼](../../data-types/phone-number.md) | 此人的工作電話號碼。 |
-| `identityMap` | 地圖 | 一個地圖欄位，包含人員的一組命名空間身分識別。 系統會在擷取身分資料時自動更新此欄位。 為了為[即時客戶配置檔案](../../../profile/home.md)正確使用此欄位，請勿嘗試手動更新資料操作中欄位的內容。<br /><br />如需其使用案例的詳細資訊，請 [參閱結構組合基](../../schema/composition.md#identityMap) 本概念中的身分對應區段。 |
+| `identityMap` | 地圖 | 一個地圖欄位，包含人員的一組命名空間身分識別。 系統會在擷取身分資料時自動更新此欄位。 為了正確利用此欄位 [即時客戶個人檔案](../../../profile/home.md)，請勿嘗試手動更新資料操作中欄位的內容。<br /><br />請參閱 [綱要構成基本知識](../../schema/composition.md#identityMap) 以取得其使用案例的詳細資訊。 |
 | `organizations` | 字串陣列 | 人員工作所在的組織名稱清單。 |
 
 {style=&quot;table-layout:auto&quot;}

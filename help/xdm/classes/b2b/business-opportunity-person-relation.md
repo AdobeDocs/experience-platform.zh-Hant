@@ -2,20 +2,16 @@
 title: XDM業務機會人員關係類
 description: 本檔案概述Experience Data Model(XDM)中的XDM Business Opportunity Person Relation類別。
 exl-id: 7be193d2-52eb-4b28-953b-5e0fc21d8f93
-source-git-commit: b5cdd72238f7b4519de1c789f4294b9698415327
+source-git-commit: edf7afc5db219430232a3226dc691570b50a32bd
 workflow-type: tm+mt
-source-wordcount: '270'
-ht-degree: 3%
+source-wordcount: '242'
+ht-degree: 4%
 
 ---
 
-# [!UICONTROL XDM業務機會人] 員關係類（測試版）
+# [!UICONTROL XDM商機人員關係] 類
 
->[!IMPORTANT]
->
->此類別屬於目前測試版的即時客戶資料平台B2B版。 檔案和功能可能會有所變更。
-
-[!UICONTROL XDM Business Opportunity Person Relationship] 是一種標準的Experience Data Model(XDM)類，它捕獲與業務機會關聯的人員的最低必需屬性。
+[!UICONTROL XDM商機人員關係] 是標準的Experience Data Model(XDM)類別，可擷取與業務機會相關聯之人員的最低必要屬性。
 
 ![](../../images/classes/b2b/business-opportunity-person-relation.png)
 
@@ -34,4 +30,4 @@ ht-degree: 3%
 
 {style=&quot;table-layout:auto&quot;}
 
-請參閱即時CDP B2B版本](../../tutorials/relationship-b2b.md)中的[架構關係指南，了解此類別在概念上如何與其他B2B類別相關，以及如何在Adobe Experience Platform UI中建立這些關係。
+請參閱 [即時CDP B2B版中的架構關係](../../tutorials/relationship-b2b.md) 了解此類別在概念上如何與其他B2B類別相關，以及如何在Adobe Experience Platform UI中建立這些關係。

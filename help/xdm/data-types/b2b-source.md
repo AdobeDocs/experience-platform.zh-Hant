@@ -2,24 +2,20 @@
 title: B2B源資料類型
 description: 本檔案概述B2B來源Experience Data Model(XDM)資料類型。
 exl-id: 01b7d41c-1ab6-4cbc-b9b3-77b6af69faf3
-source-git-commit: b5cdd72238f7b4519de1c789f4294b9698415327
+source-git-commit: edf7afc5db219430232a3226dc691570b50a32bd
 workflow-type: tm+mt
-source-wordcount: '302'
-ht-degree: 2%
+source-wordcount: '273'
+ht-degree: 3%
 
 ---
 
-# [!UICONTROL B2B源資] 料類型（測試版）
+# [!UICONTROL B2B源] 資料類型
 
->[!IMPORTANT]
->
->此資料類型屬於目前測試版的即時客戶資料平台B2B版。 檔案和功能可能會有所變更。
+[!UICONTROL B2B源] 是標準的Experience Data Model(XDM)資料類型，代表B2B實體的複合識別碼(例如 [帳戶](../classes/b2b/business-account.md), [商機](../classes/b2b/business-opportunity.md)，或 [行銷活動](../classes/b2b/business-campaign.md))。
 
-[!UICONTROL B2B來] 源是標準的Experience Data Model(XDM)資料類型，代表B2B實體(例如帳戶 [](../classes/b2b/business-account.md)、機 [會](../classes/b2b/business-opportunity.md)或促銷活 [動](../classes/b2b/business-campaign.md))的複合識別碼。
+僅依賴字串型識別碼時，跨多個系統的ID之間可能會有重疊（例如，一個CRM系統上可能會為機會指定字串ID，但同一ID可能指的是完全不同的機會）。 這樣會在將資料合併到 [即時客戶個人檔案](../../profile/home.md).
 
-僅依賴字串型識別碼時，跨多個系統的ID之間可能會有重疊（例如，一個CRM系統上可以為機會指定字串ID，但同一ID可能指的是完全不同的機會）。 在[即時客戶設定檔](../../profile/home.md)中合併資料時，這可能會導致資料衝突。
-
-[!UICONTROL B2B源]資料類型允許您使用實體的原始字串ID，並將其與源特定上下文資訊組合，以確保它在Platform系統中保持完全唯一，而無論其源自何。
+此 [!UICONTROL B2B源] 資料類型可讓您使用實體的原始字串ID，並將其與來源專屬的內容資訊結合，以確保其在Platform系統中完全不重複，無論其來源為何。
 
 ![B2B源結構](../images/data-types/b2b-source.png)
 
@@ -27,7 +23,7 @@ ht-degree: 2%
 | --- | --- | --- |
 | `sourceID` | 字串 | 源記錄的唯一ID。 |
 | `sourceInstanceID` | 字串 | 來源資料的例項或組織ID。 |
-| `sourceKey` | 字串 | 由`sourceId`、`sourceInstanceId`和`sourceType`以下列格式串連在一起的唯一識別碼：`[sourceID]@$[sourceInstanceID].[sourceType]`。<br><br>某些來源連接器(例如Marketo)會針對特定識別碼自動串連此值。必須使用[資料準備`concat`函式](../../data-prep/functions.md#string)手動串連其他項目，例如：`concat(id,"@${ORG_ID}.Marketo")` |
+| `sourceKey` | 字串 | 由 `sourceId`, `sourceInstanceId`，和 `sourceType` 以下列格式串連： `[sourceID]@$[sourceInstanceID].[sourceType]`.<br><br>某些來源連接器(例如Marketo)會針對特定識別碼自動串連此值。 其他必須使用 [資料準備 `concat` 函式](../../data-prep/functions.md#string)，例如： `concat(id,"@${ORG_ID}.Marketo")` |
 | `sourceType` | 字串 | 提供來源資料的平台名稱。 |
 
 {style=&quot;table-layout:auto&quot;}

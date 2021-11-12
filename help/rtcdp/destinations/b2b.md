@@ -1,19 +1,15 @@
 ---
-title: Real-time Customer Data Platform B2B版（測試版）中的目的地
+title: Real-time Customer Data Platform B2B版目的地
 description: Real-time Customer Data Platform B2B版中目的地角色的概述。
 exl-id: 81b502dd-d1b2-409e-972c-652c0a01526c
-source-git-commit: fef18389f8e64bdf11fe93d4077eb0474abc4981
+source-git-commit: f4ca1efe9c728f50008d7fbaa17aa009dfc18393
 workflow-type: tm+mt
-source-wordcount: '244'
+source-wordcount: '223'
 ht-degree: 0%
 
 ---
 
-# Real-time Customer Data Platform B2B版（測試版）中的目的地
-
->[!IMPORTANT]
->
->Real-time Customer Data Platform B2B版目前仍在測試中。 檔案和功能可能會有所變更。
+# Real-time Customer Data Platform B2B版目的地
 
 >[!NOTE]
 >

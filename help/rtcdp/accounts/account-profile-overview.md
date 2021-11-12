@@ -1,20 +1,16 @@
 ---
 keywords: rtcdp b2b;b2b；帳戶；帳戶設定檔；帳戶設定檔rtcdp；即時客戶資料平台；
-title: Real-time CDP B2B Edition（測試版）中的客戶配置檔案
+title: Real-time CDP B2B Edition中的帳戶配置檔案
 description: 了解Real-time Customer Data Platform B2B版如何讓您使用帳戶設定檔統一來自多個來源的帳戶資訊。
 exl-id: 67515fe0-975e-4ee1-b172-60bc93ba1010
-source-git-commit: 6f421a8ae77318ca2598d640cf7e27ea485ec9db
+source-git-commit: f4ca1efe9c728f50008d7fbaa17aa009dfc18393
 workflow-type: tm+mt
-source-wordcount: '275'
+source-wordcount: '254'
 ht-degree: 0%
 
 ---
 
-# 帳戶設定檔概述（測試版）
-
->[!IMPORTANT]
->
->Real-time Customer Data Platform B2B版目前仍在測試中。 檔案和功能可能會有所變更。
+# 帳戶設定檔概觀
 
 >[!NOTE]
 >

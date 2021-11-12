@@ -3,9 +3,9 @@ keywords: 檢視設定檔rtcdp;rtcdp設定檔檢視；rtcdp設定檔
 title: 在Real-time Customer Data Platform中瀏覽設定檔
 description: Real-time Customer Data Platform可讓您使用Adobe Experience Platform使用者介面來瀏覽即時客戶個人檔案資料。
 exl-id: 8481e286-2ff0-484f-85d2-a8db9b08d8d3
-source-git-commit: c15f59de49c60f55b432a39f30fb5f1865fd4671
+source-git-commit: f4ca1efe9c728f50008d7fbaa17aa009dfc18393
 workflow-type: tm+mt
-source-wordcount: '553'
+source-wordcount: '533'
 ht-degree: 0%
 
 ---
@@ -19,11 +19,7 @@ ht-degree: 0%
 
 Real-time Customer Data Platform建置在Adobe Experience Platform上，因此可以使用Experience PlatformUI中的設定檔檢視功能。 如需在Platform使用者介面中檢視客戶設定檔的詳細指南，請參閱 [即時客戶個人檔案使用手冊](../../profile/ui/user-guide.md).
 
-## 即時CDP B2B Edition(Beta)的設定檔增強功能
-
->[!IMPORTANT]
->
->Real-time Customer Data Platform B2B版目前仍在測試中。 檔案和功能可能會有所變更。
+## Real-time CDP B2B Edition的配置檔案增強功能
 
 除了Adobe Experience Platform支援的設定檔瀏覽功能外， Real-time CDP B2B Edition使用者還可以在 [!UICONTROL 屬性] 和 [!UICONTROL 事件] 頁簽。 B2B資料也可用來執行分段，這些區段會顯示在客戶的 [!UICONTROL 區段成員資格] 標籤並搭配非B2B區段。
 

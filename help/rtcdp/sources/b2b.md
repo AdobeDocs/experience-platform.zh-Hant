@@ -1,19 +1,15 @@
 ---
-title: Real-time Customer Data Platform B2B版（測試版）中的來源
+title: Real-time Customer Data Platform B2B版中的來源
 description: 概略說明來源在Real-time Customer Data Platform B2B版中的角色。
 exl-id: eeea4b2e-67c5-4491-9b8e-4b8987e44777
-source-git-commit: 8dfeeea7c13802723bdfff48eaa49ba3f2c43d20
+source-git-commit: f4ca1efe9c728f50008d7fbaa17aa009dfc18393
 workflow-type: tm+mt
-source-wordcount: '283'
+source-wordcount: '262'
 ht-degree: 0%
 
 ---
 
-# Real-time Customer Data Platform B2B版（測試版）中的來源
-
->[!IMPORTANT]
->
->Real-time Customer Data Platform B2B版目前仍在測試中。 檔案和功能可能會有所變更。
+# Real-time Customer Data Platform B2B版中的來源
 
 >[!NOTE]
 >
@@ -31,5 +27,5 @@ Real-time Customer Data Platform B2B版可讓您透過 [[!DNL Marketo Engage]](.
 
 * 有關如何連接您的 [!DNL Marketo] 若要將資料傳送至Platform，請參閱 [在UI中建立Marketo來源連接器](../../sources/tutorials/ui/create/adobe-applications/marketo.md).
 * 如需B2B命名空間和結構的基礎設定相關資訊，請參閱 [!DNL Marketo]，請參閱 [B2B命名空間和結構](../../sources/connectors/adobe-applications/marketo/marketo-namespaces.md).
-* 如需尋找 [!DNL Marketo] Munchkin ID和產生憑證，請參閱 [[!DNL Marketo] 驗證指南](../../sources/connectors/adobe-applications/marketo/marketo-auth.md).
+* 如需尋找 [!DNL Marketo] Munchkin ID和產生您的憑證，請參閱 [[!DNL Marketo] 驗證指南](../../sources/connectors/adobe-applications/marketo/marketo-auth.md).
 * 有關適用於的特定映射規則的資訊 [!DNL Marketo] 資料集，請參閱 [[!DNL Marketo] 欄位對應](../../sources/connectors/adobe-applications//mapping/marketo.md).

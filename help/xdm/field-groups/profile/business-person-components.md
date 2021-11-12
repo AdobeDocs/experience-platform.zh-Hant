@@ -2,24 +2,20 @@
 title: XDM企業人員元件結構欄位組
 description: 本檔案概述「XDM企業人員元件」結構欄位群組。
 exl-id: 965b89f4-59f5-43f4-8778-3549e15b44d4
-source-git-commit: b5cdd72238f7b4519de1c789f4294b9698415327
+source-git-commit: edf7afc5db219430232a3226dc691570b50a32bd
 workflow-type: tm+mt
-source-wordcount: '441'
+source-wordcount: '412'
 ht-degree: 3%
 
 ---
 
-# [!UICONTROL XDM企業人員] 元件結構欄位群組（測試版）
+# [!UICONTROL XDM企業人員元件] 方案欄位組
 
->[!IMPORTANT]
->
->此欄位群組屬於目前測試版的即時客戶資料平台B2B版。 檔案和功能可能會有所變更。
+[!UICONTROL XDM企業人員元件] 是的標準架構欄位組 [[!DNL XDM Individual Profile] 類](../../classes/individual-profile.md) 會擷取人員的多個來源記錄，以及人員分段所需的其他屬性。
 
-[!UICONTROL XDM業務人] 員元件是類別的標準結構欄 [[!DNL XDM Individual Profile] ](../../classes/individual-profile.md) 位群組，可擷取人員的多個來源記錄，以及人員細分所需的其他屬性。
+為人員建立設定檔時透過 [即時客戶個人檔案](../../../profile/home.md) 在B2B版的即時CDP中，用於建立該配置檔案的資訊可能來自許多源記錄。 例如，如果某人為兩家不同的公司工作，則許多CRM系統會建立該人刻意重複的副本，使其中一份連結至公司A，而另一份連結至公司B。將該資料帶入Adobe Experience Platform時，此欄位群組可用來將這些不同的來源記錄合併為單一表示。
 
-在B2B版即時CDP中透過[即時客戶設定檔](../../../profile/home.md)為人員建立設定檔時，建立該設定檔時使用的資訊可能來自許多來源記錄。 例如，如果某人為兩家不同的公司工作，則許多CRM系統會建立該人刻意重複的副本，使其中一份連結至公司A，而另一份連結至公司B。將該資料帶入Adobe Experience Platform時，此欄位群組可用來將這些不同的來源記錄合併為單一表示。
-
-欄位組提供根級`personComponents`欄位，該欄位是對象的陣列。 陣列中的每個對象表示不同的源記錄。
+欄位群組提供根層級 `personComponents` 欄位，此欄位是物件的陣列。 陣列中的每個對象表示不同的源記錄。
 
 ![](../../images/field-groups/business-person-components.png)
 

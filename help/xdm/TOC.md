@@ -4,9 +4,9 @@ user-guide-title: Experience Data Model (XDM) 系統說明
 breadcrumb-title: Experience Data Model (XDM) 指南
 user-guide-description: 使用Experience Data Model(XDM)類別和結構欄位群組，以標準化體驗資料。
 feature: Schemas
-source-git-commit: 4a74faad811d9b13f93799686df44f04a8d1b784
+source-git-commit: eea5cfe6111d25da4a7978d3924861250059cc7e
 workflow-type: tm+mt
-source-wordcount: '398'
+source-wordcount: '396'
 ht-degree: 14%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 14%
    * [XDM欄位類型限制](schema/field-constraints.md)
    * [XDM中的名稱步調](./schema/namespaces.md)
    * [XDM欄位字典](schema/field-dictionary.md)
-   * 行業資料模型{#industries}
+   * 產業資料模型 {#industries}
       * [總覽](./schema/industries/overview.md)
       * [零售](./schema/industries/retail.md)
       * [金融服務](./schema/industries/financial.md)
@@ -31,7 +31,7 @@ ht-degree: 14%
    * [XDM個別設定檔](./classes/individual-profile.md)
    * [XDM ExperienceEvent](./classes/experienceevent.md)
    * [區段定義](./classes/segment-definition.md)
-   * B2B類(Beta){#b2b}
+   * B2B類 {#b2b}
       * [XDM商業帳戶](./classes/b2b/business-account.md)
       * [XDM企業帳戶人員關係](./classes/b2b/business-account-person-relation.md)
       * [XDM商業宣傳](./classes/b2b/business-campaign.md)
@@ -40,8 +40,8 @@ ht-degree: 14%
       * [XDM商機人員關係](./classes/b2b/business-opportunity-person-relation.md)
       * [XDM商業行銷清單](./classes/b2b/business-marketing-list.md)
       * [XDM商業行銷清單成員](./classes/b2b/business-marketing-list-members.md)
-* 架構欄位組{#field-groups}
-   * 配置檔案欄位組{#profile}
+* 架構欄位群組 {#field-groups}
+   * 設定檔欄位群組 {#profile}
       * [人口統計詳細資料](./field-groups/profile/demographic-details.md)
       * [IAB TCF 2.0同意](./field-groups/profile/iab.md)
       * [IdentityMap](./field-groups/profile/identitymap.md)
@@ -53,7 +53,7 @@ ht-degree: 14%
       * [工作聯繫人詳細資訊](./field-groups/profile/work-contact-details.md)
       * [XDM企業人員元件](./field-groups/profile/business-person-components.md)
       * [XDM業務人員詳細資訊](./field-groups/profile/business-person-details.md)
-   * 事件欄位組{#event}
+   * 事件欄位群組 {#event}
       * [促銷活動行銷詳細資料](./field-groups/event/campaign-marketing-details.md)
       * [管道詳細資料](./field-groups/event/channel-details.md)
       * [商務詳細資訊](./field-groups/event/commerce-details.md)
@@ -74,7 +74,7 @@ ht-degree: 14%
    * [信標](./data-types/beacon.md)
    * [瀏覽器詳細資訊](./data-types/browser-details.md)
    * [B2B源](./data-types/b2b-source.md)
-   * [商務](./data-types/commerce.md)
+   * [Commerce](./data-types/commerce.md)
    * [同意字串](./data-types/consent-string.md)
    * [同意與偏好設定](./data-types/consents.md)
    * [貨幣](./data-types/currency.md)
@@ -113,15 +113,15 @@ ht-degree: 14%
    * [網路資訊](./data-types/web-information.md)
    * [網路互動](./data-types/web-interaction.md)
    * [網頁詳細資訊](./data-types/webpage-details.md)
-*  綱要UI  {#ui}
+* [!UICONTROL 結構] UI {#ui}
    * [總覽](./ui/overview.md)
    * [探索 XDM 資源](./ui/explore.md)
-   * 建立和編輯資源{#resources}
+   * 建立和編輯資源 {#resources}
       * [方案](./ui/resources/schemas.md)
       * [類別](./ui/resources/classes.md)
       * [欄位群組](./ui/resources/field-groups.md)
       * [資料類型](./ui/resources/data-types.md)
-   * 定義欄位{#fields}
+   * 定義欄位 {#fields}
       * [總覽](./ui/fields/overview.md)
       * [必填欄位](./ui/fields/required.md)
       * [物件欄位](./ui/fields/object.md)
@@ -132,7 +132,7 @@ ht-degree: 14%
    * [依欄位的工作流程](./ui/field-based-workflows.md)
    * [產生範例XDM資料](./ui/sample.md)
    * [匯出XDM結構](./ui/export.md)
-* 架構註冊表API {#api}
+* 結構註冊表API {#api}
    * [總覽](api/overview.md)
    * [快速入門](api/getting-started.md)
    * [方案](api/schemas.md)
@@ -153,7 +153,7 @@ ht-degree: 14%
    * [在API中建立結構](tutorials/create-schema-api.md)
    * [在UI中定義結構關係](tutorials/relationship-ui.md)
    * [在API中定義結構關係](tutorials/relationship-api.md)
-   * [在Real-time CDP B2B Edition(Beta)中定義架構關係](tutorials/relationship-b2b.md)
+   * [在即時CDP B2B Edition中定義架構關係](tutorials/relationship-b2b.md)
    * [建立臨機結構(API)](tutorials/ad-hoc.md)
 * [疑難排解指南](troubleshooting-guide.md)
 * [API 參考資料](https://www.adobe.io/experience-platform-apis/references/schema-registry/)
