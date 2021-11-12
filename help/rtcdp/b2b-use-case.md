@@ -1,20 +1,16 @@
 ---
 keywords: RTCDP; CDP;Real-time Customer Data Platform；即時客戶資料平台；real time cdp;cdp;rtcdp
-title: Real-time Customer Data Platform B2B版本（測試版）的使用案例範例
+title: Real-time Customer Data Platform B2B版的範例使用案例
 description: 此範例案例提供您實作Real-time Customer Data Platform B2B Edition的設定範例。
 exl-id: 15505980-ac33-44b2-8989-c08cbabd212b
-source-git-commit: 6f421a8ae77318ca2598d640cf7e27ea485ec9db
+source-git-commit: e6f71954d52e0a998955c3420307417cc011c24d
 workflow-type: tm+mt
-source-wordcount: '1146'
-ht-degree: 1%
+source-wordcount: '1134'
+ht-degree: 0%
 
 ---
 
-# Real-time Customer Data Platform B2B版本（測試版）的使用案例範例
-
->[!IMPORTANT]
->
->Real-time CDP Business to Business Edition目前處於測試版。 文件和功能可能會有所變更。
+# Real-time Customer Data Platform B2B版的範例使用案例
 
 Real-time Customer Data Platform B2B Edition擴充了現有的即時CDP和Adobe Experience Platform產品，以支援B2B資料和工作流程。 本檔案提供範例使用案例，示範B2B版本提供的其他優點。 包括:
 
@@ -29,8 +25,6 @@ Real-time Customer Data Platform B2B Edition擴充了現有的即時CDP和Adobe 
 然而，Bodea有兩種不同的業務。 Bodea的第一項業務「1號線」為汽車行業創造了軟體。 其第二行「2號線」銷售3D打印機，用於製造汽車部件。 由於Bodea的兩項業務，從Bodea的客戶帳戶產生的收入資料在單一視圖中並不統一。
 
 每個業務部門都有自己的銷售系統：「CRM 1」和「CRM 2」。 該兩個CRM銷售系統均連接至其本身的行銷自動化平台「Marketo 1」及「Marketo 2」。 來自CRM 1的資料只會同步至Marketo 1，而來自CRM2的資料只會同步至Marketo 2。 最終，他們的資料被維護在不同的公司資訊孤島中。
-
-<!-- ![lines of business diagram](./assets/lines-of-business.png) -->
 
 ## 當前資料情況
 
@@ -97,7 +91,7 @@ CRM1的B2B資料（人員、帳戶、機會和活動）會同步至Marketo 1。 
 
 建議您參考下列檔案，以進一步了解B2B特定功能：
 
-<!-- PLACEHOLDER Link to B2B tutorial required  -->
+- [Real-time Customer Data Platform B2B版端對端教學課程](./b2b-tutorial.md)
 - [Real-time Customer Data Platform B2B版中的來源](./sources/b2b.md)
 - [Real-time Customer Data Platform B2B版中的結構描述](./schemas/b2b.md)
 - [B2B區段範例](./segmentation/b2b.md)

@@ -1,21 +1,15 @@
 ---
-title: 即時CDP B2B Edition(Beta)的區段使用案例概觀
+title: 即時CDP B2B版的區段使用案例概觀
 description: 概述各種可用的即時CDP B2B Edition使用案例。
 exl-id: 2a99b85e-71b3-4781-baf7-a4d5436339d3
-source-git-commit: b77380b661f59363daeeefb186a94e3d62b47e27
+source-git-commit: e6f71954d52e0a998955c3420307417cc011c24d
 workflow-type: tm+mt
-source-wordcount: '1116'
-ht-degree: 1%
+source-wordcount: '1096'
+ht-degree: 0%
 
 ---
 
-# Real-time Customer Data Platform B2B版（測試版）的區段使用案例概觀
-
-<!-- This document relates to this [ticket](https://jira.corp.adobe.com/browse/PLAT-100468) -->
-
->[!IMPORTANT]
->
->Real-time CDP B2B Edition目前處於測試版。 文件和功能可能會有所變更。
+# Real-time Customer Data Platform B2B版的區段使用案例概觀
 
 本檔案提供相關範例，說明即時CDP B2B Edition可用的區段，以及如何針對常見的B2B使用案例結合不同類型的屬性。
 

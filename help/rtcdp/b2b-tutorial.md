@@ -1,16 +1,16 @@
 ---
 keywords: RTCDP; CDP;B2B Edition;Real-time Customer Data Platform；即時客戶資料平台；即時cdp;b2b; CDP
 solution: Experience Platform
-title: Real-time Customer Data Platform B2B版快速入門(Beta)
+title: Real-time Customer Data Platform B2B版快速入門
 description: 設定Real-time Customer Data Platform B2B Edition實作時，請使用此範例案例作為範例。
-source-git-commit: 6d55139325cb32cf0e0aac659f6056b7c5e9157b
+source-git-commit: e6f71954d52e0a998955c3420307417cc011c24d
 workflow-type: tm+mt
-source-wordcount: '1180'
+source-wordcount: '1178'
 ht-degree: 0%
 
 ---
 
-# Real-time Customer Data Platform B2B版（測試版）快速入門
+# Real-time Customer Data Platform B2B版快速入門
 
 本檔案提供高階的端對端工作流程，以開始使用Real-time Customer Data Platform(CDP)B2B Edition，透過範例使用案例來說明重要概念。
 
