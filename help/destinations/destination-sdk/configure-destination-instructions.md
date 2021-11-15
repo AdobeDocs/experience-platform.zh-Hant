@@ -1,31 +1,31 @@
 ---
 description: 本頁列出並說明使用Destination SDK設定串流目的地的步驟。
-title: 如何使用Destination SDK設定串流目的地
+title: 使用Destination SDK設定串流目的地
 exl-id: d8aa7353-ba55-4a0d-81c4-ea2762387638
-source-git-commit: 0bd57e226155ee68758466146b5d873dc4fdca29
+source-git-commit: bc77614eee6cc50d2ce6b14c1b228ed87f88f340
 workflow-type: tm+mt
-source-wordcount: '667'
+source-wordcount: '663'
 ht-degree: 0%
 
 ---
 
-# 如何使用Destination SDK設定串流目的地
+# 使用Destination SDK設定串流目的地
 
 ## 總覽 {#overview}
 
-本頁面說明如何使用 [目的地SDK中的設定選項](./configuration-options.md) 和其他目的地SDK功能和API參考檔案，以設定 [串流目的地](/help/destinations/destination-types.md#streaming-destinations). 步驟依序排列如下。
+本頁面說明如何使用 [目的地SDK中的設定選項](./configuration-options.md) 和其他Destination SDK功能和API參考檔案中，以設定 [串流目的地](/help/destinations/destination-types.md#streaming-destinations). 步驟依序排列如下。
 
 >[!NOTE]
 >
->目前不支援透過目的地SDK設定批次目的地。
+>目前不支援透過Destination SDK設定批次目的地。
 
 ## 先決條件 {#prerequisites}
 
-在前進到下面所示的步驟之前，請閱讀 [目標SDK快速入門](./getting-started.md) 取得必要Adobe I/O驗證憑證以及使用目標SDK API之其他必要條件的相關資訊。
+在前進到下面所示的步驟之前，請閱讀 [Destination SDK快速入門](./getting-started.md) 頁面，以取得使用Destination SDK API所需的Adobe I/O驗證憑證和其他必要條件的相關資訊。
 
-## 使用目標SDK中設定選項來設定目標的步驟 {#steps}
+## 使用Destination SDK中設定選項來設定目的地的步驟 {#steps}
 
-![使用目標SDK端點的說明步驟](./assets/destination-sdk-steps.png)
+![使用Destination SDK端點的說明步驟](./assets/destination-sdk-steps.png)
 
 ## 步驟1:建立伺服器和範本配置 {#create-server-template-configuration}
 
@@ -152,7 +152,7 @@ POST platform.adobe.io/data/core/activation/authoring/destinations
 
 ## 步驟4:建立對象中繼資料設定 {#create-audience-metadata-configuration}
 
-對於某些目的地，目的地SDK需要您設定對象中繼資料設定，以程式設計方式建立、更新或刪除您目的地的對象。 請參閱 [對象中繼資料管理](./audience-metadata-management.md) 以了解您何時需要設定此設定及如何設定。
+針對某些目的地，Destination SDK會要求您設定對象中繼資料設定，以程式設計方式建立、更新或刪除您目的地的對象。 請參閱 [對象中繼資料管理](./audience-metadata-management.md) 以了解您何時需要設定此設定及如何設定。
 
 如果您使用對象中繼資料設定，則必須將其連線至您在步驟2建立的目的地設定。 將對象中繼資料設定的例項ID新增至目的地設定，作為 `audienceTemplateId`.
 
@@ -167,7 +167,7 @@ POST platform.adobe.io/data/core/activation/authoring/destinations
 
 使用前述步驟中的設定端點設定目的地後，您可以使用 [目的地測試工具](./create-template.md) 來測試Adobe Experience Platform與目的地之間的整合。
 
-在測試目的地的程式中，您必須使用Experience PlatformUI來建立區段，以便您對目的地啟用區段。 如需如何在Experience Platform中建立區段的指示，請參閱以下兩個資源：
+在測試目的地的程式中，您必須使用Experience PlatformUI來建立區段，以便您對目的地啟用。 如需如何在Experience Platform中建立區段的指示，請參閱以下兩個資源：
 
 * [建立區段檔案頁面](https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/overview.html?lang=en#create-segment)
 * [建立區段視訊逐步說明](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=en)

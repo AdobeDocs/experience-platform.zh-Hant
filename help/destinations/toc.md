@@ -4,9 +4,9 @@ user-guide-title: 目的地指南
 user-guide-description: 針對跨通路行銷活動、電子郵件宣傳、鎖定特定目標的行銷活動和其他諸多使用案例，啟用已知和未知的資料。
 description: 本檔案列出Adobe Experience Platform目的地的目錄
 feature: Destinations
-source-git-commit: 3e2382cf4b02ea4fd40e3638b52b4719938a2ea2
+source-git-commit: a01730fce4f7746389fc48e700c259567492d0ee
 workflow-type: tm+mt
-source-wordcount: '668'
+source-wordcount: '677'
 ht-degree: 9%
 
 ---
@@ -174,6 +174,7 @@ ht-degree: 9%
          * [設定檔產生API操作範例](./destination-sdk/sample-profile-generation-api.md)
    * 指南 {#guides}
       * [使用Destination SDK設定串流目的地](./destination-sdk/configure-destination-instructions.md)
+      * [提交以檢閱在Destination SDK中撰寫的目的地](./destination-sdk/submit-destination.md)
    * 記錄您的目的地 {#document-destination}
       * [在Adobe Experience Platform中記錄您的目的地](./destination-sdk/docs-framework/documentation-instructions.md)
       * [使用GitHub網頁介面建立目的地檔案頁面](./destination-sdk/docs-framework/use-github-interface-to-create-documentation.md)
