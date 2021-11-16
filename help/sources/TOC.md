@@ -4,9 +4,9 @@ user-guide-title: Adobe Experience Platform 來源連接器說明
 breadcrumb-title: 來源連接器指南
 user-guide-description: 從多種來源或結構擷取資料、加標籤，以及增強已擷取的資料。
 feature: Sources
-source-git-commit: 92b2dc869a659a030e1f13c83a0c5e3d707685c6
+source-git-commit: c178bf54bfdda54293cb4e06d452f82111690895
 workflow-type: tm+mt
-source-wordcount: '661'
+source-wordcount: '741'
 ht-degree: 13%
 
 ---
@@ -257,6 +257,25 @@ ht-degree: 13%
    - [更新資料流](tutorials/ui/update-dataflows.md)
    - [刪除帳戶](tutorials/ui/delete-accounts.md)
    - [刪除資料流](tutorials/ui/delete.md)
+- [來源SDK] {#sources-sdk}
+   - [總覽](sources-sdk/overview.md)
+   - [來源SDK功能] {#functionality}
+      - [設定選項](sources-sdk/config/config.md)
+      - [配置身份驗證規範](sources-sdk/config/authspec.md)
+      - [配置源規範](sources-sdk/config/sourcespec.md)
+      - [配置瀏覽規範](sources-sdk/config/explorespec.md)
+   - [Sources SDK API教學課程] {#sdk-tutorials}
+      - [來源SDK API概觀](sources-sdk/api/overview.md)
+      - [快速入門](sources-sdk/api/getting-started.md)
+      - [建立連接規範](sources-sdk/api/create.md)
+      - [更新連接規範](sources-sdk/api/update-connection-specs.md)
+      - [更新流規範](sources-sdk/api/update-flow-specs.md)
+      - [提交您的來源](sources-sdk/api/submit.md)
+   - [記錄您的來源] {#document}
+      - [在Adobe Experience Platform中記錄您的來源](sources-sdk/documentation/overview.md)
+      - [使用GitHub網頁介面建立來源檔案頁面](sources-sdk/documentation/github.md)
+      - [在本機環境中使用文字編輯器來建立來源檔案頁面](sources-sdk/documentation/text-editor.md)
+      - [檔案自助服務範本](sources-sdk/documentation/template.md)
 - [流運行通知](notifications.md)
 - [IP位址允許清單](ip-address-allow-list.md)
 - [常見問答](./troubleshooting.md)
