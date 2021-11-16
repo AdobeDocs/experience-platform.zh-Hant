@@ -1,10 +1,11 @@
 ---
 title: 規則
 description: 了解標籤擴充功能在Adobe Experience Platform中的運作方式。
-source-git-commit: 272cf2906b44ccfeca041d9620ac0780e24ad1ae
+exl-id: 2beca2c9-72b7-4ea0-a166-50a3b8edb9cd
+source-git-commit: f3c23665229a83d6c63c7d6026ebf463069d8ad9
 workflow-type: tm+mt
-source-wordcount: '1977'
-ht-degree: 77%
+source-wordcount: '1969'
+ht-degree: 79%
 
 ---
 
@@ -12,7 +13,7 @@ ht-degree: 77%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch在Adobe Experience Platform中已重新命名為一套資料收集技術。 因此，產品檔案中已推出數個術語變更。 有關術語更改的綜合參考，請參閱以下[document](../../term-updates.md)。
+>Adobe Experience Platform Launch在Adobe Experience Platform中已重新命名為一套資料收集技術。 因此，所有產品文件中出現了幾項術語變更。 如需術語變更的彙整參考資料，請參閱以下[文件](../../term-updates.md)。
 
 Adobe Experience Platform中的標籤會遵循規則型系統。 它們會尋找使用者互動和相關資料。 當符合列於您規則中的準則時，規則會觸發您識別的擴充功能、指令黨指令檔或用戶端代碼。
 
@@ -36,9 +37,9 @@ Adobe Experience Platform中的標籤會遵循規則型系統。 它們會尋找
 
 如果發生指定事件，就會得出條件，然後視需要發生指定的動作。
 
-* **事件**:指定必須發生的一或多個事件，才能觸發規則。您可使用 OR 聯結多個事件。任何指定事件都會觸發規則。
+* **事件**:指定必須發生的一或多個事件，才能觸發規則。 您可使用 OR 聯結多個事件。任何指定事件都會觸發規則。
 
-* **條件**:設定事件必須為true的任何條件來縮小事件，以觸發規則。例外是以 NOT 條件的形式定義。您可使用 AND 聯結多個條件。
+* **條件**:設定事件必須為true的任何條件來縮小事件，以觸發規則。 例外是以 NOT 條件的形式定義。您可使用 AND 聯結多個條件。
 
 可用的事件取決於安裝的擴充功能。如需核心擴充功能中事件的詳細資訊，請參閱[核心擴充功能事件類型](../../extensions/web/core/overview.md#core-extension-event-types)。
 
@@ -50,12 +51,12 @@ Adobe Experience Platform中的標籤會遵循規則型系統。 它們會尋找
 
 指定在符合條件時會發生什麼動作，以建立規則。
 
-1. 開啟[!UICONTROL Rules]標籤，然後選擇&#x200B;**[!UICONTROL Create New Rule]**。
+1. 開啟 [!UICONTROL 規則] ，然後選取 **[!UICONTROL 建立新規則]**.
 
    ![](../../images/launch-rule-builder.jpg)
 
 1. 為規則命名。
-1. 選擇「事件」 **[!UICONTROL 「添加」]**&#x200B;表徵圖。
+1. 選取事件 **[!UICONTROL 新增]** 表徵圖。
 1. 選擇您的擴充功能，以及該擴充功能所提供的任一事件類型，然後設定事件相關設定。
 
    ![](../../images/rule-event-config.png)
@@ -64,7 +65,7 @@ Adobe Experience Platform中的標籤會遵循規則型系統。 它們會尋找
 
    >[!IMPORTANT]
    >
-   >用戶端規則中的資料元素會在名稱的頭尾分別加上 `%`，加以代碼化，例如 `%viewportHeight%`。在事件轉送規則中，資料元素會以`{{`標籤，其開頭為`}}`，最後為資料元素名稱。 例如 `{{viewportHeight}}`。
+   >用戶端規則中的資料元素會在名稱的頭尾分別加上 `%`，加以代碼化，例如 `%viewportHeight%`。在事件轉送規則中，資料元素會以 `{{` 在開頭和 `}}` 在資料元素名稱的結尾。 例如 `{{viewportHeight}}`。
 
    若要參照 Edge Network 的資料，資料元素路徑必須為 `arc.event._<element>_`，
 
@@ -76,7 +77,7 @@ Adobe Experience Platform中的標籤會遵循規則型系統。 它們會尋找
    >
    >如果未正確指定此路徑，系統就不會收集資料。
 
-1. 設定Order參數，然後選擇&#x200B;**[!UICONTROL Keep Changes]**。
+1. 設定Order參數，然後選取 **[!UICONTROL 保留變更]**.
 
    所有規則元件的預設順序皆為 50。若要加快元件執行的速度，請指定小於 50 的數字。
 
@@ -86,7 +87,7 @@ Adobe Experience Platform中的標籤會遵循規則型系統。 它們會尋找
 
       若要使其稍後執行，請指定大於 50 的數字。如需排序的詳細資訊，請參閱[規則排序](rules.md#rule-ordering)。
 
-1. 選取「條件」 **[!UICONTROL 「新增]**」圖示，然後選擇邏輯類型、擴充功能、條件類型並設定條件的設定。 接下來，選擇&#x200B;**[!UICONTROL 保留更改]**。
+1. 選取條件 **[!UICONTROL 新增]** 圖示，然後選擇邏輯類型、擴充功能、條件類型並設定條件的設定。 下一步，選擇 **[!UICONTROL 保留變更]**.
 
    ![](../../images/condition-settings.png)
 
@@ -101,18 +102,18 @@ Adobe Experience Platform中的標籤會遵循規則型系統。 它們會尋找
 
    您可以無限新增條件。同一規則內的多個條件會由 AND 聯結。
 
-1. 選取「動作」 **[!UICONTROL 「新增」]**&#x200B;圖示，然後選擇您的擴充功能以及該擴充功能可用的其中一種動作類型，設定動作的設定，然後選取「保留變更」**[!UICONTROL 。]**
+1. 選取動作 **[!UICONTROL 新增]** 圖示，然後選擇您的擴充功能以及該擴充功能可用的其中一種動作類型，設定動作的設定，然後選取 **[!UICONTROL 保留變更]**.
 
    ![](../../images/action-settings.png)
 
    可選擇的動作類型取決於您選取的擴充功能。動作設定會因動作類型而異。
 
-   (進階) 等候執行下一個動作：在屬性上啟用規則元件排序後，即可使用此選項。勾選後，此動作完成前，標籤不會呼叫下一個動作。 取消勾選後，下一個動作會立即開始執行。預設值為&#x200B;**[!UICONTROL Checked]**。
+   (進階) 等候執行下一個動作：在屬性上啟用規則元件排序後，即可使用此選項。勾選後，此動作完成前，標籤不會呼叫下一個動作。 取消勾選後，下一個動作會立即開始執行。預設為 **[!UICONTROL 已勾選]**.
 
    (進階) 逾時：在屬性上啟用規則元件排序後，即可使用此選項。這能定義動作完成的時間長度上限。如果逾時，動作就會執行失敗，系統會從處理佇列中移除此規則的任何後續動作。預設值為 2000 ms。
 
 
-1. 檢閱您的規則，然後選取&#x200B;**[!UICONTROL 儲存規則]**。
+1. 檢閱您的規則，然後選取 **[!UICONTROL 儲存規則]**.
 
    之後，當您[發佈](../publishing/overview.md)時，您會將此規則新增到程式庫並進行部署。
 
@@ -153,13 +154,9 @@ Adobe強烈建議您使用介於1和100（預設為50）之間的正數來排序
 
 這些事件幾乎都會執行 (除非條件評估為 false)，因此為了提高效率，這些事件會整合至主程式庫，也就是您內嵌程式碼所參考的檔案。
 
-* **Javascript:** JavaScript已內嵌於主要標籤庫中。自訂指令碼會包裝在指令碼標記中，並使用 `document.write` 寫入至文件。如果規則有多個自訂程式碼，則會依序寫入。
+* **Javascript:** JavaScript已內嵌於主要標籤程式庫中。 自訂指令碼會包裝在指令碼標記中，並使用 `document.write` 寫入至文件。如果規則有多個自訂程式碼，則會依序寫入。
 
-   >[!NOTE]
-   >
-   >標籤使用ES5 JavaScript。 事件轉送使用ES6。
-
-* **HTML:** HTML已內嵌於主要標籤程式庫中。`document.write` 可用來將 HTML 寫入文件。如果規則有多個自訂程式碼，則會依序寫入。
+* **HTML:** HTML內嵌於主要標籤程式庫中。 `document.write` 可用來將 HTML 寫入文件。如果規則有多個自訂程式碼，則會依序寫入。
 
 ### 具有任何其他事件的規則
 
@@ -170,7 +167,7 @@ Adobe 無法保證會實際觸發其他任何規則，且會需要規則的動�
 
 ## 規則元件排序 {#sequencing}
 
-標籤執行階段環境的行為取決於序列&#x200B;]**的「執行規則元件」是否針對屬性開啟。**[!UICONTROL 
+標籤執行階段環境的行為取決於 **[!UICONTROL 依序執行規則元件]** 是開啟或關閉屬性。
 
 ### 啟用
 

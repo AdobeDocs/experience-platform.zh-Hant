@@ -2,10 +2,10 @@
 title: 核心擴充功能概述
 description: 了解Adobe Experience Platform中的核心標籤擴充功能。
 exl-id: 841f32ad-a6a8-49fb-a131-ef4faab47187
-source-git-commit: 868239c84571ed4a274db6b2b49694489a17073e
+source-git-commit: f3c23665229a83d6c63c7d6026ebf463069d8ad9
 workflow-type: tm+mt
-source-wordcount: '5292'
-ht-degree: 66%
+source-wordcount: '5362'
+ht-degree: 65%
 
 ---
 
@@ -542,6 +542,10 @@ return new Promise(function(resolve, reject) {
 
 ### 自訂程式碼
 
+>[!NOTE]
+>
+>自訂程式碼現在支援ES6+ JavaScript。 請注意，某些舊版瀏覽器不支援ES6+。 若要了解使用ES6+功能的影響，請針對所有應支援的網頁瀏覽器進行測試。
+
 提供觸發事件和評估條件後執行的程式碼。
 
 1. 為動作程式碼命名。
@@ -645,6 +649,10 @@ setTimeout(function() {
 `string`
 
 ### 自訂程式碼
+
+>[!NOTE]
+>
+>自訂程式碼現在支援ES6+ JavaScript。 請注意，某些舊版瀏覽器不支援ES6+。 若要了解使用ES6+功能的影響，請針對所有應支援的網頁瀏覽器進行測試。
 
 您可以選取「開啟編輯器」，並在編輯器視窗中插入程式碼，藉此在 UI 中輸入自訂 JavaScript。
 

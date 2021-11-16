@@ -1,9 +1,10 @@
 ---
 title: 錯誤處理
 description: 了解在Reactor API中如何處理錯誤。
-source-git-commit: 6a1728bd995137a7cd6dc79313762ae6e665d416
+exl-id: 336c0ced-1067-4519-94e1-85aea700fce6
+source-git-commit: f3c23665229a83d6c63c7d6026ebf463069d8ad9
 workflow-type: tm+mt
-source-wordcount: '1071'
+source-wordcount: '1068'
 ht-degree: 0%
 
 ---
@@ -13,11 +14,11 @@ ht-degree: 0%
 當呼叫Reactor API時發生問題時，可能會透過下列其中一種方式傳回錯誤：
 
 * **立即錯誤**:執行會導致立即錯誤的要求時，API會傳回錯誤回應，其HTTP狀態會反映所發生的一般錯誤類型。
-* **延遲錯誤**:執行導致延遲錯誤（例如非同步活動）的API請求時，API可在相關資源中傳 `meta.status_details` 回錯誤。
+* **延遲錯誤**:執行API要求而導致延遲錯誤（例如非同步活動）時，API可能會在 `meta.status_details` 相關資源。
 
 ## 錯誤格式
 
-錯誤回應旨在符合[JSON:API錯誤規格](http://jsonapi.org/format/#errors)，並通常遵循下列結構：
+錯誤回應旨在符合 [JSON:API錯誤規格](http://jsonapi.org/format/#errors)，並一般遵循下列結構：
 
 ```json
 {
@@ -43,9 +44,9 @@ ht-degree: 0%
 | `id` | 此問題特定出現情況的唯一標識符。 |
 | `status` | 適用於此問題的HTTP狀態代碼，以字串值表示。 |
 | `code` | 應用程式專屬的錯誤碼，以字串值表示。 |
-| `title` | **不應從發生變為發生（除了本地化目的）的問題的簡短、人類可讀的摘要。** |
-| `detail` | 此問題發生時人類看得懂的解釋。 與`title`一樣，此欄位的值也可以本地化。 |
-| `source` | 包含對錯誤源的引用的對象，可選地包括以下任一成員：<ul><li>`pointer`:JSON指 [針(RFC6901)](https://datatracker.ietf.org/doc/html/rfc6901) 字串，會參考請求檔案中的相關聯實體(例如 `/data` 主要資料物件或 `/data/attributes/title` 特定屬性)。</li></ul> |
+| `title` | 人類看得懂的簡短問題摘要 **不應變更** 從發生到發生，但本地化用途除外。 |
+| `detail` | 此問題發生時人類看得懂的解釋。 贊 `title`，此欄位的值可以本地化。 |
+| `source` | 包含對錯誤源的引用的對象，可選地包括以下任一成員：<ul><li>`pointer`:a [JSON指標(RFC6901)](https://datatracker.ietf.org/doc/html/rfc6901) 引用請求文檔中關聯實體的字串(如 `/data` 主要資料物件，或 `/data/attributes/title` )。</li></ul> |
 | `meta` | 包含錯誤相關非標準中繼資料的物件。 |
 
 {style=&quot;table-layout:auto&quot;}
@@ -85,13 +86,13 @@ ht-degree: 0%
 | `invalid-rule` | 無法將無效規則新增至程式庫。 |
 | `invalid-settings-syntax` | 剖析設定JSON時遇到語法錯誤。 |
 | `library-file-not-found` | 在zip套件內找不到extension.json中定義的必要檔案。 |
-| `minification-error` | 由於代碼或ES6代碼無效，無法編譯代碼。 |
+| `minification-error` | 由於代碼無效，無法編譯代碼。 |
 | `multiple-revisions` | 程式庫中只能包含每個資源的一個修訂版本。 |
 | `no-available-orgs` | 此使用者帳戶不屬於可存取標籤的產品設定檔。 使用Admin Console將此使用者新增至具有標籤權限的產品設定檔。 |
 | `not-authorized` | 此使用者帳戶沒有執行此動作的必要權限。 |
 | `not-found` | 找不到記錄。 驗證您嘗試擷取的物件ID。 |
 | `not-unique` | 您嘗試使用的名稱已在使用中。 對於此資源，&#39;name&#39;屬性必須是唯一的。 |
-| `public-release-not-authorized` | 擴充功能的公開發行由`launch-ext-dev@adobe.com`協調。 如需詳細資訊，請參閱[發行擴充功能](../../extension-dev/submit/release.md)的相關檔案。 |
+| `public-release-not-authorized` | 擴充功能的公開發行由協調 `launch-ext-dev@adobe.com`. 請參閱 [發行擴充功能](../../extension-dev/submit/release.md) 以取得更多資訊。 |
 | `read-only` | 此資源為只讀資源，無法修改。 |
 | `session-timeout` | 用戶會話已過期。 請註銷並重新登錄。 |
 | `sftp-authentication-failed` | SFTP連線驗證失敗。 |

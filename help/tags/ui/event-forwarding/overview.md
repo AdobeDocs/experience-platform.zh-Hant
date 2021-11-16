@@ -3,9 +3,9 @@ title: 事件轉送概述
 description: 了解Adobe Experience Platform中的事件轉送功能，讓您不須變更標籤實作，即可使用Platform Edge Network執行工作。
 feature: Event Forwarding
 exl-id: 18e76b9c-4fdd-4eff-a515-a681bc78d37b
-source-git-commit: 5218e6cf82b74efbbbcf30495395a4fe2ad9fe14
+source-git-commit: f3c23665229a83d6c63c7d6026ebf463069d8ad9
 workflow-type: tm+mt
-source-wordcount: '547'
+source-wordcount: '533'
 ht-degree: 42%
 
 ---
@@ -41,9 +41,9 @@ Adobe Experience Platform中的事件轉送功能可讓Adobe Experience Platform
 
 * 資料元素代碼化
 
-   * 標籤：在規則中，資料元素會以`%`標籤，位於資料元素名稱的開頭和結尾。 例如 `%viewportHeight%`。
+   * 標籤：在規則中，資料元素會以 `%` 在資料元素名稱的開頭和結尾。 例如 `%viewportHeight%`。
 
-   * 事件轉送：在規則中，資料元素會以`{{`在開頭、`}}`在資料元素名稱的結尾標籤。 例如 `{{viewportHeight}}`。
+   * 事件轉送：在規則中，資料元素會以 `{{` 在開頭和 `}}` 在資料元素名稱的結尾。 例如 `{{viewportHeight}}`。
 
 * 資料參照方式
 
@@ -61,9 +61,5 @@ Adobe Experience Platform中的事件轉送功能可讓Adobe Experience Platform
 * 規則動作順序
 
    在規則的「動作」區段中，事件轉送規則一律會依序執行。 儲存規則時，請確認動作順序正確。無法像使用標籤一樣選擇此執行序列。
-
-* 自訂程式碼 JavaScript 版本
-
-   標籤使用JavaScript es5版。 事件轉送使用es6版。
 
 <!--doc Adobe Cloud Connector extension, get from Jon-->
