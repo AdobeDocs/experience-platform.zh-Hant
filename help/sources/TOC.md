@@ -4,7 +4,7 @@ user-guide-title: Adobe Experience Platform 來源連接器說明
 breadcrumb-title: 來源連接器指南
 user-guide-description: 從多種來源或結構擷取資料、加標籤，以及增強已擷取的資料。
 feature: Sources
-source-git-commit: c178bf54bfdda54293cb4e06d452f82111690895
+source-git-commit: 83aefe6a0880b201e376f458279461888e531741
 workflow-type: tm+mt
 source-wordcount: '741'
 ht-degree: 13%
@@ -257,14 +257,14 @@ ht-degree: 13%
    - [更新資料流](tutorials/ui/update-dataflows.md)
    - [刪除帳戶](tutorials/ui/delete-accounts.md)
    - [刪除資料流](tutorials/ui/delete.md)
-- [來源SDK] {#sources-sdk}
+- [來源SDK] {#sdk}
    - [總覽](sources-sdk/overview.md)
-   - [來源SDK功能] {#functionality}
+   - [來源SDK設定] {#config}
       - [設定選項](sources-sdk/config/config.md)
       - [配置身份驗證規範](sources-sdk/config/authspec.md)
       - [配置源規範](sources-sdk/config/sourcespec.md)
       - [配置瀏覽規範](sources-sdk/config/explorespec.md)
-   - [Sources SDK API教學課程] {#sdk-tutorials}
+   - [Sources SDK API教學課程] {#sdk-api}
       - [來源SDK API概觀](sources-sdk/api/overview.md)
       - [快速入門](sources-sdk/api/getting-started.md)
       - [建立連接規範](sources-sdk/api/create.md)
