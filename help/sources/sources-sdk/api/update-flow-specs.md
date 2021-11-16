@@ -5,7 +5,7 @@ topic-legacy: developer guide
 description: 以下檔案提供如何使用來源SDK的流量服務API來擷取和更新流量規格的步驟。
 hide: true
 hidefromtoc: true
-source-git-commit: d4b5b54be9fa2b430a3b45eded94a523b6bd4ef8
+source-git-commit: d98cf404fd1a4d150f202154aba87b0089418957
 workflow-type: tm+mt
 source-wordcount: '432'
 ht-degree: 1%
@@ -616,4 +616,4 @@ PUT -X GET \
 
 ## 後續步驟
 
-將新連接規範添加到相應的流規範後，您現在可以繼續測試和提交新源。 請參閱 [測試和提交新源](./overview.md#submit) 以取得更多資訊。
+將新連接規範添加到相應的流規範後，您現在可以繼續測試和提交新源。 請參閱 [測試和提交新源](./submit.md) 以取得更多資訊。

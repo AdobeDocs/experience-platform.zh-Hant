@@ -4,9 +4,9 @@ user-guide-title: Adobe Experience Platform 來源連接器說明
 breadcrumb-title: 來源連接器指南
 user-guide-description: 從多種來源或結構擷取資料、加標籤，以及增強已擷取的資料。
 feature: Sources
-source-git-commit: 83aefe6a0880b201e376f458279461888e531741
+source-git-commit: b8793a4346e3f6017bdac07a1dd8df75a7341066
 workflow-type: tm+mt
-source-wordcount: '741'
+source-wordcount: '731'
 ht-degree: 13%
 
 ---
@@ -259,23 +259,20 @@ ht-degree: 13%
    - [刪除資料流](tutorials/ui/delete.md)
 - [來源SDK] {#sdk}
    - [總覽](sources-sdk/overview.md)
-   - [來源SDK設定] {#config}
-      - [設定選項](sources-sdk/config/config.md)
-      - [配置身份驗證規範](sources-sdk/config/authspec.md)
-      - [配置源規範](sources-sdk/config/sourcespec.md)
-      - [配置瀏覽規範](sources-sdk/config/explorespec.md)
-   - [Sources SDK API教學課程] {#sdk-api}
-      - [來源SDK API概觀](sources-sdk/api/overview.md)
-      - [快速入門](sources-sdk/api/getting-started.md)
-      - [建立連接規範](sources-sdk/api/create.md)
-      - [更新連接規範](sources-sdk/api/update-connection-specs.md)
-      - [更新流規範](sources-sdk/api/update-flow-specs.md)
-      - [提交您的來源](sources-sdk/api/submit.md)
-   - [記錄您的來源] {#document}
-      - [在Adobe Experience Platform中記錄您的來源](sources-sdk/documentation/overview.md)
-      - [使用GitHub網頁介面建立來源檔案頁面](sources-sdk/documentation/github.md)
-      - [在本機環境中使用文字編輯器來建立來源檔案頁面](sources-sdk/documentation/text-editor.md)
-      - [檔案自助服務範本](sources-sdk/documentation/template.md)
+   - [設定選項](sources-sdk/config/config.md)
+   - [配置身份驗證規範](sources-sdk/config/authspec.md)
+   - [配置源規範](sources-sdk/config/sourcespec.md)
+   - [配置瀏覽規範](sources-sdk/config/explorespec.md)
+   - [來源SDK API概觀](sources-sdk/api/api-overview.md)
+   - [快速入門](sources-sdk/api/getting-started.md)
+   - [建立連接規範](sources-sdk/api/create.md)
+   - [更新連接規範](sources-sdk/api/update-connection-specs.md)
+   - [更新流規範](sources-sdk/api/update-flow-specs.md)
+   - [提交您的來源](sources-sdk/api/submit.md)
+   - [在Adobe Experience Platform中記錄您的來源](sources-sdk/documentation/doc-overview.md)
+   - [使用GitHub網頁介面建立來源檔案頁面](sources-sdk/documentation/github.md)
+   - [在本機環境中使用文字編輯器來建立來源檔案頁面](sources-sdk/documentation/text-editor.md)
+   - [檔案自助服務範本](sources-sdk/documentation/template.md)
 - [流運行通知](notifications.md)
 - [IP位址允許清單](ip-address-allow-list.md)
 - [常見問答](./troubleshooting.md)

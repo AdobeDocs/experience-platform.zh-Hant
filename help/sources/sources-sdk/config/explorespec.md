@@ -5,7 +5,7 @@ topic-legacy: overview
 description: 本檔案概述使用Sources SDK所需準備的設定。
 hide: true
 hidefromtoc: true
-source-git-commit: d4b5b54be9fa2b430a3b45eded94a523b6bd4ef8
+source-git-commit: d98cf404fd1a4d150f202154aba87b0089418957
 workflow-type: tm+mt
 source-wordcount: '248'
 ht-degree: 2%
@@ -87,4 +87,4 @@ ht-degree: 2%
 
 ## 後續步驟
 
-填入瀏覽規格後，您可以繼續使用 [!DNL Flow Service] API。 請參閱 [[!DNL Sources SDK] API指南](../api/overview.md) 以取得更多資訊。
+填入瀏覽規格後，您可以繼續使用 [!DNL Flow Service] API。 請參閱 [[!DNL Sources SDK] API指南](../api/api-overview.md) 以取得更多資訊。
