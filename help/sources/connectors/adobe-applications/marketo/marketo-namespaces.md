@@ -5,9 +5,9 @@ title: B2B命名空間和結構
 topic-legacy: overview
 description: 本檔案概述建立B2B來源連接器時所需的自訂命名空間。
 exl-id: f1592be5-987e-41b8-9844-9dea5bd452b9
-source-git-commit: 21617c6ec364fc05d7b8b6d00daa68608d1ed318
+source-git-commit: 8718512a9768158183b9fb6b9e336081e47cd889
 workflow-type: tm+mt
-source-wordcount: '1664'
+source-wordcount: '1688'
 ht-degree: 4%
 
 ---
@@ -15,6 +15,10 @@ ht-degree: 4%
 # B2B命名空間和結構
 
 本檔案提供與B2B來源搭配使用之命名空間和結構之基礎設定的相關資訊。 本檔案也提供有關設定Postman自動化公用程式的詳細資訊，此公用程式是產生B2B命名空間和結構時所需的。
+
+>[!IMPORTANT]
+>
+>您必須擁有 [Real-time Customer Data Platform B2B版](../../../../rtcdp/b2b-overview.md) 讓B2B架構參與 [即時客戶個人檔案](../../../../profile/home.md).
 
 ## 設定B2B命名空間和架構自動產生公用程式
 

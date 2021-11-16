@@ -2,14 +2,18 @@
 title: XDM商業行銷清單類別
 description: 本檔案概述Experience Data Model(XDM)中的XDM Business Marketing List類別。
 exl-id: 510c5608-054d-4bed-91eb-22d84b5dc625
-source-git-commit: edf7afc5db219430232a3226dc691570b50a32bd
+source-git-commit: 8718512a9768158183b9fb6b9e336081e47cd889
 workflow-type: tm+mt
-source-wordcount: '185'
+source-wordcount: '225'
 ht-degree: 4%
 
 ---
 
 # [!UICONTROL XDM商業行銷清單] 類
+
+>[!IMPORTANT]
+>
+>此類別旨在供具有以下權限的組織使用： [Real-time Customer Data Platform B2B版](../../../rtcdp/b2b-overview.md). 您必須擁有Real-time CDP B2B Edition的訪問權限，才能讓此類參與 [即時客戶個人檔案](../../../profile/home.md).
 
 [!UICONTROL XDM商業行銷清單] 是標準的Experience Data Model(XDM)類別，可擷取行銷清單的最低必要屬性。 行銷清單可讓您針對最可能購買您產品的潛在客戶進行優先排序。
 

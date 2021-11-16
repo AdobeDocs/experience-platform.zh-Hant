@@ -2,14 +2,18 @@
 title: XDM業務機會人員關係類
 description: 本檔案概述Experience Data Model(XDM)中的XDM Business Opportunity Person Relation類別。
 exl-id: 7be193d2-52eb-4b28-953b-5e0fc21d8f93
-source-git-commit: edf7afc5db219430232a3226dc691570b50a32bd
+source-git-commit: 8718512a9768158183b9fb6b9e336081e47cd889
 workflow-type: tm+mt
-source-wordcount: '242'
-ht-degree: 4%
+source-wordcount: '282'
+ht-degree: 3%
 
 ---
 
 # [!UICONTROL XDM商機人員關係] 類
+
+>[!IMPORTANT]
+>
+>此類別旨在供具有以下權限的組織使用： [Real-time Customer Data Platform B2B版](../../../rtcdp/b2b-overview.md). 您必須擁有Real-time CDP B2B Edition的訪問權限，才能讓此類參與 [即時客戶個人檔案](../../../profile/home.md).
 
 [!UICONTROL XDM商機人員關係] 是標準的Experience Data Model(XDM)類別，可擷取與業務機會相關聯之人員的最低必要屬性。
 

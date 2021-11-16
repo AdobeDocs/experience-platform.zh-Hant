@@ -2,14 +2,18 @@
 title: XDM業務帳戶類別
 description: 本檔案概述Experience Data Model(XDM)中的XDM商業帳戶類別。
 exl-id: abe4c919-a680-4aad-918e-6e56cae8bd4d
-source-git-commit: edf7afc5db219430232a3226dc691570b50a32bd
+source-git-commit: 8718512a9768158183b9fb6b9e336081e47cd889
 workflow-type: tm+mt
-source-wordcount: '147'
-ht-degree: 4%
+source-wordcount: '187'
+ht-degree: 3%
 
 ---
 
 # [!UICONTROL XDM商業帳戶] 類
+
+>[!IMPORTANT]
+>
+>此類別旨在供具有以下權限的組織使用： [Real-time Customer Data Platform B2B版](../../../rtcdp/b2b-overview.md). 您必須擁有Real-time CDP B2B Edition的訪問權限，才能讓此類參與 [即時客戶個人檔案](../../../profile/home.md).
 
 [!UICONTROL XDM商業帳戶] 是標準的Experience Data Model(XDM)類別，可擷取商業帳戶的最低必要屬性。
 

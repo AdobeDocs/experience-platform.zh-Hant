@@ -2,14 +2,18 @@
 title: XDM業務機會類別
 description: 本檔案概述Experience Data Model(XDM)中的XDM Business Opportunity類別。
 exl-id: d816b0f9-fd37-45da-aa55-247f7f662da0
-source-git-commit: edf7afc5db219430232a3226dc691570b50a32bd
+source-git-commit: 8718512a9768158183b9fb6b9e336081e47cd889
 workflow-type: tm+mt
-source-wordcount: '197'
-ht-degree: 6%
+source-wordcount: '237'
+ht-degree: 5%
 
 ---
 
 # [!UICONTROL XDM業務機會] 類
+
+>[!IMPORTANT]
+>
+>此類別旨在供具有以下權限的組織使用： [Real-time Customer Data Platform B2B版](../../../rtcdp/b2b-overview.md). 您必須擁有Real-time CDP B2B Edition的訪問權限，才能讓此類參與 [即時客戶個人檔案](../../../profile/home.md).
 
 [!UICONTROL XDM業務機會] 是標準的Experience Data Model(XDM)類別，可擷取業務機會的最低必要屬性。
 
