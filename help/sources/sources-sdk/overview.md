@@ -6,7 +6,7 @@ topic-legacy: overview
 description: Adobe Experience Platform Sources SDK是一組設定API，可讓您使用流量服務API整合REST API型來源，將資料帶入Experience Platform。
 hide: true
 hidefromtoc: true
-source-git-commit: 4ce9eac605fb7c801852cd0e109448d314092603
+source-git-commit: 3d510876cfdd8ac3045dae8df6fcf6045de2538b
 workflow-type: tm+mt
 source-wordcount: '529'
 ht-degree: 0%
@@ -41,17 +41,17 @@ Platform可內嵌來自外部來源的資料，同時允許您使用Platform服�
 
 透過Sources SDK，您可以整合自己的REST API型來源，並將資料帶入Platform [!DNL Flow Service]. Sources SDK可讓您透過 [!DNL Flow Service] API。
 
-請參閱 [建立新的連接規範](./api/overview.md) 以了解如何將新來源整合至Platform的資訊。
+請參閱 [建立新的連接規範](./api/api-overview.md) 以了解如何將新來源整合至Platform的資訊。
 
 ## 記錄您的來源
 
-建立來源後，請參閱 [檔案指南](./documentation/overview.md) 有關如何通過以下方式記錄源的說明： [!DNL GitHub] 網頁介面或透過您自己的文字編輯器。
+建立來源後，請參閱 [檔案指南](./documentation/doc-overview.md) 有關如何通過以下方式記錄源的說明： [!DNL GitHub] 網頁介面或透過您自己的文字編輯器。
 
 ## 高級流程
 
 在Experience Platform中配置源的逐步過程如下：
 
-* 閱讀 [來源SDK API指南](./api/overview.md);
+* 閱讀 [來源SDK API指南](./api/api-overview.md);
    * 閱讀 [快速入門手冊](./api/getting-started.md);
    * 請依照 [建立新的連接規範](./api/create.md);
    * 請依照 [更新連接規範](./api/update-connection-specs.md);
@@ -61,7 +61,7 @@ Platform可內嵌來自外部來源的資料，同時允許您使用Platform服�
    * 請參閱 [配置驗證規範](./config/authspec.md);
    * 請參閱 [配置源規範](./config/sourcespec.md);
    * 請參閱 [配置瀏覽規範](./config/explorespec.md);
-* 若要開始記錄來源，請參閱 [建立來源SDK檔案的概觀](./documentation/overview.md)
+* 若要開始記錄來源，請參閱 [建立來源SDK檔案的概觀](./documentation/doc-overview.md)
    * 您可以使用 [來源檔案範本](./documentation/template.md) 構造檔案；
    * 請參閱 [使用GitHub網頁介面](./documentation/github.md) 以取得使用GitHub建立檔案的步驟；
    * 請參閱 [使用文字編輯器](./documentation/text-editor.md) 以了解如何使用本機電腦建立檔案的步驟。
