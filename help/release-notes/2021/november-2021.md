@@ -1,9 +1,9 @@
 ---
 title: Adobe Experience Platform 發行說明
 description: 2021年11月Adobe Experience Platform發行說明。
-source-git-commit: 4618d8d73beeb7e525b5681aaa119125adaf7883
+source-git-commit: 90e2bb00575cc0b38367d792c75e2b656491c49f
 workflow-type: tm+mt
-source-wordcount: '323'
+source-wordcount: '325'
 ht-degree: 24%
 
 ---
@@ -26,7 +26,7 @@ Attribution AI 可將點數歸因到促成轉換事件的接觸點。行銷人�
 | 功能 | 說明 |
 | ------- | ----------- |
 | 支援多個資料集 | Attribution AI現在可以直接在UI中輕鬆內嵌多個資料集，無需對應及拼接每個資料集。 這項新的時間節省功能提供來自多個資料集的更豐富資料，提供更強大、更精確的分數。 |
-| 媒體頻道和行銷活動欄位對應 | Attribution AI現在支援對應媒體頻道和行銷活動欄位。 資料集之間的媒體管道對應可改善衍生自Attribution AI的深入分析，並協助提供更清楚、易於解讀的結果。 |
+| 媒體頻道和行銷活動欄位對應 | Attribution AI現在支援媒體頻道和行銷活動欄位的對應。 資料集之間的媒體管道對應可改善衍生自Attribution AI的深入分析，並協助提供更清楚、易於解讀的結果。 |
 
 如需Attribution AI的詳細資訊，請參閱 [Attribution AI檔案](../../intelligent-services/attribution-ai/overview.md).
 
