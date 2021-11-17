@@ -5,26 +5,26 @@ title: 稽核記錄API端點
 description: 架構註冊表API中的/auditlog端點可讓您擷取已對現有XDM資源進行之變更的時間順序清單。
 topic-legacy: developer guide
 exl-id: 8d33ae7c-0aa4-4f38-a183-a2ff1801e291
-source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
+source-git-commit: 7abe27d7fcc461becb0495fcd470eaea031b94bc
 workflow-type: tm+mt
-source-wordcount: '402'
+source-wordcount: '407'
 ht-degree: 3%
 
 ---
 
 # 審核日誌端點
 
-對於每個Experience Data Model(XDM)資源， [!DNL Schema Registry]會維護在不同更新之間發生的所有變更記錄。 [!DNL Schema Registry] API中的`/auditlog`端點可讓您擷取ID所指定之任何類別、架構欄位群組、資料類型或架構的稽核記錄。
+對於每個Experience Data Model(XDM)資源， [!DNL Schema Registry] 維護在不同更新之間發生的所有更改的日誌。 此 `/auditlog` 端點 [!DNL Schema Registry] API可讓您擷取ID所指定之任何類別、結構欄位群組、資料類型或結構的稽核記錄。
 
 ## 快速入門
 
-本指南中使用的端點是[[!DNL Schema Registry] API](https://www.adobe.io/experience-platform-apis/references/schema-registry/)的一部分。 繼續之前，請檢閱[快速入門手冊](./getting-started.md)，取得相關檔案的連結、閱讀本檔案中範例API呼叫的指南，以及成功呼叫任何Experience PlatformAPI所需的必要標頭的重要資訊。
+本指南中使用的端點屬於 [[!DNL Schema Registry] API](https://www.adobe.io/experience-platform-apis/references/schema-registry/). 繼續之前，請檢閱 [快速入門手冊](./getting-started.md) 如需相關檔案的連結，請參閱本檔案中讀取範例API呼叫的指南，以及成功呼叫任何Experience PlatformAPI所需的必要標頭重要資訊。
 
-`/auditlog`端點是[!DNL Schema Registry]支援的遠程過程調用(RPC)的一部分。 與[!DNL Schema Registry] API中的其他端點不同，RPC端點不需要額外的標題，如`Accept`或`Content-Type`，也不使用`CONTAINER_ID`。 因此，他們必須使用`/rpc`命名空間，如下方API呼叫所示。
+此 `/auditlog` 端點是遠端程式呼叫(RPC)的一部分，這些呼叫由 [!DNL Schema Registry]. 不同於 [!DNL Schema Registry] API、RPC端點不需要其他標題，例如 `Accept` 或 `Content-Type`，且不使用 `CONTAINER_ID`. 而是必須使用 `/rpc` 命名空間，如下方API呼叫所示。
 
 ## 檢索資源的審核日誌
 
-您可以在`/auditlog`端點的GET請求路徑中指定資源的ID，以檢索架構庫內任何類、欄位組、資料類型或架構的審核日誌。
+您可以在方案庫內的任何類、欄位組、資料類型或方案中檢索審核日誌，方法是在GET請求的路徑中指定資源的ID `/auditlog` 端點。
 
 **API格式**
 
@@ -34,17 +34,17 @@ GET /rpc/auditlog/{RESOURCE_ID}
 
 | 參數 | 說明 |
 | --- | --- |
-| `{RESOURCE_ID}` | 您要擷取其稽核記錄的資源的`meta:altId`或URL編碼的`$id`。 |
+| `{RESOURCE_ID}` | 此 `meta:altId` 或URL編碼 `$id` 要檢索其審核日誌的資源。 |
 
 {style=&quot;table-layout:auto&quot;}
 
 **要求**
 
-以下請求將檢索`Restaurant`欄位組的審核日誌。
+下列請求會擷取結構的稽核記錄。
 
 ```shell
 curl -X GET \
-  https://platform.adobe.io/data/foundation/schemaregistry/rpc/auditlog/_{TENANT_ID}.mixins.922a56b58c6b4e4aeb49e577ec82752106ffe8971b23b4d9 \
+  https://platform.adobe.io/data/foundation/schemaregistry/rpc/auditlog/_{TENANT_ID}.schemas.50649eb1b040bf042d6400a0335901cd2a97d31a4eac4330 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
@@ -58,44 +58,72 @@ curl -X GET \
 ```json
 [
   {
-    "id": "https://ns.adobe.com/{TENANT_ID}/mixins/922a56b58c6b4e4aeb49e577ec82752106ffe8971b23b4d9",
-    "auditTrails": [
+    "id": "https://ns.adobe.com/{TENANT_ID}/schemas/50649eb1b040bf042d6400a0335901cd2a97d31a4eac4330",
+    "updatedUser": "{USER_ID}",
+    "imsOrg": "{IMS_ORG}",
+    "updatedTime": "02-19-2021 05:43:56",
+    "requestId": "a14NMF0jd6BIfyXaHdTDl4bC4R0r9rht",
+    "clientId": "{CLIENT_ID}",
+    "sandBoxId": "28e74200-e3de-11e9-8f5d-7f27416c5f0d",
+    "updates": [
       {
-        "id": "https://ns.adobe.com/{TENANT_ID}/mixins/922a56b58c6b4e4aeb49e577ec82752106ffe8971b23b4d9",
-        "xdmType": "mixins",
-        "action": "add",
-        "path": "/definitions/customFields/properties/_{TENANT_ID}/properties/brand",
+        "id": "https://ns.adobe.com/{TENANT_ID}/schemas/50649eb1b040bf042d6400a0335901cd2a97d31a4eac4330",
+        "xdmType": "schemas",
+        "action": "remove",
+        "path": "/meta:usageCount",
+        "value": 0
+      }
+    ]
+  },
+  {
+    "id": "https://ns.adobe.com/{TENANT_ID}/schemas/50649eb1b040bf042d6400a0335901cd2a97d31a4eac4330",
+    "updatedUser": "{USER_ID}",
+    "imsOrg": "{IMS_ORG}",
+    "updatedTime": "02-19-2021 05:43:56",
+    "requestId": "pFQbgmWrdbJrNB9GdxTSGECpXYWspu68",
+    "clientId": "{CLIENT_ID}",
+    "sandBoxId": "28e74200-e3de-11e9-8f5d-7f27416c5f0d",
+    "updates": [
+      {
+        "id": "https://ns.adobe.com/{TENANT_ID}/classes/11052164b588f0c29584bf6ae1a6663a59aa65426c82389f",
+        "xdmType": "classes",
+        "action": "remove",
+        "path": "/definitions/customFields/properties/_{TENANT_ID}/properties/loyaltySunday_ABC",
         "value": {
-          "title": "Brand",
+          "title": "LoyaltySundayABC",
           "description": "",
           "type": "string",
           "isRequired": false,
+          "required": [],
           "meta:xdmType": "string"
         }
       },
       {
-        "id": "https://ns.adobe.com/{TENANT_ID}/mixins/922a56b58c6b4e4aeb49e577ec82752106ffe8971b23b4d9",
-        "xdmType": "mixins",
-        "action": "add",
-        "path": "/meta:usageCount",
-        "value": 0
+        "id": "https://ns.adobe.com/{TENANT_ID}/classes/11052164b588f0c29584bf6ae1a6663a59aa65426c82389f",
+        "xdmType": "classes",
+        "action": "remove",
+        "path": "/definitions/customFields/properties/_{TENANT_ID}/properties/loyaltyMoxee_XYZ",
+        "value": {
+          "title": "LoyaltyMoxeeXYZ",
+          "description": "",
+          "type": "string",
+          "isRequired": false,
+          "required": [],
+          "meta:xdmType": "string"
+        }
       }
-    ],
-    "updatedUser": "{USER_ID}",
-    "imsOrg": "{IMS_ORG}",
-    "updated": 1606255582281,
-    "clientId": "{CLIENT_ID}",
-    "sandBoxId": "{SANDBOX_ID}"
+    ]
   }
 ]
 ```
 
 | 屬性 | 說明 |
 | --- | --- |
-| `auditTrails` | 對象的陣列，每個對象表示對指定資源或其一個相關資源所做的更改。 |
-| `id` | 已更改的資源的`$id`。 此值通常會代表請求路徑中指定的資源，但如果是變更的來源，則可能代表相依資源。 |
+| `updates` | 對象的陣列，每個對象表示對指定資源或其一個相關資源所做的更改。 |
+| `id` | 此 `$id` 已變更的資源。 此值通常代表請求路徑中指定的資源，但如果是變更的來源，則可能代表相依資源。 |
+| `xdmType` | 已變更的資源類型。 |
 | `action` | 已進行的變更類型。 |
-| `path` | [JSON指針](../../landing/api-fundamentals.md#json-pointer)字串，用於指示已變更或新增之特定欄位的路徑。 |
+| `path` | A [JSON指標](../../landing/api-fundamentals.md#json-pointer) 字串，指出已變更或新增之特定欄位的路徑。 |
 | `value` | 指派給新欄位或更新欄位的值。 |
 
 {style=&quot;table-layout:auto&quot;}
