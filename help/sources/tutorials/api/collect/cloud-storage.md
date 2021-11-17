@@ -6,9 +6,9 @@ topic-legacy: overview
 type: Tutorial
 description: 本教學課程涵蓋從協力廠商雲端儲存空間擷取資料，以及使用來源連接器和API將資料匯入Platform的步驟。
 exl-id: 95373c25-24f6-4905-ae6c-5000bf493e6f
-source-git-commit: f0bb779961e9387eab6a424461e35eba9ab48fe2
+source-git-commit: 10f04044e970158131677e0c630edf761d4577bd
 workflow-type: tm+mt
-source-wordcount: '1792'
+source-wordcount: '1835'
 ht-degree: 1%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 1%
 
 ## 快速入門
 
-本教學課程要求您透過有效連線存取協力廠商雲端儲存空間，並取得您要匯入Platform之檔案的相關資訊，包括檔案的路徑和結構。 如果您沒有此資訊，請參閱 [使用 [!DNL Flow Service] API](../explore/cloud-storage.md) 在嘗試本教學課程之前。
+本教學課程需要您透過有效連線存取第三方雲端儲存空間，以及您要匯入Platform之檔案的相關資訊，包括檔案的路徑和結構。 如果您沒有此資訊，請參閱 [使用 [!DNL Flow Service] API](../explore/cloud-storage.md) ，再嘗試本教學課程。
 
 本教學課程也需要您妥善了解下列Adobe Experience Platform元件：
 
@@ -638,6 +638,10 @@ curl -X GET \
 - [資料流規範ID](#specs)
 
 資料流負責從源中調度和收集資料。 您可以在裝載中提供先前提及的值時，執行POST要求來建立資料流。
+
+>[!NOTE]
+>
+>對於批次內嵌，每個隨後的資料流都會根據檔案的來源選擇要內嵌的檔案 **上次修改** 時間戳記。 這意味著批處理資料流從源中選擇自上次資料流運行以來新建或修改的檔案。
 
 若要排程擷取，您必須先將開始時間值設為紀元時間（以秒為單位）。 然後，您必須將頻率值設定為以下五個選項之一： `once`, `minute`, `hour`, `day`，或 `week`. 間隔值指定兩個連續擷取之間的期間，並建立一次性擷取不需要設定間隔。 對於所有其他頻率，間隔值必須設定為等於或大於 `15`.
 
