@@ -3,7 +3,7 @@ product: adobe experience platform
 solution: Experience Platform, Real-time Customer Data Platform
 title: Adobe Experience Platform Real-time Customer Data Platform B2B版發行說明
 description: Adobe Experience Platform Real-time Customer Data Platform B2B版的最新發行說明。
-source-git-commit: 4417670d167d7390d0e82ac5c32a1a6b46a15226
+source-git-commit: b6bcd94130126d1d893621ae1ab4255c8a789a80
 workflow-type: tm+mt
 source-wordcount: '445'
 ht-degree: 1%
@@ -26,7 +26,7 @@ Real-time CDP B2B Edition建置在Real-time Customer Data Platform(Real-time CDP
 
 ## 全新B2B和B2P版本 {#editions}
 
-**全新B2B和B2P版本** 可購買將ABM資料和功能整合至即時CDP和Platform Activation產品的ABM。
+**全新B2B和B2P版本** 可將B2B資料和功能帶入即時CDP和Platform Activation產品，並可供購買。
 
 要了解有關Real-time CDP B2B Edition的更多資訊，請參見 [概述](./b2b-overview.md)
 
