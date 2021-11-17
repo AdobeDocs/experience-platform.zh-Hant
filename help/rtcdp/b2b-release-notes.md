@@ -3,9 +3,9 @@ product: adobe experience platform
 solution: Experience Platform, Real-time Customer Data Platform
 title: Adobe Experience Platform Real-time Customer Data Platform B2B版發行說明
 description: Adobe Experience Platform Real-time Customer Data Platform B2B版的最新發行說明。
-source-git-commit: f5d9252b25793bd9233b5bc8dcc83be464ce7fdd
+source-git-commit: 4417670d167d7390d0e82ac5c32a1a6b46a15226
 workflow-type: tm+mt
-source-wordcount: '452'
+source-wordcount: '445'
 ht-degree: 1%
 
 ---
@@ -36,7 +36,7 @@ Real-time CDP B2B Edition建置在Real-time Customer Data Platform(Real-time CDP
 
 | 功能 | 說明 |
 |---|---|
-| Marketo Engage源連接器 | Adobe Experience Platform可讓您從外部來源擷取資料，同時使用Platform服務來建構、加標籤及增強傳入資料。 Marketo Engage來源連接器是銷售機會管理和B2B行銷人員的完整解決方案。 |
+| Marketo Engage源連接器 | Marketo Engage來源連接器可讓行銷人員將其一或多個Marketo執行個體的資料流暢內嵌至其Adobe Experience Platform執行個體，並為銷售機會管理和B2B行銷人員提供完整的解決方案。 |
 | Marketo Engage目標 | 此 [Marketo目的地](https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/adobe/marketo-engage.html) 可讓行銷人員將在Adobe Experience Platform中建立的區段推送至Marketo，這些區段會顯示為靜態清單。 |
 
 若要深入了解Marketo Source Connector，請參閱 [概述](../sources/connectors/adobe-applications/marketo/marketo.md)
