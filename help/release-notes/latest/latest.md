@@ -1,63 +1,44 @@
 ---
 title: Adobe Experience Platform 發行說明
 description: Adobe Experience Platform的最新發行說明。
-source-git-commit: b6f4c79df79ae20b8051b69ef34dd255df193454
+source-git-commit: d34b3480b182b4128bb1626326b0de7bf2809985
 workflow-type: tm+mt
-source-wordcount: '454'
-ht-degree: 7%
+source-wordcount: '325'
+ht-degree: 24%
 
 ---
 
 # Adobe Experience Platform 發行說明
 
-**發行日期：2021 年 10 月 27 日**
-
-## 更新Experience Platform
-
-更新Experience Platform。
-
-### 使用者介面 {#ui}
-
-使用者介面已更新，並有下列變更：
-
-| 功能 | 說明 |
-| --- | --- |
-| 深色主題 | 使用深色主題切換，在Platform介面的淺色主題和深色主題之間切換。 交換機位於用戶名和電子郵件下的用戶配置檔案中。 |
-| 切換左側導覽 | 使用應用程式標題頂端改良的導覽切換按鈕，來顯示或隱藏顯示您的Experience Platform功能的功能表。 系統會記住您上次的選取，並只顯示您有權存取的功能。 |
-| 存取可見性 | 左側導覽列只顯示您可存取的功能。 在舊版Adobe Experience Platform中，即使您無法存取無法使用的項目，也會顯示這些項目。 |
-
-請參閱 [Platform UI指南](../../landing/ui-guide.md) 了解更多。
+**發行日期：2021 年 11 月 17 日**
 
 ## 更新現有功能
 
 Adobe Experience Platform 現有功能更新：
 
-- [[!DNL Data Prep]](#data-prep)
-- [來源](#sources)
+- [Attribution AI](#attribution-ai)
+- [Customer AI](#customer-ai)
 
-### [!DNL Data Prep] {#data-prep}
+### Attribution AI {#attribution-ai}
 
-[!DNL Data Prep] 可讓資料工程師將資料對應、轉換及驗證至Experience Data Model(XDM)。
+Attribution AI 可將點數歸因到促成轉換事件的接觸點。行銷人員可善用此工具，協助量化客戶歷程中各個獨立行銷接觸點對行銷的影響。
+
+| 功能 | 說明 |
+| ------- | ----------- |
+| 支援多個資料集 | Attribution AI現在可以直接在UI中輕鬆內嵌多個資料集，無需對應及拼接每個資料集。 這項新的時間節省功能提供來自多個資料集的更豐富資料，提供更強大、更精確的分數。 |
+| 媒體頻道和行銷活動欄位對應 | Attribution AI現在支援媒體頻道和行銷活動欄位的對應。 資料集之間的媒體管道對應可改善衍生自Attribution AI的深入分析，並協助提供更清楚、易於解讀的結果。 |
+
+如需Attribution AI的詳細資訊，請參閱 [Attribution AI檔案](../../intelligent-services/attribution-ai/overview.md).
+
+### Customer AI {#customer-ai}
+
+Real-time Customer Data Platform提供的Customer AI可產生自訂傾向分數，例如大規模個別設定檔的流失和轉換。 不必將企業需求轉換為機器學習問題、挑選演算法、培訓或部署，就能達成上述目的。
 
 **更新功能**
 
 | 功能 | 說明 |
 | --- | --- |
-| `contains_key` 函數 | 此 `contains_key` 函式，可讓您檢查物件是否存在於來源中。 此函式會取代 `is_set` 函式，現已過時。 |
-| 錯誤訊息 | 由 `/mappingSets/preview` 資料準備API中的端點現在與執行階段產生的錯誤訊息一致。 |
+| 支援多個資料集 | Customer AI現在可以直接在UI中輕鬆內嵌多個資料集，而無須對應並拼接每個資料集。 這項新的時間節省功能提供來自多個資料集的更豐富資料，提供更強大、更精確的分數。 |
+| 自訂設定檔屬性 | 除了標準事件欄位外，Customer AI現在支援在您的資料中定義自訂設定檔資料集欄位（含時間戳記）。 使用此選項，您可以新增其他您認為具影響力的設定檔屬性，這些屬性可能會改善模型品質，並提供更精確的結果 |
 
-請參閱 [[!DNL Data Prep] 概述](../../data-prep/home.md) 以進一步了解此服務。
-
-### 來源 {#sources}
-
-Adobe Experience Platform可內嵌來自外部來源的資料，同時允許您使用Platform服務來建構、加標籤及增強該資料。 您可以內嵌來自各種來源的資料，例如Adobe應用程式、雲端儲存、協力廠商軟體和您的CRM系統。
-
-Experience Platform提供RESTful API和互動式UI，讓您輕鬆為各種資料提供者設定來源連線。 這些源連接允許您驗證並連接到外部儲存系統和CRM服務、設定獲取運行時間以及管理資料獲取吞吐量。
-
-| 功能 | 說明 |
-| --- | --- |
-| [!DNL Amazon S3] 來源增強功能 | 您現在可以使用 `s3SessionToken` 參數來連接 [!DNL Amazon S3] 帳戶傳至Platform（使用暫時安全性憑證）。 此代號可讓您提供對 [!DNL Amazon S3] 資源給不受信任環境中的用戶。 請參閱 [[!DNL Amazon S3] 檔案](../../sources/connectors/cloud-storage/s3.md#prerequisites) 以取得更多資訊。 |
-| [!DNL Generic REST API] （測試版） | 您現在可以建立 [!DNL Generic REST API] 源連接使用 [[!DNL Flow Service] API](../../sources/tutorials/api/create/protocols/generic-rest.md) 將一般REST應用程式的資料帶入Platform。 請參閱 [[!DNL Generic REST API] 概述](../../sources/connectors/protocols/generic-rest.md) 以取得更多資訊。 |
-| [!DNL Zoho CRM] （測試版） | 您現在可以建立 [!DNL Zoho CRM] 源連接使用 [[!DNL Flow Service] API](../../sources/tutorials/api/create/crm/zoho.md) 或 [使用者介面](../../sources/tutorials/ui/create/crm/zoho.md) 從 [!DNL Zoho CRM] 帳戶至Platform。 請參閱 [[!DNL Zoho CRM] 概述](../../sources/connectors/crm/zoho.md) 以取得更多資訊。 |
-
-若要進一步了解來源，請參閱 [來源概觀](../../sources/home.md).
+如需Customer AI的詳細資訊，請參閱 [Customer AI檔案](../../intelligent-services/customer-ai/overview.md).
