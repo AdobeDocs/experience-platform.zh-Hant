@@ -5,9 +5,9 @@ seo-title: Destinations overview
 description: 了解如何針對跨通路行銷宣傳、電子郵件、目標廣告等目的地啟用Adobe Experience Platform資料。
 seo-description: Destinations are pre-built integrations with destination platforms that allow for the seamless activation of data from Adobe Experience Platform. You can use Destinations in the Adobe Experience Platform to activate your known and unknown data for cross-channel marketing campaigns, email campaigns, targeted advertising, and many other use cases.
 exl-id: afd07ddc-652e-4e22-b298-feba27332462
-source-git-commit: 03e7863f38b882a2fbf6ba0de1755e1924e8e228
+source-git-commit: c93e23d334ffe3cbee049f120a7b6c5e7e69d0ea
 workflow-type: tm+mt
-source-wordcount: '461'
+source-wordcount: '460'
 ht-degree: 0%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 0%
 
 ![目的地概述橫幅](./assets/overview/destinations-overview-banner.png)
 
-**[!DNL Destinations]** 是與目的地平台預先建置的整合，可順暢地從Adobe Experience Platform啟動資料。 您可以使用目的地來針對跨通路行銷活動、電子郵件行銷活動、目標廣告和其他許多使用案例，啟用已知和未知的資料。
+**[!DNL Destinations]** 預先建置與目的地平台的整合，可順暢地從Adobe Experience Platform啟動資料。 您可以使用目的地來針對跨通路行銷活動、電子郵件行銷活動、目標廣告和其他許多使用案例，啟用已知和未知的資料。
 
 ## 目的地和來源 {#destinations-and-sources}
 
