@@ -4,9 +4,9 @@ title: 同意和首選項架構欄位組
 topic-legacy: overview
 description: 本文檔概述了「同意」和「首選項」架構欄位組。
 exl-id: ec592102-a9d3-4cac-8b94-58296a138573
-source-git-commit: d2c71423165776bf7c106a7503514c5acc284f8e
+source-git-commit: 6caece867afe3e6f3fd323843b753cce2319623c
 workflow-type: tm+mt
-source-wordcount: '958'
+source-wordcount: '941'
 ht-degree: 0%
 
 ---
@@ -29,7 +29,7 @@ ht-degree: 0%
 >
 >請參閱 [探索XDM資源](../../ui/explore.md) 如需如何在Platform UI中尋找任何XDM資源並檢查其結構的步驟，請參閱。
 
-下列JSON顯示資料類型的範例，其中 [!UICONTROL 同意和偏好設定] 欄位群組可以處理。 以下各節將提供有關這些欄位具體用途的資訊。
+下列JSON顯示資料類型的範例，其中 [!UICONTROL 同意和偏好設定] 欄位群組可以處理。 有關如何使用欄位組提供的大多數欄位的資訊，請參閱 [同意和首選項資料類型](../../data-types/consents.md). 以下子區段著重於欄位群組新增至資料類型的唯一屬性。
 
 ```json
 {
@@ -96,8 +96,6 @@ ht-degree: 0%
 >* [在UI中產生範例資料](../../ui/sample.md)
 >* [在API中產生範例資料](../../api/sample-data.md)
 
-
-有關如何使用欄位組提供的大多數欄位的資訊，請參閱 [同意和首選項資料類型](../../data-types/consents.md). 以下子區段著重於欄位群組新增至資料類型的唯一屬性。
 
 ### `idSpecific`
 
