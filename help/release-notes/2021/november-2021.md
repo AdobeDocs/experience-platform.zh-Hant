@@ -1,16 +1,22 @@
 ---
 title: Adobe Experience Platform 發行說明
 description: 2021年11月Adobe Experience Platform發行說明。
-source-git-commit: 90e2bb00575cc0b38367d792c75e2b656491c49f
+source-git-commit: aa8cafc9a40748eda3098b2af732a828d39204b2
 workflow-type: tm+mt
-source-wordcount: '325'
-ht-degree: 24%
+source-wordcount: '724'
+ht-degree: 14%
 
 ---
 
 # Adobe Experience Platform 發行說明
 
 **發行日期：2021 年 11 月 17 日**
+
+## 新功能
+
+Adobe Experience Platform的新功能：
+
+- [Real-time Customer Data Platform B2B Edition](#B2B)
 
 ## 更新現有功能
 
@@ -19,13 +25,50 @@ Adobe Experience Platform 現有功能更新：
 - [Attribution AI](#attribution-ai)
 - [Customer AI](#customer-ai)
 
+### Real-time Customer Data Platform B2B版 {#B2B}
+
+**發行日期：2021 年 11 月 12 日**
+
+Real-time CDP B2B Edition建置在Real-time Customer Data Platform(Real-time CDP)之上，專為以企業對企業服務模式運作的行銷人員而打造。 它匯集了來自多個來源的資料，並將其結合為人員和帳戶設定檔的單一檢視。 此統一的資料可讓行銷人員精確鎖定特定對象，並參與所有可用管道中的這些對象。
+
+對各種Adobe Experience Platform功能進行了改進，將即時CDP B2B Edition與其B2C對應版本區分開來。 其中包括針對B2B使用案例改善Experience Data Model(XDM)、升級為身分解析和設定檔分段，以及自訂的連接器和Marketo Engage目的地。 Marketo連接器可讓B2B品牌將其業界領先的B2B參與資料與行為資訊連結，以培育銷售機會並增強以帳戶為基礎的行銷作業。
+
+-[全新B2B和B2P版本](#editions)
+-[全新Marketo資料來源和目的地連接器](#marketo)
+-[標準B2B XDM](#XDM)
+
+### 全新B2B和B2P版本 {#editions}
+
+現已推出新的B2B和B2P版本，可將B2B資料和功能同時帶入即時CDP和Platform Activation產品，供購買。
+
+要了解有關Real-time CDP B2B Edition的更多資訊，請參見 [概述](../../rtcdp/overview.md).
+
+### 全新Marketo資料來源和目的地連接器 {#marketo}
+
+新的Marketo資料來源和目的地連接器會將Marketo資料串流至Platform和Platform對象，並傳回Marketo。 適用於所有平台使用者。
+
+| 功能 | 說明 |
+|-----------|--------------|
+| Marketo Engage源連接器 | 此 [Marketo Engage源連接器](../../sources/connectors/adobe-applications/marketo/marketo.md) 可讓行銷人員將一或多個Marketo執行個體的資料流暢內嵌至其Adobe Experience Platform執行個體，並為銷售機會管理和B2B行銷人員提供完整的解決方案。 |
+| Marketo Engage目標 | 此 [Marketo目的地](../../destinations/catalog/adobe/marketo-engage.md) 可讓行銷人員將在Adobe Experience Platform中建立的區段推送至Marketo，這些區段會顯示為靜態清單。 |
+
+### 標準B2B XDM {#XDM}
+
+所有Platform使用者皆可使用標準B2B XDM類別、欄位群組和資料類型。
+
+| 功能 | 說明 |
+|----------|-------------|
+| 標準B2B XDM類別 | Real-time Customer Data Platform B2B版提供數種標準XDM，可擷取關於基本B2B資料實體（例如帳戶、機會、行銷活動等）的詳細資訊。 |
+
+請參閱 [Real-time Customer Data Platform B2B版中的結構描述](../../rtcdp/schemas/b2b.md) 檔案，進一步了解擷取B2B資料實體。
+
 ### Attribution AI {#attribution-ai}
 
 Attribution AI 可將點數歸因到促成轉換事件的接觸點。行銷人員可善用此工具，協助量化客戶歷程中各個獨立行銷接觸點對行銷的影響。
 
 | 功能 | 說明 |
 | ------- | ----------- |
-| 支援多個資料集 | Attribution AI現在可以直接在UI中輕鬆內嵌多個資料集，無需對應及拼接每個資料集。 這項新的時間節省功能提供來自多個資料集的更豐富資料，提供更強大、更精確的分數。 |
+| 支援多個資料集 | Attribution AI現在可以直接在UI中輕鬆內嵌多個資料集，無需對應及拼接每個資料集。 這項新的省時功能提供來自多個資料集的豐富資料，提供更強大、更精確的分數。 |
 | 媒體頻道和行銷活動欄位對應 | Attribution AI現在支援媒體頻道和行銷活動欄位的對應。 資料集之間的媒體管道對應可改善衍生自Attribution AI的深入分析，並協助提供更清楚、易於解讀的結果。 |
 
 如需Attribution AI的詳細資訊，請參閱 [Attribution AI檔案](../../intelligent-services/attribution-ai/overview.md).
@@ -38,11 +81,7 @@ Real-time Customer Data Platform提供的Customer AI可產生自訂傾向分數�
 
 | 功能 | 說明 |
 | --- | --- |
-| 支援多個資料集 | Customer AI現在可以直接在UI中輕鬆內嵌多個資料集，而無須對應並拼接每個資料集。 這項新的時間節省功能提供來自多個資料集的更豐富資料，提供更強大、更精確的分數。 |
-| 自訂設定檔屬性 | 除了標準事件欄位外，Customer AI現在支援在您的資料中定義自訂設定檔資料集欄位（含時間戳記）。 使用此選項，您可以新增其他您認為具影響力的設定檔屬性，這些屬性可能會改善模型品質，並提供更精確的結果 |
+| 支援多個資料集 | Customer AI現在可以直接在UI中輕鬆內嵌多個資料集，而無須對應並拼接每個資料集。 這項新的省時功能提供來自多個資料集的豐富資料，提供更強大、更精確的分數。 |
+| 自訂設定檔屬性 | 除了標準事件欄位外，Customer AI現在支援在您的資料中定義自訂設定檔資料集欄位（含時間戳記）。 使用此選項可讓您新增您認為有影響的其他設定檔屬性，這可能會改善模型品質，並提供更精確的結果。 |
 
 如需Customer AI的詳細資訊，請參閱 [Customer AI檔案](../../intelligent-services/customer-ai/overview.md).
-
-
-
-
