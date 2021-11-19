@@ -3,22 +3,29 @@ keywords: 個人化；個人化
 title: 個人化目的地概觀
 description: 個人化平台會收集個別行為的資料和深入分析。 這些平台可協助行銷人員導覽匿名資料、根據先前的活動或作為具有類似習慣之受眾區段的一部分，向潛在客戶提供優惠方案或廣告。
 exl-id: 18a2b170-43d0-4d41-8afc-d2f0f9bfd7bb
-source-git-commit: 15ea3ab9370541c35b874414a8753e8812eea9c6
+source-git-commit: 8f9a601a833149c83d465f68d16ca362ed730b8a
 workflow-type: tm+mt
-source-wordcount: '136'
-ht-degree: 9%
+source-wordcount: '145'
+ht-degree: 10%
 
 ---
 
 # 個人化目的地概觀 {#personalization-destinations}
 
-## 概覽 {#overview}
+## 總覽 {#overview}
 
 個人化平台會收集個別行為的資料和深入分析。 這些平台可協助行銷人員導覽匿名資料、根據先前的活動或作為具有類似習慣之受眾區段的一部分，向潛在客戶提供優惠方案或廣告。
 
 ## 支援的個人化目的地 {#supported-destinations}
 
 目前，Platform支援下列個人化目的地。 如需如何連線至這些目的地的詳細資訊，請參閱個別連結：
+
+**連線**
+
+* [（測試版）Adobe Target](adobe-target-connection.md)
+* [（測試版）自訂個人化連線](custom-personalization.md)
+
+**擴充功能**
 
 * [Adobe Target 擴充功能](adobe-target.md)
 * [Adobe Target v2 擴充功能](adobe-target-v2.md)
