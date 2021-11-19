@@ -5,13 +5,13 @@ topic-legacy: overview
 description: 本檔案概述使用Sources SDK所需準備的設定。
 hide: true
 hidefromtoc: true
-source-git-commit: d4b5b54be9fa2b430a3b45eded94a523b6bd4ef8
+exl-id: 68ed22fe-1f22-46d2-9d58-72ad8a9e6b98
+source-git-commit: a3bfd3b87343ca1dd2d122f4f82926082965578c
 workflow-type: tm+mt
 source-wordcount: '526'
 ht-degree: 2%
 
 ---
-
 
 # 配置源SDK的驗證規範
 
@@ -180,7 +180,7 @@ OAuth 2重新整理程式碼可產生暫時存取權杖和重新整理權杖，�
 | 屬性 | 說明 | 範例 |
 | --- | --- | --- |
 | `authSpec.name` | 顯示支援的驗證類型的名稱。 | `Basic Authentication` |
-| `authSpec.type` | 定義源支援的驗證類型。 | `oAuth2-refresh-code` |
+| `authSpec.type` | 定義源支援的驗證類型。 | `BasicAuthentication` |
 | `authSpec.spec` | 包含驗證結構、資料類型和屬性的相關資訊。 |
 | `authSpec.spec.$schema` | 定義用於驗證的架構。 | `http://json-schema.org/draft-07/schema#` |
 | `authSpec.spec.type` | 定義架構的資料類型。 | `object` |
