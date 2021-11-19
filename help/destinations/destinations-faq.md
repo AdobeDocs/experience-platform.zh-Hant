@@ -5,9 +5,9 @@ seo-title: Frequently asked questions
 description: 關於Adobe Experience Platform目的地最常問問題的回答
 seo-description: Answers to the most frequently asked questions about Adobe Experience Platform destinations
 exl-id: 2c34ecd0-a6d0-48dd-86b0-a144a6acf61a
-source-git-commit: 8f9a601a833149c83d465f68d16ca362ed730b8a
+source-git-commit: 69fc8e8ec3211495056be73c2e49c6aecfc569ea
 workflow-type: tm+mt
-source-wordcount: '781'
+source-wordcount: '798'
 ht-degree: 4%
 
 ---
@@ -77,7 +77,7 @@ ht-degree: 4%
 
 **我可以在Platform UI中為不同的Facebook帳戶建立多個Facebook目的地嗎？**
 
-Experience Platform中的Facebook目的地為Facebook中廣告帳戶的1:1。 您可以為公司中的每個Facebook廣告帳戶建立個別的Facebook目的地。 關注 [目的地連線教學課程](/help/destinations/ui/connect-destination.md) 並針對Platform UI中的每個新Facebook目的地，連線至個別的Facebook帳戶。
+可以。Experience Platform中的Facebook目的地為Facebook中廣告帳戶的1:1。 您可以為公司中的每個Facebook廣告帳戶建立個別的Facebook目的地。 關注 [目的地連線教學課程](/help/destinations/ui/connect-destination.md) 並針對Platform UI中的每個新Facebook目的地，連線至個別的Facebook帳戶。 您可以連線的Facebook和帳戶數沒有限制。
 
 ## linkedIn相符的對象 {#linkedin}
 
