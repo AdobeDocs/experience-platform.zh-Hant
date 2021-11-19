@@ -4,9 +4,9 @@ user-guide-title: 目的地指南
 user-guide-description: 針對跨通路行銷活動、電子郵件宣傳、鎖定特定目標的行銷活動和其他諸多使用案例，啟用已知和未知的資料。
 description: 本檔案列出Adobe Experience Platform目的地的目錄
 feature: Destinations
-source-git-commit: a01730fce4f7746389fc48e700c259567492d0ee
+source-git-commit: 320c95f894c75a7f52808730b0cac4bc1e4411e1
 workflow-type: tm+mt
-source-wordcount: '677'
+source-wordcount: '680'
 ht-degree: 9%
 
 ---
@@ -36,7 +36,6 @@ ht-degree: 9%
    * [監視資料流](./ui/monitor-dataflows.md)
 * 目的地目錄 {#catalog}
    * [目的地目錄概觀](./catalog/overview.md)
-   * [ (Alpha)HTTP連線](./catalog/http-destination.md)
    * Adobe目的地{#adobe}
       * [Adobe目的地概觀](./catalog/adobe/overview.md)
       * [Marketo Engage連線](./catalog/adobe/marketo-engage.md)
@@ -132,6 +131,8 @@ ht-degree: 9%
       * [Facebook連線](./catalog/social/facebook.md)
       * [linkedIn相符的對象連線](./catalog/social/linkedin.md)
       * [[!DNL Twitter Custom Audiences] 連接](./catalog/social/twitter.md)
+   * 串流目的地 {#streaming}
+      * [ （測試版）HTTP API連線](./catalog/streaming/http-destination.md)
    * 調查目的地 {#survey}
       * [調查目的地概觀](./catalog/survey/overview.md)
       * [Foresee擴展目的地](./catalog/survey/foresee.md)
