@@ -1,10 +1,11 @@
 ---
 title: Adobe Experience Platform 發行說明
 description: 2021年11月Adobe Experience Platform發行說明。
-source-git-commit: aa8cafc9a40748eda3098b2af732a828d39204b2
+exl-id: f649b516-8ef8-49af-bb3e-0392337d0d86
+source-git-commit: 2c4b0d6dd0884fe81565356c31b18c0555bf973f
 workflow-type: tm+mt
-source-wordcount: '724'
-ht-degree: 14%
+source-wordcount: '798'
+ht-degree: 12%
 
 ---
 
@@ -17,6 +18,7 @@ ht-degree: 14%
 Adobe Experience Platform的新功能：
 
 - [Real-time Customer Data Platform B2B Edition](#B2B)
+- [（測試版）透過臨機啟動API啟動對象區段以批次目的地](#ad-hoc-activation)
 
 ## 更新現有功能
 
@@ -61,6 +63,10 @@ Real-time CDP B2B Edition建置在Real-time Customer Data Platform(Real-time CDP
 | 標準B2B XDM類別 | Real-time Customer Data Platform B2B版提供數種標準XDM，可擷取關於基本B2B資料實體（例如帳戶、機會、行銷活動等）的詳細資訊。 |
 
 請參閱 [Real-time Customer Data Platform B2B版中的結構描述](../../rtcdp/schemas/b2b.md) 檔案，進一步了解擷取B2B資料實體。
+
+### （測試版）透過臨機啟動API啟動對象區段以批次目的地 {#ad-hoc-activation}
+
+臨機啟動API可讓行銷人員針對需要立即啟動的情況，以快速且有效的方式，以程式設計方式將對象區段啟用至目的地。 僅支援隨選對象啟動 [批次檔案型目的地](../../destinations/destination-types.md#file-based) 目前為測試版。 如需詳細資訊，請參閱 [臨機啟動API檔案](../../destinations/api/ad-hoc-activation-api.md).
 
 ### Attribution AI {#attribution-ai}
 

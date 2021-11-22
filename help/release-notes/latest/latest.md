@@ -1,10 +1,11 @@
 ---
 title: Adobe Experience Platform 發行說明
 description: Adobe Experience Platform的最新發行說明。
-source-git-commit: aa8cafc9a40748eda3098b2af732a828d39204b2
+exl-id: 8f2c9bf8-1487-46e4-993b-bd9b63774cab
+source-git-commit: 2c4b0d6dd0884fe81565356c31b18c0555bf973f
 workflow-type: tm+mt
-source-wordcount: '724'
-ht-degree: 14%
+source-wordcount: '798'
+ht-degree: 12%
 
 ---
 
@@ -17,6 +18,7 @@ ht-degree: 14%
 Adobe Experience Platform的新功能：
 
 - [Real-time Customer Data Platform B2B Edition](#B2B)
+- [（測試版）透過臨機啟動API啟動對象區段以批次目的地](#ad-hoc-activation)
 
 ## 更新現有功能
 
@@ -62,6 +64,10 @@ Real-time CDP B2B Edition建置在Real-time Customer Data Platform(Real-time CDP
 
 請參閱 [Real-time Customer Data Platform B2B版中的結構描述](../../rtcdp/schemas/b2b.md) 檔案，進一步了解擷取B2B資料實體。
 
+### （測試版）透過臨機啟動API啟動對象區段以批次目的地 {#ad-hoc-activation}
+
+臨機啟動API可讓行銷人員針對需要立即啟動的情況，以快速且有效的方式，以程式設計方式將對象區段啟用至目的地。 僅支援隨選對象啟動 [批次檔案型目的地](../../destinations/destination-types.md#file-based) 目前為測試版。 如需詳細資訊，請參閱 [臨機啟動API檔案](../../destinations/api/ad-hoc-activation-api.md).
+
 ### Attribution AI {#attribution-ai}
 
 Attribution AI 可將點數歸因到促成轉換事件的接觸點。行銷人員可善用此工具，協助量化客戶歷程中各個獨立行銷接觸點對行銷的影響。
@@ -85,3 +91,4 @@ Real-time Customer Data Platform提供的Customer AI可產生自訂傾向分數�
 | 自訂設定檔屬性 | 除了標準事件欄位外，Customer AI現在支援在您的資料中定義自訂設定檔資料集欄位（含時間戳記）。 使用此選項可讓您新增您認為有影響的其他設定檔屬性，這可能會改善模型品質，並提供更精確的結果。 |
 
 如需Customer AI的詳細資訊，請參閱 [Customer AI檔案](../../intelligent-services/customer-ai/overview.md).
+
