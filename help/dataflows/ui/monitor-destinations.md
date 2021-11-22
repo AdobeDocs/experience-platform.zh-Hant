@@ -6,7 +6,7 @@ title: 在UI中監視目標的資料流
 topic-legacy: overview
 type: Tutorial
 exl-id: 8eb7bb3c-f2dc-4dbc-9cf5-3d5d3224f5f1
-source-git-commit: 822276890b6ebed922d359f8dece58d8c90dea24
+source-git-commit: 055338228608685a65bc79d9d9d0c07e3ddddfb2
 workflow-type: tm+mt
 source-wordcount: '1785'
 ht-degree: 0%
@@ -48,13 +48,13 @@ ht-degree: 0%
 ### 流目的地的資料流運行
 
 >[!CONTEXTUALHELP]
->id="platform_destinations_activate_identitiesactivated"
+>id="platform_destinations_dataflow_identitiesactivated"
 >title="已激活身份"
 >abstract="已成功啟動至所選目的地的個別設定檔身分識別計數。"
 >additional-url="https://adobe.com/go/destinations-monitor-dataflows-batch-en" text="進一步了解檔案"
 
 >[!CONTEXTUALHELP]
->id="platform_destinations_activate_identitiesexcluded"
+>id="platform_destinations_dataflow_identitiesexcluded"
 >title="已排除的身分"
 >abstract="根據遺失屬性和同意違規，從所選目的地啟動中排除的個別設定檔記錄計數。"
 >additional-url="https://adobe.com/go/destinations-monitor-dataflows-batch-en" text="進一步了解檔案"
