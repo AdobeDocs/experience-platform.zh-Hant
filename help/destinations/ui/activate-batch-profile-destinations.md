@@ -6,9 +6,9 @@ seo-title: Activate audience data to batch profile export destinations
 description: 了解如何將區段傳送至批次設定檔式型目的地，以啟動Adobe Experience Platform中的受眾資料。
 seo-description: Learn how to activate the audience data you have in Adobe Experience Platform by sending segments to batch profile-based destinations.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: b4810dfef7b0d437744ca14a32bd4f5746e8d002
+source-git-commit: 822276890b6ebed922d359f8dece58d8c90dea24
 workflow-type: tm+mt
-source-wordcount: '1958'
+source-wordcount: '2114'
 ht-degree: 0%
 
 ---
@@ -48,6 +48,12 @@ ht-degree: 0%
 
 ## 排程區段匯出 {#scheduling}
 
+>[!CONTEXTUALHELP]
+>id="platform_destinations_activate_schedule"
+>title="排程"
+>abstract="儲存區段後，無法變更檔案匯出類型（完整檔案或增量檔案）和排程。"
+>additional-url="https://www.adobe.com/go/destinations-profile-batch-en" text="進一步了解檔案"
+
 [!DNL Adobe Experience Platform] 以 [!DNL CSV] 檔案。 在 **[!UICONTROL 排程]** 頁面，您可以為要匯出的每個區段設定排程和檔案名稱。 必須設定排程，但設定檔案名稱為選用。
 
 >[!IMPORTANT]
@@ -61,6 +67,12 @@ ht-degree: 0%
 ![建立計畫按鈕](../assets/ui/activate-batch-profile-destinations/create-schedule-button.png)
 
 ### 導出完整檔案 {#export-full-files}
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_activate_exportoptions"
+>title="檔案導出選項"
+>abstract="選擇 **導出完整檔案** 匯出所有符合區段資格之設定檔的完整快照。 <br> 選擇 **導出增量檔案** 僅匯出自上次匯出以來符合區段資格的設定檔。 第一個增量檔案匯出包含所有符合區段資格的設定檔，可作為回填。 將來的增量檔案僅包括自首次增量檔案導出以來符合段資格的配置檔案。"
+>additional-url="https://www.adobe.com/go/destinations-profile-batch-en" text="進一步了解檔案"
 
 選擇 **[!UICONTROL 導出完整檔案]** 觸發匯出檔案，該檔案包含所選區段之所有設定檔資格的完整快照。
 
@@ -112,6 +124,12 @@ ht-degree: 0%
 1. 選擇 **[!UICONTROL 建立]** 以儲存排程。
 
 ### 配置檔案名 {#file-names}
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_activate_filename"
+>title="配置檔案名"
+>abstract="針對以檔案為基礎的目的地，每個區段會產生唯一的檔案名稱。 使用檔案名編輯器建立和編輯唯一的檔案名或保留預設名稱。"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html?lang=en#file-names" text="進一步了解檔案"
 
 預設檔案名稱包含目的地名稱、區段ID以及日期和時間指標。 例如，您可以編輯匯出的檔案名稱以區分不同的促銷活動，或將資料匯出時間附加至檔案。
 
