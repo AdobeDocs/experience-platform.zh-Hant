@@ -2,7 +2,7 @@
 description: 本頁列出並說明使用Destination SDK設定串流目的地的步驟。
 title: 使用Destination SDK設定串流目的地
 exl-id: d8aa7353-ba55-4a0d-81c4-ea2762387638
-source-git-commit: bc77614eee6cc50d2ce6b14c1b228ed87f88f340
+source-git-commit: 3b320f253516f2c169330e1eed6ad870a583891a
 workflow-type: tm+mt
 source-wordcount: '663'
 ht-degree: 0%
@@ -165,7 +165,7 @@ POST platform.adobe.io/data/core/activation/authoring/destinations
 
 ## 步驟6:測試您的目的地 {#test-destination}
 
-使用前述步驟中的設定端點設定目的地後，您可以使用 [目的地測試工具](./create-template.md) 來測試Adobe Experience Platform與目的地之間的整合。
+使用前述步驟中的設定端點設定目的地後，您可以使用 [目的地測試工具](./test-destination.md) 來測試Adobe Experience Platform與目的地之間的整合。
 
 在測試目的地的程式中，您必須使用Experience PlatformUI來建立區段，以便您對目的地啟用。 如需如何在Experience Platform中建立區段的指示，請參閱以下兩個資源：
 
