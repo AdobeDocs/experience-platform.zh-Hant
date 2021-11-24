@@ -5,9 +5,9 @@ title: Privacy ServiceAPI指南附錄
 topic-legacy: developer guide
 description: 本檔案包含使用Privacy ServiceAPI的其他資訊。
 exl-id: 7099e002-b802-486e-8863-0630d66e330f
-source-git-commit: 445c8158dbf012defb32e9cd7aa4c27c6be1fb88
+source-git-commit: 532c9c9d07c112944ff26b1e48545d2b4777b06c
 workflow-type: tm+mt
-source-wordcount: '484'
+source-wordcount: '485'
 ht-degree: 7%
 
 ---
@@ -69,12 +69,11 @@ ht-degree: 7%
 | Adobe Audience Manager | `AudienceManager` |
 | Adobe Campaign | `campaign` |
 | Adobe Experience Platform（資料湖） | `aepDataLake` |
+| Adobe Experience Platform（即時客戶個人檔案） | `profileService` |
 | Adobe Primetime驗證 | `primetimeAuthentication` |
 | Adobe Target | `target` |
-| 自動化產品 | `automationProduct` |
 | 客戶屬性(CRS) | `CRS` |
 | 身份識別服務 | `Identity` |
-| 即時客戶個人檔案 | `profileService` |
 | Marketo Engage | `marketo` |
 
 {style=&quot;table-layout:auto&quot;}
