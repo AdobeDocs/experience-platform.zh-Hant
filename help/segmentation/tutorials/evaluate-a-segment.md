@@ -6,9 +6,9 @@ topic-legacy: tutorial
 type: Tutorial
 description: 請依照本教學課程，了解如何使用Adobe Experience Platform區段服務API評估區段並存取區段結果。
 exl-id: 47702819-f5f8-49a8-a35d-034ecac4dd98
-source-git-commit: 44644d786842564c76234bacb1f19815741b92ae
+source-git-commit: 9e73925b0842c3b67db8bfda4b984bfa3e98a2fe
 workflow-type: tm+mt
-source-wordcount: '1572'
+source-wordcount: '1595'
 ht-degree: 0%
 
 ---
@@ -86,12 +86,11 @@ ht-degree: 0%
 
 ### 建立區段作業
 
-區段工作是建立新受眾區段的非同步程式。 它會參考區段定義，以及任何控制如何 [!DNL Real-time Customer Profile] 合併您的設定檔片段的重疊屬性。 區段工作成功完成後，您可以收集區段的各種資訊，例如處理期間可能發生的任何錯誤，以及對象的最終大小。
+區段工作是非同步程式，可依需求建立受眾區段。 它會參考區段定義，以及任何控制如何 [!DNL Real-time Customer Profile] 合併您的設定檔片段的重疊屬性。 區段工作成功完成後，您可以收集區段的各種資訊，例如處理期間可能發生的任何錯誤，以及對象的最終大小。 每當您要重新整理目前符合區段定義資格的對象時，都需要執行區段工作。
 
 您可以透過向 `/segment/jobs` 端點 [!DNL Real-time Customer Profile] API。
 
 有關使用此端點的更多詳細資訊，請參見 [區段作業端點指南](../api/segment-jobs.md#create)
-
 
 ### 查找段作業狀態
 
