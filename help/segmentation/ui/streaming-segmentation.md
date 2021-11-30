@@ -5,9 +5,9 @@ title: 串流劃分UI指南
 topic-legacy: ui guide
 description: Adobe Experience Platform上的串流細分可讓您近乎即時執行細分，同時專注於資料的豐富性。 透過串流細分，區段資格現在會在資料進入Platform時進行，以緩解排程及執行區段工作的需求。 透過此功能，現在大部分的區段規則都可在資料傳入Platform時評估，這表示區段成員資格會保持最新，而不會執行排程的區段工作。
 exl-id: cb9b32ce-7c0f-4477-8c49-7de0fa310b97
-source-git-commit: 58b546ea83774672dd36ca6cd952e229410aa645
+source-git-commit: 6db0aef66abe11b8ed9f4b8da56875aa296b1a10
 workflow-type: tm+mt
-source-wordcount: '1200'
+source-wordcount: '1190'
 ht-degree: 0%
 
 ---
@@ -85,8 +85,6 @@ ht-degree: 0%
 若要進一步了解如何使用Adobe Experience Platform使用者介面，請閱讀 [區段使用手冊](./overview.md).
 
 ## 附錄
-
-下節列出關於串流細分的常見問題：
 
 下節列出關於串流細分的常見問題：
 
