@@ -6,9 +6,9 @@ topic-legacy: overview
 type: Tutorial
 description: 資料流是一個排程任務，可從源中檢索資料並將資料內嵌到Platform資料集。 本教學課程提供使用雲儲存帳戶配置新資料流的步驟。
 exl-id: b327bbea-039d-4c04-afd3-f1d6a5f902a6
-source-git-commit: 85a68d49614f021ec7e4be2c11f91ef835e88929
+source-git-commit: 873a23d06696c98633f76e37a8b4a1d9b1d25c8b
 workflow-type: tm+mt
-source-wordcount: '2076'
+source-wordcount: '2061'
 ht-degree: 0%
 
 ---
@@ -193,8 +193,7 @@ ht-degree: 0%
 >id="platform_sources_alerts_subscribe"
 >title="訂閱源警報"
 >abstract="選中此選項可訂閱源資料流的通知警報。"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/dataflow/cloud-storage.html?lang=en#provide-dataflow-details" text="進一步了解檔案"
-
+>text="Learn more in documentation"
 
 此 **[!UICONTROL 資料流詳細資訊]** 步驟出現，允許您為新資料流命名並提供簡要說明。
 
