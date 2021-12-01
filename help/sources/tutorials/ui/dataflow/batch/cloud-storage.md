@@ -6,9 +6,9 @@ topic-legacy: overview
 type: Tutorial
 description: 資料流是一個排程任務，可從源中檢索資料並將資料內嵌到Platform資料集。 本教學課程提供使用雲儲存帳戶配置新資料流的步驟。
 exl-id: b327bbea-039d-4c04-afd3-f1d6a5f902a6
-source-git-commit: 65007d1ee7934e2b3c98601b0a51542ce24bafd0
+source-git-commit: 82f02064477cc5336bf528a34284c9f4f7669c3d
 workflow-type: tm+mt
-source-wordcount: '2082'
+source-wordcount: '2067'
 ht-degree: 0%
 
 ---
@@ -41,7 +41,7 @@ ht-degree: 0%
 
 建立雲端儲存空間帳戶後， **[!UICONTROL 選擇資料]** 步驟，提供介面供您探索雲端儲存檔案階層。
 
-* 介面的左側是目錄瀏覽器，顯示您的雲儲存檔案和目錄。
+* The left part of the interface is a directory browser, displaying your cloud storage files and directories.
 * 介面的右側可讓您從相容的檔案中預覽最多100列資料。
 
 ![介面](../../../../images/tutorials/dataflow/cloud-storage/batch/interface.png)
@@ -52,7 +52,7 @@ ht-degree: 0%
 
 下表顯示支援的檔案類型的適當資料格式：
 
-| 檔案類型 | 資料格式 |
+| 檔案類型 | Data format |
 | --- | --- |
 | CSV | [!UICONTROL 分隔] |
 | JSON | [!UICONTROL JSON] |
@@ -66,7 +66,7 @@ ht-degree: 0%
 >
 >與分隔檔案和JSON檔案類型不同，預覽無法使用Parquet格式化檔案。
 
-預覽介面可讓您檢查檔案的內容和結構。 預設情況下，預覽介面將顯示所選資料夾中的第一個檔案。
+預覽介面可讓您檢查檔案的內容和結構。 By default, the preview interface displays the first file in the folder you selected.
 
 要預覽不同的檔案，請在要檢查的檔案名稱旁選擇預覽表徵圖。
 
@@ -94,13 +94,13 @@ ht-degree: 0%
 
 在 [!UICONTROL 選擇資料] 步驟，選取要擷取的壓縮檔案，然後選取其適當的檔案類型，以及是否符合XDM。 下一步，選擇 **[!UICONTROL 壓縮類型]** 然後為源資料選擇適當的壓縮檔案類型。
 
-識別壓縮檔案類型後，請選取 **[!UICONTROL 下一個]** 繼續。
+With a compressed file type identified, select **[!UICONTROL Next]** to proceed.
 
 ![](../../../../images/tutorials/dataflow/cloud-storage/batch/compressed-files.png)
 
 ## 將資料欄位對應至XDM結構
 
-此 **[!UICONTROL 對應]** 步驟，提供互動式介面以將來源資料對應至 [!DNL Platform] 資料集。 以Parquet格式化的來源檔案必須符合XDM標準，且不要求您手動設定對應，而CSV檔案則要求您明確設定對應，但可讓您選取要對應的來源資料欄位。 JSON檔案若標示為XDM投訴，則不需要手動設定。 不過，如果未標示為符合XDM，則需要您明確設定對應。
+The **[!UICONTROL Mapping]** step appears, providing an interactive interface to map the source data to a [!DNL Platform] dataset. 以Parquet格式化的來源檔案必須符合XDM標準，且不要求您手動設定對應，而CSV檔案則要求您明確設定對應，但可讓您選取要對應的來源資料欄位。 JSON檔案若標示為XDM投訴，則不需要手動設定。 不過，如果未標示為符合XDM，則需要您明確設定對應。
 
 選擇要內嵌入的傳入資料的資料集。 您可以使用現有資料集或建立新資料集。
 
@@ -159,9 +159,9 @@ ht-degree: 0%
 | 欄位 | 說明 |
 | --- | --- |
 | 頻率 | 可選頻率包括 `Once`, `Minute`, `Hour`, `Day`，和 `Week`. |
-| 間隔 | 設定所選頻率間隔的整數。 |
+| Interval | 設定所選頻率間隔的整數。 |
 | 開始時間 | UTC時間戳記，指出第一次擷取的設定何時發生。 |
-| 回填 | 一個布林值，可決定最初擷取的資料。 若 **[!UICONTROL 回填]** 啟用時，指定路徑中的所有目前檔案都會在首次排程擷取期間內擷取。 若 **[!UICONTROL 回填]** 已停用，則只會擷取在首次擷取執行與開始時間之間載入的檔案。 在開始時間之前載入的檔案將不會被擷取。 |
+| Backfill | 一個布林值，可決定最初擷取的資料。 若 **[!UICONTROL 回填]** 啟用時，指定路徑中的所有目前檔案都會在首次排程擷取期間內擷取。 若 **[!UICONTROL 回填]** 已停用，則只會擷取在首次擷取執行與開始時間之間載入的檔案。 在開始時間之前載入的檔案將不會被擷取。 |
 
 資料流設計為按計畫自動內嵌資料。 首先，選取擷取頻率。 接下來，設定間隔以指定兩個流運行之間的週期。 間隔的值應為非零整數，應設為大於或等於15。
 
@@ -171,19 +171,19 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->對於批次內嵌，每個隨後的資料流都會根據檔案的來源選擇要內嵌的檔案 **上次修改** 時間戳記。 這意味著批處理資料流從源中選擇自上次資料流運行以來新建或修改的檔案。
+>對於批次內嵌，每個隨後的資料流都會根據檔案的來源選擇要內嵌的檔案 **上次修改** 時間戳記。 This means that batch dataflows select files from the source that are either new or have been modified since the last dataflow run.
 
 ![](../../../../images/tutorials/dataflow/cloud-storage/batch/scheduling-interval-on.png)
 
 ### 設定一次性內嵌資料流
 
-若要設定一次性擷取，請選取頻率下拉箭頭並選取 **[!UICONTROL 一次]**. 只要開始時間在將來，您就可以繼續編輯資料流集以進行一次性頻率獲取。 一旦開始時間過後，就無法再編輯一次性頻率值。 **[!UICONTROL 間隔]** 和 **[!UICONTROL 回填]** 設定一次性內嵌資料流時，不會顯示。
+To set up one-time ingestion, select the frequency drop down arrow and select **[!UICONTROL Once]**. 只要開始時間在將來，您就可以繼續編輯資料流集以進行一次性頻率獲取。 一旦開始時間過後，就無法再編輯一次性頻率值。 **[!UICONTROL Interval]** and **[!UICONTROL Backfill]** are not visible when setting up a one-time ingestion dataflow.
 
 >[!IMPORTANT]
 >
 >強烈建議在使用 [FTP連接器](../../../../connectors/cloud-storage/ftp.md).
 
-為排程提供適當值後，請選取 **[!UICONTROL 下一個]**.
+Once you have provided appropriate values to the schedule, select **[!UICONTROL Next]**.
 
 ![](../../../../images/tutorials/dataflow/cloud-storage/batch/scheduling-once.png)
 
@@ -193,7 +193,7 @@ ht-degree: 0%
 >id="platform_sources_alerts_subscribe"
 >title="訂閱源警報"
 >abstract="選擇要訂閱的選項，以接收源資料流的通知警報。"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/dataflow/cloud-storage.html?lang=en#provide-dataflow-details" text="進一步了解檔案"
+>text="Learn more in documentation"
 
 此 **[!UICONTROL 資料流詳細資訊]** 步驟出現，允許您為新資料流命名並提供簡要說明。
 
@@ -205,7 +205,7 @@ ht-degree: 0%
 
 ## 查看資料流
 
-此 **[!UICONTROL 檢閱]** 步驟顯示，允許您在建立新資料流之前對其進行查看。 詳細資料會分組為下列類別：
+The **[!UICONTROL Review]** step appears, allowing you to review your new dataflow before it is created. 詳細資料會分組為下列類別：
 
 * **[!UICONTROL 連線]**:顯示源類型、所選源檔案的相關路徑以及該源檔案中的列數。
 * **[!UICONTROL 指派資料集和對應欄位]**:顯示要擷取來源資料的資料集，包括資料集所遵守的結構。
@@ -254,4 +254,4 @@ ht-degree: 0%
 
 ### 為啟用傳入資料 [!DNL Profile] 人口
 
-來自來源連接器的傳入資料可用於擴充和填入 [!DNL Real-time Customer Profile] 資料。 如需填入 [!DNL Real-time Customer Profile] 資料，請參閱 [設定檔母體](../../profile.md).
+Inbound data from your source connector can be used towards enriching and populating your [!DNL Real-time Customer Profile] data. For more information on populating your [!DNL Real-time Customer Profile] data, see the tutorial on [Profile population](../../profile.md).
