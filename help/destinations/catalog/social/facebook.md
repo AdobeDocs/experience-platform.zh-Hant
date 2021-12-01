@@ -3,9 +3,9 @@ keywords: facebook連線；facebook連線；facebook目的地；facebook;instagr
 title: Facebook連線
 description: 根據雜湊電子郵件啟用Facebook行銷活動的設定檔，以鎖定對象、個人化和隱藏。
 exl-id: 51e8c8f0-5e79-45b9-afbc-110bae127f76
-source-git-commit: 822276890b6ebed922d359f8dece58d8c90dea24
+source-git-commit: 357916aa925c7b3ada4abe64a2bc6ad090d70cc0
 workflow-type: tm+mt
-source-wordcount: '1558'
+source-wordcount: '1589'
 ht-degree: 1%
 
 ---
@@ -138,6 +138,21 @@ ht-degree: 1%
 >title="受眾來源"
 >abstract="選擇區段中客戶資料的最初收集方式。 當區段鎖定使用者時，資料會顯示在Facebook中"
 >additional-url="http://www.adobe.com/go/destinations-facebook-activate-section-en" text="進一步了解檔案"
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_activate_facebook_originofaudience_customers"
+>title="受眾來源"
+>abstract="廣告商直接從客戶收集資料。"
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_activate_facebook_originofaudience_partners"
+>title="受眾來源"
+>abstract="廣告商直接從其合作夥伴收集資料。"
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_activate_facebook_originofaudience_customersandpartners"
+>title="受眾來源"
+>abstract="廣告商直接從其客戶和合作夥伴收集資料。"
 
 請參閱 [對串流區段匯出目的地啟用受眾資料](../../ui/activate-segment-streaming-destinations.md) 以取得啟用受眾區段至此目的地的指示。
 
