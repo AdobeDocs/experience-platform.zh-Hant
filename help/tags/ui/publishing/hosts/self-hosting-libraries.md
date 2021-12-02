@@ -1,10 +1,11 @@
 ---
 title: 自行托管程式庫
 description: 了解如何在Adobe Experience Platform中為您的標籤程式庫組建實作自行托管。
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+exl-id: 8c3bf202-de7a-46e0-801f-0cede24865fd
+source-git-commit: 91b28fc284344b42020b0e49b64ac023e492d572
 workflow-type: tm+mt
-source-wordcount: '495'
-ht-degree: 67%
+source-wordcount: '489'
+ht-degree: 74%
 
 ---
 
@@ -12,9 +13,9 @@ ht-degree: 67%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch在Adobe Experience Platform中已重新命名為一套資料收集技術。 因此，產品檔案中已推出數個術語變更。 有關術語更改的綜合參考，請參閱以下[document](../../../term-updates.md)。
+>Adobe Experience Platform Launch在Adobe Experience Platform中已重新命名為一套資料收集技術。 因此，所有產品文件中出現了幾項術語變更。 如需術語變更的彙整參考資料，請參閱以下[文件](../../../term-updates.md)。
 
-Adobe Experience Platform中的標籤可產生一組稱為[build](../builds.md)的檔案。 這組檔案控制應用程式在運行時的行為。
+Adobe Experience Platform中的標籤可產生一組稱為 [建置](../builds.md). 這組檔案控制應用程式在運行時的行為。
 
 組建需要在某處託管，用戶端裝置才能在需要時於執行階段擷取這些組建。
 
@@ -40,7 +41,6 @@ Adobe 不從事 Web 託管業務。如果您選擇交由 Adobe 管理託管作�
 
 * 有些瀏覽器會根據終端使用者設定的隱私權設定，封鎖 assets.adobedtm.com 網域
 * 自行託管可減少所需的 DNS 查閱數
-* 您需要使用HTTP/2
 * 您擁有設定安全性所需的特定標題
 * 您的快取控制要求與Adobe預設設定不同
 * 您希望更全面控制邊緣節點的位置
