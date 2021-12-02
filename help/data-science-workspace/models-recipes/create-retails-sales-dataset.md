@@ -1,51 +1,51 @@
 ---
-keywords: Experience Platform；零售銷售配方；資料科學工作區；熱門主題；配方
+keywords: Experience Platform；零售銷售方式； Data Science Workspace；熱門主題；方式
 solution: Experience Platform
 title: 建立零售銷售結構和資料集
 topic-legacy: tutorial
 type: Tutorial
-description: 本教學課程提供您其他Adobe Experience Platform資料科學工作區教學課程的必要條件和必要資產。 完成後，您和您的IMS組織成員將可使用零售銷售方案和資料集進行Experience Platform。
+description: 本教學課程提供其他Adobe Experience Platform Data Science Workspace教學課程所需的必要條件和資產。 完成後，您和IMS組織成員即可Experience Platform使用零售銷售結構和資料集。
 exl-id: 1b868c8c-7c92-4f99-8486-54fd7aa1af48
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: b30700fde3ce75cc4f66343c8d37d3e731775627
 workflow-type: tm+mt
 source-wordcount: '554'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
+
 # 建立零售銷售結構和資料集
 
-本教學課程提供所有其他[!DNL Adobe Experience Platform] [!DNL Data Science Workspace]教學課程的必要條件和資產。 完成後，您和[!DNL Experience Platform]上的IMS組織成員將可使用零售銷售方案和資料集。
+本教學課程提供所有其他必要條件和資產 [!DNL Adobe Experience Platform] [!DNL Data Science Workspace] 教學課程。 完成後，您和IMS組織成員即可使用零售銷售結構和資料集 [!DNL Experience Platform].
 
 ## 快速入門
 
 開始本教學課程之前，您必須具備下列必要條件：
-- 存取[!DNL Adobe Experience Platform]。 如果您沒有[!DNL Experience Platform]中IMS組織的存取權，請在繼續之前先與系統管理員聯絡。
-- 進行[!DNL Experience Platform] API呼叫的授權。 完成[驗證並訪問Adobe Experience PlatformAPI](https://www.adobe.com/go/platform-api-authentication-en)教程，以獲取以下值，以成功完成本教程：
+- 存取 [!DNL Adobe Experience Platform]. 如果您無權存取 [!DNL Experience Platform]，請在繼續操作之前與系統管理員聯繫。
+- 授權 [!DNL Experience Platform] API呼叫。 完成 [驗證及存取Adobe Experience Platform API](https://www.adobe.com/go/platform-api-authentication-en) 若要成功完成本教學課程，請取得下列值的教學課程：
    - Authorization: `{ACCESS_TOKEN}`
-   - x-api-key:`{API_KEY}`
-   - x-gw-ims-org-id:`{IMS_ORG}`
-   - 用戶端密碼：`{CLIENT_SECRET}`
-   - 用戶端憑證：`{PRIVATE_KEY}`
-- [零售銷售方式](../pre-built-recipes/retail-sales.md)的示例資料和源檔案。 從[Adobe公用Git儲存庫](https://github.com/adobe/experience-platform-dsw-reference/)下載此教學課程和其他[!DNL Data Science Workspace]教學課程所需的資產。
-- [Python >= 2.7](https://www.python.org/downloads/) 和以下軟 [!DNL Python] 件包：
-   - [pip](https://pypi.org/project/pip/)
+   - x-api-key: `{API_KEY}`
+   - x-gw-ims-org-id: `{IMS_ORG}`
+   - 用戶端密碼： `{CLIENT_SECRET}`
+   - 客戶端證書： `{PRIVATE_KEY}`
+- 的範例資料和來源檔案 [零售銷售方式](../pre-built-recipes/retail-sales.md). 下載此及其他項目所需的資產 [!DNL Data Science Workspace] 教學課程 [Adobe公用Git存放庫](https://github.com/adobe/experience-platform-dsw-reference/).
+- [Python >= 2.7](https://www.python.org/downloads/) 和下列 [!DNL Python] 包：
+   - [pi](https://pypi.org/project/pip/)
    - [PyYAML](https://pyyaml.org/)
-   - [dictor](https://pypi.org/project/dictor/)
+   - [字典](https://pypi.org/project/dictor/)
    - [JWT](https://pypi.org/project/jwt/)
-- 對本教學課程中使用的下列概念有正確認識：
+- 深入了解本教學課程中使用的下列概念：
    - [[!DNL Experience Data Model (XDM)]](../../xdm/home.md)
-   - [架構構成基礎](../../xdm/schema/field-dictionary.md)
+   - [結構構成基本概念](../../xdm/schema/field-dictionary.md)
 
 ## 建立零售銷售結構和資料集
 
-零售銷售方案和資料集是使用提供的引導指令碼自動建立的。 請依下列步驟進行：
+使用提供的引導指令碼自動建立零售銷售結構和資料集。 請依照下列步驟操作：
 
-### 設定檔案
+### 配置檔案
 
-1. 在[!DNL Experience Platform]教程資源包中，導航到`bootstrap`目錄，然後使用適當的文本編輯器開啟`config.yaml`。
-2. 在`Enterprise`節下輸入以下值：
+1. 內 [!DNL Experience Platform] 教程資源包，導航到目錄 `bootstrap`，開啟 `config.yaml` 使用適當的文字編輯器。
+2. 在 `Enterprise` ，請輸入以下值：
 
    ```yaml
    Enterprise:
@@ -56,7 +56,7 @@ ht-degree: 0%
        priv_key_filename: {PRIVATE_KEY}
    ```
 
-3. 編輯`Platform`節下找到的值，如下所示：
+3. 編輯 `Platform` 區段，範例如下所示：
 
    ```yaml
    Platform:
@@ -67,13 +67,13 @@ ht-degree: 0%
        kernel_type: Python
    ```
 
-   - `platform_gateway` :API呼叫的基本路徑。請勿修改此值。
-   - `ims_token` :你 `{ACCESS_TOKEN}` 來這。
-   - `ingest_data` :在本教程中，請將此值設定為，以 `"True"` 便建立零售銷售方案和資料集。值`"False"`將僅建立方案。
-   - `build_recipe_artifacts` :在本教學課程中，請將此值設 `"False"` 定為防止指令碼產生Recipe對象。
-   - `kernel_type` :處方對象的執行類型。如果`build_recipe_artifacts`設為`"False"`，請將此值保留為`Python`，否則請指定正確的執行類型。
+   - `platform_gateway` :API呼叫的基本路徑。 請勿修改此值。
+   - `ims_token` :您的 `{ACCESS_TOKEN}` 來這裡。
+   - `ingest_data` :在本教學課程中，請將此值設為 `"True"` 以建立零售銷售結構和資料集。 值 `"False"` 只會建立結構。
+   - `build_recipe_artifacts` :在本教學課程中，請將此值設為 `"False"` 來防止指令碼生成方式對象。
+   - `kernel_type` :方式對象的執行類型。 將此值保留為 `Python` if `build_recipe_artifacts` 設為 `"False"`，否則請指定正確的執行類型。
 
-4. 在`Titles`區段下，為零售銷售示例資料提供下列適當資訊，在編輯完成後儲存並關閉檔案。 範例如下：
+4. 在 `Titles` 節中，為零售銷售示例資料適當提供以下資訊，在編輯完成後保存並關閉檔案。 以下範例所示：
 
    ```yaml
    Titles:
@@ -93,8 +93,8 @@ ht-degree: 0%
 
 ### 運行引導指令碼
 
-1. 開啟終端應用程式並導航到[!DNL Experience Platform]教程資源目錄。
-2. 將`bootstrap`目錄設定為當前工作路徑，然後輸入以下命令運行`bootstrap.py` [!DNL Python]指令碼：
+1. 開啟您的終端機應用程式，並導覽至 [!DNL Experience Platform] 教程資源目錄。
+2. 設定 `bootstrap` 目錄作為當前工作路徑，並運行 `bootstrap.py` [!DNL Python] 指令碼，方法是輸入下列命令：
 
    ```bash
    python bootstrap.py
@@ -102,17 +102,17 @@ ht-degree: 0%
 
    >[!NOTE]
    >
-   >完成指令碼可能需要幾分鐘的時間。
+   >指令碼可能需要幾分鐘才能完成。
 
 ## 後續步驟
 
-成功完成引導指令碼後，可在[!DNL Experience Platform]上查看零售銷售部門的輸入和輸出方案和資料集。 請參閱[預覽架構資料教學課程](./preview-schema-data.md)
-的上界。
+引導指令碼成功完成後，可以在上查看零售銷售的輸入和輸出結構和資料集 [!DNL Experience Platform]. 請參閱 [預覽架構資料教學課程](./preview-schema-data.md)
+以取得更多資訊。
 
-您也使用提供的引導指令碼成功將零售銷售示例資料導入[!DNL Experience Platform]。
+您也已成功將零售銷售範例資料內嵌至 [!DNL Experience Platform] 使用提供的引導指令碼。
 
-要繼續使用收錄的資料：
+若要繼續使用擷取的資料：
 - [使用Jupyter Notebooks分析資料](../jupyterlab/analyze-your-data.md)
-   - 使用Data Science Workspace中的Jupyter Notebooks來存取、探索、視覺化和瞭解您的資料。
-- [將來源檔案封裝至配方](./package-source-files-recipe.md)
-   - 請依照本教學課程，瞭解如何將來源檔案封裝在可匯入的方式檔案中，將您自己的模型帶入[!DNL Data Science Workspace]。
+   - 使用Data Science Workspace中的Jupyter Notebooks來存取、探索、視覺化和了解您的資料。
+- [將源檔案打包到配方中](./package-source-files-recipe.md)
+   - 請依照本教學課程，了解如何將您自己的模型帶入 [!DNL Data Science Workspace] 將源檔案打包成可導入的方式檔案。
