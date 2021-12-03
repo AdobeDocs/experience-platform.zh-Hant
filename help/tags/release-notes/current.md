@@ -2,9 +2,9 @@
 title: 版本注意事項
 description: Adobe Experience Platform中標籤的最新發行說明。
 exl-id: 2ebeaa1e-64b8-48fd-b4e8-419663271a87
-source-git-commit: cda34c08a53d084a92a07caa9a2b166e27d9e28c
+source-git-commit: 2056f7f6e7372fa1dee2e975a75e7ba3b8dfe518
 workflow-type: tm+mt
-source-wordcount: '578'
+source-wordcount: '658'
 ht-degree: 6%
 
 ---
@@ -14,6 +14,12 @@ ht-degree: 6%
 >[!NOTE]
 >
 >Adobe Experience Platform Launch已重新命名為Experience Platform中的資料收集技術套件。 因此，所有產品文件中出現了幾項術語變更。 如需術語變更的彙整參考資料，請參閱以下[文件](../term-updates.md)。
+
+## 2021 年 11 月 15 日
+
+**在標籤中接受ES6程式碼**  — 包含ES6程式碼的擴充功能和自訂程式碼現在可用於標籤中。 在擴充功能目錄中，每個包含ES6程式碼擴充功能的卡片內會顯示ES6+標籤。 IE10和IE11不支援ES6代碼。 在「標籤」程式庫中使用ES6程式碼之前，請適度延遲。
+
+**使用字元作為JavaScript壓縮程式** - Terser替換了Uglifier。 自此版本開始，所有標籤程式庫皆由Terser縮制。
 
 ## 2021 年 10 月 21 日
 
