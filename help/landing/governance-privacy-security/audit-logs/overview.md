@@ -2,9 +2,9 @@
 title: 稽核記錄概述
 description: 了解稽核記錄如何讓您查看誰在Adobe Experience Platform中執行了哪些動作。
 exl-id: 00baf615-5b71-4e0a-b82a-ca0ce8566e7f
-source-git-commit: d4beb7691c8fb38359425509a40572ea9b09fd26
+source-git-commit: d258ddef6a904fee5a4676a513fc426663342c91
 workflow-type: tm+mt
-source-wordcount: '608'
+source-wordcount: '658'
 ht-degree: 5%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 5%
 
 為了提高系統中執行活動的透明度和可見度，Adobe Experience Platform可讓您以「稽核記錄」的形式，稽核各種服務和功能的使用者活動。 這些日誌形成了審核跟蹤，可以幫助Platform上的問題進行故障排除，並幫助您的企業有效遵守公司資料管理策略和法規要求。
 
-從基本意義上講，審核日誌告訴&#x200B;**誰**&#x200B;執行了&#x200B;**什麼**&#x200B;操作，以及當&#x200B;**時執行了**&#x200B;操作。 記錄在記錄檔中的每個動作都包含中繼資料，指出動作類型、日期和時間、執行動作之使用者的電子郵件ID，以及與動作類型相關的其他屬性。
+從基本意義上講，審核日誌會告訴 **誰** 執行 **what** 動作，和 **when**. 記錄在記錄檔中的每個動作都包含中繼資料，指出動作類型、日期和時間、執行動作之使用者的電子郵件ID，以及與動作類型相關的其他屬性。
 
 本檔案涵蓋Platform中的稽核記錄，包括如何在UI或API中檢視及管理這些記錄。
 
@@ -27,7 +27,7 @@ ht-degree: 5%
 
 | 資源 | 動作 |
 | --- | --- |
-| [資料集](../../../catalog/datasets/overview.md) | <ul><li>建立</li><li>更新</li><li>刪除</li><li>啟用[即時客戶設定檔](../../../profile/home.md)</li></ul> |
+| [資料集](../../../catalog/datasets/overview.md) | <ul><li>建立</li><li>更新</li><li>刪除</li><li>啟用 [即時客戶個人檔案](../../../profile/home.md)</li></ul> |
 | [方案](../../../xdm/schema/composition.md) | <ul><li>建立</li><li>更新</li><li>刪除</li></ul> |
 | [類別](../../../xdm/schema/composition.md#class) | <ul><li>建立</li><li>更新</li><li>刪除</li></ul> |
 | [欄位組](../../../xdm/schema/composition.md#field-group) | <ul><li>建立</li><li>更新</li><li>刪除</li></ul> |
@@ -39,11 +39,11 @@ ht-degree: 5%
 
 為您的組織啟用功能時，稽核記錄會隨著活動發生而自動收集。 您不需要手動啟用記錄檔收集。
 
-若要檢視和匯出稽核記錄檔，您必須已授與「檢視稽核記錄檔」存取控制權限（可在「資料控管」類別下找到）。 若要了解如何管理Platform功能的個別權限，請參閱[存取控制檔案](../../../access-control/home.md)。
+若要檢視和匯出稽核記錄檔，您必須已授與「檢視稽核記錄檔」存取控制權限（可在「資料控管」類別下找到）。 若要了解如何管理Platform功能的個別權限，請參閱 [存取控制檔案](../../../access-control/home.md).
 
 ## 在UI中管理稽核記錄
 
-您可以在Platform UI的&#x200B;**[!UICONTROL Audits]**&#x200B;工作區中檢視不同Experience Platform功能的稽核記錄。 工作區會顯示記錄的記錄清單，依預設會從最近到最近排序。
+您可以在 **[!UICONTROL 稽核]** 工作區。 工作區會顯示記錄的記錄清單，依預設會從最近到最近排序。
 
 ![稽核記錄控制面板](../../images/audit-logs/audits.png)
 
@@ -53,7 +53,9 @@ ht-degree: 5%
 
 ![事件詳細資料](../../images/audit-logs/select-event.png)
 
-選取漏斗圖示（![篩選圖示](../../images/audit-logs/icon.png)）以顯示篩選控制項清單，以縮小結果範圍。
+### 篩選稽核記錄
+
+選取漏斗圖示(![篩選圖示](../../images/audit-logs/icon.png))以顯示篩選控制項清單，以縮小結果範圍。
 
 ![篩選條件](../../images/audit-logs/filters.png)
 
@@ -61,29 +63,33 @@ ht-degree: 5%
 
 | 篩選 | 說明 |
 | --- | --- |
-| [!UICONTROL 類別] | 使用下拉式功能表，依[category](#category)篩選顯示的結果。 |
-| [!UICONTROL 動作] | 依動作篩選。 目前只能篩選[!UICONTROL Create]和[!UICONTROL Delete]動作。 |
-| [!UICONTROL 訪問控制狀態] | 篩選條件：由於缺少[存取控制](../../../access-control/home.md)權限，是否允許（完成）動作或拒絕動作。 |
+| [!UICONTROL 類別] | 使用下拉式功能表，依據篩選顯示的結果 [類別](#category). |
+| [!UICONTROL 動作] | 依動作篩選。 目前僅 [!UICONTROL 建立] 和 [!UICONTROL 刪除] 可篩選動作。 |
+| [!UICONTROL 訪問控制狀態] | 依照是否允許（完成）或因缺少而拒絕動作進行篩選 [存取控制](../../../access-control/home.md) 權限。 |
 | [!UICONTROL 日期] | 選取開始日期和/或結束日期，以定義要依據篩選結果的日期範圍。 |
 
-若要移除篩選器，請為相關篩選器在藥丸圖示上選取「X」，或選取&#x200B;**[!UICONTROL 全部清除]**&#x200B;以移除所有篩選器。
+若要移除篩選器，請針對相關篩選器在藥丸圖示上選取「X」，或選取 **[!UICONTROL 全部清除]** 移除所有篩選器。
 
 ![清除篩選器](../../images/audit-logs/clear-filters.png)
 
-<!-- (Planned for post-beta release)
-### Export an audit log
+### 導出審核日誌
 
-Select **[!UICONTROL Download log]** to export an audit log.
--->
+要導出審核日誌的當前清單，請選擇 **[!UICONTROL 下載記錄檔]**.
+
+![下載記錄檔](../../images/audit-logs/download.png)
+
+在顯示的對話方塊中，選取您偏好的格式( **[!UICONTROL CSV]** 或 **[!UICONTROL JSON]**)，然後選取 **[!UICONTROL 下載]**. 瀏覽器會下載產生的檔案，並將其儲存至電腦。
+
+![選擇下載格式](../../images/audit-logs/select-download-format.png)
 
 ## 管理API中的稽核記錄
 
-您在UI中可執行的所有動作也可以透過API呼叫完成。 如需詳細資訊，請參閱[API參考檔案](https://www.adobe.io/experience-platform-apis/references/audit-query/)。
+您在UI中可執行的所有動作也可以透過API呼叫完成。 請參閱 [API參考檔案](https://www.adobe.io/experience-platform-apis/references/audit-query/) 以取得更多資訊。
 
 ## 管理Adobe Admin Console的稽核記錄
 
-若要了解如何管理Adobe Admin Console中活動的稽核記錄，請參閱下列[document](https://helpx.adobe.com/enterprise/using/audit-logs.html)。
+若要了解如何管理Adobe Admin Console中活動的稽核記錄，請參閱下列內容 [檔案](https://helpx.adobe.com/enterprise/using/audit-logs.html).
 
 ## 後續步驟
 
-本指南說明如何在Experience Platform中管理稽核記錄。 如需如何監控Platform活動的詳細資訊，請參閱[可觀察性前瞻分析](../../../observability/home.md)和[監控資料擷取](../../../ingestion/quality/monitor-data-ingestion.md)的相關檔案。
+本指南說明如何在Experience Platform中管理稽核記錄。 如需如何監控Platform活動的詳細資訊，請參閱 [可觀察性深入分析](../../../observability/home.md) 和 [監控資料擷取](../../../ingestion/quality/monitor-data-ingestion.md).
