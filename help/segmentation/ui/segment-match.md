@@ -5,7 +5,7 @@ title: 區段符合概述
 topic-legacy: overview
 description: 區段比對是Adobe Experience Platform中的區段共用服務，可讓兩位或多位Platform使用者以安全、受控且符合隱私權的方式來交換區段資料。
 exl-id: 4e6ec2e0-035a-46f4-b171-afb777c14850
-source-git-commit: ba215f20db3bfead8beba8f1dea98bfc37e4358c
+source-git-commit: 105ddf70aafe8c92b5a64959ba1c4cefa5eb6f12
 workflow-type: tm+mt
 source-wordcount: '1982'
 ht-degree: 1%
@@ -59,7 +59,7 @@ Adobe Experience Platform區段比對是區段共用服務，可讓兩位或多�
 
 您必須提供同意設定，並將其預設值設為 `opt-in` 或 `opt-out` 進行同意檢查。
 
-選擇加入和選擇退出同意檢查會決定您是否可以以同意的方式操作，以依預設共用使用者資料。 如果同意設定預設設為 `opt-in`，則可共用使用者資料，除非使用者明確選擇退出。 如果預設值設為 `opt-out`，則無法共用使用者資料，除非使用者明確選擇加入。
+選擇加入和選擇退出同意檢查會決定您是否可以以同意的方式操作，以依預設共用使用者資料。 如果同意設定預設設為 `opt-out`，則可共用使用者資料，除非使用者明確選擇退出。 如果預設值設為 `opt-in`，則無法共用使用者資料，除非使用者明確選擇加入。
 
 的預設同意設定 [!DNL Segment Match] 設為 `opt-out`. 若要對您的資料強制執行選擇加入模型，請傳送電子郵件要求給您的Adobe客戶經理。
 
