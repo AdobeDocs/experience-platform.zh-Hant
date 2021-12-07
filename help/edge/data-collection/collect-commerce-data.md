@@ -3,9 +3,9 @@ title: 使用Adobe Experience Platform Web SDK收集商務和產品資訊
 description: 了解如何使用Adobe Experience Platform Web SDK新增與產品或購物車相關的資料。
 keywords: 產品；商務；措施；訂單；購物車放棄；結帳；productListAdds;productListOpens;productListRepones;productListViews;productViews；購買；saveForLaters;currencyCode;paymentAmount;paymentType;transactionID;priceTotal;purchaseID;purchaseOrderNumber;
 exl-id: 3c79e776-89ef-494b-a2ea-3c23efce09ae
-source-git-commit: 22d15dde62f3113167684c7a76a2265e6f0e7bab
+source-git-commit: 51a18ca3a9d0817eafeecea328900eb2f4d1d9a4
 workflow-type: tm+mt
-source-wordcount: '1324'
+source-wordcount: '1326'
 ht-degree: 6%
 
 ---
@@ -114,7 +114,7 @@ alloy("sendEvent",{
 | **欄位** | **建議** | **說明** |
 |---|---|---|
 | [currencyCode](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/content/productlistitem.schema.md#xdmcurrencycode) | 選填 | 此 [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) 產品的貨幣。 唯有當您的產品具有不同的貨幣代碼且適用時，此功能才十分實用。 例如，當有購買或新增至購物車時。 |
-| [priceTotal](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/content/productlistitem.schema.md#xdmpricetotal) | 強烈建議 | 應僅在適用時設定。 例如，可能無法設定 `productView` 因為不同產品的不同可能有不同的價格 `productListAdds`. |
+| [priceTotal](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/content/productlistitem.schema.md#xdmpricetotal) | 強烈建議 | 應僅在適用時設定。 例如，可能無法設定 `productView` 事件，因為產品的不同變體可能有不同的價格，但 `productListAdds` 事件。 |
 | [產品](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/content/productlistitem.schema.md#xdmproduct) | 強烈建議 | 產品的XDM ID。 |
 | [productAddMethod](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/content/productlistitem.schema.md#xdmproductaddmethod) | 強烈建議 | 訪客用來將產品項目新增至清單的方法。 設定為 `productListAdds` 測量，且只應在產品新增至清單時使用。 範例包括 `add to cart button`、`quick add`、 和 `upsell`。 |
 | [productName](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/content/productlistitem.schema.md#xdmname) | 強烈建議 | 這會設為產品的顯示名稱或人類看得懂的名稱。 |
