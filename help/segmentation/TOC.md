@@ -1,45 +1,47 @@
 ---
 audience: user
-user-guide-title: Adobe Experience Platform Segmentation Service
+user-guide-title: Adobe Experience 平台 Segmentation Service
 breadcrumb-title: 分段服務指南
 user-guide-description: 從您的即時客戶設定檔資料建立區段並產生對象。
 feature: Segments
-source-git-commit: 5160bc8057a7f71e6b0f7f2d594ba414bae9d8f6
+source-git-commit: 0f20b5cfb3301bc7f7f336e14e9faa0234c05c51
 workflow-type: tm+mt
-source-wordcount: '159'
+source-wordcount: '163'
 ht-degree: 27%
 
 ---
 
 
-# Adobe Experience Platform區段服務 {#segmentation}
+# Adobe Experience 平台 Segmentation Service {#segmentation}
 
 - [區段服務概觀](home.md)
 - [區段資料類型](data-types.md)
-- 分段API {#api}
-   - [概覽](api/overview.md)
+- 區段API {#api}
+   - [總覽](api/overview.md)
    - [快速入門](api/getting-started.md)
    - [邊緣分割](api/edge-segmentation.md)
    - [匯出工作](api/export-jobs.md)
    - [預覽和估計](api/previews-and-estimates.md)
-   - [排程器](api/schedules.md)
+   - [排程](api/schedules.md)
    - [區段定義](api/segment-definitions.md)
    - [區段作業](api/segment-jobs.md)
    - [區段搜尋](api/segment-search.md)
    - [串流細分](api/streaming-segmentation.md)
-- 分段UI {#ui}
-   - [概覽](ui/overview.md)
+- 區段UI {#ui}
+   - [總覽](ui/overview.md)
    - [區段控制面板](ui/segment-dashboard.md)
    - [區段產生器](ui/segment-builder.md)
-   - [區段符合](ui/segment-match.md)
    - [邊緣分割](ui/edge-segmentation.md)
    - [串流細分](ui/streaming-segmentation.md)
    - [串流細分（視訊）](video/streaming-segmentation-overview.md)
    - [時間限制重構](ui/segment-refactoring.md)
+   - 區段符合 {#segment-match}
+      - [區段符合概觀](ui/segment-match/overview.md)
+      - [疑難排解](ui/segment-match/troubleshooting.md)
 - [履行同意](consents.md)
 - [多實體細分](multi-entity-segmentation.md)
-- 設定檔查詢語言{#pql}
-   - [概覽](pql/overview.md)
+- 設定檔查詢語言 {#pql}
+   - [總覽](pql/overview.md)
    - [布林函式](pql/boolean-functions.md)
    - [比較函式](pql/comparison-functions.md)
    - [陣列、清單和設定函式](pql/array-functions.md)
