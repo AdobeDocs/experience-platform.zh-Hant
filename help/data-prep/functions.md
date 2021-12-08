@@ -5,9 +5,9 @@ title: 資料準備映射函式
 topic-legacy: overview
 description: 本文檔介紹與資料準備一起使用的映射函式。
 exl-id: e95d9329-9dac-4b54-b804-ab5744ea6289
-source-git-commit: 16484a5cf9f8ae7e4d0802cb8957c8627466db5f
+source-git-commit: c01f8d9f785bec5be712c0a64a8347557db0577e
 workflow-type: tm+mt
-source-wordcount: '3983'
+source-wordcount: '3971'
 ht-degree: 4%
 
 ---
@@ -43,13 +43,13 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 | 函數 | 說明 | 參數 | 語法 | 運算式 | 範例輸出 |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | concat | 串連指定的字串。 | <ul><li>字串：將串連的字串。</li></ul> | concat(STRING_1, STRING_2) | concat(&quot;Hi, &quot;, &quot;there&quot;, &quot;!&quot;) | `"Hi, there!"` |
-| 爆炸 | 根據規則運算式分割字串，並傳回一組部分。 可選擇包含分割字串的規則運算式。 依預設，拆分解析為「，」。 下列分隔字元 **需要** 逸出 `\`: `+, ?, ^, |, ., [, (, {, ), *, $, \` 如果您包含多個字元作為分隔字元，分隔字元將視為多字元分隔字元。 | <ul><li>字串： **必填** 需要拆分的字串。</li><li>REGEX: *可選* 可用來分割字串的規則運算式。</li></ul> | explode（字串， REGEX） | explode（&quot;嗨，那兒！&quot;, &quot; &quot;） | `["Hi,", "there"]` |
+| 爆炸 | 根據規則運算式分割字串，並傳回一組部分。 可選擇包含分割字串的規則運算式。 依預設，拆分解析為「，」。 下列分隔字元 **需要** 被逸出 `\`: `+, ?, ^, |, ., [, (, {, ), *, $, \` 如果您包含多個字元作為分隔字元，分隔字元將視為多字元分隔字元。 | <ul><li>字串： **必填** 需要拆分的字串。</li><li>REGEX: *可選* 可用來分割字串的規則運算式。</li></ul> | explode（字串， REGEX） | explode（&quot;嗨，那兒！&quot;, &quot; &quot;） | `["Hi,", "there"]` |
 | instr | 傳回子字串的位置/索引。 | <ul><li>輸入： **必填** 正在搜尋的字串。</li><li>子字串： **必填** 在字串內搜尋的子字串。</li><li>START_POSITION: *可選* 要開始查看字串的位置。</li><li>發生次數： *可選* 要從開始位置尋找的第n個出現次數。 預設為1。 </li></ul> | instr（INPUT，子字串， START_POSITION, OCCURRENCE） | instr(&quot;adobe.com&quot;, &quot;com&quot;) | 6 |
 | replacestr | 如果原始字串中存在，則替換搜索字串。 | <ul><li>輸入： **必填** 輸入字串。</li><li>TO_FIND: **必填** 要在輸入內查詢的字串。</li><li>TO_REPLACE: **必填** 將替換&quot;TO_FIND&quot;中值的字串。</li></ul> | replacestr(INPUT, TO_FIND, TO_REPLACE) | replacestr（&quot;這是字串re test&quot;、&quot;re&quot;、&quot;replace&quot;） | &quot;這是字串替換測試&quot; |
 | substr | 傳回指定長度的子字串。 | <ul><li>輸入： **必填** 輸入字串。</li><li>START_INDEX: **必填** 子字串開始的輸入字串的索引。</li><li>長度： **必填** 子字串的長度。</li></ul> | substr(INPUT, START_INDEX, LENGTH) | substr（&quot;這是子字串測試&quot;, 7, 8） | &quot; a subst&quot; |
 | lower /<br>lcase | 將字串轉換為小寫。 | <ul><li>輸入： **必填** 將轉換為小寫的字串。</li></ul> | lower(INPUT) | lower(&quot;HeLo&quot;)<br>lcase(&quot;HeLo&quot;) | &quot;hello&quot; |
 | upper /<br>ucase | 將字串轉換為大寫。 | <ul><li>輸入： **必填** 將轉換為大寫的字串。</li></ul> | upper(INPUT) | upper(&quot;HeLo&quot;)<br>ucase(&quot;HeLo&quot;) | &quot;HELLO&quot; |
-| split | 在分隔符上分割輸入字串。 下列分隔符號 **需求** 逸出 `\`: `\`. 如果您包含多個分隔字元，字串將依 **any** 字串中顯示的分隔字元。 | <ul><li>輸入： **必填** 即將分割的輸入字串。</li><li>分隔符： **必填** 用於分割輸入的字串。</li></ul> | 拆分（輸入，分隔符） | split(&quot;Hello world&quot;, &quot; &quot;) | `["Hello", "world"]` |
+| split | 在分隔符上分割輸入字串。 下列分隔符號 **需求** 被逸出 `\`: `\`. 如果您包含多個分隔字元，字串將依 **any** 字串中顯示的分隔字元。 | <ul><li>輸入： **必填** 即將分割的輸入字串。</li><li>分隔符： **必填** 用於分割輸入的字串。</li></ul> | 拆分（輸入，分隔符） | split(&quot;Hello world&quot;, &quot; &quot;) | `["Hello", "world"]` |
 | 加入 | 使用分隔符聯接對象清單。 | <ul><li>分隔符： **必填** 將用於連接對象的字串。</li><li>對象： **必填** 要連結的字串陣列。</li></ul> | `join(SEPARATOR, [OBJECTS])` | `join(" ", to_array(true, "Hello", "world"))` | 「你好世界」 |
 | lpad | 將字串的左側與另一個指定字串固定。 | <ul><li>輸入： **必填** 被補出來的繩子。 此字串可以為null。</li><li>計數： **必填** 要填補的字串大小。</li><li>邊框間距： **必填** 用填充輸入的字串。 如果為空或空，則會將其視為單一空格。</li></ul> | lpad（輸入，計數，填充） | lpad(&quot;bat&quot;, 8, &quot;yz&quot;) | &quot;yzyzybat&quot; |
 | rpad | 將字串的右側與另一個指定字串固定。 | <ul><li>輸入： **必填** 被補出來的繩子。 此字串可以為null。</li><li>計數： **必填** 要填補的字串大小。</li><li>邊框間距： **必填** 用填充輸入的字串。 如果為空或空，則會將其視為單一空格。</li></ul> | rpad（輸入，計數，填充） | rpad(&quot;bat&quot;, 8, &quot;yz&quot;) | &quot;batyzyzy&quot; |
@@ -114,8 +114,8 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | now | 擷取目前時間。 |  | now() | now() | `2021-10-26T10:10:24Z` |
 | timestamp | 檢索當前Unix時間。 |  | timestamp() | timestamp() | 1571850624571 |
-| date_to_string | 根據指定的格式設定輸入日期的格式。 | <ul><li>日期： **必填** 要格式化的輸入日期（作為ZonedDateTime對象）。</li><li>格式： **必填** 您要將日期變更為的格式。</li></ul> | date_to_string(DATE, FORMAT) | date_to_string(2019-10-23T11:24:00+00:00, &quot;yyyy-MM-dd HH:mm:ss&quot;) | &quot;2019-10-23 11:24:35英吋 |
-| long_to_date | 根據指定格式將時間戳轉換為日期字串。 | <ul><li>時間戳： **必填** 要格式化的時間戳記。 這會以毫秒為單位寫入。</li><li>格式： **必填** 您希望時間戳記變成的格式。</li></ul> | long_to_date(TIMESTAMP, FORMAT) | long_to_date(1571829875000, &quot;yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSX」) | &quot;2019-10-23T11&quot;:24:35.000Z」 |
+| 格式 | 根據指定的格式設定輸入日期的格式。 | <ul><li>日期： **必填** 要格式化的輸入日期（作為ZonedDateTime對象）。</li><li>格式： **必填** 您要將日期變更為的格式。</li></ul> | 格式（日期，格式） | 格式(2019-10-23T11:24:00+00:00, &quot;yyyy-MM-dd HH:mm:ss&quot;) | &quot;2019-10-23 11:24:35英吋 |
+| dformat | 根據指定格式將時間戳轉換為日期字串。 | <ul><li>時間戳： **必填** 要格式化的時間戳記。 這會以毫秒為單位寫入。</li><li>格式： **必填** 您希望時間戳記變成的格式。</li></ul> | dformat(TIMESTAMP, FORMAT) | dformat(1571829875000, &quot;yyyy-MM-dd&#39;THH:mm:ss.SSX」) | &quot;2019-10-23T11&quot;:24:35.000Z」 |
 | 日期 | 將日期字串轉換為ZonedDateTime對象（ISO 8601格式）。 | <ul><li>日期： **必填** 代表日期的字串。</li><li>格式： **必填** 代表來源日期格式的字串。**注意：** 確實如此 **not** 代表您要將日期字串轉換為的格式。 </li><li>DEFAULT_DATE: **必填** 如果提供的日期為空，則返回預設日期。</li></ul> | date(DATE, FORMAT, DEFAULT_DATE) | date(&quot;2019-10-23 11:24&quot;, &quot;yyyy-MM-dd HH:mm&quot;, now()) | &quot;2019-10-23T11&quot;:24:00Z」 |
 | 日期 | 將日期字串轉換為ZonedDateTime對象（ISO 8601格式）。 | <ul><li>日期： **必填** 代表日期的字串。</li><li>格式： **必填** 代表來源日期格式的字串。**注意：** 確實如此 **not** 代表您要將日期字串轉換為的格式。 </li></ul> | 日期（日期，格式） | date(&quot;2019-10-23 11:24&quot;, &quot;yyyy-MM-dd HH:mm&quot;) | &quot;2019-10-23T11&quot;:24:00Z」 |
 | 日期 | 將日期字串轉換為ZonedDateTime對象（ISO 8601格式）。 | <ul><li>日期： **必填** 代表日期的字串。</li></ul> | 日期（日期） | date(&quot;2019-10-23 11:24&quot;) | &quot;2019-10-23T11&quot;:24:00Z」 |
