@@ -5,9 +5,9 @@ title: 串流劃分UI指南
 topic-legacy: ui guide
 description: Adobe Experience Platform上的串流細分可讓您近乎即時執行細分，同時專注於資料的豐富性。 透過串流細分，區段資格現在會在資料進入Platform時進行，以緩解排程及執行區段工作的需求。 透過此功能，現在大部分的區段規則都可在資料傳入Platform時評估，這表示區段成員資格會保持最新，而不會執行排程的區段工作。
 exl-id: cb9b32ce-7c0f-4477-8c49-7de0fa310b97
-source-git-commit: 6db0aef66abe11b8ed9f4b8da56875aa296b1a10
+source-git-commit: 1fa7663cc8bebca98f284593e98163315acda478
 workflow-type: tm+mt
-source-wordcount: '1190'
+source-wordcount: '1245'
 ht-degree: 0%
 
 ---
@@ -69,6 +69,12 @@ ht-degree: 0%
 具體來說， **[!UICONTROL 總合格對象大小]** 中的任何值。 此 **[!UICONTROL 合格受眾總規模]** 顯示上次完成區段工作執行中合格對象的總數。 如果區段工作在過去24小時內未完成，則會改從預估中擷取對象數量。
 
 下方的折線圖顯示過去24小時內合格和取消資格的區段數。 下拉式清單可以調整為顯示過去24小時、上週或過去30天。
+
+>[!NOTE]
+>
+>如果區段從沒有狀態變成已實現，或從退出變成已實現，則會視為合格。 如果區段從「已實現」變為「退出」，或從「現有」變為「退出」，則會視為無資格。
+>
+>有關這些狀態的詳細資訊，請參閱 [細分概述](./overview.md#browse).
 
 ![](../images/ui/streaming-segmentation/monitoring-streaming-segment-graph.png)
 
