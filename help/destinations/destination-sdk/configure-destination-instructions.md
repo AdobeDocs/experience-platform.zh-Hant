@@ -2,9 +2,9 @@
 description: 本頁列出並說明使用Destination SDK設定串流目的地的步驟。
 title: 使用Destination SDK設定串流目的地
 exl-id: d8aa7353-ba55-4a0d-81c4-ea2762387638
-source-git-commit: 3b320f253516f2c169330e1eed6ad870a583891a
+source-git-commit: b3d0f0c43b60895961cee2ee54518c0450e2e2f7
 workflow-type: tm+mt
-source-wordcount: '663'
+source-wordcount: '702'
 ht-degree: 0%
 
 ---
@@ -61,6 +61,10 @@ POST platform.adobe.io/data/core/activation/authoring/destination-servers
 以下是目標範本的設定範例，建立方法為使用 `/destinations` API端點。 如需此範本的詳細資訊，請參閱 [目標配置](./destination-configuration.md).
 
 要將步驟1中的伺服器和模板配置連接到此目標配置，請將伺服器和模板配置的實例ID添加為 `destinationServerId` 這裡。
+
+>[!IMPORTANT]
+>
+>若要建立正確設定的目的地，請 *必須* 在 `identityNamespaces`，如下所示。 如果未設定目標身分，則使用者將無法通過 [對應步驟](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping) 啟動工作流程。
 
 ```json
 POST platform.adobe.io/data/core/activation/authoring/destinations
