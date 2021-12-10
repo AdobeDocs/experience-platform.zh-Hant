@@ -2,9 +2,9 @@
 title: Real-time Customer Data Platform B2B版中的來源
 description: 概略說明來源在Real-time Customer Data Platform B2B版中的角色。
 exl-id: eeea4b2e-67c5-4491-9b8e-4b8987e44777
-source-git-commit: ef3b9bb742b44aafc838b84a0076e7c8445ac84f
+source-git-commit: 1a104d26b920082ee73178dd0ad7234ad43dec1a
 workflow-type: tm+mt
-source-wordcount: '275'
+source-wordcount: '290'
 ht-degree: 0%
 
 ---
@@ -20,6 +20,8 @@ Real-time Customer Data Platform B2B版可讓您透過各種來源帶入B2B資�
 >[!TIP]
 >
 >Real-time Customer Data Platform B2B版提供廣泛的外部來源，可從這些來源擷取資料，但其可用資料卻不如Real-time Customer Data Platform少。 若要了解貴組織可使用的來源連接器，您可以在Platform UI中檢視來源目錄。 若要存取目錄，請選取 **來源** 在左側導覽器中，然後選取 **目錄**.
+
+若要了解來源與B2B工作流程的契合程度，請參閱 [端對端教學課程](../b2b-tutorial.md#ingest-your-data-into-experience-platform).
 
 請參閱 [來源連接器概觀](../../sources/home.md) 以取得Adobe Experience Platform中可用來源類型的詳細資訊。
 

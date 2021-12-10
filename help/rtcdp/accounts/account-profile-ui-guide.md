@@ -3,9 +3,9 @@ keywords: rtcdp設定檔；設定檔rtcdp;rtcdp身分；rtcdp合併原則；即�
 title: 帳戶設定檔UI指南
 description: 透過使用帳戶設定檔，Real-time Customer Data Platform B2B Edition可讓您統一來自多個來源的帳戶資訊。 本指南提供與Adobe Experience Platform使用者介面中帳戶設定檔互動的詳細資訊。
 exl-id: a05e8b84-026e-4482-a288-aa25b441bd69
-source-git-commit: f4ca1efe9c728f50008d7fbaa17aa009dfc18393
+source-git-commit: 9bd7434f2b224d76decac1e04d8491a6b3149a3a
 workflow-type: tm+mt
-source-wordcount: '1172'
+source-wordcount: '1193'
 ht-degree: 0%
 
 ---
@@ -17,6 +17,8 @@ ht-degree: 0%
 >帳戶設定檔僅供Real-time Customer Data Platform B2B Edition客戶使用。 若要進一步了解即時CDP，包括每種許可證類型可用的功能，請從閱讀 [Real-time CDP概述](../overview.md).
 
 帳戶設定檔可讓您統一來自多個來源的帳戶資訊。 帳戶的統一檢視會匯集來自許多行銷管道的資料，以及貴組織目前用來儲存客戶帳戶資訊的不同系統。 本檔案提供使用Adobe Experience Platform使用者介面(UI)中提供的即時CDP B2B Edition功能，與帳戶設定檔互動的指南。
+
+若要進一步了解如何在B2B工作流程中建立帳戶設定檔，請參閱 [端對端教學課程](../b2b-tutorial.md).
 
 ## 瀏覽帳戶設定檔
 

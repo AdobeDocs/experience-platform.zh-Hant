@@ -1,17 +1,17 @@
 ---
-title: 即時CDP B2B版的區段使用案例概觀
+title: Real-time CDP B2B Edition的細分使用案例
 description: 概述各種可用的即時CDP B2B Edition使用案例。
 exl-id: 2a99b85e-71b3-4781-baf7-a4d5436339d3
-source-git-commit: e6f71954d52e0a998955c3420307417cc011c24d
+source-git-commit: 9bd7434f2b224d76decac1e04d8491a6b3149a3a
 workflow-type: tm+mt
-source-wordcount: '1096'
-ht-degree: 0%
+source-wordcount: '1105'
+ht-degree: 1%
 
 ---
 
-# Real-time Customer Data Platform B2B版的區段使用案例概觀
+# Real-time Customer Data Platform B2B版的區段使用案例
 
-本檔案提供相關範例，說明即時CDP B2B Edition可用的區段，以及如何針對常見的B2B使用案例結合不同類型的屬性。
+本檔案提供即時CDP B2B Edition中區段定義的範例，以及如何針對常見B2B使用案例結合不同類型的屬性。 若要了解目的地與B2B工作流程有何不同，請參閱 [端對端教學課程](../b2b-tutorial.md#create-a-segment-to-evaluate-your-data).
 
 >[!NOTE]
 >
@@ -70,31 +70,31 @@ B2B類及其屬性會附加 `B2B` 標籤，以區別於Real-time Customer Data P
 
 ![顯示示例2設定的UI](../assets/segmentation/example-2.png)
 
-### 範例3
+### 範例 3
 
 查找直接分配給帳戶位於指定位置的任何業務機會的所有人員（加拿大）。 此區段需要 [!UICONTROL XDM個別設定檔] 類別， [!UICONTROL XDM商機人員關係] 類別， [!UICONTROL XDM業務機會] 類別，和 [!UICONTROL XDM商業帳戶] 類別。
 
 ![顯示示例3設定的UI](../assets/segmentation/example-3.png)
 
-### 範例4
+### 範例 4
 
 查找所有作為「決策者」的人員，了解客戶所在的「金融」行業中的任何機會，並在過去三天內訪問了定價頁。 此區段需要 [!UICONTROL XDM個別設定檔] 類別， [!UICONTROL XDM商機人員關係] 類別， [!UICONTROL XDM業務機會] 類別，和 [!UICONTROL XDM商業帳戶] 類別，和 [!UICONTROL XDM ExperienceEvent] 類別。
 
 ![顯示示例4設定的UI](../assets/segmentation/example-4.png)
 
-### 範例5
+### 範例 5
 
 查找所有在人力資源部(HR)工作的人員，這些人員與任何具有至少一個價值給定金額（100萬美元）或更多的開放機會的帳戶相關。 此區段需要 [!UICONTROL XDM個別設定檔] 類別， [!UICONTROL XDM商業帳戶] 類別，和 [!UICONTROL XDM業務機會] 類別。
 
 ![顯示示例5設定的UI](../assets/segmentation/example-5.png)
 
-### 範例6
+### 範例 6
 
 查找其職稱為副總裁且與任何年收入達指定金額（1億美元）或以上的帳戶相關的所有人員，並在上個月至少訪問過定價頁面3次。 此區段需要 [!UICONTROL XDM個別設定檔] 類別， [!UICONTROL XDM商業帳戶] 類別，和 [!UICONTROL XDM ExperienceEvent] 類別。
 
 ![顯示示例6設定的UI](../assets/segmentation/example-6.png)
 
-### 範例7
+### 範例 7
 
 查找所有作為任何已關閉的銷售機會的「決策者」，並在上週訪問了定價頁。 此區段需要 [!UICONTROL XDM個別設定檔] 類別， [!UICONTROL XDM商機人員關係] 類別， [!UICONTROL XDM業務機會] 類別，和 [!UICONTROL XDM ExperienceEvent] 類別。
 

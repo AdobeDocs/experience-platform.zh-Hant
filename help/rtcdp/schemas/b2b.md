@@ -2,9 +2,9 @@
 title: Real-time Customer Data Platform B2B版中的結構描述
 description: 概略說明Real-time Customer Data Platform B2B版本中Experience Data Model(XDM)結構之角色。
 exl-id: 3b18d377-108f-443f-86ae-dc7537cf9013
-source-git-commit: 8718512a9768158183b9fb6b9e336081e47cd889
+source-git-commit: 1a104d26b920082ee73178dd0ad7234ad43dec1a
 workflow-type: tm+mt
-source-wordcount: '220'
+source-wordcount: '235'
 ht-degree: 0%
 
 ---
@@ -27,6 +27,8 @@ Real-time CDP B2B Edition提供了以下標準類：
 * [XDM商機人員關係](../../xdm/classes/b2b/business-opportunity-person-relation.md)
 * [XDM商業行銷清單](../../xdm/classes/b2b/business-marketing-list.md)
 * [XDM商業行銷清單成員](../../xdm/classes/b2b/business-marketing-list-members.md)
+
+若要了解結構如何與您的B2B工作流程搭配，請參閱 [端對端教學課程](../b2b-tutorial.md).
 
 如需如何在兩個結構之間建立多對一關係的步驟，請參閱以下的教學課程： [定義B2B架構關係](../../xdm/tutorials/relationship-b2b.md).
 
