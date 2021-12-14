@@ -5,9 +5,9 @@ title: 資料準備映射函式
 topic-legacy: overview
 description: 本文檔介紹與資料準備一起使用的映射函式。
 exl-id: e95d9329-9dac-4b54-b804-ab5744ea6289
-source-git-commit: c01f8d9f785bec5be712c0a64a8347557db0577e
+source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
 workflow-type: tm+mt
-source-wordcount: '3971'
+source-wordcount: '3964'
 ht-degree: 4%
 
 ---
@@ -114,10 +114,10 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | now | 擷取目前時間。 |  | now() | now() | `2021-10-26T10:10:24Z` |
 | timestamp | 檢索當前Unix時間。 |  | timestamp() | timestamp() | 1571850624571 |
-| 格式 | 根據指定的格式設定輸入日期的格式。 | <ul><li>日期： **必填** 要格式化的輸入日期（作為ZonedDateTime對象）。</li><li>格式： **必填** 您要將日期變更為的格式。</li></ul> | 格式（日期，格式） | 格式(2019-10-23T11:24:00+00:00, &quot;yyyy-MM-dd HH:mm:ss&quot;) | &quot;2019-10-23 11:24:35英吋 |
-| dformat | 根據指定格式將時間戳轉換為日期字串。 | <ul><li>時間戳： **必填** 要格式化的時間戳記。 這會以毫秒為單位寫入。</li><li>格式： **必填** 您希望時間戳記變成的格式。</li></ul> | dformat(TIMESTAMP, FORMAT) | dformat(1571829875000, &quot;yyyy-MM-dd&#39;THH:mm:ss.SSX」) | &quot;2019-10-23T11&quot;:24:35.000Z」 |
-| 日期 | 將日期字串轉換為ZonedDateTime對象（ISO 8601格式）。 | <ul><li>日期： **必填** 代表日期的字串。</li><li>格式： **必填** 代表來源日期格式的字串。**注意：** 確實如此 **not** 代表您要將日期字串轉換為的格式。 </li><li>DEFAULT_DATE: **必填** 如果提供的日期為空，則返回預設日期。</li></ul> | date(DATE, FORMAT, DEFAULT_DATE) | date(&quot;2019-10-23 11:24&quot;, &quot;yyyy-MM-dd HH:mm&quot;, now()) | &quot;2019-10-23T11&quot;:24:00Z」 |
-| 日期 | 將日期字串轉換為ZonedDateTime對象（ISO 8601格式）。 | <ul><li>日期： **必填** 代表日期的字串。</li><li>格式： **必填** 代表來源日期格式的字串。**注意：** 確實如此 **not** 代表您要將日期字串轉換為的格式。 </li></ul> | 日期（日期，格式） | date(&quot;2019-10-23 11:24&quot;, &quot;yyyy-MM-dd HH:mm&quot;) | &quot;2019-10-23T11&quot;:24:00Z」 |
+| 格式 | 根據指定的格式設定輸入日期的格式。 | <ul><li>日期： **必填** 要格式化的輸入日期（作為ZonedDateTime對象）。</li><li>格式： **必填** 您要將日期變更為的格式。</li></ul> | 格式（日期，格式） | 格式(2019-10-23T11:24:00+00:00, &quot;yyyy-MM-dd HH:mm:ss&quot;) | `2019-10-23 11:24:35` |
+| dformat | 根據指定格式將時間戳轉換為日期字串。 | <ul><li>時間戳： **必填** 要格式化的時間戳記。 這會以毫秒為單位寫入。</li><li>格式： **必填** 您希望時間戳記變成的格式。</li></ul> | dformat(TIMESTAMP, FORMAT) | dformat(1571829875000, &quot;yyyy-MM-dd&#39;THH:mm:ss.SSX」) | `2019-10-23T11:24:35.000Z` |
+| 日期 | 將日期字串轉換為ZonedDateTime對象（ISO 8601格式）。 | <ul><li>日期： **必填** 代表日期的字串。</li><li>格式： **必填** 代表來源日期格式的字串。**注意：** 確實如此 **not** 代表您要將日期字串轉換為的格式。 </li><li>DEFAULT_DATE: **必填** 如果提供的日期為空，則返回預設日期。</li></ul> | date(DATE, FORMAT, DEFAULT_DATE) | date(&quot;2019-10-23 11:24&quot;, &quot;yyyy-MM-dd HH:mm&quot;, now()) | `2019-10-23T11:24:00Z` |
+| 日期 | 將日期字串轉換為ZonedDateTime對象（ISO 8601格式）。 | <ul><li>日期： **必填** 代表日期的字串。</li><li>格式： **必填** 代表來源日期格式的字串。**注意：** 確實如此 **not** 代表您要將日期字串轉換為的格式。 </li></ul> | 日期（日期，格式） | date(&quot;2019-10-23 11:24&quot;, &quot;yyyy-MM-dd HH:mm&quot;) | `2019-10-23T11:24:00Z` |
 | 日期 | 將日期字串轉換為ZonedDateTime對象（ISO 8601格式）。 | <ul><li>日期： **必填** 代表日期的字串。</li></ul> | 日期（日期） | date(&quot;2019-10-23 11:24&quot;) | &quot;2019-10-23T11&quot;:24:00Z」 |
 | date_part | 擷取日期的部分。 支援下列元件值： <br><br>&quot;year&quot;<br>&quot;yyyy&quot;<br>&quot;yy&quot;<br><br>&quot;quarter&quot;<br>&quot;qq&quot;<br>&quot;q&quot;<br><br>&quot;month&quot;<br>&quot;mm&quot;<br>&quot;m&quot;<br><br>&quot;dayofyear&quot;<br>&quot;dy&quot;<br>&quot;y&quot;<br><br>&quot;day&quot;<br>&quot;dd&quot;<br>&quot;d&quot;<br><br>&quot;week&quot;<br>&quot;ww&quot;<br>&quot;w&quot;<br><br>&quot;weekday&quot;<br>&quot;dw&quot;<br>&quot;w&quot;<br><br>&quot;hour&quot;<br>&quot;hh&quot;<br>&quot;hh24&quot;<br>&quot;hh12&quot;<br><br>&quot;minute&quot;<br>&quot;mi&quot;<br>&quot;n&quot;<br><br>&quot;second&quot;<br>&quot;ss&quot;<br>&quot;s&quot;<br><br>&quot;毫秒&quot;<br>&quot;ms&quot; | <ul><li>元件： **必填** 代表日期部分的字串。 </li><li>日期： **必填** 日期，採用標準格式。</li></ul> | date_part(&#x200B;元件，日期) | date_part(&quot;MM&quot;, date(&quot;2019-10-17 11:55:12英吋) | 10 |
 | set_date_part | 在指定日期中取代元件。 接受下列元件： <br><br>&quot;year&quot;<br>&quot;yyyy&quot;<br>&quot;yy&quot;<br><br>&quot;month&quot;<br>&quot;mm&quot;<br>&quot;m&quot;<br><br>&quot;day&quot;<br>&quot;dd&quot;<br>&quot;d&quot;<br><br>&quot;hour&quot;<br>&quot;hh&quot;<br><br>&quot;minute&quot;<br>&quot;mi&quot;<br>&quot;n&quot;<br><br>&quot;second&quot;<br>&quot;ss&quot;<br>&quot;s&quot; | <ul><li>元件： **必填** 代表日期部分的字串。 </li><li>值： **必填** 為指定日期的元件設定的值。</li><li>日期： **必填** 日期，採用標準格式。</li></ul> | set_date_part(&#x200B;元件，值，日期) | set_date_part(&quot;m&quot;, 4, date(&quot;2016-11-09T11:44:44.797″) | &quot;2016-04-09T11&quot;:44:44Z」 |
@@ -214,7 +214,7 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 
 | 函數 | 說明 | 參數 | 語法 | 運算式 | 範例輸出 |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
-| json_to_object | 從指定字串反序列化JSON內容。 | <ul><li>字串： **必填** 要反序列化的JSON字串。</li></ul> | json_to_object&#x200B;(STRING) | json_to_object&#x200B;({&quot;info&quot;:{&quot;firstName&quot;:&quot;John&quot;,&quot;lastName&quot; :&quot;Doe&quot;}) | 代表JSON的物件。 |
+| json_to_object | 從指定字串反序列化JSON內容。 | <ul><li>字串： **必填** 要反序列化的JSON字串。</li></ul> | json_to_object&#x200B;(STRING) | json_to_object&#x200B;({&quot;info&quot;:{&quot;firstName&quot;:&quot;John&quot;,&quot;lastName&quot;:&quot;Doe&quot;}) | 代表JSON的物件。 |
 
 {style=&quot;table-layout:auto&quot;}
 

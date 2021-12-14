@@ -6,48 +6,48 @@ topic-legacy: overview
 type: Tutorial
 description: 了解如何使用Flow Service API將Adobe Experience Platform連線至Amazon Kinesis來源。
 exl-id: 64da8894-12ac-45a0-b03e-fe9b6aa435d3
-source-git-commit: b4291b4f13918a1f85d73e0320c67dd2b71913fc
+source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
 workflow-type: tm+mt
 source-wordcount: '730'
 ht-degree: 1%
 
 ---
 
-# 使用流服務API建立[!DNL Amazon Kinesis]源連接
+# 建立 [!DNL Amazon Kinesis] 源連接（使用流服務API）
 
-本教學課程會逐步帶您了解使用[[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/)將[!DNL Amazon Kinesis]（以下稱為「[!DNL Kinesis]」）連線至Experience Platform的步驟。
+本教學課程會逐步引導您完成連線步驟 [!DNL Amazon Kinesis] (下稱「[!DNL Kinesis]&quot;)Experience Platform，使用 [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## 快速入門
 
 本指南需要妥善了解下列Adobe Experience Platform元件：
 
-* [來源](../../../../home.md):Experience Platform可讓您從各種來源擷取資料，同時使用服務來建構、加標籤及增強傳入 [!DNL Platform] 資料。
-* [沙箱](../../../../../sandboxes/home.md):Experience Platform提供可將單一執行個體分割成個 [!DNL Platform] 別虛擬環境的虛擬沙箱，以協助開發及改進數位體驗應用程式。
+* [來源](../../../../home.md):Experience Platform可讓您從各種來源擷取資料，同時使用來建構、加標籤及增強傳入資料 [!DNL Platform] 服務。
+* [沙箱](../../../../../sandboxes/home.md):Experience Platform提供可分割單一 [!DNL Platform] 例項放入個別的虛擬環境，以協助開發及改進數位體驗應用程式。
 
-以下小節提供您需要知道的其他資訊，以便使用[!DNL Flow Service] API成功將[!DNL Kinesis]連線至Platform。
+以下各節提供了成功連接所需的其他資訊 [!DNL Kinesis] 到使用 [!DNL Flow Service] API。
 
 ### 收集所需憑據
 
-為了使[!DNL Flow Service]與[!DNL Amazon Kinesis]帳戶連接，必須為以下連接屬性提供值：
+為了 [!DNL Flow Service] 與 [!DNL Amazon Kinesis] 帳戶，您必須提供下列連線屬性的值：
 
 | 憑據 | 說明 |
 | ---------- | ----------- |
-| `accessKeyId` | 存取金鑰ID是用來驗證[!DNL Kinesis]帳戶至Platform的存取金鑰組的一半。 |
-| `secretKey` | 秘密存取金鑰是用來驗證[!DNL Kinesis]帳戶至Platform的存取金鑰組的另一半。 |
-| `region` | [!DNL Kinesis]帳戶的地區。 有關地區的詳細資訊，請參閱[將IP位址新增至允許清單](../../../../ip-address-allow-list.md)的指南。 |
-| `connectionSpec.id` | 連接規範返回源的連接器屬性，包括與建立基連接和源連接相關的驗證規範。 [!DNL Kinesis]連接規範ID為：`86043421-563b-46ec-8e6c-e23184711bf6`。 |
+| `accessKeyId` | 存取金鑰ID是用來驗證您的 [!DNL Kinesis] 帳戶至Platform。 |
+| `secretKey` | 秘密訪問密鑰是用於驗證您的 [!DNL Kinesis] 帳戶至Platform。 |
+| `region` | 您的 [!DNL Kinesis] 帳戶。 請參閱 [新增IP位址至允許清單](../../../../ip-address-allow-list.md) 以取得地區的詳細資訊。 |
+| `connectionSpec.id` | 連接規範返回源的連接器屬性，包括與建立基連接和源連接相關的驗證規範。 此 [!DNL Kinesis] 連接規範ID為： `86043421-563b-46ec-8e6c-e23184711bf6`. |
 
-有關[!DNL Kinesis]訪問密鑰以及如何生成這些密鑰的詳細資訊，請參閱本[[!DNL AWS] 指南，以管理IAM用戶的訪問密鑰](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html)。
+如需 [!DNL Kinesis] 存取金鑰及其產生方式，請參閱 [[!DNL AWS] 管理IAM用戶訪問密鑰的指南](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html).
 
 ### 使用平台API
 
-如需如何成功呼叫Platform API的詳細資訊，請參閱[Platform API快速入門手冊](../../../../../landing/api-guide.md)。
+如需如何成功呼叫Platform API的詳細資訊，請參閱 [Platform API快速入門](../../../../../landing/api-guide.md).
 
 ## 建立基本連接
 
-建立源連接的第一步是驗證[!DNL Kinesis]源並生成基本連接ID。 基本連線ID可讓您從來源探索和導覽檔案，並識別您要擷取的特定項目，包括其資料類型和格式的相關資訊。
+建立源連接的第一步是驗證您的 [!DNL Kinesis] 源和生成基本連接ID。 基本連線ID可讓您從來源探索和導覽檔案，並識別您要擷取的特定項目，包括其資料類型和格式的相關資訊。
 
-若要建立基本連線ID，請在提供[!DNL Kinesis]驗證憑證作為請求參數的一部分時，向`/connections`端點提出POST請求。
+若要建立基本連線ID，請向 `/connections` 端點提供 [!DNL Kinesis] 驗證憑證作為要求參數的一部分。
 
 **API格式**
 
@@ -86,14 +86,14 @@ curl -X POST \
 
 | 屬性 | 說明 |
 | -------- | ----------- |
-| `auth.params.accessKeyId` | [!DNL Kinesis]帳戶的訪問密鑰ID。 |
-| `auth.params.secretKey` | [!DNL Kinesis]帳戶的秘密訪問密鑰。 |
-| `auth.params.region` | [!DNL Kinesis]帳戶的地區。 |
-| `connectionSpec.id` | [!DNL Kinesis]連接規範ID:`86043421-563b-46ec-8e6c-e23184711bf6` |
+| `auth.params.accessKeyId` | 您 [!DNL Kinesis] 帳戶。 |
+| `auth.params.secretKey` | 您的 [!DNL Kinesis] 帳戶。 |
+| `auth.params.region` | 您的 [!DNL Kinesis] 帳戶。 |
+| `connectionSpec.id` | 此 [!DNL Kinesis] 連接規範ID: `86043421-563b-46ec-8e6c-e23184711bf6` |
 
 **回應**
 
-成功的響應返回新建立的基本連接的詳細資訊，包括其唯一標識符(`id`)。 在下一步建立源連接時需要此ID。
+成功的回應會傳回新建立之基本連線的詳細資訊，包括其唯一識別碼(`id`)。 在下一步建立源連接時需要此ID。
 
 ```json
 {
@@ -106,7 +106,7 @@ curl -X POST \
 
 來源連線會建立並管理資料擷取所在之外部來源的連線。 源連接由資料源、資料格式和建立資料流所需的源連接ID等資訊組成。 來源連線例項是租用戶和IMS組織專屬的。
 
-要建立源連接，請向[!DNL Flow Service] API的`/sourceConnections`端點發出POST請求。
+若要建立來源連線，請向 `/sourceConnections` 端點 [!DNL Flow Service] API。
 
 **API格式**
 
@@ -147,16 +147,16 @@ curl -X POST \
 | --- | --- |
 | `name` | 源連接的名稱。 請確保源連接的名稱是描述性的，因為您可以使用此名稱查找有關源連接的資訊。 |
 | `description` | 可提供的選用值，用於包含來源連線的詳細資訊。 |
-| `baseConnectionId` | 在上一步中生成的[!DNL Kinesis]源的基本連接ID。 |
-| `connectionSpec.id` | [!DNL Kinesis]的固定連接規範ID。 此ID為：`86043421-563b-46ec-8e6c-e23184711bf6` |
-| `data.format` | 您要擷取的[!DNL Kinesis]資料格式。 目前，唯一支援的資料格式是`json`。 |
+| `baseConnectionId` | 您的 [!DNL Kinesis] 在上一步驟中生成的源。 |
+| `connectionSpec.id` | 的固定連接規範ID [!DNL Kinesis]. 此ID為： `86043421-563b-46ec-8e6c-e23184711bf6` |
+| `data.format` | 格式 [!DNL Kinesis] 您要擷取的資料。 目前，唯一支援的資料格式是 `json`. |
 | `params.stream` | 要提取記錄的資料流的名稱。 |
-| `params.dataType` | 此參數會定義正在擷取的資料類型。 支援的資料類型包括：`raw`和`xdm`。 |
-| `params.reset` | 此參數會定義資料的讀取方式。 使用`latest`開始從最新資料中讀取，並使用`earliest`開始從流中第一個可用資料中讀取。 |
+| `params.dataType` | 此參數會定義正在擷取的資料類型。 支援的資料類型包括： `raw` 和 `xdm`. |
+| `params.reset` | 此參數會定義資料的讀取方式。 使用 `latest` 從最新資料開始讀取，並使用 `earliest` 從資料流中的第一個可用資料開始讀取。 |
 
 **回應**
 
-成功的響應返回新建源連接的唯一標識符(`id`)。 在下一個教程中建立資料流時需要此ID。
+成功的回應會傳回唯一識別碼(`id`)。 在下一個教程中建立資料流時需要此ID。
 
 ```json
 {
@@ -167,4 +167,4 @@ curl -X POST \
 
 ## 後續步驟
 
-依照本教學課程，您已使用[!DNL Flow Service] API建立[!DNL Kinesis]來源連線。 您可以在[的下一個教程中使用此源連接ID，以使用 [!DNL Flow Service] API](../../collect/streaming.md)建立流資料流。
+依照本教學課程，您已建立 [!DNL Kinesis] 源連接使用 [!DNL Flow Service] API。 您可以在下一個教學課程中使用此來源連線ID [使用 [!DNL Flow Service] API](../../collect/streaming.md).

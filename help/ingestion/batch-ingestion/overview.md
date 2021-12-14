@@ -5,7 +5,7 @@ title: 批次擷取API概觀
 topic-legacy: overview
 description: Adobe Experience Platform資料擷取API可讓您將資料以批次檔案的形式內嵌至Platform。 所擷取的資料可以是CRM系統中一般檔案（例如Parquet檔案）的設定檔資料，或符合Experience Data Model(XDM)註冊表中已知結構的資料。
 exl-id: ffd1dc2d-eff8-4ef7-a26b-f78988f050ef
-source-git-commit: 3eea0a1ecbe7db202f56f326e7b9b1300b37d236
+source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
 workflow-type: tm+mt
 source-wordcount: '1388'
 ht-degree: 6%
@@ -14,9 +14,9 @@ ht-degree: 6%
 
 # 批次內嵌API概觀
 
-Adobe Experience Platform資料擷取API可讓您將資料以批次檔案的形式內嵌至Platform。 所擷取的資料可以是來自一般檔案（例如Parquet檔案）的設定檔資料，或符合[!DNL Experience Data Model](XDM)註冊表中已知結構的資料。
+Adobe Experience Platform資料擷取API可讓您將資料以批次檔案的形式內嵌至Platform。 擷取的資料可以是來自一般檔案（例如Parquet檔案）的設定檔資料，或符合 [!DNL Experience Data Model] (XDM)註冊表。
 
-[資料擷取API參考](https://www.adobe.io/experience-platform-apis/references/data-ingestion/)提供這些API呼叫的其他資訊。
+此 [資料擷取API參考](https://www.adobe.io/experience-platform-apis/references/data-ingestion/) 提供這些API呼叫的其他資訊。
 
 下圖概述批次擷取程式：
 
@@ -24,12 +24,12 @@ Adobe Experience Platform資料擷取API可讓您將資料以批次檔案的形�
 
 ## 快速入門
 
-本指南中使用的API端點屬於[資料擷取API](https://www.adobe.io/experience-platform-apis/references/data-ingestion/)的一部分。 繼續之前，請檢閱[快速入門手冊](getting-started.md)，取得相關檔案的連結、閱讀本檔案中範例API呼叫的指南，以及成功呼叫任何Experience PlatformAPI所需的必要標頭的重要資訊。
+本指南中使用的API端點屬於 [資料擷取API](https://www.adobe.io/experience-platform-apis/references/data-ingestion/). 繼續之前，請檢閱 [快速入門手冊](getting-started.md) 如需相關檔案的連結，請參閱本檔案中讀取範例API呼叫的指南，以及成功呼叫任何Experience PlatformAPI所需的必要標頭重要資訊。
 
 ### [!DNL Data Ingestion] 必要條件
 
 - 要上傳的資料必須採用Parquet或JSON格式。
-- 在[[!DNL Catalog services]](../../catalog/home.md)中建立的資料集。
+- 在 [[!DNL Catalog services]](../../catalog/home.md).
 - Parquet檔案的內容必須符合上傳至之資料集結構的子集。
 - 在驗證後使用您的唯一存取權杖。
 
@@ -49,15 +49,15 @@ Adobe Experience Platform資料擷取API可讓您將資料以批次檔案的形�
 
 >[!NOTE]
 >
->若要上傳大於512MB的檔案，必須將檔案分割為較小的區塊。 上載大型檔案的說明可在本文檔](#large-file-upload---create-file)的[大型檔案上載部分找到。
+>若要上傳大於512MB的檔案，必須將檔案分割為較小的區塊。 上傳大型檔案的指示位於 [本文檔的大檔案上載部分](#large-file-upload---create-file).
 
 ### 類型
 
-擷取資料時，請務必了解[!DNL Experience Data Model](XDM)結構的運作方式。 有關XDM欄位類型如何映射到不同格式的詳細資訊，請參閱[Schema Registry開發人員指南](../../xdm/api/getting-started.md)。
+擷取資料時，請務必了解 [!DNL Experience Data Model] (XDM)結構可運作。 如需XDM欄位類型如何對應至不同格式的詳細資訊，請參閱 [Schema Registry開發人員指南](../../xdm/api/getting-started.md).
 
-擷取資料時有一些彈性 — 如果類型與目標架構中的內容不符，則資料會轉換為表示的目標類型。 如果無法，則會以`TypeCompatibilityException`失敗批次處理。
+擷取資料時有一些彈性 — 如果類型與目標架構中的內容不符，則資料會轉換為表示的目標類型。 如果無法，則會以 `TypeCompatibilityException`.
 
-例如，JSON或CSV的類型均不是`date`或`date-time`。 因此，這些值是使用[ISO 8061格式化字串](https://www.iso.org/iso-8601-date-and-time-format.html)(&quot;2018-07-10T15:05:59.000-08:00&quot;)或Unix時間(以毫秒(1531263959000)為格式)表示，並在擷取時轉換為目標XDM類型。
+例如，JSON或CSV都沒有 `date` 或 `date-time` 類型。 因此，這些值會以 [ISO 8061格式化字串](https://www.iso.org/iso-8601-date-and-time-format.html) (&quot;2018-07-10T15&quot;:05:59.000-08:00英吋)或以毫秒(1531263959000)為單位的Unix時間格式，並會在擷取時轉換為目標XDM類型。
 
 下表顯示擷取資料時支援的轉換。
 
@@ -80,7 +80,7 @@ Adobe Experience Platform資料擷取API可讓您將資料以批次檔案的形�
 
 ## 使用 API
 
-[!DNL Data Ingestion] API可讓您透過三個基本步驟，將資料以批次（資料單位，由一或多個要以單一單位內嵌的檔案組成）的形式內嵌至[!DNL Experience Platform]:
+此 [!DNL Data Ingestion] API可讓您將資料以批次（資料單位，由一或多個要以單一單位內嵌的檔案組成）內嵌至 [!DNL Experience Platform] 三個基本步驟：
 
 1. 建立新批。
 2. 將檔案上傳至符合資料之XDM結構的指定資料集。
@@ -102,7 +102,7 @@ curl -X POST "https://platform.adobe.io/data/foundation/import/batches" \
   -H "x-gw-ims-org-id: {IMS_ORG}" \
   -H "x-sandbox-name: {SANDBOX_NAME}" \
   -H "Authorization: Bearer {ACCESS_TOKEN}" \
-  -H "x-api-key : {API_KEY}"
+  -H "x-api-key: {API_KEY}"
   -d '{ 
           "datasetId": "{DATASET_ID}" 
       }'
@@ -147,11 +147,11 @@ curl -X POST "https://platform.adobe.io/data/foundation/import/batches" \
 
 >[!NOTE]
 >
->批次內嵌可用來逐步更新設定檔存放區中的資料。 如需詳細資訊，請參閱[批次內嵌開發人員指南](api-overview.md)中的[更新批次](#patch-a-batch)一節。
+>批次內嵌可用來逐步更新設定檔存放區中的資料。 如需詳細資訊，請參閱 [更新批](#patch-a-batch) 在 [批次匯入開發人員指南](api-overview.md).
 
 >[!INFO]
 >
->以下示例使用[Apache Parquet](https://parquet.apache.org/documentation/latest/)檔案格式。 若需使用JSON檔案格式的範例，請參閱[批次內嵌開發人員指南](api-overview.md)。
+>以下範例使用 [阿帕奇鑲木地板](https://parquet.apache.org/documentation/latest/) 檔案格式。 若需使用JSON檔案格式的範例，請參閱 [批次匯入開發人員指南](api-overview.md).
 
 ### 小型檔案上傳
 
@@ -175,7 +175,7 @@ curl -X PUT "https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}
   -H "x-gw-ims-org-id: {IMS_ORG}" \
   -H "x-sandbox-name: {SANDBOX_NAME}" \
   -H "Authorization: Bearer {ACCESS_TOKEN}" \
-  -H "x-api-key : {API_KEY}" \
+  -H "x-api-key: {API_KEY}" \
   --data-binary "@{FILE_PATH_AND_NAME}.parquet"
 ```
 
@@ -258,7 +258,7 @@ curl -X PATCH "https://platform.adobe.io/data/foundation/import/batches/{BATCH_I
 
 ## 信號批完成
 
-將所有檔案上載到批後，可以發出該批完成的信號。 通過執行此操作，將為已完成的檔案建立[!DNL Catalog] DataSetFile條目，並與上述生成的批相關聯。 接著， [!DNL Catalog]批次會標示為成功，這會觸發下游流程內嵌可用資料。
+將所有檔案上載到批後，可以發出批完成的信號。 通過這樣做， [!DNL Catalog] DataSetFile條目是為已完成的檔案建立的，並與上述生成的批相關聯。 此 [!DNL Catalog] 接著，批次會標示為成功，這會觸發下游流程內嵌可用資料。
 
 **要求**
 
@@ -275,7 +275,7 @@ curl -X POST "https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID
 -H "x-gw-ims-org-id: {IMS_ORG}" \
 -H "x-sandbox-name: {SANDBOX_NAME}" \
 -H "Authorization: Bearer {ACCESS_TOKEN}" \
--H "x-api-key : {API_KEY}"
+-H "x-api-key: {API_KEY}"
 ```
 
 **回應**
@@ -402,20 +402,20 @@ curl GET "https://platform.adobe.io/data/foundation/catalog/batch/{BATCH_ID}" \
 | -------- | ----------- |
 | `{USER_ID}` | 建立或更新批的用戶的ID。 |
 
-`"status"`欄位顯示請求的批的當前狀態。 批可以具有以下任一狀態：
+此 `"status"` 欄位是顯示所請求批的當前狀態的內容。 批可以具有以下任一狀態：
 
 ## 批次內嵌狀態
 
 | 狀態 | 說明 |
 | ------ | ----------- |
 | 放棄 | 批未在預期的時間範圍內完成。 |
-| 已中止 | 已為指定批調用中止操作&#x200B;**顯式**（通過批次內嵌API）。 一旦批次進入「已載入」狀態，就無法中止。 |
+| 已中止 | 中止操作具有 **顯式** 已針對指定批次呼叫（透過批次內嵌API）。 一旦批次進入「已載入」狀態，就無法中止。 |
 | 作用中 | 批已成功升級，可用於下游衝減。 此狀態可與「Success」交替使用。 |
 | 已刪除 | 批次的資料已完全移除。 |
-| 已失敗 | 由錯誤配置和/或錯誤資料造成的終端狀態。 失敗批次的資料將&#x200B;**不會**&#x200B;顯示。 此狀態可與「失敗」交互使用。 |
+| 已失敗 | 由錯誤配置和/或錯誤資料造成的終端狀態。 失敗批次的資料將 **not** 出現。 此狀態可與「失敗」交互使用。 |
 | 非作用中 | 批已成功升級，但已還原或已過期。 該批不再可用於下游衝減。 |
 | 已載入 | 批次的資料已完成，且該批次已準備好升級。 |
-| 載入 | 正在上載此批的資料，並且該批當前&#x200B;**不**&#x200B;已準備好升級。 |
+| 載入 | 正在上載此批的資料，且該批當前正在 **not** 準備升職。 |
 | 重試 | 正在處理此批的資料。 但是，由於系統或暫時錯誤，該批處理失敗，因此正在重試該批處理。 |
 | 已轉移 | 批的升級進程的分段階段已完成，並且已運行獲取作業。 |
 | 預備 | 正在處理批的資料。 |

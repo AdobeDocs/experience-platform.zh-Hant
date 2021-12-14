@@ -5,7 +5,7 @@ topic-legacy: guide
 type: Documentation
 description: 在Adobe Experience Platform中，計算屬性是用來將事件層級資料匯總至設定檔層級屬性的函式。 系統會自動計算這些函式，以便用於不同區段、啟動和個人化。 本指南說明如何使用即時客戶設定檔API來建立、檢視、更新和刪除計算屬性。
 exl-id: 6b35ff63-590b-4ef5-ab39-c36c39ab1d58
-source-git-commit: 4c544170636040b8ab58780022a4c357cfa447de
+source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
 workflow-type: tm+mt
 source-wordcount: '2272'
 ht-degree: 2%
@@ -18,21 +18,21 @@ ht-degree: 2%
 >
 >本文檔中概述的計算屬性功能當前為Alpha格式，不適用於所有用戶。 文件和功能可能會有所變更。
 
-計算屬性是用於將事件層級資料匯總到設定檔層級屬性的函式。 系統會自動計算這些函式，以便用於不同區段、啟動和個人化。 本指南包含使用`/computedAttributes`端點執行基本CRUD作業的範例API呼叫。
+計算屬性是用於將事件層級資料匯總到設定檔層級屬性的函式。 系統會自動計算這些函式，以便用於不同區段、啟動和個人化。 本指南包含使用執行基本CRUD作業的範例API呼叫 `/computedAttributes` 端點。
 
-要了解有關計算屬性的詳細資訊，請從閱讀[計算屬性概述](overview.md)開始。
+若要進一步了解運算屬性，請先閱讀 [計算屬性概述](overview.md).
 
 ## 快速入門
 
-本指南中使用的API端點屬於[即時客戶設定檔API](https://www.adobe.com/go/profile-apis-en)的一部分。
+本指南中使用的API端點屬於 [即時客戶個人檔案API](https://www.adobe.com/go/profile-apis-en).
 
-繼續之前，請檢閱[設定檔API快速入門手冊](../api/getting-started.md)，以取得建議檔案的連結、閱讀本檔案中顯示之範例API呼叫的指南，以及成功呼叫任何Experience PlatformAPI所需之必要標題的重要資訊。
+繼續之前，請檢閱 [設定檔API快速入門手冊](../api/getting-started.md) 若為建議檔案的連結，請參閱閱讀本檔案中顯示之範例API呼叫的指南，以及成功呼叫任何Experience PlatformAPI所需之必要標題的重要資訊。
 
 ## 配置計算屬性欄位
 
 若要建立計算屬性，您首先需要識別架構中包含計算屬性值的欄位。
 
-請參閱[配置計算屬性](configure-api.md)上的文檔，以了解在架構中建立計算屬性欄位的完整端到端指南。
+請參閱 [配置計算屬性](configure-api.md) ，了解在架構中建立計算屬性欄位的完整端到端指南。
 
 >[!WARNING]
 >
@@ -40,9 +40,9 @@ ht-degree: 2%
 
 ## 建立計算屬性 {#create-a-computed-attribute}
 
-在啟用「設定檔」的結構中定義了計算屬性欄位，您現在可以設定計算屬性。 如果您尚未執行此操作，請按照[配置計算屬性](configure-api.md)文檔中概述的工作流。
+在啟用「設定檔」的結構中定義了計算屬性欄位，您現在可以設定計算屬性。 如果您尚未執行此作業，請依照 [配置計算屬性](configure-api.md) 檔案。
 
-要建立計算屬性，請從向`/config/computedAttributes`端點發出POST請求開始，請求主體包含要建立的計算屬性的詳細資訊。
+若要建立計算屬性，請從向 `/config/computedAttributes` 端點為請求內文，其中包含您要建立之計算屬性的詳細資訊。
 
 **API格式**
 
@@ -61,13 +61,13 @@ curl -X POST \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '{
-        "name" : "birthdayCurrentMonth",
-        "path" : "_{TENANT_ID}",
-        "description" : "Computed attribute to capture if the customer birthday is in the current month.",
-        "expression" : {
-            "type" : "PQL", 
-            "format" : "pql/text", 
-            "value":  "person.birthDate.getMonth() = currentMonth()"
+        "name": "birthdayCurrentMonth",
+        "path": "_{TENANT_ID}",
+        "description": "Computed attribute to capture if the customer birthday is in the current month.",
+        "expression": {
+            "type": "PQL", 
+            "format": "pql/text", 
+            "value": "person.birthDate.getMonth() = currentMonth()"
         },
         "schema": 
           {
@@ -80,15 +80,15 @@ curl -X POST \
 | 屬性 | 說明 |
 |---|---|
 | `name` | 計算屬性欄位的名稱，作為字串。 |
-| `path` | 包含計算屬性的欄位路徑。 此路徑位於架構的`properties`屬性內，「不應」在路徑中包含欄位名稱。 寫入路徑時，忽略`properties`屬性的多個級別。 |
-| `{TENANT_ID}` | 若您不熟悉租用戶ID，請參閱[Schema Registry開發人員指南](../../xdm/api/getting-started.md#know-your-tenant_id)中尋找租用戶ID的步驟。 |
+| `path` | 包含計算屬性的欄位路徑。 此路徑位於 `properties` 屬性，且「不應」在路徑中包含欄位名稱。 寫入路徑時，忽略 `properties` 屬性。 |
+| `{TENANT_ID}` | 若您不熟悉租用戶ID，請參閱 [Schema Registry開發人員指南](../../xdm/api/getting-started.md#know-your-tenant_id). |
 | `description` | 計算屬性的說明。 一旦定義了多個計算屬性，這特別有用，因為它將幫助IMS組織內的其他人決定要使用的正確計算屬性。 |
-| `expression.value` | 有效的[!DNL Profile Query Language](PQL)表達式。 計算屬性當前支援以下函式：總和、計數、最小值、最大值和布林值。 有關示例表達式的清單，請參閱[示例PQL表達式](expressions.md)文檔。 |
-| `schema.name` | 包含計算屬性欄位的架構所基於的類。 範例：`_xdm.context.experienceevent`，適用於以XDM ExperienceEvent類別為基礎的結構。 |
+| `expression.value` | 有效 [!DNL Profile Query Language] (PQL)表達式。 計算屬性當前支援以下函式：總和、計數、最小值、最大值和布林值。 如需範例運算式的清單，請參閱 [PQL表達式示例](expressions.md) 檔案。 |
+| `schema.name` | 包含計算屬性欄位的架構所基於的類。 範例： `_xdm.context.experienceevent` ，以根據XDM ExperienceEvent類別的結構。 |
 
 **回應**
 
-成功建立的計算屬性返回HTTP狀態200(OK)，並返回包含新建立的計算屬性詳細資訊的響應正文。 這些詳細資訊包括唯一、只讀、系統生成的`id`，可用於在其他API操作期間參考計算的屬性。
+成功建立的計算屬性返回HTTP狀態200(OK)，並返回包含新建立的計算屬性詳細資訊的響應正文。 這些詳細資訊包括唯一、唯讀、系統產生的 `id` 可在其他API作業期間用於參考計算屬性。
 
 ```json
 {
@@ -138,17 +138,17 @@ curl -X POST \
 |---|---|
 | `id` | 唯一、唯讀、系統產生的ID，可在其他API作業期間用於參考計算的屬性。 |
 | `imsOrgId` | 與計算屬性相關的IMS組織應符合請求中傳送的值。 |
-| `sandbox` | 沙箱物件包含沙箱的詳細資訊，計算屬性是在其中設定的。 此資訊取自於請求中傳送的沙箱標題。 如需詳細資訊，請參閱[沙箱概述](../../sandboxes/home.md)。 |
-| `positionPath` | 陣列，內含已解構`path`至請求中傳送之欄位。 |
+| `sandbox` | 沙箱物件包含沙箱的詳細資訊，計算屬性是在其中設定的。 此資訊取自於請求中傳送的沙箱標題。 如需詳細資訊，請參閱 [沙箱概述](../../sandboxes/home.md). |
+| `positionPath` | 包含被解構的 `path` 至請求中傳送的欄位。 |
 | `returnSchema.meta:xdmType` | 儲存計算屬性的欄位類型。 |
 | `definedOn` | 顯示已定義計算屬性的聯合結構的陣列。 每個聯合架構包含一個對象，這表示如果計算的屬性已根據不同類添加到多個架構中，陣列中可能存在多個對象。 |
-| `active` | 顯示計算屬性當前是否處於活動狀態的布爾值。 預設值為`true`。 |
+| `active` | 顯示計算屬性當前是否處於活動狀態的布爾值。 預設情況下，值為 `true`. |
 | `type` | 建立的資源類型，在此例中，「ComputedAttribute」是預設值。 |
 | `createEpoch` 和 `updateEpoch` | 分別建立和上次更新計算屬性的時間。 |
 
 ## 建立引用現有計算屬性的計算屬性
 
-也可以建立引用現有計算屬性的計算屬性。 若要這麼做，請先向`/config/computedAttributes`端點提出POST要求。 請求內文將在`expression.value`欄位中包含對計算屬性的參考，如以下範例所示。
+也可以建立引用現有計算屬性的計算屬性。 若要這麼做，請先向 `/config/computedAttributes` 端點。 請求內文將包含對 `expression.value` 欄位，如下列範例所示。
 
 **API格式**
 
@@ -163,7 +163,7 @@ POST /config/computedAttributes
 * **`totalSpend`:** 擷取客戶已花費的總金額。
 * **`countPurchases`:** 計算客戶已進行的購買次數。
 
-以下請求引用了兩個現有的計算屬性，使用有效的PQL進行劃分，以計算新的`averageSpend`計算屬性。
+以下請求會參考兩個現有的計算屬性，使用有效的PQL進行除以計算新屬性 `averageSpend` 計算屬性。
 
 ```shell
 curl -X POST \
@@ -174,13 +174,13 @@ curl -X POST \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '{
-        "name" : "averageSpend",
-        "path" : "_{TENANT_ID}.purchaseSummary",
-        "description" : "Computed attribute to capture the average dollar amount that a customer spends on each purchase.",
-        "expression" : {
-            "type" : "PQL", 
-            "format" : "pql/text", 
-            "value":  "_{TENANT_ID}.purchaseSummary.totalSpend/_{TENANT_ID}.purchaseSummary.countPurchases"
+        "name": "averageSpend",
+        "path": "_{TENANT_ID}.purchaseSummary",
+        "description": "Computed attribute to capture the average dollar amount that a customer spends on each purchase.",
+        "expression": {
+            "type": "PQL", 
+            "format": "pql/text", 
+            "value": "_{TENANT_ID}.purchaseSummary.totalSpend/_{TENANT_ID}.purchaseSummary.countPurchases"
         },
         "schema": 
           {
@@ -193,15 +193,15 @@ curl -X POST \
 | 屬性 | 說明 |
 |---|---|
 | `name` | 計算屬性欄位的名稱，作為字串。 |
-| `path` | 包含計算屬性的欄位路徑。 此路徑位於架構的`properties`屬性內，「不應」在路徑中包含欄位名稱。 寫入路徑時，忽略`properties`屬性的多個級別。 |
-| `{TENANT_ID}` | 若您不熟悉租用戶ID，請參閱[Schema Registry開發人員指南](../../xdm/api/getting-started.md#know-your-tenant_id)中尋找租用戶ID的步驟。 |
+| `path` | 包含計算屬性的欄位路徑。 此路徑位於 `properties` 屬性，且「不應」在路徑中包含欄位名稱。 寫入路徑時，忽略 `properties` 屬性。 |
+| `{TENANT_ID}` | 若您不熟悉租用戶ID，請參閱 [Schema Registry開發人員指南](../../xdm/api/getting-started.md#know-your-tenant_id). |
 | `description` | 計算屬性的說明。 一旦定義了多個計算屬性，這特別有用，因為它將幫助IMS組織內的其他人決定要使用的正確計算屬性。 |
-| `expression.value` | 有效的PQL表達式。 計算屬性當前支援以下函式：總和、計數、最小值、最大值和布林值。 有關示例表達式的清單，請參閱[示例PQL表達式](expressions.md)文檔。<br/><br/>在此示例中，表達式引用兩個現有的計算屬性。使用計算屬性的`path`和`name`引用屬性，如在定義計算屬性的架構中所顯示。 例如，第一個引用的計算屬性的`path`為`_{TENANT_ID}.purchaseSummary`，而`name`為`totalSpend`。 |
-| `schema.name` | 包含計算屬性欄位的架構所基於的類。 範例：`_xdm.context.experienceevent`，適用於以XDM ExperienceEvent類別為基礎的結構。 |
+| `expression.value` | 有效的PQL表達式。 計算屬性當前支援以下函式：總和、計數、最小值、最大值和布林值。 如需範例運算式的清單，請參閱 [PQL表達式示例](expressions.md) 檔案。<br/><br/>在此示例中，表達式引用兩個現有的計算屬性。 系統會使用 `path` 和 `name` 在定義計算屬性的架構中顯示的計算屬性。 例如， `path` 第一個引用的計算屬性為 `_{TENANT_ID}.purchaseSummary` 和 `name` is `totalSpend`. |
+| `schema.name` | 包含計算屬性欄位的架構所基於的類。 範例： `_xdm.context.experienceevent` ，以根據XDM ExperienceEvent類別的結構。 |
 
 **回應**
 
-成功建立的計算屬性返回HTTP狀態200(OK)，並返回包含新建立的計算屬性詳細資訊的響應正文。 這些詳細資訊包括唯一、只讀、系統生成的`id`，可用於在其他API操作期間參考計算的屬性。
+成功建立的計算屬性返回HTTP狀態200(OK)，並返回包含新建立的計算屬性詳細資訊的響應正文。 這些詳細資訊包括唯一、唯讀、系統產生的 `id` 可在其他API作業期間用於參考計算屬性。
 
 ```json
 {
@@ -220,9 +220,9 @@ curl -X POST \
         "purchaseSummary"
     ],
     "description": "Computed attribute to capture the average dollar amount that a customer spends on each purchase.",
-    "expression" : {
-            "type" : "PQL", 
-            "format" : "pql/text", 
+    "expression": {
+            "type": "PQL", 
+            "format": "pql/text", 
             "value":  "_{TENANT_ID}.purchaseSummary.totalSpend/_{TENANT_ID}.purchaseSummary.countPurchases"
     },
     "schema": {
@@ -266,26 +266,26 @@ curl -X POST \
 |---|---|
 | `id` | 唯一、唯讀、系統產生的ID，可在其他API作業期間用於參考計算的屬性。 |
 | `imsOrgId` | 與計算屬性相關的IMS組織應符合請求中傳送的值。 |
-| `sandbox` | 沙箱物件包含沙箱的詳細資訊，計算屬性是在其中設定的。 此資訊取自於請求中傳送的沙箱標題。 如需詳細資訊，請參閱[沙箱概述](../../sandboxes/home.md)。 |
-| `positionPath` | 陣列，內含已解構`path`至請求中傳送之欄位。 |
+| `sandbox` | 沙箱物件包含沙箱的詳細資訊，計算屬性是在其中設定的。 此資訊取自於請求中傳送的沙箱標題。 如需詳細資訊，請參閱 [沙箱概述](../../sandboxes/home.md). |
+| `positionPath` | 包含被解構的 `path` 至請求中傳送的欄位。 |
 | `returnSchema.meta:xdmType` | 儲存計算屬性的欄位類型。 |
 | `definedOn` | 顯示已定義計算屬性的聯合結構的陣列。 每個聯合架構包含一個對象，這表示如果計算的屬性已根據不同類添加到多個架構中，陣列中可能存在多個對象。 |
-| `active` | 顯示計算屬性當前是否處於活動狀態的布爾值。 預設值為`true`。 |
+| `active` | 顯示計算屬性當前是否處於活動狀態的布爾值。 預設情況下，值為 `true`. |
 | `type` | 建立的資源類型，在此例中，「ComputedAttribute」是預設值。 |
 | `createEpoch` 和 `updateEpoch` | 分別建立和上次更新計算屬性的時間。 |
 
 ## 訪問計算屬性
 
-使用API處理計算屬性時，有兩個選項可存取您的組織已定義的計算屬性。 第一個是列出所有計算屬性，第二個是按其唯一`id`查看特定計算屬性。
+使用API處理計算屬性時，有兩個選項可存取您的組織已定義的計算屬性。 第一個是列出所有計算屬性，第二個是按其唯一查看特定計算屬性 `id`.
 
 本檔案中概述了兩種存取模式的步驟。 選取下列其中一項以開始：
 
-* **[列出所有現有的計算屬性](#list-all-computed-attributes):** 傳回您的組織已建立的所有現有計算屬性的清單。
-* **[檢視特定計算屬性](#view-a-computed-attribute):** 在請求期間指定ID，以傳回單一計算屬性的詳細資訊。
+* **[列出所有現有的計算屬性](#list-all-computed-attributes):** 返回您的組織已建立的所有現有計算屬性的清單。
+* **[查看特定計算屬性](#view-a-computed-attribute):** 在請求期間指定ID，以傳回單一計算屬性的詳細資訊。
 
 ### 列出所有計算屬性 {#list-all-computed-attributes}
 
-您的IMS組織可以建立多個計算屬性，並對`/config/computedAttributes`端點執行GET請求，允許您列出組織的所有現有計算屬性。
+您的IMS組織可以建立多個計算屬性，並對 `/config/computedAttributes` 端點可讓您列出組織的所有現有計算屬性。
 
 **API格式**
 
@@ -306,9 +306,9 @@ curl -X GET \
 
 **回應**
 
-成功的響應包括`_page`屬性，該屬性提供計算屬性的總數(`totalCount`)和頁面上的計算屬性的數(`pageSize`)。
+成功的回應包含 `_page` 提供計算屬性總數的屬性(`totalCount`)和頁面上的計算屬性數(`pageSize`)。
 
-該響應還包括由一個或多個對象組成的`children`陣列，每個對象包含一個計算屬性的詳細資訊。 如果您的組織沒有任何計算屬性，則`totalCount`和`pageSize`將為0（零），而`children`陣列將為空。
+回應也包含 `children` 由一個或多個對象組成的陣列，每個對象都包含一個計算屬性的詳細資訊。 如果您的組織沒有任何計算屬性，則 `totalCount` 和 `pageSize` 將為0（零），而 `children` 陣列將為空。
 
 ```json
 {
@@ -375,8 +375,8 @@ curl -X GET \
             ],
             "description": "Calculate total product downloads.",
             "expression": {
-                "type" : "PQL", 
-                "format" : "pql/text", 
+                "type": "PQL", 
+                "format": "pql/text", 
                 "value":  "let Y = xEvent[_coresvc.event.subType = \"DOWNLOAD\"].groupBy(_coresvc.attributes[name = \"product\"].value).map({
                   \"downloaded\": this.head()._coresvc.attributes[name = \"product\"].head().value,
                   \"downloadsSum\": this.count(),
@@ -416,14 +416,14 @@ curl -X GET \
 | 屬性 | 說明 |
 |---|---|
 | `_page.totalCount` | 由您的IMS組織定義的計算屬性總數。 |
-| `_page.pageSize` | 此結果頁返回的計算屬性數。 如果`pageSize`等於`totalCount`，這表示只有一個結果頁面且已傳回所有計算屬性。 如果不相等，則可存取其他結果頁面。 有關詳細資訊，請參見`_links.next`。 |
-| `children` | 由一個或多個對象組成的陣列，每個對象都包含單個計算屬性的詳細資訊。 如果尚未定義計算屬性，`children`陣列為空。 |
-| `id` | 建立計算屬性時自動分配給該屬性的唯一隻讀系統生成值。 有關計算屬性對象的元件的詳細資訊，請參閱本教程前面關於建立計算屬性的部分[。](#create-a-computed-attribute) |
-| `_links.next` | 如果返回了計算屬性的單一頁，`_links.next`是空對象，如上面的示例響應所示。 如果您的組織有許多計算屬性，則會在您可以存取的多個頁面上傳回，方法是向`_links.next`值提出GET請求。 |
+| `_page.pageSize` | 此結果頁返回的計算屬性數。 若 `pageSize` 等於 `totalCount`，這表示只有一個結果頁面，且已傳回所有計算屬性。 如果不相等，則可存取其他結果頁面。 請參閱 `_links.next` 以取得詳細資訊。 |
+| `children` | 由一個或多個對象組成的陣列，每個對象都包含單個計算屬性的詳細資訊。 如果尚未定義計算屬性，則 `children` 陣列為空。 |
+| `id` | 建立計算屬性時自動分配給該屬性的唯一隻讀系統生成值。 有關計算屬性對象的元件的詳細資訊，請參閱 [建立計算屬性](#create-a-computed-attribute) 本教學課程的前面部分。 |
+| `_links.next` | 如果返回了計算屬性的單一頁， `_links.next` 是空白物件，如上方範例回應所示。 如果您的組織有許多計算屬性，則會在多個頁面上傳回，您可以透過向 `_links.next` 值。 |
 
 ### 查看計算屬性 {#view-a-computed-attribute}
 
-您可以向`/config/computedAttributes`端點提出GET請求，並在請求路徑中包含計算屬性ID，以查看特定的計算屬性。
+您可以向 `/config/computedAttributes` 端點，並在請求路徑中納入計算的屬性ID。
 
 **API格式**
 
@@ -494,7 +494,7 @@ curl -X GET \
 
 ## 更新計算屬性
 
-如果您發現需要更新現有的計算屬性，則可以通過向`/config/computedAttributes`端點發出PATCH請求並在請求路徑中包括要更新的計算屬性的ID來完成此操作。
+如果您發現需要更新現有的計算屬性，您可以透過向 `/config/computedAttributes` 端點，並包含您要在請求路徑中更新之計算屬性的ID。
 
 **API格式**
 
@@ -508,7 +508,7 @@ PATCH /config/computedAttributes/{ATTRIBUTE_ID}
 
 **要求**
 
-此請求使用[JSON修補程式格式](http://jsonpatch.com/)來更新「運算式」欄位的「值」。
+此請求使用 [JSON修補程式格式](http://jsonpatch.com/) 更新「運算式」欄位的「值」。
 
 ```shell
 curl -X PATCH \
@@ -524,8 +524,8 @@ curl -X PATCH \
           "path": "/expression",
           "value": 
           {
-            "type" : "PQL", 
-            "format" : "pql/text", 
+            "type": "PQL", 
+            "format": "pql/text", 
             "value":  "{NEW_EXPRESSION_VALUE}"
           }
         }
@@ -534,7 +534,7 @@ curl -X PATCH \
 
 | 屬性 | 說明 |
 |---|---|
-| `{NEW_EXPRESSION_VALUE}` | 有效的[!DNL Profile Query Language](PQL)表達式。 計算屬性當前支援以下函式：總和、計數、最小值、最大值和布林值。 有關示例表達式的清單，請參閱[示例PQL表達式](expressions.md)文檔。 |
+| `{NEW_EXPRESSION_VALUE}` | 有效 [!DNL Profile Query Language] (PQL)表達式。 計算屬性當前支援以下函式：總和、計數、最小值、最大值和布林值。 如需範例運算式的清單，請參閱 [PQL表達式示例](expressions.md) 檔案。 |
 
 **回應**
 
@@ -542,7 +542,7 @@ curl -X PATCH \
 
 ## 刪除計算的屬性
 
-您也可以使用API刪除計算的屬性。 要完成此操作，請向`/config/computedAttributes`端點發出DELETE請求，並在請求路徑中包含您要刪除的計算屬性ID。
+您也可以使用API刪除計算的屬性。 若要這麼做，請向 `/config/computedAttributes` 端點，並在請求路徑中包含您要刪除之計算屬性的ID。
 
 >[!NOTE]
 >
@@ -575,11 +575,11 @@ curl -X DELETE \
 
 ## 建立參考計算屬性的區段定義
 
-Adobe Experience Platform可讓您建立區段，從一組設定檔定義一組特定屬性或行為。 段定義包含的表達式封裝了寫入PQL的查詢。 這些運算式也可參考計算屬性。
+Adobe Experience Platform可讓您建立區段，從一組設定檔中定義一組特定屬性或行為。 段定義包含的表達式封裝了寫入PQL的查詢。 這些運算式也可參考計算屬性。
 
-下面的示例建立引用現有計算屬性的段定義。 若要進一步了解區段定義，以及如何在區段服務API中使用這些定義，請參閱[區段定義API端點指南](../../segmentation/api/segment-definitions.md)。
+下面的示例建立引用現有計算屬性的段定義。 若要進一步了解區段定義，以及如何在區段服務API中使用這些定義，請參閱 [區段定義API端點指南](../../segmentation/api/segment-definitions.md).
 
-若要開始，請向`/segment/definitions`端點提出POST請求，並在請求正文中提供計算屬性。
+若要開始，請向 `/segment/definitions` 端點，在請求內文中提供計算屬性。
 
 **API格式**
 
@@ -619,17 +619,17 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/definitions
 | -------- | ----------- |
 | `name` | 區段的唯一名稱，作為字串。 |
 | `description` | 人類看得懂的定義說明。 |
-| `schema.name` | 與區段中的實體相關聯的架構。 包含`id`或`name`欄位。 |
+| `schema.name` | 與區段中的實體相關聯的架構。 包含 `id` 或 `name` 欄位。 |
 | `expression` | 包含欄位的物件，內含區段定義的相關資訊。 |
 | `expression.type` | 指定運算式類型。 目前僅支援「PQL」。 |
-| `expression.format` | 指示值中表達式的結構。 目前僅支援`pql/text`。 |
+| `expression.format` | 指示值中表達式的結構。 目前，僅 `pql/text` 支援。 |
 | `expression.value` | 有效的PQL表達式，在此示例中，它包含對現有計算屬性的引用。 |
 
-有關架構定義屬性的詳細資訊，請參閱[區段定義API端點指南](../../segmentation/api/segment-definitions.md)中提供的範例。
+如需結構定義屬性的詳細資訊，請參閱 [區段定義API端點指南](../../segmentation/api/segment-definitions.md).
 
 **回應**
 
-成功的回應會傳回HTTP狀態200，並包含您新建立之區段定義的詳細資訊。 若要深入了解區段定義回應物件，請參閱[區段定義API端點指南](../../segmentation/api/segment-definitions.md)。
+成功的回應會傳回HTTP狀態200，並包含您新建立之區段定義的詳細資訊。 若要進一步了解區段定義回應物件，請參閱 [區段定義API端點指南](../../segmentation/api/segment-definitions.md).
 
 ```json
 {

@@ -5,7 +5,7 @@ title: 輸入和輸出(在Attribution AI中)
 topic-legacy: Input and Output data for Attribution AI
 description: 以下文檔概述了Attribution AI中使用的不同輸入和輸出。
 exl-id: d6dbc9ee-0c1a-4a5f-b922-88c7a36a5380
-source-git-commit: 9023019ed8a781f9ae3965adab875cf2244f55a9
+source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
 workflow-type: tm+mt
 source-wordcount: '2268'
 ht-degree: 3%
@@ -87,7 +87,7 @@ Attribution AI需要歷史資料作為模型訓練的輸入。 所需的資料�
 >
 > 具有預設配置的應用程式所需的資料的最小長度為：2個季度（180天）+ 56天= 236天。
 
-範例 :
+範例：
 
 - 您想要歸因過去90天（3個月）內發生的轉換事件，並追蹤轉換事件前4週內發生的所有接觸點。 輸入資料的持續時間應會跨越過去90天+ 28天（4週）。 培訓期間為90天，回顧期間為28天，總計為118天。
 

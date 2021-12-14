@@ -6,7 +6,7 @@ description: 本檔案說明如何使用Adobe Experience Platform API建立電�
 topic-legacy: tutorial
 type: Tutorial
 exl-id: 41fd295d-7cda-4ab1-a65e-b47e6c485562
-source-git-commit: b4291b4f13918a1f85d73e0320c67dd2b71913fc
+source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
 workflow-type: tm+mt
 source-wordcount: '1701'
 ht-degree: 1%
@@ -15,21 +15,21 @@ ht-degree: 1%
 
 # 使用流量服務API連線至電子郵件行銷目的地並啟用資料
 
-本教學課程示範如何使用API呼叫連線至您的Adobe Experience Platform資料、建立[電子郵件行銷目的地](../catalog/email-marketing/overview.md)、建立資料流至新建立的目的地，以及啟用資料至新建立的目的地。
+本教學課程示範如何使用API呼叫來連線至Adobe Experience Platform資料，並建立 [電子郵件行銷目的地](../catalog/email-marketing/overview.md)，建立資料流到新建立的目標，並激活資料到新建立的目標。
 
 本教學課程在所有範例中都使用Adobe Campaign目的地，但所有電子郵件行銷目的地的步驟都相同。
 
 ![概述 — 建立目的地和啟用區段的步驟](../assets/api/email-marketing/overview.png)
 
-如果您偏好使用Platform中的使用者介面來連線目的地並啟用資料，請參閱[連線目的地](../ui/connect-destination.md)和[啟用對象資料至批次設定檔匯出目的地](../ui/activate-batch-profile-destinations.md)教學課程。
+如果您偏好使用Platform中的使用者介面來連線目的地並啟用資料，請參閱 [連接目標](../ui/connect-destination.md) 和 [啟用受眾資料以批次設定檔匯出目的地](../ui/activate-batch-profile-destinations.md) 教學課程。
 
 ## 開始使用
 
 本指南需要妥善了解下列Adobe Experience Platform元件：
 
-* [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md):組織客戶體驗資 [!DNL Experience Platform] 料的標準化架構。
-* [[!DNL Catalog Service]](../../catalog/home.md): [!DNL Catalog] 是內用於資料位置和世系的記錄系 [!DNL Experience Platform]統。
-* [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform] 提供可將單一執行個體分割成個 [!DNL Platform] 別虛擬環境的虛擬沙箱，以協助開發及改進數位體驗應用程式。
+* [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md):標準化框架 [!DNL Experience Platform] 組織客戶體驗資料。
+* [[!DNL Catalog Service]](../../catalog/home.md): [!DNL Catalog] 是內用於資料位置和世系的記錄系統 [!DNL Experience Platform].
+* [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform] 提供可分割單一沙箱的虛擬沙箱 [!DNL Platform] 例項放入個別的虛擬環境，以協助開發及改進數位體驗應用程式。
 
 以下小節提供您需要了解的其他資訊，以便在Platform中啟用資料至電子郵件行銷目的地。
 
@@ -37,28 +37,28 @@ ht-degree: 1%
 
 若要完成本教學課程中的步驟，您應根據您要連線和啟用區段的目的地類型，備妥下列憑證。
 
-* 對於[!DNL Amazon]電子郵件行銷平台的S3連線：`accessId`, `secretKey`
-* 若要將SFTP連線連線至電子郵件行銷平台：`domain`、`port`、`username`、`password`或`ssh key`（視連線至FTP位置的方法而定）
+* 針對 [!DNL Amazon] S3與電子郵件行銷平台的連線： `accessId`, `secretKey`
+* 若要將SFTP連線連線至電子郵件行銷平台： `domain`, `port`, `username`, `password` 或 `ssh key` （視連線至FTP位置的方法而定）
 
 ### 讀取範例API呼叫
 
-本教學課程提供範例API呼叫，以示範如何設定要求格式。 這些功能包括路徑、必要標題和格式正確的請求裝載。 也提供API回應中傳回的範例JSON。 如需範例API呼叫檔案中所使用慣例的資訊，請參閱[!DNL Experience Platform]疑難排解指南中[如何讀取範例API呼叫](../../landing/troubleshooting.md#how-do-i-format-an-api-request)一節。
+本教學課程提供範例API呼叫，以示範如何設定要求格式。 這些功能包括路徑、必要標題和格式正確的請求裝載。 也提供API回應中傳回的範例JSON。 如需範例API呼叫檔案中所使用慣例的相關資訊，請參閱 [如何閱讀API呼叫範例](../../landing/troubleshooting.md#how-do-i-format-an-api-request) 在 [!DNL Experience Platform] 疑難排解指南。
 
 ### 收集必要和選用標題的值
 
-若要呼叫[!DNL Platform] API，您必須先完成[authentication tutorial](https://www.adobe.com/go/platform-api-authentication-en)。 完成驗證教學課程後，將提供所有[!DNL Experience Platform] API呼叫中每個必要標題的值，如下所示：
+若要對 [!DNL Platform] API，您必須先完成 [驗證教學課程](https://www.adobe.com/go/platform-api-authentication-en). 完成驗證教學課程會提供所有 [!DNL Experience Platform] API呼叫，如下所示：
 
-* 授權：承載`{ACCESS_TOKEN}`
+* 授權：承載 `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
 * x-gw-ims-org-id: `{IMS_ORG}`
 
-[!DNL Experience Platform]中的資源可以隔離至特定虛擬沙箱。 在[!DNL Platform] API的請求中，您可以指定要執行操作之沙箱的名稱和ID。 這些是選用參數。
+資源 [!DNL Experience Platform] 可隔離至特定虛擬沙箱。 在 [!DNL Platform] API，您可以指定要進行操作之沙箱的名稱和ID。 這些是選用參數。
 
 * x-sandbox-name: `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
->如需[!DNL Experience Platform]中沙箱的詳細資訊，請參閱[沙箱概觀檔案](../../sandboxes/home.md)。
+>如需中沙箱的詳細資訊，請參閱 [!DNL Experience Platform]，請參閱 [沙箱概述檔案](../../sandboxes/home.md).
 
 所有包含裝載(POST、PUT、PATCH)的請求都需要其他媒體類型標題：
 
@@ -66,13 +66,13 @@ ht-degree: 1%
 
 ### Swagger檔案
 
-您可以在Swagger中找到本教學課程中所有API呼叫的隨附參考檔案。 請參閱[Adobe I/O](https://www.adobe.io/experience-platform-apis/references/flow-service/)上的流量服務API檔案。 建議您同時使用本教學課程和Swagger檔案頁面。
+您可以在Swagger中找到本教學課程中所有API呼叫的隨附參考檔案。 請參閱 [Adobe I/O上的流量服務API檔案](https://www.adobe.io/experience-platform-apis/references/flow-service/). 建議您同時使用本教學課程和Swagger檔案頁面。
 
 ## 取得可用目的地的清單 {#get-the-list-of-available-destinations}
 
 ![目標步驟概述步驟1](../assets/api/email-marketing/step1.png)
 
-首先，您應決定要啟用資料的電子郵件行銷目的地。 若要開始使用，請執行呼叫，以要求可供連線及啟用區段的可用目的地清單。 向`connectionSpecs`端點執行以下GET請求以返回可用目的地清單：
+首先，您應決定要啟用資料的電子郵件行銷目的地。 若要開始使用，請執行呼叫，以要求可供連線及啟用區段的可用目的地清單。 對執行下列GET要求 `connectionSpecs` 端點，返回可用目的地清單：
 
 **API格式**
 
@@ -120,17 +120,17 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 }
 ```
 
-## 連接到[!DNL Experience Platform]資料 {#connect-to-your-experience-platform-data}
+## 連線至您的 [!DNL Experience Platform] 資料 {#connect-to-your-experience-platform-data}
 
 ![目標步驟概述步驟2](../assets/api/email-marketing/step2.png)
 
-接下來，您必須連線至您的[!DNL Experience Platform]資料，以便匯出設定檔資料並在您偏好的目的地啟用它。 這包含兩個子步驟，如下所述。
+接下來，您必須連線至 [!DNL Experience Platform] 資料，以便您匯出設定檔資料，並在您偏好的目的地啟用它。 這包含兩個子步驟，如下所述。
 
-1. 首先，您必須通過設定基本連接來執行呼叫，以授權[!DNL Experience Platform]中對資料的訪問。
-2. 然後，使用基本連接ID，將進行另一個呼叫，在其中建立源連接，該連接將建立與[!DNL Experience Platform]資料的連接。
+1. 首先，您必須執行呼叫，以授權存取 [!DNL Experience Platform]，方法是設定基本連線。
+2. 然後，使用基本連線ID，您將進行另一個呼叫，在其中建立源連接，從而建立與您的 [!DNL Experience Platform] 資料。
 
 
-### 授權[!DNL Experience Platform]中的資料存取權
+### 授權存取 [!DNL Experience Platform]
 
 **API格式**
 
@@ -182,11 +182,11 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 ```
 
 
-* `{CONNECTION_SPEC_ID}`:使用配置檔案服務的連接規範ID  `8a9c3494-9708-43d7-ae3f-cda01e5030e1`。
+* `{CONNECTION_SPEC_ID}`:使用配置檔案服務的連接規範ID - `8a9c3494-9708-43d7-ae3f-cda01e5030e1`.
 
 **回應**
 
-成功的響應包含基本連接的唯一標識符(`id`)。 在下一步建立源連接時，按需要儲存此值。
+成功的回應包含基本連線的唯一識別碼(`id`)。 在下一步建立源連接時，按需要儲存此值。
 
 ```json
 {
@@ -194,7 +194,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 }
 ```
 
-### 連接到[!DNL Experience Platform]資料 {#connect-to-platform-data}
+### 連線至您的 [!DNL Experience Platform] 資料 {#connect-to-platform-data}
 
 **API格式**
 
@@ -251,16 +251,16 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
                 "format": "CSV",
                 "schema": null
             },
-            "params" : {}
+            "params": {}
 }'
 ```
 
 * `{BASE_CONNECTION_ID}`:使用您在上一步中取得的ID。
-* `{CONNECTION_SPEC_ID}`:將連接規範ID用 [!DNL Profile Service] 於 —  `8a9c3494-9708-43d7-ae3f-cda01e5030e1`。
+* `{CONNECTION_SPEC_ID}`:使用的連接規範ID [!DNL Profile Service] - `8a9c3494-9708-43d7-ae3f-cda01e5030e1`.
 
 **回應**
 
-成功的響應返回新建立的源連接到[!DNL Profile Service]的唯一標識符(`id`)。 這可確認您已成功連接[!DNL Experience Platform]資料。 在後續步驟中，視需要儲存此值。
+成功的回應會傳回唯一識別碼(`id`)，將新建立的來源連線 [!DNL Profile Service]. 這可確認您已成功連線至 [!DNL Experience Platform] 資料。 在後續步驟中，視需要儲存此值。
 
 ```json
 {
@@ -343,14 +343,14 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 }'
 ```
 
-* `{CONNECTION_SPEC_ID}`:使用在獲取可用目的地清單中 [獲得的連接規範ID](#get-the-list-of-available-destinations)。
-* `{S3 or SFTP}`:填寫此目的地所需的連線類型。在[目的地目錄](../catalog/overview.md)中，捲動至您偏好的目的地，查看是否支援S3和/或SFTP連線類型。
-* `{ACCESS_ID}`:S3儲存位置 [!DNL Amazon] 的存取ID。
-* `{SECRET_KEY}`:S3儲存位置的 [!DNL Amazon] 機密金鑰。
+* `{CONNECTION_SPEC_ID}`:使用在步驟中獲得的連接規範ID [取得可用目的地的清單](#get-the-list-of-available-destinations).
+* `{S3 or SFTP}`:填寫此目的地所需的連線類型。 在 [目的地目錄](../catalog/overview.md)，捲動至您偏好的目的地，查看是否支援S3和/或SFTP連線類型。
+* `{ACCESS_ID}`:您的 [!DNL Amazon] S3儲存位置。
+* `{SECRET_KEY}`:你的秘鑰 [!DNL Amazon] S3儲存位置。
 
 **回應**
 
-成功的響應包含基本連接的唯一標識符(`id`)。 在下一步建立目標連線時，視需要儲存此值。
+成功的回應包含基本連線的唯一識別碼(`id`)。 在下一步建立目標連線時，視需要儲存此值。
 
 ```json
 {
@@ -360,13 +360,13 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 ### 指定儲存位置和資料格式
 
-[!DNL Adobe Experience Platform] 以檔案形式匯出電子郵件行銷和雲端儲存目的地的 [!DNL CSV] 資料。
+[!DNL Adobe Experience Platform] 以 [!DNL CSV] 檔案。
 
 >[!IMPORTANT]
 > 
->[!DNL Adobe Experience Platform] 會自動分割每個檔案500萬筆記錄（列）的匯出檔案。每一列代表一個設定檔。
+>[!DNL Adobe Experience Platform] 會自動分割每個檔案500萬筆記錄（列）的匯出檔案。 每一列代表一個設定檔。
 >
->拆分檔案名後附加一個數字，表示該檔案是較大導出的一部分，例如：`filename.csv`、`filename_2.csv`、`filename_3.csv`。
+>拆分檔案名後附加一個數字，表示該檔案是較大導出的一部分，例如： `filename.csv`, `filename_2.csv`, `filename_3.csv`.
 
 **API格式**
 
@@ -441,13 +441,13 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 ```
 
 * `{BASE_CONNECTION_ID}`:使用您在上述步驟中取得的基本連線ID。
-* `{CONNECTION_SPEC_ID}`:使用在獲取可用目的地清單 [中獲得的連接規格](#get-the-list-of-available-destinations)。
-* `{BUCKETNAME}`:您 [!DNL Amazon] 的S3貯體，Platform會將資料匯出存放於此處。
-* `{FILEPATH}`:Platform將存放 [!DNL Amazon] 資料匯出的S3儲存貯體目錄中的路徑。
+* `{CONNECTION_SPEC_ID}`:使用在步驟中獲得的連接規範 [取得可用目的地的清單](#get-the-list-of-available-destinations).
+* `{BUCKETNAME}`:您的 [!DNL Amazon] S3貯體，Platform會在此存放資料匯出。
+* `{FILEPATH}`:您 [!DNL Amazon] Platform將存放資料匯出的S3貯體目錄。
 
 **回應**
 
-成功的回應會傳回新建立之目標連線的唯一識別碼(`id`)，以連線至您的電子郵件行銷目的地。 在後續步驟中，視需要儲存此值。
+成功的回應會傳回唯一識別碼(`id`)，以取得新建立的目標連線，以利您的電子郵件行銷目的地。 在後續步驟中，視需要儲存此值。
 
 ```json
 {
@@ -459,7 +459,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 ![目標步驟概述步驟4](../assets/api/email-marketing/step4.png)
 
-您現在可以使用在前述步驟中取得的ID，在[!DNL Experience Platform]資料和要啟用資料的目標之間建立資料流。 請將此步驟想像為建構管道，資料稍後會透過管道在[!DNL Experience Platform]和您想要的目的地之間流動。
+您現在可以使用在前述步驟中取得的ID，在 [!DNL Experience Platform] 資料和您要啟用資料的目的地。 將此步驟想像為建構管道，資料稍後會透過管道在 [!DNL Experience Platform] 和你的目的地。
 
 若要建立資料流，請執行POST請求，如下所示，同時在裝載中提供以下提及的值。
 
@@ -511,13 +511,13 @@ curl -X POST \
     }
 ```
 
-* `{FLOW_SPEC_ID}`:使用您要連線之電子郵件行銷目的地的流程。要獲取流規範，請對`flowspecs`端點執行GET操作。 請參閱以下的Swagger檔案：https://platform.adobe.io/data/foundation/flowservice/swagger#/Flow%20Specs%20API/getFlowSpecs。 在回應中，尋找`upsTo`並複製您要連線之電子郵件行銷目的地的對應ID。 例如，若為Adobe Campaign，請尋找`upsToCampaign`並複製`id`參數。
-* `{SOURCE_CONNECTION_ID}`:使用在「連線至您的Experience Platform」步驟中 [取得的來源連線ID](#connect-to-your-experience-platform-data)。
-* `{TARGET_CONNECTION_ID}`:使用您在連線至電子郵件行銷目的地 [步驟中取得的目標連線ID](#connect-to-email-marketing-destination)。
+* `{FLOW_SPEC_ID}`:使用您要連線之電子郵件行銷目的地的流程。 要獲取流規格，請對 `flowspecs` 端點。 請參閱以下的Swagger檔案：https://platform.adobe.io/data/foundation/flowservice/swagger#/Flow%20Specs%20API/getFlowSpecs。 在回應中，尋找 `upsTo` 並複製您要連線之電子郵件行銷目的地的對應ID。 例如，若為Adobe Campaign，請尋找 `upsToCampaign` 並複製 `id` 參數。
+* `{SOURCE_CONNECTION_ID}`:使用在步驟中獲得的源連接ID [連線至您的Experience Platform](#connect-to-your-experience-platform-data).
+* `{TARGET_CONNECTION_ID}`:使用您在步驟中取得的目標連線ID [連線至電子郵件行銷目的地](#connect-to-email-marketing-destination).
 
 **回應**
 
-成功的響應返回新建立的資料流的ID(`id`)和`etag`。 請記下這兩個值。 如同您在下一步中啟動區段時一樣。
+成功的回應會傳回ID(`id`)和 `etag`. 請記下這兩個值。 如同您在下一步中啟動區段時一樣。
 
 ```json
 {
@@ -533,7 +533,7 @@ curl -X POST \
 
 建立了所有連線和資料流程後，您就可以將設定檔資料啟用至電子郵件行銷平台。 在此步驟中，您可以選取要傳送至目的地的區段以及設定檔屬性，並可排程及傳送資料至目的地。
 
-若要將區段啟用至新目的地，您必須執行JSONPATCH作業，如下列範例所示。 您可以在一個呼叫中啟用多個區段和設定檔屬性。 若要深入了解JSONPATCH，請參閱[RFC規格](https://tools.ietf.org/html/rfc6902)。
+若要將區段啟用至新目的地，您必須執行JSONPATCH作業，如下列範例所示。 您可以在一個呼叫中啟用多個區段和設定檔屬性。 若要深入了解JSONPATCH，請參閱 [RFC規範](https://tools.ietf.org/html/rfc6902).
 
 **API格式**
 
@@ -592,7 +592,7 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 
 * `{DATAFLOW_ID}`:使用您在上一步驟中取得的資料流。
 * `{ETAG}`:使用您在上一步驟中取得的標籤。
-* `{SEGMENT_ID}`:提供您要匯出至此目的地的區段ID。若要擷取您要啟用之區段的區段ID，請前往&#x200B;**https://www.adobe.io/apis/experienceplatform/home/api-reference.html#/**，在左側導覽功能表中選取&#x200B;**[!UICONTROL 分段服務API]**，然後在&#x200B;**[!UICONTROL 區段定義]**&#x200B;中尋找`GET /segment/definitions`操作。
+* `{SEGMENT_ID}`:提供您要匯出至此目的地的區段ID。 若要擷取您要啟用之區段的區段ID，請前往 **https://www.adobe.io/apis/experienceplatform/home/api-reference.html#/**，選取 **[!UICONTROL 區段服務API]** 在左側導覽功能表中，並尋找 `GET /segment/definitions` 操作 **[!UICONTROL 區段定義]**.
 * `{PROFILE_ATTRIBUTE}`: 例如, `"person.lastName"`
 
 **回應**
@@ -630,7 +630,7 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 
 **回應**
 
-傳回的回應應包含在`transformations`參數中，亦即您在上一步驟中提交的區段和設定檔屬性。 回應中的範例`transformations`參數可能如下所示：
+傳回的回應應包含在 `transformations` 參數您在上一步驟中提交的區段和設定檔屬性。 範例 `transformations` 回應中的參數可能如下所示：
 
 ```json
 "transformations": [

@@ -6,7 +6,7 @@ description: 本檔案說明如何使用Adobe Experience Platform API建立串�
 topic-legacy: tutorial
 type: Tutorial
 exl-id: 3e8d2745-8b83-4332-9179-a84d8c0b4400
-source-git-commit: 2b1cde9fc913be4d3bea71e7d56e0e5fe265a6be
+source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
 workflow-type: tm+mt
 source-wordcount: '2021'
 ht-degree: 2%
@@ -56,7 +56,7 @@ ht-degree: 2%
 * x-api-key: `{API_KEY}`
 * x-gw-ims-org-id: `{IMS_ORG}`
 
-Experience Platform中的資源可以隔離至特定虛擬沙箱。 在向Platform API提出的請求中，您可以指定要執行操作之沙箱的名稱和ID。 這些是選用參數。
+Experience Platform中的資源可以隔離至特定的虛擬沙箱。 在向Platform API提出的請求中，您可以指定要執行操作之沙箱的名稱和ID。 這些是選用參數。
 
 * x-sandbox-name: `{SANDBOX_NAME}`
 
@@ -194,7 +194,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
             "data": {
                 "format": "json"
             },
-            "params" : {}
+            "params": {}
 }'
 ```
 
@@ -610,7 +610,7 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 
 ### 如何使用Postman集合
 
-若要使用附加的 [!DNL Postman] 集合，請遵循下列步驟：
+若要使用附加的成功連線至目的地 [!DNL Postman] 集合，請遵循下列步驟：
 
 * 下載並安裝 [!DNL Postman];
 * [下載](../assets/api/streaming-destination/DestinationPostmanCollection.zip) 並解壓縮附加的集合；

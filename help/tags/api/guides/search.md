@@ -1,7 +1,8 @@
 ---
 title: 在Reactor API中搜尋資源
 description: 了解如何在Reactor API中搜尋資源。
-source-git-commit: 59592154eeb8592fa171b5488ecb0385e0e59f39
+exl-id: cb594e60-3e24-457e-bfb3-78ec84d3e39a
+source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
 workflow-type: tm+mt
 source-wordcount: '260'
 ht-degree: 0%
@@ -10,11 +11,11 @@ ht-degree: 0%
 
 # 在Reactor API中搜尋資源
 
-Reactor API中的`/search`端點可讓您對儲存的資源進行結構化查詢。 本檔案針對各種常見使用案例提供不同搜尋查詢的範例。
+此 `/search` reactor API中的端點可讓您對儲存的資源進行結構化查詢。 本檔案針對各種常見使用案例提供不同搜尋查詢的範例。
 
 >[!NOTE]
 >
->閱讀本指南之前，請參閱[search endpoint guide](../endpoints/search.md) ，了解接受的查詢語法和其他使用指南。
+>閱讀本指南之前，請參閱 [search endpoint指南](../endpoints/search.md) 以取得接受的查詢語法和其他使用准則的資訊。
 
 ## 基本查詢策略
 
@@ -22,11 +23,11 @@ Reactor API中的`/search`端點可讓您對儲存的資源進行結構化查詢
 
 ### 跨多個欄位搜尋
 
-在欄位名稱中使用萬用字元，即可在多個欄位間執行搜尋。 例如，要跨多個屬性欄位進行搜索，請使用`attributes.*`作為欄位名稱。
+在欄位名稱中使用萬用字元，即可在多個欄位間執行搜尋。 例如，若要跨多個屬性欄位搜尋，請使用 `attributes.*` 作為欄位名稱。
 
 ```json
 {
-  "data" : {
+  "data": {
     "query": {
       "attributes.*": {
         "value": "evar7"
@@ -38,15 +39,15 @@ Reactor API中的`/search`端點可讓您對儲存的資源進行結構化查詢
 
 >[!IMPORTANT]
 >
->通常，搜尋值必須符合要搜尋的資料類型。 例如，針對整數欄位的查詢值`evar7`將會失敗。 在多個欄位間搜尋時，查詢類型要求會較寬，以避免錯誤，但可能會產生不適當的結果。
+>通常，搜尋值必須符合要搜尋的資料類型。 例如，查詢值為 `evar7` 針對整數欄位會失敗。 在多個欄位間搜尋時，查詢類型要求會較寬，以避免錯誤，但可能會產生不適當的結果。
 
 ### 對特定資源類型的作用域查詢
 
-您可以在請求中提供`resource_types`，將搜索範圍限定為特定資源類型。 例如，要跨`data_elements`和`rule_components`進行搜索：
+您可以提供 `resource_types` 中。 例如，若要跨 `data_elements`，和 `rule_components`:
 
 ```json
 {
-  "data" : {
+  "data": {
     "from": 0,
     "size": 25,
     "query": {
@@ -64,11 +65,11 @@ Reactor API中的`/search`端點可讓您對儲存的資源進行結構化查詢
 
 ### 排序回應
 
-`sort`屬性可用於排序回應。 例如，若要依`created_at`排序，請以最新優先：
+此 `sort` 屬性可用來排序回應。 例如，若要依 `created_at` 最新優先：
 
 ```json
 {
-  "data" : {
+  "data": {
     "from": 0,
     "size": 25,
     "query": {
@@ -104,7 +105,7 @@ curl -X POST \
   -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1' \
   -d '{
-        "data" : {
+        "data": {
           "query": {
             "attributes.name": {
               "value": "Adobe"
@@ -125,7 +126,7 @@ curl -X POST \
   -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1' \
   -d '{
-        "data" : {
+        "data": {
           "query": {
             "attributes.*": {
               "value": "evar7"
@@ -146,7 +147,7 @@ curl -X POST \
   -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1' \
   -d '{
-        "data" : {
+        "data": {
           "query": {
             "attributes.delegate_descriptor_id": {
               "value": "custom-code"
@@ -168,7 +169,7 @@ curl -X POST \
   -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1' \
   -d '{
-        "data" : {
+        "data": {
           "query": {
             "attributes.settings": {
               "value": "myDataElement8"
@@ -190,7 +191,7 @@ curl -X POST \
   -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1' \
   -d '{
-        "data" : {
+        "data": {
           "query": {
             "relationships.property.data.id": {
               "value": "PR3cab070a9eb3423894e4a3038ef0e7b7"
@@ -212,7 +213,7 @@ curl -X POST \
   -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1' \
   -d '{
-        "data" : {
+        "data": {
           "query": {
             "id": {
               "value": "PR3cab070a9eb3423894e4a3038ef0e7b7"
@@ -233,7 +234,7 @@ curl -X POST \
   -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1' \
   -d '{
-        "data" : {
+        "data": {
           "query": {
             "attributes.display_name": {
               "value": "My Rule Holiday Sale",

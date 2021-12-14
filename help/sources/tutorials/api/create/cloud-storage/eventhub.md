@@ -6,7 +6,7 @@ topic-legacy: overview
 type: Tutorial
 description: 了解如何使用流量服務API將Adobe Experience Platform連線至Azure事件中心帳戶。
 exl-id: a4d0662d-06e3-44f3-8cb7-4a829c44f4d9
-source-git-commit: 855b6414981c6d7ee79bc674e5a4087dd79dde5b
+source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
 workflow-type: tm+mt
 source-wordcount: '737'
 ht-degree: 1%

@@ -5,7 +5,7 @@ title: 使用API建立資料集
 topic-legacy: datasets
 description: 本檔案提供使用Adobe Experience Platform API建立資料集，以及使用檔案填入資料集的一般步驟。
 exl-id: 3a5f48cf-ad05-4b9e-be1d-ff213a26a477
-source-git-commit: e4bf5bb77ac4186b24580329699d74d653310d93
+source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
 workflow-type: tm+mt
 source-wordcount: '1305'
 ht-degree: 1%
@@ -21,30 +21,30 @@ ht-degree: 1%
 本指南需要妥善了解下列Adobe Experience Platform元件：
 
 * [批次內嵌](../../ingestion/batch-ingestion/overview.md): [!DNL Experience Platform] 可讓您將資料內嵌為批次檔案。
-* [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md):組織客戶體驗資 [!DNL Experience Platform] 料的標準化架構。
-* [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform] 提供可將單一執行個體分割成個 [!DNL Platform] 別虛擬環境的虛擬沙箱，以協助開發及改進數位體驗應用程式。
+* [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md):標準化框架 [!DNL Experience Platform] 組織客戶體驗資料。
+* [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform] 提供可分割單一沙箱的虛擬沙箱 [!DNL Platform] 例項放入個別的虛擬環境，以協助開發及改進數位體驗應用程式。
 
-以下各節提供您需要了解的其他資訊，以便成功呼叫[!DNL Platform] API。
+以下小節提供您需要知道的其他資訊，以便成功呼叫 [!DNL Platform] API。
 
 ### 讀取範例API呼叫
 
-本教學課程提供範例API呼叫，以示範如何設定要求格式。 這些功能包括路徑、必要標題和格式正確的請求裝載。 也提供API回應中傳回的範例JSON。 如需範例API呼叫檔案中所使用慣例的資訊，請參閱[!DNL Experience Platform]疑難排解指南中[如何讀取範例API呼叫](../../landing/troubleshooting.md#how-do-i-format-an-api-request)一節。
+本教學課程提供範例API呼叫，以示範如何設定要求格式。 這些功能包括路徑、必要標題和格式正確的請求裝載。 也提供API回應中傳回的範例JSON。 如需範例API呼叫檔案中所使用慣例的相關資訊，請參閱 [如何閱讀API呼叫範例](../../landing/troubleshooting.md#how-do-i-format-an-api-request) 在 [!DNL Experience Platform] 疑難排解指南。
 
 ### 收集必要標題的值
 
-若要呼叫[!DNL Platform] API，您必須先完成[authentication tutorial](https://www.adobe.com/go/platform-api-authentication-en)。 完成驗證教學課程後，將提供所有[!DNL Experience Platform] API呼叫中每個必要標題的值，如下所示：
+若要對 [!DNL Platform] API，您必須先完成 [驗證教學課程](https://www.adobe.com/go/platform-api-authentication-en). 完成驗證教學課程會提供所有 [!DNL Experience Platform] API呼叫，如下所示：
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
 * `x-gw-ims-org-id: {IMS_ORG}`
 
-[!DNL Experience Platform]中的所有資源都與特定虛擬沙箱隔離。 對[!DNL Platform] API的所有請求都需要標題，以指定作業將在下列位置進行的沙箱名稱：
+中的所有資源 [!DNL Experience Platform] 與特定虛擬沙箱隔離。 所有請求 [!DNL Platform] API需要標頭，以指定要在中執行操作的沙箱名稱：
 
 * x-sandbox-name: `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
->如需[!DNL Platform]中沙箱的詳細資訊，請參閱[沙箱概觀檔案](../../sandboxes/home.md)。
+>如需中沙箱的詳細資訊，請參閱 [!DNL Platform]，請參閱 [沙箱概述檔案](../../sandboxes/home.md).
 
 所有包含裝載(POST、PUT、PATCH)的請求都需要額外的標題：
 
@@ -54,15 +54,15 @@ ht-degree: 1%
 
 若要建立資料集，必須先定義結構。 結構是一組規則，可協助表示資料。 除了說明資料結構外，結構還提供可套用的限制和期望，當資料在系統之間移動時，可用來驗證資料。
 
-這些標準定義允許一致地解釋資料（無論來源為何），並消除跨應用程式翻譯的需要。 有關合成架構的詳細資訊，請參閱[架構合成基礎](../../xdm/schema/composition.md)的指南
+這些標準定義允許一致地解釋資料（無論來源為何），並消除跨應用程式翻譯的需要。 有關合成結構的詳細資訊，請參閱 [綱要構成基本知識](../../xdm/schema/composition.md)
 
 ## 查詢資料集結構
 
-本教學課程從[Schema Registry API教學課程](../../xdm/tutorials/create-schema-api.md)結束的位置開始，其中會使用在本教學課程中建立的忠誠會員架構。
+本教學課程從 [Schema Registry API教學課程](../../xdm/tutorials/create-schema-api.md) 結束：使用教學課程期間建立的忠誠會員結構。
 
-如果您尚未完成[!DNL Schema Registry]教學課程，請從該處開始，並僅在您構建了必要的架構後繼續使用此資料集教學課程。
+如果您尚未完成 [!DNL Schema Registry] 教學課程，請從這裡開始，並在您完成必要的架構後，再繼續使用此資料集教學課程。
 
-以下呼叫可用來檢視您在[!DNL Schema Registry] API教學課程期間建立的忠誠會員架構：
+下列呼叫可用來檢視您在 [!DNL Schema Registry] API教學課程：
 
 **API格式**
 
@@ -209,16 +209,16 @@ curl -X POST \
 
 | 屬性 | 說明 |
 | --- | --- |
-| `schemaRef.id` | 資料集將基於的XDM架構的URI `$id`值。 |
-| `schemaRef.contentType` | 指示架構的格式和版本。 如需詳細資訊，請參閱XDM API指南中[架構版本設定](../../xdm/api/getting-started.md#versioning)的相關章節。 |
+| `schemaRef.id` | URI `$id` 資料集所根據之XDM架構的值。 |
+| `schemaRef.contentType` | 指示架構的格式和版本。 請參閱 [方案版本設定](../../xdm/api/getting-started.md#versioning) （位於XDM API指南中）以取得詳細資訊。 |
 
 >[!NOTE]
 >
->本教學課程的所有範例都使用[Apache Parquet](https://parquet.apache.org/documentation/latest/)檔案格式。 若需使用JSON檔案格式的範例，請參閱[批次內嵌開發人員指南](../../ingestion/batch-ingestion/api-overview.md)
+>本教學課程使用 [阿帕奇鑲木地板](https://parquet.apache.org/documentation/latest/) 檔案格式。 若需使用JSON檔案格式的範例，請參閱 [批次匯入開發人員指南](../../ingestion/batch-ingestion/api-overview.md)
 
 **回應**
 
-成功的回應會傳回HTTP狀態201（已建立），而回應物件則包含陣列，內含以`"@/datasets/{DATASET_ID}"`格式建立之新資料集的ID。 資料集ID是唯讀、系統產生的字串，用於在API呼叫中參考資料集。
+成功的回應會傳回HTTP狀態201（已建立），而回應物件則由陣列組成，陣列內含新建立資料集的ID，格式為 `"@/datasets/{DATASET_ID}"`. 資料集ID是唯讀、系統產生的字串，用於在API呼叫中參考資料集。
 
 ```JSON
 [
@@ -238,7 +238,7 @@ POST /batches
 
 **要求**
 
-要求內文包含「datasetId」欄位，其值為上一步驟中產生的`{DATASET_ID}`。
+要求內文包含「datasetId」欄位，其值為 `{DATASET_ID}` 於上一步驟產生。
 
 ```SHELL
 curl -X POST 'https://platform.adobe.io/data/foundation/import/batches' \
@@ -246,7 +246,7 @@ curl -X POST 'https://platform.adobe.io/data/foundation/import/batches' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'x-api-key : {API_KEY}' \
+  -H 'x-api-key: {API_KEY}' \
   -H 'content-type: application/json' \
   -d '{
         "datasetId":"5c8c3c555033b814b69f947f"
@@ -255,7 +255,7 @@ curl -X POST 'https://platform.adobe.io/data/foundation/import/batches' \
 
 **回應**
 
-成功的響應返回HTTP狀態201（已建立）和包含新建立批的詳細資訊的響應對象，包括其`id`（只讀、系統生成的字串）。
+成功的回應會傳回HTTP狀態201（已建立），而回應物件會包含新建立批次的詳細資訊，包括其 `id`，此為唯讀、系統產生的字串。
 
 ```JSON
 {
@@ -308,8 +308,8 @@ PUT /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 
 | 參數 | 說明 |
 | --- | --- |
-| `{BATCH_ID}` | 要上載到的批的`id`。 |
-| `{DATASET_ID}` | 批次資料集的`id`將持續存在。 |
+| `{BATCH_ID}` | 此 `id` 上傳至的批次。 |
+| `{DATASET_ID}` | 此 `id` 批次會保存在資料集中。 |
 | `{FILE_NAME}` | 您要上傳的檔案名稱。 |
 
 **要求**
@@ -317,7 +317,7 @@ PUT /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 ```SHELL
 curl -X PUT 'https://platform.adobe.io/data/foundation/import/batches/5d01230fc78a4e4f8c0c6b387b4b8d1c/datasets/5c8c3c555033b814b69f947f/files/loyaltyData.parquet' \
   -H 'content-type: application/octet-stream' \
-  -H 'x-api-key : {API_KEY}' \
+  -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMG_ORG}' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   --data-binary '@{FILE_PATH_AND_NAME}.parquet'
@@ -329,7 +329,7 @@ curl -X PUT 'https://platform.adobe.io/data/foundation/import/batches/5d01230fc7
 
 ## 信號批完成
 
-將所有資料檔案上傳至批次後，您可以發出批次訊號以完成。 信令完成使服務為上載的檔案建立[!DNL Catalog] `DataSetFile`條目，並將它們與以前生成的批處理關聯。 [!DNL Catalog]批次會標示為成功，這會觸發任何下游流程，而這些流程隨後可用於目前可用的資料。
+將所有資料檔案上傳至批次後，您可以發出批次訊號以完成。 信令完成導致服務建立 [!DNL Catalog] `DataSetFile` 上傳檔案的項目，並將它們與先前產生的批次建立關聯。 此 [!DNL Catalog] 批次會標示為成功，這會觸發任何下游流程，而這些流程隨後可對現在可用的資料運作。
 
 **API格式**
 
@@ -339,13 +339,13 @@ POST /batches/{BATCH_ID}?action=COMPLETE
 
 | 參數 | 說明 |
 | --- | --- |
-| `{BATCH_ID}` | 要標籤為完成的批的`id`。 |
+| `{BATCH_ID}` | 此 `id` 標籤為已完成的批。 |
 
 **要求**
 
 ```SHELL
 curl -X POST "https://platform.adobe.io/data/foundation/import/batches/5d01230fc78a4e4f8c0c6b387b4b8d1c?action=COMPLETE" \
-  -H 'x-api-key : {API_KEY}' \
+  -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMG_ORG}' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}'
 ```
@@ -356,7 +356,7 @@ curl -X POST "https://platform.adobe.io/data/foundation/import/batches/5d01230fc
 
 ## 監視擷取
 
-批處理需要不同的時間才能進行內嵌，具體取決於資料的大小。 您可以將包含批次ID的`batch`請求參數附加至`GET /batches`請求，借此監控批次的狀態。 API會從擷取到回應中的`status`，對資料集進行輪詢，以找出批次狀態，指出完成（&quot;success&quot;或&quot;failure&quot;）。
+批處理需要不同的時間才能進行內嵌，具體取決於資料的大小。 您可以附加 `batch` 包含批次ID的請求參數 `GET /batches` 請求。 API會從擷取到擷取，輪詢資料集的批次狀態 `status` 在回應中表示完成（「success」或「failure」）。
 
 **API格式**
 
@@ -366,14 +366,14 @@ GET /batches?batch={BATCH_ID}
 
 | 參數 | 說明 |
 | --- | --- |
-| `{BATCH_ID}` | 要監視的批的`id`。 |
+| `{BATCH_ID}` | 此 `id` 要監視的批次。 |
 
 **要求**
 
 ```SHELL
 curl -X GET \
   'https://platform.adobe.io/data/foundation/catalog/batches?batch=5d01230fc78a4e4f8c0c6b387b4b8d1c' \
-  -H 'x-api-key : {API_KEY}' \
+  -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMG_ORG}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}'
@@ -381,7 +381,7 @@ curl -X GET \
 
 **回應**
 
-正向響應返回具有`status`屬性的對象，該屬性包含`success`的值：
+正面回應會傳回物件及其 `status` 包含值的屬性 `success`:
 
 ```JSON
 {
@@ -413,7 +413,7 @@ curl -X GET \
 }
 ```
 
-負響應在其`"status"`屬性中返回值為`"failed"`的對象，並包括任何相關錯誤消息：
+負回應會傳回物件，其值為 `"failed"` 在 `"status"` 屬性，並包含任何相關錯誤訊息：
 
 ```JSON
 {
@@ -465,14 +465,14 @@ curl -X GET \
 
 您也可以使用資料存取API來傳回名稱、大小（以位元組為單位），以及下載檔案或資料夾的連結。
 
-若需使用資料存取API的詳細步驟，請參閱[資料存取開發人員指南](../../data-access/home.md)。
+若需使用資料存取API的詳細步驟，請參閱 [資料存取開發人員指南](../../data-access/home.md).
 
 ## 更新資料集結構
 
 您可以新增欄位，並將其他資料內嵌至已建立的資料集。 若要這麼做，您必須先新增定義新資料的其他屬性，以更新結構。 您可以使用PATCH和/或PUT操作來更新現有架構。
 
-如需更新結構的詳細資訊，請參閱[Schema Registry API開發人員指南](../../xdm/api/getting-started.md)。
+如需更新結構的詳細資訊，請參閱 [Schema Registry API開發人員指南](../../xdm/api/getting-started.md).
 
 更新結構後，您可以依照本教學課程中的步驟，擷取符合修訂結構的新資料。
 
-請務必記住，架構演化純粹是可加進的，這表示一旦將架構儲存至註冊表並用於資料擷取，便無法對架構進行中斷變更。 若要進一步了解合成架構以與Adobe Experience Platform搭配使用的最佳實務，請參閱架構合成[基本概念](../../xdm/schema/composition.md)上的指南。
+請務必記住，架構演化純粹是可加進的，這表示一旦將架構儲存至註冊表並用於資料擷取，便無法對架構進行中斷變更。 若要進一步了解合成結構以搭配Adobe Experience Platform使用的最佳實務，請參閱 [綱要構成基本知識](../../xdm/schema/composition.md).

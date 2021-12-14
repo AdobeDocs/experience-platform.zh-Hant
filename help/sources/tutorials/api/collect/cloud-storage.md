@@ -6,7 +6,7 @@ topic-legacy: overview
 type: Tutorial
 description: 本教學課程涵蓋從協力廠商雲端儲存空間擷取資料，以及使用來源連接器和API將資料匯入Platform的步驟。
 exl-id: 95373c25-24f6-4905-ae6c-5000bf493e6f
-source-git-commit: 10f04044e970158131677e0c630edf761d4577bd
+source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
 workflow-type: tm+mt
 source-wordcount: '1835'
 ht-degree: 1%
@@ -160,7 +160,7 @@ curl -X POST \
         "data": {
             "format": "delimited",
             "properties": {
-                "compressionType" : "gzip"
+                "compressionType": "gzip"
             }
         },
         "params": {

@@ -6,7 +6,7 @@ title: Customer AI中的輸入和輸出
 topic-legacy: Getting started
 description: 進一步了解Customer AI使用的必要事件、輸入和輸出。
 exl-id: 9b21a89c-bf48-4c45-9eb3-ace38368481d
-source-git-commit: 6da41552811a458fc6cf66b54fc2e9ed448a859d
+source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
 workflow-type: tm+mt
 source-wordcount: '3054'
 ht-degree: 1%
@@ -114,7 +114,7 @@ Customer AI需要模型訓練的歷史資料，但所需資料量是根據兩個
 >
 > 30是合格人口所需的最低天數。 若未提供，則預設為120天。
 
-範例 :
+範例：
 
 - 您想要預測客戶是否可能在未來30天內購買手錶。 您也想對過去60天內有某些Web活動的使用者評分。 在此情況下，所需資料的最小長度= 60天+ 30天。 合格人口為60天，結果期為30天，總共90天。
 

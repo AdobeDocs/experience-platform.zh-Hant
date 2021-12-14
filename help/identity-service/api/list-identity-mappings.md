@@ -1,25 +1,24 @@
 ---
-keywords: Experience Platform;home；熱門主題；identity;Identity
+keywords: Experience Platform；首頁；熱門主題；身分；身分
 solution: Experience Platform
-title: 清單標識映射
+title: 清單身分對應
 topic-legacy: API guide
-description: 映射是群集中所有標識的集合，用於指定的命名空間。
+description: 對應是叢集中指定命名空間之所有身分識別的集合。
 exl-id: db80c783-620b-4ba3-b55c-75c1fd6e90b1
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
 workflow-type: tm+mt
 source-wordcount: '270'
 ht-degree: 1%
 
 ---
 
-# 清單標識映射
+# 列出標識映射
 
-映射是群集中所有標識的集合，用於指定的命名空間。
+對應是叢集中指定命名空間之所有身分識別的集合。
 
 ## 取得單一身分的身分對應
 
-給定身份，從請求中由身份表示的相同名稱空間中檢索所有相關身份。
+在提供身分識別後，請使用與請求中的身分識別所代表的相同命名空間來擷取所有相關身分識別。
 
 **API格式**
 
@@ -29,7 +28,7 @@ GET https://platform-{REGION}.adobe.io/data/core/identity/mapping
 
 **要求**
 
-選項1:將識別碼提供為命名空間（`nsId`，依ID）和ID值(`id`)。
+選項1:將身分提供為命名空間(`nsId`，依ID)和ID值(`id`)。
 
 ```shell
 curl -X GET \
@@ -40,7 +39,7 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-選項2:將身分提供為namespace（`ns`，依名稱）和ID值(`id`)。
+選項2:將身分提供為命名空間(`ns`，依名稱)和ID值(`id`)。
 
 ```shell
 curl -X GET \
@@ -51,7 +50,7 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-選項3:提供身份作為XID(`xid`)。 有關如何獲取身份的XID的詳細資訊，請參閱本文檔中有關[獲取身份的XID的章節](./list-native-id.md)。
+選項3:將標識提供為XID(`xid`)。 如需如何取得身分識別的XID的詳細資訊，請參閱本檔案涵蓋 [獲取XID以獲取身份](./list-native-id.md).
 
 ```shell
 curl -X GET \
@@ -62,13 +61,13 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-### 獲取多個身份的身份映射
+### 取得多個身分的身分對應
 
-使用`POST`方法作為與上述`GET`方法相等的批處理，以檢索多個身份的映射。
+使用 `POST` 方法，如批次等值 `GET` 方法，擷取多個身分的對應。
 
 >[!NOTE]
 >
->請求應指明最多1000個身分。 超過1000個身分的要求將產生400個狀態碼。
+>請求應指示最多1000個身分。 超過1000個身分的請求將產生400個狀態代碼。
 
 **API格式**
 
@@ -76,9 +75,9 @@ curl -X GET \
 POST https://platform.adobe.io/data/core/identity/mappings
 ```
 
-**請求正文**
+**要求內文**
 
-選項1:提供要檢索映射的XID清單。
+選項1:提供要檢索映射的XID的清單。
 
 ```shell
 {
@@ -87,7 +86,7 @@ POST https://platform.adobe.io/data/core/identity/mappings
 }
 ```
 
-選項2:提供身分清單作為複合ID，其中每個ID值皆以命名空間ID命名。 此示例演示在覆蓋「專用圖」的預設`graph-type`時使用此方法。
+選項2:提供身分識別清單作為複合ID，其中每個ID的名稱都是ID值，而命名空間ID是依命名空間ID命名的。 此範例示範如何覆寫預設值時使用此方法 `graph-type` 「私密圖表」。
 
 ```shell
 {
@@ -116,7 +115,7 @@ curl -X POST \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: 111111@AdobeOrg' \
   -d '{
-        "xids" : ["GesCQXX0CAESEE8wHpswUoLXXmrYy8KBTVgA"],
+        "xids": ["GesCQXX0CAESEE8wHpswUoLXXmrYy8KBTVgA"],
         "targetNs": "0",
         "graph-type": "Private Graph"
       }' | json_pp
@@ -146,7 +145,7 @@ curl -X POST \
       }' | json_pp
 ```
 
-如果所提供的輸入未找到相關身份，則會傳回沒有內容的`HTTP 204`回應碼。
+若未找到所提供輸入的相關身分，則 `HTTP 204` 回應代碼會傳回，但不含任何內容。
 
 **回應**
 
@@ -184,9 +183,9 @@ curl -X POST \
 }
 ```
 
-- `lastAssociationTime`:輸入身份上次與此身份關聯的時間戳。
-- `regions`:提供 `regionId` 和 `lastAssociationTime` 身份的顯示位置。
+- `lastAssociationTime`:上次與此標識關聯的輸入標識的時間戳。
+- `regions`:提供 `regionId` 和 `lastAssociationTime` 在哪裡發現了身份。
 
 ## 後續步驟
 
-繼續下一個教程，以[列出可用名稱空間](./list-namespaces.md)。
+繼續下一個教學課程，前往 [清單可用命名空間](./list-namespaces.md).

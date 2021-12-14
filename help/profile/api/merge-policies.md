@@ -5,7 +5,7 @@ topic-legacy: guide
 type: Documentation
 description: Adobe Experience Platform可讓您從多個來源將資料片段匯整在一起，並加以結合，以便查看每個客戶的完整檢視。 將這些資料整合在一起時，Platform會使用合併原則來判斷資料的優先順序，以及將哪些資料合併以建立統一檢視。
 exl-id: fb49977d-d5ca-4de9-b185-a5ac1d504970
-source-git-commit: 9af59d5a4fda693a2aef8e590a7754f0e1c1ac8d
+source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
 workflow-type: tm+mt
 source-wordcount: '2469'
 ht-degree: 1%
@@ -143,7 +143,7 @@ Adobe Experience Platform可讓您從多個來源將資料片段匯整在一起�
 其中 `{ATTRIBUTE_MERGE_TYPE}` 是下列其中一項：
 
 * **`timestampOrdered`**:（預設）將優先順序設為上次更新的設定檔。 使用此合併類型， `data` 屬性不是必要項目。
-* **`dataSetPrecedence`** :根據設定檔片段的來源資料集，為其指定優先順序。 當一個資料集中的資訊比另一個資料集中的資料更偏好或更受信任時，即可使用此方法。 使用此合併類型時， `order` 屬性為必要項目，因為它會依優先順序列出資料集。
+* **`dataSetPrecedence`**:根據設定檔片段的來源資料集，為其指定優先順序。 當一個資料集中的資訊比另一個資料集中的資料更偏好或更受信任時，即可使用此方法。 使用此合併類型時， `order` 屬性為必要項目，因為它會依優先順序列出資料集。
    * **`order`**:使用&quot;dataSetPrecerance&quot;時， `order` 陣列必須隨附資料集清單。 清單中未包含的任何資料集都不會合併。 換言之，必須明確列出資料集，才能合併至設定檔中。 此 `order` 陣列會依優先順序列出資料集的ID。
 
 #### 範例 `attributeMerge` 對象使用 `dataSetPrecedence` type
@@ -151,7 +151,7 @@ Adobe Experience Platform可讓您從多個來源將資料片段匯整在一起�
 ```json
     "attributeMerge": {
         "type": "dataSetPrecedence",
-        "order" : [
+        "order": [
             "dataSetId_2", 
             "dataSetId_3", 
             "dataSetId_1", 
@@ -483,12 +483,12 @@ curl -X POST \
   -H 'Content-Type: application/json' \
   -d '{
     "name": "Loyalty members ordered by ID",
-    "identityGraph" : {
+    "identityGraph": {
         "type": "none"
     },
-    "attributeMerge" : {
+    "attributeMerge": {
         "type":"dataSetPrecedence",
-        "order" : [
+        "order": [
             "5b76f86b85d0e00000be5c8b",
             "5b76f8d787a6af01e2ceda18"
         ]

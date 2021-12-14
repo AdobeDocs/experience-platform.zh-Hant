@@ -1,7 +1,8 @@
 ---
-title: Adobe用戶端資料層擴充功能的發行說明
+title: Adobe用戶端資料層擴充功能發行說明
 description: Adobe Experience Platform中Adobe用戶端資料層標籤擴充功能的最新發行說明。
-source-git-commit: 8dfb7bdc16d0654ee1d76dc5f5af50938b122d33
+exl-id: 8fa3a210-6c85-4162-84cf-15c6e3cfcb9e
+source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
 workflow-type: tm+mt
 source-wordcount: '164'
 ht-degree: 4%

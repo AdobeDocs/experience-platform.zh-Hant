@@ -1,12 +1,11 @@
 ---
-keywords: Experience Platform;home；熱門主題；建立批處理；目錄服務；api
+keywords: Experience Platform；首頁；熱門主題；建立批次；目錄服務；api
 solution: Experience Platform
 title: 在API中建立批次
 topic-legacy: developer guide
-description: 您可以通過向目錄API中的/batches端點發出POST請求來建立批。
+description: 您可以在目錄API中向/batches端點提出POST請求，以建立批次。
 exl-id: 1d2cbca9-1cd6-4b89-9b77-3687268bd849
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
 workflow-type: tm+mt
 source-wordcount: '117'
 ht-degree: 3%
@@ -15,7 +14,7 @@ ht-degree: 3%
 
 # 建立批次
 
-為了讓資料集收錄資料，資料集必須有與其關聯的批次。 使用現有資料集的`id`值，可以通過向[!DNL Catalog] API中的`/batches`端點發出POST請求來建立批。
+資料集若要內嵌資料，必須有與資料集相關聯的批次資料。 使用 `id` 值，您可以透過向POST請求建立批次 `/batches` 端點 [!DNL Catalog] API。
 
 **API格式**
 
@@ -31,7 +30,7 @@ curl -X POST 'https://platform.adobe.io/data/foundation/import/batches' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'x-api-key : {API_KEY}' \
+  -H 'x-api-key: {API_KEY}' \
   -H 'content-type: application/json' \
   -d '{
         "datasetId":"5c8c3c555033b814b69f947f"
@@ -40,11 +39,11 @@ curl -X POST 'https://platform.adobe.io/data/foundation/import/batches' \
 
 | 屬性 | 說明 |
 | --- | --- |
-| `datasetId` | 批處理將與的資料集的`id`相關聯。 |
+| `datasetId` | 此 `id` 批次關聯的資料集。 |
 
 **回應**
 
-成功的響應返回HTTP狀態201（已建立）和包含新建立批的詳細資訊的響應對象，包括其`id`（只讀，系統生成的字串）。
+成功的回應會傳回HTTP狀態201（已建立），而回應物件會包含新建立批次的詳細資訊，包括其 `id`，此為唯讀、系統產生的字串。
 
 ```JSON
 {

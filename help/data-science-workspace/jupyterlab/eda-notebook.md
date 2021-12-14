@@ -6,7 +6,7 @@ topic-legacy: overview
 type: Tutorial
 description: 本指南著重說明如何使用探索資料分析(EDA)筆記型電腦來探索網路資料中的模式、以預測目標聚合事件、清除匯總資料，以及了解預測者與目標之間的關係。
 exl-id: 48209326-0a07-4b5c-8b49-a2082a78fa47
-source-git-commit: 38c493e6306e493f4ef5caf90509bda6f4d80023
+source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
 workflow-type: tm+mt
 source-wordcount: '2760'
 ht-degree: 0%
@@ -342,7 +342,7 @@ iplot(fig)
 - `COUNT_CHECK_OUTS`:結帳次數。
 - `COUNT_PURCHASES`:購買次數。
 - `COUNT_INSTANCE_PRODUCTADDS`:產品新增例項的數量。
-- `NUMBER_VISITS` :造訪次數。
+- `NUMBER_VISITS`:造訪次數。
 - `COUNT_PAID_SEARCHES`:付費搜尋的數量。
 - `DAYS_SINCE_VISIT`:距離上次造訪的天數。
 - `TOTAL_ORDER_REVENUE`:總訂單收入。
@@ -469,7 +469,7 @@ Data.head(5)
 此儲存格會列印不重複設定檔的數量。
 
 ```python
-print("Count of unique profiles :", (len(Data)))
+print("Count of unique profiles:", (len(Data)))
 ```
 
 ### 檢測丟失值和離群值
@@ -621,11 +621,11 @@ for column in Data_categorical.columns[0:]:
 for col in Data.columns:
     if len(Data[col].unique()) == 1:
         if col == 'TARGET':
-            print(Fore.RED + '\033[1m' + 'WARNING : TARGET HAS A SINGLE UNIQUE VALUE, ANY BIVARIATE ANALYSIS (NEXT STEP IN THIS NOTEBOOK) OR PREDICTION WILL BE MEANINGLESS' + Fore.RESET + '\x1b[21m')
+            print(Fore.RED + '\033[1m' + 'WARNING: TARGET HAS A SINGLE UNIQUE VALUE, ANY BIVARIATE ANALYSIS (NEXT STEP IN THIS NOTEBOOK) OR PREDICTION WILL BE MEANINGLESS' + Fore.RESET + '\x1b[21m')
         elif col == 'ID':
-            print(Fore.RED + '\033[1m' + 'WARNING : THERE IS ONLY ONE PROFILE IN THE DATA, ANY BIVARIATE ANALYSIS (NEXT STEP IN THIS NOTEBOOK) OR PREDICTION WILL BE MEANINGLESS' + Fore.RESET + '\x1b[21m')
+            print(Fore.RED + '\033[1m' + 'WARNING: THERE IS ONLY ONE PROFILE IN THE DATA, ANY BIVARIATE ANALYSIS (NEXT STEP IN THIS NOTEBOOK) OR PREDICTION WILL BE MEANINGLESS' + Fore.RESET + '\x1b[21m')
         else:
-            print('Dropped column :',col)
+            print('Dropped column:',col)
             Data.drop(col,inplace=True,axis=1)
 ```
 

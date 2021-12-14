@@ -6,7 +6,8 @@ topic-legacy: tutorial
 description: 了解如何使用Flow Service API將Adobe Experience Platform連線至YOURSOURCE。
 hide: true
 hidefromtoc: true
-source-git-commit: d4b5b54be9fa2b430a3b45eded94a523b6bd4ef8
+exl-id: c6927a71-3721-461e-9752-8ebc0b7b1cca
+source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
 workflow-type: tm+mt
 source-wordcount: '2300'
 ht-degree: 2%
@@ -54,7 +55,7 @@ POST /connections
 
 **要求**
 
-下列請求會為 *您的來源* :
+下列請求會為 *您的來源*:
 
 ```shell
 curl -X POST \
@@ -237,7 +238,7 @@ POST /sourceConnections
 
 **要求**
 
-以下請求將建立源連接 *您的來源* :
+以下請求將建立源連接 *您的來源*:
 
 ```shell
 curl -X POST \
@@ -312,7 +313,7 @@ POST /targetConnections
 
 **要求**
 
-下列請求會為 *您的來源* :
+下列請求會為 *您的來源*:
 
 ```shell
 curl -X POST \
