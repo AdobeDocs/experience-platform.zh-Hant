@@ -1,9 +1,10 @@
 ---
 description: 此頁面提供您提交以檢閱使用Destination SDK製作的目的地所需的所有資訊。
 title: 提交以檢閱在Destination SDK中撰寫的目的地
-source-git-commit: bc77614eee6cc50d2ce6b14c1b228ed87f88f340
+exl-id: eef0d858-ebd9-426e-91a1-5c93903b0eb5
+source-git-commit: 468b9309c5184684c0b25c2656a9eef37715af53
 workflow-type: tm+mt
-source-wordcount: '593'
+source-wordcount: '568'
 ht-degree: 1%
 
 ---
@@ -211,10 +212,6 @@ curl --location --request POST 'https://platform.adobe.io/data/core/activation/a
 ## 產品化整合的目的地檔案PR（提取要求）
 
 如果您是獨立軟體供應商(ISV)或系統整合商(SI)，則建立 [產品化整合](./overview.md#productized-custom-integrations)，請使用 [自助服務檔案程式](./docs-framework/documentation-instructions.md) 為目的地建立產品檔案頁面的方式。 在提交程式中，請提供目的地檔案的提取請求(PR)。
-
-來自現有整合合作夥伴的範例PR包括：
-* [Yahoo目的地檔案PR](https://github.com/AdobeDocs/experience-platform.en/pull/110);
-* [Airship目的地檔案PR](https://github.com/AdobeDocs/experience-platform.en/pull/54).
 
 ## 目的地標誌
 
