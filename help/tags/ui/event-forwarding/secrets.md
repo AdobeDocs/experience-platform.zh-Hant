@@ -1,14 +1,15 @@
 ---
-title: 事件轉發機密
+title: 在事件轉送中設定機密
 description: 了解如何在資料收集UI中設定機密，以驗證事件轉送屬性中使用的端點。
-source-git-commit: 43d593cd8adf5a29c3283a328c24b0994009222b
+exl-id: eefd87d7-457f-422a-b159-5b428da54189
+source-git-commit: 7cbf8cfa4ac7aeff9f1ed56777212f5203df2ce9
 workflow-type: tm+mt
-source-wordcount: '1445'
+source-wordcount: '1449'
 ht-degree: 1%
 
 ---
 
-# 事件轉送機密
+# 在事件轉送中設定機密
 
 在事件轉發中，機密是代表另一個系統的驗證憑證的資源，允許安全地交換資料。 只能在事件轉發屬性內建立機密。
 

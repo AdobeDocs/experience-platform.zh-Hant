@@ -4,9 +4,9 @@ user-guide-title: 標籤說明
 breadcrumb-title: 標籤
 user-guide-description: 了解如何部署及管理分析、行銷和廣告標籤，以強化客戶體驗。
 feature: Tags
-source-git-commit: 7368b6e69522cce9343df78c31a712bfdbfedfe3
+source-git-commit: 7cbf8cfa4ac7aeff9f1ed56777212f5203df2ce9
 workflow-type: tm+mt
-source-wordcount: '381'
+source-wordcount: '382'
 ht-degree: 67%
 
 ---
@@ -54,7 +54,7 @@ ht-degree: 67%
 * 事件轉送 {#event-forwarding}
    * [總覽](./ui/event-forwarding/overview.md)
    * [快速入門](./ui/event-forwarding/getting-started.md)
-   * [秘密](./ui/event-forwarding/secrets.md)
+   * [配置機密](./ui/event-forwarding/secrets.md)
 * 管理 {#admin}
    * [總覽](./ui/administration/overview.md)
    * [公司和屬性](./ui/administration/companies-and-properties.md)
