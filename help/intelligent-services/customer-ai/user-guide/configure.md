@@ -6,9 +6,9 @@ title: 設定Customer AI例項
 topic-legacy: Instance creation
 description: Intelligent Services將Customer AI提供為簡單易用的Adobe Sensei服務，可針對不同使用案例進行設定。 以下各節提供設定Customer AI例項的步驟。
 exl-id: 78353dab-ccb5-4692-81f6-3fb3f6eca886
-source-git-commit: 899ea8502c80fa520df55ce63255e95cb5ad436d
+source-git-commit: f7fde9ed299e6bdb6e63279be1126b91fc90d3f3
 workflow-type: tm+mt
-source-wordcount: '2299'
+source-wordcount: '2608'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,7 @@ Customer AI是Intelligent Services的一部分，可讓您產生自訂傾向分�
 
 Intelligent Services將Customer AI提供為簡單易用的Adobe Sensei服務，可針對不同使用案例進行設定。 以下各節提供設定Customer AI例項的步驟。
 
-## 設定您的執行個體 {#set-up-your-instance}
+## 建立例項 {#set-up-your-instance}
 
 在平台UI中，選取 **[!UICONTROL 服務]** 的下一頁。 此 **[!UICONTROL 服務]** 瀏覽器隨即顯示，並顯示您自己擁有的所有可用服務。 在Customer AI的容器中，選取 **[!UICONTROL 開啟]**.
 
@@ -156,9 +156,13 @@ Customer AI根據設計使用Adobe Analytics、Adobe Audience Manager、體驗�
 
 如果您除了 [標準事件欄位](../input-output.md#standard-events) 由Customer AI用來產生傾向分數，會提供自訂事件選項。 使用此選項可讓您新增您認為有影響力的其他事件，這可能會改善模型品質，並有助於提供更精確的結果。 如果您選取的資料集包含結構中定義的自訂事件，您可以將其新增至執行個體。
 
+>[!NOTE]
+>
+> 如需自訂事件對Customer AI評分結果有何影響的深入說明，請造訪 [自訂事件範例](#custom-event) 區段。
+
 ![事件功能](../images/user-guide/event-feature.png)
 
-若要新增自訂事件，請選取 **[!UICONTROL 新增自訂事件]**. 接下來，輸入自訂事件名稱，然後將其對應至您結構中的事件欄位。 查看影響因素和其他深入分析時，會顯示自訂事件名稱，取代欄位值。 這表示使用者ID、保留ID、裝置資訊和其他自訂值會以自訂事件名稱列出，而非事件的ID/值。 Customer AI會使用這些額外的自訂事件來改善模型品質，並提供更精確的結果。
+若要新增自訂事件，請選取 **[!UICONTROL 新增自訂事件]**. 接下來，輸入自訂事件名稱，然後將其對應至您結構中的事件欄位。 查看影響因素和其他深入分析時，會顯示自訂事件名稱，取代欄位值。 這表示將會使用自訂事件名稱，而非事件的ID/值。 如需自訂事件顯示方式的詳細資訊，請參閱 [自訂事件範例區段](#custom-event). Customer AI會使用這些額外的自訂事件來改善模型品質，並提供更精確的結果。
 
 ![自訂事件欄位](../images/user-guide/custom-event.png)
 
@@ -178,21 +182,31 @@ Customer AI根據設計使用Adobe Analytics、Adobe Audience Manager、體驗�
 
 >[!NOTE]
 >
->新增自訂設定檔屬性的工作流程與新增自訂事件相同。
+>新增自訂設定檔屬性的工作流程與新增自訂事件相同。 與自訂事件類似，自訂設定檔屬性也會以相同方式影響模型計分。 如需深入說明，請造訪 [自訂事件範例](#custom-event) 區段。
 
 ![新增自訂設定檔屬性](../images/user-guide/profile-attributes.png)
 
+### 新增自訂事件範例 {#custom-event}
+
+在下列範例中，自訂事件和設定檔屬性會新增至Customer AI例項。 Customer AI例項的目標是預測客戶在未來60天內購買其他Luma產品的可能性。 通常，產品資料會連結至產品SKU。 在此情況下，SKU為 `prd1013`. 在Customer AI模型接受訓練/評分後，此SKU可以連結至事件，並顯示為傾向貯體的影響因素。
+
+Customer AI會自動對自訂事件(例如 **手錶購買**. 若將此事件視為客戶高、中或低傾向的重要因素，則Customer AI會將其顯示為 `Days since prd1013 purchase` 或 `Count of prd1013 purchase`. 將其建立為「自訂」事件，可為事件指定新名稱，讓結果更容易閱讀。 例如 `Days since Watch purchase`。此外，即使該事件不是標準事件，Customer AI也會在其訓練和分數中使用此事件。 這表示您可以新增多個您認為可能具影響力的事件，並透過包含保留、訪客記錄和其他事件等資料來進一步自訂模型。 新增這些資料點，可進一步提高Customer AI模型的準確度和精準度。
+
+![自訂事件範例](../images/user-guide/custom-event-name.png)
+
+## 設定選項
+
+「設定選項」步驟可讓您設定排程以自動執行預測、定義預測排除以篩選特定事件，以及切換 **[!UICONTROL 設定檔]** 開/關。
+
 ### 設定排程 *（可選）* {#configure-a-schedule}
 
-此 **[!UICONTROL 進階]** 步驟。 此選用步驟可讓您設定排程以自動執行預測、定義預測排除以篩選特定事件或選取 **[!UICONTROL 完成]** 如果不需要。
-
-通過配置 **[!UICONTROL 計分頻率]**. 可排程每週或每月執行自動預測執行。
+若要設定計分排程，請從設定 **[!UICONTROL 計分頻率]**. 可排程每週或每月執行自動預測執行。
 
 ![](../images/user-guide/schedule.png)
 
-### 預測排除
+### 預測排除 *（可選）*
 
-如果您的資料集包含任何新增為測試資料的欄，您可以選取 **新增排除項目** 接著輸入您要排除的欄位。 這可防止在產生分數時評估符合特定條件的事件。 此功能可用來篩選掉無關的資料輸入或特定促銷活動。
+如果您的資料集包含任何新增為測試資料的欄，您可以選取 **[!UICONTROL 新增排除項目]** 接著輸入您要排除的欄位。 這可防止在產生分數時評估符合特定條件的事件。 此功能可用來篩選掉無關的資料輸入或促銷活動。
 
 若要排除事件，請選取 **[!UICONTROL 新增排除項目]** 和定義事件。 若要移除排除項目，請選取點(**[!UICONTROL ...]**)，然後選取「 」 **[!UICONTROL 移除容器]**.
 
@@ -202,7 +216,7 @@ Customer AI根據設計使用Adobe Analytics、Adobe Audience Manager、體驗�
 
 「設定檔」切換可讓Customer AI將計分結果匯出至「即時客戶設定檔」。 禁用此切換可防止將模型評分結果添加到「配置檔案」中。 停用此功能後，仍可使用Customer AI評分結果。
 
-首次使用Customer AI時，應將此功能關閉，直到您對模型輸出結果滿意為止。 這可防止您上傳多個計分資料集至「即時客戶設定檔」，同時微調您的模型。
+第一次使用Customer AI時，您可以關閉此功能，直到您對模型輸出結果滿意為止。 這可防止您上傳多個計分資料集至客戶設定檔，同時微調您的模型。 標定完模型後，可使用 [原地選項](#set-up-your-instance) 從 **服務實例** 頁面。 這可讓您建立模型副本並開啟設定檔。
 
 ![設定檔切換](../images/user-guide/advanced-workflow.png)
 
