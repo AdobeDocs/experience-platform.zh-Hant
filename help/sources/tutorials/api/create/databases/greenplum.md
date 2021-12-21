@@ -6,9 +6,9 @@ topic-legacy: overview
 type: Tutorial
 description: 了解如何使用Flow Service API將GreenPlum連線至Adobe Experience Platform。
 exl-id: c4ce452a-b4c5-46ab-83ab-61b296c271d0
-source-git-commit: c3a72d5a4aea33f123f81bd416557a9cfe879224
+source-git-commit: bdc9b78666c3f67cd8794d132515fda5698c81ac
 workflow-type: tm+mt
-source-wordcount: '435'
+source-wordcount: '427'
 ht-degree: 2%
 
 ---
@@ -33,7 +33,7 @@ ht-degree: 2%
 | `connectionString` | 用來連線至您的 [!DNL GreenPlum] 例項。 的連接字串模式 [!DNL GreenPlum] is `HOST={SERVER};PORT={PORT};DB={DATABASE};UID={USERNAME};PWD={PASSWORD}` |
 | `connectionSpec.id` | 連接規範返回源的連接器屬性，包括與建立基連接和源連接相關的驗證規範。 的連接規範ID [!DNL GreenPlum] is `37b6bf40-d318-4655-90be-5cd6f65d334b`. |
 
-有關獲取連接字串的詳細資訊，請參閱 [這份綠李檔案](https://gpdb.docs.pivotal.io/580/security-guide/topics/Authenticate.html#topic_fzv_wb2_jr__config_ssl_client_conn).
+有關獲取連接字串的詳細資訊，請參閱 [這份綠李檔案](https://docs.greenplum.org/6-7/security-guide/topics/Authenticate.html).
 
 ### 使用平台API
 
