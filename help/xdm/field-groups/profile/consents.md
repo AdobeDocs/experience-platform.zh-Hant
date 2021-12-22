@@ -4,7 +4,7 @@ title: 同意和首選項架構欄位組
 topic-legacy: overview
 description: 本文檔概述了「同意」和「首選項」架構欄位組。
 exl-id: ec592102-a9d3-4cac-8b94-58296a138573
-source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
+source-git-commit: 04e778d3318d60733772c2042c8bb272f0c87d5c
 workflow-type: tm+mt
 source-wordcount: '941'
 ht-degree: 0%
@@ -178,7 +178,7 @@ ht-degree: 0%
 
 若要使用 [!UICONTROL 同意和偏好設定] 欄位群組，您必鬚根據包含該欄位群組的結構，建立資料集。
 
-請參閱 [在UI中建立結構](http://www.adobe.com/go/xdm-schema-editor-tutorial-en) 以取得如何指派欄位群組至欄位的步驟。 建立包含欄位的架構後，請使用 [!UICONTROL 同意和偏好設定] 欄位群組，請參閱 [建立資料集](../../../catalog/datasets/user-guide.md#create) 在「資料集使用指南」中，依照步驟使用現有結構建立資料集。
+請參閱 [在UI中建立結構](https://www.adobe.com/go/xdm-schema-editor-tutorial-en) 以取得如何指派欄位群組至欄位的步驟。 建立包含欄位的架構後，請使用 [!UICONTROL 同意和偏好設定] 欄位群組，請參閱 [建立資料集](../../../catalog/datasets/user-guide.md#create) 在「資料集使用指南」中，依照步驟使用現有結構建立資料集。
 
 >[!IMPORTANT]
 >

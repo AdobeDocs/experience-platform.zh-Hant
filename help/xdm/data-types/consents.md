@@ -4,7 +4,7 @@ title: 同意和首選項資料類型
 description: 「隱私權」、「個人化」和「行銷偏好設定」的同意資料類型，旨在支援收集同意管理平台(CMP)和其他來源從您的資料操作產生的客戶權限和偏好設定。
 topic-legacy: guide
 exl-id: cdcc7b04-eeb9-40d3-b0b5-f736a5472621
-source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
+source-git-commit: 04e778d3318d60733772c2042c8bb272f0c87d5c
 workflow-type: tm+mt
 source-wordcount: '2039'
 ht-degree: 2%
@@ -21,8 +21,8 @@ ht-degree: 2%
 
 若要了解XDM，以及如何使用 [!DNL Experience Platform]. 請先檢閱下列檔案，再繼續：
 
-* [XDM系統概觀](http://www.adobe.com/go/xdm-home-en)
-* [結構構成基本概念](http://www.adobe.com/go/xdm-schema-best-practices-en)
+* [XDM系統概觀](https://www.adobe.com/go/xdm-home-en)
+* [結構構成基本概念](https://www.adobe.com/go/xdm-schema-best-practices-en)
 
 ## 資料類型結構 {#structure}
 
@@ -255,7 +255,7 @@ ht-degree: 2%
 
 若要使用 [!UICONTROL 同意和偏好設定] 資料類型若要從客戶擷取同意資料，您必鬚根據包含該資料類型的結構來建立資料集。
 
-請參閱 [在UI中建立結構](http://www.adobe.com/go/xdm-schema-editor-tutorial-en) 以取得如何指派資料類型至欄位的步驟。 建立包含欄位的架構後，請使用 [!UICONTROL 同意和偏好設定] 資料類型，請參閱 [建立資料集](../../catalog/datasets/user-guide.md#create) 在「資料集使用指南」中，依照步驟使用現有結構建立資料集。
+請參閱 [在UI中建立結構](https://www.adobe.com/go/xdm-schema-editor-tutorial-en) 以取得如何指派資料類型至欄位的步驟。 建立包含欄位的架構後，請使用 [!UICONTROL 同意和偏好設定] 資料類型，請參閱 [建立資料集](../../catalog/datasets/user-guide.md#create) 在「資料集使用指南」中，依照步驟使用現有結構建立資料集。
 
 >[!IMPORTANT]
 >
