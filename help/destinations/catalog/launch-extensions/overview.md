@@ -3,41 +3,51 @@ keywords: 標籤延伸模組；標籤延伸模組；launch目的地；平台標�
 title: 在Adobe Experience Platform中標籤擴充功能
 description: Adobe Experience Platform提供新一代的標籤管理功能，來自Adobe。 Platform可讓您透過簡單的方式部署及管理所有必要的分析、行銷及廣告標籤功能，以便支援相關客戶體驗。
 exl-id: 54fca635-0e37-460e-abb3-5da294d4e0cf
-source-git-commit: 272cf2906b44ccfeca041d9620ac0780e24ad1ae
+source-git-commit: fe71294cb73a25c2c4708b0a6ebe04fc2b97afdf
 workflow-type: tm+mt
-source-wordcount: '508'
-ht-degree: 0%
+source-wordcount: '486'
+ht-degree: 1%
 
 ---
 
 # 在Adobe Experience Platform中標籤擴充功能
 
-Adobe Experience Platform提供新一代的標籤管理功能，來自Adobe。 Platform可讓您透過簡單的方式部署及管理所有必要的分析、行銷及廣告標籤功能，以便支援相關客戶體驗。 標籤以隨附的加值功能形式提供給Adobe Experience Cloud客戶。
+Adobe Experience Platform提供新一代標籤管理功能，來自Adobe。 Platform可讓您透過簡單的方式部署及管理所有必要的分析、行銷及廣告標籤功能，以便支援相關客戶體驗。 標籤以隨附的加值功能形式提供給Adobe Experience Cloud客戶。
 
 如需標籤的簡介，請參閱下列資源：
 
-- [標籤概述](../../../tags/home.md)
-- [快速入門手冊](../../../tags/quick-start/quick-start.md)
+- [標記總覽](../../../tags/home.md)
+- [快速入門指南](../../../tags/quick-start/quick-start.md)
 
 ## 如何在Platform介面中尋找標籤擴充功能 {#how-to-find-extensions-in-interface}
 
-若要在Platform介面中尋找擴充功能，請瀏覽至&#x200B;**[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**，然後在&#x200B;**[!UICONTROL Types]**&#x200B;篩選器中選取&#x200B;**[!UICONTROL Extensions]**。
+若要在Platform介面中尋找擴充功能，請瀏覽至 **[!UICONTROL 目的地]** > **[!UICONTROL 目錄]** 選取 **[!UICONTROL 擴充功能]** 在 **[!UICONTROL 類型]** 篩選。
 
 ![介面中的擴充功能篩選器](../../assets/catalog/launch-extensions/filter.png)
 
 ## 標籤擴充功能如何運作 {#how-extensions-work}
 
-擴充功能會將原始事件資料轉送至數種目的地。 請將擴充功能視為目標的&#x200B;**事件轉送**&#x200B;類型。 這是與目的地平台整合的更簡單類型，目的地平台只會轉送原始事件資料。 這些範例包括[Gainsight個人化擴充功能](../personalization/gainsight.md)或[確認客戶擴充功能之聲音](../voice/confirmit-digital-feedback.md)。
+A [標籤擴充功能](../../../tags/home.md#extensions) 是可增強網站或行動應用程式功能的程式碼套件。 這可能包括將原始事件資料傳送至 [Google Analytics](/help/destinations/catalog/analytics/google-universal-analytics.md) 但它們也能發揮其他功能。
 
-**Adobe Experience Platform中的設** 定檔/區段匯出目的地會擷取事件資料、將其與其他資料來源結合、套用區段，以及將區段和合格設定檔匯出至目的地。這些範例包括[Amazon S3雲端儲存空間目的地](../cloud-storage/amazon-s3.md)或[Google Display &amp; Video 360廣告目的地](../advertising/google-dv360.md)。
+請務必區分標籤和事件轉送擴充功能。 在Platform目的地使用者介面中呈現的擴充功能為 *標籤擴充功能*. 如需 [標籤和事件轉送之間的差異](/help/tags/ui/event-forwarding/overview.md#differences-between-event-forwarding-and-tags).
 
-![與其他目的地比較的標籤擴充功能](../../assets/common/launch-and-other-destinations.png)
+
+
+<!--
+
+Extensions forward raw event data to several types of destinations. Think of extensions as an **Event Forwarding** type of destination. This is a simpler type of integration with destination platforms, which only forwards raw event data. Examples of those are the [Gainsight personalization extension](../personalization/gainsight.md) or the [Confirmit Voice of the Customer extension](../voice/confirmit-digital-feedback.md).
+
+**Profile/Segment Export** destinations in Adobe Experience Platform capture event data, combine it with other data sources, apply segmentation, and export segments and qualified profiles to destinations. Examples of those are the [Amazon S3 cloud storage destination](../cloud-storage/amazon-s3.md) or the [Google Display & Video 360 advertising destination](../advertising/google-dv360.md).
+
+![Tag extensions compared to other destinations](../../assets/common/launch-and-other-destinations.png)
+
+-->
 
 ## 使用標籤擴充功能的優點 {#extensions-benefits}
 
 現有Experience Cloud客戶可免費使用Platform的標籤功能。 此系統透過易於使用的擴充功能，簡化網站上的標籤部署，供您安裝、設定、更新及刪除。 標籤會在您的網站上留下很小的空間，並可讓您讓頁面快速載入。
 
-雖然您無法啟動區段以標籤擴充功能，但您可以設定規則，僅在某些情況下轉送事件資料。 此功能強大，可讓您只在特定情況下轉送事件資料，而非在每次互動時傳送事件資料。 如需詳細資訊，請參閱[標籤檔案](../../../tags/ui/managing-resources/rules.md)中的規則。
+雖然您無法啟動區段以標籤擴充功能，但您可以設定規則，僅在某些情況下轉送事件資料。 此功能強大，可讓您只在特定情況下轉送事件資料，而非在每次互動時傳送事件資料。 如需詳細資訊，請參閱 [標籤檔案](../../../tags/ui/managing-resources/rules.md).
 
 ## 擴充功能的使用案例範例 {#extensions-use-cases}
 

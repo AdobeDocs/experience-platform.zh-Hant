@@ -1,42 +1,43 @@
 ---
 title: 標籤概覽
-description: Adobe Experience Platform中的標籤是新一代Adobe標籤管理功能。 標籤可讓客戶透過簡單的方式部署及管理所有必要的分析、行銷及廣告標籤功能，以便支援相關客戶體驗。
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+description: Adobe Experience Platform 標記是新一代 Adobe 標記管理功能。標記可讓客戶透過簡單的方式部署及管理所有必要的分析、行銷及廣告標記功能，以強化相關客戶體驗。
+exl-id: 23d882a5-1ddd-404b-a7e9-3000f1804971
+source-git-commit: 4f31c77fd3efe06797055ca04a30ae5ff4872b4e
 workflow-type: tm+mt
 source-wordcount: '562'
-ht-degree: 56%
+ht-degree: 78%
 
 ---
 
-# 標籤概述
+# 標記總覽
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch在Adobe Experience Platform中已重新命名為一套資料收集技術。 因此，產品檔案中已推出數個術語變更。 有關術語更改的綜合參考，請參閱以下[document](./term-updates.md)。
+>Adobe Experience Platform Launch在Adobe Experience Platform中已重新命名為一套資料收集技術。 因此，所有產品文件中出現了幾項術語變更。 如需術語變更的彙整參考資料，請參閱以下[文件](./term-updates.md)。
 
-Adobe Experience Platform中的標籤是新一代Adobe標籤管理功能。 標籤可讓客戶透過簡單的方式部署及管理所有必要的分析、行銷及廣告標籤功能，以便支援相關客戶體驗。
+Adobe Experience Platform 標記是新一代 Adobe 標記管理功能。標記可讓客戶透過簡單的方式部署及管理所有必要的分析、行銷及廣告標記功能，以強化相關客戶體驗。
 
-標籤可讓任何人建置和維護自己的整合，稱為&#x200B;*擴充功能*。 這些擴充功能可為 [!DNL Adobe Experience Cloud] 客戶提供應用程式商店的使用體驗，讓客戶快速安裝、設定和部署自己的標籤。
+標籤可讓任何人建置和維護自己的整合，稱為 *擴充功能*. 這些擴充功能可為 [!DNL Adobe Experience Cloud] 客戶提供應用程式商店的使用體驗，讓客戶快速安裝、設定和部署自己的標籤。
 
-標籤會以隨附的加值功能的形式提供給[!DNL Adobe Experience Cloud]客戶。
+提供標籤給 [!DNL Adobe Experience Cloud] 客戶作為隨附的加值功能。
 
-## 主要優點
+## 主要優點 {#key-benefits}
 
 * 加速創造價值。
 * 使用資料元素集中收集、整理和傳送資料，確保資料值得信賴。
 * 使用規則產生器，透過整合資料和行銷技術提供引人入勝的體驗。
 
-## 主要功能
+## 主要功能 {#key-features}
 
-### 擴充功能
+### 擴充功能 {#extensions}
 
-擴充功能是擴充標籤功能的程式碼（JavaScript、HTML及CSS）套件。 使用幾乎為自助服務的介面來建置、管理和更新您的整合。您可以將擴充功能視為您用來完成工作的應用程式。
+擴充功能是可擴充標記功能的程式碼 (JavaScript、HTML 及 CSS) 套件。使用幾乎為自助服務的介面來建置、管理和更新您的整合。您可以將擴充功能視為您用來完成工作的應用程式。
 
-### 擴充功能目錄
+### 擴充功能目錄 {#extension-catalog}
 
 瀏覽、設定及部署由獨立軟體廠商建置和維護的行銷/廣告工具。
 
-### 規則產生器
+### 規則產生器 {#rule-builder}
 
 建立結合多個事件的完善規則，並以您使用若/則 (if/then) 邏輯搭配條件和例外決定的順序加以排序。規則為以下項目提供選項：
 
@@ -49,11 +50,11 @@ Adobe Experience Platform中的標籤是新一代Adobe標籤管理功能。 標�
 
 只要符合規則中所列的準則及其他條件，您所定義的動作就會依序執行。
 
-### 資料元素
+### 資料元素 {#data-elements}
 
 透過網頁式行銷和廣告技術收集、整理及傳送資料。
 
-### 企業發佈
+### 企業發佈 {#enterprise-publishing}
 
 發佈程序可讓團隊將程式碼發佈至頁面。不同的人員可以建立實施、核准，然後在您的頁面上發佈。
 
@@ -63,7 +64,7 @@ Adobe Experience Platform中的標籤是新一代Adobe標籤管理功能。 標�
 * 開發環境不受任何限制。
 * 以權限為基礎的審慎程式，可將程式庫合併在一起。
 
-### 開放 API
+### 開放 API {#open-apis}
 
 將個別技術或一組技術的實作自動化。
 
@@ -72,11 +73,11 @@ Adobe Experience Platform中的標籤是新一代Adobe標籤管理功能。 標�
 * 將  API 與您自己的內部系統進行整合。
 * 您可以視需要建立自己的使用者介面。
 
-### 輕量型模組化容器標籤
+### 輕量型模組化容器標籤 {#modular-tag}
 
 容器的內容皆經過適當極簡化，包括自訂程式碼。一切模組化。如果您不需要某個項目，就不必將該項目納入程式庫。如此可使實作流程更加快速和精簡。請參閱[縮製](./ui/publishing/builds.md)。
 
-## 其他重點項目
+## 其他重點項目 {#other-highlights}
 
 標籤在類似系統上提供數項改善，包括：
 
