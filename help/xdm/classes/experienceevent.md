@@ -5,9 +5,9 @@ title: XDM ExperienceEvent類別
 topic-legacy: overview
 description: 本檔案概述XDM ExperienceEvent類別，以及事件資料模型的最佳實務。
 exl-id: a8e59413-b52f-4ea5-867b-8d81088a3321
-source-git-commit: 5405a2e2312e81db210a97a759681f66faa8b1fa
+source-git-commit: 64e76c456ac5f59a2a1996e58eda405f1b27efa8
 workflow-type: tm+mt
-source-wordcount: '1759'
+source-wordcount: '1758'
 ht-degree: 1%
 
 ---
@@ -16,20 +16,20 @@ ht-degree: 1%
 
 [!DNL XDM ExperienceEvent] 是標準的體驗資料模型(XDM)類別，可讓您在特定事件發生時或達到特定條件集時，建立系統的時間戳記快照。
 
-體驗事件是所發生事件的事實記錄，包括相關個人的時間點和身分。 事件可以是顯性（直接可觀察的人類行為）或隱性（在沒有直接人類行為的情況下引起），並記錄在案時不進行匯總或解釋。 如需在Platform生態系統中使用此類別的詳細資訊，請參閱[XDM概述](../home.md#data-behaviors)。
+體驗事件是所發生事件的事實記錄，包括相關個人的時間點和身分。 事件可以是顯性（直接可觀察的人類行為）或隱性（不直接人類行為而引發），記錄時不加匯總或解釋。 如需在Platform生態系統中使用此類別的詳細資訊，請參閱 [XDM概觀](../home.md#data-behaviors).
 
-[!DNL XDM ExperienceEvent]類本身為架構提供了多個與時間序列相關的欄位。 擷取資料時，會自動填入其中某些欄位的值：
+此 [!DNL XDM ExperienceEvent] 類本身為架構提供了多個與時間序列相關的欄位。 擷取資料時，會自動填入其中某些欄位的值：
 
 ![](../images/classes/experienceevent/structure.png)
 
 | 屬性 | 說明 |
 | --- | --- |
-| `_id` | 事件的唯一字串識別碼。 此欄位可用來追蹤個別事件的獨特性、防止資料重複，以及在下游服務中尋找該事件。 在某些情況下，`_id`可以是[通用唯一識別碼(UUID)](https://tools.ietf.org/html/rfc4122)或[全域唯一識別碼(GUID)](https://docs.microsoft.com/en-us/dotnet/api/system.guid?view=net-5.0)。<br><br>如果您是從來源連線串流資料，或直接從Parquet檔案內嵌資料，應串連使事件唯一的特定欄位組合（例如主要ID、時間戳記、事件類型等），以產生此值。串連值必須是`uri-reference`格式字串，表示必須移除任何冒號字元。 之後，串連值應該會使用SHA-256或您選擇的其他演算法來雜湊。<br><br>請務必區分， **此欄位不代表與個人相關的身分**，而是資料本身的記錄。與人員相關的身份資料應降級為由相容欄位群組提供的[身分欄位](../schema/composition.md#identity)。 |
-| `eventMergeId` | 如果使用[Adobe Experience Platform Web SDK](../../edge/home.md)來內嵌資料，則此量度代表內嵌批次的ID，該批次會建立記錄。 資料擷取時，系統會自動填入此欄位。 不支援在Web SDK實作內容之外使用此欄位。 |
-| `eventType` | 指出事件類型或類別的字串。 如果您想要區分相同結構和資料集中的不同事件類型，例如區分零售公司的產品檢視事件與購物車附加事件，則可使用此欄位。<br><br>此屬性的標準值在附錄部分 [中提供](#eventType)，包括其預期使用案例的說明。此欄位是可擴充的列舉，這表示您也可以使用自己的事件類型字串，將您追蹤的事件分類。<br><br>`eventType` 限制您在應用程式上每次點擊只使用單一事件，因此您必須使用計算欄位，讓系統知道最重要的事件。如需詳細資訊，請參閱[計算欄位](#calculated)最佳實務一節。 |
-| `producedBy` | 描述事件產生者或來源的字串值。 如果需要，此欄位可用來篩選特定事件產生器以用於細分。<br><br>附錄一節提供此屬性的一些建 [議值](#producedBy)。此欄位是可擴充的列舉，這表示您也可以使用自己的字串來代表不同的事件產生者。 |
-| `identityMap` | 一個地圖欄位，其中包含事件所套用之個人的命名空間身分識別集。 系統會在擷取身分資料時自動更新此欄位。 為了為[即時客戶配置檔案](../../profile/home.md)正確使用此欄位，請勿嘗試手動更新資料操作中欄位的內容。<br /><br />如需其使用案例的詳細資訊，請 [參閱結構組合基](../schema/composition.md#identityMap) 本概念中的身分對應區段。 |
-| `timestamp` | 事件發生時的ISO 8601時間戳記，格式為[RFC 3339第5.6節](https://tools.ietf.org/html/rfc3339#section-5.6)。 此時間戳記必須發生在過去。 如需使用此欄位的最佳實務，請參閱下方[時間戳記](#timestamps)的一節。 |
+| `_id` | 事件的唯一字串識別碼。 此欄位可用來追蹤個別事件的獨特性、防止資料重複，以及在下游服務中尋找該事件。 在某些情況下， `_id` 可以是 [通用唯一識別碼(UUID)](https://tools.ietf.org/html/rfc4122) 或 [全局唯一標識符(GUID)](https://docs.microsoft.com/en-us/dotnet/api/system.guid?view=net-5.0).<br><br>如果您是從來源連線串流資料，或直接從Parquet檔案內嵌資料，應串連使事件唯一的特定欄位組合（例如主要ID、時間戳記、事件類型等），以產生此值。 串連值必須是 `uri-reference` 格式字串，表示必須移除任何冒號字元。 之後，串連值應該會使用SHA-256或您選擇的其他演算法來雜湊。<br><br>必須區分 **此欄位不代表與個人相關的身分**，而是資料本身的記錄。 與個人有關的身份資料應被降級為 [身分欄位](../schema/composition.md#identity) 由相容的欄位群組提供。 |
+| `eventMergeId` | 若使用 [Adobe Experience Platform Web SDK](../../edge/home.md) 若要內嵌資料，這代表內嵌批次的ID，該批次導致建立記錄。 資料擷取時，系統會自動填入此欄位。 不支援在Web SDK實作內容之外使用此欄位。 |
+| `eventType` | 指出事件類型或類別的字串。 如果您想要區分相同結構和資料集中的不同事件類型，例如區分零售公司的產品檢視事件與購物車附加事件，則可使用此欄位。<br><br>此屬性的標準值提供於 [附錄](#eventType)，包括其預定使用案例的說明。 此欄位是可擴充的列舉，這表示您也可以使用自己的事件類型字串，將您追蹤的事件分類。<br><br>`eventType` 限制您在應用程式上每次點擊只使用單一事件，因此您必須使用計算欄位，讓系統知道最重要的事件。 如需詳細資訊，請參閱 [計算欄位的最佳作法](#calculated). |
+| `producedBy` | 描述事件產生者或來源的字串值。 如果需要，此欄位可用來篩選特定事件產生器以用於細分。<br><br>此屬性的一些建議值提供於 [附錄](#producedBy). 此欄位是可擴充的列舉，這表示您也可以使用自己的字串來代表不同的事件產生者。 |
+| `identityMap` | 一個地圖欄位，其中包含事件所套用之個人的命名空間身分識別集。 系統會在擷取身分資料時自動更新此欄位。 為了正確利用此欄位 [即時客戶個人檔案](../../profile/home.md)，請勿嘗試手動更新資料操作中欄位的內容。<br /><br />請參閱 [綱要構成基本知識](../schema/composition.md#identityMap) 以取得其使用案例的詳細資訊。 |
+| `timestamp` | 事件發生時的ISO 8601時間戳記，格式如下 [RFC 3339第5.6節](https://tools.ietf.org/html/rfc3339#section-5.6). 此時間戳記必須發生在過去。 請參閱下方的章節，內容如下： [時間戳記](#timestamps) 以了解使用此欄位的最佳實務。 |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -39,9 +39,9 @@ ht-degree: 1%
 
 ### 時間戳記 {#timestamps}
 
-事件架構的根`timestamp`欄位只能&#x200B;****&#x200B;代表事件本身的觀察，且必須發生在過去。 如果您的分段使用案例需要使用未來可能發生的時間戳記，這些值必須在體驗事件結構的其他位置受到限制。
+根 `timestamp` 事件架構的欄位可 **僅限** 代表事件本身的觀察，且必須發生在過去。 如果您的分段使用案例需要使用未來可能發生的時間戳記，這些值必須在體驗事件結構的其他位置受到限制。
 
-例如，如果旅行和旅館業中的企業正在建立航班預訂事件的模型，則班級`timestamp`欄位表示觀察預訂事件的時間。 與事件相關的其他時間戳記，例如旅行預訂的開始日期，應在標準或自訂欄位群組提供的個別欄位中擷取。
+例如，如果旅行和旅館業中的企業正在為航班預訂事件建模，則類別級別 `timestamp` 欄位代表觀察保留事件的時間。 與事件相關的其他時間戳記，例如旅行預訂的開始日期，應在標準或自訂欄位群組提供的個別欄位中擷取。
 
 ![](../images/classes/experienceevent/timestamps.png)
 
@@ -49,21 +49,21 @@ ht-degree: 1%
 
 ### 使用計算欄位 {#calculated}
 
-您的體驗應用程式中的某些互動可能會產生多個相關事件，技術上會共用相同的事件時間戳記，因此可以呈現為單一事件記錄。 例如，如果客戶在您的網站上檢視產品，則可能會產生有兩個潛在`eventType`值的事件記錄：「產品檢視」事件(`commerce.productViews`)或一般「頁面檢視」事件(`web.webpagedetails.pageViews`)。 在這些情況下，當單一點擊中擷取多個事件時，您可以使用計算欄位來擷取最重要的屬性。
+您的體驗應用程式中的某些互動可能會產生多個相關事件，技術上會共用相同的事件時間戳記，因此可以呈現為單一事件記錄。 例如，如果客戶檢視了您網站上的產品，則可能會產生兩個潛在事件記錄 `eventType` 值：「產品檢視」事件(`commerce.productViews`)或一般「頁面檢視」事件(`web.webpagedetails.pageViews`)。 在這些情況下，當單一點擊中擷取多個事件時，您可以使用計算欄位來擷取最重要的屬性。
 
-[Adobe Experience Platform Data ](../../data-prep/home.md) Prepack可讓您將資料對應、轉換及驗證至XDM和從XDM。使用服務提供的可用[映射函式](../../data-prep/functions.md)，可以調用邏輯運算子，以在將資料內嵌到Experience Platform中時優先處理、轉換和/或合併來自多事件記錄的資料。 在上述範例中，您可以將`eventType`指定為計算欄位，在「產品檢視」和「頁面檢視」同時發生時，將「產品檢視」優先順序設定於「頁面檢視」之上。
+[Adobe Experience Platform資料準備](../../data-prep/home.md) 可讓您將資料對應、轉換及驗證至XDM。 使用可用 [映射函式](../../data-prep/functions.md) 由服務提供，您可以叫用邏輯運算子，以便在將資料擷取到Experience Platform時，對來自多事件記錄的資料進行優先排序、轉換和/或合併。 在上例中，您可以指定 `eventType` 計算欄位，可在「產品檢視」和「頁面檢視」同時發生時，將「產品檢視」優先順序置於「頁面檢視」之上。
 
-如果您要透過UI手動將資料內嵌至Platform，請參閱[計算欄位指南](../../data-prep/calculated-fields.md)上的指南，以了解如何建立計算欄位的特定步驟。
+如果您要透過UI手動將資料內嵌至Platform，請參閱 [計算欄位](../../data-prep/calculated-fields.md) ，以了解如何建立計算欄位的特定步驟。
 
-如果您使用來源連線將資料串流至Platform，您可以設定來源，改為使用計算欄位。 有關配置連接時如何實施計算欄位的說明，請參閱特定源](../../sources/home.md)的[文檔。
+如果您使用來源連線將資料串流至Platform，您可以設定來源，改為使用計算欄位。 請參閱 [特定來源的檔案](../../sources/home.md) ，以了解在設定連線時如何實作計算欄位的說明。
 
 ## 相容的架構欄位組 {#field-groups}
 
 >[!NOTE]
 >
->數個欄位組的名稱已變更。 有關詳細資訊，請參閱[欄位組名稱更新](../field-groups/name-updates.md)上的文檔。
+>數個欄位組的名稱已變更。 請參閱 [欄位群組名稱更新](../field-groups/name-updates.md) 以取得更多資訊。
 
-Adobe提供多個標準欄位組以用於[!DNL XDM ExperienceEvent]類。 以下是類別一些常用欄位群組的清單：
+Adobe提供數個標準欄位群組，以搭配 [!DNL XDM ExperienceEvent] 類別。 以下是類別一些常用欄位群組的清單：
 
 * [[!UICONTROL 促銷活動行銷詳細資料]](../field-groups/event/campaign-marketing-details.md)
 * [[!UICONTROL 管道詳細資料]](../field-groups/event/channel-details.md)
@@ -80,11 +80,11 @@ Adobe提供多個標準欄位組以用於[!DNL XDM ExperienceEvent]類。 以下
 
 ## 附錄
 
-下節包含有關[!UICONTROL XDM ExperienceEvent]類別的其他資訊。
+下節包含 [!UICONTROL XDM ExperienceEvent] 類別。
 
-### `eventType`的接受值 {#eventType}
+### 的接受值 `eventType` {#eventType}
 
-下表概述`eventType`的接受值及其定義：
+下表概述 `eventType`，及其定義：
 
 | 值 | 定義 |
 | --- | --- |
@@ -138,9 +138,9 @@ Adobe提供多個標準欄位組以用於[!DNL XDM ExperienceEvent]類。 以下
 
 {style=&quot;table-layout:auto&quot;}
 
-### `producedBy`的建議值 {#producedBy}
+### 的建議值 `producedBy` {#producedBy}
 
-下表概述`producedBy`的一些接受值：
+下表概述 `producedBy`:
 
 | 值 | 定義 |
 | --- | --- |

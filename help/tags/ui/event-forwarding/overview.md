@@ -3,7 +3,7 @@ title: 事件轉送概述
 description: 了解 Adobe Experience Platform 中的事件轉送功能，它可讓您使用 Platform Edge Network 執行工作，而不變更標記實施。
 feature: Event Forwarding
 exl-id: 18e76b9c-4fdd-4eff-a515-a681bc78d37b
-source-git-commit: 82ce288d55e57f05910fd8290c38f44b1846f48e
+source-git-commit: 64e76c456ac5f59a2a1996e58eda405f1b27efa8
 workflow-type: tm+mt
 source-wordcount: '955'
 ht-degree: 8%
@@ -38,7 +38,7 @@ Adobe Experience Platform中的事件轉送功能可讓您將收集的事件資�
 
 * 提高透明度並控制要在所有屬性間傳送哪些資料。
 
-## 事件轉送與標籤之間的差異
+## 事件轉送與標籤之間的差異 {#differences-from-tags}
 
 就設定而言，事件轉送會使用許多與標籤相同的概念，例如 [規則](../managing-resources/rules.md), [資料元素](../managing-resources/data-elements.md)，和 [擴充功能](../managing-resources/extensions/overview.md). 兩者的主要差異可歸納為：
 
@@ -47,7 +47,7 @@ Adobe Experience Platform中的事件轉送功能可讓您將收集的事件資�
 
 雖然標籤會使用Platform Web和Mobile SDK直接從您的網站或原生行動應用程式收集事件資料，但事件轉送需要已透過Platform Edge Network傳送的事件資料，才能轉送至目的地。 換言之，您必須在您的數位屬性上實作Platform Web或Mobile SDK（透過標籤或使用原始代碼），才能使用事件轉送。
 
-### 屬性
+### 屬性 {#properties}
 
 事件轉送會維護自己的屬性存放區，區別於標籤，您可以透過選取 **[!UICONTROL 事件轉送]** 的下一頁。
 
@@ -61,13 +61,13 @@ Adobe Experience Platform中的事件轉送功能可讓您將收集的事件資�
 
 ![資料收集UI中的事件轉送擴充功能](../../images/ui/event-forwarding/overview/extensions.png)
 
-### 資料元素
+### 資料元素 {#data-elements}
 
 事件轉送中可用的資料元素類型僅限於相容的目錄 [擴充功能](#extensions) 才能提供。
 
 雖然資料元素本身在事件轉送中的建立和設定方式與標籤相同，但在參考來自Platform Edge Network的資料時，有一些重要的語法差異。
 
-#### 從平台邊緣網路參考資料
+#### 從平台邊緣網路參考資料 {#edge}
 
 若要參考來自Platform Edge Network的資料，您必須建立資料元素，以提供該資料的有效路徑。 在UI中建立資料元素時，請選取 **[!UICONTROL 核心]** 擴充功能和 **[!UICONTROL 路徑]** （針對類型）。
 
@@ -75,23 +75,23 @@ Adobe Experience Platform中的事件轉送功能可讓您將收集的事件資�
 
 ![用於事件轉送的路徑類型資料元素範例](../../images/ui/event-forwarding/overview/data-reference.png)
 
-### 規則
+### 規則 {#rules}
 
 在事件轉送屬性中建立規則的運作方式與標籤類似，主要差異在於您無法選取事件作為規則元件。 事件轉送規則會處理從 [資料流](../../../edge/fundamentals/datastreams.md) 並在滿足特定條件時，將這些事件轉送至目的地。
 
 ![資料收集UI中的事件轉送規則](../../images/ui/event-forwarding/overview/rules.png)
 
-#### 資料元素代碼化
+#### 資料元素代碼化 {#tokenization}
 
 在標籤規則中，資料元素會以 `%` 在資料元素名稱的開頭和結尾處(例如： `%viewportHeight%`)。 在事件轉送規則中，資料元素會改為使用 `{{` 在開頭和 `}}` 在資料元素名稱的結尾(例如： `{{viewportHeight}}`)。
 
 ![用於事件轉送的路徑類型資料元素範例](../../images/ui/event-forwarding/overview/tokenization.png)
 
-#### 規則動作順序
+#### 規則動作順序 {#action-sequencing}
 
 此 [!UICONTROL 動作] 事件轉送規則的區段一律會依序執行。 儲存規則時，請確認動作順序正確。此執行序列無法像使用標籤一樣非同步執行。
 
-## 秘密
+## 秘密 {#secrets}
 
 事件轉送功能可讓您建立、管理和儲存機密，這些機密可用來驗證您要傳送資料的伺服器。 請參閱 [秘密](./secrets.md) 關於不同種類的可用機密類型，以及在UI中實作的方式。
 

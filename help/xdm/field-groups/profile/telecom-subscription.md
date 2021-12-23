@@ -4,33 +4,34 @@ solution: Experience Platform
 title: 電信訂閱方案欄位組
 topic-legacy: overview
 description: 本文檔提供電信訂閱架構欄位組的概述。
-source-git-commit: 19675e4042c28061a4b2ed4e68374d5e09216ba1
+exl-id: 00c20081-09d0-425c-9894-0f957558bd43
+source-git-commit: 64e76c456ac5f59a2a1996e58eda405f1b27efa8
 workflow-type: tm+mt
-source-wordcount: '726'
+source-wordcount: '730'
 ht-degree: 5%
 
 ---
 
-# [!UICONTROL 電信] 訂閱方案欄位組
+# [!UICONTROL 電信訂閱] 方案欄位組
 
 >[!NOTE]
 >
->數個架構欄位組的名稱已變更。 有關詳細資訊，請參閱[欄位組名稱更新](../name-updates.md)上的文檔。
+>數個架構欄位組的名稱已變更。 請參閱 [欄位群組名稱更新](../name-updates.md) 以取得更多資訊。
 
-[!UICONTROL 電信] 訂閱是類別的標準結構欄位 [[!DNL XDM Individual Profile] ](../../classes/individual-profile.md) 群組，可說明客戶的電信訂閱計畫，包括定價、套件和個別產品訂閱。
+[!UICONTROL 電信訂閱] 是的標準架構欄位組 [[!DNL XDM Individual Profile] 類](../../classes/individual-profile.md) 說明客戶的電信訂閱計畫，包括定價、套件和個別產品訂閱。
 
-欄位組提供了單個對象類型欄位`telecomSubscription`，其屬性如下所述。
+欄位組提供單個對象類型欄位， `telecomSubscription`，其屬性說明如下。
 
 ![電信訂閱結構](../../images/field-groups/telecom-subscription/structure.png)
 
 | 屬性 | 資料類型 | 說明 |
 | --- | --- | --- |
-| `internetSubscription` | 物件陣列 | 說明網際網路訂閱計畫詳細資訊，如資料上限、連線類型和速度詳細資訊。 如需詳細資訊，請參閱下方的[一節。](#internetSubscription) |
-| `landlineSubscription` | 物件陣列 | 說明固定電話訂購計畫詳細資訊，包括選定的功能、分鐘數和撥號計畫。 如需詳細資訊，請參閱下方的[一節。](#landlineSubscription) |
-| `mediaSubscription` | 物件陣列 | 說明媒體訂閱計畫的詳細資訊，包括頻道數和包含的串流服務。 如需詳細資訊，請參閱下方的[一節。](#mediaSubscription) |
-| `mobileSubscription` | 物件陣列 | 說明行動訂閱計畫詳細資訊，包括行數、資料費率、成本等。 如需詳細資訊，請參閱下方的[一節。](#mobileSubscription) |
+| `internetSubscription` | 物件陣列 | 說明網際網路訂閱計畫詳細資訊，如資料上限、連線類型和速度詳細資訊。 請參閱 [下文](#internetSubscription) 以取得更多資訊。 |
+| `landlineSubscription` | 物件陣列 | 說明固定電話訂購計畫詳細資訊，包括選定的功能、分鐘數和撥號計畫。 請參閱 [下文](#landlineSubscription) 以取得更多資訊。 |
+| `mediaSubscription` | 物件陣列 | 說明媒體訂閱計畫的詳細資訊，包括頻道數和包含的串流服務。 請參閱 [下文](#mediaSubscription) 以取得更多資訊。 |
+| `mobileSubscription` | 物件陣列 | 說明行動訂閱計畫詳細資訊，包括行數、資料費率、成本等。 請參閱 [下文](#mobileSubscription) 以取得更多資訊。 |
 | `primarySubscriber` | [[!UICONTROL 「人」]](../../data-types/person.md) | 說明訂閱的擁有者。 |
-| `bundleName` | 字串 | 擷取客戶已註冊的任何類型訂閱套件組合的名稱，例如`Internet + Media`。 |
+| `bundleName` | 字串 | 擷取客戶已註冊之任何類型訂閱套件的名稱，例如 `Internet + Media`. |
 | `primaryPartyID` | 字串 | 負責訂閱之主要人員的識別碼，通常可能是其裝置電話號碼。 |
 
 {style=&quot;table-layout:auto&quot;}
@@ -42,7 +43,7 @@ ht-degree: 5%
 
 ## `internetSubscription` {#internetSubscription}
 
-`internetSubscription` 提供物件陣列。每個物件的結構說明如下。
+`internetSubscription` 是以物件陣列的形式提供。 每個物件的結構說明如下。
 
 ![internetSubscription](../../images/field-groups/telecom-subscription/internetSubscription.png)
 
@@ -59,7 +60,7 @@ ht-degree: 5%
 
 ## `landlineSubscription` {#landlineSubscription}
 
-`landlineSubscription` 提供物件陣列。每個物件的結構說明如下。
+`landlineSubscription` 是以物件陣列的形式提供。 每個物件的結構說明如下。
 
 ![landlineSubscription](../../images/field-groups/telecom-subscription/landlineSubscription.png)
 
@@ -82,7 +83,7 @@ ht-degree: 5%
 
 ## `mediaSubscription` {#mediaSubscription}
 
-`mediaSubscription` 提供物件陣列。每個物件的結構說明如下。
+`mediaSubscription` 是以物件陣列的形式提供。 每個物件的結構說明如下。
 
 ![mediaSubscription](../../images/field-groups/telecom-subscription/mediaSubscription.png)
 
@@ -96,7 +97,7 @@ ht-degree: 5%
 
 ## `mobileSubscription` {#mobileSubscription}
 
-`mobileSubscription` 提供物件陣列。每個物件的結構說明如下。
+`mobileSubscription` 是以物件陣列的形式提供。 每個物件的結構說明如下。
 
 ![mobileSubscription](../../images/field-groups/telecom-subscription/mobileSubscription.png)
 
@@ -109,4 +110,3 @@ ht-degree: 5%
 | `portedNumber` | 布林值 | 指示客戶是否從另一個電信商埠號。 |
 
 {style=&quot;table-layout:auto&quot;}
-

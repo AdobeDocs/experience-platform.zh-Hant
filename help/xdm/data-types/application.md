@@ -5,16 +5,16 @@ title: 應用程式資料類型
 topic-legacy: overview
 description: 本檔案概述Application Experience Data Model(XDM)資料類型。
 exl-id: ac7d6761-7b58-4e0d-85e7-6f157fb2eea5
-source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
+source-git-commit: 64e76c456ac5f59a2a1996e58eda405f1b27efa8
 workflow-type: tm+mt
-source-wordcount: '441'
+source-wordcount: '442'
 ht-degree: 2%
 
 ---
 
-#  應用程式資料類型
+# [!UICONTROL 應用程式] 資料類型
 
- 應用程式是標準的Experience Data Model(XDM)資料類型，可說明與應用程式產生的互動相關的詳細資訊。應用程式是指軟體體驗，例如可由最終用戶安裝、運行、關閉或卸載的移動或案頭應用程式。 此資料類型的屬性不是用於描述聊天機器人、基於瀏覽器的插件或不適用於應用程式的其他體驗等代理。
+[!UICONTROL 應用程式] 是標準的Experience Data Model(XDM)資料類型，可說明與應用程式產生的互動相關的詳細資訊。 應用程式是指軟體體驗，例如可由最終用戶安裝、運行、關閉或卸載的移動或案頭應用程式。 此資料類型的屬性不是用於描述聊天機器人、基於瀏覽器的插件或不適用於應用程式的其他體驗等代理。
 
 <img src="../images/data-types/application.PNG" width="500" /><br />
 
@@ -29,7 +29,7 @@ ht-degree: 2%
 | `upgrades` | [[!UICONTROL 測量]](./measure.md) | 包含先前已安裝之應用程式升級的資料。 這會在升級後的首次啟動時觸發。 |
 | `id` | 字串 | 應用程式的唯一識別碼。 |
 | `name` | 字串 | 應用程式的名稱。 |
-| `userPerspective` | 字串 | 事件發生時，使用者與應用程式或品牌之間的透視或實體關係。 了解使用者對應用程式的看法，有助於在您不想納入`background`和`detached`事件的大部分時間內，準確產生工作階段，作為「作用中」工作階段的一部分。 此屬性的值必須等於下列列舉值之一。 <li> `foreground`:使用者和應用程式會直接彼此互動。 </li> <li> `background`:應用程式和使用者間接互動。例如，應用程式可測量值並在畫面鎖定或前景中使用另一個應用程式時重新整理。  </li> <li> `detached`:分離表示事件與應用程式相關，但並非直接來自應用程式，例如從外部系統傳送電子郵件或推播通知。 |
+| `userPerspective` | 字串 | 事件發生時，使用者與應用程式或品牌之間的透視或實體關係。 了解使用者對應用程式的看法，有助於在您不想納入的大多數時間內，準確產生工作階段 `background` 和 `detached` 事件作為「作用中」工作階段的一部分。 此屬性的值必須等於下列列舉值之一。 <li> `foreground`:使用者和應用程式會直接彼此互動。 </li> <li> `background`:應用程式和使用者間接互動。 例如，應用程式可測量值並在畫面鎖定或前景中使用另一個應用程式時重新整理。  </li> <li> `detached`:分離表示事件與應用程式相關，但並非直接來自應用程式，例如從外部系統傳送電子郵件或推播通知。 |
 | `version` | 字串 | 應用程式的版本。 |
 
 {style=&quot;table-layout:auto&quot;}
