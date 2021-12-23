@@ -6,9 +6,9 @@ seo-title: Activate audience data to batch profile export destinations
 description: 了解如何將區段傳送至批次設定檔式型目的地，以啟動Adobe Experience Platform中的受眾資料。
 seo-description: Learn how to activate the audience data you have in Adobe Experience Platform by sending segments to batch profile-based destinations.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: 822276890b6ebed922d359f8dece58d8c90dea24
+source-git-commit: c0e6477907fa616aecebf57b0465d9f8d82c740a
 workflow-type: tm+mt
-source-wordcount: '2114'
+source-wordcount: '2187'
 ht-degree: 0%
 
 ---
@@ -89,10 +89,12 @@ ht-degree: 0%
    >
    >由於內部Experience Platform進程的配置方式，第一個增量或完整檔案導出可能不包含所有回填資料。 <br> <br> 為確保完整檔案和增量檔案都能匯出完整且最新的回填資料，Adobe建議在次日中午12點後設定第一次檔案匯出時間。 未來版本將會解決此限制。
 
-1. 使用 **[!UICONTROL 日期]** 選取器，以選擇應進行匯出的日期或間隔。
-   >[!TIP]
+1. 使用 **[!UICONTROL 日期]** 選取器，以選擇應進行匯出的日期或間隔。 對於每日匯出，最佳實務是設定您的開始和結束日期，以符合下游平台中促銷活動的持續時間。
+
+   >[!IMPORTANT]
    >
-   > 若是每日匯出，請設定您的開始和結束日期，以符合下游平台中促銷活動的持續時間。
+   > 選取匯出間隔時，匯出中不會包含間隔的最後一天。 例如，如果選取1月4日到11日的間隔，最後一次檔案匯出將於1月10日進行。
+
 1. 選擇 **[!UICONTROL 建立]** 以儲存排程。
 
 
@@ -117,10 +119,12 @@ ht-degree: 0%
    >
    >由於內部Experience Platform進程的配置方式，第一個增量或完整檔案導出可能不包含所有回填資料。 <br> <br> 為確保完整檔案和增量檔案都能匯出完整且最新的回填資料，Adobe建議在次日中午12點後設定第一次檔案匯出時間。 未來版本將會解決此限制。
 
-1. 使用 **[!UICONTROL 日期]** 選取器，以選擇應進行匯出的日期或間隔。
-   >[!TIP]
+1. 使用 **[!UICONTROL 日期]** 選取器，以選擇應進行匯出的間隔。 最佳實務是設定您的開始和結束日期，以符合下游平台中促銷活動的持續時間。
+
+   >[!IMPORTANT]
    >
-   >設定您的開始和結束日期，以符合下游平台中促銷活動的持續時間。
+   >匯出中不會包含間隔的最後一天。 例如，如果選取1月4日到11日的間隔，最後一次檔案匯出將於1月10日進行。
+
 1. 選擇 **[!UICONTROL 建立]** 以儲存排程。
 
 ### 配置檔案名 {#file-names}
