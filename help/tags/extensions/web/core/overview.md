@@ -2,10 +2,10 @@
 title: 核心擴充功能概述
 description: 了解Adobe Experience Platform中的核心標籤擴充功能。
 exl-id: 841f32ad-a6a8-49fb-a131-ef4faab47187
-source-git-commit: f3c23665229a83d6c63c7d6026ebf463069d8ad9
+source-git-commit: 04404ff9ab8d623214b96ec65342d2e8d11e85a6
 workflow-type: tm+mt
-source-wordcount: '5362'
-ht-degree: 65%
+source-wordcount: '5492'
+ht-degree: 63%
 
 ---
 
@@ -128,9 +128,13 @@ ht-degree: 65%
 
 指定的資料元素變更時，就會觸發此事件。 您必須提供資料元素的名稱。 您可以在文字欄位中輸入資料元素名稱，或選取文字欄位右側的資料元素圖示，然後從顯示對話方塊內提供的清單中選擇，以選取資料元素。
 
-#### 直接呼叫
+#### 直接呼叫 {#direct-call-event}
 
-直接呼叫事件會略過事件偵測和查閱系統。 若您想要明確告訴Platform發生的狀況，直接呼叫規則是理想的選擇。 另外，這類規則也非常適用於 Platform 無法偵測 DOM 中事件的情況 (例如使用 Adobe Flash 時)。指定 `_satellite.track` 「標識符」文本欄位中的字串。
+直接呼叫事件會略過事件偵測和查閱系統。 若要告訴系統確切發生的狀況，直接呼叫規則是理想的選擇。 此外，當系統無法偵測DOM中的事件時，也是理想的作法。
+
+定義直接呼叫事件時，您必須指定字串作為此事件的識別碼。 若 [觸發直接呼叫動作](#direct-call-action) 會觸發包含相同識別碼的事件，然後執行監聽該識別碼的任何直接呼叫事件規則。
+
+![資料收集UI中直接呼叫事件的螢幕擷圖](../../../images/extensions/core/direct-call-event.png)
 
 #### 元素存在
 
@@ -625,6 +629,14 @@ setTimeout(function() {
 }, 1000);
 </script>
 ```
+
+### 觸發直接呼叫 {#direct-call-action}
+
+此動作會觸發使用特定 [直接呼叫事件](#direct-call-event). 設定動作時，您必須提供您要觸發之直接呼叫事件的識別碼字串。 或者，您也可以透過 `detail` 物件，可包含一組自訂索引鍵值配對。
+
+![資料收集UI中觸發直接呼叫動作的螢幕擷圖](../../../images/extensions/core/direct-call-action.png)
+
+動作會直接對應至 [`track` 方法](../../../ui/client-side/satellite-object.md?lang=en#track) 在 `satellite` 物件，可由用戶端代碼存取。
 
 ## 核心擴充功能資料元素類型
 

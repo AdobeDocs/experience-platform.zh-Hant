@@ -2,9 +2,9 @@
 title: 核心擴充功能發行說明
 description: Adobe Experience Platform核心擴充功能的最新發行說明。
 exl-id: a049b2d5-7a00-435d-bcc7-112658a53a1e
-source-git-commit: 317f134420666de23f0ee9c14938fffeda09d3de
+source-git-commit: 5441c6ca0c15996ee06afa2c795ec5ae6e030f35
 workflow-type: tm+mt
-source-wordcount: '1543'
+source-wordcount: '1565'
 ht-degree: 58%
 
 ---
@@ -14,6 +14,12 @@ ht-degree: 58%
 >[!NOTE]
 >
 >Adobe Experience Platform Launch在Adobe Experience Platform中已重新命名為一套資料收集技術。 因此，所有產品文件中出現了幾項術語變更。 如需術語變更的彙整參考資料，請參閱以下[文件](../../../term-updates.md)。
+
+## 2022 年 1 月 4 日
+
+v3.3.0
+
+* 更改 [觸發直接呼叫動作](./overview.md#direct-call-action) 以便您提供自訂事件資訊以傳送至直接呼叫規則。
 
 ## 2021 年 10 月 8 日
 
@@ -62,7 +68,7 @@ v3.0.0
 
 * PDCL-6153:新增支援，以可靠地提取快取自訂程式碼動作的完整限定URL。
 
-核心擴充功能的v3.0.0與Turbine Web執行階段[v27.2.0的變更結合，如果使用者的公司支援Premium CDN，此變更可讓使用者在許多Adobe管理的托管區域中載入其程式庫。](https://github.com/adobe/reactor-turbine/releases/tag/v27.2.0)
+核心擴充功能的v3.0.0與 [v27.2.0（Turbine Web運行時）](https://github.com/adobe/reactor-turbine/releases/tag/v27.2.0)，如果使用者的公司支援Premium CDN，則可讓使用者在許多Adobe管理的托管區域中載入其程式庫。
 
 若使用者沒有Premium CDN，此升級為選用且回溯相容，若客戶的公司已啟用Premium CDN，則此升級為強制。
 
@@ -91,7 +97,7 @@ v2.0.4
 
 * 新增各欄位的資料元素支援 — 下列事件已新增資料元素支援：「頁面逗留時間」、「進入檢視區」、「暫留」和「媒體播放時間」。 以及下列條件：「網站逗留時間」和「值比較」
 * 新增對ctrl/cmd +按一下和使用連結延遲時滑鼠中鍵點按預設行為的支援
-* **將點按事件上的連結延遲標示為「不再支援」。**  — 如需詳細資訊，請參閱 [Adobe Experience Platform的](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-launch/explainer-link-delay/ba-p/398403) 資料收集部落格
+* **將點按事件上的連結延遲標示為「不再支援」。**  — 如需詳細資訊，請參閱 [資料收集部落格](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-launch/explainer-link-delay/ba-p/398403) 針對Adobe Experience Platform
 
 ## 2021 年 1 月 6 日
 
@@ -155,7 +161,7 @@ v1.6.2
 
 v1.6.1
 
-* **支援 CSP Nonce** - 核心擴充功能現起提供選用的設定參數。您可以新增參照 Nonce 的資料元素。如果已設定，標籤新增至頁面的所有內嵌指令碼都會使用您所設定的Nonce。 這項變更可支援使用內容安全性原則及Nonce，讓標籤指令碼仍可在CSP環境中載入。 您可以在此處[閱讀更多有關搭配CSP使用標籤的資訊。](../../../ui/client-side/content-security-policy.md)
+* **支援 CSP Nonce** - 核心擴充功能現起提供選用的設定參數。您可以新增參照 Nonce 的資料元素。如果已設定，標籤新增至頁面的所有內嵌指令碼都會使用您所設定的Nonce。 這項變更可支援使用內容安全性原則及Nonce，讓標籤指令碼仍可在CSP環境中載入。 您可以閱讀更多有關搭配CSP使用標籤的資訊 [此處](../../../ui/client-side/content-security-policy.md).
 
 ## 2019 年 6 月 18 日
 
@@ -183,8 +189,8 @@ v1.4.2
 ## 2018 年 11 月 8 日
 
 * **「保留同類群組」選項** - 在「取樣」條件中新增了保留同類群組的選項。這可讓使用者在不同工作階段間，將使用者保留或移出取樣同類群組。例如，如果勾選「保留同類群組」核取方塊，且在首次對特定訪客執行該條件時傳回 true，則後續對同一訪客執行該條件時都會傳回 true。同樣地，如果勾選「保留同類群組」核取方塊，且在首次對特定訪客執行該條件時傳回 false，則後續對同一訪客執行該條件時都會傳回 false。
-* **錯誤修正**  — 修正當同步載入標籤，但並未正確安裝(沒有呼叫 `_satellite.pageBottom()`)時，在頁面上使用「頁面底部」事件和「自訂程式碼」動作的規則會清除網站內容的問題。
-* **錯誤修正**  — 修正當瀏覽器的「DOMContentLoaded」事件引發後，標籤程式庫以非同步方式載入並完成載入時，「Enters Viewport」無法運作的問題。
+* **錯誤修正**  — 修正在同步載入標籤但未正確安裝的頁面上，使用「頁面底部」事件和「自訂程式碼」動作的規則(未呼叫 `_satellite.pageBottom()`)會清除網站內容。
+* **錯誤修正**  — 修正當瀏覽器的DOMContentLoaded事件引發後，標籤程式庫以非同步方式載入並完成載入時，「Enters Viewport」無法運作的問題。
 
 ## 2018 年 5 月 24 日
 
