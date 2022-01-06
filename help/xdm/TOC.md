@@ -2,12 +2,12 @@
 audience: user
 user-guide-title: Experience Data Model (XDM) 系統說明
 breadcrumb-title: Experience Data Model (XDM) 指南
-user-guide-description: 使用Experience Data Model(XDM)類別和結構欄位群組，以標準化體驗資料。
+user-guide-description: 使用 Experience Data Model (XDM) 類別和方案欄位群組，將體驗資料標準化。
 feature: Schemas
-source-git-commit: db7e8de8e2669fae7fdf21d10042b7a71c63a8f6
+source-git-commit: 065f5ef9d3d3be0fcab84d7518d8a00e4cd551cf
 workflow-type: tm+mt
-source-wordcount: '401'
-ht-degree: 14%
+source-wordcount: '405'
+ht-degree: 18%
 
 ---
 
@@ -18,15 +18,16 @@ ht-degree: 14%
 * 方案 {#schema}
    * [結構構成基本概念](schema/composition.md)
    * [資料模型最佳實務](schema/best-practices.md)
+   * [敏感和個人資料](./schema/sensitive-and-personal-data.md)
    * [XDM欄位類型限制](schema/field-constraints.md)
    * [XDM中的名稱步調](./schema/namespaces.md)
-   * [XDM欄位字典](schema/field-dictionary.md)
    * 產業資料模型 {#industries}
       * [總覽](./schema/industries/overview.md)
       * [零售](./schema/industries/retail.md)
       * [金融服務](./schema/industries/financial.md)
       * [電信](./schema/industries/telecom.md)
       * [旅行和招待](./schema/industries/travel-hospitality.md)
+   * [XDM欄位字典](schema/field-dictionary.md)
 * 類別 {#classes}
    * [XDM個別設定檔](./classes/individual-profile.md)
    * [XDM ExperienceEvent](./classes/experienceevent.md)
