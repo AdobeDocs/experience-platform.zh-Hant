@@ -1,16 +1,17 @@
 ---
 title: Pinterest客戶清單連線
 description: 從您的客戶清單、造訪過您網站的人員或已在Pinterest上與您的內容互動的人員建立對象。
-source-git-commit: a071aaaf5e9b8ef9223ef4f9ea204460f18bf95e
+exl-id: e601f75f-0d40-4cd0-93ca-54d7439f1db7
+source-git-commit: 90aa0d16851443255dd4828e9f28330a89a12692
 workflow-type: tm+mt
-source-wordcount: '516'
+source-wordcount: '515'
 ht-degree: 2%
 
 ---
 
 # [!DNL Pinterest Customer List] 連接
 
-## 概覽 {#overview}
+## 總覽 {#overview}
 
 從您的客戶清單、造訪過您網站的人員或已在Pinterest上與您的內容互動的人員建立對象。
 
@@ -20,21 +21,21 @@ ht-degree: 2%
 
 ## 先決條件 {#prerequisites}
 
-* 使用者需要使用Pinterest帳戶進行驗證，該帳戶可存取他們要新增受眾的廣告商帳戶。 有關共用廣告商帳戶的詳細資訊，請參閱[此處](https://help.pinterest.com/en/business/article/share-and-manage-access-to-your-ad-accounts)。 具體而言，使用者需要「對象」存取層級。
-* 有關客戶清單標識格式的詳細資訊，請參見[此處](https://help.pinterest.com/en/business/article/audience-targeting)。
+* 使用者需要使用Pinterest帳戶進行驗證，該帳戶可存取他們要新增受眾的廣告商帳戶。 有關共用廣告商帳戶的詳細資訊，請參閱 [此處](https://help.pinterest.com/en/business/article/share-and-manage-access-to-your-ad-accounts). 具體而言，使用者需要「對象」存取層級。
+* 有關客戶清單標識格式的詳細資訊 [此處](https://help.pinterest.com/en/business/article/audience-targeting).
 
 
 ## 支援的身分 {#supported-identities}
 
-[!DNL Pinterest Customer List]目的地支援下表所述的身分識別的啟用。 深入了解[identities](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=en#getting-started)。
+此 [!DNL Pinterest Customer List] 目的地支援啟用下表所述的身分。 深入了解 [身分](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=en#getting-started).
 
-在目標啟動工作流程的[對應步驟](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping)中，將所需身分對應至目標欄位&#x200B;*pinterest_audience*。 身分識別會在資料擷取至Pinterest時加以區分和解析。
+在 [對應步驟](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping) 將所需身分對應至目標欄位 *pinterest_audience*. 身分識別會在資料擷取至Pinterest時加以區分和解析。
 
 | Target身分 | 說明 | 考量事項 |
 |---|---|---|
-| GAID | [!DNL Google Advertising ID] | 將&#x200B;*GAID*&#x200B;來源身分命名空間對應至目標身分欄位&#x200B;*pinterest_audience*。 身分識別會在資料擷取至Pinterest時加以區分和解析。 |
-| IDFA | [!DNL Apple ID for Advertisers] | 將&#x200B;*IDFA*&#x200B;來源身分命名空間對應至目標身分欄位&#x200B;*pinterest_audience*。 身分識別會在資料擷取至Pinterest時加以區分和解析。 |
-| 電子郵件 | 電子郵件地址（清除文字或使用SHA256演算法雜湊） | Adobe Experience Platform支援純文字和SHA256雜湊電子郵件地址。 <br> 將Emailor  ** Email_ *LC_SHA256* 來源身分識別命名空間對應至目標身分欄 *位pinterest_audience*。 |
+| GAID | [!DNL Google Advertising ID] | 對應 *GAID* 目標標識欄位的源標識命名空間 *pinterest_audience*. 身分識別會在資料擷取至Pinterest時加以區分和解析。 |
+| IDFA | [!DNL Apple ID for Advertisers] | 對應 *IDFA* 目標標識欄位的源標識命名空間 *pinterest_audience*. 身分識別會在資料擷取至Pinterest時加以區分和解析。 |
+| 電子郵件 | 電子郵件地址（清除文字或使用SHA256演算法雜湊） | Adobe Experience Platform支援純文字和SHA256雜湊電子郵件地址。 <br> 對應 *電子郵件* 或 *Email_LC_SHA256* 目標標識欄位的源標識命名空間 *pinterest_audience*. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -44,7 +45,7 @@ ht-degree: 2%
 
 ## 使用案例 {#use-cases}
 
-為協助您更清楚了解您應如何及何時使用[!DNL Pinterest Customer List]目的地，以下是Adobe Experience Platform客戶可借由使用此目的地解決的範例使用案例。
+以協助您更清楚了解應如何及何時使用 [!DNL Pinterest Customer List] 目的地，以下是Adobe Experience Platform客戶可透過此目的地解決的範例使用案例。
 
 
 ### 使用案例#1
@@ -53,26 +54,25 @@ ht-degree: 2%
 
 ## 連接到目標 {#connect}
 
-要連接到此目標，請按照[目標配置教程](../../ui/connect-destination.md)中所述的步驟操作。
-
+若要連線至此目的地，請依照 [目的地設定教學課程](../../ui/connect-destination.md).
 
 
 ### 連線參數 {#parameters}
 
-在[設定](../../ui/connect-destination.md)此目標時，您必須提供下列資訊：
+同時 [設定](../../ui/connect-destination.md) 此目的地時，您必須提供下列資訊：
 
 * **[!UICONTROL 名稱]**:日後您將透過此名稱識別此目的地。
 * **[!UICONTROL 說明]**:未來可協助您識別此目的地的說明。
-* **[!UICONTROL 帳戶ID]**:您的Pinterest廣告帳戶ID。
+* **[!UICONTROL 廣告商ID]**:您的Pinterest廣告商ID。
 
 ## 啟用此目的地的區段 {#activate}
 
-請參閱[啟動設定檔和區段至串流區段匯出目的地](/help/destinations/ui/activate-segment-streaming-destinations.md) ，以取得啟動受眾區段至此目的地的指示。
+閱讀 [啟動設定檔和區段至串流區段匯出目的地](/help/destinations/ui/activate-segment-streaming-destinations.md) 以取得啟用受眾區段至此目的地的指示。
 
 ## 資料使用與控管 {#data-usage-governance}
 
-處理資料時，所有[!DNL Adobe Experience Platform]目標都符合資料使用策略。 有關[!DNL Adobe Experience Platform]如何實施資料控管的詳細資訊，請參閱[資料控管概述](https://experienceleague.adobe.com/docs/experience-platform/data-governance/home.html)。
+全部 [!DNL Adobe Experience Platform] 處理資料時，目的地符合資料使用原則。 有關如何 [!DNL Adobe Experience Platform] 強制實施資料控管，請參閱 [資料控管概觀](https://experienceleague.adobe.com/docs/experience-platform/data-governance/home.html).
 
 ## 其他資源 {#additional-resources}
 
-如需詳細資訊，請參閱[Pinterest說明中心頁面](https://help.pinterest.com/en/business/article/audience-targeting)。
+請參閱 [Pinterest說明中心頁面](https://help.pinterest.com/en/business/article/audience-targeting) 以取得其他資訊。
