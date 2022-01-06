@@ -5,10 +5,10 @@ title: 查詢服務中的Spark SQL函式
 topic-legacy: spark sql functions
 description: 本文檔包含有關擴展SQL功能的Spark SQL函式的資訊。
 exl-id: 59e6d82b-3317-456d-8c56-3efd5978433a
-source-git-commit: 07b3483a3e8c666e769a0d00d08fa4784d10813d
+source-git-commit: f291c0db5b751227e979e70ea8f91a0c133ecf34
 workflow-type: tm+mt
-source-wordcount: '3909'
-ht-degree: 1%
+source-wordcount: '3866'
+ht-degree: 0%
 
 ---
 
@@ -16,33 +16,21 @@ ht-degree: 1%
 
 Adobe Experience Platform Query Service提供數種內建的Spark SQL函式以擴充SQL功能。 本文檔列出了Query Service支援的Spark SQL函式。
 
-有關函式的詳細資訊，包括其語法、用法和示例，請參閱[Spark SQL函式文檔](https://spark.apache.org/docs/latest/api/sql/index.html)。
+如需函式的詳細資訊，包括其語法、使用方式和範例，請參閱 [Spark SQL函式文檔](https://spark.apache.org/docs/latest/api/sql/index.html).
 
 >[!NOTE]
 >
 >外部檔案中並非所有函式皆受支援。
 
-## 類別
-
-- [數學和統計運算子及函式](#math)
-- [邏輯運算子](#logical-operators)
-- [日期/時間函式](#datetime-functions)
-- [陣列](#arrays)
-- [資料類型轉換函式](#datatype-casting)
-- [轉換和格式功能](#conversion)
-- [資料評估](#data-evaluation)
-- [目前資訊](#current-information)
-- [高階函式](#higher-order)
-
 ## 數學和統計運算子及函式 {#math}
 
 | 運算子/函式 | 說明 |
 | ----------------- | ----------- |
-| [`%`](https://spark.apache.org/docs/latest/api/sql/index.html#_2) | 傳回兩個數字的余數 |
-| [`*`](https://spark.apache.org/docs/latest/api/sql/index.html#_4) | 將兩個數字相乘 |
-| [`+`](https://spark.apache.org/docs/latest/api/sql/index.html#_5) | 將兩個數字相加 |
-| [`-`](https://spark.apache.org/docs/latest/api/sql/index.html#_6) | 減去兩個數字 |
-| [`/`](https://spark.apache.org/docs/latest/api/sql/index.html#_7) | 將兩個數字除以 |
+| [`%`](https://spark.apache.org/docs/latest/api/sql/index.html#_3) | 傳回兩個數字的余數 |
+| [`*`](https://spark.apache.org/docs/latest/api/sql/index.html#_5) | 將兩個數字相乘 |
+| [`+`](https://spark.apache.org/docs/latest/api/sql/index.html#_6) | 將兩個數字相加 |
+| [`-`](https://spark.apache.org/docs/latest/api/sql/index.html#_7) | 減去兩個數字 |
+| [`/`](https://spark.apache.org/docs/latest/api/sql/index.html#_8) | 將兩個數字除以 |
 | [`abs`](https://spark.apache.org/docs/latest/api/sql/index.html#abs) | 返回輸入的絕對值 |
 | [`acos`](https://spark.apache.org/docs/latest/api/sql/index.html#acos) | 傳回反余弦值 |
 | [`approx_count_distinct`](https://spark.apache.org/docs/latest/api/sql/index.html#approx_count_distinct) | 按HyperLogLog返回估計基數++ |
@@ -84,13 +72,13 @@ Adobe Experience Platform Query Service提供數種內建的Spark SQL函式以�
 | [`pi`](https://spark.apache.org/docs/latest/api/sql/index.html#pi) | 傳回pi |
 | [`pmod`](https://spark.apache.org/docs/latest/api/sql/index.html#pmod) | 傳回兩個值之間的正模數 |
 | [`positive`](https://spark.apache.org/docs/latest/api/sql/index.html#positive) | 傳回正平衡 |
-| [`pow`](https://spark.apache.org/docs/latest/api/sql/index.html#pow),  [`power`](https://spark.apache.org/docs/latest/api/sql/index.html#power) | 傳回第一個值至第二個值的冪 |
+| [`pow`](https://spark.apache.org/docs/latest/api/sql/index.html#pow), [`power`](https://spark.apache.org/docs/latest/api/sql/index.html#power) | 傳回第一個值至第二個值的冪 |
 | [`radians`](https://spark.apache.org/docs/latest/api/sql/index.html#radians) | 將值轉換為弧度 |
 | [`rand`](https://spark.apache.org/docs/latest/api/sql/index.html#rand) | 傳回0到1之間的隨機數 |
 | [`randn`](https://spark.apache.org/docs/latest/api/sql/index.html#randn) | 傳回隨機值 |
 | [`rint`](https://spark.apache.org/docs/latest/api/sql/index.html#rint) | 傳回最接近的雙值 |
 | [`round`](https://spark.apache.org/docs/latest/api/sql/index.html#round) | 傳回最接近的四捨五入值 |
-| [`sign`](https://spark.apache.org/docs/latest/api/sql/index.html#sign),  [`signum`](https://spark.apache.org/docs/latest/api/sql/index.html#signum) | 傳回數字元號 |
+| [`sign`](https://spark.apache.org/docs/latest/api/sql/index.html#sign), [`signum`](https://spark.apache.org/docs/latest/api/sql/index.html#signum) | 傳回數字元號 |
 | [`sin`](https://spark.apache.org/docs/latest/api/sql/index.html#sin) | 傳回值的正弦 |
 | [`sinh`](https://spark.apache.org/docs/latest/api/sql/index.html#sinh) | 傳回值的雙曲正弦 |
 | [`sqrt`](https://spark.apache.org/docs/latest/api/sql/index.html#sqrt) | 傳回值的平方根 |
@@ -101,22 +89,21 @@ Adobe Experience Platform Query Service提供數種內建的Spark SQL函式以�
 | [`tan`](https://spark.apache.org/docs/latest/api/sql/index.html#tan) | 傳回值的正切 |
 | [`tanh`](https://spark.apache.org/docs/latest/api/sql/index.html#tanh) | 傳回值的雙曲正切 |
 | [`var_pop`](https://spark.apache.org/docs/latest/api/sql/index.html#var_pop) | 傳回計算的母體差異 |
-| [`var_samp`](https://spark.apache.org/docs/latest/api/sql/index.html#var_samp),  [`variance`](https://spark.apache.org/docs/latest/api/sql/index.html#variance) | 傳回計算的範例變異數 |
+| [`var_samp`](https://spark.apache.org/docs/latest/api/sql/index.html#var_samp), [`variance`](https://spark.apache.org/docs/latest/api/sql/index.html#variance) | 傳回計算的範例變異數 |
 
 ### 邏輯運算子和函式 {#logical-operators}
 
 | 運算子/函式 | 說明 |
 | ----------------- | ----------- |
 | [`!`](https://spark.apache.org/docs/latest/api/sql/index.html#_1) 或 [`not`](https://spark.apache.org/docs/latest/api/sql/index.html#not) | 邏輯非 |
-| [`<`](https://spark.apache.org/docs/latest/api/sql/index.html#_7) | Less than |
-| [`<=`](https://spark.apache.org/docs/latest/api/sql/index.html#_8) | Less than or equal to |
-| [`=`](https://spark.apache.org/docs/latest/api/sql/index.html#_10) | Equal to |
-| [`>`](https://spark.apache.org/docs/latest/api/sql/index.html#_12) | Greater than |
-| [`>=`](https://spark.apache.org/docs/latest/api/sql/index.html#_13) | Greater than or equal to |
-| [`^`](https://spark.apache.org/docs/latest/api/sql/index.html#_14) | 位獨佔或 |
-| [`>=`](https://spark.apache.org/docs/latest/api/sql/index.html#_13) | 大於或等於 |
-| [`|`](https://spark.apache.org/docs/latest/api/sql/index.html#_15) | 按位或 |
-| [`~`](https://spark.apache.org/docs/latest/api/sql/index.html#_16) | 按位不 |
+| [`<`](https://spark.apache.org/docs/latest/api/sql/index.html#_8) | 少於 |
+| [`<=`](https://spark.apache.org/docs/latest/api/sql/index.html#_9) | Less than or equal to |
+| [`=`](https://spark.apache.org/docs/latest/api/sql/index.html#_12) | Equal to |
+| [`>`](https://spark.apache.org/docs/latest/api/sql/index.html#_14) | Greater than |
+| [`>=`](https://spark.apache.org/docs/latest/api/sql/index.html#_15) | 大於或等於 |
+| [`^`](https://spark.apache.org/docs/latest/api/sql/index.html#_16) | 位獨佔或 |
+| [`\|`](https://spark.apache.org/docs/latest/api/sql/index.html#_17) | 按位或 |
+| [`~`](https://spark.apache.org/docs/latest/api/sql/index.html#_19) | 按位不 |
 | [`arrays_overlap`](https://spark.apache.org/docs/latest/api/sql/index.html#arrays_overlap) | 傳回通用元素 |
 | [`assert_true`](https://spark.apache.org/docs/latest/api/sql/index.html#assert_true) | 聲明如果表達式為true |
 | [`if`](https://spark.apache.org/docs/latest/api/sql/index.html#if) | 如果運算式評估為true，則傳回第二個運算式。 否則，傳回第三個運算式。 |
@@ -140,7 +127,7 @@ Adobe Experience Platform Query Service提供數種內建的Spark SQL函式以�
 | [`date_sub`](https://spark.apache.org/docs/latest/api/sql/index.html#date_sub) | 從日期減去天數 |
 | [`date_trunc`](https://spark.apache.org/docs/latest/api/sql/index.html#date_trunc) | 傳回截斷日期至指定單位 |
 | [`datediff`](https://spark.apache.org/docs/latest/api/sql/index.html#datediff) | 傳回日期之間的差異（以天為單位） |
-| [`day`](https://spark.apache.org/docs/latest/api/sql/index.html#day),  [`dayofmonth`](https://spark.apache.org/docs/latest/api/sql/index.html#dayofmonth) | 傳回月份的某天 |
+| [`day`](https://spark.apache.org/docs/latest/api/sql/index.html#day), [`dayofmonth`](https://spark.apache.org/docs/latest/api/sql/index.html#dayofmonth) | 傳回月份的某天 |
 | [`dayofweek`](https://spark.apache.org/docs/latest/api/sql/index.html#dayofweek) | 傳回一週中的某天(1-7) |
 | [`dayofyear`](https://spark.apache.org/docs/latest/api/sql/index.html#dayofyear) | 傳回一年中的某天 |
 | [`from_unixtime`](https://spark.apache.org/docs/latest/api/sql/index.html#from_unixtime) | 以Unix時間傳回日期 |
@@ -153,8 +140,8 @@ Adobe Experience Platform Query Service提供數種內建的Spark SQL函式以�
 | [`next_day`](https://spark.apache.org/docs/latest/api/sql/index.html#next_day) | 傳回晚於輸入的第一天 |
 | [`quarter`](https://spark.apache.org/docs/latest/api/sql/index.html#quarter) | 傳回輸入的季度 |
 | [`second`](https://spark.apache.org/docs/latest/api/sql/index.html#second) | 傳回字串的秒數 |
-| [`to_date`](https://spark.apache.org/docs/latest/api/sql/index.html#to_date) | 將字串轉換為日期。 **注意：** 字串 **** 必須採用格式 `yyyy-mm-ddTHH24:MM:SS`。 |
-| [`to_timestamp`](https://spark.apache.org/docs/latest/api/sql/index.html#to_timestamp) | 將字串轉換為時間戳記。 **注意：** 字串 **** 必須採用格式 `yyyy-mm-ddTHH24:MM:SS`。 |
+| [`to_date`](https://spark.apache.org/docs/latest/api/sql/index.html#to_date) | 將字串轉換為日期。 **注意：** 字串 **必須** 格式 `yyyy-mm-ddTHH24:MM:SS`. |
+| [`to_timestamp`](https://spark.apache.org/docs/latest/api/sql/index.html#to_timestamp) | 將字串轉換為時間戳記。 **注意：** 字串 **必須** 格式 `yyyy-mm-ddTHH24:MM:SS`. |
 | [`to_unix_timestamp`](https://spark.apache.org/docs/latest/api/sql/index.html#to_unix_timestamp) | 將字串轉換為Unix時間戳記 |
 | [`to_utc_timestamp`](https://spark.apache.org/docs/latest/api/sql/index.html#to_utc_timestamp) | 將字串轉換為UTC時間戳記 |
 | [`trunc`](https://spark.apache.org/docs/latest/api/sql/index.html#trunc) | 截斷日期 |
@@ -180,7 +167,7 @@ Adobe Experience Platform Query Service提供數種內建的Spark SQL函式以�
 | [`array_repeat`](https://spark.apache.org/docs/latest/api/sql/index.html#array_repeat) | 建立包含值計數次數的陣列 |
 | [`array_sort`](https://spark.apache.org/docs/latest/api/sql/index.html#array_sort) | 對陣列進行排序 |
 | [`array_union`](https://spark.apache.org/docs/latest/api/sql/index.html#array_union) | 將陣列連接在一起，沒有任何重複項 |
-| [`array_zip`](https://spark.apache.org/docs/latest/api/sql/index.html#array_zip) | 郵遞區號 |
+| [`arrays_zip`](https://spark.apache.org/docs/latest/api/sql/index.html#array_zip) | 將給定陣列的值與給定索引處原始集合的值組合 |
 | [`cardinality`](https://spark.apache.org/docs/latest/api/sql/index.html#cardinality) | 返回陣列的大小 |
 | [`element_at`](https://spark.apache.org/docs/latest/api/sql/index.html#element_at) | 在位置返回元素 |
 | [`explode`](https://spark.apache.org/docs/latest/api/sql/index.html#explode) | 將陣列的元素分成多行，不包括null |
@@ -189,8 +176,7 @@ Adobe Experience Platform Query Service提供數種內建的Spark SQL函式以�
 | [`flatten`](https://spark.apache.org/docs/latest/api/sql/index.html#flatten) | 拼合陣列陣列 |
 | [`inline`](https://spark.apache.org/docs/latest/api/sql/index.html#inline) | 將結構陣列分離到表中，不包括null |
 | [`inline_outer`](https://spark.apache.org/docs/latest/api/sql/index.html#inline_outer) | 將結構陣列分隔到表中，包括null |
-| [`posexplod`](https://spark.apache.org/docs/latest/api/sql/index.html#posexplod) | 將陣列的元素分成多個行（帶位置），不包括null |
-| [`posexplod`](https://spark.apache.org/docs/latest/api/sql/index.html#posexplod) | 將陣列的元素分成多行，並帶有位置，包括null |
+| [`posexplode`](https://spark.apache.org/docs/latest/api/sql/index.html#posexplode) | 將陣列的元素分成多個行（帶位置），不包括null |
 | [`reverse`](https://spark.apache.org/docs/latest/api/sql/index.html#reverse) | 陣列的反向元素 |
 | [`shuffle`](https://spark.apache.org/docs/latest/api/sql/index.html#shuffle) | 返回陣列的隨機排列 |
 | [`slice`](https://spark.apache.org/docs/latest/api/sql/index.html#slice) | 子集陣列 |
@@ -224,16 +210,16 @@ Adobe Experience Platform Query Service提供數種內建的Spark SQL函式以�
 | [`base64`](https://spark.apache.org/docs/latest/api/sql/index.html#base64) | 將引數變更為base64字串 |
 | [`bin`](https://spark.apache.org/docs/latest/api/sql/index.html#bin) | 將引數變更為二進位值 |
 | [`bit_length`](https://spark.apache.org/docs/latest/api/sql/index.html#bit_length) | 返回位長度 |
-| [`char`](https://spark.apache.org/docs/latest/api/sql/index.html#char),  [`chr`](https://spark.apache.org/docs/latest/api/sql/index.html#chr) | 傳回ASCII字元 |
-| [`char_length`](https://spark.apache.org/docs/latest/api/sql/index.html#char_length),  [`character_length`](https://spark.apache.org/docs/latest/api/sql/index.html#character_length) | 傳回字串長度 |
+| [`char`](https://spark.apache.org/docs/latest/api/sql/index.html#char), [`chr`](https://spark.apache.org/docs/latest/api/sql/index.html#chr) | 傳回ASCII字元 |
+| [`char_length`](https://spark.apache.org/docs/latest/api/sql/index.html#char_length), [`character_length`](https://spark.apache.org/docs/latest/api/sql/index.html#character_length) | 傳回字串長度 |
 | [`crc32`](https://spark.apache.org/docs/latest/api/sql/index.html#crc32) | 返回循環冗餘校驗值 |
 | [`degrees`](https://spark.apache.org/docs/latest/api/sql/index.html#degrees) | 將弧度轉換為度 |
 | [`format_number`](https://spark.apache.org/docs/latest/api/sql/index.html#format_number) | 更改數字的格式 |
-| [`from_json`](https://spark.apache.org/docs/latest/api/sql/index.html#from_json),  [`get_json_object`](https://spark.apache.org/docs/latest/api/sql/index.html#get_json_object) | 從JSON取得資料 |
+| [`from_json`](https://spark.apache.org/docs/latest/api/sql/index.html#from_json), [`get_json_object`](https://spark.apache.org/docs/latest/api/sql/index.html#get_json_object) | 從JSON取得資料 |
 | [`hash`](https://spark.apache.org/docs/latest/api/sql/index.html#hash) | 傳回雜湊值 |
 | [`hex`](https://spark.apache.org/docs/latest/api/sql/index.html#hex) | 將引數轉換為十六進位值 |
 | [`initcap`](https://spark.apache.org/docs/latest/api/sql/index.html#initcap) | 將字串變更為標題為 |
-| [`lcase`](https://spark.apache.org/docs/latest/api/sql/index.html#lcase),  [`lower`](https://spark.apache.org/docs/latest/api/sql/index.html#lower) | 將字串變更為全部小寫 |
+| [`lcase`](https://spark.apache.org/docs/latest/api/sql/index.html#lcase), [`lower`](https://spark.apache.org/docs/latest/api/sql/index.html#lower) | 將字串變更為全部小寫 |
 | [`lpad`](https://spark.apache.org/docs/latest/api/sql/index.html#lpad) | 在字串的左側墊上 |
 | [`map`](https://spark.apache.org/docs/latest/api/sql/index.html#map) | 建立地圖 |
 | [`map_from_arrays`](https://spark.apache.org/docs/latest/api/sql/index.html#map_from_arrays) | 從陣列建立地圖 |
@@ -241,15 +227,15 @@ Adobe Experience Platform Query Service提供數種內建的Spark SQL函式以�
 | [`md5`](https://spark.apache.org/docs/latest/api/sql/index.html#md5) | 傳回md5值 |
 | [`rpad`](https://spark.apache.org/docs/latest/api/sql/index.html#rpad) | 將字串的右側貼上 |
 | [`rtrim`](https://spark.apache.org/docs/latest/api/sql/index.html#rtrim) | 移除尾端空格 |
-| [`sha`](https://spark.apache.org/docs/latest/api/sql/index.html#sha),  [`sha1`](https://spark.apache.org/docs/latest/api/sql/index.html#sha1) | 傳回SHA1值 |
+| [`sha`](https://spark.apache.org/docs/latest/api/sql/index.html#sha), [`sha1`](https://spark.apache.org/docs/latest/api/sql/index.html#sha1) | 傳回SHA1值 |
 | [`sha2`](https://spark.apache.org/docs/latest/api/sql/index.html#sha2) | 傳回SHA2值 |
 | [`soundex`](https://spark.apache.org/docs/latest/api/sql/index.html#soundex) | 傳回soundex程式碼 |
 | [`stack`](https://spark.apache.org/docs/latest/api/sql/index.html#stack) | 將值分隔成行 |
-| [`substr`](https://spark.apache.org/docs/latest/api/sql/index.html#substr),  [`substring`](https://spark.apache.org/docs/latest/api/sql/index.html#substring) | 傳回子字串 |
+| [`substr`](https://spark.apache.org/docs/latest/api/sql/index.html#substr), [`substring`](https://spark.apache.org/docs/latest/api/sql/index.html#substring) | 傳回子字串 |
 | [`to_json`](https://spark.apache.org/docs/latest/api/sql/index.html#to_json) | 傳回JSON字串 |
 | [`translate`](https://spark.apache.org/docs/latest/api/sql/index.html#translate) | 取代字串內的值 |
 | [`trim`](https://spark.apache.org/docs/latest/api/sql/index.html#trim) | 移除開頭和結尾字元 |
-| [`ucase`](https://spark.apache.org/docs/latest/api/sql/index.html#ucase),  [`upper`](https://spark.apache.org/docs/latest/api/sql/index.html#upper) | 將字串更改為全部大寫 |
+| [`ucase`](https://spark.apache.org/docs/latest/api/sql/index.html#ucase), [`upper`](https://spark.apache.org/docs/latest/api/sql/index.html#upper) | 將字串更改為全部大寫 |
 | [`unbase64`](https://spark.apache.org/docs/latest/api/sql/index.html#unbase64) | 將base64字串轉換為二進位 |
 | [`unhex`](https://spark.apache.org/docs/latest/api/sql/index.html#unhex) | 將十六進位轉換為二進位 |
 | [`uuid`](https://spark.apache.org/docs/latest/api/sql/index.html#uuid) | 傳回UUID |
@@ -265,19 +251,19 @@ Adobe Experience Platform Query Service提供數種內建的Spark SQL函式以�
 | [`concat_ws`](https://spark.apache.org/docs/latest/api/sql/index.html#concat_ws) | 與分隔符的串連 |
 | [`count`](https://spark.apache.org/docs/latest/api/sql/index.html#count) | 傳回列的總計數 |
 | [`decode`](https://spark.apache.org/docs/latest/api/sql/index.html#decode) | 使用字元集進行解碼 |
-| [`elt`](https://spark.apache.org/docs/latest/api/sql/index.html#elt) | 傳回[`n`](https://spark.apache.org/docs/latest/api/sql/index.html#n)th輸入 |
+| [`elt`](https://spark.apache.org/docs/latest/api/sql/index.html#elt) | 傳回 [`n`](https://spark.apache.org/docs/latest/api/sql/index.html#n)輸入 |
 | [`encode`](https://spark.apache.org/docs/latest/api/sql/index.html#encode) | 使用字元集進行編碼 |
-| [`first`](https://spark.apache.org/docs/latest/api/sql/index.html#first),  [`first_value`](https://spark.apache.org/docs/latest/api/sql/index.html#first_value) | 傳回第一個值 |
+| [`first`](https://spark.apache.org/docs/latest/api/sql/index.html#first), [`first_value`](https://spark.apache.org/docs/latest/api/sql/index.html#first_value) | 傳回第一個值 |
 | [`grouping`](https://spark.apache.org/docs/latest/api/sql/index.html#grouping) | 指示列是否被分組 |
 | [`grouping_id`](https://spark.apache.org/docs/latest/api/sql/index.html#grouping_id) | 返回分組級別 |
 | [`instr`](https://spark.apache.org/docs/latest/api/sql/index.html#instr) | 返回基於1的字元出現索引 |
 | [`json_tuple`](https://spark.apache.org/docs/latest/api/sql/index.html#json_tuple) | 從JSON輸入傳回元組 |
-| [`lag`](https://spark.apache.org/docs/latest/api/sql/index.html#lag),  [`lead`](https://spark.apache.org/docs/latest/api/sql/index.html#lead) | 傳回偏移前的值 |
-| [`last`](https://spark.apache.org/docs/latest/api/sql/index.html#last),  [`last_value`](https://spark.apache.org/docs/latest/api/sql/index.html#last_value) | 傳回最後一個值 |
-| [`left`](https://spark.apache.org/docs/latest/api/sql/index.html#left) | 傳回第一個[`n`](https://spark.apache.org/docs/latest/api/sql/index.html#n)字元 |
+| [`lag`](https://spark.apache.org/docs/latest/api/sql/index.html#lag), [`lead`](https://spark.apache.org/docs/latest/api/sql/index.html#lead) | 傳回偏移前的值 |
+| [`last`](https://spark.apache.org/docs/latest/api/sql/index.html#last), [`last_value`](https://spark.apache.org/docs/latest/api/sql/index.html#last_value) | 傳回最後一個值 |
+| [`left`](https://spark.apache.org/docs/latest/api/sql/index.html#left) | 傳回第一個 [`n`](https://spark.apache.org/docs/latest/api/sql/index.html#n) 字元 |
 | [`length`](https://spark.apache.org/docs/latest/api/sql/index.html#length) | 傳回字串的長度 |
 | [`levenshtein`](https://spark.apache.org/docs/latest/api/sql/index.html#levenshtein) | 傳回字串之間的Levenshtein距離 |
-| [`locate`](https://spark.apache.org/docs/latest/api/sql/index.html#locate),  [`position`](https://spark.apache.org/docs/latest/api/sql/index.html#position) | 傳回子字串首次出現的位置 |
+| [`locate`](https://spark.apache.org/docs/latest/api/sql/index.html#locate), [`position`](https://spark.apache.org/docs/latest/api/sql/index.html#position) | 傳回子字串首次出現的位置 |
 | [`map_concat`](https://spark.apache.org/docs/latest/api/sql/index.html#map_concat) | 串連地圖 |
 | [`map_keys`](https://spark.apache.org/docs/latest/api/sql/index.html#map_keys) | 傳回地圖的鍵 |
 | [`map_values`](https://spark.apache.org/docs/latest/api/sql/index.html#map_values) | 傳回地圖的值 |
@@ -300,12 +286,12 @@ Adobe Experience Platform Query Service提供數種內建的Spark SQL函式以�
 | [`shiftright`](https://spark.apache.org/docs/latest/api/sql/index.html#shiftright) | 按位右移 |
 | [`shiftrightunsigned`](https://spark.apache.org/docs/latest/api/sql/index.html#shiftrightunsigned) | 無符號位向右移 |
 | [`size`](https://spark.apache.org/docs/latest/api/sql/index.html#size) | 返回陣列的大小 |
-| [`space`](https://spark.apache.org/docs/latest/api/sql/index.html#space) | 傳回包含[`n`](https://spark.apache.org/docs/latest/api/sql/index.html#n)空格的字串 |
+| [`space`](https://spark.apache.org/docs/latest/api/sql/index.html#space) | 傳回包含的字串 [`n`](https://spark.apache.org/docs/latest/api/sql/index.html#n) 空格 |
 | [`split`](https://spark.apache.org/docs/latest/api/sql/index.html#split) | 分割字串 |
 | [`substring_index`](https://spark.apache.org/docs/latest/api/sql/index.html#substring_index) | 子字串的返回索引 |
 | [`window`](https://spark.apache.org/docs/latest/api/sql/index.html#window) | 視窗 |
 | [`xpath`](https://spark.apache.org/docs/latest/api/sql/index.html#xpath) | 分析XML節點 |
-| [`xpath_double`](https://spark.apache.org/docs/latest/api/sql/index.html#xpath_double),  [`xpath_number`](https://spark.apache.org/docs/latest/api/sql/index.html#xpath_number) | 對XML節點進行雙重解析 |
+| [`xpath_double`](https://spark.apache.org/docs/latest/api/sql/index.html#xpath_double), [`xpath_number`](https://spark.apache.org/docs/latest/api/sql/index.html#xpath_number) | 對XML節點進行雙重解析 |
 | [`xpath_float`](https://spark.apache.org/docs/latest/api/sql/index.html#xpath_float) | 分析浮點數的XML節點 |
 | [`xpath_int`](https://spark.apache.org/docs/latest/api/sql/index.html#xpath_int) | 解析整數的XML節點 |
 | [`xpath_long`](https://spark.apache.org/docs/latest/api/sql/index.html#xpath_long) | 解析XML節點很長 |
@@ -318,7 +304,7 @@ Adobe Experience Platform Query Service提供數種內建的Spark SQL函式以�
 | -------- | ----------- |
 | [`current_database`](https://spark.apache.org/docs/latest/api/sql/index.html#current_database) | 返回當前資料庫 |
 | [`current_date`](https://spark.apache.org/docs/latest/api/sql/index.html#current_date) | 傳回目前日期 |
-| [`current_timestamp`](https://spark.apache.org/docs/latest/api/sql/index.html#current_timestamp),  [`now`](https://spark.apache.org/docs/latest/api/sql/index.html#now) | 傳回目前時間戳記 |
+| [`current_timestamp`](https://spark.apache.org/docs/latest/api/sql/index.html#current_timestamp), [`now`](https://spark.apache.org/docs/latest/api/sql/index.html#now) | 傳回目前時間戳記 |
 
 ### 高階函式 {#higher-order}
 
