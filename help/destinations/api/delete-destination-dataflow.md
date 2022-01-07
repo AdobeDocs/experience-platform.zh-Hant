@@ -4,9 +4,10 @@ solution: Experience Platform
 title: 使用流服務API刪除目標資料流
 type: Tutorial
 description: 了解如何使用流量服務API將資料流刪除到批處理和流目的地。
-source-git-commit: df89f8ce8050b26068e0ab7aa01f1c964f5d2422
+exl-id: fa40cf97-46c6-4a10-b53c-30bed2dd1b2d
+source-git-commit: c93a054174bc68ecedf67599ef61ad0b41a56ada
 workflow-type: tm+mt
-source-wordcount: '553'
+source-wordcount: '565'
 ht-degree: 1%
 
 ---
@@ -90,3 +91,5 @@ curl -X DELETE \
 依照本教學課程，您已成功使用 [!DNL Flow Service] 將現有資料流刪除到目標的API。
 
 有關如何使用用戶介面執行這些操作的步驟，請參閱 [刪除UI中的資料流](../ui/delete-destinations.md).
+
+你現在可以繼續 [刪除目標帳戶](/help/destinations/api/delete-destination-account.md) 使用 [!DNL Flow Service] API。

@@ -1,11 +1,11 @@
 ---
 keywords: 流；
-title: HTTP連線
+title: HTTP API連線
 description: Adobe Experience Platform中的HTTP API目的地可讓您將設定檔資料傳送至協力廠商HTTP端點。
 exl-id: 165a8085-c8e6-4c9f-8033-f203522bb288
-source-git-commit: 8d2c5ef477d4707be4c0da43ba1f672fac797604
+source-git-commit: c93a054174bc68ecedf67599ef61ad0b41a56ada
 workflow-type: tm+mt
-source-wordcount: '633'
+source-wordcount: '634'
 ht-degree: 1%
 
 ---

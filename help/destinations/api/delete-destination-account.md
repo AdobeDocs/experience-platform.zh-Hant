@@ -4,9 +4,10 @@ solution: Experience Platform
 title: 使用流量服務API刪除目標帳戶
 type: Tutorial
 description: 了解如何使用流量服務API刪除目標帳戶。
-source-git-commit: df89f8ce8050b26068e0ab7aa01f1c964f5d2422
+exl-id: a963073c-ecba-486b-a5c2-b85bdd426e72
+source-git-commit: c93a054174bc68ecedf67599ef61ad0b41a56ada
 workflow-type: tm+mt
-source-wordcount: '758'
+source-wordcount: '769'
 ht-degree: 1%
 
 ---
@@ -184,4 +185,4 @@ curl -X DELETE \
 
 ## 後續步驟
 
-依照本教學課程，您已成功使用 [!DNL Flow Service] API可刪除現有的目的地帳戶。
+依照本教學課程，您已成功使用 [!DNL Flow Service] API可刪除現有的目的地帳戶。 如需使用目的地的詳細資訊，請參閱 [目的地概述](/help/destinations/home.md).
