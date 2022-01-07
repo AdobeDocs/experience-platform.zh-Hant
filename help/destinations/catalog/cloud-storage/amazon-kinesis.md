@@ -3,10 +3,10 @@ keywords: Amazon Kinesis;kinesis目的地；kinesis
 title: Amazon Kinesis連線
 description: 建立與Amazon Kinesis儲存體的即時傳出連線，以串流來自Adobe Experience Platform的資料。
 exl-id: b40117ef-6ad0-48a9-bbcb-97c6f6d1dce3
-source-git-commit: 2b1cde9fc913be4d3bea71e7d56e0e5fe265a6be
+source-git-commit: 8d2c5ef477d4707be4c0da43ba1f672fac797604
 workflow-type: tm+mt
-source-wordcount: '552'
-ht-degree: 2%
+source-wordcount: '824'
+ht-degree: 1%
 
 ---
 
@@ -102,6 +102,18 @@ ht-degree: 2%
 ## 啟用此目的地的區段 {#activate}
 
 請參閱 [對串流設定檔匯出目的地啟用受眾資料](../../ui/activate-streaming-profile-destinations.md) 以取得啟用受眾區段至此目的地的指示。
+
+## 設定檔匯出行為 {#profile-export-behavior}
+
+Experience Platform會最佳化設定檔匯出行為至您的Amazon Kinesis目的地，以僅在符合區段資格或其他重大事件後發生設定檔的相關更新時，將資料匯出至您的目的地。 設定檔會在下列情況下匯出至您的目的地：
+
+* 至少有一個區段對應至目的地，區段成員資格有所變更，便觸發設定檔更新。 例如，設定檔已符合對應至目的地的其中一個區段資格，或已退出對應至目的地的其中一個區段。
+* 設定檔更新是由 [身分圖](/help/xdm/field-groups/profile/identitymap.md). 例如，已符合其中一個對應至目的地區段資格的設定檔，已在「身分對應」屬性中新增身分識別。
+* 設定檔更新是由至少一個已對應至目的地之屬性的屬性變更所觸發。 例如，對應步驟中對應至目的地的其中一個屬性會新增至設定檔。
+
+在上述所有情況中，只有發生相關更新的設定檔會匯出至您的目的地。 例如，如果對應至目的地流程的區段有100個成員，且有5個新設定檔符合該區段的資格，則匯出至目的地的作業會是增量的，且僅包含5個新設定檔。
+
+請注意，無論變更在何處，所有對應屬性都會針對設定檔匯出。 因此，在上述範例中，即使屬性本身未變更，這五個新設定檔的所有對應屬性也會匯出。
 
 ## 匯出的資料 {#exported-data}
 

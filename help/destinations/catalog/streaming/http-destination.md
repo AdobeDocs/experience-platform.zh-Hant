@@ -3,10 +3,10 @@ keywords: 流；
 title: HTTP連線
 description: Adobe Experience Platform中的HTTP API目的地可讓您將設定檔資料傳送至協力廠商HTTP端點。
 exl-id: 165a8085-c8e6-4c9f-8033-f203522bb288
-source-git-commit: 3bec18f1b7209b1f329dc90aadb597edb6143291
+source-git-commit: 8d2c5ef477d4707be4c0da43ba1f672fac797604
 workflow-type: tm+mt
-source-wordcount: '360'
-ht-degree: 3%
+source-wordcount: '633'
+ht-degree: 1%
 
 ---
 
@@ -61,6 +61,18 @@ ht-degree: 3%
 ### 目標屬性 {#attributes}
 
 在 [[!UICONTROL 選擇屬性]](../../ui/activate-streaming-profile-destinations.md#select-attributes) 步驟，Adobe建議您從 [聯合方案](../../../profile/home.md#profile-fragments-and-union-schemas). 選取唯一識別碼，以及您要匯出至目的地的任何其他XDM欄位。
+
+## 設定檔匯出行為 {#profile-export-behavior}
+
+Experience Platform會最佳化將設定檔匯出行為匯出至您的HTTP API目的地，以僅在符合區段資格或其他重大事件後發生設定檔的相關更新時，將資料匯出至API端點。 設定檔會在下列情況下匯出至您的目的地：
+
+* 至少有一個區段對應至目的地，區段成員資格有所變更，便觸發設定檔更新。 例如，設定檔已符合對應至目的地的其中一個區段資格，或已退出對應至目的地的其中一個區段。
+* 設定檔更新是由 [身分圖](/help/xdm/field-groups/profile/identitymap.md). 例如，已符合其中一個對應至目的地區段資格的設定檔，已在「身分對應」屬性中新增身分識別。
+* 設定檔更新是由至少一個已對應至目的地之屬性的屬性變更所觸發。 例如，對應步驟中對應至目的地的其中一個屬性會新增至設定檔。
+
+在上述所有情況中，只有發生相關更新的設定檔會匯出至您的目的地。 例如，如果對應至目的地流程的區段有100個成員，且有5個新設定檔符合該區段的資格，則匯出至目的地的作業會是增量的，且僅包含5個新設定檔。
+
+請注意，無論變更在何處，所有對應屬性都會針對設定檔匯出。 因此，在上述範例中，即使屬性本身未變更，這五個新設定檔的所有對應屬性也會匯出。
 
 ## 匯出的資料 {#exported-data}
 
