@@ -2,10 +2,10 @@
 title: Adobe Target v2擴充功能發行說明
 description: Adobe Experience Platform中Adobe Target v2標籤擴充功能的最新發行說明。
 exl-id: c1a04e62-026d-4b16-aa70-bc6d5dbe6b2d
-source-git-commit: 42a1ceac3de2244bef858bf03eabe4910ae597f8
+source-git-commit: 644be95d9f90e20622c4f8ad68252ac57c09a288
 workflow-type: tm+mt
-source-wordcount: '589'
-ht-degree: 48%
+source-wordcount: '623'
+ht-degree: 47%
 
 ---
 
@@ -14,6 +14,12 @@ ht-degree: 48%
 >[!NOTE]
 >
 >Adobe Experience Platform Launch在Adobe Experience Platform中已重新命名為一套資料收集技術。 因此，所有產品文件中出現了幾項術語變更。 如需術語變更的彙整參考資料，請參閱以下[文件](../../../term-updates.md)。
+
+## 2022 年 1 月 7 日
+
+### Adobe Target v2 擴充功能 0.17.0 版
+
+- 更新以支援at.js v2.8.0，現在正在收集功能使用情況和效能遙測資料。  不會收集個人資料。 若要退出此功能，請設定 `telemetryEnabled` to `false` in `targetGlobalSettings`.
 
 ## 2021 年 10 月 28 日
 
@@ -43,7 +49,7 @@ ht-degree: 48%
 
 ### Adobe Target v2 擴充功能 0.14.2 版
 
-- 修正最終套件組合包含兩個at.js版本的錯誤，一個具有On-Device Decisioning，另一個沒有。
+- 修正最終套件組合包含兩個at.js版本的錯誤，一個具有裝置決策功能，另一個沒有。
 
 ## 2021 年 5 月 19 日
 
