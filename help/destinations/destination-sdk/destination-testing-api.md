@@ -2,10 +2,10 @@
 description: 本頁列出並說明您可使用「/authoring/testing/destinationInstance/」 API端點來執行的所有API操作，以測試您的目標是否已正確設定，以及驗證資料流向您所設定目的地的完整性。
 title: 目的地測試API操作
 exl-id: 2b54250d-ec30-4ad7-a8be-b86b14e4f074
-source-git-commit: 52ce788f6947300b607dfc2efa09d028f9c2ddd7
+source-git-commit: 6dd8a94e46b9bee6d1407e7ec945a722d8d7ecdb
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '646'
+ht-degree: 2%
 
 ---
 
@@ -321,7 +321,7 @@ curl --location --request POST 'https://platform.adobe.io/data/core/activation/a
 
 ## API錯誤處理 {#api-error-handling}
 
-Destination SDK API端點遵循一般Experience PlatformAPI錯誤訊息原則。 請參閱 [API狀態代碼](https://experienceleague.adobe.com/docs/experience-platform/landing/troubleshooting.html?lang=en#api-status-codes) 和 [請求標題錯誤](https://experienceleague.adobe.com/docs/experience-platform/landing/troubleshooting.html?lang=en#request-header-errors) （位於平台疑難排解指南中）。
+Destination SDKAPI端點遵循一般Experience PlatformAPI錯誤訊息原則。 請參閱 [API狀態代碼](../../landing/troubleshooting.md#api-status-codes) 和 [請求標題錯誤](../../landing/troubleshooting.md#request-header-errors) （位於平台疑難排解指南中）。
 
 ## 後續步驟
 

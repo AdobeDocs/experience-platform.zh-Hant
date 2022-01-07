@@ -1,10 +1,10 @@
 ---
-description: 本頁列出並說明所有可使用「/authoring/destination-servers」 API端點執行的API操作。 您可在Adobe Experience Platform目的地SDK中，透過通用端點「/authoring/destination-servers」設定目的地的伺服器和範本規格。
+description: 本頁列出並說明所有可使用「/authoring/destination-servers」 API端點執行的API操作。 目標的伺服器和模板規格可通過公共端點「/authoring/destination-servers」在Adobe Experience Platform Destination SDK中配置。
 title: 目標伺服器端點API操作
 exl-id: a144b0fb-d34f-42d1-912b-8576296e59d2
-source-git-commit: 2ed132cd16db64b5921c5632445956f750fead56
+source-git-commit: 6dd8a94e46b9bee6d1407e7ec945a722d8d7ecdb
 workflow-type: tm+mt
-source-wordcount: '845'
+source-wordcount: '827'
 ht-degree: 5%
 
 ---
@@ -13,17 +13,17 @@ ht-degree: 5%
 
 >[!IMPORTANT]
 >
->**API端點**:  `platform.adobe.io/data/core/activation/authoring/destination-servers`
+>**API端點**: `platform.adobe.io/data/core/activation/authoring/destination-servers`
 
-本頁列出並說明了所有可使用`/authoring/destination-servers` API端點執行的API操作。 您可在Adobe Experience Platform目的地SDK中，透過通用端點`/authoring/destination-servers`設定目的地的伺服器和範本規格。 有關此終結點提供的功能的說明，請參閱[伺服器和模板規格](./server-and-template-configuration.md)。
+此頁面列出並說明您可使用 `/authoring/destination-servers` API端點。 目標的伺服器和模板規格可通過公共端點在Adobe Experience Platform Destination SDK中配置 `/authoring/destination-servers`. 有關此端點提供的功能的說明，請閱讀 [伺服器和範本規格](./server-and-template-configuration.md).
 
 ## 目標伺服器API操作快速入門 {#get-started}
 
-繼續之前，請檢閱[快速入門手冊](./getting-started.md)，以取得成功呼叫API所需的重要資訊，包括如何取得必要的目的地編寫權限和必要的標題。
+繼續之前，請檢閱 [快速入門手冊](./getting-started.md) 若要成功呼叫API，需知的重要資訊，包括如何取得必要的目的地編寫權限和必要的標題。
 
 ## 為目標伺服器建立配置 {#create}
 
-您可以向`/authoring/destination-servers`端點發出POST請求，以建立新的目標伺服器配置。
+您可以向發出POST要求，以建立新的目標伺服器設定 `/authoring/destination-servers` 端點。
 
 **API格式**
 
@@ -34,7 +34,7 @@ POST /authoring/destination-servers
 
 **要求**
 
-下列請求會建立新的目標伺服器設定，由裝載中提供的參數所設定。 以下裝載包含`/authoring/destination-servers`端點接受的所有參數。 請注意，您不必在呼叫上新增所有參數，且可根據您的API需求自訂範本。
+下列請求會建立新的目標伺服器設定，由裝載中提供的參數所設定。 以下裝載包含接受的所有參數 `/authoring/destination-servers` 端點。 請注意，您不必在呼叫上新增所有參數，且可根據您的API需求自訂範本。
 
 ```shell
 curl -X POST https://platform.adobe.io/data/core/activation/authoring/destination-servers \
@@ -66,14 +66,14 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 
 | 參數 | 類型 | 說明 |
 | -------- | ----------- | ----------- |
-| `name` | 字串 | *必填。* 代表您伺服器的好記名稱，只顯示給Adobe。合作夥伴或客戶看不到此名稱。 範例 `Moviestar destination server`. |
+| `name` | 字串 | *必填。* 代表您伺服器的好記名稱，只顯示給Adobe。 合作夥伴或客戶看不到此名稱。 範例 `Moviestar destination server`. |
 | `destinationServerType` | 字串 | *必填。* `URL_BASED` 是目前唯一可用的選項。 |
-| `urlBasedDestination.url.templatingStrategy` | 字串 | *必填.* <ul><li>如果Adobe需要轉換下方`value`欄位中的URL，請使用`PEBBLE_V1`。 如果您的端點如下所示，請使用此選項：`https://api.moviestar.com/data/{{customerData.region}}/items`。 </li><li> 如果Adobe端不需要轉換，例如，如果您有如下的端點，請使用`NONE`:`https://api.moviestar.com/data/items`。</li></ul> |
+| `urlBasedDestination.url.templatingStrategy` | 字串 | *必填.* <ul><li>使用 `PEBBLE_V1` 如果Adobe需要轉換 `value` 欄位。 如果您的端點如下所示，請使用此選項： `https://api.moviestar.com/data/{{customerData.region}}/items`. </li><li> 使用 `NONE` 如果Adobe端不需要轉換，例如，如果您有如下的端點： `https://api.moviestar.com/data/items`.</li></ul> |
 | `urlBasedDestination.url.value` | 字串 | *必填。* 填入Experience Platform應連線之API端點的位址。 |
-| `httpTemplate.httpMethod` | 字串 | *必填。* Adobe將用於呼叫伺服器的方法。選項包括`GET`、`PUT`、`POST`、`DELETE`、`PATCH`。 |
-| `httpTemplate.requestBody.templatingStrategy` | 字串 | *必填。*&#x200B;使用 `PEBBLE_V1`。 |
-| `httpTemplate.requestBody.value` | 字串 | *必填。* 此字串是字元逸出版本，可將Platform客戶的資料轉換為服務預期的格式。  <br> <ul><li> 有關如何編寫模板的資訊，請閱讀[使用模板部分](./message-format.md#using-templating)。 </li><li> 如需字元逸出的詳細資訊，請參閱[RFC JSON標準，第七節](https://tools.ietf.org/html/rfc8259#section-7)。 </li><li> 如需簡單轉換的範例，請參閱[設定檔屬性](./message-format.md#attributes)轉換。 </li></ul> |
-| `httpTemplate.contentType` | 字串 | *必填。* 伺服器接受的內容類型。此值很可能是`application/json`。 |
+| `httpTemplate.httpMethod` | 字串 | *必填。* Adobe將用於呼叫伺服器的方法。 選項包括 `GET`, `PUT`, `POST`, `DELETE`, `PATCH`. |
+| `httpTemplate.requestBody.templatingStrategy` | 字串 | *必填。* 使用 `PEBBLE_V1`. |
+| `httpTemplate.requestBody.value` | 字串 | *必填。* 此字串是字元逸出版本，可將Platform客戶的資料轉換為服務預期的格式。 <br> <ul><li> 如需如何編寫範本的資訊，請閱讀 [使用模板部分](./message-format.md#using-templating). </li><li> 如需字元逸出的詳細資訊，請參閱 [RFC JSON標準，第七節](https://tools.ietf.org/html/rfc8259#section-7). </li><li> 如需簡單轉換的範例，請參閱 [設定檔屬性](./message-format.md#attributes) 轉換。 </li></ul> |
+| `httpTemplate.contentType` | 字串 | *必填。* 伺服器接受的內容類型。 此值很可能 `application/json`. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -83,7 +83,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 
 ## 列出目標伺服器配置 {#retrieve-list}
 
-您可以向`/authoring/destination-servers`端點提出GET要求，以擷取IMS組織的所有目標伺服器設定清單。
+您可以向提出GET要求，以擷取IMS組織的所有目標伺服器設定清單 `/authoring/destination-servers` 端點。
 
 **API格式**
 
@@ -106,7 +106,7 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/destination
 
 **回應**
 
-下列回應會根據您使用的IMS組織ID和沙箱名稱，傳回HTTP狀態200，並列出您可存取的目標伺服器設定。 一個`instanceId`對應於一個目標伺服器的模板。 回應會為簡潔而截斷。
+下列回應會根據您使用的IMS組織ID和沙箱名稱，傳回HTTP狀態200，並列出您可存取的目標伺服器設定。 一 `instanceId` 對應於一個目標伺服器的模板。 回應會為簡潔而截斷。
 
 ```json
 {
@@ -184,7 +184,7 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/destination
 
 ## 更新現有目標伺服器配置 {#update}
 
-通過向`/authoring/destination-servers`端點發出PUT請求並提供要更新的目標伺服器配置的實例ID，可以更新現有的目標伺服器配置。 在呼叫內文中，提供更新的目的地伺服器設定。
+您可以向發出PUT要求，以更新現有的目標伺服器設定 `/authoring/destination-servers` 端點，並提供您要更新之目標伺服器設定的執行個體ID。 在呼叫內文中，提供更新的目的地伺服器設定。
 
 **API格式**
 
@@ -235,7 +235,7 @@ curl -X PUT https://platform.adobe.io/data/core/activation/authoring/destination
 
 ## 檢索特定目標伺服器配置 {#get}
 
-通過向`/authoring/destination-servers`端點發出GET請求並提供要更新的目標伺服器配置的實例ID，可以檢索有關特定目標伺服器配置的詳細資訊。
+您可以向提出GET要求，以擷取特定目標伺服器設定的詳細資訊 `/authoring/destination-servers` 端點，並提供您要更新之目標伺服器設定的執行個體ID。
 
 **API格式**
 
@@ -286,7 +286,7 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/destination
 
 ## 刪除特定目標伺服器配置 {#delete}
 
-您可以向`/authoring/destination-servers`端點發出DELETE請求，並在請求路徑中提供要刪除的目標伺服器配置的ID，以刪除指定的目標伺服器配置。
+您可以透過向發出DELETE要求，以刪除指定的目標伺服器設定 `/authoring/destination-servers` 端點，並提供您要在請求路徑中刪除之目標伺服器設定的ID。
 
 **API格式**
 
@@ -296,7 +296,7 @@ DELETE /authoring/destination-servers/{INSTANCE_ID}
 
 | 參數 | 說明 |
 | --------- | ----------- |
-| `{INSTANCE_ID}` | 要刪除的目標伺服器配置的`id`。 |
+| `{INSTANCE_ID}` | 此 `id` 要刪除的目標伺服器配置。 |
 
 **要求**
 
@@ -314,8 +314,8 @@ curl -X DELETE https://platform.adobe.io/data/core/activation/authoring/destinat
 
 ## API錯誤處理
 
-目標SDK API端點會遵循一般Experience PlatformAPI錯誤訊息原則。 請參閱平台疑難排解指南中的[API狀態代碼](https://experienceleague.adobe.com/docs/experience-platform/landing/troubleshooting.html?lang=en#api-status-codes)和[要求標題錯誤](https://experienceleague.adobe.com/docs/experience-platform/landing/troubleshooting.html?lang=en#request-header-errors)。
+Destination SDKAPI端點遵循一般Experience PlatformAPI錯誤訊息原則。 請參閱 [API狀態代碼](../../landing/troubleshooting.md#api-status-codes) 和 [請求標題錯誤](../../landing/troubleshooting.md#request-header-errors) （位於平台疑難排解指南中）。
 
 ## 後續步驟
 
-閱讀本檔案後，您現在知道如何使用`/authoring/destination-servers` API端點來設定目標伺服器和範本。 請參閱[如何使用目標SDK來設定目標](./configure-destination-instructions.md) ，了解此步驟在設定目標程式中的適用位置。
+閱讀本檔案後，您現在知道如何使用 `/authoring/destination-servers` API端點。 閱讀 [如何使用Destination SDK來設定您的目的地](./configure-destination-instructions.md) 了解此步驟在設定目的地程式中的適用位置。

@@ -2,9 +2,9 @@
 description: 本頁列出並說明了所有可使用「/authoring/sample-profiles」 API端點來執行的API操作，以產生要用於目標測試的範例設定檔。
 title: 設定檔產生API操作範例
 exl-id: 5f1cd00a-8eee-4454-bcae-07b05afa54af
-source-git-commit: 7f0dcc916b72145705ecd09b45aadd40eac99b23
+source-git-commit: 6dd8a94e46b9bee6d1407e7ec945a722d8d7ecdb
 workflow-type: tm+mt
-source-wordcount: '989'
+source-wordcount: '971'
 ht-degree: 2%
 
 ---
@@ -375,7 +375,7 @@ curl --location --request GET 'https://platform.adobe.io/data/core/activation/au
 
 ## API錯誤處理 {#api-error-handling}
 
-Destination SDK API端點遵循一般Experience PlatformAPI錯誤訊息原則。 請參閱 [API狀態代碼](https://experienceleague.adobe.com/docs/experience-platform/landing/troubleshooting.html?lang=en#api-status-codes) 和 [請求標題錯誤](https://experienceleague.adobe.com/docs/experience-platform/landing/troubleshooting.html?lang=en#request-header-errors) （位於平台疑難排解指南中）。
+Destination SDKAPI端點遵循一般Experience PlatformAPI錯誤訊息原則。 請參閱 [API狀態代碼](../../landing/troubleshooting.md#api-status-codes) 和 [請求標題錯誤](../../landing/troubleshooting.md#request-header-errors) （位於平台疑難排解指南中）。
 
 ## 後續步驟
 

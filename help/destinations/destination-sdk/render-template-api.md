@@ -2,9 +2,9 @@
 description: 本頁列出並說明了您可使用「/authoring/testing/template/render」 API端點來執行的所有API操作，以便根據您的訊息轉換範本，呈現目的地的匯出資料。
 title: 呈現範本API操作
 exl-id: e64ea89e-6064-4a05-9730-e0f7d7a3e1db
-source-git-commit: aa5898369d41ba48a1416a0b4ea82f6345333d18
+source-git-commit: 6dd8a94e46b9bee6d1407e7ec945a722d8d7ecdb
 workflow-type: tm+mt
-source-wordcount: '824'
+source-wordcount: '806'
 ht-degree: 1%
 
 ---
@@ -1067,8 +1067,8 @@ curl --location --request POST 'https://platform.adobe.io/data/core/activation/a
 
 ## API錯誤處理 {#api-error-handling}
 
-Destination SDK API端點遵循一般Experience PlatformAPI錯誤訊息原則。 請參閱 [API狀態代碼](https://experienceleague.adobe.com/docs/experience-platform/landing/troubleshooting.html?lang=en#api-status-codes) 和 [請求標題錯誤](https://experienceleague.adobe.com/docs/experience-platform/landing/troubleshooting.html?lang=en#request-header-errors) （位於平台疑難排解指南中）。
+Destination SDKAPI端點遵循一般Experience PlatformAPI錯誤訊息原則。 請參閱 [API狀態代碼](../../landing/troubleshooting.md#api-status-codes) 和 [請求標題錯誤](../../landing/troubleshooting.md#request-header-errors) （位於平台疑難排解指南中）。
 
 ## 後續步驟 {#next-steps}
 
-閱讀本檔案後，您現在知道如何使用訊息轉換範本，產生符合目的地預期資料格式的匯出設定檔。 閱讀 [如何使用Destination SDK設定您的目的地](./configure-destination-instructions.md) 了解此步驟在設定目的地程式中的適用位置。
+閱讀本檔案後，您現在知道如何使用訊息轉換範本，產生符合目的地預期資料格式的匯出設定檔。 閱讀 [如何使用Destination SDK來設定您的目的地](./configure-destination-instructions.md) 了解此步驟在設定目的地程式中的適用位置。

@@ -5,13 +5,13 @@ title: （測試版）透過臨機啟動API啟動對象區段以批次目的地
 description: 本文說明透過臨機啟動API來啟動對象區段的端對端工作流程，包括啟動前發生的區段工作。
 topic-legacy: tutorial
 type: Tutorial
-source-git-commit: 749fa5dc1e8291382408d9b1a0391c4c7f2b2a46
+exl-id: 1a09f5ff-0b04-413d-a9f6-57911a92b4e4
+source-git-commit: 6dd8a94e46b9bee6d1407e7ec945a722d8d7ecdb
 workflow-type: tm+mt
-source-wordcount: '1065'
+source-wordcount: '1047'
 ht-degree: 2%
 
 ---
-
 
 # （測試版）透過臨機啟動API啟動對象區段以批次目的地
 
@@ -75,7 +75,7 @@ Adobe Experience Platform每24小時執行一次已排程的分段工作。 臨�
 * x-api-key: `{API_KEY}`
 * x-gw-ims-org-id: `{IMS_ORG}`
 
-Experience Platform中的資源可以隔離至特定虛擬沙箱。 在向Platform API提出的請求中，您可以指定要執行操作之沙箱的名稱和ID。 這些是選用參數。
+Experience Platform中的資源可以隔離至特定的虛擬沙箱。 在向Platform API提出的請求中，您可以指定要執行操作之沙箱的名稱和ID。 這些是選用參數。
 
 * x-sandbox-name: `{SANDBOX_NAME}`
 
@@ -185,4 +185,4 @@ curl -X POST https://platform.adobe.io/data/core/activation/disflowprovider/adho
 
 ## API錯誤處理
 
-目標SDK API端點會遵循一般Experience PlatformAPI錯誤訊息原則。 請參閱 [API狀態代碼](https://experienceleague.adobe.com/docs/experience-platform/landing/troubleshooting.html?lang=en#api-status-codes) 和 [請求標題錯誤](https://experienceleague.adobe.com/docs/experience-platform/landing/troubleshooting.html?lang=en#request-header-errors) （位於平台疑難排解指南中）。
+Destination SDKAPI端點遵循一般Experience PlatformAPI錯誤訊息原則。 請參閱 [API狀態代碼](../../landing/troubleshooting.md#api-status-codes) 和 [請求標題錯誤](../../landing/troubleshooting.md#request-header-errors) （位於平台疑難排解指南中）。

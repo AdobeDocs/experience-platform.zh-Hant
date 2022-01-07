@@ -2,9 +2,9 @@
 description: 本頁列出並說明您可使用「/authoring/destinations」 API端點執行的所有API操作。
 title: 目的地API端點作業
 exl-id: 96755e9d-be62-432f-b985-91330575b395
-source-git-commit: 0bd57e226155ee68758466146b5d873dc4fdca29
+source-git-commit: 6dd8a94e46b9bee6d1407e7ec945a722d8d7ecdb
 workflow-type: tm+mt
-source-wordcount: '2405'
+source-wordcount: '2387'
 ht-degree: 3%
 
 ---
@@ -697,8 +697,8 @@ curl -X DELETE https://platform.adobe.io/data/core/activation/authoring/destinat
 
 ## API錯誤處理
 
-目標SDK API端點會遵循一般Experience PlatformAPI錯誤訊息原則。 請參閱 [API狀態代碼](https://experienceleague.adobe.com/docs/experience-platform/landing/troubleshooting.html?lang=en#api-status-codes) 和 [請求標題錯誤](https://experienceleague.adobe.com/docs/experience-platform/landing/troubleshooting.html?lang=en#request-header-errors) （位於平台疑難排解指南中）。
+Destination SDKAPI端點遵循一般Experience PlatformAPI錯誤訊息原則。 請參閱 [API狀態代碼](../../landing/troubleshooting.md#api-status-codes) 和 [請求標題錯誤](../../landing/troubleshooting.md#request-header-errors) （位於平台疑難排解指南中）。
 
 ## 後續步驟
 
-閱讀本檔案後，您現在知道如何使用 `/authoring/destinations` API端點。 閱讀 [如何使用目的地SDK來設定您的目的地](./configure-destination-instructions.md) 了解此步驟在設定目的地程式中的適用位置。
+閱讀本檔案後，您現在知道如何使用 `/authoring/destinations` API端點。 閱讀 [如何使用Destination SDK來設定您的目的地](./configure-destination-instructions.md) 了解此步驟在設定目的地程式中的適用位置。
