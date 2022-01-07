@@ -1,64 +1,67 @@
 ---
-keywords: Experience Platform; home；熱門主題；刪除帳戶
-description: Adobe Experience Platform的來源連接器提供按計畫接收外部來源資料的能力。 本教學課程提供從「來源」工作區刪除帳戶的步驟。
+keywords: Experience Platform；首頁；熱門主題；刪除帳戶
+description: Adobe Experience Platform中的來源連接器可讓您依排程內嵌外部來源資料。 本教學課程提供從來源工作區刪除帳戶的步驟。
 solution: Experience Platform
-title: 在UI中刪除源連接帳戶
+title: 刪除UI中的源連接帳戶
 topic-legacy: overview
 type: Tutorial
 exl-id: 7cb65d17-d99d-46ff-b28f-7469d0b57d07
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 609f7a5de51840fe657ca72df99c90da56c8f466
 workflow-type: tm+mt
-source-wordcount: '439'
+source-wordcount: '487'
 ht-degree: 0%
 
 ---
 
 # 刪除源連接帳戶
 
-Adobe Experience Platform的來源連接器提供按計畫接收外部來源資料的能力。 本教學課程提供從&#x200B;**[!UICONTROL Sources]**&#x200B;工作區刪除帳戶的步驟。
+Adobe Experience Platform中的來源連接器可讓您依排程內嵌外部來源資料。 本教學課程提供從 **[!UICONTROL 來源]** 工作區。
 
 ## 快速入門
 
-本教學課程需要對Adobe Experience Platform的下列部分有正確的理解：
+本教學課程需要妥善了解下列Adobe Experience Platform元件：
 
-- [[!DNL Experience Data Model (XDM)] 系統](../../../xdm/home.md):組織客戶體驗資 [!DNL Experience Platform] 料的標準化架構。
-   - [架構構成基礎](../../../xdm/schema/composition.md):瞭解XDM架構的基本建置區塊，包括架構組合的主要原則和最佳實務。
-   - [架構編輯器教程](../../../xdm/tutorials/create-schema-ui.md):瞭解如何使用架構編輯器UI建立自訂架構。
-- [[!DNL Real-time Customer Profile]](../../../profile/home.md):根據來自多個來源的匯整資料，提供統一、即時的消費者個人檔案。
+- [[!DNL Experience Data Model (XDM)] 系統](../../../xdm/home.md):標準化框架 [!DNL Experience Platform] 組織客戶體驗資料。
+   - [結構構成基本概念](../../../xdm/schema/composition.md):了解XDM結構描述的基本建置組塊，包括結構描述的主要原則和最佳實務。
+   - [結構編輯器教學課程](../../../xdm/tutorials/create-schema-ui.md):了解如何使用結構編輯器UI建立自訂結構。
+- [[!DNL Real-time Customer Profile]](../../../profile/home.md):根據來自多個來源的匯總資料，提供統一的即時消費者設定檔。
 
 ## 使用UI刪除帳戶
 
-登入[Adobe Experience Platform](https://platform.adobe.com)，然後從左側導覽列選擇&#x200B;**[!UICONTROL Sources]**&#x200B;以存取&#x200B;**[!UICONTROL Sources]**&#x200B;工作區。 **[!UICONTROL Catalog]**&#x200B;螢幕顯示了各種源，您可以為其建立帳戶和資料流。 每個源顯示與其關聯的現有帳戶和資料流的數量。
+>[!TIP]
+>
+>在刪除源帳戶之前，必須先刪除與源帳戶關聯的任何現有資料流。 要刪除現有資料流，請參閱 [刪除UI中的源資料流](./delete.md).
 
-選擇&#x200B;**[!UICONTROL Accounts]**&#x200B;以訪問&#x200B;**[!UICONTROL Accounts]**&#x200B;頁。
+登入 [Adobe Experience Platform](https://platform.adobe.com) 然後選取 **[!UICONTROL 來源]** 從左側導覽列存取 **[!UICONTROL 來源]** 工作區。 此 **[!UICONTROL 目錄]** 螢幕顯示了各種源，您可以用這些源建立帳戶和資料流。 每個源顯示與其關聯的現有帳戶和資料流的數量。
+
+選擇 **[!UICONTROL 帳戶]** 若要存取 **[!UICONTROL 帳戶]** 頁面。
 
 ![catalog-accounts](../../images/tutorials/delete-accounts/catalog.png)
 
-現有帳戶的清單隨即出現。 此頁面是現有帳戶的可排序資訊清單，如源帳戶、用戶名、關聯資料流和建立日期。 選擇左上角的&#x200B;**漏斗表徵圖**&#x200B;進行排序。
+現有帳戶的清單隨即出現。 本頁列出現有帳戶的可排序資訊，如源、用戶名、關聯資料流和建立日期。 選取 **漏斗圖示** 排序。
 
 ![dataflows-list](../../images/tutorials/delete-accounts/accounts.png)
 
-排序面板會出現在畫面的左側，其中包含可用來源的清單。 您可以使用排序函式選擇多個源。
+排序面板會顯示在畫面左側，其中包含可用來源清單。 您可以使用排序函式選擇多個源。
 
-選擇要訪問的源，並從主介面的帳戶清單中找到要刪除的帳戶。 在示例中，所選源為&#x200B;**[!DNL Azure Blob Storage]** ，帳戶名為&#x200B;**[!UICONTROL blobTestConnector]**。 從排序面板中選取多個來源時，您最近建立的帳戶會優先顯示，因為清單會依建立日期排序。
+選擇您要訪問的源，並從主介面的帳戶清單中找到要刪除的帳戶。 在示例中，所選源為 **[!DNL Azure Blob Storage]** 而帳戶名稱是 **[!UICONTROL blobTestConnector]**. 從排序面板中選取多個來源時，最近建立的帳戶會先顯示，因為清單會依建立日期排序。
 
-選擇您要刪除的帳戶。
+選擇要刪除的帳戶。
 
-![dataflows-sort](../../images/tutorials/delete-accounts/sort.png)
+![dataflows sort](../../images/tutorials/delete-accounts/sort.png)
 
-**[!UICONTROL Properties]**&#x200B;面板會出現在畫面的右側，其中包含有關選取帳戶的資訊。
+此 **[!UICONTROL 屬性]** 面板會顯示在畫面的右側，其中包含有關所選帳戶的資訊。
 
-選取您要刪除之帳戶名稱旁的省略號(`...`)。 此時會出現一個彈出式面板，提供&#x200B;**[!UICONTROL Add data]**、**[!UICONTROL Edit details]**&#x200B;和&#x200B;**[!UICONTROL Delete]**&#x200B;的選項。 選擇&#x200B;**[!UICONTROL Delete]**&#x200B;刪除帳戶。
+選取點(`...`)，並在您要刪除的帳戶名稱旁邊。 此時將出現彈出式面板，提供以下選項 **[!UICONTROL 新增資料]**, **[!UICONTROL 編輯詳細資訊]**，和 **[!UICONTROL 刪除]**. 選擇 **[!UICONTROL 刪除]** 刪除帳戶。
 
-![dataflows-sort](../../images/tutorials/delete-accounts/delete.png)
+![dataflows sort](../../images/tutorials/delete-accounts/delete.png)
 
-最後出現確認對話框，選擇&#x200B;**[!UICONTROL Delete]**&#x200B;以完成該過程。
+最後確認對話框出現，請選擇 **[!UICONTROL 刪除]** 來完成此程式。
 
 ![刪除](../../images/tutorials/delete-accounts/confirm.png)
 
 ## 後續步驟
 
-在本教學課程中，您已成功使用&#x200B;**[!UICONTROL Sources]**&#x200B;工作區刪除現有帳戶。
+依照本教學課程，您已成功使用 **[!UICONTROL 來源]** 工作區以刪除現有帳戶。
 
-有關如何使用[!DNL Flow Service] API以程式設計方式執行這些作業的步驟，請參閱有關使用流式服務API](../../tutorials/api/delete.md)刪除連線的[教學課程
+有關如何以程式設計方式使用 [!DNL Flow Service] API，請參閱 [使用流服務API刪除連接](../../tutorials/api/delete.md)
