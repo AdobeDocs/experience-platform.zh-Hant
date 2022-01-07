@@ -4,9 +4,9 @@ user-guide-title: 目的地指南
 user-guide-description: 針對跨通路行銷活動、電子郵件宣傳、鎖定特定目標的行銷活動和其他諸多使用案例，啟用已知和未知的資料。
 description: 本檔案列出Adobe Experience Platform目的地的目錄
 feature: Destinations
-source-git-commit: 320c95f894c75a7f52808730b0cac4bc1e4411e1
+source-git-commit: 54da385fa3e275137164423a0bec71445b0242e4
 workflow-type: tm+mt
-source-wordcount: '680'
+source-wordcount: '686'
 ht-degree: 9%
 
 ---
@@ -20,6 +20,8 @@ ht-degree: 9%
    * [使用流量服務API連線至串流目的地並啟用資料](./api/streaming-destinations.md)
    * [使用流量服務API連線至電子郵件行銷目的地並啟用資料](./api/email-marketing.md)
    * [（測試版）透過臨機啟動API啟動對象區段以批次目的地](./api/ad-hoc-activation-api.md)
+   * [刪除目標帳戶](./api/delete-destination-account.md)
+   * [刪除目標資料流](./api/delete-destination-dataflow.md)
 * UI指南 {#ui}
    * [目的地工作區](./ui/destinations-workspace.md)
    * [建立新的目的地連線](./ui/connect-destination.md)
@@ -174,8 +176,8 @@ ht-degree: 9%
          * [目的地測試API操作](./destination-sdk/destination-testing-api.md)
          * [設定檔產生API操作範例](./destination-sdk/sample-profile-generation-api.md)
    * 指南 {#guides}
-      * [使用Destination SDK設定串流目的地](./destination-sdk/configure-destination-instructions.md)
-      * [提交以檢閱在Destination SDK中撰寫的目的地](./destination-sdk/submit-destination.md)
+      * [使用Destination SDK來設定串流目的地](./destination-sdk/configure-destination-instructions.md)
+      * [提交以審核在Destination SDK中創作的目標](./destination-sdk/submit-destination.md)
    * 記錄您的目的地 {#document-destination}
       * [在Adobe Experience Platform中記錄您的目的地](./destination-sdk/docs-framework/documentation-instructions.md)
       * [使用GitHub網頁介面建立目的地檔案頁面](./destination-sdk/docs-framework/use-github-interface-to-create-documentation.md)
