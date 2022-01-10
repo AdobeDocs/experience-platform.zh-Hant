@@ -3,9 +3,9 @@ keywords: 流；
 title: HTTP API連線
 description: Adobe Experience Platform中的HTTP API目的地可讓您將設定檔資料傳送至協力廠商HTTP端點。
 exl-id: 165a8085-c8e6-4c9f-8033-f203522bb288
-source-git-commit: b0c2c8313e05d1316f23dc15d99893e1887f8dcf
+source-git-commit: ba338972be13c7afa6720bba3f0fc96d244b8f9f
 workflow-type: tm+mt
-source-wordcount: '634'
+source-wordcount: '646'
 ht-degree: 1%
 
 ---
@@ -76,7 +76,7 @@ Experience Platform會最佳化將設定檔匯出行為匯出至您的HTTP API�
 
 ## 匯出的資料 {#exported-data}
 
-已導出 [!DNL Experience Platform] 資料登陸 [!DNL HTTP] 目的地。 例如，以下事件包含已符合特定區段資格並退出其他區段之對象的電子郵件地址設定檔屬性。 此潛在客戶的身份為 [!DNL ECID] 和電子郵件。
+已導出 [!DNL Experience Platform] 資料登陸 [!DNL HTTP] 目的地。 例如，下列匯出包含符合特定區段資格且已退出另一個區段的設定檔，並包含設定檔屬性名、姓氏、出生日期和個人電子郵件地址。 此設定檔的身分為ECID和電子郵件。
 
 ```json
 {

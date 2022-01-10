@@ -3,9 +3,9 @@ keywords: Amazon Kinesis;kinesis目的地；kinesis
 title: Amazon Kinesis連線
 description: 建立與Amazon Kinesis儲存體的即時傳出連線，以串流來自Adobe Experience Platform的資料。
 exl-id: b40117ef-6ad0-48a9-bbcb-97c6f6d1dce3
-source-git-commit: f7f3bc229ddad046dca5ea8d2889942fc9cb2cab
+source-git-commit: ba338972be13c7afa6720bba3f0fc96d244b8f9f
 workflow-type: tm+mt
-source-wordcount: '824'
+source-wordcount: '835'
 ht-degree: 1%
 
 ---
@@ -117,7 +117,7 @@ Experience Platform會最佳化設定檔匯出行為至您的Amazon Kinesis目�
 
 ## 匯出的資料 {#exported-data}
 
-已導出 [!DNL Experience Platform] 資料登陸 [!DNL Amazon Kinesis] 格式。 例如，以下事件包含已符合特定區段資格並退出其他區段之對象的電子郵件地址設定檔屬性。 此潛在客戶的身分識別為ECID和電子郵件。
+已導出 [!DNL Experience Platform] 資料登陸 [!DNL Amazon Kinesis] 格式。 例如，下列匯出包含符合特定區段資格且已退出另一個區段的設定檔，並包含設定檔屬性名、姓氏、出生日期和個人電子郵件地址。 此設定檔的身分為ECID和電子郵件。
 
 ```json
 {
