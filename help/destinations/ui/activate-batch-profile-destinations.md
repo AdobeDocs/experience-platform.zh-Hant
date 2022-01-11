@@ -6,9 +6,9 @@ seo-title: Activate audience data to batch profile export destinations
 description: 了解如何將區段傳送至批次設定檔式型目的地，以啟動Adobe Experience Platform中的受眾資料。
 seo-description: Learn how to activate the audience data you have in Adobe Experience Platform by sending segments to batch profile-based destinations.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: f529a49c994d20f4b8da4c0d6bfe4c06a1a32655
+source-git-commit: a3596624c16da6369f8901d448bb381c37e3510e
 workflow-type: tm+mt
-source-wordcount: '2187'
+source-wordcount: '2194'
 ht-degree: 0%
 
 ---
@@ -72,7 +72,7 @@ ht-degree: 0%
 >id="platform_destinations_activate_exportoptions"
 >title="檔案導出選項"
 >abstract="選擇「導出完整檔案」以導出所有符合段資格的配置檔案的完整快照。 選取「匯出增量檔案」 ，以僅匯出自上次匯出以來符合區段資格的設定檔。 第一個增量檔案匯出包含所有符合區段資格的設定檔，可作為回填。 將來的增量檔案僅包括自首次增量檔案導出以來符合段資格的配置檔案。"
->additional-url="https://www.adobe.com/go/destinations-incremental-files-en" text="導出增量檔案"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html?lang=en#export-incremental-files" text="導出增量檔案"
 
 選擇 **[!UICONTROL 導出完整檔案]** 觸發匯出檔案，該檔案包含所選區段之所有設定檔資格的完整快照。
 
