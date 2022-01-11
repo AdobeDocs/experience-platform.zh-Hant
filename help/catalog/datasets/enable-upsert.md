@@ -4,9 +4,9 @@ title: 使用API啟用資料集以進行設定檔更新
 type: Tutorial
 description: 本教學課程說明如何使用Adobe Experience Platform API來啟用具有「更新」功能的資料集，以便更新即時客戶設定檔資料。
 exl-id: fc89bc0a-40c9-4079-8bfc-62ec4da4d16a
-source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
+source-git-commit: d463dabbb9dc099394081b803df619129c0cb416
 workflow-type: tm+mt
-source-wordcount: '967'
+source-wordcount: '965'
 ht-degree: 2%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 2%
 
 ## 快速入門
 
-本教學課程需要妥善了解管理啟用設定檔的資料集時涉及的數個Adobe Experience Platform服務。 開始本教學課程之前，請先檢閱這些相關DNL平台服務的檔案：
+本教學課程需要妥善了解管理啟用設定檔的資料集時涉及的數個Adobe Experience Platform服務。 開始本教學課程之前，請檢閱這些相關檔案 [!DNL Platform] 服務：
 
 - [[!DNL Real-time Customer Profile]](../../profile/home.md):根據來自多個來源的匯總資料，提供統一的即時消費者設定檔。
 - [[!DNL Catalog Service]](../../catalog/home.md):RESTful API可讓您建立資料集，並針對 [!DNL Real-time Customer Profile] 和 [!DNL Identity Service].
