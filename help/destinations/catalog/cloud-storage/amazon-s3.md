@@ -3,9 +3,9 @@ keywords: Amazon S3;S3目的地；s3;Amazon s3
 title: Amazon S3連線
 description: 建立與Amazon Web Services(AWS)S3儲存的即時傳出連線，以定期從Adobe Experience Platform將CSV資料檔案匯出至您自己的S3貯體。
 exl-id: 6a2a2756-4bbf-4f82-88e4-62d211cbbb38
-source-git-commit: b4810dfef7b0d437744ca14a32bd4f5746e8d002
+source-git-commit: bf46f4e6549fcbd975a9f0a6034040ed2e9b34e6
 workflow-type: tm+mt
-source-wordcount: '361'
+source-wordcount: '390'
 ht-degree: 0%
 
 ---
@@ -27,6 +27,12 @@ ht-degree: 0%
 若要連線至此目的地，請依照 [目的地設定教學課程](../../ui/connect-destination.md).
 
 ### 連線參數 {#parameters}
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_connect_s3_rsa"
+>title="RSA公鑰"
+>abstract="或者，您可以附加RSA格式的公鑰，以將加密添加到導出的檔案中。 您的公開金鑰必須寫入為Base64編碼字串。"
+>text="Learn more in documentation"
 
 同時 [設定](../../ui/connect-destination.md) 此目的地時，您必須提供下列資訊：
 

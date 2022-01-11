@@ -3,9 +3,9 @@ keywords: SFTP;sftp
 title: SFTP連線
 description: 建立與SFTP伺服器的即時傳出連線，以定期從Adobe Experience Platform匯出分隔的資料檔案。
 exl-id: 27abfc38-ec19-4321-b743-169370d585a0
-source-git-commit: b4810dfef7b0d437744ca14a32bd4f5746e8d002
+source-git-commit: bf46f4e6549fcbd975a9f0a6034040ed2e9b34e6
 workflow-type: tm+mt
-source-wordcount: '281'
+source-wordcount: '310'
 ht-degree: 0%
 
 ---
@@ -31,6 +31,12 @@ ht-degree: 0%
 若要連線至此目的地，請依照 [目的地設定教學課程](../../ui/connect-destination.md).
 
 ### 連線參數 {#parameters}
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_connect_sftp_rsa"
+>title="RSA公鑰"
+>abstract="或者，您可以附加RSA格式的公鑰，以將加密添加到導出的檔案中。 您的公開金鑰必須寫入為Base64編碼字串。"
+>text="Learn more in documentation"
 
 同時 [設定](../../ui/connect-destination.md) 此目的地時，您必須提供下列資訊：
 

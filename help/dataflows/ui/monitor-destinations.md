@@ -6,9 +6,9 @@ title: 在UI中監視目標的資料流
 topic-legacy: overview
 type: Tutorial
 exl-id: 8eb7bb3c-f2dc-4dbc-9cf5-3d5d3224f5f1
-source-git-commit: 055338228608685a65bc79d9d9d0c07e3ddddfb2
+source-git-commit: 86981f2bf97c9f504c17d9531cd51a58ab994dd2
 workflow-type: tm+mt
-source-wordcount: '1785'
+source-wordcount: '1797'
 ht-degree: 0%
 
 ---
@@ -28,7 +28,7 @@ ht-degree: 0%
 - [目的地](../../destinations/home.md):目的地是與常用應用程式預先建立的整合，可順暢地啟動來自Platform的資料，以進行跨通路行銷活動、電子郵件行銷活動、目標廣告和許多其他使用案例。
 - [沙箱](../../sandboxes/home.md): [!DNL Experience Platform] 提供可分割單一沙箱的虛擬沙箱 [!DNL Platform] 例項放入個別的虛擬環境，以協助開發及改進數位體驗應用程式。
 
-## 監視目標工作區中的資料流
+## 監視目標工作區中的資料流 {#monitor-dataflows-in-the-destinations-workspace}
 
 在 **[!UICONTROL 目的地]** Platform UI中的工作區，導覽至 **[!UICONTROL 瀏覽]** 標籤，然後選取您要檢視的目的地名稱。
 
@@ -45,18 +45,24 @@ ht-degree: 0%
 | 正在處理 | 此 `Processing` 狀態表示資料流尚未處於活動狀態。 建立新資料流後，通常會立即出現此狀態。 |
 | 錯誤 | 此 `Error` 狀態表示資料流的激活過程已中斷。 |
 
-### 流目的地的資料流運行
+### 流目的地的資料流運行 {#dataflow-runs-for-streaming-destinations}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_dataflow_identitiesactivated"
 >title="已激活身份"
 >abstract="已成功啟動至所選目的地的個別設定檔身分識別計數。"
->additional-url="https://adobe.com/go/destinations-monitor-dataflows-batch-en" text="進一步了解檔案"
+>text="Learn more in documentation"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_dataflow_identitiesexcluded"
 >title="已排除的身分"
 >abstract="根據遺失屬性和同意違規，從所選目的地啟動中排除的個別設定檔記錄計數。"
+>text="Learn more in documentation"
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_dataflow_identitiesfailed"
+>title="身份失敗"
+>abstract="針對所選目的地失敗的個別設定檔身分識別計數。 有關詳細資訊，請查看錯誤診斷。"
 >additional-url="https://adobe.com/go/destinations-monitor-dataflows-batch-en" text="進一步了解檔案"
 
 若為串流目的地， [!UICONTROL 資料流運行] 索引標籤會每小時更新資料流執行中的量度資料。 標有「身份」標籤的最顯著統計資料。
@@ -93,7 +99,7 @@ ht-degree: 0%
 
 ![](../assets/ui/monitor-destinations/dataflow-records-stream.png)
 
-### 針對批處理目標運行資料流
+### 針對批處理目標運行資料流 {#dataflow-runs-for-batch-destinations}
 
 針對批次目的地， [!UICONTROL 資料流運行] 索引標籤提供資料流執行時的量度資料。 個別執行的清單及其特定量度會顯示，以及下列身分總計：
 
