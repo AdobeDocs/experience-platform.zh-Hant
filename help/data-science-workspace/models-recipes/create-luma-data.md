@@ -5,19 +5,19 @@ title: 建立Luma Web結構和資料集
 topic-legacy: tutorial
 type: Tutorial
 description: 本教學課程提供Luma示範傾向模型所需的必要條件和資產。
-source-git-commit: fd0f6aa2ac73bdc0a5413c437d091df6bb5d38a6
+exl-id: a791e532-1116-4407-b745-fd6c2ac0d8f7
+source-git-commit: f57ca64c34f569f4402cb998af72e1e9022510ca
 workflow-type: tm+mt
 source-wordcount: '466'
 ht-degree: 1%
 
 ---
 
-
 # 建立Luma傾向模型結構和資料集
 
 本教學課程提供所有其他必要條件和資產 [!DNL Adobe Experience Platform] [!DNL Data Science Workspace] 教學課程。 完成後，您和IMS組織將能使用下列結構和資料集。
 
-**結構描述:**
+**方案:**
 
 - Luma網站資料結構
 - 傾向模型分數結果結構
