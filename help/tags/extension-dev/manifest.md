@@ -1,10 +1,11 @@
 ---
 title: 擴充功能資訊清單
 description: 了解如何設定JSON資訊清單檔案，通知Adobe Experience Platform如何正確使用您的擴充功能。
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+exl-id: 7cac020b-3cfd-4a0a-a2d1-edee1be125d0
+source-git-commit: dc81da58594fac4ce304f9d030f2106f0c3de271
 workflow-type: tm+mt
 source-wordcount: '2647'
-ht-degree: 74%
+ht-degree: 75%
 
 ---
 
@@ -12,7 +13,7 @@ ht-degree: 74%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch在Adobe Experience Platform中已重新命名為一套資料收集技術。 因此，產品檔案中已推出數個術語變更。 有關術語更改的綜合參考，請參閱以下[document](../term-updates.md)。
+>Adobe Experience Platform Launch在Adobe Experience Platform中已重新命名為一套資料收集技術。 因此，所有產品文件中出現了幾項術語變更。 如需術語變更的彙整參考資料，請參閱以下[文件](../term-updates.md)。
 
 在擴充功能的基礎目錄中，您必須建立名為 `extension.json` 的檔案。其中包含與您的擴充功能有關，而讓 Adobe Experience Platform 能夠正確加以使用的重要詳細資訊。部分內容是以 [npm `package.json`](https://docs.npmjs.com/files/package.json) 的形式構成的。
 
@@ -22,12 +23,12 @@ ht-degree: 74%
 
 | 屬性 | 說明 |
 | --- | --- |
-| `name` | 擴充功能的名稱。此名稱在所有其他擴充功能中必須是唯一的，且必須符合[命名規則](#naming-rules)。 **標籤會以此名稱作為識別碼，您發佈擴充功能後不應加以變更。** |
+| `name` | 擴充功能的名稱。它在所有其他擴充功能中必須是唯一的，且必須符合 [命名規則](#naming-rules). **標籤會以此名稱作為識別碼，您發佈擴充功能後不應加以變更。** |
 | `platform` | 擴充功能的平台。目前唯一接受的值是 `web`。 |
-| `version` | 擴充功能的版本。此版本必須依循 [semver](http://semver.org/) 版本設定格式。這與 [npm 版本欄位](https://docs.npmjs.com/files/package.json#version)一致。 |
+| `version` | 擴充功能的版本。此版本必須依循 [semver](https://semver.org/) 版本設定格式。這與 [npm 版本欄位](https://docs.npmjs.com/files/package.json#version)一致。 |
 | `displayName` | 清楚易懂的擴充功能名稱。這會向Platform使用者顯示。 不需提及「標籤」或「擴充功能」；使用者已經知道他們在查看標籤擴充功能。 |
 | `description` | 擴充功能的說明。這會向Platform使用者顯示。 如果您的擴充功能允許使用者在其網站上實作您的產品，請說明您的產品有何行為。不需提及「標籤」或「擴充功能」；使用者已經知道他們在查看標籤擴充功能。 |
-| `iconPath` *(選用)* | 將針對擴充功能顯示之圖示的相對路徑。 此路徑不應以斜線開頭。它必須參考副檔名為 `.svg` 的 SVG 檔案。SVG應為正方形，並可由Platform調整。 |
+| `iconPath` *(選用)* | 將針對擴充功能顯示之圖示的相對路徑。 此路徑不應以斜線開頭。它必須參考副檔名為 `.svg` 的 SVG 檔案。SVG應為正方形，且可由Platform調整。 |
 | `author` | 「作者」是一個物件，應具有如下結構： <ul><li>`name`：擴充功能作者的名稱。或者，可在此處使用公司名稱。</li><li>`url` *(選用)*：一個 URL，您可在其中找到更多關於擴充功能作者的資訊。</li><li>`email` *(選用)*：擴充功能作者的電子郵件地址。</li></ul>這與 [npm 作者欄位](https://docs.npmjs.com/files/package.json#people-fields-author-contributors)規則一致。 |
 | `exchangeUrl` *(公開擴充功能的必要項目)* | 您在 Adobe Exchange 上的擴充功能清單的 URL。其格式必須符合 `https://www.adobeexchange.com/experiencecloud.details.######.html`。 |
 | `viewBasePath` | 包含您所有檢視和檢視相關資源 (HTML、JavaScript、CSS 和影像) 之子目錄的相對路徑。Platform 將此目錄託管在 Web 伺服器上，並從中載入 iframe 內容。這是必要欄位，且不應以斜線開頭。例如，如果您所有的檢視都包含在 `src/view/` 中，則 `viewBasePath` 的值將是 `src/view/`。 |
@@ -71,7 +72,7 @@ ht-degree: 74%
     </tr>
     <tr>
       <td><code>schema</code></td>
-      <td><a href="http://json-schema.org/">JSON 結構描述</a>的物件，說明從擴充功能組態檢視中儲存的有效物件格式。由於您是組態檢視的開發人員，因此需負責確保任何儲存的設定物件皆與此結構描述相符。當使用者嘗試使用 Platform 服務儲存資料時，此會使用此結構描述進行驗證。<br><br>以下是範例結構描述物件：
+      <td><a href="https://json-schema.org/">JSON 結構描述</a>的物件，說明從擴充功能組態檢視中儲存的有效物件格式。由於您是組態檢視的開發人員，因此需負責確保任何儲存的設定物件皆與此結構描述相符。當使用者嘗試使用 Platform 服務儲存資料時，此會使用此結構描述進行驗證。<br><br>以下是範例結構描述物件：
 <pre class="JSON language-JSON hljs">
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
@@ -88,7 +89,7 @@ ht-degree: 74%
   "additionalProperties": false
 }
 </pre>
-      我們建議使用 <a href="http://www.jsonschemavalidator.net/">JSON Schema Validator</a> 這類工具，以手動方式測試您的結構描述。</td>
+      我們建議使用 <a href="https://www.jsonschemavalidator.net/">JSON Schema Validator</a> 這類工具，以手動方式測試您的結構描述。</td>
     </tr>
     <tr>
       <td><code>transforms</code> <em>(選填)</em></td>
@@ -119,7 +120,7 @@ ht-degree: 74%
     </tr>
     <tr>
       <td><code>categoryName</code> <em>(選填)</em></td>
-      <td>提供後， <code>displayName</code>將列在資料收集UI的<code>categoryName</code>下方。 所有具有相同 <code>categoryName</code> 的類型都會列在相同類別下。例如，如果您的擴充功能提供了 <code>keyUp</code> 事件類型和 <code>keyDown</code> 事件類型，且兩者的 <code>categoryName</code> 皆為 <code>Keyboard</code>，則當使用者在建置規則時從可用事件類型清單中選取時，這兩種事件類型都會列在「鍵盤」類別下方。<code>categoryName</code> 必須是人類看得懂的值。</td>
+      <td>提供時， <code>displayName</code> 會列在 <code>categoryName</code> 在資料收集UI中。 所有具有相同 <code>categoryName</code> 的類型都會列在相同類別下。例如，如果您的擴充功能提供了 <code>keyUp</code> 事件類型和 <code>keyDown</code> 事件類型，且兩者的 <code>categoryName</code> 皆為 <code>Keyboard</code>，則當使用者在建置規則時從可用事件類型清單中選取時，這兩種事件類型都會列在「鍵盤」類別下方。<code>categoryName</code> 必須是人類看得懂的值。</td>
     </tr>
     <tr>
       <td><code>libPath</code></td>
@@ -131,24 +132,11 @@ ht-degree: 74%
     </tr>
     <tr>
       <td><code>schema</code></td>
-      <td><a href="http://json-schema.org/">JSON 結構描述</a>的物件，說明使用者可儲存的有效設定物件格式。設定通常由使用者使用資料收集使用者介面來設定和儲存。 在這些情況下，擴充功能的檢視可採取必要步驟來驗證使用者提供的設定。另一方面，有些使用者會選擇直接使用標籤API，而不需要任何使用者介面的協助。 此結構描述的目的是讓 Platform 能正確驗證使用者儲存的設定物件 (不論是否使用使用者介面) 的格式，與將在執行階段依據設定物件執行動作的程式庫模組相容。<br><br>以下是範例結構描述物件：<br>
+      <td><a href="https://json-schema.org/">JSON 結構描述</a>的物件，說明使用者可儲存的有效設定物件格式。設定通常由使用者使用資料收集使用者介面來設定和儲存。 在這些情況下，擴充功能的檢視可採取必要步驟來驗證使用者提供的設定。另一方面，有些使用者會選擇直接使用標籤API，而不需要任何使用者介面的協助。 此結構描述的目的是讓 Platform 能正確驗證使用者儲存的設定物件 (不論是否使用使用者介面) 的格式，與將在執行階段依據設定物件執行動作的程式庫模組相容。<br><br>以下是範例結構描述物件：<br>
 <pre class="JSON language-JSON hljs">
-{
-  "$schema":"http://json-schema.org/draft-04/schema#",
-  "type":"object",
-  "properties":{
-    "delay":{
-      "type":"數字",
-      「最小」：3
-    }
-  },
-  "required":[
-    "delay"
-  ],
-  "additionalProperties":false
-}
+{ "$schema":"http://json-schema.org/draft-04/schema#", "type":"object", "properties":{ "delay":{ "type":"number"、"minimum":1 } }，「必填」：[ "delay" ], "additionalProperties":false }
 </pre>
-      我們建議使用 <a href="http://www.jsonschemavalidator.net/">JSON Schema Validator</a> 這類工具，以手動方式測試您的結構描述。</td>
+      我們建議使用 <a href="https://www.jsonschemavalidator.net/">JSON Schema Validator</a> 這類工具，以手動方式測試您的結構描述。</td>
     </tr>
     <tr>
       <td><code>transforms</code> <em>(選填)</em></td>
@@ -161,7 +149,7 @@ ht-degree: 74%
 
 針對某些特定使用案例，擴充功能從檢視儲存的設定物件必須先由Platform轉換，才能發出至標籤執行階段程式庫中。 在 `extension.json` 中定義類型定義時，您可以設定 `transforms` 屬性，以要求進行一或多個這類轉換。`transforms` 屬性是一個物件陣列，其中每個物件分別代表應進行的轉換。
 
-所有轉換都需要 `type` 和 `propertyPath`。`type` 必須是 `function`、`remove` 和 `file` 的其中之一，並說明 Platform 應將哪個轉換套用至設定物件。`propertyPath`是以句點分隔的字串，用於指示標籤應在何處查找需要在設定對象中修改的屬性。 以下是設定物件和某些 `propertyPath` 的範例：
+所有轉換都需要 `type` 和 `propertyPath`。`type` 必須是 `function`、`remove` 和 `file` 的其中之一，並說明 Platform 應將哪個轉換套用至設定物件。此 `propertyPath` 是以句點分隔的字串，用來向標籤指出應在何處尋找需要在設定物件中修改的屬性。 以下是設定物件和某些 `propertyPath` 的範例：
 
 ```js
 {
@@ -306,7 +294,7 @@ ht-degree: 74%
 }
 ```
 
-我們不想將屬性`bar`包含在標籤執行階段程式庫中。 為了解決此範例的問題，我們將在 `extension.json` 中定義動作類型定義的轉換，如下所示：
+我們不想將該屬性 `bar` 在標籤執行階段程式庫中。 為了解決此範例的問題，我們將在 `extension.json` 中定義動作類型定義的轉換，如下所示：
 
 ```json
 {

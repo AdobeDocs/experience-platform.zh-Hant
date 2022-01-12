@@ -1,10 +1,11 @@
 ---
 title: 檢視 在網頁擴充功能中
 description: 了解如何為Adobe Experience Platform Web擴充功能中的程式庫模組定義檢視。
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+exl-id: 4471df3e-75e2-4257-84c0-dd7b708be417
+source-git-commit: dc81da58594fac4ce304f9d030f2106f0c3de271
 workflow-type: tm+mt
 source-wordcount: '2063'
-ht-degree: 74%
+ht-degree: 76%
 
 ---
 
@@ -12,7 +13,7 @@ ht-degree: 74%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch在Adobe Experience Platform中已重新命名為一套資料收集技術。 因此，產品檔案中已推出數個術語變更。 有關術語更改的綜合參考，請參閱以下[document](../../term-updates.md)。
+>Adobe Experience Platform Launch在Adobe Experience Platform中已重新命名為一套資料收集技術。 因此，所有產品文件中出現了幾項術語變更。 如需術語變更的彙整參考資料，請參閱以下[文件](../../term-updates.md)。
 
 每個事件、條件、動作或資料元素類型都可提供一個檢視，讓使用者提供設定。擴充功能也可以有頂層[擴充功能組態檢視](../configuration.md)，讓使用者為整個擴充功能提供全域設定。所有檢視類型的檢視建置程序均相同。
 
@@ -26,7 +27,7 @@ ht-degree: 74%
 
 ## 包括iframe指令碼標籤
 
-在檢視的HTML中加入標籤iframe指令碼：
+在檢視的HTML中加入iframe指令碼標籤：
 
 ```html
 <script src="https://assets.adobedtm.com/activation/reactor/extensionbridge/extensionbridge.min.js"></script>
@@ -64,22 +65,22 @@ window.extensionBridge.register({
 
 ### [!DNL init]
 
-當檢視載入iframe中後，標籤會立即呼叫`init`方法。 此方法之中會傳入單一引數 (`info`)，而該引數必須是包含下列屬性的物件：
+此 `init` 當檢視載入iframe中後，標籤會立即呼叫方法。 此方法之中會傳入單一引數 (`info`)，而該引數必須是包含下列屬性的物件：
 
 | 屬性 | 說明 |
 | --- | --- |
 | `settings` | 一個物件，其中包含先前從這個檢視儲存的設定。如果 `settings` 為 `null`，表示使用者建立了初始設定，而非載入已儲存的版本。如果 `settings` 是物件，則您應使用該物件來填入檢視，因為使用者選擇編輯先前保存的設定。 |
-| `extensionSettings` | 從擴充功能組態檢視儲存的設定。在不是擴充功能組態檢視的檢視中存取擴充功能設定時，此屬性可能有其效用。如果當前視圖是擴展配置視圖，請使用`settings`。 |
+| `extensionSettings` | 從擴充功能組態檢視儲存的設定。在不是擴充功能組態檢視的檢視中存取擴充功能設定時，此屬性可能有其效用。如果目前檢視是擴充功能組態檢視，請使用 `settings`. |
 | `propertySettings` | 包含屬性設定的物件。如需此物件所含內容的詳細資訊，請參閱 [Turbine 物件指南](../turbine.md#property-settings)。 |
-| `tokens` | 包含 API 代號的物件。若要從檢視內存取 Adobe API，通常需要在 `tokens.imsAccess` 下方使用 IMS 代號。此代號將僅供Adobe開發的擴充功能使用。 如果您是Adobe員工，負責展現由Adobe製作的某項擴充功能，請[傳送電子郵件給資料收集工程團隊](mailto:reactor@adobe.com)，並提供擴充功能的名稱，以便我們將其新增至允許清單。 |
+| `tokens` | 包含 API 代號的物件。若要從檢視內存取 Adobe API，通常需要在 `tokens.imsAccess` 下方使用 IMS 代號。此代號將僅供Adobe開發的擴充功能使用。 如果您是Adobe員工，負責展示由Adobe製作的擴充功能，請 [傳送電子郵件給資料收集工程團隊](mailto:reactor@adobe.com) 並提供擴充功能的名稱，以便將其新增至允許的清單。 |
 | `company` | 包含單一屬性 `orgId` 的物件，其本身代表您的 Adobe Experience Cloud ID (24 個字元的英數字串)。 |
-| `schema` | [JSON 結構描述](http://json-schema.org/)格式的物件。此物件將來自[擴充功能資訊清單](../manifest.md)，可能有助於驗證您的表單。 |
+| `schema` | [JSON 結構描述](https://json-schema.org/)格式的物件。此物件將來自[擴充功能資訊清單](../manifest.md)，可能有助於驗證您的表單。 |
 
 您的檢視應使用這項資訊來呈現和管理其表單。您可能只需處理 `info.settings`，但仍會提供另一項資訊以備不時之需。
 
 ### [!DNL validate]
 
-當使用者點擊「儲存」按鈕後，將呼叫`validate`方法。 此方法應會傳回以下其中一項：
+此 `validate` 當使用者點擊「儲存」按鈕後，將會呼叫方法。 此方法應會傳回以下其中一項：
 
 * 一個布林值，指出使用者的輸入是否有效。
 * 後續要以指出使用者輸入是否有效的布林值進行解析的 Promise。
@@ -90,7 +91,7 @@ window.extensionBridge.register({
 
 ### [!DNL getSettings]
 
-當使用者點擊「儲存」按鈕且檢視經過驗證後，將會呼叫`getSettings`方法。 此函數應會傳回以下其中一項：
+此 `getSettings` 當使用者點擊「儲存」按鈕，且檢視經過驗證後，就會呼叫方法。 此函數應會傳回以下其中一項：
 
 * 根據使用者輸入包含設定的物件。
 * 後續要以根據使用者輸入包含設定的物件進行解析的 Promise。
@@ -99,7 +100,7 @@ window.extensionBridge.register({
 
 ## 使用共用檢視
 
-`window.extensionBridge`物件有數種方法可讓您透過標籤利用現有的檢視，因此您不必在檢視中重新產生。 可用的方法如下：
+此 `window.extensionBridge` 物件有數種方法可讓您利用透過標籤提供的現有檢視，因此您不必在檢視中重新產生。 可用的方法如下：
 
 ### [!DNL openCodeEditor]
 
@@ -129,7 +130,7 @@ window.extensionBridge.openRegexTester().then(function(pattern) {
 | 屬性 | 說明 |
 | --- | --- |
 | `pattern` | 供測試器內的模式欄位作為初始值的規則運算式模式。這通常會在使用者編輯現有的規則運算式時提供。若未提供此屬性，則模式欄位一開始將是空的。 |
-| `flags` | 測試器所應使用的規則運算式標幟。例如，`gi` 表示全域比對旗標和忽略大小寫標幟。這些標幟在測試器內無法由使用者修改，而是要用來展示擴充功能在執行規則運算式時所將使用的特定標幟。若未提供，測試器內將不會使用任何標幟。如需規則運算式標幟的詳細資訊，請參閱 [MDN 的 RegExp 文件](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp)。<br><br>常見的案例是擴充功能允許使用者切換規則運算式的區分大小寫功能。為了支援此功能，擴充功能通常會在其擴充功能檢視中提供一個核取方塊，一經勾選後即會啟用不區分大小寫功能（以`i`標幟表示）。 檢視所儲存的設定物件必須顯示是否已勾選核取方塊，讓執行規則運算式的程式庫模組得知是否應使用 `i` 標幟。此外，當擴充功能檢視要開啟規則運算式測試器時，如果勾選不區分大小寫的核取方塊，則需要傳遞`i`標幟。 這可讓使用者正確測試已啟用不區分大小寫功能的規則運算式。 |
+| `flags` | 測試器所應使用的規則運算式標幟。例如，`gi` 表示全域比對旗標和忽略大小寫標幟。這些標幟在測試器內無法由使用者修改，而是要用來展示擴充功能在執行規則運算式時所將使用的特定標幟。若未提供，測試器內將不會使用任何標幟。如需規則運算式標幟的詳細資訊，請參閱 [MDN 的 RegExp 文件](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp)。<br><br>常見的案例是擴充功能允許使用者切換規則運算式的區分大小寫功能。為了支援此功能，擴充功能通常會在其擴充功能檢視中提供一個核取方塊，一經勾選後即會啟用不區分大小寫功能(以 `i` 標幟)。 檢視所儲存的設定物件必須顯示是否已勾選核取方塊，讓執行規則運算式的程式庫模組得知是否應使用 `i` 標幟。此外，當擴充功能檢視想要開啟規則運算式測試器時，必須傳遞 `i` 如果已勾選不區分大小寫的核取方塊，則會標籤此欄位。 這可讓使用者正確測試已啟用不區分大小寫功能的規則運算式。 |
 
 ### [!DNL openDataElementSelector] {#open-data-element}
 
@@ -141,7 +142,7 @@ window.extensionBridge.openDataElementSelector().then(function(dataElement) {
 
 呼叫此方法會顯示一個強制回應，讓使用者可選取資料元素。當使用者完成資料元素的選取後，將會以所選資料元素的名稱來解析 Promise (依預設會在名稱兩側加上百分比符號)。如果使用者未儲存變更即關閉元素選擇器，就不會解析 Promise。
 
-`options`物件應包含單一布林屬性`tokenize`。 此屬性可指出在解析 Promise 之前，是否應在所選資料元素的名稱兩側加上百分比符號。請參閱[支援的資料元素](#supporting-data-elements)的相關小節以了解其功用。此選項預設為 `true`。
+此 `options` 物件應包含單一布林屬性， `tokenize`. 此屬性可指出在解析 Promise 之前，是否應在所選資料元素的名稱兩側加上百分比符號。請參閱[支援的資料元素](#supporting-data-elements)的相關小節以了解其功用。此選項預設為 `true`。
 
 ## 支援的資料元素 {#supporting-data-elements}
 
@@ -157,7 +158,7 @@ window.extensionBridge.openDataElementSelector().then(function(dataElement) {
 }
 ```
 
-在執行階段中，將設定物件傳遞至程式庫模組之前，會掃描設定物件，並將任何資料元素代號取代為其各自的值。 如果在執行階段中，`productname`資料元素的值為`Ceiling Medallion Pro 2000`，則會傳入程式庫模組的設定物件將是：
+在執行階段中，將設定物件傳遞至程式庫模組之前，會掃描設定物件，並將任何資料元素代號取代為其各自的值。 若在執行階段， `productname` 資料元素 `Ceiling Medallion Pro 2000`，則會傳入程式庫模組的設定物件將是：
 
 ```js
 {
@@ -215,7 +216,7 @@ window.extensionBridge.openDataElementSelector().then(function(dataElement) {
 }
 ```
 
-在此案例中，由於 `productName` 的值不只是單一資料元素代號，因此結果將一律為字串。每個資料元素代號在轉換為字串後，都將取代為其各自對應的值。如果執行階段的`productname`值為`Ceiling Medallion Pro`（字串），而`modelnumber`為`2000`（數字），則傳入程式庫模組的結果設定物件將是：
+在此案例中，由於 `productName` 的值不只是單一資料元素代號，因此結果將一律為字串。每個資料元素代號在轉換為字串後，都將取代為其各自對應的值。若在執行階段， `productname` wes `Ceiling Medallion Pro` （字串）和 `modelnumber` wes `2000` （數字），傳入程式庫模組的產生設定物件將是：
 
 ```js
 {

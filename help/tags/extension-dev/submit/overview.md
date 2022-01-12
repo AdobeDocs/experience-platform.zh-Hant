@@ -1,10 +1,11 @@
 ---
 title: 擴充功能提交程式概觀
 description: 了解在Adobe Experience Platform中從開發到發行提交擴充功能的步驟。
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+exl-id: 7a30ae5c-f9c7-45f9-b648-3fb31006b1ce
+source-git-commit: dc81da58594fac4ce304f9d030f2106f0c3de271
 workflow-type: tm+mt
-source-wordcount: '229'
-ht-degree: 26%
+source-wordcount: '238'
+ht-degree: 32%
 
 ---
 
@@ -12,7 +13,7 @@ ht-degree: 26%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch在Adobe Experience Platform中已重新命名為一套資料收集技術。 因此，產品檔案中已推出數個術語變更。 有關術語更改的綜合參考，請參閱以下[document](../../term-updates.md)。
+>Adobe Experience Platform Launch在Adobe Experience Platform中已重新命名為一套資料收集技術。 因此，所有產品文件中出現了幾項術語變更。 如需術語變更的彙整參考資料，請參閱以下[文件](../../term-updates.md)。
 
 將擴充功能提交至Adobe Experience Platform中的資料收集目錄似乎是一項艱巨的任務。 本檔案提供逐步指南，協助您使用個別循序指南來提交擴充功能。 若要提交擴充功能，您必須完成下列步驟：
 
@@ -28,7 +29,7 @@ ht-degree: 26%
 
 ## 支援
 
-當您建置和測試擴充功能時，可透過標籤開發人員社群Slack工作區提供支援。 Slack工作區是一個線上社群，擴充功能作者可在此相互支援。 您可以透過 [http://join.launchdevelopers.chat](http://join.launchdevelopers.chat) 要求取得存取權。
+當您建置和測試擴充功能時，可透過標籤開發人員社群Slack工作區提供支援。 Slack工作區是一個線上社群，擴充功能作者可在此相互支援。 您可以使用下列項目來要求存取權 [線上表單](https://docs.google.com/forms/d/e/1FAIpQLScq1m63YkDrRpvPLhzUqtfoleWiDDTTXZsSivIXRfFdlSMzpQ/viewform).
 
 >[!NOTE]
 >

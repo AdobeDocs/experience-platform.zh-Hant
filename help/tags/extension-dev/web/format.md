@@ -1,10 +1,11 @@
 ---
 title: Web擴充功能中的程式庫模組
 description: 了解如何在Adobe Experience Platform中為網頁擴充功能設定程式庫模組的格式。
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+exl-id: 08f2bb01-9071-49c5-a0ff-47d592cc34a5
+source-git-commit: dc81da58594fac4ce304f9d030f2106f0c3de271
 workflow-type: tm+mt
-source-wordcount: '377'
-ht-degree: 64%
+source-wordcount: '378'
+ht-degree: 70%
 
 ---
 
@@ -12,7 +13,7 @@ ht-degree: 64%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch在Adobe Experience Platform中已重新命名為一套資料收集技術。 因此，產品檔案中已推出數個術語變更。 有關術語更改的綜合參考，請參閱以下[document](../../term-updates.md)。
+>Adobe Experience Platform Launch在Adobe Experience Platform中已重新命名為一套資料收集技術。 因此，所有產品文件中出現了幾項術語變更。 如需術語變更的彙整參考資料，請參閱以下[文件](../../term-updates.md)。
 
 >[!IMPORTANT]
 >
@@ -20,7 +21,7 @@ ht-degree: 64%
 
 程式庫模組是一段可重複使用的程式碼，由Adobe Experience Platform中標籤執行階段程式庫內發出的擴充功能所提供。 此程式庫隨後在用戶端的網站上執行。 例如，`gesture` 事件類型會有一個程式庫模組在用戶端的網站上執行並偵測使用者的手勢。
 
-程式庫模組採取 [CommonJS 模組](http://wiki.commonjs.org/wiki/Modules/1.1.1)的結構。CommonJS 模組內有下列變數可供使用：
+程式庫模組採取 [CommonJS 模組](https://nodejs.org/api/modules.html#modules-commonjs-modules)的結構。CommonJS 模組內有下列變數可供使用：
 
 ## [!DNL require]
 
@@ -70,4 +71,4 @@ module.exports = function(settings) {
 }
 ```
 
-`runs on startup` 將立即記錄， `runs when necessary` 而只有在標籤引擎呼叫已匯出的函式時才會記錄。雖然這對您的特定模組可能沒有直接的用處，但您仍可在匯出函數之前執行任何必要的設定，加以運用。
+`runs on startup` 會立即記錄，但 `runs when necessary` 只有在標籤引擎呼叫已匯出的函式時才會記錄。 雖然這對您的特定模組可能沒有直接的用處，但您仍可在匯出函數之前執行任何必要的設定，加以運用。

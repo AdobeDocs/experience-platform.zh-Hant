@@ -5,9 +5,9 @@ topic-legacy: guide
 type: Documentation
 description: Adobe Experience Platform可讓您從多個來源將資料片段匯整在一起，並加以結合，以便查看每個客戶的完整檢視。 將這些資料整合在一起時，Platform會使用合併原則來判斷資料的優先順序，以及將哪些資料合併以建立統一檢視。
 exl-id: fb49977d-d5ca-4de9-b185-a5ac1d504970
-source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
+source-git-commit: dc81da58594fac4ce304f9d030f2106f0c3de271
 workflow-type: tm+mt
-source-wordcount: '2469'
+source-wordcount: '2472'
 ht-degree: 1%
 
 ---
@@ -588,7 +588,7 @@ curl -X PATCH \
 
 | 屬性 | 說明 |
 |---|---|
-| `op` | 指定要執行的操作。 如需其他PATCH操作的範例，請參閱 [JSON修補程式檔案](http://jsonpatch.com) |
+| `op` | 指定要執行的操作。 如需其他PATCH操作的範例，請參閱 [JSON修補程式檔案](https://datatracker.ietf.org/doc/html/rfc6902) |
 | `path` | 要更新的欄位路徑。 接受的值為：&quot;/name&quot;, &quot;/identityGraph.type&quot;, &quot;/attributeMerge.type&quot;, &quot;/schema.name&quot;, &quot;/version&quot;, &quot;/default&quot;, &quot;/isActiveOnEdge&quot; |
 | `value` | 將指定欄位設為的值。 |
 

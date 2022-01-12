@@ -5,9 +5,9 @@ title: '透過串流細分即時評估事件 '
 topic-legacy: developer guide
 description: 本檔案包含如何搭配Adobe Experience Platform區段服務API使用串流區段的範例。
 exl-id: 119508bd-5b2e-44ce-8ebf-7aef196abd7a
-source-git-commit: 65ff1c34e12cc93f614c3c93c4e40e53f2bf51ff
+source-git-commit: dc81da58594fac4ce304f9d030f2106f0c3de271
 workflow-type: tm+mt
-source-wordcount: '1828'
+source-wordcount: '1831'
 ht-degree: 1%
 
 ---
@@ -338,7 +338,7 @@ curl -X POST \
 | `type` | **（必要）** 字串格式的作業類型。 支援的類型包括 `batch_segmentation` 和 `export`. |
 | `properties` | **（必要）** 包含與排程相關的其他屬性的物件。 |
 | `properties.segments` | **(必要時 `type` 等於 `batch_segmentation`)** 使用 `["*"]` 確保包含所有區段。 |
-| `schedule` | **（必要）** 包含作業計畫的字串。 作業只能排程為每天執行一次，這表示您無法排程作業在24小時期間執行多次。 顯示的範例(`0 0 1 * * ?`)表示每天1時觸發工作:00:00 UTC。 如需詳細資訊，請檢閱 [cron運算式格式](http://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html) 檔案。 |
+| `schedule` | **（必要）** 包含作業計畫的字串。 作業只能排程為每天執行一次，這表示您無法排程作業在24小時期間執行多次。 顯示的範例(`0 0 1 * * ?`)表示每天1時觸發工作:00:00 UTC。 如需詳細資訊，請檢閱 [cron運算式格式](https://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html) 檔案。 |
 | `state` | *（可選）* 包含排程狀態的字串。 可用值： `active` 和 `inactive`. 預設值為 `inactive`。IMS組織只能建立一個排程。 更新排程的步驟將在本教學課程的稍後部分提供。 |
 
 **回應**
@@ -381,7 +381,7 @@ POST /config/schedules/{SCHEDULE_ID}
 
 **要求**
 
-下列要求使用 [JSON修補程式格式](http://jsonpatch.com/) 以便更新 `state` 的 `active`.
+下列要求使用 [JSON修補程式格式](https://datatracker.ietf.org/doc/html/rfc6902) 以便更新 `state` 的 `active`.
 
 ```shell
 curl -X POST \

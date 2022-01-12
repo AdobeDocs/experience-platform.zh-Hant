@@ -5,9 +5,9 @@ topic-legacy: guide
 type: Documentation
 description: 在Adobe Experience Platform中，計算屬性是用來將事件層級資料匯總至設定檔層級屬性的函式。 系統會自動計算這些函式，以便用於不同區段、啟動和個人化。 本指南說明如何使用即時客戶設定檔API來建立、檢視、更新和刪除計算屬性。
 exl-id: 6b35ff63-590b-4ef5-ab39-c36c39ab1d58
-source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
+source-git-commit: dc81da58594fac4ce304f9d030f2106f0c3de271
 workflow-type: tm+mt
-source-wordcount: '2272'
+source-wordcount: '2275'
 ht-degree: 2%
 
 ---
@@ -508,7 +508,7 @@ PATCH /config/computedAttributes/{ATTRIBUTE_ID}
 
 **要求**
 
-此請求使用 [JSON修補程式格式](http://jsonpatch.com/) 更新「運算式」欄位的「值」。
+此請求使用 [JSON修補程式格式](https://datatracker.ietf.org/doc/html/rfc6902) 更新「運算式」欄位的「值」。
 
 ```shell
 curl -X PATCH \

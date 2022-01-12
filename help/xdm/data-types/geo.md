@@ -5,16 +5,16 @@ title: 地理資料類型
 topic-legacy: overview
 description: 本檔案概述Geo XDM資料類型。
 exl-id: d0eef943-ef86-4abd-8a51-dc45f2ed782d
-source-git-commit: 12c3f440319046491054b3ef3ec404798bb61f06
+source-git-commit: dc81da58594fac4ce304f9d030f2106f0c3de271
 workflow-type: tm+mt
 source-wordcount: '202'
 ht-degree: 5%
 
 ---
 
-#  地理資料類型
+# [!UICONTROL 地理] 資料類型
 
- Geo是標準XDM資料類型，可說明觀察到事件的地理區域。
+[!UICONTROL 地理] 是標準XDM資料類型，可說明觀察到事件的地理區域。
 
 <img src="../images/data-types/geo.png" width="400" /><br />
 
@@ -23,11 +23,11 @@ ht-degree: 5%
 | `_schema` | [[!UICONTROL 地理座標]](./geo-coordinates.md) | 說明地理座標。 |
 | `_id` | 字串 | 座標的唯一、系統產生的ID。 |
 | `city` | 字串 | 城市的名字。 |
-| `countryCode` | 字串 | 國家/地區的兩字元<a href="https://datahub.io/core/country-list">ISO 3166-1alpha-2</a>代碼。 |
+| `countryCode` | 字串 | 兩個字元 <a href="https://datahub.io/core/country-list">ISO 3166-1alpha-2</a> 國家/地區的代碼。 |
 | `dmaID` | 整數 | Nielsen媒體研究指定的市場區域。 |
 | `msaID` | 整數 | 觀察發生地的美國大都市統計區。 |
 | `postalCode` | 字串 | 位置的郵遞區號。 郵遞區號不適用於所有國家/地區。 在某些國家/地區，這只會包含部分郵遞區號。 |
-| `stateProvince` | 字串 | 觀察的州或省部分。 格式遵循[ISO 3166-2（國家/地區和細分）](http://www.unece.org/cefact/locode/subdivisions.html)標準。 |
+| `stateProvince` | 字串 | 觀察的州或省部分。 格式會遵循 [ISO 3166-2（國家/地區和細分）](https://www.unece.org/cefact/locode/subdivisions.html) 標準。 |
 
 {style=&quot;table-layout:auto&quot;}
 

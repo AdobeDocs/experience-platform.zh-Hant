@@ -5,9 +5,9 @@ title: 量度API端點
 topic-legacy: developer guide
 description: 了解如何使用可觀察性前瞻分析API在Experience Platform中擷取可觀察性量度。
 exl-id: 08d416f0-305a-44e2-a2b7-d563b2bdd2d2
-source-git-commit: 5c893d7c8c455c86c94cd311a20ce774abcf65e0
+source-git-commit: dc81da58594fac4ce304f9d030f2106f0c3de271
 workflow-type: tm+mt
-source-wordcount: '1866'
+source-wordcount: '1864'
 ht-degree: 5%
 
 ---
@@ -84,8 +84,8 @@ curl -X POST \
 | `metrics` | 物件陣列，每個要擷取的量度各一個。 |
 | `name` | 可觀察性前瞻分析所識別的量度名稱。 請參閱 [附錄](#available-metrics) 以取得已接受量度名稱的完整清單。 |
 | `filters` | 選用欄位，可讓您依特定資料集篩選量度。 欄位是物件的陣列（每個篩選器各一個），每個物件包含下列屬性： <ul><li>`name`:要據以篩選量度的實體類型。 目前，僅 `dataSets` 支援。</li><li>`value`:一或多個資料集的ID。 多個資料集ID可設為單一字串，每個ID以垂直長條字元(`\|`)。</li><li>`groupBy`:設為true時，表示對應的 `value` 代表應個別傳回其量度結果的多個資料集。 如果設為false，系統會將這些資料集的量度結果分組。</li></ul> |
-| `aggregator` | 指定應用於將多個時間序列記錄分組為單個結果的聚合函式。 有關可用聚合器的詳細資訊，請參閱 [OpenTSDB檔案](http://opentsdb.net/docs/build/html/user_guide/query/aggregators.html). |
-| `downsample` | 選用欄位，可讓您指定匯總函式，透過將欄位排序為間隔（或「貯體」）來降低量度資料的取樣率。 縮減取樣的間隔由 `granularity` 屬性。 有關縮減取樣的詳細資訊，請參閱 [OpenTSDB檔案](http://opentsdb.net/docs/build/html/user_guide/query/downsampling.html). |
+| `aggregator` | 指定應用於將多個時間序列記錄分組為單個結果的聚合函式。 有關可用聚合器的詳細資訊，請參閱 [OpenTSDB檔案](https://docs.w3cub.com/opentsdb/user_guide/query/aggregators). |
+| `downsample` | 選用欄位，可讓您指定匯總函式，透過將欄位排序為間隔（或「貯體」）來降低量度資料的取樣率。 縮減取樣的間隔由 `granularity` 屬性。 有關縮減取樣的詳細資訊，請參閱 [OpenTSDB檔案](https://docs.w3cub.com/opentsdb/user_guide/query/aggregators). |
 
 {style=&quot;table-layout:auto&quot;}
 

@@ -5,7 +5,7 @@ title: Privacy Service和Experience Cloud應用程式
 topic-legacy: overview
 description: 本檔案提供如何針對隱私權相關作業設定不同Experience Cloud應用程式的參考。
 exl-id: da21c15f-0b99-4eb7-ac9a-f0fe5e3ba842
-source-git-commit: b430b9741beb2f8d41bcbe8168cb20a73d13c750
+source-git-commit: dc81da58594fac4ce304f9d030f2106f0c3de271
 workflow-type: tm+mt
 source-wordcount: '888'
 ht-degree: 10%
@@ -34,12 +34,12 @@ Adobe Experience Platform [!DNL Privacy Service] 專為支援數個Adobe Experie
 | 應用程式 | 存取/刪除 | 選擇退出銷售 | 刪除行為 | 檔案和其他考量 |
 | --- | :---: | :---: | --- | --- |
 | Adobe Advertising Cloud | ✓ | ✓ | 資料主體的Cookie ID或裝置ID會從系統中刪除，並附上與Cookie相關聯的所有成本、點按和收入資料。 | <ul><li>[存取/刪除GDPR的檔案](https://experienceleague.adobe.com/docs/advertising-cloud/privacy/ad-cloud-gdpr.html)</li><li>[存取/刪除CCPA的檔案](https://experienceleague.adobe.com/docs/advertising-cloud/privacy/ad-cloud-ccpa-access-delete.html)</li><li>[CCPA的選擇退出銷售檔案](https://experienceleague.adobe.com/docs/advertising-cloud/privacy/ad-cloud-ccpa-opt-out-of-sale.html)</li></ul> |
-| Adobe Analytics | ✓ | ✓ | 若 `analyticsDeleteMethod` 或設為 `anonymize` 提出隱私權要求時，指定使用者ID集合參考的所有資料都會設為匿名。 若 `analyticsDeleteMethod` 設為 `purge`，所有資料都會完全移除。 | <ul><li>[存取/刪除檔案](https://experienceleague.adobe.com/docs/analytics/admin/data-governance/an-gdpr-overview.html?lang=zh-Hant)</li><li>[!DNL Analytics] 使用 [隱私權報表變數](https://experienceleague.adobe.com/docs/analytics/admin/data-governance/consent-variables.html)</li></ul> |
+| Adobe Analytics | ✓ | ✓ | 若 `analyticsDeleteMethod` 或設為 `anonymize` 提出隱私權要求時，指定使用者ID集合參考的所有資料都會設為匿名。 若 `analyticsDeleteMethod` 設為 `purge`，所有資料都會完全移除。 | <ul><li>[存取/刪除檔案](https://experienceleague.adobe.com/docs/analytics/admin/data-governance/an-gdpr-overview.html?lang=zh-Hant)</li><li>[!DNL Analytics] 使用 [隱私權報表變數](https://experienceleague.adobe.com/docs/analytics/admin/data-governance/consent-variables.html?lang=zh-Hant)</li></ul> |
 | Adobe Audience Manager | ✓ | ✓ | 請求中包含之Audience Manager識別碼相關的所有特徵和區段都會遭刪除。 此外，個人的各個標識符被選擇退出進一步的資料收集，並且相應的ID映射被刪除。 | <ul><li>[存取/刪除檔案](https://experienceleague.adobe.com/docs/audience-manager/user-guide/overview/data-privacy/data-privacy-requests.html)</li><li>[退出檔案](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/declared-ids.html)</li></ul> |
 | Adobe Campaign Standard | ✓ | ✓ | 從系統中刪除資料主體的儲存資料。 | <ul><li>[存取/刪除檔案](https://experienceleague.adobe.com/docs/campaign-classic/using/getting-started/privacy/privacy-management.html?lang=zh-Hant)</li><li>[退出檔案](../segmentation/consents.md)</li></ul> |
 | Adobe客戶屬性(CRS) | ✓ | 不適用 | 資料主體的屬性將從系統中刪除。 | <ul><li>[存取/刪除GDPR的檔案](https://experienceleague.adobe.com/docs/core-services/interface/customer-attributes/gdpr.html)</li><li>[存取/刪除CCPA的檔案](https://experienceleague.adobe.com/docs/core-services/interface/customer-attributes/ccpa.html)</li><li>客戶屬性無法傳輸資料，因此不適用退出銷售的要求。</li></ul> |
 | Adobe Experience Platform | ✓ | ✓ | 當Experience Platform從Privacy Service收到刪除請求時，Platform會傳送確認給Privacy Service，確認已收到請求，且受影響的資料已標示為刪除。 隱私權工作完成後，記錄便會從資料湖或設定檔存放區中移除。 作業完成前，資料會遭軟刪除，因此任何Platform服務都無法存取。 | <ul><li>[存取/刪除資料湖的檔案](../catalog/privacy.md)</li><li>[存取/刪除Identity Service的檔案](../identity-service/privacy.md)</li><li>[存取/刪除即時客戶個人檔案的檔案](../profile/privacy.md)</li><li>[!DNL Experience Platform] 榮譽 [對象區段的退出請求](../segmentation/consents.md).</li></ul> |
-| Adobe Primetime驗證 | ✓ | 不適用 | 從系統中刪除資料主體的儲存資料。 | <ul><li>[存取/刪除檔案](http://tve.helpdocsonline.com/how-to-make-a-privacy-request)</li><li>[!DNL Primetime] 無法傳輸資料，因此選擇退出銷售請求不適用。</li></ul> |
+| Adobe Primetime驗證 | ✓ | 不適用 | 從系統中刪除資料主體的儲存資料。 | <ul><li>[存取/刪除檔案](https://tve.helpdocsonline.com/how-to-make-a-privacy-request)</li><li>[!DNL Primetime] 無法傳輸資料，因此選擇退出銷售請求不適用。</li></ul> |
 | Adobe Target | ✓ | 不適用 | 與資料主體的ID相關聯的所有資料都會從其訪客資料中刪除。 不會識別個人或與其他無關的匯總或匿名資料（例如內容資料）不適用於刪除請求。 | <ul><li>[存取/刪除檔案](https://experienceleague.adobe.com/docs/target/using/implement-target/before-implement/privacy/cmp-privacy-and-general-data-protection-regulation.html)</li><li>[!DNL Target] 無法傳輸資料，因此選擇退出銷售請求不適用。</li></ul> |
 | Marketo Engage | ✓ | 不適用 | 從系統中刪除資料主體的儲存資料。 | <ul><li>[存取/刪除檔案](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/miscellaneous/privacy-requests.html)</li><li>[!DNL Marketo] 無法傳輸資料，因此選擇退出銷售請求不適用。</li></ul> |
 
