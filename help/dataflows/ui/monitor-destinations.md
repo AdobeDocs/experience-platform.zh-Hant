@@ -6,9 +6,9 @@ title: 在UI中監視目標的資料流
 topic-legacy: overview
 type: Tutorial
 exl-id: 8eb7bb3c-f2dc-4dbc-9cf5-3d5d3224f5f1
-source-git-commit: 86981f2bf97c9f504c17d9531cd51a58ab994dd2
+source-git-commit: dc7de355284e2f1f52939ca7a80344345ce92c43
 workflow-type: tm+mt
-source-wordcount: '1797'
+source-wordcount: '1879'
 ht-degree: 0%
 
 ---
@@ -83,7 +83,7 @@ ht-degree: 0%
 - **[!UICONTROL 處理時間]**:資料流處理所花費的時間。
 - **[!UICONTROL 收到的設定檔]**:資料流中接收的配置檔案總數。
 - **[!UICONTROL 已激活身份]**:成功啟動至所選目的地的設定檔身分識別總數。
-- **[!UICONTROL 已排除的身分]**:根據遺失屬性和同意違規而排除以供啟用的設定檔身分總數。
+- **[!UICONTROL 已排除的身分]**:根據遺失屬性和同意違反而從啟動中排除的設定檔身分總數。
 - **[!UICONTROL 身份失敗]** 因錯誤而未啟動至目的地的設定檔身分識別總數。
 - **[!UICONTROL 啟動率]**:已成功啟動或跳過的接收身份的百分比。 下列公式示範如何計算此值：
    ![](../assets/ui/monitor-destinations/activation-rate-formula.png)
@@ -101,10 +101,21 @@ ht-degree: 0%
 
 ### 針對批處理目標運行資料流 {#dataflow-runs-for-batch-destinations}
 
+>[!CONTEXTUALHELP]
+>id="platform_monitoring_dataflow_run_details_activation"
+>title="資料流運行詳細資訊"
+>abstract="目標資料流運行詳細資訊包含有關段激活狀態的資訊，以及從即時客戶配置檔案獲取的用於生成唯一標識的度量。 若要深入了解，請檢閱量度定義指南。"
+
+>[!CONTEXTUALHELP]
+>id="platform_monitoring_profiles_received"
+>title="收到的設定檔"
+>abstract="資料流中接收的配置檔案總數。 此值每60分鐘更新一次。"
+>additional-url="https://adobe.com/go/destinations-monitor-dataflows-batch-en" text="進一步了解檔案"
+
 針對批次目的地， [!UICONTROL 資料流運行] 索引標籤提供資料流執行時的量度資料。 個別執行的清單及其特定量度會顯示，以及下列身分總計：
 
 - **[!UICONTROL 已激活身份]**:已成功啟動至所選目的地的個別設定檔身分識別計數。
-- **[!UICONTROL 已排除的身分]**:根據遺失的屬性和同意違規，為所選目的地排除以啟用的個別設定檔身分識別的計數。
+- **[!UICONTROL 已排除的身分]**:根據遺失的屬性和同意違反，從所選目的地的啟動中排除的個別設定檔身分識別計數。
 
 ![](../assets/ui/monitor-destinations/dataflow-runs-batch.png)
 
@@ -114,7 +125,7 @@ ht-degree: 0%
 - **[!UICONTROL 處理時間]**:處理資料流運行所花費的時間。
 - **[!UICONTROL 收到的設定檔]**:資料流中接收的配置檔案總數。 此值每60分鐘更新一次。
 - **[!UICONTROL 已激活身份]**:成功啟動至所選目的地的設定檔身分識別總數。
-- **[!UICONTROL 已排除的身分]**:根據遺失屬性和同意違規而排除以供啟用的設定檔身分總數。
+- **[!UICONTROL 已排除的身分]**:根據遺失屬性和同意違反而從啟動中排除的設定檔身分總數。
 - **[!UICONTROL 狀態]**:表示資料流所處的狀態。 這可以是三種狀態之一： [!UICONTROL 成功], [!UICONTROL 失敗]，和 [!UICONTROL 處理]. [!UICONTROL 成功] 表示資料流處於活動狀態，並正在根據其提供的調度導出資料。 [!UICONTROL 失敗] 表示資料的啟動因錯誤而暫停。 [!UICONTROL 處理] 表示資料流尚未處於活動狀態，並且通常在建立新資料流時遇到。
 
 要查看特定資料流運行的詳細資訊，請從清單中選擇運行的開始時間。
@@ -136,6 +147,11 @@ ht-degree: 0%
 ![](../assets/ui/monitor-destinations/dataflow-records-batch.png)
 
 ## 監控目標控制面板 {#monitoring-destinations-dashboard}
+
+>[!CONTEXTUALHELP]
+>id="platform_monitoring_activation"
+>title="啟用"
+>abstract="目的地啟動包含區段啟動狀態的相關資訊，以及從即時客戶設定檔擷取來產生唯一身分的量度。"
 
 若要存取 [!UICONTROL 監控] 控制面板，選取 **[!UICONTROL 監控]** (![監視表徵圖](../assets/ui/monitor-destinations/monitoring-icon.png))。 一次 [!UICONTROL 監控] 頁面，選取 [!UICONTROL 目的地]. 此 [!UICONTROL 監控] 控制面板包含目標執行作業的度量和資訊。
 
