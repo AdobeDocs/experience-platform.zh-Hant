@@ -5,9 +5,9 @@ title: Azure事件集線器源連接器概述
 topic-legacy: overview
 description: 了解如何使用API或使用者介面將Azure事件中心連線至Adobe Experience Platform。
 exl-id: b4d4bc7f-2241-482d-a5c2-4422c31705bf
-source-git-commit: cda9ca9c560b1af2147c00ea4e89dff09b7428ba
+source-git-commit: 832e32c31be944fff1101fa409e56f5c3e27d325
 workflow-type: tm+mt
-source-wordcount: '326'
+source-wordcount: '506'
 ht-degree: 0%
 
 ---
@@ -18,6 +18,20 @@ ht-degree: 0%
 Adobe Experience Platform為AWS等雲端提供者提供原生連線， [!DNL Google Cloud Platform]，和 [!DNL Azure]. 您可以將這些系統的資料匯入Platform。
 
 雲端儲存來源可將您自己的資料匯入Platform，而無須下載、格式化或上傳。 擷取的資料可格式化為XDM JSON、XDM Parquet或分隔字元。 流程的每個步驟都整合至來源工作流程中。 Platform可讓您將資料 [!DNL Event Hubs] 即時。
+
+## 使用 [!DNL Event Hubs]
+
+您的 [!DNL Event Hubs] 如果您需要導入高容量資料、增加並行性或提高獲取平台的速度，則必須增加實例。
+
+### 入口較高的卷資料
+
+目前，您可從 [!DNL Event Hubs] 帳戶對Platform的影響是每秒2000條記錄。 若要放大並擷取較多數量的資料，請聯絡您的Adobe代表。
+
+### 增加並行性 [!DNL Event Hubs] 和平台
+
+並行性是指在多個處理單元上同時執行相同的任務，以提高速度和效能。 可以在 [!DNL Event Hubs] 通過增加分區，或通過獲取更多處理單元 [!DNL Event Hubs] 帳戶。 看這個 [[!DNL Event Hubs] 縮放比例的文檔](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-scalability) 以取得更多資訊。
+
+若要提高平台端擷取速度，Platform必須增加來源連接器中要從您的 [!DNL Event Hubs] 分區。 一旦在 [!DNL Event Hubs] 側面，請連絡您的Adobe代表，以根據您的新分區來調整Platform任務。 目前，此程式未自動執行。
 
 ## 使用虛擬網路連接到 [!DNL Event Hubs] 到平台
 

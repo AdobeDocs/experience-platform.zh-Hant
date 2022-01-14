@@ -5,35 +5,39 @@ title: Amazon Kinesis Source Connector概述
 topic-legacy: overview
 description: 了解如何使用API或使用者介面將Amazon Kinesis連線至Adobe Experience Platform。
 exl-id: b71fc922-7722-4279-8fc6-e5d7735e1ebb
-source-git-commit: 481f72c5c630f6dbcbbfd3eee11c91787e780f3f
+source-git-commit: 5f4355a9d3ef39ee63581fc70dbf0f6e7d674814
 workflow-type: tm+mt
-source-wordcount: '445'
+source-wordcount: '491'
 ht-degree: 0%
 
 ---
 
 # [!DNL Amazon Kinesis] 連接器
 
-Adobe Experience Platform為AWS、[!DNL Google Cloud Platform]和[!DNL Azure]等雲端提供者提供原生連線。 您可以將資料從這些系統帶入[!DNL Platform]。
+Adobe Experience Platform為AWS等雲端提供者提供原生連線， [!DNL Google Cloud Platform]，和 [!DNL Azure]. 您可以將資料從這些系統帶入 [!DNL Platform].
 
-雲端儲存來源可將您自己的資料帶入[!DNL Platform]，而無需下載、格式化或上傳。 擷取的資料可格式化為XDM JSON、XDM Parquet或分隔字元。 流程的每個步驟都整合至來源工作流程中。 [!DNL Platform] 可讓您即時從匯 [!DNL Amazon Kinesis] 入資料。
+雲端儲存來源可將您自己的資料帶入 [!DNL Platform] 而無須下載、格式化或上傳。 擷取的資料可格式化為XDM JSON、XDM Parquet或分隔字元。 流程的每個步驟都整合至來源工作流程中。 [!DNL Platform] 可讓您將資料 [!DNL Amazon Kinesis] 即時。
+
+>[!NOTE]
+>
+>的比例因子 [!DNL Kinesis] 必須增加，才能內嵌大量資料。 目前，您可從 [!DNL Kinesis] 帳戶對Platform的影響是每秒4000條記錄。 若要放大並擷取較多數量的資料，請聯絡您的Adobe代表。
 
 ## 先決條件
 
-以下部分提供了建立[!DNL Kinesis]源連接前所需的先決條件設定的詳細資訊。
+以下章節提供建立之前所需先決條件設定的詳細資訊 [!DNL Kinesis] 源連接。
 
 ### 設定訪問策略
 
-[!DNL Kinesis]資料流需要以下權限才能建立源連接：
+A [!DNL Kinesis] stream需要下列權限才能建立來源連線：
 
 - `GetShardIterator`
 - `GetRecords`
 - `DescribeStream`
 - `ListStreams`
 
-這些權限會透過[!DNL Kinesis]主控台排列，當您輸入憑證並選取資料流時，Platform會加以檢查。
+這些權限會透過 [!DNL Kinesis] 輸入憑證並選取資料流後，Platform會核取主控台和。
 
-下面的示例顯示建立[!DNL Kinesis]源連接所需的最低訪問權限。
+以下範例顯示建立 [!DNL Kinesis] 源連接。
 
 ```json
 {
@@ -62,7 +66,7 @@ Adobe Experience Platform為AWS、[!DNL Google Cloud Platform]和[!DNL Azure]等
 | `kinesis:DescribeStream` | 傳回關於資料流（包括共用地圖）的資訊的動作，這是產生共用ID所需的。 |
 | `kinesis:ListStreams` | 列出可用資料流（您可從UI中選取）所需的動作。 |
 
-有關控制[!DNL Kinesis]資料流訪問的詳細資訊，請參閱以下[[!DNL Kinesis] document](https://docs.aws.amazon.com/streams/latest/dev/controlling-access.html)。
+有關控制訪問的詳細資訊 [!DNL Kinesis] 資料流，請參閱下列 [[!DNL Kinesis] 檔案](https://docs.aws.amazon.com/streams/latest/dev/controlling-access.html).
 
 ### 配置迭代器類型
 
@@ -76,13 +80,13 @@ Adobe Experience Platform為AWS、[!DNL Google Cloud Platform]和[!DNL Azure]等
 | `TRIM_HORIZON` | 從最舊的資料記錄開始讀取資料。 |
 | `LATEST` | 從最新資料記錄開始讀取資料。 |
 
-[!DNL Kinesis] UI來源目前僅支援`TRIM_HORIZON`，而API同時支援`TRIM_HORIZON`和`LATEST`作為取得資料的模式。 Platform用於[!DNL Kinesis]源的預設迭代器值為`TRIM_HORIZON`。
+A [!DNL Kinesis] UI來源目前僅支援 `TRIM_HORIZON`，而API支援兩者 `TRIM_HORIZON` 和 `LATEST` 作為取得資料的模式。 Platform用於 [!DNL Kinesis] 來源為 `TRIM_HORIZON`.
 
-有關迭代器類型的詳細資訊，請參閱以下[[!DNL Kinesis] document](https://docs.aws.amazon.com/kinesis/latest/APIReference/API_GetShardIterator.html#API_GetShardIterator_RequestSyntax)。
+有關迭代器類型的詳細資訊，請參閱以下內容 [[!DNL Kinesis] 檔案](https://docs.aws.amazon.com/kinesis/latest/APIReference/API_GetShardIterator.html#API_GetShardIterator_RequestSyntax).
 
-## 將[!DNL Amazon Kinesis]連接到[!DNL Platform]
+## Connect [!DNL Amazon Kinesis] to [!DNL Platform]
 
-以下檔案提供如何使用API或使用者介面將[!DNL Amazon Kinesis]連線至[!DNL Platform]的資訊：
+以下檔案提供如何連線的資訊 [!DNL Amazon Kinesis] to [!DNL Platform] 使用API或使用者介面：
 
 ### 使用API
 
