@@ -3,9 +3,9 @@ title: Adobe Experience Platform Web SDK概述
 description: 了解如何使用Adobe Experience Platform Web SDK將Platform功能整合至您的網站。
 keywords: Adobe Experience Platform Web SDK;Platform Web SDK;Web SDK;Edge;Visitor.js;AppMeasurement.js;AT.js;DIL.js;Web SDK;SDK;Web SDK;Launch；啟動
 exl-id: 1348144a-7d25-4c27-bc40-3daee2f043a6
-source-git-commit: 92344ca9c2daf603d866c8a3cc4e92b72a382fb1
+source-git-commit: 1048f19e2395f63fac8c4218ed92a546b8071a93
 workflow-type: tm+mt
-source-wordcount: '664'
+source-wordcount: '703'
 ht-degree: 1%
 
 ---
@@ -13,6 +13,8 @@ ht-degree: 1%
 # Adobe Experience Platform Web SDK概述
 
 Adobe Experience Platform Web SDK是用戶端JavaScript程式庫，可讓Adobe Experience Cloud的客戶與 [!DNL Experience Cloud] 透過Adobe Experience Platform Edge Network。 除了JavaScript程式庫，還有 [標籤擴充功能](./extension/web-sdk-extension-configuration.md) 協助您進行Web SDK設定。
+
+**如需使用標籤來設定Web SDK及將資料傳送至解決方案的逐步指南，請參閱我們的 [使用Web SDK實作Adobe Experience Cloud教學課程](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/overview.html?lang=en)**
 
 ## Experience Edge
 
