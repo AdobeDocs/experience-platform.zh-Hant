@@ -5,7 +5,7 @@ title: 排程查詢API端點
 topic-legacy: scheduled queries
 description: 以下小節將逐步說明您可使用Query Service API針對已排程查詢所進行的各種API呼叫。
 exl-id: f57dbda5-da50-4812-a924-c8571349f1cd
-source-git-commit: 34a3b71ace2f9ece02e4368b6bd7eab716330ee1
+source-git-commit: f1b982e5f788282a8cf2a9c4523370c520b82d0e
 workflow-type: tm+mt
 source-wordcount: '1113'
 ht-degree: 2%
@@ -16,11 +16,11 @@ ht-degree: 2%
 
 ## 範例API呼叫
 
-現在您已了解要使用的標題，可以開始呼叫[!DNL Query Service] API。 以下小節將逐步說明您可使用[!DNL Query Service] API進行的各種API呼叫。 每個呼叫都包含一般API格式、顯示必要標題的範例要求，以及範例回應。
+現在您已了解要使用的標題，可以開始對 [!DNL Query Service] API。 以下小節將逐步說明您可使用 [!DNL Query Service] API。 每個呼叫都包含一般API格式、顯示必要標題的範例要求，以及範例回應。
 
 ### 擷取排程查詢清單
 
-您可以向`/schedules`端點提出GET要求，以擷取IMS組織的所有已排程查詢清單。
+您可以向 `/schedules` 端點。
 
 **API格式**
 
@@ -31,7 +31,7 @@ GET /schedules?{QUERY_PARAMETERS}
 
 | 屬性 | 說明 |
 | -------- | ----------- |
-| `{QUERY_PARAMETERS}` | （*選用*）新增至請求路徑的參數，用以設定回應中傳回的結果。 可包含多個參數，以&amp;符號(`&`)分隔。 可用參數列於下方。 |
+| `{QUERY_PARAMETERS}` | (*可選*)參數，這些參數會設定在回應中傳回的結果。 可包含多個參數，以&amp;符號分隔(`&`)。 可用參數列於下方。 |
 
 **查詢參數**
 
@@ -39,10 +39,10 @@ GET /schedules?{QUERY_PARAMETERS}
 
 | 參數 | 說明 |
 | --------- | ----------- |
-| `orderby` | 指定用來排序結果的欄位。 支援的欄位為`created`和`updated`。 例如， `orderby=created`會依照以升序建立的方式來排序結果。 在建立前新增`-`(`orderby=-created`)會依照遞減順序建立來排序項目。 |
+| `orderby` | 指定用來排序結果的欄位。 支援的欄位包括 `created` 和 `updated`. 例如， `orderby=created` 會依建立的遞增順序來排序結果。 新增 `-` 建立之前(`orderby=-created`)會以遞減順序依建立來排序項目。 |
 | `limit` | 指定頁面大小限制以控制頁面中包含的結果數量。 (*預設值：20*) |
-| `start` | 使用基於零的編號來偏移響應清單。 例如， `start=2`將返回從第三個列出的查詢開始的清單。 (*預設值：0*) |
-| `property` | 根據欄位篩選結果。 篩選器&#x200B;**必須**&#x200B;被HTML逸出。 逗號可用來結合多組篩選器。 支援的欄位有`created`、`templateId`和`userId`。 支援的運算子清單包括`>`（大於）、`<`（小於）和`==`（等於）。 例如， `userId==6ebd9c2d-494d-425a-aa91-24033f3abeec`將傳回使用者ID如指定的所有排程查詢。 |
+| `start` | 使用基於零的編號來偏移響應清單。 例如， `start=2` 將從第三個列出的查詢返回一個清單。 (*預設值：0*) |
+| `property` | 根據欄位篩選結果。 篩選 **必須** HTML逸出。 逗號可用來結合多組篩選器。 支援的欄位包括 `created`, `templateId`，和 `userId`. 支援的運算子清單包括 `>` （大於）, `<` （小於），和 `==` （等於）。 例如， `userId==6ebd9c2d-494d-425a-aa91-24033f3abeec` 將傳回使用者ID如指定的所有排程查詢。 |
 
 **要求**
 
@@ -124,7 +124,7 @@ curl -X GET https://platform.adobe.io/data/foundation/query/schedules?limit=1
 
 ### 建立新的排程查詢
 
-您可以向`/schedules`端點提出POST請求，以建立新的排程查詢。 在API中建立排程查詢時，您也可以在查詢編輯器中看到該查詢。 如需UI中已排程查詢的詳細資訊，請參閱[查詢編輯器檔案](../ui/user-guide.md#scheduled-queries)。
+您可以向 `/schedules` 端點。 在API中建立排程查詢時，您也可以在查詢編輯器中看到該查詢。 如需UI中已排程查詢的詳細資訊，請參閱 [查詢編輯器檔案](../ui/user-guide.md#scheduled-queries).
 
 **API格式**
 
@@ -161,12 +161,12 @@ curl -X POST https://platform.adobe.io/data/foundation/query/schedules
 | `query.dbName` | 要為建立計畫查詢的資料庫的名稱。 |
 | `query.sql` | 要建立的SQL查詢。 |
 | `query.name` | 排程查詢的名稱。 |
-| `schedule.schedule` | 查詢的cron排程。 如需cron排程的詳細資訊，請參閱[cron運算式格式](https://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html)檔案。 在此範例中，「30 * * * *」表示查詢將在30分鐘標籤下每小時執行一次。<br><br>或者，您也可以使用下列速記運算式：<ul><li>`@once`:查詢只會執行一次。</li><li>`@hourly`:查詢在小時的開始時每小時運行一次。這等同於cron運算式`0 * * * *`。</li><li>`@daily`:查詢會在午夜執行一次。這等同於cron運算式`0 0 * * *`。</li><li>`@weekly`:查詢每週在星期日午夜執行一次。這等同於cron運算式`0 0 * * 0`。</li><li>`@monthly`:查詢每月在當月第一天午夜執行一次。這等同於cron運算式`0 0 1 * *`。</li><li>`@yearly`:查詢每年在1月1日午夜執行一次。這等同於cron運算式`1 0 0 1 1 *`。 |
+| `schedule.schedule` | 查詢的cron排程。 如需cron排程的詳細資訊，請參閱 [cron運算式格式](https://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html) 檔案。 在此範例中，「30 * * * *」表示查詢將在30分鐘標籤下每小時執行一次。<br><br>或者，您也可以使用下列速記運算式：<ul><li>`@once`:查詢只會執行一次。</li><li>`@hourly`:查詢在小時的開始時每小時運行一次。 這等同於cron運算式 `0 * * * *`.</li><li>`@daily`:查詢會在午夜執行一次。 這等同於cron運算式 `0 0 * * *`.</li><li>`@weekly`:查詢每週在星期日午夜執行一次。 這等同於cron運算式 `0 0 * * 0`.</li><li>`@monthly`:查詢每月在當月第一天午夜執行一次。 這等同於cron運算式 `0 0 1 * *`.</li><li>`@yearly`:查詢每年在1月1日午夜執行一次。 這等同於cron運算式 `1 0 0 1 1 *`. |
 | `schedule.startDate` | 排程查詢的開始日期，以UTC時間戳記撰寫。 |
 
 **回應**
 
-成功的回應會傳回HTTP狀態202（接受），並包含新建立之排程查詢的詳細資訊。 啟動排程查詢後，`state`將從`REGISTERING`變更為`ENABLED`。
+成功的回應會傳回HTTP狀態202（接受），並包含新建立之排程查詢的詳細資訊。 啟動排程查詢後， `state` 將從 `REGISTERING` to `ENABLED`.
 
 ```json
 {
@@ -219,11 +219,11 @@ curl -X POST https://platform.adobe.io/data/foundation/query/schedules
 
 >[!NOTE]
 >
->您可以使用`_links.delete`值來[刪除已建立的排程查詢](#delete-a-specified-scheduled-query)。
+>您可以使用 `_links.delete` to [刪除已建立的排程查詢](#delete-a-specified-scheduled-query).
 
 ### 指定計畫查詢的請求詳細資訊
 
-您可以向`/schedules`端點提出GET請求並在請求路徑中提供其ID，以擷取特定排程查詢的資訊。
+您可以向 `/schedules` 端點，並在要求路徑中提供其ID。
 
 **API格式**
 
@@ -233,7 +233,7 @@ GET /schedules/{SCHEDULE_ID}
 
 | 屬性 | 說明 |
 | -------- | ----------- |
-| `{SCHEDULE_ID}` | 您要擷取之排程查詢的`id`值。 |
+| `{SCHEDULE_ID}` | 此 `id` 要檢索的計畫查詢的值。 |
 
 **要求**
 
@@ -302,17 +302,17 @@ curl -X GET https://platform.adobe.io/data/foundation/query/schedules/e95186d65a
 
 >[!NOTE]
 >
->您可以使用`_links.delete`值來[刪除已建立的排程查詢](#delete-a-specified-scheduled-query)。
+>您可以使用 `_links.delete` to [刪除已建立的排程查詢](#delete-a-specified-scheduled-query).
 
 ### 更新指定計畫查詢的詳細資訊
 
-您可以向`/schedules`端點提出PATCH請求，並在請求路徑中提供ID，以更新指定排程查詢的詳細資訊。
+您可以向 `/schedules` 端點，並在要求路徑中提供其ID。
 
-PATCH請求支援兩種不同的路徑：`/state`和`/schedule/schedule`。
+PATCH請求支援兩種不同的路徑： `/state` 和 `/schedule/schedule`.
 
 ### 更新計畫查詢狀態
 
-您可以使用`/state`來更新所選計畫查詢的狀態 — 「已啟用」或「已禁用」。 若要更新狀態，您必須將值設為`enable`或`disable`。
+您可以使用 `/state` 要更新選定計畫查詢的狀態 — 「已啟用」或「禁用」。 若要更新狀態，您必須將值設為 `enable` 或 `disable`.
 
 **API格式**
 
@@ -322,7 +322,7 @@ PATCH /schedules/{SCHEDULE_ID}
 
 | 屬性 | 說明 |
 | -------- | ----------- |
-| `{SCHEDULE_ID}` | 您要擷取之排程查詢的`id`值。 |
+| `{SCHEDULE_ID}` | 此 `id` 要PATCH的排程查詢的值。 |
 
 
 **要求**
@@ -348,8 +348,8 @@ curl -X PATCH https://platform.adobe.io/data/foundation/query/schedules/e95186d6
 
 | 屬性 | 說明 |
 | -------- | ----------- |
-| `path` | 要修補的值的路徑。 在此情況下，由於您正在更新排程查詢的狀態，因此必須將`path`的值設為`/state`。 |
-| `value` | `/state`的更新值。 此值可設為`enable`或`disable`以啟用或停用排程查詢。 |
+| `path` | 要修補的值的路徑。 在此情況下，由於您要更新排程查詢的狀態，因此必須設定 `path` to `/state`. |
+| `value` | 更新的值 `/state`. 此值可設為 `enable` 或 `disable` 啟用或禁用計畫查詢。 |
 
 **回應**
 
@@ -364,7 +364,7 @@ curl -X PATCH https://platform.adobe.io/data/foundation/query/schedules/e95186d6
 
 ### 更新排程查詢排程
 
-您可以使用`/schedule/schedule`來更新已排程查詢的cron排程。 如需cron排程的詳細資訊，請參閱[cron運算式格式](https://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html)檔案。
+您可以使用 `/schedule/schedule` 更新已排程查詢的cron排程。 如需cron排程的詳細資訊，請參閱 [cron運算式格式](https://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html) 檔案。
 
 **API格式**
 
@@ -374,7 +374,7 @@ PATCH /schedules/{SCHEDULE_ID}
 
 | 屬性 | 說明 |
 | -------- | ----------- |
-| `{SCHEDULE_ID}` | 您要擷取之排程查詢的`id`值。 |
+| `{SCHEDULE_ID}` | 此 `id` 要PATCH的排程查詢的值。 |
 
 **要求**
 
@@ -399,8 +399,8 @@ curl -X PATCH https://platform.adobe.io/data/foundation/query/schedules/e95186d6
 
 | 屬性 | 說明 |
 | -------- | ----------- |
-| `path` | 要修補的值的路徑。 在這種情況下，由於您正在更新排程查詢的排程，因此必須將`path`的值設為`/schedule/schedule`。 |
-| `value` | `/schedule`的更新值。 此值必須以cron排程的形式。 因此，在此範例中，排程的查詢會在45分鐘標籤下每小時執行一次。 |
+| `path` | 要修補的值的路徑。 在此情況下，由於您要更新排程查詢的排程，因此必須設定 `path` to `/schedule/schedule`. |
+| `value` | 更新的值 `/schedule`. 此值必須以cron排程的形式。 因此，在此範例中，排程的查詢會在45分鐘標籤下每小時執行一次。 |
 
 **回應**
 
@@ -415,11 +415,11 @@ curl -X PATCH https://platform.adobe.io/data/foundation/query/schedules/e95186d6
 
 ### 刪除指定的計畫查詢
 
-您可以向`/schedules`端點提出DELETE請求，並在請求路徑中提供要刪除的已排程查詢的ID，以刪除指定的已排程查詢。
+您可以透過向 `/schedules` 端點，並提供您要在請求路徑中刪除之已排程查詢的ID。
 
 >[!NOTE]
 >
->刪除前，必須禁用計畫&#x200B;**。**
+>排程 **必須** 在被刪除前被禁用。
 
 **API格式**
 
@@ -429,7 +429,7 @@ DELETE /schedules/{SCHEDULE_ID}
 
 | 屬性 | 說明 |
 | -------- | ----------- |
-| `{SCHEDULE_ID}` | 您要擷取之排程查詢的`id`值。 |
+| `{SCHEDULE_ID}` | 此 `id` 要DELETE的排程查詢的值。 |
 
 **要求**
 
