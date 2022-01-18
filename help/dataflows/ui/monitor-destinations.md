@@ -6,9 +6,9 @@ title: 在UI中監視目標的資料流
 topic-legacy: overview
 type: Tutorial
 exl-id: 8eb7bb3c-f2dc-4dbc-9cf5-3d5d3224f5f1
-source-git-commit: dc7de355284e2f1f52939ca7a80344345ce92c43
+source-git-commit: 567cfd5ecec23d35317a46a3126a608cc4792a73
 workflow-type: tm+mt
-source-wordcount: '1879'
+source-wordcount: '1897'
 ht-degree: 0%
 
 ---
@@ -152,6 +152,11 @@ ht-degree: 0%
 >id="platform_monitoring_activation"
 >title="啟用"
 >abstract="目的地啟動包含區段啟動狀態的相關資訊，以及從即時客戶設定檔擷取來產生唯一身分的量度。"
+
+>[!CONTEXTUALHELP]
+>id="platform_monitoring_segment_jobs"
+>title="區段作業"
+>abstract="區段作業控制面板包含所有區段的評估和匯出作業的相關資訊。"
 
 若要存取 [!UICONTROL 監控] 控制面板，選取 **[!UICONTROL 監控]** (![監視表徵圖](../assets/ui/monitor-destinations/monitoring-icon.png))。 一次 [!UICONTROL 監控] 頁面，選取 [!UICONTROL 目的地]. 此 [!UICONTROL 監控] 控制面板包含目標執行作業的度量和資訊。
 
