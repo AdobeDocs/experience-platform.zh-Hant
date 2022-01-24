@@ -1,39 +1,53 @@
 ---
-keywords: Experience Platform；首頁；熱門主題；salesforce marketing cloud;SalesforceMarketing Cloud；行銷自動化
+keywords: Experience Platform；首頁；熱門主題；SalesforceMarketing Cloud；市場營銷自動化
 solution: Experience Platform
-title: SalesforceMarketing Cloud源概述
+title: SalesforceMarketing Cloud源概覽
 topic-legacy: overview
-description: 了解如何使用API或使用者介面將SalesforceMarketing Cloud連線至Adobe Experience Platform。
-source-git-commit: f196da32f67578ad1d73f3200f6050a7ddab0d88
+description: 瞭解如何使用API或用戶介面將SalesforceMarketing Cloud連接到Adobe Experience Platform。
+exl-id: 2177d68c-0cef-4031-a0e7-8bf22ee2e70b
+source-git-commit: 6876ad592e4924dc884568899662dfa9c8eecc62
 workflow-type: tm+mt
-source-wordcount: '257'
+source-wordcount: '359'
 ht-degree: 0%
 
 ---
 
-# (Beta)[!DNL Salesforce Marketing Cloud]
+# (Beta) [!DNL Salesforce Marketing Cloud]
 
 >[!NOTE]
 >
->[!DNL Salesforce Marketing Cloud]源位於測試版。 有關使用測試版標籤的來源的詳細資訊，請參閱[來源概述](../../home.md#terms-and-conditions)。
+>的 [!DNL Salesforce Marketing Cloud] 源為beta。 查看 [源概述](../../home.md#terms-and-conditions) 的子菜單。
 
-Adobe Experience Platform可讓您從外部來源擷取資料，同時使用Platform服務來建構、加標籤及增強傳入資料。 您可以從多種來源(如Adobe應用程式、雲儲存、資料庫等)內嵌資料。
+Adobe Experience Platform允許從外部源接收資料，同時讓您能夠使用平台服務構建、標籤和增強傳入資料。 您可以從多種源(如Adobe應用程式、基於雲的儲存、資料庫和許多其他源)接收資料。
 
-[!DNL Experience Platform] 提供從協力廠商行銷自動化系統擷取資料的支援。對行銷自動化提供者的支援包括[!DNL Salesforce Marketing Cloud]。
+[!DNL Experience Platform] 支援從第三方營銷自動化系統接收資料。 對營銷自動化提供商的支援包括 [!DNL Salesforce Marketing Cloud]。
 
-## IP位址允許清單
+## 先決條件
 
-使用來源連接器前，必須將IP位址清單新增至允許清單。 若未將您地區專屬的IP位址新增至允許清單，在使用來源時可能會導致錯誤或效能不佳。 如需詳細資訊，請參閱[IP位址允許清單](../../ip-address-allow-list.md)頁面。
+在連接之前 [!DNL Salesforce Marketing Cloud] 源到平台，必須確保 **權限作用域** 已預配給 [!DNL Salesforce Marketing Cloud] 客戶端ID和客戶端密碼組合：
 
-以下檔案提供如何使用API或使用者介面將[!DNL Salesforce Marketing Cloud]連線至Platform的資訊：
+* `campaign_read`
+* `list_and_subscribers_read`
 
-## 使用API將[!DNL Salesforce Marketing Cloud]連線至平台
+通過調用 `v2/userinfo` 資源 [!DNL Salesforce Marketing Cloud] API。 查看 [[!DNL Salesforce Marketing Cloud] API整合權限作用域文檔](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/data-access-permissions.html) 有關如何請求和比較範圍的指導。
 
-- [使用流量服務API建立SalesforceMarketing Cloud基礎連接](../../tutorials/api/create/marketing-automation/salesforce-marketing-cloud.md)
-- [使用流量服務API探索行銷自動化來源的資料結構和內容](../../tutorials/api/explore/marketing-automation.md)
-- [使用流服務API為行銷自動化來源建立資料流](../../tutorials/api/collect/marketing-automation.md)
+有關作用域（包括其相關權限和行為的清單）的詳細資訊，請參閱 [[!DNL Salesforce Marketing Cloud] REST API文檔](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/rest-permissions-and-scopes.html)。
 
-## 使用UI將[!DNL Salesforce Marketing Cloud]連線至Platform
+## IP地址允許清單
 
-- [在UI中建立SalesforceMarketing Cloud來源連線](../../tutorials/ui/create/marketing-automation/salesforce-marketing-cloud.md)
-- [在UI中建立行銷自動化來源連線的資料流](../../tutorials/ui/dataflow/marketing-automation.md)
+在使用源連接器之前，必須將IP地址清單添加到允許清單。 如果無法將特定於區域的IP地址添加到允許清單，則在使用源時可能會導致錯誤或效能不佳。 查看 [IP地址允許清單](../../ip-address-allow-list.md) 的子菜單。
+
+## 連接 [!DNL Salesforce Marketing Cloud] 到使用API的平台
+
+以下文檔提供了有關如何連接的資訊 [!DNL Salesforce Marketing Cloud] 到使用API的平台：
+
+* [使用流服務API建立SalesforceMarketing Cloud基連接](../../tutorials/api/create/marketing-automation/salesforce-marketing-cloud.md)
+* [使用Flow Service API探索營銷自動化源的資料結構和內容](../../tutorials/api/explore/marketing-automation.md)
+* [使用流服務API為市場營銷自動化源建立資料流](../../tutorials/api/collect/marketing-automation.md)
+
+## 連接 [!DNL Salesforce Marketing Cloud] 到使用UI的平台
+
+以下文檔提供了有關如何連接的資訊 [!DNL Salesforce Marketing Cloud] 到使用用戶介面的平台：
+
+* [在UI中建立SalesforceMarketing Cloud源連接](../../tutorials/ui/create/marketing-automation/salesforce-marketing-cloud.md)
+* [在UI中為市場營銷自動化源連接建立資料流](../../tutorials/ui/dataflow/marketing-automation.md)
