@@ -1,88 +1,96 @@
 ---
-keywords: 目的地；目的地；目的地詳細資料頁面；目的地詳細資料頁面
+keywords: 目標；目標；目標詳細資訊頁；目標詳細資訊頁
 title: 查看目標詳細資訊
-description: '個別目的地的詳細資訊頁面提供目的地詳細資訊的概觀。 目的地詳細資訊包括目的地名稱、ID、對應至目的地的區段，以及編輯啟用和啟用資料流的控制項。 '
-seo-description: 個別目的地的詳細資訊頁面提供目的地詳細資訊的概觀。 目的地詳細資訊包括目的地名稱、ID、對應至目的地的區段，以及編輯啟用和啟用資料流的控制項。
+description: '單個目標的詳細資訊頁面提供了目標詳細資訊的概覽。 目標詳細資訊包括目標名稱、ID、映射到目標的段，以及用於編輯激活和啟用和禁用資料流的控制項。 '
+seo-description: The details page for an individual destination provides an overview of the destination details. Destination details include the destination name, ID, segments mapped to the destination, and controls to edit the activation and to enable and disable the data flow.
 exl-id: e44e2b2d-f477-4516-8a47-3e95c2d85223
-source-git-commit: a619227de30513bb06a22ce7b4f2fc13847c1ab6
+source-git-commit: 6d81973554f30642cafff54330140c606ab5499d
 workflow-type: tm+mt
-source-wordcount: '668'
+source-wordcount: '681'
 ht-degree: 2%
 
 ---
 
 # 查看目標詳細資訊
 
-## 概覽 {#overview}
+## 總覽 {#overview}
 
-在Adobe Experience Platform使用者介面中，您可以檢視及監控目的地的屬性和活動。 這些詳細資訊包括目的地的名稱和ID、啟用或停用目的地的控制項等。 批次目的地的詳細資訊還包括已啟用設定檔記錄的量度，以及資料流執行的歷史記錄。
+在Adobe Experience Platform用戶介面中，可以查看和監視目標的屬性和活動。 這些詳細資訊包括目標的名稱和ID、用於激活或禁用目標的控制項等。 詳細資訊還包括激活的配置檔案記錄、激活的標識、失敗的和排除的度量，以及資料流運行的歷史記錄。
 
 >[!NOTE]
 >
->目的地詳細資訊頁面是[!DNL Platform] [!DNL UI]中[!UICONTROL 目的地]工作區的一部分。 如需詳細資訊，請參閱[[!UICONTROL Destinations]工作區概述](./destinations-workspace.md) 。
+>目標詳細資訊頁面是 [!UICONTROL 目標] 工作區 [!DNL Platform] [!DNL UI]。 查看 [[!UICONTROL 目標] 工作區概述](./destinations-workspace.md) 的子菜單。
 
 ## 查看目標詳細資訊 {#view-details}
 
-請依照下列步驟，檢視關於現有目的地的詳細資訊。
+按照以下步驟查看有關現有目標的詳細資訊。
 
-1. 登入[Experience PlatformUI](https://platform.adobe.com/)並從左側導覽列選取&#x200B;**[!UICONTROL 目的地]**。 從頂端標題選取&#x200B;**[!UICONTROL Browse]**&#x200B;以檢視您現有的目的地。
+1. 登錄到 [Experience PlatformUI](https://platform.adobe.com/) 選擇 **[!UICONTROL 目標]** 的下界。 選擇 **[!UICONTROL 瀏覽]** 的子目錄。
 
-   ![瀏覽目的地](../assets/ui/details-page/browse-destinations.png)
+   ![瀏覽目標](../assets/ui/details-page/browse-destinations.png)
 
-1. 選擇左上角的篩選表徵圖![Filter-icon](../assets/ui/details-page/filter.png)以啟動排序面板。 排序面板會提供所有目的地的清單。 您可以從清單中選擇多個目標，以查看與所選目標關聯的資料流的篩選選擇。
+1. 選擇篩選器表徵圖 ![篩選器表徵圖](../assets/ui/details-page/filter.png) 的子菜單。 排序面板提供所有目標的清單。 可以從清單中選擇多個目標，以查看與所選目標關聯的資料流的篩選選擇。
 
-   ![篩選目的地](../assets/ui/details-page/filter-destinations.png)
+   ![篩選目標](../assets/ui/details-page/filter-destinations.png)
 
-1. 選取您要檢視的目的地名稱。
+1. 選擇要查看的目標名稱。
 
    ![選擇目標](../assets/ui/details-page/destination-select.png)
 
-1. 目的地的詳細資訊頁面隨即顯示，並顯示其可用的控制項。 如果您正在查看批處理目標的詳細資訊，則還會顯示監視控制面板。
+1. 此時將顯示目標的詳細資訊頁面，其中顯示其可用控制項。
 
-   ![目的地詳細資訊](../assets/ui/details-page/destination-details.png)
+   ![目標詳細資訊](../assets/ui/details-page/destination-details.png)
 
-## 右側邊欄
+## 右滑軌 {#right-rail}
 
-右側邊欄會顯示所選目的地的基本資訊。
+右滑軌顯示有關選定目標的基本資訊。
 
-![右側邊欄](../assets/ui/details-page/right-sidebar.png)
+![右欄](../assets/ui/details-page/right-sidebar.png)
 
-下表涵蓋右側邊欄提供的控制項和詳細資訊：
+下表介紹了右滑軌提供的控制項和詳細資訊：
 
-| 右側邊欄項目 | 說明 |
+| 右滑軌項目 | 說明 |
 | --- | --- |
-| [!UICONTROL 啟動] | 選取此控制項可編輯對應至目的地的區段。 如需詳細資訊，請參閱[啟用對象資料以劃分串流目的地](./activate-segment-streaming-destinations.md)、[啟用對象資料以批次設定檔目的地](./activate-batch-profile-destinations.md)和[啟用對象資料以串流設定檔目的地](./activate-streaming-profile-destinations.md)的相關指南。 |
-| [!UICONTROL 刪除] | 允許您刪除此資料流，並取消映射先前激活的段（如果有的話）。 |
-| [!UICONTROL 目的地名稱] | 可以編輯此欄位以更新目標的名稱。 |
-| [!UICONTROL 說明] | 您可以編輯此欄位，以更新或新增選擇性說明至目的地。 |
-| [!UICONTROL 目標] | 代表對象被傳送至的目的地平台。 如需詳細資訊，請參閱[目的地目錄](../catalog/overview.md) 。 |
+| [!UICONTROL 激活段] | 選擇此控制項可編輯哪些段映射到目標、更新導出計畫或添加和刪除映射的屬性和標識。 查看上的參考線 [激活觀眾資料，將流目標分段](./activate-segment-streaming-destinations.md)。 [將受眾資料激活到基於批配置檔案的目標](./activate-batch-profile-destinations.md), [將觀眾資料激活到基於流配置檔案的目標](./activate-streaming-profile-destinations.md) 的子菜單。 |
+| [!UICONTROL 刪除] | 允許您刪除此資料流並取消映射以前激活的段（如果存在）。 |
+| [!UICONTROL 目標名稱] | 可以編輯此欄位以更新目標的名稱。 |
+| [!UICONTROL 說明] | 可以編輯此欄位以更新或向目標添加可選說明。 |
+| [!UICONTROL 目標] | 表示受眾發送到的目標平台。 查看 [目標目錄](../catalog/overview.md) 的子菜單。 |
 | [!UICONTROL 狀態] | 指示目標是啟用還是禁用。 |
-| [!UICONTROL 行銷動作] | 指出針對此目的地為資料控管目的而套用的行銷動作（使用案例）。 |
-| [!UICONTROL 類別] | 指示目標類型。 如需詳細資訊，請參閱[目的地目錄](../catalog/overview.md) 。 |
-| [!UICONTROL 連線類型] | 指出將對象傳送至目的地的表單。 可能的值包括[!UICONTROL Cookie]和[!UICONTROL Profile-based]。 |
-| [!UICONTROL 頻率] | 指出對象傳送至目的地的頻率。 可能的值包括[!UICONTROL 流]和[!UICONTROL 批]。 |
-| [!UICONTROL 身分] | 代表目的地接受的身分命名空間，例如`GAID`、`IDFA`或`email`。 如需接受的身分識別命名空間的詳細資訊，請參閱[身分識別命名空間概述](../../identity-service/namespaces.md)。 |
+| [!UICONTROL 市場營銷操作] | 指明為資料治理目的應用於此目標的市場營銷操作（使用案例）。 |
+| [!UICONTROL 類別] | 指示目標類型。 查看 [目標目錄](../catalog/overview.md) 的子菜單。 |
+| [!UICONTROL 連線類型] | 指示將受眾發送到目標的窗體。 可能的值包括 [!UICONTROL Cookie] 和 [!UICONTROL 基於配置檔案]。 |
+| [!UICONTROL 頻率] | 指示將受眾發送到目標的頻率。 可能的值包括 [!UICONTROL 流] 和 [!UICONTROL 批]。 |
+| [!UICONTROL 身分] | 表示目標接受的標識命名空間，如 `GAID`。 `IDFA`或 `email`。 有關接受的標識命名空間的詳細資訊，請參見 [標識命名空間概述](../../identity-service/namespaces.md)。 |
 | [!UICONTROL 建立者] | 指示建立此目標的用戶。 |
 | [!UICONTROL 已建立] | 指示建立此目標時的UTC日期時間。 |
 
 {style=&quot;table-layout:auto&quot;}
 
-## [!UICONTROL 啟用]/ 停用切換
+## [!UICONTROL 已啟用]/[!UICONTROL 已禁用] 切換 {#enabled-disabled-toggle}
 
-您可以使用&#x200B;**[!UICONTROL Enabled]/[!UICONTROL Disabled]**&#x200B;切換開始和暫停所有匯出至目的地的資料。
+您可以使用 **[!UICONTROL 已啟用]/[!UICONTROL 已禁用]** 切換以啟動並暫停向目標的所有資料導出。
 
-![啟用禁用切換](../assets/ui/details-page/enable-disable.png)
+![啟用或禁用資料流切換](../assets/ui/details-page/enable-disable.png)
 
-## [!UICONTROL 資料流運行]
+## [!UICONTROL 資料流運行] {#dataflow-runs}
 
-[!UICONTROL 資料流運行]頁簽提供資料流運行到批處理目標的度量資料。 有關詳細資訊，請參閱[監視資料流](monitor-dataflows.md)。
+的 [!UICONTROL 資料流運行] 頁籤提供資料流運行到批處理和流式傳輸目標的度量資料。 請參閱 [監視資料流](monitor-dataflows.md) 中。
 
-## [!UICONTROL 啟動資料] {#activation-data}
+![資料流運行視圖](../assets/ui/details-page/dataflow-runs.png)
 
-[!UICONTROL 啟動資料]標籤會顯示已對應至目的地的區段清單，包括其開始日期和結束日期（若適用）。 若要檢視特定區段的詳細資訊，請從清單中選取其名稱。
+## [!UICONTROL 激活資料] {#activation-data}
 
-![啟動資料](../assets/ui/details-page/activation-data.png)
+的 [!UICONTROL 激活資料] 頁籤顯示已映射到目標的段的清單，包括其起始日期和終止日期（如果適用），以及用於資料導出的其他相關資訊，如導出類型、計畫和頻率。 要查看特定段的詳細資訊，請從清單中選擇其名稱。
+
+>[!TIP]
+>
+>要查看和編輯映射到目標的屬性和標識的詳細資訊，請選擇 **[!UICONTROL 激活段]** 的 [右欄](#right-rail)。
+
+![激活資料視圖批處理目標](../assets/ui/details-page/activation-data-batch.png)
+
+![激活資料視圖流目標](../assets/ui/details-page/activation-data-streaming.png)
 
 >[!NOTE]
 >
->如需探索區段詳細資訊頁面的詳細資訊，請參閱[分段UI概述](../../segmentation/ui/overview.md#segment-details)。
+>有關瀏覽分部詳細資訊頁面的詳細資訊，請參閱 [分段UI概述](../../segmentation/ui/overview.md#segment-details)。
