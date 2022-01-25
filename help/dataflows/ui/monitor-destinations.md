@@ -6,9 +6,9 @@ title: 監視UI中目標的資料流
 topic-legacy: overview
 type: Tutorial
 exl-id: 8eb7bb3c-f2dc-4dbc-9cf5-3d5d3224f5f1
-source-git-commit: b9f9e709fe51000a32eaea7a1a7c76488a36dd9b
+source-git-commit: b66c39016b2ccd4a4e24899f9e59f9a80cdc531b
 workflow-type: tm+mt
-source-wordcount: '2050'
+source-wordcount: '2085'
 ht-degree: 0%
 
 ---
@@ -135,6 +135,11 @@ ht-degree: 0%
 >title="收到的配置檔案"
 >abstract="在資料流中接收的配置檔案總數。 此值每60分鐘更新一次。"
 >text="Learn more in documentation"
+
+>[!CONTEXTUALHELP]
+>id="platform_monitoring_dataflow_run_details_activation"
+>title="資料流運行詳細資訊"
+>abstract="目標資料流運行詳細資訊包含有關段的激活狀態和從即時客戶配置檔案獲取的度量的資訊，以生成唯一標識。 要瞭解更多資訊，請查看度量定義指南。"
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_dataflow_run_details_activation_batch"
