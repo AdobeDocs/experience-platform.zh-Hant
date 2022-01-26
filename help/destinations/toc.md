@@ -4,9 +4,9 @@ user-guide-title: 目的地指南
 user-guide-description: 針對跨通路行銷活動、電子郵件宣傳、鎖定特定目標的行銷活動和其他諸多使用案例，啟用已知和未知的資料。
 description: 本文檔列出了Adobe Experience Platform目標的目錄
 feature: Destinations
-source-git-commit: b41230c1280bf699e9a78d5fd15b43d51ab298f7
+source-git-commit: 628e7a993a3566322e0249a5a9864cf6b3fe4493
 workflow-type: tm+mt
-source-wordcount: '689'
+source-wordcount: '695'
 ht-degree: 9%
 
 ---
@@ -32,6 +32,7 @@ ht-degree: 9%
       * [激活受眾資料以流式處理配置檔案導出目標](./ui/activate-streaming-profile-destinations.md)
       * [將受眾資料激活到批配置檔案導出目標](./ui/activate-batch-profile-destinations.md)
       * [激活受眾資料以配置檔案請求目標(Beta)](./ui/activate-profile-request-destinations.md)
+      * [配置同頁和下一頁個性化的個性化目標](./ui/configure-personalization-destinations.md)
    * [查看目標詳細資訊](./ui/destination-details-page.md)
    * [更新目標帳戶](./ui/update-accounts.md)
    * [編輯激活流](./ui/edit-activation.md)
@@ -118,11 +119,11 @@ ht-degree: 9%
       * [Braze連接](./catalog/mobile-engagement/braze.md)
    * 個性化目標 {#personalization}
       * [個性化目標概述](./catalog/personalization/overview.md)
-      * [Adobe Target連接(Beta)](./catalog/personalization/adobe-target-connection.md)
+      * [Adobe Target](./catalog/personalization/adobe-target-connection.md)
       * [Adobe Target 擴充功能](./catalog/personalization/adobe-target.md)
       * [Adobe Target v2 擴充功能](./catalog/personalization/adobe-target-v2.md)
       * [貝姆雷延伸](./catalog/personalization/beemray.md)
-      * [自定義個性化連接(Beta)](./catalog/personalization/custom-personalization.md)
+      * [自定義個性化連接](./catalog/personalization/custom-personalization.md)
       * [D&amp;B訪問者智慧擴展](./catalog/personalization/dnb.md)
       * [Experience Cloud ID 服務擴充功能](./catalog/personalization/adobe-ecid.md)
       * [Gainsight擴展](./catalog/personalization/gainsight.md)
