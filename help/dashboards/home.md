@@ -1,37 +1,43 @@
 ---
 solution: Experience Platform
-title: Experience Platform控制面板簡介
+title: Experience Platform儀表板簡介
 type: Documentation
-description: 探索Adobe Experience Platform中的多個控制面板，以檢視在每日快照期間擷取之組織資料的重要資訊。
+description: 在Adobe Experience Platform瀏覽多個儀表板以查看有關組織資料的重要資訊，這些資訊在每日快照期間捕獲。
 exl-id: d56cb139-392d-4bbc-97ec-202a0c8a2863
-source-git-commit: e927dbef8a3028155e907e0ca05c17c29fb74cf1
+source-git-commit: e7ff48d6aa7d7f70688081df45ae2d36da741eb4
 workflow-type: tm+mt
-source-wordcount: '252'
+source-wordcount: '309'
 ht-degree: 0%
 
 ---
 
 
-# 控制面板概觀 {#dashboards}
+# 儀表板概述 {#dashboards}
 
-Adobe Experience Platform提供多個控制面板，讓您透過這些控制面板檢視有關組織資料的重要資訊，如每日快照中所擷取。
+Adobe Experience Platform提供了多個儀表板，您可以通過這些儀表板查看有關組織資料的重要資訊，這些資訊在每日快照期間捕獲。
 
-## 控制面板簡介
+## 儀表板簡介
 
-控制面板可提供組織資料的現成可用報表，並直接內建在Platform內的行銷人員工作流程中。 這些儀表板無需額外的IT支援，也無需花費時間和精力，即可通過額外的資料倉庫設計和實施導出和處理資料。
+控制面板提供有關組織資料的現成報告，並直接內置到平台內的營銷員工作流中。 這些控制板可用，無需額外的IT支援，也無需花費額外的時間和精力，通過額外的資料倉庫設計和實施來導出和處理資料。
 
-## 控制面板快速入門
+## 儀表板入門
 
-若要存取控制面板，請導覽至Platform使用者介面(UI)中的適當區段。 在區段中，選取&#x200B;**[!UICONTROL 概述]**&#x200B;標籤（如果未自動選取）以檢視控制面板。
+要查看和管理儀表板，請導航至 **[!UICONTROL 儀表板]** 在Experience Platform用戶介面(UI)中，選擇 **[!UICONTROL 瀏覽]** 頁籤。
 
-快照中的資料與建立快照時在特定時間點顯示的資料完全相同。 換句話說，快照不是資料的近似值或樣本，控制面板不會即時更新。
+您還可以通過導航到要查看的儀表板的UI中的相應部分來訪問儀表板。 要查看配置檔案的儀表板，請導航至 **[!UICONTROL 配置檔案]** 工作區，然後選擇 **[!UICONTROL 概述]** 頁籤。
+
+快照中的資料與拍攝快照時在特定時間點顯示的資料完全相同。 換句話說，快照不是資料的近似值或示例，儀表板不會即時更新。
 
 >[!NOTE]
 >
->自拍攝快照以來對資料所做的任何更改或更新都不會反映在儀表板中，直到拍攝下一個快照。
+>自拍攝快照以來對資料所做的任何更改或更新不會反映在儀表板中，直到拍攝下一個快照。
 
-## 可用控制面板
+## 儀表板清單
 
-Experience Platform內目前有多個控制面板，每個控制面板都能讓您組織的客戶資料更透明。
+有關如何使用 **[!UICONTROL 儀表板]** 工作區以查看所有可用儀表板，請參閱 [儀表板清單指南](./inventory.md)。
 
-若要進一步了解這些控制面板及其量度，請從檔案導覽的可用控制面板清單中選取控制面板。
+## 可用儀表板
+
+Experience Platform中當前有多個儀表板，每個儀表板都為組織的客戶資料提供透明度。
+
+要瞭解有關這些儀表板及其度量的詳細資訊，請從文檔導航中可用儀表板清單中選擇一個儀表板。

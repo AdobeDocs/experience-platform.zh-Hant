@@ -1,33 +1,36 @@
 ---
 audience: user
-user-guide-title: Adobe Experience Platform 儀表板說明
+user-guide-title: Adobe Experience 平台儀表板說明
 breadcrumb-title: 儀表板指南
-user-guide-description: 在可自訂儀表板上呈現視覺化的 Experience Platform 資料。
+user-guide-description: 在可自訂儀表板上呈現視覺化的 Experience 平台資料。
 feature: Dashboards
-source-git-commit: 5218e6cf82b74efbbbcf30495395a4fe2ad9fe14
+source-git-commit: 058f1cf5aa0ea134f276d1b3bc7064195fb252f1
 workflow-type: tm+mt
-source-wordcount: '58'
+source-wordcount: '64'
 ht-degree: 32%
 
 ---
 
 
-# Adobe Experience Platform控制面板 {#dashboards}
+# Adobe Experience Platform儀表板 {#dashboards}
 
-* [控制面板概觀](home.md)
-* [控制面板存取權限](permissions.md)
-* [下載控制面板以PDF](download.md)
-* 可用控制面板{#guides}
+* [儀表板概述](home.md)
+* [儀表板訪問權限](permissions.md)
+* [儀表板清單](inventory.md)
+* [將儀表板下載到PDF](download.md)
+* 可用儀表板 {#guides}
    * [設定檔](guides/profiles.md)
    * [區段](guides/segments.md)
    * [目的地](guides/destinations.md)
-   * [授權使用](guides/license-usage.md)
-* 自訂控制面板{#customize}
-   * [自訂概觀](customize/overview.md)
-   * [修改控制面板](customize/modify.md)
-   * [介面工具集程式庫](customize/widget-library.md)
-   * [標準介面工具集](customize/standard-widgets.md)
-   * [自訂小工具](customize/custom-widgets.md)
+   * [許可證使用](guides/license-usage.md)
+* 自定義儀表板 {#customize}
+   * [自定義概述](customize/overview.md)
+   * [修改儀表板](customize/modify.md)
+   * [小部件庫](customize/widget-library.md)
+   * [標準小部件](customize/standard-widgets.md)
+   * [自定義小部件](customize/custom-widgets.md)
    * [編輯方案](customize/edit-schema.md)
-* [查詢控制面板資料集](query.md)
+* 應用程式整合 {#integrations}
+   * [Power BI](integrations/power-bi.md)
+* [查詢儀表板資料集](query.md)
 * [平台發行說明](https://www.adobe.com/go/platform-release-notes-en)
