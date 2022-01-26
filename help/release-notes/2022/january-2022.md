@@ -2,10 +2,10 @@
 title: Adobe Experience 平台發行說明
 description: Adobe Experience Platform的最新發行說明。
 exl-id: bcd52989-ef62-4ab9-866e-1d9e57b76a0c
-source-git-commit: 78f9b8434d577909ccb1c62211a802e05c8291e1
+source-git-commit: 8a26a69e6a244fc8a0d347e2814f0406713b1c9b
 workflow-type: tm+mt
-source-wordcount: '959'
-ht-degree: 5%
+source-wordcount: '1253'
+ht-degree: 4%
 
 ---
 
@@ -18,6 +18,7 @@ Adobe Experience Platform 現有功能更新：
 - [警報](#alerts)
 - [[!DNL Data Prep]](#data-prep)
 - [[!DNL Dashboards]](#dashboards)
+- [[!DNL Destinations]](#destinations)
 - [查詢服務](#query-service)
 - [沙盒](#sandboxes)
 - [細分服務](#segmentation)
@@ -60,30 +61,34 @@ Adobe Experience Platform提供了多個儀表板，您可以通過這些儀表�
 
 有關 [!DNL Data Prep]，請參閱 [[!DNL Data Prep] 概述](../../data-prep/home.md)。
 
-<!--
-
 ## [!DNL Destinations] {#destinations}
 
-[!DNL Destinations] are pre-built integrations with destination platforms that allow for the seamless activation of data from Adobe Experience Platform. You can use destinations to activate your known and unknown data for cross-channel marketing campaigns, email campaigns, targeted advertising, and many other use cases.
+[!DNL Destinations] 是預先構建的與目標平台的整合，允許無縫激活來自Adobe Experience Platform的資料。 您可以使用目標來激活跨渠道市場營銷活動、電子郵件活動、目標廣告和許多其他使用案例的已知和未知資料。
+
+**新增或更新的功能**
+
+| 功能 | 說明 |
+| ----------- | ----------- |
+| 同頁和下頁個性化 | 同頁和下一頁個性化功能為體驗邊緣上的應用程式提供了用戶的共用、可目標視圖，以實現營銷渠道和客戶渠道之間的一致性。 此個性化功能可通過 [Adobe Target](../../destinations/catalog/personalization/adobe-target-connection.md) 和 [自定義個性化連接](../../destinations/catalog/personalization/custom-personalization.md)。 要配置同一頁或下一頁個性化市場活動，請參閱 [專用教程](../../destinations/ui/configure-personalization-destinations.md)。 |
+| Marketo目標增強 | Experience Platform使用Marketo Engage的客戶可以利用將新人記錄從Experience Platform通過 [Marketo目標連接器](/help/destinations/catalog/adobe/marketo-engage.md)。 在將受眾段從Experience Platform發送到Marketo Engage時，可以自動將段內尚未存在於Marketo Engage資料庫中的人添加到該段。 有關詳細資訊，請閱讀 [將Adobe Experience Platform段推入Marketo靜態清單](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/smart-lists-and-static-lists/static-lists/push-an-adobe-experience-platform-segment-to-a-marketo-static-list.html?lang=en) (本教程中的步驟9指明如何將新人記錄推送到Marketo)。 |
+
+<!--
 
 | Feature | Description |
 | ----------- | ----------- |
-| Placeholder for next-hit personalization | Description |
-| Placeholder for batch monitoring | Description |
-| Placeholder for re-introducing scheduling in the UI | Description |
-| Placeholder for Marketo destination update | Description |
-
-
-**New destinations**
-
-| Destination | Description |
-| ----------- | ----------- |
-| Placeholder for Target | Description |
-| Placeholder for Custom Personalization | Description |
-
-For more general information on destinations, refer to the [destinations overview](../../destinations/home.md).
+| Batch destination monitoring and segment-level metrics | The destination monitoring functionality is now expanded from streaming destinations to also include batch destinations and segment-level metrics for your activation dataflows. For more information, read monitoring destinations dashboard, monitoring segment jobs dashboard, and segment-level view. |
+| Schedule editing in the UI for existing batch activation dataflows | This release introduces the option to edit the schedule of your existing activation dataflows to batch destinations. For more information, read [activate profile data to batch profile destinations](/help/destinations/ui/activate-batch-profile-destinations.md).  |
 
 -->
+
+**新目標**
+
+| 目的地 | 說明 |
+| ----------- | ----------- |
+| [Adobe Target](../../destinations/catalog/personalization/adobe-target-connection.md) | Adobe Target是一個應用程式，它在跨網站、移動應用等所有入站客戶交互中提供即時、基於人工智慧的個性化和實驗。 Adobe Target是Adobe Experience Platform的個性化連接。 |
+| [自定義個性化連接](../../destinations/catalog/personalization/custom-personalization.md) | 這種個性化連接提供了一種從Adobe Experience Platform檢索段資訊到外部個性化平台、內容管理系統、廣告伺服器以及在客戶網站上運行的其他應用程式的方法。 |
+
+有關目標的更多一般資訊，請參閱 [目標概述](../../destinations/home.md)。
 
 ## 查詢服務 {#query-service}
 
