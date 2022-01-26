@@ -4,180 +4,180 @@ solution: Experience Platform
 title: 在UI中為付款源連接配置資料流
 topic-legacy: overview
 type: Tutorial
-description: 資料流是一項排程任務，可從來源擷取資料，並內嵌至Adobe Experience Platform資料集。 本教學課程提供使用付款帳戶配置新資料流的步驟。
+description: 資料流是從源中檢索資料並將資料接收到Adobe Experience Platform資料集的計畫任務。 本教程提供了使用付款帳戶配置新資料流的步驟。
 exl-id: 7355435b-c038-4310-b04a-8ac6b6723b9b
-source-git-commit: 46fb08a10bc05dc758bdcb025693f819b980b41a
+source-git-commit: 38f64f2ba0b40a20528aac6efff0e2fd6bc12ed2
 workflow-type: tm+mt
-source-wordcount: '1465'
+source-wordcount: '1461'
 ht-degree: 0%
 
 ---
 
-# 在UI中為付款連線配置資料流
+# 在UI中為付款連接配置資料流
 
-資料流是一項排程任務，可從來源擷取資料，並內嵌至Adobe Experience Platform資料集。 本教學課程提供使用付款帳戶配置新資料流的步驟。
+資料流是從源中檢索資料並將資料接收到Adobe Experience Platform資料集的計畫任務。 本教程提供了使用付款帳戶配置新資料流的步驟。
 
 ## 快速入門
 
-本教學課程需要妥善了解下列Adobe Experience Platform元件：
+本教程需要對Adobe Experience Platform的以下部分進行有效的理解：
 
-- [[!DNL Experience Data Model (XDM)] 系統](../../../../xdm/home.md):組織客戶體驗資 [!DNL Experience Platform] 料的標準化架構。
-   - [結構構成基本概念](../../../../xdm/schema/composition.md):了解XDM結構描述的基本建置組塊，包括結構描述的主要原則和最佳實務。
-   - [結構編輯器教學課程](../../../../xdm/tutorials/create-schema-ui.md):了解如何使用結構編輯器UI建立自訂結構。
-- [[!DNL Real-time Customer Profile]](../../../../profile/home.md):根據來自多個來源的匯總資料，提供統一的即時消費者設定檔。
+- [[!DNL Experience Data Model (XDM)] 系統](../../../../xdm/home.md):標準化框架 [!DNL Experience Platform] 組織客戶體驗資料。
+   - [架構組合的基礎](../../../../xdm/schema/composition.md):瞭解XDM架構的基本構建基塊，包括架構組成中的關鍵原則和最佳做法。
+   - [架構編輯器教程](../../../../xdm/tutorials/create-schema-ui.md):瞭解如何使用架構編輯器UI建立自定義架構。
+- [[!DNL Real-time Customer Profile]](../../../../profile/home.md):基於來自多個源的聚合資料提供統一、即時的用戶配置檔案。
 
-此外，本教學課程要求您已建立付款帳戶。 若需在UI中建立不同付款連接器的教學課程清單，請參閱[來源連接器概述](../../../home.md)。
+此外，本教程要求您已建立付款帳戶。 有關在UI中建立不同付款連接器的教程清單，請參見 [源連接器概述](../../../home.md)。
 
 ## 選擇資料
 
-建立付款帳戶後，將顯示&#x200B;**[!UICONTROL 選擇資料]**&#x200B;步驟，為您提供交互介面以探索檔案層次結構。
+建立付款帳戶後， **[!UICONTROL 選擇資料]** 的子菜單。
 
-- 介面的左半部是目錄瀏覽器，顯示伺服器的檔案和目錄。
-- 介面的右半部分可讓您從相容的檔案中預覽最多100列資料。
+- 介面的左半部分是目錄瀏覽器，顯示伺服器的檔案和目錄。
+- 該介面的右半部分允許您從相容檔案中預覽多達100行資料。
 
-您可以使用頁面頂端的&#x200B;**[!UICONTROL 搜尋]**&#x200B;選項，快速識別您要使用的來源資料。
+您可以使用 **[!UICONTROL 搜索]** 選項，以快速確定要使用的源資料。
 
 >[!NOTE]
 >
->搜尋來源資料選項可供所有表格式來源連接器使用，但不包括Analytics、分類、事件中心和Kinesis連接器。
+>搜索源資料選項可用於除分析、分類、事件集線器和Kinesis連接器之外的所有基於表格的源連接器。
 
-找到源資料後，選擇目錄，然後按一下&#x200B;**[!UICONTROL Next]**。
+找到源資料後，選擇目錄，然後按一下 **[!UICONTROL 下一個]**。
 
-![select-data](../../../images/tutorials/dataflow/all-tabular/select-data.png)
+![選擇資料](../../../images/tutorials/dataflow/all-tabular/select-data.png)
 
-## 將資料欄位對應至XDM結構
+## 將資料欄位映射到XDM架構
 
-此時會顯示&#x200B;**[!UICONTROL 映射]**&#x200B;步驟，提供互動式介面將源資料映射到[!DNL Platform]資料集。
+的 **[!UICONTROL 映射]** 步驟，提供交互介面將源資料映射到 [!DNL Platform] 資料集。
 
-選擇要內嵌入的傳入資料的資料集。 您可以使用現有資料集或建立新資料集。
+為要接收到的入站資料選擇資料集。 可以使用現有資料集或建立新資料集。
 
 ### 使用現有資料集
 
-若要將資料內嵌至現有資料集，請選取「**[!UICONTROL 使用現有資料集]**」，然後按一下資料集圖示。
+要將資料插入現有資料集，請選擇 **[!UICONTROL 使用現有資料集]**，然後按一下資料集表徵圖。
 
 ![use-existing-dataset](../../../images/tutorials/dataflow/payments/existing-dataset.png)
 
-此時會出現「**[!UICONTROL 選取資料集]**」對話方塊。 找到您要使用的資料集，選擇該資料集，然後按一下&#x200B;**[!UICONTROL Continue]**。
+的 **[!UICONTROL 選擇資料集]** 對話框。 查找要使用的資料集，選擇它，然後按一下 **[!UICONTROL 繼續]**。
 
-![select-existing-dataset](../../../images/tutorials/dataflow/payments/select-dataset.png)
+![選擇 — 現有資料集](../../../images/tutorials/dataflow/payments/select-dataset.png)
 
 ### 使用新資料集
 
-若要將資料內嵌至新資料集，請選取「**[!UICONTROL 建立新資料集]**」，然後在提供的欄位中輸入資料集的名稱和說明。
+要將資料插入新資料集，請選擇 **[!UICONTROL 建立新資料集]** 並在提供的欄位中輸入資料集的名稱和說明。
 
-您可以在&#x200B;**[!UICONTROL 選擇架構]**&#x200B;搜索欄中輸入架構名稱，以附加架構欄位。 您也可以選取下拉式圖示，以查看現有結構的清單。 或者，您也可以選取&#x200B;**[!UICONTROL 進階搜尋]**&#x200B;來存取現有結構的畫面，包括其各自的詳細資訊。
+通過在 **[!UICONTROL 選擇架構]** 的子菜單。 您也可以選擇下拉表徵圖，查看現有方案的清單。 或者，可以選擇 **[!UICONTROL 高級搜索]** 訪問現有架構的螢幕，包括其各自的詳細資訊。
 
-在此步驟中，您可以為[!DNL Real-time Customer Profile]啟用資料集，並建立實體屬性和行為的整體檢視。 [!DNL Profile]中將包含所有已啟用資料集的資料，並在保存資料流時應用更改。
+在此步驟中，您可以為 [!DNL Real-time Customer Profile] 並建立實體屬性和行為的整體視圖。 來自所有已啟用的資料集的資料將包含在 [!DNL Profile] 並在保存資料流時應用更改。
 
-切換&#x200B;**[!UICONTROL 設定檔資料集]**&#x200B;按鈕，為[!DNL Profile]啟用目標資料集。
+切換 **[!UICONTROL 配置檔案資料集]** 按鈕啟用目標資料集 [!DNL Profile]。
 
-![create-new-dataset](../../../images/tutorials/dataflow/payments/new-dataset.png)
+![新建資料集](../../../images/tutorials/dataflow/payments/new-dataset.png)
 
-此時將顯示&#x200B;**[!UICONTROL 選擇架構]**&#x200B;對話框。 選取您要套用至新資料集的結構，然後按一下「**[!UICONTROL 完成]**」。
+的 **[!UICONTROL 選擇架構]** 對話框。 選擇要應用到新資料集的架構，然後按一下 **[!UICONTROL 完成]**。
 
-![select-schema](../../../images/tutorials/dataflow/payments/select-schema.png)
+![選擇模式](../../../images/tutorials/dataflow/payments/select-schema.png)
 
-您可以視需要選擇直接映射欄位，或使用資料準備函式來轉換源資料，以導出計算值或計算值。 有關映射器函式和計算欄位的詳細資訊，請參閱[資料準備函式指南](../../../../data-prep/functions.md)或[計算欄位指南](../../../../data-prep/calculated-fields.md)。
+根據您的需要，您可以選擇直接映射欄位，或使用資料準備函式轉換源資料以導出計算值或計算值。 有關使用映射器介面和計算欄位的全面步驟，請參見 [資料準備UI指南](../../../../data-prep/ui/mapping.md)。
 
 >[!TIP]
 >
->[!DNL Platform] 根據您選取的目標結構或資料集，為自動對應欄位提供智慧型建議。您可以手動調整對應規則以符合您的使用案例。
+>平台根據您選擇的目標架構或資料集為自動映射欄位提供智慧建議。 您可以手動調整映射規則以適合您的使用情形。
 
 ![](../../../images/tutorials/dataflow/all-tabular/mapping.png)
 
-選取「**[!UICONTROL 預覽資料]**」 ，即可查看所選資料集中最多100列範例資料的對應結果。
+選擇 **[!UICONTROL 預覽資料]** 查看所選資料集中最多100行示例資料的映射結果。
 
-在預覽期間，身分欄會優先順序排列為第一個欄位，因為這是驗證對應結果時所需的關鍵資訊。
+在預覽期間，標識列作為第一個欄位按優先順序排列，因為它是驗證映射結果時所必需的關鍵資訊。
 
 ![](../../../images/tutorials/dataflow/all-tabular/mapping-preview.png)
 
-映射源資料後，選擇&#x200B;**[!UICONTROL Close]**。
+映射源資料後，選擇 **[!UICONTROL 關閉]**。
 
-## 排程擷取執行
+## 計畫攝取運行
 
-此時會顯示&#x200B;**[!UICONTROL 排程]**&#x200B;步驟，讓您設定擷取排程，以使用設定的對應自動擷取選取的來源資料。 下表概述用於調度的不同可配置欄位：
+的 **[!UICONTROL 計畫]** 步驟，允許您配置接收計畫以使用配置的映射自動接收選定的源資料。 下表概述了計畫的不同可配置欄位：
 
 | 欄位 | 說明 |
 | --- | --- |
-| 頻率 | 可選頻率包括`Once`、`Minute`、`Hour`、`Day`和`Week`。 |
-| 間隔 | 設定所選頻率間隔的整數。 |
-| 開始時間 | UTC時間戳記，指出第一次擷取的設定何時發生。 |
-| 回填 | 一個布林值，可決定最初擷取的資料。 如果啟用&#x200B;**[!UICONTROL 回填]**，則在首次排程擷取期間，會擷取指定路徑中所有目前的檔案。 如果&#x200B;**[!UICONTROL 回填]**&#x200B;已停用，則只會擷取在首次擷取執行與開始時間之間載入的檔案。 在開始時間之前載入的檔案將不會被擷取。 |
-| 增量列 | 具有類型、日期或時間的源架構欄位集的篩選選項。 此欄位可用來區分新資料和現有資料。 將根據所選欄的時間戳記擷取增量資料。 |
+| 頻率 | 可選頻率包括 `Once`。 `Minute`。 `Hour`。 `Day`, `Week`。 |
+| 間隔 | 設定所選頻率的間隔的整數。 |
+| 開始時間 | UTC時間戳，指示第一次攝取的時間設定為何時發生。 |
+| 回填 | 一個布爾值，它確定最初接收的資料。 如果 **[!UICONTROL 回填]** 啟用後，指定路徑中的所有當前檔案將在首次計畫接收期間被接收。 如果 **[!UICONTROL 回填]** 禁用，將只接收在第一次接收運行和開始時間之間載入的檔案。 在開始時間之前載入的檔案將不會被攝取。 |
+| 增量列 | 具有類型、日期或時間的一組篩選源架構欄位的選項。 此欄位用於區分新資料和現有資料。 增量資料將根據選定列的時間戳進行接收。 |
 
-資料流設計為按計畫自動內嵌資料。 首先，選取擷取頻率。 接下來，設定間隔以指定兩個流運行之間的週期。 間隔的值應為非零整數，應設為大於或等於15。
+資料流設計為按計畫自動接收資料。 從選擇攝取頻率開始。 接下來，設定間隔以指定兩個流運行之間的時段。 間隔的值應為非零整數，並應設定為大於或等於15。
 
-若要設定擷取的開始時間，請調整開始時間方塊中顯示的日期和時間。 或者，您也可以選取日曆圖示來編輯開始時間值。 開始時間必須大於或等於當前UTC時間。
+要設定攝取的開始時間，請調整在開始時間框中顯示的日期和時間。 或者，可以選擇日曆表徵圖以編輯開始時間值。 開始時間必須大於或等於當前UTC時間。
 
-選擇&#x200B;**[!UICONTROL 按]**&#x200B;載入增量資料以分配增量列。 此欄位可區分新資料和現有資料。
+選擇 **[!UICONTROL 載入增量資料的方式]** 指定增量列。 此欄位區分新資料和現有資料。
 
 ![](../../../images/tutorials/dataflow/databases/schedule-interval-on.png)
 
-### 設定一次性內嵌資料流
+### 設定一次性接收資料流
 
-若要設定一次性擷取，請選取頻率下拉箭頭，然後選取&#x200B;**[!UICONTROL Once]**。
+要設定一次性接收，請選擇頻率下拉箭頭並選擇 **[!UICONTROL 一次]**。
 
 >[!TIP]
 >
->**** 擷取 **** 一次期間內不會顯示間隔回填。
+>**[!UICONTROL 間隔]** 和 **[!UICONTROL 回填]** 在一次性攝取期間不可見。
 
-在為調度提供適當值後，選擇&#x200B;**[!UICONTROL Next]**。
+為計畫提供適當值後，選擇 **[!UICONTROL 下一個]**。
 
 ![](../../../images/tutorials/dataflow/databases/schedule-once.png)
 
 ## 提供資料流詳細資訊
 
-此時將顯示&#x200B;**[!UICONTROL 資料流詳細資訊]**&#x200B;步驟，允許您命名新資料流並提供有關新資料流的簡要說明。
+的 **[!UICONTROL 資料流詳細資訊]** 步驟，使您可以命名並簡要描述新資料流。
 
-在此過程中，您還可以啟用&#x200B;**[!UICONTROL 部分獲取]**&#x200B;和&#x200B;**[!UICONTROL 錯誤診斷]**。 啟用&#x200B;**[!UICONTROL 部分擷取]**&#x200B;可讓您內嵌包含錯誤且高達特定臨界值的資料。 啟用&#x200B;**[!UICONTROL 部分擷取]**&#x200B;後，拖曳&#x200B;**[!UICONTROL 錯誤臨界值%]**&#x200B;撥號以調整批次的錯誤臨界值。 或者，您也可以選取輸入方塊，手動調整臨界值。 如需詳細資訊，請參閱[部分批次內嵌概述](../../../../ingestion/batch-ingestion/partial.md)。
+在此過程中，您還可以 **[!UICONTROL 部分攝取]** 和 **[!UICONTROL 錯誤診斷]**。 啟用 **[!UICONTROL 部分攝取]** 提供了接收包含錯誤的資料的能力，這些錯誤最高可達某個閾值。 一次 **[!UICONTROL 部分攝取]** 啟用，拖動 **[!UICONTROL 錯誤閾值%]** 撥號以調整批的錯誤閾值。 或者，可以通過選擇輸入框手動調整閾值。 有關詳細資訊，請參見 [部分批處理接收概述](../../../../ingestion/batch-ingestion/partial.md)。
 
-為資料流提供值，然後選擇&#x200B;**[!UICONTROL Next]**。
+為資料流提供值並選擇 **[!UICONTROL 下一個]**。
 
-![dataflow-details](../../../images/tutorials/dataflow/all-tabular/dataflow-detail.png)
+![資料流詳細資訊](../../../images/tutorials/dataflow/all-tabular/dataflow-detail.png)
 
 ## 查看資料流
 
-此時將顯示&#x200B;**[!UICONTROL 查看]**&#x200B;步驟，允許您在建立新資料流之前查看該資料流。 詳細資料會分組為下列類別：
+的 **[!UICONTROL 審閱]** 步驟，允許您在建立新資料流之前查看它。 詳細資訊按以下類別分組：
 
-- **[!UICONTROL 連線]**:顯示源類型、所選源檔案的相關路徑以及該源檔案中的列數。
-- **[!UICONTROL 指派資料集和對應欄位]**:顯示要擷取來源資料的資料集，包括資料集所遵守的結構。
-- **[!UICONTROL 排程]**:顯示擷取排程的作用中期間、頻率和間隔。
+- **[!UICONTROL 連接]**:顯示源類型、所選源檔案的相關路徑以及該源檔案中的列數。
+- **[!UICONTROL 分配資料集和映射欄位]**:顯示源資料正被攝取到的資料集，包括該資料集所遵循的架構。
+- **[!UICONTROL 計畫]**:顯示接收計畫的活動期間、頻率和間隔。
 
-審核資料流後，按一下&#x200B;**[!UICONTROL 完成]**&#x200B;並允許建立資料流的一些時間。
+查看資料流後，按一下 **[!UICONTROL 完成]** 並為建立資料流留出一些時間。
 
 ![審查](../../../images/tutorials/dataflow/payments/review.png)
 
 ## 監視資料流
 
-建立資料流後，您可以監視正在通過資料流進行內嵌的資料，以查看有關內嵌率、成功和錯誤的資訊。 有關如何監視資料流的詳細資訊，請參閱UI](../monitor.md)中有關[監視帳戶和資料流的教程。
+建立資料流後，您可以監視通過它攝取的資料，以查看有關攝取率、成功和錯誤的資訊。 有關如何監視資料流的詳細資訊，請參見上的教程 [監視UI中的帳戶和資料流](../monitor.md)。
 
 ## 刪除資料流
 
-您可以刪除不再需要或使用&#x200B;**[!UICONTROL Dataflows]**&#x200B;工作區中可用的&#x200B;**[!UICONTROL Delete]**&#x200B;函式建立錯誤的資料流。 有關如何刪除資料流的詳細資訊，請參閱有關在UI](../delete.md)中刪除資料流的教程。[
+您可以刪除不再需要或使用 **[!UICONTROL 刪除]** 函式 **[!UICONTROL 資料流]** 工作區。 有關如何刪除資料流的詳細資訊，請參見上的教程 [刪除UI中的資料流](../delete.md)。
 
 ## 後續步驟
 
-依照本教學課程，您已成功建立資料流，以從行銷自動化系統匯入資料，並深入了解監控資料集。 下游[!DNL Platform]服務（如[!DNL Real-time Customer Profile]和[!DNL Data Science Workspace]）現在可以使用傳入的資料。 如需詳細資訊，請參閱下列檔案：
+通過本教程，您成功建立了一個資料流，以從市場營銷自動化系統中導入資料，並深入瞭解了監控資料集。 傳入資料現在可供下游使用 [!DNL Platform] 服務，如 [!DNL Real-time Customer Profile] 和 [!DNL Data Science Workspace]。 有關詳細資訊，請參閱以下文檔：
 
 - [[!DNL Real-time Customer Profile] 概觀](../../../../profile/home.md)
 - [[!DNL Data Science Workspace] 概觀](../../../../data-science-workspace/home.md)
 
 ## 附錄
 
-以下各節提供使用源連接器的其他資訊。
+以下各節提供了有關使用源連接器的其他資訊。
 
 ### 禁用資料流
 
-建立資料流時，它會立即變為活動狀態，並根據給定的時間表內嵌資料。 您可以隨時按照以下說明禁用活動資料流。
+建立資料流時，它會立即變為活動狀態，並根據給定的時間表接收資料。 您可以隨時按照以下說明禁用活動資料流。
 
-在&#x200B;**[!UICONTROL 資料流]**&#x200B;螢幕中，選擇要禁用的資料流的名稱。
+在 **[!UICONTROL 資料流]** 螢幕中，選擇要禁用的資料流的名稱。
 
-![browse-dataset-flow](../../../images/tutorials/dataflow/payments/view-dataset-flows.png)
+![瀏覽資料集流](../../../images/tutorials/dataflow/payments/view-dataset-flows.png)
 
-螢幕的右側會顯示&#x200B;**[!UICONTROL Properties]**&#x200B;欄。 此面板包含&#x200B;**[!UICONTROL Enabled]**&#x200B;切換按鈕。 按一下切換按鈕以禁用資料流。 禁用資料流後，可以使用相同的切換按鈕重新啟用資料流。
+的 **[!UICONTROL 屬性]** 列。 此面板包含 **[!UICONTROL 已啟用]** 切換按鈕。 按一下切換以禁用資料流。 禁用資料流後，可以使用相同的切換功能重新啟用資料流。
 
 ![disable](../../../images/tutorials/dataflow/payments/disable.png)
 
-### 啟用[!DNL Profile]母體的入站資料
+### 激活入站資料 [!DNL Profile] 人口
 
-來自來源連接器的傳入資料可用於擴充和填入[!DNL Real-time Customer Profile]資料。 如需填入[!DNL Real-time Customer Profile]資料的詳細資訊，請參閱[設定檔填入](../profile.md)的教學課程。
+來自源連接器的入站資料可用於豐富和填充 [!DNL Real-time Customer Profile] 資料。 有關填充的詳細資訊 [!DNL Real-time Customer Profile] 資料，請參見上的教程 [概況填充](../profile.md)。

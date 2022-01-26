@@ -1,251 +1,251 @@
 ---
 keywords: Experience Platform；首頁；熱門主題；資料流；資料流
 solution: Experience Platform
-title: 在UI中為雲儲存批次連接器配置資料流
+title: 在UI中為雲儲存批處理連接器配置資料流
 topic-legacy: overview
 type: Tutorial
-description: 資料流是一個排程任務，可從源中檢索資料並將資料內嵌到Platform資料集。 本教學課程提供使用雲儲存帳戶配置新資料流的步驟。
+description: 資料流是從源資料集中檢索資料並將資料接收到平台資料集的計畫任務。 本教程提供了使用雲儲存帳戶配置新資料流的步驟。
 exl-id: b327bbea-039d-4c04-afd3-f1d6a5f902a6
-source-git-commit: db0c295777a98cc945d7c88f3e49eda3d2581f7b
+source-git-commit: 38f64f2ba0b40a20528aac6efff0e2fd6bc12ed2
 workflow-type: tm+mt
-source-wordcount: '2045'
+source-wordcount: '2040'
 ht-degree: 0%
 
 ---
 
-# 在UI中為雲儲存批次連接配置資料流
+# 在UI中為雲儲存批處理連接配置資料流
 
-資料流是從源中檢索和將資料內嵌到 [!DNL Platform] 資料集。 本教學課程提供使用雲儲存帳戶配置新資料流的步驟。
+資料流是從源中檢索資料並將資料接收到的計畫任務 [!DNL Platform] 資料集。 本教程提供了使用雲儲存帳戶配置新資料流的步驟。
 
 ## 快速入門
 
-本教學課程需要妥善了解下列Adobe Experience Platform元件：
+本教程需要對Adobe Experience Platform的以下部分進行有效的理解：
 
 * [[!DNL Experience Data Model (XDM)] 系統](../../../../../xdm/home.md):標準化框架 [!DNL Experience Platform] 組織客戶體驗資料。
-   * [結構構成基本概念](../../../../../xdm/schema/composition.md):了解XDM結構描述的基本建置組塊，包括結構描述的主要原則和最佳實務。
-   * [結構編輯器教學課程](../../../../../xdm/tutorials/create-schema-ui.md):了解如何使用結構編輯器UI建立自訂結構。
-* [[!DNL Real-time Customer Profile]](../../../../../profile/home.md):根據來自多個來源的匯總資料，提供統一的即時消費者設定檔。
+   * [架構組合的基礎](../../../../../xdm/schema/composition.md):瞭解XDM架構的基本構建基塊，包括架構組成中的關鍵原則和最佳做法。
+   * [架構編輯器教程](../../../../../xdm/tutorials/create-schema-ui.md):瞭解如何使用架構編輯器UI建立自定義架構。
+* [[!DNL Real-time Customer Profile]](../../../../../profile/home.md):基於來自多個源的聚合資料提供統一、即時的用戶配置檔案。
 
-此外，本教學課程需要您已建立雲端儲存空間帳戶。 若需在UI中建立不同雲端儲存空間帳戶的教學課程清單，請參閱 [來源連接器概觀](../../../../home.md).
+此外，本教程要求您已建立雲儲存帳戶。 有關在UI中建立不同雲儲存帳戶的教程清單，請參見 [源連接器概述](../../../../home.md)。
 
 ### 支援的檔案格式
 
-[!DNL Experience Platform] 支援從外部儲存器擷取的下列檔案格式：
+[!DNL Experience Platform] 支援從外部儲存接收的以下檔案格式：
 
-* 分隔字元分隔值(DSV):任何單字元值都可用作DSV格式化資料檔案的分隔符。
+* 分隔符分隔的值(DSV):任何單字元值都可用作DSV格式資料檔案的分隔符。
 * [!DNL JavaScript Object Notation] (JSON):JSON格式的資料檔案必須符合XDM。
-* [!DNL Apache Parquet]:鑲木格式的資料檔案必須符合XDM。
-* 壓縮檔案：JSON和分隔檔案可壓縮為： `bzip2`, `gzip`, `deflate`, `zipDeflate`, `tarGzip`，和 `tar`.
+* [!DNL Apache Parquet]:拼花格式的資料檔案必須符合XDM。
+* 壓縮檔案：JSON和分隔的檔案可壓縮為： `bzip2`。 `gzip`。 `deflate`。 `zipDeflate`。 `tarGzip`, `tar`。
 
 ## 選擇資料
 
-建立雲端儲存空間帳戶後， **[!UICONTROL 選擇資料]** 步驟，提供介面供您探索雲端儲存檔案階層。
+建立雲儲存帳戶後， **[!UICONTROL 選擇資料]** 步驟，為您提供一個介面以瀏覽雲儲存檔案層次結構。
 
-* 介面的左側是目錄瀏覽器，顯示您的雲儲存檔案和目錄。
-* 介面的右側可讓您從相容的檔案中預覽最多100列資料。
+* 介面的左側是目錄瀏覽器，顯示雲儲存檔案和目錄。
+* 該介面的右側部分允許您從相容檔案中預覽多達100行資料。
 
 ![介面](../../../../images/tutorials/dataflow/cloud-storage/batch/interface.png)
 
-選取列出的資料夾可讓您將資料夾階層周遊至更深層的資料夾。 您可以選取單一資料夾，遞回內嵌資料夾中的所有檔案。 擷取整個資料夾時，您必須確保資料夾中的所有檔案都共用相同的結構。
+選擇列出的資料夾允許您將資料夾層次結構遍歷到更深入的資料夾中。 您可以選擇單個資料夾以遞歸方式接收資料夾中的所有檔案。 在插入整個資料夾時，必須確保資料夾中的所有檔案共用同一架構。
 
-選取相容的檔案或資料夾後，請從 [!UICONTROL 選擇資料格式] 下拉式功能表。
+選擇相容檔案或資料夾後，從 [!UICONTROL 選擇資料格式] 下拉菜單。
 
-下表顯示支援的檔案類型的適當資料格式：
+下表顯示了支援的檔案類型的相應資料格式：
 
 | 檔案類型 | 資料格式 |
 | --- | --- |
 | CSV | [!UICONTROL 分隔] |
 | JSON | [!UICONTROL JSON] |
-| 鑲木 | [!UICONTROL XDM Parquet] |
+| 鑲木 | [!UICONTROL XDM鑲木地板] |
 
-選擇 **[!UICONTROL JSON]** 並等待幾秒鐘，以便填入預覽介面。
+選擇 **[!UICONTROL JSON]** 等待幾秒後，預覽介面將填充。
 
-![select-data](../../../../images/tutorials/dataflow/cloud-storage/batch/select-data.png)
+![選擇資料](../../../../images/tutorials/dataflow/cloud-storage/batch/select-data.png)
 
 >[!NOTE]
 >
->與分隔檔案和JSON檔案類型不同，預覽無法使用Parquet格式化檔案。
+>與分隔檔案和JSON檔案類型不同，Parfect格式的檔案不可用於預覽。
 
-預覽介面可讓您檢查檔案的內容和結構。 預設情況下，預覽介面將顯示所選資料夾中的第一個檔案。
+預覽介面允許您檢查檔案的內容和結構。 預設情況下，預覽介面將顯示所選資料夾中的第一個檔案。
 
-要預覽不同的檔案，請在要檢查的檔案名稱旁選擇預覽表徵圖。
+要預覽其他檔案，請選擇要檢查的檔案名稱旁邊的預覽表徵圖。
 
 ![預設預覽](../../../../images/tutorials/dataflow/cloud-storage/batch/default-preview.png)
 
-檢查資料夾中檔案的內容和結構後，選擇 **[!UICONTROL 下一個]** 遞歸內嵌資料夾中的所有檔案。
+檢查資料夾中檔案的內容和結構後，選擇 **[!UICONTROL 下一個]** 以遞歸方式接收資料夾中的所有檔案。
 
-![select-folder](../../../../images/tutorials/dataflow/cloud-storage/batch/select-folder.png)
+![選擇資料夾](../../../../images/tutorials/dataflow/cloud-storage/batch/select-folder.png)
 
-如果您偏好選取特定檔案，請選取您要擷取的檔案，然後選取 **[!UICONTROL 下一個]**.
+如果希望選擇特定檔案，請選擇要接收的檔案，然後選擇 **[!UICONTROL 下一個]**。
 
 ![選擇檔案](../../../../images/tutorials/dataflow/cloud-storage/batch/select-file.png)
 
-### 為分隔檔案設定自訂分隔字元
+### 為分隔檔案設定自定義分隔符
 
-擷取分隔檔案時，您可以設定自訂分隔字元。 選取 **[!UICONTROL 分隔字元]** 選項，然後從下拉式功能表中選取分隔字元。 功能表會顯示分隔字元最常使用的選項，包括逗號(`,`)、標籤(`\t`)和垂直號(`|`)。 如果您偏好使用自訂分隔字元，請選取 **[!UICONTROL 自訂]** 並在彈出式輸入列中輸入您所選擇的單字元分隔字元。
+可以在插入分隔檔案時設定自定義分隔符。 選擇 **[!UICONTROL 分隔符]** 選項，然後從下拉菜單中選擇分隔符。 該菜單顯示分隔符最常用的選項，包括逗號(`,`)，頁籤(`\t`)和管道(`|`)。 如果希望使用自定義分隔符，請選擇 **[!UICONTROL 自定義]** 並在彈出輸入欄中輸入您選擇的單字元分隔符。
 
-選取資料格式並設定分隔字元後，請選取 **[!UICONTROL 下一個]**.
+選擇資料格式並設定分隔符後，選擇 **[!UICONTROL 下一個]**。
 
 ![](../../../../images/tutorials/dataflow/cloud-storage/batch/delimiter.png)
 
-### 內嵌壓縮檔案
+### 正在攝取壓縮檔案
 
-您可以指定壓縮類型，以內嵌壓縮的JSON或分隔檔案。
+可以通過指定壓縮類型來接收壓縮的JSON或分隔檔案。
 
-在 [!UICONTROL 選擇資料] 步驟，選取要擷取的壓縮檔案，然後選取其適當的檔案類型，以及是否符合XDM。 下一步，選擇 **[!UICONTROL 壓縮類型]** 然後為源資料選擇適當的壓縮檔案類型。
+在 [!UICONTROL 選擇資料] 步驟，選擇壓縮檔案以進行接收，然後選擇其適當的檔案類型以及是否符合XDM。 下一步，選擇 **[!UICONTROL 壓縮類型]** 然後為源資料選擇適當的壓縮檔案類型。
 
-識別壓縮檔案類型後，請選取 **[!UICONTROL 下一個]** 繼續。
+如果標識了壓縮檔案類型，請選擇 **[!UICONTROL 下一個]** 繼續。
 
 ![](../../../../images/tutorials/dataflow/cloud-storage/batch/compressed-files.png)
 
-## 將資料欄位對應至XDM結構
+## 將資料欄位映射到XDM架構
 
-此 **[!UICONTROL 對應]** 步驟，提供互動式介面以將來源資料對應至 [!DNL Platform] 資料集。 以Parquet格式化的來源檔案必須符合XDM標準，且不要求您手動設定對應，而CSV檔案則要求您明確設定對應，但可讓您選取要對應的來源資料欄位。 JSON檔案若標示為XDM投訴，則不需要手動設定。 不過，如果未標示為符合XDM，則需要您明確設定對應。
+的 **[!UICONTROL 映射]** 步驟，提供交互介面將源資料映射到 [!DNL Platform] 資料集。 以Parce格式化的源檔案必須符合XDM要求，並且不要求您手動配置映射，而CSV檔案要求您顯式配置映射，但允許您選擇要映射的源資料欄位。 JSON檔案（如果標籤為XDM投訴）不需要手動配置。 但是，如果未將其標籤為符合XDM，則需要顯式配置映射。
 
-選擇要內嵌入的傳入資料的資料集。 您可以使用現有資料集或建立新資料集。
+為要接收到的入站資料選擇資料集。 可以使用現有資料集或建立新資料集。
 
 **使用現有資料集**
 
-若要將資料內嵌至現有資料集，請選取 **[!UICONTROL 現有資料集]**，然後選取資料集圖示。
+要將資料插入現有資料集，請選擇 **[!UICONTROL 現有資料集]**，然後選擇資料集表徵圖。
 
 ![](../../../../images/tutorials/dataflow/cloud-storage/batch/use-existing-data.png)
 
-此 **[!UICONTROL 選取資料集]** 對話框。 找到您要使用的資料集，選取該資料集，然後按一下 **[!UICONTROL 繼續]**.
+的 **[!UICONTROL 選擇資料集]** 對話框。 查找要使用的資料集，選擇它，然後按一下 **[!UICONTROL 繼續]**。
 
 ![](../../../../images/tutorials/dataflow/cloud-storage/batch/select-existing-dataset.png)
 
 **使用新資料集**
 
-若要將資料內嵌至新資料集，請選取 **[!UICONTROL 新資料集]** 並在提供的欄位中輸入資料集的名稱和說明。 若要新增結構，您可以在 **[!UICONTROL 選擇架構]** 對話框。 或者，您也可以選取 **[!UICONTROL 架構高級搜索]** 來搜尋適當的結構。
+要將資料插入新資料集，請選擇 **[!UICONTROL 新資料集]** 並在提供的欄位中輸入資料集的名稱和說明。 要添加方案，可以在 **[!UICONTROL 選擇架構]** 對話框。 或者，可以選取 **[!UICONTROL 架構高級搜索]** 以搜索適當的架構。
 
-在此步驟中，您可以為 [!DNL Real-time Customer Profile] 並建立實體屬性和行為的整體檢視。 所有已啟用資料集的資料將包含在 [!DNL Profile] 和更改會在保存資料流時應用。
+在此步驟中，您可以為 [!DNL Real-time Customer Profile] 並建立實體屬性和行為的整體視圖。 來自所有已啟用的資料集的資料將包含在 [!DNL Profile] 並在保存資料流時應用更改。
 
-切換 **[!UICONTROL 設定檔資料集]** 按鈕，啟用目標資料集 [!DNL Profile].
+切換 **[!UICONTROL 配置檔案資料集]** 按鈕啟用目標資料集 [!DNL Profile]。
 
 ![](../../../../images/tutorials/dataflow/cloud-storage/batch/new-dataset.png)
 
-此 **[!UICONTROL 選擇架構]** 對話框。 選取您要套用至新資料集的結構，然後選取 **[!UICONTROL 完成]**.
+的 **[!UICONTROL 選擇架構]** 對話框。 選擇要應用到新資料集的架構，然後選擇 **[!UICONTROL 完成]**。
 
 ![](../../../../images/tutorials/dataflow/cloud-storage/batch/select-schema.png)
 
-您可以視需要選擇直接映射欄位，或使用資料準備函式來轉換源資料，以導出計算值或計算值。 有關映射器函式和計算欄位的詳細資訊，請參閱 [資料準備功能指南](../../../../../data-prep/functions.md) 或 [計算欄位指南](../../../../../data-prep/calculated-fields.md).
+根據您的需要，您可以選擇直接映射欄位，或使用資料準備函式轉換源資料以導出計算值或計算值。 有關使用映射器介面和計算欄位的全面步驟，請參見 [資料準備UI指南](../../../../../data-prep/ui/mapping.md)。
 
 ![](../../../../images/tutorials/dataflow/cloud-storage/batch/mapping.png)
 
-對於JSON檔案，除了直接將欄位對應至其他欄位，您還可以直接將物件對應至其他物件和陣列至其他陣列。您也可以使用雲端儲存來源連接器，預覽和對應JSON檔案中的陣列等複雜資料類型。
+對於JSON檔案，除了直接將欄位映射到其他欄位外，您還可以將對象直接映射到其他對象和陣列到其他陣列。您還可以使用雲儲存源連接器預覽和映射JSON檔案中的陣列等複雜資料類型。
 
 ![](../../../../images/tutorials/dataflow/cloud-storage/batch/source-field-json.png)
 
 ![](../../../../images/tutorials/dataflow/cloud-storage/batch/target-field-json.png)
 
-請注意，您無法對應不同類型。 例如，您無法將對象映射到陣列，或將欄位映射到對象。
+請注意，您不能跨不同類型進行映射。 例如，不能將對象映射到陣列，或將欄位映射到對象。
 
 >[!TIP]
 >
->Platform會根據您選取的目標結構或資料集，為自動對應欄位提供智慧型建議。 您可以手動調整對應規則以符合您的使用案例。
+>平台根據您選擇的目標架構或資料集為自動映射欄位提供智慧建議。 您可以手動調整映射規則以適合您的使用情形。
 
-選擇 **[!UICONTROL 預覽資料]** ，查看所選資料集最多100列範例資料的對應結果。
+選擇 **[!UICONTROL 預覽資料]** 查看所選資料集中最多100行示例資料的映射結果。
 
-在預覽期間，身分欄會優先順序排列為第一個欄位，因為這是驗證對應結果時所需的關鍵資訊。
+在預覽期間，標識列作為第一個欄位按優先順序排列，因為它是驗證映射結果時所必需的關鍵資訊。
 
 ![](../../../../images/tutorials/dataflow/cloud-storage/batch/mapping-preview.png)
 
-映射源資料後，選擇 **[!UICONTROL 關閉]**.
+映射源資料後，選擇 **[!UICONTROL 關閉]**。
 
-## 排程擷取執行
+## 計畫攝取運行
 
-此 **[!UICONTROL 排程]** 步驟，可讓您設定擷取排程，以使用已設定的對應自動擷取選取的來源資料。 下表概述用於調度的不同可配置欄位：
+的 **[!UICONTROL 計畫]** 步驟，允許您配置接收計畫以使用配置的映射自動接收選定的源資料。 下表概述了計畫的不同可配置欄位：
 
 | 欄位 | 說明 |
 | --- | --- |
-| 頻率 | 可選頻率包括 `Once`, `Minute`, `Hour`, `Day`，和 `Week`. |
-| 間隔 | 設定所選頻率間隔的整數。 |
-| 開始時間 | UTC時間戳記，指出第一次擷取的設定何時發生。 |
-| 回填 | 一個布林值，可決定最初擷取的資料。 若 **[!UICONTROL 回填]** 啟用時，指定路徑中的所有目前檔案都會在首次排程擷取期間內擷取。 若 **[!UICONTROL 回填]** 已停用，則只會擷取在首次擷取執行與開始時間之間載入的檔案。 在開始時間之前載入的檔案將不會被擷取。 |
+| 頻率 | 可選頻率包括 `Once`。 `Minute`。 `Hour`。 `Day`, `Week`。 |
+| 間隔 | 設定所選頻率的間隔的整數。 |
+| 開始時間 | UTC時間戳，指示第一次攝取的時間設定為何時發生。 |
+| 回填 | 一個布爾值，它確定最初接收的資料。 如果 **[!UICONTROL 回填]** 啟用後，指定路徑中的所有當前檔案將在首次計畫接收期間被接收。 如果 **[!UICONTROL 回填]** 禁用，將只接收在第一次接收運行和開始時間之間載入的檔案。 在開始時間之前載入的檔案將不會被攝取。 |
 
-資料流設計為按計畫自動內嵌資料。 首先，選取擷取頻率。 接下來，設定間隔以指定兩個流運行之間的週期。 間隔的值應為非零整數，應設為大於或等於15。
+資料流設計為按計畫自動接收資料。 從選擇攝取頻率開始。 接下來，設定間隔以指定兩個流運行之間的時段。 間隔的值應為非零整數，並應設定為大於或等於15。
 
-若要設定擷取的開始時間，請調整開始時間方塊中顯示的日期和時間。 或者，您也可以選取日曆圖示來編輯開始時間值。 開始時間必須大於或等於當前時間（以UTC表示）。
+要設定攝取的開始時間，請調整在開始時間框中顯示的日期和時間。 或者，可以選擇日曆表徵圖以編輯開始時間值。 開始時間必須大於或等於當前時間（以UTC表示）。
 
-提供排程的值並選取 **[!UICONTROL 下一個]**.
+提供計畫值並選擇 **[!UICONTROL 下一個]**。
 
 >[!NOTE]
 >
->對於批次內嵌，每個隨後的資料流都會根據檔案的來源選擇要內嵌的檔案 **上次修改** 時間戳記。 這意味著批處理資料流從源中選擇自上次資料流運行以來新建或修改的檔案。
+>對於批處理接收，每個後續資料流都會根據源檔案選擇要從源檔案接收的檔案 **上次修改** 時間戳。 這意味著批處理資料流從源中選擇新檔案或自上次資料流運行以來已修改的檔案。
 
 ![](../../../../images/tutorials/dataflow/cloud-storage/batch/scheduling-interval-on.png)
 
-### 設定一次性內嵌資料流
+### 設定一次性接收資料流
 
-若要設定一次性擷取，請選取頻率下拉箭頭並選取 **[!UICONTROL 一次]**. 只要開始時間在將來，您就可以繼續編輯資料流集以進行一次性頻率獲取。 一旦開始時間過後，就無法再編輯一次性頻率值。 **[!UICONTROL 間隔]** 和 **[!UICONTROL 回填]** 設定一次性內嵌資料流時，不會顯示。
+要設定一次性接收，請選擇頻率下拉箭頭並選擇 **[!UICONTROL 一次]**。 只要開始時間在將來保持不變，您就可以繼續編輯用於一次性頻率接收的資料流集。 一旦開始時間過去，就不能再編輯一次性頻率值。 **[!UICONTROL 間隔]** 和 **[!UICONTROL 回填]** 設定一次性接收資料流時不可見。
 
 >[!IMPORTANT]
 >
->強烈建議在使用 [FTP連接器](../../../../connectors/cloud-storage/ftp.md).
+>強烈建議在使用 [FTP連接器](../../../../connectors/cloud-storage/ftp.md)。
 
-為排程提供適當值後，請選取 **[!UICONTROL 下一個]**.
+為計畫提供適當值後，選擇 **[!UICONTROL 下一個]**。
 
 ![](../../../../images/tutorials/dataflow/cloud-storage/batch/scheduling-once.png)
 
 ## 提供資料流詳細資訊
 
-此 **[!UICONTROL 資料流詳細資訊]** 步驟出現，允許您為新資料流命名並提供簡要說明。
+的 **[!UICONTROL 資料流詳細資訊]** 步驟，使您可以命名並簡要描述新資料流。
 
-在此程式中，您也可以啟用 **[!UICONTROL 部分擷取]** 和 **[!UICONTROL 錯誤診斷]**. 啟用 **[!UICONTROL 部分擷取]** 提供內嵌包含錯誤的資料的功能，最多可以設定特定臨界值。 啟用 **[!UICONTROL 錯誤診斷]** 會提供任何個別批次處理之錯誤資料的詳細資訊。 如需詳細資訊，請參閱 [部分批次內嵌概觀](../../../../../ingestion/batch-ingestion/partial.md).
+在此過程中，您還可以 **[!UICONTROL 部分攝取]** 和 **[!UICONTROL 錯誤診斷]**。 啟用 **[!UICONTROL 部分攝取]** 提供了接收包含錯誤的資料的能力，可以設定一定閾值。 啟用 **[!UICONTROL 錯誤診斷]** 將提供有關單獨批處理的任何不正確資料的詳細資訊。 有關詳細資訊，請參見 [部分批處理接收概述](../../../../../ingestion/batch-ingestion/partial.md)。
 
-為資料流提供值並選擇 **[!UICONTROL 下一個]**.
+為資料流提供值並選擇 **[!UICONTROL 下一個]**。
 
 ![](../../../../images/tutorials/dataflow/cloud-storage/batch/dataflow-detail.png)
 
 ## 查看資料流
 
-此 **[!UICONTROL 檢閱]** 步驟顯示，允許您在建立新資料流之前對其進行查看。 詳細資料會分組為下列類別：
+的 **[!UICONTROL 審閱]** 步驟，允許您在建立新資料流之前查看它。 詳細資訊按以下類別分組：
 
-* **[!UICONTROL 連線]**:顯示源類型、所選源檔案的相關路徑以及該源檔案中的列數。
-* **[!UICONTROL 指派資料集和對應欄位]**:顯示要擷取來源資料的資料集，包括資料集所遵守的結構。
-* **[!UICONTROL 排程]**:顯示擷取排程的作用中期間、頻率和間隔。
+* **[!UICONTROL 連接]**:顯示源類型、所選源檔案的相關路徑以及該源檔案中的列數。
+* **[!UICONTROL 分配資料集和映射欄位]**:顯示源資料正被攝取到的資料集，包括該資料集所遵循的架構。
+* **[!UICONTROL 計畫]**:顯示接收計畫的活動期間、頻率和間隔。
 
-審核資料流後，按一下 **[!UICONTROL 完成]** 並允許建立資料流的時間。
+查看資料流後，按一下 **[!UICONTROL 完成]** 並為建立資料流留出一些時間。
 
 ![](../../../../images/tutorials/dataflow/cloud-storage/batch/review.png)
 
 ## 監視資料流
 
-建立資料流後，您可以監視正在通過資料流進行內嵌的資料，以查看有關內嵌率、成功和錯誤的資訊。 有關如何監視資料流的詳細資訊，請參閱 [監視UI中的帳戶和資料流](../../monitor.md).
+建立資料流後，您可以監視通過它攝取的資料，以查看有關攝取率、成功和錯誤的資訊。 有關如何監視資料流的詳細資訊，請參見上的教程 [監視UI中的帳戶和資料流](../../monitor.md)。
 
 ## 刪除資料流
 
-您可以刪除不再需要的資料流，或使用 **[!UICONTROL 刪除]** 函式 **[!UICONTROL 資料流]** 工作區。 有關如何刪除資料流的詳細資訊，請參閱 [刪除UI中的資料流](../../delete.md).
+您可以刪除不再需要或使用 **[!UICONTROL 刪除]** 函式 **[!UICONTROL 資料流]** 工作區。 有關如何刪除資料流的詳細資訊，請參見上的教程 [刪除UI中的資料流](../../delete.md)。
 
 ## 後續步驟
 
-依照本教學課程，您已成功建立資料流以從外部雲端儲存空間傳入資料，並深入了解監控資料集。 要了解有關建立資料流的詳細資訊，您可以觀看下面的視頻來補充學習內容。 此外，下游現在可以使用傳入的資料 [!DNL Platform] 服務，例如 [!DNL Real-time Customer Profile] 和 [!DNL Data Science Workspace]. 如需詳細資訊，請參閱下列檔案：
+按照本教程，您成功建立了資料流，以從外部雲儲存中導入資料，並深入瞭解了監視資料集。 要瞭解有關建立資料流的詳細資訊，您可以通過觀看下面的視頻來補充學習內容。 此外，現在下游可以使用傳入資料 [!DNL Platform] 服務，如 [!DNL Real-time Customer Profile] 和 [!DNL Data Science Workspace]。 有關詳細資訊，請參閱以下文檔：
 
 * [[!DNL Real-time Customer Profile] 概觀](../../../../../profile/home.md)
 * [[!DNL Data Science Workspace] 概觀](../../../../../data-science-workspace/home.md)
 
 >[!WARNING]
 >
-> 此 [!DNL Platform] 下列影片中顯示的UI已過期。 請參閱上述檔案，了解最新的UI螢幕擷取畫面和功能。
+> 的 [!DNL Platform] 以下視頻中顯示的UI已過期。 有關最新的UI螢幕截圖和功能，請參閱上面的文檔。
 
 >[!VIDEO](https://video.tv.adobe.com/v/29695?quality=12&learn=on)
 
 ## 附錄
 
-以下各節提供使用源連接器的其他資訊。
+以下各節提供了有關使用源連接器的其他資訊。
 
 ### 禁用資料流
 
-建立資料流時，它會立即變為活動狀態，並根據給定的時間表內嵌資料。 您可以隨時按照以下說明禁用活動資料流。
+建立資料流時，它會立即變為活動狀態，並根據給定的時間表接收資料。 您可以隨時按照以下說明禁用活動資料流。
 
-在 **[!UICONTROL 來源]** 工作區，按一下 **[!UICONTROL 瀏覽]** 標籤。 接下來，按一下與要禁用的活動資料流關聯的帳戶的名稱。
+在 **[!UICONTROL 源]** 工作區，按一下 **[!UICONTROL 瀏覽]** 頁籤。 接下來，按一下與要禁用的活動資料流關聯的帳戶名稱。
 
 ![](../../../../images/tutorials/dataflow/cloud-storage/batch/browse.png)
 
-此 **[!UICONTROL 來源活動]** 頁。 從清單中選擇活動資料流以開啟其 **[!UICONTROL 屬性]** 欄，其中包含 **[!UICONTROL 已啟用]** 切換按鈕。 按一下切換按鈕以禁用資料流。 禁用資料流後，可以使用相同的切換按鈕重新啟用資料流。
+的 **[!UICONTROL 源活動]** 的子菜單。 從清單中選擇活動資料流以開啟其 **[!UICONTROL 屬性]** 框中，該框包含 **[!UICONTROL 已啟用]** 切換按鈕。 按一下切換以禁用資料流。 禁用資料流後，可以使用相同的切換功能重新啟用資料流。
 
 ![](../../../../images/tutorials/dataflow/cloud-storage/batch/disable-source.png)
 
-### 為啟用傳入資料 [!DNL Profile] 人口
+### 激活入站資料 [!DNL Profile] 人口
 
-來自來源連接器的傳入資料可用於擴充和填入 [!DNL Real-time Customer Profile] 資料。 如需填入 [!DNL Real-time Customer Profile] 資料，請參閱 [設定檔母體](../../profile.md).
+來自源連接器的入站資料可用於豐富和填充 [!DNL Real-time Customer Profile] 資料。 有關填充的詳細資訊 [!DNL Real-time Customer Profile] 資料，請參見上的教程 [概況填充](../../profile.md)。
