@@ -6,9 +6,9 @@ seo-title: Activate audience data to batch profile export destinations
 description: 瞭解如何通過將段發送到基於批處理配置檔案的目標來激活您在Adobe Experience Platform擁有的受眾資料。
 seo-description: Learn how to activate the audience data you have in Adobe Experience Platform by sending segments to batch profile-based destinations.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: 7bafa87de874c6be90b80e4a899c02fd3868290e
+source-git-commit: 551b07eac95b560950fe2d70fd2a981ae3a29252
 workflow-type: tm+mt
-source-wordcount: '2193'
+source-wordcount: '2188'
 ht-degree: 0%
 
 ---
@@ -51,7 +51,7 @@ ht-degree: 0%
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_schedule"
 >title="排程"
->abstract="檔案導出類型（完整檔案或增量檔案）和計畫在保存段後無法更改。"
+>abstract="設定檔案導出類型（完整檔案或增量檔案）和導出頻率。"
 >additional-url="https://www.adobe.com/go/destinations-profile-batch-en" text="瞭解有關文檔的詳細資訊"
 
 [!DNL Adobe Experience Platform] 以以下形式導出資料以用於電子郵件營銷和雲儲存目標 [!DNL CSV] 的子菜單。 在 **[!UICONTROL 計畫]** 頁中，您可以配置要導出的每個段的調度和檔案名。 配置計畫是必需的，但配置檔案名是可選的。
