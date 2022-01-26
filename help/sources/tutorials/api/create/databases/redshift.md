@@ -1,56 +1,60 @@
 ---
-keywords: Experience Platform；首頁；熱門主題；Redshift;Redshift;Amazon Redshift;Amazon Redshift
+keywords: Experience Platform；首頁；熱門主題；紅移；紅移；Amazon紅移；亞馬遜紅移
 solution: Experience Platform
-title: 使用流服務API建立Amazon Redshift基本連接
+title: 使用流服務API建立Amazon紅移基連接
 topic-legacy: overview
 type: Tutorial
-description: 了解如何使用Flow Service API將Adobe Experience Platform連接到Amazon Redshift。
+description: 瞭解如何使用流服務API將Adobe Experience Platform與Amazon紅移連接。
 exl-id: 2728ce08-05c9-4dca-af1d-d2d1b266c5d9
-source-git-commit: b4291b4f13918a1f85d73e0320c67dd2b71913fc
+source-git-commit: 2fb972b0ec8d1f679c6ce104a439265b5cc4d535
 workflow-type: tm+mt
-source-wordcount: '463'
+source-wordcount: '474'
 ht-degree: 1%
 
 ---
 
-# 使用[!DNL Flow Service] API建立[!DNL Amazon Redshift]基本連線
+# 建立 [!DNL Amazon Redshift] 基本連接使用 [!DNL Flow Service] API
 
-基本連線代表來源和Adobe Experience Platform之間已驗證的連線。
+基連接表示源和Adobe Experience Platform之間經過驗證的連接。
 
-本教學課程會逐步引導您使用[[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/)建立[!DNL Amazon Redshift]基本連線的步驟。
+本教程將指導您完成建立基本連接的步驟 [!DNL Amazon Redshift] 使用 [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/)。
 
 ## 快速入門
 
-本指南需要妥善了解下列Adobe Experience Platform元件：
+本指南要求對Adobe Experience Platform的下列組成部分有工作上的理解：
 
-* [來源](../../../../home.md): [!DNL Experience Platform] 可讓您從各種來源擷取資料，同時使用服務來建構、加標籤及增強傳入 [!DNL Platform] 資料。
-* [沙箱](../../../../../sandboxes/home.md): [!DNL Experience Platform] 提供可將單一執行個體分割成個 [!DNL Platform] 別虛擬環境的虛擬沙箱，以協助開發及改進數位體驗應用程式。
+* [源](../../../../home.md): [!DNL Experience Platform] 允許從各種源接收資料，同時讓您能夠使用 [!DNL Platform] 服務。
+* [沙箱](../../../../../sandboxes/home.md): [!DNL Experience Platform] 提供虛擬沙箱，將單個沙箱 [!DNL Platform] 實例到獨立的虛擬環境，以幫助開發和發展數字型驗應用程式。
 
-以下各節提供您需要知道的其他資訊，以便使用[!DNL Flow Service] API成功連接到[!DNL Amazon Redshift]。
+以下各節提供了要成功連接到所需的其他資訊 [!DNL Amazon Redshift] 使用 [!DNL Flow Service] API。
 
 ### 收集所需憑據
 
-要使[!DNL Flow Service]與[!DNL Amazon Redshift]連接，必須提供以下連接屬性：
+為了 [!DNL Flow Service] 連接 [!DNL Amazon Redshift]，必須提供以下連接屬性：
 
 | **憑據** | **說明** |
 | -------------- | --------------- |
-| `server` | 與[!DNL Amazon Redshift]帳戶相關聯的伺服器。 |
-| `username` | 與您的[!DNL Amazon Redshift]帳戶相關聯的使用者名稱。 |
-| `password` | 與[!DNL Amazon Redshift]帳戶相關聯的密碼。 |
-| `database` | 您正在訪問的[!DNL Amazon Redshift]資料庫。 |
-| `connectionSpec.id` | 連接規範返回源的連接器屬性，包括與建立基連接和源連接相關的驗證規範。 [!DNL Amazon Redshift]的連接規範ID為`3416976c-a9ca-4bba-901a-1f08f66978ff`。 |
+| `server` | 與您的 [!DNL Amazon Redshift] 帳戶。 |
+| `username` | 與您的 [!DNL Amazon Redshift] 帳戶。 |
+| `password` | 與您的 [!DNL Amazon Redshift] 帳戶。 |
+| `database` | 的 [!DNL Amazon Redshift] 正在訪問的資料庫。 |
+| `connectionSpec.id` | 連接規範返回源的連接器屬性，包括與建立基連接和源連接相關的驗證規範。 連接規範ID [!DNL Amazon Redshift] 是 `3416976c-a9ca-4bba-901a-1f08f66978ff`。 |
 
-有關入門的詳細資訊，請參閱此[[!DNL Amazon Redshift] document](https://docs.aws.amazon.com/redshift/latest/gsg/getting-started.html)。
+有關入門的詳細資訊，請參閱此 [[!DNL Amazon Redshift] 文檔](https://docs.aws.amazon.com/redshift/latest/gsg/getting-started.html)。
 
 ### 使用平台API
 
-如需如何成功呼叫Platform API的詳細資訊，請參閱[Platform API快速入門手冊](../../../../../landing/api-guide.md)。
+有關如何成功調用平台API的資訊，請參見上的指南 [平台API入門](../../../../../landing/api-guide.md)。
 
 ## 建立基本連接
 
-基本連接在源和平台之間保留資訊，包括源的驗證憑據、連接的當前狀態和唯一基本連接ID。 基本連線ID可讓您從來源探索和導覽檔案，並識別您要擷取的特定項目，包括其資料類型和格式的相關資訊。
+>[!NOTE]
+>
+>的預設編碼標準 [!DNL Redshift] 是Unicode。 不能更改。
 
-若要建立基本連線ID，請在提供[!DNL Amazon Redshift]驗證憑證作為請求參數的一部分時，向`/connections`端點提出POST請求。
+基本連接將保留源和平台之間的資訊，包括源的驗證憑據、連接的當前狀態和唯一的基本連接ID。 基本連接ID允許您從源中瀏覽和導航檔案，並標識要攝取的特定項目，包括有關其資料類型和格式的資訊。
+
+要建立基本連接ID，請向 `/connections` 提供端點 [!DNL Amazon Redshift] 身份驗證憑據作為請求參數的一部分。
 
 **API格式**
 
@@ -60,7 +64,7 @@ POST /connections
 
 **要求**
 
-以下請求為[!DNL Amazon Redshift]建立基本連接：
+以下請求為 [!DNL Amazon Redshift]:
 
 ```shell
 curl -X POST \
@@ -91,15 +95,15 @@ curl -X POST \
 
 | 屬性 | 說明 |
 | ------------- | --------------- |
-| `auth.params.server` | 您的[!DNL Amazon Redshift]伺服器。 |
-| `auth.params.database` | 與[!DNL Amazon Redshift]帳戶相關聯的資料庫。 |
-| `auth.params.password` | 與[!DNL Amazon Redshift]帳戶相關聯的密碼。 |
-| `auth.params.username` | 與您的[!DNL Amazon Redshift]帳戶相關聯的使用者名稱。 |
-| `connectionSpec.id` | [!DNL Amazon Redshift]連接規範ID:`3416976c-a9ca-4bba-901a-1f08f66978ff` |
+| `auth.params.server` | 您 [!DNL Amazon Redshift] 伺服器。 |
+| `auth.params.database` | 與您的 [!DNL Amazon Redshift] 帳戶。 |
+| `auth.params.password` | 與您的 [!DNL Amazon Redshift] 帳戶。 |
+| `auth.params.username` | 與您的 [!DNL Amazon Redshift] 帳戶。 |
+| `connectionSpec.id` | 的 [!DNL Amazon Redshift] 連接規範ID: `3416976c-a9ca-4bba-901a-1f08f66978ff` |
 
 **回應**
 
-成功的響應返回新建立的連接，包括其唯一標識符(`id`)。 在下一個教學課程中探索資料時需要此ID。
+成功的響應返回新建立的連接，包括其唯一標識符(`id`)。 在下一教程中瀏覽資料時需要此ID。
 
 ```json
 {
@@ -110,4 +114,4 @@ curl -X POST \
 
 ## 後續步驟
 
-依照本教學課程，您已使用[!DNL Flow Service] API建立[!DNL Amazon Redshift]連線，並取得連線的唯一ID值。 在學習如何使用流服務API](../../explore/database-nosql.md)來瀏覽資料庫或NoSQL系統時，您可以在下一個教程中使用此連接ID。[
+按照本教程，您建立了 [!DNL Amazon Redshift] 使用 [!DNL Flow Service] API，並已獲取連接的唯一ID值。 在下一教程中，您可以在學習如何 [使用流服務API瀏覽資料庫或NoSQL系統](../../explore/database-nosql.md)。
