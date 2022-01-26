@@ -2,10 +2,10 @@
 keywords: 個性化；目標；目的地；目的地個性化；配置個性化目標；同一頁；下一頁；
 title: 配置同頁和下一頁個性化的個性化目標
 type: Tutorial
-seo-title: Configure personalization destinations for same-page and next-page personalization
-description: 瞭解如何為同一頁和下一頁個性化配置個性化目標
-seo-description: Configure personalization destinations for same-page and next-page personalization
-source-git-commit: 628e7a993a3566322e0249a5a9864cf6b3fe4493
+seo-title: Configure personalization destinations for same-page and next-page personalization.
+description: 瞭解如何為同一頁和下一頁個性化配置個性化目標。
+seo-description: Configure personalization destinations for same-page and next-page personalization.
+source-git-commit: 24e8d088dd79304e0bf0335b7c3df2ef75baf81d
 workflow-type: tm+mt
 source-wordcount: '320'
 ht-degree: 1%
