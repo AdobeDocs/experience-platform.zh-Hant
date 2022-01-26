@@ -1,13 +1,13 @@
 ---
 audience: user
-user-guide-title: Adobe Experience Platform 查詢服務說明
+user-guide-title: Adobe Experience 平台查詢服務說明
 breadcrumb-title: 查詢服務指南
-user-guide-description: 使用標準 SQL 在 Platform Data Lake 中查詢資料。
+user-guide-description: 使用標準 SQL 在 平台 Data Lake 中查詢資料。
 feature: Queries
-source-git-commit: a41efa075d0fff5537eaf055635e346ac5ce677b
+source-git-commit: d939624d222839532f4601ceed8dfa6e291f37aa
 workflow-type: tm+mt
-source-wordcount: '141'
-ht-degree: 18%
+source-wordcount: '146'
+ht-degree: 17%
 
 ---
 
@@ -19,39 +19,40 @@ ht-degree: 18%
 - 查詢服務API {#api}
    - [快速入門](api/getting-started.md)
    - [查詢](api/queries.md)
-   - [連線參數](api/connection-parameters.md)
-   - [排程查詢](api/scheduled-queries.md)
-   - [針對排程查詢執行](api/runs-scheduled-queries.md)
-   - [查詢範本](api/query-templates.md)
+   - [連接參數](api/connection-parameters.md)
+   - [計畫查詢](api/scheduled-queries.md)
+   - [運行計畫查詢](api/runs-scheduled-queries.md)
+   - [查詢模板](api/query-templates.md)
 - 查詢服務UI {#ui}
    - [UI概述](ui/overview.md)
    - [查詢編輯器使用手冊](ui/user-guide.md)
    - [使用查詢服務憑據](ui/credentials.md)
-   - [從查詢結果產生資料集](ui/create-datasets.md)
+   - [從查詢結果生成資料集](ui/create-datasets.md)
 - 最佳做法 {#best-practices}
-   - [查詢執行的一般指南](best-practices/writing-queries.md)
-   - [重複資料刪除](best-practices/deduplication.md)
-   - [體驗事件查詢範例](best-practices/experience-event-queries.md)
-   - [範例Adobe Analytics查詢](best-practices/adobe-analytics.md)
-   - [範例Adobe Target查詢](best-practices/adobe-target.md)
+   - [查詢執行的一般指導](best-practices/writing-queries.md)
+   - [資料資產組織指南](./best-practices/organize-data-assets.md)
+   - [重複資料消除](best-practices/deduplication.md)
+   - [體驗事件查詢示例](best-practices/experience-event-queries.md)
+   - [示例Adobe Analytics查詢](best-practices/adobe-analytics.md)
+   - [示例Adobe Target查詢](best-practices/adobe-target.md)
    - [匿名塊查詢示例](best-practices/anonymous-block.md)
    - [增量載入](best-practices/incremental-load.md)
-- SQL參考 {#sql}
+- SQL引用 {#sql}
    - [SQL概述](sql/overview.md)
    - [SQL語法](sql/syntax.md)
-   - [Adobe定義的函式](sql/adobe-defined-functions.md)
+   - [Adobe定義函式](sql/adobe-defined-functions.md)
    - [Spark SQL函式](sql/spark-sql-functions.md)
    - [元資料命令](sql/metadata.md)
    - [準備的陳述](sql/prepared-statements.md)
 - 將客戶端連接到查詢服務 {#clients}
-   - [用戶端連線概觀](clients/overview.md)
+   - [客戶端連接概述](clients/overview.md)
    - [Aqua Data Studio](clients/aqua-data-studio.md)
-   - [Looker](clients/looker.md)
+   - [看](clients/looker.md)
    - [波斯蒂科(Mac)](clients/postico.md)
    - [Power BI(PC)](clients/power-bi.md)
    - [PSQL](clients/psql.md)
    - [RStudio](clients/rstudio.md)
    - [塔布洛](clients/tableau.md)
-- [疑難排解指南](troubleshooting-guide.md)
+- [故障排除指南](troubleshooting-guide.md)
 - [API 參考資料](https://www.adobe.io/experience-platform-apis/references/query-service/)
 - [平台發行說明](https://www.adobe.com/go/platform-release-notes-en)
