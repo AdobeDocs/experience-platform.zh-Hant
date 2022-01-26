@@ -2,9 +2,9 @@
 title: Adobe Experience 平台發行說明
 description: Adobe Experience Platform的最新發行說明。
 exl-id: bcd52989-ef62-4ab9-866e-1d9e57b76a0c
-source-git-commit: 8a26a69e6a244fc8a0d347e2814f0406713b1c9b
+source-git-commit: 703e49a20fae0fbf527275e1385f596d01642954
 workflow-type: tm+mt
-source-wordcount: '1253'
+source-wordcount: '1329'
 ht-degree: 4%
 
 ---
@@ -69,17 +69,10 @@ Adobe Experience Platform提供了多個儀表板，您可以通過這些儀表�
 
 | 功能 | 說明 |
 | ----------- | ----------- |
-| 同頁和下頁個性化 | 同頁和下一頁個性化功能為體驗邊緣上的應用程式提供了用戶的共用、可目標視圖，以實現營銷渠道和客戶渠道之間的一致性。 此個性化功能可通過 [Adobe Target](../../destinations/catalog/personalization/adobe-target-connection.md) 和 [自定義個性化連接](../../destinations/catalog/personalization/custom-personalization.md)。 要配置同一頁或下一頁個性化市場活動，請參閱 [專用教程](../../destinations/ui/configure-personalization-destinations.md)。 |
-| Marketo目標增強 | Experience Platform使用Marketo Engage的客戶可以利用將新人記錄從Experience Platform通過 [Marketo目標連接器](/help/destinations/catalog/adobe/marketo-engage.md)。 在將受眾段從Experience Platform發送到Marketo Engage時，可以自動將段內尚未存在於Marketo Engage資料庫中的人添加到該段。 有關詳細資訊，請閱讀 [將Adobe Experience Platform段推入Marketo靜態清單](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/smart-lists-and-static-lists/static-lists/push-an-adobe-experience-platform-segment-to-a-marketo-static-list.html?lang=en) (本教程中的步驟9指明如何將新人記錄推送到Marketo)。 |
-
-<!--
-
-| Feature | Description |
-| ----------- | ----------- |
-| Batch destination monitoring and segment-level metrics | The destination monitoring functionality is now expanded from streaming destinations to also include batch destinations and segment-level metrics for your activation dataflows. For more information, read monitoring destinations dashboard, monitoring segment jobs dashboard, and segment-level view. |
-| Schedule editing in the UI for existing batch activation dataflows | This release introduces the option to edit the schedule of your existing activation dataflows to batch destinations. For more information, read [activate profile data to batch profile destinations](/help/destinations/ui/activate-batch-profile-destinations.md).  |
-
--->
+| 同頁和下頁個性化 | 的 [同頁和下一頁個性化功能](../../destinations/ui/configure-personalization-destinations.md) 為體驗邊緣上的應用程式提供用戶的共用、可目標視圖，以實現營銷渠道和客戶渠道之間的一致性。 此個性化功能可通過 [Adobe Target](../../destinations/catalog/personalization/adobe-target-connection.md) 和 [自定義個性化連接](../../destinations/catalog/personalization/custom-personalization.md)。 要配置同一頁或下一頁個性化市場活動，請參閱 [專用教程](../../destinations/ui/configure-personalization-destinations.md)。 |
+| 批目標監視和段級度量 | 目標監視功能現在從流目標擴展為包括激活資料流的批處理目標和段級度量。 有關詳細資訊，請閱讀 [監視目標儀表板](/help/dataflows/ui/monitor-destinations.md#monitoring-destinations-dashboard) 和 [段級視圖](/help/dataflows/ui/monitor-destinations.md#segment-level-view)。 |
+| 計畫在UI中編輯現有批激活資料流 | 此版本引入了將現有激活資料流的計畫編輯到批處理目標的選項。 有關詳細資訊，請閱讀 [將配置檔案資料激活至批配置檔案目標](/help/destinations/ui/activate-batch-profile-destinations.md)。 |
+| Marketo目標增強 | Experience Platform使用Marketo Engage的客戶可以利用將新人記錄從Experience Platform通過 [Marketo目標連接器](/help/destinations/catalog/adobe/marketo-engage.md)。 <br> 在將受眾段從Experience Platform發送到Marketo Engage時，可以自動將段內尚未存在於Marketo Engage資料庫中的人添加到該段。 有關詳細資訊，請閱讀 [將Adobe Experience Platform段推入Marketo靜態清單](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/smart-lists-and-static-lists/static-lists/push-an-adobe-experience-platform-segment-to-a-marketo-static-list.html?lang=en) (本教程中的步驟9指明如何將新人記錄推送到Marketo)。 |
 
 **新目標**
 
