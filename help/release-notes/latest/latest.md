@@ -1,94 +1,109 @@
 ---
-title: Adobe Experience Platform 發行說明
+title: Adobe Experience 平台發行說明
 description: Adobe Experience Platform的最新發行說明。
-exl-id: 8f2c9bf8-1487-46e4-993b-bd9b63774cab
-source-git-commit: 2c4b0d6dd0884fe81565356c31b18c0555bf973f
+source-git-commit: 74e2ebd324265744702a385dbaca2ac4a10ea1f7
 workflow-type: tm+mt
-source-wordcount: '798'
-ht-degree: 12%
+source-wordcount: '959'
+ht-degree: 5%
 
 ---
 
 # Adobe Experience Platform 發行說明
 
-**發行日期：2021 年 11 月 17 日**
-
-## 新功能
-
-Adobe Experience Platform的新功能：
-
-- [Real-time Customer Data Platform B2B Edition](#B2B)
-- [（測試版）透過臨機啟動API啟動對象區段以批次目的地](#ad-hoc-activation)
-
-## 更新現有功能
+**發行日期：2022 年 1 月 26 日**
 
 Adobe Experience Platform 現有功能更新：
 
-- [Attribution AI](#attribution-ai)
-- [Customer AI](#customer-ai)
+- [警報](#alerts)
+- [[!DNL Data Prep]](#data-prep)
+- [[!DNL Dashboards]](#dashboards)
+- [查詢服務](#query-service)
+- [沙盒](#sandboxes)
+- [細分服務](#segmentation)
+- [來源](#sources)
 
-### Real-time Customer Data Platform B2B版 {#B2B}
+## 警報 {#alerts}
 
-**發行日期：2021 年 11 月 12 日**
+Experience Platform允許您訂閱各種平台活動的基於事件的警報。 您可以通過 [!UICONTROL 警報] 頁籤，並可以選擇在UI本身或通過電子郵件通知接收警報消息。
 
-Real-time CDP B2B Edition建置在Real-time Customer Data Platform(Real-time CDP)之上，專為以企業對企業服務模式運作的行銷人員而打造。 它匯集了來自多個來源的資料，並將其結合為人員和帳戶設定檔的單一檢視。 此統一的資料可讓行銷人員精確鎖定特定對象，並參與所有可用管道中的這些對象。
-
-對各種Adobe Experience Platform功能進行了改進，將即時CDP B2B Edition與其B2C對應版本區分開來。 其中包括針對B2B使用案例改善Experience Data Model(XDM)、升級為身分解析和設定檔分段，以及自訂的連接器和Marketo Engage目的地。 Marketo連接器可讓B2B品牌將其業界領先的B2B參與資料與行為資訊連結，以培育銷售機會並增強以帳戶為基礎的行銷作業。
-
--[全新B2B和B2P版本](#editions)
--[全新Marketo資料來源和目的地連接器](#marketo)
--[標準B2B XDM](#XDM)
-
-### 全新B2B和B2P版本 {#editions}
-
-現已推出新的B2B和B2P版本，可將B2B資料和功能同時帶入即時CDP和Platform Activation產品，供購買。
-
-要了解有關Real-time CDP B2B Edition的更多資訊，請參見 [概述](../../rtcdp/overview.md).
-
-### 全新Marketo資料來源和目的地連接器 {#marketo}
-
-新的Marketo資料來源和目的地連接器會將Marketo資料串流至Platform和Platform對象，並傳回Marketo。 適用於所有平台使用者。
+**已更新功能**
 
 | 功能 | 說明 |
-|----------|-------------|
-| Marketo Engage源連接器 | 此 [Marketo Engage源連接器](../../sources/connectors/adobe-applications/marketo/marketo.md) 可讓行銷人員將一或多個Marketo執行個體的資料流暢內嵌至其Adobe Experience Platform執行個體，並為銷售機會管理和B2B行銷人員提供完整的解決方案。 |
-| Marketo Engage目標 | 此 [Marketo目的地](../../destinations/catalog/adobe/marketo-engage.md) 可讓行銷人員將在Adobe Experience Platform中建立的區段推送至Marketo，這些區段會顯示為靜態清單。 |
+| --- | --- |
+| 新警報規則 | 現在，幾個新的警報規則可用於與資料接收、身份、配置檔案、分段和激活相關的工作流。 請參閱 [警報規則](../../observability/alerts/rules.md) 的子菜單。 |
+| 源資料流的上下文警報 | 您現在可以訂閱接收有關接收工作流期間資料流狀態的警報消息。 有關詳細資訊，請參閱上的指南 [訂閱UI中的源警報](../../sources/tutorials/ui/alerts.md)。 |
 
-### 標準B2B XDM {#XDM}
+有關平台中警報的詳細資訊，請參閱 [警報概述](../../observability/alerts/overview.md)。
 
-所有Platform使用者皆可使用標準B2B XDM類別、欄位群組和資料類型。
+## [!DNL Dashboards] {#dashboards}
 
-| 功能 | 說明 |
-|-----------|--------------|
-| 標準B2B XDM類別 | Real-time Customer Data Platform B2B版提供數種標準XDM，可擷取關於基本B2B資料實體（例如帳戶、機會、行銷活動等）的詳細資訊。 |
-
-請參閱 [Real-time Customer Data Platform B2B版中的結構描述](../../rtcdp/schemas/b2b.md) 檔案，進一步了解擷取B2B資料實體。
-
-### （測試版）透過臨機啟動API啟動對象區段以批次目的地 {#ad-hoc-activation}
-
-臨機啟動API可讓行銷人員針對需要立即啟動的情況，以快速且有效的方式，以程式設計方式將對象區段啟用至目的地。 僅支援隨選對象啟動 [批次檔案型目的地](../../destinations/destination-types.md#file-based) 目前為測試版。 如需詳細資訊，請參閱 [臨機啟動API檔案](../../destinations/api/ad-hoc-activation-api.md).
-
-### Attribution AI {#attribution-ai}
-
-Attribution AI 可將點數歸因到促成轉換事件的接觸點。行銷人員可善用此工具，協助量化客戶歷程中各個獨立行銷接觸點對行銷的影響。
+Adobe Experience Platform提供了多個儀表板，您可以通過這些儀表板查看有關組織資料的重要見解，如在每日快照中捕獲的。
 
 | 功能 | 說明 |
-|-----------|---------------|
-| 支援多個資料集 | Attribution AI現在可以直接在UI中輕鬆內嵌多個資料集，無需對應及拼接每個資料集。 這項新的省時功能提供來自多個資料集的豐富資料，提供更強大、更精確的分數。 |
-| 媒體頻道和行銷活動欄位對應 | Attribution AI現在支援媒體頻道和行銷活動欄位的對應。 資料集之間的媒體管道對應可改善衍生自Attribution AI的深入分析，並協助提供更清楚、易於解讀的結果。 |
+| --- | --- |
+| 智慧字幕 | 機器學習算法會自動提供有關您的個人資料和受眾資料的洞見，並在30-90天或12個月期間展示模式和趨勢。 標題包括有關 <ul><li>總體形狀和統計</li><li>趨勢和突變</li><li>季節性模式</li><li>異常</li></ul> 有關 [配置檔案儀表板](../../dashboards/guides/profiles.md#profiles-count-trend) 和 [段儀表板](../../dashboards/guides/segments.md#audience-size-trend) 文檔。 |
+| 儀表板清單 | 在集中位置訪問預配置的配置檔案、資料段和目標儀表板報告，包括任何已安裝的整合（如PowerBI）。 有關詳細資訊，請參見 [[!DNL Dashboards] 概述](../../dashboards/home.md)。 |
+| PowerBI報表模板 | 使用新的PowerBI圖表從配置檔案、段和目標報告資料模型構建、自定義或擴展度量。 自動安裝工作流允許您從PowerBI環境中在整個組織內共用您的營銷見解。 有關詳細資訊，請參見 [[!DNL Dashboards] 概述](../../dashboards/home.md)。 |
 
-如需Attribution AI的詳細資訊，請參閱 [Attribution AI檔案](../../intelligent-services/attribution-ai/overview.md).
+有關 [!DNL Dashboards]，請參閱 [[!DNL Dashboards] 概述](../../dashboards/home.md)。
 
-### Customer AI {#customer-ai}
+## [!DNL Data Prep] {#data-prep}
 
-Real-time Customer Data Platform提供的Customer AI可產生自訂傾向分數，例如大規模個別設定檔的流失和轉換。 不必將企業需求轉換為機器學習問題、挑選演算法、培訓或部署，就能達成上述目的。
+[!DNL Data Prep] 允許資料工程師將資料映射到體驗資料模型(XDM)並驗證資料。
 
-**更新功能**
+**已更新功能**
 
 | 功能 | 說明 |
-|-----------|-------------|
-| 支援多個資料集 | Customer AI現在可以直接在UI中輕鬆內嵌多個資料集，而無須對應並拼接每個資料集。 這項新的省時功能提供來自多個資料集的豐富資料，提供更強大、更精確的分數。 |
-| 自訂設定檔屬性 | 除了標準事件欄位外，Customer AI現在支援在您的資料中定義自訂設定檔資料集欄位（含時間戳記）。 使用此選項可讓您新增您認為有影響的其他設定檔屬性，這可能會改善模型品質，並提供更精確的結果。 |
+| --- | --- |
+| 整合的映射體驗 | 平台UI中的新映射介面為您提供了一致的映射體驗，讓您能夠利用智慧映射建議案、手動配置映射規則以及調試映射集上發生的任何錯誤。 有關詳細資訊，請參見 [[!DNL Data Prep] UI指南](../../data-prep/ui/mapping.md)。 |
 
-如需Customer AI的詳細資訊，請參閱 [Customer AI檔案](../../intelligent-services/customer-ai/overview.md).
+有關 [!DNL Data Prep]，請參閱 [[!DNL Data Prep] 概述](../../data-prep/home.md)。
 
+## 查詢服務 {#query-service}
+
+[!DNL Query Service] 允許您使用標準SQL查詢Adobe Experience Platform的資料 [!DNL Data Lake]。 您可以加入來自 [!DNL Data Lake] 並將查詢結果捕獲為新資料集，用於報告、Data Science Workspace或用於接收到即時客戶概要檔案。
+
+**已更新功能**
+
+| 功能 | 說明 |
+| --- | --- |
+| 匿名塊 | 匿名塊SQL構造允許您將查詢服務中的大規模資料準備作業分解為較小的任務，然後按順序重新使用並執行這些任務以進行增量資料載入。 有關詳細資訊，請參見 [查詢服務概述](../../query-service/home.md)。 |
+| 資料集組織 | 提供一個連貫的邏輯資料結構，以便隨著沙箱中資料資產的數量增加，組織資料資產以與查詢服務一起使用。 有關詳細資訊，請參見 [查詢服務概述](../../query-service/home.md)。 |
+
+有關 [!DNL Query Service]，請參閱 [[!DNL Query Service] 概述](../../query-service/home.md)。
+
+## 沙盒 {#sandboxes}
+
+Adobe Experience Platform的建設旨在在全球範圍內豐富數字型驗應用。 公司通常並行運行多個數字型驗應用程式，需要滿足這些應用程式的開發、測試和部署需要，同時確保操作合規性。 為了滿足這一需要，Experience Platform提供了沙箱，可將單個平台實例分區為獨立的虛擬環境，以幫助開發和發展數字型驗應用程式。
+
+**已更新功能**
+
+| 功能 | 說明 |
+| --- | --- |
+| Sandboxes UI增強 | 沙盒指示器現在整合在所有平台UI應用程式的標頭中。 沙盒指示器顯示沙盒名稱、區域和類型，還允許您訪問下拉菜單以在沙盒之間切換。 有關詳細資訊，請參見 [沙盒UI指南](../../sandboxes/ui/user-guide.md)。 |
+
+有關沙箱的詳細資訊，請參閱 [箱概述](../../sandboxes/home.md)。
+
+## 分段服務 {#segmentation}
+
+[!DNL Segmentation Service] 通過描述區分客戶群中可銷售人員組的標準來定義特定配置檔案子集。 段可以基於記錄資料（如人口統計資訊）或表示客戶與您品牌的交互的時間序列事件。
+
+**新功能**
+
+| 功能 | 說明 |
+| --- | --- |
+| 段匹配 | 段匹配是一種資料協作服務，允許兩個或更多平台用戶以安全、受管理和隱私友好的方式基於公共標識符交換資料。 段匹配使用平台隱私標準和個人標識符，如散列電子郵件、散列電話號碼和設備標識符，如IDFA和GAID。 有關詳細資訊，請參見 [段匹配概述](../../segmentation/ui/segment-match/overview.md)。 |
+
+有關 [!DNL Segmentation Service]，請參閱 [分段概述](../../segmentation/home.md)。
+
+## 來源 {#sources}
+
+Adobe Experience Platform可以從外部源接收資料，同時允許您使用平台服務來構建、標籤和增強資料。 您可以從多種來源(如Adobe應用程式、基於雲的儲存、第三方軟體和您的CRM系統)接收資料。
+
+Experience Platform提供REST風格的API和互動式UI，讓您能夠輕鬆地為各種資料提供程式設定源連接。 通過這些源連接，您可以驗證並連接到外部儲存系統和CRM服務，設定接收運行時間，並管理資料接收吞吐量。
+
+| 功能 | 說明 |
+| --- | --- |
+| Beta源移至GA | 已將以下源從beta升級為GA: <ul><li>[[!DNL Snowflake]](../../sources/connectors/databases/snowflake.md)</li><li>[[!DNL Veeva CRM]](../../sources/connectors/crm/veeva.md)</li></ul> |
+| [!DNL Event Hubs] 源增強 | 的 [!DNL Event Hubs] 源現在支援非根SAS密鑰類型的身份驗證以連接和建立源連接。 有關詳細資訊，請參見 [[!DNL Event Hubs] 概述](../../sources/connectors/cloud-storage/eventhub.md)。 |
+| [!DNL SFTP] 源增強 | 的 [!DNL SFTP] 現在，源允許您建立一組最大併發連接數，資料流可以使用這些連接來連接到SFTP伺服器。 有關詳細資訊，請參見 [[!DNL SFTP] 概述](../../sources/connectors/cloud-storage/sftp.md)。 |

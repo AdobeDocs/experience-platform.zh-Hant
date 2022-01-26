@@ -1,19 +1,21 @@
 ---
 audience: user
-user-guide-title: Adobe Experience Platform 發行說明
+user-guide-title: Adobe Experience 平台發行說明
 breadcrumb-title: Platform 發行說明
-user-guide-description: Adobe Experience Platform 的每月發行說明。
-source-git-commit: da9204f1581832d6885acd64387cf7e83c4b012a
+user-guide-description: Adobe Experience 平台的每月發行說明。
+source-git-commit: 3ff39848d1e3362c33f1c91cc3dc4e56d0e4a710
 workflow-type: tm+mt
-source-wordcount: '56'
-ht-degree: 92%
+source-wordcount: '58'
+ht-degree: 93%
 
 ---
 
 
 # Adobe Experience Platform 發行說明 {#release-notes}
 
-* [最新Platform發行說明](latest/latest.md)
+* [當前平台發行說明](latest/latest.md)
+* 2022 {#2022}
+   * [2022 年 1 月](2022/january-2022.md)
 * 2021 年 {#2021}
    * [2021 年 11 月](2021/november-2021.md)
    * [2021 年 10 月](2021/october-2021.md)
