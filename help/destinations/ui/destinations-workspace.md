@@ -1,107 +1,108 @@
 ---
-keywords: 平台；目的地；目的地工作區；工作區；ui；目的地ui；目錄；目的地目錄；
-title: 目的地工作區
-description: 「目的地」工作區包含四個區段：目錄、瀏覽、帳戶和系統檢視。 以下各節將說明這些規則。
+keywords: 平台；目標；目的地；工作區；ui；目標；目的地；目的地；目的地目錄；平台；目的地；工作區；工作區；ui；目的地；目的地；目的地目錄；
+title: 目標工作區
+description: 「目標」工作區由四個部分組成，即「目錄」、「瀏覽」、「帳戶」和「系統視圖」。 下面各節介紹了這些內容。
 seo-description: In Adobe Experience Platform, select Destinations from the left navigation bar to access the destinations workspace.
 exl-id: 0f46f08d-0fe3-441d-933a-86bc146c0f19
-source-git-commit: f4721d3f114357b25517e4e66f1f626f82621c34
+source-git-commit: 7356802ee5bb0c5c05b224d9aa5f0e32cf1de843
 workflow-type: tm+mt
-source-wordcount: '858'
+source-wordcount: '883'
 ht-degree: 2%
 
 ---
 
-# 目的地工作區 {#destinations-workspace}
+# 目標工作區 {#destinations-workspace}
 
-在Adobe Experience Platform中，從左側導覽列選取&#x200B;**[!UICONTROL 目標]**&#x200B;以存取[!UICONTROL 目標]工作區。
+在Adobe Experience Platform，選擇 **[!UICONTROL 目標]** 從左導航欄訪問 [!UICONTROL 目標] 工作區。
 
-[!UICONTROL Destinations]工作區由以下各節中描述的五個部分組成：[!UICONTROL Overview]、[!UICONTROL Catalog]、[!UICONTROL Browse]、[!UICONTROL Accounts]和[!UICONTROL System View]。
+的 [!UICONTROL 目標] 工作區由五個部分組成， [!UICONTROL 概述]。 [!UICONTROL 目錄]。 [!UICONTROL 瀏覽]。 [!UICONTROL 帳戶], [!UICONTROL 系統視圖]，在下面各節中介紹。
 
-![目的地概述](../assets/ui/workspace/destinations-overview.png)
+![目標 — 概述](../assets/ui/workspace/destinations-overview.png)
 
-## [!UICONTROL 概覽] {#overview}
+## [!UICONTROL 概觀] {#overview}
 
-**[!UICONTROL 概述]**&#x200B;標籤顯示[!UICONTROL 目標]控制面板，提供與貴組織的目的地資料相關的關鍵量度。 若要進一步了解，請造訪[[!UICONTROL 目標]控制面板指南](../../dashboards/guides/destinations.md)。
+的 **[!UICONTROL 概述]** 頁籤顯示 [!UICONTROL 目標] 控制板，提供與組織的目標資料相關的關鍵度量。 要瞭解更多資訊，請訪問 [[!UICONTROL 目標] 儀表板指南](../../dashboards/guides/destinations.md)。
 
 >[!NOTE]
 >
->如果您的組織剛開始Experience Platform，且尚未有作用中的目的地，則不會顯示[!UICONTROL Destinations]控制面板和[!UICONTROL Overview]標籤。 相反地，從左側導覽中選取[!UICONTROL Destinations]會顯示[[!UICONTROL Catalog]標籤](#catalog)。
+>如果您的組織是新Experience Platform的，且尚未有活動目標， [!UICONTROL 目標] 儀表板和 [!UICONTROL 概述] 頁籤不可見。 而是選擇 [!UICONTROL 目標] 從左側導航顯示 [[!UICONTROL 目錄] 頁籤](#catalog)。
 
 ![](../../dashboards/images/destinations/dashboard-overview.png)
 
 ## [!UICONTROL 目錄] {#catalog}
 
-**[!UICONTROL Catalog]**&#x200B;標籤顯示[!DNL Platform]中所有可用的目標的清單，您可以將資料發送到這些目標。
+的 **[!UICONTROL 目錄]** 頁籤顯示中所有可用目標的清單 [!DNL Platform]，以便向其發送資料。
 
-[!DNL Platform]使用者介面在目標目錄頁面上提供數個搜尋和篩選選項：
+的 [!DNL Platform] 用戶介面在目標目錄頁上提供了幾個搜索和篩選選項：
 
-* 使用頁面上的搜尋功能來尋找特定目的地。
-* 使用[!UICONTROL 類別]控制項篩選目的地。
-* 在[!UICONTROL 所有目標]和[!UICONTROL 我的目標]之間切換。 選擇&#x200B;**[!UICONTROL 所有目標]**&#x200B;時，將顯示所有可用的[!DNL Platform]目標。 選擇&#x200B;**[!UICONTROL 我的目標]**&#x200B;時，您只能查看已建立連接的目標。
-* 選擇以查看&#x200B;**[!UICONTROL Connections]**&#x200B;和/或&#x200B;**[!UICONTROL Extensions]**。 若要了解這兩個類別之間的差異，請參閱[目標類型和類別](../destination-types.md)。
+* 使用頁面上的搜索功能查找特定目標。
+* 使用 [!UICONTROL 類別] 控制項。
+* 在 [!UICONTROL 所有目標] 和 [!UICONTROL 我的目的地]。 選擇時 **[!UICONTROL 所有目標]**，全部可用 [!DNL Platform] 顯示目標。 選擇時 **[!UICONTROL 我的目的地]**，您只能查看已建立連接的目標。
+* 選擇以查看 **[!UICONTROL 連接]** 和/或 **[!UICONTROL 擴展]**。 要瞭解兩種類別之間的差異，請參閱 [目標類型和類別](../destination-types.md)。
 
 ![目錄](../assets/ui/workspace/catalog.png)
 
-目標卡包含&#x200B;**[!UICONTROL Set up]**&#x200B;或&#x200B;**[!UICONTROL Activate segments]**&#x200B;控制項，以及帶有更多選項的輔助控制項。 以下說明這些控制項：
+目標卡包含 **[!UICONTROL 設定]** 或 **[!UICONTROL 激活段]** 控制項和輔助控制項，可顯示更多選項。 下面介紹了這些控制項：
 
-| 控制 | 說明 |
+| 控制項 | 說明 |
 |---------|----------|
-| [!UICONTROL 設定] | 可讓您建立與目的地的連線。 |
-| [!UICONTROL 啟用區段] | 建立與目的地的連線後，您就可以啟用區段。 |
-| [!UICONTROL 查看帳戶] | 查看已為目標連接的帳戶。 |
-| [!UICONTROL 查看資料流] | 檢視目的地的資料啟動流程。 |
-| [!UICONTROL 檢視檔案] | 開啟該特定目的地的檔案頁面連結，以取得詳細資訊並協助您進行設定。 |
+| [!UICONTROL 設定] | 允許您建立到目標的連接。 |
+| [!UICONTROL 激活段] | 建立到目標的連接後，可以激活段。 |
+| [!UICONTROL 查看帳戶] | 查看您為目標連接的帳戶。 |
+| [!UICONTROL 查看資料流] | 查看目標存在的資料激活流。 |
+| [!UICONTROL 查看文檔] | 開啟指向該特定目標的文檔頁面的連結，瞭解詳細資訊並幫助您設定該目標。 |
 
 {style=&quot;table-layout:auto&quot;}
 
-![控制目的地卡](../assets/ui/workspace/destination-card-options.png)
+![對目標卡的控制](../assets/ui/workspace/destination-card-options.png)
 
-在目錄中選取目的地卡片，以開啟右側邊欄。 您可以在此處查看目的地的說明。 右側邊欄提供上表所述的相同控制項，包括目的地說明以及目的地類別和類型的指示。
+在目錄中選擇目標卡以開啟右滑軌。 在這裡，您可以看到目標的描述。 右滑軌提供上表中描述的相同控制項，包括目的地的說明以及目的地類別和類型的指示。
 
 ![目標目錄選項](../assets/ui/workspace/destination-right-rail.png)
 
-有關目標類別和每個目標資訊的詳細資訊，請參閱[目標目錄](../catalog/overview.md)和[目標類型和類別](../destination-types.md)。
+有關目標類別和每個目標資訊的詳細資訊，請參閱 [目標目錄](../catalog/overview.md) 和 [目標類型和類別](../destination-types.md)。
 
 ## [!UICONTROL 帳戶] {#accounts}
 
-**[!UICONTROL Accounts]**&#x200B;頁簽顯示您與各種目的地建立的連接的詳細資訊，並允許您更新現有的連接詳細資訊。 有關詳細說明，請參閱[更新帳戶](update-accounts.md)。
+的 **[!UICONTROL 帳戶]** 頁籤顯示有關您已與各種目標建立的連接的詳細資訊，並允許您更新現有的連接詳細資訊。 請參閱 [更新帳戶](update-accounts.md) 的上界。
 
 ## [!UICONTROL 瀏覽] {#browse}
 
-**[!UICONTROL Browse]**&#x200B;標籤顯示您已建立連接的目標。 已分別開啟&#x200B;**[!UICONTROL 啟用/停用]**&#x200B;的目標，將目標設定為使用中或非使用中。 您也可以選取&#x200B;**[!UICONTROL 區段]** > **[!UICONTROL 瀏覽]**&#x200B;並選取要檢查的區段，以檢視有資料流動的目的地。 有關在「瀏覽」頁簽中為每個目標提供的所有資訊，請參閱下表：
+的 **[!UICONTROL 瀏覽]** 頁籤顯示已建立連接的目標。 目標 **[!UICONTROL 已啟用/已禁用]** 開啟切換，將目標分別設定為活動或非活動。 通過選擇 **[!UICONTROL 段]** > **[!UICONTROL 瀏覽]** 並選擇要檢查的段。 有關「瀏覽」(Browse)頁籤中為每個目標提供的所有資訊，請參閱下表：
 
 >[!TIP]
 >
-> * 在[!UICONTROL Name]欄上選取三個點，然後使用![Add segments按鈕](../assets/ui/workspace/add-data-symbol.png)**[!UICONTROL Activate segments ]**按鈕將區段傳送至該目的地。
-> * 在[!UICONTROL Name]列上選擇三個點，然後使用![Delete destinations按鈕](../assets/ui/workspace/delete-destination-symbol.png)**[!UICONTROL Delete ]**按鈕[Remove](delete-destinations.md)與目標的現有連接。
+> * 選擇 [!UICONTROL 名稱] 列和使用 ![「激活段」按鈕](../assets/ui/workspace/add-data-symbol.png)**[!UICONTROL 激活段&#x200B;]**按鈕將段發送到該目標。
+> * 選擇 [!UICONTROL 名稱] 列和使用 ![刪除按鈕](../assets/ui/workspace/delete-destination-symbol.png)**[!UICONTROL 刪除&#x200B;]**按鈕 [刪除](delete-destinations.md) 到目標的現有連接。
+> * 選擇 [!UICONTROL 名稱] 列和使用 ![監視按鈕](../assets/ui/workspace/monitoring-icon.png)**[!UICONTROL 監視&#x200B;]**按鈕查看此目標的激活資訊 [監控儀表板](/help/dataflows/ui/monitor-destinations.md#monitoring-destinations-dashboard)。
 
 
-![瀏覽頁簽](../assets/ui/workspace/browse-tab.png)
+![瀏覽頁籤](../assets/ui/workspace/browse-tab.png)
 
 | 元素 | 說明 |
 |---------|----------|
-| 名稱 | 您為啟動流程提供的名稱，可用於此目的地。 同一欄包含兩個控制項：[!UICONTROL 啟動]和[!UICONTROL 刪除目標]。 |
-| [!UICONTROL 上次流運行狀態] | 上次資料流運行的狀態。 有關資料流運行的詳細資訊，請參閱[查看目標詳細資訊](destination-details-page.md)。 |
-| [!UICONTROL 上次流運行日期] | 上次資料流運行發生的時間和日期。 有關資料流運行的詳細資訊，請參閱[查看目標詳細資訊](destination-details-page.md)。 |
-| [!UICONTROL 目標] | 您為啟動流程選取的目的地平台。 |
-| [!UICONTROL 連線類型] | 代表與儲存貯體或目的地的連線類型。 <ul><li>對於電子郵件行銷目的地：可以是S3、FTP或[!DNL Azure Blob]。</li><li>針對即時廣告目的地：伺服器對伺服器。</li><li>針對串流目的地：可以是[!DNL Azure Event Hubs]或[!DNL Amazon Kinesis]。</li></ul> |
-| [!UICONTROL 使用者名稱] | 您為目的地流程選擇的帳戶憑據。 |
-| [!UICONTROL 啟動資料] | 指出要啟動至此目的地的區段數。 選取此控制項，即可進一步了解已啟用的區段。 如需已啟動區段的詳細資訊，請參閱目標詳細資訊頁面中的[啟動資料](/help/destinations/ui/destination-details-page.md#activation-data)。 |
-| [!UICONTROL 已建立] | 建立至目的地的啟動流程的日期和UTC時間。 |
+| 名稱 | 您為到此目標的激活流提供的名稱。 同一列包含兩個控制項： [!UICONTROL 激活 ] 和 [!UICONTROL 刪除目標]。 |
+| [!UICONTROL 上次流運行狀態] | 上次資料流運行的狀態。 請參閱 [查看目標詳細資訊](destination-details-page.md) 的子菜單。 |
+| [!UICONTROL 上次流運行日期] | 上次資料流運行的時間和日期。 請參閱 [查看目標詳細資訊](destination-details-page.md) 的子菜單。 |
+| [!UICONTROL 目標] | 為激活流選擇的目標平台。 |
+| [!UICONTROL 連線類型] | 表示到儲存桶或目標的連接類型。 <ul><li>對於電子郵件營銷目標：可以是S3、FTP或 [!DNL Azure Blob]。</li><li>對於即時廣告目標：伺服器到伺服器。</li><li>對於流目標：可以 [!DNL Azure Event Hubs] 或 [!DNL Amazon Kinesis]。</li></ul> |
+| [!UICONTROL 用戶名] | 為目標流選擇的帳戶憑據。 |
+| [!UICONTROL 激活資料] | 指示正被激活到此目標的段數。 選擇此控制項可瞭解有關已激活段的詳細資訊。 請參閱 [激活資料](/help/destinations/ui/destination-details-page.md#activation-data) 的子菜單。 |
+| [!UICONTROL 已建立] | 建立到目標的激活流的日期和時間。 |
 | [!UICONTROL 狀態] | `Active` 或 `Inactive`. 指示是否正在將資料激活到此目標。 |
 
-按一下目的地列，在右側邊欄中顯示有關目的地的詳細資訊。
+按一下目標行，在右欄中顯示有關目標的詳細資訊。
 
-![按一下目標列](../assets/ui/workspace/click-destination-row.png)
+![按一下目標行](../assets/ui/workspace/click-destination-row.png)
 
-選取目標名稱，以查看已啟動至此目標之區段的相關資訊。 按一下&#x200B;**[!UICONTROL 編輯啟用]**&#x200B;以修改或新增至傳送至此目的地的區段。
+選擇目標名稱以查看有關激活到此目標的段的資訊。 按一下 **[!UICONTROL 編輯激活]** 修改或添加到要發送到此目標的段。
 
 ## [!UICONTROL 系統視圖] {#system-view}
 
-**[!UICONTROL 系統視圖]**&#x200B;頁簽顯示您已在Adobe Experience Platform中設定的激活流的圖形表示。
+的 **[!UICONTROL 系統視圖]** 頁籤顯示您在Adobe Experience Platform中設定的激活流的圖形表示。
 
 ![資料流1](../assets/ui/workspace/data-flows1.png)
 
-選擇頁面上顯示的任何目標，然後按一下&#x200B;**[!UICONTROL 查看資料流]**&#x200B;以查看您為每個目標設定的所有連接的資訊。
+選擇頁面上顯示的任何目標，然後按一下 **[!UICONTROL 查看資料流]** 查看您為每個目標設定的所有連接的資訊。
 
 ![資料流2](../assets/ui/workspace/data-flows2.png)
