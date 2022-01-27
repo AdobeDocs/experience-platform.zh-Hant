@@ -2,7 +2,8 @@
 keywords: Experience Platform；首頁；熱門主題；映射csv；映射csv；映射csv；將csv檔案映射到xdm；將csv映射到xdm;ui指南；映射；資料準備；準備資料；
 title: 資料準備UI指南
 description: 本文檔提供有關如何在平台UI中使用資料準備函式將CSV檔案映射到XDM架構的說明。
-source-git-commit: 4c2e3380881e6a032100ef00502b55112f3b103f
+exl-id: fafa4aca-fb64-47ff-a97d-c18e58ae4dae
+source-git-commit: 4cce36ef21ad7490941eecff3933ff0459a0425c
 workflow-type: tm+mt
 source-wordcount: '1665'
 ht-degree: 1%
@@ -80,18 +81,18 @@ ht-degree: 1%
 
 ### 瞭解映射介面
 
-映射介面包括一個儀表板，該儀表板提供有關接收工作流上下文中映射集的運行狀況的資訊。 控制面板顯示有關映射集的以下詳細資訊：
+映射介面包括一個儀表板，該儀表板提供有關接收工作流上下文中映射欄位的運行狀況的資訊。 控制面板顯示有關映射欄位的以下詳細資訊：
 
 | 屬性 | 說明 |
 | --- | --- |
 | [!UICONTROL 映射欄位] | 顯示已映射到目標XDM欄位的源欄位總數，而不考慮錯誤。 |
 | [!UICONTROL 必填欄位] | 顯示必需的映射欄位數。 |
-| [!UICONTROL 身分欄位] | 顯示定義為標識的映射集總數。 這些映射集由指紋表徵圖表示。 |
-| [!UICONTROL 錯誤] | 顯示錯誤映射集的數量。 |
+| [!UICONTROL 身分欄位] | 顯示定義為標識的映射欄位總數。 這些映射欄位由指紋表徵圖表示。 |
+| [!UICONTROL 錯誤] | 顯示錯誤映射欄位的數量。 |
 
 ![頂面板](../images/ui/mapping/top-panel.png)
 
-映射介面還提供一個選項面板，您可以從中選擇這些選項，以便通過映射集更好地進行交互或篩選。
+映射介面還提供一個選項面板，您可以從中選擇這些選項，以便通過映射欄位更好地進行交互或篩選。
 
 ![第二面板](../images/ui/mapping/second-panel.png)
 
@@ -112,11 +113,11 @@ ht-degree: 1%
 | [!UICONTROL 未映射的欄位] | 此選項篩選源架構以僅顯示尚未映射的欄位。 |
 | [!UICONTROL 帶建議的欄位] | 此選項篩選源架構以僅顯示包含映射建議的欄位。 |
 
-選擇 **[!UICONTROL 有錯誤的欄位]** 查看所有有錯誤的映射集。
+選擇 **[!UICONTROL 有錯誤的欄位]** 查看所有具有錯誤的映射欄位。
 
 ![篩選](../images/ui/mapping/filter.png)
 
-出現錯誤映射集的孤立視圖，允許您通過智慧映射建議或手動映射樹解決錯誤。
+此時將顯示錯誤映射欄位的孤立視圖，允許您通過智慧映射建議或手動映射樹解決錯誤。
 
 ![帶錯誤的欄位](../images/ui/mapping/fields-with-errors.png)
 
@@ -176,13 +177,13 @@ ht-degree: 1%
 
 ![預覽螢幕](../images/ui/mapping/preview-screen.png)
 
-要刪除所有映射集，請選擇 **[!UICONTROL 清除所有映射]**。
+要刪除所有映射欄位，請選擇 **[!UICONTROL 清除所有映射]**。
 
 ![全部清除](../images/ui/mapping/clear-all.png)
 
 ### 使用映射介面
 
-平台根據您選擇的目標架構或資料集自動為自動映射欄位提供智慧建議。 您可以手動調整映射規則以適應您的使用情形，或修復任何重複的映射集以清除任何錯誤。
+平台根據您選擇的目標架構或資料集自動為自動映射欄位提供智慧建議。 您可以手動調整映射規則以適應您的使用情形，或修復任何重複的映射欄位以清除任何錯誤。
 
 ![映射介面](../images/ui/mapping/mapping-interface.png)
 
@@ -200,7 +201,7 @@ ht-degree: 1%
 
 ![重疊面板](../images/ui/mapping/recc-panel.png)
 
-目標架構映射介面與映射集顯示在同一視圖中，允許您在同一螢幕中修改映射對。 選擇適合您的使用案例的目標欄位或修復錯誤。
+目標架構映射介面與映射欄位顯示在同一視圖中，允許您在同一螢幕中修改映射對。 選擇適合您的使用案例的目標欄位或修復錯誤。
 
 ![選擇目標域](../images/ui/mapping/select-target-field.png)
 
