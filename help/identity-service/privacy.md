@@ -1,54 +1,58 @@
 ---
 keywords: Experience Platform；首頁；熱門主題
-title: Identity Service中的隱私權要求處理
-description: Adobe Experience Platform Privacy Service會處理客戶存取、選擇退出銷售或刪除其個人資料的請求，這些資料是多項隱私權法規所規定。 本檔案涵蓋與處理Identity Service隱私權要求相關的基本概念。
-source-git-commit: 49f5de6c4711120306bfc3e6759ed4e83e8a19c2
+title: 身份服務中的隱私請求處理
+description: Adobe Experience Platform Privacy Service處理客戶訪問、選擇退出銷售或刪除其個人資料的請求，這些資料由許多隱私法規規定。 本文檔涵蓋與處理Identity Service的隱私請求相關的基本概念。
+exl-id: ab84450b-1a4b-4fdd-b77d-508c86bbb073
+source-git-commit: f0fa8d77e6184314056f8e70205a9b42409d09d5
 workflow-type: tm+mt
-source-wordcount: '666'
-ht-degree: 1%
+source-wordcount: '722'
+ht-degree: 0%
 
 ---
 
+# 隱私請求處理 [!DNL Identity Service]
 
-# 中的隱私權要求處理 [!DNL Identity Service]
+Adobe Experience Platform [!DNL Privacy Service] 處理客戶訪問、選擇不銷售或刪除其個人資料的請求，如一般資料保護法規(GDPR)和 [!DNL California Consumer Privacy Act] (CCPA)。
 
-Adobe Experience Platform [!DNL Privacy Service] 處理客戶要求存取、選擇退出銷售或刪除其隱私權法規(例如一般資料保護規範(GDPR))所規定之個人資料的請求，並 [!DNL California Consumer Privacy Act] (CCPA)。
-
-本檔案涵蓋處理隱私權要求的相關基本概念 [!DNL Identity Service] 在Adobe Experience Platform。
+本文檔涵蓋與處理針對 [!DNL Identity Service] 在Adobe Experience Platform。
 
 >[!NOTE]
 >
->本指南僅說明如何針對Experience Platform中的身分資料存放區提出隱私權要求。 如果您也打算向Platform Data Lake或 [!DNL Real-time Customer Profile]，請參閱的指南 [資料湖中的隱私權要求處理](../catalog/privacy.md) 和指南 [設定檔的隱私權要求處理](../profile/privacy.md) 除了本教學課程之外。
+>本指南僅介紹如何對Experience Platform中的Identity資料儲存進行隱私請求。 如果您還計畫對平台資料湖或 [!DNL Real-time Customer Profile]，請參閱上的指南 [資料湖中的隱私請求處理](../catalog/privacy.md) 和指南 [配置檔案的隱私請求處理](../profile/privacy.md) 除本教程外。
 >
->如需如何為其他Adobe Experience Cloud應用程式提出隱私權要求的步驟，請參閱 [Privacy Service檔案](../privacy-service/experience-cloud-apps.md).
+>有關如何對其他Adobe Experience Cloud應用程式發出隱私請求的步驟，請參閱 [Privacy Service文檔](../privacy-service/experience-cloud-apps.md)。
 
 ## 快速入門
 
-建議您對下列事項有切實的了解 [!DNL Experience Platform] 服務，再閱讀本指南：
+建議您對以下內容有正確理解 [!DNL Experience Platform] 服務，然後閱讀本指南。
 
-* [[!DNL Privacy Service]](../privacy-service/home.md):管理客戶在Adobe Experience Cloud應用程式中存取、選擇退出銷售或刪除其個人資料的請求。
-* [[!DNL Identity Service]](../identity-service/home.md):通過跨裝置和系統橋接身分，解決客戶體驗資料分散帶來的根本難題。
-* [[!DNL Real-time Customer Profile]](home.md):根據來自多個來源的匯總資料，提供統一的即時消費者設定檔。
+* [[!DNL Privacy Service]](../privacy-service/home.md):管理客戶跨Adobe Experience Cloud應用程式訪問、選擇退出銷售或刪除其個人資料的請求。
+* [[!DNL Identity Service]](../identity-service/home.md):通過跨設備和系統橋接身份，解決客戶體驗資料碎片化帶來的根本難題。
+* [[!DNL Real-time Customer Profile]](home.md):基於來自多個源的聚合資料提供統一、即時的用戶配置檔案。
 
-## 了解身分識別命名空間 {#namespaces}
+## 瞭解標識命名空間 {#namespaces}
 
-Adobe Experience Platform [!DNL Identity Service] 橋接跨系統和裝置的客戶身分資料。 [!DNL Identity Service] uses **身分識別命名空間** 將身份值與其來源系統關聯，以提供其內容。 命名空間可代表一般概念，例如電子郵件地址（「電子郵件」），或將身分識別與特定應用程式建立關聯，例如Adobe Advertising Cloud ID(「AdCloud」)或Adobe Target ID(「TNTID」)。
+Adobe Experience Platform [!DNL Identity Service] 跨系統和設備橋接客戶身份資料。 [!DNL Identity Service] 使用 **標識命名空間** 通過將身份值與其來源系統相關聯，提供身份值的上下文。 命名空間可以表示一個通用概念，如電子郵件地址（「電子郵件」），或將標識與特定應用程式(如Adobe Advertising CloudID(「AdCloud」)或Adobe TargetID(「TNTID」))關聯。
 
-Identity Service會維護全域定義（標準）和使用者定義（自訂）身分識別命名空間的存放區。 所有組織皆可使用標準命名空間（例如「電子郵件」和「ECID」），而您的組織也可以建立自訂命名空間，以符合其特定需求。
+Identity Service維護全局定義（標準）和用戶定義（自定義）標識命名空間的儲存。 標準命名空間適用於所有組織（例如，「電子郵件」和「ECID」），而您的組織也可以建立自定義命名空間以滿足其特定需求。
 
-如需中身分識別命名空間的詳細資訊，請參閱 [!DNL Experience Platform]，請參閱 [身分命名空間概述](../identity-service/namespaces.md).
+有關中標識命名空間的詳細資訊 [!DNL Experience Platform]，請參見 [標識命名空間概述](../identity-service/namespaces.md)。
 
 ## 提交請求 {#submit}
 
-以下各節將說明如何向 [!DNL Identity Service] 使用 [!DNL Privacy Service] API或UI。 閱讀這些章節之前，強烈建議您檢閱 [Privacy ServiceAPI](../privacy-service/api/getting-started.md) 或 [Privacy ServiceUI](../privacy-service/ui/overview.md) 說明檔案，以取得如何提交隱私權工作的完整步驟，包括如何在要求裝載中正確格式化使用者資料。
+以下各節概述了如何對 [!DNL Identity Service] 使用 [!DNL Privacy Service] API或UI。 在閱讀這些部分之前，強烈建議您查看 [Privacy ServiceAPI](../privacy-service/api/getting-started.md) 或 [Privacy ServiceUI](../privacy-service/ui/overview.md) 有關如何提交隱私作業的完整步驟的文檔，包括如何在請求負載中正確格式化用戶資料。
 
 ### 使用 API
 
-在API中建立工作請求時， `userIDs` 必須使用特定 `namespace` 和 `type`. 有效 [身分命名空間](#namespaces) 確認 [!DNL Identity Service] 必須為 `namespace` 值，而 `type` 必須為 `standard` 或 `unregistered` （適用於標準和自訂命名空間）。
+在API中建立作業請求時，在 `userIDs` 必須使用特定 `namespace` 和 `type`。 有效 [標識命名空間](#namespaces) 確認 [!DNL Identity Service] 必須提供 `namespace` 值，而 `type` 必須為 `standard` 或 `unregistered` （分別用於標準名稱空間和自定義命名空間）。
 
-此外， `include` 要求裝載的陣列必須包含要提出要求之不同資料存放區的產品值。 向 [!DNL Identity]，陣列必須包含值 `Identity`.
+另外， `include` 請求負載的陣列必須包括請求所針對的不同資料儲存的產品值。 在向 [!DNL Identity]，陣列必須包括值 `Identity`。
 
-下列要求會在GDPR下針對 [!DNL Identity] 儲存。 中為客戶提供兩個身分值，位於 `userIDs` 陣列；使用標準 `Email` 身分命名空間，而另一個使用 `ECID` 命名空間，也包含 [!DNL Identity] (`Identity`) `include` 陣列：
+以下請求在GDPR下為GDPR中的單個客戶資料建立新的隱私作業 [!DNL Identity] 商店。 為中的客戶提供兩個標識值 `userIDs` 陣列；使用標準 `Email` 標識命名空間，而另一個使用 `ECID` 命名空間，還包括 [!DNL Identity] (`Identity`) `include` 陣列：
+
+>[!TIP]
+>
+>使用API刪除自定義命名空間時，必須將標識符指定為命名空間，而不是顯示名稱。
 
 ```shell
 curl -X POST \
@@ -90,14 +94,18 @@ curl -X POST \
 
 ### 使用UI
 
-在UI中建立工作請求時，請務必選取 **[!UICONTROL 身分]** 在 **[!UICONTROL 產品]** 以處理儲存於 [!DNL Identity Service].
+>[!TIP]
+>
+>使用UI刪除自定義命名空間時，必須將標識符號指定為命名空間，而不是顯示名稱。 此外，您不能刪除非生產沙箱的UI中的自定義命名空間。
 
-![identity-gdpr](./images/identity-gdpr.png)
+在UI中建立作業請求時，請確保選擇 **[!UICONTROL 身份]** 在 **[!UICONTROL 產品]** 以便處理儲存在 [!DNL Identity Service]。
+
+![標識](./images/identity-gdpr.png)
 
 ## 刪除請求處理
 
-當 [!DNL Experience Platform] 從接收刪除請求 [!DNL Privacy Service], [!DNL Platform] 發送確認 [!DNL Privacy Service] 已收到請求，且受影響的資料已標示為刪除。 個別身分的刪除是根據提供的命名空間及/或ID值。 此外，會刪除與指定IMS組織相關聯的所有沙箱。
+當 [!DNL Experience Platform] 從接收刪除請求 [!DNL Privacy Service]。 [!DNL Platform] 發送確認 [!DNL Privacy Service] 已接收請求並且已將受影響資料標籤為刪除。 單個標識的刪除基於所提供的命名空間和/或ID值。 此外，刪除與給定IMS組織關聯的所有沙箱。
 
 ## 後續步驟
 
-閱讀本檔案後，您便了解處理隱私權要求的重要概念，如 [!DNL Identity Service]. 如需處理其他隱私權要求的相關資訊， [!DNL Experience Cloud] 應用程式，請參閱 [[!DNL Privacy Service] and [!DNL Experience Cloud] 應用程式](../privacy-service/experience-cloud-apps.md).
+通過閱讀本文檔，您已瞭解處理隱私請求時涉及的重要概念 [!DNL Identity Service]。 有關處理其他隱私請求的資訊 [!DNL Experience Cloud] 應用程式，請參閱上的文檔 [[!DNL Privacy Service] and [!DNL Experience Cloud] 應用程式](../privacy-service/experience-cloud-apps.md)。
