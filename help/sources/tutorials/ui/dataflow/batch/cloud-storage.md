@@ -6,9 +6,9 @@ topic-legacy: overview
 type: Tutorial
 description: 資料流是從源資料集中檢索資料並將資料接收到平台資料集的計畫任務。 本教程提供了使用雲儲存帳戶配置新資料流的步驟。
 exl-id: b327bbea-039d-4c04-afd3-f1d6a5f902a6
-source-git-commit: 38f64f2ba0b40a20528aac6efff0e2fd6bc12ed2
+source-git-commit: 86d8313d7acea41e7b3bcea6554e91ea2190ae69
 workflow-type: tm+mt
-source-wordcount: '2040'
+source-wordcount: '2083'
 ht-degree: 0%
 
 ---
@@ -171,7 +171,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->對於批處理接收，每個後續資料流都會根據源檔案選擇要從源檔案接收的檔案 **上次修改** 時間戳。 這意味著批處理資料流從源中選擇新檔案或自上次資料流運行以來已修改的檔案。
+>對於批處理接收，每個後續資料流都會根據源檔案選擇要從源檔案接收的檔案 **上次修改** 時間戳。 這意味著批處理資料流從源中選擇新檔案或自上次流運行以來已修改的檔案。 此外，您必須確保檔案上載和計畫流運行之間有足夠的時間跨度，因為在計畫流運行時間之前，可能無法提取未完全上載到雲儲存帳戶的檔案以進行接收。
 
 ![](../../../../images/tutorials/dataflow/cloud-storage/batch/scheduling-interval-on.png)
 
