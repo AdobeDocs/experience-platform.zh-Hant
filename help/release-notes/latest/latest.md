@@ -1,9 +1,10 @@
 ---
 title: Adobe Experience 平台發行說明
 description: Adobe Experience Platform的最新發行說明。
-source-git-commit: 7a0a9d61f5f51ba548b342a24e4fd9869c4abf18
+exl-id: 734ce1b3-e270-4c37-958c-88bcc39fbf20
+source-git-commit: 5a27b725d945fcfc3908b2299f770796ce4fdbd1
 workflow-type: tm+mt
-source-wordcount: '1329'
+source-wordcount: '1337'
 ht-degree: 4%
 
 ---
@@ -43,8 +44,8 @@ Adobe Experience Platform提供了多個儀表板，您可以通過這些儀表�
 | 功能 | 說明 |
 | --- | --- |
 | 智慧字幕 | 機器學習算法會自動提供有關您的個人資料和受眾資料的洞見，並在30-90天或12個月期間展示模式和趨勢。 標題包括有關 <ul><li>總體形狀和統計</li><li>趨勢和突變</li><li>季節性模式</li><li>異常</li></ul> 有關 [配置檔案儀表板](../../dashboards/guides/profiles.md#profiles-count-trend) 和 [段儀表板](../../dashboards/guides/segments.md#audience-size-trend) 文檔。 |
-| 儀表板清單 | 在集中位置訪問預配置的配置檔案、資料段和目標儀表板報告，包括任何已安裝的整合（如PowerBI）。 有關詳細資訊，請參見 [[!DNL Dashboards] 概述](../../dashboards/home.md)。 |
-| PowerBI報表模板 | 使用新的PowerBI圖表從配置檔案、段和目標報告資料模型構建、自定義或擴展度量。 自動安裝工作流允許您從PowerBI環境中在整個組織內共用您的營銷見解。 有關詳細資訊，請參見 [[!DNL Dashboards] 概述](../../dashboards/home.md)。 |
+| 儀表板清單 | 在集中位置訪問預配置的配置檔案、資料段和目標儀表板報告，包括任何已安裝的整合（如PowerBI）。 有關詳細資訊，請參見 [[!DNL Dashboards] 庫存文檔](../../dashboards/inventory.md)。 |
+| PowerBI報表模板 | 使用新的PowerBI圖表從配置檔案、段和目標報告資料模型構建、自定義或擴展度量。 自動安裝工作流允許您從PowerBI環境中在整個組織內共用您的營銷見解。 有關詳細資訊，請參見 [PowerBI報表模板文檔](../../dashboards/integrations/power-bi.md)。 |
 
 有關 [!DNL Dashboards]，請參閱 [[!DNL Dashboards] 概述](../../dashboards/home.md)。
 
@@ -90,8 +91,8 @@ Adobe Experience Platform提供了多個儀表板，您可以通過這些儀表�
 
 | 功能 | 說明 |
 | --- | --- |
-| 匿名塊 | 匿名塊SQL構造允許您將查詢服務中的大規模資料準備作業分解為較小的任務，然後按順序重新使用並執行這些任務以進行增量資料載入。 有關詳細資訊，請參見 [查詢服務概述](../../query-service/home.md)。 |
-| 資料集組織 | 提供一個連貫的邏輯資料結構，以便隨著沙箱中資料資產的數量增加，組織資料資產以與查詢服務一起使用。 有關詳細資訊，請參見 [查詢服務概述](../../query-service/home.md)。 |
+| 匿名塊 | 匿名塊SQL構造允許您將查詢服務中的大規模資料準備作業分解為較小的任務，然後按順序重新使用並執行這些任務以進行增量資料載入。 有關詳細資訊，請參見 [匿名塊文檔的示例查詢](../../query-service/best-practices/anonymous-block.md)。 |
+| 資料集組織 | 提供一個連貫的邏輯資料結構，以便隨著沙箱中資料資產的數量增加，組織資料資產以與查詢服務一起使用。 有關詳細資訊，請參見 [組織資料資產文檔](../../query-service/best-practices/organize-data-assets.md)。 |
 
 有關 [!DNL Query Service]，請參閱 [[!DNL Query Service] 概述](../../query-service/home.md)。
 
