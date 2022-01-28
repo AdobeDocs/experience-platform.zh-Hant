@@ -5,10 +5,10 @@ title: '使用API的邊緣分割 '
 topic-legacy: developer guide
 description: 本文檔包含如何使用Adobe Experience Platform分段服務API進行邊緣分段的示例。
 exl-id: effce253-3d9b-43ab-b330-943fb196180f
-source-git-commit: f168566d03485176b16b6d3833c37930b38b0149
+source-git-commit: e52aa55adde532d838d5417feba36913ed03ce29
 workflow-type: tm+mt
-source-wordcount: '989'
-ht-degree: 1%
+source-wordcount: '1015'
+ht-degree: 0%
 
 ---
 
@@ -25,6 +25,8 @@ ht-degree: 1%
 >[!IMPORTANT]
 >
 > 邊緣資料將儲存在最靠近其收集位置的邊緣伺服器位置，並且可以儲存在指定為集線器（或主體）Adobe Experience Platform資料中心的位置以外的位置。
+>
+> 此外，邊緣分割引擎將僅處理存在邊緣的請求 **一個** 主標籤標識，與非基於邊緣的主標識一致。
 
 ## 快速入門
 

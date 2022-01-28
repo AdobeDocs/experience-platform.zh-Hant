@@ -5,9 +5,9 @@ title: 邊緣分割UI指南
 topic-legacy: ui guide
 description: 邊緣分割是指能夠即時評估平台中的邊緣段，從而實現相同的頁面和下一頁個性化使用案例。
 exl-id: eae948e6-741c-45ce-8e40-73d10d5a88f1
-source-git-commit: f168566d03485176b16b6d3833c37930b38b0149
+source-git-commit: 522a6a005bc4b9d5059b4de3ceb0a24f7767caad
 workflow-type: tm+mt
-source-wordcount: '744'
+source-wordcount: '770'
 ht-degree: 0%
 
 ---
@@ -23,6 +23,8 @@ ht-degree: 0%
 >[!IMPORTANT]
 >
 > 邊緣資料將儲存在最靠近其收集位置的邊緣伺服器位置，並且可以儲存在指定為集線器（或主體）Adobe Experience Platform資料中心的位置以外的位置。
+>
+> 此外，邊緣分割引擎將僅處理存在邊緣的請求 **一個** 主標籤標識，與非基於邊緣的主標識一致。
 
 ## 邊緣分割查詢類型
 
