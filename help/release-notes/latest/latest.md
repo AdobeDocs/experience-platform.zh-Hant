@@ -2,9 +2,9 @@
 title: Adobe Experience 平台發行說明
 description: Adobe Experience Platform的最新發行說明。
 exl-id: 734ce1b3-e270-4c37-958c-88bcc39fbf20
-source-git-commit: 5a27b725d945fcfc3908b2299f770796ce4fdbd1
+source-git-commit: 51f0cfc1423f8a3bd2ffbceb65de4a09c39d474b
 workflow-type: tm+mt
-source-wordcount: '1337'
+source-wordcount: '1341'
 ht-degree: 4%
 
 ---
@@ -70,7 +70,7 @@ Adobe Experience Platform提供了多個儀表板，您可以通過這些儀表�
 | 功能 | 說明 |
 | ----------- | ----------- |
 | 同頁和下頁個性化 | 的 [同頁和下一頁個性化功能](../../destinations/ui/configure-personalization-destinations.md) 為體驗邊緣上的應用程式提供用戶的共用、可目標視圖，以實現營銷渠道和客戶渠道之間的一致性。 此個性化功能可通過 [Adobe Target](../../destinations/catalog/personalization/adobe-target-connection.md) 和 [自定義個性化連接](../../destinations/catalog/personalization/custom-personalization.md)。 要配置同一頁或下一頁個性化市場活動，請參閱 [專用教程](../../destinations/ui/configure-personalization-destinations.md)。 |
-| 批目標監視和段級度量 | 目標監視功能現在從流目標擴展為包括激活資料流的批處理目標和段級度量。 有關詳細資訊，請閱讀 [監視目標儀表板](/help/dataflows/ui/monitor-destinations.md#monitoring-destinations-dashboard) 和 [段級視圖](/help/dataflows/ui/monitor-destinations.md#segment-level-view)。 |
+| 批目標監視和段級度量 | 目標監視功能現在從流目標擴展為包括激活資料流的批處理目標和段級度量。 有關詳細資訊，請閱讀 [監視目標儀表板](/help/dataflows/ui/monitor-destinations.md#monitoring-destinations-dashboard)。 [監視段作業控制面板](/help/dataflows/ui/monitor-destinations.md#monitoring-segment-jobs-dashboard), [段級視圖](/help/dataflows/ui/monitor-destinations.md#segment-level-view)。 |
 | 計畫在UI中編輯現有批激活資料流 | 此版本引入了將現有激活資料流的計畫編輯到批處理目標的選項。 有關詳細資訊，請閱讀 [將配置檔案資料激活至批配置檔案目標](/help/destinations/ui/activate-batch-profile-destinations.md)。 |
 | Marketo目標增強 | Experience Platform使用Marketo Engage的客戶可以利用將新人記錄從Experience Platform通過 [Marketo目標連接器](/help/destinations/catalog/adobe/marketo-engage.md)。 <br> 在將受眾段從Experience Platform發送到Marketo Engage時，可以自動將段內尚未存在於Marketo Engage資料庫中的人添加到該段。 有關詳細資訊，請閱讀 [將Adobe Experience Platform段推入Marketo靜態清單](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/smart-lists-and-static-lists/static-lists/push-an-adobe-experience-platform-segment-to-a-marketo-static-list.html?lang=en) (本教程中的步驟9指明如何將新人記錄推送到Marketo)。 |
 
