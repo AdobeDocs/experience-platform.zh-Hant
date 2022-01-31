@@ -1,17 +1,17 @@
 ---
 keywords: Experience Platform；首頁；熱門主題；分段；分段；段匹配；段匹配
 solution: Experience Platform
-title: 段匹配常見問題(Beta)
+title: 段匹配常見問題
 description: 段匹配是Adobe Experience Platform的段共用服務，允許兩個或兩個以上平台用戶以安全、受管理和隱私友好的方式交換段資料。
 exl-id: cfa9db16-0bc3-4d25-914d-0d923eccb5a3
-source-git-commit: 50795be308649052037be62153109eadab02c9a1
+source-git-commit: 823eb549e5514a3201ba68ed395c69e202cb747f
 workflow-type: tm+mt
-source-wordcount: '420'
+source-wordcount: '418'
 ht-degree: 0%
 
 ---
 
-# [!DNL Segment Match] 常見問題(Beta)
+# [!DNL Segment Match] 常見問題
 
 本指南提供有關Adobe Experience Platform段匹配的隱私和法律問題的答案。
 
