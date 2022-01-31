@@ -2,9 +2,9 @@
 title: 審核日誌概述
 description: 瞭解審核日誌如何讓您查看誰在Adobe Experience Platform執行了哪些操作。
 exl-id: 00baf615-5b71-4e0a-b82a-ca0ce8566e7f
-source-git-commit: 2677d5f0c4369ab692f9e4b16710098a359402d7
+source-git-commit: 7e4853cee8a0fa937c82eb842cd73b675eb337a3
 workflow-type: tm+mt
-source-wordcount: '659'
+source-wordcount: '657'
 ht-degree: 5%
 
 ---
@@ -65,7 +65,7 @@ ht-degree: 5%
 | --- | --- |
 | [!UICONTROL 類別] | 使用下拉菜單按 [類別](#category)。 |
 | [!UICONTROL 動作] | 按操作篩選。 僅當前 [!UICONTROL 建立] 和 [!UICONTROL 刪除] 可以篩選操作。 |
-| [!UICONTROL 訪問控制狀態] | 按操作是否允許（完成）或由於缺少而被拒絕進行篩選 [訪問控制](../../../access-control/home.md) 權限。 |
+| [!UICONTROL 狀態] | 按操作是否允許（完成）或由於缺少而被拒絕進行篩選 [訪問控制](../../../access-control/home.md) 權限。 |
 | [!UICONTROL 日期] | 選擇起始日期和/或終止日期以定義日期範圍以篩選結果。 |
 
 要刪除濾鏡，請為有關的濾鏡選擇「X」，或選擇 **[!UICONTROL 全部清除]** 按鈕，將選定控制項在Tab鍵次序中下移一個位置。
