@@ -1,39 +1,36 @@
 ---
-keywords: Experience Platform；首頁；熱門主題；Amazon Redshift;Amazon紅移；紅移
+keywords: Experience Platform；主題；熱門主題；Amazon紅移；Amazon紅移；紅移；紅移
 solution: Experience Platform
 title: Snowflake源連接器概述
 topic-legacy: overview
-description: 了解如何使用API或使用者介面將Snowflake連線至Adobe Experience Platform。
-source-git-commit: ee83c547b0c6b03baf14ebc732be14f27f557bf9
+description: 瞭解如何使用API或用戶介面將Snowflake連接到Adobe Experience Platform。
+exl-id: df066463-1ae6-4ecd-ae0e-fb291cec4bd5
+source-git-commit: 25cc0c5a1e6dcf01b82956ea1022663445315a27
 workflow-type: tm+mt
-source-wordcount: '261'
+source-wordcount: '244'
 ht-degree: 0%
 
 ---
 
-# (Beta)[!DNL Snowflake]源
+# [!DNL Snowflake] 源
 
->[!NOTE]
->
->[!DNL Snowflake]源位於測試版。 有關使用測試版標籤連接器的詳細資訊，請參閱[來源概述](../../home.md#terms-and-conditions)。
+Adobe Experience Platform允許從外部源接收資料，同時讓您能夠使用平台服務構建、標籤和增強傳入資料。 您可以從多種源(如Adobe應用程式、基於雲的儲存、資料庫和許多其他源)接收資料。
 
-Adobe Experience Platform可讓您從外部來源擷取資料，同時使用Platform服務來建構、加標籤及增強傳入資料。 您可以從多種來源(如Adobe應用程式、雲儲存、資料庫等)內嵌資料。
+Experience Platform支援從第三方資料庫接收資料。 平台可以連接到不同類型的資料庫，如關係型、NoSQL或資料倉庫。 對資料庫提供程式的支援包括 [!DNL Snowflake]。
 
-Experience Platform支援從協力廠商資料庫擷取資料。 平台可以連接到不同類型的資料庫，如關係型、 NoSQL或資料倉庫。 對資料庫提供程式的支援包括[!DNL Snowflake]。
+## IP地址允許清單
 
-## IP位址允許清單
+在使用源連接器之前，必須將IP地址清單添加到允許清單。 如果無法將特定於區域的IP地址添加到允許清單，則在使用源時可能會導致錯誤或效能不佳。 查看 [IP地址允許清單](../../ip-address-allow-list.md) 的子菜單。
 
-使用來源連接器前，必須將IP位址清單新增至允許清單。 若未將您地區專屬的IP位址新增至允許清單，在使用來源時可能會導致錯誤或效能不佳。 如需詳細資訊，請參閱[IP位址允許清單](../../ip-address-allow-list.md)頁面。
+以下文檔提供了有關如何連接的資訊 [!DNL Snowflake] 到使用API或用戶介面的平台：
 
-以下檔案提供如何使用API或使用者介面將[!DNL Snowflake]連線至Platform的資訊：
+## 連接 [!DNL Snowflake] 到使用API的平台
 
-## 使用API將[!DNL Snowflake]連線至平台
-
-- [使用流量服務API建立Snowflake基礎連線](../../tutorials/api/create/databases/snowflake.md)
-- [使用流服務API探索資料庫源的資料結構和內容](../../tutorials/api/explore/database-nosql.md)
+- [使用流服務API建立Snowflake基連接](../../tutorials/api/create/databases/snowflake.md)
+- [使用流服務API瀏覽資料庫源的資料結構和內容](../../tutorials/api/explore/database-nosql.md)
 - [使用流服務API為資料庫源建立資料流](../../tutorials/api/collect/database-nosql.md)
 
-## 使用UI將[!DNL Snowflake]連線至Platform
+## 連接 [!DNL Snowflake] 到使用UI的平台
 
-- [在UI中建立Snowflake來源連線](../../tutorials/ui/create/databases/snowflake.md)
+- [在UI中建立Snowflake源連接](../../tutorials/ui/create/databases/snowflake.md)
 - [在UI中為資料庫源連接建立資料流](../../tutorials/ui/dataflow/databases.md)
