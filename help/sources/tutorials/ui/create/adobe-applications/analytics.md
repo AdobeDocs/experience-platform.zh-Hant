@@ -6,9 +6,9 @@ topic-legacy: overview
 type: Tutorial
 description: 瞭解如何在UI中建立Adobe Analytics源連接，以將消費者資料帶入Adobe Experience Platform。
 exl-id: 5ddbaf63-feaa-44f5-b2f2-2d5ae507f423
-source-git-commit: f5d341daffd7d4d77ee816cc7537b0d0c52ca636
+source-git-commit: 7bc706751a801a9a673590582cf57872c9c4ae95
 workflow-type: tm+mt
-source-wordcount: '1493'
+source-wordcount: '1571'
 ht-degree: 1%
 
 ---
@@ -61,6 +61,16 @@ ht-degree: 1%
 >[!IMPORTANT]
 >
 >用於 [!DNL Analytics] 源為beta。
+
+在映射之前 [!DNL Analytics] 資料到目標XDM架構，必須首先選擇是使用預設架構還是使用自定義架構。
+
+預設架構代表您建立新架構，包含 [!DNL Analytics] 欄位組。 要使用預設架構，請選擇 **[!UICONTROL 預設架構]**。
+
+![預設模式](../../../../images/tutorials/create/analytics/default-schema.png)
+
+使用自定義架構，您可以為 [!DNL Analytics] 資料，只要架構 [!DNL Analytics] 欄位組。 要使用自定義架構，請選擇 **[!UICONTROL 自定義架構]**。
+
+![自定義模式](../../../../images/tutorials/create/analytics/custom-schema.png)
 
 的 [!UICONTROL 映射] 頁提供了將源欄位映射到相應目標模式欄位的介面。 在此處，您可以將自定義變數映射到新架構欄位組，並應用資料準備支援的計算。 選擇目標方案以啟動映射進程。
 
