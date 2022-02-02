@@ -6,7 +6,7 @@ topic-legacy: overview
 type: Tutorial
 description: 瞭解如何在UI中建立Adobe Analytics源連接，以將消費者資料帶入Adobe Experience Platform。
 exl-id: 5ddbaf63-feaa-44f5-b2f2-2d5ae507f423
-source-git-commit: 7bc706751a801a9a673590582cf57872c9c4ae95
+source-git-commit: d62d1ff9ebef58401911bab1232d1847d65e043f
 workflow-type: tm+mt
 source-wordcount: '1571'
 ht-degree: 1%
@@ -64,11 +64,11 @@ ht-degree: 1%
 
 在映射之前 [!DNL Analytics] 資料到目標XDM架構，必須首先選擇是使用預設架構還是使用自定義架構。
 
-預設架構代表您建立新架構，包含 [!DNL Analytics] 欄位組。 要使用預設架構，請選擇 **[!UICONTROL 預設架構]**。
+預設架構代表您建立新架構，包含 [!DNL Adobe Analytics ExperienceEvent Template] 欄位組。 要使用預設架構，請選擇 **[!UICONTROL 預設架構]**。
 
 ![預設模式](../../../../images/tutorials/create/analytics/default-schema.png)
 
-使用自定義架構，您可以為 [!DNL Analytics] 資料，只要架構 [!DNL Analytics] 欄位組。 要使用自定義架構，請選擇 **[!UICONTROL 自定義架構]**。
+使用自定義架構，您可以為 [!DNL Analytics] 資料，只要該架構 [!DNL Adobe Analytics ExperienceEvent Template] 欄位組。 要使用自定義架構，請選擇 **[!UICONTROL 自定義架構]**。
 
 ![自定義模式](../../../../images/tutorials/create/analytics/custom-schema.png)
 
@@ -76,7 +76,7 @@ ht-degree: 1%
 
 >[!TIP]
 >
->僅具有 [!DNL Analytics] 模板欄位組顯示在模式選擇菜單中。 省略其他架構。 如果報表套件資料沒有適當的架構，則必須建立新架構。 有關建立架構的詳細步驟，請參見上的指南 [在UI中建立和編輯架構](../../../../../xdm/ui/resources/schemas.md)。
+>僅具有 [!DNL Adobe Analytics ExperienceEvent Template] 欄位組將顯示在模式選擇菜單中。 省略其他架構。 如果報表套件資料沒有適當的架構，則必須建立新架構。 有關建立架構的詳細步驟，請參見上的指南 [在UI中建立和編輯架構](../../../../../xdm/ui/resources/schemas.md)。
 
 ![選擇模式](../../../../images/tutorials/create/analytics/select-schema.png)
 
