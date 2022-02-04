@@ -4,9 +4,9 @@ title: 目標工作區
 description: 「目標」工作區由四個部分組成，即「目錄」、「瀏覽」、「帳戶」和「系統視圖」。 下面各節介紹了這些內容。
 seo-description: In Adobe Experience Platform, select Destinations from the left navigation bar to access the destinations workspace.
 exl-id: 0f46f08d-0fe3-441d-933a-86bc146c0f19
-source-git-commit: 60df79ce1d12bdce133bff54ffda1ed13307bfa4
+source-git-commit: 533f76891f47ba11e2a9de87aa8c249eb9249895
 workflow-type: tm+mt
-source-wordcount: '887'
+source-wordcount: '1084'
 ht-degree: 2%
 
 ---
@@ -64,11 +64,30 @@ ht-degree: 2%
 
 ## [!UICONTROL 帳戶] {#accounts}
 
-的 **[!UICONTROL 帳戶]** 頁籤顯示有關您已與各種目標建立的連接的詳細資訊，並允許您更新現有的連接詳細資訊。 請參閱 [更新帳戶](update-accounts.md) 的上界。
+的 **[!UICONTROL 帳戶]** 頁籤顯示您與各種目標建立的連接的詳細資訊，並允許您更新或刪除現有帳戶詳細資訊。 有關每個目標帳戶的所有資訊，請參閱下表。
+
+>[!TIP]
+>
+> * 選擇 [!UICONTROL 平台] 列和使用 ![「激活段」按鈕](../assets/ui/workspace/add-data-symbol.png)**[!UICONTROL 激活段&#x200B;]**按鈕將段發送到該目標。
+> * 選擇 [!UICONTROL 平台] 列和使用 ![「編輯詳細資訊」按鈕](../assets/ui/workspace/pencil-icon.png)**[!UICONTROL 編輯詳細資訊&#x200B;]**按鈕 [更新](update-accounts.md) 現有目標帳戶的詳細資訊。
+> * 選擇 [!UICONTROL 平台] 列和使用 ![刪除按鈕](../assets/ui/workspace/delete-destination-symbol.png)**[!UICONTROL 刪除&#x200B;]**按鈕 [刪除](delete-destination-account.md) 現有目標帳戶。
+
+
+![「帳戶」頁籤](../assets/ui/workspace/destination-account-options.png)
+
+| 元素 | 說明 |
+|---|---|
+| [!UICONTROL 平台] | 您為其設定連接的目標。 |
+| [!UICONTROL 連線類型] | 表示到儲存桶或目標的帳戶連接類型。 驗證選項取決於目標： <ul><li>對於電子郵件營銷目標：可以是S3、FTP或Azure Blob。</li><li>對於即時廣告目標：伺服器到伺服器</li><li>對於AmazonS3雲儲存目標：訪問密鑰 </li><li>對於SFTP雲儲存目標：SFTP的基本身份驗證</li><li>OAuth 1或OAuth 2身份驗證</li><li>持有者令牌驗證</li></ul> |
+| [!UICONTROL 用戶名] | 您在 [連接目標嚮導](../catalog/email-marketing/overview.md#connect-destination)。 |
+| [!UICONTROL 目的地] | 表示與為目標建立的基本資訊連接的唯一成功目標資料流的數量。 |
+| [!UICONTROL 已驗證] | 授權到此目標的連接的日期。 |
+
+{style=&quot;table-layout:auto&quot;&quot;
 
 ## [!UICONTROL 瀏覽] {#browse}
 
-的 **[!UICONTROL 瀏覽]** 頁籤顯示已建立連接的目標。 目標 **[!UICONTROL 已啟用/已禁用]** 開啟切換，將目標分別設定為活動或非活動。 通過選擇 **[!UICONTROL 段]** > **[!UICONTROL 瀏覽]** 並選擇要檢查的段。 有關「瀏覽」(Browse)頁籤中為每個目標提供的所有資訊，請參閱下表：
+的 **[!UICONTROL 瀏覽]** 頁籤顯示已建立連接的目標。 目標 **[!UICONTROL 已啟用/已禁用]** 開啟切換，將目標分別設定為活動或非活動。 通過選擇 **[!UICONTROL 段]** > **[!UICONTROL 瀏覽]** 並選擇要檢查的段。 請參閱下表，瞭解中為每個目標提供的所有資訊 [!UICONTROL 瀏覽] 頁籤：
 
 >[!TIP]
 >
