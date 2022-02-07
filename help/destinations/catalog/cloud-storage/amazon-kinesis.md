@@ -1,54 +1,54 @@
 ---
-keywords: Amazon Kinesis;kinesis目的地；kinesis
-title: Amazon Kinesis連線
-description: 建立與Amazon Kinesis儲存體的即時傳出連線，以串流來自Adobe Experience Platform的資料。
+keywords: AmazonKinesis;kinesis目標；kinesis
+title: AmazonKinesis
+description: 建立到AmazonKinesis儲存的即時出站連接，以從Adobe Experience Platform流資料。
 exl-id: b40117ef-6ad0-48a9-bbcb-97c6f6d1dce3
-source-git-commit: ba338972be13c7afa6720bba3f0fc96d244b8f9f
+source-git-commit: 577b42eef9d4b44b5b556ee31d22276d72c609ea
 workflow-type: tm+mt
-source-wordcount: '835'
+source-wordcount: '1233'
 ht-degree: 1%
 
 ---
 
-# （測試版） [!DNL Amazon Kinesis] 連接
+# (Beta) [!DNL Amazon Kinesis] 連接
 
 ## 總覽 {#overview}
 
 >[!IMPORTANT]
 >
->此 [!DNL Amazon Kinesis] Platform中的目的地目前為測試版。 文件和功能可能會有所變更。
+>的 [!DNL Amazon Kinesis] 平台中的目標當前處於beta中。 文件和功能可能會有所變更。
 
-此 [!DNL Kinesis Data Streams] 服務依據 [!DNL Amazon Web Services] 可讓您即時收集和處理大量資料記錄。
+的 [!DNL Kinesis Data Streams] 服務 [!DNL Amazon Web Services] 允許您即時收集和處理大量資料記錄。
 
-您可以建立與 [!DNL Amazon Kinesis] 儲存以從Adobe Experience Platform串流資料。
+您可以建立到您的 [!DNL Amazon Kinesis] 儲存以從Adobe Experience Platform傳輸資料。
 
-* 如需 [!DNL Amazon Kinesis]，請參閱 [Amazon檔案](https://docs.aws.amazon.com/streams/latest/dev/introduction.html).
-* 連線至 [!DNL Amazon Kinesis] 以程式設計方式，請參閱 [串流目的地API教學課程](../../api/streaming-destinations.md).
-* 連線至 [!DNL Amazon Kinesis] 使用Platform使用者介面，請參閱以下各節。
+* 有關 [!DNL Amazon Kinesis]，請參見 [Amazon文檔](https://docs.aws.amazon.com/streams/latest/dev/introduction.html)。
+* 連接到 [!DNL Amazon Kinesis] 以寫程式方式，請參見 [流目標API教程](../../api/streaming-destinations.md)。
+* 連接到 [!DNL Amazon Kinesis] 使用平台用戶介面，請參閱以下各節。
 
-![Amazon Kinesis在UI中](../../assets/catalog/cloud-storage/amazon-kinesis/catalog.png)
+![AmazonKinesis在用戶介面](../../assets/catalog/cloud-storage/amazon-kinesis/catalog.png)
 
 ## 使用案例 {#use-cases}
 
-使用串流目的地，例如 [!DNL Amazon Kinesis]，您可以輕鬆將高價值細分事件和相關設定檔屬性饋送至您所選擇的系統。
+使用流目標，如 [!DNL Amazon Kinesis]，您可以輕鬆地將高價值分段事件和關聯的配置檔案屬性輸入到您選擇的系統中。
 
-例如，潛在客戶下載了白皮書，將其歸類為「高傾向轉換」區段。 通過映射潛在客戶所在的段 [!DNL Amazon Kinesis] 目的地，您會在 [!DNL Amazon Kinesis]. 在那裡，您可以採用自己動手做的方法，在活動之上描述業務邏輯，因為您認為最適合您的企業IT系統。
+例如，潛在客戶下載了一份白皮書，確認他們屬於「高傾向轉換」段。 通過映射目標客戶所在的段 [!DNL Amazon Kinesis] 目標，您將在 [!DNL Amazon Kinesis]。 在這裡，您可以採用自行動手的方法，並在活動之前描述業務邏輯，因為您認為最適合您的企業IT系統。
 
-## 匯出類型 {#export-type}
+## 導出類型 {#export-type}
 
-**設定檔**  — 您要匯出區段的所有成員，以及所需的架構欄位(例如：電子郵件地址、電話號碼、姓氏)，如「選取屬性」畫面中所選 [對象啟用工作流程](../../ui/activate-streaming-profile-destinations.md#select-attributes).
+**基於配置檔案**  — 導出段的所有成員以及所需的架構欄位(例如：電子郵件地址、電話號碼、姓氏)，從的「選擇屬性」螢幕中選擇 [受眾激活工作流](../../ui/activate-streaming-profile-destinations.md#select-attributes)。
 
-## 必填 [!DNL Amazon Kinesis] 權限 {#required-kinesis-permission}
+## 必需 [!DNL Amazon Kinesis] 權限 {#required-kinesis-permission}
 
-若要成功連線並將資料匯出至 [!DNL Amazon Kinesis] 串流，Experience Platform需要下列動作的權限：
+要成功將資料連接和導出到 [!DNL Amazon Kinesis] 流，Experience Platform需要以下操作的權限：
 
 * `kinesis:ListStreams`
 * `kinesis:PutRecord`
 * `kinesis:PutRecords`
 
-這些權限會透過 [!DNL Kinesis] 在Platform使用者介面中設定Kinesis目的地後，Platform會檢查主控台和。
+這些權限通過 [!DNL Kinesis] 在平台用戶介面中配置Kinesis目標後，平台將檢查控制台。
 
-以下範例顯示成功將資料匯出至 [!DNL Kinesis] 目的地。
+下面的示例顯示成功將資料導出到 [!DNL Kinesis] 目標。
 
 ```json
 {
@@ -71,25 +71,25 @@ ht-degree: 1%
 
 | 屬性 | 說明 |
 | -------- | ----------- |
-| `kinesis:ListStreams` | 列出Amazon Kinesis資料流的動作。 |
-| `kinesis:PutRecord` | 將單一資料記錄寫入Kinesis資料流的動作。 |
-| `kinesis:PutRecords` | 在單一呼叫中將多個資料記錄寫入Kinesis資料流的動作。 |
+| `kinesis:ListStreams` | 列出您的AmazonKinesis資料流的操作。 |
+| `kinesis:PutRecord` | 將單個資料記錄寫入Kinesis資料流的操作。 |
+| `kinesis:PutRecords` | 在單個調用中將多個資料記錄寫入Kinesis資料流的操作。 |
 
-有關控制訪問的詳細資訊 [!DNL Kinesis] 資料流，請讀取以下內容 [[!DNL Kinesis] 檔案](https://docs.aws.amazon.com/streams/latest/dev/controlling-access.html).
+有關控制訪問的詳細資訊 [!DNL Kinesis] 資料流，讀取以下內容 [[!DNL Kinesis] 文檔](https://docs.aws.amazon.com/streams/latest/dev/controlling-access.html)。
 
 ## 連接到目標 {#connect}
 
-若要連線至此目的地，請依照 [目的地設定教學課程](../../ui/connect-destination.md).
+要連接到此目標，請按照 [目標配置教程](../../ui/connect-destination.md)。
 
-### 連線參數 {#parameters}
+### 連接參數 {#parameters}
 
-同時 [設定](../../ui/connect-destination.md) 此目的地時，您必須提供下列資訊：
+同時 [設定](../../ui/connect-destination.md) 此目標，必須提供以下資訊：
 
-* **[!DNL Amazon Web Services]訪問密鑰和密鑰**:在 [!DNL Amazon Web Services]，產生 `access key - secret access key` 配對，以授與 [!DNL Amazon Kinesis] 帳戶。 了解更多 [Amazon Web Services檔案](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html).
-* **地區**:指出 [!DNL Amazon Web Services] 資料流到的區域。
-* **名稱**:提供連線的名稱 [!DNL Amazon Kinesis]
-* **說明**:提供與 [!DNL Amazon Kinesis].
-* **流**:提供您 [!DNL Amazon Kinesis] 帳戶。 Platform會將資料匯出至此資料流。
+* **[!DNL Amazon Web Services]訪問密鑰和密鑰**:在 [!DNL Amazon Web Services]，生成 `access key - secret access key` 對以授予您的平台訪問權 [!DNL Amazon Kinesis] 帳戶。 在 [Amazon Web Services文檔](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html)。
+* **區域**:指明 [!DNL Amazon Web Services] 要將資料流到的區域。
+* **名稱**:提供與 [!DNL Amazon Kinesis]
+* **說明**:提供與 [!DNL Amazon Kinesis]。
+* **流**:提供您的 [!DNL Amazon Kinesis] 帳戶。 平台會將資料導出到此流。
 
 <!--
 
@@ -99,25 +99,43 @@ ht-degree: 1%
 
 -->
 
-## 啟用此目的地的區段 {#activate}
+## 將段激活到此目標 {#activate}
 
-請參閱 [對串流設定檔匯出目的地啟用受眾資料](../../ui/activate-streaming-profile-destinations.md) 以取得啟用受眾區段至此目的地的指示。
+請參閱 [激活受眾資料以流式處理配置檔案導出目標](../../ui/activate-streaming-profile-destinations.md) 有關激活此目標受眾段的說明。
 
-## 設定檔匯出行為 {#profile-export-behavior}
+## 配置檔案導出行為 {#profile-export-behavior}
 
-Experience Platform會最佳化設定檔匯出行為至您的Amazon Kinesis目的地，以僅在符合區段資格或其他重大事件後發生設定檔的相關更新時，將資料匯出至您的目的地。 設定檔會在下列情況下匯出至您的目的地：
+Experience Platform優化配置檔案導出行為 [!DNL Amazon Kinesis] 目標：僅當在段鑑定或其他重要事件之後對配置檔案進行了相關更新時，才將資料導出到目標。 配置式在以下情況下導出到目標：
 
-* 至少有一個區段對應至目的地，區段成員資格有所變更，便觸發設定檔更新。 例如，設定檔已符合對應至目的地的其中一個區段資格，或已退出對應至目的地的其中一個區段。
-* 設定檔更新是由 [身分圖](/help/xdm/field-groups/profile/identitymap.md). 例如，已符合其中一個對應至目的地區段資格的設定檔，已在「身分對應」屬性中新增身分識別。
-* 設定檔更新是由至少一個已對應至目的地之屬性的屬性變更所觸發。 例如，對應步驟中對應至目的地的其中一個屬性會新增至設定檔。
+* 配置檔案更新由映射到目的地的至少一個段的段成員資格的改變確定。 例如，配置檔案已限定映射到目標的段之一或已退出映射到目標的段之一。
+* 配置檔案更新由 [身份映射](/help/xdm/field-groups/profile/identitymap.md)。 例如，已為映射到目標的段之一限定的配置檔案已在標識映射屬性中添加了新標識。
+* 配置檔案更新由映射到目的地的至少一個屬性的屬性的改變確定。 例如，映射步驟中映射到目標的屬性之一被添加到配置檔案。
 
-在上述所有情況中，只有發生相關更新的設定檔會匯出至您的目的地。 例如，如果對應至目的地流程的區段有100個成員，且有5個新設定檔符合該區段的資格，則匯出至目的地的作業會是增量的，且僅包含5個新設定檔。
+在上述所有情況下，只將發生相關更新的配置檔案導出到目標。 例如，如果映射到目標流的段有100個成員，並且有5個新配置檔案符合該段的條件，則向目標的導出是增量的，並且只包括5個新配置檔案。
 
-請注意，無論變更在何處，所有對應屬性都會針對設定檔匯出。 因此，在上述範例中，即使屬性本身未變更，這五個新設定檔的所有對應屬性也會匯出。
+請注意，無論更改位於何處，都會為配置檔案導出所有映射的屬性。 因此，在上面的示例中，即使屬性本身沒有更改，也會導出這五個新配置檔案的所有映射屬性。
 
-## 匯出的資料 {#exported-data}
+### 什麼決定資料導出以及導出中包含的內容 {#what-determines-export-what-is-included}
 
-已導出 [!DNL Experience Platform] 資料登陸 [!DNL Amazon Kinesis] 格式。 例如，下列匯出包含符合特定區段資格且已退出另一個區段的設定檔，並包含設定檔屬性名、姓氏、出生日期和個人電子郵件地址。 此設定檔的身分為ECID和電子郵件。
+對於為給定配置檔案導出的資料，瞭解以下兩個不同概念非常重要 *決定將資料導出到 [!DNL Amazon Kinesis] 目標* 和 *資料包含在導出中*。
+
+| 決定目標導出的因素 | 目標導出中包含的內容 |
+|---------|----------|
+| <ul><li>映射的屬性和段用作目標導出的提示。 這意味著，如果任何映射段更改狀態（從null更改為已實現或從已實現/現有更新為退出）或任何映射屬性被更新，則將啟動目標導出。</li><li>由於標識當前無法映射到 [!DNL Amazon Kinesis] 目標，給定配置檔案上任何身份的更改也會決定目標導出。</li><li>屬性的更改定義為屬性上的任何更新，無論其值是否相同。 這意味著，即使值本身未更改，屬性上的覆蓋也被視為更改。</li></ul> | <ul><li>所有段（具有最新成員身份狀態）都包含在 `segmentMembership` 的雙曲餘切值。</li><li>中的所有標識 `identityMap` 也包括對象(Experience Platform當前不支援在 [!DNL Amazon Kinesis] 目標)。</li><li>目標導出中只包含映射的屬性。</li></ul> |
+
+{style=&quot;table-layout:fixed&quot;
+
+例如，將此資料流視為 [!DNL Amazon Kinesis] 目標，其中在資料流中選擇了三個段，並將四個屬性映射到目標。
+
+![AmazonKinesis目標資料流](/help/destinations/assets/catalog/http/profile-export-example-dataflow.png)
+
+導出到目標的配置檔案可由符合或退出其中一個配置檔案來確定 *三個映射段*。 但是，在資料導出中，在 `segmentMembership` 對象（請參見） [導出的資料](#exported-data) )中，如果特定配置檔案是其成員，則可能會顯示其他未映射的段。 如果配置檔案符合DeLorean Cars分部客戶的資格，但也是受觀看的「回到未來」電影和科幻片迷分部的成員，則另外兩個分部也將出現在 `segmentMembership` 資料導出的對象，即使這些對象未映射到資料流中。
+
+從配置檔案屬性的視點來看，對上述四個屬性的任何更改都將確定目標導出，並且配置檔案上存在的四個映射屬性中的任何一個都將出現在資料導出中。
+
+## 導出的資料 {#exported-data}
+
+已導出 [!DNL Experience Platform] 資料到達 [!DNL Amazon Kinesis] JSON格式的目標。 例如，下面的導出包含符合特定段條件的配置檔案，是另兩個段的成員，並退出另一個段。 導出還包括配置檔案屬性的名字、姓氏、出生日期和個人電子郵件地址。 此配置檔案的標識為ECID和電子郵件。
 
 ```json
 {
@@ -132,17 +150,25 @@ Experience Platform會最佳化設定檔匯出行為至您的Amazon Kinesis目�
     "address": "john.doe@acme.com"
   },
   "segmentMembership": {
-    "ups": {
-      "7841ba61-23c1-4bb3-a495-00d3g5fe1e93": {
-        "lastQualificationTime": "2020-05-25T21:24:39Z",
-        "status": "exited"
+   "ups":{
+      "7841ba61-23c1-4bb3-a495-00d3g5fe1e93":{
+         "lastQualificationTime":"2022-01-11T21:24:39Z",
+         "status":"exited"
       },
-      "59bd2fkd-3c48-4b18-bf56-4f5c5e6967ae": {
-        "lastQualificationTime": "2020-05-25T23:37:33Z",
-        "status": "existing"
+      "59bd2fkd-3c48-4b18-bf56-4f5c5e6967ae":{
+         "lastQualificationTime":"2022-01-02T23:37:33Z",
+         "status":"existing"
+      },
+      "947c1c46-008d-40b0-92ec-3af86eaf41c1":{
+         "lastQualificationTime":"2021-08-25T23:37:33Z",
+         "status":"existing"
+      },
+      "5114d758-ce71-43ba-b53e-e2a91d67b67f":{
+         "lastQualificationTime":"2022-01-11T23:37:33Z",
+         "status":"realized"
       }
-    }
-  },
+   }
+},
   "identityMap": {
     "ecid": [
       {
@@ -164,11 +190,9 @@ Experience Platform會最佳化設定檔匯出行為至您的Amazon Kinesis目�
 }
 ```
 
-
-
 >[!MORELIKETHIS]
 >
->* [連線至Amazon Kinesis並使用流量服務API啟用資料](../../api/streaming-destinations.md)
+>* [連接到AmazonKinesis，並使用流服務API激活資料](../../api/streaming-destinations.md)
 >* [Azure事件中心目標](./azure-event-hubs.md)
->* [目的地類型和類別](../../destination-types.md)
+>* [目標類型和類別](../../destination-types.md)
 

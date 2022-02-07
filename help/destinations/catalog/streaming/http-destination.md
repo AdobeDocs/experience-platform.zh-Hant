@@ -3,9 +3,9 @@ keywords: 流；
 title: HTTP API連接
 description: Adobe Experience Platform的HTTP API目標允許您將配置檔案資料發送到第三方HTTP終結點。
 exl-id: 165a8085-c8e6-4c9f-8033-f203522bb288
-source-git-commit: bf36592fe4ea7b9d9b6703f3aca8fd8344fe5c9f
+source-git-commit: 577b42eef9d4b44b5b556ee31d22276d72c609ea
 workflow-type: tm+mt
-source-wordcount: '1274'
+source-wordcount: '1275'
 ht-degree: 1%
 
 ---
@@ -103,27 +103,19 @@ Experience Platform可優化配置檔案導出行為到HTTP API目標，以便�
 
 請注意，無論更改位於何處，都會為配置檔案導出所有映射的屬性。 因此，在上面的示例中，即使屬性本身沒有更改，也會導出這五個新配置檔案的所有映射屬性。
 
-### 決定更新的內容以及導出中包含的內容 {#what-determines-export-what-is-included}
+### 什麼決定資料導出以及導出中包含的內容 {#what-determines-export-what-is-included}
 
 對於為給定配置檔案導出的資料，瞭解以下兩個不同概念非常重要 *決定資料導出到HTTP API目標的內容* 和 *資料包含在導出中*。
 
 | 決定目標導出的因素 | 目標導出中包含的內容 |
 |---------|----------|
-| <ul><li>映射的屬性和段用作目標更新的提示。 這意味著，如果任何映射段更改狀態（從null更改為已實現或從已實現/現有更新為退出）或任何映射屬性被更新，則將啟動目標導出。</li><li>由於標識當前無法映射到HTTP API目標，因此給定配置檔案上任何標識的更改也會決定目標導出。</li><li>屬性的更改定義為屬性上的任何更新，無論其值是否相同。 這意味著，即使值本身未更改，屬性上的覆蓋也被視為更改。</li></ul> | <ul><li>所有段（具有最新成員身份狀態）都包含在 `segmentMembership` 的雙曲餘切值。</li><li>中的所有標識 `identityMap` 對象也包括在內(Experience Platform當前不支援HTTP API目標中的標識映射)。</li><li>目標導出中只包含映射的屬性。</li></ul> |
+| <ul><li>映射的屬性和段用作目標導出的提示。 這意味著，如果任何映射段更改狀態（從null更改為已實現或從已實現/現有更新為退出）或任何映射屬性被更新，則將啟動目標導出。</li><li>由於標識當前無法映射到HTTP API目標，因此給定配置檔案上任何標識的更改也會決定目標導出。</li><li>屬性的更改定義為屬性上的任何更新，無論其值是否相同。 這意味著，即使值本身未更改，屬性上的覆蓋也被視為更改。</li></ul> | <ul><li>所有段（具有最新成員身份狀態）都包含在 `segmentMembership` 的雙曲餘切值。</li><li>中的所有標識 `identityMap` 對象也包括在內(Experience Platform當前不支援HTTP API目標中的標識映射)。</li><li>目標導出中只包含映射的屬性。</li></ul> |
 
 {style=&quot;table-layout:fixed&quot;
 
 例如，將此資料流視為HTTP目標，其中在資料流中選擇了三個段，並將四個屬性映射到目標。
 
 ![HTTP API目標資料流](/help/destinations/assets/catalog/http/profile-export-example-dataflow.png)
-
-<!--
-
-![HTTP API destination dataflow](/help/destinations/assets/catalog/http/dataflow-destination.png)
-
-![Mapped attributes](/help/destinations/assets/catalog/http/mapped-attributes.png)
-
--->
 
 導出到目標的配置檔案可由符合或退出其中一個配置檔案來確定 *三個映射段*。 但是，在資料導出中，在 `segmentMembership` 對象（請參見） [導出的資料](#exported-data) )中，如果特定配置檔案是其成員，則可能會顯示其他未映射的段。 如果配置檔案符合DeLorean Cars分部客戶的資格，但也是受觀看的「回到未來」電影和科幻片迷分部的成員，則另外兩個分部也將出現在 `segmentMembership` 資料導出的對象，即使這些對象未映射到資料流中。
 
