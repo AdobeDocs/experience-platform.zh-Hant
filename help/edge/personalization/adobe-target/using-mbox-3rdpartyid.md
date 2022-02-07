@@ -2,9 +2,9 @@
 title: mbox3rdPartyId 的即時設定檔同步
 description: 瞭解如何在Adobe Experience PlatformWeb SDK中使用mbox3rdPartyId。
 keywords: 個性化；目標；adobe目標；renderDecisions;sendEvent;mbox3rdPartyId;
-source-git-commit: 86acedc6813a14648848a25e08aa7e65f48d1a2a
+source-git-commit: 439f26177837e985ef95e972c3102cc2db37d539
 workflow-type: tm+mt
-source-wordcount: '163'
+source-wordcount: '161'
 ht-degree: 9%
 
 ---
