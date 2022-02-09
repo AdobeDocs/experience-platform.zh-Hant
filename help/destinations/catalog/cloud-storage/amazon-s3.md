@@ -1,11 +1,11 @@
 ---
-keywords: Amazon S3;S3目的地；s3;Amazon s3
-title: Amazon S3連線
-description: 建立與Amazon Web Services(AWS)S3儲存的即時傳出連線，以定期從Adobe Experience Platform將CSV資料檔案匯出至您自己的S3貯體。
+keywords: AmazonS3;S3目標；s3;amazon s3
+title: AmazonS3連接
+description: 建立到Amazon Web Services(AWS)S3儲存的即時出站連接，以定期將CSV資料檔案從Adobe Experience Platform導出到您自己的S3儲存桶中。
 exl-id: 6a2a2756-4bbf-4f82-88e4-62d211cbbb38
-source-git-commit: bf46f4e6549fcbd975a9f0a6034040ed2e9b34e6
+source-git-commit: e6dc0fb136a6f5199153630a20e8809c2c040107
 workflow-type: tm+mt
-source-wordcount: '390'
+source-wordcount: '503'
 ht-degree: 0%
 
 ---
@@ -14,43 +14,56 @@ ht-degree: 0%
 
 ## 總覽 {#overview}
 
-建立與 [!DNL Amazon Web Services] (AWS)S3儲存，以定期從Adobe Experience Platform將CSV資料檔案匯出至您自己的S3貯體。
+建立到的即時出站連接 [!DNL Amazon Web Services] (AWS)S3儲存，定期將CSV資料檔案從Adobe Experience Platform導出到您自己的S3儲存桶中。
 
-## 匯出類型 {#export-type}
+## 導出類型 {#export-type}
 
-**設定檔**  — 您要匯出區段的所有成員，以及所需的架構欄位(例如：電子郵件地址、電話號碼、姓氏)，如「選取屬性」畫面中所選 [目的地啟動工作流程](../../ui/activate-segment-streaming-destinations.md#mapping).
+**基於配置檔案**  — 導出段的所有成員以及所需的架構欄位(例如：電子郵件地址、電話號碼、姓氏)，從的「選擇屬性」螢幕中選擇 [目標激活工作流](../../ui/activate-segment-streaming-destinations.md#mapping)。
 
-![Amazon S3設定檔匯出類型](../../assets/catalog/cloud-storage/amazon-s3/catalog.png)
+![AmazonS3基於配置檔案的導出類型](../../assets/catalog/cloud-storage/amazon-s3/catalog.png)
 
 ## 連接到目標 {#connect}
 
-若要連線至此目的地，請依照 [目的地設定教學課程](../../ui/connect-destination.md).
+要連接到此目標，請按照 [目標配置教程](../../ui/connect-destination.md)。
 
-### 連線參數 {#parameters}
+### 連接參數 {#parameters}
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_connect_s3_bucket"
+>title="儲存段名稱"
+>abstract="長度必須介於3到63個字元之間。 必須以字母或數字開頭和結尾。 只能包含小寫字母、數字或連字元(-)。 不能將格式設定為IP地址(例如，192.100.1.1)。"
+>text="Learn more in documentation"
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_connect_s3_folderpath"
+>title="資料夾路徑"
+>abstract="只能包含字元A-Z、a-z、0-9，並且可以包含以下特殊字元： `/!-_.'()"^[]+$%.*"`。 要按段檔案建立資料夾，請將宏/%SEGMENT_NAME%或/%SEGMENT_ID%或/%SEGMENT_NAME%/%SEGMENT_ID%插入文本欄位。 宏只能插入資料夾路徑的末尾。 查看文檔中的宏示例。"
+>text="Learn more in documentation"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/cloud-storage/overview.html?lang=en#use-macros" text="使用宏在儲存位置中建立資料夾"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_s3_rsa"
 >title="RSA公鑰"
->abstract="或者，您可以附加RSA格式的公鑰，以將加密添加到導出的檔案中。 您的公開金鑰必須寫入為Base64編碼字串。"
+>abstract="或者，您可以附加RSA格式的公鑰，以將加密添加到導出的檔案中。 公鑰必須寫為Base64編碼字串。"
 >text="Learn more in documentation"
 
-同時 [設定](../../ui/connect-destination.md) 此目的地時，您必須提供下列資訊：
+同時 [設定](../../ui/connect-destination.md) 此目標，必須提供以下資訊：
 
-* **[!DNL Amazon S3]存取金鑰** 和 **[!DNL Amazon S3]密鑰**:在 [!DNL Amazon S3]，產生 `access key - secret access key` 配對，以授與 [!DNL Amazon S3] 帳戶。 了解更多 [Amazon Web Services檔案](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html).
-* **[!UICONTROL 名稱]**:輸入有助於您識別此目的地的名稱。
+* **[!DNL Amazon S3]訪問密鑰** 和 **[!DNL Amazon S3]密鑰**:在 [!DNL Amazon S3]，生成 `access key - secret access key` 對以授予您的平台訪問權 [!DNL Amazon S3] 帳戶。 在 [Amazon Web Services文檔](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html)。
+* **[!UICONTROL 名稱]**:輸入一個名稱，以幫助您標識此目標。
 * **[!UICONTROL 說明]**:輸入此目標的說明。
-* **[!UICONTROL 貯體名稱]**:輸入 [!DNL Amazon S3] 此目的地所使用的貯體。
-* **[!UICONTROL 資料夾路徑]**:輸入要承載導出檔案的目標資料夾的路徑。
+* **[!UICONTROL 儲存段名稱]**:輸入 [!DNL Amazon S3] 該目標使用的儲存桶。
+* **[!UICONTROL 資料夾路徑]**:輸入將承載導出檔案的目標資料夾的路徑。
 
-或者，您可以附加RSA格式的公鑰，以將加密添加到導出的檔案中。 您的公開金鑰必須寫入 [!DNL Base64] 編碼字串。
+或者，您可以附加RSA格式的公鑰，以將加密添加到導出的檔案中。 您的公鑰必須寫為 [!DNL Base64] 編碼字串。
 
 >[!TIP]
 >
->在連線目標工作流程中，您可以根據匯出的區段檔案，在Amazon S3儲存空間中建立自訂資料夾。 閱讀 [使用宏在儲存位置中建立資料夾](overview.md#use-macros) 的說明。
+>在連接目標工作流中，您可以在每個導出的段檔案的AmazonS3儲存中建立一個自定義資料夾。 閱讀 [使用宏在儲存位置中建立資料夾](overview.md#use-macros) 的雙曲餘切值。
 
-### 必填 [!DNL Amazon S3] 權限 {#required-s3-permission}
+### 必需 [!DNL Amazon S3] 權限 {#required-s3-permission}
 
-若要成功連線並將資料匯出至 [!DNL Amazon S3] 儲存位置，為建立Identity and Access Management(IAM)用戶 [!DNL Platform] in [!DNL Amazon S3] 並指派下列動作的權限：
+要成功將資料連接和導出到 [!DNL Amazon S3] 建立Identity and Access Management(IAM)用戶 [!DNL Platform] 在 [!DNL Amazon S3] 並為以下操作分配權限：
 
 * `s3:DeleteObject`
 * `s3:GetBucketLocation`
@@ -69,10 +82,10 @@ Commenting out this note, as write permissions are assigned through the s3:PutOb
 
 -->
 
-## 啟用此目的地的區段 {#activate}
+## 將段激活到此目標 {#activate}
 
-請參閱 [啟用受眾資料以批次設定檔匯出目的地](../../ui/activate-batch-profile-destinations.md) 以取得啟用受眾區段至此目的地的指示。
+請參閱 [將受眾資料激活到批配置檔案導出目標](../../ui/activate-batch-profile-destinations.md) 有關激活此目標受眾段的說明。
 
-## 匯出的資料 {#exported-data}
+## 導出的資料 {#exported-data}
 
-針對 [!DNL Amazon S3] 目的地， [!DNL Platform] 會建立 `.csv` 檔案。 如需檔案的詳細資訊，請參閱 [啟用受眾資料以批次設定檔匯出目的地](../../ui/activate-batch-profile-destinations.md) 在區段啟用教學課程中。
+對於 [!DNL Amazon S3] 目的地， [!DNL Platform] 建立 `.csv` 檔案。 有關檔案的詳細資訊，請參見 [將受眾資料激活到批配置檔案導出目標](../../ui/activate-batch-profile-destinations.md) 在段激活教程中。
