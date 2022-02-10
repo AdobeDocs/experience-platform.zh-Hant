@@ -5,7 +5,7 @@ topic-legacy: overview
 type: Tutorial
 description: 瞭解如何使用Adobe Experience PlatformUI建立Snowflake源連接。
 exl-id: fb2038b9-7f27-4818-b5de-cc8072122127
-source-git-commit: 25cc0c5a1e6dcf01b82956ea1022663445315a27
+source-git-commit: ac7910c971fbedf3afebd87633f814d597260cae
 workflow-type: tm+mt
 source-wordcount: '445'
 ht-degree: 1%
@@ -36,7 +36,7 @@ ht-degree: 1%
 | 密碼 | 的密碼 [!DNL Snowflake] 用戶帳戶。 |
 | 連接字串 | 用於連接到您的 [!DNL Snowflake] 實例。 的連接字串模式 [!DNL Snowflake] 是 `jdbc:snowflake://{ACCOUNT_NAME}.snowflakecomputing.com/?user={USERNAME}&password={PASSWORD}&db={DATABASE}&warehouse={WAREHOUSE}` |
 
-有關這些值的詳細資訊，請參閱 [此Snowflake文檔](https://docs.snowflake.com/en/user-guide/oauth-custom.html)。
+有關這些值的詳細資訊，請參閱 [此Snowflake文檔](https://docs.snowflake.com/en/user-guide/key-pair-auth.html)。
 
 ## 連接Snowflake帳戶
 
