@@ -1,37 +1,37 @@
 ---
-keywords: 個人化；個人化
-title: 個人化目的地概觀
-description: 個人化平台會收集個別行為的資料和深入分析。 這些平台可協助行銷人員導覽匿名資料、根據先前的活動或作為具有類似習慣之受眾區段的一部分，向潛在客戶提供優惠方案或廣告。
+keywords: 個性化；個性化
+title: 個性化目標概述
+description: 個性化平台從單個行為收集資料和洞察力。 這些平台可以幫助營銷人員導航匿名資料，根據先前的活動或作為具有類似習慣的受眾群的一部分向潛在客戶提供優惠或廣告。
 exl-id: 18a2b170-43d0-4d41-8afc-d2f0f9bfd7bb
-source-git-commit: 8f9a601a833149c83d465f68d16ca362ed730b8a
+source-git-commit: 7acb823b9cbfb4a7988235949c6d2fd0b9baa7c0
 workflow-type: tm+mt
-source-wordcount: '145'
-ht-degree: 10%
+source-wordcount: '143'
+ht-degree: 11%
 
 ---
 
-# 個人化目的地概觀 {#personalization-destinations}
+# 個性化目標概述 {#personalization-destinations}
 
 ## 總覽 {#overview}
 
-個人化平台會收集個別行為的資料和深入分析。 這些平台可協助行銷人員導覽匿名資料、根據先前的活動或作為具有類似習慣之受眾區段的一部分，向潛在客戶提供優惠方案或廣告。
+個性化平台從單個行為收集資料和洞察力。 這些平台可以幫助營銷人員導航匿名資料，根據先前的活動或作為具有類似習慣的受眾群的一部分向潛在客戶提供優惠或廣告。
 
-## 支援的個人化目的地 {#supported-destinations}
+## 支援的個性化目標 {#supported-destinations}
 
-目前，Platform支援下列個人化目的地。 如需如何連線至這些目的地的詳細資訊，請參閱個別連結：
+目前，平台支援下面列出的個性化目標。 有關如何連接到這些目標的資訊，請參見各個連結：
 
 **連線**
 
-* [（測試版）Adobe Target](adobe-target-connection.md)
-* [（測試版）自訂個人化連線](custom-personalization.md)
+* [Adobe Target](adobe-target-connection.md)
+* [自定義個性化連接](custom-personalization.md)
 
 **擴充功能**
 
 * [Adobe Target 擴充功能](adobe-target.md)
 * [Adobe Target v2 擴充功能](adobe-target-v2.md)
-* [Beemray擴充功能](beemray.md)
-* [D&amp;B Visitor Intelligence擴充功能](dnb.md)
+* [貝姆雷延伸](beemray.md)
+* [D&amp;B訪問者智慧擴展](dnb.md)
 * [Experience Cloud ID 服務擴充功能](adobe-ecid.md)
-* [Gainsight擴充功能](gainsight.md)
-* [Kickfire擴充功能](kickfire.md)
-* [Marketo Web Personalization擴充功能](marketo-web-personalization.md)
+* [Gainsight擴展](gainsight.md)
+* [Kickfire擴展](kickfire.md)
+* [MarketoWeb個性化擴展](marketo-web-personalization.md)
