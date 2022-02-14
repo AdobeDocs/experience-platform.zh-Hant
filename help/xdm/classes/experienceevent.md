@@ -5,9 +5,9 @@ title: XDM ExperienceEvent類
 topic-legacy: overview
 description: 本文檔概述了XDM ExperienceEvent類以及事件資料建模的最佳做法。
 exl-id: a8e59413-b52f-4ea5-867b-8d81088a3321
-source-git-commit: f5d341daffd7d4d77ee816cc7537b0d0c52ca636
+source-git-commit: 07fdbf467f3dde16f9216db47099b92cbbfd18d2
 workflow-type: tm+mt
-source-wordcount: '1758'
+source-wordcount: '1783'
 ht-degree: 1%
 
 ---
@@ -118,6 +118,10 @@ Adobe提供幾個標準欄位組，用於 [!DNL XDM ExperienceEvent] 類。 以�
 | `directMarketing.emailDelivered` | 已成功將電子郵件發送到個人電子郵件服務 |
 | `directMarketing.emailOpened` | 一個人開啟了營銷電子郵件。 |
 | `directMarketing.emailUnsubscribed` | 取消訂閱營銷電子郵件的人。 |
+| `inappmessageTracking.dismiss` | 應用內消息已被刪除。 |
+| `inappmessageTracking.display` | 顯示應用內消息。 |
+| `inappmessageTracking.interact` | 一個應用內資訊被互動。 |
+| `leadOperation.callWebhook` | 為了響應線索，調用了網鈎。 |
 | `leadOperation.convertLead` | 已轉換潛在顧客。 |
 | `leadOperation.interestingMoment` | 為一個人錄制了一個有趣的時刻。 |
 | `leadOperation.newLead` | 已建立潛在顧客。 |
