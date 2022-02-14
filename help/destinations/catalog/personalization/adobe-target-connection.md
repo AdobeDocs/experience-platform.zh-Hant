@@ -3,9 +3,9 @@ keywords: 目標個性化；目的地；體驗平台目標；adobe目標目標�
 title: Adobe Target
 description: Adobe Target是一個應用程式，在跨網站、移動應用等的所有入站客戶交互中提供基於人工智慧的即時個性化和實驗功能。
 exl-id: 3e3c405b-8add-4efb-9389-5ad695bc9799
-source-git-commit: 8845bb42fe1a47f1bcd6521f7886c1582d209993
+source-git-commit: fb79d0697244518cc713efeada7d017d64ce6214
 workflow-type: tm+mt
-source-wordcount: '432'
+source-wordcount: '475'
 ht-degree: 0%
 
 ---
@@ -33,6 +33,10 @@ Adobe Target是Adobe Experience Platform的個性化連接。
 一家房屋租賃和銷售公司希望根據Adobe Experience Platform的客戶細分資格，在自己的首頁上打出一個標語，個性化自己的首頁。 公司可以選擇哪些受眾應該獲得個性化體驗，並將這些體驗作為目標服務的目標標準發送給Adobe Target。
 
 ## 連接到目標 {#connect}
+
+>[!IMPORTANT]
+>
+>在建立 [!DNL Adobe Target] 連接，我們建議您閱讀有關如何 [為同一頁和下一頁個性化設定配置個性化目標](../../ui/configure-personalization-destinations.md)。 本指南將引導您跨多個Experience Platform元件完成同一頁和下一頁個性化使用案例所需的配置步驟。
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_target_datastream"
