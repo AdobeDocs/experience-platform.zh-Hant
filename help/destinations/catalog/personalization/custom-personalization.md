@@ -3,9 +3,9 @@ keywords: 自定義個性化；目的地；體驗平台定制目標；
 title: 自定義個性化連接
 description: 此目標提供外部個性化、內容管理系統、廣告伺服器以及您站點上運行的其他應用程式，以便從Adobe Experience Platform檢索段資訊。 此目標基於用戶配置檔案段成員身份提供即時個性化。
 exl-id: 2382cc6d-095f-4389-8076-b890b0b900e3
-source-git-commit: d0638ea80c03bf9d5ce76e27e3a4fc7358bfe83c
+source-git-commit: acbee5c4f67dd576b5513c061a67ed4b5af2d254
 workflow-type: tm+mt
-source-wordcount: '635'
+source-wordcount: '637'
 ht-degree: 1%
 
 ---
@@ -63,7 +63,7 @@ ht-degree: 1%
 
 ## 導出的資料 {#exported-data}
 
-如果您使用 [Adobe標籤](../../../tags/home.md) 要部署Experience PlatformWeb SDK，請使用 [發送事件完成](../../../edge/extension/event-types.md) 功能和自定義代碼操作將 `event.destinations` 可用於查看導出資料的變數。
+如果您使用 [Adobe Experience Platform標籤](../../../tags/home.md) 要部署Experience PlatformWeb SDK，請使用 [發送事件完成](../../../edge/extension/event-types.md) 功能和自定義代碼操作將 `event.destinations` 可用於查看導出資料的變數。
 
 下面是 `event.destinations` 變數：
 
@@ -85,7 +85,7 @@ ht-degree: 1%
 ]
 ```
 
-如果您不使用 [Adobe標籤](../../../tags/home.md) 要部署Experience PlatformWeb SDK，請使用 [處理事件響應](../../../edge/fundamentals/tracking-events.md#handling-responses-from-events) 功能，查看導出的資料。
+如果您不使用 [標籤](../../../tags/home.md) 要部署Experience PlatformWeb SDK，請使用 [處理事件響應](../../../edge/fundamentals/tracking-events.md#handling-responses-from-events) 功能，查看導出的資料。
 
 可以分析來自Adobe Experience Platform的JSON響應，以查找您正與Adobe Experience Platform整合的應用程式的相應整合別名。 段ID可以作為目標參數傳遞給應用程式的代碼。 下面是特定於目標響應的示例。
 
