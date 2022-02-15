@@ -5,10 +5,10 @@ user-guide-title: Adobe Experience 平台網頁 SDK 說明
 breadcrumb-title: Web SDK 指南
 user-guide-description: 通過邊緣網路與Experience Cloud服務交互。
 feature: Web SDK
-source-git-commit: 2b6a64bed3033cc5e4f97ed838050dab4400a282
+source-git-commit: f237ee364cdf6048840dca797f7827b9b88dd73b
 workflow-type: tm+mt
-source-wordcount: '146'
-ht-degree: 30%
+source-wordcount: '154'
+ht-degree: 28%
 
 ---
 
@@ -46,6 +46,7 @@ ht-degree: 30%
       * [單頁應用程式實現](personalization/adobe-target/spa-implementation.md)
       * [訪問響應令牌](personalization/adobe-target/accessing-response-tokens.md)
       * [使用mbox第三方ID](personalization/adobe-target/using-mbox-3rdpartyid.md)
+      * [將at.js庫與Web SDK進行比較](personalization/adobe-target/web-sdk-atjs-comparison.md)
    * Offer Decisioning {#offer-decisioning}
       * [總覽](personalization/offer-decisioning/offer-decisioning-overview.md)
 * 同意 {#consent}
