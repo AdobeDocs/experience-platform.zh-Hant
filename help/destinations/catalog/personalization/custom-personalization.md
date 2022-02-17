@@ -3,9 +3,9 @@ keywords: 自定義個性化；目的地；體驗平台定制目標；
 title: 自定義個性化連接
 description: 此目標提供外部個性化、內容管理系統、廣告伺服器以及您站點上運行的其他應用程式，以便從Adobe Experience Platform檢索段資訊。 此目標基於用戶配置檔案段成員身份提供即時個性化。
 exl-id: 2382cc6d-095f-4389-8076-b890b0b900e3
-source-git-commit: fb79d0697244518cc713efeada7d017d64ce6214
+source-git-commit: ee9ed1c17a566f37b4ad79df7c66f8b2ffb4b879
 workflow-type: tm+mt
-source-wordcount: '682'
+source-wordcount: '681'
 ht-degree: 1%
 
 ---

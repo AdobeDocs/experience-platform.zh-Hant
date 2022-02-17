@@ -6,9 +6,9 @@ title: 監視UI中目標的資料流
 topic-legacy: overview
 type: Tutorial
 exl-id: 8eb7bb3c-f2dc-4dbc-9cf5-3d5d3224f5f1
-source-git-commit: e75dec7d71c301ea16cc5bfb6bad948964180c4d
+source-git-commit: ee9ed1c17a566f37b4ad79df7c66f8b2ffb4b879
 workflow-type: tm+mt
-source-wordcount: '3204'
+source-wordcount: '3205'
 ht-degree: 0%
 
 ---
@@ -203,7 +203,7 @@ ht-degree: 0%
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_segment_jobs"
 >title="段作業"
->abstract="段作業控制面板包含有關所有段的評估和導出作業的資訊。"
+>abstract="段作業視圖包含有關所有段的評估和導出作業的資訊。"
 
 訪問 [!UICONTROL 段作業] 儀表板，選擇 **[!UICONTROL 監視]** (![監視表徵圖](../assets/ui/monitor-destinations/monitoring-icon.png))。 在 [!UICONTROL 監視] ，選擇 [!UICONTROL 段作業]。 的 [!UICONTROL 監視] 儀表板包含有關段評估和導出作業的度量和資訊。
 
@@ -226,7 +226,7 @@ ht-degree: 0%
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_activation"
 >title="啟用"
->abstract="目標激活包含有關段的激活狀態和從即時客戶配置檔案獲取的度量的資訊，以生成唯一標識。"
+>abstract="目標激活視圖包含有關段的激活狀態和從即時客戶配置檔案獲取的度量的資訊，以生成唯一標識。"
 
 訪問 [!UICONTROL 監視] 儀表板，選擇 **[!UICONTROL 監視]** (![監視表徵圖](../assets/ui/monitor-destinations/monitoring-icon.png))。 在 [!UICONTROL 監視] ，選擇 [!UICONTROL 目標]。 的 [!UICONTROL 監視] 儀表板包含有關目標運行作業的度量和資訊。
 

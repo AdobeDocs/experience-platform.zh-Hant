@@ -6,9 +6,9 @@ title: 監視UI中源的資料流
 topic-legacy: overview
 type: Tutorial
 exl-id: 53fa4338-c5f8-4e1a-8576-3fe13d930846
-source-git-commit: 38e56beacd8857648abbbf20f4a5c4941ff779ee
+source-git-commit: ee9ed1c17a566f37b4ad79df7c66f8b2ffb4b879
 workflow-type: tm+mt
-source-wordcount: '1856'
+source-wordcount: '1862'
 ht-degree: 0%
 
 ---
@@ -41,7 +41,7 @@ ht-degree: 0%
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_source_ingestion"
 >title="源攝取"
->abstract="源處理包含有關資料湖服務中資料活動狀態和度量的資訊，包括接收的記錄和失敗的記錄。 查看度量定義指南，瞭解有關度量和圖形的詳細資訊。"
+>abstract="「源接收」視圖包含資料湖服務中資料活動狀態和度量的資訊，包括已接收的記錄和失敗的記錄。 查看度量定義指南，瞭解有關度量和圖形的詳細資訊。"
 >text="Learn more in documentation"
 
 >[!CONTEXTUALHELP]
@@ -151,7 +151,7 @@ ht-degree: 0%
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_identity_processing"
 >title="身份處理"
->abstract="身份處理包含有關接收到身份服務的記錄的資訊，包括添加的身份數、建立的圖形和更新的圖形。 查看度量定義指南，瞭解有關度量和圖形的詳細資訊。"
+>abstract="「身份處理」視圖包含有關接收到身份服務的記錄的資訊，包括添加的身份數、建立的圖形和更新的圖形。 查看度量定義指南，瞭解有關度量和圖形的詳細資訊。"
 >text="Learn more in documentation"
 
 >[!CONTEXTUALHELP]
@@ -194,7 +194,7 @@ ht-degree: 0%
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_profile_processing"
 >title="配置檔案處理"
->abstract="配置檔案處理包含有關接收到配置檔案服務的記錄的資訊，包括建立的配置檔案片段數、更新的配置檔案片段數和配置檔案片段總數。"
+>abstract="「配置檔案處理」視圖包含有關接收到配置檔案服務的記錄的資訊，包括建立的配置檔案片段數、更新的配置檔案片段數和配置檔案片段總數。"
 >text="Learn more in documentation"
 
 >[!CONTEXTUALHELP]
