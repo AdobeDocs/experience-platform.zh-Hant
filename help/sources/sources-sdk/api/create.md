@@ -1,49 +1,49 @@
 ---
-keywords: Experience Platform；首頁；熱門主題；來源；連接器；來源連接器；來源sdk;sdk; SDK
+keywords: Experience Platform；首頁；熱門主題；源；連接器；源連接器；源sdk;sdk;SDK
 solution: Experience Platform
-title: 使用流量服務API（測試版）建立新的連接規範
+title: 使用流服務API(Beta)建立新連接規範
 topic-legacy: tutorial
-description: 以下檔案提供如何使用流量服務API建立連線規格，以及透過來源SDK整合新來源的步驟。
+description: 以下文檔提供了如何使用流服務API建立連接規範並通過源SDK整合新源的步驟。
 hide: true
 hidefromtoc: true
 exl-id: 0b0278f5-c64d-4802-a6b4-37557f714a97
-source-git-commit: 5af36c096a030c9f06c304f2c899ce49066ae4cb
+source-git-commit: d84af88bc1bfe2bfb1bbf2bf36cdb43894975288
 workflow-type: tm+mt
 source-wordcount: '524'
 ht-degree: 2%
 
 ---
 
-# 使用 [!DNL Flow Service] API（測試版）
+# 使用 [!DNL Flow Service] API(Beta)
 
 >[!IMPORTANT]
 >
->Sources SDK目前仍在測試階段，而您的組織可能尚未取得存取權。 本檔案所述的功能可能會有所變更。
+>源SDK當前處於測試版中，您的組織可能尚未訪問它。 本文檔中描述的功能可能會發生更改。
 
-連接規範表示源的結構。 它包含有關源的身份驗證要求的資訊，定義如何探索和檢查源資料，並提供有關給定源的屬性的資訊。 此 `/connectionSpecs` 端點 [!DNL Flow Service] API可讓您以程式設計方式管理組織內的連線規格。
+連接規範表示源的結構。 它包含有關源的驗證要求的資訊，定義如何瀏覽和檢查源資料，並提供有關給定源的屬性的資訊。 的 `/connectionSpecs` 端點 [!DNL Flow Service] API允許您以寫程式方式管理組織內的連接規範。
 
-以下文檔提供了如何使用 [!DNL Flow Service] API並透過來源SDK整合新來源。
+以下文檔提供了有關如何使用 [!DNL Flow Service] API，並通過源SDK整合新源。
 
 ## 快速入門
 
-繼續之前，請檢閱 [快速入門手冊](./getting-started.md) 如需相關檔案的連結，請參閱本檔案中讀取範例API呼叫的指南，以及成功呼叫任何Experience PlatformAPI所需的必要標頭重要資訊。
+在繼續之前，請查看 [入門指南](./getting-started.md) 有關相關文檔的連結、閱讀本文檔中示例API調用的指南，以及有關成功調用任何Experience PlatformAPI所需標頭的重要資訊。
 
-## 收整合品
+## 收集對象
 
-通過 [!DNL Sources SDK] 是與您的Adobe代表協調，並識別來源對應之值 **圖示**, **說明**, **標籤**，和 **類別**.
+建立新源的第一步 [!DNL Sources SDK] 與Adobe代表協調，並確定源的相應值 **表徵圖**。 **描述**。 **標籤**, **類別**。
 
-| 成品 | 說明 | 範例 |
+| 工件 | 說明 | 範例 |
 | --- | --- | --- |
 | 標籤 | 源的名稱。 | [!DNL MailChimp Members] |
-| 說明 | 您的來源的簡短說明。 | 建立連線至您的 [!DNL Mailchimp Members] 例項，將歷史和排程資料內嵌至Experience Platform。 |
-| 圖示 | 代表您來源的影像或標誌。 圖示會顯示在您來源的Platform UI呈現中。 | `mailchimp-members-icon.svg` |
-| 類別 | 源的類別。 | <ul><li>`advertising`</li><li>`crm`</li><li>`customer success`</li><li>`database`</li><li>`ecommerce`</li><li>`marketing automation`</li><li>`payments`</li><li>`protocols`</li></ul> |
+| 說明 | 來源的簡要描述。 | 建立到您的即時入站連接 [!DNL Mailchimp Members] 實例，將歷史資料和計畫資料都錄入Experience Platform。 |
+| 圖示 | 表示源的影像或徽標。 該表徵圖顯示在源的平台UI呈現中。 | `mailchimp-members-icon.svg` |
+| 類別 | 來源的類別。 | <ul><li>`advertising`</li><li>`crm`</li><li>`customer success`</li><li>`database`</li><li>`ecommerce`</li><li>`marketing automation`</li><li>`payments`</li><li>`protocols`</li></ul> |
 
 {style=&quot;table-layout:auto&quot;}
 
 ## 複製連接規範模板
 
-收集到所需的成品後，將下面的連接規範模板複製並貼到所選的文本編輯器中，然後以方括弧更新屬性 `{}` 與特定來源相關的資訊。
+收集所需對象後，將下面的連接規範模板複製並貼上到所選文本編輯器中，然後更新方括弧中的屬性 `{}` 與特定來源相關的資訊。
 
 ```json
 {
@@ -185,59 +185,200 @@ ht-degree: 2%
         "isPreview": true,
         "isBeta": true,
         "category": {
-          "key": "{CATEGORY}"
+          "key": "protocols"
         },
         "icon": {
-          "key": "{ICON}"
+          "key": "genericRestIcon"
         },
         "description": {
-          "key": "{DESCRIPTION}"
+          "key": "genericRestDescription"
         },
         "label": {
-          "key": "{LABEL}"
+          "key": "genericRestLabel"
         }
-      },
-      "urlParams": {
-        "path": "{RESOURCE_PATH}",
-        "method": "{GET_or_POST}",
-        "queryParams": "{QUERY_PARAMS}"
-      },
-      "headerParams": "{HEADER_VALUES}",
-      "bodyParams": "{BODY_PARAMS_USED_IF_METHOD_IS_POST}",
-      "contentPath": {
-        "path": "{PATH_SHOULD_POINT_TO_COLLECTION_OF_RECORDS}",
-        "skipAttributes": [],
-        "overrideWrapperAttribute": "{OVERRIDE_ATTRIBUTES}"
-      },
-      "explodeEntityPath": {
-        "path": "{PATH_SHOULD_POINT_TO_COLLECTION_OF_RECORDS}",
-        "skipAttributes": [],
-        "overrideWrapperAttribute": "{OVERRIDE_ATTRIBUTES}"
-      },
-      "paginationParams": {
-        "type": "{OFFSET_OR_POINTER}",
-        "limitName": "{NUMBER_OF_RECORDS_ATTRIBUTE_NAME}",
-        "limitValue": "{NUMBER_OF_RECORDS_PER_PAGE}",
-        "offSetName": "{OFFSET_ATTRIBUTE_NAME_REQUIRED_IN_CASE_OF_OFFSET BASED_PAGINATION}",
-        "pointerName": "{POINTER_PATH_REQUIRED_IN__CASE_OF_POINTER BASED_PAGINATION}"
-      },
-      "scheduleParams": {
-        "scheduleStartParamName": "{START_TIME_PARAMETER_NAME}",
-        "scheduleEndParamName": "{END_TIME_PARAMETER_NAME}",
-        "scheduleStartParamFormat": "{DATE_TIME_FORMAT_FOR_START_TIME}",
-        "scheduleEndParamFormat": "{END_TIME_FORMAT_FOR_START_TIME}"
       }
     },
     "spec": {
       "$schema": "http://json-schema.org/draft-07/schema#",
       "type": "object",
-      "description": "Define user input parameters to fetch resource values.",
+      "description": "defines static and user input parameters to fetch resource values.",
       "properties": {
-        "listId": {
-          "type": "string",
-          "description": "listId for which members need to fetch."
+        "urlParams": {
+          "type": "object",
+          "properties": {
+            "path": {
+              "type": "string",
+              "description": "Enter resource path",
+              "example": "/3.0/reports/campaignId/email-activity"
+            },
+            "method": {
+              "type": "string",
+              "description": "Http method type.",
+              "enum": [
+                "GET",
+                "POST"
+              ]
+            },
+            "queryParams": {
+              "type": "object",
+              "description": "query parameters in json format",
+              "example": "{'key':'value','key1':'value1'} in JSON format"
+            }
+          },
+          "required": [
+            "path",
+            "method"
+          ]
+        },
+        "headerParams": {
+          "type": "object",
+          "description": "header parameters in json format",
+          "example": "{'user':'c26f50c88dc035610e6753f807e28e9','x-api-key':'apiKey'}"
+        },
+        "contentPath": {
+          "type": "object",
+          "description": "Params required for main collection content.",
+          "properties": {
+            "path": {
+              "description": "path to main content.",
+              "type": "string",
+              "example": "$.emails"
+            },
+            "skipAttributes": {
+              "type": "array",
+              "description": "list of attributes that needs to be skipped while fattening the array.",
+              "example": "[total_items]",
+              "items": {
+                "type": "string"
+              }
+            },
+            "keepAttributes": {
+              "type": "array",
+              "description": "list of attributes that needs to be kept while fattening the array.",
+              "example": "[total_items]",
+              "items": {
+                "type": "string"
+              }
+            },
+            "overrideWrapperAttribute": {
+              "type": "string",
+              "description": "rename root content path node.",
+              "example": "email"
+            }
+          },
+          "required": [
+            "path"
+          ]
+        },
+        "explodeEntityPath": {
+          "type": "object",
+          "description": "Params required for sub-array content.",
+          "properties": {
+            "path": {
+              "description": "path to sub-array content.",
+              "type": "string",
+              "example": "$.email.activity"
+            },
+            "skipAttributes": {
+              "type": "array",
+              "description": "list of attributes that needs to be skipped while fattening sub-array.",
+              "example": "[total_items]",
+              "items": {
+                "type": "string"
+              }
+            },
+            "keepAttributes": {
+              "type": "array",
+              "description": "list of attributes that needs to be kept while fattening the sub-array.",
+              "example": "[total_items]",
+              "items": {
+                "type": "string"
+              }
+            },
+            "overrideWrapperAttribute": {
+              "type": "string",
+              "description": "rename root content path node.",
+              "example": "activity"
+            }
+          },
+          "required": [
+            "path"
+          ]
+        },
+        "paginationParams": {
+          "type": "object",
+          "description": "Params required to fetch data using pagination.",
+          "properties": {
+            "type": {
+              "description": "Pagination fetch type.",
+              "type": "string",
+              "enum": [
+                "OFFSET",
+                "POINTER"
+              ]
+            },
+            "limitName": {
+              "type": "string",
+              "description": "limit property name",
+              "example": "limit or count"
+            },
+            "limitValue": {
+              "type": "integer",
+              "description": "number of records per page to fetch.",
+              "example": "limit=10 or count=10"
+            },
+            "offsetName": {
+              "type": "string",
+              "description": "offset property name",
+              "example": "offset"
+            },
+            "pointerPath": {
+              "type": "string",
+              "description": "pointer property name",
+              "example": "pointer"
+            }
+          },
+          "required": [
+            "type",
+            "limitName",
+            "limitValue"
+          ]
+        },
+        "scheduleParams": {
+          "type": "object",
+          "description": "Params required to fetch data for batch schedule.",
+          "properties": {
+            "scheduleStartParamName": {
+              "type": "string",
+              "description": "order property name to get the order by date."
+            },
+            "scheduleEndParamName": {
+              "type": "string",
+              "description": "order property name to get the order by date."
+            },
+            "scheduleStartParamFormat": {
+              "type": "string",
+              "description": "order property name to get the order by date.",
+              "example": "yyyy-MM-ddTHH:mm:ssZ"
+            },
+            "scheduleEndParamFormat": {
+              "type": "string",
+              "description": "order property name to get the order by date.",
+              "example": "yyyy-MM-ddTHH:mm:ssZ"
+            }
+          },
+          "required": [
+            "scheduleStartParamName",
+            "scheduleEndParamName"
+          ]
         }
-      }
+      },
+      "required": [
+        "urlParams",
+        "contentPath",
+        "paginationParams",
+        "scheduleParams"
+      ]
     }
   },
   "exploreSpec": {
@@ -287,17 +428,17 @@ ht-degree: 2%
 
 ## 建立連接規範 {#create}
 
-獲得連接規範模板後，您現在可以通過填寫與源對應的適當值來開始創作新的連接規範。
+獲取連接規範模板後，現在可以通過填寫與源對應的相應值開始創作新的連接規範。
 
 連接規範可分為三個不同部分：驗證規範、源規範和瀏覽規範。
 
-有關如何填入連接規範每個部分的值的說明，請參閱以下文檔：
+有關如何填充連接規範各部分值的說明，請參閱以下文檔：
 
 * [配置身份驗證規範](../config/authspec.md)
 * [配置源規範](../config/sourcespec.md)
 * [配置瀏覽規範](../config/explorespec.md)
 
-更新規範資訊後，您可以通過向 `/connectionSpecs` 端點 [!DNL Flow Service] API。
+在更新規範資訊後，您可以通過向POST `/connectionSpecs` 端點 [!DNL Flow Service] API。
 
 **API格式**
 
@@ -307,7 +448,7 @@ POST /connectionSpecs
 
 **要求**
 
-以下請求是完整編寫的 [!DNL MailChimp] 來源：
+以下請求是完全創作的連接規範的示例 [!DNL MailChimp] 源：
 
 ```shell
 curl -X POST \
@@ -482,7 +623,7 @@ curl -X POST \
 
 **回應**
 
-成功的響應返回新建立的連接規範，包括其唯一性 `id`.
+成功的響應返回新建立的連接規範，包括其唯一性 `id`。
 
 ```json
 {
@@ -667,6 +808,6 @@ curl -X POST \
 
 ## 後續步驟
 
-現在，您已建立了新的連接規範，必須將其對應的連接規範ID添加到現有流規範中。 請參閱 [更新流規範](./update-flow-specs.md) 以取得更多資訊。
+現在，您已建立了新的連接規範，必須將其相應的連接規範ID添加到現有的流規範中。 請參閱上的教程 [更新流規範](./update-flow-specs.md) 的子菜單。
 
-若要修改您建立的連線規格，請參閱 [更新連接規範](./update-connection-specs.md).
+要修改所建立的連接規範，請參閱上的教程 [更新連接規範](./update-connection-specs.md)。
