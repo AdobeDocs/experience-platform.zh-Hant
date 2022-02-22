@@ -3,9 +3,9 @@ title: 為Experience PlatformWeb SDK配置資料流
 description: '瞭解如何配置資料流。 '
 keywords: 配置；資料流；資料流；邊；資料流ID；環境設定；邊配置ID；標識；ID同步容器ID；沙盒；流入口；事件資料集；目標；客戶端代碼；屬性令牌；目標；Cookie環境ID；目標；url；分析設定塊報告套件ID;
 exl-id: 736c75cb-e290-474e-8c47-2a031f215a56
-source-git-commit: 012ebbadc7149747df1414360eca6451836d6bbc
+source-git-commit: 74c19bb0498002b81f93954d4d8e40f0df36c97d
 workflow-type: tm+mt
-source-wordcount: '1090'
+source-wordcount: '1127'
 ht-degree: 1%
 
 ---
@@ -57,7 +57,7 @@ ID同步可以分組到容器中，以允許在不同時間運行不同的ID同�
 
 | 欄位 | 說明 |
 | --- | --- |
-| [!UICONTROL 沙箱] | **（必需）** 選擇要向其發送資料的平台沙盒。 沙箱是Adobe Experience Platform的虛擬分區，允許您將資料和實施與組織中的其他人隔離開來。<br><br>建立資料流後，其沙盒將無法更改。 的 [!UICONTROL 沙盒] 因此，編輯現有資料流時，選擇欄位不可用。<br><br>有關沙箱在Experience Platform中角色的詳細資訊，請參見 [箱文檔](../../sandboxes/home.md)。 |
+| [!UICONTROL 沙箱] | **（必需）** 選擇要向其發送資料的平台沙盒。 沙箱是Adobe Experience Platform的虛擬分區，允許您將資料和實施與組織中的其他人隔離開來。<br><br>如果建立資料流而不選擇沙盒，則以後仍可以選擇沙盒。<br><br>建立資料流並選擇沙盒後，無法更改沙盒。 的 [!UICONTROL 沙盒] 因此，當使用選定沙盒編輯現有資料流時，選擇欄位不可用。<br><br> 的 [!UICONTROL 沙盒] 因此，編輯現有資料流時，選擇欄位不可用。<br><br>有關沙箱在Experience Platform中角色的詳細資訊，請參見 [箱文檔](../../sandboxes/home.md)。 |
 | [!UICONTROL 事件資料集] | **（必需）** 選擇將客戶事件資料流式傳輸到的平台資料集。 此架構必須使用 [XDM ExperienceEvent類](../../xdm/classes/experienceevent.md)。 |
 | [!UICONTROL 配置檔案資料集] | 選擇客戶屬性資料將發送到的平台資料集。 此架構必須使用 [XDM個人配置檔案類](../../xdm/classes/individual-profile.md)。 |
 | [!UICONTROL Offer Decisioning] | 選中此複選框可啟用平台Web SDK實現的Offer decisioning。 請參閱上的指南 [與平台Web SDK一起使用Offer decisioning](../personalization/offer-decisioning/offer-decisioning-overview.md) 的子菜單。 有關Offer decisioning功能的詳細資訊，請參閱 [Adobe Journey Optimizer文檔](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioniong/get-started/starting-offer-decisioning.html?lang=zh-Hant)。 |
