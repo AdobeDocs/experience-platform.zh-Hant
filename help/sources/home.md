@@ -5,7 +5,7 @@ title: 源連接器概述
 topic-legacy: overview
 description: Adobe Experience Platform允許從外部源接收資料，同時讓您能夠使用平台服務構建、標籤和增強傳入資料。 您可以從多種源(如Adobe應用程式、基於雲的儲存、資料庫和許多其他源)接收資料。
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: 0154891cf2c68a38c08b9fe44251ec13325a7366
+source-git-commit: 7254c84f1a7f4f45a0098e27515a7a01cae395db
 workflow-type: tm+mt
 source-wordcount: '1006'
 ht-degree: 0%
@@ -118,7 +118,7 @@ Experience Platform支援從本地系統接收資料。 有關特定源連接器
 Experience Platform支援從第三方營銷自動化系統接收資料。 有關特定源連接器的詳細資訊，請參閱以下相關文檔：
 
 - [[!DNL HubSpot]](connectors/marketing-automation/hubspot.md)
-- [[!DNL MailChimp]](connectors/marketing-automation/mailchimp.md)
+- [[!DNL Mailchimp]](connectors/marketing-automation/mailchimp.md)
 - [[!DNL Salesforce Marketing Cloud]](connectors/marketing-automation/salesforce-marketing-cloud.md)
 
 ### 付款

@@ -6,9 +6,9 @@ topic-legacy: overview
 type: Tutorial
 description: 瞭解如何在UI中建立Adobe Analytics源連接，以將消費者資料帶入Adobe Experience Platform。
 exl-id: 5ddbaf63-feaa-44f5-b2f2-2d5ae507f423
-source-git-commit: d62d1ff9ebef58401911bab1232d1847d65e043f
+source-git-commit: 96791e24c59734f82113972a8db9191ea1c0c557
 workflow-type: tm+mt
-source-wordcount: '1571'
+source-wordcount: '1560'
 ht-degree: 1%
 
 ---
@@ -57,10 +57,6 @@ ht-degree: 1%
 <!---Analytics Report Suites can be configured for one sandbox at a time. To import the same Report Suite into a different sandbox, the dataset flow will have to be deleted and instantiated again via configuration for a different sandbox.--->
 
 ### 映射
-
->[!IMPORTANT]
->
->用於 [!DNL Analytics] 源為beta。
 
 在映射之前 [!DNL Analytics] 資料到目標XDM架構，必須首先選擇是使用預設架構還是使用自定義架構。
 
