@@ -5,9 +5,9 @@ topic-legacy: overview
 title: 存取控制概覽
 description: Adobe Experience Platform的出入控制通過Adobe Admin Console提供。 此功能利用Admin Console中的產品配置檔案，將用戶與權限和沙箱連結起來。
 exl-id: 591d59ad-2784-4ae4-a509-23649ce712c9
-source-git-commit: 2677d5f0c4369ab692f9e4b16710098a359402d7
+source-git-commit: a3ee014656f135a0701b33f938384d3ab4316a99
 workflow-type: tm+mt
-source-wordcount: '1384'
+source-wordcount: '1392'
 ht-degree: 3%
 
 ---
@@ -97,6 +97,7 @@ Adobe Admin Console為管理Adobe產品權利和組織訪問提供了一個中�
 | [!DNL Profile Management] | [!UICONTROL 為受眾評估段] | 通過評估段定義為受眾生成配置檔案的能力。 |
 | [!DNL Identities] | [!UICONTROL 管理身分識別命名空間] | 訪問讀取、建立、編輯和刪除標識命名空間。 |
 | [!DNL Identities] | [!UICONTROL 檢視身分識別命名空間] | 標識命名空間的只讀訪問。 |
+| [!DNL Identities] | [!UICONTROL 查看標識圖] | 標識圖形的只讀訪問。 |
 | [!DNL Sandbox Administration] | [!UICONTROL 管理沙箱] | 訪問讀取、建立、編輯和刪除沙箱。 |
 | [!DNL Sandbox Administration] | [!UICONTROL 檢視沙箱] | 屬於您組織的沙箱的只讀訪問。 |
 | [!DNL Sandbox Administration] | [!UICONTROL 重置沙盒] | 能夠重置沙盒。 |
