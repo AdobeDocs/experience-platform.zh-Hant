@@ -1,10 +1,10 @@
 ---
 title: Adobe Experience 平台發行說明
 description: Adobe Experience Platform的最新發行說明。
-source-git-commit: 762a4b7336f1c26b79883db9484d8f5fc7bff53c
+source-git-commit: 07dc417cbeb5ac0a59d2405986e9bb771b0735f2
 workflow-type: tm+mt
-source-wordcount: '362'
-ht-degree: 8%
+source-wordcount: '573'
+ht-degree: 6%
 
 ---
 
@@ -14,9 +14,25 @@ ht-degree: 8%
 
 Adobe Experience Platform 現有功能更新：
 
+- [資料收集](#data-collection)
 - [[!DNL Data Prep]](#data-prep)
 - [[!DNL Identity Service]](#identity)
 - [來源](#sources)
+
+## 資料收集 {#data-collection}
+
+平台提供一套技術，使您能夠收集客戶端客戶體驗資料並將其發送到Adobe Experience Platform邊緣網路，在該網路中，資料可以得到豐富、轉換並分發到Adobe或非Adobe目的地。
+
+**新功能**
+
+| 功能 | 說明 |
+| --- | --- |
+| 用於資料流配置的改進的UI工作流 | 已在資料收集UI中建立新資料流的工作流已更新。 將服務添加到資料流時，選項清單中將只包含您有權訪問的服務。 請參閱上的指南 [配置資料流](../../edge/fundamentals/datastreams.md) 的子菜單。 |
+| 資料收集的資料準備 | 如果您使用Adobe Experience PlatformWeb SDK，現在可以利用資料準備功能將資料映射到伺服器端的體驗資料模型(XDM)。 請參閱 [資料收集的資料準備](../../edge/fundamentals/datastreams.md#data-prep) 的子菜單。 |
+| 第一方設備ID | 使用平台Web SDK收集客戶資料時，您現在可以將自己的設備ID發送到Adobe Experience Platform邊緣網路，這為最近對第三方Cookie生命週期的瀏覽器限制提供了一種解決方法。 請參閱上的指南 [第一方設備ID](../../edge/identity/first-party-device-ids.md) 的子菜單。 |
+
+有關平台中資料收集的詳細資訊，請參閱 [資料收集概述](../../collection/home.md)。
+
 
 ## [!DNL Data Prep] {#data-prep}
 
