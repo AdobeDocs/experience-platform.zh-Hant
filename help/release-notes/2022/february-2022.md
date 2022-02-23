@@ -1,10 +1,11 @@
 ---
 title: Adobe Experience 平台發行說明
 description: Adobe Experience Platform的最新發行說明。
-source-git-commit: 6d360721a598ff3fa82169aea608263a09c1f05f
+exl-id: ae453f7d-ac75-4cc3-8435-57d25f086cc3
+source-git-commit: 3ae4d0f0a92c96b15c605c6654693fd6d7e94ba8
 workflow-type: tm+mt
 source-wordcount: '575'
-ht-degree: 5%
+ht-degree: 6%
 
 ---
 
@@ -37,7 +38,7 @@ Adobe Experience Platform 現有功能更新：
 
 [!DNL Data Prep] 允許資料工程師將資料映射到體驗資料模型(XDM)並驗證資料。
 
-**已更新功能**
+**新功能**
 
 | 功能 | 說明 |
 | --- | --- |

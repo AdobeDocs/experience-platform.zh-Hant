@@ -4,15 +4,17 @@ solution: Experience Platform
 title: 使用平台UI建立MailChimp市場活動源連接
 topic-legacy: tutorial
 description: 瞭解如何使用平台UI將Adobe Experience Platform與MailChimp活動連接。
-source-git-commit: a67f9589346a117eb6f51dc9f908680d661e5d5b
+hide: true
+hidefromtoc: true
+exl-id: e8e1ed32-4277-44c9-aafc-6bb9e0a1fe0d
+source-git-commit: f8951b5a0a0ca94679155bad9f4c4c2991740b1a
 workflow-type: tm+mt
 source-wordcount: '682'
 ht-degree: 1%
 
 ---
 
-
-# 建立 [!DNL MailChimp Campaigns] 使用平台UI的源連接
+# 建立 [!DNL Mailchimp Campaigns] 使用平台UI的源連接
 
 本教程提供建立 [!DNL Mailchimp] 源連接器以接收 [!DNL Mailchimp Campaigns] 資料到Adobe Experience Platform。
 
@@ -98,4 +100,3 @@ ht-degree: 1%
 ## 後續步驟
 
 與 [!DNL Mailchimp] 已驗證帳戶， [!DNL Mailchimp Campaigns] 選擇資料後，您現在可以開始建立資料流，以將資料帶到平台。 有關如何建立資料流的詳細步驟，請參見上的文檔 [建立資料流，將營銷自動化資料帶到平台](../../dataflow/marketing-automation.md)。
-

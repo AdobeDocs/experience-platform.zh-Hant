@@ -4,13 +4,15 @@ solution: Experience Platform
 title: 使用平台UI建立MailChimp成員源連接
 topic-legacy: tutorial
 description: 瞭解如何使用平台UI將Adobe Experience Platform連接到MailChimp成員。
-source-git-commit: a67f9589346a117eb6f51dc9f908680d661e5d5b
+hide: true
+hidefromtoc: true
+exl-id: dc620ef9-624d-4fc9-8475-bb475ea86eb7
+source-git-commit: f8951b5a0a0ca94679155bad9f4c4c2991740b1a
 workflow-type: tm+mt
 source-wordcount: '682'
 ht-degree: 1%
 
 ---
-
 
 # 建立 [!DNL Mailchimp Members] 使用平台UI的源連接
 
