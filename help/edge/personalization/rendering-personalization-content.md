@@ -3,16 +3,20 @@ title: 使用Adobe Experience PlatformWeb SDK呈現個性化內容
 description: 瞭解如何使用Adobe Experience PlatformWeb SDK呈現個性化內容。
 keywords: 個性化；renderDecisions;sendEvent;decisionScopes；命題；
 exl-id: 6a3252ca-cdec-48a0-a001-2944ad635805
-source-git-commit: 5d4214c1f9dc8476dd946559f602591c6e929cb1
+source-git-commit: 6ba563db7fd31084813426ffbb0c35be9d7fe4bb
 workflow-type: tm+mt
-source-wordcount: '701'
+source-wordcount: '741'
 ht-degree: 1%
 
 ---
 
 # 呈現個性化內容
 
-Adobe Experience PlatformWeb SDK支援從Adobe的個性化解決方案中檢索個性化內容，包括 [Adobe Target](https://business.adobe.com/products/target/adobe-target.html) 和 [offer decisioning](https://experienceleague.adobe.com/docs/offer-decisioning/using/get-started/starting-offer-decisioning.html?lang=zh-Hant)。 在Adobe Target內建立的內容 [視覺體驗作曲家](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html) 可由SDK自動檢索和呈現。 在Adobe Target內建立的內容 [基於表單的體驗作曲家](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html) 或SDK無法自動呈現Offer decisioning。 相反，您必須使用SDK請求此內容，然後自行手動呈現該內容。
+Adobe Experience PlatformWeb SDK支援從Adobe個性化解決方案檢索個性化內容，包括 [Adobe Target](https://business.adobe.com/products/target/adobe-target.html) 和 [offer decisioning](https://experienceleague.adobe.com/docs/offer-decisioning/using/get-started/starting-offer-decisioning.html?lang=zh-Hant)。
+
+此外，Web SDK還通過Adobe Experience Platform個性化目標(如 [Adobe Target](../../destinations/catalog/personalization/adobe-target-connection.md) 和 [自定義個性化連接](../../destinations/catalog/personalization/custom-personalization.md)。 要瞭解如何為同頁和下一頁個性化配置Experience Platform，請參閱 [專用指南](../../destinations/ui/configure-personalization-destinations.md)。
+
+在Adobe Target內建立的內容 [視覺體驗作曲家](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html) 可由SDK自動檢索和呈現。 在Adobe Target內建立的內容 [基於表單的體驗作曲家](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html) 或SDK無法自動呈現Offer decisioning。 相反，您必須使用SDK請求此內容，然後自行手動呈現該內容。
 
 ## 自動呈現內容
 
