@@ -4,7 +4,7 @@ title: 使用平台UI建立Adobe CampaignManaged Services源連接
 description: 瞭解如何使用平台UI將Adobe Experience Platform與Adobe CampaignManaged Services連接。
 hide: true
 hidefromtoc: true
-source-git-commit: 1b1f25093db642b394c6e05f15f6d1071096eb36
+source-git-commit: 57a34b10e40dee80638392477d49c21e107c491f
 workflow-type: tm+mt
 source-wordcount: '300'
 ht-degree: 1%
@@ -33,8 +33,6 @@ ht-degree: 1%
 
 ### 選擇資料 {#select-data}
 
-的 [!UICONTROL 選擇資料] 步驟，為您提供了配置 [!UICONTROL Adobe Campaign實例]。 [!UICONTROL 目標映射], [!UICONTROL 架構名稱]。
-
 >[!CONTEXTUALHELP]
 >id="platform_sources_campaign_instance"
 >title="ACC實例"
@@ -52,3 +50,5 @@ ht-degree: 1%
 >title="架構名稱"
 >abstract="在Adobe Campaign資料庫中定義的實體的名稱。"
 >text="Learn more in documentation"
+
+的 [!UICONTROL 選擇資料] 步驟，為您提供了配置 [!UICONTROL Adobe Campaign實例]。 [!UICONTROL 目標映射], [!UICONTROL 架構名稱]。
