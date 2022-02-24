@@ -4,10 +4,10 @@ title: 配置式儀表板
 description: Adobe Experience Platform提供了一個儀表板，您可以通過該儀表板查看有關您組織的即時客戶配置檔案資料的重要資訊。
 type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
-source-git-commit: ab76292f569fa8c21dab736d6291891b717d026d
+source-git-commit: 8571d86e1ce9dc894e54fe72dea75b9f8fe84f0b
 workflow-type: tm+mt
-source-wordcount: '2324'
-ht-degree: 1%
+source-wordcount: '1618'
+ht-degree: 0%
 
 ---
 
@@ -43,26 +43,6 @@ Adobe Experience Platform用戶介面(UI)提供了一個儀表板，您可以通
 
 請參閱 [修改儀表板](../customize/modify.md) 和 [構件庫概述](../customize/widget-library.md) 文檔以瞭解詳細資訊。
 
-## (Beta)配置檔案效率洞見 {#profile-efficiency-insights}
-
->[!IMPORTANT]
->
->配置檔案效率洞察功能當前處於測試版中，並且不適用於所有用戶。 文件和功能可能會有所變更。
-
-的 [!UICONTROL 功效] 頁籤提供有關使用配置檔案效能小部件後配置檔案資料的質量和完整性的指標。 這些小部件可一目瞭然地說明您的配置檔案的構成、隨時間推移的完整性趨勢，以及對配置檔案資料質量的評估。
-
-[配置檔案效能儀表板。](../images/profiles/attributes-quality-assessment.png)
-
-查看 [配置檔案效能小部件部分](#profile-efficacy-widgets) 的子菜單。
-
-通過選擇 [**[!UICONTROL 修改儀表板]**](../customize/modify.md) 從 [!UICONTROL 概述] 頁籤。
-
-## 瀏覽配置檔案 {#browse-profiles}
-
-的 [!UICONTROL 瀏覽] 頁籤允許您搜索和查看已接收到IMS組織中的只讀配置檔案。 從此處，您可以看到屬於配置檔案的重要資訊，這些資訊涉及其首選項、過去的事件、交互和段
-
-要瞭解有關平台UI中提供的配置檔案查看功能的詳細資訊，請參閱上的文檔 [瀏覽Real-time Customer Data Platform個人資料](../../rtcdp/profile/profile-browse.md)。
-
 ## 合併策略 {#merge-policies}
 
 顯示在 [!UICONTROL 配置檔案] 儀表板基於應用於您的即時客戶配置檔案資料的合併策略。 當資料從多個源匯集到一起以建立客戶配置檔案時，資料可能包含衝突的值（例如，一個資料集可能將客戶列為「單個」，而另一個資料集可能將客戶列為「已婚」）。 合併策略的任務是確定哪些資料要作為配置檔案的一部分進行優先順序排序和顯示。
@@ -76,14 +56,6 @@ Adobe Experience Platform用戶介面(UI)提供了一個儀表板，您可以通
 >下拉菜單僅顯示與XDM單個配置檔案類相關的合併策略，但是，如果您的組織已建立多個合併策略，則可能意味著您需要滾動才能查看可用合併策略的完整清單。
 
 ![](../images/profiles/select-merge-policy.png)
-
-## 聯合架構
-
-的 [!UICONTROL 聯合架構] 儀表板顯示特定XDM類的聯合架構。 通過選擇 [!UICONTROL **類**] 下拉菜單，可以查看不同XDM類的聯合架構。
-
-聯合架構由多個共用同一類且已為配置檔案啟用的架構組成。 它們使您能夠在單個視圖中查看，即共用同一類的每個架構中包含的每個欄位的合併。
-
-請參閱聯合架構UI指南以瞭解有關 [查看平台UI中的聯合架構](../../profile/ui/union-schema.md#view-union-schemas)。
 
 ## 小部件和度量
 
@@ -162,59 +134,6 @@ Adobe提供了多個標準小部件，您可以使用這些小部件來可視化
 要瞭解有關身份的詳細資訊，請訪問 [Adobe Experience Platform身份服務文檔](../../identity-service/home.md)。
 
 ![](../images/profiles/identity-overlap.png)
-
-## (Beta)配置檔案功效小部件 {#profile-efficacy-widgets}
-
->[!IMPORTANT]
->
->配置檔案效率小部件當前處於測試版中，並且不適用於所有用戶。 文件和功能可能會有所變更。
-
-Adobe提供多個小部件，用於評估可用於資料分析的所攝取配置檔案的完整性。 每個配置檔案功效小部件都可以通過合併策略進行篩選。 要更改合併策略篩選器，請選擇[!UICONTROL 使用合併策略的配置檔案] 下拉清單，然後從可用清單中選擇相應的策略。
-
-要瞭解有關每個配置檔案功效小部件的詳細資訊，請從以下清單中選擇一個小部件的名稱：
-
-* [[!UICONTROL 屬性質量評估]](#attribute-quality-assessment)
-* [[!UICONTROL 配置檔案完整性]](#profile-completeness)
-* [[!UICONTROL 配置檔案完整性趨勢]](#profile-completeness-trend)
-
-### (Beta) [!UICONTROL 屬性質量評估] {#attribute-quality-assessment}
-
-此小部件顯示自上次處理日期以來每個配置檔案屬性的完整性和基數。 此資訊以具有四列的表形式顯示，其中表中的每一行表示單個屬性。
-
-| 欄目 | 說明 |
-|---|---|
-| 屬性 | 屬性的名稱。 |
-| 設定檔 | 具有此屬性並填充了非空值的配置檔案數。 |
-| 完整性 | 此百分比由具有此屬性並填充了非空值的配置檔案總數確定。 該數字通過將配置檔案總數除以該屬性配置檔案中非空值的總數來計算。 |
-| 基數 | 總數 **獨特** 此屬性的非空值。 它是在所有輪廓上測量的。 |
-
-![屬性質量評估構件](../images/profiles/attributes-quality-assessment.png)
-
-### (Beta) [!UICONTROL 按完整性列出的配置檔案] {#profile-completeness}
-
-此小部件建立自上次處理日期以來配置檔案完整性的圓圖。 配置檔案的完整性由所有觀察屬性中填充了非空值的屬性的百分比來衡量。
-
-此小部件顯示高、中或低完整性的配置檔案的比例。 預設情況下，配置了三個完整性級別：
-
-* 高完整性：配置檔案已填充70%以上的屬性。
-* 中等完整性：配置檔案填充的屬性少於70%且超過30%。
-* 低完整性：配置檔案填充的屬性少於30%。
-
-![按完整性構件列出的配置檔案](../images/profiles/profiles-by-completeness.png)
-
-### (Beta) [!UICONTROL 配置檔案完整性趨勢] {#profile-completeness-trend}
-
-此小部件建立堆積柱形圖，以描述隨時間推移配置檔案完整性的趨勢。 完整性由所有觀察屬性中填充非空值的屬性百分比度量。 它將配置檔案完整性分類為自上次處理日期以來的高、中或低完整性。
-
-x軸表示時間，y軸表示輪廓的數量，顏色表示輪廓完整性的三個級別。
-
-完整性的三個層次是：
-
-* 高完整性：配置檔案已填充70%以上的屬性。
-* 中等完整性：配置檔案填充的屬性少於70%且超過30%。
-* 低完整性：配置檔案填充的屬性少於30%。
-
-![配置檔案完整性趨勢構件](../images/profiles/profiles-completeness-trend.png)
 
 ## 後續步驟
 
