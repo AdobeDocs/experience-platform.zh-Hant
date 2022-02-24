@@ -3,9 +3,9 @@ keywords: 自定義個性化；目的地；體驗平台定制目標；
 title: 自定義個性化連接
 description: 此目標提供外部個性化、內容管理系統、廣告伺服器以及您站點上運行的其他應用程式，以便從Adobe Experience Platform檢索段資訊。 此目標基於用戶配置檔案段成員身份提供即時個性化。
 exl-id: 2382cc6d-095f-4389-8076-b890b0b900e3
-source-git-commit: ee9ed1c17a566f37b4ad79df7c66f8b2ffb4b879
+source-git-commit: a990e829c8ba034f31b883360495513f3f5b4cfc
 workflow-type: tm+mt
-source-wordcount: '681'
+source-wordcount: '676'
 ht-degree: 1%
 
 ---
@@ -19,6 +19,10 @@ ht-degree: 1%
 ## 先決條件 {#prerequisites}
 
 此整合由 [Adobe Experience PlatformWeb SDK](../../../edge/home.md) 或 [Adobe Experience Platform移動SDK](https://aep-sdks.gitbook.io/docs/)。 您必須使用其中一個SDK才能使用此目標。
+
+>[!IMPORTANT]
+>
+>建立自定義個性化連接之前，請閱讀有關如何 [為同一頁和下一頁個性化設定配置個性化目標](../../ui/configure-personalization-destinations.md)。 本指南將引導您跨多個Experience Platform元件完成同一頁和下一頁個性化使用案例所需的配置步驟。
 
 ## 導出類型 {#export-type}
 
@@ -39,10 +43,6 @@ ht-degree: 1%
 使用針對其廣告伺服器的單獨的自定義個性化目標，同一網站可以使用來自Adobe Experience Platform的不同段集作為目標標準來針對現場廣告。
 
 ## 連接到目標 {#connect}
-
->[!IMPORTANT]
->
->在建立自定義個性化連接之前，我們建議您閱讀我們的指南，瞭解如何 [為同一頁和下一頁個性化設定配置個性化目標](../../ui/configure-personalization-destinations.md)。 本指南將引導您跨多個Experience Platform元件完成同一頁和下一頁個性化使用案例所需的配置步驟。
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_custom_personalization_datastream"

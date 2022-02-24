@@ -3,9 +3,9 @@ keywords: 目標個性化；目的地；體驗平台目標；adobe目標目標�
 title: Adobe Target
 description: Adobe Target是一個應用程式，在跨網站、移動應用等的所有入站客戶交互中提供基於人工智慧的即時個性化和實驗功能。
 exl-id: 3e3c405b-8add-4efb-9389-5ad695bc9799
-source-git-commit: 61a3a05466eca30ba08fcaf32a3f00e0ca49f325
+source-git-commit: a990e829c8ba034f31b883360495513f3f5b4cfc
 workflow-type: tm+mt
-source-wordcount: '474'
+source-wordcount: '469'
 ht-degree: 0%
 
 ---
@@ -21,6 +21,10 @@ Adobe Target是Adobe Experience Platform的個性化連接。
 ## 先決條件 {#prerequisites}
 
 此整合由 [Adobe Experience PlatformWeb SDK](../../../edge/home.md)。 您必須使用此SDK才能使用此目標。
+
+>[!IMPORTANT]
+>
+>在建立 [!DNL Adobe Target] 連接，閱讀有關如何 [為同一頁和下一頁個性化設定配置個性化目標](../../ui/configure-personalization-destinations.md)。 本指南將引導您跨多個Experience Platform元件完成同一頁和下一頁個性化使用案例所需的配置步驟。
 
 ## 導出類型 {#export-type}
 
@@ -39,10 +43,6 @@ Adobe Target是Adobe Experience Platform的個性化連接。
 >title="關於資料流ID"
 >abstract="此選項確定在響應頁面時將包括段的資料收集資料流的位置。 下拉菜單僅顯示啟用了目標配置的資料流。 必須先配置資料流，然後才能配置目標。"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/datastreams.html?lang=en" text="瞭解如何配置資料流。"
-
->[!IMPORTANT]
->
->在建立 [!DNL Adobe Target] 連接，我們建議您閱讀有關如何 [為同一頁和下一頁個性化設定配置個性化目標](../../ui/configure-personalization-destinations.md)。 本指南將引導您跨多個Experience Platform元件完成同一頁和下一頁個性化使用案例所需的配置步驟。
 
 要連接到此目標，請按照 [目標配置教程](../../ui/connect-destination.md)。
 

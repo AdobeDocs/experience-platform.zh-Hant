@@ -6,9 +6,9 @@ seo-title: Configure personalization destinations for same-page and next-page pe
 description: 瞭解如何為同一頁和下一頁個性化配置個性化目標。
 seo-description: Configure personalization destinations for same-page and next-page personalization.
 exl-id: 7d7b6869-bd59-4766-a044-f449396f6524
-source-git-commit: 69db8dbc315f97a0133bcc761ebf850d587dd7d1
+source-git-commit: a990e829c8ba034f31b883360495513f3f5b4cfc
 workflow-type: tm+mt
-source-wordcount: '380'
+source-wordcount: '413'
 ht-degree: 0%
 
 ---
@@ -24,6 +24,10 @@ Adobe Experience Platform用途 [邊緣分割](../../segmentation/ui/edge-segmen
 此外，請觀看下面的視頻，瞭解端到端配置過程的概述。
 
 >[!VIDEO](https://video.tv.adobe.com/v/340091/)
+
+>[!NOTE]
+>
+>Experience Platform用戶介面頻繁更新，自此視頻記錄後可能已更改。 有關最新資訊，請參閱以下各節中介紹的配置步驟。
 
 ## 步驟1:在資料收集UI中配置資料流 {#configure-datastream}
 
