@@ -1,32 +1,31 @@
 ---
-description: 本頁列出並說明所有可使用「/authoring/destination-servers」 API端點執行的API操作。 目標的伺服器和模板規格可通過公共端點「/authoring/destination-servers」在Adobe Experience Platform Destination SDK中配置。
-title: 目標伺服器端點API操作
+description: 此頁列出並說明了可以使用「/authoring/destination-servers」 API終結點執行的所有API操作。 您的目標的伺服器和模板規範可通過通用端點「/創作/目標伺服器」在Adobe Experience Platform Destination SDK中配置。
+title: 目標伺服器終結點API操作
 exl-id: a144b0fb-d34f-42d1-912b-8576296e59d2
-source-git-commit: 6dd8a94e46b9bee6d1407e7ec945a722d8d7ecdb
+source-git-commit: 6bdb7a3ce6e9f37070dceff8b0226bd6cd53038b
 workflow-type: tm+mt
-source-wordcount: '827'
-ht-degree: 5%
+source-wordcount: '1454'
+ht-degree: 3%
 
 ---
 
-# 目標伺服器端點API操作
+# 目標伺服器終結點API操作
 
 >[!IMPORTANT]
 >
->**API端點**: `platform.adobe.io/data/core/activation/authoring/destination-servers`
+>**API終結點**: `platform.adobe.io/data/core/activation/authoring/destination-servers`
 
-此頁面列出並說明您可使用 `/authoring/destination-servers` API端點。 目標的伺服器和模板規格可通過公共端點在Adobe Experience Platform Destination SDK中配置 `/authoring/destination-servers`. 有關此端點提供的功能的說明，請閱讀 [伺服器和範本規格](./server-and-template-configuration.md).
+此頁列出並說明了可以使用 `/authoring/destination-servers` API終結點。 您的目標的伺服器和模板規範可以通過公共終結點在Adobe Experience Platform Destination SDK中配置 `/authoring/destination-servers`。 有關此終結點提供的功能的說明，請閱讀 [伺服器和模板規範](./server-and-template-configuration.md)。
 
-## 目標伺服器API操作快速入門 {#get-started}
+## 目標伺服器API操作入門 {#get-started}
 
-繼續之前，請檢閱 [快速入門手冊](./getting-started.md) 若要成功呼叫API，需知的重要資訊，包括如何取得必要的目的地編寫權限和必要的標題。
+在繼續之前，請查看 [入門指南](./getting-started.md) 瞭解成功調用API所需的重要資訊，包括如何獲得所需的目標創作權限和所需的標題。
 
-## 為目標伺服器建立配置 {#create}
+## 為流目標伺服器建立配置 {#create}
 
-您可以向發出POST要求，以建立新的目標伺服器設定 `/authoring/destination-servers` 端點。
+您可以通過向以下站點發出POST請求，為流目標建立新的目標伺服器配置 `/authoring/destination-servers` 端點。
 
 **API格式**
-
 
 ```http
 POST /authoring/destination-servers
@@ -34,7 +33,7 @@ POST /authoring/destination-servers
 
 **要求**
 
-下列請求會建立新的目標伺服器設定，由裝載中提供的參數所設定。 以下裝載包含接受的所有參數 `/authoring/destination-servers` 端點。 請注意，您不必在呼叫上新增所有參數，且可根據您的API需求自訂範本。
+以下請求將建立由負載中提供的參數配置的新目標伺服器配置。 下面的負載包括接受的所有參數 `/authoring/destination-servers` 端點。 請注意，您不必在調用中添加所有參數，並且模板可根據API要求進行自定義。
 
 ```shell
 curl -X POST https://platform.adobe.io/data/core/activation/authoring/destination-servers \
@@ -66,24 +65,578 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 
 | 參數 | 類型 | 說明 |
 | -------- | ----------- | ----------- |
-| `name` | 字串 | *必填。* 代表您伺服器的好記名稱，只顯示給Adobe。 合作夥伴或客戶看不到此名稱。 範例 `Moviestar destination server`. |
-| `destinationServerType` | 字串 | *必填。* `URL_BASED` 是目前唯一可用的選項。 |
-| `urlBasedDestination.url.templatingStrategy` | 字串 | *必填.* <ul><li>使用 `PEBBLE_V1` 如果Adobe需要轉換 `value` 欄位。 如果您的端點如下所示，請使用此選項： `https://api.moviestar.com/data/{{customerData.region}}/items`. </li><li> 使用 `NONE` 如果Adobe端不需要轉換，例如，如果您有如下的端點： `https://api.moviestar.com/data/items`.</li></ul> |
-| `urlBasedDestination.url.value` | 字串 | *必填。* 填入Experience Platform應連線之API端點的位址。 |
-| `httpTemplate.httpMethod` | 字串 | *必填。* Adobe將用於呼叫伺服器的方法。 選項包括 `GET`, `PUT`, `POST`, `DELETE`, `PATCH`. |
+| `name` | 字串 | *必填。* 表示伺服器的友好名稱，僅對Adobe可見。 合作夥伴或客戶看不到此名稱。 範例 `Moviestar destination server`. |
+| `destinationServerType` | 字串 | *必填。* 設定為 `URL_BASED` 流目標。 |
+| `urlBasedDestination.url.templatingStrategy` | 字串 | *必填.* <ul><li>使用 `PEBBLE_V1` 如果Adobe需要轉換 `value` 的下界。 如果您具有端點，如： `https://api.moviestar.com/data/{{customerData.region}}/items`。 </li><li> 使用 `NONE` 如果Adobe端不需要轉換，例如，如果您有一個端點，如： `https://api.moviestar.com/data/items`。</li></ul> |
+| `urlBasedDestination.url.value` | 字串 | *必填。* 填寫Experience Platform應連接到的API終結點的地址。 |
+| `httpTemplate.httpMethod` | 字串 | *必填。* Adobe在對伺服器的調用中使用的方法。 選項為 `GET`。 `PUT`。 `POST`。 `DELETE`。 `PATCH`。 |
 | `httpTemplate.requestBody.templatingStrategy` | 字串 | *必填。* 使用 `PEBBLE_V1`. |
-| `httpTemplate.requestBody.value` | 字串 | *必填。* 此字串是字元逸出版本，可將Platform客戶的資料轉換為服務預期的格式。 <br> <ul><li> 如需如何編寫範本的資訊，請閱讀 [使用模板部分](./message-format.md#using-templating). </li><li> 如需字元逸出的詳細資訊，請參閱 [RFC JSON標準，第七節](https://tools.ietf.org/html/rfc8259#section-7). </li><li> 如需簡單轉換的範例，請參閱 [設定檔屬性](./message-format.md#attributes) 轉換。 </li></ul> |
-| `httpTemplate.contentType` | 字串 | *必填。* 伺服器接受的內容類型。 此值很可能 `application/json`. |
+| `httpTemplate.requestBody.value` | 字串 | *必填。* 此字串是字元轉義版本，它將平台客戶的資料轉換為服務所需的格式。 <br> <ul><li> 有關如何編寫模板的資訊，請閱讀 [使用模板部](./message-format.md#using-templating)。 </li><li> 有關字元轉義的詳細資訊，請參閱 [RFC JSON標準，第7節](https://tools.ietf.org/html/rfc8259#section-7)。 </li><li> 有關簡單轉換的示例，請參閱 [配置檔案屬性](./message-format.md#attributes) 轉換。 </li></ul> |
+| `httpTemplate.contentType` | 字串 | *必填。* 伺服器接受的內容類型。 此值極有可能 `application/json`。 |
 
 {style=&quot;table-layout:auto&quot;}
 
 **回應**
 
-成功的回應會傳回HTTP狀態200，並包含您新建立之目標伺服器組態的詳細資訊。
+成功的響應返回HTTP狀態200，其中包含新建立的目標伺服器配置的詳細資訊。
+
+## 為基於檔案的目標伺服器建立配置 {#create-file-based}
+
+### 示例：為SFTP目標伺服器建立配置
+
+>[!IMPORTANT]
+>
+>Adobe Experience Platform Destination SDK中基於檔案的目標支援當前處於測試版中。 文檔和功能可能會更改。
+
+通過向SFTP發出POST請求，可以建立新的SFTP目標伺服器配置 `/authoring/destination-servers` 端點。
+
+**API格式**
+
+```http
+POST /authoring/destination-servers
+```
+
+**要求**
+
+以下請求將建立由負載中提供的參數配置的新目標伺服器配置。 下面的負載包括接受的所有參數 `/authoring/destination-servers` 端點。 請注意，您不必在調用中添加所有參數，並且模板可根據API要求進行自定義。
+
+
+```shell
+curl -X POST https://platform.adobe.io/data/core/activation/authoring/destination-servers \
+ -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+ -H 'Content-Type: application/json' \
+ -H 'x-gw-ims-org-id: {IMS_ORG}' \
+ -H 'x-api-key: {API_KEY}' \
+ -H 'x-sandbox-name: {SANDBOX_NAME}' \
+ -d '
+{
+   "name":"File-based SFTP destination server",
+   "destinationServerType":"FILE_BASED_SFTP",
+   "fileBasedSftpDestination":{
+      "rootDirectory":{
+         "templatingStrategy":"PEBBLE_V1",
+         "value":"{{customerData.rootDirectory}}"
+      }, 
+      "port": 22,
+      "encryptionMode" : "PGP"
+   },
+    "fileConfigurations": {
+        "compression": {
+            "templatingStrategy": "PEBBLE_V1",
+            "value": "{{customerData.compression}}"
+        },
+        "fileType": {
+            "templatingStrategy": "PEBBLE_V1",
+            "value": "{{customerData.fileType}}"
+        },
+        "csvOptions": {
+            "quote": {
+                "templatingStrategy": "NONE",
+                "value": "\""
+            },
+            "quoteAll": {
+                "templatingStrategy": "NONE",
+                "value": "false"
+            },
+            "escape": {
+                "templatingStrategy": "NONE",
+                "value": "\\"
+            },
+            "escapeQuotes": {
+                "templatingStrategy": "NONE",
+                "value": "true"
+            },
+            "header": {
+                "templatingStrategy": "NONE",
+                "value": "true"
+            },
+            "ignoreLeadingWhiteSpace": {
+                "templatingStrategy": "NONE",
+                "value": "true"
+            },
+            "ignoreTrailingWhiteSpace": {
+                "templatingStrategy": "NONE",
+                "value": "true"
+            },
+            "nullValue": {
+                "templatingStrategy": "NONE",
+                "value": ""
+            },
+            "dateFormat": {
+                "templatingStrategy": "NONE",
+                "value": "yyyy-MM-dd"
+            },
+            "timestampFormat": {
+                "templatingStrategy": "NONE",
+                "value": "yyyy-MM-dd'T':mm:ss[.SSS][XXX]"
+            },
+            "charToEscapeQuoteEscaping": {
+                "templatingStrategy": "NONE",
+                "value": "\\"
+            },
+            "emptyValue": {
+                "templatingStrategy": "NONE",
+                "value": ""
+            },
+            "lineSep": {
+                "templatingStrategy": "NONE",
+                "value": "\n"
+            }
+        }
+    }
+}
+```
+
+**回應**
+
+成功的響應返回HTTP狀態200，其中包含新建立的目標伺服器配置的詳細資訊。
++++
+
++++示例：為AmazonS3目標伺服器建立配置
+
+>[!IMPORTANT]
+>
+>Adobe Experience Platform Destination SDK中基於檔案的目標支援當前處於測試版中。 文檔和功能可能會更改。
+
+您可以通過向以下站點發出POST請求來建立新的AmazonS3目標伺服器配置 `/authoring/destination-servers` 端點。
+
+**API格式**
+
+```http
+POST /authoring/destination-servers
+```
+
+**要求**
+
+以下請求將建立由負載中提供的參數配置的新目標伺服器配置。 下面的負載包括接受的所有參數 `/authoring/destination-servers` 端點。 請注意，您不必在調用中添加所有參數，並且模板可根據API要求進行自定義。
+
+```shell
+curl -X POST https://platform.adobe.io/data/core/activation/authoring/destination-servers \
+ -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+ -H 'Content-Type: application/json' \
+ -H 'x-gw-ims-org-id: {IMS_ORG}' \
+ -H 'x-api-key: {API_KEY}' \
+ -H 'x-sandbox-name: {SANDBOX_NAME}' \
+ -d '
+{
+    "name": "S3 destination",
+    "destinationServerType": "FILE_BASED_S3",
+    "fileBasedS3Destination": {
+        "bucket": {
+            "templatingStrategy": "PEBBLE_V1",
+            "value": "{{customerData.bucket}}"
+        },
+        "path": {
+            "templatingStrategy": "PEBBLE_V1",
+            "value": "{{customerData.path}}"
+        }
+    },
+    "fileConfigurations": {
+        "compression": {
+            "templatingStrategy": "PEBBLE_V1",
+            "value": "{{customerData.compression}}"
+        },
+        "fileType": {
+            "templatingStrategy": "PEBBLE_V1",
+            "value": "{{customerData.fileType}}"
+        },
+        "csvOptions": {
+            "quote": {
+                "templatingStrategy": "NONE",
+                "value": "\""
+            },
+            "quoteAll": {
+                "templatingStrategy": "NONE",
+                "value": "false"
+            },
+            "escape": {
+                "templatingStrategy": "NONE",
+                "value": "\\"
+            },
+            "escapeQuotes": {
+                "templatingStrategy": "NONE",
+                "value": "true"
+            },
+            "header": {
+                "templatingStrategy": "NONE",
+                "value": "true"
+            },
+            "ignoreLeadingWhiteSpace": {
+                "templatingStrategy": "NONE",
+                "value": "true"
+            },
+            "ignoreTrailingWhiteSpace": {
+                "templatingStrategy": "NONE",
+                "value": "true"
+            },
+            "nullValue": {
+                "templatingStrategy": "NONE",
+                "value": ""
+            },
+            "dateFormat": {
+                "templatingStrategy": "NONE",
+                "value": "yyyy-MM-dd"
+            },
+            "timestampFormat": {
+                "templatingStrategy": "NONE",
+                "value": "yyyy-MM-dd'T':mm:ss[.SSS][XXX]"
+            },
+            "charToEscapeQuoteEscaping": {
+                "templatingStrategy": "NONE",
+                "value": "\\"
+            },
+            "emptyValue": {
+                "templatingStrategy": "NONE",
+                "value": ""
+            },
+            "lineSep": {
+                "templatingStrategy": "NONE",
+                "value": "\n"
+            }
+        }
+    }
+}
+```
+
+**回應**
+
+成功的響應返回HTTP狀態200，其中包含新建立的目標伺服器配置的詳細資訊。
++++
+
++++示例：為Azure Blob目標伺服器建立配置
+
+>[!IMPORTANT]
+>
+>Adobe Experience Platform Destination SDK中基於檔案的目標支援當前處於測試版中。 文檔和功能可能會更改。
+
+通過向Azure Blob發出POST請求，可以建立新的Azure Blob目標伺服器配置 `/authoring/destination-servers` 端點。
+
+**API格式**
+
+
+```http
+POST /authoring/destination-servers
+```
+
+**要求**
+
+以下請求將建立由負載中提供的參數配置的新目標伺服器配置。 下面的負載包括接受的所有參數 `/authoring/destination-servers` 端點。 請注意，您不必在調用中添加所有參數，並且模板可根據API要求進行自定義。
+
+```shell
+curl -X POST https://platform.adobe.io/data/core/activation/authoring/destination-servers \
+ -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+ -H 'Content-Type: application/json' \
+ -H 'x-gw-ims-org-id: {IMS_ORG}' \
+ -H 'x-api-key: {API_KEY}' \
+ -H 'x-sandbox-name: {SANDBOX_NAME}' \
+ -d '
+{
+   "name":"Blob destination server",
+   "destinationServerType":"FILE_BASED_AZURE_BLOB",
+   "fileBasedAzureBlobDestination":{
+      "path":{
+         "templatingStrategy":"PEBBLE_V1",
+         "value":"{{customerData.path}}"
+      },
+      "container":{
+         "templatingStrategy":"PEBBLE_V1",
+         "value":"{{customerData.container}}"
+      }
+   },
+  "fileConfigurations": {
+        "compression": {
+            "templatingStrategy": "PEBBLE_V1",
+            "value": "{{customerData.compression}}"
+        },
+        "fileType": {
+            "templatingStrategy": "PEBBLE_V1",
+            "value": "{{customerData.fileType}}"
+        },
+        "csvOptions": {
+            "quote": {
+                "templatingStrategy": "NONE",
+                "value": "\""
+            },
+            "quoteAll": {
+                "templatingStrategy": "NONE",
+                "value": "false"
+            },
+            "escape": {
+                "templatingStrategy": "NONE",
+                "value": "\\"
+            },
+            "escapeQuotes": {
+                "templatingStrategy": "NONE",
+                "value": "true"
+            },
+            "header": {
+                "templatingStrategy": "NONE",
+                "value": "true"
+            },
+            "ignoreLeadingWhiteSpace": {
+                "templatingStrategy": "NONE",
+                "value": "true"
+            },
+            "ignoreTrailingWhiteSpace": {
+                "templatingStrategy": "NONE",
+                "value": "true"
+            },
+            "nullValue": {
+                "templatingStrategy": "NONE",
+                "value": ""
+            },
+            "dateFormat": {
+                "templatingStrategy": "NONE",
+                "value": "yyyy-MM-dd"
+            },
+            "timestampFormat": {
+                "templatingStrategy": "NONE",
+                "value": "yyyy-MM-dd'T':mm:ss[.SSS][XXX]"
+            },
+            "charToEscapeQuoteEscaping": {
+                "templatingStrategy": "NONE",
+                "value": "\\"
+            },
+            "emptyValue": {
+                "templatingStrategy": "NONE",
+                "value": ""
+            },
+            "lineSep": {
+                "templatingStrategy": "NONE",
+                "value": "\n"
+            }
+        }
+    }
+}
+```
+
+**回應**
+
+成功的響應返回HTTP狀態200，其中包含新建立的目標伺服器配置的詳細資訊。
++++
+
++++示例：為Azure資料湖儲存(ADLS)目標伺服器建立配置
+
+>[!IMPORTANT]
+>
+>Adobe Experience Platform Destination SDK中基於檔案的目標支援當前處於測試版中。 文檔和功能可能會更改。
+
+您可以通過向ADLS發出POST請求來建立新的ADLS目標伺服器配置 `/authoring/destination-servers` 端點。
+
+**API格式**
+
+
+```http
+POST /authoring/destination-servers
+```
+
+**要求**
+
+以下請求將建立由負載中提供的參數配置的新目標伺服器配置。 下面的負載包括接受的所有參數 `/authoring/destination-servers` 端點。 請注意，您不必在調用中添加所有參數，並且模板可根據API要求進行自定義。
+
+```shell
+curl -X POST https://platform.adobe.io/data/core/activation/authoring/destination-servers \
+ -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+ -H 'Content-Type: application/json' \
+ -H 'x-gw-ims-org-id: {IMS_ORG}' \
+ -H 'x-api-key: {API_KEY}' \
+ -H 'x-sandbox-name: {SANDBOX_NAME}' \
+ -d '
+{
+   "name":"ADLS destination server",
+   "destinationServerType":"FILE_BASED_ADLS_GEN2",
+   "fileBasedAdlsGen2Destination":{
+      "path":{
+         "templatingStrategy":"PEBBLE_V1",
+         "value":"{{customerData.path}}"
+      }
+   },
+  "fileConfigurations": {
+        "compression": {
+            "templatingStrategy": "PEBBLE_V1",
+            "value": "{{customerData.compression}}"
+        },
+        "fileType": {
+            "templatingStrategy": "PEBBLE_V1",
+            "value": "{{customerData.fileType}}"
+        },
+        "csvOptions": {
+            "quote": {
+                "templatingStrategy": "NONE",
+                "value": "\""
+            },
+            "quoteAll": {
+                "templatingStrategy": "NONE",
+                "value": "false"
+            },
+            "escape": {
+                "templatingStrategy": "NONE",
+                "value": "\\"
+            },
+            "escapeQuotes": {
+                "templatingStrategy": "NONE",
+                "value": "true"
+            },
+            "header": {
+                "templatingStrategy": "NONE",
+                "value": "true"
+            },
+            "ignoreLeadingWhiteSpace": {
+                "templatingStrategy": "NONE",
+                "value": "true"
+            },
+            "ignoreTrailingWhiteSpace": {
+                "templatingStrategy": "NONE",
+                "value": "true"
+            },
+            "nullValue": {
+                "templatingStrategy": "NONE",
+                "value": ""
+            },
+            "dateFormat": {
+                "templatingStrategy": "NONE",
+                "value": "yyyy-MM-dd"
+            },
+            "timestampFormat": {
+                "templatingStrategy": "NONE",
+                "value": "yyyy-MM-dd'T':mm:ss[.SSS][XXX]"
+            },
+            "charToEscapeQuoteEscaping": {
+                "templatingStrategy": "NONE",
+                "value": "\\"
+            },
+            "emptyValue": {
+                "templatingStrategy": "NONE",
+                "value": ""
+            },
+            "lineSep": {
+                "templatingStrategy": "NONE",
+                "value": "\n"
+            }
+        }
+    }
+}
+```
+
+**回應**
+
+成功的響應返回HTTP狀態200，其中包含新建立的目標伺服器配置的詳細資訊。
++++
+
++++示例：為資料登錄區(DLZ)目標伺服器建立配置
+
+>[!IMPORTANT]
+>
+>Adobe Experience Platform Destination SDK中基於檔案的目標支援當前處於測試版中。 文檔和功能可能會更改。
+
+[!DNL Data Landing Zone] ([!DNL DLZ]) [!DNL Azure Blob] 由Adobe Experience Platform提供的儲存介面，允許您訪問安全、基於雲的檔案儲存設施，以將檔案帶入平台。 請參閱
+
+您可以通過向DLZ發出POST請求來建立新的DLZ目標伺服器配置 `/authoring/destination-servers` 端點。
+
+**API格式**
+
+
+```http
+POST /authoring/destination-servers
+```
+
+**要求**
+
+以下請求將建立由負載中提供的參數配置的新目標伺服器配置。 下面的負載包括接受的所有參數 `/authoring/destination-servers` 端點。 請注意，您不必在調用中添加所有參數，並且模板可根據API要求進行自定義。
+
+```shell
+curl -X POST https://platform.adobe.io/data/core/activation/authoring/destination-servers \
+ -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+ -H 'Content-Type: application/json' \
+ -H 'x-gw-ims-org-id: {IMS_ORG}' \
+ -H 'x-api-key: {API_KEY}' \
+ -H 'x-sandbox-name: {SANDBOX_NAME}' \
+ -d '
+{
+   "name":"DLZ destination server",
+   "destinationServerType":"FILE_BASED_DLZ",
+   "fileBasedDlzDestination":{
+      "path":{
+         "templatingStrategy":"PEBBLE_V1",
+         "value":"{{customerData.path}}"
+      },
+      "useCase": "Your use case"
+   },
+   "fileConfigurations": {
+        "compression": {
+            "templatingStrategy": "PEBBLE_V1",
+            "value": "{{customerData.compression}}"
+        },
+        "fileType": {
+            "templatingStrategy": "PEBBLE_V1",
+            "value": "{{customerData.fileType}}"
+        },
+        "csvOptions": {
+            "quote": {
+                "templatingStrategy": "NONE",
+                "value": "\""
+            },
+            "quoteAll": {
+                "templatingStrategy": "NONE",
+                "value": "false"
+            },
+            "escape": {
+                "templatingStrategy": "NONE",
+                "value": "\\"
+            },
+            "escapeQuotes": {
+                "templatingStrategy": "NONE",
+                "value": "true"
+            },
+            "header": {
+                "templatingStrategy": "NONE",
+                "value": "true"
+            },
+            "ignoreLeadingWhiteSpace": {
+                "templatingStrategy": "NONE",
+                "value": "true"
+            },
+            "ignoreTrailingWhiteSpace": {
+                "templatingStrategy": "NONE",
+                "value": "true"
+            },
+            "nullValue": {
+                "templatingStrategy": "NONE",
+                "value": ""
+            },
+            "dateFormat": {
+                "templatingStrategy": "NONE",
+                "value": "yyyy-MM-dd"
+            },
+            "timestampFormat": {
+                "templatingStrategy": "NONE",
+                "value": "yyyy-MM-dd'T':mm:ss[.SSS][XXX]"
+            },
+            "charToEscapeQuoteEscaping": {
+                "templatingStrategy": "NONE",
+                "value": "\\"
+            },
+            "emptyValue": {
+                "templatingStrategy": "NONE",
+                "value": ""
+            },
+            "lineSep": {
+                "templatingStrategy": "NONE",
+                "value": "\n"
+            }
+        }
+    }
+}
+```
+
+**回應**
+
+成功的響應返回HTTP狀態200，其中包含新建立的目標伺服器配置的詳細資訊。
++++
 
 ## 列出目標伺服器配置 {#retrieve-list}
 
-您可以向提出GET要求，以擷取IMS組織的所有目標伺服器設定清單 `/authoring/destination-servers` 端點。
+通過向IMS組織發出GET請求，您可以檢索IMS組織的所有目標伺服器配置清單 `/authoring/destination-servers` 端點。
 
 **API格式**
 
@@ -94,7 +647,7 @@ GET /authoring/destination-servers
 
 **要求**
 
-下列請求會根據IMS組織和沙箱設定，擷取您有權存取的目標伺服器設定清單。
+以下請求將根據IMS組織和沙盒配置檢索您有權訪問的目標伺服器配置清單。
 
 ```shell
 curl -X GET https://platform.adobe.io/data/core/activation/authoring/destination-servers \
@@ -106,7 +659,7 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/destination
 
 **回應**
 
-下列回應會根據您使用的IMS組織ID和沙箱名稱，傳回HTTP狀態200，並列出您可存取的目標伺服器設定。 一 `instanceId` 對應於一個目標伺服器的模板。 回應會為簡潔而截斷。
+以下響應會根據您使用的IMS組織ID和沙盒名稱返回HTTP狀態200，其中包含您有權訪問的目標伺服器配置清單。 一 `instanceId` 對應於一個目標伺服器的模板。 響應被截斷以便簡化。
 
 ```json
 {
@@ -184,7 +737,7 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/destination
 
 ## 更新現有目標伺服器配置 {#update}
 
-您可以向發出PUT要求，以更新現有的目標伺服器設定 `/authoring/destination-servers` 端點，並提供您要更新之目標伺服器設定的執行個體ID。 在呼叫內文中，提供更新的目的地伺服器設定。
+通過向以下站點發出PUT請求，可以更新現有目標伺服器配置 `/authoring/destination-servers` 終結點並提供要更新的目標伺服器配置的實例ID。 在呼叫正文中，提供更新的目標伺服器配置。
 
 **API格式**
 
@@ -195,11 +748,11 @@ PUT /authoring/destination-servers/{INSTANCE_ID}
 
 | 參數 | 說明 |
 | -------- | ----------- |
-| `{INSTANCE_ID}` | 要更新的目標伺服器配置ID。 |
+| `{INSTANCE_ID}` | 要更新的目標伺服器配置的ID。 |
 
 **要求**
 
-下列要求會更新現有的目的地伺服器設定，由裝載中提供的參數所設定。
+以下請求更新現有目標伺服器配置，該配置由負載中提供的參數配置。
 
 ```shell
 curl -X PUT https://platform.adobe.io/data/core/activation/authoring/destination-servers/bd4ec8f0-e98f-4b6a-8064-dd7adbfffec9 \
@@ -229,13 +782,9 @@ curl -X PUT https://platform.adobe.io/data/core/activation/authoring/destination
 }
 ```
 
-
-
-
-
 ## 檢索特定目標伺服器配置 {#get}
 
-您可以向提出GET要求，以擷取特定目標伺服器設定的詳細資訊 `/authoring/destination-servers` 端點，並提供您要更新之目標伺服器設定的執行個體ID。
+您可以通過向以下站點發出GET請求來檢索有關特定目標伺服器配置的詳細資訊： `/authoring/destination-servers` 終結點並提供要更新的目標伺服器配置的實例ID。
 
 **API格式**
 
@@ -260,7 +809,7 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/destination
 
 **回應**
 
-成功的回應會傳回HTTP狀態200，並包含指定目的地伺服器設定的詳細資訊。
+成功的響應返回HTTP狀態200，其中包含有關指定目標伺服器配置的詳細資訊。
 
 ```json
 {
@@ -286,7 +835,7 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/destination
 
 ## 刪除特定目標伺服器配置 {#delete}
 
-您可以透過向發出DELETE要求，以刪除指定的目標伺服器設定 `/authoring/destination-servers` 端點，並提供您要在請求路徑中刪除之目標伺服器設定的ID。
+可以通過向以下站點發出DELETE請求來刪除指定的目標伺服器配置 `/authoring/destination-servers` 終結點，並提供您希望在請求路徑中刪除的目標伺服器配置的ID。
 
 **API格式**
 
@@ -296,7 +845,7 @@ DELETE /authoring/destination-servers/{INSTANCE_ID}
 
 | 參數 | 說明 |
 | --------- | ----------- |
-| `{INSTANCE_ID}` | 此 `id` 要刪除的目標伺服器配置。 |
+| `{INSTANCE_ID}` | 的 `id` 目標伺服器配置。 |
 
 **要求**
 
@@ -310,12 +859,12 @@ curl -X DELETE https://platform.adobe.io/data/core/activation/authoring/destinat
 
 **回應**
 
-成功的回應會傳回HTTP狀態200，並傳回空的HTTP回應。
+成功的響應返回HTTP狀態200以及空的HTTP響應。
 
 ## API錯誤處理
 
-Destination SDKAPI端點遵循一般Experience PlatformAPI錯誤訊息原則。 請參閱 [API狀態代碼](../../landing/troubleshooting.md#api-status-codes) 和 [請求標題錯誤](../../landing/troubleshooting.md#request-header-errors) （位於平台疑難排解指南中）。
+Destination SDKAPI端點遵循常規Experience PlatformAPI錯誤消息原則。 請參閱 [API狀態代碼](../../landing/troubleshooting.md#api-status-codes) 和 [請求標頭錯誤](../../landing/troubleshooting.md#request-header-errors) 中。
 
 ## 後續步驟
 
-閱讀本檔案後，您現在知道如何使用 `/authoring/destination-servers` API端點。 閱讀 [如何使用Destination SDK來設定您的目的地](./configure-destination-instructions.md) 了解此步驟在設定目的地程式中的適用位置。
+閱讀此文檔後，您現在知道如何使用 `/authoring/destination-servers` API終結點。 閱讀 [如何使用Destination SDK配置目標](./configure-destination-instructions.md) 瞭解此步驟在配置目標過程中的適用範圍。

@@ -1,159 +1,44 @@
 ---
-description: 本頁面說明您可以使用「/authoring/credentials」 API端點執行的所有API操作。
-title: 憑證端點API操作
+description: 本頁介紹了可以使用「/authoring/credentials」 API終結點執行的所有API操作。
+title: 憑據終結點API操作
 exl-id: 89957f38-e7f4-452d-abc0-0940472103fe
-source-git-commit: 6dd8a94e46b9bee6d1407e7ec945a722d8d7ecdb
+source-git-commit: bc357e2e93b80edb5f7825bf2dee692f14bd7297
 workflow-type: tm+mt
-source-wordcount: '712'
+source-wordcount: '797'
 ht-degree: 4%
 
 ---
 
-# 憑證端點API操作 {#credentials}
+# 憑據終結點API操作 {#credentials}
 
 >[!IMPORTANT]
 >
->**API端點**: `platform.adobe.io/data/core/activation/authoring/credentials`
+>**API終結點**: `platform.adobe.io/data/core/activation/authoring/credentials`
 
-此頁面列出並說明您可使用 `/authoring/credentials` API端點。
+此頁列出並說明了可以使用 `/authoring/credentials` API終結點。
 
-## 何時使用 `/credentials` API端點 {#when-to-use}
+有關此終結點支援的功能的說明，請閱讀：
+
+* [流目標配置](destination-configuration.md) 為流目標配置的功能。
+* [基於檔案的目標配置](file-based-destination-configuration.md) 為基於檔案的目標配置的功能。
+
+## 何時使用 `/credentials` API終結點 {#when-to-use}
 
 >[!IMPORTANT]
 >
->在大多數情況下，您 *不* 需要使用 `/credentials` API端點。 反之，您可以透過 `customerAuthenticationConfigurations` 參數 `/destinations` 端點。 閱讀 [驗證配置](./authentication-configuration.md#when-to-use) 以取得更多資訊。
+>在大多數情況下，你 *不* 需要使用 `/credentials` API終結點。 相反，您可以通過 `customerAuthenticationConfigurations` 參數 `/destinations` 端點。 閱讀 [驗證配置](./authentication-configuration.md#when-to-use) 的子菜單。
 
-使用此API端點並選取 `PLATFORM_AUTHENTICATION` 在 [目的地配置](./destination-configuration.md#destination-delivery) 如果Adobe與目的地之間有全域驗證系統，則 [!DNL Platform] 客戶不需要提供任何驗證憑證來連線至您的目的地。 在此情況下，您必須使用 `/credentials` API端點。
+使用此API終結點並選擇 `PLATFORM_AUTHENTICATION` 的 [目標配置](./destination-configuration.md#destination-delivery) 如果Adobe與目標之間有全局身份驗證系統， [!DNL Platform] 客戶不需要提供任何身份驗證憑據來連接到目標。 在這種情況下，必須使用 `/credentials` API終結點。
 
-<!--
+## 憑據配置API操作入門 {#get-started}
 
-Commenting out the example configurations
-
-## Example configurations
-
-**Example configuration for a Basic authentication credential configuration with username and password**
-
-```json
-{
-  "type": "BASIC",
-  "name": "YOUR_DESTINATION_NAME",
-  "basicAuthentication": {
-    "username": "YOUR_DESTINATION_SERVER_USERNAME",
-    "password": "YOUR_DESTINATION_SERVER_PASSWORD"
-  }
-}
-
-```
-
-**Example configuration for an OAuth2 credential configuration**
-
-```json
-
-{
-  "oauth2AccessTokenAuthentication": {
-    "accessToken": "YOUR_DESTINATION_SERVER_ACCESS_TOKEN",
-    "expiration": "YOUR_TOKEN_TIME_TO_LIVE",
-    "username": "YOUR_DESTINATION_SERVER_USERNAME",
-    "userId": "YOUR_DESTINATION_USER_ID",
-    "url": "AUTHORIZATION_PROVIDER_URL",
-    "header": "YOUR_AUTHORIZATION_HEADER"
-  }
-}
-
-```
-
-The sections below list out the necessary parameters for each authentication type. Let us know which authentication type your server uses and provide us with the relevant information for your server type.
-
-## Basic authentication
-
-|Parameter | Type | Description|
-|---------|----------|------|
-|`username` | String | credentials configuration login username |
-|`password` | String | credentials configuration login password |
-
-
-
-// commenting out this part as these types of authentication methods are not supported in phase one
-
-### S3 authentication
-
-|Parameter | Type | Description|
-|---------|----------|------|
-|accessId | String | credentials configuration S3 credential Access key ID |
-|secretKey | String | credentials configuration S3 credential Secret key |
-
-### SSH 
-
-|Parameter | Type | Description|
-|---------|----------|------|
-|username | String | credentials configuration SSH username |
-|SSHKey | String | credentials configuration SSH key |
-
-
-
-## OAuth1
-
-|Parameter | Type | Description|
-|---------|----------|------|
-|`apiKey` | String | A value used by the Destinations Service to identify itself to the Service Provider. |
-|`apiSecret` | String | Secret used by the Destinations Service to establish ownership of the API key to the Service Provider. |
-|`acccessToken` | String | A value used by the Destinations Service to gain access to the Protected Resources on behalf of the User |
-|`tokenSecret` | String | A secret used by the Destinations Service to establish ownership of an access token. |
-
-## OAuth2 user credentials
-
-|Parameter | Type | Description|
-|---------|----------|------|
-|`clientId` | String | Client ID of Client/Application credential |
-|`clientSecret` | String | Client secret of Client/Application credential |
-|`username` | String | The user's username to log on to your platform. |
-|`password` | String | The user's password to log on to your platform. |
-|`url` | String | URL of authorization provider |
-|`header` | String | Any header required for authorization |
-
-## OAuth2 client credentials
-
-|Parameter | Type | Description|
-|---------|----------|------|
-|`clientId` | String | Client ID of Client/Application credential |
-|`clientSecret` | String | Client secret of Client/Application credential |
-|`username`| String | URL of authorization provider |
-|`password` | String | Any header required for authorization |
-
-## OAuth2 access token
-
-|Parameter | Type | Description|
-|---------|----------|------|
-|`accessToken` | String | Access token provided by the authorization provider |
-|`expiration` | String | The time-to-live for the access token |
-|`username` | String | The user's username to log on to your platform. |
-|`userId` | String | The user's ID with your platform. |
-|`url` | String | URL of authorization provider |
-|`header` | String | Any header required for authorization |
-
-## OAuth2 refresh token
-
-|Parameter | Type | Description|
-|---------|----------|------|
-|`clientId` | String | Client ID of Client/Application credential |
-|`clientSecret` | String | Client secret of Client/Application credential |
-|`refreshToken` | String | Refresh token provided by the authorization provider |
-|`url` | String | URL of authorization provider |
-|`expiration` | String | The time-to-live for the refresh token |
-|`header` | String | Any header required for authorization |
-
--->
-
-## 憑證設定API操作快速入門 {#get-started}
-
-繼續之前，請檢閱 [快速入門手冊](./getting-started.md) 若要成功呼叫API，需知的重要資訊，包括如何取得必要的目的地編寫權限和必要的標題。
+在繼續之前，請查看 [入門指南](./getting-started.md) 瞭解成功調用API所需的重要資訊，包括如何獲得所需的目標創作權限和所需的標題。
 
 ## 建立憑據配置 {#create}
 
-您可以向發出POST要求，以建立新憑證設定 `/authoring/credentials` 端點。
+通過向POST請求建立新的憑據配置 `/authoring/credentials` 端點。
 
 **API格式**
-
 
 ```http
 POST /authoring/credentials
@@ -161,7 +46,7 @@ POST /authoring/credentials
 
 **要求**
 
-下列請求會建立新的憑證設定，由裝載中提供的參數所設定。 以下裝載包含接受的所有參數 `/authoring/credentials` 端點。 請注意，您不必在呼叫上新增所有參數，且可根據您的API需求自訂範本。
+以下請求將建立由負載中提供的參數配置的新憑據配置。 下面的負載包括接受的所有參數 `/authoring/credentials` 端點。 請注意，您不必在調用中添加所有參數，並且模板可根據API要求進行自定義。
 
 ```shell
 curl -X POST https://platform.adobe.io/data/core/activation/authoring/credentials \
@@ -202,6 +87,28 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/credential
       "clientSecret":"string",
       "url":"string",
       "header":"string"
+   },
+   "s3Authentication":{
+      "accessId":"string",
+      "secretKey":"string"
+   },
+   "sshAuthentication":{
+      "username":"string",
+      "sshKey":"string"
+   },
+   "azureAuthentication":{
+      "url":"string",
+      "tenant":"string",
+      "servicePrincipalId":"string",
+      "servicePrincipalKey":"string"
+   },
+   "azureConnectionStringAuthentication":{
+      "connectionString":"string"
+   },
+   "basicAuthentication":{
+      "url":"string",
+      "username":"string",
+      "password":"string"
    }
 }
 ```
@@ -212,21 +119,28 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/credential
 | `password` | 字串 | 憑據配置登錄密碼 |
 | `url` | 字串 | 授權提供程式的URL |
 | `clientId` | 字串 | 客戶端/應用程式憑據的客戶端ID |
-| `clientSecret` | 字串 | 客戶端/應用程式憑據的客戶端密碼 |
-| `accessToken` | 字串 | 授權提供者提供的存取權杖 |
-| `expiration` | 字串 | 存取權杖的存留時間 |
-| `refreshToken` | 字串 | 授權提供者提供的重新整理Token |
+| `clientSecret` | 字串 | 客戶端/應用程式憑據的客戶端密鑰 |
+| `accessToken` | 字串 | 授權提供程式提供的訪問令牌 |
+| `expiration` | 字串 | 訪問令牌的生存時間 |
+| `refreshToken` | 字串 | 由授權提供程式提供的刷新令牌 |
 | `header` | 字串 | 授權所需的任何標頭 |
+| `accessId` | 字串 | AmazonS3訪問ID |
+| `secretKey` | 字串 | AmazonS3密鑰 |
+| `sshKey` | 字串 | SSH認證的SFTP的SSH密鑰 |
+| `tenant` | 字串 | Azure資料湖儲存租戶 |
+| `servicePrincipalId` | 字串 | Azure資料湖儲存的Azure服務主體ID |
+| `servicePrincipalKey` | 字串 | Azure資料湖儲存的Azure服務主體密鑰 |
+| `connectionString` | 字串 | Azure Blob儲存連接字串 |
 
 {style=&quot;table-layout:auto&quot;}
 
 **回應**
 
-成功的回應會傳回HTTP狀態200，並包含新建立憑據組態的詳細資訊。
+成功的響應返回HTTP狀態200，其中包含新建立的憑據配置的詳細資訊。
 
 ## 列出憑據配置 {#retrieve-list}
 
-您可以向提出GET要求，以擷取IMS組織的所有認證設定清單 `/authoring/credentials` 端點。
+通過向IMS組織發出GET請求，您可以檢索IMS組織的所有憑據配置清單 `/authoring/credentials` 端點。
 
 **API格式**
 
@@ -237,7 +151,7 @@ GET /authoring/credentials
 
 **要求**
 
-下列要求會根據IMS組織和沙箱設定，擷取您有權存取的認證設定清單。
+以下請求將根據IMS組織和沙盒配置檢索您有權訪問的憑據配置清單。
 
 ```shell
 curl -X GET https://platform.adobe.io/data/core/activation/authoring/credentials \
@@ -249,7 +163,7 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/credentials
 
 **回應**
 
-下列回應會根據您使用的IMS組織ID和沙箱名稱，傳回HTTP狀態200，並列出您有權存取的憑證設定。 一 `instanceId` 與一個憑據配置的模板相對應。 回應會為簡潔而截斷。
+以下響應會根據您使用的IMS組織ID和沙盒名稱返回HTTP狀態200，其中包含您有權訪問的憑據配置清單。 一 `instanceId` 對應於一個憑據配置的模板。 響應被截斷以便簡化。
 
 ```json
 {
@@ -276,7 +190,7 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/credentials
 
 ## 更新現有憑據配置 {#update}
 
-您可以向發出PUT要求，以更新現有的憑證設定 `/authoring/credentials` 端點，並提供您要更新之憑證設定的執行個體ID。 在呼叫內文中，提供更新的憑證設定。
+通過向發出PUT請求，可以更新現有的憑據配置 `/authoring/credentials` 終結點並提供要更新的憑據配置的實例ID。 在呼叫正文中，提供更新的憑據配置。
 
 **API格式**
 
@@ -291,7 +205,7 @@ PUT /authoring/credentials/{INSTANCE_ID}
 
 **要求**
 
-下列要求會更新現有憑證設定，由裝載中提供的參數所設定。
+以下請求更新現有憑據配置，配置由負載中提供的參數進行。
 
 ```shell
 curl -X PUT https://platform.adobe.io/data/core/activation/authoring/credentials/n55affa0-3747-4030-895d-1d1236bb3680 \
@@ -318,16 +232,11 @@ curl -X PUT https://platform.adobe.io/data/core/activation/authoring/credentials
 }
 ```
 
-
-
-
-
 ## 檢索特定憑據配置 {#get}
 
-您可以向提出GET要求，以擷取特定憑證設定的詳細資訊 `/authoring/credentials` 端點，並提供您要更新之憑證設定的執行個體ID。
+您可以通過向Oracle Server發出GET請求來檢索有關特定憑據配置的詳細資訊 `/authoring/credentials` 終結點並提供要更新的憑據配置的實例ID。
 
 **API格式**
-
 
 ```http
 GET /authoring/credentials/{INSTANCE_ID}
@@ -349,7 +258,7 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/credentials
 
 **回應**
 
-成功的回應會傳回HTTP狀態200，其中包含指定憑證設定的詳細資訊。
+成功的響應返回HTTP狀態200，其中包含有關指定憑據配置的詳細資訊。
 
 ```json
 {
@@ -369,10 +278,9 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/credentials
 }
 ```
 
-
 ## 刪除特定憑據配置 {#delete}
 
-您可以向發出DELETE要求，以刪除指定的憑證設定 `/authoring/credentials` 端點，並提供您要在請求路徑中刪除之憑證設定的ID。
+您可以通過向DELETE請求刪除指定的憑據配置 `/authoring/credentials` 終結點，並提供在請求路徑中要刪除的憑據配置的ID。
 
 **API格式**
 
@@ -382,7 +290,7 @@ DELETE /authoring/credentials/{INSTANCE_ID}
 
 | 參數 | 說明 |
 | --------- | ----------- |
-| `{INSTANCE_ID}` | 此 `id` 刪除的憑據配置。 |
+| `{INSTANCE_ID}` | 的 `id` 刪除的憑據配置。 |
 
 **要求**
 
@@ -396,12 +304,12 @@ curl -X DELETE https://platform.adobe.io/data/core/activation/authoring/credenti
 
 **回應**
 
-成功的回應會傳回HTTP狀態200，並傳回空的HTTP回應。
+成功的響應返回HTTP狀態200以及空的HTTP響應。
 
 ## API錯誤處理
 
-Destination SDKAPI端點遵循一般Experience PlatformAPI錯誤訊息原則。 請參閱 [API狀態代碼](../../landing/troubleshooting.md#api-status-codes) 和 [請求標題錯誤](../../landing/troubleshooting.md#request-header-errors) （位於平台疑難排解指南中）。
+Destination SDKAPI端點遵循常規Experience PlatformAPI錯誤消息原則。 請參閱 [API狀態代碼](../../landing/troubleshooting.md#api-status-codes) 和 [請求標頭錯誤](../../landing/troubleshooting.md#request-header-errors) 中。
 
 ## 後續步驟
 
-閱讀本檔案後，您現在知道何時應使用憑證端點，以及如何使用 `/authoring/credentials` API端點或 `/authoring/destinations` 端點。 閱讀 [如何使用Destination SDK來設定您的目的地](./configure-destination-instructions.md) 了解此步驟在設定目的地程式中的適用位置。
+閱讀此文檔後，您現在知道何時使用憑據終結點以及如何使用 `/authoring/credentials` API終結點或 `/authoring/destinations` 端點。 閱讀 [如何使用Destination SDK配置目標](./configure-destination-instructions.md) 瞭解此步驟在配置目標過程中的適用範圍。
