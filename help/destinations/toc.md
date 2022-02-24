@@ -4,9 +4,9 @@ user-guide-title: 目的地指南
 user-guide-description: 針對跨通路行銷活動、電子郵件宣傳、鎖定特定目標的行銷活動和其他諸多使用案例，啟用已知和未知的資料。
 description: 本文檔列出了Adobe Experience Platform目標的目錄
 feature: Destinations
-source-git-commit: 2f8e31321345a14c098f795b50d33c700ac0faa8
+source-git-commit: e03f680bfa2ee4c1e79e7ee22724702ac3721a84
 workflow-type: tm+mt
-source-wordcount: '722'
+source-wordcount: '724'
 ht-degree: 9%
 
 ---
@@ -157,9 +157,9 @@ ht-degree: 9%
    * Destination SDK功能 {#functionality}
       * [設定選項](./destination-sdk/configuration-options.md)
       * [流目標配置](./destination-sdk/destination-configuration.md)
-      * [基於檔案的目標配置](./destination-sdk/file-based-destination-configuration.md)
+      * [（測試版）基於檔案的目標配置](./destination-sdk/file-based-destination-configuration.md)
       * [流式目標伺服器和模板規範](./destination-sdk/server-and-template-configuration.md)
-      * [基於檔案的目標伺服器和檔案規格](./destination-sdk/server-and-file-configuration.md)
+      * [（測試版）基於檔案的目標伺服器和檔案規格](./destination-sdk/server-and-file-configuration.md)
       * [訊息格式](./destination-sdk/message-format.md)
       * [受眾元資料管理](./destination-sdk/audience-metadata-management.md)
       * 驗證 {#authentication}
