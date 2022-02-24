@@ -4,9 +4,9 @@ user-guide-title: Adobe Experience 平台來源連接器說明
 breadcrumb-title: 來源連接器指南
 user-guide-description: 從多種來源或結構擷取資料、加標籤，以及增強已擷取的資料。
 feature: Sources
-source-git-commit: 0154891cf2c68a38c08b9fe44251ec13325a7366
+source-git-commit: da3d0399bae9953cd74bd0ac6d6e16b64796a578
 workflow-type: tm+mt
-source-wordcount: '741'
+source-wordcount: '745'
 ht-degree: 13%
 
 ---
@@ -181,6 +181,7 @@ ht-degree: 13%
          - [Adobe Analytics（報告套件資料）](tutorials/ui/create/adobe-applications/analytics.md)
          - [Adobe Analytics（分類資料）](tutorials/ui/create/adobe-applications/classifications.md)
          - [Adobe Audience Manager](tutorials/ui/create/adobe-applications/audience-manager.md)
+         - [Adobe CampaignManaged Services](tutorials/ui/create/adobe-applications/campaign.md)
          - [客戶屬性](tutorials/ui/create/adobe-applications/customer-attributes.md)
          - [Marketo Engage](tutorials/ui/create/adobe-applications/marketo.md)
       - 廣告 {#create}
