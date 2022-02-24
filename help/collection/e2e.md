@@ -2,7 +2,7 @@
 title: 資料收集端到端概述
 description: 使用Adobe Experience Platform提供的資料收集技術向Adobe Experience Cloud解決方案發送事件資料的高級別概述。
 exl-id: 01ddbb19-40bb-4cb5-bfca-b272b88008b3
-source-git-commit: 1125907e02c23b89ea672f424d1bbf9e9de0ba04
+source-git-commit: d326267cacf8d678937e8c959de8acbfbbb88c93
 workflow-type: tm+mt
 source-wordcount: '2618'
 ht-degree: 0%
@@ -103,7 +103,7 @@ ht-degree: 0%
 
 資料流的配置要求取決於您要將資料發送到哪些產品和功能。 有關每個產品的配置選項的詳細資訊，請參閱 [資料流概述](../edge/fundamentals/datastreams.md)。
 
-## 安裝和配置Web SDK {#install}
+## 安裝和配置Web SDK
 
 建立架構和資料流後，下一步是安裝和配置平台Web SDK，以開始向邊緣網路發送資料。
 
