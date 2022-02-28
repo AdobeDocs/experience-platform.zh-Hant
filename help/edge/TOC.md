@@ -3,12 +3,12 @@ solution: Experience Platform, Data Collection
 audience: user
 user-guide-title: Adobe Experience 平台網頁 SDK 說明
 breadcrumb-title: Web SDK 指南
-user-guide-description: 通過邊緣網路與Experience Cloud服務交互。
+user-guide-description: 透過 Edge 網路與 Experience Cloud 服務互動。
 feature: Web SDK
-source-git-commit: 6fb6d1579f888720b6af9617400d512a68d06264
+source-git-commit: ea2bd2ff025c2fbd898e58b171c24abf1dbe55b1
 workflow-type: tm+mt
-source-wordcount: '157'
-ht-degree: 28%
+source-wordcount: '163'
+ht-degree: 31%
 
 ---
 
@@ -35,7 +35,7 @@ ht-degree: 28%
    * [跟蹤連結](data-collection/track-links.md)
    * [收集商業和產品資料](data-collection/collect-commerce-data.md)
    * Adobe Analytics {#adobe-analytics}
-      * [總覽](data-collection/adobe-analytics/analytics-overview.md)
+      * [將Adobe Analytics與平台Web SDK配合使用](data-collection/adobe-analytics/analytics-overview.md)
       * [映射分析變數](data-collection/adobe-analytics/manually-mapping-variables.md)
       * [自動映射的變數](data-collection/adobe-analytics/automatically-mapped-vars.md)
       * [將資料發送到分析](data-collection/adobe-analytics/sending-data-to-analytics.md)
