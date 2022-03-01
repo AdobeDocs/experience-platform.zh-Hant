@@ -6,7 +6,7 @@ topic-legacy: overview
 type: Tutorial
 description: 瞭解如何使用流服務API刪除帳戶。
 exl-id: 3d07ab7d-c012-472e-8db4-b19e3936dcba
-source-git-commit: a51c878bbfd3004cb597ce9244a9ed2f2318604b
+source-git-commit: 95f455bd03b7baefe0133a9818c9d048f36f9d38
 workflow-type: tm+mt
 source-wordcount: '339'
 ht-degree: 2%
@@ -28,7 +28,7 @@ ht-degree: 2%
 * [源](../../home.md): [!DNL Experience Platform] 允許從各種源接收資料，同時讓您能夠使用 [!DNL Platform] 服務。
 * [沙箱](../../../sandboxes/home.md): [!DNL Experience Platform] 提供虛擬沙箱，將單個沙箱 [!DNL Platform] 實例到獨立的虛擬環境，以幫助開發和發展數字型驗應用程式。
 
-## 使用平台API
+### 使用平台API
 
 有關如何成功調用平台API的資訊，請參見上的指南 [平台API入門](../../../landing/api-guide.md)。
 

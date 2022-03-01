@@ -6,55 +6,35 @@ topic-legacy: overview
 type: Tutorial
 description: 本教程介紹使用流服務API監視流運行資料的完整性、錯誤和度量的步驟。
 exl-id: 5b7d1aa4-5e6d-48f4-82bd-5348dc0e890d
-source-git-commit: a51c878bbfd3004cb597ce9244a9ed2f2318604b
+source-git-commit: 95f455bd03b7baefe0133a9818c9d048f36f9d38
 workflow-type: tm+mt
-source-wordcount: '629'
-ht-degree: 1%
+source-wordcount: '410'
+ht-degree: 2%
 
 ---
 
 # 使用流服務API監視資料流
 
-Adobe Experience Platform允許從外部源接收資料，同時讓您能夠使用 [!DNL Platform] 服務。 您可以從多種源(如Adobe應用程式、基於雲的儲存、資料庫和許多其他源)接收資料。
-
-[!DNL Flow Service] 用於收集和集中Adobe Experience Platform內不同來源的客戶資料。 該服務提供了用戶介面和REST風格的API，所有支援的源都可從中連接。
-
 本教程介紹了使用以下工具監控流運行資料的步驟： [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/)。
 
-## 快速入門
+>[!NOTE]
+>
+>本教程要求您具有有效資料流的ID值。 如果沒有有效的資料流ID，請從 [源概述](../../home.md) 在嘗試本教程之前，請按照概述的步驟建立資料流。
 
-本教程要求您具有有效資料流的ID值。 如果沒有有效的資料流ID，請從 [源概述](../../home.md) 在嘗試本教程之前，請按照上述步驟操作。
+## 快速入門
 
 本教程還要求您對以下Adobe Experience Platform元件有一定的瞭解：
 
 * [源](../../home.md): [!DNL Experience Platform] 允許從各種源接收資料，同時讓您能夠使用 [!DNL Platform] 服務。
 * [沙箱](../../../sandboxes/home.md): [!DNL Experience Platform] 提供虛擬沙箱，將單個沙箱 [!DNL Platform] 實例到獨立的虛擬環境，以幫助開發和發展數字型驗應用程式。
 
-以下各節提供了您需要瞭解的其他資訊，以便使用 [!DNL Flow Service] API。
+### 使用平台API
 
-### 讀取示例API調用
+有關如何成功調用平台API的資訊，請參見上的指南 [平台API入門](../../../landing/api-guide.md)。
 
-本教程提供了示例API調用，以演示如何格式化請求。 這些包括路徑、必需的標頭和正確格式化的請求負載。 還提供了API響應中返回的示例JSON。 有關示例API調用文檔中使用的約定的資訊，請參見上的 [如何讀取示例API調用](../../../landing/troubleshooting.md#how-do-i-format-an-api-request) 的 [!DNL Experience Platform] 疑難解答指南。
+## 監視資料流
 
-### 收集所需標題的值
-
-為了呼叫 [!DNL Platform] API，必須首先完成 [驗證教程](https://www.adobe.com/go/platform-api-authentication-en)。 完成身份驗證教程將提供所有中每個必需標頭的值 [!DNL Experience Platform] API調用，如下所示：
-
-* `Authorization: Bearer {ACCESS_TOKEN}`
-* `x-api-key: {API_KEY}`
-* `x-gw-ims-org-id: {IMS_ORG}`
-
-中的所有資源 [!DNL Experience Platform]包括那些 [!DNL Flow Service]，與特定虛擬沙箱隔離。 所有請求 [!DNL Platform] API需要一個標頭，該標頭指定操作將在以下位置進行的沙盒的名稱：
-
-* `x-sandbox-name: {SANDBOX_NAME}`
-
-所有包含負載(POST、PUT、PATCH)的請求都需要附加的媒體類型報頭：
-
-* `Content-Type: application/json`
-
-## 監視流運行
-
-一旦建立了資料流，請向執行GET請求 [!DNL Flow Service] API。
+要查看資料流的狀態，請向 [!DNL Flow Service] API，同時提供資料流的相應流ID。
 
 **API格式**
 
