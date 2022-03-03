@@ -4,9 +4,9 @@ user-guide-title: Experience Data Model (XDM) 系統說明
 breadcrumb-title: Experience Data Model (XDM) 指南
 user-guide-description: 使用 Experience Data Model (XDM) 類別和方案欄位群組，將體驗資料標準化。
 feature: Schemas
-source-git-commit: fecea2040af6e6c666de8eb4f1b13b3beaa45486
+source-git-commit: 760b82c89730a74ca5f5dd331d543f43eec1e0d6
 workflow-type: tm+mt
-source-wordcount: '412'
+source-wordcount: '435'
 ht-degree: 17%
 
 ---
@@ -31,6 +31,8 @@ ht-degree: 17%
 * 類別 {#classes}
    * [XDM個人配置檔案](./classes/individual-profile.md)
    * [XDM體驗事件](./classes/experienceevent.md)
+   * [策略](./classes/policy.md)
+   * [產品](./classes/product.md)
    * [段定義](./classes/segment-definition.md)
    * B2B類 {#b2b}
       * [XDM業務客戶](./classes/b2b/business-account.md)
@@ -42,7 +44,7 @@ ht-degree: 17%
       * [XDM業務營銷清單](./classes/b2b/business-marketing-list.md)
       * [XDM業務營銷清單成員](./classes/b2b/business-marketing-list-members.md)
 * 欄位群組 {#field-groups}
-   * 配置檔案欄位組 {#profile}
+   * XDM個人配置檔案 {#profile}
       * [人口結構詳細資訊](./field-groups/profile/demographic-details.md)
       * [IAB TCF 2.0同意](./field-groups/profile/iab.md)
       * [標識映射](./field-groups/profile/identitymap.md)
@@ -54,11 +56,14 @@ ht-degree: 17%
       * [工作聯繫人詳細資訊](./field-groups/profile/work-contact-details.md)
       * [XDM業務人員元件](./field-groups/profile/business-person-components.md)
       * [XDM業務人員詳細資訊](./field-groups/profile/business-person-details.md)
-   * 事件欄位組 {#event}
+   * XDM體驗事件 {#event}
       * [Adobe Analytics全分機](./field-groups/event/analytics-full-extension.md)
+      * [餘額轉移](./field-groups/event/balance-transfers.md)
       * [市場活動市場營銷詳細資訊](./field-groups/event/campaign-marketing-details.md)
+      * [卡操作](./field-groups/event/card-actions.md)
       * [渠道詳細資訊](./field-groups/event/channel-details.md)
       * [商業詳細資訊](./field-groups/event/commerce-details.md)
+      * [存款詳細資訊](./field-groups/event/deposit-details.md)
       * [設備折價詳細資訊](./field-groups/event/device-trade-in-details.md)
       * [餐廳預訂](./field-groups/event/dining-reservation.md)
       * [最終用戶ID詳細資訊](./field-groups/event/enduserids.md)
@@ -66,10 +71,15 @@ ht-degree: 17%
       * [航班預訂](./field-groups/event/flight-reservation.md)
       * [IAB TCF 2.0同意](./field-groups/event/iab.md)
       * [住宿預訂](./field-groups/event/lodging-reservation.md)
+      * [報價請求詳細資訊](./field-groups/event/quote-request-details.md)
       * [保留詳細資訊](./field-groups/event/reservation-details.md)
+      * [支援站點搜索](./field-groups/event/support-site-search.md)
       * [升級詳細資訊](./field-groups/event/upgrade-details.md)
       * [追加銷售詳細資訊](./field-groups/event/upsell-details.md)
       * [Web詳細資訊](./field-groups/event/web-details.md)
+   * 產品 {#product}
+      * [產品目錄](./field-groups/product/product-catalog.md)
+      * [產品類別](./field-groups/product/product-category.md)
    * [欄位組名稱更新](./field-groups/name-updates.md)
 * 資料類型 {#data-types}
    * [應用程式](./data-types/application.md)
@@ -85,6 +95,7 @@ ht-degree: 17%
    * [環境](./data-types/environment.md)
    * [體驗渠道](./data-types/experience-channel.md)
    * [外部源系統審核屬性](./data-types/external-source-system-audit-attributes.md)
+   * [財務帳戶](./data-types/financial-account.md)
    * [通用同意欄位](./data-types/consent-field.md)
    * [一般市場營銷首選項欄位](./data-types/marketing-field.md)
    * [具有訂閱的一般市場營銷首選項欄位](./data-types/marketing-field-subscriptions.md)
@@ -96,6 +107,7 @@ ht-degree: 17%
    * [地理形狀](./data-types/geo-shape.md)
    * [身分](./data-types/identity.md)
    * [曝光數](./data-types/impressions.md)
+   * [內部站點搜索](./data-types/internal-site-search.md)
    * [鍵值對](./data-types/key-value-pair.md)
    * [營銷](./data-types/marketing.md)
    * [度量](./data-types/measure.md)
