@@ -3,9 +3,9 @@ keywords: Azure事件中心目標；azure事件中心；azure事件thub
 title: (Beta) [!DNL Azure Event Hubs] 連接
 description: 建立到您的 [!DNL Azure Event Hubs] 儲存以從Experience Platform流資料。
 exl-id: f98a389a-bce3-4a80-9452-6c7293d01de3
-source-git-commit: 577b42eef9d4b44b5b556ee31d22276d72c609ea
+source-git-commit: be09d794a4cbc3afc76df70d11f55b0cae6f2009
 workflow-type: tm+mt
-source-wordcount: '1149'
+source-wordcount: '1183'
 ht-degree: 1%
 
 ---
@@ -46,10 +46,11 @@ ht-degree: 1%
 
 同時 [設定](../../ui/connect-destination.md) 此目標，必須提供以下資訊：
 
-* **[!UICONTROL SAS密鑰名稱]** 和 **[!UICONTROL SAS密鑰]**:填寫SAS密鑰名稱和密鑰。 瞭解身份驗證 [!DNL Azure Event Hubs] 在 [Microsoft文檔](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature)。
+* **[!UICONTROL SAS密鑰名稱]**:授權規則的名稱，也稱為SAS密鑰名稱。
+* **[!UICONTROL SAS密鑰]**:事件集線器命名空間的主鍵。 的 `sasPolicy` 那個 `sasKey` 必須對應 **管理** 為填充事件中心清單而配置的權限。 瞭解身份驗證 [!DNL Azure Event Hubs] 在 [Microsoft文檔](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature)。
 * **[!UICONTROL 命名空間]**:填寫 [!DNL Azure Event Hubs] 命名空間。 瞭解 [!DNL Azure Event Hubs] 命名空間 [Microsoft文檔](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hubs-namespace)。
 * **[!UICONTROL 名稱]**:填寫到的連接的名稱 [!DNL Azure Event Hubs]。
-* **[!UICONTROL 說明]**:提供連接的說明。  示例：「高級客戶」、「男性對風箏衝浪感興趣」。
+* **[!UICONTROL 說明]**:提供連接的說明。  示例：「高級客戶」、「對風箏衝浪感興趣的客戶」。
 * **[!UICONTROL 事件集線器名稱]**:為流提供名稱 [!DNL Azure Event Hubs] 目標。
 
 ## 將段激活到此目標 {#activate}
