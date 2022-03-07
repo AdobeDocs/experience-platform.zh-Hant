@@ -5,9 +5,9 @@ title: Mailchimp連接器概述
 topic-legacy: overview
 description: 瞭解如何使用API或用戶介面將Mailchimp連接到Adobe Experience Platform。
 exl-id: eedb4fe0-3aae-4e93-bf13-c095171e2d11
-source-git-commit: f8951b5a0a0ca94679155bad9f4c4c2991740b1a
+source-git-commit: ed185d0957c3cd84c33a6ff60c5ded2b17fbfe74
 workflow-type: tm+mt
-source-wordcount: '195'
+source-wordcount: '221'
 ht-degree: 0%
 
 ---
@@ -27,15 +27,9 @@ Experience Platform支援從第三方營銷自動化系統接收資料。 對營
 ## 連接 [!DNL Mailchimp Campaigns] 到平台
 
 * [建立源連接以 [!DNL Mailchimp Campaigns] 使用API向平台發送資料](../../tutorials/api/create/marketing-automation/mailchimp-campaign.md)。
-
-<!--
-* [Create a source connection to bring [!DNL Mailchimp Campaigns] data to Platform using the user interface](../../tutorials/ui/create/marketing-automation/mailchimp-campaigns.md).
--->
+* [建立源連接以 [!DNL Mailchimp Campaigns] 使用用戶介面向平台發送資料](../../tutorials/ui/create/marketing-automation/mailchimp-campaigns.md)。
 
 ## 連接 [!DNL Mailchimp Members] 到平台
 
 * [建立源連接以 [!DNL Mailchimp Members] 使用API向平台發送資料](../../tutorials/api/create/marketing-automation/mailchimp-members.md)。
-
-<!--
-* [Create a source connection to bring [!DNL Mailchimp Members] data to Platform using the user interface](../../tutorials/ui/create/marketing-automation/mailchimp-members.md).
--->
+* [建立源連接以 [!DNL Mailchimp Members] 使用用戶介面向平台發送資料](../../tutorials/ui/create/marketing-automation/mailchimp-members.md)。
