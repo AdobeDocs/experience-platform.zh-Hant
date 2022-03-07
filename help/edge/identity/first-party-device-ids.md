@@ -2,11 +2,9 @@
 title: 平台Web SDK中的第一方設備ID
 description: 瞭解如何為Adobe Experience PlatformWeb SDK配置第一方設備ID(FPID)。
 exl-id: c3b17175-8a57-43c9-b8a0-b874fecca952
-hide: true
-hidefromtoc: true
-source-git-commit: c094e72232f9ac44d10a1919a00024e5faa27b2b
+source-git-commit: 700dea7ed7f35797b3a3fe4bf09f5e266577363b
 workflow-type: tm+mt
-source-wordcount: '1680'
+source-wordcount: '1776'
 ht-degree: 0%
 
 ---
@@ -27,36 +25,44 @@ Adobe Experience PlatformWeb SDK分配 [Adobe Experience CloudID(ECID)](https://
 
 ## 使用FPID
 
-當使用客戶擁有的伺服器設定第一方Cookie時，它們最有效。 使用第一方設備ID，可以使用DNS A記錄在Cookie中設定自己的設備ID。 然後，這些ID可以發送到Adobe，並用作種子以生成ECID，這些ID將繼續作為Adobe Experience Cloud應用程式中的主要標識符。
+FPID通過使用第一方餅乾跟蹤訪問者。 使用利用DNS的伺服器設定第一方Cookie時最有效 [記錄](https://datatracker.ietf.org/doc/html/rfc1035) （對於IPv4）或 [AAAA記錄](https://datatracker.ietf.org/doc/html/rfc3596) （對於IPv6），而不是DNS CNAME或JavaScript代碼。
+
+>[!IMPORTANT]
+>
+>只支援記錄或AAAA記錄來設定和跟蹤Cookie。 資料收集的主要方法是通過DNS CNAME。 換句話說，使用A記錄或AAAA記錄來設定FPID，然後使用CNAME來發送到Adobe。
+>
+>的 [Adobe管理的證書程式](https://experienceleague.adobe.com/docs/core-services/interface/administration/ec-cookies/cookies-first-party.html#adobe-managed-certificate-program) 也支援第一方資料收集。
+
+一旦設定了FPIDcookie，就可以讀取其值，並在收集事件資料時將其發送到Adobe。 收集的FPID用作種子來生成ECID,ECID繼續是Adobe Experience Cloud應用中的主要標識符。
 
 要將網站訪問者的FPID發送到平台邊緣網路，必須在 `identityMap` 為那位訪客準備的。 請參閱本文檔稍後的部分， [在中使用FPID `identityMap`](#identityMap) 的子菜單。
 
-## ID格式要求
+### ID格式要求
 
 平台邊緣網路僅接受符合 [UUIDv4格式](https://datatracker.ietf.org/doc/html/rfc4122)。 將拒絕不採用UUIDv4格式的設備ID。
 
 生成UUID幾乎總會導致唯一的隨機ID，而發生衝突的概率可以忽略。 不能使用IP地址或任何其他個人識別資訊(PII)植入UUIDv4。 UUID無處不在，幾乎每種寫程式語言都可找到庫來生成它們。
 
-## 使用DNS A記錄設定Cookie
+## 使用您自己的伺服器設定Cookie
 
-可以使用多種方法來設定Cookie，以防止它因瀏覽器策略而受到限制：
+使用您擁有的伺服器設定cookie時，可以使用多種方法來防止由於瀏覽器策略而限制cookie:
 
 * 使用伺服器端指令碼語言生成Cookie
 * 設定Cookie以響應對站點上的子域或其他終結點發出的API請求
 * 使用CMS生成Cookie
 * 使用CDN生成Cookie
 
->[!NOTE]
+>[!IMPORTANT]
 >
 >使用JavaScript設定的Cookie `document.cookie` 方法幾乎永遠不會受到限制cookie持續時間的瀏覽器策略的保護。
 
-## 何時設定Cookie
+### 何時設定Cookie
 
 最好在向邊緣網路發出任何請求之前設定FPIDcookie。 但是，在不可能生成ECID的情況下，仍使用現有方法生成ECID，只要Cookie存在，它就充當主標識符。
 
 假設ECID最終受到瀏覽器刪除策略的影響，但FPID不受影響，則FPID將在下次訪問時成為主標識符，並用於在每次後續訪問時對ECID進行種子化。
 
-## 設定Cookie的到期日
+### 設定Cookie的到期日
 
 設定Cookie的過期時間是實施FPID功能時應認真考慮的問題。 在做出此決定時，您應考慮您的組織所在國家或地區，以及這些地區中每個地區的法律和政策。
 
