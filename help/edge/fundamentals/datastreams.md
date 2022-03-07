@@ -3,7 +3,7 @@ title: 為Experience PlatformWeb SDK配置資料流
 description: '瞭解如何配置資料流。 '
 keywords: 配置；資料流；資料流；邊；資料流ID；環境設定；邊配置ID；標識；ID同步容器ID；沙盒；流入口；事件資料集；目標；客戶端代碼；屬性令牌；目標；Cookie環境ID；目標；url；分析設定塊報告套件ID;
 exl-id: 736c75cb-e290-474e-8c47-2a031f215a56
-source-git-commit: 0141f0a83ca7b444015d98d8ce11199b400f77a5
+source-git-commit: c2378c5da73c36e5889d2c83b18194ff239fce96
 workflow-type: tm+mt
 source-wordcount: '2045'
 ht-degree: 1%
@@ -70,7 +70,7 @@ ht-degree: 1%
 
 選擇 **[!UICONTROL 保存和添加映射]** 完成後 [基本配置步驟](#configure)的 **[!UICONTROL 選擇資料]** 的上界。 在此處，必須提供一個示例JSON對象，該對象表示您計畫發送到平台的資料的結構。 您可以選擇將對象作為檔案上載的選項，或將原始對象貼上到提供的文本框中。
 
->[!NOTE]
+>[!IMPORTANT]
 >
 >JSON對象必須具有單個根節點 `data` 以通過驗證。
 
