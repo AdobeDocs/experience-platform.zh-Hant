@@ -2,10 +2,10 @@
 title: Adobe Experience 平台發行說明
 description: Adobe Experience Platform的最新發行說明。
 exl-id: ae453f7d-ac75-4cc3-8435-57d25f086cc3
-source-git-commit: d407d6bedbe0eb9b4dde229d990160c114fad472
+source-git-commit: 534d87aed98359b979fe06d40f9b9a2daee5308c
 workflow-type: tm+mt
-source-wordcount: '502'
-ht-degree: 6%
+source-wordcount: '720'
+ht-degree: 4%
 
 ---
 
@@ -15,9 +15,22 @@ ht-degree: 6%
 
 Adobe Experience Platform 現有功能更新：
 
+- [[!DNL Dashboards]](#dashboards)
 - [資料收集](#data-collection)
 - [[!DNL Identity Service]](#identity)
 - [來源](#sources)
+
+## [!DNL Dashboards] {#dashboards}
+
+Adobe Experience Platform提供 [!DNL dashboards] 通過這些資訊，您可以查看有關組織資料的重要見解，如在每日快照中捕獲的。
+
+**已更新功能**
+
+| 功能 | 說明 |
+| --- | --- |
+| 新標準目標小部件 | 以下標準小部件允許您可視化與目標相關的不同度量。<ul><li>最近按目標激活的段。 此小部件根據所選目標按降序顯示前五個最近激活的段。</li><li>受眾規模趨勢。 此小部件描述已映射到該目標帳戶的段一段時間內配置檔案計數的關係。</li><li>未按標識映射段。 此小部件列出按給定目標和標識的降序標識計數排序的前五個未映射段。</li><li>按標識映射的段。 此小部件列出前五個映射的段。 段按與構件下拉菜單中選擇的目標ID匹配的源ID的各個計數從高到低排序。</li><li>普通觀眾。 此小部件提供了在頁面頂部選擇的目標帳戶和在小部件下拉清單中選擇的目標帳戶中激活的前五個段的清單。</li></ul> 有關可用標準小部件的詳細資訊，請參閱 [目標儀表板文檔。](https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/destinations.html?lang=en#standard-widgets)。 |
+
+有關 [!DNL Dashboards]，請參閱 [[!DNL Dashboards] 概述](../../dashboards/home.md)。
 
 ## 資料收集 {#data-collection}
 
