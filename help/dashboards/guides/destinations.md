@@ -4,9 +4,9 @@ title: 目標儀表板
 description: Adobe Experience Platform提供了一個儀表板，您可以通過該儀表板查看有關組織活動目標的重要資訊。
 type: Documentation
 exl-id: 6a34a796-24a1-450a-af39-60113928873e
-source-git-commit: 8571d86e1ce9dc894e54fe72dea75b9f8fe84f0b
+source-git-commit: 7590c24baae669ebe3214985088a7135a69ff8bc
 workflow-type: tm+mt
-source-wordcount: '895'
+source-wordcount: '1642'
 ht-degree: 0%
 
 ---
@@ -43,13 +43,18 @@ Adobe Experience Platform用戶介面(UI)提供了一個儀表板，您可以通
 
 ## 標準小部件
 
-Adobe提供了多個標準小部件，您可以使用這些部件來可視化與目標相關的不同度量。 您也可以使用 [!UICONTROL 小部件庫]。 要瞭解有關建立自定義小部件的詳細資訊，請首先閱讀 [構件庫概述](../customize/widget-library.md)。
+Adobe提供了多個標準小部件，您可以使用這些部件來可視化與目標相關的不同度量，並評估可用於資料分析的段的完整性。 您也可以使用 [!UICONTROL 小部件庫]。 要瞭解有關建立自定義小部件的詳細資訊，請首先閱讀 [構件庫概述](../customize/widget-library.md)。
 
 要瞭解有關每個可用標準小部件的詳細資訊，請從以下清單中選擇小部件的名稱：
 
 * [[!UICONTROL 最常用的目標]](#most-used-destinations)
 * [[!UICONTROL 最近建立的目標]](#recently-created-destinations)
 * [[!UICONTROL 最近激活的段]](#recently-activated-segments)
+* [[!UICONTROL 按目標最近激活的段]](#recently-activated-segments-by-destination)
+* [[!UICONTROL 受眾規模趨勢]](#audience-size-trends)
+* [[!UICONTROL 按標識未映射的段]](#unmapped-segments-by-identity)
+* [[!UICONTROL 按標識映射的段]](#mapped-segments-by-identity)
+* [[!UICONTROL 普通觀眾]](#common-audiences)
 
 ### [!UICONTROL 最常用的目標] {#most-used-destinations}
 
@@ -86,6 +91,66 @@ Adobe提供了多個標準小部件，您可以使用這些部件來可視化與
 有關使用Experience Platform中段的詳細資訊，請首先閱讀 [分段服務概述](../../segmentation/home.md)。
 
 ![](../images/destinations/recently-activated-segments.png)
+
+### [!UICONTROL 按目標最近激活的段] {#recently-activated-segments-by-destination}
+
+的 **[!UICONTROL 按目標最近激活的段]** 小部件根據在概述下拉清單中選擇的目標按降序顯示前五個最近激活的段。 與 [!UICONTROL 最近激活的段] 小部件，但顯示的資料 **僅** 應用於所選目標。
+
+此小部件包含兩個度量：段名稱和段上次激活到目標的日期。 顯示的資料自上次的每日快照時起是正確的。
+
+通過從顯示的清單中選擇段名稱，可以查看段的詳細資訊。
+
+![最近按目標小部件激活的段。](../images/destinations/recently-activated-segments-by-destination.png)
+
+### [!UICONTROL 受眾規模趨勢] {#audience-size-trend}
+
+的 **[!UICONTROL 受眾規模趨勢]** 小部件描述已映射到該目標帳戶的段的配置檔案計數在一段時間內的關係。 構件使用線形圖來說明段中包含的每天發送到目標帳戶的配置檔案數。
+
+過去30天、90天或12個月的受眾趨勢時段可以使用第一個下拉菜單進行調整。
+
+第二個下拉菜單列出了每個可發送到儀表板頂部所選目標帳戶的可用段。
+
+![受眾大小趨勢小部件。](../images/destinations/audience-size-trend.png)
+
+### [!UICONTROL 按標識未映射的段] {#unmapped-segments-by-identity}
+
+的 **[!UICONTROL 按標識未映射的段]** 小部件列出前五 **未映射** 按給定目標和標識的降序標識計數排序的段。 它突出顯示基於所選ID映射到所選目標帳戶最有益的段。
+
+目標ID下拉清單將篩選可用段。 下拉清單中列出的篩選器ID取決於在概述頁頂部選擇的目標帳戶。
+
+標識列計算段內可映射到構件ID下拉清單中選擇的ID的源ID數。
+
+![按標識構件顯示的未映射段。](../images/destinations/unmapped-segments-by-identity.png)
+
+### [!UICONTROL 按標識映射的段] {#mapped-segments-by-identity}
+
+此小部件提供了 **映射** 段。 根據段中包含的源ID數，從高到低對清單進行排序。 要計數的目標ID是從小部件標題下的下拉菜單中選擇的。 從構件中的下拉清單中可用的目標ID將根據在概述儀表板頂部選擇的目標帳戶篩選器進行更改。
+
+![按標識小部件映射的段。](../images/destinations/mapped-segments-by-identity.png)
+
+的 **[!UICONTROL 按標識映射的段]** 小部件一覽表就會突出顯示，成功鎖定所選目標內市場活動的配置檔案機會的可能性。 有效的目標市場活動不取決於發送到目標的配置檔案數量，而取決於可能與目標ID匹配以提供有用且可操作資料的源ID數量。
+
+### 普通觀眾
+
+的 **[!UICONTROL 普通觀眾]** 小部件提供了在頁面頂部選擇的目標帳戶中激活的前五個段以及在小部件下拉清單中選擇的目標的清單。 段清單按激活時間排序。 最近激活的段顯示在頂部。
+
+的 [!UICONTROL 受眾大小] 列提供每個列出段的總配置檔案計數。
+
+![常見受眾小部件。](../images/destinations/common-audiences.png)
+
+### 映射的受眾健康
+
+該小部件提供一個清單，列出多達20個映射的段，其截至最後一個每日快照，其配置檔案總數與映射到該目標的30天平均受眾大小的至少一個標準偏差因子。
+
+簡而言之，它提供了計算過去30天中觀眾人數的平均分佈的指標。 它比較了今天的受眾規模是否超出了過去30天資料中所見的歷史標準差。
+
+系統中的所有觀眾大小按高到低的觀眾大小排序，如 [!UICONTROL 最新大小] 的雙曲餘切值。
+
+如果您的段映射配置檔案計數與過去30天內的平均映射配置檔案大小不在一個標準偏差範圍之內，則表明系統中存在異常，應對其進行調查。
+
+如果 [!UICONTROL 映射的受眾健康] 小部件偏差較大，您應參考受眾大小趨勢圖並查找異常段。 這一趨勢可以進一步瞭解您所在細分市場的健康狀況。
+
+![映射的受眾健康小部件。](../images/destinations/mapped-audience-health.png)
 
 ## 後續步驟
 
