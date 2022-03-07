@@ -6,9 +6,9 @@ seo-title: Activate audience data to profile request destinations
 description: 瞭解如何通過將段映射到配置檔案請求目標來激活您在Adobe Experience Platform擁有的受眾資料。
 seo-description: Learn how to activate the audience data you have in Adobe Experience Platform by mapping segments to profile request destinations.
 exl-id: cd7132eb-4047-4faa-a224-47366846cb56
-source-git-commit: dd9493077706b102467493e90b363ac202550eee
+source-git-commit: d0660f29df93659990d80353f86dcbf856afb733
 workflow-type: tm+mt
-source-wordcount: '454'
+source-wordcount: '457'
 ht-degree: 0%
 
 ---
@@ -25,7 +25,7 @@ ht-degree: 0%
 
 ### 段合併策略 {#merge-policy}
 
-當前，配置檔案請求目標僅支援激活使用 [預設合併策略](../../segmentation/ui/segment-builder.md#merge-policies)。
+當前，配置檔案請求目標僅支援激活使用 [活動邊緣合併策略](../../segmentation/ui/segment-builder.md#merge-policies) 設定為預設值。
 
 ## 選擇目標 {#select-destination}
 
