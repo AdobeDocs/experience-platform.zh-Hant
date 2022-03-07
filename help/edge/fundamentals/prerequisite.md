@@ -3,10 +3,10 @@ title: 使用Adobe Experience PlatformWeb SDK的先決條件
 description: 瞭解使用Adobe Experience PlatformWeb SDK的先決條件。
 keywords: 第一方域；CNAME；架構；建立模式；啟動；aep web sdk擴展；擴展；配置ID；配置工具；資料元；建立資料元；XDM對象；sendEvent;send Event;
 exl-id: 98ae69db-bc87-4ea3-b101-664ac53e7ae0
-source-git-commit: a9b63d2ad2c1adbd647c0c3a43331cddffa8a04e
+source-git-commit: 1ff52944be6e9475f57c62793b0e4c671ff8786b
 workflow-type: tm+mt
-source-wordcount: '396'
-ht-degree: 2%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 2%
 
 要使用Adobe Experience PlatformWeb SDK，必須首先：
 
-- 已為您的組織設定此功能。 如果您想獲得訪問權限，請填寫以下內容 [表格](https://adobe.ly/websdkaccess) 而Adobe將為您提供訪問資料流和Adobe Experience Platform（如果需要）的權限。 請注意，Adobe將為您提供必要的訪問權，讓您在SDK中以有限的方式使用，無需額外付費。
+- 已為您的組織設定此功能。 如果您想獲得訪問權限，請填寫以下內容 [表格](https://adobe.ly/websdkaccess) 而Adobe將為您提供對Datastreams和Adobe Experience Platform（如果需要）的訪問權限。 請注意，Adobe將為您提供必要的訪問權，讓您在SDK中以有限的方式使用，無需額外付費。
 - 建議啟用第一方域(CNAME)。 如果你已經有Adobe Analytics的CNAME，你應該用那個。 在開發中進行測試沒有CNAME，但Adobe建議在您投入生產前先使用一個。 雖然CNAME實現在Cookie生存期方面沒有提供任何好處，但它可以阻止某些廣告攔截程式和不太常見的瀏覽器阻止SDK請求。 在這些情況下，使用CNAME可能會防止使用這些工具的用戶中斷資料收集。
 
 >[!IMPORTANT]
