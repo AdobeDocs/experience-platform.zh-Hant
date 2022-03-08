@@ -6,9 +6,9 @@ topic-legacy: overview
 type: Tutorial
 description: 本教程介紹了使用源連接器和API從資料庫中檢索資料並將其導入平台的步驟。
 exl-id: 1e1f9bbe-eb5e-40fb-a03c-52df957cb683
-source-git-commit: 67e6de74ea8f2f4868a39ec1907ee1cac335c9f0
+source-git-commit: 43e7ee264cd436c8c430760e50d5067c8c9ef535
 workflow-type: tm+mt
-source-wordcount: '1348'
+source-wordcount: '1347'
 ht-degree: 1%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->為了建立資料流，您必須已具有與平台上以下任何雲儲存源的有效基本連接ID:<ul><li>[[!DNL Amazon Redshift]](../create/databases/redshift.md)</li><li>[[!DNL Apache Hive on Azure HDInsights]](../create/databases/hive.md)</li><li>[[!DNL Apache Spark on Azure HDInsights]](../create/databases/spark.md)</li><li>[[!DNL Azure Data Explorer]](../create/databases/data-explorer.md)</li><li>[[!DNL Azure Synapse Analytics]](../create/databases/synapse-analytics.md)</li><li>[[!DNL Azure Table Storage]](../create/databases/ats.md)</li><li>[[!DNL Couchbase]](../create/databases/couchbase.md)</li><li>[[!DNL Google BigQuery]](../create/databases/bigquery.md)</li><li>[[!DNL Greenplum]](../create/databases/greenplum.md)</li><li>[[!DNL HP Vertica]](../create/databases/hp-vertica.md)</li><li>[[!DNL IBM DB2]](../create/databases/ibm-db2.md)</li><li>[[!DNL MariaDB]](../create/databases/mariadb.md)</li><li>[[!DNL Microsoft SQL Server]](../create/databases/sql-server.md)</li><li>[[!DNL MySQL]](../create/databases/mysql.md)</li><li>[[!DNL Oracle]](../create/databases/oracle.md)</li><li>[[!DNL Phoenix]](../create/databases/phoenix.md)</li><li>[[!DNL PostgreSQL]](../create/databases/postgres.md)</li><li>[[!DNL Snowflake]](../create/databases/snowflake.md)</li></ul>
+>為了建立資料流，您必須已具有與平台上以下任何資料庫源的有效基本連接ID:<ul><li>[[!DNL Amazon Redshift]](../create/databases/redshift.md)</li><li>[[!DNL Apache Hive on Azure HDInsights]](../create/databases/hive.md)</li><li>[[!DNL Apache Spark on Azure HDInsights]](../create/databases/spark.md)</li><li>[[!DNL Azure Data Explorer]](../create/databases/data-explorer.md)</li><li>[[!DNL Azure Synapse Analytics]](../create/databases/synapse-analytics.md)</li><li>[[!DNL Azure Table Storage]](../create/databases/ats.md)</li><li>[[!DNL Couchbase]](../create/databases/couchbase.md)</li><li>[[!DNL Google BigQuery]](../create/databases/bigquery.md)</li><li>[[!DNL Greenplum]](../create/databases/greenplum.md)</li><li>[[!DNL HP Vertica]](../create/databases/hp-vertica.md)</li><li>[[!DNL IBM DB2]](../create/databases/ibm-db2.md)</li><li>[[!DNL MariaDB]](../create/databases/mariadb.md)</li><li>[[!DNL Microsoft SQL Server]](../create/databases/sql-server.md)</li><li>[[!DNL MySQL]](../create/databases/mysql.md)</li><li>[[!DNL Oracle]](../create/databases/oracle.md)</li><li>[[!DNL Phoenix]](../create/databases/phoenix.md)</li><li>[[!DNL PostgreSQL]](../create/databases/postgres.md)</li><li>[[!DNL Snowflake]](../create/databases/snowflake.md)</li></ul>
 
 ## 快速入門
 
