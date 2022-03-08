@@ -6,9 +6,9 @@ title: 監視UI中目標的資料流
 topic-legacy: overview
 type: Tutorial
 exl-id: 8eb7bb3c-f2dc-4dbc-9cf5-3d5d3224f5f1
-source-git-commit: 387e10038f61a7444a16f4e6270a62082446c09d
+source-git-commit: 042a739593b291cdd7193437906a16dc889a3b4b
 workflow-type: tm+mt
-source-wordcount: '3269'
+source-wordcount: '3358'
 ht-degree: 0%
 
 ---
@@ -61,7 +61,7 @@ ht-degree: 0%
 >[!CONTEXTUALHELP]
 >id="platform_destinations_dataflow_identitiesactivated_streaming"
 >title="已激活身份"
->abstract="已成功激活到選定目標的單個配置檔案標識的計數。"
+>abstract="已成功激活到選定目標的單個配置檔案標識的計數。 此度量包括建立、更新和從導出的段中刪除的標識。"
 >text="Learn more in documentation"
 
 >[!CONTEXTUALHELP]
@@ -82,7 +82,7 @@ ht-degree: 0%
 
 將顯示單個運行及其特定度量的清單，以及以下標識總計：
 
-- **[!UICONTROL 已激活身份]**:為激活而建立或更新的配置檔案標識的總數。
+- **[!UICONTROL 已激活身份]**:成功激活到選定目標的配置檔案標識總數。 此度量包括建立、更新和從導出的段中刪除的標識。
 - **[!UICONTROL 排除的身份]**:基於缺少屬性和同意違規而跳過用於激活的配置檔案標識總數。
 - **[!UICONTROL 標識失敗]**:由於錯誤而未激活到目標的配置檔案標識總數。
 
@@ -95,7 +95,7 @@ ht-degree: 0%
    - 對於 **[!UICONTROL 已完成]** 運行時，處理時間度量始終顯示1小時。
    - 對於仍位於 **[!UICONTROL 處理]** 狀態，用於捕獲所有度量的窗口將保持開啟狀態超過一個小時，以處理與資料流運行對應的所有度量。 例如，在上午9:30啟動的資料流運行可能會在處理狀態中停留1小時30分鐘，以捕獲和處理所有度量。 然後，一旦處理窗口關閉，並且資料流的狀態將更新到 **已完成**，顯示的處理時間被更改為1小時。
 - **[!UICONTROL 收到的配置檔案]**:在資料流中接收的配置檔案總數。
-- **[!UICONTROL 已激活身份]**:成功激活到選定目標的配置檔案標識總數。
+- **[!UICONTROL 已激活身份]**:在資料流運行過程中成功激活到選定目標的配置檔案標識總數。 此度量包括建立、更新和從導出的段中刪除的標識。
 - **[!UICONTROL 排除的身份]**:基於缺少屬性和同意違規而被排除在激活中的配置檔案標識總數。
 - **[!UICONTROL 標識失敗]** 由於錯誤而未激活到目標的配置檔案標識總數。
 - **[!UICONTROL 激活率]**:已成功激活或跳過的已接收標識的百分比。 以下公式說明如何計算此值：
@@ -133,7 +133,7 @@ ht-degree: 0%
 >[!CONTEXTUALHELP]
 >id="platform_destinations_dataflow_identitiesactivated_batch"
 >title="已激活身份"
->abstract="已成功激活到選定目標的單個配置檔案標識的計數。"
+>abstract="已成功激活到選定目標的單個配置檔案標識的計數。 此度量包括建立、更新和從導出的段中刪除的標識。"
 >text="Learn more in documentation"
 
 >[!CONTEXTUALHELP]
@@ -144,7 +144,7 @@ ht-degree: 0%
 
 對於批目標， [!UICONTROL 資料流運行] 頁籤提供資料流運行的度量資料。 將顯示單個運行及其特定度量的清單，以及以下標識總計：
 
-- **[!UICONTROL 已激活身份]**:已成功激活到選定目標的單個配置檔案標識的計數。
+- **[!UICONTROL 已激活身份]**:成功激活到選定目標的配置檔案標識總數。 此度量包括建立、更新和從導出的段中刪除的標識。
 - **[!UICONTROL 排除的身份]**:基於缺少的屬性和同意違規，從選定目標的激活中排除的單個配置檔案標識的計數。
 
 ![批處理目標的資料流運行視圖](../assets/ui/monitor-destinations/dataflow-runs-batch.png)
@@ -154,7 +154,7 @@ ht-degree: 0%
 - **[!UICONTROL 資料流運行啟動]**:資料流運行於的時間。
 - **[!UICONTROL 處理時間]**:處理資料流運行所花費的時間。
 - **[!UICONTROL 收到的配置檔案]**:在資料流中接收的配置檔案總數。 此值每60分鐘更新一次。
-- **[!UICONTROL 已激活身份]**:成功激活到選定目標的配置檔案標識總數。
+- **[!UICONTROL 已激活身份]**:在資料流運行過程中成功激活到選定目標的配置檔案標識總數。 此度量包括建立、更新和從導出的段中刪除的標識。
 - **[!UICONTROL 排除的身份]**:基於缺少屬性和同意違規而被排除在激活中的配置檔案標識總數。
 - **[!UICONTROL 狀態]**:表示資料流處於的狀態。 這可以是三個狀態之一： [!UICONTROL 成功]。 [!UICONTROL 失敗], [!UICONTROL 處理]。 [!UICONTROL 成功] 表示資料流處於活動狀態，並正在根據其提供的時間表導出資料。 [!UICONTROL 失敗] 表示由於錯誤而暫停了資料的激活。 [!UICONTROL 處理] 表示資料流尚未處於活動狀態，並且通常在建立新資料流時遇到。
 
