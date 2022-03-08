@@ -4,7 +4,7 @@ title: 配置式儀表板
 description: Adobe Experience Platform提供了一個儀表板，您可以通過該儀表板查看有關您組織的即時客戶配置檔案資料的重要資訊。
 type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
-source-git-commit: 7590c24baae669ebe3214985088a7135a69ff8bc
+source-git-commit: 77fb7efa90e03c42c036b267ee93547647dab41d
 workflow-type: tm+mt
 source-wordcount: '2324'
 ht-degree: 1%
@@ -51,7 +51,7 @@ Adobe Experience Platform用戶介面(UI)提供了一個儀表板，您可以通
 
 的 [!UICONTROL 功效] 頁籤提供有關使用配置檔案效能小部件後配置檔案資料的質量和完整性的指標。 這些小部件可一目瞭然地說明您的配置檔案的構成、隨時間推移的完整性趨勢，以及對配置檔案資料質量的評估。
 
-[配置檔案效能儀表板。](../images/profiles/attributes-quality-assessment.png)
+![配置檔案效能儀表板。](../images/profiles/attributes-quality-assessment.png)
 
 查看 [配置檔案效能小部件部分](#profile-efficacy-widgets) 的子菜單。
 
