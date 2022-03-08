@@ -2,10 +2,10 @@
 title: Adobe Experience 平台發行說明
 description: Adobe Experience Platform的最新發行說明。
 exl-id: ae453f7d-ac75-4cc3-8435-57d25f086cc3
-source-git-commit: b714a5cf0f4bdf2c0f010664bfef96c5b6641c22
+source-git-commit: 366656346c25cd5206b36c7ff2b9942c5027de17
 workflow-type: tm+mt
-source-wordcount: '732'
-ht-degree: 4%
+source-wordcount: '1018'
+ht-degree: 3%
 
 ---
 
@@ -20,9 +20,10 @@ ht-degree: 4%
 Adobe Experience Platform 現有功能更新：
 
 - [[!DNL Dashboards]](#dashboards)
-- [資料收集](#data-collection)
+- [[!DNL Data collection]](#data-collection)
+- [[!DNL Destinations]](#destinations)
 - [[!DNL Identity Service]](#identity)
-- [來源](#sources)
+- [[!DNL Sources]](#sources)
 
 ## [!DNL Dashboards] {#dashboards}
 
@@ -49,6 +50,16 @@ Adobe Experience Platform提供 [!DNL dashboards] 通過這些資訊，您可以
 | 第一方設備ID | 使用平台Web SDK收集客戶資料時，您現在可以將自己的設備ID發送到Adobe Experience Platform邊緣網路，這為最近對第三方Cookie生命週期的瀏覽器限制提供了一種解決方法。 請參閱上的指南 [第一方設備ID](../../edge/identity/first-party-device-ids.md) 的子菜單。 |
 
 有關平台中資料收集的詳細資訊，請參閱 [資料收集概述](../../collection/home.md)。
+
+## [!DNL Destinations] {#destinations}
+
+[!DNL Destinations] 是預先構建的與目標平台的整合，允許無縫激活來自Adobe Experience Platform的資料。 您可以使用目標來激活跨渠道市場營銷活動、電子郵件活動、目標廣告和許多其他使用案例的已知和未知資料。
+
+**新增或更新的功能**
+
+| 功能 | 說明 |
+| ----------- | ----------- |
+| (Beta)對基於檔案的目標的Destination SDK支援 | [Destination SDK對基於檔案的目標的支援](../../destinations/destination-sdk/file-based-destination-configuration.md) 目前是私有beta版，僅供選定數量的合作夥伴和客戶使用。 在正式發佈之前，功能和相關文檔可能會發生更改。<br><br>請與Adobe客戶代表聯繫，瞭解如何訪問該功能。 Adobe — 內部客戶代表應聯繫Experience Platform目的地產品和工程團隊，討論受支援的使用案例。 <br><br> 在基於檔案的目標的Destination SDK支援的測試階段，測試合作夥伴和客戶可以使用 [Experience PlatformDestination SDK](/help/destinations/destination-sdk/overview.md) 要從以下功能中獲益，請構建專用目標： <ul><li>通過AmazonS3、SFTP伺服器、Azure Blob、Azure Data Lake Storage、Data Landing Zone儲存建立基於檔案的（批處理）目標。</li><li>配置和設定預設檔案導出計畫和頻率選項。</li><li>配置和設定選項以格式化導出的CSV檔案（分隔符、轉義字元和其他選項）。</li><li>能夠設定和編輯自定義檔案頭。</li><li>能夠接收有關檔案和段導出的事件通知。</li><li>能夠導出其他檔案類型，如CSV、TSV、JSON和Parmet。</li></ul>  <br>要開始使用新功能，請閱讀 [（測試版）使用Destination SDK配置基於檔案的目標](../../destinations/destination-sdk/file-based-destination-configuration.md)。 <br><br> 建立專用或已生產化的功能 *流* 所有Experience Platform客戶和合作夥伴都可以使用「Destination SDK」來確定目的地。 閱讀有關如何 [使用Destination SDK配置流目標](/help/destinations/destination-sdk/configure-destination-instructions.md) 的雙曲餘切值。 |
 
 ## [!DNL Identity Service] {#identity}
 
