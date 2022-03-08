@@ -6,9 +6,9 @@ seo-title: Activate audience data to batch profile export destinations
 description: 瞭解如何通過將段發送到基於批處理配置檔案的目標來激活您在Adobe Experience Platform擁有的受眾資料。
 seo-description: Learn how to activate the audience data you have in Adobe Experience Platform by sending segments to batch profile-based destinations.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: ee9ed1c17a566f37b4ad79df7c66f8b2ffb4b879
+source-git-commit: 6c64e8400c85865aab4e8cfb9e86850562ba97aa
 workflow-type: tm+mt
-source-wordcount: '2188'
+source-wordcount: '2178'
 ht-degree: 0%
 
 ---
@@ -51,7 +51,7 @@ ht-degree: 0%
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_schedule"
 >title="排程"
->abstract="設定檔案導出類型（完整檔案或增量檔案）和導出頻率。"
+>abstract="使用鉛筆表徵圖可設定檔案導出類型（完整檔案或增量檔案）和導出頻率。"
 >additional-url="https://www.adobe.com/go/destinations-profile-batch-en" text="瞭解有關文檔的詳細資訊"
 
 [!DNL Adobe Experience Platform] 以以下形式導出資料以用於電子郵件營銷和雲儲存目標 [!DNL CSV] 的子菜單。 在 **[!UICONTROL 計畫]** 頁中，您可以配置要導出的每個段的調度和檔案名。 配置計畫是必需的，但配置檔案名是可選的。
@@ -133,7 +133,6 @@ ht-degree: 0%
 >id="platform_destinations_activate_filename"
 >title="配置檔案名"
 >abstract="對於基於檔案的目標，每個段生成唯一的檔案名。 使用檔案名編輯器建立和編輯唯一檔案名或保留預設名稱。"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html?lang=en#file-names" text="瞭解有關文檔的詳細資訊"
 
 預設檔案名包括目標名稱、段ID以及日期和時間指示器。 例如，您可以編輯導出的檔案名以區分不同的市場活動或將資料導出時間附加到檔案。
 

@@ -6,9 +6,9 @@ title: 監視UI中目標的資料流
 topic-legacy: overview
 type: Tutorial
 exl-id: 8eb7bb3c-f2dc-4dbc-9cf5-3d5d3224f5f1
-source-git-commit: 042a739593b291cdd7193437906a16dc889a3b4b
+source-git-commit: 0a6813d5d614d86940b042e03d2ab4f083644600
 workflow-type: tm+mt
-source-wordcount: '3358'
+source-wordcount: '3338'
 ht-degree: 0%
 
 ---
@@ -56,25 +56,21 @@ ht-degree: 0%
 >id="platform_monitoring_profiles_received_streaming"
 >title="收到的配置檔案"
 >abstract="在資料流中接收的配置檔案總數。 此值每60分鐘更新一次。"
->text="Learn more in documentation"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_dataflow_identitiesactivated_streaming"
 >title="已激活身份"
 >abstract="已成功激活到選定目標的單個配置檔案標識的計數。 此度量包括建立、更新和從導出的段中刪除的標識。"
->text="Learn more in documentation"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_dataflow_identitiesexcluded_streaming"
 >title="排除的身份"
 >abstract="基於丟失的屬性和同意違規而從選定目標的激活中排除的單個配置檔案記錄的計數。"
->text="Learn more in documentation"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_dataflow_identitiesfailed_streaming"
 >title="標識失敗"
 >abstract="所選目標失敗的單個配置檔案標識的計數。 有關詳細資訊，請檢查錯誤診斷。"
->text="Learn more in documentation"
 
 對於流目標， [!UICONTROL 資料流運行] 頁籤為資料流運行上的度量資料提供每小時更新。 標有標識的最顯赫統計資料是身份。
 
@@ -118,29 +114,22 @@ ht-degree: 0%
 >id="platform_monitoring_dataflow_run_details_activation"
 >title="資料流運行詳細資訊"
 >abstract="目標資料流運行詳細資訊包含有關段的激活狀態和從即時客戶配置檔案獲取的度量的資訊，以生成唯一標識。 要瞭解更多資訊，請查看度量定義指南。"
-
->[!CONTEXTUALHELP]
->id="platform_monitoring_dataflow_run_details_activation_batch"
->title="資料流運行詳細資訊"
->abstract="目標資料流運行詳細資訊包含有關段的激活狀態和從即時客戶配置檔案獲取的度量的資訊，以生成唯一標識。 要瞭解更多資訊，請查看度量定義指南。"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/dataflows/ui/monitor-destinations.html?lang=en#dataflow-runs-for-streaming-destinations" text="流目標的資料流運行"
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_profiles_received_batch"
 >title="收到的配置檔案"
 >abstract="在資料流中接收的配置檔案總數。 此值每60分鐘更新一次。"
->text="Learn more in documentation"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_dataflow_identitiesactivated_batch"
 >title="已激活身份"
 >abstract="已成功激活到選定目標的單個配置檔案標識的計數。 此度量包括建立、更新和從導出的段中刪除的標識。"
->text="Learn more in documentation"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_dataflow_identitiesexcluded_batch"
 >title="排除的身份"
 >abstract="基於丟失的屬性和同意違規而從選定目標的激活中排除的單個配置檔案記錄的計數。"
->text="Learn more in documentation"
 
 對於批目標， [!UICONTROL 資料流運行] 頁籤提供資料流運行的度量資料。 將顯示單個運行及其特定度量的清單，以及以下標識總計：
 
