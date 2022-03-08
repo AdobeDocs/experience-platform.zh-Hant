@@ -1,18 +1,19 @@
 ---
 title: 擴展軟枚舉欄位
-description: 了解如何擴充Schema Registry API中的軟列舉欄位。
-source-git-commit: 2d85db789e6e6a28402bb68122a3b5cfe9d0c5dc
+description: 瞭解如何在架構註冊表API中擴展軟枚舉欄位。
+exl-id: 96897a5d-e00a-410f-a20e-f77e223bd8c4
+source-git-commit: a26c8d43ff7874bcedd2adb3d6da995986198c96
 workflow-type: tm+mt
-source-wordcount: '532'
+source-wordcount: '531'
 ht-degree: 0%
 
 ---
 
-# 擴充軟列舉欄位
+# 擴展軟枚舉欄位
 
-在Experience Data Model(XDM)中，列舉欄位代表字串欄位，其受限於預先定義的值子集。 列舉欄位可提供驗證，以確保擷取的資料符合一組接受的值（稱為「硬列舉」），或者它們只能表示一組建議的值，而不強制執行限制（稱為「軟列舉」）。
+在體驗資料模型(XDM)中，枚舉欄位表示一個字串欄位，該字串欄位被限制為預定義的值子集。 枚舉欄位可以提供驗證以確保所攝取的資料符合一組接受的值（稱為「硬枚舉」），或者它們只能表示一組建議的值而不強制約束（稱為「軟枚舉」）。
 
-在結構註冊表API中，硬列舉的限制值由 `enum` 陣列，若 `meta:enum` 物件提供這些值的好記顯示名稱：
+在架構註冊表API中，硬枚舉的約束值由 `enum` 陣列，而 `meta:enum` object為這些值提供友好的顯示名稱：
 
 ```json
 "sampleHardEnumField": {
@@ -31,9 +32,9 @@ ht-degree: 0%
 }
 ```
 
-對於硬列舉欄位，架構註冊表不允許 `meta:enum` 將擴展到 `enum`，因為嘗試擷取這些限制以外的字串值時，無法通過驗證。
+對於硬枚舉欄位，架構註冊表不允許 `meta:enum` 將擴展到下面提供的值之外 `enum`，因為嘗試在這些約束之外輸入字串值將不會通過驗證。
 
-相較之下，軟列舉欄位不包含 `enum` 陣列，且僅使用 `meta:enum` 物件，表示建議的值：
+相反，軟枚舉欄位不包含 `enum` 僅使用 `meta:enum` 對象表示建議的值：
 
 ```json
 "sampleSoftEnumField": {
@@ -47,24 +48,24 @@ ht-degree: 0%
 }
 ```
 
-由於軟列舉與硬列舉的驗證限制不同，因此其 `meta:enum` 屬性可延伸以包含新值。 本教學課程涵蓋如何擴充Schema Registry API中的標準和自訂軟式列舉欄位。
+由於軟枚舉與硬枚舉的驗證約束不相同，因此它們 `meta:enum` 可以擴展屬性以包括新值。 本教程介紹如何擴展架構註冊表API中的標準和自定義可變枚舉欄位。
 
 ## 先決條件
 
-本指南假設您熟悉XDM中架構組成的元素，以及如何使用Schema Registry API來建立和編輯XDM資源。 如需簡介，請參閱下列檔案：
+本指南假定您熟悉XDM中模式組合的元素以及如何使用模式註冊表API建立和編輯XDM資源。 如需介紹，請參閱以下文檔：
 
-* [結構構成基本概念](../schema/composition.md)
-* [Schema Registry API指南](../api/overview.md)
+* [架構組合的基礎](../schema/composition.md)
+* [架構註冊API指南](../api/overview.md)
 
-## 擴充標準軟列舉欄位
+## 擴展標準軟枚舉欄位
 
-若要擴充 `meta:enum` ，您可以建立 [友好名稱描述符](../api/descriptors.md#friendly-name) 針對特定結構中的相關欄位。
+擴展 `meta:enum` 在標準字串欄位中，可以建立 [友好名稱描述符](../api/descriptors.md#friendly-name) 的子菜單。
 
 >[!NOTE]
 >
->標準軟列舉只能在架構層級擴充。 換句話說，將 `meta:enum` 標準欄位的其他結構不會影響採用相同標準欄位的其他結構。
+>只能在架構級別擴展標準軟枚舉。 換句話說， `meta:enum` 模式中的標準欄位不會影響使用相同標準欄位的其他模式。
 
-下列請求會將軟列舉值新增至標準 `eventType` 欄位(由 [XDM ExperienceEvent類別](../classes/experienceevent.md))，適用於 `sourceSchema`:
+以下請求將可變枚舉值添加到標準 `eventType` 欄位(由 [XDM ExperienceEvent類](../classes/experienceevent.md))，用於在 `sourceSchema`:
 
 ```curl
 curl -X POST \
@@ -95,7 +96,7 @@ curl -X POST \
       }'
 ```
 
-應用描述符後，當檢索架構時，架構註冊表使用以下內容進行響應（響應因空間而截斷）:
+應用描述符後，在檢索架構時，架構註冊表會以下方式作出響應（因空間而截斷的響應）:
 
 ```json
 {
@@ -117,7 +118,7 @@ curl -X POST \
 
 >[!NOTE]
 >
->如果標準欄位已包含 `meta:enum`，則描述符的新值不會覆寫現有欄位，而會改為在上新增：
+>如果標準欄位已包含以下值 `meta:enum`，描述符中的新值不會覆蓋現有欄位，而是添加到：
 >
 >
 ```json
@@ -134,20 +135,20 @@ curl -X POST \
 >}
 >```
 
-## 擴充自訂軟列舉欄位
+## 擴展自定義軟枚舉欄位
 
-若要擴充 `meta:enum` 在自訂欄位中，您可以透過PATCH請求更新欄位的上層類別、欄位群組或資料類型。
+擴展 `meta:enum` 在自定義欄位中，您可以通過PATCH請求更新欄位的父類、欄位組或資料類型。
 
 >[!WARNING]
 >
->與標準欄位相反，請更新 `meta:enum` 自訂欄位的其他結構會影響使用該欄位的所有結構。 如果您不想讓變更傳播至不同結構，請考慮改為建立新的自訂資源：
+>與標準欄位不同，更新 `meta:enum` 自定義欄位會影響使用該欄位的所有其他架構。 如果不希望更改在方案間傳播，請考慮改為建立新的自定義資源：
 >
->* [建立自訂類別](../api/classes.md#create)
->* [建立自訂欄位群組](../api/field-groups.md#create)
->* [建立自訂資料類型](../api/data-types.md#create)
+>* [建立自定義類](../api/classes.md#create)
+>* [建立自定義欄位組](../api/field-groups.md#create)
+>* [建立自定義資料類型](../api/data-types.md#create)
 
 
-下列請求會更新 `meta:enum` 自訂資料類型提供的「忠誠度等級」欄位中：
+以下請求更新 `meta:enum` 自定義資料類型提供的「忠誠度級別」欄位：
 
 ```curl
 curl -X PATCH \
@@ -172,7 +173,7 @@ curl -X PATCH \
       ]'
 ```
 
-應用更改後，當檢索架構時，架構註冊表將使用以下內容進行響應（響應因空間而截斷）:
+應用更改後，在檢索架構時，架構註冊表會以下方式作出響應（因空間而截斷的響應）:
 
 ```json
 {
@@ -197,4 +198,4 @@ curl -X PATCH \
 
 ## 後續步驟
 
-本指南說明如何擴充Schema Registry API中的軟列舉。 如需如何在API中定義不同欄位類型的詳細資訊，請參閱 [XDM欄位類型限制](../schema/field-constraints.md#define-fields).
+本指南介紹如何擴展架構註冊表API中的軟枚舉。 請參閱上的指南 [定義API中的自定義欄位](./custom-fields-api.md) 的子菜單。
