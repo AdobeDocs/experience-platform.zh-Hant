@@ -4,7 +4,7 @@ title: 配置式儀表板
 description: Adobe Experience Platform提供了一個儀表板，您可以通過該儀表板查看有關您組織的即時客戶配置檔案資料的重要資訊。
 type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
-source-git-commit: 77fb7efa90e03c42c036b267ee93547647dab41d
+source-git-commit: 7dd7cccfe17d360b072783823517e847a50166e6
 workflow-type: tm+mt
 source-wordcount: '2324'
 ht-degree: 1%
@@ -43,11 +43,11 @@ Adobe Experience Platform用戶介面(UI)提供了一個儀表板，您可以通
 
 請參閱 [修改儀表板](../customize/modify.md) 和 [構件庫概述](../customize/widget-library.md) 文檔以瞭解詳細資訊。
 
-## (Beta)配置檔案效率洞見 {#profile-efficiency-insights}
+## (Beta)簡介功效洞察 {#profile-efficacy-insights}
 
 >[!IMPORTANT]
 >
->配置檔案效率洞察功能當前處於測試版中，並且不適用於所有用戶。 文件和功能可能會有所變更。
+>配置檔案功效透視功能當前處於測試版中，並且不適用於所有用戶。 文件和功能可能會有所變更。
 
 的 [!UICONTROL 功效] 頁籤提供有關使用配置檔案效能小部件後配置檔案資料的質量和完整性的指標。 這些小部件可一目瞭然地說明您的配置檔案的構成、隨時間推移的完整性趨勢，以及對配置檔案資料質量的評估。
 
@@ -167,7 +167,7 @@ Adobe提供了多個標準小部件，您可以使用這些小部件來可視化
 
 >[!IMPORTANT]
 >
->配置檔案效率小部件當前處於測試版中，並且不適用於所有用戶。 文件和功能可能會有所變更。
+>配置檔案有效性小部件當前位於Beta中，並且不適用於所有用戶。 文件和功能可能會有所變更。
 
 Adobe提供多個小部件，用於評估可用於資料分析的所攝取配置檔案的完整性。 每個配置檔案功效小部件都可以通過合併策略進行篩選。 要更改合併策略篩選器，請選擇[!UICONTROL 使用合併策略的配置檔案] 下拉清單，然後從可用清單中選擇相應的策略。
 
