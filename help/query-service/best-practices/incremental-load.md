@@ -1,15 +1,15 @@
 ---
-title: 增量載入查詢示例
+title: 查詢服務中的增量載入
 description: 增量載入功能使用匿名塊和快照功能提供近乎即時的解決方案，用於在忽略匹配資料的同時將資料從資料湖移動到資料倉庫。
 exl-id: 1418d041-29ce-4153-90bf-06bd8da8fb78
-source-git-commit: e5a79db157524d014c9a07d2bf5907a5544e7b77
+source-git-commit: 7087991c7a3daad57c5acd92a20c7024a1152c7e
 workflow-type: tm+mt
-source-wordcount: '687'
+source-wordcount: '688'
 ht-degree: 0%
 
 ---
 
-# 增量資料載入查詢示例
+# 查詢服務中的增量載入
 
 增量式負載設計模式是一種管理資料的解決方案。 該模式僅處理自上次載入執行後建立或修改的資料集中的資訊。
 

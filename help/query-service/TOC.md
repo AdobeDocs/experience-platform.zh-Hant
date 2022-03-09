@@ -4,9 +4,9 @@ user-guide-title: Adobe Experience 平台查詢服務說明
 breadcrumb-title: 查詢服務指南
 user-guide-description: 使用標準 SQL 在 平台 Data Lake 中查詢資料。
 feature: Queries
-source-git-commit: 7dd0f69b51ebda5e43fc0e832be249ed2a0eebe1
+source-git-commit: c3baf586f5e11e085114b1f26422d191b1067281
 workflow-type: tm+mt
-source-wordcount: '149'
+source-wordcount: '151'
 ht-degree: 18%
 
 ---
@@ -32,12 +32,13 @@ ht-degree: 18%
    - [查詢執行的一般指導](best-practices/writing-queries.md)
    - [資料資產組織指南](./best-practices/organize-data-assets.md)
    - [使用嵌套資料結構](best-practices/nested-data-structures.md)
-   - [重複資料消除](best-practices/deduplication.md)
-   - [體驗事件查詢示例](best-practices/experience-event-queries.md)
-   - [示例Adobe Analytics查詢](best-practices/adobe-analytics.md)
-   - [示例Adobe Target查詢](best-practices/adobe-target.md)
    - [匿名塊查詢示例](best-practices/anonymous-block.md)
    - [增量載入](best-practices/incremental-load.md)
+   - [重複資料消除](best-practices/deduplication.md)
+- 示例查詢 {#sample-queries}
+   - [體驗事件查詢示例](sample-queries/experience-event.md)
+   - [示例Adobe Analytics查詢](sample-queries/adobe-analytics.md)
+   - [示例Adobe Target查詢](sample-queries/adobe-target.md)
 - SQL引用 {#sql}
    - [SQL概述](sql/overview.md)
    - [SQL語法](sql/syntax.md)

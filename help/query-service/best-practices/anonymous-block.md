@@ -1,15 +1,15 @@
 ---
-title: 匿名塊查詢示例
+title: 查詢服務中的匿名塊
 description: 匿名塊是Adobe Experience Platform查詢服務支援的SQL語法，它允許您高效地執行查詢序列
 exl-id: ec497475-9d2b-43aa-bcf4-75a430590496
-source-git-commit: 83b9aad78bcbf6e40d3059607a3779b6f1a2083f
+source-git-commit: 7087991c7a3daad57c5acd92a20c7024a1152c7e
 workflow-type: tm+mt
-source-wordcount: '499'
+source-wordcount: '491'
 ht-degree: 0%
 
 ---
 
-# 匿名塊的查詢示例
+# 查詢服務中的匿名塊
 
 Adobe Experience Platform查詢服務支援匿名塊。 匿名塊功能允許您連結按順序執行的一個或多個SQL陳述式。 它們還允許例外處理選項。
 
@@ -60,4 +60,4 @@ $$;
 
 通過閱讀此文檔，您現在對匿名塊及其結構有了清晰的瞭解。 [有關查詢執行的詳細資訊](./writing-queries.md)，請閱讀查詢服務中查詢執行指南。
 
-有關可在查詢服務中使用的更多查詢示例，請閱讀上的指南 [Adobe Analytics示例查詢](./adobe-analytics.md)。 [Adobe Target示例查詢](./adobe-target.md)或 [ExperienceEvent示例查詢](./experience-event-queries.md)。
+您還應該閱讀 [匿名塊與增量載入設計模式的使用方式](./incremental-load.md) 以提高查詢效率。
