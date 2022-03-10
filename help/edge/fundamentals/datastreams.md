@@ -3,9 +3,9 @@ title: 為Experience PlatformWeb SDK配置資料流
 description: '瞭解如何配置資料流。 '
 keywords: 配置；資料流；資料流；邊；資料流ID；環境設定；邊配置ID；標識；ID同步容器ID；沙盒；流入口；事件資料集；目標；客戶端代碼；屬性令牌；目標；Cookie環境ID；目標；url；分析設定塊報告套件ID;
 exl-id: 736c75cb-e290-474e-8c47-2a031f215a56
-source-git-commit: c2378c5da73c36e5889d2c83b18194ff239fce96
+source-git-commit: 0d23576097b113fa3b24857467658bdf745be427
 workflow-type: tm+mt
-source-wordcount: '2045'
+source-wordcount: '1940'
 ht-degree: 1%
 
 ---
@@ -78,7 +78,7 @@ ht-degree: 1%
 
 ![預期傳入資料的JSON示例](../images/datastreams/select-data.png)
 
-#### [!UICONTROL 映射]
+#### [!UICONTROL 對應]
 
 的 **[!UICONTROL 映射]** 步驟，允許您將源資料中的欄位映射到平台中目標事件模式的欄位。 要開始，請選擇 **[!UICONTROL 添加新映射]** 的子菜單。
 
@@ -107,14 +107,6 @@ ht-degree: 1%
 配置新資料流或選擇要查看的現有資料流後，將顯示該資料流的詳細資訊頁。 在此，您可以找到有關資料流（包括其ID）的詳細資訊。
 
 ![已建立資料流的「詳細資訊」頁](../images/datastreams/view-details.png)
-
-建立資料流時，會自動使用相同的設定建立三個相關的環境。 這三個環境 `dev`。 `stage`, `prod`，對應於 [標籤的預設環境](../../tags/ui/publishing/environments.md)。 將標籤庫構建到 `dev` 環境，庫自動使用 `dev` 資料流中的環境。 您可以自由編輯各個環境中的設定，以滿足您的需要。
-
-在SDK實現中， `edgeConfigId` 是指定資料流和該資料流內特定環境的組合ID。 例如，要指定 `stage` 具有ID的資料流的環境 `1c86778b-cdba-4684-9903-750e52912ad1`，使用 `edgeConfigId` `1c86778b-cdba-4684-9903-750e52912ad1:stage`。
-
->[!IMPORTANT]
->
->如果複合ID中不存在環境，則生產環境(`prod`)。
 
 在資料流詳細資訊螢幕中， [添加服務](#add-services) 從您有權訪問的Adobe Experience Cloud產品啟用功能。
 
