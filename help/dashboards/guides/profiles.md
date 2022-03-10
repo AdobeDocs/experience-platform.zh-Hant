@@ -4,9 +4,9 @@ title: 配置式儀表板
 description: Adobe Experience Platform提供了一個儀表板，您可以通過該儀表板查看有關您組織的即時客戶配置檔案資料的重要資訊。
 type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
-source-git-commit: 7dd7cccfe17d360b072783823517e847a50166e6
+source-git-commit: 5d4d4a984ef858865e4ca5427ce042b879f2c981
 workflow-type: tm+mt
-source-wordcount: '2324'
+source-wordcount: '2329'
 ht-degree: 1%
 
 ---
@@ -197,8 +197,8 @@ Adobe提供多個小部件，用於評估可用於資料分析的所攝取配置
 此小部件顯示高、中或低完整性的配置檔案的比例。 預設情況下，配置了三個完整性級別：
 
 * 高完整性：配置檔案已填充70%以上的屬性。
-* 中等完整性：配置檔案填充的屬性少於70%且超過30%。
-* 低完整性：配置檔案填充的屬性少於30%。
+* 中等完整性：配置檔案填充的屬性少於70%，超過30%。
+* 低完整性：配置檔案中填充的屬性不到30%。
 
 ![按完整性構件列出的配置檔案](../images/profiles/profiles-by-completeness.png)
 
@@ -211,8 +211,8 @@ x軸表示時間，y軸表示輪廓的數量，顏色表示輪廓完整性的三
 完整性的三個層次是：
 
 * 高完整性：配置檔案已填充70%以上的屬性。
-* 中等完整性：配置檔案填充的屬性少於70%且超過30%。
-* 低完整性：配置檔案填充的屬性少於30%。
+* 中等完整性：配置檔案填充的屬性少於70%，超過30%。
+* 低完整性：配置檔案中填充的屬性不到30%。
 
 ![配置檔案完整性趨勢構件](../images/profiles/profiles-completeness-trend.png)
 
