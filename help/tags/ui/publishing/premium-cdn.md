@@ -1,9 +1,10 @@
 ---
 title: 對標籤的高級CDN支援
 description: 瞭解標籤的高級CDN功能，以及如何使用它在多個地理區域中交付內容。
-source-git-commit: 530fc1ad3f389ffb5d77ddf6aa0b0b3208f1d532
+exl-id: 33e36d3b-9e21-44a8-8498-32a5fc20b46b
+source-git-commit: 3843b08a3a047200f02c1ceb17a64a196d4a0287
 workflow-type: tm+mt
-source-wordcount: '580'
+source-wordcount: '536'
 ht-degree: 0%
 
 ---
@@ -20,21 +21,13 @@ ht-degree: 0%
 
 高級CDN支援是付費功能，必須由您的組織購買才能啟用和使用它。 本指南介紹在購買資料收集UI後如何配置和使用此功能。
 
-## 為公司啟用高級CDN
+## 為您的組織啟用高級CDN
 
-在公司級別啟用了高級CDN，這意味著您必須擁有公司編輯權限才能啟用該功能。
-
-在資料收集UI中，導航到 **[!UICONTROL 標籤]** > **[!UICONTROL 公司]**。 在此處，選擇要為其啟用功能的公司，然後選擇 **[!UICONTROL 配置]** 。
-
-![選擇要配置的公司](../../images/ui/publishing/premium-cdn/configure-property.png)
-
-在出現的配置對話框中，選擇 **[!UICONTROL 已啟用高級CDN]** 選擇 **[!UICONTROL 保存]** 確認更改。
-
-![啟用高級CDN選項](../../images/ui/publishing/premium-cdn/enable-premium-cdn.png)
+在公司級別啟用高級CDN。 在您的組織購買了高級CDN功能後，Adobe管理員將在資料收集UI中為您的公司啟用。
 
 ## 使用更新的嵌入代碼重建和安裝標籤庫
 
-啟用高級CDN功能並不意味著您的標籤資產會立即複製並準備在新區域內使用。 這隻意味著您現在可以選擇何時選擇使用此功能。
+一旦啟用高級CDN，並不意味著您的標籤資產會立即複製並準備在新區域內使用。 這隻意味著您現在可以選擇何時選擇使用此功能。
 
 >[!IMPORTANT]
 >
