@@ -4,9 +4,9 @@ title: 目標工作區
 description: 「目標」工作區由四個部分組成，即「目錄」、「瀏覽」、「帳戶」和「系統視圖」。 下面各節介紹了這些內容。
 seo-description: In Adobe Experience Platform, select Destinations from the left navigation bar to access the destinations workspace.
 exl-id: 0f46f08d-0fe3-441d-933a-86bc146c0f19
-source-git-commit: 533f76891f47ba11e2a9de87aa8c249eb9249895
+source-git-commit: 2d944c7bd237efbbd4a770b3a6dd03c4133bc901
 workflow-type: tm+mt
-source-wordcount: '1084'
+source-wordcount: '1101'
 ht-degree: 2%
 
 ---
@@ -107,8 +107,8 @@ ht-degree: 2%
 | [!UICONTROL 連線類型] | 表示到儲存桶或目標的連接類型。 <ul><li>對於電子郵件營銷目標：可以是S3、FTP或 [!DNL Azure Blob]。</li><li>對於即時廣告目標：伺服器到伺服器。</li><li>對於流目標：可以 [!DNL Azure Event Hubs] 或 [!DNL Amazon Kinesis]。</li></ul> |
 | [!UICONTROL 用戶名] | 為目標流選擇的帳戶憑據。 |
 | [!UICONTROL 激活資料] | 指示正被激活到此目標的段數。 選擇此控制項可瞭解有關已激活段的詳細資訊。 請參閱 [激活資料](/help/destinations/ui/destination-details-page.md#activation-data) 的子菜單。 |
-| [!UICONTROL 已建立] | 建立到目標的激活流的日期和時間。 |
-| [!UICONTROL 狀態] | `Active` 或 `Inactive`. 指示是否正在將資料激活到此目標。 |
+| [!UICONTROL 已建立] | 建立到目標的激活流的日期和時間。 選擇向上/向下箭頭符號，按最新的第一個或最早的第一個對激活流進行排序。 |
+| [!UICONTROL 狀態] | `Enabled` 或 `Disabled`. 指示是否正在將資料激活到此目標。 |
 
 按一下目標行，在右欄中顯示有關目標的詳細資訊。
 
