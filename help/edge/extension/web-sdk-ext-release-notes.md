@@ -2,9 +2,9 @@
 title: Adobe Experience PlatformWeb SDK擴展發行說明
 description: Adobe Experience PlatformWeb SDK標籤擴展
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: a768cde86215ed9aad19e45362c6185276456703
+source-git-commit: bb06dd63de1a36d3e3d065a986f3d34f63783895
 workflow-type: tm+mt
-source-wordcount: '1256'
+source-wordcount: '1290'
 ht-degree: 48%
 
 ---
@@ -12,6 +12,12 @@ ht-degree: 48%
 # Adobe Experience PlatformWeb SDK擴展發行說明
 
 本文檔介紹Adobe Experience PlatformWeb SDK標籤擴展的發行說明。 有關SDK本身的最新發行說明，請參見 [平台Web SDK發行說明](https://experienceleague.adobe.com/docs/experience-platform/edge/release-notes.html)。
+
+## 版本2.10.0 - 2022年3月10日
+
+* 更新可在配置頁上複製的預隱藏代碼段，以便與更新的Adobe TargetVEC編輯器一起使用。
+
+包含 2.9.0 版的 Adobe Experience Platform Web SDK 程式庫。
 
 ## 版本2.9.0 - 2022年1月19日
 
