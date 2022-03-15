@@ -4,9 +4,9 @@ title: 查看目標詳細資訊
 description: '單個目標的詳細資訊頁面提供了目標詳細資訊的概覽。 目標詳細資訊包括目標名稱、ID、映射到目標的段，以及用於編輯激活和啟用和禁用資料流的控制項。 '
 seo-description: The details page for an individual destination provides an overview of the destination details. Destination details include the destination name, ID, segments mapped to the destination, and controls to edit the activation and to enable and disable the data flow.
 exl-id: e44e2b2d-f477-4516-8a47-3e95c2d85223
-source-git-commit: 6d81973554f30642cafff54330140c606ab5499d
+source-git-commit: a129085f034665a6398bbf0ccfe2f1dc8acbdd8a
 workflow-type: tm+mt
-source-wordcount: '681'
+source-wordcount: '708'
 ht-degree: 2%
 
 ---
@@ -76,6 +76,10 @@ ht-degree: 2%
 ## [!UICONTROL 資料流運行] {#dataflow-runs}
 
 的 [!UICONTROL 資料流運行] 頁籤提供資料流運行到批處理和流式傳輸目標的度量資料。 請參閱 [監視資料流](monitor-dataflows.md) 中。
+
+>[!NOTE]
+>
+>目標監視功能當前支援Experience Platform中的所有目標 *除* 這樣 [AmazonKinesis](/help/destinations/catalog/cloud-storage/amazon-kinesis.md)。 [Azure事件中心](/help/destinations/catalog/cloud-storage/azure-event-hubs.md)。 [HTTP API](/help/destinations/catalog/streaming/http-destination.md)。 [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md), [自定義個性化](/help/destinations/catalog/personalization/custom-personalization.md) 目標。
 
 ![資料流運行視圖](../assets/ui/details-page/dataflow-runs.png)
 
