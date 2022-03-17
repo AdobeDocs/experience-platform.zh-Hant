@@ -3,9 +3,9 @@ title: 為Experience PlatformWeb SDK配置資料流
 description: '瞭解如何配置資料流。 '
 keywords: 配置；資料流；資料流；邊；資料流ID；環境設定；邊配置ID；標識；ID同步容器ID；沙盒；流入口；事件資料集；目標；客戶端代碼；屬性令牌；目標；Cookie環境ID；目標；url；分析設定塊報告套件ID;
 exl-id: 736c75cb-e290-474e-8c47-2a031f215a56
-source-git-commit: 0d23576097b113fa3b24857467658bdf745be427
+source-git-commit: 9dbadcb65d4306702e5e4d7dae2614e86cbde332
 workflow-type: tm+mt
-source-wordcount: '1940'
+source-wordcount: '1944'
 ht-degree: 1%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->必須為您的組織設定此功能，才能在UI中訪問它。 如果您沒有訪問權限，請與您的客戶成功經理(CSM)聯繫以加入允許清單。
+>必須為您的組織設定此功能，才能在UI中訪問它。 如果您沒有訪問權限，請填寫以下內容 [表格](http://adobe.ly/websdkaccess) 我們會給予你必要的訪問權。
 
 ## 訪問 [!UICONTROL 資料流] 工作區
 
