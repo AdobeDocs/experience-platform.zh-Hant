@@ -1,11 +1,11 @@
 ---
 title: Marketo Engage目標
-description: Marketo Engage是唯一適用於行銷、廣告、分析和商務的端對端客戶體驗管理(CXM)解決方案。 它可讓您自動化和管理活動，從CRM銷售機會管理、客戶參與，到以帳戶為基礎的行銷和收入歸因。
+description: Marketo Engage是用於營銷、廣告、分析和商業的唯一端到端客戶體驗管理(CXM)解決方案。 它使您能夠自動化和管理從CRM主管管理和客戶參與到基於客戶的市場營銷和收入分配中的活動。
 exl-id: 5ae5f114-47ba-4ff6-8e42-f8f43eb079f7
-source-git-commit: 05b97e8bdeb4ffb81a4a671d282d0d8ebc7e870a
+source-git-commit: b1945d42b82b549985d848071762fa6ee2451368
 workflow-type: tm+mt
-source-wordcount: '379'
-ht-degree: 1%
+source-wordcount: '445'
+ht-degree: 3%
 
 ---
 
@@ -13,34 +13,43 @@ ht-degree: 1%
 
 ## 總覽 {#overview}
 
-Marketo Engage是唯一適用於行銷、廣告、分析和商務的端對端客戶體驗管理(CXM)解決方案。 它可讓您自動化和管理活動，從CRM銷售機會管理、客戶參與，到以帳戶為基礎的行銷和收入歸因。
+Marketo Engage是用於營銷、廣告、分析和商業的唯一端到端客戶體驗管理(CXM)解決方案。 它使您能夠自動化和管理從CRM主管管理和客戶參與到基於客戶的市場營銷和收入分配中的活動。
 
-目的地可讓行銷人員將在Adobe Experience Platform中建立的區段推送至Marketo，這些區段會顯示為靜態清單。
+目標使營銷商能夠將在Adobe Experience Platform建立的段推送到Marketo，在那裡它們將顯示為靜態清單。
 
-## 支援的身分 {#supported-identities}
+## 支援的身份 {#supported-identities}
 
-| Target身分 | 說明 |
+| 目標標識 | 說明 |
 |---|---|
-| ECID | 代表ECID的命名空間。 此命名空間也可由下列別名引用：&quot;Adobe Marketing Cloud ID&quot;、&quot;Adobe Experience Cloud ID&quot;、&quot;Adobe Experience Platform ID&quot;。 請參閱下列檔案，內容如下 [ECID](/help/identity-service/ecid.md) 以取得更多資訊。 |
-| 電子郵件 | 代表電子郵件地址的命名空間。 此類型的命名空間通常與單一人員相關聯，因此可用於跨不同管道識別該人員。 |
+| ECID | 表示ECID的命名空間。 以下別名也可以引用此命名空間：&quot;Adobe Marketing CloudID&quot;,&quot;Adobe Experience CloudID&quot;,&quot;Adobe Experience PlatformID&quot; 請參閱以下文檔 [ECID](/help/identity-service/ecid.md) 的子菜單。 |
+| 電子郵件 | 表示電子郵件地址的命名空間。 此類型的命名空間通常與單個人關聯，因此可用於跨不同渠道標識該人。 |
+
+{style=&quot;table-layout:auto&quot;}
 
 >[!NOTE]
 >
->在 [對應步驟](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping) 啟動目標工作流程， *強制* 來對應身分和 *可選* 映射屬性。 從「身分命名空間」標籤對應電子郵件和/或ECID是確保人員在Marketo中符合的最重要動作。 對應電子郵件可確保最高的匹配率。
+>在 [映射步驟](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping) 在激活目標工作流中 *強制* 映射標識和 *可選* 按鈕。 從「標識名稱空間」頁籤映射電子郵件和/或ECID是確保在Marketo匹配該人員的最重要工作。 映射電子郵件可確保最高的匹配率。
 
-## 匯出類型 {#export-type}
+## 導出類型和頻率 {#export-type-frequency}
 
-區段匯出 — 您會匯出區段（對象）的所有成員，並在Marketo Engage目的地中使用識別碼（電子郵件、ECID）。
+有關目標導出類型和頻率的資訊，請參閱下表。
 
-## 設定目的地和啟用區段 {#set-up}
+| 項目 | 類型 | 附註 |
+---------|----------|---------|
+| 導出類型 | **[!UICONTROL 區段匯出]** | 您正在導出段（受眾）的所有成員，其中包含Marketo Engage目標中使用的標識符（電子郵件、ECID）。 |
+| 導出頻率 | **[!UICONTROL 流]** | 流目標是基於API的「始終開啟」連接。 一旦基於段評估在Experience Platform中更新配置檔案，連接器就將更新下游發送到目標平台。 閱讀有關 [流目標](/help/destinations/destination-types.md#streaming-destinations)。 |
 
-如需如何設定目的地和啟用區段的詳細指示，請參閱 [推送Adobe Experience Platform區段至Marketo靜態清單](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/smart-lists-and-static-lists/static-lists/push-an-adobe-experience-cloud-segment-to-a-marketo-static-list.html?lang=en) 在Marketo檔案中。
+{style=&quot;table-layout:auto&quot;&quot;
 
-以下影片也示範設定Marketo目的地和啟用區段的步驟。
+## 設定目標並激活段 {#set-up}
+
+有關如何設定目標和激活段的詳細說明，請閱讀 [將Adobe Experience Platform段推入Marketo靜態清單](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/smart-lists-and-static-lists/static-lists/push-an-adobe-experience-cloud-segment-to-a-marketo-static-list.html?lang=en) 在Marketo檔案里。
+
+下面的視頻還演示了配置Marketo目標和激活段的步驟。
 
 >[!NOTE]
 >
->Experience Platform使用者介面經常更新，且自此視訊錄制以來可能已變更。 如需最新資訊，請參閱上述連結的指南。
+>Experience Platform用戶介面頻繁更新，自此視頻記錄後可能已更改。 有關最新資訊，請參閱上面連結的指南。
 
 >[!VIDEO](https://video.tv.adobe.com/v/338248?quality=12)
 
@@ -52,9 +61,9 @@ To connect to this destination, follow the steps described in the [destination c
 
 -->
 
-## 資料使用與控管 {#data-usage-governance}
+## 資料使用和治理 {#data-usage-governance}
 
-全部 [!DNL Adobe Experience Platform] 處理資料時，目的地符合資料使用原則。 有關如何 [!DNL Adobe Experience Platform] 強制實施資料控管，請參閱 [資料控管概觀](https://experienceleague.adobe.com/docs/experience-platform/data-governance/home.html).
+全部 [!DNL Adobe Experience Platform] 目標在處理資料時符合資料使用策略。 有關如何 [!DNL Adobe Experience Platform] 強制實施資料治理，請參見 [資料治理概述](https://experienceleague.adobe.com/docs/experience-platform/data-governance/home.html)。
 
 <!--
 

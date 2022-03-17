@@ -1,107 +1,118 @@
 ---
 keywords: 飛艇標籤；飛艇目的地
-title: Airship標籤連接
-description: 流暢地將Adobe對象資料傳遞至Airship，作為對象標籤，以在Airship內鎖定目標。
+title: 飛艇標籤連接
+description: 將Adobe受眾資料無縫傳遞到飛艇上，作為飛艇內目標的受眾標籤。
 exl-id: 84cf5504-f0b5-48d8-8da1-ff91ee1dc171
-source-git-commit: a765f6829f08f36010e0e12a7186bf5552dfe843
+source-git-commit: c5d2427635d90f3a9551e2a395d01d664005e8bc
 workflow-type: tm+mt
-source-wordcount: '685'
-ht-degree: 0%
+source-wordcount: '770'
+ht-degree: 1%
 
 ---
 
 # [!DNL Airship Tags] 連接 {#airship-tags-destination}
 
-## 概覽
+## 總覽
 
-[!DNL Airship] 是領先的客戶參與平台，可協助您在客戶生命週期的每個階段，為使用者提供有意義的個人化全通路訊息。
+[!DNL Airship] 是領先的客戶接洽平台，幫助您在客戶生命週期的每個階段向用戶提供有意義、個性化的渠道資訊。
 
-此整合會將Adobe Experience Platform區段資料以[Tags](https://docs.airship.com/guides/audience/tags/)傳遞至[!DNL Airship]，以鎖定目標或觸發。
+此整合將Adobe Experience Platform段資料 [!DNL Airship] 如 [標籤](https://docs.airship.com/guides/audience/tags/) 用於目標或觸發。
 
-若要深入了解[!DNL Airship]，請參閱[Airship檔案](https://docs.airship.com)。
+瞭解有關 [!DNL Airship]，請參見 [飛艇文檔](https://docs.airship.com)。
 
 
 >[!TIP]
 >
->此檔案頁面由[!DNL Airship]團隊建立。 有關任何查詢或更新請求，請直接聯繫[support.airship.com](https://support.airship.com/)。
+>此文檔頁面由 [!DNL Airship] 團隊。 如有任何查詢或更新請求，請直接聯繫他們，地址為： [support.fapher.com](https://support.airship.com/)。
 
 ## 先決條件
 
-您必須先以下列方式將Adobe Experience Platform區段傳送至[!DNL Airship]:
+在將您的Adobe Experience Platform段發送到 [!DNL Airship]，您必須：
 
-* 在[!DNL Airship]專案中建立標籤群組。
+* 在中建立標籤組 [!DNL Airship] 項目。
 * 生成用於驗證的承載令牌。
 
 >[!TIP]
 > 
->若尚未透過[此註冊連結](https://go.airship.eu/accounts/register/plan/starter/)建立[!DNL Airship]帳戶。
+>建立 [!DNL Airship] 帳戶 [此註冊連結](https://go.airship.eu/accounts/register/plan/starter/) 你還沒有。
 
-## 標籤群組
+## 導出類型和頻率 {#export-type-frequency}
 
-Adobe Experience Platform中的區段概念類似於Airship中的[Tags](https://docs.airship.com/guides/audience/tags/)，在實作上稍有差異。 此整合會將Experience Platform區段](../../../xdm/field-groups/profile/segmentation.md)中使用者[成員資格的狀態對應至[!DNL Airship]標籤是否存在。 例如，在`xdm:status`變更為`realized`的平台區段中，標籤會新增至[!DNL Airship]頻道，或此設定檔對應至的指名使用者。 如果`xdm:status`變更為`exited`，則會移除標籤。
+有關目標導出類型和頻率的資訊，請參閱下表。
 
-若要啟用此整合，請在[!DNL Airship]中建立&#x200B;*標籤群組*，名為`adobe-segments`。
+| 項目 | 類型 | 附註 |
+---------|----------|---------|
+| 導出類型 | **[!UICONTROL 區段匯出]** | 您正在導出段（受眾）的所有成員，其中包含「飛艇標籤」目標中使用的標識符。 |
+| 導出頻率 | **[!UICONTROL 流]** | 流目標是基於API的「始終開啟」連接。 一旦基於段評估在Experience Platform中更新配置檔案，連接器就將更新下游發送到目標平台。 閱讀有關 [流目標](/help/destinations/destination-types.md#streaming-destinations)。 |
+
+{style=&quot;table-layout:auto&quot;}
+
+## 標籤組
+
+Adobe Experience Platorm中段的概念與 [標籤](https://docs.airship.com/guides/audience/tags/) 在飛艇上，在實施上稍有差異。 此整合映射用戶的狀態 [Experience Platform段成員](../../../xdm/field-groups/profile/segmentation.md) 是否存在 [!DNL Airship] 標籤。 例如，在平台段中， `xdm:status` 更改 `realized`，標籤將添加到 [!DNL Airship] 此配置檔案映射到的通道或已命名用戶。 如果 `xdm:status` 更改 `exited`，標籤將被刪除。
+
+要啟用此整合，請建立 *標籤組* 在 [!DNL Airship] 命名 `adobe-segments`。
 
 >[!IMPORTANT]
 >
->建立新標籤組&#x200B;**時，請勿勾選顯示「[!DNL Allow these tags to be set only from your server]」的選項按鈕**。 這麼做會導致Adobe標籤整合失敗。
+>建立新標籤組時 **不檢查** 單選按鈕上寫著&quot;[!DNL Allow these tags to be set only from your server]。 這樣做將導致Adobe標籤整合失敗。
 
-如需建立標籤群組的相關指示，請參閱[管理標籤群組](https://docs.airship.com/tutorials/manage-project/messaging/tag-groups)。
+請參閱 [管理標籤組](https://docs.airship.com/tutorials/manage-project/messaging/tag-groups) 中。
 
-## 生成承載令牌
+## 生成持有者令牌
 
-前往[Airship控制面板](https://go.airship.com)中的&#x200B;**[!UICONTROL 設定]**&quot; **[!UICONTROL API與整合]**，然後在左側功能表中選取&#x200B;**[!UICONTROL Token]**。
+轉到 **[!UICONTROL 設定]** &quot; **[!UICONTROL API和整合]** 的 [飛艇儀表板](https://go.airship.com) 選擇 **[!UICONTROL 令牌]** 的上界。
 
-按一下「**[!UICONTROL 建立代號]**」。
+按一下 **[!UICONTROL 建立令牌]**。
 
-提供您代號的好記名稱，例如「Adobe標籤目的地」，並為角色選取「完全存取」。
+提供令牌的用戶友好名稱，例如「Adobe標籤目標」，並選擇「所有訪問」作為角色。
 
-按一下「**[!UICONTROL 建立代號]**」並將詳細資訊儲存為機密。
+按一下 **[!UICONTROL 建立令牌]** 並將細節保密。
 
 ## 使用案例
 
-為協助您更清楚了解您應如何及何時使用[!DNL Airship Tags]目的地，以下是Adobe Experience Platform客戶可借由使用此目的地解決的範例使用案例。
+幫助您更好地瞭解您應如何以及何時使用 [!DNL Airship Tags] 目的地，以下是Adobe Experience Platform客戶可通過使用此目的地解決的示例使用案例。
 
-### 使用案例#1
+### 用例#1
 
-零售商或娛樂平台可以建立其忠誠客戶的使用者設定檔，並將這些區段傳入[!DNL Airship]，以便在行動行銷活動上進行訊息定位。
+零售商或娛樂平台可以在忠誠客戶上建立用戶配置檔案，並將這些分段傳遞到 [!DNL Airship] 用於移動活動中的消息目標。
 
-### 使用案例#2
+### 用例#2
 
-當使用者落入或離開Adobe Experience Platform內的特定區段時，即時觸發一對一訊息。
+當用戶進入或離開Adobe Experience Platform內的特定網段時，即時觸發一對一消息。
 
-例如，零售商在Platform中設定牛仔褲品牌專屬區段。 當某人將牛仔褲偏好設定設為特定品牌時，該零售商現在可以觸發行動訊息。
+例如，一家零售商在Platform公司設立了一個牛仔褲品牌專業部門。 現在，只要某人將牛仔褲偏好設定在某個特定品牌，該零售商就能觸發手機消息。
 
 ## 連接到目標 {#connect}
 
-要連接到此目標，請按照[目標配置教程](../../ui/connect-destination.md)中所述的步驟操作。
+要連接到此目標，請按照 [目標配置教程](../../ui/connect-destination.md)。
 
-### 連線參數 {#parameters}
+### 連接參數 {#parameters}
 
-在[設定](../../ui/connect-destination.md)此目標時，您必須提供下列資訊：
+同時 [設定](../../ui/connect-destination.md) 此目標，必須提供以下資訊：
 
-* **[!UICONTROL 承載權杖]**:您從控制面板產生的承載代 [!DNL Airship] 號。
-* **[!UICONTROL 名稱]**:輸入有助於您識別此目的地的名稱。
+* **[!UICONTROL 持有者令牌]**:從 [!DNL Airship] 控制項欄。
+* **[!UICONTROL 名稱]**:輸入一個名稱，以幫助您標識此目標。
 * **[!UICONTROL 說明]**:輸入此目標的說明。
-* **[!UICONTROL 網域]**:選擇美國或歐盟資料中心，具體取決於 [!DNL Airship] 哪個資料中心適用於此目的地。
+* **[!UICONTROL 域]**:選擇美國或歐盟資料中心，具體取決於 [!DNL Airship] 資料中心適用於此目標。
 
 
-## 啟用此目的地的區段 {#activate}
+## 將段激活到此目標 {#activate}
 
-請參閱[對串流區段匯出目的地啟用受眾資料](../../ui/activate-segment-streaming-destinations.md) ，以取得對此目的地啟用受眾區段的指示。
+請參閱 [將受眾資料激活到流段導出目標](../../ui/activate-segment-streaming-destinations.md) 有關激活此目標受眾段的說明。
 
-## 對應考量事項 {#mapping-considerations}
+## 映射注意事項 {#mapping-considerations}
 
-[!DNL Airship] 標籤可在代表裝置例項（例如iPhone）的頻道上設定，或是指名使用者，此指名使用者會將使用者的所有裝置對應至通用識別碼，例如客戶ID。如果您的結構中有純文字（未雜湊）電子郵件地址作為主要身分，請在&#x200B;**[!UICONTROL 來源屬性]**&#x200B;中選取電子郵件欄位，並在&#x200B;**[!UICONTROL 目標身分]**&#x200B;下方右欄中對應至[!DNL Airship]指名的使用者，如下所示。
+[!DNL Airship] 可以在表示設備實例(例如，iPhone)的頻道上設定標籤，或在將用戶的所有設備映射到公共標識符（例如客戶ID）上的命名用戶。 如果在架構中將純文字檔案（未散列）電子郵件地址作為主標識，請選擇您的 **[!UICONTROL 源屬性]** 並映射到 [!DNL Airship] 右列中的命名用戶 **[!UICONTROL 目標標識]**，如下所示。
 
 ![命名用戶映射](../../assets/catalog/mobile-engagement/airship-tags/mapping-option-2.png)
 
-對於應映射到通道（即設備）的標識符，根據源映射到相應的通道。 下列影像顯示如何將Google Advertising ID對應至[!DNL Airship] Android頻道。
+對於應映射到通道（即設備）的標識符，基於源映射到相應的通道。 以下影像顯示如何將Google廣告ID映射到 [!DNL Airship] 安卓頻道。
 
-![連接到Airship ](../../assets/catalog/mobile-engagement/airship-tags/select-source-identity.png)
-![TagsConnect到Airship ](../../assets/catalog/mobile-engagement/airship-tags/select-target-identity.png)
-![TagsChannel映射](../../assets/catalog/mobile-engagement/airship-tags/mapping-option.png)
+![連接到飛艇標籤](../../assets/catalog/mobile-engagement/airship-tags/select-source-identity.png)
+![連接到飛艇標籤](../../assets/catalog/mobile-engagement/airship-tags/select-target-identity.png)
+![通道映射](../../assets/catalog/mobile-engagement/airship-tags/mapping-option.png)
 
-## 資料使用與控管 {#data-usage-governance}
+## 資料使用和治理 {#data-usage-governance}
 
-處理資料時，所有[!DNL Adobe Experience Platform]目標都符合資料使用策略。 有關[!DNL Adobe Experience Platform]如何實施資料控管的詳細資訊，請參閱[資料控管概述](../../../data-governance/home.md)。
+全部 [!DNL Adobe Experience Platform] 目標在處理資料時符合資料使用策略。 有關如何 [!DNL Adobe Experience Platform] 強制實施資料治理，請參見 [資料治理概述](../../../data-governance/home.md)。

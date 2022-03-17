@@ -3,9 +3,9 @@ keywords: 流；
 title: HTTP API連接
 description: Adobe Experience Platform的HTTP API目標允許您將配置檔案資料發送到第三方HTTP終結點。
 exl-id: 165a8085-c8e6-4c9f-8033-f203522bb288
-source-git-commit: 577b42eef9d4b44b5b556ee31d22276d72c609ea
+source-git-commit: c5d2427635d90f3a9551e2a395d01d664005e8bc
 workflow-type: tm+mt
-source-wordcount: '1275'
+source-wordcount: '1376'
 ht-degree: 1%
 
 ---
@@ -27,6 +27,17 @@ HTTP API目標是 [!DNL Adobe Experience Platform] 流目標，幫助您將配�
 HTTP目標針對需要將XDM配置檔案資料和訪問群體段導出到通用HTTP端點的客戶。
 
 HTTP端點可以是客戶自己的系統或第三方解決方案。
+
+## 導出類型和頻率 {#export-type-frequency}
+
+有關目標導出類型和頻率的資訊，請參閱下表。
+
+| 項目 | 類型 | 附註 |
+---------|----------|---------|
+| 導出類型 | **[!UICONTROL 基於配置檔案]** | 您正在導出段的所有成員以及所需的架構欄位(例如：電子郵件地址、電話號碼、姓氏)，在「選擇配置檔案屬性」螢幕中選擇 [目標激活工作流](../../ui/activate-batch-profile-destinations.md#select-attributes)。 |
+| 導出頻率 | **[!UICONTROL 流]** | 流目標是基於API的「始終開啟」連接。 一旦基於段評估在Experience Platform中更新配置檔案，連接器就將更新下游發送到目標平台。 閱讀有關 [流目標](/help/destinations/destination-types.md#streaming-destinations)。 |
+
+{style=&quot;table-layout:auto&quot;}
 
 ## 先決條件 {#prerequisites}
 

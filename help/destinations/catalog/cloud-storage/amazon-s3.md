@@ -3,10 +3,10 @@ keywords: AmazonS3;S3目標；s3;amazon s3
 title: AmazonS3連接
 description: 建立到Amazon Web Services(AWS)S3儲存的即時出站連接，以定期將CSV資料檔案從Adobe Experience Platform導出到您自己的S3儲存桶中。
 exl-id: 6a2a2756-4bbf-4f82-88e4-62d211cbbb38
-source-git-commit: e6dc0fb136a6f5199153630a20e8809c2c040107
+source-git-commit: c5d2427635d90f3a9551e2a395d01d664005e8bc
 workflow-type: tm+mt
-source-wordcount: '503'
-ht-degree: 0%
+source-wordcount: '554'
+ht-degree: 1%
 
 ---
 
@@ -16,9 +16,16 @@ ht-degree: 0%
 
 建立到的即時出站連接 [!DNL Amazon Web Services] (AWS)S3儲存，定期將CSV資料檔案從Adobe Experience Platform導出到您自己的S3儲存桶中。
 
-## 導出類型 {#export-type}
+## 導出類型和頻率 {#export-type-frequency}
 
-**基於配置檔案**  — 導出段的所有成員以及所需的架構欄位(例如：電子郵件地址、電話號碼、姓氏)，從的「選擇屬性」螢幕中選擇 [目標激活工作流](../../ui/activate-segment-streaming-destinations.md#mapping)。
+有關目標導出類型和頻率的資訊，請參閱下表。
+
+| 項目 | 類型 | 附註 |
+---------|----------|---------|
+| 導出類型 | **[!UICONTROL 基於配置檔案]** | 您正在導出段的所有成員以及所需的架構欄位(例如：電子郵件地址、電話號碼、姓氏)，在「選擇配置檔案屬性」螢幕中選擇 [目標激活工作流](../../ui/activate-batch-profile-destinations.md#select-attributes)。 |
+| 導出頻率 | **[!UICONTROL 批]** | 批處理目標將檔案以3、6、8、12或24小時的增量導出到下游平台。 閱讀有關 [基於批檔案的目標](/help/destinations/destination-types.md#file-based)。 |
+
+{style=&quot;table-layout:auto&quot;}
 
 ![AmazonS3基於配置檔案的導出類型](../../assets/catalog/cloud-storage/amazon-s3/catalog.png)
 

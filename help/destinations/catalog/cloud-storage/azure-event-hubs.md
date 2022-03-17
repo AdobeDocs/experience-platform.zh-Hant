@@ -3,9 +3,9 @@ keywords: Azure事件中心目標；azure事件中心；azure事件thub
 title: (Beta) [!DNL Azure Event Hubs] 連接
 description: 建立到您的 [!DNL Azure Event Hubs] 儲存以從Experience Platform流資料。
 exl-id: f98a389a-bce3-4a80-9452-6c7293d01de3
-source-git-commit: be09d794a4cbc3afc76df70d11f55b0cae6f2009
+source-git-commit: b1945d42b82b549985d848071762fa6ee2451368
 workflow-type: tm+mt
-source-wordcount: '1183'
+source-wordcount: '1247'
 ht-degree: 1%
 
 ---
@@ -34,9 +34,16 @@ ht-degree: 1%
 
 例如，潛在客戶下載了一份白皮書，確認他們屬於「高傾向轉換」段。 通過映射目標客戶所在的段 [!DNL Azure Event Hubs] 目標，您將在 [!DNL Azure Event Hubs]。 在這裡，您可以採用自行動手的方法，並在活動之前描述業務邏輯，因為您認為最適合您的企業IT系統。
 
-## 導出類型 {#export-type}
+## 導出類型和頻率 {#export-type-frequency}
 
-**基於配置檔案**  — 導出段的所有成員以及所需的架構欄位(例如：電子郵件地址、電話號碼、姓氏)，從的「選擇屬性」螢幕中選擇 [受眾激活工作流](../../ui/activate-streaming-profile-destinations.md#select-attributes)。
+有關目標導出類型和頻率的資訊，請參閱下表。
+
+| 項目 | 類型 | 附註 |
+---------|----------|---------|
+| 導出類型 | **[!UICONTROL 基於配置檔案]** | 您正在導出段的所有成員以及所需的架構欄位(例如：電子郵件地址、電話號碼、姓氏)，在「選擇配置檔案屬性」螢幕中選擇 [目標激活工作流](../../ui/activate-batch-profile-destinations.md#select-attributes)。 |
+| 導出頻率 | **[!UICONTROL 流]** | 流目標是基於API的「始終開啟」連接。 一旦基於段評估在Experience Platform中更新配置檔案，連接器就將更新下游發送到目標平台。 閱讀有關 [流目標](/help/destinations/destination-types.md#streaming-destinations)。 |
+
+{style=&quot;table-layout:auto&quot;}
 
 ## 連接到目標 {#connect}
 
