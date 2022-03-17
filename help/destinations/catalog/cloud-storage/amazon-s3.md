@@ -3,7 +3,7 @@ keywords: AmazonS3;S3目標；s3;amazon s3
 title: AmazonS3連接
 description: 建立到Amazon Web Services(AWS)S3儲存的即時出站連接，以定期將CSV資料檔案從Adobe Experience Platform導出到您自己的S3儲存桶中。
 exl-id: 6a2a2756-4bbf-4f82-88e4-62d211cbbb38
-source-git-commit: c5d2427635d90f3a9551e2a395d01d664005e8bc
+source-git-commit: 691e3181e05a24b6bb0ebbe8e0f797a2b4c572d2
 workflow-type: tm+mt
 source-wordcount: '554'
 ht-degree: 1%
@@ -39,20 +39,17 @@ ht-degree: 1%
 >id="platform_destinations_connect_s3_bucket"
 >title="儲存段名稱"
 >abstract="長度必須介於3到63個字元之間。 必須以字母或數字開頭和結尾。 只能包含小寫字母、數字或連字元(-)。 不能將格式設定為IP地址(例如，192.100.1.1)。"
->text="Learn more in documentation"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_s3_folderpath"
 >title="資料夾路徑"
 >abstract="只能包含字元A-Z、a-z、0-9，並且可以包含以下特殊字元： `/!-_.'()"^[]+$%.*"`。 要按段檔案建立資料夾，請將宏/%SEGMENT_NAME%或/%SEGMENT_ID%或/%SEGMENT_NAME%/%SEGMENT_ID%插入文本欄位。 宏只能插入資料夾路徑的末尾。 查看文檔中的宏示例。"
->text="Learn more in documentation"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/cloud-storage/overview.html?lang=en#use-macros" text="使用宏在儲存位置中建立資料夾"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_s3_rsa"
 >title="RSA公鑰"
 >abstract="或者，您可以附加RSA格式的公鑰，以將加密添加到導出的檔案中。 公鑰必須寫為Base64編碼字串。"
->text="Learn more in documentation"
 
 同時 [設定](../../ui/connect-destination.md) 此目標，必須提供以下資訊：
 

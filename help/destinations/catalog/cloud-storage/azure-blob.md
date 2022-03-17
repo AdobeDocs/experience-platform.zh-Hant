@@ -3,9 +3,9 @@ keywords: Azure Blob;Blob目標；s3;azure Blob目標
 title: Azure Blob連接
 description: 建立到Azure Blob儲存的即時出站連接以定期從Adobe Experience Platform導出CSV資料檔案。
 exl-id: 8099849b-e3d2-48a5-902a-ca5a5ec88207
-source-git-commit: b1945d42b82b549985d848071762fa6ee2451368
+source-git-commit: 691e3181e05a24b6bb0ebbe8e0f797a2b4c572d2
 workflow-type: tm+mt
-source-wordcount: '474'
+source-wordcount: '503'
 ht-degree: 2%
 
 ---
@@ -49,6 +49,11 @@ ht-degree: 2%
 要連接到此目標，請按照 [目標配置教程](../../ui/connect-destination.md)。
 
 ### 連接參數 {#parameters}
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_connect_blob_rsa"
+>title="RSA公鑰"
+>abstract="或者，您可以附加RSA格式的公鑰，以將加密添加到導出的檔案中。 公鑰必須寫為Base64編碼字串。"
 
 同時 [設定](../../ui/connect-destination.md) 此目標，必須提供以下資訊：
 
