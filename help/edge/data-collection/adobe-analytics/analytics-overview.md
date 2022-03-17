@@ -3,10 +3,10 @@ title: 將Adobe Analytics與平台Web SDK配合使用
 description: 瞭解如何使用Adobe Experience PlatformWeb SDK向Adobe Analytics發送資料。
 keywords: adobe analytics;analytics;mapped data;mapped vars;
 exl-id: b18d1163-9edf-4a9c-b247-cd1aa7dfca50
-source-git-commit: 45becec3b198821e38afbc21fe42a8901e352888
+source-git-commit: 921a3a32ee5f2daa04512a3f2c68935667ab3875
 workflow-type: tm+mt
-source-wordcount: '189'
-ht-degree: 7%
+source-wordcount: '233'
+ht-degree: 6%
 
 ---
 
@@ -17,6 +17,10 @@ Adobe Experience Platform [!DNL Web SDK] 可以把資料發給Adobe Analytics。
 ## 設定
 
 如果在客戶配置UI中映射了報告套件，Adobe Analytics會自動提取您發送的資料。 在此，您可以將一個或多個報告映射到給定的配置。 映射報表套件後，資料將自動開始流動。
+
+## XDM欄位組
+
+為了便於捕獲最常見的Adobe Analytics度量，我們提供了一個可供您使用的分析欄位組。 有關此架構的詳細資訊，請參閱 [Adobe AnalyticsExperienceEvent完整擴展架構欄位組](../../../xdm/field-groups/event/analytics-full-extension.md)
 
 ## 自動映射資料
 
