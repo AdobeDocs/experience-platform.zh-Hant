@@ -1,23 +1,23 @@
 ---
-title: 配置Adobe Experience Platform Web SDK
-description: 了解如何配置Adobe Experience Platform Web SDK。
+title: 配置Adobe Experience PlatformWeb SDK
+description: 瞭解如何配置Adobe Experience PlatformWeb SDK。
 seo-description: Learn how to configure the Experience Platform Web SDK
-keywords: 設定；設定；SDK；邊緣；Web SDK；設定；edgeConfigId；內容；網頁；裝置；環境；placeContext;debugEnabled;edgeDomain;orgId;clickCollectionEnabled;onBeforeEventSend;defaultConsent；網頁設定；prehidingStyle；不透明度；cookieDestinationsEnabled;urlDesitionsEnabled;idMigrationEnabled；第三方CookiesEnabled
+keywords: configure;configuration;SDK;edge;Web SDK;configure;edgeConfigId;context;web；設備；環境；placeContext;debugEnabled;egdeDomain;orgId;clickCollectionEnabled;onBeforeEventSend;defaultConsendw;web sdk設定；predkdk;predddkStyle;compent;cons;cons;ce;cond;cons;T;Tons;T;T;Tsts;went;Tings;wets;T;Tings;T;Cookies;D;Tewed;Web stings;Comped;DestinationsEnabled;idMigrationEnabled;thirdPartyCookiesEnabled;
 exl-id: d1e95afc-0b8a-49c0-a20e-e2ab3d657e45
-source-git-commit: c0e2d01bd21405f07f4857e1ccf45dd0e4d0f414
+source-git-commit: 4d0f1b3e064bd7b24e17ff0fafb50d930b128968
 workflow-type: tm+mt
-source-wordcount: '826'
-ht-degree: 14%
+source-wordcount: '860'
+ht-degree: 15%
 
 ---
 
 # 配置平台Web SDK
 
-SDK的設定是使用`configure`命令完成。
+SDK的配置是使用 `configure` 的子菜單。
 
 >[!IMPORTANT]
 >
->`configure` 始終 ** 是第一個命令，稱為。
+>`configure` 是 *總是* 第一個命令叫做。
 
 ```javascript
 alloy("configure", {
@@ -26,15 +26,15 @@ alloy("configure", {
 });
 ```
 
-設定期間可設定許多選項。 所有選項均可在下方找到，依類別分組。
+在配置過程中可以設定許多選項。 所有選項都可在下面找到，按類別分組。
 
-## 一般選項
+## 常規選項
 
 ### `edgeConfigId`
 
 >[!NOTE]
 >
->**Edge Configurations已重新命名為Datastreams。資料流ID與配置ID相同。**
+>**邊緣配置已重新標籤為資料流。 資料流ID與配置ID相同。**
 
 | **類型** | **必填** | **預設值** |
 | -------- | ------------ | ----------------- |
@@ -42,7 +42,7 @@ alloy("configure", {
 
 {style=&quot;table-layout:auto&quot;}
 
-您指派的設定ID，會將SDK連結至適當的帳戶和設定。 在單一頁面內設定多個執行個體時，您必須為每個執行個體設定不同的`edgeConfigId`。
+您分配的配置ID，它將SDK連結到相應的帳戶和配置。 在單頁內配置多個實例時，必須配置其他實例 `edgeConfigId` 例。
 
 ### `context`
 
@@ -50,31 +50,41 @@ alloy("configure", {
 | ---------------- | ------------ | -------------------------------------------------- |
 | 字串陣列 | 無 | `["web", "device", "environment", "placeContext"]` |
 
-{style=&quot;table-layout:auto&quot;}
+{style=&quot;table-layout:auto&quot;&quot;
 
-指示要自動收集的上下文類別，如[自動資訊](../data-collection/automatic-information.md)中所述。 如果未指定此配置，預設會使用所有類別。
+指示要自動收集的上下文類別（如所述） [自動資訊](../data-collection/automatic-information.md)。 如果未指定此配置，則預設使用所有類別。
 
 ### `debugEnabled`
 
 | **類型** | **必填** | **預設值** |
 | -------- | ------------ | ----------------- |
-| 布林值 | 無 | `false` |
+| 布爾型 | 無 | `false` |
 
-{style=&quot;table-layout:auto&quot;}
+{style=&quot;table-layout:auto&quot;&quot;
 
-指出是否已啟用除錯。 將此配置設定為`true`將啟用以下功能：
+指示是否啟用調試。 將此配置設定為 `true` 啟用以下功能：
 
 | **功能** | **函數** |
 | ---------------------- | ------------------ |
-| 主控台記錄 | 啟用偵錯訊息，以顯示在瀏覽器的JavaScript主控台中 |
+| 控制台日誌記錄 | 允許調試消息顯示在瀏覽器的JavaScript控制台中 |
 
-{style=&quot;table-layout:auto&quot;}
+{style=&quot;table-layout:auto&quot;&quot;
 
 ### `edgeDomain` {#edge-domain}
 
-將您的第一方網域填入此欄位。 有關更多詳細資訊，請參閱[文檔](https://experienceleague.adobe.com/docs/core-services/interface/ec-cookies/cookies-first-party.html?lang=zh-Hant)。
+使用第一方域填充此欄位。 有關詳細資訊，請參閱 [文檔](https://experienceleague.adobe.com/docs/core-services/interface/ec-cookies/cookies-first-party.html?lang=zh-Hant)。
 
-此域類似於網站www的`data.{customerdomain.com}`。{customerdomain.com}。
+域類似於 `data.{customerdomain.com}` 網址為：{customerdomain.com}。
+
+### `edgeBasePath` {#edge-base-path}
+
+用於與Adobe服務通信和交互的edgeDomain之後的路徑。  通常，只有在不使用預設生產環境時才會更改。
+
+| **類型** | **必填** | **預設值** |
+| -------- | ------------ | ----------------- |
+| 字串 | 無 | e |
+
+{style=&quot;table-layout:auto&quot;&quot;
 
 ### `orgId`
 
@@ -82,33 +92,33 @@ alloy("configure", {
 | -------- | ------------ | ----------------- |
 | 字串 | 是 | 無 |
 
-{style=&quot;table-layout:auto&quot;}
+{style=&quot;table-layout:auto&quot;&quot;
 
-您指派的[!DNL Experience Cloud]組織ID。 在頁面內設定多個執行個體時，您必須為每個執行個體設定不同的`orgId`。
+您分配的 [!DNL Experience Cloud] 組織ID。 在頁內配置多個實例時，必須配置其他實例 `orgId` 例。
 
-## 資料彙集
+## 資料收集
 
 ### `clickCollectionEnabled` {#clickCollectionEnabled}
 
 | **類型** | **必填** | **預設值** |
 | -------- | ------------ | ----------------- |
-| 布林值 | 無 | `true` |
+| 布爾型 | 無 | `true` |
 
-{style=&quot;table-layout:auto&quot;}
+{style=&quot;table-layout:auto&quot;&quot;
 
-指出系統是否會自動收集與連結點按次數相關聯的資料。 如需詳細資訊，請參閱[自動連結追蹤](../data-collection/track-links.md#automaticLinkTracking) 。 如果連結包含下載屬性或連結結尾是副檔名，也會標示為下載連結。 下載連結限定符可以使用規則運算式進行設定。 預設值為 `"\\.(exe|zip|wav|mp3|mov|mpg|avi|wmv|pdf|doc|docx|xls|xlsx|ppt|pptx)$"`
+指示是否自動收集與連結按一下相關聯的資料。 請參閱 [自動連結跟蹤](../data-collection/track-links.md#automaticLinkTracking) 的子菜單。 如果連結包含下載屬性或連結以檔案副檔名結尾，則也會將其標籤為下載連結。 下載連結限定詞可以使用規則運算式進行配置。 預設值為 `"\\.(exe|zip|wav|mp3|mov|mpg|avi|wmv|pdf|doc|docx|xls|xlsx|ppt|pptx)$"`
 
 ### `onBeforeEventSend`
 
 | **類型** | **必填** | **預設值** |
 | -------- | ------------ | ----------------- |
-| 函數 | 無 | ()=>未定義 |
+| 函數 | 無 | （=>未定義） |
 
-{style=&quot;table-layout:auto&quot;}
+{style=&quot;table-layout:auto&quot;&quot;
 
-設定在傳送前對每個事件呼叫的回呼。 欄位`xdm`的物件會傳送至回呼。 要更改發送的內容，請修改`xdm`對象。 在回呼內，`xdm`物件已在event命令中傳遞資料，且已自動收集資訊。 有關此回呼的時間和示例的詳細資訊，請參閱[全局修改事件](tracking-events.md#modifying-events-globally)。
+配置在發送每個事件之前調用的回調。 帶欄位的對象 `xdm` 已發送到回調。 要更改發送的內容，請修改 `xdm` 的雙曲餘切值。 在回電中， `xdm` 對象已在event命令中傳遞了資料，並自動收集了資訊。 有關此回調時間的詳細資訊和示例，請參見 [全局修改事件](tracking-events.md#modifying-events-globally)。
 
-## 隱私權選項
+## 隱私選項
 
 ### `defaultConsent` {#default-consent}
 
@@ -116,14 +126,15 @@ alloy("configure", {
 | -------- | ------------ | ----------------- |
 | 物件 | 無 | `"in"` |
 
-{style=&quot;table-layout:auto&quot;}
+{style=&quot;table-layout:auto&quot;&quot;
 
-設定使用者的預設同意。 如果尚未為用戶保存同意首選項，請使用此設定。 其他有效值為`"pending"`和`"out"`。 此預設值不會持續存在使用者的設定檔中。 只有在呼叫`setConsent`時，才會更新使用者的設定檔。
-* `"in"`:當設定此設定或未提供值時，工作將在不使用者同意偏好設定的情況下進行。
-* `"pending"`:設定此設定時，會排入佇列，直到使用者提供同意偏好設定為止。
-* `"out"`:設定此設定時，會捨棄工作，直到使用者提供同意偏好設定為止。提供使用者偏好設定後，工作會根據使用者偏好設定而繼續或中止。 如需詳細資訊，請參閱[支援同意](../consent/supporting-consent.md) 。
+設定用戶的預設同意。 如果尚未為用戶保存同意首選項，則使用此設定。 其他有效值為 `"pending"` 和 `"out"`。 此預設值不會永續到用戶的配置檔案。 僅當在以下情況下才更新用戶的配置檔案 `setConsent` 。
+* `"in"`:設定此設定或未提供值時，工作將在未經用戶同意首選項的情況下進行。
+* `"pending"`:設定此設定後，工作將排入隊列，直到用戶提供同意首選項。
+* `"out"`:設定此設定後，工作將被丟棄，直到用戶提供同意首選項。
+在提供用戶的首選項後，根據用戶的首選項繼續或中止工作。 請參閱 [支援同意](../consent/supporting-consent.md) 的子菜單。
 
-## 個人化選項
+## 個性化選項
 
 ### `prehidingStyle`
 
@@ -131,56 +142,56 @@ alloy("configure", {
 | -------- | ------------ | ----------------- |
 | 字串 | 無 | 無 |
 
-{style=&quot;table-layout:auto&quot;}
+{style=&quot;table-layout:auto&quot;&quot;
 
-用於建立CSS樣式定義，在從伺服器載入個人化內容時隱藏網頁的內容區域。 若未提供此選項，則SDK不會在載入個人化內容時嘗試隱藏任何內容區域，這可能會導致「忽隱忽現」。
+用於建立CSS樣式定義，該定義在從伺服器載入個性化內容時隱藏網頁的內容區域。 如果未提供此選項，則SDK在載入個性化內容時不會嘗試隱藏任何內容區域，這可能會導致「閃爍」。
 
-例如，如果網頁上的元素ID為`container`，當從伺服器載入個人化內容時，您要隱藏其預設內容，請使用下列預先隱藏樣式：
+例如，如果網頁上的元素的ID為 `container`在從伺服器載入個性化內容時要隱藏其預設內容，請使用以下預隱藏樣式：
 
 ```javascript
   prehidingStyle: "#container { opacity: 0 !important }"
 ```
 
-## 對象選項
+## 受眾選項
 
 ### `cookieDestinationsEnabled`
 
 | **類型** | **必填** | **預設值** |
 | -------- | ------------ | ----------------- |
-| 布林值 | 無 | `true` |
+| 布爾型 | 無 | `true` |
 
-{style=&quot;table-layout:auto&quot;}
+{style=&quot;table-layout:auto&quot;&quot;
 
-啟用[!DNL Audience Manager] Cookie目的地，以便根據區段資格設定Cookie。
+啟用 [!DNL Audience Manager] cookie目標，允許根據段限定設定cookie。
 
 ### `urlDestinationsEnabled`
 
 | **類型** | **必填** | **預設值** |
 | -------- | ------------ | ----------------- |
-| 布林值 | 無 | `true` |
+| 布爾型 | 無 | `true` |
 
-{style=&quot;table-layout:auto&quot;}
+{style=&quot;table-layout:auto&quot;&quot;
 
-啟用[!DNL Audience Manager] URL目的地，以便根據區段資格觸發URL。
+啟用 [!DNL Audience Manager] URL目標，它允許基於段限定觸發URL。
 
-## 身分選項
+## 標識選項
 
 ### `idMigrationEnabled` {#id-migration-enabled}
 
 | **類型** | **必填** | **預設值** |
 | -------- | ------------ | ----------------- |
-| 布林值 | 無 | `true` |
+| 布爾型 | 無 | `true` |
 
-{style=&quot;table-layout:auto&quot;}
+{style=&quot;table-layout:auto&quot;&quot;
 
-若為true，則SDK會讀取並設定舊的AMCV Cookie。 此選項有助於轉換為使用Adobe Experience Platform Web SDK，而網站的某些部分可能仍使用Visitor.js。 如果頁面上已定義訪客API,SDK會查詢ECID的訪客API。 此選項可讓您使用Adobe Experience Platform Web SDK執行雙標籤頁面，但仍有相同的ECID。
+如果為true，則SDK讀取並設定舊的AMCV Cookie。 此選項有助於過渡到使用Adobe Experience PlatformWeb SDK，而站點的某些部分可能仍使用Visitor.js。 如果訪問者API在頁面上定義，則SDK將查詢訪問者API以獲取ECID。 此選項使您能夠使用Adobe Experience PlatformWeb SDK進行雙標籤頁面，並且仍然具有相同的ECID。
 
 ### `thirdPartyCookiesEnabled`
 
 | **類型** | **必填** | **預設值** |
 | -------- | ------------ | ----------------- |
-| 布林值 | 無 | `true` |
+| 布爾型 | 無 | `true` |
 
-{style=&quot;table-layout:auto&quot;}
+{style=&quot;table-layout:auto&quot;&quot;
 
-啟用Adobe第三方Cookie的設定。 SDK可在協力廠商內容中保留訪客ID，以便跨網站使用相同的訪客ID。 如果您有多個網站，或想要與合作夥伴共用資料，請使用此選項；不過，有時出於隱私權原因，不需要此選項。
+啟用Adobe第三方Cookie的設定。 SDK可以將訪問者ID保留在第三方上下文中，以使同一訪問者ID能夠跨站點使用。 如果您有多個站點，或希望與合作夥伴共用資料，請使用此選項；但是，有時出於隱私原因，不需要此選項。
