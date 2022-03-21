@@ -1,11 +1,11 @@
 ---
 keywords: AmazonKinesis;kinesis目標；kinesis
-title: AmazonKinesis
+title: (β)AmazonKinesis
 description: 建立到AmazonKinesis儲存的即時出站連接，以從Adobe Experience Platform流資料。
 exl-id: b40117ef-6ad0-48a9-bbcb-97c6f6d1dce3
-source-git-commit: b1945d42b82b549985d848071762fa6ee2451368
+source-git-commit: c2e726a7e66267bf8f301014ae30dedd7472c693
 workflow-type: tm+mt
-source-wordcount: '1297'
+source-wordcount: '1298'
 ht-degree: 1%
 
 ---

@@ -3,9 +3,9 @@ keywords: SFTP;SFTP
 title: SFTP連接
 description: 建立到SFTP伺服器的即時出站連接，以定期從Adobe Experience Platform導出分隔的資料檔案。
 exl-id: 27abfc38-ec19-4321-b743-169370d585a0
-source-git-commit: 691e3181e05a24b6bb0ebbe8e0f797a2b4c572d2
+source-git-commit: fa393b2bd8085a17653962b5a8b112a5db10df83
 workflow-type: tm+mt
-source-wordcount: '361'
+source-wordcount: '517'
 ht-degree: 1%
 
 ---
@@ -44,16 +44,44 @@ ht-degree: 1%
 >title="RSA公鑰"
 >abstract="或者，您可以附加RSA格式的公鑰，以將加密添加到導出的檔案中。 公鑰必須寫為Base64編碼字串。"
 
-同時 [設定](../../ui/connect-destination.md) 此目標，必須提供以下資訊：
+>[!CONTEXTUALHELP]
+>id="platform_destinations_connect_sftp_ssh"
+>title="SSH密鑰"
+>abstract="SSH密鑰需要Base64字串。"
 
-* **主機**:SFTP儲存位置的地址
-* **用戶名**:登錄到SFTP儲存位置的用戶名
-* **密碼**:登錄SFTP儲存位置的密碼
-* **[!UICONTROL 名稱]**:輸入一個名稱，以幫助您標識此目標。
-* **[!UICONTROL 說明]**:輸入此目標的說明。
-* **[!UICONTROL 資料夾路徑]**:輸入將承載導出檔案的目標資料夾的路徑。
+當 [連接](../../ui/connect-destination.md) 要到達此目標，必須提供以下資訊：
 
-或者，您可以附加RSA格式的公鑰，以將加密添加到導出的檔案中。 您的公鑰必須寫為 [!DNL Base64] 編碼字串。
+#### 驗證資訊 {#authentication-information}
+
+如果選擇 **[!UICONTROL 基本身份驗證]** 鍵入以連接到SFTP位置：
+
+![SFTP目標基本身份驗證](/help/destinations/assets/catalog/cloud-storage/sftp/stfp-basic-authentication.png)
+
+* **[!UICONTROL 主機]**:SFTP儲存位置的地址；
+* **[!UICONTROL 用戶名]**:登錄SFTP儲存位置的用戶名；
+* **[!UICONTROL 密碼]**:登錄SFTP儲存位置的密碼。
+* **[!UICONTROL 加密密鑰]**:或者，您可以附加RSA格式的公鑰，以將加密添加到導出的檔案中。 您的公鑰必須寫為 [!DNL Base64] 編碼字串。
+
+
+如果選擇 **[!UICONTROL 帶SSH密鑰的SFTP]** 連接到SFTP位置的驗證類型：
+
+![SFTP目標SSH密鑰驗證](/help/destinations/assets/catalog/cloud-storage/sftp/sftp-ssh-key-authentication.png)
+
+* **[!UICONTROL 域]**:填寫SFTP帳戶的IP地址或域名
+* **[!UICONTROL 埠]**:SFTP儲存位置使用的埠；
+* **[!UICONTROL 用戶名]**:登錄SFTP儲存位置的用戶名；
+* **[!UICONTROL SSH密鑰]**:登錄到SFTP儲存位置的SSH密鑰。
+* **[!UICONTROL 加密密鑰]**:或者，您可以附加RSA格式的公鑰，以將加密添加到導出的檔案中。 您的公鑰必須寫為 [!DNL Base64] 編碼字串。
+
+#### 目標詳細資訊 {#destination-details}
+
+在建立到SFTP位置的身份驗證連接後，請提供目標的以下資訊：
+
+![SFTP目標的可用目標詳細資訊](/help/destinations/assets/catalog/cloud-storage/sftp/sftp-destination-details.png)
+
+* **[!UICONTROL 名稱]**:在Experience Platform用戶介面中輸入有助於識別此目標的名稱；
+* **[!UICONTROL 說明]**:輸入此目標的說明；
+* **[!UICONTROL 資料夾路徑]**:在SFTP位置輸入檔案導出位置的資料夾路徑。
 
 ## 導出的資料 {#exported-data}
 
