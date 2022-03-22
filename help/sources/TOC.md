@@ -4,9 +4,9 @@ user-guide-title: Adobe Experience 平台來源連接器說明
 breadcrumb-title: 來源連接器指南
 user-guide-description: 從多種來源或結構擷取資料、加標籤，以及增強已擷取的資料。
 feature: Sources
-source-git-commit: da3d0399bae9953cd74bd0ac6d6e16b64796a578
+source-git-commit: c74676836d4690568665f16445c0dcf91496daf6
 workflow-type: tm+mt
-source-wordcount: '745'
+source-wordcount: '750'
 ht-degree: 13%
 
 ---
@@ -277,7 +277,8 @@ ht-degree: 13%
    - [在Adobe Experience Platform記錄你的消息來源](sources-sdk/documentation/doc-overview.md)
    - [使用GitHub Web介面建立源文檔頁](sources-sdk/documentation/github.md)
    - [使用本地環境中的文本編輯器建立源文檔頁](sources-sdk/documentation/text-editor.md)
-   - [文檔自助服務模板](sources-sdk/documentation/template.md)
+   - [文檔自助API模板](sources-sdk/documentation/template.md)
+   - [文檔自助服務UI模板](sources-sdk/documentation/ui-template.md)
 - [流運行通知](notifications.md)
 - [IP地址允許清單](ip-address-allow-list.md)
 - [常見問答](./troubleshooting.md)

@@ -1,68 +1,69 @@
 ---
-keywords: Experience Platform；首頁；熱門主題；來源；連接器；來源連接器；來源sdk;sdk; SDK
+keywords: Experience Platform；首頁；熱門主題；源；連接器；源連接器；源sdk;sdk;SDK
 solution: Experience Platform
-title: 來源SDK概述（測試版）
+title: 源SDK概述(Beta)
 topic-legacy: overview
-description: Adobe Experience Platform Sources SDK是一組設定API，可讓您使用流量服務API整合REST API型來源，將資料帶入Experience Platform。
+description: Adobe Experience Platform源SDK是一組配置API，它允許您使用流服務API整合基於REST API的源，以將資料Experience Platform。
 hide: true
 hidefromtoc: true
-source-git-commit: 3d510876cfdd8ac3045dae8df6fcf6045de2538b
+exl-id: 5d5449ad-a1ba-402b-a281-0b2d8b704f32
+source-git-commit: ce902e461c748e30e0307558da894a4dbdd212a4
 workflow-type: tm+mt
-source-wordcount: '529'
+source-wordcount: '544'
 ht-degree: 0%
 
 ---
 
-# 來源SDK概述（測試版）
+# 源SDK概述(Beta)
 
 >[!IMPORTANT]
 >
->Sources SDK目前仍在測試階段，而您的組織可能尚未取得存取權。 本檔案所述的功能可能會有所變更。
+>源SDK當前處於測試版中，您的組織可能尚未訪問它。 本文檔中描述的功能可能會發生更改。
 
-Adobe Experience Platform Sources SDK是一組設定API，可讓您使用 [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/) 將資料帶入Experience Platform。
+Adobe Experience Platform源SDK是一組配置API，允許您使用 [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/) 將您的資料Experience Platform。
 
 使用Sources SDK，您可以：
 
-* 使用，將新來源設定為Platform目錄，並完成建立、讀取、更新和刪除功能 [!DNL Flow Service] API。
-* 定義源的規範，包括與支援的驗證類型以及如何獲取資源資料相關的資訊。
-* 為新來源建立面向使用者的檔案。
+* 將新源配置到平台目錄，並使用 [!DNL Flow Service] API。
+* 定義源的規範，包括與支援的身份驗證類型和獲取資源資料的方式相關的資訊。
+* 為新源建立面向用戶的文檔。
 
-Sources SDK檔案提供的指示可供您使用Adobe Experience Platform Sources SDK來設定、測試及發行與Platform的REST API型來源整合，並讓您的來源成為不斷增長之來源目錄的一部分。
+Sources SDK文檔提供了使用Adobe Experience Platform源SDK配置、test和發佈與平台基於REST API的源整合的說明，並使您的源成為不斷增長的源目錄的一部分。
 
 ![目錄](./assets/catalog.png)
 
-## 了解來源
+## 瞭解來源
 
-Platform可內嵌來自外部來源的資料，同時允許您使用Platform服務來建構、加標籤及增強該資料。 您可以內嵌來自各種來源的資料，例如Adobe應用程式、雲端儲存、協力廠商軟體和您的CRM系統。
+平台可以從外部源接收資料，同時允許您使用平台服務來構建、標籤和增強資料。 您可以從多種來源(如Adobe應用程式、基於雲的儲存、第三方軟體和您的CRM系統)接收資料。
 
-如需來源的詳細資訊，以及查看Platform上目前支援的不同來源的清單，請參閱 [來源概觀](../home.md).
+有關源的詳細資訊，以及要查看平台上當前支援的不同源的清單，請參見 [源概述](../home.md)。
 
-## 建立來源
+## 建立源
 
-透過Sources SDK，您可以整合自己的REST API型來源，並將資料帶入Platform [!DNL Flow Service]. Sources SDK可讓您透過 [!DNL Flow Service] API。
+通過源SDK，您可以整合您自己的基於REST API的源，並將資料帶到平台 [!DNL Flow Service]。 Sources SDK允許您通過以下方式將新源與平台整合：通過 [!DNL Flow Service] API。
 
-請參閱 [建立新的連接規範](./api/api-overview.md) 以了解如何將新來源整合至Platform的資訊。
+請參閱上的指南 [建立新連接規範](./api/api-overview.md) 有關如何將新源整合到平台的資訊。
 
-## 記錄您的來源
+## 記錄源
 
-建立來源後，請參閱 [檔案指南](./documentation/doc-overview.md) 有關如何通過以下方式記錄源的說明： [!DNL GitHub] 網頁介面或透過您自己的文字編輯器。
+建立源後，請參閱 [文檔指南](./documentation/doc-overview.md) 有關如何通過 [!DNL GitHub] 或通過您自己的文本編輯器。
 
 ## 高級流程
 
-在Experience Platform中配置源的逐步過程如下：
+以下概述了在Experience Platform中配置源的逐步過程：
 
-* 閱讀 [來源SDK API指南](./api/api-overview.md);
-   * 閱讀 [快速入門手冊](./api/getting-started.md);
-   * 請依照 [建立新的連接規範](./api/create.md);
-   * 請依照 [更新連接規範](./api/update-connection-specs.md);
-   * 請依照 [將新連接規範ID添加到流規範](./api/update-flow-specs.md)
-   * [提交新源](./api/submit.md).
-* 要更好地了解連接規範的結構和屬性，請參閱 [源SDK的配置選項](./config/config.md);
-   * 請參閱 [配置驗證規範](./config/authspec.md);
-   * 請參閱 [配置源規範](./config/sourcespec.md);
-   * 請參閱 [配置瀏覽規範](./config/explorespec.md);
-* 若要開始記錄來源，請參閱 [建立來源SDK檔案的概觀](./documentation/doc-overview.md)
-   * 您可以使用 [來源檔案範本](./documentation/template.md) 構造檔案；
-   * 請參閱 [使用GitHub網頁介面](./documentation/github.md) 以取得使用GitHub建立檔案的步驟；
-   * 請參閱 [使用文字編輯器](./documentation/text-editor.md) 以了解如何使用本機電腦建立檔案的步驟。
-
+* 閱讀 [源SDK API指南](./api/api-overview.md);
+   * 閱讀 [入門指南](./api/getting-started.md);
+   * 按照本教程 [建立新連接規範](./api/create.md);
+   * 按照本教程 [更新連接規範](./api/update-connection-specs.md);
+   * 按照本教程 [將新連接規範ID添加到流規範](./api/update-flow-specs.md)
+   * [提交新源](./api/submit.md)。
+* 要更好地瞭解連接規範的結構和屬性，請參閱上的指南 [源SDK的配置選項](./config/config.md);
+   * 請參閱上的指南 [配置身份驗證規範](./config/authspec.md);
+   * 請參閱上的指南 [配置源規範](./config/sourcespec.md);
+   * 請參閱上的指南 [配置瀏覽規範](./config/explorespec.md);
+* 要開始記錄源，請參閱 [建立源SDK文檔概述](./documentation/doc-overview.md)
+   * 你可以使用 [源API文檔模板](./documentation/template.md) 構建API文檔；
+   * 你可以使用 [源UI文檔模板](./documentation/ui-template.md) 構建UI文檔；
+   * 請參閱上的指南 [使用GitHub Web介面](./documentation/github.md) 有關如何使用GitHub建立文檔的步驟；
+   * 請參閱上的指南 [使用文本編輯器](./documentation/text-editor.md) 有關如何使用本地電腦建立文檔的步驟。
