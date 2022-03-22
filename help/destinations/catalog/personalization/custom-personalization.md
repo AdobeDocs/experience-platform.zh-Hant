@@ -3,7 +3,7 @@ keywords: 自定義個性化；目的地；體驗平台定制目標；
 title: 自定義個性化連接
 description: 此目標提供外部個性化、內容管理系統、廣告伺服器以及您站點上運行的其他應用程式，以便從Adobe Experience Platform檢索段資訊。 此目標基於用戶配置檔案段成員身份提供即時個性化。
 exl-id: 2382cc6d-095f-4389-8076-b890b0b900e3
-source-git-commit: 95d287f3eac08064da35aea7c4cb22ea901c7324
+source-git-commit: 05217dead7e1365d6dcc0cc7ae4078628514d1d5
 workflow-type: tm+mt
 source-wordcount: '678'
 ht-degree: 1%
@@ -48,7 +48,7 @@ ht-degree: 1%
 >id="platform_destinations_custom_personalization_datastream"
 >title="關於資料流ID"
 >abstract="此選項確定在響應頁面時將包括段的資料收集資料流的位置。 下拉菜單僅顯示啟用了目標配置的資料流。 必須先配置資料流，然後才能配置目標。"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/datastreams.html?lang=en" text="瞭解如何配置資料流。"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/datastreams.html?lang=en" text="瞭解如何配置資料流"
 
 要連接到此目標，請按照 [目標配置教程](../../ui/connect-destination.md)。
 
