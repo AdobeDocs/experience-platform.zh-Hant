@@ -5,18 +5,18 @@ title: 查詢Adobe Target資料示例
 topic-legacy: queries
 description: 來自Adobe Target的資料將轉換為「體驗事件XDM」架構，並作為資料集接收到Experience Platform。 此文檔包含用於將Query Service與Adobe Target資料集一起使用的示例查詢。
 exl-id: 0ab3cd6e-25ed-43dc-b8f0-a2b71621ae50
-source-git-commit: c0e7ae8f65aa0373d35a55d4da46e0ffcb0e60f9
+source-git-commit: 76847d8286776a554e55209fa1b334c98b02d76b
 workflow-type: tm+mt
-source-wordcount: '328'
+source-wordcount: '324'
 ht-degree: 1%
 
 ---
 
 # Adobe Target資料查詢示例
 
-來自Adobe Target的資料被轉換為「體驗事件XDM」架構，並作為資料集被接收到Adobe Experience Platform。 Adobe Experience Platform查詢服務使用此資料的使用情形很多，以下示例查詢應用於您的Adobe Target資料集。
+從Adobe Target攝入的資料被轉換成體驗事件XDM模式，並作為資料集被攝入Adobe Experience Platform。 Adobe Experience Platform查詢服務方便了此資料的許多使用案例，以下示例查詢應與您的Adobe Target資料集配合使用。
 
-在Experience Platform中，自動建立的資料集的名稱為「Adobe Target體驗事件」。 將此資料集與查詢一起使用時，應使用名稱 `adobe_target_experience_events`。
+在Experience Platform中，自動建立的資料集的名稱為「Adobe Target體驗事件」。 將此資料集與查詢一起使用時，請使用名稱 `adobe_target_experience_events`。
 
 ## 高級部分XDM欄位映射
 
