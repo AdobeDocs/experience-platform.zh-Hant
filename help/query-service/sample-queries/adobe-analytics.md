@@ -3,11 +3,11 @@ keywords: Experience Platform；首頁；熱門主題；查詢服務；查詢服
 solution: Experience Platform
 title: 查詢Adobe Analytics資料示例
 topic-legacy: queries
-description: 選定的Adobe Analytics報告套件中的資料將轉換為XDM ExperienceEvents，並作為資料集接收到Adobe Experience Platform。 本文檔概述了Adobe Experience Platform查詢服務使用此資料的一些使用情形，包括的示例查詢應與您的Adobe Analytics資料集一起使用。
+description: 從選定的Adobe Analytics報告套件中的資料被轉換為XDM ExperienceEvents，並作為資料集被攝入Adobe Experience Platform。 本文檔概述了Query Service使用此資料的多種使用情形，包括旨在與您的Adobe Analytics資料集配合使用的示例查詢。
 exl-id: 96da3713-c7ab-41b3-9a9d-397756d9dd07
-source-git-commit: bb5ece5e48ca5e3bb97aa1367515f510ab03deee
+source-git-commit: fec6f614946860e6ad377beaca05972a63052dd8
 workflow-type: tm+mt
-source-wordcount: '1052'
+source-wordcount: '1066'
 ht-degree: 1%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 1%
 
 將來自選定Adobe Analytics報告套件的資料轉換為符合 [!DNL XDM ExperienceEvent] 以資料集的形式被攝入Adobe Experience Platform。
 
-本文檔概述了Adobe Experience Platform [!DNL Query Service] 利用此資料，包括示例查詢應與您的Adobe Analytics資料集配合使用。 請參閱 [分析欄位映射](../../sources/connectors/adobe-applications/mapping/analytics.md) 有關映射到的詳細資訊 [!DNL Experience Events]。
+本文檔概述了Adobe Experience Platform [!DNL Query Service] 利用此資料，包括旨在與您的Adobe Analytics資料集配合使用的示例查詢。 請參閱 [分析欄位映射](../../sources/connectors/adobe-applications/mapping/analytics.md) 有關映射到的詳細資訊 [!DNL Experience Events]。
 
 ## 快速入門
 
@@ -24,7 +24,7 @@ ht-degree: 1%
 
 ## 常用SQL示例
 
-以下示例顯示了分析Adobe Analytics資料的常用SQL查詢。
+以下示例顯示了用於分析Adobe Analytics資料的常用案例的SQL查詢。
 
 ### 給定日的每小時訪問者計數
 
@@ -120,14 +120,15 @@ ORDER BY Hour;
 
 ## 去重複化
 
-Adobe Experience Platform查詢服務支援重複資料消除。 查看 [查詢服務文檔中的重複資料消除](../best-practices/deduplication.md) 有關如何在查詢時生成新值的資訊 [!DNL Experience Event] 資料集。
+[!DNL Query Service] 支援重複資料消除。 查看 [中的重複資料消除 [!DNL Query Service] 文檔](../best-practices/deduplication.md) 有關如何在查詢時生成新值的資訊 [!DNL Experience Event] 資料集。
 
 ## 促銷變數（產品語法）
 
+以下各節提供了XDM欄位和示例查詢，您可以使用這些欄位和示例查詢來訪問您的促銷變數 [!DNL Analytics] 資料集。
 
 ### 產品語法
 
-在Adobe Analytics，定制產品級資料可以通過特殊配置的變數來收集。 這些基於eVar或自定義事件。 這些變數與其標準用途的不同之處在於它們代表在命中點上找到的每個產品的單獨值，而不是僅代表命中點的單個值。
+在Adobe Analytics，定制產品級資料可以通過特殊配置的變數來收集。 這些基於eVar或自定義事件。 這些變數與其典型用途的不同之處在於它們代表在命中點上找到的每個產品的單獨值，而不是僅代表命中點的單個值。
 
 這些變數稱為產品語法促銷變數。 這允許收集資訊，如每個產品的「折扣額」或客戶搜索結果中有關產品「頁面位置」的資訊。
 
@@ -200,12 +201,12 @@ LIMIT 20
 
 ### 轉換語法
 
-在Adobe Analytics找到的另一種類型的商品銷售變數是轉換語法。 使用product語法，值與product同時收集，但這要求資料在同一頁上顯示。 在轉換或與產品相關的感興趣事件之前，有些方案會在頁面上出現資料。 例如，請考慮產品查找方法的使用案例。
+在Adobe Analytics找到的另一種商品化變數是轉換語法。 使用product語法，值與product同時收集，但這要求資料在同一頁上顯示。 在轉換或與產品相關的感興趣事件之前，有些方案會在頁面上出現資料。 例如，請考慮產品查找方法的使用案例。
 
 1. 用戶對「冬帽」執行和內部搜索，將啟用轉換語法的促銷eVar6設定為「內部搜索：冬帽」
 2. 用戶點擊「華夫餅燕」，然後登錄到產品詳細資訊頁面。\
    a.降落在這裡會引發 `Product View` 12.99美元的「華夫餅燕」活動。\
-   b.因為 `Product View` 將產品「waffle beanie」配置為綁定事件，現在將綁定到「internal search:winter hat」的eVar6值。 每當收集「華夫餅燕」產品時，它將與「內部搜索：冬帽」相關聯，直到(1)到期設定或(2)設定新eVar6值並再次與該產品發生綁定事件。
+   b.自 `Product View` 「waffle beanie」被配置為綁定事件，現在將綁定到「internal search:winter hat」的eVar6值。 每當收集「華夫餅燕」產品時，它將與「內部搜索：冬帽」相關聯，直到(1)到期設定或(2)設定新eVar6值並再次與該產品發生綁定事件。
 3. 用戶將產品添加到其購物車，並激發 `Cart Add` 的子菜單。
 4. 用戶對「夏季襯衫」執行另一次內部搜索，該搜索將啟用轉換語法的促銷eVar6設定為「內部搜索：夏季襯衫」
 5. 用戶點擊「運動t恤衫」，然後登錄到產品詳細資訊頁面。\
