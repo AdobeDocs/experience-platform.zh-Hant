@@ -1,48 +1,61 @@
 ---
-keywords: Experience Platform；首頁；熱門主題；資料擷取；擷取資料；串流；概觀；串流擷取；延遲；串流延遲；
+keywords: Experience Platform；首頁；熱門主題；資料接收；接收資料；流；概述；流接收；延遲；流處理；流處理；；首頁；熱門主題；資料接收；接收；流處理；流處理；概述；流處理；延遲；流處理；
 solution: Experience Platform
-title: 串流擷取概述
+title: 流式接收概述
 topic-legacy: overview
-description: Adobe Experience Platform的串流內嵌功能可讓使用者透過用戶端和伺服器端裝置，即時傳送資料至Experience Platform。
+description: Adobe Experience Platform的流接收為用戶提供了一種從客戶端和伺服器端設備向Experience Platform即時發送資料的方法。
 exl-id: 851f15fd-7ac5-4a9f-934d-6b907057da87
-source-git-commit: 12c3f440319046491054b3ef3ec404798bb61f06
+source-git-commit: 57555011ce5cf8b3f80b1d1d849cb179f4801f02
 workflow-type: tm+mt
-source-wordcount: '277'
-ht-degree: 3%
+source-wordcount: '348'
+ht-degree: 2%
 
 ---
 
-# 串流獲取概觀
+# 流攝入概述
 
-Adobe Experience Platform的串流內嵌為使用者提供了一種方法，可即時將資料從用戶端和伺服器端裝置傳送至[!DNL Experience Platform]。
+Adobe Experience Platform的流接收為用戶提供了從客戶端和伺服器端設備向 [!DNL Experience Platform] 即時。
 
-## 您可以透過串流獲取做什麼？
+## 你能用流式攝入做什麼？
 
-Adobe Experience Platform可讓您為每個個別客戶產生[!DNL Real-time Customer Profile] ，借此促進協調、一致和相關的體驗。 串流內嵌可讓您將[!DNL Profile]資料盡可能少的延遲傳送至[!DNL Data Lake]，在建立這些設定檔時起到關鍵作用。
+Adobe Experience Platform通過建立 [!DNL Real-time Customer Profile] 為每個客戶。 流式接收在構建這些配置檔案中起著關鍵作用，它使您能夠提供 [!DNL Profile] 資料 [!DNL Data Lake] 盡可能少的延遲。
 
-以下影片旨在協助您了解串流擷取，並概述上述概念。
+以下視頻旨在幫助您理解流攝入，並概述上述概念。
 
 >[!VIDEO](https://video.tv.adobe.com/v/28425?quality=12&learn=on)
 
-### 資料流配置檔案記錄和[!DNL ExperienceEvents]
+### 流配置檔案記錄和 [!DNL ExperienceEvents]
 
-透過串流內嵌，使用者可以在數秒內將設定檔記錄和[!DNL ExperienceEvents]串流至[!DNL Platform]，以協助推動即時個人化。 所有傳送至串流獲取API的資料都會自動保存在[!DNL Data Lake]中。
+通過流式接收，用戶可以流式傳輸配置檔案記錄和 [!DNL ExperienceEvents] 至 [!DNL Platform] 幫助即時個性化。 發送到流式接收API的所有資料將自動保留在 [!DNL Data Lake]。
 
-請閱讀[建立串流連接指南](../tutorials/create-streaming-connection.md)以了解詳細資訊。
+請閱讀 [建立流連接指南](../tutorials/create-streaming-connection.md) 的子菜單。
 
-### 串流至資料集
+### 流到資料集
 
-確信資料已清除後，您就可以為[!DNL Real-time Customer Profile]和[!DNL Identity Service]啟用資料集。
+一旦您確信資料是乾淨的，就可以為 [!DNL Real-time Customer Profile] 和 [!DNL Identity Service]。
 
-有關為[!DNL Profile]和[!DNL Identity Service]啟用資料集的詳細資訊，請參閱[配置資料集指南](../../profile/tutorials/dataset-configuration.md)。
+有關為 [!DNL Profile] 和 [!DNL Identity Service]，請閱讀 [配置資料集指南](../../profile/tutorials/dataset-configuration.md)。
 
-## [!DNL Platform]上串流擷取的預期延遲為何？
+## 上的流式接收預期延遲是什麼 [!DNL Platform]?
 
 | 目的地 | 預期延遲 |
 | --------- | ---------------- |
-| 即時客戶個人檔案 | &lt; 1=&quot;&quot; minute=&quot;&quot;> |
-| 資料湖 | &lt; 60 分鐘 |
+| 即時客戶個人檔案 | &lt;1分鐘 |
+| 達塔湖 | &lt; 60 分鐘 |
+
+## 每秒請求(RPS)流接收指導
+
+下表顯示關於流式接收的每秒請求限制的指導。
+
+| RPS限制 | 附註 |
+| --- | --- |
+| 每秒1000次請求 | 當使用 `/collection/batch` 端點。 |
+| 每秒10000條單條消息 | 使用 `/collection/batch` 端點。 |
+
+>[!IMPORTANT]
+>
+>強制限制將變為 **每分鐘60次請求** 使用同步驗證時，將其用於調試。
 
 ## Adobe Experience Platform 擴充功能
 
-您可以使用Adobe Experience Platform擴充功能建立新的串流連線。 [!DNL Experience Platform]擴充功能提供可傳送[!DNL Experience Data Model](XDM)格式化信標以即時擷取至[!DNL Experience Platform]的動作。 如需詳細資訊，請參閱[Experience Platform擴充功能](../../tags/extensions/web/sdk/overview.md)檔案。
+可以使用Adobe Experience Platform擴展建立新的流連接。 的 [!DNL Experience Platform] 擴展提供了在中發送格式化的信標的操作 [!DNL Experience Data Model] (XDM)，用於即時接收 [!DNL Experience Platform]。 訪問 [Experience Platform擴展](../../tags/extensions/web/sdk/overview.md) 的子菜單。
