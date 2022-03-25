@@ -1,37 +1,36 @@
 ---
-keywords: Experience Platform；入門；內容ai；商務ai；內容與商務ai；顏色提取；顏色提取
-solution: Experience Platform, Intelligent Services
+keywords: Experience Platform；入門；內容；商務；內容和商務；顏色提取；顏色提取
+solution: Intelligent Services
 title: 內容與商務AI API中的顏色提取
 topic-legacy: Developer guide
-description: 當給定影像時，顏色提取服務可以計算像素顏色的直方圖，並按主色排序到桶中。
+description: 當給定影像時，顏色提取服務可以計算像素顏色的直方圖並按主色將它們排序成桶。
 exl-id: 6b3b6314-cb67-404f-888c-4832d041f5ed
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 16120a10f8a6e3fd7d2143e9f52a822c59a4c935
 workflow-type: tm+mt
 source-wordcount: '712'
 ht-degree: 2%
 
 ---
 
-# 色彩擷取
+# 顏色提取
 
 >[!NOTE]
 >
->[!DNL Content and Commerce AI] 是測試版。說明檔案可能會有所變更。
+>[!DNL Content and Commerce AI] 是β 文檔可能會更改。
 
-當給定影像時，色彩擷取服務可計算像素色彩的色階分佈圖，並依主色排序成桶。 影像像素中的顏色被分成40種主要顏色，這些顏色代表色譜。 然後，在這40種顏色中計算顏色值的直方圖。 該服務有兩種變體：
+當給定影像時，顏色提取服務可以計算像素顏色的直方圖並按主色將它們排序成桶。 影像像素中的顏色被分段成代表色譜的40種主要顏色。 然後，在這40種顏色中計算顏色值的直方圖。 該服務有兩個變型：
 
-**色彩擷取（完整影像）**
+**顏色提取（完整影像）**
 
-此方法會擷取整個影像的色彩色階分佈圖。
+該方法在整個影像上提取顏色直方圖。
 
-**色彩擷取（含遮色片）**
+**顏色提取（帶蒙版）**
 
-該方法採用基於深度學習的前景提取器來識別前景中的對象。 該模型在電子商務影像目錄上進行培訓。 一旦提取前景對象，就像先前所述那樣計算佔優勢顏色的直方圖。
+該方法採用基於深度學習的前景提取器來識別前景中的對象。 該模型是在電子商務影像目錄上進行的。 一旦提取前景對象，就像先前描述的那樣在主色上計算直方圖。
 
-本文檔中的示例使用了以下影像：
+本文檔所示的示例中使用了以下影像：
 
-![測試影像](../images/QQAsset1.jpg)
+![test影像](../images/QQAsset1.jpg)
 
 **API格式**
 
@@ -41,13 +40,13 @@ POST /services/v1/predict
 
 **要求**
 
-下列範例要求使用完整影像方法進行色彩擷取。
+下面的示例請求使用全影像方法進行顏色提取。
 
-下列請求基於在有效載荷中提供的輸入參數從影像中提取顏色。 請參閱範例裝載下表，以取得有關所示輸入參數的詳細資訊。
+以下請求基於在負載中提供的輸入參數從影像中提取顏色。 有關所示輸入參數的詳細資訊，請參閱示例負載下表。
 
 >[!CAUTION]
 >
->`analyzer_id` 決定使 [!DNL Sensei Content Framework] 用的項目。請在提出要求之前，先檢查您是否有正確的`analyzer_id`。 對於顏色提取服務，`analyzer_id` ID為：
+>`analyzer_id` 確定 [!DNL Sensei Content Framework] 的子菜單。 請檢查一下 `analyzer_id` 在你提出要求之前。 對於顏色提取服務， `analyzer_id` ID是：
 >`Feature:image-color-histogram:Service-6fe52999293e483b8e4ae9a95f1b81a7`
 
 ```SHELL
@@ -87,27 +86,27 @@ curl -i -X POST https://sensei.adobe.io/services/v1/predict \
 
 | 屬性 | 說明 | 必要 |
 | --- | --- | --- |
-| `analyzer_id` | 您的請求部署在下的[!DNL Sensei]服務ID。 此ID決定使用哪個[!DNL Sensei Content Frameworks]。 如需自訂服務，請聯絡「內容與商務AI」團隊以設定自訂ID。 | 是 |
+| `analyzer_id` | 的 [!DNL Sensei] 部署請求的服務ID。 此ID確定 [!DNL Sensei Content Frameworks] 的子菜單。 有關自定義服務，請與Content and Commerce AI團隊聯繫以設定自定義ID。 | 是 |
 | `application-id` | 已建立應用程式的ID。 | 是 |
-| `data` | 包含JSON物件的陣列。 陣列中的每個對象都代表一個影像。 作為此陣列的一部分傳遞的任何參數都將覆蓋在`data`陣列外指定的全局參數。 下表中概述的任何其他屬性都可從`data`中覆寫。 | 是 |
-| `content-id` | 回應中傳回之資料元素的唯一ID。 如果未傳遞此資訊，則會指派自動產生的ID。 | 無 |
-| `content` | 要由顏色提取服務分析的內容。 如果影像是請求主體的一部分，請在curl命令中使用`-F file=@<filename>`來傳遞影像，將此參數保留為空字串。 <br> 如果影像是S3上的檔案，請傳遞已簽署的URL。當內容是請求內文的一部分時，資料元素清單應該只有一個物件。 如果傳遞多個物件，則只會處理第一個物件。 | 是 |
-| `content-type` | 用於指出輸入是請求內文的一部分，還是S3儲存貯體的已簽署URL。 此屬性的預設值為`inline`。 | 無 |
-| `encoding` | 輸入影像的檔案格式。 目前只能處理JPEG和PNG影像。 此屬性的預設值為`jpeg`。 | 無 |
-| `threshold` | 需要傳回結果的分數臨界值（0到1）。 使用`0`值返回所有結果。 此屬性的預設值為`0`。 | 無 |
-| `top-N` | 要傳回的結果數（不能是負整數）。 使用`0`值返回所有結果。 當與`threshold`搭配使用時，傳回的結果數量會小於任一限制集。 此屬性的預設值為`0`。 | 無 |
-| `custom` | 要傳遞的任何自訂參數。 | 無 |
-| `historic-metadata` | 可傳遞中繼資料的陣列。 | 無 |
+| `data` | 包含JSON對象的陣列。 陣列中的每個對象都表示影像。 作為此陣列的一部分傳遞的任何參數都將覆蓋在 `data` 陣列。 此表中概述的任何剩餘屬性都可以從中覆蓋 `data`。 | 是 |
+| `content-id` | 響應中返回的資料元素的唯一ID。 如果未傳遞此資訊，則分配自動生成的ID。 | 無 |
+| `content` | 由顏色提取服務分析的內容。 如果影像是請求主體的一部分，請使用 `-F file=@<filename>` 在curl命令中傳遞影像，將此參數保留為空字串。 <br> 如果影像是S3上的檔案，請傳遞帶簽名的URL。 當內容是請求正文的一部分時，資料元素清單應只有一個對象。 如果傳遞了多個對象，則只處理第一個對象。 | 是 |
+| `content-type` | 用於指示輸入是請求正文的一部分還是S3儲存段的帶簽名URL。 此屬性的預設值為 `inline`。 | 無 |
+| `encoding` | 輸入影像的檔案格式。 目前只能處理JPEG和PNG影像。 此屬性的預設值為 `jpeg`。 | 無 |
+| `threshold` | 需要返回結果的分數（0到1）的閾值。 使用值 `0` 返回所有結果。 此屬性的預設值為 `0`。 | 無 |
+| `top-N` | 要返回的結果數（不能為負整數）。 使用值 `0` 返回所有結果。 與 `threshold`，返回的結果數是任一限制集的較小值。 此屬性的預設值為 `0`。 | 無 |
+| `custom` | 要傳遞的任何自定義參數。 | 無 |
+| `historic-metadata` | 可傳遞元資料的陣列。 | 無 |
 
 **回應**
 
-成功的回應會傳回擷取色彩的詳細資料。 每種顏色都由`feature_value`鍵表示，其中包含以下資訊：
+成功的響應返回提取顏色的詳細資訊。 每種顏色由 `feature_value` 鍵，其中包含以下資訊：
 
 - 顏色名稱
 - 此顏色相對於影像顯示的百分比
 - 顏色的RGB值
 
-在下面的第一個範例物件中，`White,0.59,251,251,243`的`feature_value`表示所找到的顏色為白色，在影像的59%中為白色，且RGB值為251,251,243。
+在下面的第一個示例對象中， `feature_value` 共 `White,0.59,251,251,243` 表示找到的顏色為白色，在影像的59%中找到白色，其RGB值為251,251,243。
 
 ```json
 {
@@ -152,5 +151,5 @@ curl -i -X POST https://sensei.adobe.io/services/v1/predict \
 
 | 屬性 | 說明 |
 | --- | --- |
-| `content_id` | 在您的POST請求中上傳的影像名稱。 |
-| `feature_value` | 其對象包含具有相同屬性名稱的鍵的陣列。 這些鍵包含一個字串，代表顏色名稱、此顏色相對於在`content_id`中傳送的影像顯示的百分比，以及顏色的RGB值。 |
+| `content_id` | 在您的POST請求中上載的映像的名稱。 |
+| `feature_value` | 對象包含具有相同屬性名稱的鍵的陣列。 這些鍵包含一個表示顏色名稱的字串，此顏色相對於在 `content_id`和顏色的RGB值。 |

@@ -1,44 +1,44 @@
 ---
-keywords: Experience Platform；深入分析；customer ai；熱門主題；customer ai區段
-solution: Experience Platform, Intelligent Services, Real-time Customer Data Platform
+keywords: Experience Platform；洞察力；客戶ai；熱門主題；客戶ai段
+solution: Intelligent Services, Real-time Customer Data Platform
 feature: Customer AI
-title: 使用預測分數建立客戶區段
+title: 使用預測分數建立客戶段
 topic-legacy: Create a segment
-description: 當預測執行完成時，設定檔會自動使用預測的傾向分數。 使用Customer AI分數豐富設定檔，可建立客戶區段，根據其傾向分數尋找對象。 本節提供使用「區段產生器」建立區段的步驟。
+description: 當預測運行完成時，預測傾向分數由Profiles自動消耗。 利用客戶AI分數豐富配置檔案允許建立客戶段，以便根據其傾向分數查找受眾。 本節提供了使用段生成器建立段的步驟。
 exl-id: ac81f798-f599-4a8d-af25-c00c92e74b4e
-source-git-commit: c3320f040383980448135371ad9fae583cfca344
+source-git-commit: 16120a10f8a6e3fd7d2143e9f52a822c59a4c935
 workflow-type: tm+mt
 source-wordcount: '318'
 ht-degree: 0%
 
 ---
 
-# 使用預測分數建立客戶區段
+# 建立具有預測分值的客戶段
 
-當預測執行完成時，設定檔會自動使用預測的傾向分數。 使用Customer AI分數豐富設定檔，可建立客戶區段，根據其傾向分數尋找對象。 本節提供使用「區段產生器」建立區段的步驟。 如需建立區段的更完善教學課程，請參閱[區段產生器使用指南](../../../segmentation/ui/segment-builder.md)。
+當預測運行完成時，預測傾向分數由Profiles自動消耗。 利用客戶AI分數豐富配置檔案允許建立客戶段，以便根據其傾向分數查找受眾。 本節提供了使用段生成器建立段的步驟。 有關建立段的更強健的教程，請參見 [段生成器使用手冊](../../../segmentation/ui/segment-builder.md)。
 
 >[!IMPORTANT]
 >
->若要使用此方法，必須為資料集啟用即時客戶設定檔。
+>為了利用此方法，需要為資料集啟用即時客戶配置檔案。
 
-在Platform UI中，按一下左側導覽中的&#x200B;**[!UICONTROL 區段]**，然後按一下&#x200B;**[!UICONTROL 建立區段]**。
+在平台UI中，按一下 **[!UICONTROL 段]** ，然後按一下 **[!UICONTROL 建立段]**。
 
 ![](../images/user-guide/segments.png)
 
-此時會出現&#x200B;**區段產生器**。 從左側的&#x200B;**[!UICONTROL 欄位]**&#x200B;欄和&#x200B;**[!UICONTROL 屬性]**&#x200B;標籤下，按一下名為&#x200B;**[!UICONTROL XDM個別設定檔]**&#x200B;的資料夾，然後按一下具有您組織的命名空間的資料夾。 名為&#x200B;**[!UICONTROL Customer AI]**&#x200B;的資料夾包含預測運行的結果，並以分數所屬的實例命名。 按一下執行個體資料夾以存取其所需執行個體的結果。
+的 **段生成器** 的子菜單。 左起 **[!UICONTROL 欄位]** 列和 **[!UICONTROL 屬性]** 頁籤，按一下名為 **[!UICONTROL XDM個人配置檔案]** 然後，按一下具有組織名稱空間的資料夾。 名為的資料夾 **[!UICONTROL 客戶AI]** 包含預測運行的結果，並以分值所屬的實例命名。 按一下實例資料夾以訪問其所需實例的結果。
 
 ![](../images/user-guide/results.png)
 
-位於區段產生器的中央，將&#x200B;**[!UICONTROL Score]**&#x200B;屬性拖放至&#x200B;*規則產生器畫布*&#x200B;以定義規則。
+位於段生成器的中心，拖放 **[!UICONTROL 得分]** 屬性 *規則生成器畫布* 的子菜單。
 
-在右側的&#x200B;*區段屬性*&#x200B;欄下，提供區段的名稱。
+右下 *段屬性* 列，提供段的名稱。
 
 ![](../images/user-guide/properties.png)
 
-在左側的&#x200B;*欄位*&#x200B;欄上，按一下&#x200B;**gear**&#x200B;圖示，然後從下拉式清單中選取&#x200B;*合併原則*。 按一下「**[!UICONTROL 儲存]**」以建立區段。
+在左手上方 *欄位* 列，按一下 **齒輪** 表徵圖並選擇 *合併策略* 從下拉清單中。 按一下 **[!UICONTROL 保存]** 的子菜單。
 
 ![](../images/user-guide/merge_policy.png)
 
 ## 後續步驟
 
-依照本教學課程，您已使用「區段產生器」，根據其傾向分數成功找到對象。 您現在可以透過在目的地啟用對象來鎖定對象。 如需詳細資訊，請參閱[目的地概述](../../../destinations/home.md) 。
+通過本教程，您已使用段生成器根據受眾的傾向得分成功找到受眾。 現在，您可以通過將受眾激活到目標來瞄準他們。 查看 [目標概述](../../../destinations/home.md) 的子菜單。

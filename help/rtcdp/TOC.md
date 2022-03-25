@@ -1,60 +1,60 @@
 ---
 product: adobe experience platform
-solution: Experience Platform, Real-time Customer Data Platform
+solution: Real-time Customer Data Platform
 audience: user
-user-guide-title: 即時客戶資料平台指南
+user-guide-title: Real-time Customer Data Platform 指南
 user-guide-description: 將來自多個企業來源的已知和匿名資料放在一起，以建立客戶設定檔，從這些設定檔建立對象區段，並對協力廠商目的地啟動這些區段。
-source-git-commit: 69833137498fedd87e99ca4255b8f1ace0921ff9
+source-git-commit: c0ea64691ad5f901bca9729ff6d742ffd423f1e5
 workflow-type: tm+mt
 source-wordcount: '174'
-ht-degree: 31%
+ht-degree: 32%
 
 ---
 
 
-# Real-time Customer Data Platform說明 {#rtcdp}
+# Real-time Customer Data Platform幫助 {#rtcdp}
 
-* [Real-time CDP概述](overview.md)
-* [Real-time CDP B2B Edition概述](b2b-overview.md)
+* [即時CDP概述](overview.md)
+* [即時CDP B2B版概述](b2b-overview.md)
 * 快速入門 {#intro}
    * Real-time CDP {#rtcdp-intro}
-      * [開始使用Real-time CDP](get-started.md)
+      * [即時CDP入門](get-started.md)
       * [量度概觀](home-page-dashboards.md)
-   * Real-time CDP B2B Edition {#rtcdpb2b-intro}
-      * [範例使用案例](./b2b-use-case.md)
-      * [端對端教學課程](./b2b-tutorial.md)
-      * [Real-time CDP B2B Edition護欄](b2b-guardrails.md)
-* 帳戶設定檔 {#account}
-   * [帳戶設定檔概觀](accounts/account-profile-overview.md)
-   * [帳戶設定檔UI指南](accounts/account-profile-ui-guide.md)
+   * 即時CDP B2B版 {#rtcdpb2b-intro}
+      * [示例用例](./b2b-use-case.md)
+      * [端到端教程](./b2b-tutorial.md)
+      * [即時CDP B2B版護欄](b2b-guardrails.md)
+* 帳戶配置檔案 {#account}
+   * [帳戶配置檔案概述](accounts/account-profile-overview.md)
+   * [帳戶配置檔案UI指南](accounts/account-profile-ui-guide.md)
 * 管理 {#admin}
    * [管理概述](administration/admin-overview.md)
 * 資料集 {#datasets}
    * [資料集](datasets/dataset.md)
-   * [Platform上的資料品質](datasets/data-quality.md)
+   * [平台上的資料質量](datasets/data-quality.md)
 * 目的地 {#destinations}
    * [目的地概觀](destinations/overview.md)
-   * [Real-time CDP B2B Edition中的目標](destinations/b2b.md)
+   * [即時CDP B2B版中的目標](destinations/b2b.md)
 * 身分 {#identity}
-   * [身分與身分識別命名空間](profile/identities-overview.md)
+   * [標識和標識命名空間](profile/identities-overview.md)
 * 合併策略 {#merge-policies}
    * [合併策略概述](profile/merge-policies.md)
-* 隱私權和資料控管 {#privacy}
+* 隱私和資料治理 {#privacy}
    * [隱私權概觀](privacy/privacy-overview.md)
-   * [資料控管概觀](privacy/data-governance-overview.md)
+   * [資料治理概述](privacy/data-governance-overview.md)
 * 設定檔 {#profile}
-   * [設定檔概觀](profile/profile-overview.md)
-   * [設定檔瀏覽](profile/profile-browse.md)
+   * [概要檔案概述](profile/profile-overview.md)
+   * [配置檔案瀏覽](profile/profile-browse.md)
 * 方案 {#schemas}
-   * [結構概觀](schemas/overview.md)
-   * [Real-time CDP B2B Edition中的結構描述](schemas/b2b.md)
+   * [架構概述](schemas/overview.md)
+   * [即時CDP B2B版中的架構](schemas/b2b.md)
 * 區段 {#segmentation}
-   * [區段概觀](segmentation/segmentation-overview.md)
-   * [區段產生器指南](segmentation/segment-builder-guide.md)
-   * [即時CDP B2B版中的分段](segmentation/b2b.md)
-   * [Customer AI](segmentation/customer-ai.md)
+   * [分段概述](segmentation/segmentation-overview.md)
+   * [段生成器指南](segmentation/segment-builder-guide.md)
+   * [即時CDP B2B版的分段](segmentation/b2b.md)
+   * [客戶AI](segmentation/customer-ai.md)
 * 來源 {#sources}
-   * [來源概觀](sources/sources-overview.md)
+   * [源概述](sources/sources-overview.md)
    * [即時CDP B2B版中的源](sources/b2b.md)
 * [Experience Platform發行說明](https://www.adobe.com/go/platform-release-notes-en)
 * [Experience Platform 詞彙表](https://www.adobe.com/go/platform-glossary-en)
