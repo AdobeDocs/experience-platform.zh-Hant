@@ -4,9 +4,9 @@ user-guide-title: Adobe Experience 平台來源連接器說明
 breadcrumb-title: 來源連接器指南
 user-guide-description: 從多種來源或結構擷取資料、加標籤，以及增強已擷取的資料。
 feature: Sources
-source-git-commit: c74676836d4690568665f16445c0dcf91496daf6
+source-git-commit: 5d03dda7a972d37697032978b6e91a39800f81c8
 workflow-type: tm+mt
-source-wordcount: '750'
+source-wordcount: '757'
 ht-degree: 13%
 
 ---
@@ -82,6 +82,7 @@ ht-degree: 13%
    - 營銷自動化 {#marketing-automation}
       - [HubSpot連接器](connectors/marketing-automation/hubspot.md)
       - [郵件連接器](connectors/marketing-automation/mailchimp.md)
+      - [OracleEloqua連接器](connectors/marketing-automation/oracle-eloqua.md)
       - [SalesforceMarketing Cloud](connectors/marketing-automation/salesforce-marketing-cloud.md)
    - 付款 {#payments}
       - [PayPal連接器](connectors/payments/paypal.md)
@@ -141,6 +142,7 @@ ht-degree: 13%
          - [集線器競價](tutorials/api/create/marketing-automation/hubspot.md)
          - [MailChimp活動](tutorials/api/create/marketing-automation/mailchimp-campaign.md)
          - [MailChimp成員](tutorials/api/create/marketing-automation/mailchimp-members.md)
+         - [Oracle雄辯](tutorials/api/create/marketing-automation/oracle-eloqua.md)
          - [SalesforceMarketing Cloud](tutorials/api/create/marketing-automation/salesforce-marketing-cloud.md)
       - 付款 {#payments}
          - [貝帕爾](tutorials/api/create/payments/paypal.md)
@@ -236,6 +238,7 @@ ht-degree: 13%
          - [集線器競價](tutorials/ui/create/marketing-automation/hubspot.md)
          - [郵箱活動](tutorials/ui/create/marketing-automation/mailchimp-campaigns.md)
          - [郵箱成員](tutorials/ui/create/marketing-automation/mailchimp-members.md)
+         - [Oracle雄辯](tutorials/ui/create/marketing-automation/oracle-eloqua.md)
          - [SalesforceMarketing Cloud](tutorials/ui/create/marketing-automation/salesforce-marketing-cloud.md)
       - 付款 {#payments}
          - [貝帕爾](tutorials/ui/create/payments/paypal.md)
