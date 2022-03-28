@@ -3,9 +3,9 @@ title: 為Experience PlatformWeb SDK配置資料流
 description: '瞭解如何配置資料流。 '
 keywords: 配置；資料流；資料流；邊；資料流ID；環境設定；邊配置ID；標識；ID同步容器ID；沙盒；流入口；事件資料集；目標；客戶端代碼；屬性令牌；目標；Cookie環境ID；目標；url；分析設定塊報告套件ID;
 exl-id: 736c75cb-e290-474e-8c47-2a031f215a56
-source-git-commit: 7fc62099ef7561595d260a5507fb2094f58b6016
+source-git-commit: 026d45b2c9d362d7510576601174c296e3b18a2a
 workflow-type: tm+mt
-source-wordcount: '2004'
+source-wordcount: '1995'
 ht-degree: 1%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->必須為您的組織設定此功能，才能在UI中訪問它。 如果您沒有訪問權限，請填寫以下內容 [表格](http://adobe.ly/websdkaccess) 我們會給予你必要的訪問權。
+>必須為您的組織設定此功能，才能在UI中訪問它。 請填寫以下內容 [表格](https://adobe.ly/websdkaccess) 請求必要的訪問權。
 
 ## 訪問 [!UICONTROL 資料流] 工作區
 
@@ -60,7 +60,7 @@ ht-degree: 1%
 | [!UICONTROL 第一方ID Cookie] | 啟用後，此設定將指示邊緣網路在查找 [第一方設備ID](../identity/first-party-device-ids.md)，而不是在「身份映射」中查找此值。<br><br>啟用此設定時，必須提供應儲存ID的Cookie的名稱。 |
 | [!UICONTROL 第三方ID同步] | ID同步可以分組到容器中，以允許在不同時間運行不同的ID同步。 啟用此設定後，可以指定為此資料流運行ID同步的容器。 |
 
-本節的其餘部分重點介紹將資料映射到所選平台事件架構的步驟。 如果您正在使用Mobile SDK或沒有為平台配置資料流，請選擇 **[!UICONTROL 保存]** 繼續下一節， [將服務添加到資料流](#add-services)。
+本節的其餘部分重點介紹將資料映射到所選平台事件架構的步驟。 如果您使用MobileSDK，或者沒有為平台配置資料流，請選擇 **[!UICONTROL 保存]** 繼續下一節， [將服務添加到資料流](#add-services)。
 
 ### 資料收集的資料準備 {#data-prep}
 
