@@ -2,18 +2,14 @@
 title: 審核日誌概述
 description: 瞭解審核日誌如何讓您查看誰在Adobe Experience Platform執行了哪些操作。
 exl-id: 00baf615-5b71-4e0a-b82a-ca0ce8566e7f
-source-git-commit: 7e4853cee8a0fa937c82eb842cd73b675eb337a3
+source-git-commit: d726576a4d1f29d83f3b7cf72c9f5c5d4ff114d3
 workflow-type: tm+mt
-source-wordcount: '657'
-ht-degree: 5%
+source-wordcount: '757'
+ht-degree: 7%
 
 ---
 
-# 審核日誌(Beta)
-
->[!IMPORTANT]
->
->Adobe Experience Platform的審計日誌功能當前處於測試版中，您的組織可能尚未訪問它。 本文檔中描述的功能可能會發生更改。
+# 審核日誌
 
 為了提高系統中所執行活動的透明度和可見性，Adobe Experience Platform允許您以「審計日誌」的形式對用戶活動進行各種服務和功能的審計。 這些日誌形成了審核跟蹤，可幫助解決平台上的問題，並幫助您的企業有效地遵守公司資料管理策略和法規要求。
 
@@ -27,13 +23,18 @@ ht-degree: 5%
 
 | 資源 | 動作 |
 | --- | --- |
-| [資料集](../../../catalog/datasets/overview.md) | <ul><li>建立</li><li>更新</li><li>刪除</li><li>啟用 [即時客戶概要資訊](../../../profile/home.md)</li></ul> |
-| [方案](../../../xdm/schema/composition.md) | <ul><li>建立</li><li>更新</li><li>刪除</li></ul> |
+| [資料集](../../../catalog/datasets/overview.md) | <ul><li>建立</li><li>更新</li><li>刪除</li><li>啟用 [即時客戶概要資訊](../../../profile/home.md)</li><li>禁用配置檔案</li></ul> |
+| [方案](../../../xdm/schema/composition.md) | <ul><li>建立</li><li>更新</li><li>刪除</li><li>啟用配置檔案</li></ul> |
 | [類](../../../xdm/schema/composition.md#class) | <ul><li>建立</li><li>更新</li><li>刪除</li></ul> |
 | [欄位組](../../../xdm/schema/composition.md#field-group) | <ul><li>建立</li><li>更新</li><li>刪除</li></ul> |
 | [資料類型](../../../xdm/schema/composition.md#data-type) | <ul><li>建立</li><li>更新</li><li>刪除</li></ul> |
 | [沙箱](../../../sandboxes/home.md) | <ul><li>建立</li><li>更新</li><li>重設</li><li>刪除</li></ul> |
-| [目標](../../../destinations/home.md) | <ul><li>啟動</li></ul> |
+| [目標](../../../destinations/home.md) | <ul><li>建立</li><li>更新</li><li>刪除</li><li>啟用</li><li>禁用</li><li>資料集激活</li><li>刪除資料集</li><li>配置檔案激活</li><li>配置檔案刪除</li></ul> |
+| [區段](../../../segmentation/home.md) | <ul><li>建立</li><li>刪除</li><li>段激活</li><li>段刪除</li></ul> |
+| [合併策略](../../../profile/merge-policies/overview.md) | <ul><li>建立</li><li>更新</li><li>刪除</li></ul> |
+| [計算屬性](../../../profile/computed-attributes/overview.md) | <ul><li>建立</li><li>更新</li><li>刪除</li></ul> |
+| [產品描述檔](../../../access-control/home.md) | <ul><li>建立</li><li>更新</li><li>刪除</li></ul> |
+| [帳戶(Adobe)](../../../access-control/home.md) | <ul><li>建立</li><li>更新</li><li>刪除</li></ul> |
 
 ## 訪問審核日誌
 
@@ -47,7 +48,7 @@ ht-degree: 5%
 
 ![審核日誌儀表板](../../images/audit-logs/audits.png)
 
-系統只顯示去年的審核日誌。 超過此限制的日誌將自動從系統中刪除。
+審核日誌將保留365天，之後將從系統中刪除。 因此，您最多只能回到365天。
 
 從清單中選擇一個事件，以在右欄中查看其詳細資訊。
 
@@ -55,9 +56,14 @@ ht-degree: 5%
 
 ### 篩選審核日誌
 
-選擇漏斗表徵圖(![「篩選器」表徵圖](../../images/audit-logs/icon.png))以顯示篩選器控制項清單，以幫助縮小結果範圍。
+>[!NOTE]
+>
+>由於這是一項新功能，所顯示的資料只能追溯到2022年3月。 根據所選資源，早期資料可從2022年1月開始提供。
 
-![篩選條件](../../images/audit-logs/filters.png)
+
+選擇漏斗表徵圖(![「篩選器」表徵圖](../../images/audit-logs/icon.png))以顯示篩選器控制項清單，以幫助縮小結果範圍。 只顯示最後1000條記錄，而與所選的各種篩選器無關。
+
+![篩選器](../../images/audit-logs/filters.png)
 
 以下篩選器可用於UI中的審核事件：
 
@@ -65,8 +71,9 @@ ht-degree: 5%
 | --- | --- |
 | [!UICONTROL 類別] | 使用下拉菜單按 [類別](#category)。 |
 | [!UICONTROL 動作] | 按操作篩選。 僅當前 [!UICONTROL 建立] 和 [!UICONTROL 刪除] 可以篩選操作。 |
+| [!UICONTROL 使用者] | 輸入完整的用戶ID(例如， `johndoe@acme.com`)按用戶篩選。 |
 | [!UICONTROL 狀態] | 按操作是否允許（完成）或由於缺少而被拒絕進行篩選 [訪問控制](../../../access-control/home.md) 權限。 |
-| [!UICONTROL 日期] | 選擇起始日期和/或終止日期以定義日期範圍以篩選結果。 |
+| [!UICONTROL 日期] | 選擇起始日期和/或終止日期以定義日期範圍以篩選結果。 可以使用90天的回望期（例如，2021-12-15到2022-03-15）導出資料。 這可能因事件類型而異。 |
 
 要刪除濾鏡，請為有關的濾鏡選擇「X」，或選擇 **[!UICONTROL 全部清除]** 按鈕，將選定控制項在Tab鍵次序中下移一個位置。
 
@@ -90,6 +97,10 @@ ht-degree: 5%
 
 要瞭解如何管理Adobe Admin Console活動的審核日誌，請參閱以下內容 [文檔](https://helpx.adobe.com/enterprise/using/audit-logs.html)。
 
-## 後續步驟
+## 後續步驟和其他資源
 
 本指南介紹了如何管理Experience Platform中的審核日誌。 有關如何監視平台活動的詳細資訊，請參閱 [可觀性洞察](../../../observability/home.md) 和 [監控資料接收](../../../ingestion/quality/monitor-data-ingestion.md)。
+
+要增強您對Experience Platform中審核日誌的瞭解，請觀看以下視頻：
+
+>[!VIDEO](https://video.tv.adobe.com/v/341450?quality=12&learn=on)
