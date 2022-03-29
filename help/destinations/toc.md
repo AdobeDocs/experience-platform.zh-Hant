@@ -4,9 +4,9 @@ user-guide-title: 目的地指南
 user-guide-description: 針對跨通路行銷活動、電子郵件宣傳、鎖定特定目標的行銷活動和其他諸多使用案例，啟用已知和未知的資料。
 description: 本文檔列出了Adobe Experience Platform目標的目錄
 feature: Destinations
-source-git-commit: 2d944c7bd237efbbd4a770b3a6dd03c4133bc901
+source-git-commit: c4d8ae6de2e1bbf23a25a66bde5dc88c13a13402
 workflow-type: tm+mt
-source-wordcount: '724'
+source-wordcount: '733'
 ht-degree: 9%
 
 ---
@@ -96,7 +96,7 @@ ht-degree: 9%
       * [Azure Blob連接](./catalog/cloud-storage/azure-blob.md)
       * [（測試版）Azure事件集線器連接](./catalog/cloud-storage/azure-event-hubs.md)
       * [SFTP連接](./catalog/cloud-storage/sftp.md)
-      * [IP地址允許清單](./catalog/cloud-storage/ip-address-allow-list.md)
+      * [雲儲存目標的IP地址允許清單](./catalog/cloud-storage/ip-address-allow-list.md)
    * 資料管理平台目標 {#data-management}
       * [資料管理平台(DMP)目標概述](./catalog/data-management/overview.md)
       * [Audience ManagerDIL擴展](./catalog/data-management/aam-dil-extension.md)
@@ -113,12 +113,12 @@ ht-degree: 9%
       * [SalesforceMarketing Cloud連接](./catalog/email-marketing/salesforce-marketing-cloud.md)
    * 標籤擴展 {#launch-extensions}
       * [標籤擴展概述](./catalog/launch-extensions/overview.md)
-   * 移動接洽目標 {#mobile-engagement}
+   * Mobile訂婚目的地 {#mobile-engagement}
       * [移動項目目標概述](./catalog/mobile-engagement/overview.md)
       * [飛艇屬性連接](./catalog/mobile-engagement/airship-attributes.md)
       * [飛艇標籤連接](./catalog/mobile-engagement/airship-tags.md)
       * [Braze連接](./catalog/mobile-engagement/braze.md)
-   * 個性化目標 {#personalization}
+   * Personalization目的地 {#personalization}
       * [個性化目標概述](./catalog/personalization/overview.md)
       * [Adobe Target](./catalog/personalization/adobe-target-connection.md)
       * [Adobe Target 擴充功能](./catalog/personalization/adobe-target.md)
@@ -138,6 +138,7 @@ ht-degree: 9%
       * [[!DNL Twitter Custom Audiences] 連接](./catalog/social/twitter.md)
    * 流目標 {#streaming}
       * [ (Beta)HTTP API連接](./catalog/streaming/http-destination.md)
+      * [流目標的IP地址允許清單](./catalog/streaming/ip-address-allow-list.md)
    * 調查目標 {#survey}
       * [調查目標概述](./catalog/survey/overview.md)
       * [預測擴展目標](./catalog/survey/foresee.md)

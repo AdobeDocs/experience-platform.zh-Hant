@@ -3,9 +3,9 @@ keywords: Azure事件中心目標；azure事件中心；azure事件thub
 title: (Beta) [!DNL Azure Event Hubs] 連接
 description: 建立到您的 [!DNL Azure Event Hubs] 儲存以從Experience Platform流資料。
 exl-id: f98a389a-bce3-4a80-9452-6c7293d01de3
-source-git-commit: b1945d42b82b549985d848071762fa6ee2451368
+source-git-commit: b2ac26589527313ec9f3cf84126e3e23da6c7b83
 workflow-type: tm+mt
-source-wordcount: '1247'
+source-wordcount: '1289'
 ht-degree: 1%
 
 ---
@@ -44,6 +44,10 @@ ht-degree: 1%
 | 導出頻率 | **[!UICONTROL 流]** | 流目標是基於API的「始終開啟」連接。 一旦基於段評估在Experience Platform中更新配置檔案，連接器就將更新下游發送到目標平台。 閱讀有關 [流目標](/help/destinations/destination-types.md#streaming-destinations)。 |
 
 {style=&quot;table-layout:auto&quot;}
+
+## IP地址允許清單 {#ip-address-allowlist}
+
+為滿足客戶的安全性和法規遵從性要求，Experience Platform提供了一個靜態IP清單，您可以為 [!DNL Azure Event Hubs] 目標。 請參閱 [流目標的IP地址允許清單](/help/destinations/catalog/streaming/ip-address-allow-list.md) 清單。
 
 ## 連接到目標 {#connect}
 

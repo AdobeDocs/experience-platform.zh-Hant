@@ -3,9 +3,9 @@ keywords: 流；
 title: HTTP API連接
 description: Adobe Experience Platform的HTTP API目標允許您將配置檔案資料發送到第三方HTTP終結點。
 exl-id: 165a8085-c8e6-4c9f-8033-f203522bb288
-source-git-commit: c2e726a7e66267bf8f301014ae30dedd7472c693
+source-git-commit: 7acacc4a5ddd10f47da59837ad7dab2615d41789
 workflow-type: tm+mt
-source-wordcount: '1377'
+source-wordcount: '1384'
 ht-degree: 1%
 
 ---
@@ -61,8 +61,11 @@ curl --location --request POST '<YOUR_API_ENDPOINT>' \
 --data-urlencode 'client_secret=<CLIENT_SECRET>'
 ```
 
-
 您還可以使用 [Adobe Experience Platform Destination SDK](/help/destinations/destination-sdk/overview.md) 設定整合併將Experience Platform配置檔案資料發送到HTTP終結點。
+
+## IP地址允許清單 {#ip-address-allowlist}
+
+為滿足客戶的安全性和合規性要求，Experience Platform提供了一個靜態IP清單，您可以允許列出該HTTP API目標。 請參閱 [流目標的IP地址允許清單](/help/destinations/catalog/streaming/ip-address-allow-list.md) 清單。
 
 ## 連接到目標 {#connect-destination}
 
@@ -97,10 +100,6 @@ curl --location --request POST '<YOUR_API_ENDPOINT>' \
 ### 目標屬性 {#attributes}
 
 在 [[!UICONTROL 選擇屬性]](../../ui/activate-streaming-profile-destinations.md#select-attributes) 步驟，Adobe建議您從 [聯合架構](../../../profile/home.md#profile-fragments-and-union-schemas)。 選擇要導出到目標的唯一標識符和任何其他XDM欄位。
-
-## 產品注意事項 {#product-considerations}
-
-Experience Platform不會通過一組固定的靜態IP將資料流出到HTTP端點。 因此，Adobe無法提供可以為HTTP API目標列出的靜態IP清單。
 
 ## 配置檔案導出行為 {#profile-export-behavior}
 

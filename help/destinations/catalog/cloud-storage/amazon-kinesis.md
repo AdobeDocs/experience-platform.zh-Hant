@@ -3,9 +3,9 @@ keywords: AmazonKinesis;kinesis目標；kinesis
 title: (β)AmazonKinesis
 description: 建立到AmazonKinesis儲存的即時出站連接，以從Adobe Experience Platform流資料。
 exl-id: b40117ef-6ad0-48a9-bbcb-97c6f6d1dce3
-source-git-commit: c2e726a7e66267bf8f301014ae30dedd7472c693
+source-git-commit: b2ac26589527313ec9f3cf84126e3e23da6c7b83
 workflow-type: tm+mt
-source-wordcount: '1298'
+source-wordcount: '1340'
 ht-degree: 1%
 
 ---
@@ -44,6 +44,10 @@ ht-degree: 1%
 | 導出頻率 | **[!UICONTROL 流]** | 流目標是基於API的「始終開啟」連接。 一旦基於段評估在Experience Platform中更新配置檔案，連接器就將更新下游發送到目標平台。 閱讀有關 [流目標](/help/destinations/destination-types.md#streaming-destinations)。 |
 
 {style=&quot;table-layout:auto&quot;}
+
+## IP地址允許清單 {#ip-address-allowlist}
+
+為滿足客戶的安全性和法規遵從性要求，Experience Platform提供了一個靜態IP清單，您可以為 [!DNL Amazon Kinesis] 目標。 請參閱 [流目標的IP地址允許清單](/help/destinations/catalog/streaming/ip-address-allow-list.md) 清單。
 
 ## 必需 [!DNL Amazon Kinesis] 權限 {#required-kinesis-permission}
 
