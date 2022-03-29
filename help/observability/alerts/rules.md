@@ -4,9 +4,9 @@ title: 標準警報規則
 description: 本文檔涵蓋由Experience Platform提供的預定義警報規則。
 feature: Alerts
 exl-id: b4af1c15-b1bc-4e4b-a447-09cc17a63988
-source-git-commit: d8ada2de0ee0408e4e10f0dc45652af6eb6352cf
+source-git-commit: f1098f5992068173f35cb1c53924a82df6996acb
 workflow-type: tm+mt
-source-wordcount: '728'
+source-wordcount: '785'
 ht-degree: 3%
 
 ---
@@ -24,9 +24,11 @@ Adobe Experience Platform提供了幾個預定義的警報規則，您可以為�
 | I/O事件訂閱 | 警報規則 | 說明 |
 | --- | --- | --- |
 | 源流運行資訊 | 源流運行啟動 | 當源連接開始處理資料時，此警報會觸發。 |
-| 源流運行資訊 | 源流運行成功 | 當從源連接成功接收資料時，此警報會觸發。 |
+| 源流運行資訊 | 源流運行成功 | 從源連接成功接收資料時，此警報會觸發。 |
 | 源流運行延遲、失敗和錯誤 | 源流運行失敗 | 當從源連接接收資料時發生錯誤時，此警報會觸發。 |
 | 源流運行延遲、失敗和錯誤 | 攝取延遲 | 當批處理接收流運行超過150分鐘時，此警報會觸發。 |
+| 源流運行延遲、失敗和錯誤 | 缺乏攝取 | 如果接收延遲超過七小時且未向平台接收任何資料，則此警報會向您發送消息。 |
+| 源流運行延遲、失敗和錯誤 | 攝取失敗 | 當失敗記錄與所有記錄的比率超過閾值0.5%時，此警報會觸發 |
 
 {style=&quot;table-layout:auto&quot;}
 
