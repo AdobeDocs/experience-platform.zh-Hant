@@ -1,10 +1,10 @@
 ---
 title: Adobe Experience 平台發行說明
 description: Adobe Experience Platform的最新發行說明。
-source-git-commit: 9117fffc58786f05e8741d9695ddb551344b6cc7
+source-git-commit: 04d35137a301492794ab8c0c67183cf5c76f2105
 workflow-type: tm+mt
-source-wordcount: '652'
-ht-degree: 7%
+source-wordcount: '1063'
+ht-degree: 5%
 
 ---
 
@@ -19,7 +19,9 @@ Adobe Experience Platform的新功能：
 Adobe Experience Platform 現有功能更新：
 
 - [警報](#alerts)
+- [[!DNL Dashboards]](#dashboards)
 - [體驗資料模型(XDM)](#xdm)
+- [[!DNL Query Service]](#query-service)
 - [來源](#sources)
 
 ## 審核日誌 {#audit-logs}
@@ -51,11 +53,40 @@ Experience Platform允許您訂閱各種平台活動的基於事件的警報。 
 
 有關平台中警報的詳細資訊，請參閱 [警報概述](../../observability/alerts/overview.md)。
 
+## 儀表板 {#dashboards}
+
+Adobe Experience Platform提供 [!DNL dashboards] 您可以通過查看有關組織資料的重要資訊（在每日快照中捕獲）。
+
+### 配置檔案儀表板
+
+「配置式」控制面板顯示您的組織在「配置式儲存」Experience Platform中擁有的屬性（記錄）資料的快照。
+
+**已更新功能**
+
+| 功能 | 說明 |
+| --- | --- |
+| 未分段的配置檔案構件 | 該構件提供未附加到任何段的所有配置檔案的總數。 生成的數字在上次快照時準確無誤，表示整個組織中配置檔案激活的機會。 查看 [配置檔案標準小部件文檔](../../dashboards/guides/profiles.md#standard-widgets) 的子菜單。 |
+| 未分段的配置檔案趨勢構件 | 此小部件提供線形圖圖，說明在給定時間段內未附加到任何段的配置檔案數。 該趨勢可以在30天、90天和12個月期間進行可視化。 查看 [配置檔案標準小部件文檔](../../dashboards/guides/profiles.md#standard-widgets) 的子菜單。 |
+| 按身份構件分段的配置檔案 | 此小部件按其唯一標識符對未分段的配置檔案總數進行分類。 資料以條形圖顯示。 查看 [配置檔案標準小部件文檔](../../dashboards/guides/profiles.md#standard-widgets) 的子菜單。 |
+| 單個身份配置檔案小部件 | 此小部件提供組織的配置檔案的計數，這些配置檔案只具有一種類型的ID類型，可建立其標識，即電子郵件或ECID。 查看 [配置檔案標準小部件文檔](../../dashboards/guides/profiles.md#standard-widgets) 的子菜單。 |
+
+有關配置式儀表板的詳細資訊，請參閱 [配置檔案儀表板概述](../../dashboards/guides/profiles.md)。
+
+### 目標儀表板
+
+「目標」控制面板顯示您的組織在Experience Platform中啟用的目標的快照。
+
+**已更新功能**
+
+| 功能 | 說明 |
+| --- | --- |
+| 目標計數小部件 | 該小部件提供了可用終結點的總數，在該總數中，可在系統內激活和傳遞受眾。 此數字包括活動和非活動目標。 查看 [目標標準構件文檔](../../dashboards/guides/destinations.md#standard-widgets) 的子菜單。 |
+
+有關平台中目標儀表板的詳細資訊，請參閱 [目標儀表板概述](../../dashboards/guides/destinations.md)。
+
 ## 體驗資料模型(XDM) {#xdm}
 
 體驗資料模型(XDM)是一種開源規範，它為傳入Adobe Experience Platform的資料提供了通用的結構和定義（架構）。 通過遵守XDM標準，所有客戶體驗資料都可以納入到共同的表示形式中，以更快、更整合的方式提供見解。 您可以從客戶操作中獲得有價值的見解，通過細分市場定義客戶受眾，並將客戶屬性用於個性化目的。
-
-**已更新功能**
 
 | 功能 | 說明 |
 | --- | --- |
@@ -65,11 +96,23 @@ Experience Platform允許您訂閱各種平台活動的基於事件的警報。 
 
 有關平台中XDM的詳細資訊，請參見 [XDM系統概述](../../xdm/home.md)。
 
+## 查詢服務 {#query-service}
+
+[!DNL Query Service] 允許您使用標準SQL查詢Adobe Experience Platform的資料 [!DNL Data Lake]。 您可以加入來自 [!DNL Data Lake] 並將查詢結果捕獲為新資料集，用於報告、Data Science Workspace或用於接收到即時客戶概要檔案。
+
+**已更新功能**
+
+| 功能 | 說明 |
+| --- | --- |
+| `table_exists` | 新功能命令用於確認系統中當前是否存在表。 該命令返回一個布爾值： `true` 的 **是** 存在 `false` 如果表 **不** 存在。 查看 [SQL語法文檔](../../query-service/sql/syntax.md) 的子菜單。 |
+
+有關可用功能的詳細資訊，請參閱 [查詢服務概述](../../query-service/home.md)。
+
 ## 來源 {#sources}
 
 Adobe Experience Platform可以從外部源接收資料，同時允許您使用平台服務來構建、標籤和增強資料。 您可以從多種來源(如Adobe應用程式、基於雲的儲存、第三方軟體和您的CRM系統)接收資料。
 
-Experience Platform提供REST風格的API和互動式UI，讓您能夠輕鬆地為各種資料提供程式設定源連接。 通過這些源連接，您可以驗證並連接到外部儲存系統和CRM服務，設定接收運行時間，並管理資料接收吞吐量。
+Experience Platform提供REST風格的API和互動式UI，讓您能夠輕鬆地為各種資料提供程式設定源連接。 通過這些源連接，您可以驗證並連接到外部儲存系統和CRM服務，設定接收運行時間，並在整個過程中管理資料接收。
 
 **已更新功能**
 
