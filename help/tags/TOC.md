@@ -4,7 +4,8 @@ user-guide-title: 標記說明
 breadcrumb-title: 標籤
 user-guide-description: 了解如何部署及管理分析、行銷和廣告標籤，以強化客戶體驗。
 feature: Tags
-source-git-commit: 66975d2352062e4abe1af35d7a7130a5c85188d0
+solution: Tags, Data Collection
+source-git-commit: 42a768a51b437a216204b3177eb758416666aac5
 workflow-type: tm+mt
 source-wordcount: '386'
 ht-degree: 68%

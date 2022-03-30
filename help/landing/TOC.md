@@ -3,9 +3,9 @@ audience: user
 user-guide-title: Adobe Experience Platform 概觀
 breadcrumb-title: Experience 平台概觀
 user-guide-description: 了解 Experience 平台如何協助您即時為客戶傳遞個人化體驗。
-source-git-commit: c53482763a98946543907ea96df1a1080ce78beb
+source-git-commit: 520405601dccc649b983da2b8f999f3862dd140b
 workflow-type: tm+mt
-source-wordcount: '236'
+source-wordcount: '235'
 ht-degree: 25%
 
 ---
@@ -33,7 +33,7 @@ ht-degree: 25%
    * [平台API入門](api-guide.md)
    * [驗證及存取 Platform API](api-authentication.md)
    * [API基礎](api-fundamentals.md)
-   * [將郵遞員與平台API一起使用](postman.md)
+   * [將Postman與平台API一起使用](postman.md)
    * [API參考文檔](https://www.adobe.com/go/platform-api-reference-en)
 * 平台文檔 {#documentation}
    * [總覽](documentation/overview.md)
@@ -56,7 +56,7 @@ ht-degree: 25%
          * [總覽](./governance-privacy-security/consent/iab/overview.md)
          * [配置資料集以捕獲同意和首選項資料](./governance-privacy-security/consent/iab/dataset.md)
       * [整合平台Web SDK以處理同意和首選項資料](./governance-privacy-security/consent/sdk.md)
-   * 審核日誌(Beta) {#audit-logs}
+   * 審核日誌 {#audit-logs}
       * [總覽](./governance-privacy-security/audit-logs/overview.md)
 * [許可證使用儀表板](license-usage-dashboard.md)
 * [故障排除指南](troubleshooting.md)
