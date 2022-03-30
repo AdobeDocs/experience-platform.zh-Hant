@@ -1,10 +1,10 @@
 ---
 title: Adobe Experience 平台發行說明
 description: Adobe Experience Platform的最新發行說明。
-source-git-commit: 004835ab8af8f187c3e6af036429072e8de19024
+source-git-commit: 95c0aa2861952c1468d5ef43aa370d31d2c8a2ef
 workflow-type: tm+mt
-source-wordcount: '882'
-ht-degree: 6%
+source-wordcount: '1059'
+ht-degree: 5%
 
 ---
 
@@ -15,6 +15,7 @@ ht-degree: 6%
 Adobe Experience Platform的新功能：
 
 - [審核日誌](#audit-logs)
+- [Real-Time CDPB2B版相關帳戶](#related-accounts)
 
 Adobe Experience Platform 現有功能更新：
 
@@ -38,6 +39,22 @@ Experience Platform允許您審計用戶活動中的各種服務和功能。 審
 {style=&quot;table-layout:auto&quot;}
 
 有關平台中審核日誌的詳細資訊，請參閱 [審核日誌概述](../../landing/governance-privacy-security/audit-logs/overview.md)。
+
+## Real-Time CDPB2B版相關帳戶 {#related-accounts}
+
+>[!NOTE]
+>
+>相關客戶功能僅適用於Real-Time CDPB2B版的客戶。
+
+B2B企業通常將客戶資訊儲存在多個系統中，每個系統都只包含同一真實業務實體的部分甚至衝突資料。 這就帶來了一個巨大的挑戰，即要準確地瞭解客戶的情況，從而降低其B2B營銷和銷售工作的效率和效率。 隨著相關賬戶的發佈， [!DNL Real-time CDP B2B] 現在顯示與您正在瀏覽的帳戶類似的帳戶清單。 您可以將相關帳戶包括在段定義中，以擴大範圍或在段中應用更寬的標準。
+
+閱讀以下文檔頁中有關該功能的詳細資訊：
+
+- [Real-Time CDPB2B版相關帳戶概述](../../rtcdp/b2b-ai-ml-services/related-accounts.md)
+- [「帳戶配置檔案UI」指南中的「相關帳戶」頁籤](../../rtcdp/accounts/account-profile-ui-guide.md#related-accounts-tab)
+- [如何在段定義中使用相關帳戶](../../rtcdp/segmentation/b2b.md#related-account)
+
+要瞭解有關即時CDP B2B版的更多資訊，請參見 [概述](../../rtcdp/overview.md)。
 
 ## 警報 {#alerts}
 
