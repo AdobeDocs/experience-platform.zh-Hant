@@ -4,9 +4,9 @@ description: 瞭解如何將現有欄位組中的欄位單獨添加到您的體�
 hide: true
 hidefromtoc: true
 exl-id: 0499ff30-a602-419b-b9d3-2defdd4354a7
-source-git-commit: c1b1a3b18a9950d71fb84e463adc973ab45ba563
+source-git-commit: 49a54b78d1e3745694352e779fb2226acd99d663
 workflow-type: tm+mt
-source-wordcount: '1208'
+source-wordcount: '1199'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->此測試版文檔中描述的工作流現在在Adobe Experience Platform普遍提供。 有關架構編輯器中基於欄位的工作流的最新指導，請參閱 [架構UI指南](./resources/schemas.md) 的雙曲餘切值。 此指南將很快刪除。
+>本文檔中描述的工作流當前處於測試版中，您的組織可能尚未訪問這些工作流。 本文檔中描述的功能可能會發生更改。
 
 Adobe Experience Platform提供了一套健全的標準化 [欄位組](../schema/composition.md#field-group) 用於體驗資料模型(XDM)架構。 這些欄位組的結構和語義都經過精心的定製，以滿足平台中各種分割使用案例和其他下游應用。 您還可以定義自己的自定義欄位組，以滿足獨特的業務需要。
 

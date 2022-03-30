@@ -5,9 +5,9 @@ title: 在UI中定義XDM欄位
 description: 瞭解如何在Experience Platform用戶介面中定義XDM欄位。
 topic-legacy: user guide
 exl-id: 2adb03d4-581b-420e-81f8-e251cf3d9fb9
-source-git-commit: 08002616450259aded0cc53046472f10ce0a9bb9
+source-git-commit: 49a54b78d1e3745694352e779fb2226acd99d663
 workflow-type: tm+mt
-source-wordcount: '1374'
+source-wordcount: '1331'
 ht-degree: 4%
 
 ---
@@ -26,26 +26,21 @@ ht-degree: 4%
 
 要在UI中定義新的XDM欄位，必須先在 [!DNL Schema Editor]。 根據您當前可以使用的架構 [!DNL Schema Library]，您可以選擇 [建立新架構](../resources/schemas.md#create) 或 [選擇要編輯的現有架構](../resources/schemas.md#edit)。
 
-一旦你擁有 [!DNL Schema Editor] 開啟時，要添加或編輯欄位的控制項將出現在畫布中。 這些控制項出現在方案名稱旁邊，以及在所選類或欄位組下定義的任何對象類型欄位。
+一旦你擁有 [!DNL Schema Editor] 開啟，使用左滑軌選擇要為其定義欄位的類或欄位組。 如果資源是您的組織定義的自定義資源，則在畫布中將顯示添加或編輯欄位的控制項。 這些控制項出現在方案名稱旁邊，以及在所選類或欄位組下定義的任何對象類型欄位。
 
 ![](../../images/ui/fields/overview/select-resource.png)
 
->[!WARNING]
+>[!NOTE]
 >
->如果嘗試將欄位添加到由標準欄位組提供的對象，則該欄位組將轉換為自定義欄位組，並且原始欄位組將不再可用。 請參閱 [將欄位添加到標準欄位組](../resources/schemas.md#custom-fields-for-standard-groups) 中。
+>如果您選擇的類或欄位組是Adobe提供的核心資源，則無法編輯它，因此不會顯示上面顯示的控制項。 如果要向其添加欄位的架構基於核心XDM類，且不包含任何自定義欄位組，則可以 [建立新欄位組](../resources/field-groups.md#create) 中選擇相應的選項。
 
 要向資源添加新欄位，請選擇 **加(+)** 表徵圖，位於畫布中方案名稱旁邊，或要在下定義欄位的對象類型欄位旁邊。
 
 ![](../../images/ui/fields/overview/plus-icon.png)
 
-根據您是直接將欄位添加到方案還是其組成類和欄位組，添加該欄位所需的步驟會有所不同。 本文檔的其餘部分將重點介紹如何配置欄位的屬性，而不管該欄位在架構中的顯示位置如何。 有關欄位可以添加到架構的不同方式的詳細資訊，請參閱架構UI指南中的以下各節：
+## 定義資源的欄位 {#define}
 
-* [將欄位添加到欄位組](../resources/schemas.md#add-fields)
-* [將欄位直接添加到架構](../resources/schemas.md#add-individual-fields)
-
-## 定義欄位的屬性 {#define}
-
-選擇 **加(+)** 表徵圖 **[!UICONTROL 新建欄位]** 顯示在畫布中，位於與唯一租戶ID同名的對象中(顯示為 `_tenantId` )。 添加到架構的所有自定義欄位將自動放置在此命名空間中，以防止與Adobe提供的類和欄位組中的其他欄位發生衝突。
+選擇 **加(+)** 表徵圖 **[!UICONTROL 新建欄位]** 顯示在畫布中，位於與唯一租戶ID同名的根級對象中(顯示為 `_tenantId` )。 通過自定義類和欄位組添加到架構的所有欄位將自動放置在此命名空間中，以防止與Adobe提供的類和欄位組中的其他欄位發生衝突。
 
 ![](../../images/ui/fields/overview/new-field.png)
 
