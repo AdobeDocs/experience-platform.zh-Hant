@@ -4,10 +4,10 @@ title: 配置式儀表板
 description: Adobe Experience Platform提供了一個儀表板，您可以通過該儀表板查看有關您組織的即時客戶配置檔案資料的重要資訊。
 type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
-source-git-commit: 5d4d4a984ef858865e4ca5427ce042b879f2c981
+source-git-commit: 7ca40776747541615e1a1d717aae8d48bed27a74
 workflow-type: tm+mt
-source-wordcount: '2329'
-ht-degree: 1%
+source-wordcount: '2572'
+ht-degree: 0%
 
 ---
 
@@ -102,6 +102,10 @@ Adobe提供了多個標準小部件，您可以使用這些小部件來可視化
 * [[!UICONTROL 配置檔案計數趨勢]](#profiles-count-trend)
 * [[!UICONTROL 按身份顯示的配置檔案]](#profiles-by-identity)
 * [[!UICONTROL 身份重疊]](#identity-overlap)
+* [[!UICONTROL 單個身份配置檔案]](#single-identity-profiles)
+* [[!UICONTROL 未分段的配置檔案]](#unsegmented-profiles)
+* [[!UICONTROL 未分段的配置檔案] 趨勢](#unsegmented-profiles-trend)
+* [[!UICONTROL 按身份分段的配置檔案]](#unsegmented-profiles-by-identity)
 
 ### [!UICONTROL 配置檔案計數] {#profile-count}
 
@@ -162,6 +166,30 @@ Adobe提供了多個標準小部件，您可以使用這些小部件來可視化
 要瞭解有關身份的詳細資訊，請訪問 [Adobe Experience Platform身份服務文檔](../../identity-service/home.md)。
 
 ![](../images/profiles/identity-overlap.png)
+
+### [!UICONTROL 單個身份配置檔案] {#single-identity-profiles}
+
+的 [!UICONTROL 單個身份配置檔案] 小部件提供了組織的配置檔案計數，這些配置檔案只具有一種類型的ID類型，可建立其標識。 此ID類型可以是電子郵件或ECID。 配置檔案計數是從最近快照中包含的資料生成的。
+
+![單個身份配置檔案構件。](../images/profiles/single-identity-profiles.png)
+
+### [!UICONTROL 未分段的配置檔案] {#unsegmented-profiles}
+
+的 [!UICONTROL 未分段的配置檔案] 構件提供未附加到任何段的所有配置檔案的總數。 生成的數字在上次快照時準確無誤，表示整個組織中配置檔案激活的機會。 它還表明了擴展不能提供足夠ROI的配置檔案的機會。
+
+![未分段的配置檔案構件。](../images/profiles/unsegmented-profiles.png)
+
+### [!UICONTROL 未分段配置檔案趨勢] {#unsegmented-profiles-trend}
+
+的 [!UICONTROL 未分段配置檔案趨勢] 構件提供線形圖圖，說明在給定時間段內未附加到任何段的配置檔案數。 未附加到任何段的配置檔案的趨勢可以在30天、90天和12個月期間進行可視化。 時間段從小部件的下拉菜單中選擇。 輪廓計數反映在x軸上的y軸和時間上。
+
+![未分段配置檔案趨勢構件。](../images/profiles/unsegmented-profiles-trend.png)
+
+### [!UICONTROL 按身份分段的配置檔案] (#unsegmented-profiles-by-identity)
+
+的 [!UICONTROL 按身份分段的配置檔案] 小部件按其唯一標識符對未分段的配置檔案總數進行分類。 資料以條形圖可視化，便於比較。
+
+![按身份構件分段的配置檔案。](../images/profiles/unsegmented-profiles-by-identity.png)
 
 ## (Beta)配置檔案功效小部件 {#profile-efficacy-widgets}
 
