@@ -4,9 +4,9 @@ title: 目標儀表板
 description: Adobe Experience Platform提供了一個儀表板，您可以通過該儀表板查看有關組織活動目標的重要資訊。
 type: Documentation
 exl-id: 6a34a796-24a1-450a-af39-60113928873e
-source-git-commit: 7590c24baae669ebe3214985088a7135a69ff8bc
+source-git-commit: 86041e3165d4ea9cb55717f24b002afa084ff420
 workflow-type: tm+mt
-source-wordcount: '1642'
+source-wordcount: '1709'
 ht-degree: 0%
 
 ---
@@ -55,6 +55,7 @@ Adobe提供了多個標準小部件，您可以使用這些部件來可視化與
 * [[!UICONTROL 按標識未映射的段]](#unmapped-segments-by-identity)
 * [[!UICONTROL 按標識映射的段]](#mapped-segments-by-identity)
 * [[!UICONTROL 普通觀眾]](#common-audiences)
+* [[!UICONTROL 目標計數]](#destinations-count)
 
 ### [!UICONTROL 最常用的目標] {#most-used-destinations}
 
@@ -151,6 +152,14 @@ Adobe提供了多個標準小部件，您可以使用這些部件來可視化與
 如果 [!UICONTROL 映射的受眾健康] 小部件偏差較大，您應參考受眾大小趨勢圖並查找異常段。 這一趨勢可以進一步瞭解您所在細分市場的健康狀況。
 
 ![映射的受眾健康小部件。](../images/destinations/mapped-audience-health.png)
+
+### [!UICONTROL 目標計數] (#destinations-count)
+
+的 [!UICONTROL 目標計數] 構件提供了可在系統中激活和傳遞受眾的可用終結點總數。 此數字包括活動和非活動目標。
+
+在總計數以下，選擇 **[!UICONTROL 目標]** 導航至目標瀏覽頁籤。 此頁列出了您已建立與迄今為止的連接的所有目標。
+
+![目標計數構件。](../images/destinations/destinations-count.png)
 
 ## 後續步驟
 
