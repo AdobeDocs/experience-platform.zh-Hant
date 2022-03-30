@@ -2,89 +2,133 @@
 title: Adobe Experience 平台發行說明
 description: Adobe Experience Platform的最新發行說明。
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 366656346c25cd5206b36c7ff2b9942c5027de17
+source-git-commit: 6ae54c1f3f06c8daaf7c0d36beb4d5884bc258eb
 workflow-type: tm+mt
-source-wordcount: '1018'
-ht-degree: 3%
+source-wordcount: '882'
+ht-degree: 6%
 
 ---
 
 # Adobe Experience Platform 發行說明
 
-**發行日期：2022 年 3 月 7 日**
+**發行日期：2022 年 3 月 30 日**
 
->[!NOTE]
->
->本稿從2月23日的原日期改為3月7日。
+Adobe Experience Platform的新功能：
+
+- [審核日誌](#audit-logs)
 
 Adobe Experience Platform 現有功能更新：
 
+- [警報](#alerts)
 - [[!DNL Dashboards]](#dashboards)
-- [[!DNL Data collection]](#data-collection)
-- [[!DNL Destinations]](#destinations)
-- [[!DNL Identity Service]](#identity)
-- [[!DNL Sources]](#sources)
+- [[!DNL Query Service]](#query-service)
+- [來源](#sources)
+<!-- - [Experience Data Model (XDM)](#xdm) -->
 
-## [!DNL Dashboards] {#dashboards}
+## 審核日誌 {#audit-logs}
 
-Adobe Experience Platform提供 [!DNL dashboards] 通過這些資訊，您可以查看有關組織資料的重要見解，如在每日快照中捕獲的。
-
-**已更新功能**
-
-| 功能 | 說明 |
-| --- | --- |
-| 新標準目標小部件 | 以下標準小部件允許您可視化與目標相關的不同度量。<ul><li>最近按目標激活的段。 此小部件根據所選目標按降序顯示前五個最近激活的段。</li><li>受眾規模趨勢。 此小部件描述已映射到該目標帳戶的段一段時間內配置檔案計數的關係。</li><li>未按標識映射段。 此小部件列出按給定目標和標識的降序標識計數排序的前五個未映射段。</li><li>按標識映射的段。 此小部件列出前五個映射的段。 段按與構件下拉菜單中選擇的目標ID匹配的源ID的各個計數從高到低排序。</li><li>普通觀眾。 此小部件提供了在頁面頂部選擇的目標帳戶和在小部件下拉清單中選擇的目標帳戶中激活的前五個段的清單。</li></ul> 有關可用標準小部件的詳細資訊，請參閱 [目標儀表板文檔。](https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/destinations.html?lang=en#standard-widgets)。 |
-
-有關 [!DNL Dashboards]，請參閱 [[!DNL Dashboards] 概述](../../dashboards/home.md)。
-
-## 資料收集 {#data-collection}
-
-平台提供一套技術，使您能夠收集客戶端客戶體驗資料並將其發送到Adobe Experience Platform邊緣網路，在該網路中，資料可以得到豐富、轉換並分發到Adobe或非Adobe目的地。
+Experience Platform允許您審計用戶活動中的各種服務和功能。 審計日誌提供了有關誰執行了什麼和何時執行的資訊。
 
 **新功能**
 
 | 功能 | 說明 |
 | --- | --- |
-| 用於資料流配置的改進的UI工作流 | 已在資料收集UI中建立新資料流的工作流已更新。 將服務添加到資料流時，選項清單中將只包含您有權訪問的服務。 請參閱上的指南 [配置資料流](../../edge/fundamentals/datastreams.md) 的子菜單。 |
-| 資料收集的資料準備 | 如果您使用Adobe Experience PlatformWeb SDK，現在可以利用資料準備功能將資料映射到伺服器端的體驗資料模型(XDM)。 請參閱 [資料收集的資料準備](../../edge/fundamentals/datastreams.md#data-prep) 的子菜單。 |
-| 第一方設備ID | 使用平台Web SDK收集客戶資料時，您現在可以將自己的設備ID發送到Adobe Experience Platform邊緣網路，這為最近對第三方Cookie生命週期的瀏覽器限制提供了一種解決方法。 請參閱上的指南 [第一方設備ID](../../edge/identity/first-party-device-ids.md) 的子菜單。 |
+| 資料集、架構、類、欄位組、資料類型、沙盒、目標、段、合併策略、計算屬性、產品配置檔案和帳戶的審核日誌(Adobe) | 這些資源由審計日誌記錄。 如果啟用該功能，則在活動發生時自動收集審計日誌。 您不需要手動啟用日誌收集。 |
+| 導出審核日誌 | 審核日誌可以作為 `CSV` 或 `JSON` 的子菜單。 生成的檔案將直接保存到您的電腦。 |
 
-有關平台中資料收集的詳細資訊，請參閱 [資料收集概述](../../collection/home.md)。
+{style=&quot;table-layout:auto&quot;}
 
-## [!DNL Destinations] {#destinations}
+有關平台中審核日誌的詳細資訊，請參閱 [審核日誌概述](../../landing/governance-privacy-security/audit-logs/overview.md)。
 
-[!DNL Destinations] 是預先構建的與目標平台的整合，允許無縫激活來自Adobe Experience Platform的資料。 您可以使用目標來激活跨渠道市場營銷活動、電子郵件活動、目標廣告和許多其他使用案例的已知和未知資料。
+## 警報 {#alerts}
 
-**新增或更新的功能**
-
-| 功能 | 說明 |
-| ----------- | ----------- |
-| (Beta)對基於檔案的目標的Destination SDK支援 | [Destination SDK對基於檔案的目標的支援](../../destinations/destination-sdk/file-based-destination-configuration.md) 目前是私有beta版，僅供選定數量的合作夥伴和客戶使用。 在正式發佈之前，功能和相關文檔可能會發生更改。<br><br>請與Adobe客戶代表聯繫，瞭解如何訪問該功能。 Adobe — 內部客戶代表應聯繫Experience Platform目的地產品和工程團隊，討論受支援的使用案例。 <br><br> 在基於檔案的目標的Destination SDK支援的測試階段，測試合作夥伴和客戶可以使用 [Experience PlatformDestination SDK](/help/destinations/destination-sdk/overview.md) 要從以下功能中獲益，請構建專用目標： <ul><li>通過AmazonS3、SFTP伺服器、Azure Blob、Azure Data Lake Storage、Data Landing Zone儲存建立基於檔案的（批處理）目標。</li><li>配置和設定預設檔案導出計畫和頻率選項。</li><li>配置和設定選項以格式化導出的CSV檔案（分隔符、轉義字元和其他選項）。</li><li>能夠設定和編輯自定義檔案頭。</li><li>能夠接收有關檔案和段導出的事件通知。</li><li>能夠導出其他檔案類型，如CSV、TSV、JSON和Parmet。</li></ul>  <br>要開始使用新功能，請閱讀 [（測試版）使用Destination SDK配置基於檔案的目標](../../destinations/destination-sdk/file-based-destination-configuration.md)。 <br><br> 建立專用或已生產化的功能 *流* 所有Experience Platform客戶和合作夥伴都可以使用「Destination SDK」來確定目的地。 閱讀有關如何 [使用Destination SDK配置流目標](/help/destinations/destination-sdk/configure-destination-instructions.md) 的雙曲餘切值。 |
-
-## [!DNL Identity Service] {#identity}
-
-提供相關數字型驗需要全面瞭解您的客戶。 當您的客戶資料分散在不同的系統中，導致每個客戶都顯示有多個「身份」時，這就變得更加困難了。
-
-Adobe Experience Platform [!DNL Identity Service] 通過跨設備和系統橋接身份，幫助您更好地瞭解客戶及其行為，讓您能夠即時提供有影響的個人數字型驗。
+Experience Platform允許您訂閱各種平台活動的基於事件的警報。 您可以通過 [!UICONTROL 警報] 頁籤，並可以選擇在UI本身或通過電子郵件通知接收警報消息。
 
 **已更新功能**
 
 | 功能 | 說明 |
 | --- | --- |
-| 新權限 `view-identity-graph` | 您現在可以使用 `view-identity-graph` 控制組織中的用戶是否能夠查看身份圖資料的權限。 未具有此權限的用戶將被禁止訪問UI中的標識圖查看器，或在訪問 [!DNL Identity Service] 返回標識的API。 查看 [訪問控制概述](../../access-control/home.md) 的子菜單。 |
+| 新警報規則 | 現在，兩個新警報規則可用於與資料接收相關的源。 請參閱 [警報規則](../../observability/alerts/rules.md) 的子菜單。 |
 
-有關 [!DNL Identity Service]，請參閱 [Identity Service概述](../../identity-service/home.md)。
+{style=&quot;table-layout:auto&quot;&quot;
+
+有關平台中警報的詳細資訊，請參閱 [警報概述](../../observability/alerts/overview.md)。
+
+## 儀表板 {#dashboards}
+
+Adobe Experience Platform提供 [!DNL dashboards] 您可以通過查看有關組織資料的重要資訊（在每日快照中捕獲）。
+
+### 配置檔案儀表板
+
+「配置式」控制面板顯示您的組織在「配置式儲存」Experience Platform中擁有的屬性（記錄）資料的快照。
+
+**已更新功能**
+
+| 功能 | 說明 |
+| --- | --- |
+| 未分段的配置檔案構件 | 該構件提供未附加到任何段的所有配置檔案的總數。 生成的數字在上次快照時準確無誤，表示整個組織中配置檔案激活的機會。 查看 [配置檔案標準小部件文檔](../../dashboards/guides/profiles.md#standard-widgets) 的子菜單。 |
+| 未分段的配置檔案趨勢構件 | 此小部件提供線形圖圖，說明在給定時間段內未附加到任何段的配置檔案數。 該趨勢可以在30天、90天和12個月期間進行可視化。 查看 [配置檔案標準小部件文檔](../../dashboards/guides/profiles.md#standard-widgets) 的子菜單。 |
+| 按身份構件分段的配置檔案 | 此小部件按其唯一標識符對未分段的配置檔案總數進行分類。 資料以條形圖顯示。 查看 [配置檔案標準小部件文檔](../../dashboards/guides/profiles.md#standard-widgets) 的子菜單。 |
+| 單個身份配置檔案小部件 | 此小部件提供組織的配置檔案的計數，這些配置檔案只具有一種類型的ID類型，可建立其標識，即電子郵件或ECID。 查看 [配置檔案標準小部件文檔](../../dashboards/guides/profiles.md#standard-widgets) 的子菜單。 |
+
+{style=&quot;table-layout:auto&quot;&quot;
+
+有關配置式儀表板的詳細資訊，請參閱 [配置檔案儀表板概述](../../dashboards/guides/profiles.md)。
+
+### 目標儀表板
+
+「目標」控制面板顯示您的組織在Experience Platform中啟用的目標的快照。
+
+**已更新功能**
+
+| 功能 | 說明 |
+| --- | --- |
+| 目標計數小部件 | 該小部件提供了可用終結點的總數，在該總數中，可在系統內激活和傳遞受眾。 此數字包括活動和非活動目標。 查看 [目標標準構件文檔](../../dashboards/guides/destinations.md#standard-widgets) 的子菜單。 |
+
+{style=&quot;table-layout:auto&quot;&quot;
+
+有關平台中目標儀表板的詳細資訊，請參閱 [目標儀表板概述](../../dashboards/guides/destinations.md)。
+
+<!-- ## Experience Data Model (XDM) {#xdm}
+
+Experience Data Model (XDM) is an open-source specification that provides common structures and definitions (schemas) for data that is brought into Adobe Experience Platform. By adhering to XDM standards, all customer experience data can be incorporated into a common representation to deliver insights in a faster, more integrated way. You can gain valuable insights from customer actions, define customer audiences through segments, and use customer attributes for personalization purposes.
+
+| Feature | Description |
+| --- | --- |
+| Add or remove individual standard fields for a schema | The Schema Editor UI now allows you to add portions of standard field groups to your schemas, providing more flexibility for the fields you choose to include without needing to build custom resources from scratch.<br><br>You can now also define ad-hoc custom fields directly within the schema structure and assign them to a new or existing custom field group without needing to create or edit the field group beforehand.<br><br>See the guide on [creating and editing schemas in the UI](../../xdm/ui/resources/schemas.md) for more information on these new workflows. |
+
+{style="table-layout:auto"}
+
+For more information on XDM in Platform, see the [XDM System overview](../../xdm/home.md). -->
+
+## 查詢服務 {#query-service}
+
+[!DNL Query Service] 允許您使用標準SQL查詢Adobe Experience Platform的資料 [!DNL Data Lake]。 您可以加入來自 [!DNL Data Lake] 並將查詢結果捕獲為新資料集，用於報告、Data Science Workspace或用於接收到即時客戶概要檔案。
+
+**已更新功能**
+
+| 功能 | 說明 |
+| --- | --- |
+| `table_exists` | 新功能命令用於確認系統中當前是否存在表。 該命令返回一個布爾值： `true` 的 **是** 存在 `false` 如果表 **不** 存在。 查看 [SQL語法文檔](../../query-service/sql/syntax.md) 的子菜單。 |
+
+{style=&quot;table-layout:auto&quot;&quot;
+
+有關可用功能的詳細資訊，請參閱 [查詢服務概述](../../query-service/home.md)。
 
 ## 來源 {#sources}
 
 Adobe Experience Platform可以從外部源接收資料，同時允許您使用平台服務來構建、標籤和增強資料。 您可以從多種來源(如Adobe應用程式、基於雲的儲存、第三方軟體和您的CRM系統)接收資料。
 
-Experience Platform提供REST風格的API和互動式UI，讓您能夠輕鬆地為各種資料提供程式設定源連接。 通過這些源連接，您可以驗證並連接到外部儲存系統和CRM服務，設定接收運行時間，並管理資料接收吞吐量。
+Experience Platform提供REST風格的API和互動式UI，讓您能夠輕鬆地為各種資料提供程式設定源連接。 通過這些源連接，您可以驗證並連接到外部儲存系統和CRM服務，設定接收運行時間，並在整個過程中管理資料接收。
 
 **已更新功能**
 
 | 功能 | 說明 |
 | --- | --- |
-| Beta源移至GA | 已將以下源從beta升級為GA: <ul><li>[[!DNL Mailchimp Campaigns]](../../sources/connectors/marketing-automation/mailchimp.md)</li><li>[[!DNL Mailchimp Members]](../../sources/connectors/marketing-automation/mailchimp.md)</li><li>[[!DNL Zoho CRM]](../../sources/connectors/crm/zoho.md)</li></ul> |
+| 現在可用於B2B的新源 | 現在，您可以將平台上所有可用的源用於B2B使用案例。 查看 [源目錄](../../sources/home.md) 的子菜單。 |
+| 全面提供新 [!DNL Oracle Eloqua] 源 | 您現在可以使用 [!DNL Oracle Eloqua] 源，以無縫地從 [!DNL Oracle Eloqua] 實例（帳戶、市場活動、聯繫人）到平台。 請參閱 [建立 [!DNL Oracle Eloqua] 源連接](../../sources/connectors/marketing-automation/oracle-eloqua.md) 的子菜單。 |
+| API增強功能 [!DNL Data Landing Zone] | 的 [!DNL Data Landing Zone] 現在，使用 [!DNL Flow Service] API。 請參閱 [建立 [!DNL Data Landing Zone] 源連接](../../sources/tutorials/api/create/cloud-storage/data-landing-zone.md) 的子菜單。 |
+
+{style=&quot;table-layout:auto&quot;&quot;
 
 要瞭解有關源的詳細資訊，請參閱 [源概述](../../sources/home.md)。

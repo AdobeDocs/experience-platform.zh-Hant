@@ -1,7 +1,7 @@
 ---
 title: Adobe Experience 平台發行說明
 description: Adobe Experience Platform的最新發行說明。
-source-git-commit: 4bead30e4bb13461cf42374cb93f3d67520a14ec
+source-git-commit: 004835ab8af8f187c3e6af036429072e8de19024
 workflow-type: tm+mt
 source-wordcount: '882'
 ht-degree: 6%
@@ -125,7 +125,7 @@ Experience Platform提供REST風格的API和互動式UI，讓您能夠輕鬆地�
 | 功能 | 說明 |
 | --- | --- |
 | 現在可用於B2B的新源 | 現在，您可以將平台上所有可用的源用於B2B使用案例。 查看 [源目錄](../../sources/home.md) 的子菜單。 |
-| 全面提供新 [!DNL Oracle Eloqua] 源 | 您現在可以使用 [!DNL Oracle Eloqua] 源，以無縫地從 [!DNL Oracle Eloqua] 實例（帳戶、市場活動、聯繫人）到平台。 請參閱 [建立 [!DNL Oracle Eloqua] 源連接](../../sources/connectors/oracle-eloqua.md) 的子菜單。 |
+| 全面提供新 [!DNL Oracle Eloqua] 源 | 您現在可以使用 [!DNL Oracle Eloqua] 源，以無縫地從 [!DNL Oracle Eloqua] 實例（帳戶、市場活動、聯繫人）到平台。 請參閱 [建立 [!DNL Oracle Eloqua] 源連接](../../sources/connectors/marketing-automation/oracle-eloqua.md) 的子菜單。 |
 | API增強功能 [!DNL Data Landing Zone] | 的 [!DNL Data Landing Zone] 現在，使用 [!DNL Flow Service] API。 請參閱 [建立 [!DNL Data Landing Zone] 源連接](../../sources/tutorials/api/create/cloud-storage/data-landing-zone.md) 的子菜單。 |
 
 {style=&quot;table-layout:auto&quot;&quot;
