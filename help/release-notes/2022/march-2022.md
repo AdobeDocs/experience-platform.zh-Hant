@@ -1,10 +1,10 @@
 ---
 title: Adobe Experience 平台發行說明
 description: Adobe Experience Platform的最新發行說明。
-source-git-commit: 04d35137a301492794ab8c0c67183cf5c76f2105
+source-git-commit: 4bead30e4bb13461cf42374cb93f3d67520a14ec
 workflow-type: tm+mt
-source-wordcount: '1063'
-ht-degree: 5%
+source-wordcount: '882'
+ht-degree: 6%
 
 ---
 
@@ -20,9 +20,9 @@ Adobe Experience Platform 現有功能更新：
 
 - [警報](#alerts)
 - [[!DNL Dashboards]](#dashboards)
-- [體驗資料模型(XDM)](#xdm)
 - [[!DNL Query Service]](#query-service)
 - [來源](#sources)
+<!-- - [Experience Data Model (XDM)](#xdm) -->
 
 ## 審核日誌 {#audit-logs}
 
@@ -70,6 +70,8 @@ Adobe Experience Platform提供 [!DNL dashboards] 您可以通過查看有關組
 | 按身份構件分段的配置檔案 | 此小部件按其唯一標識符對未分段的配置檔案總數進行分類。 資料以條形圖顯示。 查看 [配置檔案標準小部件文檔](../../dashboards/guides/profiles.md#standard-widgets) 的子菜單。 |
 | 單個身份配置檔案小部件 | 此小部件提供組織的配置檔案的計數，這些配置檔案只具有一種類型的ID類型，可建立其標識，即電子郵件或ECID。 查看 [配置檔案標準小部件文檔](../../dashboards/guides/profiles.md#standard-widgets) 的子菜單。 |
 
+{style=&quot;table-layout:auto&quot;&quot;
+
 有關配置式儀表板的詳細資訊，請參閱 [配置檔案儀表板概述](../../dashboards/guides/profiles.md)。
 
 ### 目標儀表板
@@ -82,19 +84,21 @@ Adobe Experience Platform提供 [!DNL dashboards] 您可以通過查看有關組
 | --- | --- |
 | 目標計數小部件 | 該小部件提供了可用終結點的總數，在該總數中，可在系統內激活和傳遞受眾。 此數字包括活動和非活動目標。 查看 [目標標準構件文檔](../../dashboards/guides/destinations.md#standard-widgets) 的子菜單。 |
 
-有關平台中目標儀表板的詳細資訊，請參閱 [目標儀表板概述](../../dashboards/guides/destinations.md)。
-
-## 體驗資料模型(XDM) {#xdm}
-
-體驗資料模型(XDM)是一種開源規範，它為傳入Adobe Experience Platform的資料提供了通用的結構和定義（架構）。 通過遵守XDM標準，所有客戶體驗資料都可以納入到共同的表示形式中，以更快、更整合的方式提供見解。 您可以從客戶操作中獲得有價值的見解，通過細分市場定義客戶受眾，並將客戶屬性用於個性化目的。
-
-| 功能 | 說明 |
-| --- | --- |
-| 添加或刪除架構的單個標準欄位 | 現在，通過架構編輯器UI，您可以將標準欄位組的部分添加到您的架構中，從而為您選擇包括的欄位提供了更大的靈活性，而無需從頭構建自定義資源。<br><br>現在，您還可以直接在架構結構中定義即席自定義域，並將它們分配給新的或現有的自定義域組，而無需事先建立或編輯域組。<br><br>請參閱上的指南 [在UI中建立和編輯架構](../../xdm/ui/resources/schemas.md) 的子菜單。 |
-
 {style=&quot;table-layout:auto&quot;&quot;
 
-有關平台中XDM的詳細資訊，請參見 [XDM系統概述](../../xdm/home.md)。
+有關平台中目標儀表板的詳細資訊，請參閱 [目標儀表板概述](../../dashboards/guides/destinations.md)。
+
+<!-- ## Experience Data Model (XDM) {#xdm}
+
+Experience Data Model (XDM) is an open-source specification that provides common structures and definitions (schemas) for data that is brought into Adobe Experience Platform. By adhering to XDM standards, all customer experience data can be incorporated into a common representation to deliver insights in a faster, more integrated way. You can gain valuable insights from customer actions, define customer audiences through segments, and use customer attributes for personalization purposes.
+
+| Feature | Description |
+| --- | --- |
+| Add or remove individual standard fields for a schema | The Schema Editor UI now allows you to add portions of standard field groups to your schemas, providing more flexibility for the fields you choose to include without needing to build custom resources from scratch.<br><br>You can now also define ad-hoc custom fields directly within the schema structure and assign them to a new or existing custom field group without needing to create or edit the field group beforehand.<br><br>See the guide on [creating and editing schemas in the UI](../../xdm/ui/resources/schemas.md) for more information on these new workflows. |
+
+{style="table-layout:auto"}
+
+For more information on XDM in Platform, see the [XDM System overview](../../xdm/home.md). -->
 
 ## 查詢服務 {#query-service}
 
@@ -105,6 +109,8 @@ Adobe Experience Platform提供 [!DNL dashboards] 您可以通過查看有關組
 | 功能 | 說明 |
 | --- | --- |
 | `table_exists` | 新功能命令用於確認系統中當前是否存在表。 該命令返回一個布爾值： `true` 的 **是** 存在 `false` 如果表 **不** 存在。 查看 [SQL語法文檔](../../query-service/sql/syntax.md) 的子菜單。 |
+
+{style=&quot;table-layout:auto&quot;&quot;
 
 有關可用功能的詳細資訊，請參閱 [查詢服務概述](../../query-service/home.md)。
 
