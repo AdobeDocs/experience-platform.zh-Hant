@@ -1,11 +1,11 @@
 ---
+title: (Beta)HTTP API連接
 keywords: 流；
-title: HTTP API連接
 description: Adobe Experience Platform的HTTP API目標允許您將配置檔案資料發送到第三方HTTP終結點。
 exl-id: 165a8085-c8e6-4c9f-8033-f203522bb288
-source-git-commit: 7acacc4a5ddd10f47da59837ad7dab2615d41789
+source-git-commit: 0d58445557490a5539279f55c34183994429c632
 workflow-type: tm+mt
-source-wordcount: '1384'
+source-wordcount: '1382'
 ht-degree: 1%
 
 ---
