@@ -2,7 +2,8 @@
 title: Real-Time CDPB2B版相關帳戶
 type: Documentation
 description: 有關Experience Platform即時CDP B2B中相關帳戶功能的概述和詳細資訊。
-source-git-commit: 09fd6c30461a4229411ce67426fdcb247661f7cb
+exl-id: 37fd2cdb-87c0-4e5e-9599-ad4f397f7c28
+source-git-commit: 5be8eac1603f1b81e45b4c0aeace5c2017b46149
 workflow-type: tm+mt
 source-wordcount: '386'
 ht-degree: 6%
@@ -53,4 +54,4 @@ B2B企業通常將客戶資訊儲存在多個系統中，每個系統都只包�
 
 您可以在細分時使用帳戶和相關帳戶。 是否在段定義中使用相關帳戶的決定取決於您的市場營銷使用案例。 例如，您可以將相關帳戶用於電子郵件營銷或廣告活動，在這些活動中，您可能會接受較低的準確性，以換取更廣的覆蓋面。
 
-查看 [分段示例](/help/rtcdp/segmentation/b2b.md#related-account) 使用相關帳戶。
+查看 [分段示例](/help/rtcdp/segmentation/b2b.md#related-accounts) 使用相關帳戶。

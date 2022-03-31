@@ -2,7 +2,7 @@
 title: Adobe Experience 平台發行說明
 description: Adobe Experience Platform的最新發行說明。
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 13e10956519199ae1872685ba6a6eff8b5d73e21
+source-git-commit: 5be8eac1603f1b81e45b4c0aeace5c2017b46149
 workflow-type: tm+mt
 source-wordcount: '1059'
 ht-degree: 5%
@@ -53,7 +53,7 @@ B2B企業通常將客戶資訊儲存在多個系統中，每個系統都只包�
 
 - [Real-Time CDPB2B版相關帳戶概述](../../rtcdp/b2b-ai-ml-services/related-accounts.md)
 - [「帳戶配置檔案UI」指南中的「相關帳戶」頁籤](../../rtcdp/accounts/account-profile-ui-guide.md#related-accounts-tab)
-- [如何在段定義中使用相關帳戶](../../rtcdp/segmentation/b2b.md#related-account)
+- [如何在段定義中使用相關帳戶](../../rtcdp/segmentation/b2b.md#related-accounts)
 
 要瞭解有關即時CDP B2B版的更多資訊，請參見 [概述](../../rtcdp/overview.md)。
 
