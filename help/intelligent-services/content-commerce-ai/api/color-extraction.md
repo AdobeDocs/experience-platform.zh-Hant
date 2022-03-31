@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform；入門；內容；商務；內容和商務；顏色提取；顏色提取
-solution: Intelligent Services
+solution: Experience Platform
 title: 內容與商務AI API中的顏色提取
 topic-legacy: Developer guide
 description: 當給定影像時，顏色提取服務可以計算像素顏色的直方圖並按主色將它們排序成桶。
 exl-id: 6b3b6314-cb67-404f-888c-4832d041f5ed
-source-git-commit: 16120a10f8a6e3fd7d2143e9f52a822c59a4c935
+source-git-commit: eae43834d1cd5931dd752b95023da7ac77668e56
 workflow-type: tm+mt
 source-wordcount: '712'
 ht-degree: 2%

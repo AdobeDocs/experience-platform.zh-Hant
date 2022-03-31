@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform；家庭；智慧服務；熱門主題；智慧服務；智慧服務
-solution: Intelligent Services
+solution: Experience Platform
 title: 智慧服務概述
 topic-legacy: Intelligent Services overview
 description: 智慧服務使營銷分析師和從業人員能夠利用人工智慧和機器學習在客戶體驗使用案例中的威力。 這使市場營銷分析員能夠使用業務級配置來設定特定於公司需要的預測，而無需資料科學專業知識。 此外，營銷從業者可以激活Adobe Experience Cloud、Adobe Experience Platform和第三方應用程式中的預測。
 exl-id: db080c83-2a45-4fd5-8502-d9cae2a063be
-source-git-commit: 16120a10f8a6e3fd7d2143e9f52a822c59a4c935
+source-git-commit: eae43834d1cd5931dd752b95023da7ac77668e56
 workflow-type: tm+mt
 source-wordcount: '502'
 ht-degree: 0%

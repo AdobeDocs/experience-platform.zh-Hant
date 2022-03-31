@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform；入門；客戶ai；熱門主題；客戶ai輸入；客戶ai輸出
-solution: Intelligent Services, Real-time Customer Data Platform
+solution: Experience Platform, Real-time Customer Data Platform
 feature: Customer AI
 title: 客戶AI中的輸入和輸出
 topic-legacy: Getting started
 description: 瞭解客戶AI使用的所需事件、輸入和輸出的詳細資訊。
 exl-id: 9b21a89c-bf48-4c45-9eb3-ace38368481d
-source-git-commit: 16120a10f8a6e3fd7d2143e9f52a822c59a4c935
+source-git-commit: eae43834d1cd5931dd752b95023da7ac77668e56
 workflow-type: tm+mt
 source-wordcount: '3054'
 ht-degree: 1%

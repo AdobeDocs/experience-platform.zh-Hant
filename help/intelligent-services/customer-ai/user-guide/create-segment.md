@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform；洞察力；客戶ai；熱門主題；客戶ai段
-solution: Intelligent Services, Real-time Customer Data Platform
+solution: Experience Platform, Real-time Customer Data Platform
 feature: Customer AI
 title: 使用預測分數建立客戶段
 topic-legacy: Create a segment
 description: 當預測運行完成時，預測傾向分數由Profiles自動消耗。 利用客戶AI分數豐富配置檔案允許建立客戶段，以便根據其傾向分數查找受眾。 本節提供了使用段生成器建立段的步驟。
 exl-id: ac81f798-f599-4a8d-af25-c00c92e74b4e
-source-git-commit: 16120a10f8a6e3fd7d2143e9f52a822c59a4c935
+source-git-commit: eae43834d1cd5931dd752b95023da7ac77668e56
 workflow-type: tm+mt
 source-wordcount: '318'
 ht-degree: 0%

@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform；入門；內容；商務；內容和商務；ai
-solution: Intelligent Services
+solution: Experience Platform
 title: 內容和商務AI入門
 topic-legacy: Getting started
 description: 內容和商務AI利用Adobe I/OAPI。 要調用Adobe I/OAPI和I/O控制台整合，必須先完成身份驗證教程。
 exl-id: e7b0e9bb-a1f1-479c-9e9b-46991f2942e2
-source-git-commit: 16120a10f8a6e3fd7d2143e9f52a822c59a4c935
+source-git-commit: eae43834d1cd5931dd752b95023da7ac77668e56
 workflow-type: tm+mt
 source-wordcount: '592'
 ht-degree: 0%
@@ -32,7 +32,7 @@ ht-degree: 0%
 
 ## 建立Postman環境（可選）
 
-在Adobe開發人員控制台中設定項目和API後，您就可以選擇下載Postman的環境檔案。 下 **[!UICONTROL API]** 項目的左滑軌，選擇 **[!UICONTROL 內容和商務AI]**。 將開啟一個新頁籤，其中包含標有「」的卡[!DNL Try it out]。 選擇 **郵遞員下載** 下載用於配置郵遞員環境的JSON檔案。
+在Adobe開發人員控制台中設定項目和API後，您就可以選擇下載Postman的環境檔案。 下 **[!UICONTROL API]** 項目的左滑軌，選擇 **[!UICONTROL 內容和商務AI]**。 將開啟一個新頁籤，其中包含標有「」的卡[!DNL Try it out]。 選擇 **下載Postman** 下載用於配置郵遞員環境的JSON檔案。
 
 ![下載郵遞員](./images/add-to-postman.png)
 

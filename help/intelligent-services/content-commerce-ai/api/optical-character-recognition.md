@@ -1,11 +1,11 @@
 ---
 keywords: OCR；文本存在；光學字元識別
-solution: Intelligent Services
+solution: Experience Platform
 title: 文本存在與光學字元識別
 topic-legacy: Developer guide
 description: 在Content and Commerce AI API中，文本存在/光學字元識別(OCR)服務可以指示給定影像中是否存在文本。 如果存在文本，OCR可以返回文本。
 exl-id: 85b976a7-0229-43e9-b166-cdbd213b867f
-source-git-commit: 16120a10f8a6e3fd7d2143e9f52a822c59a4c935
+source-git-commit: eae43834d1cd5931dd752b95023da7ac77668e56
 workflow-type: tm+mt
 source-wordcount: '525'
 ht-degree: 3%

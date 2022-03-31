@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform；下載分數；客戶ai；熱門主題；導出；客戶ai下載；客戶ai得分
-solution: Intelligent Services, Real-time Customer Data Platform
+solution: Experience Platform, Real-time Customer Data Platform
 feature: Customer AI
 title: 在客戶AI中下載分數
 topic-legacy: Downloading scores
 description: 客戶AI允許您下載Parfect檔案格式的分數。
 exl-id: 08f05565-3fd4-4089-9c41-32467f0be751
-source-git-commit: 16120a10f8a6e3fd7d2143e9f52a822c59a4c935
+source-git-commit: eae43834d1cd5931dd752b95023da7ac77668e56
 workflow-type: tm+mt
 source-wordcount: '961'
 ht-degree: 2%

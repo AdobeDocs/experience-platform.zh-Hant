@@ -1,11 +1,11 @@
 ---
 keywords: 視覺相似性；視覺相似性；ccai api
-solution: Intelligent Services
+solution: Experience Platform
 title: 內容與商務AI API中的視覺相似性
 topic-legacy: Developer guide
 description: 當給定影像時，視覺相似性服務自動從目錄中找到視覺相似的影像。
 exl-id: fe31d9be-ee42-44fa-b83f-3b8a718cb4e3
-source-git-commit: 16120a10f8a6e3fd7d2143e9f52a822c59a4c935
+source-git-commit: eae43834d1cd5931dd752b95023da7ac77668e56
 workflow-type: tm+mt
 source-wordcount: '510'
 ht-degree: 3%

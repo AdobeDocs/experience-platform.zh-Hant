@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform；入門；內容ai;commerce ai;content and commerce ai；關鍵字提取；關鍵字提取
-solution: Intelligent Services
+solution: Experience Platform
 title: Content and Commerce AI API中的關鍵字提取
 topic-legacy: Developer guide
 description: 當給定文本文檔時，關鍵字提取服務自動提取最能描述文檔主題的關鍵字或關鍵字短語。 為了提取關鍵字，使用命名實體識別(NER)和無監督關鍵字提取算法的組合。
 exl-id: 56a2da96-5056-4702-9110-a1dfec56f0dc
-source-git-commit: 16120a10f8a6e3fd7d2143e9f52a822c59a4c935
+source-git-commit: eae43834d1cd5931dd752b95023da7ac77668e56
 workflow-type: tm+mt
 source-wordcount: '1082'
 ht-degree: 3%

@@ -4,8 +4,8 @@ user-guide-title: Adobe Experience 平台資料科學工作區說明
 breadcrumb-title: Data Science Workspace 指南
 user-guide-description: 透過 Adobe Sensei 和 JupyterLab Notebooks，使用機器學習來開發、訓練和對模型與配方計分。
 feature: Data Science Workspace
-solution: Intelligent Services
-source-git-commit: 16120a10f8a6e3fd7d2143e9f52a822c59a4c935
+solution: Experience Platform
+source-git-commit: eae43834d1cd5931dd752b95023da7ac77668e56
 workflow-type: tm+mt
 source-wordcount: '248'
 ht-degree: 16%

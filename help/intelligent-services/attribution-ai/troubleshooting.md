@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform；入門；屬性；流行主題；屬性ai輸入；屬性ai輸出；屬性ai疑難解答；屬性ai錯誤
-solution: Intelligent Services, Real-time Customer Data Platform
+solution: Experience Platform, Real-time Customer Data Platform
 feature: Attribution AI
 title: Attribution AI錯誤疑難解答
 description: 查找Attribution AI中常見錯誤的答案。
 type: Documentation
 exl-id: c2ff700a-1e36-4ba2-876c-9f8b56344241
-source-git-commit: 16120a10f8a6e3fd7d2143e9f52a822c59a4c935
+source-git-commit: eae43834d1cd5931dd752b95023da7ac77668e56
 workflow-type: tm+mt
 source-wordcount: '167'
 ht-degree: 0%
