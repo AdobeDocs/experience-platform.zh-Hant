@@ -1,161 +1,164 @@
 ---
-keywords: Experience Platform;home；熱門主題；enable dataset;Dataset;dataset
+keywords: Experience Platform；首頁；熱門主題；啟用資料集；資料集；資料集
 solution: Experience Platform
 title: 資料集UI指南
 topic-legacy: datasets
-description: 瞭解如何在Adobe Experience Platform用戶介面中使用資料集時執行常見操作。
+description: 瞭解如何在Adobe Experience Platform用戶介面中處理資料集時執行常見操作。
 exl-id: f0d59d4f-4ebd-42cb-bbc3-84f38c1bf973
-translation-type: tm+mt
-source-git-commit: d2f19cc97082f75e66cf38e54b5bdb89482930ed
+source-git-commit: 09db4aab17b933c63968d997f33279ab9a96bdef
 workflow-type: tm+mt
-source-wordcount: '1082'
+source-wordcount: '1185'
 ht-degree: 0%
 
 ---
 
 # 資料集UI指南
 
-本使用手冊提供在Adobe Experience Platform用戶介面中使用資料集時執行常見操作的說明。
+本使用手冊提供了在Adobe Experience Platform用戶介面內處理資料集時執行常見操作的說明。
 
 ## 快速入門
 
-本使用手冊需要對Adobe Experience Platform的下列元件有正確的理解：
+本使用手冊要求對Adobe Experience Platform的以下組成部分有工作上的瞭解：
 
-* [資料集](overview.md):中用於資料持久性的儲存和管理結構 [!DNL Experience Platform]。
-* [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md):組織客戶體驗資 [!DNL Experience Platform] 料的標準化架構。
-   * [架構構成基礎](../../xdm/schema/composition.md):瞭解XDM架構的基本建置區塊，包括架構組合的主要原則和最佳實務。
-   * [架構編輯器](../../xdm/tutorials/create-schema-ui.md):瞭解如何使用使用者介面建立您自己 [!DNL Schema Editor] 的自 [!DNL Platform] 訂XDM架構。
-* [[!DNL Real-time Customer Profile]](../../profile/home.md):根據來自多個來源的匯整資料，提供統一、即時的消費者個人檔案。
-* [[!DNL Adobe Experience Platform Data Governance]](../../data-governance/home.md):確保遵守有關客戶資料使用的法規、限制和政策。
+* [資料集](overview.md):資料永續的儲存與管理結構 [!DNL Experience Platform]。
+* [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md):標準化框架 [!DNL Experience Platform] 組織客戶體驗資料。
+   * [架構組合的基礎](../../xdm/schema/composition.md):瞭解XDM架構的基本構建基塊，包括架構組成中的關鍵原則和最佳做法。
+   * [架構編輯器](../../xdm/tutorials/create-schema-ui.md):瞭解如何使用 [!DNL Schema Editor] 在 [!DNL Platform] 用戶介面。
+* [[!DNL Real-time Customer Profile]](../../profile/home.md):基於來自多個源的聚合資料提供統一、即時的用戶配置檔案。
+* [[!DNL Adobe Experience Platform Data Governance]](../../data-governance/home.md):確保遵守有關使用客戶資料的法規、限制和策略。
 
-## 檢視資料集
+## 查看資料集
 
-在[!DNL Experience Platform] UI中，按一下左側導覽中的&#x200B;**[!UICONTROL Datasets]**&#x200B;以開啟&#x200B;**[!UICONTROL Datasets]**&#x200B;控制面板。 控制面板會列出您組織的所有可用資料集。 會針對每個列出的資料集顯示詳細資訊，包括其名稱、資料集所遵守的架構，以及最近擷取執行的狀態。
+在 [!DNL Experience Platform] UI，選擇 **[!UICONTROL 資料集]** 中開啟 **[!UICONTROL 資料集]** 控制項欄。 儀表板列出了組織的所有可用資料集。 將顯示每個列出的資料集的詳細資訊，包括其名稱、資料集所遵循的架構以及最近接收運行的狀態。
 
 ![](../images/datasets/user-guide/browse-datasets.png)
 
-按一下資料集的名稱以存取其&#x200B;**[!UICONTROL Dataset activity]**&#x200B;畫面，並查看您選取之資料集的詳細資訊。 該活動頁籤包括圖形，該圖形可視化正在消耗的消息速率以及成功和失敗批的清單。
+預設情況下，僅顯示您已攝取的資料集。 如果要查看系統生成的資料集，請啟用 **[!UICONTROL 顯示系統資料集]** 切換。 系統生成的資料集僅用於處理其他元件。 例如，系統生成的配置檔案導出資料集用於處理配置檔案儀表板。
+
+![](../images/datasets/user-guide/system-datasets.png)
+
+選擇資料集的名稱以訪問其 **[!UICONTROL 資料集活動]** 螢幕並查看所選資料集的詳細資訊。 「活動」(Activity)頁籤包含圖形，以可視化正在使用的消息的速率以及成功和失敗批的清單。
 
 ![](../images/datasets/user-guide/dataset-activity-1.png)
 ![](../images/datasets/user-guide/dataset-activity-2.png)
 
 ## 預覽資料集
 
-在&#x200B;**[!UICONTROL Dataset activity]**&#x200B;畫面中，按一下畫面右上角的&#x200B;**[!UICONTROL Preview dataset]**&#x200B;以預覽最多100列資料。 如果資料集為空，預覽連結將會停用，而會指出預覽不可用。
+從 **[!UICONTROL 資料集活動]** 螢幕，選擇 **[!UICONTROL 預覽資料集]** 靠近螢幕右上角，最多可預覽100行資料。 如果資料集為空，則預覽連結將被停用，而是表示預覽不可用。
 
-![](../images/datasets/user-guide/click-to-preview.png)
+![](../images/datasets/user-guide/select-preview.png)
 
-在預覽視窗中，資料集的架構階層檢視會顯示在右側。
+在預覽窗口中，資料集模式的分層視圖在右側顯示。
 
 ![](../images/datasets/user-guide/preview-dataset.png)
 
-要獲得更強穩的資料存取方法，[!DNL Experience Platform]提供下游服務，如[!DNL Query Service]和[!DNL JupyterLab]以探索和分析資料。 如需詳細資訊，請參閱下列檔案：
+要獲得更強健的資料存取方法， [!DNL Experience Platform] 提供下游服務，如 [!DNL Query Service] 和 [!DNL JupyterLab] 來分析資料。 有關詳細資訊，請參閱以下文檔：
 
 * [查詢服務概述](../../query-service/home.md)
-* [JupyterLab使用指南](../../data-science-workspace/jupyterlab/overview.md)
+* [JupyterLab使用手冊](../../data-science-workspace/jupyterlab/overview.md)
 
-## 建立資料集{#create}
+## 建立資料集 {#create}
 
-若要建立新資料集，請先按一下&#x200B;**[!UICONTROL Datasets]**&#x200B;控制面板中的&#x200B;**[!UICONTROL Create dataset]**。
+要建立新資料集，請首先選擇 **[!UICONTROL 建立資料集]** 的 **[!UICONTROL 資料集]** 控制項欄。
 
-![](../images/datasets/user-guide/click-to-create.png)
+![](../images/datasets/user-guide/select-create.png)
 
-在下一個畫面中，您會看到下列兩個建立新資料集的選項：
+在下一個螢幕中，將顯示以下兩個用於建立新資料集的選項：
 
 * [從架構建立資料集](#schema)
 * [從CSV檔案建立資料集](#csv)
 
-### 使用現有模式{#schema}建立資料集
+### 使用現有模式建立資料集 {#schema}
 
-在&#x200B;**[!UICONTROL Create dataset]**&#x200B;畫面中，按一下&#x200B;**[!UICONTROL Create dataset from schema]**&#x200B;以建立新的空資料集。
+在 **[!UICONTROL 建立資料集]** 螢幕，選擇 **[!UICONTROL 從架構建立資料集]** 建立新的空資料集。
 
 ![](../images/datasets/user-guide/create-dataset-schema.png)
 
-出現&#x200B;**[!UICONTROL Select schema]**&#x200B;步驟。 在按一下&#x200B;**[!UICONTROL Next]**&#x200B;之前，瀏覽模式清單並選擇資料集將遵循的模式。
+的 **[!UICONTROL 選擇架構]** 的上界。 瀏覽模式清單並選擇資料集將遵循的模式，然後再選擇 **[!UICONTROL 下一個]**。
 
 ![](../images/datasets/user-guide/select-schema.png)
 
-出現&#x200B;**[!UICONTROL Configure dataset]**&#x200B;步驟。 為資料集提供名稱和選用說明，然後按一下&#x200B;**[!UICONTROL Finish]**&#x200B;以建立資料集。
+的 **[!UICONTROL 配置資料集]** 的上界。 為資料集提供名稱和可選說明，然後選擇 **[!UICONTROL 完成]** 建立資料集。
 
 ![](../images/datasets/user-guide/configure-dataset-schema.png)
 
-### 使用CSV檔案{#csv}建立資料集
+### 使用CSV檔案建立資料集 {#csv}
 
-當使用CSV檔案建立資料集時，會建立臨機模式，以提供資料集符合所提供CSV檔案的結構。 在&#x200B;**[!UICONTROL Create dataset]**&#x200B;畫面中，按一下說明&#x200B;**[!UICONTROL Create dataset from CSV file]**&#x200B;的方塊。
+當使用CSV檔案建立資料集時，會建立專用模式以為資料集提供與所提供的CSV檔案匹配的結構。 在 **[!UICONTROL 建立資料集]** 螢幕，選擇 **[!UICONTROL 從CSV檔案建立資料集]**。
 
 ![](../images/datasets/user-guide/create-dataset-csv.png)
 
-出現&#x200B;**[!UICONTROL Configure]**&#x200B;步驟。 為資料集提供名稱和選用說明，然後按一下&#x200B;**[!UICONTROL Next]**。
+的 **[!UICONTROL 配置]** 的上界。 為資料集提供名稱和可選說明，然後選擇 **[!UICONTROL 下一個]**。
 
 ![](../images/datasets/user-guide/configure-dataset-csv.png)
 
-出現&#x200B;**[!UICONTROL Add data]**&#x200B;步驟。 將CSV檔案拖放至畫面中央，或按一下&#x200B;**[!UICONTROL Browse]**&#x200B;來瀏覽檔案目錄，即可上傳該檔案。 該檔案最大可以有10GB的大小。 上傳CSV檔案後，按一下&#x200B;**[!UICONTROL Save]**&#x200B;以建立資料集。
+的 **[!UICONTROL 添加資料]** 的上界。 將CSV檔案拖放到螢幕的中心，或選擇 **[!UICONTROL 瀏覽]** 以瀏覽檔案目錄。 該檔案的大小可高達十GB。 上載CSV檔案後，選擇 **[!UICONTROL 保存]** 建立資料集。
 
 >[!NOTE]
 >
->CSV欄名稱必須以英數字元開頭，且只能包含字母、數字和底線。
+>CSV列名必須以字母數字字元開頭，並且只能包含字母、數字和下划線。
 
 ![](../images/datasets/user-guide/add-csv-data.png)
 
-## 啟用即時客戶個人資料資料集{#enable-profile}
+## 為即時客戶配置檔案啟用資料集 {#enable-profile}
 
-每個資料集都能運用其收錄的資料豐富客戶個人檔案。 若要這麼做，資料集所遵循的架構必須相容，才能用於[!DNL Real-time Customer Profile]。 相容的架構符合下列需求：
+每個資料集都能夠利用其所攝取的資料來豐富客戶配置檔案。 為此，資料集所遵循的架構必須相容，以便在 [!DNL Real-time Customer Profile]。 相容架構滿足以下要求：
 
 * 架構至少有一個屬性指定為標識屬性。
-* 架構具有定義為主標識的身份屬性。
+* 架構具有定義為主標識的標識屬性。
 
-有關為[!DNL Profile]啟用架構的詳細資訊，請參閱[架構編輯器使用手冊](../../xdm/tutorials/create-schema-ui.md)。
+有關啟用架構的詳細資訊 [!DNL Profile]，請參見 [架構編輯器使用手冊](../../xdm/tutorials/create-schema-ui.md)。
 
-若要啟用描述檔的資料集，請存取其&#x200B;**[!UICONTROL Dataset activity]**&#x200B;畫面，然後按一下&#x200B;**[!UICONTROL Profile]**&#x200B;在&#x200B;**[!UICONTROL Properties]**&#x200B;欄內切換。 啟用後，資料集中的資料也會用來填入客戶個人檔案。
+要為配置檔案啟用資料集，請訪問其 **[!UICONTROL 資料集活動]** 並選擇 **[!UICONTROL 配置檔案]** 在 **[!UICONTROL 屬性]** 的雙曲餘切值。 啟用後，資料集中攝取的資料也將用於填充客戶配置檔案。
 
 >[!NOTE]
 >
->如果資料集已包含資料，且已啟用[!DNL Profile]，則[!DNL Profile]不會自動使用現有資料。 在[!DNL Profile]啟用資料集後，建議您重新收錄任何現有資料，讓其為客戶個人檔案提供資料。
+>如果資料集已包含資料，並且已為 [!DNL Profile]，現有資料不會自動被 [!DNL Profile]。 在為 [!DNL Profile]，建議您重新攝取任何現有資料，使其對客戶配置檔案有所貢獻。
 
 ![](../images/datasets/user-guide/enable-dataset-profiles.png)
 
-## 在資料集上管理並強制執行資料控管
+## 在資料集上管理和強制實施資料治理
 
-資料使用標籤可讓您根據套用至該資料的使用原則來分類資料集和欄位。 請參閱[資料治理概述](../../data-governance/home.md)以進一步瞭解標籤，或參閱[資料使用標籤使用指南](../../data-governance/labels/overview.md)以取得如何將標籤套用至資料集的指示。
+資料使用情況標籤允許您根據應用於該資料的使用情況策略對資料集和欄位進行分類。 查看 [資料治理概述](../../data-governance/home.md) 瞭解有關標籤的詳細資訊，或參閱 [資料使用標籤使用手冊](../../data-governance/labels/overview.md) 有關如何將標籤應用於資料集的說明。
 
 ## 刪除資料集
 
-您可以先存取資料集的&#x200B;**[!UICONTROL Dataset activity]**&#x200B;畫面，以刪除資料集。 然後，按一下&#x200B;**[!UICONTROL Delete dataset]**&#x200B;將其刪除。
+可以通過首先訪問資料集來刪除資料集 **[!UICONTROL 資料集活動]** 的上界。 然後，選擇 **[!UICONTROL 刪除資料集]** 刪除它。
 
 >[!NOTE]
 >
->無法刪除由Adobe應用程式和服務(如Adobe Analytics、Adobe Audience Manager或[!DNL Offer Decisioning])建立和使用的資料集。
+>由Adobe應用程式和服務(如Adobe Analytics、Adobe Audience Manager或 [!DNL Offer Decisioning])。
 
 ![](../images/datasets/user-guide/delete-dataset.png)
 
-隨即出現確認框。 按一下&#x200B;**[!UICONTROL Delete]**&#x200B;以確認刪除資料集。
+將出現確認框。 選擇 **[!UICONTROL 刪除]** 確認刪除資料集。
 
 ![](../images/datasets/user-guide/confirm-delete.png)
 
-## 刪除啟用設定檔的資料集
+## 刪除啟用配置檔案的資料集
 
-如果[!DNL Profile]啟用資料集，透過UI刪除該資料集將會從「資料湖」和「平台」中的「設定檔」儲存區中將其刪除。
+如果為 [!DNL Profile]，通過UI刪除該資料集將從平台內的資料湖和配置檔案儲存中刪除。
 
-您只能使用即時客戶設定檔API從[!DNL Profile]商店刪除資料集（將資料保留在資料湖中）。 如需詳細資訊，請參閱[描述檔系統作業API端點指南](../../profile/api/profile-system-jobs.md)。
+可以從 [!DNL Profile] 僅儲存（將資料保留在資料湖中），使用即時客戶配置檔案API。 有關詳細資訊，請參見 [配置檔案系統作業API終結點指南](../../profile/api/profile-system-jobs.md)。
 
-## 監控資料擷取
+## 監視資料攝取
 
-在[!DNL Experience Platform] UI中，按一下左側導覽中的&#x200B;**[!UICONTROL Monitoring]**。 **[!UICONTROL Monitoring]**&#x200B;控制面板可讓您檢視來自批次或串流擷取的傳入資料狀態。 要查看單個批的狀態，請按一下&#x200B;**[!UICONTROL Batch end-to-end]**&#x200B;或&#x200B;**[!UICONTROL Streaming end-to-end]**。 控制面板會列出所有批次或串流擷取執行，包括成功、失敗或仍在進行中的執行。 每個清單都會提供批次的詳細資訊，包括批次ID、目標資料集的名稱，以及所擷取的記錄數。 如果[!DNL Profile]啟用目標資料集，則也會顯示所擷取的身分和描述檔記錄數。
+在 [!DNL Experience Platform] UI，選擇 **[!UICONTROL 監視]** 的上界。 的 **[!UICONTROL 監視]** 通過「儀表板」，可以查看來自批處理或流式處理接收的入站資料的狀態。 要查看單個批的狀態，請選擇 **[!UICONTROL 批端到端]** 或 **[!UICONTROL 流式端到端]**。 儀表板列出所有批處理或流式接收運行，包括成功、失敗或仍在進行的運行。 每個清單都提供批的詳細資訊，包括批ID、目標資料集的名稱和接收的記錄數。 如果為 [!DNL Profile]，還顯示所攝取的身份和配置檔案記錄的數量。
 
 ![](../images/datasets/user-guide/batch-listing.png)
 
-您可以按一下個別的&#x200B;**[!UICONTROL Batch ID]**&#x200B;來存取&#x200B;**[!UICONTROL Batch overview]**&#x200B;控制面板，並查看批次的詳細資訊，包括批次無法收錄的錯誤記錄。
+可以在單個 **[!UICONTROL 批ID]** 訪問 **[!UICONTROL 批概覽]** 控制板，並查看批的詳細資訊，包括如果批未能接收錯誤日誌。
 
 ![](../images/datasets/user-guide/batch-overview.png)
 
-如果要刪除批，可按一下儀表板右上角附近的&#x200B;**[!UICONTROL Delete batch]**&#x200B;進行刪除。 這麼做也會從批次原本擷取到的資料集中移除其記錄。
+如果要刪除批，可通過選擇 **[!UICONTROL 刪除批]** 在儀表板右上角找到的。 這樣做還會從最初接收批的資料集中刪除其記錄。
 
 ![](../images/datasets/user-guide/delete-batch.png)
 
 ## 後續步驟
 
-本使用手冊提供了在[!DNL Experience Platform]用戶介面中使用資料集時執行常見操作的說明。 有關執行涉及資料集的常見[!DNL Platform]工作流的步驟，請參閱以下教程：
+本使用手冊提供了在使用中的資料集時執行常見操作的說明 [!DNL Experience Platform] 用戶介面。 有關執行常用操作的步驟 [!DNL Platform] 涉及資料集的工作流，請參閱以下教程：
 
 * [使用API建立資料集](create.md)
 * [使用資料存取API查詢資料集資料](../../data-access/home.md)
-* [使用API為即時客戶個人檔案和身分服務設定資料集](../../profile/tutorials/dataset-configuration.md)
+* [使用API為Real-time Customer Profile和Identity Service配置資料集](../../profile/tutorials/dataset-configuration.md)
