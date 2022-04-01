@@ -3,9 +3,9 @@ keywords: SFTP;SFTP
 title: SFTP連接
 description: 建立到SFTP伺服器的即時出站連接，以定期從Adobe Experience Platform導出分隔的資料檔案。
 exl-id: 27abfc38-ec19-4321-b743-169370d585a0
-source-git-commit: fa393b2bd8085a17653962b5a8b112a5db10df83
+source-git-commit: 9805b984a0b19ad7e942e82f3ad927523102e772
 workflow-type: tm+mt
-source-wordcount: '517'
+source-wordcount: '519'
 ht-degree: 1%
 
 ---
@@ -55,29 +55,31 @@ ht-degree: 1%
 
 如果選擇 **[!UICONTROL 基本身份驗證]** 鍵入以連接到SFTP位置：
 
-![SFTP目標基本身份驗證](/help/destinations/assets/catalog/cloud-storage/sftp/stfp-basic-authentication.png)
+![SFTP目標基本身份驗證](../..//assets/catalog/cloud-storage/sftp/stfp-basic-authentication.png)
 
 * **[!UICONTROL 主機]**:SFTP儲存位置的地址；
 * **[!UICONTROL 用戶名]**:登錄SFTP儲存位置的用戶名；
 * **[!UICONTROL 密碼]**:登錄SFTP儲存位置的密碼。
 * **[!UICONTROL 加密密鑰]**:或者，您可以附加RSA格式的公鑰，以將加密添加到導出的檔案中。 您的公鑰必須寫為 [!DNL Base64] 編碼字串。
+   * 範例: `----BEGIN PGP PUBLIC KEY BLOCK---- {Base64-encoded string} ----END PGP PUBLIC KEY BLOCK----`
 
 
 如果選擇 **[!UICONTROL 帶SSH密鑰的SFTP]** 連接到SFTP位置的驗證類型：
 
-![SFTP目標SSH密鑰驗證](/help/destinations/assets/catalog/cloud-storage/sftp/sftp-ssh-key-authentication.png)
+![SFTP目標SSH密鑰驗證](../../assets/catalog/cloud-storage/sftp/sftp-ssh-key-authentication.png)
 
 * **[!UICONTROL 域]**:填寫SFTP帳戶的IP地址或域名
 * **[!UICONTROL 埠]**:SFTP儲存位置使用的埠；
 * **[!UICONTROL 用戶名]**:登錄SFTP儲存位置的用戶名；
 * **[!UICONTROL SSH密鑰]**:登錄到SFTP儲存位置的SSH密鑰。
 * **[!UICONTROL 加密密鑰]**:或者，您可以附加RSA格式的公鑰，以將加密添加到導出的檔案中。 您的公鑰必須寫為 [!DNL Base64] 編碼字串。
+   * 範例: `----BEGIN PGP PUBLIC KEY BLOCK---- {Base64-encoded string} ----END PGP PUBLIC KEY BLOCK----`
 
 #### 目標詳細資訊 {#destination-details}
 
 在建立到SFTP位置的身份驗證連接後，請提供目標的以下資訊：
 
-![SFTP目標的可用目標詳細資訊](/help/destinations/assets/catalog/cloud-storage/sftp/sftp-destination-details.png)
+![SFTP目標的可用目標詳細資訊](../../assets/catalog/cloud-storage/sftp/sftp-destination-details.png)
 
 * **[!UICONTROL 名稱]**:在Experience Platform用戶介面中輸入有助於識別此目標的名稱；
 * **[!UICONTROL 說明]**:輸入此目標的說明；
