@@ -5,9 +5,9 @@ title: '基於流分割的近即時事件評估 '
 topic-legacy: developer guide
 description: 本文檔包含如何使用Adobe Experience Platform分段服務API進行流分段的示例。
 exl-id: 119508bd-5b2e-44ce-8ebf-7aef196abd7a
-source-git-commit: 4b9c72b4acb9c419afc1725235a9d7865181736b
+source-git-commit: 58c58048538eaf5977b1a5905fab44307bb433a9
 workflow-type: tm+mt
-source-wordcount: '1834'
+source-wordcount: '1896'
 ht-degree: 1%
 
 ---
@@ -24,7 +24,9 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->流分段只能用於評估流入平台的資料。 換句話說，通過批量攝取而攝取的資料不會通過流分段來評估，並且將與夜間計畫的分段作業一起評估。
+>流分割對使用流源攝取的所有資料都有效。 使用基於批處理的源攝取的段將在夜間進行評估，即使它符合流分割的條件。
+>
+>此外，如果該段基於另一段，而該段是使用批分段進行評估的，則使用流分段評估的段可能在理想和實際隸屬度之間漂移。 例如，如果段A基於段B，並且使用批分段來評估段B，因為段B僅每24小時更新一次，則段A將進一步遠離實際資料，直到與段B更新重新同步。
 
 ## 快速入門
 
