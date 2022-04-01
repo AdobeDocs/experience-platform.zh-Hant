@@ -1,18 +1,18 @@
 ---
-title: 為Experience PlatformWeb SDK配置資料流
-description: '瞭解如何配置資料流。 '
-keywords: 配置；資料流；資料流；邊；資料流ID；環境設定；邊配置ID；標識；ID同步容器ID；沙盒；流入口；事件資料集；目標；客戶端代碼；屬性令牌；目標；Cookie環境ID；目標；url；分析設定塊報告套件ID;
+title: 配置資料流
+description: 將客戶端Experience PlatformSDK整合與Adobe產品和第三方目標連接。
+keywords: 配置；資料流；資料流；邊；資料流ID；環境設定；邊配置ID；標識；ID同步容器ID；沙盒；流入口；事件資料集；目標；客戶端代碼；屬性令牌；目標；Cookie目標；URL目標；分析設定塊報表ID；資料資料收集準備；資料準備；映射器；XDM映射器；邊緣上的映射器；
 exl-id: 736c75cb-e290-474e-8c47-2a031f215a56
-source-git-commit: 026d45b2c9d362d7510576601174c296e3b18a2a
+source-git-commit: cfe524169b94b5b4160ed75e5e36c83c217f4270
 workflow-type: tm+mt
-source-wordcount: '1995'
+source-wordcount: '2090'
 ht-degree: 1%
 
 ---
 
 # 配置資料流
 
-資料流表示實施Adobe Experience PlatformWeb和移動SDK時的伺服器端配置。 當 [configure命令](configuring-the-sdk.md) 在SDK中，控制必須在客戶端上處理的內容(如 `edgeDomain`)，資料流處理SDK的所有其它配置。 當請求發送到Adobe Experience Platform邊緣網路時， `edgeConfigId` 用於引用資料流。 這樣，您就可以更新伺服器端配置，而無需在網站上進行代碼更改。
+資料流表示實施Adobe Experience PlatformWeb和MobileSDK時的伺服器端配置。 當 [configure命令](configuring-the-sdk.md) 在SDK中，控制必須在客戶端上處理的內容(如 `edgeDomain`)，資料流處理SDK的所有其它配置。 當請求發送到Adobe Experience Platform邊緣網路時， `edgeConfigId` 用於引用資料流。 這樣，您就可以更新伺服器端配置，而無需在網站上進行代碼更改。
 
 本文檔介紹在資料收集UI中配置資料流的步驟。
 
@@ -66,7 +66,7 @@ ht-degree: 1%
 
 >[!IMPORTANT]
 >
->MobileSDK實現當前不支援資料收集的資料準備。
+>Mobile SDK實現當前不支援資料收集的資料準備。
 
 資料準備是一種Experience Platform服務，允許您將資料映射到體驗資料模型(XDM)和從體驗資料模型(XDM)轉換和驗證資料。 配置支援平台的資料流時，可以使用資料準備功能將源資料發送到平台邊緣網路時映射到XDM。
 
@@ -78,13 +78,78 @@ ht-degree: 1%
 
 #### [!UICONTROL 選擇資料]
 
-選擇 **[!UICONTROL 保存和添加映射]** 完成後 [基本配置步驟](#configure)的 **[!UICONTROL 選擇資料]** 的上界。 在此處，必須提供一個示例JSON對象，該對象表示您計畫發送到平台的資料的結構。 您可以選擇將對象作為檔案上載的選項，或將原始對象貼上到提供的文本框中。
+選擇 **[!UICONTROL 保存和添加映射]** 完成後 [基本配置步驟](#configure)的 **[!UICONTROL 選擇資料]** 的上界。 在此處，必須提供一個示例JSON對象，該對象表示您計畫發送到平台的資料的結構。
+
+您應構造此JSON對象，以便可以將要捕獲的資料層中的屬性映射到該對象。 選擇下面的部分以查看格式正確的JSON對象的示例。
+
++++示例JSON檔案
+
+```json
+{
+  "data": {
+    "eventMergeId": "cce1b53c-571f-4f36-b3c1-153d85be6602",
+    "eventType": "view:load",
+    "timestamp": "2021-09-30T14:50:09.604Z",
+    "web": {
+      "webPageDetails": {
+        "siteSection": "Product section",
+        "server": "example.com",
+        "name": "product home",
+        "URL": "https://www.example.com"
+      },
+      "webReferrer": {
+        "URL": "https://www.adobe.com/index2.html",
+        "type": "external"
+      }
+    },
+    "commerce": {
+      "purchase": 1,
+      "order": {
+        "orderID": "1234"
+      }
+    },
+    "product": [
+      {
+        "productInfo": {
+          "productID": "123"
+        }
+      },
+      {
+        "productInfo": {
+          "productID": "1234"
+        }
+      }
+    ],
+    "reservation": {
+      "id": "anc45123xlm",
+      "name": "Embassy Suits",
+      "SKU": "12345-L",
+      "skuVariant": "12345-LG-R",
+      "priceTotal": "112.99",
+      "currencyCode": "USD",
+      "adults": 2,
+      "children": 3,
+      "productAddMethod": "PDP",
+      "_namespace": {
+        "test": 1,
+        "priceTotal": "112.99",
+        "category": "Overnight Stay"
+      },
+      "freeCancellation": false,
+      "cancellationFee": 20,
+      "refundable": true
+    }
+  }
+}
+```
+
++++
 
 >[!IMPORTANT]
 >
 >JSON對象必須具有單個根節點 `data` 以通過驗證。
 
-如果JSON有效，則在右面板中顯示預覽架構。 選擇 **[!UICONTROL 下一個]** 繼續。
+您可以選擇將對象作為檔案上載的選項，或將原始對象貼上到提供的文本框中。 如果JSON有效，則在右面板中顯示預覽架構。 選擇 **[!UICONTROL 下一個]** 繼續。
 
 ![預期傳入資料的JSON示例](../images/datastreams/select-data.png)
 
@@ -105,6 +170,12 @@ ht-degree: 1%
 此時將重新顯示映射頁，並顯示已完成的欄位映射。 的 **[!UICONTROL 映射進度]** 部分更新以反映已成功映射的欄位總數。
 
 ![已成功映射反映進度的欄位](../images/datastreams/field-mapped.png)
+
+>[!TIP]
+>
+>如果要將對象陣列（在源欄位中）映射到不同對象陣列（在目標欄位中），請添加 `[*]` 位於源和目標欄位路徑中的陣列名稱后，如下所示。
+>
+>![陣列對象映射](../images/datastreams/array-object-mapping.png)
 
 繼續執行上述步驟，將其餘欄位映射到目標架構。 雖然您不必映射所有可用的源欄位，但必須映射目標架構中根據需要設定的任何欄位才能完成此步驟。 的 **[!UICONTROL 必填欄位]** counter表示當前配置中尚未映射的必填欄位數。
 
