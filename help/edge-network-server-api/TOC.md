@@ -5,7 +5,7 @@ user-guide-title: Adobe Experience Platform邊緣網路伺服器API幫助
 breadcrumb-title: Adobe Experience Platform邊緣網路伺服器API指南
 user-guide-description: '通過邊緣網路伺服器API與Experience Cloud服務交互 '
 feature: Data Collection
-source-git-commit: a8a6681e878932c03ed9a2e59527e2adc565a28e
+source-git-commit: 8ea9877fd7dc00b4f5e7b1c974bb3743ce4e1356
 workflow-type: tm+mt
 source-wordcount: '67'
 ht-degree: 7%
@@ -13,9 +13,9 @@ ht-degree: 7%
 ---
 
 
-# 邊緣網路伺服器API {#server-api}
+# 邊緣網路伺服器API {#edge-network-server-api}
 
-* 邊緣網路伺服器API {#server-api}
+* 邊緣網路伺服器API {#edge-network-server-api}
    * [總覽](overview.md)
    * [驗證](authentication.md)
    * 資料彙集 {#server-api-data-collection}
