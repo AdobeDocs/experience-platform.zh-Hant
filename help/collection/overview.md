@@ -3,10 +3,10 @@ title: 邊緣網路伺服器API
 description: 瞭解Adobe Experience Platform邊緣網路伺服器API是什麼以及如何使用它。
 seo-description: Learn what the Adobe Experience Platform Edge Network Server API is and how you can use it.
 keywords: 資料收集；收集；Adobe Experience Platform邊緣網路；伺服器api;
-source-git-commit: 92b3a7bff576f72edc8628a850a2cdb9b43cb1c4
+source-git-commit: 4145e22519c1df2d5c010e563b81642a6f647cdc
 workflow-type: tm+mt
-source-wordcount: '287'
-ht-degree: 1%
+source-wordcount: '273'
+ht-degree: 0%
 
 ---
 
@@ -31,7 +31,7 @@ C.C.的益處 [!DNL Server API] 體系結構包括：
 1. 該互動式終點支援與Adobe Experience Platform和Adobe Experience Cloud服務的通信，這些服務支援高級細分、個性化和其他營銷使用案例。
 2. 當需要裝載資料時，批端點將允許批發送請求，而不會從調用的應用程式接收響應。
 
-的 [!DNL Server API] 支援以下類型的請求：的 [!DNL Server API] 支援經驗證的請求 [Adobe I/O](https://developer.adobe.com/)，使用新建 `server.adobedc.net` 端點。
+的 [!DNL Server API] 支援以下類型的請求：
 
 * 通過驗證的請求 [Adobe I/O](https://developer.adobe.com/)，使用新建 `server.adobedc.net` 端點。
 * 未通過身份驗證的請求 `edge.adobedc.net` 端點。
