@@ -2,7 +2,7 @@
 title: Adobe Experience 平台發行說明
 description: Adobe Experience Platform的最新發行說明。
 exl-id: 0d499aa6-e25d-4d34-ad32-5e4ab361cba1
-source-git-commit: b378a920380030d51956a0910271f1b1f9f4c371
+source-git-commit: 8d0f39dff6b047d21d4dff17005405fc83941961
 workflow-type: tm+mt
 source-wordcount: '1158'
 ht-degree: 5%
@@ -94,18 +94,6 @@ Adobe Experience Platform提供 [!DNL dashboards] 您可以通過查看有關組
 
 有關配置式儀表板的詳細資訊，請參閱 [配置檔案儀表板概述](../../dashboards/guides/profiles.md)。
 
-## 資料收集 {#data-collection}
-
-平台提供一套技術，使您能夠收集客戶端客戶體驗資料並將其發送到Adobe Experience Platform邊緣網路，在該網路中，資料可以得到豐富、轉換並分發到Adobe或非Adobe目的地。
-
-**新功能**
-
-| 功能 | 說明 |
-| --- | --- |
-| 全局資料流設定 | 現在，在配置資料流時可以配置幾個新的全局設定：地理位置、第一方IDcookie和第三方ID同步。 請參閱 [配置資料流](../../edge/fundamentals/datastreams.md#configure) 的子菜單。 |
-
-有關平台中資料收集的詳細資訊，請參閱 [資料收集概述](../../collection/home.md)。
-
 ### 目標儀表板
 
 「目標」控制面板顯示您的組織在Experience Platform中啟用的目標的快照。
@@ -119,6 +107,18 @@ Adobe Experience Platform提供 [!DNL dashboards] 您可以通過查看有關組
 {style=&quot;table-layout:auto&quot;&quot;
 
 有關平台中目標儀表板的詳細資訊，請參閱 [目標儀表板概述](../../dashboards/guides/destinations.md)。
+
+## 資料收集 {#data-collection}
+
+平台提供一套技術，使您能夠收集客戶端客戶體驗資料並將其發送到Adobe Experience Platform邊緣網路，在該網路中，資料可以得到豐富、轉換並分發到Adobe或非Adobe目的地。
+
+**新功能**
+
+| 功能 | 說明 |
+| --- | --- |
+| 全局資料流設定 | 現在，在配置資料流時可以配置幾個新的全局設定：地理位置、第一方IDcookie和第三方ID同步。 請參閱 [配置資料流](../../edge/fundamentals/datastreams.md#configure) 的子菜單。 |
+
+有關平台中資料收集的詳細資訊，請參閱 [資料收集概述](../../collection/home.md)。
 
 <!-- ## Experience Data Model (XDM) {#xdm}
 
