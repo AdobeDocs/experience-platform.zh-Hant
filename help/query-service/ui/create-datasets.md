@@ -1,42 +1,56 @@
 ---
-keywords: Experience Platform；首頁；熱門主題；查詢服務；查詢服務；產生資料集；產生資料集；建立資料集；
+keywords: Experience Platform；首頁；熱門主題；查詢服務；查詢服務；生成資料集；生成資料集；建立資料集；
 solution: Experience Platform
 title: 從查詢服務中的結果生成資料集
 topic-legacy: queries
 type: Tutorial
-description: Adobe Experience Platform Query Service可從UI建立資料集。 建立資料集後，您就可以像「資料湖」中的其他資料集一樣存取該資料集，並用於各種使用案例。
+description: Adobe Experience Platform查詢服務允許從UI建立資料集。 建立資料集後，可以像Data Lake中的任何其他資料集一樣訪問該資料集，並用於各種使用情形。
 exl-id: 6f6c049d-f19f-4161-aeb4-3a01eca7dc75
-source-git-commit: 03e7863f38b882a2fbf6ba0de1755e1924e8e228
+source-git-commit: 0c2cfe9b0bd839bdf662622283a7563c0417c9a9
 workflow-type: tm+mt
-source-wordcount: '329'
+source-wordcount: '476'
 ht-degree: 0%
 
 ---
 
-# 在Query Service中從結果產生資料集
+# 根據結果生成資料集 [!DNL Query Service]
 
-真正的力量 [!DNL Query Service] 查詢用來產生資料集時會顯示 [!DNL Data Lake] 將用作輸入到更多查詢或其它服務(如 [!DNL Data Science Workspace], [!DNL Real-time Customer Profile]，或 [!DNL Analysis Workspace].
+[!DNL Query Service] 允許您使用查詢在 [!DNL Data Lake]。 然後，這些資料集可以用作更多查詢或其他服務(如 [!DNL Data Science Workspace]、即時客戶概要資訊，或 [!DNL Analysis Workspace]。
 
-[!DNL Query Service] 可從UI建立資料集。 請依照下列步驟操作：
+## 從Adobe Experience Platform用戶介面生成資料集
 
-1. 使用連接的客戶端編寫查詢並驗證輸出。
-2. 登入 [!DNL Platform] UI並前往「查詢」。
-3. 在清單中尋找查詢，並將滑鼠指標暫留在該列上。
-4. 選擇 **[!UICONTROL 建立資料集]**. ![影像](../images/ui/create-datasets/output-dataset.png)
-5. 輸入資料集名稱，並在前面加上您的LDAP ID(不必唯一或SQL安全；系統會根據此處提供的名稱產生「表格名稱」)。
-6. 輸入資料集說明並選取 **[!UICONTROL 運行查詢]**.![影像](../images/ui/create-datasets/run-query.png)
-7. 觀看查詢完成，然後前往資料集清單頁面查看您剛建立的資料集。
+要從Adobe Experience Platform用戶介面(UI)建立資料集，請執行以下步驟：
 
-建立資料集後，您就可以像 [!DNL Data Lake] 並用於各種使用案例。
+1. 使用連接的客戶端建立查詢並驗證輸出。 瞭解如何使用 [!DNL Query Editor]，閱讀 [!DNL Query Editor] UI指南 [編寫查詢](./user-guide.md#writing-queries)。
+
+2. 在平台UI中，導航到 **[!UICONTROL 查詢]** 後跟 **[!UICONTROL 瀏覽]** 頁籤，然後選擇已建立的查詢。 有關如何查看在平台UI中為您的組織建立和保存的查詢的詳細資訊，請閱讀 [[!DNL Query Service] 概述](./overview.md#browse)。
+
+3. 在「查詢詳細資訊」面板中，選擇 **[!UICONTROL 輸出資料集]**。
+
+   ![選擇輸出資料集](../images/ui/create-datasets/output-dataset.png)
+
+4. 在顯示的對話框中，輸入以LDAP ID為前置詞的資料集名稱。 資料集名稱不必是唯一的或SQL安全的。 請注意，將根據您在此處建立的資料集名稱生成資料集的表名。
+
+5. 接下來，在 [!UICONTROL 說明] 選擇 **[!UICONTROL 運行查詢]**。
+
+   ![運行查詢](../images/ui/create-datasets/run-query.png)
+
+6. 查詢運行完成後，導航到 **[!UICONTROL 資料集]** 查看已建立的資料集。 要瞭解有關在平台UI中處理資料集時如何執行常見操作的詳細資訊，請參見 [資料集UI指南](../../catalog/datasets/user-guide.md)。
+
+建立資料集後，可以像中的任何其他資料集一樣訪問該資料集 [!DNL Data Lake] 並用於各種使用案例。
 
 >[!NOTE]
 >
->在即時實作中，您必須在建立資料集後套用資料控管標籤。
+>在即時實施中，必須在建立資料集後應用「資料治理」標籤。 要瞭解有關如何將資料使用標籤應用到資料集的詳細資訊，請參見 [資料使用標籤概述](../../data-governance/labels/overview.md)。
 
-## 使用預先定義的產生資料集 [!DNL Experience Data Model] 綱要
+## 使用預定義的資料集生成 [!DNL Experience Data Model] 架構
 
-若要產生預先定義的資料集 [!DNL Experience Data Model] (XDM)架構，則必須使用SQL語法。 如需您必須使用哪種語法的詳細資訊，請參閱 [SQL語法指南](../sql/syntax.md#create-table-as-select).
+使用SQL語法生成具有預定義的資料集 [!DNL Experience Data Model] (XDM)架構。 有關支援的語法的詳細資訊 [!DNL Query Service]，請閱讀 [SQL語法指南](../sql/syntax.md#create-table-as-select)。
 
 ## 輸出資料集
 
-通過此功能建立的資料集使用與SQL陳述式中定義的輸出資料結構相匹配的臨時架構生成。 有些下游服務需要特定的資料集 [!DNL Experience Data Model] (XDM)結構。 在寫入查詢之前，驗證下游服務的資料格式要求。
+通過此功能建立的資料集使用與SQL陳述式中定義的輸出資料結構匹配的即席模式生成。 某些下游服務需要具有特定XDM架構的資料集。 在編寫查詢之前驗證下游服務的資料格式要求。
+
+## 後續步驟
+
+閱讀此文檔後，您應該瞭解如何使用 [!DNL Query Service] 從平台UI生成資料集。 有關如何訪問、寫入和執行平台UI中查詢的詳細資訊，請參見 [[!DNL Query Service] UI概述](./overview.md)。
