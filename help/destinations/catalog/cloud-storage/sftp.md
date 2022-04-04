@@ -3,9 +3,9 @@ keywords: SFTP;SFTP
 title: SFTP連接
 description: 建立到SFTP伺服器的即時出站連接，以定期從Adobe Experience Platform導出分隔的資料檔案。
 exl-id: 27abfc38-ec19-4321-b743-169370d585a0
-source-git-commit: 99bb5d1b76b926622ca21fa1df7c3cb9fabc4856
+source-git-commit: dbefe3e9b193ccef06b6a81919233501b6e938be
 workflow-type: tm+mt
-source-wordcount: '523'
+source-wordcount: '557'
 ht-degree: 1%
 
 ---
@@ -61,7 +61,7 @@ ht-degree: 1%
 * **[!UICONTROL 用戶名]**:登錄SFTP儲存位置的用戶名；
 * **[!UICONTROL 密碼]**:登錄SFTP儲存位置的密碼。
 * **[!UICONTROL 加密密鑰]**:或者，您可以附加RSA格式的公鑰，以將加密添加到導出的檔案中。 您的公鑰必須寫為 [!DNL Base64] 編碼字串。
-   * 範例: `----BEGIN PGP PUBLIC KEY BLOCK---- {Base64-encoded string} ----END PGP PUBLIC KEY BLOCK----`
+   * 範例：`----BEGIN PGP PUBLIC KEY BLOCK---- {Base64-encoded string} ----END PGP PUBLIC KEY BLOCK----`。請參見下面一個正確格式的PGP鍵示例，其中中間部分縮短以便簡化。
 
       ![PGP鍵](../..//assets/catalog/cloud-storage/sftp/pgp-key.png)
 
@@ -75,7 +75,7 @@ ht-degree: 1%
 * **[!UICONTROL 用戶名]**:登錄SFTP儲存位置的用戶名；
 * **[!UICONTROL SSH密鑰]**:登錄到SFTP儲存位置的SSH密鑰。
 * **[!UICONTROL 加密密鑰]**:或者，您可以附加RSA格式的公鑰，以將加密添加到導出的檔案中。 您的公鑰必須寫為 [!DNL Base64] 編碼字串。
-   * 範例: `----BEGIN PGP PUBLIC KEY BLOCK---- {Base64-encoded string} ----END PGP PUBLIC KEY BLOCK----`
+   * 範例：`----BEGIN PGP PUBLIC KEY BLOCK---- {Base64-encoded string} ----END PGP PUBLIC KEY BLOCK----`。請參見下面一個正確格式的PGP鍵示例，其中中間部分縮短以便簡化。
 
       ![PGP鍵](../..//assets/catalog/cloud-storage/sftp/pgp-key.png)
 
