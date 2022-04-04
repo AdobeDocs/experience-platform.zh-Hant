@@ -4,9 +4,9 @@ user-guide-title: Adobe Experience 平台查詢服務說明
 breadcrumb-title: 查詢服務指南
 user-guide-description: 使用標準 SQL 在 平台 Data Lake 中查詢資料。
 feature: Queries
-source-git-commit: 341b34c9acd7b3e19369ec30c4ba643c0cf1b829
+source-git-commit: 7b4761e42b18b0aa8a54c4d72960b870d5655508
 workflow-type: tm+mt
-source-wordcount: '149'
+source-wordcount: '151'
 ht-degree: 18%
 
 ---
@@ -49,6 +49,7 @@ ht-degree: 18%
 - 將客戶端連接到查詢服務 {#clients}
    - [客戶端連接概述](clients/overview.md)
    - [Aqua Data Studio](clients/aqua-data-studio.md)
+   - [資料庫可視化工具](./clients/dbvisulaizer.md)
    - [看](clients/looker.md)
    - [波斯蒂科](clients/postico.md)
    - [Power BI](clients/power-bi.md)
