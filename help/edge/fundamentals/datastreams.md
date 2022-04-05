@@ -3,16 +3,16 @@ title: 配置資料流
 description: 將客戶端Experience PlatformSDK整合與Adobe產品和第三方目標連接。
 keywords: 配置；資料流；資料流；邊；資料流ID；環境設定；邊配置ID；標識；ID同步容器ID；沙盒；流入口；事件資料集；目標；客戶端代碼；屬性令牌；目標；Cookie目標；URL目標；分析設定塊報表ID；資料資料收集準備；資料準備；映射器；XDM映射器；邊緣上的映射器；
 exl-id: 736c75cb-e290-474e-8c47-2a031f215a56
-source-git-commit: cfe524169b94b5b4160ed75e5e36c83c217f4270
+source-git-commit: 5c57f65014736e20e1bcad6a9b158c923bbb4220
 workflow-type: tm+mt
-source-wordcount: '2090'
+source-wordcount: '2102'
 ht-degree: 1%
 
 ---
 
 # 配置資料流
 
-資料流表示實施Adobe Experience PlatformWeb和MobileSDK時的伺服器端配置。 當 [configure命令](configuring-the-sdk.md) 在SDK中，控制必須在客戶端上處理的內容(如 `edgeDomain`)，資料流處理SDK的所有其它配置。 當請求發送到Adobe Experience Platform邊緣網路時， `edgeConfigId` 用於引用資料流。 這樣，您就可以更新伺服器端配置，而無需在網站上進行代碼更改。
+資料流表示實施Adobe Experience PlatformWeb和移動SDK時的伺服器端配置。 當 [configure命令](configuring-the-sdk.md) 在SDK中，控制必須在客戶端上處理的內容(如 `edgeDomain`)，資料流處理SDK的所有其它配置。 當請求發送到Adobe Experience Platform邊緣網路時， `edgeConfigId` 用於引用資料流。 這樣，您就可以更新伺服器端配置，而無需在網站上進行代碼更改。
 
 本文檔介紹在資料收集UI中配置資料流的步驟。
 
@@ -70,11 +70,18 @@ ht-degree: 1%
 
 資料準備是一種Experience Platform服務，允許您將資料映射到體驗資料模型(XDM)和從體驗資料模型(XDM)轉換和驗證資料。 配置支援平台的資料流時，可以使用資料準備功能將源資料發送到平台邊緣網路時映射到XDM。
 
-下面的子部分介紹在資料收集UI中映射資料的基本步驟。 有關所有資料準備功能（包括計算欄位的轉換函式）的全面指導，請參閱以下文檔：
+>[!NOTE]
+>
+>有關所有資料準備功能（包括計算欄位的轉換函式）的全面指導，請參閱以下文檔：
+>
+>* [資料準備概述](../../data-prep/home.md)
+>* [資料準備映射函式](../../data-prep/functions.md)
+>* [使用資料準備處理資料格式](../../data-prep/data-handling.md)
 
-* [資料準備概述](../../data-prep/home.md)
-* [資料準備映射函式](../../data-prep/functions.md)
-* [使用資料準備處理資料格式](../../data-prep/data-handling.md)
+
+下面的子部分介紹在資料收集UI中映射資料的基本步驟。 有關這些步驟的快速演示，請參閱以下視頻：
+
+>[!VIDEO](https://video.tv.adobe.com/v/342120?quality=12&enable10seconds=on&speedcontrol=on)
 
 #### [!UICONTROL 選擇資料]
 
