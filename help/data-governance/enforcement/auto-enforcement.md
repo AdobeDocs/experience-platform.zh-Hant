@@ -5,7 +5,7 @@ title: 自動策略強制
 topic-legacy: guide
 description: 本文檔介紹在將段激活到Experience Platform中的目標時如何自動強制實施資料使用策略。
 exl-id: c6695285-77df-48c3-9b4c-ccd226bc3f16
-source-git-commit: 63705bdcf102ff01b4d67ce5955d8e23b32dbfe6
+source-git-commit: ca35b1780db00ad98c2a364d45f28772c27a4bc3
 workflow-type: tm+mt
 source-wordcount: '1232'
 ht-degree: 0%
@@ -63,10 +63,11 @@ ht-degree: 0%
 | 資料沿襲階段 | 策略執行中的角色 |
 | --- | --- |
 | 資料集 | 資料集包含資料使用標籤（應用於資料集或欄位級別），這些標籤定義了整個資料集或特定欄位可用於哪些使用案例。 如果將包含某些標籤的資料集或欄位用於策略限制的目的，則將發生策略違規。 |
+| 合併策略 | 合併策略是平台用於確定合併多個資料集的片段時資料優先順序的規則。 如果將合併策略配置為將帶有限制標籤的資料集激活到目標，則將發生策略違規。 查看 [合併策略概述](../../profile/merge-policies/overview.md) 的子菜單。 |
+| 區段 | 段規則定義應從客戶配置檔案中包括哪些屬性。 根據段定義包括哪些欄位，段將繼承這些欄位的所有已應用用法標籤。 如果您根據目標目標的市場營銷使用案例激活其繼承標籤受其適用策略限制的段，則將發生策略違規。 |
+| 目的地 | 在設定目標時，可以定義市場營銷活動（有時稱為市場營銷使用案例）。 此使用情形與策略中定義的市場營銷活動相關。 換句話說，您為目標定義的市場營銷使用案例決定了哪些資料使用策略和同意策略適用於該目標。 如果激活的段的使用標籤受目標目標的適用策略的限制，則將發生策略違規。 |
 <!-- | Dataset | Datasets contain data usage labels (applied at the dataset or field level) that define which use cases the entire dataset or specific fields can be used for. Policy violations will occur if a dataset or field containing certain labels is used for a purpose that a policy restricts.<br><br>Any consent attributes collected from your customers are also stored in datasets. If you have access to [consent policies](../policies/user-guide.md#consent-policy) (currently in beta), any profiles that do not meet the consent attribute requirements of your policies will be excluded from segments that are activated to a destination. | -->
-|合併策略 |合併策略是平台用於確定合併多個資料集的片段時資料優先順序的規則。 如果將合併策略配置為將帶有限制標籤的資料集激活到目標，則將發生策略違規。 查看 [合併策略概述](../../profile/merge-policies/overview.md) 的子菜單。 | |段 |段規則定義應從客戶配置檔案中包括哪些屬性。 根據段定義包括哪些欄位，段將繼承這些欄位的所有已應用用法標籤。 如果您根據目標目標的市場營銷使用案例激活其繼承標籤受其適用策略限制的段，則將發生策略違規。 |
 <!-- | Segment | Segment rules define which attributes should be included from customer profiles. Depending on which fields a segment definition includes, the segment will inherit any applied usage labels for those fields. Policy violations will occur if you activate a segment whose inherited labels are restricted by the target destination's applicable policies, based on its marketing use case. | -->
-|目標 |在設定目標時，可以定義市場營銷操作（有時稱為市場營銷使用案例）。 此使用情形與策略中定義的市場營銷活動相關。 換句話說，您為目標定義的市場營銷使用案例決定了哪些資料使用策略和同意策略適用於該目標。 如果激活的段的使用標籤受目標目標的適用策略的限制，則將發生策略違規。 |
 
 >[!IMPORTANT]
 >
