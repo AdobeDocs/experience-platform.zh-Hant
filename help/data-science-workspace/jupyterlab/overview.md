@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;JupyterLab；筆記本；資料科學工作區；熱門主題；jupyterlab
 solution: Experience Platform
-title: JupyterLab UI Overview
+title: JupyterLab UI概述
 topic-legacy: Overview
 description: JupyterLab是Project Jupyter的一個基於Web的用戶介面，並與Adobe Experience Platform緊密整合。 它為資料科學家提供了互動式開發環境，以便他們與Jupyter筆記本、代碼和資料一起工作。 本文檔概述了JupyterLab及其功能以及執行常見操作的說明。
 exl-id: 13786fbd-ef16-49cd-8bcf-46320c33e902
-source-git-commit: aa81dfd3d52b17984a0e9fb3f8863dabc4fa44ef
+source-git-commit: 1d3981c67c86f93394acf49b61bd29154e9653e8
 workflow-type: tm+mt
 source-wordcount: '1820'
 ht-degree: 3%
@@ -29,22 +29,22 @@ Experience Platform的JupyterLab整合附帶了架構更改、設計考慮、定
 | **核** | 內核提供筆記本和其他 [!DNL JupyterLab] 前端是以不同寫程式語言執行和反映代碼的能力。 [!DNL Experience Platform] 提供其他內核以支援開發 [!DNL Python]、R、PySpark和 [!DNL Spark]。 查看 [核](#kernels) 的子菜單。 |
 | **資料存取** | 直接從中訪問現有資料集 [!DNL JupyterLab] 完全支援讀寫功能。 |
 | **[!DNL Platform]服務整合** | 內置整合允許您利用其他 [!DNL Platform] 直接從內部 [!DNL JupyterLab]。 有關支援的整合的完整清單，請參見 [與其他平台服務整合](#service-integration)。 |
-| **驗證** | 除 <a href="https://jupyter-notebook.readthedocs.io/en/latest/security.html" target="_blank">JupyterLab的內置安全模型</a>，應用程式與Experience Platform之間的每個交互（包括平台服務到服務通信）都通過加密和驗證 <a href="https://www.adobe.io/authentication/auth-methods.html" target="_blank">[!DNL Adobe Identity Management System] (IMS)</a>。 |
-| **開發程式庫** | 在 [!DNL Experience Platform]。 [!DNL JupyterLab] 為 [!DNL Python]、R和PySpark。 See the [appendix](#supported-libraries) for a complete list of supported libraries. |
-| **庫控制器** | When the pre-installed libraries are lacking for your needs, additional libraries can be installed for Python and R, and are temporarily stored in isolated containers to maintain the integrity of [!DNL Platform] and keep your data safe. 查看 [核](#kernels) 的子菜單。 |
+| **驗證** | 除 <a href="https://jupyter-notebook.readthedocs.io/en/stable/security.html" target="_blank">JupyterLab的內置安全模型</a>，應用程式與Experience Platform之間的每個交互（包括平台服務到服務通信）都通過加密和驗證 <a href="https://www.adobe.io/authentication/auth-methods.html" target="_blank">[!DNL Adobe Identity Management System] (IMS)</a>。 |
+| **開發程式庫** | 在 [!DNL Experience Platform]。 [!DNL JupyterLab] 為 [!DNL Python]、R和PySpark。 查看 [附錄](#supported-libraries) 的子菜單。 |
+| **庫控制器** | 當預安裝的庫因您的需要而不足時，可以為Python和R安裝其他庫，並臨時儲存在隔離的容器中以保持 [!DNL Platform] 保證資料安全。 查看 [核](#kernels) 的子菜單。 |
 
 >[!NOTE]
 >
->Additional libraries are only available for the session in which they were installed. 啟動新會話時，必須重新安裝所需的任何其他庫。
+>其他庫僅可用於安裝它們的會話。 啟動新會話時，必須重新安裝所需的任何其他庫。
 
-## Integration with other [!DNL Platform] services {#service-integration}
+## 與其他 [!DNL Platform] 服務 {#service-integration}
 
 標準化和互操作性是其背後的關鍵概念 [!DNL Experience Platform]。 整合 [!DNL JupyterLab] 上 [!DNL Platform] 作為嵌入式IDE，它可以與其他 [!DNL Platform] 服務，使您能夠利用 [!DNL Platform] 它的潛力。 以下 [!DNL Platform] 服務 [!DNL JupyterLab]:
 
 * **[!DNL Catalog Service]:** 使用讀寫功能訪問和瀏覽資料集。
 * **[!DNL Query Service]:** 使用SQL訪問和瀏覽資料集，在處理大量資料時提供較低的資料存取開銷。
-* **[!DNL Sensei ML Framework]:** Model development with the ability to train and score data, as well as recipe creation with a single click.
-* **[!DNL Experience Data Model (XDM)]:** Standardization and interoperability are key concepts behind Adobe Experience Platform. [體驗資料模型(XDM)](https://www.adobe.com/go/xdm-home-en)在Adobe的推動下，這是一種努力，目的是標準化客戶體驗資料並定義客戶體驗管理模式。
+* **[!DNL Sensei ML Framework]:** 能夠訓練和評分資料的模型開發，以及只需按一下即可建立處方。
+* **[!DNL Experience Data Model (XDM)]:** 標準化和互操作性是Adobe Experience Platform背後的關鍵概念。 [體驗資料模型(XDM)](https://www.adobe.com/go/xdm-home-en)在Adobe的推動下，這是一種努力，目的是標準化客戶體驗資料並定義客戶體驗管理模式。
 
 >[!NOTE]
 >
@@ -73,7 +73,7 @@ Experience Platform的JupyterLab整合附帶了架構更改、設計考慮、定
 
 **功能表列**
 
-The menu bar at the top of the interface has top-level menus that expose actions available in [!DNL JupyterLab] with their keyboard shortcuts:
+介面頂部的菜單欄具有顯示操作的頂級菜單， [!DNL JupyterLab] 鍵盤快捷鍵：
 
 * **檔案：** 與檔案和目錄相關的操作
 * **編輯：** 與編輯文檔和其他活動相關的操作
@@ -111,21 +111,21 @@ The menu bar at the top of the interface has top-level menus that expose actions
 
 >[!NOTE]
 >
->每個組織只為筆記本預配一個GPU。 If the GPU is in use, you need to wait for the user that has currently reserved the GPU to release it. This can be done by logging out or leaving the GPU in an idle state for four or more hours.
+>每個組織只為筆記本預配一個GPU。 如果GPU正在使用，則需要等待當前已保留GPU的用戶釋放它。 這可以通過註銷或將GPU處於空閒狀態達四小時或更長時間來完成。
 
 ![](../images/jupyterlab/user-guide/notebook-gpu-config.png)
 
 ### 終止並重新啟動 [!DNL JupyterLab]
 
-在 [!DNL JupyterLab]，您可以終止會話，以防止使用更多資源。 Start by selecting the **power icon** ![power icon](../images/jupyterlab/user-guide/power_button.png), then select **[!UICONTROL Shut Down]** from the popover that appears to terminate your session. Notebook sessions auto-terminate after 12 hours of no activity.
+在 [!DNL JupyterLab]，您可以終止會話，以防止使用更多資源。 從選擇 **電源表徵圖** ![電源表徵圖](../images/jupyterlab/user-guide/power_button.png)，然後選擇 **[!UICONTROL 關閉]** 從終止會話的跨距。 筆記本會話在12小時無活動後自動終止。
 
-To restart [!DNL JupyterLab], select the **restart icon** ![restart icon](../images/jupyterlab/user-guide/restart_button.png) located directly to the left of the power icon, then select **[!UICONTROL Restart]** from the popover that appears.
+重新啟動 [!DNL JupyterLab]，選擇 **重新啟動表徵圖** ![重新啟動表徵圖](../images/jupyterlab/user-guide/restart_button.png) 位於電源表徵圖的左側，然後選擇 **[!UICONTROL 重新啟動]** 從出現的跨距。
 
 ![終止jupterlab](../images/jupyterlab/user-guide/shutdown-jupyterlab.gif)
 
-### Code cells {#code-cells}
+### 代碼單元格 {#code-cells}
 
-Code cells are the primary content of notebooks. 它們包含以筆記本關聯內核語言和作為執行代碼單元格結果的輸出的原始碼。 每個代碼單元的右側顯示一個執行計數，該代碼單元表示其執行順序。
+代碼單元是筆記本的主要內容。 它們包含以筆記本關聯內核語言和作為執行代碼單元格結果的輸出的原始碼。 每個代碼單元的右側顯示一個執行計數，它表示其執行順序。
 
 ![](../images/jupyterlab/user-guide/code_cell.png)
 
@@ -133,25 +133,25 @@ Code cells are the primary content of notebooks. 它們包含以筆記本關聯�
 
 * **添加單元格：** 按一下加號(**+**)以添加空單元格。 新的單元被放置在當前正在交互的單元下，或者如果沒有特定單元處於焦點中，則放置在筆記本的末尾。
 
-* **Move a cell:** Place your cursor to the right of the cell you wish to move, then click and drag the cell to a new location. Additionally, moving a cell from one notebook to another replicates the cell along with its contents.
+* **移動單元格：** 將游標置於要移動的單元格的右側，然後按一下並將單元格拖動到新位置。 此外，將單元格從一個筆記本移動到另一個筆記本會複製該單元格及其內容。
 
-* **Execute a cell:** Click on the body of the cell you wish to execute and then click the **play** icon (**▶**) from the notebook menu. 星號(**\***)在內核處理執行時顯示在單元格的執行計數器中，並在完成後替換為整數。
+* **執行單元格：** 按一下要執行的單元格的主體，然後按一下 **玩** 表徵圖。**▶**)。 星號(**\***)在內核處理執行時顯示在單元格的執行計數器中，並在完成後替換為整數。
 
 * **刪除單元格：** 按一下要刪除的單元格的正文，然後按一下 **剪刀** 表徵圖
 
-### Kernels {#kernels}
+### 核 {#kernels}
 
-Notebook kernels are the language-specific computing engines for processing notebook cells. 除 [!DNL Python]。 [!DNL JupyterLab] 在R、PySpark和 [!DNL Spark] （斯卡拉）。 When you open a notebook document, the associated kernel is launched. 當筆記本單元被執行時，內核執行計算並產生可能消耗大量CPU和記憶體資源的結果。 請注意，在內核關閉之前不會釋放已分配的記憶體。
+筆記型電腦內核是處理筆記型電腦單元的語言特定計算引擎。 除 [!DNL Python]。 [!DNL JupyterLab] 在R、PySpark和 [!DNL Spark] （斯卡拉）。 開啟筆記本文檔時，將啟動關聯的內核。 當筆記本單元被執行時，內核執行計算並產生可能消耗大量CPU和記憶體資源的結果。 請注意，在內核關閉之前不會釋放已分配的記憶體。
 
-Certain features and functionalities are limited to particular kernels as described in the table below:
+下表所述，某些功能和特性僅限於特定內核：
 
 | 內核 | 庫安裝支援 | [!DNL Platform] 整合 |
 | :----: | :--------------------------: | :-------------------- |
 | **[!DNL Python]** | 是 | <ul><li>[!DNL Sensei ML Framework]</li><li>[!DNL Catalog Service]</li><li>[!DNL Query Service]</li></ul> |
 | **R** | 是 | <ul><li>[!DNL Sensei ML Framework]</li><li>[!DNL Catalog Service]</li></ul> |
-| **Scala** | 無 | <ul><li>[!DNL Sensei ML Framework]</li><li>[!DNL Catalog Service]</li></ul> |
+| **斯卡拉** | 無 | <ul><li>[!DNL Sensei ML Framework]</li><li>[!DNL Catalog Service]</li></ul> |
 
-### Kernel sessions {#kernel-sessions}
+### 內核會話 {#kernel-sessions}
 
 每個活動筆記本或活動 [!DNL JupyterLab] 利用內核會話。 通過擴展 **運行終端和內核** 的下界。 可通過觀察筆記本介面的右上角來標識筆記本內核的類型和狀態。 在下圖中，筆記本的關聯內核是 **[!DNL Python]3** 其當前狀態由右邊的灰色圓表示。 空心圓表示空閒內核，實心圓表示忙碌內核。
 
@@ -161,7 +161,7 @@ Certain features and functionalities are limited to particular kernels as descri
 
 ![](../images/jupyterlab/user-guide/switch_kernel.gif)
 
-### Launcher {#launcher}
+### 啟動程式 {#launcher}
 
 [//]: # (Talk about the different Notebooks, introduce that certain starter notebooks are limited to particular kernels)
 
@@ -186,11 +186,11 @@ Certain features and functionalities are limited to particular kernels as descri
         <td></td>
         <th><strong>空白</strong></th>
         <th><strong>啟動器</strong></th>
-        <th><strong>Retail Sales</strong></th>
-        <th><strong>Recipe Builder</strong></th>
+        <th><strong>零售銷售</strong></th>
+        <th><strong>處方生成器</strong></th>
         <th><strong>[!DNL Query Service]</strong></th>
         <th><strong>XDM事件</strong></th>
-        <th><strong>XDM Queries</strong></th>
+        <th><strong>XDM查詢</strong></th>
         <th><strong>彙總</strong></th>
         <th><strong>聚類</strong></th>
     </tr>
@@ -212,11 +212,11 @@ Certain features and functionalities are limited to particular kernels as descri
         <td >是</td>
         <td >是</td>
         <td >不</td>
-        <td >no</td>
         <td >不</td>
         <td >不</td>
-        <td >no</td>
-        <td >no</td>
+        <td >不</td>
+        <td >不</td>
+        <td >不</td>
     </tr>
       <tr>
         <th  ><strong>PySpark 3([!DNL Spark] 2.4)</strong></th>
@@ -224,14 +224,14 @@ Certain features and functionalities are limited to particular kernels as descri
         <td >是</td>
         <td >不</td>
         <td >不</td>
-        <td >no</td>
+        <td >不</td>
         <td >不</td>
         <td >是</td>
         <td >是</td>
         <td >不</td>
     </tr>
     <tr>
-        <th ><strong>Scala</strong></th>
+        <th ><strong>斯卡拉</strong></th>
         <td >是</td>
         <td >是</td>
         <td >不</td>
@@ -244,7 +244,7 @@ Certain features and functionalities are limited to particular kernels as descri
     </tr>
 </table>
 
-To open a new *Launcher*, click **File > New Launcher**. 或者，展開 **檔案瀏覽器** 從左側欄中，按一下加號(**+**):
+開啟新 *啟動程式*&#x200B;按一下 **「檔案」>「新建啟動程式」**。 或者，展開 **檔案瀏覽器** 從左側欄中，按一下加號(**+**):
 
 ![](../images/jupyterlab/user-guide/new_launcher.gif)
 
