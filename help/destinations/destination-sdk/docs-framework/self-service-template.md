@@ -2,9 +2,9 @@
 title: 文檔自助模板//替換為目標名稱
 description: 使用此模板可在Adobe Experience Platform目錄中為目標建立公共文檔。//替換為「概述」部分中的段落
 exl-id: 99700474-8bf6-4176-acc1-38814e17c995
-source-git-commit: c5d2427635d90f3a9551e2a395d01d664005e8bc
+source-git-commit: a45fe9185e0ae74cfba7905a4bb6d18df7efed9e
 workflow-type: tm+mt
-source-wordcount: '1066'
+source-wordcount: '1201'
 ht-degree: 2%
 
 ---
@@ -17,11 +17,27 @@ ht-degree: 2%
 
 ## 總覽 {#overview}
 
-*為您的公司提供簡短的概述，包括它為客戶提供的價值。 包括指向產品文檔首頁的連結，以供進一步閱讀。*
+*提供您公司的簡短概述，包括它為客戶提供的價值。 包括指向產品文檔首頁的連結，以供進一步閱讀。*
 
 >[!IMPORTANT]
 >
->此文檔頁面由 *您的目標* 團隊。 如有任何查詢或更新請求，請直接聯繫他們，地址為： *插入連結或電子郵件地址，可以在其中獲取更新*
+>此文檔頁面由 *您的目標* 團隊。 如有任何查詢或更新請求，請直接聯繫他們，地址為： *插入連結或電子郵件地址，以便可以訪問您進行更新，例如 `support@yourdestination.com`。*
+
+## 使用案例 {#use-cases}
+
+幫助您更好地瞭解您應如何以及何時使用 *您的目標* 目的地，以下是Adobe Experience Platform客戶可通過使用此目的地解決的示例使用案例。
+
+### 用例#1
+
+*對於移動消息平台：*
+
+*一個房屋租賃和銷售平台希望將移動通知推送給客戶的Android和iOS設備，讓他們知道，在他們之前搜索的租房區域，有100個更新的房源。*
+
+### 用例#2
+
+*對於社交網路平台：*
+
+*一個運動服裝品牌希望通過社交媒體賬戶接觸現有客戶。 服裝品牌可以將自己的CRM中的電子郵件地址發送到Adobe Experience Platform，從自己的離線資料構建資料段，並將這些資料段發送到YOURDESTINATION，以在客戶的社交媒體源中顯示廣告。*
 
 ## 先決條件 {#prerequisites}
 
@@ -38,13 +54,13 @@ ht-degree: 2%
 
 *在本節中添加有關目標支援的標識的資訊。 我們用一些標準值預填了表。 刪除不適用於目標的值和未預填充的任何值。*
 
-*您的目標* 支援激活下表中描述的身份。 瞭解有關 [身份](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=en#getting-started)。
+*您的目標* 支援激活下表中描述的身份。 瞭解有關 [身份](/help/identity-service/namespaces.md)。
 
 | 目標標識 | 說明 | 考量事項 |
 |---|---|---|
 | GAID | Google廣告ID | 當源標識為GAID命名空間時，選擇GAID目標標識。 |
 | IDFA | Apple廣告商ID | 當源標識為IDFA命名空間時，選擇IDFA目標標識。 |
-| ECID | Experience Cloud ID | 表示ECID的命名空間。 以下別名也可以引用此命名空間：&quot;Adobe Marketing CloudID&quot;,&quot;Adobe Experience CloudID&quot;,&quot;Adobe Experience PlatformID&quot; 請參閱以下文檔 [ECID](https://experienceleague.adobe.com/docs/experience-platform/identity/ecid.html) 的子菜單。 |
+| ECID | Experience Cloud ID | 表示ECID的命名空間。 以下別名也可以引用此命名空間：&quot;Adobe Marketing CloudID&quot;,&quot;Adobe Experience CloudID&quot;,&quot;Adobe Experience PlatformID&quot; 請參閱以下文檔 [ECID](/help/identity-service/ecid.md) 的子菜單。 |
 | phone_sha256 | 使用SHA256算法散列的電話號碼 | 純文字檔案和SHA256散列電話號碼都受Adobe Experience Platform支援。 如果源欄位包含未散列的屬性，請檢查 **[!UICONTROL 應用轉換]** 選項 [!DNL Platform] 激活時自動對資料進行散列。 |
 | email_lc_sha256 | 使用SHA256算法散列的電子郵件地址 | 純文字檔案和SHA256散列電子郵件地址都受Adobe Experience Platform支援。 如果源欄位包含未散列的屬性，請檢查 **[!UICONTROL 應用轉換]** 選項 [!DNL Platform] 激活時自動對資料進行散列。 |
 | 外部ID | 自定義用戶ID | 如果源標識是自定義命名空間，請選擇此目標標識。 |
@@ -66,31 +82,27 @@ ht-degree: 2%
 
 {style=&quot;table-layout:auto&quot;&quot;
 
-## 使用案例 {#use-cases}
-
-幫助您更好地瞭解您應如何以及何時使用 *您的目標* 目的地，以下是Adobe Experience Platform客戶可通過使用此目的地解決的示例使用案例。
-
-### 用例#1
-
-*對於移動消息平台：*
-
-*一個房屋租賃和銷售平台希望將移動通知推送給客戶的Android和iOS設備，讓他們知道，在他們之前搜索的租房區域，有100個更新的房源。*
-
-### 用例#2
-
-*對於社交網路平台：*
-
-*一個運動服裝品牌希望通過社交媒體賬戶接觸現有客戶。 服裝品牌可以將自己的CRM中的電子郵件地址發送到Adobe Experience Platform，從自己的離線資料構建資料段，並將這些資料段發送到YOURDESTINATION，以在客戶的社交媒體源中顯示廣告。*
-
 ## 連接到目標 {#connect}
 
-要連接到此目標，請按照 [目標配置教程](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html)。
+要連接到此目標，請按照 [目標配置教程](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html)。 在配置目標工作流中，填寫下面兩節中列出的欄位。
 
-### 連接參數 {#parameters}
+### 驗證到目標 {#authenticate}
 
-同時 [設定](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html) 此目標，必須提供以下資訊：
+*添加客戶在向目標進行身份驗證時必須填寫的欄位。 這些欄位是特定於目標的，取決於您在Destination SDK中的配置。 目標的欄位可能與下面列出的欄位不同。 還請包括與下面顯示的示例螢幕快照類似的螢幕快照。*
 
-*添加配置新目標時客戶必須填寫的欄位。 這些欄位是特定於目標的，取決於您在Destination SDK中的配置。 目標的欄位可能與下面列出的欄位不同。*
+要驗證到目標，請填寫必填欄位並選擇 **[!UICONTROL 連接到目標]**。
+
+![示例螢幕截圖，顯示如何驗證到目標](/help/destinations/destination-sdk/docs-framework/assets/authenticate-destination.png)
+
+* **[!UICONTROL 持有者令牌]**:填寫承載令牌以驗證到目標。
+
+### 填寫目標詳細資訊 {#destination-details}
+
+*添加配置新目標時客戶必須填寫的欄位。 這些欄位是特定於目標的，取決於您在Destination SDK中的配置。 目標的欄位可能與下面列出的欄位不同。 還請包括與下面顯示的示例螢幕快照類似的螢幕快照。*
+
+要配置目標的詳細資訊，請填寫必填欄位並選擇 **[!UICONTROL 下一個]**。
+
+![示例螢幕截圖，顯示如何填寫目標的詳細資訊](/help/destinations/destination-sdk/docs-framework/assets/configure-destination-details.png)
 
 * **[!UICONTROL 名稱]**:您將來識別此目標的名稱。
 * **[!UICONTROL 說明]**:將幫助您在將來確定此目標的說明。
@@ -161,9 +173,9 @@ If no policy violations have been detected, select **[!UICONTROL Finish]** to co
 
 -->
 
-## 導出的資料 {#exported-data}
+## 導出的資料/驗證資料導出 {#exported-data}
 
-*添加有關如何將資料導出到目標的說明。 這將幫助客戶確保他們已正確整合到您的目標。 例如，您可以提供類似於下面的JSON示例。*
+*添加有關如何將資料導出到目標的段落。 這將幫助客戶確保他們已正確整合到您的目標。 例如，您可以提供類似於下面的JSON示例。 或者，您可以從目標的介面提供螢幕截圖和資訊，以顯示客戶應如何期望在目標平台中填充段。*
 
 ```
 {
@@ -205,8 +217,8 @@ If no policy violations have been detected, select **[!UICONTROL Finish]** to co
 
 ## 資料使用和治理 {#data-usage-governance}
 
-全部 [!DNL Adobe Experience Platform] 目標在處理資料時符合資料使用策略。 有關如何 [!DNL Adobe Experience Platform] 強制實施資料治理，讀取 [資料治理概述](https://experienceleague.adobe.com/docs/experience-platform/data-governance/home.html)。
+全部 [!DNL Adobe Experience Platform] 目標在處理資料時符合資料使用策略。 有關如何 [!DNL Adobe Experience Platform] 強制實施資料治理，讀取 [資料治理概述](/help/data-governance/home.md)。
 
 ## 其他資源 {#additional-resources}
 
-*您可以提供產品文檔或您認為對客戶成功非常重要的任何其他資源的進一步連結。*
+*您可以提供指向產品文檔或您認為對客戶成功非常重要的任何其他資源的進一步連結。*
