@@ -4,16 +4,20 @@ title: 使用API為配置檔案更新啟用資料集
 type: Tutorial
 description: 本教程介紹如何使用Adobe Experience PlatformAPI啟用具有「upsert」功能的資料集，以便更新即時客戶配置檔案資料。
 exl-id: fc89bc0a-40c9-4079-8bfc-62ec4da4d16a
-source-git-commit: 58c58048538eaf5977b1a5905fab44307bb433a9
+source-git-commit: e7bd2c699b30276dca1a2e29c19f0a885b246f48
 workflow-type: tm+mt
-source-wordcount: '965'
-ht-degree: 2%
+source-wordcount: '991'
+ht-degree: 1%
 
 ---
 
 # 使用API為配置檔案更新啟用資料集
 
 本教程介紹如何啟用具有「upsert」功能的資料集，以便更新即時客戶配置檔案資料。 這包括建立新資料集和配置現有資料集的步驟。
+
+>[!NOTE]
+>
+>upsert工作流僅用於批接收。 流攝入 **不** 支援。
 
 ## 快速入門
 
@@ -22,7 +26,7 @@ ht-degree: 2%
 - [[!DNL Real-time Customer Profile]](../../profile/home.md):基於來自多個源的聚合資料提供統一、即時的用戶配置檔案。
 - [[!DNL Catalog Service]](../../catalog/home.md):一個REST風格的API，允許您建立資料集並為 [!DNL Real-time Customer Profile] 和 [!DNL Identity Service]。
 - [[!DNL Experience Data Model (XDM)]](../../xdm/home.md):標準化框架 [!DNL Platform] 組織客戶體驗資料。
-- [批次擷取](../../ingestion/batch-ingestion/overview.md)
+- [批量攝取](../../ingestion/batch-ingestion/overview.md):批處理接收API允許您將資料作為批處理檔案接收到Experience Platform中。
 
 以下各節提供了成功調用平台API所需的其他資訊。
 
@@ -102,11 +106,11 @@ curl -X POST \
 
 ## 配置現有資料集 {#configure-an-existing-dataset}
 
-以下步驟介紹如何配置現有啟用配置檔案的資料集以進行更新(「upsert」)功能。
+以下步驟介紹如何配置現有啟用配置檔案的資料集以進行更新(upsert)功能。
 
 >[!NOTE]
 >
->為了為「upsert」配置現有啟用配置檔案的資料集，必須先為配置檔案禁用資料集，然後在 `isUpsert` 標籤。 如果未為配置檔案啟用現有資料集，則可以直接執行 [啟用Profile和upsert的資料集](#enable-the-dataset)。 如果不確定，以下步驟將顯示如何檢查資料集是否已啟用。
+>為了為upsert配置現有啟用配置檔案的資料集，必須先禁用配置檔案的資料集，然後在 `isUpsert` 標籤。 如果未為配置檔案啟用現有資料集，則可以直接執行 [啟用Profile和upsert的資料集](#enable-the-dataset)。 如果不確定，以下步驟將顯示如何檢查資料集是否已啟用。
 
 ### 檢查是否為配置檔案啟用了資料集
 
@@ -219,7 +223,8 @@ curl -X PATCH \
       ]'
 ```
 
-**響應**
+**回應**
+
 成功的PATCH請求返回HTTP狀態200(OK)和包含已更新資料集ID的陣列。 此ID應與在PATCH請求中發送的ID匹配。 的 `unifiedProfile` 標籤現在已禁用。
 
 ```json
@@ -270,4 +275,4 @@ curl -X PATCH \
 
 ## 後續步驟
 
-您的配置檔案和啟用更新的資料集現在可以用於批處理和流式處理接收工作流來更新配置檔案資料。 要瞭解有關將資料導入Adobe Experience Platform的更多資訊，請首先閱讀 [資料攝取概述](../../ingestion/home.md)。
+您的配置檔案和啟用更新的資料集現在可以由批處理接收工作流使用，以更新配置檔案資料。 要瞭解有關將資料導入Adobe Experience Platform的更多資訊，請首先閱讀 [資料攝取概述](../../ingestion/home.md)。
