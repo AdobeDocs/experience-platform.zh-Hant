@@ -2,9 +2,9 @@
 description: 此配置允許您指明基本資訊，如目標名稱、類別、說明、徽標等。 此配置中的設定還確定Experience Platform用戶如何驗證到目標、Experience Platform用戶介面中的顯示方式以及可以導出到目標的身份。
 title: 流式傳輸目標配置選項，用於Destination SDK
 exl-id: b7e4db67-2981-4f18-b202-3facda5c8f0b
-source-git-commit: 92bca3600d854540fd2badd925e453fba41601a7
+source-git-commit: 51417bee5dba7a96d3a7a7eb507fc95711fad4a5
 workflow-type: tm+mt
-source-wordcount: '1756'
+source-wordcount: '1787'
 ht-degree: 4%
 
 ---
@@ -98,8 +98,8 @@ ht-degree: 4%
       "aggregationType":"CONFIGURABLE_AGGREGATION",
       "configurableAggregation":{
          "splitUserById":true,
-         "maxBatchAgeInSecs":0,
-         "maxNumEventsInBatch":0,
+         "maxBatchAgeInSecs":2400,
+         "maxNumEventsInBatch":5000,
          "aggregationKey":{
             "includeSegmentId":true,
             "includeSegmentStatus":true,
@@ -276,6 +276,10 @@ ht-degree: 4%
    * 段ID;
    * 段狀態；
    * 身份或身份組。
+
+>[!NOTE]
+>
+>在為目標使用可配置的聚合選項時，請注意可用於這兩個參數的最小值和最大值 `maxBatchAgeInSecs` （最少1.800和最多3.600）和 `maxNumEventsInBatch` （最小1.000，最大10.000）。
 
 有關聚合參數的詳細說明，請參閱 [目標API終結點操作](./destination-configuration-api.md) 參考頁，其中描述了每個參數。
 
