@@ -5,9 +5,9 @@ title: 查詢服務UI指南
 topic-legacy: guide
 description: Adobe Experience Platform查詢服務提供一個用戶介面，可用於編寫和執行查詢、查看以前執行的查詢以及訪問IMS組織內用戶保存的查詢。
 exl-id: ea25fa32-809c-429c-b855-fcee5ee31b3e
-source-git-commit: b4388106caf1c6ee48c44051fe484cd595278483
+source-git-commit: a5e8b4df78d8dff58e000030d209606b46a582e8
 workflow-type: tm+mt
-source-wordcount: '1127'
+source-wordcount: '1168'
 ht-degree: 1%
 
 ---
@@ -20,7 +20,7 @@ Adobe Experience Platform查詢服務允許您與外部客戶端連接。 您可
 
 您可以使用過期憑據快速設定到外部客戶端的連接。
 
-![](../images/ui/credentials/expiring-credentials.png)
+![「查詢」面板「身份證明」頁籤，其中「過期身份證明」部分突出顯示。](../images/ui/credentials/expiring-credentials.png)
 
 的 **[!UICONTROL 過期憑據]** 部分提供了以下資訊：
 
@@ -55,7 +55,7 @@ Adobe Experience Platform查詢服務允許您與外部客戶端連接。 您可
 
 要建立一組未過期的憑據，請返回平台UI並選擇 **[!UICONTROL 查詢]** 從左側導航 [!UICONTROL 查詢] 工作區。 接下來，選擇 **[!UICONTROL 憑據]** 後跟 **[!UICONTROL 生成憑據]**。
 
-![](../images/ui/credentials/generate-credentials.png)
+![「查詢」面板中的「身份證明」頁籤和「生成身份證明」突出顯示。](../images/ui/credentials/generate-credentials.png)
 
 將顯示一個對話框，允許您生成憑據。 要建立未過期的憑據，必須提供以下詳細資訊：
 
@@ -66,11 +66,11 @@ Adobe Experience Platform查詢服務允許您與外部客戶端連接。 您可
 
 提供所有必需的詳細資訊後，選擇 **[!UICONTROL 生成憑據]** 生成憑據。
 
-![](../images/ui/credentials/create-account.png)
+![「生成憑據」對話框突出顯示。](../images/ui/credentials/create-account.png)
 
 >[!IMPORTANT]
 >
->一旦 **[!UICONTROL 生成憑據]** 按鈕，配置JSON檔案將下載到本地電腦。 因為Adobe **不** 記錄生成的憑據，必須安全地儲存下載的檔案並保留憑據的記錄。
+>當 **[!UICONTROL 生成憑據]** 選中後，配置JSON檔案將下載到您的本地電腦。 因為Adobe **不** 記錄生成的憑據，必須安全地儲存下載的檔案並保留憑據的記錄。
 >
 >此外，如果憑據在90天內未使用，則會刪除憑據。
 
@@ -82,7 +82,7 @@ Adobe Experience Platform查詢服務允許您與外部客戶端連接。 您可
 
 保存生成的憑據後，選擇 **[!UICONTROL 關閉]**。 您現在可以看到所有未過期的憑據的清單。
 
-![](../images/ui/credentials/list-credentials.png)
+![「查詢」面板「身份證明」頁籤，「未過期身份證明」部分已展開。](../images/ui/credentials/list-credentials.png)
 
 您可以編輯或刪除未過期的憑據。 要編輯未過期的憑據，請選擇鉛筆表徵圖(![](../images/ui/credentials/edit-icon.png))。 要刪除未過期的憑據，請選擇刪除表徵圖(![](../images/ui/credentials/delete-icon.png))。
 
@@ -92,7 +92,7 @@ Adobe Experience Platform查詢服務允許您與外部客戶端連接。 您可
 - **[!UICONTROL 說明]**:（可選）您正在生成的憑據的說明。
 - **[!UICONTROL 分配給]**:將為其分配憑據的用戶。 此值應為建立憑據的用戶的電子郵件地址。
 
-![](../images/ui/credentials/update-credentials.png)
+![「更新帳戶」對話框。](../images/ui/credentials/update-credentials.png)
 
 提供所有必需的詳細資訊後，選擇 **[!UICONTROL 更新帳戶]** 完成對憑據的更新。
 
@@ -112,11 +112,11 @@ Adobe Experience Platform查詢服務允許您與外部客戶端連接。 您可
 
 | 參數 | 說明 |
 |---|---|
-| 伺服器/主機 | 要連接的伺服器/主機的名稱。 <ul><li>此值用於過期的憑據和非過期的憑據，其形式為 `server.adobe.io`。 值位於 **[!UICONTROL 主機]** 的 [!UICONTROL 過期憑據] 的子菜單。</ul></li> |
-| 埠 | 要連接的伺服器/主機的埠。 <ul><li>此值用於過期憑據和非過期憑據，可在 **[!UICONTROL 埠]** 的 [!UICONTROL 過期憑據] 的子菜單。 埠的示例值為 `80`。</ul></li> |
-| 資料庫 | 要連接的資料庫。 <ul><li>此值用於過期憑據和非過期憑據，在 **[!UICONTROL 資料庫]** 的 [!UICONTROL 過期憑據] 的子菜單。 資料庫的示例值為 `prod:all`。</ul></li> |
-| 用戶名 | 連接到外部客戶端的用戶的用戶名。 <ul><li>此值用於過期憑據和非過期憑據。 它採用字母數字字串的形式 `@AdobeOrg`。 此值位於 **[!UICONTROL 用戶名]**。</li></ul> |
-| 密碼 | 連接到外部客戶端的用戶的密碼。 <ul><li>如果您正在使用過期憑據，則可以在 **[!UICONTROL 密碼]** 在 [!UICONTROL 過期憑據] 的子菜單。</li><li>如果您使用的是非過期憑據，則此值是technicalAccountID的級連參數和從配置JSON檔案獲取的憑據。 密碼值採用以下形式： `{technicalAccountId}:{credential}`。</li></ul> |
+| **伺服器/主機** | 要連接的伺服器/主機的名稱。 <ul><li>此值用於過期的憑據和非過期的憑據，其形式為 `server.adobe.io`。 值位於 **[!UICONTROL 主機]** 的 [!UICONTROL 過期憑據] 的子菜單。</ul></li> |
+| **埠** | 要連接的伺服器/主機的埠。 <ul><li>此值用於過期憑據和非過期憑據，可在 **[!UICONTROL 埠]** 的 [!UICONTROL 過期憑據] 的子菜單。 埠的示例值為 `80`。</ul></li> |
+| **資料庫** | 要連接的資料庫。 <ul><li>此值用於過期憑據和非過期憑據，在 **[!UICONTROL 資料庫]** 的 [!UICONTROL 過期憑據] 的子菜單。 資料庫的示例值為 `prod:all`。</ul></li> |
+| **用戶名** | 連接到外部客戶端的用戶的用戶名。 <ul><li>此值用於過期憑據和非過期憑據。 它採用字母數字字串的形式 `@AdobeOrg`。 此值位於 **[!UICONTROL 用戶名]**。</li></ul> |
+| **密碼** | 連接到外部客戶端的用戶的密碼。 <ul><li>如果您正在使用過期憑據，則可以在 **[!UICONTROL 密碼]** 在 [!UICONTROL 過期憑據] 的子菜單。</li><li>如果您使用的是非過期憑據，則此值是technicalAccountID的級連參數和從配置JSON檔案獲取的憑據。 密碼值採用以下形式： `{technicalAccountId}:{credential}`。</li></ul> |
 
 ## 後續步驟
 
