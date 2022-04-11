@@ -4,9 +4,9 @@ title: 目標儀表板
 description: Adobe Experience Platform提供了一個儀表板，您可以通過該儀表板查看有關組織活動目標的重要資訊。
 type: Documentation
 exl-id: 6a34a796-24a1-450a-af39-60113928873e
-source-git-commit: 86041e3165d4ea9cb55717f24b002afa084ff420
+source-git-commit: 32df4c5972cb32afc6021ae27dc05f77076a5984
 workflow-type: tm+mt
-source-wordcount: '1709'
+source-wordcount: '1708'
 ht-degree: 0%
 
 ---
@@ -153,7 +153,7 @@ Adobe提供了多個標準小部件，您可以使用這些部件來可視化與
 
 ![映射的受眾健康小部件。](../images/destinations/mapped-audience-health.png)
 
-### [!UICONTROL 目標計數] (#destinations-count)
+### [!UICONTROL 目標計數] {#destinations-count}
 
 的 [!UICONTROL 目標計數] 構件提供了可在系統中激活和傳遞受眾的可用終結點總數。 此數字包括活動和非活動目標。
 
