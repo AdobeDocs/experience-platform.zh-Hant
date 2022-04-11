@@ -3,9 +3,9 @@ keywords: AmazonS3;S3目標；s3;amazon s3
 title: AmazonS3連接
 description: 建立到Amazon Web Services(AWS)S3儲存的即時出站連接，以定期將CSV資料檔案從Adobe Experience Platform導出到您自己的S3儲存桶中。
 exl-id: 6a2a2756-4bbf-4f82-88e4-62d211cbbb38
-source-git-commit: 691e3181e05a24b6bb0ebbe8e0f797a2b4c572d2
+source-git-commit: 935bbbc842ce5e2f42ee92c525255c9708bf34c2
 workflow-type: tm+mt
-source-wordcount: '554'
+source-wordcount: '552'
 ht-degree: 1%
 
 ---
@@ -44,7 +44,7 @@ ht-degree: 1%
 >id="platform_destinations_connect_s3_folderpath"
 >title="資料夾路徑"
 >abstract="只能包含字元A-Z、a-z、0-9，並且可以包含以下特殊字元： `/!-_.'()"^[]+$%.*"`。 要按段檔案建立資料夾，請將宏/%SEGMENT_NAME%或/%SEGMENT_ID%或/%SEGMENT_NAME%/%SEGMENT_ID%插入文本欄位。 宏只能插入資料夾路徑的末尾。 查看文檔中的宏示例。"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/cloud-storage/overview.html?lang=en#use-macros" text="使用宏在儲存位置中建立資料夾"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/cloud-storage/overview.html#use-macros" text="使用宏在儲存位置中建立資料夾"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_s3_rsa"
