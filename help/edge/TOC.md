@@ -1,13 +1,13 @@
 ---
 solution: Data Collection
 audience: user
-user-guide-title: Adobe Experience 平台網頁 SDK 說明
+user-guide-title: Adobe Experience Platform Web SDK 說明
 breadcrumb-title: Web SDK 指南
 user-guide-description: 透過 Edge 網路與 Experience Cloud 服務互動。
 feature: Web SDK
-source-git-commit: ff612f7ef466276757095a3a9a724781eeb6a089
+source-git-commit: 7eb89d44bdb6e3c6e6aede0a1ce20c02b19284fd
 workflow-type: tm+mt
-source-wordcount: '163'
+source-wordcount: '174'
 ht-degree: 31%
 
 ---
@@ -48,6 +48,10 @@ ht-degree: 31%
       * [訪問響應令牌](personalization/adobe-target/accessing-response-tokens.md)
       * [使用mbox第三方ID](personalization/adobe-target/using-mbox-3rdpartyid.md)
       * [將at.js庫與Web SDK進行比較](personalization/adobe-target/web-sdk-atjs-comparison.md)
+      * 目標(A4T)日誌分析 {#a4t}
+         * [總覽](personalization/adobe-target/analytics-logging/overview.md)
+         * [用戶端 記錄](personalization/adobe-target/analytics-logging/client-side.md)
+         * [伺服器端日誌記錄](personalization/adobe-target/analytics-logging/server-side.md)
    * Offer Decisioning {#offer-decisioning}
       * [總覽](personalization/offer-decisioning/offer-decisioning-overview.md)
 * 同意 {#consent}
