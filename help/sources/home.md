@@ -5,9 +5,9 @@ title: 源連接器概述
 topic-legacy: overview
 description: Adobe Experience Platform允許從外部源接收資料，同時讓您能夠使用平台服務構建、標籤和增強傳入資料。 您可以從多種源(如Adobe應用程式、基於雲的儲存、資料庫和許多其他源)接收資料。
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: 8d302a5d2907d971d0ff6b7602d18bed418d3a12
+source-git-commit: adefaeb895c91d45727f791b73b73a17a2b1ccf9
 workflow-type: tm+mt
-source-wordcount: '1006'
+source-wordcount: '1032'
 ht-degree: 0%
 
 ---
@@ -61,6 +61,13 @@ Experience Platform支援從第三方廣告系統接收資料。 有關特定源
 - [[!DNL Google PubSub] 連接器](connectors/cloud-storage/google-pubsub.md)
 - [[!DNL Oracle Object Storage] 連接器](connectors/cloud-storage/oracle-object-storage.md)
 - [[!DNL SFTP] 連接器](connectors/cloud-storage/sftp.md)
+
+### 同意和首選項 {#consent}
+
+Experience Platform支援從第三方同意和偏好管理平台接收資料。 有關詳細資訊，請參閱以下相關文檔：
+
+- [[!DNL OneTrust Integration]](connectors/consent-and-preferences/onetrust.md)
+
 
 ### 客戶關係管理(CRM) {#crm}
 

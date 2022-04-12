@@ -4,10 +4,10 @@ user-guide-title: Adobe Experience 平台來源連接器說明
 breadcrumb-title: 來源連接器指南
 user-guide-description: 從多種來源或結構擷取資料、加標籤，以及增強已擷取的資料。
 feature: Sources
-source-git-commit: 5d03dda7a972d37697032978b6e91a39800f81c8
+source-git-commit: 66dafe4bca6e1eb0fc67a745ac20a6e0b119aa39
 workflow-type: tm+mt
-source-wordcount: '757'
-ht-degree: 13%
+source-wordcount: '773'
+ht-degree: 12%
 
 ---
 
@@ -48,6 +48,8 @@ ht-degree: 13%
       - [Oracle對象儲存](connectors/cloud-storage/oracle-object-storage.md)
       - [SFTP連接器](connectors/cloud-storage/sftp.md)
       - [AmazonS3和Azure Blob連接器](connectors/cloud-storage/blob-s3.md)
+   - 同意和首選項 {#consent}
+      - [OneTrust整合](connectors/consent-and-preferences/onetrust.md)
    - CRM {#crm}
       - [Microsoft Dynamics 連接器](connectors/crm/ms-dynamics.md)
       - [Salesforce連接器](connectors/crm/salesforce.md)
@@ -109,6 +111,8 @@ ht-degree: 13%
          - [Google酒吧](tutorials/api/create/cloud-storage/google-pubsub.md)
          - [Oracle對象儲存](tutorials/api/create/cloud-storage/oracle-object-storage.md)
          - [SFTP](tutorials/api/create/cloud-storage/sftp.md)
+      - 同意和首選項 {#consent}
+         - [OneTrust整合](tutorials/api/create/consent-and-preferences/onetrust.md)
       - CRM {#crm}
          - [Microsoft Dynamics](tutorials/api/create/crm/ms-dynamics.md)
          - [Salesforce](tutorials/api/create/crm/salesforce.md)
@@ -203,6 +207,8 @@ ht-degree: 13%
          - [Oracle對象儲存](tutorials/ui/create/cloud-storage/oracle-object-storage.md)
          - [SFTP](tutorials/ui/create/cloud-storage/sftp.md)
          - [AmazonS3和Blob](tutorials/ui/create/cloud-storage/blob-s3.md)
+      - 同意和首選項 {#consent}
+         - [OneTrust整合](tutorials/ui/create/consent-and-preferences/onetrust.md)
       - CRM {#crm}
          - [Microsoft動力](tutorials/ui/create/crm/dynamics.md)
          - [Salesforce](tutorials/ui/create/crm/salesforce.md)
@@ -250,6 +256,7 @@ ht-degree: 13%
       - [廣告連接資料流](tutorials/ui/dataflow/advertising.md)
       - [批處理雲儲存連接資料流](tutorials/ui/dataflow/batch/cloud-storage.md)
       - [流式雲儲存連接資料流](tutorials/ui/dataflow/streaming/cloud-storage-streaming.md)
+      - [同意和首選項連接資料流](tutorials/ui/dataflow/consent-and-preferences.md)
       - [CRM連接資料流](tutorials/ui/dataflow/crm.md)
       - [客戶成功連接資料流](tutorials/ui/dataflow/customer-success.md)
       - [資料庫連接資料流](tutorials/ui/dataflow/databases.md)
