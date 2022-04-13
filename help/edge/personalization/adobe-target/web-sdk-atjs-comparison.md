@@ -2,9 +2,10 @@
 title: 將at.js與Experience PlatformWeb SDK進行比較
 description: 瞭解at.js功能與Experience PlatformWeb SDK的比較方式
 keywords: target;adobe target;activity.id;experience.id;renderDecisions;decisionScopes;prehiding snippet;vec；基於表單的體驗作曲家；xdm;avocies;decions;scope;schema；系統圖；圖
-source-git-commit: 6efb40e90cb8c29a0141bb0db6e20cec23f2be9a
+exl-id: b63fe47d-856a-4cae-9057-51917b3e58dd
+source-git-commit: 71c63e0d0b993206cb3bb5de7f7fbd5e10c6f2e3
 workflow-type: tm+mt
-source-wordcount: '2277'
+source-wordcount: '2269'
 ht-degree: 6%
 
 ---
@@ -23,13 +24,13 @@ ht-degree: 6%
 
 ### 安裝Web SDK
 
-The prebuilt version is available on a CDN. 您可以直接在頁面上引用CDN上的庫，或下載並托管在您自己的基礎架構上。 它以縮小和未縮小的格式提供。 The unminified version is helpful for debugging purposes.
+預構建版本可在CDN上使用。 您可以直接在頁面上引用CDN上的庫，或下載並托管在您自己的基礎架構上。 它以縮小和未縮小的格式提供。 未修改的版本有助於調試。
 
-URL structure: https://cdn1.adoberesources.net/alloy/[VERSION]/alloy.min.js OR alloy.js for the non-minified version.
+URL結構：https://cdn1.adoberesources.net/alloy/[版本]/alloy.min.js或alloy.js，用於非精簡版本。
 
 例如：
 
-* Minified: [https://cdn1.adoberesources.net/alloy/2.6.4/alloy.min.js](https://cdn1.adoberesources.net/alloy/2.6.4/alloy.min.js)
+* 已簡化： [https://cdn1.adoberesources.net/alloy/2.6.4/alloy.min.js](https://cdn1.adoberesources.net/alloy/2.6.4/alloy.min.js)
 * 未限定： [https://cdn1.adoberesources.net/alloy/2.6.4/alloy.js](https://cdn1.adoberesources.net/alloy/2.6.4/alloy.js)
 
 [更多詳情](../../fundamentals/installing-the-sdk.md)
@@ -38,7 +39,7 @@ URL structure: https://cdn1.adoberesources.net/alloy/[VERSION]/alloy.min.js OR a
 
 ### 配置at.js
 
-在每個at.js檔案的末尾，您將找到一個節，在該節中我們實例化並傳遞設定對象。 It is customizable, at download we populate that section with current customer settings.
+在每個at.js檔案的末尾，您將找到一個節，在該節中我們實例化並傳遞設定對象。 它可自定義，下載時，我們將用當前客戶設定填充該部分。
 
 ```javascript
 window.adobe.target.init(window, document, {
@@ -99,17 +100,17 @@ alloy("configure", {
 [更多詳情](../../fundamentals/configuring-the-sdk.md)
 
 
-## How to request and automatically render Page Load Target offers
+## 如何請求並自動呈現頁面載入目標產品
 
-### Using at.js
+### 使用at.js
 
-啟用設定時使用at.js 2.x `pageLoadEnabled`，庫將觸發對目標邊緣的調用 `execute -> pageLoad`。 If all the settings are set to the default values, no custom coding is necessary.Once at.js is added to the page and loaded by the browser, a Target Edge call will be executed.
+啟用設定時使用at.js 2.x `pageLoadEnabled`，庫將觸發對目標邊緣的調用 `execute -> pageLoad`。 如果所有設定都設定為預設值，則無需自定義編碼。一旦at.js添加到頁面並由瀏覽器載入，將執行目標邊緣調用。
 
-### Using Web SDK
+### 使用Web SDK
 
 在Adobe Target內建立的內容 [視覺體驗作曲家](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html) 可由SDK自動檢索和呈現。
 
-To request and automatically render Target offers, use the `sendEvent` command and set the `renderDecisions` option to `true`. 這樣做會強制SDK自動呈現任何符合自動呈現條件的個性化內容。
+要請求並自動呈現目標優惠，請使用 `sendEvent` 命令並設定 `renderDecisions` 選項 `true`。 這樣做會強制SDK自動呈現任何符合自動呈現條件的個性化內容。
 
 範例：
 
@@ -448,7 +449,7 @@ alloy("sendEvent", {
 
 ## 如何應用目標活動
 
-### Using at.js
+### 使用at.js
 
 您可以使用 `applyOffers` 函式： `adobe.target.applyOffer(options)`
 
@@ -471,9 +472,9 @@ Web SDK當前不支援此功能。
 
 ### 使用at.js
 
-You can track events by using the `trackEvent` function or using `sendNotifications`.
+您可以使用 `trackEvent` 函式或使用 `sendNotifications`。
 
-This function fires a request to report user actions, such as clicks and conversions. 它不提供響應中的活動。
+此函式將觸發報告用戶操作（如按一下和轉換）的請求。 它不提供響應中的活動。
 
 
 **範例 1**
@@ -625,7 +626,7 @@ alloy("sendEvent", {
 
 ### 使用at.js
 
-使用 `adobe.target.triggerView` 的子菜單。 每當新頁面載入或頁面上的元件重新呈現時，就可呼叫此函數。應為單頁應用程式(SPA)實現adobe.target.triggerView()，以便使用Visual Experience Composer(VEC)建立A/BTest和體驗目標(XT)活動。 If adobe.target.triggerView() is not implemented on the site, the VEC cannot be utilized for SPA.
+使用 `adobe.target.triggerView` 的子菜單。 每當新頁面載入或頁面上的元件重新呈現時，就可呼叫此函數。應為單頁應用程式(SPA)實現adobe.target.triggerView()，以便使用Visual Experience Composer(VEC)建立A/BTest和體驗目標(XT)活動。 如果站點上未實現adobe.target.triggerView()，則無法使用VECSPA。
 
 **範例**
 
@@ -657,9 +658,9 @@ alloy("sendEvent", {
 
 [更多詳情](./spa-implementation.md#implementing-xdm-views)
 
-## How to leverage Response Tokens
+## 如何利用響應令牌
 
-Personalization content returned from Adobe Target includes [response tokens](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html), which are details about the activity, offer, experience, user profile, geo information, and more. 這些詳細資訊可以與第三方工具共用或用於調試。 可以在Adobe Target用戶介面中配置響應令牌。
+從Adobe Target返回的個性化內容包括 [響應令牌](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html)，這些是有關活動、服務、體驗、用戶配置檔案、地理資訊等的詳細資訊。 這些詳細資訊可以與第三方工具共用或用於調試。 可以在Adobe Target用戶介面中配置響應令牌。
 
 ### 使用at.js
 
@@ -914,7 +915,7 @@ alloy("sendEvent", {
 
 ## 如何設定目標全局設定
 
-### Using at.js
+### 使用at.js
 
 您可以使用 `window.targetGlobalSettings` 覆寫 at.js 資料庫中的設定，而非在 Target Standard/Premium UI 中或使用 REST API 進行設定。
 
@@ -932,11 +933,11 @@ window.targetGlobalSettings = {
 
 [了解更多](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/targetgobalsettings.html?lang=en)
 
-### Using Web SDK
+### 使用Web SDK
 
-This feature is not supported in Web SDK.
+Web SDK不支援此功能。
 
-## How to update Target Profile attributes
+## 如何更新目標配置檔案屬性
 
 ### 使用at.js
 
@@ -1221,8 +1222,8 @@ At.js公開了以下調試功能：
 
 使用Web SDK時，您具有多個調試功能：
 
-* Using [Griffon](https://aep-sdks.gitbook.io/docs/beta/project-griffon)
+* 使用 [格里豐](https://aep-sdks.gitbook.io/docs/beta/project-griffon)
 * [已啟用Web SDK調試](../../../edge/fundamentals/debugging.md)
 * 使用 [Web SDK監視掛接](https://github.com/adobe/alloy/wiki/Monitoring-Hooks)
-* 使用 [Adobe Experience Platform調試器](https://experienceleague.adobe.com/docs/debugger/using-v2/experience-cloud-debugger.html?lang=zh-tw)
+* 使用 [Adobe Experience Platform調試器](../../../debugger/home.md)
 * 目標跟蹤
