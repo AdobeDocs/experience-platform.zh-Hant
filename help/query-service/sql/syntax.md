@@ -5,9 +5,9 @@ title: 查詢服務中的SQL語法
 topic-legacy: syntax
 description: 此文檔顯示Adobe Experience Platform查詢服務支援的SQL語法。
 exl-id: 2bd4cc20-e663-4aaa-8862-a51fde1596cc
-source-git-commit: 2a74d900053a868ce936d957dee008da846d6608
+source-git-commit: a5391c1ccc24845673217e15bafd1a1df33cbc18
 workflow-type: tm+mt
-source-wordcount: '2668'
+source-wordcount: '2741'
 ht-degree: 2%
 
 ---
@@ -424,11 +424,15 @@ END $$;
 
 ## 內聯 {#inline}
 
-內聯函式將結構陣列的元素分離，並將這些值生成到表中。 它只能放在 `SELECT` 清單 `LATERAL VIEW`。
+的 `inline` 函式將結構陣列的元素分離，並將這些值生成表。 它只能放在 `SELECT` 清單 `LATERAL VIEW`。
 
-內聯函式 **不能** 將其置於具有其他生成器功能的選擇清單中。
+的 `inline` 函式 **不能** 將其置於具有其他生成器功能的選擇清單中。
 
 預設情況下，生成的列名為&quot;col1&quot;、&quot;col2&quot;等。 如果表達式為 `NULL` 則不生成行。
+
+>[!TIP]
+>
+>可以使用 `RENAME` 的子菜單。
 
 **範例**
 
@@ -442,6 +446,20 @@ END $$;
 1  a Spark SQL
 2  b Spark SQL
 ```
+
+第二個示例進一步演示了C-SiO_2的概念和應用 `inline` 的子菜單。 該示例的資料模型在下圖中說明。
+
+![productListItems的架構圖](../images/sql/productListItems.png)
+
+**範例**
+
+```sql
+select inline(productListItems) from source_dataset limit 10;
+```
+
+從 `source_dataset` 用於填充目標表。
+
+| SKU |體驗 |數量 |價格總計 | |—+—+—| | product-id-1 |(&quot;(&quot;(&quot;(&quot;(A,pass,B,NULL)&quot;)&quot;) | 5 | 10.5 | | product-id-5 |(&quot;(&quot;(&quot;(&quot;(A,pass, B,NULL)&quot;)&quot;) | | | | product-id-2 |(&quot;(&quot;(&quot;(AF, C, D,NULL)&quot;)&quot;) | 6 | 40 | | product-id-4 |(&quot;(&quot;(&quot;(&quot;(BM,pass, NA,NULL)&quot;)&quot;) | 3 | 12 |
 
 ## [!DNL Spark] SQL命令
 
