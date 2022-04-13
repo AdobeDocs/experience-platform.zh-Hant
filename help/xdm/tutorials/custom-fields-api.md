@@ -1,9 +1,10 @@
 ---
 title: 在架構註冊表API中定義XDM欄位
 description: 瞭解如何在架構註冊表API中建立自定義體驗資料模型(XDM)資源時定義不同的欄位。
-source-git-commit: af4c345819d3e293af4e888c9cabba6bd874583b
+exl-id: d79332e3-8448-42af-b250-882bcb0f1e7d
+source-git-commit: 536657f11a50ea493736296780dd57f41dfefeae
 workflow-type: tm+mt
-source-wordcount: '762'
+source-wordcount: '783'
 ht-degree: 0%
 
 ---
@@ -165,16 +166,18 @@ ht-degree: 0%
 
 ## 建立自定義映射類型 {#maps}
 
-為了在XDM中有效地支援「類地圖」資料，可以使用 `meta:xdmType` 設定為 `map` 以明確管理對象時，應將鍵集視為不受約束。 XDM對此儲存提示的使用設定了以下限制：
+為了在XDM中有效地支援「類地圖」資料，可以使用 `meta:xdmType` 設定為 `map` 以明確管理對象時，應將鍵集視為不受約束。 被攝入到映射欄位中的資料必須使用字串鍵，並且只使用字串或整數值(由 `additionalProperties.type`)。
 
-* 映射類型MUST為類型 `object`
-* 映射類型不能定義屬性（換句話說，它們定義「空」對象）
-* 映射類型必須包括單個 `additionalProperties` 描述可能放置在映射中的值的架構
+XDM對此儲存提示的使用設定了以下限制：
+
+* 映射類型MUST為類型 `object`。
+* 映射類型不能定義屬性（換句話說，它們定義「空」對象）。
+* 映射類型必須包括 `additionalProperties.type` 欄位，該欄位描述可能放置在映射中的值 `string` 或 `integer`。
 
 確保在完全必要時僅使用映射類型欄位，因為這些欄位具有以下效能缺陷：
 
-* 對於1億條記錄，Adobe Experience Platform查詢服務的響應時間從三秒縮短到十秒
-* 地圖必須少於16個鍵，否則可能進一步降級
+* 對於1億條記錄，Adobe Experience Platform查詢服務的響應時間從3秒縮短到10秒。
+* 地圖必須少於16個鍵，否則可能會進一步退化。
 
 平台用戶介面在如何提取映射類型欄位的鍵方面也有局限性。 對象類型欄位可以展開，但映射將顯示為單個欄位。
 
