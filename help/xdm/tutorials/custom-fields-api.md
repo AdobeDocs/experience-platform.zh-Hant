@@ -2,7 +2,7 @@
 title: 在架構註冊表API中定義XDM欄位
 description: 瞭解如何在架構註冊表API中建立自定義體驗資料模型(XDM)資源時定義不同的欄位。
 exl-id: d79332e3-8448-42af-b250-882bcb0f1e7d
-source-git-commit: 536657f11a50ea493736296780dd57f41dfefeae
+source-git-commit: 4ce9e53ec420a8c9ba07cdfd75e66d854989f8d2
 workflow-type: tm+mt
 source-wordcount: '783'
 ht-degree: 0%
@@ -60,7 +60,7 @@ ht-degree: 0%
     <td>約束枚舉值提供在 <code>enum</code> 陣列，而每個值的面向客戶的可選標籤可在下面提供 <code>meta:enum</code>:
       <pre class="JSON language-JSON hljs">
 "sampleField":{ "type":"string","enum":[ "value1"、"value2"、"value3" ]、"meta:enum:{ "value1":"值1"、"值2":"值2"、"值3":"值3" }, "default":"值1" }</pre>
-    <br>請注意 <code>meta:enum</code> 值 <strong>不</strong> 聲明枚舉或自行驅動任何資料驗證。 在大多數情況下， <code>meta:enum</code> 也提供 <code>enum</code> 確保資料受到約束。 但是，有些使用情況 <code>meta:enum</code> 沒有相應的 <code>enum</code> 陣列。 請參閱上的教程 <a href="../tutorials/extend-soft-enum.md">延伸軟圓</a> 的子菜單。
+    <br>請注意 <code>meta:enum</code> 值 <strong>不</strong> 聲明枚舉或自行驅動任何資料驗證。 在大多數情況下， <code>meta:enum</code> 也提供 <code>enum</code> 確保資料受到約束。 但是，有些使用情況 <code>meta:enum</code> 沒有相應的 <code>enum</code> 陣列。 請參閱上的教程 <a href="../tutorials/suggested-values.md">定義建議值</a> 的子菜單。
     </td>
   </tr>
   <tr>
