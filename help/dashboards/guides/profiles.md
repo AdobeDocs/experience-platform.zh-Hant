@@ -4,7 +4,7 @@ title: 配置式儀表板
 description: Adobe Experience Platform提供了一個儀表板，您可以通過該儀表板查看有關您組織的即時客戶配置檔案資料的重要資訊。
 type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
-source-git-commit: 7ca40776747541615e1a1d717aae8d48bed27a74
+source-git-commit: bc449e066a6c9875dd667c5b1715ab3226228d85
 workflow-type: tm+mt
 source-wordcount: '2572'
 ht-degree: 0%
@@ -232,7 +232,7 @@ Adobe提供多個小部件，用於評估可用於資料分析的所攝取配置
 
 ### (Beta) [!UICONTROL 配置檔案完整性趨勢] {#profile-completeness-trend}
 
-此小部件建立堆積柱形圖，以描述隨時間推移配置檔案完整性的趨勢。 完整性由所有觀察屬性中填充非空值的屬性百分比度量。 它將配置檔案完整性分類為自上次處理日期以來的高、中或低完整性。
+此小部件建立堆積面積圖，以描述隨時間推移配置檔案完整性的趨勢。 完整性由所有觀察屬性中填充非空值的屬性百分比度量。 它將配置檔案完整性分類為自上次處理日期以來的高、中或低完整性。
 
 x軸表示時間，y軸表示輪廓的數量，顏色表示輪廓完整性的三個級別。
 

@@ -4,7 +4,7 @@ title: 目標儀表板
 description: Adobe Experience Platform提供了一個儀表板，您可以通過該儀表板查看有關組織活動目標的重要資訊。
 type: Documentation
 exl-id: 6a34a796-24a1-450a-af39-60113928873e
-source-git-commit: 45806166e48e3a9d9d7eeeaea0827d6f83c3ca3b
+source-git-commit: bc449e066a6c9875dd667c5b1715ab3226228d85
 workflow-type: tm+mt
 source-wordcount: '1764'
 ht-degree: 0%
@@ -51,7 +51,7 @@ Adobe提供了多個標準小部件，您可以使用這些部件來可視化與
 * [[!UICONTROL 最近建立的目標]](#recently-created-destinations)
 * [[!UICONTROL 最近激活的段]](#recently-activated-segments)
 * [[!UICONTROL 按目標最近激活的段]](#recently-activated-segments-by-destination)
-* [[!UICONTROL 受眾規模趨勢]](#audience-size-trends)
+* [[!UICONTROL 受眾規模趨勢]](#audience-size-trend)
 * [[!UICONTROL 按標識未映射的段]](#unmapped-segments-by-identity)
 * [[!UICONTROL 按標識映射的段]](#mapped-segments-by-identity)
 * [[!UICONTROL 普通觀眾]](#common-audiences)
