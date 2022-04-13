@@ -5,9 +5,9 @@ title: XDM ExperienceEvent類
 topic-legacy: overview
 description: 本文檔概述了XDM ExperienceEvent類以及事件資料建模的最佳做法。
 exl-id: a8e59413-b52f-4ea5-867b-8d81088a3321
-source-git-commit: 32d8798d426696d8fd4ace4c53a8bf9b4db26b61
+source-git-commit: 39e4ed1ff872de241bc07271cfb44310d41a2401
 workflow-type: tm+mt
-source-wordcount: '1797'
+source-wordcount: '1830'
 ht-degree: 1%
 
 ---
@@ -18,18 +18,18 @@ ht-degree: 1%
 
 「體驗事件」是所發生事件的事實記錄，包括所涉及個人的時間點和身份。 事件可以是顯性（直接可觀察的人類行為）或隱性（在沒有直接人類行為的情況下引起），並記錄時不進行匯總或解釋。 有關此類在平台生態系統中使用的更高級別資訊，請參閱 [XDM概述](../home.md#data-behaviors)。
 
-的 [!DNL XDM ExperienceEvent] 類本身為架構提供了多個與時間序列相關的欄位。 在接收資料時，會自動填充其中某些欄位的值：
+的 [!DNL XDM ExperienceEvent] 類本身為架構提供了多個與時間序列相關的欄位。 其中兩個欄位(`_id` 和 `timestamp`) **要求** 對於基於類的所有架構，其餘為可選。 在接收資料時，會自動填充某些欄位的值。
 
-![](../images/classes/experienceevent/structure.png)
+![XDM ExperienceEvent在平台UI中顯示的結構](../images/classes/experienceevent/structure.png)
 
 | 屬性 | 說明 |
 | --- | --- |
-| `_id` | 事件的唯一字串標識符。 此欄位用於跟蹤單個事件的唯一性、防止重複資料並在下游服務中查找該事件。 有時， `_id` 可以是 [通用唯一標識符(UUID)](https://tools.ietf.org/html/rfc4122) 或 [全局唯一標識符(GUID)](https://docs.microsoft.com/en-us/dotnet/api/system.guid?view=net-5.0)。<br><br>如果是從源連接流式傳輸資料或直接從Parce檔案接收資料，則應通過連接使事件唯一的特定欄位組合來生成此值，如主ID、時間戳、事件類型等。 連接的值必須是 `uri-reference` 格式化字串，表示必須刪除任何冒號字元。 然後，應使用SHA-256或您選擇的其他算法對連接值進行散列。<br><br>必須要區分 **此欄位不表示與個人相關的標識**&#x200B;而是資料本身的記錄。 與個人有關的身份資料應降級到 [標識欄位](../schema/composition.md#identity) 由相容欄位組提供。 |
+| `_id`<br>**(必填)** | 事件的唯一字串標識符。 此欄位用於跟蹤單個事件的唯一性、防止重複資料並在下游服務中查找該事件。 有時， `_id` 可以是 [通用唯一標識符(UUID)](https://tools.ietf.org/html/rfc4122) 或 [全局唯一標識符(GUID)](https://docs.microsoft.com/en-us/dotnet/api/system.guid?view=net-5.0)。<br><br>如果是從源連接流式傳輸資料或直接從Parce檔案接收資料，則應通過連接使事件唯一的特定欄位組合來生成此值，如主ID、時間戳、事件類型等。 連接的值必須是 `uri-reference` 格式化字串，表示必須刪除任何冒號字元。 然後，應使用SHA-256或您選擇的其他算法對連接值進行散列。<br><br>必須要區分 **此欄位不表示與個人相關的標識**&#x200B;而是資料本身的記錄。 與個人有關的身份資料應降級到 [標識欄位](../schema/composition.md#identity) 由相容欄位組提供。 |
 | `eventMergeId` | 如果使用 [Adobe Experience PlatformWeb SDK](../../edge/home.md) 要接收資料，這表示導致建立記錄的接收批的ID。 資料接收時，系統會自動填充此欄位。 不支援在Web SDK實現的上下文之外使用此欄位。 |
 | `eventType` | 一個字串，它指示事件的類型或類別。 如果要區分同一架構和資料集中的不同事件類型，例如區分零售公司的產品視圖事件和購物車附加事件，則可以使用此欄位。<br><br>此屬性的標準值在 [附錄部分](#eventType)包括其預期用例的說明。 此欄位是可擴展枚舉，這意味著您也可以使用自己的事件類型字串對正在跟蹤的事件進行分類。<br><br>`eventType` 限制您每次在應用程式上點擊時只使用一個事件，因此您必須使用計算欄位讓系統知道哪個事件最重要。 有關詳細資訊，請參閱 [計算欄位的最佳實踐](#calculated)。 |
 | `producedBy` | 描述事件的生成者或來源的字串值。 如果需要，該欄位可用於過濾某些事件生成者以用於分段。<br><br>中提供了此屬性的一些建議值 [附錄部分](#producedBy)。 此欄位是可擴展的枚舉，這意味著您也可以使用自己的字串來表示不同的事件生成者。 |
 | `identityMap` | 一個映射欄位，包含事件所應用的個體的一組命名空間標識。 當接收身份資料時，系統會自動更新此欄位。 為了正確利用此欄位 [即時客戶概要資訊](../../profile/home.md)，不要嘗試手動更新資料操作中欄位的內容。<br /><br />請參閱中有關標識映射的章節 [架構組合基礎](../schema/composition.md#identityMap) 的子菜單。 |
-| `timestamp` | 事件發生時的ISO 8601時間戳，格式為 [RFC 3339第5.6節](https://tools.ietf.org/html/rfc3339#section-5.6)。 此時間戳必須發生在過去。 請參閱下面的章節 [時間戳](#timestamps) 用於此欄位的最佳做法。 |
+| `timestamp`<br>**(必填)** | 事件發生時的ISO 8601時間戳，格式為 [RFC 3339第5.6節](https://tools.ietf.org/html/rfc3339#section-5.6)。 此時間戳必須發生在過去。 請參閱下面的章節 [時間戳](#timestamps) 用於此欄位的最佳做法。 |
 
 {style=&quot;table-layout:auto&quot;}
 
