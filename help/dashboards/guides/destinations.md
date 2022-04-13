@@ -4,9 +4,9 @@ title: 目標儀表板
 description: Adobe Experience Platform提供了一個儀表板，您可以通過該儀表板查看有關組織活動目標的重要資訊。
 type: Documentation
 exl-id: 6a34a796-24a1-450a-af39-60113928873e
-source-git-commit: 32df4c5972cb32afc6021ae27dc05f77076a5984
+source-git-commit: 45806166e48e3a9d9d7eeeaea0827d6f83c3ca3b
 workflow-type: tm+mt
-source-wordcount: '1708'
+source-wordcount: '1764'
 ht-degree: 0%
 
 ---
@@ -112,6 +112,10 @@ Adobe提供了多個標準小部件，您可以使用這些部件來可視化與
 第二個下拉菜單列出了每個可發送到儀表板頂部所選目標帳戶的可用段。
 
 ![受眾大小趨勢小部件。](../images/destinations/audience-size-trend.png)
+
+的 **[!UICONTROL 受眾規模趨勢]** 小部件提供 [!UICONTROL 字幕] 按鈕。 選擇 **[!UICONTROL 字幕]** 的子菜單。 機器學習模型通過分析圖表和分段資料自動生成描述關鍵趨勢和重要事件的字幕。
+
+![「受眾大小趨勢」小部件的自動字幕對話框。](../images/destinations/audience-size-trend-captions.png)
 
 ### [!UICONTROL 按標識未映射的段] {#unmapped-segments-by-identity}
 
