@@ -2,9 +2,9 @@
 title: Adobe Experience 平台發行說明
 description: Adobe Experience Platform的最新發行說明。
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 63c25b1d99e55fae92c3c5e89025ac2bbcff5b03
+source-git-commit: 3f1750d75bd69c5cf47eb593144f564564f90405
 workflow-type: tm+mt
-source-wordcount: '1158'
+source-wordcount: '1193'
 ht-degree: 5%
 
 ---
@@ -117,6 +117,7 @@ Adobe Experience Platform提供 [!DNL dashboards] 您可以通過查看有關組
 | 功能 | 說明 |
 | --- | --- |
 | 全局資料流設定 | 現在，在配置資料流時可以配置幾個新的全局設定：地理位置、第一方IDcookie和第三方ID同步。 請參閱 [配置資料流](../../edge/fundamentals/datastreams.md#configure) 的子菜單。 |
+| [邊緣網路伺服器API](../../server-api/overview.md) | 伺服器API使客戶能夠使用新的經過驗證的端點與Experience Platform邊緣網路進行交互，以支援各種資料收集，個性化，廣告和營銷使用案例。 |
 
 有關平台中資料收集的詳細資訊，請參閱 [資料收集概述](../../collection/home.md)。
 
