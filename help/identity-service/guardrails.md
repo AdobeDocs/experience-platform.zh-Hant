@@ -2,9 +2,10 @@
 keywords: Experience Platform；身份；身份服務；疑難解答；guardrails;guidentity;identity service;troubleshooting;guardrails;guidelines;limit;
 title: 標識服務的護欄
 description: 本文檔提供有關Identity Service資料的使用和費率限制的資訊，以幫助您優化對身份圖的使用。
-source-git-commit: b36ace84acdb13b89deb6f77a02c298acade8d8e
+exl-id: bd86d8bf-53fd-4d76-ad01-da473a1999ab
+source-git-commit: b07a45e5bb9cae6e147ea790ebb77cb63f8790c1
 workflow-type: tm+mt
-source-wordcount: '377'
+source-wordcount: '385'
 ht-degree: 3%
 
 ---
@@ -30,7 +31,7 @@ ht-degree: 3%
 
 | 瓜德賴爾 | 限制 | 附註 |
 | --- | --- | --- |
-| 圖中的恆等式數 | 150 | 一旦達到限制，將不會更新標識圖。 |
+| 圖中的恆等式數 | 150 | 該限制在沙盒級別應用。 一旦達到限制，將不會更新標識圖。 |
 | XDM記錄中的標識數 | 20 | 所需的XDM記錄的最小數量為2。 |
 | 自定義命名空間數 | None | 可以建立的自定義命名空間數目沒有限制。 |
 | 圖數 | 無 | 您可以建立的標識圖數沒有限制。 |
@@ -49,5 +50,5 @@ ht-degree: 3%
 
 有關 [!DNL Identity Service]:
 
-* [[!DNL Identity Service] 概觀](home.md)
+* [[!DNL Identity Service]概述](home.md)
 * [標識圖形查看器](ui/identity-graph-viewer.md)
