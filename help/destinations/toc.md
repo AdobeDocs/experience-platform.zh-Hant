@@ -4,9 +4,9 @@ user-guide-title: 目的地指南
 user-guide-description: 針對跨通路行銷活動、電子郵件宣傳、鎖定特定目標的行銷活動和其他諸多使用案例，啟用已知和未知的資料。
 description: 本文檔列出了Adobe Experience Platform目標的目錄
 feature: Destinations
-source-git-commit: 9467aa3b09df04e901e158368db9b7a2a255e880
+source-git-commit: 6257e06369060d7f71e837059977817cd495f62e
 workflow-type: tm+mt
-source-wordcount: '736'
+source-wordcount: '738'
 ht-degree: 8%
 
 ---
@@ -112,6 +112,7 @@ ht-degree: 8%
       * [OracleEloqua連接](./catalog/email-marketing/oracle-eloqua.md)
       * [Oracle響應系統連接](./catalog/email-marketing/oracle-responsys.md)
       * [SalesforceMarketing Cloud連接](./catalog/email-marketing/salesforce-marketing-cloud.md)
+      * [SendGrid連接](./catalog/email-marketing/sendgrid.md)
    * 標籤擴展 {#launch-extensions}
       * [標籤擴展概述](./catalog/launch-extensions/overview.md)
    * 移動接洽目標 {#mobile-engagement}
@@ -119,7 +120,7 @@ ht-degree: 8%
       * [飛艇屬性連接](./catalog/mobile-engagement/airship-attributes.md)
       * [飛艇標籤連接](./catalog/mobile-engagement/airship-tags.md)
       * [Braze連接](./catalog/mobile-engagement/braze.md)
-   * 個性化目標 {#personalization}
+   * Personalization目的地 {#personalization}
       * [個性化目標概述](./catalog/personalization/overview.md)
       * [Adobe Target](./catalog/personalization/adobe-target-connection.md)
       * [Adobe Target 擴充功能](./catalog/personalization/adobe-target.md)

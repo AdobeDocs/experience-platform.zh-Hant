@@ -4,9 +4,9 @@ title: 電子郵件營銷目標概述
 type: Tutorial
 description: 電子郵件服務提供商(ESP)允許您管理電子郵件營銷活動，例如發送促銷電子郵件活動。
 exl-id: e07f8c5a-0424-4de5-810f-3d5711ef4606
-source-git-commit: 9d2e98c834eddcacf67de7caafef4717e38d80f8
+source-git-commit: ccbc633bfce8f4f66577b50064c28cfc26cb6dca
 workflow-type: tm+mt
-source-wordcount: '387'
+source-wordcount: '388'
 ht-degree: 4%
 
 ---
@@ -27,6 +27,7 @@ Adobe Experience Platform支援以下電子郵件營銷目標：
 * [Oracle雄辯](oracle-eloqua.md)
 * [Oracle響應系統](oracle-responsys.md)
 * [SalesforceMarketing Cloud](salesforce-marketing-cloud.md)
+* [發送網格](sendgrid.md)
 
 ## 連接到新的電子郵件營銷目標 {#connect-destination}
 
