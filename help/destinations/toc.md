@@ -4,10 +4,10 @@ user-guide-title: 目的地指南
 user-guide-description: 針對跨通路行銷活動、電子郵件宣傳、鎖定特定目標的行銷活動和其他諸多使用案例，啟用已知和未知的資料。
 description: 本文檔列出了Adobe Experience Platform目標的目錄
 feature: Destinations
-source-git-commit: c4d8ae6de2e1bbf23a25a66bde5dc88c13a13402
+source-git-commit: 9467aa3b09df04e901e158368db9b7a2a255e880
 workflow-type: tm+mt
-source-wordcount: '733'
-ht-degree: 9%
+source-wordcount: '736'
+ht-degree: 8%
 
 ---
 
@@ -52,6 +52,7 @@ ht-degree: 9%
       * [Awin Dacriter Mastertag擴展](./catalog/advertising/awin-mastertag.md)
       * [必應廣告通用事件跟蹤(UET)擴展](./catalog/advertising/bing-ads.md)
       * [分支擴展](./catalog/advertising/branch.md)
+      * [(Beta)Criteo連接](./catalog/advertising/criteo.md)
       * [按兩下泛光燈(Beta)擴展](./catalog/advertising/doubleclick-floodlight.md)
       * [Facebook像素擴展](./catalog/advertising/facebook-pixel.md)
       * [閃電通話OneTag擴展](./catalog/advertising/flashtalking.md)
@@ -113,12 +114,12 @@ ht-degree: 9%
       * [SalesforceMarketing Cloud連接](./catalog/email-marketing/salesforce-marketing-cloud.md)
    * 標籤擴展 {#launch-extensions}
       * [標籤擴展概述](./catalog/launch-extensions/overview.md)
-   * Mobile訂婚目的地 {#mobile-engagement}
+   * 移動接洽目標 {#mobile-engagement}
       * [移動項目目標概述](./catalog/mobile-engagement/overview.md)
       * [飛艇屬性連接](./catalog/mobile-engagement/airship-attributes.md)
       * [飛艇標籤連接](./catalog/mobile-engagement/airship-tags.md)
       * [Braze連接](./catalog/mobile-engagement/braze.md)
-   * Personalization目的地 {#personalization}
+   * 個性化目標 {#personalization}
       * [個性化目標概述](./catalog/personalization/overview.md)
       * [Adobe Target](./catalog/personalization/adobe-target-connection.md)
       * [Adobe Target 擴充功能](./catalog/personalization/adobe-target.md)
