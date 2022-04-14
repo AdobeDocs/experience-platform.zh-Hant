@@ -7,9 +7,9 @@ description: 瞭解如何使用流服務API將Adobe Experience Platform連接到
 hide: true
 hidefromtoc: true
 exl-id: c6927a71-3721-461e-9752-8ebc0b7b1cca
-source-git-commit: a51c878bbfd3004cb597ce9244a9ed2f2318604b
+source-git-commit: 74ef1b3abb90ab3ca24690c88c073083f02a2f1b
 workflow-type: tm+mt
-source-wordcount: '2300'
+source-wordcount: '2296'
 ht-degree: 2%
 
 ---
@@ -289,7 +289,7 @@ curl -X POST \
 
 為了在平台中使用源資料，必須建立目標架構以根據您的需要來構造源資料。 然後使用目標模式建立包含源資料的平台資料集。
 
-通過執行對目標XDM的POST請求，可以建立目標XDM模式 [架構註冊表API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml)。
+通過執行對目標XDM的POST請求，可以建立目標XDM模式 [架構註冊表API](https://developer.adobe.com/experience-platform-apis/references/schema-registry/)。
 
 有關如何建立目標XDM架構的詳細步驟，請參見上的教程 [使用API建立架構](https://experienceleague.adobe.com/docs/experience-platform/xdm/api/schemas.html?lang=en#create)。
 

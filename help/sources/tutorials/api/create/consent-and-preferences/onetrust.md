@@ -3,9 +3,10 @@ keywords: Experience Platform；首頁；熱門主題；OneTrust
 solution: Experience Platform
 title: (Beta)使用流服務API為OneTrust整合源建立資料流
 description: 瞭解如何使用流服務API將Adobe Experience Platform連接到OneTrust整合。
-source-git-commit: adefaeb895c91d45727f791b73b73a17a2b1ccf9
+exl-id: e224efe0-4756-4b8a-b446-a3e1066f2050
+source-git-commit: 74ef1b3abb90ab3ca24690c88c073083f02a2f1b
 workflow-type: tm+mt
-source-wordcount: '2317'
+source-wordcount: '2313'
 ht-degree: 2%
 
 ---
@@ -6794,7 +6795,7 @@ curl -X POST \
 
 為了在平台中使用源資料，必須建立目標架構以根據您的需要來構造源資料。 然後使用目標模式建立包含源資料的平台資料集。
 
-通過執行對目標XDM的POST請求，可以建立目標XDM模式 [架構註冊表API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml)。
+通過執行對目標XDM的POST請求，可以建立目標XDM模式 [架構註冊表API](https://developer.adobe.com/experience-platform-apis/references/schema-registry/)。
 
 有關如何建立目標XDM架構的詳細步驟，請參見上的教程 [使用API建立架構](../../../../../xdm/api/schemas.md)。
 
@@ -7786,4 +7787,3 @@ curl -X DELETE \
 成功的響應返回HTTP狀態204（無內容）和空白正文。
 
 您可以通過嘗試查找(GET)連接請求來確認刪除。
-
