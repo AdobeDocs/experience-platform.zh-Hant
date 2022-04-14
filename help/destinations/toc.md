@@ -4,10 +4,10 @@ user-guide-title: 目的地指南
 user-guide-description: 針對跨通路行銷活動、電子郵件宣傳、鎖定特定目標的行銷活動和其他諸多使用案例，啟用已知和未知的資料。
 description: 本文檔列出了Adobe Experience Platform目標的目錄
 feature: Destinations
-source-git-commit: 6257e06369060d7f71e837059977817cd495f62e
+source-git-commit: 4f057afec285af59a48dc4e28c08cfeba28597bf
 workflow-type: tm+mt
-source-wordcount: '738'
-ht-degree: 8%
+source-wordcount: '742'
+ht-degree: 9%
 
 ---
 
@@ -120,7 +120,7 @@ ht-degree: 8%
       * [飛艇屬性連接](./catalog/mobile-engagement/airship-attributes.md)
       * [飛艇標籤連接](./catalog/mobile-engagement/airship-tags.md)
       * [Braze連接](./catalog/mobile-engagement/braze.md)
-   * Personalization目的地 {#personalization}
+   * 個性化目標 {#personalization}
       * [個性化目標概述](./catalog/personalization/overview.md)
       * [Adobe Target](./catalog/personalization/adobe-target-connection.md)
       * [Adobe Target 擴充功能](./catalog/personalization/adobe-target.md)
@@ -187,6 +187,8 @@ ht-degree: 8%
       * [使用Destination SDK配置流目標](./destination-sdk/configure-destination-instructions.md)
       * [（測試版）使用Destination SDK配置基於檔案的目標](./destination-sdk/configure-file-based-destination-instructions.md)
       * [提交以審閱在Destination SDK中創作的目標](./destination-sdk/submit-destination.md)
+   * 參考 {#reference}
+      * [支援的轉換函式](./destination-sdk/supported-functions.md)
    * 記錄目標 {#document-destination}
       * [記錄您在Adobe Experience Platform的目標](./destination-sdk/docs-framework/documentation-instructions.md)
       * [使用GitHub Web介面建立目標文檔頁](./destination-sdk/docs-framework/use-github-interface-to-create-documentation.md)
