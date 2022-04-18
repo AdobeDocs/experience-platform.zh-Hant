@@ -2,10 +2,10 @@
 description: 此頁提供您需要提交的所有資訊，以便複查使用Destination SDK創作的目標。
 title: 提交以審閱在Destination SDK中創作的目標
 exl-id: eef0d858-ebd9-426e-91a1-5c93903b0eb5
-source-git-commit: 85b308b3f92a734fed0c885a574b71fa05684bb4
+source-git-commit: 7c6d0c8d4d1eea16f13359e9d7a895d767ad3c00
 workflow-type: tm+mt
-source-wordcount: '580'
-ht-degree: 1%
+source-wordcount: '648'
+ht-degree: 0%
 
 ---
 
@@ -25,9 +25,14 @@ ht-degree: 1%
 * （僅適用於已生產化的整合）文檔PR（拉式請求），請遵循 [自助文檔處理](./docs-framework/documentation-instructions.md)。
 * 將作為目標卡的徽標在Experience Platform目標目錄中顯示的影像檔案。
 
->[!NOTE]
+>[!IMPORTANT]
 >
->Adobe審查目標發佈請求的標準響應時間為5個工作日。
+>* Adobe審查目標發佈請求的標準響應時間為5個工作日。
+>
+>* 如果Adobe團隊要求您在初次提交後對配置進行任何更新，則必須在您進行更新後提交另一個目標發佈請求。
+>
+>* 即使目標在Experience Platform目錄中生存後，如果您需要對配置進行任何更新，則必須提交新的目標發佈請求，以便更新反映在配置中。
+
 
 您可以在以下各節中找到有關每個項目的詳細資訊：
 

@@ -2,9 +2,9 @@
 description: 此頁列出並說明了可以使用「/authoring/destination/publish」 API終結點執行的所有API操作。
 title: 發佈目標API終結點操作
 exl-id: 0564a132-42f4-478c-9197-9b051acf093c
-source-git-commit: 702a5b7154724faa9f5e6847b462e0ae90475571
+source-git-commit: a73a4ea93a432f60d62da5e234d8e357009b2d88
 workflow-type: tm+mt
-source-wordcount: '718'
+source-wordcount: '748'
 ht-degree: 4%
 
 ---
@@ -23,6 +23,7 @@ ht-degree: 4%
 
 * 作為Destination SDK合作夥伴，您希望使所有Experience Platform組織中的產品化目標都可用於所有Experience Platform客戶；
 * 您希望在您自己的Experience Platform組織中跨所有沙箱提供自定義目標。
+* 你 *任何更新* 配置。 配置更新僅在您提交新發佈請求後才反映在目標中，新發佈請求已獲得Experience Platform團隊的批准。
 
 ## 目標發佈API操作入門 {#get-started}
 
