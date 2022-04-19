@@ -1,14 +1,14 @@
 ---
-keywords: '廣告；罪； '
+keywords: 廣告；罪；
 title: Criteo連接
 description: Criteo能夠讓可信、有影響力的廣告為開放網際網路上的每個消費者帶來更豐富的體驗。 Criteo擁有全球最大的商業資料集和一流的人工智慧，確保整個購物過程中的每個觸點都個性化，以便在適當的時間通過正確的廣告接觸到客戶。
-source-git-commit: a3263a322012a48f37cee6137054c7fcf3cdb8a2
+exl-id: e6f394b2-ab82-47bb-8521-1cf9d01a203b
+source-git-commit: 36da42b184450cfaf12b097f982234d628681430
 workflow-type: tm+mt
-source-wordcount: '749'
+source-wordcount: '763'
 ht-degree: 3%
 
 ---
-
 
 # (Beta)Criteo連接
 
@@ -16,7 +16,7 @@ ht-degree: 3%
 
 >[!IMPORTANT]
 >
->此文檔頁面由Criteo建立。 這是當前的測試產品。 如有任何查詢或更新請求，請直接與Criteo聯繫 [這裡](mailto:criteoTechnicalPartnerships@criteo.com)。
+>此文檔頁面由Criteo建立。 這是當前的試用版產品，功能可能會更改。 如有任何查詢或更新請求，請直接與Criteo聯繫 [這裡](mailto:criteoTechnicalPartnerships@criteo.com)。
 
 Criteo能夠讓可信、有影響力的廣告為開放網際網路上的每個消費者帶來更豐富的體驗。 Criteo擁有全球最大的商業資料集和一流的人工智慧，確保整個購物過程中的每個觸點都個性化，以便在適當的時間通過正確的廣告接觸到客戶。
 
@@ -24,7 +24,11 @@ Criteo能夠讓可信、有影響力的廣告為開放網際網路上的每個�
 
 * 您需要具有管理員用戶帳戶 [克里特奧管理中心](https://marketing.criteo.com)。
 * 您需要您的Criteo廣告商ID（如果您沒有此ID，請咨詢您的Criteo聯繫人）。
-* Criteo只接受SHA-256和純文字檔案電子郵件（在發送前轉換為SHA-256）。 請勿發送任何PII（個人識別資訊，如個人姓名或電話號碼）。
+
+## 限制 {#limitations}
+
+* Criteo當前不支援從受眾中刪除用戶。
+* 克里泰奧只接受 [!DNL SHA-256] — 散列和純文字檔案電子郵件(將轉換為 [!DNL SHA-256] 發送前)。 請勿發送任何PII（個人識別資訊，如個人姓名或電話號碼）。
 
 ![先決條件](../../assets/catalog/advertising/criteo/prerequisites.png)
 
