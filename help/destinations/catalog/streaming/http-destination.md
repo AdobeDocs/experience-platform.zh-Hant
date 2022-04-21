@@ -3,9 +3,9 @@ title: (Beta)HTTP API連接
 keywords: 流；
 description: Adobe Experience Platform的HTTP API目標允許您將配置檔案資料發送到第三方HTTP終結點。
 exl-id: 165a8085-c8e6-4c9f-8033-f203522bb288
-source-git-commit: 0d58445557490a5539279f55c34183994429c632
+source-git-commit: c62117de27b150f072731c910bb0593ce1fca082
 workflow-type: tm+mt
-source-wordcount: '1382'
+source-wordcount: '1560'
 ht-degree: 1%
 
 ---
@@ -72,6 +72,36 @@ curl --location --request POST '<YOUR_API_ENDPOINT>' \
 要連接到此目標，請按照 [目標配置教程](../../ui/connect-destination.md)。
 
 ### 連接參數 {#parameters}
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_connect_http_clientcredentialstype"
+>title="客戶端憑據類型"
+>abstract="選擇 **體形編碼** 將客戶端ID和客戶端機密包含在請求正文中，或 **基本授權** 將客戶端ID和客戶端機密包含在授權標頭中。 查看文檔中的示例。"
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_connect_http_headers"
+>title="標頭"
+>abstract="按照以下格式輸入要包括在目標調用中的任何自定義標頭： `header1:value1,header2:value2,...headerN:valueN`"
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_connect_http_endpoint"
+>title="HTTP終結點"
+>abstract="要將配置檔案資料發送到的HTTP終結點的URL。"
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_connect_http_includesegmentnames"
+>title="包括段名稱"
+>abstract="如果希望資料導出包含要導出的段的名稱，則切換。 查看資料導出示例的文檔，並選中此選項。"
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_connect_http_includesegmenttimestamps"
+>title="包括段時間戳"
+>abstract="如果希望資料導出包括建立和更新段時的UNIX時間戳，以及將段映射到要激活的目標時的UNIX時間戳，則切換。 查看資料導出示例的文檔，並選中此選項。"
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_connect_http_queryparameters"
+>title="查詢參數"
+>abstract="也可以將查詢參數添加到HTTP終結點URL。 設定您使用的查詢參數的格式如下： `parameter1=value&parameter2=value`。"
 
 同時 [設定](../../ui/connect-destination.md) 此目標，必須提供以下資訊：
 

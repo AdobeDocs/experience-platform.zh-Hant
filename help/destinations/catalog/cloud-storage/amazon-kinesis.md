@@ -3,9 +3,9 @@ keywords: AmazonKinesis;kinesis目標；kinesis
 title: (β)AmazonKinesis
 description: 建立到AmazonKinesis儲存的即時出站連接，以從Adobe Experience Platform流資料。
 exl-id: b40117ef-6ad0-48a9-bbcb-97c6f6d1dce3
-source-git-commit: b2ac26589527313ec9f3cf84126e3e23da6c7b83
+source-git-commit: c62117de27b150f072731c910bb0593ce1fca082
 workflow-type: tm+mt
-source-wordcount: '1340'
+source-wordcount: '1422'
 ht-degree: 1%
 
 ---
@@ -93,6 +93,16 @@ ht-degree: 1%
 要連接到此目標，請按照 [目標配置教程](../../ui/connect-destination.md)。
 
 ### 連接參數 {#parameters}
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_connect_kinesis_includesegmentnames"
+>title="包括段名稱"
+>abstract="如果希望資料導出包含要導出的段的名稱，則切換。 查看資料導出示例的文檔，並選中此選項。"
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_connect_kinesis_includesegmenttimestamps"
+>title="包括段時間戳"
+>abstract="如果希望資料導出包括建立和更新段時的UNIX時間戳，以及將段映射到要激活的目標時的UNIX時間戳，則切換。 查看資料導出示例的文檔，並選中此選項。"
 
 同時 [設定](../../ui/connect-destination.md) 此目標，必須提供以下資訊：
 
