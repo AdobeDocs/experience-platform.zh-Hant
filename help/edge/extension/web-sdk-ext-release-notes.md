@@ -2,16 +2,23 @@
 title: Adobe Experience PlatformWeb SDK擴展發行說明
 description: Adobe Experience PlatformWeb SDK標籤擴展
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: bb06dd63de1a36d3e3d065a986f3d34f63783895
+source-git-commit: 22ae7d206d4393719352232dc254d7669ca667bd
 workflow-type: tm+mt
-source-wordcount: '1290'
-ht-degree: 48%
+source-wordcount: '1313'
+ht-degree: 47%
 
 ---
 
 # Adobe Experience PlatformWeb SDK擴展發行說明
 
 本文檔介紹Adobe Experience PlatformWeb SDK標籤擴展的發行說明。 有關SDK本身的最新發行說明，請參見 [平台Web SDK發行說明](https://experienceleague.adobe.com/docs/experience-platform/edge/release-notes.html)。
+
+## 版本2.11.0 - 2022年4月22日
+
+* 改進的標籤UI效能。
+* 將沙盒選擇器添加到資料流擴展配置。
+
+包含Adobe Experience PlatformWeb SDK庫的2.10.0版。
 
 ## 版本2.10.0 - 2022年3月10日
 
