@@ -1,43 +1,44 @@
 ---
-title: 在Adobe Experience Platform中記錄您的目的地
-description: 在Adobe Experience Platform中為目的地建立檔案頁面的逐步指示
+title: 記錄您在Adobe Experience Platform的目標
+description: 逐步說明，以便您在Adobe Experience Platform為目標建立文檔頁面
 exl-id: 6cc9c758-44bb-463b-941a-06b1a22ee8f3
-source-git-commit: 83539a9aa2fddcae0c9a44302d8bfa9d9f56de0c
+source-git-commit: f9938aca8a5c72a53a688152ac2ab0c0abe632ce
 workflow-type: tm+mt
-source-wordcount: '458'
+source-wordcount: '481'
 ht-degree: 0%
 
 ---
 
-# 在Adobe Experience Platform中記錄您的目的地
+# 記錄您在Adobe Experience Platform的目標
 
 ## 總覽 {#overview}
 
-歡迎來到Adobe Experience Platform，真高興有你來！
-記錄目的地是在Adobe Experience Platform中即時設定目的地的最後一步。
+歡迎來到Adobe Experience Platform，很高興能來！
+記錄目標是在Adobe Experience Platform直播之前的最後一步。
 
-本檔案章節包含：
+本文檔部分包括：
 
-* 逐步指示您為新目的地建立檔案頁面；
-* 可供您填寫目的地的範本；
-* [使用Markdown的一般指示](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html?lang=en);
-* [AdobeMarkdown味道的特定指示](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html?lang=en#custom-markdown-extensions) (AdobeMarkdown味道與一般Markdown非常類似)。
+* 逐步說明，以便您為新目標建立文檔頁面；
+* 一個模板，供您填寫目標；
+* [有關使用Markdown的一般說明](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html?lang=en);
+* [AdobeMarkdown風味的具體說明](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html?lang=en#custom-markdown-extensions) (AdobeMarkdown的味道與普通Markdown非常相似)。
+* A [最佳做法頁](./authoring-best-practices.md) 幫助您為目標頁面建立文檔頁面，該頁面符合Experience Platform文檔質量標準。
 
 ## 先決條件 {#prerequisites}
 
-若要根據本文的指示建立目的地的檔案，需要下列項目：
+要根據本文中的說明為目標建立文檔，需要以下各項：
 
-* **GitHub帳戶**。如果您尚無帳戶，請註冊[ GitHub](https://github.com/)。
-* **GitHub案頭版**。如果您選取在本機環境](./work-in-local-environment.md)中建立檔案，則必須使用[GitHub Desktop](https://desktop.github.com/)。[
-* 您與Adobe的整合必須處於測試階段，且目的地已部署在Adobe Experience Platform的中繼環境中。
+* **GitHub帳戶**。 註冊 [GitHub](https://github.com/) 你還沒有帳戶。
+* **GitHub案頭**。 如果選擇 [在本地環境中建立文檔](./work-in-local-environment.md)，必須使用 [GitHub案頭](https://desktop.github.com/)。
+* 您與Adobe的整合必須處於測試階段，目標部署在Adobe Experience Platform的過渡環境中。
 
-## 在Adobe Experience Platform中建立目的地檔案的高階指示 {#high-level-instructions}
+## 為您在Adobe Experience Platform的目標建立文檔的高級說明 {#high-level-instructions}
 
-若要針對您的目的地建立檔案，您需要先建立Adobe Experience Platform檔案存放庫的復本](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html?lang=en#fork-the-repository)，然後在新分支中編輯提供的[檔案範本](./self-service-template.md)。 [使用Adobe提供的範本建立新的目的地頁面。 準備就緒時，請開啟提取請求(PR)。 下面的[建立新目的地頁面的步驟中會進一步說明此操作。](./documentation-instructions.md#steps-to-create-docs-page)
+在較高級別，要為目標建立文檔，您需要 [建立叉](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html?lang=en#fork-the-repository) 並編輯 [提供的文檔模板](./self-service-template.md) 新的分支。 使用Adobe提供的模板建立新的目標頁。 準備好後開啟拉入請求(PR)。 下面將進一步介紹執行此操作的說明， [建立新目標頁的步驟](./documentation-instructions.md#steps-to-create-docs-page)。
 
 >[!TIP]
 >
->如需Adobe檔案團隊在編寫檔案時使用的一些快速撰寫秘訣，請參閱[Adobe檔案撰寫指南](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/general-writing-guidance.html?lang=en) 。
+>請參閱 [編寫Adobe文檔指南](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/general-writing-guidance.html?lang=en) Adobe文檔團隊在創作文檔時使用的一些快速編寫提示。
 
 <!--
 
@@ -46,13 +47,13 @@ ht-degree: 0%
 
 -->
 
-## 檔案範本 {#documentation-template}
+## 文檔模板 {#documentation-template}
 
-為協助您建立檔案頁面，Adobe已為您預填[檔案範本](./self-service-template.md)。 在下方，您可以找到如何編輯範本和開啟提取請求的指示。 Adobe檔案團隊將檢閱並發佈您新目的地的檔案。
+為幫助您建立文檔頁面，Adobe已預填 [文檔模板](./self-service-template.md) 為你。 在下面，您可以找到如何編輯模板和開啟拉入請求的說明。 Adobe文檔團隊將審閱並發佈新目標的文檔。
 
-[在此下載范](assets/yourdestination-template.zip) 本，然後解壓縮檔案以解壓 `yourdestination.md` 縮檔案。
+[在此處下載模板](assets/yourdestination-template.zip) 解壓縮檔案以解壓 `yourdestination.md` 的子菜單。
 
-下文將詳細說明如何使用範本建立檔案頁面。
+有關使用模板建立文檔頁面的說明如下。
 
 <!--
 
@@ -81,12 +82,12 @@ If you are new to the GitHub contribution model and not used to working in a tex
 -->
 
 
-## 建立新目的地頁面的步驟 {#steps-to-create-docs-page}
+## 建立新目標頁的步驟 {#steps-to-create-docs-page}
 
-您可以使用GitHub網頁介面或本機環境，在Adobe Experience Platform中建立新目的地的檔案。 請在以下連結中找到兩個選項的指示：
+您可以使用GitHub Web介面或本地環境為新目標在Adobe Experience Platform建立文檔。 在以下連結中查找兩個選項的說明：
 
-* [使用GitHub網頁介面建立目的地檔案頁面](./use-github-interface-to-create-documentation.md)
-* [在本機環境中使用文字編輯器來建立目的地檔案頁面](./work-in-local-environment.md)
+* [使用GitHub Web介面建立目標文檔頁](./use-github-interface-to-create-documentation.md)
+* [使用本地環境中的文本編輯器建立目標文檔頁](./work-in-local-environment.md)
 
 
 <!--

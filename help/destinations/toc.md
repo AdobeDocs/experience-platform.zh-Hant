@@ -4,10 +4,10 @@ user-guide-title: 目的地指南
 user-guide-description: 針對跨通路行銷活動、電子郵件宣傳、鎖定特定目標的行銷活動和其他諸多使用案例，啟用已知和未知的資料。
 description: 本文檔列出了Adobe Experience Platform目標的目錄
 feature: Destinations
-source-git-commit: 4f057afec285af59a48dc4e28c08cfeba28597bf
+source-git-commit: f9938aca8a5c72a53a688152ac2ab0c0abe632ce
 workflow-type: tm+mt
-source-wordcount: '742'
-ht-degree: 9%
+source-wordcount: '745'
+ht-degree: 8%
 
 ---
 
@@ -194,5 +194,6 @@ ht-degree: 9%
       * [使用GitHub Web介面建立目標文檔頁](./destination-sdk/docs-framework/use-github-interface-to-create-documentation.md)
       * [使用本地環境中的文本編輯器建立目標文檔頁](./destination-sdk/docs-framework/work-in-local-environment.md)
       * [文檔自助服務模板](./destination-sdk/docs-framework/self-service-template.md)
+      * [編寫最佳做法](./destination-sdk/docs-framework/authoring-best-practices.md)
 * [常見問答](./destinations-faq.md)
 * [平台發行說明](https://www.adobe.com/go/platform-release-notes-en)
