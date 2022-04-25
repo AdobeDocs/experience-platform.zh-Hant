@@ -5,16 +5,20 @@ title: Marketo Engage源的映射欄位
 topic-legacy: overview
 description: 下表包含Marketo資料集中的欄位與其對應的XDM欄位之間的映射。
 exl-id: 2b217bba-2748-4d6f-85ac-5f64d5e99d49
-source-git-commit: f5d341daffd7d4d77ee816cc7537b0d0c52ca636
+source-git-commit: 3f4c7c5a5b792476cb46afe886af5a469edfe745
 workflow-type: tm+mt
-source-wordcount: '532'
-ht-degree: 8%
+source-wordcount: '608'
+ht-degree: 7%
 
 ---
 
 # [!DNL Marketo Engage] 欄位映射
 
 下表包含9個欄位之間的映射 [!DNL Marketo] 資料集及其相應的經驗資料模型(XDM)欄位。
+
+>[!TIP]
+>
+>全部 [!DNL Marketo] 資料集 `Activities` 現在支援 `isDeleted`。 現有資料流將自動包括 `isDeleted`，但只會為新接入的資料攝入標誌。 如果要將該標誌應用於所有歷史資料，則必須停止現有資料流並使用新映射重新建立它們。 請注意，如果您 `isDeleted`，則您將無法再訪問該功能。 在自動填充映射後保留映射至關重要。
 
 ## 活動 {#activities}
 
@@ -118,6 +122,7 @@ ht-degree: 8%
 | `webinarHistorySyncDate` | `webinarHistorySyncDate` |
 | `startDate` | `campaignStartDate` |
 | `endDate` | `campaignEndDate` |
+| `marketoIsDeleted` | `isDeleted` |
 
 {style=&quot;table-layout:auto&quot;&quot;
 
@@ -148,6 +153,7 @@ ht-degree: 8%
 | `sfdc.firstRespondedDate` | `firstRespondedDate` |
 | `createdAt` | `extSourceSystemAudit.createdDate` |
 | `updatedAt` | `extSourceSystemAudit.lastUpdatedDate` |
+| `marketoIsDeleted` | `isDeleted` |
 
 {style=&quot;table-layout:auto&quot;&quot;
 
@@ -177,6 +183,7 @@ ht-degree: 8%
 | `companyNotes` | `accountDescription` |
 | `site` | `accountSite` |
 | `iif(mktoCdpParentOrgId != null && mktoCdpParentOrgId != "", to_object("sourceType", "Marketo", "sourceInstanceID", "${MUNCHKIN_ID}","sourceID", concat(mktoCdpParentOrgId, ".mkto_org"), "sourceKey", concat(mktoCdpParentOrgId, ".mkto_org@${MUNCHKIN_ID}.Marketo")), null)` | `accountParentKey` |
+| `marketoIsDeleted` | `isDeleted` |
 
 {style=&quot;table-layout:auto&quot;&quot;
 
@@ -192,6 +199,7 @@ ht-degree: 8%
 | `description` | `marketingListDescription` |
 | `createdAt` | `extSourceSystemAudit.createdDate` |
 | `updatedAt` | `extSourceSystemAudit.lastUpdatedDate` |
+| `marketoIsDeleted` | `isDeleted` |
 
 {style=&quot;table-layout:auto&quot;&quot;
 
@@ -206,6 +214,7 @@ ht-degree: 8%
 | `iif(staticListID != null && staticListID != "", to_object("sourceType", "Marketo", "sourceInstanceID", "${MUNCHKIN_ID}","sourceID", staticListID, "sourceKey", concat(staticListID,"@${MUNCHKIN_ID}.Marketo")), null)` | `marketingListKey` | 關係 |
 | `iif(personID != null && personID != "", to_object("sourceType", "Marketo", "sourceInstanceID", "${MUNCHKIN_ID}","sourceID", personID, "sourceKey", concat(personID,"@${MUNCHKIN_ID}.Marketo")), null)` | `personKey` | 關係 |
 | `createdAt` | `extSourceSystemAudit.createdDate` |
+| `marketoIsDeleted` | `isDeleted` |
 
 {style=&quot;table-layout:auto&quot;&quot;
 
@@ -235,6 +244,7 @@ ht-degree: 8%
 | `name` | `accountName` |
 | `iif(parentAccountId != null && parentAccountId != "", to_object("sourceType", "Marketo", "sourceInstanceID", "${MUNCHKIN_ID}", "sourceID", concat(parentAccountId, ".mkto_acct"), "sourceKey", concat(parentAccountId, ".mkto_acct@${MUNCHKIN_ID}.Marketo")), null)` | `accountParentKey` |
 | `sourceType` | `accountSourceType` |
+| `marketoIsDeleted` | `isDeleted` |
 
 {style=&quot;table-layout:auto&quot;&quot;
 
@@ -268,6 +278,7 @@ ht-degree: 8%
 | `lastActivityDate` | `lastActivityDate` |
 | `leadSource` | `leadSource` |
 | `nextStep` | `nextStep` |
+| `marketoIsDeleted` | `isDeleted` |
 
 {style=&quot;table-layout:auto&quot;&quot;
 
@@ -286,6 +297,7 @@ ht-degree: 8%
 | `isPrimary` | `isPrimary` |
 | `createdAt` | `extSourceSystemAudit.createdDate` |
 | `updatedAt` | `extSourceSystemAudit.lastUpdatedDate` |
+| `marketoIsDeleted` | `isDeleted` |
 
 {style=&quot;table-layout:auto&quot;&quot;
 
@@ -338,6 +350,7 @@ ht-degree: 8%
 | `email` | `personComponents.workEmail.address` |
 | `email` | `workEmail.address` |
 | `iif(ecids != null, to_object('ECID',arrays_to_objects('id',explode(ecids))), null)` | `identityMap` | 這是計算欄位。 |
+| `marketoIsDeleted` | `isDeleted` |
 
 {style=&quot;table-layout:auto&quot;&quot;
 
