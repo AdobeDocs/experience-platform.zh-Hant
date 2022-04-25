@@ -3,10 +3,10 @@ audience: user
 user-guide-title: Adobe Experience Platform 概觀
 breadcrumb-title: Experience 平台概觀
 user-guide-description: 了解 Experience 平台如何協助您即時為客戶傳遞個人化體驗。
-source-git-commit: 520405601dccc649b983da2b8f999f3862dd140b
+source-git-commit: ba2df1ca905bfe2d0f8868ef658b369b28eb9af3
 workflow-type: tm+mt
-source-wordcount: '235'
-ht-degree: 25%
+source-wordcount: '245'
+ht-degree: 24%
 
 ---
 
@@ -56,9 +56,11 @@ ht-degree: 25%
          * [總覽](./governance-privacy-security/consent/iab/overview.md)
          * [配置資料集以捕獲同意和首選項資料](./governance-privacy-security/consent/iab/dataset.md)
       * [整合平台Web SDK以處理同意和首選項資料](./governance-privacy-security/consent/sdk.md)
-   * 審核日誌 {#audit-logs}
+   * 稽核記錄 {#audit-logs}
       * [總覽](./governance-privacy-security/audit-logs/overview.md)
-* [許可證使用儀表板](license-usage-dashboard.md)
+* 許可證使用和護欄 {#license}
+   * [資料管理許可證權利最佳實踐](./license-usage-and-guardrails/data-management-best-practices.md)
+   * [許可證使用儀表板](./license-usage-and-guardrails/license-usage-dashboard.md)
 * [故障排除指南](troubleshooting.md)
 * [Gen2資料湖遷移](adls2-gen2-migration.md)
 * [字彙](glossary.md)
