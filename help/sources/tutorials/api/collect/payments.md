@@ -6,9 +6,9 @@ topic-legacy: overview
 type: Tutorial
 description: 本教程介紹了使用源連接器和API從支付應用程式檢索資料並將其插入平台的步驟。
 exl-id: b75e2a3d-6590-4079-a261-fa4e9626e8dc
-source-git-commit: 964bdaab8a90983f1e40b33720580110ac9e40fe
+source-git-commit: 4cc1c164ca7caa0b64859cf67a4cc206bc6404d7
 workflow-type: tm+mt
-source-wordcount: '1319'
+source-wordcount: '1304'
 ht-degree: 1%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->要建立資料流，您必須已具有有效 [!DNL PayPal] 基本連接ID。 如果您沒有此ID，請參閱有關如何 [建立 [!DNL PayPal] 基本連接](../create/payments/paypal.md) 之後再嘗試執行本教程。
+>為了建立資料流，您必須已具有有效的基本連接ID，該ID在平台上具有以下任何付款來源：<ul><li>[[!DNL PayPal]](../create/payments/paypal.md)</li><li>[[!DNL Square]](../create/payments/square.md)</li></ul>
 
 ## 快速入門
 

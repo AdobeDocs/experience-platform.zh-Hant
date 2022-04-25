@@ -5,9 +5,9 @@ title: 源連接器概述
 topic-legacy: overview
 description: Adobe Experience Platform允許從外部源接收資料，同時讓您能夠使用平台服務構建、標籤和增強傳入資料。 您可以從多種源(如Adobe應用程式、基於雲的儲存、資料庫和許多其他源)接收資料。
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: adefaeb895c91d45727f791b73b73a17a2b1ccf9
+source-git-commit: cc966bccf28dcc915d5c19eab7614d6e80a7e67f
 workflow-type: tm+mt
-source-wordcount: '1032'
+source-wordcount: '1031'
 ht-degree: 0%
 
 ---
@@ -133,7 +133,8 @@ Experience Platform支援從第三方營銷自動化系統接收資料。 有關
 
 Experience Platform支援從第三方支付系統接收資料。 有關特定源連接器的詳細資訊，請參閱以下相關文檔：
 
-- [[!DNL PayPal] 連接器](connectors/payments/paypal.md)
+- [[!DNL PayPal]](connectors/payments/paypal.md)
+- [[!DNL Square]](connectors/payments/square.md)
 
 ### 流 {#streaming}
 

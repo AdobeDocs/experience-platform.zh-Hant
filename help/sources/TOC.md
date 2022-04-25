@@ -4,9 +4,9 @@ user-guide-title: Adobe Experience 平台來源連接器說明
 breadcrumb-title: 來源連接器指南
 user-guide-description: 從多種來源或結構擷取資料、加標籤，以及增強已擷取的資料。
 feature: Sources
-source-git-commit: 66dafe4bca6e1eb0fc67a745ac20a6e0b119aa39
+source-git-commit: cc966bccf28dcc915d5c19eab7614d6e80a7e67f
 workflow-type: tm+mt
-source-wordcount: '773'
+source-wordcount: '777'
 ht-degree: 12%
 
 ---
@@ -88,6 +88,7 @@ ht-degree: 12%
       - [SalesforceMarketing Cloud](connectors/marketing-automation/salesforce-marketing-cloud.md)
    - 付款 {#payments}
       - [PayPal連接器](connectors/payments/paypal.md)
+      - [方形連接器](connectors/payments/square.md)
    - 協定 {#protocols}
       - [通用OData連接器](connectors/protocols/odata.md)
       - [通用REST API連接器](connectors/protocols/generic-rest.md)
@@ -150,6 +151,7 @@ ht-degree: 12%
          - [SalesforceMarketing Cloud](tutorials/api/create/marketing-automation/salesforce-marketing-cloud.md)
       - 付款 {#payments}
          - [貝帕爾](tutorials/api/create/payments/paypal.md)
+         - [方塊](tutorials/api/create/payments/square.md)
       - 協定 {#protocols}
          - [通用OData](tutorials/api/create/protocols/odata.md)
          - [通用REST API](tutorials/api/create/protocols/generic-rest.md)
@@ -248,6 +250,7 @@ ht-degree: 12%
          - [SalesforceMarketing Cloud](tutorials/ui/create/marketing-automation/salesforce-marketing-cloud.md)
       - 付款 {#payments}
          - [貝帕爾](tutorials/ui/create/payments/paypal.md)
+         - [方塊](tutorials/ui/create/payments/square.md)
       - 協定 {#protocols}
          - [通用OData](tutorials/ui/create/protocols/odata.md)
       - 流 {#streaming}
