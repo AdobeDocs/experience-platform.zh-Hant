@@ -3,9 +3,9 @@ keywords: Experience Platform；首頁；熱門主題；映射csv；映射csv；
 title: 資料準備UI指南
 description: 本文檔提供有關如何在平台UI中使用資料準備函式將CSV檔案映射到XDM架構的說明。
 exl-id: fafa4aca-fb64-47ff-a97d-c18e58ae4dae
-source-git-commit: 4cce36ef21ad7490941eecff3933ff0459a0425c
+source-git-commit: edef8843c03282774991f30220504ece97af52cf
 workflow-type: tm+mt
-source-wordcount: '1665'
+source-wordcount: '1837'
 ht-degree: 1%
 
 ---
@@ -98,7 +98,7 @@ ht-degree: 1%
 
 要搜索特定映射集，請選擇 **[!UICONTROL 搜索源欄位]** 並輸入要隔離的源資料的名稱。
 
-![搜索](../images/ui/mapping/search.png)
+![搜尋](../images/ui/mapping/search.png)
 
 選擇 **[!UICONTROL 所有源欄位]** 查看包含過濾選項的下拉菜單，以更好地縮小映射介面的視圖範圍。
 
@@ -107,7 +107,7 @@ ht-degree: 1%
 | 源欄位 | 說明 |
 | --- | --- |
 | [!UICONTROL 所有源欄位] | 此選項顯示源架構的所有源欄位。 預設情況下顯示此選項。 |
-| [!UICONTROL 必填欄位] | 此選項篩選源方案，以僅顯示完成映射所需的欄位。 |
+| [!UICONTROL 必填欄位] | 此選項篩選源架構，以僅顯示完成映射所需的欄位。 |
 | [!UICONTROL 身分欄位] | 此選項篩選源架構，以僅顯示標籤為「標識」的欄位。 |
 | [!UICONTROL 映射欄位] | 此選項篩選源架構以僅顯示已映射的欄位。 |
 | [!UICONTROL 未映射的欄位] | 此選項篩選源架構以僅顯示尚未映射的欄位。 |
@@ -168,6 +168,34 @@ ht-degree: 1%
 可以使用中心的表達式編輯器手動添加欄位、函式和運算子。 選擇編輯器以開始建立表達式。 完成後，選擇 **[!UICONTROL 保存]** 繼續。
 
 ![建立計算欄位](../images/ui/mapping/create-calculated-field.png)
+
+### 導入映射 {#import}
+
+您可以重新使用現有資料流的映射，以減少資料接收的手動配置時間並限制錯誤。 選擇 **[!UICONTROL 導入映射]** 重用現有映射。
+
+![導入映射](../images/ui/mapping/import-mapping.png)
+
+的 [!UICONTROL 導入映射] 的子菜單。
+
+選擇預覽表徵圖以預覽所選資料流的映射。
+
+![清單映射](../images/ui/mapping/list-mapping.png)
+
+預覽窗口允許您在導入到資料流之前檢查現有映射。 驗證映射後，可以選擇 **[!UICONTROL 後退]** 返回資料流清單並檢查另一組映射，或者 **[!UICONTROL 選擇]** 繼續。
+
+![預覽映射](../images/ui/mapping/preview-mapping.png)
+
+或者，可以從資料流窗口清單中選擇要導入的映射。 選擇包含要導入的映射的資料流，然後選擇 **[!UICONTROL 選擇]** 繼續。
+
+![選擇映射](../images/ui/mapping/select-mapping.png)
+
+該介面將使用您導入的映射進行更新。
+
+>[!NOTE]
+>
+>您建立的任何現有映射集或ML映射建議將替換為從現有資料流導入的映射。
+
+![映射導入](../images/ui/mapping/mapping-imported.png)
 
 選擇 **[!UICONTROL 預覽資料]** 查看所選資料集中最多100行示例資料的映射結果。
 
