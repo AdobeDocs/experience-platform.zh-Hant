@@ -6,7 +6,7 @@ topic-legacy: tutorial
 type: Tutorial
 description: 按照本教程學習如何使用Adobe Experience Platform分段服務API評估段和訪問段結果。
 exl-id: 47702819-f5f8-49a8-a35d-034ecac4dd98
-source-git-commit: 885ebbcae223229f4614acd5b50266ea11bcf906
+source-git-commit: 9d82065fdf1be087023284f153f1abedb7fdb67b
 workflow-type: tm+mt
 source-wordcount: '1595'
 ht-degree: 0%
@@ -46,7 +46,7 @@ ht-degree: 0%
 
 - 內容類型：應用程式/json
 
-## 評估段
+## 評估段 {#evaluate-a-segment}
 
 開發、測試和保存段定義後，您就可以通過計畫評估或按需評估來評估段。
 

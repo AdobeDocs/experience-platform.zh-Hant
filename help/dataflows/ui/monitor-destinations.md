@@ -6,9 +6,9 @@ title: 監視UI中目標的資料流
 topic-legacy: overview
 type: Tutorial
 exl-id: 8eb7bb3c-f2dc-4dbc-9cf5-3d5d3224f5f1
-source-git-commit: 935bbbc842ce5e2f42ee92c525255c9708bf34c2
+source-git-commit: 1bb3db196ed603a5a9ba0dcf9d54419d36a6ed51
 workflow-type: tm+mt
-source-wordcount: '3363'
+source-wordcount: '3190'
 ht-degree: 0%
 
 ---
@@ -164,29 +164,6 @@ ht-degree: 0%
 詳細資訊頁面還顯示失敗的標識清單和排除的標識。 將顯示失敗標識和排除標識的資訊，包括錯誤代碼和說明。 預設情況下，清單顯示失敗的標識。 要顯示排除的身份，請選擇 **[!UICONTROL 排除的身份]** 切換。
 
 ![批處理目標的資料流記錄](../assets/ui/monitor-destinations/dataflow-records-batch.png)
-
-## 監視段作業控制面板 {#monitoring-segment-jobs-dashboard}
-
->[!CONTEXTUALHELP]
->id="platform_monitoring_segment_jobs"
->title="段作業"
->abstract="段作業視圖包含有關所有段的評估和導出作業的資訊。"
-
-訪問 [!UICONTROL 段作業] 儀表板，選擇 **[!UICONTROL 監視]** (![監視表徵圖](../assets/ui/monitor-destinations/monitoring-icon.png))。 在 [!UICONTROL 監視] ，選擇 [!UICONTROL 段作業]。 的 [!UICONTROL 監視] 儀表板包含有關段評估和導出作業的度量和資訊。
-
-![段作業監視控制面板](../assets/ui/monitor-destinations/dashboard-segment-jobs.png)
-
-使用 [!UICONTROL 段作業] 控制面板，以瞭解配置檔案評估和導出是否按時進行且無任何例外，因此目標激活的下游服務可以具有最新評估的配置檔案資料。
-
-以下度量可用於段作業：
-
-| 量度 | 說明 |
----------|----------|
-| **[!UICONTROL 段任務]** | 指示段作業的名稱。 |
-| **[!UICONTROL 類型]** | 指示段作業的類型 — 導出或評估。 請注意，在這兩種情況下，段任務都會評估或導出 *全部* 屬於組織的段。 |
-| **[!UICONTROL 作業開始]** | 段作業開始的日期和時間。 |
-| **[!UICONTROL 作業結束]** | 段任務完成的日期和時間。 |
-| **[!UICONTROL 狀態]** | 已完成作業的狀態 — 成功或失敗。 |
 
 ## 監視目標儀表板 {#monitoring-destinations-dashboard}
 
