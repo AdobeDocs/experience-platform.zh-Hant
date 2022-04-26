@@ -1,10 +1,10 @@
 ---
 title: Adobe Experience Platform發行說明2022年4月
 description: 2022年4月為Adobe Experience Platform發行的說明。
-source-git-commit: d09eb2e71a5ebce31aeaf8560c20f0c8595f5d19
+source-git-commit: 820fba06d3460408640c816c80f05bff1de227cd
 workflow-type: tm+mt
-source-wordcount: '1473'
-ht-degree: 5%
+source-wordcount: '1999'
+ht-degree: 4%
 
 ---
 
@@ -14,11 +14,37 @@ ht-degree: 5%
 
 Adobe Experience Platform 現有功能更新：
 
+- [[!DNL Dashboards]](#dashboards)
 - [資料流](#dataflows)
 - [[!DNL Data Prep]](#data-prep)
 - [體驗資料模型(XDM)](#xdm)
 - [Real-time Customer Data Platform B2B Edition](#B2B)
 - [來源](#sources)
+
+## [!DNL Dashboards] {#dashboards}
+
+平台提供了多個儀表板，您可以通過這些儀表板查看有關組織資料的重要資訊，這些資訊在每日快照期間捕獲。
+
+控制面板為您的組織的資料提供預先配置的報告選項，並直接內置到平台內的營銷員工作流中。 這些控制板可用，無需額外的IT支援，也無需花費額外的時間和精力，通過額外的資料倉庫設計和實施來導出和處理資料。
+
+以下小部件可通過它們各自的儀表板上的小部件庫獲得。 有關 [如何通過小部件庫添加小部件](../../dashboards/customize/widget-library.md)。
+
+| 功能 | 控制面板 | 說明 |
+| --------------------------------------------------------- | ------------- | ----------- |
+| [!UICONTROL 配置檔案添加趨勢] | 設定檔 | 此小部件使用線形圖來說明過去30天、90天或12個月中每天添加到配置檔案儲存的合併配置檔案總數。 |
+| [!UICONTROL 映射到目標狀態的受眾] | 設定檔 | 此小部件在單個度量中顯示映射的和未映射的受眾的總數，並使用圓環圖來說明它們的合計之間的比例差異。 |
+| [!UICONTROL 觀眾大小] | 設定檔 | 此小部件提供一個雙清單，其中列出最多20個段以及每個段中包含的受眾總數。 該清單取決於所應用的合併策略，並根據受眾總數從高到低排序。 |
+| [!UICONTROL 配置檔案計數趨勢] | 設定檔 | 此小部件使用線形圖來說明一段時間內系統中包含的配置檔案總數的趨勢。 資料可以在30天、90天和12個月期間進行可視化。 |
+| [!UICONTROL 單個身份配置檔案（按身份）] | 設定檔 | 此小部件使用條形圖來說明僅使用單個唯一標識符標識的配置檔案總數。 該小部件最多支援五種最常見的身份。 |
+| [!UICONTROL 目標狀態] | 目的地 | 此小部件將啟用的目標總數顯示為單個度量，並使用圓環圖來說明啟用和禁用的目標之間的比例差異。 |
+| [!UICONTROL 按目標平台列出的活動目標] | 目的地 | 此小部件使用雙清單來顯示活動目標平台的清單以及每個目標平台的活動目標總數。 |
+| [!UICONTROL 已激活所有目標的受眾] | 目的地 | 此小部件提供單個度量中所有目標上激活的受眾總數。 |
+| [!UICONTROL 受眾激活順序] | 區段 | 此小部件提供一個三清單，其中列出了訪問群體的目標名稱、平台和激活日期。 |
+| [!UICONTROL 受眾規模趨勢] | 區段 | 此小部件提供了線形圖圖，說明在30天、90天和12個月期間內滿足任何段定義條件的配置檔案總數。 |
+| [!UICONTROL 受眾大小變化趨勢] | 區段 | 此小部件提供線形圖圖，說明在最近的每日快照之間限定給定段的配置檔案總數之間的差異。 趨勢分析期可以在30天、90天和12個月期間顯示。 |
+| [!UICONTROL 按身份分類的受眾規模趨勢] | 區段 | 此小部件基於所選標識類型說明特定段的受眾大小趨勢。 趨勢分析期可以在30天、90天和12個月期間顯示。 |
+
+有關 [[!DNL Profiles]](../../dashboards/guides/profiles.md)。 [[!DNL Destinations]](../../dashboards/guides/destinations.md), [[!DNL Segments]](../../dashboards/guides/segments.md) 儀表板。
 
 ## 資料流 {#dataflows}
 
