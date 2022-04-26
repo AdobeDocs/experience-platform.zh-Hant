@@ -6,9 +6,9 @@ topic-legacy: overview
 type: Tutorial
 description: 瞭解如何在UI中建立Adobe Analytics源連接，以將消費者資料帶入Adobe Experience Platform。
 exl-id: 5ddbaf63-feaa-44f5-b2f2-2d5ae507f423
-source-git-commit: 06232d4b567ba1d6bed55226aaa08147510c4498
+source-git-commit: 2cb6803ecf56dd9a7d9614c72e3a1ff4e76ba966
 workflow-type: tm+mt
-source-wordcount: '1578'
+source-wordcount: '1700'
 ht-degree: 1%
 
 ---
@@ -46,11 +46,17 @@ ht-degree: 1%
 
 ### 選擇資料
 
-的 **[!UICONTROL 分析源添加資料]** 的上界。 選擇 **[!UICONTROL 報表套件]** 開始為分析報表套件資料建立源連接，然後選擇要接收的報表套件。 無法選擇的報表套件已在此沙盒或其他沙盒中攝取。 選擇 **[!UICONTROL 下一個]** 繼續。
+的 **[!UICONTROL 分析源添加資料]** 步驟提供了 [!DNL Analytics] 用於建立源連接的報表套件資料。
+
+只能使用單個活動資料流來接收報表套件。 它不能用於多個資料流。 此外，報告套件必須與正在其中建立源連接的平台沙盒實例屬於同一區域。 已在此沙盒或其他沙盒中接收了無法選擇的報告套件。
+
+可以建立多個綁定連接，將多個報告套件帶入同一沙箱。 如果報告套件具有不同的變數架構（如eVars或事件），則應將這些架構映射到自定義欄位組中的特定欄位，並避免使用 [資料準備](../../../../../data-prep/ui/mapping.md)。 只能將報表套件添加到單個沙盒中。
 
 >[!NOTE]
 >
->可以建立多個綁定連接以引入多個報告套件，但一次只能與Real-time Customer Data Platform一起使用一個報告套件。
+>只有當沒有資料衝突(如兩個具有不同含義的自定義屬性（eVars、清單和道理）)無法映射到XDM中的同一屬性時，才能為即時客戶資料配置檔案啟用來自多個報表套件的資料。
+
+建立 [!DNL Analytics] 源連接，選擇報表套件，然後選擇 **[!UICONTROL 下一個]** 繼續。
 
 ![](../../../../images/tutorials/create/analytics/add-data.png)
 
@@ -60,7 +66,7 @@ ht-degree: 1%
 
 >[!IMPORTANT]
 >
->為 [!DNL Analytics] 源目前處於beta中。 功能和文檔可能會更改。
+>資料準備轉換可能會增加整個資料流的延遲。 增加的附加延遲根據轉換邏輯的複雜性而改變。
 
 在映射之前 [!DNL Analytics] 資料到目標XDM架構，必須首先選擇是使用預設架構還是使用自定義架構。
 
@@ -193,10 +199,10 @@ ht-degree: 1%
 
 建立連接後，將自動建立資料流，以包含傳入資料並使用所選模式填充資料集。 此外，還會進行資料回填，以及內嵌長達 13 個月的歷史資料。初始攝取完成後， [!DNL Analytics] 資料和供下游平台服務使用，例如 [!DNL Real-time Customer Profile] 和分段服務。 有關詳細資訊，請參閱以下文檔：
 
-* [[!DNL Real-time Customer Profile] 概觀](../../../../../profile/home.md)
-* [[!DNL Segmentation Service] 概觀](../../../../../segmentation/home.md)
-* [[!DNL Data Science Workspace] 概觀](../../../../../data-science-workspace/home.md)
-* [[!DNL Query Service] 概觀](../../../../../query-service/home.md)
+* [[!DNL Real-time Customer Profile]概述](../../../../../profile/home.md)
+* [[!DNL Segmentation Service]概述](../../../../../segmentation/home.md)
+* [[!DNL Data Science Workspace]概述](../../../../../data-science-workspace/home.md)
+* [[!DNL Query Service]概述](../../../../../query-service/home.md)
 
 以下視頻旨在支援您對使用Adobe Analytics源連接器接收資料的理解：
 
