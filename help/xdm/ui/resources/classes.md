@@ -1,98 +1,105 @@
 ---
-keywords: Experience Platform;home；熱門主題；api;API;XDM;XDM系統；體驗資料模型；ui;workspace;class;classes;
+keywords: Experience Platform；首頁；熱門主題；api;API;XDM;XDM系統；經驗資料模型；資料模型；ui;workspace;class;class;
 solution: Experience Platform
-title: 在UI中建立和編輯類別
-description: 瞭解如何在Experience Platform使用者介面中建立和編輯類別。
+title: 在UI中建立和編輯類
+description: 瞭解如何在Experience Platform用戶介面中建立和編輯類。
 topic-legacy: user guide
 exl-id: 1b4c3996-2319-45dd-9edd-a5bcad46578b
-translation-type: tm+mt
-source-git-commit: ab0798851e5f2b174d9f4241ad64ac8afa20a938
+source-git-commit: c83b5616f46f6f7d752979fa66a66fad16f16102
 workflow-type: tm+mt
-source-wordcount: '871'
+source-wordcount: '999'
 ht-degree: 0%
 
 ---
 
-# 在UI中建立和編輯類別
+# 在UI中建立和編輯類
 
-在Experience Data Model(XDM)中，類定義模式將包含的資料的行為方面（記錄或時間序列）。 此外，類還描述了基於該類的所有方案需要包含的最小公共屬性數，並為合併多個相容資料集提供了一種方法。
+在經驗資料模型(XDM)中，類定義模式將包含的資料的行為方面（記錄或時間序列）。 此外，類還描述了基於該類的所有方案需要包括的最小數量的公共屬性，並為合併多個相容資料集提供了一種方法。
 
-Adobe提供多種標準（「核心」）XDM類，包括[!DNL XDM Individual Profile]和[!DNL XDM ExperienceEvent]。 除了這些核心類別外，您也可以建立自己的自訂類別，以說明組織的更多特定使用案例。
+Adobe提供多個標準（「核心」）XDM類，包括 [!DNL XDM Individual Profile] 和 [!DNL XDM ExperienceEvent]。 除了這些核心類之外，您還可以建立自己的自定義類，以說明組織的更具體的使用案例。
 
-本檔案概述如何在Adobe Experience PlatformUI中建立、編輯和管理自訂類別。
+本文檔概述了如何在Adobe Experience PlatformUI中建立、編輯和管理自定義類。
 
 ## 先決條件
 
-本指南需要對XDM System有充分的瞭解。 有關XDM在Experience Platform生態系統中的角色介紹，請參閱[XDM概述](../../home.md)以及[架構構成基礎](../../schema/composition.md)，以瞭解類對XDM架構的貢獻。
+本指南要求對XDM系統有正確的瞭解。 請參閱 [XDM概述](../../home.md) 介紹XDM在Experience Platform生態系統中的作用， [架構組合基礎](../../schema/composition.md) 瞭解類如何對XDM架構作出貢獻。
 
-雖然本指南不是必要的，但建議您也要遵循在UI](../../tutorials/create-schema-ui.md)中構成架構的[教學課程，以熟悉[!DNL Schema Editor]的各種功能。
+雖然本指南不是必需的，但建議您也學習上的教程 [在UI中合成架構](../../tutorials/create-schema-ui.md) 熟悉 [!DNL Schema Editor]。
 
-## 建立新類{#create}
+## 建立新類 {#create}
 
-在&#x200B;**[!UICONTROL Schemas]**&#x200B;工作區中，選擇&#x200B;**[!UICONTROL Create schema]**，然後從下拉式清單中選擇&#x200B;**[!UICONTROL Browse]**。
+在 **[!UICONTROL 架構]** 工作區，選擇 **[!UICONTROL 建立架構]**，然後選擇 **[!UICONTROL 瀏覽]** 的下界。
 
 ![](../../images/ui/resources/classes/browse-classes.png)
 
-此時將出現一個對話框，允許您從可用類清單中進行選擇。 在對話框頂部，選擇&#x200B;**[!UICONTROL Create new class]**。 然後，您可以為新類提供顯示名稱（類的簡短、描述性、唯一和用戶友好名稱）、說明，以及模式將定義的資料的行為（&quot;[!UICONTROL Record]&quot;或&quot;[!UICONTROL Time-series]&quot;）。
+將顯示一個對話框，允許您從可用類清單中進行選擇。 在對話框頂部，選擇 **[!UICONTROL 建立新類]**。 然後，您可以為新類提供顯示名稱（類的簡短、描述性、唯一性和用戶友好名稱）、說明以及方案將定義的資料的行為(&quot;[!UICONTROL 記錄]&quot;或&quot;[!UICONTROL 時間序列]「)。
 
-完成後，選擇&#x200B;**[!UICONTROL Assign class]**。
+完成後，選擇 **[!UICONTROL 分配類]**。
 
 ![](../../images/ui/resources/classes/class-details.png)
 
-此時會出現[!DNL Schema Editor]，顯示畫布中基於您剛建立的自定義類的新模式。 由於尚未將欄位添加到類中，因此方案只包含`_id`欄位，該欄位表示系統生成的唯一標識符，該標識符自動應用於[!DNL Schema Registry]中的所有資源。
+的 [!DNL Schema Editor] 顯示，在畫布中顯示基於剛建立的自定義類的新架構。 由於尚未將欄位添加到類，因此架構僅包含 `_id` 欄位，表示系統生成的唯一標識符，該標識符自動應用於 [!DNL Schema Registry]。
 
 ![](../../images/ui/resources/classes/schema.png)
 
 >[!IMPORTANT]
 >
->在構建實現由組織定義的類的方案時，請記住，方案欄位組僅可用於相容類。 由於您定義的類是新的，因此&#x200B;**[!UICONTROL Add field group]**&#x200B;對話框中沒有列出相容的欄位組。 而是需要[建立新欄位群組](./field-groups.md#create)以搭配該類別使用。 下次構建實施新類的方案時，將列出您定義的欄位組並可供使用。
+>構建實現由您的組織定義的類的架構時，請記住，架構欄位組僅可用於相容類。 由於您定義的類是新的，因此在 **[!UICONTROL 添加欄位組]** 對話框。 相反，你需要 [新建欄位組](./field-groups.md#create) 用在那門課上。 下次構建實現新類的方案時，將列出您定義的欄位組並可供使用。
 
-您現在可以開始向類[添加欄位，該類將由採用該類的所有方案共用。](#add-fields)
+現在可以開始 [將欄位添加到類](#add-fields)，將由使用類的所有架構共用。
 
-## 編輯現有類{#edit}
+## 編輯現有類 {#edit}
+
+>[!IMPORTANT]
+>
+>無法直接編輯2022年4月30日之後建立的自定義類，並且當前正在開發修復程式。 作為變通方法，您可以 [建立自定義欄位組](./field-groups.md) 並將其重新用於每個使用要擴展的自定義類的架構。 在2022年4月30日之前建立的自定義類不受此限制的影響。
 
 >[!NOTE]
 >
->只有您組織定義的自訂類別才能完整編輯和自訂。 對於由Adobe定義的核心類，只能在單個方案的上下文中編輯其欄位的顯示名稱。 有關詳細資訊，請參閱[編輯架構欄位的顯示名稱一節。](./schemas.md#display-names)
+>只有組織定義的自定義類才能完全編輯和自定義。 對於由Adobe定義的核心類，只能在單個方案的上下文中編輯其欄位的顯示名稱。 請參閱 [編輯架構欄位的顯示名稱](./schemas.md#display-names) 的雙曲餘切值。
 >
->在儲存自訂類別並用於資料擷取後，之後只能對它進行加法變更。 如需詳細資訊，請參閱[模式演化規則](../../schema/composition.md#evolution)。
+>自定義類一旦保存並用於資料接收，以後只能對其進行附加更改。 查看 [模式演化規則](../../schema/composition.md#evolution) 的子菜單。
 
-要編輯現有類，請選擇&#x200B;**[!UICONTROL Browse]**&#x200B;頁籤，然後選擇使用要編輯的類的方案名稱。
+要編輯現有類，請選擇 **[!UICONTROL 瀏覽]** 頁籤，然後選擇使用要編輯的類的架構的名稱。
 
 ![](../../images/ui/resources/classes/select-for-edit.png)
 
 >[!TIP]
 >
->您可以使用工作區的搜尋和篩選功能，協助您更輕鬆地尋找結構。 如需詳細資訊，請參閱[探索XDM資源](../explore.md)指南。
+>可以使用工作區的搜索和篩選功能幫助更輕鬆地查找架構。 請參閱上的指南 [探索XDM資源](../explore.md) 的子菜單。
 
-出現[!DNL Schema Editor]，畫布中顯示結構。 您現在可以開始向類[添加欄位。](#add-fields)
+的 [!DNL Schema Editor] 顯示，其中在畫布中顯示架構的結構。 現在可以開始 [將欄位添加到類](#add-fields)。
 
 ![](../../images/ui/resources/classes/edit.png)
 
-## 將欄位添加到{#add-fields}類
+## 將欄位添加到類 {#add-fields}
 
-在[!UICONTROL Schema Editor]中開啟了使用自定義類的架構後，可以開始向類中添加欄位。 要添加新欄位，請選擇方案名稱旁的&#x200B;**加號(+)**&#x200B;表徵圖。
+>[!IMPORTANT]
+>
+>無法直接編輯2022年4月30日之後建立的自定義類，並且當前正在開發修復程式。 作為變通方法，您可以 [建立自定義欄位組](./field-groups.md) 並將其重新用於每個使用要擴展的自定義類的架構。 在2022年4月30日之前建立的自定義類不受此限制的影響。
+
+一旦您的架構使用在 [!UICONTROL 架構編輯器]，可開始向類添加欄位。 要添加新欄位，請選擇 **加(+)** 表徵圖。
 
 ![](../../images/ui/resources/classes/add-field.png)
 
 >[!IMPORTANT]
 >
->請記住，您新增至類別的任何欄位，都會用於採用該類別的所有結構中。 因此，您應仔細考慮哪些欄位在所有架構使用案例中都有用。 如果您考慮添加只能在此類下某些方案中使用的欄位，則可考慮通過[改為建立欄位組](./field-groups.md#create)將其添加到這些方案。
+>請記住，添加到類的任何欄位都將用於使用該類的所有架構。 因此，您應仔細考慮哪些欄位在所有架構使用情形中都有用。 如果您正考慮添加一個欄位，該欄位可能只能看到此類下的某些架構中的使用，則您可能希望考慮通過以下方式將其添加到這些架構中 [建立欄位組](./field-groups.md#create) 的雙曲餘切值。
 
-畫布中會出現&#x200B;**[!UICONTROL New field]**，右側邊欄會更新，以顯示設定欄位屬性的控制項。 有關如何配置欄位並將其添加到類的具體步驟，請參閱UI](../fields/overview.md#define)中[定義欄位的指南。
+A **[!UICONTROL 新建欄位]** 顯示在畫布中，右滑軌將更新以顯示用於配置欄位屬性的控制項。 請參閱上的指南 [定義UI中的欄位](../fields/overview.md#define) 有關如何配置欄位並將其添加到類的特定步驟。
 
-繼續將所需的欄位新增至類別。 完成後，選擇&#x200B;**[!UICONTROL Save]**&#x200B;以保存模式和類。
+繼續向類添加所需的任意多個欄位。 完成後，選擇 **[!UICONTROL 保存]** 來保存架構和類。
 
 ![](../../images/ui/resources/classes/save.png)
 
-如果您先前已建立採用此類別的架構，新新增的欄位將自動顯示在這些架構中。
+如果您以前建立過使用此類的方案，則新添加的欄位將自動顯示在這些方案中。
 
-## 更改方案{#schema}的類
+## 更改架構的類 {#schema}
 
-在初始建立過程中，可以在保存模式之前，隨時更改該模式的類。 有關詳細資訊，請參閱[建立和編輯方案](./schemas.md#change-class)的指南。
+在初始建立過程中，在保存架構之前，可以在任何時間點更改該架構的類。 請參閱上的指南 [建立和編輯架構](./schemas.md#change-class) 的子菜單。
 
 ## 後續步驟
 
-本檔案說明如何使用平台UI建立和編輯類別。 有關[!UICONTROL Schemas]工作區功能的詳細資訊，請參閱[[!UICONTROL Schemas]工作區概述](../overview.md)。
+本文檔介紹了如何使用平台UI建立和編輯類。 有關功能的詳細資訊 [!UICONTROL 架構] 工作區，請參閱 [[!UICONTROL 架構] 工作區概述](../overview.md)。
 
-要瞭解如何使用[!DNL Schema Registry] API管理類，請參閱[類端點指南](../../api/classes.md)。
+瞭解如何使用 [!DNL Schema Registry] API，請參見 [類終結點指南](../../api/classes.md)。

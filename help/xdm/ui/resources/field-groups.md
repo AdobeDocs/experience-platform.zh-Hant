@@ -5,9 +5,9 @@ title: 在UI中建立和編輯架構欄位組
 description: 瞭解如何在Experience Platform用戶介面中建立和編輯架構欄位組。
 topic-legacy: user guide
 exl-id: 928d70a6-0468-4fb7-a53a-6686ac77f2a3
-source-git-commit: 49a54b78d1e3745694352e779fb2226acd99d663
+source-git-commit: 1d4eba9f566dc1926afd7886c6ad2808ed91ea13
 workflow-type: tm+mt
-source-wordcount: '752'
+source-wordcount: '781'
 ht-degree: 0%
 
 ---
@@ -54,7 +54,11 @@ Adobe Experience Platform提供許多標準的現場小組，涵蓋各種營銷�
 
 ## 將欄位添加到欄位組 {#add-fields}
 
-將欄位添加到 [!DNL Schema Editor]，首先選擇左欄中的欄位組名稱，然後選擇 **加(+)** 表徵圖，位於畫布中架構名稱旁邊。
+>[!NOTE]
+>
+>本節重點介紹將欄位添加到自定義欄位組。 有關如何將自定義欄位添加到標準欄位組的資訊，請參閱 [架構UI指南](./schemas.md#custom-fields-for-standard-groups)。
+
+將欄位添加到中的自定義欄位組 [!DNL Schema Editor]，首先選擇左欄中的欄位組名稱，然後選擇 **加(+)** 表徵圖，位於畫布中架構名稱旁邊。
 
 ![](../../images/ui/resources/field-groups/add-field.png)
 
