@@ -2,9 +2,9 @@
 title: Marketo Engage目標
 description: Marketo Engage是用於營銷、廣告、分析和商業的唯一端到端客戶體驗管理(CXM)解決方案。 它使您能夠自動化和管理從CRM主管管理和客戶參與到基於客戶的市場營銷和收入分配中的活動。
 exl-id: 5ae5f114-47ba-4ff6-8e42-f8f43eb079f7
-source-git-commit: b1945d42b82b549985d848071762fa6ee2451368
+source-git-commit: 0006c498cd33d9deb66f1d052b4771ec7504457d
 workflow-type: tm+mt
-source-wordcount: '445'
+source-wordcount: '491'
 ht-degree: 3%
 
 ---
@@ -42,6 +42,12 @@ Marketo Engage是用於營銷、廣告、分析和商業的唯一端到端客戶
 {style=&quot;table-layout:auto&quot;&quot;
 
 ## 設定目標並激活段 {#set-up}
+
+>[!IMPORTANT]
+> 
+>* 要連接到目標，您需要 **[!UICONTROL 管理目標]** [訪問控制權限](/help/access-control/home.md#permissions)。
+>* 要激活資料，您需要 **[!UICONTROL 管理目標]**。 **[!UICONTROL 激活目標]**。 **[!UICONTROL 查看配置檔案]**, **[!UICONTROL 查看段]** [訪問控制權限](/help/access-control/home.md#permissions)。 閱讀 [訪問控制概述](/help/access-control/ui/overview.md) 或聯繫您的產品管理員以獲取所需權限。
+
 
 有關如何設定目標和激活段的詳細說明，請閱讀 [將Adobe Experience Platform段推入Marketo靜態清單](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/smart-lists-and-static-lists/static-lists/push-an-adobe-experience-cloud-segment-to-a-marketo-static-list.html?lang=en) 在Marketo檔案里。
 

@@ -6,14 +6,22 @@ description: 使用流服務API建立批雲儲存或電子郵件營銷目標的�
 topic-legacy: tutorial
 type: Tutorial
 exl-id: 41fd295d-7cda-4ab1-a65e-b47e6c485562
-source-git-commit: a8a8b3b9e4fdae11be95d2fa80abc0f356eff345
+source-git-commit: 0b094e635e6d22e58e5aa79a374df0879167a833
 workflow-type: tm+mt
-source-wordcount: '3083'
+source-wordcount: '3129'
 ht-degree: 2%
 
 ---
 
 # 使用流服務API連接到批處理目標並激活資料
+
+>[!IMPORTANT]
+> 
+>要連接到目標，您需要 **[!UICONTROL 管理目標]** [訪問控制權限](/help/access-control/home.md#permissions)。
+>
+>要激活資料，您需要 **[!UICONTROL 管理目標]**。 **[!UICONTROL 激活目標]**。 **[!UICONTROL 查看配置檔案]**, **[!UICONTROL 查看段]** [訪問控制權限](/help/access-control/home.md#permissions)。
+>
+>閱讀 [訪問控制概述](/help/access-control/ui/overview.md) 或聯繫您的產品管理員以獲取所需權限。
 
 本教程演示如何使用流服務API建立批 [雲儲存](../catalog/cloud-storage/overview.md) 或 [電子郵件營銷目標](../catalog/email-marketing/overview.md)，建立資料流到新建立的目標，並通過CSV檔案將資料導出到新建立的目標。
 

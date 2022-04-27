@@ -3,9 +3,9 @@ keywords: 飛艇屬性；飛艇目的地
 title: 飛艇屬性連接
 description: 將Adobe受眾資料無縫地傳遞到飛艇中，作為飛艇內目標的受眾屬性。
 exl-id: bfc1b52f-2d68-40d6-9052-c2ee1e877961
-source-git-commit: c5d2427635d90f3a9551e2a395d01d664005e8bc
+source-git-commit: 0006c498cd33d9deb66f1d052b4771ec7504457d
 workflow-type: tm+mt
-source-wordcount: '802'
+source-wordcount: '863'
 ht-degree: 1%
 
 ---
@@ -76,6 +76,10 @@ Adobe Experience Platform配置檔案屬性類似 [!DNL Airship] 屬性，並且
 
 ## 連接到目標 {#connect}
 
+>[!IMPORTANT]
+> 
+>要連接到目標，您需要 **[!UICONTROL 管理目標]** [訪問控制權限](/help/access-control/home.md#permissions)。 閱讀 [訪問控制概述](/help/access-control/ui/overview.md) 或聯繫您的產品管理員以獲取所需權限。
+
 請參閱 [將受眾資料激活到流段導出目標](../../ui/activate-segment-streaming-destinations.md) 有關激活此目標受眾段的說明。
 
 ### 連接參數 {#parameters}
@@ -88,6 +92,10 @@ Adobe Experience Platform配置檔案屬性類似 [!DNL Airship] 屬性，並且
 * **[!UICONTROL 域]**:選擇美國或歐盟資料中心，具體取決於 [!DNL Airship] 資料中心適用於此目標。
 
 ## 將段激活到此目標 {#activate}
+
+>[!IMPORTANT]
+> 
+>要激活資料，您需要 **[!UICONTROL 管理目標]**。 **[!UICONTROL 激活目標]**。 **[!UICONTROL 查看配置檔案]**, **[!UICONTROL 查看段]** [訪問控制權限](/help/access-control/home.md#permissions)。 閱讀 [訪問控制概述](/help/access-control/ui/overview.md) 或聯繫您的產品管理員以獲取所需權限。
 
 請參閱 [將受眾資料激活到流段導出目標](../../ui/activate-segment-streaming-destinations.md) 有關激活此目標受眾段的說明。
 

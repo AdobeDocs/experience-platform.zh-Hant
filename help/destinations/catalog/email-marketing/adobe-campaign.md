@@ -3,9 +3,9 @@ keywords: 電子郵件；電子郵件；電子郵件；電子郵件目標；adob
 title: Adobe Campaign
 description: Adobe Campaign是一組解決方案，可幫助您個性化並提供所有線上和離線渠道的促銷活動。
 exl-id: 0de91738-8f56-41f5-8745-9b14b15db76a
-source-git-commit: b1945d42b82b549985d848071762fa6ee2451368
+source-git-commit: 0006c498cd33d9deb66f1d052b4771ec7504457d
 workflow-type: tm+mt
-source-wordcount: '764'
+source-wordcount: '825'
 ht-degree: 3%
 
 ---
@@ -37,6 +37,10 @@ Adobe Campaign是一組解決方案，可幫助您個性化並提供所有線上
 
 ## 連接到目標 {#connect}
 
+>[!IMPORTANT]
+> 
+>要連接到目標，您需要 **[!UICONTROL 管理目標]** [訪問控制權限](/help/access-control/home.md#permissions)。 閱讀 [訪問控制概述](/help/access-control/ui/overview.md) 或聯繫您的產品管理員以獲取所需權限
+
 要連接到此目標，請按照 [目標配置教程](../../ui/connect-destination.md)。
 
 Adobe Campaign支援以下連接類型：
@@ -65,6 +69,11 @@ Adobe Campaign支援以下連接類型：
 * **[!UICONTROL 檔案格式]**:選擇 **CSV** 將CSV檔案導出到儲存位置。
 
 ## 將段激活到此目標 {#activate}
+
+>[!IMPORTANT]
+> 
+>要激活資料，您需要 **[!UICONTROL 管理目標]**。 **[!UICONTROL 激活目標]**。 **[!UICONTROL 查看配置檔案]**, **[!UICONTROL 查看段]** [訪問控制權限](/help/access-control/home.md#permissions)。 閱讀 [訪問控制概述](/help/access-control/ui/overview.md) 或聯繫您的產品管理員以獲取所需權限。
+
 
 請參閱 [將受眾資料激活到批配置檔案導出目標](../../ui/activate-batch-profile-destinations.md) 有關激活此目標受眾段的說明。
 

@@ -3,9 +3,9 @@ keywords: 廣告；罪；
 title: Criteo連接
 description: Criteo能夠讓可信、有影響力的廣告為開放網際網路上的每個消費者帶來更豐富的體驗。 Criteo擁有全球最大的商業資料集和一流的人工智慧，確保整個購物過程中的每個觸點都個性化，以便在適當的時間通過正確的廣告接觸到客戶。
 exl-id: e6f394b2-ab82-47bb-8521-1cf9d01a203b
-source-git-commit: 36da42b184450cfaf12b097f982234d628681430
+source-git-commit: 0006c498cd33d9deb66f1d052b4771ec7504457d
 workflow-type: tm+mt
-source-wordcount: '763'
+source-wordcount: '824'
 ht-degree: 3%
 
 ---
@@ -63,6 +63,10 @@ Criteo支援激活下表中描述的身份。 瞭解有關 [身份](https://expe
 
 ## 連接到Criteo {#connect}
 
+>[!IMPORTANT]
+> 
+>要連接到目標，您需要 **[!UICONTROL 管理目標]** [訪問控制權限](/help/access-control/home.md#permissions)。 閱讀 [訪問控制概述](/help/access-control/ui/overview.md) 或聯繫您的產品管理員以獲取所需權限。
+
 要連接到此目標，請按照 [目標配置教程](../../ui/connect-destination.md)。
 
 ### 驗證到Criteo
@@ -96,6 +100,10 @@ Criteo支援激活下表中描述的身份。 瞭解有關 [身份](https://expe
 | 廣告商ID | 貴組織的Criteo Dactier ID。 請聯繫您的Criteo客戶經理以獲取此資訊。 | 是 |
 
 ## 將段激活到此目標 {#activate-segments}
+
+>[!IMPORTANT]
+> 
+>要激活資料，您需要 **[!UICONTROL 管理目標]**。 **[!UICONTROL 激活目標]**。 **[!UICONTROL 查看配置檔案]**, **[!UICONTROL 查看段]** [訪問控制權限](/help/access-control/home.md#permissions)。 閱讀 [訪問控制概述](/help/access-control/ui/overview.md) 或聯繫您的產品管理員以獲取所需權限。
 
 閱讀 [激活配置檔案和段以流式處理段導出目標](../../ui/activate-segment-streaming-destinations.md) 有關激活此目標受眾段的說明。
 

@@ -3,9 +3,9 @@ keywords: AmazonS3;S3目標；s3;amazon s3
 title: AmazonS3連接
 description: 建立到Amazon Web Services(AWS)S3儲存的即時出站連接，以定期將CSV資料檔案從Adobe Experience Platform導出到您自己的S3儲存桶中。
 exl-id: 6a2a2756-4bbf-4f82-88e4-62d211cbbb38
-source-git-commit: 935bbbc842ce5e2f42ee92c525255c9708bf34c2
+source-git-commit: 0006c498cd33d9deb66f1d052b4771ec7504457d
 workflow-type: tm+mt
-source-wordcount: '552'
+source-wordcount: '613'
 ht-degree: 1%
 
 ---
@@ -51,6 +51,10 @@ ht-degree: 1%
 >title="RSA公鑰"
 >abstract="或者，您可以附加RSA格式的公鑰，以將加密添加到導出的檔案中。 公鑰必須寫為Base64編碼字串。"
 
+>[!IMPORTANT]
+> 
+>要連接到目標，您需要 **[!UICONTROL 管理目標]** [訪問控制權限](/help/access-control/home.md#permissions)。 閱讀 [訪問控制概述](/help/access-control/ui/overview.md) 或聯繫您的產品管理員以獲取所需權限。
+
 同時 [設定](../../ui/connect-destination.md) 此目標，必須提供以下資訊：
 
 * **[!DNL Amazon S3]訪問密鑰** 和 **[!DNL Amazon S3]密鑰**:在 [!DNL Amazon S3]，生成 `access key - secret access key` 對以授予您的平台訪問權 [!DNL Amazon S3] 帳戶。 在 [Amazon Web Services文檔](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html)。
@@ -87,6 +91,10 @@ Commenting out this note, as write permissions are assigned through the s3:PutOb
 -->
 
 ## 將段激活到此目標 {#activate}
+
+>[!IMPORTANT]
+> 
+>要激活資料，您需要 **[!UICONTROL 管理目標]**。 **[!UICONTROL 激活目標]**。 **[!UICONTROL 查看配置檔案]**, **[!UICONTROL 查看段]** [訪問控制權限](/help/access-control/home.md#permissions)。 閱讀 [訪問控制概述](/help/access-control/ui/overview.md) 或聯繫您的產品管理員以獲取所需權限。
 
 請參閱 [將受眾資料激活到批配置檔案導出目標](../../ui/activate-batch-profile-destinations.md) 有關激活此目標受眾段的說明。
 

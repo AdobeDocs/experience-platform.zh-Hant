@@ -3,9 +3,9 @@ keywords: google客戶匹配；Google客戶匹配；Google客戶匹配
 title: Google客戶匹配連接
 description: Google客戶匹配允許您使用線上和離線資料在Google擁有和運營的資產(如搜索、購物、Gmail和YouTube)中與客戶聯繫並重新聯繫。
 exl-id: 8209b5eb-b05c-4ef7-9fdc-22a528d5f020
-source-git-commit: b1945d42b82b549985d848071762fa6ee2451368
+source-git-commit: 0006c498cd33d9deb66f1d052b4771ec7504457d
 workflow-type: tm+mt
-source-wordcount: '1623'
+source-wordcount: '1684'
 ht-degree: 1%
 
 ---
@@ -84,7 +84,7 @@ ht-degree: 1%
 在中激活電話號碼有兩種方法 [!DNL Google Customer Match]:
 
 * **正在接收原始電話號碼**:你可以錄下原始電話號碼 [!DNL E.164] 格式 [!DNL Platform]，並在激活時自動對它們進行散列。 如果選擇此選項，請確保始終將原始電話號碼插入 `Phone_E.164` 命名空間。
-* **正在攝取散列電話號碼**:你可以先對電話號碼進行散列，然後再接收 [!DNL Platform]。 如果選擇此選項，請確保始終將散列電話號碼輸入到 `PHONE_SHA256_E.164` 命名空間。
+* **正在攝取散列電話號碼**:你可以先對電話號碼進行散列，然後才能接收 [!DNL Platform]。 如果選擇此選項，請確保始終將散列電話號碼輸入到 `PHONE_SHA256_E.164` 命名空間。
 
 >[!NOTE]
 >
@@ -123,6 +123,10 @@ The video below demonstrates the steps to configure a [!DNL Google Customer Matc
 
 ## 連接到目標 {#connect}
 
+>[!IMPORTANT]
+> 
+>要連接到目標，您需要 **[!UICONTROL 管理目標]** [訪問控制權限](/help/access-control/home.md#permissions)。 閱讀 [訪問控制概述](/help/access-control/ui/overview.md) 或聯繫您的產品管理員以獲取所需權限。
+
 要連接到此目標，請按照 [目標配置教程](../../ui/connect-destination.md)。
 
 ### 連接參數 {#parameters}
@@ -139,6 +143,10 @@ The video below demonstrates the steps to configure a [!DNL Google Customer Matc
 
 
 ## 將段激活到此目標 {#activate}
+
+>[!IMPORTANT]
+> 
+>要激活資料，您需要 **[!UICONTROL 管理目標]**。 **[!UICONTROL 激活目標]**。 **[!UICONTROL 查看配置檔案]**, **[!UICONTROL 查看段]** [訪問控制權限](/help/access-control/home.md#permissions)。 閱讀 [訪問控制概述](/help/access-control/ui/overview.md) 或聯繫您的產品管理員以獲取所需權限。
 
 請參閱 [將受眾資料激活到流段導出目標](../../ui/activate-segment-streaming-destinations.md) 有關激活此目標受眾段的說明。
 

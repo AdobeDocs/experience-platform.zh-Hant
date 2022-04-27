@@ -4,14 +4,18 @@ title: 新建目標連接
 type: Tutorial
 description: 本教程列出了連接到Adobe Experience Platform目標的步驟
 exl-id: 56d7799a-d1da-4727-ae79-fb2c775fe5a5
-source-git-commit: b275621d9c6552327e0e55c00c8fcf0397088168
+source-git-commit: 729c0724c7af88bb69c9d68a45d58c3575c90828
 workflow-type: tm+mt
-source-wordcount: '383'
+source-wordcount: '411'
 ht-degree: 0%
 
 ---
 
 # 新建目標連接
+
+>[!IMPORTANT]
+> 
+>要連接到目標，您需要 **[!UICONTROL 管理目標]** [訪問控制權限](/help/access-control/home.md#permissions)。 閱讀 [訪問控制概述](/help/access-control/ui/overview.md) 或聯繫您的產品管理員以獲取所需權限。
 
 ## 總覽 {#overview}
 

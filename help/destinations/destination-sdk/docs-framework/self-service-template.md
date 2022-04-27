@@ -2,10 +2,10 @@
 title: 文檔自助模板//替換為目標名稱
 description: 使用此模板可在Adobe Experience Platform目錄中為目標建立公共文檔。//替換為「概述」部分中的段落
 exl-id: 99700474-8bf6-4176-acc1-38814e17c995
-source-git-commit: f9938aca8a5c72a53a688152ac2ab0c0abe632ce
+source-git-commit: 729c0724c7af88bb69c9d68a45d58c3575c90828
 workflow-type: tm+mt
-source-wordcount: '1250'
-ht-degree: 2%
+source-wordcount: '1311'
+ht-degree: 1%
 
 ---
 
@@ -90,6 +90,10 @@ ht-degree: 2%
 
 ## 連接到目標 {#connect}
 
+>[!IMPORTANT]
+> 
+>要連接到目標，您需要 **[!UICONTROL 管理目標]** [訪問控制權限](/help/access-control/home.md#permissions)。 閱讀 [訪問控制概述](/help/access-control/ui/overview.md) 或聯繫您的產品管理員以獲取所需權限。
+
 要連接到此目標，請按照 [目標配置教程](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html)。 在配置目標工作流中，填寫下面兩節中列出的欄位。
 
 ### 驗證到目標 {#authenticate}
@@ -115,6 +119,10 @@ ht-degree: 2%
 * **[!UICONTROL 帳戶ID]**:您 *目標* 帳戶ID。
 
 ## 將段激活到此目標 {#activate}
+
+>[!IMPORTANT]
+> 
+>要激活資料，您需要 **[!UICONTROL 管理目標]**。 **[!UICONTROL 激活目標]**。 **[!UICONTROL 查看配置檔案]**, **[!UICONTROL 查看段]** [訪問控制權限](/help/access-control/home.md#permissions)。 閱讀 [訪問控制概述](/help/access-control/ui/overview.md) 或聯繫您的產品管理員以獲取所需權限。
 
 閱讀 [激活配置檔案和段以流式處理段導出目標](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations.html?lang=en) 有關激活此目標受眾段的說明。
 

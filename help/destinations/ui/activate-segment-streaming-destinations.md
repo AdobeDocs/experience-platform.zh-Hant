@@ -6,14 +6,18 @@ seo-title: Activate audience data to streaming segment export destinations
 description: 瞭解如何通過將段映射到段流式傳輸目標來激活您在Adobe Experience Platform擁有的觀眾資料。
 seo-description: Learn how to activate the audience data you have in Adobe Experience Platform by mapping segments to segment streaming destinations.
 exl-id: bb61a33e-38fc-4217-8999-9eb9bf899afa
-source-git-commit: 935bbbc842ce5e2f42ee92c525255c9708bf34c2
+source-git-commit: 0b094e635e6d22e58e5aa79a374df0879167a833
 workflow-type: tm+mt
-source-wordcount: '799'
+source-wordcount: '832'
 ht-degree: 0%
 
 ---
 
 # 將受眾資料激活到流段導出目標
+
+>[!IMPORTANT]
+> 
+>要激活資料，您需要 **[!UICONTROL 管理目標]**。 **[!UICONTROL 激活目標]**。 **[!UICONTROL 查看配置檔案]**, **[!UICONTROL 查看段]** [訪問控制權限](/help/access-control/home.md#permissions)。 閱讀 [訪問控制概述](/help/access-control/ui/overview.md) 或聯繫您的產品管理員以獲取所需權限。
 
 ## 總覽 {#overview}
 

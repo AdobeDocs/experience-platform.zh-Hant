@@ -3,9 +3,9 @@ keywords: facebook連接；facebook連接；facebook目標；facebook;instagram;
 title: Facebook
 description: 激活您的Facebook市場活動的配置檔案，以便根據經過散列的電子郵件進行受眾目標、個性化和壓制。
 exl-id: 51e8c8f0-5e79-45b9-afbc-110bae127f76
-source-git-commit: c5d2427635d90f3a9551e2a395d01d664005e8bc
+source-git-commit: 0006c498cd33d9deb66f1d052b4771ec7504457d
 workflow-type: tm+mt
-source-wordcount: '1652'
+source-wordcount: '1713'
 ht-degree: 2%
 
 ---
@@ -84,7 +84,7 @@ ht-degree: 2%
 在中激活電話號碼有兩種方法 [!DNL Facebook]:
 
 * **正在接收原始電話號碼**:你可以錄下原始電話號碼 [!DNL E.164] 格式 [!DNL Platform]。 它們在激活時自動散列。 如果選擇此選項，請確保始終將原始電話號碼插入 `Phone_E.164` 命名空間。
-* **正在攝取散列電話號碼**:你可以先對電話號碼進行散列，然後才能接收 [!DNL Platform]。 如果選擇此選項，請確保始終將散列電話號碼輸入到 `Phone_SHA256` 命名空間。
+* **正在攝取散列電話號碼**:你可以先對電話號碼進行散列，然後再接收 [!DNL Platform]。 如果選擇此選項，請確保始終將散列電話號碼輸入到 `Phone_SHA256` 命名空間。
 
 >[!NOTE]
 >
@@ -119,6 +119,10 @@ ht-degree: 2%
 在使用 `Extern_ID` 將資料發送到的命名空間 [!DNL Facebook]，確保您使用 [!DNL Facebook Pixel]。 查看 [Facebook官方檔案](https://developers.facebook.com/docs/marketing-api/audiences/guides/custom-audiences/#external_identifiers) 的上界。
 
 ## 連接到目標 {#connect}
+
+>[!IMPORTANT]
+> 
+>要連接到目標，您需要 **[!UICONTROL 管理目標]** [訪問控制權限](/help/access-control/home.md#permissions)。 閱讀 [訪問控制概述](/help/access-control/ui/overview.md) 或聯繫您的產品管理員以獲取所需權限。
 
 要連接到此目標，請按照 [目標配置教程](../../ui/connect-destination.md)。
 
@@ -160,6 +164,10 @@ ht-degree: 2%
 >id="platform_destinations_activate_facebook_originofaudience_customersandpartners"
 >title="受眾來源"
 >abstract="廣告商直接從客戶和合作夥伴那裡收集資料。"
+
+>[!IMPORTANT]
+> 
+>要激活資料，您需要 **[!UICONTROL 管理目標]**。 **[!UICONTROL 激活目標]**。 **[!UICONTROL 查看配置檔案]**, **[!UICONTROL 查看段]** [訪問控制權限](/help/access-control/home.md#permissions)。 閱讀 [訪問控制概述](/help/access-control/ui/overview.md) 或聯繫您的產品管理員以獲取所需權限。
 
 請參閱 [將受眾資料激活到流段導出目標](../../ui/activate-segment-streaming-destinations.md) 有關激活此目標受眾段的說明。
 

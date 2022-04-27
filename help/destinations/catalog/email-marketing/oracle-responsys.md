@@ -3,9 +3,9 @@ keywords: 電子郵件；電子郵件；電子郵件；電子郵件目標；orac
 title: Oracle響應系統連接
 description: Responsys是企業電子郵件營銷工具，用於通過Oracle提供的跨渠道營銷活動，以在電子郵件、移動、顯示和社交網路中個性化交互。
 exl-id: 70f2f601-afee-4315-bf7a-ed2c92397ebe
-source-git-commit: b1945d42b82b549985d848071762fa6ee2451368
+source-git-commit: 0006c498cd33d9deb66f1d052b4771ec7504457d
 workflow-type: tm+mt
-source-wordcount: '522'
+source-wordcount: '583'
 ht-degree: 1%
 
 ---
@@ -36,6 +36,10 @@ ht-degree: 1%
 請參閱 [雲儲存目標的IP地址允許清單](../cloud-storage/ip-address-allow-list.md) 如果需要將AdobeIP添加到允許清單。
 
 ## 連接到目標 {#connect}
+
+>[!IMPORTANT]
+> 
+>要連接到目標，您需要 **[!UICONTROL 管理目標]** [訪問控制權限](/help/access-control/home.md#permissions)。 閱讀 [訪問控制概述](/help/access-control/ui/overview.md) 或聯繫您的產品管理員以獲取所需權限。
 
 要連接到此目標，請按照 [目標配置教程](../../ui/connect-destination.md)。
 
@@ -73,6 +77,10 @@ Commenting out Amazon S3 bucket part for now until support is clarified
 -->
 
 ## 將段激活到此目標 {#activate}
+
+>[!IMPORTANT]
+> 
+>要激活資料，您需要 **[!UICONTROL 管理目標]**。 **[!UICONTROL 激活目標]**。 **[!UICONTROL 查看配置檔案]**, **[!UICONTROL 查看段]** [訪問控制權限](/help/access-control/home.md#permissions)。 閱讀 [訪問控制概述](/help/access-control/ui/overview.md) 或聯繫您的產品管理員以獲取所需權限。
 
 請參閱 [將受眾資料激活到批配置檔案導出目標](../../ui/activate-batch-profile-destinations.md) 有關激活此目標受眾段的說明。
 

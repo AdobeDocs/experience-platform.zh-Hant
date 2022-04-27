@@ -2,9 +2,9 @@
 title: Verizon MediaYahoo DataX連接
 description: DataX是Verizon Media/Yahoo的聚合基礎架構，它承載著各種元件，使Verizon Media/Yahoo能夠以安全、自動和可擴展的方式與外部合作夥伴交換資料。
 exl-id: 7d02671d-8650-407d-9c9f-fad7da3156bc
-source-git-commit: b1945d42b82b549985d848071762fa6ee2451368
+source-git-commit: 0006c498cd33d9deb66f1d052b4771ec7504457d
 workflow-type: tm+mt
-source-wordcount: '651'
+source-wordcount: '712'
 ht-degree: 3%
 
 ---
@@ -90,6 +90,10 @@ DataX API可供廣告商使用，這些廣告商希望以Verizon Media(VMG)中�
 
 ## 連接到目標 {#connect}
 
+>[!IMPORTANT]
+> 
+>要連接到目標，您需要 **[!UICONTROL 管理目標]** [訪問控制權限](/help/access-control/home.md#permissions)。 閱讀 [訪問控制概述](/help/access-control/ui/overview.md) 或聯繫您的產品管理員以獲取所需權限。
+
 ![平台UI中的Yahoo DataX目標卡](/help/destinations/assets/catalog/advertising/yahoo-datax/catalog.png)
 
 要連接到此目標，請按照 [目標配置教程](../../ui/connect-destination.md)。
@@ -103,6 +107,10 @@ DataX API可供廣告商使用，這些廣告商希望以Verizon Media(VMG)中�
 * **[!UICONTROL MDM ID]**:這是Yahoo DataX中的唯一標識符，也是設定向此目標的資料導出的必需欄位。 如果您不知道此Id，請與Yahoo Data X客戶經理聯繫。  使用MDM ID時，資料可以被限制為僅用於特定的一組獨佔用戶（例如廣告商的第一方資料）。
 
 ## 將段激活到此目標 {#activate}
+
+>[!IMPORTANT]
+> 
+>要激活資料，您需要 **[!UICONTROL 管理目標]**。 **[!UICONTROL 激活目標]**。 **[!UICONTROL 查看配置檔案]**, **[!UICONTROL 查看段]** [訪問控制權限](/help/access-control/home.md#permissions)。 閱讀 [訪問控制概述](/help/access-control/ui/overview.md) 或聯繫您的產品管理員以獲取所需權限。
 
 閱讀 [激活配置檔案和段到目標](../../ui/activate-segment-streaming-destinations.md) 有關激活目標受眾段的說明。
 

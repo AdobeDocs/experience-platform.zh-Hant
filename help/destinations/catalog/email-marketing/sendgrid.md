@@ -2,13 +2,13 @@
 keywords: 電子郵件；電子郵件；電子郵件；電子郵件目標；sendgrid;sendgrid目標
 title: SendGrid連接
 description: SendGrid目標允許您導出第一方資料，並在SendGrid中根據您的業務需要激活它。
-source-git-commit: ccbc633bfce8f4f66577b50064c28cfc26cb6dca
+exl-id: 6f22746f-2043-4a20-b8a6-097d721f2fe7
+source-git-commit: 0006c498cd33d9deb66f1d052b4771ec7504457d
 workflow-type: tm+mt
-source-wordcount: '1414'
-ht-degree: 3%
+source-wordcount: '1475'
+ht-degree: 2%
 
 ---
-
 
 # [!DNL SendGrid] 連接
 
@@ -74,6 +74,11 @@ SendGrid支援激活下表中描述的身份。 瞭解有關 [身份](/help/iden
 
 ## 連接到目標 {#connect}
 
+>[!IMPORTANT]
+> 
+>要連接到目標，您需要 **[!UICONTROL 管理目標]** [訪問控制權限](/help/access-control/home.md#permissions)。 閱讀 [訪問控制概述](/help/access-control/ui/overview.md) 或聯繫您的產品管理員以獲取所需權限。
+
+
 要連接到此目標，請按照 [目標配置教程](../../ui/connect-destination.md)。 下面詳細說明了特定於此目標的步驟。
 
 1. 在 [!DNL Adobe Experience Platform] 控制台，導航至 **目標**。
@@ -101,6 +106,10 @@ SendGrid支援激活下表中描述的身份。 瞭解有關 [身份](/help/iden
 ![](../../assets/catalog/email-marketing/sendgrid/06.jpg)
 
 ## 將段激活到此目標 {#activate}
+
+>[!IMPORTANT]
+> 
+>要激活資料，您需要 **[!UICONTROL 管理目標]**。 **[!UICONTROL 激活目標]**。 **[!UICONTROL 查看配置檔案]**, **[!UICONTROL 查看段]** [訪問控制權限](/help/access-control/home.md#permissions)。 閱讀 [訪問控制概述](/help/access-control/ui/overview.md) 或聯繫您的產品管理員以獲取所需權限。
 
 閱讀 [激活配置檔案和段以流式處理段導出目標](/help/destinations/ui/activate-segment-streaming-destinations.md) 有關激活此目標受眾段的說明。
 

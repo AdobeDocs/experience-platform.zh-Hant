@@ -3,9 +3,9 @@ keywords: SFTP;SFTP
 title: SFTP連接
 description: 建立到SFTP伺服器的即時出站連接，以定期從Adobe Experience Platform導出分隔的資料檔案。
 exl-id: 27abfc38-ec19-4321-b743-169370d585a0
-source-git-commit: dbefe3e9b193ccef06b6a81919233501b6e938be
+source-git-commit: 0b094e635e6d22e58e5aa79a374df0879167a833
 workflow-type: tm+mt
-source-wordcount: '557'
+source-wordcount: '642'
 ht-degree: 1%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 1%
 
 >[!IMPORTANT]
 >
-> 雖然Adobe支援向SFTP伺服器導出資料，但建議的用於導出資料的雲儲存位置 [!DNL Amazon S3] 和 [!DNL Azure Blob]。
+> 雖然Experience Platform支援向SFTP伺服器導出資料，但建議的用於導出資料的雲儲存位置 [!DNL Amazon S3] 和 [!DNL Azure Blob]。
 
 ## 導出類型和頻率 {#export-type-frequency}
 
@@ -34,6 +34,10 @@ ht-degree: 1%
 ![基於SFTP配置檔案的導出類型](../../assets/catalog/cloud-storage/sftp/catalog.png)
 
 ## 連接到目標 {#connect}
+
+>[!IMPORTANT]
+> 
+>要連接到目標，您需要 **[!UICONTROL 管理目標]** [訪問控制權限](/help/access-control/home.md#permissions)。 閱讀 [訪問控制概述](/help/access-control/ui/overview.md) 或聯繫您的產品管理員以獲取所需權限。
 
 要連接到此目標，請按照 [目標配置教程](../../ui/connect-destination.md)。
 
@@ -88,6 +92,14 @@ ht-degree: 1%
 * **[!UICONTROL 名稱]**:在Experience Platform用戶介面中輸入有助於識別此目標的名稱；
 * **[!UICONTROL 說明]**:輸入此目標的說明；
 * **[!UICONTROL 資料夾路徑]**:在SFTP位置輸入檔案導出位置的資料夾路徑。
+
+## 將段激活到此目標 {#activate}
+
+>[!IMPORTANT]
+> 
+>要激活資料，您需要 **[!UICONTROL 管理目標]**。 **[!UICONTROL 激活目標]**。 **[!UICONTROL 查看配置檔案]**, **[!UICONTROL 查看段]** [訪問控制權限](/help/access-control/home.md#permissions)。 閱讀 [訪問控制概述](/help/access-control/ui/overview.md) 或聯繫您的產品管理員以獲取所需權限。
+
+請參閱 [將受眾資料激活到批配置檔案導出目標](../../ui/activate-batch-profile-destinations.md) 有關激活此目標受眾段的說明。
 
 ## 導出的資料 {#exported-data}
 

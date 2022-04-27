@@ -3,9 +3,9 @@ keywords: linkedin連接；linkedin連接；linkedin連接；linkedin目標；li
 title: Linkedin匹配的受眾連接
 description: 根據經過散列的電子郵件激活LinkedIn市場活動的配置檔案，以針對受眾進行目標、個性化和壓制。
 exl-id: 74c233e9-161a-4e4a-98ef-038a031feff0
-source-git-commit: c5d2427635d90f3a9551e2a395d01d664005e8bc
+source-git-commit: 0006c498cd33d9deb66f1d052b4771ec7504457d
 workflow-type: tm+mt
-source-wordcount: '834'
+source-wordcount: '895'
 ht-degree: 2%
 
 ---
@@ -87,6 +87,10 @@ ht-degree: 2%
 
 ## 連接到目標 {#connect}
 
+>[!IMPORTANT]
+> 
+>要連接到目標，您需要 **[!UICONTROL 管理目標]** [訪問控制權限](/help/access-control/home.md#permissions)。 閱讀 [訪問控制概述](/help/access-control/ui/overview.md) 或聯繫您的產品管理員以獲取所需權限。
+
 要連接到此目標，請按照 [目標配置教程](../../ui/connect-destination.md)。
 
 下面的視頻還演示了配置 [!DNL LinkedIn Matched Audiences] 目標和激活段。
@@ -106,6 +110,10 @@ ht-degree: 2%
 * **[!UICONTROL 帳戶ID]**:你 [!DNL LinkedIn Campaign Manager Account ID]。 您可以在 [!DNL LinkedIn Campaign Manager] 帳戶。
 
 ## 將段激活到此目標 {#activate}
+
+>[!IMPORTANT]
+> 
+>要激活資料，您需要 **[!UICONTROL 管理目標]**。 **[!UICONTROL 激活目標]**。 **[!UICONTROL 查看配置檔案]**, **[!UICONTROL 查看段]** [訪問控制權限](/help/access-control/home.md#permissions)。 閱讀 [訪問控制概述](/help/access-control/ui/overview.md) 或聯繫您的產品管理員以獲取所需權限。
 
 請參閱 [將受眾資料激活到流段導出目標](../../ui/activate-segment-streaming-destinations.md) 有關激活此目標受眾段的說明。
 
