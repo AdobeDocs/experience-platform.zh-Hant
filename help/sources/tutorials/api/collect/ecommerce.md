@@ -6,7 +6,7 @@ topic-legacy: overview
 type: Tutorial
 description: 本教程介紹了從第三方電子商務系統檢索資料以及使用源連接器和API將資料導入平台的步驟。
 exl-id: 0952f037-5e20-4d84-a2e6-2c9470f168f5
-source-git-commit: 964bdaab8a90983f1e40b33720580110ac9e40fe
+source-git-commit: fc719a4ec90c5150f129deec45da87df703ec4b5
 workflow-type: tm+mt
 source-wordcount: '1260'
 ht-degree: 1%
@@ -546,7 +546,7 @@ curl -X POST \
                 "name": "Mapping",
                 "params": {
                     "mappingId": "22922102bffd4369b6209c102a604062",
-                    "mappingVersion": "0"
+                    "mappingVersion": 0
                 }
             }
         ],

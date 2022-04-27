@@ -6,7 +6,7 @@ topic-legacy: overview
 type: Tutorial
 description: 本教程介紹了從第三方廣告應用程式檢索資料以及使用源連接器和流服務API將其插入平台的步驟。
 exl-id: 2a0eb13b-d09e-4bc1-aae3-84c8741eead1
-source-git-commit: 964bdaab8a90983f1e40b33720580110ac9e40fe
+source-git-commit: fc719a4ec90c5150f129deec45da87df703ec4b5
 workflow-type: tm+mt
 source-wordcount: '1296'
 ht-degree: 1%
@@ -587,7 +587,7 @@ curl -X POST \
             "name": "Mapping",
             "params": {
                 "mappingId": "febec6a6785e45ea9ed594422cc483d7",
-                "mappingVersion": "0"
+                "mappingVersion": 0
                 }
             }
         ],
