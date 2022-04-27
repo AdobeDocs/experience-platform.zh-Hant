@@ -3,9 +3,9 @@ keywords: Experience Platform；首頁；熱門主題；資料管理；許可證
 title: 資料管理許可證權利最佳實踐
 description: 本文檔概述了可遵循的最佳做法和可用於更好地管理您與Adobe Experience Platform的許可證權利的工具。
 exl-id: f23bea28-ebd2-4ed4-aeb1-f896d30d07c2
-source-git-commit: a15b5525d3a2fa034715803c83dc22a94915347e
+source-git-commit: 02882957fc38058ff092938d631e290725d4bdc2
 workflow-type: tm+mt
-source-wordcount: '2586'
+source-wordcount: '2531'
 ht-degree: 0%
 
 ---
@@ -130,7 +130,8 @@ Adobe Experience PlatformUI提供了一個儀表板，通過它可以查看貴�
 
 * **資料集重疊報表API**:公開對可定址受眾貢獻最大的資料集。 您可以使用此報表來確定 [!DNL ExperienceEvent] 資料集，為設定TTL。 請參閱上的教程 [生成資料集重疊報告](../../profile/tutorials/dataset-overlap-report.md) 的子菜單。
 * **標識重疊報表API**:顯示對可定址受眾貢獻最大的身份命名空間。 請參閱上的教程 [生成身份重疊報告](../../profile/api/preview-sample-status.md#generate-the-identity-namespace-overlap-report) 的子菜單。
-* **未知配置檔案報告API**:暴露在不同時間閾值下應用假名TTL的影響。 您可以使用此報告來標識要應用的假名TTL閾值。 請參閱上的教程 [生成未知配置檔案報告](../../profile/api/preview-sample-status.md#generate-the-unknown-profiles-report) 的子菜單。
+<!-- * **Unknown Profiles Report API**: Exposes the impact of applying pseudonymous TTL for different time thresholds. You can use this report to identify which pseudonymous TTL threshold to apply. See the tutorial on [generating the unknown profiles report](../../profile/api/preview-sample-status.md#generate-the-unknown-profiles-report) for more information.
+-->
 
 #### [!DNL ExperienceEvent] 資料集TTL {#dataset-ttl}
 
@@ -197,7 +198,6 @@ Adobe Experience PlatformUI提供了一個儀表板，通過它可以查看貴�
 | [事件轉發資料篩選器](../../tags/ui/event-forwarding/overview.md) | 應用伺服器端 [!DNL Kafka] 過濾器，以從攝取中排除不必要的資料。  請參閱 [標籤規則](../../tags/ui/managing-resources/rules.md) 的雙曲餘切值。 |
 | [許可證使用儀表板UI](../../dashboards/guides/license-usage.md#license-usage-dashboard-data) | 查看組織與許可證相關資料的快照以進行Experience Platform |
 | [資料集重疊報表API](../../profile/tutorials/dataset-overlap-report.md) | 輸出對可定址受眾貢獻最大的資料集 |
-| [未知配置檔案報告API](../../profile/api/preview-sample-status.md#generate-the-unknown-profiles-report) | 輸出不同時間閾值應用假名TTL的影響 |
 | [標識重疊報表API](../../profile/api/preview-sample-status.md#generate-the-identity-namespace-overlap-report) | 輸出對可定址受眾貢獻最大的身份命名空間 |
 
 {style=&quot;table-layout:auto&quot;&quot;
