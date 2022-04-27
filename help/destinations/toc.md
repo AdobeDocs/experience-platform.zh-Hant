@@ -4,9 +4,9 @@ user-guide-title: 目的地指南
 user-guide-description: 針對跨通路行銷活動、電子郵件宣傳、鎖定特定目標的行銷活動和其他諸多使用案例，啟用已知和未知的資料。
 description: 本文檔列出了Adobe Experience Platform目標的目錄
 feature: Destinations
-source-git-commit: 73bb1d21e70644ffef50b08f22048d0937a6a729
+source-git-commit: d5f83f9d99789afba44e26400d0cea8a72946d7a
 workflow-type: tm+mt
-source-wordcount: '753'
+source-wordcount: '758'
 ht-degree: 8%
 
 ---
@@ -39,6 +39,7 @@ ht-degree: 8%
    * [編輯激活資料流](./ui/edit-activation.md)
    * [刪除目標](./ui/delete-destinations.md)
    * [監視資料流](./ui/monitor-dataflows.md)
+   * [訂閱上下文中的目標警報](ui/alerts.md)
 * 目標目錄 {#catalog}
    * [目標目錄概述](./catalog/overview.md)
    * Adobe目標{#adobe}
@@ -115,7 +116,7 @@ ht-degree: 8%
       * [SendGrid連接](./catalog/email-marketing/sendgrid.md)
    * 標籤擴展 {#launch-extensions}
       * [標籤擴展概述](./catalog/launch-extensions/overview.md)
-   * 移動接洽目標 {#mobile-engagement}
+   * Mobile訂婚目的地 {#mobile-engagement}
       * [移動項目目標概述](./catalog/mobile-engagement/overview.md)
       * [飛艇屬性連接](./catalog/mobile-engagement/airship-attributes.md)
       * [飛艇標籤連接](./catalog/mobile-engagement/airship-tags.md)

@@ -1,58 +1,62 @@
 ---
-keywords: 連接目標；目標連接；如何連接目標
-title: 建立新的目的地連線
+keywords: 連接目標；目標連接；連接目標
+title: 新建目標連接
 type: Tutorial
-description: 本教學課程列出連線至Adobe Experience Platform中目的地的步驟
+description: 本教程列出了連接到Adobe Experience Platform目標的步驟
 exl-id: 56d7799a-d1da-4727-ae79-fb2c775fe5a5
-source-git-commit: f4721d3f114357b25517e4e66f1f626f82621c34
+source-git-commit: b275621d9c6552327e0e55c00c8fcf0397088168
 workflow-type: tm+mt
-source-wordcount: '326'
+source-wordcount: '383'
 ht-degree: 0%
 
 ---
 
-# 建立新的目的地連線
+# 新建目標連接
 
-## 概覽 {#overview}
+## 總覽 {#overview}
 
-您必須先設定與目的地平台的連線，才能將受眾資料傳送至目的地。 本文說明如何使用Adobe Experience Platform使用者介面來設定新目的地。
+在將受眾資料發送到目標之前，必須設定到目標平台的連接。 本文介紹如何使用Adobe Experience Platform用戶介面設定新目標。
 
-## 建立新的目的地連線 {#setup}
+## 新建目標連接 {#setup}
 
-1. 前往&#x200B;**[!UICONTROL 連線]** > **[!UICONTROL 目的地]**，然後選取&#x200B;**[!UICONTROL 目錄]**&#x200B;標籤。
+1. 轉到 **[!UICONTROL 連接]** > **[!UICONTROL 目標]**，然後選擇 **[!UICONTROL 目錄]** 頁籤。
 
-   ![目錄頁面](../assets/ui/connect-destinations/catalog.png)
+   ![目錄頁](../assets/ui/connect-destinations/catalog.png)
 
-1. 視您是否擁有與目的地的現有連線而定，您可以在目的地卡片上看到&#x200B;**[!UICONTROL 設定]**&#x200B;或&#x200B;**[!UICONTROL 啟用區段]**&#x200B;按鈕。 如需&#x200B;**[!UICONTROL 啟用區段]**&#x200B;與&#x200B;**[!UICONTROL 設定]**&#x200B;之間差異的詳細資訊，請參閱目標工作區檔案的[目錄](../ui/destinations-workspace.md#catalog)區段。
+1. 根據您是否與目標有現有連接，您可以看到 **[!UICONTROL 設定]** 或 **[!UICONTROL 激活段]** 按鈕。 有關兩者之間差異的詳細資訊 **[!UICONTROL 激活段]** 和 **[!UICONTROL 設定]**，請參閱 [目錄](../ui/destinations-workspace.md#catalog) 目標工作區文檔的「 」部分。
 
-   選取「**[!UICONTROL 設定]**」或「**[!UICONTROL 啟用區段]**」，視您可使用的按鈕而定。
+   選擇 **[!UICONTROL 設定]** 或 **[!UICONTROL 激活段]**，具體取決於您可以使用的按鈕。
 
-   ![目錄頁面](../assets/ui/connect-destinations/set-up.png)
+   ![目錄頁](../assets/ui/connect-destinations/set-up.png)
 
-   ![啟用區段](../assets/ui/connect-destinations/activate-segments.png)
+   ![激活段](../assets/ui/connect-destinations/activate-segments.png)
 
-1. 如果選擇了&#x200B;**[!UICONTROL Set up]**，請跳到下一步。
+1. 如果已選擇 **[!UICONTROL 設定]**，跳至下一步。
 
-   如果您選取了&#x200B;**[!UICONTROL 啟用區段]**，您現在可以看到現有目的地連線清單。
+   如果已選擇 **[!UICONTROL 激活段]**，您現在可以看到現有目標連接的清單。
 
-   選擇&#x200B;**[!UICONTROL 配置新目標]**。
+   選擇 **[!UICONTROL 配置新目標]**。
 
    ![配置新目標](../assets/ui/connect-destinations/configure-new-destination.png)
 
-1. 輸入目標平台連接詳細資訊，然後選擇&#x200B;**[!UICONTROL 連接到目標]**。
+1. 輸入目標平台連接詳細資訊，然後選擇 **[!UICONTROL 連接到目標]**。
 
    >[!NOTE]
    >
-   >下圖僅供圖例之用。 目的地的連線詳細資訊因目的地而異。 如需您目的地的連線詳細資訊，請參閱每個[目的地目錄](../catalog/overview.md)頁面中的&#x200B;**連線參數**&#x200B;區段（例如[Google Customer Match](..//catalog/advertising/google-customer-match.md#parameters)）。
+   >下面的影像僅用於圖示目的。 目標連接詳細資訊因目標而異。 有關目標的連接詳細資訊，請參閱 **連接參數** 的 [目標目錄](../catalog/overview.md) 頁面(例如， [Google客戶匹配](..//catalog/advertising/google-customer-match.md#parameters))。
 
    ![連接到目標](../assets/ui/connect-destinations/connect-destination.png)
+
+1. （可選）選擇要訂閱的目標資料流警報。 在建立資料流以接收有關流運行狀態、成功或失敗的警報消息時，可以訂閱警報。 請參閱 [訂閱上下文中的目標警報](alerts.md) 有關目標資料流警報的詳細資訊。
+
+   ![顯示上下文目標警報訂閱選項的UI影像](../assets/ui/connect-destinations/subscribe-to-alerts.png)
 
 1. 選取&#x200B;**[!UICONTROL 「下一步」]**。
 
    ![連接到目標](../assets/ui/connect-destinations/next.png)
 
-1. 選取適用於您要匯出至目的地之資料的行銷動作。 行銷動作會指出要將資料匯出至目的地的目的。 您可以從Adobe定義的行銷動作中選取，或者您可以建立自己的行銷動作。 如需行銷動作的詳細資訊，請參閱[資料使用原則概述](../../data-governance/policies/overview.md)頁面。
+1. 選擇適用於要導出到目標的資料的市場營銷操作。 市場營銷操作指明將資料導出到目標的目的。 您可以從Adobe定義的市場營銷活動中進行選擇，也可以建立自己的市場營銷活動。 有關市場營銷活動的詳細資訊，請參閱 [資料使用策略概述](../../data-governance/policies/overview.md) 的子菜單。
 
-   ![選取行銷動作](../assets/ui/connect-destinations/governance.png)
+   ![選擇市場營銷活動](../assets/ui/connect-destinations/governance.png)
 
-1. 選取&#x200B;**[!UICONTROL 儲存並退出]**&#x200B;以儲存目的地設定，或選取&#x200B;**[!UICONTROL 下一個]**&#x200B;以繼續處理對象資料[啟動流程](activation-overview.md)。
+1. 選擇 **[!UICONTROL 保存並退出]** 保存目標配置，或選擇 **[!UICONTROL 下一個]** 繼續訪問受眾資料 [激活流](activation-overview.md)。

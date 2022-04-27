@@ -4,9 +4,9 @@ title: 目標工作區
 description: 「目標」工作區由四個部分組成，即「目錄」、「瀏覽」、「帳戶」和「系統視圖」。 下面各節介紹了這些內容。
 seo-description: In Adobe Experience Platform, select Destinations from the left navigation bar to access the destinations workspace.
 exl-id: 0f46f08d-0fe3-441d-933a-86bc146c0f19
-source-git-commit: 2d944c7bd237efbbd4a770b3a6dd03c4133bc901
+source-git-commit: b275621d9c6552327e0e55c00c8fcf0397088168
 workflow-type: tm+mt
-source-wordcount: '1101'
+source-wordcount: '1156'
 ht-degree: 2%
 
 ---
@@ -94,6 +94,7 @@ ht-degree: 2%
 > * 選擇 [!UICONTROL 名稱] 列和使用 ![「激活段」按鈕](../assets/ui/workspace/add-data-symbol.png)**[!UICONTROL 激活段&#x200B;]**按鈕將段發送到該目標。
 > * 選擇 [!UICONTROL 名稱] 列和使用 ![刪除按鈕](../assets/ui/workspace/delete-destination-symbol.png)**[!UICONTROL 刪除&#x200B;]**按鈕 [刪除](delete-destinations.md) 到目標的現有連接。
 > * 選擇 [!UICONTROL 名稱] 列和使用 ![「在監視中查看」按鈕](../assets/ui/workspace/monitoring-icon.png)**[!UICONTROL 在監視中查看&#x200B;]**按鈕查看此目標的激活資訊 [監控儀表板](/help/dataflows/ui/monitor-destinations.md#monitoring-destinations-dashboard)。
+> * 選擇 [!UICONTROL 名稱] 列和使用 ![訂閱警報 ](../assets/ui/workspace/alerts-icon.png)**[!UICONTROL 訂閱警報&#x200B;]**按鈕以訂閱目標資料流警報。 您可以訂閱警報以接收有關流運行狀態、成功或失敗的消息。 請參閱 [訂閱上下文中的目標警報](alerts.md) 有關目標資料流警報的詳細資訊……
 
 
 ![瀏覽頁籤](../assets/ui/workspace/browse-tab.png)
