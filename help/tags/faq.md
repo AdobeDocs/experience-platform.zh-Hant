@@ -2,9 +2,9 @@
 title: 標籤疑難解答指南
 description: 獲取有關Adobe Experience Platform標籤的常見問題的答案。
 exl-id: c06b8e25-4d79-4a11-94da-94ac096b5e33
-source-git-commit: 2181ec15f2d868d1821a5f9926729d2796f2f298
+source-git-commit: c21699af0d08d0f63562910e2174273f0a139538
 workflow-type: tm+mt
-source-wordcount: '1042'
+source-wordcount: '1049'
 ht-degree: 27%
 
 ---
@@ -106,4 +106,4 @@ Adobe解決方案以及大量且不斷增加的獨立分析、營銷、廣告和
 
 ## 若我有其他問題該怎麼辦？
 
-如果你有其他問題，你可以問 [Adobe Experience Platform資料收集社區頁](https://adobe.com/go/launchme) Experience League，或加入 [標籤開發商官方Slack小組](http://join.connectionsdevs.chat)。
+如果你有其他問題，你可以問 [Adobe Experience Platform資料收集社區頁](https://adobe.com/go/launchme) Experience League，或加入 [標籤開發商官方Slack小組](https://docs.google.com/forms/d/e/1FAIpQLScq1m63YkDrRpvPLhzUqtfoleWiDDTTXZsSivIXRfFdlSMzpQ/viewform)。
