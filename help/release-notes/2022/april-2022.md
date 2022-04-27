@@ -2,10 +2,10 @@
 title: Adobe Experience Platform發行說明2022年4月
 description: 2022年4月為Adobe Experience Platform發行的說明。
 exl-id: 39233787-3089-4469-8363-b006ae41ae21
-source-git-commit: 881be00b9dd10ea95677cc1a960c80db0afe0c54
+source-git-commit: 6c2271e4c5be924dcd8c137cb40bef72e104c7e2
 workflow-type: tm+mt
-source-wordcount: '2379'
-ht-degree: 4%
+source-wordcount: '2493'
+ht-degree: 3%
 
 ---
 
@@ -84,14 +84,31 @@ Adobe Experience Platform 現有功能更新：
 
 | 功能 | 說明 |
 | ----------- | ----------- |
-| [目標資料流的上下文警報](../../destinations/ui/alerts.md) | 現在，在建立目標資料流時，您可以訂閱警報，以接收有關資料流運行狀態、成功或失敗的警報消息。 您可以選擇在Experience PlatformUI中或通過電子郵件接收警報。 |
+| 高級企業目標連接器 | 現在，三個企業目標連接器已正式提供： [[!DNL Amazon Kinesis]](../../destinations/catalog/cloud-storage/amazon-kinesis.md)。 [[!DNL Azure Event Hubs]](../../destinations/catalog/cloud-storage/azure-event-hubs.md), [[!DNL HTTP API]](../../destinations/catalog/streaming/http-destination.md)。 <br> 企業目標連接器的一般可用性包括以前在測試階段提供的所有功能，以及更多功能： <ul><li>新的身份驗證功能，包括 [Azure事件中心中的共用訪問簽名](../../destinations/catalog/cloud-storage/azure-event-hubs.md#sas-authentication) 更多 [驗證類型](../../destinations/catalog/streaming/http-destination.md#authentication-information) （承載令牌，OAuth 2）;</li><li>[回填歷史配置檔案資料](../../destinations/catalog/streaming/http-destination.md#historical-data-backfill) （在首次激活時發送符合段的歷史配置檔案）;</li><li>現在，這些目標支援資料流運行度量；</li><li>[其他段元資料](../../destinations/catalog/streaming/http-destination.md#destination-details) 包括在資料負載中，包括段名稱和段時間戳；</li><li>支援 [靜態IP地址](/help/destinations/catalog/streaming/ip-address-allow-list.md) 允許客戶Experience Platform。</li></ul> |
+| 目標資料流的上下文警報 | 你現在可以 [訂閱警報](../../destinations/ui/alerts.md) 建立目標資料流時，接收有關資料流運行狀態、成功或失敗的警報消息。 您可以選擇在Experience PlatformUI中或通過電子郵件接收警報。 |
+
+<!--
+
+### Release process for advanced enterprise destination connectors {#release-process-enterprise-destinations}
+
+For the Amazon Kinesis, Azure Event Hubs, and HTTP API destinations, during the release process (starting April 27th), you will see both the former Beta destination card, as well as the new generally available (GA) destination card in the destinations catalog. Any dataflows configured by customers using the beta destinations will be migrated in the next couple of days to the GA version of the same destination. This migration should ultimately be completed by the end of day Friday April 29th. The Beta destinations will be continue to be visible during this short time-window and labeled as **Deprecated**.
+
+If you have been utilizing these destinations in the Beta phase, please note the following:
+
+- If have been previously in Beta with any of the 3 destinations, no action is needed. All dataflows set up as part of Beta will continue to be functional and will be migrated to the GA version.
+- If you want to set up these destinations beginning April 27th, please do so with the new GA version of the destinations.
+- The beta cards marked as deprecated will be removed once the release operation is complete, estimated by the end of day Friday April 29th. The Experience Platform engineering team is monitoring closely for a successful release operation.
+
+-->
 
 **新目標**
 
 | 目的地 | 說明 |
 | ----------- | ----------- |
-| [[!DNL Criteo]](../../destinations/catalog/advertising/criteo.md) | 將資料連接並激活到Criteo廣告平台。 |
-| [[!DNL Sendgrid]](../../destinations/catalog/email-marketing/sendgrid.md) | 將資料連接並激活到Sendgrid平台，以用於事務性和營銷電子郵件。 |
+| [!DNL Criteo] | 將資料連接並激活到 [[!DNL Criteo]](../../destinations/catalog/advertising/criteo.md) 廣告平台。 |
+| [!DNL Sendgrid] | 將資料連接並激活到 [[!DNL Sendgrid]](../../destinations/catalog/email-marketing/sendgrid.md) 用於交易和營銷電子郵件的平台。 |
+
+有關目標的更多一般資訊，請參閱 [目標概述](../../destinations/home.md)。
 
 ## 體驗資料模型(XDM) {#xdm}
 
