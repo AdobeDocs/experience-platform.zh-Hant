@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform；首頁；熱門主題；監視資料流；流服務api；流服務
 solution: Experience Platform
-title: 使用流服務API監視資料流
+title: 使用流服務API監視源資料流
 topic-legacy: overview
 type: Tutorial
 description: 本教程介紹使用流服務API監視流運行資料的完整性、錯誤和度量的步驟。
 exl-id: 5b7d1aa4-5e6d-48f4-82bd-5348dc0e890d
-source-git-commit: 95f455bd03b7baefe0133a9818c9d048f36f9d38
+source-git-commit: 9727f7b0e8eaae92c85f102e5e7bea018a2ee6de
 workflow-type: tm+mt
-source-wordcount: '410'
+source-wordcount: '412'
 ht-degree: 2%
 
 ---
 
-# 使用流服務API監視資料流
+# 使用流服務API監視源資料流
 
 本教程介紹了使用以下工具監控流運行資料的步驟： [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/)。
 
