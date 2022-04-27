@@ -6,9 +6,9 @@ title: 配置客戶AI實例
 topic-legacy: Instance creation
 description: 智慧服務將客戶AI作為一種簡單易用的Adobe Sensei服務，可針對不同的使用情形進行配置。 以下各節提供了配置客戶AI實例的步驟。
 exl-id: 78353dab-ccb5-4692-81f6-3fb3f6eca886
-source-git-commit: eae43834d1cd5931dd752b95023da7ac77668e56
+source-git-commit: c4e1d739bf54cbebf6a04d87f92d0df4bdbc083e
 workflow-type: tm+mt
-source-wordcount: '2608'
+source-wordcount: '2618'
 ht-degree: 0%
 
 ---
@@ -64,7 +64,7 @@ ht-degree: 0%
 
 ## 選擇資料 {#select-data}
 
-根據設計，客戶AI使用Adobe Analytics、Adobe Audience Manager、體驗事件和消費者體驗事件資料來計算傾向得分。 選擇資料集時，只列出與客戶AI相容的資料集。 要選擇資料集，請選擇&#x200B;**+**)資料集名稱旁邊的符號，或選中複選框以一次添加多個資料集。 使用搜索選項可快速查找您感興趣的資料集。
+按照設計，客戶AI使用Adobe Analytics、Adobe Audience Manager、總體體驗事件和消費者體驗事件資料來計算傾向得分。 選擇資料集時，只列出與客戶AI相容的資料集。 要選擇資料集，請選擇&#x200B;**+**)資料集名稱旁邊的符號，或選中複選框以一次添加多個資料集。 使用搜索選項可快速查找您感興趣的資料集。
 
 ![選擇並搜索資料集](../images/user-guide/configure-dataset-page.png)
 
@@ -90,7 +90,9 @@ ht-degree: 0%
 
 ### 選擇標識 {#identity}
 
-為了使多個資料集彼此聯接，必須選擇標識類型（也稱為「標識命名空間」）和該命名空間中的標識值。 如果在同一命名空間下將多個欄位指定為架構中的標識，則所有分配的標識值都會出現在由命名空間優先的標識下拉清單中，如 `EMAIL (personalEmail.address)` 或 `EMAIL (workEmail.address)`。
+現在，您可以基於標識映射（欄位）將多個資料集聯接到彼此。 必須選擇標識類型（也稱為「標識命名空間」）和該命名空間中的標識值。 如果在同一命名空間下將多個欄位指定為架構中的標識，則所有分配的標識值都會出現在由命名空間優先的標識下拉清單中，如 `EMAIL (personalEmail.address)` 或 `EMAIL (workEmail.address)`。
+
+[選擇相同命名空間](../images/user-guide/cai-identity-map.png)
 
 >[!IMPORTANT]
 >
@@ -98,7 +100,8 @@ ht-degree: 0%
 
 要選擇標識，請選擇標識列中帶下划線的值。 將出現選擇標識跨距。
 
-![選擇相同命名空間](../images/user-guide/identity-type.png)
+<!-- ![select same namespace](../images/user-guide/identity-type.png) -->
+[選擇相同命名空間](../images/user-guide/cai-identity-namespace.png)
 
 如果命名空間中有多個標識可用，請確保為使用案例選擇正確的標識欄位。 例如，電子郵件命名空間中有兩個電子郵件標識，一個是工作電子郵件，另一個是個人電子郵件。 根據使用案例，個人電子郵件更可能被填入，在個人預測中也更有用。 這意味著 `EMAIL (personalEmail.address)` 將被選作身份。
 
@@ -116,7 +119,8 @@ ht-degree: 0%
 
 要建立目標，請選擇 **[!UICONTROL 輸入欄位名稱]** 後跟下拉清單中的欄位。 選擇第二個輸入，即事件條件的子句，然後根據需要提供目標值以完成事件。 可以通過選擇 **[!UICONTROL 添加事件]**。 最後，通過應用預測時間框（天數）來完成目標，然後選擇 **[!UICONTROL 下一個]**。
 
-![](../images/user-guide/define-a-goal.png)
+<!-- ![](../images/user-guide/define-a-goal.png) -->
+![](../images/user-guide/cai-define-a-goal.png)
 
 ### 將發生且不會發生
 
@@ -124,7 +128,8 @@ ht-degree: 0%
 
 例如，如果您想設定應用以預測客戶是否會購買產品，則可以選擇 **[!UICONTROL 將發生]** 後跟 **[!UICONTROL 全部]** 然後輸入 **commerce.purches.id** （或類似欄位） **[!UICONTROL 存在]** 作為運算子。
 
-![會發生](../images/user-guide/occur.png)
+<!-- ![will occur](../images/user-guide/occur.png) -->
+![會發生](../images/user-guide/cai-will-occur.png)
 
 但是，有時您對預測某個事件是否在特定時間範圍內不會發生感興趣。 要使用此選項配置目標，請選擇 **[!UICONTROL 不會發生]** 從頂級下拉清單中。
 
