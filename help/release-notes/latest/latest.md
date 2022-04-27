@@ -2,7 +2,7 @@
 title: Adobe Experience Platform 發行說明
 description: Adobe Experience Platform的最新發行說明。
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: e9e4e58de454abb1fc66e07d5ad4ce18398c6a44
+source-git-commit: 881be00b9dd10ea95677cc1a960c80db0afe0c54
 workflow-type: tm+mt
 source-wordcount: '2378'
 ht-degree: 4%
@@ -163,7 +163,7 @@ Attribution AI和客戶AI允許客戶配置高級AI/ML模型以用於營銷屬�
 
 有關 [!DNL Intelligent Services]，請參閱 [[!DNL Intelligent Services] 概述](../../intelligent-services/home.md)。
 
-### Real-time Customer Data PlatformB2B版 {#B2B}
+## Real-time Customer Data PlatformB2B版 {#B2B}
 
 即時CDP B2B版本構建在Real-time Customer Data Platform（即時CDP）之上，專門為以業務到業務服務模式運營的營銷人員而構建。 它將來自多個來源的資料匯集在一起，並將其合併到人員和帳戶配置檔案的單個視圖中。 此統一資料使營銷人員能夠精確地瞄準特定受眾，並跨所有可用渠道接觸這些受眾。
 

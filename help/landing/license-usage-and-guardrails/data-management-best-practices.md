@@ -2,9 +2,10 @@
 keywords: Experience Platform；首頁；熱門主題；資料管理；許可證權利；許可；最佳實踐
 title: 資料管理許可證權利最佳實踐
 description: 本文檔概述了可遵循的最佳做法和可用於更好地管理您與Adobe Experience Platform的許可證權利的工具。
-source-git-commit: 3bac35ba5f6e9cde6c1324b11220c523daa1f8cb
+exl-id: f23bea28-ebd2-4ed4-aeb1-f896d30d07c2
+source-git-commit: a15b5525d3a2fa034715803c83dc22a94915347e
 workflow-type: tm+mt
-source-wordcount: '2603'
+source-wordcount: '2586'
 ht-degree: 0%
 
 ---
@@ -30,7 +31,7 @@ Experience Platform主要由兩個資料儲存庫組成：這樣 [!DNL Data Lake
 的 **配置檔案儲存** 是建立客戶配置檔案的地點，主要用於以下目的：
 
 * 充當用於支援即時體驗的配置檔案的資料儲存；
-* Enables use cases such as segmentation, activation, and personalization.
+* 啟用分段、激活和個性化等使用案例。
 
 >[!NOTE]
 >
@@ -59,11 +60,11 @@ Adobe Experience PlatformUI提供了一個儀表板，通過它可以查看貴�
 
 ## 資料管理最佳做法
 
-The following sections outline best practices to follow to better manage your data.
+以下各節概述了為更好地管理資料而遵循的最佳做法。
 
 ### 瞭解您的資料
 
-Not all data is the same in Adobe Experience Platform. 有些資料可能是密集的，但值較低，而另一些資料可能是稀疏的，但值較高。 Some data may lose value as soon as its generated, while others may be valuable for months, if not years.
+並非所有資料都在Adobe Experience Platform。 有些資料可能是密集的，但值較低，而另一些資料可能是稀疏的，但值較高。 一些資料一旦產生就可能會失去價值，而另一些資料可能會在數月甚至數年內都有價值。
 
 瞭解資料的價值需要考慮三個方面：
 
@@ -75,7 +76,7 @@ Not all data is the same in Adobe Experience Platform. 有些資料可能是密�
 
 ### 資料管理工具 {#data-management-tools}
 
-There are two central scenarios to consider when ensuring that your data usage remains within your license entitlement limits:
+在確保資料使用量保持在許可證權限範圍內時，需要考慮以下兩種主要情形：
 
 ### 要將哪些資料引入平台？
 
@@ -103,8 +104,8 @@ There are two central scenarios to consider when ensuring that your data usage r
 | Adobe Audience Manager源過濾 | 建立Adobe Audience Manager源連接時，可以選擇要引入到 [!DNL Data Lake] 和配置檔案服務，而不是整個接收Audience Manager資料。 請參閱上的指南 [建立Audience Manager源連接](../../sources/tutorials/ui/create/adobe-applications/audience-manager.md) 的子菜單。 |
 | Adobe Analytics資料準備 | 您可以使用 [!DNL Data Prep] 建立分析源連接以過濾您的使用案例不需要的資料時的功能。 通過 [!DNL Data Prep]，您可以定義哪些屬性/列需要發佈到配置檔案。 您還可以提供條件語句，以通知平台資料應發佈到配置檔案，還是僅發佈到 [!DNL Data Lake]。 請參閱上的指南 [建立分析源連接](../../sources/tutorials/ui/create/adobe-applications/analytics.md) 的子菜單。 |
 | 支援啟用/禁用配置檔案的資料集 | 要將資料插入配置檔案服務，必須啟用資料集以在配置檔案儲存中使用。 這樣，您 [!DNL Addressable Audience] 和 [!DNL Profile Richness] 權利。 一旦客戶配置檔案使用案例不再需要資料集，您就可以禁用該資料集與配置檔案的整合，以確保您的資料保持許可證合規性。 請參閱上的指南 [啟用和禁用配置檔案的資料集](../../catalog/datasets/enable-for-profile.md) 的子菜單。 |
-| Web SDK and Mobile SDK data exclusion | Web和Mobile SDK收集的資料有兩種：自動收集的資料和開發人員顯式收集的資料。 為了更好地管理許可證合規性，您可以通過上下文設定在SDK配置中禁用自動資料收集。 Custom data can also be removed or not set by your developer. See the guide on [configuring SDK fundamentals](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html?lang=en#fundamentals) for more information. |
-| Server-side forwarding data exclusion | 如果您使用伺服器端轉發將資料發送到平台，則可以通過刪除規則操作中的映射以在所有事件中排除該映射，或向規則添加條件以使某些事件只觸發資料來排除發送的資料。 請參閱 [事件和條件](https://experienceleague.adobe.com/docs/experience-platform/tags/ui/rules.html#events-and-conditions-(if)) 的子菜單。 |
+| Web SDK和Mobile SDK資料排除 | Web和Mobile SDK收集的資料有兩種：自動收集的資料和開發人員顯式收集的資料。 為了更好地管理許可證合規性，您可以通過上下文設定在SDK配置中禁用自動資料收集。 您的開發人員也可以刪除或不設定自定義資料。 請參閱上的指南 [配置SDK基礎](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html?lang=en#fundamentals) 的子菜單。 |
+| 伺服器端轉發資料排除 | 如果您使用伺服器端轉發將資料發送到平台，則可以通過刪除規則操作中的映射以在所有事件中排除該映射，或向規則添加條件以使某些事件只觸發資料來排除發送的資料。 請參閱 [事件和條件](https://experienceleague.adobe.com/docs/experience-platform/tags/ui/rules.html#events-and-conditions-(if)) 的子菜單。 |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -117,8 +118,8 @@ There are two central scenarios to consider when ensuring that your data usage r
 | 配置檔案儲存元件 | 說明 |
 | --- | --- |
 | 配置檔案片段 | 每個客戶配置檔案由多個 **配置檔案片段** 已合併，形成該客戶的單一視圖。 例如，如果客戶通過多個渠道與您的品牌進行交互，您的組織將具有多個 **配置檔案片段** 與出現在多個資料集中的單個客戶相關。 當這些片段被放入平台中時，它們會使用身份圖拼合在一起，為該客戶建立單個配置檔案。 **配置檔案片段** 由標識名稱空間作為標識符，與關聯的記錄資料和/或時間序列資料一起構成。 |
-| 記錄資料（屬性） | A profile is a representation of a subject, an organization or an individual, composed of many **Attributes** (also known as **record data**). 例如，產品的配置檔案可能包括SKU和說明，而人員的配置檔案則包含諸如名、姓和電子郵件地址等資訊。 **記錄資料** 通常體積較低/中等，但在較長的時間內很有價值。 |
-| Time-series data (Behavior) | **時間序列資料** 提供有關用戶行為的資訊。 由標準架構類體驗資料模型(XDM)表示 [!DNL ExperienceEvent]，時間序列資料可描述事件，如添加到購物車的項目、按一下的連結和查看的視頻。 行為的價值可能會隨著時間推移而下降。 |
+| 記錄資料（屬性） | 配置檔案是由許多組成的主題、組織或個人的表示 **屬性** (也稱為 **記錄資料**)。 例如，產品的配置檔案可能包括SKU和說明，而人員的配置檔案則包含諸如名、姓和電子郵件地址等資訊。 **記錄資料** 通常體積較低/中等，但在較長的時間內很有價值。 |
+| 時間序列資料（行為） | **時間序列資料** 提供有關用戶行為的資訊。 由標準架構類體驗資料模型(XDM)表示 [!DNL ExperienceEvent]，時間序列資料可描述事件，如添加到購物車的項目、按一下的連結和查看的視頻。 行為的價值可能會隨著時間推移而下降。 |
 | 標識名稱空間（標識） | 當客戶資料匯集在一起時，通過使用 **標識命名空間**，以及隨著更多關於用戶的資訊逐漸為人所知而將這些身份粘在一起的能力。 查看 [標識命名空間概述](../../identity-service/namespaces.md) 的子菜單。 |
 
 {style=&quot;table-layout:auto&quot;&quot;
@@ -129,7 +130,7 @@ There are two central scenarios to consider when ensuring that your data usage r
 
 * **資料集重疊報表API**:公開對可定址受眾貢獻最大的資料集。 您可以使用此報表來確定 [!DNL ExperienceEvent] 資料集，為設定TTL。 請參閱上的教程 [生成資料集重疊報告](../../profile/tutorials/dataset-overlap-report.md) 的子菜單。
 * **標識重疊報表API**:顯示對可定址受眾貢獻最大的身份命名空間。 請參閱上的教程 [生成身份重疊報告](../../profile/api/preview-sample-status.md#generate-the-identity-namespace-overlap-report) 的子菜單。
-* **未知配置檔案報告API**:暴露在不同時間閾值下應用假名TTL的影響。 You can use this report to identify which pseudonymous TTL threshold to apply. 請參閱上的教程 [生成未知配置檔案報告](../../profile/api/preview-sample-status.md#generate-the-unknown-profiles-report) 的子菜單。
+* **未知配置檔案報告API**:暴露在不同時間閾值下應用假名TTL的影響。 您可以使用此報告來標識要應用的假名TTL閾值。 請參閱上的教程 [生成未知配置檔案報告](../../profile/api/preview-sample-status.md#generate-the-unknown-profiles-report) 的子菜單。
 
 #### [!DNL ExperienceEvent] 資料集TTL {#dataset-ttl}
 
@@ -193,7 +194,7 @@ There are two central scenarios to consider when ensuring that your data usage r
 | [Adobe Analytics資料準備篩選器](../../sources/tutorials/ui/create/adobe-applications/analytics.md) | 應用 [!DNL Kafka] 從攝取中排除不必要資料的過濾器 |
 | [Adobe Audience Manager源連接器過濾器](../../sources/tutorials/ui/create/adobe-applications/audience-manager.md) | 應用Audience Manager源連接篩選器以從攝取中排除不必要的資料 |
 | [合金SDK資料篩選器](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html?lang=en#fundamentals) | 應用合金濾鏡以從攝取中排除不必要的資料 |
-| [伺服器端資料篩選器](https://experienceleague.adobe.com/docs/launch/using/server-side-info/server-side-overview.html?lang=en-better-data-governance) | 應用 [!DNL Kafka] 過濾器，以從攝取中排除不必要的資料。  請參閱 [事件和條件](https://experienceleague.adobe.com/docs/experience-platform/tags/ui/rules.html#events-and-conditions-(if)) 的雙曲餘切值。 |
+| [事件轉發資料篩選器](../../tags/ui/event-forwarding/overview.md) | 應用伺服器端 [!DNL Kafka] 過濾器，以從攝取中排除不必要的資料。  請參閱 [標籤規則](../../tags/ui/managing-resources/rules.md) 的雙曲餘切值。 |
 | [許可證使用儀表板UI](../../dashboards/guides/license-usage.md#license-usage-dashboard-data) | 查看組織與許可證相關資料的快照以進行Experience Platform |
 | [資料集重疊報表API](../../profile/tutorials/dataset-overlap-report.md) | 輸出對可定址受眾貢獻最大的資料集 |
 | [未知配置檔案報告API](../../profile/api/preview-sample-status.md#generate-the-unknown-profiles-report) | 輸出不同時間閾值應用假名TTL的影響 |
