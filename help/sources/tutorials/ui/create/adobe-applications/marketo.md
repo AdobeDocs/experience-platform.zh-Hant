@@ -6,14 +6,18 @@ topic-legacy: overview
 type: Tutorial
 description: 本教程提供了在UI中建立Marketo Engage源連接器以將B2B資料引入Adobe Experience Platform的步驟。
 exl-id: a6aa596b-9cfa-491e-86cb-bd948fb561a8
-source-git-commit: cffa2edf5746f0412bf8366c32ea777ca1974334
+source-git-commit: 8d88af787508f9aeaa7966409b33bf0aae488a87
 workflow-type: tm+mt
-source-wordcount: '1369'
+source-wordcount: '1427'
 ht-degree: 0%
 
 ---
 
 # 建立 [!DNL Marketo Engage] UI中的源連接器
+
+>[!IMPORTANT]
+>
+>在建立 [!DNL Marketo Engage] 源連接和資料流，必須首先確保 [映射了Adobe IMS組織ID](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/miscellaneous/set-up-adobe-organization-mapping.html?lang=en) 在 [!DNL Marketo]。 此外，您還必須確保您已完成 [自動填充 [!DNL Marketo] B2B命名空間和架構](../../../../connectors/adobe-applications/marketo/marketo-namespaces.md) 建立源連接和資料流之前。
 
 本教程提供建立 [!DNL Marketo Engage] (以下簡稱：[!DNL Marketo]&quot;)UI中的源連接器，將B2B資料帶入Adobe Experience Platform。
 
@@ -168,5 +172,5 @@ ht-degree: 0%
 
 按照本教程，您已成功建立了要引入的資料流 [!DNL Marketo] 資料。 現在，下游平台服務(如 [!DNL Real-time Customer Profile] 和 [!DNL Data Science Workspace]。 有關詳細資訊，請參閱以下文檔：
 
-* [[!DNL Real-time Customer Profile] 概觀](/help/profile/home.md)
-* [[!DNL Data Science Workspace] 概觀](/help/data-science-workspace/home.md)
+* [[!DNL Real-time Customer Profile]概述](/help/profile/home.md)
+* [[!DNL Data Science Workspace]概述](/help/data-science-workspace/home.md)
