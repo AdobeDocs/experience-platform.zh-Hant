@@ -4,9 +4,9 @@ user-guide-title: 目的地指南
 user-guide-description: 針對跨通路行銷活動、電子郵件宣傳、鎖定特定目標的行銷活動和其他諸多使用案例，啟用已知和未知的資料。
 description: 本文檔列出了Adobe Experience Platform目標的目錄
 feature: Destinations
-source-git-commit: d5f83f9d99789afba44e26400d0cea8a72946d7a
+source-git-commit: 0f3cb17650612399091c12a6b638471a80306729
 workflow-type: tm+mt
-source-wordcount: '758'
+source-wordcount: '755'
 ht-degree: 8%
 
 ---
@@ -93,10 +93,10 @@ ht-degree: 8%
       * [Yext轉換跟蹤擴展](./catalog/analytics/yext.md)
    * 雲儲存目標 {#cloud-storage}
       * [雲儲存目標概述](./catalog/cloud-storage/overview.md)
-      * [(β)AmazonKinesis](./catalog/cloud-storage/amazon-kinesis.md)
+      * [AmazonKinesis](./catalog/cloud-storage/amazon-kinesis.md)
       * [AmazonS3連接](./catalog/cloud-storage/amazon-s3.md)
       * [Azure Blob連接](./catalog/cloud-storage/azure-blob.md)
-      * [（測試版）Azure事件集線器連接](./catalog/cloud-storage/azure-event-hubs.md)
+      * [Azure事件中心連接](./catalog/cloud-storage/azure-event-hubs.md)
       * [SFTP連接](./catalog/cloud-storage/sftp.md)
       * [雲儲存目標的IP地址允許清單](./catalog/cloud-storage/ip-address-allow-list.md)
    * 資料管理平台目標 {#data-management}
@@ -116,7 +116,7 @@ ht-degree: 8%
       * [SendGrid連接](./catalog/email-marketing/sendgrid.md)
    * 標籤擴展 {#launch-extensions}
       * [標籤擴展概述](./catalog/launch-extensions/overview.md)
-   * Mobile訂婚目的地 {#mobile-engagement}
+   * 移動接洽目標 {#mobile-engagement}
       * [移動項目目標概述](./catalog/mobile-engagement/overview.md)
       * [飛艇屬性連接](./catalog/mobile-engagement/airship-attributes.md)
       * [飛艇標籤連接](./catalog/mobile-engagement/airship-tags.md)
@@ -140,7 +140,7 @@ ht-degree: 8%
       * [linkedIn與受眾匹配連接](./catalog/social/linkedin.md)
       * [[!DNL Twitter Custom Audiences] 連接](./catalog/social/twitter.md)
    * 流目標 {#streaming}
-      * [ (Beta)HTTP API連接](./catalog/streaming/http-destination.md)
+      * [HTTP API連接](./catalog/streaming/http-destination.md)
       * [流目標的IP地址允許清單](./catalog/streaming/ip-address-allow-list.md)
    * 調查目標 {#survey}
       * [調查目標概述](./catalog/survey/overview.md)

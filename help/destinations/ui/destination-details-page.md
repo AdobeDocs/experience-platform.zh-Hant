@@ -4,9 +4,9 @@ title: 查看目標詳細資訊
 description: '單個目標的詳細資訊頁面提供了目標詳細資訊的概覽。 目標詳細資訊包括目標名稱、ID、映射到目標的段，以及用於編輯激活和啟用和禁用資料流的控制項。 '
 seo-description: The details page for an individual destination provides an overview of the destination details. Destination details include the destination name, ID, segments mapped to the destination, and controls to edit the activation and to enable and disable the data flow.
 exl-id: e44e2b2d-f477-4516-8a47-3e95c2d85223
-source-git-commit: a129085f034665a6398bbf0ccfe2f1dc8acbdd8a
+source-git-commit: 9928241235cac97b9b9a050256a22f9659e4092f
 workflow-type: tm+mt
-source-wordcount: '708'
+source-wordcount: '718'
 ht-degree: 2%
 
 ---
@@ -79,7 +79,9 @@ ht-degree: 2%
 
 >[!NOTE]
 >
->目標監視功能當前支援Experience Platform中的所有目標 *除* 這樣 [AmazonKinesis](/help/destinations/catalog/cloud-storage/amazon-kinesis.md)。 [Azure事件中心](/help/destinations/catalog/cloud-storage/azure-event-hubs.md)。 [HTTP API](/help/destinations/catalog/streaming/http-destination.md)。 [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md), [自定義個性化](/help/destinations/catalog/personalization/custom-personalization.md) 目標。
+>* 目標監視功能當前支援Experience Platform中的所有目標 *除* 這樣 [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md) 和 [自定義個性化](/help/destinations/catalog/personalization/custom-personalization.md) 目標。
+>* 對於 [AmazonKinesis](/help/destinations/catalog/cloud-storage/amazon-kinesis.md)。 [Azure事件中心](/help/destinations/catalog/cloud-storage/azure-event-hubs.md), [HTTP API](/help/destinations/catalog/streaming/http-destination.md) 目標、排除的身份當前不顯示。
+
 
 ![資料流運行視圖](../assets/ui/details-page/dataflow-runs.png)
 

@@ -4,9 +4,9 @@ title: 目標類型和類別
 seo-title: Destination types and categories
 description: 瞭解Adobe Experience Platform不同類型和類別的目的地。
 exl-id: 7826d1e2-bd6b-4f65-9da9-0a3b3e8bb93b
-source-git-commit: 08c6c2716b88180b1eb290663117e6da2d8641f0
+source-git-commit: 1c2846941df09b66eb74f8ea8bec91574577fbbc
 workflow-type: tm+mt
-source-wordcount: '533'
+source-wordcount: '596'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 閱讀本頁，瞭解Adobe Experience Platform目標的不同類型和類別。
 
-## 目標類型
+## 目標類型 {#destination-types}
 
 在Adobe Experience Platform，我們區分兩種目標類型 — 連接和擴展。 連接目標有兩種類型：配置檔案導出目標和段導出目標。
 
@@ -25,16 +25,28 @@ ht-degree: 0%
 
 **[!UICONTROL 配置檔案導出]** 和 **[!UICONTROL 流段導出]** 目標在Adobe Experience Platform捕獲事件資料，將其與其他資料源組合以形成 [即時客戶概要資訊](../profile/home.md)，應用分段，並將段和限定配置檔案導出到目標。
 
-## 配置檔案導出目標
+## 配置檔案導出目標 {#profile-export}
 
 配置檔案導出目標接收原始資料，通常以電子郵件地址作為主鍵。 Experience Platform當前支援兩種類型的配置檔案導出目標：
 
-* [流配置檔案導出目標](#streaming-profile-export)
+* [流配置檔案導出目標（企業目標）](#streaming-profile-export)
 * [批處理（基於檔案）目標](#file-based)
 
-### 流配置檔案導出目標 {#streaming-profile-export}
+### 流配置檔案導出目標（企業目標） {#streaming-profile-export}
 
-流配置檔案導出目標接收段和配置檔案資料作為Experience Platform資料流。 [AmazonKinesis](catalog/cloud-storage/amazon-kinesis.md) 和 [Azure事件中心](catalog/cloud-storage/azure-event-hubs.md) 就是這些目的地的例子。
+>[!IMPORTANT]
+>
+>企業目標或流配置檔案導出目標可用於 [Real-time Customer Data Platform旗艦](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html) 僅限客戶。
+
+使用企業目標資料連接器將Real-time Customer Data Platform概要檔案以接近即時的方式傳送到內部系統或其他第三方系統，以便進行資料同步、分析和進一步概要檔案濃縮使用案例。
+
+這些目的地接收段和輪廓資料作為Experience Platform資料流。
+
+企業目標包括：
+
+* [HTTP API目標](catalog/streaming/http-destination.md)
+* [AmazonKinesis](catalog/cloud-storage/amazon-kinesis.md)
+* [Azure事件中心](catalog/cloud-storage/azure-event-hubs.md)
 
 ### 批處理（基於檔案）目標 {#file-based}
 
@@ -42,7 +54,7 @@ ht-degree: 0%
 
 ## 流段導出目標 {#streaming-destinations}
 
-段導出目標接收Experience Platform段資料。 這些目標使用段ID或用戶ID。 [[!DNL Google Display & Video 360]](catalog/advertising/google-dv360.md)。 [[!DNL Google Ads]](catalog/advertising/google-ads-destination.md)，是此類目標的示例。
+段導出目標接收Experience Platform段資料。 這些目標使用段ID或用戶ID。 廣告和社交目的地，如 [[!DNL Google Display & Video 360]](catalog/advertising/google-dv360.md)。 [[!DNL Google Ads]](catalog/advertising/google-ads-destination.md)或 [Facebook](catalog/social/facebook.md) 就是這些目的地的例子。
 
 ## 配置檔案導出和段導出目標 — 視頻概述 {#video}
 

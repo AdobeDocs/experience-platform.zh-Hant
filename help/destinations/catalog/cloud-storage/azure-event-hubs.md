@@ -1,22 +1,22 @@
 ---
 keywords: Azure事件中心目標；azure事件中心；azure事件thub
-title: (Beta) [!DNL Azure Event Hubs] 連接
+title: Azure事件中心連接
 description: 建立到您的 [!DNL Azure Event Hubs] 儲存以從Experience Platform流資料。
 exl-id: f98a389a-bce3-4a80-9452-6c7293d01de3
-source-git-commit: c62117de27b150f072731c910bb0593ce1fca082
+source-git-commit: 30549f31e7ba7f9cfafd2e71fb3ccfb701b9883f
 workflow-type: tm+mt
-source-wordcount: '1371'
-ht-degree: 1%
+source-wordcount: '1926'
+ht-degree: 0%
 
 ---
 
-# (Beta) [!DNL Azure Event Hubs] 連接
+# [!DNL Azure Event Hubs] 連接
 
 ## 總覽 {#overview}
 
 >[!IMPORTANT]
 >
->的 [!DNL Azure Event Hubs] 平台中的目標當前處於beta中。 文件和功能可能會有所變更。
+> 此目標僅可用於 [Real-time Customer Data Platform旗艦](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html) 客戶。
 
 [!DNL Azure Event Hubs] 是大資料流平台和事件接收服務。 它每秒可以接收和處理數百萬個事件。 通過使用任何即時分析提供程式或批處理/儲存適配器，可以轉換和儲存發送到事件中心的資料。
 
@@ -51,9 +51,25 @@ ht-degree: 1%
 
 ## 連接到目標 {#connect}
 
-要連接到此目標，請按照 [目標配置教程](../../ui/connect-destination.md)。
+>[!IMPORTANT]
+> 
+>要連接到目標，您需要 **[!UICONTROL 管理目標]** [訪問控制權限](/help/access-control/home.md#permissions)。 閱讀 [訪問控制概述](/help/access-control/ui/overview.md) 或聯繫您的產品管理員以獲取所需權限。
 
-### 連接參數 {#parameters}
+要連接到此目標，請按照 [目標配置教程](../../ui/connect-destination.md)。 連接到此目標時，必須提供以下資訊：
+
+### 驗證資訊 {#authentication-information}
+
+#### 標準驗證 {#standard-authentication}
+
+![顯示Azure事件集線器標準身份驗證詳細資訊已完成欄位的UI螢幕影像](../../assets/catalog/cloud-storage/event-hubs/event-hubs-standard-authentication.png)
+
+如果選擇 **[!UICONTROL 標準驗證]** 鍵入以連接到HTTP終結點，輸入下面的欄位並選擇 **[!UICONTROL 連接到目標]**:
+
+* **[!UICONTROL SAS密鑰名稱]**:授權規則的名稱，也稱為SAS密鑰名稱。
+* **[!UICONTROL SAS密鑰]**:事件集線器命名空間的主鍵。 的 `sasPolicy` 那個 `sasKey` 必須對應 **管理** 為填充事件中心清單而配置的權限。 瞭解身份驗證 [!DNL Azure Event Hubs] 在 [Microsoft文檔](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature)。
+* **[!UICONTROL 命名空間]**:填寫 [!DNL Azure Event Hubs] 命名空間。 瞭解 [!DNL Azure Event Hubs] 命名空間 [Microsoft文檔](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hubs-namespace)。
+
+#### 共用訪問簽名(SAS)驗證 {#sas-authentication}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_eventhubs_includesegmentnames"
@@ -65,16 +81,32 @@ ht-degree: 1%
 >title="包括段時間戳"
 >abstract="如果希望資料導出包括建立和更新段時的UNIX時間戳，以及將段映射到要激活的目標時的UNIX時間戳，則切換。 查看資料導出示例的文檔，並選中此選項。"
 
-同時 [設定](../../ui/connect-destination.md) 此目標，必須提供以下資訊：
+![顯示Azure事件集線器標準身份驗證詳細資訊已完成欄位的UI螢幕影像](../../assets/catalog/cloud-storage/event-hubs/event-hubs-sas-authentication.png)
+
+如果選擇 **[!UICONTROL 標準驗證]** 鍵入以連接到HTTP終結點，輸入下面的欄位並選擇 **[!UICONTROL 連接到目標]**:
 
 * **[!UICONTROL SAS密鑰名稱]**:授權規則的名稱，也稱為SAS密鑰名稱。
 * **[!UICONTROL SAS密鑰]**:事件集線器命名空間的主鍵。 的 `sasPolicy` 那個 `sasKey` 必須對應 **管理** 為填充事件中心清單而配置的權限。 瞭解身份驗證 [!DNL Azure Event Hubs] 在 [Microsoft文檔](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature)。
 * **[!UICONTROL 命名空間]**:填寫 [!DNL Azure Event Hubs] 命名空間。 瞭解 [!DNL Azure Event Hubs] 命名空間 [Microsoft文檔](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hubs-namespace)。
+* **[!UICONTROL 命名空間]**:填寫 [!DNL Azure Event Hubs] 命名空間。 瞭解 [!DNL Azure Event Hubs] 命名空間 [Microsoft文檔](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hubs-namespace)。
+
+### 目標詳細資訊 {#destination-details}
+
+在建立到Azure事件中心目標的身份驗證連接後，請提供目標的以下資訊：
+
+![顯示Azure事件中心目標詳細資訊已完成欄位的UI螢幕影像](../../assets/catalog/cloud-storage/event-hubs/event-hubs-destination-details.png)
+
 * **[!UICONTROL 名稱]**:填寫到的連接的名稱 [!DNL Azure Event Hubs]。
 * **[!UICONTROL 說明]**:提供連接的說明。  示例：「高級客戶」、「對風箏衝浪感興趣的客戶」。
 * **[!UICONTROL 事件集線器名稱]**:為流提供名稱 [!DNL Azure Event Hubs] 目標。
+* **[!UICONTROL 包括段名稱]**:如果希望資料導出包含要導出的段的名稱，則切換。 有關選擇此選項的資料導出示例，請參閱 [導出的資料](#exported-data) 的下一頁。
+* **[!UICONTROL 包括段時間戳]**:如果希望資料導出包括建立和更新段時的UNIX時間戳，以及將段映射到要激活的目標時的UNIX時間戳，則切換。 有關選擇此選項的資料導出示例，請參閱 [導出的資料](#exported-data) 的下一頁。
 
 ## 將段激活到此目標 {#activate}
+
+>[!IMPORTANT]
+> 
+>要激活資料，您需要 **[!UICONTROL 管理目標]**。 **[!UICONTROL 激活目標]**。 **[!UICONTROL 查看配置檔案]**, **[!UICONTROL 查看段]** [訪問控制權限](/help/access-control/home.md#permissions)。 閱讀 [訪問控制概述](/help/access-control/ui/overview.md) 或聯繫您的產品管理員以獲取所需權限。
 
 請參閱 [激活受眾資料以流式處理配置檔案導出目標](../../ui/activate-streaming-profile-destinations.md) 有關激活此目標受眾段的說明。
 
@@ -107,6 +139,10 @@ Experience Platform優化配置檔案導出行為 [!DNL Azure Event Hubs] 目標
 導出到目標的配置檔案可由符合或退出其中一個配置檔案來確定 *三個映射段*。 但是，在資料導出中，在 `segmentMembership` 對象（請參見） [導出的資料](#exported-data) )中，如果特定配置檔案是其成員，則可能會顯示其他未映射的段。 如果配置檔案符合DeLorean Cars分部客戶的資格，但也是受觀看的「回到未來」電影和科幻片迷分部的成員，則另外兩個分部也將出現在 `segmentMembership` 資料導出的對象，即使這些對象未映射到資料流中。
 
 從配置檔案屬性的視點來看，對上述四個屬性的任何更改都將確定目標導出，並且配置檔案上存在的四個映射屬性中的任何一個都將出現在資料導出中。
+
+## 歷史資料回填 {#historical-data-backfill}
+
+當您將新段添加到現有目標或建立新目標並將段映射到該目標時，Experience Platform會將歷史段限定資料導出到目標。 限定段的配置檔案 *先* 已添加到目標的段在大約一小時內導出到目標。
 
 ## 導出的資料 {#exported-data}
 
@@ -165,6 +201,52 @@ Experience Platform優化配置檔案導出行為 [!DNL Azure Event Hubs] 目標
 }
 ```
 
+下面是導出資料的進一步示例，具體取決於您在連接目標流中為 **[!UICONTROL 包括段名稱]** 和 **[!UICONTROL 包括段時間戳]** 選項：
+
++++ 以下資料導出示例包括 `segmentMembership` 節
+
+```json
+"segmentMembership": {
+        "ups": {
+          "5b998cb9-9488-4ec3-8d95-fa8338ced490": {
+            "lastQualificationTime": "2019-04-15T02:41:50+0000",
+            "status": "existing",
+            "createdAt": 1648553325000,
+            "updatedAt": 1648553330000,
+            "mappingCreatedAt": 1649856570000,
+            "mappingUpdatedAt": 1649856570000,
+            "name": "First name equals John"
+          }
+        }
+      }
+```
+
++++
+
++++ 以下資料導出示例包括 `segmentMembership` 節
+
+```json
+"segmentMembership": {
+        "ups": {
+          "5b998cb9-9488-4ec3-8d95-fa8338ced490": {
+            "lastQualificationTime": "2019-04-15T02:41:50+0000",
+            "status": "existing",
+            "createdAt": 1648553325000,
+            "updatedAt": 1648553330000,
+            "mappingCreatedAt": 1649856570000,
+            "mappingUpdatedAt": 1649856570000,
+          }
+        }
+      }
+```
+
++++
+
+## 限制和重試策略 {#limits-retry-policy}
+
+在95%的時間內，Experience Platform嘗試為成功發送的消息提供小於10分鐘的吞吐量延遲，每個資料流每秒的請求數小於10.000。
+
+如果向HTTP API目標發出失敗請求，Experience Platform將儲存失敗的請求並重試兩次，以將請求發送到終結點。
 
 >[!MORELIKETHIS]
 >
