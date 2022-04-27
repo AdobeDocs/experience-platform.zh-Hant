@@ -1,9 +1,9 @@
 ---
 title: Adobe Experience Platform發行說明2022年4月
 description: 2022年4月為Adobe Experience Platform發行的說明。
-source-git-commit: 820fba06d3460408640c816c80f05bff1de227cd
+source-git-commit: ea04132c5092ce62820b0af1edc95bb1e0a1a16f
 workflow-type: tm+mt
-source-wordcount: '1999'
+source-wordcount: '2260'
 ht-degree: 4%
 
 ---
@@ -14,12 +14,28 @@ ht-degree: 4%
 
 Adobe Experience Platform 現有功能更新：
 
+- [[!DNL Intelligent Services]](#intelligent-services)
 - [[!DNL Dashboards]](#dashboards)
 - [資料流](#dataflows)
 - [[!DNL Data Prep]](#data-prep)
 - [體驗資料模型(XDM)](#xdm)
 - [Real-time Customer Data Platform B2B Edition](#B2B)
 - [來源](#sources)
+
+## [!DNL Intelligent Services] {#intelligent-services}
+
+智慧服務使營銷分析師和從業人員能夠利用人工智慧和機器學習在客戶體驗使用案例中的威力。 這使市場營銷分析員能夠使用業務級配置來設定特定於公司需要的預測，而無需資料科學專業知識。
+
+Attribution AI和客戶AI允許客戶配置高級AI/ML模型以用於營銷屬性和客戶傾向。 多資料集功能可幫助客戶在模型配置時引入多個資料集，而無需預先編寫和準備資料。
+
+**已更新功能**
+
+| 功能 | 說明 |
+| ------- | ----------- |
+| 支援多資料集 | 多資料集功能現在支援所有體驗事件資料集以及選擇身份映射作為身份。 只要跨資料集有一個通用的標識命名空間，客戶就可以選擇標識映射和任何關聯的ID。 Attribution AI支援以下架構：Adobe Analytics，體驗活動，消費者體驗活動。 客戶AI支援所有這些架構以及Adobe Audience Manager架構。 有關Attribution AI和客戶AI中多資料集支援的詳細資訊，請參閱 [Attribution AI使用手冊](../../intelligent-services/attribution-ai/user-guide.md) 和 [客戶AI使用手冊](../../intelligent-services/customer-ai/user-guide/configure.md)。 |
+| 客戶人工智慧中的新模型評價指標 | 客戶人工智慧中的「新增收益」圖表使營銷人員能夠根據其預算和ROI目標確定要瞄準的組大小。 新的升程圖可以衡量模型的質量，從而更好地瞭解它們將超越隨機目標的升程。 有關詳細資訊，請參見 [瞭解客戶AI的見解](../../intelligent-services/customer-ai/user-guide/discover-insights.md) 的子菜單。 |
+
+有關 [!DNL Intelligent Services]，請參閱 [[!DNL Intelligent Services] 概述](../../intelligent-services/home.md)。
 
 ## [!DNL Dashboards] {#dashboards}
 
