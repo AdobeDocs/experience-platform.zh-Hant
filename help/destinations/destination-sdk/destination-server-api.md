@@ -2,10 +2,10 @@
 description: 此頁列出並說明了可以使用「/authoring/destination-servers」 API終結點執行的所有API操作。 您的目標的伺服器和模板規範可通過通用端點「/創作/目標伺服器」在Adobe Experience Platform Destination SDK中配置。
 title: 目標伺服器終結點API操作
 exl-id: a144b0fb-d34f-42d1-912b-8576296e59d2
-source-git-commit: 6bdb7a3ce6e9f37070dceff8b0226bd6cd53038b
+source-git-commit: ce63d602e768d04ba7fdc6aded34869682ee7206
 workflow-type: tm+mt
-source-wordcount: '1454'
-ht-degree: 3%
+source-wordcount: '1382'
+ht-degree: 4%
 
 ---
 
@@ -82,11 +82,13 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 
 ## 為基於檔案的目標伺服器建立配置 {#create-file-based}
 
-### 示例：為SFTP目標伺服器建立配置
-
 >[!IMPORTANT]
 >
 >Adobe Experience Platform Destination SDK中基於檔案的目標支援當前處於測試版中。 文檔和功能可能會更改。
+
+### SFTP目標伺服器示例配置 {#sftp-server-sample}
+
++++查看示例 [!DNL SFTP] 目標伺服器配置
 
 通過向SFTP發出POST請求，可以建立新的SFTP目標伺服器配置 `/authoring/destination-servers` 端點。
 
@@ -192,11 +194,9 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 成功的響應返回HTTP狀態200，其中包含新建立的目標伺服器配置的詳細資訊。
 +++
 
-+++示例：為AmazonS3目標伺服器建立配置
+### [!DNL Amazon S3] 目標伺服器示例配置 {#s3-server-sample}
 
->[!IMPORTANT]
->
->Adobe Experience Platform Destination SDK中基於檔案的目標支援當前處於測試版中。 文檔和功能可能會更改。
++++查看示例 [!DNL Amazon S3] 目標伺服器配置
 
 您可以通過向以下站點發出POST請求來建立新的AmazonS3目標伺服器配置 `/authoring/destination-servers` 端點。
 
@@ -303,16 +303,13 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 成功的響應返回HTTP狀態200，其中包含新建立的目標伺服器配置的詳細資訊。
 +++
 
-+++示例：為Azure Blob目標伺服器建立配置
+### [!DNL Azure Blob] 目標伺服器示例配置 {#blob-server-sample}
 
->[!IMPORTANT]
->
->Adobe Experience Platform Destination SDK中基於檔案的目標支援當前處於測試版中。 文檔和功能可能會更改。
++++查看示例 [!DNL Azure Blob] 目標伺服器配置
 
 通過向Azure Blob發出POST請求，可以建立新的Azure Blob目標伺服器配置 `/authoring/destination-servers` 端點。
 
 **API格式**
-
 
 ```http
 POST /authoring/destination-servers
@@ -415,16 +412,13 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 成功的響應返回HTTP狀態200，其中包含新建立的目標伺服器配置的詳細資訊。
 +++
 
-+++示例：為Azure資料湖儲存(ADLS)目標伺服器建立配置
+### [!DNL Azure Data Lake Storage] 目標伺服器示例配置 {#adls-server-sample}
 
->[!IMPORTANT]
->
->Adobe Experience Platform Destination SDK中基於檔案的目標支援當前處於測試版中。 文檔和功能可能會更改。
++++查看示例 [!DNL Azure Data Lake Storage (ADLS)] 目標伺服器配置
 
 您可以通過向ADLS發出POST請求來建立新的ADLS目標伺服器配置 `/authoring/destination-servers` 端點。
 
 **API格式**
-
 
 ```http
 POST /authoring/destination-servers
@@ -523,18 +517,15 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 成功的響應返回HTTP狀態200，其中包含新建立的目標伺服器配置的詳細資訊。
 +++
 
-+++示例：為資料登錄區(DLZ)目標伺服器建立配置
+### [!DNL Data Landing Zone] (DLZ)目標伺服器示例配置 {#dlz-server-sample}
 
->[!IMPORTANT]
->
->Adobe Experience Platform Destination SDK中基於檔案的目標支援當前處於測試版中。 文檔和功能可能會更改。
++++查看示例 [!DNL Data Landing Zone (DLZ)] 目標伺服器配置
 
-[!DNL Data Landing Zone] ([!DNL DLZ]) [!DNL Azure Blob] 由Adobe Experience Platform提供的儲存介面，允許您訪問安全、基於雲的檔案儲存設施，以將檔案帶入平台。 請參閱
+[!DNL Data Landing Zone] ([!DNL DLZ]) [!DNL Azure Blob] 由Adobe Experience Platform提供的儲存介面，允許您訪問安全、基於雲的檔案儲存設施，以將檔案帶入平台。
 
 您可以通過向DLZ發出POST請求來建立新的DLZ目標伺服器配置 `/authoring/destination-servers` 端點。
 
 **API格式**
-
 
 ```http
 POST /authoring/destination-servers
@@ -640,7 +631,6 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 
 **API格式**
 
-
 ```http
 GET /authoring/destination-servers
 ```
@@ -741,7 +731,6 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/destination
 
 **API格式**
 
-
 ```http
 PUT /authoring/destination-servers/{INSTANCE_ID}
 ```
@@ -788,7 +777,6 @@ curl -X PUT https://platform.adobe.io/data/core/activation/authoring/destination
 
 **API格式**
 
-
 ```http
 GET /authoring/destination-servers/{INSTANCE_ID}
 ```
@@ -831,7 +819,6 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/destination
    }
 }
 ```
-
 
 ## 刪除特定目標伺服器配置 {#delete}
 
