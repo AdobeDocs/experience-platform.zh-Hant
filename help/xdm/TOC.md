@@ -4,10 +4,10 @@ user-guide-title: Experience Data Model (XDM) 系統說明
 breadcrumb-title: Experience Data Model (XDM) 指南
 user-guide-description: 使用 Experience Data Model (XDM) 類別和方案欄位群組，將體驗資料標準化。
 feature: Schemas
-source-git-commit: 4ce9e53ec420a8c9ba07cdfd75e66d854989f8d2
+source-git-commit: fab182dc868990ddd5fbc45f0f50dc87258f98bc
 workflow-type: tm+mt
-source-wordcount: '442'
-ht-degree: 17%
+source-wordcount: '458'
+ht-degree: 16%
 
 ---
 
@@ -77,6 +77,10 @@ ht-degree: 17%
       * [升級詳細資訊](./field-groups/event/upgrade-details.md)
       * [追加銷售詳細資訊](./field-groups/event/upsell-details.md)
       * [Web詳細資訊](./field-groups/event/web-details.md)
+   * XDM業務活動 {#b2b-campaign}
+      * [XDM業務活動詳細資訊](./field-groups/b2b-campaign/details.md)
+   * XDM業務活動成員 {#b2b-campaign-members}
+      * [XDM業務活動成員詳細資訊](./field-groups/b2b-campaign-members/details.md)
    * 產品 {#product}
       * [產品目錄](./field-groups/product/product-catalog.md)
       * [產品類別](./field-groups/product/product-category.md)
