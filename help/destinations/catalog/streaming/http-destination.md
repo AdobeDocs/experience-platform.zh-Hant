@@ -3,7 +3,7 @@ title: HTTP API連接
 keywords: 流；
 description: 使用Adobe Experience Platform的HTTP API目標將配置檔案資料發送到第三方HTTP終結點以運行您自己的分析或對導出出Experience Platform的配置檔案資料執行可能需要的任何其他操作。
 exl-id: 165a8085-c8e6-4c9f-8033-f203522bb288
-source-git-commit: 30549f31e7ba7f9cfafd2e71fb3ccfb701b9883f
+source-git-commit: d4a4baf330925d6696f515bf650d86740c18e97c
 workflow-type: tm+mt
 source-wordcount: '2296'
 ht-degree: 0%
@@ -92,6 +92,11 @@ curl --location --request POST 'https://some-api.com/token' \
 
 ### 驗證資訊 {#authentication-information}
 
+>[!CONTEXTUALHELP]
+>id="platform_destinations_connect_http_clientcredentialstype"
+>title="客戶端憑據類型"
+>abstract="選擇 **體形編碼** 將客戶端ID和客戶端機密包含在請求正文中，或 **基本授權** 將客戶端ID和客戶端機密包含在授權標頭中。 查看文檔中的示例。"
+
 #### 持有者令牌驗證 {#bearer-token-authentication}
 
 如果選擇 **[!UICONTROL 持有者令牌]** 連接到HTTP終結點的驗證類型，輸入下面的欄位並選擇 **[!UICONTROL 連接到目標]**:
@@ -121,11 +126,6 @@ curl --location --request POST 'https://some-api.com/token' \
 * **[!UICONTROL 密碼]**:訪問HTTP終結點的密碼。
 
 #### OAuth 2客戶端憑據身份驗證 {#oauth-2-client-credentials-authentication}
-
->[!CONTEXTUALHELP]
->id="platform_destinations_connect_http_clientcredentialstype"
->title="客戶端憑據類型"
->abstract="選擇 **體形編碼** 將客戶端ID和客戶端機密包含在請求正文中，或 **基本授權** 將客戶端ID和客戶端機密包含在授權標頭中。 查看文檔中的示例。"
 
 如果選擇 **[!UICONTROL OAuth 2客戶端憑據]** 連接到HTTP終結點的驗證類型，輸入下面的欄位並選擇 **[!UICONTROL 連接到目標]**:
 
