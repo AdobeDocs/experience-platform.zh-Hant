@@ -3,9 +3,9 @@ title: 平台Web SDK中的身份資料
 description: 瞭解如何使用Adobe Experience CloudWeb SDK檢索和管理Adobe Experience PlatformID(ECID)。
 keywords: 身份；第一方身份；身份服務；第三方身份；ID遷移；訪問者ID；第三方身份；第三方CookieEnabled;idMigrationEnabled;getIdentity；同步身份；同步身份；sendIdentity;identityMap;primary;ecid;Identity Namespace;authenticationState;hashEnabled;
 exl-id: 03060cdb-becc-430a-b527-60c055c2a906
-source-git-commit: 6fb6d1579f888720b6af9617400d512a68d06264
+source-git-commit: 85ff35e0e7f7e892de5252e8f3ad069eff83aa15
 workflow-type: tm+mt
-source-wordcount: '1327'
+source-wordcount: '1334'
 ht-degree: 0%
 
 ---
@@ -20,9 +20,9 @@ Adobe Experience PlatformWeb SDK利用 [Adobe Experience CloudID(ECID)](../../id
 
 平台Web SDK通過使用cookie來分配和跟蹤ECID，並使用多種可用方法來配置這些cookie的生成方式。
 
-當新用戶到達您的網站時，Adobe Experience Cloud身份服務會嘗試為該用戶設定設備標識cookie。 對於首次訪問者，在來自Adobe Experience Platform邊緣網路的第一響應中生成並返回ECID。 對於重複訪問者，從 `kndctr_{YOUR-ORG-ID}_AdobeOrg_identity` Cookie並添加到負載中。
+當新用戶到達您的網站時，Adobe Experience Cloud身份服務會嘗試為該用戶設定設備標識cookie。 對於首次訪問者，在來自Adobe Experience Platform邊緣網路的第一響應中生成並返回ECID。 對於重複訪問者，從 `kndctr_{YOUR-ORG-ID}_AdobeOrg_identity` Cookie和邊緣網路添加到負載。
 
-一旦設定了包含ECID的Cookie，平台Web SDK生成的每個後續請求都將包括ECID。
+一旦設定了包含ECID的Cookie,Web SDK生成的每個後續請求將在 `kndctr_{YOUR-ORG-ID}_AdobeOrg_identity` 餅乾。
 
 使用cookie進行設備標識時，您有兩個選項可與邊緣網路交互：
 
@@ -108,7 +108,7 @@ alloy("sendEvent", {
 | --- | --- | --- |
 | `id` | 字串 | **（必需）** 要為給定命名空間設定的ID。 |
 | `authenticationState` | 字串 | **（必需）** ID的驗證狀態。 可能的值為 `ambiguous`。 `authenticated`, `loggedOut`。 |
-| `primary` | 布爾型 | 確定是否應將此標識用作配置檔案中的主要片段。 預設情況下，ECID設定為用戶的主標識符。 如果省略，此值預設為 `false`。 |
+| `primary` | 布林值 | 確定是否應將此標識用作配置檔案中的主要片段。 預設情況下，ECID設定為用戶的主標識符。 如果省略，此值預設為 `false`。 |
 
 ## 從訪問者API遷移到ECID
 
