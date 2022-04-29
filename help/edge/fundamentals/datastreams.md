@@ -1,34 +1,30 @@
 ---
 title: 配置資料流
-description: 將客戶端Experience PlatformSDK整合與Adobe產品和第三方目標連接。
+description: 連接您的客戶端 Experience Platform SDK 與 Adobe 產品和協力廠商目標的整合。
 keywords: 配置；資料流；資料流；邊；資料流ID；環境設定；邊配置ID；標識；ID同步容器ID；沙盒；流入口；事件資料集；目標；客戶端代碼；屬性令牌；目標；Cookie目標；URL目標；分析設定塊報表ID；資料資料收集準備；資料準備；映射器；XDM映射器；邊緣上的映射器；
 exl-id: 736c75cb-e290-474e-8c47-2a031f215a56
-source-git-commit: 5c57f65014736e20e1bcad6a9b158c923bbb4220
+source-git-commit: 2275a32cfa9419d2ca407dd48a15f8d06354cd49
 workflow-type: tm+mt
-source-wordcount: '2102'
-ht-degree: 1%
+source-wordcount: '2081'
+ht-degree: 2%
 
 ---
 
 # 配置資料流
 
-資料流表示實施Adobe Experience PlatformWeb和移動SDK時的伺服器端配置。 當 [configure命令](configuring-the-sdk.md) 在SDK中，控制必須在客戶端上處理的內容(如 `edgeDomain`)，資料流處理SDK的所有其它配置。 當請求發送到Adobe Experience Platform邊緣網路時， `edgeConfigId` 用於引用資料流。 這樣，您就可以更新伺服器端配置，而無需在網站上進行代碼更改。
+資料流表示實施Adobe Experience PlatformWeb和MobileSDK時的伺服器端配置。 當 [configure命令](configuring-the-sdk.md) 在SDK中，控制必須在客戶端上處理的內容(如 `edgeDomain`)，資料流處理SDK的所有其它配置。 當請求發送到Adobe Experience Platform邊緣網路時， `edgeConfigId` 用於引用資料流。 這樣，您就可以更新伺服器端配置，而無需在網站上進行代碼更改。
 
 本文檔介紹在資料收集UI中配置資料流的步驟。
 
 >[!NOTE]
 >
->必須為您的組織設定此功能，才能在UI中訪問它。 請填寫以下內容 [表格](https://adobe.ly/websdkaccess) 請求必要的訪問權。
+>必須為您的組織設定此功能，才能在UI中訪問它。 請填寫以下內容 [表格](https://adobe.ly/websdkaccess) 請求必要的訪問權。 要管理資料流，必須將用戶帳戶添加到產品配置檔案中的標籤 [!DNL Adobe Experience Platform]。
 
 ## 訪問 [!UICONTROL 資料流] 工作區
 
 通過選擇 **[!UICONTROL 資料流]** 的子菜單。
 
 ![資料收集UI中的資料流頁籤](../images/datastreams/datastreams-tab.png)
-
->[!NOTE]
->
->當您可以訪問 [!UICONTROL 資料流] 頁籤無論您是否使用平台的標籤管理功能，您都必須具有開發人員權限才能自己管理資料流。 查看 [用戶權限](../../tags/ui/administration/user-permissions.md) 的子文檔。
 
 的 [!UICONTROL 資料流] 頁籤顯示現有資料流的清單，包括其友好名稱、ID和上次修改日期。 選擇要 [查看其詳細資訊並配置服務](#view-details)。
 
@@ -60,13 +56,13 @@ ht-degree: 1%
 | [!UICONTROL 第一方ID Cookie] | 啟用後，此設定將指示邊緣網路在查找 [第一方設備ID](../identity/first-party-device-ids.md)，而不是在「身份映射」中查找此值。<br><br>啟用此設定時，必須提供應儲存ID的Cookie的名稱。 |
 | [!UICONTROL 第三方ID同步] | ID同步可以分組到容器中，以允許在不同時間運行不同的ID同步。 啟用此設定後，可以指定為此資料流運行ID同步的容器。 |
 
-本節的其餘部分重點介紹將資料映射到所選平台事件架構的步驟。 如果您使用MobileSDK，或者沒有為平台配置資料流，請選擇 **[!UICONTROL 保存]** 繼續下一節， [將服務添加到資料流](#add-services)。
+本節的其餘部分重點介紹將資料映射到所選平台事件架構的步驟。 如果您正在使用Mobile SDK或沒有為平台配置資料流，請選擇 **[!UICONTROL 保存]** 繼續下一節， [將服務添加到資料流](#add-services)。
 
 ### 資料收集的資料準備 {#data-prep}
 
 >[!IMPORTANT]
 >
->Mobile SDK實現當前不支援資料收集的資料準備。
+>MobileSDK實現當前不支援資料收集的資料準備。
 
 資料準備是一種Experience Platform服務，允許您將資料映射到體驗資料模型(XDM)和從體驗資料模型(XDM)轉換和驗證資料。 配置支援平台的資料流時，可以使用資料準備功能將源資料發送到平台邊緣網路時映射到XDM。
 
