@@ -1,52 +1,52 @@
 ---
-title: Adobe Experience Platform Web SDK常見問題集
-description: 取得Adobe Experience Platform Web SDK常見問題的解答。
+title: Adobe Experience PlatformWeb SDK常見問題
+description: 獲取有關Adobe Experience PlatformWeb SDK的常見問題的答案。
 exl-id: 6ddb4b4d-c9b8-471a-bd2e-135dc4202876
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+source-git-commit: e19c70883785ff338623ea2e6433562a792b3841
 workflow-type: tm+mt
-source-wordcount: '1802'
+source-wordcount: '1855'
 ht-degree: 1%
 
 ---
 
 # 常見問答
 
-本指南提供經常詢問關於Adobe Experience Platform Web SDK問題的回答。
+本指南提供了有關Adobe Experience PlatformWeb SDK的常見問題的答案。
 
-## 什麼是Adobe Experience Platform Web SDK?
+## 什麼是Adobe Experience PlatformWeb SDK?
 
-Adobe Experience Platform Web SDK是用戶端JavaScript程式庫，可讓Adobe Experience Cloud的客戶與Experience Cloud中的各種服務互動。
+Adobe Experience PlatformWeb SDK是客戶端JavaScript庫，它允許Adobe Experience Cloud客戶與Experience Cloud中的各種服務進行交互。
 
-它會以不受解決方案限制的方式(XDM)傳送資料至Adobe Experience Platform Edge Network，然後由Edge Network將資料對應至解決方案的特定格式和目的地，並即時傳送資料。
+它以解決方案不可知的方式(XDM)將資料發送到Adobe Experience Platform邊緣網路，然後將資料映射到解決方案特定的格式和目標，並即時發送。
 
-**更多**
-[資訊Adobe Summit簡報](https://www.adobe.com/summit/2020/with-alloy-js-never-tag-for-an-evar-or-mbox-again.html)
+**詳細資訊**
+[Adobe Summit演示](https://www.adobe.com/summit/2020/with-alloy-js-never-tag-for-an-evar-or-mbox-again.html)
 
-## Adobe Experience Platform Web SDK與舊版解決方案有何不同？
+## Adobe Experience PlatformWeb SDK與以前的解決方案有何不同？
 
-### 在Adobe Experience Platform SDK之前
+### Adobe Experience PlatformSDK之前
 
-目前，您必鬚根據每個個別解決方案部署不同的JavaScript程式庫。
+目前，您必鬚根據每個解決方案部署不同的JavaScript庫。
 
-* 每個解決方案都有其專屬的JavaScript程式庫、結構和網域。
-* 這些程式庫都不是建置成可彼此搭配使用。
-* 跨解決方案和Adobe Experience Platform使用案例需要這些不同的程式庫保持相依性，造成部署摩擦。
+* 每個解決方案都有其自己的JavaScript庫、模式和域。
+* 這些圖書館都不是為了彼此合作而建的。
+* 跨解決方案和Adobe Experience Platform使用案例要求這些不同的庫相互依賴，從而導致部署摩擦。
 
-雖然Platform中的標籤可讓部署及管理這些程式庫盡可能輕鬆，但仍有下列問題：
+儘管平台中的標籤使部署和管理這些庫變得盡可能容易，但仍存在以下問題：
 
-* 程式庫大小(頁面上的Adobe程式碼過多)
-* 效能（網站載入太長）
-* 單一使用案例的多次呼叫
-* 在個人化呼叫前等候ECID傳回（原因延遲）
-* 已斷開的資料收集（什麼是evar？）
-* 解決方案(A4T)之間的結構混淆
-* 其他很多不那麼優的東西
+* 庫大小(頁面上的Adobe代碼過多)
+* 效能（站點載入時間過長）
+* 針對單個使用案例的多個調用
+* 在個性化調用之前等待ECID返回（導致延遲）
+* 斷開的資料收集（什麼是平均資料？）
+* 解決方案(A4T)之間的模式混淆
+* 其他很多不太理想的事情
 
-此外，目前沒有可直接將資料傳送至Adobe Experience Platform的JavaScript程式庫。
+此外，目前沒有直接將資料發送到Adobe Experience Platform的JavaScript庫。
 
-### 使用Adobe Experience Platform Web SDK
+### 使用Adobe Experience PlatformWeb SDK
 
-新的Web SDK會將下列解決方案的資料傳送至單一目的地(Adobe Experience Platform邊緣網路)，並針對前述最常見的解決方案使用案例加以解決。
+新的Web SDK將以下解決方案的資料發送到單個目標(Adobe Experience Platform邊緣網路)，並解決上述最常見的解決方案使用情形。
 
 * Adobe Analytics
 * Adobe Audience Manager
@@ -54,120 +54,118 @@ Adobe Experience Platform Web SDK是用戶端JavaScript程式庫，可讓Adobe E
 * 訪客 ID
 * Adobe Experience Platform
 
-今年晚些時候，其他解決方案將陸續出台。
+其他解決方案將在今年晚些時候出台。
 
-Adobe Experience Platform Web SDK也可以直接將資料傳送至Adobe Experience Platform。 此資料會以XDM格式呈現，且會對應至伺服器端解決方案架構。
+Adobe Experience PlatformWeb SDK還可以直接將資料發送到Adobe Experience Platform。 此資料在XDM中，並映射到伺服器端解決方案架構。
 
-## 這個新Web SDK有何價值？
+## 此新Web SDK的價值是什麼？
 
-**效能：** Web SDK比使用所有目前的Adobe程式庫都小，且可大幅加快頁面載入速度。
+**效能：** Web SDK比使用所有當前Adobe庫的容量小，並提供了顯著更快的頁面載入。
 
-**簡單性：** XDM、Web SDK、標籤、Experience Edge、Adobe Experience Cloud解決方案和Adobe Experience Platform的結合，打造了簡單易懂且易於追蹤的資料收集故事。
+**簡潔性：** XDM、Web SDK、標籤、體驗邊緣、Adobe Experience Cloud解決方案和Adobe Experience Platform的結合，可建立一個易於理解且易於跟蹤的資料收集故事。
 
-* **XDM:** 您用來傳送資料至Adobe的解決方案不受限制結構。不再為eVar或mbox進行標籤。
-* **Adobe Experience Platform Web SDK:** 讓您輕鬆將資料傳送至Adobe Experience Platform邊緣網路。
-* **標籤：** 簡化網站上Web SDK（及任何其他JavaScript標籤）的部署和設定。
-* **Experience Edge:** 以所需格式輕鬆將資料路由至Adobe Experience Platform和解決方案。
-* **Adobe Experience Platform和Adobe解決方案：** 啟用其價值主張。
+* **XDM:** 用於將資料發送到Adobe的解決方案不可知架構。 不再為躲避者或箱子添加標籤。
+* **Adobe Experience PlatformWeb SDK:** 使得向Adobe Experience Platform邊緣網路發送和接收資料變得容易。
+* **標籤：** 簡化站點上Web SDK（和任何其他JavaScript標籤）的部署和配置。
+* **體驗邊緣：** 輕鬆將資料以所需格式路由到Adobe Experience Platform和解決方案。
+* **Adobe Experience Platform和Adobe解決方案：** 實現其價值主張。
 
-**控制：** 因為所有資料都使用單一且連接的資料流，所以您可以邏輯上遵循並控制資料在歷程中每毫秒、應用程式之間的外觀。
+**控制項：** 因為所有資料都使用一個連接的資料流，所以您可以邏輯上跟蹤並控制資料在訪問應用程式和從應用程式訪問資料的每一毫秒中的外觀。
 
-**現代且面向未來：** Web SDK及其與Experience Edge Network的連線已讓Adobe大幅導入Adobe處理資料收集、個人化、同意和第三方Cookie未來的方式。(它會啟用由Adobe管理的第一方網域。)
+**現代且為未來做好準備：** Web SDK及其與體驗邊緣網路的連接使Adobe能夠大大現代化Adobe處理資料收集、個性化、同意和第三方Cookie的未來的方式。 (它啟用由Adobe管理的第一方域。)
 
-**實現價值：** Adobe已付諸努力（並將持續），透過標籤輕鬆部署Web SDK，並將用戶端資料對應至XDM。完成該工作後，所有其他Adobe解決方案和Adobe Experience Platform服務都可在伺服器端開啟或關閉。 例如，如果您將此功能用於Adobe Analytics，而且您想要開啟Target或Experience Platform，您只需扳動Datastream設定的切換開關，然後點亮這些使用案例。
+**價值實現時間：** Adobe已經努力（並將繼續），以盡可能輕鬆地通過標籤部署Web SDK並將客戶端資料映射到XDM。 完成該工作後，所有其他Adobe解決方案和Adobe Experience Platform服務都可以開啟或關閉伺服器端。 例如，如果您正在將此功能用於Adobe Analytics，並且要開啟目標或Experience Platform，則只需在Datastream配置上翻轉，並點亮這些使用情形。
 
-## 什麼是Alloy?
+## 什麼是合金？
 
-Alloy是Adobe Experience Platform Web SDK的程式碼名稱。 這會在SDK的原始碼和檔案名稱中使用，但Adobe Experience Platform Web SDK是官方名稱。
+Alloy是Adobe Experience PlatformWeb SDK的代碼名。 它在SDK的原始碼和檔案名中使用，但Adobe Experience PlatformWeb SDK是正式名稱。
 
-## 客戶是否需要購買Adobe Experience Platform才能使用Web SDK?
+## 客戶是否需要購買Adobe Experience Platform [!DNL Web SDK]?
 
-不可以。任何Adobe數位體驗客戶皆可使用。 完全自由。 任何想要使用Web SDK的客戶都可在Adobe Experience Platform UI中建立結構描述和資料集。
+不可以。 任何Adobe數字型驗客戶都可以免費使用Adobe Experience PlatformWeb SDK。 要使用Web SDK，您必須為組織設定此功能。 如果您想獲得訪問權限，請填寫以下內容 [表格](https://adobe.ly/websdkaccess) 而Adobe會讓你有權 [資料流UI](fundamentals/datastreams.md) 和Adobe Experience PlatformUI（如果需要）。
 
-## Web SDK該由誰使用？
+希望使用 [!DNL Web SDK] 將獲得在Adobe Experience PlatformUI中建立架構、資料集和標識命名空間的權限。
 
-Adobe Experience Platform Web SDK已開發給下列人員：
+## 誰應使用Web SDK?
 
-* Adobe Experience Platform使用者
+Adobe Experience PlatformWeb SDK已開發給以下人員：
 
-   如果您需要直接從裝置將資料傳送至Adobe Experience Platform，這是官方建議的方式。
-
-   Adobe知道，如果客戶已有Adobe Analytics，則使用Adobe Analytics連接器會更快，但這並非資料收集的長期策略。
+* Adobe Experience Platform用戶
+   * 如果您需要直接從設備向Adobe Experience Platform發送資料，則正式建議使用此方法。
+   * Adobe知道，如果客戶已經擁有了Adobe Analytics，則使用Adobe Analytics連接器會更快，但這不是資料收集的長期策略。
 
 * Adobe Experience Cloud解決方案客戶
-
-   Adobe Analytics、Adobe Audience Manager和Adobe Target的新客戶應從新的Web SDK開始，而不要使用舊版程式庫。
-
-   想要盡可能獲得最佳化實作的現有客戶應使用新的Web SDK。
+   * 新的Adobe Analytics、Adobe Audience Manager和Adobe Target客戶應從新的Web SDK開始，而不應使用舊版庫。
+   * 希望獲得盡可能最佳化實施的現有客戶應使用新的Web SDK。
 
 
-## 如何存取Adobe Experience Platform Web SDK?
+## 如何獲得使用Adobe Experience PlatformWeb SDK的權限？
 
-Web SDK目前可供一般大眾使用，且可用於傳送資料至Adobe Experience Cloud產品。 將資料傳送至協力廠商解決方案的功能即將推出。 SDK是免費的、由Adobe免費托管，且可以下載，讓您可以視需要免費在自己的伺服器上托管。 Platform Web SDK需要存取Datastream設定和Adobe Experience Platform XDM結構產生器，以便Adobe的伺服器正確處理來自SDK的傳入資料。 若想取得存取權，請聯絡客戶成功經理(CSM)以開始要求程式。
+Web SDK目前可供一般公眾使用，可用於向Adobe Experience Cloud產品發送資料。 向第三方解決方案發送資料的能力將在不久的將來出現。 SDK是免費的，由Adobe免費托管，並且可以下載，以便您可以根據需要免費將其托管在自己的伺服器上。 平台Web SDK需要訪問Datastream配置和Adobe Experience PlatformXDM架構構建器，以便Adobe的伺服器正確處理來自SDK的入站資料。 如果您想獲得訪問權限，請與客戶成功經理(CSM)聯繫以啟動請求流程。
 
-## Web SDK目前支援哪些使用案例？
+## Web SDK當前支援哪些使用案例？
 
-Web SDK正在快速發展。 正在處理更多使用案例。 您可以在此處找到[目前支援的使用案例清單。](https://github.com/adobe/alloy/projects/5)
+Web SDK正在快速發展。 正在處理更多使用案例。 您可以找到 [此處當前支援的使用案例清單。](https://github.com/adobe/alloy/projects/5)
 
-## 目前的客戶是否必須重新標籤其網站？
+## 當前客戶是否必須重新標籤其站點？
 
-視情況而定。Adobe Experience Platform Web SDK可部署為兩種不同的樣式。 未來的移轉檔案將提供其他詳細資訊。
+視情況而定。Adobe Experience PlatformWeb SDK可以部署為兩種不同的樣式。 將來的遷移文檔將提供更多詳細資訊。
 
-* **只是另一個標籤：** 如果網站已經經過解決方案的標籤，且您無法重新標籤，但您想要傳送資料至Adobe Experience Platform Edge Network，以供Experience Platform使用案例或即將推出的事件轉送功能（請參閱下方），您可以將標籤新增至網站，其作為「其他標籤」運作。 `alloy.js` 
+* **只是另一個標籤：** 如果站點已標籤瞭解決方案，並且您無法重新標籤，但是您希望將資料發送到Adobe Experience Platform邊緣網路以便Experience Platform使用案例或即將發生的事件轉發功能（請參閱下面），則可以添加 `alloy.js` 標籤到站點，在該站點中，它的作用是「僅僅是另一個標籤」。
 
-* **唯一的標籤：** 如果您想要將Web SDK用於Experience Cloud解決方案，則必須將其用於該 __ 頁面上的所有解決方案。例如，如果您的網站已經被標籤為Adobe Analytics，而您想要將其用於Target，則您需要同時將其用於Target，以及未來的任何其他項目。
+* **唯一標籤：** 如果要將Web SDK用於Experience Cloud解決方案，則必須將其用於 _全部_ 那頁的解決方案。 例如，如果您的站點已為Adobe Analytics添加標籤，並且您希望將其用於目標，則您需要將其用於兩者，以及將來的任何其他站點。
 
-換言之，如果您決定將Adobe Experience Platform Web SDK用於非解決方案使用案例，則可以使用`alloy.js`標籤網站，並將其視為新解決方案而繼續移動。 如果您想要將其用於Adobe Analytics、Target或Audience Manager，或應用程式使用案例，您可能必須移除頁面上的任何舊版程式碼。
+換句話說，如果您決定將Adobe Experience PlatformWeb SDK用於非解決方案使用情形，則可以使用 `alloy.js` 繼續，好像這是新的解決方案。 如果要將其用於Adobe Analytics、目標或Audience Manager，或用於應用程式使用情形，則可能必須刪除頁面上的任何舊代碼。
 
-## 我可以在開始使用Alloy時移轉ECID，以免我的網站訪客開始顯示為新訪客嗎？
+## 當我開始使用Alloy時，是否可以遷移ECID，以便我的網站訪問者不會開始以新訪問者的身份出現？
 
-是的，Adobe Experience Platform Web SDK提供身分移轉功能。 如需詳細資訊，請依照[平台Web SDK身分檔案](https://experienceleague.adobe.com/docs/experience-platform/edge/identity/overview.html?lang=en#id-migration)中的指示移轉ID。
+是，Adobe Experience PlatformWeb SDK提供了身份遷移功能。 按照中的ID遷移說明 [平台Web SDK標識文檔](https://experienceleague.adobe.com/docs/experience-platform/edge/identity/overview.html?lang=en#id-migration) 的子菜單。
 
 ## Web SDK與標籤有何不同？
 
-* **Experience Platform中的標** 記可管理裝置程式碼。使用它們可更輕鬆部署程式碼。 它們是自由而強大的。
+* **Experience Platform中的標籤** 管理設備代碼。 使用它們可以更輕鬆地部署代碼。 他們自由而強大。
 
-* **Adobe Experience Platform Web** SDK是新程式碼的官方名稱，由Adobe使用案例的標籤所部署。它也是自由而強大的。
+* **Adobe Experience PlatformWeb SDK** 是新代碼的正式名稱，該代碼將由標籤部署以用於Adobe使用案例。 它也是自由而強大的。
 
-* **`alloy.js`** 是Adobe Experience Platform Web SDK程式碼的檔案名稱。
+* **`alloy.js`** 是Adobe Experience PlatformWeb SDK代碼的檔案名。
 
-## 我是否必須使用標籤來部署Web SDK?
+## 是否必須使用標籤來部署Web SDK?
 
-不可以。您可以自行下載`alloy.js`檔案。
+不可以。 您可以下載 `alloy.js` 自己歸檔。
 
-不過：
+但是：
 
-* Adobe Experience Platform Web SDK需要資料流ID，這樣邊緣網路就能識別資料流，並決定該如何處理資料。 此ID是在Experience Platform內建立。 這並不表示您必須使用資料收集UI來建立屬性或部署JavaScript程式碼，但您確實需要使用標籤來建立設定ID。
+* Adobe Experience PlatformWeb SDK需要一種稱為資料流ID的東西，以便邊緣網路能夠識別流並確定如何處理資料。 此ID是在Experience Platform中建立的。 這並不意味著您必須使用資料收集UI建立屬性或部署JavaScript代碼，但是您確實需要使用標籤來建立配置ID。
 
-* 標籤不僅是最佳的可用標籤和SDK管理員，還可讓您輕鬆部署`alloy.js`，並將資料對應至XDM結構。 如果您決定不使用標籤，則必須先管理`alloy.js`部署、事件，以及將資料對應至XDM，才能傳送。 這是比使用標籤更困難的&#x200B;_許多_&#x200B;程式。
+* 標籤不僅是最好的可用標籤和SDK管理器，它使部署非常容易 `alloy.js` 將資料映射到XDM模式。 如果您決定不使用標籤，則必須管理部署 `alloy.js`、執行事件處理，並在發送資料之前將其映射到XDM。 這是 _多_ 比使用標籤更困難。
 
-* 建議您使用標籤來部署`alloy.js`，即使這是您唯一使用該標籤的標籤亦然。
+* 建議您使用標籤來部署 `alloy.js`即使它是你唯一用的標籤。
 
-## 什麼是事件轉送？
+## 什麼是事件轉發？
 
-如果您使用SDK並將XDM傳送至Experience Edge，這些新功能事件轉送可讓您安裝新的伺服器端擴充功能，並將資料對應至任何位置，並從我們的邊緣網路傳送至任何位置。 將其視為「資料收集即服務」。  這項服務需支付成本，並隨Adobe Experience Platform提供整合功能。
+如果您使用我們的SDK並將XDM發送到體驗邊緣，這些新功能事件轉發允許您安裝新的伺服器端擴展並將資料映射到任何位置，並從我們的邊緣網路發送到任何位置。 將其視為「資料收集即服務」。 這項服務將付費，並作為Adobe Experience Platform的一部分打包。
 
-## 什麼是CNAME或第一方網域？為什麼這很重要？
+## 什麼是CNAME或第一方域，它為什麼重要？
 
-[Adobe檔案](https://experienceleague.adobe.com/docs/id-service/using/reference/analytics-reference/cname.html)中提供有關CNAME的詳細資訊
+有關CNAME的詳細資訊，請參閱 [Adobe文檔](https://experienceleague.adobe.com/docs/id-service/using/reference/analytics-reference/cname.html)
 
-## Adobe Experience Platform Web SDK是否使用Cookie? 如果是，它會使用哪些Cookie?
+## Adobe Experience PlatformWeb SDK是否使用cookie? 如果是，它會使用什麼Cookie?
 
-是的，目前Web SDK使用的Cookie介於1到4個之間，端視您的實作而定。 以下為Web SDK中可能看到的4個Cookie清單及其使用方式：
+是，Web SDK當前使用1到4個Cookie的任意位置，具體取決於您的實現。 以下是Web SDK中可能看到的4個Cookie的清單及其使用方式：
 
-**kndct_orgid_identity:** 身分識別Cookie可用來儲存ECID，以及一些與ECID相關的其他資訊。
+**kndct_orgid標識：** 標識cookie用於儲存ECID以及與ECID相關的其他資訊。
 
-**kndctr_orgid_consent:** 此cookie會儲存使用者對網站的同意偏好設定。
+**kndctr_orgid_connection:** 此cookie儲存用戶對網站的同意偏好。
 
-**kndctr_orgid_personalization:** 此cookie包含Adobe Target用來個人化網頁的工作階段資訊。
+**kndctr_orgid_personalization:** 此cookie包含Adobe Target用於個性化網頁的會話資訊。
 
-**kndctr_orgid_consentcheck:** 此以工作階段為基礎的cookie會訊息伺服器端查詢同意偏好設定。
+**kndctr_orgid_converscheck:** 此基於會話的cookie指示伺服器查找同意首選項伺服器端。
 
-## Adobe Experience Platform Web SDK支援哪些瀏覽器？
+## Adobe Experience PlatformWeb SDK支援哪些瀏覽器？
 
-Adobe Experience Platform Web SDK的設計，可在最新版Google Chrome、Safari、Firefox、Internet Explorer 11和Microsoft Edge Chromium中以最佳方式運作。 您在舊版瀏覽器上使用某些功能時可能遇到問題。
+Adobe Experience PlatformWeb SDK設計為在最新版本的GoogleChrome、Safari、火狐、Internet Explorer 11和MicrosoftEdge Crr中以最佳方式工作。 在較舊版本的瀏覽器上使用某些功能時可能會遇到問題。
 
-## 我可以在何處取得Adobe Experience Platform Web SDK的詳細資訊？
+## 從哪裡可以獲取有關Adobe Experience PlatformWeb SDK的更多資訊？
 
 * [文件](https://experienceleague.adobe.com/docs/experience-platform/edge/home.html)
 * [原始碼](https://github.com/adobe/alloy)
