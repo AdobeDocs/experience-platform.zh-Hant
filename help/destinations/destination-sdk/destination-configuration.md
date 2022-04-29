@@ -2,7 +2,7 @@
 description: 此配置允許您指明基本資訊，如目標名稱、類別、說明、徽標等。 此配置中的設定還確定Experience Platform用戶如何驗證到目標、Experience Platform用戶介面中的顯示方式以及可以導出到目標的身份。
 title: 流式傳輸目標配置選項，用於Destination SDK
 exl-id: b7e4db67-2981-4f18-b202-3facda5c8f0b
-source-git-commit: 51417bee5dba7a96d3a7a7eb507fc95711fad4a5
+source-git-commit: e3886cbcde76e37263d2fa23769fb9e96501edc4
 workflow-type: tm+mt
 source-wordcount: '1787'
 ht-degree: 4%
@@ -168,7 +168,7 @@ ht-degree: 4%
 | `type` | 字串 | 指示您要引入的自定義欄位類型。 接受的值為 `string`。 `object`。 `integer`。 |
 | `title` | 字串 | 指示欄位的名稱，如客戶在Experience Platform用戶介面中看到的。 |
 | `description` | 字串 | 提供自定義欄位的說明。 |
-| `isRequired` | 布爾型 | 指示目標設定工作流中是否需要此欄位。 |
+| `isRequired` | 布林值 | 指示目標設定工作流中是否需要此欄位。 |
 | `enum` | 字串 | 將自定義欄位呈現為下拉菜單並列出用戶可用的選項。 |
 | `pattern` | 字串 | 如果需要，為自定義欄位強制實施模式。 使用規則運算式來強制模式。 例如，如果客戶ID不包括數字或下划線，請輸入 `^[A-Za-z]+$` 的子菜單。 |
 
@@ -196,9 +196,9 @@ ht-degree: 4%
 | 參數 | 類型 | 說明 |
 |---------|----------|------|
 | `profileFields` | 陣列 | *上面的示例配置中未顯示。* 添加預定義項時 `profileFields`,Experience Platform用戶可以選擇將平台屬性映射到目標側的預定義屬性。 |
-| `profileRequired` | 布爾型 | 使用 `true` 如果用戶應能將配置檔案屬性從Experience Platform映射到目標側的自定義屬性，如上面的示例配置所示。 |
-| `segmentRequired` | 布爾型 | 始終使用 `segmentRequired:true`。 |
-| `identityRequired` | 布爾型 | 使用 `true` 如果用戶應能將標識命名空間從Experience Platform映射到所需的架構。 |
+| `profileRequired` | 布林值 | 使用 `true` 如果用戶應能將配置檔案屬性從Experience Platform映射到目標側的自定義屬性，如上面的示例配置所示。 |
+| `segmentRequired` | 布林值 | 始終使用 `segmentRequired:true`。 |
+| `identityRequired` | 布林值 | 使用 `true` 如果用戶應能將標識命名空間從Experience Platform映射到所需的架構。 |
 
 {style=&quot;table-layout:auto&quot;&quot;
 
@@ -218,9 +218,9 @@ ht-degree: 4%
 
 | 參數 | 類型 | 說明 |
 |---------|----------|------|
-| `acceptsAttributes` | 布爾型 | 指示目標是否接受標準配置檔案屬性。 通常，這些屬性會在合作夥伴的文檔中突出顯示。 |
-| `acceptsCustomNamespaces` | 布爾型 | 指示客戶是否可以在目標中設定自定義命名空間。 |
-| `allowedAttributesTransformation` | 字串 | *未在示例配置中顯示*。 例如，在 [!DNL Platform] 客戶將純電子郵件地址作為屬性，而您的平台只接受經過散列的電子郵件。 在此對象中，可以應用需要的轉換（例如，將電子郵件轉換為小寫，然後是哈希）。 有關示例，請參見 `requiredTransformation` 的 [目標配置API參考](./destination-configuration-api.md#update)。 |
+| `acceptsAttributes` | 布林值 | 指示目標是否接受標準配置檔案屬性。 通常，這些屬性會在合作夥伴的文檔中突出顯示。 |
+| `acceptsCustomNamespaces` | 布林值 | 指示客戶是否可以在目標中設定自定義命名空間。 |
+| `transformation` | 字串 | *未在示例配置中顯示*。 例如，在 [!DNL Platform] 客戶將純電子郵件地址作為屬性，而您的平台只接受經過散列的電子郵件。 在此對象中，可以應用需要的轉換（例如，將電子郵件轉換為小寫，然後是哈希）。 有關示例，請參見 `requiredTransformation` 的 [目標配置API參考](./destination-configuration-api.md#update)。 |
 | `acceptedGlobalNamespaces` | - | 用於平台接受 [標準標識命名空間](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=en#standard-namespaces) （例如，IDFA），因此您可以限制平台用戶只選擇這些標識命名空間。 |
 
 {style=&quot;table-layout:auto&quot;&quot;
@@ -289,7 +289,7 @@ ht-degree: 4%
 
 | 參數 | 類型 | 說明 |
 |---------|----------|------|
-| `backfillHistoricalProfileData` | 布爾型 | 控制在將段激活到目標時是否導出歷史配置檔案資料。 <br> <ul><li> `true`: [!DNL Platform] 發送在激活段之前符合段的歷史用戶配置檔案。 </li><li> `false`: [!DNL Platform] 僅包括激活段後符合段條件的用戶配置檔案。 </li></ul> |
+| `backfillHistoricalProfileData` | 布林值 | 控制在將段激活到目標時是否導出歷史配置檔案資料。 <br> <ul><li> `true`: [!DNL Platform] 發送在激活段之前符合段的歷史用戶配置檔案。 </li><li> `false`: [!DNL Platform] 僅包括激活段後符合段條件的用戶配置檔案。 </li></ul> |
 
 ## 此配置如何連接目標的所有必要資訊 {#connecting-all-configurations}
 

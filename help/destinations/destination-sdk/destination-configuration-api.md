@@ -2,10 +2,10 @@
 description: 此頁列出並說明了可以使用「/authoring/destinations」 API終結點執行的所有API操作。
 title: 目標API終結點操作
 exl-id: 96755e9d-be62-432f-b985-91330575b395
-source-git-commit: 51417bee5dba7a96d3a7a7eb507fc95711fad4a5
+source-git-commit: e3886cbcde76e37263d2fa23769fb9e96501edc4
 workflow-type: tm+mt
 source-wordcount: '2537'
-ht-degree: 3%
+ht-degree: 4%
 
 ---
 
@@ -145,39 +145,39 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 | `customerDataFields.type` | 字串 | 指示您要引入的自定義欄位類型。 接受的值為 `string`。 `object`。 `integer` |
 | `customerDataFields.title` | 字串 | 指示欄位的名稱，如客戶在Experience Platform用戶介面中看到的 |
 | `customerDataFields.description` | 字串 | 提供自定義欄位的說明。 |
-| `customerDataFields.isRequired` | 布爾型 | 指示目標設定工作流中是否需要此欄位。 |
+| `customerDataFields.isRequired` | 布林值 | 指示目標設定工作流中是否需要此欄位。 |
 | `customerDataFields.enum` | 字串 | 將自定義欄位呈現為下拉菜單並列出用戶可用的選項。 |
 | `customerDataFields.pattern` | 字串 | 如果需要，為自定義欄位強制實施模式。 使用規則運算式來強制模式。 例如，如果客戶ID不包括數字或下划線，請輸入 `^[A-Za-z]+$` 的子菜單。 |
 | `uiAttributes.documentationLink` | 字串 | 引用中的文檔頁面 [目標目錄](https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/overview.html?lang=en#catalog) 你的目的地。 使用 `https://www.adobe.com/go/destinations-YOURDESTINATION-en`，也請參見Wiki頁。 `YOURDESTINATION` 是目標的名稱。 對於名為Moviestar的目標，您將使用 `https://www.adobe.com/go/destinations-moviestar-en`。 |
 | `uiAttributes.category` | 字串 | 指分配給您在Adobe Experience Platform的目標的類別。 有關詳細資訊，請閱讀 [目標類別](https://experienceleague.adobe.com/docs/experience-platform/rtcdp/destinations/destination-types.html?lang=en#destination-categories)。 使用以下值之一： `adobeSolutions, advertising, analytics, cdp, cloudStorage, crm, customerSuccess, database, dmp, ecommerce, email, emailMarketing, enrichment, livechat, marketingAutomation, mobile, personalization, protocols, social, streaming, subscriptions, surveys, tagManagers, voc, warehouses, payments`。 |
 | `uiAttributes.connectionType` | 字串 | `Server-to-server` 是當前唯一可用的選項。 |
 | `uiAttributes.frequency` | 字串 | `Streaming` 是當前唯一可用的選項。 |
-| `identityNamespaces.externalId.acceptsAttributes` | 布爾型 | 指示目標是否接受標準配置檔案屬性。 通常，這些屬性會在合作夥伴的文檔中加以強調。 |
-| `identityNamespaces.externalId.acceptsCustomNamespaces` | 布爾型 | 指示客戶是否可以在目標中設定自定義命名空間。 |
-| `identityNamespaces.externalId.allowedAttributesTransformation` | 字串 | _未在示例配置中顯示_。 例如，在 [!DNL Platform] 客戶將純電子郵件地址作為屬性，而您的平台只接受經過散列的電子郵件。 您將在此處提供需要應用的轉換（例如，將電子郵件轉換為小寫，然後進行散列）。 |
+| `identityNamespaces.externalId.acceptsAttributes` | 布林值 | 指示目標是否接受標準配置檔案屬性。 通常，這些屬性會在合作夥伴的文檔中加以強調。 |
+| `identityNamespaces.externalId.acceptsCustomNamespaces` | 布林值 | 指示客戶是否可以在目標中設定自定義命名空間。 |
+| `identityNamespaces.externalId.transformation` | 字串 | _未在示例配置中顯示_。 例如，在 [!DNL Platform] 客戶將純電子郵件地址作為屬性，而您的平台只接受經過散列的電子郵件。 您將在此處提供需要應用的轉換（例如，將電子郵件轉換為小寫，然後進行散列）。 |
 | `identityNamespaces.externalId.acceptedGlobalNamespaces` | - | 用於平台接受 [標準標識命名空間](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=en#standard-namespaces) （例如，IDFA），因此您可以限制平台用戶只選擇這些標識命名空間。 <br> 使用 `acceptedGlobalNamespaces`，您可以使用 `"requiredTransformation":"sha256(lower($))"` 到小寫和散列電子郵件地址或電話號碼。 |
 | `destinationDelivery.authenticationRule` | 字串 | 指示如何 [!DNL Platform] 客戶連接到您的目標。 接受的值為 `CUSTOMER_AUTHENTICATION`。 `PLATFORM_AUTHENTICATION`。 `NONE`。 <br> <ul><li>使用 `CUSTOMER_AUTHENTICATION` 如果平台客戶通過用戶名和密碼、持有者令牌或其他身份驗證方法登錄到您的系統。 例如，如果同時選擇了 `authType: OAUTH2` 或 `authType:BEARER` 在 `customerAuthenticationConfigurations`。 </li><li> 使用 `PLATFORM_AUTHENTICATION` 如果Adobe與目標之間有全局身份驗證系統， [!DNL Platform] 客戶不需要提供任何身份驗證憑據來連接到目標。 在這種情況下，必須使用 [憑據](./credentials-configuration-api.md) 配置。 </li><li>使用 `NONE` 如果向目標平台發送資料不需要身份驗證。 </li></ul> |
 | `destinationDelivery.destinationServerId` | 字串 | 的 `instanceId` 的 [目標伺服器模板](./destination-server-api.md) 用於此目標。 |
-| `backfillHistoricalProfileData` | 布爾型 | 控制在將段激活到目標時是否導出歷史配置檔案資料。 <br> <ul><li> `true`: [!DNL Platform] 發送在激活段之前符合段的歷史用戶配置檔案。 </li><li> `false`: [!DNL Platform] 僅包括激活段後符合段條件的用戶配置檔案。 </li></ul> |
-| `segmentMappingConfig.mapUserInput` | 布爾型 | 控制用戶是否輸入目標激活工作流中的段映射ID。 |
-| `segmentMappingConfig.mapExperiencePlatformSegmentId` | 布爾型 | 控制目標激活工作流中的段映射ID是否是Experience Platform段ID。 |
-| `segmentMappingConfig.mapExperiencePlatformSegmentName` | 布爾型 | 控制目標激活工作流中的段映射id是否是Experience Platform段名稱。 |
-| `segmentMappingConfig.audienceTemplateId` | 布爾型 | 的 `instanceId` 的 [受眾元資料模板](./audience-metadata-api.md) 用於此目標。 |
+| `backfillHistoricalProfileData` | 布林值 | 控制在將段激活到目標時是否導出歷史配置檔案資料。 <br> <ul><li> `true`: [!DNL Platform] 發送在激活段之前符合段的歷史用戶配置檔案。 </li><li> `false`: [!DNL Platform] 僅包括激活段後符合段條件的用戶配置檔案。 </li></ul> |
+| `segmentMappingConfig.mapUserInput` | 布林值 | 控制用戶是否輸入目標激活工作流中的段映射ID。 |
+| `segmentMappingConfig.mapExperiencePlatformSegmentId` | 布林值 | 控制目標激活工作流中的段映射ID是否是Experience Platform段ID。 |
+| `segmentMappingConfig.mapExperiencePlatformSegmentName` | 布林值 | 控制目標激活工作流中的段映射id是否是Experience Platform段名稱。 |
+| `segmentMappingConfig.audienceTemplateId` | 布林值 | 的 `instanceId` 的 [受眾元資料模板](./audience-metadata-api.md) 用於此目標。 |
 | `schemaConfig.profileFields` | 陣列 | 添加預定義項時 `profileFields` 如上面的配置所示，用戶可以選擇將Experience Platform屬性映射到目標側的預定義屬性。 |
-| `schemaConfig.profileRequired` | 布爾型 | 使用 `true` 如果用戶應能將配置檔案屬性從Experience Platform映射到目標側的自定義屬性，如上面的示例配置所示。 |
-| `schemaConfig.segmentRequired` | 布爾型 | 始終使用 `segmentRequired:true`。 |
-| `schemaConfig.identityRequired` | 布爾型 | 使用 `true` 如果用戶應能夠將標識命名空間從Experience Platform映射到所需的架構。 |
+| `schemaConfig.profileRequired` | 布林值 | 使用 `true` 如果用戶應能將配置檔案屬性從Experience Platform映射到目標側的自定義屬性，如上面的示例配置所示。 |
+| `schemaConfig.segmentRequired` | 布林值 | 始終使用 `segmentRequired:true`。 |
+| `schemaConfig.identityRequired` | 布林值 | 使用 `true` 如果用戶應能夠將標識命名空間從Experience Platform映射到所需的架構。 |
 | `aggregation.aggregationType` | - | 選取「`BEST_EFFORT`」或「`CONFIGURABLE_AGGREGATION`」。上面的示例配置包括 `BEST_EFFORT` 聚合。 例如 `CONFIGURABLE_AGGREGATION`，請參閱 [目標配置](./destination-configuration.md#example-configuration) 的子菜單。 下表介紹了與可配置聚合相關的參數。 |
 | `aggregation.bestEffortAggregation.maxUsersPerRequest` | 整數 | Experience Platform可以在單個HTTP調用中聚合多個導出的配置檔案。 指定終結點在單個HTTP調用中應接收的最大配置檔案數。 請注意，這是一種盡力的聚合。 例如，如果指定值100，平台可能會在呼叫時發送小於100的任意數量的配置檔案。 <br> 如果伺服器不接受每個請求的多個用戶，請將此值設定為1。 |
-| `aggregation.bestEffortAggregation.splitUserById` | 布爾型 | 如果應按標識拆分到目標的調用，則使用此標誌。 將此標誌設定為 `true` 如果伺服器對給定命名空間每次只接受一個標識。 |
-| `aggregation.configurableAggregation.splitUserById` | 布爾型 | 請參見示例配置中的參數 [這裡](./destination-configuration.md#example-configuration)。 如果應按標識拆分到目標的調用，則使用此標誌。 將此標誌設定為 `true` 如果伺服器對給定命名空間每次只接受一個標識。 |
+| `aggregation.bestEffortAggregation.splitUserById` | 布林值 | 如果應按標識拆分到目標的調用，則使用此標誌。 將此標誌設定為 `true` 如果伺服器對給定命名空間每次只接受一個標識。 |
+| `aggregation.configurableAggregation.splitUserById` | 布林值 | 請參見示例配置中的參數 [這裡](./destination-configuration.md#example-configuration)。 如果應按標識拆分到目標的調用，則使用此標誌。 將此標誌設定為 `true` 如果伺服器對給定命名空間每次只接受一個標識。 |
 | `aggregation.configurableAggregation.maxBatchAgeInSecs` | 整數 | <ul><li>*最小值：1800*</li><li>*最大值：3600*</li><li>請參見示例配置中的參數 [這裡](./destination-configuration.md#example-configuration)。 配置最小值和最大可接受值之間的值。 與 `maxNumEventsInBatch`，此參數確定Experience Platform應等待多長時間，直到將API調用發送到您的終結點。 <br> 例如，如果對這兩個參數都使用最大值，Experience Platform將等待3600秒或直到有10.000個合格配置檔案才進行API調用（以先發生的情況為準）。 </li></ul> |
 | `aggregation.configurableAggregation.maxNumEventsInBatch` | 整數 | <ul><li>*最小值：1000*</li><li>*最大值：10000*</li><li>請參見示例配置中的參數 [這裡](./destination-configuration.md#example-configuration)。 配置最小值和最大可接受值之間的值。 有關此參數的說明，請參見 `maxBatchAgeInSecs` 就在上面。</li></ul> |
-| `aggregation.configurableAggregation.aggregationKey` | 布爾型 | 請參見示例配置中的參數 [這裡](./destination-configuration.md#example-configuration)。 允許您根據以下參數聚合映射到目標的導出配置檔案： <br> <ul><li>段ID</li><li> 段狀態 </li><li> 標識命名空間 </li></ul> |
-| `aggregation.configurableAggregation.aggregationKey.includeSegmentId` | 布爾型 | 請參見示例配置中的參數 [這裡](./destination-configuration.md#example-configuration)。 將此設定為 `true` 按段ID對導出到目標的配置檔案進行分組。 |
-| `aggregation.configurableAggregation.aggregationKey.includeSegmentStatus` | 布爾型 | 請參見示例配置中的參數 [這裡](./destination-configuration.md#example-configuration)。 必須同時設定 `includeSegmentId:true` 和 `includeSegmentStatus:true` 按段ID和段狀態對導出到目標的配置檔案進行分組。 |
-| `aggregation.configurableAggregation.aggregationKey.includeIdentity` | 布爾型 | 請參見示例配置中的參數 [這裡](./destination-configuration.md#example-configuration)。 將此設定為 `true` 按標識名稱空間將導出到目標的配置檔案分組。 |
-| `aggregation.configurableAggregation.aggregationKey.oneIdentityPerGroup` | 布爾型 | 請參見示例配置中的參數 [這裡](./destination-configuration.md#example-configuration)。 使用此參數可指定是否希望導出的配置檔案聚合為單個標識的組（GAID、IDFA、電話號碼、電子郵件等）。 |
+| `aggregation.configurableAggregation.aggregationKey` | 布林值 | 請參見示例配置中的參數 [這裡](./destination-configuration.md#example-configuration)。 允許您根據以下參數聚合映射到目標的導出配置檔案： <br> <ul><li>段ID</li><li> 段狀態 </li><li> 標識命名空間 </li></ul> |
+| `aggregation.configurableAggregation.aggregationKey.includeSegmentId` | 布林值 | 請參見示例配置中的參數 [這裡](./destination-configuration.md#example-configuration)。 將此設定為 `true` 按段ID對導出到目標的配置檔案進行分組。 |
+| `aggregation.configurableAggregation.aggregationKey.includeSegmentStatus` | 布林值 | 請參見示例配置中的參數 [這裡](./destination-configuration.md#example-configuration)。 必須同時設定 `includeSegmentId:true` 和 `includeSegmentStatus:true` 按段ID和段狀態對導出到目標的配置檔案進行分組。 |
+| `aggregation.configurableAggregation.aggregationKey.includeIdentity` | 布林值 | 請參見示例配置中的參數 [這裡](./destination-configuration.md#example-configuration)。 將此設定為 `true` 按標識名稱空間將導出到目標的配置檔案分組。 |
+| `aggregation.configurableAggregation.aggregationKey.oneIdentityPerGroup` | 布林值 | 請參見示例配置中的參數 [這裡](./destination-configuration.md#example-configuration)。 使用此參數可指定是否希望導出的配置檔案聚合為單個標識的組（GAID、IDFA、電話號碼、電子郵件等）。 |
 | `aggregation.configurableAggregation.aggregationKey.groups` | 字串 | 請參見示例配置中的參數 [這裡](./destination-configuration.md#example-configuration)。 如果要按標識命名空間的組將導出到目標的配置檔案分組，請建立標識組清單。 例如，您可以使用示例中的配置將包含IDFA和GAID移動標識符的配置檔案合併為一個到目標的呼叫和電子郵件，再將另一個組合為電子郵件。 |
 
 {style=&quot;table-layout:auto&quot;}
@@ -577,25 +577,25 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/destination
 | `customerDataFields.type` | 字串 | 指示您要引入的自定義欄位類型。 接受的值為 `string`。 `object`。 `integer` |
 | `customerDataFields.title` | 字串 | 指示欄位的名稱，如客戶在Experience Platform用戶介面中看到的 |
 | `customerDataFields.description` | 字串 | 提供自定義欄位的說明。 |
-| `customerDataFields.isRequired` | 布爾型 | 指示目標設定工作流中是否需要此欄位。 |
+| `customerDataFields.isRequired` | 布林值 | 指示目標設定工作流中是否需要此欄位。 |
 | `customerDataFields.enum` | 字串 | 將自定義欄位呈現為下拉菜單並列出用戶可用的選項。 |
 | `customerDataFields.pattern` | 字串 | 如果需要，為自定義欄位強制實施模式。 使用規則運算式來強制模式。 例如，如果客戶ID不包括數字或下划線，請輸入 `^[A-Za-z]+$` 的子菜單。 |
 | `uiAttributes.documentationLink` | 字串 | 引用中的文檔頁面 [目標目錄](https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/overview.html?lang=en#catalog) 你的目的地。 使用 `https://www.adobe.com/go/destinations-YOURDESTINATION-en`，也請參見Wiki頁。 `YOURDESTINATION` 是目標的名稱。 對於名為Moviestar的目標，您將使用 `https://www.adobe.com/go/destinations-moviestar-en` |
 | `uiAttributes.category` | 字串 | 指分配給您在Adobe Experience Platform的目標的類別。 有關詳細資訊，請閱讀 [目標類別](https://experienceleague.adobe.com/docs/experience-platform/rtcdp/destinations/destination-types.html?lang=en#destination-categories)。 使用以下值之一： `adobeSolutions, advertising, analytics, cdp, cloudStorage, crm, customerSuccess, database, dmp, ecommerce, email, emailMarketing, enrichment, livechat, marketingAutomation, mobile, personalization, protocols, social, streaming, subscriptions, surveys, tagManagers, voc, warehouses, payments` |
 | `uiAttributes.connectionType` | 字串 | `Server-to-server` 是當前唯一可用的選項。 |
 | `uiAttributes.frequency` | 字串 | `Streaming` 是當前唯一可用的選項。 |
-| `identityNamespaces.externalId.acceptsAttributes` | 布爾型 | 指示目標是否接受標準配置檔案屬性。 通常，這些屬性會在合作夥伴的文檔中加以強調。 |
-| `identityNamespaces.externalId.acceptsCustomNamespaces` | 布爾型 | 指示客戶是否可以在目標中設定自定義命名空間。 閱讀有關 [自定義命名空間](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=en#manage-namespaces) 在Adobe Experience Platform。 |
-| `identityNamespaces.externalId.allowedAttributesTransformation` | 字串 | _未在示例配置中顯示_。 例如，在 [!DNL Platform] 客戶將純電子郵件地址作為屬性，而您的平台只接受經過散列的電子郵件。 您將在此處提供需要應用的轉換（例如，將電子郵件轉換為小寫，然後進行散列）。 |
+| `identityNamespaces.externalId.acceptsAttributes` | 布林值 | 指示目標是否接受標準配置檔案屬性。 通常，這些屬性會在合作夥伴的文檔中加以強調。 |
+| `identityNamespaces.externalId.acceptsCustomNamespaces` | 布林值 | 指示客戶是否可以在目標中設定自定義命名空間。 閱讀有關 [自定義命名空間](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=en#manage-namespaces) 在Adobe Experience Platform。 |
+| `identityNamespaces.externalId.transformation` | 字串 | _未在示例配置中顯示_。 例如，在 [!DNL Platform] 客戶將純電子郵件地址作為屬性，而您的平台只接受經過散列的電子郵件。 您將在此處提供需要應用的轉換（例如，將電子郵件轉換為小寫，然後進行散列）。 |
 | `identityNamespaces.externalId.acceptedGlobalNamespaces` | - | 用於平台接受 [標準標識命名空間](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=en#standard-namespaces) （例如，IDFA），因此您可以限制平台用戶只選擇這些標識命名空間。 |
 | `destinationDelivery.authenticationRule` | 字串 | 指示如何 [!DNL Platform] 客戶連接到您的目標。 接受的值為 `CUSTOMER_AUTHENTICATION`。 `PLATFORM_AUTHENTICATION`。 `NONE`。 <br> <ul><li>使用 `CUSTOMER_AUTHENTICATION` 如果平台客戶通過用戶名和密碼、持有者令牌或其他身份驗證方法登錄到您的系統。 例如，如果同時選擇了 `authType: OAUTH2` 或 `authType:BEARER` 在 `customerAuthenticationConfigurations`。 </li><li> 使用 `PLATFORM_AUTHENTICATION` 如果Adobe與目標之間有全局身份驗證系統， [!DNL Platform] 客戶不需要提供任何身份驗證憑據來連接到目標。 在這種情況下，必須使用 [憑據](./authentication-configuration.md) 配置。 </li><li>使用 `NONE` 如果向目標平台發送資料不需要身份驗證。 </li></ul> |
 | `destinationDelivery.destinationServerId` | 字串 | 的 `instanceId` 的 [目標伺服器模板](./destination-server-api.md) 用於此目標。 |
 | `destConfigId` | 字串 | 此欄位是自動生成的，不需要輸入。 |
-| `backfillHistoricalProfileData` | 布爾型 | 控制在將段激活到目標時是否導出歷史配置檔案資料。 <br> <ul><li> `true`: [!DNL Platform] 發送在激活段之前符合段的歷史用戶配置檔案。 </li><li> `false`: [!DNL Platform] 僅包括激活段後符合段條件的用戶配置檔案。 </li></ul> |
-| `segmentMappingConfig.mapUserInput` | 布爾型 | 控制用戶是否輸入目標激活工作流中的段映射ID。 |
-| `segmentMappingConfig.mapExperiencePlatformSegmentId` | 布爾型 | 控制目標激活工作流中的段映射ID是否是Experience Platform段ID。 |
-| `segmentMappingConfig.mapExperiencePlatformSegmentName` | 布爾型 | 控制目標激活工作流中的段映射id是否是Experience Platform段名稱。 |
-| `segmentMappingConfig.audienceTemplateId` | 布爾型 | 的 `instanceId` 的 [受眾元資料模板](./audience-metadata-management.md) 用於此目標。 要設定受眾元資料模板，請閱讀 [受眾元資料API參考](./audience-metadata-api.md)。 |
+| `backfillHistoricalProfileData` | 布林值 | 控制在將段激活到目標時是否導出歷史配置檔案資料。 <br> <ul><li> `true`: [!DNL Platform] 發送在激活段之前符合段的歷史用戶配置檔案。 </li><li> `false`: [!DNL Platform] 僅包括激活段後符合段條件的用戶配置檔案。 </li></ul> |
+| `segmentMappingConfig.mapUserInput` | 布林值 | 控制用戶是否輸入目標激活工作流中的段映射ID。 |
+| `segmentMappingConfig.mapExperiencePlatformSegmentId` | 布林值 | 控制目標激活工作流中的段映射ID是否是Experience Platform段ID。 |
+| `segmentMappingConfig.mapExperiencePlatformSegmentName` | 布林值 | 控制目標激活工作流中的段映射id是否是Experience Platform段名稱。 |
+| `segmentMappingConfig.audienceTemplateId` | 布林值 | 的 `instanceId` 的 [受眾元資料模板](./audience-metadata-management.md) 用於此目標。 要設定受眾元資料模板，請閱讀 [受眾元資料API參考](./audience-metadata-api.md)。 |
 
 {style=&quot;table-layout:auto&quot;&quot;
 
