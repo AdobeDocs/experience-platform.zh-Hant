@@ -2,9 +2,9 @@
 title: 查詢服務中的匿名塊
 description: 匿名塊是Adobe Experience Platform查詢服務支援的SQL語法，它允許您高效地執行查詢序列
 exl-id: ec497475-9d2b-43aa-bcf4-75a430590496
-source-git-commit: 7087991c7a3daad57c5acd92a20c7024a1152c7e
+source-git-commit: 43c5bdbfa93872ba54bde72bbea8201b73e9dfee
 workflow-type: tm+mt
-source-wordcount: '491'
+source-wordcount: '515'
 ht-degree: 0%
 
 ---
@@ -14,6 +14,10 @@ ht-degree: 0%
 Adobe Experience Platform查詢服務支援匿名塊。 匿名塊功能允許您連結按順序執行的一個或多個SQL陳述式。 它們還允許例外處理選項。
 
 匿名塊特徵是執行一系列操作或查詢的有效方法。 塊內的查詢鏈可以另存為模板，並計畫在特定時間或間隔運行。 這些查詢可用於寫入和追加資料以建立新資料集，並且通常在您具有依賴關係時使用。
+
+>[!IMPORTANT]
+>
+>當前僅可通過 [!DNL Query Service] API。 請參閱文檔 [有關通過API計畫查詢的完整說明](../api/scheduled-queries.md)。
 
 該表提供了塊主要部分的細目：執行和異常處理。 這些節由關鍵字定義 `BEGIN`。 `END`, `EXCEPTION`。
 

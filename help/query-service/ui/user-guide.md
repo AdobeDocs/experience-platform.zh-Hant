@@ -5,9 +5,9 @@ title: 查詢編輯器UI指南
 topic-legacy: query editor
 description: 查詢編輯器是Adobe Experience Platform查詢服務提供的互動式工具，允許您在Experience Platform用戶介面中編寫、驗證和運行客戶體驗資料查詢。 查詢編輯器支援為分析和資料探索開發查詢，並允許您為開發目的運行互動式查詢以及非互動式查詢以填充Experience Platform中的資料集。
 exl-id: d7732244-0372-467d-84e2-5308f42c5d51
-source-git-commit: 5e0db96b833cabd0330b1073a2ab14d4528c68b4
+source-git-commit: aa61cb696d647c5f039283ce5926d5fa1e901a13
 workflow-type: tm+mt
-source-wordcount: '1572'
+source-wordcount: '1599'
 ht-degree: 1%
 
 ---
@@ -18,25 +18,25 @@ ht-degree: 1%
 
 有關的概念和功能的詳細資訊 [!DNL Query Service]，請參見 [查詢服務概述](../home.md)。 瞭解有關如何在上導航查詢服務用戶介面的詳細資訊 [!DNL Platform]，請參見 [查詢服務UI概述](./overview.md)。
 
-## 快速入門
+## 快速入門 {#getting-started}
 
 [!DNL Query Editor] 通過連接到 [!DNL Query Service]，並且查詢僅在此連接處於活動狀態時運行。
 
-### 連接到 [!DNL Query Service]
+### 連接到 [!DNL Query Service] {#connecting-to-query-service}
 
-[!DNL Query Editor] 初始化和連接需要幾秒鐘 [!DNL Query Service] 的子菜單。 控制台會告訴您何時連接，如下所示。 如果嘗試在編輯器連接之前運行查詢，則會延遲執行，直到連接完成。
+[!DNL Query Editor] 初始化和連接需要幾秒鐘 [!DNL Query Service] 的子菜單。 控制台將告訴您何時連接，如下所示。 如果嘗試在編輯器連接之前運行查詢，則會延遲執行，直到連接完成。
 
 ![影像](../images/ui/query-editor/connect.png)
 
-### 查詢的運行方式 [!DNL Query Editor]
+### 查詢的運行方式 [!DNL Query Editor] {#run-a-query}
 
 從執行的查詢 [!DNL Query Editor] 交互運行。 這意味著，如果關閉瀏覽器或離開瀏覽器，則查詢將被取消。 對於通過查詢輸出生成資料集而進行的查詢，也是如此。
 
-## 查詢創作使用 [!DNL Query Editor]
+## 查詢創作使用 [!DNL Query Editor] {#query-authoring}
 
-使用 [!DNL Query Editor]，您可以編寫、執行和保存客戶體驗資料查詢。 執行的所有查詢 [!DNL Query Editor]或已保存，可供組織中有權訪問 [!DNL Query Service]。
+使用 [!DNL Query Editor]，您可以編寫、執行和保存客戶體驗資料查詢。 執行或保存的所有查詢 [!DNL Query Editor] 可供組織中的所有用戶使用 [!DNL Query Service]。
 
-### 存取 [!DNL Query Editor]
+### 存取 [!DNL Query Editor] {#accessing-query-editor}
 
 在 [!DNL Experience Platform] UI，選擇 **[!UICONTROL 查詢]** 的子菜單。 [!DNL Query Service] 工作區。 下一步，選擇 **[!UICONTROL 建立查詢]** 在螢幕右上角開始寫入查詢。 此連結可從中的任何頁面獲得 [!DNL Query Service] 工作區。
 
@@ -50,7 +50,7 @@ ht-degree: 1%
 
 為將開發時間減到最短，建議您開發對返回的行具有限制的查詢。 例如 `SELECT fields FROM table WHERE conditions LIMIT number_of_rows`。驗證查詢是否生成了預期輸出後，請刪除限制並使用 `CREATE TABLE tablename AS SELECT` 生成帶輸出的資料集。
 
-### 將工具寫入 [!DNL Query Editor]
+### 將工具寫入 [!DNL Query Editor] {#writing-tools}
 
 - **自動語法突出顯示：** 使讀取和組織SQL變得更容易。
 
@@ -64,7 +64,7 @@ ht-degree: 1%
 
 ![影像](../images/ui/query-editor/tables-auto.png)
 
-### 錯誤檢測
+### 錯誤檢測 {#error-detection}
 
 [!DNL Query Editor] 在編寫查詢時自動驗證該查詢，提供通用SQL驗證和特定執行驗證。 如果查詢下方顯示紅色下划線（如下圖所示），則表示查詢內有錯誤。
 
@@ -74,7 +74,7 @@ ht-degree: 1%
 
 ![影像](../images/ui/query-editor/linting-error.png)
 
-### 查詢詳細資訊
+### 查詢詳細資訊 {#query-details}
 
 在中查看查詢時 [!DNL Query Editor]，也請參見Wiki頁。 **[!UICONTROL 查詢詳細資訊]** 面板提供了管理選定查詢的工具。
 
@@ -86,9 +86,9 @@ ht-degree: 1%
 
 ### 計畫查詢 {#scheduled-queries}
 
->[!NOTE]
+>[!IMPORTANT]
 >
-> 您只能向已建立、保存和運行的查詢添加計畫。 此外，您 **不** 能夠向參數化查詢添加計畫。
+>以下是使用查詢編輯器時計畫查詢的限制清單。 它們不適用於 [!DNL Query Service] API:<br/>您只能向已建立、保存和運行的查詢添加計畫。<br/>你 **不能** 向參數化查詢添加計畫。<br/>計畫查詢 **不能** 包含匿名塊。
 
 要向查詢添加計畫，請選擇 **[!UICONTROL 添加計畫]**。
 
@@ -114,15 +114,15 @@ ht-degree: 1%
 
 確認所有這些詳細資訊後，選擇 **[!UICONTROL 保存]** 的子菜單。
 
-此時將重新顯示查詢詳細資料頁，並現在顯示新建立的調度的詳細資料，包括調度ID、調度本身和調度的輸出資料集。 您可以使用計畫ID查找有關計畫查詢本身運行的詳細資訊。 要瞭解更多資訊，請閱讀 [計畫查詢運行終結點指南](../api/runs-scheduled-queries.md)。
+此時將重新顯示查詢詳細資料頁，並現在顯示新建立的調度的詳細資訊，包括調度ID、調度本身和調度的輸出資料集。 您可以使用計畫ID查找有關計畫查詢本身運行的詳細資訊。 要瞭解更多資訊，請閱讀 [計畫查詢運行終結點指南](../api/runs-scheduled-queries.md)。
 
 >[!NOTE]
 >
-> 您只能計畫 **一個** 使用UI查詢模板。 如果要向查詢模板添加其他計畫，則需要使用API。 如果已使用API添加計畫，則 **不** 使用UI添加其他計畫。 如果已將多個計畫附加到查詢模板，則只顯示最舊的計畫。 要瞭解如何使用API添加計畫，請閱讀 [計畫查詢終結點指南](../api/scheduled-queries.md)。
+> 您只能計畫 **一個** 使用UI查詢模板。 如果要向查詢模板添加其他計畫，則需要使用API。 如果已使用API添加計畫，則 **不** 能夠使用UI添加其他計畫。 如果已將多個計畫附加到查詢模板，則只顯示最舊的計畫。 要瞭解如何使用API添加計畫，請閱讀 [計畫查詢終結點指南](../api/scheduled-queries.md)。
 >
 > 此外，如果要確保您所查看的計畫具有最新狀態，則應刷新頁面。
 
-#### 刪除計畫
+#### 刪除計畫 {#delete-schedule}
 
 通過選擇 **[!UICONTROL 刪除計畫]**。
 
@@ -132,11 +132,11 @@ ht-degree: 1%
 >
 > 如果要刪除查詢的計畫，必須先禁用該計畫。
 
-### 保存查詢
+### 保存查詢 {#saving-queries}
 
 [!DNL Query Editor] 提供了保存函式，允許您保存查詢並稍後處理該查詢。 要保存查詢，請選擇 **[!UICONTROL 保存]** 在 [!DNL Query Editor]。 在保存查詢之前，必須使用 **[!UICONTROL 查詢詳細資訊]** 的子菜單。
 
-### 如何查找以前的查詢
+### 如何查找以前的查詢 {#previous-queries}
 
 從執行的所有查詢 [!DNL Query Editor] 在日誌表中捕獲。 可以在 **[!UICONTROL 日誌]** 頁籤，查找查詢執行。 保存的查詢列在 **[!UICONTROL 瀏覽]** 頁籤。
 
@@ -146,11 +146,11 @@ ht-degree: 1%
 >
 >未執行的查詢不由日誌保存。 為使查詢在 [!DNL Query Service]，必須運行或保存 [!DNL Query Editor]。
 
-## 使用查詢編輯器執行查詢
+## 使用查詢編輯器執行查詢 {#executing-queries}
 
 在中運行查詢 [!DNL Query Editor]，可以在編輯器中輸入SQL或從 **[!UICONTROL 日誌]** 或 **[!UICONTROL 瀏覽]** ，然後選擇 **播放**。 查詢執行的狀態顯示在 **[!UICONTROL 控制台]** 的子菜單，並在 **[!UICONTROL 結果]** 頁籤。
 
-### 控制台
+### 控制台 {#console}
 
 控制台提供有關 [!DNL Query Service]。 控制台顯示與 [!DNL Query Service]、正在執行的查詢操作以及這些查詢產生的任何錯誤消息。
 
@@ -160,13 +160,13 @@ ht-degree: 1%
 >
 >控制台僅顯示執行查詢所導致的錯誤。 在執行查詢之前，它不顯示查詢驗證錯誤。
 
-### 查詢結果
+### 查詢結果 {#query-results}
 
 查詢完成後，結果將顯示在 **[!UICONTROL 結果]** 頁籤 **[!UICONTROL 控制台]** 頁籤。 此視圖顯示查詢的表格輸出，最多顯示100行。 此視圖允許您驗證查詢是否生成了預期的輸出。 要使用查詢生成資料集，請刪除返回的行限制，然後使用 `CREATE TABLE tablename AS SELECT` 生成帶輸出的資料集。 查看 [生成資料集教程](./create-datasets.md) 有關如何從查詢結果生成資料集的說明 [!DNL Query Editor]。
 
 ![影像](../images/ui/query-editor/query-results.png)
 
-## 運行查詢 [!DNL Query Service] 教程視頻
+## 運行查詢 [!DNL Query Service] 教程視頻 {#query-tutorial-video}
 
 以下視頻顯示如何在Adobe Experience Platform介面和PSQL客戶端中運行查詢。 此外，還演示了在XDM對象中使用單個屬性、使用Adobe定義函式以及使用CREATE TABLE AS SELECT(CTAS)。
 
