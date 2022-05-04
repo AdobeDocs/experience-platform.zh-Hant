@@ -1,117 +1,136 @@
 ---
-keywords: Experience Platform；設定檔；區段；區段；使用者介面；UI；自訂；區段控制面板；控制面板
-title: 區段控制面板
-description: 'Adobe Experience Platform提供控制面板，供您檢視貴組織已建立區段的重要資訊。 '
+keywords: Experience Platform；配置檔案；段；段；分段；用戶介面；UI；自定義；段儀表板；儀表板
+title: 段操控板
+description: 'Adobe Experience Platform提供了一個控制板，您可以通過該控制板查看有關您的組織建立的段的重要資訊。 '
 type: Documentation
 exl-id: de5e07bc-2c44-416e-99db-7607059117cb
-source-git-commit: 2842344f4b17d76bf1c3313500e691357df31ebc
+source-git-commit: b4cd7bc0d8c038346aacdda7c4c9def12864065c
 workflow-type: tm+mt
-source-wordcount: '1047'
+source-wordcount: '1232'
 ht-degree: 0%
 
 ---
 
-# 區段控制面板 {#segment-dashboard}
+# 段操控板 {#segment-dashboard}
 
-Adobe Experience Platform使用者介面(UI)提供控制面板，讓您透過控制面板檢視每日快照擷取之區段的重要資訊。 本指南概述如何存取和使用UI中的區段控制面板，並提供控制面板中所顯示視覺效果的詳細資訊。
+Adobe Experience Platform用戶介面(UI)提供了一個儀表板，您可以通過該儀表板查看有關資料段的重要資訊，這些資訊在每日快照期間捕獲。 本指南概述了如何訪問和使用UI中的段儀表板，並提供了有關儀表板中顯示的可視化效果的詳細資訊。
 
-如需Platform使用者介面中所有Adobe Experience Platform區段服務功能的概觀，請造訪 [區段服務UI指南](../../segmentation/ui/overview.md).
+有關平台用戶介面中Adobe Experience Platform分段服務的所有功能的概述，請訪問 [分段服務UI指南](../../segmentation/ui/overview.md)。
 
-## 區段控制面板資料
+## 段儀表板資料
 
-區段控制面板會顯示您的組織在「設定檔」存放區內Experience Platform的屬性（記錄）資料快照。 快照不包含任何事件（時間系列）資料。
+段控制板顯示您的組織在「配置檔案」儲存中Experience Platform的屬性（記錄）資料的快照。 快照不包括任何事件（時間系列）資料。
 
-快照中的屬性資料與建立快照時在特定時間點顯示的資料完全相同。 換句話說，快照不是資料的近似值或樣本，而且區段控制面板不會即時更新。
-
->[!NOTE]
->
->自拍攝快照以來對資料所做的任何更改或更新都不會反映在儀表板中，直到拍攝下一個快照。
-
-## 探索區段控制面板
-
-導覽至 [!UICONTROL 區段] 平台UI中的控制面板，請選取 **[!UICONTROL 區段]** 在左側邊欄中，選取 **[!UICONTROL 概述]** 標籤來顯示控制面板。
+快照中的屬性資料與拍攝快照時在特定時間點顯示的資料完全相同。 換句話說，快照不是資料的近似值或示例，而且段儀表板不會即時更新。
 
 >[!NOTE]
 >
->如果您的組織剛接觸Platform，且尚未建立作用中的設定檔資料集或合併原則，請 [!UICONTROL 區段] 控制面板未顯示。 反之， [!UICONTROL 概述] 索引標籤會顯示可協助您開始使用區段的連結和檔案。
+>自拍攝快照以來對資料所做的任何更改或更新不會反映在儀表板中，直到拍攝下一個快照。
+
+## 瀏覽段儀表板
+
+導航到 [!UICONTROL 段] 平台UI中的儀表板，選擇 **[!UICONTROL 段]** 在左滑軌中，選擇 **[!UICONTROL 概述]** 頁籤。
+
+>[!NOTE]
+>
+>如果您的組織是新加入平台的，並且尚未建立活動的配置檔案資料集或合併策略， [!UICONTROL 段] 儀表板不可見。 相反， [!UICONTROL 概述] 頁籤顯示幫助您開始分段的連結和文檔。
 
 ![](../images/segments/dashboard-overview.png)
 
-### 修改 [!UICONTROL 區段] 儀表板
+### 修改 [!UICONTROL 段] 儀表板
 
-您可以修改 [!UICONTROL 區段] 控制面板，選取 **[!UICONTROL 修改控制面板]**. 這可讓您從控制面板移動、新增和移除小工具，以及存取 **[!UICONTROL 介面工具集程式庫]** 探索可用的介面工具集，並為貴組織建立自訂介面工具集。
+可修改 [!UICONTROL 段] 通過選擇 **[!UICONTROL 修改儀表板]**。 這使您能夠從儀表板中移動、添加和刪除小部件，以及訪問 **[!UICONTROL 小部件庫]** 瀏覽可用小部件並為您的組織建立自定義小部件。
 
-請參閱 [修改控制面板](../customize/modify.md) 和 [介面工具集程式庫概述](../customize/widget-library.md) 檔案以深入了解。
+請參閱 [修改儀表板](../customize/modify.md) 和 [小部件庫概述](../customize/widget-library.md) 文檔以瞭解詳細資訊。
 
-## 選取區段
+## 選擇段
 
-控制面板會自動選取要顯示的區段，但您可以使用下拉式功能表或區段選取器來變更區段。
+操控板會自動選擇要顯示的段，但是，您可以使用下拉菜單或段選擇器更改段。
 
-若要選擇不同的區段，請選取區段名稱旁的下拉式清單，或使用區段選取器開啟區段選取對話方塊。
+要選擇其他段，請選擇段名稱旁邊的下拉清單或使用段選擇器開啟段選擇對話框。
 
 ![](../images/segments/change-segment.png)
 
 ![](../images/segments/select-segment-dialog.png)
 
-## Widget和量度
+## 小部件和度量
 
-區段控制面板由Widget組成，Widget是唯讀量度，提供與您所選區段相關的重要資訊。
+段控制板由小部件組成，這些部件是只讀度量，提供有關所選段的重要資訊。
 
-介面工具集上的「上次更新」日期和時間會顯示資料的最後快照拍攝時間。 快照的日期和時間以UTC提供；不在個別使用者或IMS組織的時區。
+小部件上的「上次更新」日期和時間顯示了上次拍攝資料快照的時間。 快照的日期和時間以UTC提供；它不在單個用戶或IMS組織的時區。
 
 ![](../images/segments/widget-timestamp.png)
 
-## 標準介面工具集
+## 標準小部件
 
-Adobe提供多個標準Widget，您可用來視覺化與區段相關的不同量度。 您也可以使用 [!UICONTROL 介面工具集程式庫]. 若要進一步了解建立自訂Widget，請先閱讀 [介面工具集程式庫概述](../customize/widget-library.md).
+Adobe提供了多個標準小部件，您可以使用這些小部件來可視化與段相關的不同度量。 您也可以使用 [!UICONTROL 小部件庫]。 要瞭解有關建立自定義小部件的詳細資訊，請首先閱讀 [小部件庫概述](../customize/widget-library.md)。
 
-若要進一步了解每個可用的標準介面工具集，請從下列清單中選取介面工具集的名稱：
+要瞭解有關每個可用標準小部件的詳細資訊，請從以下清單中選擇小部件的名稱：
 
-* [[!UICONTROL 對象大小]](#audience-size)
-* [[!UICONTROL 對象大小趨勢]](#audience-size-trend)
-* [[!UICONTROL 身分重疊]](#identity-overlap)
-* [[!UICONTROL 依身分設定檔]](#profiles-by-identity)
+* [[!UICONTROL 受眾大小]](#audience-size)
+* [[!UICONTROL 身份重疊]](#identity-overlap)
+* [[!UICONTROL 按身份顯示的配置檔案]](#profiles-by-identity)
+* [[!UICONTROL 受眾激活順序]](#audience-activation-order)
+* [[!UICONTROL 受眾規模趨勢]](#audience-size-trend)
+* [[!UICONTROL 受眾大小變化趨勢]](#audience-size-change-trend)
+* [[!UICONTROL 按身份分類的受眾規模趨勢]](#audience-size-trend-by-identity)
 
-### [!UICONTROL 對象大小] {#audience-size}
+### [!UICONTROL 受眾大小] {#audience-size}
 
-此 **[!UICONTROL 對象大小]** 介面工具集會顯示拍攝快照時，所選區段內合併的設定檔總數。 此數字是將區段合併原則套用至您的設定檔資料的結果，以便將設定檔片段合併在一起，為區段中的每個個人形成單一設定檔。
+的 **[!UICONTROL 受眾大小]** 構件顯示拍攝快照時選定段內合併的配置檔案總數。 此數字是將段合併策略應用於配置檔案資料的結果，以便將配置檔案片段合併到一起，為段中的每個個體形成單個配置檔案。
 
-如需片段和已合併設定檔的詳細資訊，請先閱讀 [即時客戶個人檔案概觀](../../profile/home.md).
+有關碎片和合併配置檔案的詳細資訊，請首先閱讀 [即時客戶概要資訊概述](../../profile/home.md)。
 
 ![](../images/segments/audience-size.png)
 
-### [!UICONTROL 對象大小趨勢] {#audience-size-trend}
+### [!UICONTROL 身份重疊] {#identity-overlap}
 
-此 **[!UICONTROL 對象大小趨勢]** 介面工具集提供過去30天、90天或12個月內，在每日快照期間擷取之區段中設定檔總數的相關資訊。 此介面工具集顯示隨著新設定檔符合區段或退出區段，區段大小可能會隨著時間而改變。
+的 **[!UICONTROL 身份重疊]** 小部件顯示一個Venn圖或設定圖，顯示包含多個標識的段中配置檔案的重疊。
 
-若要進一步了解區段評估，以及設定檔如何限定和退出區段，請參閱 [區段服務檔案](../../segmentation/home.md).
+使用小部件上的下拉菜單選擇要比較的標識後，會出現圓圈顯示每個標識的相對大小，其中包含兩個命名空間的配置檔案的數量由圓圈之間重疊的大小表示。
 
-![區段概述會顯示對象大小趨勢介面工具集。](../images/segments/audience-size-trend-captions.png)
+如果客戶在多個渠道上與您的品牌進行交互，則多個身份將與該個別客戶關聯，因此您的組織很可能具有多個配置檔案，其中包含來自多個身份的片段。
 
-此 **[!UICONTROL 對象大小趨勢]** 介面工具集提供 [!UICONTROL 字幕] 按鈕。 選擇 **[!UICONTROL 字幕]** 開啟自動字幕對話框。 機器學習模型通過分析圖表和區段資料自動生成字幕以描述關鍵趨勢和重要事件。
-
-![「對象大小」趨勢Widget的自動字幕對話方塊。](../images/segments/audience-size-trend-automatic-captions-dialog.png)
-
-### [!UICONTROL 身分重疊] {#identity-overlap}
-
-此 **[!UICONTROL 身分重疊]** 介面工具集會顯示Venn圖表或設定圖表，顯示您包含多個身分的區段中設定檔的重疊。
-
-使用介面工具集上的下拉式功能表來選取您要比較的身分後，圓圈會顯示每個身分的相對大小，包含兩個命名空間的設定檔數目會以圓圈之間重疊的大小來表示。
-
-如果客戶在多個管道上與您的品牌互動，則多個身分會與該個別客戶相關聯，因此您的組織可能會有多個設定檔，其中包含來自多個身分的片段。
-
-若要進一步了解身分，請造訪 [Adobe Experience Platform Identity Service檔案](../../identity-service/home.md).
+要瞭解有關身份的詳細資訊，請訪問 [Adobe Experience Platform身份服務文檔](../../identity-service/home.md)。
 
 ![](../images/segments/identity-overlap.png)
 
-### [!UICONTROL 依身分設定檔] {#profiles-by-identity}
+### [!UICONTROL 按身份顯示的配置檔案] {#profiles-by-identity}
 
-此 **[!UICONTROL 依身分設定檔]** 介面工具集會顯示您所選區段中所有合併設定檔的身分劃分。 依身分劃分的設定檔總數可能高於區段中的設定檔總數，因為一個設定檔可能有多個與其相關聯的身分。 換句話說，將每個身分顯示的值加總後，可能會超過區段中的總受眾規模，因為如果客戶在多個管道上與您的品牌互動，則多個身分可能會與該個別客戶相關聯。
+的 **[!UICONTROL 按身份顯示的配置檔案]** 小部件顯示選定段中所有合併的配置檔案的標識細分。 按標識列出的配置檔案總數可能高於段中的配置檔案總數，因為一個配置檔案可能具有與其關聯的多個標識。 換句話說，將每個身份顯示的值加在一起，可能總和會超過網段中的總受眾規模，因為如果客戶在多個渠道與您的品牌進行交互，則多個身份可能與該個別客戶相關聯。
 
-若要進一步了解身分，請造訪 [Adobe Experience Platform Identity Service檔案](../../identity-service/home.md).
+選擇 **[!UICONTROL 字幕]** 的子菜單。
 
-![](../images/segments/profiles-by-identity.png)
+![按標識標題顯示的配置檔案對話框。](../images/segments/profiles-by-identity.png)
+
+機器學習模型通過分析資料的總體分佈和關鍵維度自動生成資料洞察力。
+
+要瞭解有關身份的詳細資訊，請訪問 [Adobe Experience Platform身份服務文檔](../../identity-service/home.md)。
+
+### [!UICONTROL 受眾激活順序] {#audience-activation-order}
+
+的 [!UICONTROL 受眾激活順序] 小部件提供了一個三清單，其中列出了 [!UICONTROL 目標名稱]，也請參見Wiki頁。 [!UICONTROL 平台]，並激活 [!UICONTROL 日期] 觀眾中。 清單根據頻率從高到低排序，最多可容納10行。
+
+![受眾激活順序構件。](../images/segments/audience-activation-order.png)
+
+### [!UICONTROL 受眾規模趨勢] {#audience-size-trend}
+
+的 [!UICONTROL 受眾規模趨勢] 構件提供了符合以下條件的配置檔案總數的線形圖圖 **任何** 段定義。 觀眾人數趨勢可以在30天、90天和12個月期間進行可視化。 時間段從小部件的下拉菜單中選擇。 觀眾大小反映在y軸上，時間反映在x軸上。
+
+![「受眾大小」趨勢小部件。](../images/segments/audience-size-trend.png)
+
+### [!UICONTROL 受眾大小變化趨勢] {#audience-size-change-trend}
+
+此小部件提供線形圖圖，說明在最近的每日快照之間限定給定段的配置檔案總數之間的差異。 從「概述」(overview)下拉清單中選擇了用於分析的段。 趨勢分析期可以在30天、90天和12個月期間顯示。 時間段從小部件的下拉菜單中選擇。 觀眾大小反映在y軸上，時間反映在x軸上。
+
+![「受眾大小」更改趨勢小部件。](../images/segments/audience-size-change-trend.png)
+
+### [!UICONTROL 按身份分類的受眾規模趨勢] {#audience-size-trend-by-identity}
+
+此小部件根據從小部件下拉菜單中選擇的標識類型，說明特定段的受眾大小趨勢。 用於分析的段是從概述下拉清單中選擇的。 趨勢分析期可以在30天、90天和12個月期間顯示。 時間段從小部件的下拉菜單中選擇。
+
+![按身份小部件顯示的受眾大小趨勢。](../images/segments/audience-size-trend-by-identity.png)
 
 ## 後續步驟
 
-依照本檔案操作，您現在應該能夠找到區段控制面板，並選取要檢視的區段。 您也應了解可用介面工具集中顯示的量度。 若要進一步了解如何在Experience PlatformUI中使用區段，請參閱 [區段服務UI指南](../../segmentation/ui/overview.md).
+現在，通過遵循本文檔，您應該能夠找到段操控板並選擇要查看的段。 您還應瞭解可用小部件中顯示的度量。 要瞭解有關在Experience PlatformUI中使用段的詳細資訊，請參閱 [分段服務UI指南](../../segmentation/ui/overview.md)。

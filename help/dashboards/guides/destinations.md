@@ -4,9 +4,9 @@ title: 目標儀表板
 description: Adobe Experience Platform提供了一個儀表板，您可以通過該儀表板查看有關組織活動目標的重要資訊。
 type: Documentation
 exl-id: 6a34a796-24a1-450a-af39-60113928873e
-source-git-commit: bc449e066a6c9875dd667c5b1715ab3226228d85
+source-git-commit: b4cd7bc0d8c038346aacdda7c4c9def12864065c
 workflow-type: tm+mt
-source-wordcount: '1764'
+source-wordcount: '1962'
 ht-degree: 0%
 
 ---
@@ -39,11 +39,11 @@ Adobe Experience Platform用戶介面(UI)提供了一個儀表板，您可以通
 
 通過選擇 **[!UICONTROL 修改儀表板]**。 這使您能夠從儀表板中移動、添加和刪除小部件，以及訪問 **[!UICONTROL 小部件庫]** 瀏覽可用小部件並為您的組織建立自定義小部件。
 
-請參閱 [修改儀表板](../customize/modify.md) 和 [構件庫概述](../customize/widget-library.md) 文檔以瞭解詳細資訊。
+請參閱 [修改儀表板](../customize/modify.md) 和 [小部件庫概述](../customize/widget-library.md) 文檔以瞭解詳細資訊。
 
 ## 標準小部件
 
-Adobe提供了多個標準小部件，您可以使用這些部件來可視化與目標相關的不同度量，並評估可用於資料分析的段的完整性。 您也可以使用 [!UICONTROL 小部件庫]。 要瞭解有關建立自定義小部件的詳細資訊，請首先閱讀 [構件庫概述](../customize/widget-library.md)。
+Adobe提供了多個標準小部件，您可以使用這些部件來可視化與目標相關的不同度量，並評估可用於資料分析的段的完整性。 您也可以使用 [!UICONTROL 小部件庫]。 要瞭解有關建立自定義小部件的詳細資訊，請首先閱讀 [小部件庫概述](../customize/widget-library.md)。
 
 要瞭解有關每個可用標準小部件的詳細資訊，請從以下清單中選擇小部件的名稱：
 
@@ -56,6 +56,9 @@ Adobe提供了多個標準小部件，您可以使用這些部件來可視化與
 * [[!UICONTROL 按標識映射的段]](#mapped-segments-by-identity)
 * [[!UICONTROL 普通觀眾]](#common-audiences)
 * [[!UICONTROL 目標計數]](#destinations-count)
+* [[!UICONTROL 目標狀態]](#destination-status)
+* [[!UICONTROL 按目標平台列出的活動目標]](#active-destinations-by-destination-platform)
+* [[!UICONTROL 已激活所有目標的受眾]](#activated-audiences-across-all-destinations)
 
 ### [!UICONTROL 最常用的目標] {#most-used-destinations}
 
@@ -164,6 +167,28 @@ Adobe提供了多個標準小部件，您可以使用這些部件來可視化與
 在總計數以下，選擇 **[!UICONTROL 目標]** 導航至目標瀏覽頁籤。 此頁列出了您已建立與迄今為止的連接的所有目標。
 
 ![目標計數構件。](../images/destinations/destinations-count.png)
+
+### [!UICONTROL 目標狀態] {#destination-status}
+
+的 [!UICONTROL 目標狀態] 小部件將啟用的目標的總數顯示為單個度量，並使用環形圖來說明啟用和禁用的目標之間的比例差異。
+
+當游標懸停在圓形圖的相應部分上時，對話框中顯示啟用或禁用目標的單個計數。
+
+![目標狀態構件。](../images/destinations/destination-status.png)
+
+### [!UICONTROL 按目標平台列出的活動目標] {#active-destinations-by-destination-platform}
+
+該小部件提供一個兩清單，用於顯示活動目標平台的清單以及每個目標平台的活動目標總數。 目標平台清單從高到低排序。
+
+![按目標平台構件列出的活動目標。](../images/destinations/active-destinations-by-destination-platform.png)
+
+### [!UICONTROL 已激活所有目標的受眾] {#activated-audiences-across-all-destinations}
+
+的 [!UICONTROL 已激活所有目標的受眾] 構件提供單個度量中所有目標上激活的受眾總數。 此數字對於最近的快照是準確的。
+
+![所有目標小部件中的已激活受眾。](../images/destinations/activated-audiences-across-all-destinations.png)
+
+選擇 **[!UICONTROL 觀眾]** 導航至目標 [!UICONTROL 瀏覽] 頁籤。 此頁提供所有已啟用的目標和各種相關度量的清單。 請參閱文檔 [更多資訊 [!UICONTROL 瀏覽] 頁籤](../../destinations/ui/destinations-workspace.md#browse)。
 
 ## 後續步驟
 
