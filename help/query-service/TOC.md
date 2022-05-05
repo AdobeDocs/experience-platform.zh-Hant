@@ -1,13 +1,13 @@
 ---
 audience: user
-user-guide-title: Adobe Experience 平台查詢服務說明
+user-guide-title: Adobe Experience Platform 查詢服務說明
 breadcrumb-title: 查詢服務指南
 user-guide-description: 使用標準 SQL 在 平台 Data Lake 中查詢資料。
 feature: Queries
-source-git-commit: 15d835fcbcb6e34995f153c14d90fc937792eefc
+source-git-commit: b5c9dd966e14739e570105892becd39990d9acfb
 workflow-type: tm+mt
-source-wordcount: '153'
-ht-degree: 18%
+source-wordcount: '156'
+ht-degree: 17%
 
 ---
 
@@ -57,6 +57,7 @@ ht-degree: 18%
    - [PSQL](clients/psql.md)
    - [RStudio](clients/rstudio.md)
    - [塔布洛](clients/tableau.md)
+- [審核日誌指南](audit-log-guide.md)
 - [故障排除指南](troubleshooting-guide.md)
 - [API 參考資料](https://www.adobe.io/experience-platform-apis/references/query-service/)
 - [平台發行說明](https://www.adobe.com/go/platform-release-notes-en)
