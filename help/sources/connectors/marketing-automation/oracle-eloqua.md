@@ -4,9 +4,10 @@ solution: Experience Platform
 title: OracleEloqua連接器概述
 topic-legacy: overview
 description: 瞭解如何使用API或用戶介面將OracleEloca連接到Adobe Experience Platform。
-source-git-commit: a0c7ba20926d9f55a1f7818374fc6d2b5320820f
+exl-id: ebe16bff-4c89-4d45-9973-e5aa13b61a36
+source-git-commit: fa861e9740e05b4fcc4e8039bb288301d42b8357
 workflow-type: tm+mt
-source-wordcount: '235'
+source-wordcount: '227'
 ht-degree: 0%
 
 ---
@@ -26,7 +27,7 @@ Experience Platform支援從第三方營銷自動化系統接收資料。 對營
 ## 連接 [!DNL Oracle Eloqua] 到使用API的平台
 
 * [使用流服務API建立OracleEloqua基連接](../../tutorials/api/create/marketing-automation/oracle-eloqua.md)
-* [使用Flow Service API探索營銷自動化源的資料結構和內容](../../tutorials/api/explore/marketing-automation.md)
+* [使用流服務API瀏覽資料表](../../tutorials/api/explore/tabular.md)
 * [使用流服務API為市場營銷自動化源建立資料流](../../tutorials/api/collect/marketing-automation.md)
 
 ## 連接 [!DNL Oracle Eloqua] 到使用UI的平台

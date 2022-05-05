@@ -6,9 +6,9 @@ topic-legacy: overview
 type: Tutorial
 description: 瞭解如何使用流服務API將Adobe Experience Platform與Amazon紅移連接。
 exl-id: 2728ce08-05c9-4dca-af1d-d2d1b266c5d9
-source-git-commit: 2fb972b0ec8d1f679c6ce104a439265b5cc4d535
+source-git-commit: c0d750ef61ad2e295568cccabca5c52a758997c2
 workflow-type: tm+mt
-source-wordcount: '474'
+source-wordcount: '477'
 ht-degree: 1%
 
 ---
@@ -114,4 +114,7 @@ curl -X POST \
 
 ## 後續步驟
 
-按照本教程，您建立了 [!DNL Amazon Redshift] 使用 [!DNL Flow Service] API，並已獲取連接的唯一ID值。 在下一教程中，您可以在學習如何 [使用流服務API瀏覽資料庫或NoSQL系統](../../explore/database-nosql.md)。
+按照本教程，您建立了 [!DNL Amazon Redshift] 基本連接使用 [!DNL Flow Service] API。 您可以在以下教程中使用此基本連接ID:
+
+* [使用 [!DNL Flow Service] API](../../explore/tabular.md)
+* [建立資料流，使用 [!DNL Flow Service] API](../../collect/database-nosql.md)

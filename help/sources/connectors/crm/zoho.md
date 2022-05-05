@@ -5,9 +5,9 @@ title: Zoho CRM源連接器概述
 topic-legacy: overview
 description: 瞭解如何使用API或用戶介面將Zoho CRM連接到Adobe Experience Platform。
 exl-id: 4a010453-3d09-4a47-b04e-5789ae4af48c
-source-git-commit: 46b2fd6bc715bf1d8ccfeed576a2a2d193f92edd
+source-git-commit: fa861e9740e05b4fcc4e8039bb288301d42b8357
 workflow-type: tm+mt
-source-wordcount: '532'
+source-wordcount: '525'
 ht-degree: 0%
 
 ---
@@ -51,7 +51,7 @@ Experience Platform支援從第三方CRM系統接收資料。 對CRM提供程式
 以下文檔提供了有關如何連接的資訊 [!DNL Zoho CRM] 到使用API或用戶介面的平台：
 
 - [建立 [!DNL Zoho CRM] 使用流服務API的基連接](../../tutorials/api/create/crm/zoho.md)
-- [使用流服務API瀏覽CRM源的資料結構和內容](../../tutorials/api/explore/crm.md)
+- [使用流服務API瀏覽資料表](../../tutorials/api/explore/tabular.md)
 - [使用流服務API為CRM源建立資料流](../../tutorials/api/collect/crm.md)
 
 ## 連接 [!DNL Zoho CRM] 至 [!DNL Platform] 使用UI

@@ -3,9 +3,10 @@ keywords: Experience Platform；首頁；熱門主題；square
 solution: Experience Platform
 title: 方形源連接器概述
 description: 瞭解如何使用API或用戶介面將Square連接到Adobe Experience Platform。
-source-git-commit: cb2902455f965aced8d40859c36824710b9e695f
+exl-id: 18d33c5a-2955-4d0b-938c-52b6f72a444d
+source-git-commit: fa861e9740e05b4fcc4e8039bb288301d42b8357
 workflow-type: tm+mt
-source-wordcount: '225'
+source-wordcount: '218'
 ht-degree: 0%
 
 ---
@@ -25,7 +26,7 @@ Experience Platform支援從第三方支付應用程式接收資料。 支付提
 ## 連接 [!DNL Square] 到使用API的平台
 
 * [使用流服務API建立方形基連接](../../tutorials/api/create/payments/square.md)
-* [使用流服務API瀏覽付款源的資料結構和內容](../../tutorials/api/explore/payments.md)
+* [使用流服務API瀏覽資料表](../../tutorials/api/explore/tabular.md)
 * [使用流服務API為付款源建立資料流](../../tutorials/api/collect/payments.md)
 
 ## 連接 [!DNL Square] 到使用UI的平台

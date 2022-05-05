@@ -6,9 +6,9 @@ topic-legacy: overview
 type: Tutorial
 description: 瞭解如何使用流服務API將Adobe Experience Platform連接到Snowflake。
 exl-id: 0ef34d30-7b4c-43f5-8e2e-cde05da05aa5
-source-git-commit: ac7910c971fbedf3afebd87633f814d597260cae
+source-git-commit: 0ca900b77275851076a13dcc4b8b4a9995ddd0be
 workflow-type: tm+mt
-source-wordcount: '526'
+source-wordcount: '532'
 ht-degree: 1%
 
 ---
@@ -104,4 +104,7 @@ curl -X POST \
 }
 ```
 
-按照本教程，您建立了 [!DNL Snowflake] 使用 [!DNL Flow Service] API，並已獲取連接的唯一ID值。 在下一教程中，您可以在學習如何 [使用流服務API瀏覽資料庫](../../explore/database-nosql.md)。
+按照本教程，您建立了 [!DNL Snowflake] 基本連接使用 [!DNL Flow Service] API。 您可以在以下教程中使用此基本連接ID:
+
+* [使用 [!DNL Flow Service] API](../../explore/tabular.md)
+* [建立資料流，使用 [!DNL Flow Service] API](../../collect/database-nosql.md)

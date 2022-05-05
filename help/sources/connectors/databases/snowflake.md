@@ -5,9 +5,9 @@ title: Snowflake源連接器概述
 topic-legacy: overview
 description: 瞭解如何使用API或用戶介面將Snowflake連接到Adobe Experience Platform。
 exl-id: df066463-1ae6-4ecd-ae0e-fb291cec4bd5
-source-git-commit: 25cc0c5a1e6dcf01b82956ea1022663445315a27
+source-git-commit: fa861e9740e05b4fcc4e8039bb288301d42b8357
 workflow-type: tm+mt
-source-wordcount: '244'
+source-wordcount: '237'
 ht-degree: 0%
 
 ---
@@ -27,7 +27,7 @@ Experience Platform支援從第三方資料庫接收資料。 平台可以連接
 ## 連接 [!DNL Snowflake] 到使用API的平台
 
 - [使用流服務API建立Snowflake基連接](../../tutorials/api/create/databases/snowflake.md)
-- [使用流服務API瀏覽資料庫源的資料結構和內容](../../tutorials/api/explore/database-nosql.md)
+- [使用流服務API瀏覽資料表](../../tutorials/api/explore/tabular.md)
 - [使用流服務API為資料庫源建立資料流](../../tutorials/api/collect/database-nosql.md)
 
 ## 連接 [!DNL Snowflake] 到使用UI的平台

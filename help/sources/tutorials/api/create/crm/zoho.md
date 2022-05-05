@@ -6,9 +6,9 @@ topic-legacy: overview
 type: Tutorial
 description: 瞭解如何使用流服務API將Adobe Experience Platform連接到Zoho CRM。
 exl-id: 33995927-8f5e-44c5-b809-4db8706bbd34
-source-git-commit: 46b2fd6bc715bf1d8ccfeed576a2a2d193f92edd
+source-git-commit: 17055f76800deadacf435970a691cec79c9f1d17
 workflow-type: tm+mt
-source-wordcount: '649'
+source-wordcount: '654'
 ht-degree: 1%
 
 ---
@@ -123,4 +123,7 @@ curl -X POST \
 
 ## 後續步驟
 
-按照本教程，您建立了 [!DNL Zoho CRM] 基本連接使用 [!DNL Flow Service] API，並已獲取連接的唯一ID值。 在學習如何 [使用流服務API瀏覽CRM系統](../../explore/crm.md)。
+按照本教程，您建立了 [!DNL Zoho] 基本連接使用 [!DNL Flow Service] API。 您可以在以下教程中使用此基本連接ID:
+
+* [使用 [!DNL Flow Service] API](../../explore/tabular.md)
+* [建立資料流，使用 [!DNL Flow Service] API](../../collect/crm.md)

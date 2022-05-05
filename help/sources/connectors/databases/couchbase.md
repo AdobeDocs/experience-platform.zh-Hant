@@ -3,36 +3,36 @@ keywords: Experience Platform；首頁；熱門主題；couchbase;Couchbase
 solution: Experience Platform
 title: Couchbase源連接器概述
 topic-legacy: overview
-description: 了解如何使用API或使用者介面將Couchbase連線至Adobe Experience Platform。
+description: 瞭解如何使用API或用戶介面將Couchbase連接到Adobe Experience Platform。
 exl-id: 4b1cc352-3b1a-4015-baee-b1d42c15a400
-source-git-commit: 5821f9304a37c1a03d17f0113d09548799662a2e
+source-git-commit: fa861e9740e05b4fcc4e8039bb288301d42b8357
 workflow-type: tm+mt
-source-wordcount: '216'
+source-wordcount: '209'
 ht-degree: 0%
 
 ---
 
-# (Beta)[!DNL Couchbase]連接器
+# (Beta) [!DNL Couchbase] 連接器
 
 >[!NOTE]
 >
->[!DNL Couchbase]連接器為測試版。 有關使用測試版標籤連接器的詳細資訊，請參閱[來源概述](../../home.md#terms-and-conditions)。
+>的 [!DNL Couchbase] 連接器位於beta中。 查看 [源概述](../../home.md#terms-and-conditions) 的子菜單。
 
-Adobe Experience Platform為[!DNL Microsoft]、MySQL和[!DNL Azure]等資料庫提供程式提供本機連接，允許您從這些系統中帶來資料。 支援不同類型的第三方資料庫，包括關係、 NoSQL或資料倉庫。 對資料庫提供程式的支援包括[!DNL Couchbase]。
+Adobe Experience Platform提供資料庫提供商(如 [!DNL Microsoft]、 MySQL和 [!DNL Azure]，允許您從這些系統中獲取資料。 支援不同類型的第三方資料庫，包括關係型、NoSQL或資料倉庫。 支援資料庫提供程式包括 [!DNL Couchbase]。
 
-## IP位址允許清單
+## IP地址允許清單
 
-使用來源連接器前，必須將IP位址清單新增至允許清單。 若未將您地區專屬的IP位址新增至允許清單，在使用來源時可能會導致錯誤或效能不佳。 如需詳細資訊，請參閱[IP位址允許清單](../../ip-address-allow-list.md)頁面。
+在使用源連接器之前，必須將IP地址清單添加到允許清單。 如果無法將特定於區域的IP地址添加到允許清單，則在使用源時可能會導致錯誤或效能不佳。 查看 [IP地址允許清單](../../ip-address-allow-list.md) 的子菜單。
 
-以下檔案提供如何使用API或使用者介面將[!DNL Couchbase]連線至[!DNL Platform]的資訊：
+以下文檔提供了有關如何連接的資訊 [!DNL Couchbase] 至 [!DNL Platform] 使用API或用戶介面：
 
-## 使用API將[!DNL Couchbase]連線至[!DNL Platform]
+## 連接 [!DNL Couchbase] 至 [!DNL Platform] 使用API
 
 - [使用流服務API建立Couchbase基連接](../../tutorials/api/create/databases/couchbase.md)
-- [使用流服務API探索資料庫源的資料結構和內容](../../tutorials/api/explore/database-nosql.md)
+- [使用流服務API瀏覽資料表](../../tutorials/api/explore/tabular.md)
 - [使用流服務API為資料庫源建立資料流](../../tutorials/api/collect/database-nosql.md)
 
-## 使用UI將[!DNL Couchbase]連線至[!DNL Platform]
+## 連接 [!DNL Couchbase] 至 [!DNL Platform] 使用UI
 
-- [在UI中建立Couchbase來源連線](../../tutorials/ui/create/databases/couchbase.md)
+- [在UI中建立Couchbase源連接](../../tutorials/ui/create/databases/couchbase.md)
 - [在UI中為資料庫源連接建立資料流](../../tutorials/ui/dataflow/databases.md)

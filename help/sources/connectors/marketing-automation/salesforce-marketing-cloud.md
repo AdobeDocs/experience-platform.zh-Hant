@@ -5,9 +5,9 @@ title: SalesforceMarketing Cloud源概覽
 topic-legacy: overview
 description: 瞭解如何使用API或用戶介面將SalesforceMarketing Cloud連接到Adobe Experience Platform。
 exl-id: 2177d68c-0cef-4031-a0e7-8bf22ee2e70b
-source-git-commit: 6876ad592e4924dc884568899662dfa9c8eecc62
+source-git-commit: fa861e9740e05b4fcc4e8039bb288301d42b8357
 workflow-type: tm+mt
-source-wordcount: '359'
+source-wordcount: '351'
 ht-degree: 0%
 
 ---
@@ -42,7 +42,7 @@ Adobe Experience Platform允許從外部源接收資料，同時讓您能夠使�
 以下文檔提供了有關如何連接的資訊 [!DNL Salesforce Marketing Cloud] 到使用API的平台：
 
 * [使用流服務API建立SalesforceMarketing Cloud基連接](../../tutorials/api/create/marketing-automation/salesforce-marketing-cloud.md)
-* [使用Flow Service API探索營銷自動化源的資料結構和內容](../../tutorials/api/explore/marketing-automation.md)
+* [使用流服務API瀏覽資料表](../../tutorials/api/explore/tabular.md)
 * [使用流服務API為市場營銷自動化源建立資料流](../../tutorials/api/collect/marketing-automation.md)
 
 ## 連接 [!DNL Salesforce Marketing Cloud] 到使用UI的平台

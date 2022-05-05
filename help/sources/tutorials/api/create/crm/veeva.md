@@ -6,10 +6,10 @@ topic-legacy: overview
 type: Tutorial
 description: 瞭解如何使用流服務API將Adobe Experience Platform連接到Veeva CRM。
 exl-id: e1aea5a2-a247-43eb-8252-2e2ed96b82a1
-source-git-commit: 25cc0c5a1e6dcf01b82956ea1022663445315a27
+source-git-commit: 17055f76800deadacf435970a691cec79c9f1d17
 workflow-type: tm+mt
-source-wordcount: '497'
-ht-degree: 1%
+source-wordcount: '504'
+ht-degree: 2%
 
 ---
 
@@ -113,4 +113,9 @@ curl -X POST \
 
 ## 後續步驟
 
-按照本教程，您建立了 [!DNL Veeva CRM] 基本連接使用 [!DNL Flow Service] API，並已獲取連接的唯一ID值。 在學習如何 [使用流服務API瀏覽CRM系統](../../explore/crm.md)。
+## 後續步驟
+
+按照本教程，您建立了 [!DNL Veeva CRM] 基本連接使用 [!DNL Flow Service] API。 您可以在以下教程中使用此基本連接ID:
+
+* [使用 [!DNL Flow Service] API](../../explore/tabular.md)
+* [建立資料流，使用 [!DNL Flow Service] API](../../collect/crm.md)

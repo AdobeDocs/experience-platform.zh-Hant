@@ -1,60 +1,60 @@
 ---
-keywords: Experience Platform；首頁；熱門主題；bigquery;Google;google;Google;Google BigQuery
+keywords: Experience Platform；首頁；熱門主題；bigquery;Google;google;Google大查詢
 solution: Experience Platform
-title: 使用流程服務API建立Google BigQuery基本連線
+title: 使用流服務API建立GoogleBigQuery基連接
 topic-legacy: overview
 type: Tutorial
-description: 了解如何使用Flow Service API將Adobe Experience Platform連線至Google BigQuery。
+description: 瞭解如何使用流服務API將Adobe Experience Platform連接到GoogleBigQuery。
 exl-id: 51f90366-7a0e-49f1-bd57-b540fa1d15af
-source-git-commit: b4291b4f13918a1f85d73e0320c67dd2b71913fc
+source-git-commit: 0ca900b77275851076a13dcc4b8b4a9995ddd0be
 workflow-type: tm+mt
-source-wordcount: '522'
+source-wordcount: '525'
 ht-degree: 1%
 
 ---
 
-# 使用[!DNL Flow Service] API建立[!DNL Google BigQuery]基本連線
+# 建立 [!DNL Google BigQuery] 基本連接使用 [!DNL Flow Service] API
 
 >[!NOTE]
 >
->[!DNL Google BigQuery]連接器為測試版。 有關使用測試版標籤連接器的詳細資訊，請參閱[來源概述](../../../../home.md#terms-and-conditions)。
+>的 [!DNL Google BigQuery] 連接器位於beta中。 查看 [源概述](../../../../home.md#terms-and-conditions) 的子菜單。
 
-基本連線代表來源和Adobe Experience Platform之間已驗證的連線。
+基連接表示源和Adobe Experience Platform之間經過驗證的連接。
 
-本教學課程會逐步帶您了解使用[[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/)建立[!DNL Google BigQuery]基本連線（以下稱為「[!DNL BigQuery]」）的步驟。
+本教程將指導您完成建立基本連接的步驟 [!DNL Google BigQuery] (以下簡稱：[!DNL BigQuery]&quot;)使用 [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/)。
 
 ## 快速入門
 
-本指南需要妥善了解下列Adobe Experience Platform元件：
+本指南要求對Adobe Experience Platform的下列組成部分有工作上的理解：
 
-* [來源](../../../../home.md): [!DNL Experience Platform] 可讓您從各種來源擷取資料，同時使用服務來建構、加標籤及增強傳入 [!DNL Platform] 資料。
-* [沙箱](../../../../../sandboxes/home.md): [!DNL Experience Platform] 提供可將單一執行個體分割成個 [!DNL Platform] 別虛擬環境的虛擬沙箱，以協助開發及改進數位體驗應用程式。
+* [源](../../../../home.md): [!DNL Experience Platform] 允許從各種源接收資料，同時讓您能夠使用 [!DNL Platform] 服務。
+* [沙箱](../../../../../sandboxes/home.md): [!DNL Experience Platform] 提供虛擬沙箱，將單個沙箱 [!DNL Platform] 實例到獨立的虛擬環境，以幫助開發和發展數字型驗應用程式。
 
-以下各節提供您需要知道的其他資訊，以便使用[!DNL Flow Service] API成功連接到[!DNL BigQuery]。
+以下各節提供了要成功連接到所需的其他資訊 [!DNL BigQuery] 使用 [!DNL Flow Service] API。
 
 ### 收集所需憑據
 
-若要讓[!DNL Flow Service]將[!DNL BigQuery]連線至Platform，您必須提供下列OAuth 2.0驗證值：
+為了 [!DNL Flow Service] 連接 [!DNL BigQuery] 在平台中，必須提供以下OAuth 2.0驗證值：
 
 | 憑據 | 說明 |
 | ---------- | ----------- |
-| `project` | 要查詢的預設[!DNL BigQuery]項目的項目ID。 |
-| `clientID` | 用來產生重新整理Token的ID值。 |
-| `clientSecret` | 用於產生重新整理Token的密碼值。 |
-| `refreshToken` | 從[!DNL Google]獲取的刷新令牌，用於授權對[!DNL BigQuery]的訪問。 |
-| `connectionSpec.id` | 連接規範返回源的連接器屬性，包括與建立基連接和源連接相關的驗證規範。 [!DNL BigQuery]的連接規範ID為：`3c9b37f8-13a6-43d8-bad3-b863b941fedd`。 |
+| `project` | 預設項目ID [!DNL BigQuery] 要查詢的項目。 |
+| `clientID` | 用於生成刷新令牌的ID值。 |
+| `clientSecret` | 用於生成刷新令牌的密鑰值。 |
+| `refreshToken` | 從獲取的刷新令牌 [!DNL Google] 用於授權訪問 [!DNL BigQuery]。 |
+| `connectionSpec.id` | 連接規範返回源的連接器屬性，包括與建立基連接和源連接相關的驗證規範。 連接規範ID [!DNL BigQuery] 為： `3c9b37f8-13a6-43d8-bad3-b863b941fedd`。 |
 
-有關這些值的詳細資訊，請參閱此[[!DNL BigQuery] document](https://cloud.google.com/storage/docs/json_api/v1/how-tos/authorizing)。
+有關這些值的詳細資訊，請參閱 [[!DNL BigQuery] 文檔](https://cloud.google.com/storage/docs/json_api/v1/how-tos/authorizing)。
 
 ### 使用平台API
 
-如需如何成功呼叫Platform API的詳細資訊，請參閱[Platform API快速入門手冊](../../../../../landing/api-guide.md)。
+有關如何成功調用平台API的資訊，請參見上的指南 [平台API入門](../../../../../landing/api-guide.md)。
 
 ## 建立基本連接
 
-基本連接在源和平台之間保留資訊，包括源的驗證憑據、連接的當前狀態和唯一基本連接ID。 基本連線ID可讓您從來源探索和導覽檔案，並識別您要擷取的特定項目，包括其資料類型和格式的相關資訊。
+基本連接將保留源和平台之間的資訊，包括源的驗證憑據、連接的當前狀態和唯一的基本連接ID。 基本連接ID允許您從源中瀏覽和導航檔案，並標識要攝取的特定項目，包括有關其資料類型和格式的資訊。
 
-若要建立基本連線ID，請在提供[!DNL BigQuery]驗證憑證作為請求參數的一部分時，向`/connections`端點提出POST請求。
+要建立基本連接ID，請向 `/connections` 提供端點 [!DNL BigQuery] 身份驗證憑據作為請求參數的一部分。
 
 **API格式**
 
@@ -64,7 +64,7 @@ POST /connections
 
 **要求**
 
-以下請求為[!DNL BigQuery]建立基本連接：
+以下請求為 [!DNL BigQuery]:
 
 ```shell
 curl -X POST \
@@ -96,15 +96,15 @@ curl -X POST \
 
 | 屬性 | 說明 |
 | --------- | ----------- |
-| `auth.params.project` | 要查詢的預設[!DNL BigQuery]項目的項目ID。 反對。 |
-| `auth.params.clientId` | 用來產生重新整理Token的ID值。 |
-| `auth.params.clientSecret` | 用於產生重新整理Token的用戶端值。 |
-| `auth.params.refreshToken` | 從[!DNL Google]獲取的刷新令牌，用於授權對[!DNL BigQuery]的訪問。 |
-| `connectionSpec.id` | [!DNL Google BigQuery]連接規範ID:`3c9b37f8-13a6-43d8-bad3-b863b941fedd`。 |
+| `auth.params.project` | 預設項目ID [!DNL BigQuery] 要查詢的項目。 反對。 |
+| `auth.params.clientId` | 用於生成刷新令牌的ID值。 |
+| `auth.params.clientSecret` | 用於生成刷新令牌的客戶端值。 |
+| `auth.params.refreshToken` | 從獲取的刷新令牌 [!DNL Google] 用於授權訪問 [!DNL BigQuery]。 |
+| `connectionSpec.id` | 的 [!DNL Google BigQuery] 連接規範ID: `3c9b37f8-13a6-43d8-bad3-b863b941fedd`。 |
 
 **回應**
 
-成功的響應返回新建立連接的詳細資訊，包括其唯一標識符(`id`)。 在下一個教學課程中探索資料時需要此ID。
+成功的響應返回新建立的連接的詳細資訊，包括其唯一標識符(`id`)。 在下一教程中瀏覽資料時需要此ID。
 
 ```json
 {
@@ -115,4 +115,7 @@ curl -X POST \
 
 ## 後續步驟
 
-依照本教學課程，您已使用[!DNL Flow Service] API建立[!DNL BigQuery]連線，並取得連線的唯一ID值。 在學習如何使用流服務API](../../explore/database-nosql.md)來瀏覽資料庫或NoSQL系統時，您可以在下一個教程中使用此連接ID。[
+按照本教程，您建立了 [!DNL Google BigQuery] 基本連接使用 [!DNL Flow Service] API。 您可以在以下教程中使用此基本連接ID:
+
+* [使用 [!DNL Flow Service] API](../../explore/tabular.md)
+* [建立資料流，使用 [!DNL Flow Service] API](../../collect/database-nosql.md)

@@ -2,34 +2,34 @@
 keywords: Experience Platform；首頁；熱門主題；Paypal;paypal;PayPal
 solution: Experience Platform
 title: PayPal源連接器概述
-description: 了解如何使用API或使用者介面將PayPal連線至Adobe Experience Platform。
+description: 瞭解如何使用API或用戶介面將PayPal連接到Adobe Experience Platform。
 exl-id: c70a9b91-b883-4e58-9ec5-6fc9b2163efd
-source-git-commit: 6b6bd67e70267e81c144c37549b0dcba20534eb6
+source-git-commit: fa861e9740e05b4fcc4e8039bb288301d42b8357
 workflow-type: tm+mt
-source-wordcount: '227'
+source-wordcount: '220'
 ht-degree: 0%
 
 ---
 
 # [!DNL PayPal] 連接器
 
-Adobe Experience Platform可讓您從外部來源擷取資料，同時使用Platform服務來建構、加標籤及增強傳入資料。 您可以從多種來源(如Adobe應用程式、雲儲存、資料庫等)內嵌資料。
+Adobe Experience Platform允許從外部源接收資料，同時讓您能夠使用平台服務構建、標籤和增強傳入資料。 您可以從多種源(如Adobe應用程式、基於雲的儲存、資料庫和許多其他源)接收資料。
 
-Experience Platform支援從第三方支付應用程式擷取資料。 支援支付提供商包括[!DNL PayPal]。
+Experience Platform支援從第三方支付應用程式接收資料。 支付提供者支援包括 [!DNL PayPal]。
 
-## IP位址允許清單
+## IP地址允許清單
 
-使用來源連接器前，必須將IP位址清單新增至允許清單。 若未將您地區專屬的IP位址新增至允許清單，在使用來源時可能會導致錯誤或效能不佳。 如需詳細資訊，請參閱[IP位址允許清單](../../ip-address-allow-list.md)頁面。
+在使用源連接器之前，必須將IP地址清單添加到允許清單。 如果無法將特定於區域的IP地址添加到允許清單，則在使用源時可能會導致錯誤或效能不佳。 查看 [IP地址允許清單](../../ip-address-allow-list.md) 的子菜單。
 
-以下檔案提供如何使用API或使用者介面將[!DNL PayPal]連線至Platform的資訊：
+以下文檔提供了有關如何連接的資訊 [!DNL PayPal] 到使用API或用戶介面的平台：
 
-## 使用API將[!DNL PayPal]連線至平台
+## 連接 [!DNL PayPal] 到使用API的平台
 
-- [使用流量服務API建立PayPal基本連線](../../tutorials/api/create/payments/paypal.md)
-- [使用流量服務API探索支付來源的資料結構和內容](../../tutorials/api/explore/payments.md)
+- [使用流服務API建立PayPal基連接](../../tutorials/api/create/payments/paypal.md)
+- [使用流服務API瀏覽資料表](../../tutorials/api/explore/tabular.md)
 - [使用流服務API為付款源建立資料流](../../tutorials/api/collect/payments.md)
 
-## 使用UI將[!DNL PayPal]連線至Platform
+## 連接 [!DNL PayPal] 到使用UI的平台
 
-- [在UI中建立PayPal來源連線](../../tutorials/ui/create/payments/paypal.md)
+- [在UI中建立PayPal源連接](../../tutorials/ui/create/payments/paypal.md)
 - [在UI中為付款源連接建立資料流](../../tutorials/ui/dataflow/payments.md)
