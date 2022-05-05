@@ -6,9 +6,9 @@ topic-legacy: overview
 type: Tutorial
 description: 本教程介紹了從第三方CRM系統檢索資料並使用源連接器和API將其引入平台的步驟。
 exl-id: b07dd640-bce6-4699-9d2b-b7096746934a
-source-git-commit: fc719a4ec90c5150f129deec45da87df703ec4b5
+source-git-commit: 85af48f773d36eb00149b9fdec71a9c566a1bde5
 workflow-type: tm+mt
-source-wordcount: '1308'
+source-wordcount: '1329'
 ht-degree: 1%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->為了建立資料流，您必須已具有與平台上的以下任何CRM源的有效基連接ID:<ul><li>[[!DNL Microsoft Dynamics]](../create/crm/ms-dynamics.md)</li><li>[[!DNL Salesforce]](../create/crm/salesforce.md)</li><li>[[!DNL Veeva CRM]](../create/crm/veeva.md)</li><li>[[!DNL Zoho CRM]](../create/crm/zoho.md)</li></ul>
+>為了建立資料流，您必須已具有與CRM源的有效基連接ID。 如果您沒有此ID，請查看 [源概述](../../../home.md#customer-relationship-management) 的子目錄。
 
 ## 快速入門
 

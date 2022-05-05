@@ -6,9 +6,9 @@ topic-legacy: overview
 type: Tutorial
 description: 本教程介紹了使用源連接器和API從協定應用程式中檢索資料並將其插入平台的步驟。
 exl-id: e14e75c2-2a93-45d8-8056-f06075bd4b8d
-source-git-commit: fc719a4ec90c5150f129deec45da87df703ec4b5
+source-git-commit: 85af48f773d36eb00149b9fdec71a9c566a1bde5
 workflow-type: tm+mt
-source-wordcount: '1276'
+source-wordcount: '1293'
 ht-degree: 1%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->為了建立資料流，您必須已經具有平台上具有以下任何協定源的有效基本連接ID:<ul><li>[通用OData](../create/protocols/odata.md)</li><li>[通用REST](../create/protocols/generic-rest.md)</li></ul>
+>為了建立資料流，必須已具有有效的基連接ID和協定源。 如果您沒有此ID，請查看 [源概述](../../../home.md#protocols) 的子目錄。
 
 ## 快速入門
 

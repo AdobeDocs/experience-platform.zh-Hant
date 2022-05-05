@@ -6,9 +6,9 @@ topic-legacy: overview
 type: Tutorial
 description: 本教程介紹了從客戶成功系統檢索資料以及使用源連接器和API將資料導入平台的步驟。
 exl-id: 0fae04d0-164b-4113-a274-09677f4bbde5
-source-git-commit: fc719a4ec90c5150f129deec45da87df703ec4b5
+source-git-commit: 85af48f773d36eb00149b9fdec71a9c566a1bde5
 workflow-type: tm+mt
-source-wordcount: '1305'
+source-wordcount: '1327'
 ht-degree: 1%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->為了建立資料流，您必須已具有有效的基本連接ID，該ID與平台上以下客戶成功源中的任何一個：<ul><li>[[!DNL Salesforce Service Cloud]](../create/customer-success/salesforce-service-cloud.md)</li><li>[[!DNL ServiceNow]](../create/customer-success/servicenow.md)</li></ul>
+>為了建立資料流，您必須已具有與客戶成功源的有效基本連接ID。 如果您沒有此ID，請查看 [源概述](../../../home.md#customer-success) 獲取可以建立基本連接的客戶成功源清單。
 
 ## 快速入門
 
