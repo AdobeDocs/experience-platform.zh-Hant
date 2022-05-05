@@ -3,7 +3,7 @@ title: 核心事件轉發擴展概述
 description: 瞭解Adobe Experience Platform的核心事件轉發擴展。
 feature: Event Forwarding
 exl-id: b5ee4ccf-6fa5-4472-be04-782930f07e20
-source-git-commit: d41779c5897b748130b88d3886472c7908347389
+source-git-commit: 15e7245acef1fe13a09ed0e083033b3963c444f2
 workflow-type: tm+mt
 source-wordcount: '1724'
 ht-degree: 91%
@@ -43,16 +43,16 @@ getDataElementValue('productName')
 您也可以在自訂程式碼中使用 `ruleStash` 物件。
 
 ```javascript
-arc.ruleStash: Object<string, *>`
-```
-
-```javascript
 utils.logger.log(context.arc.ruleStash);
 ```
 
 `ruleStash` 是收集動作模組各個結果的物件。
 
 每個擴充功能都有專屬的命名空間。舉例來說，如果您的擴充功能名為 `send-beacon`，則 `send-beacon` 動作的所有結果都會儲存在 `ruleStash['send-beacon']` 命名空間。
+
+```javascript
+utils.logger.log(context.arc.ruleStash['adobe-cloud-connector']);
+```
 
 每個擴充功能的命名空間都是獨一無二，其開頭的值為 `undefined`。
 
