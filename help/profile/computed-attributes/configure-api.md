@@ -1,30 +1,30 @@
 ---
-keywords: Experience Platform；設定檔；即時客戶設定檔；疑難排解；API
+keywords: Experience Platform；配置；即時客戶配置；故障排除；API
 title: 如何配置計算屬性欄位
 topic-legacy: guide
 type: Documentation
-description: 計算屬性是用於將事件層級資料匯總到設定檔層級屬性的函式。 要配置計算屬性，首先需要標識將保存計算屬性值的欄位。 此欄位可使用Schema Registry API來建立，以定義將保存計算屬性欄位的架構和自定義欄位組。
+description: 計算屬性是用於將事件級資料聚合到配置檔案級屬性中的函式。 要配置計算屬性，首先需要標識將保存計算屬性值的欄位。 可以使用架構註冊表API建立此欄位，以定義將保存計算屬性欄位的架構和自定義欄位組。
 exl-id: 91c5d125-8ab5-4291-a974-48dd44c68a13
-source-git-commit: e4bf5bb77ac4186b24580329699d74d653310d93
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '736'
 ht-degree: 2%
 
 ---
 
-# (Alpha)使用結構註冊表API配置計算屬性欄位
+# (Alpha)使用架構註冊表API配置計算屬性欄位
 
 >[!IMPORTANT]
 >
->計算屬性功能當前位於Alpha中，不適用於所有用戶。 文件和功能可能會有所變更。
+>計算屬性功能當前位於Alpha中，並且不適用於所有用戶。 文件和功能可能會有所變更。
 
-要配置計算屬性，首先需要標識將保存計算屬性值的欄位。 此欄位可使用Schema Registry API建立，以定義將保存計算屬性欄位的架構和自定義架構欄位組。 建議您建立個別的「計算屬性」結構和欄位群組，讓您的組織可以新增任何要作為計算屬性的屬性。 這可讓您的組織將計算的屬性架構與用於資料擷取的其他架構徹底區隔。
+要配置計算屬性，首先需要標識將保存計算屬性值的欄位。 可以使用架構註冊表API建立此欄位，以定義將保存計算屬性欄位的架構和自定義架構欄位組。 建議最好建立單獨的「計算屬性」架構和欄位組，您的組織可以在其中添加任何要用作計算屬性的屬性。 這使您的組織能夠將計算的屬性架構與用於資料接收的其他架構完全分離。
 
-本檔案中的工作流程概述如何使用Schema Registry API來建立引用自訂欄位群組、啟用設定檔的「計算屬性」架構。 本文檔包含特定於計算屬性的示例代碼，但有關使用API定義欄位組和方案的詳細資訊，請參閱[方案註冊表API指南](../../xdm/api/overview.md)。
+本文檔中的工作流概述了如何使用架構註冊表API建立引用自定義欄位組的啟用配置檔案的「計算屬性」架構。 此文檔包含特定於計算屬性的示例代碼，但請參閱 [架構註冊API指南](../../xdm/api/overview.md) 有關使用API定義欄位組和方案的詳細資訊。
 
 ## 建立計算屬性欄位組
 
-若要使用架構註冊表API建立欄位組，請從向`/tenant/fieldgroups`端點提出POST請求並在請求正文中提供欄位組的詳細資訊開始。 有關使用架構註冊表API使用欄位組的詳細資訊，請參閱[欄位組API端點指南](../../xdm/api/field-groups.md)。
+要使用架構註冊表API建立欄位組，請首先向 `/tenant/fieldgroups` 端點，並提供請求正文中欄位組的詳細資訊。 有關使用架構註冊表API處理欄位組的詳細資訊，請參閱 [欄位組API終結點指南](../../xdm/api/field-groups.md)。
 
 **API格式**
 
@@ -39,7 +39,7 @@ curl -X POST \
   https://platform.adobe.io/data/foundation/schemaregistry/tenant/fieldgroups\
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -H 'content-type: application/json' \
   -d '{
@@ -79,12 +79,12 @@ curl -X POST \
 
 | 屬性 | 說明 |
 |---|---|
-| `title` | 您正在建立的欄位群組名稱。 |
-| `meta:intendedToExtend` | 可使用欄位群組的XDM類別。 |
+| `title` | 所建立的欄位組的名稱。 |
+| `meta:intendedToExtend` | 可使用欄位組的XDM類。 |
 
 **回應**
 
-成功的請求返回HTTP響應狀態201（已建立），其響應正文包含新建立的欄位組的詳細資訊，包括`$id`、`meta:altIt`和`version`。 這些值是只讀的，由架構註冊表指定。
+成功的請求返回HTTP響應狀態201（已建立），其響應主體包含新建立的欄位組的詳細資訊，包括 `$id`。 `meta:altIt`, `version`。 這些值是只讀的，由架構註冊表分配。
 
 ```json
 {
@@ -120,7 +120,7 @@ curl -X POST \
       "meta:xdmType": "object"
     }
   ],
-  "imsOrg": "{IMS_ORG}",
+  "imsOrg": "{ORG_ID}",
   "meta:extensible": true,
   "meta:abstract": true,
   "meta:intendedToExtend": [
@@ -146,9 +146,9 @@ curl -X POST \
 
 ## 使用其他計算屬性更新欄位組
 
-由於需要更多計算屬性，因此可以通過向`/tenant/fieldgroups`端點發出PUT請求來使用附加屬性更新計算屬性欄位組。 此請求需要您包含在路徑中建立之欄位群組的唯一ID，以及您要在內文中新增的所有新欄位。
+由於需要更多計算屬性，因此您可以通過向PUT發出請求來使用附加屬性更新計算屬性欄位組 `/tenant/fieldgroups` 端點。 此請求要求您包括在路徑中建立的欄位組的唯一ID，以及要在正文中添加的所有新欄位。
 
-有關使用架構註冊表API更新欄位組的詳細資訊，請參閱[欄位組API終結點指南](../../xdm/api/field-groups.md)。
+有關使用架構註冊表API更新欄位組的詳細資訊，請參閱 [欄位組API終結點指南](../../xdm/api/field-groups.md)。
 
 **API格式**
 
@@ -158,11 +158,11 @@ PUT /tenant/fieldgroups/{FIELD_GROUP_ID}
 
 **要求**
 
-此請求將添加與`purchaseSummary`資訊相關的新欄位。
+此請求添加與 `purchaseSummary` 的下界。
 
 >[!NOTE]
 >
->透過PUT請求更新欄位群組時，內文必須包含在POST請求中建立新欄位群組時所需的所有欄位。
+>通過PUT請求更新欄位組時，主體必須包括在POST請求中建立新欄位組時需要的所有欄位。
 
 ```shell
 curl -X PUT \
@@ -170,7 +170,7 @@ curl -X PUT \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '{
         "type": "object",
@@ -229,7 +229,7 @@ curl -X PUT \
 
 **回應**
 
-成功的回應會傳回更新欄位群組的詳細資訊。
+成功的響應將返回更新的欄位組的詳細資訊。
 
 ```json
 {
@@ -285,7 +285,7 @@ curl -X PUT \
       "meta:xdmType": "object"
     }
   ],
-  "imsOrg": "{IMS_ORG}",
+  "imsOrg": "{ORG_ID}",
   "meta:extensible": true,
   "meta:abstract": true,
   "meta:intendedToExtend": [
@@ -309,11 +309,11 @@ curl -X PUT \
 }
 ```
 
-## 建立啟用設定檔的結構
+## 建立啟用概要檔案的架構
 
-若要使用架構註冊表API建立架構，請從向`/tenant/schemas`端點提出POST請求並在請求正文中提供架構的詳細資訊開始。 還必須為[!DNL Profile]啟用架構，並作為架構類的聯合架構的一部分顯示。
+要使用架構註冊表API建立架構，請首先向 `/tenant/schemas` 終結點，並在請求正文中提供架構的詳細資訊。 還必須為 [!DNL Profile] 並作為架構類的聯合架構的一部分顯示。
 
-有關[!DNL Profile]啟用的架構和聯合架構的詳細資訊，請參閱[[!DNL Schema Registry] API指南](../../xdm/api/overview.md)和[架構構成基本檔案](../../xdm/schema/composition.md)。
+有關 [!DNL Profile]-enabled schemas和union schemas，請查看 [[!DNL Schema Registry] API指南](../../xdm/api/overview.md) 和 [架構組合基礎文檔](../../xdm/schema/composition.md)。
 
 **API格式**
 
@@ -323,7 +323,7 @@ POST /tenants/schemas
 
 **要求**
 
-以下請求將建立一個新架構，該架構引用本文檔中先前建立的`computedAttributesFieldGroup`（使用其唯一ID），並為配置檔案聯合架構啟用（使用`meta:immutableTags`陣列）。 有關如何使用架構註冊表API建立架構的詳細說明，請參閱[架構API端點指南](../../xdm/api/schemas.md)。
+後續請求將建立引用 `computedAttributesFieldGroup` 在本文檔早期建立（使用其唯一ID），並為配置檔案聯合架構啟用(使用 `meta:immutableTags` )。 有關如何使用架構註冊表API建立架構的詳細說明，請參閱 [架構API終結點指南](../../xdm/api/schemas.md)。
 
 ```shell
 curl -X POST \
@@ -331,7 +331,7 @@ curl -X POST \
   -H 'Authorization: Bearer {ACCESS_TOKEN' \
   -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '{
         "type": "object",
@@ -366,7 +366,7 @@ curl -X POST \
 
 **回應**
 
-成功的回應會傳回HTTP狀態201（已建立），以及包含新建立架構詳細資訊的裝載，包括`$id`、`meta:altId`和`version`。 這些值是只讀的，由架構註冊表指定。
+成功的響應返回HTTP狀態201（已建立）和包含新建立架構的詳細資訊的負載，包括 `$id`。 `meta:altId`, `version`。 這些值是只讀的，由架構註冊表分配。
 
 ```json
 {
@@ -400,7 +400,7 @@ curl -X POST \
     "https://ns.adobe.com/xdm/context/identitymap",
     "https://ns.adobe.com/{TENANT_ID}/mixins/860ad1b1b35e0a88ecf6df92ebce08335c180313d5805352"
   ],
-  "imsOrg": "{IMS_ORG}",
+  "imsOrg": "{ORG_ID}",
   "meta:extensible": false,
   "meta:abstract": false,
   "meta:extends": [
@@ -434,4 +434,4 @@ curl -X POST \
 
 ## 後續步驟
 
-現在您已建立將計算屬性儲存到的架構和欄位組，可以使用`/computedattributes` API端點建立計算屬性。 有關在API中建立計算屬性的詳細步驟，請遵循[計算屬性API終結點指南](ca-api.md)中提供的步驟。
+既然您已建立了將計算屬性儲存到其中的架構和欄位組，則可以使用 `/computedattributes` API終結點。 有關在API中建立計算屬性的詳細步驟，請按照中提供的步驟操作 [計算屬性API終結點指南](ca-api.md)。

@@ -1,10 +1,10 @@
 ---
 title: 資料衛生API(Alpha)
-description: 了解如何以程式設計方式修正或刪除客戶在Adobe Experience Platform中儲存的個人資料。
+description: 瞭解如何以寫程式方式更正或刪除客戶在Adobe Experience Platform儲存的個人資料。
 hide: true
 hidefromtoc: true
 exl-id: 78c8b15b-b433-4168-a1e8-c97b96e4bf85
-source-git-commit: f956a8191614cc8e0eeaadaa55277abfbc5be106
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '535'
 ht-degree: 1%
@@ -15,35 +15,35 @@ ht-degree: 1%
 
 >[!IMPORTANT]
 >
->資料衛生API目前位於Alpha中，而您的組織可能尚未取得存取權。 本檔案所述的功能可能會有所變更。
+>資料衛生API當前位於Alpha中，您的組織可能尚未訪問它。 本文檔中描述的功能可能會更改。
 
-資料衛生API可讓您以程式設計方式修正或刪除客戶儲存在Adobe Experience Platform中的個人資料。 與Privacy ServiceAPI不同，這些操作不需要與法律隱私權法規相關聯，而且可單純用於保持資料乾淨和準確。
+資料衛生API允許您以寫程式方式更正或刪除客戶在Adobe Experience Platform儲存的個人資料。 與Privacy ServiceAPI不同，這些操作不需要與法律隱私管理法規相關聯，而且純粹可用於保持資料乾淨和準確。
 
-您可以透過下列根路徑存取API:`https://platform.adobe.io/data/core/hygiene/`
+您可以通過以下根路徑訪問API: `https://platform.adobe.io/data/core/hygiene/`
 
 ## 快速入門
 
-本節提供在嘗試呼叫資料衛生API前，您需先了解的核心概念的簡介。
+本節介紹在嘗試調用資料衛生API之前需要瞭解的核心概念。
 
-### 收集必要標題的值
+### 收集所需標題的值
 
-若要呼叫資料衛生API，您必須先收集驗證憑證。 這些是用來存取Privacy ServiceAPI的相同憑證。 請依照Privacy ServiceAPI的[快速入門手冊](./api/getting-started.md)，為資料衛生API的每個必要標題產生值，如下所示：
+要調用資料衛生API，必須先收集身份驗證憑據。 這些是用於訪問Privacy ServiceAPI的相同憑據。 關注 [入門指南](./api/getting-started.md) 為Privacy ServiceAPI生成資料衛生API的每個必需標頭的值，如下所示：
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
-* `x-gw-ims-org-id: {IMS_ORG}`
+* `x-gw-ims-org-id: {ORG_ID}`
 
-所有包含裝載(POST、PUT、PATCH)的請求都需要額外的標題：
+包含負載(POST、PUT、PATCH)的所有請求都需要附加的標頭：
 
 * `Content-Type: application/json`
 
-### 讀取範例API呼叫
+### 讀取示例API調用
 
-本檔案提供範例API呼叫，以示範如何設定請求格式。 如需範例API呼叫檔案中所使用慣例的資訊，請參閱Experience PlatformAPI快速入門手冊中的[如何讀取範例API呼叫](../landing/api-guide.md#sample-api)一節。
+本文檔提供了一個示例API調用，以演示如何格式化請求。 有關示例API調用文檔中使用的約定的資訊，請參見上的 [如何讀取示例API調用](../landing/api-guide.md#sample-api) 的FTP伺服器連接設定。
 
 ## 建立刪除作業
 
-您可以提出POST請求，以建立刪除作業。
+您可以通過發出POST請求來建立刪除作業。
 
 **API格式**
 
@@ -53,20 +53,20 @@ POST /jobs
 
 **要求**
 
-請求裝載的結構與Privacy ServiceAPI](./api/privacy-jobs.md#access-delete)中的[delete請求的結構類似。 它包括`users`陣列，其對象表示要刪除其資料的用戶。
+請求負載的結構與請求負載的結構類似 [刪除Privacy ServiceAPI中的請求](./api/privacy-jobs.md#access-delete)。 它包括 `users` 其對象表示要刪除其資料的用戶的陣列。
 
 ```shell
 curl -X POST \
   https://platform.adobe.io/data/core/hygiene/jobs \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'Content-Type: application/json' \
   -d '{
         "companyContexts": [
           {
             "namespace": "imsOrgID",
-            "value": "{IMS_ORG}"
+            "value": "{ORG_ID}"
           }
         ],
         "users": [
@@ -107,14 +107,14 @@ curl -X POST \
 
 | 屬性 | 說明 |
 | --- | --- |
-| `companyContexts` | 包含貴組織驗證資訊的陣列。 它必須包含具有下列屬性的單一物件： <ul><li>`namespace`:必須設為 `imsOrgID`。</li><li>`value`:您的IMS組織ID。這與`x-gw-ims-org-id`標題中提供的值相同。</li></ul> |
-| `users` | 一個陣列，其中包含至少一個要刪除其資訊的用戶的集合。 每個使用者物件包含下列資訊： <ul><li>`key`:用來限定回應資料中個別作業ID的使用者識別碼。最佳實務是為此值選擇可輕鬆識別的唯一字串，以便日後參考或查閱。</li><li>`action`:列出對使用者資料採取之所需動作的陣列。必須包含單一字串值：`delete`。</li><li>`userIDs`:使用者的身分集合。單一使用者可擁有的身分數目上限為九。 每個身分包含下列屬性： <ul><li>`namespace`:與 [ID](../identity-service/namespaces.md) 相關聯的身分名稱。這可以是Platform所識別的[標準命名空間](./api/appendix.md#standard-namespaces)，也可以是您的組織所定義的自訂命名空間。 使用的命名空間類型必須反映在`type`屬性中。</li><li>`value`:身分值。</li><li>`type`:如果使用全域 `standard` 辨識的命名空間，或使用 `custom` 組織定義的命名空間，則必須設為。</li></ul></li></ul> |
+| `companyContexts` | 包含組織驗證資訊的陣列。 它必須包含具有以下屬性的單個對象： <ul><li>`namespace`:必須設定為 `imsOrgID`。</li><li>`value`:您的IMS組織ID。 此值與 `x-gw-ims-org-id` 標題。</li></ul> |
+| `users` | 包含至少一個要刪除其資訊的用戶集合的陣列。 每個用戶對象都包含以下資訊： <ul><li>`key`:用於限定響應資料中的單獨作業ID的用戶的標識符。 最好為此值選擇一個唯一且易於識別的字串，以便以後可以引用或查找它。</li><li>`action`:一個陣列，它列出了對用戶資料執行的所需操作。 必須包含單個字串值： `delete`。</li><li>`userIDs`:用戶的標識集合。 單個用戶可以擁有的標識數限制為9。 每個標識都包含以下屬性： <ul><li>`namespace`:的 [標識命名空間](../identity-service/namespaces.md) 與ID關聯。 這可以是 [標準命名空間](./api/appendix.md#standard-namespaces) 平台識別，或者它可以是您的組織定義的自定義命名空間。 使用的命名空間類型必須反映在 `type` 屬性。</li><li>`value`:標識值。</li><li>`type`:必須設定為 `standard` 如果使用全局識別的命名空間，或 `custom` 使用由組織定義的命名空間。</li></ul></li></ul> |
 
 {style=&quot;table-layout:auto&quot;}
 
 **回應**
 
-成功的回應會傳回已建立作業的詳細資訊。
+成功的響應將返回已建立作業的詳細資訊。
 
 ```json
 {

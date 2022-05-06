@@ -1,20 +1,21 @@
 ---
-keywords: Experience Platform；首頁；熱門主題；來源；連接器；來源連接器；來源sdk;sdk; SDK
-title: 使用流服務API（測試版）更新連接規範
+keywords: Experience Platform；首頁；熱門主題；源；連接器；源連接器；源sdk;sdk;SDK
+title: 使用流服務API(Beta)更新連接規範
 topic-legacy: developer guide
-description: 可以通過PUT操作更新連接規範的屬性。
+description: 您可以通過PUT操作更新連接規範的屬性。
 hide: true
 hidefromtoc: true
-source-git-commit: d4b5b54be9fa2b430a3b45eded94a523b6bd4ef8
+exl-id: fcb00521-8fc2-491e-aa35-6e0f9b730dd4
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '120'
 ht-degree: 1%
 
 ---
 
-# 使用流服務API（測試版）更新連接規範
+# 使用流服務API(Beta)更新連接規範
 
-可以通過PUT操作更新連接規範的屬性。 通過PUT請求更新連接規範時，主體必須包括在POST請求中建立新連接規範時需要的所有欄位。
+您可以通過PUT操作更新連接規範的屬性。 通過PUT請求更新連接規範時，主體必須包括在POST請求中建立新連接規範時需要的所有欄位。
 
 **API格式**
 
@@ -24,7 +25,7 @@ PUT /connectionSpecs/{CONNECTION_SPEC_ID}
 
 **要求**
 
-下列請求會更新 `name` 的 [!DNL MailChimp] 在上一步驟中建立的源。
+以下請求更新 `name` 的 [!DNL MailChimp] 在上一步中建立的源。
 
 ```shell
 PUT -X GET \
@@ -32,7 +33,7 @@ PUT -X GET \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
   -d '{
       "name": "MailChimp source update 1.0",
@@ -207,7 +208,7 @@ PUT -X GET \
 
 **回應**
 
-成功的呼叫會傳回更新的連線規格詳細資料，包括其更新的名稱。
+成功的調用將返回更新的連接規範詳細資訊，包括其更新的名稱。
 
 ```json
 {
@@ -220,7 +221,7 @@ PUT -X GET \
     "updatedClient": "{UPDATED_CLIENT}",
     "sandboxId": "{SANDBOX_ID}",
     "sandboxName": "{SANDBOX_NAME}",
-    "imsOrgId": "{IMS_ORG}",
+    "imsOrgId": "{ORG_ID}",
     "name": "MailChimp source update 1.0",
     "providerId": "0ed90a81-07f4-4586-8190-b40eccef1c5a",
     "version": "1.0",

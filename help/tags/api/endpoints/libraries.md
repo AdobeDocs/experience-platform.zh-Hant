@@ -1,28 +1,29 @@
 ---
-title: 程式庫端點
-description: 了解如何在Reactor API中呼叫/libraries端點。
-source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
+title: 庫終結點
+description: 瞭解如何調用Repartor API中的/library端點。
+exl-id: 0f7bc10f-2e03-43fa-993c-a2635f4d0c64
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '1584'
 ht-degree: 8%
 
 ---
 
-# 程式庫端點
+# 庫終結點
 
-程式庫是標籤資源（[extensions](./extensions.md)、[rules](./rules.md)及[資料元素](./data-elements.md)）的集合，代表[屬性](./properties.md)的所需行為。 Reactor API中的`/libraries`端點可讓您以程式設計方式管理標籤屬性中的程式庫。
+庫是標籤資源的集合([擴展](./extensions.md)。 [規則](./rules.md), [資料元素](./data-elements.md))表示 [屬性](./properties.md)。 的 `/libraries` Reactor API中的端點允許您以寫程式方式管理標籤屬性中的庫。
 
-程式庫只屬於一個屬性。 屬性可以有許多程式庫。
+庫只屬於一個屬性。 一個屬性可以具有多個庫。
 
 ## 快速入門
 
-本指南中使用的端點是[Reactor API](https://www.adobe.io/experience-platform-apis/references/reactor/)的一部分。 繼續操作之前，請參閱[快速入門手冊](../getting-started.md)，了解如何驗證API的重要資訊。
+本指南中使用的端點是 [反應堆API](https://www.adobe.io/experience-platform-apis/references/reactor/)。 在繼續之前，請查看 [入門指南](../getting-started.md) 有關如何驗證到API的重要資訊。
 
-在Reactor API中使用程式庫之前，請務必了解程式庫狀態和環境在決定您可以對特定程式庫執行哪些動作時所扮演的角色。 如需詳細資訊，請參閱[程式庫發佈流程](../../ui/publishing/publishing-flow.md)上的指南。
+在使用Repartor API中的庫之前，瞭解庫狀態和環境在確定可以對特定庫執行哪些操作時所起的作用非常重要。 請參閱 [庫發佈流](../../ui/publishing/publishing-flow.md) 的子菜單。
 
-## 擷取程式庫清單 {#list}
+## 檢索庫清單 {#list}
 
-您可以在GET請求的路徑中加入屬性的ID，以擷取屬性的程式庫清單。
+通過將屬性的ID包括在GET請求的路徑中，可以檢索屬性的庫清單。
 
 **API格式**
 
@@ -32,13 +33,13 @@ GET /properties/{PROPERTY_ID}/libraries
 
 | 參數 | 說明 |
 | --- | --- |
-| `PROPERTY_ID` | 擁有程式庫的屬性的`id`。 |
+| `PROPERTY_ID` | 的 `id` 擁有庫的屬性。 |
 
 {style=&quot;table-layout:auto&quot;}
 
 >[!NOTE]
 >
->您可以使用查詢參數，根據下列屬性來篩選列出的程式庫：<ul><li>`created_at`</li><li>`name`</li><li>`published_at`</li><li>`stale`</li><li>`state`</li><li>`updated_at`</li></ul>如需詳細資訊，請參閱[篩選回應](../guides/filtering.md)的指南。
+>使用查詢參數，可以根據以下屬性篩選列出的庫：<ul><li>`created_at`</li><li>`name`</li><li>`published_at`</li><li>`stale`</li><li>`state`</li><li>`updated_at`</li></ul>請參閱上的指南 [過濾響應](../guides/filtering.md) 的子菜單。
 
 **要求**
 
@@ -47,14 +48,14 @@ curl -X GET \
   https://reactor.adobe.io/properties/PR4bc17fb09ed845b1acfb0f6600a1f3c0/libraries \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
 
 **回應**
 
-成功的回應會傳回指定屬性的程式庫清單。
+成功的響應將返回指定屬性的庫清單。
 
 ```json
 {
@@ -148,7 +149,7 @@ curl -X GET \
 
 ## 查找庫 {#lookup}
 
-您可以在請求的路徑中提供程式庫ID，以便查詢程式庫。
+您可以通過在GET請求的路徑中提供庫ID來查找庫。
 
 **API格式**
 
@@ -158,9 +159,9 @@ GET /libraries/{LIBRARY_ID}
 
 | 參數 | 說明 |
 | --- | --- |
-| `LIBRARY_ID` | 您要查詢的程式庫的`id`。 |
+| `LIBRARY_ID` | 的 `id` 你想查的圖書館。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style=&quot;table-layout:auto&quot;&quot;
 
 **要求**
 
@@ -169,14 +170,14 @@ curl -X GET \
   https://reactor.adobe.io/libraries/LB5862ee2dc21b4646a5536c8d6edb0c84 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
 
 **回應**
 
-成功的回應會傳回程式庫的詳細資訊。
+成功的響應返回庫的詳細資訊。
 
 ```json
 {
@@ -259,7 +260,7 @@ curl -X GET \
 
 ## 建立程式庫 {#create}
 
-您可以提出POST要求來建立新程式庫。
+可以通過發出POST請求建立新庫。
 
 **API格式**
 
@@ -269,20 +270,20 @@ POST /properties/{PROPERTY_ID}/libraries
 
 | 參數 | 說明 |
 | --- | --- |
-| `PROPERTY_ID` | 您要定義下的程式庫的[property](./properties.md)的`id`。 |
+| `PROPERTY_ID` | 的 `id` 的 [屬性](./properties.md) 定義下的庫。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style=&quot;table-layout:auto&quot;&quot;
 
 **要求**
 
-下列請求會為指定的屬性建立新程式庫。 首次建立程式庫時，只能設定其`name`屬性。 若要將資料元素、擴充功能和規則新增至程式庫，您必須建立關係。 如需詳細資訊，請參閱[管理程式庫資源](#resources)一節。
+以下請求為指定的屬性建立新庫。 首次建立庫時，僅 `name` 可以配置屬性。 要向庫添加資料元素、擴展和規則，必須建立關係。 請參閱 [管理庫資源](#resources) 的子菜單。
 
 ```shell
 curl -X POST \
   https://reactor.adobe.io/properties/PR97d92a379a5f48758947cdf44f607a0d/libraries \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'Content-Type: application/json' \
   -d '{
         "data": {
@@ -296,14 +297,14 @@ curl -X POST \
 
 | 屬性 | 說明 |
 | --- | --- |
-| `attributes.name` | **（必要）** 程式庫人類看得懂的名稱。 |
-| `type` | 要更新的資源類型。 對於此端點，值必須為`libraries`。 |
+| `attributes.name` | **（必需）** 庫的可讀名稱。 |
+| `type` | 要更新的資源類型。 對於此終結點，值必須為 `libraries`。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style=&quot;table-layout:auto&quot;&quot;
 
 **回應**
 
-成功的回應會傳回新建立之程式庫的詳細資訊。
+成功的響應將返回新建立的庫的詳細資訊。
 
 ```json
 {
@@ -403,13 +404,13 @@ curl -X POST \
 }
 ```
 
-## 管理程式庫的資源 {#resources}
+## 管理庫的資源 {#resources}
 
-與程式庫相關聯的資料元素、擴充功能、規則和環境是透過關係建立。 以下各節說明如何透過API呼叫管理這些關係。
+通過關係建立與庫關聯的資料元素、擴展、規則和環境。 以下各節介紹如何通過API調用管理這些關係。
 
-### 新增資源至程式庫 {#add-resources}
+### 將資源添加到庫 {#add-resources}
 
-您可以將`/relationships`附加至POST請求的路徑，接著附加資源類型，以將資源新增至程式庫。
+可以通過附加將資源添加到庫 `/relationships` 到POST請求的路徑，然後是資源類型。
 
 **API格式**
 
@@ -419,21 +420,21 @@ POST /libraries/{LIBRARY_ID}/relationships/{RESOURCE_TYPE}
 
 | 參數 | 說明 |
 | --- | --- |
-| `{LIBRARY_ID}` | 您要新增資源的程式庫ID。 |
-| `{RESOURCE_TYPE}` | 您要新增至程式庫的資源類型。 接受下列值： <ul><li>`data_elements`</li><li>`extensions`</li><li>`rules`</li></ul> |
+| `{LIBRARY_ID}` | 要添加資源的庫的ID。 |
+| `{RESOURCE_TYPE}` | 要添加到庫的資源類型。 接受以下值： <ul><li>`data_elements`</li><li>`extensions`</li><li>`rules`</li></ul> |
 
-{style=&quot;table-layout:auto&quot;}
+{style=&quot;table-layout:auto&quot;&quot;
 
 **要求**
 
-下列請求會將兩個資料元素新增至程式庫。
+以下請求將兩個資料元素添加到庫中。
 
 ```shell
 curl -X POST \
   https://reactor.adobe.io/libraries/LBdd2f55e9c3bb4ce0a582a0b0c586a6f5/relationships/data_elements \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'Accept: application/vnd.api+json;revision=1' \
   -H 'Content-Type: application/json' \
   -d '{
@@ -452,14 +453,14 @@ curl -X POST \
 
 | 屬性 | 說明 |
 | --- | --- |
-| `id` | 您要新增至程式庫的資源ID。 |
-| `type` | 您要新增至程式庫的資源類型。 |
+| `id` | 要添加到庫的資源的ID。 |
+| `type` | 要添加到庫的資源類型。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style=&quot;table-layout:auto&quot;&quot;
 
 **回應**
 
-成功的回應會傳回新增關係的詳細資訊。 為程式庫執行[查詢請求](#lookup)時，會顯示`relationships`屬性下新增的關係。
+成功的響應將返回所添加關係的詳細資訊。 執行 [查找請求](#lookup) 的 `relationships` 屬性。
 
 ```json
 {
@@ -480,9 +481,9 @@ curl -X POST \
 }
 ```
 
-### 取代程式庫的資源 {#replace-resources}
+### 替換庫的資源 {#replace-resources}
 
-您可以將`/relationships`附加至程式庫請求的路徑，接著您要取代的資源類型，以取代程式庫特定類型的所有現有資源。
+可通過附加來替換庫的特定類型的所有現有資源 `/relationships` 到PATCH請求的路徑，然後是要替換的資源類型。
 
 **API格式**
 
@@ -493,20 +494,20 @@ PATCH /libraries/{LIBRARY_ID}/relationships/{RESOURCE_TYPE}
 | 參數 | 說明 |
 | --- | --- |
 | `{LIBRARY_ID}` | 要替換其關係的庫的ID。 |
-| `{RESOURCE_TYPE}` | 要替換的資源類型。 接受下列值： <ul><li>`data_elements`</li><li>`extensions`</li><li>`rules`</li></ul> |
+| `{RESOURCE_TYPE}` | 要替換的資源類型。 接受以下值： <ul><li>`data_elements`</li><li>`extensions`</li><li>`rules`</li></ul> |
 
-{style=&quot;table-layout:auto&quot;}
+{style=&quot;table-layout:auto&quot;&quot;
 
 **要求**
 
-下列要求會以`data`陣列中提供的擴充功能取代程式庫的擴充功能。
+以下請求將庫的擴展替換為中提供的擴展 `data` 陣列。
 
 ```shell
 curl -X PATCH \
   https://reactor.adobe.io/libraries/LBdd2f55e9c3bb4ce0a582a0b0c586a6f5/relationships/environment \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'Accept: application/vnd.api+json;revision=1' \
   -H 'Content-Type: application/json' \
   -d '{
@@ -521,14 +522,14 @@ curl -X PATCH \
 
 | 屬性 | 說明 |
 | --- | --- |
-| `id` | 您要新增至程式庫的資源ID。 |
-| `type` | 您要新增至程式庫的資源類型。 |
+| `id` | 要添加到庫的資源的ID。 |
+| `type` | 要添加到庫的資源類型。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style=&quot;table-layout:auto&quot;&quot;
 
 **回應**
 
-成功的回應會傳回更新關係的詳細資訊。 對程式庫執行[查詢請求](#lookup)時，會在`relationships`屬性下顯示關係。
+成功的響應將返回更新關係的詳細資訊。 執行 [查找請求](#lookup) 顯示 `relationships` 屬性。
 
 ```json
 {
@@ -545,9 +546,9 @@ curl -X PATCH \
 }
 ```
 
-### 移除程式庫的資源 {#remove-resources}
+### 刪除庫的資源 {#remove-resources}
 
-您可以將`/relationships`附加至程式庫請求的路徑，之後接著您要移除的資源類型，借此從程式庫中移除現有資源。
+可通過附加來從庫中刪除現有資源 `/relationships` 到DELETE請求的路徑，然後是要刪除的資源類型。
 
 **API格式**
 
@@ -557,21 +558,21 @@ DELETE /libraries/{LIBRARY_ID}/relationships/{RESOURCE_TYPE}
 
 | 參數 | 說明 |
 | --- | --- |
-| `{LIBRARY_ID}` | 您要移除其資源的程式庫ID。 |
-| `{RESOURCE_TYPE}` | 您要移除的資源類型。 接受下列值： <ul><li>`data_elements`</li><li>`extensions`</li><li>`rules`</li></ul> |
+| `{LIBRARY_ID}` | 要刪除其資源的庫的ID。 |
+| `{RESOURCE_TYPE}` | 要刪除的資源類型。 接受以下值： <ul><li>`data_elements`</li><li>`extensions`</li><li>`rules`</li></ul> |
 
-{style=&quot;table-layout:auto&quot;}
+{style=&quot;table-layout:auto&quot;&quot;
 
 **要求**
 
-下列請求會從程式庫中移除規則。 未包含在`data`陣列中的任何現有規則都不會刪除。
+以下請求從庫中刪除規則。 未包含於 `data` 陣列未刪除。
 
 ```shell
 curl -X DELETE \
   https://reactor.adobe.io/libraries/LBdd2f55e9c3bb4ce0a582a0b0c586a6f5/relationships/environment \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'Accept: application/vnd.api+json;revision=1' \
   -H 'Content-Type: application/json' \
   -d '{
@@ -586,14 +587,14 @@ curl -X DELETE \
 
 | 屬性 | 說明 |
 | --- | --- |
-| `id` | 您要從程式庫中移除的資源ID。 |
-| `type` | 您要從程式庫中移除的資源類型。 |
+| `id` | 從庫中刪除的資源的ID。 |
+| `type` | 從庫中刪除的資源類型。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style=&quot;table-layout:auto&quot;&quot;
 
 **回應**
 
-成功的響應返回資源類型的更新關係的詳細資訊。 如果此資源類型不存在任何關係，則`data`屬性將作為空陣列返回。 對程式庫執行[查詢請求](#lookup)時，會在`relationships`屬性下顯示關係。
+成功的響應將返回資源類型的更新關係的詳細資訊。 如果此資源類型不存在關係，則 `data` 屬性作為空陣列返回。 執行 [查找請求](#lookup) 顯示 `relationships` 屬性。
 
 ```json
 {
@@ -607,9 +608,9 @@ curl -X DELETE \
 }
 ```
 
-## 將程式庫指派給環境 {#environment}
+## 將庫分配給環境 {#environment}
 
-您可以將程式庫指派給環境`/relationships/environment`至POST請求的路徑。
+可以將庫分配給環境  `/relationships/environment` 到POST請求的路徑。
 
 **API格式**
 
@@ -619,9 +620,9 @@ POST /libraries/{LIBRARY_ID}/relationships/environment
 
 | 參數 | 說明 |
 | --- | --- |
-| `{LIBRARY_ID}` | 您要指派的程式庫ID。 |
+| `{LIBRARY_ID}` | 要分配的庫的ID。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style=&quot;table-layout:auto&quot;&quot;
 
 **要求**
 
@@ -630,7 +631,7 @@ curl -X POST \
   https://reactor.adobe.io/libraries/LBdd2f55e9c3bb4ce0a582a0b0c586a6f5/relationships/environment \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'Accept: application/vnd.api+json;revision=1' \
   -H 'Content-Type: application/json' \
   -d '{
@@ -643,14 +644,14 @@ curl -X POST \
 
 | 屬性 | 說明 |
 | --- | --- |
-| `id` | 您指派程式庫的環境ID。 |
-| `type` | 必須設為`environments`。 |
+| `id` | 將庫分配給的環境的ID。 |
+| `type` | 必須設定為 `environments`。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style=&quot;table-layout:auto&quot;&quot;
 
 **回應**
 
-成功的回應會傳回關係的詳細資訊。 對程式庫執行[查詢請求](#lookup)時，會顯示`relationships`屬性下新增的關係。
+成功的響應將返回關係的詳細資訊。 執行 [查找請求](#lookup) 在 `relationships` 屬性。
 
 ```json
 {
@@ -665,9 +666,9 @@ curl -X POST \
 }
 ```
 
-## 轉換程式庫 {#transition}
+## 轉換庫 {#transition}
 
-您可以將程式庫ID納入PATCH請求的路徑，並在裝載中提供適當的`meta.action`值，以將程式庫轉換為不同的發佈狀態。
+通過將庫的ID包括在PATCH請求的路徑中，並提供適當的發佈狀態，可以將庫轉換到其他發佈狀態 `meta.action` 值。
 
 **API格式**
 
@@ -677,20 +678,20 @@ PATCH /libraries/{LIBRARY_ID}
 
 | 參數 | 說明 |
 | --- | --- |
-| `LIBRARY_ID` | 要轉換的程式庫的`id`。 |
+| `LIBRARY_ID` | 的 `id` 要轉換的庫。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style=&quot;table-layout:auto&quot;&quot;
 
 **要求**
 
-下列要求會根據有效負載中提供的`meta.action`值，轉變現有程式庫的狀態。 程式庫的可用動作取決於其目前的發佈狀態，如[發佈流程](../../ui/publishing/publishing-flow.md#state)中所述。
+以下請求將根據 `meta.action` 在有效載荷中提供。 庫的可用操作取決於其當前發佈狀態，如 [發佈流](../../ui/publishing/publishing-flow.md#state)。
 
 ```shell
 curl -X PATCH \
   https://reactor.adobe.io/libraries/LB5862ee2dc21b4646a5536c8d6edb0c84 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'Content-Type: application/json' \
   -d '{
         "data": {
@@ -705,15 +706,15 @@ curl -X PATCH \
 
 | 屬性 | 說明 |
 | --- | --- |
-| `meta.action` | 您要在程式庫上執行的特定轉變動作。 根據程式庫的目前發佈狀態，可使用下列動作： <ul><li>`develop`</li><li>`submit`</li><li>`approve`</li><li>`reject`</li></ul> |
-| `id` | 要更新的庫的`id`。 這應符合要求路徑中提供的`{LIBRARY_ID}`值。 |
-| `type` | 要更新的資源類型。 對於此端點，值必須為`libraries`。 |
+| `meta.action` | 要對庫執行的特定轉換操作。 根據庫的當前發佈狀態，可以執行以下操作： <ul><li>`develop`</li><li>`submit`</li><li>`approve`</li><li>`reject`</li></ul> |
+| `id` | 的 `id` 的子菜單。 這應與 `{LIBRARY_ID}` 請求路徑中提供的值。 |
+| `type` | 要更新的資源類型。 對於此終結點，值必須為 `libraries`。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style=&quot;table-layout:auto&quot;&quot;
 
 **回應**
 
-成功的回應會傳回更新程式庫的詳細資訊。
+成功的響應將返回更新的庫的詳細資訊。
 
 ```json
 {
@@ -797,13 +798,13 @@ curl -X PATCH \
 }
 ```
 
-## 發佈程式庫 {#publish}
+## 發佈庫 {#publish}
 
 >[!NOTE]
 >
->只能將已核准的程式庫發佈至生產環境。
+>只能將已批准的庫發佈到生產環境中。
 
-若要將程式庫發佈至生產環境，請確定生產環境已新增至程式庫，然後建立組建。
+要將庫發佈到生產，請確保已將生產環境添加到庫中，然後建立生成。
 
 **API格式**
 
@@ -813,20 +814,20 @@ POST /libraries/{LIBRARY_ID}/builds
 
 | 參數 | 說明 |
 | --- | --- |
-| `LIBRARY_ID` | 您要發佈的程式庫的`id`。 |
+| `LIBRARY_ID` | 的 `id` 你想發佈的庫。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style=&quot;table-layout:auto&quot;&quot;
 
 **要求**
 
-此要求不需要裝載。
+此請求不需要負載。
 
 ```shell
 curl -X POST \
   https://reactor.adobe.io/libraries/LB80c337c956804738b2db2ea2f69fcdf0/builds \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'Content-Type: application/json'
 ```
 
@@ -902,19 +903,19 @@ curl -X POST \
 }
 ```
 
-## 管理程式庫的附註 {#notes}
+## 管理庫的注釋 {#notes}
 
-程式庫是「顯著」資源，這表示您可以針對每個個別資源建立和擷取文字型附註。 有關如何管理庫和其他相容資源的注釋的詳細資訊，請參閱[notes端點指南](./notes.md)。
+庫是「顯著」資源，這意味著您可以建立和檢索每個資源上基於文本的注釋。 查看 [notes endpoint guide（注釋終結點指南）](./notes.md) 的子菜單。
 
-## 擷取程式庫的相關資源 {#related}
+## 檢索庫的相關資源 {#related}
 
-下列呼叫示範如何擷取程式庫的相關資源。 當[查找庫](#lookup)時，這些關係將列在`relationships`屬性下。
+以下調用演示如何檢索庫的相關資源。 當 [查圖書館](#lookup)，這些關係列在 `relationships` 屬性。
 
-有關Reactor API中關係的詳細資訊，請參閱[關係指南](../guides/relationships.md)。
+查看 [關係指南](../guides/relationships.md) 的子菜單。
 
-### 列出程式庫的相關資料元素 {#data-elements}
+### 列出庫的相關資料元素 {#data-elements}
 
-您可以將`/data_elements`附加至查詢請求的路徑，以列出程式庫所使用的資料元素。
+可以通過附加列出庫使用的資料元素 `/data_elements` 查找請求的路徑。
 
 **API格式**
 
@@ -924,9 +925,9 @@ GET  /libraries/{LIBRARY_ID}/data_elements
 
 | 參數 | 說明 |
 | --- | --- |
-| `{LIBRARY_ID}` | 要列出其資料元素的程式庫的`id`。 |
+| `{LIBRARY_ID}` | 的 `id` 列出其資料元素的庫。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style=&quot;table-layout:auto&quot;&quot;
 
 **要求**
 
@@ -935,14 +936,14 @@ curl -X GET \
   https://reactor.adobe.io/libraries/LB5862ee2dc21b4646a5536c8d6edb0c84/data_elements \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
 
 **回應**
 
-成功的回應會傳回使用指定程式庫的資料元素清單。
+成功的響應返回使用指定庫的資料元素清單。
 
 ```json
 {
@@ -1053,9 +1054,9 @@ curl -X GET \
 }
 ```
 
-### 列出程式庫的相關擴充功能 {#extensions}
+### 列出庫的相關擴展 {#extensions}
 
-您可以將`/extensions`附加至查詢請求的路徑，以列出程式庫所使用的擴充功能。
+可通過附加列出庫使用的擴展 `/extensions` 查找請求的路徑。
 
 **API格式**
 
@@ -1065,9 +1066,9 @@ GET  /libraries/{LIBRARY_ID}/extensions
 
 | 參數 | 說明 |
 | --- | --- |
-| `{LIBRARY_ID}` | 您要列出其擴充功能之程式庫的`id`。 |
+| `{LIBRARY_ID}` | 的 `id` 的子目錄。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style=&quot;table-layout:auto&quot;&quot;
 
 **要求**
 
@@ -1076,14 +1077,14 @@ curl -X GET \
   https://reactor.adobe.io/libraries/LB5862ee2dc21b4646a5536c8d6edb0c84/extensions \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
 
 **回應**
 
-成功的回應會傳回使用指定程式庫的擴充功能清單。
+成功的響應返回使用指定庫的擴展的清單。
 
 ```json
 {
@@ -1184,9 +1185,9 @@ curl -X GET \
 }
 ```
 
-### 列出程式庫的相關規則 {#rules}
+### 列出庫的相關規則 {#rules}
 
-您可以將`/rules`附加至查詢請求的路徑，以列出程式庫所使用的規則。
+可通過附加列出庫使用的規則 `/rules` 查找請求的路徑。
 
 **API格式**
 
@@ -1196,9 +1197,9 @@ GET  /libraries/{LIBRARY_ID}/rules
 
 | 參數 | 說明 |
 | --- | --- |
-| `{LIBRARY_ID}` | 要列出其規則的程式庫的`id`。 |
+| `{LIBRARY_ID}` | 的 `id` 列出其規則的庫。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style=&quot;table-layout:auto&quot;&quot;
 
 **要求**
 
@@ -1207,14 +1208,14 @@ curl -X GET \
   https://reactor.adobe.io/libraries/LB5862ee2dc21b4646a5536c8d6edb0c84/rules \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
 
 **回應**
 
-成功的回應會傳回使用指定程式庫的規則清單。
+成功的響應返回使用指定庫的規則清單。
 
 ```json
 {
@@ -1297,9 +1298,9 @@ curl -X GET \
 }
 ```
 
-### 查詢程式庫的相關環境 {#related-environment}
+### 查找庫的相關環境 {#related-environment}
 
-您可以將`/environment`附加至GET請求的路徑，以尋找指派程式庫的環境。
+可通過附加來查找庫所分配的環境 `/environment` 到GET請求的路徑。
 
 **API格式**
 
@@ -1309,9 +1310,9 @@ GET  /libraries/{LIBRARY_ID}/environment
 
 | 參數 | 說明 |
 | --- | --- |
-| `{LIBRARY_ID}` | 您要查詢其環境的程式庫的`id`。 |
+| `{LIBRARY_ID}` | 的 `id` 你想查的那個圖書館。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style=&quot;table-layout:auto&quot;&quot;
 
 **要求**
 
@@ -1320,14 +1321,14 @@ curl -X GET \
   https://reactor.adobe.io/libraries/LB5862ee2dc21b4646a5536c8d6edb0c84/environment \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
 
 **回應**
 
-成功的回應會傳回指定程式庫所指派給之環境的詳細資訊。
+成功的響應將返回指定庫所分配到的環境的詳細資訊。
 
 ```json
 {
@@ -1411,7 +1412,7 @@ curl -X GET \
 
 ### 查找庫的相關屬性 {#property}
 
-您可以將`/property`附加至GET請求的路徑，以尋找擁有程式庫的屬性。
+可以通過附加 `/property` 到GET請求的路徑。
 
 **API格式**
 
@@ -1421,9 +1422,9 @@ GET  /libraries/{LIBRARY_ID}/property
 
 | 參數 | 說明 |
 | --- | --- |
-| `{LIBRARY_ID}` | 您要查詢其屬性的程式庫的`id`。 |
+| `{LIBRARY_ID}` | 的 `id` 你想查的圖書館。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style=&quot;table-layout:auto&quot;&quot;
 
 **要求**
 
@@ -1432,14 +1433,14 @@ curl -X GET \
   https://reactor.adobe.io/libraries/LB5862ee2dc21b4646a5536c8d6edb0c84/property \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
 
 **回應**
 
-成功的回應會傳回擁有指定程式庫之屬性的詳細資訊。
+成功的響應將返回擁有指定庫的屬性的詳細資訊。
 
 ```json
 {
@@ -1532,9 +1533,9 @@ curl -X GET \
 }
 ```
 
-### 尋找程式庫的上游 {#upstream}
+### 在上游查找庫 {#upstream}
 
-您可以將`/upstream_library`附加至程式庫請求的路徑，從程式庫的上游尋找下一個程式庫。
+可通過附加從庫上游查找下一個庫 `/upstream_library` 到GET請求的路徑。
 
 **API格式**
 
@@ -1544,9 +1545,9 @@ GET  /libraries/{LIBRARY_ID}/upstream_library
 
 | 參數 | 說明 |
 | --- | --- |
-| `{LIBRARY_ID}` | 您要查詢其上遊程式庫的`id`。 |
+| `{LIBRARY_ID}` | 的 `id` 你要查的上游圖書館。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style=&quot;table-layout:auto&quot;&quot;
 
 **要求**
 
@@ -1555,14 +1556,14 @@ curl -X GET \
   https://reactor.adobe.io/libraries/LB5862ee2dc21b4646a5536c8d6edb0c84/upstream_library \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
 
 **回應**
 
-成功的回應會傳回上遊程式庫的詳細資訊。
+成功的響應返回上游庫的詳細資訊。
 
 ```json
 {

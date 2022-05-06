@@ -1,44 +1,44 @@
 ---
-keywords: Experience Platform；首頁；熱門主題；API; XDM; XDM系統；體驗資料模型；體驗資料模型；資料模型；結構註冊表；結合；聯合；工會；segmentMembership;timeSeriesEvents;
+keywords: Experience Platform；主題；熱門主題；api;API;XDM;XDM系統；體驗資料模型；體驗資料模型；資料模型；資料模型；資料模型；架構註冊；架構註冊；聯合；聯合；聯合；段成員；時間系列事件；
 solution: Experience Platform
-title: Union API端點
-description: Schema Registry API中的/union端點可讓您以程式設計方式管理體驗應用程式中的XDM聯合結構。
+title: 聯合API終結點
+description: 通過架構註冊表API中的/unions終結點，可以以寫程式方式管理您的體驗應用程式中的XDM聯合架構。
 topic-legacy: developer guide
 exl-id: d0ece235-72e8-49d9-856b-5dba44e16ee7
-source-git-commit: 5160bc8057a7f71e6b0f7f2d594ba414bae9d8f6
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '911'
 ht-degree: 3%
 
 ---
 
-# Union端點
+# 聯合終結點
 
-聯合（或聯合視圖）是系統生成的只讀架構，用於聚合共用相同類（[!DNL XDM ExperienceEvent]或[!DNL XDM Individual Profile]）且為[[!DNL Real-time Customer Profile]](../../profile/home.md)啟用的所有架構的欄位。
+聯合（或聯合視圖）是系統生成的只讀模式，用於聚合共用同一類的所有架構的欄位([!DNL XDM ExperienceEvent] 或 [!DNL XDM Individual Profile])，並啟用 [[!DNL Real-time Customer Profile]](../../profile/home.md)。
 
-本檔案涵蓋在結構註冊表API中與工會合作的基本概念，包括各種作業的範例呼叫。 有關XDM中聯合的更一般資訊，請參閱[架構組成基礎](../schema/composition.md#union)中有關聯合的一節。
+本文檔介紹與架構註冊表API中的工會協作的基本概念，包括各種操作的示例調用。 有關XDM中工會的更多一般資訊，請參見中有關工會的章節 [架構組合基礎](../schema/composition.md#union)。
 
 ## 聯合架構欄位
 
-[!DNL Schema Registry]會自動在聯合架構中包含三個鍵欄位：`identityMap`、`timeSeriesEvents`和`segmentMembership`。
+的 [!DNL Schema Registry] 自動包括聯合架構中的三個關鍵字： `identityMap`。 `timeSeriesEvents`, `segmentMembership`。
 
-### 身分對應
+### 身份映射
 
-聯合架構的`identityMap`表示聯合的相關記錄架構內的已知身份。 身分對應會將身分分割為由命名空間輸入的不同陣列。 所列的每個身分本身都是包含唯一`id`值的物件。 如需詳細資訊，請參閱[Identity Service檔案](../../identity-service/home.md)。
+聯合架構 `identityMap` 是聯合的關聯記錄架構中已知標識的表示。 標識映射將標識分隔為由命名空間鍵控的不同陣列。 每個列出的標識本身都是包含唯一標識的對象 `id` 值。 查看 [Identity Service文檔](../../identity-service/home.md) 的子菜單。
 
-### 時間序列事件
+### 時間系列事件
 
-`timeSeriesEvents`陣列是與與聯合關聯的記錄架構相關的時間序列事件清單。 將設定檔資料匯出至資料集時，每筆記錄都會包含此陣列。 這對各種使用案例非常有用，例如機器學習，其中模型除了其記錄屬性外，還需要設定檔的整個行為歷史記錄。
+的 `timeSeriesEvents` array是與與union關聯的記錄架構相關的時間序列事件的清單。 將配置檔案資料導出到資料集時，每個記錄都包括此陣列。 這對於各種使用情形（如機器學習）非常有用，在機器學習中，模型除了需要記錄屬性外還需要配置檔案的整個行為歷史記錄。
 
-### 區段成員資格對應
+### 段成員資格映射
 
-`segmentMembership`地圖會儲存區段評估的結果。 使用[分段API](https://www.adobe.io/experience-platform-apis/references/segmentation/)成功執行區段作業時，會更新對映。 `segmentMembership` 也會儲存擷取至Platform的任何預先評估對象區段，以便與Adobe Audience Manager等其他解決方案整合。如需詳細資訊，請參閱[使用API建立區段的教學課程。](../../segmentation/tutorials/create-a-segment.md)
+的 `segmentMembership` map儲存段評估的結果。 使用 [分段API](https://www.adobe.io/experience-platform-apis/references/segmentation/)，將更新映射。 `segmentMembership` 還儲存所有預評估的受眾群，這些受眾群被攝取到平台中，從而可以與Adobe Audience Manager等其他解決方案整合。 請參閱上的教程 [使用API建立段](../../segmentation/tutorials/create-a-segment.md) 的子菜單。
 
 ## 檢索聯合清單 {#list}
 
-在架構上設定`union`標籤時， [!DNL Schema Registry]會自動將架構添加到架構所基於類的聯合中。 如果相關類不存在聯合，則會自動建立新聯合。 聯合的`$id`與其他[!DNL Schema Registry]資源的標準`$id`類似，唯一的差異是由兩個底線附加，並加上&quot;union&quot;(`__union`)。
+設定 `union` 在架構上標籤， [!DNL Schema Registry] 自動將模式添加到基於該模式的類的聯合中。 如果所涉類不存在聯合，則會自動建立新的聯合。 的 `$id` 因為工會和標準 `$id` 其他 [!DNL Schema Registry] 資源，唯一的區別是用兩個下划線和單詞&quot;union&quot;(`__union`)。
 
-您可以向`/tenant/unions`端點提出GET請求，以查看可用聯合的清單。
+您可以通過向以下站點發出GET請求來查看可用工會清單 `/tenant/unions` 端點。
 
 **API格式**
 
@@ -53,23 +53,23 @@ curl -X GET \
   https://platform.adobe.io/data/foundation/schemaregistry/tenant/unions \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -H 'Accept: application/vnd.adobe.xed-id+json'
 ```
 
-回應格式取決於要求中傳送的`Accept`標題。 下列`Accept`標題可用於清單聯合：
+響應格式取決於 `Accept` 請求中發送的標頭。 以下 `Accept` 標題可用於清單聯合：
 
 | `Accept` 標題 | 說明 |
 | --- | --- |
-| `application/vnd.adobe.xed-id+json` | 傳回每個資源的簡短摘要。 這是列出資源的建議標題。 (限制：300) |
-| `application/vnd.adobe.xed+json` | 傳回每個資源的完整JSON類別，並包含原始的`$ref`和`allOf`。 (限制：300) |
+| `application/vnd.adobe.xed-id+json` | 返回每個資源的簡短摘要。 這是列出資源的建議標頭。 (限制：300) |
+| `application/vnd.adobe.xed+json` | 為每個資源返回完整的JSON類，原始 `$ref` 和 `allOf` 包含。 (限制：300) |
 
 {style=&quot;table-layout:auto&quot;}
 
 **回應**
 
-成功的回應會傳回HTTP狀態200(OK)，以及回應內文中的`results`陣列。 如果已定義聯合，則每個聯合的詳細資訊將作為陣列內的對象提供。 如果未定義聯合，則仍會返回HTTP狀態200(OK)，但`results`陣列將為空。
+成功響應返回HTTP狀態200(OK)和 `results` 陣列。 如果定義了聯合，則每個聯合的詳細資訊都作為陣列中的對象提供。 如果尚未定義聯合，則仍返回HTTP狀態200（確定），但 `results` 陣列將為空。
 
 ```JSON
 {
@@ -92,11 +92,11 @@ curl -X GET \
 
 ## 查找工會 {#lookup}
 
-您可以執行包含`$id`的GET請求，並根據Accept標題查看聯合的部分或全部詳細資訊，以查看特定聯合。
+您可以通過執行包含以下項的GET請求來查看特定聯合 `$id` 和（取決於「接受」標題），以及聯合的部分或全部詳細資訊。
 
 >[!NOTE]
 >
->聯集查閱可使用`/unions`和`/schemas`端點，以便在[!DNL Profile]匯出至資料集時使用。
+>聯合查找可使用 `/unions` 和 `/schemas` 使用端點 [!DNL Profile] 導出到資料集。
 
 **API格式**
 
@@ -107,9 +107,9 @@ GET /tenant/schemas/{UNION_ID}
 
 | 參數 | 說明 |
 | --- | --- |
-| `{UNION_ID}` | 要查找的聯合的URL編碼的`$id` URI。 聯合架構的URI會附加「__union」。 |
+| `{UNION_ID}` | URL編碼 `$id` 要查找的聯盟的URI。 聯合架構的URI將附加「__union」。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style=&quot;table-layout:auto&quot;&quot;
 
 **要求**
 
@@ -118,27 +118,27 @@ curl -X GET \
   https://platform.adobe.io/data/foundation/schemaregistry/tenant/unions/https%3A%2F%2Fns.adobe.com%2Fxdm%2Fcontext%2Fprofile__union \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -H 'Accept: application/vnd.adobe.xed+json; version=1'
 ```
 
-聯合查詢請求需要在Accept標題中包含`version`。
+聯合查找請求需要 `version` 包含在「接受」標題中。
 
-下列「接受」標題適用於聯合架構查閱：
+以下「接受」標頭可用於聯合架構查找：
 
 | Accept | 說明 |
 | -------|------------ |
-| `application/vnd.adobe.xed+json; version=1` | 具有`$ref`和`allOf`的原始。 包含標題和說明。 |
-| `application/vnd.adobe.xed-full+json; version=1` | `$ref` 屬性和已 `allOf` 解析。包含標題和說明。 |
+| `application/vnd.adobe.xed+json; version=1` | 原始 `$ref` 和 `allOf`。 包括標題和說明。 |
+| `application/vnd.adobe.xed-full+json; version=1` | `$ref` 屬性和 `allOf` 已解決。 包括標題和說明。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style=&quot;table-layout:auto&quot;&quot;
 
 **回應**
 
-成功的回應會傳回實作要求路徑中提供`$id`類別之所有結構的聯合檢視。
+成功的響應返回實現其類的所有架構的聯合視圖 `$id` 在請求路徑中提供。
 
-回應格式取決於要求中傳送的Accept標題。 嘗試不同的「接受」標題來比較回應，並判斷哪個標題最適合您的使用案例。
+響應格式取決於請求中發送的「接受」標頭。 使用不同的「接受」標頭進行實驗，以比較響應並確定哪個標頭最適合您的使用情形。
 
 ```JSON
 {
@@ -179,13 +179,13 @@ curl -X GET \
 }
 ```
 
-## 啟用聯合成員資格的結構 {#enable}
+## 啟用聯合成員身份的架構 {#enable}
 
-若要將架構納入其類別的聯合中，必須將`union`標籤新增至架構的`meta:immutableTags`屬性。 您可以發出PATCH要求，將單字串值`union`的`meta:immutableTags`陣列新增至相關架構，以達到此目的。 如需詳細範例，請參閱[綱要端點指南](./schemas.md#union)。
+為了將架構包含在其類的聯合中， `union` 必須將標籤添加到架構 `meta:immutableTags` 屬性。 通過發出PATCH請求以添加 `meta:immutableTags` 單字串值為 `union` 到有關的架構。 查看 [架構終結點指南](./schemas.md#union) 的上界。
 
-## 列出聯合的結構 {#list-schemas}
+## 列出聯合中的架構 {#list-schemas}
 
-若要查看哪些結構屬於特定聯合的一部分，您可以對`/tenant/schemas`端點執行GET請求。 使用`property`查詢參數，可以將響應配置為僅返回包含`meta:immutableTags`欄位和`meta:class`等於您正在訪問其聯合的類的架構。
+為了查看哪些架構是特定聯合的一部分，您可以向 `/tenant/schemas` 端點。 使用 `property` 查詢參數，可以將響應配置為僅返回包含 `meta:immutableTags` 和 `meta:class` 等於您要訪問其聯合的類。
 
 **API格式**
 
@@ -195,13 +195,13 @@ GET /tenant/schemas?property=meta:immutableTags==union&property=meta:class=={CLA
 
 | 參數 | 說明 |
 | --- | --- |
-| `{CLASS_ID}` | 要列出其聯合啟用架構的類的`$id`。 |
+| `{CLASS_ID}` | 的 `$id` 要列出其聯合啟用架構的類。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style=&quot;table-layout:auto&quot;&quot;
 
 **要求**
 
-下列請求會擷取屬於[!DNL XDM Individual Profile]類別聯合的所有結構清單。
+以下請求將檢索作為聯合的一部分的所有架構的清單 [!DNL XDM Individual Profile] 類。
 
 ```SHELL
 curl -X GET \
@@ -209,22 +209,22 @@ curl -X GET \
   -H 'Accept: application/vnd.adobe.xed-id+json' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-回應格式取決於要求中傳送的`Accept`標題。 下列`Accept`標題可用於列出結構：
+響應格式取決於 `Accept` 請求中發送的標頭。 以下 `Accept` 標題可用於清單架構：
 
 | `Accept` 標題 | 說明 |
 | --- | --- |
-| `application/vnd.adobe.xed-id+json` | 傳回每個資源的簡短摘要。 這是列出資源的建議標題。 (限制：300) |
-| `application/vnd.adobe.xed+json` | 傳回每個資源的完整JSON結構，並包含原始的`$ref`和`allOf`。 (限制：300) |
+| `application/vnd.adobe.xed-id+json` | 返回每個資源的簡短摘要。 這是列出資源的建議標頭。 (限制：300) |
+| `application/vnd.adobe.xed+json` | 為每個資源返回完整的JSON架構（原始） `$ref` 和 `allOf` 包含。 (限制：300) |
 
-{style=&quot;table-layout:auto&quot;}
+{style=&quot;table-layout:auto&quot;&quot;
 
 **回應**
 
-成功的響應返回一個已篩選的架構清單，該清單僅包含屬於已啟用聯合成員資格的指定類的架構。 請記住，使用多個查詢參數時，會假設為AND關係。
+成功的響應返回篩選的方案清單，其中只包含屬於已啟用聯合成員資格的指定類的方案。 請記住，當使用多個查詢參數時，會假定AND關係。
 
 ```JSON
 {

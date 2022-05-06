@@ -1,7 +1,8 @@
 ---
 title: 資料元素端點
-description: 了解如何在Reactor API中呼叫/data_elements端點。
-source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
+description: 瞭解如何調用Reactor API中的/data_elements端點。
+exl-id: ea346682-441b-415b-af06-094158eb7c71
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '1411'
 ht-degree: 6%
@@ -10,21 +11,21 @@ ht-degree: 6%
 
 # 資料元素端點
 
-資料元素的作用是變數，指向應用程式內的重要資料片段。 資料元素用於[rules](./rules.md)和[extension](./extensions.md)設定中。 在瀏覽器或應用程式的執行階段觸發規則時，會解析資料元素的值，並在規則內使用。 擴充功能設定的資料元素功能相同。
+資料元素用作一個變數，該變數指向應用程式內的重要資料。 資料元素在 [規則](./rules.md) 和 [擴展](./extensions.md) 配置。 在瀏覽器或應用程式的運行時觸發規則時，將解析資料元素的值並在規則內使用。 對於擴展配置，資料元素的作用相同。
 
-一起使用數個資料元素會產生資料字典或資料地圖。 此字典代表Adobe Experience Platform所知及可使用的資料。
+將多個資料元素一起使用會生成資料字典或資料映射。 這本字典是Adobe Experience Platform所瞭解和可以利用的資料。
 
-資料元素只屬於一個[property](./properties.md)。 屬性可以有許多資料元素。
+資料元素恰好屬於 [屬性](./properties.md)。 屬性可以包含許多資料元素。
 
-如需資料元素及其在標籤中使用的詳細資訊，請參閱UI檔案中的[資料元素指南](../../ui/managing-resources/data-elements.md)。
+有關資料元素及其在標籤中的使用的詳細資訊，請參見 [資料元素指南](../../ui/managing-resources/data-elements.md) 的子菜單。
 
 ## 快速入門
 
-本指南中使用的端點是[Reactor API](https://www.adobe.io/experience-platform-apis/references/reactor/)的一部分。 繼續操作之前，請參閱[快速入門手冊](../getting-started.md)，了解如何驗證API的重要資訊。
+本指南中使用的端點是 [反應堆API](https://www.adobe.io/experience-platform-apis/references/reactor/)。 在繼續之前，請查看 [入門指南](../getting-started.md) 有關如何驗證到API的重要資訊。
 
-## 擷取資料元素清單 {#list}
+## 檢索資料元素清單 {#list}
 
-您可以在GET請求的路徑中加入屬性的ID，以擷取屬性的資料元素清單。
+通過將屬性的ID包括在GET請求的路徑中，可以檢索屬性的資料元素清單。
 
 **API格式**
 
@@ -34,13 +35,13 @@ GET /properties/{PROPERTY_ID}/data_elements
 
 | 參數 | 說明 |
 | --- | --- |
-| `PROPERTY_ID` | 擁有資料元素的屬性的`id`。 |
+| `PROPERTY_ID` | 的 `id` 屬性的附件。 |
 
 {style=&quot;table-layout:auto&quot;}
 
 >[!NOTE]
 >
->您可以使用查詢參數，根據下列屬性來篩選列出的資料元素：<ul><li>`created_at`</li><li>`dirty`</li><li>`enabled`</li><li>`name`</li><li>`origin_id`</li><li>`published`</li><li>`published_at`</li><li>`revision_number`</li><li>`updated_at`</li></ul>如需詳細資訊，請參閱[篩選回應](../guides/filtering.md)的指南。
+>使用查詢參數，可以根據以下屬性篩選列出的資料元素：<ul><li>`created_at`</li><li>`dirty`</li><li>`enabled`</li><li>`name`</li><li>`origin_id`</li><li>`published`</li><li>`published_at`</li><li>`revision_number`</li><li>`updated_at`</li></ul>請參閱上的指南 [過濾響應](../guides/filtering.md) 的子菜單。
 
 **要求**
 
@@ -49,14 +50,14 @@ curl -X GET \
   https://reactor.adobe.io/properties/PR97d92a379a5f48758947cdf44f607a0d/data_elements \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
 
 **回應**
 
-成功的回應會傳回指定屬性的資料元素清單。
+成功的響應返回指定屬性的資料元素清單。
 
 ```json
 {
@@ -167,13 +168,13 @@ curl -X GET \
 }
 ```
 
-## 查詢資料元素 {#lookup}
+## 查找資料元素 {#lookup}
 
-您可以在資料元素的請求路徑中提供其ID，以便查找GET元素。
+通過在請求路徑中提供資料元素的ID，可以查找資料元素。
 
 >[!NOTE]
 >
->刪除資料元素時，資料元素會標示為已刪除，但實際上不會從系統中移除。 因此，可以查找已刪除的資料元素。 刪除的資料元素可以通過`data.meta.deleted_at`屬性的存在來識別。
+>刪除資料元素時，它們被標籤為已刪除，但實際上不會從系統中刪除。 因此，可以查找已刪除的資料元素。 刪除的資料元素可以通過 `data.meta.deleted_at` 屬性。
 
 **API格式**
 
@@ -183,9 +184,9 @@ GET /data_elements/{DATA_ELEMENT_ID}
 
 | 參數 | 說明 |
 | --- | --- |
-| `DATA_ELEMENT_ID` | 您要查詢的資料元素的`id`。 |
+| `DATA_ELEMENT_ID` | 的 `id` 查找的資料元素。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style=&quot;table-layout:auto&quot;&quot;
 
 **要求**
 
@@ -194,14 +195,14 @@ curl -X GET \
   https://reactor.adobe.io/data_elements/DE8097636264104451ac3a18c95d5ff833 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
 
 **回應**
 
-成功的回應會傳回資料元素的詳細資訊。
+成功的響應返回資料元素的詳細資訊。
 
 ```json
 {
@@ -303,7 +304,7 @@ curl -X GET \
 
 ## 建立資料元素 {#create}
 
-您可以提出POST要求，以建立新資料元素。
+通過發出POST請求，可以建立新資料元素。
 
 **API格式**
 
@@ -313,20 +314,20 @@ POST /properties/{PROPERTY_ID}/data_elements
 
 | 參數 | 說明 |
 | --- | --- |
-| `PROPERTY_ID` | 您要定義下的資料元素的[property](./properties.md)的`id`。 |
+| `PROPERTY_ID` | 的 `id` 的 [屬性](./properties.md) 定義資料元素。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style=&quot;table-layout:auto&quot;&quot;
 
 **要求**
 
-下列請求會為指定的屬性建立新的資料元素。 呼叫也會透過`relationships`屬性將資料元素與現有擴充功能建立關聯。 有關詳細資訊，請參閱[relationships](../guides/relationships.md)上的指南。
+以下請求為指定屬性建立新資料元素。 該調用還將資料元素與通過 `relationships` 屬性。 請參閱上的指南 [關係](../guides/relationships.md) 的子菜單。
 
 ```shell
 curl -X POST \
   https://reactor.adobe.io/properties/PR97d92a379a5f48758947cdf44f607a0d/data_elements \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'Content-Type: application/json' \
   -d '{
         "data": {
@@ -354,20 +355,20 @@ curl -X POST \
 
 | 屬性 | 說明 |
 | --- | --- |
-| `attributes.name` | **（必要）** 資料元素的人類看得懂的名稱。 |
-| `attributes.delegate_descriptor_id` | **（必要）** 將資料元素與擴充功能套件建立關聯的格式化字串。所有資料元素在首次建立時都必須與擴充功能套件相關聯，因為每個擴充功能套件都會定義其委派資料元素的相容類型，以及其預期行為。 如需詳細資訊，請參閱[委派描述元ID](../guides/delegate-descriptor-ids.md)上的指南。 |
-| `attributes.settings` | 以字串表示的設定JSON物件。 |
-| `attributes.default_value` | 若資料元素評估為`undefined`，則傳回的預設值。 |
-| `attributes.enabled` | 指示資料元素是否已啟用的布林值。 |
-| `attributes.force_lower_case` | 指示資料元素值在儲存之前是否應轉換為小寫的布林值。 |
-| `attributes.clean_text` | 一個布林值，指示在儲存前是否應從資料元素值中移除前導和尾隨空白字元。 |
-| `type` | 要更新的資源類型。 對於此端點，值必須為`data_elements`。 |
+| `attributes.name` | **（必需）** 資料元素的可讀名稱。 |
+| `attributes.delegate_descriptor_id` | **（必需）** 將資料元素與擴展包關聯的格式化字串。 所有資料元素在首次建立擴展包時都必須與它們關聯，因為每個擴展包都定義其委託資料元素的相容類型及其預期行為。 請參閱上的指南 [委託描述符ID](../guides/delegate-descriptor-ids.md) 的子菜單。 |
+| `attributes.settings` | 以字串表示的設定JSON對象。 |
+| `attributes.default_value` | 如果資料元素計算為，則返回的預設值 `undefined`。 |
+| `attributes.enabled` | 一個布爾值，指示是否啟用了資料元素。 |
+| `attributes.force_lower_case` | 一個布爾值，指示在儲存資料元素值之前是否應將其轉換為小寫。 |
+| `attributes.clean_text` | 一個布爾值，指示在儲存前是否應從資料元素值中刪除前導空格和尾隨空格。 |
+| `type` | 要更新的資源類型。 對於此終結點，值必須為 `data_elements`。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style=&quot;table-layout:auto&quot;&quot;
 
 **回應**
 
-成功的回應會傳回新建立資料元素的詳細資訊。
+成功的響應將返回新建立的資料元素的詳細資訊。
 
 ```json
 {
@@ -469,7 +470,7 @@ curl -X POST \
 
 ## 更新資料元素 {#update}
 
-您可以在PATCH請求的路徑中加入資料元素ID，以更新資料元素。
+可以通過在PATCH請求的路徑中包含資料元素的ID來更新該資料元素。
 
 **API格式**
 
@@ -479,20 +480,20 @@ PATCH /data_elements/{DATA_ELEMENT_ID}
 
 | 參數 | 說明 |
 | --- | --- |
-| `DATA_ELEMENT_ID` | 要更新的資料元素的`id`。 |
+| `DATA_ELEMENT_ID` | 的 `id` 要更新的資料元素。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style=&quot;table-layout:auto&quot;&quot;
 
 **要求**
 
-下列請求會更新現有資料元素的`name`。
+以下請求更新 `name` 的子菜單。
 
 ```shell
 curl -X PATCH \
   https://reactor.adobe.io/data_elements/DE3fab176ccf8641838b3da59f716fc42b \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'Content-Type: application/json' \
   -d '{
         "data": {
@@ -507,15 +508,15 @@ curl -X PATCH \
 
 | 屬性 | 說明 |
 | --- | --- |
-| `attributes` | 一個物件，其屬性代表要為資料元素更新的屬性。 可更新所有資料元素屬性。 如需屬性清單及其使用案例，請參閱[建立資料元素](#create)的範例呼叫。 |
-| `id` | 您要更新之資料元素的`id`。 這應符合要求路徑中提供的`{DATA_ELEMENT_ID}`值。 |
-| `type` | 要更新的資源類型。 對於此端點，值必須為`data_elements`。 |
+| `attributes` | 其屬性表示要為資料元素更新的屬性的對象。 可以更新所有資料元素屬性。 請參閱的示例調用 [建立資料元素](#create) 的子菜單。 |
+| `id` | 的 `id` 要更新的資料元素。 這應與 `{DATA_ELEMENT_ID}` 請求路徑中提供的值。 |
+| `type` | 要更新的資源類型。 對於此終結點，值必須為 `data_elements`。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style=&quot;table-layout:auto&quot;&quot;
 
 **回應**
 
-成功的回應會傳回更新資料元素的詳細資訊。
+成功的響應返回更新的資料元素的詳細資訊。
 
 ```json
 {
@@ -617,9 +618,9 @@ curl -X PATCH \
 
 ## 修訂資料元素 {#revise}
 
-修訂資料元素時，會使用目前（標題）修訂建立資料元素的新修訂。 資料元素的每個修訂版本都有其專屬的ID。 原始資料元素可通過原始連結被發現。
+修訂資料元素時，將使用當前（頭）修訂建立資料元素的新修訂。 資料元素的每個修訂版本都將具有自己的ID。 原始資料元素可通過原始連結被發現。
 
-您可以在PATCH請求內文中提供`meta.action`屬性，其值為`revise`，以修訂資料元素。
+通過提供 `meta.action` 值為 `revise` 在PATCH請求中。
 
 **API格式**
 
@@ -629,9 +630,9 @@ PATCH /data_elements/{DATA_ELEMENT_ID}
 
 | 參數 | 說明 |
 | --- | --- |
-| `DATA_ELEMENT_ID` | 要修訂的資料元素的`id`。 |
+| `DATA_ELEMENT_ID` | 的 `id` 要修訂的資料元素。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style=&quot;table-layout:auto&quot;&quot;
 
 **要求**
 
@@ -640,7 +641,7 @@ curl -X PATCH \
   https://reactor.adobe.io/data_elements/DE3fab176ccf8641838b3da59f716fc42b \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'Content-Type: application/json' \
   -d '{
         "data": {
@@ -658,16 +659,16 @@ curl -X PATCH \
 
 | 屬性 | 說明 |
 | --- | --- |
-| `attributes` | 一個物件，其屬性代表要為資料元素更新的屬性。 可更新所有資料元素屬性。 如需屬性清單及其使用案例，請參閱[建立資料元素](#create)的範例呼叫。 |
-| `meta.action` | 當包含`revise`值時，此屬性表示應為資料元素建立新修訂。 |
-| `id` | 要修訂的資料元素的`id`。 這應符合要求路徑中提供的`{DATA_ELEMENT_ID}`值。 |
-| `type` | 要修訂的資源類型。 對於此端點，值必須為`data_elements`。 |
+| `attributes` | 其屬性表示要為資料元素更新的屬性的對象。 可以更新所有資料元素屬性。 請參閱的示例調用 [建立資料元素](#create) 的子菜單。 |
+| `meta.action` | 當包含值為 `revise`，此屬性表示應為資料元素建立新修訂。 |
+| `id` | 的 `id` 的子菜單。 這應與 `{DATA_ELEMENT_ID}` 請求路徑中提供的值。 |
+| `type` | 要修訂的資源類型。 對於此終結點，值必須為 `data_elements`。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style=&quot;table-layout:auto&quot;&quot;
 
 **回應**
 
-成功的回應會傳回資料元素的新修訂的詳細資訊，如遞增的`meta.latest_revision_number`屬性所示。
+成功的響應返回資料元素的新修訂版本的詳細資訊，如增量所示 `meta.latest_revision_number` 屬性。
 
 ```json
 {
@@ -769,7 +770,7 @@ curl -X PATCH \
 
 ## 刪除資料元素
 
-您可以在DELETE請求的路徑中加入資料元素ID，以刪除該資料元素。
+通過將資料元素的ID包括在DELETE請求的路徑中，可以刪除該資料元素。
 
 **API格式**
 
@@ -779,9 +780,9 @@ DELETE /data_elements/{DATA_ELEMENT_ID}
 
 | 參數 | 說明 |
 | --- | --- |
-| `DATA_ELEMENT_ID` | 要刪除的資料元素的`id`。 |
+| `DATA_ELEMENT_ID` | 的 `id` 的子菜單。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style=&quot;table-layout:auto&quot;&quot;
 
 **要求**
 
@@ -790,26 +791,26 @@ curl -X DELETE \
   https://reactor.adobe.io/data_elements/DE3fab176ccf8641838b3da59f716fc42b \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}'
+  -H 'x-gw-ims-org-id: {ORG_ID}'
 ```
 
 **回應**
 
-成功的回應會傳回HTTP狀態204（無內容），但沒有回應內文，表示資料元素已刪除。
+成功的響應返回沒有響應正文的HTTP狀態204（無內容），表示資料元素已被刪除。
 
-## 管理資料元素的附註 {#notes}
+## 管理資料元素的注釋 {#notes}
 
-資料元素是「顯著」資源，這表示您可以針對每個個別資源建立和擷取文字型附註。 有關如何管理資料元素和其他相容資源的附註的詳細資訊，請參閱[附註端點指南](./notes.md)。
+資料元素是「顯著」資源，這意味著您可以建立和檢索每個資源上基於文本的注釋。 查看 [notes endpoint guide（注釋終結點指南）](./notes.md) 的子菜單。
 
-## 擷取資料元素的相關資源 {#related}
+## 檢索資料元素的相關資源 {#related}
 
-下列呼叫示範如何擷取資料元素的相關資源。 當[查找資料元素](#lookup)時，這些關係將列在`relationships`屬性下。
+以下調用演示如何檢索資料元素的相關資源。 當 [查找資料元素](#lookup)，這些關係列在 `relationships` 屬性。
 
-有關Reactor API中關係的詳細資訊，請參閱[關係指南](../guides/relationships.md)。
+查看 [關係指南](../guides/relationships.md) 的子菜單。
 
-### 列出資料元素的相關程式庫 {#libraries}
+### 列出資料元素的相關庫 {#libraries}
 
-您可以將`/libraries`附加至查詢請求的路徑，以列出使用資料元素的程式庫。
+可通過附加來列出利用資料元素的庫 `/libraries` 查找請求的路徑。
 
 **API格式**
 
@@ -819,9 +820,9 @@ GET  /data_elements/{DATA_ELEMENT_ID}/libraries
 
 | 參數 | 說明 |
 | --- | --- |
-| `{DATA_ELEMENT_ID}` | 您要列出其程式庫的資料元素的`id`。 |
+| `{DATA_ELEMENT_ID}` | 的 `id` 列出其庫的資料元素。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style=&quot;table-layout:auto&quot;&quot;
 
 **要求**
 
@@ -830,14 +831,14 @@ curl -X GET \
   https://reactor.adobe.io/data_elements/DE3fab176ccf8641838b3da59f716fc42b/libraries \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
 
 **回應**
 
-成功的回應會傳回使用指定資料元素的程式庫清單。
+成功的響應返回使用指定資料元素的庫清單。
 
 ```json
 {
@@ -931,7 +932,7 @@ curl -X GET \
 
 ### 列出資料元素的相關修訂 {#revisions}
 
-您可以將`/revisions`附加至查詢請求的路徑，以列出資料元素的先前修訂版本。
+可通過附加來列出資料元素的先前修訂 `/revisions` 查找請求的路徑。
 
 **API格式**
 
@@ -941,9 +942,9 @@ GET  /data_elements/{DATA_ELEMENT_ID}/revisions
 
 | 參數 | 說明 |
 | --- | --- |
-| `{DATA_ELEMENT_ID}` | 要列出其修訂版本的資料元素的`id`。 |
+| `{DATA_ELEMENT_ID}` | 的 `id` 要列出其修訂的資料元素。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style=&quot;table-layout:auto&quot;&quot;
 
 **要求**
 
@@ -952,14 +953,14 @@ curl -X GET \
   https://reactor.adobe.io/data_elements/DE3fab176ccf8641838b3da59f716fc42b/revisions \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
 
 **回應**
 
-成功的回應會傳回指定資料元素的修訂清單。
+成功的響應返回指定資料元素的修訂清單。
 
 ```json
 {
@@ -1163,9 +1164,9 @@ curl -X GET \
 }
 ```
 
-### 查詢資料元素的相關擴充功能 {#extension}
+### 查找資料元素的相關擴展 {#extension}
 
-您可以借由將`/extension`附加至GET請求的路徑，來尋找使用資料元素的擴充功能。
+可通過附加來查找利用資料元素的擴展 `/extension` 到GET請求的路徑。
 
 **API格式**
 
@@ -1175,9 +1176,9 @@ GET  /data_elements/{DATA_ELEMENT_ID}/extension
 
 | 參數 | 說明 |
 | --- | --- |
-| `{DATA_ELEMENT_ID}` | 您要查詢其擴充功能的資料元素的`id`。 |
+| `{DATA_ELEMENT_ID}` | 的 `id` 要查找其副檔名的資料元素。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style=&quot;table-layout:auto&quot;&quot;
 
 **要求**
 
@@ -1186,14 +1187,14 @@ curl -X GET \
   https://reactor.adobe.io/data_elements/DE3fab176ccf8641838b3da59f716fc42b/extension \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
 
 **回應**
 
-成功的回應會傳回使用指定資料元素之擴充功能的詳細資料。
+成功的響應返回使用指定資料元素的擴展的詳細資訊。
 
 ```json
 {
@@ -1283,9 +1284,9 @@ curl -X GET \
 }
 ```
 
-### 查找資料元素的相關來源 {#origin}
+### 查找資料元素的相關原點 {#origin}
 
-您可以將`/origin`附加至GET請求的路徑，以尋找資料元素的來源。 資料元素的來源是先前為建立當前修訂而更新的修訂。
+可通過附加來查找資料元素的原點 `/origin` 到GET請求的路徑。 資料元素的原點是以前的修訂版本，它已更新以建立當前修訂版本。
 
 **API格式**
 
@@ -1295,9 +1296,9 @@ GET  /data_elements/{DATA_ELEMENT_ID}/origin
 
 | 參數 | 說明 |
 | --- | --- |
-| `{DATA_ELEMENT_ID}` | 您要查找其來源的資料元素的`id`。 |
+| `{DATA_ELEMENT_ID}` | 的 `id` 要查找其原點的資料元素。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style=&quot;table-layout:auto&quot;&quot;
 
 **要求**
 
@@ -1306,14 +1307,14 @@ curl -X GET \
   https://reactor.adobe.io/data_elements/DE3fab176ccf8641838b3da59f716fc42b/origin \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
 
 **回應**
 
-成功的回應會傳回指定資料元素來源的詳細資訊。
+成功的響應返回指定資料元素來源的詳細資訊。
 
 ```json
 {
@@ -1413,9 +1414,9 @@ curl -X GET \
 }
 ```
 
-### 查詢資料元素的相關屬性 {#property}
+### 查找資料元素的相關屬性 {#property}
 
-您可以將`/property`附加至GET請求的路徑，以尋找擁有資料元素的屬性。
+通過附加，可以查找擁有資料元素的屬性 `/property` 到GET請求的路徑。
 
 **API格式**
 
@@ -1425,9 +1426,9 @@ GET  /data_elements/{DATA_ELEMENT_ID}/property
 
 | 參數 | 說明 |
 | --- | --- |
-| `{DATA_ELEMENT_ID}` | 您要查詢其屬性的資料元素的`id`。 |
+| `{DATA_ELEMENT_ID}` | 的 `id` 要查找其屬性的資料元素。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style=&quot;table-layout:auto&quot;&quot;
 
 **要求**
 
@@ -1436,14 +1437,14 @@ curl -X GET \
   https://reactor.adobe.io/data_elements/DE3fab176ccf8641838b3da59f716fc42b/property \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
 
 **回應**
 
-成功的回應會傳回擁有指定資料元素之屬性的詳細資訊。
+成功的響應返回擁有指定資料元素的屬性的詳細資訊。
 
 ```json
 {

@@ -1,36 +1,37 @@
 ---
-keywords: Experience Platform；首頁；熱門主題；來源；連接器；來源連接器；來源sdk;sdk; SDK
-title: 使用流量服務API（測試版）更新流量規格
+keywords: Experience Platform；首頁；熱門主題；源；連接器；源連接器；源sdk;sdk;SDK
+title: 使用流服務API(Beta)更新流規範
 topic-legacy: developer guide
-description: 以下檔案提供如何使用來源SDK的流量服務API來擷取和更新流量規格的步驟。
+description: 以下文檔提供了如何使用Flow Service API for Sources SDK檢索和更新流規範的步驟。
 hide: true
 hidefromtoc: true
-source-git-commit: d98cf404fd1a4d150f202154aba87b0089418957
+exl-id: 67a0cd3e-ac18-43a4-aa22-8f6376d5cc3f
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '432'
 ht-degree: 1%
 
 ---
 
-# 使用更新流量規格 [!DNL Flow Service] API（測試版）
+# 使用 [!DNL Flow Service] API(Beta)
 
 >[!IMPORTANT]
 >
->Sources SDK目前仍在測試階段，而您的組織可能尚未取得存取權。 本檔案所述的功能可能會有所變更。
+>源SDK當前處於測試版中，您的組織可能尚未訪問它。 本文檔中描述的功能可能會發生更改。
 
-生成新的連接規範ID後，必須將此ID添加到流規範中，才能建立資料流。
+生成新連接規範ID後，必須將此ID添加到流規範中才能建立資料流。
 
-流規範包含定義流的資訊，包括它支援的源和目標連接ID、需要應用於資料的轉換規範，以及生成流所需的調度參數。 您可以使用 `/flowSpecs` 端點。
+流規範包含定義流的資訊，包括它支援的源連接ID和目標連接ID、需要應用到資料的轉換規範以及生成流所需的調度參數。 可以使用 `/flowSpecs` 端點。
 
-以下文檔提供了有關如何使用 [!DNL Flow Service] 來源SDK的API。
+以下文檔提供了有關如何使用 [!DNL Flow Service] 源SDK的API。
 
 ## 快速入門
 
-繼續之前，請檢閱 [快速入門手冊](./getting-started.md) 如需相關檔案的連結，請參閱本檔案中讀取範例API呼叫的指南，以及成功呼叫任何Experience PlatformAPI所需的必要標頭重要資訊。
+在繼續之前，請查看 [入門指南](./getting-started.md) 有關相關文檔的連結、閱讀本文檔中示例API調用的指南，以及有關成功調用任何Experience PlatformAPI所需標頭的重要資訊。
 
 ## 查找流規範 {#lookup}
 
-使用建立的來源 `generic-rest-extension` 範本全部使用 `RestStorageToAEP` 流量規格。 此流規範可借由向 `/flowSpecs/` 端點，並提供 `flowSpec.id` of `6499120c-0b15-42dc-936e-847ea3c24d72`.
+使用 `generic-rest-extension` 模板全部使用 `RestStorageToAEP` 流規範。 可通過向Web伺服器發出GET請求來檢索此流規範 `/flowSpecs/` 端點，並提供 `flowSpec.id` 共 `6499120c-0b15-42dc-936e-847ea3c24d72`。
 
 **API格式**
 
@@ -40,7 +41,7 @@ GET /flowSpecs/6499120c-0b15-42dc-936e-847ea3c24d72
 
 **要求**
 
-下列請求會擷取 `6499120c-0b15-42dc-936e-847ea3c24d72` 連接規範。
+以下請求將檢索 `6499120c-0b15-42dc-936e-847ea3c24d72` 連接規範。
 
 ```shell
 curl -X GET \
@@ -48,7 +49,7 @@ curl -X GET \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' 
 ```
 
@@ -69,7 +70,7 @@ curl -X GET \
           "updatedClient": "{UPDATED_CLIENT}",
           "sandboxId": "{SANDBOX_ID}",
           "sandboxName": "{SANDBOX_NAME}",
-          "imsOrgId": "{IMS_ORG}",
+          "imsOrgId": "{ORG_ID}",
           "name": "RestStorageToAEP",
           "providerId": "0ed90a81-07f4-4586-8190-b40eccef1c5a",
           "version": "1.0",
@@ -243,7 +244,7 @@ curl -X GET \
 
 >[!IMPORTANT]
 >
->您必須更新 `sourceConnectionSpecIds` 流規格的值，該流規格在每次建立新源時都與新源相對應。 這可確保現有流規範支援新源，從而允許您使用新源完成資料流建立過程。
+>必須更新 `sourceConnectionSpecIds` 在每次建立新源時對應於新源的流規範。 這可確保現有流規範支援新源，從而允許您使用新源完成資料流建立過程。
 
 **API格式**
 
@@ -253,7 +254,7 @@ PUT /flowSpecs/6499120c-0b15-42dc-936e-847ea3c24d72
 
 **要求**
 
-以下請求更新 `6499120c-0b15-42dc-936e-847ea3c24d72` 包括連接規範ID `f6c0de0c-0a42-4cd9-9139-8768bf2f1b55`.
+以下請求更新了 `6499120c-0b15-42dc-936e-847ea3c24d72` 要包括連接規範ID `f6c0de0c-0a42-4cd9-9139-8768bf2f1b55`。
 
 ```shell
 PUT -X GET \
@@ -261,7 +262,7 @@ PUT -X GET \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
   -d '{
 `     "id": "6499120c-0b15-42dc-936e-847ea3c24d72",
@@ -435,7 +436,7 @@ PUT -X GET \
 
 **回應**
 
-成功的響應返回查詢的流規範的詳細資訊，包括其更新的清單 `sourceConnectionSpecIds`.
+成功的響應返回查詢的流規範的詳細資訊，包括其更新清單 `sourceConnectionSpecIds`。
 
 ```json
 {
@@ -445,7 +446,7 @@ PUT -X GET \
     "updatedClient": "{UPDATED_CLIENT}",
     "sandboxId": "{SANDBOX_ID}",
     "sandboxName": "{SANDBOX_NAME}",
-    "imsOrgId": "{IMS_ORG}",
+    "imsOrgId": "{ORG_ID}",
     "name": "RestStorageToAEP",
     "providerId": "0ed90a81-07f4-4586-8190-b40eccef1c5a",
     "version": "1.0",
@@ -616,4 +617,4 @@ PUT -X GET \
 
 ## 後續步驟
 
-將新連接規範添加到相應的流規範後，您現在可以繼續測試和提交新源。 請參閱 [測試和提交新源](./submit.md) 以取得更多資訊。
+將新連接規範添加到相應的流規範後，您現在可以繼續測試和提交新源。 請參閱上的指南 [測試和提交新源](./submit.md) 的子菜單。

@@ -1,48 +1,48 @@
 ---
-keywords: Experience Platform；首頁；熱門主題；API; XDM; XDM系統；體驗資料模型；體驗資料模型；資料模型；結構註冊表；結構註冊表；結構；結構；結構；結構；關係；關係描述元；關係描述元；關係描述元；參考身分；參考身分；
+keywords: Experience Platform；主題；熱門主題；api;XDM;XDM;XDM系統；經驗資料模型；體驗資料模型；資料模型；資料模型；資料模型；架構註冊；架構；架構；架構；架構；關係；關係描述符；關係描述符；參考身份；
 solution: Experience Platform
-title: 使用結構註冊表API定義兩個結構之間的關係
-description: 本檔案提供教學課程，說明如何使用Schema Registry API，定義貴組織所定義的兩個結構之間的一對一關係。
+title: 使用架構註冊表API定義兩個架構之間的關係
+description: 本文檔提供了一個教程，用於定義組織使用架構註冊表API定義的兩個架構之間的一對一關係。
 topic-legacy: tutorial
 type: Tutorial
 exl-id: ef9910b5-2777-4d8b-a6fe-aee51d809ad5
-source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '1365'
 ht-degree: 2%
 
 ---
 
-# 使用[!DNL Schema Registry] API定義兩個結構之間的關係
+# 使用 [!DNL Schema Registry] API
 
-了解客戶之間的關係，以及客戶在不同管道與品牌互動的能力，是Adobe Experience Platform的重要一環。 在[!DNL Experience Data Model](XDM)結構內定義這些關係，可讓您對客戶資料獲得複雜的深入分析。
+瞭解客戶之間的關係以及客戶與品牌之間通過各種渠道進行的互動是Adobe Experience Platform的重要部分。 在結構中定義這些關係 [!DNL Experience Data Model] (XDM)架構使您能夠對客戶資料獲得複雜的見解。
 
-雖然可透過使用聯合架構和[!DNL Real-time Customer Profile]來推斷架構關係，但這隻適用於共用相同類別的架構。 要在屬於不同類的兩個架構之間建立關係，必須將專用的關係欄位添加到源架構中，該源架構引用目標架構的標識。
+而架構關係可通過使用聯合架構和 [!DNL Real-time Customer Profile]，這僅適用於共用同一類的方案。 要在屬於不同類的兩個架構之間建立關係，必須將專用關係欄位添加到引用目標架構標識的源架構中。
 
-本檔案提供教學課程，說明如何使用[[!DNL Schema Registry API]](https://www.adobe.io/experience-platform-apis/references/schema-registry/)來定義貴組織所定義的兩個結構之間的一對一關係。
+本文檔提供了一個教程，用於定義由您的組織使用 [[!DNL Schema Registry API]](https://www.adobe.io/experience-platform-apis/references/schema-registry/)。
 
 ## 快速入門
 
-本教學課程需要妥善了解[!DNL Experience Data Model](XDM)和[!DNL XDM System]。 開始本教學課程之前，請檢閱下列檔案：
+本教程要求您對 [!DNL Experience Data Model] (XDM)和 [!DNL XDM System]。 在開始本教程之前，請查看以下文檔：
 
-* [Experience Platform中的XDM系統](../home.md):概略說明XDM及其實作方 [!DNL Experience Platform]式。
-   * [結構構成基本概念](../schema/composition.md):介紹XDM結構的建置組塊。
-* [[!DNL Real-time Customer Profile]](../../profile/home.md):根據來自多個來源的匯總資料，提供統一的即時消費者設定檔。
-* [沙箱](../../sandboxes/home.md): [!DNL Experience Platform] 提供可將單一執行個體分割成個 [!DNL Platform] 別虛擬環境的虛擬沙箱，以協助開發及改進數位體驗應用程式。
+* [XDM系統在Experience Platform](../home.md):XDM及其在XDM中的應用 [!DNL Experience Platform]。
+   * [架構組合的基礎](../schema/composition.md):介紹了XDM模式的構件。
+* [[!DNL Real-time Customer Profile]](../../profile/home.md):基於來自多個源的聚合資料提供統一、即時的用戶配置檔案。
+* [沙箱](../../sandboxes/home.md): [!DNL Experience Platform] 提供虛擬沙箱，將單個沙箱 [!DNL Platform] 實例到獨立的虛擬環境，以幫助開發和發展數字型驗應用程式。
 
-開始本教學課程之前，請檢閱[開發人員指南](../api/getting-started.md)，以取得您需要了解的重要資訊，以便成功呼叫[!DNL Schema Registry] API。 這包括您的`{TENANT_ID}`、「容器」的概念，以及提出請求所需的標題（請特別注意[!DNL Accept]標題及其可能的值）。
+在開始本教程之前，請複習 [開發者指南](../api/getting-started.md) 獲取您需要瞭解的重要資訊，以便成功撥打 [!DNL Schema Registry] API。 這包括您 `{TENANT_ID}`、&quot;容器&quot;的概念以及提出請求所需的標題(特別注意 [!DNL Accept] 標題及其可能值)。
 
 ## 定義源和目標架構 {#define-schemas}
 
-您應已建立將在關係中定義的兩個結構。 本教學課程會在組織的目前忠誠計畫（在「[!DNL Loyalty Members]」架構中定義）的成員與其最喜愛的酒店（在「[!DNL Hotels]」架構中定義）之間建立關係。
+預期您已經建立了將在關係中定義的兩個架構。 本教程在組織的當前會員計畫（在「」中定義）的成員之間建立關係[!DNL Loyalty Members]&quot;架構及其最喜愛的酒店(在「[!DNL Hotels]&quot;架構)。
 
-架構關係由&#x200B;**源架構**&#x200B;表示，該源架構具有引用&#x200B;**目標架構**&#x200B;內另一欄位的欄位。 在後續步驟中，「[!DNL Loyalty Members]」將是源架構，而「[!DNL Hotels]」將充當目標架構。
+架構關係由 **源架構** 有一個欄位，該欄位引用 **目標架構**。 在後續步驟中， &quot;[!DNL Loyalty Members]&quot;將是源架構，而&quot;[!DNL Hotels]&quot;將用作目標架構。
 
 >[!IMPORTANT]
 >
->若要建立關係，兩個結構都必須定義主要身分，並且必須為[!DNL Real-time Customer Profile]啟用。 如果您需要如何據以設定結構的指引，請參閱架構建立教學課程中[啟用結構以用於Profile](./create-schema-api.md#profile)的一節。
+>要建立關係，兩個方案必須都定義了主標識並且都為 [!DNL Real-time Customer Profile]。 請參閱 [啟用在配置檔案中使用的架構](./create-schema-api.md#profile) 在架構建立教程中，如果您需要有關如何相應地配置架構的指導。
 
-若要定義兩個結構之間的關係，您必須先取得兩個結構的`$id`值。 如果您知道結構的顯示名稱(`title`)，則可以在[!DNL Schema Registry] API中向`/tenant/schemas`端點提出GET要求，以找到其`$id`值。
+要定義兩個方案之間的關係，必須首先獲取 `$id` 兩個方案的值。 如果您知道顯示名稱(`title`)，您可以找到 `$id` 值，方法是向 `/tenant/schemas` 端點 [!DNL Schema Registry] API。
 
 **API格式**
 
@@ -57,18 +57,18 @@ curl -X GET \
   https://platform.adobe.io/data/foundation/schemaregistry/tenant/schemas \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -H 'Accept: application/vnd.adobe.xed-id+json'
 ```
 
 >[!NOTE]
 >
->[!DNL Accept]標題`application/vnd.adobe.xed-id+json`僅傳回結果結構的標題、ID和版本。
+>的 [!DNL Accept] 標題 `application/vnd.adobe.xed-id+json` 僅返回結果架構的標題、ID和版本。
 
 **回應**
 
-成功的回應會傳回您的組織所定義的結構清單，包括其`name`、`$id`、`meta:altId`和`version`。
+成功的響應返回由組織定義的方案清單，包括其 `name`。 `$id`。 `meta:altId`, `version`。
 
 ```json
 {
@@ -106,25 +106,25 @@ curl -X GET \
 }
 ```
 
-記錄要定義兩者間關係的`$id`值。 這些值將用於後續步驟。
+錄制 `$id` 要定義之間關係的兩個方案的值。 這些值將在後續步驟中使用。
 
-## 為源架構定義引用欄位
+## 定義源方案的引用欄位
 
-在[!DNL Schema Registry]中，關係描述符的工作方式與關係資料庫表中的外鍵類似：源架構中的欄位用作目標架構的主標識欄位的引用。 如果源架構沒有用於此目的的欄位，則可能需要使用新欄位建立架構欄位組，並將其添加到架構中。 此新欄位的`type`值必須為「[!DNL string]」。
+在 [!DNL Schema Registry]，關係描述符在關係資料庫表中的工作與外鍵類似：源架構中的欄位用作對目標架構的主標識欄位的引用。 如果源架構沒有用於此目的的欄位，則可能需要使用新欄位建立架構欄位組並將其添加到架構中。 此新欄位必須具有 `type` 值&quot;[!DNL string]。
 
 >[!IMPORTANT]
 >
 >與目標架構不同，源架構不能將其主標識用作引用欄位。
 
-在本教程中，目標架構「[!DNL Hotels]」包含`hotelId`欄位，該欄位用作架構的主要標識，因此也將用作其引用欄位。 但是，源架構「[!DNL Loyalty Members]」沒有專用欄位可用作引用，必須為其指定一個新欄位組，以向架構添加新欄位：`favoriteHotel`。
+在本教程中，目標架構「」[!DNL Hotels]&quot;包含 `hotelId` 作為架構主標識的欄位，因此也將用作其引用欄位。 但是，源架構&quot;[!DNL Loyalty Members]&quot;沒有要用作引用的專用欄位，並且必須給它一個新的欄位組，該欄位組將新欄位添加到架構中： `favoriteHotel`。
 
 >[!NOTE]
 >
->如果源架構已有您計畫用作參考欄位的專用欄位，則可跳到[建立參考描述符](#reference-identity)上的步驟。
+>如果源架構已有一個您計畫用作引用欄位的專用欄位，則可以跳到上的步驟 [建立引用描述符](#reference-identity)。
 
-### 建立新欄位群組
+### 建立新欄位組
 
-若要將新欄位新增至結構，必須先在欄位群組中定義欄位。 您可以向`/tenant/fieldgroups`端點提出POST請求，以建立新欄位組。
+要向架構添加新欄位，必須先在欄位組中定義該欄位。 您可以通過向 `/tenant/fieldgroups` 端點。
 
 **API格式**
 
@@ -134,14 +134,14 @@ POST /tenant/fieldgroups
 
 **要求**
 
-下列請求會建立新欄位群組，在其新增至之任何架構的`_{TENANT_ID}`命名空間下新增`favoriteHotel`欄位。
+以下請求將建立一個新欄位組， `favoriteHotel` 欄位 `_{TENANT_ID}` 添加到的任何架構的命名空間。
 
 ```shell
 curl -X POST\
   https://platform.adobe.io/data/foundation/schemaregistry/tenant/fieldgroups \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -H 'content-type: application/json' \
   -d '{
@@ -175,7 +175,7 @@ curl -X POST\
 
 **回應**
 
-成功的回應會傳回新建立欄位群組的詳細資訊。
+成功的響應將返回新建立的欄位組的詳細資訊。
 
 ```json
 {
@@ -228,15 +228,15 @@ curl -X POST\
 
 | 屬性 | 說明 |
 | --- | --- |
-| `$id` | 只讀，系統生成新欄位組的唯一標識符。 以URI的形式。 |
+| `$id` | 只讀，系統生成了新欄位組的唯一標識符。 以URI的形式。 |
 
 {style=&quot;table-layout:auto&quot;}
 
-記錄欄位組的`$id` URI，以用於將欄位組添加到源架構的下一步。
+錄制 `$id` 將欄位組添加到源架構的下一步中使用的欄位組的URI。
 
 ### 將欄位組添加到源架構
 
-建立欄位組後，可以通過向`/tenant/schemas/{SCHEMA_ID}`端點發出PATCH請求將其添加到源架構。
+建立欄位組後，可以通過向PATCH請求將其添加到源架構 `/tenant/schemas/{SCHEMA_ID}` 端點。
 
 **API格式**
 
@@ -246,13 +246,13 @@ PATCH /tenant/schemas/{SCHEMA_ID}
 
 | 參數 | 說明 |
 | --- | --- |
-| `{SCHEMA_ID}` | 源架構的URL編碼的`$id` URI或`meta:altId`。 |
+| `{SCHEMA_ID}` | URL編碼 `$id` URI或 `meta:altId` 源架構。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style=&quot;table-layout:auto&quot;&quot;
 
 **要求**
 
-以下請求將「[!DNL Favorite Hotel]」欄位組添加到「[!DNL Loyalty Members]」架構中。
+以下請求將添加「[!DNL Favorite Hotel]&quot;欄位組到&quot;[!DNL Loyalty Members]&quot;架構。
 
 ```shell
 curl -X PATCH \
@@ -260,7 +260,7 @@ curl -X PATCH \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '[
     { 
@@ -275,15 +275,15 @@ curl -X PATCH \
 
 | 屬性 | 說明 |
 | --- | --- |
-| `op` | 要執行的PATCH操作。 此請求使用`add`操作。 |
-| `path` | 新增新資源的架構欄位路徑。 將欄位群組新增至結構時，值必須是「/allOf/ — 」。 |
-| `value.$ref` | 要添加的欄位組的`$id`。 |
+| `op` | 要執行的PATCH操作。 此請求使用 `add` 的下界。 |
+| `path` | 將添加新資源的架構欄位的路徑。 將欄位組添加到架構時，值必須為「/allOf/ — 」。 |
+| `value.$ref` | 的 `$id` 的子菜單。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style=&quot;table-layout:auto&quot;&quot;
 
 **回應**
 
-成功的回應會傳回更新架構的詳細資訊，現在包含新增欄位群組`allOf`陣列下的`$ref`值。
+成功的響應返回更新的架構的詳細資訊，現在包括 `$ref` 其下添加的欄位組的值 `allOf` 陣列。
 
 ```json
 {
@@ -319,7 +319,7 @@ curl -X PATCH \
     "meta:abstract": false,
     "meta:extensible": false,
     "meta:tenantNamespace": "_{TENANT_ID}",
-    "imsOrg": "{IMS_ORG}",
+    "imsOrg": "{ORG_ID}",
     "meta:extends": [
         "https://ns.adobe.com/xdm/context/profile",
         "https://ns.adobe.com/xdm/data/record",
@@ -344,9 +344,9 @@ curl -X PATCH \
 
 ## 建立引用標識描述符 {#reference-identity}
 
-如果方案欄位用作關係中其他方案的引用，則必須將引用標識描述符應用到它們。 由於「[!DNL Loyalty Members]」中的`favoriteHotel`欄位將引用「[!DNL Hotels]」中的`hotelId`欄位，因此`hotelId`必須獲得引用標識描述符。
+如果將架構欄位用作關係中其他架構的引用，則必須將引用標識描述符應用於它們。 自 `favoriteHotel` 欄位「」[!DNL Loyalty Members]」將引用 `hotelId` 欄位「」[!DNL Hotels]&quot; `hotelId` 必須給出引用標識描述符。
 
-通過向`/tenant/descriptors`端點發出POST請求，為目標架構建立引用描述符。
+通過向目標架構發出POST請求，為目標架構建立引用描述符 `/tenant/descriptors` 端點。
 
 **API格式**
 
@@ -356,14 +356,14 @@ POST /tenant/descriptors
 
 **要求**
 
-以下請求為目標架構「[!DNL Hotels]」中的`hotelId`欄位建立引用描述符。
+以下請求為 `hotelId` 目標架構「」中的欄位[!DNL Hotels]。
 
 ```shell
 curl -X POST \
   https://platform.adobe.io/data/foundation/schemaregistry/tenant/descriptors \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -H 'Content-Type: application/json' \
   -d '{
@@ -377,17 +377,17 @@ curl -X POST \
 
 | 參數 | 說明 |
 | --- | --- |
-| `@type` | 要定義的描述符的類型。 對於引用描述符，值必須是&quot;xdm:descriptorReferenceIdentity&quot;。 |
-| `xdm:sourceSchema` | 目標架構的`$id` URL。 |
+| `@type` | 正在定義的描述符的類型。 對於引用描述符，值必須為&quot;xdm:descriptorReferenceIdentity&quot;。 |
+| `xdm:sourceSchema` | 的 `$id` 目標架構的URL。 |
 | `xdm:sourceVersion` | 目標架構的版本號。 |
-| `sourceProperty` | 目標架構的主要身份欄位的路徑。 |
-| `xdm:identityNamespace` | 參考欄位的身分命名空間。 這必須與將欄位定義為架構的主要身分時使用的命名空間相同。 如需詳細資訊，請參閱[身分命名空間概述](../../identity-service/home.md) 。 |
+| `sourceProperty` | 目標架構的主標識欄位的路徑。 |
+| `xdm:identityNamespace` | 引用欄位的標識名稱空間。 此名稱空間必須與將欄位定義為架構的主標識時使用的名稱空間相同。 查看 [標識命名空間概述](../../identity-service/home.md) 的子菜單。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style=&quot;table-layout:auto&quot;&quot;
 
 **回應**
 
-成功的響應返回目標架構新建的引用描述符的詳細資訊。
+成功的響應返回新建立的目標架構的引用描述符的詳細資訊。
 
 ```json
 {
@@ -403,7 +403,7 @@ curl -X POST \
 
 ## 建立關係描述符 {#create-descriptor}
 
-關係描述符在源模式和目標模式之間建立一對一關係。 為目標架構定義了引用描述符後，可以通過向`/tenant/descriptors`端點發出POST請求來建立新的關係描述符。
+關係描述符在源模式和目標模式之間建立一對一關係。 在為目標架構定義了引用描述符後，可以通過向目標架構發出POST請求來建立新的關係描述符 `/tenant/descriptors` 端點。
 
 **API格式**
 
@@ -413,14 +413,14 @@ POST /tenant/descriptors
 
 **要求**
 
-以下請求將建立新的關係描述符，其中「[!DNL Loyalty Members]」作為源架構，「[!DNL Legacy Loyalty Members]」作為目標架構。
+以下請求將建立新的關係描述符，其中包含「[!DNL Loyalty Members]&quot;作為源架構和&quot;[!DNL Legacy Loyalty Members]&quot;作為目標架構。
 
 ```shell
 curl -X POST \
   https://platform.adobe.io/data/foundation/schemaregistry/tenant/descriptors \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -H 'Content-Type: application/json' \
   -d '{
@@ -436,19 +436,19 @@ curl -X POST \
 
 | 參數 | 說明 |
 | --- | --- |
-| `@type` | 要建立的描述符的類型。 關係描述符的`@type`值為&quot;xdm:descriptorOneToOne&quot;。 |
-| `xdm:sourceSchema` | 源架構的`$id` URL。 |
+| `@type` | 要建立的描述符的類型。 的 `@type` 關係描述符的值為&quot;xdm:descriptorOneToOne&quot;。 |
+| `xdm:sourceSchema` | 的 `$id` 源架構的URL。 |
 | `xdm:sourceVersion` | 源架構的版本號。 |
 | `xdm:sourceProperty` | 源架構中引用欄位的路徑。 |
-| `xdm:destinationSchema` | 目標架構的`$id` URL。 |
+| `xdm:destinationSchema` | 的 `$id` 目標架構的URL。 |
 | `xdm:destinationVersion` | 目標架構的版本號。 |
 | `xdm:destinationProperty` | 目標架構中引用欄位的路徑。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style=&quot;table-layout:auto&quot;&quot;
 
 ### 回應
 
-成功的響應返回新建立的關係描述符的詳細資訊。
+成功的響應將返回新建立的關係描述符的詳細資訊。
 
 ```json
 {
@@ -466,4 +466,4 @@ curl -X POST \
 
 ## 後續步驟
 
-依照本教學課程，您已成功建立兩個結構間的一對一關係。 有關使用[!DNL Schema Registry] API的描述符的詳細資訊，請參閱[Schema Registry開發者指南](../api/descriptors.md)。 有關如何在UI中定義架構關係的步驟，請參閱有關使用架構編輯器](relationship-ui.md)定義架構關係的教程。[
+按照本教程，您已成功在兩個架構之間建立了一對一關係。 有關使用描述符的詳細資訊 [!DNL Schema Registry] API，請參見 [架構註冊表開發人員指南](../api/descriptors.md)。 有關如何在UI中定義架構關係的步驟，請參見上的教程 [使用架構編輯器定義架構關係](relationship-ui.md)。

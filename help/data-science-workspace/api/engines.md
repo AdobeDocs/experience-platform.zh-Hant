@@ -1,12 +1,11 @@
 ---
-keywords: Experience Platform；開發人員指南；端點；資料科學工作區；熱門主題；引擎；sensei機器學習api
+keywords: Experience Platform；開發人員指南；端點；資料科學工作區；熱門主題；引擎；感性機器學習api
 solution: Experience Platform
-title: 引擎API端點
+title: 引擎API終結點
 topic-legacy: Developer guide
-description: 引擎是資料科學工作區中機器學習模型的基礎。 它們包含可解決特定問題的機器學習演算法、可執行特徵工程的特徵管線，或兩者皆可。
+description: 引擎是資料科學工作區中機器學習模型的基礎。 它們包含可解決特定問題的機器學習算法、用於執行特徵工程的特徵管線，或兩者兼有。
 exl-id: 7c670abd-636c-47d8-bd8c-5ce0965ce82f
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '1165'
 ht-degree: 3%
@@ -15,15 +14,15 @@ ht-degree: 3%
 
 # 引擎端點
 
-引擎是資料科學工作區中機器學習模型的基礎。 它們包含可解決特定問題的機器學習演算法、可執行特徵工程的特徵管線，或兩者皆可。
+引擎是資料科學工作區中機器學習模型的基礎。 它們包含可解決特定問題的機器學習算法、用於執行特徵工程的特徵管線，或兩者兼有。
 
 ## 查找您的Docker註冊表
 
 >[!TIP]
 >
->如果您沒有Docker URL，請造訪[將來源檔案封裝至recipe](../models-recipes/package-source-files-recipe.md)教學課程，以取得建立Docker主機URL的逐步逐步說明。
+>如果您沒有Docker URL，請訪問 [將源檔案打包到處方](../models-recipes/package-source-files-recipe.md) 有關建立Docker主機URL的逐步步驟的教程。
 
-您的Docker註冊表憑證是上傳封裝的Recipe檔案（包括您的Docker主機URL、使用者名稱和密碼）的必要條件。 您可以執行下列GET要求來查閱此資訊：
+要上載打包的處方檔案，需要您的Docker註冊表憑據，包括您的Docker主機URL、用戶名和密碼。 您可以通過執行以下GET請求來查找此資訊：
 
 **API格式**
 
@@ -37,17 +36,17 @@ GET /engines/dockerRegistry
 curl -X GET https://platform.adobe.io/data/sensei/engines/dockerRegistry \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
 **回應**
 
-成功的響應返回包含Docker註冊表詳細資訊的裝載，包括Docker URL(`host`)、用戶名(`username`)和密碼(`password`)。
+成功的響應返回包含Docker註冊表詳細資訊（包括Docker URL）的負載(`host`)，用戶名(`username`)和密碼(`password`)。
 
 >[!NOTE]
 >
->每當`{ACCESS_TOKEN}`更新時，Docker密碼都會更改。
+>您的Docker密碼隨時更改 `{ACCESS_TOKEN}` 。
 
 ```json
 {
@@ -57,9 +56,9 @@ curl -X GET https://platform.adobe.io/data/sensei/engines/dockerRegistry \
 }
 ```
 
-## 使用Docker URL {#docker-image}建立引擎
+## 使用Docker URL建立引擎 {#docker-image}
 
-您可以建立引擎，方法是在提供中繼資料和參考多部分表單中Docker影像的Docker URL時，執行POST請求。
+您可以通過在提供元資料和引用多部件表單中Docker影像的Docker URL的同時執行POST請求來建立引擎。
 
 **API格式**
 
@@ -74,7 +73,7 @@ curl -X POST \
     https://platform.adobe.io/data/sensei/engines \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'content-type: multipart/form-data' \
     -F 'engine={
@@ -96,23 +95,23 @@ curl -X POST \
 
 | 屬性 | 說明 |
 | --- | --- |
-| `name` | 引擎的所需名稱。 與此引擎對應的配方將繼承此值，並以配方名稱顯示在UI中。 |
-| `description` | 引擎的選用說明。 與此引擎對應的方式將繼承此值，並以方式說明的形式顯示在UI中。 此為必要屬性。如果您不想提供說明，請將其值設為空字串。 |
-| `type` | 引擎的執行類型。 此值對應於Docker映像所基於的語言，可以是&quot;Python&quot;、&quot;R&quot;或&quot;Tensorflow&quot;。 |
-| `algorithm` | 指定機器學習演算法類型的字串。 支援的演算法類型包括「分類」、「回歸」或「自訂」。 |
-| `artifacts.default.image.location` | 由Docker URL連結到的Docker映像的位置。 |
-| `artifacts.default.image.executionType` | 引擎的執行類型。 此值對應於Docker映像所基於的語言，可以是&quot;Python&quot;、&quot;R&quot;或&quot;Tensorflow&quot;。 |
+| `name` | 引擎的所需名稱。 與此引擎對應的處方將繼承此值，該值將作為處方名稱顯示在UI中。 |
+| `description` | 引擎的可選說明。 與此引擎對應的處方將繼承此值，該值將作為處方說明顯示在UI中。 此為必要屬性。如果不想提供說明，請將其值設定為空字串。 |
+| `type` | 引擎的執行類型。 此值與Docker映像所基於的語言相對應，可以是&quot;Python&quot;、&quot;R&quot;或&quot;Tensorflow&quot;。 |
+| `algorithm` | 指定機器學習算法類型的字串。 支援的算法類型包括「分類」、「回歸」或「自定義」。 |
+| `artifacts.default.image.location` | 由Docker URL連結到的Docker影像的位置。 |
+| `artifacts.default.image.executionType` | 引擎的執行類型。 此值與Docker映像所基於的語言相對應，可以是&quot;Python&quot;、&quot;R&quot;或&quot;Tensorflow&quot;。 |
 
-**要求PySpark/Scala**
+**請求PySpark/Scala**
 
-提出PySpark配方要求時，`executionType`和`type`是「PySpark」。 提出Scala配方要求時，`executionType`和`type`是&quot;Spark&quot;。 下列Scala配方範例使用Spark:
+在請求PySpark配方時， `executionType` 和 `type` 是&quot;PySpark&quot; 請求斯卡拉食譜時， `executionType` 和 `type` 是&quot;火花&quot; 以下Scala配方示例使用Spark:
 
 ```shell
 curl -X POST \
   https://platform.adobe.io/data/sensei/engines \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'content-type: multipart/form-data' \
     -F 'engine={
@@ -135,16 +134,16 @@ curl -X POST \
 
 | 屬性 | 說明 |
 | --- | --- |
-| `name` | 引擎的所需名稱。 與此引擎對應的配方將繼承此值，並以配方名稱顯示在UI中。 |
-| `description` | 引擎的選用說明。 與此引擎對應的方式將繼承此值，並以方式說明的形式顯示在UI中。 此為必要屬性。如果您不想提供說明，請將其值設為空字串。 |
-| `type` | 引擎的執行類型。 此值與Docker映像所基於的語言相對應。 此值可設為Spark或PySpark。 |
-| `mlLibrary` | 建立PySpark和Scala配方的引擎時所需的欄位。 此欄位必須設定為`databricks-spark`。 |
-| `artifacts.default.image.location` | Docker映像的位置。 僅支ACR援Azure或Public（未驗證）Dockerhub。 |
+| `name` | 引擎的所需名稱。 與此引擎對應的處方將繼承此值，該值將作為處方名稱顯示在UI中。 |
+| `description` | 引擎的可選說明。 與此引擎對應的處方將繼承此值，該值將作為處方說明顯示在UI中。 此為必要屬性。如果不想提供說明，請將其值設定為空字串。 |
+| `type` | 引擎的執行類型。 此值與Docker映像所基於的語言相對應。 該值可設定為「Spark」或「PySpark」。 |
+| `mlLibrary` | 為PySpark和Scala配方建立引擎時所需的欄位。 此欄位必須設定為 `databricks-spark`。 |
+| `artifacts.default.image.location` | Docker影像的位置。 僅支援AzureACR或Public（未驗證）Dockerhub。 |
 | `artifacts.default.image.executionType` | 引擎的執行類型。 此值與Docker映像所基於的語言相對應。 這可以是「Spark」或「PySpark」。 |
 
 **回應**
 
-成功的回應會傳回包含新建立之引擎之詳細資料（包括其唯一識別碼）的裝載。 `id`以下是Python引擎的範例回應。 所有引擎回應都遵循下列格式：
+成功的響應返回包含新建立引擎的詳細資訊（包括其唯一標識符）的負載(`id`)。 以下示例響應是Python引擎。 所有引擎響應都遵循以下格式：
 
 ```json
 {
@@ -171,9 +170,9 @@ curl -X POST \
 }
 ```
 
-## 使用Docker URL {#feature-pipeline-docker}建立功能管線引擎
+## 使用Docker URL建立特徵管線引擎 {#feature-pipeline-docker}
 
-您可以執行POST請求，同時提供元資料和引用Docker影像的Docker URL，以建立功能管線引擎。
+通過在提供其元資料和引用Docker影像的Docker URL的同時執行POST請求，可以建立功能管線引擎。
 
 **API格式**
 
@@ -214,19 +213,19 @@ curl -X POST \
 
 | 屬性 | 說明 |
 | --- | --- |
-| `type` | 引擎的執行類型。 此值與Docker映像所基於的語言相對應。 此值可設為Spark或PySpark。 |
-| `algorithm` | 使用的演算法，請將此值設為`fp`（功能管線）。 |
-| `name` | 特徵管線引擎的所需名稱。 與此引擎對應的配方將繼承此值，並以配方名稱顯示在UI中。 |
-| `description` | 引擎的選用說明。 與此引擎對應的方式將繼承此值，並以方式說明的形式顯示在UI中。 此為必要屬性。如果您不想提供說明，請將其值設為空字串。 |
-| `mlLibrary` | 建立PySpark和Scala配方引擎時所需的欄位。 此欄位必須設定為`databricks-spark`。 |
-| `artifacts.default.image.location` | Docker映像的位置。 僅支ACR援Azure或Public（未驗證）Dockerhub。 |
+| `type` | 引擎的執行類型。 此值與Docker映像所基於的語言相對應。 該值可設定為「Spark」或「PySpark」。 |
+| `algorithm` | 所使用的算法，將此值設定為 `fp` （特徵管線）。 |
+| `name` | 特徵管線引擎的所需名稱。 與此引擎對應的處方將繼承此值，該值將作為處方名稱顯示在UI中。 |
+| `description` | 引擎的可選說明。 與此引擎對應的處方將繼承此值，該值將作為處方說明顯示在UI中。 此為必要屬性。如果不想提供說明，請將其值設定為空字串。 |
+| `mlLibrary` | 為PySpark和Scala配方建立引擎時所需的欄位。 此欄位必須設定為 `databricks-spark`。 |
+| `artifacts.default.image.location` | Docker影像的位置。 僅支援AzureACR或Public（未驗證）Dockerhub。 |
 | `artifacts.default.image.executionType` | 引擎的執行類型。 此值與Docker映像所基於的語言相對應。 這可以是「Spark」或「PySpark」。 |
-| `artifacts.default.image.packagingType` | 引擎的封裝類型。 此值應設為`docker`。 |
-| `artifacts.default.defaultMLInstanceConfigs` | 您的`pipeline.json`配置檔案參數。 |
+| `artifacts.default.image.packagingType` | 引擎的包裝類型。 此值應設定為 `docker`。 |
+| `artifacts.default.defaultMLInstanceConfigs` | 您 `pipeline.json` 配置檔案參數。 |
 
 **回應**
 
-成功的響應返回包含新建立的特徵管線引擎的詳細資訊（包括其唯一標識符）的有效載荷。 `id`以下是PySpark特徵管線引擎的示例響應。
+成功的響應返回包含新建立的功能管道引擎詳細資訊（包括其唯一標識符）的負載(`id`)。 以下示例響應是PySpark特徵管道引擎。
 
 ```json
 {
@@ -253,9 +252,9 @@ curl -X POST \
 }
 ```
 
-## 擷取引擎清單
+## 檢索引擎清單
 
-您可以執行單一GET請求來擷取引擎清單。 若要協助篩選結果，您可以在請求路徑中指定查詢參數。 有關可用查詢的清單，請參閱[資產檢索查詢參數](./appendix.md#query)的附錄部分。
+通過執行單個GET請求，可以檢索引擎清單。 要幫助篩選結果，可以在請求路徑中指定查詢參數。 有關可用查詢的清單，請參閱附錄部分。 [資產檢索查詢參數](./appendix.md#query)。
 
 **API格式**
 
@@ -272,13 +271,13 @@ curl -X GET \
     https://platform.adobe.io/data/sensei/engines \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
 **回應**
 
-成功的回應會傳回引擎清單及其詳細資訊。
+成功的響應返回引擎及其詳細資訊的清單。
 
 ```json
 {
@@ -328,9 +327,9 @@ curl -X GET \
 }
 ```
 
-### 檢索特定引擎{#retrieve-specific}
+### 檢索特定引擎 {#retrieve-specific}
 
-您可以執行請求，將所需引擎的ID包含在請求路徑中，以擷取特定引擎的詳細資訊。
+通過執行請求路徑中包含所需引擎ID的GET請求，可以檢索特定引擎的詳細資訊。
 
 **API格式**
 
@@ -349,13 +348,13 @@ curl -X GET \
     https://platform.adobe.io/data/sensei/engines/22f4166f-85ba-4130-a995-a2b8e1edde32 \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
 **回應**
 
-成功的回應會傳回包含所需引擎詳細資料的裝載。
+成功的響應返回包含所需引擎詳細資訊的負載。
 
 ```json
 {
@@ -384,13 +383,13 @@ curl -X GET \
 
 ## 更新引擎
 
-您可以透過PUT請求覆寫現有引擎的屬性，以修改和更新現有引擎，該請求在請求路徑中包含目標引擎的ID，並提供包含更新屬性的JSON裝載。
+您可以通過PUT請求覆蓋現有引擎的屬性來修改和更新現有引擎，該請求在請求路徑中包括目標引擎的ID，並提供包含已更新屬性的JSON負載。
 
 >[!NOTE]
 >
->為確保此PUT請求成功，建議您先執行GET請求，以按ID](#retrieve-specific)擷取引擎。 [然後，修改並更新傳回的JSON物件，並套用已修改的JSON物件作為PUT要求的裝載。
+>為確保此PUT請求成功，建議您首先執行GET請求， [按ID檢索引擎](#retrieve-specific)。 然後，修改和更新返回的JSON對象，並應用已修改的JSON對象的整個作為PUT請求的負載。
 
-下列範例API呼叫會在最初具有這些屬性時更新引擎的名稱和說明：
+以下示例API調用將在最初具有這些屬性時更新引擎的名稱和說明：
 
 ```json
 {
@@ -426,7 +425,7 @@ curl -X PUT \
     https://platform.adobe.io/data/sensei/engines/22f4166f-85ba-4130-a995-a2b8e1edde32 \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'content-type: application/vnd.adobe.platform.sensei+json;profile=engine.v1.json' \
     -d '{
@@ -447,7 +446,7 @@ curl -X PUT \
 
 **回應**
 
-成功的回應會傳回包含引擎更新詳細資料的裝載。
+成功的響應返回包含引擎更新的詳細資訊的負載。
 
 ```json
 {
@@ -475,7 +474,7 @@ curl -X PUT \
 
 ## 刪除引擎
 
-您可以在執行DELETE請求時，在請求路徑中指定目標引擎的ID，以刪除引擎。 刪除引擎將級聯刪除引用該引擎的所有MLI實例，包括屬於這些MLI實例的任何實驗和實驗運行。
+在請求路徑中指定目標引擎的ID時，可通過執行DELETE請求來刪除引擎。 刪除引擎將級聯刪除引用該引擎的所有MLInstance，包括屬於這些MLInstance的任何「實驗」和「實驗」運行。
 
 **API格式**
 
@@ -494,7 +493,7 @@ curl -X DELETE \
     https://platform.adobe.io/data/sensei/engines/22f4166f-85ba-4130-a995-a2b8e1edde32 \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 

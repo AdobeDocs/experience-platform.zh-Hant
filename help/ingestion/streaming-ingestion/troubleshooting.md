@@ -1,79 +1,78 @@
 ---
-keywords: Experience Platform；首頁；熱門主題；串流；串流擷取；疑難排解；串流擷取疑難排解；串流擷取常見問答；常見問答；
+keywords: Experience Platform；主題；熱門主題；流；流；流；故障排除；流處理；故障排除；流處理；常見問題；faq;
 solution: Experience Platform
-title: 串流擷取疑難排解指南
+title: 流式接收故障排除指南
 topic-legacy: troubleshooting
-description: 本檔案針對有關Adobe Experience Platform串流擷取的常問問題提供解答。
+description: 本文檔提供有關Adobe Experience Platform流式攝入的常見問題解答。
 exl-id: 5d5deccf-25b8-44c9-ae27-9a4713ced274
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
-source-wordcount: '1019'
+source-wordcount: '1025'
 ht-degree: 0%
 
 ---
 
-# 串流擷取疑難排解指南
+# 流攝入故障排除指南
 
-本檔案針對有關Adobe Experience Platform串流擷取的常問問題提供解答。 有關其他[!DNL Platform]服務的問題和疑難排解，包括所有[!DNL Platform] API中遇到的問題，請參閱[Experience Platform故障排解指南](../../landing/troubleshooting.md)。
+本文檔提供有關Adobe Experience Platform流式攝入的常見問題解答。 有關與其他相關的問題和故障排除 [!DNL Platform] 服務，包括在所有 [!DNL Platform] API，請參閱 [Experience Platform故障排除指南](../../landing/troubleshooting.md)。
 
-Adobe Experience Platform[!DNL Data Ingestion]提供REST風格的API，您可用來將資料內嵌至[!DNL Experience Platform]。 所擷取的資料可用來即時更新個別客戶個人檔案，讓您跨多個通道提供個人化、相關的體驗。 請閱讀[資料擷取概觀](../home.md)，以取得有關服務和不同擷取方法的詳細資訊。 有關如何使用串流擷取API的步驟，請閱讀[串流擷取概觀](../streaming-ingestion/overview.md)。
+Adobe Experience Platform [!DNL Data Ingestion] 提供了REST風格的API，您可以使用這些API將資料插入 [!DNL Experience Platform]。 所攝取的資料用於近即時更新單個客戶配置檔案，使您能夠跨多個渠道提供個性化的相關體驗。 請閱讀 [資料接收概述](../home.md) 的子菜單。 有關如何使用流式接收API的步驟，請閱讀 [流式處理概述](../streaming-ingestion/overview.md)。
 
 ## 常見問題集
 
-以下是串流擷取常見問題的解答清單。
+以下是有關流式接收的常見問題的答案清單。
 
-### 我要如何得知我傳送的裝載已正確格式化？
+### 我如何知道發送的負載格式正確？
 
-[!DNL Data Ingestion] 利 [!DNL Experience Data Model] 用(XDM)模式來驗證傳入資料的格式。發送不符合預定義XDM模式結構的資料將導致接收失敗。 有關XDM及其在[!DNL Experience Platform]中的使用的詳細資訊，請參閱[ XDM系統概述](../../xdm/home.md)。
+[!DNL Data Ingestion] 利用 [!DNL Experience Data Model] (XDM)架構，用於驗證傳入資料的格式。 發送不符合預定義XDM架構結構的資料將導致接收失敗。 有關XDM及其在 [!DNL Experience Platform]，請參見 [XDM系統概述](../../xdm/home.md)。
 
-串流擷取支援兩種驗證模式：同步與非同步。 每個驗證方法處理失敗資料的方式都不同。
+流式接收支援兩種驗證模式：同步和非同步。 每個驗證方法處理失敗資料的方式不同。
 
-**在開** 發程式期間，應使用同步驗證。失敗驗證的記錄會被丟棄，並傳回錯誤訊息，說明其失敗的原因(例如：&quot;無效的XDM消息格式&quot;)。
+**同步驗證** 在開發過程中應使用。 驗證失敗的記錄會被刪除，並返回一條錯誤消息，說明失敗的原因(例如：&quot;XDM消息格式無效&quot;)。
 
-**生產** 中應使用非同步驗證。任何未通過驗證的格式錯誤的資料都作為失敗的批處理檔案發送到[!DNL Data Lake]，以便稍後在此處檢索以進行進一步分析。
+**非同步驗證** 應用於生產。 未通過驗證的任何格式錯誤的資料都會發送到 [!DNL Data Lake] 作為失敗的批處理檔案，稍後可在其中檢索該檔案以供進一步分析。
 
-如需同步與非同步驗證的詳細資訊，請參閱[串流驗證概觀](../quality/streaming-validation.md)。 有關如何查看驗證失敗批次的步驟，請參閱[檢索失敗批次](../quality/retrieve-failed-batches.md)上的指南。
+有關同步和非同步驗證的詳細資訊，請參見 [流驗證概述](../quality/streaming-validation.md)。 有關如何查看驗證失敗的批的步驟，請參閱上的指南 [檢索失敗批](../quality/retrieve-failed-batches.md)。
 
-### 我是否可先驗證請求裝載，再將其傳送至[!DNL Platform]?
+### 能否在將請求負載發送到之前驗證它 [!DNL Platform]?
 
-請求負載只能在發送到[!DNL Platform]後評估。 執行同步驗證時，有效負載會傳回已填入的JSON物件，而無效負載則會傳回錯誤訊息。 在非同步驗證期間，服務會偵測並傳送任何格式錯誤的資料至[!DNL Data Lake]，以便稍後擷取該資料以進行分析。 如需詳細資訊，請參閱[串流驗證概觀](../quality/streaming-validation.md)。
+請求有效負載只有在發送到 [!DNL Platform]。 執行同步驗證時，有效負載返回填充的JSON對象，無效負載返回錯誤消息。 在非同步驗證期間，服務將檢測併發送任何格式錯誤的資料到 [!DNL Data Lake] 以後可以檢索到它以進行分析。 查看 [流驗證概述](../quality/streaming-validation.md) 的子菜單。
 
-### 當在不支援同步驗證的邊緣上要求同步驗證時，會發生什麼情況？
+### 當在不支援同步驗證的邊緣上請求同步驗證時會發生什麼情況？
 
-當請求的位置不支援同步驗證時，會傳回501錯誤回應。 如需同步驗證的詳細資訊，請參閱[串流驗證概觀](../quality/streaming-validation.md)。
+如果請求的位置不支援同步驗證，則返回501錯誤響應。 請參閱 [流驗證概述](../quality/streaming-validation.md) 的子菜單。
 
-### 如何確保僅從受信任來源收集資料？
+### 如何確保僅從受信任的源收集資料？
 
-[!DNL Experience Platform] 支援安全的資料收集。啟用驗證資料收集後，用戶端必須傳送JSON Web Token(JWT)及其IMS組織ID作為請求標題。 有關如何將已驗證資料發送到[!DNL Platform]的詳細資訊，請參閱[已驗證資料收集](../tutorials/create-authenticated-streaming-connection.md)上的指南。
+[!DNL Experience Platform] 支援安全的資料收集。 啟用經過身份驗證的資料收集後，客戶端必須將JSON Web令牌(JWT)及其IMS組織ID作為請求標頭髮送。 有關如何將經過身份驗證的資料發送到的詳細資訊 [!DNL Platform]，請參閱上的指南 [經過驗證的資料收集](../tutorials/create-authenticated-streaming-connection.md)。
 
-### 串流資料至[!DNL Real-time Customer Profile]的延遲為何？
+### 流資料到的延遲是什麼 [!DNL Real-time Customer Profile]?
 
-串流事件通常在60秒內反映在[!DNL Real-time Customer Profile]中。 實際延遲可能因資料量、消息大小和頻寬限制而有所不同。
+流式事件通常反映在 [!DNL Real-time Customer Profile] 不到60秒。 實際延遲可能因資料量、消息大小和頻寬限制而有所不同。
 
-### 我是否可在相同的API要求中包含多個訊息？
+### 我是否可以在同一API請求中包含多個消息？
 
-您可以在單一請求裝載內將多個訊息分組，並將其串流至[!DNL Platform]。 正確使用時，在單一要求中分組多個訊息是最佳化資料作業的絕佳方式。 請閱讀有關[在請求中發送多條消息的教程](../tutorials/streaming-multiple-messages.md)，以瞭解更多資訊。
+您可以在單個請求負載內對多個消息進行分組，並將它們流式傳輸到 [!DNL Platform]。 正確使用時，在單個請求中對多個消息進行分組是優化資料操作的極好方法。 請閱讀有關 [在請求中發送多個消息](../tutorials/streaming-multiple-messages.md) 的子菜單。
 
-### 我要如何得知我傳送的資料是否收到？
+### 我如何知道我發送的資料是否正在收到？
 
-所有傳送至[!DNL Platform]（成功或否）的資料都會儲存為批次檔案，然後再保存在資料集中。 批次的處理狀態會顯示在傳送至的資料集中。
+發送到的所有資料 [!DNL Platform] （成功或否）在保存到資料集之前，將作為批處理檔案儲存。 批處理的處理狀態顯示在發送到的資料集中。
 
-您可以使用[Experience Platform使用者介面](https://platform.adobe.com)檢查資料集活動，以確認資料是否已成功擷取。 按一下左側導覽中的&#x200B;**[!UICONTROL Datasets]**&#x200B;以顯示資料集清單。 從顯示的清單中選擇要流式處理的資料集以開啟其&#x200B;**[!UICONTROL Dataset activity]**&#x200B;頁，顯示選定時段內發送的所有批。 有關使用[!DNL Experience Platform]監控資料流的詳細資訊，請參閱[監控流資料流](../quality/monitor-data-ingestion.md)的指南。
+通過使用 [Experience Platform用戶介面](https://platform.adobe.com)。 按一下 **[!UICONTROL 資料集]** 的子菜單。 從顯示清單中選擇要流式處理的資料集以開啟其 **[!UICONTROL 資料集活動]** 頁，顯示在選定時間段內發送的所有批。 有關使用的詳細資訊 [!DNL Experience Platform] 要監視資料流，請參見上的指南 [監視流資料流](../quality/monitor-data-ingestion.md)。
 
-如果您的資料未能收錄，而您想從[!DNL Platform]中恢復，則可以通過將失敗的批次的ID發送到[!DNL Data Access API]來檢索失敗的批次。 有關詳細資訊，請參閱[檢索失敗批](../quality/retrieve-failed-batches.md)指南。
+如果資料未能接收，並且您希望從 [!DNL Platform]，您可以通過將失敗的批發送到 [!DNL Data Access API]。 請參閱上的指南 [檢索失敗批](../quality/retrieve-failed-batches.md) 的子菜單。
 
-### 為什麼我的串流資料無法在Data Lake中使用？
+### 為什麼我的流資料在資料湖中不可用？
 
-批次擷取可能無法到達[!DNL Data Lake]的原因有很多，例如無效的格式、遺失資料或系統錯誤。 要確定批失敗的原因，您必須使用[!DNL Data Ingestion Service API]檢索批並查看其詳細資訊。 有關檢索失敗批的詳細步驟，請參見[檢索失敗批](../quality/retrieve-failed-batches.md)的指南。
+批量攝取可能無法達到以下目的的原因有很多 [!DNL Data Lake]，例如格式無效、缺少資料或系統錯誤。 要確定批失敗的原因，必須使用 [!DNL Data Ingestion Service API] 並查看其詳細資訊。 有關檢索失敗批的詳細步驟，請參閱上的指南 [檢索失敗批](../quality/retrieve-failed-batches.md)。
 
-### 如何剖析API要求傳回的回應？
+### 如何分析為API請求返回的響應？
 
-您可以先檢查伺服器回應程式碼，以判斷您的要求是否被接受，從而解析回應。 如果返回成功的響應代碼，則可以查看`responses`陣列對象以確定接收任務的狀態。
+您可以通過首先檢查伺服器響應代碼來確定是否接受您的請求來解析響應。 如果返回成功的響應代碼，則可以查看 `responses` array對象以確定接收任務的狀態。
 
-成功的單一訊息API要求會傳回狀態碼200。 成功（或部分成功）批次訊息API請求會傳回狀態代碼207。
+成功的單消息API請求返回狀態代碼200。 成功（或部分成功）批處理消息API請求返回狀態代碼207。
 
-下列JSON是含有兩則訊息之API要求的範例回應物件：一個成功，一個失敗。 成功串流的訊息會傳回`xactionId`屬性。 無法串流的訊息會傳回`statusCode`屬性和回應`message`，並包含更多資訊。
+以下JSON是包含兩條消息的API請求的示例響應對象：一個成功，一個失敗。 成功流式傳輸的消息返回 `xactionId` 屬性。 無法流式傳輸的消息返回 `statusCode` 屬性和響應 `message` 的雙曲余弦值。
 
 ```JSON
 {
@@ -88,17 +87,17 @@ Adobe Experience Platform[!DNL Data Ingestion]提供REST風格的API，您可用
             "statusCode": 400,
             "message": "inletId: [9b0cb233972f3b0092992284c7353f5eead496218e8441a
                 79b25e9421ea127f5] 
-                imsOrgId: [{IMS_ORG}] 
+                imsOrgId: [{ORG_ID}] 
                 Message has unknown xdm format"
         }
     ]
 }
 ```
 
-### 為什麼[!DNL Real-time Customer Profile]未收到我的已發送消息？
+### 為什麼我的發送郵件未被 [!DNL Real-time Customer Profile]?
 
-如果[!DNL Real-time Customer Profile]拒絕訊息，則很可能是由於身分資訊不正確所致。 這可能是為身份提供無效值或命名空間的結果。
+如果 [!DNL Real-time Customer Profile] 拒絕消息，很可能是由於身份資訊不正確所致。 這可能是為標識提供無效值或命名空間的結果。
 
-身份名稱空間有兩種類型：預設值和自訂值。 使用自訂名稱空間時，請確定名稱空間已在[!DNL Identity Service]中註冊。 如需使用預設和自訂名稱空間的詳細資訊，請參閱[identity namespace綜覽](../../identity-service/namespaces.md)。
+有兩種類型的標識命名空間：預設和自定義。 使用自定義命名空間時，請確保已在中註冊了該命名空間 [!DNL Identity Service]。 查看 [標識命名空間概述](../../identity-service/namespaces.md) 的子菜單。
 
-您可以使用[[!DNL Experience Platform UI]](https://platform.adobe.com)來查看郵件擷取失敗原因的詳細資訊。 在左側導覽中按一下&#x200B;**[!UICONTROL Monitoring]**，然後檢視&#x200B;**[!UICONTROL Streaming end-to-end]**&#x200B;標籤，以檢視在選取時段內串流的訊息批次。
+您可以使用 [[!DNL Experience Platform UI]](https://platform.adobe.com) 查看有關消息接收失敗原因的詳細資訊。 按一下 **[!UICONTROL 監視]** 在左導航中，然後查看 **[!UICONTROL 流式端到端]** 頁籤，查看在選定時間段內流式處理的郵件批。

@@ -1,62 +1,61 @@
 ---
 keywords: Experience Platform；首頁；熱門主題；電子商務；電子商務
 solution: Experience Platform
-title: 使用Flow Service API探索電子商務連線
+title: 使用流服務API瀏覽電子商務連接
 topic-legacy: overview
-description: 本教學課程使用Flow Service API來探索電子商務連線。
+description: 本教程使用流服務API來瀏覽電子商務連接。
 exl-id: 832ce399-6c9f-40da-8e7c-5434503c16b6
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
-source-wordcount: '562'
+source-wordcount: '573'
 ht-degree: 2%
 
 ---
 
-# 使用[!DNL Flow Service] API探索電子商務連線
+# 使用 [!DNL Flow Service] API
 
-[!DNL Flow Service] 用於收集和集中Adobe Experience Platform內不同來源的客戶資料。該服務提供用戶介面和REST風格的API，所有支援的源都可從中連接。
+[!DNL Flow Service] 用於收集和集中Adobe Experience Platform內不同來源的客戶資料。 該服務提供了用戶介面和REST風格的API，所有支援的源都可從中連接。
 
-本教學課程使用[!DNL Flow Service] API來探索協力廠商&#x200B;**[!UICONTROL eCommerce]**&#x200B;連線。
+本教程使用 [!DNL Flow Service] API用於探索第三方 **[!UICONTROL 電子商務]** 連接。
 
 ## 快速入門
 
-本指南需要對Adobe Experience Platform的下列組成部分有切實的瞭解：
+本指南要求對Adobe Experience Platform的下列組成部分有工作上的理解：
 
-* [[!DNL Sources]](../../../home.md): [!DNL Experience Platform] 允許從各種來源接收資料，同時提供使用服務構建、標籤和增強傳入資料的 [!DNL Platform] 能力。
-* [[!DNL Sandboxes]](../../../../sandboxes/home.md): [!DNL Experience Platform] 提供虛擬沙盒，可將單一執行個體分 [!DNL Platform] 割為不同的虛擬環境，以協助開發和發展數位體驗應用程式。
+* [[!DNL Sources]](../../../home.md): [!DNL Experience Platform] 允許從各種源接收資料，同時讓您能夠使用 [!DNL Platform] 服務。
+* [[!DNL Sandboxes]](../../../../sandboxes/home.md): [!DNL Experience Platform] 提供虛擬沙箱，將單個沙箱 [!DNL Platform] 實例到獨立的虛擬環境，以幫助開發和發展數字型驗應用程式。
 
-以下各節提供您需要瞭解的其他資訊，以便使用[!DNL Flow Service] API成功連線至&#x200B;**[!UICONTROL eCommerce]**&#x200B;連線。
+以下各節提供了成功連接到 **[!UICONTROL 電子商務]** 使用 [!DNL Flow Service] API。
 
-### 取得連線ID
+### 獲取連接ID
 
-要使用[!DNL Platform] API來探索&#x200B;**[!UICONTROL eCommerce]**&#x200B;連接，您必須擁有有效的連接ID。 如果您尚未建立要使用的&#x200B;**[!UICONTROL eCommerce]**&#x200B;連線，則可以透過下列教學課程建立連線：
+為了探索 **[!UICONTROL 電子商務]** 連接使用 [!DNL Platform] API，必須具有有效的連接ID。 如果尚未連接 **[!UICONTROL 電子商務]** 要使用的連接，您可以通過以下教程建立一個連接：
 
-* [Shopify](../create/ecommerce/shopify.md)
+* [修改](../create/ecommerce/shopify.md)
 
-### 讀取範例API呼叫
+### 讀取示例API調用
 
-本教學課程提供範例API呼叫，以示範如何設定請求的格式。 這些包括路徑、必要標題和正確格式化的請求負載。 也提供API回應中傳回的範例JSON。 如需範例API呼叫檔案中所用慣例的詳細資訊，請參閱[!DNL Experience Platform]疑難排解指南中[如何讀取範例API呼叫](../../../../landing/troubleshooting.md#how-do-i-format-an-api-request)一節。
+本教程提供了示例API調用，以演示如何格式化請求。 這些包括路徑、必需的標頭和正確格式化的請求負載。 還提供了API響應中返回的示例JSON。 有關示例API調用文檔中使用的約定的資訊，請參見上的 [如何讀取示例API調用](../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) 的 [!DNL Experience Platform] 疑難解答指南。
 
-### 收集必要標題的值
+### 收集所需標題的值
 
-若要呼叫[!DNL Platform] API，您必須先完成[驗證教學課程](https://www.adobe.com/go/platform-api-authentication-en)。 完成驗證教學課程後，所有[!DNL Experience Platform] API呼叫中每個所需標題的值都會顯示在下面：
+為了呼叫 [!DNL Platform] API，必須首先完成 [驗證教程](https://www.adobe.com/go/platform-api-authentication-en)。 完成身份驗證教程將提供所有中每個必需標頭的值 [!DNL Experience Platform] API調用，如下所示：
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
-* `x-gw-ims-org-id: {IMS_ORG}`
+* `x-gw-ims-org-id: {ORG_ID}`
 
-[!DNL Experience Platform]中的所有資源（包括屬於[!DNL Flow Service]的資源）都隔離到特定的虛擬沙盒。 對[!DNL Platform] API的所有請求都需要一個標題，該標題指定要在中執行操作的沙盒的名稱：
+中的所有資源 [!DNL Experience Platform]包括那些 [!DNL Flow Service]，與特定虛擬沙箱隔離。 所有請求 [!DNL Platform] API需要一個標頭，該標頭指定操作將在以下位置進行的沙盒的名稱：
 
 * `x-sandbox-name: {SANDBOX_NAME}`
 
-所有包含裝載(POST、PUT、PATCH)的請求都需要附加的媒體類型標題：
+所有包含負載(POST、PUT、PATCH)的請求都需要附加的媒體類型報頭：
 
 * `Content-Type: application/json`
 
-## 探索您的資料表格
+## 瀏覽資料表
 
-使用&#x200B;**[!UICONTROL eCommerce]**&#x200B;連接ID，您可以執行GET請求來瀏覽資料表。 使用以下調用查找要檢查或裝入[!DNL Platform]的表的路徑。
+使用 **[!UICONTROL 電子商務]** 連接ID，您可以通過執行GET請求來瀏覽資料表。 使用以下調用查找要檢查或插入的表的路徑 [!DNL Platform]。
 
 **API格式**
 
@@ -66,7 +65,7 @@ GET /connections/{CONNECTION_ID}/explore?objectType=root
 
 | 參數 | 說明 |
 | --- | --- |
-| `{CONNECTION_ID}` | 您的&#x200B;**[!UICONTROL eCommerce]**&#x200B;連線ID。 |
+| `{CONNECTION_ID}` | 您 **[!UICONTROL 電子商務]** 連接ID。 |
 
 **要求**
 
@@ -75,13 +74,13 @@ curl -X GET \
     'http://platform.adobe.io/data/foundation/flowservice/connections/582f4f8d-71e9-4a5c-a164-9d2056318d6c/explore?objectType=root' \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
 **回應**
 
-成功的響應從&#x200B;**[!UICONTROL eCommerce]**&#x200B;連接返回表陣列。 查找要帶入[!DNL Platform]的表，並記下其`path`屬性，因為在下一步中需要提供該表來檢查其結構。
+成功的響應會從 **[!UICONTROL 電子商務]** 連接。 查找要放入的表 [!DNL Platform] 並注意到 `path` 屬性，因為在下一步中需要提供該屬性來檢查其結構。
 
 ```json
 [
@@ -118,7 +117,7 @@ curl -X GET \
 
 ## Inspect桌子的結構
 
-要從&#x200B;**[!UICONTROL eCommerce]**&#x200B;連接檢查表的結構，請在指定`object`查詢參數內表的路徑時執行GET請求。
+從 **[!UICONTROL 電子商務]** 連接，在指定表的路徑時執行GET請求 `object` 查詢參數。
 
 **API格式**
 
@@ -128,8 +127,8 @@ GET /connections/{CONNECTION_ID}/explore?objectType=table&object={TABLE_PATH}
 
 | 參數 | 說明 |
 | --------- | ----------- |
-| `{CONNECTION_ID}` | **[!UICONTROL eCommerce]**&#x200B;連接的連接ID。 |
-| `{TABLE_PATH}` | **[!UICONTROL eCommerce]**&#x200B;連接中表的路徑。 |
+| `{CONNECTION_ID}` | 您的連接ID **[!UICONTROL 電子商務]** 連接。 |
+| `{TABLE_PATH}` | 表在您 **[!UICONTROL 電子商務]** 連接。 |
 
 **要求**
 
@@ -138,13 +137,13 @@ curl -X GET \
     'http://platform.adobe.io/data/foundation/flowservice/connections/582f4f8d-71e9-4a5c-a164-9d2056318d6c/explore?objectType=table&object=Orders' \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
 **回應**
 
-成功的響應返回指定表的結構。 有關每個表列的詳細資訊位於`columns`陣列的元素中。
+成功的響應返回指定表的結構。 有關每個表列的詳細資訊位於 `columns` 陣列。
 
 ```json
 {
@@ -198,4 +197,4 @@ curl -X GET \
 
 ## 後續步驟
 
-通過本教程，您已探索了&#x200B;**[!UICONTROL eCommerce]**&#x200B;連接，找到了要嵌入[!DNL Platform]的表的路徑，並獲取了有關其結構的資訊。 您可以在下一個教學課程中使用這項資訊來收集電子商務資料，並將其匯入Platform](../collect/ecommerce.md)。[
+通過學完本教程，您已探索了 **[!UICONTROL 電子商務]** 連接，找到要插入的表的路徑 [!DNL Platform]並獲取了有關其結構的資訊。 您可以在下一教程中使用此資訊 [收集電子商務資料並將其導入平台](../collect/ecommerce.md)。

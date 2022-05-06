@@ -6,7 +6,7 @@ topic-legacy: tutorial
 type: Tutorial
 description: 本文件逐步說明如何存取 Adobe Experience Platform 開發人員帳戶，進而呼叫 Experience Platform API。
 exl-id: dfe8a7be-1b86-4d78-a27e-87e4ed8b3d42
-source-git-commit: f5f4230c85a16aba00d0071b388e8305ccc654d5
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '1272'
 ht-degree: 5%
@@ -20,7 +20,7 @@ ht-degree: 5%
 
 * `{ACCESS_TOKEN}`
 * `{API_KEY}`
-* `{IMS_ORG}`
+* `{ORG_ID}`
 
 要維護應用程式和用戶的安全，必須使用OAuth和JSON Web令牌(JWT)等標準對Adobe I/OAPI的所有請求進行身份驗證和授權。 JWT與特定於客戶端的資訊一起使用，以生成您的個人訪問令牌。
 
@@ -43,7 +43,7 @@ ht-degree: 5%
 
 ## 獲得開發人員和用戶訪問權以進行Experience Platform
 
-在Adobe開發者控制台上建立整合之前，您的帳戶必須對Adobe Admin Console的Experience Platform產品配置檔案具有開發者和用戶權限。
+在Adobe Developer控制台上建立整合之前，您的帳戶必須具有Adobe Admin ConsoleExperience Platform產品配置檔案的開發人員和用戶權限。
 
 ### 獲取開發人員訪問權限
 
@@ -61,11 +61,11 @@ ht-degree: 5%
 >
 >如果您從 [Privacy ServiceAPI指南](../privacy-service/api/getting-started.md)，現在可以返回該指南以生成唯一的訪問憑據 [!DNL Privacy Service]。
 
-在您獲得開發人員和用戶對平台的訪問權後， [!DNL Admin Console]，下一步是生成 `{IMS_ORG}` 和 `{API_KEY}` Adobe開發者控制台中的憑據。 這些憑據只需生成一次，並可在以後的平台API調用中重用。
+在您獲得開發人員和用戶對平台的訪問權後， [!DNL Admin Console]，下一步是生成 `{ORG_ID}` 和 `{API_KEY}` Adobe Developer控制台中的憑據。 這些憑據只需生成一次，並可在以後的平台API調用中重用。
 
 ### 向項目添加Experience Platform
 
-轉到 [Adobe開發人員控制台](https://www.adobe.com/go/devs_console_ui) 和你的Adobe ID登錄。 接下來，按照本教程中介紹的步驟操作 [建立空項目](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/projects-empty.md) 在AdobeDeveloper Console文檔中。
+轉到 [Adobe開發人員控制台](https://www.adobe.com/go/devs_console_ui) 和你的Adobe ID登錄。 接下來，按照本教程中介紹的步驟操作 [建立空項目](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/projects-empty.md) 在Adobe Developer控制台文檔中。
 
 建立新項目後，選擇 **[!UICONTROL 添加API]** 的 **[!UICONTROL 項目概述]** 的上界。
 
@@ -86,7 +86,7 @@ ht-degree: 5%
 API添加到項目後， **[!UICONTROL Experience PlatformAPI]** 項目的頁面顯示所有對Experience PlatformAPI的調用所需的以下憑據：
 
 * `{API_KEY}` ([!UICONTROL 客戶端ID])
-* `{IMS_ORG}` ([!UICONTROL 組織 ID])
+* `{ORG_ID}` ([!UICONTROL 組織 ID])
 
 ![](././images/api-authentication/api-key-ims-org.png)
 
@@ -102,7 +102,7 @@ API添加到項目後， **[!UICONTROL Experience PlatformAPI]** 項目的頁面
 >
 >在本教程中，以下步驟概述了如何在開發人員控制台中生成JWT。 但是，這種生成方法只應用於測試和評估。
 >
->為了經常使用，必須自動生成JWT。 有關如何以寫程式方式生成JWT的詳細資訊，請參見 [服務帳戶驗證指南](https://www.adobe.io/developer-console/docs/guides/authentication/JWT/) Adobe開發商。
+>為了經常使用，必須自動生成JWT。 有關如何以寫程式方式生成JWT的詳細資訊，請參見 [服務帳戶驗證指南](https://www.adobe.io/developer-console/docs/guides/authentication/JWT/) Adobe Developer。
 
 選擇 **[!UICONTROL 服務帳戶(JWT)]** 在左側導航中，然後選擇 **[!UICONTROL 生成JWT]**。
 
@@ -118,7 +118,7 @@ API添加到項目後， **[!UICONTROL Experience PlatformAPI]** 項目的頁面
 
 ## 生成訪問令牌
 
-生成JWT後，可以在API調用中使用它來生成 `{ACCESS_TOKEN}`。 與 `{API_KEY}` 和 `{IMS_ORG}`，必須每24小時生成一個新令牌才能繼續使用平台API。
+生成JWT後，可以在API調用中使用它來生成 `{ACCESS_TOKEN}`。 與 `{API_KEY}` 和 `{ORG_ID}`，必須每24小時生成一個新令牌才能繼續使用平台API。
 
 **要求**
 
@@ -169,7 +169,7 @@ curl -X GET https://platform.adobe.io/data/foundation/schemaregistry/global/clas
   -H 'Accept: application/vnd.adobe.xed-id+json' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}'
+  -H 'x-gw-ims-org-id: {ORG_ID}'
 ```
 
 **回應**
@@ -195,7 +195,7 @@ curl -X GET https://platform.adobe.io/data/foundation/schemaregistry/global/clas
 }
 ```
 
-## 使用郵遞員驗證和testAPI調用
+## 使用Postman驗證和testAPI調用
 
 [郵遞員](https://www.postman.com/) 是一種常用工具，可讓開發人員瀏覽和testREST風格的API。 此 [中柱](https://medium.com/adobetech/using-postman-for-jwt-authentication-on-adobe-i-o-7573428ffe7f) 介紹如何設定Postman以自動執行JWT驗證並使用它來使用平台API。
 

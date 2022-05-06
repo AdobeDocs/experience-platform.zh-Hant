@@ -1,12 +1,11 @@
 ---
-keywords: Experience Platform；開發人員指南；端點；資料科學工作區；熱門主題；實驗；sensei機器學習api
+keywords: Experience Platform；開發人員指南；端點；資料科學工作區；熱門主題；實驗；感性機器學習api
 solution: Experience Platform
-title: 實驗API端點
+title: 實驗API終結點
 topic-legacy: Developer guide
-description: 模型開發與訓練是在實驗層級進行，其中實驗由MLInstance、訓練執行和計分執行組成。
+description: 模型開發和訓練在實驗級別進行，其中實驗由MLInstance、訓練運行和評分運行組成。
 exl-id: 6ca5106e-896d-4c03-aecc-344632d5307d
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '783'
 ht-degree: 4%
@@ -15,15 +14,15 @@ ht-degree: 4%
 
 # 實驗端點
 
-模型開發與訓練是在實驗層級進行，其中實驗由MLInstance、訓練執行和計分執行組成。
+模型開發和訓練在實驗級別進行，其中實驗由MLInstance、訓練運行和評分運行組成。
 
-## 建立實驗{#create-an-experiment}
+## 建立實驗 {#create-an-experiment}
 
-您可以執行POST請求，同時在請求裝載中提供名稱和有效的MLInstance ID來建立實驗。
+您可以通過在請求負載中提供名稱和有效MLInstance ID時執行POST請求來建立「實驗」。
 
 >[!NOTE]
 >
->與UI中的模型訓練不同，透過明確的API呼叫建立實驗不會自動建立並執行訓練執行。
+>與UI中的模型培訓不同，通過顯式API調用建立實驗不會自動建立和執行培訓運行。
 
 **API格式**
 
@@ -38,7 +37,7 @@ curl -X POST \
     https://platform.adobe.io/data/sensei/experiments \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'content-type: application/vnd.adobe.platform.sensei+json;profile=experiment.v1.json' \
     -d '{
@@ -49,12 +48,12 @@ curl -X POST \
 
 | 屬性 | 說明 |
 | --- | --- |
-| `name` | 實驗的所需名稱。 與此實驗相對應的訓練執行將繼承此值，以便在UI中顯示為訓練執行名稱。 |
+| `name` | 實驗的所需名稱。 與本實驗對應的培訓運行將繼承此值，該值將作為培訓運行名顯示在UI中。 |
 | `mlInstanceId` | 有效的MLInstance ID。 |
 
 **回應**
 
-成功的回應會傳回包含新建立之實驗詳細資料（包括其唯一識別碼）的負載(`id`)。
+成功的響應返回包含新建立實驗的詳細資訊（包括其唯一標識符）的負載(`id`)。
 
 ```json
 {
@@ -70,9 +69,9 @@ curl -X POST \
 }
 ```
 
-## 建立並執行訓練或計分執行{#experiment-training-scoring}
+## 建立並執行培訓或評分運行 {#experiment-training-scoring}
 
-您可以執行POST請求並提供有效的實驗ID並指定執行任務，以建立訓練或計分執行。 只有在「實驗」有現有且成功的訓練執行時，才可建立計分執行。 成功建立培訓運行將初始化模型培訓過程，成功完成該過程將生成一個受培訓的模型。 產生已訓練的模型將取代任何先前現有的模型，使得實驗在任何指定時間只能使用單一已訓練的模型。
+您可以通過執行POST請求並提供有效的實驗ID並指定運行任務來建立培訓或評分運行。 僅當「實驗」具有現有且成功的培訓運行時，才能建立評分運行。 成功建立培訓運行將初始化模型培訓過程，其成功完成將生成經過培訓的模型。 生成經過訓練的模型將替換任何先前存在的模型，這樣實驗在任何給定時間只能使用單個經過訓練的模型。
 
 **API格式**
 
@@ -91,7 +90,7 @@ curl -X POST \
     https://platform.adobe.io/data/sensei/experiments/5cb25a2d-2cbd-4c99-a619-8ddae5250a7b/runs \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'content-type: application/vnd.adobe.platform.sensei+json;profile=experimentRun.v1.json' \
     -d '{
@@ -101,11 +100,11 @@ curl -X POST \
 
 | 屬性 | 說明 |
 | --- | --- |
-| `{TASK}` | 指定運行的任務。 將此值設為訓練的`train`、計分的`score`或功能管道的`featurePipeline`。 |
+| `{TASK}` | 指定運行的任務。 將此值設定為 `train` 訓練， `score` 用於評分，或 `featurePipeline` 。 |
 
 **回應**
 
-成功的回應會傳回包含新建立之執行之詳細資料的裝載，包括繼承的預設訓練或計分參數，以及執行的唯一ID(`{RUN_ID}`)。
+成功的響應返回一個負載，該負載包含新建立的運行的詳細資訊，包括繼承的預設培訓或評分參數以及運行的唯一ID(`{RUN_ID}`)。
 
 ```json
 {
@@ -132,9 +131,9 @@ curl -X POST \
 }
 ```
 
-## 擷取實驗清單
+## 檢索實驗清單
 
-您可以執行單一GET請求並提供有效的MLInstance ID作為查詢參數，以檢索屬於特定MLInstance的實驗清單。 有關可用查詢的清單，請參閱[資產檢索查詢參數](./appendix.md#query)的附錄部分。
+通過執行單個GET請求並提供有效的MLInstance ID作為查詢參數，可以檢索屬於特定MLInstance的實驗清單。 有關可用查詢的清單，請參閱附錄部分。 [資產檢索查詢參數](./appendix.md#query)。
 
 
 **API格式**
@@ -146,7 +145,7 @@ GET /experiments?property=mlInstanceId=={MLINSTANCE_ID}
 
 | 參數 | 說明 |
 | --- | --- |
-| `{MLINSTANCE_ID}` | 提供有效的MLInstance ID，以擷取屬於該特定MLInstance的實驗清單。 |
+| `{MLINSTANCE_ID}` | 提供有效的MLInstance ID以檢索屬於該特定MLInstance的實驗清單。 |
 
 **要求**
 
@@ -155,13 +154,13 @@ curl -X GET \
     https://platform.adobe.io/data/sensei/experiments?property=mlInstanceId==46986c8f-7739-4376-8509-0178bdf32cda \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
 **回應**
 
-成功的回應會傳回共用相同MLInstance ID(`{MLINSTANCE_ID}`)的實驗清單。
+成功的響應返回共用相同MLInstance ID(`{MLINSTANCE_ID}`)。
 
 ```json
 {
@@ -198,9 +197,9 @@ curl -X GET \
 }
 ```
 
-## 擷取特定實驗{#retrieve-specific}
+## 檢索特定實驗 {#retrieve-specific}
 
-您可以執行請求，將所需實驗的ID包含在請求路徑中，以擷取特定實驗的詳細資訊。
+通過執行請求路徑中包含所需實驗ID的GET請求，可以檢索特定實驗的詳細資訊。
 
 **API格式**
 
@@ -219,13 +218,13 @@ curl -X GET \
     https://platform.adobe.io/data/sensei/experiments/5cb25a2d-2cbd-4c99-a619-8ddae5250a7b \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
 **回應**
 
-成功的回應會傳回包含所請求實驗詳細資料的裝載。
+成功的響應返回包含所請求實驗詳細資訊的負載。
 
 ```json
 {
@@ -241,13 +240,13 @@ curl -X GET \
 }
 ```
 
-## 擷取實驗執行清單
+## 檢索「實驗」運行清單
 
-您可以執行單一GET要求並提供有效的實驗ID，以擷取屬於特定實驗的訓練或計分執行清單。 若要協助篩選結果，您可以在請求路徑中指定查詢參數。 有關可用查詢參數的完整清單，請參閱[資產檢索查詢參數](./appendix.md#query)的附錄部分。
+通過執行單個GET請求並提供有效的實驗ID，可以檢索屬於特定實驗的訓練或評分運行清單。 要幫助篩選結果，可以在請求路徑中指定查詢參數。 有關可用查詢參數的完整清單，請參閱附錄部分。 [資產檢索查詢參數](./appendix.md#query)。
 
 >[!NOTE]
 >
->組合多個查詢參數時，必須以&amp;符號分隔。
+>組合多個查詢參數時，必須用和符號(&amp;)分隔。
 
 **API格式**
 
@@ -260,25 +259,25 @@ GET /experiments/{EXPERIMENT_ID}/runs?{QUERY_PARAMETER_1}={VALUE_1}&{QUERY_PARAM
 | 參數 | 說明 |
 | --- | --- |
 | `{EXPERIMENT_ID}` | 有效的實驗ID。 |
-| `{QUERY_PARAMETER}` | 用於篩選結果的[可用查詢參數](./appendix.md#query)之一。 |
+| `{QUERY_PARAMETER}` | 其中 [可用查詢參數](./appendix.md#query) 用於篩選結果。 |
 | `{VALUE}` | 前面查詢參數的值。 |
 
 **要求**
 
-下列請求包含查詢，並擷取屬於某些實驗的訓練執行清單。
+以下請求包含查詢並檢索屬於某個「實驗」的培訓運行清單。
 
 ```shell
 curl -X GET \
     https://platform.adobe.io/data/sensei/experiments/5cb25a2d-2cbd-4c99-a619-8ddae5250a7b/runs?property=mode==train \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
 **回應**
 
-成功的回應會傳回包含執行清單及其每個詳細資訊（包括其實驗執行ID）的裝載。`{RUN_ID}`
+成功的響應返回一個包含運行清單及其每個詳細資訊（包括其實驗運行ID）的負載(`{RUN_ID}`)。
 
 ```json
 {
@@ -304,13 +303,13 @@ curl -X GET \
 
 ## 更新實驗
 
-您可以透過PUT請求覆寫現有實驗的屬性，該請求在請求路徑中包含目標實驗的ID，並提供包含已更新屬性的JSON裝載，借此更新現有實驗。
+您可以通過PUT請求覆蓋現有實驗的屬性來更新其屬性，該請求在請求路徑中包括目標實驗的ID，並提供包含已更新屬性的JSON負載。
 
 >[!TIP]
 >
->為確保此PUT請求成功，建議您先執行GET請求，以[擷取「實驗依ID」](#retrieve-specific)。 然後，修改並更新傳回的JSON物件，並套用已修改的JSON物件作為PUT要求的裝載。
+>為確保此PUT請求成功，建議您首先執行GET請求， [按ID檢索實驗](#retrieve-specific)。 然後，修改和更新返回的JSON對象，並應用已修改的JSON對象的整個作為PUT請求的負載。
 
-下列範例API呼叫會在最初具有這些屬性時更新實驗的名稱：
+下面的示例API調用在初始具有這些屬性時更新實驗的名稱：
 
 ```json
 {
@@ -341,7 +340,7 @@ curl -X PUT \
     https://platform.adobe.io/data/sensei/experiments/5cb25a2d-2cbd-4c99-a619-8ddae5250a7b \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'content-type: application/vnd.adobe.platform.sensei+json;profile=experiments.v1.json' \
     -d '{
@@ -357,7 +356,7 @@ curl -X PUT \
 
 **回應**
 
-成功的回應會傳回包含實驗更新詳細資料的負載。
+成功的響應返回包含實驗更新的詳細資訊的負載。
 
 ```json
 {
@@ -375,7 +374,7 @@ curl -X PUT \
 
 ## 刪除實驗
 
-您可以執行DELETE請求，將目標實驗的ID包含在請求路徑中，以刪除單一實驗。
+通過執行DELETE請求，可以刪除單個實驗，該請求在請求路徑中包括目標實驗的ID。
 
 **API格式**
 
@@ -394,7 +393,7 @@ curl -X DELETE \
     https://platform.adobe.io/data/sensei/experiments/5cb25a2d-2cbd-4c99-a619-8ddae5250a7b \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -408,9 +407,9 @@ curl -X DELETE \
 }
 ```
 
-## 刪除由MLInstance ID進行的實驗
+## 按MLInstance ID刪除實驗
 
-您可以執行包含MLInstance ID作為查詢參數的DELETE請求，刪除屬於特定MLInstance的所有實驗。
+通過執行包含MLInstance ID作為查詢參數的DELETE請求，可以刪除屬於特定MLInstance的所有實驗。
 
 **API格式**
 
@@ -429,7 +428,7 @@ curl -X DELETE \
     https://platform.adobe.io/data/sensei/experiments?mlInstanceId=46986c8f-7739-4376-8509-0178bdf32cda \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 

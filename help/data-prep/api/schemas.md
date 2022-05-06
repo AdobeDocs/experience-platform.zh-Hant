@@ -1,34 +1,33 @@
 ---
-keywords: Experience Platform;home；熱門主題；資料準備；api指南；方案；
+keywords: Experience Platform；首頁；熱門主題；資料準備；api指南；架構；
 solution: Experience Platform
-title: 方案API端點
+title: 架構API終結點
 topic-legacy: schemas
-description: '您可以使用Adobe Experience PlatformAPI中的「/方案」端點，以寫程式方式檢索、建立和更新方案，以便與平台中的映射器一起使用。 '
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+description: '可以使用Adobe Experience PlatformAPI中的「/schemas」端點以寫程式方式檢索、建立和更新架構，以便與平台中的映射器一起使用。 '
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '613'
-ht-degree: 3%
+ht-degree: 4%
 
 ---
 
 
 
-# 方案端點
+# 架構終結點
 
-方案可與映射器一起使用，以確保您已收錄到Adobe Experience Platform的資料與要收錄的資料匹配。 您可以使用`/schemas`端點，以寫程式方式建立、列出和獲取自定義結構，以便與平台中的映射器一起使用。
+架構可與映射器一起使用，以確保您在Adobe Experience Platform攝取的資料與您要攝取的資料相匹配。 您可以使用 `/schemas` 終結點，以寫程式方式建立、列出和獲取自定義架構，以便與平台中的映射器一起使用。
 
 >[!NOTE]
 >
->使用此端點建立的方案只與映射器和映射集一起使用。 要建立可由其他平台服務訪問的架構，請閱讀[架構註冊表開發人員指南](../../xdm/api/schemas.md)。
+>使用此終結點建立的架構專用於映射器和映射集。 要建立其他平台服務可訪問的架構，請閱讀 [架構註冊表開發人員指南](../../xdm/api/schemas.md)。
 
-## 取得所有結構描述
+## 獲取所有架構
 
-通過向`/schemas`端點發出GET請求，可以檢索IMS組織的所有可用映射程式方案的清單。
+通過向IMS組織發出GET請求，您可以檢索IMS組織的所有可用映射程式架構的清單 `/schemas` 端點。
 
 **API格式**
 
-`/schemas`端點支援數個查詢參數，可協助您篩選結果。 雖然這些參數大部分都是選擇性的，但強烈建議使用它們，以協助降低昂貴的開銷。 不過，您必須同時包含`start`和`limit`參數，做為請求的一部分。 可以包括多個參數，用&amp;符號(`&`)分隔。
+的 `/schemas` 終結點支援多個查詢參數，以幫助您篩選結果。 雖然這些參數大多是可選的，但強烈建議使用這些參數以幫助降低昂貴的開銷。 但是，必須同時包括 `start` 和 `limit` 參數。 可以包括多個參數，用和符號分隔(`&`)。
 
 ```http
 GET /schemas?limit={LIMIT}&start={START}
@@ -38,30 +37,30 @@ GET /schemas?limit={LIMIT}&start={START}&orderBy={ORDER_BY}
 
 | 參數 | 說明 |
 | --------- | ----------- |
-| `{LIMIT}` | **必填**. 指定返回的方案數。 |
-| `{START}` | **必填**. 指定結果頁的偏移。 若要取得第一頁的結果，請將值設定為`start=0`。 |
+| `{LIMIT}` | **必填**. 指定返回的架構數。 |
+| `{START}` | **必填**. 指定結果頁的偏移。 要獲取結果的第一頁，請將值設定為 `start=0`。 |
 | `{NAME}` | 根據名稱篩選架構。 |
-| `{ORDER_BY}` | 對結果的順序進行排序。 支援的欄位有`modifiedDate`和`createdDate`。 您可以在屬性前加上`+`或`-`，分別依遞增或遞減順序來排序。 |
+| `{ORDER_BY}` | 對結果的順序進行排序。 支援的欄位為 `modifiedDate` 和 `createdDate`。 您可以用 `+` 或 `-` 按升序或降序排序。 |
 
 **要求**
 
-下列請求會擷取您IMS組織的最後兩個已建立結構。
+以下請求將檢索為IMS組織建立的最後兩個架構。
 
 ```shell
 curl -X GET https://platform.adobe.io/data/foundation/conversion/schemas&start=0&limit=2 \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
- -H 'x-gw-ims-org-id: {IMS_ORG}' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
 **回應**
 
-以下響應返回HTTP狀態200，並返回請求的結構描述的清單。
+以下響應返回HTTP狀態200，其中包含請求的架構的清單。
 
 >[!NOTE]
 >
->下列回應已截斷空格。
+>以下響應已被截斷為空間。
 
 ```json
 {
@@ -132,25 +131,25 @@ curl -X GET https://platform.adobe.io/data/foundation/conversion/schemas&start=0
 }
 ```
 
-## 建立架構
+## 建立方案
 
-通過向`/schemas`端點發出POST請求，可以建立要驗證的方案。 建立架構有三種方法：使用範例資料傳送[JSON結構描述](https://json-schema.org/)，或參考現有的XDM結構描述。
+您可以通過向Web站點發出POST請求來建立要驗證的架構 `/schemas` 端點。 建立架構有三種方法：發送 [JSON架構](https://json-schema.org/)、使用示例資料或引用現有XDM架構。
 
 ```http
 POST /schemas
 ```
 
-### 使用JSON結構描述
+### 使用JSON架構
 
 **要求**
 
-下列請求可讓您傳送[JSON結構描述](https://json-schema.org/)來建立結構描述。
+以下請求允許您通過發送 [JSON架構](https://json-schema.org/)。
 
 ```shell
 curl -X POST https://platform.adobe.io/data/foundation/conversion/schemas \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
  -H 'Content-Type: application/json' \
- -H 'x-gw-ims-org-id: {IMS_ORG}' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}'
  -d '
@@ -165,7 +164,7 @@ curl -X POST https://platform.adobe.io/data/foundation/conversion/schemas \
 
 **回應**
 
-成功的回應會傳回HTTP狀態200，其中包含您新建立之架構的相關資訊。
+成功的響應返回HTTP狀態200，其中包含有關新建立的架構的資訊。
 
 ```json
 {
@@ -179,17 +178,17 @@ curl -X POST https://platform.adobe.io/data/foundation/conversion/schemas \
 }
 ```
 
-### 使用樣本資料
+### 使用示例資料
 
 **要求**
 
-下列請求可讓您使用先前上傳的範例資料來建立結構。
+以下請求允許您使用先前上載的示例資料建立方案。
 
 ```shell
 curl -X POST https://platform.adobe.io/data/foundation/conversion/schemas \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
  -H 'Content-Type: application/json' \
- -H 'x-gw-ims-org-id: {IMS_ORG}' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}'
  -d '
@@ -200,11 +199,11 @@ curl -X POST https://platform.adobe.io/data/foundation/conversion/schemas \
 
 | 屬性 | 說明 |
 | -------- | ----------- |
-| `sampleId` | 您將模式設定為of的示例資料的ID。 |
+| `sampleId` | 基於的架構的示例資料的ID。 |
 
 **回應**
 
-成功的回應會傳回HTTP狀態200，其中包含您新建立之架構的相關資訊。
+成功的響應返回HTTP狀態200，其中包含有關新建立的架構的資訊。
 
 ```json
 {
@@ -244,17 +243,17 @@ curl -X POST https://platform.adobe.io/data/foundation/conversion/schemas \
 }
 ```
 
-### 請參閱XDM架構
+### 參考XDM架構
 
 **要求**
 
-以下請求可讓您參考現有的XDM架構來建立架構。
+以下請求允許您通過引用現有XDM架構來建立架構。
 
 ```shell
 curl -X POST https://platform.adobe.io/data/foundation/conversion/schemas \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
  -H 'Content-Type: application/json' \
- -H 'x-gw-ims-org-id: {IMS_ORG}' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}'
  -d '
@@ -269,24 +268,24 @@ curl -X POST https://platform.adobe.io/data/foundation/conversion/schemas \
 
 | 屬性 | 說明 |
 | -------- | ----------- |
-| `name` | 要建立的方案的名稱。 |
-| `schemaRef.id` | 您所參照之架構的ID。 |
-| `schemaRef.contentType` | 確定引用方案的響應格式。 有關此欄位的詳細資訊，請參閱[方案註冊表開發人員指南](../../xdm/api/schemas.md#lookup) |
+| `name` | 要建立的架構的名稱。 |
+| `schemaRef.id` | 您引用的架構的ID。 |
+| `schemaRef.contentType` | 確定引用架構的響應格式。 有關此欄位的詳細資訊，請參閱 [架構註冊表開發者指南](../../xdm/api/schemas.md#lookup) |
 
 **回應**
 
-成功的回應會傳回HTTP狀態200，其中包含您新建立之架構的相關資訊。
+成功的響應返回HTTP狀態200，其中包含有關新建立的架構的資訊。
 
 >[!NOTE]
 >
->下列回應已截斷空格。
+>以下響應已被截斷為空間。
 
 ```json
 {
     "id": "4b64daa51b774cb2ac21b61d80125ed0",
     "version": 0,
     "name": "schemaName",
-    "jsonSchema": "{\"id\":null,\"schema\":null,\"_refId\":null,\"title\":\"SimpleUser\",...,\"imsOrg\":\"{IMS_ORG}\",\"$id\":\"https://ns.adobe.com/{TENANT_ID}/schemas/901c44cc5b2748488574f4e2824c5f96\"}",
+    "jsonSchema": "{\"id\":null,\"schema\":null,\"_refId\":null,\"title\":\"SimpleUser\",...,\"imsOrg\":\"{ORG_ID}\",\"$id\":\"https://ns.adobe.com/{TENANT_ID}/schemas/901c44cc5b2748488574f4e2824c5f96\"}",
     "schemaRef": {
         "id": "https://ns.adobe.com/{TENANT_ID}/schemas/901c44cc5b2748488574f4e2824c5f96",
         "contentType": "application/vnd.adobe.xed+json;version=1.0"
@@ -296,7 +295,7 @@ curl -X POST https://platform.adobe.io/data/foundation/conversion/schemas \
 
 ## 使用檔案上載建立架構
 
-您可以上傳JSON檔案，以便從中轉換，以建立結構描述。
+可以通過上載JSON檔案來建立要從中轉換的架構。
 
 **API格式**
 
@@ -306,13 +305,13 @@ POST /schemas/upload
 
 **要求**
 
-下列請求可讓您從已上傳的JSON檔案建立結構描述。
+以下請求允許您從上載的JSON檔案建立架構。
 
 ```shell
 curl -X POST https://platform.adobe.io/data/foundation/conversion/schemas/upload \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
  -H 'Content-Type: multipart/form-data' \
- -H 'x-gw-ims-org-id: {IMS_ORG}' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}'
  -F 'file=@{PATH_TO_FILE}.json'
@@ -320,7 +319,7 @@ curl -X POST https://platform.adobe.io/data/foundation/conversion/schemas/upload
 
 **回應**
 
-成功的回應會傳回HTTP狀態200，其中包含您新建立之架構的相關資訊。
+成功的響應返回HTTP狀態200，其中包含有關新建立的架構的資訊。
 
 ```json
 {
@@ -334,9 +333,9 @@ curl -X POST https://platform.adobe.io/data/foundation/conversion/schemas/upload
 }
 ```
 
-## 檢索特定模式
+## 檢索特定架構
 
-通過向`/schemas`端點發出GET請求，並在請求路徑中提供要檢索的方案的ID，可以檢索有關特定方案的資訊。
+可通過向Web站點發出GET請求來檢索有關特定架構的資訊 `/schemas` 端點，並提供要在請求路徑中檢索的架構的ID。
 
 **API格式**
 
@@ -350,19 +349,19 @@ GET /schemas/{SCHEMA_ID}
 
 **要求**
 
-以下請求將檢索有關指定方案的資訊。
+以下請求檢索有關指定架構的資訊。
 
 ```shell
 curl -X GET https://platform.adobe.io/data/foundation/conversion/schemas/0f868d3a1b804fb0abf738306290ae79 \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
- -H 'x-gw-ims-org-id: {IMS_ORG}' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
 **回應**
 
-成功的響應返回HTTP狀態200，並返回有關指定模式的資訊。
+成功的響應返回HTTP狀態200，其中包含有關指定架構的資訊。
 
 ```json
 {

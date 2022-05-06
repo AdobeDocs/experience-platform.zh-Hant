@@ -5,7 +5,7 @@ title: Salesforce源連接器概述
 topic-legacy: overview
 description: 瞭解如何使用API或用戶介面將Salesforce連接到Adobe Experience Platform。
 exl-id: 597778ad-3cf8-467c-ad5b-e2850967fdeb
-source-git-commit: fa861e9740e05b4fcc4e8039bb288301d42b8357
+source-git-commit: 93061c84639ca1fdd3f7abb1bbd050eb6eebbdd6
 workflow-type: tm+mt
 source-wordcount: '897'
 ht-degree: 0%
@@ -60,7 +60,7 @@ Experience Platform支援從第三方CRM系統接收資料。 對CRM提供程式
 | `PRIVATE_KEY` | 用於驗證您的 [!DNL Postman] 實例到Experience PlatformAPI。 請參閱有關設定開發人員控制台和 [設定開發人員控制台和 [!DNL Postman]](../../../landing/postman.md) 有關如何檢索{PRIVATE_KEY}的說明。 | `{PRIVATE_KEY}` |
 | `TECHNICAL_ACCOUNT_ID` | 用於整合到Adobe I/O的憑據。 | `D42AEVJZTTJC6LZADUBVPA15@techacct.adobe.com` |
 | `IMS` | Identity Management系統(IMS)為Adobe服務提供了驗證框架。 關於 [!DNL Marketo]，此值是固定的，並且始終設定為： `ims-na1.adobelogin.com`。 | `ims-na1.adobelogin.com` |
-| `IMS_ORG` | 擁有或許可產品和服務並允許訪問其成員的公司實體。 請參閱上的教程 [設定開發人員控制台和 [!DNL Postman]](../../../landing/postman.md) 有關如何檢索 `{IMS_ORG}` 的下界。 | `ABCEH0D9KX6A7WA7ATQE0TE@adobeOrg` |
+| `IMS_ORG` | 擁有或許可產品和服務並允許訪問其成員的公司實體。 請參閱上的教程 [設定開發人員控制台和 [!DNL Postman]](../../../landing/postman.md) 有關如何檢索 `{ORG_ID}` 的下界。 | `ABCEH0D9KX6A7WA7ATQE0TE@adobeOrg` |
 | `SANDBOX_NAME` | 您正在使用的虛擬沙盒分區的名稱。 | `prod` |
 | `TENANT_ID` | 一個ID，用於確保您建立的資源與IMS組織中的資源同名並包含在您的IMS組織中。 | `b2bcdpproductiontest` |
 | `PLATFORM_URL` | 要對其進行API調用的URL終結點。 此值是固定的，始終設定為： `http://platform.adobe.io/`。 | `http://platform.adobe.io/` |

@@ -1,27 +1,26 @@
 ---
-keywords: Experience Platform;home；常用主題；namespace；命名空間；命名空間；標識命名空間；標識命名空間；標識名稱空間；標識
+keywords: Experience Platform；首頁；熱門主題；命名空間；命名空間；命名空間；標識命名空間；標識命名空間；標識名空間；標識名空間；標識；標識
 solution: Experience Platform
-title: 在Identity Service API中建立自訂命名空間
+title: 在Identity Service API中建立自定義命名空間
 topic-legacy: API guide
-description: 使用Identity Namespace API，您可以建立自訂的身分名稱空間，該名稱空間僅供您的組織使用。
+description: 使用Identity Namespace API，您可以建立僅對您的組織可用的自定義標識命名空間。
 exl-id: 6015a225-4508-49cc-9dda-fb9f73a8746c
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '120'
 ht-degree: 3%
 
 ---
 
-# 在Identity Service API中建立自訂命名空間
+# 在Identity Service API中建立自定義命名空間
 
-使用[!DNL Identity Namespace] API，您可以建立自訂的身分名稱空間，該名稱空間僅供您的組織使用。
+使用 [!DNL Identity Namespace] API，您可以建立僅對您的組織可用的自定義標識命名空間。
 
-如需有關建立自訂名稱空間的建議，請參閱[Identity Service常見問答集檔案](../troubleshooting-guide.md)。
+有關建立自定義命名空間的建議，請參見 [Identity Service常見問題文檔](../troubleshooting-guide.md)。
 
 >[!NOTE]
 >
->名稱空間是身份的限定詞。 因此，一旦建立了命名空間，就無法刪除。
+>命名空間是標識的限定符。 因此，一旦建立了命名空間，就無法刪除該命名空間。
 
 **API格式**
 
@@ -38,7 +37,7 @@ curl -X POST \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -d '{
         "name": "Loyalty Member",
         "code": "Loyalty",
@@ -65,4 +64,4 @@ curl -X POST \
 
 ## 後續步驟
 
-繼續下一個教學課程[列出身分的原生ID](./list-native-id.md)
+繼續下一教程， [列出標識的本機ID](./list-native-id.md)

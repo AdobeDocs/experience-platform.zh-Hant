@@ -1,12 +1,11 @@
 ---
-keywords: Experience Platform;home；熱門主題；目錄服務；目錄api；附錄
+keywords: Experience Platform；首頁；熱門主題；目錄服務；目錄api；附錄
 solution: Experience Platform
 title: 目錄服務API指南附錄
 topic-legacy: developer guide
-description: 本檔案包含其他資訊，可協助您使用Adobe Experience Platform的Catalog API。
+description: 本文檔包含其他資訊以幫助您使用Adobe Experience Platform的目錄API。
 exl-id: fafc8187-a95b-4592-9736-cfd9d32fd135
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '920'
 ht-degree: 1%
@@ -15,13 +14,13 @@ ht-degree: 1%
 
 # [!DNL Catalog Service] API指南附錄
 
-本檔案包含協助您使用[!DNL Catalog] API的其他資訊。
+此文檔包含其他資訊，可幫助您使用 [!DNL Catalog] API。
 
-## 查看相關對象{#view-interrelated-objects}
+## 查看相關對象 {#view-interrelated-objects}
 
-某些[!DNL Catalog]對象可以與其他[!DNL Catalog]對象相關聯。 在響應負載中以`@`為前置詞的任何欄位都表示相關對象。 這些欄位的值採用URI的形式，可用於個別的GET請求，以擷取其所代表的相關物件。
+部分 [!DNL Catalog] 對象可以與其他 [!DNL Catalog] 對象。 前置詞為的任何欄位 `@` 響應負載表示相關對象。 這些欄位的值採用URI的形式，可在單獨的GET請求中使用URI來檢索它們所表示的相關對象。
 
-在[查找特定資料集](look-up-object.md)的文檔中返回的示例資料集包含具有以下URI值的`files`欄位：`"@/dataSets/5ba9452f7de80400007fc52a/views/5ba9452f7de80400007fc52b/files"`。 使用此URI作為新GET請求的路徑，可以查看`files`欄位的內容。
+在文檔中返回的示例資料集 [查找特定資料集](look-up-object.md) 包含 `files` 具有以下URI值的欄位： `"@/dataSets/5ba9452f7de80400007fc52a/views/5ba9452f7de80400007fc52b/files"`。 的內容 `files` 使用此URI作為新GET請求的路徑可查看欄位。
 
 **API格式**
 
@@ -31,24 +30,24 @@ GET {OBJECT_URI}
 
 | 參數 | 說明 |
 | --- | --- |
-| `{OBJECT_URI}` | 由相關對象欄位（不包括`@`符號）提供的URI。 |
+| `{OBJECT_URI}` | 由相關對象欄位提供的URI(不包括 `@` )的正平方根。 |
 
 **要求**
 
-下列請求使用範例資料集的`files`屬性提供的URI來擷取資料集相關聯檔案的清單。
+以下請求使用URI提供示例資料集的 `files` 屬性，以檢索資料集的關聯檔案清單。
 
 ```shell
 curl -X GET \
   'https://platform.adobe.io/data/foundation/catalog/dataSets/5ba9452f7de80400007fc52a/views/5ba9452f7de80400007fc52b/files' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
 **回應**
 
-成功的響應返回相關對象的清單。 在此範例中，會傳回資料集檔案的清單。
+成功的響應返回相關對象的清單。 在此示例中，返回資料集檔案的清單。
 
 ```json
 {
@@ -56,7 +55,7 @@ curl -X GET \
         "id": "7d501090-0280-11ea-a6bb-f18323b7005c-1",
         "batchId": "7d501090-0280-11ea-a6bb-f18323b7005c",
         "dataSetViewId": "5ba9452f7de80400007fc52b",
-        "imsOrg": "{IMS_ORG}",
+        "imsOrg": "{ORG_ID}",
         "createdUser": "{USER_ID}",
         "createdClient": "{CLIENT_ID}",
         "updatedUser": "{USER_ID}",
@@ -68,7 +67,7 @@ curl -X GET \
         "id": "148ac690-0280-11ea-8d23-8571a35dce49-1",
         "batchId": "148ac690-0280-11ea-8d23-8571a35dce49",
         "dataSetViewId": "5ba9452f7de80400007fc52b",
-        "imsOrg": "{IMS_ORG}",
+        "imsOrg": "{ORG_ID}",
         "createdUser": "{USER_ID}",
         "createdClient": "{CLIENT_ID}",
         "updatedUser": "{USER_ID}",
@@ -80,7 +79,7 @@ curl -X GET \
         "id": "64dd5e19-8ea4-4ddd-acd1-f43cccd8eddb-1",
         "batchId": "64dd5e19-8ea4-4ddd-acd1-f43cccd8eddb",
         "dataSetViewId": "5ba9452f7de80400007fc52b",
-        "imsOrg": "{IMS_ORG}",
+        "imsOrg": "{ORG_ID}",
         "createdUser": "{USER_ID}",
         "createdClient": "{CLIENT_ID}",
         "updatedUser": "{USER_ID}",
@@ -91,11 +90,11 @@ curl -X GET \
 }
 ```
 
-## 在單一呼叫中提出多個請求
+## 在單個呼叫中發出多個請求
 
-[!DNL Catalog] API的根端點允許在單次呼叫中發出多個請求。 請求裝載包含代表通常是個別請求的物件陣列，然後依序執行。
+的根端點 [!DNL Catalog] API允許在單個調用中發出多個請求。 該請求負載包含表示通常是單個請求的對象的陣列，然後按順序執行。
 
-如果這些請求是對[!DNL Catalog]的修改或添加，而且任何更改都失敗，則所有更改都將恢復。
+如果這些請求是對 [!DNL Catalog] 任何更改都會失敗，所有更改都將恢復。
 
 **API格式**
 
@@ -105,20 +104,20 @@ POST /
 
 **要求**
 
-下列請求會建立新資料集，然後建立該資料集的相關檢視。 此範例示範如何使用範本語言來存取先前呼叫中傳回的值，以便用於後續呼叫。
+以下請求將建立新資料集，然後為該資料集建立相關視圖。 此示例演示了使用模板語言來訪問先前調用中返回的值，以便在後續調用中使用。
 
-例如，如果您想要參考從先前的子請求傳回的值，則可以建立以下格式的參考：`<<{REQUEST_ID}.{ATTRIBUTE_NAME}>>`（其中`{REQUEST_ID}`是使用者提供的子請求ID，如下所示）。 您可以使用這些範本，來參考先前子請求回應物件內文中可用的任何屬性。
+例如，如果要引用從上一個子請求返回的值，可以以下格式建立引用： `<<{REQUEST_ID}.{ATTRIBUTE_NAME}>>` ( `{REQUEST_ID}` 是用戶為子請求提供的ID，如下所示)。 您可以使用這些模板來引用先前子請求的響應對象正文中可用的任何屬性。
 
 >[!NOTE]
 >
->當執行的子請求僅返回對對象的引用(在目錄API中，對於大多數POST和PUT請求，此為預設值)時，此引用將別名化為值`id`，並可用作`<<{OBJECT_ID}.id>>`。
+>當執行的子請求僅返回對對象的引用(這是目錄API中大多數POST和PUT請求的預設值)時，此引用將別名為值 `id` 可用作  `<<{OBJECT_ID}.id>>`。
 
 ```shell
 curl -X POST \
   https://platform.adobe.io/data/foundation/catalog \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -H 'Content-Type: application/json' \
   -d '[
@@ -145,14 +144,14 @@ curl -X POST \
 
 | 屬性 | 說明 |
 | --- | --- |
-| `id` | 附加至回應物件的使用者提供ID，以便您將要求與回應相符。 [!DNL Catalog] 不會儲存此值，只會在回應中傳回該值，以供參考。 |
-| `resource` | 相對於[!DNL Catalog] API根的資源路徑。 協定和域不應是此值的一部分，並且應加上前置詞&quot;/&quot;。 <br/><br/> 當使用PATCH或DELETE作為子請求時， `method`請在資源路徑中包括對象ID。不要與用戶提供的`id`混淆，資源路徑使用[!DNL Catalog]對象本身的ID（例如`resource: "/dataSets/1234567890"`）。 |
-| `method` | 與請求中所發生動作相關的方法(GET、PUT、POST、PATCH或DELETE)名稱。 |
-| `body` | 通常會在POST、PUT或PATCH請求中作為裝載傳遞的JSON檔案。 此屬性不是GET或DELETE請求的必需屬性。 |
+| `id` | 附加到響應對象的用戶提供的ID，以便您可以將請求與響應匹配。 [!DNL Catalog] 不儲存此值，而只是將其返回到響應中以供參考。 |
+| `resource` | 相對於的根的資源路徑 [!DNL Catalog] API。 協定和域不應是此值的一部分，並且應在前面加上「/」。 <br/><br/> 將PATCH或DELETE用作子請求 `method`，將對象ID包括在資源路徑中。 不要與用戶提供的混淆 `id`，資源路徑使用的ID [!DNL Catalog] 對象本身(例如， `resource: "/dataSets/1234567890"`)。 |
+| `method` | 與請求中發生的操作相關的方法(GET、PUT、POST、PATCH或DELETE)的名稱。 |
+| `body` | 通常作為POST、PUT或PATCH請求中的負載傳遞的JSON文檔。 此屬性不是GET或DELETE請求所必需的。 |
 
 **回應**
 
-成功的響應返回一組對象，這些對象包含您分配給每個請求的`id`、單個請求的HTTP狀態代碼和響應`body`。 由於三個示例請求都是為了建立新對象，因此每個對象的`body`都是一個僅包含新建立對象ID的陣列，而[!DNL Catalog]中最成功POST響應的標準陣列也是如此。
+成功的響應返回包含 `id` 分配給每個請求的HTTP狀態代碼，以及響應 `body`。 由於三個示例請求都是為建立新對象， `body` 每個對象的陣列只包含新建立對象的ID，而POST響應最成功的標準陣列 [!DNL Catalog]。
 
 ```json
 [
@@ -173,26 +172,26 @@ curl -X POST \
 ]
 ```
 
-檢查多重請求的回應時請務必小心，因為您需要驗證每個個別子請求的程式碼，而不要只依賴父POST請求的HTTP狀態程式碼。  單個子請求可以傳回404(例如對無效資源的GET請求)，而整體請求傳回200。
+檢查對多請求的響應時要小心，因為您需要驗證每個子請求的代碼，而不是僅依賴父POST請求的HTTP狀態代碼。  單個子請求可以返回404(例如對無效資源的GET請求)，而總請求返回200。
 
-## 其他請求標題
+## 其他請求標頭
 
-[!DNL Catalog] 提供數種標題慣例，以協助您在更新期間維持資料的完整性。
+[!DNL Catalog] 提供了多種標題約定，以幫助您在更新期間保持資料的完整性。
 
 ### If-Match
 
-最好使用物件版本控制來防止多個使用者同時儲存物件時發生的資料損毀類型。
+最好使用對象版本控制來防止當多個用戶幾乎同時保存對象時發生的資料損壞類型。
 
-更新物件時的最佳實務是先進行API呼叫，以檢視(GET)要更新的物件。 包含在回應中（以及任何回應包含單一物件的呼叫）是包含物件版本的`E-Tag`標題。 在更新(PUT或PATCH)呼叫中將物件版本新增為名為`If-Match`的請求標題，只有在版本不變時，才會成功進行更新，有助於避免資料衝突。
+更新對象時的最佳做法是首先進行API調用以查看(GET)要更新的對象。 包含在響應（以及響應包含單個對象的任何調用）中是 `E-Tag` 包含對象版本的標題。 將對象版本添加為名為的請求標題 `If-Match` 在更新(PUT或PATCH)調用中，只有在版本仍然相同的情況下才會成功更新，從而有助於防止資料衝突。
 
-如果版本不匹配（自您檢索到該對象後，該對象被其他進程修改），則您將收到HTTP狀態412（先決條件失敗），表示對目標資源的訪問被拒絕。
+如果版本不匹配（自您檢索到該對象後，該對象被其他進程修改），您將收到HTTP狀態412（前提條件失敗），表示對目標資源的訪問被拒絕。
 
 ### Pragma
 
-有時，您可能希望驗證對象而不保存資訊。 使用`Pragma`標題（其值為`validate-only`）可讓您僅傳送POST或PUT請求以進行驗證，避免對資料進行任何變更。
+有時，您可能希望驗證對象而不保存資訊。 使用 `Pragma` 值為 `validate-only` 允許您僅為驗證目的發送POST或PUT請求，從而防止對資料的任何更改被保留。
 
 ## 資料壓縮
 
-壓縮是一種[!DNL Experience Platform]服務，可將小檔案的資料合併為大檔案，而不會變更任何資料。 出於效能原因，有時將一組小檔案合併為較大的檔案，以便在查詢時提供更快速的資料存取。
+壓縮是 [!DNL Experience Platform] 將小檔案中的資料合併到大檔案中而不更改任何資料的服務。 出於效能原因，有時將一組小檔案合併到較大檔案中是有益的，以便在查詢時能夠更快地訪問資料。
 
-當收錄批次中的檔案已壓縮時，會更新其相關的[!DNL Catalog]物件，以利監控。
+當所攝取批中的檔案已壓縮時，其關聯 [!DNL Catalog] 對象已更新以用於監視目的。

@@ -1,58 +1,57 @@
 ---
 keywords: Experience Platform；訓練和評估；資料科學工作區；熱門主題；Sensei機器學習API
 solution: Experience Platform
-title: 使用Sensei機器學習API來訓練和評估模型
+title: 用Sensei機器學習API訓練和評估模型
 topic-legacy: tutorial
 type: Tutorial
-description: 本教學課程將示範如何使用Sensei Machine Learning API呼叫建立、訓練和評估模型。
+description: 本教程將向您介紹如何使用Sensei機器學習API調用建立、訓練和評估模型。
 exl-id: 8107221f-184c-426c-a33e-0ef55ed7796e
-translation-type: tm+mt
-source-git-commit: 441d7822f287fabf1b06cdf3f6982f9c910387a8
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '1235'
 ht-degree: 1%
 
 ---
 
-# 使用[!DNL Sensei Machine Learning] API來訓練和評估模型
+# 使用 [!DNL Sensei Machine Learning] API
 
 
-本教學課程將示範如何使用API呼叫建立、訓練和評估模型。 請參閱[本檔案](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml)以取得API檔案的詳細清單。
+本教程將介紹如何使用API調用建立、訓練和評估模型。 請參閱 [此文檔](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml) 的子菜單。
 
 ## 先決條件
 
-請遵循[使用API](./import-packaged-recipe-api.md)匯入封裝配方以建立引擎，此引擎是使用API來訓練和評估模型所需的。
+關注 [使用API導入打包的處方](./import-packaged-recipe-api.md) 建立引擎時，需要使用API來訓練和評估模型。
 
-請依照[Experience PlatformAPI驗證教學課程](https://www.adobe.com/go/platform-api-authentication-en)開始進行API呼叫。
+關注 [Experience PlatformAPI驗證教程](https://www.adobe.com/go/platform-api-authentication-en) 開始調用API。
 
-在教學課程中，您現在應該有下列值：
+在本教程中，您現在應具有以下值：
 
-- `{ACCESS_TOKEN}`:驗證後提供的您特定的載體Token值。
-- `{IMS_ORG}`:您的IMS組織認證可在您獨特的Adobe Experience Platform整合中找到。
-- `{API_KEY}`:您在獨特的Adobe Experience Platform整合中找到的特定API金鑰值。
+- `{ACCESS_TOKEN}`:身份驗證後提供的特定持有者令牌值。
+- `{ORG_ID}`:在您獨特的Adobe Experience Platform整合中找到了您的IMS組織憑據。
+- `{API_KEY}`:在您獨特的Adobe Experience Platform整合中找到您的特定API密鑰值。
 
-- 連結至智慧型服務的Docker影像
+- 連結到智慧服務的Docker映像
 
-## API工作流程
+## API工作流
 
-我們將使用API來建立實驗執行以進行訓練。 在本教學課程中，我們將重點討論引擎、MLInstances和實驗端點。 下圖概述這三者之間的關係，並介紹「執行」(Run)和「模型」(Model)的概念。
+我們將使用API建立用於培訓的實驗運行。 在本教程中，我們將重點介紹引擎、MLInstances和實驗端點。 下圖概述了三者之間的關係，還介紹了「運行」(Run)和「模型」(Model)的思想。
 
 ![](../images/models-recipes/train-evaluate-api/engine_hierarchy_api.png)
 
 >[!NOTE]
 >
->「引擎」、「MLInstance」、「MLService」、「實驗」和「模型」在UI中稱為不同的詞語。 如果您是來自UI，下表會對應差異。
+>在UI中，術語「引擎」、「MLInstance」、「MLService」、「Experime」和「Model」被稱為不同的術語。 如果您來自UI，下表將映射差異。
 
-| UI詞語 | API期限 |
+| UI術語 | API術語 |
 | --- | --- |
-| 配方 | 引擎 |
+| 食譜 | 引擎 |
 | 模型 | MLInstance |
-| 訓練課程 | 實驗 |
+| 培訓 | 實驗 |
 | 服務 | MLService |
 
 ### 建立MLInstance
 
-您可使用下列請求來建立MLInstance。 您將使用從[使用API](./import-packaged-recipe-ui.md)教學課程匯入封裝配方建立引擎時傳回的`{ENGINE_ID}`。
+可以使用以下請求建立MLInstance。 您將使用 `{ENGINE_ID}` 在建立 [使用API導入打包的處方](./import-packaged-recipe-ui.md) 教程。
 
 **要求**
 
@@ -62,14 +61,14 @@ curl -X POST \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/vnd.adobe.platform.sensei+json;profile=mlInstance.v1.json' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -d `{JSON_PAYLOAD}`
 ```
 
-`{ACCESS_TOKEN}`:驗證後提供的您特定的載體Token值。\
-`{IMS_ORG}`:您的IMS組織認證可在您獨特的Adobe Experience Platform整合中找到。\
-`{API_KEY}`:您在獨特的Adobe Experience Platform整合中找到的特定API金鑰值。\
-`{JSON_PAYLOAD}`:MLInstance的配置。我們在教學課程中使用的範例如下所示：
+`{ACCESS_TOKEN}`:身份驗證後提供的特定持有者令牌值。\
+`{ORG_ID}`:在您獨特的Adobe Experience Platform整合中找到了您的IMS組織憑據。\
+`{API_KEY}`:在您獨特的Adobe Experience Platform整合中找到您的特定API密鑰值。\
+`{JSON_PAYLOAD}`:MLInstance的配置。 本教程中使用的示例如下所示：
 
 ```JSON
 {
@@ -124,9 +123,9 @@ curl -X POST \
 
 >[!NOTE]
 >
->在`{JSON_PAYLOAD}`中，我們定義`tasks`陣列中用於訓練和計分的參數。 `{ENGINE_ID}`是您要使用之引擎的ID，而`tag`欄位是用來識別例項的選用參數。
+>在 `{JSON_PAYLOAD}`，我們定義用於在 `tasks` 陣列。 的 `{ENGINE_ID}` 是要使用的引擎的ID, `tag` 欄位是用於標識實例的可選參數。
 
-響應包含`{INSTANCE_ID}` ，該代表所建立的MLInstance。 可以建立具有不同配置的多模型MLI實例。
+響應包含 `{INSTANCE_ID}` 表示所建立的MLInstance。 可以建立具有不同配置的多個模型MLInstance。
 
 **回應**
 
@@ -159,12 +158,12 @@ curl -X POST \
 }
 ```
 
-`{ENGINE_ID}`:此ID代表在下建立MLInstance的引擎。\
-`{INSTANCE_ID}`:代表MLInstance的ID。
+`{ENGINE_ID}`:此ID表示在下建立MLInstance的引擎。\
+`{INSTANCE_ID}`:表示MLInstance的ID。
 
 ### 建立實驗
 
-資料科學家在訓練時使用實驗來獲得高效能模型。 多項實驗包括變更資料集、功能、學習參數和硬體。 以下是建立實驗的示例。
+資料科學家在訓練時使用實驗來獲得高效能模型。 多個實驗包括更改資料集、功能、學習參數和硬體。 以下是建立「實驗」的示例。
 
 **要求**
 
@@ -173,15 +172,15 @@ curl -X POST \
   https://platform.adobe.io/data/sensei/experiments \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/vnd.adobe.platform.sensei+json;profile=experiment.v1.json' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-api-key: {API_KEY' \
   -d `{JSON PAYLOAD}`
 ```
 
-`{IMS_ORG}`:您的IMS組織認證可在您獨特的Adobe Experience Platform整合中找到。\
-`{ACCESS_TOKEN}`:驗證後提供的您特定的載體Token值。\
-`{API_KEY}`:您在獨特的Adobe Experience Platform整合中找到的特定API金鑰值。\
-`{JSON_PAYLOAD}`:實驗所建立的物件。我們在教學課程中使用的範例如下所示：
+`{ORG_ID}`:在您獨特的Adobe Experience Platform整合中找到了您的IMS組織憑據。\
+`{ACCESS_TOKEN}`:身份驗證後提供的特定持有者令牌值。\
+`{API_KEY}`:在您獨特的Adobe Experience Platform整合中找到您的特定API密鑰值。\
+`{JSON_PAYLOAD}`:建立的實驗對象。 本教程中使用的示例如下所示：
 
 ```JSON
 {
@@ -193,9 +192,9 @@ curl -X POST \
 }
 ```
 
-`{INSTANCE_ID}`:代表MLInstance的ID。
+`{INSTANCE_ID}`:表示MLInstance的ID。
 
-「實驗」建立的回應如下所示。
+「實驗」(Experiment)建立的響應如下所示。
 
 **回應**
 
@@ -213,13 +212,14 @@ curl -X POST \
 }
 ```
 
-`{EXPERIMENT_ID}`:代表您剛建立的實驗的ID。`{INSTANCE_ID}`:代表MLInstance的ID。
+`{EXPERIMENT_ID}`:表示您剛建立的實驗的ID。
+`{INSTANCE_ID}`:表示MLInstance的ID。
 
-### 建立計畫的訓練實驗
+### 為培訓建立計畫實驗
 
-使用「排程實驗」，因此我們不需要透過API呼叫建立每個「實驗執行」。 我們會在「實驗」建立期間提供所有必要的參數，並定期建立每個執行。
+使用計畫實驗，這樣我們就不需要通過API調用建立每個單個實驗運行。 相反，在「實驗」(Experite)建立期間，我們提供所有必需參數，並且將定期建立每個運行。
 
-若要指出已排程實驗的建立，我們必須在請求正文中新增`template`區段。 在`template`中，計畫執行的所有必要參數都包含在內，例如`tasks`（表示執行的動作）和`schedule`（表示排程執行的時間）。
+要指示計畫實驗的建立，必須添加 `template` 的上界。 在 `template`，包括調度運行的所有必要參數，如 `tasks`，表示操作和 `schedule`，指示計畫運行的時間。
 
 **要求**
 
@@ -228,15 +228,15 @@ curl -X POST \
   https://platform.adobe.io/data/sensei/experiments \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/vnd.adobe.platform.sensei+json;profile=experiment.v1.json' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-api-key: {API_KEY}' \
   -d '{JSON_PAYLOAD}`
 ```
 
-`{IMS_ORG}`:您的IMS組織認證可在您獨特的Adobe Experience Platform整合中找到。\
-`{ACCESS_TOKEN}`:驗證後提供的您特定的載體Token值。\
-`{API_KEY}`:您在獨特的Adobe Experience Platform整合中找到的特定API金鑰值。\
-`{JSON_PAYLOAD}`:要張貼的資料集。我們在教學課程中使用的範例如下所示：
+`{ORG_ID}`:在您獨特的Adobe Experience Platform整合中找到了您的IMS組織憑據。\
+`{ACCESS_TOKEN}`:身份驗證後提供的特定持有者令牌值。\
+`{API_KEY}`:在您獨特的Adobe Experience Platform整合中找到您的特定API密鑰值。\
+`{JSON_PAYLOAD}`:要過帳的資料集。 本教程中使用的示例如下所示：
 
 ```JSON
 {
@@ -266,7 +266,7 @@ curl -X POST \
 }
 ```
 
-當我們建立實驗時，主體`{JSON_PAYLOAD}`應包含`mlInstanceId`或`mlInstanceQuery`參數。 在此範例中，排程的「實驗」會每20分鐘叫用一次執行，在`cron`參數中設定，從`startTime`開始，直到`endTime`。
+當我們做實驗時，身體， `{JSON_PAYLOAD}`，應包含 `mlInstanceId` 或 `mlInstanceQuery` 的下界。 在此示例中，計畫實驗將每20分鐘調用一次運行，在 `cron` 參數，從 `startTime` 直到 `endTime`。
 
 **回應**
 
@@ -300,13 +300,13 @@ curl -X POST \
 }
 ```
 
-`{EXPERIMENT_ID}`:代表實驗的ID。\
-`{INSTANCE_ID}`:代表MLInstance的ID。
+`{EXPERIMENT_ID}`:表示實驗的ID。\
+`{INSTANCE_ID}`:表示MLInstance的ID。
 
 
-### 建立訓練的實驗執行
+### 建立用於培訓的實驗運行
 
-建立實驗實體後，就可使用下列呼叫建立並執行訓練執行。 您需要`{EXPERIMENT_ID}`，並在請求內文中指出您要觸發的`mode`。
+建立「實驗」實體後，可以使用下面的調用建立並運行培訓運行。 你需要 `{EXPERIMENT_ID}` 說明 `mode` 要在請求正文中觸發。
 
 **要求**
 
@@ -315,16 +315,16 @@ curl -X POST \
   https://platform.adobe.io/data/sensei/experiments/{EXPERIMENT_ID}/runs \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/vnd.adobe.platform.sensei+json;profile=experimentRun.v1.json' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-api-key: {API_KEY}' \
   -d '{JSON_PAYLOAD}'
 ```
 
-`{EXPERIMENT_ID}`:與您要定位的「實驗」對應的ID。這可在建立實驗時的回應中找到。\
-`{IMS_ORG}`:您的IMS組織認證可在您獨特的Adobe Experience Platform整合中找到。\
-`{ACCESS_TOKEN}`:驗證後提供的您特定的載體Token值。\
-`{API_KEY}`:您在獨特的Adobe Experience Platform整合中找到的特定API金鑰值。\
-`{JSON_PAYLOAD}`:若要建立訓練執行，您必須將下列項目納入內文：
+`{EXPERIMENT_ID}`:與要瞄準的「實驗」對應的ID。 在建立實驗時的響應中可找到此項。\
+`{ORG_ID}`:在您獨特的Adobe Experience Platform整合中找到了您的IMS組織憑據。\
+`{ACCESS_TOKEN}`:身份驗證後提供的特定持有者令牌值。\
+`{API_KEY}`:在您獨特的Adobe Experience Platform整合中找到您的特定API密鑰值。\
+`{JSON_PAYLOAD}`:要建立培訓運行，必須在正文中包括以下內容：
 
 ```JSON
 {
@@ -332,7 +332,7 @@ curl -X POST \
 }
 ```
 
-您也可以通過包含`tasks`陣列來覆蓋配置參數：
+也可以通過包含 `tasks` 陣列：
 
 ```JSON
 {
@@ -351,7 +351,7 @@ curl -X POST \
 }
 ```
 
-您會收到下列回應，其中會告知您`{EXPERIMENT_RUN_ID}`和`tasks`下的設定。
+您將得到以下響應，以便您知道 `{EXPERIMENT_RUN_ID}` 和下面的配置 `tasks`。
 
 **回應**
 
@@ -372,12 +372,12 @@ curl -X POST \
 }
 ```
 
-`{EXPERIMENT_RUN_ID}`:代表「實驗執行」的ID。\
-`{EXPERIMENT_ID}`:代表「實驗執行」所在實驗的ID。
+`{EXPERIMENT_RUN_ID}`:表示「實驗運行」的ID。\
+`{EXPERIMENT_ID}`:表示「實驗運行」(Experity Run)所在的「實驗」(Experity)的ID。
 
-### 擷取實驗執行狀態
+### 檢索實驗運行狀態
 
-可以使用`{EXPERIMENT_RUN_ID}`查詢實驗運行的狀態。
+可以使用 `{EXPERIMENT_RUN_ID}`。
 
 **要求**
 
@@ -385,19 +385,19 @@ curl -X POST \
 curl -X GET \
   https://platform.adobe.io/data/sensei/experiments/{EXPERIMENT_ID}/runs/{EXPERIMENT_RUN_ID}/status \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-api-key: {API_KEY}'
 ```
 
-`{EXPERIMENT_ID}`:代表實驗的ID。\
-`{EXPERIMENT_RUN_ID}`:代表「實驗執行」的ID。\
-`{ACCESS_TOKEN}`:驗證後提供的您特定的載體Token值。\
-`{IMS_ORG}`:您的IMS組織認證可在您獨特的Adobe Experience Platform整合中找到。\
-`{API_KEY}`:您在獨特的Adobe Experience Platform整合中找到的特定API金鑰值。
+`{EXPERIMENT_ID}`:表示實驗的ID。\
+`{EXPERIMENT_RUN_ID}`:表示「實驗運行」的ID。\
+`{ACCESS_TOKEN}`:身份驗證後提供的特定持有者令牌值。\
+`{ORG_ID}`:在您獨特的Adobe Experience Platform整合中找到了您的IMS組織憑據。\
+`{API_KEY}`:在您獨特的Adobe Experience Platform整合中找到您的特定API密鑰值。
 
 **回應**
 
-GET調用將提供`state`參數中的狀態，如下所示：
+GET呼叫將提供 `state` 參數，如下所示：
 
 ```JSON
 {
@@ -430,19 +430,19 @@ GET調用將提供`state`參數中的狀態，如下所示：
 }
 ```
 
-`{EXPERIMENT_RUN_ID}`:代表「實驗執行」的ID。\
-`{EXPERIMENT_ID}`:代表「實驗執行」所在實驗的ID。
+`{EXPERIMENT_RUN_ID}`:表示「實驗運行」的ID。\
+`{EXPERIMENT_ID}`:表示「實驗運行」(Experity Run)所在的「實驗」(Experity)的ID。
 
-除了`DONE`狀態外，其他狀態還包括：
+除 `DONE` 州，其他州包括：
 - `PENDING`
 - `RUNNING`
 - `FAILED`
 
-若要取得詳細資訊，請在`tasklogs`參數下找到詳細的記錄檔。
+要獲取更多資訊，請在 `tasklogs` 的下界。
 
 ### 檢索已訓練的模型
 
-為了在培訓期間獲得上面建立的培訓模型，我們提出以下請求：
+為了在培訓期間建立上述培訓模型，我們提出以下請求：
 
 **要求**
 
@@ -450,14 +450,14 @@ GET調用將提供`state`參數中的狀態，如下所示：
 curl -X GET \
   'https://platform.adobe.io/data/sensei/models/?property=experimentRunId=={EXPERIMENT_RUN_ID}' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}'
+  -H 'x-gw-ims-org-id: {ORG_ID}'
 ```
 
-`{EXPERIMENT_RUN_ID}`:與您要定位的「實驗執行」對應的ID。這可在建立「實驗執行」時的回應中找到。\
-`{ACCESS_TOKEN}`:驗證後提供的您特定的載體Token值。\
-`{IMS_ORG}`:您的IMS組織認證可在您獨特的Adobe Experience Platform整合中找到。
+`{EXPERIMENT_RUN_ID}`:與要瞄準的「實驗運行」對應的ID。 建立「實驗運行」時，可以在響應中找到。\
+`{ACCESS_TOKEN}`:身份驗證後提供的特定持有者令牌值。\
+`{ORG_ID}`:在您獨特的Adobe Experience Platform整合中找到了您的IMS組織憑據。
 
-響應表示已建立的受訓模型。
+響應表示已建立的訓練模型。
 
 **回應**
 
@@ -484,12 +484,12 @@ curl -X GET \
 ```
 
 `{MODEL_ID}`:與「模型」(Model)對應的ID。\
-`{EXPERIMENT_ID}`:與「實驗運行」對應的ID在「實驗運行」下。\
-`{EXPERIMENT_RUN_ID}`:與「實驗執行」對應的ID。
+`{EXPERIMENT_ID}`:與「實驗運行」(Experite the Experitement Run)對應的ID在下。\
+`{EXPERIMENT_RUN_ID}`:與「實驗運行」(Emperition Run)對應的ID。
 
-### 停止和刪除排程的實驗
+### 停止並刪除計畫的實驗
 
-如果要在計畫實驗的`endTime`之前停止執行，可以通過查詢`{EXPERIMENT_ID}`的DELETE請求來完成此操作
+如果要停止在計畫實驗之前執行 `endTime`，這可以通過查詢DELETE請求來完成 `{EXPERIMENT_ID}`
 
 **要求**
 
@@ -497,18 +497,18 @@ curl -X GET \
 curl -X DELETE \
   'https://platform.adobe.io/data/sensei/experiments/{EXPERIMENT_ID}' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}'
+  -H 'x-gw-ims-org-id: {ORG_ID}'
 ```
 
-`{EXPERIMENT_ID}`:與實驗對應的ID。\
-`{ACCESS_TOKEN}`:驗證後提供的您特定的載體Token值。\
-`{IMS_ORG}`:您的IMS組織認證可在您獨特的Adobe Experience Platform整合中找到。
+`{EXPERIMENT_ID}`:與「實驗」對應的ID。\
+`{ACCESS_TOKEN}`:身份驗證後提供的特定持有者令牌值。\
+`{ORG_ID}`:在您獨特的Adobe Experience Platform整合中找到了您的IMS組織憑據。
 
 >[!NOTE]
 >
->API呼叫會停用建立新實驗執行的功能。 但是，它不會停止執行已執行的Enperity Runs。
+>API調用將禁用建立新實驗運行。 但是，它不會停止執行已運行的實驗運行。
 
-以下是回應，通知實驗已成功刪除。
+以下是響應，通知已成功刪除實驗。
 
 **回應**
 
@@ -522,4 +522,4 @@ curl -X DELETE \
 
 ## 後續步驟
 
-本教學課程說明如何使用API來建立引擎、實驗、排程實驗執行和訓練的模型。 在[下一練習](./score-model-api.md)中，您將使用表現最佳的訓練模型對新資料集評分，以進行預測。
+本教程介紹了如何使用API來建立引擎、實驗、計畫實驗運行和訓練的模型。 在 [下一次練習](./score-model-api.md)，您將使用效能最好的訓練模型對新資料集進行評分，從而進行預測。

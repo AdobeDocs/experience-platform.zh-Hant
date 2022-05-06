@@ -5,7 +5,7 @@ title: 計畫API終結點
 topic-legacy: developer guide
 description: 計畫是一種工具，可用於每天自動運行一次批分段作業。
 exl-id: 92477add-2e7d-4d7b-bd81-47d340998ff1
-source-git-commit: a4f5602365d5db28ba375db0794b80670229fa75
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '2013'
 ht-degree: 3%
@@ -46,7 +46,7 @@ GET /config/schedules?limit={LIMIT}
 ```shell
 curl -X GET https://platform.adobe.io/data/core/ups/config/schedules?limit=10 \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
- -H 'x-gw-ims-org-id: {IMS_ORG}' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
@@ -68,7 +68,7 @@ curl -X GET https://platform.adobe.io/data/core/ups/config/schedules?limit=10 \
     "children": [
         {
             "id": "4e538382-dbd8-449e-988a-4ac639ebe72b",
-            "imsOrgId": "{IMS_ORG}",
+            "imsOrgId": "{ORG_ID}",
             "sandbox": {
                 "sandboxId": "28e74200-e3de-11e9-8f5d-7f27416c5f0d",
                 "sandboxName": "prod",
@@ -119,7 +119,7 @@ POST /config/schedules
 curl -X POST https://platform.adobe.io/data/core/ups/config/schedules \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
  -H 'Content-Type: application/json' \
- -H 'x-gw-ims-org-id: {IMS_ORG}' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}'
  -d '
@@ -152,7 +152,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/config/schedules \
 ```json
 {
     "id": "4e538382-dbd8-449e-988a-4ac639ebe72b",
-    "imsOrgId": "{IMS_ORG}",
+    "imsOrgId": "{ORG_ID}",
     "sandbox": {
         "sandboxId": "e7e17720-c5bb-11e9-aafb-87c71c35cac8",
         "sandboxName": "prod",
@@ -192,7 +192,7 @@ GET /config/schedules/{SCHEDULE_ID}
 ```shell
 curl -X GET https://platform.adobe.io/data/core/ups/config/schedules/4e538382-dbd8-449e-988a-4ac639ebe72b
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
- -H 'x-gw-ims-org-id: {IMS_ORG}' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
@@ -204,7 +204,7 @@ curl -X GET https://platform.adobe.io/data/core/ups/config/schedules/4e538382-db
 ```json
 {
     "id": "4e538382-dbd8-449e-988a-4ac639ebe72b",
-    "imsOrgId": "{IMS_ORG}",
+    "imsOrgId": "{ORG_ID}",
     "sandbox": {
         "sandboxId": "e7e17720-c5bb-11e9-aafb-87c71c35cac8",
         "sandboxName": "prod",
@@ -259,7 +259,7 @@ PATCH /config/schedules/{SCHEDULE_ID}
 ```shell
 curl -X DELETE https://platform.adobe.io/data/core/ups/config/schedules/4e538382-dbd8-449e-988a-4ac639ebe72b \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
- -H 'x-gw-ims-org-id: {IMS_ORG}' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}'
  -d '
@@ -300,7 +300,7 @@ PATCH /config/schedules/{SCHEDULE_ID}
 ```shell
 curl -X PATCH https://platform.adobe.io/data/core/ups/config/schedules/4e538382-dbd8-449e-988a-4ac639ebe72b \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
- -H 'x-gw-ims-org-id: {IMS_ORG}' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}'
  -d '
@@ -341,7 +341,7 @@ DELETE /config/schedules/{SCHEDULE_ID}
 ```shell
 curl -X DELETE https://platform.adobe.io/data/core/ups/config/schedules/4e538382-dbd8-449e-988a-4ac639ebe72b \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
- -H 'x-gw-ims-org-id: {IMS_ORG}' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
@@ -371,7 +371,7 @@ cron表達式是由6或7個欄位組成的字串。 表達式的外觀與以下�
 | 秒 | 是 | 0-59 | `, - * /` |
 | 分鐘 | 是 | 0-59 | `, - * /` |
 | 小時 | 是 | 0-23 | `, - * /` |
-| 月中的日 | 是 | 1-31 | `, - * ? / L W` |
+| 當月日期 | 是 | 1-31 | `, - * ? / L W` |
 | 月 | 是 | 1-12,1-12 | `, - * /` |
 | 週中的日 | 是 | 1-7,SUN-SAT | `, - * ? / L #` |
 | 年 | 無 | 空，1970-2099 | `, - * /` |

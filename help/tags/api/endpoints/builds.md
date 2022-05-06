@@ -1,34 +1,35 @@
 ---
-title: 組建端點
-description: 了解如何在Reactor API中呼叫/builds端點。
-source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
+title: 生成終結點
+description: 瞭解如何調用Reactor API中的/build端點。
+exl-id: 476abea0-efff-478a-b87f-ef6b91bfcca5
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '833'
 ht-degree: 8%
 
 ---
 
-# 組建端點
+# 生成終結點
 
-擴充功能、規則和資料元素是Adobe Experience Platform中標籤的基礎要素。 當您想讓應用程式執行某項作業時，這些建置區塊會新增至[library](./libraries.md)。 若要在您的體驗應用程式上部署程式庫，程式庫會編譯到組建中。 Reactor API中的`/builds`端點可讓您以程式設計方式管理體驗應用程式中的組建。
+擴展、規則和資料元素是Adobe Experience Platform中標籤的構成塊。 當您希望應用程式執行某些操作時，這些構建基塊將添加到 [庫](./libraries.md)。 為了在您的體驗應用程式上部署庫，將庫編譯為生成。 的 `/builds` Reactor API中的端點允許您以寫程式方式管理體驗應用程式中的生成。
 
-組建是在網頁和行動應用程式中載入的實際檔案（或檔案）。 每個組建的內容會因下列因素而異：
+生成是Web和移動應用程式中載入的實際檔案（或檔案）。 每個生成的內容因以下因素而異：
 
-* 程式庫中包含的資源
-* 建置程式庫所在的[environment](./environments.md)的配置
-* 組建所屬[屬性](./properties.md)的平台
+* 庫中包含的資源
+* 配置 [環境](./environments.md) 在其中構建庫
+* 平台 [屬性](./properties.md) 構件所屬的
 
-組建只屬於一個程式庫。 程式庫可以有許多組建。
+一個版本正好屬於一個庫。 庫可以有許多內部版本。
 
-如需關於組建以及組建與標籤發佈工作流程的配合情形的詳細資訊，請參閱[發佈概述](../../ui/publishing/overview.md)。
+有關生成以及它們如何適用於標籤的發佈工作流的詳細資訊，請參閱 [發佈概述](../../ui/publishing/overview.md)。
 
 ## 快速入門
 
-本指南中使用的端點是[Reactor API](https://www.adobe.io/experience-platform-apis/references/reactor/)的一部分。 繼續操作之前，請參閱[快速入門手冊](../getting-started.md)，了解如何驗證API的重要資訊。
+本指南中使用的端點是 [反應堆API](https://www.adobe.io/experience-platform-apis/references/reactor/)。 在繼續之前，請查看 [入門指南](../getting-started.md) 有關如何驗證到API的重要資訊。
 
-## 擷取組建清單 {#list}
+## 檢索生成清單 {#list}
 
-您可以將程式庫的ID加入特定程式庫的請求路徑中，以列出特定程式庫的組建。
+通過將庫的ID包括在請求路徑中，可以列出特定庫的生成。
 
 **API格式**
 
@@ -38,13 +39,13 @@ GET /libraries/{LIBRARY_ID}/builds
 
 | 參數 | 說明 |
 | --- | --- |
-| `LIBRARY_ID` | 您要列出其組建的程式庫的`id`。 |
+| `LIBRARY_ID` | 的 `id` 要列出的庫。 |
 
 {style=&quot;table-layout:auto&quot;}
 
 >[!NOTE]
 >
->您可以使用查詢參數，根據下列屬性來篩選列出的組建：<ul><li>`created_at`</li><li>`status`</li><li>`token`</li><li>`updated_at`</li></ul>如需詳細資訊，請參閱[篩選回應](../guides/filtering.md)的指南。
+>使用查詢參數，可以根據以下屬性篩選列出的生成：<ul><li>`created_at`</li><li>`status`</li><li>`token`</li><li>`updated_at`</li></ul>請參閱上的指南 [過濾響應](../guides/filtering.md) 的子菜單。
 
 **要求**
 
@@ -53,14 +54,14 @@ curl -X GET \
   https://reactor.adobe.io/libraries/LBad32d71feff844b7b5a11dd0bf030964/builds \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
 
 **回應**
 
-成功的回應會傳回指定程式庫的組建清單。
+成功的響應返回指定庫的生成清單。
 
 ```json
 {
@@ -143,9 +144,9 @@ curl -X GET \
 }
 ```
 
-## 查找組建 {#lookup}
+## 查找構建 {#lookup}
 
-您可以在請求的路徑中提供組建ID，以便查詢GET。
+您可以通過在請求路徑中提供其ID來查找生成。
 
 **API格式**
 
@@ -155,9 +156,9 @@ GET /builds/{BUILD_ID}
 
 | 參數 | 說明 |
 | --- | --- |
-| `BUILD_ID` | 您要查詢之組建的`id`。 |
+| `BUILD_ID` | 的 `id` 你想查的那棟樓。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style=&quot;table-layout:auto&quot;&quot;
 
 **要求**
 
@@ -166,14 +167,14 @@ curl -X GET \
   https://reactor.adobe.io/builds/BL8238895201d548718bda2d0bf2b83467 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
 
 **回應**
 
-成功的回應會傳回組建的詳細資訊。
+成功的響應返回生成的詳細資訊。
 
 ```json
 {
@@ -245,9 +246,9 @@ curl -X GET \
 }
 ```
 
-## 建立組建 {#create}
+## 建立生成 {#create}
 
-您可以為程式庫建立組建，包括程式庫ID在POST請求的路徑中。
+您可以為庫建立生成，包括庫的ID在POST請求路徑中。
 
 **API格式**
 
@@ -257,25 +258,25 @@ POST /libraries/{LIBRARY_ID}/builds
 
 | 參數 | 說明 |
 | --- | --- |
-| `LIBRARY_ID` | 您要定義下組建的程式庫的`id`。 |
+| `LIBRARY_ID` | 的 `id` 定義構建的庫。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style=&quot;table-layout:auto&quot;&quot;
 
 **要求**
 
-下列請求會為請求路徑中指定的程式庫建立新的組建。 不需要要求裝載。
+以下請求為請求路徑中指定的庫建立新的生成。 不需要請求負載。
 
 ```shell
 curl -X POST \
   https://reactor.adobe.io/libraries/LBd8eaef8283fe40738348db65a8984475/builds \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}'
+  -H 'x-gw-ims-org-id: {ORG_ID}'
 ```
 
 **回應**
 
-成功的回應會傳回新建立之組建的詳細資訊。
+成功的響應將返回新建立的生成的詳細資訊。
 
 ```json
 {
@@ -347,9 +348,9 @@ curl -X POST \
 }
 ```
 
-## 重新發佈組建 {#republish}
+## 重新發佈生成 {#republish}
 
-您可以從[已發佈的程式庫](./libraries.md#publish)重新發佈組建，方法是將其ID納入PATCH請求的路徑。
+您可以從 [已發佈庫](./libraries.md#publish) 將其ID包含在PATCH請求的路徑中。
 
 **API格式**
 
@@ -359,20 +360,20 @@ PATCH /builds/{BUILD_ID}
 
 | 參數 | 說明 |
 | --- | --- |
-| `BUILD_ID` | 您要重新發佈之組建的`id`。 |
+| `BUILD_ID` | 的 `id` 要重新發佈的版本。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style=&quot;table-layout:auto&quot;&quot;
 
 **要求**
 
-下列請求會更新現有應用程式設定的`app_id`。
+以下請求更新 `app_id` 為現有應用配置。
 
 ```shell
 curl -X PATCH \
   https://reactor.adobe.io/builds/BLb408c04c20ba4a82b6df496969a99781 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'Content-Type: application/json' \
   -d '{
         "data": {
@@ -387,15 +388,15 @@ curl -X PATCH \
 
 | 屬性 | 說明 |
 | --- | --- |
-| `id` | 您要更新之組建的`id`。 這應符合要求路徑中提供的`{BUILD_ID}`值。 |
-| `type` | 要更新的資源類型。 對於此端點，值必須為`builds`。 |
-| `meta.action` | 要執行的PATCH動作類型。 必須設為`republish`。 |
+| `id` | 的 `id` 要更新的版本。 這應與 `{BUILD_ID}` 請求路徑中提供的值。 |
+| `type` | 要更新的資源類型。 對於此終結點，值必須為 `builds`。 |
+| `meta.action` | 要執行的PATCH操作的類型。 必須設定為 `republish`。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style=&quot;table-layout:auto&quot;&quot;
 
 **回應**
 
-成功的回應會傳回重新發佈之組建的詳細資訊。
+成功的響應返回重新發佈的生成的詳細資訊。
 
 ```json
 {
@@ -468,15 +469,15 @@ curl -X PATCH \
 }
 ```
 
-## 擷取組建的相關資源 {#related}
+## 檢索生成的相關資源 {#related}
 
-下列呼叫示範如何擷取組建的相關資源。 當[查詢組建](#lookup)時，這些關係會列在`relationships`屬性下。
+以下調用演示如何檢索生成的相關資源。 當 [查房](#lookup)，這些關係列在 `relationships` 屬性。
 
-有關Reactor API中關係的詳細資訊，請參閱[關係指南](../guides/relationships.md)。
+查看 [關係指南](../guides/relationships.md) 的子菜單。
 
-### 列出組建的相關資料元素 {#data-elements}
+### 列出生成的相關資料元素 {#data-elements}
 
-您可以將`/data_elements`附加至查詢請求的路徑，以列出組建的相關資料元素。
+可通過附加來列出生成的相關資料元素 `/data_elements` 查找請求的路徑。
 
 **API格式**
 
@@ -486,9 +487,9 @@ GET  /builds/{BUILD_ID}/data_elements
 
 | 參數 | 說明 |
 | --- | --- |
-| `{BUILD_ID}` | 您要列出其資料元素之組建的`id`。 |
+| `{BUILD_ID}` | 的 `id` 要列出其資料元素的生成。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style=&quot;table-layout:auto&quot;&quot;
 
 **要求**
 
@@ -497,14 +498,14 @@ curl -X GET \
   https://reactor.adobe.io/builds/BLb408c04c20ba4a82b6df496969a99781/data_elements \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
 
 **回應**
 
-成功的回應會傳回與組建相關的資料元素清單。
+成功的響應返回與生成相關的資料元素的清單。
 
 ```json
 {
@@ -615,9 +616,9 @@ curl -X GET \
 }
 ```
 
-### 列出組建的相關擴充功能 {#extensions}
+### 列出生成的相關擴展 {#extensions}
 
-您可以將`/extensions`附加至查詢請求的路徑，以列出組建的相關擴充功能。
+可通過附加來列出生成的相關擴展 `/extensions` 查找請求的路徑。
 
 **API格式**
 
@@ -627,9 +628,9 @@ GET  /builds/{BUILD_ID}/extensions
 
 | 參數 | 說明 |
 | --- | --- |
-| `{BUILD_ID}` | 您要列出其擴充功能之組建的`id`。 |
+| `{BUILD_ID}` | 的 `id` 要列出其副檔名的生成。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style=&quot;table-layout:auto&quot;&quot;
 
 **要求**
 
@@ -638,14 +639,14 @@ curl -X GET \
   https://reactor.adobe.io/builds/BLb408c04c20ba4a82b6df496969a99781/extensions \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
 
 **回應**
 
-成功的回應會傳回與組建相關的擴充功能清單。
+成功的響應返回與生成相關的擴展的清單。
 
 ```json
 {
@@ -746,9 +747,9 @@ curl -X GET \
 }
 ```
 
-### 列出組建的相關規則 {#rules}
+### 列出生成的相關規則 {#rules}
 
-您可以將`/rules`附加至查詢請求的路徑，借此列出組建的相關規則。
+可通過附加來列出生成的相關規則 `/rules` 查找請求的路徑。
 
 **API格式**
 
@@ -758,9 +759,9 @@ GET  /builds/{BUILD_ID}/rules
 
 | 參數 | 說明 |
 | --- | --- |
-| `{BUILD_ID}` | 要列出其規則的組建的`id`。 |
+| `{BUILD_ID}` | 的 `id` 要列出其規則的生成。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style=&quot;table-layout:auto&quot;&quot;
 
 **要求**
 
@@ -769,14 +770,14 @@ curl -X GET \
   https://reactor.adobe.io/builds/BLb408c04c20ba4a82b6df496969a99781/rules \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
 
 **回應**
 
-成功的回應會傳回與組建相關的規則清單。
+成功的響應返回與生成相關的規則清單。
 
 ```json
 {
@@ -859,9 +860,9 @@ curl -X GET \
 }
 ```
 
-### 尋找組建的相關程式庫 {#library}
+### 查找相關庫以生成 {#library}
 
-您可以將`/library`附加至查詢請求的路徑，借此擷取組建的相關程式庫。
+可通過附加來檢索生成的相關庫 `/library` 查找請求的路徑。
 
 **API格式**
 
@@ -871,9 +872,9 @@ GET  /builds/{BUILD_ID}/library
 
 | 參數 | 說明 |
 | --- | --- |
-| `{BUILD_ID}` | 您要查詢其程式庫的組建的`id`。 |
+| `{BUILD_ID}` | 的 `id` 你想查的那棟樓。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style=&quot;table-layout:auto&quot;&quot;
 
 **要求**
 
@@ -882,7 +883,7 @@ curl -X GET \
   https://reactor.adobe.io/builds/BLb408c04c20ba4a82b6df496969a99781/library \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
@@ -972,9 +973,9 @@ curl -X GET \
 }
 ```
 
-### 查找組建的相關環境 {#environment}
+### 查找構建的相關環境 {#environment}
 
-您可以將`/environment`附加至查詢請求的路徑，借此擷取組建的相關環境。
+可通過附加來檢索生成的相關環境 `/environment` 查找請求的路徑。
 
 **API格式**
 
@@ -984,9 +985,9 @@ GET  /builds/{BUILD_ID}/environment
 
 | 參數 | 說明 |
 | --- | --- |
-| `{BUILD_ID}` | 您要查詢其環境的組建的`id`。 |
+| `{BUILD_ID}` | 的 `id` 你想查的環境。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style=&quot;table-layout:auto&quot;&quot;
 
 **要求**
 
@@ -995,7 +996,7 @@ curl -X GET \
   https://reactor.adobe.io/builds/BLb408c04c20ba4a82b6df496969a99781/environment \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```

@@ -1,11 +1,10 @@
 ---
-keywords: Experience Platform; home；熱門主題；資料準備；api指南；示例資料；
+keywords: Experience Platform；主題；熱門主題；資料準備；api指南；示例資料；
 solution: Experience Platform
-title: 範例資料API端點
+title: 示例資料API終結點
 topic-legacy: sample data
-description: '您可以使用Adobe Experience PlatformAPI中的「/samples」端點，以程式設計方式擷取、建立、更新及驗證對應範例資料。 '
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+description: '可以使用Adobe Experience PlatformAPI中的「/samples」端點以寫程式方式檢索、建立、更新和驗證映射示例資料。 '
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '401'
 ht-degree: 4%
@@ -13,17 +12,17 @@ ht-degree: 4%
 ---
 
 
-# 範例資料端點
+# 示例資料終結點
 
-為映射集建立架構時可使用示例資料。 您可以使用資料準備API中的`/samples`端點，以程式設計方式擷取、建立和更新範例資料。
+在為映射集建立架構時可以使用示例資料。 您可以使用 `/samples` 資料準備API中的端點，以寫程式方式檢索、建立和更新示例資料。
 
-## 列出範例資料
+## 列出示例資料
 
-您可以向`/samples`端點提出GET請求，以檢索IMS組織的所有映射示例資料清單。
+通過向IMS組織發出GET請求，您可以檢索IMS組織的所有映射示例資料清單 `/samples` 端點。
 
 **API格式**
 
-`/samples`端點支援數個查詢參數，以協助篩選結果。 目前，您必須同時包含`start`和`limit`參數，做為請求的一部分。
+的 `/samples` 終結點支援多個查詢參數以幫助篩選結果。 當前，必須同時包括 `start` 和 `limit` 參數。
 
 ```http
 GET /samples?limit={LIMIT}&start={START}
@@ -31,24 +30,24 @@ GET /samples?limit={LIMIT}&start={START}
 
 | 參數 | 說明 |
 | --------- | ----------- |
-| `{LIMIT}` | **必填**. 指定傳回的映射範例資料數。 |
-| `{START}` | **必填**. 指定結果頁的偏移。 若要取得第一頁的結果，請將值設定為`start=0`。 |
+| `{LIMIT}` | **必填**. 指定返回的映射示例資料數。 |
+| `{START}` | **必填**. 指定結果頁的偏移。 要獲取結果的第一頁，請將值設定為 `start=0`。 |
 
 **要求**
 
-下列請求將擷取您IMS組織內最後兩個對應範例資料。
+以下請求將檢索IMS組織內的最後兩個映射示例資料。
 
 ```shell
 curl -X GET https://platform.adobe.io/data/foundation/conversion/samples?limit=2&start=0 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \ 
+  -H 'x-gw-ims-org-id: {ORG_ID}' \ 
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
 **回應**
 
-成功的回應會傳回HTTP狀態200，其中包含映射範例資料的最後兩個物件的相關資訊。
+成功的響應返回HTTP狀態200，其中包含映射示例資料的最後兩個對象的資訊。
 
 ```json
 {
@@ -86,9 +85,9 @@ curl -X GET https://platform.adobe.io/data/foundation/conversion/samples?limit=2
 | `sampleData` |  |
 | `sampleType` |  |
 
-## 建立範例資料
+## 建立示例資料
 
-您可以向`/samples`端點發出POST請求，以建立示例資料。
+您可以通過向POST `/samples` 端點。
 
 ```http
 POST /samples
@@ -101,7 +100,7 @@ curl -X POST https://platform.adobe.io/data/foundation/conversion/samples \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \ 
+  -H 'x-gw-ims-org-id: {ORG_ID}' \ 
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '
   {
@@ -112,7 +111,7 @@ curl -X POST https://platform.adobe.io/data/foundation/conversion/samples \
 
 **回應**
 
-成功的回應會傳回HTTP狀態200，其中包含您新建立之範例資料的相關資訊。
+成功的響應返回HTTP狀態200，其中包含有關新建立的示例資料的資訊。
 
 ```json
 {
@@ -127,9 +126,9 @@ curl -X POST https://platform.adobe.io/data/foundation/conversion/samples \
 }
 ```
 
-## 上傳檔案以建立範例資料
+## 通過上載檔案建立示例資料
 
-通過向`/samples/upload`端點發出POST請求，可以使用檔案建立示例資料。
+您可以通過向Web站點發出POST請求來使用檔案建立示例資料 `/samples/upload` 端點。
 
 **API格式**
 
@@ -144,14 +143,14 @@ curl -X POST https://platform.adobe.io/data/foundation/conversion/samples \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: multipart/form-data' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \ 
+  -H 'x-gw-ims-org-id: {ORG_ID}' \ 
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -F 'file=@{PATH_TO_FILE}.json'
 ```
 
 **回應**
 
-成功的回應會傳回HTTP狀態200，其中包含您新建立之範例資料的相關資訊。
+成功的響應返回HTTP狀態200，其中包含有關新建立的示例資料的資訊。
 
 ```json
 {
@@ -168,7 +167,7 @@ curl -X POST https://platform.adobe.io/data/foundation/conversion/samples \
 
 ## 查找特定的示例資料對象
 
-您可在`/samples`端點的GET請求路徑中提供範例資料的特定物件ID，以尋找範例資料。
+通過在GET請求到的路徑中提供示例資料的ID，可以查找示例資料的特定對象 `/samples` 端點。
 
 **API格式**
 
@@ -178,7 +177,7 @@ GET /samples/{SAMPLE_ID}
 
 | 參數 | 說明 |
 | --------- | ----------- |
-| `{SAMPLE_ID}` | 您要擷取之範例資料物件的ID。 |
+| `{SAMPLE_ID}` | 要檢索的示例資料對象的ID。 |
 
 **要求**
 
@@ -186,13 +185,13 @@ GET /samples/{SAMPLE_ID}
 curl -X GET https://platform.adobe.io/data/foundation/conversion/samples/1fc0b6c20bae49d8ab33209ed126bdcd \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \ 
+  -H 'x-gw-ims-org-id: {ORG_ID}' \ 
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
 **回應**
 
-成功的回應會傳回HTTP狀態200，其中包含您要擷取之範例資料物件的資訊。
+成功的響應返回HTTP狀態200，其中包含要檢索的示例資料對象的資訊。
 
 ```json
 {
@@ -207,9 +206,9 @@ curl -X GET https://platform.adobe.io/data/foundation/conversion/samples/1fc0b6c
 }
 ```
 
-## 更新範例資料
+## 更新示例資料
 
-您可以在`/samples`端點的PUT請求路徑中提供特定樣本資料對象的ID，以更新該對象。
+通過在PUT請求路徑中提供特定示例資料對象的ID，可以更新特定示例資料對象 `/samples` 端點。
 
 **API格式**
 
@@ -219,17 +218,17 @@ PUT /samples/{SAMPLE_ID}
 
 | 參數 | 說明 |
 | --------- | ----------- |
-| `{SAMPLE_ID}` | 您要更新之範例資料物件的ID。 |
+| `{SAMPLE_ID}` | 要更新的示例資料對象的ID。 |
 
 **要求**
 
-下列請求會更新指定的範例資料。 具體來說，它會將姓氏從&quot;Smith&quot;更新為&quot;Lee&quot;。
+以下請求更新指定的示例資料。 具體來說，它將姓氏從&quot;史密斯&quot;更新為&quot;李&quot;。
 
 ```shell
 curl -X PUT https://platform.adobe.io/data/foundation/conversion/samples/1fc0b6c20bae49d8ab33209ed126bdcd \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \ 
+  -H 'x-gw-ims-org-id: {ORG_ID}' \ 
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '
   {
@@ -240,7 +239,7 @@ curl -X PUT https://platform.adobe.io/data/foundation/conversion/samples/1fc0b6c
 
 **回應**
 
-成功的回應會傳回HTTP狀態200，其中包含更新範例資料的相關資訊。
+成功的響應返回HTTP狀態200，其中包含有關更新的示例資料的資訊。
 
 ```json
 {

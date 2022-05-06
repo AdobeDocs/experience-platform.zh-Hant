@@ -1,27 +1,26 @@
 ---
-keywords: Experience Platform;home；熱門主題；identity xid;XID
+keywords: Experience Platform；主題；熱門主題；標識xid;XID
 solution: Experience Platform
-title: 取得身分的原生ID
+title: 獲取標識的本機ID
 topic-legacy: API guide
-description: 身分資料通常在所接收的XDM資料中以ID字串值和身分命名空間的形式提供，並在提供身分以供API呼叫使用時提供。 當身分識別保存在Identity Service中時，會產生ID並指派給該身分，稱為原生XID。 需要身分資料支援的平台API，使用這個更精簡的表單來匯整ID和命名空間。 XID是base64編碼字串。
+description: 標識資料通常作為ID字串值和標識命名空間在接收的XDM資料中提供，並且當提供標識用於API調用時提供。 當身份保留在Identity Service中時，將生成ID並將其分配給該身份，稱為本地XID。 需要身份資料支援的平台API使用此更緊湊的表單（用於聚合ID和命名空間）。 XID是base64編碼字串。
 exl-id: e734f5d8-e00b-43fa-b06c-97c73e1f7c71
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '231'
 ht-degree: 0%
 
 ---
 
-# 取得身分的原生ID
+# 獲取標識的本機ID
 
-身分資料通常在所接收的XDM資料中以ID字串值和身分命名空間的形式提供，並在提供身分以供API呼叫使用時提供。 當身分持續存在[!DNL Identity Service]時，會產生ID並指派給該身分，稱為原生XID。 [!DNL Platform] 需要身分資料支援的API，使用這個更精簡的表單來匯整ID和命名空間。XID是base64編碼字串。
+標識資料通常作為ID字串值和標識命名空間在接收的XDM資料中提供，並且當提供標識用於API調用時提供。 當身份持續存在時 [!DNL Identity Service]，將生成ID，並將其分配給該標識，稱為本地XID。 [!DNL Platform] 需要身份資料支援的API使用聚合ID和命名空間的此更緊湊的表單。 XID是base64編碼字串。
 
 >[!NOTE]
 >
->此格式主要供內部Adobe使用。 原生XID是個奇異值，可提高空間效率，是[!DNL Platform]解決方案內部用於儲存和序列化的功能。 但是，它不是人類可讀的，不透明，而且需要單獨呼叫才能使用。
+>此格式主要供內部Adobe使用。 本機XID作為奇數值，空間效率更高，內部使用 [!DNL Platform] 儲存和序列化解決方案。 但是，它不是人類可讀的，是不透明的，並且需要單獨調用才能使用它。
 
-使用本節所述的服務，取得特定ID值和命名空間的XID。
+使用本節中介紹的服務獲取給定ID值和命名空間的XID。
 
 **API格式**
 
@@ -36,7 +35,7 @@ curl -X GET \
   'https://platform-va7.adobe.io/data/core/identity/identity?namespace=email&id=test@adobetest.com' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 

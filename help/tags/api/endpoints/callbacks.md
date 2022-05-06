@@ -1,20 +1,21 @@
 ---
-title: 回呼端點
-description: 了解如何在Reactor API中呼叫/callbacks端點。
-source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
+title: 回調終結點
+description: 瞭解如何調用Repartor API中的/callbacks端點。
+exl-id: dd980f91-89e3-4ba0-a6fc-64d66b288a22
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '621'
 ht-degree: 8%
 
 ---
 
-# 回呼端點
+# 回調終結點
 
-回呼是Reactor API傳送至特定URL（通常是由您的組織托管的URL）的訊息。
+回調是Repartor API發送到特定URL（通常由您的組織承載）的消息。
 
-回呼旨在與[稽核事件](./audit-events.md)搭配使用，以追蹤Reactor API中的活動。 每次產生特定類型的稽核事件時，回呼都可傳送相符訊息至指定的URL。
+回調將與 [審計事件](./audit-events.md) 跟蹤反應堆API中的活動。 每次生成某種類型的審計事件時，回調可以向指定URL發送匹配消息。
 
-回撥中指定之URL後面的服務必須以HTTP狀態代碼200(OK)或201（已建立）回應。 如果服務未以下列任一狀態代碼回應，則會依下列時間間隔重試訊息傳送：
+回調中指定的URL後面的服務必須以HTTP狀態代碼200(OK)或201（已建立）響應。 如果服務未使用以下任一狀態代碼響應，則按以下間隔重試消息傳遞：
 
 * 1分鐘
 * 5 分鐘
@@ -26,19 +27,19 @@ ht-degree: 8%
 
 >[!NOTE]
 >
->重試間隔是與前一個間隔相對的。 例如，如果一分鐘內的重試失敗，則在一分鐘的嘗試失敗後（產生訊息後六分鐘），將下次嘗試排程五分鐘。
+>重試間隔與上一間隔相對。 例如，如果一分鐘的重試失敗，則在一分鐘的嘗試失敗後（在生成消息後六分鐘）安排下一次嘗試五分鐘。
 
-如果所有傳送嘗試均失敗，則會捨棄訊息。
+如果所有傳遞嘗試都未成功，則消息將被丟棄。
 
-回呼只屬於一個[屬性](./properties.md)。 屬性可以有許多回呼。
+回叫正好屬於 [屬性](./properties.md)。 一個屬性可以有許多回調。
 
 ## 快速入門
 
-本指南中使用的端點是[Reactor API](https://www.adobe.io/experience-platform-apis/references/reactor/)的一部分。 繼續操作之前，請參閱[快速入門手冊](../getting-started.md)，了解如何驗證API的重要資訊。
+本指南中使用的端點是 [反應堆API](https://www.adobe.io/experience-platform-apis/references/reactor/)。 在繼續之前，請查看 [入門指南](../getting-started.md) 有關如何驗證到API的重要資訊。
 
-## 清單回呼 {#list}
+## 清單回調 {#list}
 
-您可以透過提出GET要求，列出屬性下的所有回呼。
+通過發出GET請求，可以列出屬性下的所有回調。
 
 **API格式**
 
@@ -48,13 +49,13 @@ GET  /properties/{PROPERTY_ID}/callbacks
 
 | 參數 | 說明 |
 | --- | --- |
-| `{PROPERTY_ID}` | 要列出其回呼的屬性的`id`。 |
+| `{PROPERTY_ID}` | 的 `id` 的子目錄。 |
 
 {style=&quot;table-layout:auto&quot;}
 
 >[!NOTE]
 >
->您可以使用查詢參數，根據下列屬性來篩選列出的回呼：<ul><li>`created_at`</li><li>`updated_at`</li></ul>如需詳細資訊，請參閱[篩選回應](../guides/filtering.md)的指南。
+>使用查詢參數，可以根據以下屬性篩選列出的回調：<ul><li>`created_at`</li><li>`updated_at`</li></ul>請參閱上的指南 [過濾響應](../guides/filtering.md) 的子菜單。
 
 **要求**
 
@@ -63,14 +64,14 @@ curl -X GET \
   https://reactor.adobe.io/properties/PR66a3356c73fc4aabb67ee22caae53d70/callbacks \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
 
 **回應**
 
-成功的響應返回指定屬性的回呼清單。
+成功的響應將返回指定屬性的回調清單。
 
 ```json
 {
@@ -115,9 +116,9 @@ curl -X GET \
 }
 ```
 
-## 查詢回呼 {#lookup}
+## 查找回調 {#lookup}
 
-您可以在要求的路徑中提供回呼的ID，以查詢GET。
+您可以通過在GET請求的路徑中提供回調的ID來查找回調。
 
 **API格式**
 
@@ -127,9 +128,9 @@ GET /callbacks/{CALLBACK_ID}
 
 | 參數 | 說明 |
 | --- | --- |
-| `CALLBACK_ID` | 您要查詢之回呼的`id`。 |
+| `CALLBACK_ID` | 的 `id` 你想查的回電。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style=&quot;table-layout:auto&quot;&quot;
 
 **要求**
 
@@ -138,14 +139,14 @@ curl -X GET \
   https://reactor.adobe.io/callbacks/CBeef389cee8d84e69acef8665e4dcbef6 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
 
 **回應**
 
-成功的回應會傳回回回撥的詳細資訊。
+成功的響應返回回調的詳細資訊。
 
 ```json
 {
@@ -179,9 +180,9 @@ curl -X GET \
 }
 ```
 
-## 建立回呼 {#create}
+## 建立回調 {#create}
 
-您可以提出POST要求，以建立新回呼。
+可以通過發出POST請求建立新回調。
 
 **API格式**
 
@@ -191,9 +192,9 @@ POST /properties/{PROPERTY_ID}/callbacks
 
 | 參數 | 說明 |
 | --- | --- |
-| `PROPERTY_ID` | 您要定義回呼的[property](./properties.md)的`id`。 |
+| `PROPERTY_ID` | 的 `id` 的 [屬性](./properties.md) 定義回叫。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style=&quot;table-layout:auto&quot;&quot;
 
 **要求**
 
@@ -202,7 +203,7 @@ curl -X POST \
   https://reactor.adobe.io/properties/PR5e22de986a7c4070965e7546b2bb108d/callbacks \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'Content-Type: application/json' \
   -d '{
         "data": {
@@ -218,14 +219,14 @@ curl -X POST \
 
 | 屬性 | 說明 |
 | --- | --- |
-| `url` | 回撥訊息的URL目的地。 URL必須使用HTTPS通訊協定擴充功能。 |
-| `subscriptions` | 字串的陣列，指出將觸發回撥的稽核事件類型。 有關可能的事件類型的清單，請參閱[審核事件終結點指南](./audit-events.md)。 |
+| `url` | 回調消息的URL目標。 URL必須使用HTTPS協定擴展。 |
+| `subscriptions` | 字串陣列，指示將觸發回調的審計事件類型。 查看 [審計事件終結點指南](./audit-events.md) 清單。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style=&quot;table-layout:auto&quot;&quot;
 
 **回應**
 
-成功的回應會傳回新建立之回呼的詳細資料。
+成功的響應將返回新建立的回調的詳細資訊。
 
 ```json
 {
@@ -259,9 +260,9 @@ curl -X POST \
 }
 ```
 
-## 更新回呼
+## 更新回調
 
-您可以在回呼要求的路徑中加入其ID，以更新回呼。
+可以通過在回調請求的路徑中包含回調的ID來更新回調。
 
 **API格式**
 
@@ -271,20 +272,20 @@ PUT /callbacks/{CALLBACK_ID}
 
 | 參數 | 說明 |
 | --- | --- |
-| `CALLBACK_ID` | 您要更新之回呼的`id`。 |
+| `CALLBACK_ID` | 的 `id` 要更新的回調。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style=&quot;table-layout:auto&quot;&quot;
 
 **要求**
 
-以下請求會更新現有回撥的`subscriptions`陣列。
+以下請求更新 `subscriptions` 用於現有回調的陣列。
 
 ```shell
 curl -X PUT \
   https://reactor.adobe.io/callbacks/CB4310904d415549888cc9e31ebe1e1e45 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'Content-Type: application/json' \
   -d '{
         "data": {
@@ -302,15 +303,15 @@ curl -X PUT \
 
 | 屬性 | 說明 |
 | --- | --- |
-| `attributes` | 一個物件，其屬性代表要針對回撥更新的屬性。 每個索引鍵代表要更新的特定回呼屬性，以及應更新的對應值。<br><br>可針對回呼更新下列屬性：<ul><li>`subscriptions`</li><li>`url`</li></ul> |
-| `id` | 您要更新之回撥的`id`。 這應符合要求路徑中提供的`{CALLBACK_ID}`值。 |
-| `type` | 要更新的資源類型。 對於此端點，值必須為`callbacks`。 |
+| `attributes` | 其屬性表示要為回調更新的屬性的對象。 每個鍵都表示要更新的特定回調屬性以及應更新到的相應值。<br><br>可以更新以下屬性以進行回調：<ul><li>`subscriptions`</li><li>`url`</li></ul> |
+| `id` | 的 `id` 要更新的回調。 這應與 `{CALLBACK_ID}` 請求路徑中提供的值。 |
+| `type` | 要更新的資源類型。 對於此終結點，值必須為 `callbacks`。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style=&quot;table-layout:auto&quot;&quot;
 
 **回應**
 
-成功的回應會傳回更新回呼的詳細資料。
+成功的響應返回更新的回調的詳細資訊。
 
 ```json
 {
@@ -345,9 +346,9 @@ curl -X PUT \
 }
 ```
 
-## 刪除回呼
+## 刪除回調
 
-您可以在回呼請求的路徑中加入其ID，以刪除回呼。
+通過將回調ID包含在DELETE請求的路徑中，可以刪除它。
 
 **API格式**
 
@@ -357,9 +358,9 @@ DELETE /callbacks/{CALLBACK_ID}
 
 | 參數 | 說明 |
 | --- | --- |
-| `CALLBACK_ID` | 您要刪除之回撥的`id`。 |
+| `CALLBACK_ID` | 的 `id` 刪除的回調。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style=&quot;table-layout:auto&quot;&quot;
 
 **要求**
 
@@ -368,9 +369,9 @@ curl -X DELETE \
   https://reactor.adobe.io/callbacks/CB4310904d415549888cc9e31ebe1e1e45 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}'
+  -H 'x-gw-ims-org-id: {ORG_ID}'
 ```
 
 **回應**
 
-成功的回應會傳回HTTP狀態204（無內容），但沒有回應內文，指出已刪除回呼。
+成功的響應返回HTTP狀態204（無內容），沒有響應正文，表示回調已被刪除。

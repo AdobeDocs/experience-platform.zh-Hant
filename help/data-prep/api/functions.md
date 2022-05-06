@@ -1,12 +1,11 @@
 ---
-keywords: Experience Platform;home；熱門主題；資料準備；api指南；方案；
+keywords: Experience Platform；首頁；熱門主題；資料準備；api指南；架構；
 solution: Experience Platform
-title: 方案API端點
+title: 架構API終結點
 topic-legacy: schemas
-description: 您可以使用Adobe Experience PlatformAPI中的「/functions」端點來驗證映射表達式並列出可用的映射集函式。
+description: 可以使用Adobe Experience PlatformAPI中的「/functions」終結點驗證映射表達式並列出可用的映射集函式。
 exl-id: dc24bfb4-2d96-4757-a610-0c2ee960d41d
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '210'
 ht-degree: 2%
@@ -15,11 +14,11 @@ ht-degree: 2%
 
 # 函式端點
 
-映射集函式允許您在源方案和目標方案之間轉換資料。 您可以使用`/languages/el`端點來驗證您的運算式，並取得所有可用映射集函式的清單。
+映射集函式允許您在源架構和目標架構之間轉換資料。 您可以使用 `/languages/el` 終結點，以驗證表達式並獲取所有可用映射集函式的清單。
 
-## 驗證運算式
+## 驗證表達式
 
-您可以向`/languages/el/validate`端點發出POST請求，以驗證當前表達式是否有效。
+您可以通過向以下對象發出POST請求來驗證當前表達式是否有效 `/languages/el/validate` 端點。
 
 **API格式**
 
@@ -34,7 +33,7 @@ curl -X POST https://platform.adobe.io/data/foundation/conversion/languages/el/v
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \ 
+  -H 'x-gw-ims-org-id: {ORG_ID}' \ 
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '
   {
@@ -44,7 +43,7 @@ curl -X POST https://platform.adobe.io/data/foundation/conversion/languages/el/v
 
 **回應**
 
-成功的回應會傳回HTTP狀態200，其驗證狀態為運算式。
+成功的響應返回HTTP狀態200，其驗證狀態為表達式。
 
 ```json
 {
@@ -55,7 +54,7 @@ curl -X POST https://platform.adobe.io/data/foundation/conversion/languages/el/v
 
 ## 清單映射集函式
 
-通過向`/languages/el/functions`端點發出GET請求，可以檢索所有可用映射集函式的清單。
+通過向Web站點發出GET請求，可以檢索所有可用映射集函式的清單 `/languages/el/functions` 端點。
 
 **API格式**
 
@@ -69,17 +68,17 @@ GET /languages/el/functions
 curl -X GET https://platform.adobe.io/data/foundation/conversion/languages/el/functions \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \ 
+  -H 'x-gw-ims-org-id: {ORG_ID}' \ 
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
 **回應**
 
-成功的響應返回HTTP狀態200，並返回所有可用映射集函式的清單。
+成功的響應返回HTTP狀態200，其中包含所有可用映射集函式的清單。
 
 >[!NOTE]
 >
->此回應已針對空間截斷。
+>此響應已被截斷為空間。
 
 ```json
 [
@@ -120,7 +119,7 @@ curl -X GET https://platform.adobe.io/data/foundation/conversion/languages/el/fu
 
 ## 清單映射集運算子
 
-通過向`/languages/el/operators`端點發出GET請求，可以檢索所有可用於映射集運算子的清單。
+通過向 `/languages/el/operators` 端點。
 
 **API格式**
 
@@ -134,17 +133,17 @@ GET /languages/el/operators
 curl -X GET https://platform.adobe.io/data/foundation/conversion/languages/el/operators \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \ 
+  -H 'x-gw-ims-org-id: {ORG_ID}' \ 
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
 **回應**
 
-成功的回應會傳回HTTP狀態200，並列出所有可用的對應集運算子。
+成功的響應返回HTTP狀態200，其中包含所有可用映射集運算子的清單。
 
 >[!NOTE]
 >
->此回應已針對空間截斷。
+>此響應已被截斷為空間。
 
 ```json
 [

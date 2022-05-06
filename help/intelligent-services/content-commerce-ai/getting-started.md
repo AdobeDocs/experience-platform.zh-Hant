@@ -5,7 +5,7 @@ title: 內容和商務AI入門
 topic-legacy: Getting started
 description: 內容和商務AI利用Adobe I/OAPI。 要調用Adobe I/OAPI和I/O控制台整合，必須先完成身份驗證教程。
 exl-id: e7b0e9bb-a1f1-479c-9e9b-46991f2942e2
-source-git-commit: eae43834d1cd5931dd752b95023da7ac77668e56
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '592'
 ht-degree: 0%
@@ -28,7 +28,7 @@ ht-degree: 0%
 
 - `Authorization: Bearer {ACCESS_TOKEN}`
 - `x-api-key: {API_KEY}`
-- `x-gw-ims-org-id: {IMS_ORG}`
+- `x-gw-ims-org-id: {ORG_ID}`
 
 ## 建立Postman環境（可選）
 

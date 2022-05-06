@@ -1,26 +1,27 @@
 ---
-title: 公司端點
-description: 了解如何在Reactor API中呼叫/companys端點。
-source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
+title: 公司終結點
+description: 瞭解如何調用Repartor API中的/companys端點。
+exl-id: ee435358-ed34-4e0c-93af-796133fb11fc
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '243'
 ht-degree: 4%
 
 ---
 
-# 公司端點
+# 公司終結點
 
-公司代表客戶組織，通常是企業。 在Reactor API中，這些公司會將1:1與IMS組織ID相符。 API使用者只能查看其有權存取的公司。 公司可能包含許多[屬性](./properties.md)。 屬性只屬於一個公司。
+公司代表客戶組織，通常是企業。 在Reactor API中，這些公司與IMS組織ID匹配1:1。 API用戶只能查看他們有權訪問的公司。 公司可能包含許多 [屬性](./properties.md)。 一處房產只屬於一家公司。
 
-Reactor API中的`/companies`端點可讓您以程式設計方式擷取您在體驗應用程式中可存取的公司。
+的 `/companies` Reactor API中的端點允許您以寫程式方式檢索您在體驗應用程式中有權訪問的公司。
 
 ## 快速入門
 
-本指南中使用的端點是[Reactor API](https://www.adobe.io/experience-platform-apis/references/reactor/)的一部分。 繼續操作之前，請參閱[快速入門手冊](../getting-started.md)，了解如何驗證API的重要資訊。
+本指南中使用的端點是 [反應堆API](https://www.adobe.io/experience-platform-apis/references/reactor/)。 在繼續之前，請查看 [入門指南](../getting-started.md) 有關如何驗證到API的重要資訊。
 
-## 擷取公司清單 {#list}
+## 檢索公司清單 {#list}
 
-您可以向`/companies`端點提出GET請求，以列出您有權使用的公司。 在大多數情況下，只有一個。
+您可以通過向以下站點發出GET請求來列出您有權使用的公司 `/companies` 端點。 在大多數情況下，只有一個。
 
 **API格式**
 
@@ -30,7 +31,7 @@ GET /companies
 
 >[!NOTE]
 >
->您可以使用查詢參數，根據下列屬性來篩選上市公司：<ul><li>`created_at`</li><li>`name`</li><li>`org_id`</li><li>`token`</li><li>`updated_at`</li></ul>如需詳細資訊，請參閱[篩選回應](../guides/filtering.md)的指南。
+>使用查詢參數，可以根據以下屬性篩選上市公司：<ul><li>`created_at`</li><li>`name`</li><li>`org_id`</li><li>`token`</li><li>`updated_at`</li></ul>請參閱上的指南 [過濾響應](../guides/filtering.md) 的子菜單。
 
 **要求**
 
@@ -39,14 +40,14 @@ curl -X GET \
   https://reactor.adobe.io/companies \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
 
 **回應**
 
-成功的回應會傳回您有權存取的公司清單。
+成功的響應將返回您有權訪問的公司清單。
 
 ```json
 {
@@ -57,7 +58,7 @@ curl -X GET \
       "attributes": {
         "created_at": "2020-08-13T17:13:30.667Z",
         "name": "Example Company",
-        "org_id": "{IMS_ORG}",
+        "org_id": "{ORG_ID}",
         "updated_at": "2020-08-13T17:13:30.667Z",
         "token": "d5a4f682bbae",
         "cjm_enabled": false,
@@ -108,7 +109,7 @@ curl -X GET \
 
 ## 查找公司 {#lookup}
 
-您可以在請求的路徑中加入特定公司ID，借此查詢其GET。
+您可以通過在GET請求路徑中包含其ID來查找特定公司。
 
 **API格式**
 
@@ -118,7 +119,7 @@ GET /companies/{COMPANY_ID}
 
 | 參數 | 說明 |
 | --- | --- |
-| `{COMPANY_ID}` | 您要查詢之公司的`id`值。 |
+| `{COMPANY_ID}` | 的 `id` 你想查的公司的價值。 |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -129,14 +130,14 @@ curl -X GET \
   https://reactor.adobe.io/companies/COdb0cd64ad4524440be94b8496416ec7d \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
 
 **回應**
 
-成功的回應會傳回公司的詳細資訊。
+成功的響應將返回公司的詳細資訊。
 
 ```json
 {
@@ -146,7 +147,7 @@ curl -X GET \
     "attributes": {
       "created_at": "2020-08-13T17:13:30.667Z",
       "name": "Example Company",
-      "org_id": "{IMS_ORG}",
+      "org_id": "{ORG_ID}",
       "updated_at": "2020-08-13T17:13:30.667Z",
       "token": "d5a4f682bbae",
       "cjm_enabled": false,

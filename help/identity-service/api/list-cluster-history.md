@@ -1,28 +1,27 @@
 ---
-keywords: Experience Platform;home；熱門主題；身份；群集歷史
+keywords: Experience Platform；首頁；熱門主題；標識；群集歷史記錄
 solution: Experience Platform
-title: 獲取身份的集群歷史記錄
+title: 獲取標識的群集歷史記錄
 topic-legacy: API guide
-description: 身分可在各種裝置圖表執行過程中移動叢集。 Identity Service可讓您隨時間檢視特定身分的叢集關聯。
+description: 標識可以在各種設備圖形運行過程中移動群集。 Identity Service可隨時間推移查看給定身份的群集關聯。
 exl-id: e52edb15-e3d6-4085-83d5-212bbd952632
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '337'
 ht-degree: 1%
 
 ---
 
-# 獲取身份的群集歷史記錄
+# 獲取標識的群集歷史記錄
 
-身分可在各種裝置圖表執行過程中移動叢集。 [!DNL Identity Service] 可隨時間查看指定身份的群集關聯。
+標識可以在各種設備圖形運行過程中移動群集。 [!DNL Identity Service] 提供隨時間推移給定標識的群集關聯的可見性。
 
-使用可選`graph-type`參數指示從中獲取群集的輸出類型。 選項包括：
+使用可選 `graph-type` 參數，以指示從中獲取群集的輸出類型。 選項包括：
 
-- `None` -不執行身份聯繫。
-- `Private Graph` -根據您的個人身份圖表執行身份拼接。如果未提供`graph-type`，則此為預設值。
+- `None`  — 不執行身份拼接。
+- `Private Graph`  — 根據您的個人身份圖執行身份拼接。 否 `graph-type` ，這是預設值。
 
-## 獲取單個身份的群集歷史記錄
+## 獲取單個標識的群集歷史記錄
 
 **API格式**
 
@@ -32,46 +31,46 @@ GET https://platform-{REGION}.adobe.io/data/core/identity/cluster/history
 
 **要求**
 
-選項1:將識別碼提供為命名空間（`nsId`，依ID）和ID值(`id`)。
+選項1:將標識作為命名空間提供(`nsId`，按ID)和ID值(`id`)。
 
 ```shell
 curl -X GET \
   'https://platform-va7.adobe.io/data/core/identity/cluster/history?nsId=411&id=WTCpVgAAAFq14FMF' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-選項2:將身分提供為namespace（`ns`，依名稱）和ID值(`id`)。
+選項2:將標識作為命名空間提供(`ns`，按名稱)和ID值(`id`)。
 
 ```shell
 curl -X GET \
   'https://platform-va7.adobe.io/data/core/identity/cluster/history?ns=AMO&id=WTCpVgAAAFq14FMF' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-選項3:提供身份作為XID(`xid`)。 有關如何獲取身份的XID的詳細資訊，請參閱本文檔中有關[獲取身份的XID的章節](./list-native-id.md)。
+備選3:將標識作為XID提供(`xid`)。 有關如何獲取身份的XID的詳細資訊，請參閱本文檔中包含 [獲取XID以獲取身份](./list-native-id.md)。
 
 ```shell
 curl -X GET \
   'https://platform-va7.adobe.io/data/core/identity/cluster/history?xid=CJsDEAMaEAHmCKwPCQYNvzxD9JGDHZ8' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
 ## 獲取多個身份的群集歷史記錄
 
-使用`POST`方法作為與上述`GET`方法相等的批次，以返回多個身份的群集歷史記錄。
+使用 `POST` 方法作為批處理等效項 `GET` 上述方法返回多個身份的簇歷史。
 
 >[!NOTE]
 >
->請求應指明最多1000個身分。 超過1000個身分的要求將產生400個狀態碼。
+>請求應最多指示1000個身份。 超過1000個身份的請求將生成400個狀態代碼。
 
 **API格式**
 
@@ -81,7 +80,7 @@ POST https://platform-va7.adobe.io/data/core/identity/clusters/history
 
 **請求正文**
 
-選項1:提供要為其檢索群整合員的XID清單。
+選項1:提供要檢索其群整合員的XID清單。
 
 ```shell
 {
@@ -90,7 +89,7 @@ POST https://platform-va7.adobe.io/data/core/identity/clusters/history
 }
 ```
 
-選項2:提供身分清單作為複合ID，其中每個ID值皆以命名空間程式碼命名。
+選項2:提供作為複合ID的身份清單，其中每個ID值和命名空間都按命名空間代碼命名。
 
 ```shell
 {
@@ -110,7 +109,7 @@ POST https://platform-va7.adobe.io/data/core/identity/clusters/history
 
 **存根請求**
 
-使用`x-uis-cst-ctx: stub`標題會傳回無效回應。 這是一個臨時解決方案，在服務完成的同時，促進早期的一體化發展進程。 當不再需要時，此選項將不再提供。
+使用 `x-uis-cst-ctx: stub` 標頭將返回一個短路響應。 這是一個臨時解決方案，在服務完成的同時促進早期一體化發展進展。 不再需要時，將棄用此選項。
 
 ```shell
 curl -X POST \
@@ -118,7 +117,7 @@ curl -X POST \
   -H 'authorization: Bearer {ACCESS_TOKEN}' \
   -H 'content-type: application/json' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -H 'x-uis-cst-ctx: stub' \
   -d '{
@@ -135,7 +134,7 @@ curl -X POST \
   -H 'authorization: Bearer {ACCESS_TOKEN}' \
   -H 'content-type: application/json' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '{
         "xids": ["GYMBWaoXbMtZ1j4eAAACepuQGhs","b2NJK9a5X7x4LVE4rUqkMyM"],
@@ -151,7 +150,7 @@ curl -X POST \
   -H 'authorization: Bearer {ACCESS_TOKEN}' \
   -H 'content-type: application/json' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '{
         "compositeXids": [{
@@ -167,7 +166,7 @@ curl -X POST \
       }' | json_pp
 ```
 
-**回應**
+**響應**
 
 ```json
 {
@@ -215,8 +214,8 @@ curl -X POST \
 
 >[!NOTE]
 >
->無論請求的XID是否屬於同一群集，或是一個或多個XID是否與任何群集相關聯，響應始終為請求中提供的每個XID都包含一個條目。
+>無論請求的XID是屬於同一群集還是一個或多個群集與任何群集相關聯，響應都始終為請求中提供的每個XID都包含一個條目。
 
 ## 後續步驟
 
-繼續下一個教學課程[列出身份映射](./list-identity-mappings.md)
+繼續下一教程， [清單標識映射](./list-identity-mappings.md)

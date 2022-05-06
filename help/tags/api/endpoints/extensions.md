@@ -1,26 +1,27 @@
 ---
-title: 擴充功能端點
-description: 了解如何在Reactor API中呼叫/extensions端點。
-source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
+title: 擴展終結點
+description: 瞭解如何調用Reactor API中的/extensions端點。
+exl-id: cc02b2aa-d107-463a-930c-5a9fcc5b4a5a
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '977'
 ht-degree: 8%
 
 ---
 
-# 擴充功能端點
+# 擴展終結點
 
-在Reactor API中，擴充功能代表[擴充功能套件](./extension-packages.md)的已安裝例項。 擴充功能可讓[屬性](./properties.md)使用擴充功能套件定義的功能。 建立[擴充功能](./data-elements.md)和[規則元件](./rule-components.md)時會運用這些功能。
+在Reactor API中，擴展表示 [擴展包](./extension-packages.md)。 擴展使由擴展包定義的特徵可用於 [屬性](./properties.md)。 在建立 [擴展](./data-elements.md) 和 [規則元件](./rule-components.md)。
 
-擴充功能只屬於一個屬性。 屬性可以有許多擴充功能，但指定擴充功能套件的已安裝例項不能多於一個。
+擴展只屬於一個屬性。 屬性可以具有多個擴展，但給定擴展包的已安裝實例不能多於一個。
 
 ## 快速入門
 
-本指南中使用的端點是[Reactor API](https://www.adobe.io/experience-platform-apis/references/reactor/)的一部分。 繼續操作之前，請參閱[快速入門手冊](../getting-started.md)，了解如何驗證API的重要資訊。
+本指南中使用的端點是 [反應堆API](https://www.adobe.io/experience-platform-apis/references/reactor/)。 在繼續之前，請查看 [入門指南](../getting-started.md) 有關如何驗證到API的重要資訊。
 
-## 擷取擴充功能清單 {#list}
+## 檢索擴展清單 {#list}
 
-您可以提出GET要求，以擷取屬性的擴充功能清單。
+通過發出GET請求，可以檢索屬性的副檔名清單。
 
 **API格式**
 
@@ -30,13 +31,13 @@ GET properties/{PROPERTY_ID}/extensions
 
 | 參數 | 說明 |
 | --- | --- |
-| `{PROPERTY_ID}` | 要列出其副檔名的屬性的`id`。 |
+| `{PROPERTY_ID}` | 的 `id` 的子目錄。 |
 
 {style=&quot;table-layout:auto&quot;}
 
 >[!NOTE]
 >
->您可以使用查詢參數，根據下列屬性來篩選列出的擴充功能：<ul><li>`created_at`</li><li>`dirty`</li><li>`display_name`</li><li>`enabled`</li><li>`name`</li><li>`origin_id`</li><li>`published`</li><li>`published_at`</li><li>`revision_number`</li><li>`updated_at`</li><li>`version`</li></ul>如需詳細資訊，請參閱[篩選回應](../guides/filtering.md)的指南。
+>使用查詢參數，可以根據以下屬性篩選列出的擴展：<ul><li>`created_at`</li><li>`dirty`</li><li>`display_name`</li><li>`enabled`</li><li>`name`</li><li>`origin_id`</li><li>`published`</li><li>`published_at`</li><li>`revision_number`</li><li>`updated_at`</li><li>`version`</li></ul>請參閱上的指南 [過濾響應](../guides/filtering.md) 的子菜單。
 
 **要求**
 
@@ -45,14 +46,14 @@ curl -X GET \
   https://reactor.adobe.io/properties/PRee071cb5b7794f42b74c913e1ad2e325/extensions \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
 
 **回應**
 
-成功的回應會傳回在指定屬性下定義的擴充功能清單。
+成功的響應返回在指定屬性下定義的擴展的清單。
 
 ```json
 {
@@ -153,13 +154,13 @@ curl -X GET \
 }
 ```
 
-## 查詢擴充功能 {#lookup}
+## 查找擴展 {#lookup}
 
-您可以在請求的路徑中提供擴充功能ID，以便查詢GET。
+您可以通過在GET請求的路徑中提供其ID來查找擴展。
 
 >[!NOTE]
 >
->刪除擴充功能時，系統會將其標示為已刪除，但實際上不會移除。 因此，可擷取已刪除的擴充功能。 刪除的擴充功能可透過傳回擴充功能資料的`meta`中存在`deleted_at`屬性來識別。
+>刪除擴展時，它們會在系統中標籤為已刪除，但實際上並未刪除。 因此，可以檢索已刪除的擴展。 刪除的擴展可以通過 `deleted_at` 屬性 `meta` 已返回擴展資料。
 
 **API格式**
 
@@ -169,9 +170,9 @@ GET /extensions/{EXTENSION_ID}
 
 | 參數 | 說明 |
 | --- | --- |
-| `EXTENSION_ID` | 您要查詢之擴充功能的`id`。 |
+| `EXTENSION_ID` | 的 `id` 你想查的分機。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style=&quot;table-layout:auto&quot;&quot;
 
 **要求**
 
@@ -180,14 +181,14 @@ curl -X GET \
   https://reactor.adobe.io/extensions/EX2ba586f436ac48e390a1ee7e8c9a8f6e \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
 
 **回應**
 
-成功的回應會傳回擴充功能的詳細資訊。
+成功的響應返回擴展的詳細資訊。
 
 ```json
 {
@@ -277,9 +278,9 @@ curl -X GET \
 }
 ```
 
-## 建立或更新擴充功能 {#create}
+## 建立或更新擴展 {#create}
 
-擴充功能是透過參考[擴充功能套件](./extension-packages.md)並將已安裝的擴充功能新增至屬性來建立。 安裝任務完成後，會傳回回應，指出是否已成功安裝擴充功能。
+通過引用 [擴展包](./extension-packages.md) 並將已安裝的擴展添加到屬性。 安裝任務完成後，將返回一個響應，指示擴展是否成功安裝。
 
 **API格式**
 
@@ -289,9 +290,9 @@ POST /properties/{PROPERTY_ID}/extensions
 
 | 參數 | 說明 |
 | --- | --- |
-| `PROPERTY_ID` | 您要在下安裝擴充功能之屬性的`id`。 |
+| `PROPERTY_ID` | 的 `id` 的子目錄。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style=&quot;table-layout:auto&quot;&quot;
 
 **要求**
 
@@ -300,7 +301,7 @@ curl -X POST \
   https://reactor.adobe.io/properties/PRee071cb5b7794f42b74c913e1ad2e325/extensions \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'Content-Type: application/vnd.api+json' \
   -d '{
         "data": {
@@ -324,16 +325,16 @@ curl -X POST \
 
 | 屬性 | 說明 |
 | --- | --- |
-| `relationships.extension_package` | **（必要）** 參考所安裝擴充功能套件ID的物件。 |
-| `attributes.delegate_descriptor_id` | 如果您的擴充功能需要自訂設定，則也需要委派描述元ID。 如需詳細資訊，請參閱[委派描述元ID](../guides/delegate-descriptor-ids.md)上的指南。 |
-| `attributes.enabled` | 指出擴充功能是否已啟用的布林值。 |
-| `attributes.settings` | 以字串表示的設定JSON物件。 |
+| `relationships.extension_package` | **（必需）** 引用正在安裝的擴展包的ID的對象。 |
+| `attributes.delegate_descriptor_id` | 如果您的擴展需要自定義設定，則還需要委託描述符ID。 請參閱上的指南 [委託描述符ID](../guides/delegate-descriptor-ids.md) 的子菜單。 |
+| `attributes.enabled` | 指示是否啟用擴展的布爾值。 |
+| `attributes.settings` | 以字串表示的設定JSON對象。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style=&quot;table-layout:auto&quot;&quot;
 
 **回應**
 
-成功的回應會傳回新建立之擴充功能的詳細資訊。
+成功的響應將返回新建立的擴展的詳細資訊。
 
 ```json
 {
@@ -423,9 +424,9 @@ curl -X POST \
 }
 ```
 
-## 修訂擴充功能 {#revise}
+## 修訂擴展 {#revise}
 
-您可以在PATCH請求的路徑中加入擴充功能ID，以修訂擴充功能。
+可通過將擴展ID包含在PATCH請求的路徑中來修訂擴展。
 
 **API格式**
 
@@ -435,20 +436,20 @@ PATCH /extensions/{EXTENSION_ID}
 
 | 參數 | 說明 |
 | --- | --- |
-| `EXTENSION_ID` | 要修訂的擴展的`id`。 |
+| `EXTENSION_ID` | 的 `id` 修改的副檔名。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style=&quot;table-layout:auto&quot;&quot;
 
 **要求**
 
-與[建立擴充功能](#create)一樣，修訂套件的本機版本必須透過表單資料上傳。
+與 [建立擴展](#create)，必須通過表單資料上載已修訂包的本地版本。
 
 ```shell
 curl -X PATCH \
   https://reactor.adobe.io/extensions/EX8ce7ced633f34bd48d33089ff8fad082 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'Content-Type: application/vnd.api+json' \
   -d '{
         "data": {
@@ -466,14 +467,14 @@ curl -X PATCH \
 
 | 屬性 | 說明 |
 | --- | --- |
-| `attributes` | 要修訂的屬性。 對於擴充功能，您可以修訂其`delegate_descriptor_id`、`enabled`和`settings`屬性。 |
-| `meta.action` | 進行修訂時，必須包含值`revise`。 |
+| `attributes` | 要修訂的屬性。 對於擴展，您可以修改其 `delegate_descriptor_id`。 `enabled`, `settings` 屬性。 |
+| `meta.action` | 必須包含值為 `revise` 進行修訂。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style=&quot;table-layout:auto&quot;&quot;
 
 **回應**
 
-成功的回應會傳回修訂擴充功能的詳細資訊，其`meta.latest_revision_number`屬性增加1。
+成功的響應返回修訂的延期的詳細資訊，其 `meta.latest_revision_number` 財產增加1
 
 ```json
 {
@@ -563,9 +564,9 @@ curl -X PATCH \
 }
 ```
 
-## 刪除擴充功能 {#private-release}
+## 刪除擴展 {#private-release}
 
-您可以在DELETE請求的路徑中加入擴充功能ID，以刪除擴充功能。
+可以通過將擴展ID包含在DELETE請求的路徑中來刪除該擴展。
 
 **API格式**
 
@@ -575,9 +576,9 @@ DELETE /extensions/{EXTENSION_ID}
 
 | 參數 | 說明 |
 | --- | --- |
-| `EXTENSION_ID` | 您要刪除之擴充功能的`id`。 |
+| `EXTENSION_ID` | 的 `id` 刪除的副檔名。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style=&quot;table-layout:auto&quot;&quot;
 
 **要求**
 
@@ -586,26 +587,26 @@ curl -X DELETE \
   https://reactor.adobe.io/extensions/EX8ce7ced633f34bd48d33089ff8fad082 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}'
+  -H 'x-gw-ims-org-id: {ORG_ID}'
 ```
 
 **回應**
 
-成功的回應會傳回HTTP狀態204（無內容），但沒有回應內文，表示擴充功能已刪除。
+成功的響應返回HTTP狀態204（無內容），沒有響應正文，表示擴展已被刪除。
 
-## 管理擴充功能的附註 {#notes}
+## 管理擴展的注釋 {#notes}
 
-擴充功能是「顯著」資源，這表示您可以針對每個個別資源建立和擷取文字型附註。 有關如何管理擴充功能和其他相容資源的附註的詳細資訊，請參閱[附註端點指南](./notes.md)。
+副檔名是「顯著」資源，這意味著您可以為每個資源建立和檢索基於文本的注釋。 查看 [notes endpoint guide（注釋終結點指南）](./notes.md) 的子菜單。
 
-## 擷取擴充功能的相關資源 {#related}
+## 檢索擴展的相關資源 {#related}
 
-下列呼叫示範如何擷取擴充功能的相關資源。 當[查找擴展](#lookup)時，這些關係將列在`relationships`屬性下。
+以下調用演示如何檢索擴展的相關資源。 當 [查找分機](#lookup)，這些關係列在 `relationships` 屬性。
 
-有關Reactor API中關係的詳細資訊，請參閱[關係指南](../guides/relationships.md)。
+查看 [關係指南](../guides/relationships.md) 的子菜單。
 
-### 列出擴充功能的相關程式庫 {#libraries}
+### 列出擴展的相關庫 {#libraries}
 
-您可以將`/libraries`附加至查詢請求的路徑，以列出使用擴充功能的程式庫。
+可通過附加來列出利用副檔名的庫 `/libraries` 查找請求的路徑。
 
 **API格式**
 
@@ -615,9 +616,9 @@ GET  /extensions/{EXTENSION_ID}/libraries
 
 | 參數 | 說明 |
 | --- | --- |
-| `{EXTENSION_ID}` | 您要列出其程式庫的擴充功能的`id`。 |
+| `{EXTENSION_ID}` | 的 `id` 要列出其庫的副檔名。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style=&quot;table-layout:auto&quot;&quot;
 
 **要求**
 
@@ -626,14 +627,14 @@ curl -X GET \
   https://reactor.adobe.io/extensions/EX8ce7ced633f34bd48d33089ff8fad082/libraries \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
 
 **回應**
 
-成功的回應會傳回使用指定擴充功能的程式庫清單。
+成功的響應返回使用指定副檔名的庫清單。
 
 ```json
 {
@@ -725,9 +726,9 @@ curl -X GET \
 }
 ```
 
-### 列出擴充功能的相關修訂 {#revisions}
+### 列出擴展的相關修訂 {#revisions}
 
-您可以將`/revisions`附加至查詢請求的路徑，以列出擴充功能的先前修訂版本。
+可通過附加來列出擴展的先前修訂 `/revisions` 查找請求的路徑。
 
 **API格式**
 
@@ -737,9 +738,9 @@ GET  /extensions/{EXTENSION_ID}/revisions
 
 | 參數 | 說明 |
 | --- | --- |
-| `{EXTENSION_ID}` | 您要列出其修訂版本的擴充功能的`id`。 |
+| `{EXTENSION_ID}` | 的 `id` 要列出其修訂的副檔名。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style=&quot;table-layout:auto&quot;&quot;
 
 **要求**
 
@@ -748,14 +749,14 @@ curl -X GET \
   https://reactor.adobe.io/extensions/EX8ce7ced633f34bd48d33089ff8fad082/revisions \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
 
 **回應**
 
-成功的回應會傳回指定擴充功能的修訂清單。
+成功的響應返回指定擴展的修訂清單。
 
 ```json
 {
@@ -939,9 +940,9 @@ curl -X GET \
 }
 ```
 
-### 查詢擴充功能的相關擴充功能套件 {#extension}
+### 查找相關擴展包以查找擴展 {#extension}
 
-您可以將`/extension_package`附加至GET請求的路徑，以尋找擴充功能所根據的擴充功能套件。
+可通過附加來查找擴展所基於的擴展包 `/extension_package` 到GET請求的路徑。
 
 **API格式**
 
@@ -951,9 +952,9 @@ GET  /extensions/{EXTENSION_ID}/extension_package
 
 | 參數 | 說明 |
 | --- | --- |
-| `{EXTENSION_ID}` | 您要查詢其擴充功能的`id`。 |
+| `{EXTENSION_ID}` | 的 `id` 你想查的分機。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style=&quot;table-layout:auto&quot;&quot;
 
 **要求**
 
@@ -962,14 +963,14 @@ curl -X GET \
   https://reactor.adobe.io/extensions/EX8ce7ced633f34bd48d33089ff8fad082/extension \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
 
 **回應**
 
-成功的回應會傳回指定擴充功能所依據之擴充功能套件的詳細資訊。 下列範例回應已截斷空格。
+成功的響應返回指定擴展所基於的擴展包的詳細資訊。 下面的示例響應已被截斷為空間。
 
 ```json
 {
@@ -1174,9 +1175,9 @@ curl -X GET \
 }
 ```
 
-### 查詢擴充功能的相關來源 {#origin}
+### 查找擴展的相關原點 {#origin}
 
-您可以將`/origin`附加至GET要求的路徑，以尋找擴充功能的來源。 擴充功能的來源是先前更新以建立目前修訂的版本。
+可通過附加來查找延伸的原點 `/origin` 到GET請求的路徑。 擴展的原點是先前的修訂版本，它已更新以建立當前修訂版本。
 
 **API格式**
 
@@ -1186,9 +1187,9 @@ GET  /extensions/{EXTENSION_ID}/origin
 
 | 參數 | 說明 |
 | --- | --- |
-| `{EXTENSION_ID}` | 您要查詢其來源之擴充功能的`id`。 |
+| `{EXTENSION_ID}` | 的 `id` 你想查的分機。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style=&quot;table-layout:auto&quot;&quot;
 
 **要求**
 
@@ -1197,14 +1198,14 @@ curl -X GET \
   https://reactor.adobe.io/extensions/EX8ce7ced633f34bd48d33089ff8fad082/origin \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
 
 **回應**
 
-成功的回應會傳回指定擴充功能的來源詳細資訊。
+成功的響應返回指定擴展的源的詳細資訊。
 
 ```json
 {
@@ -1294,9 +1295,9 @@ curl -X GET \
 }
 ```
 
-### 查詢擴充功能的相關屬性 {#property}
+### 查找擴展的相關屬性 {#property}
 
-您可以將`/property`附加至GET請求的路徑，以尋找擁有擴充功能的屬性。
+可通過附加來查找擁有副檔名的屬性 `/property` 到GET請求的路徑。
 
 **API格式**
 
@@ -1306,9 +1307,9 @@ GET  /extensions/{EXTENSION_ID}/property
 
 | 參數 | 說明 |
 | --- | --- |
-| `{EXTENSION_ID}` | 您要查詢其屬性的擴充功能的`id`。 |
+| `{EXTENSION_ID}` | 的 `id` 要查找其屬性的分機。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style=&quot;table-layout:auto&quot;&quot;
 
 **要求**
 
@@ -1317,14 +1318,14 @@ curl -X GET \
   https://reactor.adobe.io/extensions/EX8ce7ced633f34bd48d33089ff8fad082/property \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
 
 **回應**
 
-成功的回應會傳回擁有指定擴充功能之屬性的詳細資訊。
+成功的響應返回擁有指定擴展的屬性的詳細資訊。
 
 ```json
 {

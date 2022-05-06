@@ -1,30 +1,29 @@
 ---
-keywords: Experience Platform;home；熱門主題；清單標識；清單群集
+keywords: Experience Platform；首頁；熱門主題；清單標識；清單群集
 solution: Experience Platform
 title: 列出群集中的所有標識
 topic-legacy: API guide
-description: 在身分圖中相關的身分識別（無論名稱空間為何），都會被視為該身分圖中相同「叢集」的一部分。 以下選項提供訪問所有群整合員的方法。
+description: 在標識圖中相關的標識（不管命名空間如何）被視為該標識圖中同一「群集」的一部分。 下面的選項提供了訪問所有群整合員的方法。
 exl-id: 0fb9eac9-2dc2-4881-8598-02b3053d0b31
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '359'
 ht-degree: 1%
 
 ---
 
-# 列出群集中的所有身份
+# 列出群集中的所有標識
 
-在身分圖中相關的身分識別（無論名稱空間為何），都會被視為該身分圖中相同「叢集」的一部分。 以下選項提供訪問所有群整合員的方法。
+在標識圖中相關的標識（不管命名空間如何）被視為該標識圖中同一「群集」的一部分。 下面的選項提供了訪問所有群整合員的方法。
 
-## 取得單一身分的相關身分
+## 獲取單個標識的關聯標識
 
-檢索所有群整合員的單個標識。
+檢索單個標識的所有群整合員。
 
-可以使用可選`graph-type`參數來指示從中獲取群集的身份圖。 選項包括：
+可以使用 `graph-type` 參數，用於指示從中獲取群集的標識圖。 選項包括：
 
-- 無——不執行身份聯繫。
-- 私用圖表——根據您的私用身份圖表執行身份拼接。 如果未提供`graph-type`，則此為預設值。
+- 無 — 不執行標識拼接。
+- 專用圖 — 根據您的專用標識圖執行標識拼接。 否 `graph-type` ，這是預設值。
 
 **API格式**
 
@@ -34,46 +33,46 @@ GET https://platform-{REGION}.adobe.io/data/core/identity/cluster/members?{PARAM
 
 **要求**
 
-選項1:將識別碼提供為命名空間（`nsId`，依ID）和ID值(`id`)。
+選項1:將標識作為命名空間提供(`nsId`，按ID)和ID值(`id`)。
 
 ```shell
 curl -X GET \
   'https://platform-va7.adobe.io/data/core/identity/cluster/members?nsId=411&id=WTCpVgAAAFq14FMF' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-選項2:將身分提供為namespace（`ns`，依名稱）和ID值(`id`)。
+選項2:將標識作為命名空間提供(`ns`，按名稱)和ID值(`id`)。
 
 ```shell
 curl -X GET \
   'https://platform-va7.adobe.io/data/core/identity/cluster/members?ns=AMO&id=WTCpVgAAAFq14FMF' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-選項3:提供身份作為XID(`xid`)。 有關如何獲取身份的XID的詳細資訊，請參閱本文檔中有關[獲取身份的XID的章節](./list-native-id.md)。
+備選3:將標識作為XID提供(`xid`)。 有關如何獲取身份的XID的詳細資訊，請參閱本文檔中包含 [獲取XID以獲取身份](./list-native-id.md)。
 
 ```shell
 curl -X GET \
   'https://platform-va7.adobe.io/data/core/identity/cluster/members?xid=CJsDEAMaEAHmCKwPCQYNvzxD9JGDHZ8' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-## 取得多個身分的相關身分
+## 獲取多個標識的關聯標識
 
-使用`POST`作為批次等效於上述`GET`方法，以返回多個身份簇中的身份。
+使用 `POST` 作為等效於 `GET` 上述方法可返回多個身份簇中的身份。
 
 >[!NOTE]
 >
->請求應指明最多1000個身分。 超過1000個身分的要求將產生400個狀態碼。
+>請求應最多指示1000個身份。 超過1000個身份的請求將生成400個狀態代碼。
 
 **API格式**
 
@@ -83,11 +82,11 @@ POST https://platform-{REGION}.adobe.io/data/core/identity/clusters/members
 
 **要求**
 
-以下請求演示提供要為其檢索群整合員的XID的清單。
+以下請求演示提供要檢索群整合員的XID清單。
 
 **存根請求**
 
-使用`x-uis-cst-ctx: stub`標題會傳回無效回應。 這是一個臨時解決方案，在服務完成的同時，促進早期的一體化發展進程。 當不再需要時，此選項將不再提供。
+使用 `x-uis-cst-ctx: stub` 標頭將返回一個短路響應。 這是一個臨時解決方案，在服務完成的同時促進早期一體化發展進展。 不再需要時，將棄用此選項。
 
 ```shell
 curl -X POST \
@@ -96,14 +95,14 @@ curl -X POST \
   -H 'content-type: application/json' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-uis-cst-ctx: stub' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '{
     "xids": ["GYMBWaoXbMtZ1j4eAAACepuQGhs","b2NJK9a5X7x4LVE4rUqkMyM"]
 }'
 ```
 
-**使用XID呼叫**
+**使用XID進行呼叫**
 
 ```shell
 curl -X POST \
@@ -111,7 +110,7 @@ curl -X POST \
   -H 'authorization: Bearer {ACCESS_TOKEN}' \
   -H 'content-type: application/json' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '{
     "xids": ["GYMBWaoXbMtZ1j4eAAACepuQGhs","b2NJK9a5X7x4LVE4rUqkMyM"],
@@ -119,7 +118,7 @@ curl -X POST \
 }' | json_pp
 ```
 
-**使用UID呼叫**
+**使用UID調用**
 
 ```shell
 curl -X POST \
@@ -127,7 +126,7 @@ curl -X POST \
   -H 'authorization: Bearer {ACCESS_TOKEN}' \
   -H 'content-type: application/json' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '{
     "compositeXids": [{
@@ -145,7 +144,7 @@ curl -X POST \
 
 **回應**
 
-**「無效」回應**
+**「Stubed」響應**
 
 ```json
 {
@@ -185,7 +184,7 @@ curl -X POST \
 }
 ```
 
-**完整回應**
+**完全響應**
 
 ```json
 {
@@ -239,8 +238,8 @@ curl -X POST \
 
 >[!NOTE]
 >
->無論請求的XID是否屬於同一群集，或是一個或多個XID是否與任何群集相關聯，響應始終為請求中提供的每個XID都包含一個條目。
+>無論請求的XID是屬於同一群集還是一個或多個群集與任何群集相關聯，響應都始終為請求中提供的每個XID都包含一個條目。
 
 ## 後續步驟
 
-繼續下一個教程[列出身份的群集歷史記錄](./list-cluster-history.md)
+繼續下一教程， [列出標識的群集歷史記錄](./list-cluster-history.md)

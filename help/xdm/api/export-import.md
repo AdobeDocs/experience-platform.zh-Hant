@@ -1,30 +1,30 @@
 ---
-keywords: Experience Platform；首頁；熱門主題；API; XDM; XDM系統；體驗資料模型；體驗資料模型；資料模型；資料模型；匯出；匯入；rpc;
+keywords: Experience Platform；主題；熱門主題；api;API;XDM;XDM系統；經驗資料模型；經驗資料模型；資料模型；資料模型；導出；導入；rpc;
 solution: Experience Platform
-title: 匯出/匯入API端點
-description: 架構註冊表API中的/export和/import端點可讓您在IMS組織和沙箱之間共用XDM資源。
+title: 導出/導入API終結點
+description: 架構註冊表API中的/export和/import端點允許您在IMS組織和沙箱之間共用XDM資源。
 topic-legacy: developer guide
 exl-id: 33b62f75-2670-42f4-9aac-fa1540cd7d4a
-source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '506'
 ht-degree: 2%
 
 ---
 
-# 匯出/匯入端點
+# 導出/導入終結點
 
-[!DNL Schema Library]中的所有資源都包含在IMS組織內的特定沙箱中。 在某些情況下，您可能會想在沙箱與IMS組織之間共用Experience Data Model(XDM)資源。 [!DNL Schema Registry] API提供兩個端點，可讓您為[!DNL  Schema Library]中的任何架構、架構欄位群組或資料類型產生匯出裝載，然後使用該裝載將該資源（及所有相依資源）匯入目標沙箱和IMS組織。
+所有資源 [!DNL Schema Library] 包含在IMS組織內的特定沙箱中。 在某些情況下，您可能希望在沙箱和IMS Orgs之間共用體驗資料模型(XDM)資源。 的 [!DNL Schema Registry] API提供兩個端點，允許您為中的任何架構、架構欄位組或資料類型生成導出負載[!DNL  Schema Library]，然後使用該負載將該資源（以及所有相關資源）導入到目標沙箱和IMS組織中。
 
 ## 快速入門
 
-本指南中使用的端點是[[!DNL Schema Registry] API](https://www.adobe.io/experience-platform-apis/references/schema-registry/)的一部分。 繼續之前，請檢閱[快速入門手冊](./getting-started.md)，取得相關檔案的連結、閱讀本檔案中範例API呼叫的指南，以及成功呼叫任何Experience PlatformAPI所需的必要標頭的重要資訊。
+本指南中使用的端點是 [[!DNL Schema Registry] API](https://www.adobe.io/experience-platform-apis/references/schema-registry/)。 在繼續之前，請查看 [入門指南](./getting-started.md) 有關相關文檔的連結、閱讀本文檔中示例API調用的指南，以及有關成功調用任何Experience PlatformAPI所需標頭的重要資訊。
 
-匯出/匯入端點是[!DNL Schema Registry]支援的遠端程式呼叫(RPC)的一部分。 與[!DNL Schema Registry] API中的其他端點不同，RPC端點不需要額外的標題，如`Accept`或`Content-Type`，也不使用`CONTAINER_ID`。 因此，他們必須使用`/rpc`命名空間，如下方API呼叫所示。
+導出/導入終結點是遠程過程調用(RPC)的一部分，該調用由 [!DNL Schema Registry]。 不同於 [!DNL Schema Registry] API、RPC終結點不需要像 `Accept` 或 `Content-Type`，並且不使用 `CONTAINER_ID`。 相反，他們必須使用 `/rpc` 命名空間，如下面的API調用中所示。
 
-## 擷取資源的匯出裝載 {#export}
+## 檢索資源的導出負載 {#export}
 
-對於[!DNL Schema Library]中的任何現有架構、欄位組或資料類型，可以通過向`/export`端點發出GET請求並提供路徑中資源的ID來生成導出裝載。
+對於中的任何現有架構、欄位組或資料類型 [!DNL Schema Library]，可通過向GET請求生成導出負載 `/export` 終結點，提供路徑中資源的ID。
 
 **API格式**
 
@@ -34,29 +34,29 @@ GET /rpc/export/{RESOURCE_ID}
 
 | 參數 | 說明 |
 | --- | --- |
-| `{RESOURCE_ID}` | 您要匯出之XDM資源的`meta:altId`或URL編碼的`$id`。 |
+| `{RESOURCE_ID}` | 的 `meta:altId` 或URL編碼 `$id` 要導出的XDM資源。 |
 
 {style=&quot;table-layout:auto&quot;}
 
 **要求**
 
-下列請求會擷取`Restaurant`欄位群組的匯出裝載。
+以下請求檢索的導出負載 `Restaurant` 欄位組。
 
 ```shell
 curl -X GET \
   https://platform.adobe.io/data/foundation/schemaregistry/rpc/export/_{TENANT_ID}.mixins.922a56b58c6b4e4aeb49e577ec82752106ffe8971b23b4d9 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -H 'Accept: application/vnd.adobe.xdm-link+json'
 ```
 
 **回應**
 
-成功的回應會傳回物件陣列，代表目標XDM資源及其所有相依資源。 在此示例中，陣列中的第一個對象是`Restaurant`欄位組採用的租戶建立的`Property`資料類型，而第二個對象是`Restaurant`欄位組本身。 然後，此裝載可用來將資源](#import)匯入至不同的沙箱或IMS組織。[
+成功的響應返回一組對象，這些對象表示目標XDM資源及其所有相關資源。 在此示例中，陣列中的第一個對象是租戶建立的 `Property` 資料類型 `Restaurant` 欄位組雇用，而第二個對象是 `Restaurant` 欄位組本身。 然後，此負載可用於 [導入資源](#import) 進入另一個沙箱或IMS組織。
 
-請注意，資源的租用戶ID的所有例項都會取代為`<XDM_TENANTID_PLACEHOLDER>`。 這可讓架構註冊表根據資源在後續匯入呼叫中的傳送位置，自動將正確的租用戶ID套用至資源。
+請注意，資源的租戶ID的所有實例都替換為 `<XDM_TENANTID_PLACEHOLDER>`。 這允許架構註冊表根據資源在後續導入調用中的發送位置自動將正確的租戶ID應用到資源。
 
 ```json
 [
@@ -196,9 +196,9 @@ curl -X GET \
 ]
 ```
 
-## 匯入資源 {#import}
+## 導入資源 {#import}
 
-在您產生XDM資源的[匯出裝載](#export)後，即可在`/import`端點的POST請求中使用該裝載，將該資源匯入目標IMS組織和沙箱。
+一旦你 [生成導出負載](#export) 對於XDM資源，您可以在POST請求中使用該負載 `/import` 終結點，以將該資源導入到目標IMS組織和沙盒中。
 
 **API格式**
 
@@ -208,14 +208,14 @@ POST /rpc/import
 
 **要求**
 
-下列請求會採用先前[匯出範例](#export)中傳回的裝載，將`Restaurant`欄位群組匯入新的IMS組織和沙箱，分別由`x-gw-ims-org-id`和`x-sandbox-name`標題決定。
+以下請求將接收上一個請求中返回的負載 [導出示例](#export) 導入 `Restaurant` 域組到新的IMS組織和沙盒中，由 `x-gw-ims-org-id` 和 `x-sandbox-name` 標題。
 
 ```shell
 curl -X POST \
   https://platform.adobe.io/data/foundation/schemaregistry/rpc/import \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -H 'Content-Type: application/json' \
   -d '[
@@ -359,7 +359,7 @@ curl -X POST \
 
 **回應**
 
-成功的回應會傳回匯入資源的清單，並套用適當的租用戶ID和IMS組織值。
+成功的響應返回導入的資源清單，並應用相應的租戶ID和IMS組織值。
 
 ```json
 [
@@ -427,7 +427,7 @@ curl -X POST \
             }
         ],
         "refs": [],
-        "imsOrg": "{IMS_ORG}",
+        "imsOrg": "{ORG_ID}",
         "meta:extensible": true,
         "meta:abstract": true,
         "meta:xdmType": "object",
@@ -506,7 +506,7 @@ curl -X POST \
         "refs": [
             "https://ns.adobe.com/{TENANT_ID}/datatypes/fc07162ee7ca8d18e074a3bb50c3938c76160bf6040e8495"
         ],
-        "imsOrg": "{IMS_ORG}",
+        "imsOrg": "{ORG_ID}",
         "meta:extensible": true,
         "meta:abstract": true,
         "meta:intendedToExtend": [],
