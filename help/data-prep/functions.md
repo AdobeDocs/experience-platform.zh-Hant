@@ -5,7 +5,7 @@ title: 資料準備映射函式
 topic-legacy: overview
 description: 本文檔介紹了與資料準備一起使用的映射功能。
 exl-id: e95d9329-9dac-4b54-b804-ab5744ea6289
-source-git-commit: 5b40476051ceb20cd4d43f6a49b0ee984c17abc3
+source-git-commit: 14c7c3bd0bda0ab56767b9c0f5470090cf2bdb15
 workflow-type: tm+mt
 source-wordcount: '4164'
 ht-degree: 3%
@@ -136,7 +136,6 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 
 | 函數 | 說明 | 參數 | 語法 | 運算式 | 示例輸出 |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
-| 大小 | 返回輸入的大小。 | <ul><li>輸入： **必需** 您嘗試查找的對象大小。</li></ul> | size_of(INPUT) | `size_of([1, 2, 3, 4])` | 4 |
 | 為空 | 檢查對象是否為空。 | <ul><li>輸入： **必需** 您嘗試檢查的對象為空。</li></ul> | is_empty(INPUT) | `is_empty([1, 2, 3])` | 假 |
 | 陣列_到對象 | 建立對象清單。 | <ul><li>輸入： **必需** 鍵對和陣列對的分組。</li></ul> | arrays_to_object(INPUT) | 需要樣本 | 需要樣本 |
 | 到對象 | 根據給定的平面鍵/值對建立對象。 | <ul><li>輸入： **必需** 鍵/值對的平面清單。</li></ul> | to_object(INPUT) | to_object &#x200B;(&quot;firstName&quot;、&quot;John&quot;、&quot;lastName&quot;、&quot;Doe&quot;) | `{"firstName": "John", "lastName": "Doe"}` |
@@ -164,6 +163,7 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 | 添加到陣列 | 將元素添加到陣列的末尾。 | <ul><li>陣列： **必需** 要添加元素的陣列。</li><li>值：要追加到陣列的元素。</li></ul> | add_to_array&#x200B;(ARRAY, VALUES) | 添加到陣列&#x200B;([「a」、「b」], &#39;c&#39;, &#39;d&#39;) | [&#39;a&#39;、&#39;b&#39;、&#39;c&#39;、&#39;d&#39;] |
 | 連接陣列 | 將陣列相互組合。 | <ul><li>陣列： **必需** 要添加元素的陣列。</li><li>值：要追加到父陣列的陣列。</li></ul> | join_arrays&#x200B;(ARRAY, VALUES) | join_arrays&#x200B;([「a」、「b」]。 [&#39;c&#39;]。 [「d」、「e」]) | [&#39;a&#39;, &#39;b&#39;, &#39;c&#39;, &#39;d&#39;, &#39;e&#39;] |
 | 到陣列 | 獲取輸入清單並將其轉換為陣列。 | <ul><li>INCLUDE_NULLS: **必需** 一個布爾值，用於指示是否在響應陣列中包括空值。</li><li>值： **必需** 要轉換為陣列的元素。</li></ul> | to_array &#x200B;(INCLUDE_NULLS, VALUES) | to_array(false, 1,null, 2, 3) | `[1, 2, 3]` |
+| 大小 | 返回輸入的大小。 | <ul><li>輸入： **必需** 您嘗試查找的對象大小。</li></ul> | size_of(INPUT) | `size_of([1, 2, 3, 4])` | 4 |
 
 {style=&quot;table-layout:auto&quot;&quot;
 
