@@ -5,7 +5,7 @@ title: 查詢服務疑難解答指南
 topic-legacy: troubleshooting
 description: 本文檔包含有關您遇到的常見錯誤代碼及可能原因的資訊。
 exl-id: 14cdff7a-40dd-4103-9a92-3f29fa4c0809
-source-git-commit: aa61cb696d647c5f039283ce5926d5fa1e901a13
+source-git-commit: 31a95a107b4d1c7aef87455833d6d4dc2a5a360d
 workflow-type: tm+mt
 source-wordcount: '3516'
 ht-degree: 1%
@@ -38,9 +38,9 @@ ht-degree: 1%
 +++答案一個潛在原因是自動完成功能。 該功能處理某些元資料命令，這些命令在查詢編輯過程中偶爾會減慢編輯器的速度。
 +++
 
-### 我能否將郵遞員用於查詢服務API?
+### 我能否將Postman用於查詢服務API?
 
-+++答案是，您可以使用Postman（免費的第三方應用程式）可視化並與所有AdobeAPI服務交互。 觀看 [郵遞員設定指南](https://video.tv.adobe.com/v/28832) 有關如何在Adobe Developer控制台中設定項目並獲取所有必要憑據以供Postman使用的逐步說明。 請參閱 [關於啟動、運行和共用Postman收藏的指導](https://learning.postman.com/docs/running-collections/intro-to-collection-runs/)。
++++答案是，您可以使用Postman（一個免費的第三方應用程式）可視化所有AdobeAPI服務並與之交互。 觀看 [郵遞員設定指南](https://video.tv.adobe.com/v/28832) 有關如何在Adobe Developer控制台中設定項目並獲取所有必要憑據以供Postman使用的逐步說明。 請參閱 [關於啟動、運行和共用Postman收藏的指導](https://learning.postman.com/docs/running-collections/intro-to-collection-runs/)。
 +++
 
 ### 從查詢通過UI返回的最大行數是否有限制？
@@ -442,7 +442,7 @@ WHERE T2.ID IS NULL
 
 本節提供有關導出資料和限制的資訊。
 
-### 是否有一種方法在查詢處理後從查詢服務中提取資料並將結果保存到CSV檔案中？
+### 是否有一種方法在查詢處理後從查詢服務中提取資料並將結果保存到CSV檔案中？ {#export-csv}
 
 +++回答是。 可以從查詢服務中提取資料，還可以使用SQL命令以CSV格式儲存結果。
 
