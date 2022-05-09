@@ -4,7 +4,7 @@ title: 配置式儀表板
 description: Adobe Experience Platform提供了一個儀表板，您可以通過該儀表板查看有關您組織的即時客戶配置檔案資料的重要資訊。
 type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
-source-git-commit: b4cd7bc0d8c038346aacdda7c4c9def12864065c
+source-git-commit: 25953a5a1f5b32de7d150dbef700ad06ce6014df
 workflow-type: tm+mt
 source-wordcount: '2976'
 ht-degree: 0%
@@ -103,9 +103,9 @@ Adobe提供了多個標準小部件，您可以使用這些小部件來可視化
 * [[!UICONTROL 按身份顯示的配置檔案]](#profiles-by-identity)
 * [[!UICONTROL 身份重疊]](#identity-overlap)
 * [[!UICONTROL 單個身份配置檔案]](#single-identity-profiles)
-* [[!UICONTROL 未分段的配置檔案]](#unsegmented-profiles)
+* [[!UICONTROL 未分段的輪廓]](#unsegmented-profiles)
 * [[!UICONTROL 未分段配置檔案趨勢]](#unsegmented-profiles-trend)
-* [[!UICONTROL 按身份分段的配置檔案]](#unsegmented-profiles-by-identity)
+* [[!UICONTROL 按身份劃分的未分割配置檔案]](#unsegmented-profiles-by-identity)
 * [[!UICONTROL 映射到目標狀態的受眾]](#audiences-mapped-to-destination-status)
 * [[!UICONTROL 觀眾大小]](#audiences-size)
 * [[!UICONTROL 配置檔案計數趨勢]](#profile-count-trend)
@@ -183,7 +183,7 @@ Adobe提供了多個標準小部件，您可以使用這些小部件來可視化
 
 ![單個身份配置檔案構件。](../images/profiles/single-identity-profiles.png)
 
-### [!UICONTROL 未分段的配置檔案] {#unsegmented-profiles}
+### [!UICONTROL 未分段的輪廓] {#unsegmented-profiles}
 
 的 [!UICONTROL 未分段的配置檔案] 構件提供未附加到任何段的所有配置檔案的總數。 生成的數字在上次快照時準確無誤，表示整個組織中配置檔案激活的機會。 它還表明了擴展不能提供足夠ROI的配置檔案的機會。
 
@@ -195,7 +195,7 @@ Adobe提供了多個標準小部件，您可以使用這些小部件來可視化
 
 ![未分段配置檔案趨勢構件。](../images/profiles/unsegmented-profiles-trend.png)
 
-### [!UICONTROL 按身份分段的配置檔案] (#unsegmented-profiles-by-identity)
+### [!UICONTROL 按身份劃分的未分割配置檔案] (#unsegmented-profiles-by-identity)
 
 的 [!UICONTROL 按身份分段的配置檔案] 小部件按其唯一標識符對未分段的配置檔案總數進行分類。 資料以條形圖可視化，便於比較。
 

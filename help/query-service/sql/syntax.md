@@ -5,9 +5,9 @@ title: 查詢服務中的SQL語法
 topic-legacy: syntax
 description: 此文檔顯示Adobe Experience Platform查詢服務支援的SQL語法。
 exl-id: 2bd4cc20-e663-4aaa-8862-a51fde1596cc
-source-git-commit: a5391c1ccc24845673217e15bafd1a1df33cbc18
+source-git-commit: 25953a5a1f5b32de7d150dbef700ad06ce6014df
 workflow-type: tm+mt
-source-wordcount: '2741'
+source-wordcount: '2747'
 ht-degree: 2%
 
 ---
@@ -459,7 +459,12 @@ select inline(productListItems) from source_dataset limit 10;
 
 從 `source_dataset` 用於填充目標表。
 
-| SKU |體驗 |數量 |價格總計 | |—+—+—| | product-id-1 |(&quot;(&quot;(&quot;(&quot;(A,pass,B,NULL)&quot;)&quot;) | 5 | 10.5 | | product-id-5 |(&quot;(&quot;(&quot;(&quot;(A,pass, B,NULL)&quot;)&quot;) | | | | product-id-2 |(&quot;(&quot;(&quot;(AF, C, D,NULL)&quot;)&quot;) | 6 | 40 | | product-id-4 |(&quot;(&quot;(&quot;(&quot;(BM,pass, NA,NULL)&quot;)&quot;) | 3 | 12 |
+| SKU | _體驗 | 數量 | 價格合計 |
+|---------------------|-----------------------------------|----------|--------------|
+| 產品ID-1 | (&quot;(&quot;(&quot;(A,pass,B,NULL)&quot;)&quot;) | 5 | 十點五 |
+| 產品ID-5 | (&quot;(&quot;(&quot;(&quot;(A,pass, B,NULL)&quot;)&quot;) |  |  |
+| 產品ID-2 | (&quot;(&quot;(&quot;(AF, C, D,NULL)&quot;)&quot;) | 6 | 40 |
+| 產品ID-4 | (&quot;(&quot;(&quot;(BM,pass, NA,NULL)&quot;)&quot;) | 3 | 12 |
 
 ## [!DNL Spark] SQL命令
 

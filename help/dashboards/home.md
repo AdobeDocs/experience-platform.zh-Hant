@@ -1,12 +1,12 @@
 ---
 solution: Experience Platform
-title: Experience Platform儀表板簡介
+title: 儀表板概述
 type: Documentation
 description: 在Adobe Experience Platform瀏覽多個儀表板以查看有關組織資料的重要資訊，這些資訊在每日快照期間捕獲。
 exl-id: d56cb139-392d-4bbc-97ec-202a0c8a2863
-source-git-commit: e7ff48d6aa7d7f70688081df45ae2d36da741eb4
+source-git-commit: 25953a5a1f5b32de7d150dbef700ad06ce6014df
 workflow-type: tm+mt
-source-wordcount: '309'
+source-wordcount: '306'
 ht-degree: 0%
 
 ---
