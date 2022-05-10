@@ -3,9 +3,9 @@ keywords: 廣告；罪；
 title: Criteo連接
 description: Criteo能夠讓可信、有影響力的廣告為開放網際網路上的每個消費者帶來更豐富的體驗。 Criteo擁有全球最大的商業資料集和一流的人工智慧，確保整個購物過程中的每個觸點都個性化，以便在適當的時間通過正確的廣告接觸到客戶。
 exl-id: e6f394b2-ab82-47bb-8521-1cf9d01a203b
-source-git-commit: 0006c498cd33d9deb66f1d052b4771ec7504457d
+source-git-commit: add177efd3fdd0a39dc33c5add59375f8e918c1e
 workflow-type: tm+mt
-source-wordcount: '824'
+source-wordcount: '820'
 ht-degree: 3%
 
 ---
@@ -138,4 +138,4 @@ Criteo支援激活下表中描述的身份。 瞭解有關 [身份](https://expe
 ## 其他資源
 
 * [克里特奧幫助中心](https://help.criteo.com/kb/en)
-* [Criteo開發人員門戶](https://developers.criteo.com/marketing-solutions/v2022.04/reference/modifyaudienceuserswithattributes)
+* [Criteo開發人員門戶](https://developers.criteo.com)
