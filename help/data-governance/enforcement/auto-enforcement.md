@@ -5,9 +5,9 @@ title: 自動策略強制
 topic-legacy: guide
 description: 本文檔介紹在將段激活到Experience Platform中的目標時如何自動強制實施資料使用策略。
 exl-id: c6695285-77df-48c3-9b4c-ccd226bc3f16
-source-git-commit: ca35b1780db00ad98c2a364d45f28772c27a4bc3
+source-git-commit: 679b9eb621baff99342fb55c0a13a60f5ef256bd
 workflow-type: tm+mt
-source-wordcount: '1232'
+source-wordcount: '1702'
 ht-degree: 0%
 
 ---
@@ -35,7 +35,7 @@ ht-degree: 0%
 
 * 應用於要激活的段內的欄位和資料集的資料使用標籤。
 * 目標的市場營銷目的。
-<!-- * (Beta) The profiles that have consented to be included in the segment activation, based on your configured consent policies. -->
+* (Beta)已同意包含在段激活中的配置檔案（基於您配置的同意策略）。
 
 >[!NOTE]
 >
@@ -58,16 +58,14 @@ ht-degree: 0%
 1. 將簡檔組分為 **段** 基於公共屬性。
 1. 段被激活到下游 **目的地**。
 
-上述時間表中的每個階段都表示一個實體，該實體可能會導致違反的策略，如下表所述：
+如下表所述，上述時間表的每個階段都代表可能有助於政策執行的實體：
 
 | 資料沿襲階段 | 策略執行中的角色 |
 | --- | --- |
-| 資料集 | 資料集包含資料使用標籤（應用於資料集或欄位級別），這些標籤定義了整個資料集或特定欄位可用於哪些使用案例。 如果將包含某些標籤的資料集或欄位用於策略限制的目的，則將發生策略違規。 |
+| 資料集 | 資料集包含資料使用標籤（應用於資料集或欄位級別），這些標籤定義了整個資料集或特定欄位可用於哪些使用案例。 如果將包含某些標籤的資料集或欄位用於策略限制的目的，則將發生策略違規。<br><br>從客戶收集的任何同意屬性也儲存在資料集中。 如果您有權訪問同意策略（當前在測試版中），則不符合策略的同意屬性要求的任何配置檔案都將從激活到目標的段中排除。 |
 | 合併策略 | 合併策略是平台用於確定合併多個資料集的片段時資料優先順序的規則。 如果將合併策略配置為將帶有限制標籤的資料集激活到目標，則將發生策略違規。 查看 [合併策略概述](../../profile/merge-policies/overview.md) 的子菜單。 |
 | 區段 | 段規則定義應從客戶配置檔案中包括哪些屬性。 根據段定義包括哪些欄位，段將繼承這些欄位的所有已應用用法標籤。 如果您根據目標目標的市場營銷使用案例激活其繼承標籤受其適用策略限制的段，則將發生策略違規。 |
-| 目的地 | 在設定目標時，可以定義市場營銷活動（有時稱為市場營銷使用案例）。 此使用情形與策略中定義的市場營銷活動相關。 換句話說，您為目標定義的市場營銷使用案例決定了哪些資料使用策略和同意策略適用於該目標。 如果激活的段的使用標籤受目標目標的適用策略的限制，則將發生策略違規。 |
-<!-- | Dataset | Datasets contain data usage labels (applied at the dataset or field level) that define which use cases the entire dataset or specific fields can be used for. Policy violations will occur if a dataset or field containing certain labels is used for a purpose that a policy restricts.<br><br>Any consent attributes collected from your customers are also stored in datasets. If you have access to [consent policies](../policies/user-guide.md#consent-policy) (currently in beta), any profiles that do not meet the consent attribute requirements of your policies will be excluded from segments that are activated to a destination. | -->
-<!-- | Segment | Segment rules define which attributes should be included from customer profiles. Depending on which fields a segment definition includes, the segment will inherit any applied usage labels for those fields. Policy violations will occur if you activate a segment whose inherited labels are restricted by the target destination's applicable policies, based on its marketing use case. | -->
+| 目的地 | 在設定目標時，可以定義市場營銷活動（有時稱為市場營銷使用案例）。 此使用情形與策略中定義的市場營銷活動相關。 換句話說，您為目標定義的市場營銷操作將確定哪些資料使用策略和同意策略適用於該目標。<br><br>如果您激活了其使用標籤受目標目標市場營銷操作限制的段，則會發生資料使用策略違規。<br><br>(Beta)激活段時，任何不包含市場營銷活動所需同意屬性（由您的同意策略定義）的配置檔案都將從激活的受眾中排除。 |
 
 >[!IMPORTANT]
 >
@@ -77,15 +75,14 @@ ht-degree: 0%
 
 當發生策略違規時，UI中顯示的結果消息將提供有用的工具，用於探查違規的貢獻資料沿襲，以幫助解決問題。 下一節提供了更多詳細資訊。
 
-## 策略違規消息 {#enforcement}
+## 策略實施消息 {#enforcement}
 
-<!-- (TO INCLUDE FOR PHASE 2)
-The sections below outline the different policy enforcement messages that appear in the Platform UI:
+以下各節概述了平台UI中顯示的不同策略實施消息：
 
-* [Data usage policy violation](#data-usage-violation)
-* [Consent policy evaluation](#consent-policy-evaluation)
+* [資料使用策略違規](#data-usage-violation)
+* [同意政策評估](#consent-policy-evaluation)
 
-### Data usage policy violation {#data-usage-violation} -->
+### 資料使用策略違規 {#data-usage-violation}
 
 如果嘗試激活段(或 [對已激活的段進行編輯](#policy-enforcement-for-activated-segments))操作被阻止，並出現一個跨距，指示已違反一個或多個策略。 一旦觸發違規， **[!UICONTROL 保存]** 按鈕將被禁用，直到相應元件更新為符合資料使用策略。
 
@@ -109,19 +106,55 @@ The sections below outline the different policy enforcement messages that appear
 
 ![](../images/enforcement/list-view.png)
 
-<!-- (TO INCLUDE FOR PHASE 2)
-### Consent policy evaluation (Beta) {#consent-policy-evaluation}
+### 同意政策評估(Beta) {#consent-policy-evaluation}
 
 >[!IMPORTANT]
 >
->Consent policies are currently in beta and your organization may not have access to them yet.
+>同意策略當前處於試用版，您的組織可能尚未訪問它們。
 
-If you have [created consent policies](../policies/user-guide.md#consent-policy) and are activating a segment to a destination, you can see how your consent policies will affect the percentage of profiles that will be included in the activation.
+如果 [建立同意策略](../policies/user-guide.md#consent-policy) 並且正在激活到目標的段，您可以看到您的同意策略如何影響激活中包含的配置檔案的百分比。
 
-Once you reach at the **[!UICONTROL Review]** step in the [activation workflow](../../destinations/ui/activation-overview.md), select **[!UICONTROL View applied policies]**.
+#### 預激活評估
 
-A policy check dialog appears, showing you a preview of how your consent policies affect the addressable audience of the activated segment.
- -->
+一旦你到達 **[!UICONTROL 審閱]** 步驟 [激活目標](../../destinations/ui/activation-overview.md)選中 **[!UICONTROL 查看已應用的策略]**。
+
+![在激活目標工作流中查看應用的策略按鈕](../images/enforcement/view-applied-policies.png)
+
+此時將顯示策略檢查對話框，其中顯示您的同意策略如何影響已激活段的已同意受眾的預覽。
+
+![平台UI中的「同意策略檢查」對話框](../images/enforcement/consent-policy-check.png)
+
+該對話框一次顯示一個節段的同意的受眾。 要查看不同段的策略評估，請使用圖上方的下拉菜單從清單中選擇一個。
+
+![策略檢查對話框中的段切換器](../images/enforcement/segment-switcher.png)
+
+使用左滑軌在所選段的適用同意策略之間切換。 未選擇的策略在「 」中表示[!UICONTROL 其他策略]的下界。
+
+![策略檢查對話框中的策略切換器](../images/enforcement/policy-switcher.png)
+
+該圖顯示三組配置檔案之間的重疊：
+
+1. 符合選定段的配置檔案
+1. 符合選定同意策略的配置檔案
+1. 符合該分部其他適用同意政策的配置檔案(稱為「[!UICONTROL 其他策略])
+
+符合上述所有三個組的資格的配置檔案代表選定段的同意受眾，摘要在右欄中。
+
+![策略檢查對話框中的摘要部分](../images/enforcement/summary.png)
+
+將滑鼠懸停在圖中的某個受眾上，以顯示其包含的配置檔案數。
+
+![在策略檢查對話框中突出顯示圖節](../images/enforcement/highlight-segment.png)
+
+同意的觀眾由圖的中心重疊表示，並且可以像其他部分一樣被加亮。
+
+![在圖中突出顯示同意的受眾](../images/enforcement/consented-audience.png)
+
+#### 流運行強制
+
+當資料被激活到目標時，流運行詳細資訊顯示由於活動同意策略而被排除的標識數。
+
+![資料流運行的排除標識度量](../images/enforcement/dataflow-run-enforcement.png)
 
 ## 已激活段的策略實施 {#policy-enforcement-for-activated-segments}
 
