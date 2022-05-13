@@ -6,9 +6,9 @@ title: 監視UI中源的資料流
 topic-legacy: overview
 type: Tutorial
 exl-id: 53fa4338-c5f8-4e1a-8576-3fe13d930846
-source-git-commit: ee9ed1c17a566f37b4ad79df7c66f8b2ffb4b879
+source-git-commit: ed88ebe7822f60ace2babd7d5a04d2d92d83cf49
 workflow-type: tm+mt
-source-wordcount: '1862'
+source-wordcount: '1069'
 ht-degree: 0%
 
 ---
@@ -88,7 +88,7 @@ ht-degree: 0%
 
 或者，可以在搜索欄中輸入源以隔離單個源。 確定源後，選擇篩選器表徵圖 ![濾波器](../assets/ui/monitor-sources/filter.png) 清單。
 
-![搜索](../assets/ui/monitor-sources/search.png)
+![搜尋](../assets/ui/monitor-sources/search.png)
 
 此時將顯示資料流清單。 要縮小清單範圍並關注出錯的資料流，請選擇 **[!UICONTROL 僅顯示失敗]**。
 
@@ -130,102 +130,9 @@ ht-degree: 0%
 
 ![麵包屑](../assets/ui/monitor-sources/breadcrumbs.png)
 
-## 跨服務監視 {#cross-service-monitoring}
-
-儀表板的上部包含從源級到 [!DNL Identity Service], [!DNL Profile]。 每個單元包括一個點標籤，該點標籤指示在攝取階段出現的錯誤。 綠點表示無錯誤攝取，而紅點表示在特定攝取階段發生錯誤。
-
-![跨服務監控](../assets/ui/monitor-sources/cross-service-monitoring.png)
-
-在「資料流」頁中，找到成功的資料流並選擇篩選器表徵圖 ![濾波器](../assets/ui/monitor-sources/filter.png) 旁邊，查看其資料流運行資訊。
-
-![資料流成功](../assets/ui/monitor-sources/dataflow-success.png)
-
-的 [!UICONTROL 源攝取] 頁包含確認成功接收資料流的資訊。 從這裡，您可以開始監控資料流從源級到 [!DNL Identity Service]，然後 [!DNL Profile]。
-
-選擇 **[!UICONTROL 身份]** 看到食物攝入 [!UICONTROL 身份] 。
-
-![來源](../assets/ui/monitor-sources/sources.png)
-
-### [!DNL Identity] 度量 {#identity-metrics}
-
->[!CONTEXTUALHELP]
->id="platform_monitoring_identity_processing"
->title="身份處理"
->abstract="「身份處理」視圖包含有關接收到身份服務的記錄的資訊，包括添加的身份數、建立的圖形和更新的圖形。 查看度量定義指南，瞭解有關度量和圖形的詳細資訊。"
->text="Learn more in documentation"
-
->[!CONTEXTUALHELP]
->id="platform_monitoring_dataflow_run_details_identity"
->title="資料流運行詳細資訊"
->abstract="「資料流運行詳細資料」頁顯示有關身份資料流運行的詳細資訊，包括其IMS組織ID和資料流運行ID。"
-
-的 [!UICONTROL 身份處理] 頁面包含接收到的記錄的資訊 [!DNL Identity Service]，包括添加的標識數、建立的圖形和更新的圖形數。
-
-選擇篩選器表徵圖 ![濾波器](../assets/ui/monitor-sources/filter.png) 在資料流運行開始時間旁邊，查看有關 [!DNL Identity] 資料流運行。
-
-![身份](../assets/ui/monitor-sources/identities.png)
-
-| 標識度量 | 說明 |
-| ---------------- | ----------- |
-| [!UICONTROL 收到的記錄] | 從接收的記錄數 [!DNL Data Lake]。 |
-| [!UICONTROL 記錄失敗] | 由於資料中的錯誤而未接收到平台的記錄數。 |
-| [!UICONTROL 略過的記錄] | 攝入但未進入的記錄數 [!DNL Identity Service] 因為記錄行中只有一個標識符。 |
-| [!UICONTROL 攝取的記錄] | 接收到的記錄數 [!DNL Identity Service]。 |
-| [!UICONTROL 記錄總數] | 所有記錄（包括記錄失敗、跳過的記錄）的總計數， [!DNL Identities] 添加和複製記錄。 |
-| [!UICONTROL 已添加標識] | 添加到的淨新標識符數 [!DNL Identity Service]。 |
-| [!UICONTROL 已建立圖形] | 在中建立的淨新標識圖數 [!DNL Identity Service]。 |
-| [!UICONTROL 圖形已更新] | 使用新邊更新的現有標識圖形的數量。 |
-| [!UICONTROL 資料流運行失敗] | 失敗的資料流運行數。 |
-| [!UICONTROL 處理時間] | 從接收開始到完成的時間戳。 |
-| [!UICONTROL 狀態] | 定義資料流的總體狀態。 可能的狀態值為： <ul><li>`Success`:指示資料流處於活動狀態，並且正在根據提供的計畫接收資料。</li><li>`Failed`:指示資料流的激活過程因錯誤而中斷。 </li><li>`Processing`:指示資料流尚未處於活動狀態。 建立新資料流後，通常會立即遇到此狀態。</li></ul> |
-
-的 [!UICONTROL 資料流運行詳細資訊] 頁面顯示有關 [!DNL Identity] 資料流運行，包括其IMS組織ID和資料流運行ID。 此頁還顯示由提供的相應錯誤代碼和錯誤消息 [!DNL Identity Service]，是否在攝取過程中出現任何錯誤。
-
-選擇 **[!UICONTROL 運行開始：2/14/2021，晚9:47]** 的子菜單。
-
-![標識資料流運行](../assets/ui/monitor-sources/identities-dataflow-run.png)
-
-從 [!UICONTROL 身份處理] ，選擇 **[!UICONTROL 配置檔案]** 查看 [!UICONTROL 配置檔案] 。
-
-![選擇配置檔案](../assets/ui/monitor-sources/select-profiles.png)
-
-### [!DNL Profile] 度量 {#profile-metrics}
-
->[!CONTEXTUALHELP]
->id="platform_monitoring_profile_processing"
->title="配置檔案處理"
->abstract="「配置檔案處理」視圖包含有關接收到配置檔案服務的記錄的資訊，包括建立的配置檔案片段數、更新的配置檔案片段數和配置檔案片段總數。"
->text="Learn more in documentation"
-
->[!CONTEXTUALHELP]
->id="platform_monitoring_dataflow_run_details_profile"
->title="資料流運行詳細資訊"
->abstract="「資料流運行詳細資料」頁顯示有關配置檔案資料流運行的詳細資訊，包括其IMS組織ID和資料流運行ID。"
-
-的 [!UICONTROL 配置檔案處理] 頁面包含接收到的記錄的資訊 [!DNL Profile]包括建立的配置檔案片段數、更新的配置檔案片段數和配置檔案片段總數。
-
-選擇篩選器表徵圖 ![濾波器](../assets/ui/monitor-sources/filter.png) 在資料流運行開始時間旁邊，查看有關 [!DNL Profile] 資料流運行。
-
-![配置檔案](../assets/ui/monitor-sources/profiles.png)
-
-| 配置檔案度量 | 說明 |
-| --------------- | ----------- |
-| [!UICONTROL 收到的記錄] | 從接收的記錄數 [!DNL Data Lake]。 |
-| [!UICONTROL 記錄失敗 ] | 攝入但未進入的記錄數 [!DNL Profile] 錯誤。 |
-| [!UICONTROL 已添加配置檔案片段] | 淨新數 [!DNL Profile] 已添加片段。 |
-| [!UICONTROL 已更新配置檔案片段] | 現有數量 [!DNL Profile] 片段更新 |
-| [!UICONTROL 配置檔案碎片總數] | 寫入的記錄總數 [!DNL Profile]，包括所有現有 [!DNL Profile] 片段更新和新 [!DNL Profile] 已建立片段。 |
-| [!UICONTROL 資料流運行失敗] | 失敗的資料流運行數。 |
-| [!UICONTROL 處理時間] | 從接收開始到完成的時間戳。 |
-| [!UICONTROL 狀態] | 定義資料流的總體狀態。 可能的狀態值為： <ul><li>`Success`:指示資料流處於活動狀態，並且正在根據提供的計畫接收資料。</li><li>`Failed`:指示資料流的激活過程因錯誤而中斷。 </li><li>`Processing`:指示資料流尚未處於活動狀態。 建立新資料流後，通常會立即遇到此狀態。</li></ul> |
-
-的 [!UICONTROL 資料流運行詳細資訊] 頁面顯示有關 [!DNL Profile] 資料流運行，包括其IMS組織ID和資料流運行ID。 此頁還顯示由提供的相應錯誤代碼和錯誤消息 [!DNL Profile]，是否在攝取過程中出現任何錯誤。
-
-![配置檔案 — 資料流運行](../assets/ui/monitor-sources/profiles-dataflow-run.png)
-
 ## 後續步驟 {#next-steps}
 
-通過遵循本教程，您已成功從源級監視接收資料流， [!DNL Identity Service], [!DNL Profile]，使用 **[!UICONTROL 監視]** 控制項欄。 您還成功識別了導致資料流在接收過程中失敗的錯誤。 有關詳細資訊，請參閱以下文檔：
+按照本教程，您已使用 **[!UICONTROL 監視]** 控制項欄。 您還成功識別了導致資料流在接收過程中失敗的錯誤。 有關詳細資訊，請參閱以下文檔：
 
-* [即時客戶概要資訊概述](../../profile/home.md)
-* [資料科學工作區概述](../../data-science-workspace/home.md)
+* [監視資料流中的標識](./monitor-identities.md)
+* [監視資料流中的配置檔案](./monitor-profiles.md)
