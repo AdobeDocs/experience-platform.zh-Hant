@@ -2,9 +2,9 @@
 title: Adobe Experience Platform 發行說明
 description: Adobe Experience Platform的最新發行說明。
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: d4a4baf330925d6696f515bf650d86740c18e97c
+source-git-commit: a80f011dc8a6e10d1d311bc85029fa9f57d8b4ab
 workflow-type: tm+mt
-source-wordcount: '2707'
+source-wordcount: '2804'
 ht-degree: 3%
 
 ---
@@ -32,8 +32,10 @@ Adobe Experience Platform 現有功能更新：
 
 以下小部件可通過它們各自的儀表板上的小部件庫獲得。 有關 [如何通過小部件庫添加小部件](../../dashboards/customize/widget-library.md)。
 
-| 功能 | 控制面板 | 說明 |
-| --------------------------------------------------------- | ------------- | ----------- |
+**新小部件**
+
+| 小部件 | 控制面板 | 說明 |
+| ------ | --------- | ----------- |
 | [!UICONTROL 配置檔案添加趨勢] | 設定檔 | 此小部件使用線形圖來說明過去30天、90天或12個月中每天添加到配置檔案儲存的合併配置檔案總數。 |
 | [!UICONTROL 映射到目標狀態的受眾] | 設定檔 | 此小部件在單個度量中顯示映射的和未映射的受眾的總數，並使用圓環圖來說明它們的合計之間的比例差異。 |
 | [!UICONTROL 觀眾大小] | 設定檔 | 此小部件提供一個雙清單，其中列出最多20個段以及每個段中包含的受眾總數。 該清單取決於所應用的合併策略，並根據受眾總數從高到低排序。 |
@@ -46,6 +48,14 @@ Adobe Experience Platform 現有功能更新：
 | [!UICONTROL 受眾規模趨勢] | 區段 | 此小部件提供了線形圖圖，說明在30天、90天和12個月期間內滿足任何段定義條件的配置檔案總數。 |
 | [!UICONTROL 受眾大小變化趨勢] | 區段 | 此小部件提供線形圖圖，說明在最近的每日快照之間限定給定段的配置檔案總數之間的差異。 趨勢分析期可以在30天、90天和12個月期間顯示。 |
 | [!UICONTROL 按身份分類的受眾規模趨勢] | 區段 | 此小部件基於所選標識類型說明特定段的受眾大小趨勢。 趨勢分析期可以在30天、90天和12個月期間顯示。 |
+
+**新功能**
+
+| 功能 | 控制面板 | 說明 |
+| ------- | --------- | ----------- |
+| 孤立的配置檔案段成員身份清除 | 配置檔案和許可證使用 | 配置檔案服務現在每天刪除剩餘的段成員，以便更準確地表示您在系統中的配置檔案。 在刪除給定配置檔案的所有配置檔案片段後，將進行此清理。 這可能顯示許可證使用儀表板中「可定址受眾」度量的下降，也可能顯示配置檔案儀表板中「配置檔案計數」度量的下降，因為這些度量包括此版本之前剩餘的段片段。 |
+
+{style=&quot;table-layout:auto&quot;}
 
 有關 [[!DNL Profiles]](../../dashboards/guides/profiles.md)。 [[!DNL Destinations]](../../dashboards/guides/destinations.md), [[!DNL Segments]](../../dashboards/guides/segments.md) 儀表板。
 
@@ -116,7 +126,7 @@ XDM是一種開源規範，它為傳入Adobe Experience Platform的資料提供�
 | --- | --- |
 | 添加或刪除架構的單個標準欄位 | 現在，通過架構編輯器UI，您可以將標準欄位組的部分添加到您的架構中，從而為您選擇包括的欄位提供了更大的靈活性，而無需從頭構建自定義資源。<br><br>現在，您還可以直接在架構結構中定義即席自定義域，並將它們分配給新的或現有的自定義域組，而無需事先建立或編輯域組。<br><br>請參閱上的指南 [在UI中建立和編輯架構](../../xdm/ui/resources/schemas.md) 的子菜單。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style=&quot;table-layout:auto&quot;&quot;
 
 **新的XDM元件**
 

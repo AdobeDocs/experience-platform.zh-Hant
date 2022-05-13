@@ -2,9 +2,9 @@
 title: Adobe Experience Platform發行說明2022年4月
 description: 2022年4月為Adobe Experience Platform發行的說明。
 exl-id: 39233787-3089-4469-8363-b006ae41ae21
-source-git-commit: 1f5c21e09e471ac0d6f1d98e219e06e571ede89f
+source-git-commit: a80f011dc8a6e10d1d311bc85029fa9f57d8b4ab
 workflow-type: tm+mt
-source-wordcount: '2802'
+source-wordcount: '2805'
 ht-degree: 3%
 
 ---
@@ -49,11 +49,13 @@ Adobe Experience Platform 現有功能更新：
 | [!UICONTROL 受眾大小變化趨勢] | 區段 | 此小部件提供線形圖圖，說明在最近的每日快照之間限定給定段的配置檔案總數之間的差異。 趨勢分析期可以在30天、90天和12個月期間顯示。 |
 | [!UICONTROL 按身份分類的受眾規模趨勢] | 區段 | 此小部件基於所選標識類型說明特定段的受眾大小趨勢。 趨勢分析期可以在30天、90天和12個月期間顯示。 |
 
-**新功能**
+**新功能** {#new-features}
 
 | 功能 | 控制面板 | 說明 |
 | ------- | --------- | ----------- |
 | 孤立的配置檔案段成員身份清除 | 配置檔案和許可證使用 | 配置檔案服務現在每天刪除剩餘的段成員，以便更準確地表示您在系統中的配置檔案。 在刪除給定配置檔案的所有配置檔案片段後，將進行此清理。 這可能顯示許可證使用儀表板中「可定址受眾」度量的下降，也可能顯示配置檔案儀表板中「配置檔案計數」度量的下降，因為這些度量包括此版本之前剩餘的段片段。 |
+
+{style=&quot;table-layout:auto&quot;}
 
 有關 [[!DNL Profiles]](../../dashboards/guides/profiles.md)。 [[!DNL Destinations]](../../dashboards/guides/destinations.md), [[!DNL Segments]](../../dashboards/guides/segments.md) 儀表板。
 
@@ -124,7 +126,7 @@ XDM是一種開源規範，它為傳入Adobe Experience Platform的資料提供�
 | --- | --- |
 | 添加或刪除架構的單個標準欄位 | 現在，通過架構編輯器UI，您可以將標準欄位組的部分添加到您的架構中，從而為您選擇包括的欄位提供了更大的靈活性，而無需從頭構建自定義資源。<br><br>現在，您還可以直接在架構結構中定義即席自定義域，並將它們分配給新的或現有的自定義域組，而無需事先建立或編輯域組。<br><br>請參閱上的指南 [在UI中建立和編輯架構](../../xdm/ui/resources/schemas.md) 的子菜單。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style=&quot;table-layout:auto&quot;&quot;
 
 **新的XDM元件**
 
