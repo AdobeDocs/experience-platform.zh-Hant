@@ -5,7 +5,7 @@ title: 查詢服務總覽
 topic-legacy: overview
 description: 此文檔概述了Experience Platform中查詢服務的角色。
 exl-id: fdaefc12-a97d-4e4e-9aed-d3dbd0f43ea0
-source-git-commit: 796460be52b465216cdc69d45aa38ac80aa3516d
+source-git-commit: c09a7a6198bf1ef3f94e53bdbdf3b0b93f6b2bd1
 workflow-type: tm+mt
 source-wordcount: '722'
 ht-degree: 0%
@@ -42,7 +42,7 @@ Adobe Experience Platform [!DNL Segmentation Service] 允許用戶將客戶分�
 
 ### Adobe Analytics瀏覽放棄
 
-此 [瀏覽放棄示例以使用Adobe [!DNL Analytics]](./use-cases/abandoned-cart.md) 建立特定可操作受眾的資料。 [!DNL Query Service] 適應複雜的分段邏輯，以計算各種個性化屬性以便下游使用，或大大簡化您構建段的方式。
+此 [瀏覽放棄示例以使用Adobe [!DNL Analytics]](./use-cases/abandoned-browse.md) 建立特定可操作受眾的資料。 [!DNL Query Service] 適應複雜的分段邏輯，以計算各種個性化屬性以便下游使用，或大大簡化您構建段的方式。
 
 ### 查找器BI儀表板
 

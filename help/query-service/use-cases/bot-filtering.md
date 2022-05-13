@@ -1,9 +1,10 @@
 ---
 title: 基於機器學習的查詢服務中的Bot過濾
 description: 本文檔概述了如何使用查詢服務和機器學習來確定bot活動並從真正的線上網站訪問流量中過濾其操作。
-source-git-commit: 7b223b4917e6bdb3f4a05238cbaf66261d80660e
+exl-id: fc9dbc5c-874a-41a9-9b60-c926f3fd6e76
+source-git-commit: c5b91bd516e876e095a2a6b6e3ba962b29f55a7b
 workflow-type: tm+mt
-source-wordcount: '875'
+source-wordcount: '873'
 ht-degree: 5%
 
 ---
@@ -164,6 +165,6 @@ Model Accuracy: 0.99935
 
 ## 後續步驟
 
-通過閱讀此文檔，您可以更好地瞭解如何使用查詢服務和機器學習來確定和篩選bot活動。
+通過閱讀此文檔，您對如何使用 [!DNL Query Service] 和機器學習來確定和過濾機器人活動。
 
-其他顯示 [!DNL Query Service] 對於您組織的戰略業務洞察力，請參閱廢棄的瀏覽使用案例示例。
+其他顯示 [!DNL Query Service] 對您組織的戰略性業務洞見是 [已放棄的瀏覽使用案例](./abandoned-browse.md) 示例。

@@ -2,9 +2,9 @@
 title: 查詢服務審核日誌整合
 description: 查詢服務審核日誌維護各種用戶操作的記錄，以形成用於排除問題或遵守公司資料管理策略和法規要求的審核跟蹤。 本教程概述了特定於查詢服務的審計日誌功能。
 exl-id: 5fdc649f-3aa1-4337-965f-3f733beafe9d
-source-git-commit: 861283cb8ea99b91480bf776ff0c53de52f464ad
+source-git-commit: 12b717be67cb35928d84e83b6d692f9944d651d8
 workflow-type: tm+mt
-source-wordcount: '824'
+source-wordcount: '815'
 ht-degree: 2%
 
 ---
@@ -27,7 +27,7 @@ Adobe Experience Platform [!DNL Query Service] 審計日誌整合提供了與查
 |---|---|
 | [!UICONTROL 計畫查詢] | 此類別允許您審核在中建立、更新或刪除的計畫 [!DNL Query Service]。 |
 | [!UICONTROL 查詢模板] | 此類別允許您審計對查詢模板執行的各種操作（建立、更新和刪除）。 |
-| [!UICONTROL 查詢] | 此類別允許您審計查詢執行。 |
+<!-- | [!UICONTROL Query] | This category allows you to audit query executions. | -->
 
 ## 執行 [!DNL Query Service] 審計日誌 {#perform-an-audit-log}
 
