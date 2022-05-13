@@ -5,9 +5,9 @@ title: 資料準備映射函式
 topic-legacy: overview
 description: 本文檔介紹了與資料準備一起使用的映射功能。
 exl-id: e95d9329-9dac-4b54-b804-ab5744ea6289
-source-git-commit: 14c7c3bd0bda0ab56767b9c0f5470090cf2bdb15
+source-git-commit: 87bdffece94404ae49fcc2b4afbe44db0864cafb
 workflow-type: tm+mt
-source-wordcount: '4164'
+source-wordcount: '4175'
 ht-degree: 3%
 
 ---
@@ -100,7 +100,7 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 | get_url_host | 返回給定URL的主機。 如果輸入無效，則返回null。 | <ul><li>URL: **必需** 需要從中提取主機的URL。</li></ul> | get_url_host&#x200B;(URL) | get_url_host&#x200B;(&quot;https://platform &#x200B;.adobe.com/home&quot;) | platform.adobe.com |
 | get_url_port | 返回給定URL的埠。 如果輸入無效，則返回null。 | <ul><li>URL: **必需** 需要從中提取埠的URL。</li></ul> | get_url_port(URL) | get_url_port&#x200B;(&quot;sftp://example.com//home/ &#x200B; joe/employee.csv&quot;) | 22 |
 | get_url_path | 返回給定URL的路徑。 預設情況下，返回完整路徑。 | <ul><li>URL: **必需** 需要從中提取路徑的URL。</li><li>完整路徑(_P): *可選* 一個布爾值，它確定是否返回完整路徑。 如果設定為false，則只返迴路徑的結尾。</li></ul> | get_url_path&#x200B;(URL, FULL_PATH) | get_url_path&#x200B;(&quot;sftp://example.com// &#x200B; home/joe/employee.csv&quot;) | &quot;//home/joe/&#x200B; employee.csv&quot; |
-| get_url_query_str | 返回給定URL的查詢字串。 | <ul><li>URL: **必需** 您試圖從中獲取查詢字串的URL。</li><li>錨點： **必需** 確定將對查詢字串中的錨點執行什麼操作。 可以是三個值之一：&quot;retain&quot;、&quot;remove&quot;或&quot;append&quot;。<br><br>如果值為「retain」，則錨點將附加到返回的值。<br>如果值為&quot;remove&quot;，則錨點將從返回的值中刪除。<br>如果值為「append」，則錨點將作為單獨的值返回。</li></ul> | get_url_query_str&#x200B;(URL, ANCHOR) | get_url_query_str&#x200B;(&quot;foo://example.com:8042 &#x200B;/over/there?name= &#x200B; ferret#nose&quot;, &quot;retain&quot;<br>get_url_query_str&#x200B;(&quot;foo://example.com:8042 &#x200B;/over/there?name= &#x200B; ferret#nose&quot;, &quot;remove&quot;<br>get_url_query_str&#x200B;(&quot;foo://example.com &#x200B;:8042/over/the&#x200B;?name=ferret#nose&quot;, &quot;append&quot;) | `{"name": "ferret#nose"}`<br>`{"name": "ferret"}`<br>`{"name": "ferret", "_anchor_": "nose"}` |
+| get_url_query_str | 返回給定URL的查詢字串，作為查詢字串名稱和查詢字串值的映射。 | <ul><li>URL: **必需** 您試圖從中獲取查詢字串的URL。</li><li>錨點： **必需** 確定將對查詢字串中的錨點執行什麼操作。 可以是三個值之一：&quot;retain&quot;、&quot;remove&quot;或&quot;append&quot;。<br><br>如果值為「retain」，則錨點將附加到返回的值。<br>如果值為&quot;remove&quot;，則錨點將從返回的值中刪除。<br>如果值為「append」，則錨點將作為單獨的值返回。</li></ul> | get_url_query_str&#x200B;(URL, ANCHOR) | get_url_query_str&#x200B;(&quot;foo://example.com:8042 &#x200B;/over/there?name= &#x200B; ferret#nose&quot;, &quot;retain&quot;<br>get_url_query_str&#x200B;(&quot;foo://example.com:8042 &#x200B;/over/there?name= &#x200B; ferret#nose&quot;, &quot;remove&quot;<br>get_url_query_str&#x200B;(&quot;foo://example.com &#x200B;:8042/over/the&#x200B;?name=ferret#nose&quot;, &quot;append&quot;) | `{"name": "ferret#nose"}`<br>`{"name": "ferret"}`<br>`{"name": "ferret", "_anchor_": "nose"}` |
 
 {style=&quot;table-layout:auto&quot;&quot;
 
