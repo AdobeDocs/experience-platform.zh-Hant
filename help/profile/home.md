@@ -4,9 +4,9 @@ title: 即時客戶概要資訊概述
 topic-legacy: guide
 description: 即時客戶概要檔案合併來自各種來源的資料，並以單個客戶概要檔案和相關時間系列事件的形式提供對這些資料的訪問。 此功能使營銷人員能夠跨多個渠道與其受眾進行協調、一致和相關的體驗。
 exl-id: c93d8d78-b215-4559-a806-f019c602c4d2
-source-git-commit: 9f00bff31f9e7d2da1294d3d1f24cba7870a4614
+source-git-commit: d2182b48e21de059f12ad8923bb3b420ed87bcfc
 workflow-type: tm+mt
-source-wordcount: '1888'
+source-wordcount: '2046'
 ht-degree: 0%
 
 ---
@@ -19,11 +19,24 @@ Adobe Experience Platform使您能夠為您的客戶提供協調、一致和相�
 
 Real-time Customer Profile與Experience Platform內其他服務之間的關係在以下圖中突出顯示：
 
-![](images/profile-overview/profile-in-platform.png)
+![Real-time Customer Profile與Adobe Experience Platform其他服務之間的關係。 此圖表顯示Profile是Adobe Experience Platform的核心元件之一。](images/profile-overview/profile-in-platform.png)
 
 ## 瞭解配置檔案
 
 [!DNL Real-time Customer Profile] 合併來自各種企業系統的資料，然後以客戶配置檔案的形式提供對該資料的訪問，並顯示相關的時間系列事件。 此功能使營銷人員能夠跨多個渠道與其受眾進行協調、一致和相關的體驗。 以下各節重點介紹一些必須瞭解的核心概念，以便在平台內有效地構建和維護配置檔案。
+
+### 配置檔案實體組合
+
+即時客戶配置檔案由主實體(稱為 **主實體**&#x200B;以及各種配套實體。 主實體由配置檔案的特徵、行為和段成員構成。 其它實體允許分割引擎利用輪廓的主實體之外的資料，並包括：
+
+- **維實體**:用於簡化資料建模過程的實體，用於在事件或配置檔案記錄之間共用資訊。 這也稱為查找實體或分類實體。
+- **B2B實體**:描述配置檔案與業務對業務客戶和機會關係的實體。
+
+![說明配置檔案圖元組成的圖。](./images/profile-overview/profile-entity-composition.png)
+
+>[!IMPORTANT]
+>
+>由於維實體和B2B實體僅存在於主實體之外，因此它們僅用於批分割。
 
 ### 配置檔案資料儲存
 
@@ -115,9 +128,9 @@ Oncebrity Insights允許您公開Adobe Experience Platform的關鍵指標。 除
 
 由於資料存取相關，資料治理在 [!DNL Experience Platform] 各級：
 
-* 資料使用標籤
-* 資料存取策略
-* 對市場營銷活動資料的訪問控制
+- 資料使用標籤
+- 資料存取策略
+- 對市場營銷活動資料的訪問控制
 
 資料治理在幾個點進行管理。 這些包括確定所攝取的資料 [!DNL Platform] 以及在接收特定營銷活動後可以訪問哪些資料。 有關詳細資訊，請首先閱讀 [資料治理概述](../data-governance/home.md)。
 
