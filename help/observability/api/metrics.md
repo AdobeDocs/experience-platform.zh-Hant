@@ -5,10 +5,10 @@ title: 度量API終結點
 topic-legacy: developer guide
 description: 瞭解如何使用Oncebrity Insights API在Experience Platform中檢索可觀性度量。
 exl-id: 08d416f0-305a-44e2-a2b7-d563b2bdd2d2
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: dc7deab2c9fe1a1fa151731fceeb3c239dd18878
 workflow-type: tm+mt
-source-wordcount: '1864'
-ht-degree: 5%
+source-wordcount: '1409'
+ht-degree: 4%
 
 ---
 
@@ -201,23 +201,12 @@ curl -X POST \
 
 | 洞察度 | 說明 | ID查詢參數 |
 | ---- | ---- | ---- |
-| timeseries.ingestion.dataset.new.count | 建立的資料集總數。 | 不適用 |
 | timeseries.ingestion.dataset.size | 為一個資料集或所有資料集所攝取的所有資料的累計大小。 | 資料集 ID |
 | timeseries.ingestion.dataset.dailysize | 針對一個資料集或所有資料集按每日使用情況接收的資料大小。 | 資料集 ID |
 | timeseries.ingestion.dataset.batchfailed.count | 一個資料集或所有資料集失敗的批處理數。 | 資料集 ID |
 | timeseries.ingestion.dataset.batchsuccess.count | 為一個資料集或所有資料集所攝取的批次數。 | 資料集 ID |
 | timeseries.ingestion.dataset.recordsuccess.count | 為一個資料集或所有資料集所攝取的記錄數。 | 資料集 ID |
-| **timeseries.data.collection.validation.total.messages.rate** | 一個資料集或所有資料集的消息總數。 | 資料集 ID |
-| **timeseries.data.collection.validation.valid.messages.rate** | 一個資料集或所有資料集的有效消息總數。 | 資料集 ID |
-| **timeseries.data.collection.validation.invalid.messages.rate** | 一個資料集或所有資料集的無效消息總數。 | 資料集 ID |
-| **timeseries.data.collection.validation.category.type.count** | 一個資料集或所有資料集的無效「類型」消息的總數。 | 資料集 ID |
-| **timeseries.data.collection.validation.category.range.count** | 一個資料集或所有資料集的無效「範圍」消息的總數。 | 資料集 ID |
-| **timeseries.data.collection.validation.category.format.count** | 一個資料集或所有資料集的無效「格式」消息的總數。 | 資料集 ID |
-| **timeseries.data.collection.validation.category.pattern.count** | 一個資料集或所有資料集的無效「模式」消息的總數。 | 資料集 ID |
 | **timeseries.data.collection.validation.category.presence.count** | 一個資料集或所有資料集的無效「存在」消息的總數。 | 資料集 ID |
-| **timeseries.data.collection.validation.category.enum.count** | 一個資料集或所有資料集的無效「枚舉」消息的總數。 | 資料集 ID |
-| **timeseries.data.collection.validation.category.unclassifed.count** | 一個資料集或所有資料集的無效「未分類」消息的總數。 | 資料集 ID |
-| **timeseries.data.collection.validation.category.unknown.count** | 一個資料集或所有資料集的無效「未知」消息的總數。 | 資料集 ID |
 | **timeseries.data.collection.inlet.total.messages.received** | 為一個資料入口或所有資料入口接收的消息總數。 | 入口ID |
 | **timeseries.data.collection.inlet.total.messages.size.received** | 為一個資料入口或所有資料入口接收的資料的總大小。 | 入口ID |
 | **timeseries.data.collection.inlet.success** | 成功調用一個資料入口或所有資料入口的HTTP總數。 | 入口ID |
@@ -233,40 +222,11 @@ curl -X POST \
 | ---- | ---- | ---- |
 | timeseries.identity.dataset.recordsuccess.count | 寫入其資料源的記錄數 [!DNL Identity Service]，用於一個資料集或所有資料集。 | 資料集 ID |
 | timeseries.identity.dataset.recordfailed.count | 失敗的記錄數 [!DNL Identity Service]，用於一個資料集或所有資料集。 | 資料集 ID |
-| timeseries.identity.dataset.namespacecode.recordsuccess.count | 成功接收命名空間的標識記錄數。 | 命名空間ID(**必需**) |
 | timeseries.identity.dataset.namespacecode.recordfailed.count | 命名空間失敗的標識記錄數。 | 命名空間ID(**必需**) |
 | timeseries.identity.dataset.namespacecode.recordskipped.count | 命名空間跳過的標識記錄數。 | 命名空間ID(**必需**) |
 | timeseries.identity.graph.imsorg.uniqueidentities.count | IMS組織的標識圖中儲存的唯一標識數。 | 不適用 |
 | timeseries.identity.graph.imsorg.namespacecode.uniqueidentities.count | 命名空間的標識圖中儲存的唯一標識數。 | 命名空間ID(**必需**) |
-| timeseries.identity.graph.imsorg.numidgraphs.count | IMS組織的標識圖中儲存的唯一圖形標識數。 | 不適用 |
 | timeseries.identity.graph.imsorg.graphstrength.uniqueidentities.count | IMS組織的特定圖形強度（「未知」、「弱」或「強」）的標識圖中儲存的唯一標識數。 | 圖形強度(**必需**) |
-
-{style=&quot;table-layout:auto&quot;&quot;
-
-#### [!DNL Privacy Service] {#privacy}
-
-下表概述Adobe Experience Platform的指標 [!DNL Privacy Service]。
-
-| 洞察度 | 說明 | ID查詢參數 |
-| ---- | ---- | ---- |
-| timeseries.gdpr.jobs.totaljobs.count | 從GDPR建立的作業總數。 | 環境(**必需**) |
-| timeseries.gdpr.jobs.completedjobs.count | 來自GDPR的已完成作業總數。 | 環境(**必需**) |
-| timeseries.gdpr.jobs.errorjobs.count | 來自GDPR的錯誤作業總數。 | 環境(**必需**) |
-
-{style=&quot;table-layout:auto&quot;&quot;
-
-#### [!DNL Query Service] {#query}
-
-下表概述Adobe Experience Platform的指標 [!DNL Query Service]。
-
-| 洞察度 | 說明 | ID查詢參數 |
-| ---- | ---- | ---- |
-| timeseries.queryservice.query.scheduleonce.count | 非循環計畫查詢的總數。 | 不適用 |
-| timeseries.queryservice.query.scheduledrecurring.count | 定期計畫查詢的總數。 | 不適用 |
-| timeseries.queryservice.query.batchquery.count | 已執行的批查詢總數。 | 不適用 |
-| timeseries.queryservice.query.scheduledquery.count | 已執行的計畫查詢總數。 | 不適用 |
-| timeseries.queryservice.query.interactivequery.count | 已執行的互動式查詢總數。 | 不適用 |
-| timeseries.queryservice.query.batchfrompsqlquery.count | 從PSQL執行的批處理查詢總數。 | 不適用 |
 
 {style=&quot;table-layout:auto&quot;&quot;
 
@@ -278,18 +238,7 @@ curl -X POST \
 | ---- | ---- | ---- |
 | timeseries.profiles.dataset.recordread.count | 從 [!DNL Data Lake] 按 [!DNL Profile]，用於一個資料集或所有資料集。 | 資料集 ID |
 | timeseries.profiles.dataset.recordsuccess.count | 寫入其資料源的記錄數 [!DNL Profile]，用於一個資料集或所有資料集。 | 資料集 ID |
-| timeseries.profiles.dataset.recordfailed.count | 失敗的記錄數 [!DNL Profile]，用於一個資料集或所有資料集。 | 資料集 ID |
 | timeseries.profiles.dataset.batchsuccess.count | 數量 [!DNL Profile] 為資料集或所有資料集接收的批處理。 | 資料集 ID |
-| timeseries.profiles.dataset.batchfailed.count | 數量 [!DNL Profile] 對於一個資料集或所有資料集，批處理失敗。 | 資料集 ID |
-| platform.ups.ingest.streaming.request.m1_rate | 傳入請求速率。 | IMS組織(**必需**) |
-| aep.core.unified-profile.psi.platform.ups.ingest.streaming.access.put.success.meter.m1_rate | 攝取成功率。 | IMS組織(**必需**) |
-| platform.ups.ingest.streaming.records.created.m15_rate | 為資料集攝取的新記錄的速率。 | 資料集ID(**必需**) |
-| platform.ups.ingest.streaming.request.error.created.outOfOrder.m1_rate | 為資料集建立請求的超序時間戳記錄的速率。 | 資料集ID(**必需**) |
-| platform.ups.profile-commons.ingest.streaming.dataSet.record.created.timestamp | 資料集的上次建立記錄請求的時間戳。 | 資料集ID(**必需**) |
-| platform.ups.ingest.streaming.request.error.updated.outOfOrder.m1_rate | 資料集更新請求的超序時間戳記錄的速率。 | 資料集ID(**必需**) |
-| platform.ups.profile-commons.ingest.streaming.dataSet.record.updated.timestamp | 資料集的上次更新記錄請求的時間戳。 | 資料集ID(**必需**) |
-| platform.ups.ingest.streaming.record.size.m1_rate | 平均記錄大小。 | IMS組織(**必需**) |
-| platform.ups.ingest.streaming.records.updated.m15_rate | 為資料集接收的記錄的更新請求的速率。 | 資料集ID(**必需**) |
 
 {style=&quot;table-layout:auto&quot;&quot;
 
