@@ -2,9 +2,10 @@
 keywords: Experience Platform；首頁；熱門主題；資料準備；資料準備；流式處理；upsert；流式處理；upsert
 title: 使用資料準備將部分行更新發送到配置檔案服務
 description: 本文檔提供有關如何使用資料準備將部分行更新發送到配置檔案服務的資訊。
-source-git-commit: 26059af9f899b4ccf5701899c9ac8111d56488e8
+exl-id: f9f9e855-0f72-4555-a4c5-598818fc01c2
+source-git-commit: 67049cf220379bfa5b64f530f26045ea21077be0
 workflow-type: tm+mt
-source-wordcount: '1057'
+source-wordcount: '1155'
 ht-degree: 0%
 
 ---
@@ -241,6 +242,14 @@ curl -X POST 'https://dcs.adobedc.net/collection/9aba816d350a69c4abbd283eb5818ec
   }
  }'
 ```
+
+## 已知限制和關鍵注意事項
+
+以下概述了在上插頁流時要考慮的已知限制清單 [!DNL Data Prep]:
+
+* 只有在將部分行更新發送到 [!DNL Profile Service]。 部分行更新是 **不** 由資料湖消耗。
+* 流式Upserts方法不支援更新、替換和刪除身份。 只能使用 `identity: create` 的下界。
+* 流upsreats方法當前僅支援基元單值屬性（如整數、日期、時間戳和字串）和對象。 流式更新插頁方法不支援替換、附加或覆蓋陣列屬性和特定陣列索引。
 
 ## 後續步驟
 
