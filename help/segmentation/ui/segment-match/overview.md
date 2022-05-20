@@ -5,14 +5,14 @@ title: 段匹配概述
 topic-legacy: overview
 description: 段匹配是Adobe Experience Platform的段共用服務，允許兩個或兩個以上平台用戶以安全、受管理和隱私友好的方式交換段資料。
 exl-id: 4e6ec2e0-035a-46f4-b171-afb777c14850
-source-git-commit: 50795be308649052037be62153109eadab02c9a1
+source-git-commit: 1c2b9862facfe9fbce59246c882e6373f3e2c3ef
 workflow-type: tm+mt
-source-wordcount: '1968'
+source-wordcount: '1994'
 ht-degree: 0%
 
 ---
 
-# [!DNL Segment Match] 概觀
+# [!DNL Segment Match]概述
 
 Adobe Experience Platform網段匹配是一種網段共用服務，允許兩個或兩個以上平台用戶以安全、受管理和隱私友好的方式交換網段資料。 [!DNL Segment Match] 使用平台隱私標準和個人標識符，如散列電子郵件、散列電話號碼和設備標識符，如IDFA和GAID。
 
@@ -114,7 +114,13 @@ Adobe Experience Platform網段匹配是一種網段共用服務，允許兩個�
 
 ![connect partner.png](./images/connect-partner.png)
 
-### 建立源
+### 建立源 {#create-feed}
+
+>[!CONTEXTUALHELP]
+>id="platform_segment_match_marketing"
+>title="限制營銷使用案例"
+>abstract="受限的營銷使用案例可幫助您的合作夥伴提供指導，確保根據您的資料治理限制正確使用共用段。"
+>text="Learn more in documentation"
 
 A **飼料** 是一組資料（段）、資料如何公開或使用的規則，以及確定資料與合作夥伴資料匹配方式的配置。 源可以獨立管理，並可通過以下方式與其他平台用戶交換 [!DNL Segment Match]。
 
@@ -198,4 +204,4 @@ A **飼料** 是一組資料（段）、資料如何公開或使用的規則，�
 
 * [[!DNL Segmentation Service]](../../home.md)
 * [[!DNL Identity Service]](../../../identity-service/home.md)
-* [[!DNL Real-time Customer Profile] 概觀](../../../profile/home.md)
+* [[!DNL Real-time Customer Profile]概述](../../../profile/home.md)
