@@ -5,9 +5,9 @@ title: Identity Service故障排除指南
 topic-legacy: troubleshooting
 description: 本文檔提供有關Adobe Experience Platform身份服務的常見問題解答以及常見錯誤的故障排除指南。
 exl-id: dac31bc3-7003-46d6-9d41-9f6fd3645c2c
-source-git-commit: 80530705f5f8d30294ad31e00d8956257ee2c085
+source-git-commit: 3d308d18c926cabdf0bd4b52c0623d8ec9428ee8
 workflow-type: tm+mt
-source-wordcount: '2236'
+source-wordcount: '2180'
 ht-degree: 0%
 
 ---
@@ -90,13 +90,7 @@ ZIP代碼和IP地址等欄位不應被標籤為個人身份，因為這些值可
 
 ## Identity Service如何處理個人身份資訊(PII)?
 
-Identity Service在保留值之前建立PII的強單向加密哈希。 使用SHA-256自動對「電話」和「電子郵件」命名空間中的標識資料進行散列，在散列之前，「電子郵件」值會自動轉換為小寫。
-
-## 是否應在發送到平台之前加密所有PII?
-
-在將PII資料導入平台之前，您不需要手動加密它。 通過應用 `I1` 資料使用標籤到所有適用的資料欄位，平台會在接收時自動將這些欄位轉換為散列ID值。
-
-有關如何應用和管理資料使用標籤的步驟，請參閱 [資料使用標籤教程](../data-governance/labels/user-guide.md)。
+Identity Service具有標準命名空間，可支援接收已散列的電話號碼和電子郵件的標識值。 但是，您負責對值進行散列。 要瞭解有關接收到平台中的散列資料的詳細資訊，請參閱 [[!DNL Data Prep] 映射函式指南](../data-prep/functions.md#hashing)。
 
 ## 散列基於PII的標識時是否有考慮因素？
 
