@@ -1,11 +1,11 @@
 ---
-title: Adobe Experience 平台發行說明
-description: Adobe Experience Platform的最新發行說明。
+title: Adobe Experience Platform發行說明2022年1月
+description: 2022年1月為Adobe Experience Platform發佈的說明。
 exl-id: 734ce1b3-e270-4c37-958c-88bcc39fbf20
-source-git-commit: 7087991c7a3daad57c5acd92a20c7024a1152c7e
+source-git-commit: ce967ae176fce81aa26d92b3f0ee8be006808657
 workflow-type: tm+mt
-source-wordcount: '1341'
-ht-degree: 4%
+source-wordcount: '1342'
+ht-degree: 3%
 
 ---
 
@@ -20,7 +20,7 @@ Adobe Experience Platform 現有功能更新：
 - [[!DNL Data Prep]](#data-prep)
 - [[!DNL Destinations]](#destinations)
 - [查詢服務](#query-service)
-- [沙盒](#sandboxes)
+- [沙箱](#sandboxes)
 - [細分服務](#segmentation)
 - [來源](#sources)
 
@@ -96,7 +96,7 @@ Adobe Experience Platform提供了多個儀表板，您可以通過這些儀表�
 
 有關 [!DNL Query Service]，請參閱 [[!DNL Query Service] 概述](../../query-service/home.md)。
 
-## 沙盒 {#sandboxes}
+## 沙箱 {#sandboxes}
 
 Adobe Experience Platform的建設旨在在全球範圍內豐富數字型驗應用。 公司通常並行運行多個數字型驗應用程式，需要滿足這些應用程式的開發、測試和部署需要，同時確保操作合規性。 為了滿足這一需要，Experience Platform提供了沙箱，可將單個平台實例分區為獨立的虛擬環境，以幫助開發和發展數字型驗應用程式。
 

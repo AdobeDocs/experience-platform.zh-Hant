@@ -1,10 +1,10 @@
 ---
-title: Adobe Experience 平台發行說明
-description: Adobe Experience Platform的最新發行說明。
+title: Adobe Experience Platform發行說明2022年3月
+description: 2022年3月為Adobe Experience Platform發佈的說明。
 exl-id: 0d499aa6-e25d-4d34-ad32-5e4ab361cba1
-source-git-commit: 3f1750d75bd69c5cf47eb593144f564564f90405
+source-git-commit: 9a506fcecc94ba20906133e60e4ff54fbe0403a3
 workflow-type: tm+mt
-source-wordcount: '1193'
+source-wordcount: '1194'
 ht-degree: 5%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 5%
 
 Adobe Experience Platform的新功能：
 
-- [審核日誌](#audit-logs)
+- [稽核記錄](#audit-logs)
 - [Real-Time CDPB2B版相關帳戶](#related-accounts)
 
 Adobe Experience Platform 現有功能更新：
@@ -26,9 +26,7 @@ Adobe Experience Platform 現有功能更新：
 - [[!DNL Query Service]](#query-service)
 - [來源](#sources)
 
-<!-- - [Experience Data Model (XDM)](#xdm) -->
-
-## 審核日誌 {#audit-logs}
+## 稽核記錄 {#audit-logs}
 
 Experience Platform允許您審計用戶活動中的各種服務和功能。 審計日誌提供了有關誰執行了什麼和何時執行的資訊。
 
@@ -117,21 +115,9 @@ Adobe Experience Platform提供 [!DNL dashboards] 您可以通過查看有關組
 | 功能 | 說明 |
 | --- | --- |
 | 全局資料流設定 | 現在，在配置資料流時可以配置幾個新的全局設定：地理位置、第一方IDcookie和第三方ID同步。 請參閱 [配置資料流](../../edge/fundamentals/datastreams.md#configure) 的子菜單。 |
-| [邊緣網路伺服器API](../../server-api/overview.md) | 伺服器API使客戶能夠使用新的經過驗證的端點與Experience Platform邊緣網路進行交互，以支援各種資料收集，個性化，廣告和營銷使用案例。 |
+| [邊緣網路伺服器 API](../../server-api/overview.md) | 伺服器API使客戶能夠使用新的經過驗證的端點與Experience Platform邊緣網路進行交互，以支援各種資料收集，個性化，廣告和營銷使用案例。 |
 
 有關平台中資料收集的詳細資訊，請參閱 [資料收集概述](../../collection/home.md)。
-
-<!-- ## Experience Data Model (XDM) {#xdm}
-
-Experience Data Model (XDM) is an open-source specification that provides common structures and definitions (schemas) for data that is brought into Adobe Experience Platform. By adhering to XDM standards, all customer experience data can be incorporated into a common representation to deliver insights in a faster, more integrated way. You can gain valuable insights from customer actions, define customer audiences through segments, and use customer attributes for personalization purposes.
-
-| Feature | Description |
-| --- | --- |
-| Add or remove individual standard fields for a schema | The Schema Editor UI now allows you to add portions of standard field groups to your schemas, providing more flexibility for the fields you choose to include without needing to build custom resources from scratch.<br><br>You can now also define ad-hoc custom fields directly within the schema structure and assign them to a new or existing custom field group without needing to create or edit the field group beforehand.<br><br>See the guide on [creating and editing schemas in the UI](../../xdm/ui/resources/schemas.md) for more information on these new workflows. |
-
-{style="table-layout:auto"}
-
-For more information on XDM in Platform, see the [XDM System overview](../../xdm/home.md). -->
 
 ## 查詢服務 {#query-service}
 

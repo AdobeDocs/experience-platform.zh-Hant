@@ -1,10 +1,10 @@
 ---
-title: Adobe Experience 平台發行說明
-description: Adobe Experience Platform的最新發行說明。
+title: Adobe Experience Platform發行說明2022年2月
+description: 2022年2月為Adobe Experience Platform發佈的說明。
 exl-id: ae453f7d-ac75-4cc3-8435-57d25f086cc3
-source-git-commit: 5f6b46245781051da01a8051f023df11ff4c7d51
+source-git-commit: ce967ae176fce81aa26d92b3f0ee8be006808657
 workflow-type: tm+mt
-source-wordcount: '1018'
+source-wordcount: '1019'
 ht-degree: 3%
 
 ---

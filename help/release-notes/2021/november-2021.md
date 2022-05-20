@@ -1,9 +1,10 @@
 ---
-title: Adobe Experience 平台發行說明
-description: Adobe Experience Platform的最新發行說明。
-source-git-commit: 7cd4a776ab07fcd123e798497b23edd41266f409
+title: Adobe Experience Platform發行說明2021年11月
+description: 2021年11月為Adobe Experience Platform發佈的說明。
+exl-id: 8f2c9bf8-1487-46e4-993b-bd9b63774cab
+source-git-commit: ce967ae176fce81aa26d92b3f0ee8be006808657
 workflow-type: tm+mt
-source-wordcount: '798'
+source-wordcount: '799'
 ht-degree: 12%
 
 ---
@@ -90,4 +91,3 @@ Attribution AI 可將點數歸因到促成轉換事件的接觸點。行銷人�
 | 自定義配置檔案屬性 | 客戶AI現在支援在資料中定義自定義配置檔案資料集欄位（帶有時間戳）以及標準事件欄位。 使用此選項可以添加您認為具有影響力的附加配置檔案屬性，這些屬性可能會提高模型的質量並提供更準確的結果。 |
 
 有關客戶AI的詳細資訊，請參閱 [客戶AI文檔](../../intelligent-services/customer-ai/overview.md)。
-

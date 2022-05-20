@@ -1,17 +1,16 @@
 ---
-title: Adobe Experience Platform 發行說明
-description: 2021年3月31日的Experience Platform發行說明。
+title: Adobe Experience Platform發行說明2021年3月
+description: 2021年3月為Adobe Experience Platform發佈的說明。
 doc-type: release notes
 last-update: March 31, 2021
 author: ens72741
-translation-type: tm+mt
-source-git-commit: 9b4395d423bbc62c8a1a9427ea91248a0f693794
+exl-id: 027cd7b1-1651-4939-bc97-968a41824117
+source-git-commit: ce967ae176fce81aa26d92b3f0ee8be006808657
 workflow-type: tm+mt
-source-wordcount: '422'
-ht-degree: 7%
+source-wordcount: '425'
+ht-degree: 6%
 
 ---
-
 
 # Adobe Experience Platform 發行說明
 
@@ -25,40 +24,40 @@ Adobe Experience Platform 現有功能更新：
 
 ## [!DNL Data Prep] {#data-prep}
 
-[!DNL Data Prep] 可讓資料工程師將資料對應、轉換及驗證資料與Experience Data Model(XDM)。
+[!DNL Data Prep] 允許資料工程師將資料映射到體驗資料模型(XDM)並驗證資料。
 
 | 功能 | 說明 |
 | ------- | ----------- |
-| `add_to_array` 函數 | 更新功能，以支援陣列做為參數。 |
-| `to_array` 函數 | 更新功能以支援物件做為參數。 |
+| `add_to_array` 函數 | 已更新功能，以支援陣列作為參數。 |
+| `to_array` 函數 | 已更新功能，以支援對象作為參數。 |
 
-如需詳細資訊，請參閱[[!DNL Data Prep] overview](../../data-prep/home.md)。
+有關詳細資訊，請參閱 [[!DNL Data Prep] 概述](../../data-prep/home.md)。
 
-## 劃分服務 {#segmentation}
+## 分段服務 {#segmentation}
 
-Adobe Experience Platform區段服務提供使用者介面和REST風格的API，可讓您建立區段並從您的[!DNL Real-time Customer Profile]資料產生觀眾。 這些區段是集中設定並維護在[!DNL Platform]上，讓任何Adobe應用程式都可輕鬆存取。
+Adobe Experience Platform分段服務提供用戶介面和REST風格的API，使您能夠生成分段並從您的 [!DNL Real-time Customer Profile] 資料。 這些段在 [!DNL Platform]使任何Adobe應用程式都可輕鬆訪問。
 
-[!DNL Segmentation Service] 定義個人檔案的特定子集，方法是描述區分客戶群中有價人群的標準。區段可以根據記錄資料（例如人口統計資訊）或代表客戶與品牌互動的時間系列事件來劃分。
+[!DNL Segmentation Service] 通過描述區分客戶群中可銷售人員組的標準來定義特定配置檔案子集。 段可以基於記錄資料（如人口統計資訊）或表示客戶與您品牌的交互的時間序列事件。
 
 **新功能**
 
 | 功能 | 說明 |
 | ------- | ----------- |
-| （測試版）邊緣區隔 | 邊緣區段會即時評估區段，允許相同頁面和下一頁個人化使用案例。 有關邊緣分段的詳細資訊，請參閱[分段UI概觀](../../segmentation/ui/overview.md)。 |
-| （測試版）增量細分 | 將批次分段中評估的現有區段定義新鮮度提高至一小時。 |
+| (Beta)邊緣分割 | 邊緣分割即時評估段，這允許使用相同的頁面和下一頁個性化使用案例。 有關邊緣分割的詳細資訊，請參閱 [分段UI概述](../../segmentation/ui/overview.md)。 |
+| (Beta)增量分段 | 將在批處理分段中評估的現有段定義的新鮮度提高到最多一小時。 |
 
-如需[!DNL Segmentation Service]的詳細資訊，請參閱[區段概述](../../segmentation/home.md)。
+有關 [!DNL Segmentation Service]，請參閱 [分段概述](../../segmentation/home.md)。
 
 ## [!DNL Sources] {#sources}
 
-Adobe Experience Platform可以從外部來源收集資料，同時允許您使用平台服務來建構、標籤和增強該資料。 您可以從多種來源收集資料，例如Adobe應用程式、雲端儲存空間、協力廠商軟體和您的CRM系統。
+Adobe Experience Platform可以從外部源接收資料，同時允許您使用平台服務來構建、標籤和增強資料。 您可以從多種來源(如Adobe應用程式、基於雲的儲存、第三方軟體和您的CRM系統)接收資料。
 
-Experience Platform提供REST風格的API和互動式UI，讓您輕鬆地為各種資料提供者設定來源連線。 這些源連接允許您驗證並連接到外部儲存系統和CRM服務、設定接收運行的時間，以及管理資料接收吞吐量。
+Experience Platform提供REST風格的API和互動式UI，讓您能夠輕鬆地為各種資料提供程式設定源連接。 通過這些源連接，您可以驗證並連接到外部儲存系統和CRM服務，設定接收運行時間，並管理資料接收吞吐量。
 
 | 功能 | 說明 |
 | ------- | ----------- |
-| Beta版來源正在推出 | 下列來源已從測試版提升至正式發行： <ul><li>[[!DNL MySQL]](../../sources/connectors/databases/mysql.md)</li><li>[[!DNL PostGres]](../../sources/connectors/databases/postgres.md)</li><li>[[!DNL Salesforce Service Cloud]](../../sources/connectors/customer-success/salesforce-service-cloud.md)</li><li>[[!DNL SFTP]](../../sources/connectors/cloud-storage/sftp.md)</li><li>[[!DNL Shopify]](../../sources/connectors/ecommerce/shopify.md)</li></ul> |
-| 壓縮檔案擷取的API支援 | 您現在可以使用雲端儲存來源預覽並內嵌壓縮的JSON或分隔檔案。 如需詳細資訊，請參閱[使用API收集雲端儲存資料的教學課程。](../../sources/tutorials/api/collect/cloud-storage.md) |
-| 遞歸檔案上傳的UI支援 | 您現在可以使用雲端儲存來源，以遞歸方式收錄整個資料夾。 在提取整個資料夾時，必須確保其內容共用相同的模式。 如需詳細資訊，請參閱UI](../../sources/tutorials/ui/dataflow/batch/cloud-storage.md)中的[設定雲端儲存連接器的資料流教學課程。 |
+| Beta源移至GA | 已將以下源從beta升級為GA: <ul><li>[[!DNL MySQL]](../../sources/connectors/databases/mysql.md)</li><li>[[!DNL PostGres]](../../sources/connectors/databases/postgres.md)</li><li>[[!DNL Salesforce Service Cloud]](../../sources/connectors/customer-success/salesforce-service-cloud.md)</li><li>[[!DNL SFTP]](../../sources/connectors/cloud-storage/sftp.md)</li><li>[[!DNL Shopify]](../../sources/connectors/ecommerce/shopify.md)</li></ul> |
+| API支援壓縮檔案接收 | 您現在可以使用雲儲存源預覽和接收壓縮的JSON或分隔檔案。 有關詳細資訊，請參見上的教程 [使用API收集雲儲存資料](../../sources/tutorials/api/collect/cloud-storage.md)。 |
+| 遞歸檔案上載的UI支援 | 現在，使用雲儲存源時可以遞歸地接收整個資料夾。 在插入整個資料夾時，必須確保其內容共用同一架構。 有關詳細資訊，請參見上的教程 [為UI中的雲儲存連接器配置資料流](../../sources/tutorials/ui/dataflow/batch/cloud-storage.md)。 |
 
-若要進一步瞭解來源，請參閱[來源概觀](../../sources/home.md)。
+要瞭解有關源的詳細資訊，請參閱 [源概述](../../sources/home.md)。
