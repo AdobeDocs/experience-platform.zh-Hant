@@ -5,7 +5,7 @@ title: 計畫API終結點
 topic-legacy: developer guide
 description: 計畫是一種工具，可用於每天自動運行一次批分段作業。
 exl-id: 92477add-2e7d-4d7b-bd81-47d340998ff1
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 604d1d02156b441ab3978ff976e02191bbdc311f
 workflow-type: tm+mt
 source-wordcount: '2013'
 ht-degree: 3%
@@ -147,7 +147,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/config/schedules \
 
 **回應**
 
-成功的響應返回HTTP狀態200，其中包含新建立的計畫的詳細資訊。
+成功的響應返回HTTP狀態200，其中包含您新建立的計畫的詳細資訊。
 
 ```json
 {
@@ -257,7 +257,7 @@ PATCH /config/schedules/{SCHEDULE_ID}
 **要求**
 
 ```shell
-curl -X DELETE https://platform.adobe.io/data/core/ups/config/schedules/4e538382-dbd8-449e-988a-4ac639ebe72b \
+curl -X PATCH https://platform.adobe.io/data/core/ups/config/schedules/4e538382-dbd8-449e-988a-4ac639ebe72b \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
  -H 'x-gw-ims-org-id: {ORG_ID}' \
  -H 'x-api-key: {API_KEY}' \
