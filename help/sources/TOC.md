@@ -4,23 +4,24 @@ user-guide-title: Adobe Experience Platform 來源連接器說明
 breadcrumb-title: 來源連接器指南
 user-guide-description: 從多種來源或結構擷取資料、加標籤，以及增強已擷取的資料。
 feature: Sources
-source-git-commit: fa861e9740e05b4fcc4e8039bb288301d42b8357
+source-git-commit: be3967e7045e159736952e369a55df322afd9fec
 workflow-type: tm+mt
-source-wordcount: '780'
+source-wordcount: '777'
 ht-degree: 12%
 
 ---
 
 
-# 源連接器 {#sources}
+# 來源 {#sources}
 
-- [源連接器概述](home.md)
+- [源概述](home.md)
 - 可用源連接器 {#connectors}
    - Adobe應用程式 {#adobe-applications}
-      - [分析分類源連接器](connectors/adobe-applications/classifications.md)
-      - [分析源連接器](connectors/adobe-applications/analytics.md)
-      - [Audience Manager源連接器](connectors/adobe-applications/audience-manager.md)
-      - [客戶屬性源連接器](connectors/adobe-applications/customer-attributes.md)
+      - [分析分類來源](connectors/adobe-applications/classifications.md)
+      - [分析源](connectors/adobe-applications/analytics.md)
+      - [Audience Manager源](connectors/adobe-applications/audience-manager.md)
+      - [客戶屬性來源](connectors/adobe-applications/customer-attributes.md)
+      - [資料收集源](connectors/adobe-applications/data-collection.md)
       - 欄位映射 {#mapping}
          - [分析欄位映射](connectors/adobe-applications/mapping/analytics.md)
          - [Audience Manager欄位映射](connectors/adobe-applications/mapping/audience-manager.md)

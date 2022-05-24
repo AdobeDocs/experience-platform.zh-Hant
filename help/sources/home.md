@@ -5,9 +5,9 @@ title: 源連接器概述
 topic-legacy: overview
 description: Adobe Experience Platform允許從外部源接收資料，同時讓您能夠使用平台服務構建、標籤和增強傳入資料。 您可以從多種源(如Adobe應用程式、基於雲的儲存、資料庫和許多其他源)接收資料。
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: f0b8b5d16739b2bec6e1a11b718962de3faed463
+source-git-commit: 365e36351bf18864c677f53dffbc30b47f29b074
 workflow-type: tm+mt
-source-wordcount: '997'
+source-wordcount: '1000'
 ht-degree: 0%
 
 ---
@@ -34,6 +34,7 @@ Experience Platform允許從包括Adobe Analytics和Adobe Audience Manager在內
 - [在UI中建立Adobe Analytics分類資料源連接](./tutorials/ui/create/adobe-applications/classifications.md)
 - [Adobe Analytics報表套件資料源連接概述](connectors/adobe-applications/analytics.md)
 - [在UI中建立Adobe Analytics源連接](./tutorials/ui/create/adobe-applications/analytics.md)
+- [Adobe資料收集](connectors/adobe-applications/data-collection.md)
 - [在UI中建立客戶屬性源連接](./tutorials/ui/create/adobe-applications/customer-attributes.md)
 - [[!DNL Marketo Engage] 連接器概述](connectors/adobe-applications/marketo/marketo.md)
 - [建立 [!DNL Marketo Engage] UI中的源連接](./tutorials/ui/create/adobe-applications/marketo.md)
