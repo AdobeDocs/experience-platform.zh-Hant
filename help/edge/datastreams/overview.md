@@ -84,7 +84,7 @@ ht-degree: 2%
 >
 >每個服務配置都包含 **[!UICONTROL 已啟用]** 切換在選擇服務時自動激活的選項。 要禁用此資料流的選定服務，請選擇 **[!UICONTROL 已啟用]** 再次切換。
 
-### Adobe Analytics設定
+### Adobe Analytics設定 {#analytics}
 
 此服務控制資料是否以及如何發送到Adobe Analytics。 有關其他詳細資訊，請參閱上 [將資料發送到分析](../data-collection/adobe-analytics/analytics-overview.md)。
 
@@ -94,7 +94,7 @@ ht-degree: 2%
 | --- | --- |
 | [!UICONTROL 報告套裝 ID] | **（必需）** 要向其發送資料的分析報告套件的ID。 此ID可在Adobe AnalyticsUI下找到 [!UICONTROL 管理] > [!UICONTROL 報表套件]。 如果指定了多個報表套件，則資料將複製到每個報表套件。 |
 
-### Adobe Audience Manager設定
+### Adobe Audience Manager設定 {#audience-manager}
 
 此服務控制資料是否以及如何發送到Adobe Audience Manager。 將資料發送到Audience Manager所需的一切就是啟用此部分。 其他設定是可選的，但是是鼓勵的。
 
@@ -105,7 +105,7 @@ ht-degree: 2%
 | [!UICONTROL 已啟用Cookie目標] | 允許SDK通過 [cookie目標](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/custom-destinations/create-cookie-destination.html) 從 [!DNL Audience Manager]。 |
 | [!UICONTROL 已啟用URL目標] | 允許SDK通過 [URL目標](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/custom-destinations/create-url-destination.html) 從 [!DNL Audience Manager]。 |
 
-### Adobe Experience Platform設定
+### Adobe Experience Platform設定 {#aep}
 
 >[!IMPORTANT]
 >
