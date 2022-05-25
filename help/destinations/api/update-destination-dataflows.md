@@ -6,9 +6,9 @@ topic-legacy: overview
 type: Tutorial
 description: 本教程介紹了更新目標資料流的步驟。 瞭解如何使用流服務API啟用或禁用資料流、更新其基本資訊或添加和刪除段和屬性。
 exl-id: 3f69ad12-940a-4aa1-a1ae-5ceea997a9ba
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 95dd6982eeecf6b13b6c8a6621b5e6563c25ae26
 workflow-type: tm+mt
-source-wordcount: '2136'
+source-wordcount: '2419'
 ht-degree: 1%
 
 ---
@@ -484,8 +484,8 @@ curl -X PATCH \
             "schedule":{
                "startDate":"2022-01-05",
                "frequency":"DAILY",
-               "endData":"2022-03-10"
-               "startTime":"16:00",
+               "triggerType": "AFTER_SEGMENT_EVAL",
+               "endDate":"2022-03-10"
             }
          }
       }
@@ -504,6 +504,7 @@ curl -X PATCH \
 | `exportMode` | 對於 *批處理目標* 只是。 僅當將段添加到批處理檔案導出目標(如AmazonS3、SFTP或Azure Blob)中的資料流時，才需要此欄位。 <br> 必要. 選取「`"DAILY_FULL_EXPORT"`」或「`"FIRST_FULL_THEN_INCREMENTAL"`」。有關兩個選項的詳細資訊，請參閱 [導出完整檔案](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) 和 [導出增量檔案](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) 在批處理目標激活教程中。 |
 | `startDate` | 選擇段應開始將配置檔案導出到目標的日期。 |
 | `frequency` | 對於 *批處理目標* 只是。 僅當將段添加到批處理檔案導出目標(如AmazonS3、SFTP或Azure Blob)中的資料流時，才需要此欄位。 <br> 必要. <br> <ul><li>對於 `"DAILY_FULL_EXPORT"` 導出模式，可以選擇 `ONCE` 或 `DAILY`。</li><li>對於 `"FIRST_FULL_THEN_INCREMENTAL"` 導出模式，可以選擇 `"DAILY"`。 `"EVERY_3_HOURS"`。 `"EVERY_6_HOURS"`。 `"EVERY_8_HOURS"`。 `"EVERY_12_HOURS"`。</li></ul> |
+| `triggerType` | 對於 *批處理目標* 只是。 僅當選擇 `"DAILY_FULL_EXPORT"` 的 `frequency` 選擇器。 <br> 必要. <br> <ul><li>選擇 `"AFTER_SEGMENT_EVAL"` 使激活作業在每日平台批處理分段作業完成後立即運行。 這可確保在激活作業運行時，最新的配置檔案會導出到目標。</li><li>選擇 `"SCHEDULED"` 使激活作業在固定時間運行。 這可確保每天同時導出Experience Platform配置檔案資料，但導出的配置檔案可能不是最新的，具體取決於激活作業開始前批分段作業是否已完成。 選擇此選項時，還必須添加 `startTime` 以UTC表示日導出應在何時進行。</li></ul> |
 | `endDate` | 對於 *批處理目標* 只是。 僅當將段添加到批處理檔案導出目標(如AmazonS3、SFTP或Azure Blob)中的資料流時，才需要此欄位。 <br> 選擇時不適用 `"exportMode":"DAILY_FULL_EXPORT"` 和 `"frequency":"ONCE"`。 <br> 設定段成員停止導出到目標的日期。 |
 | `startTime` | 對於 *批處理目標* 只是。 僅當將段添加到批處理檔案導出目標(如AmazonS3、SFTP或Azure Blob)中的資料流時，才需要此欄位。 <br> 必要. 選擇生成包含段成員的檔案並將其導出到目標的時間。 |
 
@@ -639,6 +640,112 @@ curl -X PATCH \
     "etag": "\"50014cc8-0000-0200-0000-6036eb720000\""
 }
 ```
+
+有關可以在資料流中更新的段元件的更多示例，請參見以下示例。
+
+## 將段的導出模式從計畫更新為段評估之後 {#update-export-mode}
+
++++ 按一下查看一個示例，其中段導出從在指定時間每天激活到在平台批處理分段作業完成後每天激活。
+
+該段每天在UTC 16:00導出。
+
+```json
+{
+  "type": "PLATFORM_SEGMENT",
+  "value": {
+    "id": "b1e50e8e-a6e2-420d-99e8-a80deda2082f",
+    "name": "12JAN22-AEP-NA-NTC-90D-MW",
+    "filenameTemplate": "%DESTINATION_NAME%_%SEGMENT_ID%_%DATETIME(YYYYMMdd_HHmmss)%",
+    "exportMode": "DAILY_FULL_EXPORT"
+    "schedule": {
+      "frequency": "DAILY",
+      "triggerType": "SCHEDULED",
+      "startDate": "2022-01-13",
+      "endDate": "2023-01-13",
+      "startTime":"16:00"
+    },
+    "createTime": "1642041770",
+    "updateTime": "1642615573"
+  }
+}
+```
+
+每日批處理分段作業完成後，每天導出該段。
+
+```json
+{
+  "type": "PLATFORM_SEGMENT",
+  "value": {
+    "id": "b1e50e8e-a6e2-420d-99e8-a80deda2082f",
+    "name": "12JAN22-AEP-NA-NTC-90D-MW",
+    "filenameTemplate": "%DESTINATION_NAME%_%SEGMENT_ID%_%DATETIME(YYYYMMdd_HHmmss)%",
+    "exportMode": "DAILY_FULL_EXPORT"
+    "schedule": {
+      "frequency": "DAILY",
+      "triggerType": "AFTER_SEGMENT_EVAL",
+      "startDate": "2022-01-13",
+      "endDate": "2023-01-13"
+    },
+    "createTime": "1642041770",
+    "updateTime": "1642615573"
+  }
+}
+```
+
++++
+
+## 更新檔案名模板以在檔案名中包括其他欄位 {#update-filename-template}
+
++++ 按一下查看更新檔案名模板以在檔案名中包括附加欄位的示例
+
+導出的檔案包含目標名稱和Experience Platform段ID
+
+```json
+{
+  "type": "PLATFORM_SEGMENT",
+  "value": {
+    "id": "b1e50e8e-a6e2-420d-99e8-a80deda2082f",
+    "name": "12JAN22-AEP-NA-NTC-90D-MW",
+    "filenameTemplate": "%DESTINATION_NAME%_%SEGMENT_ID%",
+    "exportMode": "DAILY_FULL_EXPORT"
+    "schedule": {
+      "frequency": "DAILY",
+      "triggerType": "SCHEDULED",
+      "startDate": "2022-01-13",
+      "endDate": "2023-01-13",
+      "startTime":"16:00"
+    },
+    "createTime": "1642041770",
+    "updateTime": "1642615573"
+  }
+}
+```
+
+導出的檔案包含目標名稱、Experience Platform段ID、Experience Platform生成檔案的日期和時間以及檔案末尾附加的自定義文本。
+
+
+```json
+{
+  "type": "PLATFORM_SEGMENT",
+  "value": {
+    "id": "b1e50e8e-a6e2-420d-99e8-a80deda2082f",
+    "name": "12JAN22-AEP-NA-NTC-90D-MW",
+    "filenameTemplate": "%DESTINATION_NAME%_%SEGMENT_ID%_%DATETIME(YYYYMMdd_HHmmss)%_%this is custom text%",
+    "exportMode": "DAILY_FULL_EXPORT"
+    "schedule": {
+      "frequency": "DAILY",
+      "triggerType": "SCHEDULED",
+      "startDate": "2022-01-13",
+      "endDate": "2023-01-13",
+      "startTime":"16:00"
+    },
+    "createTime": "1642041770",
+    "updateTime": "1642615573"
+  }
+}
+```
+
++++
 
 ## 將配置檔案屬性添加到資料流 {#add-profile-attribute}
 

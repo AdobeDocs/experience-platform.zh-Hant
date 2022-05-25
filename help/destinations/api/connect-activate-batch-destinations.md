@@ -6,9 +6,9 @@ description: 使用流服務API建立批雲儲存或電子郵件營銷目標的�
 topic-legacy: tutorial
 type: Tutorial
 exl-id: 41fd295d-7cda-4ab1-a65e-b47e6c485562
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 95dd6982eeecf6b13b6c8a6621b5e6563c25ae26
 workflow-type: tm+mt
-source-wordcount: '3129'
+source-wordcount: '3334'
 ht-degree: 2%
 
 ---
@@ -1003,6 +1003,7 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
                 "exportMode": "DAILY_FULL_EXPORT",
                 "schedule": {
                     "frequency": "ONCE",
+                    "triggerType": "SCHEDULED",
                     "startDate": "2021-12-20",
                     "startTime": "17:00"
                 },   
@@ -1037,10 +1038,15 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 | `exportMode` | 必要. 選取「`"DAILY_FULL_EXPORT"`」或「`"FIRST_FULL_THEN_INCREMENTAL"`」。有關兩個選項的詳細資訊，請參閱 [導出完整檔案](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) 和 [導出增量檔案](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) 在批處理目標激活教程中。 |
 | `startDate` | 選擇段應開始將配置檔案導出到目標的日期。 |
 | `frequency` | 必要. <br> <ul><li>對於 `"DAILY_FULL_EXPORT"` 導出模式，可以選擇 `ONCE` 或 `DAILY`。</li><li>對於 `"FIRST_FULL_THEN_INCREMENTAL"` 導出模式，可以選擇 `"DAILY"`。 `"EVERY_3_HOURS"`。 `"EVERY_6_HOURS"`。 `"EVERY_8_HOURS"`。 `"EVERY_12_HOURS"`。</li></ul> |
-| `endDate` | 選擇時不適用 `"exportMode":"DAILY_FULL_EXPORT"` 和 `"frequency":"ONCE"`。 <br> 設定段成員停止導出到目標的日期。 |
-| `startTime` | 必要. 選擇生成包含段成員的檔案並將其導出到目標的時間。 |
+| `triggerType` | 對於 *批處理目標* 只是。 僅當選擇 `"DAILY_FULL_EXPORT"` 的 `frequency` 選擇器。 <br> 必要. <br> <ul><li>選擇 `"AFTER_SEGMENT_EVAL"` 使激活作業在每日平台批處理分段作業完成後立即運行。 這可確保在激活作業運行時，最新的配置檔案會導出到目標。</li><li>選擇 `"SCHEDULED"` 使激活作業在固定時間運行。 這可確保每天同時導出Experience Platform配置檔案資料，但導出的配置檔案可能不是最新的，具體取決於激活作業開始前批分段作業是否已完成。 選擇此選項時，還必須添加 `startTime` 以UTC表示日導出應在何時進行。</li></ul> |
+| `endDate` | 對於 *批處理目標* 只是。 僅當將段添加到批處理檔案導出目標(如AmazonS3、SFTP或Azure Blob)中的資料流時，才需要此欄位。 <br> 選擇時不適用 `"exportMode":"DAILY_FULL_EXPORT"` 和 `"frequency":"ONCE"`。 <br> 設定段成員停止導出到目標的日期。 |
+| `startTime` | 對於 *批處理目標* 只是。 僅當將段添加到批處理檔案導出目標(如AmazonS3、SFTP或Azure Blob)中的資料流時，才需要此欄位。 <br> 必要. 選擇生成包含段成員的檔案並將其導出到目標的時間。 |
 
 {style=&quot;table-layout:auto&quot;&quot;
+
+>[!TIP]
+>
+> 請參閱 [更新資料流中段的元件](/help/destinations/api/update-destination-dataflows.md#update-segment) 瞭解如何更新導出段的各個元件（檔案名模板、導出時間等）。
 
 **回應**
 
