@@ -2,9 +2,9 @@
 title: 查詢服務審核日誌整合
 description: 查詢服務審核日誌維護各種用戶操作的記錄，以形成用於排除問題或遵守公司資料管理策略和法規要求的審核跟蹤。 本教程概述了特定於查詢服務的審計日誌功能。
 exl-id: 5fdc649f-3aa1-4337-965f-3f733beafe9d
-source-git-commit: 12b717be67cb35928d84e83b6d692f9944d651d8
+source-git-commit: 40de87ae407884d4ec7c75215fc7319721fbe1d0
 workflow-type: tm+mt
-source-wordcount: '815'
+source-wordcount: '935'
 ht-degree: 2%
 
 ---
@@ -25,9 +25,9 @@ Adobe Experience Platform [!DNL Query Service] 審計日誌整合提供了與查
 
 | 類別 | 說明 |
 |---|---|
-| [!UICONTROL 計畫查詢] | 此類別允許您審核在中建立、更新或刪除的計畫 [!DNL Query Service]。 |
+| [!UICONTROL 查詢] | 此類別允許您審計查詢執行。 |
 | [!UICONTROL 查詢模板] | 此類別允許您審計對查詢模板執行的各種操作（建立、更新和刪除）。 |
-<!-- | [!UICONTROL Query] | This category allows you to audit query executions. | -->
+| [!UICONTROL 計畫查詢] | 此類別允許您審核在中建立、更新或刪除的計畫 [!DNL Query Service]。 |
 
 ## 執行 [!DNL Query Service] 審計日誌 {#perform-an-audit-log}
 
@@ -42,7 +42,7 @@ Adobe Experience Platform [!DNL Query Service] 審計日誌整合提供了與查
 | 列名 | 說明 |
 |---|---|
 | [!UICONTROL 時間戳記] | 在中執行的操作的確切日期和時間 `month/day/year hour:minute AM/PM` 的子菜單。 |
-| [!UICONTROL 資產名稱] | 的值 [!UICONTROL 資產名稱] 欄位取決於選擇作為篩選器的類別。 使用 [!UICONTROL 計畫查詢] 類別 **計畫名稱**。 使用 [!UICONTROL 查詢模板] 類別，這是 **模板名稱**。 |
+| [!UICONTROL 資產名稱] | 的值 [!UICONTROL 資產名稱] 欄位取決於選擇作為篩選器的類別。 使用 [!UICONTROL 計畫查詢] 類別 **計畫名稱**。 使用 [!UICONTROL 查詢模板] 類別，這是 **模板名稱**。 使用 [!UICONTROL 查詢] 類別，這是 **會話ID** |
 | [!UICONTROL 類別] | 此欄位與您在篩選器下拉清單中選擇的類別匹配。 |
 | [!UICONTROL 動作] | 這可以是建立、刪除、更新或執行。 可用操作取決於選擇作為篩選器的類別。 |
 | [!UICONTROL 使用者] | 此欄位提供執行查詢的用戶ID。 |
@@ -53,13 +53,25 @@ Adobe Experience Platform [!DNL Query Service] 審計日誌整合提供了與查
 >
 >通過以CSV或JSON檔案格式下載日誌結果，提供了比審計日誌儀表板中預設顯示的更多查詢詳細資訊。
 
+## 詳細資訊面板
+
 選擇任何行的審核日誌結果以開啟螢幕右側的詳細資訊面板。
 
 ![審核儀表板「活動日誌」頁籤，其中突出顯示了「詳細資訊」面板。](../images/audit-log/details-panel.png)
 
->[!NOTE]
->
->詳細資訊面板可用於查找 [!UICONTROL 資產ID]。 的值 [!UICONTROL 資產ID] 根據審計中使用的類別進行更改。 使用 [!UICONTROL 查詢模板] 的 [!UICONTROL 資產ID] 是 **模板ID**。 使用 [!UICONTROL 計畫查詢] 的 [!UICONTROL 資產ID] 是  **計畫ID**。
+詳細資訊面板可用於查找 [!UICONTROL 資產ID] 和 [!UICONTROL 事件狀態]。
+
+的值 [!UICONTROL 資產ID] 根據審計中使用的類別進行更改。
+
+* 使用 [!UICONTROL 查詢] 的 [!UICONTROL 資產ID] 是  **會話ID**。
+* 使用 [!UICONTROL 查詢模板] 的 [!UICONTROL 資產ID] 是 **模板ID** 加上 `[!UICONTROL templateID:]`。
+* 使用 [!UICONTROL 計畫查詢] 的 [!UICONTROL 資產ID] 是  **計畫ID** 加上 `[!UICONTROL scheduleID:]`。
+
+的值 [!UICONTROL 事件狀態] 根據審計中使用的類別進行更改。
+
+* 使用 [!UICONTROL 查詢] 的 [!UICONTROL 事件狀態] 欄位提供所有 **查詢ID** 由用戶在該會話中執行。
+* 使用 [!UICONTROL 查詢模板] 的 [!UICONTROL 事件狀態] 欄位提供 **模板名稱** 作為事件狀態的前置詞。
+* 使用 [!UICONTROL 查詢計畫] 的 [!UICONTROL 事件狀態] 欄位提供 **計畫名稱** 作為事件狀態的前置詞。
 
 ## 可用篩選器 [!DNL Query Service] 審計日誌類別 {#available-filters}
 
@@ -68,9 +80,9 @@ Adobe Experience Platform [!DNL Query Service] 審計日誌整合提供了與查
 | 篩選 | 說明 |
 |---|---|
 | 類別 | 查看 [[!DNL Query Service] 審計日誌類別](#audit-log-categories) 的子菜單。 |
-| 動作 | 當指的是 [!DNL Query Service] 審計類別，更新是 **對現有窗體的修改**，刪除為 **刪除計畫或模板**，建立 **建立新計畫或模板**，並且執行正在運行查詢。 |
+| 動作 | 當指的是 [!DNL Query Service] 審計類別，更新是 **對現有窗體的修改**，刪除為 **刪除計畫或模板**，建立 **建立新計畫或模板**，並執行 **運行查詢**。 |
 | 使用者 | 輸入要按用戶篩選的完整用戶ID(例如johndoe@acme.com)。 |
-| 狀態 | 此篩選器不適用於 [!DNL Query Service] 審核日誌。 的 [!UICONTROL 允許]。 [!UICONTROL 成功], [!UICONTROL 失敗] 選項將不篩選結果，而 [!UICONTROL 拒絕] 選項篩選出 **全部** 日誌。 |
+| 狀態 | 的 [!UICONTROL 允許]。 [!UICONTROL 成功], [!UICONTROL 失敗] 選項根據「狀態」或「事件狀態」篩選日誌，而 [!UICONTROL 拒絕] 選項篩選出 **全部** 日誌。 |
 | 日期 | 選擇起始日期和/或終止日期以定義日期範圍以篩選結果。 |
 
 ## 後續步驟
