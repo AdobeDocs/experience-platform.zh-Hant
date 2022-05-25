@@ -6,9 +6,9 @@ seo-title: Activate audience data to batch profile export destinations
 description: 瞭解如何通過將段發送到基於批處理配置檔案的目標來激活您在Adobe Experience Platform擁有的受眾資料。
 seo-description: Learn how to activate the audience data you have in Adobe Experience Platform by sending segments to batch profile-based destinations.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: 729c0724c7af88bb69c9d68a45d58c3575c90828
+source-git-commit: 95dd6982eeecf6b13b6c8a6621b5e6563c25ae26
 workflow-type: tm+mt
-source-wordcount: '2242'
+source-wordcount: '2411'
 ht-degree: 0%
 
 ---
@@ -97,7 +97,20 @@ ht-degree: 0%
    * **[!UICONTROL 一次]**:安排一次按需完整檔案導出。
    * **[!UICONTROL 每日]**:在您指定的時間每天安排一次完整檔案導出。
 
-1. 使用 **[!UICONTROL 時間]** 選擇器，選擇一天中的時間，在 [!DNL UTC] 格式。
+1. 使用 **[!UICONTROL 時間]** 切換以選擇導出應在段評估後立即進行還是在指定時間按計畫進行。 選擇 **[!UICONTROL 計畫]** 選項，可使用選擇器選擇一天中的時間，在 [!DNL UTC] 格式。
+
+   >[!NOTE]
+   >
+   >的 **[!UICONTROL 段評估後]** 下面描述的選項當前僅可用於選擇測試版客戶。
+
+   使用 **[!UICONTROL 段評估後]** 選項，使激活作業在每日平台批處理分段作業完成後立即運行。 這可確保在激活作業運行時，最新的配置檔案會導出到目標。
+
+   <!-- Batch segmentation currently runs at {{insert time of day}} and lasts for an average {{x hours}}. Adobe reserves the right to modify this schedule. -->
+
+   ![在批處理目標的激活流中突出顯示段後評估選項的影像。](../assets/ui/activate-batch-profile-destinations/after-segment-evaluation-option.png)
+使用 **[!UICONTROL 計畫]** 選項，使激活作業在固定時間運行。 這可確保每天同時導出Experience Platform配置檔案資料，但導出的配置檔案可能不是最新的，具體取決於激活作業啟動之前批分段作業是否已完成。
+
+   ![在批處理目標的激活流中突出顯示「計畫」選項並顯示時間選擇器的影像。](../assets/ui/activate-batch-profile-destinations/scheduled-option.png)
 
    >[!IMPORTANT]
    >
@@ -110,7 +123,6 @@ ht-degree: 0%
    > 選擇導出間隔時，該間隔的最後一天不包括在導出中。 例如，如果選擇的時間間隔為1月4日–11日，最後一次檔案導出將在1月10日進行。
 
 1. 選擇 **[!UICONTROL 建立]** 來修改標籤元素的屬性。
-
 
 ### 導出增量檔案 {#export-incremental-files}
 
@@ -146,7 +158,7 @@ ht-degree: 0%
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_filename"
 >title="配置檔案名"
->abstract="對於基於檔案的目標，每個段生成唯一的檔案名。 使用檔案名編輯器建立和編輯唯一檔案名或保留預設名稱。"
+>abstract="對於基於檔案的目標，每個段生成唯一的檔案名。 使用檔案名編輯器建立和編輯唯一檔案名或保留預設名。"
 
 預設檔案名包括目標名稱、段ID以及日期和時間指示器。 例如，您可以編輯導出的檔案名以區分不同的市場活動或將資料導出時間附加到檔案。
 

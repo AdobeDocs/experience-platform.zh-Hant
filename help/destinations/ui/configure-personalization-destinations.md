@@ -6,14 +6,20 @@ seo-title: Configure personalization destinations for same-page and next-page pe
 description: 瞭解如何為同一頁和下一頁個性化配置個性化目標。
 seo-description: Configure personalization destinations for same-page and next-page personalization.
 exl-id: 7d7b6869-bd59-4766-a044-f449396f6524
-source-git-commit: fb0d8aedbb88aad8ed65592e0b706bd17840406b
+source-git-commit: 99a60621bca43ecf2dacb6202e005bbd8f191c99
 workflow-type: tm+mt
-source-wordcount: '413'
+source-wordcount: '435'
 ht-degree: 0%
 
 ---
 
 # 配置同頁和下一頁個性化的個性化目標
+
+## 總覽 {#overview}
+
+>[!NOTE]
+>
+>當 [配置Adobe Target連接](../catalog/personalization/adobe-target-connection.md) 如果不使用資料流ID，則不支援本文中描述的使用案例。
 
 Adobe Experience Platform用途 [邊緣分割](../../segmentation/ui/edge-segmentation.md) 使客戶能夠即時、高規模地建立和瞄準受眾群。
 

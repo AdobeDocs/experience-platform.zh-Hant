@@ -3,7 +3,7 @@ title: 資料流概述
 description: 連接您的客戶端 Experience Platform SDK 與 Adobe 產品和協力廠商目標的整合。
 keywords: 配置；資料流；資料流；邊；資料流ID；環境設定；邊配置ID；標識；ID同步容器ID；沙盒；流入口；事件資料集；目標；客戶端代碼；屬性令牌；目標；Cookie目標；URL目標；分析設定塊報表ID；資料資料收集準備；資料準備；映射器；XDM映射器；邊緣上的映射器；
 exl-id: 736c75cb-e290-474e-8c47-2a031f215a56
-source-git-commit: 4ad80d8198f86010291532a9e6b9cd564abf6d15
+source-git-commit: fe66cbd61d546da8fb6621ef78b3565126cb193d
 workflow-type: tm+mt
 source-wordcount: '1686'
 ht-degree: 2%
@@ -84,7 +84,7 @@ ht-degree: 2%
 >
 >每個服務配置都包含 **[!UICONTROL 已啟用]** 切換在選擇服務時自動激活的選項。 要禁用此資料流的選定服務，請選擇 **[!UICONTROL 已啟用]** 再次切換。
 
-### Adobe Analytics設定
+### Adobe Analytics設定 {#analytics}
 
 此服務控制資料是否以及如何發送到Adobe Analytics。 有關其他詳細資訊，請參閱上 [將資料發送到分析](../data-collection/adobe-analytics/analytics-overview.md)。
 
@@ -94,7 +94,7 @@ ht-degree: 2%
 | --- | --- |
 | [!UICONTROL 報告套裝 ID] | **（必需）** 要向其發送資料的分析報告套件的ID。 此ID可在Adobe AnalyticsUI下找到 [!UICONTROL 管理] > [!UICONTROL 報表套件]。 如果指定了多個報表套件，則資料將複製到每個報表套件。 |
 
-### Adobe Audience Manager設定
+### Adobe Audience Manager設定 {#audience-manager}
 
 此服務控制資料是否以及如何發送到Adobe Audience Manager。 將資料發送到Audience Manager所需的一切就是啟用此部分。 其他設定是可選的，但是是鼓勵的。
 
@@ -105,7 +105,7 @@ ht-degree: 2%
 | [!UICONTROL 已啟用Cookie目標] | 允許SDK通過 [cookie目標](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/custom-destinations/create-cookie-destination.html) 從 [!DNL Audience Manager]。 |
 | [!UICONTROL 已啟用URL目標] | 允許SDK通過 [URL目標](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/custom-destinations/create-url-destination.html) 從 [!DNL Audience Manager]。 |
 
-### Adobe Experience Platform設定
+### Adobe Experience Platform設定 {#aep}
 
 >[!IMPORTANT]
 >
@@ -127,7 +127,7 @@ ht-degree: 2%
 | [!UICONTROL 邊緣分割] | 選中此複選框以啟用 [邊緣分割](../../segmentation/ui/edge-segmentation.md) 資料流。 當SDK通過啟用邊緣分割的資料流發送資料時，在響應中將有關配置檔案的任何更新的段成員身份發回。<br><br>此選項可與 [!UICONTROL 個性化目標] 為 [下一頁個性化用例](../../destinations/ui/configure-personalization-destinations.md)。 |
 | [!UICONTROL 個性化目標] | 與 [!UICONTROL 邊緣分割] 複選框，此選項允許資料流連接到個性化引擎，如Adobe Target。 請參閱目標文檔以瞭解有關 [配置個性化目標](../../destinations/ui/configure-personalization-destinations.md)。 |
 
-### Adobe Target設定
+### Adobe Target設定 {#target}
 
 此服務控制資料是否以及如何發送到Adobe Target。
 
