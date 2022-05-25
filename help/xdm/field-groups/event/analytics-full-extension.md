@@ -1,10 +1,11 @@
 ---
 title: Adobe AnalyticsExperienceEvent完整擴展架構欄位組
 description: 此文檔概述了Adobe AnalyticsExperienceEvent完整擴展架構欄位組。
-source-git-commit: bfdcee33fb2cbd28039633d1d981149c40aa1d68
+exl-id: b5e17f4a-a582-4059-bbcb-435d46932775
+source-git-commit: fb0d8aedbb88aad8ed65592e0b706bd17840406b
 workflow-type: tm+mt
 source-wordcount: '894'
-ht-degree: 5%
+ht-degree: 7%
 
 ---
 
@@ -36,7 +37,7 @@ ht-degree: 5%
 
 ## `customDimensions` {#custom-dimensions}
 
-`customDimensions` 捕獲 [尺寸](https://experienceleague.adobe.com/docs/analytics/components/dimensions/overview.html?lang=zh-Hant) 由分析跟蹤。
+`customDimensions` 捕獲 [尺寸](https://experienceleague.adobe.com/docs/analytics/components/dimensions/overview.html) 由分析跟蹤。
 
 ![customDimensions欄位](../../images/field-groups/analytics-full-extension/customDimensions.png)
 
@@ -102,4 +103,4 @@ ht-degree: 5%
 
 本文檔介紹了分析擴展欄位組的結構和使用案例。 有關欄位組本身的詳細資訊，請參閱 [公共XDM儲存庫](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/analytics/experienceevent-all.schema.json)。
 
-如果您使用此欄位組來使用Adobe Experience PlatformWeb SDK收集分析資料，請參閱上的指南 [配置資料流](../../../edge/fundamentals/datastreams.md) 瞭解如何將資料映射到伺服器端的XDM。
+如果您使用此欄位組來使用Adobe Experience PlatformWeb SDK收集分析資料，請參閱上的指南 [配置資料流](../../../edge/datastreams/overview.md) 瞭解如何將資料映射到伺服器端的XDM。

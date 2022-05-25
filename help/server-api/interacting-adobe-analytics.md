@@ -4,7 +4,7 @@ description: 瞭解如何使用邊緣網路伺服器API與Adobe Analytics交互
 seo-description: Learn how to use the Edge Network Server API to interact with Adobe Analytics
 keywords: 資料採集；出口；分析；Adobe Experience Platform邊緣網路api；分析
 exl-id: b5e7a4d0-9aea-4e70-a7d6-b9aad09aaddf
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 08b1924c518a76873051b4038d8a1fe38dc7ddac
 workflow-type: tm+mt
 source-wordcount: '190'
 ht-degree: 1%
@@ -19,7 +19,7 @@ Adobe Analytics的資料收集工作是將XDM資料轉換為Adobe Analytics能�
 
 您也可以 [手動映射XDM值](../edge/data-collection/adobe-analytics/manually-mapping-variables.md) 舊分析變數。
 
-要使Adobe Analytics能夠從伺服器API接收資料，您需要 [配置資料流](../edge/fundamentals/datastreams.md#adobe-analytics-settings) 要將事件轉發到Adobe Analytics，請在資料流配置頁中輸入報告套件ID。
+要使Adobe Analytics能夠從伺服器API接收資料，您需要 [配置資料流](../edge/datastreams/overview.md#adobe-analytics-settings) 要將事件轉發到Adobe Analytics，請在資料流配置頁中輸入報告套件ID。
 
 ![Adobe Analytics資料流配置](assets/analytics-datastream.png)
 
@@ -33,7 +33,7 @@ POST https://server.adobedc.net/v2/interact?dataStreamId={DATASTREAM_ID}
 
 ### 請求 {#request}
 
-下面的示例包括幾個自動映射的值 `_experience.analytics` 欄位組。 它還包括基於JSON的資料層。 雖然這些資料層無法自動映射，但可以使用 [資料收集的資料準備](../edge/fundamentals/datastreams.md#data-prep) 將這些值映射到包含上述欄位組的架構。
+下面的示例包括幾個自動映射的值 `_experience.analytics` 欄位組。 它還包括基於JSON的資料層。 雖然這些資料層無法自動映射，但可以使用 [資料收集的資料準備](../edge/datastreams/data-prep.md) 將這些值映射到包含上述欄位組的架構。
 
 用戶映射到這些欄位的所有值將自動映射到相應的分析值，就像它們包含在API請求中一樣。
 

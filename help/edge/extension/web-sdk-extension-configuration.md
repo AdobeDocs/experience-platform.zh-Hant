@@ -2,7 +2,7 @@
 title: 配置Adobe Experience PlatformWeb SDK擴展
 description: 如何在資料收集UI中配置Adobe Experience PlatformWeb SDK標籤擴展。
 exl-id: 96d32db8-0c9a-49f0-91f3-0244522d66df
-source-git-commit: 1f9454148ed4ee95f0d86f03c4bcf8c917d0aeea
+source-git-commit: fb0d8aedbb88aad8ed65592e0b706bd17840406b
 workflow-type: tm+mt
 source-wordcount: '1047'
 ht-degree: 6%
@@ -47,11 +47,11 @@ Adobe Experience PlatformWeb SDK擴展支援頁面上的多個實例。 該名�
 
 的 [!UICONTROL 邊緣域] 是Adobe Experience Platform分機發送和接收資料的域。 Adobe建議對此擴展使用第1方域(CNAME)。 預設的第三方網域適用於開發環境，但不適用於生產環境。若需設定第一方 CNAME 的相關說明，請參閱[此處](https://experienceleague.adobe.com/docs/core-services/interface/ec-cookies/cookies-first-party.html?lang=zh-Hant)。
 
-## [!UICONTROL 資料流]
+## [!UICONTROL 資料串流]
 
 當請求發送到Adobe Experience Platform邊緣網路時，資料流ID用於引用伺服器端配置。 您無需在網站上更改代碼即可更新配置。
 
-請參閱上的指南 [資料流](../fundamentals/datastreams.md) 的子菜單。
+請參閱上的指南 [資料流](../datastreams/overview.md) 的子菜單。
 
 
 ## [!UICONTROL 隱私]

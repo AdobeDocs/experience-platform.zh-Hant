@@ -3,7 +3,7 @@ title: 將Adobe Target與平台Web SDK配合使用
 description: 瞭解如何使用Experience PlatformWeb SDK使用Adobe Target呈現個性化內容
 keywords: target;adobe target;activity.id;experience.id;renderDecisions;decisionScopes;prehiding snippet;vec；基於表單的體驗作曲家；xdm;avocies;decions;scope;schema；系統圖；圖
 exl-id: 021171ab-0490-4b27-b350-c37d2a569245
-source-git-commit: cdcbfdec6a232495aacaf9066d880bc9a10455d1
+source-git-commit: fb0d8aedbb88aad8ed65592e0b706bd17840406b
 workflow-type: tm+mt
 source-wordcount: '1273'
 ht-degree: 5%
@@ -25,7 +25,7 @@ ht-degree: 5%
 * [Automated Personalization活動](https://experienceleague.adobe.com/docs/target/using/activities/automated-personalization/automated-personalization.html)
 * [針對經驗的活動](https://experienceleague.adobe.com/docs/target/using/activities/automated-personalization/automated-personalization.html)
 * [多元Test](https://experienceleague.adobe.com/docs/target/using/activities/multivariate-test/multivariate-testing.html)
-* [Recommendations活動](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations.html)
+* [Recommendations 活動](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations.html)
 * [本機目標印象和轉換報告](https://experienceleague.adobe.com/docs/target/using/reports/reports.html)
 * [VEC支援](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html)
 
@@ -49,7 +49,7 @@ ht-degree: 5%
 
 啟用 [!DNL Target]，執行以下操作：
 
-1. 啟用 [!DNL Target] 在 [資料流](../../fundamentals/datastreams.md) 和相應的客戶端代碼。
+1. 啟用 [!DNL Target] 在 [資料流](../../datastreams/overview.md) 和相應的客戶端代碼。
 1. 添加 `renderDecisions` 頁籤
 
 然後，您也可以添加以下選項：

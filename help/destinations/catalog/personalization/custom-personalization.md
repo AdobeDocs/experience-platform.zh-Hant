@@ -3,7 +3,7 @@ keywords: 自定義個性化；目的地；體驗平台定制目標；
 title: 自定義個性化連接
 description: 此目標提供外部個性化、內容管理系統、廣告伺服器以及您站點上運行的其他應用程式，以便從Adobe Experience Platform檢索段資訊。 此目標基於用戶配置檔案段成員身份提供即時個性化。
 exl-id: 2382cc6d-095f-4389-8076-b890b0b900e3
-source-git-commit: 0006c498cd33d9deb66f1d052b4771ec7504457d
+source-git-commit: fb0d8aedbb88aad8ed65592e0b706bd17840406b
 workflow-type: tm+mt
 source-wordcount: '973'
 ht-degree: 0%
@@ -26,7 +26,7 @@ ht-degree: 0%
 
 ## 導出類型和頻率 {#export-type-frequency}
 
-**配置檔案請求**  — 您正在請求在自定義個性化目標中映射的所有段，以用於單個配置檔案。 可以為不同設定不同的自定義個性化目標 [Adobe資料收集資料流](../../../edge/fundamentals/datastreams.md)。
+**配置檔案請求**  — 您正在請求在自定義個性化目標中映射的所有段，以用於單個配置檔案。 可以為不同設定不同的自定義個性化目標 [Adobe資料收集資料流](../../../edge/datastreams/overview.md)。
 
 ## 使用案例 {#use-cases}
 
@@ -73,7 +73,7 @@ ht-degree: 0%
 * **[!UICONTROL 名稱]**:填寫此目標的首選名稱。
 * **[!UICONTROL 說明]**:輸入目標的說明。 例如，您可以提及您為此目標使用的市場活動。 此欄位為可選欄位。
 * **[!UICONTROL 整合別名]**:此值將作為JSON對象名發送到Experience PlatformWeb SDK。
-* **[!UICONTROL 資料流ID]**:這確定在響應頁面時將包括段的資料收集資料流的位置。 下拉菜單僅顯示啟用了目標配置的資料流。 請參閱 [配置資料流](../../../edge/fundamentals/datastreams.md) 的子菜單。
+* **[!UICONTROL 資料流ID]**:這確定在響應頁面時將包括段的資料收集資料流的位置。 下拉菜單僅顯示啟用了目標配置的資料流。 請參閱 [配置資料流](../../../edge/datastreams/overview.md) 的子菜單。
 
 ## 將段激活到此目標 {#activate}
 

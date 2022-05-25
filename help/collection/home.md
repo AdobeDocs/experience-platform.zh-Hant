@@ -5,10 +5,10 @@ title: 資料彙集概觀
 topic-legacy: overview
 description: 瞭解收集Adobe Experience Platform客戶體驗資料所涉及的各種技術。
 exl-id: 03ce5339-e68d-4adf-8c3c-82846a626dad
-source-git-commit: 1322ef78683e62130b56c5b6a22b8699e57a31cf
+source-git-commit: fb0d8aedbb88aad8ed65592e0b706bd17840406b
 workflow-type: tm+mt
 source-wordcount: '478'
-ht-degree: 3%
+ht-degree: 4%
 
 ---
 
@@ -26,7 +26,7 @@ Experience Platform提供的資料收集技術側重於所攝取資料集的可�
 
 * [Adobe Experience Platform邊緣網路](https://experienceleague.adobe.com/docs/web-sdk-learn/tutorials/introduction-to-web-sdk-and-edge-network.html)
 * [標籤](../tags/home.md)
-* [資料流](../edge/fundamentals/datastreams.md)
+* [資料串流](../edge/datastreams/overview.md)
 * [事件轉發](../tags/ui/event-forwarding/overview.md)
 * [Adobe Experience Platform Web SDK](../edge/home.md)
 * [Adobe Experience Platform移動SDK](https://aep-sdks.gitbook.io/docs/)
@@ -46,7 +46,7 @@ Experience Platform提供的資料收集技術側重於所攝取資料集的可�
 
 ## 平台邊緣網路和資料流 {#edge}
 
-平台邊緣網路是一個全球分佈、快速且可靠的伺服器網路，能夠接收和處理大規模的資料。 使用標籤，可以設定 [資料流](../edge/fundamentals/datastreams.md) 對於Adobe Target、Adobe Audience Manager和Adobe Analytics等產品，您可以在伺服器端激活這些產品，而無需更改客戶端代碼。
+平台邊緣網路是一個全球分佈、快速且可靠的伺服器網路，能夠接收和處理大規模的資料。 使用標籤，可以設定 [資料流](../edge/datastreams/overview.md) 對於Adobe Target、Adobe Audience Manager和Adobe Analytics等產品，您可以在伺服器端激活這些產品，而無需更改客戶端代碼。
 
 ![資料流和Adobe解決方案](./images/home/adobe-solutions.png)
 

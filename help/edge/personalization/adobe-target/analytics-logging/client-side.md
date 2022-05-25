@@ -4,7 +4,8 @@ description: 瞭解如何使用Experience PlatformWeb SDK為目標(A4T)啟用Ado
 seo-title: Client-side logging for A4T data in the Platform Web SDK
 seo-description: Learn how to enable client-side logging for Adobe Analytics for Target (A4T) using the Experience Platform Web SDK.
 keywords: 目標；a4t;logging;web sdk;experience;platform;target;a4t;logging;web sdk;experience;platform
-source-git-commit: a2214465001f90d19d88c0622c154e7a4ae3bb03
+exl-id: 7071d7e4-66e0-4ab5-a51a-1387bbff1a6d
+source-git-commit: fb0d8aedbb88aad8ed65592e0b706bd17840406b
 workflow-type: tm+mt
 source-wordcount: '1159'
 ht-degree: 4%
@@ -39,7 +40,7 @@ Adobe Experience PlatformWeb SDK允許您收集 [Adobe Analytics代目標(A4T)](
 
 ### 啟用分析客戶端日誌記錄 {#enable-analytics-client-side-logging}
 
-要考慮為您的實施啟用分析客戶端日誌記錄，您必須在您的 [資料流](../../../fundamentals/datastreams.md)。
+要考慮為您的實施啟用分析客戶端日誌記錄，您必須在您的 [資料流](../../../datastreams/overview.md)。
 
 ![分析資料流配置已禁用](../assets/disable-analytics-datastream.png)
 

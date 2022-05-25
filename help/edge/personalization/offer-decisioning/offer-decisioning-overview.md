@@ -3,10 +3,10 @@ title: 使用Offer decisioning與平台Web SDK
 description: Adobe Experience PlatformWeb SDK可以提供和呈現以Offer decisioning管理的個性化服務。 您可以使用Offer decisioningUI或API建立優惠和其他相關對象。
 keywords: offer decisioning；決定；Web SDK；平台Web SDK；個性化服務；提供服務；提供服務；提供個性化服務；
 exl-id: 4ab51f9d-3c44-4855-b900-aa2cde673a9a
-source-git-commit: b0cc2343a502e180267d86bca4a699c02f2d6f3d
+source-git-commit: fb0d8aedbb88aad8ed65592e0b706bd17840406b
 workflow-type: tm+mt
 source-wordcount: '870'
-ht-degree: 3%
+ht-degree: 5%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 3%
 >
 >在Adobe Experience PlatformWeb SDK中使用Offer decisioning可以提前訪問選定用戶。 此功能並非所有IMS組織都可用。
 
-Adobe Experience Platform [!DNL Web SDK] 可以交付和呈現以Offer decisioning管理的個性化優惠。 您可以使用Offer decisioning用戶介面(UI)或API建立您的優惠和其他相關對象。
+Adobe Experience Platform [!DNL Web SDK] 可以交付和呈現以Offer decisioning管理的個性化優惠。 您可以使用 Offer Decisioning 使用者介面 (UI) 或 API 建立您的優惠方案與其他相關物件。 
 
 ## 先決條件
 
@@ -53,7 +53,7 @@ Adobe Experience Platform [!DNL Web SDK] 可以交付和呈現以Offer decisioni
 
    ![](assets/decision-scope-copy.png)
 
-* **資料流：** 有關詳細資訊，請閱讀 [資料流](../../fundamentals/datastreams.md) 文檔。
+* **資料流：** 有關詳細資訊，請閱讀 [資料流](../../datastreams/overview.md) 文檔。
 
 * **身份**:有關詳細資訊，請閱讀本文檔，概述如何 [平台Web SDK使用Identity Service](../../identity/overview.md)。
 
@@ -61,7 +61,7 @@ Adobe Experience Platform [!DNL Web SDK] 可以交付和呈現以Offer decisioni
 
 要啟用Offer decisioning，請執行以下步驟：
 
-1. 已啟用您的Adobe Experience Platform [資料流](../../fundamentals/datastreams.md) 選中「Offer decisioning」框
+1. 已啟用您的Adobe Experience Platform [資料流](../../datastreams/overview.md) 選中「Offer decisioning」框
 
    ![提供決策邊緣配置](./assets/offer-decisioning-edge-config.png)
 

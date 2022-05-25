@@ -2,7 +2,7 @@
 title: Adobe Experience Platform發行說明2022年2月
 description: 2022年2月為Adobe Experience Platform發佈的說明。
 exl-id: ae453f7d-ac75-4cc3-8435-57d25f086cc3
-source-git-commit: ce967ae176fce81aa26d92b3f0ee8be006808657
+source-git-commit: 3a031c84138d36a5e23b2f80a44ada06e1a52184
 workflow-type: tm+mt
 source-wordcount: '1019'
 ht-degree: 3%
@@ -45,8 +45,8 @@ Adobe Experience Platform提供 [!DNL dashboards] 通過這些資訊，您可以
 
 | 功能 | 說明 |
 | --- | --- |
-| 用於資料流配置的改進的UI工作流 | 已在資料收集UI中建立新資料流的工作流已更新。 將服務添加到資料流時，選項清單中將只包含您有權訪問的服務。 請參閱上的指南 [配置資料流](../../edge/fundamentals/datastreams.md) 的子菜單。 |
-| 資料收集的資料準備 | 如果您使用Adobe Experience PlatformWeb SDK，現在可以利用資料準備功能將資料映射到伺服器端的體驗資料模型(XDM)。 請參閱 [資料收集的資料準備](../../edge/fundamentals/datastreams.md#data-prep) 的子菜單。 |
+| 用於資料流配置的改進的UI工作流 | 已在資料收集UI中建立新資料流的工作流已更新。 將服務添加到資料流時，選項清單中將只包含您有權訪問的服務。 請參閱上的指南 [配置資料流](../../edge/datastreams/overview.md) 的子菜單。 |
+| 資料收集的資料準備 | 如果您使用Adobe Experience PlatformWeb SDK，現在可以利用資料準備功能將資料映射到伺服器端的體驗資料模型(XDM)。 請參閱 [資料收集的資料準備](../../edge/datastreams/data-prep.md) 的子菜單。 |
 | 第一方設備ID | 使用平台Web SDK收集客戶資料時，您現在可以將自己的設備ID發送到Adobe Experience Platform邊緣網路，這為最近對第三方Cookie生命週期的瀏覽器限制提供了一種解決方法。 請參閱上的指南 [第一方設備ID](../../edge/identity/first-party-device-ids.md) 的子菜單。 |
 
 有關平台中資料收集的詳細資訊，請參閱 [資料收集概述](../../collection/home.md)。

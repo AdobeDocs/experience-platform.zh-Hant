@@ -2,7 +2,7 @@
 title: Adobe Experience Platform發行說明2022年3月
 description: 2022年3月為Adobe Experience Platform發佈的說明。
 exl-id: 0d499aa6-e25d-4d34-ad32-5e4ab361cba1
-source-git-commit: 9a506fcecc94ba20906133e60e4ff54fbe0403a3
+source-git-commit: 3a031c84138d36a5e23b2f80a44ada06e1a52184
 workflow-type: tm+mt
 source-wordcount: '1194'
 ht-degree: 5%
@@ -114,7 +114,7 @@ Adobe Experience Platform提供 [!DNL dashboards] 您可以通過查看有關組
 
 | 功能 | 說明 |
 | --- | --- |
-| 全局資料流設定 | 現在，在配置資料流時可以配置幾個新的全局設定：地理位置、第一方IDcookie和第三方ID同步。 請參閱 [配置資料流](../../edge/fundamentals/datastreams.md#configure) 的子菜單。 |
+| 全局資料流設定 | 現在，在配置資料流時可以配置幾個新的全局設定：地理位置、第一方IDcookie和第三方ID同步。 請參閱 [配置資料流](../../edge/datastreams/overview.md#create) 的子菜單。 |
 | [邊緣網路伺服器 API](../../server-api/overview.md) | 伺服器API使客戶能夠使用新的經過驗證的端點與Experience Platform邊緣網路進行交互，以支援各種資料收集，個性化，廣告和營銷使用案例。 |
 
 有關平台中資料收集的詳細資訊，請參閱 [資料收集概述](../../collection/home.md)。
