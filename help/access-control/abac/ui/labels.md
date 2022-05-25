@@ -1,0 +1,33 @@
+---
+keywords: Experience Platform；主題；熱門主題；訪問控制；基於屬性的訪問控制；ABAC
+title: 基於屬性的訪問控制管理標籤
+description: 本檔案提供關於Adobe Experience Platform基於屬性的訪問控制的資訊
+hide: true
+hidefromtoc: true
+exl-id: c790f09c-fda6-48bf-95db-3f5053cd882e
+source-git-commit: 19f1e8df8cd8b55ed6b03f80e42810aefd211474
+workflow-type: tm+mt
+source-wordcount: '165'
+ht-degree: 0%
+
+---
+
+# 管理標籤
+
+>[!IMPORTANT]
+>
+>基於屬性的訪問控制目前在面向美國醫療保健客戶的有限版本中提供。 這一功能一旦完全發佈，將可供所有Real-time Customer Data Platform客戶使用。
+
+標籤允許您根據應用於該資料的使用策略對資料集和欄位進行分類。 標籤可以隨時應用，在選擇管理資料的方式上提供了靈活性。 最佳做法鼓勵在資料被引入平台或資料在平台中可用時立即標籤資料。
+
+## 建立新標籤
+
+要建立新標籤，請選擇 **[!UICONTROL 標籤]** 頁籤，然後選擇 **[!UICONTROL 建立標籤]**。
+
+![flac-new-label](../../images/flac-ui/create-label.png)
+
+的 **[!UICONTROL 建立新標籤]** 對話框，提示您輸入名稱、可選友好名稱和可選說明。
+
+![新標籤資訊](../../images/flac-ui/new-label-info.png)
+
+完成後，選擇 **[!UICONTROL 確認]**。
