@@ -1,15 +1,15 @@
 ---
 title: 審核日誌概述
-description: 了解稽核紀錄如何讓您查看誰在 Adob​​e Experience Platform 中執行了哪些操作。
+description: 了解稽核紀錄如何讓您查看誰在 Adobe Experience Platform 中執行了哪些操作。
 exl-id: 00baf615-5b71-4e0a-b82a-ca0ce8566e7f
-source-git-commit: ba190bdd1856b2d89fa28679eb7f09c258ddd17c
+source-git-commit: cd7ce8c107769a77373f328d9aa84c982be0d8ee
 workflow-type: tm+mt
-source-wordcount: '767'
-ht-degree: 10%
+source-wordcount: '847'
+ht-degree: 11%
 
 ---
 
-# 審核日誌
+# 稽核記錄
 
 為了提高系統中所執行活動的透明度和可見性，Adobe Experience Platform允許您以「審計日誌」的形式對用戶活動進行各種服務和功能的審計。 這些日誌形成了審核跟蹤，可幫助解決平台上的問題，並幫助您的企業有效地遵守公司資料管理策略和法規要求。
 
@@ -23,20 +23,28 @@ ht-degree: 10%
 
 | 資源 | 動作 |
 | --- | --- |
-| [資料集](../../../catalog/datasets/overview.md) | <ul><li>建立</li><li>更新</li><li>刪除</li><li>啟用 [即時客戶概要資訊](../../../profile/home.md)</li><li>禁用配置檔案</li></ul> |
-| [方案](../../../xdm/schema/composition.md) | <ul><li>建立</li><li>更新</li><li>刪除</li><li>啟用配置檔案</li></ul> |
+| [訪問控制策略（基於屬性的訪問控制）](../../../access-control/home.md) | <ul><li>建立</li><li>更新</li><li>刪除</li></ul> |
+| [帳戶(Adobe)](../../../sources/connectors/tutorials/ui/../../../tutorials/ui/update.md) | <ul><li>建立</li><li>更新</li><li>刪除</li></ul> |
+| [稽核記錄](../../../landing/governance-privacy-security/audit-logs/overview.md) | <ul><li>轉存</li></ul> |
 | [類](../../../xdm/schema/composition.md#class) | <ul><li>建立</li><li>更新</li><li>刪除</li></ul> |
-| [欄位組](../../../xdm/schema/composition.md#field-group) | <ul><li>建立</li><li>更新</li><li>刪除</li></ul> |
-| [資料類型](../../../xdm/schema/composition.md#data-type) | <ul><li>建立</li><li>更新</li><li>刪除</li></ul> |
-| [沙箱](../../../sandboxes/home.md) | <ul><li>建立</li><li>更新</li><li>重設</li><li>刪除</li></ul> |
-| [目標](../../../destinations/home.md) | <ul><li>建立</li><li>更新</li><li>刪除</li><li>啟用</li><li>禁用</li><li>資料集激活</li><li>刪除資料集</li><li>配置檔案激活</li><li>配置檔案刪除</li></ul> |
-| [區段](../../../segmentation/home.md) | <ul><li>建立</li><li>刪除</li><li>段激活</li><li>段刪除</li></ul> |
-| [合併策略](../../../profile/merge-policies/overview.md) | <ul><li>建立</li><li>更新</li><li>刪除</li></ul> |
 | [計算屬性](../../../profile/computed-attributes/overview.md) | <ul><li>建立</li><li>更新</li><li>刪除</li></ul> |
+| [資料集](../../../catalog/datasets/overview.md) | <ul><li>建立</li><li>更新</li><li>刪除</li><li>啟用 [即時客戶概要資訊](../../../profile/home.md)</li><li>禁用配置檔案</li><li>添加資料</li><li>刪除批</li></ul> |
+| [資料類型](../../../xdm/schema/composition.md#data-type) | <ul><li>建立</li><li>更新</li><li>刪除</li></ul> |
+| [目標](../../../destinations/home.md) | <ul><li>建立</li><li>更新</li><li>刪除</li><li>啟用</li><li>禁用</li><li>資料集激活</li><li>刪除資料集</li><li>配置檔案激活</li><li>配置檔案刪除</li></ul> |
+| [欄位組](../../../xdm/schema/composition.md#field-group) | <ul><li>建立</li><li>更新</li><li>刪除</li></ul> |
+| [標識圖](../../../identity-service/ui/identity-graph-viewer.md) | <ul><li>檢視</li></ul> |
+| [標識命名空間](../../../identity-service/ui/identity-graph-viewer.md) | <ul><li>建立</li><li>更新</li></ul> |
+| [合併策略](../../../profile/merge-policies/overview.md) | <ul><li>建立</li><li>更新</li><li>刪除</li></ul> |
 | [產品描述檔](../../../access-control/home.md) | <ul><li>建立</li><li>更新</li><li>刪除</li></ul> |
-| [帳戶(Adobe)](../../../access-control/home.md) | <ul><li>建立</li><li>更新</li><li>刪除</li></ul> |
-| [查詢模板](../../../access-control/home.md) | <ul><li>建立</li><li>更新</li><li>刪除</li></ul> |
-| [計畫查詢](../../../access-control/home.md) | <ul><li>建立</li><li>更新</li><li>刪除</li></ul> |
+| [查詢](../../../query-service/ui/overview.md) | <ul><li>執行</li></ul> |
+| [查詢模板](../../../query-service/ui/overview.md) | <ul><li>建立</li><li>更新</li><li>刪除</li></ul> |
+| [角色（基於屬性的訪問控制）](../../../access-control/home.md) | <ul><li>建立</li><li>更新</li><li>刪除</li><li>添加用戶</li><li>刪除用戶</li></ul> |
+| [沙箱](../../../sandboxes/home.md) | <ul><li>建立</li><li>更新</li><li>重設</li><li>刪除</li></ul> |
+| [計畫查詢](../../../query-service/ui/overview.md) | <ul><li>建立</li><li>更新</li><li>刪除</li></ul> |
+| [方案](../../../xdm/schema/composition.md) | <ul><li>建立</li><li>更新</li><li>刪除</li><li>啟用配置檔案</li></ul> |
+| [區段](../../../segmentation/home.md) | <ul><li>建立</li><li>刪除</li><li>段激活</li><li>段刪除</li></ul> |
+| [源資料流](../../../sources/connectors/tutorials/ui/../../../tutorials/ui/update.md) | <ul><li>建立</li><li>更新</li><li>刪除</li><li>啟用</li><li>禁用</li><li>資料集激活</li><li>資料集刪除</li><li>配置檔案激活</li><li>刪除配置檔案</li></ul> |
+| [工作單](../../../hygiene/home.md) | <ul><li>建立</li></ul> |
 
 ## 訪問審核日誌
 
@@ -50,7 +58,7 @@ ht-degree: 10%
 
 ![審核日誌儀表板](../../images/audit-logs/audits.png)
 
-審核日誌將保留365天，之後將從系統中刪除。 因此，您最多只能回到365天。
+審核日誌將保留365天，之後將從系統中刪除。 因此，您最多只能返回365天。 如果需要超過365天的資料，應定期導出日誌以滿足內部策略要求。
 
 從清單中選擇一個事件，以在右欄中查看其詳細資訊。
 
