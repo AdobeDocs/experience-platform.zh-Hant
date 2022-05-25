@@ -4,10 +4,10 @@ title: 配置式儀表板
 description: Adobe Experience Platform提供了一個儀表板，您可以通過該儀表板查看有關您組織的即時客戶配置檔案資料的重要資訊。
 type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
-source-git-commit: 65096a2da03f504c16f00a75bfdef9e78f8c1799
+source-git-commit: 2fdcd0748ccfe5b6b079bc21c8dbde491fbb2471
 workflow-type: tm+mt
-source-wordcount: '3535'
-ht-degree: 0%
+source-wordcount: '3761'
+ht-degree: 1%
 
 ---
 
@@ -81,7 +81,7 @@ Adobe Experience Platform用戶介面(UI)提供了一個儀表板，您可以通
 
 的 [!UICONTROL 聯合架構] 儀表板顯示特定XDM類的聯合架構。 通過選擇 **[!UICONTROL 類]** 下拉菜單，可以查看不同XDM類的聯合架構。
 
-聯合架構由多個共用同一類且已為配置檔案啟用的架構組成。 它們使您能夠在單個視圖中查看，即共用同一類的每個架構中包含的每個欄位的合併。
+聯合結構描述由共用相同類別並已為設定檔啟用的多個結構描述組成。它們使您能夠在單個視圖中查看，即共用同一類的每個架構中包含的每個欄位的合併。
 
 請參閱聯合架構UI指南以瞭解有關 [查看平台UI中的聯合架構](../../profile/ui/union-schema.md#view-union-schemas)。
 
@@ -110,6 +110,8 @@ Adobe提供了多個標準小部件，您可以使用這些小部件來可視化
 * [[!UICONTROL 觀眾大小]](#audiences-size)
 * [[!UICONTROL 配置檔案計數趨勢]](#profile-count-trend)
 * [[!UICONTROL 單個身份配置檔案（按身份）]](#single-identity-profiles-by-identity)
+* [[!UICONTROL 按合併策略的受眾重疊]](#audience-overlap-by-merge-policy)
+* [[!UICONTROL 配置檔案計數按標識的更改趨勢]](#profiles-count-change-trend-by-identity)
 
 ### [!UICONTROL 配置檔案計數] {#profile-count}
 
@@ -290,6 +292,25 @@ Adobe提供了多個標準小部件，您可以使用這些小部件來可視化
 將滑鼠懸停在各個條上，查看一個對話框，詳細列出標識的配置檔案總數。
 
 ![按身份構件顯示的單個身份配置檔案。](../images/profiles/single-identity-profiles-by-identity.png)
+
+### [!UICONTROL 按合併策略的受眾重疊] {#audience-overlap-by-merge-policy}
+
+此小部件使用Venn圖顯示兩個選定段的重疊。 從頁面頂部的概述下拉清單中選擇合併策略，並從構件內的兩個下拉菜單中選擇用於分析的段。 通過懸停在圓或交點上，可以看到相關段定義中包含的輪廓總數。
+
+當小部件顯示段定義的可視交叉時，您可以通過研究段定義之間的相似性來優化分割策略。
+
+![「平台UI概要檔案」面板中的合併策略下拉清單和小部件段下拉清單突出顯示。](../images/profiles/audience-overlap-by-merge-policy.png)
+
+### [!UICONTROL 配置檔案計數按標識的更改趨勢] {#profiles-count-change-trend-by-identity}
+
+<!-- This widget uses a line graph to illustrate the change in number of profiles filtered by a chosen source identity and merge policy. -->
+
+此小部件基於選定的源標識和合併策略篩選配置檔案計數，然後使用線形圖說明不同期間的編號變化。 合併策略從頁面頂部的概述下拉清單中選擇，源標識和時間段從構件下拉菜單中選擇。 該趨勢可以在30天、90天和12個月期間進行可視化。
+
+此小部件通過演示按所需身份篩選的配置檔案的增長模式，幫助您管理目標激活需求。
+
+![配置檔案計數按身份小部件的更改趨勢。](../images/profiles/profiles-count-change-trend-by-identity.png)
+
 
 ## (Beta)配置檔案功效小部件 {#profile-efficacy-widgets}
 

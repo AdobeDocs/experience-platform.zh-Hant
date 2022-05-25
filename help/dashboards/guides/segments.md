@@ -4,9 +4,9 @@ title: 段操控板
 description: 'Adobe Experience Platform提供了一個控制板，您可以通過該控制板查看有關您的組織建立的段的重要資訊。 '
 type: Documentation
 exl-id: de5e07bc-2c44-416e-99db-7607059117cb
-source-git-commit: 65096a2da03f504c16f00a75bfdef9e78f8c1799
+source-git-commit: 63a7857c2b88e81de3df7d925daf15bf631ff84c
 workflow-type: tm+mt
-source-wordcount: '1491'
+source-wordcount: '1576'
 ht-degree: 0%
 
 ---
@@ -74,6 +74,7 @@ Adobe提供了多個標準小部件，您可以使用這些小部件來可視化
 * [[!UICONTROL 受眾規模趨勢]](#audience-size-trend)
 * [[!UICONTROL 受眾大小變化趨勢]](#audience-size-change-trend)
 * [[!UICONTROL 按身份分類的受眾規模趨勢]](#audience-size-trend-by-identity)
+* [[!UICONTROL 受眾重疊]](#audience-overlap)
 
 ### [!UICONTROL 受眾大小] {#audience-size}
 
@@ -162,6 +163,14 @@ Adobe提供了多個標準小部件，您可以使用這些小部件來可視化
 此小部件根據從小部件下拉菜單中選擇的標識類型，說明特定段的受眾大小趨勢。 用於分析的段是從概述下拉清單中選擇的。 趨勢分析期可以在30天、90天和12個月期間顯示。 時間段從小部件的下拉菜單中選擇。
 
 ![按身份小部件顯示的受眾大小趨勢。](../images/segments/audience-size-trend-by-identity.png)
+
+### [!UICONTROL 受眾重疊] {#audience-overlap}
+
+此構件表示兩個段中滿足兩個段定義條件的配置檔案數。 用於比較的段是從構件下拉菜單中選擇的。 通過懸停在圓上或Venn圖的交點上，可以看到相關段定義中包含的輪廓總數。
+
+此小部件使您能夠通過可視化段定義結果中的相似性來優化分割策略。
+
+![受眾重疊小部件。](../images/segments/audience-overlap.png)
 
 ## 後續步驟
 

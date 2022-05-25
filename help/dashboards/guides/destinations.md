@@ -4,9 +4,9 @@ title: 目標儀表板
 description: Adobe Experience Platform提供了一個儀表板，您可以通過該儀表板查看有關組織活動目標的重要資訊。
 type: Documentation
 exl-id: 6a34a796-24a1-450a-af39-60113928873e
-source-git-commit: 65096a2da03f504c16f00a75bfdef9e78f8c1799
+source-git-commit: 2fdcd0748ccfe5b6b079bc21c8dbde491fbb2471
 workflow-type: tm+mt
-source-wordcount: '2538'
+source-wordcount: '2671'
 ht-degree: 0%
 
 ---
@@ -60,6 +60,7 @@ Adobe提供了多個標準小部件，您可以使用這些部件來可視化與
 * [[!UICONTROL 目標狀態]](#destination-status)
 * [[!UICONTROL 按目標平台列出的活動目標]](#active-destinations-by-destination-platform)
 * [[!UICONTROL 已激活所有目標的受眾]](#activated-audiences-across-all-destinations)
+* [[!UICONTROL 激活的觀眾]](#activated-audiences)
 
 ### [!UICONTROL 最常用的目標] {#most-used-destinations}
 
@@ -250,6 +251,18 @@ Adobe提供了多個標準小部件，您可以使用這些部件來可視化與
 ![所有目標小部件中的已激活受眾。](../images/destinations/activated-audiences-across-all-destinations.png)
 
 選擇 **[!UICONTROL 觀眾]** 導航至目標 [!UICONTROL 瀏覽] 頁籤。 此頁提供所有已啟用的目標和各種相關度量的清單。 請參閱文檔 [更多資訊 [!UICONTROL 瀏覽] 頁籤](../../destinations/ui/destinations-workspace.md#browse)。
+
+### [!UICONTROL 激活的觀眾] {#activated-audiences}
+
+此小部件提供單個度量，以確定激活到目標的受眾總數。
+
+![激活的受眾小部件。](../images/destinations/activated-audiences.png)
+
+選擇 **[!UICONTROL 觀眾]** 導航至目標儀表板的詳細資訊頁。 的 [!UICONTROL 激活資料] 頁籤顯示已映射到目標的段的清單，包括其起始日期和終止日期（如果適用），以及用於資料導出的其他相關資訊，如導出類型、計畫和頻率。 要查看特定段的詳細資訊，請從清單中選擇其名稱。
+
+![突出顯示了「激活資料」頁籤的目標儀表板詳細資訊頁。](../images/destinations/activation-data-tab.png)
+
+此小部件可幫助您根據一覽式激活的受眾數量瞭解目標的價值。 它還提供了對更詳細資訊的輕鬆訪問，以便進一步分析。
 
 ## 後續步驟
 
