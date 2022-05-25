@@ -6,7 +6,7 @@ title: 客戶AI中的輸入和輸出
 topic-legacy: Getting started
 description: 瞭解客戶AI使用的所需事件、輸入和輸出的詳細資訊。
 exl-id: 9b21a89c-bf48-4c45-9eb3-ace38368481d
-source-git-commit: 0f408f217dd168b9c94b8dbbd7dc3c6edb06488c
+source-git-commit: 62188f56861dd021db7b13325f622323644af8e0
 workflow-type: tm+mt
 source-wordcount: '3096'
 ht-degree: 1%
@@ -265,7 +265,7 @@ XDM體驗事件用於確定各種客戶行為。 根據資料的結構，下面�
 
 客戶AI為被視為合格的單個配置檔案生成多個屬性。 根據您已預配的內容，有兩種方法來使用分數（輸出）。 如果您有啟用即時客戶配置檔案的資料集，則可以使用中的「即時客戶配置檔案」中的洞見 [段生成器](../../segmentation/ui/segment-builder.md)。 如果沒有啟用配置檔案的資料集，則可以 [下載客戶AI輸出](./user-guide/download-scores.md) 資料集在資料湖上可用。
 
-可以在以下位置找到輸出資料集 **資料集** 在平台中。 所有客戶AI輸出資料集都以名稱開頭 **客戶AI分數 — 名稱_of_app** 而所有客戶AI輸出架構以名稱開頭 **客戶AI架構 — 名稱_of_app**。
+可以在以下位置找到輸出資料集 **資料集** 在平台中。 所有客戶AI輸出資料集都以名稱開頭 **客戶AI分數 — 名稱_of_app**。 同樣，所有客戶AI輸出架構都以名稱開頭 **客戶AI架構 — 名稱_of_app**。
 
 ![cai-schema-of-app](./images/user-guide/cai-schema-name-of-app.png)
 

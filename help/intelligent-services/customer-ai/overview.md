@@ -7,10 +7,10 @@ topic-legacy: Customer AI Overview
 description: Customer AI 可產生自訂傾向評分，例如大規模個別設定檔的流失和轉換情形。不必將企業需求轉換為機器學習問題、挑選演算法、培訓或部署，就能達成上述目的。
 landing-page-description: Customer AI 可產生自訂傾向評分，例如大量個別設定檔的流失和轉換情形。
 exl-id: 3e668103-e2a2-4ce6-a40a-8029a6aaa8dd
-source-git-commit: fccb5e6193d9c456d0035ef5c7d2adf5ffe883a4
+source-git-commit: 62188f56861dd021db7b13325f622323644af8e0
 workflow-type: tm+mt
-source-wordcount: '554'
-ht-degree: 18%
+source-wordcount: '553'
+ht-degree: 19%
 
 ---
 
@@ -46,7 +46,7 @@ Customer AI 可產生自訂傾向評分，例如大規模個別設定檔的流�
 
 >[!VIDEO](https://video.tv.adobe.com/v/32664?learn=on&quality=12)
 
-## 它是如何工作的
+## 運作方式
 
 客戶AI通過分析現有的消費者體驗事件資料來預測流失或轉換傾向得分。 Adobe認識到，在所有使用案例中，更改和轉換的定義並不統一，因此，您能夠將自定義目標目標定義為一組條件。 只要所輸入的消費者體驗事件資料中存在感興趣的事件，您就可以配置預測目標。
 
