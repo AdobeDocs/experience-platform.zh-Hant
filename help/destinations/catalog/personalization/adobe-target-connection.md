@@ -67,7 +67,7 @@ Adobe Experience Platform自動連接到您公司的Adobe Target實例。 不需
 
 * **名稱**:填寫此目標的首選名稱。
 * **說明**:輸入目標的說明。 例如，您可以提及您為此目標使用的市場活動。 此欄位為可選欄位。
-* **資料流ID**:這確定將包含段的資料收集資料流的位置。 下拉菜單僅顯示已啟用目標目標的資料流。 請參閱 [配置資料流](../../../edge/datastreams/overview.md#target) 有關如何為Adobe Target配置資料流的詳細資訊。
+* **資料流ID**:這確定將包含段的資料收集資料流的位置。 下拉菜單僅顯示已啟用目標目標的資料流。 請參閱 [配置資料流](../../../edge/fundamentals/datastreams.md#target) 有關如何為Adobe Target配置資料流的詳細資訊。
    * **[!UICONTROL 無]**:如果需要配置Adobe Target個性化設定，但無法實施 [Experience PlatformWeb SDK](../../../edge/home.md)。 使用此選項時，從Experience Platform導出到目標的段僅支援下一會話個性化，並且會禁用邊緣分割。 有關詳細資訊，請參閱下表。
 
 | 未選擇任何資料流 | 已選擇資料流 |
