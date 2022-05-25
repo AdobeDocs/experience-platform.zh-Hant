@@ -4,7 +4,7 @@ user-guide-title: 資料衛生幫助
 breadcrumb-title: 資料衛生指南
 user-guide-description: 管理消費者資料請求以遵守法律隱私法規，如GDPR和CCPA。
 feature: Privacy
-source-git-commit: b119cc56701a0e6038a31e032b7134fb5d0fbbad
+source-git-commit: adce89e5601daf18fe9cacb704a787472262db41
 workflow-type: tm+mt
 source-wordcount: '54'
 ht-degree: 3%
