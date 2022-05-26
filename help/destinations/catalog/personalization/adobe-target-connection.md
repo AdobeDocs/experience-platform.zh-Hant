@@ -3,7 +3,7 @@ keywords: 目標個性化；目的地；體驗平台目標；adobe目標目標�
 title: Adobe Target
 description: Adobe Target是一個應用程式，在跨網站、移動應用等的所有入站客戶交互中提供基於人工智慧的即時個性化和實驗功能。
 exl-id: 3e3c405b-8add-4efb-9389-5ad695bc9799
-source-git-commit: 0868d81bcd1968b3223c79abb5a7bb8f279a4130
+source-git-commit: 46e732dfc630ad1875a57289a6e6cf9c964b9547
 workflow-type: tm+mt
 source-wordcount: '752'
 ht-degree: 1%
@@ -51,7 +51,7 @@ Adobe Target是Adobe Experience Platform的個性化連接。
 >id="platform_destinations_target_datastream"
 >title="關於資料流ID"
 >abstract="此選項確定將包含段的資料收集資料流的位置。 下拉菜單僅顯示啟用了目標配置的資料流。 要使用邊緣分割，必須選擇資料流ID。 選擇「無」(None)將禁用使用邊分割的所有使用情形。"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/personalization/adobe-target-connection.html#parameters" text="瞭解有關選擇資料流的詳細資訊。"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/personalization/adobe-target-connection.html#parameters" text="瞭解有關選擇資料流的詳細資訊"
 
 >[!IMPORTANT]
 > 
