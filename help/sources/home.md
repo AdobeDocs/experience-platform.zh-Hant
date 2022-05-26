@@ -5,9 +5,9 @@ title: 源連接器概述
 topic-legacy: overview
 description: Adobe Experience Platform允許從外部源接收資料，同時讓您能夠使用平台服務構建、標籤和增強傳入資料。 您可以從多種源(如Adobe應用程式、基於雲的儲存、資料庫和許多其他源)接收資料。
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: cae2c80c5e0fc7aaece948599e781b32d67989bb
+source-git-commit: 7ffc2ed09b58cc6b6118ef2115666aae092c202c
 workflow-type: tm+mt
-source-wordcount: '1000'
+source-wordcount: '1001'
 ht-degree: 0%
 
 ---
@@ -28,22 +28,22 @@ Experience Platform中的源分為以下類別：
 
 Experience Platform允許從包括Adobe Analytics和Adobe Audience Manager在內的其他Adobe應用程式中接收資料。 有關詳細資訊，請參閱以下相關文檔：
 
-- [Adobe Audience Manager連接器概述](connectors/adobe-applications/audience-manager.md)
+- [Adobe Audience Manager源概述](connectors/adobe-applications/audience-manager.md)
 - [在UI中建立Adobe Audience Manager源連接](./tutorials/ui/create/adobe-applications/audience-manager.md)
 - [Adobe Analytics分類資料源連接概述](connectors/adobe-applications/classifications.md)
 - [在UI中建立Adobe Analytics分類資料源連接](./tutorials/ui/create/adobe-applications/classifications.md)
 - [Adobe Analytics報表套件資料源連接概述](connectors/adobe-applications/analytics.md)
 - [在UI中建立Adobe Analytics源連接](./tutorials/ui/create/adobe-applications/analytics.md)
-- [Adobe資料收集](connectors/adobe-applications/data-collection.md)
+- [Adobe資料收集源概述](connectors/adobe-applications/data-collection.md)
 - [在UI中建立客戶屬性源連接](./tutorials/ui/create/adobe-applications/customer-attributes.md)
-- [[!DNL Marketo Engage] 連接器概述](connectors/adobe-applications/marketo/marketo.md)
+- [[!DNL Marketo Engage] 源概述](connectors/adobe-applications/marketo/marketo.md)
 - [建立 [!DNL Marketo Engage] UI中的源連接](./tutorials/ui/create/adobe-applications/marketo.md)
 
 ### Advertising {#advertising}
 
 Experience Platform支援從第三方廣告系統接收資料。 有關特定源連接器的詳細資訊，請參閱以下相關文檔：
 
-- [[!DNL Google AdWords]](connectors/advertising/ads.md) 連接器
+- [[!DNL Google AdWords]](connectors/advertising/ads.md)
 
 ### 雲儲存 {#cloud-storage}
 
