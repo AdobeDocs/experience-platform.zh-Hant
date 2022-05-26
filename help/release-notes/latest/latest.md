@@ -2,7 +2,7 @@
 title: Adobe Experience Platform 發行說明
 description: Adobe Experience Platform的最新發行說明。
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 37d073266bf9293ad3a9e85c193acd1e2e47fa2a
+source-git-commit: 9484da6948243a098db2ff8ebdd59c5e70a51635
 workflow-type: tm+mt
 source-wordcount: '1553'
 ht-degree: 6%
@@ -71,9 +71,11 @@ Experience Platform允許您審計用戶活動中的各種服務和功能。 審
 
 **已更新功能**
 
-|功能 |名稱 |描述 | | - | - | - | |添加的資源 | <ul><li> 訪問控制策略 </li><li> 角色 </li><li> 稽核記錄 </li><li> 工作單 </li><li> 標識命名空間 </li><li> 標識圖 </li><li> 查詢 </li><li> 資料集 </li><li> 源資料流 </li></ul> |在活動發生時自動記錄審核日誌資源。 如果啟用了該功能，則無需手動啟用日誌收集。 |
+| 功能 | 名稱 | 說明 |
+| --- | --- | --- |
+| 已添加資源 | <ul><li> 訪問控制策略 </li><li> 角色 </li><li> 稽核記錄 </li><li> 工作單 </li><li> 標識命名空間 </li><li> 標識圖 </li><li> 查詢 </li><li> 資料集 </li><li> 源資料流 </li></ul> | 在活動發生時自動記錄審核日誌資源。 如果啟用了該功能，則無需手動啟用日誌收集。 |
 
-
+{style=&quot;table-layout:auto&quot;}
 
 有關平台中審核日誌的詳細資訊，請參閱 [審核日誌概述](../../landing/governance-privacy-security/audit-logs/overview.md)。
 
