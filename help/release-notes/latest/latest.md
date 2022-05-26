@@ -73,7 +73,7 @@ Experience Platform允許您審計用戶活動中的各種服務和功能。 審
 
 |功能 |名稱 |描述 | | - | - | - | |添加的資源 | <ul><li> 訪問控制策略 </li><li> 角色 </li><li> 稽核記錄 </li><li> 工作單 </li><li> 標識命名空間 </li><li> 標識圖 </li><li> 查詢 </li><li> 資料集 </li><li> 源資料流 </li></ul> |在活動發生時自動記錄審核日誌資源。 如果啟用了該功能，則無需手動啟用日誌收集。 |
 
-{style=&quot;table-layout:auto&quot;}
+
 
 有關平台中審核日誌的詳細資訊，請參閱 [審核日誌概述](../../landing/governance-privacy-security/audit-logs/overview.md)。
 
