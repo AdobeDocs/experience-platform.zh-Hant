@@ -5,9 +5,9 @@ title: 查詢服務中的SQL語法
 topic-legacy: syntax
 description: 此文檔顯示Adobe Experience Platform查詢服務支援的SQL語法。
 exl-id: 2bd4cc20-e663-4aaa-8862-a51fde1596cc
-source-git-commit: 25953a5a1f5b32de7d150dbef700ad06ce6014df
+source-git-commit: f509b468e7779b822eda96033a2c55cc3a12893d
 workflow-type: tm+mt
-source-wordcount: '2747'
+source-wordcount: '3050'
 ht-degree: 2%
 
 ---
@@ -714,7 +714,7 @@ COPY query
 >
 >完整的輸出路徑將是 `adl://<ADLS_URI>/users/<USER_ID>/acp_foundation_queryService/folder_location/<QUERY_ID>`
 
-### 更改表
+### 更改表 {#alter-table}
 
 的 `ALTER TABLE` 命令可以添加或刪除主鍵或外鍵約束，以及向表中添加列。
 
@@ -747,6 +747,26 @@ ALTER TABLE table_name DROP CONSTRAINT constraint_name FOREIGN KEY ( column_name
 >
 >表架構應是唯一的，並且不在多個表之間共用。 此外，對於主鍵約束，命名空間是必需的。
 
+#### 添加或刪除主標識和輔助標識
+
+的 `ALTER TABLE` 命令允許您直接通過SQL為主標識表列和輔助標識表列添加或刪除約束。
+
+以下示例通過添加約束來添加主標識和次標識。
+
+```sql
+ALTER TABLE t1 ADD CONSTRAINT PRIMARY IDENTITY (id) NAMESPACE 'IDFA';
+ALTER TABLE t1 ADD CONSTRAINT IDENTITY(id) NAMESPACE 'IDFA';
+```
+
+也可以通過刪除約束來刪除標識，如下例所示。
+
+```sql
+ALTER TABLE t1 DROP CONSTRAINT PRIMARY IDENTITY (c1) ;
+ALTER TABLE t1 DROP CONSTRAINT IDENTITY (c1) ;
+```
+
+有關在即席資料集中設定標識的詳細資訊，請參見文檔。
+
 #### 添加列
 
 以下SQL查詢顯示了向表添加列的示例。
@@ -756,6 +776,23 @@ ALTER TABLE table_name ADD COLUMN column_name data_type
 
 ALTER TABLE table_name ADD COLUMN column_name_1 data_type1, column_name_2 data_type2 
 ```
+
+##### 支援的資料類型
+
+下表列出了用於將列添加到具有 [!DNL Postgres SQL]、 XDM和 [!DNL Accelerated Database Recovery] (ADR)。
+
+| — | PSQL客戶端 | XDM | ADR | 說明 |
+|---|---|---|---|---|
+| 1 | `bigint` | `int8` | `bigint` | 用於儲存大整數的數字資料類型，大整數範圍從–9,223,372,036,854,775,807到9,223,372,036,854,775,807（8位元組）。 |
+| 2 | `integer` | `int4` | `integer` | 用於儲存從–2,147,483,648到2,147,483,647的整數（以4個位元組為單位）的數字資料類型。 |
+| 3 | `smallint` | `int2` | `smallint` | 用於儲存–32,768到215-1 32,767的整數（以2個位元組為單位）的數字資料類型。 |
+| 4 | `tinyint` | `int1` | `tinyint` | 用於儲存1個位元組中0到255的整數的數字資料類型。 |
+| 5 | `varchar(len)` | `string` | `varchar(len)` | 大小可變的字元資料類型。 `varchar` 當列資料條目的大小變化很大時，最好使用此選項。 |
+| 6 | `double` | `float8` | `double precision` | `FLOAT8` 和 `FLOAT` 是有效的同義詞 `DOUBLE PRECISION`。 `double precision` 是浮點資料類型。 浮點值以8個位元組儲存。 |
+| 7 | `double precision` | `float8` | `double precision` | `FLOAT8` 是的有效同義詞 `double precision`。`double precision` 是浮點資料類型。 浮點值以8個位元組儲存。 |
+| 8 | `date` | `date` | `date` | 的 `date` 資料類型是4位元組儲存的日曆日期值，沒有任何時間戳資訊。 有效日期的範圍為01-01-0001至12-31-9999。 |
+| 9 | `datetime` | `datetime` | `datetime` | 一種資料類型，用於儲存以日曆日期和時間表示的即時時間。 `datetime` 包括下列的合格者：年、月、日、小時、秒和分數。 A `datetime` 聲明可以包括這些時間單位中的任何子集，這些時間單位在該序列中連接，甚至只包括一個時間單位。 |
+| 10 | `char(len)` | `string` | `char(len)` | 的 `char(len)` 關鍵字用於指示項是固定長度字元。 |
 
 #### 添加架構
 
