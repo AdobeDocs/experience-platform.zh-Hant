@@ -2,9 +2,9 @@
 title: Adobe Experience Platform 發行說明
 description: Adobe Experience Platform的最新發行說明。
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: d8f62bdaa0d043fa2c27b25ae2a6f5979076314e
+source-git-commit: 8e1f4d8cef1a962a056328417a1dbdff1aed2078
 workflow-type: tm+mt
-source-wordcount: '1593'
+source-wordcount: '1685'
 ht-degree: 6%
 
 ---
@@ -20,16 +20,29 @@ ht-degree: 6%
 
 Adobe Experience Platform 現有功能更新：
 
+- [警報](#alerts)
 - [稽核記錄](#audit-logs)
 - [儀表板](#dashbaords)
 - [資料收集](#data-collection)
-
 <!-- - [Data Governance](#data-governance) -->
 - [資料準備](#data-prep)
 - [目的地](#destinations)
 - [體驗資料模型(XDM)](#xdm)
 - [查詢服務](#query-service)
 - [來源](#sources)
+
+## 警報 {#alerts}
+
+Experience Platform允許您訂閱各種平台活動的基於事件的警報。 您可以通過 [!UICONTROL 警報] 頁籤，並可以選擇在UI本身或通過電子郵件通知接收警報消息。
+
+**已更新功能**
+
+| 功能 | 警報規則 | 說明 |
+| --- | --- | --- |
+| 新建警報規則 | 跳頁率超過閾值 | 現在，當源資料流超過標識閾值時，您可以使用警報來接收通知。 請參閱 [警報規則](../../observability/alerts/rules.md) 的子菜單。 |
+
+{style=&quot;table-layout:auto&quot;}
+
 
 <!-- ## Attribute-based access control {#abac}
 
@@ -75,7 +88,7 @@ Experience Platform允許您審計用戶活動中的各種服務和功能。 審
 | --- | --- | --- |
 | 已添加資源 | <ul><li> 訪問控制策略 </li><li> 角色 </li><li> 稽核記錄 </li><li> 工作單 </li><li> 標識命名空間 </li><li> 標識圖 </li><li> 查詢 </li><li> 資料集 </li><li> 源資料流 </li></ul> | 在活動發生時自動記錄審核日誌資源。 如果啟用了該功能，則無需手動啟用日誌收集。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style=&quot;table-layout:auto&quot;&quot;
 
 有關平台中審核日誌的詳細資訊，請參閱 [審核日誌概述](../../landing/governance-privacy-security/audit-logs/overview.md)。
 
