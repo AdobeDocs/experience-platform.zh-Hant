@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 查詢服務中查詢執行的一般指導
 topic-legacy: queries
 type: Tutorial
-description: 本文檔詳細介紹了在Adobe Experience Platform查詢服務中寫入查詢時要瞭解的重要詳細資訊。
+description: 本文檔概述了在Adobe Experience Platform查詢服務中編寫查詢時需要瞭解的重要詳細資訊。
 exl-id: a7076c31-8f7c-455e-9083-cbbb029c93bb
-source-git-commit: c0e7ae8f65aa0373d35a55d4da46e0ffcb0e60f9
+source-git-commit: 7016c0ce1ca8be5cecb7c09d01e9fd2e48e551de
 workflow-type: tm+mt
 source-wordcount: '1031'
 ht-degree: 3%
