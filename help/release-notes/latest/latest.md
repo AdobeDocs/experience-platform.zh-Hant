@@ -2,9 +2,9 @@
 title: Adobe Experience Platform 發行說明
 description: Adobe Experience Platform的最新發行說明。
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 9484da6948243a098db2ff8ebdd59c5e70a51635
+source-git-commit: d8f62bdaa0d043fa2c27b25ae2a6f5979076314e
 workflow-type: tm+mt
-source-wordcount: '1553'
+source-wordcount: '1593'
 ht-degree: 6%
 
 ---
@@ -136,6 +136,7 @@ Experience Platform提供了一套技術，使您能夠收集客戶端客戶體�
 | 導入資料流映射規則 | 設定資料收集的資料準備時，您可以 [導入現有資料流的映射規則](../../edge/datastreams/data-prep.md#import-mapping) 而不是手動配置每個欄位映射。 |
 | 支援Mobile SDK的資料團隊映射 | 現在，您可以在要與Experience PlatformMobile SDK一起使用的資料流上配置資料收集的資料準備。 |
 | 支援XDM對象的資料團隊映射 | 將XDM對象與資料層對象映射為 [為資料收集配置資料準備](../../edge/datastreams/data-prep.md#select-data)。 |
+| 與資料流整合 | 使用平台中的源目錄訪問平台邊緣網路上的資料，包括資料收集準備和改進對資料準備警告的支援。 查看 [Adobe資料收集源概述](../../sources/connectors/adobe-applications/data-collection.md) 的子菜單。 |
 
 有關平台中資料收集的詳細資訊，請參閱 [資料收集概述](../../collection/home.md)。
 
@@ -238,7 +239,7 @@ Experience Platform提供REST風格的API和互動式UI，讓您能夠輕鬆地�
 | 功能 | 說明 |
 | --- | --- |
 | Beta版 [!DNL Zendesk] 源 | 使用 [!DNL Zendesk] 源，用於從您的 [!DNL Zendesk] 實例 [!DNL Profile] 濃縮。 查看 [[!DNL Zendesk] 源概述](../../sources/connectors/customer-success/zendesk.md) 的子菜單。 |
-| 支援Adobe資料收集 | 使用源目錄訪問資料收集體驗邊緣資料，包括資料收集的資料準備和對資料準備中資料警告的改進支援。 查看 [Adobe資料收集源概述](../../sources/connectors/adobe-applications/data-collection.md) 的子菜單。 |
+| 支援Adobe資料收集 | 使用平台中的源目錄訪問平台邊緣網路上的資料，包括資料收集準備和改進對資料準備警告的支援。 查看 [Adobe資料收集源概述](../../sources/connectors/adobe-applications/data-collection.md) 的子菜單。 |
 | 支援使用 `ISO-8859-1` 編碼 | 使用 `encoding` 參數以進行攝取 `ISO-8859-1` 已編碼檔案，其中包含雲儲存源到平台 [!DNL Flow Service] API。 請參閱上的指南 [建立雲儲存源連接](../../sources/tutorials/api/collect/cloud-storage.md) 的子菜單。 |
 
 {style=&quot;table-layout:auto&quot;&quot;
