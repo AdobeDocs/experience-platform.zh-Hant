@@ -5,10 +5,10 @@ description: 本檔案提供關於Adobe Experience Platform基於屬性的訪問
 hide: true
 hidefromtoc: true
 exl-id: 39634bde-8858-44a6-b39a-776846654fc1
-source-git-commit: 19f1e8df8cd8b55ed6b03f80e42810aefd211474
+source-git-commit: 143db2c19ec5ee7628b5cb9b30e71f24b4b3dcc8
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '376'
+ht-degree: 3%
 
 ---
 
@@ -17,6 +17,17 @@ ht-degree: 0%
 >[!IMPORTANT]
 >
 >基於屬性的訪問控制目前在面向美國醫療保健客戶的有限版本中提供。 這一功能一旦完全發佈，將可供所有Real-time Customer Data Platform客戶使用。
+
+權限是Adobe Experience Cloud的區域，管理員可以在該區域定義用戶角色和訪問策略，以管理產品應用程式中功能和對象的訪問權限。
+
+使用權限，您可以配置：
+
+* [標記](./labels.md)
+* [權限](./permissions.md)
+* [原則](./permissions.md)
+* [角色](./roles.md)
+* [沙箱](./sandboxes.md)
+* [使用者](./users.md)
 
 為了訪問基於屬性的訪問控制權限 [!DNL Experience Cloud]，您必須是您的組織的管理員，該組織具有對 [!DNL Experience Cloud]。 雖然Adobe支援組織的靈活管理員層次結構，但您必須是Adobe Experience Platform的產品管理員才能配置權限。 參見Adobe Help Center上的 [管理角色](https://helpx.adobe.com/enterprise/using/admin-roles.html) 的子菜單。
 

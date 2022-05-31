@@ -5,9 +5,9 @@ description: 本檔案提供關於Adobe Experience Platform基於屬性的訪問
 hide: true
 hidefromtoc: true
 exl-id: 8acd2bb6-eef8-4b23-8fd8-3566c7508fe7
-source-git-commit: 19f1e8df8cd8b55ed6b03f80e42810aefd211474
+source-git-commit: 02a17d8aed743b03219958cae2f0585f871e56f6
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '849'
 ht-degree: 0%
 
 ---
@@ -17,6 +17,10 @@ ht-degree: 0%
 >[!IMPORTANT]
 >
 >基於屬性的訪問控制目前在面向美國醫療保健客戶的有限版本中提供。 這一功能一旦完全發佈，將可供所有Real-time Customer Data Platform客戶使用。
+
+權限是Experience Cloud區域，管理員可以在該區域定義用戶角色和訪問策略，以管理產品應用程式中功能和對象的訪問權限。
+
+通過權限，您可以建立和管理角色，並為這些角色分配所需的資源權限。 權限還允許您管理與特定角色關聯的標籤、沙箱和用戶。
 
 緊接著 [建立新角色](#create-a-new-role)，則返回 **[!UICONTROL 角色]** 頁籤。 如果正在編輯現有角色的權限，請從 **[!UICONTROL 角色]** 頁籤。 或者，使用篩選器選項篩選結果以查找角色。
 

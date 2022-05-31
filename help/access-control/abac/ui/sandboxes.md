@@ -5,10 +5,10 @@ description: 本檔案提供關於Adobe Experience Platform基於屬性的訪問
 hide: true
 hidefromtoc: true
 exl-id: c21eb319-fc0d-442a-b778-bbfa2d6bb22d
-source-git-commit: 19f1e8df8cd8b55ed6b03f80e42810aefd211474
+source-git-commit: 02a17d8aed743b03219958cae2f0585f871e56f6
 workflow-type: tm+mt
-source-wordcount: '188'
-ht-degree: 1%
+source-wordcount: '245'
+ht-degree: 0%
 
 ---
 
@@ -17,6 +17,10 @@ ht-degree: 1%
 >[!IMPORTANT]
 >
 >基於屬性的訪問控制目前在面向美國醫療保健客戶的有限版本中提供。 這一功能一旦完全發佈，將可供所有Real-time Customer Data Platform客戶使用。
+
+沙箱是單個Experience Platform實例中的虛擬分區，它允許與數字型驗應用程式的開發過程無縫整合。 沙盒內執行的所有內容和操作僅限於該沙盒，不影響任何其他沙盒。 有關沙箱的詳細資訊，請參閱 [沙箱概述](../../../sandboxes/home.md)。
+
+## 配置沙箱
 
 要查看沙盒分配給/與的詳細資訊和角色，請選擇 **[!UICONTROL 沙箱]** 頁籤。
 
