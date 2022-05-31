@@ -3,13 +3,11 @@ keywords: Experience Platform；首頁；熱門主題；api；基於屬性的訪
 solution: Experience Platform
 title: 《基於屬性的訪問控制API指南》
 description: 基於屬性的訪問控制API允許您以寫程式方式管理Adobe Experience Platform內的角色和策略。 請遵循本指南以了解如何使用 API 執行關鍵作業。
-hide: true
-hidefromtoc: true
 exl-id: 0fc32354-4869-4392-9501-b1dbea1bc55e
-source-git-commit: 19f1e8df8cd8b55ed6b03f80e42810aefd211474
+source-git-commit: 567bfe089fd96cb08cb8ea7c90d065c804be9413
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '424'
+ht-degree: 4%
 
 ---
 

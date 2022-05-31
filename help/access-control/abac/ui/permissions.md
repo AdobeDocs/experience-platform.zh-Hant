@@ -1,13 +1,11 @@
 ---
 keywords: Experience Platform；主題；熱門主題；訪問控制；基於屬性的訪問控制；ABAC
 title: 基於屬性的訪問控制管理角色權限
-description: 本檔案提供關於Adobe Experience Platform基於屬性的訪問控制的資訊
-hide: true
-hidefromtoc: true
+description: 本文檔提供有關通過Adobe Experience Cloud的「權限」介面配置角色權限的資訊
 exl-id: 8acd2bb6-eef8-4b23-8fd8-3566c7508fe7
-source-git-commit: 02a17d8aed743b03219958cae2f0585f871e56f6
+source-git-commit: c31855bff9d87133252c43e2f2f2fe1960c7b144
 workflow-type: tm+mt
-source-wordcount: '849'
+source-wordcount: '855'
 ht-degree: 0%
 
 ---

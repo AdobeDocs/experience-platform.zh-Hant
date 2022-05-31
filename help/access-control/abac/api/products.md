@@ -3,13 +3,11 @@ keywords: Experience Platform；首頁；熱門主題；api；基於屬性的訪
 solution: Experience Platform
 title: 產品API終結點
 description: 基於屬性的訪問控制API中的/products端點允許您以寫程式方式管理Adobe Experience Platform的產品。
-hide: true
-hidefromtoc: true
 exl-id: 44ee9a9d-7a13-4d59-a1a9-97764dbd3763
-source-git-commit: 19f1e8df8cd8b55ed6b03f80e42810aefd211474
+source-git-commit: 567bfe089fd96cb08cb8ea7c90d065c804be9413
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '523'
+ht-degree: 3%
 
 ---
 
