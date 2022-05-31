@@ -5,9 +5,9 @@ title: MicrosoftDynamics源連接器概述
 topic-legacy: overview
 description: 瞭解如何使用API或用戶介面將MicrosoftDynamics連接到Adobe Experience Platform。
 exl-id: 6ca162ce-2016-4270-b741-301cf4230233
-source-git-commit: fa861e9740e05b4fcc4e8039bb288301d42b8357
+source-git-commit: 4fbf1b9a55c755d0bac9e15efbf6bdb25fa24deb
 workflow-type: tm+mt
-source-wordcount: '222'
+source-wordcount: '282'
 ht-degree: 1%
 
 ---
@@ -21,6 +21,21 @@ Adobe Experience Platform允許從外部源接收資料，同時讓您能夠使�
 ## IP地址允許清單
 
 在使用源連接器之前，必須將IP地址清單添加到允許清單。 如果無法將特定於區域的IP地址添加到允許清單，則在使用源時可能會導致錯誤或效能不佳。 查看 [IP地址允許清單](../../ip-address-allow-list.md) 的子菜單。
+
+## 欄位映射自 [!DNL Microsoft Dynamics] 到XDM
+
+建立源連接 [!DNL Microsoft Dynamics] 平台， [!DNL Microsoft Dynamics] 在將源資料欄位納入平台之前，必須將其映射到相應的目標XDM欄位。
+
+有關在以下位置之間的欄位映射規則的詳細資訊，請參閱以下 [!DNL Microsoft Dynamics] 資料集和平台：
+
+- [聯繫人](../adobe-applications/mapping/dynamics.md#contacts)
+- [銷售線索](../adobe-applications/mapping/dynamics.md#leads)
+- [帳戶](../adobe-applications/mapping/dynamics.md#accounts)
+- [機會](../adobe-applications/mapping/dynamics.md#opportunities)
+- [機會聯繫人角色](../adobe-applications/mapping/dynamics.md#opportunity-contact-roles)
+- [Campaigns](../adobe-applications/mapping/dynamics.md#campaigns)
+- [營銷員](../adobe-applications/mapping/dynamics.md#marketing-list)
+- [市場營銷清單成員](../adobe-applications/mapping/dynamics.md#marketing-list-members)
 
 以下文檔提供了有關如何連接的資訊 [!DNL Microsoft Dynamics] 至 [!DNL Platform] 使用API或用戶介面：
 

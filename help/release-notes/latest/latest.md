@@ -2,9 +2,9 @@
 title: Adobe Experience Platform 發行說明
 description: Adobe Experience Platform的最新發行說明。
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 8e1f4d8cef1a962a056328417a1dbdff1aed2078
+source-git-commit: 1b417935d557f7d58039c508544ed768f6ad1cc4
 workflow-type: tm+mt
-source-wordcount: '1685'
+source-wordcount: '1719'
 ht-degree: 6%
 
 ---
@@ -252,7 +252,8 @@ Experience Platform提供REST風格的API和互動式UI，讓您能夠輕鬆地�
 | 功能 | 說明 |
 | --- | --- |
 | Beta版 [!DNL Zendesk] 源 | 使用 [!DNL Zendesk] 源，用於從您的 [!DNL Zendesk] 實例 [!DNL Profile] 濃縮。 查看 [[!DNL Zendesk] 源概述](../../sources/connectors/customer-success/zendesk.md) 的子菜單。 |
-| 支援Adobe資料收集 | 使用平台中的源目錄訪問平台邊緣網路上的資料，包括資料收集準備和改進對資料準備警告的支援。 查看 [Adobe資料收集源概述](../../sources/connectors/adobe-applications/data-collection.md) 的子菜單。 |
+| B2B的普遍可用性 [!DNL Microsoft Dynamics] 源 | 您現在可以使用 [!DNL Microsoft Dynamics] 源，用於接收客戶、機會、市場活動、市場營銷清單和市場營銷清單成員等B2B對象。 查看 [[!DNL Microsoft Dynamics] 源概述](../../sources/connectors/crm/ms-dynamics.md) 的子菜單。 |
+| 支援Adobe資料收集 | 使用源目錄訪問資料收集體驗邊緣資料，包括資料收集的資料準備和對資料準備中資料警告的改進支援。 查看 [Adobe資料收集源概述](../../sources/connectors/adobe-applications/data-collection.md) 的子菜單。 |
 | 支援使用 `ISO-8859-1` 編碼 | 使用 `encoding` 參數以進行攝取 `ISO-8859-1` 已編碼檔案，其中包含雲儲存源到平台 [!DNL Flow Service] API。 請參閱上的指南 [建立雲儲存源連接](../../sources/tutorials/api/collect/cloud-storage.md) 的子菜單。 |
 
 {style=&quot;table-layout:auto&quot;&quot;

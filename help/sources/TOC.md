@@ -4,10 +4,10 @@ user-guide-title: Adobe Experience Platform 來源連接器說明
 breadcrumb-title: 來源連接器指南
 user-guide-description: 從多種來源或結構擷取資料、加標籤，以及增強已擷取的資料。
 feature: Sources
-source-git-commit: 3c80f3b297e7119067480739e206064bb2ace22c
+source-git-commit: b21e735b5c6c310b485700ef619302e3e3086763
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '785'
+ht-degree: 12%
 
 ---
 
@@ -27,6 +27,7 @@ ht-degree: 0%
          - [Audience Manager欄位映射](connectors/adobe-applications/mapping/audience-manager.md)
          - [目標欄位映射](connectors/adobe-applications/mapping/target.md)
          - [Marketo Engage欄位映射](connectors/adobe-applications/mapping/marketo.md)
+         - [Microsoft動力學欄位映射](connectors/adobe-applications/mapping/dynamics.md)
          - [Salesforce欄位映射](connectors/adobe-applications/mapping/salesforce.md)
       - Marketo {#marketo}
          - [Marketo Engage連接器](connectors/adobe-applications/marketo/marketo.md)
