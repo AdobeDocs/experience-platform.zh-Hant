@@ -4,7 +4,7 @@ description: 瞭解如何使用邊緣網路伺服器API與Adobe Analytics交互
 seo-description: Learn how to use the Edge Network Server API to interact with Adobe Analytics
 keywords: 資料採集；出口；分析；Adobe Experience Platform邊緣網路api；分析
 exl-id: b5e7a4d0-9aea-4e70-a7d6-b9aad09aaddf
-source-git-commit: 08b1924c518a76873051b4038d8a1fe38dc7ddac
+source-git-commit: 396dc8d861f0e699a76aa367fc07fe62be804cc5
 workflow-type: tm+mt
 source-wordcount: '190'
 ht-degree: 1%
@@ -28,7 +28,7 @@ Adobe Analytics的資料收集工作是將XDM資料轉換為Adobe Analytics能�
 ### API格式 {#format}
 
 ```http
-POST https://server.adobedc.net/v2/interact?dataStreamId={DATASTREAM_ID}
+POST https://server.adobedc.net/ee/v2/interact?dataStreamId={DATASTREAM_ID}
 ```
 
 ### 請求 {#request}
@@ -38,7 +38,7 @@ POST https://server.adobedc.net/v2/interact?dataStreamId={DATASTREAM_ID}
 用戶映射到這些欄位的所有值將自動映射到相應的分析值，就像它們包含在API請求中一樣。
 
 ```shell
-curl -X POST "https://server.adobedc.net/v2/interact?dataStreamId={DATASTREAM_ID}" \
+curl -X POST "https://server.adobedc.net/ee/v2/interact?dataStreamId={DATASTREAM_ID}" \
 -H "Authorization: Bearer {TOKEN}" 
 -H "x-gw-ims-org-id: {ORG_ID}" 
 -H "x-api-key: {API_KEY}" 

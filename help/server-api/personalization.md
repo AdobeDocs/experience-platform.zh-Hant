@@ -3,7 +3,7 @@ title: 從其他Adobe解決方案檢索個性化內容
 description: 瞭解如何使用Adobe Experience Platform邊緣網路伺服器API從Adobe個性化解決方案中檢索個性化內容
 seo-description: Learn how to use the Adobe Experience Platform Edge Network Server API to retrieve personalized content from Adobe personalization solutions
 keywords: 個性化；伺服器api;Adobe Experience Platform邊緣網路；檢索個性化
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 3c9dff35cf1645b31207719ec73a68da37e8d685
 workflow-type: tm+mt
 source-wordcount: '671'
 ht-degree: 9%
@@ -138,7 +138,7 @@ POST /ee/v2/interact
 ### 請求 {#request}
 
 ```shell
-curl -X POST "https://server.adobedc.net/v2/interact?dataStreamId={DATASTREAM_ID}"
+curl -X POST "https://server.adobedc.net/ee/v2/interact?dataStreamId={DATASTREAM_ID}"
 -H "Authorization: Bearer {TOKEN}"
 -H "x-gw-ims-org-id: {ORG_ID}"
 -H "x-api-key: {API_KEY}"
@@ -253,13 +253,13 @@ curl -X POST "https://server.adobedc.net/v2/interact?dataStreamId={DATASTREAM_ID
 ### API格式
 
 ```http
-POST /v2/collect
+POST /ee/v2/collect
 ```
 
 ### 請求
 
 ```shell
-url -X POST "https://server.adobedc.net/v2/collect?dataStreamId={DATASTREAM_ID}" 
+url -X POST "https://server.adobedc.net/ee/v2/collect?dataStreamId={DATASTREAM_ID}" 
 -H "Authorization: Bearer {TOKEN}" 
 -H "x-gw-ims-org-id: {ORG_ID}" 
 -H "x-api-key: {API_KEY}"
