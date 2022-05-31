@@ -4,9 +4,9 @@ user-guide-title: 資料衛生幫助
 breadcrumb-title: 資料衛生指南
 user-guide-description: 管理消費者資料請求以遵守法律隱私法規，如GDPR和CCPA。
 feature: Privacy
-source-git-commit: adce89e5601daf18fe9cacb704a787472262db41
+source-git-commit: 9057d424d63217a3cef7ad2237a65700d9159323
 workflow-type: tm+mt
-source-wordcount: '54'
+source-wordcount: '52'
 ht-degree: 3%
 
 ---
@@ -18,9 +18,8 @@ ht-degree: 3%
 * 資料衛生UI {#ui}
    * [總覽](./ui/overview.md)
    * [瀏覽現有工作單](./ui/browse.md)
-   * [刪除使用者資料](./ui/delete-consumer.md)
    * [管理資料集的生存時間(TTL)](./ui/ttl.md)
 * 資料衛生API {#api}
    * [總覽](./api/overview.md)
-   * [工作單](./api/workorder.md)
    * [資料集生存時間(TTL)](./api/ttl.md)
+   * [使用者刪除作業](./api/jobs.md)

@@ -2,9 +2,9 @@
 title: Adobe Experience Platform 發行說明
 description: Adobe Experience Platform的最新發行說明。
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: b557946252cd2afc07159caad939ec3a11d35e28
+source-git-commit: c318d64f6dc09094855ec20d998a7c41d837211f
 workflow-type: tm+mt
-source-wordcount: '2389'
+source-wordcount: '2375'
 ht-degree: 5%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 5%
 
 Adobe Experience Platform的新功能：
 
-- [基於屬性的訪問控制](#abac) —>
+- [基於屬性的訪問控制](#abac)
 - [資料衛生](#hygiene)
 
 Adobe Experience Platform 現有功能更新：
@@ -60,8 +60,9 @@ Experience Platform提供了一套資料衛生功能，允許您通過寫程式�
 
 | 功能 | 說明 |
 | --- | --- |
-| 用戶刪除 | [刪除使用者記錄](../../hygiene/ui/delete-consumer.md) 基於主身份資料從資料湖和配置檔案儲存中獲取。 |
 | 資料集的生存時間(TTL) | [計畫TTL](../../hygiene/ui/ttl.md) 用於平台資料集。 |
+
+{style=&quot;table-layout:auto&quot;}
 
 有關平台中審核日誌的詳細資訊，請參閱 [資料衛生概述](../../hygiene/home.md)。
 
@@ -75,7 +76,7 @@ Experience Platform允許您訂閱各種平台活動的基於事件的警報。 
 | --- | --- | --- |
 | 新建警報規則 | 跳頁率超過閾值 | 現在，當源資料流超過標識閾值時，您可以使用警報來接收通知。 請參閱 [警報規則](../../observability/alerts/rules.md) 的子菜單。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style=&quot;table-layout:auto&quot;&quot;
 
 有關警報的詳細資訊，請參閱 [[!DNL Observability Insights] 概述](../../observability/home.md)。
 

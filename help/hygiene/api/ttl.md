@@ -2,9 +2,7 @@
 title: 資料集生存時間(TTL)API終結點
 description: 資料衛生API中的/ttl端點允許您以寫程式方式調度Adobe Experience Platform的資料集TTL。
 exl-id: fbabc2df-a79e-488c-b06b-cd72d6b9743b
-hide: true
-hidefromtoc: true
-source-git-commit: c2e7cf1859f6a2b277783cdec535ecc208703fac
+source-git-commit: 22da9e39e168d9a995c7c134733aa7a1b3587749
 workflow-type: tm+mt
 source-wordcount: '1315'
 ht-degree: 6%

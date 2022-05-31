@@ -2,11 +2,9 @@
 title: 《資料衛生API指南》
 description: 瞭解如何以寫程式方式更正或刪除客戶在Adobe Experience Platform儲存的個人資料。
 exl-id: 78c8b15b-b433-4168-a1e8-c97b96e4bf85
-hide: true
-hidefromtoc: true
-source-git-commit: c2e7cf1859f6a2b277783cdec535ecc208703fac
+source-git-commit: 22da9e39e168d9a995c7c134733aa7a1b3587749
 workflow-type: tm+mt
-source-wordcount: '349'
+source-wordcount: '309'
 ht-degree: 1%
 
 ---
@@ -41,9 +39,9 @@ ht-degree: 1%
 
 本文檔提供了一個示例API調用，以演示如何格式化請求。 有關示例API調用文檔中使用的約定的資訊，請參見上的 [如何讀取示例API調用](../../landing/api-guide.md#sample-api) 的FTP伺服器連接設定。
 
-## 工作單
+<!-- ## Work orders
 
-工作單是從特定資料集或所有資料集中刪除使用者身份的資料衛生任務的表示。 查看 [工作單終結點指南](./workorder.md) 的子菜單。
+A work order is a representation of a data hygiene task that deletes consumer identities from a specific dataset or all datasets. See the [work order endpoint guide](./workorder.md) for details on working with work orders in the API. -->
 
 ## 資料集的生存時間(TTL)
 
