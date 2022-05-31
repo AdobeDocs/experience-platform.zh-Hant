@@ -4,9 +4,9 @@ user-guide-title: 目的地指南
 user-guide-description: 針對跨通路行銷活動、電子郵件宣傳、鎖定特定目標的行銷活動和其他諸多使用案例，啟用已知和未知的資料。
 description: 本文檔列出了Adobe Experience Platform目標的目錄
 feature: Destinations
-source-git-commit: 0f3cb17650612399091c12a6b638471a80306729
+source-git-commit: d01875bcb89d887ca4f4dbb9e7fe6179446faa3c
 workflow-type: tm+mt
-source-wordcount: '755'
+source-wordcount: '759'
 ht-degree: 8%
 
 ---
@@ -48,6 +48,7 @@ ht-degree: 8%
       * [Experience Platform分部共用](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html)
    * 廣告目的地{#advertising}
       * [廣告目標概述](./catalog/advertising/overview.md)
+      * [Adobe Advertising Cloud](./catalog/advertising/adobe-advertising-cloud-connection.md)
       * [Adobe Advertising Cloud擴展](./catalog/advertising/adobe-advertising-cloud.md)
       * [Awin廣告商轉換標籤擴展](./catalog/advertising/awin-conversiontag.md)
       * [Awin Dacriter Mastertag擴展](./catalog/advertising/awin-mastertag.md)
