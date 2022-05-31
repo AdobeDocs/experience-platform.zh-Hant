@@ -2,10 +2,10 @@
 title: Adobe Experience Platform 發行說明
 description: Adobe Experience Platform的最新發行說明。
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 1b417935d557f7d58039c508544ed768f6ad1cc4
+source-git-commit: b557946252cd2afc07159caad939ec3a11d35e28
 workflow-type: tm+mt
-source-wordcount: '1719'
-ht-degree: 6%
+source-wordcount: '2389'
+ht-degree: 5%
 
 ---
 
@@ -13,10 +13,10 @@ ht-degree: 6%
 
 **發行日期：2022 年 5 月 25 日**
 
-<!-- New features in Adobe Experience Platform: -->
+Adobe Experience Platform的新功能：
 
-<!-- - [Attribute-based access control](#abac) -->
-<!-- - [Data hygiene](#hygiene) -->
+- [基於屬性的訪問控制](#abac) —>
+- [資料衛生](#hygiene)
 
 Adobe Experience Platform 現有功能更新：
 
@@ -24,12 +24,46 @@ Adobe Experience Platform 現有功能更新：
 - [稽核記錄](#audit-logs)
 - [儀表板](#dashbaords)
 - [資料收集](#data-collection)
-<!-- - [Data Governance](#data-governance) -->
+- [資料治理](#data-governance)
 - [資料準備](#data-prep)
 - [目的地](#destinations)
 - [體驗資料模型(XDM)](#xdm)
 - [查詢服務](#query-service)
 - [來源](#sources)
+
+## 基於屬性的訪問控制 {#abac}
+
+>[!IMPORTANT]
+>
+>基於屬性的訪問控制目前在面向美國醫療保健客戶的有限版本中提供。 這一功能一旦完全發佈，將可供所有Real-time Customer Data Platform客戶使用。
+
+基於屬性的訪問控制是Adobe Experience Platform的一種功能，它使管理員能夠基於屬性控制對特定對象和/或權能的訪問。 屬性可以是添加到對象的元資料，如添加到架構欄位或段的標籤。 管理員定義包括屬性的訪問策略以管理用戶訪問權限。
+
+通過基於屬性的訪問控制，您組織的管理員可以控制用戶對所有平台工作流和資源中敏感個人資料(SPD)和個人識別資訊(PII)的訪問。 管理員可以定義只能訪問特定欄位和與這些欄位對應的資料的用戶角色。
+
+| 功能 | 說明 |
+| --- | --- |
+| 基於屬性的訪問控制 | 基於屬性的訪問控制允許您使用定義組織或資料使用範圍的標籤來標籤體驗資料模型(XDM)架構欄位。 同時，管理員可以使用用戶和角色管理介面來定義涵蓋XDM架構欄位的訪問策略，並更好地管理提供給用戶或用戶組（內部、外部或第三方用戶）的訪問。 此外，基於屬性的訪問控制允許管理員管理對特定段的訪問。 有關詳細資訊，請參見 [基於屬性的訪問控制概述](../../access-control/abac/overview.md)。 |
+| 權限 | 權限是Experience Cloud區域，管理員可以在該區域定義用戶角色和訪問策略，以管理產品應用程式中功能和對象的訪問權限。 通過權限，您可以建立和管理角色，並為這些角色分配所需的資源權限。 權限還允許您管理與特定角色關聯的標籤、沙箱和用戶。 有關詳細資訊，請參見 [權限UI指南](../../access-control/abac/ui/browse.md)。 |
+
+有關基於屬性的訪問控制的詳細資訊，請參閱 [基於屬性的訪問控制概述](../../access-control/abac/overview.md)。
+
+## 資料衛生 {#hygiene}
+
+Experience Platform提供了一套資料衛生功能，允許您通過寫程式刪除消費者記錄和資料集來管理儲存的資料。 使用 [!UICONTROL 資料衛生] 在UI中或通過調用資料衛生API，您可以管理資料儲存以確保資訊按預期使用，在錯誤資料需要修復時更新，並在組織策略認為有必要時刪除。
+
+>[!IMPORTANT]
+>
+>目前，資料衛生功能僅適用於已購買「Adobe保護保健」附加產品的組織。
+
+**新功能**
+
+| 功能 | 說明 |
+| --- | --- |
+| 用戶刪除 | [刪除使用者記錄](../../hygiene/ui/delete-consumer.md) 基於主身份資料從資料湖和配置檔案儲存中獲取。 |
+| 資料集的生存時間(TTL) | [計畫TTL](../../hygiene/ui/ttl.md) 用於平台資料集。 |
+
+有關平台中審核日誌的詳細資訊，請參閱 [資料衛生概述](../../hygiene/home.md)。
 
 ## 警報 {#alerts}
 
@@ -43,40 +77,7 @@ Experience Platform允許您訂閱各種平台活動的基於事件的警報。 
 
 {style=&quot;table-layout:auto&quot;}
 
-
-<!-- ## Attribute-based access control {#abac}
-
->[!IMPORTANT]
->
->Attribute-based access control is currently available in a limited release for US-based healthcare customers. This capability will be available to all Real-time Customer Data Platform customers once it is fully released.
-
-Attribute-based access control is a capability of Adobe Experience Platform that enables administrators to control access to specific objects and/or capabilities based on attributes. Attributes can be metadata added to an object, such as a label added to a schema field or segment. An administrator defines access policies that include attributes to manage user access permissions.
-
-Through attribute-based access control, administrators of your organization can control users’ access to both sensitive personal data (SPD) and personally identifiable information (PII) across all Platform workflows and resources. Administrators can define user roles that have access only to specific fields and data that correspond to those fields.
-
-| Feature | Description |
-| --- | --- |
-| Attribute-based access control | Attribute-based access control allows you to label Experience Data Model (XDM) schema fields with labels that define organizational or data usage scopes. In parallel, administrators can use the user and role administration interface to define access policies covering XDM schema fields and better manage the access given to users or groups of users (internal, external, or third-party users). Additionally, attribute-based access control allows administrators to manage access to specific segments. |
-| Permissions | Permissions is the area of Experience Cloud where administrators can define user roles and access policies to manage access permissions for features and objects within a product application. Through Permissions, you can create and manage roles, as well as assign the desired resource permissions for these roles. Permissions also allow you to manage the labels, sandboxes, and users associated with a specific role. For more information, see the [Permissions UI guide](../../access-control/abac/ui/browse.md). |
-
-For more information on attribute-based access control, see the [attribute-based access control overview](../../access-control/abac/overview.md). -->
-
-<!-- ## Data hygiene {#hygiene}
-
-Experience Platform provides a suite of data hygiene capabilities that allow you manage your stored data through programmatic deletions of consumer records and datasets. Using either the [!UICONTROL Data Hygiene] workspace in the UI or through calls to the Data Hygiene API, you can manage your data stores to ensure that information is used as expected, is updated when incorrect data needs fixing, and is deleted when organizational policies deem it necessary.
-
->[!IMPORTANT]
->
->Data hygiene capabilities are currently only available for organizations that have purchased the Adobe Shield for Healthcare add-on offering.
-
-**New features**
-
-| Feature | Description |
-| --- | --- |
-| Consumer deletion | [Delete consumer records](../../hygiene/ui/delete-consumer.md) from the data lake and Profile store based on primary identity data. |
-| Time to live (TTL) for datasets | [Schedule TTLs](../../hygiene/ui/ttl.md) for Platform datasets.  |
-
-For more information on audit logs in Platform, refer to the [data hygiene overview](../../hygiene/home.md). -->
+有關警報的詳細資訊，請參閱 [[!DNL Observability Insights] 概述](../../observability/home.md)。
 
 ## 稽核記錄 {#audit-logs}
 
@@ -153,19 +154,19 @@ Experience Platform提供了一套技術，使您能夠收集客戶端客戶體�
 
 有關平台中資料收集的詳細資訊，請參閱 [資料收集概述](../../collection/home.md)。
 
-<!-- ## Data Governance {#governance}
+## 資料治理 {#governance}
 
-Adobe Experience Platform Data Governance is a series of strategies and technologies used to manage customer data and ensure compliance with regulations, restrictions, and policies applicable to data usage. It plays a key role within [!DNL Experience Platform] at various levels, including cataloging, data lineage, data usage labeling, data access policies, and access control on data for marketing actions.
+Adobe Experience Platform資料治理是用於管理客戶資料和確保遵守適用於資料使用的法規、限制和策略的一系列戰略和技術。 它在 [!DNL Experience Platform] 包括編目、資料沿襲、資料使用標籤、資料存取策略和對資料的訪問控制，以執行市場營銷操作。
 
-**New features**
+**新功能**
 
-| Feature | Description | 
+| 功能 | 說明 |
 | ------- | ----------- |
-| Consent policy enforcement (limited availability) | If your organization has purchased the Adobe Shield for Healthcare add-on offering, you can now [create consent policies](../../data-governance/policies/user-guide.md#consent-policy) to automatically [enforce customer consents and preferences in segment participation](../../data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation). |
+| 同意策略執行（可用性有限） | 如果您的組織已購買了「Adobe保護醫療保健」附加產品，您現在可以 [建立同意策略](../../data-governance/policies/user-guide.md#consent-policy) 自動 [在分部參與中強制客戶同意和偏好](../../data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation)。 |
 
-{style="table-layout:auto"}
+{style=&quot;table-layout:auto&quot;&quot;
 
-See the [Data Governance overview](../../data-governance/home.md) for more information on the service. -->
+查看 [資料治理概述](../../data-governance/home.md) 的子菜單。
 
 ## [!DNL Data Prep] {#data-prep}
 
@@ -175,12 +176,11 @@ See the [Data Governance overview](../../data-governance/home.md) for more infor
 
 | 功能 | 說明 |
 | ------- | ----------- |
+| 基於屬性的訪問控制 [!DNL Data Prep] | 您現在只能映射您有權訪問的屬性。 您無權訪問的屬性不能用於傳遞映射和計算欄位。 有關詳細資訊，請參見 [基於屬性的訪問控制 [!DNL Data Prep]](../../data-prep/home.md)。 **注釋**:基於屬性的訪問控制目前在面向美國醫療保健客戶的有限版本中提供。 這一功能一旦完全發佈，將可供所有Real-time Customer Data Platform客戶使用。 |
 | 本地化資料錯誤 | [!DNL Data Prep] 現在將所有轉換錯誤鎖定到屬性級別（以前在行級別）。 現在，資料流將接收填充有沒有任何轉換錯誤的列的部分行，而不是忽略完整行。 |
 | 向上插入流到 [!DNL Profile Service] | 流上插頁 [!DNL Data Prep] 將部分行更新發送到配置檔案服務 [[!DNL Amazon Kinesis]](../../sources/connectors/cloud-storage/kinesis.md)。 [[!DNL Azure Event Hubs]](../../sources/connectors/cloud-storage/eventhub.md)或 [[!DNL HTTP API]](../../sources/connectors/streaming/http.md) 源。 請參閱上的指南 [流式](../../data-prep/upserts.md) 的子菜單。 |
 
 {style=&quot;table-layout:auto&quot;&quot;
-
-<!-- | Attribute-based access control in [!DNL Data Prep] | You will now only be able to map attributes that you have access to. Attributes that you do not have access to can not be used in pass-through mappings and calculated fields. For more information, see [attribute-based access control in [!DNL Data Prep]](../../data-prep/home.md). **Note**: Attribute-based access control is currently available in a limited release for US-based healthcare customers. This capability will be available to all Real-time Customer Data Platform customers once it is fully released. | -->
 
 有關 [!DNL Data Prep]，請參閱 [[!DNL Data Prep] 概述](../../data-prep/home.md)。
 
@@ -239,9 +239,9 @@ XDM是一種開源規範，它為傳入Adobe Experience Platform的資料提供�
 
 {style=&quot;table-layout:auto&quot;&quot;
 
-<!-- For more information on data governance in Query Service, see the [data governance overview](../../query-service/data-governance/overview.md). -->
-
 有關查詢服務功能的詳細資訊，請參見 [查詢服務概述](../../query-service/home.md)
+
+<!--For more information on data governance in Query Service, see the [data governance overview](../../query-service/data-governance/overview.md).-->
 
 ## 來源 {#sources}
 
@@ -251,13 +251,11 @@ Experience Platform提供REST風格的API和互動式UI，讓您能夠輕鬆地�
 
 | 功能 | 說明 |
 | --- | --- |
+| 源中基於屬性的訪問控制 | 您現在可以在接收期間管理和控制對單個源欄位和屬性的訪問。 **注釋**:基於屬性的訪問控制目前在面向美國醫療保健客戶的有限版本中提供。 這一功能一旦完全發佈，將可供所有Real-time Customer Data Platform客戶使用。 |
 | Beta版 [!DNL Zendesk] 源 | 使用 [!DNL Zendesk] 源，用於從您的 [!DNL Zendesk] 實例 [!DNL Profile] 濃縮。 查看 [[!DNL Zendesk] 源概述](../../sources/connectors/customer-success/zendesk.md) 的子菜單。 |
-| B2B的普遍可用性 [!DNL Microsoft Dynamics] 源 | 您現在可以使用 [!DNL Microsoft Dynamics] 源，用於接收客戶、機會、市場活動、市場營銷清單和市場營銷清單成員等B2B對象。 查看 [[!DNL Microsoft Dynamics] 源概述](../../sources/connectors/crm/ms-dynamics.md) 的子菜單。 |
-| 支援Adobe資料收集 | 使用源目錄訪問資料收集體驗邊緣資料，包括資料收集的資料準備和對資料準備中資料警告的改進支援。 查看 [Adobe資料收集源概述](../../sources/connectors/adobe-applications/data-collection.md) 的子菜單。 |
+| 支援Adobe資料收集 | 使用平台中的源目錄訪問平台邊緣網路上的資料，包括資料收集準備和改進對資料準備警告的支援。 查看 [Adobe資料收集源概述](../../sources/connectors/adobe-applications/data-collection.md) 的子菜單。 |
 | 支援使用 `ISO-8859-1` 編碼 | 使用 `encoding` 參數以進行攝取 `ISO-8859-1` 已編碼檔案，其中包含雲儲存源到平台 [!DNL Flow Service] API。 請參閱上的指南 [建立雲儲存源連接](../../sources/tutorials/api/collect/cloud-storage.md) 的子菜單。 |
 
 {style=&quot;table-layout:auto&quot;&quot;
-
-<!-- | Attribute-based access control in sources | You can now manage and control access to individual source fields and attributes during ingestion. **Note**: Attribute-based access control is currently available in a limited release for US-based healthcare customers. This capability will be available to all Real-time Customer Data Platform customers once it is fully released.  | -->
 
 要瞭解有關源的詳細資訊，請參閱 [源概述](../../sources/home.md)。
