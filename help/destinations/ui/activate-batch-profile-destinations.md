@@ -6,9 +6,9 @@ seo-title: Activate audience data to batch profile export destinations
 description: 瞭解如何通過將段發送到基於批處理配置檔案的目標來激活您在Adobe Experience Platform擁有的受眾資料。
 seo-description: Learn how to activate the audience data you have in Adobe Experience Platform by sending segments to batch profile-based destinations.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: 95dd6982eeecf6b13b6c8a6621b5e6563c25ae26
+source-git-commit: b19dc5c0d67bc218de0366fdc40f752ce7c3ad71
 workflow-type: tm+mt
-source-wordcount: '2411'
+source-wordcount: '2544'
 ht-degree: 0%
 
 ---
@@ -31,15 +31,15 @@ ht-degree: 0%
 
 1. 轉到 **[!UICONTROL 連接>目標]**，然後選擇 **[!UICONTROL 目錄]** 頁籤。
 
-   ![目標目錄頁籤](../assets/ui/activate-batch-profile-destinations/catalog-tab.png)
+   ![突出顯示如何進入目標目錄頁籤的影像](../assets/ui/activate-batch-profile-destinations/catalog-tab.png)
 
 1. 選擇 **[!UICONTROL 激活段]** 在與要激活段的目標相對應的卡上，如下圖所示。
 
-   ![「激活段」按鈕](../assets/ui/activate-batch-profile-destinations/activate-segments-button.png)
+   ![突出顯示「激活段」按鈕的影像](../assets/ui/activate-batch-profile-destinations/activate-segments-button.png)
 
 1. 選擇要用於激活段的目標連接，然後選擇 **[!UICONTROL 下一個]**。
 
-   ![選擇目標](../assets/ui/activate-batch-profile-destinations/select-destination.png)
+   ![影像突出顯示如何選擇一個或多個目標以激活段](../assets/ui/activate-batch-profile-destinations/select-destination.png)
 
 1. 移至下一節 [選擇段](#select-segments)。
 
@@ -47,7 +47,7 @@ ht-degree: 0%
 
 使用段名稱左側的複選框選擇要激活到目標的段，然後選擇 **[!UICONTROL 下一個]**。
 
-![選擇段](../assets/ui/activate-batch-profile-destinations/select-segments.png)
+![影像突出顯示如何選擇一個或多個段以激活](../assets/ui/activate-batch-profile-destinations/select-segments.png)
 
 
 ## 計畫段導出 {#scheduling}
@@ -68,7 +68,7 @@ ht-degree: 0%
 
 選擇 **[!UICONTROL 建立計畫]** 按鈕。
 
-![「建立計畫」按鈕](../assets/ui/activate-batch-profile-destinations/create-schedule-button.png)
+![突出顯示「建立計畫」按鈕的影像](../assets/ui/activate-batch-profile-destinations/create-schedule-button.png)
 
 ### 導出完整檔案 {#export-full-files}
 
@@ -90,7 +90,7 @@ ht-degree: 0%
 
 選擇 **[!UICONTROL 導出完整檔案]** 觸發檔案導出，該檔案包含選定段的所有配置檔案資格的完整快照。
 
-![導出完整檔案](../assets/ui/activate-batch-profile-destinations/export-full-files.png)
+![選擇「導出完整檔案」時的UI影像。](../assets/ui/activate-batch-profile-destinations/export-full-files.png)
 
 1. 使用 **[!UICONTROL 頻率]** 選擇器以選擇導出頻率：
 
@@ -132,7 +132,7 @@ ht-degree: 0%
 >
 >第一個導出的增量檔案包括所有符合段條件的配置檔案，這些配置檔案可用作回填。
 
-![導出增量檔案](../assets/ui/activate-batch-profile-destinations/export-incremental-files.png)
+![選擇「導出增量檔案」時的UI影像。](../assets/ui/activate-batch-profile-destinations/export-incremental-files.png)
 
 1. 使用 **[!UICONTROL 頻率]** 選擇器以選擇導出頻率：
 
@@ -164,11 +164,15 @@ ht-degree: 0%
 
 選取鉛筆表徵圖以開啟模式窗口並編輯檔案名。 檔案名限制為255個字元。
 
-![配置檔案名](../assets/ui/activate-batch-profile-destinations/configure-name.png)
+>[!NOTE]
+>
+>下圖顯示了如何為AmazonS3目標編輯檔案名，但所有批處理目標（例如SFTP或Azure Blob儲存）的進程相同。
+
+![用於配置檔案名的鉛筆表徵圖突出顯示影像。](../assets/ui/activate-batch-profile-destinations/configure-name.png)
 
 在檔案名編輯器中，可以選擇要添加到檔案名中的不同元件。
 
-![編輯檔案名稱選項](../assets/ui/activate-batch-profile-destinations/activate-workflow-configure-step-2.png)
+![顯示所有可用檔案名選項的影像。](../assets/ui/activate-batch-profile-destinations/activate-workflow-configure-step-2.png)
 
 無法從檔案名中刪除目標名稱和段ID。 除這些外，還可以添加以下內容：
 
@@ -191,15 +195,15 @@ ht-degree: 0%
 
 1. 在 **[!UICONTROL 選擇屬性]** ，選擇 **[!UICONTROL 添加新欄位]**。
 
-   ![添加新映射](../assets/ui/activate-batch-profile-destinations/add-new-field.png)
+   ![突出顯示「添加新欄位」按鈕的影像。](../assets/ui/activate-batch-profile-destinations/add-new-field.png)
 
 1. 選擇右側的箭頭 **[!UICONTROL 架構欄位]** 的子菜單。
 
-   ![選擇源欄位](../assets/ui/activate-batch-profile-destinations/select-target-field.png)
+   ![突出顯示如何選擇源欄位的影像。](../assets/ui/activate-batch-profile-destinations/select-target-field.png)
 
 1. 在 **[!UICONTROL 選擇欄位]** 頁，選擇要發送到目標的XDM屬性，然後選擇 **[!UICONTROL 選擇]**。
 
-   ![「選擇源欄位」頁](../assets/ui/activate-batch-profile-destinations/target-field-page.png)
+   ![該影像顯示作為源欄位可用的各個欄位。](../assets/ui/activate-batch-profile-destinations/target-field-page.png)
 
 1. 要添加更多映射，請重複步驟1至3。
 
@@ -211,7 +215,7 @@ ht-degree: 0%
 * 如果 `segmentMembership.status` 欄位，導出的檔案包括 **[!UICONTROL 活動]** 初始完整快照中的成員和 **[!UICONTROL 活動]** 和 **[!UICONTROL 已過期]** 後續增量導出中的成員。
 * 如果 `segmentMembership.status` 欄位未選中，導出的檔案僅包括 **[!UICONTROL 活動]** 初始完整快照和後續增量導出中的成員。
 
-![推薦屬性](../assets/ui/activate-batch-profile-destinations/mandatory-deduplication.png)
+![在段激活工作流的映射步驟中顯示預填充的建議屬性的影像。](../assets/ui/activate-batch-profile-destinations/mandatory-deduplication.png)
 
 ### 必需屬性 {#mandatory-attributes}
 
@@ -384,11 +388,11 @@ Adobe建議選擇標識命名空間，如 [!DNL CRM ID] 或電子郵件地址作
 >
 >在此步驟中，Adobe Experience Platform檢查資料使用策略違規。 下面顯示的示例違反了策略。 在解決違規之前，無法完成段激活工作流。 有關如何解決策略違規的資訊，請參見 [策略執行](../../rtcdp/privacy/data-governance-overview.md#enforcement) 資料治理文檔部分。
 
-![資料策略違規](../assets/common/data-policy-violation.png)
+![顯示資料策略違規示例的影像。](../assets/common/data-policy-violation.png)
 
 如果未檢測到任何策略違規，請選擇 **[!UICONTROL 完成]** 確認選擇並開始向目標發送資料。
 
-![審閱](../assets/ui/activate-batch-profile-destinations/review.png)
+![顯示段激活工作流的審閱螢幕的影像。](../assets/ui/activate-batch-profile-destinations/review.png)
 
 ## 驗證段激活 {#verify}
 
