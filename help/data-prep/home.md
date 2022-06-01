@@ -5,9 +5,9 @@ title: 資料準備概述
 topic-legacy: overview
 description: 本文檔介紹Adobe Experience Platform內的資料準備。
 exl-id: f15eeb50-a531-4560-a524-1a670fbda706
-source-git-commit: 3dac1a80e640364f8c0b6b6fd81821499bf889b3
+source-git-commit: d6d8b6ad9877735848d04cb229b3059842471ee8
 workflow-type: tm+mt
-source-wordcount: '594'
+source-wordcount: '715'
 ht-degree: 0%
 
 ---
@@ -54,6 +54,14 @@ Data Prep可以強健地處理不同格式的資料，這些資料被導入平�
 ## 使用 [!DNL Data Prep]
 
 流上插頁 [!DNL Data Prep] 允許您將部分行更新發送到 [!DNL Profile Service] 資料，同時使用單個API請求建立和建立新的標識連結。 瞭解有關如何流式傳輸上插頁的詳細資訊 [!DNL Data Prep]，請參閱上的文檔 [發送部分行更新](./upserts.md)。
+
+## 基於屬性的訪問控制 [!DNL Data Prep]
+
+Adobe Experience Platform基於屬性的訪問控制允許管理員基於屬性控制對特定對象和/或權能的訪問。
+
+基於屬性的訪問控制可確保您只能映射您有權訪問的屬性。 您無權訪問的屬性不能用於傳遞映射和計算欄位。 因此，如果您沒有訪問必填欄位的權限，則無法成功保存映射。 此外，如果您沒有訪問任何子屬性的權限，則不能映射對象或對象陣列。 但是，可以單獨映射對象或對象陣列中的其他元素。
+
+查看 [基於屬性的訪問控制概述](../access-control/abac/overview.md) 的子菜單。
 
 ## 後續步驟
 
