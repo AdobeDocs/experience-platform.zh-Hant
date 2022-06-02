@@ -3,9 +3,9 @@ keywords: Experience Platform；主題；熱門主題；訪問控制；基於屬
 title: 基於屬性的訪問控制概述
 description: 本檔案提供關於Adobe Experience Platform基於屬性的訪問控制的資訊
 exl-id: 5495c55f-b808-40c1-8896-e03eace0ca4d
-source-git-commit: 567bfe089fd96cb08cb8ea7c90d065c804be9413
+source-git-commit: 6156d84cfdd33f8fe491e9a80e3711cf304733e9
 workflow-type: tm+mt
-source-wordcount: '1575'
+source-wordcount: '1576'
 ht-degree: 1%
 
 ---
@@ -113,7 +113,7 @@ Adobe Experience Platform [!DNL Identity Service] 通過跨設備和系統橋接
 
 使用基於屬性的訪問控制，您可以：
 
-* 將屬性應用於欄位組和類。 這允許具有相同欄位組或類的多個方案具有標籤有相同屬性的欄位，具體取決於欄位組或類級別的配置；
+* [將資料使用標籤應用於欄位組和類](../../xdm/tutorials/labels.md)。 這允許具有相同欄位組或類的多個方案具有標籤有相同屬性的欄位，具體取決於欄位組或類級別的配置；
 * 根據應用於分配給用戶的角色的權限集，配置用戶對特定XDM架構欄位的訪問權限。
 
 有關XDM的詳細資訊，請參閱 [XDM概述](../../xdm/home.md)。
