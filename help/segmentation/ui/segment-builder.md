@@ -5,9 +5,9 @@ title: 段生成器UI指南
 topic-legacy: ui guide
 description: Adobe Experience PlatformUI中的段生成器提供了一個豐富的工作區，允許您與配置檔案資料元素交互。 工作區為生成和編輯規則提供了直觀的控制項，如用於表示資料屬性的拖放拼貼。
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
-source-git-commit: 708103a52187ef17892de60ff8e562a05fc2f2db
+source-git-commit: 71741a18c99a003e6401bc324822d50a266350b3
 workflow-type: tm+mt
-source-wordcount: '2457'
+source-wordcount: '2612'
 ht-degree: 1%
 
 ---
@@ -18,9 +18,14 @@ ht-degree: 1%
 
 ![](../images/ui/segment-builder/segment-builder.png)
 
-## 段定義構件塊
+## 段定義構件塊 {#building-blocks}
 
-段定義的基本構造塊是屬性和事件。 此外，現有受眾中包含的屬性和事件也可用作新定義的元件。
+>[!CONTEXTUALHELP]
+>id="platform_segments_createsegment_segmentbuilder_fields"
+>title="欄位"
+>abstract="組成段的三個欄位類型是屬性、事件和受眾。 屬性允許您使用屬於XDM Individual Profile類的Profile屬性，事件允許您根據使用XDM ExperienceEvent資料元素進行的操作或事件建立受眾，而訪問群體允許您使用從外部源導入的受眾。"
+
+段定義的基本構造塊是屬性和事件。 此外，現有受眾中包含的屬性和事件可以用作新定義的元件。
 
 你可以在 **[!UICONTROL 欄位]** 的 [!DNL Segment Builder] 工作區。 **[!UICONTROL 欄位]** 包含每個主要構造塊的頁籤：&quot;[!UICONTROL 屬性]&quot;, &quot;[!UICONTROL 事件]&quot;和&quot;[!UICONTROL 觀眾]。
 
@@ -85,7 +90,7 @@ ht-degree: 1%
 
 一旦映射了報表套件，您就可以在與配置檔案相關的工作流和分段中使用這些新映射的欄位。
 
-| 藍本 | 聯合架構體驗 | 分段通用變數 | 分段映射變數 |
+| 情境 | 聯合架構體驗 | 分段通用變數 | 分段映射變數 |
 | -------- | ----------------------- | ----------------------------- | ---------------------------- |
 | 單個報告套件 | 友好名稱描述符隨泛型變數一起提供。 <br><br>**示例：** 頁名(eVar2) | <ul><li>泛型變數包含的友好名稱描述符</li><li>查詢使用特定資料集中的資料，因為它是唯一</li></ul> | 查詢可以使用Adobe Analytics資料和可能的其他源。 |
 | 多報表套裝 | 泛型變數不包含友好名稱描述符。 <br><br>**示例：** eVar2 | <ul><li>具有多個描述符的任何欄位都顯示為泛型。 這意味著UI中不顯示友好名稱。</li><li>查詢可以使用包含該eVar的任何資料集中的資料，這可能導致結果混合或不正確。</li></ul> | 查詢使用多個資料集中正確組合的結果。 |
@@ -210,7 +215,19 @@ ht-degree: 1%
 
 ![](../images/ui/segment-builder/merge-policy-selector.png)
 
-## 段屬性
+## 段屬性 {#segment-properties}
+
+>[!CONTEXTUALHELP]
+>id="platform_segments_createsegment_segmentbuilder_segmentproperties"
+>title="段屬性"
+>abstract="段屬性部分顯示結果段的估計大小，顯示與配置檔案總數相比的合格配置檔案數。 這樣，您就可以根據需要調整段定義，然後再構建受眾本身。"
+
+>[!CONTEXTUALHELP]
+>id="platform_segments_createsegment_segmentbuilder_refreshestimate"
+>title="更新估計"
+>abstract="您可以刷新段的估計值，以立即查看有多少配置檔案符合建議段的條件。 使用當天樣本資料的樣本大小生成受眾估計。"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/tutorials/create-a-segment.html?lang=en#estimate-and-preview-an-audience" text="從文檔瞭解更多資訊"
+
 
 構建段定義時， **[!UICONTROL 段屬性]** 工作區右側的部分顯示結果段的大小估計值，允許您根據需要調整段定義，然後再構建受眾本身。
 
