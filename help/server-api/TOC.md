@@ -5,10 +5,10 @@ user-guide-title: Edge Network 伺服器 API 文件
 breadcrumb-title: Edge Network 伺服器 API 文件
 user-guide-description: 了解 Edge Network 伺服器 API 及其使用方法。
 feature: Data Collection
-source-git-commit: c6ecd493bd8366d49ca0b9dd851c92c5ce732d18
+source-git-commit: 492efa6ef0d95b502839d612988f0b7f59b8bd69
 workflow-type: tm+mt
-source-wordcount: '67'
-ht-degree: 52%
+source-wordcount: '63'
+ht-degree: 55%
 
 ---
 
@@ -24,7 +24,7 @@ ht-degree: 52%
 * 與其他Adobe解決方案交互 {#interacting-other-adobe-solutions}
    * [與Adobe Analytics互動](interacting-adobe-analytics.md)
 * 個人化 {#personalization}
-   * [從Adobe解決方案檢索個性化內容](personalization-overview.md)
+   * [個性化概述](personalization-overview.md)
    * [通過Offer decisioning個性化](personalization-offer-decisioning.md)
    * [通過Adobe Target個性化](personalization-target.md)
 * [錯誤處理](error-handling.md)
