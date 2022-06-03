@@ -5,9 +5,9 @@ breadcrumb-title: 標籤
 user-guide-description: 了解如何部署及管理分析、行銷和廣告標籤，以強化客戶體驗。
 feature: Tags
 solution: Data Collection
-source-git-commit: ff612f7ef466276757095a3a9a724781eeb6a089
+source-git-commit: 638b4fea8a80763a2b46863ecb0e3969a6fc127a
 workflow-type: tm+mt
-source-wordcount: '386'
+source-wordcount: '392'
 ht-degree: 68%
 
 ---
@@ -119,6 +119,9 @@ ht-degree: 68%
       * [!DNL BrightCove] 視頻跟蹤 {#brightcove}
          * [總覽](./extensions/web/brightcove/overview.md)
          * [發行說明](./extensions/web/brightcove/release-notes.md)
+      * Google資料層 {#google-data-layer}
+         * [總覽](./extensions/web/google-data-layer/overview.md)
+         * [發行說明](./extensions/web/google-data-layer/release-notes.md)
       * [!DNL YouTube] 視頻跟蹤擴展 {#youtube}
          * [總覽](./extensions/web/youtube/overview.md)
          * [發行說明](./extensions/web/youtube/release-notes.md)
