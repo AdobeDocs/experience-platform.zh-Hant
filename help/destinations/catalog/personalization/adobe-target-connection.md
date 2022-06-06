@@ -3,9 +3,9 @@ keywords: 目標個性化；目的地；體驗平台目標；adobe目標目標�
 title: Adobe Target
 description: Adobe Target是一個應用程式，在跨網站、移動應用等的所有入站客戶交互中提供基於人工智慧的即時個性化和實驗功能。
 exl-id: 3e3c405b-8add-4efb-9389-5ad695bc9799
-source-git-commit: 46e732dfc630ad1875a57289a6e6cf9c964b9547
+source-git-commit: 12e2c1a32f08b6942d6e4aefc35a53bae8387d7e
 workflow-type: tm+mt
-source-wordcount: '752'
+source-wordcount: '846'
 ht-degree: 1%
 
 ---
@@ -16,9 +16,11 @@ ht-degree: 1%
 
 Adobe Target是一個應用程式，在跨網站、移動應用等的所有入站客戶交互中提供基於人工智慧的即時個性化和實驗功能。
 
-Adobe Target是Adobe Experience Platform的個性化連接。
+Adobe Target是Adobe Experience Platform目的地目錄中的個性化連接。
 
 ## 先決條件 {#prerequisites}
+
+### 資料流ID {#datastream-id}
 
 將Adobe Target連接配置為 [使用資料流ID](#parameters)，您必須 [Adobe Experience PlatformWeb SDK](../../../edge/home.md) 執行。
 
@@ -27,6 +29,15 @@ Adobe Target是Adobe Experience Platform的個性化連接。
 >[!IMPORTANT]
 >
 >在建立 [!DNL Adobe Target] 連接，閱讀有關如何 [為同一頁和下一頁個性化設定配置個性化目標](../../ui/configure-personalization-destinations.md)。 本指南將引導您跨多個Experience Platform元件完成同一頁和下一頁個性化使用案例所需的配置步驟。 同頁和下一頁個性化要求您在配置Adobe Target連接時使用資料流ID。
+
+### Adobe Target的先決條件 {#prerequisites-in-adobe-target}
+
+在Adobe Target，確保您的用戶：
+
+* 訪問 [預設工作區](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/property-channel.html?lang=en#default-workspace);
+* 的 **批准者** [角色](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/property-channel.html?lang=en#roles-and-permissions)。
+
+閱讀有關授予權限的詳細資訊 [目標高級](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/properties-overview.html?lang=en#section_8C425E43E5DD4111BBFC734A2B7ABC80) 和 [目標標準](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/users/user-management.html?lang=en#roles-permissions)。
 
 ## 導出類型和頻率 {#export-type-frequency}
 
