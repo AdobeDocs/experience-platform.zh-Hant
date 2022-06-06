@@ -6,9 +6,9 @@ description: 本文闡述了通過即席激活API激活受眾段的端到端工�
 topic-legacy: tutorial
 type: Tutorial
 exl-id: 1a09f5ff-0b04-413d-a9f6-57911a92b4e4
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 049b9c3ef2b96001a23ee54ac3e86a4df7b4ecea
 workflow-type: tm+mt
-source-wordcount: '1047'
+source-wordcount: '1102'
 ht-degree: 2%
 
 ---
@@ -65,7 +65,7 @@ Adobe Experience Platform每24小時運行一次分段作業。 基於最新分�
 
 * 你有一個IMS組織帳戶，可以訪問Adobe Experience Platform。
 * 您的Experience Platform帳戶 `developer` 和 `user` 為Adobe Experience PlatformAPI產品配置檔案啟用的角色。 聯繫您 [Admin Console](../../access-control/home.md) 管理員，以為您的帳戶啟用這些角色。
-* 你有個Adobe ID。 如果你沒有Adobe ID，去 [Adobe開發人員控制台](https://developer.adobe.com/console) 並建立新帳戶。
+* 你有個Adobe ID。 如果你沒有Adobe ID，去 [Adobe Developer控制台](https://developer.adobe.com/console) 並建立新帳戶。
 
 ## 步驟2:收集憑據 {#credentials}
 
@@ -91,9 +91,10 @@ Experience Platform中的資源可以隔離到特定的虛擬沙箱。 在對平
 
 必須先在平台UI中為所選目標配置激活流，然後才能通過點對點激活API激活段。
 
-這包括進入激活工作流、選擇段、配置調度並激活它們。
+這包括進入激活工作流、選擇段、配置調度並激活它們。 可以使用UI或API建立激活流：
 
-有關如何為批處理目標配置激活流的詳細說明，請參閱以下教程： [將受眾資料激活到批配置檔案導出目標](../ui/activate-batch-profile-destinations.md)。
+* [使用平台UI建立用於批配置檔案導出目標的激活流](../ui/activate-batch-profile-destinations.md)
+* [使用流服務API連接到批配置檔案導出目標並激活資料](../api/connect-activate-batch-destinations.md)
 
 ## 第4步：獲取最新段導出作業ID {#segment-export-id}
 
@@ -156,7 +157,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/disflowprovider/adho
 
 | 屬性 | 說明 |
 | -------- | ----------- |
-| <ul><li>`destinationId1`</li><li>`destinationId2`</li></ul> | 要激活段的目標實例的ID。 |
+| <ul><li>`destinationId1`</li><li>`destinationId2`</li></ul> | 要激活段的目標實例的ID。 通過導航到 **[!UICONTROL 目標]** > **[!UICONTROL 瀏覽]** 頁籤，然後按一下所需的目標行以在右欄中顯示目標ID。 有關詳細資訊，請閱讀 [目標工作區文檔](/help/destinations/ui/destinations-workspace.md#browse)。 |
 | <ul><li>`segmentId1`</li><li>`segmentId2`</li><li>`segmentId3`</li></ul> | 要激活到選定目標的段的ID。 |
 | <ul><li>`exportId1`</li></ul> | 在響應中返回的ID [段出口](../../segmentation/api/export-jobs.md#retrieve-list) 工作。 請參閱 [第4步：獲取最新段導出作業ID](#segment-export-id) 有關如何查找此ID的說明。 |
 
