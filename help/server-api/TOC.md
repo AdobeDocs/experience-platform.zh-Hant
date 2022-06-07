@@ -5,10 +5,10 @@ user-guide-title: Edge Network 伺服器 API 文件
 breadcrumb-title: Edge Network 伺服器 API 文件
 user-guide-description: 了解 Edge Network 伺服器 API 及其使用方法。
 feature: Data Collection
-source-git-commit: 492efa6ef0d95b502839d612988f0b7f59b8bd69
+source-git-commit: 951773d7a314b3d128fa364a7a034e0e8514bbe4
 workflow-type: tm+mt
-source-wordcount: '63'
-ht-degree: 55%
+source-wordcount: '65'
+ht-degree: 53%
 
 ---
 
@@ -17,6 +17,7 @@ ht-degree: 55%
 
 
 * [總覽](overview.md)
+* [效能護欄](guardrails.md)
 * [驗證](authentication.md)
 * 資料彙集 {#data-collection}
    * [單事件資料收集](interactive-data-collection.md)
