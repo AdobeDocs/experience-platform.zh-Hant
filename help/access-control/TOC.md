@@ -4,7 +4,7 @@ user-guide-title: Adobe Experience Platform 中的存取控制說明
 breadcrumb-title: Access Control 指南
 user-guide-description: 運用 Adobe Admin Console 中的產品設定檔，將使用者與權限和沙盒連結。
 feature: Access Control
-source-git-commit: aa4dda26a55963ea26b0e050c8f2a39966da67d7
+source-git-commit: cd598b58af3067dd1615348beef3fb96e2233cba
 workflow-type: tm+mt
 source-wordcount: '116'
 ht-degree: 42%
@@ -17,7 +17,7 @@ ht-degree: 42%
 * [存取控制概覽](home.md)
 * 基於屬性的訪問控制 {#abac}
    * [總覽](abac/overview.md)
-   * [權限] {#permissions-ui}
+   * 權限 {#permissions-ui}
       * [瀏覽](abac/ui/browse.md)
       * [標記](abac/ui/labels.md)
       * [權限](abac/ui/permissions.md)

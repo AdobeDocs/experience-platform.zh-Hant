@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Zendesk源連接器概述
 description: 瞭解如何使用API或用戶介面將Zendesk連接到Adobe Experience Platform。
 exl-id: 9f245783-949d-4f40-9cf3-8991b4b6d780
-source-git-commit: 19f1e8df8cd8b55ed6b03f80e42810aefd211474
+source-git-commit: 61b694ca5fbd3548243663b3f1bff06aaca72434
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '391'
 ht-degree: 0%
 
 ---
@@ -33,7 +33,7 @@ Experience Platform支援從第三方客戶成功應用程式接收資料。 對
 
 本節概述了為驗證您的 [!DNL Zendesk] 帳戶。
 
-* 驗證您 [!DNL Zendesk] 帳戶是確保 [!DNL Zendesk] 支援帳戶。 如果你還沒看到 [[!DNL Zendesk]註冊頁](https://www.zendesk.com/register/) 註冊並建立Zendesk帳戶。
+* 驗證您 [!DNL Zendesk] 帳戶是確保 [!DNL Zendesk] 支援帳戶。 如果你還沒看到 [[!DNL Zendesk] 註冊頁](https://www.zendesk.com/register/) 註冊並建立Zendesk帳戶。
 * 成功註冊後，導航至 [[!DNL Zendesk] 網站](https://www.zendesk.com/login/) 提供 **子域**。
 * 下一步，選擇 **[!DNL Settings]** > **[!DNL Apps and Integrations]** > **[!DNL Zendesk API]**。
 * 最後，從 **[!DNL API token]** 的子菜單。
