@@ -4,9 +4,9 @@ description: 瞭解如何刪除Adobe Experience PlatformUI中的消費者記錄�
 exl-id: 5303905a-9005-483e-9980-f23b3b11b1d9
 hide: true
 hidefromtoc: true
-source-git-commit: 6f94c7c5e844eaddd50653296875886757f6fb35
+source-git-commit: d17c53066d77652e46471ba4c696fde682eb3bab
 workflow-type: tm+mt
-source-wordcount: '1110'
+source-wordcount: '1091'
 ht-degree: 0%
 
 ---
@@ -144,4 +144,10 @@ JSON檔案必須格式化為對象陣列，每個對象都表示使用者標識�
 
 本文檔介紹了如何刪除Experience PlatformUI中的使用者記錄。 有關如何在UI中執行其他資料衛生任務的資訊，請參閱 [資料衛生UI概述](./overview.md)。
 
-要瞭解如何使用資料衛生API刪除使用者記錄，請參閱 [工作單終結點指南](../api/workorder.md)。
+<!--
+
+Paragraph below should be commented out until workorder.md will be added to the TOC.
+
+To learn how to delete consumer records using the Data Hygiene API, refer to the [work order endpoint guide](../api/workorder.md).
+
+-->
