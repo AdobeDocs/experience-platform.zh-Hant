@@ -6,9 +6,9 @@ topic-legacy: overview
 type: Tutorial
 description: 本教程介紹了使用源連接器和API從第三方雲儲存中檢索資料並將其引入平台的步驟。
 exl-id: 95373c25-24f6-4905-ae6c-5000bf493e6f
-source-git-commit: e059ff1066ef0197207667b40fb2f31c296464cb
+source-git-commit: 313d80603f54b7e79316b01790fb4f258851858e
 workflow-type: tm+mt
-source-wordcount: '1586'
+source-wordcount: '1613'
 ht-degree: 1%
 
 ---
@@ -99,7 +99,7 @@ curl -X POST \
 | `data.properties.columnDelimiter` | （可選）在收集平面檔案時可指定的單字元列分隔符。 任何單個字元值都是允許的列分隔符。 如果未提供，則使用逗號(`,`)作為預設值。 **注釋**:的 `columnDelimiter` 僅當插入分隔的檔案時才能使用屬性。 |
 | `data.properties.encoding` | （可選）定義將資料插入平台時使用的編碼類型的屬性。 支援的編碼類型有： `UTF-8` 和 `ISO-8859-1`。 **注釋**:的 `encoding` 參數僅在插入分隔的CSV檔案時可用。 其他檔案類型將採用預設編碼， `UTF-8`。 |
 | `data.properties.compressionType` | （可選）定義用於接收的壓縮檔案類型的屬性。 支援的壓縮檔案類型有： `bzip2`。 `gzip`。 `deflate`。 `zipDeflate`。 `tarGzip`, `tar`。 **注釋**:的 `compressionType` 僅當插入分隔檔案或JSON檔案時才能使用屬性。 |
-| `params.path` | 要訪問的源檔案的路徑。 此參數指向單個檔案或整個資料夾。 |
+| `params.path` | 要訪問的源檔案的路徑。 此參數指向單個檔案或整個資料夾。  **注釋**:可以使用星號代替檔案名來指定整個資料夾的接收。 例如： `/acme/summerCampaign/*.csv` 會吃掉整個 `/acme/summerCampaign/` 的子菜單。 |
 | `params.type` | 您正在接收的源資料檔案的檔案類型。 使用類型 `file` 接收單個檔案並使用類型 `folder` 來錄制整個資料夾。 |
 | `connectionSpec.id` | 與特定雲儲存源關聯的連接規範ID。 查看 [附錄](#appendix) 連接規範ID清單。 |
 
