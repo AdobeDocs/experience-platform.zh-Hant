@@ -4,9 +4,9 @@ description: 瞭解如何刪除Adobe Experience PlatformUI中的消費者記錄�
 exl-id: 5303905a-9005-483e-9980-f23b3b11b1d9
 hide: true
 hidefromtoc: true
-source-git-commit: 95d75292b7697ef4f98e3ebd34c04724019ac37f
+source-git-commit: 6f94c7c5e844eaddd50653296875886757f6fb35
 workflow-type: tm+mt
-source-wordcount: '1113'
+source-wordcount: '1110'
 ht-degree: 0%
 
 ---
@@ -62,12 +62,12 @@ ht-degree: 0%
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_primaryidentity"
 >title="主標識"
->abstract="主標識是將記錄與Experience Platform中的使用者配置檔案關聯的屬性。 資料集的主標識欄位由資料集所基於的模式定義。 在此列中，必須提供使用者主標識的類型（或命名空間），如電子郵件地址的「email」和Experience CloudID的「ecid」。 要瞭解更多資訊，請參閱資料衛生用戶介面指南。"
+>abstract="主標識是將記錄與Experience Platform中的使用者配置檔案關聯的屬性。 資料集的主標識欄位由資料集所基於的模式定義。 在此列中，必須為使用者的主標識提供類型（或命名空間），如 `email` 電子郵件地址和 `ecid` Experience CloudID。 要瞭解更多資訊，請參閱資料衛生用戶介面指南。"
 
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_identityvalue"
 >title="標識值"
->abstract="在此列中，必須為使用者的主要標識提供值，該值必須與左列中提供的標識類型相對應。 如果主標識類型為「email」，則值應為用戶的電子郵件地址。 要瞭解更多資訊，請參閱資料衛生用戶介面指南。"
+>abstract="在此列中，必須為使用者的主要標識提供值，該值必須與左列中提供的標識類型相對應。 如果主標識類型為 `email`，值應為用戶的電子郵件地址。 要瞭解更多資訊，請參閱資料衛生用戶介面指南。"
 
 刪除使用者資料時，必須提供身份資訊，以便系統可以確定必須刪除哪些記錄。 對於平台中的任何資料集，記錄將根據 **主身份** 由資料集的架構定義的欄位。
 
