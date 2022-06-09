@@ -5,10 +5,10 @@ user-guide-title: Adobe Experience Platform Web SDK 說明
 breadcrumb-title: Web SDK 指南
 user-guide-description: 透過 Edge 網路與 Experience Cloud 服務互動。
 feature: Web SDK
-source-git-commit: 1a53d98d8a0b47b96d54e79d93f2ece2d4b587a6
+source-git-commit: 2b9edb258e647dc04faadbbaeab429cf8ac3e0ec
 workflow-type: tm+mt
-source-wordcount: '178'
-ht-degree: 34%
+source-wordcount: '183'
+ht-degree: 33%
 
 ---
 
@@ -32,6 +32,7 @@ ht-degree: 34%
 * 身分 {#identity}
    * [總覽](identity/overview.md)
    * [第一方設備ID](identity/first-party-device-ids.md)
+   * [移動到Web和跨域ID共用](identity/id-sharing.md)
 * 資料彙集 {#data-collection}
    * [自動收集的資訊](data-collection/automatic-information.md)
    * [跟蹤連結](data-collection/track-links.md)
