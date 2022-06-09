@@ -4,9 +4,9 @@ description: 瞭解如何配置Adobe Experience Platform邊緣網路伺服器API
 seo-description: Learn how to configure authentication for the Adobe Experience Platform Edge Network Server API
 keywords: 資料採集；認證；Adobe Experience Platform邊緣網路api;授權
 exl-id: 73c7a186-9b85-43fe-a586-4c6260b6fa8c
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 64093bdb8cb1bf2f14caaa562e196a1d69e74359
 workflow-type: tm+mt
-source-wordcount: '628'
+source-wordcount: '648'
 ht-degree: 2%
 
 ---
@@ -15,15 +15,15 @@ ht-degree: 2%
 
 ## 總覽
 
-的 [!DNL Adobe Experience Platform Edge Network Server API] 根據事件源和API收集域處理經過驗證和未經驗證的資料收集。
+的 [!DNL Edge Network Server API] 根據事件源和API收集域處理經過驗證和未經驗證的資料收集。
 
-對於每個請求， [!DNL Server API] 驗證資料流 `access_type` 的子菜單。
+對於每個請求， [!DNL Server API] 驗證資料流 [!DNL access type] 的子菜單。 使用此設定，客戶可以配置資料流以接受經過驗證的資料，或者接受經過驗證的資料和未經驗證的資料。 預設情況下，兩種類型的資料都被接受。
 
-使用此設定，客戶可以配置資料流以接受經過驗證的資料，或者接受經過驗證的資料和未經驗證的資料。 預設情況下，兩種類型的資料都被接受。
+有關配置資料流訪問類型的詳細資訊，請參閱有關如何配置資料流訪問類型的文檔 [建立和配置資料流](../edge/datastreams/overview.md#create)。
 
-以下是行為摘要，根據 `access_type` 配置和接收請求的終結點。
+下面是基於資料流的行為摘要 [!DNL Access Type] 配置和接收請求的終結點。
 
-| `access_type` | edge.adobedc.net | server.adobedc.net |
+| [!DNL Access Type] | edge.adobedc.net | server.adobedc.net |
 |-----------------|-------------------------------|-----------------------|
 | 混合（預設） | 不驗證請求 | 驗證請求 |
 | 已驗證 | 驗證請求 | 驗證請求 |
@@ -36,7 +36,7 @@ ht-degree: 2%
 
 * 你有一個IMS組織帳戶，可以訪問Adobe Experience Platform。
 * 您的Experience Platform帳戶 `developer` 和 `user` 為Adobe Experience PlatformAPI產品配置檔案啟用的角色。 聯繫您 [Admin Console](../access-control/home.md) 管理員，以為您的帳戶啟用這些角色。
-* 你有個Adobe ID。 如果你沒有Adobe ID，去 [Adobe開發人員控制台](https://developer.adobe.com/console) 並建立新帳戶。
+* 你有個Adobe ID。 如果你沒有Adobe ID，去 [Adobe Developer控制台](https://developer.adobe.com/console) 並建立新帳戶。
 
 ## 收集憑據 {#credentials}
 
