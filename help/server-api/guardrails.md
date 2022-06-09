@@ -2,13 +2,13 @@
 title: 效能護欄
 description: 瞭解如何在最佳效能護欄內使用伺服器API
 keywords: 資料收集；收集；邊緣網路；api;sla;slt;service levels;data collection;edge network;api;sla;slt;service levels
-source-git-commit: 951773d7a314b3d128fa364a7a034e0e8514bbe4
+exl-id: 063d0fbb-26d1-4727-9dea-8e7223b2173d
+source-git-commit: 6f0eb81f9709cf4fcaea94334449117c4ed76107
 workflow-type: tm+mt
-source-wordcount: '435'
+source-wordcount: '426'
 ht-degree: 2%
 
 ---
-
 
 # 效能護欄
 
@@ -20,12 +20,12 @@ Adobe不負責超出使用限制導致的效能降級。 始終超過效能護�
 
 ## 定義
 
-* **可用性** 每五分鐘間隔計算一次，即體驗Adobe Experience Platform邊緣網路處理的不會因錯誤而失敗且僅與預配置的Adobe Experience Platform邊緣網路API相關的請求的百分比。 如果租戶在給定的五分鐘間隔內未發出任何請求，則該間隔被視為100%可用。
+* **可用性** 每五分鐘間隔計算一次，即Experience Platform邊緣網路處理的不因錯誤而失敗且僅與預配置邊緣網路API相關的請求的百分比。 如果租戶在給定的五分鐘間隔內未發出任何請求，則該間隔被視為100%可用。
 * **每月正常運行時間百分比** 對於給定區域，計算為一個月內所有五分鐘間隔的可用性平均值。
-* 安 **上游** 是Adobe Edge網路後面的服務，可用於特定的資料流，如Adobe伺服器端轉發、Adobe Edge分段或Adobe Target。
+* 安 **上游** 是邊緣網路後面的服務，可用於特定的資料流，如Adobe伺服器端轉發、Adobe Edge分段或Adobe Target。
 * A **請求單元** 對應於請求的8 KB片段和為資料流配置的上游。
 * A **請求** 是由客戶擁有的應用程式發送給 [!DNL Server API]。 請求可以包含一個或多個請求單元。
-* 安 **錯誤** 是因Adobe Experience Platform邊緣網路而失敗的任何請求 [內部服務錯誤](error-handling.md)。
+* 安 **錯誤** 是任何因邊緣網路而失敗的請求 [內部服務錯誤](error-handling.md)。
 
 ## 服務限制
 
