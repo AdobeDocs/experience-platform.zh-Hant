@@ -3,9 +3,9 @@ keywords: SFTP;SFTP
 title: SFTP連接
 description: 建立到SFTP伺服器的即時出站連接，以定期從Adobe Experience Platform導出分隔的資料檔案。
 exl-id: 27abfc38-ec19-4321-b743-169370d585a0
-source-git-commit: 0b094e635e6d22e58e5aa79a374df0879167a833
+source-git-commit: 715533352e84573f60f012504988595af6146e2f
 workflow-type: tm+mt
-source-wordcount: '642'
+source-wordcount: '671'
 ht-degree: 1%
 
 ---
@@ -50,8 +50,8 @@ ht-degree: 1%
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_sftp_ssh"
->title="SSH密鑰"
->abstract="SSH密鑰需要Base64字串。"
+>title="專用SSH密鑰"
+>abstract="專用SSH密鑰必須格式化為Base64編碼的字串，且不得受密碼保護。 "
 
 當 [連接](../../ui/connect-destination.md) 要到達此目標，必須提供以下資訊：
 
@@ -59,13 +59,13 @@ ht-degree: 1%
 
 如果選擇 **[!UICONTROL 基本身份驗證]** 鍵入以連接到SFTP位置：
 
-![SFTP目標基本身份驗證](../..//assets/catalog/cloud-storage/sftp/stfp-basic-authentication.png)
+![SFTP目標基本身份驗證](../../assets/catalog/cloud-storage/sftp/stfp-basic-authentication.png)
 
 * **[!UICONTROL 主機]**:SFTP儲存位置的地址；
 * **[!UICONTROL 用戶名]**:登錄SFTP儲存位置的用戶名；
 * **[!UICONTROL 密碼]**:登錄SFTP儲存位置的密碼。
 * **[!UICONTROL 加密密鑰]**:或者，您可以附加RSA格式的公鑰，以將加密添加到導出的檔案中。 您的公鑰必須寫為 [!DNL Base64] 編碼字串。
-   * 範例：`----BEGIN PGP PUBLIC KEY BLOCK---- {Base64-encoded string} ----END PGP PUBLIC KEY BLOCK----`。請參見下面一個正確格式的PGP鍵示例，其中中間部分縮短以便簡化。
+   * 範例: `----BEGIN PGP PUBLIC KEY BLOCK---- {Base64-encoded string} ----END PGP PUBLIC KEY BLOCK----`. 請參見下面一個正確格式的PGP鍵示例，其中中間部分縮短為簡短。
 
       ![PGP鍵](../..//assets/catalog/cloud-storage/sftp/pgp-key.png)
 
@@ -77,11 +77,11 @@ ht-degree: 1%
 * **[!UICONTROL 域]**:填寫SFTP帳戶的IP地址或域名
 * **[!UICONTROL 埠]**:SFTP儲存位置使用的埠；
 * **[!UICONTROL 用戶名]**:登錄SFTP儲存位置的用戶名；
-* **[!UICONTROL SSH密鑰]**:登錄到SFTP儲存位置的SSH密鑰。
+* **[!UICONTROL SSH密鑰]**:用於登錄到SFTP儲存位置的專用SSH密鑰。 私鑰必須格式化為Base64編碼的字串，且不得受密碼保護。
 * **[!UICONTROL 加密密鑰]**:或者，您可以附加RSA格式的公鑰，以將加密添加到導出的檔案中。 您的公鑰必須寫為 [!DNL Base64] 編碼字串。
-   * 範例：`----BEGIN PGP PUBLIC KEY BLOCK---- {Base64-encoded string} ----END PGP PUBLIC KEY BLOCK----`。請參見下面一個正確格式的PGP鍵示例，其中中間部分縮短以便簡化。
+   * 範例: `----BEGIN PGP PUBLIC KEY BLOCK---- {Base64-encoded string} ----END PGP PUBLIC KEY BLOCK----`. 請參見下面一個正確格式的PGP鍵示例，其中中間部分縮短為簡短。
 
-      ![PGP鍵](../..//assets/catalog/cloud-storage/sftp/pgp-key.png)
+      ![PGP鍵](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
 
 #### 目標詳細資訊 {#destination-details}
 
