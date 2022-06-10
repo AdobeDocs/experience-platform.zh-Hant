@@ -2,13 +2,13 @@
 title: 移動到Web和跨域ID共用
 description: 瞭解如何跨域將訪問者ID從移動屬性保留到Web屬性
 keywords: 標識；移動；id；共用；域；跨域；sdk；平台；
-source-git-commit: 55e28f749741c653a230b42fabf5a047ba8c7d01
+exl-id: b9bb236f-52cf-4615-96d8-1137d957de8c
+source-git-commit: 3b65143e33804b251f888dbe2a69d238b3f4cda3
 workflow-type: tm+mt
-source-wordcount: '893'
+source-wordcount: '901'
 ht-degree: 1%
 
 ---
-
 
 # 移動到Web和跨域ID共用
 
@@ -32,9 +32,11 @@ Adobe Experience Platform網路軟體開發工具包支援訪問者身份共用�
 
 ## 先決條件 {#prerequisites}
 
-要使用Mobile-to-Web和跨域ID共用，必須更新到 [!DNL Web SDK] 2.11.0版或更高版本。
+要使用移動到Web和跨域ID共用，必須使用 [!DNL Web SDK] 2.11.0版或更高版本。
 
 對於邊緣網路移動實現，在 [邊緣網路的標識](https://aep-sdks.gitbook.io/docs/foundation-extensions/identity-for-edge-network) 擴展從1.1.0版(iOS和Android)開始。
+
+此功能還與 [!DNL VisitorAPI.js] 1.7.0版或更高版本。
 
 ## 移動到Web的ID共用 {#mobile-to-web}
 
