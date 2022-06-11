@@ -5,9 +5,9 @@ title: 查詢Adobe Analytics資料示例
 topic-legacy: queries
 description: 從選定的Adobe Analytics報告套件中的資料被轉換為XDM ExperienceEvents，並作為資料集被攝入Adobe Experience Platform。 本文檔概述了Query Service使用此資料的多種使用情形，包括旨在與您的Adobe Analytics資料集配合使用的示例查詢。
 exl-id: 96da3713-c7ab-41b3-9a9d-397756d9dd07
-source-git-commit: fec6f614946860e6ad377beaca05972a63052dd8
+source-git-commit: e0cdfc514a9e1277134d4c0d5396fc0bdf9d9958
 workflow-type: tm+mt
-source-wordcount: '1066'
+source-wordcount: '975'
 ht-degree: 1%
 
 ---
@@ -16,107 +16,9 @@ ht-degree: 1%
 
 將來自選定Adobe Analytics報告套件的資料轉換為符合 [!DNL XDM ExperienceEvent] 以資料集的形式被攝入Adobe Experience Platform。
 
-本文檔概述了Adobe Experience Platform [!DNL Query Service] 利用此資料，包括旨在與您的Adobe Analytics資料集配合使用的示例查詢。 請參閱 [分析欄位映射](../../sources/connectors/adobe-applications/mapping/analytics.md) 有關映射到的詳細資訊 [!DNL Experience Events]。
+本文檔概述了Adobe Experience Platform [!DNL Query Service] 利用這些資料。 請參閱 [分析欄位映射](../../sources/connectors/adobe-applications/mapping/analytics.md) 有關映射到的詳細資訊 [!DNL Experience Events]。
 
-## 快速入門
-
-本文檔中的SQL示例要求您編輯SQL，並根據您感興趣的評估資料集、eVar、事件或時間框架填寫查詢的預期參數。 無論您看到什麼位置都提供參數 `{ }` 在下面的SQL示例中。
-
-## 常用SQL示例
-
-以下示例顯示了用於分析Adobe Analytics資料的常用案例的SQL查詢。
-
-### 給定日的每小時訪問者計數
-
-```sql
-SELECT Substring(from_utc_timestamp(timestamp, 'America/New_York'), 1, 10) AS Day,
-       Substring(from_utc_timestamp(timestamp, 'America/New_York'), 12, 2) AS Hour, 
-       Count(DISTINCT enduserids._experience.aaid.id) AS Visitor_Count 
-FROM   {TARGET_TABLE}
-WHERE TIMESTAMP = to_timestamp('{TARGET_YEAR}-{TARGET_MONTH}-{TARGET_DAY}')
-GROUP BY Day, Hour
-ORDER BY Hour;
-```
-
-### 指定日期前10個查看頁面
-
-```sql
-SELECT web.webpagedetails.name AS Page_Name, 
-       Sum(web.webpagedetails.pageviews.value) AS Page_Views 
-FROM   {TARGET_TABLE}
-WHERE TIMESTAMP = to_timestamp('{TARGET_YEAR}-{TARGET_MONTH}-{TARGET_DAY}')
-GROUP BY web.webpagedetails.name 
-ORDER BY page_views DESC 
-LIMIT  10;
-```
-
-### 前10位最活躍用戶
-
-```sql
-SELECT enduserids._experience.aaid.id AS aaid, 
-       Count(timestamp) AS Count
-FROM   {TARGET_TABLE}
-WHERE TIMESTAMP = to_timestamp('{TARGET_YEAR}-{TARGET_MONTH}-{TARGET_DAY}')
-GROUP BY enduserids._experience.aaid.id
-ORDER BY Count DESC
-LIMIT  10;
-```
-
-### 按用戶活動列出的前10大城市
-
-```sql
-SELECT concat(placeContext.geo.stateProvince, ' - ', placeContext.geo.city) AS state_city, 
-       Count(timestamp) AS Count
-FROM   {TARGET_TABLE}
-WHERE TIMESTAMP = to_timestamp('{TARGET_YEAR}-{TARGET_MONTH}-{TARGET_DAY}')
-GROUP BY state_city
-ORDER BY Count DESC
-LIMIT  10;
-```
-
-### 10大已查看產品
-
-```sql
-SELECT Product_SKU,
-       Sum(Product_Views) AS Total_Product_Views
-FROM  (SELECT Explode(productlistitems.sku) AS Product_SKU, 
-              commerce.productviews.value   AS Product_Views 
-       FROM   {TARGET_TABLE}
-            WHERE TIMESTAMP = to_timestamp('{TARGET_YEAR}-{TARGET_MONTH}-{TARGET_DAY}')
-              AND commerce.productviews.value IS NOT NULL) 
-GROUP BY Product_SKU 
-ORDER BY Total_Product_Views DESC
-LIMIT  10;
-```
-
-### 前10位訂單總收入
-
-```sql
-SELECT Purchase_ID, 
-       Round(Sum(Product_Items.priceTotal * Product_Items.quantity), 2) AS Total_Order_Revenue 
-FROM   (SELECT commerce.`order`.purchaseid AS Purchase_ID, 
-               Explode(productlistitems)   AS Product_Items 
-        FROM   {TARGET_TABLE} 
-        WHERE  commerce.`order`.purchaseid IS NOT NULL 
-                AND TIMESTAMP = to_timestamp('{TARGET_YEAR}-{TARGET_MONTH}-{TARGET_DAY}')
-
-GROUP BY Purchase_ID 
-ORDER BY total_order_revenue DESC 
-LIMIT  10;
-```
-
-### 按天列出的事件計數
-
-```sql
-SELECT Substring(from_utc_timestamp(timestamp, 'America/New_York'), 1, 10) AS Day, 
-       Substring(from_utc_timestamp(timestamp, 'America/New_York'), 12, 2) AS Hour, 
-       Sum(_experience.analytics.event1to100.{TARGET_EVENT}.value) AS Event_Count
-FROM   {TARGET_TABLE}
-WHERE  _experience.analytics.event1to100.{TARGET_EVENT}.value IS NOT NULL 
-        AND TIMESTAMP = to_timestamp('{TARGET_YEAR}-{TARGET_MONTH}-{TARGET_DAY}')
-GROUP BY Day, Hour
-ORDER BY Hour;
-```
+查看 [分析用例文檔](../use-cases/analytics-insights.md) 瞭解如何使用查詢服務從所攝取的Adobe Analytics資料中建立可操作的洞見。
 
 ## 去重複化
 

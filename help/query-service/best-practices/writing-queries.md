@@ -6,7 +6,7 @@ topic-legacy: queries
 type: Tutorial
 description: 本文檔概述了在Adobe Experience Platform查詢服務中編寫查詢時需要瞭解的重要詳細資訊。
 exl-id: a7076c31-8f7c-455e-9083-cbbb029c93bb
-source-git-commit: 7016c0ce1ca8be5cecb7c09d01e9fd2e48e551de
+source-git-commit: 13e2248845734d985331653a17599f48aec0ebde
 workflow-type: tm+mt
 source-wordcount: '1031'
 ht-degree: 3%
@@ -318,4 +318,8 @@ LIMIT 50;
 
 通過閱讀本文檔，您在使用 [!DNL Query Service]。 有關如何使用SQL語法編寫您自己的查詢的詳細資訊，請閱讀 [SQL語法文檔](../sql/syntax.md)。
 
-有關可在查詢服務中使用的更多查詢示例，請閱讀上的指南 [Adobe Analytics示例查詢](../sample-queries/adobe-analytics.md)。 [Adobe Target示例查詢](../sample-queries/adobe-target.md)或 [ExperienceEvent示例查詢](../sample-queries/experience-event.md)。
+有關查詢服務中可以使用的更多查詢示例，請閱讀以下用例文檔：
+
+- [分析學洞見](../use-cases/analytics-insights.md)
+- [Adobe Target活動分析](../use-cases/activity-analysis-with-adobe-target.md)
+- [ExperienceEvent示例查詢](../sample-queries/experience-event.md)。
