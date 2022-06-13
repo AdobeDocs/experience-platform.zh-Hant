@@ -3,14 +3,32 @@ title: Adobe Experience Platform Web SDK 發行說明
 description: Adobe Experience Platform Web SDK 最新版本注意事項。
 keywords: Adobe Experience PlatformWeb SDK；平台Web SDK;Web SDK；發行說明；
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: 29852bc8f17de6db04805f4738f383f2dc7c1406
+source-git-commit: 207fdd6d8a8dc27fa89798999734ba820f30fd54
 workflow-type: tm+mt
-source-wordcount: '1018'
+source-wordcount: '1169'
 ht-degree: 3%
 
 ---
 
+
 # 發行說明
+
+本文檔介紹Adobe Experience PlatformWeb SDK的發行說明。
+有關Web SDK標籤擴展的最新發行說明，請參見 [《 Web SDK標籤擴展發行說明》](extension/web-sdk-ext-release-notes.md)。
+
+## 版本2.11.0 - 2022年6月13日
+
+**新功能**
+
+* 現在，您可以通過在移動應用和移動Web內容之間以及跨域共用訪問者ID，更準確地提供個性化體驗。 查看 [專用文檔](identity/id-sharing.md) 來瞭解更多資訊。
+* 現在，您可以從 [!DNL Adobe Target] 不增加分析度量，即可將其插入到單頁應用程式中。 這減少了報告錯誤並提高了分析的準確性。 查看 [專用文檔](personalization/rendering-personalization-content.md#applypropositions) 來瞭解更多資訊。
+* 已向 `getLibraryInfo` 命令，包括實例的可用命令和最終配置。
+
+**修正和改良**
+
+* 要使用的更新Cookie設定 `sameSite="none"` 和 `secure` 標誌 [!DNL HTTPS] 頁。
+* 已修復在使用時未正確應用個性化內容的問題 `eq` 偽選擇器。
+* 已修復問題 `localTimezoneOffset` 可能無法通過Experience Platform驗證。
 
 ## 版本2.10.1 - 2022年5月3日
 
@@ -70,7 +88,7 @@ ht-degree: 3%
 
 ## 版本2.4.0 - 2021年3月
 
-* SDK現在可以 [已作為npm包安裝](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/installing-the-sdk.html)。
+* SDK現在可以 [已作為npm包安裝](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/installing-the-sdk.html?lang=zh-Hant)。
 * 為 `out` 選項 [配置預設同意](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html#default-consent)，它將刪除所有事件，直到收到同意(現有 `pending` 選項將事件排隊，並在收到同意後發送它們)。
 * 的 [onBeforeEventSend回調](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html#onbeforeeventsend) 現在可用於阻止發送事件。
 * 現在使用XDM架構欄位組，而不是 `meta.personalization` 發送有關正在呈現或按一下的個性化內容的事件時。

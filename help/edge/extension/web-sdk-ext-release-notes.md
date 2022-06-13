@@ -2,16 +2,27 @@
 title: Adobe Experience PlatformWeb SDK擴展發行說明
 description: Adobe Experience PlatformWeb SDK標籤擴展
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: 18f7e32c8922b254d68655aeb2b633c12a97d2a7
+source-git-commit: 83f7fca5d8a3fd2a57d39c155153caa70d89d353
 workflow-type: tm+mt
-source-wordcount: '1343'
-ht-degree: 46%
+source-wordcount: '1398'
+ht-degree: 44%
 
 ---
+
 
 # Adobe Experience PlatformWeb SDK擴展發行說明
 
 本文檔介紹Adobe Experience PlatformWeb SDK標籤擴展的發行說明。 有關SDK本身的最新發行說明，請參見 [平台Web SDK發行說明](https://experienceleague.adobe.com/docs/experience-platform/edge/release-notes.html)。
+
+## 版本2.12.0 - 2022年6月13日
+
+* 已更新 `identityMap` 資料元素，用於根據擴展設定定義的沙框填充命名空間選項。
+* 已添加 **[!UICONTROL 使用標識重定向]** 允許跨域標識共用的操作。
+* 添加到 `sendEvent` 操作。
+* 已升級React Spectrum UI庫。
+* 多個用戶介面增強。
+
+包含Adobe Experience PlatformWeb SDK庫的2.11.0版。
 
 ## 版本2.11.2 - 2022年5月3日
 
