@@ -5,9 +5,9 @@ title: 在UI中管理資料使用策略
 topic-legacy: policies
 description: Adobe Experience Platform資料治理提供了一個用戶介面，允許您建立和管理資料使用策略。 本文檔概述了可在Experience Platform用戶介面的「策略」工作區中執行的操作。
 exl-id: 29434dc1-02c2-4267-a1f1-9f73833e76a0
-source-git-commit: 931b847761e649696aa8433d53233593efd4d1ee
+source-git-commit: 0c78b5dc420a1346c92bf9ed7864fa1733422a83
 workflow-type: tm+mt
-source-wordcount: '1329'
+source-wordcount: '1326'
 ht-degree: 0%
 
 ---
@@ -33,7 +33,7 @@ Adobe Experience Platform資料治理提供了一個用戶介面，允許您建�
 
 ![](../images/policies/browse-policies.png)
 
-如果您有權訪問同意策略（當前在測試版中），請選擇 **[!UICONTROL 同意策略]** 切換以在 [!UICONTROL 瀏覽] 頁籤。
+如果您有權訪問同意策略，請選擇 **[!UICONTROL 同意策略]** 切換以在 [!UICONTROL 瀏覽] 頁籤。
 
 ![](../images/policies/consent-policy-toggle.png)
 

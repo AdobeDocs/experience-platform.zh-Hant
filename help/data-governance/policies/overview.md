@@ -5,9 +5,9 @@ title: 資料使用策略概述
 topic-legacy: policies
 description: 為了使資料使用標籤有效地支援資料合規性，必須實施資料使用策略。 資料使用策略是描述允許或限制您對Experience Platform內的資料執行的市場營銷操作類型的規則。
 exl-id: 1b372aa5-3e49-4741-82dc-5701a4bc8469
-source-git-commit: 6e4a3ff03a551069efb8dc96f21b82de06cc47d8
+source-git-commit: 0c78b5dc420a1346c92bf9ed7864fa1733422a83
 workflow-type: tm+mt
-source-wordcount: '1122'
+source-wordcount: '1121'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 0%
 可用策略有兩種類型：
 
 * **[!UICONTROL 資料治理策略]**:根據正在執行的營銷活動和由有關資料攜帶的資料使用標籤限制資料激活。
-* **[!UICONTROL 同意政策] (Beta)**:篩選可激活的配置檔案 [目的地](../../destinations/home.md) 根據客戶的同意或偏好
+* **[!UICONTROL 同意政策]**:篩選可激活的配置檔案 [目的地](../../destinations/home.md) 根據客戶的同意或偏好
 
 本文檔提供資料使用策略的高級概述，並提供指向在UI或API中使用策略的進一步文檔的連結。
 
@@ -89,6 +89,6 @@ For a reference on how specific Data Export Controls map to marketing actions in
 | 電子郵件目標 | 在電子郵件目標市場活動中使用資料的操作。 |
 | 導出到第三方 | 將資料導出到與客戶沒有直接關係的處理器和實體的操作。 許多資料提供者在合同中有禁止從最初收集的地方導出資料的條款。 例如，社交網路合同通常會限制您從這些合同接收到的資料的傳輸。 |
 | 現場廣告 | 使用資料進行現場廣告的操作，包括在您組織的網站或應用上選擇和交付廣告，或衡量此類廣告的交付和效果。 |
-| 現場Personalization | 使用資料實現現場內容個性化的操作。 現場個性化是用於推斷用戶興趣的任何資料，並用於根據這些推斷選擇提供哪些內容或廣告。 |
+| 現場個性化 | 使用資料實現現場內容個性化的操作。 現場個性化是用於推斷用戶興趣的任何資料，並用於根據這些推斷選擇提供哪些內容或廣告。 |
 | 段匹配 | 使用Adobe Experience Platform段匹配資料的操作，允許兩個或更多平台用戶交換段資料。 通過啟用引用此操作的策略，您可以限制用於段匹配的資料。 例如，如果啟用了核心策略「限制資料共用」，則具有 [C11標籤](../labels/reference.md#c11) 不能用於段匹配。 |
-| 單一身份Personalization | 要求將單個標識用於個性化目的而不是從多個源拼接標識的操作。 |
+| 單個身份個性化 | 要求將單個標識用於個性化目的而不是從多個源拼接標識的操作。 |

@@ -5,9 +5,9 @@ title: 資料治理概述
 topic-legacy: overview
 description: Adobe Experience Platform資料治理允許您管理客戶資料並確保遵守適用於資料使用的法規、限制和策略。 它在Experience Platform的不同級別中起著關鍵作用，包括編目、資料沿襲、資料使用標籤、資料使用策略，以及控制資料在市場營銷操作中的使用
 exl-id: 00ca6bc2-1c58-4ea2-8bb5-30fd3fa5944a
-source-git-commit: 6e4a3ff03a551069efb8dc96f21b82de06cc47d8
+source-git-commit: 0c78b5dc420a1346c92bf9ed7864fa1733422a83
 workflow-type: tm+mt
-source-wordcount: '1432'
+source-wordcount: '1431'
 ht-degree: 0%
 
 ---
@@ -81,7 +81,7 @@ Adobe Experience Platform資料治理允許您管理客戶資料並確保遵守�
 可用策略有兩種類型：
 
 * **[!UICONTROL 資料治理策略]**:根據正在執行的營銷活動和由有關資料攜帶的資料使用標籤限制資料激活。
-* **[!UICONTROL 同意政策] (Beta)**:篩選可激活的配置檔案 [目的地](../destinations/home.md) 根據客戶的同意或偏好。
+* **[!UICONTROL 同意政策]**:篩選可激活的配置檔案 [目的地](../destinations/home.md) 根據客戶的同意或偏好。
 
 一旦應用了資料使用標籤，資料管理員就可以使用 [!DNL Policy Service] API或 [!DNL Experience Platform] 用戶介面。 有關資料使用策略和市場營銷操作的詳細資訊，請參閱 [策略概述](./policies/overview.md)。
 
