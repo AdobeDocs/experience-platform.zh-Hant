@@ -5,9 +5,9 @@ title: 架構組合基礎
 topic-legacy: overview
 description: 本文檔介紹了經驗資料模型(XDM)架構，以及用於組合要在Adobe Experience Platform使用的架構的構成模組、原則和最佳做法。
 exl-id: d449eb01-bc60-4f5e-8d6f-ab4617878f7e
-source-git-commit: 997a3cdd6301adc2c52b6b397307c1dd1d194d7c
+source-git-commit: 90f055f2fbeb7571d2f7c1daf4ea14490069f2eb
 workflow-type: tm+mt
-source-wordcount: '3838'
+source-wordcount: '3881'
 ht-degree: 0%
 
 ---
@@ -51,11 +51,17 @@ XDM模式是以自包含格式儲存大量複雜資料的理想選擇。 請參�
 
 ### [!UICONTROL 身分] {#identity}
 
+>[!CONTEXTUALHELP]
+>id="platform_schemas_identities"
+>title="架構中的標識"
+>abstract="標識是架構中可用於標識主題的關鍵欄位，如電子郵件地址或營銷ID。 這些欄位用於為每個個人構建身份圖並構建客戶配置檔案。"
+>text="See the documentation for more information on identities in schemas."
+
 架構用於將資料插入 [!DNL Experience Platform]。 此資料可以跨多個服務使用，以建立單個實體的單個統一視圖。 因此，在考慮架構時，必須考慮客戶身份以及哪些欄位可用於標識主題，而不管資料可能來自何處。
 
 要幫助處理此過程，可以將架構中的關鍵欄位標籤為標識。 在資料接收時，這些欄位中的資料將插入到「 」[!UICONTROL 標識圖]為那個人。 然後，可以通過 [[!DNL Real-time Customer Profile]](../../profile/home.md) 其他 [!DNL Experience Platform] 提供每個客戶的縫合視圖。
 
-通常標籤為「」的欄位[!UICONTROL 身份]「包括：電子郵件地址，電話號碼， [[!DNL Experience Cloud ID (ECID)]](https://experienceleague.adobe.com/docs/id-service/using/home.html)、CRM ID或其他唯一ID欄位。 您還應考慮組織特有的任何唯一標識符，因為它們可能是好的&quot;[!UICONTROL 身份]」對話框。
+通常標籤為「」的欄位[!UICONTROL 身份]「包括：電子郵件地址，電話號碼， [[!DNL Experience Cloud ID (ECID)]](https://experienceleague.adobe.com/docs/id-service/using/home.html?lang=zh-Hant)、CRM ID或其他唯一ID欄位。 您還應考慮組織特有的任何唯一標識符，因為它們可能是好的&quot;[!UICONTROL 身份]」對話框。
 
 在架構規劃階段考慮客戶身份非常重要，以幫助確保將資料匯集到一起，以構建盡可能最強健的配置檔案。 請參閱 [Adobe Experience Platform身份服務](../../identity-service/home.md) 瞭解有關身份資訊如何幫助您向客戶提供數字型驗的更多資訊。
 
@@ -210,7 +216,7 @@ Adobe提供多個標準（「核心」）XDM類。 其中兩門課， [!DNL XDM 
 * 字串
 * 整數
 * 雙倍
-* 布爾型
+* 布林值
 * 陣列
 * 物件
 

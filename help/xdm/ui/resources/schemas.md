@@ -5,9 +5,9 @@ title: 在UI中建立和編輯架構
 description: 瞭解如何在Experience Platform用戶介面中建立和編輯架構的基本知識。
 topic-legacy: user guide
 exl-id: be83ce96-65b5-4a4a-8834-16f7ef9ec7d1
-source-git-commit: e0148480ce8d4179771f1c10fb6b921baf6a24d1
+source-git-commit: 90f055f2fbeb7571d2f7c1daf4ea14490069f2eb
 workflow-type: tm+mt
-source-wordcount: '2844'
+source-wordcount: '2895'
 ht-degree: 0%
 
 ---
@@ -221,6 +221,12 @@ ht-degree: 0%
 ![添加到標準對象的欄位](../../images/ui/resources/schemas/added-to-standard-object.png)
 
 ## 為即時客戶配置檔案啟用方案 {#profile}
+
+>[!CONTEXTUALHELP]
+>id="platform_schemas_enableforprofile"
+>title="為配置檔案啟用架構"
+>abstract="為配置檔案啟用方案後，從此方案建立的任何資料集都將參與即時客戶配置檔案，該配置檔案合併來自不同來源的資料以構建每個客戶的完整視圖。 一旦使用架構將資料插入配置式，就無法禁用它。"
+>text="See the documentation for more information on enabling a schema for Profile."
 
 [即時客戶概要資訊](../../../profile/home.md) 合併來自不同源的資料以構建每個客戶的完整視圖。 如果希望方案捕獲的資料參與此進程，則必須啟用該方案以供使用 [!DNL Profile]。
 
