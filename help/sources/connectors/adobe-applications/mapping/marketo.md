@@ -5,10 +5,10 @@ title: Marketo Engage源的映射欄位
 topic-legacy: overview
 description: 下表包含Marketo資料集中的欄位與其對應的XDM欄位之間的映射。
 exl-id: 2b217bba-2748-4d6f-85ac-5f64d5e99d49
-source-git-commit: 1d2f485a91a8ad2c5b2bea9816c05b7bc26ae8e7
+source-git-commit: be3ec7dc7e2089a8cee0b1577659e1ec0a465044
 workflow-type: tm+mt
-source-wordcount: '634'
-ht-degree: 7%
+source-wordcount: '713'
+ht-degree: 6%
 
 ---
 
@@ -21,6 +21,8 @@ ht-degree: 7%
 >全部 [!DNL Marketo] 資料集 `Activities` 現在支援 `isDeleted`。 現有資料流將自動包括 `isDeleted`，但只會為新接入的資料接收標誌。 如果要將該標誌應用於所有歷史資料，則必須停止現有資料流並使用新映射重新建立它們。 請注意，如果您 `isDeleted`，則您將無法再訪問該功能。 在自動填充映射後保留映射至關重要。
 
 ## 活動 {#activities}
+
+的 [!DNL Marketo] 源現在支援其他標準活動。 要使用標準活動，必須使用 [模式自動生成實用程式](../marketo/marketo-namespaces.md) 因為如果新建 `activities` 資料流在不更新您的架構的情況下，映射模板將失敗，因為新目標欄位將不存在於您的架構中。 如果選擇不更新架構，則仍然可以建立新的資料流並消除任何錯誤。 但是，任何新的或更新的欄位將不會被納入平台。
 
 | 源資料集 | XDM目標欄位 | 附註 |
 | -------------- | ---------------- | ----- |
