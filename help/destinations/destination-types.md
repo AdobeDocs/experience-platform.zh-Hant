@@ -4,9 +4,9 @@ title: 目標類型和類別
 seo-title: Destination types and categories
 description: 瞭解Adobe Experience Platform不同類型和類別的目的地。
 exl-id: 7826d1e2-bd6b-4f65-9da9-0a3b3e8bb93b
-source-git-commit: 1c2846941df09b66eb74f8ea8bec91574577fbbc
+source-git-commit: 2252c6e8bd5f0ada717d67f005b7f6ddd0b238ab
 workflow-type: tm+mt
-source-wordcount: '596'
+source-wordcount: '642'
 ht-degree: 0%
 
 ---
@@ -23,7 +23,7 @@ ht-degree: 0%
 
 ## 連線 {#connections}
 
-**[!UICONTROL 配置檔案導出]** 和 **[!UICONTROL 流段導出]** 目標在Adobe Experience Platform捕獲事件資料，將其與其他資料源組合以形成 [即時客戶概要資訊](../profile/home.md)，應用分段，並將段和限定配置檔案導出到目標。
+**[!UICONTROL 配置檔案導出]**。 **[!UICONTROL 流段導出]**, **[!DNL Edge Personalization]** 目標在Adobe Experience Platform捕獲事件資料，將其與其他資料源組合以形成 [即時客戶概要資訊](../profile/home.md)，應用分段，並將段和限定配置檔案導出到目標。
 
 ## 配置檔案導出目標 {#profile-export}
 
@@ -55,6 +55,12 @@ ht-degree: 0%
 ## 流段導出目標 {#streaming-destinations}
 
 段導出目標接收Experience Platform段資料。 這些目標使用段ID或用戶ID。 廣告和社交目的地，如 [[!DNL Google Display & Video 360]](catalog/advertising/google-dv360.md)。 [[!DNL Google Ads]](catalog/advertising/google-ads-destination.md)或 [Facebook](catalog/social/facebook.md) 就是這些目的地的例子。
+
+## 邊緣個性化目標 {#edge-personalization-destinations}
+
+Experience Platform中的邊緣個性化目標包括 [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md) 和 [自定義個性化目標](/help/destinations/catalog/personalization/custom-personalization.md)。 通過使用這些目標，您可以為客戶啟用同頁和下頁個性化使用案例。
+
+閱讀有關如何 [為同一頁和下一頁個性化設定配置個性化目標](/help/destinations/ui/configure-personalization-destinations.md)。
 
 ## 配置檔案導出和段導出目標 — 視頻概述 {#video}
 
