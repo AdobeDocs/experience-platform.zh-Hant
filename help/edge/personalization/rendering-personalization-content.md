@@ -3,9 +3,9 @@ title: 使用Adobe Experience PlatformWeb SDK呈現個性化內容
 description: 瞭解如何使用Adobe Experience PlatformWeb SDK呈現個性化內容。
 keywords: 個性化；renderDecisions;sendEvent;decisionScopes；命題；
 exl-id: 6a3252ca-cdec-48a0-a001-2944ad635805
-source-git-commit: 6ba563db7fd31084813426ffbb0c35be9d7fe4bb
+source-git-commit: 0d8e19d8428191cc0c6c56e629e8c5528a96115c
 workflow-type: tm+mt
-source-wordcount: '741'
+source-wordcount: '924'
 ht-degree: 1%
 
 ---
@@ -296,3 +296,94 @@ alloy("sendEvent", {
 ### 管理閃爍
 
 SDK提供了 [管理閃爍](../personalization/manage-flicker.md) 在個性化過程中。
+
+## 在單頁應用程式中呈現主張，而不增加度量 {#applypropositions}
+
+的 `applyPropositions` 命令允許您呈現或執行命題陣列 [!DNL Target] 到單頁應用程式，而不增加 [!DNL Analytics] 和 [!DNL Target] 度量。 這提高了報告的準確性。
+
+>[!IMPORTANT]
+>
+>如果 `__view__` 在頁面載入上呈現範圍，其 `renderAttempted` 標誌將設定為 `true`。 的 `applyPropositions` 命令不會重新呈現 `__view__` 範圍命題 `renderAttempted: true` 。
+
+### 用例1:重新呈現單頁應用程式視圖主張
+
+下面的示例中描述的使用案例將重新呈現先前提取和呈現的購物車視圖主張，而不發送顯示通知。
+
+在下面的示例中， `sendEvent` 命令在視圖更改時觸發，並將生成的對象保存為常數。
+
+接下來，當視圖或元件更新時， `applyPropositions` 命令被調用，其命題來自 `sendEvent` 命令，以重新呈現視圖主題。
+
+```js
+var cartPropositions = alloy("sendEvent", {
+    renderDecisions: true,
+    xdm: {
+        web: {
+            webPageDetails: {
+                viewName: "cart"
+            }
+        }
+    }
+}).then(function(result) {
+    var propositions = result.propositions;
+
+    // Collect response tokens, etc.
+    return propositions;
+});
+
+// Call applyPropositions to re-render the view propositions from the previous sendEvent command.
+alloy("applyPropositions", {
+    propositions: cartPropositions
+});
+```
+
+### 用例2:呈現沒有選擇器的命題
+
+此使用案例適用於使用 [!DNL Target Form-based Experience Composer]。
+
+必須在 `applyPropositions` 呼叫。
+
+支援 `actionTypes` 為：
+
+* `setHtml`
+* `replaceHtml`
+* `appendHtml`
+
+```js
+// Retrieve propositions for salutation and discount scopes
+alloy("sendEvent", {
+    decisionScopes: ["salutation", "discount"]
+}).then(function(result) {
+    var retrievedPropositions = result.propositions;
+    // Render propositions on the page by providing additional metadata
+
+    return alloy("applyPropositions", {
+        propositions: retrievedPropositions,
+        metadata: {
+            salutation: {
+                selector: "#first-form-based-offer",
+                actionType: "setHtml"
+            },
+            discount: {
+                selector: "#second-form-based-offer",
+                actionType: "replaceHtml"
+            }
+        }
+    }).then(function(applyPropositionsResult) {
+        var renderedPropositions = applyPropositionsResult.propositions;
+
+        // Send the display notifications via sendEvent command
+        alloy("sendEvent", {
+            xdm: {
+                eventType: "decisioning.propositionDisplay",
+                _experience: {
+                    decisioning: {
+                        propositions: renderedPropositions
+                    }
+                }
+            }
+        });
+    });
+});
+```
+
+如果沒有為決策範圍提供元資料，則不會呈現相關建議。
