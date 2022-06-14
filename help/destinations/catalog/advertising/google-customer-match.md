@@ -3,9 +3,9 @@ keywords: google客戶匹配；Google客戶匹配；Google客戶匹配
 title: Google客戶匹配連接
 description: Google客戶匹配允許您使用線上和離線資料在Google擁有和運營的資產(如搜索、購物、Gmail和YouTube)中與客戶聯繫並重新聯繫。
 exl-id: 8209b5eb-b05c-4ef7-9fdc-22a528d5f020
-source-git-commit: 0006c498cd33d9deb66f1d052b4771ec7504457d
+source-git-commit: 23828fcbb1257fa093c1e114ee4c2fcb2162d9d6
 workflow-type: tm+mt
-source-wordcount: '1684'
+source-wordcount: '1715'
 ht-degree: 1%
 
 ---
@@ -135,7 +135,7 @@ The video below demonstrates the steps to configure a [!DNL Google Customer Matc
 
 * **[!UICONTROL 名稱]**:為此目標連接提供名稱
 * **[!UICONTROL 說明]**:提供此目標連接的說明
-* **[!UICONTROL 帳戶ID]**:你的Google客戶ID。 ID的格式為xxx-xxx-xxxx。
+* **[!UICONTROL 帳戶ID]**:你 [Google廣告客戶ID](https://support.google.com/google-ads/answer/1704344?hl=en)。 ID的格式為xxx-xxx-xxxx。 如果使用 [!DNL Google Ads Manager Account (My Client Center)]，不要使用Manager帳戶ID。 使用 [Google廣告客戶ID](https://support.google.com/google-ads/answer/1704344?hl=en) 的雙曲餘切值。
 
 >[!IMPORTANT]
 >
