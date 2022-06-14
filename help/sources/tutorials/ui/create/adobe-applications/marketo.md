@@ -6,9 +6,9 @@ topic-legacy: overview
 type: Tutorial
 description: 本教程提供了在UI中建立Marketo Engage源連接器以將B2B資料引入Adobe Experience Platform的步驟。
 exl-id: a6aa596b-9cfa-491e-86cb-bd948fb561a8
-source-git-commit: 8d88af787508f9aeaa7966409b33bf0aae488a87
+source-git-commit: 72fb25a262d2ab76085f12e3ad0c6a8decba50ac
 workflow-type: tm+mt
-source-wordcount: '1427'
+source-wordcount: '1473'
 ht-degree: 0%
 
 ---
@@ -25,6 +25,7 @@ ht-degree: 0%
 
 本教程需要對Adobe Experience Platform的以下部分進行有效的理解：
 
+* [B2B命名空間和模式自動生成實用程式](../../../../connectors/adobe-applications/marketo/marketo-namespaces.md):B2B命名空間和模式自動生成實用程式允許您使用 [!DNL Postman] 為B2B命名空間和架構自動生成值。 必須先完成B2B命名空間和架構，然後才能建立 [!DNL Marketo] 源連接和資料流。
 * [源](../../../../home.md):Experience Platform允許從各種源接收資料，同時讓您能夠使用平台服務構建、標籤和增強傳入資料。
 * [體驗資料模型(XDM)](../../../../../xdm/home.md):Experience Platform組織客戶體驗資料的標準化框架。
    * [在UI中建立和編輯架構](../../../../../xdm/ui/resources/schemas.md):瞭解如何在UI中建立和編輯架構。

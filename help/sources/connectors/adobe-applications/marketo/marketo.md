@@ -5,9 +5,9 @@ title: Marketo Engage連接器
 topic-legacy: overview
 description: 本文檔概述了Marketo Engage源連接器，包括有關其驗證、映射和資料延遲的資訊。
 exl-id: 063ec5d9-d643-4141-bf6d-878273f22b33
-source-git-commit: ebf605bda32a7e587e6a6ca93a58669d16581ff9
+source-git-commit: 1ecdd5f058a5996b4a3d12ba62c5f352633cd75a
 workflow-type: tm+mt
-source-wordcount: '521'
+source-wordcount: '578'
 ht-degree: 0%
 
 ---
@@ -31,6 +31,10 @@ Adobe Experience Platform允許從外部源接收資料，同時讓您能夠使�
 ## 設定Adobe組織映射
 
 在為 [!DNL Marketo]，必須首先設定Adobe組織映射。 有關如何完成此操作的詳細步驟，請參見上的指南 [設定Adobe組織映射 [!DNL Marketo]](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/miscellaneous/set-up-adobe-organization-mapping.html)。
+
+## 設定B2B命名空間和模式自動生成實用程式
+
+接下來，使用B2B命名空間和模式自動生成實用程式來設定平台開發人員控制台和Postman環境。 這允許您自動填充B2B命名空間和架構。 有關詳細說明，請參閱上的指南 [設定B2B命名空間和模式自動生成實用程式](./marketo-namespaces.md)
 
 ## 體驗資料模型(XDM)
 
