@@ -4,14 +4,26 @@ description: Adobe Experience Platform Debugger 的最新發行說明。
 keywords: Debugger；Experience Platform Debugger 擴充功能；Chrome；擴充功能；發行說明
 uuid: 47a5d6f3-c074-4ad5-ad4b-e6030496689b
 exl-id: 3eed44da-5f85-413e-a783-3a0df03a2baf
-source-git-commit: a15b5525d3a2fa034715803c83dc22a94915347e
+source-git-commit: 9c4f16c84b78403e5baf02595a38093341eefa67
 workflow-type: tm+mt
-source-wordcount: '295'
-ht-degree: 6%
+source-wordcount: '351'
+ht-degree: 5%
 
 ---
 
 # Adobe Experience Platform調試器發行說明
+
+## 版本1.3.2 - 2022年6月9日
+
+* 已在用戶登錄時添加預設虛擬形象。
+* 已向日誌中的JSON對象添加語法突出顯示。
+
+## 版本1.3.1 - 2022年5月24日
+
+* 已更新依賴項。
+* 無法啟用後處理命中的已修復分析問題。
+* 已解決調試器將附加到Adobe登錄窗口的問題。
+* 已修復AT.js問題，其中日誌消息不會在調試器中顯示。
 
 ## 版本1.3.0 - 2022年1月28日
 
