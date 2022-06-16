@@ -4,9 +4,9 @@ user-guide-title: Adobe Experience Platform 來源連接器說明
 breadcrumb-title: 來源連接器指南
 user-guide-description: 從多種來源或結構擷取資料、加標籤，以及增強已擷取的資料。
 feature: Sources
-source-git-commit: b21e735b5c6c310b485700ef619302e3e3086763
+source-git-commit: 6f7611b120046fffc1b7c15bd657d699f4b4a588
 workflow-type: tm+mt
-source-wordcount: '785'
+source-wordcount: '795'
 ht-degree: 12%
 
 ---
@@ -35,6 +35,8 @@ ht-degree: 12%
          - [B2B命名空間和架構](connectors/adobe-applications/marketo/marketo-namespaces.md)
    - Advertising {#advertising}
       - [GoogleAdWords連接器](connectors/advertising/ads.md)
+   - Analytics {#analytics}
+      - [混合面板連接器](connectors/analytics/mixpanel.md)
    - 雲儲存 {#cloud-storage}
       - [AmazonKinesis連接器](connectors/cloud-storage/kinesis.md)
       - [AmazonS3連接器](connectors/cloud-storage/s3.md)
@@ -101,6 +103,8 @@ ht-degree: 12%
    - 建立基本連接 {#create}
       - 廣告 {#advertising}
          - [Google AdWords](tutorials/api/create/advertising/ads.md)
+      - 分析 {#analytics}
+         - [混合面板](tutorials/api/create/analytics/mixpanel.md)
       - 雲儲存 {#cloud-storage}
          - [AmazonKinesis](tutorials/api/create/cloud-storage/kinesis.md)
          - [Amazon S3](tutorials/api/create/cloud-storage/s3.md)
@@ -197,8 +201,10 @@ ht-degree: 12%
          - [Adobe CampaignManaged Services](tutorials/ui/create/adobe-applications/campaign.md)
          - [客戶屬性](tutorials/ui/create/adobe-applications/customer-attributes.md)
          - [Marketo Engage](tutorials/ui/create/adobe-applications/marketo.md)
-      - 廣告 {#create}
+      - 廣告 {#advertising}
          - [Google廣告詞](tutorials/ui/create/advertising/ads.md)
+      - 分析 {#analytics}
+         - [混合面板](tutorials/ui/create/analytics/mixpanel.md)
       - 雲儲存 {#cloud-storage}
          - [AmazonKinesis](tutorials/ui/create/cloud-storage/kinesis.md)
          - [AmazonS3](tutorials/ui/create/cloud-storage/s3.md)
@@ -263,6 +269,7 @@ ht-degree: 12%
          - [HTTP API](tutorials/ui/create/streaming/http.md)
    - 配置資料流 {#dataflow}
       - [廣告連接資料流](tutorials/ui/dataflow/advertising.md)
+      - [分析連接資料流](tutorials/ui/dataflow/analytics.md)
       - [批處理雲儲存連接資料流](tutorials/ui/dataflow/batch/cloud-storage.md)
       - [流式雲儲存連接資料流](tutorials/ui/dataflow/streaming/cloud-storage-streaming.md)
       - [同意和首選項連接資料流](tutorials/ui/dataflow/consent-and-preferences.md)
