@@ -4,9 +4,9 @@ title: 許可證使用儀表板指南
 description: Adobe Experience Platform提供了一個儀表板，您可以通過該儀表板查看有關組織許可證使用情況的重要資訊。
 type: Documentation
 exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
-source-git-commit: a15b5525d3a2fa034715803c83dc22a94915347e
+source-git-commit: d3a1d4a65d1e5810bbc37fa9d3d230557bec39ee
 workflow-type: tm+mt
-source-wordcount: '838'
+source-wordcount: '873'
 ht-degree: 1%
 
 ---
@@ -88,6 +88,7 @@ Adobe Experience Platform用戶介面(UI)提供了一個儀表板，您可以通
 | <ul><li>RT客戶資料平台：OD</li><li>RT客戶資料平台：OD PRFL到10M</li><li>RT客戶資料平台：OD PRFL到50M</li></ul> | [即時客戶資料平台](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html) |
 | <ul><li>AEP:OD激活</li><li>AEP:OD激活PRFL至10M</li><li>AEP:OD激活率最高達50米</li></ul> | [Adobe Experience Platform激活](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-platform0.html) |
 | <ul><li>AEP:OD智慧</li></ul> | [Adobe Experience Platform情報](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-platform-intelligence---product-description.html) |
+| <ul><li>Journey Optimizer選擇：OD</li><li>Journey Optimizer首相：OD</li><li>Journey Optimizer旗艦：OD</li><li>UNP AJO首要入門：OD</li><li>UNP AJO終極入門：OD</li><li>UNP RTCDP:OD配置檔案業務流程</li></ul> | [Adobe Journey Optimizer](https://helpx.adobe.com/legal/product-descriptions/adobe-journey-optimizer.html) |
 
 >[!WARNING]
 >
