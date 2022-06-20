@@ -5,9 +5,9 @@ title: 描述符API終結點
 description: 通過架構註冊表API中的/descriptors終結點，可以以寫程式方式管理體驗應用程式中的XDM描述符。
 topic-legacy: developer guide
 exl-id: bda1aabd-5e6c-454f-a039-ec22c5d878d2
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: b92246e729ca26387a3d375e5627165a29956e52
 workflow-type: tm+mt
-source-wordcount: '1626'
+source-wordcount: '1836'
 ht-degree: 3%
 
 ---
@@ -311,7 +311,7 @@ curl -X DELETE \
 
 | 屬性 | 說明 |
 | --- | --- |
-| `@type` | 正在定義的描述符的類型。 |
+| `@type` | 正在定義的描述符的類型。 對於標識描述符，必須將此值設定為 `xdm:descriptorIdentity`。 |
 | `xdm:sourceSchema` | 的 `$id` 定義描述符的架構的URI。 |
 | `xdm:sourceVersion` | 源架構的主版本。 |
 | `xdm:sourceProperty` | 將作為標識的特定屬性的路徑。 路徑應以「/」開頭，而不以「/」結尾。 不要在路徑中包括&quot;properties&quot;（例如，使用&quot;/personalEmail/address&quot;而不是&quot;/properties/personalEmail/properties/address&quot;） |
@@ -347,7 +347,7 @@ curl -X DELETE \
 
 | 屬性 | 說明 |
 | --- | --- |
-| `@type` | 正在定義的描述符的類型。 |
+| `@type` | 正在定義的描述符的類型。 對於友好名稱描述符，必須將此值設定為 `xdm:alternateDisplayInfo`。 |
 | `xdm:sourceSchema` | 的 `$id` 定義描述符的架構的URI。 |
 | `xdm:sourceVersion` | 源架構的主版本。 |
 | `xdm:sourceProperty` | 將作為標識的特定屬性的路徑。 路徑應以「/」開頭，而不以「/」結尾。 不要在路徑中包括&quot;properties&quot;（例如，使用&quot;/personalEmail/address&quot;而不是&quot;/properties/personalEmail/properties/address&quot;） |
@@ -377,7 +377,7 @@ curl -X DELETE \
 
 | 屬性 | 說明 |
 | --- | --- |
-| `@type` | 正在定義的描述符的類型。 |
+| `@type` | 正在定義的描述符的類型。 對於關係描述符，必須將此值設定為 `xdm:descriptorOneToOne`。 |
 | `xdm:sourceSchema` | 的 `$id` 定義描述符的架構的URI。 |
 | `xdm:sourceVersion` | 源架構的主版本。 |
 | `xdm:sourceProperty` | 源架構中定義關係的欄位的路徑。 應以「/」開頭，而不以「/」結尾。 不要在路徑中包括「properties」（例如，「/personalEmail/address」，而不是「/properties/personalEmail/properties/address」）。 |
@@ -386,7 +386,6 @@ curl -X DELETE \
 | `xdm:destinationProperty` | 目標架構中目標欄位的可選路徑。 如果省略此屬性，則目標欄位將由包含匹配引用標識描述符的任何欄位來推斷（請參閱下文）。 |
 
 {style=&quot;table-layout:auto&quot;&quot;
-
 
 #### 引用標識描述符
 
@@ -404,8 +403,32 @@ curl -X DELETE \
 
 | 屬性 | 說明 |
 | --- | --- |
-| `@type` | 正在定義的描述符的類型。 |
+| `@type` | 正在定義的描述符的類型。 對於引用標識描述符，必須將此值設定為 `xdm:descriptorReferenceIdentity`。 |
 | `xdm:sourceSchema` | 的 `$id` 定義描述符的架構的URI。 |
 | `xdm:sourceVersion` | 源架構的主版本。 |
 | `xdm:sourceProperty` | 定義描述符的源架構中欄位的路徑。 應以「/」開頭，而不以「/」結尾。 不要在路徑中包括「properties」（例如，「/personalEmail/address」，而不是「/properties/personalEmail/properties/address」）。 |
 | `xdm:identityNamespace` | 源屬性的標識名稱空間代碼。 |
+
+{style=&quot;table-layout:auto&quot;&quot;
+
+#### 不建議使用的欄位描述符
+
+你可以 [棄用自定義XDM資源中的欄位](../tutorials/field-deprecation.md#custom) 通過添加 `meta:status` 屬性集 `deprecated` 去那個領域。 如果要棄用架構中標準XDM資源提供的欄位，則可以將已棄用的欄位描述符分配給有關的架構，以達到相同的效果。 使用 [正確 `Accept` 標題](../tutorials/field-deprecation.md#verify-deprecation)，然後在API中查找架構時，可以查看該架構不建議使用的標準欄位。
+
+```json
+{
+  "@type": "xdm:descriptorDeprecated",
+  "xdm:sourceSchema": "https://ns.adobe.com/{TENANT_ID}/schemas/c65ddf08cf2d4a2fe94bd06113bf4bc4c855e12a936410d5",
+  "xdm:sourceVersion": 1,
+  "xdm:sourceProperty": "/faxPhone"
+}
+```
+
+| 屬性 | 說明 |
+| --- | --- |
+| `@type` | 描述符的類型。 對於欄位棄用描述符，必須將此值設定為 `xdm:descriptorDeprecated`。 |
+| `xdm:sourceSchema` | URI `$id` 將描述符應用到的架構。 |
+| `xdm:sourceVersion` | 要將描述符應用到的架構的版本。 應設定為 `1`。 |
+| `xdm:sourceProperty` | 將描述符應用到的架構中的屬性的路徑。 如果要將描述符應用於多個屬性，可以以陣列的形式提供路徑清單(例如， `["/firstName", "/lastName"]`)。 |
+
+{style=&quot;table-layout:auto&quot;&quot;

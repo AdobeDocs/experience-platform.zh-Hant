@@ -5,9 +5,9 @@ title: 架構註冊表API入門
 description: 本文檔介紹了在嘗試調用架構註冊表API之前需要瞭解的核心概念。
 topic-legacy: developer guide
 exl-id: 7daebb7d-72d2-4967-b4f7-1886736db69f
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: b92246e729ca26387a3d375e5627165a29956e52
 workflow-type: tm+mt
-source-wordcount: '1342'
+source-wordcount: '1356'
 ht-degree: 0%
 
 ---
@@ -211,6 +211,7 @@ XDM資源用 `$id` 屬性，如以下示例：
 | `application/vnd.adobe.xed-notext+json; version=1` | 原始XDM `$ref` 和 `allOf`。 沒有標題或說明。 |
 | `application/vnd.adobe.xed-full-notext+json; version=1` | `$ref` 屬性和 `allOf` 已解決。 沒有標題或說明。 |
 | `application/vnd.adobe.xed-full-desc+json; version=1` | `$ref` 屬性和 `allOf` 已解決。 包括描述符。 |
+| `application/vnd.adobe.xed-deprecatefield+json; version=1` | `$ref` 和 `allOf` 已解析，有標題和說明。 不建議使用的欄位 `meta:status` 屬性 `deprecated`。 |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -254,8 +255,8 @@ XDM資源用 `$id` 屬性，如以下示例：
 * 欄位對象的名稱可能包含字母數字、短划線或下划線字元，但 **不能** 以下划線開頭。
    * **正確：** `fieldName`。 `field_name2`。 `Field-Name`。 `field-name_3`
    * **錯誤：** `_fieldName`
-* camelCase是欄位對象名稱的首選項。 範例: `fieldName`
-* 該欄位應包括 `title`，寫在標題中。 範例: `Field Name`
+* camelCase是欄位對象名稱的首選項。 範例：`fieldName`
+* 該欄位應包括 `title`，寫在標題中。 範例：`Field Name`
 * 該欄位需要 `type`。
    * 定義某些類型可能需要可選 `format`。
    * 如果需要特定格式化的資料， `examples` 可以添加為陣列。

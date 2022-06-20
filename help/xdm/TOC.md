@@ -4,9 +4,9 @@ user-guide-title: 體驗資料模型 (XDM) 系統說明
 breadcrumb-title: 體驗資料模型 (XDM) 指南
 user-guide-description: 使用體驗資料模型 (XDM) 類別和結構描述欄位群組，將體驗資料標準化。
 feature: Schemas
-source-git-commit: ec61d4ed810029646e2ae28ffc91215eb9189f10
+source-git-commit: b92246e729ca26387a3d375e5627165a29956e52
 workflow-type: tm+mt
-source-wordcount: '465'
+source-wordcount: '469'
 ht-degree: 16%
 
 ---
@@ -171,12 +171,13 @@ ht-degree: 16%
    * [在UI中建立架構](tutorials/create-schema-ui.md)
    * [在API中建立架構](tutorials/create-schema-api.md)
    * [在API中定義自定義欄位](./tutorials/custom-fields-api.md)
+   * [將建議的值添加到欄位(API)](tutorials/suggested-values.md)
+   * [棄用XDM欄位](tutorials/field-deprecation.md)
    * [在UI中定義架構關係](tutorials/relationship-ui.md)
    * [在API中定義架構關係](tutorials/relationship-api.md)
    * [在即時CDP B2B版中定義模式關係](tutorials/relationship-b2b.md)
    * [管理架構的資料使用標籤](tutorials/labels.md)
-   * [建立即席模式(API)](tutorials/ad-hoc.md)
-   * [將建議的值添加到欄位(API)](tutorials/suggested-values.md)
+   * [建立即席架構](tutorials/ad-hoc.md)
 * [故障排除指南](troubleshooting-guide.md)
 * [API 參考資料](https://www.adobe.io/experience-platform-apis/references/schema-registry/)
 * [平台發行說明](https://www.adobe.com/go/platform-release-notes-en)

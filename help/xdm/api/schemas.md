@@ -5,9 +5,9 @@ title: 架構API終結點
 description: 通過架構註冊表API中的/schemas終結點，可以以寫程式方式管理體驗應用程式中的XDM架構。
 topic-legacy: developer guide
 exl-id: d0bda683-9cd3-412b-a8d1-4af700297abf
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: b92246e729ca26387a3d375e5627165a29956e52
 workflow-type: tm+mt
-source-wordcount: '1454'
+source-wordcount: '1468'
 ht-degree: 4%
 
 ---
@@ -138,6 +138,7 @@ curl -X GET \
 | `application/vnd.adobe.xed-notext+json; version=1` | 原始 `$ref` 和 `allOf`，沒有標題或說明。 |
 | `application/vnd.adobe.xed-full-notext+json; version=1` | `$ref` 和 `allOf` 已解析，沒有標題或說明。 |
 | `application/vnd.adobe.xed-full-desc+json; version=1` | `$ref` 和 `allOf` 已解析，包含描述符。 |
+| `application/vnd.adobe.xed-deprecatefield+json; version=1` | `$ref` 和 `allOf` 已解析，有標題和說明。 不建議使用的欄位 `meta:status` 屬性 `deprecated`。 |
 
 {style=&quot;table-layout:auto&quot;&quot;
 
