@@ -5,9 +5,9 @@ title: Salesforce源連接器概述
 topic-legacy: overview
 description: 瞭解如何使用API或用戶介面將Salesforce連接到Adobe Experience Platform。
 exl-id: 597778ad-3cf8-467c-ad5b-e2850967fdeb
-source-git-commit: 93061c84639ca1fdd3f7abb1bbd050eb6eebbdd6
+source-git-commit: e178e0df2653b8cb0d4176734be7cb421098e225
 workflow-type: tm+mt
-source-wordcount: '897'
+source-wordcount: '900'
 ht-degree: 0%
 
 ---
@@ -35,6 +35,7 @@ Experience Platform支援從第三方CRM系統接收資料。 對CRM提供程式
 - [機會聯繫人角色](../adobe-applications/mapping/salesforce.md#opportunity-contact-role)
 - [Campaigns](../adobe-applications/mapping/salesforce.md#campaign)
 - [市場活動成員](../adobe-applications/mapping/salesforce.md#campaign-member)
+- [帳戶聯繫人關係](../adobe-applications/mapping/salesforce.md#account-contact-relation)
 
 ## 設定 [!DNL Salesforce] 命名空間和架構自動生成實用程式
 
