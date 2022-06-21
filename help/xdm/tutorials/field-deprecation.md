@@ -1,16 +1,18 @@
 ---
 title: 棄用XDM欄位
 description: 瞭解如何棄用架構註冊表API中的「體驗資料模型」(XDM)欄位。
-source-git-commit: dc400dce8a77f27347e767230faf7301afc7c1fb
+source-git-commit: a1b86e6976cdb5b2bd3c2ecee933dfde337c9880
 workflow-type: tm+mt
-source-wordcount: '519'
+source-wordcount: '554'
 ht-degree: 2%
 
 ---
 
 # 棄用XDM欄位
 
-在體驗資料模型(XDM)中，可以使用 [架構註冊表API](https://developer.adobe.com/experience-platform-apis/references/schema-registry/)。 本文檔介紹如何為不同的XDM資源棄用欄位。
+在體驗資料模型(XDM)中，可以使用 [架構註冊表API](https://developer.adobe.com/experience-platform-apis/references/schema-registry/)。 棄用某個欄位會使其隱藏在下游UI中，如 [!UICONTROL 配置檔案] 工作區和Customer Journey Analytics，但是，它不會發生中斷更改，不會對現有資料流產生負面影響。
+
+本文檔介紹如何為不同的XDM資源棄用欄位。
 
 ## 快速入門
 
