@@ -5,9 +5,9 @@ title: 即時客戶檔案中的隱私請求處理
 type: Documentation
 description: Adobe Experience Platform Privacy Service處理客戶訪問、選擇退出銷售或刪除其個人資料的請求，這些資料由許多隱私法規規定。 本文檔介紹與處理即時客戶配置檔案的隱私請求相關的基本概念。
 exl-id: fba21a2e-aaf7-4aae-bb3c-5bd024472214
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 1686ff1684080160057462e9aa40819a60bf6b75
 workflow-type: tm+mt
-source-wordcount: '1272'
+source-wordcount: '1281'
 ht-degree: 0%
 
 ---
@@ -135,7 +135,7 @@ curl -X POST \
 
 >[!IMPORTANT]
 >
->成功的刪除請求刪除客戶（或一組客戶）的收集屬性資料時，該請求不會刪除在標識圖中建立的關聯。
+>如果對配置檔案發出刪除請求(`ProfileService`)但不是Identity Service(`identity`)，生成的作業將刪除客戶（或一組客戶）的收集屬性資料，但不會刪除在標識圖中建立的關聯。
 >
 >例如，使用客戶的 `email_id` 和 `customer_id` 刪除儲存在這些ID下的所有屬性資料。 但是，隨後在同一資料下攝取的任何資料 `customer_id` 仍與相應的 `email_id`，因為關聯仍然存在。
 >
