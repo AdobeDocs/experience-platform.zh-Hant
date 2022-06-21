@@ -2,9 +2,8 @@
 keywords: Experience Platform；首頁；熱門主題；源；連接器；源連接器；源sdk;sdk;SDK
 title: (Beta)在UI中建立混合面板源連接
 description: 瞭解如何使用Adobe Experience PlatformUI建立Mixpanel源連接。
-hide: true
-hidefromtoc: true
-source-git-commit: 8092829c95c9bc43894b73db104fdbb22363e460
+exl-id: 2a02f6a4-08ed-468c-8052-f5b7be82d183
+source-git-commit: e44f6d5bb2fd891a3e3b3c5e4aed68e8d4687b53
 workflow-type: tm+mt
 source-wordcount: '897'
 ht-degree: 2%

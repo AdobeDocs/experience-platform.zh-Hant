@@ -2,9 +2,8 @@
 keywords: Experience Platform；首頁；熱門主題；
 title: (Beta)Mixpanel源連接器概述
 description: 瞭解如何使用API或用戶介面將Mixpanel連接到Adobe Experience Platform。
-hide: true
-hidefromtoc: true
-source-git-commit: e7a5e20721f5826ca1f4520b4a27d261eed1e4df
+exl-id: 7eb605f6-8580-40b7-a9b3-96b9c3444f5d
+source-git-commit: e44f6d5bb2fd891a3e3b3c5e4aed68e8d4687b53
 workflow-type: tm+mt
 source-wordcount: '472'
 ht-degree: 0%
@@ -61,4 +60,3 @@ Experience Platform支援從第三方分析應用程式接收資料。 對分析
 
 * [建立 [!DNL Mixpanel] UI中的源連接](../../tutorials/ui/create/analytics/mixpanel.md)
 * [在UI中為客戶成功源連接建立資料流](../../tutorials/ui/dataflow/analytics.md)
-
