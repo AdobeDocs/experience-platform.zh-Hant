@@ -4,9 +4,9 @@ user-guide-title: 體驗資料模型 (XDM) 系統說明
 breadcrumb-title: 體驗資料模型 (XDM) 指南
 user-guide-description: 使用體驗資料模型 (XDM) 類別和結構描述欄位群組，將體驗資料標準化。
 feature: Schemas
-source-git-commit: b92246e729ca26387a3d375e5627165a29956e52
+source-git-commit: c57c0ff63abe35fcf0246088b12b6bc6cfc542b6
 workflow-type: tm+mt
-source-wordcount: '469'
+source-wordcount: '473'
 ht-degree: 16%
 
 ---
@@ -161,7 +161,9 @@ ht-degree: 16%
    * [資料類型](api/data-types.md)
    * [描述符](api/descriptors.md)
    * [工會](api/unions.md)
-   * [導出/導入](api/export-import.md)
+   * [CSV到架構轉換](api/csv-to-schema.md)
+   * [轉存](api/export.md)
+   * [讀入](api/import.md)
    * [示例資料](api/sample-data.md)
    * [審核日誌](api/audit-log.md)
    * [點對點架構](api/ad-hoc.md)

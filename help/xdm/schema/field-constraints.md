@@ -5,10 +5,10 @@ title: XDM欄位類型約束
 topic-legacy: overview
 description: 體驗資料模型(XDM)中欄位類型約束的引用，包括可以映射到的其它序列化格式以及如何在API中定義自己的欄位類型。
 exl-id: 63839a28-6d26-46f1-8bbf-b524e82ac4df
-source-git-commit: 279a1d90be82188ad6fd9d2bb9123354d0046b0d
+source-git-commit: 2a58236031834bbe298576e2fcab54b04ec16ac3
 workflow-type: tm+mt
 source-wordcount: '668'
-ht-degree: 5%
+ht-degree: 6%
 
 ---
 
@@ -22,7 +22,7 @@ ht-degree: 5%
 
 如果您計畫在API中定義自己的欄位類型，強烈建議您從 [架構註冊表開發人員指南](../api/getting-started.md) 瞭解如何建立域組和資料類型以在中包括自定義域。 如果使用Experience PlatformUI建立方案，請參閱上的指南 [定義UI中的欄位](../ui/fields/overview.md) 瞭解如何對自定義欄位組和資料類型中定義的欄位實施約束。
 
-## 基本結構和示例
+## 基本結構和示例 {#basic-types}
 
 XDM構建在JSON架構之上，因此XDM欄位在定義其類型時繼承了類似的語法。 瞭解JSON架構中不同欄位類型的表示方式有助於指明每種類型的基本約束。
 
@@ -144,7 +144,7 @@ XDM構建在JSON架構之上，因此XDM欄位在定義其類型時繼承了類�
 | [!UICONTROL 位元組] | 類型： `INT32`<br>注釋： `INT_8` | `ByteType` | `java.lang.Short` |
 | [!UICONTROL 日期] | 類型： `INT32`<br>注釋： `DATE` | `DateType` | `java.util.Date` |
 | [!UICONTROL 日期時間] | 類型： `INT64`<br>注釋： `TIMESTAMP_MILLIS` | `TimestampType` | `java.util.Date` |
-| [!UICONTROL 布爾型] | 類型：`BOOLEAN` | `BooleanType` | `java.lang.Boolean` |
+| [!UICONTROL 布林值] | 類型：`BOOLEAN` | `BooleanType` | `java.lang.Boolean` |
 | [!UICONTROL 地圖] | `MAP` — 注釋組<br><br>(`<key-type>` 必須 `STRING`) | `MapType`<br><br>(`keyType` 必須 `StringType`) | `java.util.Map` |
 
 {style=&quot;table-layout:auto&quot;}
@@ -161,7 +161,7 @@ XDM構建在JSON架構之上，因此XDM欄位在定義其類型時繼承了類�
 | [!UICONTROL 位元組] | `Byte` | `System.SByte` | `Number` |
 | [!UICONTROL 日期] | `java.util.Date` | `System.DateTime` | `String` |
 | [!UICONTROL 日期時間] | `java.util.Date` | `System.DateTime` | `String` |
-| [!UICONTROL 布爾型] | `Boolean` | `System.Boolean` | `Boolean` |
+| [!UICONTROL 布林值] | `Boolean` | `System.Boolean` | `Boolean` |
 | [!UICONTROL 地圖] | `Map` | (不適用) | `object` |
 
 {style=&quot;table-layout:auto&quot;&quot;
@@ -178,7 +178,7 @@ XDM構建在JSON架構之上，因此XDM欄位在定義其類型時繼承了類�
 | [!UICONTROL 位元組] | `int` | `Integer` | `int32` |
 | [!UICONTROL 日期] | `date` | `Integer`<br>（Unix毫秒） | `int64`<br>（Unix毫秒） |
 | [!UICONTROL 日期時間] | `timestamp` | `Integer`<br>（Unix毫秒） | `int64`<br>（Unix毫秒） |
-| [!UICONTROL 布爾型] | `bool` | `Integer`<br>（0/1二進位） | `bool` |
+| [!UICONTROL 布林值] | `bool` | `Integer`<br>（0/1二進位） | `bool` |
 | [!UICONTROL 地圖] | `object` | `map` | `map<key_type, value_type>` |
 
 {style=&quot;table-layout:auto&quot;&quot;
