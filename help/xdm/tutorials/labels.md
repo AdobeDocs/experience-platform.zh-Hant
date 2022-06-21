@@ -1,9 +1,10 @@
 ---
 title: 管理架構的資料使用標籤
 description: 瞭解如何將資料使用標籤添加到Adobe Experience PlatformUI中的「體驗資料模型」(XDM)架構欄位。
-source-git-commit: 6156d84cfdd33f8fe491e9a80e3711cf304733e9
+exl-id: 92284bf7-f034-46cc-b905-bdfb9fcd608a
+source-git-commit: 6c72e9dd5961d4dc94d8264a7da795ebd96c40ec
 workflow-type: tm+mt
-source-wordcount: '691'
+source-wordcount: '711'
 ht-degree: 0%
 
 ---
@@ -20,6 +21,8 @@ ht-degree: 0%
 
 雖然標籤可以應用於單個資料集（以及這些資料集中的欄位），但您也可以在架構級別應用標籤。 將標籤直接應用到架構時，這些標籤將傳播到基於該架構的所有現有和將來資料集。
 
+此外，在一個方案中添加的任何欄位標籤都會傳播到使用共用類或欄位組中相同欄位的所有其他方案。 這有助於確保整個資料模型中類似欄位的使用規則保持一致。
+
 本教程介紹了使用平台UI中的架構編輯器向架構添加標籤的步驟。
 
 ## 快速入門
@@ -32,7 +35,7 @@ ht-degree: 0%
 
 ## 選擇要將標籤添加到的架構或欄位
 
-標籤只能應用於方案，並且不能添加到構成這些方案的元件（類、欄位組和資料類型）。 要開始添加標籤，必須先 [選擇要編輯的現有架構](../ui/resources/schemas.md#edit) 或 [建立新架構](../ui/resources/schemas.md#create) 在架構編輯器中查看其結構。
+要開始添加標籤，必須先 [選擇要編輯的現有架構](../ui/resources/schemas.md#edit) 或 [建立新架構](../ui/resources/schemas.md#create) 在架構編輯器中查看其結構。
 
 要編輯單個欄位的標籤，可以在畫布中選擇該欄位，然後選擇 **[!UICONTROL 管理訪問]** 右欄。
 
