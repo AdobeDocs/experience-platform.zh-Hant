@@ -4,9 +4,9 @@ user-guide-title: 目的地指南
 user-guide-description: 針對跨通路行銷活動、電子郵件宣傳、鎖定特定目標的行銷活動和其他諸多使用案例，啟用已知和未知的資料。
 description: 本文檔列出了Adobe Experience Platform目標的目錄
 feature: Destinations
-source-git-commit: d01875bcb89d887ca4f4dbb9e7fe6179446faa3c
+source-git-commit: 34c408e5e4c9917be7f664f284e4b8e87898945c
 workflow-type: tm+mt
-source-wordcount: '759'
+source-wordcount: '761'
 ht-degree: 8%
 
 ---
@@ -153,6 +153,7 @@ ht-degree: 8%
       * [客戶之聲目標概述](./catalog/voice/overview.md)
       * [確認數字反饋擴展](./catalog/voice/confirmit-digital-feedback.md)
       * [無效標籤擴展](./catalog/voice/invoca.md)
+      * [Medallia連接](./catalog/voice/medallia-connector.md)
       * [梅達利亞分機](./catalog/voice/medallia.md)
       * [通話URL收件箱擴展](./catalog/voice/talkurl.md)
 * 目標 SDK {#destination-sdk}
