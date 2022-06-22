@@ -5,9 +5,9 @@ title: 資料集UI指南
 topic-legacy: datasets
 description: 瞭解如何在Adobe Experience Platform用戶介面中處理資料集時執行常見操作。
 exl-id: f0d59d4f-4ebd-42cb-bbc3-84f38c1bf973
-source-git-commit: 09db4aab17b933c63968d997f33279ab9a96bdef
+source-git-commit: 6238558e8edf968df4b24c43a626b736e2478be6
 workflow-type: tm+mt
-source-wordcount: '1185'
+source-wordcount: '1208'
 ht-degree: 0%
 
 ---
@@ -27,7 +27,13 @@ ht-degree: 0%
 * [[!DNL Real-time Customer Profile]](../../profile/home.md):基於來自多個源的聚合資料提供統一、即時的用戶配置檔案。
 * [[!DNL Adobe Experience Platform Data Governance]](../../data-governance/home.md):確保遵守有關使用客戶資料的法規、限制和策略。
 
-## 查看資料集
+## 查看資料集 {#view-datasets}
+
+>[!CONTEXTUALHELP]
+>id="platform_datasets_negative_numbers"
+>title="資料集活動中的負數"
+>abstract="接收記錄中的負數表示用戶已刪除選定時間範圍內的某些批。"
+>text="Learn more in documentation"
 
 在 [!DNL Experience Platform] UI，選擇 **[!UICONTROL 資料集]** 中開啟 **[!UICONTROL 資料集]** 控制項欄。 儀表板列出了組織的所有可用資料集。 將顯示每個列出的資料集的詳細資訊，包括其名稱、資料集所遵循的架構以及最近接收運行的狀態。
 
