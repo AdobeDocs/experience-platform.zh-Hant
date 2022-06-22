@@ -1,9 +1,11 @@
 ---
+keywords: Experience Platform；查詢服務；查詢服務；嵌套資料結構；嵌套資料；
 title: 在Query Service中使用嵌套資料結構
 description: 本文檔提供了一個使用CTAS和INSERT INTO語句處理和轉換嵌套資料欄位的工作示例。
-source-git-commit: 838ee939a8438c2f09ff64044c129e20c37ea01a
+exl-id: 593379fb-88ad-4b14-8d2e-aa6d18129974
+source-git-commit: b2b292dba0cf9ab9adbdff26aa61ef5a2cd5fe86
 workflow-type: tm+mt
-source-wordcount: '785'
+source-wordcount: '796'
 ht-degree: 1%
 
 ---
