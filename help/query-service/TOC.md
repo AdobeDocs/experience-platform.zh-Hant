@@ -4,10 +4,10 @@ user-guide-title: Adobe Experience Platform 查詢服務說明
 breadcrumb-title: 查詢服務指南
 user-guide-description: 使用標準 SQL 在 平台 Data Lake 中查詢資料。
 feature: Queries
-source-git-commit: f501a93786a726c5aa74e19903ac3b2564e72a91
+source-git-commit: 401d6f9e7ff4e30ff5b0efb35254e8863476425c
 workflow-type: tm+mt
-source-wordcount: '179'
-ht-degree: 19%
+source-wordcount: '187'
+ht-degree: 18%
 
 ---
 
@@ -48,6 +48,7 @@ ht-degree: 19%
 - 資料治理 {#data-governance}
    - [審核日誌指南](data-governance/audit-log-guide.md)
    - [ad hoc模式資料集中的標識](data-governance/ad-hoc-schema-identities.md)
+   - [基於屬性的訪問控制支援ad hoc模式](./data-governance/ad-hoc-schema-labels.md)
 - SQL引用 {#sql}
    - [SQL概述](sql/overview.md)
    - [SQL語法](sql/syntax.md)
