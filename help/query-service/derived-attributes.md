@@ -1,7 +1,9 @@
 ---
 title: 派生屬性
 description: 派生屬性允許您計算常規節奏上的屬性，並根據需要將這些派生屬性作為配置檔案屬性發佈到即時客戶配置檔案中。 本文檔概述了如何使用查詢服務建立派生屬性，以便與配置檔案資料一起使用。
-source-git-commit: 72e157e0a6310ebf2f55205b03b60600a56e3cf6
+hide: true
+hidefromtoc: true
+source-git-commit: fc2d2e7dadb95460f5d735ba33e5f106880a0198
 workflow-type: tm+mt
 source-wordcount: '1650'
 ht-degree: 1%

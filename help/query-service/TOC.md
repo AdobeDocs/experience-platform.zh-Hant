@@ -4,7 +4,7 @@ user-guide-title: Adobe Experience Platform 查詢服務說明
 breadcrumb-title: 查詢服務指南
 user-guide-description: 使用標準 SQL 在 平台 Data Lake 中查詢資料。
 feature: Queries
-source-git-commit: d074ebaef19616f1556671f4c7307faeb954cd60
+source-git-commit: fc2d2e7dadb95460f5d735ba33e5f106880a0198
 workflow-type: tm+mt
 source-wordcount: '193'
 ht-degree: 18%
@@ -47,10 +47,6 @@ ht-degree: 18%
 - 示例查詢 {#sample-queries}
    - [體驗事件查詢示例](sample-queries/experience-event.md)
    - [示例Adobe Analytics查詢](sample-queries/adobe-analytics.md)
-- 資料治理 {#data-governance}
-   - [審核日誌指南](data-governance/audit-log-guide.md)
-   - [ad hoc模式資料集中的標識](data-governance/ad-hoc-schema-identities.md)
-   - [基於屬性的訪問控制支援ad hoc模式](./data-governance/ad-hoc-schema-labels.md)
 - SQL引用 {#sql}
    - [SQL概述](sql/overview.md)
    - [SQL語法](sql/syntax.md)
@@ -69,6 +65,10 @@ ht-degree: 18%
    - [PSQL](clients/psql.md)
    - [RStudio](clients/rstudio.md)
    - [塔布洛](clients/tableau.md)
+- 資料治理 {#data-governance}
+   - [審核日誌指南](data-governance/audit-log-guide.md)
+   - [ad hoc模式資料集中的標識](data-governance/ad-hoc-schema-identities.md)
+   - [基於屬性的訪問控制支援ad hoc模式](./data-governance/ad-hoc-schema-labels.md)
 - [故障排除指南](troubleshooting-guide.md)
 - [API 參考資料](https://www.adobe.io/experience-platform-apis/references/query-service/)
 - [平台發行說明](https://www.adobe.com/go/platform-release-notes-en)
