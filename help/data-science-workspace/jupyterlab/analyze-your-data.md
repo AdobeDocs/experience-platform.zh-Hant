@@ -1,98 +1,97 @@
 ---
-keywords: Experience Platform;JupyterLab；筆記型電腦；資料科學工作區；熱門主題；分析資料筆記型電腦
+keywords: Experience Platform;JupyterLab；筆記本；Data Science Workspace；熱門主題；分析資料筆記本
 solution: Experience Platform
-title: 使用筆記型電腦分析資料
+title: 使用筆記本分析資料
 topic-legacy: tutorial
 type: Tutorial
-description: 本教學課程著重於如何使用Jupyter Notebooks（在Data Science Workspace中建立）來存取、探索和視覺化您的資料。
+description: 本教程重點介紹如何使用Jupyter Notebooks（在Data Science Workspace中構建）來訪問、瀏覽和可視化您的資料。
 exl-id: 3b0148d1-9c08-458b-9601-979cb6c7a0fb
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 1e240c710da3fa7ae863377d044308b0bca47c7f
 workflow-type: tm+mt
-source-wordcount: '1730'
+source-wordcount: '1724'
 ht-degree: 0%
 
 ---
 
-# 使用筆記型電腦分析資料
+# 使用筆記本分析資料
 
-本教學課程著重於如何使用Jupyter Notebooks（在Data Science Workspace中建立）來存取、探索和視覺化您的資料。 在本教學課程結束時，您應瞭解Jupyter Notebooks提供的一些功能，以便更好地瞭解您的資料。
+本教程重點介紹如何使用Jupyter Notebooks（在Data Science Workspace中構建）來訪問、瀏覽和可視化您的資料。 在本教程結束時，您應瞭解Jupyter筆記型電腦提供的一些功能，以便更好地瞭解您的資料。
 
-以下概念介紹：
+介紹了以下概念：
 
-- **[!DNL JupyterLab]:** [[!DNL JupyterLab]](https://blog.jupyter.org/jupyterlab-is-ready-for-users-5a6f039b8906) 是Project Jupyter的新一代Web介面，並緊密整合在其中 [!DNL Adobe Experience Platform]。
-- **批處理：** 資料集由批處理組成。批是一組在一段時間內收集並作為單個單位一起處理的資料。 新增資料至資料集時，會建立新的批次。
-- **資料存取SDK（已過時）:** 資料存取SDK現已過時。請使用[[!DNL Platform SDK]](../authoring/platform-sdk.md)指南。
+- **[!DNL JupyterLab]:** [[!DNL JupyterLab]](https://blog.jupyter.org/jupyterlab-is-ready-for-users-5a6f039b8906) 是Project Jupyter的新一代基於web的介面，並緊密整合到 [!DNL Adobe Experience Platform]。
+- **批：** 資料集由批處理組成。 批是一組在一段時間內收集並作為單個單位一起處理的資料。 將資料添加到資料集時會建立新批。
+- **資料存取SDK（不建議使用）:** 資料存取SDK現在已棄用。 請使用 [[!DNL Platform SDK]](../authoring/platform-sdk.md) 的子菜單。
 
-## 在Data Science Workspace中探索筆記型電腦
+## 在Data Science Workspace中瀏覽筆記本
 
-在本節中，將探索先前納入零售銷售模式的資料。
+在本節中，將探索以前已納入零售銷售架構的資料。
 
-Data Science Workspace可讓使用者透過[!DNL JupyterLab]平台建立[!DNL Jupyter Notebooks]，以建立和編輯機器學習工作流程。 [!DNL JupyterLab] 是伺服器——用戶端共同作業工具，可讓使用者透過網頁瀏覽器編輯筆記型電腦檔案。這些筆記型電腦可同時包含可執行代碼和富格文本元素。 為了我們的目的，我們將使用Markdown進行分析說明，並可執行[!DNL Python]程式碼來執行資料探索和分析。
+Data Science Workspace允許用戶建立 [!DNL Jupyter Notebooks] 通過 [!DNL JupyterLab] 可在其中建立和編輯機器學習工作流的平台。 [!DNL JupyterLab] 是一種伺服器 — 客戶端協作工具，允許用戶通過web瀏覽器編輯筆記本文檔。 這些筆記本可包含可執行代碼和富文本元素。 為了我們的目的，我們將使用Markdown進行分析說明和執行檔 [!DNL Python] 用於執行資料勘探和分析的代碼。
 
-### 選擇您的工作區
+### 選擇工作區
 
-在啟動[!DNL JupyterLab]時，我們將為Jupyter Notebooks提供基於Web的介面。 根據我們選擇的筆記本類型，將啟動相應的內核。
+啟動時 [!DNL JupyterLab]為Jupyter筆記本提供了一個基於Web的介面。 根據我們選擇的筆記本類型，將啟動相應的內核。
 
-在比較要使用的環境時，我們必須考慮每項服務的限制。 例如，如果我們使用[apacties](https://pandas.pydata.org/)資料庫與[!DNL Python]，作為一般使用者，RAM限制為2 GB。 即使身為強大使用者，我們也只能使用20 GB的記憶體。 如果處理較大的計算，則使用[!DNL Spark]來提供與所有筆記本實例共用的1.5 TB是有意義的。
+在比較要使用的環境時，我們必須考慮每個服務的局限性。 例如，如果我們使用 [熊貓](https://pandas.pydata.org/) 庫 [!DNL Python]，作為普通用戶，RAM限制為2 GB。 即使是電源用戶，也將限制為20 GB的RAM。 如果處理較大的計算，使用 [!DNL Spark] 它提供1.5 TB，與所有筆記本實例共用。
 
-依預設，Tensorflow方式可在GPU叢集中運作，而Python則可在CPU叢集中執行。
+預設情況下，Tensorflow配方在GPU群集中工作，Python在CPU群集中運行。
 
 ### 建立新筆記本
 
-在[!DNL Adobe Experience Platform] UI中，按一下頂端功能表中的「資料科學」標籤，將您帶往「資料科學工作區」。 在此頁中，按一下[!DNL JupyterLab]頁籤，該頁籤將開啟[!DNL JupyterLab]啟動程式。 您應該會看到類似此的頁面。
+在 [!DNL Adobe Experience Platform] UI，選擇 [!UICONTROL 資料科學] 的子菜單。 從此頁面中，選擇 [!DNL JupyterLab] 開啟 [!DNL JupyterLab] 啟動程式。 您應該看到類似的頁面。
 
-![](../images/jupyterlab/analyze-data/jupyterlab-launcher.png)
+![](../images/jupyterlab/analyze-data/jupyterlab-launcher-new.png)
 
-在本教程中，我們將使用Jupyter Notebook中的[!DNL Python] 3來演示如何訪問和瀏覽資料。 在「啟動器」頁中，提供了示例筆記本。 我們將使用[!DNL Python] 3的零售銷售配方。
+在本教程中，我們將使用 [!DNL Python] 3，顯示如何訪問和瀏覽資料。 在「啟動程式」頁中，提供了示例筆記本。 我們將使用零售銷售處方 [!DNL Python] 3.
 
 ![](../images/jupyterlab/analyze-data/retail_sales.png)
 
-「零售銷售」方式是使用相同「零售銷售」資料集的獨立範例，以顯示如何在Jupyter Notebook中探索和視覺化資料。 此外，本筆記本還通過培訓和驗證深入探討。 有關此特定筆記本的詳細資訊，請參閱[逐步介紹](../walkthrough.md)。
+零售銷售處方是一個獨立的示例，它使用相同的零售銷售資料集來顯示如何在Jupyter筆記本中瀏覽和可視化資料。 此外，筆記本在培訓和驗證方面更深入。 有關此特定筆記本的詳細資訊，請參閱 [漫步](../walkthrough.md)。
 
-### 存取資料
+### 訪問資料
 
 >[!NOTE]
 >
->`data_access_sdk_python`已過時，不再建議使用。 請參閱將資料存取SDK轉換為平台SDK](../authoring/platform-sdk.md)教學課程，以轉換您的程式碼。 [本教學課程仍適用下列相同步驟。
+>的 `data_access_sdk_python` 已棄用，不再推薦。 請參閱 [將資料存取SDK轉換為平台SDK](../authoring/platform-sdk.md) 教程來轉換代碼。 本教程仍適用以下相同步驟。
 
-我們將從[!DNL Adobe Experience Platform]內部存取資料，從外部存取資料。 我們將使用`data_access_sdk_python`程式庫來存取內部資料，例如資料集和XDM架構。 對於外部資料，我們將使用熊貓[!DNL Python]圖書館。
+我們將從以下位置對內部資料進行訪問 [!DNL Adobe Experience Platform] 和外部資料。 我們將使用 `data_access_sdk_python` 庫以訪問內部資料，如資料集和XDM架構。 對於外部資料，我們用熊貓 [!DNL Python] 的下界。
 
 #### 外部資料
 
-當零售銷售筆記型電腦開啟時，尋找「載入資料」標題。 以下[!DNL Python]代碼使用`DataFrame`資料結構和[read_csv()](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.read_csv.html#pandas.read_csv)函式將[!DNL Github]上托管的CSV讀入DataFrame:
+開啟零售銷售筆記本後，查找「載入資料」標題。 以下 [!DNL Python] 代碼使用熊貓 `DataFrame` 資料結構和 [read_csv()](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.read_csv.html#pandas.read_csv) 函式，用於讀取托管於 [!DNL Github] 到DataFrame中：
 
 ![](../images/jupyterlab/analyze-data/read_csv.png)
 
-熊貓的DataFrame資料結構是一種二維標籤資料結構。 若要快速查看資料的維度，我們可使用`df.shape`。 這會傳回表示DataFrame維度的元組：
+Panots的DataFrame資料結構是一種二維標注資料結構。 要快速查看資料的維度，我們可以使用 `df.shape`。 這將返回表示DataFrame的維度的元組：
 
 ![](../images/jupyterlab/analyze-data/df_shape.png)
 
-最後，我們可以一窺我們的資料外觀。 我們可以使用`df.head(n)`來查看DataFrame的前`n`行：
+最後，我們可以看一看我們的資料是什麼樣子。 我們可以 `df.head(n)` 查看 `n` DataFrame的行：
 
 ![](../images/jupyterlab/analyze-data/df_head.png)
 
 #### [!DNL Experience Platform] 資料
 
-現在，我們將重點介紹訪問[!DNL Experience Platform]資料。
+現在，我們將通過 [!DNL Experience Platform] 資料。
 
-##### 依資料集ID
+##### 按資料集ID
 
-在本節中，我們使用零售銷售資料集，該資料集與零售銷售示例筆記本中使用的資料集相同。
+對於本節，我們使用的是Retail Sales資料集，該資料集與Retail Sales示例筆記本中使用的資料集相同。
 
-在Jupyter Notebook中，可以從左側的&#x200B;**Data**&#x200B;標籤![資料標籤](../images/jupyterlab/analyze-data/dataset-tab.png)訪問資料。 在選擇頁籤時，將提供兩個資料夾。 選擇&#x200B;**[!UICONTROL Datasets]**&#x200B;資料夾。
+在Jupyter筆記本中，您可以從 **資料** 頁籤 ![資料頁籤](../images/jupyterlab/analyze-data/dataset-tab.png) 左邊。 選擇該頁籤後，將提供兩個資料夾。 選擇 **[!UICONTROL 資料集]** 的子菜單。
 
 ![](../images/jupyterlab/analyze-data/dataset_tab.png)
 
-現在，在Datasets目錄中，您可以看到所有收錄的資料集。 請注意，如果目錄中填入了大量資料集，則可能需要一分鐘來載入所有條目。
+現在，在資料集目錄中，您可以看到所有攝取的資料集。 請注意，如果目錄中的資料集已大量填充，則載入所有條目可能需要一分鐘。
 
-由於資料集相同，因此我們想要取代使用外部資料的上一區段的載入資料。 在&#x200B;**Load Data**&#x200B;下選擇代碼塊，然後在鍵盤上按兩次&#x200B;**&#39;d&#39;**&#x200B;鍵。 請確定焦點在區塊上，而非在文字中。 您可以按兩下&#x200B;**&#39;esc&#39;**&#x200B;以逸出文字焦點，然後再按兩下&#x200B;**&#39;d&#39;**。
+由於資料集是相同的，因此我們希望替換使用外部資料的前一部分的載入資料。 選擇下面的代碼塊 **載入資料** 然後按 **「d」** 鍵盤上鍵兩次。 確保焦點在塊上，而不是文本中。 你可以按 **「esc」** 在按前避開文本焦點 **「d」** 兩次。
 
-現在，我們可以在`Retail-Training-<your-alias>`資料集上按一下滑鼠右鍵，然後在下拉式清單中選取「探索筆記型電腦中的資料」選項。 可執行的代碼條目將出現在您的筆記本中。
+現在，我們可以按一下右鍵 `Retail-Training-<your-alias>` 資料集，然後在下拉清單中選擇「瀏覽筆記本中的資料」選項。 可執行代碼條目將出現在您的筆記本中。
 
 >[!TIP]
 >
->請參閱[[!DNL Platform SDK]](../authoring/platform-sdk.md)指南以轉換程式碼。
+>請參閱 [[!DNL Platform SDK]](../authoring/platform-sdk.md) 的子菜單。
 
 ```PYTHON
 from data_access_sdk_python.reader import DataSetReader
@@ -102,9 +101,9 @@ df = reader.load(data_set_id="xxxxxxxx", ims_org="xxxxxxxx@AdobeOrg")
 df.head()
 ```
 
-如果您正在使用[!DNL Python]以外的其他內核，請參閱[本頁](https://github.com/adobe/acp-data-services-dsw-reference/wiki/Accessing-Data-on-the-Platform)以訪問[!DNL Adobe Experience Platform]上的資料。
+如果您正在處理除 [!DNL Python]，請參閱 [此頁](https://github.com/adobe/acp-data-services-dsw-reference/wiki/Accessing-Data-on-the-Platform) 訪問 [!DNL Adobe Experience Platform]。
 
-選擇可執行單元格，然後按工具欄中的播放按鈕將運行可執行代碼。 `head()`的輸出將是表，其資料集的索引鍵為欄，而資料集中的前n列為欄。 `head()` 接受整數引數，以指定要輸出的行數。預設為5。
+選擇執行檔單元格，然後按工具欄中的播放按鈕將運行執行檔代碼。 的輸出 `head()` 將是一個表，其資料集的鍵為列，資料集中的前n行為。 `head()` 接受整數參數以指定要輸出的行數。 預設情況下，此值為5。
 
 ![](../images/jupyterlab/analyze-data/datasetreader_head.png)
 
@@ -113,9 +112,9 @@ df.head()
 ![](../images/jupyterlab/analyze-data/restart_kernel_run.png)
 
 
-### 探索您的資料
+### 瀏覽資料
 
-既然我們可以存取您的資料，讓我們利用統計資料和視覺化功能來關注資料本身。 我們使用的資料集是零售資料集，它提供了關於給定日期45個不同商店的各種資訊。 給定`date`和`store`的某些特性包括：
+既然我們可以訪問您的資料，讓我們通過統計和可視化來關注資料本身。 我們使用的資料集是零售資料集，它提供了關於給定日期45個不同商店的雜項資訊。 給定的某些特徵 `date` 和 `store` 包括：
 - `storeType`
 - `weeklySales`
 - `storeSize`
@@ -128,7 +127,7 @@ df.head()
 
 #### 統計摘要
 
-我們可以利用[!DNL Python's]熊貓庫來獲取每個屬性的資料類型。 下列呼叫的輸出將提供每個欄的項目數和資料類型的相關資訊：
+我們可以利用 [!DNL Python's] 熊貓庫獲取每個屬性的資料類型。 以下調用的輸出將提供有關每個列的條目數和資料類型的資訊：
 
 ```PYTHON
 df.info()
@@ -136,9 +135,9 @@ df.info()
 
 ![](../images/jupyterlab/analyze-data/df_info.png)
 
-由於瞭解每欄的資料類型可讓我們瞭解如何處理資料，因此這項資訊十分實用。
+此資訊非常有用，因為瞭解每列的資料類型將使我們能夠瞭解如何處理資料。
 
-現在讓我們來看一下統計摘要。 只會顯示數值資料類型，因此`date`、`storeType`和`isHoliday`將不會輸出：
+現在讓我們看一下統計摘要。 只顯示數字資料類型，因此 `date`。 `storeType`, `isHoliday` 將不輸出：
 
 ```PYTHON
 df.describe()
@@ -146,59 +145,59 @@ df.describe()
 
 ![](../images/jupyterlab/analyze-data/df_describe.png)
 
-這樣，我們可以看到每個特徵有6435個實例。 同時，給出了平均、標準差(std)、最小、最大和四分位數等統計資訊。 這會提供資料的偏差資訊。 在下一節，我們將檢視視覺化，並搭配這些資訊，讓我們更瞭解我們的資料。
+由此可以看出，每個特徵有6435個實例。 同時給出了平均、標準差(std)、最小、最大和四分之間的統計資訊。 這給出了資料偏差的資訊。 在下一節中，我們將瀏覽與這些資訊一起工作的可視化技術，以便我們更好地瞭解我們的資料。
 
-查看`store`的最小值和最大值，我們可以看到有45個唯一儲存資料。 還有`storeTypes`可區分商店的不同。 通過執行下列操作，我們可以看到`storeTypes`的分佈：
+查看 `store`，我們可以看到有45個資料表示的唯一儲存。 還有 `storeTypes` 才能區分店面。 我們可以看到 `storeTypes` 執行以下操作：
 
 ![](../images/jupyterlab/analyze-data/df_groupby.png)
 
-這表示22個商店`storeType` `A`,17個商店`storeType` `B`,6個商店`storeType` `C`。
+這意味著22家商店 `storeType` `A`, 17 `storeType` `B`，和6 `storeType` `C`。
 
-#### 資料視覺化
+#### 資料可視化
 
-既然我們知道我們的資料框值，我們想要以視覺化來補充，讓事物更清晰，更容易辨識模式。 在將結果傳達給觀眾時，圖表也很有用。 有些[!DNL Python]程式庫對視覺化非常有用，包括：
-- [馬特普洛特利卜](https://matplotlib.org/)
+既然我們知道我們的資料框架值，我們想用可視化來補充這一點，使事情更清晰，更容易識別模式。 圖形在將結果傳送給觀眾時也很有用。 部分 [!DNL Python] 用於可視化的庫包括：
+- [馬普洛特利布](https://matplotlib.org/)
 - [熊貓](https://pandas.pydata.org/)
-- [西伯恩](https://seaborn.pydata.org/)
-- [gplot](https://ggplot2.tidyverse.org/)
+- [西博恩](https://seaborn.pydata.org/)
+- [積](https://ggplot2.tidyverse.org/)
 
-在本節中，我們將快速介紹使用每個程式庫的一些優點。
+在本節中，我們將快速介紹使用每個庫的一些優勢。
 
-[Matplotlibis是](https://matplotlib.org/) 最古老的 [!DNL Python] 視覺化套件。他們的目標是讓「輕鬆、艱難的事情成為可能」。 這通常是正確的，因為該套產品功能極強，但同時也具有複雜性。 在不花費大量時間和精力的情況下，要獲得合理的外觀圖並不總是容易的。
+[馬普洛特利布](https://matplotlib.org/) 是 [!DNL Python] 可視化包。 他們的目標是讓「容易、難」成為可能。 這一點往往是正確的，因為一攬子計畫功能極強，但也伴隨著複雜性。 在不花費大量時間和精力的情況下，要獲得一個合理的外觀圖並不總是容易的。
 
-[Pandasis](https://pandas.pydata.org/) 主要用於其DataFrame物件，可讓資料處理與整合索引。不過，熊貓也包括了一個基於matplotlib的內置繪圖功能。
+[熊貓](https://pandas.pydata.org/) 主要用於其DataFrame對象，該對象允許使用整合索引進行資料操作。 不過，熊貓還包括一個內置的繪圖功能，該功能基於matplotlib。
 
-[西](https://seaborn.pydata.org/) 博尼斯在matplotlib上構建軟體包。其主要目標是讓預設圖形更具視覺吸引力，並簡化複雜圖形的建立。
+[西博恩](https://seaborn.pydata.org/) 是在matplotlib上生成的包。 它的主要目標是使預設圖形更具有視覺吸引力，並簡化複雜圖形的建立。
 
-[](https://ggplot2.tidyverse.org/) ggplotis a package so bult on to of matplotlib.但主要區別在於，該工具是R的ggplot2埠。與西博恩類似，其目標是改進matplotlib。 熟悉gplot2 for R的使用者應考慮此程式庫。
+[積](https://ggplot2.tidyverse.org/) 也是在matplotlib上構建的包。 但主要區別是該工具是R的ggplot2埠。與西博恩類似，其目標是改進matplotlib。 熟悉R的ggplot2的用戶應考慮此庫。
 
 
-##### 一元圖
+##### 單變數圖
 
-單變數圖是個別變數的圖形。 常用的單變數圖形是方框和須條圖，用來視覺化您的資料。
+單變數圖是單個變數的圖。 常用的單變數圖形用於將資料可視化為框和晶須圖。
 
-使用我們過去的零售資料集，我們可以為45家商店及其每週銷售量產生包裝盒和須條圖。 該出圖是使用`seaborn.boxplot`函式生成的。
+使用我們以前的零售資料集，我們可以為45家商店中的每家及其每週銷售額生成框和晶須圖。 繪圖是使用 `seaborn.boxplot` 的子菜單。
 
 ![](../images/jupyterlab/analyze-data/box_whisker.png)
 
-用方框和晶須圖顯示資料的分佈。 圖的外線顯示上四分位數和下四分位數，而框則跨越四分位數範圍。 框中的行標示中間值。 任何高於上四分位數或下四分位數1.5倍的資料點都會標示為圓。 這些點被認為是離群的。
+用盒和晶須圖顯示資料的分佈。 出圖的外線顯示上四分位和下四分位，而框跨過四分位範圍。 框中的線條標籤中位。 高於上四分之一或下四分之一的任何資料點都標籤為圓。 這些點被認為是異常點。
 
-##### 多變數圖表
+##### 多元圖
 
-多變數圖表可用來查看變數之間的互動。 透過視覺化，資料科學家可以查看變數之間是否有任何關聯或模式。 常用的多變數圖形是關聯矩陣。 利用相關矩陣，利用相關係數量化多變數間的相關性。
+多變數圖用於查看變數之間的相互作用。 通過可視化，資料科學家可以查看變數之間是否存在任何相關或模式。 常用的多元圖是相關矩陣。 利用相關矩陣，利用相關係數量化多個變數之間的相關性。
 
-使用相同的零售資料集，可以生成關聯矩陣。
+使用同一零售資料集，可以生成相關矩陣。
 
 ![](../images/jupyterlab/analyze-data/correlation_1.png)
 
-注意中心下方1的對角線。 這顯示在比較變數本身時，其具有完全正相關性。 強正相關度將接近1，弱關聯度接近0。 負相關顯示，負系數顯示逆趨勢。
+注意中心下方1的對角線。 這表明，在將變數與自身進行比較時，它具有完全正相關性。 強正相關度將接近1，弱相關度將接近0。 顯示負相關和顯示逆趨勢的負系數。
 
 
 ## 後續步驟
 
-本教學課程介紹如何在Data Science Workspace中建立新的Jupyter Notebook，以及如何從外部以及從[!DNL Adobe Experience Platform]訪問資料。 具體來說，我們逐一檢視下列步驟：
+本教程將介紹如何在資料科學工作區中建立新的Jupyter筆記本，以及如何從外部和從中訪問資料 [!DNL Adobe Experience Platform]。 具體來說，我們介紹了以下步驟：
 - 建立新的Jupyter筆記本
-- 存取資料集和結構
-- 探索資料集
+- 訪問資料集和架構
+- 瀏覽資料集
 
-現在，您已準備好前往[下一節](../models-recipes/package-source-files-recipe.md)封裝配方並匯入至Data Science Workspace。
+現在，您已準備好 [下一部分](../models-recipes/package-source-files-recipe.md) 打包配方並導入到Data Science Workspace。
