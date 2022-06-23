@@ -4,9 +4,9 @@ user-guide-title: 目的地指南
 user-guide-description: 針對跨通路行銷活動、電子郵件宣傳、鎖定特定目標的行銷活動和其他諸多使用案例，啟用已知和未知的資料。
 description: 本文檔列出了Adobe Experience Platform目標的目錄
 feature: Destinations
-source-git-commit: 34c408e5e4c9917be7f664f284e4b8e87898945c
+source-git-commit: 8c2ce6936eea5c90319a03e35f697ebcdb89e1e5
 workflow-type: tm+mt
-source-wordcount: '761'
+source-wordcount: '773'
 ht-degree: 8%
 
 ---
@@ -33,6 +33,7 @@ ht-degree: 8%
       * [將受眾資料激活到批配置檔案導出目標](./ui/activate-batch-profile-destinations.md)
       * [將受眾資料激活到配置檔案請求目標](./ui/activate-profile-request-destinations.md)
       * [配置同頁和下一頁個性化的個性化目標](./ui/configure-personalization-destinations.md)
+      * [(Beta)使用Experience PlatformUI按需導出檔案到批處理目標](./ui/export-file-now.md)
    * [查看目標詳細資訊](./ui/destination-details-page.md)
    * [更新目標帳戶](./ui/update-accounts.md)
    * [刪除目標帳戶](./ui/delete-destination-account.md)
