@@ -2,7 +2,7 @@
 description: 此配置允許您指明基本資訊，如目標名稱、類別、說明、徽標等。 此配置中的設定還確定Experience Platform用戶如何驗證到目標、Experience Platform用戶介面中的顯示方式以及可以導出到目標的身份。
 title: （測試版）基於檔案的目標配置選項，用於Destination SDK
 exl-id: 6b0a0398-6392-470a-bb27-5b34b0062793
-source-git-commit: 89e05ed522aed697ba3a2f06137546fd5673920d
+source-git-commit: 39fbdcdb704f096e1fcee680221c529758a00555
 workflow-type: tm+mt
 source-wordcount: '2304'
 ht-degree: 5%
@@ -308,7 +308,6 @@ ht-degree: 5%
             "CUSTOM_TEXT"
          ],
          "defaultFilenameAppendOptions":[
-            "SEGMENT_ID",
             "DATETIME"
          ],
          "defaultFilename":"%DESTINATION%_%SEGMENT_ID%"
@@ -759,22 +758,21 @@ Adobe Experience Platform Destination SDK支援夥伴定義的架構。 合作�
    "defaultFrequency":"DAILY",
    "defaultStartTime":"00:00",
    "filenameConfig":{
-      "allowedFilenameAppendOptions":[
-         "SEGMENT_NAME",
-         "DESTINATION_INSTANCE_ID",
-         "DESTINATION_INSTANCE_NAME",
-         "ORGANIZATION_NAME",
-         "SANDBOX_NAME",
-         "DATETIME",
-         "CUSTOM_TEXT"
-      ],
-      "defaultFilenameAppendOptions":[
-         "SEGMENT_ID",
-         "DATETIME"
-      ],
-      "defaultFilename":"%DESTINATION%_%SEGMENT_ID%"
+         "allowedFilenameAppendOptions":[
+            "SEGMENT_NAME",
+            "DESTINATION_INSTANCE_ID",
+            "DESTINATION_INSTANCE_NAME",
+            "ORGANIZATION_NAME",
+            "SANDBOX_NAME",
+            "DATETIME",
+            "CUSTOM_TEXT"
+         ],
+         "defaultFilenameAppendOptions":[
+            "DATETIME"
+         ],
+         "defaultFilename":"%DESTINATION%_%SEGMENT_ID%"
+      },
    }
-}
 ```
 
 | 參數 | 類型 | 說明 |
