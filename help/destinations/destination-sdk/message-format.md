@@ -2,7 +2,7 @@
 description: 本頁介紹從Adobe Experience Platform導出到目標的資料中的消息格式和配置檔案轉換。
 title: 訊息格式
 exl-id: 1212c1d0-0ada-4ab8-be64-1c62a1158483
-source-git-commit: f000eadb689a99f7667c47e2bef5d2a780aa0505
+source-git-commit: 6600549cf421e2adc360b75e0b463992d549b85e
 workflow-type: tm+mt
 source-wordcount: '2266'
 ht-degree: 1%
@@ -61,7 +61,7 @@ Users who want to activate data to your destination need to map the fields in th
 
 假設您的平台可以接收消息格式，如：
 
-```curl
+```shell
 POST https://YOUR_REST_API_URL/users/
 Content-Type: application/json
 Authorization: Bearer YOUR_REST_API_KEY
@@ -164,7 +164,7 @@ Adobe使用 [卵石模板](https://pebbletemplates.io/)，類似於 [金賈](htt
 2. 組合上述欄位的模板的複雜性增加示例： [建立發送段和標識的模板](./message-format.md#segments-and-identities) 和 [建立發送段、標識和配置檔案屬性的模板](./message-format.md#segments-identities-attributes)。
 3. 包含聚合鍵的模板。 使用 [可配置聚合](./destination-configuration.md#configurable-aggregation) 在目標配置中，Experience Platform根據段ID、段狀態或標識命名空間等條件對導出到目標的配置檔案進行分組。
 
-### 設定檔屬性 {#attributes}
+### 配置檔案屬性 {#attributes}
 
 要轉換導出到目標的配置檔案屬性，請參閱下面的JSON和代碼示例。
 
@@ -474,7 +474,6 @@ Adobe使用 [卵石模板](https://pebbletemplates.io/)，類似於 [金賈](htt
     ]
 }
 ```
-
 
 ### 建立發送段和標識的模板 {#segments-and-identities}
 

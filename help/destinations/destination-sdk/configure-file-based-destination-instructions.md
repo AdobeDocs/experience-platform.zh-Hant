@@ -1,9 +1,10 @@
 ---
 description: 此頁列出並說明使用Destination SDK配置基於檔案的目標的步驟。
 title: （測試版）使用Destination SDK配置基於檔案的目標
-source-git-commit: 92bca3600d854540fd2badd925e453fba41601a7
+exl-id: 84d73452-88e4-4e0f-8fc7-d0d8e10f9ff5
+source-git-commit: 77c80c391ef6677f95af81ef15272380687e6789
 workflow-type: tm+mt
-source-wordcount: '477'
+source-wordcount: '480'
 ht-degree: 0%
 
 ---
@@ -259,8 +260,9 @@ POST platform.adobe.io/data/core/activation/authoring/destinations
 * 如果已選擇 `"authenticationRule": "CUSTOMER_AUTHENTICATION"` 在目標配置中，有關基於檔案的目標的Destination SDK支援的驗證類型，請參見以下各節：
 
    * [AmazonS3驗證](authentication-configuration.md#s3)
-   * [Azure連接字串](authentication-configuration.md#blob)
-   * [Azure服務主體](authentication-configuration.md#adls)
+   * [Azure Blob](authentication-configuration.md#blob)
+   * [Azure資料湖儲存](authentication-configuration.md#adls)
+   * [Google雲儲存](authentication-configuration.md#gcs)
    * [使用SSH密鑰進行SFTP驗證](authentication-configuration.md#sftp-ssh)
    * [使用密碼進行SFTP驗證](authentication-configuration.md#sftp-password)
 

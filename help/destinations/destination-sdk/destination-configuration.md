@@ -2,7 +2,7 @@
 description: 此配置允許您指明基本資訊，如目標名稱、類別、說明、徽標等。 此配置中的設定還確定Experience Platform用戶如何驗證到目標、Experience Platform用戶介面中的顯示方式以及可以導出到目標的身份。
 title: 流式傳輸目標配置選項，用於Destination SDK
 exl-id: b7e4db67-2981-4f18-b202-3facda5c8f0b
-source-git-commit: e3886cbcde76e37263d2fa23769fb9e96501edc4
+source-git-commit: b12e46592c6c7bb09a90b809e7fac7d05703210a
 workflow-type: tm+mt
 source-wordcount: '1787'
 ht-degree: 4%
@@ -271,6 +271,7 @@ ht-degree: 4%
 如果您希望批量較大，並且同一呼叫上有數千個配置檔案，則此選項最有效。 此選項還允許您基於複雜的聚合規則聚合導出的配置檔案。
 
 此選項允許您：
+
 * 在對目標進行API調用之前，設定要聚合的配置檔案的最大時間和最大數量。
 * 根據以下資訊聚合映射到目標的導出配置檔案：
    * 段ID;

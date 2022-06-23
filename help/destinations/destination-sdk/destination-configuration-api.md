@@ -2,7 +2,7 @@
 description: 此頁列出並說明了可以使用「/authoring/destinations」 API終結點執行的所有API操作。
 title: 目標API終結點操作
 exl-id: 96755e9d-be62-432f-b985-91330575b395
-source-git-commit: 93061c84639ca1fdd3f7abb1bbd050eb6eebbdd6
+source-git-commit: b12e46592c6c7bb09a90b809e7fac7d05703210a
 workflow-type: tm+mt
 source-wordcount: '2537'
 ht-degree: 4%
@@ -35,7 +35,7 @@ POST /authoring/destinations
 
 以下請求將建立新的流式傳輸目標配置，該配置由負載中提供的參數配置。 下面的負載包括所有參數，用於流目標，由 `/authoring/destinations` 端點。 請注意，您不必在調用中添加所有參數，並且模板可根據API要求進行自定義。
 
-```json
+```shell
 curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinations \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
  -H 'Content-Type: application/json' \
@@ -200,7 +200,14 @@ POST /authoring/destinations
 
 以下請求將建立新 [!DNL Amazon S3] 基於檔案的目標配置，由負載中提供的參數配置。 以下負載包括接受的基於檔案的目標的所有參數 `/authoring/destinations` 端點。 請注意，您不必在調用中添加所有參數，並且模板可根據API要求進行自定義。
 
-```json
+```shell
+curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinations \
+ -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+ -H 'Content-Type: application/json' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
+ -H 'x-api-key: {API_KEY}' \
+ -H 'x-sandbox-name: {SANDBOX_NAME}' \
+ -d '
 {
         "name": "S3 Destination with CSV Options",
         "description": "S3 Destination with CSV Options",
