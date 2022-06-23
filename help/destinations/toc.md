@@ -4,9 +4,9 @@ user-guide-title: 目的地指南
 user-guide-description: 針對跨通路行銷活動、電子郵件宣傳、鎖定特定目標的行銷活動和其他諸多使用案例，啟用已知和未知的資料。
 description: 本文檔列出了Adobe Experience Platform目標的目錄
 feature: Destinations
-source-git-commit: e017f98ba2fbeab9fe1a785cc7710f75d3dd496a
+source-git-commit: 492a05b24ec905de926d861f607a6e5d294d46e0
 workflow-type: tm+mt
-source-wordcount: '777'
+source-wordcount: '778'
 ht-degree: 8%
 
 ---
@@ -62,7 +62,7 @@ ht-degree: 8%
       * [Google廣告連接](./catalog/advertising/google-ads-destination.md)
       * [Google廣告分機](./catalog/advertising/google-ads-extension.md)
       * [Google廣告經理連接](./catalog/advertising/google-ad-manager.md)
-      * [Google廣告經理360連接](./catalog/advertising/google-ad-manager-360-connection.md)
+      * [(Beta)Google廣告管理器360連接](./catalog/advertising/google-ad-manager-360-connection.md)
       * [Google客戶匹配連接](./catalog/advertising/google-customer-match.md)
       * [GoogleDisplay &amp; Video 360連接](./catalog/advertising/google-dv360.md)
       * [Googlegtag擴展](./catalog/advertising/gtag-advertising.md)
