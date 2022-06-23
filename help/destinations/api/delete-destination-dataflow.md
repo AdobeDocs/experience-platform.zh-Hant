@@ -5,9 +5,9 @@ title: 使用流服務API刪除目標資料流
 type: Tutorial
 description: 瞭解如何使用流服務API將資料流刪除到批處理和流式處理目標。
 exl-id: fa40cf97-46c6-4a10-b53c-30bed2dd1b2d
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: c35a29d4e9791b566d9633b651aecd2c16f88507
 workflow-type: tm+mt
-source-wordcount: '565'
+source-wordcount: '572'
 ht-degree: 1%
 
 ---
@@ -84,7 +84,7 @@ curl -X DELETE \
 
 ## API錯誤處理 {#api-error-handling}
 
-本教程中的API端點遵循一般Experience PlatformAPI錯誤消息原則。 請參閱 [API狀態代碼](../../landing/troubleshooting.md#api-status-codes) 和 [請求標頭錯誤](../../landing/troubleshooting.md#request-header-errors) 中。
+本教程中的API端點遵循一般Experience PlatformAPI錯誤消息原則。 請參閱 [API狀態代碼](/help/landing/troubleshooting.md#api-status-codes) 和 [請求標頭錯誤](/help/landing/troubleshooting.md#request-header-errors) 有關解釋錯誤響應的詳細資訊，請參閱「Platform troubleshooting guide（平台故障排除指南）」。
 
 ## 後續步驟 {#next-steps}
 

@@ -6,9 +6,9 @@ topic-legacy: overview
 type: Tutorial
 description: 本教程介紹了更新目標資料流的步驟。 瞭解如何使用流服務API啟用或禁用資料流、更新其基本資訊或添加和刪除段和屬性。
 exl-id: 3f69ad12-940a-4aa1-a1ae-5ceea997a9ba
-source-git-commit: 95dd6982eeecf6b13b6c8a6621b5e6563c25ae26
+source-git-commit: c35a29d4e9791b566d9633b651aecd2c16f88507
 workflow-type: tm+mt
-source-wordcount: '2419'
+source-wordcount: '2408'
 ht-degree: 1%
 
 ---
@@ -856,8 +856,8 @@ curl -X PATCH \
 
 ## API錯誤處理 {#api-error-handling}
 
-本教程中的API端點遵循一般Experience PlatformAPI錯誤消息原則。 請參閱 [API狀態代碼](https://experienceleague.adobe.com/docs/experience-platform/landing/troubleshooting.html?lang=en#api-status-codes) 和 [請求標頭錯誤](https://experienceleague.adobe.com/docs/experience-platform/landing/troubleshooting.html?lang=en#request-header-errors) 中。
+本教程中的API端點遵循一般Experience PlatformAPI錯誤消息原則。 請參閱 [API狀態代碼](/help/landing/troubleshooting.md#api-status-codes) 和 [請求標頭錯誤](/help/landing/troubleshooting.md#request-header-errors) 有關解釋錯誤響應的詳細資訊，請參閱「Platform troubleshooting guide（平台故障排除指南）」。
 
-## 後續步驟
+## 後續步驟 {#next-steps}
 
 通過本教程，您已學習了如何更新目標資料流的各個元件，如使用添加或刪除段或配置檔案屬性 [!DNL Flow Service] API。 有關目標的詳細資訊，請參閱 [目標概述](../home.md)。

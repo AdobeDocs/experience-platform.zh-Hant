@@ -6,9 +6,9 @@ description: 本文檔介紹使用Adobe Experience PlatformAPI建立流目標
 topic-legacy: tutorial
 type: Tutorial
 exl-id: 3e8d2745-8b83-4332-9179-a84d8c0b4400
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 183830318a3dd5012f27a73a8dd2753638aff83f
 workflow-type: tm+mt
-source-wordcount: '2049'
+source-wordcount: '2241'
 ht-degree: 1%
 
 ---
@@ -471,10 +471,17 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 ]
 ```
 
-* `{DATAFLOW_ID}`:使用在上一步中獲得的資料流。
-* `{ETAG}`:使用在上一步中獲得的etag。
-* `{SEGMENT_ID}`:提供要導出到此目標的段ID。 要檢索要激活的段的段ID，請轉到 **https://www.adobe.io/apis/experienceplatform/home/api-reference.html#/**&#x200B;選中 **[!UICONTROL 分段服務API]** 在左側的導航菜單中，查找 `GET /segment/definitions` 操作 **[!UICONTROL 段定義]**。
-* `{PROFILE_ATTRIBUTE}`:比如說， `personalEmail.address` 或 `person.lastName`
+| 屬性 | 說明 |
+| --------- | ----------- |
+| `{DATAFLOW_ID}` | 在URL中，使用在上一步中建立的資料流的ID。 |
+| `{ETAG}` | 獲取 `{ETAG}` 從上一步的反應中， [建立資料流](#create-dataflow)。 上一步中的響應格式已轉義引號。 必須在請求的標題中使用未轉義值。 請參閱以下示例： <br> <ul><li>響應示例： `"etag":""7400453a-0000-1a00-0000-62b1c7a90000""`</li><li>在請求中使用的值： `"etag": "7400453a-0000-1a00-0000-62b1c7a90000"`</li></ul> <br> etag值會隨著資料流的每次成功更新而更新。 |
+| `{SEGMENT_ID}` | 提供要導出到此目標的段ID。 要檢索要激活的段的段ID，請參見 [檢索段定義](https://www.adobe.io/experience-platform-apis/references/segmentation/#operation/retrieveSegmentDefinitionById) Experience PlatformAPI引用中。 |
+| `{PROFILE_ATTRIBUTE}` | 例如, `"person.lastName"` |
+| `op` | 用於定義更新資料流所需操作的操作調用。 操作包括： `add`。 `replace`, `remove`。 要將段添加到資料流，請使用 `add` 的下界。 |
+| `path` | 定義要更新的流的部分。 將段添加到資料流時，請使用示例中指定的路徑。 |
+| `value` | 要用更新參數的新值。 |
+| `id` | 指定要添加到目標資料流的段的ID。 |
+| `name` | *可選*. 指定要添加到目標資料流的段的名稱。 請注意，此欄位不是必需欄位，您可以在不提供段名稱的情況下成功將段添加到目標資料流。 |
 
 **回應**
 
@@ -597,7 +604,7 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 }
 ```
 
-## 使用Postman集合連接到流目標  {#collections}
+## 使用 [!DNL Postman] 連接到流目標  {#collections}
 
 要以更簡化的方式連接到本教程中描述的流式傳輸目標，您可以使用 [[!DNL Postman]](https://www.postman.com/)。
 
@@ -612,17 +619,21 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 
 每個集合都包括必需的請求和環境變數， [!DNL AWS Kinesis], [!DNL Azure Event Hub]的下界。
 
-### 如何使用Postman收藏
+### 如何使用 [!DNL Postman] 集合 {#how-to-use-postman-collections}
 
 使用連接的 [!DNL Postman] 收藏，請執行以下步驟：
 
 * 下載並安裝 [!DNL Postman];
 * [下載](../assets/api/streaming-destination/DestinationPostmanCollection.zip) 並解壓附帶的收藏；
-* 將收藏從相應資料夾導入Postman;
+* 將集合從其相應資料夾導入 [!DNL Postman];
 * 根據本文的說明填寫環境變數；
-* 運行 [!DNL API] Postman根據本文的指示提出的要求。
+* 運行 [!DNL API] 請求 [!DNL Postman]根據本文的說明。
 
-## 後續步驟
+## API錯誤處理 {#api-error-handling}
+
+本教程中的API端點遵循一般Experience PlatformAPI錯誤消息原則。 請參閱 [API狀態代碼](/help/landing/troubleshooting.md#api-status-codes) 和 [請求標頭錯誤](/help/landing/troubleshooting.md#request-header-errors) 有關解釋錯誤響應的詳細資訊，請參閱「Platform troubleshooting guide（平台故障排除指南）」。
+
+## 後續步驟 {#next-steps}
 
 按照本教程，您已成功將平台連接到您首選的流式傳輸目標之一，並設定到相應目標的資料流。 傳出資料現在可以在目標中用於客戶分析或您可能希望執行的任何其他資料操作。 有關詳細資訊，請參閱以下頁：
 

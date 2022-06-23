@@ -6,10 +6,10 @@ description: 使用流服務API建立批雲儲存或電子郵件營銷目標的�
 topic-legacy: tutorial
 type: Tutorial
 exl-id: 41fd295d-7cda-4ab1-a65e-b47e6c485562
-source-git-commit: 67f1ba46a9d570d3d494b126a83e6ca3ace1c727
+source-git-commit: 183830318a3dd5012f27a73a8dd2753638aff83f
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '3420'
+ht-degree: 2%
 
 ---
 
@@ -1026,7 +1026,7 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 | 屬性 | 說明 |
 | --------- | ----------- |
 | `{DATAFLOW_ID}` | 在URL中，使用在上一步中建立的資料流的ID。 |
-| `{ETAG}` | 使用在上一步中獲得的etag。 |
+| `{ETAG}` | 獲取 `{ETAG}` 從上一步的反應中， [建立資料流](#create-dataflow)。 上一步中的響應格式已轉義引號。 必須在請求的標題中使用未轉義值。 請參閱以下示例： <br> <ul><li>響應示例： `"etag":""7400453a-0000-1a00-0000-62b1c7a90000""`</li><li>在請求中使用的值： `"etag": "7400453a-0000-1a00-0000-62b1c7a90000"`</li></ul> <br> etag值會隨著資料流的每次成功更新而更新。 |
 | `{SEGMENT_ID}` | 提供要導出到此目標的段ID。 要檢索要激活的段的段ID，請參見 [檢索段定義](https://www.adobe.io/experience-platform-apis/references/segmentation/#operation/retrieveSegmentDefinitionById) Experience PlatformAPI引用中。 |
 | `{PROFILE_ATTRIBUTE}` | 例如, `"person.lastName"` |
 | `op` | 用於定義更新資料流所需操作的操作調用。 操作包括： `add`。 `replace`, `remove`。 要將段添加到資料流，請使用 `add` 的下界。 |
@@ -1236,7 +1236,11 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 ]
 ```
 
-## 後續步驟
+## API錯誤處理 {#api-error-handling}
+
+本教程中的API端點遵循一般Experience PlatformAPI錯誤消息原則。 請參閱 [API狀態代碼](/help/landing/troubleshooting.md#api-status-codes) 和 [請求標頭錯誤](/help/landing/troubleshooting.md#request-header-errors) 有關解釋錯誤響應的詳細資訊，請參閱「Platform troubleshooting guide（平台故障排除指南）」。
+
+## 後續步驟 {#next-steps}
 
 按照本教程，您已成功將平台連接到您首選的批處理雲儲存或電子郵件營銷目標之一，並將資料流設定到相應目標以導出資料檔案。 現在，外發資料可用於目標中的電子郵件活動、目標廣告和許多其他使用案例。 有關更多詳細資訊，請參閱以下頁，如如何使用流服務API編輯現有資料流：
 
