@@ -1,9 +1,9 @@
 ---
 title: Adobe Experience Platform發行說明2022年6月
 description: 2022年6月為Adobe Experience Platform發佈的說明。
-source-git-commit: 492a05b24ec905de926d861f607a6e5d294d46e0
+source-git-commit: 4edd2042234149ab8836da4fc58eb4d6084ae205
 workflow-type: tm+mt
-source-wordcount: '801'
+source-wordcount: '824'
 ht-degree: 6%
 
 ---
@@ -67,6 +67,7 @@ Data Science Workspace使用機器學習和人工智慧從資料中釋放洞見�
 | ----------- | ----------- |
 | [(Beta)Google廣告經理360](../../destinations/catalog/advertising/google-ad-manager-360-connection.md) | 的 [!DNL Google Ad Manager 360] 連接啟用批處理上載 [!DNL publisher provided identifiers] (PPID)到 [!DNL Google Ad Manager 360]，通過 [!DNL Google Cloud Storage] <br><br>此目標目前為Beta版，僅對有限數量的客戶可用。 請求訪問 [!DNL Google Ad Manager 360] 連接，請與您的Adobe代表聯繫，並 [!DNL IMS Organization ID]。 |
 | [[!DNL Medallia]](/help/destinations/catalog/voice/medallia-connector.md) | 激活針對Medallia調查和反饋收集的配置檔案，以便更好地瞭解客戶需求和期望。 |
+| [[!DNL Adobe Advertising Cloud DSP]](../../destinations/catalog/advertising/adobe-advertising-cloud-connection.md) | Adobe Advertising Cloud [!DNL Demand-Side Platform] (DSP)目標允許您與經認證的廣告商和用戶共用經過身份驗證的第一方段，以便與他們一起激活活DSP動。 |
 
 {style=&quot;table-layout:auto&quot;&quot;
 
