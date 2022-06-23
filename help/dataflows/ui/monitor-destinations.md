@@ -6,9 +6,9 @@ title: 監視UI中目標的資料流
 topic-legacy: overview
 type: Tutorial
 exl-id: 8eb7bb3c-f2dc-4dbc-9cf5-3d5d3224f5f1
-source-git-commit: 2be8ed7daaac6554bdbc52acab325a474fa87566
+source-git-commit: 20fbc4a33baa677cf34b3e1525f45af1862a7024
 workflow-type: tm+mt
-source-wordcount: '3200'
+source-wordcount: '3211'
 ht-degree: 0%
 
 ---
@@ -141,6 +141,7 @@ ht-degree: 0%
 每個資料流運行都顯示以下詳細資訊：
 
 - **[!UICONTROL 資料流運行啟動]**:資料流運行於的時間。
+- **[!UICONTROL 段]**:與每個資料流運行關聯的段的名稱。
 - **[!UICONTROL 處理時間]**:處理資料流運行所花費的時間。
 - **[!UICONTROL 收到的配置檔案]**:在資料流中接收的配置檔案總數。 此值每60分鐘更新一次。
 - **[!UICONTROL 已激活身份]**:在資料流運行過程中成功激活到選定目標的配置檔案標識總數。 此度量包括建立、更新和從導出的段中刪除的標識。
