@@ -1,9 +1,9 @@
 ---
 title: Adobe Experience Platform發行說明2022年6月
 description: 2022年6月為Adobe Experience Platform發佈的說明。
-source-git-commit: 4edd2042234149ab8836da4fc58eb4d6084ae205
+source-git-commit: 314cd79185748e848bcb06fb21bfe4fea37a8853
 workflow-type: tm+mt
-source-wordcount: '824'
+source-wordcount: '860'
 ht-degree: 6%
 
 ---
@@ -58,6 +58,7 @@ Data Science Workspace使用機器學習和人工智慧從資料中釋放洞見�
 | 功能 | 說明 |
 | ----------- | ----------- |
 | (Beta)Destination SDK支援 [[!DNL Google Cloud Storage]](../../destinations/destination-sdk/server-and-file-configuration.md#gcs-example) 基於檔案的目標和 [可配置檔案名](../../destinations/destination-sdk/file-based-destination-configuration.md#file-name-configuration)。 | 現在，您可以使用該Destination SDK通過檔案名宏建立Google雲儲存目標並為導出的檔案定義自定義檔案名。 <br><br> Adobe Experience Platform Destination SDK中基於檔案的目標支援當前處於測試版中。 文檔和功能可能會更改。 |
+| 資料流中的段列運行到批處理目標 | 對於向批處理目標運行的資料流，UI現在顯示與每個資料流運行關聯的段的名稱。 閱讀有關 [資料流運行到批處理目標](/help/dataflows/ui/monitor-destinations.md#dataflow-runs-for-batch-destinations)。 |
 
 {style=&quot;table-layout:auto&quot;&quot;
 
