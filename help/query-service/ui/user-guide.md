@@ -5,9 +5,9 @@ title: 查詢編輯器UI指南
 topic-legacy: query editor
 description: 查詢編輯器是Adobe Experience Platform查詢服務提供的互動式工具，允許您在Experience Platform用戶介面中編寫、驗證和運行客戶體驗資料查詢。 查詢編輯器支援為分析和資料探索開發查詢，並允許您為開發目的運行互動式查詢以及非互動式查詢以填充Experience Platform中的資料集。
 exl-id: d7732244-0372-467d-84e2-5308f42c5d51
-source-git-commit: aa61cb696d647c5f039283ce5926d5fa1e901a13
+source-git-commit: c8b3b22b678622c31462ba0baa2f50fbe89b00d5
 workflow-type: tm+mt
-source-wordcount: '1599'
+source-wordcount: '1625'
 ht-degree: 1%
 
 ---
@@ -135,6 +135,10 @@ ht-degree: 1%
 ### 保存查詢 {#saving-queries}
 
 [!DNL Query Editor] 提供了保存函式，允許您保存查詢並稍後處理該查詢。 要保存查詢，請選擇 **[!UICONTROL 保存]** 在 [!DNL Query Editor]。 在保存查詢之前，必須使用 **[!UICONTROL 查詢詳細資訊]** 的子菜單。
+
+>[!NOTE]
+>
+>使用「查詢編輯器」命名和保存的查詢可作為「查詢」儀表板中的模板使用 [!UICONTROL 瀏覽] 頁籤。 查看 [模板文檔](./query-templates.md) 的子菜單。
 
 ### 如何查找以前的查詢 {#previous-queries}
 
