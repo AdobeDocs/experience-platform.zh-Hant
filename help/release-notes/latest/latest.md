@@ -1,10 +1,11 @@
 ---
 title: Adobe Experience Platform發行說明2022年6月
 description: 2022年6月為Adobe Experience Platform發佈的說明。
-source-git-commit: 314cd79185748e848bcb06fb21bfe4fea37a8853
+exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
+source-git-commit: 6eadd71984814548522da32ae6d88a49c3ba704f
 workflow-type: tm+mt
-source-wordcount: '860'
-ht-degree: 6%
+source-wordcount: '806'
+ht-degree: 5%
 
 ---
 
@@ -14,25 +15,10 @@ ht-degree: 6%
 
 Adobe Experience Platform 現有功能更新：
 
-- [[!DNL Data Prep]](#data-prep)
 - [[!DNL Data Science Workspace]](#dsw)
 - [[!DNL Destinations]](#destinations)
 - [查詢服務](#query-service)
 - [來源](#sources)
-
-## [!DNL Data Prep] {#data-prep}
-
-[!DNL Data Prep] 允許資料工程師將資料映射到體驗資料模型(XDM)並驗證資料。
-
-**已更新功能**
-
-| 功能 | 說明 |
-| --- | --- |
-| 增強 [!DNL Data Prep] Recommendations | [!DNL Data Prep] Recommendations現在更聰明，更快。 新的驗證檢查可顯著減少最常見的映射錯誤，從而縮短了時間值。 |
-
-{style=&quot;table-layout:auto&quot;}
-
-有關 [!DNL Data Prep]，請參閱 [[!DNL Data Prep] 概述](../../data-prep/home.md)。
 
 ## [!DNL Data Science Workspace] {#dsw}
 
@@ -45,7 +31,7 @@ Data Science Workspace使用機器學習和人工智慧從資料中釋放洞見�
 | 核 | Scala(Spark)筆記本現在通過Scala內核編寫。 PySpark筆記本現在通過Python Kernel編寫。 Spark和PySpark內核已棄用，並設定為在後續版本中刪除。 |
 | 食譜 | 新的PySpark和Spark配方現在遵循與Python和R配方類似的Docker工作流。 |
 
-{style=&quot;table-layout:auto&quot;&quot;
+{style=&quot;table-layout:auto&quot;}
 
 有關資料科學工作區的更多一般資訊，請參見 [概述文檔](../../data-science-workspace/home.md)。
 
