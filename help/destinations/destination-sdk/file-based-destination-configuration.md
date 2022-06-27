@@ -2,9 +2,9 @@
 description: 此配置允許您指明基本資訊，如目標名稱、類別、說明、徽標等。 此配置中的設定還確定Experience Platform用戶如何驗證到目標、Experience Platform用戶介面中的顯示方式以及可以導出到目標的身份。
 title: （測試版）基於檔案的目標配置選項，用於Destination SDK
 exl-id: 6b0a0398-6392-470a-bb27-5b34b0062793
-source-git-commit: 39fbdcdb704f096e1fcee680221c529758a00555
+source-git-commit: bd89df0659604c05ffd049682343056dbe5667e3
 workflow-type: tm+mt
-source-wordcount: '2304'
+source-wordcount: '2313'
 ht-degree: 5%
 
 ---
@@ -788,6 +788,7 @@ Adobe Experience Platform Destination SDK支援夥伴定義的架構。 合作�
 | `filenameConfig.defaultFilenameAppendOptions` | 字串 | *必填*. 用戶可以取消選中的預選預設檔案名宏。<br><br> 此清單中的宏是中定義的宏的子集 `allowedFilenameAppendOptions`。 |
 | `filenameConfig.defaultFilename` | 字串 | *可選*. 定義導出檔案的預設檔案名宏。 用戶無法覆蓋這些內容。 <br><br>由定義的任何宏 `allowedFilenameAppendOptions` 將在 `defaultFilename` 宏。 <br><br>如果 `defaultFilename` 為空，您必須在 `allowedFilenameAppendOptions`。 |
 
+{style=&quot;table-layout:auto&quot;&quot;
 
 ### 檔案名配置 {#file-name-configuration}
 
@@ -808,6 +809,7 @@ Adobe Experience Platform Destination SDK支援夥伴定義的架構。 合作�
 | `CUSTOM_TEXT` | [!UICONTROL 自定義文本] | 要包含在檔案名中的用戶定義的自定義文本。 不能用於 `defaultFilename`。 | My_Custom_Text |
 | `TIMESTAMP` | [!UICONTROL 日期和時間] | 以Unix格式生成檔案的時間的10位時間戳。 | 1652131584 |
 
+{style=&quot;table-layout:auto&quot;&quot;
 
 ![顯示帶有預選宏的檔案名配置螢幕的UI影像](assets/file-name-configuration.png)
 
@@ -840,6 +842,8 @@ Adobe Experience Platform Destination SDK支援夥伴定義的架構。 合作�
 | 參數 | 類型 | 說明 |
 |---------|----------|------|
 | `backfillHistoricalProfileData` | 布林值 | 控制在將段激活到目標時是否導出歷史配置檔案資料。 <br> <ul><li> `true`: [!DNL Platform] 發送在激活段之前符合段的歷史用戶配置檔案。 </li><li> `false`: [!DNL Platform] 僅包括激活段後符合段條件的用戶配置檔案。 </li></ul> |
+
+{style=&quot;table-layout:auto&quot;&quot;
 
 ## 此配置如何連接目標的所有必要資訊 {#connecting-all-configurations}
 

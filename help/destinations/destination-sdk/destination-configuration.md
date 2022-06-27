@@ -2,9 +2,9 @@
 description: 此配置允許您指明基本資訊，如目標名稱、類別、說明、徽標等。 此配置中的設定還確定Experience Platform用戶如何驗證到目標、Experience Platform用戶介面中的顯示方式以及可以導出到目標的身份。
 title: 流式傳輸目標配置選項，用於Destination SDK
 exl-id: b7e4db67-2981-4f18-b202-3facda5c8f0b
-source-git-commit: b12e46592c6c7bb09a90b809e7fac7d05703210a
+source-git-commit: bd89df0659604c05ffd049682343056dbe5667e3
 workflow-type: tm+mt
-source-wordcount: '1787'
+source-wordcount: '1790'
 ht-degree: 4%
 
 ---
@@ -291,6 +291,8 @@ ht-degree: 4%
 | 參數 | 類型 | 說明 |
 |---------|----------|------|
 | `backfillHistoricalProfileData` | 布林值 | 控制在將段激活到目標時是否導出歷史配置檔案資料。 <br> <ul><li> `true`: [!DNL Platform] 發送在激活段之前符合段的歷史用戶配置檔案。 </li><li> `false`: [!DNL Platform] 僅包括激活段後符合段條件的用戶配置檔案。 </li></ul> |
+
+{style=&quot;table-layout:auto&quot;&quot;
 
 ## 此配置如何連接目標的所有必要資訊 {#connecting-all-configurations}
 

@@ -2,10 +2,10 @@
 description: 本頁介紹從Adobe Experience Platform導出到目標的資料中的消息格式和配置檔案轉換。
 title: 訊息格式
 exl-id: 1212c1d0-0ada-4ab8-be64-1c62a1158483
-source-git-commit: 6600549cf421e2adc360b75e0b463992d549b85e
+source-git-commit: bd89df0659604c05ffd049682343056dbe5667e3
 workflow-type: tm+mt
-source-wordcount: '2266'
-ht-degree: 1%
+source-wordcount: '2272'
+ht-degree: 2%
 
 ---
 
@@ -83,6 +83,8 @@ Authorization: Bearer YOUR_REST_API_KEY
 | `_your_custom_schema.firstName` | ` attributes.first_name` | `first_name` |
 | `_your_custom_schema.lastName` | `attributes.last_name` | `last_name` |
 | `personalEmail.address` | `attributes.external_id` | `external_id` |
+
+{style=&quot;table-layout:auto&quot;}
 
 ## Experience Platform中的輪廓結構 {#profile-structure}
 
@@ -1194,6 +1196,8 @@ https://api.example.com/audience/{{input.aggregationKey.segmentId}}
 | `destination.segmentNames` | 從Adobe Experience Platform命名空間中的段名稱映射到合作夥伴系統中的段名稱。 |
 | `addedSegments(listOfSegments)` | 僅返回具有狀態的段 `realized` 或 `existing`。 |
 | `removedSegments(listOfSegments)` | 僅返回具有狀態的段 `exited`。 |
+
+{style=&quot;table-layout:auto&quot;&quot;
 
 ## 後續步驟 {#next-steps}
 
