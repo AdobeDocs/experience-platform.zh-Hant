@@ -2,10 +2,10 @@
 description: Adobe Experience Platform Destination SDK是一組配置API，允許您配置目標整合模式，以便根據您選擇的資料和身份驗證格式將受眾和配置檔案資料傳送到您的端點。 這些配置儲存在Experience Platform中，並可通過API檢索，以進行其他更新。
 title: Adobe Experience Platform Destination SDK
 exl-id: 7aca9f40-98c8-47c2-ba88-4308fc2b1798
-source-git-commit: 7c6d0c8d4d1eea16f13359e9d7a895d767ad3c00
+source-git-commit: abc9b9857e4a93a334440e855ca0ae562c695df1
 workflow-type: tm+mt
-source-wordcount: '703'
-ht-degree: 2%
+source-wordcount: '704'
+ht-degree: 3%
 
 ---
 
@@ -64,7 +64,7 @@ Destination SDK訪問因您作為合作夥伴或Experience Platform客戶的狀�
 | 獨立軟體供應商(ISV) | 加入 [Adobe交換計畫](https://partners.adobe.com/exchangeprogram/experiencecloud.html) 並請求獲取預配的Experience Platform沙盒以訪問Destination SDK。 |
 | 系統整合商(SI) | 您需要在2015年的黃金或白金級別 [Adobe解決方案合作夥伴計畫](https://solutionpartners.adobe.com/home.html)，您將獲得Experience Platform沙盒的預配和Destination SDK。 |
 | Experience Platform客戶 [激活包](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-platform0.html) | 預設情況下，您可以訪問Experience Platform沙箱和Destination SDK。 |
-| Experience Platform客戶 [即時CDP產品包](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html) | 您無權訪問Destination SDK，但您有權訪問其他公司使用Destination SDK配置的所有已生產化目標，並在Experience Platform組織中發佈。 |
+| Experience Platform客戶 [即時CDP終極產品包](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html) | 您無權訪問Destination SDK，但您有權訪問其他公司使用Destination SDK配置的所有已生產化目標，並在Experience Platform組織中發佈。 |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -86,5 +86,5 @@ Destination SDK訪問因您作為合作夥伴或Experience Platform客戶的狀�
 Adobe建議您閱讀並瞭解以下Experience Platform文檔：
 
 * [Adobe Experience Platform目標概述](https://experienceleague.adobe.com/docs/experience-platform/destinations/home.html?lang=en)
-* [XDM架構組合的基礎](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/composition.html?lang=en)
+* [XDM架構組合的基礎](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/composition.html?lang=zh-Hant)
 * [Identity命名空間概述](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=en)

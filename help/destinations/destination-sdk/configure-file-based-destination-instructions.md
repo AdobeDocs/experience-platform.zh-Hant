@@ -2,9 +2,9 @@
 description: 此頁列出並說明使用Destination SDK配置基於檔案的目標的步驟。
 title: （測試版）使用Destination SDK配置基於檔案的目標
 exl-id: 84d73452-88e4-4e0f-8fc7-d0d8e10f9ff5
-source-git-commit: 77c80c391ef6677f95af81ef15272380687e6789
+source-git-commit: abc9b9857e4a93a334440e855ca0ae562c695df1
 workflow-type: tm+mt
-source-wordcount: '480'
+source-wordcount: '544'
 ht-degree: 0%
 
 ---
@@ -280,8 +280,16 @@ As part of the process to test your destination, you must use the Experience Pla
 
 ## 第5步：發佈目標 {#publish-destination}
 
+>[!NOTE]
+>
+>如果您要建立專用目標供自己使用，並且不想將其發佈到目標目錄中以供其他客戶使用，則無需執行此步驟。
+
 配置和測試目標後，使用 [目標發佈API](./destination-publish-api.md) 將您的配置提交給Adobe以供審閱。
 
 ## 步驟6:記錄目標 {#document-destination}
+
+>[!NOTE]
+>
+>如果您要建立專用目標供自己使用，並且不想將其發佈到目標目錄中以供其他客戶使用，則無需執行此步驟。
 
 如果您是獨立軟體供應商(ISV)或系統整合商(SI)，則 [產品化整合](./overview.md#productized-custom-integrations)，使用 [自助文檔處理](./docs-framework/documentation-instructions.md) 為目標建立產品文檔頁面 [Experience Platform目標目錄](/help/destinations/catalog/overview.md)。

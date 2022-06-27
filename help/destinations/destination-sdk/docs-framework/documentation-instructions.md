@@ -2,14 +2,18 @@
 title: 記錄您在Adobe Experience Platform的目標
 description: 逐步說明，以便您在Adobe Experience Platform為目標建立文檔頁面
 exl-id: 6cc9c758-44bb-463b-941a-06b1a22ee8f3
-source-git-commit: 3c871471802e905b58acf8cd25db6788f49b9e43
+source-git-commit: dd4a150351b5e0c41586cf663324aeb345a896e4
 workflow-type: tm+mt
-source-wordcount: '502'
+source-wordcount: '538'
 ht-degree: 1%
 
 ---
 
 # 記錄您在Adobe Experience Platform的目標
+
+>[!IMPORTANT]
+>
+>此處記錄的流程僅對提交已生產化（公共）目標的合作夥伴是必需的。 如果您正在建立專用目標供自己使用，則無需為目標建立和發佈文檔。
 
 ## 總覽 {#overview}
 

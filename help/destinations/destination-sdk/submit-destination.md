@@ -1,17 +1,21 @@
 ---
-description: 此頁提供您需要提交的所有資訊，以便複查使用Destination SDK創作的目標。
-title: 提交以審閱在Destination SDK中創作的目標
+description: 此頁提供您需要提交的所有資訊，以便複查使用Destination SDK創作的已生產化目標。
+title: 提交以審閱在Destination SDK中創作的已生產化目標
 exl-id: eef0d858-ebd9-426e-91a1-5c93903b0eb5
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: dd4a150351b5e0c41586cf663324aeb345a896e4
 workflow-type: tm+mt
-source-wordcount: '648'
+source-wordcount: '683'
 ht-degree: 0%
 
 ---
 
-# 提交以審閱在Destination SDK中創作的目標
+# 提交以審閱在Destination SDK中創作的已生產化目標
 
 ## 總覽 {#overview}
+
+>[!IMPORTANT]
+>
+>此處記錄的流程僅對提交已生產化（公共）目標的合作夥伴是必需的。 如果您正在建立專用目標供您自用，則無需製作這些材料並與Adobe共用。
 
 在將目標發佈到 [Experience Platform目標目錄](/help/destinations/catalog/overview.md)，您必須向Adobe提供有關目標和您執行的測試的特定資訊，以確保用戶在將資料激活到您的平台時享受盡可能最好的體驗。
 
@@ -22,7 +26,7 @@ ht-degree: 0%
    * 對目標終結點進行的API調用。
    * 從目標終結點接收的API響應。
 * 證明您已使用 [目標發佈API](./destination-publish-api.md)。
-* （僅適用於已生產化的整合）文檔PR（拉式請求），請遵循 [自助文檔處理](./docs-framework/documentation-instructions.md)。
+* 文檔PR（拉取請求），遵循中介紹的說明 [自助文檔處理](./docs-framework/documentation-instructions.md)。
 * 將作為目標卡的徽標在Experience Platform目標目錄中顯示的影像檔案。
 
 >[!IMPORTANT]
