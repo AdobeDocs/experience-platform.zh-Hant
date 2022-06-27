@@ -1,16 +1,16 @@
 ---
-title: 效能護欄
-description: 瞭解如何在最佳效能護欄內使用伺服器API
+title: 邊緣網路伺服器API的效能保護器
+description: 瞭解如何在最佳效能護欄內使用伺服器API。
 keywords: 資料收集；收集；邊緣網路；api;sla;slt;service levels;data collection;edge network;api;sla;slt;service levels
 exl-id: 063d0fbb-26d1-4727-9dea-8e7223b2173d
-source-git-commit: 6f0eb81f9709cf4fcaea94334449117c4ed76107
+source-git-commit: f52603f7e65ac553e00a2b632857561cd07ae441
 workflow-type: tm+mt
-source-wordcount: '426'
+source-wordcount: '436'
 ht-degree: 2%
 
 ---
 
-# 效能護欄
+# 邊緣網路伺服器API的效能保護器
 
 ## 總覽 {#overview}
 

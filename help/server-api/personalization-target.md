@@ -1,14 +1,13 @@
 ---
 title: 通過Adobe Target個性化
-description: 瞭解如何使用伺服器API提供和呈現在Adobe Target建立的個性化體驗
-keywords: 個性化；伺服器api;Adobe Experience Platform邊緣網路；檢索個性化；目標；adobe目標
-source-git-commit: 59cb43007c4a7ff125738c21064381cf833063b2
+description: 瞭解如何使用伺服器API來提供和呈現在Adobe Target建立的個性化體驗。
+exl-id: c9e2f7ef-5022-4dc4-82b4-ecc210f27270
+source-git-commit: f52603f7e65ac553e00a2b632857561cd07ae441
 workflow-type: tm+mt
-source-wordcount: '715'
+source-wordcount: '702'
 ht-degree: 2%
 
 ---
-
 
 # 通過Adobe Target個性化
 

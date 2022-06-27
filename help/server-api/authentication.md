@@ -1,12 +1,10 @@
 ---
 title: 驗證
-description: 瞭解如何配置Adobe Experience Platform邊緣網路伺服器API的身份驗證
-seo-description: Learn how to configure authentication for the Adobe Experience Platform Edge Network Server API
-keywords: 資料採集；認證；Adobe Experience Platform邊緣網路api;授權
+description: 瞭解如何配置Adobe Experience Platform邊緣網路伺服器API的身份驗證。
 exl-id: 73c7a186-9b85-43fe-a586-4c6260b6fa8c
-source-git-commit: 64093bdb8cb1bf2f14caaa562e196a1d69e74359
+source-git-commit: f52603f7e65ac553e00a2b632857561cd07ae441
 workflow-type: tm+mt
-source-wordcount: '648'
+source-wordcount: '638'
 ht-degree: 2%
 
 ---

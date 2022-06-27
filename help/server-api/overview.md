@@ -1,12 +1,12 @@
 ---
-title: 邊緣網路伺服器API
-description: 瞭解邊緣網路伺服器API是什麼以及如何使用它。
+title: 邊緣網路伺服器API概述
+description: 了解 Edge Network 伺服器 API 及其使用方法。
 seo-description: Learn what the Edge Network Server API is and how you can use it.
 keywords: 資料收集；收集；Adobe Experience Platform邊緣網路；伺服器api;
 exl-id: 46bd8798-d7f9-405b-9ca8-856ad4aa688c
-source-git-commit: 422f859bef8faf292fd7e5fd8b6a8d31967421c1
+source-git-commit: f52603f7e65ac553e00a2b632857561cd07ae441
 workflow-type: tm+mt
-source-wordcount: '270'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---

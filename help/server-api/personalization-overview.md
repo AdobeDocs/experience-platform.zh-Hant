@@ -1,15 +1,13 @@
 ---
 title: 個性化概述
-description: 瞭解如何使用Adobe Experience Platform邊緣網路伺服器API從Adobe個性化解決方案中檢索個性化內容
-seo-description: Learn how to use the Adobe Experience Platform Edge Network Server API to retrieve personalized content from Adobe personalization solutions
-keywords: 個性化；伺服器api;Adobe Experience Platform邊緣網路；檢索個性化
-source-git-commit: 492efa6ef0d95b502839d612988f0b7f59b8bd69
+description: 瞭解如何使用Adobe Experience Platform邊緣網路伺服器API從Adobe個性化解決方案中檢索個性化內容。
+exl-id: 11be9178-54fe-49d0-b578-69e6a8e6ab90
+source-git-commit: f52603f7e65ac553e00a2b632857561cd07ae441
 workflow-type: tm+mt
-source-wordcount: '751'
+source-wordcount: '741'
 ht-degree: 9%
 
 ---
-
 
 # 個性化概述
 

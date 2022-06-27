@@ -1,12 +1,10 @@
 ---
 title: 資料收集
-description: 瞭解Adobe Experience Platform邊緣網路伺服器API如何構建收集的資料
-seo-description: Learn how the Adobe Experience Platform Edge Network Server API structures the collected data
-keywords: 資料收集；收集；Adobe Experience Platform邊緣網路；api;structure
-source-git-commit: 422f859bef8faf292fd7e5fd8b6a8d31967421c1
+description: 瞭解Adobe Experience Platform邊緣網路伺服器API如何構建收集的資料。
+source-git-commit: f52603f7e65ac553e00a2b632857561cd07ae441
 workflow-type: tm+mt
-source-wordcount: '141'
-ht-degree: 4%
+source-wordcount: '131'
+ht-degree: 5%
 
 ---
 

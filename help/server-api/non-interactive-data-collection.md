@@ -1,12 +1,10 @@
 ---
 title: 非互動式資料收集
-description: 瞭解Adobe Experience Platform邊緣網路伺服器API如何執行非互動式資料收集
-seo-description: Learn how the Adobe Experience Platform Edge Network Server API performs non-interactive data collection
-keywords: 資料收集；收集；adobe體驗平台邊緣網路；api；非互動式資料收集
+description: 瞭解Adobe Experience Platform邊緣網路伺服器API如何執行非互動式資料收集。
 exl-id: 1a704e8f-8900-4f56-a843-9550007088fe
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: f52603f7e65ac553e00a2b632857561cd07ae441
 workflow-type: tm+mt
-source-wordcount: '229'
+source-wordcount: '217'
 ht-degree: 4%
 
 ---
@@ -20,17 +18,6 @@ ht-degree: 4%
 建議在最終用戶事件在本地排隊一段短時間（例如，沒有網路連接時）時以批處理形式發送事件。
 
 批處理事件不一定屬於同一最終用戶，這意味著事件可以在其中包含不同的身份 `identityMap` 的雙曲餘切值。
-
-
-<!-- However, when an `ECID` identity is sent via a cookie or metadata (in Edge Network accepted format), the Edge Network will read it and associate it with each event in the batch.
-
-Each event should include the corresponding `XDM` content that needs to be collected.
-
->[!NOTE]
->
->[Experience Edge Identity Protocol](visitor-identification.md#experience-edge-identity-protocol) (`ECID` generation) is not applicable for data collection requests, meaning that events sent to this API should already have at least one identity associated to them. For server datastreams (calls to `server.adobedc.net`), the API requires that each event contains an identity **explicitly set as primary**. For device datastreams, the Edge Network will attempt to set the `ECID` as primary, when it is present, and no other primary identity is explicitly set.
-
--->
 
 ## 非互動式API調用示例 {#example}
 

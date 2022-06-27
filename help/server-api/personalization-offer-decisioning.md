@@ -1,14 +1,13 @@
 ---
 title: 通過Offer decisioning個性化
-description: 瞭解如何使用伺服器API通過Offer decisioning提供和呈現個性化體驗
-keywords: 個性化；伺服器api;Adobe Experience Platform邊緣網路；檢索個性化；目標；offer decisioning;retrieve personalization;target;retive;retarize;
-source-git-commit: 59cb43007c4a7ff125738c21064381cf833063b2
+description: 瞭解如何使用伺服器API通過Offer decisioning提供和呈現個性化體驗。
+exl-id: 5348cd3e-08db-4778-b413-3339cb56b35a
+source-git-commit: f52603f7e65ac553e00a2b632857561cd07ae441
 workflow-type: tm+mt
-source-wordcount: '568'
+source-wordcount: '555'
 ht-degree: 2%
 
 ---
-
 
 # 通過Offer decisioning個性化
 
@@ -260,4 +259,3 @@ curl -X POST 'https://server.adobedc.net/ee/v2/interact?dataStreamId={DATASTREAM
 | `content` | 以字串格式與建議的優惠關聯的內容。 | `"content": "<p style="color:red;">20% Off on shipping</p>"` |
 | `deliveryUrl` | 以URL格式與建議的優惠相關聯的影像內容。 | `"deliveryURL": "https://image.jpeg"` |
 | `characteristics` | JSON對象包含與建議的服務關聯的特性。 | `"characteristics": { "foo": "bar", "foo1": "bar1" }` |
-
