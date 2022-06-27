@@ -2,11 +2,9 @@
 keywords: 激活配置檔案請求目標；激活資料；配置檔案請求目標
 title: 將受眾資料激活到配置檔案請求目標
 type: Tutorial
-seo-title: Activate audience data to profile request destinations
 description: 瞭解如何通過將段映射到配置檔案請求目標來激活您在Adobe Experience Platform擁有的受眾資料。
-seo-description: Learn how to activate the audience data you have in Adobe Experience Platform by mapping segments to profile request destinations.
 exl-id: cd7132eb-4047-4faa-a224-47366846cb56
-source-git-commit: 0b094e635e6d22e58e5aa79a374df0879167a833
+source-git-commit: a6fe0f5a0c4f87ac265bf13cb8bba98252f147e0
 workflow-type: tm+mt
 source-wordcount: '467'
 ht-degree: 0%

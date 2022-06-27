@@ -1,57 +1,55 @@
 ---
-keywords: 分段；分段rtcdp；即時客戶資料平台分段
-title: 即時客戶資料平台中的細分服務
-seo-title: 即時客戶資料平台中的細分服務
-description: 即時CDP建立在Adobe Experience Platform之上，並運用許多Experience Platform服務和功能。 使用「分段服務」，您可以將客戶劃分為具有類似特徵的較小群組，以提供量身打造的行銷。
-translation-type: tm+mt
-source-git-commit: 36f63cecd49e6a6b39367359d50252612ea16d7a
+keywords: 分割；分段rtcdp；即時客戶資料平台分段
+title: Real-time Customer Data Platform分段服務
+description: 即時CDP構建在Adobe Experience Platform之上，並利用了許多Experience Platform服務和功能。 使用分段服務，您可以通過將客戶分成具有相似特徵的較小組來提供定製的市場營銷。
+exl-id: 140667c0-e288-40c4-8c45-c275e348b84a
+source-git-commit: ad0d38cbd249642d582a807c5679065827f57717
 workflow-type: tm+mt
-source-wordcount: '544'
-ht-degree: 0%
+source-wordcount: '537'
+ht-degree: 4%
 
 ---
 
+# [!DNL Segmentation Service]在 [!DNL Real-time Customer Data Platform]
 
-# [!DNL Segmentation Service] in [!DNL Real-time Customer Data Platform]
+[!DNL Real-time Customer Data Platform] （即時CDP）允許您從多個源中提供資料，為客戶提供協調一致的體驗。 使用 [!DNL Segmentation Service]Adobe Experience Platform。
 
-[!DNL Real-time Customer Data Platform] （即時CDP）允許您從多個源獲取資料，為客戶提供協調一致的體驗。透過Adobe Experience Platform的[!DNL Segmentation Service]，您就可以實現相關的個人化行銷宣傳。
-
-即時CDP建立在Adobe Experience Platform之上，並運用了許多[!DNL Experience Platform]服務和功能。 使用[!DNL Segmentation Service]，您可以將客戶分成具有類似特徵的較小群組，以提供量身打造的行銷。
+即時CDP構建在Adobe Experience Platform之上，並利用了 [!DNL Experience Platform] 功能。 使用 [!DNL Segmentation Service]，您可以通過將客戶分成具有相似特徵的較小組來提供定制營銷。
 
 ## 區段
 
-區段是定義描述檔商店中描述檔子集所共用的特定屬性或行為，以區分適銷人員群組和客戶群的程式。 例如，在名為「您忘記購買運動鞋嗎？」的電子郵件促銷活動中，您可能希望擁有在過去30天內搜尋跑鞋但未完成購買的所有使用者的觀眾。 使用不同的細分，您可以專注於不同的受眾，提供更自訂的行銷體驗。
+細分是定義配置檔案子集與配置檔案儲存共用的特定屬性或行為的過程，以區分可銷售的人員組與客戶群。 例如，在一封名為「你忘記買運動鞋了嗎？」的電子郵件中，你可能希望看到過去30天內搜索跑鞋但沒有完成購買的所有用戶的觀眾。 使用不同的細分市場，您可以專注於不同的受眾，提供更為定製的營銷體驗。
 
 ## [!DNL Segment Builder]
 
-[!DNL Platform] 可讓您輕鬆建立和存取區段，並使用不同的建置區塊進一步描述區段。如需如何使用區段產生器的詳細資訊，請閱讀[區段產生器指南](./segment-builder-guide.md)。
+[!DNL Platform] 允許您輕鬆建立和訪問段，並使用不同的構建塊進一步表徵段。 有關如何使用段生成器的詳細資訊，請閱讀 [段生成器指南](./segment-builder-guide.md)。
 
-## 客戶人工智慧
+## 客戶AI
 
-即時客戶資料平台隨附的客戶人工智慧，提供您在個別層級產生客戶預測的能力，並提供說明。
+客戶AI(包括在Real-time Customer Data Platform)中)使您能夠在單個級別生成客戶預測並提供解釋。
 
-借助影響因素，客戶人工智慧可以告訴您客戶可能做什麼以及為什麼。 此外，您還可以從客戶AI預測和洞見中獲益，透過提供最合適的優惠和訊息來個人化客戶體驗。 客戶人工智慧可協助：
+在影響因子的協助下，Customer AI 可告知您客戶可能會有什麼行為以及原因何在。 此外，您還可以從客戶AI預測和洞察中獲益，通過提供最合適的優惠和消息傳遞來個性化客戶體驗。 客戶AI可協助：
 
-* 提供高精確度的客戶傾向模型，以利更有力的細分與鎖定。
-* 瞭解特定客戶行為背後的影響因素和可能性。
-* 為貴公司的獨特使用案例和資料提供可自訂的選項。
-* 利用客戶傾向分數（例如客戶流失和轉化）增強即時客戶個人檔案。
-* 利用影響傾向分數的因素來增強客戶個人檔案。
-* 根據影響因素和傾向分數建立客戶細分。
+* 為更強的細分和目標提供高精度的客戶傾向模型。
+* 瞭解某些客戶行為背後的影響因素和可能性。
+* 為您的公司獨特的使用案例和資料提供可定製的選項。
+* 利用客戶傾向評分（如流失和轉換）增強即時客戶概要資訊。
+* 利用影響傾向得分的因素增強客戶概況。
+* 根據影響因素和傾向得分建立客戶細分。
 
-客戶AI位於&#x200B;**[!UICONTROL 服務]**&#x200B;標籤的&#x200B;**[!UICONTROL Adobe服務]**&#x200B;下。
+客戶AI位於 **[!UICONTROL 服務]** 頁籤 **[!UICONTROL Adobe服務]**。
 
 ![客戶AI位置](../assets/overview/rtcdp-customer-ai.png)
 
-### 客戶AI快速入門
+### 客戶AI入門
 
-為了開始使用客戶AI，您需要遵循[資料準備教學課程](../../intelligent-services/data-preparation.md)，並根據您的使用案例設定輸入架構。 接下來，您需要[配置客戶AI實例](../../intelligent-services/customer-ai/user-guide/configure.md)。 設定例項後，會產生一個模型，您可在其中[檢視見解和分數](../../intelligent-services/customer-ai/user-guide/discover-insights.md)。 使用從模型產生的資料，您可以建立區段以進行資料導向的啟動。
+為了開始使用客戶AI，您需要遵循 [資料預操作教程](../../intelligent-services/data-preparation.md) 並根據使用案例配置輸入模式。 接下來，你需要 [配置客戶AI實例](../../intelligent-services/customer-ai/user-guide/configure.md)。 配置實例後，將生成一個模型，您可以在其中 [查看您的見解和成績](../../intelligent-services/customer-ai/user-guide/discover-insights.md)。 使用從模型生成的資料，可以建立資料驅動激活的段。
 
-若要進一步瞭解客戶AI，請先造訪[客戶AI概觀](../../intelligent-services/customer-ai/overview.md)。 此外，以下視訊說明客戶AI如何運用AI傾向豐富客戶個人檔案，並協助客戶細分和鎖定目標。
+要瞭解有關客戶AI的詳細資訊，請首先訪問 [客戶AI概述](../../intelligent-services/customer-ai/overview.md)。 此外，以下視頻顯示了客戶AI如何用基於AI的傾向性豐富客戶概況，並增強客戶細分和目標化努力。
 
 >[!VIDEO](https://video.tv.adobe.com/v/40374/?quality=12&learn=on)
 
 
 ## 後續步驟
 
-閱讀此概觀後，您現在應該瞭解即時CDP如何運用[!DNL Segmentation Service]來增強行銷宣傳的自訂和個人化。 有關[!DNL Segmentation Service]的更多資訊，請閱讀[區段檔案](../../segmentation/home.md)。
+閱讀此概述後，您現在應該瞭解即時CDP是如何利用的 [!DNL Segmentation Service] 增強市場營銷活動的定製和個性化。 有關 [!DNL Segmentation Service]，請閱讀 [分段文檔](../../segmentation/home.md)。

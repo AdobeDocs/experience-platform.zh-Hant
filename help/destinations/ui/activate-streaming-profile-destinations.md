@@ -2,11 +2,9 @@
 keywords: 激活配置檔案目標；激活目標；激活資料激活電子郵件營銷目標；激活雲儲存目標
 title: 激活受眾資料以流式處理配置檔案導出目標
 type: Tutorial
-seo-title: Activate audience data to streaming profile export destinations
 description: 瞭解如何通過將段發送到基於配置檔案的流式傳輸目的地來激活您在Adobe Experience Platform擁有的受眾資料。
-seo-description: Learn how to activate the audience data you have in Adobe Experience Platform by sending segments to streaming profile-based destinations.
 exl-id: bc0f781e-60de-44a5-93cb-06b4a3148591
-source-git-commit: 0b094e635e6d22e58e5aa79a374df0879167a833
+source-git-commit: a6fe0f5a0c4f87ac265bf13cb8bba98252f147e0
 workflow-type: tm+mt
 source-wordcount: '557'
 ht-degree: 0%

@@ -1,11 +1,9 @@
 ---
 keywords: 目的地；問題；常問問題；常見問題目標常見問題
 title: 常見問答
-seo-title: Frequently asked questions
 description: 關於Adobe Experience Platform目的地最常問問題的解答
-seo-description: Answers to the most frequently asked questions about Adobe Experience Platform destinations
 exl-id: 2c34ecd0-a6d0-48dd-86b0-a144a6acf61a
-source-git-commit: b2636377eda6740dceb9bc07fbcc082b85ff3c94
+source-git-commit: a6fe0f5a0c4f87ac265bf13cb8bba98252f147e0
 workflow-type: tm+mt
 source-wordcount: '864'
 ht-degree: 4%

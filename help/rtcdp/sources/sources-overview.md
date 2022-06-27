@@ -1,20 +1,17 @@
 ---
 keywords: rtcdp源；源rtcdp；即時客戶資料平台源
-title: 即時客戶資料平台中的來源
-seo-title: 即時客戶資料平台中的來源
-description: 本檔案概述即時客戶資料平台中的來源
-seo-description: 本檔案概述即時客戶資料平台中的來源
-translation-type: tm+mt
-source-git-commit: 36f63cecd49e6a6b39367359d50252612ea16d7a
+title: Real-time Customer Data Platform來源
+description: 本文檔概述了Real-time Customer Data Platform
+exl-id: 15b3ee9b-6faf-4091-9641-e653e4cdd7fb
+source-git-commit: ad0d38cbd249642d582a807c5679065827f57717
 workflow-type: tm+mt
-source-wordcount: '118'
+source-wordcount: '100'
 ht-degree: 0%
 
 ---
 
+# Real-time Customer Data Platform來源
 
-# 即時客戶資料平台中的來源
+[!DNL Real-Time Customer Data Platform] 允許從外部源接收資料，同時讓您能夠使用 [!DNL Platform] 服務。 您可以從多種來源(如Adobe解決方案、基於雲的儲存、第三方軟體和您的CRM)中接收資料。
 
-[!DNL Real-Time Customer Data Platform] 允許從外部來源接收資料，同時提供使用服務構建、標籤和增強傳入資料的 [!DNL Platform] 能力。您可以從多種來源收集資料，例如Adobe解決方案、雲端儲存空間、協力廠商軟體和您的CRM。
-
-有關來源的更詳細概述，包括可用來源清單和教學課程的連結，請閱讀[來源檔案](../../sources/home.md)。
+有關源的更詳細的概述，包括可用源的清單和指向教程的連結，請閱讀 [源文檔](../../sources/home.md)。

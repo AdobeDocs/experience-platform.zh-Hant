@@ -2,11 +2,9 @@
 keywords: 激活配置檔案目標；激活目標；激活資料激活電子郵件營銷目標；激活雲儲存目標
 title: 將受眾資料激活到批配置檔案導出目標
 type: Tutorial
-seo-title: Activate audience data to batch profile export destinations
 description: 瞭解如何通過將段發送到基於批處理配置檔案的目標來激活您在Adobe Experience Platform擁有的受眾資料。
-seo-description: Learn how to activate the audience data you have in Adobe Experience Platform by sending segments to batch profile-based destinations.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: 2f38f98567523a5b2830be99782658cd8863771e
+source-git-commit: a6fe0f5a0c4f87ac265bf13cb8bba98252f147e0
 workflow-type: tm+mt
 source-wordcount: '2544'
 ht-degree: 0%
@@ -158,7 +156,7 @@ ht-degree: 0%
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_filename"
 >title="配置檔案名"
->abstract="對於基於檔案的目標，每個段生成唯一的檔案名。 使用檔案名編輯器建立和編輯唯一檔案名或保留預設名。"
+>abstract="對於基於檔案的目標，每個段生成唯一的檔案名。 使用檔案名編輯器建立和編輯唯一檔案名或保留預設名稱。"
 
 預設檔案名包括目標名稱、段ID以及日期和時間指示器。 例如，您可以編輯導出的檔案名以區分不同的市場活動或將資料導出時間附加到檔案。
 

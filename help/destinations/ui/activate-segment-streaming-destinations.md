@@ -2,11 +2,9 @@
 keywords: 激活段流目標；激活段流目標；激活資料
 title: 將受眾資料激活到流段導出目標
 type: Tutorial
-seo-title: Activate audience data to streaming segment export destinations
 description: 瞭解如何通過將段映射到段流式傳輸目標來激活您在Adobe Experience Platform擁有的觀眾資料。
-seo-description: Learn how to activate the audience data you have in Adobe Experience Platform by mapping segments to segment streaming destinations.
 exl-id: bb61a33e-38fc-4217-8999-9eb9bf899afa
-source-git-commit: 0b094e635e6d22e58e5aa79a374df0879167a833
+source-git-commit: a6fe0f5a0c4f87ac265bf13cb8bba98252f147e0
 workflow-type: tm+mt
 source-wordcount: '832'
 ht-degree: 0%

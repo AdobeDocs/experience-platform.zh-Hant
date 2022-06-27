@@ -2,11 +2,9 @@
 keywords: 激活目標；激活資料
 title: Activation 總覽
 type: Tutorial
-seo-title: Activation overview
 description: 瞭解如何將您在Adobe Experience Platform擁有的受眾資料激活到各種類型的目標。
-seo-description: Learn how to activate the audience data you have in Adobe Experience Platform to various types of destinations.
 exl-id: 987af401-2d93-45b4-a8f9-191e6058e4da
-source-git-commit: 5240e0db96a5072ab02a4c8b52e9c2d3dd4d6aa0
+source-git-commit: a6fe0f5a0c4f87ac265bf13cb8bba98252f147e0
 workflow-type: tm+mt
 source-wordcount: '327'
 ht-degree: 1%

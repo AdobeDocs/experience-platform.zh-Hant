@@ -1,73 +1,71 @@
 ---
-keywords: 目的地；adobe experience platform；平台；目的地概述；啟動資料；啟動；
+keywords: 目的地；adobe體驗平台；平台；目標概述；激活資料；activate;
 title: 目的地概觀
-seo-title: Destinations overview
-description: 了解如何針對跨通路行銷宣傳、電子郵件、目標廣告等目的地啟用Adobe Experience Platform資料。
-seo-description: Destinations are pre-built integrations with destination platforms that allow for the seamless activation of data from Adobe Experience Platform. You can use Destinations in the Adobe Experience Platform to activate your known and unknown data for cross-channel marketing campaigns, email campaigns, targeted advertising, and many other use cases.
+description: 目的地是預先構建的與目標平台的整合，這些平台允許從Adobe Experience Platform無縫激活資料。 您可以使用Adobe Experience Platform的目標來激活您已知的和未知的資料，以用於跨渠道營銷活動、電子郵件活動、目標廣告和許多其他使用案例。
 exl-id: afd07ddc-652e-4e22-b298-feba27332462
-source-git-commit: c93e23d334ffe3cbee049f120a7b6c5e7e69d0ea
+source-git-commit: ad0d38cbd249642d582a807c5679065827f57717
 workflow-type: tm+mt
-source-wordcount: '460'
+source-wordcount: '489'
 ht-degree: 0%
 
 ---
 
-# [!DNL Destinations] 概觀 {#overview}
+# [!DNL Destinations]概述 {#overview}
 
-![目的地概述橫幅](./assets/overview/destinations-overview-banner.png)
+![目標概述標題](./assets/overview/destinations-overview-banner.png)
 
-**[!DNL Destinations]** 預先建置與目的地平台的整合，可順暢地從Adobe Experience Platform啟動資料。 您可以使用目的地來針對跨通路行銷活動、電子郵件行銷活動、目標廣告和其他許多使用案例，啟用已知和未知的資料。
+**[!DNL Destinations]** 是預先構建的與目標平台的整合，允許無縫激活來自Adobe Experience Platform的資料。 您可以使用目標來激活跨渠道市場營銷活動、電子郵件活動、目標廣告和許多其他使用案例的已知和未知資料。
 
-## 目的地和來源 {#destinations-and-sources}
+## 目標和來源 {#destinations-and-sources}
 
-Platform的其中一項核心功能是擷取您的第一方資料，並根據您的業務需求加以啟用。 使用 [來源](../sources/home.md) 將資料內嵌至Platform和目的地，以便從Platform匯出資料。
+平台的一個核心功能是接收您的第一方資料，並根據您的業務需要激活它。 使用 [來源](../sources/home.md) 將資料導入平台和目標，以從平台導出資料。
 
-## 目的地步驟 {#steps}
+## 目標步驟 {#steps}
 
-* 從 [自助式目錄](./catalog/overview.md) Platform中可用的所有目的地。
-* 使用目的地將設定檔或區段傳送至行銷自動化平台、數位廣告平台等。
-* 定期排程匯出至您偏好目的地的資料。
+* 從 [自助目錄](./catalog/overview.md) 平台中所有可用目的地。
+* 使用目標向營銷自動化平台、數字廣告平台等發送配置檔案或段。
+* 計畫定期向首選目標導出資料。
 
 ## 控制項 {#controls}
 
-中的控制項 [目的地工作區](./ui/destinations-workspace.md) 允許您：
+中的控制項 [目標工作區](./ui/destinations-workspace.md) 允許您：
 
-* 瀏覽可啟用資料的目的地平台目錄；
-* 建立、編輯、啟用和停用流向目錄中目的地的資料流；
-* 在儲存位置中建立帳戶，或將Platform連結至目標平台中的帳戶；
-* 選取應將哪些區段啟動至目的地；
-* 選取 [Experience Data Model(XDM)欄位](../xdm/home.md) 若要在啟用區段至電子郵件行銷目的地時匯出。
+* 瀏覽可激活資料的目標平台目錄；
+* 建立、編輯、激活和禁用流向目錄中目標的資料流；
+* 在儲存位置建立帳戶或將平台連結到目標平台中的帳戶；
+* 選擇應激活到目標的段；
+* 選擇 [體驗資料模型(XDM)欄位](../xdm/home.md) 在將段激活到電子郵件營銷目標時導出。
 
-## 目的地類型和類別 {#types-and-categories}
+## 目標類型和類別 {#types-and-categories}
 
-如需詳細資訊，請參閱 [目的地類型與類別概觀](./destination-types.md).
+有關詳細資訊，請參見 [目標類型和類別概述](./destination-types.md)。
 
-## 目的地和存取控制 {#access-controls}
+## 目標和訪問控制 {#access-controls}
 
-Platform中的目的地功能可與Adobe Experience Platform存取控制權限搭配使用。 您可以檢視、管理和啟用目的地，視使用者的權限層級而定。 如需個別權限的相關資訊，請參閱 [Adobe Experience Platform中的存取控制](../access-control/home.md) 並向下捲動至頁面底部。
+平台中的目標功能與Adobe Experience Platform訪問控制權限配合使用。 根據用戶的權限級別，您可以查看、管理和激活目標。 有關單個權限的資訊，請參見 [Adobe Experience Platform的訪問控制](../access-control/home.md) 向下滾動到頁面底部。
 
-如需存取控制的詳細資訊，請參閱 [存取控制使用手冊](../access-control/ui/overview.md).
+有關訪問控制的詳細資訊，請參見 [訪問控制使用手冊](../access-control/ui/overview.md)。
 
-## 針對將資料啟用至目的地的資料控管限制 {#data-governance}
+## 將資料激活到目標的資料治理限制 {#data-governance}
 
-Platform目的地的資料控管會透過下列方式強制執行：
+通過以下方式為平台目標強制實施資料治理：
 
-* *行銷動作* （在「建立目標」工作流程中選取）;
-* *資料使用原則* 限制包含特定使用標籤的資料啟動至具有特定行銷動作的目的地。
+* *市場營銷操作* 可在建立目標工作流中選擇；
+* *資料使用策略* 限制包含某些使用標籤的資料被激活到具有某些市場營銷操作的目標。
 
-如需詳細資訊，請參閱Platform中的資料控管檔案 [行銷動作](../data-governance/policies/overview.md) 和 [解決資料策略違規](../data-governance/enforcement/auto-enforcement.md).
+有關更多資訊，請參閱平台中的資料治理文檔 [營銷活動](../data-governance/policies/overview.md) 和 [解決資料策略違規](../data-governance/enforcement/auto-enforcement.md)。
 
-如需在建立目標工作流程中選取行銷動作的詳細資訊，請參閱下列頁面，了解Platform中不同目標類型的資訊：
+有關在建立目標工作流中選擇市場營銷操作的詳細資訊，請參閱以下有關平台中不同目標類型的頁面：
 
-* [廣告目的地 — Google Ad Manager ](./catalog/advertising/google-ad-manager.md)
-* [廣告目的地 — Google Ads](./catalog/advertising/google-ads-destination.md)
-* [廣告目的地 — Google Display &amp; Video 360 ](./catalog/advertising/google-dv360.md)
-* [雲端儲存目的地](./catalog/cloud-storage/overview.md)
-* [電子郵件行銷目的地](./catalog/email-marketing/overview.md)
-* [社交目的地](./catalog/social/overview.md)
+* [廣告目的地 — Google廣告經理 ](./catalog/advertising/google-ad-manager.md)
+* [廣告目的地 — Google廣告](./catalog/advertising/google-ads-destination.md)
+* [廣告目的地 — GoogleDisplay &amp; Video 360 ](./catalog/advertising/google-dv360.md)
+* [雲儲存目標](./catalog/cloud-storage/overview.md)
+* [電子郵件營銷目標](./catalog/email-marketing/overview.md)
+* [社會目的地](./catalog/social/overview.md)
 
-如需區段啟動工作流程中違反資料原則的詳細資訊，請參閱下列指南中的檢閱步驟：
+有關段激活工作流中違反資料策略的詳細資訊，請參閱以下指南中的「查看」步驟：
 
-* [對串流區段匯出目的地啟用受眾資料](./ui/activate-segment-streaming-destinations.md#review)
-* [對串流設定檔匯出目的地啟用受眾資料](./ui/activate-streaming-profile-destinations.md#review)
-* [啟用受眾資料以批次設定檔匯出目的地](./ui/activate-batch-profile-destinations.md#review)
+* [將受眾資料激活到流段導出目標](./ui/activate-segment-streaming-destinations.md#review)
+* [激活受眾資料以流式處理配置檔案導出目標](./ui/activate-streaming-profile-destinations.md#review)
+* [將受眾資料激活到批配置檔案導出目標](./ui/activate-batch-profile-destinations.md#review)
