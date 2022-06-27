@@ -3,7 +3,7 @@ title: 事件轉發概述
 description: 了解 Adobe Experience Platform 中的事件轉送功能，它可讓您使用 Platform Edge Network 執行工作，而不變更標記實施。
 feature: Event Forwarding
 exl-id: 18e76b9c-4fdd-4eff-a515-a681bc78d37b
-source-git-commit: fb0d8aedbb88aad8ed65592e0b706bd17840406b
+source-git-commit: b445e25ebda39e1604b926dc40d8ed52ad2e9b54
 workflow-type: tm+mt
 source-wordcount: '955'
 ht-degree: 8%
@@ -67,7 +67,7 @@ Adobe Experience Platform的事件轉發允許您將收集的事件資料發送�
 
 雖然資料元素本身的建立和配置方式與標籤的轉發方式相同，但在如何引用平台邊緣網路中的資料方面，存在一些重要的語法差異。
 
-#### 從平台邊緣網路引用資料 {#edge}
+#### 從平台邊緣網路引用資料 {#data-element-path}
 
 要從平台邊緣網路引用資料，必須建立一個資料元素，該資料元素提供該資料的有效路徑。 在UI中建立資料元素時，選擇 **[!UICONTROL 核心]** 為延期和 **[!UICONTROL 路徑]** 的雙曲餘切值。
 
