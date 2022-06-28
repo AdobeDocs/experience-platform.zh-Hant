@@ -3,9 +3,9 @@ keywords: Experience Platform；主題；熱門主題；訪問控制；基於屬
 title: 基於屬性的訪問控制管理角色權限
 description: 本文檔提供有關通過Adobe Experience Cloud的「權限」介面配置角色權限的資訊
 exl-id: 8acd2bb6-eef8-4b23-8fd8-3566c7508fe7
-source-git-commit: c31855bff9d87133252c43e2f2f2fe1960c7b144
+source-git-commit: 79ffdf35e27d74a64ea8e25544fdeeb293b58306
 workflow-type: tm+mt
-source-wordcount: '855'
+source-wordcount: '930'
 ht-degree: 0%
 
 ---
@@ -15,6 +15,10 @@ ht-degree: 0%
 >[!IMPORTANT]
 >
 >基於屬性的訪問控制目前在面向美國醫療保健客戶的有限版本中提供。 這一功能一旦完全發佈，將可供所有Real-time Customer Data Platform客戶使用。
+
+>[!IMPORTANT]
+>
+>訪問控制使用用戶ID（分配給用戶的內部唯一ID）授予權限。 當組織從Adobe ID遷移到業務ID時，其用戶設定的所有權限都將丟失，因為用戶ID更改，訪問控制將使用新生成的用戶ID。 如果您的組織已遷移到業務ID，請與Adobe代表聯繫，將您的用戶ID從Adobe ID遷移到業務ID。
 
 權限是Experience Cloud區域，管理員可以在該區域定義用戶角色和訪問策略，以管理產品應用程式中功能和對象的訪問權限。
 
