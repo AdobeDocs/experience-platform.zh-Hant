@@ -5,9 +5,9 @@ title: 流式接收概述
 topic-legacy: overview
 description: Adobe Experience Platform的流接收為用戶提供了一種從客戶端和伺服器端設備向Experience Platform即時發送資料的方法。
 exl-id: 851f15fd-7ac5-4a9f-934d-6b907057da87
-source-git-commit: 57555011ce5cf8b3f80b1d1d849cb179f4801f02
+source-git-commit: 968f2635330fb0fa8a55b17b30bd8557f7d70335
 workflow-type: tm+mt
-source-wordcount: '348'
+source-wordcount: '352'
 ht-degree: 2%
 
 ---
@@ -40,7 +40,7 @@ Adobe Experience Platform通過建立 [!DNL Real-time Customer Profile] 為每�
 
 | 目的地 | 預期延遲 |
 | --------- | ---------------- |
-| 即時客戶個人檔案 | &lt;1分鐘 |
+| 即時客戶個人檔案 | &lt; 15分鐘，第95個百分點 |
 | 達塔湖 | &lt; 60 分鐘 |
 
 ## 每秒請求(RPS)流接收指導
