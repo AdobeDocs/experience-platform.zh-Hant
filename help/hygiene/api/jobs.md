@@ -3,18 +3,23 @@ title: 使用資料衛生API刪除使用者記錄
 description: 瞭解如何以寫程式方式更正或刪除客戶在Adobe Experience Platform儲存的個人資料。
 hide: true
 hidefromtoc: true
-source-git-commit: 9057d424d63217a3cef7ad2237a65700d9159323
+exl-id: d80a4be3-e072-4bb4-a56d-b34a20f88c78
+source-git-commit: c0d51d33d1e9d49d43f732925f2a794b5afea03b
 workflow-type: tm+mt
-source-wordcount: '481'
+source-wordcount: '505'
 ht-degree: 1%
 
 ---
 
 # 使用資料衛生API刪除使用者記錄
 
+>[!IMPORTANT]
+>
+>資料衛生API當前處於測試版中。 本文檔中概述的功能可能會更改。
+
 資料衛生API允許您以寫程式方式更正或刪除客戶在Adobe Experience Platform儲存的個人資料。
 
-您可以通過以下根路徑訪問API: `https://platform.adobe.io/data/core/hygiene/`
+您可以通過與 [Privacy ServiceAPI](../../privacy-service/api/overview.md): `https://platform.adobe.io/data/core/privacy/`
 
 ## 快速入門
 
@@ -52,7 +57,7 @@ POST /jobs
 
 ```shell
 curl -X POST \
-  https://platform.adobe.io/data/core/hygiene/jobs \
+  https://platform.adobe.io/data/core/privacy/jobs \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
