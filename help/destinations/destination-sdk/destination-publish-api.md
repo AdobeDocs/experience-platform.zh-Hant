@@ -2,14 +2,18 @@
 description: 此頁列出並說明了可以使用「/authoring/destination/publish」 API終結點執行的所有API操作。
 title: 發佈目標API終結點操作
 exl-id: 0564a132-42f4-478c-9197-9b051acf093c
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 1fb0fde2054528679235268ae96e3b7e78de80ef
 workflow-type: tm+mt
-source-wordcount: '748'
-ht-degree: 4%
+source-wordcount: '779'
+ht-degree: 3%
 
 ---
 
 # 發佈目標終結點API操作 {#publish-destination}
+
+>[!IMPORTANT]
+>
+>只有在提交要供其他Experience Platform客戶使用的產品化（公共）目標時，才需要使用此API終結點。 如果您正在建立專用目標供自己使用，則無需使用發佈API正式提交目標。
 
 >[!IMPORTANT]
 >
@@ -22,8 +26,9 @@ ht-degree: 4%
 在以下情況下，使用發佈目標API終結點提交發佈請求：
 
 * 作為Destination SDK合作夥伴，您希望使所有Experience Platform組織中的產品化目標都可用於所有Experience Platform客戶；
-* 您希望在您自己的Experience Platform組織中跨所有沙箱提供自定義目標。
 * 你 *任何更新* 配置。 配置更新僅在您提交新發佈請求後才反映在目標中，新發佈請求已獲得Experience Platform團隊的批准。
+
+<!-- * You want to make your custom destination available in your own Experience Platform organization, across all sandboxes. -->
 
 ## 目標發佈API操作入門 {#get-started}
 
