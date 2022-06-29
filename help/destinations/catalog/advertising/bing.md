@@ -3,10 +3,10 @@ keywords: '廣告；炳； '
 title: Microsoft兵
 description: 使用Microsoft必應連接目標，您可以在Microsoft顯示廣告中執行重定目標和針對受眾的數字營銷活動。
 exl-id: e1c0273b-7e3c-4d77-ae14-d1e528ca0294
-source-git-commit: 0006c498cd33d9deb66f1d052b4771ec7504457d
+source-git-commit: cffd689363e71f27a554df31beaf763f9bad37f4
 workflow-type: tm+mt
-source-wordcount: '525'
-ht-degree: 3%
+source-wordcount: '570'
+ht-degree: 2%
 
 ---
 
@@ -73,15 +73,22 @@ ht-degree: 3%
 
 ## 將段激活到此目標 {#activate}
 
+>[!CONTEXTUALHELP]
+>id="platform_destinations_bing_mapping_id"
+>title="映射ID"
+>abstract="輸入要將選定段映射到的數字Bing段ID。 如果提供 [!UICONTROL 映射ID] 與必應目標中的段ID不對應，因此您在必應帳戶中看不到預期的受眾資料。"
+
 >[!IMPORTANT]
 > 
 >要激活資料，您需要 **[!UICONTROL 管理目標]**。 **[!UICONTROL 激活目標]**。 **[!UICONTROL 查看配置檔案]**, **[!UICONTROL 查看段]** [訪問控制權限](/help/access-control/home.md#permissions)。 閱讀 [訪問控制概述](/help/access-control/ui/overview.md) 或聯繫您的產品管理員以獲取所需權限。
 
 請參閱 [將受眾資料激活到流段導出目標](../../ui/activate-segment-streaming-destinations.md) 有關激活此目標受眾段的說明。
 
-在 [段計畫](../../ui/activate-segment-streaming-destinations.md#scheduling) 步驟，必須手動將段映射到目標中的相應ID或友好名稱。
+在 [段計畫](../../ui/activate-segment-streaming-destinations.md#scheduling) 步驟，必須手動將段映射到其相應的數欄位ID [!DNL Bing] 目標。 填寫數欄位ID [!DNL Bing] 的 [!UICONTROL 映射ID] 的子菜單。
 
-在映射段時，建議您使用 [!DNL Platform] 段名稱或更短的形式，以方便使用。 但是，目標中的段ID或名稱不需要與目標中的段ID或名稱匹配 [!DNL Platform] 帳戶。 在映射欄位中插入的任何值都將由目標反映。
+![顯示段映射螢幕的UI影像，其示例為Bing映射ID](../../assets/catalog/advertising/bing/mapping-id.png)
+
+如果提供 [!UICONTROL 映射ID] 與必應目標中的段ID不對應，因此您在必應帳戶中看不到預期的受眾資料。
 
 ## 導出的資料 {#exported-data}
 
