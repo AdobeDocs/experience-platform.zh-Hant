@@ -3,9 +3,9 @@ title: Adobe Experience Platform Web SDK 發行說明
 description: Adobe Experience Platform Web SDK 最新版本注意事項。
 keywords: Adobe Experience PlatformWeb SDK；平台Web SDK;Web SDK；發行說明；
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: 207fdd6d8a8dc27fa89798999734ba820f30fd54
+source-git-commit: b12f97a7c5e937a116d86495b3434dd9c0805b04
 workflow-type: tm+mt
-source-wordcount: '1169'
+source-wordcount: '1227'
 ht-degree: 3%
 
 ---
@@ -15,6 +15,11 @@ ht-degree: 3%
 
 本文檔介紹Adobe Experience PlatformWeb SDK的發行說明。
 有關Web SDK標籤擴展的最新發行說明，請參見 [《 Web SDK標籤擴展發行說明》](extension/web-sdk-ext-release-notes.md)。
+
+## 版本2.12.0 - 2022年6月29日
+
+* 將請求更改到邊緣網路，以使用 `cluster` 作為URL的一部分的cookie位置提示。 這確保更改其位置（例如通過VPN或使用移動設備等）的用戶在中間會話中到達同一邊緣，並具有相同的個性化配置檔案。
+* 在getLibraryInfo命令響應中字串化已配置的函式。
 
 ## 版本2.11.0 - 2022年6月13日
 
