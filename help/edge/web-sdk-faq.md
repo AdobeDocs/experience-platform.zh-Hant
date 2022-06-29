@@ -2,9 +2,9 @@
 title: Adobe Experience PlatformWeb SDK常見問題
 description: 獲取有關Adobe Experience PlatformWeb SDK的常見問題的答案。
 exl-id: 6ddb4b4d-c9b8-471a-bd2e-135dc4202876
-source-git-commit: 219f0f66026e8eb6729370916be3490309937f2a
+source-git-commit: 95305c0a5df71295e1321eb4c8c28baa66c5d94d
 workflow-type: tm+mt
-source-wordcount: '1924'
+source-wordcount: '1955'
 ht-degree: 1%
 
 ---
@@ -157,9 +157,7 @@ Web SDK正在快速發展。 正在處理更多使用案例。 您可以找到 [
 
 **kndctr_orgid_connection:** 此cookie儲存用戶對網站的同意偏好。
 
-**kndctr_orgid_personalization:** 此cookie包含Adobe Target用於個性化網頁的會話資訊。
-
-**kndctr_orgid_converscheck:** 此基於會話的cookie指示伺服器查找同意首選項伺服器端。
+**kndctr_orgid群集：** 此Cookie儲存正在為當前用戶的請求提供服務的體驗邊緣區域。 該區域用在URL路徑中，以便「體驗邊緣」可將請求路由到正確的區域。 此cookie的生存期為30分鐘，因此如果用戶使用不同的IP地址連接，則可以將請求路由到最近的區域。
 
 使用Web SDK時，邊緣網路會設定上面的一個或多個Cookie。 邊緣網路將所有Cookie `secure` 和 `sameSite="none"` 屬性。
 
