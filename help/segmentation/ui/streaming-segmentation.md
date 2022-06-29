@@ -5,9 +5,9 @@ title: 流分段UI指南
 topic-legacy: ui guide
 description: 在Adobe Experience Platform上進行流分割可以在關注資料豐富度的同時進行接近即時的分割。 隨著流分割，分段資格現在隨著資料登陸平台而發生，緩解了調度和運行分段作業的需要。 利用此功能，現在可以在資料傳遞到平台時評估大多數段規則，這意味著在不運行計畫的分段作業的情況下，段成員身份將保持最新。
 exl-id: cb9b32ce-7c0f-4477-8c49-7de0fa310b97
-source-git-commit: 4022eb62e791282bb519f9604b6edf903d69239f
+source-git-commit: f6825869805733d2c3838f0cad0bca0f4baf7f16
 workflow-type: tm+mt
-source-wordcount: '1295'
+source-wordcount: '1315'
 ht-degree: 0%
 
 ---
@@ -67,9 +67,9 @@ ht-degree: 0%
 
 ![](../images/ui/streaming-segmentation/monitoring-streaming-segment.png)
 
-具體來說， **[!UICONTROL 總合格受眾規模]** 的上界。 的 **[!UICONTROL 合格受眾總大小]** 顯示上次完成段作業運行中合格受眾的總數。 如果在過去24小時內沒有完成某段作業，則將從估計中取代受眾數。
+具體而言， **[!UICONTROL 合格總數]** 將顯示度量，該度量顯示基於此段的批處理和流評估的合格受眾總數。
 
-下面是一個線形圖，顯示過去24小時內合格和不合格的段數。 可以調整下拉清單以顯示過去24小時、上週或過去30天。
+下面是一個線形圖，顯示過去24小時內使用流評估方法更新的新受眾數。 可以調整下拉清單以顯示過去24小時、上週或過去30天。 的 **[!UICONTROL 新受眾已更新]** 度量基於在所選時間範圍內觀眾大小的變化，如流分段所評估的。 此度量不包括每日段批評估的合格受眾總數。
 
 >[!NOTE]
 >
@@ -79,7 +79,7 @@ ht-degree: 0%
 
 ![](../images/ui/streaming-segmentation/monitoring-streaming-segment-graph.png)
 
-通過選擇資訊氣泡，可以找到關於最後段評估的附加資訊。
+通過選擇旁邊的資訊氣泡，可以找到關於最後一段評估的其他資訊 **[!UICONTROL 合格總數]**。
 
 ![](../images/ui/streaming-segmentation/info-bubble.png)
 
