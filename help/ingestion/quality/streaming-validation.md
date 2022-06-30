@@ -6,7 +6,7 @@ topic-legacy: tutorial
 type: Tutorial
 description: 流式處理接收允許您使用流式處理端點將資料即時上傳到Adobe Experience Platform。 流式接收API支援同步和非同步兩種驗證模式。
 exl-id: 6e9ac943-6d73-44de-a13b-bef6041d3834
-source-git-commit: 958bd461be0eb3ed59b44759407bed40a3edc00a
+source-git-commit: ec8eb0e805f7127dd8712fc3fe08057d1d8c10c1
 workflow-type: tm+mt
 source-wordcount: '917'
 ht-degree: 3%
@@ -60,13 +60,13 @@ ht-degree: 3%
 
 ## 同步驗證
 
->[!WARNING]
->
->的 `syncValidation` query參數僅可用於單個消息終結點，不能用於批處理終結點。
-
 同步驗證是一種驗證方法，可立即反饋接收失敗的原因。 但是，在失敗時，驗證失敗的記錄將被丟棄，並且無法向下游發送。 因此，同步驗證只應在開發過程中使用。 執行同步驗證時，將通知呼叫方XDM驗證的結果，如果失敗，則告知失敗原因。
 
 預設情況下，不啟用同步驗證。 要啟用它，必須傳遞可選查詢參數 `syncValidation=true` 進行API調用時。 此外，當前只有流端點位於VA7資料中心時，同步驗證才可用。
+
+>[!NOTE]
+>
+>的 `syncValidation` query參數僅可用於單個消息終結點，不能用於批處理終結點。
 
 如果消息在同步驗證期間失敗，則消息不會寫入輸出隊列，這會為用戶提供即時反饋。
 
