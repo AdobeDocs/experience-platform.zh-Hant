@@ -5,15 +5,15 @@ user-guide-title: Real-time Customer Data Platform連接
 breadcrumb-title: Real-time Customer Data Platform連接
 user-guide-description: 啟動 Adobe Experience Platform Edge Network 的客戶端資料彙集功能。
 feature: Data Collection
-source-git-commit: 0a01dd2b0d8a1039178e3593475f9a87639ccdcd
+source-git-commit: 08541ed2d179040a1faef0dace477f268687fd54
 workflow-type: tm+mt
-source-wordcount: '40'
-ht-degree: 32%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
 
-# Real-time Customer Data Platform連接 {#collection}
+# Real-time Customer Data Platform連接 {#rtcdp-connections}
 
 - [RTCDP連接概述](home.md)
 - [端到端概述](e2e.md)
