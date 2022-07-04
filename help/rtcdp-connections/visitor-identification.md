@@ -4,18 +4,16 @@ description: 瞭解Adobe Experience Platform邊緣網路伺服器API如何識別
 seo-description: Learn how Adobe Experience Platform Edge Network Server API identifies visitors
 keywords: 邊緣網路；網關；api;visitor;identification
 exl-id: aa2f3b83-5cc8-4e02-9119-edfd5e212588
-source-git-commit: 0a01dd2b0d8a1039178e3593475f9a87639ccdcd
+source-git-commit: 6798c15b1cee781c41b9faf5cc6dcfa73090a60a
 workflow-type: tm+mt
-source-wordcount: '152'
+source-wordcount: '151'
 ht-degree: 5%
 
 ---
 
 # 訪客身分識別
 
-## 總覽 {#overview}
-
-邊緣網路伺服器API支援 [通過第一方ID([!DNL FPID])](visitor-identification-fpid.md)
+邊緣網路伺服器API支援 [通過第一方ID([!DNL FPID])](visitor-identification-fpid.md)。
 
 應在中提供所有用戶標識 `identityMap` 欄位組。 此欄位組包含在AEP Web SDK中 `ExperienceEvent` 混音。
 

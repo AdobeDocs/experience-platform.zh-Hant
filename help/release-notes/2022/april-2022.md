@@ -2,10 +2,10 @@
 title: Adobe Experience Platform發行說明2022年4月
 description: 2022年4月為Adobe Experience Platform發行的說明。
 exl-id: 39233787-3089-4469-8363-b006ae41ae21
-source-git-commit: 7040a3415ced04035e2a6a73292c2113411df21d
+source-git-commit: 6798c15b1cee781c41b9faf5cc6dcfa73090a60a
 workflow-type: tm+mt
-source-wordcount: '2917'
-ht-degree: 5%
+source-wordcount: '2916'
+ht-degree: 6%
 
 ---
 
@@ -135,17 +135,17 @@ XDM是一種開源規範，它為傳入Adobe Experience Platform的資料提供�
 | 全局架構 | [[!UICONTROL 資料衛生操作請求]](https://github.com/adobe/xdm/blob/master/schemas/hygiene/aep-hygiene-ops-record.schema.json) | 捕獲資料清除請求的詳細資訊，以刪除或修改指定資料集或沙盒中的記錄。 |
 | 描述符 | [[!UICONTROL 時間序列粒度描述符]](https://github.com/adobe/xdm/blob/master/schemas/descriptors/time-series/descriptorTimeSeriesGranularity.schema.json) | 指示時間序列和摘要資料的粒度。 應用到架構時，架構 `timestamp` 欄位是此粒度週期中的第一個時間戳。 |
 | 類 | [[!UICONTROL XDM摘要度量]](https://github.com/adobe/xdm/blob/master/components/classes/summary_metrics.schema.json) | 提供具有分組維的預匯總度量，如具有GROUP BY的SQL SELECT的結果。 |
-| 欄位組 | [[!UICONTROL 同意策略評估結果圖]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-site-search.schema.json) | 捕獲個人的同意策略評估結果。 |
-| 欄位組 | [[!UICONTROL 站點搜索]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-site-search.schema.json) | 捕獲與站點搜索相關的資訊，如搜索查詢、篩選和排序。 |
-| 欄位組 | [[!UICONTROL 合併銷售線索]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/events/merge-leads.schema.json) | 捕獲合併兩個或多個銷售線索的事件的詳細資訊。 |
-| 欄位組 | [[!UICONTROL 已傳送電子郵件]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/events/emailsent.schema.json) | 捕獲將電子郵件發送到收件人的事件的詳細資訊。 |
-| 欄位組 | [[!UICONTROL 拼接欄位]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-stitching.schema.json) | 捕獲通過事件的標識拼接過程計算的值。 |
-| 欄位組 | [[!UICONTROL 審核的輔助收件人詳細資訊]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/customerJourneyManagement/secondary-recipient-detail.schema.json) | Adobe Journey Optimizer欄位組，用於捕獲審核的輔助收件人詳細資訊。 |
-| 欄位組 | [[!UICONTROL XDM業務帳戶人員關係詳細資訊]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/account-person/account-person-details.schema.json) | 捕獲與帳戶 — 人員關係相關的詳細資訊。 |
-| 欄位組 | [[!UICONTROL 帳戶人員詳細資訊]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/account-person/account-person-details.schema.json) | 捕獲與帳戶 — 人員關係相關的詳細資訊。 |
+| 欄位群組 | [[!UICONTROL 同意策略評估結果圖]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/profile-consentResults.schema.json) | 捕獲個人的同意策略評估結果。 |
+| 欄位群組 | [[!UICONTROL 站點搜索]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-site-search.schema.json) | 捕獲與站點搜索相關的資訊，如搜索查詢、篩選和排序。 |
+| 欄位群組 | [[!UICONTROL 合併銷售線索]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/events/merge-leads.schema.json) | 捕獲合併兩個或多個銷售線索的事件的詳細資訊。 |
+| 欄位群組 | [[!UICONTROL 已傳送電子郵件]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/events/emailsent.schema.json) | 捕獲將電子郵件發送到收件人的事件的詳細資訊。 |
+| 欄位群組 | [[!UICONTROL 拼接欄位]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-stitching.schema.json) | 捕獲通過事件的標識拼接過程計算的值。 |
+| 欄位群組 | [[!UICONTROL 審核的輔助收件人詳細資訊]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/customerJourneyManagement/secondary-recipient-detail.schema.json) | Adobe Journey Optimizer欄位組，用於捕獲審核的輔助收件人詳細資訊。 |
+| 欄位群組 | [[!UICONTROL XDM業務帳戶人員關係詳細資訊]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/account-person/account-person-details.schema.json) | 捕獲與帳戶 — 人員關係相關的詳細資訊。 |
+| 欄位群組 | [[!UICONTROL 帳戶人員詳細資訊]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/account-person/account-person-details.schema.json) | 捕獲與帳戶 — 人員關係相關的詳細資訊。 |
 | 資料類型 | [[!UICONTROL 購物車]](https://github.com/adobe/xdm/blob/master/components/datatypes/cart.schema.json) | 捕獲有關電子商務購物車的資訊。 |
 | 資料類型 | [[!UICONTROL 裝運]](https://github.com/adobe/xdm/blob/master/components/datatypes/shipping.schema.json) | 捕獲一個或多個產品的發運資訊。 |
-| 資料類型 | [[!UICONTROL 站點搜索]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-site-search.schema.json) | 捕獲有關站點搜索活動的資訊。 |
+| 資料類型 | [[!UICONTROL 站點搜索]](https://github.com/adobe/xdm/blob/master/components/datatypes/sitesearch.schema.json) | 捕獲有關站點搜索活動的資訊。 |
 | 分機(Workfront) | [[!UICONTROL 操作任務屬性]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/workfront/opTask.schema.json) | 捕獲與操作任務相關的詳細資訊。 |
 | 分機(Workfront) | [[!UICONTROL 工作Portfolio屬性]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/workfront/portfolio.schema.json) | 捕獲與工作組合相關的詳細資訊。 |
 | 分機(Workfront) | [[!UICONTROL 工作計畫屬性]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/workfront/program.schema.json) | 捕獲與工作程式相關的詳細資訊。 |
@@ -159,7 +159,7 @@ XDM是一種開源規範，它為傳入Adobe Experience Platform的資料提供�
 | --- | --- | --- |
 | 全局架構 | [[!UICONTROL 目的地]](https://github.com/adobe/xdm/blob/master/schemas/destinations/destination.schema.json) | 新的枚舉值 `destinationCategory`。 |
 | 描述符 | [[!UICONTROL 友好名稱描述符]](https://github.com/adobe/xdm/blob/master/schemas/descriptors/display/alternateDisplayInfo.schema.json) | 增加了對刪除建議值的支援(`meta:enum`)。 |
-| 欄位組 | [[!UICONTROL 用戶登錄過程]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-user-login-details.schema.json) | `createProfile` 的下界。 |
+| 欄位群組 | [[!UICONTROL 用戶登錄過程]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-user-login-details.schema.json) | `createProfile` 的下界。 |
 | 資料類型 | [[!UICONTROL 商務]](https://github.com/adobe/xdm/blob/master/components/datatypes/marketing/commerce.schema.json) | 已添加幾個與購物車相關的欄位。 |
 | 資料類型 | [[!UICONTROL 產品清單項]](https://github.com/adobe/xdm/blob/master/components/datatypes/productlistitem.schema.json) | 為所選選項和折扣金額添加的新欄位。 |
 | 擴展（智慧服務） | [[!UICONTROL 智慧服務JourneyAI發送時間優化]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/intelligentServices/profile-journeyai-sendtimeoptimization.schema.json) | 優化發送時間分數的儲存格式。 |
@@ -177,7 +177,7 @@ AI/ML服務使營銷分析員和從業人員能夠利用人工智慧和機器學
 
 ### Attribution AI
 
-Attribution AI 可將點數歸因到促成轉換事件的接觸點。行銷人員可善用此工具，協助量化客戶歷程中各個獨立行銷接觸點對行銷的影響。
+Attribution AI 可將點數歸因到促成轉換事件的接觸點。 行銷人員可善用此工具，協助量化客戶歷程中各個獨立行銷接觸點對行銷的影響。
 
 **已更新功能**
 

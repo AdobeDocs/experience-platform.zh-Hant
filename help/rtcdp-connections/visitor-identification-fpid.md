@@ -4,16 +4,14 @@ description: 瞭解如何使用FPID通過伺服器API一致地識別訪問者
 seo-description: Learn how to consistently identify visitors via the Server API, by using the FPID
 keywords: 邊緣網路；網關；api;visitor;identification;fpid
 exl-id: c61d2e7c-7b5e-4b14-bd52-13dde34e32e3
-source-git-commit: 0a01dd2b0d8a1039178e3593475f9a87639ccdcd
+source-git-commit: 6798c15b1cee781c41b9faf5cc6dcfa73090a60a
 workflow-type: tm+mt
-source-wordcount: '340'
+source-wordcount: '348'
 ht-degree: 0%
 
 ---
 
 # 基於FPID的訪客身份識別
-
-## 總覽
 
 [!DNL First-party IDs] (`FPIDs`)是由客戶生成、管理和儲存的設備ID。 這使客戶能夠控制識別用戶設備。 通過發送 `FPIDs`，邊緣網路不生成全新 `ECID` 一個不包含請求的請求。
 
@@ -35,7 +33,7 @@ ht-degree: 0%
 }
 ```
 
-對於同時包含a的請求 `FPID` 和 `ECID`，也請參見Wiki頁。 `ECID` 請求中已存在的請求將優先於從 `FPID`。 因此，邊緣網路將使用 `ECID` 已提供，並且不會從給定計算 `FPID`。
+對於同時包含 `FPID` 和 `ECID`，也請參見Wiki頁。 `ECID` 請求中已存在的請求將優先於從 `FPID`。 換句話說，邊緣網路使用 `ECID` 已提供和 `FPID` 忽略。 新 `ECID` 僅在 `FPID` 是自己提供的。
 
 就設備ID而言， `server` 資料流應使用 `FPID` 作為設備ID。 其他身份(即 `EMAIL`)，但邊緣網路要求顯式提供主標識。 主標識是配置檔案資料將儲存到的基本標識。
 
