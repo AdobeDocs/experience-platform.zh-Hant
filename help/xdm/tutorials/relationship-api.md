@@ -1,14 +1,13 @@
 ---
 keywords: Experience Platform；主題；熱門主題；api;XDM;XDM;XDM系統；經驗資料模型；體驗資料模型；資料模型；資料模型；資料模型；架構註冊；架構；架構；架構；架構；關係；關係描述符；關係描述符；參考身份；
-solution: Experience Platform
 title: 使用架構註冊表API定義兩個架構之間的關係
 description: 本文檔提供了一個教程，用於定義組織使用架構註冊表API定義的兩個架構之間的一對一關係。
 topic-legacy: tutorial
 type: Tutorial
 exl-id: ef9910b5-2777-4d8b-a6fe-aee51d809ad5
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 65a6eca9450b3a3e19805917fb777881c08817a0
 workflow-type: tm+mt
-source-wordcount: '1365'
+source-wordcount: '1367'
 ht-degree: 2%
 
 ---
@@ -110,13 +109,13 @@ curl -X GET \
 
 ## 定義源方案的引用欄位
 
-在 [!DNL Schema Registry]，關係描述符在關係資料庫表中的工作與外鍵類似：源架構中的欄位用作對目標架構的主標識欄位的引用。 如果源架構沒有用於此目的的欄位，則可能需要使用新欄位建立架構欄位組並將其添加到架構中。 此新欄位必須具有 `type` 值&quot;[!DNL string]。
+在 [!DNL Schema Registry]，關係描述符在關係資料庫表中的工作與外鍵類似：源架構中的欄位用作對目標架構的主標識欄位的引用。 如果源架構沒有用於此目的的欄位，則可能需要使用新欄位建立架構欄位組並將其添加到架構中。 此新欄位必須具有 `type` 值 `string`。
 
 >[!IMPORTANT]
 >
->與目標架構不同，源架構不能將其主標識用作引用欄位。
+>源架構不能將其主標識用作引用欄位。
 
-在本教程中，目標架構「」[!DNL Hotels]&quot;包含 `hotelId` 作為架構主標識的欄位，因此也將用作其引用欄位。 但是，源架構&quot;[!DNL Loyalty Members]&quot;沒有要用作引用的專用欄位，並且必須給它一個新的欄位組，該欄位組將新欄位添加到架構中： `favoriteHotel`。
+在本教程中，目標架構「」[!DNL Hotels]&quot;包含 `hotelId` 用作架構主標識的欄位。 但是，源架構&quot;[!DNL Loyalty Members]&quot;沒有要用作引用的專用欄位 `hotelId`，因此需要建立自定義欄位組，以便向架構添加新欄位： `favoriteHotel`。
 
 >[!NOTE]
 >
@@ -344,9 +343,9 @@ curl -X PATCH \
 
 ## 建立引用標識描述符 {#reference-identity}
 
-如果將架構欄位用作關係中其他架構的引用，則必須將引用標識描述符應用於它們。 自 `favoriteHotel` 欄位「」[!DNL Loyalty Members]」將引用 `hotelId` 欄位「」[!DNL Hotels]&quot; `hotelId` 必須給出引用標識描述符。
+如果將架構欄位用作對關係中另一個架構的引用，則它們必須應用引用標識描述符。 自 `favoriteHotel` 欄位「」[!DNL Loyalty Members]」將引用 `hotelId` 欄位「」[!DNL Hotels]&quot; `favoriteHotel` 必須給出引用標識描述符。
 
-通過向目標架構發出POST請求，為目標架構建立引用描述符 `/tenant/descriptors` 端點。
+通過向源架構發出POST請求，為其建立引用描述符 `/tenant/descriptors` 端點。
 
 **API格式**
 
@@ -356,7 +355,7 @@ POST /tenant/descriptors
 
 **要求**
 
-以下請求為 `hotelId` 目標架構「」中的欄位[!DNL Hotels]。
+以下請求為 `favoriteHotel` 源架構「」中的欄位[!DNL Loyalty Members]。
 
 ```shell
 curl -X POST \
@@ -368,33 +367,33 @@ curl -X POST \
   -H 'Content-Type: application/json' \
   -d '{
     "@type": "xdm:descriptorReferenceIdentity",
-    "xdm:sourceSchema": "https://ns.adobe.com/{TENANT_ID}/schemas/d4ad4b8463a67f6755f2aabbeb9e02c7",
+    "xdm:sourceSchema": "https://ns.adobe.com/{TENANT_ID}/schemas/533ca5da28087c44344810891b0f03d9",
     "xdm:sourceVersion": 1,
-    "xdm:sourceProperty": "/_{TENANT_ID}/hotelId",
+    "xdm:sourceProperty": "/_{TENANT_ID}/favoriteHotel",
     "xdm:identityNamespace": "Hotel ID"
   }'
 ```
 
 | 參數 | 說明 |
 | --- | --- |
-| `@type` | 正在定義的描述符的類型。 對於引用描述符，值必須為&quot;xdm:descriptorReferenceIdentity&quot;。 |
-| `xdm:sourceSchema` | 的 `$id` 目標架構的URL。 |
-| `xdm:sourceVersion` | 目標架構的版本號。 |
-| `sourceProperty` | 目標架構的主標識欄位的路徑。 |
-| `xdm:identityNamespace` | 引用欄位的標識名稱空間。 此名稱空間必須與將欄位定義為架構的主標識時使用的名稱空間相同。 查看 [標識命名空間概述](../../identity-service/home.md) 的子菜單。 |
+| `@type` | 正在定義的描述符的類型。 對於引用描述符，值必須為 `xdm:descriptorReferenceIdentity`。 |
+| `xdm:sourceSchema` | 的 `$id` 源架構的URL。 |
+| `xdm:sourceVersion` | 源架構的版本號。 |
+| `sourceProperty` | 源架構中用於引用目標架構的主標識的欄位的路徑。 |
+| `xdm:identityNamespace` | 引用欄位的標識名稱空間。 這必須與目標架構的主標識具有相同的命名空間。 查看 [標識命名空間概述](../../identity-service/home.md) 的子菜單。 |
 
 {style=&quot;table-layout:auto&quot;&quot;
 
 **回應**
 
-成功的響應返回新建立的目標架構的引用描述符的詳細資訊。
+成功的響應將返回新建立的源欄位引用描述符的詳細資訊。
 
 ```json
 {
     "@type": "xdm:descriptorReferenceIdentity",
-    "xdm:sourceSchema": "https://ns.adobe.com/{TENANT_ID}/schemas/d4ad4b8463a67f6755f2aabbeb9e02c7",
+    "xdm:sourceSchema": "https://ns.adobe.com/{TENANT_ID}/schemas/533ca5da28087c44344810891b0f03d9",
     "xdm:sourceVersion": 1,
-    "xdm:sourceProperty": "/_{TENANT_ID}/hotelId",
+    "xdm:sourceProperty": "/_{TENANT_ID}/favoriteHotel",
     "xdm:identityNamespace": "Hotel ID",
     "meta:containerId": "tenant",
     "@id": "53180e9f86eed731f6bf8bf42af4f59d81949ba6"
@@ -403,7 +402,7 @@ curl -X POST \
 
 ## 建立關係描述符 {#create-descriptor}
 
-關係描述符在源模式和目標模式之間建立一對一關係。 在為目標架構定義了引用描述符後，可以通過向目標架構發出POST請求來建立新的關係描述符 `/tenant/descriptors` 端點。
+關係描述符在源模式和目標模式之間建立一對一關係。 在源架構中為相應欄位定義了引用標識描述符後，可以通過向POST請求建立新的關係描述符 `/tenant/descriptors` 端點。
 
 **API格式**
 
@@ -413,7 +412,7 @@ POST /tenant/descriptors
 
 **要求**
 
-以下請求將建立新的關係描述符，其中包含「[!DNL Loyalty Members]&quot;作為源架構和&quot;[!DNL Legacy Loyalty Members]&quot;作為目標架構。
+以下請求將建立新的關係描述符，其中包含「[!DNL Loyalty Members]&quot;作為源架構和&quot;[!DNL Hotels]&quot;作為目標架構。
 
 ```shell
 curl -X POST \
@@ -436,13 +435,13 @@ curl -X POST \
 
 | 參數 | 說明 |
 | --- | --- |
-| `@type` | 要建立的描述符的類型。 的 `@type` 關係描述符的值為&quot;xdm:descriptorOneToOne&quot;。 |
+| `@type` | 要建立的描述符的類型。 的 `@type` 關係描述符的值 `xdm:descriptorOneToOne`。 |
 | `xdm:sourceSchema` | 的 `$id` 源架構的URL。 |
 | `xdm:sourceVersion` | 源架構的版本號。 |
 | `xdm:sourceProperty` | 源架構中引用欄位的路徑。 |
 | `xdm:destinationSchema` | 的 `$id` 目標架構的URL。 |
 | `xdm:destinationVersion` | 目標架構的版本號。 |
-| `xdm:destinationProperty` | 目標架構中引用欄位的路徑。 |
+| `xdm:destinationProperty` | 目標架構中主標識欄位的路徑。 |
 
 {style=&quot;table-layout:auto&quot;&quot;
 

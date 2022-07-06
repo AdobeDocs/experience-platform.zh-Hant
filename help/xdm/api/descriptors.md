@@ -5,9 +5,9 @@ title: 描述符API終結點
 description: 通過架構註冊表API中的/descriptors終結點，可以以寫程式方式管理體驗應用程式中的XDM描述符。
 topic-legacy: developer guide
 exl-id: bda1aabd-5e6c-454f-a039-ec22c5d878d2
-source-git-commit: b92246e729ca26387a3d375e5627165a29956e52
+source-git-commit: 65a6eca9450b3a3e19805917fb777881c08817a0
 workflow-type: tm+mt
-source-wordcount: '1836'
+source-wordcount: '1839'
 ht-degree: 3%
 
 ---
@@ -389,7 +389,7 @@ curl -X DELETE \
 
 #### 引用標識描述符
 
-引用標識描述符提供對模式欄位的主要標識的引用上下文，允許其他模式中的欄位引用它。 必須先用標識描述符標籤欄位，然後才能將引用描述符應用到這些欄位。
+引用標識描述符提供對模式欄位的主要標識的引用上下文，允許其他模式中的欄位引用它。 目標架構必須已定義一個主標識欄位，然後才能通過此描述符由其他架構引用它。
 
 ```json
 {
@@ -406,7 +406,7 @@ curl -X DELETE \
 | `@type` | 正在定義的描述符的類型。 對於引用標識描述符，必須將此值設定為 `xdm:descriptorReferenceIdentity`。 |
 | `xdm:sourceSchema` | 的 `$id` 定義描述符的架構的URI。 |
 | `xdm:sourceVersion` | 源架構的主版本。 |
-| `xdm:sourceProperty` | 定義描述符的源架構中欄位的路徑。 應以「/」開頭，而不以「/」結尾。 不要在路徑中包括「properties」（例如，「/personalEmail/address」，而不是「/properties/personalEmail/properties/address」）。 |
+| `xdm:sourceProperty` | 源架構中用於引用目標架構的欄位的路徑。 應以「/」開頭，而不以「/」結尾。 路徑中不包含「屬性」(例如， `/personalEmail/address` 而不是 `/properties/personalEmail/properties/address`)。 |
 | `xdm:identityNamespace` | 源屬性的標識名稱空間代碼。 |
 
 {style=&quot;table-layout:auto&quot;&quot;
