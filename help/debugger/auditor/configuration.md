@@ -2,10 +2,10 @@
 title: 配置Test參考
 description: 瞭解審計員如何在Adobe Experience Platform調試器中為配置設定test。
 exl-id: 92b07224-57f1-4891-9923-aa079945e6bc
-source-git-commit: 10a5605c40143b58f6ba0108cc087956aa929866
+source-git-commit: 797d4f305b4a6884ada4e0619beadff6a45ab42d
 workflow-type: tm+mt
-source-wordcount: '749'
-ht-degree: 65%
+source-wordcount: '740'
+ht-degree: 67%
 
 ---
 
@@ -30,8 +30,8 @@ ht-degree: 65%
 | 啟動 — 在DOM就緒後非同步載入第三方標籤 | 3 | 要在良好的用戶體驗和收集準確資料之間取得平衡，應在DOM就緒時觸發第三方標籤。 這樣可以確保這些追蹤指令碼能夠在不影響網站功能的情況下執行。 | 通過調整執行第三方像素的所有規則以在DOM Ready時激發來解決此問題。<br><br>[其他資訊](../../tags/ui/managing-resources/rules.md) |
 | Experience Cloud ID 服務 - 最新版本 | 2 | 您的頁面未執行最新版的訪客 ID 服務程式碼庫 visitorAPI.js。支援 Experience Cloud 技術的程式碼庫會持續更新及調整，以強化效能並提供最新功能。 | 安裝最新版的訪客 ID 服務程式庫。<br><br>[其他資訊](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/library.html) |
 | Launch - 最新版本 | 2 | 這些頁面未運行標籤代碼庫（渦輪）的最新版本。 支援 Experience Cloud 技術的程式碼庫會持續更新及調整，以強化效能並提供最新功能。 | 重建並發佈標籤庫。<br><br>[其他資訊](../../tags/quick-start/quick-start.md) |
-| Target - 最新版本 | 2 | 您的頁面未執行最新版 Target 程式碼庫。支援 Experience Cloud 技術的程式碼庫會持續更新及調整，以強化效能並提供最新功能。 | 安裝最新版的 Target 程式庫。<br><br>[其他資訊](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/implement-target-for-client-side-web.html) |
-| Target - 在 mboxCreate 前面加上 mboxDefault | 5 | mboxCreate 的正確用法如下所示：<br><br> `<div class="mboxDefault"><!-Customer content--></div><script>mboxCreate('myMboxName')</script>` | 確保包括  `<div class="mboxDefault"></div>` 調用mboxCreate()之前的標籤。 at.js 不會為您加上此標記。<br><br>[其他資訊](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/implement-target-for-client-side-web.html) |
-| Target - 有效的 DOCTYPE | 5 | 偵測到無效的 DOCTYPE。在此情況下不會引發 mbox。對 at.js 而言，DOCTYPE 必須處於「標準」模式，否則 Target 將無法運作。 | 更新頁面上的 DOCTYPE。<br><br>[其他資訊](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/faq-at-js/target-atjs-faq.html) |
+| Target - 最新版本 | 2 | 您的頁面未執行最新版 Target 程式碼庫。支援 Experience Cloud 技術的程式碼庫會持續更新及調整，以強化效能並提供最新功能。 | 安裝最新版的 Target 程式庫。<br><br>[其他資訊](https://developer.adobe.com/target/implement/client-side/) |
+| Target - 在 mboxCreate 前面加上 mboxDefault | 5 | mboxCreate 的正確用法如下所示：<br><br> `<div class="mboxDefault"><!-Customer content--></div><script>mboxCreate('myMboxName')</script>` | 確保包括  `<div class="mboxDefault"></div>` 調用mboxCreate()之前的標籤。 at.js 不會為您加上此標記。<br><br>[其他資訊](https://developer.adobe.com/target/implement/client-side/) |
+| Target - 有效的 DOCTYPE | 5 | 偵測到無效的 DOCTYPE。在此情況下不會引發 mbox。對 at.js 而言，DOCTYPE 必須處於「標準」模式，否則 Target 將無法運作。 | 更新頁面上的 DOCTYPE。<br><br>[其他資訊](https://developer.adobe.com/target/implement/client-side/atjs/target-atjs-faq/) |
 
 {style=&quot;table-layout:auto&quot;}

@@ -1,16 +1,17 @@
 ---
 title: 產品類
 description: 本文檔概述了「體驗資料模型」(XDM)中的「產品」類。
-source-git-commit: c0437b8f9d93c46dbec991a33a893a5b9e0cdf2c
+exl-id: 911680ae-b761-4945-9ad3-0233eaea89b0
+source-git-commit: fdd68e5a94d841992a6f8abe10f3cffe0ebb6794
 workflow-type: tm+mt
-source-wordcount: '213'
+source-wordcount: '215'
 ht-degree: 7%
 
 ---
 
 # [!UICONTROL 產品] 類
 
-在經驗資料模型(XDM)中， [!UICONTROL 產品] 類捕獲定義產品的最小屬性集。
+在經驗資料模型(XDM)中， [!UICONTROL 產品] 類捕獲定義零售產品的最小屬性集。
 
 ![](../images/classes/product.png)
 
@@ -29,7 +30,7 @@ ht-degree: 7%
 
 ## 相容欄位組 {#field-groups}
 
-Adobe提供幾個標準欄位組，用於 [!DNL XDM Individual Profile] 類。 以下是類中一些常用欄位組的清單：
+Adobe提供幾個標準欄位組，用於 [!UICONTROL 產品] 類。 以下是類中一些常用欄位組的清單：
 
 * [[!UICONTROL 產品目錄]](../field-groups/product/product-catalog.md)
 * [[!UICONTROL 產品類別]](../field-groups/product/product-category.md)
