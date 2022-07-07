@@ -1,10 +1,11 @@
 ---
 title: 基於屬性的Ad Hoc模式訪問控制支援
 description: 用於限制訪問通過Adobe Experience Platform查詢服務生成的臨時架構中的資料欄位的指南。
-source-git-commit: 3d908face315c7aa2ad8f6350fb1fe0d3446d428
+exl-id: d675e3de-ab62-4beb-9360-1f6090397a17
+source-git-commit: 9b327257eacea189363587ad79dc6595b636d5b8
 workflow-type: tm+mt
 source-wordcount: '1037'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
@@ -41,7 +42,7 @@ ht-degree: 0%
 
 ## 在平台UI的架構清單中發現即席架構
 
-要在平台UI中啟用即席架構的顯示，請選擇搜索欄位左側的篩選器表徵圖(../images/data-governance/filter.png)，然後選擇**[!UICONTROL 顯示即席架構] 左欄。
+要在平台UI中啟用即席架構的顯示，請選擇篩選器表徵圖(![篩選器表徵圖。](../images/data-governance/filter.png))，然後選擇**[!UICONTROL 顯示即席架構] 左欄。
 
 ![啟用「顯示即席架構」切換的「架構」儀表板篩選器選項左側的欄。](../images/data-governance/adhoc-schema-toggle.png)
 
@@ -93,4 +94,4 @@ ht-degree: 0%
 閱讀此文檔後，您更瞭解如何將資料使用標籤添加到通過查詢服務CTAS查詢建立的即席架構。 如果尚未執行此操作，則以下文檔對於提高您對查詢服務中資料治理的瞭解非常有用：
 
 * [即席架構標識](./ad-hoc-schema-identities.md)
-* [資料治理](https://experienceleague.adobe.com/docs/experience-platform/data-governance/home.html)
+* [資料治理](https://experienceleague.adobe.com/docs/experience-platform/data-governance/home.html?lang=zh-Hant)
