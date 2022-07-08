@@ -4,9 +4,9 @@ user-guide-title: 目的地指南
 user-guide-description: 針對跨通路行銷活動、電子郵件宣傳、鎖定特定目標的行銷活動和其他諸多使用案例，啟用已知和未知的資料。
 description: 本文檔列出了Adobe Experience Platform目標的目錄
 feature: Destinations
-source-git-commit: 492a05b24ec905de926d861f607a6e5d294d46e0
+source-git-commit: fa092e4d1828d9ecd5bc98e3f225fa377f38065f
 workflow-type: tm+mt
-source-wordcount: '778'
+source-wordcount: '814'
 ht-degree: 8%
 
 ---
@@ -184,10 +184,17 @@ ht-degree: 8%
       * [憑據終結點API操作](./destination-sdk/credentials-configuration-api.md)
       * [發佈終結點API操作](./destination-sdk/destination-publish-api.md)
       * 開發人員工具參考 {#developer-tools-reference}
-         * [獲取示例模板API操作](./destination-sdk/sample-template-api.md)
-         * [呈現模板API操作](./destination-sdk/render-template-api.md)
-         * [目標測試API操作](./destination-sdk/destination-testing-api.md)
-         * [配置檔案生成API操作示例](./destination-sdk/sample-profile-generation-api.md)
+         * 流目標測試API {#streaming-destination-testing-api}
+            * [獲取示例模板API操作](./destination-sdk/sample-template-api.md)
+            * [呈現模板API操作](./destination-sdk/render-template-api.md)
+            * [目標測試API操作](./destination-sdk/destination-testing-api.md)
+            * [配置檔案生成API操作示例](./destination-sdk/sample-profile-generation-api.md)
+         * 基於檔案的目標測試API {#file-based-destination-testing-api}
+            * [基於檔案的目標測試API概述](./destination-sdk/file-based-destination-testing-overview.md)
+            * [基於源架構生成示例配置檔案](./destination-sdk/file-based-sample-profile-generation-api.md)
+            * [Test基於檔案的目標，包含示例配置檔案](./destination-sdk/file-based-destination-testing-api.md)
+            * [查看詳細的激活結果](./destination-sdk/file-based-destination-results-api.md)
+            * [驗證模板化客戶欄位](./destination-sdk/file-based-render-template-api.md)
    * 指南 {#guides}
       * [使用Destination SDK配置流目標](./destination-sdk/configure-destination-instructions.md)
       * [（測試版）使用Destination SDK配置基於檔案的目標](./destination-sdk/configure-file-based-destination-instructions.md)
