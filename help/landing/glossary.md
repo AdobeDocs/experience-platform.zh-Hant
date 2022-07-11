@@ -3,12 +3,12 @@ keywords: Experience Platform；首頁；熱門主題
 solution: Experience Platform
 title: Adobe Experience Platform辭彙表
 topic-legacy: getting started
-description: Experience 平台重要術語表。
+description: Experience Platform 重要術語表。
 exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
-source-git-commit: 7bafa87de874c6be90b80e4a899c02fd3868290e
+source-git-commit: c0f01efa224bffb5b435e2f247e793edfbc576b9
 workflow-type: tm+mt
-source-wordcount: '7385'
-ht-degree: 1%
+source-wordcount: '7428'
+ht-degree: 0%
 
 ---
 
@@ -257,6 +257,8 @@ ht-degree: 1%
 **地方科學**:地質是由GPS或RFID技術定義的虛擬地理邊界，使軟體能夠在移動設備進入或離開特定區域時觸發響應。
 
 **GDPR（一般資料保護法規）**:《一般資料保護條例》(GDPR)是一個法律框架，為收集和處理歐盟（歐盟）內個人的個人資訊制定了指導方針。 GDPR規定了資料管理原則和個人權利，涵蓋了處理歐盟公民資料的所有公司。
+
+**護欄**:護欄是指為資料和系統使用、效能優化和避免錯誤或意外結果在Adobe Experience Platform提供指導的閾值。 護欄可以參考您對許可權利的使用或資料的使用和處理。
 
 ## H
 
