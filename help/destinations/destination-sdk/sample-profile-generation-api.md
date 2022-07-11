@@ -2,9 +2,9 @@
 description: 此頁列出並說明了可以使用「/authoring/sample-profiles」 API終結點執行的所有API操作，以生成要用於目標測試的示例配置檔案。
 title: 配置檔案生成API操作示例
 exl-id: 5f1cd00a-8eee-4454-bcae-07b05afa54af
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 789a3928379d200af292c722806f7ca72441d9f3
 workflow-type: tm+mt
-source-wordcount: '971'
+source-wordcount: '975'
 ht-degree: 2%
 
 ---
@@ -183,7 +183,7 @@ curl --location --request GET 'https://platform.adobe.io/data/core/activation/au
 | -------- | ----------- |
 | `segmentMembership` | 描述個人段成員身份的映射對象。 有關 `segmentMembership`，閱讀 [段成員身份詳細資訊](https://experienceleague.adobe.com/docs/experience-platform/xdm/field-groups/profile/segmentation.html)。 |
 | `lastQualificationTime` | 此配置檔案上次限定段的時間的時間戳。 |
-| `xdm:status` | 指示段成員資格是否已作為當前請求的一部分實現。 接受以下值： <ul><li>`existing`:在請求之前，配置檔案已是段的一部分，並繼續保持其成員資格。</li><li>`realized`:配置檔案正在輸入段作為當前請求的一部分。</li><li>`exited`:配置檔案作為當前請求的一部分退出段。</li></ul> |
+| `xdm:status` | 一個字串欄位，指示是否已將段成員資格作為當前請求的一部分實現。 接受以下值： <ul><li>`existing`:在請求之前，配置檔案已是段的一部分，並繼續保持其成員資格。</li><li>`realized`:配置檔案正在輸入段作為當前請求的一部分。</li><li>`exited`:配置檔案作為當前請求的一部分退出段。</li></ul> |
 | `identityMap` | 映射類型欄位，它描述個人的各種標識值及其關聯的命名空間。 有關 `identityMap`，閱讀 [架構組合的基礎](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/composition.html?lang=en#identityMap)。 |
 
 {style=&quot;table-layout:auto&quot;&quot;
