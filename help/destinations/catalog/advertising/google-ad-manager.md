@@ -3,9 +3,9 @@ keywords: google廣告管理器；google廣告；按兩下廣告；按兩下廣�
 title: Google廣告經理連接
 description: Google廣告管理器以前叫DoubleClick for Publishers或DoubleClick AdX，是Google的一個廣告服務平台，它使出版商能夠通過視頻和移動應用管理其網站上廣告的顯示。
 exl-id: e93f1bd5-9d29-43a1-a9a6-8933f9d85150
-source-git-commit: 0006c498cd33d9deb66f1d052b4771ec7504457d
+source-git-commit: dd18350387aa6bdeb61612f0ccf9d8d2223a8a5d
 workflow-type: tm+mt
-source-wordcount: '779'
+source-wordcount: '842'
 ht-degree: 3%
 
 ---
@@ -90,6 +90,12 @@ ht-degree: 3%
 >[!NOTE]
 >
 >設定 [!DNL Google Ad Manager] 目標，請與 [!DNL Google Account Manager] 或Adobe代表，瞭解您的帳戶類型。
+
+### 啟用警報 {#enable-alerts}
+
+您可以啟用警報來接收有關目標資料流狀態的通知。 從清單中選擇要訂閱的警報以接收有關資料流狀態的通知。 有關警報的詳細資訊，請參閱上的指南 [使用UI訂閱目標警報](../../ui/alerts.md)。
+
+完成提供目標連接的詳細資訊後，選擇 **[!UICONTROL 下一個]**。
 
 ## 將段激活到此目標 {#activate}
 

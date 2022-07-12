@@ -3,9 +3,9 @@ keywords: AmazonKinesis;kinesis目標；kinesis
 title: AmazonKinesis
 description: 建立到AmazonKinesis儲存的即時出站連接，以從Adobe Experience Platform流資料。
 exl-id: b40117ef-6ad0-48a9-bbcb-97c6f6d1dce3
-source-git-commit: b19dc5c0d67bc218de0366fdc40f752ce7c3ad71
+source-git-commit: abe2e7ba363b82a696136aa46aa1adbbe25ee461
 workflow-type: tm+mt
-source-wordcount: '1809'
+source-wordcount: '1889'
 ht-degree: 0%
 
 ---
@@ -86,6 +86,8 @@ ht-degree: 0%
 | `kinesis:PutRecord` | 將單個資料記錄寫入Kinesis資料流的操作。 |
 | `kinesis:PutRecords` | 在單個調用中將多個資料記錄寫入Kinesis資料流的操作。 |
 
+{style=&quot;table-layout:auto&quot;&quot;
+
 有關控制訪問的詳細資訊 [!DNL Kinesis] 資料流，讀取以下內容 [[!DNL Kinesis] 文檔](https://docs.aws.amazon.com/streams/latest/dev/controlling-access.html)。
 
 ## 連接到目標 {#connect}
@@ -105,7 +107,7 @@ ht-degree: 0%
 * **[!DNL Amazon Web Services]訪問密鑰和密鑰**:在 [!DNL Amazon Web Services]，生成 `access key - secret access key` 對以授予您的平台訪問權 [!DNL Amazon Kinesis] 帳戶。 在 [Amazon Web Services文檔](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html)。
 * **[!UICONTROL 區域]**:指明 [!DNL Amazon Web Services] 要將資料流到的區域。
 
-### 目標詳細資訊 {#destination-details}
+### 填寫目標詳細資訊 {#destination-details}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_kinesis_includesegmentnames"
@@ -117,7 +119,7 @@ ht-degree: 0%
 >title="包括段時間戳"
 >abstract="如果希望資料導出包括建立和更新段時的UNIX時間戳，以及將段映射到要激活的目標時的UNIX時間戳，則切換。 查看資料導出示例的文檔，並選中此選項。"
 
-在建立到AmazonKinesis目標的身份驗證連接後，請提供目標的以下資訊：
+要配置目標的詳細資訊，請填寫以下必需欄位和可選欄位。 UI中某個欄位旁邊的星號表示該欄位是必需的。
 
 ![顯示AmazonKinesis目標詳細資訊的已完成欄位的用戶介面螢幕影像](../../assets/catalog/cloud-storage/amazon-kinesis/kinesis-destination-details.png)
 
@@ -134,6 +136,12 @@ ht-degree: 0%
 >Platform needs `write` permissions on the bucket object where the export files will be delivered.
 
 -->
+
+### 啟用警報 {#enable-alerts}
+
+您可以啟用警報來接收有關目標資料流狀態的通知。 從清單中選擇要訂閱的警報以接收有關資料流狀態的通知。 有關警報的詳細資訊，請參閱上的指南 [使用UI訂閱目標警報](../../ui/alerts.md)。
+
+完成提供目標連接的詳細資訊後，選擇 **[!UICONTROL 下一個]**。
 
 ## 將段激活到此目標 {#activate}
 

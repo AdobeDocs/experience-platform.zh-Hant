@@ -3,9 +3,9 @@ keywords: 電子郵件；電子郵件；電子郵件；電子郵件目標；orac
 title: Oracle響應系統連接
 description: Responsys是企業電子郵件營銷工具，用於通過Oracle提供的跨渠道營銷活動，以在電子郵件、移動、顯示和社交網路中個性化交互。
 exl-id: 70f2f601-afee-4315-bf7a-ed2c92397ebe
-source-git-commit: 0006c498cd33d9deb66f1d052b4771ec7504457d
+source-git-commit: dd18350387aa6bdeb61612f0ccf9d8d2223a8a5d
 workflow-type: tm+mt
-source-wordcount: '583'
+source-wordcount: '646'
 ht-degree: 1%
 
 ---
@@ -75,6 +75,12 @@ Commenting out Amazon S3 bucket part for now until support is clarified
 - **[!UICONTROL Bucket name]**: Your Amazon S3 bucket, where Platform will deposit the data export. Your input must be between 3 and 63 characters long. Must begin and end with a letter or number. Must contain only lowercase letters, numbers, or hyphens ( - ). Must not be formatted as an IP address (for example, 192.100.1.1).
 
 -->
+
+### 啟用警報 {#enable-alerts}
+
+您可以啟用警報來接收有關目標資料流狀態的通知。 從清單中選擇要訂閱的警報以接收有關資料流狀態的通知。 有關警報的詳細資訊，請參閱上的指南 [使用UI訂閱目標警報](../../ui/alerts.md)。
+
+完成提供目標連接的詳細資訊後，選擇 **[!UICONTROL 下一個]**。
 
 ## 將段激活到此目標 {#activate}
 

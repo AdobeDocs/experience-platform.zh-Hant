@@ -2,9 +2,9 @@
 title: Adobe Advertising Cloud DSP
 description: Adobe Advertising Cloud DSP是 [!DNL Adobe Real-time Customer Data Profile]允許您與經認證的廣告商和用戶共用經過身份驗證的第一方段，以便激活活動。
 exl-id: 11ff7797-a9c6-4334-b843-ae9df9a48e54
-source-git-commit: 2b8c9d81b7d9eddbbed3119a496e9c8d37e6c415
+source-git-commit: dd18350387aa6bdeb61612f0ccf9d8d2223a8a5d
 workflow-type: tm+mt
-source-wordcount: '954'
+source-wordcount: '1026'
 ht-degree: 1%
 
 ---
@@ -78,12 +78,18 @@ Adobe Advertising Cloud DSP目的地支援激活下表中描述的身份。 瞭�
 
 ### 填寫目標詳細資訊 {#destination-details}
 
-要配置目標的詳細資訊，請填寫 [!UICONTROL 目標詳細資訊] ，然後選擇 **[!UICONTROL 下一個]**。
+要配置目標的詳細資訊，請填寫以下必需欄位和可選欄位。 UI中某個欄位旁邊的星號表示該欄位是必需的。
 
 * **[!UICONTROL 名稱]**:您將來識別此目標的名稱。
 * **[!UICONTROL 說明]**:將幫助您在將來確定此目標的說明。
 
 ![目標詳細資訊欄位](/help/destinations/assets/catalog/advertising/adobe-advertising-cloud-connection/destination-details.png)
+
+### 啟用警報 {#enable-alerts}
+
+您可以啟用警報來接收有關目標資料流狀態的通知。 從清單中選擇要訂閱的警報以接收有關資料流狀態的通知。 有關警報的詳細資訊，請參閱上的指南 [使用UI訂閱目標警報](../../ui/alerts.md)。
+
+完成提供目標連接的詳細資訊後，選擇 **[!UICONTROL 下一個]**。
 
 ## 將段激活到此目標 {#activate}
 

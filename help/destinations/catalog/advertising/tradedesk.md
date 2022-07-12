@@ -3,9 +3,9 @@ keywords: 廣告；交易部門；廣告貿易台
 title: 交易台連接
 description: 交易台是一個自助服務平台，供廣告購買者跨顯示器、視頻和移動庫存來源執行重定目標和受眾定向數字活動。
 exl-id: b8f638e8-dc45-4aeb-8b4b-b3fa2906816d
-source-git-commit: 0006c498cd33d9deb66f1d052b4771ec7504457d
+source-git-commit: dd18350387aa6bdeb61612f0ccf9d8d2223a8a5d
 workflow-type: tm+mt
-source-wordcount: '613'
+source-wordcount: '676'
 ht-degree: 3%
 
 ---
@@ -75,6 +75,12 @@ ht-degree: 3%
    * **[!UICONTROL 東北美洲]**
    * **[!UICONTROL 北美西部]**
    * **[!UICONTROL 拉丁美洲]**
+
+### 啟用警報 {#enable-alerts}
+
+您可以啟用警報來接收有關目標資料流狀態的通知。 從清單中選擇要訂閱的警報以接收有關資料流狀態的通知。 有關警報的詳細資訊，請參閱上的指南 [使用UI訂閱目標警報](../../ui/alerts.md)。
+
+完成提供目標連接的詳細資訊後，選擇 **[!UICONTROL 下一個]**。
 
 ## 將段激活到此目標 {#activate}
 

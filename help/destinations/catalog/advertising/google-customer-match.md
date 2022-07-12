@@ -3,9 +3,9 @@ keywords: google客戶匹配；Google客戶匹配；Google客戶匹配
 title: Google客戶匹配連接
 description: Google客戶匹配允許您使用線上和離線資料在Google擁有和運營的資產(如搜索、購物、Gmail和YouTube)中與客戶聯繫並重新聯繫。
 exl-id: 8209b5eb-b05c-4ef7-9fdc-22a528d5f020
-source-git-commit: 23828fcbb1257fa093c1e114ee4c2fcb2162d9d6
+source-git-commit: dd18350387aa6bdeb61612f0ccf9d8d2223a8a5d
 workflow-type: tm+mt
-source-wordcount: '1715'
+source-wordcount: '1778'
 ht-degree: 1%
 
 ---
@@ -141,6 +141,12 @@ The video below demonstrates the steps to configure a [!DNL Google Customer Matc
 >
 > * 的 **[!UICONTROL 與PII結合]** 預設情況下，為 [!DNL Google Customer Match] 目標，無法刪除。
 
+
+### 啟用警報 {#enable-alerts}
+
+您可以啟用警報來接收有關目標資料流狀態的通知。 從清單中選擇要訂閱的警報以接收有關資料流狀態的通知。 有關警報的詳細資訊，請參閱上的指南 [使用UI訂閱目標警報](../../ui/alerts.md)。
+
+完成提供目標連接的詳細資訊後，選擇 **[!UICONTROL 下一個]**。
 
 ## 將段激活到此目標 {#activate}
 

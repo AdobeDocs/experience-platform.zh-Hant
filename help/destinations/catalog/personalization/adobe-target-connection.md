@@ -3,9 +3,9 @@ keywords: 目標個性化；目的地；體驗平台目標；adobe目標目標�
 title: Adobe Target
 description: Adobe Target是一個應用程式，在跨網站、移動應用等的所有入站客戶交互中提供基於人工智慧的即時個性化和實驗功能。
 exl-id: 3e3c405b-8add-4efb-9389-5ad695bc9799
-source-git-commit: 12e2c1a32f08b6942d6e4aefc35a53bae8387d7e
+source-git-commit: dd18350387aa6bdeb61612f0ccf9d8d2223a8a5d
 workflow-type: tm+mt
-source-wordcount: '846'
+source-wordcount: '909'
 ht-degree: 1%
 
 ---
@@ -85,6 +85,12 @@ Adobe Experience Platform自動連接到您公司的Adobe Target實例。 不需
 |---|---|
 | <ul><li>[邊緣分割](../../../segmentation/ui/edge-segmentation.md) 不支援。</li><li>[同頁和下頁個性化](../../ui/configure-personalization-destinations.md) 不支援。</li><li>您只能為生產沙盒共用段到Adobe Target連接。</li><li>要配置下一會話個性化而不使用資料流ID，請使用 [at.js](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/at-js/how-atjs-works.html?lang=en)。</li></ul> | <ul><li>邊緣分割按預期工作。</li><li>[同頁和下頁個性化](../../ui/configure-personalization-destinations.md) 。</li><li>其他沙箱支援段共用。</li></ul> |
 
+### 啟用警報 {#enable-alerts}
+
+您可以啟用警報來接收有關目標資料流狀態的通知。 從清單中選擇要訂閱的警報以接收有關資料流狀態的通知。 有關警報的詳細資訊，請參閱上的指南 [使用UI訂閱目標警報](../../ui/alerts.md)。
+
+完成提供目標連接的詳細資訊後，選擇 **[!UICONTROL 下一個]**。
+
 ## 將段激活到此目標 {#activate}
 
 >[!IMPORTANT]
@@ -99,4 +105,4 @@ Adobe Target從Adobe Experience Platform邊緣網路讀取配置檔案資料，�
 
 ## 資料使用和治理 {#data-usage-governance}
 
-全部 [!DNL Adobe Experience Platform] 目標在處理資料時符合資料使用策略。 有關如何 [!DNL Adobe Experience Platform] 強制實施資料治理，讀取 [資料治理概述](https://experienceleague.adobe.com/docs/experience-platform/data-governance/home.html)。
+全部 [!DNL Adobe Experience Platform] 目標在處理資料時符合資料使用策略。 有關如何 [!DNL Adobe Experience Platform] 強制實施資料治理，讀取 [資料治理概述](https://experienceleague.adobe.com/docs/experience-platform/data-governance/home.html?lang=zh-Hant)。

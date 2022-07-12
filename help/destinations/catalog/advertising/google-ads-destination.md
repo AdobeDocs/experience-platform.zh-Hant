@@ -3,9 +3,9 @@ keywords: Google廣告；谷歌廣告；谷歌廣告；Google廣告詞；Google�
 title: Google廣告連接
 description: Google廣告以前叫GoogleAdWords，是一種線上廣告服務，允許企業在基於文本的搜索、圖形顯示、YouTube視頻和應用內移動顯示中按點擊付費廣告。
 exl-id: 7143f476-49a8-42aa-bfb4-b11fc2b8f5c3
-source-git-commit: 0006c498cd33d9deb66f1d052b4771ec7504457d
+source-git-commit: dd18350387aa6bdeb61612f0ccf9d8d2223a8a5d
 workflow-type: tm+mt
-source-wordcount: '835'
+source-wordcount: '898'
 ht-degree: 3%
 
 ---
@@ -91,6 +91,12 @@ ht-degree: 3%
 * **[!UICONTROL 說明]**:可選。 例如，您可以提及您為此目標使用的市場活動。
 * **[!UICONTROL 帳戶類型]**:AdWords是唯一可用的選項。
 * **[!UICONTROL 帳戶ID]**:用 [!DNL Google Ads]。 ID格式通常為123-456-7890。
+
+### 啟用警報 {#enable-alerts}
+
+您可以啟用警報來接收有關目標資料流狀態的通知。 從清單中選擇要訂閱的警報以接收有關資料流狀態的通知。 有關警報的詳細資訊，請參閱上的指南 [使用UI訂閱目標警報](../../ui/alerts.md)。
+
+完成提供目標連接的詳細資訊後，選擇 **[!UICONTROL 下一個]**。
 
 ## 將段激活到此目標 {#activate}
 

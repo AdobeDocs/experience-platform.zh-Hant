@@ -2,9 +2,9 @@
 title: Pinterest客戶清單連接
 description: 從您的客戶清單、訪問您站點的人員或已與您的內容在Pinterest進行互動的人員中建立受眾。
 exl-id: e601f75f-0d40-4cd0-93ca-54d7439f1db7
-source-git-commit: 0006c498cd33d9deb66f1d052b4771ec7504457d
+source-git-commit: dd18350387aa6bdeb61612f0ccf9d8d2223a8a5d
 workflow-type: tm+mt
-source-wordcount: '639'
+source-wordcount: '702'
 ht-degree: 3%
 
 ---
@@ -23,7 +23,6 @@ ht-degree: 3%
 
 * 用戶需要向具有訪問其要向其添加受眾的廣告商帳戶的Pinterest帳戶進行身份驗證。 有關共用廣告商帳戶的詳細資訊 [這裡](https://help.pinterest.com/en/business/article/share-and-manage-access-to-your-ad-accounts)。 具體來說，用戶需要「受眾」訪問級別。
 * 有關客戶清單標識格式的詳細資訊 [這裡](https://help.pinterest.com/en/business/article/audience-targeting)。
-
 
 ## 支援的身份 {#supported-identities}
 
@@ -74,6 +73,12 @@ ht-degree: 3%
 * **[!UICONTROL 說明]**:將幫助您在將來確定此目標的說明。
 * **[!UICONTROL 廣告商ID]**:您的Pinterest廣告商ID。
 
+### 啟用警報 {#enable-alerts}
+
+您可以啟用警報來接收有關目標資料流狀態的通知。 從清單中選擇要訂閱的警報以接收有關資料流狀態的通知。 有關警報的詳細資訊，請參閱上的指南 [使用UI訂閱目標警報](../../ui/alerts.md)。
+
+完成提供目標連接的詳細資訊後，選擇 **[!UICONTROL 下一個]**。
+
 ## 將段激活到此目標 {#activate}
 
 >[!IMPORTANT]
@@ -84,7 +89,7 @@ ht-degree: 3%
 
 ## 資料使用和治理 {#data-usage-governance}
 
-全部 [!DNL Adobe Experience Platform] 目標在處理資料時符合資料使用策略。 有關如何 [!DNL Adobe Experience Platform] 強制實施資料治理，請參見 [資料治理概述](https://experienceleague.adobe.com/docs/experience-platform/data-governance/home.html)。
+全部 [!DNL Adobe Experience Platform] 目標在處理資料時符合資料使用策略。 有關如何 [!DNL Adobe Experience Platform] 強制實施資料治理，請參見 [資料治理概述](https://experienceleague.adobe.com/docs/experience-platform/data-governance/home.html?lang=zh-Hant)。
 
 ## 其他資源 {#additional-resources}
 

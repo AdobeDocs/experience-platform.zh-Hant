@@ -2,10 +2,10 @@
 title: Verizon MediaYahoo DataX連接
 description: DataX是Verizon Media/Yahoo的聚合基礎架構，它承載著各種元件，使Verizon Media/Yahoo能夠以安全、自動和可擴展的方式與外部合作夥伴交換資料。
 exl-id: 7d02671d-8650-407d-9c9f-fad7da3156bc
-source-git-commit: 0006c498cd33d9deb66f1d052b4771ec7504457d
+source-git-commit: dd18350387aa6bdeb61612f0ccf9d8d2223a8a5d
 workflow-type: tm+mt
-source-wordcount: '712'
-ht-degree: 3%
+source-wordcount: '775'
+ht-degree: 4%
 
 ---
 
@@ -106,6 +106,12 @@ DataX API可供廣告商使用，這些廣告商希望以Verizon Media(VMG)中�
 * **[!UICONTROL 說明]**:將幫助您在將來確定此目標的說明。
 * **[!UICONTROL MDM ID]**:這是Yahoo DataX中的唯一標識符，也是設定向此目標的資料導出的必需欄位。 如果您不知道此Id，請與Yahoo Data X客戶經理聯繫。  使用MDM ID時，資料可以被限制為僅用於特定的一組獨佔用戶（例如廣告商的第一方資料）。
 
+### 啟用警報 {#enable-alerts}
+
+您可以啟用警報來接收有關目標資料流狀態的通知。 從清單中選擇要訂閱的警報以接收有關資料流狀態的通知。 有關警報的詳細資訊，請參閱上的指南 [使用UI訂閱目標警報](../../ui/alerts.md)。
+
+完成提供目標連接的詳細資訊後，選擇 **[!UICONTROL 下一個]**。
+
 ## 將段激活到此目標 {#activate}
 
 >[!IMPORTANT]
@@ -116,7 +122,7 @@ DataX API可供廣告商使用，這些廣告商希望以Verizon Media(VMG)中�
 
 ## 資料使用和治理 {#data-usage-governance}
 
-全部 [!DNL Adobe Experience Platform] 目標在處理資料時符合資料使用策略。 有關如何 [!DNL Adobe Experience Platform] 強制實施資料治理，請參見 [資料治理概述](https://experienceleague.adobe.com/docs/experience-platform/data-governance/home.html)。
+全部 [!DNL Adobe Experience Platform] 目標在處理資料時符合資料使用策略。 有關如何 [!DNL Adobe Experience Platform] 強制實施資料治理，請參見 [資料治理概述](https://experienceleague.adobe.com/docs/experience-platform/data-governance/home.html?lang=zh-Hant)。
 
 ## 其他資源 {#additional-resources}
 

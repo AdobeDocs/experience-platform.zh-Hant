@@ -3,10 +3,10 @@ keywords: linkedin連接；linkedin連接；linkedin連接；linkedin目標；li
 title: Linkedin匹配的受眾連接
 description: 根據經過散列的電子郵件激活LinkedIn市場活動的配置檔案，以針對受眾進行目標、個性化和壓制。
 exl-id: 74c233e9-161a-4e4a-98ef-038a031feff0
-source-git-commit: 0006c498cd33d9deb66f1d052b4771ec7504457d
+source-git-commit: fd2019feb25b540612a278cbea5bf5efafe284dc
 workflow-type: tm+mt
-source-wordcount: '895'
-ht-degree: 2%
+source-wordcount: '1041'
+ht-degree: 1%
 
 ---
 
@@ -91,7 +91,7 @@ ht-degree: 2%
 > 
 >要連接到目標，您需要 **[!UICONTROL 管理目標]** [訪問控制權限](/help/access-control/home.md#permissions)。 閱讀 [訪問控制概述](/help/access-control/ui/overview.md) 或聯繫您的產品管理員以獲取所需權限。
 
-要連接到此目標，請按照 [目標配置教程](../../ui/connect-destination.md)。
+要連接到此目標，請按照 [目標配置教程](../../ui/connect-destination.md)。 在配置目標工作流中，填寫下面兩節中列出的欄位。
 
 下面的視頻還演示了配置 [!DNL LinkedIn Matched Audiences] 目標和激活段。
 
@@ -101,13 +101,31 @@ ht-degree: 2%
 >
 >Experience Platform用戶介面頻繁更新，自此視頻記錄後可能已更改。 有關最新資訊，請參閱 [目標配置教程](../../ui/connect-destination.md)。
 
-### 連接參數 {#parameters}
+### 驗證到目標 {#authenticate}
 
-同時 [設定](../../ui/connect-destination.md) 此目標，必須提供以下資訊：
+1. 查找 [!DNL LinkedIn Matched Audiences] 目標目錄中的目標，然後選擇 **[!UICONTROL 設定]**。
+2. 選擇 **[!UICONTROL 連接到目標]**。
+   ![驗證到LinkedIn](/help/destinations/assets/catalog/social/linkedin/authenticate-linkedin-destination.png)
+3. 輸入您的LinkedIn憑據並選擇 **登錄**。
 
-* **[!UICONTROL 名稱]**:您將來通過此名稱來識別此目標。
+### 填寫目標詳細資訊 {#destination-details}
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_connect_linkedin_accountid"
+>title="帳戶 ID"
+>abstract="您的LinkedIn市場活動經理帳戶ID。 您可以在LinkedIn市場活動經理帳戶中找到此ID。"
+
+要配置目標的詳細資訊，請填寫以下必需欄位和可選欄位。 UI中某個欄位旁邊的星號表示該欄位是必需的。
+
+* **[!UICONTROL 名稱]**:您將來識別此目標的名稱。
 * **[!UICONTROL 說明]**:將幫助您在將來確定此目標的說明。
-* **[!UICONTROL 帳戶ID]**:你 [!DNL LinkedIn Campaign Manager Account ID]。 您可以在 [!DNL LinkedIn Campaign Manager] 帳戶。
+* **[!UICONTROL 帳戶ID]**:您 [!DNL LinkedIn Campaign Manager Account ID]。 您可以在 [!DNL LinkedIn Campaign Manager] 帳戶。
+
+### 啟用警報 {#enable-alerts}
+
+您可以啟用警報來接收有關目標資料流狀態的通知。 從清單中選擇要訂閱的警報以接收有關資料流狀態的通知。 有關警報的詳細資訊，請參閱上的指南 [使用UI訂閱目標警報](../../ui/alerts.md)。
+
+完成提供目標連接的詳細資訊後，選擇 **[!UICONTROL 下一個]**。
 
 ## 將段激活到此目標 {#activate}
 

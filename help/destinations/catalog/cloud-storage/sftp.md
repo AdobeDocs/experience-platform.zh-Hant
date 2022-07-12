@@ -3,9 +3,9 @@ keywords: SFTP;SFTP
 title: SFTP連接
 description: 建立到SFTP伺服器的即時出站連接，以定期從Adobe Experience Platform導出分隔的資料檔案。
 exl-id: 27abfc38-ec19-4321-b743-169370d585a0
-source-git-commit: 715533352e84573f60f012504988595af6146e2f
+source-git-commit: fd2019feb25b540612a278cbea5bf5efafe284dc
 workflow-type: tm+mt
-source-wordcount: '671'
+source-wordcount: '673'
 ht-degree: 1%
 
 ---
@@ -39,9 +39,9 @@ ht-degree: 1%
 > 
 >要連接到目標，您需要 **[!UICONTROL 管理目標]** [訪問控制權限](/help/access-control/home.md#permissions)。 閱讀 [訪問控制概述](/help/access-control/ui/overview.md) 或聯繫您的產品管理員以獲取所需權限。
 
-要連接到此目標，請按照 [目標配置教程](../../ui/connect-destination.md)。
+要連接到此目標，請按照 [目標配置教程](../../ui/connect-destination.md)。 在配置目標工作流中，填寫下面兩節中列出的欄位。
 
-### 連接參數 {#parameters}
+### 驗證資訊 {#authentication-information}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_sftp_rsa"
@@ -51,11 +51,7 @@ ht-degree: 1%
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_sftp_ssh"
 >title="專用SSH密鑰"
->abstract="專用SSH密鑰必須格式化為Base64編碼的字串，且不得受密碼保護。 "
-
-當 [連接](../../ui/connect-destination.md) 要到達此目標，必須提供以下資訊：
-
-#### 驗證資訊 {#authentication-information}
+>abstract="專用SSH密鑰必須格式化為Base64編碼的字串，且不得受密碼保護。"
 
 如果選擇 **[!UICONTROL 基本身份驗證]** 鍵入以連接到SFTP位置：
 
@@ -83,7 +79,7 @@ ht-degree: 1%
 
       ![PGP鍵](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
 
-#### 目標詳細資訊 {#destination-details}
+### 目標詳細資訊 {#destination-details}
 
 在建立到SFTP位置的身份驗證連接後，請提供目標的以下資訊：
 

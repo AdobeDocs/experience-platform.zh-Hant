@@ -3,9 +3,9 @@ keywords: 按兩下標價管理器；按兩下標價管理器；按兩下；顯�
 title: GoogleDisplay & Video 360連接
 description: Display & Video 360（以前稱為DoubleClick Bid Manager）是一種工具，用於在顯示、視頻和移動清單來源中執行重定目標和受眾目標數字活動。
 exl-id: bdd3b3fd-891f-44ec-bd47-daf7f3289f92
-source-git-commit: 898bd0d5d986bf26e62b0843de7cbb71b859aee3
+source-git-commit: dd18350387aa6bdeb61612f0ccf9d8d2223a8a5d
 workflow-type: tm+mt
-source-wordcount: '830'
+source-wordcount: '893'
 ht-degree: 2%
 
 ---
@@ -86,6 +86,12 @@ ht-degree: 2%
 >[!NOTE]
 >
 >設定 [!DNL Google Display & Video 360] 目標，請與 [!DNL Google Account Manager] 或Adobe代表，瞭解您的帳戶類型。
+
+### 啟用警報 {#enable-alerts}
+
+您可以啟用警報來接收有關目標資料流狀態的通知。 從清單中選擇要訂閱的警報以接收有關資料流狀態的通知。 有關警報的詳細資訊，請參閱上的指南 [使用UI訂閱目標警報](../../ui/alerts.md)。
+
+完成提供目標連接的詳細資訊後，選擇 **[!UICONTROL 下一個]**。
 
 ## 將段激活到此目標 {#activate}
 

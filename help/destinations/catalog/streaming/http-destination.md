@@ -3,9 +3,9 @@ title: HTTP API連接
 keywords: 流；
 description: 使用Adobe Experience Platform的HTTP API目標將配置檔案資料發送到第三方HTTP終結點以運行您自己的分析或對導出出Experience Platform的配置檔案資料執行可能需要的任何其他操作。
 exl-id: 165a8085-c8e6-4c9f-8033-f203522bb288
-source-git-commit: d4a4baf330925d6696f515bf650d86740c18e97c
+source-git-commit: dd18350387aa6bdeb61612f0ccf9d8d2223a8a5d
 workflow-type: tm+mt
-source-wordcount: '2296'
+source-wordcount: '2374'
 ht-degree: 0%
 
 ---
@@ -138,7 +138,7 @@ curl --location --request POST 'https://some-api.com/token' \
    * **[!UICONTROL 體形編碼]**:在這個例子中， [!DNL client ID] 和 [!DNL client secret] 包括 *在請求正文中* 送到你的目的地。 有關示例，請參見 [支援的身份驗證類型](#supported-authentication-types) 的子菜單。
    * **[!UICONTROL 基本授權]**:在這個例子中， [!DNL client ID] 和 [!DNL client secret] 包括 *在 `Authorization` 標題* 將base64編碼併發送到目標。 有關示例，請參見 [支援的身份驗證類型](#supported-authentication-types) 的子菜單。
 
-### 目標詳細資訊 {#destination-details}
+### 填寫目標詳細資訊 {#destination-details}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_http_headers"
@@ -165,7 +165,7 @@ curl --location --request POST 'https://some-api.com/token' \
 >title="查詢參數"
 >abstract="也可以將查詢參數添加到HTTP終結點URL。 設定您使用的查詢參數的格式如下： `parameter1=value&parameter2=value`。"
 
-建立到HTTP終結點的身份驗證連接後，請提供目標的以下資訊：
+要配置目標的詳細資訊，請填寫以下必需欄位和可選欄位。 UI中某個欄位旁邊的星號表示該欄位是必需的。
 
 ![顯示HTTP目標詳細資訊的已完成欄位的UI螢幕影像](../../assets/catalog/http/http-api-destination-details.png)
 
@@ -176,6 +176,12 @@ curl --location --request POST 'https://some-api.com/token' \
 * **[!UICONTROL 查詢參數]**:也可以將查詢參數添加到HTTP終結點URL。 設定您使用的查詢參數的格式如下： `parameter1=value&parameter2=value`。
 * **[!UICONTROL 包括段名稱]**:如果希望資料導出包含要導出的段的名稱，則切換。 有關選擇此選項的資料導出示例，請參閱 [導出的資料](#exported-data) 的下一頁。
 * **[!UICONTROL 包括段時間戳]**:如果希望資料導出包括建立和更新段時的UNIX時間戳，以及將段映射到要激活的目標時的UNIX時間戳，則切換。 有關選擇此選項的資料導出示例，請參閱 [導出的資料](#exported-data) 的下一頁。
+
+### 啟用警報 {#enable-alerts}
+
+您可以啟用警報來接收有關目標資料流狀態的通知。 從清單中選擇要訂閱的警報以接收有關資料流狀態的通知。 有關警報的詳細資訊，請參閱上的指南 [使用UI訂閱目標警報](../../ui/alerts.md)。
+
+完成提供目標連接的詳細資訊後，選擇 **[!UICONTROL 下一個]**。
 
 ## 將段激活到此目標 {#activate}
 

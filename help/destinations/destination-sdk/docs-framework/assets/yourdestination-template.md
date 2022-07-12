@@ -1,25 +1,19 @@
 ---
-title: 文檔自助模板//替換為目標名稱
+title: 自助模板//替換為目標名稱
 description: 使用此模板可在Adobe Experience Platform目錄中為目標建立公共文檔。//替換為「概述」部分中的段落
-exl-id: 99700474-8bf6-4176-acc1-38814e17c995
 source-git-commit: fd2019feb25b540612a278cbea5bf5efafe284dc
 workflow-type: tm+mt
-source-wordcount: '1382'
+source-wordcount: '1341'
 ht-degree: 1%
 
 ---
+
 
 # 您的目標連接 {#your-destination}
 
 *在完成此模板時，替換或刪除斜體中的所有段落（從此段開始）。*
 
 *首先更新頁面頂部的元資料（標題和說明）。 請忽略此頁上UICONTROL的所有實例。 這是一個標籤，它幫助我們的機器翻譯流程將頁面正確翻譯成我們支援的多種語言。 在您提交文檔後，我們將向其添加標籤。*
-
->[!IMPORTANT]
->
->* 按模板中概述的順序填充此模板中的所有部分。
->* 根據合作夥伴反饋，此模板不經常更新。 在開始為目標創作文檔之前，請確保已下載 [模板的最新版本](/help/destinations/destination-sdk/docs-framework/assets/yourdestination-template.zip)。
-
 
 ## 總覽 {#overview}
 
@@ -33,13 +27,13 @@ ht-degree: 1%
 
 幫助您更好地瞭解您應如何以及何時使用 *目標* 目的地，以下是Adobe Experience Platform客戶可通過使用此目的地解決的示例使用案例。
 
-### 用例#1 {#use-case-1}
+### 用例#1
 
 *對於移動消息平台：*
 
 *一個房屋租賃和銷售平台希望將移動通知推送給客戶的Android和iOS設備，讓他們知道，在他們之前搜索的租房區域，有100個更新的房源。*
 
-### 用例#2 {#use-case-2}
+### 用例#2
 
 *對於社交網路平台：*
 
@@ -102,7 +96,7 @@ ht-degree: 1%
 
 要驗證到目標，請填寫必填欄位並選擇 **[!UICONTROL 連接到目標]**。
 
-![示例螢幕截圖，顯示如何驗證到目標](/help/destinations/destination-sdk/docs-framework/assets/authenticate-destination.png)
+![在此處添加指向一個或多個示例螢幕快照的連結，這些示例螢幕快照向用戶顯示如何驗證到目標](/help/destinations/destination-sdk/docs-framework/assets/authenticate-destination.png)
 
 * **[!UICONTROL 持有者令牌]**:填寫承載令牌以驗證到目標。
 
@@ -112,7 +106,7 @@ ht-degree: 1%
 
 要配置目標的詳細資訊，請填寫以下必需欄位和可選欄位。 UI中某個欄位旁邊的星號表示該欄位是必需的。
 
-![示例螢幕截圖，顯示如何填寫目標的詳細資訊](/help/destinations/destination-sdk/docs-framework/assets/configure-destination-details.png)
+![在此處添加指向一個或多個示例螢幕截圖的連結，這些示例螢幕截圖向用戶顯示如何填寫目標的詳細資訊](/help/destinations/destination-sdk/docs-framework/assets/configure-destination-details.png)
 
 * **[!UICONTROL 名稱]**:您將來識別此目標的名稱。
 * **[!UICONTROL 說明]**:將幫助您在將來確定此目標的說明。
@@ -130,7 +124,7 @@ ht-degree: 1%
 > 
 >要激活資料，您需要 **[!UICONTROL 管理目標]**。 **[!UICONTROL 激活目標]**。 **[!UICONTROL 查看配置檔案]**, **[!UICONTROL 查看段]** [訪問控制權限](/help/access-control/home.md#permissions)。 閱讀 [訪問控制概述](/help/access-control/ui/overview.md) 或聯繫您的產品管理員以獲取所需權限。
 
-閱讀 [激活配置檔案和段以流式處理段導出目標](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations.html?lang=en) 有關激活此目標受眾段的說明。
+閱讀 [激活配置檔案和段以流式處理段導出目標](../../ui/activate/activate-segment-streaming-destinations.md) 有關激活此目標受眾段的說明。
 
 ## 導出的資料/驗證資料導出 {#exported-data}
 
@@ -176,8 +170,8 @@ ht-degree: 1%
 
 ## 資料使用和治理 {#data-usage-governance}
 
-全部 [!DNL Adobe Experience Platform] 目標在處理資料時符合資料使用策略。 有關如何 [!DNL Adobe Experience Platform] 強制實施資料治理，讀取 [資料治理概述](/help/data-governance/home.md)。
+全部 [!DNL Adobe Experience Platform] 目標在處理資料時符合資料使用策略。 有關如何 [!DNL Adobe Experience Platform] 強制實施資料治理，請參見 [資料治理概述](/help/data-governance/home.md)。
 
 ## 其他資源 {#additional-resources}
 
-*您可以提供指向產品文檔或您認為對客戶成功非常重要的任何其他資源的進一步連結。*
+*您可以提供產品文檔或您認為對客戶成功非常重要的任何其他資源的進一步連結。*

@@ -3,9 +3,9 @@ keywords: 電子郵件；電子郵件；電子郵件；電子郵件目標；adob
 title: Adobe Campaign
 description: Adobe Campaign是一組解決方案，可幫助您個性化並提供所有線上和離線渠道的促銷活動。
 exl-id: 0de91738-8f56-41f5-8745-9b14b15db76a
-source-git-commit: 0006c498cd33d9deb66f1d052b4771ec7504457d
+source-git-commit: dd18350387aa6bdeb61612f0ccf9d8d2223a8a5d
 workflow-type: tm+mt
-source-wordcount: '825'
+source-wordcount: '888'
 ht-degree: 3%
 
 ---
@@ -67,6 +67,12 @@ Adobe Campaign支援以下連接類型：
 * **[!UICONTROL 資料夾路徑]**:提供儲存位置中的路徑 [!DNL Platform] 將導出資料儲存為CSV檔案。
 * **[!UICONTROL 容器]**: *對於Blob連接*。 包含資料夾路徑的Blob的容器在中。
 * **[!UICONTROL 檔案格式]**:選擇 **CSV** 將CSV檔案導出到儲存位置。
+
+### 啟用警報 {#enable-alerts}
+
+您可以啟用警報來接收有關目標資料流狀態的通知。 從清單中選擇要訂閱的警報以接收有關資料流狀態的通知。 有關警報的詳細資訊，請參閱上的指南 [使用UI訂閱目標警報](../../ui/alerts.md)。
+
+完成提供目標連接的詳細資訊後，選擇 **[!UICONTROL 下一個]**。
 
 ## 將段激活到此目標 {#activate}
 

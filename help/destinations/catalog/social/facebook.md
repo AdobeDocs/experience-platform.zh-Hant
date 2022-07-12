@@ -3,10 +3,10 @@ keywords: facebook連接；facebook連接；facebook目標；facebook;instagram;
 title: Facebook
 description: 激活您的Facebook市場活動的配置檔案，以便根據經過散列的電子郵件進行受眾目標、個性化和壓制。
 exl-id: 51e8c8f0-5e79-45b9-afbc-110bae127f76
-source-git-commit: 0006c498cd33d9deb66f1d052b4771ec7504457d
+source-git-commit: dd18350387aa6bdeb61612f0ccf9d8d2223a8a5d
 workflow-type: tm+mt
-source-wordcount: '1713'
-ht-degree: 2%
+source-wordcount: '1867'
+ht-degree: 1%
 
 ---
 
@@ -84,12 +84,11 @@ ht-degree: 2%
 在中激活電話號碼有兩種方法 [!DNL Facebook]:
 
 * **正在接收原始電話號碼**:你可以錄下原始電話號碼 [!DNL E.164] 格式 [!DNL Platform]。 它們在激活時自動散列。 如果選擇此選項，請確保始終將原始電話號碼插入 `Phone_E.164` 命名空間。
-* **正在攝取散列電話號碼**:你可以先對電話號碼進行散列，然後再接收 [!DNL Platform]。 如果選擇此選項，請確保始終將散列電話號碼輸入到 `Phone_SHA256` 命名空間。
+* **正在攝取散列電話號碼**:你可以先對電話號碼進行散列，然後才能接收 [!DNL Platform]。 如果選擇此選項，請確保始終將散列電話號碼輸入到 `Phone_SHA256` 命名空間。
 
 >[!NOTE]
 >
 >接收到的電話號碼 `Phone` 無法在中激活命名空間 [!DNL Facebook]。
-
 
 ## 電子郵件散列要求 {#email-hashing-requirements}
 
@@ -124,7 +123,7 @@ ht-degree: 2%
 > 
 >要連接到目標，您需要 **[!UICONTROL 管理目標]** [訪問控制權限](/help/access-control/home.md#permissions)。 閱讀 [訪問控制概述](/help/access-control/ui/overview.md) 或聯繫您的產品管理員以獲取所需權限。
 
-要連接到此目標，請按照 [目標配置教程](../../ui/connect-destination.md)。
+要連接到此目標，請按照 [目標配置教程](../../ui/connect-destination.md)。 在配置目標工作流中，填寫下面兩節中列出的欄位。
 
 下面的視頻還演示了配置 [!DNL Facebook] 目標和激活段。
 
@@ -134,13 +133,31 @@ ht-degree: 2%
 >
 >Experience Platform用戶介面頻繁更新，自此視頻記錄後可能已更改。 有關最新資訊，請參閱 [目標配置教程](../../ui/connect-destination.md)。
 
-### 連接參數 {#parameters}
+### 驗證到目標 {#authenticate}
 
-同時 [設定](../../ui/connect-destination.md) 此目標，必須提供以下資訊：
+1. 在目標目錄中查找Facebook目標，然後選擇 **[!UICONTROL 設定]**。
+2. 選擇 **[!UICONTROL 連接到目標]**。
+   ![驗證到Facebook](/help/destinations/assets/catalog/social/facebook/authenticate-facebook-destination.png)
+3. 輸入您的Facebook憑據並選擇 **登錄**。
+
+### 填寫目標詳細資訊 {#destination-details}
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_connect_facebook_accountid"
+>title="帳戶 ID"
+>abstract="你的Facebook廣告帳戶ID。 您可以在Facebook廣告經理帳戶中找到此ID。 輸入此ID時，請始終將其前置詞 `act_`。"
+
+要配置目標的詳細資訊，請填寫以下必需欄位和可選欄位。 UI中某個欄位旁邊的星號表示該欄位是必需的。
 
 * **[!UICONTROL 名稱]**:您將來識別此目標的名稱。
 * **[!UICONTROL 說明]**:將幫助您在將來確定此目標的說明。
-* **[!UICONTROL 帳戶ID]**:你 [!DNL Facebook Ad Account ID]。 您可以在 [!DNL Facebook Ads Manager] 帳戶。 輸入此ID時，請始終將其前置詞 `act_`。
+* **[!UICONTROL 帳戶ID]**:您 [!DNL Facebook Ad Account ID]。 您可以在 [!DNL Facebook Ads Manager] 帳戶。 輸入此ID時，請始終將其前置詞 `act_`。
+
+### 啟用警報 {#enable-alerts}
+
+您可以啟用警報來接收有關目標資料流狀態的通知。 從清單中選擇要訂閱的警報以接收有關資料流狀態的通知。 有關警報的詳細資訊，請參閱上的指南 [使用UI訂閱目標警報](../../ui/alerts.md)。
+
+完成提供目標連接的詳細資訊後，選擇 **[!UICONTROL 下一個]**。
 
 ## 將段激活到此目標 {#activate}
 

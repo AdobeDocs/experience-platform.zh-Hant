@@ -3,9 +3,9 @@ keywords: Azure事件中心目標；azure事件中心；azure事件thub
 title: Azure事件中心連接
 description: 建立到您的 [!DNL Azure Event Hubs] 儲存以從Experience Platform流資料。
 exl-id: f98a389a-bce3-4a80-9452-6c7293d01de3
-source-git-commit: b19dc5c0d67bc218de0366fdc40f752ce7c3ad71
+source-git-commit: dd18350387aa6bdeb61612f0ccf9d8d2223a8a5d
 workflow-type: tm+mt
-source-wordcount: '1926'
+source-wordcount: '2002'
 ht-degree: 0%
 
 ---
@@ -80,7 +80,7 @@ ht-degree: 0%
 * **[!UICONTROL 命名空間]**:填寫 [!DNL Azure Event Hubs] 命名空間。 瞭解 [!DNL Azure Event Hubs] 命名空間 [Microsoft文檔](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hubs-namespace)。
 * **[!UICONTROL 命名空間]**:填寫 [!DNL Azure Event Hubs] 命名空間。 瞭解 [!DNL Azure Event Hubs] 命名空間 [Microsoft文檔](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hubs-namespace)。
 
-### 目標詳細資訊 {#destination-details}
+### 填寫目標詳細資訊 {#destination-details}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_eventhubs_includesegmentnames"
@@ -92,7 +92,7 @@ ht-degree: 0%
 >title="包括段時間戳"
 >abstract="如果希望資料導出包括建立和更新段時的UNIX時間戳，以及將段映射到要激活的目標時的UNIX時間戳，則切換。 查看資料導出示例的文檔，並選中此選項。"
 
-在建立到Azure事件中心目標的身份驗證連接後，請提供目標的以下資訊：
+要配置目標的詳細資訊，請填寫以下必需欄位和可選欄位。 UI中某個欄位旁邊的星號表示該欄位是必需的。
 
 ![顯示Azure事件中心目標詳細資訊已完成欄位的UI螢幕影像](../../assets/catalog/cloud-storage/event-hubs/event-hubs-destination-details.png)
 
@@ -101,6 +101,12 @@ ht-degree: 0%
 * **[!UICONTROL 事件集線器名稱]**:為流提供名稱 [!DNL Azure Event Hubs] 目標。
 * **[!UICONTROL 包括段名稱]**:如果希望資料導出包含要導出的段的名稱，則切換。 有關選擇此選項的資料導出示例，請參閱 [導出的資料](#exported-data) 的下一頁。
 * **[!UICONTROL 包括段時間戳]**:如果希望資料導出包括建立和更新段時的UNIX時間戳，以及將段映射到要激活的目標時的UNIX時間戳，則切換。 有關選擇此選項的資料導出示例，請參閱 [導出的資料](#exported-data) 的下一頁。
+
+### 啟用警報 {#enable-alerts}
+
+您可以啟用警報來接收有關目標資料流狀態的通知。 從清單中選擇要訂閱的警報以接收有關資料流狀態的通知。 有關警報的詳細資訊，請參閱上的指南 [使用UI訂閱目標警報](../../ui/alerts.md)。
+
+完成提供目標連接的詳細資訊後，選擇 **[!UICONTROL 下一個]**。
 
 ## 將段激活到此目標 {#activate}
 

@@ -3,9 +3,9 @@ keywords: 電子郵件；電子郵件；電子郵件；電子郵件目標；send
 title: SendGrid連接
 description: SendGrid目標允許您導出第一方資料，並在SendGrid中根據您的業務需要激活它。
 exl-id: 6f22746f-2043-4a20-b8a6-097d721f2fe7
-source-git-commit: 0006c498cd33d9deb66f1d052b4771ec7504457d
+source-git-commit: dd18350387aa6bdeb61612f0ccf9d8d2223a8a5d
 workflow-type: tm+mt
-source-wordcount: '1475'
+source-wordcount: '1548'
 ht-degree: 2%
 
 ---
@@ -78,8 +78,9 @@ SendGrid支援激活下表中描述的身份。 瞭解有關 [身份](/help/iden
 > 
 >要連接到目標，您需要 **[!UICONTROL 管理目標]** [訪問控制權限](/help/access-control/home.md#permissions)。 閱讀 [訪問控制概述](/help/access-control/ui/overview.md) 或聯繫您的產品管理員以獲取所需權限。
 
+要連接到此目標，請按照 [目標配置教程](../../ui/connect-destination.md)。 在配置目標工作流中，填寫下面兩節中列出的欄位。
 
-要連接到此目標，請按照 [目標配置教程](../../ui/connect-destination.md)。 下面詳細說明了特定於此目標的步驟。
+### 驗證到目標 {#authenticate}
 
 1. 在 [!DNL Adobe Experience Platform] 控制台，導航至 **目標**。
 
@@ -96,7 +97,7 @@ SendGrid支援激活下表中描述的身份。 瞭解有關 [身份](/help/iden
 
 ![](../../assets/catalog/email-marketing/sendgrid/05.jpg)
 
-### 連接參數 {#parameters}
+### 填寫目標詳細資訊 {#destination-details}
 
 同時 [設定](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html?lang=en) 此目標，必須提供以下資訊：
 
@@ -104,6 +105,12 @@ SendGrid支援激活下表中描述的身份。 瞭解有關 [身份](/help/iden
 * **[!UICONTROL 說明]**:可選的說明，將幫助您在將來確定此目標。
 
 ![](../../assets/catalog/email-marketing/sendgrid/06.jpg)
+
+### 啟用警報 {#enable-alerts}
+
+您可以啟用警報來接收有關目標資料流狀態的通知。 從清單中選擇要訂閱的警報以接收有關資料流狀態的通知。 有關警報的詳細資訊，請參閱上的指南 [使用UI訂閱目標警報](../../ui/alerts.md)。
+
+完成提供目標連接的詳細資訊後，選擇 **[!UICONTROL 下一個]**。
 
 ## 將段激活到此目標 {#activate}
 

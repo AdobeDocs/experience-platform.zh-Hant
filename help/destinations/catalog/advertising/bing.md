@@ -3,9 +3,9 @@ keywords: '廣告；炳； '
 title: Microsoft兵
 description: 使用Microsoft必應連接目標，您可以在Microsoft顯示廣告中執行重定目標和針對受眾的數字營銷活動。
 exl-id: e1c0273b-7e3c-4d77-ae14-d1e528ca0294
-source-git-commit: cffd689363e71f27a554df31beaf763f9bad37f4
+source-git-commit: 812688043a7da943832b5798de0f433928634998
 workflow-type: tm+mt
-source-wordcount: '570'
+source-wordcount: '633'
 ht-degree: 2%
 
 ---
@@ -70,6 +70,12 @@ ht-degree: 2%
 * **[!UICONTROL 名稱]**:您將來識別此目標的名稱。
 * **[!UICONTROL 說明]**:將幫助您在將來確定此目標的說明。
 * **[!UICONTROL 帳戶ID]**:您 [!DNL Bing Ads CID]。
+
+### 啟用警報 {#enable-alerts}
+
+您可以啟用警報來接收有關目標資料流狀態的通知。 從清單中選擇要訂閱的警報以接收有關資料流狀態的通知。 有關警報的詳細資訊，請參閱上的指南 [使用UI訂閱目標警報](../../ui/alerts.md)。
+
+完成提供目標連接的詳細資訊後，選擇 **[!UICONTROL 下一個]**。
 
 ## 將段激活到此目標 {#activate}
 

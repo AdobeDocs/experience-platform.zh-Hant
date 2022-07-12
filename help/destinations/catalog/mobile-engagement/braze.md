@@ -3,9 +3,9 @@ keywords: 移動；曬；消息；
 title: Braze連接
 description: Braze是一個全面的客戶參與平台，為客戶和他們喜愛的品牌之間提供相關而令人難忘的體驗。
 exl-id: 508e79ee-7364-4553-b153-c2c00cc85a73
-source-git-commit: 0006c498cd33d9deb66f1d052b4771ec7504457d
+source-git-commit: fd2019feb25b540612a278cbea5bf5efafe284dc
 workflow-type: tm+mt
-source-wordcount: '885'
+source-wordcount: '1001'
 ht-degree: 1%
 
 ---
@@ -61,16 +61,27 @@ ht-degree: 1%
 > 
 >要連接到目標，您需要 **[!UICONTROL 管理目標]** [訪問控制權限](/help/access-control/home.md#permissions)。 閱讀 [訪問控制概述](/help/access-control/ui/overview.md) 或聯繫您的產品管理員以獲取所需權限。
 
-要連接到此目標，請按照 [目標配置教程](../../ui/connect-destination.md)。
+要連接到此目標，請按照 [目標配置教程](../../ui/connect-destination.md)。 在配置目標工作流中，填寫下面兩節中列出的欄位。
 
-### 連接參數 {#parameters}
+### 驗證到目標 {#authenticate}
 
-同時 [設定](../../ui/connect-destination.md) 此目標，必須提供以下資訊：
+要驗證到目標，請填寫必填欄位並選擇 **[!UICONTROL 連接到目標]**。
 
 * **[!UICONTROL Braze帳戶令牌]**:這是你的 [!DNL Braze] [!DNL API] 按鈕 您可以找到有關如何獲取 [!DNL API] 此處的鍵： [REST API密鑰概述](https://www.braze.com/docs/api/api_key/)。
+
+### 填寫目標詳細資訊 {#destination-details}
+
+要配置目標的詳細資訊，請填寫以下必需欄位和可選欄位。 UI中某個欄位旁邊的星號表示該欄位是必需的。
+
 * **[!UICONTROL 名稱]**:輸入將來用於識別此目標的名稱。
 * **[!UICONTROL 說明]**:輸入將幫助您在將來確定此目標的說明。
 * **[!UICONTROL 終結點實例]**:請 [!DNL Braze] 代表您應使用的終結點實例。
+
+### 啟用警報 {#enable-alerts}
+
+您可以啟用警報來接收有關目標資料流狀態的通知。 從清單中選擇要訂閱的警報以接收有關資料流狀態的通知。 有關警報的詳細資訊，請參閱上的指南 [使用UI訂閱目標警報](../../ui/alerts.md)。
+
+完成提供目標連接的詳細資訊後，選擇 **[!UICONTROL 下一個]**。
 
 ## 將段激活到此目標 {#activate}
 

@@ -3,9 +3,9 @@ keywords: 飛艇屬性；飛艇目的地
 title: 飛艇屬性連接
 description: 將Adobe受眾資料無縫地傳遞到飛艇中，作為飛艇內目標的受眾屬性。
 exl-id: bfc1b52f-2d68-40d6-9052-c2ee1e877961
-source-git-commit: 0006c498cd33d9deb66f1d052b4771ec7504457d
+source-git-commit: fd2019feb25b540612a278cbea5bf5efafe284dc
 workflow-type: tm+mt
-source-wordcount: '863'
+source-wordcount: '975'
 ht-degree: 1%
 
 ---
@@ -80,16 +80,27 @@ Adobe Experience Platform配置檔案屬性類似 [!DNL Airship] 屬性，並且
 > 
 >要連接到目標，您需要 **[!UICONTROL 管理目標]** [訪問控制權限](/help/access-control/home.md#permissions)。 閱讀 [訪問控制概述](/help/access-control/ui/overview.md) 或聯繫您的產品管理員以獲取所需權限。
 
-請參閱 [將受眾資料激活到流段導出目標](../../ui/activate-segment-streaming-destinations.md) 有關激活此目標受眾段的說明。
+要連接到此目標，請按照 [目標配置教程](../../ui/connect-destination.md)。 在配置目標工作流中，填寫下面兩節中列出的欄位。
 
-### 連接參數 {#parameters}
+### 驗證到目標 {#authenticate}
 
-同時 [設定](../../ui/connect-destination.md) 此目標，必須提供以下資訊：
+要驗證到目標，請填寫必填欄位並選擇 **[!UICONTROL 連接到目標]**。
 
 * **[!UICONTROL 持有者令牌]**:從 [!DNL Airship] 控制項欄。
+
+### 填寫目標詳細資訊 {#destination-details}
+
+要配置目標的詳細資訊，請填寫以下必需欄位和可選欄位。 UI中某個欄位旁邊的星號表示該欄位是必需的。
+
 * **[!UICONTROL 名稱]**:輸入一個名稱，以幫助您標識此目標。
 * **[!UICONTROL 說明]**:輸入此目標的說明。
 * **[!UICONTROL 域]**:選擇美國或歐盟資料中心，具體取決於 [!DNL Airship] 資料中心適用於此目標。
+
+### 啟用警報 {#enable-alerts}
+
+您可以啟用警報來接收有關目標資料流狀態的通知。 從清單中選擇要訂閱的警報以接收有關資料流狀態的通知。 有關警報的詳細資訊，請參閱上的指南 [使用UI訂閱目標警報](../../ui/alerts.md)。
+
+完成提供目標連接的詳細資訊後，選擇 **[!UICONTROL 下一個]**。
 
 ## 將段激活到此目標 {#activate}
 
