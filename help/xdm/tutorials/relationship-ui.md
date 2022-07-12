@@ -6,9 +6,9 @@ description: 本文檔提供了一個教程，用於使用Experience Platform用
 topic-legacy: tutorial
 type: Tutorial
 exl-id: feed776b-bc8d-459b-9700-e5c9520788c0
-source-git-commit: 90f055f2fbeb7571d2f7c1daf4ea14490069f2eb
+source-git-commit: 0ce574700ce4134cddbb990b9b2765c25112b44d
 workflow-type: tm+mt
-source-wordcount: '1042'
+source-wordcount: '1145'
 ht-degree: 0%
 
 ---
@@ -21,9 +21,21 @@ ht-degree: 0%
 >abstract="屬於不同類的架構可以通過關係欄位上下文連結，從而可以構建更複雜的分割規則。"
 >text="See the documentation for more information on schema relationships."
 
+>[!CONTEXTUALHELP]
+>id="platform_xdm_1to1_reference_schema"
+>title="引用架構"
+>abstract="選擇要建立關係的方案。 此架構可以是與當前架構不同的類。"
+>text="See the documentation for more information on schema relationships."
+
+>[!CONTEXTUALHELP]
+>id="platform_xdm_1to1_identity_namespace"
+>title="引用標識命名空間"
+>abstract="引用架構的主標識欄位的命名空間（類型）。 引用架構必須具有已建立的主標識欄位才能參與關係。"
+>text="See the documentation for more information on schema relationships."
+
 >[!NOTE]
 >
->如果您使用的是Real-time Customer Data PlatformB2B版，請參閱上的指南 [建立B2B關係](./relationship-b2b.md) 的雙曲餘切值。
+>有關如何在Real-time Customer Data PlatformB2B版中建立多對一關係的步驟，請參見上的指南 [建立B2B關係](./relationship-b2b.md)。
 
 瞭解客戶之間的關係以及客戶與品牌之間通過各種渠道進行的互動是Adobe Experience Platform的重要部分。 在結構中定義這些關係 [!DNL Experience Data Model] (XDM)架構使您能夠對客戶資料獲得複雜的見解。
 
@@ -110,6 +122,10 @@ ht-degree: 0%
 ## 為源方案定義關係欄位 {#relationship-field}
 
 在源架構定義了專用引用欄位後，可以將其指定為關係欄位。
+
+>[!NOTE]
+>
+>下面的步驟介紹如何使用畫布中的右滑軌控制項定義關係欄位。 如果您有訪問Real-Time CDPB2B版的權限，您還可以使用 [同一對話](./relationship-b2b.md#relationship-field) 建立多對一關係時。
 
 選擇 `favoriteHotel` 欄位，然後向下滾動 **[!UICONTROL 欄位屬性]** 直到 **[!UICONTROL 關係]** 的子菜單。 選中該複選框可顯示配置關係欄位所需的參數。
 
