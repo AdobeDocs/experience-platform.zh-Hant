@@ -1,9 +1,9 @@
 ---
 title: （測試版）Snap Inc連接
 description: 瞭解如何連接到Snapchat廣告平台，並將您的觀眾群從Experience Platform中導出。
-source-git-commit: 14f7efc2d893bf081c4e167b46a3e85baeff4ec9
+source-git-commit: 734d66cc881ab1b691c13ef446331d0c51851cf9
 workflow-type: tm+mt
-source-wordcount: '949'
+source-wordcount: '1012'
 ht-degree: 2%
 
 ---
@@ -103,6 +103,12 @@ ht-degree: 2%
 >[!IMPORTANT]
 > 
 >輸入不正確或無效的Snapchat廣告帳戶ID將導致段激活失敗。 請仔細檢查您是否輸入了正確的廣告帳戶ID。
+
+### 啟用警報 {#enable-alerts}
+
+您可以啟用警報來接收有關目標資料流狀態的通知。 從清單中選擇要訂閱的警報以接收有關資料流狀態的通知。 有關警報的詳細資訊，請參閱上的指南 [使用UI訂閱目標警報](../../ui/alerts.md)。
+
+完成提供目標連接的詳細資訊後，選擇 **[!UICONTROL 下一個]**。
 
 ## 將段激活到此目標 {#activate}
 

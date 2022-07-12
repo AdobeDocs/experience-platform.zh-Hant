@@ -1,9 +1,9 @@
 ---
 description: 本頁說明如何使用Destination SDK中的/sample-profiles API終結點來基於源架構生成示例配置檔案。 您可以使用這些示例配置檔案來test基於檔案的目標配置。
 title: 基於源架構生成示例配置檔案
-source-git-commit: fa092e4d1828d9ecd5bc98e3f225fa377f38065f
+source-git-commit: 734d66cc881ab1b691c13ef446331d0c51851cf9
 workflow-type: tm+mt
-source-wordcount: '676'
+source-wordcount: '674'
 ht-degree: 2%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 2%
 
 測試基於檔案的目標的第一步是使用 `/sample-profiles` 終結點，以基於現有源架構生成示例配置檔案。
 
-示例配置檔案旨在幫助您瞭解配置檔案的JSON結構。 此外，它們還為您提供了一個骨幹，您可以使用自己的配置檔案資料進行自定義，以便進行進一步的目標測試。
+示例配置檔案可幫助您瞭解配置檔案的JSON結構。 此外，它們還為您提供了一個預設值，您可以使用自己的配置檔案資料進行自定義，以便進行進一步的目標測試。
 
 ## 快速入門 {#getting-started}
 
@@ -51,7 +51,7 @@ GET /authoring/sample-profiles?destinationInstanceId={DESTINATION_INSTANCE_ID}&c
 以下請求基於在目標實例中定義的源模式生成示例配置檔案，其中 `destinationInstanceId`。
 
 ```shell
-curl -X GET 'https://platform.adobe.io/data/core/activation/authoring/sample-profiles?destinationInstanceId={DESTINATION_INSTANCE_ID}&count=2' \
+curl -X GET 'https://platform.adobe.io/data/core/activation/authoring/sample-profiles?destinationInstanceId={DESTINATION_INSTANCE_ID}' \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
  -H 'Content-Type: application/json' \
  -H 'x-gw-ims-org-id: {IMS_ORG}' \

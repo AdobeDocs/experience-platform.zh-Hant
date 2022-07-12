@@ -1,9 +1,9 @@
 ---
 description: 本頁介紹如何使用/authoring/testing/template/render終結點來直觀顯示在目標配置中定義的模板化客戶資料欄位的外觀。
 title: 驗證模板化客戶欄位
-source-git-commit: fa092e4d1828d9ecd5bc98e3f225fa377f38065f
+source-git-commit: 734d66cc881ab1b691c13ef446331d0c51851cf9
 workflow-type: tm+mt
-source-wordcount: '388'
+source-wordcount: '386'
 ht-degree: 2%
 
 ---
@@ -83,7 +83,7 @@ curl -X POST 'https://platform.adobe.io/data/core/activation/authoring/testing/t
 
 成功的響應返回 `HTTP 200 OK` 狀態，並且主體包含模板化欄位的隨機生成值。
 
-此響應旨在幫助您驗證客戶資料欄位的正確結構，如儲存段名稱或資料夾路徑。
+此響應可以幫助您驗證客戶資料欄位的正確結構，如儲存段名稱或資料夾路徑。
 
 
 ```json

@@ -1,9 +1,9 @@
 ---
 description: 基於檔案的目標測試API是端點的集合，您可以使用它來驗證通過Destination SDK構建的基於檔案的目標的配置。
 title: 基於檔案的目標測試API
-source-git-commit: d2d362f4b61e04fc2fa4d9cd9db70ed94a850642
+source-git-commit: 734d66cc881ab1b691c13ef446331d0c51851cf9
 workflow-type: tm+mt
-source-wordcount: '376'
+source-wordcount: '386'
 ht-degree: 0%
 
 ---
@@ -23,34 +23,34 @@ ht-degree: 0%
 
 有關每個端點可以執行的操作的簡要概述，請參閱以下各節。
 
-## 示例生成終結點 {#sample-generation-endpoint}
+## 生成示例配置檔案 {#generate-sample-profiles}
 
-此終結點幫助您基於現有源架構生成示例配置檔案。
+使用 `/sample-profiles` API終結點，用於基於現有源架構生成示例配置檔案。
 
-示例配置檔案旨在幫助您瞭解配置檔案的JSON結構。 此外，它們還為您提供了一個骨幹，您可以使用自己的配置檔案資料進行自定義，以便進行進一步的目標測試。
+示例配置檔案可幫助您瞭解配置檔案的JSON結構。 此外，它們還為您提供了一個預設值，您可以使用自己的配置檔案資料進行自定義，以便進行進一步的目標測試。
 
 查看 [專用文檔](file-based-sample-profile-generation-api.md) 瞭解如何生成示例配置檔案。
 
-## 目標配置測試終結點 {#destination-configuration-testing-endpoint}
+## Test目標配置 {#test-destination-configuration}
 
-此終結點可幫助您在正確配置基於檔案的目標時進行test，並驗證到已配置目標的資料流的完整性。
+使用 `/testing/destinationInstance` API終結點，以test基於檔案的目標是否配置正確，並驗證到配置目標的資料流的完整性。
 
 可以在添加或不添加的情況下向測試端點發出請求 [示例配置檔案](file-based-sample-profile-generation-api.md) 電話。 如果您未在請求上發送任何配置檔案，則API將自動生成示例配置檔案並將其添加到請求中。
 
 查看 [專用文檔](file-based-destination-testing-api.md) 瞭解如何使用示例配置檔案test目標配置。
 
-## 激活結果終結點 {#activation-results}
+## 查看詳細的激活結果 {#view-detailed-activation-results}
 
-此終結點可幫助您查看基於檔案的目標測試結果的完整詳細資訊。
+使用 `/testing/destinationInstance` 用於查看基於檔案的目標測試結果的完整詳細資訊的API終結點。
 
 此API終結點返回的結果與使用 [流服務API](../api/update-destination-dataflows.md) 監視資料流。
 
 查看 [專用文檔](file-based-destination-results-api.md) 瞭解如何查看詳細的激活結果。
 
-## 客戶欄位呈現終結點 {#customer-fields-rendering-endpoint}
+## 呈現客戶資料欄位 {#render-customer-data-fields}
 
-此終結點可幫助您直觀地顯示模板化方式 [客戶資料欄位](file-based-destination-configuration.md#customer-data-fields) 在目標配置中定義。
+使用 `/authoring/testing/template/render` API終結點，用於直觀顯示模板化方式 [客戶資料欄位](file-based-destination-configuration.md#customer-data-fields) 在目標配置中定義。
 
-終結點為客戶資料欄位生成隨機值，並在響應中返回這些值。 這有助於驗證客戶資料欄位的語義結構，如儲存段名稱或資料夾路徑。
+API終結點為客戶資料欄位生成隨機值，並在響應中返回這些值。 這有助於驗證客戶資料欄位的語義結構，如儲存段名稱或資料夾路徑。
 
-查看 [專用文檔](file-based-render-template-api.md) 瞭解如何查看詳細的激活結果。
+查看 [專用文檔](file-based-render-template-api.md) 瞭解如何為客戶資料欄位生成和可視化值。

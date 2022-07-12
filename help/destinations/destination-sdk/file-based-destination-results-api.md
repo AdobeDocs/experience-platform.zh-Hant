@@ -1,7 +1,7 @@
 ---
 description: 本頁說明如何使用/testing/destinationInstance API終結點查看測試結果的完整詳細資訊。 此API終結點返回的結果與使用流服務API監視資料流時獲得的結果相同。
 title: 查看詳細的激活結果
-source-git-commit: 5b62203113dd55dad8adeb96cbcc2d46b3420c3a
+source-git-commit: 734d66cc881ab1b691c13ef446331d0c51851cf9
 workflow-type: tm+mt
 source-wordcount: '545'
 ht-degree: 2%
@@ -42,7 +42,7 @@ ht-degree: 2%
 
 一旦你 [已驗證目標配置](file-based-destination-testing-api.md)，您可以通過向GET請求查看詳細的激活結果 `authoring/testing/destinationInstance/` 終結點，並提供要測試的目標的目標實例ID，以及已激活段的流運行ID。
 
-您可以在 `results` 返回的屬性 [目標測試呼叫的響應](file-based-destination-testing-api.md)。
+您可以在中找到需要使用的完整API URL `results` 返回的屬性 [目標測試呼叫的響應](file-based-destination-testing-api.md)。
 
 **API格式**
 
