@@ -3,11 +3,11 @@ keywords: Experience Platform；首頁；熱門主題；命名空間；命名空
 solution: Experience Platform
 title: Identity Namespace概述
 topic-legacy: overview
-description: 身分識別命名空間是 Identity Service 的元件，用途是作為身分識別相關內容的指標。例如，它們將值"name@email.com"區分為電子郵件地址，或將值"443522"區分為數字CRM ID。
+description: 身分識別命名空間是 Identity Service 的元件，用途是作為身分識別相關內容的指標。 例如，它們將值"name@email.com"區分為電子郵件地址，或將值"443522"區分為數字CRM ID。
 exl-id: 86cfc7ae-943d-4474-90c8-e368afa48b7c
-source-git-commit: 3a9e97b472482d6a7f6df5f2a59f2f75635be181
+source-git-commit: 3e073d2c45f88c56473ccc2e3d18a2bbedd4f254
 workflow-type: tm+mt
-source-wordcount: '1598'
+source-wordcount: '1627'
 ht-degree: 2%
 
 ---
@@ -32,7 +32,13 @@ ht-degree: 2%
 
 ![](images/identity-service-stitching.png)
 
-### 標識類型
+### 標識類型 {#identity-types}
+
+>[!CONTEXTUALHELP]
+>id="platform_identity_create_namespace"
+>title="指定標識類型"
+>abstract="標識類型控制資料是否儲存到標識圖形。 將不儲存非人員標識符，並且所有其他標識類型都將儲存。"
+>text="Learn more in documentation"
 
 資料可以由幾種不同的標識類型來標識。 標識類型是在建立標識命名空間時指定的，並控制資料是否永續到標識圖形以及如何處理該資料的任何特殊說明。 除外的所有標識類型 **非人員標識符** 按照將命名空間及其相應ID值拼接到標識圖簇的相同行為進行操作。 使用時資料不會拼接在一起 **非人員標識符**。
 
