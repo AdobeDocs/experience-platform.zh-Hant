@@ -3,10 +3,10 @@ keywords: google廣告管理器；google廣告；按兩下廣告；按兩下廣�
 title: Google廣告經理連接
 description: Google廣告管理器以前叫DoubleClick for Publishers或DoubleClick AdX，是Google的一個廣告服務平台，它使出版商能夠通過視頻和移動應用管理其網站上廣告的顯示。
 exl-id: e93f1bd5-9d29-43a1-a9a6-8933f9d85150
-source-git-commit: dd18350387aa6bdeb61612f0ccf9d8d2223a8a5d
+source-git-commit: 0c5d3ae2f43b0eeb6c86f535e37a906b7c414600
 workflow-type: tm+mt
-source-wordcount: '842'
-ht-degree: 3%
+source-wordcount: '873'
+ht-degree: 2%
 
 ---
 
@@ -64,8 +64,8 @@ ht-degree: 3%
 
 * **帳戶ID**:Adobe的Google賬戶ID。 帳戶ID:87933855。
 * **客戶ID**:Adobe的客戶帳戶ID與Google。 客戶ID:89690775。
-* **網路ID**:這是你的帳戶 [!DNL Google Ad Manager]
-* **受眾連結ID**:這是你的帳戶 [!DNL Google Ad Manager]
+* **網路代碼**:這是你的 [!DNL Google Ad Manager] 網路標識符，在 **[!UICONTROL 「管理」>「全局設定」]** 的子菜單。
+* **受眾連結ID**:這是與您的 [!DNL Google Ad Manager] 網路 [!DNL Network code]) **[!UICONTROL 「管理」>「全局設定」]** 在Google介面。
 * 您的帳戶類型。 由Google或AdX買家提供的DFP。
 
 ## 連接到目標 {#connect}

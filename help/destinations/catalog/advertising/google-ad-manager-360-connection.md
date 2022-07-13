@@ -1,10 +1,11 @@
 ---
 title: (Beta) [!DNL Google Ad Manager 360] 連接
 description: Google廣告管理器360是Google的一個廣告服務平台，它使出版商能夠通過視頻和移動應用管理其網站上廣告的顯示。
-source-git-commit: 60ae86ed6e741bd7739086105bfe70952841d454
+exl-id: 3251145a-3e4d-40aa-b120-d79c8c9c7cae
+source-git-commit: 4f57574bc17f43406df800358c7320372eb197d0
 workflow-type: tm+mt
-source-wordcount: '649'
-ht-degree: 2%
+source-wordcount: '888'
+ht-degree: 1%
 
 ---
 
@@ -44,7 +45,7 @@ ht-degree: 2%
 
 | 項目 | 類型 | 附註 |
 ---------|----------|---------|
-| 導出類型 | **[!UICONTROL 基於配置檔案]** | 您正在導出段的所有成員以及所需的架構欄位(例如：電子郵件地址、電話號碼、姓氏)，在「選擇配置檔案屬性」螢幕中選擇 [目標激活工作流](/help/destinations/ui/activate-batch-profile-destinations.md#select-attributes)。 |
+| 導出類型 | **[!UICONTROL 基於配置檔案]** | 您正在導出段的所有成員以及適用的架構欄位（例如PPID），如在的「選擇配置檔案屬性」螢幕中選擇的 [目標激活工作流](/help/destinations/ui/activate-batch-profile-destinations.md#select-attributes)。 |
 | 導出頻率 | **[!UICONTROL 批]** | 批處理目標將檔案以3、6、8、12或24小時的增量導出到下游平台。 閱讀有關 [基於批檔案的目標](/help/destinations/destination-types.md#file-based)。 |
 
 {style=&quot;table-layout:auto&quot;&quot;
@@ -57,12 +58,14 @@ ht-degree: 2%
 >
 >在設定第一個允許清單之前，該允許清單是必需的 [!DNL Google Ad Manager] 目標。 請確保以下描述的允許清單過程已由 [!DNL Google] 建立目標之前。
 
-在建立 [!DNL Google Ad Manager 360] 目標在平台中，您必須聯繫 [!DNL Google] 用於將Adobe置於允許的資料提供程式清單中，以及將帳戶添加到允許清單中。 聯繫人 [!DNL Google] 並提供以下資訊：
+>[!IMPORTANT]
+>
+>Google簡化了將外部受眾管理平台連接到GoogleAd Manager 360的過程。 您現在可以通過該過程以自助方式連結到Google廣告管理器360。 閱讀 [資料管理平台的細分](https://support.google.com/admanager/answer/3289669?hl=en) 在Google檔案里。 您應將下面列出的ID列在手上。
 
 * **帳戶ID**:Adobe的Google賬戶ID。 帳戶ID:87933855。
 * **客戶ID**:Adobe的客戶帳戶ID與Google。 客戶ID:89690775。
-* **網路ID**:這是你的帳戶 [!DNL Google Ad Manager]
-* **受眾連結ID**:這是你的帳戶 [!DNL Google Ad Manager]
+* **網路代碼**:這是你的 [!DNL Google Ad Manager] 網路標識符，在 **[!UICONTROL 「管理」>「全局設定」]** 的子菜單。
+* **受眾連結ID**:這是與您的 [!DNL Google Ad Manager] 網路 [!DNL Network code]) **[!UICONTROL 「管理」>「全局設定」]** 在Google介面。
 * 您的帳戶類型。 由Google或AdX買家提供的DFP。
 
 ## 連接到目標 {#connect}
@@ -71,16 +74,31 @@ ht-degree: 2%
 > 
 >要連接到目標，您需要 **[!UICONTROL 管理目標]** [訪問控制權限](/help/access-control/home.md#permissions)。 閱讀 [訪問控制概述](/help/access-control/ui/overview.md) 或聯繫您的產品管理員以獲取所需權限。
 
-要連接到此目標，請按照 [目標配置教程](../../ui/connect-destination.md)。
+要連接到此目標，請按照 [目標配置教程](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html)。 在目標配置工作流中，填寫下面兩節中列出的欄位。
 
-### 連接參數 {#parameters}
+### 驗證到目標 {#authenticate}
 
-同時 [設定](../../ui/connect-destination.md) 此目標，必須提供以下資訊：
+要驗證到目標，請填寫必填欄位並選擇 **[!UICONTROL 連接到目標]**。
+
+* **[!UICONTROL 訪問密鑰ID]**:61個字元的字母數字字串，用於驗證 [!DNL Google Cloud Storage] 帳戶到平台。
+* **[!UICONTROL 秘密訪問密鑰]**:一個40個字元、基64編碼的字串，用於驗證 [!DNL Google Cloud Storage] 帳戶到平台。
+
+有關這些值的詳細資訊，請參見 [Google雲儲存HMAC密鑰](https://cloud.google.com/storage/docs/authentication/hmackeys#overview) 的子菜單。 有關如何生成您自己的訪問密鑰ID和密鑰訪問密鑰的步驟，請參閱 [[!DNL Google Cloud Storage] 源概述](/help/sources/connectors/cloud-storage/google-cloud-storage.md)。
+
+### 填寫目標詳細資訊 {#destination-details}
+
+要配置目標的詳細資訊，請填寫以下必需欄位和可選欄位。 UI中某個欄位旁邊的星號表示該欄位是必需的。
 
 * **[!UICONTROL 名稱]**:填寫此目標的首選名稱。
 * **[!UICONTROL 說明]**:可選。 例如，您可以提及您為此目標使用的市場活動。
 * **[!UICONTROL 儲存段名稱]**:輸入 [!DNL Google Cloud Storage] 該目標使用的儲存桶。
 * **[!UICONTROL 資料夾路徑]**:輸入將承載導出檔案的目標資料夾的路徑。
+
+### 啟用警報 {#enable-alerts}
+
+您可以啟用警報來接收有關目標資料流狀態的通知。 從清單中選擇要訂閱的警報以接收有關資料流狀態的通知。 有關警報的詳細資訊，請參閱上的指南 [使用UI訂閱目標警報](../../ui/alerts.md)。
+
+完成提供目標連接的詳細資訊後，選擇 **[!UICONTROL 下一個]**。
 
 ## 將段激活到此目標 {#activate}
 
