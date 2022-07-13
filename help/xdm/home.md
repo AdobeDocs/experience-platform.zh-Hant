@@ -5,9 +5,9 @@ title: XDM系統概述
 topic-legacy: overview
 description: 標準化和互操作性是Adobe Experience Platform背後的關鍵概念。 體驗資料模型(XDM)由Adobe驅動，旨在規範客戶體驗資料並定義客戶體驗管理模式。
 exl-id: 294d5f02-850f-47ea-9333-8b94a0bb291e
-source-git-commit: 90f055f2fbeb7571d2f7c1daf4ea14490069f2eb
+source-git-commit: a95e5cf02e993d6c761abd74c98c0967a89eb678
 workflow-type: tm+mt
-source-wordcount: '2076'
+source-wordcount: '2087'
 ht-degree: 2%
 
 ---
@@ -54,8 +54,7 @@ Experience Platform提供用戶介面和REST風格的API，您可以從中查看
 >[!CONTEXTUALHELP]
 >id="platform_schemas_behavior"
 >title="資料行為"
->abstract="用於Experience Platform的資料分為三種行為類型：記錄、時間序列和臨時。 記錄模式提供有關主題屬性的資訊，而時間序列模式在執行操作時捕獲系統的快照。 即席模式捕獲只供單個資料集使用的命名空間欄位。"
->text="See the documentation for more information on data behaviors in Platform."
+>abstract="用於Experience Platform的資料分為三種行為類型：記錄、時間序列和臨時。 記錄模式提供有關主題屬性的資訊，而時間序列模式在執行操作時捕獲系統的快照。 即席模式捕獲只供單個資料集使用的命名空間欄位。 有關平台中資料行為的詳細資訊，請參閱文檔。"
 
 用於Experience Platform的資料分為三種行為類型：
 

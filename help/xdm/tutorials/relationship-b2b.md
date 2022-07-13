@@ -2,9 +2,9 @@
 title: 定義Real-time Customer Data PlatformB2B版中兩個架構之間的關係
 description: 瞭解如何在Real-time Customer Data PlatformB2B版中定義兩個架構之間的多對一關係。
 exl-id: 14032754-c7f5-46b6-90e6-c6e99af1efba
-source-git-commit: b9ec275df738e006d3fec2cdd64b0ed6577dbff8
+source-git-commit: a95e5cf02e993d6c761abd74c98c0967a89eb678
 workflow-type: tm+mt
-source-wordcount: '1351'
+source-wordcount: '1401'
 ht-degree: 0%
 
 ---
@@ -14,12 +14,7 @@ ht-degree: 0%
 >[!CONTEXTUALHELP]
 >id="platform_xdm_b2b_reference_schema"
 >title="引用架構"
->abstract="選擇要與建立關係的架構。 根據架構的類，它還可能與B2B上下文中的其他實體存在現有關係。"
->text="See the documentation to learn how B2B schema classes relate to each other."
-
->[!NOTE]
->
->如果您沒有使用Real-time Customer Data PlatformB2B版或想建立一對一關係，請參閱上的指南 [建立一對一關係](./relationship-ui.md) 的雙曲餘切值。
+>abstract="選擇要與建立關係的架構。 根據架構的類，它還可能與B2B上下文中的其他實體存在現有關係。 請參見文檔以瞭解B2B架構類如何彼此關聯。"
 
 Real-time Customer Data PlatformB2B版提供了幾個體驗資料模型(XDM)類，這些類捕獲基本B2B資料實體，包括 [帳戶](../classes/b2b/business-account.md)。 [機會](../classes/b2b/business-opportunity.md)。 [活動](../classes/b2b/business-campaign.md)。 通過基於這些類構建架構並啟用它們以用於 [即時客戶概要資訊](../../profile/home.md)，可以將來自不同源的資料合併到稱為聯合架構的統一表示中。
 
@@ -32,6 +27,8 @@ Real-time Customer Data PlatformB2B版提供了幾個體驗資料模型(XDM)類�
 本教程介紹在即時CDP B2B版中定義兩個架構之間多對一關係的步驟。
 
 >[!NOTE]
+>
+>如果您沒有使用Real-time Customer Data PlatformB2B版或想建立一對一關係，請參閱上的指南 [建立一對一關係](./relationship-ui.md) 的雙曲餘切值。
 >
 >本教程重點介紹如何在平台UI中手動建立B2B架構之間的關係。 如果從B2B源連接引入資料，則可以使用自動生成實用程式來建立所需的架構、標識和關係。 有關B2B命名空間和架構的詳細資訊，請參閱源文檔 [使用自動生成實用程式](../../sources/connectors/adobe-applications/marketo/marketo-namespaces.md)。
 
@@ -54,8 +51,7 @@ Real-time Customer Data PlatformB2B版提供了幾個體驗資料模型(XDM)類�
 >[!CONTEXTUALHELP]
 >id="platform_xdm_b2b_identity_namespace"
 >title="引用標識命名空間"
->abstract="引用架構的主標識欄位的命名空間（類型）。 引用架構必須具有已建立的主標識欄位才能參與關係。"
->text="See the documentation to learn more about identities in B2B relationships."
+>abstract="引用架構的主標識欄位的命名空間（類型）。 引用架構必須具有已建立的主標識欄位才能參與關係。 有關B2B關係中的標識的詳細資訊，請參閱文檔。"
 
 要建立關係，目標架構必須具有已定義的主標識。 為B2B實體設定主標識時，請記住，如果您跨不同系統或位置收集基於字串的實體ID，則它們可能會重疊，這可能導致平台中的資料衝突。
 
@@ -88,14 +84,12 @@ Real-time Customer Data PlatformB2B版提供了幾個體驗資料模型(XDM)類�
 >[!CONTEXTUALHELP]
 >id="platform_xdm_b2b_relationship_name_current"
 >title="當前架構的關係名稱"
->abstract="描述從當前架構到引用架構的關係（例如「相關帳戶」）的標籤。 此標籤用於配置檔案和分段，以向相關B2B實體的資料提供上下文。"
->text="See the documentation to learn more about building B2B schema relationships."
+>abstract="描述從當前架構到引用架構的關係（例如「相關帳戶」）的標籤。 此標籤用於配置檔案和分段，以向相關B2B實體的資料提供上下文。 有關構建B2B架構關係的詳細資訊，請參閱文檔。"
 
 >[!CONTEXTUALHELP]
 >id="platform_xdm_b2b_relationship_name_reference"
 >title="引用架構中的關係名稱"
->abstract="描述從引用架構到當前架構的關係的標籤（例如，「Related Opportunities」）。 此標籤用於配置檔案和分段，以向相關B2B實體的資料提供上下文。"
->text="See the documentation to learn more about building B2B schema relationships."
+>abstract="描述從引用架構到當前架構的關係的標籤（例如，「Related Opportunities」）。 此標籤用於配置檔案和分段，以向相關B2B實體的資料提供上下文。 有關構建B2B架構關係的詳細資訊，請參閱文檔。"
 
 為了定義兩個方案之間的關係，源方案必須有一個引用目標方案主標識的專用欄位。 標準B2B類包括用於常見相關業務實體的專用源關鍵字欄位。 例如， [!UICONTROL XDM業務機會] 類包含相關帳戶的源關鍵字欄位(`accountKey`)和相關活動(`campaignKey`)。 但是，您也可以添加其他 [!UICONTROL B2B源] 使用自定義欄位組（如果需要的元件多於預設元件）將欄位輸入架構。
 

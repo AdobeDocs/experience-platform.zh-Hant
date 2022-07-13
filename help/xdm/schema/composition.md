@@ -5,9 +5,9 @@ title: 架構組合基礎
 topic-legacy: overview
 description: 本文檔介紹了經驗資料模型(XDM)架構，以及用於組合要在Adobe Experience Platform使用的架構的構成模組、原則和最佳做法。
 exl-id: d449eb01-bc60-4f5e-8d6f-ab4617878f7e
-source-git-commit: 11dcb1a824020a5b803621025863e95539ab4d71
+source-git-commit: a95e5cf02e993d6c761abd74c98c0967a89eb678
 workflow-type: tm+mt
-source-wordcount: '3992'
+source-wordcount: '4103'
 ht-degree: 0%
 
 ---
@@ -54,8 +54,7 @@ XDM模式是以自包含格式儲存大量複雜資料的理想選擇。 請參�
 >[!CONTEXTUALHELP]
 >id="platform_schemas_identities"
 >title="架構中的標識"
->abstract="標識是架構中可用於標識主題的關鍵欄位，如電子郵件地址或營銷ID。 這些欄位用於為每個個人構建身份圖並構建客戶配置檔案。"
->text="See the documentation for more information on identities in schemas."
+>abstract="標識是架構中可用於標識主題的關鍵欄位，如電子郵件地址或營銷ID。 這些欄位用於為每個個人構建身份圖並構建客戶配置檔案。 有關架構中標識的詳細資訊，請參閱文檔。"
 
 架構用於將資料插入 [!DNL Experience Platform]。 此資料可以跨多個服務使用，以建立單個實體的單個統一視圖。 因此，在考慮架構時，必須考慮客戶身份以及哪些欄位可用於標識主題，而不管資料可能來自何處。
 
@@ -169,6 +168,11 @@ XDM模式是以自包含格式儲存大量複雜資料的理想選擇。 請參�
 
 ### 類 {#class}
 
+>[!CONTEXTUALHELP]
+>id="platform_schemas_class"
+>title="類"
+>abstract="每個架構都基於一個類。 該類定義架構的行為以及基於該類的所有架構必須包含的公共屬性。 請參見文檔，以瞭解有關如何在架構組合中涉及類的詳細資訊。"
+
 合成架構的開始是分配類。 類定義模式將包含的資料的行為方面（記錄或時間序列）。 此外，類還描述了基於該類的所有方案需要包括的最小數量的公共屬性，並為合併多個相容資料集提供了一種方法。
 
 架構的類確定哪些欄位組有資格在該架構中使用。 在 [下一部分](#field-group)。
@@ -182,6 +186,11 @@ Adobe提供多個標準（「核心」）XDM類。 其中兩門課， [!DNL XDM 
 有關可用標準XDM類的最新清單，請參閱 [正式XDM儲存庫](https://github.com/adobe/xdm/tree/master/components/classes)。 或者，可參閱上的指南 [探索XDM元件](../ui/explore.md) 的子菜單。
 
 ### 欄位群組 {#field-group}
+
+>[!CONTEXTUALHELP]
+>id="platform_schemas_fieldgroup"
+>title="欄位群組"
+>abstract="欄位組是可重用的元件，允許您使用附加屬性擴展方案。 大多數欄位組只與某些類相容。 您可以使用由Adobe定義的標準欄位組，也可以手動定義自己的自定義欄位組。 請參見文檔以瞭解有關架構組合中如何涉及欄位組的詳細資訊。"
 
 欄位組是可重用的元件，它定義了一個或多個欄位，這些欄位實現了某些功能，如個人詳細資訊、酒店首選項或地址。 欄位組將作為實現相容類的架構的一部分被包括。
 

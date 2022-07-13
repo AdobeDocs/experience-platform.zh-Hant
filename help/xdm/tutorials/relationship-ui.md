@@ -6,9 +6,9 @@ description: 本文檔提供了一個教程，用於使用Experience Platform用
 topic-legacy: tutorial
 type: Tutorial
 exl-id: feed776b-bc8d-459b-9700-e5c9520788c0
-source-git-commit: 0ce574700ce4134cddbb990b9b2765c25112b44d
+source-git-commit: a95e5cf02e993d6c761abd74c98c0967a89eb678
 workflow-type: tm+mt
-source-wordcount: '1145'
+source-wordcount: '1172'
 ht-degree: 0%
 
 ---
@@ -18,30 +18,27 @@ ht-degree: 0%
 >[!CONTEXTUALHELP]
 >id="platform_schemas_relationships"
 >title="架構關係"
->abstract="屬於不同類的架構可以通過關係欄位上下文連結，從而可以構建更複雜的分割規則。"
->text="See the documentation for more information on schema relationships."
+>abstract="屬於不同類的架構可以通過關係欄位上下文連結，從而可以構建更複雜的分割規則。 有關架構關係的詳細資訊，請參閱文檔。"
 
 >[!CONTEXTUALHELP]
 >id="platform_xdm_1to1_reference_schema"
 >title="引用架構"
->abstract="選擇要建立關係的方案。 此架構可以是與當前架構不同的類。"
->text="See the documentation for more information on schema relationships."
+>abstract="選擇要建立關係的方案。 此架構可以是與當前架構不同的類。 有關架構關係的詳細資訊，請參閱文檔。"
 
 >[!CONTEXTUALHELP]
 >id="platform_xdm_1to1_identity_namespace"
 >title="引用標識命名空間"
->abstract="引用架構的主標識欄位的命名空間（類型）。 引用架構必須具有已建立的主標識欄位才能參與關係。"
->text="See the documentation for more information on schema relationships."
-
->[!NOTE]
->
->有關如何在Real-time Customer Data PlatformB2B版中建立多對一關係的步驟，請參見上的指南 [建立B2B關係](./relationship-b2b.md)。
+>abstract="引用架構的主標識欄位的命名空間（類型）。 引用架構必須具有已建立的主標識欄位才能參與關係。 有關架構關係的詳細資訊，請參閱文檔。"
 
 瞭解客戶之間的關係以及客戶與品牌之間通過各種渠道進行的互動是Adobe Experience Platform的重要部分。 在結構中定義這些關係 [!DNL Experience Data Model] (XDM)架構使您能夠對客戶資料獲得複雜的見解。
 
 而架構關係可通過使用聯合架構和 [!DNL Real-time Customer Profile]，這僅適用於共用同一類的方案。 要在屬於不同類的兩個架構之間建立關係，必須將專用關係欄位添加到引用目標架構標識的源架構中。
 
 本文檔提供了使用中的架構編輯器定義兩個架構之間的關係的教程 [!DNL Experience Platform] 用戶介面。 有關使用API定義架構關係的步驟，請參見上的教程 [使用方案註冊表API定義關係](relationship-api.md)。
+
+>[!NOTE]
+>
+>有關如何在Real-time Customer Data PlatformB2B版中建立多對一關係的步驟，請參見上的指南 [建立B2B關係](./relationship-b2b.md)。
 
 ## 快速入門
 
