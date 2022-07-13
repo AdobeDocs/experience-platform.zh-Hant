@@ -5,10 +5,10 @@ breadcrumb-title: 標籤
 user-guide-description: 了解如何部署及管理分析、行銷和廣告標籤，以強化客戶體驗。
 feature: Tags
 solution: Data Collection
-source-git-commit: 2cabd8d8fa44f942f9bfce914fd2910a4ddbb973
+source-git-commit: 0103f1af37dc202087d3c81d495de88d3de7c377
 workflow-type: tm+mt
-source-wordcount: '396'
-ht-degree: 67%
+source-wordcount: '402'
+ht-degree: 66%
 
 ---
 
@@ -197,6 +197,7 @@ ht-degree: 67%
       * [秘密](./api/guides/secrets.md)
 * [常見問題集](./faq.md)
 * [術語更新](./term-updates.md)
+* [棄用對Internet Explorer 10和11的支援](./ie-deprecation.md)
 * 發行說明 {#release-notes}
    * [最新消息](./release-notes/current.md)
    * [2020 年發行說明](./release-notes/2020.md)
