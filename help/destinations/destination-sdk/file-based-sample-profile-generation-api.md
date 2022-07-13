@@ -1,9 +1,9 @@
 ---
 description: 本頁說明如何使用Destination SDK中的/sample-profiles API終結點來基於源架構生成示例配置檔案。 您可以使用這些示例配置檔案來test基於檔案的目標配置。
 title: 基於源架構生成示例配置檔案
-source-git-commit: 734d66cc881ab1b691c13ef446331d0c51851cf9
+source-git-commit: ee2bf346a4857a70a7f9aec02bab574f8a257ace
 workflow-type: tm+mt
-source-wordcount: '674'
+source-wordcount: '678'
 ht-degree: 2%
 
 ---
@@ -108,7 +108,7 @@ curl -X GET 'https://platform.adobe.io/data/core/activation/authoring/sample-pro
 | -------- | ----------- |
 | `segmentMembership` | 描述個人段成員身份的映射對象。 有關 `segmentMembership`，閱讀 [段成員身份詳細資訊](../../xdm/field-groups/profile/segmentation.md)。 |
 | `lastQualificationTime` | 此配置檔案上次限定段的時間的時間戳。 |
-| `status` | 指示段成員資格是否已作為當前請求的一部分實現。 接受以下值： <ul><li>`existing`:在請求之前，配置檔案已是段的一部分，並繼續保持其成員資格。</li><li>`realized`:配置檔案正在輸入段作為當前請求的一部分。</li><li>`exited`:配置檔案作為當前請求的一部分退出段。</li></ul> |
+| `status` | 一個字串欄位，指示是否已將段成員資格作為當前請求的一部分實現。 接受以下值： <ul><li>`existing`:在請求之前，配置檔案已是段的一部分，並繼續保持其成員資格。</li><li>`realized`:配置檔案正在輸入段作為當前請求的一部分。</li><li>`exited`:配置檔案作為當前請求的一部分退出段。</li></ul> |
 | `identityMap` | 映射類型欄位，它描述個人的各種標識值及其關聯的命名空間。 有關 `identityMap`，請參閱 [模式組合基礎](../../xdm/schema/composition.md#identityMap)。 |
 
 {style=&quot;table-layout:auto&quot;}
