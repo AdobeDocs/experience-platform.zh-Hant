@@ -2,7 +2,7 @@
 title: 基於屬性的Ad Hoc模式訪問控制支援
 description: 用於限制訪問通過Adobe Experience Platform查詢服務生成的臨時架構中的資料欄位的指南。
 exl-id: d675e3de-ab62-4beb-9360-1f6090397a17
-source-git-commit: 9b327257eacea189363587ad79dc6595b636d5b8
+source-git-commit: d955473fb9123a6fc2384cde4073c713b921f582
 workflow-type: tm+mt
 source-wordcount: '1037'
 ht-degree: 1%
@@ -40,7 +40,7 @@ ht-degree: 1%
 >
 >預設情況下，在架構清單中不顯示即席架構。
 
-## 在平台UI的架構清單中發現即席架構
+## 在平台UI的架構清單中發現即席架構 {#discover-ad-hoc-schemas}
 
 要在平台UI中啟用即席架構的顯示，請選擇篩選器表徵圖(![篩選器表徵圖。](../images/data-governance/filter.png))，然後選擇**[!UICONTROL 顯示即席架構] 左欄。
 
