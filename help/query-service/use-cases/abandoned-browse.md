@@ -4,7 +4,7 @@ title: Adobe Experience Platform查詢服務的示例用例
 topic-legacy: tutorial
 description: 一個端到端示例，演示Adobe Experience Platform查詢服務的多用性和優點。
 exl-id: 00bdae47-71b7-44ea-9365-a1d64c88d2bf
-source-git-commit: 06655e930e447b48089891ca930da89854b8320b
+source-git-commit: 6f6256b5601ce5c230ef334a9ce71325b43fda45
 workflow-type: tm+mt
 source-wordcount: '712'
 ht-degree: 2%
@@ -15,7 +15,7 @@ ht-degree: 2%
 
 本文檔及隨附的視頻演示提供了高端端到端工作流程，演示了Adobe Experience Platform [!DNL Query Service] 有利於您組織的戰略性業務洞察力。 本指南以瀏覽放棄使用案例為例說明以下主要概念：
 
-* 資料處理對最大限度地發揮Adobe Experience Platform潛力的關鍵重要性
+* 資料處理對最大限度地發揮Adobe Experience Platform的潛力至關重要。
 * 基於現有資料體系結構構建查詢的方法。
 * 確保滿足您需要的資料質量，以及緩解任何不足的方法。
 * 調度查詢以在設定頻率下運行以便在分段和用於個性化的目的地中下游使用的過程。
