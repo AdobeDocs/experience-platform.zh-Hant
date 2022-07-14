@@ -1,10 +1,8 @@
 ---
 title: 派生屬性
 description: 派生屬性提供了一種方便的方法，可以生成您選擇的屬性，這些屬性可以在任何常規節奏下刷新，並可以根據需要發佈到即時客戶配置檔案資料中。 本文檔概述了如何使用查詢服務建立派生屬性，以便與配置檔案資料一起使用。
-hide: true
-hidefromtoc: true
 exl-id: 5d52b268-e2a3-411c-8242-3aa32e759937
-source-git-commit: ae11d6f622c42d08373b7454ef920a80abaf2425
+source-git-commit: 61e0895484b8005e2109056d51557f609fecaf97
 workflow-type: tm+mt
 source-wordcount: '752'
 ht-degree: 0%

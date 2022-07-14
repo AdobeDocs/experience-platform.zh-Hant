@@ -1,9 +1,7 @@
 ---
 title: '基於Decile的派生屬性使用案例 '
 description: 本指南演示了使用查詢服務建立用於配置檔案資料的基於檔案的派生屬性所需的步驟。
-hide: true
-hidefromtoc: true
-source-git-commit: 4f44e66ee7537e038628a5beb6b3b3bd0760ff1b
+source-git-commit: 61e0895484b8005e2109056d51557f609fecaf97
 workflow-type: tm+mt
 source-wordcount: '1508'
 ht-degree: 2%
