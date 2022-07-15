@@ -7,7 +7,7 @@ feature: Access Control
 source-git-commit: cd598b58af3067dd1615348beef3fb96e2233cba
 workflow-type: tm+mt
 source-wordcount: '116'
-ht-degree: 42%
+ht-degree: 44%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 42%
 # 存取控制 {#access-control}
 
 * [存取控制概覽](home.md)
-* 基於屬性的訪問控制 {#abac}
+* 以屬性為基礎的存取控制 {#abac}
    * [總覽](abac/overview.md)
    * 權限 {#permissions-ui}
       * [瀏覽](abac/ui/browse.md)

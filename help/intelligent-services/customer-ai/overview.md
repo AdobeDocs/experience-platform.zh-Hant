@@ -4,13 +4,13 @@ solution: Experience Platform, Real-time Customer Data Platform
 feature: Customer AI
 title: Customer AI 概述
 topic-legacy: Customer AI Overview
-description: Customer AI 可產生自訂傾向評分，例如大規模個別設定檔的流失和轉換情形。不必將企業需求轉換為機器學習問題、挑選演算法、培訓或部署，就能達成上述目的。
+description: Customer AI 可產生自訂傾向評分，例如大規模個別設定檔的流失和轉換情形。 不必將企業需求轉換為機器學習問題、挑選演算法、培訓或部署，就能達成上述目的。
 landing-page-description: Customer AI 可產生自訂傾向評分，例如大量個別設定檔的流失和轉換情形。
 exl-id: 3e668103-e2a2-4ce6-a40a-8029a6aaa8dd
 source-git-commit: 62188f56861dd021db7b13325f622323644af8e0
 workflow-type: tm+mt
 source-wordcount: '553'
-ht-degree: 19%
+ht-degree: 26%
 
 ---
 
@@ -19,11 +19,11 @@ ht-degree: 19%
 
 客戶AI作為智慧服務的一部分，為營銷人員提供了在個人級別生成客戶預測並提供解釋的能力。
 
-在影響因素的幫助下，客戶AI可以告訴您客戶可能做什麼以及為什麼。 此外，營銷人員可以從客戶人工智慧預測和洞察中獲益，通過提供最合適的優惠和資訊來個性化客戶體驗。
+在影響因子的協助下，Customer AI 可告知您客戶可能會有什麼行為以及原因何在。 此外，行銷人員可受益於 Customer AI 預測和洞見，藉由提供最適合的方案和訊息來打造個人化客戶體驗。
 
 ## 瞭解客戶AI
 
-Customer AI 可產生自訂傾向評分，例如大規模個別設定檔的流失和轉換情形。不必將企業需求轉換為機器學習問題、挑選演算法、培訓或部署，就能達成上述目的。
+Customer AI 可產生自訂傾向評分，例如大規模個別設定檔的流失和轉換情形。 不必將企業需求轉換為機器學習問題、挑選演算法、培訓或部署，就能達成上述目的。
 
 客戶AI構建為：
 

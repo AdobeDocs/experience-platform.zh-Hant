@@ -7,8 +7,8 @@ user-guide-description: 啟動 Adobe Experience Platform Edge Network 的客戶�
 feature: Data Collection
 source-git-commit: 08541ed2d179040a1faef0dace477f268687fd54
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '40'
+ht-degree: 32%
 
 ---
 

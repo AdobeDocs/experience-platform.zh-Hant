@@ -7,7 +7,7 @@ user-guide-description: 利用智慧型人工智慧服務，從行銷事件資�
 source-git-commit: eae43834d1cd5931dd752b95023da7ac77668e56
 workflow-type: tm+mt
 source-wordcount: '123'
-ht-degree: 22%
+ht-degree: 24%
 
 ---
 

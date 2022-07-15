@@ -7,14 +7,14 @@ feature: Privacy
 source-git-commit: e74d0658d5c389a22497301d289e0310d28731f0
 workflow-type: tm+mt
 source-wordcount: '83'
-ht-degree: 51%
+ht-degree: 55%
 
 ---
 
 
 # Adobe Experience Platform 隱私權服務 {#privacy}
 
-* [Privacy Service概述](./home.md)
+* [Privacy Service 概述](./home.md)
 * [Privacy Service和Experience Cloud應用程式](./experience-cloud-apps.md)
 * [隱私請求的標識資料](./identity-data.md)
 * [隱私JS庫概述](./js-library.md)

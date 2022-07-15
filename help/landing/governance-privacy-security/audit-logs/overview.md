@@ -5,7 +5,7 @@ exl-id: 00baf615-5b71-4e0a-b82a-ca0ce8566e7f
 source-git-commit: cd7ce8c107769a77373f328d9aa84c982be0d8ee
 workflow-type: tm+mt
 source-wordcount: '847'
-ht-degree: 11%
+ht-degree: 12%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 11%
 
 本文檔介紹平台中的審核日誌，包括如何在UI或API中查看和管理這些日誌。
 
-## 由審核日誌捕獲的事件類型 {#category}
+## 由稽核記錄擷取的事件類型 {#category}
 
 下表概述了審計日誌記錄資源的操作：
 
@@ -31,7 +31,7 @@ ht-degree: 11%
 | [資料集](../../../catalog/datasets/overview.md) | <ul><li>建立</li><li>更新</li><li>刪除</li><li>啟用 [即時客戶概要資訊](../../../profile/home.md)</li><li>禁用配置檔案</li><li>添加資料</li><li>刪除批</li></ul> |
 | [資料類型](../../../xdm/schema/composition.md#data-type) | <ul><li>建立</li><li>更新</li><li>刪除</li></ul> |
 | [目標](../../../destinations/home.md) | <ul><li>建立</li><li>更新</li><li>刪除</li><li>啟用</li><li>禁用</li><li>資料集激活</li><li>刪除資料集</li><li>配置檔案激活</li><li>配置檔案刪除</li></ul> |
-| [欄位組](../../../xdm/schema/composition.md#field-group) | <ul><li>建立</li><li>更新</li><li>刪除</li></ul> |
+| [欄位群組](../../../xdm/schema/composition.md#field-group) | <ul><li>建立</li><li>更新</li><li>刪除</li></ul> |
 | [標識圖](../../../identity-service/ui/identity-graph-viewer.md) | <ul><li>檢視</li></ul> |
 | [標識命名空間](../../../identity-service/ui/identity-graph-viewer.md) | <ul><li>建立</li><li>更新</li></ul> |
 | [合併策略](../../../profile/merge-policies/overview.md) | <ul><li>建立</li><li>更新</li><li>刪除</li></ul> |

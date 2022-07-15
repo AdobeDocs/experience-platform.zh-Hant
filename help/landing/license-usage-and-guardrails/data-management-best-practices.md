@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform；首頁；熱門主題；資料管理；許可證權利；許可；最佳實踐
 title: 資料管理許可證權利最佳實踐
-description: 本文檔概述了可遵循的最佳做法和可用於更好地管理您與Adobe Experience Platform的許可證權利的工具。
+description: 本文件會概述可遵循的最佳做法以及可用來將 Adobe Experience Platform 的授權權益管理得更好的工具。
 exl-id: f23bea28-ebd2-4ed4-aeb1-f896d30d07c2
 source-git-commit: 02882957fc38058ff092938d631e290725d4bdc2
 workflow-type: tm+mt
 source-wordcount: '2531'
-ht-degree: 0%
+ht-degree: 2%
 
 ---
 
@@ -16,7 +16,7 @@ Adobe Experience Platform是一個開放系統，可將您的資料轉換為即�
 
 平台提供許可證，用於確定可建立的配置檔案數和可導入的資料量。 由於能夠引入任何資料源、卷或歷史記錄，因此隨著資料卷的增長，可能會超出您的許可權限。
 
-本文檔概述了可遵循的最佳做法和可用於更好地管理您與Adobe Experience Platform的許可證權利的工具。
+本文件會概述可遵循的最佳做法以及可用來將 Adobe Experience Platform 的授權權益管理得更好的工具。
 
 ## 瞭解Adobe Experience Platform資料儲存
 
@@ -37,7 +37,7 @@ Experience Platform主要由兩個資料儲存庫組成：這樣 [!DNL Data Lake
 >
 >訪問 [!DNL Data Lake] 取決於您購買的產品SKU。 有關產品SKU的詳細資訊，請與您的Adobe代表聯繫。
 
-## 許可證使用 {#license-usage}
+## 授權使用情況 {#license-usage}
 
 當您進行許可Experience Platform時，您將獲得許可使用權，這些權利因SKU而異：
 

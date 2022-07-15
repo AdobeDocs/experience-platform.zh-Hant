@@ -1,7 +1,7 @@
 ---
 audience: user
 user-guide-title: 檢視範圍指南
-user-guide-description: 透過使用統計量度和事件通知來監控 Platform 活動。
+user-guide-description: 透過使用統計量度和事件通知來監控平台活動。
 feature: Observability
 source-git-commit: 5218e6cf82b74efbbbcf30495395a4fe2ad9fe14
 workflow-type: tm+mt
@@ -13,13 +13,13 @@ ht-degree: 46%
 
 # 可觀察性深入分析 {#observability}
 
-* [可觀察性深入分析概述](./home.md)
-* 可觀察性前瞻分析API {#api}
-   * [概覽](./api/overview.md)
+* [可觀性透視概述](./home.md)
+* 可觀性透視API {#api}
+   * [總覽](./api/overview.md)
    * [快速入門](./api/getting-started.md)
    * [量度](./api/metrics.md)
 * 警報 {#alerts}
-   * [概覽](./alerts/overview.md)
+   * [總覽](./alerts/overview.md)
    * [標準警報規則](./alerts/rules.md)
    * [UI指南](./alerts/ui.md)
    * [訂閱I/O事件通知](./alerts/subscribe.md)
