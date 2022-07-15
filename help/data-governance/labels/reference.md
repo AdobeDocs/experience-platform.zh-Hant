@@ -5,14 +5,14 @@ title: 資料使用標籤辭彙表
 topic-legacy: labels
 description: 本文檔概述了Adobe Experience Platform當前支援的所有資料使用標籤。
 exl-id: 70d0702d-def7-4ab2-a861-eaf0f0cde1d4
-source-git-commit: 90f055f2fbeb7571d2f7c1daf4ea14490069f2eb
+source-git-commit: 1a10216c01a049539b5e1d21d0c42942496b2e3e
 workflow-type: tm+mt
 source-wordcount: '2083'
 ht-degree: 2%
 
 ---
 
-# 資料使用標籤辭彙表
+# 資料使用標籤辭彙表 {#data-usage-labels-glossary}
 
 >[!CONTEXTUALHELP]
 >id="platform_policies_labeltype"
@@ -138,4 +138,4 @@ IAB:4. 內容選擇、交付、報告：資訊的收集以及與先前收集的�
 
 #### C11 {#c11}
 
-Adobe Experience Platform網段匹配允許您將第一方網段與隱私和同意首選項進行匹配，從而有助於豐富的分析和下游洞察力。 C11標籤表示不應用於 [!DNL Segment Match] 進程。 在確定要從段匹配中排除的資料集和/或欄位並相應添加C11標籤後，該標籤將由段匹配工作流自動強制執行。
+Adobe Experience Platform網段匹配允許您將第一方網段與隱私和同意首選項進行匹配，從而方便了豐富的分析和下游洞察。 C11標籤表示不應用於 [!DNL Segment Match] 進程。 在確定要從段匹配中排除的資料集和/或欄位並相應添加C11標籤後，該標籤將由段匹配工作流自動強制執行。
