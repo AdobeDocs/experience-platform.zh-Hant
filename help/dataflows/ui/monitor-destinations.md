@@ -6,7 +6,7 @@ title: 監視UI中目標的資料流
 topic-legacy: overview
 type: Tutorial
 exl-id: 8eb7bb3c-f2dc-4dbc-9cf5-3d5d3224f5f1
-source-git-commit: 20fbc4a33baa677cf34b3e1525f45af1862a7024
+source-git-commit: 4a9511f055854ab574aca46f44acf155b0c16af6
 workflow-type: tm+mt
 source-wordcount: '3211'
 ht-degree: 0%
@@ -173,13 +173,13 @@ ht-degree: 0%
 >title="啟用"
 >abstract="目標激活視圖包含有關段的激活狀態和從即時客戶配置檔案獲取的度量的資訊，以生成唯一標識。"
 
-訪問 [!UICONTROL 監視] 儀表板，選擇 **[!UICONTROL 監視]** (![監視表徵圖](../assets/ui/monitor-destinations/monitoring-icon.png))。 在 [!UICONTROL 監視] ，選擇 [!UICONTROL 目標]。 的 [!UICONTROL 監視] 儀表板包含有關目標運行作業的度量和資訊。
-
 >[!NOTE]
 >
 >- 目標監視功能當前支援Experience Platform中的所有目標 *除* 這樣 [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md) 和 [自定義個性化](/help/destinations/catalog/personalization/custom-personalization.md) 目標。
 >- 對於 [AmazonKinesis](/help/destinations/catalog/cloud-storage/amazon-kinesis.md)。 [Azure事件中心](/help/destinations/catalog/cloud-storage/azure-event-hubs.md), [HTTP API](/help/destinations/catalog/streaming/http-destination.md) 目標、排除的身份當前不顯示。
 
+
+訪問 [!UICONTROL 監視] 儀表板，選擇 **[!UICONTROL 監視]** (![監視表徵圖](../assets/ui/monitor-destinations/monitoring-icon.png))。 在 [!UICONTROL 監視] ，選擇 [!UICONTROL 目標]。 的 [!UICONTROL 監視] 儀表板包含有關目標運行作業的度量和資訊。
 
 使用 [!UICONTROL 目標] 控制板，以全面瞭解激活流的運行狀況。 首先瞭解所有批處理和流式處理目標的聚合級別，然後深入查看資料流、資料流運行和激活段的詳細視圖，以深入查看激活資料。 螢幕 [!UICONTROL 監視] 儀表板通過度量和錯誤說明提供可操作的洞察力，以幫助您解決激活方案中可能出現的任何問題。
 
