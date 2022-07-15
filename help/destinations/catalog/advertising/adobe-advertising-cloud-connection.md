@@ -2,9 +2,9 @@
 title: Adobe Advertising Cloud DSP
 description: Adobe Advertising Cloud DSP是 [!DNL Adobe Real-time Customer Data Profile]允許您與經認證的廣告商和用戶共用經過身份驗證的第一方段，以便激活活動。
 exl-id: 11ff7797-a9c6-4334-b843-ae9df9a48e54
-source-git-commit: dd18350387aa6bdeb61612f0ccf9d8d2223a8a5d
+source-git-commit: 27869b91deeb4a5cca580970507845d992d21aaf
 workflow-type: tm+mt
-source-wordcount: '1026'
+source-wordcount: '1044'
 ht-degree: 1%
 
 ---
@@ -33,7 +33,7 @@ Adobe Advertising Cloud [!DNL Demand-Side Platform] (DSP)目標允許您與經�
 
 ## 先決條件 {#prerequisites}
 
-* 帳DSP戶級和市場活動級設定，以啟用段共用 [!DNL LiveRamp RampID]將客戶資料轉換為 [!DNL RampIDs] 建立目標段。 您的DSP帳戶團隊將執行此配置。
+* 帳DSP戶級和市場活動級設定，以啟用段共用 [!DNL LiveRamp RampID]將客戶資料轉換為 [!DNL RampIDs] 建立目標段。 您的DSP帳戶團隊將執行此配置。 [!DNL RampID] 可通過與之間的DSP夥伴關係 [!DNL LiveRamp]而你不需要自己的 [!DNL LiveRamp] 成員身份。
 * Experience Cloud帳戶的Experience Platform組織ID。 你可以在你的 [!DNL Real-Time CDP] 用戶配置檔案頁面。
 * A [[!DNL Real-Time CDP] 源DSP](https://experienceleague.adobe.com/docs/advertising-cloud/dsp/audiences/sources/source-create.html) 接收市場活動激活的段。 您的DSP帳戶團隊將使用您的Experience Cloud組織ID建立源。
 * 帳戶或廣DSP告商的源密鑰 [[!DNL Real-Time CDP] 源建立於DSP](https://experienceleague.adobe.com/docs/advertising-cloud/dsp/audiences/sources/source-create.html)。 您的DSP帳戶團隊將與您共用此密鑰。 您將在Experience Platform中使用它建立到Advertising Cloud DSP目標的目標連接，如 [下文](#authenticate)。
