@@ -3,9 +3,9 @@ keywords: 廣告目標；目標；平台目標
 title: 廣告目標概述
 description: 將Adobe Experience Platform連接到第三方廣告平台(DSP如廣告網路、SSP)，並與這些平台共用假名受眾。
 exl-id: 072743a4-fc62-4a61-92ec-8f9640a47ab2
-source-git-commit: 14f7efc2d893bf081c4e167b46a3e85baeff4ec9
+source-git-commit: 4b48a1062e922a28ba925050b3879feff8fc40b2
 workflow-type: tm+mt
-source-wordcount: '243'
+source-wordcount: '248'
 ht-degree: 1%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 1%
 
 ## 總覽 {#overview}
 
-將Adobe Experience Platform連接到第三方廣告平台DSP，並與這些平台共用假名受眾。
+將Adobe Experience Platform連接到廣告平台DSP，以便與這些平台共用已知和假名受眾。
 
 當連接到廣告目標時，您的受眾將作為ID發送到目標平台，在該平台中，他們映射到目標平台已知的ID。
 
@@ -26,6 +26,7 @@ ht-degree: 1%
 
 ### 連線
 
+* [Adobe Advertising Cloud](adobe-advertising-cloud-connection.md)
 * [(Beta)Criteo連接](criteo.md)
 * [GoogleDisplay &amp; Video 360連接](google-dv360.md)
 * [Google廣告連接](google-ads-destination.md)
