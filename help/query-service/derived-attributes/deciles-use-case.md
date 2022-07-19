@@ -1,7 +1,8 @@
 ---
-title: '基於Decile的派生屬性使用案例 '
+title: 基於Decile的派生屬性使用案例
 description: 本指南演示了使用查詢服務建立用於配置檔案資料的基於檔案的派生屬性所需的步驟。
-source-git-commit: 61e0895484b8005e2109056d51557f609fecaf97
+exl-id: 0ec6b511-b9fd-4447-b63d-85aa1f235436
+source-git-commit: c1ec6f949bd0ab9ec3b1ccc58baf74d8c71deca0
 workflow-type: tm+mt
 source-wordcount: '1508'
 ht-degree: 2%
@@ -59,7 +60,7 @@ ht-degree: 2%
 
 >[!NOTE]
 >
->簡單說來，信條ID `_profilefoundationreportingstg` 從列標題中的命名空間開始以及整個文檔中的後續提及中省略。
+>簡單說，租戶ID `_profilefoundationreportingstg` 從列標題中的命名空間開始以及整個文檔中的後續提及中省略。
 
 | `.membershipNumber` | `.emailAddress.address` | `.transactionDate` | `.transactionType` | `.transactionDetails` | `.mileage` | `.loyaltyStatus` |
 |---|---|---|---|---|---|---|
@@ -299,4 +300,3 @@ GROUP BY rankings.membershipNumber
 ## 後續步驟
 
 上面提供的示例用例突出說明了使「即時客戶配置檔案」中的decile屬性可用的步驟。 這允許分段服務通過用戶介面或REST風格的API能夠基於這些分檔儲存段生成受眾。 查看 [分段服務概述](../../segmentation/home.md) 有關如何建立、評估和訪問段的資訊。
-

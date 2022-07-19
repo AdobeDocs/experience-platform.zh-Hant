@@ -1,8 +1,8 @@
 ---
 title: 查詢服務中的資料治理
 description: 本概述介紹了Experience Platform查詢服務中資料治理的主要要素。
-feature: Data Governance
-source-git-commit: ec063a0f5600729d3575f98898ade04443f29f2a
+exl-id: 37543d43-bd8c-4bf9-88e5-39de5efe3164
+source-git-commit: c1ec6f949bd0ab9ec3b1ccc58baf74d8c71deca0
 workflow-type: tm+mt
 source-wordcount: '2667'
 ht-degree: 0%
@@ -169,7 +169,7 @@ Query Service資料符合性確保資料始終被加密。 傳輸中的資料始
 1. **會話日誌**:無論用戶是否執行查詢，系統都會在用戶登錄到查詢服務時為其建立會話條目日誌。
 1. **第三方客戶端連接日誌**:當用戶成功將查詢服務連接到第三方客戶端時，將生成連接審核日誌。
 
-查看 [審核日誌概述](../../landing/governance-privacy-security/audit-logs/overview.md) 有關審核日誌如何幫助您的組織實現資料合規性的詳細資訊。
+查看 [審核日誌概述](../../landing/governance-privacy-security/audit-logs/overview.md) 有關審核日誌如何幫助您的組織實現資料合規性的更多資訊，。
 
 ## 資料使用 {#data-usage}
 
