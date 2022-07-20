@@ -5,9 +5,9 @@ title: PostmanAdobe Experience Platform
 topic-legacy: api guide
 description: 本文檔包含如何設定Postman環境、導入Postman集合以及每個平台服務可用集合清單的步驟。
 exl-id: a09b3875-97f5-47f1-a562-52decbce67b1
-source-git-commit: 9f00bff31f9e7d2da1294d3d1f24cba7870a4614
+source-git-commit: d06c3bc51909b464b9eed2a2f0df04ca531010b3
 workflow-type: tm+mt
-source-wordcount: '550'
+source-wordcount: '545'
 ht-degree: 0%
 
 ---
@@ -22,7 +22,7 @@ Postman是API開發的協作平台，允許您設定具有預設變數的環境�
 
 >[!VIDEO](https://video.tv.adobe.com/v/28832)
 
-## 郵遞員收藏 {#collections}
+## Postman收藏 {#collections}
 
 通過訪問，可以找到包含所有可用Postman收藏的資料夾 [Experience PlatformPostman示例GitHub儲存庫](https://github.com/adobe/experience-platform-postman-samples/tree/master/apis/experience-platform)。 或者，Postman集合連結可在 [API參考文檔](https://www.adobe.com/go/platform-api-reference-en) Adobe I/O。
 
@@ -32,7 +32,7 @@ Postman是API開發的協作平台，允許您設定具有預設變數的環境�
 
 ## 導入Postman集合 {#import}
 
-為了利用 [郵遞員收藏](#collections)您需要設定環境。 完成環境設定後，選擇 **[!DNL Manage Environments]** 的子菜單。
+為了利用 [Postman收藏](#collections)您需要設定環境。 完成環境設定後，選擇 **[!DNL Manage Environments]** 的子菜單。
 
 ![管理環境選擇器](./images/api-guide/environment-selector.png)
 
@@ -52,9 +52,9 @@ Postman是API開發的協作平台，允許您設定具有預設變數的環境�
 
 >[!WARNING]
 >
->如Adobe I/O訪問令牌生成Postman集合中所述，表示的生成方法適用於 **非生產用途**。 本地簽名從第三方主機載入JavaScript庫，遠程簽名將私鑰發送到由Adobe擁有和操作的Web服務。 雖然Adobe不儲存此私鑰，但生產密鑰不應與任何人共用。
+>如Identity Management服務(IMS)Postman集合中所述，表示的生成方法適合 **非生產用途**。 本地簽名從第三方主機載入JavaScript庫，遠程簽名將私鑰發送到由Adobe擁有和操作的Web服務。 雖然Adobe不儲存此私鑰，但生產密鑰不應與任何人共用。
 
-以下視頻使用 [Adobe I/O訪問令牌生成集合](https://github.com/adobe/experience-platform-postman-samples/blob/master/apis/ims/Adobe%20IO%20Access%20Token%20Generation.postman_collection.json) 可從公共GitHub儲存庫下載。
+以下視頻使用 [Identity Management服務(IMS)Postman](https://github.com/adobe/experience-platform-postman-samples/blob/master/apis/ims/Identity%20Management%20Service.postman_collection.json) 可從公共GitHub儲存庫下載。
 
 >[!VIDEO](https://video.tv.adobe.com/v/29698/?quality=12&learn=on)
 
