@@ -3,10 +3,10 @@ title: 將Adobe Analytics與平台Web SDK配合使用
 description: 瞭解如何使用Adobe Experience PlatformWeb SDK向Adobe Analytics發送資料。
 keywords: adobe analytics;analytics;mapped data;mapped vars;
 exl-id: b18d1163-9edf-4a9c-b247-cd1aa7dfca50
-source-git-commit: 921a3a32ee5f2daa04512a3f2c68935667ab3875
+source-git-commit: f627c1f6c917e74e0a366ce0611a1fa6bd0e3c3d
 workflow-type: tm+mt
-source-wordcount: '233'
-ht-degree: 6%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -28,7 +28,7 @@ Adobe Experience Platform [!DNL Edge Network] 自動映射許多XDM變數。 列
 
 ## 手動映射的資料
 
-邊緣網路收集的所有資料都可透過處理規則來存取。資料使用點表示法展平，並可作為contextData使用。
+邊緣網路未自動映射的任何資料都可以通過處理規則來訪問。 資料使用點表示法展平，並可作為contextData使用。
 
 如果你有這樣的架構。
 
