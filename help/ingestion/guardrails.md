@@ -2,9 +2,10 @@
 keywords: Experience Platform；故障排除；護欄；指導方針；
 title: 用於資料接收的護欄
 description: 本檔案就Adobe Experience Platform資料接收的護欄提供指導
-source-git-commit: 3f558c9c11945cc9af51c42f7ed872101521259f
+exl-id: f07751cb-f9d3-49ab-bda6-8e6fec59c337
+source-git-commit: 4fd26078017ae13e22ebb02f98335094c8e0581b
 workflow-type: tm+mt
-source-wordcount: '444'
+source-wordcount: '478'
 ht-degree: 1%
 
 ---
@@ -32,7 +33,7 @@ ht-degree: 1%
 | 攝取類型 | 準則 | 附註 |
 | --- | --- | --- |
 | 串流擷取 | <ul><li>最大記錄大小為1 MB，建議大小為10 KB。</li><li>您可以在1分鐘內每秒處理20000個到Profile的請求。</li><li>在15分鐘內，您每秒最多可處理20000個資料湖請求。</li></ul> | 如果需要更高的資料吞吐量，請使用批接收API。 |
-| 流源 | <ul><li>最大記錄大小為1 MB，建議大小為10 KB。</li><li>在建立新源連接時，流源每秒支援4000到5000個請求。</li><li>您每秒可以處理4000到5000個資料湖請求。</li></ul> | 流源，如 [!DNL Kafka]。 [!DNL Azure Event Hubs], [!DNL Amazon Kinesis] 不使用 [!DNL Data Collection Core Service] (DCCS)路由，可以有不同的吞吐量限制。 查看 [源概述](../sources/home.md) 用於資料接收的源目錄。 |
+| 流源 | <ul><li>最大記錄大小為1 MB，建議大小為10 KB。</li><li>在建立新源連接時，流源每秒支援4000到5000個請求。 **注釋**:流式資料要完全處理到資料湖，最多需要30分鐘。</li><li>您每秒可以處理4000到5000個資料湖請求。 **注釋**:流式資料要完全處理到資料湖，最多需要30分鐘。</li></ul> | 流源，如 [!DNL Kafka]。 [!DNL Azure Event Hubs], [!DNL Amazon Kinesis] 不使用 [!DNL Data Collection Core Service] (DCCS)路由，可以有不同的吞吐量限制。 查看 [源概述](../sources/home.md) 用於資料接收的源目錄。 |
 
 ## 後續步驟
 
