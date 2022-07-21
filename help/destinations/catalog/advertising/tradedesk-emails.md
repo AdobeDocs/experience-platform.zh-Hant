@@ -1,9 +1,9 @@
 ---
 title: （測試版）交易台 — CRM連接
 description: 將配置檔案激活到您的交易台帳戶，以便根據CRM資料鎖定和禁止受眾。
-source-git-commit: 69bf43f86ab3369ad0c7febcb69ec41d3bcac8bb
+source-git-commit: b186a1a4b7417503ffa08a66136411ccff495510
 workflow-type: tm+mt
-source-wordcount: '1046'
+source-wordcount: '1041'
 ht-degree: 2%
 
 ---
@@ -33,7 +33,7 @@ ht-degree: 2%
 
 在將段激活到 [!DNL The Trade Desk]您必須聯繫您 [!DNL The Trade Desk] 客戶經理，以簽署CRM登陸合同。 [!DNL The Trade Desk] 然後將授予權限並共用您的廣告商ID以配置您的目標。
 
-## ID匹配要求(#id-matching-requirements)
+## ID匹配要求 {#id-matching-requirements}
 
 根據您在Adobe Experience Platform接收的ID類型，您必須遵守相應的要求。 請閱讀 [Identity Namespace概述](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=en) 的子菜單。
 
@@ -50,7 +50,7 @@ ht-degree: 2%
 
 {style=&quot;table-layout:auto&quot;}
 
-## 電子郵件散列要求(#hashing-requirements)
+## 電子郵件散列要求 {#hashing-requirements}
 
 您可以先對電子郵件地址進行散列，然後再將其插入Adobe Experience Platform或使用原始電子郵件地址。
 
@@ -77,11 +77,11 @@ ht-degree: 2%
 
 ## 連接到目標 {#connect}
 
-### 驗證到目標(#authenticate)
+### 驗證到目標 {#authenticate}
 
 [!DNL The Trade Desk] CRM目標是每日的批處理檔案上載，不需要用戶進行身份驗證。
 
-### 填寫目標詳細資訊(#fill入詳細資訊)
+### 填寫目標詳細資訊 {#fill-in-details}
 
 在將受眾資料發送或激活到目標之前，必須設定到您自己的目標平台的連接。 同時 [設定](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html?lang=en) 此目標，必須提供以下資訊：
 
@@ -104,7 +104,7 @@ ht-degree: 2%
 
 在 **[!UICONTROL 映射]** 頁中，必須從源列中選擇屬性或標識名稱空間並映射到目標列。
 
-以下是激活段到時正確標識映射的示例 [!DNL The Trade Desk] CRM目標。
+下面是激活段到時正確標識映射的示例 [!DNL The Trade Desk] CRM目標。
 
 >[!IMPORTANT]
 >
@@ -120,7 +120,7 @@ ht-degree: 2%
 * 選擇 `Email` 作為目標標識的命名空間 `Email`。
 * 選擇 `Email_LC_SHA256` 作為目標標識的命名空間 `Email_LC_SHA256`。
 
-## 驗證資料導出(#validate)
+## 驗證資料導出 {#validate}
 
 驗證資料是否正確從Experience Platform導出到 [!DNL The Trade Desk]，請在Adobe1PD資料磁貼下查找 [!DNL The Trade Desk] 資料管理平台(DMP)。 下面是查找中相應ID的步驟 [!DNL Trade Desk] UI:
 
