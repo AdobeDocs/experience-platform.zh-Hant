@@ -2,9 +2,9 @@
 description: 此配置允許您指明基本資訊，如目標名稱、類別、說明、徽標等。 此配置中的設定還確定Experience Platform用戶如何驗證到目標、Experience Platform用戶介面中的顯示方式以及可以導出到目標的身份。
 title: 流式傳輸目標配置選項，用於Destination SDK
 exl-id: b7e4db67-2981-4f18-b202-3facda5c8f0b
-source-git-commit: 301cef53644e813c3fd43e7f2dbaf730c9e5fc11
+source-git-commit: fe61b2ebe1a06e8909ef675cae088cb4e7d2b325
 workflow-type: tm+mt
-source-wordcount: '1807'
+source-wordcount: '1888'
 ht-degree: 4%
 
 ---
@@ -35,7 +35,7 @@ ht-degree: 4%
    ],
    "customerDataFields":[
       {
-         "name":"endpointsInstance",
+         "name":"endpointRegion",
          "type":"string",
          "title":"Select Endpoint",
          "description":"Moviestar manages several instances across the globe for REST endpoints that our customers are provisioned for. Select your endpoint in the dropdown list.",
@@ -158,9 +158,13 @@ ht-degree: 4%
 
 ## 客戶資料欄位 {#customer-data-fields}
 
-使用此部分可在連接到Experience PlatformUI中的目標時要求用戶填寫特定於目標的自定義欄位。 配置反映在驗證流中，如下所示：
+使用此部分可在連接到Experience PlatformUI中的目標時要求用戶填寫特定於目標的自定義欄位。 配置將反映在驗證流中，如下所示。
 
 ![自定義欄位驗證流](./assets/custom-field-authentication-flow.png)
+
+>[!TIP]
+>
+>您可以訪問和使用模板中客戶資料欄位中的客戶輸入。 使用宏 `{{customerData.name}}`。 例如，如果要求用戶輸入「客戶ID」欄位，並且該欄位的名稱 `userId`，可使用宏在模板中訪問 `{{customerData.userId}}`。 查看API終結點的URL中如何使用客戶資料欄位的示例，位於 [目標伺服器配置](/help/destinations/destination-sdk/server-and-template-configuration.md#server-specs)。
 
 | 參數 | 類型 | 說明 |
 |---------|----------|------|
@@ -178,10 +182,12 @@ ht-degree: 4%
 
 本節指上述配置中的UI元素，該Adobe應用於Adobe Experience Platform用戶介面中的目標。 請參見以下內容：
 
+![UI屬性配置的映像。](/help/destinations/destination-sdk/assets/ui-attributes-configuration.png)
+
 | 參數 | 類型 | 說明 |
 |---------|----------|------|
 | `documentationLink` | 字串 | 引用中的文檔頁面 [目標目錄](https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/overview.html?lang=en#catalog) 你的目的地。 使用 `http://www.adobe.com/go/destinations-YOURDESTINATION-en`，也請參見Wiki頁。 `YOURDESTINATION` 是目標的名稱。 對於名為Moviestar的目標，您將使用 `http://www.adobe.com/go/destinations-moviestar-en`。 請注意，此連結僅在Adobe設定目標即時並發佈文檔後才起作用。 |
-| `category` | 字串 | 指分配給您在Adobe Experience Platform的目標的類別。 有關詳細資訊，請閱讀 [目標類別](https://experienceleague.adobe.com/docs/experience-platform/destinations/destination-types.html)。 使用以下值之一： `adobeSolutions, advertising, analytics, cdp, cloudStorage, crm, customerSuccess, database, dmp, ecommerce, email, emailMarketing, enrichment, livechat, marketingAutomation, mobile, personalization, protocols, social, streaming, subscriptions, surveys, tagManagers, voc, warehouses, payments`。 |
+| `category` | 字串 | 指分配給您在Adobe Experience Platform的目標的類別。 有關詳細資訊，請閱讀 [目標類別](https://experienceleague.adobe.com/docs/experience-platform/destinations/destination-types.html)。 使用以下值之一： `adobeSolutions, advertising, analytics, cdp, cloudStorage, crm, customerSuccess, database, dmp, ecommerce, email, emailMarketing, enrichment, livechat, marketingAutomation, mobile, personalization, protocols, social, streaming, subscriptions, surveys, tagManagers, voc, warehouses, payments`。 <br> 請注意，當前每個目標只能選擇一個類別。 |
 | `connectionType` | 字串 | `Server-to-server` 是當前唯一可用的選項。 |
 | `frequency` | 字串 | 引用目標支援的資料導出類型。 支援的值： <ul><li>`Streaming`</li><li>`Batch`</li></ul> |
 
@@ -201,7 +207,6 @@ ht-degree: 4%
 | `identityRequired` | 布林值 | 使用 `true` 如果用戶應能將標識命名空間從Experience Platform映射到所需的架構。 |
 
 {style=&quot;table-layout:auto&quot;&quot;
-
 
 ## 標識和屬性 {#identities-and-attributes}
 

@@ -2,9 +2,9 @@
 description: 此配置允許您指明基本資訊，如目標名稱、類別、說明、徽標等。 此配置中的設定還確定Experience Platform用戶如何驗證到目標、Experience Platform用戶介面中的顯示方式以及可以導出到目標的身份。
 title: （測試版）基於檔案的目標配置選項，用於Destination SDK
 exl-id: 6b0a0398-6392-470a-bb27-5b34b0062793
-source-git-commit: 301cef53644e813c3fd43e7f2dbaf730c9e5fc11
+source-git-commit: fe61b2ebe1a06e8909ef675cae088cb4e7d2b325
 workflow-type: tm+mt
-source-wordcount: '2330'
+source-wordcount: '2389'
 ht-degree: 5%
 
 ---
@@ -369,6 +369,8 @@ ht-degree: 5%
 使用此部分可在連接到Experience PlatformUI中的目標時要求用戶填寫特定於目標的自定義欄位。
 
 在下面的示例中， `customerDataFields` 要求用戶輸入其目標的名稱，並提供 [!DNL Amazon S3] 儲存段名稱和資料夾路徑，以及壓縮類型、檔案格式和多個其他檔案導出選項。
+
+您可以訪問和使用模板中客戶資料欄位中的客戶輸入。 使用宏 `{{customerData.name}}`。 例如，如果要求用戶輸入名稱為「AmazonS3儲存桶」的欄位 `bucket`，可使用宏在模板中訪問 `{{customerData.bucket}}`。 查看在中使用客戶資料欄位的示例 [目標伺服器配置](/help/destinations/destination-sdk/server-and-file-configuration.md#s3-example)。
 
 ```json
  "customerDataFields":[
