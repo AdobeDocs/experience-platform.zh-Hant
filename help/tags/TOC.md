@@ -5,9 +5,9 @@ breadcrumb-title: 標籤
 user-guide-description: 了解如何部署及管理分析、行銷和廣告標籤，以強化客戶體驗。
 feature: Tags
 solution: Data Collection
-source-git-commit: 0103f1af37dc202087d3c81d495de88d3de7c377
+source-git-commit: a99046cc7df18d53b068c679ab07f5f9dd8eff0a
 workflow-type: tm+mt
-source-wordcount: '402'
+source-wordcount: '400'
 ht-degree: 66%
 
 ---
@@ -62,7 +62,6 @@ ht-degree: 66%
    * [總覽](./ui/administration/overview.md)
    * [公司和屬性](./ui/administration/companies-and-properties.md)
    * [使用者權限](./ui/administration/user-permissions.md)
-   * [管理權限](./ui/administration/manage-permissions.md)
 * 擴充功能 {#extensions}
    * [總覽](./extensions/overview.md)
    * Adobe 擴充功能 {#adobe}
