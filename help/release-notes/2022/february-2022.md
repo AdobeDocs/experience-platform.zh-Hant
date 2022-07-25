@@ -2,7 +2,7 @@
 title: Adobe Experience Platform發行說明2022年2月
 description: 2022年2月為Adobe Experience Platform發佈的說明。
 exl-id: ae453f7d-ac75-4cc3-8435-57d25f086cc3
-source-git-commit: 0a01dd2b0d8a1039178e3593475f9a87639ccdcd
+source-git-commit: 1ab1c269fd43368e059a76f96b3eb3ac4e7b8388
 workflow-type: tm+mt
 source-wordcount: '1019'
 ht-degree: 3%
@@ -49,7 +49,7 @@ Adobe Experience Platform提供 [!DNL dashboards] 通過這些資訊，您可以
 | 資料收集的資料準備 | 如果您使用Adobe Experience PlatformWeb SDK，現在可以利用資料準備功能將資料映射到伺服器端的體驗資料模型(XDM)。 請參閱 [資料收集的資料準備](../../edge/datastreams/data-prep.md) 的子菜單。 |
 | 第一方設備ID | 使用平台Web SDK收集客戶資料時，您現在可以將自己的設備ID發送到Adobe Experience Platform邊緣網路，這為最近對第三方Cookie生命週期的瀏覽器限制提供了一種解決方法。 請參閱上的指南 [第一方設備ID](../../edge/identity/first-party-device-ids.md) 的子菜單。 |
 
-有關平台中資料收集的詳細資訊，請參閱 [資料收集概述](../../rtcdp-connections/home.md)。
+有關平台中資料收集的詳細資訊，請參閱 [資料收集概述](../../collection/home.md)。
 
 ## [!DNL Destinations] {#destinations}
 

@@ -2,7 +2,7 @@
 title: 標籤的用戶權限
 description: 瞭解可用於標籤的不同類型的權限以及適用於不同業務使用情形的一些基本實施策略。
 exl-id: 9b48847a-6133-4dbd-b17d-e7b88152ad7d
-source-git-commit: a99046cc7df18d53b068c679ab07f5f9dd8eff0a
+source-git-commit: 1ab1c269fd43368e059a76f96b3eb3ac4e7b8388
 workflow-type: tm+mt
 source-wordcount: '1311'
 ht-degree: 17%
@@ -21,7 +21,7 @@ Adobe Experience Platform中標籤的用戶權限通過Adobe Admin Console分配
 
 >[!NOTE]
 >
->有關如何為使用Admin Console的用戶配置權限的步驟，請參閱上面的教程 [管理資料收集權限](../../../rtcdp-connections/permissions.md)。
+>有關如何為使用Admin Console的用戶配置權限的步驟，請參閱上面的教程 [管理資料收集權限](../../../collection/permissions.md)。
 
 ## 權限類型
 
@@ -121,4 +121,4 @@ Adobe Experience Platform中標籤的用戶權限通過Adobe Admin Console分配
 
 ## 後續步驟
 
-本文檔概述了Experience Platform中標籤的可用權限。 有關如何在Adobe Admin Console配置標籤的產品配置檔案的步驟，請參閱上的指南 [管理資料收集的用戶權限](../../../rtcdp-connections/permissions.md)。
+本文檔概述了Experience Platform中標籤的可用權限。 有關如何在Adobe Admin Console配置標籤的產品配置檔案的步驟，請參閱上的指南 [管理資料收集的用戶權限](../../../collection/permissions.md)。

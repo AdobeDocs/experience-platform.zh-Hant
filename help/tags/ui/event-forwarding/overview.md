@@ -3,7 +3,7 @@ title: 事件轉發概述
 description: 了解 Adobe Experience Platform 中的事件轉送功能，它可讓您使用 Platform Edge Network 執行工作，而不變更標記實施。
 feature: Event Forwarding
 exl-id: 18e76b9c-4fdd-4eff-a515-a681bc78d37b
-source-git-commit: 0a01dd2b0d8a1039178e3593475f9a87639ccdcd
+source-git-commit: 1ab1c269fd43368e059a76f96b3eb3ac4e7b8388
 workflow-type: tm+mt
 source-wordcount: '955'
 ht-degree: 8%
@@ -20,11 +20,11 @@ Adobe Experience Platform的事件轉發允許您將收集的事件資料發送�
 
 本文檔提供了平台中事件轉發的高級概述。
 
-![資料收集生態系統中的事件轉發](../../../rtcdp-connections/images/home/event-forwarding.png)
+![資料收集生態系統中的事件轉發](../../../collection/images/home/event-forwarding.png)
 
 >[!NOTE]
 >
->有關事件轉發在平台中資料收集生態系統中的作用的資訊，請參見 [資料收集概述](../../../rtcdp-connections/home.md)。
+>有關事件轉發在平台中資料收集生態系統中的作用的資訊，請參見 [資料收集概述](../../../collection/home.md)。
 
 事件轉發與Adobe Experience Platform [Web SDK](../../../edge/home.md) 和 [移動SDK](https://aep-sdks.gitbook.io/docs/) 提供了以下好處：
 

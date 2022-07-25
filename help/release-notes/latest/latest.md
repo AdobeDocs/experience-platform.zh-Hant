@@ -2,7 +2,7 @@
 title: Adobe Experience Platform 發行說明
 description: Adobe Experience Platform的最新發行說明。
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 4956b940dfd25f55eaf67296f2cb31db65fac079
+source-git-commit: 1ab1c269fd43368e059a76f96b3eb3ac4e7b8388
 workflow-type: tm+mt
 source-wordcount: '1864'
 ht-degree: 5%
@@ -77,7 +77,7 @@ Adobe Experience Platform公司提供了一套技術，使您能夠收集客戶�
 | [Google廣告增強轉換事件轉發擴展](https://partners.adobe.com/exchangeprogram/experiencecloud/exchange.details.108630.html) | Google廣告增強轉換擴展允許您即時增強Google廣告轉換。 |
 | [Mailchimp事件轉發擴展](../../tags/extensions/web/mailchimp/overview.md) | Mailchimp事件轉發擴展將事件發送到Mailchimp市場營銷API，該API可觸發Mailchimp市場營銷活動、旅程或交易的電子郵件。 |
 
-有關詳細資訊，請參閱 [資料收集概述](../../rtcdp-connections/home.md)。
+有關詳細資訊，請參閱 [資料收集概述](../../collection/home.md)。
 
 ## 體驗資料模型(XDM) {#xdm}
 

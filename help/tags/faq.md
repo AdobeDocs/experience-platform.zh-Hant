@@ -2,7 +2,7 @@
 title: 標籤疑難解答指南
 description: 獲取有關Adobe Experience Platform標籤的常見問題的答案。
 exl-id: c06b8e25-4d79-4a11-94da-94ac096b5e33
-source-git-commit: a99046cc7df18d53b068c679ab07f5f9dd8eff0a
+source-git-commit: 1ab1c269fd43368e059a76f96b3eb3ac4e7b8388
 workflow-type: tm+mt
 source-wordcount: '1049'
 ht-degree: 27%
@@ -96,13 +96,13 @@ Adobe解決方案以及大量且不斷增加的獨立分析、營銷、廣告和
 
 ## UI為什麼說載入我的帳戶時出錯？
 
-如果您收到一條消息，說載入帳戶時出錯，則表示您的帳戶不屬於任何標籤產品配置檔案。 請參閱上的指南 [管理權限](../rtcdp-connections/permissions.md) 瞭解如何在Adobe Admin Console配置產品配置檔案以授予對資料收集UI的訪問權限。
+如果您收到一條消息，說載入帳戶時出錯，則表示您的帳戶不屬於任何標籤產品配置檔案。 請參閱上的指南 [管理權限](../collection/permissions.md) 瞭解如何在Adobe Admin Console配置產品配置檔案以授予對資料收集UI的訪問權限。
 
 ## 為什麼無法在UI中添加任何屬性？
 
 如果登錄到資料收集UI時無法建立新屬性，則表示您的帳戶不屬於具有管理屬性權限的產品配置檔案。
 
-請參閱上的指南 [管理權限](../rtcdp-connections/permissions.md) 瞭解如何在Adobe Admin Console配置產品配置檔案以授予「管理屬性」權限。 有關標籤不同權限的詳細資訊，請參閱 [標籤的用戶權限](./ui/administration/user-permissions.md)。
+請參閱上的指南 [管理權限](../collection/permissions.md) 瞭解如何在Adobe Admin Console配置產品配置檔案以授予「管理屬性」權限。 有關標籤不同權限的詳細資訊，請參閱 [標籤的用戶權限](./ui/administration/user-permissions.md)。
 
 ## 若我有其他問題該怎麼辦？
 

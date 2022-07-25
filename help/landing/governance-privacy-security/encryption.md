@@ -3,7 +3,7 @@ title: Adobe Experience Platform資料加密
 topic-legacy: data protection
 description: 瞭解資料在傳輸過程中和在Adobe Experience Platform的休息時如何加密。
 exl-id: 184b2b2d-8cd7-4299-83f8-f992f585c336
-source-git-commit: 0a01dd2b0d8a1039178e3593475f9a87639ccdcd
+source-git-commit: 1ab1c269fd43368e059a76f96b3eb3ac4e7b8388
 workflow-type: tm+mt
 source-wordcount: '398'
 ht-degree: 3%
@@ -24,7 +24,7 @@ Adobe Experience Platform是一個功能強大且可擴展的系統，可跨企�
 
 通常，資料通過三種方式被引入平台：
 
-* [資料收集](../../rtcdp-connections/home.md) 功能允許網站和移動應用程式將資料發送到平台邊緣網路，以便準備準備接收。
+* [資料收集](../../collection/home.md) 功能允許網站和移動應用程式將資料發送到平台邊緣網路，以便準備準備接收。
 * [源連接器](../../sources/home.md) 將資料從Adobe Experience Cloud應用程式和其他企業資料源直接流到平台。
 * 非AdobeETL（提取、轉換、載入）工具將資料發送到 [批處理接收API](../../ingestion/batch-ingestion/overview.md) 為消費。
 

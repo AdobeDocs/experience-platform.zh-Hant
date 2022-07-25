@@ -3,7 +3,7 @@ title: 資料流概述
 description: 連接您的客戶端 Experience Platform SDK 與 Adobe 產品和協力廠商目標的整合。
 keywords: 配置；資料流；資料流；邊；資料流ID；環境設定；邊配置ID；標識；ID同步容器ID；沙盒；流入口；事件資料集；目標；客戶端代碼；屬性令牌；目標；Cookie目標；URL目標；分析設定塊報表ID；資料資料收集準備；資料準備；映射器；XDM映射器；邊緣上的映射器；
 exl-id: 736c75cb-e290-474e-8c47-2a031f215a56
-source-git-commit: 0a01dd2b0d8a1039178e3593475f9a87639ccdcd
+source-git-commit: 1ab1c269fd43368e059a76f96b3eb3ac4e7b8388
 workflow-type: tm+mt
 source-wordcount: '1774'
 ht-degree: 2%
@@ -179,4 +179,4 @@ ht-degree: 2%
 
 ## 後續步驟
 
-本指南介紹了如何管理資料收集UI中的資料流。 有關如何在設定資料流後安裝和配置Web SDK的詳細資訊，請參閱 [資料收集E2E指南](../../rtcdp-connections/e2e.md#install)。
+本指南介紹了如何管理資料收集UI中的資料流。 有關如何在設定資料流後安裝和配置Web SDK的詳細資訊，請參閱 [資料收集E2E指南](../../collection/e2e.md#install)。

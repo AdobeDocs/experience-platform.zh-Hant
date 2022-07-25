@@ -3,7 +3,7 @@ keywords: Experience Platform；首頁；熱門主題；源；源；資料收集
 title: Adobe資料收集
 description: 此文檔概述了Adobe資料收集源。
 exl-id: 3cb582a9-b852-4ede-8047-af1a47aa3647
-source-git-commit: 0a01dd2b0d8a1039178e3593475f9a87639ccdcd
+source-git-commit: 1ab1c269fd43368e059a76f96b3eb3ac4e7b8388
 workflow-type: tm+mt
 source-wordcount: '296'
 ht-degree: 0%
@@ -32,8 +32,8 @@ Adobe資料收集的源整合允許您通過源目錄訪問資料收集體驗邊
 
 ![資料流](./images/data-collection/datastreams.png)
 
-有關如何使用資料收集UI的全面步驟，請參見 [資料收集端到端概述](../../../rtcdp-connections/e2e.md)。
+有關如何使用資料收集UI的全面步驟，請參見 [資料收集端到端概述](../../../collection/e2e.md)。
 
 ## 後續步驟
 
-通過閱讀此文檔，您已學會了如何使用源工作區訪問資料收集UI。 有關資料收集的詳細資訊，請參閱 [資料收集概述](../../../rtcdp-connections/e2e.md)。
+通過閱讀此文檔，您已學會了如何使用源工作區訪問資料收集UI。 有關資料收集的詳細資訊，請參閱 [資料收集概述](../../../collection/e2e.md)。
