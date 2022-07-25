@@ -1,7 +1,8 @@
 ---
 title: 帳戶配置檔案儀表板
 description: Adobe Experience Platform提供了一個儀表板，您可以通過該儀表板查看有關組織B2B帳戶配置檔案的重要資訊。
-source-git-commit: 4ff30c689808e0513245852625efc4a162ab2c0e
+exl-id: c9a3d786-6240-4ba4-96c8-05f658e1150c
+source-git-commit: 8de94d38fd1d2c001935180851d6877dfe2a8941
 workflow-type: tm+mt
 source-wordcount: '822'
 ht-degree: 0%
@@ -42,7 +43,7 @@ Adobe Experience Platform用戶介面(UI)提供了一個儀表板，您可以通
 
 選擇 [!UICONTROL 配置檔案ID] 顯示在 [!UICONTROL 瀏覽] 按鈕 [!UICONTROL 詳細資訊] 頁籤。
 
-![「帳戶配置檔案」瀏覽頁籤顯示結果，並突出顯示「配置檔案ID」。](../images/account-profiles/account-profiles-browse-tab.png) —>
+![「帳戶配置檔案」瀏覽頁籤顯示結果，並突出顯示「配置檔案ID」。](../images/account-profiles/account-profiles-browse-tab.png)
 
 顯示在 [!UICONTROL 詳細資訊] 已從多個配置檔案片段合併到一起，以形成單個帳戶的單個視圖。 請參閱 [瀏覽帳戶配置檔案Real-time Customer Data Platform](../../rtcdp/accounts/account-profile-ui-guide.md#browse-account-profiles) 瞭解有關平台UI中帳戶配置檔案查看功能的詳細資訊。
 

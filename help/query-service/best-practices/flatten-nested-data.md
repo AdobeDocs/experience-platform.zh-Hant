@@ -2,7 +2,8 @@
 keywords: Experience Platform；查詢服務；查詢服務；嵌套資料結構；嵌套資料；拼合；拼合嵌套資料；
 title: 拼合用於BI工具的嵌套資料結構
 description: 本文檔介紹在將第三方BI工具與查詢服務一起使用時，如何在會話期間展平所有表和視圖的XDM架構。
-source-git-commit: 3c9a1f552760b34bfb2c4246382fcb2d66e563d0
+exl-id: 7e534c0a-db6c-463e-85da-88d7b2534ece
+source-git-commit: a7f273383293359cf6adbcc0a508fb19d2789339
 workflow-type: tm+mt
 source-wordcount: '865'
 ht-degree: 0%
@@ -55,7 +56,7 @@ prod:all?FLATTEN
 
 本指南中使用的示例架構採用標準欄位組 [!UICONTROL 商業詳細資訊]它利用 `commerce` 對象結構和 `productListItems` 陣列。 有關 [更多資訊 [!UICONTROL 商業詳細資訊] 欄位組](../../xdm/field-groups/event/commerce-details.md)。 在下圖中可看到模式結構的表示。
 
-![Commerce Details欄位組的架構圖，包括 `commerce` 和 `productListItems` 結構。](../images/best-practices/final-subscription-schema.png)
+![Commerce Details欄位組的架構圖，包括 `commerce` 和 `productListItems` 結構。](../images/best-practices/flatten-nested-data/commerce-details.png)
 
 如果BI工具不支援嵌套資料結構，則如果嵌套欄位包含序列化值(如 `commerce` 和 `productListItems` )。 這些值可能作為單個編碼的部分出現 `commerce` 字串欄位，不現實地不可用。
 
