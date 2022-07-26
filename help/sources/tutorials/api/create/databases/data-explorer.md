@@ -6,18 +6,14 @@ topic-legacy: overview
 type: Tutorial
 description: 瞭解如何使用流服務API將AzureData Explorer連接到Adobe Experience Platform。
 exl-id: 1b17bbb0-1f7b-4d89-a158-ad269e6edf30
-source-git-commit: 93061c84639ca1fdd3f7abb1bbd050eb6eebbdd6
+source-git-commit: 1e2644b7d83a0bcb7175f27d7c4859c0efba4060
 workflow-type: tm+mt
-source-wordcount: '538'
+source-wordcount: '522'
 ht-degree: 1%
 
 ---
 
 # 建立 [!DNL Azure Azure Data Explorer] 基本連接使用 [!DNL Flow Service] API
-
->[!NOTE]
->
->的 [!DNL Azure Azure Data Explorer] 連接器位於beta中。 查看 [源概述](../../../../home.md#terms-and-conditions) 的子菜單。
 
 基連接表示源和Adobe Experience Platform之間經過驗證的連接。
 

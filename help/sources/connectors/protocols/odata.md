@@ -1,22 +1,18 @@
 ---
 keywords: Experience Platform；首頁；熱門主題；OData;odata;oData；通用OData；通用資料
 solution: Experience Platform
-title: 通用OData源連接器概述
+title: 一般OData源概述
 topic-legacy: overview
 description: 瞭解如何使用API或用戶介面將Generic OData連接到Adobe Experience Platform。
 exl-id: ff50f883-d4fd-4f32-a9d6-fe4624a32e24
-source-git-commit: fa861e9740e05b4fcc4e8039bb288301d42b8357
+source-git-commit: 1e2644b7d83a0bcb7175f27d7c4859c0efba4060
 workflow-type: tm+mt
-source-wordcount: '239'
+source-wordcount: '221'
 ht-degree: 0%
 
 ---
 
-# (Beta) [!DNL Generic OData] 連接器
-
->[!NOTE]
->
->的 [!DNL Generic OData] 連接器位於beta中。 查看 [源概述](../../home.md#terms-and-conditions) 的子菜單。
+# [!DNL Generic OData] 源
 
 Adobe Experience Platform允許從外部源接收資料，同時讓您能夠使用 [!DNL Platform] 服務。 您可以從多種源(如Adobe應用程式、基於雲的儲存、資料庫和許多其他源)接收資料。
 

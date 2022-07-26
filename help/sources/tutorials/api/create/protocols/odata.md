@@ -6,18 +6,14 @@ topic-legacy: overview
 type: Tutorial
 description: 瞭解如何使用流服務API將通用OData連接到Adobe Experience Platform。
 exl-id: 45b302cb-1a43-4fab-a8a2-cb4e1ee129f9
-source-git-commit: 93061c84639ca1fdd3f7abb1bbd050eb6eebbdd6
+source-git-commit: 1e2644b7d83a0bcb7175f27d7c4859c0efba4060
 workflow-type: tm+mt
-source-wordcount: '449'
+source-wordcount: '433'
 ht-degree: 2%
 
 ---
 
 # 建立 [!DNL Generic OData] 基本連接使用 [!DNL Flow Service] API
-
->[!NOTE]
->
->的 [!DNL Generic OData] 連接器位於beta中。 查看 [源概述](../../../../home.md#terms-and-conditions) 的子菜單。
 
 基連接表示源和Adobe Experience Platform之間經過驗證的連接。
 
