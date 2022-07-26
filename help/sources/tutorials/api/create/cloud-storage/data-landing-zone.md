@@ -6,16 +6,16 @@ topic-legacy: overview
 type: Tutorial
 description: 瞭解如何使用流服務API將Adobe Experience Platform連接到資料登錄區。
 exl-id: bdb60ed3-7c63-4a69-975a-c6f1508f319e
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: b98afad74ef45cf3fabb9fa1ced283b2c768cef8
 workflow-type: tm+mt
-source-wordcount: '1223'
+source-wordcount: '1222'
 ht-degree: 4%
 
 ---
 
 # 連接 [!DNL Data Landing Zone] 到Adobe Experience Platform使用流服務API
 
-[!DNL Data Landing Zone] 是基於雲的資料儲存設施，用於預配有Adobe Experience Platform的臨時檔案儲存。 資料將自動從 [!DNL Data Landing Zone] 七天後。
+[!DNL Data Landing Zone] 是一種安全、基於雲的檔案儲存設施，用於將檔案帶入Adobe Experience Platform。 資料將自動從 [!DNL Data Landing Zone] 七天後。
 
 本教程將指導您完成如何建立 [!DNL Data Landing Zone] 源連接使用 [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/)。 本教程還提供有關如何檢索 [!DNL Data Landing Zone]，以及查看和刷新您的憑據。
 
