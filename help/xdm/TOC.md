@@ -4,10 +4,10 @@ user-guide-title: 體驗資料模型 (XDM) 系統說明
 breadcrumb-title: 體驗資料模型 (XDM) 指南
 user-guide-description: 使用體驗資料模型 (XDM) 類別和結構描述欄位群組，將體驗資料標準化。
 feature: Schemas
-source-git-commit: c57c0ff63abe35fcf0246088b12b6bc6cfc542b6
+source-git-commit: e476574e35ea18a50749009ffd1b4182941cc496
 workflow-type: tm+mt
-source-wordcount: '473'
-ht-degree: 16%
+source-wordcount: '503'
+ht-degree: 15%
 
 ---
 
@@ -25,14 +25,19 @@ ht-degree: 16%
       * [總覽](./schema/industries/overview.md)
       * [零售](./schema/industries/retail.md)
       * [金融服務](./schema/industries/financial.md)
+      * [保健](./schema/industries/healthcare.md)
       * [電信](./schema/industries/telecom.md)
       * [旅行和招待](./schema/industries/travel-hospitality.md)
    * [XDM欄位字典](schema/field-dictionary.md)
 * 類別 {#classes}
    * [XDM個人配置檔案](./classes/individual-profile.md)
    * [XDM體驗事件](./classes/experienceevent.md)
+   * [藥物](./classes/medication.md)
+   * [付款人](./classes/payer.md)
+   * [計劃](./classes/plan.md)
    * [策略](./classes/policy.md)
    * [產品](./classes/product.md)
+   * [提供程式](./classes/provider.md)
    * [段定義](./classes/segment-definition.md)
    * B2B類 {#b2b}
       * [XDM業務客戶](./classes/b2b/business-account.md)
@@ -45,12 +50,13 @@ ht-degree: 16%
       * [XDM業務營銷清單成員](./classes/b2b/business-marketing-list-members.md)
 * 欄位群組 {#field-groups}
    * XDM個人配置檔案 {#profile}
+      * [同意和首選項](./field-groups/profile/consents.md)
       * [人口結構詳細資訊](./field-groups/profile/demographic-details.md)
       * [IAB TCF 2.0同意](./field-groups/profile/iab.md)
       * [標識映射](./field-groups/profile/identitymap.md)
+      * [醫療保健成員詳細資訊](./field-groups/profile/healthcare-member-details.md)
       * [會員詳細資訊](./field-groups/profile/loyalty-details.md)
       * [個人聯繫人詳細資訊](./field-groups/profile/personal-contact-details.md)
-      * [同意和首選項](./field-groups/profile/consents.md)
       * [段成員身份詳細資訊](./field-groups/profile/segmentation.md)
       * [電信訂閱](./field-groups/profile/telecom-subscription.md)
       * [工作聯繫人詳細資訊](./field-groups/profile/work-contact-details.md)
@@ -58,6 +64,8 @@ ht-degree: 16%
       * [XDM業務人員詳細資訊](./field-groups/profile/business-person-details.md)
    * XDM體驗事件 {#event}
       * [Adobe Analytics全分機](./field-groups/event/analytics-full-extension.md)
+      * [廣告詳細資訊](./field-groups/event/advertising-details.md)
+      * [應用程式詳細資訊](./field-groups/event/application-details.md)
       * [餘額轉移](./field-groups/event/balance-transfers.md)
       * [市場活動市場營銷詳細資訊](./field-groups/event/campaign-marketing-details.md)
       * [卡操作](./field-groups/event/card-actions.md)
@@ -73,6 +81,7 @@ ht-degree: 16%
       * [住宿預訂](./field-groups/event/lodging-reservation.md)
       * [報價請求詳細資訊](./field-groups/event/quote-request-details.md)
       * [保留詳細資訊](./field-groups/event/reservation-details.md)
+      * [站點工具詳細資訊](./field-groups/event/sitetool-details.md)
       * [支援站點搜索](./field-groups/event/support-site-search.md)
       * [升級詳細資訊](./field-groups/event/upgrade-details.md)
       * [追加銷售詳細資訊](./field-groups/event/upsell-details.md)
@@ -81,11 +90,19 @@ ht-degree: 16%
       * [XDM業務活動詳細資訊](./field-groups/b2b-campaign/details.md)
    * XDM業務活動成員 {#b2b-campaign-members}
       * [XDM業務活動成員詳細資訊](./field-groups/b2b-campaign-members/details.md)
+   * 藥物 {#medication}
+      * [一種保健藥物](./field-groups/medication/healthcare-medication.md)
+   * 計劃 {#plan}
+      * [醫療保健計畫詳細資訊](./field-groups/plan/healthcare-plan-details.md)
    * 產品 {#product}
       * [產品目錄](./field-groups/product/product-catalog.md)
       * [產品類別](./field-groups/product/product-category.md)
+   * 提供程式 {#provider}
+      * [醫療保健提供商](./field-groups/provider/healthcare-provider.md)
    * [欄位組名稱更新](./field-groups/name-updates.md)
 * 資料類型 {#data-types}
+   * [帳戶詳細資訊](./data-types/account-details.md)
+   * [廣告分段](./data-types/ad-break.md)
    * [應用程式](./data-types/application.md)
    * [信標](./data-types/beacon.md)
    * [瀏覽器詳細資訊](./data-types/browser-details.md)
@@ -111,6 +128,7 @@ ht-degree: 16%
    * [地理形狀](./data-types/geo-shape.md)
    * [身分](./data-types/identity.md)
    * [曝光數](./data-types/impressions.md)
+   * [實施詳細資訊](./data-types/implementation-details.md)
    * [內部站點搜索](./data-types/internal-site-search.md)
    * [鍵值對](./data-types/key-value-pair.md)
    * [營銷](./data-types/marketing.md)
