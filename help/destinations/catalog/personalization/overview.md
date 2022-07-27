@@ -3,9 +3,9 @@ keywords: 個性化；個性化
 title: 個性化目標概述
 description: 個性化平台從單個行為收集資料和洞察力。 這些平台可以幫助營銷人員導航匿名資料，根據先前的活動或作為具有類似習慣的受眾群的一部分向潛在客戶提供優惠或廣告。
 exl-id: 18a2b170-43d0-4d41-8afc-d2f0f9bfd7bb
-source-git-commit: 7acb823b9cbfb4a7988235949c6d2fd0b9baa7c0
+source-git-commit: 26fb80a2a09b8374ddec8e164817855169fa0a81
 workflow-type: tm+mt
-source-wordcount: '143'
+source-wordcount: '148'
 ht-degree: 11%
 
 ---
@@ -24,6 +24,7 @@ ht-degree: 11%
 
 * [Adobe Target](adobe-target-connection.md)
 * [自定義個性化連接](custom-personalization.md)
+* [Pega客戶決策中心連接](pega.md)
 
 **擴充功能**
 
