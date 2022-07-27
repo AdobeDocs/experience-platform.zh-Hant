@@ -2,9 +2,9 @@
 title: Adobe Experience Platform 發行說明
 description: Adobe Experience Platform的最新發行說明。
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: fc910ec906e2d59f3a35b81377f7c97b7cafbabe
+source-git-commit: 93ac391370ddd1fe596b8515bd520fb870a10a3c
 workflow-type: tm+mt
-source-wordcount: '1706'
+source-wordcount: '1913'
 ht-degree: 5%
 
 ---
@@ -18,7 +18,9 @@ Adobe Experience Platform 現有功能更新：
 - [儀表板](#dashboards)
 - [資料收集](#collection)
 - [[!DNL Data Prep]](#data-prep)
+- [[!DNL Destinations]](#destinations)
 - [體驗資料模型(XDM)](#xdm)
+
 <!-- - [Real-time Customer Data Platform B2B Edition](#b2b) -->
 - [即時客戶個人檔案](#profile)
 - [來源](#sources)
@@ -98,6 +100,29 @@ Adobe Experience Platform公司提供了一套技術，使您能夠收集客戶�
 {style=&quot;table-layout:auto&quot;&quot;
 
 瞭解有關 [!DNL Data Prep]，請參見 [[!DNL Data Prep] 概述](../../data-prep/home.md)。
+
+## [!DNL Destinations] {#destinations}
+
+[!DNL Destinations] 是預先構建的與目標平台的整合，允許無縫激活來自Adobe Experience Platform的資料。 您可以使用目標來激活跨渠道市場營銷活動、電子郵件活動、目標廣告和許多其他使用案例的已知和未知資料。
+
+**新增或更新的功能**
+
+| 功能 | 說明 |
+| ----------- | ----------- |
+| [立即導出檔案(Beta)](../../destinations/ui/export-file-now.md) | 導出完整檔案，而不中斷先前計畫段的當前導出計畫。 此導出除了以前計畫的導出外，不會更改段的導出頻率。 <br> 檔案導出會立即觸發，它會從Experience Platform分段運行中獲取最新結果。 <br> <br>請與Adobe代表聯繫以訪問此功能。 |
+
+{style=&quot;table-layout:auto&quot;&quot;
+
+**新目標**
+
+| 目的地 | 說明 |
+| ----------- | ----------- |
+| [(Beta) [!DNL Trade Desk] - CRM連接](../../destinations/catalog/advertising/tradedesk-emails.md) | 使用 [!DNL The Trade Desk] CRM目標，將配置檔案激活到 [!DNL Trade Desk] 針對基於CRM資料的受眾目標和禁止的帳戶。 <br><br>此目標當前處於Beta中。 文檔和功能可能會更改。 |
+| [(Beta) [!DNL Snap Inc.]](../../destinations/catalog/advertising/snap-inc.md) | 這個目的地使營銷人員能夠將通過Experience Platform建立的用戶段導入Snapchat廣告中，並用它們來瞄準他們的廣告。 <br><br>此目標當前處於Beta中。 文檔和功能可能會更改。 |
+
+{style=&quot;table-layout:auto&quot;&quot;
+
+有關目標的更多一般資訊，請參閱 [目標概述](../../destinations/home.md)。
 
 ## 體驗資料模型(XDM) {#xdm}
 
