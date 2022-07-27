@@ -5,9 +5,9 @@ seo-title: Client-side logging for A4T data in the Platform Web SDK
 seo-description: Learn how to enable client-side logging for Adobe Analytics for Target (A4T) using the Experience Platform Web SDK.
 keywords: 目標；a4t;logging;web sdk;experience;platform;target;a4t;logging;web sdk;experience;platform
 exl-id: 7071d7e4-66e0-4ab5-a51a-1387bbff1a6d
-source-git-commit: fb0d8aedbb88aad8ed65592e0b706bd17840406b
+source-git-commit: de420d3bbf35968fdff59b403a0f2b18110f3c17
 workflow-type: tm+mt
-source-wordcount: '1159'
+source-wordcount: '1155'
 ht-degree: 4%
 
 ---
@@ -136,7 +136,7 @@ Adobe Experience PlatformWeb SDK允許您收集 [Adobe Analytics代目標(A4T)](
 }
 ```
 
-基於表單的Experience Composer活動的陳述可以包含內容，按一下同一陳述下的度量項。 因此，不用在中為內容顯示提供單個分析令牌 `scopeDetails.characteristics.analyticsToken` 屬性，它們可具有在下指定的顯示和按一下分析標籤 `scopeDetails.characteristics.analyticsTokens` 對象，在 `display` 和 `click` 屬性。
+基於表單的Experience Composer活動的陳述可以包含內容，按一下同一陳述下的度量項。 因此，不用在中為內容顯示提供單個分析令牌 `scopeDetails.characteristics.analyticsToken` 屬性，這些標籤可具有在中指定的顯示和按一下分析標籤 `scopeDetails.characteristics.analyticsDisplayToken` 和 `scopeDetails.characteristics.analyticsClickToken` 屬性。
 
 ```json
 {
@@ -162,14 +162,10 @@ Adobe Experience PlatformWeb SDK允許您收集 [Adobe Analytics代目標(A4T)](
               }
             ],
             "characteristics": {
-              "eventTokens": {
-                "display": "2lTS5KA6gj4JuSjOdhqUhGqipfsIHvVzTQxHolz2IpTMromRrB5ztP5VMxjHbs7c6qPG9UF4rvQTJZniWgqbOw==",
-                "click": "E0gb6q1+WyFW3FMbbQJmrg=="
-              },
-              "analyticsTokens": {
-                "display": "434689:0:0|2,434689:0:0|1",
-                "click": "434689:0:0|32767"
-              }
+               "displayToken": "2lTS5KA6gj4JuSjOdhqUhGqipfsIHvVzTQxHolz2IpTMromRrB5ztP5VMxjHbs7c6qPG9UF4rvQTJZniWgqbOw==",
+               "clickToken": "E0gb6q1+WyFW3FMbbQJmrg==",
+               "analyticsDisplayToken": "434689:0:0|2,434689:0:0|1", 
+               "analyticsClickToken": "434689:0:0|32767"
             }
           },
           "items": [
@@ -208,11 +204,11 @@ Adobe Experience PlatformWeb SDK允許您收集 [Adobe Analytics代目標(A4T)](
 }
 ```
 
-所有值 `scopeDetails.characteristics.analyticsToken`，以及 `scopeDetails.characteristics.analyticsTokens.display` （用於顯示的內容）和 `scopeDetails.characteristics.analyticsTokens.click` （用於按一下度量）是需要收集並作為 `tnta` 標籤 [資料插入API](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/data-insertion-api/index.md) 呼叫。
+所有值 `scopeDetails.characteristics.analyticsToken`，以及 `scopeDetails.characteristics.analyticsDisplayToken` （用於顯示的內容）和 `scopeDetails.characteristics.analyticsClickToken` （用於按一下度量）是需要收集並作為 `tnta` 標籤 [資料插入API](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/data-insertion-api/index.md) 呼叫。
 
 >[!IMPORTANT]
 >
->請注意 `analyticsToken`/`analyticsTokens` 屬性可以包含多個標籤，並連接為一個逗號分隔的字串。
+>的 `analyticsToken`。 `analyticsDisplayToken`。 `analyticsClickToken` 屬性可以包含多個標籤，並連接為一個逗號分隔的字串。
 >
 >在下一節中提供的實現示例中，將迭代收集多個分析令牌。 要連接分析令牌的陣列，請使用類似以下函式：
 >
@@ -344,13 +340,10 @@ alloy("sendEvent", {
         }
       ],
       "characteristics": {
-        "eventTokens": {
-          "display": "91TS5KA6gj4JuSjOdhqUhGqipfsIHvVzTQxHolz2IpTMromRrB5ztP5VMxjHbs7c6qPG9UF4rvQTJZniWgqgEt==",
-          "click": "Tagb6q1+WyFW3FMbbQJrtg=="
-        },
-        "analyticsTokens": {
-          "display": "434688:0:0|2,434688:0:0|1",
-          "click": "434688:0:0|32767"
+          "displayToken": "91TS5KA6gj4JuSjOdhqUhGqipfsIHvVzTQxHolz2IpTMromRrB5ztP5VMxjHbs7c6qPG9UF4rvQTJZniWgqgEt==",
+          "clickToken": "Tagb6q1+WyFW3FMbbQJrtg==",
+          "analyticsDisplayTokens": "434688:0:0|2,434688:0:0|1",
+          "analyticsClickTokens": "434688:0:0|32767"
         }
       }
     },
@@ -392,8 +385,8 @@ function getDisplayAnalyticsPayload(proposition) {
     return;
   }
   var characteristics = proposition.scopeDetails.characteristics;
-  if (characteristics.analyticsTokens) {
-    return characteristics.analyticsTokens.display;
+  if (characteristics.analyticsDisplayToken) {
+    return characteristics.analyticsDisplayToken;
   }
   return characteristics.analyticsToken;
 }
@@ -420,8 +413,8 @@ function getClickAnalyticsPayload(proposition) {
     return;
   }
   var characteristics = proposition.scopeDetails.characteristics;
-  if (characteristics.analyticsTokens) {
-    return characteristics.analyticsTokens.click;
+  if (characteristics.analyticsClickToken) {
+    return characteristics.analyticsClickToken;
   }
   return characteristics.analyticsToken;
 }
