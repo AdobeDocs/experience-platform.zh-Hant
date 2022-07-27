@@ -4,9 +4,9 @@ title: 配置式儀表板
 description: Adobe Experience Platform提供了一個儀表板，您可以通過該儀表板查看有關您組織的即時客戶配置檔案資料的重要資訊。
 type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
-source-git-commit: 4bb0078b6687da5239f57e7285507815aa7f3255
+source-git-commit: a1a5a34ed0f46223b1eae3df75ff65f27041503e
 workflow-type: tm+mt
-source-wordcount: '3814'
+source-wordcount: '3875'
 ht-degree: 1%
 
 ---
@@ -98,8 +98,10 @@ Adobe提供了多個標準小部件，您可以使用這些小部件來可視化
 要瞭解有關每個可用標準小部件的詳細資訊，請從以下清單中選擇小部件的名稱：
 
 * [[!UICONTROL 配置檔案計數]](#profile-count)
-* [[!UICONTROL 已添加配置檔案]](#profiles-added)
-* [[!UICONTROL 配置檔案添加趨勢]](#profiles-added-trend)
+* [[!UICONTROL 配置檔案計數趨勢]](#profile-count-trend)
+* [[!UICONTROL 配置檔案計數更改]](#profile-count-change)
+* [[!UICONTROL 配置檔案計數更改趨勢]](#profiles-count-change-trend)
+* [[!UICONTROL 配置檔案計數按標識的更改趨勢]](#profiles-count-change-trend-by-identity)
 * [[!UICONTROL 按身份顯示的配置檔案]](#profiles-by-identity)
 * [[!UICONTROL 身份重疊]](#identity-overlap)
 * [[!UICONTROL 單個身份配置檔案]](#single-identity-profiles)
@@ -109,10 +111,8 @@ Adobe提供了多個標準小部件，您可以使用這些小部件來可視化
 * [[!UICONTROL 受眾]](#audiences)
 * [[!UICONTROL 映射到目標狀態的受眾]](#audiences-mapped-to-destination-status)
 * [[!UICONTROL 觀眾大小]](#audiences-size)
-* [[!UICONTROL 配置檔案計數趨勢]](#profile-count-trend)
 * [[!UICONTROL 單個身份配置檔案（按身份）]](#single-identity-profiles-by-identity)
 * [[!UICONTROL 按合併策略的受眾重疊]](#audience-overlap-by-merge-policy)
-* [[!UICONTROL 配置檔案計數按標識的更改趨勢]](#profiles-count-change-trend-by-identity)
 
 ### [!UICONTROL 配置檔案計數] {#profile-count}
 
@@ -120,7 +120,7 @@ Adobe提供了多個標準小部件，您可以使用這些小部件來可視化
 >id="platform_dashboards_profiles_profilecount"
 >title="配置檔案計數"
 >abstract="此小部件顯示建立快照時配置檔案儲存中合併的配置檔案總數。 該數字取決於將要應用於配置檔案資料的所選合併策略。"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html#profile-count" text="從文檔瞭解更多資訊"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html" text="從文檔瞭解更多資訊"
 
 的 **[!UICONTROL 配置檔案計數]** 小部件顯示拍攝快照時配置檔案儲存中合併的配置檔案總數。 此數字是將所選合併策略應用於配置檔案資料的結果，以便將配置檔案片段合併到一起，為每個個體形成單個配置檔案。
 
@@ -134,43 +134,57 @@ Adobe提供了多個標準小部件，您可以使用這些小部件來可視化
 
 ![](../images/profiles/profile-count.png)
 
-### [!UICONTROL 已添加配置檔案] {#profiles-added}
+### [!UICONTROL 配置檔案計數趨勢] {#profile-count-trend}
 
-<!-- This CONTEXTUALHELP was commented out because this widget name will change. Details in https://jira.corp.adobe.com/browse/PLAT-120313  -->
+的 [!UICONTROL 配置檔案計數趨勢] 小部件使用線形圖來說明一段時間內系統中包含的配置檔案總數的趨勢。 此總數包括自上次每日快照後導入到系統的任何配置檔案。 資料可以在30天、90天和12個月期間進行可視化。 時間段從小部件的下拉菜單中選擇。
 
-<!-- >[!CONTEXTUALHELP]
->id="platform_dashboards_profiles_profilesadded"
->title="Profiles added"
->abstract="This widget displays the total number of merged profiles **added** to the Profile Store at the time of the last snapshot. The number depends on the selected merge policy being applied to your Profile data."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html#profiles-added" text="Learn more from documentation" -->
+![配置檔案計數趨勢小部件。](../images/profiles/profile-count-trend.png)
 
-的 **[!UICONTROL 已添加配置檔案]** 構件顯示上次快照時添加到配置檔案儲存的合併配置檔案總數。 此數字是將所選合併策略應用於配置檔案資料的結果，以便將配置檔案片段合併到一起，為每個個體形成單個配置檔案。 您可以使用下拉選擇器查看過去30天、90天或12個月中添加的配置檔案。
+### [!UICONTROL 配置檔案計數更改] {#profile-count-change}
+
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_profiles_profilescountchange"
+>title="配置檔案計數更改"
+>abstract="此小部件顯示合併的配置檔案總數 **添加** 上次快照時儲存到配置檔案。 該數字取決於將要應用於配置檔案資料的所選合併策略。"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html" text="從文檔瞭解更多資訊"
+
+的 **[!UICONTROL 配置檔案計數更改]** 構件顯示自上一個快照後添加到配置檔案儲存的合併配置檔案數。 此數字是將所選合併策略應用於配置檔案資料的結果，以便將配置檔案片段合併到一起，為每個個體形成單個配置檔案。 您可以使用下拉選擇器查看過去30天、90天或12個月中添加的配置檔案數。
 
 >[!NOTE]
 >
->的 [!UICONTROL 已添加配置檔案] 構件反映添加的配置檔案數 **後** 初始配置檔案接收和配置檔案儲存設定。 換句話說，如果您的組織在第1天設定了配置檔案儲存並接收了4,000,000，那麼在24小時內，儀表板將可用，但 [!UICONTROL 已添加配置檔案] 小部件將設定為0。 這樣做是為了避免與將配置檔案初始接收到系統中相關的尖峰。 在接下來的30天中，您的組織將另外1,000,000個配置檔案添加到配置檔案儲存中。 拍攝下一個快照後， [!UICONTROL 已添加配置檔案] 小部件將顯示添加的共1,000,000個配置檔案，而 [!UICONTROL 配置檔案計數] 小部件將顯示5,000,000個配置檔案。
+>的 [!UICONTROL 配置檔案計數更改] 構件反映添加的配置檔案數 **後** 初始配置檔案接收和配置檔案儲存設定。 換句話說，如果您的組織在第1天設定了配置檔案儲存並接收了4,000,000，那麼在24小時內，儀表板將可用，但 [!UICONTROL 配置檔案計數更改] 小部件將設定為0。 這樣做是為了避免與將配置檔案初始接收到系統中相關的尖峰。 在接下來的30天中，您的組織將另外1,000,000個配置檔案添加到配置檔案儲存中。 拍攝下一個快照後， [!UICONTROL 配置檔案計數更改] 小部件將顯示添加的共1,000,000個配置檔案，而 [!UICONTROL 配置檔案計數] 小部件將顯示5,000,000個配置檔案。
 
-![](../images/profiles/profiles-added.png)
+![突出顯示了配置檔案計數更改小部件的平台UI配置檔案儀表板。](../images/profiles/profile-count-change.png)
 
-### [!UICONTROL 配置檔案添加趨勢] {#profiles-added-trend}
+### [!UICONTROL 配置檔案計數更改趨勢] {#profiles-count-change-trend}
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_profiles_profilesaddedtrend"
->title="配置檔案添加趨勢"
->abstract="此小部件顯示過去30天、90天或12個月中每天添加到配置檔案儲存的合併配置檔案總數。 該數字還取決於所選合併策略正應用於您的配置檔案資料。"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html#profiles-count-trend" text="從文檔瞭解更多資訊"
+>title="配置檔案計數更改趨勢"
+>abstract="此小部件顯示過去30天、90天或12個月中每天添加到配置檔案儲存的合併配置檔案數。 該數字還取決於所選合併策略正應用於您的配置檔案資料。"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html" text="從文檔瞭解更多資訊"
 
-的 **[!UICONTROL 配置檔案添加趨勢]** 構件顯示過去30天、90天或12個月中每天添加到配置檔案儲存的合併配置檔案總數。 此數字在每天拍攝快照時都會更新，因此，如果要將配置式導入到平台中，則在拍攝下一個快照之前不會反映配置檔案的數量。 添加的配置檔案計數是將所選合併策略應用於配置檔案資料的結果，以便將配置檔案片段合併到一起，為每個個體形成單個配置檔案。
+的 **[!UICONTROL 配置檔案計數更改趨勢]** 構件顯示過去30天、90天或12個月中每天添加到配置檔案儲存的合併配置檔案總數。 此數字在每天拍攝快照時都會更新，因此，如果要將配置式導入到平台中，則在拍攝下一個快照之前不會反映配置檔案的數量。 添加的配置檔案計數是將所選合併策略應用於配置檔案資料的結果，以便將配置檔案片段合併到一起，為每個個體形成單個配置檔案。
 
 查看 [本文檔前面的合併策略部分](#merge-policies) 來瞭解更多資訊。
 
-的 **[!UICONTROL 配置檔案添加趨勢]** 小部件在小部件的右上角顯示「字幕」按鈕。 選擇 **[!UICONTROL 字幕]** 的子菜單。
+的 **[!UICONTROL 配置檔案計數更改趨勢]** 小部件在小部件的右上角顯示「字幕」按鈕。 選擇 **[!UICONTROL 字幕]** 的子菜單。
 
-![「配置檔案概述」頁籤顯示「配置檔案」添加的趨勢構件，並突出顯示標題按鈕。](../images/profiles/profiles-added-trend-captions.png)
+![顯示「配置檔案計數」更改趨勢小部件的「配置檔案概述」頁籤，並突出顯示標題按鈕。](../images/profiles/profiles-count-change-trend-captions.png)
 
 機器學習模型通過分析圖表和資料自動生成描述關鍵趨勢和重要事件的字幕。
 
-![「配置檔案」添加的趨勢構件的自動字幕對話框。](../images/profiles/profiles-added-trends-automatic-captions-dialog.png)
+![配置檔案計數更改趨勢構件的自動字幕對話框。](../images/profiles/profiles-added-trends-automatic-captions-dialog.png)
+
+### [!UICONTROL 配置檔案計數按標識的更改趨勢] {#profiles-count-change-trend-by-identity}
+
+<!-- This widget uses a line graph to illustrate the change in number of profiles filtered by a chosen source identity and merge policy. -->
+
+此小部件基於選定的源標識和合併策略篩選配置檔案計數，然後使用線形圖說明不同期間的編號變化。 合併策略從頁面頂部的概述下拉清單中選擇，源標識和時間段從構件下拉菜單中選擇。 該趨勢可以在30天、90天和12個月期間進行可視化。
+
+此小部件通過演示按所需身份篩選的配置檔案的增長模式，幫助您管理目標激活需求。
+
+![配置檔案計數按身份小部件的更改趨勢。](../images/profiles/profiles-count-change-trend-by-identity.png)
 
 ### [!UICONTROL 按身份顯示的配置檔案] {#profiles-by-identity}
 
@@ -178,7 +192,7 @@ Adobe提供了多個標準小部件，您可以使用這些小部件來可視化
 >id="platform_dashboards_profiles_profilesbyidentity"
 >title="按身份顯示的配置檔案"
 >abstract="此小部件按標識顯示配置檔案儲存中所有合併配置檔案的細分。"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html#profiles-by-identity" text="從文檔瞭解更多資訊"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html" text="從文檔瞭解更多資訊"
 
 的 **[!UICONTROL 按身份顯示的配置檔案]** 小部件顯示配置檔案儲存中所有合併配置檔案的標識細分。 按標識列出的配置檔案總數（即，將每個命名空間顯示的值相加）可能高於合併的配置檔案總數，因為一個配置檔案可能具有與其關聯的多個命名空間。 例如，如果客戶在多個渠道上與您的品牌進行交互，則多個命名空間將與該客戶關聯。
 
@@ -200,7 +214,7 @@ Adobe提供了多個標準小部件，您可以使用這些小部件來可視化
 >id="platform_dashboards_profiles_identityoverlap"
 >title="身份重疊"
 >abstract="此小部件使用Venn圖來顯示配置檔案儲存中包含兩個選定標識的配置檔案的重疊。"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html#identity-overlap" text="從文檔瞭解更多資訊"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html" text="從文檔瞭解更多資訊"
 
 的 **[!UICONTROL 身份重疊]** 小部件使用Venn圖或設定圖來顯示配置檔案儲存中包含兩個選定標識的配置檔案的重疊。
 
@@ -218,7 +232,7 @@ Adobe提供了多個標準小部件，您可以使用這些小部件來可視化
 >id="platform_dashboards_profiles_singleidentityprofiles"
 >title="單個身份配置檔案"
 >abstract="此小部件提供組織的配置檔案的計數，這些配置檔案只具有一種類型的ID類型，用於建立其標識。 此ID類型可以是電子郵件或ECID。"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html#single-identity-profiles" text="從文檔瞭解更多資訊"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html" text="從文檔瞭解更多資訊"
 
 的 [!UICONTROL 單個身份配置檔案] 小部件提供了組織的配置檔案計數，這些配置檔案只具有一種類型的ID類型，可建立其標識。 此ID類型可以是電子郵件或ECID。 配置檔案計數是從最近快照中包含的資料生成的。
 
@@ -230,7 +244,7 @@ Adobe提供了多個標準小部件，您可以使用這些小部件來可視化
 >id="platform_dashboards_profiles_unsegmentedprofiles"
 >title="未分段的輪廓"
 >abstract="此小部件提供未附加到任何段的所有配置檔案的總數，並表示在整個組織中激活配置檔案的機會。"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html#unsegmented-profiles" text="從文檔瞭解更多資訊"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html" text="從文檔瞭解更多資訊"
 
 的 [!UICONTROL 未分段的配置檔案] 構件提供未附加到任何段的所有配置檔案的總數。 生成的數字在上次快照時準確無誤，表示整個組織中配置檔案激活的機會。 它還表明了擴展不能提供足夠ROI的配置檔案的機會。
 
@@ -254,7 +268,7 @@ Adobe提供了多個標準小部件，您可以使用這些小部件來可視化
 >id="platform_dashboards_profiles_unsegmentedprofilesbyidentity"
 >title="按身份劃分的未分割配置檔案"
 >abstract="此小部件按其唯一標識符對未分段的配置檔案總數進行分類。"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html#unsegmented-profiles-by-identity" text="從文檔瞭解更多資訊"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html" text="從文檔瞭解更多資訊"
 
 的 [!UICONTROL 按身份分段的配置檔案] 小部件按其唯一標識符對未分段的配置檔案總數進行分類。 資料以條形圖可視化，便於比較。
 
@@ -306,12 +320,6 @@ The visualization allows you to monitor the overall health of audiences within A
 
 有關 [[!UICONTROL 段] [!UICONTROL  瀏覽] 頁籤](https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/overview.html#browse)。
 
-### [!UICONTROL 配置檔案計數趨勢] {#profile-count-trend}
-
-的 [!UICONTROL 配置檔案計數趨勢] 小部件使用線形圖來說明一段時間內系統中包含的配置檔案總數的趨勢。 此總數包括自上次每日快照後導入到系統的任何配置檔案。 資料可以在30天、90天和12個月期間進行可視化。 時間段從小部件的下拉菜單中選擇。
-
-![配置檔案計數趨勢小部件。](../images/profiles/profile-count-trend.png)
-
 ### [!UICONTROL 單個身份配置檔案（按身份）] {#single-identity-profiles-by-identity}
 
 此小部件使用條形圖來說明僅使用單個唯一標識符標識的配置檔案總數。 該小部件最多支援五種最常見的身份。
@@ -327,16 +335,6 @@ The visualization allows you to monitor the overall health of audiences within A
 當小部件顯示段定義的可視交叉時，您可以通過研究段定義之間的相似性來優化分割策略。
 
 ![「平台UI概要檔案」面板中的合併策略下拉清單和小部件段下拉清單突出顯示。](../images/profiles/audience-overlap-by-merge-policy.png)
-
-### [!UICONTROL 配置檔案計數按標識的更改趨勢] {#profiles-count-change-trend-by-identity}
-
-<!-- This widget uses a line graph to illustrate the change in number of profiles filtered by a chosen source identity and merge policy. -->
-
-此小部件基於選定的源標識和合併策略篩選配置檔案計數，然後使用線形圖說明不同期間的編號變化。 合併策略從頁面頂部的概述下拉清單中選擇，源標識和時間段從構件下拉菜單中選擇。 該趨勢可以在30天、90天和12個月期間進行可視化。
-
-此小部件通過演示按所需身份篩選的配置檔案的增長模式，幫助您管理目標激活需求。
-
-![配置檔案計數按身份小部件的更改趨勢。](../images/profiles/profiles-count-change-trend-by-identity.png)
 
 
 ## (Beta)配置檔案功效小部件 {#profile-efficacy-widgets}
@@ -359,7 +357,7 @@ Adobe提供多個小部件，用於評估可用於資料分析的所攝取配置
 >id="platform_dashboards_profiles_attributesqualityassessment"
 >title="屬性質量評估"
 >abstract="此小部件根據所有配置檔案的屬性顯示其完整性和基數。 每行都描述一個屬性。 的 **配置檔案** 列提供具有此屬性並填充了非空值的配置檔案數。 的 **完整性** 百分比由具有此屬性的配置檔案總數確定，並用非空值除以該屬性配置檔案中非空值的總數。 **基數** 提供此屬性在所有屬性中唯一非空值的總數。"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html#attributes-quality-assessment" text="從文檔瞭解更多資訊"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html" text="從文檔瞭解更多資訊"
 
 的 [!UICONTROL 屬性質量評估] 構件根據所有配置檔案的屬性顯示其完整性和基數。 該資料對最後一個處理日期準確。 此資訊以具有四列的表形式顯示，其中表中的每一行表示單個屬性。
 
@@ -378,7 +376,7 @@ Adobe提供多個小部件，用於評估可用於資料分析的所攝取配置
 >id="platform_dashboards_profiles_profilesbycompleteness"
 >title="按完整性列出的配置檔案"
 >abstract="圓形圖顯示所有觀察屬性中用非空值填充的配置檔案屬性的百分比。 它說明了高、中或低完整性的輪廓的比例。 高完整性配置檔案有超過70%的屬性被填充。 中等完整性配置檔案的屬性填充率在30%到70%之間。 低完整性配置檔案的屬性填充率不足30%。"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html#profile-completeness" text="從文檔瞭解更多資訊"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html" text="從文檔瞭解更多資訊"
 
 的 [!UICONTROL 按完整性列出的配置檔案] 構件建立自上次處理日期以來配置檔案完整性的環形圖表。 配置檔案的完整性由所有觀察屬性中填充了非空值的屬性的百分比來衡量。
 
@@ -396,7 +394,7 @@ Adobe提供多個小部件，用於評估可用於資料分析的所攝取配置
 >id="platform_dashboards_profiles_profilescompletenesstrend"
 >title="配置檔案完整性趨勢"
 >abstract="此小部件建立堆積面積圖，以描述隨時間推移配置檔案完整性的趨勢。 完整性由所有觀察屬性中填充了非空值的屬性的百分比度量。"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html#profile-completeness-trend" text="從文檔瞭解更多資訊"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html" text="從文檔瞭解更多資訊"
 
 此小部件建立堆積面積圖，以描述隨時間推移配置檔案完整性的趨勢。 完整性由所有觀察屬性中填充非空值的屬性的百分比度量。 它將配置檔案完整性分類為自上次處理日期以來的高、中或低完整性。
 
