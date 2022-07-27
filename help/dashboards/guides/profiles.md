@@ -4,9 +4,9 @@ title: 配置式儀表板
 description: Adobe Experience Platform提供了一個儀表板，您可以通過該儀表板查看有關您組織的即時客戶配置檔案資料的重要資訊。
 type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
-source-git-commit: bc1516d5453134ffb18fa682fd70b1f3581d5e18
+source-git-commit: 4bb0078b6687da5239f57e7285507815aa7f3255
 workflow-type: tm+mt
-source-wordcount: '3816'
+source-wordcount: '3814'
 ht-degree: 1%
 
 ---
@@ -59,7 +59,7 @@ Adobe Experience Platform用戶介面(UI)提供了一個儀表板，您可以通
 
 ## 瀏覽配置檔案 {#browse-profiles}
 
-的 [!UICONTROL 瀏覽] 頁籤允許您搜索和查看已接收到IMS組織中的只讀配置檔案。 從此處，您可以看到屬於配置檔案的重要資訊，這些資訊涉及其首選項、過去的事件、交互和段
+的 [!UICONTROL 瀏覽] 頁籤允許您搜索和查看導入到您的組織中的只讀配置檔案。 從此處，您可以看到屬於配置檔案的重要資訊，這些資訊涉及其首選項、過去的事件、交互和段
 
 要瞭解有關平台UI中提供的配置檔案查看功能的詳細資訊，請參閱上的文檔 [瀏覽Real-time Customer Data Platform個人資料](../../rtcdp/profile/profile-browse.md)。
 
@@ -89,9 +89,9 @@ Adobe Experience Platform用戶介面(UI)提供了一個儀表板，您可以通
 
 儀表板由小部件組成，這些部件是只讀度量，提供有關配置檔案資料的重要資訊。
 
-小部件上的「上次更新」日期和時間顯示了上次拍攝資料快照的時間。 快照的日期和時間以UTC提供；它不在單個用戶或IMS組織的時區。
+小部件上的「上次更新」日期和時間顯示了上次拍攝資料快照的時間。 快照的日期和時間以UTC提供；它不在單個用戶或組織的時區中。
 
-## 標準小部件
+## 標準小部件 {#standard-widgets}
 
 Adobe提供了多個標準小部件，您可以使用這些小部件來可視化與配置檔案資料相關的不同度量。 您也可以使用 [!UICONTROL 小部件庫]。 要瞭解有關建立自定義小部件的詳細資訊，請首先閱讀 [小部件庫概述](../customize/widget-library.md)。
 

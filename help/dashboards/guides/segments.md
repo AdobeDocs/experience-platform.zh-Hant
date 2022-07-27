@@ -4,9 +4,9 @@ title: 段操控板
 description: 'Adobe Experience Platform提供了一個控制板，您可以通過該控制板查看有關您的組織建立的段的重要資訊。 '
 type: Documentation
 exl-id: de5e07bc-2c44-416e-99db-7607059117cb
-source-git-commit: 2d84a9a7caf080abd51e846f39e4090cb4aa05c7
+source-git-commit: 4bb0078b6687da5239f57e7285507815aa7f3255
 workflow-type: tm+mt
-source-wordcount: '1576'
+source-wordcount: '1575'
 ht-degree: 0%
 
 ---
@@ -57,11 +57,11 @@ Adobe Experience Platform用戶介面(UI)提供了一個儀表板，您可以通
 
 段控制板由小部件組成，這些部件是只讀度量，提供有關所選段的重要資訊。
 
-小部件上的「上次更新」日期和時間顯示了上次拍攝資料快照的時間。 快照的日期和時間以UTC提供；它不在單個用戶或IMS組織的時區。
+小部件上的「上次更新」日期和時間顯示了上次拍攝資料快照的時間。 快照的日期和時間以UTC提供；它不在單個用戶或組織的時區中。
 
 ![](../images/segments/widget-timestamp.png)
 
-## 標準小部件
+## 標準小部件 {#standard-widgets}
 
 Adobe提供了多個標準小部件，您可以使用這些小部件來可視化與段相關的不同度量。 您也可以使用 [!UICONTROL 小部件庫]。 要瞭解有關建立自定義小部件的詳細資訊，請首先閱讀 [小部件庫概述](../customize/widget-library.md)。
 
