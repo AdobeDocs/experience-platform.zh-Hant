@@ -3,9 +3,9 @@ keywords: rtcdp配置檔案；配置檔案rtcdp;rtcdp標識；rtcdp合併策略�
 title: 帳戶配置檔案UI指南
 description: 通過使用帳戶配置檔案，Real-time Customer Data PlatformB2B版使您能夠統一來自多個來源的帳戶資訊。 本指南提供了與Adobe Experience Platform用戶介面中的帳戶配置檔案交互的詳細資訊。
 exl-id: a05e8b84-026e-4482-a288-aa25b441bd69
-source-git-commit: 55af435c4819193fa3f18a85543bc1fad423bb4d
+source-git-commit: 5a13059c7ddd3f78ef2147533c95d9bd59c5c449
 workflow-type: tm+mt
-source-wordcount: '1426'
+source-wordcount: '1479'
 ht-degree: 0%
 
 ---
@@ -19,6 +19,14 @@ ht-degree: 0%
 帳戶配置檔案使您能夠統一來自多個來源的帳戶資訊。 此帳戶的統一視圖將來自您許多市場營銷渠道和您的組織當前用於儲存客戶帳戶資訊的各種系統的資料匯集在一起。 本文檔提供了使用Adobe Experience Platform用戶介面(UI)中提供的即時CDP、B2B版功能與帳戶配置檔案交互的指南。
 
 要瞭解有關如何作為B2B工作流的一部分建立帳戶配置檔案的詳細資訊，請參閱 [端到端教程](../b2b-tutorial.md)。
+
+## 帳戶概要檔案概述(#account — 概要檔案 — 概述)
+
+有關帳戶配置檔案概述，請從選擇 **[!UICONTROL 配置檔案]** 在 [!UICONTROL 帳戶] 的上界。 在 [!UICONTROL 概述] 頁籤中，該面板顯示在單個入口點中顯示小部件的圖形或圖表。
+
+![概覽標籤](images/b2b-account-profile-overview.png)
+
+要瞭解有關帳戶配置檔案儀表板的詳細資訊，請參閱 [帳戶配置檔案儀表板](../../dashboards/guides/account-profiles.md) 文檔。
 
 ## 瀏覽帳戶配置檔案 {#browse-account-profiles}
 
