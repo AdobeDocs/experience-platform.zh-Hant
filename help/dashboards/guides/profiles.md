@@ -4,9 +4,9 @@ title: 配置式儀表板
 description: Adobe Experience Platform提供了一個儀表板，您可以通過該儀表板查看有關您組織的即時客戶配置檔案資料的重要資訊。
 type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
-source-git-commit: 2fdcd0748ccfe5b6b079bc21c8dbde491fbb2471
+source-git-commit: bc1516d5453134ffb18fa682fd70b1f3581d5e18
 workflow-type: tm+mt
-source-wordcount: '3761'
+source-wordcount: '3816'
 ht-degree: 1%
 
 ---
@@ -106,6 +106,7 @@ Adobe提供了多個標準小部件，您可以使用這些小部件來可視化
 * [[!UICONTROL 未分段的輪廓]](#unsegmented-profiles)
 * [[!UICONTROL 未分段配置檔案趨勢]](#unsegmented-profiles-trend)
 * [[!UICONTROL 按身份劃分的未分割配置檔案]](#unsegmented-profiles-by-identity)
+* [[!UICONTROL 受眾]](#audiences)
 * [[!UICONTROL 映射到目標狀態的受眾]](#audiences-mapped-to-destination-status)
 * [[!UICONTROL 觀眾大小]](#audiences-size)
 * [[!UICONTROL 配置檔案計數趨勢]](#profile-count-trend)
@@ -258,6 +259,32 @@ Adobe提供了多個標準小部件，您可以使用這些小部件來可視化
 的 [!UICONTROL 按身份分段的配置檔案] 小部件按其唯一標識符對未分段的配置檔案總數進行分類。 資料以條形圖可視化，便於比較。
 
 ![按身份構件分段的配置檔案。](../images/profiles/unsegmented-profiles-by-identity.png)
+
+### [!UICONTROL 受眾] {#audiences}
+
+此小部件根據應用於配置檔案資料的所選合併策略提供準備激活的段總數。
+
+選擇 **[!UICONTROL 觀眾]** 導航至 [!UICONTROL 段] 儀表板 [!UICONTROL 瀏覽] 頁籤。 從那裡，您可以看到組織的所有段定義的清單。
+
+![觀眾小部件。](../images/profiles/audiences.png)
+
+<!-- https://jira.corp.adobe.com/browse/PLAT-115291 -->
+
+<!-- * [[!UICONTROL Audiences change trend]](#audiences-change-trend) -->
+<!-- ### [!UICONTROL Audiences change trend] {#audiences-change-trend}
+
+This line graph widget visualizes the change in the total number of audiences each day, trending over time. The change in the number of audiences is dependent on the selected merge policy being applied to your profile data. The period of analysis is selected from the widget dropdown menu. The bar chart can be visualized over 30 days, 90 days, and 12-month periods.  
+
+The visualization allows you to monitor the overall health of audiences within Adobe Experience Platform by understanding trends in the growth or decline of the total number of audiences. -->
+
+<!-- ![The Audiences change trend widget.]() -->
+
+<!-- * [[!UICONTROL Audience overlap report]](#audience-overlap-report) -->
+<!-- ### [!UICONTROL Audience overlap report] {#audience-overlap-report} -->
+
+<!-- View an ordered list of audiences by highest or lowest overlap percentages by selected merge policy. -->
+<!-- ![The Audiences overlap report widget.]() -->
+<!-- https://jira.corp.adobe.com/browse/PLAT-126851 -->
 
 ### [!UICONTROL 映射到目標狀態的受眾] {#audiences-mapped-to-destination-status}
 

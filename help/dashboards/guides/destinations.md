@@ -4,9 +4,9 @@ title: 目標儀表板
 description: Adobe Experience Platform提供了一個儀表板，您可以通過該儀表板查看有關組織活動目標的重要資訊。
 type: Documentation
 exl-id: 6a34a796-24a1-450a-af39-60113928873e
-source-git-commit: 2fdcd0748ccfe5b6b079bc21c8dbde491fbb2471
+source-git-commit: 54020785166b735fcd4dbe052ce1e738a70a30df
 workflow-type: tm+mt
-source-wordcount: '2671'
+source-wordcount: '2726'
 ht-degree: 0%
 
 ---
@@ -55,6 +55,7 @@ Adobe提供了多個標準小部件，您可以使用這些部件來可視化與
 * [[!UICONTROL 按標識未映射的段]](#unmapped-segments-by-identity)
 * [[!UICONTROL 按標識映射的段]](#mapped-segments-by-identity)
 * [[!UICONTROL 普通觀眾]](#common-audiences)
+* [[!UICONTROL 映射的受眾]](#mapped-audiences)
 * [[!UICONTROL 映射的受眾健康]](#mapped-audience-health)
 * [[!UICONTROL 目標計數]](#destinations-count)
 * [[!UICONTROL 目標狀態]](#destination-status)
@@ -195,6 +196,14 @@ Adobe提供了多個標準小部件，您可以使用這些部件來可視化與
 的 [!UICONTROL 受眾大小] 列提供每個列出段的總配置檔案計數。
 
 ![常見受眾小部件。](../images/destinations/common-audiences.png)
+
+### 映射的受眾 {#mapped-audiences}
+
+的 [!UICONTROL 映射的受眾] 小部件顯示可激活到頁面頂部所選目標的映射受眾總數。
+
+選擇 **[!UICONTROL 段]** 導航到段控制板 [!UICONTROL 瀏覽] 頁籤。 此工作區顯示組織的所有段定義的清單。
+
+![映射的受眾小部件。](../images/destinations/mapped-audiences.png)
 
 ### 映射的受眾健康 {#mapped-audience-health}
 

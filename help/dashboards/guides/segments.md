@@ -4,7 +4,7 @@ title: 段操控板
 description: 'Adobe Experience Platform提供了一個控制板，您可以通過該控制板查看有關您的組織建立的段的重要資訊。 '
 type: Documentation
 exl-id: de5e07bc-2c44-416e-99db-7607059117cb
-source-git-commit: 63a7857c2b88e81de3df7d925daf15bf631ff84c
+source-git-commit: 2d84a9a7caf080abd51e846f39e4090cb4aa05c7
 workflow-type: tm+mt
 source-wordcount: '1576'
 ht-degree: 0%
@@ -67,7 +67,7 @@ Adobe提供了多個標準小部件，您可以使用這些小部件來可視化
 
 要瞭解有關每個可用標準小部件的詳細資訊，請從以下清單中選擇小部件的名稱：
 
-* [[!UICONTROL 受眾大小]](#audience-size)
+* [[!UICONTROL 對象規模]](#audience-size)
 * [[!UICONTROL 身份重疊]](#identity-overlap)
 * [[!UICONTROL 按身份顯示的配置檔案]](#profiles-by-identity)
 * [[!UICONTROL 受眾激活順序]](#audience-activation-order)
@@ -76,11 +76,11 @@ Adobe提供了多個標準小部件，您可以使用這些小部件來可視化
 * [[!UICONTROL 按身份分類的受眾規模趨勢]](#audience-size-trend-by-identity)
 * [[!UICONTROL 受眾重疊]](#audience-overlap)
 
-### [!UICONTROL 受眾大小] {#audience-size}
+### [!UICONTROL 對象規模] {#audience-size}
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_segments_audiencesize"
->title="受眾大小"
+>title="對象規模"
 >abstract="此小部件顯示選定段內合併的配置檔案總數。 此數字取決於應用於資料的合併策略，在最新快照時是正確的。"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/segments.html#audience-size" text="從文檔瞭解更多資訊"
 
@@ -171,6 +171,15 @@ Adobe提供了多個標準小部件，您可以使用這些小部件來可視化
 此小部件使您能夠通過可視化段定義結果中的相似性來優化分割策略。
 
 ![受眾重疊小部件。](../images/segments/audience-overlap.png)
+
+<!-- * [[!UICONTROL Audience overlap report]](#audience-overlap-report) -->
+<!-- ### [!UICONTROL Audience overlap report] {#audience-overlap-report} -->
+
+<!-- View an ordered list of audiences by Highest or Lowest overlap percentages. -->
+
+<!-- ![The Audience overlap report widget.]() -->
+
+<!-- https://jira.corp.adobe.com/browse/PLAT-125511 -->
 
 ## 後續步驟
 
