@@ -4,10 +4,10 @@ description: 資料衛生API中的/workorder終結點允許您以寫程式方式
 exl-id: f6d9c21e-ca8a-4777-9e5f-f4b2314305bf
 hide: true
 hidefromtoc: true
-source-git-commit: c2e7cf1859f6a2b277783cdec535ecc208703fac
+source-git-commit: 7f1e4bdf54314cab1f69619bcbb34216da94b17e
 workflow-type: tm+mt
-source-wordcount: '1000'
-ht-degree: 3%
+source-wordcount: '998'
+ht-degree: 4%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 3%
 
 >[!IMPORTANT]
 >
->目前，Adobe Experience Platform的資料衛生功能僅適用於已購買「Adobe保護保健」的組織。
+>Adobe Experience Platform的資料衛生功能目前僅適用於已購買Healthcare Shield的組織。
 
 的 `/workorder` 通過資料衛生API中的終結點，您可以以寫程式方式管理Adobe Experience Platform的消費者標識的刪除任務。
 

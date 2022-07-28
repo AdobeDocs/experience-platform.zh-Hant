@@ -2,9 +2,9 @@
 title: 資料集生存時間(TTL)API終結點
 description: 資料衛生API中的/ttl端點允許您以寫程式方式調度Adobe Experience Platform的資料集TTL。
 exl-id: fbabc2df-a79e-488c-b06b-cd72d6b9743b
-source-git-commit: 22da9e39e168d9a995c7c134733aa7a1b3587749
+source-git-commit: 7f1e4bdf54314cab1f69619bcbb34216da94b17e
 workflow-type: tm+mt
-source-wordcount: '1315'
+source-wordcount: '1313'
 ht-degree: 6%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 6%
 
 >[!IMPORTANT]
 >
->目前，Adobe Experience Platform的資料衛生功能僅適用於已購買「Adobe保護保健」的組織。
+>Adobe Experience Platform的資料衛生功能目前僅適用於已購買Healthcare Shield的組織。
 
 的 `/ttl` 資料衛生API中的終結點允許您為Adobe Experience Platform的資料集安排生存時間(TTL)協定。
 

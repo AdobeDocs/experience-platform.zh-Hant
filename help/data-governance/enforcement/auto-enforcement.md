@@ -5,9 +5,9 @@ title: 自動策略強制
 topic-legacy: guide
 description: 本文檔介紹在將段激活到Experience Platform中的目標時如何自動強制實施資料使用策略。
 exl-id: c6695285-77df-48c3-9b4c-ccd226bc3f16
-source-git-commit: 0c78b5dc420a1346c92bf9ed7864fa1733422a83
+source-git-commit: 7f1e4bdf54314cab1f69619bcbb34216da94b17e
 workflow-type: tm+mt
-source-wordcount: '1696'
+source-wordcount: '1694'
 ht-degree: 0%
 
 ---
@@ -110,7 +110,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->目前，僅對已購買「Adobe保護醫療保健」的組織才可使用同意策略。
+>目前，只有購買了Healthcare Shield的組織才可使用同意策略。
 
 如果 [建立同意策略](../policies/user-guide.md#consent-policy) 並且正在激活到目標的段，您可以看到您的同意策略如何影響激活中包含的配置檔案的百分比。
 

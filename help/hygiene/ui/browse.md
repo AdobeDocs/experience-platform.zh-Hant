@@ -2,9 +2,9 @@
 title: 瀏覽資料衛生工作單
 description: 瞭解如何在Adobe Experience Platform用戶介面中查看和管理現有資料衛生工作單。
 exl-id: 76d4a809-cc2c-434d-90b1-23d88f29c022
-source-git-commit: c24aa700eb425770266bbee5c187e2e87b15a9ac
+source-git-commit: 7f1e4bdf54314cab1f69619bcbb34216da94b17e
 workflow-type: tm+mt
-source-wordcount: '413'
+source-wordcount: '411'
 ht-degree: 1%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 1%
 
 >[!IMPORTANT]
 >
->目前，Adobe Experience Platform的資料衛生功能僅適用於已購買「Adobe保護保健」的組織。
+>Adobe Experience Platform的資料衛生功能目前僅適用於已購買Healthcare Shield的組織。
 
 當向系統發送資料衛生請求時，建立工作單以執行所請求的任務。 工作單表示特定資料衛生處理，如資料集的計畫生存時間(TTL)，其中包括其當前狀態和其他相關詳細資訊。
 

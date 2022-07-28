@@ -2,9 +2,9 @@
 title: 管理資料集TTL
 description: 瞭解如何為Adobe Experience PlatformUI中的資料集安排生存時間(TTL)。
 exl-id: 97db55e3-b5d6-40fd-94f0-2463fe041671
-source-git-commit: 22da9e39e168d9a995c7c134733aa7a1b3587749
+source-git-commit: 7f1e4bdf54314cab1f69619bcbb34216da94b17e
 workflow-type: tm+mt
-source-wordcount: '372'
+source-wordcount: '370'
 ht-degree: 0%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->目前，Adobe Experience Platform的資料衛生功能僅適用於已購買「Adobe保護保健」的組織。
+>Adobe Experience Platform的資料衛生功能目前僅適用於已購買Healthcare Shield的組織。
 
 的 [[!UICONTROL 資料衛生] 工作區](./overview.md) 在Adobe Experience PlatformUI中，可以為資料集安排生存時間(TTL)。
 

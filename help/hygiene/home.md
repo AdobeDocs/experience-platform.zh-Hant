@@ -2,9 +2,9 @@
 title: 資料衛生概述
 description: Adobe Experience Platform資料衛生服務允許您通過更新或清除過時或不準確的記錄來管理資料的生命週期。
 exl-id: 104a2bb8-3242-4a20-b98d-ad6df8071a16
-source-git-commit: 22da9e39e168d9a995c7c134733aa7a1b3587749
+source-git-commit: 7f1e4bdf54314cab1f69619bcbb34216da94b17e
 workflow-type: tm+mt
-source-wordcount: '220'
+source-wordcount: '218'
 ht-degree: 0%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->目前，Adobe Experience Platform的資料衛生功能僅適用於已購買「Adobe保護保健」的組織。
+>Adobe Experience Platform的資料衛生功能目前僅適用於已購買Healthcare Shield的組織。
 
 Adobe Experience Platform公司提供一套強大的工具來管理大型、複雜的資料操作，以協調消費者體驗。 隨著資料逐漸被引入系統，管理資料儲存變得越來越重要，這樣資料就可以按預期使用，當不正確的資料需要更正時更新，當組織策略認為有必要時刪除。
 

@@ -5,9 +5,9 @@ title: 在UI中管理資料使用策略
 topic-legacy: policies
 description: Adobe Experience Platform資料治理提供了一個用戶介面，允許您建立和管理資料使用策略。 本文檔概述了可在Experience Platform用戶介面的「策略」工作區中執行的操作。
 exl-id: 29434dc1-02c2-4267-a1f1-9f73833e76a0
-source-git-commit: 0c78b5dc420a1346c92bf9ed7864fa1733422a83
+source-git-commit: 7f1e4bdf54314cab1f69619bcbb34216da94b17e
 workflow-type: tm+mt
-source-wordcount: '1326'
+source-wordcount: '1324'
 ht-degree: 0%
 
 ---
@@ -25,7 +25,7 @@ Adobe Experience Platform資料治理提供了一個用戶介面，允許您建�
 本指南要求對以下方面有一定的認識 [!DNL Experience Platform] 概念：
 
 * [資料治理](../home.md)
-* [資料使用策略](./overview.md)
+* [資料使用原則](./overview.md)
 
 ## 查看現有策略 {#view-policies}
 
@@ -83,7 +83,7 @@ Adobe Experience Platform資料治理提供了一個用戶介面，允許您建�
 
 >[!IMPORTANT]
 >
->目前，僅對已購買「Adobe保護醫療保健」的組織才可使用同意策略。
+>目前，只有購買了Healthcare Shield的組織才可使用同意策略。
 
 如果您選擇建立同意策略，將顯示一個新螢幕，允許您配置新策略。
 

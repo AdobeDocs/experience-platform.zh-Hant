@@ -2,9 +2,9 @@
 title: 資料衛生UI指南
 description: 瞭解如何在Adobe Experience Platform用戶介面中管理資料衛生任務。
 exl-id: 7199151a-5390-4150-8a1d-daf53b7a1f5b
-source-git-commit: 22da9e39e168d9a995c7c134733aa7a1b3587749
+source-git-commit: 7f1e4bdf54314cab1f69619bcbb34216da94b17e
 workflow-type: tm+mt
-source-wordcount: '160'
+source-wordcount: '158'
 ht-degree: 0%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->目前，Adobe Experience Platform的資料衛生功能僅適用於已購買「Adobe保護保健」的組織。
+>Adobe Experience Platform的資料衛生功能目前僅適用於已購買Healthcare Shield的組織。
 
 的 **[!UICONTROL 資料衛生]** 使用Adobe Experience PlatformUI中的工作區，您可以建立和監視各種資料衛生任務，包括刪除使用者身份和為資料集安排生存時間(TTL)協定。
 
