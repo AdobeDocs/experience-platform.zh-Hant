@@ -3,9 +3,9 @@ keywords: 廣告目標；目標；平台目標
 title: 廣告目標概述
 description: 將Adobe Experience Platform連接到第三方廣告平台(DSP如廣告網路、SSP)，並與這些平台共用假名受眾。
 exl-id: 072743a4-fc62-4a61-92ec-8f9640a47ab2
-source-git-commit: 69bf43f86ab3369ad0c7febcb69ec41d3bcac8bb
+source-git-commit: 30e75b8fbaa4a8269a32f82ade435b67767630c5
 workflow-type: tm+mt
-source-wordcount: '253'
+source-wordcount: '254'
 ht-degree: 1%
 
 ---
@@ -37,7 +37,7 @@ ht-degree: 1%
 * [Pinterest客戶清單連接](pinterest.md)
 * [(Beta)Snapchat廣告連接](snap-inc.md)
 * [交易台連接](tradedesk.md)
-* [交易台CRM連接](tradedesk-emails.md)
+* [(Beta)交易台CRM連接](tradedesk-emails.md)
 * [Yahoo/Verizon DataX](datax.md)
 
 ### 擴充功能
