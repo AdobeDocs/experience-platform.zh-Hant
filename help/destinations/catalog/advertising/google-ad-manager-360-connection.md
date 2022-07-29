@@ -2,9 +2,9 @@
 title: (Beta) [!DNL Google Ad Manager 360] 連接
 description: Google廣告管理器360是Google的一個廣告服務平台，它使出版商能夠通過視頻和移動應用管理其網站上廣告的顯示。
 exl-id: 3251145a-3e4d-40aa-b120-d79c8c9c7cae
-source-git-commit: aed15e0abfd51a8a08290e78302239792f86535a
+source-git-commit: f163b1e3c60953192b2ddf543eb4f3e8df88799b
 workflow-type: tm+mt
-source-wordcount: '931'
+source-wordcount: '914'
 ht-degree: 1%
 
 ---
@@ -93,7 +93,7 @@ ht-degree: 1%
 * **[!UICONTROL 說明]**:可選。 例如，您可以提及您為此目標使用的市場活動。
 * **[!UICONTROL 儲存段名稱]**:輸入 [!DNL Google Cloud Storage] 該目標使用的儲存桶。
 * **[!UICONTROL 資料夾路徑]**:輸入將承載導出檔案的目標資料夾的路徑。
-* **[!UICONTROL 帳戶ID]**:用 [!DNL Google]。 這可以是您的網路代碼或您的受眾連結ID。 通常，這是一個八位ID。
+* **[!UICONTROL 帳戶ID]**:使用 [!DNL Google]。
 * **[!UICONTROL 帳戶類型]**:根據您與Google的帳戶選擇選項：
    * 使用 `DFP by Google` 為 [!DNL DoubleClick] 對於發佈者
    * 使用 `AdX buyer` 為 [!DNL Google AdX]

@@ -3,10 +3,10 @@ keywords: google廣告管理器；google廣告；按兩下廣告；按兩下廣�
 title: Google廣告經理連接
 description: Google廣告管理器以前叫DoubleClick for Publishers或DoubleClick AdX，是Google的一個廣告服務平台，它使出版商能夠通過視頻和移動應用管理其網站上廣告的顯示。
 exl-id: e93f1bd5-9d29-43a1-a9a6-8933f9d85150
-source-git-commit: aed15e0abfd51a8a08290e78302239792f86535a
+source-git-commit: f163b1e3c60953192b2ddf543eb4f3e8df88799b
 workflow-type: tm+mt
-source-wordcount: '873'
-ht-degree: 2%
+source-wordcount: '856'
+ht-degree: 3%
 
 ---
 
@@ -85,7 +85,7 @@ ht-degree: 2%
 * **[!UICONTROL 帳戶類型]**:根據您與Google的帳戶選擇選項：
    * 使用 `DFP by Google` 為 [!DNL DoubleClick] 對於發佈者
    * 使用 `AdX buyer` 為 [!DNL Google AdX]
-* **[!UICONTROL 帳戶ID]**:用 [!DNL Google]。 這可以是您的網路代碼或您的受眾連結ID。 通常，這是一個八位ID。
+* **[!UICONTROL 帳戶ID]**:使用 [!DNL Google]。
 
 >[!NOTE]
 >
