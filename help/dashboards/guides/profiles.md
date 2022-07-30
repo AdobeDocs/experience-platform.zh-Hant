@@ -4,9 +4,9 @@ title: 配置式儀表板
 description: Adobe Experience Platform提供了一個儀表板，您可以通過該儀表板查看有關您組織的即時客戶配置檔案資料的重要資訊。
 type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
-source-git-commit: a1a5a34ed0f46223b1eae3df75ff65f27041503e
+source-git-commit: e1d44c453385b8beaa49e9793eb4858876d865b0
 workflow-type: tm+mt
-source-wordcount: '3875'
+source-wordcount: '3901'
 ht-degree: 1%
 
 ---
@@ -89,7 +89,9 @@ Adobe Experience Platform用戶介面(UI)提供了一個儀表板，您可以通
 
 儀表板由小部件組成，這些部件是只讀度量，提供有關配置檔案資料的重要資訊。
 
-小部件上的「上次更新」日期和時間顯示了上次拍攝資料快照的時間。 快照的日期和時間以UTC提供；它不在單個用戶或組織的時區中。
+最近快照的日期和時間顯示在 [!UICONTROL 概述] 頁籤。 截至該日期和時間，所有小部件資料都準確。 快照的時間戳以UTC提供；它不在單個用戶或組織的時區中。
+
+![「配置式」儀表板概述頁籤，其中突出顯示了最近的快照時間戳。](../images/profiles/snapshot-timestamp.png)
 
 ## 標準小部件 {#standard-widgets}
 
@@ -105,13 +107,13 @@ Adobe提供了多個標準小部件，您可以使用這些小部件來可視化
 * [[!UICONTROL 按身份顯示的配置檔案]](#profiles-by-identity)
 * [[!UICONTROL 身份重疊]](#identity-overlap)
 * [[!UICONTROL 單個身份配置檔案]](#single-identity-profiles)
+* [[!UICONTROL 單個身份配置檔案（按身份）]](#single-identity-profiles-by-identity)
 * [[!UICONTROL 未分段的輪廓]](#unsegmented-profiles)
 * [[!UICONTROL 未分段配置檔案趨勢]](#unsegmented-profiles-trend)
 * [[!UICONTROL 按身份劃分的未分割配置檔案]](#unsegmented-profiles-by-identity)
 * [[!UICONTROL 受眾]](#audiences)
 * [[!UICONTROL 映射到目標狀態的受眾]](#audiences-mapped-to-destination-status)
 * [[!UICONTROL 觀眾大小]](#audiences-size)
-* [[!UICONTROL 單個身份配置檔案（按身份）]](#single-identity-profiles-by-identity)
 * [[!UICONTROL 按合併策略的受眾重疊]](#audience-overlap-by-merge-policy)
 
 ### [!UICONTROL 配置檔案計數] {#profile-count}
@@ -238,6 +240,14 @@ Adobe提供了多個標準小部件，您可以使用這些小部件來可視化
 
 ![單個身份配置檔案構件。](../images/profiles/single-identity-profiles.png)
 
+### [!UICONTROL 單個身份配置檔案（按身份）] {#single-identity-profiles-by-identity}
+
+此小部件使用條形圖來說明僅使用單個唯一標識符標識的配置檔案總數。 該小部件最多支援五種最常見的身份。
+
+將滑鼠懸停在各個條上，查看一個對話框，詳細列出標識的配置檔案總數。
+
+![按身份構件顯示的單個身份配置檔案。](../images/profiles/single-identity-profiles-by-identity.png)
+
 ### [!UICONTROL 未分段的輪廓] {#unsegmented-profiles}
 
 >[!CONTEXTUALHELP]
@@ -319,14 +329,6 @@ The visualization allows you to monitor the overall health of audiences within A
 ![具有段名稱的「受眾大小」小部件，並查看突出顯示的所有段文本。](../images/profiles/audiences-size-view-all-segments.png)
 
 有關 [[!UICONTROL 段] [!UICONTROL  瀏覽] 頁籤](https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/overview.html#browse)。
-
-### [!UICONTROL 單個身份配置檔案（按身份）] {#single-identity-profiles-by-identity}
-
-此小部件使用條形圖來說明僅使用單個唯一標識符標識的配置檔案總數。 該小部件最多支援五種最常見的身份。
-
-將滑鼠懸停在各個條上，查看一個對話框，詳細列出標識的配置檔案總數。
-
-![按身份構件顯示的單個身份配置檔案。](../images/profiles/single-identity-profiles-by-identity.png)
 
 ### [!UICONTROL 按合併策略的受眾重疊] {#audience-overlap-by-merge-policy}
 

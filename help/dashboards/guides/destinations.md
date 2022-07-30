@@ -4,9 +4,9 @@ title: 目標儀表板
 description: Adobe Experience Platform提供了一個儀表板，您可以通過該儀表板查看有關組織活動目標的重要資訊。
 type: Documentation
 exl-id: 6a34a796-24a1-450a-af39-60113928873e
-source-git-commit: 4bb0078b6687da5239f57e7285507815aa7f3255
+source-git-commit: e1d44c453385b8beaa49e9793eb4858876d865b0
 workflow-type: tm+mt
-source-wordcount: '2726'
+source-wordcount: '2791'
 ht-degree: 0%
 
 ---
@@ -29,11 +29,13 @@ Adobe Experience Platform用戶介面(UI)提供了一個儀表板，您可以通
 
 要導航到平台UI中的目標儀表板，請選擇 **[!UICONTROL 目標]** 在左滑軌中，選擇 **[!UICONTROL 概述]** 頁籤。
 
+最近快照的日期和時間顯示在 [!UICONTROL 概述] 目標下拉清單旁邊。 截至該日期和時間，所有小部件資料都準確。 快照的時間戳以UTC提供；它不在單個用戶或組織的時區中。
+
 >[!NOTE]
 >
 >如果您的組織是新Experience Platform的，且尚未有活動目標， [!UICONTROL 目標] 儀表板和 [!UICONTROL 概述] 頁籤不可見。 而是選擇 [!UICONTROL 目標] 從左側導航顯示 [!UICONTROL 目錄] 頁籤。 瞭解有關 [!UICONTROL 目錄] ，請參閱 [[!UICONTROL 目標] 工作區指南](../../destinations/ui/destinations-workspace.md)。
 
-![](../images/destinations/dashboard-overview.png)
+![最新快照突出顯示的平台UI目標概述。](../images/destinations/snapshot-timestamp.png)
 
 ### 修改目標儀表板
 

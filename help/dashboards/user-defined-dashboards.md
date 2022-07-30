@@ -1,7 +1,8 @@
 ---
 title: 用戶定義的儀表板
 description: 瞭解如何構建和管理自定義儀表板，在此可以建立、添加和編輯定制小部件以可視化關鍵度量。
-source-git-commit: 47e74a0cabbf40df3a45e835ca3a1e9a36fb4532
+exl-id: a9ab83f7-b68d-4dbf-9dc6-ef253df5c82c
+source-git-commit: f138bb0f1b8d289cc872afc065d31c5e55d4b05c
 workflow-type: tm+mt
 source-wordcount: '883'
 ht-degree: 0%
@@ -68,9 +69,9 @@ Adobe Experience Platform儀表板通過用戶定義的儀表板功能幫助您�
 
 選擇 **[!UICONTROL 下一個]** 確認您選擇的資料模型。 下一個視圖顯示左滑軌中可用表的清單。 選擇一個表，查看所選表中包含的資料的全面細分。
 
-的 [!UICONTROL 預覽] 面板包含頁籤 [!UICONTROL 示例記錄] 和 [!UICONTROL 屬性]. [!UICONTROL 示例記錄] 頁籤提供清單視圖中選定表中記錄的子集。 的 [!UICONTROL 屬性] 頁籤為與所選表關聯的每個屬性提供屬性名稱、資料類型和源表。
+的 [!UICONTROL 預覽] 面板包含頁籤 [!UICONTROL 示例記錄] 和 [!UICONTROL 屬性]。 的 [!UICONTROL 示例記錄] 頁籤提供清單視圖中選定表中記錄的子集。 的 [!UICONTROL 屬性] 頁籤為與所選表關聯的每個屬性提供屬性名稱、資料類型和源表。
 
-從左滑軌中可用的清單中選擇一個表，以提供小部件的資料並選擇 [!UICONTROL 選擇] 返回到小部件作曲家。
+從左滑軌中可用的清單中選擇一個表，以提供小部件的資料並選擇 **[!UICONTROL 選擇]** 返回到小部件作曲家。
 
 ![「選擇資料」對話框，其中「選擇」突出顯示。](./images/user-defined-dashboards/select-a-table.png)
 
@@ -117,7 +118,3 @@ Adobe Experience Platform儀表板通過用戶定義的儀表板功能幫助您�
 通過閱讀此文檔，您可以更好地瞭解如何建立自定義儀表板以及如何為該儀表板建立、編輯和更新自定義小部件。
 
 查找可用的預配置度量和可視化 [配置檔案](./guides/profiles.md#standard-widgets)。 [段](./guides/segments.md#standard-widgets), [目的地](./guides/destinations.md#standard-widgets) 控制板，請參閱各自文檔中的標準小部件清單。
-
-
-
-

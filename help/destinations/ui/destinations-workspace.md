@@ -3,9 +3,9 @@ keywords: 平台；目標；目的地；工作區；ui；目標；目的地；�
 title: 目標工作區
 description: 「目標」工作區由五個部分組成，即「概述」、「目錄」、「瀏覽」、「帳戶」和「系統視圖」。 下面各節介紹了這些內容。
 exl-id: 0f46f08d-0fe3-441d-933a-86bc146c0f19
-source-git-commit: a6fe0f5a0c4f87ac265bf13cb8bba98252f147e0
+source-git-commit: 802a15212f51db2c616860ed0fd2c3f1cf2d3777
 workflow-type: tm+mt
-source-wordcount: '1157'
+source-wordcount: '1162'
 ht-degree: 2%
 
 ---
@@ -26,7 +26,7 @@ ht-degree: 2%
 >
 >如果您的組織是新Experience Platform的，且尚未有活動目標， [!UICONTROL 目標] 儀表板和 [!UICONTROL 概述] 頁籤不可見。 而是選擇 [!UICONTROL 目標] 從左側導航顯示 [[!UICONTROL 目錄] 頁籤](#catalog)。
 
-![](../../dashboards/images/destinations/dashboard-overview.png)
+![「目標」面板「概述」頁籤。](../../dashboards/images/destinations/dashboard-overview.png)
 
 ## [!UICONTROL 目錄] {#catalog}
 

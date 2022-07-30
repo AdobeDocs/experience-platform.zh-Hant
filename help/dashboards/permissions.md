@@ -4,7 +4,7 @@ title: 如何獲取和授予Experience Platform儀表板的訪問權限
 type: Documentation
 description: 允許用戶使用Adobe Admin Console查看、編輯和更新Experience Platform儀表板。
 exl-id: 2e50790f-b3ab-4851-a9a5-7cb98bf98ce3
-source-git-commit: 052e365c6127961363b7b5333cb0f4f82ab5479a
+source-git-commit: f138bb0f1b8d289cc872afc065d31c5e55d4b05c
 workflow-type: tm+mt
 source-wordcount: '645'
 ht-degree: 6%
@@ -56,7 +56,7 @@ ht-degree: 6%
 | [!DNL Dashboards] [!DNL Inventory] <br/>（瀏覽頁籤） | 已啟用 | 不適用 | 不適用 | 不適用 |
 | [!DNL Dashboards] [!DNL Integrations] 頁籤 <br/>(用於安裝Power BI) | 已啟用 | **至少需要一個** | 不適用 | 不適用 |
 | Power BI安裝按鈕和工作流 | 已啟用 | 不適用 | **必需** | 不適用 |
-| [!DNL Profiles]。<br/>[!DNL Segments]。<br/>[!DNL Destinations] 大柵欄。<br/>編輯小部件架構和添加新屬性以進行小部件自定義的功能 | **需要管理標準儀表板** | **必需（對於每個相應儀表板）** | 不適用 | 不適用 |
+| [!DNL Profiles]。<br/>[!DNL Segments]。<br/>[!DNL Destinations] 儀表板。<br/>編輯小部件架構和添加新屬性以進行小部件自定義的功能 | **需要管理標準儀表板** | **必需（對於每個相應儀表板）** | 不適用 | 不適用 |
 | [!DNL License Usage Dashboard] | 不適用 | 不適用 | 不適用 | 已啟用 |
 
 {style=&quot;table-layout:auto&quot;}
