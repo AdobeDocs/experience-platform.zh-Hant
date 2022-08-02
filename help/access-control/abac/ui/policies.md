@@ -3,7 +3,7 @@ keywords: Experience Platform；主題；熱門主題；訪問控制；基於屬
 title: 基於屬性的訪問控制建立策略
 description: 本文檔提供有關通過Adobe Experience Cloud的「權限」介面管理策略的資訊
 exl-id: 66820711-2db0-4621-908d-01187771de14
-source-git-commit: c31855bff9d87133252c43e2f2f2fe1960c7b144
+source-git-commit: 97b4b98a2f14e36e8e8c71bd2ab9631782bc333f
 workflow-type: tm+mt
 source-wordcount: '692'
 ht-degree: 0%
@@ -42,7 +42,7 @@ ht-degree: 0%
 
 使用下拉清單，選擇 **資源**。
 
-![flac-policy-resource-dropf](../../images/flac-ui/flac-policy-resource-dropdown.png)
+![flac-policy-resource-dropf](../../images/flac-ui/flac-policy-resource-dropdown-1.png)
 
 接下來，使用下拉清單選擇 **匹配項**。
 
