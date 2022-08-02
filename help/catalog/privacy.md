@@ -5,9 +5,9 @@ title: 資料湖中的隱私請求處理
 topic-legacy: overview
 description: Adobe Experience Platform Privacy Service處理客戶訪問、選擇不銷售或刪除其根據法律和組織隱私法規規定的個人資料的請求。 本文檔涵蓋與處理儲存在資料湖中的客戶資料的隱私請求相關的基本概念。
 exl-id: c06b0a44-be1a-4938-9c3e-f5491a3dfc19
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: a713245f3228ed36f262fa3c2933d046ec8ee036
 workflow-type: tm+mt
-source-wordcount: '1380'
+source-wordcount: '1388'
 ht-degree: 1%
 
 ---
@@ -148,9 +148,9 @@ curl -X POST \
 
 ### 使用UI
 
-在UI中建立作業請求時，請確保選擇 **[!UICONTROL AEP資料湖]** 和/或 **[!UICONTROL 配置檔案]** 在 **[!UICONTROL 產品]** 以便處理儲存在 [!DNL Data Lake] 或 [!DNL Real-time Customer Profile]的下界。
+在UI中建立作業請求時，請確保選擇 **[!UICONTROL AEP資料湖]** 在 **[!UICONTROL 產品]** 以便處理儲存在 [!DNL Data Lake]。
 
-<img src="images/privacy/product-value.png" width="450"><br>
+![顯示在隱私請求建立對話框中選擇的資料湖產品的影像](./images/privacy/product-value.png)
 
 ### 使用 API
 

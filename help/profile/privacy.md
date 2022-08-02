@@ -5,9 +5,9 @@ title: 即時客戶檔案中的隱私請求處理
 type: Documentation
 description: Adobe Experience Platform Privacy Service處理客戶訪問、選擇退出銷售或刪除其個人資料的請求，這些資料由許多隱私法規規定。 本文檔介紹與處理即時客戶配置檔案的隱私請求相關的基本概念。
 exl-id: fba21a2e-aaf7-4aae-bb3c-5bd024472214
-source-git-commit: 1686ff1684080160057462e9aa40819a60bf6b75
+source-git-commit: a713245f3228ed36f262fa3c2933d046ec8ee036
 workflow-type: tm+mt
-source-wordcount: '1281'
+source-wordcount: '1312'
 ht-degree: 0%
 
 ---
@@ -46,9 +46,7 @@ Identity Service維護全局定義（標準）和用戶定義（自定義）標�
 
 >[!IMPORTANT]
 >
->Privacy Service只能處理 [!DNL Profile] 使用不執行身份縫合的合併策略的資料。 如果使用UI確認是否正在處理隱私請求，請確保使用的策略與「」[!DNL None]&quot; [!UICONTROL ID拼接] 的雙曲餘切值。 換句話說，您不能使用合併策略 [!UICONTROL ID拼接] 已設定為「[!UICONTROL 專用圖]。
->
->![合併策略的ID拼接設定為「無」](./images/privacy/no-id-stitch.png)
+>Privacy Service只能處理 [!DNL Profile] 使用不執行身份縫合的合併策略的資料。 請參閱 [合併策略限制](#merge-policy-limitations) 的子菜單。
 >
 >還必須指出，無法保證隱私請求完成所花費的時間。 如果在 [!DNL Profile] 在請求仍在處理時，是否處理這些記錄也無法保證。
 
@@ -60,7 +58,11 @@ Identity Service維護全局定義（標準）和用戶定義（自定義）標�
 >
 >您可能需要為每個客戶提供多個ID，具體取決於身份圖以及配置檔案片段在平台資料集中的分佈方式。 請參閱下一節 [配置檔案片段](#fragments) 的子菜單。
 
-另外， `include` 請求負載的陣列必須包括請求所針對的不同資料儲存的產品值。 向 [!DNL Data Lake]，陣列必須包含值「ProfileService」。
+另外， `include` 請求負載的陣列必須包括請求所針對的不同資料儲存的產品值。 要刪除與身份關聯的配置檔案資料，陣列必須包含該值 `ProfileService`。 要刪除客戶的標識圖關聯，陣列必須包含該值 `identity`。
+
+>[!NOTE]
+>
+>請參閱 [配置檔案請求和身份請求](#profile-v-identity) 以獲取有關使用 `ProfileService` 和 `identity` 在 `include` 陣列。
 
 以下請求為中的單個客戶資料建立新的隱私作業 [!DNL Profile] 商店。 為中的客戶提供兩個標識值 `userIDs` 陣列；使用標準 `Email` 標識命名空間，而另一個使用自定義 `Customer_ID` 命名空間。 還包括產品價值 [!DNL Profile] (`ProfileService`) `include` 陣列：
 
@@ -96,7 +98,7 @@ curl -X POST \
         ]
       }
     ],
-    "include": ["ProfileService"],
+    "include": ["ProfileService","identity"],
     "expandIds": false,
     "priority": "normal",
     "regulation": "ccpa"
@@ -129,22 +131,25 @@ curl -X POST \
 
 要確保您的隱私請求處理所有相關的客戶屬性，您必須為所有可儲存這些屬性的適用資料集提供主要標識值（每個客戶最多可以儲存9個ID）。 請參閱中有關標識欄位的部分 [架構組合基礎](../xdm/schema/composition.md#identity) 的子菜單。
 
-## 刪除請求處理
+## 刪除請求處理 {#delete}
 
 當 [!DNL Experience Platform] 從接收刪除請求 [!DNL Privacy Service]。 [!DNL Platform] 發送確認 [!DNL Privacy Service] 已接收請求並且已將受影響資料標籤為刪除。 然後，從 [!DNL Data Lake] 或 [!DNL Profile] 在隱私作業完成後儲存。 刪除作業仍在處理時，資料是軟刪除的，因此無法由任何 [!DNL Platform] 服務。 請參閱 [[!DNL Privacy Service] 文檔](../privacy-service/home.md#monitor) 的子菜單。
 
->[!IMPORTANT]
->
->如果對配置檔案發出刪除請求(`ProfileService`)但不是Identity Service(`identity`)，生成的作業將刪除客戶（或一組客戶）的收集屬性資料，但不會刪除在標識圖中建立的關聯。
->
->例如，使用客戶的 `email_id` 和 `customer_id` 刪除儲存在這些ID下的所有屬性資料。 但是，隨後在同一資料下攝取的任何資料 `customer_id` 仍與相應的 `email_id`，因為關聯仍然存在。
->
->此外，Privacy Service只能處理 [!DNL Profile] 使用不執行身份縫合的合併策略的資料。 如果使用UI確認是否正在處理隱私請求，請確保使用的策略與「」[!DNL None]&quot; [!UICONTROL ID拼接] 的雙曲餘切值。 換句話說，您不能使用合併策略 [!UICONTROL ID拼接] 已設定為「[!UICONTROL 專用圖]。
->
->![合併策略的ID拼接設定為「無」](./images/privacy/no-id-stitch.png)
-
 在未來版本中， [!DNL Platform] 將向 [!DNL Privacy Service] 資料被物理刪除後。
 
+### 配置檔案請求與身份請求 {#profile-v-identity}
+
+如果對配置檔案發出刪除請求(`ProfileService`)但不是Identity Service(`identity`)，生成的作業將刪除客戶（或一組客戶）的收集屬性資料，但不會刪除在標識圖中建立的關聯。
+
+例如，使用客戶的 `email_id` 和 `customer_id` 刪除儲存在這些ID下的所有屬性資料。 但是，隨後在同一資料下攝取的任何資料 `customer_id` 仍與相應的 `email_id`，因為關聯仍然存在。
+
+要刪除給定客戶的配置檔案和所有身份關聯，請確保在刪除請求中同時將配置檔案和身份服務作為目標產品。
+
+### 合併策略限制 {#merge-policy-limitations}
+
+Privacy Service只能處理 [!DNL Profile] 使用不執行身份縫合的合併策略的資料。 如果您使用UI來確認是否正在處理您的隱私請求，請確保您使用的策略 **[!DNL None]** 作為 [!UICONTROL ID拼接] 的雙曲餘切值。 換句話說，您不能使用合併策略 [!UICONTROL ID拼接] 設定為 [!UICONTROL 專用圖]。
+>![合併策略的ID拼接設定為「無」](./images/privacy/no-id-stitch.png)
+>
 ## 後續步驟
 
 通過閱讀本文檔，您已瞭解處理隱私請求時涉及的重要概念 [!DNL Experience Platform]。 建議您繼續閱讀本指南中提供的文檔，以加深對如何管理身份資料和建立隱私作業的理解。
