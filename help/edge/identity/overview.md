@@ -3,9 +3,9 @@ title: 平台Web SDK中的身份資料
 description: 瞭解如何使用Adobe Experience CloudWeb SDK檢索和管理Adobe Experience PlatformID(ECID)。
 keywords: 身份；第一方身份；身份服務；第三方身份；ID遷移；訪問者ID；第三方身份；第三方CookieEnabled;idMigrationEnabled;getIdentity；同步身份；同步身份；sendIdentity;identityMap;primary;ecid;Identity Namespace;authenticationState;hashEnabled;
 exl-id: 03060cdb-becc-430a-b527-60c055c2a906
-source-git-commit: 85ff35e0e7f7e892de5252e8f3ad069eff83aa15
+source-git-commit: d6aed404828d06bf223f348dd97960652b05933a
 workflow-type: tm+mt
-source-wordcount: '1334'
+source-wordcount: '1356'
 ht-degree: 0%
 
 ---
@@ -101,6 +101,10 @@ alloy("sendEvent", {
 ```
 
 內的每個屬性 `identityMap` 表示屬於特定 [標識命名空間](../../identity-service/namespaces.md)。 屬性名稱應為標識命名空間符號，您可以在Adobe Experience Platform用戶介面的「 」下找到[!UICONTROL 身份]。 屬性值應為與該標識命名空間相關的標識陣列。
+
+>[!IMPORTANT]
+>
+>傳入的命名空間ID `identityMap` 區分大小寫。 確保使用正確的命名空間ID以避免不完整的資料收集。
 
 標識陣列中的每個標識對象都包含以下屬性：
 
