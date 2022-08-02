@@ -2,10 +2,10 @@
 title: 主機終結點
 description: 瞭解如何調用Repartor API中的/hosts端點。
 exl-id: 9d0d2a65-49e9-429c-a665-754b59a11cf1
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 905384b3190cd55e7caa9c4560d6b2774280eee7
 workflow-type: tm+mt
-source-wordcount: '765'
-ht-degree: 7%
+source-wordcount: '821'
+ht-degree: 6%
 
 ---
 
@@ -211,6 +211,7 @@ curl -X POST \
             "username": "John Doe",
             "encrypted_private_key": "{PRIVATE_KEY}",
             "server": "https://example.com",
+            "skip_symlinks": true,
             "path": "assets",
             "port": 22
           },
@@ -227,6 +228,7 @@ curl -X POST \
 | `attributes.path` | 附加到的路徑 `server` URL。 |
 | `attributes.port` | 一個整數，指示要使用的特定伺服器埠。 |
 | `attributes.server` | 伺服器的主機URL。 |
+| `attributes.skip_symlinks`<br><br>（僅適用於SFTP主機） | 預設情況下，所有SFTP主機都使用符號連結（符號連結）來引用保存到伺服器的庫生成。 但是，並非所有伺服器都支援使用符號連結。 當包含此屬性並設定為 `true`，主機使用複製操作直接更新生成資產，而不是使用symlinks。 |
 | `attributes.username` | 驗證的可選用戶名。 |
 | `type` | 要更新的資源類型。 對於此終結點，值必須為 `hosts`。 |
 
@@ -248,6 +250,7 @@ curl -X POST \
       "path": "assets",
       "port": 22,
       "status": "pending",
+      "skip_symlinks": true,
       "type_of": "sftp",
       "updated_at": "2020-12-14T17:42:07.033Z",
       "username": "John Doe"
@@ -337,6 +340,7 @@ curl -X PATCH \
       "path": null,
       "port": null,
       "status": "succeeded",
+      "skip_symlinks": true,
       "type_of": "sftp",
       "updated_at": "2020-12-14T17:42:45.696Z",
       "username": null
