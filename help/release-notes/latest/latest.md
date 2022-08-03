@@ -2,9 +2,9 @@
 title: Adobe Experience Platform 發行說明
 description: Adobe Experience Platform的最新發行說明。
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 4ba6ef979945ccd7decf4816c3410f2468b596ed
+source-git-commit: 5c40235b388c20f5a28a7d8535d5cf2b6d9cb40c
 workflow-type: tm+mt
-source-wordcount: '2330'
+source-wordcount: '2325'
 ht-degree: 5%
 
 ---
@@ -15,15 +15,14 @@ ht-degree: 5%
 
 Adobe Experience Platform 現有功能更新：
 
-- [Adobe Experience Platform 發行說明](#adobe-experience-platform-release-notes)
-   - [儀表板](#dashboards)
-   - [資料收集](#data-collection)
-   - [[!DNL Data Prep]](#data-prep)
-   - [[!DNL Destinations]](#destinations)
-   - [體驗資料模型(XDM)](#xdm)
-   - [Real-time Customer Data Platform B2B Edition](#b2b)
-   - [即時客戶個人檔案](#profile)
-   - [來源](#sources)
+- [儀表板](#dashboards)
+- [資料收集](#data-collection)
+- [[!DNL Data Prep]](#data-prep)
+- [[!DNL Destinations]](#destinations)
+- [體驗資料模型(XDM)](#xdm)
+- [Real-time Customer Data Platform B2B Edition](#b2b)
+- [即時客戶個人檔案](#profile)
+- [來源](#sources)
 
 ## 儀表板 {#dashboards}
 
