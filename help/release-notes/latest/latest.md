@@ -2,9 +2,9 @@
 title: Adobe Experience Platform 發行說明
 description: Adobe Experience Platform的最新發行說明。
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 7cb940019905240b36e96b834b9e5d0166c1324d
+source-git-commit: 72ca4f0c22d5e37ffa079940ed20e219445a0bf1
 workflow-type: tm+mt
-source-wordcount: '2114'
+source-wordcount: '2347'
 ht-degree: 5%
 
 ---
@@ -15,15 +15,18 @@ ht-degree: 5%
 
 Adobe Experience Platform 現有功能更新：
 
-- [儀表板](#dashboards)
-- [資料收集](#collection)
-- [[!DNL Data Prep]](#data-prep)
-- [[!DNL Destinations]](#destinations)
-- [體驗資料模型(XDM)](#xdm)
-
-<!-- - [Real-time Customer Data Platform B2B Edition](#b2b) -->
-- [即時客戶個人檔案](#profile)
-- [來源](#sources)
+- [Adobe Experience Platform 發行說明](#adobe-experience-platform-release-notes)
+   - [儀表板 {#dashboards}](#dashboards-dashboards)
+      - [帳戶配置檔案儀表板](#account-profiles-dashboards)
+      - [配置檔案儀表板](#profile-dashboards)
+      - [目標儀表板](#destinations-dashboards)
+   - [資料彙集 {#collection}](#data-collection-collection)
+   - [[!DNL Data Prep] {#data-prep}](#dnl-data-prep-data-prep)
+   - [[!DNL Destinations] {#destinations}](#dnl-destinations-destinations)
+   - [體驗資料模型(XDM) {#xdm}](#experience-data-model-xdm-xdm)
+   - [Real-time Customer Data Platform B2B Edition {#b2b}](#real-time-customer-data-platform-b2b-edition-b2b)
+   - [即時客戶個人檔案 {#profile}](#real-time-customer-profile-profile)
+   - [來源 {#sources}](#sources-sources)
 
 ## 儀表板 {#dashboards}
 
@@ -170,16 +173,23 @@ XDM是一種開源規範，它為傳入Adobe Experience Platform的資料提供�
 
 有關平台中XDM的詳細資訊，請參見 [XDM系統概述](../../xdm/home.md)。
 
-<!-- ## Real-time Customer Data Platform B2B Edition {#b2b}
+## Real-time Customer Data Platform B2B Edition {#b2b}
 
-Built on Real-time Customer Data Platform (Real-time CDP), Real-time CDP B2B Edition is purpose-built for marketers operating in a business-to-business service model. It brings together data from multiple sources and combines it into a single view of people and account profiles. This unified data allows marketers to precisely target specific audiences and engage those audiences across all available channels.
+即時CDP B2B版本構建在Real-time Customer Data Platform（即時CDP）之上，專門為以業務到業務服務模式運營的營銷人員而構建。 它將來自多個來源的資料匯集在一起，並將其合併到人員和帳戶配置檔案的單個視圖中。 此統一資料使營銷人員能夠精確地瞄準特定受眾，並跨所有可用渠道接觸這些受眾。
 
-| Feature | Description |
-| Lead to account matching | Lead to account matching allows you to use Real-time CDP B2B edition to match known person profiles to account profiles so that these profiles can be segmented and targeted with B2B context data like account, opportunity (and add something else like don't use etc. to the description). For more information, see the document on [lead to account matching](../../rtcdp/b2b-ai-ml-services/lead-to-account-matching.md). For a guide on how to monitor profile enrichment, see the document on [monitoring profile enrichment in the UI](../../dataflows/ui/b2b/monitor-profile-enrichment.md). For instructions on how to use related accounts in segment definitions, see the guide on [Segmentation use cases for Real-time Customer Data Platform B2B Edition](../../rtcdp/segmentation/b2b.md#related-accounts)."|
+**新功能**
 
-{style="table-layout:auto"}
+| 功能 | 說明 |
+| --- | --- |
+| 銷售線索到帳戶匹配 | 線索到帳戶匹配使您能夠將已知人員配置檔案加入帳戶配置檔案。 然後，您可以在B2B上下文（如帳戶或機會）中對資料進行分段和目標。 日常運行的作業使用確定性和概率性因素，將尚未與任何帳戶關聯的人員配置檔案與最佳匹配的帳戶進行匹配。 然後，您可以決定是否在段定義中包括此類匹配項 |
 
-To learn more about Real-time CDP B2B Edition, see the [Real-time CDP B2B overview](../../rtcdp/overview.md). -->
+有關詳細資訊，請參閱上的文檔 [導致帳戶匹配](../../rtcdp/b2b-ai-ml-services/lead-to-account-matching.md)。
+
+有關如何監視配置檔案豐富程度的指南，請參閱上的文檔 [監視UI中的配置檔案富集](../../dataflows/ui/b2b/monitor-profile-enrichment.md)。
+
+有關如何在段定義中使用相關帳戶的說明，請參閱上的指南 [Real-time Customer Data PlatformB2B版的切分用例](../../rtcdp/segmentation/b2b.md#related-accounts)。
+
+要瞭解有關即時CDP B2B版的更多資訊，請參見 [即時CDP B2B概述](../../rtcdp/overview.md)。
 
 ## 即時客戶個人檔案 {#profile}
 
