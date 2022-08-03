@@ -4,14 +4,14 @@ solution: Experience Platform
 title: 監視配置檔案富集作業
 type: Tutorial
 exl-id: 096a2212-ed7f-4419-8ead-fa1ca01c2804
-source-git-commit: 6811e3032abe569b1f00d757553eb6862e4e3354
+source-git-commit: 47a6cc9b77a0591d488d5ebc3929b465e1a6e6d2
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '634'
+ht-degree: 1%
 
 ---
 
-# 監視UI中的配置檔案富集作業(#monitor-profile富集)
+# 監視UI中的配置檔案富集作業 {#monitor-profile-enrichment}
 
 使用 [!UICONTROL 配置檔案富集] 控制板，瞭解配置檔案富集作業是否成功運行和完成，並查看基本度量以評估環境的有效性。
 
@@ -38,7 +38,7 @@ ht-degree: 0%
 | **[!UICONTROL 狀態]** | 指示相關帳戶作業的狀態（成功、失敗或處理）。 |
 | **[!UICONTROL 訊息]** | 指示特定作業運行的錯誤或警告消息。 |
 
-## 導致帳戶匹配配置檔案豐富(#lead到帳戶匹配)
+## 導出至帳戶匹配配置檔案的豐富 {#lead-to-account-matching}
 
 的 [!UICONTROL 銷售線索到帳戶匹配] 控制板顯示特定於 [銷售線索到帳戶匹配](/help/rtcdp/b2b-ai-ml-services/lead-to-account-matching.md) 輪廓富集。
 
