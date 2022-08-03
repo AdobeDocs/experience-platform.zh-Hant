@@ -47,7 +47,7 @@ ht-degree: 30%
    * [配置檔案瀏覽](profile/profile-browse.md)
 * 即時CDP B2B版AI/ML服務 {#b2b-cdp-ai-ml}
    * [相關帳戶](b2b-ai-ml-services/related-accounts.md)
-* 方案 {#schemas}
+* 結構描述 {#schemas}
    * [架構概述](schemas/overview.md)
    * [即時CDP B2B版中的架構](schemas/b2b.md)
 * 區段 {#segmentation}

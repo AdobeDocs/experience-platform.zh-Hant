@@ -8,14 +8,14 @@ feature: Data Collection
 source-git-commit: b7607907f811c22a7977598f63317ae974f2c4e3
 workflow-type: tm+mt
 source-wordcount: '33'
-ht-degree: 51%
+ht-degree: 60%
 
 ---
 
 
 # 資料收集 {#collection}
 
-- [資料收集概述](home.md)
+- [資料彙集概觀](home.md)
 - [端到端概述](e2e.md)
 - [權限管理](permissions.md)
 - [客戶端狀態管理](client-state.md)

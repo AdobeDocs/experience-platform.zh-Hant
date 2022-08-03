@@ -7,7 +7,7 @@ feature: Data Ingestion
 source-git-commit: 2c0791af8bb4f40c5ab4e0504af154b757af5e84
 workflow-type: tm+mt
 source-wordcount: '128'
-ht-degree: 25%
+ht-degree: 27%
 
 ---
 
@@ -36,7 +36,7 @@ ht-degree: 25%
    - [流式處理多個消息](tutorials/streaming-multiple-messages.md)
 - 資料質量和監控{#quality}
    - [總覽](quality/overview.md)
-   - [監視資料攝取](quality/monitor-data-ingestion.md)
+   - [監視資料內嵌](quality/monitor-data-ingestion.md)
    - [檢索錯誤診斷](quality/error-diagnostics.md)
    - [檢索失敗的批](quality/retrieve-failed-batches.md)
    - [流式接收驗證](quality/streaming-validation.md)

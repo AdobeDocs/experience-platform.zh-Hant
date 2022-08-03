@@ -15,7 +15,7 @@ ht-degree: 15%
 # 體驗資料模型(XDM)系統 {#xdm}
 
 * [XDM系統概述](home.md)
-* 方案 {#schema}
+* 結構描述 {#schema}
    * [架構組合的基礎](schema/composition.md)
    * [資料建模的最佳做法](schema/best-practices.md)
    * [敏感和個人資料](./schema/sensitive-and-personal-data.md)
@@ -154,7 +154,7 @@ ht-degree: 15%
    * [總覽](./ui/overview.md)
    * [探索 XDM 資源](./ui/explore.md)
    * 建立和編輯資源 {#resources}
-      * [方案](./ui/resources/schemas.md)
+      * [結構描述](./ui/resources/schemas.md)
       * [類別](./ui/resources/classes.md)
       * [欄位群組](./ui/resources/field-groups.md)
       * [資料類型](./ui/resources/data-types.md)
@@ -172,7 +172,7 @@ ht-degree: 15%
 * 架構註冊表API {#api}
    * [總覽](api/overview.md)
    * [快速入門](api/getting-started.md)
-   * [方案](api/schemas.md)
+   * [結構描述](api/schemas.md)
    * [行為](api/behaviors.md)
    * [類別](api/classes.md)
    * [架構欄位組](api/field-groups.md)

@@ -54,7 +54,7 @@ Adobe Experience Platform允許您訂閱有關Adobe Experience Platform活動的
 
 ### I/O事件 {#events}
 
-警報可以發送到已配置的Webhook，以便有效地自動化活動監視。 要通過webhook接收警報，必須在Adobe Developer控制台中註冊webhook以獲取平台警報。 請參閱上的指南 [訂閱Adobe I/O事件通知](./subscribe.md) 的子菜單。
+警報可以發送到已配置的Webhook，以便有效自動化活動監視。 要通過webhook接收警報，必須在Adobe Developer控制台中註冊webhook以獲取平台警報。 請參閱上的指南 [訂閱Adobe I/O事件通知](./subscribe.md) 的子菜單。
 
 ### 平台UI {#ui}
 
