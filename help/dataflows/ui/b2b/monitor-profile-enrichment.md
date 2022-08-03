@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 監視配置檔案富集作業
 type: Tutorial
 exl-id: 096a2212-ed7f-4419-8ead-fa1ca01c2804
-source-git-commit: 47a6cc9b77a0591d488d5ebc3929b465e1a6e6d2
+source-git-commit: 842fe74b0b751c515a4faee437e1f94bd0662e11
 workflow-type: tm+mt
-source-wordcount: '634'
+source-wordcount: '633'
 ht-degree: 1%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 1%
 
 在 [平台UI](https://platform.adobe.com)選中 **[!UICONTROL 監視]** 從左側導航 [!UICONTROL 監視] 控制項欄。 在視圖選擇器中，選擇 **B2B流** 查看特定於的儀表板元素 [Real-Time CDPB2B](/help/rtcdp/b2b-overview.md)。  的 [!UICONTROL 監視] 儀表板包括來自最新成功運行的基本指標，以及過去最多90天的日作業狀態。
 
-## 相關帳戶配置檔案豐富(#related-accounts)
+## 相關帳戶配置檔案豐富 {#related-accounts}
 
 的 [!UICONTROL 相關帳戶] 儀表板顯示特定於 [相關帳戶](/help/rtcdp/b2b-ai-ml-services/related-accounts.md) 輪廓富集。
 
