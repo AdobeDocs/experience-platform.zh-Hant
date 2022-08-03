@@ -3,9 +3,9 @@ keywords: rtcdp配置檔案；配置檔案rtcdp;rtcdp標識；rtcdp合併策略�
 title: 帳戶配置檔案UI指南
 description: 通過使用帳戶配置檔案，Real-time Customer Data PlatformB2B版使您能夠統一來自多個來源的帳戶資訊。 本指南提供了與Adobe Experience Platform用戶介面中的帳戶配置檔案交互的詳細資訊。
 exl-id: a05e8b84-026e-4482-a288-aa25b441bd69
-source-git-commit: 604d2e100981b2c92d4cfac6862d78511791aa91
+source-git-commit: 9119e6376228c3cec214977265abf0ce55093b64
 workflow-type: tm+mt
-source-wordcount: '1476'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -27,6 +27,26 @@ ht-degree: 0%
 ![顯示小部件的概述頁籤](images/b2b-account-profile-overview.png)
 
 請參閱 [[!UICONTROL 帳戶配置檔案]](../../dashboards/guides/account-profiles.md) 以瞭解詳細資訊。
+
+## 配置銷售線索到帳戶匹配 {#configure-lead-to-account-matching}
+
+>[!IMPORTANT]
+>
+> 只有B2B AI管理員才能啟用、禁用和配置指向帳戶匹配服務的線索。 禁用服務後，匹配結果將在24小時內刪除。
+
+要配置銷售線索與帳戶匹配，請選擇 **[!UICONTROL 配置檔案]** 在 [!UICONTROL 帳戶] 的子菜單。 在 **[!UICONTROL 概述]** 頁籤 **[!UICONTROL 設定]** 右上角。
+
+![選擇設定](images/b2b-configuring-accounts-profile.png)
+
+的 **[!UICONTROL 帳戶設定]** 對話框。 從此處選擇 **[!UICONTROL 啟用銷售線索到帳戶匹配]** 切換以啟用該功能。 使用下拉菜單選擇 **[!UICONTROL 每日]** 為 **[!UICONTROL 匹配節奏]** 的子菜單。 最後，選擇相關 **[!UICONTROL 匹配條件]** 選項後跟 **[!UICONTROL 保存]** 確認設定並返回 **[!UICONTROL 帳戶配置檔案]** 的上界。
+
+>[!NOTE]
+>
+> 地址不能用作唯一的匹配條件。 必須選擇一個或多個其他匹配條件。
+
+![配置帳戶設定](images/b2b-configuring-account-settings.png)
+
+要瞭解有關銷售線索到帳戶匹配的詳細資訊，請參閱 [在即時CDP B2B概述中提前到帳戶匹配](../../rtcdp/b2b-ai-ml-services/lead-to-account-matching.md)。
 
 ## 瀏覽帳戶配置檔案 {#browse-account-profiles}
 
