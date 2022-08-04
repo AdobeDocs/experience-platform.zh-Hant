@@ -2,9 +2,9 @@
 title: 用戶定義的儀表板
 description: 瞭解如何構建和管理自定義儀表板，在此可以建立、添加和編輯定制小部件以可視化關鍵度量。
 exl-id: a9ab83f7-b68d-4dbf-9dc6-ef253df5c82c
-source-git-commit: f138bb0f1b8d289cc872afc065d31c5e55d4b05c
+source-git-commit: bf2b35e3366c71c51c58b6257cc55f7c9b0cd9c7
 workflow-type: tm+mt
-source-wordcount: '883'
+source-wordcount: '825'
 ht-degree: 0%
 
 ---
@@ -17,21 +17,19 @@ ht-degree: 0%
 
 Adobe Experience Platform儀表板通過用戶定義的儀表板功能幫助您加快洞察和自定義可視化。 此功能使您能夠構建和管理自定義儀表板，您可以在其中建立、添加和編輯定制小部件，以可視化與您的組織相關的關鍵度量。
 
-## 快速入門
+<!-- Getting started / permissions section commented out for Beta. This will be necessary after GA only
 
-要在Adobe Experience Platform查看儀表板，必須啟用相應的權限。 請閱讀 [儀表板權限文檔](./permissions.md#available-permissions) 瞭解如何授予用戶使用Adobe Admin Console查看、編輯和更新Experience Platform儀表板的能力。 如果您沒有組織的管理員權限，請與產品管理員聯繫以獲取所需權限。
+## Getting started
+
+To view dashboards in Adobe Experience Platform you must have the appropriate permissions enabled. Please read the [dashboards permissions documentation](./permissions.md#available-permissions) to learn how to grant users the ability to view, edit, and update Experience Platform dashboards using Adobe Admin Console. If you do not have administrator privileges for your organization, contact your product administrator to obtain the required permissions. -->
 
 ## 建立自定義儀表板
 
 要建立自定義儀表板，請首先導航至儀表板清單。 選擇 **[!UICONTROL 儀表板]** 從平台UI的左側導航，然後 **[!UICONTROL 建立儀表板]**。
 
-要瞭解有關可用的預配置儀表板的詳細資訊，請參閱 [儀表板清單概述](./inventory.md)。
+![左側導航中帶有儀表板的儀表板清單和突出顯示的「建立儀表板」。](./images/user-defined-dashboards/create-dashboard.png)
 
->[!NOTE]
->
->通過添加自定義儀表板，預配置儀表板的清單將從儀表板清單中刪除。 相反，儀表板清單僅由用戶定義的儀表板組成。
-
-![突出顯示了「建立儀表板」的儀表板清單。](./images/user-defined-dashboards/create-dashboard.png)
+在添加自定義儀表板之前，儀表板清單為空並顯示「未找到儀表板」。 。 建立後，所有用戶定義的儀表板都會列在儀表板清單中。
 
 的 [!UICONTROL 建立儀表板] 對話框。 輸入要建立的小部件集合的人性化的描述性名稱，然後選擇 **[!UICONTROL 保存]**。
 
@@ -85,9 +83,9 @@ Adobe Experience Platform儀表板通過用戶定義的儀表板功能幫助您�
 >
 >可以通過選擇鉛筆表徵圖(![鉛筆表徵圖。](./images/user-defined-dashboards/edit-icon.png))。
 
-選取橢圓(`...`)，將屬性添加到X軸或Y軸。
+選擇添加表徵圖(。/images/user-defined-dashboards/add-icon.png)中，將屬性添加到X軸或Y軸。
 
-![帶有橢圓下拉清單的小部件編寫器突出顯示，以將屬性添加到小部件軸。](./images/user-defined-dashboards/attributes-dropdown.png)
+![帶有添加表徵圖下拉清單的小部件編寫器突出顯示，以將屬性添加到小部件軸。](./images/user-defined-dashboards/attributes-dropdown.png)
 
 接下來，從 [!UICONTROL 標籤] 下拉菜單可生成小部件當前設定的預覽可視化。 在 [!UICONTROL 屬性] 在螢幕右側的滑軌中，在 [!UICONTROL 小部件標題] 的子菜單。
 
