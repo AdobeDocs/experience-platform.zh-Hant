@@ -3,9 +3,9 @@ keywords: Experience Platform；首頁；熱門主題
 title: 身份服務中的隱私請求處理
 description: Adobe Experience Platform Privacy Service處理客戶訪問、選擇退出銷售或刪除其個人資料的請求，這些資料由許多隱私法規規定。 本文檔涵蓋與處理Identity Service的隱私請求相關的基本概念。
 exl-id: ab84450b-1a4b-4fdd-b77d-508c86bbb073
-source-git-commit: f0fa8d77e6184314056f8e70205a9b42409d09d5
+source-git-commit: 159a46fa227207bf161100e50bc286322ba2d00b
 workflow-type: tm+mt
-source-wordcount: '722'
+source-wordcount: '1038'
 ht-degree: 0%
 
 ---
@@ -105,6 +105,17 @@ curl -X POST \
 ## 刪除請求處理
 
 當 [!DNL Experience Platform] 從接收刪除請求 [!DNL Privacy Service]。 [!DNL Platform] 發送確認 [!DNL Privacy Service] 已接收請求並且已將受影響資料標籤為刪除。 單個標識的刪除基於所提供的命名空間和/或ID值。 此外，刪除與給定IMS組織關聯的所有沙箱。
+
+根據您是否還包括即時客戶配置檔案(`ProfileService`)和資料湖(`aepDataLake`)作為您的Identity Service隱私請求中的產品(`identity`)，在可能不同的時間從系統中刪除與身份相關的不同資料集：
+
+| 包括的產品 | 效果 |
+| --- | --- |
+| `identity` 僅 | 一旦平台發送確認刪除請求已被接收，與提供的標識相關聯的標識圖即被立即刪除。 根據該身份圖構建的配置檔案仍然保留，但由於現在刪除了身份關聯，因此不會在接收新資料時更新。 與配置檔案關聯的資料也保留在資料湖中。 |
+| `identity` 和 `ProfileService` | 一旦平台發送確認刪除請求被接收，則立即刪除標識圖及其關聯配置檔案。 與配置檔案關聯的資料保留在資料湖中。 |
+| `identity` 和 `aepDataLake` | 一旦平台發送確認刪除請求已被接收，與提供的標識相關聯的標識圖即被立即刪除。 根據該身份圖構建的配置檔案仍然保留，但由於現在刪除了身份關聯，因此不會在接收新資料時更新。<br><br>當資料湖產品響應已接收請求並且當前正在處理時，與簡檔相關聯的資料被軟刪除，因此任何用戶都無法訪問 [!DNL Platform] 服務。 作業完成後，資料將完全從資料湖中刪除。 |
+| `identity`, `ProfileService`, 和 `aepDataLake` | 一旦平台發送確認刪除請求被接收，則立即刪除標識圖及其關聯配置檔案。<br><br>當資料湖產品響應已接收請求並且當前正在處理時，與簡檔相關聯的資料被軟刪除，因此任何用戶都無法訪問 [!DNL Platform] 服務。 作業完成後，資料將完全從資料湖中刪除。 |
+
+請參閱 [[!DNL Privacy Service] 文檔](../privacy-service/home.md#monitor) 的子菜單。
 
 ## 後續步驟
 

@@ -5,9 +5,9 @@ title: 即時客戶檔案中的隱私請求處理
 type: Documentation
 description: Adobe Experience Platform Privacy Service處理客戶訪問、選擇退出銷售或刪除其個人資料的請求，這些資料由許多隱私法規規定。 本文檔介紹與處理即時客戶配置檔案的隱私請求相關的基本概念。
 exl-id: fba21a2e-aaf7-4aae-bb3c-5bd024472214
-source-git-commit: a713245f3228ed36f262fa3c2933d046ec8ee036
+source-git-commit: 159a46fa227207bf161100e50bc286322ba2d00b
 workflow-type: tm+mt
-source-wordcount: '1312'
+source-wordcount: '1563'
 ht-degree: 0%
 
 ---
@@ -111,7 +111,7 @@ curl -X POST \
 
 ### 使用UI
 
-在UI中建立作業請求時，請確保選擇 **[!UICONTROL AEP資料湖]** 和/或 **[!UICONTROL 配置檔案]** 在 **[!UICONTROL 產品]** 以便處理儲存在 [!DNL Data Lake] 或 [!DNL Real-time Customer Profile]的下界。
+在UI中建立作業請求時，請確保選擇 **[!UICONTROL AEP資料湖]** 和/或 **[!UICONTROL 配置檔案]** 在 **[!UICONTROL 產品]** 以便處理儲存在資料湖或 [!DNL Real-time Customer Profile]的下界。
 
 ![在UI中建立的訪問作業請求，在「產品」下選擇了「配置檔案」選項](./images/privacy/product-value.png)
 
@@ -133,9 +133,18 @@ curl -X POST \
 
 ## 刪除請求處理 {#delete}
 
-當 [!DNL Experience Platform] 從接收刪除請求 [!DNL Privacy Service]。 [!DNL Platform] 發送確認 [!DNL Privacy Service] 已接收請求並且已將受影響資料標籤為刪除。 然後，從 [!DNL Data Lake] 或 [!DNL Profile] 在隱私作業完成後儲存。 刪除作業仍在處理時，資料是軟刪除的，因此無法由任何 [!DNL Platform] 服務。 請參閱 [[!DNL Privacy Service] 文檔](../privacy-service/home.md#monitor) 的子菜單。
+當 [!DNL Experience Platform] 從接收刪除請求 [!DNL Privacy Service]。 [!DNL Platform] 發送確認 [!DNL Privacy Service] 已接收請求並且已將受影響資料標籤為刪除。 然後，一旦隱私作業完成，就刪除記錄。
 
-在未來版本中， [!DNL Platform] 將向 [!DNL Privacy Service] 資料被物理刪除後。
+取決於您是否還包括Identity Service(`identity`)和資料湖(`aepDataLake`)作為您對配置檔案的隱私請求中的產品(`ProfileService`)，在可能不同的時間從系統中刪除與配置檔案相關的不同資料集：
+
+| 包括的產品 | 效果 |
+| --- | --- |
+| `ProfileService` 僅 | 一旦平台發送確認刪除請求，該配置檔案即會立即刪除。 然而，該輪廓的標識圖仍然存在，並且當攝取具有相同標識的新資料時，該輪廓可能被重建。 與配置檔案關聯的資料也保留在資料湖中。 |
+| `ProfileService` 和 `identity` | 一旦平台發送確認刪除請求被接收，該配置檔案及其關聯的標識圖會立即被刪除。 與配置檔案關聯的資料保留在資料湖中。 |
+| `ProfileService` 和 `aepDataLake` | 一旦平台發送確認刪除請求，該配置檔案即會立即刪除。 然而，該輪廓的標識圖仍然存在，並且當攝取具有相同標識的新資料時，該輪廓可能被重建。<br><br>當資料湖產品響應已接收請求並且當前正在處理時，與簡檔相關聯的資料被軟刪除，因此任何用戶都無法訪問 [!DNL Platform] 服務。 作業完成後，資料將完全從資料湖中刪除。 |
+| `ProfileService`, `identity`, 和 `aepDataLake` | 一旦平台發送確認刪除請求被接收，該配置檔案及其關聯的標識圖會立即被刪除。<br><br>當資料湖產品響應已接收請求並且當前正在處理時，與簡檔相關聯的資料被軟刪除，因此任何用戶都無法訪問 [!DNL Platform] 服務。 作業完成後，資料將完全從資料湖中刪除。 |
+
+請參閱 [[!DNL Privacy Service] 文檔](../privacy-service/home.md#monitor) 的子菜單。
 
 ### 配置檔案請求與身份請求 {#profile-v-identity}
 

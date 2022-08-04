@@ -5,22 +5,22 @@ title: 資料湖中的隱私請求處理
 topic-legacy: overview
 description: Adobe Experience Platform Privacy Service處理客戶訪問、選擇不銷售或刪除其根據法律和組織隱私法規規定的個人資料的請求。 本文檔涵蓋與處理儲存在資料湖中的客戶資料的隱私請求相關的基本概念。
 exl-id: c06b0a44-be1a-4938-9c3e-f5491a3dfc19
-source-git-commit: a713245f3228ed36f262fa3c2933d046ec8ee036
+source-git-commit: 159a46fa227207bf161100e50bc286322ba2d00b
 workflow-type: tm+mt
-source-wordcount: '1388'
+source-wordcount: '1428'
 ht-degree: 1%
 
 ---
 
-# 在中處理隱私請求 [!DNL Data Lake]
+# 資料湖中的隱私請求處理
 
 Adobe Experience Platform [!DNL Privacy Service] 處理客戶訪問請求、選擇不銷售或刪除其根據法律和組織隱私法規規定的個人資料。
 
-本文檔涵蓋與處理儲存在中的客戶資料的隱私請求相關的基本概念 [!DNL Data Lake]。
+本文檔涵蓋與處理儲存在資料湖中的客戶資料的隱私請求相關的基本概念。
 
 >[!NOTE]
 >
->本指南僅介紹如何對Experience Platform中的Data Lake提出隱私請求。 如果您還計畫對即時客戶配置檔案資料儲存進行隱私請求，請參閱上的指南 [配置檔案的隱私請求處理](../profile/privacy.md) 除本教程外。
+>本指南僅介紹如何對Experience Platform中的資料湖進行隱私請求。 如果您還計畫對即時客戶配置檔案資料儲存進行隱私請求，請參閱上的指南 [配置檔案的隱私請求處理](../profile/privacy.md) 除本教程外。
 >
 >有關如何對其他Adobe Experience Cloud應用程式發出隱私請求的步驟，請參閱 [Privacy Service文檔](../privacy-service/experience-cloud-apps.md)。
 
@@ -43,7 +43,7 @@ Adobe Experience Platform [!DNL Identity Service] 跨系統和設備橋接客戶
 
 ## 向資料集添加標識資料
 
-為建立隱私請求時 [!DNL Data Lake]，必須為每個單個客戶提供有效的標識值（及其關聯的命名空間），以便找到其資料並相應地處理它。 因此，所有受隱私請求約束的資料集都必須在其關聯的XDM架構中包含標識描述符。
+在為資料湖建立隱私請求時，必須為每個客戶提供有效的標識值（及其關聯的命名空間），以便找到其資料並相應地處理它。 因此，所有受隱私請求約束的資料集都必須在其關聯的XDM架構中包含標識描述符。
 
 >[!NOTE]
 >
@@ -138,27 +138,27 @@ curl -X POST \
 
 >[!NOTE]
 >
->本節介紹如何為 [!DNL Data Lake]。 強烈建議您查看 [[!DNL Privacy Service] UI](../privacy-service/ui/overview.md) 或 [[!DNL Privacy Service] API](../privacy-service/api/getting-started.md) 有關如何提交隱私作業的完整步驟的文檔，包括如何在請求負載中正確格式化已提交的用戶標識資料。
+>本節介紹如何格式化資料湖的隱私請求。 強烈建議您查看 [[!DNL Privacy Service] UI](../privacy-service/ui/overview.md) 或 [[!DNL Privacy Service] API](../privacy-service/api/getting-started.md) 有關如何提交隱私作業的完整步驟的文檔，包括如何在請求負載中正確格式化已提交的用戶標識資料。
 
-以下部分概述了如何對 [!DNL Data Lake] 使用 [!DNL Privacy Service] UI或API。
+以下部分概述如何使用 [!DNL Privacy Service] UI或API。
 
 >[!IMPORTANT]
 >
->無法保證隱私請求完成所花的時間。 如果在請求仍在處理期間資料湖中發生更改，則無法保證是否處理這些記錄。
+>無法保證隱私請求完成所花的時間。 如果在請求仍在處理期間資料湖中發生更改，則也無法保證是否處理這些記錄。
 
 ### 使用UI
 
-在UI中建立作業請求時，請確保選擇 **[!UICONTROL AEP資料湖]** 在 **[!UICONTROL 產品]** 以便處理儲存在 [!DNL Data Lake]。
+在UI中建立作業請求時，請確保選擇 **[!UICONTROL AEP資料湖]** 在 **[!UICONTROL 產品]** 以處理儲存在資料湖中的資料的作業。
 
 ![顯示在隱私請求建立對話框中選擇的資料湖產品的影像](./images/privacy/product-value.png)
 
 ### 使用 API
 
-在API中建立作業請求時， `userIDs` 必須使用特定 `namespace` 和 `type` 取決於它們所應用的資料儲存。 ID [!DNL Data Lake] 必須使用 `unregistered` 為 `type` 值和 `namespace` 與其匹配的值 [隱私標籤](#privacy-labels) 已添加到適用資料集。
+在API中建立作業請求時， `userIDs` 必須使用特定 `namespace` 和 `type` 取決於它們所應用的資料儲存。 資料湖的ID必須使用 `unregistered` 為 `type` 值和 `namespace` 與其匹配的值 [隱私標籤](#privacy-labels) 已添加到適用資料集。
 
-另外， `include` 請求負載的陣列必須包括請求所針對的不同資料儲存的產品值。 向 [!DNL Data Lake]，陣列必須包括值 `aepDataLake`。
+另外， `include` 請求負載的陣列必須包括請求所針對的不同資料儲存的產品值。 在向資料湖請求時，陣列必須包括值 `aepDataLake`。
 
-以下請求為 [!DNL Data Lake]，使用未註冊 `email_label` 命名空間。 它還包括 [!DNL Data Lake] 的 `include` 陣列：
+以下請求使用未註冊的資料湖建立新的隱私作業 `email_label` 命名空間。 還包括資料湖的產品價值。 `include` 陣列：
 
 ```shell
 curl -X POST \
@@ -205,19 +205,19 @@ curl -X POST \
 
 ## 刪除請求處理
 
-當 [!DNL Experience Platform] 從接收刪除請求 [!DNL Privacy Service]。 [!DNL Platform] 發送確認 [!DNL Privacy Service] 已接收請求並且已將受影響資料標籤為刪除。 然後，從 [!DNL Data Lake] 七天內。 在這七天的窗口期間，資料被軟刪除，因此無法由任何 [!DNL Platform] 服務。
+當 [!DNL Experience Platform] 從接收刪除請求 [!DNL Privacy Service]。 [!DNL Platform] 發送確認 [!DNL Privacy Service] 已接收請求並且已將受影響資料標籤為刪除。 然後，在七天內將記錄從資料庫中刪除。 在這七天的窗口期間，資料被軟刪除，因此無法由任何 [!DNL Platform] 服務。
 
-在未來版本中， [!DNL Platform] 將向 [!DNL Privacy Service] 資料被物理刪除後。
+如果還包括 `ProfileService` 或 `identity` 在隱私請求中，其關聯資料被單獨處理。 請參閱 [刪除配置檔案的請求處理](../profile/privacy.md#delete) 的子菜單。
 
 ## 後續步驟
 
-通過閱讀本文檔，您已瞭解了與處理 [!DNL Data Lake]。 建議您繼續閱讀本指南中提供的文檔，以加深對如何管理身份資料和建立隱私作業的理解。
+通過閱讀本文檔，您已瞭解處理資料湖隱私請求所涉及的重要概念。 建議您繼續閱讀本指南中提供的文檔，以加深對如何管理身份資料和建立隱私作業的理解。
 
 查看上的文檔 [即時客戶配置檔案的隱私請求處理](../profile/privacy.md) 有關處理隱私請求的步驟 [!DNL Profile] 商店。
 
 ## 附錄
 
-以下部分包含處理中隱私請求的附加資訊 [!DNL Data Lake]。
+以下部分包含處理資料湖中的隱私請求的附加資訊。
 
 ### 標籤嵌套的映射類型欄位 {#nested-maps}
 
