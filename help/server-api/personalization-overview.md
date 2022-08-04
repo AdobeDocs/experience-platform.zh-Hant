@@ -2,10 +2,10 @@
 title: 個性化概述
 description: 瞭解如何使用Adobe Experience Platform邊緣網路伺服器API從Adobe個性化解決方案中檢索個性化內容。
 exl-id: 11be9178-54fe-49d0-b578-69e6a8e6ab90
-source-git-commit: f52603f7e65ac553e00a2b632857561cd07ae441
+source-git-commit: f36892103b0b202550c07a70538c97b1cc673840
 workflow-type: tm+mt
-source-wordcount: '741'
-ht-degree: 9%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -261,7 +261,7 @@ POST /ee/v2/collect
 ### 請求 {#notifications-request}
 
 ```shell
-url -X POST "https://server.adobedc.net/ee/v2/collect?dataStreamId={DATASTREAM_ID}" 
+curl -X POST "https://server.adobedc.net/ee/v2/collect?dataStreamId={DATASTREAM_ID}" 
 -H "Authorization: Bearer {TOKEN}" 
 -H "x-gw-ims-org-id: {ORG_ID}" 
 -H "x-api-key: {API_KEY}"
