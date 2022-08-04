@@ -3,9 +3,10 @@ keywords: Experience Platform；首頁；熱門主題；
 title: 資料準備故障排除指南
 topic-legacy: troubleshooting
 description: 本文檔提供有關Adobe Experience Platform資料準備的常見問題解答。
-source-git-commit: e96263847f53ea2c884c273fd7986855d4c478c1
+exl-id: 810cfb2f-f80a-4aa7-ab3c-beb5de78708e
+source-git-commit: 4bb21ce5861419964b80a827269e40ef3e6483f8
 workflow-type: tm+mt
-source-wordcount: '254'
+source-wordcount: '326'
 ht-degree: 0%
 
 ---
@@ -25,3 +26,7 @@ ht-degree: 0%
 如果標籤為 **必需** 將因轉換問題而失效，則不會攝取行。 啟用部分資料接收後，您可以在整個流失敗之前設定此類拒絕的閾值。 如果無效屬性未影響任何架構級別驗證，將繼續接收該行。
 
 即使沒有任何轉換錯誤，也將拒絕任何無效行。 例如，資料接收流可能具有到必需欄位的傳遞映射（無轉換邏輯），並且該屬性沒有傳入值。 此行將被拒絕。
+
+### 如何逃避場上的特殊人物？
+
+可以使用 `${...}`。 但是，包含帶句點的欄位(`.`)不受此機制支援。 在與層次結構交互時，如果子屬性具有句點(`.`)，必須使用反斜線(`\`)以轉義特殊字元。 比如說， `address` 是包含屬性的對象 `street.name`，這可以稱為 `address.street\.name` 而不是 `address.street.name`。

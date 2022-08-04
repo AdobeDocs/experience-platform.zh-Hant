@@ -5,9 +5,9 @@ title: 資料準備概述
 topic-legacy: overview
 description: 本文檔介紹Adobe Experience Platform內的資料準備。
 exl-id: f15eeb50-a531-4560-a524-1a670fbda706
-source-git-commit: d6d8b6ad9877735848d04cb229b3059842471ee8
+source-git-commit: 7042c6f5e3061fee7183b1befa447333f116c125
 workflow-type: tm+mt
-source-wordcount: '715'
+source-wordcount: '780'
 ht-degree: 0%
 
 ---
@@ -40,6 +40,10 @@ Data Prep還應用多個內部資料驗證，以確保在接收資料時保持�
 計算欄位允許根據輸入方案中的屬性建立值。 然後，可以將這些值分配給目標架構中的屬性，並提供名稱和說明，以便更容易地引用。
 
 要瞭解有關計算欄位的詳細資訊，請閱讀 [計算欄位指南](./functions.md#calculated-fields)。
+
+### 轉義特殊字元
+
+可以使用 `${...}`。 但是，包含帶句點的欄位(`.`)不受此機制支援。 在與層次結構交互時，如果子屬性具有句點(`.`)，必須使用反斜線(`\`)以轉義特殊字元。 比如說， `address` 是包含屬性的對象 `street.name`，這可以稱為 `address.street\.name` 而不是 `address.street.name`。
 
 ## 映射集
 
