@@ -1,9 +1,10 @@
 ---
 title: 編寫最佳做法
 description: 瞭解在編寫目標文檔頁面時應遵循的規則和提示，以確保它符合Adobe Experience Platform文檔質量標準。
-source-git-commit: 35e5c388e9572a3b27ec4bce55e766725936eda4
+exl-id: b12059f1-6635-41cd-acc5-6ff471111164
+source-git-commit: 0b9b724c2530e43ce681011d12fc1341148ddbf5
 workflow-type: tm+mt
-source-wordcount: '489'
+source-wordcount: '565'
 ht-degree: 0%
 
 ---
@@ -21,9 +22,18 @@ ht-degree: 0%
 * 在Experience Platform文檔中，Adobe編寫器使用 **粗體格式** 請參閱用戶介面控制項，如：
    * 轉到 **[!UICONTROL 連接]** > **[!UICONTROL 目標]**，然後選擇 **[!UICONTROL 目錄]** 頁籤。 查看用戶介面控制項在 [目標教程](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html?lang=en#select-destination)。
 
+## 書寫樣式
+
+>[!IMPORTANT]
+>
+>閱讀 [編寫Adobe文檔指南](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/general-writing-guidance.html?lang=en) 開始創作目標文檔頁面。
+
+* 把句子短一點，快點說清楚。 如果您的句子超過20個單詞或使用多個逗號，請考慮將其分成單獨的句子。 長度超過20字的句子對讀者來說尤其具有挑戰性。
+* 別太客氣。 避免使用「please」或「wase do ...」 在技術文檔中。
+
 ## 連結 {#linking}
 
-請遵循提供的文檔模板，不要編輯模板中的現有連結。 包括新連結時，請閱讀 [使用文檔中的連結](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/linking.html?lang=en) 的上界。
+按照提供的文檔模板操作，不要編輯模板中的現有連結。 包括新連結時，請閱讀 [使用文檔中的連結](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/linking.html?lang=en) 的上界。
 
 ## 品牌推廣指南 {#branding}
 
