@@ -5,7 +5,7 @@ title: 資料準備映射函式
 topic-legacy: overview
 description: 本文檔介紹了與資料準備一起使用的映射功能。
 exl-id: e95d9329-9dac-4b54-b804-ab5744ea6289
-source-git-commit: 7cb940019905240b36e96b834b9e5d0166c1324d
+source-git-commit: a48072d2c418588a05397e991c1a2e17eee4c028
 workflow-type: tm+mt
 source-wordcount: '4286'
 ht-degree: 3%
@@ -25,7 +25,7 @@ ht-degree: 3%
 此外，如果欄位名稱 **任何** 在以下保留關鍵字中，必須用 `${}`:
 
 ```console
-new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continue, else, and, ne, true, le, if, ge, return
+new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continue, else, and, ne, true, le, if, ge, return, _errors
 ```
 
 子域內的資料可以使用點表示法訪問。 例如，如果 `name` 對象，訪問 `firstName` 欄位，使用 `name.firstName`。
