@@ -2,9 +2,9 @@
 title: Adobe Experience Platform 發行說明
 description: Adobe Experience Platform的最新發行說明。
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 5c40235b388c20f5a28a7d8535d5cf2b6d9cb40c
+source-git-commit: c4cd691eeae9e27dd7616dc19672dc5d08b8cec7
 workflow-type: tm+mt
-source-wordcount: '2325'
+source-wordcount: '2327'
 ht-degree: 5%
 
 ---
@@ -177,7 +177,7 @@ XDM是一種開源規範，它為傳入Adobe Experience Platform的資料提供�
 
 | 功能 | 說明 |
 | --- | --- |
-| 銷售線索到帳戶匹配 | 線索到帳戶匹配使您能夠將已知人員配置檔案加入帳戶配置檔案。 然後，您可以在B2B上下文（如帳戶或機會）中對資料進行分段和目標。 日常運行的作業使用確定性和概率性因素，將尚未與任何帳戶關聯的人員配置檔案與最佳匹配的帳戶進行匹配。 然後，您可以決定是否在段定義中包括此類匹配項 |
+| 銷售線索到帳戶匹配 | 「線索至帳戶」匹配使您能夠將已知人員配置檔案加入帳戶配置檔案。 然後，您可以在B2B上下文（如帳戶或機會）中對資料進行分段和目標。 日常運行的作業使用確定性和概率性因素，將尚未與任何帳戶關聯的人員配置檔案與最佳匹配的帳戶進行匹配。 然後，您可以決定是否在段定義中包括此類匹配項 |
 
 有關詳細資訊，請參閱上的文檔 [導致帳戶匹配](../../rtcdp/b2b-ai-ml-services/lead-to-account-matching.md)。
 
