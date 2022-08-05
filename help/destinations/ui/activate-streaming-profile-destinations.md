@@ -4,9 +4,9 @@ title: 激活受眾資料以流式處理配置檔案導出目標
 type: Tutorial
 description: 瞭解如何通過將段發送到基於配置檔案的流式傳輸目的地來激活您在Adobe Experience Platform擁有的受眾資料。
 exl-id: bc0f781e-60de-44a5-93cb-06b4a3148591
-source-git-commit: a6fe0f5a0c4f87ac265bf13cb8bba98252f147e0
+source-git-commit: af761155bc510d96cea2b0bd475ee4a3bc4abe16
 workflow-type: tm+mt
-source-wordcount: '557'
+source-wordcount: '645'
 ht-degree: 0%
 
 ---
@@ -29,15 +29,15 @@ ht-degree: 0%
 
 1. 轉到 **[!UICONTROL 連接>目標]**，然後選擇 **[!UICONTROL 目錄]** 頁籤。
 
-   ![目標目錄頁籤](../assets/ui/activate-streaming-profile-destinations/catalog-tab.png)
+   ![顯示目標目錄頁籤的影像。](../assets/ui/activate-streaming-profile-destinations/catalog-tab.png)
 
 1. 選擇 **[!UICONTROL 激活段]** 在與要激活段的目標相對應的卡上，如下圖所示。
 
-   ![「激活段」按鈕](../assets/ui/activate-streaming-profile-destinations/activate-segments-button.png)
+   ![在目標目錄頁籤中突出顯示激活段控制項的影像。](../assets/ui/activate-streaming-profile-destinations/activate-segments-button.png)
 
 1. 選擇要用於激活段的目標連接，然後選擇 **[!UICONTROL 下一個]**。
 
-   ![選擇目標](../assets/ui/activate-streaming-profile-destinations/select-destination.png)
+   ![該影像顯示可連接到的兩個目標的選擇。](../assets/ui/activate-streaming-profile-destinations/select-destination.png)
 
 1. 移至下一節 [選擇段](#select-segments)。
 
@@ -45,11 +45,11 @@ ht-degree: 0%
 
 使用段名稱左側的複選框選擇要激活到目標的段，然後選擇 **[!UICONTROL 下一個]**。
 
-![選擇段](../assets/ui/activate-streaming-profile-destinations/select-segments.png)
+![在激活工作流的「選擇段」步驟中突出顯示選中的複選框的影像。](../assets/ui/activate-streaming-profile-destinations/select-segments.png)
 
 ## 選擇配置檔案屬性 {#select-attributes}
 
-選擇要發送到目標的配置檔案屬性。
+在 **[!UICONTROL 映射]** 步驟，選擇要發送到目標目標的配置檔案屬性。
 
 >[!NOTE]
 >
@@ -59,19 +59,19 @@ ht-degree: 0%
 * 如果 `segmentMembership.status` 欄位，導出的檔案包括 **[!UICONTROL 活動]** 初始完整快照中的成員和 **[!UICONTROL 活動]** 和 **[!UICONTROL 已過期]** 後續增量導出中的成員。
 * 如果 `segmentMembership.status` 欄位未選中，導出的檔案僅包括 **[!UICONTROL 活動]** 初始完整快照和後續增量導出中的成員。
 
-![推薦屬性](../assets/ui/activate-streaming-profile-destinations/attributes-default.png)
+![顯示映射步驟中預填充的建議屬性的影像。](../assets/ui/activate-streaming-profile-destinations/attributes-default.png)
 
 1. 在 **[!UICONTROL 選擇屬性]** ，選擇 **[!UICONTROL 添加新欄位]**。
 
-   ![添加新映射](../assets/ui/activate-streaming-profile-destinations/add-new-field.png)
+   ![在映射步驟中突出顯示「添加新欄位」控制項的影像。](../assets/ui/activate-streaming-profile-destinations/add-new-field.png)
 
 1. 選擇右側的箭頭 **[!UICONTROL 架構欄位]** 的子菜單。
 
-   ![選擇源欄位](../assets/ui/activate-streaming-profile-destinations/select-schema-field.png)
+   ![在映射步驟中突出顯示如何選擇源欄位的影像。](../assets/ui/activate-streaming-profile-destinations/select-schema-field.png)
 
 1. 在 **[!UICONTROL 選擇欄位]** 頁，選擇要發送到目標的XDM屬性，然後選擇 **[!UICONTROL 選擇]**。
 
-   ![「選擇源欄位」頁](../assets/ui/activate-streaming-profile-destinations/target-field-page.png)
+   ![該影像顯示可選擇作為源欄位的XDM欄位的選擇。](../assets/ui/activate-streaming-profile-destinations/target-field-page.png)
 
 
 1. 要添加更多映射，請重複步驟1至3，然後選擇 **[!UICONTROL 下一個]**。
@@ -84,11 +84,11 @@ ht-degree: 0%
 >
 >在此步驟中，Adobe Experience Platform檢查資料使用策略違規。 下面顯示的示例違反了策略。 在解決違規之前，無法完成段激活工作流。 有關如何解決策略違規的資訊，請參見 [策略執行](../../rtcdp/privacy/data-governance-overview.md#enforcement) 資料治理文檔部分。
 
-![資料策略違規](../assets/common/data-policy-violation.png)
+![在審閱步驟中顯示違反資料策略的影像。](../assets/common/data-policy-violation.png)
 
 如果未檢測到任何策略違規，請選擇 **[!UICONTROL 完成]** 確認選擇並開始向目標發送資料。
 
-![審閱](../assets/ui/activate-streaming-profile-destinations/review.png)
+![顯示激活工作流的審閱步驟的影像。](../assets/ui/activate-streaming-profile-destinations/review.png)
 
 ## 驗證段激活 {#verify}
 
