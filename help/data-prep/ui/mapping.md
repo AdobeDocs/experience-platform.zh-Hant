@@ -3,9 +3,9 @@ keywords: Experience Platform；首頁；熱門主題；映射csv；映射csv；
 title: 資料準備UI指南
 description: 本文檔提供有關如何在平台UI中使用資料準備函式將CSV檔案映射到XDM架構的說明。
 exl-id: fafa4aca-fb64-47ff-a97d-c18e58ae4dae
-source-git-commit: edef8843c03282774991f30220504ece97af52cf
+source-git-commit: d0f5d1f55101ce15934289d4fcfd1f70c1b63fc7
 workflow-type: tm+mt
-source-wordcount: '1837'
+source-wordcount: '1845'
 ht-degree: 1%
 
 ---
@@ -149,7 +149,7 @@ ht-degree: 1%
 
 #### 計算欄位 {#calculated-fields}
 
-計算欄位允許根據輸入方案中的屬性建立值。 然後，可以將這些值分配給目標架構中的屬性，並提供名稱和說明，以便更容易地引用。
+計算欄位允許根據輸入方案中的屬性建立值。 然後，可以將這些值分配給目標架構中的屬性，並提供名稱和說明，以便更容易地引用。 計算欄位的最大長度為4096個字元。
 
 要建立計算欄位，請選擇 **[!UICONTROL 新欄位類型]** ，然後選擇 **[!UICONTROL 添加計算欄位]**
 
@@ -161,7 +161,7 @@ ht-degree: 1%
 | --- | ----------- |
 | [!UICONTROL 函數] | 「函式」頁籤列出了可用於轉換資料的函式。 要瞭解有關在計算欄位中可以使用的功能的詳細資訊，請閱讀上的指南 [使用資料準備（映射器）函式](../functions.md)。 |
 | [!UICONTROL 欄位] | 「欄位」頁籤列出源架構中可用的欄位和屬性。 |
-| [!UICONTROL 運算元] | 「運算子」(Operators)頁籤列出了可用於轉換資料的運算子。 |
+| [!UICONTROL 運算子] | 「運算子」(Operators)頁籤列出了可用於轉換資料的運算子。 |
 
 ![頁籤](../images/ui/mapping/tabs.png)
 

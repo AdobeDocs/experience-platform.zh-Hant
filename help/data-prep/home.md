@@ -5,9 +5,9 @@ title: 資料準備概述
 topic-legacy: overview
 description: 本文檔介紹Adobe Experience Platform內的資料準備。
 exl-id: f15eeb50-a531-4560-a524-1a670fbda706
-source-git-commit: 7042c6f5e3061fee7183b1befa447333f116c125
+source-git-commit: d0f5d1f55101ce15934289d4fcfd1f70c1b63fc7
 workflow-type: tm+mt
-source-wordcount: '780'
+source-wordcount: '788'
 ht-degree: 0%
 
 ---
@@ -37,7 +37,7 @@ Data Prep還應用多個內部資料驗證，以確保在接收資料時保持�
 
 ### 計算欄位
 
-計算欄位允許根據輸入方案中的屬性建立值。 然後，可以將這些值分配給目標架構中的屬性，並提供名稱和說明，以便更容易地引用。
+計算欄位允許根據輸入方案中的屬性建立值。 然後，可以將這些值分配給目標架構中的屬性，並提供名稱和說明，以便更容易地引用。 計算欄位的最大長度為4096個字元。
 
 要瞭解有關計算欄位的詳細資訊，請閱讀 [計算欄位指南](./functions.md#calculated-fields)。
 
