@@ -2,9 +2,9 @@
 title: Experience Platform中資料收集的權限管理
 description: 關於如何管理權限和控制對Adobe Experience Platform資料收集功能的訪問的高級概述。
 exl-id: 8426d54b-ec1d-475a-a769-f45a8c924fe7
-source-git-commit: 1ab1c269fd43368e059a76f96b3eb3ac4e7b8388
+source-git-commit: 58b8446d6a20ac797ac004b19bdbfdb10f692647
 workflow-type: tm+mt
-source-wordcount: '1201'
+source-wordcount: '1311'
 ht-degree: 5%
 
 ---
@@ -70,19 +70,36 @@ Adobe Experience Platform資料收集下的權限控制對標籤和事件轉發�
 >
 >有關這些權限如何影響標籤中的權能（包括常見方案的管理策略）的詳細資訊，請參閱上的標籤文檔 [用戶權限](../tags/ui/administration/user-permissions.md)。
 
-## 管理Adobe Experience Platform資料收集的權限 {#manage}
+## 管理權限 {#manage}
 
->[!IMPORTANT]
->
->本節僅介紹如何管理Admin Console中的Adobe Experience Platform資料收集產品的權限。 但是，管理Adobe Experience Platform產品下的權限的步驟相似。
->
->查看 [訪問控制UI指南](../access-control/ui/overview.md) 有關管理平台權限的詳細說明。 根據您的組織有權訪問的產品SKU，您可能沒有您可以擁有的所有權限。
+如上節所述，資料收集權限通過Admin Console中的兩種產品指定進行管理： **Adobe Experience Platform** 和 **Adobe Experience Platform資料收集**。
 
-要管理資料收集的權限，請登錄到 [Admin Console](https://adminconsole.adobe.com/) 選擇 **[!UICONTROL 產品]** 的上界。 從此處，選擇 **[!UICONTROL Adobe Experience Platform資料收集]**。
+要管理這些權限，請登錄到 [Admin Console](https://adminconsole.adobe.com/) 選擇 **[!UICONTROL 產品]** 的上界。 在此處，選擇要配置權限的產品卡。 有關如何管理Admin Console中每個產品下的相關權限的步驟，請參閱以下子部分：
+
+* [Adobe Experience Platform權限](#manage-platform)
+* [Adobe Experience Platform資料收集權限](#manage-collection)
+
+### 管理Adobe Experience Platform下的權限 {#manage-platform}
+
+從 **[!UICONTROL 產品]** 在Admin Console中查看，選擇 **[!UICONTROL Adobe Experience Platform資料收集]**。 選擇要編輯其權限的產品配置檔案，然後導航到 **[!UICONTROL 權限]** 頁籤。
+
+要訪問資料收集功能，必須在 **[!UICONTROL 沙箱]**。 **[!UICONTROL 資料建模]**。 **[!UICONTROL Identity Management]**, **[!UICONTROL 資料收集]** 的下界。
+
+![顯示Admin Console中資料收集產品卡的影像](./images/permissions/platform-permission-card.png)
+
+查看 [訪問控制UI指南](../access-control/ui/overview.md) 有關管理平台權限的詳細說明。
+
+>[!NOTE]
+>
+>根據您的組織有權訪問的產品SKU，您可能沒有可用的所有平台權限。
+
+### 管理Adobe Experience Platform資料收集下的權限 {#manage-collection}
+
+從 **[!UICONTROL 產品]** 在Admin Console中查看，選擇 **[!UICONTROL Adobe Experience Platform資料收集]**。
 
 ![顯示Admin Console中資料收集產品卡的影像](./images/permissions/data-collection-card.png)
 
-### 選擇或建立產品配置檔案
+#### 選擇或建立產品配置檔案
 
 下一螢幕顯示組織下資料收集的可用產品配置檔案清單，預設配置檔案 **[!DNL Default Data Collection All Access]**。 如果需要，您可以選擇編輯預設產品配置檔案，也可以選擇 **[!UICONTROL 新建配置檔案]** 建立一個。 如果您的組織中有多個需要不同訪問級別的角色或用戶組，則應為每個角色或用戶組建立單獨的產品配置檔案。
 
@@ -92,7 +109,7 @@ Adobe Experience Platform資料收集下的權限控制對標籤和事件轉發�
 
 ![顯示產品配置檔案權限頁籤的影像Admin Console](./images/permissions/edit-permission-categories.png)
 
-### 編輯產品配置檔案的權限 {#edit-permissions}
+#### 編輯產品配置檔案的權限 {#edit-permissions}
 
 編輯配置檔案的權限時，可用權限將列在左列中，而包含在配置檔案中的可用權限將列在右列中。 選擇列出的權限以在任一列之間移動它們。
 
@@ -110,7 +127,7 @@ Adobe Experience Platform資料收集下的權限控制對標籤和事件轉發�
 
 ![顯示為產品配置檔案添加的權限的影像](./images/permissions/permissions-added.png)
 
-### 將用戶分配給產品配置檔案 {#assign-users}
+#### 將用戶分配給產品配置檔案 {#assign-users}
 
 要將用戶分配給產品配置檔案（並授予他們配置檔案的配置權限），請選擇 **[!UICONTROL 用戶]** 頁籤，後跟 **[!UICONTROL 添加用戶]**。
 
