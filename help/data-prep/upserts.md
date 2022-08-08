@@ -3,9 +3,9 @@ keywords: Experience Platform；首頁；熱門主題；資料準備；資料準
 title: 使用資料準備將部分行更新發送到配置檔案服務
 description: 本文檔提供有關如何使用資料準備將部分行更新發送到配置檔案服務的資訊。
 exl-id: f9f9e855-0f72-4555-a4c5-598818fc01c2
-source-git-commit: cc3ecbd8544839246d54f72b894ad27e850c0c90
+source-git-commit: 4e24552c441c9096ef1139df66ad07d89f08a5d6
 workflow-type: tm+mt
-source-wordcount: '1188'
+source-wordcount: '1169'
 ht-degree: 1%
 
 ---
@@ -249,7 +249,6 @@ curl -X POST 'https://dcs.adobedc.net/collection/9aba816d350a69c4abbd283eb5818ec
 
 * 只有在將部分行更新發送到 [!DNL Profile Service]。 部分行更新是 **不** 由資料湖消耗。
 * 流式Upserts方法不支援更新、替換和刪除身份。 如果不存在新標識，則建立新標識。 因此 `identity` 必須始終將操作設定為建立。 如果標識已存在，則操作為no-op。
-* 流upsreats方法當前僅支援基元單值屬性（如整數、日期、時間戳和字串）和對象。
 * 流補插頁方法當前不支援 [Adobe Experience PlatformWeb SDK](https://experienceleague.adobe.com/docs/experience-platform/edge/home.html?lang=zh-Hant) 和 [Adobe Experience Platform移動SDK](https://aep-sdks.gitbook.io/docs/)。
 
 ## 後續步驟
