@@ -4,9 +4,9 @@ user-guide-title: 目的地指南
 user-guide-description: 針對跨通路行銷活動、電子郵件宣傳、鎖定特定目標的行銷活動和其他諸多使用案例，啟用已知和未知的資料。
 description: 本文檔列出了Adobe Experience Platform目標的目錄
 feature: Destinations
-source-git-commit: ff00dcda3bbccd731c91fdf475b37221edb659db
+source-git-commit: fd3114a4578637dcf99232245f8d2cec64de14b5
 workflow-type: tm+mt
-source-wordcount: '925'
+source-wordcount: '943'
 ht-degree: 7%
 
 ---
@@ -210,6 +210,7 @@ ht-degree: 7%
          * [(Beta)使用自定義檔案名和格式設定選項配置AmazonS3目標](../destinations/destination-sdk/guides/batch/configure-amazon-s3-destination-with-custom-file-formatting.md)
          * [(Beta)使用自定義檔案格式設定選項和自定義檔案名配置配置Azure Blob儲存目標](../destinations/destination-sdk/guides/batch/configure-blob-destination-with-custom-file-formatting.md)
          * [(Beta)使用自定義檔案格式選項和自定義檔案名配置配置Azure Data Lake儲存目標](../destinations/destination-sdk/guides/batch/configure-adls-destination-with-custom-file-formatting.md)
+         * [(Beta)使用自定義檔案格式設定選項和自定義檔案名配置配置資料登錄區域(DLZ)目標](../destinations/destination-sdk/guides/batch/configure-dlz-destination-with-custom-file-formatting.md)
          * [(Beta)使用預定義的檔案格式選項和自定義檔案名配置配置SFTP目標](../destinations/destination-sdk/guides/batch/configure-sftp-destination-with-predefined-file-formatting.md)
    * 參考 {#reference}
       * [流目標的速率限制和重試策略](./destination-sdk/rate-limiting-retry-policy.md)
