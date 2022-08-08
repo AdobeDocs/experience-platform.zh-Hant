@@ -3,9 +3,9 @@ keywords: AmazonKinesis;kinesis目標；kinesis
 title: AmazonKinesis
 description: 建立到AmazonKinesis儲存的即時出站連接，以從Adobe Experience Platform流資料。
 exl-id: b40117ef-6ad0-48a9-bbcb-97c6f6d1dce3
-source-git-commit: abe2e7ba363b82a696136aa46aa1adbbe25ee461
+source-git-commit: 75399d2fbe111a296479f8d3404d43c6ba0d50b5
 workflow-type: tm+mt
-source-wordcount: '1889'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -285,7 +285,7 @@ Experience Platform優化配置檔案導出行為 [!DNL Amazon Kinesis] 目標�
 
 ## 限制和重試策略 {#limits-retry-policy}
 
-在95%的時間內，Experience Platform嘗試為成功發送的消息提供小於10分鐘的吞吐量延遲，每個資料流每秒的請求數小於10.000。
+在95%的時間內，Experience Platform會嘗試為成功發送的消息提供少於10分鐘的吞吐量延遲，每個資料流的請求速率低於每秒10,000次，到HTTP目標。
 
 如果向HTTP API目標發出失敗請求，Experience Platform將儲存失敗的請求並重試兩次，以將請求發送到終結點。
 

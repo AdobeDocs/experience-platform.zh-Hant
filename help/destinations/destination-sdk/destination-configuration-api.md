@@ -2,9 +2,9 @@
 description: 此頁列出並說明了可以使用「/authoring/destinations」 API終結點執行的所有API操作。
 title: 目標API終結點操作
 exl-id: 96755e9d-be62-432f-b985-91330575b395
-source-git-commit: 301cef53644e813c3fd43e7f2dbaf730c9e5fc11
+source-git-commit: 75399d2fbe111a296479f8d3404d43c6ba0d50b5
 workflow-type: tm+mt
-source-wordcount: '2571'
+source-wordcount: '2572'
 ht-degree: 4%
 
 ---
@@ -171,7 +171,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 | `aggregation.bestEffortAggregation.maxUsersPerRequest` | 整數 | Experience Platform可以在單個HTTP調用中聚合多個導出的配置檔案。 指定終結點在單個HTTP調用中應接收的最大配置檔案數。 請注意，這是一種盡力的聚合。 例如，如果指定值100，平台可能會在呼叫時發送小於100的任意數量的配置檔案。 <br> 如果伺服器不接受每個請求的多個用戶，請將此值設定為1。 |
 | `aggregation.bestEffortAggregation.splitUserById` | 布林值 | 如果應按標識拆分到目標的調用，則使用此標誌。 將此標誌設定為 `true` 如果伺服器對給定命名空間每次只接受一個標識。 |
 | `aggregation.configurableAggregation.splitUserById` | 布林值 | 請參見示例配置中的參數 [這裡](./destination-configuration.md#example-configuration)。 如果應按標識拆分到目標的調用，則使用此標誌。 將此標誌設定為 `true` 如果伺服器對給定命名空間每次只接受一個標識。 |
-| `aggregation.configurableAggregation.maxBatchAgeInSecs` | 整數 | <ul><li>*最小值：1800*</li><li>*最大值：3600*</li><li>請參見示例配置中的參數 [這裡](./destination-configuration.md#example-configuration)。 配置最小值和最大可接受值之間的值。 與 `maxNumEventsInBatch`，此參數確定Experience Platform應等待多長時間，直到將API調用發送到您的終結點。 <br> 例如，如果對這兩個參數都使用最大值，Experience Platform將等待3600秒或直到有10.000個合格配置檔案才進行API調用（以先發生的情況為準）。 </li></ul> |
+| `aggregation.configurableAggregation.maxBatchAgeInSecs` | 整數 | <ul><li>*最小值：1800*</li><li>*最大值：3600*</li><li>請參見示例配置中的參數 [這裡](./destination-configuration.md#example-configuration)。 配置最小值和最大可接受值之間的值。 與 `maxNumEventsInBatch`，此參數確定Experience Platform應等待多長時間，直到將API調用發送到您的終結點。 <br> 例如，如果對這兩個參數都使用最大值，Experience Platform將等待3600秒或直到有10000個限定配置檔案才進行API調用（以先發生的情況為準）。 </li></ul> |
 | `aggregation.configurableAggregation.maxNumEventsInBatch` | 整數 | <ul><li>*最小值：1000*</li><li>*最大值：10000*</li><li>請參見示例配置中的參數 [這裡](./destination-configuration.md#example-configuration)。 配置最小值和最大可接受值之間的值。 有關此參數的說明，請參見 `maxBatchAgeInSecs` 就在上面。</li></ul> |
 | `aggregation.configurableAggregation.aggregationKey` | 布林值 | 請參見示例配置中的參數 [這裡](./destination-configuration.md#example-configuration)。 允許您根據以下參數聚合映射到目標的導出配置檔案： <br> <ul><li>段ID</li><li> 段狀態 </li><li> 標識命名空間 </li></ul> |
 | `aggregation.configurableAggregation.aggregationKey.includeSegmentId` | 布林值 | 請參見示例配置中的參數 [這裡](./destination-configuration.md#example-configuration)。 將此設定為 `true` 按段ID對導出到目標的配置檔案進行分組。 |
