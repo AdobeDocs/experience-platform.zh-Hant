@@ -2,10 +2,10 @@
 title: 瀏覽資料衛生工作單
 description: 瞭解如何在Adobe Experience Platform用戶介面中查看和管理現有資料衛生工作單。
 exl-id: 76d4a809-cc2c-434d-90b1-23d88f29c022
-source-git-commit: 7f1e4bdf54314cab1f69619bcbb34216da94b17e
+source-git-commit: e57b5ec6c6234d4d1fe22f8d03c70d6bd9c02f0f
 workflow-type: tm+mt
-source-wordcount: '411'
-ht-degree: 1%
+source-wordcount: '484'
+ht-degree: 2%
 
 ---
 
@@ -41,10 +41,10 @@ ht-degree: 1%
 
 | 篩選 | 說明 |
 | --- | --- |
-| [!UICONTROL 狀態] | 根據工作單的當前狀態進行篩選。 |
-| [!UICONTROL 建立日期] | 根據資料集TTL請求發出的時間進行篩選。 |
-| [!UICONTROL 刪除日期] | 根據TTL已計畫的刪除日期進行篩選。 |
-| [!UICONTROL 更新日期] | 根據上次更新資料集TTL的時間進行篩選。 TTL建立和到期被計為更新。 |
+| [!UICONTROL 狀態] | 根據工作單的當前狀態篩選：<ul><li>**[!UICONTROL 已完成]**:作業已完成。</li><li>**[!UICONTROL 待定]**:作業已建立，但尚未執行。 A [資料集生存時間(TTL)請求](./ttl.md) 在計畫刪除日期之前假定此狀態。 刪除日期到達後，狀態將更新為 [!UICONTROL 正在執行] 除非事先取消。</li><li>**[!UICONTROL 正在執行]**:該作業已啟動，當前正在處理。</li><li>**[!UICONTROL 已取消]**:作為手動用戶請求的一部分，已取消作業。</li></ul> |
+| [!UICONTROL 建立日期] | 根據下達工作單的時間進行篩選。 |
+| [!UICONTROL 到期日] | 根據有關資料集的計畫刪除日期篩選TTL請求。 |
+| [!UICONTROL 更新日期] | 根據上次更新工作單的時間篩選TTL請求。 TTL建立和到期被計為更新。 |
 
 {style=&quot;table-layout:auto&quot;}
 
