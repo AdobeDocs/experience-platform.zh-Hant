@@ -2,9 +2,9 @@
 title: Pega客戶決策中心連接
 description: 使用Adobe Experience Platform的Pega客戶決策中心目標將配置檔案屬性和段成員資料發送到Pega客戶決策中心，以便進行下一最佳行動決策。
 exl-id: 0546da5d-d50d-43ec-bbc2-9468a7db4d90
-source-git-commit: f06afec31b7fa550a612280b8ad665b8393ee2e3
+source-git-commit: 144aa80beeb13fde7ca339692774e3d20256f49c
 workflow-type: tm+mt
-source-wordcount: '1003'
+source-wordcount: '1013'
 ht-degree: 1%
 
 ---
@@ -37,7 +37,7 @@ ht-degree: 1%
 
 在使用此目標將資料導出到Adobe Experience Platform之前，請確保在 [!DNL Pega Customer Decision Hub]:
 
-* 在中配置Adobe段成員身份元件 [!DNL Pega Customer Decision Hub] 實例。
+* 配置 [Adobe Experience Platform配置檔案和段成員資格整合元件](https://docs.pega.com/component/customer-decision-hub/adobe-experience-platform-profile-and-segment-membership-integration-component) 在 [!DNL Pega Customer Decision Hub] 實例。
 * 配置OAuth 2.0 [使用客戶端憑據進行客戶端註冊](https://docs.pega.com/security/87/creating-and-configuring-oauth-20-client-registration) 授予類型 [!DNL Pega Customer Decision Hub] 實例。
 * 配置 [即時運行資料流](https://docs.pega.com/decision-management/87/creating-real-time-run-data-flows) 用於Adobe段成員身份資料流 [!DNL Pega Customer Decision Hub] 實例。
 
