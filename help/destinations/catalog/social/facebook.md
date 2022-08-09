@@ -3,9 +3,9 @@ keywords: facebook連接；facebook連接；facebook目標；facebook;instagram;
 title: Facebook
 description: 激活您的Facebook市場活動的配置檔案，以便根據經過散列的電子郵件進行受眾目標、個性化和壓制。
 exl-id: 51e8c8f0-5e79-45b9-afbc-110bae127f76
-source-git-commit: dd18350387aa6bdeb61612f0ccf9d8d2223a8a5d
+source-git-commit: 70670f7aec2ab6a5594f5e69672236c7bcc3ce81
 workflow-type: tm+mt
-source-wordcount: '1867'
+source-wordcount: '1859'
 ht-degree: 1%
 
 ---
@@ -165,7 +165,6 @@ ht-degree: 1%
 >id="platform_destinations_activate_facebook_originofaudience"
 >title="受眾來源"
 >abstract="選擇最初收集段中客戶資料的方式。 當用戶被段鎖定時，資料將顯示在Facebook"
->additional-url="http://www.adobe.com/go/destinations-facebook-activate-section-en" text="瞭解有關文檔的詳細資訊"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_facebook_originofaudience_customers"

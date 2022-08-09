@@ -4,9 +4,9 @@ title: 將受眾資料激活到流段導出目標
 type: Tutorial
 description: 瞭解如何通過將段映射到段流式傳輸目標來激活您在Adobe Experience Platform擁有的觀眾資料。
 exl-id: bb61a33e-38fc-4217-8999-9eb9bf899afa
-source-git-commit: a6fe0f5a0c4f87ac265bf13cb8bba98252f147e0
+source-git-commit: 70670f7aec2ab6a5594f5e69672236c7bcc3ce81
 workflow-type: tm+mt
-source-wordcount: '832'
+source-wordcount: '811'
 ht-degree: 0%
 
 ---
@@ -83,7 +83,6 @@ ht-degree: 0%
 >id="platform_destinations_activate_applytransformation"
 >title="應用轉換"
 >abstract="使用未散列的源欄位時，選中此選項，以使Adobe Experience Platform在激活時自動散列這些欄位。"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations.html#apply-transformation" text="瞭解有關文檔的詳細資訊"
 
 將未散列的源屬性映射到目標預期散列的目標屬性時(例如： `email_lc_sha256` 或 `phone_sha256`)，檢查 **應用轉換** 選項，使Adobe Experience Platform在激活時自動散列源屬性。
 
@@ -95,7 +94,6 @@ ht-degree: 0%
 >id="platform_destinations_activate_enddate"
 >title="結束日期"
 >abstract="無法為段計畫添加結束日期。"
->additional-url="https://www.adobe.com/go/destinations-activate-segment-scheduling-en" text="瞭解有關文檔的詳細資訊"
 
 預設情況下， [!UICONTROL 段計畫] 頁只顯示在當前激活流中選擇的新選定段。
 

@@ -4,9 +4,9 @@ title: 將受眾資料激活到批配置檔案導出目標
 type: Tutorial
 description: 瞭解如何通過將段發送到基於批處理配置檔案的目標來激活您在Adobe Experience Platform擁有的受眾資料。
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: a6fe0f5a0c4f87ac265bf13cb8bba98252f147e0
+source-git-commit: 70670f7aec2ab6a5594f5e69672236c7bcc3ce81
 workflow-type: tm+mt
-source-wordcount: '2544'
+source-wordcount: '2520'
 ht-degree: 0%
 
 ---
@@ -54,7 +54,6 @@ ht-degree: 0%
 >id="platform_destinations_activate_schedule"
 >title="排程"
 >abstract="使用鉛筆表徵圖可設定檔案導出類型（完整檔案或增量檔案）和導出頻率。"
->additional-url="https://www.adobe.com/go/destinations-profile-batch-en" text="瞭解有關文檔的詳細資訊"
 
 [!DNL Adobe Experience Platform] 以以下形式導出資料以用於電子郵件營銷和雲儲存目標 [!DNL CSV] 的子菜單。 在 **[!UICONTROL 計畫]** 頁中，您可以配置要導出的每個段的調度和檔案名。 配置計畫是必需的，但配置檔案名是可選的。
 
@@ -221,7 +220,6 @@ ht-degree: 0%
 >id="platform_destinations_activate_mandatorykey"
 >title="關於必備屬性"
 >abstract="選擇所有導出的配置檔案應包括的XDM架構屬性。 沒有強制鍵的配置檔案不會導出到目標。 不選擇強制鍵將導出所有限定的配置檔案，而不管其屬性如何。"
->additional-url="http://www.adobe.com/go/destinations-mandatory-attributes-en" text="瞭解有關文檔的詳細資訊"
 
 強制屬性是啟用用戶的複選框，可確保所有配置檔案記錄都包含所選屬性。 例如：所有導出的配置檔案都包含電子郵件地址&#x200B;。
 
@@ -237,7 +235,6 @@ ht-degree: 0%
 >id="platform_destinations_activate_deduplicationkey"
 >title="關於重複資料消除密鑰"
 >abstract="通過選擇重複資料消除密鑰，消除導出檔案中同一配置檔案的多個記錄。 選擇單個命名空間或最多兩個XDM架構屬性作為重複資料消除鍵。 不選擇重複資料消除密鑰可能會導致導出檔案中出現重複的配置檔案條目。"
->additional-url="http://www.adobe.com/go/destinations-deduplication-keys-en" text="瞭解有關文檔的詳細資訊"
 
 重複資料消除密鑰是用戶定義的主密鑰，它確定用戶希望對其配置檔案進行重複資料消除的標識&#x200B;。
 
