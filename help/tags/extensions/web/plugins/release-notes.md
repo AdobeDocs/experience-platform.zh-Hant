@@ -1,14 +1,23 @@
 ---
-title: 常見Analytics外掛程式擴充功能的發行說明
-description: Adobe Experience Platform中常見Analytics外掛程式標籤擴充功能的最新發行說明。
-source-git-commit: cce218d984bae92428c7d48aefcd0f57dab837ea
+title: 通用分析插件擴展的發行說明
+description: Adobe Experience PlatformCommon Analytics插件標籤擴展的最新發行說明。
+exl-id: 5ea4b709-4e21-4f5d-be99-e72e4889ed99
+source-git-commit: 1be361f9cd70b0424542af64a994da0b21d6b5dc
 workflow-type: tm+mt
-source-wordcount: '314'
-ht-degree: 57%
+source-wordcount: '329'
+ht-degree: 56%
 
 ---
 
-# 常見Analytics外掛程式發行說明
+# 通用分析插件發行說明
+
+## 2022 年 6 月 03 日
+
+### 常見 Analytics 外掛程式擴充功能 3.0.7
+
+#### 功能
+
+設定Cookie的插件現在使用安全標誌
 
 ## 2021 年 6 月 23 日
 
@@ -16,7 +25,7 @@ ht-degree: 57%
 
 #### 錯誤修正
 
-* 修正使用特殊字元時getPercentPageViewed會中斷的問題
+* 使用特殊字元時getPercentPageViewed將中斷的問題已解決
 
 ## 2021 年 5 月 20 日
 
@@ -24,7 +33,7 @@ ht-degree: 57%
 
 #### 錯誤修正
 
-* 修正使用一般初始化動作時getTimeParting無法正確初始化的問題
+* 已修復在使用泛型初始化操作時getTimeParting無法正確初始化的問題
 
 ## 2021 年 3 月 26 日
 
@@ -32,9 +41,9 @@ ht-degree: 57%
 
 #### 錯誤修正
 
-* 修正getPageLoadTime在視窗物件上未正確設定變數的問題
-* 修正若查詢字串中未出現queryParam時，getQueryParam傳回undefined而非&quot;&quot;的問題
-* 修正初始化動作中顯示錯誤版本號碼的問題
+* 已修復的問題，其中getPageLoadTime在窗口對象上設定了錯誤的變數
+* 如果查詢字串中不存在queryParam，則修復了getQueryParam返回undefined而不是&quot;&quot;的問題
+* 修復初始化操作中顯示不正確版本號的問題
 
 ## 2021 年 3 月 19 日
 
@@ -42,9 +51,9 @@ ht-degree: 57%
 
 #### 功能
 
-* 所有外掛程式已更新，可自動納入版本資訊作為內容資料
-* 新增getPercentPageViewed外掛程式
-* 為下列外掛程式新增資料元素
+* 所有已更新的插件自動將版本資訊包括為上下文資料
+* 已添加getPercentPageViewed插件
+* 為以下插件添加了資料元素
    * getGeoCoordinates
    * getNewRepeat
    * getPageName
@@ -53,7 +62,7 @@ ht-degree: 57%
    * getTimeSinceLastVisit
    * getVisitDuration
    * getVisitNum
-* 更新樣式
+* 更新的樣式
 
 ## 2020 年 4 月 9 日
 
@@ -83,7 +92,7 @@ ht-degree: 57%
 
 #### 錯誤修正
 
-* 重新推出個別外掛程式動作，以支援回溯相容性
+* 重新引入了單個插件操作以支援向後相容
 * 修正 `cleanStr` 外掛程式的問題
 * 修正 `getResponsiveLayout` 外掛程式的問題
 * 修正 `getPageName` 外掛程式的問題
@@ -118,5 +127,5 @@ ht-degree: 57%
 
 #### 功能
 
-* 隨七個外掛程式發行擴充功能
+* 已發佈7個插件的擴展
 * 初始化各個外掛程式的個別動作
