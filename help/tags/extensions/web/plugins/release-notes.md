@@ -2,7 +2,7 @@
 title: 通用分析插件擴展的發行說明
 description: Adobe Experience PlatformCommon Analytics插件標籤擴展的最新發行說明。
 exl-id: 5ea4b709-4e21-4f5d-be99-e72e4889ed99
-source-git-commit: 1be361f9cd70b0424542af64a994da0b21d6b5dc
+source-git-commit: c0aa12e9d50e3d1a05a8692a153242f2e6c044ca
 workflow-type: tm+mt
 source-wordcount: '329'
 ht-degree: 56%
@@ -17,7 +17,7 @@ ht-degree: 56%
 
 #### 功能
 
-設定Cookie的插件現在使用安全標誌
+* 設定Cookie的插件現在使用安全標誌
 
 ## 2021 年 6 月 23 日
 
