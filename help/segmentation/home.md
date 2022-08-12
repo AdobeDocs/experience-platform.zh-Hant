@@ -1,156 +1,178 @@
 ---
-keywords: Experience Platform；首頁；熱門主題；分段；分段；區段服務；區段；區段；區段；區段
+keywords: Experience Platform；主題；熱門主題；分段；分段；分段；分段；分段；分段；分段；分段；分段；分段；分段；分段；分段
 solution: Experience Platform
-title: 區段服務概述
+title: 分段服務概述
 topic-legacy: overview
-description: 了解Adobe Experience Platform細分服務及其在Platform生態系統中的角色。
+description: 瞭解Adobe Experience Platform細分服務及其在平台生態系統中的作用。
 exl-id: 2c18a806-88ed-4659-bdfd-2377f5a09a1a
-source-git-commit: 3130d9731a53c01fb7bc15265e044191ceae47f6
+source-git-commit: 0267b0141f7b6944ea65bc413f14cc9580081387
 workflow-type: tm+mt
-source-wordcount: '1507'
+source-wordcount: '1630'
 ht-degree: 0%
 
 ---
 
-# [!DNL Segmentation Service] 概觀
+# [!DNL Segmentation Service]概述
 
-Adobe Experience Platform [!DNL Segmentation Service] 提供使用者介面和RESTful API，可讓您建立區段，並從中產生對象 [!DNL Real-time Customer Profile] 資料。 這些區段是在 [!DNL Platform]，任何Adobe解決方案都可輕鬆存取。
+Adobe Experience Platform [!DNL Segmentation Service] 提供了用戶介面和REST風格的API，允許您生成段並從您的 [!DNL Real-time Customer Profile] 資料。 這些段在 [!DNL Platform]，並且任何Adobe解決方案都可輕鬆訪問。
 
-本檔案提供 [!DNL Segmentation Service] 以及它在Adobe Experience Platform的作用。
+此文檔提供 [!DNL Segmentation Service] 以及它在Adobe Experience Platform的作用。
 
-## 開始使用 [!DNL Segmentation Service]
+## 入門 [!DNL Segmentation Service]
 
-請務必了解本檔案中使用的下列主要術語：
+瞭解本文檔中使用的以下關鍵術語非常重要：
 
-- **區段**:將大量個人（例如客戶、潛在客戶、使用者或組織）分成具有類似特徵且對行銷策略有類似反應的較小群組。
-- **區段定義**:用來說明目標對象之關鍵特性或行為的規則集。 概念化後，區段定義中概述的規則將用於決定區段的合格受眾成員。
-- **對象**:符合區段定義條件的產生設定檔集。
+- **分段**:將一大群人（如客戶、潛在客戶、用戶或組織）分成具有相似特性並將對市場營銷策略做出類似反應的較小群體。
+- **段定義**:用於描述目標受眾的關鍵特徵或行為的規則集。 一旦概念化，段定義中概述的規則將用於確定段的合格受眾成員。
+- **觀眾**:符合段定義條件的結果配置檔案集。
 
-## 區段的運作方式
+## 分段的工作原理
 
-區段是定義設定檔存放區中一組設定檔子集所共用的特定屬性或行為的程式，以區分可行銷的一組人員和您的客戶群。 例如，在名為「您忘記購買運動鞋嗎？」的電子郵件行銷活動中，您可能想要有過去30天內搜尋跑鞋，但未完成購買的所有使用者的對象。
+細分是定義配置檔案子集與配置檔案儲存共用的特定屬性或行為的過程，以區分可銷售的人員組與客戶群。 例如，在一封名為「你忘記買運動鞋了嗎？」的電子郵件中，你可能希望看到過去30天內搜索跑鞋但沒有完成購買的所有用戶的觀眾。
 
-在概念上定義區段後，就會內建區段 [!DNL Experience Platform]. 通常，區段是由行銷人員或受眾專員建立，不過有些組織偏好由行銷部門與資料分析人員共同建立。 檢閱要傳送至的資料時 [!DNL Platform]，資料分析師會選取將用來建立區段規則或條件的欄位和值，以構成區段定義。 這是使用UI或API來完成。
+一旦在概念上定義了段，就內置 [!DNL Experience Platform]。 通常，細分由營銷人員或受眾專家構建，儘管一些組織希望由其營銷部門與資料分析員協作建立。 查看要發送到 [!DNL Platform]，資料分析員通過選擇哪些欄位和值將用於構建段的規則或條件來組成段定義。 這是使用UI或API完成的。
 
 ## 建立區段
 
-使用API建立或使用 [!DNL Segment Builder]，區段最終會使用 [!DNL Profile Query Language] (PQL)。 這是擷取符合條件之設定檔所建置語言中描述概念區段定義的地方。 如需詳細資訊，請參閱 [PQL概述](./pql/overview.md).
+是使用API建立還是使用 [!DNL Segment Builder]，段最終使用 [!DNL Profile Query Language] (PQL)。 在此處，概念段定義將以檢索滿足條件的配置檔案所構建的語言進行描述。 有關詳細資訊，請參見 [PQL概述](./pql/overview.md)。
 
-若要了解如何在 [!DNL Segment Builder] （UI實作） [!DNL Segmentation Service])，請參閱 [區段產生器指南](./ui/overview.md).
+瞭解如何在 [!DNL Segment Builder] (UI實現 [!DNL Segmentation Service])，請參閱 [段生成器指南](./ui/overview.md)。
 
-如需使用API建立區段定義的相關資訊，請參閱 [使用API建立受眾區段](./tutorials/create-a-segment.md).
-
->[!NOTE]
->
->在架構擴展時，所有將來的上載必須相應地更新新添加的欄位。 如需自訂的詳細資訊 [!DNL Experience Data Model] (XDM)，請造訪 [結構編輯器教學課程](../xdm/tutorials/create-schema-ui.md).
->
->此外，如果資料集已啟用存留時間(TTL)，這可能會影響所建立區段的成員資格。 如需TTL及其如何影響分段的詳細資訊，請參閱 [設定檔服務TTL指南](../profile/apply-ttl.md).
-
-## 評估區段
-
-Platform目前支援三種評估區段的方法：串流分段、批次分段和邊緣分段。
-
-### 串流細分
-
-串流區段是持續進行的資料選取程式，會根據使用者活動更新您的區段。 建立並儲存區段後，會對傳入的資料套用區段定義至 [!DNL Real-time Customer Profile]. 會定期處理區段新增和移除，確保目標受眾仍具相關性。
-
-若要進一步了解串流細分，請閱讀 [串流細分檔案](./api/streaming-segmentation.md).
-
-### 批次分段
-
-作為持續資料選取程式的替代方法，批次區段會透過區段定義一次移動所有設定檔資料，以產生對應的對象。 建立後，會儲存此區段，供您匯出使用。
-
-每24小時會自動評估批次區段。 如果要按需評估批段，則可以使用段任務。 若要進一步了解區段作業，請參閱 [區段工作檔案](./api/segment-jobs.md).
-
-### 邊緣分割
-
-邊緣分段是在Experience Edge上即時評估Platform中區段的功能，可啟用相同的頁面和下一頁個人化使用案例。
-
-若要進一步了解邊緣區段，請閱讀 [API檔案](./api/edge-segmentation.md) 或 [UI檔案](./ui/edge-segmentation.md).
-
-## 存取區段結果
-
-若要了解如何存取匯出的區段，請參閱 [區段評估教學課程](./tutorials/evaluate-a-segment.md).
-
-## 區段中繼資料
-
-區段中繼資料有助於在您的任何區段重複使用和/或合併時建立索引。
-
-撰寫區段(透過API或 [!DNL Segment Builder])需要您定義區段名稱及合併原則。
-
-### 區段名稱
-
-建立新區段時，您必須提供區段名稱。 區段名稱可用來識別所建立集合中的特定區段 [!DNL Segmentation Service]. 因此，區段名稱應具有描述性、簡潔明瞭且獨特。
+有關使用API構建段定義的資訊，請參見上的教程 [使用API建立受眾段](./tutorials/create-a-segment.md)。
 
 >[!NOTE]
 >
->規劃區段時，請記住，可從任何其他區段參考區段，並加以結合。 選取名稱時，請考量區段可能包含可重複使用的部分。
+>在擴展架構時，所有將來的上載都必須相應更新新添加的欄位。 有關自定義的詳細資訊 [!DNL Experience Data Model] (XDM)，訪問 [架構編輯器教程](../xdm/tutorials/create-schema-ui.md)。
+>
+>此外，如果資料集上啟用了生存時間(TTL)，則這可能會影響所建立段的成員身份。 有關TTL及其如何影響分段的詳細資訊，請閱讀 [配置檔案服務TTL指南](../profile/apply-ttl.md)。
+
+## 評估段 {#evaluate-segments}
+
+>[!CONTEXTUALHELP]
+>id="platform_segments_evaluation"
+>title="評價方法"
+>abstract="平台當前支援三種評估段的方法：流分割、批分割和邊緣分割。"
+
+平台當前支援三種評估段的方法：流分割、批分割和邊緣分割。
+
+### 流分段 {#streaming}
+
+>[!CONTEXTUALHELP]
+>id="platform_segments_evaluation_streaming"
+>title="流評估"
+>abstract="平台當前支援三種評估段的方法：流分割、批分割和邊緣分割。"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/api/streaming-segmentation.html" text="基於流分割的近即時事件評估"
+
+流分段是一個持續的資料選擇過程，它根據用戶活動更新您的分段。 一旦生成並保存了段，將針對傳入資料應用段定義。 [!DNL Real-time Customer Profile]。 定期處理段添加和刪除，確保目標受眾保持相關性。
+
+要瞭解有關流分段的詳細資訊，請閱讀 [流分段文檔](./api/streaming-segmentation.md)。
+
+### 批分段 {#batch}
+
+>[!CONTEXTUALHELP]
+>id="platform_segments_evaluation_batch"
+>title="批處理評估"
+>abstract="作為持續資料選擇過程的替代方法，批處理分段一次移動所有簡檔資料通過段定義以產生相應的受眾。 建立後，將保存並儲存段，以便導出該段供使用。"
+
+作為持續資料選擇過程的替代方法，批處理分段一次移動所有簡檔資料通過段定義以產生相應的受眾。 建立後，將保存並儲存此段，以便導出該段供使用。
+
+每24小時自動評估批段。 如果要按需計算批段，則可以使用段任務。 要瞭解有關段作業的詳細資訊，請閱讀 [段作業文檔](./api/segment-jobs.md)。
+
+### 邊緣分割 {#edge}
+
+>[!CONTEXTUALHELP]
+>id="platform_segments_evaluation_edge"
+>title="邊緣評估"
+>abstract="邊緣分割是一種在體驗邊緣上即時評估平台中段的能力，支援同頁和下一頁個性化使用案例。"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/edge-segmentation.html" text="邊緣分割UI指南"
+
+邊緣分割是即時評估平台中段的能力 [體驗邊緣](../edge/home.md)，啟用同頁和下頁個性化用例。
+
+要瞭解有關邊緣分割的詳細資訊，請閱讀 [API文檔](./api/edge-segmentation.md) 或 [UI文檔](./ui/edge-segmentation.md)。
+
+## 訪問分段結果
+
+要瞭解如何訪問導出的段，請參閱 [段評估教程](./tutorials/evaluate-a-segment.md)。
+
+## 段元資料
+
+段元資料有助於在任何段被重用和/或組合時進行索引。
+
+合成段(通過API或 [!DNL Segment Builder])要求您定義段名和合併策略。
+
+### 段名稱
+
+建立新段時，需要提供段名稱。 段名稱用於標識由 [!DNL Segmentation Service]。 因此，段名稱應具有描述性、簡潔性和唯一性。
+
+>[!NOTE]
+>
+>在規劃段時，請記住，可以從任何其它段參照段，並與其組合。 選擇名稱時，請考慮段可能包含可重用部分。
 
 ### 合併策略
 
-合併策略是用於 [!DNL Profile] 以決定在特定條件下，如何將資料排定優先順序並合併成統一檢視。
-如果未定義合併策略，則預設 [!DNL Platform] 使用合併原則。 如果您想使用貴組織專屬的合併原則，可以建立自己的合併原則，並將其標示為貴組織的預設原則。
+合併策略是使用的規則 [!DNL Profile] 確定資料在特定條件下如何排定優先順序並合併為統一視圖。
+如果未定義合併策略，則預設 [!DNL Platform] 使用合併策略。 如果您希望使用特定於組織的合併策略，則可以建立自己的合併策略並將其標籤為組織的預設策略。
 
-有關合併策略的詳細資訊，請參見 [合併策略指南](../profile/api/merge-policies.md).
+有關合併策略的詳細資訊，請參閱 [合併策略指南](../profile/api/merge-policies.md)。
 
 >[!NOTE]
 >
->對象大小的估計是根據組織的預設設定檔合併原則。
+>受眾規模的估計基於組織的預設配置檔案合併策略。
 
-### 其他區段中繼資料
+### 其他段元資料
 
-除了區段名稱和合併政策外， [!DNL Segment Builder] 提供您額外的「區段說明」中繼資料欄位，供您概述區段定義的用途。
+除段名和合併策略外， [!DNL Segment Builder] 為您提供了一個附加的「段說明」元資料欄位，您可以在該欄位中總結段定義的用途。
 
-## 進階區段功能
+## 高級分段特徵
 
-您可以透過結合來設定區段，以持續產生受眾 [串流資料內嵌](../ingestion/streaming-ingestion/overview.md) 搭配下列任何進階區段功能：
-- [循序細分](#sequential)
-- [動態細分](#dynamic)
-- [多實體細分](#multi-entity)
+可將段配置為通過組合持續地生成受眾 [流資料接收](../ingestion/streaming-ingestion/overview.md) 具有以下任何高級分割功能：
+- [序貫分割](#sequential)
+- [動態分割](#dynamic)
+- [多實體分割](#multi-entity)
 
-以下幾節將更詳細地討論這些高級功能。
+以下各節將更詳細地討論這些高級功能。
 
-## 循序細分 {#sequential}
+## 序貫分割 {#sequential}
 
-標準的使用者歷程是循序的。 Adobe Experience Platform可讓您定義一系列有序的區段，以反映此歷程，因此可在事件發生時擷取事件順序。 您可以使用 [!DNL Segment Builder].
+標準用戶行程在性質上是連續的。 Adobe Experience Platform允許您定義一系列有序的段以反映此行程，從而在事件發生時捕獲事件序列。 通過使用中的可視事件時間軸，可以將事件排列為所需的順序 [!DNL Segment Builder]。
 
-需要依序分段的客戶歷程範例為產品檢視>產品新增>結帳>無購買。
+需要按順序分段的客戶行程示例為產品視圖>產品添加>結帳>無購買。
 
-## 動態細分 {#dynamic}
+## 動態分割 {#dynamic}
 
-動態細分解決了行銷人員在建立行銷活動區段時，傳統上面臨的可擴充性問題。
+動態細分解決了營銷活動構建細分市場時營銷人員傳統上面臨的可擴充性問題。
 
-靜態分段需要您明確且重複地擷取每個可能的使用案例，而動態分段則使用變數來建立規則邏輯並動態表達關係。
+與靜態分割不同，動態分割需要顯式並重複捕獲每個可能的使用案例，而動態分割則使用變數來構建規則邏輯並動態表達關係。
 
-### 使用案例：尋找在家之外購買的客戶
+### 用例：尋找在本國以外購買的客戶
 
-為了說明此進階細分功能的價值，請考慮由資料架構師與行銷人員合作，識別在母州以外進行購買的客戶。
+為了說明此高級細分功能的價值，請考慮一個資料架構師與一個營銷人員協作，以確定在其本國之外進行採購的客戶。
 
 **問題**
 
-靜態分段需要您先定義具有唯一首頁狀態屬性的個別區段，然後才篩選不等於首頁狀態的購買事件。 此類型的明確區段會顯示「我正在尋找來自猶他州的人，而他們的購買狀態並非猶他州」。 使用此方法建立對象時，您必須為每個美國州定義一個區段，共50個區段。
+靜態分段要求您使用唯一的家庭狀態屬性定義單個段，然後篩選不等於家庭狀態的購買事件。 此類型的明確部分將寫成「我在尋找來自猶他州的人，而他們購買的產品不在猶他州」。 使用此方法建立受眾要求您為每個美國州定義一個段，共50個段。
 
-由於您在擴展時不可避免地會出現不同的區段組合，因此靜態細分所需的手動過程會更加耗時，從而降低您的整體效率。
+由於縮放時不可避免地會出現不同的段組合，因此靜態分割所需的手動過程會更加耗時，從而降低整體效率。
 
 **解決方案**
 
-借由將變數指派給購買狀態屬性，您的動態區段將簡化為「尋找購買狀態不等於客戶家庭狀態的購買」。 如此一來，您便能將50個靜態區段併入單一動態區段。
+通過將變數賦給採購狀態屬性，您的動態段可簡化為「在採購狀態不等於客戶家庭狀態的情況下查找採購」。 這樣，您就可以將50個靜態段合併到一個動態段中。
 
-## 多實體細分 {#multi-entity}
+## 多實體分割 {#multi-entity}
 
-透過進階的多實體分段功能，您可以擴充 [!DNL Real-time Customer Profile] 以產品、商店或其他非人員為基礎的其他資料（也稱為「維度」實體）的資料。 因此， [!DNL Segmentation Service] 可在區段定義期間存取其他欄位，就像這些欄位是原生欄位 [!DNL Profile] 資料儲存。 多實體細分可根據與您獨特業務需求相關的資料，靈活地識別對象。 如需詳細資訊，包括使用案例和工作流程，請參閱 [多實體分段指南](multi-entity-segmentation.md).
+使用高級多實體分割特徵，可以擴展 [!DNL Real-time Customer Profile] 帶有基於產品、儲存或其他非人員的附加資料的資料，也稱為「維」實體。 因此， [!DNL Segmentation Service] 可以在段定義期間訪問其他欄位，就好像這些欄位是本地的 [!DNL Profile] 資料儲存。 當根據與您的獨特業務需要相關的資料識別受眾時，多實體細分提供了靈活性。 有關更多資訊（包括使用案例和工作流），請參閱 [多實體分割指南](multi-entity-segmentation.md)。
 
 ## [!DNL Segmentation Service] 資料類型
 
-[!DNL Segmentation Service] 支援多種原始和複雜的資料類型。 如需詳細資訊，包括支援的資料類型清單，請參閱 [支援的資料類型指南](./data-types.md).
+[!DNL Segmentation Service] 支援各種原始和複雜的資料類型。 詳細資訊，包括支援的資料類型清單，請參見 [支援的資料類型指南](./data-types.md)。
 
 ## 後續步驟
 
-[!DNL Segmentation Service] 提供整合的工作流程，以便從 [!DNL Real-time Customer Profile] 資料。 總之：
+[!DNL Segmentation Service] 提供了一個整合的工作流，以從 [!DNL Real-time Customer Profile] 資料。 總之：
 
-- [!DNL Segmentation] 是從您的設定檔存放區定義設定檔子集的程式，可讓您描述所需有價群組的行為或屬性。 [!DNL Segmentation Service] 使這個過程成為可能。
-- 規劃區段時，請記得可從任何其他區段參考區段，並加以結合。
-- 您可以根據設定檔資料、相關時間序列資料或兩者，從規則建立區段。
-- 區段可依需求或持續評估。 隨需評估時，所有設定檔資料會一次透過區段定義傳遞。 持續評估時，資料流會在進入時透過區段定義進行 [!DNL Platform].
+- [!DNL Segmentation] 是從配置檔案儲存中定義配置檔案子集的過程，允許您表徵所需有價組的行為或屬性。 [!DNL Segmentation Service] 使這個過程成為可能。
+- 在規劃段時，請記住可以從任何其他段參照段並將其組合。
+- 可以基於配置檔案資料、相關時間序列資料或兩者的規則構建段。
+- 段可以按需評估，也可以連續評估。 按需評估時，所有配置檔案資料都會一次通過段定義。 連續評估時，資料流會通過段定義進入 [!DNL Platform]。
 
-若要了解如何在UI中定義區段，請參閱 [區段產生器指南](./ui/overview.md). 如需使用API建立區段定義的相關資訊，請參閱 [使用API建立區段](./tutorials/create-a-segment.md).
+要瞭解如何在UI中定義段，請參閱 [段生成器指南](./ui/overview.md)。 有關使用API構建段定義的資訊，請參見上的教程 [使用API建立段](./tutorials/create-a-segment.md)。
