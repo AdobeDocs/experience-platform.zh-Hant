@@ -3,9 +3,9 @@ title: 使用Adobe Experience PlatformWeb SDK的先決條件
 description: 瞭解使用Adobe Experience PlatformWeb SDK的先決條件。
 keywords: 第一方域；CNAME；架構；建立模式；啟動；aep web sdk擴展；擴展；配置ID；配置工具；資料元；建立資料元；XDM對象；sendEvent;send Event;
 exl-id: 98ae69db-bc87-4ea3-b101-664ac53e7ae0
-source-git-commit: 1ff52944be6e9475f57c62793b0e4c671ff8786b
+source-git-commit: 853c0a662592939c280c7e7ede8235d1b6155b2f
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '367'
 ht-degree: 0%
 
 ---
@@ -25,14 +25,4 @@ ht-degree: 0%
 
 ## 管理Adobe Experience PlatformWeb SDK的權限
 
-要開始使用Adobe Experience Platform，你必須擁有 [權限](https://experienceleague.adobe.com/docs/experience-platform/access-control/home.html?lang=zh-Hant) 建立架構並管理標識。 所需的最低權限可在「資料建模和標識」類別中找到。
-
-![](../images/AEP-permission-categories.png)
-
-在「資料建模」類別中，授予用戶「管理方案」和「查看方案」權限。
-
-![](../images/data-modeling-permissions.png)
-
-在Identity Management類別中，為用戶授予管理標識命名空間和查看標識命名空間權限。
-
-![](../images/identity-management-permissions.png)
+要開始使用Adobe Experience PlatformWeb SDK，您需要配置適當的權限。 要瞭解有關如何設定配置的詳細資訊，請參閱上的文檔 [資料收集權限管理](https://experienceleague.adobe.com/docs/experience-platform/collection/permissions.html?lang=en)。
