@@ -2,9 +2,9 @@
 description: 可通過/destination-servers終結點在Adobe Experience Platform Destination SDK中配置基於檔案的目標的伺服器和檔案配置規範。
 title: （測試版）基於檔案的目標伺服器規格的配置選項
 exl-id: 56434e36-0458-45d9-961d-f6505de998f7
-source-git-commit: 7a72c190d28d63c7bcd1bf12d8a52efc4589b848
+source-git-commit: a43bb18182ac6e591e011b585719da955ee681b7
 workflow-type: tm+mt
-source-wordcount: '916'
+source-wordcount: '899'
 ht-degree: 13%
 
 ---
@@ -284,10 +284,6 @@ ht-degree: 13%
             "emptyValue": {
                 "templatingStrategy": "NONE",
                 "value": ""
-            },
-            "lineSep": {
-                "templatingStrategy": "NONE",
-                "value": "\n"
             }
         },
         "maxFileRowCount":5000000
@@ -310,7 +306,6 @@ ht-degree: 13%
 | `csvOptions.timestampFormat.value` | 選填 | *僅用於`"fileType.value": "csv"`*。 設定指示時間戳格式的字串。 | `yyyy-MM-dd'T'HH:mm:ss[.SSS][XXX]` |
 | `csvOptions.charToEscapeQuoteEscaping.value` | 選填 | *僅用於`"fileType.value": "csv"`*。 設定用於轉義引號字元轉義的單個字元。 | `\` 轉義和引號字元不同時， `\0` 轉義字元和引號字元相同時。 |
 | `csvOptions.emptyValue.value` | 選填 | *僅用於`"fileType.value": "csv"`*。 設定空值的字串表示形式。 | `""` |
-| `csvOptions.lineSep.value` | 選填 | *僅用於`"fileType.value": "csv"`*。 定義應用於寫入的行分隔符。 最大長度為1個字元。 | `\n` |
 | `maxFileRowCount` | 選填 | 導出檔案可包含的最大行數。 根據目標平台檔案大小要求配置此項。 | 不適用 |
 
 {style=&quot;table-layout:auto&quot;&quot;
