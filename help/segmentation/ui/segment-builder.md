@@ -5,9 +5,9 @@ title: 段生成器UI指南
 topic-legacy: ui guide
 description: Adobe Experience PlatformUI中的段生成器提供了一個豐富的工作區，允許您與配置檔案資料元素交互。 工作區為生成和編輯規則提供了直觀的控制項，如用於表示資料屬性的拖放拼貼。
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
-source-git-commit: 71741a18c99a003e6401bc324822d50a266350b3
+source-git-commit: dd87f9e5787961442ca7d7b4c761d2e7ca724994
 workflow-type: tm+mt
-source-wordcount: '2612'
+source-wordcount: '3081'
 ht-degree: 1%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 1%
 
 [!DNL Segment Builder] 提供豐富的工作區，允許您與 [!DNL Profile] 資料元素。 工作區為生成和編輯規則提供了直觀的控制項，如用於表示資料屬性的拖放拼貼。
 
-![](../images/ui/segment-builder/segment-builder.png)
+![將顯示段生成器UI。](../images/ui/segment-builder/segment-builder.png)
 
 ## 段定義構件塊 {#building-blocks}
 
@@ -29,13 +29,13 @@ ht-degree: 1%
 
 你可以在 **[!UICONTROL 欄位]** 的 [!DNL Segment Builder] 工作區。 **[!UICONTROL 欄位]** 包含每個主要構造塊的頁籤：&quot;[!UICONTROL 屬性]&quot;, &quot;[!UICONTROL 事件]&quot;和&quot;[!UICONTROL 觀眾]。
 
-![](../images/ui/segment-builder/segment-fields.png)
+![段生成器的欄位部分會加亮顯示。](../images/ui/segment-builder/segment-fields.png)
 
 ### 屬性
 
 的 **[!UICONTROL 屬性]** 頁籤 [!DNL Profile] 屬於屬性 [!DNL XDM Individual Profile] 類。 可展開每個資料夾以顯示其他屬性，其中每個屬性都是一個磁貼，可拖動到工作區中心的規則生成器畫布上。 的 [規則生成器畫布](#rule-builder-canvas) 將在本指南的後面更詳細地討論。
 
-![](../images/ui/segment-builder/attributes.png)
+![「段生成器」(Segment Builder)欄位的屬性部分會突出顯示。](../images/ui/segment-builder/attributes.png)
 
 ### 活動
 
@@ -51,7 +51,7 @@ ht-degree: 1%
 
 然後可以輕鬆拖放 [!DNL ExperienceEvents] 和[!UICONTROL 事件類型]」。
 
-![](../images/ui/segment-builder/events-eventTypes.png)
+![段生成器UI的事件部分將突出顯示。](../images/ui/segment-builder/events.png)
 
 預設情況下，只顯示資料儲存中填充的架構欄位。 這包括「」[!UICONTROL 事件類型]。 如果[!UICONTROL 事件類型]「 」清單不可見，或者您只能選擇「 」[!UICONTROL 任意]&quot;作為&quot;[!UICONTROL 事件類型]，選擇 **齒輪表徵圖** 下 **[!UICONTROL 欄位]**，然後選擇 **[!UICONTROL 顯示完整XDM架構]** 在 **[!UICONTROL 可用欄位]**。 選擇 **齒輪表徵圖** 返回 **[!UICONTROL 欄位]** 頁籤，您現在應能查看多個&quot;[!UICONTROL 事件類型]&quot;和架構欄位，無論它們是否包含資料。
 
@@ -75,10 +75,10 @@ ht-degree: 1%
 | eVar2 | 頁面名稱 | 成員會員ID |
 | eVar3 | URL | 頁面名稱 |
 | eVar4 | 搜索詞 | 產品名稱 |
-| 事件1 | 點擊次數 | 頁面檢視 |
-| 事件2 | 頁面檢視 | 購物車新增 |
-| 事件3 | 購物車新增 | 結帳 |
-| 事件4 | 購買 | 購買 |
+| event1 | 點擊次數 | 頁面檢視 |
+| event2 | 頁面檢視 | 購物車新增 |
+| event3 | 購物車新增 | 結帳 |
+| event4 | 購買 | 購買 |
 
 在這種情況下，可以使用以下架構映射兩個報表套件：
 
@@ -103,7 +103,7 @@ ht-degree: 1%
 
 您可以將滑鼠懸停在受眾ⓘ旁，查看有關受眾的資訊，包括其ID、說明和資料夾層次結構，以查找受眾。
 
-![](../images/ui/segment-builder/audience-folder-structure.png)
+![演示資料夾層次結構如何為受眾使用的影像。](../images/ui/segment-builder/audience-folder-structure.png)
 
 您還可以使用使用搜索欄搜索受眾 [Lucene的搜索語法](https://docs.microsoft.com/en-us/azure/search/query-lucene-syntax)。 在 **[!UICONTROL 觀眾]** 的子菜單。 只有輸入完整單詞後，搜索結果才會開始填充。 例如，要查找名為 `Online Shoppers`，開始在搜索欄中鍵入「Online」。 一旦「Online（聯機）」一詞已全部鍵入，將顯示包含「Online（聯機）」一詞的搜索結果。
 
@@ -113,7 +113,7 @@ ht-degree: 1%
 
 要將新規則添加到段定義，請從 **[!UICONTROL 欄位]** 頁籤並將其放到規則生成器畫布上。 然後，您將根據要添加的資料類型使用特定於上下文的選項。 可用資料類型包括：字串，日期， [!DNL ExperienceEvents]。[!UICONTROL 事件類型]和觀眾。
 
-![](../images/ui/segment-builder/rule-builder-canvas.png)
+![空白規則生成器畫布。](../images/ui/segment-builder/rule-builder-canvas.png)
 
 >[!IMPORTANT]
 >
@@ -121,11 +121,11 @@ ht-degree: 1%
 
 為屬性選擇值時，您將看到屬性可以是的枚舉值清單。
 
-![](../images/ui/segment-builder/enum-list.png)
+![顯示屬性可以是的枚舉值清單的影像。](../images/ui/segment-builder/enum-list.png)
 
 如果從此枚舉清單中選取一個值，則值將用實體邊框進行概述。 但是，對於使用 `meta:enum` （可變）枚舉，也可選取 **不** 清單中。 如果建立自己的值，則會用虛線邊框來概括該值，並警告該值不在枚舉清單中。
 
-![](../images/ui/segment-builder/enum-warning.png)
+![如果插入的值不是枚舉清單的一部分，則顯示警告。](../images/ui/segment-builder/enum-warning.png)
 
 ### 添加受眾
 
@@ -137,7 +137,7 @@ ht-degree: 1%
 >
 >從外部源添加受眾時，僅引用受眾成員身份。 您不能將訪問群體轉換為規則，因此在新段定義中不能修改用於建立原始訪問群體的規則。
 
-![](../images/ui/segment-builder/add-audience-to-segment.png)
+![此圖顯示了如何將受眾屬性轉換為規則。](../images/ui/segment-builder/add-audience-to-segment.png)
 
 如果將受眾轉換為規則時出現任何衝突， [!DNL Segment Builder] 會盡量保留現有的選項。
 
@@ -145,11 +145,11 @@ ht-degree: 1%
 
 或者，可以查看在 [!DNL Segment Builder]。 在規則生成器畫布中建立規則後，可以選擇 **[!UICONTROL 代碼視圖]** 將段視為PQL。
 
-![](../images/ui/segment-builder/code-view.png)
+![代碼視圖按鈕會突出顯示，這允許您將段視為PQL。](../images/ui/segment-builder/code-view.png)
 
 「代碼」視圖提供了一個按鈕，允許您複製要在API調用中使用的段值。 要獲取段的最新版本，請確保已將最新更改保存到段。
 
-![](../images/ui/segment-builder/copy-code.png)
+![複製代碼按鈕會突出顯示，這允許您 ](../images/ui/segment-builder/copy-code.png)
 
 ### 聚合函式
 
@@ -157,15 +157,15 @@ ht-degree: 1%
 
 要建立聚合函式，請從左滑軌中選擇一個事件，然後將其插入 [!UICONTROL 事件] 容器。
 
-![](../images/ui/segment-builder/select-event.png)
+![事件部分將突出顯示。](../images/ui/segment-builder/events.png)
 
 在「事件」容器中放置事件後，選擇省略號表徵圖(...)，然後 **[!UICONTROL 聚合]**。
 
-![](../images/ui/segment-builder/add-aggregation.png)
+![聚合文本被加亮。 選擇此選項可以選擇聚合函式。](../images/ui/segment-builder/add-aggregation.png)
 
 現在添加聚合。 現在，您可以選擇聚合函式，選擇要聚合的屬性、等式函式以及值。 對於下例，此段將限定任何採購值總和大於$100的配置檔案，即使每個單獨採購金額小於$100。
 
-![](../images/ui/segment-builder/filled-aggregation.png)
+![事件規則，它顯示聚合函式。](../images/ui/segment-builder/filled-aggregation.png)
 
 ### 計數函式 {#count-functions}
 
@@ -173,15 +173,15 @@ ht-degree: 1%
 
 要建立計數函式，請從左滑軌中選擇一個事件並將其插入 [!UICONTROL 事件] 容器。
 
-![](../images/ui/segment-builder/add-event.png)
+![事件欄位將突出顯示。](../images/ui/segment-builder/events.png)
 
 將事件置於「事件」容器中後，選擇 [!UICONTROL 至少1] 按鈕
 
-![](../images/ui/segment-builder/add-count.png)
+![「至少」(Lay)被高亮顯示，顯示要選擇以查看計數函式完整清單的區域。](../images/ui/segment-builder/add-count.png)
 
 現在添加了count函式。 現在，您可以選擇count函式和該函式的值。 下面的示例將包括至少按一下一次的任何事件。
 
-![](../images/ui/segment-builder/select-count.png)
+![顯示並突出顯示計數函式的清單。](../images/ui/segment-builder/select-count.png)
 
 ## 容器
 
@@ -189,13 +189,13 @@ ht-degree: 1%
 
 至少將一個磁貼添加到規則生成器畫布後，就可以開始添加容器。 要建立新容器，請選擇磁貼右上角的橢圓(...)，然後選擇 **[!UICONTROL 添加容器]**。
 
-![](../images/ui/segment-builder/add-container.png)
+![「添加容器」(add container)按鈕會突出顯示，它允許您將容器添加為第一個容器的子容器。](../images/ui/segment-builder/add-container.png)
 
 新容器將作為第一個容器的子容器出現，但您可以通過拖動和移動容器來調整層次結構。 容器的預設行為為「[!UICONTROL 包括]&quot;提供的屬性、事件或訪問群體。 可以將規則設定為「」[!UICONTROL 排除]通過選擇符合容器條件的配置檔案 **[!UICONTROL 包括]** 在磁貼的左上角並選擇「[!UICONTROL 排除]。
 
 通過在子容器上選擇「取消包裝容器」，也可以提取子容器並將其內聯添加到父容器。 選擇子容器右上角的橢圓(...)以訪問此選項。
 
-![](../images/ui/segment-builder/include-exclude.png)
+![允許您取消包裝或刪除容器的選項會突出顯示。](../images/ui/segment-builder/include-exclude.png)
 
 一旦選擇 **[!UICONTROL 取消包裝容器]** 子容器被刪除，條件將顯示在內聯。
 
@@ -203,7 +203,7 @@ ht-degree: 1%
 >
 >在展開容器時，請注意邏輯繼續滿足所需的段定義。
 
-![](../images/ui/segment-builder/unwrapped-container-inline.png)
+![展開包裝後顯示容器。](../images/ui/segment-builder/unwrapped-container.png)
 
 ## 合併策略
 
@@ -213,7 +213,7 @@ ht-degree: 1%
 
 要為段定義選擇合併策略，請在 **[!UICONTROL 欄位]** ，則使用 **[!UICONTROL 合併策略]** 下拉菜單，以選擇要使用的合併策略。
 
-![](../images/ui/segment-builder/merge-policy-selector.png)
+![合併策略選擇器將突出顯示。 這允許您選擇要為段定義選擇的合併策略。](../images/ui/segment-builder/merge-policy-selector.png)
 
 ## 段屬性 {#segment-properties}
 
@@ -228,18 +228,29 @@ ht-degree: 1%
 >abstract="您可以刷新段的估計值，以立即查看有多少配置檔案符合建議段的條件。 使用當天樣本資料的樣本大小生成受眾估計。"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/tutorials/create-a-segment.html?lang=en#estimate-and-preview-an-audience" text="從文檔瞭解更多資訊"
 
-
 構建段定義時， **[!UICONTROL 段屬性]** 工作區右側的部分顯示結果段的大小估計值，允許您根據需要調整段定義，然後再構建受眾本身。
 
-的 **[!UICONTROL 段屬性]** 節也可在其中指定有關段定義的重要資訊，包括其名稱和說明。 段定義名稱用於在組織定義的段中標識段，因此應是描述性、簡潔和唯一的。
+的 **[!UICONTROL 段屬性]** 節也可在其中指定有關段定義的重要資訊，包括其名稱、說明和評估類型。 段定義名稱用於在組織定義的段中標識段，因此應是描述性、簡潔和唯一的。
 
 在繼續構建段定義時，可以通過選擇 **[!UICONTROL 查看配置檔案]**。
 
-![](../images/ui/segment-builder/segment-properties.png)
+![段定義屬性部分被加亮。 段屬性包括但不限於段名稱、描述和評價方法。](../images/ui/segment-builder/segment-properties.png)
 
 >[!NOTE]
 >
 >使用當天樣本資料的樣本大小生成受眾估計。 如果配置檔案儲存中的實體少於100萬個，則使用完整的資料集；100萬至2000萬個單位使用100萬個單位；超過2000萬戶，佔全部用戶的5%。 有關生成段估計的詳細資訊，請參閱 [估計生成部分](../tutorials/create-a-segment.md#estimate-and-preview-an-audience) 的子菜單。
+
+也可以選擇評估方法。 如果您知道要使用什麼評估方法，則可以使用下拉清單選擇所需的評估方法。 如果想知道此段適合的評估類型，可以選擇瀏覽表徵圖 ![帶有放大鏡的資料夾表徵圖](../images/ui/segment-builder/segment-evaluation-select-icon.png) 查看可用段評估方法的清單。
+
+的 [!UICONTROL 評價方法資格] 出現「popover（跨距）」。 此跨距顯示可用的評估方法，即批處理、流處理和邊。 「跨距」(Popover)顯示哪些評估方法符合條件且不符合條件。 根據段定義中使用的參數，它可能不符合某些評估方法。 有關每種評估方法要求的詳細資訊，請閱讀 [流分割](./streaming-segmentation.md#query-types) 或 [邊緣分割](./edge-segmentation.md#query-types) 概述。
+
+![此時將出現「評估方法資格」彈出窗口。 這將顯示哪些段評估方法適合和不適合該段。](../images/ui/segment-builder/select-evaluation-method.png)
+
+如果選擇的評估方法無效，系統將提示您更改段定義規則或更改評估方法。
+
+![將彈出評估方法。 如果選擇了不合格的段評估方法，則彈出窗口將說明為什麼它不合格。](../images/ui/segment-builder/ineligible-evaluation-method.png)
+
+有關不同段定義評估方法的詳細資訊，請參閱 [分段概述](../home.md#evaluate-segments)。
 
 ## 後續步驟 {#next-steps}
 

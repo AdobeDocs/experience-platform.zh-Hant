@@ -5,9 +5,9 @@ title: '基於流分割的近即時事件評估 '
 topic-legacy: developer guide
 description: 本文檔包含如何使用Adobe Experience Platform分段服務API進行流分段的示例。
 exl-id: 119508bd-5b2e-44ce-8ebf-7aef196abd7a
-source-git-commit: 81659da18d4fa8b733200998c27c25ec356ca264
+source-git-commit: 654e141735b6882b4c0233b8e1c73d0838c8374e
 workflow-type: tm+mt
-source-wordcount: '1915'
+source-wordcount: '1873'
 ht-degree: 1%
 
 ---
@@ -429,10 +429,6 @@ curl -X POST \
 ### 如何將段定義為批處理或流分段？
 
 基於查詢類型和事件歷史持續時間的組合將段定義為批分段或流分段。 可在 [流式分段查詢類型節](#query-types)。
-
-### 用戶是否可以將段定義為批處理分段或流式分段？
-
-此時，用戶無法定義是否使用批處理或流式接收來評估段，因為系統將自動確定將使用哪種方法評估段。
 
 ### 為什麼在「最後X天」下的「總合格」資料段數量在資料段詳細資訊部分中保持為零，而資料段數量卻繼續增加？
 
