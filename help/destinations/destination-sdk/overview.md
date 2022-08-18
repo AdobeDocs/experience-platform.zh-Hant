@@ -2,9 +2,9 @@
 description: Adobe Experience Platform Destination SDK是一組配置API，允許您配置目標整合模式，以便根據您選擇的資料和身份驗證格式將受眾和配置檔案資料傳送到您的端點。 這些配置儲存在Experience Platform中，並可通過API檢索，以進行其他更新。
 title: Adobe Experience Platform Destination SDK
 exl-id: 7aca9f40-98c8-47c2-ba88-4308fc2b1798
-source-git-commit: abc9b9857e4a93a334440e855ca0ae562c695df1
+source-git-commit: 179d5697e1b8d14f613a512f51bcea3575b7a832
 workflow-type: tm+mt
-source-wordcount: '704'
+source-wordcount: '740'
 ht-degree: 3%
 
 ---
@@ -74,11 +74,11 @@ Destination SDK訪問因您作為合作夥伴或Experience Platform客戶的狀�
 
 1. 如果您是ISV或SI，請參閱上面部分的獲取訪問資訊。 [Adobe Experience Platform激活](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-platform0.html) 客戶可以跳過此步驟。
 2. [請求設定Experience Platform沙箱](https://adobeexchangeec.zendesk.com/hc/en-us/articles/360037457812-Adobe-Experience-Platform-Sandbox-Accounts-Access-Adding-Users-and-Support) 並啟用目標創作權限。
-3. [構建整合](./configure-destination-instructions.md) 按照產品文檔進行。
-4. [Test整合](./test-destination.md) 按照產品文檔進行。
-5. [提交整合](./submit-destination.md) Adobe審閱（標準響應時間為五個工作日）。
-6. 如果您是ISV或SI建立 [產品化整合](./overview.md#productized-custom-integrations)，使用 [自助文檔處理](./docs-framework/documentation-instructions.md) 建立目標Experience League上的產品文檔頁面。
-7. 一旦獲得Adobe批准，您的整合將顯示在 [Experience Platform目錄](/help/destinations/catalog/overview.md)。
+3. 構建整合。 按照產品文檔中的說明進行配置 [流目標](./configure-destination-instructions.md) 或 [基於檔案的目標(beta)](./configure-file-based-destination-instructions.md)。
+4. Test您的整合。 按照產品文檔中的說明進行test [流目標](./test-destination.md) 或 [基於檔案的目標(beta)](./file-based-destination-testing-overview.md)。
+5. 如果您是ISV或SI建立 [產品化整合](./overview.md#productized-custom-integrations)。 [提交整合](./submit-destination.md) Adobe審閱（標準響應時間為五個工作日）。
+6. 如果您是ISV或SI建立產品化整合，請使用 [自助文檔處理](./docs-framework/documentation-instructions.md) 建立目標Experience League上的產品文檔頁面。
+7. 對於產品化整合，一旦獲得Adobe批准，您的整合將顯示在 [Experience Platform目錄](/help/destinations/catalog/overview.md)。
 8. 如果要更新整合，請遵循相同的流程。
 
 ## 參考 {#reference}

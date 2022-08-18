@@ -2,7 +2,7 @@
 description: 此頁提供您需要提交的所有資訊，以便複查使用Destination SDK創作的已生產化目標。
 title: 提交以審閱在Destination SDK中創作的已生產化目標
 exl-id: eef0d858-ebd9-426e-91a1-5c93903b0eb5
-source-git-commit: dd4a150351b5e0c41586cf663324aeb345a896e4
+source-git-commit: 50f205a5ddd9ec264d7390911fef45dc595ca6a1
 workflow-type: tm+mt
 source-wordcount: '683'
 ht-degree: 0%
@@ -15,7 +15,14 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->此處記錄的流程僅對提交已生產化（公共）目標的合作夥伴是必需的。 如果您正在建立專用目標供您自用，則無需製作這些材料並與Adobe共用。
+>* 此處記錄的流程僅對提交已生產化（公共）目標的合作夥伴是必需的。 如果您正在建立專用目標供您自用，則無需製作這些材料並與Adobe共用。
+>
+>* Adobe審查目標發佈請求的標準響應時間為5個工作日。
+>
+>* 如果Adobe團隊要求您在初次提交後對配置進行任何更新，則必須在您進行更新後提交另一個目標發佈請求。
+>
+>* 即使目標在Experience Platform目錄中生存後，如果您需要對配置進行任何更新，則必須提交新的目標發佈請求，以便更新反映在配置中。
+
 
 在將目標發佈到 [Experience Platform目標目錄](/help/destinations/catalog/overview.md)，您必須向Adobe提供有關目標和您執行的測試的特定資訊，以確保用戶在將資料激活到您的平台時享受盡可能最好的體驗。
 
@@ -28,15 +35,6 @@ ht-degree: 0%
 * 證明您已使用 [目標發佈API](./destination-publish-api.md)。
 * 文檔PR（拉取請求），遵循中介紹的說明 [自助文檔處理](./docs-framework/documentation-instructions.md)。
 * 將作為目標卡的徽標在Experience Platform目標目錄中顯示的影像檔案。
-
->[!IMPORTANT]
->
->* Adobe審查目標發佈請求的標準響應時間為5個工作日。
->
->* 如果Adobe團隊要求您在初次提交後對配置進行任何更新，則必須在您進行更新後提交另一個目標發佈請求。
->
->* 即使目標在Experience Platform目錄中生存後，如果您需要對配置進行任何更新，則必須提交新的目標發佈請求，以便更新反映在配置中。
-
 
 您可以在以下各節中找到有關每個項目的詳細資訊：
 
