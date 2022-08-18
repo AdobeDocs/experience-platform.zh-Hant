@@ -5,9 +5,9 @@ title: 分段服務概述
 topic-legacy: overview
 description: 瞭解Adobe Experience Platform細分服務及其在平台生態系統中的作用。
 exl-id: 2c18a806-88ed-4659-bdfd-2377f5a09a1a
-source-git-commit: 0267b0141f7b6944ea65bc413f14cc9580081387
+source-git-commit: 52197a6c009fb5b0b6037a4fef3c98ad7c327e2e
 workflow-type: tm+mt
-source-wordcount: '1630'
+source-wordcount: '1632'
 ht-degree: 0%
 
 ---
@@ -53,15 +53,15 @@ Adobe Experience Platform [!DNL Segmentation Service] 提供了用戶介面和RE
 >title="評價方法"
 >abstract="平台當前支援三種評估段的方法：流分割、批分割和邊緣分割。"
 
-平台當前支援三種評估段的方法：流分割、批分割和邊緣分割。
-
-### 流分段 {#streaming}
-
 >[!CONTEXTUALHELP]
 >id="platform_segments_evaluation_streaming"
 >title="流評估"
->abstract="平台當前支援三種評估段的方法：流分割、批分割和邊緣分割。"
+>abstract="流分段是一個持續的資料選擇過程，它根據用戶活動更新您的分段。"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/api/streaming-segmentation.html" text="基於流分割的近即時事件評估"
+
+平台當前支援三種評估段的方法：流分割、批分割和邊緣分割。
+
+### 流分段 {#streaming}
 
 流分段是一個持續的資料選擇過程，它根據用戶活動更新您的分段。 一旦生成並保存了段，將針對傳入資料應用段定義。 [!DNL Real-time Customer Profile]。 定期處理段添加和刪除，確保目標受眾保持相關性。
 
