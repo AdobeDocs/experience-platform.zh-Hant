@@ -3,9 +3,9 @@ keywords: google廣告管理器；google廣告；按兩下廣告；按兩下廣�
 title: Google廣告經理連接
 description: Google廣告管理器以前叫DoubleClick for Publishers或DoubleClick AdX，是Google的一個廣告服務平台，它使出版商能夠通過視頻和移動應用管理其網站上廣告的顯示。
 exl-id: e93f1bd5-9d29-43a1-a9a6-8933f9d85150
-source-git-commit: f163b1e3c60953192b2ddf543eb4f3e8df88799b
+source-git-commit: 7d32499bec8d7248472ae60b07893dbb5496d984
 workflow-type: tm+mt
-source-wordcount: '856'
+source-wordcount: '903'
 ht-degree: 3%
 
 ---
@@ -58,7 +58,8 @@ ht-degree: 3%
 
 >[!NOTE]
 >
->在設定第一個允許清單之前，該允許清單是必需的 [!DNL Google Ad Manager] 目標。 請確保以下描述的允許清單過程已由 [!DNL Google] 建立目標之前。
+>在設定第一個允許清單之前，必須列出 [!DNL Google Ad Manager] 目標。 請確保以下描述的允許清單過程已由 [!DNL Google] 建立目標之前。
+>此規則的例外是 [Audience Manager](https://experienceleague.adobe.com/docs/audience-manager/user-guide/aam-home.html) 客戶。 如果您已在Audience Manager中建立到此Google目標的連接，則無需再次執行允許清單過程，您可以繼續執行下一步。
 
 在建立 [!DNL Google Ad Manager] 目標在平台中，您必須聯繫 [!DNL Google] 用於將Adobe置於允許的資料提供程式清單中，以及將帳戶添加到允許清單中。 聯繫人 [!DNL Google] 並提供以下資訊：
 

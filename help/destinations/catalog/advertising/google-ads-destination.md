@@ -3,9 +3,9 @@ keywords: Google廣告；谷歌廣告；谷歌廣告；Google廣告詞；Google�
 title: Google廣告連接
 description: Google廣告以前叫GoogleAdWords，是一種線上廣告服務，允許企業在基於文本的搜索、圖形顯示、YouTube視頻和應用內移動顯示中按點擊付費廣告。
 exl-id: 7143f476-49a8-42aa-bfb4-b11fc2b8f5c3
-source-git-commit: dd18350387aa6bdeb61612f0ccf9d8d2223a8a5d
+source-git-commit: 7d32499bec8d7248472ae60b07893dbb5496d984
 workflow-type: tm+mt
-source-wordcount: '898'
+source-wordcount: '945'
 ht-degree: 3%
 
 ---
@@ -66,7 +66,8 @@ ht-degree: 3%
 
 >[!NOTE]
 >
->在設定第一個允許清單之前，該允許清單是必需的 [!DNL Google Ads] 目標。 請確保以下描述的允許清單過程已由 [!DNL Google] 建立目標之前。
+>在設定第一個允許清單之前，必須列出 [!DNL Google Ads] 目標。 請確保以下描述的允許清單過程已由 [!DNL Google] 建立目標之前。
+>此規則的例外是 [Audience Manager](https://experienceleague.adobe.com/docs/audience-manager/user-guide/aam-home.html) 客戶。 如果您已在Audience Manager中建立到此Google目標的連接，則無需再次執行允許清單過程，您可以繼續執行下一步。
 
 在建立 [!DNL Google Ads] 目標在平台中，您必須聯繫 [!DNL Google] 用於將Adobe置於允許的資料提供程式清單中，以及將帳戶添加到允許清單中。 聯繫人 [!DNL Google] 並提供以下資訊：
 

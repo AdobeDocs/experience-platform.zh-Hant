@@ -3,9 +3,9 @@ keywords: 按兩下標價管理器；按兩下標價管理器；按兩下；顯�
 title: GoogleDisplay & Video 360連接
 description: Display & Video 360（以前稱為DoubleClick Bid Manager）是一種工具，用於在顯示、視頻和移動清單來源中執行重定目標和受眾目標數字活動。
 exl-id: bdd3b3fd-891f-44ec-bd47-daf7f3289f92
-source-git-commit: dd18350387aa6bdeb61612f0ccf9d8d2223a8a5d
+source-git-commit: 7d32499bec8d7248472ae60b07893dbb5496d984
 workflow-type: tm+mt
-source-wordcount: '893'
+source-wordcount: '942'
 ht-degree: 2%
 
 ---
@@ -56,7 +56,8 @@ ht-degree: 2%
 
 >[!NOTE]
 >
->在設定第一個允許清單之前，必須列出 [!DNL Google Display & Video 360] 目標。 在建立目標之前，請確保Google已完成下面描述的允許清單過程。
+>在設定第一個允許清單之前，必須列出 [!DNL Google Display & Video 360] 目標。 請確保以下描述的允許清單過程已由 [!DNL Google] 建立目標之前。
+>此規則的例外是 [Audience Manager](https://experienceleague.adobe.com/docs/audience-manager/user-guide/aam-home.html) 客戶。 如果您已在Audience Manager中建立到此Google目標的連接，則無需再次執行允許清單過程，您可以繼續執行下一步。
 
 在建立 [!DNL Google Display & Video 360] 目標在平台中，您必須聯繫Google，要求將Adobe列在允許的資料提供程式清單中，並將您的帳戶添加到允許清單中。 聯繫Google並提供以下資訊：
 
