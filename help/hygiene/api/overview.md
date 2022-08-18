@@ -2,9 +2,9 @@
 title: 《資料衛生API指南》
 description: 瞭解如何以寫程式方式更正或刪除客戶在Adobe Experience Platform儲存的個人資料。
 exl-id: 78c8b15b-b433-4168-a1e8-c97b96e4bf85
-source-git-commit: 7f1e4bdf54314cab1f69619bcbb34216da94b17e
+source-git-commit: 49ba5263c6dc8eccac2ffe339476cf316c68e486
 workflow-type: tm+mt
-source-wordcount: '307'
+source-wordcount: '303'
 ht-degree: 1%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 1%
 >
 >Adobe Experience Platform的資料衛生功能目前僅適用於已購買Healthcare Shield的組織。
 
-資料衛生API允許您以寫程式方式更正或刪除客戶在Adobe Experience Platform儲存的個人資料，以及為資料集安排生存時間(TTL)協定。 本指南介紹使用API的先決條件步驟，並提供指向更多特定於端點的文檔的連結。
+資料衛生API允許您以寫程式方式更正或刪除客戶在Adobe Experience Platform儲存的個人資料，並為資料集安排過期日期。 本指南介紹使用API的先決條件步驟，並提供指向更多特定於端點的文檔的連結。
 
 ## 快速入門
 
@@ -43,9 +43,9 @@ ht-degree: 1%
 
 A work order is a representation of a data hygiene task that deletes consumer identities from a specific dataset or all datasets. See the [work order endpoint guide](./workorder.md) for details on working with work orders in the API. -->
 
-## 資料集的生存時間(TTL)
+## 資料集過期
 
-資料集TTL是延遲的「刪除資料集」操作。 通過建立TTL ，您將指定將來刪除該資料集的時間。 查看 [資料集TTL終結點指南](./ttl.md) 有關在API中調度資料集TTL的詳細資訊。
+資料集過期是延遲的「刪除資料集」操作。 通過建立資料集過期，您將指定將來刪除該資料集的時間。 查看 [資料集到期終結點指南](./dataset-expiration.md) 有關在API中計畫資料集過期的詳細資訊。
 
 ## 後續步驟
 
