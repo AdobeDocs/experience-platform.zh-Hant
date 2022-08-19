@@ -2,9 +2,9 @@
 title: 即時CDP B2B版的分段使用案例
 description: 概述各種可用的即時CDP B2B版使用案例。
 exl-id: 2a99b85e-71b3-4781-baf7-a4d5436339d3
-source-git-commit: 6a108a0bfde3c8f44c1a1221b06581f0f69b5203
+source-git-commit: 1fed0cf37e7297c21330ebf51ae15054aa21c781
 workflow-type: tm+mt
-source-wordcount: '1247'
+source-wordcount: '1275'
 ht-degree: 0%
 
 ---
@@ -105,6 +105,12 @@ B2B類及其屬性附加有 `B2B` 「分段」工作區中的標籤，以區別�
 查找在人力資源(HR)部門工作且與任何帳戶相關的所有人員 *或者任何一個賬戶的相關賬戶* 至少有一次機會，價值達到規定數額（100萬美元）或以上。 此段要求在 [!UICONTROL XDM個人配置檔案] 類， [!UICONTROL XDM業務客戶] 類和 [!UICONTROL XDM業務機會] 類。
 
 ![顯示相關帳戶的分段的UI](../assets/segmentation/segmentation-related-accounts.png)
+
+### 示例9:使用潛在顧客分數和/或帳戶分數來驗證配置檔案 {#account-scoring}
+
+查找銷售線索得分超過80的所有配置檔案。
+
+![UI顯示預測線索和帳戶記分的分段](../assets/segmentation/segmentation-predictive-lead-and-account-scoring.png)
 
 ## 後續步驟 {#next-steps}
 

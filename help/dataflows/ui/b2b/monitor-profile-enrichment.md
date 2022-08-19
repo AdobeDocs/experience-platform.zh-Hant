@@ -4,10 +4,10 @@ solution: Experience Platform
 title: 監視配置檔案富集作業
 type: Tutorial
 exl-id: 096a2212-ed7f-4419-8ead-fa1ca01c2804
-source-git-commit: 842fe74b0b751c515a4faee437e1f94bd0662e11
+source-git-commit: 1fed0cf37e7297c21330ebf51ae15054aa21c781
 workflow-type: tm+mt
-source-wordcount: '633'
-ht-degree: 1%
+source-wordcount: '768'
+ht-degree: 2%
 
 ---
 
@@ -56,6 +56,23 @@ ht-degree: 1%
 | **[!UICONTROL 上次成功運行]** | 指示上次成功引導至帳戶匹配作業運行的日期和時間。 |
 | **[!UICONTROL 狀態]** | 指示潛在客戶到帳戶匹配作業的狀態（成功、失敗或處理）。 |
 
+## 預測性線索和帳戶記分配置檔案的豐富 {#predictive-lead-to-account-scoring}
+
+的 [!UICONTROL 預測線索和帳戶記分] 控制板顯示特定於 [預測線索和帳戶記分](/help/rtcdp/b2b-ai-ml-services/predictive-lead-and-account-scoring.md) 輪廓富集。
+
+![預測性線索和帳戶記分配置檔案的豐富](/help/dataflows/assets/ui/b2b/predictive-lead-and-account-scoring.png)
+
+以下指標可用於預測潛在客戶和帳戶評分配置檔案富集作業：
+
+| 量度 | 說明 |
+| --------- | ---------- |
+| **[!UICONTROL 作業開始]** | 指示預測性線索和帳戶記分作業運行的起始日期和時間。 |
+| **[!UICONTROL 處理時間]** | 作業完成所用的總時間。 |
+| **[!UICONTROL 分數名稱]** | 作業的分數名稱。 |
+| **[!UICONTROL 配置檔案類型]** | 分數的類型： <ul><li>「人」</li><li>帳戶</li></ul>。 |
+| **[!UICONTROL 作業類型]** | 作業的類型：<ul><li>評分</li><li>訓練</li>。 |
+| **[!UICONTROL 狀態]** | 指示預測線索和帳戶記分作業的狀態（成功、失敗或處理）。 |
+
 ## UI控制項 {#ui-controls}
 
 本節介紹監視介面中的各種用戶介面(UI)選項，這些選項允許您過濾該頁上顯示的度量。
@@ -79,3 +96,4 @@ ht-degree: 1%
 * [即時CDP B2B中的相關客戶](/help/rtcdp/b2b-ai-ml-services/related-accounts.md)
 * [「帳戶配置檔案UI」指南中的「相關帳戶」頁籤](/help/rtcdp/accounts/account-profile-ui-guide.md)
 * [在即時CDP B2B中導致帳戶匹配](/help/rtcdp/b2b-ai-ml-services/lead-to-account-matching.md)
+* [即時CDP B2B中的預測線索和帳戶評分](/help/rtcdp/b2b-ai-ml-services/predictive-lead-and-account-scoring.md)

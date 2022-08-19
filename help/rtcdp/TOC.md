@@ -4,10 +4,10 @@ solution: Real-time Customer Data Platform
 audience: user
 user-guide-title: Real-time Customer Data Platform 指南
 user-guide-description: 將來自多個企業來源的已知和匿名資料放在一起，以建立客戶設定檔，從這些設定檔建立對象區段，並對協力廠商目的地啟動這些區段。
-source-git-commit: 375f0c8a221540553b05aa1d5fb188a31e43f3e8
+source-git-commit: 03c2a8b427d2bd916c87000b63de16950a9e05bf
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '205'
+ht-degree: 27%
 
 ---
 
@@ -48,6 +48,9 @@ ht-degree: 0%
 * 即時CDP B2B版AI/ML服務 {#b2b-cdp-ai-ml}
    * [相關帳戶](b2b-ai-ml-services/related-accounts.md)
    * [銷售線索到帳戶匹配](b2b-ai-ml-services/lead-to-account-matching.md)
+   * 預測線索和帳戶記分 {#predictive-lead-and-account-scoring-intro}
+      * [預測性線索和帳戶記分概覽](b2b-ai-ml-services/predictive-lead-and-account-scoring.md)
+      * [管理預測性線索和帳戶記分](b2b-ai-ml-services/manage-predictive-lead-and-account-scoring.md)
 * 結構描述 {#schemas}
    * [架構概述](schemas/overview.md)
    * [即時CDP B2B版中的架構](schemas/b2b.md)
