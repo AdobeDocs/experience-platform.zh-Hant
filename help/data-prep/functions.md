@@ -5,7 +5,7 @@ title: 資料準備映射函式
 topic-legacy: overview
 description: 本文檔介紹了與資料準備一起使用的映射功能。
 exl-id: e95d9329-9dac-4b54-b804-ab5744ea6289
-source-git-commit: a48072d2c418588a05397e991c1a2e17eee4c028
+source-git-commit: 66c3f4fc6da987f731f7b7e54f416c60fcc670d8
 workflow-type: tm+mt
 source-wordcount: '4286'
 ht-degree: 3%
@@ -125,8 +125,7 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 | 區域_日期_到utc | 將任意時區中的日期轉換為UTC中的日期。 | <ul><li>日期： **必需** 您嘗試轉換的日期。</li></ul> | zone_date_to_utc&#x200B;(DATE) | `zone_date_to_utc&#x200B;(2019-10-17T11:55:&#x200B;12 PST` | `2019-10-17T19:55:12Z` |
 | zone_date_to_zone | 將日期從一個時區轉換為另一個時區。 | <ul><li>日期： **必需** 您嘗試轉換的日期。</li><li>區域： **必需** 您嘗試將日期轉換為的時區。</li></ul> | zone_date_to_zone&#x200B;(DATE, ZONE) | `zone_date_to_utc&#x200B;(now(), "Europe/Paris")` | `2021-10-26T15:43:59Z` |
 
-{style=&quot;table-layout:auto&quot;}
-&#x200B;
+{style=&quot;table-layout:auto&quot;&quot;
 
 ### 層次 — 對象 {#objects}
 
