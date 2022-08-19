@@ -3,10 +3,10 @@ keywords: Experience Platform；主題；熱門主題；Salesforce;salesforce;fi
 title: Salesforce映射欄位
 description: 下表包含Salesforce源欄位與其對應的XDM欄位之間的映射。
 exl-id: 33ee76f2-0495-4acd-a862-c942c0fa3177
-source-git-commit: d77bee173791843997985cfdae15959350fd9ab2
+source-git-commit: 948247c1ffbe10fa07ba1d03f1715fd707c6d836
 workflow-type: tm+mt
 source-wordcount: '291'
-ht-degree: 8%
+ht-degree: 14%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 8%
 
 ## 聯繫人 {#contact}
 
-| 源欄位 | 目標XDM欄位路徑 | 附註 |
+| 來源欄位 | 目標XDM欄位路徑 | 附註 |
 | --- | --- | --- |
 | `AccountId` | `b2b.accountKey.sourceID` |
 | `iif(AccountId != null && AccountId != "", to_object("sourceType", "Salesforce", "sourceInstanceID", "${CRM_ORG_ID}", "sourceKey", concat(AccountId,"@${CRM_ORG_ID}.Salesforce")), null)` | `b2b.accountKey` |
@@ -74,7 +74,7 @@ ht-degree: 8%
 
 ## 線索 {#lead}
 
-| 源欄位 | 目標XDM欄位路徑 | 附註 |
+| 來源欄位 | 目標XDM欄位路徑 | 附註 |
 | --- | --- | --- |
 | `City` | `workAddress.city` |
 | `ConvertedDate` | `b2b.convertedDate` |
@@ -114,21 +114,16 @@ ht-degree: 8%
 | `Company` | `b2b.companyName` |
 | `Website` | `b2b.companyWebsite` |
 | `ConvertedContactId` | `b2b.convertedContactKey.sourceID` |
-| `"Salesforce"` | `b2b.convertedContactKey.sourceType` |
-| `"${CRM_ORG_ID}"` | `b2b.convertedContactKey.sourceInstanceID` |
-| `concat(ConvertedContactId,\"@${CRM_ORG_ID}.Salesforce\")` | `b2b.convertedContactKey.sourceKey` |
+| `iif(ConvertedContactId != null && ConvertedContactId != "", to_object("sourceType", "Salesforce", "sourceInstanceID", "${CRM_ORG_ID}", "sourceKey", concat(ConvertedContactId,"@${CRM_ORG_ID}.Salesforce")), null)` | `b2b.convertedContactKey` |
 | `CreatedDate` | `extSourceSystemAudit.createdDate` |
 | `"Lead"` | `b2b.personType` |
-| `ConvertedContactId` | `personComponents.sourceConvertedContactKey.sourceID` |
-| `"Salesforce"` | `personComponents.sourceConvertedContactKey.sourceType` |
-| `"${CRM_ORG_ID}"` | `personComponents.sourceConvertedContactKey.sourceInstanceID` |
-| `concat(ConvertedContactId,"@${CRM_ORG_ID}.Salesforce")` | `personComponents.sourceConvertedContactKey.sourceKey` |
+| `iif(ConvertedContactId != null && ConvertedContactId != "", to_object("sourceType", "Salesforce", "sourceInstanceID", "${CRM_ORG_ID}", "sourceID", ConvertedContactId, "sourceKey", concat(ConvertedContactId,"@${CRM_ORG_ID}.Salesforce")), null)` | `personComponents.sourceConvertedContactKey` |
 
 {style=&quot;table-layout:auto&quot;&quot;
 
 ## 帳戶 {#account}
 
-| 源欄位 | 目標XDM欄位路徑 | 附註 |
+| 來源欄位 | 目標XDM欄位路徑 | 附註 |
 | --- | --- | --- |
 | `"Salesforce"` | `accountKey.sourceType` |
 | `"${CRM_ORG_ID}"` | `accountKey.sourceInstanceID` | 的值 `"${CRM_ORG_ID}"` 將自動更換。 |
@@ -182,7 +177,7 @@ ht-degree: 8%
 
 ## 機會 {#opportunity}
 
-| 源欄位 | 目標XDM欄位路徑 | 附註 |
+| 來源欄位 | 目標XDM欄位路徑 | 附註 |
 | --- | --- | --- |
 | `"Salesforce"` | `opportunityKey.sourceType` |
 | `"${CRM_ORG_ID}"` | `opportunityKey.sourceInstanceID` | 的值 `"${CRM_ORG_ID}"` 將自動更換。 |
@@ -221,7 +216,7 @@ ht-degree: 8%
 
 ## 機會聯繫人角色 {#opportunity-contact-role}
 
-| 源欄位 | 目標XDM欄位路徑 | 附註 |
+| 來源欄位 | 目標XDM欄位路徑 | 附註 |
 | --- | --- | --- |
 | `"Salesforce"` | `opportunityPersonKey.sourceType` |
 | `"${CRM_ORG_ID}"` | `opportunityPersonKey.sourceInstanceID` | 的值 `"${CRM_ORG_ID}"` 將自動更換。 |
@@ -245,7 +240,7 @@ ht-degree: 8%
 
 ## Campaign {#campaign}
 
-| 源欄位 | 目標XDM欄位路徑 | 附註 |
+| 來源欄位 | 目標XDM欄位路徑 | 附註 |
 | --- | --- | --- |
 | `"Salesforce"` | `campaignKey.sourceType` |
 | `"${CRM_ORG_ID}"` | `campaignKey.sourceInstanceID` | 的值 `"${CRM_ORG_ID}"` 將自動更換。 |
@@ -274,7 +269,7 @@ ht-degree: 8%
 
 ## 市場活動成員 {#campaign-member}
 
-| 源欄位 | 目標XDM欄位路徑 | 附註 |
+| 來源欄位 | 目標XDM欄位路徑 | 附註 |
 | --- | --- | --- |
 | `"Salesforce"` | `campaignMemberKey.sourceType` |
 | `"${CRM_ORG_ID}"` | `campaignMemberKey.sourceInstanceID` | 的值 `"${CRM_ORG_ID}"` 將自動更換。 |
@@ -298,7 +293,7 @@ ht-degree: 8%
 
 ## 帳戶聯繫人關係 {#account-contact-relation}
 
-| 源欄位 | 目標XDM欄位路徑 | 附註 |
+| 來源欄位 | 目標XDM欄位路徑 | 附註 |
 | --- | --- | --- |
 | `AccountId` | `accountKey.sourceID` |
 | `iif(AccountId != null && AccountId != "", to_object("sourceType", "Salesforce", "sourceInstanceID", "${CRM_ORG_ID}", "sourceKey", concat(AccountId,"@${CRM_ORG_ID}.Salesforce")), null)` | `accountKey` |
