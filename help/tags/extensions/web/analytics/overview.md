@@ -2,10 +2,10 @@
 title: Adobe Analytics分機概述
 description: 瞭解Adobe Analytics標籤在Adobe Experience Platform的擴展。
 exl-id: 33ebdcb6-9bf0-44e6-b016-e93fe78af578
-source-git-commit: 4b0b4cf7c262940bd21965d928cc7d0cf12d15d1
+source-git-commit: 9fe94af349e1d9c979c78dce69c5180086df3adb
 workflow-type: tm+mt
 source-wordcount: '2275'
-ht-degree: 81%
+ht-degree: 82%
 
 ---
 
@@ -172,7 +172,7 @@ SSL 追蹤伺服器可在 Analytics 自訂程式碼中使用 `s.trackingServerSe
 
 ### 啟用 ClickMap
 
-[ClickMap](https://experienceleague.adobe.com/docs/analytics/analyze/activity-map/activity-map.html?lang=zh-Hant) 是 Internet Explorer 和 Firefox 的外掛程式，也是 Reports &amp; Analytics 的模組。
+[ClickMap](https://experienceleague.adobe.com/docs/analytics/analyze/activity-map/activity-map.html) 是 Internet Explorer 和 Firefox 的外掛程式，也是 Reports &amp; Analytics 的模組。
 
 ### 追蹤下載連結
 
@@ -221,7 +221,7 @@ SSL 追蹤伺服器可在 Analytics 自訂程式碼中使用 `s.trackingServerSe
 
 不重複值，代表離線和線上系統的客戶。
 
-請參閱 [visitorID](https://experienceleague.adobe.com/docs/analytics/import/data-sources/data-types-and-categories/datasrc-visitorid.html)。
+請參閱 [visitorID](https://experienceleague.adobe.com/docs/analytics/implementation/vars/config-vars/visitorid.html)。
 
 ### 訪客命名空間
 
