@@ -1,6 +1,6 @@
 ---
-title: 即時客戶個人檔案概觀
-description: 本影片提供對Adobe Experience Platform中即時客戶個人檔案的基本瞭解，並說明如何在Platform UI中瀏覽個人檔案。
+title: 即時客戶概要資訊視頻概述
+description: 此視頻提供了對Adobe Experience Platform內即時客戶概要資訊的基本瞭解，並概述了如何在平台UI中瀏覽概要資訊。
 product: experience platform
 type: Documentation
 solution: Experience Platform
@@ -8,21 +8,20 @@ kt: 2701
 audience: all
 doc-type: video
 activity: understand
-translation-type: tm+mt
-source-git-commit: cad9c690be986961aea2969ef0ade975f33a8ee5
+exl-id: cdc91194-771f-4026-808f-97d70db436d9
+source-git-commit: 05e63064dc8eb3f070a383f508cc4a86d4f5e9cc
 workflow-type: tm+mt
-source-wordcount: '116'
+source-wordcount: '117'
 ht-degree: 0%
 
 ---
 
+# 即時客戶概要資訊概述
 
-# 即時客戶個人檔案總覽
-
-本影片基本瞭解Adobe Experience Platform中的即時客戶個人檔案，並概述如何整合來自多個來源的資料，以便為個別客戶建立集中式個人檔案。 若要進一步瞭解即時客戶個人檔案的功能與特性，請先閱讀[即時客戶個人檔案概觀](../home.md)。
+此視頻基本瞭解了Adobe Experience Platform內的即時客戶概要資訊，並概述了如何將來自多個來源的資料匯集在一起，為您的每個客戶形成一個集中的概要資訊。 要瞭解有關即時客戶概要資訊功能的詳細資訊，請首先閱讀 [即時客戶概要資訊概述](../home.md)。
 
 >[!NOTE]
 >
->Experience Platform使用者介面經常更新，自錄制此視訊後可能已變更。 有關最新資訊，請參閱[配置式UI指南](../ui/user-guide.md)。
+>Experience Platform用戶介面頻繁更新，自此視頻記錄後可能已更改。 有關最新資訊，請參閱 [配置檔案UI指南](../ui/user-guide.md)。
 
 >[!VIDEO](https://video.tv.adobe.com/v/27251?quality=12&learn=on&captions=eng)

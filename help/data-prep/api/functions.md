@@ -1,13 +1,11 @@
 ---
 keywords: Experience Platform；首頁；熱門主題；資料準備；api指南；架構；
-solution: Experience Platform
-title: 架構API終結點
-topic-legacy: schemas
-description: 可以使用Adobe Experience PlatformAPI中的「/functions」終結點驗證映射表達式並列出可用的映射集函式。
+title: 函式API終結點
+description: 可以使用資料準備API中的「/functions」終結點驗證映射表達式並列出可用的映射集函式。
 exl-id: dc24bfb4-2d96-4757-a610-0c2ee960d41d
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 05e63064dc8eb3f070a383f508cc4a86d4f5e9cc
 workflow-type: tm+mt
-source-wordcount: '210'
+source-wordcount: '209'
 ht-degree: 2%
 
 ---

@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform；首頁；熱門主題；查詢服務；查詢服務；查詢編輯器；查詢編輯器；查詢編輯器；查詢編輯器；
 solution: Experience Platform
-title: 查詢服務UI指南
+title: 查詢服務憑據指南
 topic-legacy: guide
 description: Adobe Experience Platform查詢服務提供一個用戶介面，可用於編寫和執行查詢、查看以前執行的查詢以及訪問IMS組織內用戶保存的查詢。
 exl-id: ea25fa32-809c-429c-b855-fcee5ee31b3e
-source-git-commit: a5e8b4df78d8dff58e000030d209606b46a582e8
+source-git-commit: 05e63064dc8eb3f070a383f508cc4a86d4f5e9cc
 workflow-type: tm+mt
 source-wordcount: '1168'
 ht-degree: 1%
@@ -49,7 +49,7 @@ Adobe Experience Platform查詢服務允許您與外部客戶端連接。 您可
 
 要瞭解有關如何分配權限的詳細資訊，請閱讀上的文檔 [訪問控制](../../access-control/home.md)。
 
-現在，所有所需權限都已在Adobe開發人員控制台中配置，以便用戶使用過期的憑據功能。
+所有所需權限現在都在Adobe Developer控制台中配置，以便用戶使用過期的憑據功能。
 
 ### 生成憑據
 

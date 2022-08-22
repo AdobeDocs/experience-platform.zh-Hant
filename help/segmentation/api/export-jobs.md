@@ -1,18 +1,18 @@
 ---
 keywords: Experience Platform；首頁；熱門主題；分段；分段；分段服務；導出作業；api;
 solution: Experience Platform
-title: 導出作業API終結點
+title: 段導出作業API終結點
 topic-legacy: developer guide
 description: 導出作業是用於將受眾段成員保留到資料集的非同步進程。 可以在Adobe Experience Platform分段服務API中使用/export/jobs終結點，它允許您以寫程式方式檢索、建立和取消導出作業。
 exl-id: 5b504a4d-291a-4969-93df-c23ff5994553
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 05e63064dc8eb3f070a383f508cc4a86d4f5e9cc
 workflow-type: tm+mt
-source-wordcount: '1680'
+source-wordcount: '1682'
 ht-degree: 2%
 
 ---
 
-# 導出作業終結點
+# 段導出作業終結點
 
 導出作業是用於將受眾段成員保留到資料集的非同步進程。 您可以使用 `/export/jobs` Adobe Experience Platform分段API中的端點，它允許您以寫程式方式檢索、建立和取消導出作業。
 
@@ -280,7 +280,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/export/jobs \
 | `fields` | 導出欄位的清單，用逗號分隔。 如果留空，則將導出所有欄位。 |
 | `mergePolicy` | 指定用於管理導出資料的合併策略。 在導出多個段時包括此參數。 如果未提供，則導出將採用與給定段相同的合併策略。 |
 | `filter` | 一個對象，它根據下面列出的子屬性，按ID、限定時間或接收時間指定要包括在導出作業中的段。 如果保留為空，則將導出所有資料。 |
-| `filter.segments` | 指定要導出的段。 忽略此值將導致導出所有配置檔案中的所有資料。 接受段對象的陣列，每個陣列都包含以下欄位：<ul><li>`segmentId`: **(使用時需要 `segments`)** 要導出的配置檔案的段ID。</li><li>`segmentNs` *（可選）* 給定的段命名空間 `segmentID`。</li><li>`status` *（可選）* 提供用於PC的狀態過濾器的字串的陣列 `segmentID`。 預設情況下， `status` 將具有值 `["realized", "existing"]` 表示當前時間段中的所有配置檔案。 可能的值包括： `"realized"`。 `"existing"`, `"exited"`。  值「已實現」表示配置檔案正在輸入段。 「現有」值表示配置檔案繼續在段中。 值「exiting」表示配置檔案正在退出段。</li></ul> |
+| `filter.segments` | 指定要導出的段。 忽略此值將導致導出所有配置檔案中的所有資料。 接受段對象陣列，每個陣列都包含以下欄位：<ul><li>`segmentId`: **(使用時需要 `segments`)** 要導出的配置檔案的段ID。</li><li>`segmentNs` *（可選）* 給定的段命名空間 `segmentID`。</li><li>`status` *（可選）* 提供用於PC的狀態過濾器的字串的陣列 `segmentID`。 預設情況下， `status` 將具有值 `["realized", "existing"]` 表示當前時間段中的所有配置檔案。 可能的值包括： `"realized"`。 `"existing"`, `"exited"`。  值「已實現」表示配置檔案正在輸入段。 「現有」值表示配置檔案繼續在段中。 值「exiting」表示配置檔案正在退出段。</li></ul> |
 | `filter.segmentQualificationTime` | 基於段限定時間進行篩選。 可以提供開始時間和/或結束時間。 |
 | `filter.segmentQualificationTime.startTime` | 給定狀態的段ID的段資格起始時間。 它未提供，對段ID資格的開始時間將沒有篩選器。 必須在中提供時間戳 [RFC 3339](https://tools.ietf.org/html/rfc3339) 的子菜單。 |
 | `filter.segmentQualificationTime.endTime` | 給定狀態的段ID的段資格結束時間。 未提供，在段ID資格的結束時間上將不存在篩選器。 必須在中提供時間戳 [RFC 3339](https://tools.ietf.org/html/rfc3339) 的子菜單。 |

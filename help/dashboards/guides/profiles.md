@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform；配置檔案；即時客戶配置檔案；用戶介面；UI；自定義；配置檔案面板；儀表板
-title: 配置式儀表板
+title: 配置式儀表板指南
 description: Adobe Experience Platform提供了一個儀表板，您可以通過該儀表板查看有關您組織的即時客戶配置檔案資料的重要資訊。
 type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
-source-git-commit: e1d44c453385b8beaa49e9793eb4858876d865b0
+source-git-commit: 05e63064dc8eb3f070a383f508cc4a86d4f5e9cc
 workflow-type: tm+mt
-source-wordcount: '3901'
+source-wordcount: '3902'
 ht-degree: 1%
 
 ---

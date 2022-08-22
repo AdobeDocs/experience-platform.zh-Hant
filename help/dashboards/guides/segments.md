@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform；配置檔案；段；段；分段；用戶介面；UI；自定義；段儀表板；儀表板
-title: 段操控板
+title: 段儀表板指南
 description: 'Adobe Experience Platform提供了一個控制板，您可以通過該控制板查看有關您的組織建立的段的重要資訊。 '
 type: Documentation
 exl-id: de5e07bc-2c44-416e-99db-7607059117cb
-source-git-commit: e1d44c453385b8beaa49e9793eb4858876d865b0
+source-git-commit: 05e63064dc8eb3f070a383f508cc4a86d4f5e9cc
 workflow-type: tm+mt
-source-wordcount: '1597'
+source-wordcount: '1598'
 ht-degree: 0%
 
 ---

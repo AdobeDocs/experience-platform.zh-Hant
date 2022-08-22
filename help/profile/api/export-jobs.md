@@ -1,18 +1,18 @@
 ---
 keywords: Experience Platform；配置；即時客戶配置；故障排除；API
-title: 導出作業API終結點
+title: 配置檔案導出作業API終結點
 topic-legacy: guide
 type: Documentation
 description: 即時客戶概要資訊使您能夠通過將來自多個來源的資料（包括屬性資料和行為資料）匯集在一起，構建Adobe Experience Platform內單個客戶的單一視圖。 然後可將配置檔案資料導出到資料集以進一步處理。
 exl-id: d51b1d1c-ae17-4945-b045-4001e4942b67
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 05e63064dc8eb3f070a383f508cc4a86d4f5e9cc
 workflow-type: tm+mt
-source-wordcount: '1517'
+source-wordcount: '1519'
 ht-degree: 2%
 
 ---
 
-# 導出作業終結點
+# 配置檔案導出作業終結點
 
 [!DNL Real-time Customer Profile] 使您能夠通過將來自多個來源的資料（包括屬性資料和行為資料）匯集在一起，構建單個客戶視圖。 然後可將配置檔案資料導出到資料集以進一步處理。 例如，從 [!DNL Profile] 資料可以導出以用於激活，配置檔案屬性可以導出以用於報告。
 
@@ -192,10 +192,10 @@ GET /export/jobs?{QUERY_PARAMETERS}
 
 | 參數 | 說明 |
 | -------- | ----------- |
-| `start` | 按請求的建立時間偏移返回的結果頁。 範例: `start=4` |
-| `limit` | 限制返回的結果數。 範例: `limit=10` |
-| `page` | 按照請求的建立時間返回特定結果頁。 範例: `page=2` |
-| `sort` | 按特定欄位按升序對結果排序( **`asc`** )或降序( **`desc`** )順序。 返回多頁結果時，排序參數不起作用。 範例: `sort=updateTime:asc` |
+| `start` | 按請求的建立時間偏移返回的結果頁。 範例：`start=4` |
+| `limit` | 限制返回的結果數。 範例：`limit=10` |
+| `page` | 按照請求的建立時間返回特定結果頁。 範例：`page=2` |
+| `sort` | 按特定欄位按升序對結果排序( **`asc`** )或降序( **`desc`** )順序。 返回多頁結果時，排序參數不起作用。 範例：`sort=updateTime:asc` |
 
 **要求**
 

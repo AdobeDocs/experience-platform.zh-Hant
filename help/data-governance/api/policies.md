@@ -1,20 +1,24 @@
 ---
 keywords: Experience Platform；首頁；熱門主題；策略實施；基於API的實施；資料治理
 solution: Experience Platform
-title: 策略API終結點
+title: 資料使用策略API終結點
 topic-legacy: developer guide
 description: 資料使用策略是您的組織所採用的規則，它描述了您在Experience Platform內對資料執行的市場營銷活動的類型。 /policies終結點用於與查看、建立、更新或刪除資料使用策略相關的所有API調用。
 exl-id: 62a6f15b-4c12-4269-bf90-aaa04c147053
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 05e63064dc8eb3f070a383f508cc4a86d4f5e9cc
 workflow-type: tm+mt
-source-wordcount: '1813'
+source-wordcount: '1840'
 ht-degree: 2%
 
 ---
 
-# 策略終結點
+# 資料使用策略終結點
 
 資料使用策略是描述允許或限制您對內部資料執行的市場營銷操作類型的規則 [!DNL Experience Platform]。 的 `/policies` 端點 [!DNL Policy Service API] 允許您以寫程式方式管理組織的資料使用策略。
+
+>[!IMPORTANT]
+>
+>不要將此終結點與 `/policies` 端點 [訪問控制API](../../access-control/abac/api/policies.md)，用於管理訪問控制策略。
 
 ## 快速入門
 

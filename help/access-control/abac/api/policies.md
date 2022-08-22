@@ -1,23 +1,27 @@
 ---
 keywords: Experience Platform；首頁；熱門主題；api；基於屬性的訪問控制；基於屬性的訪問控制
 solution: Experience Platform
-title: 策略API終結點
+title: 訪問控制策略API終結點
 description: 基於屬性的訪問控制API中的/policys端點允許您以寫程式方式管理Adobe Experience Platform的策略。
 exl-id: 07690f43-fdd9-4254-9324-84e6bd226743
-source-git-commit: 567bfe089fd96cb08cb8ea7c90d065c804be9413
+source-git-commit: 05e63064dc8eb3f070a383f508cc4a86d4f5e9cc
 workflow-type: tm+mt
-source-wordcount: '1413'
+source-wordcount: '1443'
 ht-degree: 2%
 
 ---
 
-# 策略終結點
+# 訪問控制策略終結點
 
 >[!IMPORTANT]
 >
 >基於屬性的訪問控制目前在面向美國醫療保健客戶的有限版本中提供。 這一功能一旦完全發佈，將可供所有Real-time Customer Data Platform客戶使用。
 
-策略是將屬性集合在一起以建立允許和不允許的操作的語句。 策略可以是本地策略或全局策略，並且可以覆蓋其他策略。 的 `/policies` 基於屬性的訪問控制API中的端點允許您以寫程式方式管理策略，包括有關管理策略的規則及其各自的主題條件的資訊。
+訪問控制策略是將屬性集合在一起以建立允許和不允許的操作的語句。 這些策略可以是本地策略或全局策略，並且可以覆蓋其他策略。 的 `/policies` 基於屬性的訪問控制API中的端點允許您以寫程式方式管理策略，包括有關管理策略的規則及其各自的主題條件的資訊。
+
+>[!IMPORTANT]
+>
+>不要將此終結點與 `/policies` 端點 [資料治理API](../../../data-governance/api/policies.md)，用於管理資料使用策略。
 
 ## 快速入門
 
