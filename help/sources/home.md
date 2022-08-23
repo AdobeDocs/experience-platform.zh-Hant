@@ -5,7 +5,7 @@ title: 源連接器概述
 topic-legacy: overview
 description: Adobe Experience Platform允許從外部源接收資料，同時讓您能夠使用平台服務構建、標籤和增強傳入資料。 您可以從多種源(如Adobe應用程式、基於雲的儲存、資料庫和許多其他源)接收資料。
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: e44f6d5bb2fd891a3e3b3c5e4aed68e8d4687b53
+source-git-commit: 6ae0560607c1e5f80ddfe752e59850f438794351
 workflow-type: tm+mt
 source-wordcount: '1022'
 ht-degree: 0%
@@ -114,6 +114,7 @@ Experience Platform支援從第三方資料庫接收資料。 有關特定源連
 - [[!DNL Phoenix]](connectors/databases/phoenix.md)
 - [[!DNL PostgreSQL]](connectors/databases/postgres.md)
 - [[!DNL Snowflake]](connectors/databases/snowflake.md)
+- [[!DNL Teradata Vantage]](connectors/databases/teradata-vantage.md)
 
 ### 電子商務 {#ecommerce}
 

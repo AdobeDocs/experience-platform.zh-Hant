@@ -4,9 +4,9 @@ user-guide-title: Adobe Experience Platform 來源連接器說明
 breadcrumb-title: 來源連接器指南
 user-guide-description: 從多種來源或結構擷取資料、加標籤，以及增強已擷取的資料。
 feature: Sources
-source-git-commit: 6f7611b120046fffc1b7c15bd657d699f4b4a588
+source-git-commit: 6ae0560607c1e5f80ddfe752e59850f438794351
 workflow-type: tm+mt
-source-wordcount: '795'
+source-wordcount: '802'
 ht-degree: 12%
 
 ---
@@ -82,6 +82,7 @@ ht-degree: 12%
       - [菲尼克斯連接器](connectors/databases/phoenix.md)
       - [PostgreSQL連接器](connectors/databases/postgres.md)
       - [Snowflake連接器](connectors/databases/snowflake.md)
+      - [Teradata](connectors/databases/teradata-vantage.md)
    - 電子商務 {#ecommerce}
       - [Shopify連接器](connectors/ecommerce/shopify.md)
    - 本地系統 {#local-system}
@@ -148,6 +149,7 @@ ht-degree: 12%
          - [鳳凰](tutorials/api/create/databases/phoenix.md)
          - [PostgreSQL](tutorials/api/create/databases/postgres.md)
          - [Snowflake](tutorials/api/create/databases/snowflake.md)
+         - [Teradata](tutorials/api/create/databases/teradata-vantage.md)
          - [SQL Server](tutorials/api/create/databases/sql-server.md)
       - 電子商務 {#ecommerce}
          - [修改](tutorials/api/create/ecommerce/shopify.md)
@@ -250,6 +252,7 @@ ht-degree: 12%
          - [鳳凰](tutorials/ui/create/databases/phoenix.md)
          - [PostgreSQL](tutorials/ui/create/databases/postgres.md)
          - [Snowflake](tutorials/ui/create/databases/snowflake.md)
+         - [Teradata](tutorials/ui/create/databases/teradata-vantage.md)
       - 電子商務 {#ecommerce}
          - [修改](tutorials/ui/create/ecommerce/shopify.md)
       - 本地系統 {#local-system}
