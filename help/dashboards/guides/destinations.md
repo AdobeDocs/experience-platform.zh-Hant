@@ -4,9 +4,9 @@ title: 目標儀表板指南
 description: Adobe Experience Platform提供了一個儀表板，您可以通過該儀表板查看有關組織活動目標的重要資訊。
 type: Documentation
 exl-id: 6a34a796-24a1-450a-af39-60113928873e
-source-git-commit: 05e63064dc8eb3f070a383f508cc4a86d4f5e9cc
+source-git-commit: e59ba2e83808b460016805997580dc16c4cd369e
 workflow-type: tm+mt
-source-wordcount: '2792'
+source-wordcount: '2670'
 ht-degree: 0%
 
 ---
@@ -71,7 +71,6 @@ Adobe提供了多個標準小部件，您可以使用這些部件來可視化與
 >id="platform_dashboards_destinations_mostuseddestinations"
 >title="最常用的目標"
 >abstract="此小部件按映射的段數顯示組織最活躍的目標。 這些數字在上次快照時是準確的。 此排名可以深入瞭解當前最常用的目標，同時突出那些可能未充分利用的目標。"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/destinations.html#most-used-destinations" text="從文檔瞭解更多資訊"
 
 的 **[!UICONTROL 最常用的目標]** 小部件按映射的段數顯示組織的頂級目標，截止到上次快照。 此排名可以深入瞭解哪些目標正被利用，同時可能還顯示那些可能未充分利用的目標。
 
@@ -89,7 +88,6 @@ Adobe提供了多個標準小部件，您可以使用這些部件來可視化與
 >id="platform_dashboards_destinations_recentlycreateddestinations"
 >title="最近建立的目標"
 >abstract="此小部件顯示組織內最近配置的目標的清單。"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/destinations.html#recently-created-destinations" text="從文檔瞭解更多資訊"
 
 的 **[!UICONTROL 最近建立的目標]** 構件使您可以查看組織最近配置的目標的清單。
 
@@ -107,7 +105,6 @@ Adobe提供了多個標準小部件，您可以使用這些部件來可視化與
 >id="platform_dashboards_destinations_recentlyactivatedsegments"
 >title="最近激活的段"
 >abstract="此小部件提供最近映射到目標的段的清單。 此清單提供系統中正在使用的段和目標的快照，並有助於排除任何錯誤映射。"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/destinations.html#recently-activated-segments" text="從文檔瞭解更多資訊"
 
 的 **[!UICONTROL 最近激活的段]** 構件提供最近映射到目標的段的清單。 此清單提供系統中正在使用的段和目標的快照，並有助於排除任何錯誤映射。
 
@@ -125,7 +122,6 @@ Adobe提供了多個標準小部件，您可以使用這些部件來可視化與
 >id="platform_dashboards_destinations_recentlyactivatedsegmentsbydestination"
 >title="按目標最近激活的段"
 >abstract="此小部件根據在概述下拉清單中選擇的目標按降序顯示前五個最近激活的段。"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/destinations.html#recently-activated-segments-by-destination" text="從文檔瞭解更多資訊"
 
 的 **[!UICONTROL 按目標最近激活的段]** 小部件根據在概述下拉清單中選擇的目標按降序顯示前五個最近激活的段。 與 [!UICONTROL 最近激活的段] 小部件，但顯示的資料 **僅** 應用於所選目標。
 
@@ -141,7 +137,6 @@ Adobe提供了多個標準小部件，您可以使用這些部件來可視化與
 >id="platform_dashboards_destinations_audiencesizetrend"
 >title="受眾規模趨勢"
 >abstract="此小部件說明了段中包含的每天發送到目標帳戶的配置檔案數。 第一個下拉菜單調整受眾趨勢的時段。 第二個構件下拉菜單選擇要分析的段。 從概述下拉清單中選擇目標。"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/destinations.html#audience-size-trend" text="從文檔瞭解更多資訊"
 
 的 **[!UICONTROL 受眾規模趨勢]** 小部件描述已映射到該目標帳戶的段的配置檔案計數在一段時間內的關係。 構件使用線形圖來說明段中包含的每天發送到目標帳戶的配置檔案數。
 
@@ -161,7 +156,6 @@ Adobe提供了多個標準小部件，您可以使用這些部件來可視化與
 >id="platform_dashboards_destinations_unmappedsegmentsbyidentity"
 >title="按標識未映射的段"
 >abstract="此小部件列出前五個 **未映射** 按給定目標和標識的降序標識計數排序的段。 在小部件下拉清單中列出的篩選器ID會根據在概覽頁頂部選擇的目標帳戶而發生更改。"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/destinations.html#unmapped-segments-by-identity" text="從文檔瞭解更多資訊"
 
 的 **[!UICONTROL 按標識未映射的段]** 小部件列出前五 **未映射** 按給定目標和標識的降序標識計數排序的段。 它突出顯示基於所選ID映射到所選目標帳戶最有益的段。
 
@@ -177,7 +171,6 @@ Adobe提供了多個標準小部件，您可以使用這些部件來可視化與
 >id="platform_dashboards_destinations_mappedsegmentsbyidentity"
 >title="按標識映射的段"
 >abstract="此小部件提供了 **映射** 段。 根據段中包含的源ID數，從高到低對清單進行排序。 要計數的目標ID是從小部件標題下的下拉菜單中選擇的。 從構件下拉清單中可用的目標ID取決於在概述儀表板頂部選擇的目標。"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/destinations.html#mapped-segments-by-identity" text="從文檔瞭解更多資訊"
 
 此小部件提供了 **映射** 段。 根據段中包含的源ID數，從高到低對清單進行排序。 要計數的目標ID是從小部件標題下的下拉菜單中選擇的。 從構件中的下拉清單中可用的目標ID將根據在概述儀表板頂部選擇的目標帳戶篩選器進行更改。
 
@@ -191,7 +184,6 @@ Adobe提供了多個標準小部件，您可以使用這些部件來可視化與
 >id="platform_dashboards_destinations_commonaudiences"
 >title="普通觀眾"
 >abstract="此小部件提供了在頁面頂部選擇的目標帳戶和在小部件下拉清單中選擇的目標帳戶中激活的前五個段的清單。 段清單按激活時間排序。 最近激活的段顯示在頂部。"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/destinations.html?lang=en#common-audiences" text="從文檔瞭解更多資訊"
 
 的 **[!UICONTROL 普通觀眾]** 小部件提供了在頁面頂部選擇的目標帳戶中激活的前五個段以及在小部件下拉清單中選擇的目標的清單。 段清單按激活時間排序。 最近激活的段顯示在頂部。
 
@@ -213,7 +205,6 @@ Adobe提供了多個標準小部件，您可以使用這些部件來可視化與
 >id="platform_dashboards_destinations_mappedaudiencehealth"
 >title="映射的受眾健康"
 >abstract="此小部件提供多達20個映射段的清單，其配置檔案總數與映射到該目標的30天平均受眾大小之間至少有一個標準偏差。 它提供了計算過去30天中觀眾規模的分散度的度量。 受眾大小從高到低分類。"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/destinations.html#mapped-audience-health" text="從文檔瞭解更多資訊"
 
 該小部件提供一個清單，列出多達20個映射的段，其截至最後一個每日快照，其配置檔案總數與映射到該目標的30天平均受眾大小的至少一個標準偏差因子。
 
@@ -233,7 +224,6 @@ Adobe提供了多個標準小部件，您可以使用這些部件來可視化與
 >id="platform_dashboards_destinations_destinationscount"
 >title="目標計數"
 >abstract="此小部件提供了可用終結點的總數，可在系統中激活和傳遞受眾。 此數字包括活動和非活動目標。"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/destinations.html#destinations-count" text="從文檔瞭解更多資訊"
 
 的 [!UICONTROL 目標計數] 構件提供了可在系統中激活和傳遞受眾的可用終結點總數。 此數字包括活動和非活動目標。
 

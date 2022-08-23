@@ -4,9 +4,9 @@ title: 段儀表板指南
 description: 'Adobe Experience Platform提供了一個控制板，您可以通過該控制板查看有關您的組織建立的段的重要資訊。 '
 type: Documentation
 exl-id: de5e07bc-2c44-416e-99db-7607059117cb
-source-git-commit: 05e63064dc8eb3f070a383f508cc4a86d4f5e9cc
+source-git-commit: e59ba2e83808b460016805997580dc16c4cd369e
 workflow-type: tm+mt
-source-wordcount: '1598'
+source-wordcount: '1550'
 ht-degree: 0%
 
 ---
@@ -82,7 +82,6 @@ Adobe提供了多個標準小部件，您可以使用這些小部件來可視化
 >id="platform_dashboards_segments_audiencesize"
 >title="對象規模"
 >abstract="此小部件顯示選定段內合併的配置檔案總數。 此數字取決於應用於資料的合併策略，在最新快照時是正確的。"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/segments.html#audience-size" text="從文檔瞭解更多資訊"
 
 的 **[!UICONTROL 受眾大小]** 構件顯示拍攝快照時選定段內合併的配置檔案總數。 此數字是將段合併策略應用於配置檔案資料的結果，以便將配置檔案片段合併到一起，為段中的每個個體形成單個配置檔案。
 
@@ -96,7 +95,6 @@ Adobe提供了多個標準小部件，您可以使用這些小部件來可視化
 >id="platform_dashboards_segments_audiencesizetrend"
 >title="受眾規模趨勢"
 >abstract="此小部件提供有關滿足以下條件的配置檔案總數的資訊： **任何** 段定義，如在每日快照中捕獲的，用於過去30天、90天或12個月。"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/segments.html#audience-size-trend" text="從文檔瞭解更多資訊"
 
 的 **[!UICONTROL 受眾規模趨勢]** 構件提供了符合以下條件的配置檔案總數的線形圖圖 **任何** 段定義。 觀眾人數趨勢可以在30天、90天和12個月期間進行可視化。 時間段從小部件的下拉菜單中選擇。 觀眾大小反映在y軸上，時間反映在x軸上。
 
@@ -151,7 +149,6 @@ Adobe提供了多個標準小部件，您可以使用這些小部件來可視化
 >id="platform_dashboards_segments_identityoverlap"
 >title="身份重疊"
 >abstract="此小部件顯示段中包含兩個選定標識的配置檔案的重疊。 圓顯示每個標識的相對大小。 包含兩個命名空間的配置檔案數由圓之間的重疊表示。"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/segments.html#identity-overlap" text="從文檔瞭解更多資訊"
 
 的 **[!UICONTROL 身份重疊]** 小部件顯示一個Venn圖或設定圖，顯示包含多個標識的段中配置檔案的重疊。
 
@@ -169,7 +166,6 @@ Adobe提供了多個標準小部件，您可以使用這些小部件來可視化
 >id="platform_dashboards_segments_profilesbyidentity"
 >title="按身份顯示的配置檔案"
 >abstract="此小部件顯示所選段中每個合併配置檔案的標識細分。"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/segments.html#profiles-by-identity" text="從文檔瞭解更多資訊"
 
 的 **[!UICONTROL 按身份顯示的配置檔案]** 小部件顯示選定段中每個合併配置檔案的標識細目。 按標識列出的配置檔案總數可能高於段中的配置檔案總數，因為一個配置檔案可能具有與其關聯的多個標識。 換句話說，將每個身份顯示的值加在一起，可能總和會超過網段中的總受眾規模，因為如果客戶在多個渠道與您的品牌進行交互，則多個身份可能與該個別客戶相關聯。
 
