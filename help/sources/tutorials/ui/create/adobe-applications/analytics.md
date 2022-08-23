@@ -6,10 +6,10 @@ topic-legacy: overview
 type: Tutorial
 description: 瞭解如何在UI中建立Adobe Analytics源連接，以將消費者資料帶入Adobe Experience Platform。
 exl-id: 5ddbaf63-feaa-44f5-b2f2-2d5ae507f423
-source-git-commit: 2cb6803ecf56dd9a7d9614c72e3a1ff4e76ba966
+source-git-commit: 1d77ad44c7123f32301257c238299b7c16e2c92b
 workflow-type: tm+mt
-source-wordcount: '1700'
-ht-degree: 1%
+source-wordcount: '2182'
+ht-degree: 2%
 
 ---
 
@@ -151,6 +151,82 @@ ht-degree: 1%
 * [資料準備概述](../../../../../data-prep/home.md)
 * [資料準備映射函式](../../../../../data-prep/functions.md)
 * [添加計算欄位](../../../../../data-prep/ui/mapping.md#calculated-fields)
+
+### 篩選 [!DNL Profile Service] (Beta)
+
+>[!IMPORTANT]
+>
+>支援篩選 [!DNL Analytics] 資料當前處於beta中，並且不適用於所有用戶。 文件和功能可能會有所變更。
+
+完成映射後 [!DNL Analytics] 報告套件資料，您可以應用篩選規則和條件以有選擇地將資料從接收到接收中包括或排除 [!DNL Profile Service]。 僅對 [!DNL Analytics] 資料和資料僅在輸入前過濾 [!DNL Profile.] 所有資料都被攝入資料湖。
+
+#### 行級篩選
+
+您可以篩選資料 [!DNL Profile] 在行級和列級接收。 使用行級篩選可以定義條件，如字串包含、等於、開始或結束。 也可以使用行級篩選來連接條件 `AND` 以及 `OR`，使用 `NOT`。
+
+篩選 [!DNL Analytics] 在行級別，選擇 **[!UICONTROL 行篩選器]**。
+
+![行篩選器](../../../../images/tutorials/create/analytics/row-filter.png)
+
+使用左滑軌在架構層次結構中導航並選擇所選的架構屬性，以進一步細化特定架構。
+
+![左滑軌](../../../../images/tutorials/create/analytics/left-rail.png)
+
+確定要配置的屬性後，選擇該屬性並將其從左滑軌拖動到篩選面板。
+
+![過濾面板](../../../../images/tutorials/create/analytics/filtering-panel.png)
+
+要配置不同的條件，請選擇 **[!UICONTROL 等於]** 然後，從出現的下拉窗口中選擇一個條件。
+
+可配置條件清單包括：
+
+* [!UICONTROL 等於]
+* [!UICONTROL 不等於]
+* [!UICONTROL 開始於]
+* [!UICONTROL 終止於]
+* [!UICONTROL 不終止於]
+* [!UICONTROL 包含]
+* [!UICONTROL 不包含]
+* [!UICONTROL 存在]
+* [!UICONTROL 不存在]
+
+![條件](../../../../images/tutorials/create/analytics/conditions.png)
+
+接下來，根據所選屬性輸入要包括的值。 在下面的示例中， [!DNL Apple] 和 [!DNL Google] 被選作攝入的一部分 **[!UICONTROL 製造商]** 屬性。
+
+![包括製造商](../../../../images/tutorials/create/analytics/include-manufacturer.png)
+
+要進一步指定篩選條件，請從架構中添加另一個屬性，然後根據該屬性添加值。 在下面的示例中， **[!UICONTROL 模型]** 屬性被添加，模型如 [!DNL iPhone 13] 和 [!DNL Google Pixel 6] 過濾以攝取。
+
+![包括模型](../../../../images/tutorials/create/analytics/include-model.png)
+
+要添加新容器，請選取橢圓(`...`)，然後選擇 **[!UICONTROL 添加容器]**。
+
+![添加容器](../../../../images/tutorials/create/analytics/add-container.png)
+
+添加新容器後，選擇 **[!UICONTROL 包括]** ，然後選擇 **[!UICONTROL 排除]** 的子菜單。
+
+![排除](../../../../images/tutorials/create/analytics/exclude.png)
+
+接下來，通過拖動架構屬性並添加要從篩選中排除的相應值來完成同一進程。 在下面的示例中， [!DNL iPhone 12]。 [!DNL iPhone 12 mini], [!DNL Google Pixel 5] 全部從排除項中篩選 **[!UICONTROL 模型]** 屬性，橫向從 **[!UICONTROL 螢幕方向]**，和型號 [!DNL A1633] 排除自 **[!UICONTROL 型號]**。
+
+完成後，選擇 **[!UICONTROL 下一個]**。
+
+![排除示例](../../../../images/tutorials/create/analytics/exclude-examples.png)
+
+#### 列級篩選
+
+選擇 **[!UICONTROL 列篩選器]** 的子菜單。
+
+![列過濾器](../../../../images/tutorials/create/analytics/column-filter.png)
+
+該頁將更新到互動式架構樹中，在列級別顯示您的架構屬性。 在此處，您可以選擇要從中排除的資料列 [!DNL Profile] 攝食。 或者，可以展開列並選擇特定屬性以排除。
+
+預設情況下，全部 [!DNL Analytics] 轉到 [!DNL Profile] 此過程允許將XDM資料的分支從 [!DNL Profile] 攝食。
+
+完成後，選擇 **[!UICONTROL 下一個]**。
+
+![列選定](../../../../images/tutorials/create/analytics/columns-selected.png)
 
 ### 提供資料流詳細資訊
 
