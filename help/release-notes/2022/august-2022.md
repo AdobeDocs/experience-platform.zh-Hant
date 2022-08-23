@@ -1,10 +1,10 @@
 ---
 title: Adobe Experience Platform發行說明2022年8月
 description: 2022年8月發佈的Adobe Experience Platform說明。
-source-git-commit: b8513fa214ea74eec6809796cc194466e05cbb21
+source-git-commit: 925991d58c3cdd84e13b12a095e9681b8f4b254b
 workflow-type: tm+mt
-source-wordcount: '497'
-ht-degree: 9%
+source-wordcount: '942'
+ht-degree: 8%
 
 ---
 
@@ -15,6 +15,7 @@ ht-degree: 9%
 Adobe Experience Platform 現有功能更新：
 
 - [資料準備](#data-prep)
+- [體驗資料模型(XDM)](#xdm)
 - [來源](#sources)
 
 ## [!DNL Data Prep] {#data-prep}
@@ -30,6 +31,38 @@ Adobe Experience Platform 現有功能更新：
 {style=&quot;table-layout:auto&quot;}
 
 瞭解有關 [!DNL Data Prep]，請參見 [[!DNL Data Prep] 概述](../../data-prep/home.md)。
+
+## 體驗資料模型(XDM) {#xdm}
+
+XDM是一種開源規範，它為傳入Adobe Experience Platform的資料提供通用結構和定義（架構）。 通過遵守XDM標準，所有客戶體驗資料都可以納入到共同的表示形式中，以更快、更整合的方式提供見解。 您可以從客戶操作中獲得有價值的見解，通過細分市場定義客戶受眾，並將客戶屬性用於個性化目的。
+
+**新的XDM元件**
+
+| 元件類型 | 名稱 | 說明 |
+| --- | --- | --- |
+| 全局架構 | [[!UICONTROL AJO實體架構]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/customerJourneyManagement/ajo-entity.schema.json) | 描述Adobe Journey Optimizer的非正常實體。 |
+| 類 | [[!UICONTROL AJO執行實體]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/customerJourneyManagement/ajo-execution-entity.schema.json) | 描述用於分段的Adobe Journey Optimizer執行實體。 |
+| 欄位群組 | [[!UICONTROL Workfront工作對象]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/workfront/workobjects-all.schema.json) | 引用Adobe Workfront的所有低級對象特定欄位組的包裝欄位組。 |
+
+{style=&quot;table-layout:auto&quot;&quot;
+
+**更新的XDM元件**
+
+| 元件類型 | 名稱 | 說明 |
+| --- | --- | --- |
+| 欄位群組 | [[!UICONTROL Journey Orchestration步驟事件公用欄位]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/journeyOrchestration/stepEvents/journeyStepEventCommonFieldsMixin.schema.json) | 添加了兩個新屬性： `origTimeStamp` 和 `experienceID`。 |
+| 欄位群組 | [[!UICONTROL 段成員身份詳細資訊]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/shared/segmentation.schema.json) | 除 [!UICONTROL XDM個人配置檔案]，此欄位組現在也可以用於基於XDM業務帳戶類的架構中。 |
+| 欄位群組 | （多個） | 一些與MarketoB2B活動有關的外地小組已更新為穩定狀態。 請參閱以下內容 [拉式請求](https://github.com/adobe/xdm/pull/1593/files) 的雙曲餘切值。 |
+| 欄位群組 | （多個） | 已更新幾個與天氣有關的現場組，以修復為 `uvIndex` 和 `sunsetTime`。 請參閱以下內容 [拉式請求](https://github.com/adobe/xdm/pull/1602/files) 的雙曲餘切值。 |
+| 資料類型 | [[!UICONTROL 產品清單項]](https://github.com/adobe/xdm/blob/master/components/datatypes/productlistitem.schema.json) | 新屬性 `productImageUrl` 已添加。 |
+| 資料類型 | [[!UICONTROL Qoe資料詳細資訊]](https://github.com/adobe/xdm/blob/master/components/datatypes/qoedatadetails.schema.json) | 新屬性 `framesPerSecond` 已添加。 |
+| 資料類型 | [[!UICONTROL 會話詳細資訊資訊]](https://github.com/adobe/xdm/blob/master/components/datatypes/sessiondetails.schema.json) | `sdkVersion` 已重新命名為 `appVersion`。`meta:enum` 和 `description` 欄位也已更新。 |
+| 資料類型和欄位組 | （多個） | 多個媒體資料類型和欄位組具有新欄位和更新的說明。 請參閱以下內容 [拉式請求](https://github.com/adobe/xdm/pull/1582/files) 的雙曲餘切值。 |
+| (全部) | （多個） | 包含 `enum` 欄位現在還包含相應的 `meta:enum` 欄位，以表示每個約束的顯示值。 請參閱以下內容 [拉式請求](https://github.com/adobe/xdm/pull/1601/files) 的雙曲餘切值。 |
+
+{style=&quot;table-layout:auto&quot;&quot;
+
+有關平台中XDM的詳細資訊，請參見 [XDM系統概述](../../xdm/home.md)。
 
 ## 來源 {#sources}
 
