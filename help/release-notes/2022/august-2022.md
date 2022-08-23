@@ -1,10 +1,10 @@
 ---
 title: Adobe Experience Platform發行說明2022年8月
 description: 2022年8月發佈的Adobe Experience Platform說明。
-source-git-commit: 2a507b4fe5b7c9dc523ceb5b2f39becf9e574ed9
+source-git-commit: b8513fa214ea74eec6809796cc194466e05cbb21
 workflow-type: tm+mt
-source-wordcount: '317'
-ht-degree: 14%
+source-wordcount: '497'
+ht-degree: 9%
 
 ---
 
@@ -41,7 +41,11 @@ Experience Platform提供REST風格的API和互動式UI，讓您能夠輕鬆地�
 
 | 功能 | 說明 |
 | --- | --- |
-| 跨區域支助Adobe Analytics來源 | 您現在可以從任何區域擷取報告套裝 (美國、英國或新加坡)。報表套件必須映射到與正在其中建立源連接的Experience Platform沙盒實例相同的組織。 有關詳細資訊，請參閱上的指南 [在UI中建立Adobe Analytics源連接](../../sources/tutorials/ui/create/adobe-applications/analytics.md)。 |
+| 自助源的一般可用性（批SDK） | 開發、test和整合基於REST API的資料源，以便使用易於配置的源規範將批資料Experience Platform。 使用Sources SDK，您可以： <ul><li>為Experience Platform目錄配置新源。</li><li>定義源的規範，包括與支援的驗證類型、計畫以及獲取資源資料的方式有關的資訊。</li><li>為新源建立面向用戶的文檔。</li></ul> 有關詳細資訊，請閱讀 [自助源（批處理SDK）](../../sources/sources-sdk/overview.md)。 |
+| 2004年12月 [!DNL Google BigQuery] 源 | 使用 [!DNL Google BigQuery] 從您的 [!DNL Google BigQuery] 資料倉庫到Experience Platform。 有關詳細資訊，請閱讀 [[!DNL Google BigQuery] 源](../../sources/connectors/databases/bigquery.md)。 |
+| [!DNL Teradata Vantage] 源(Beta) | 使用 [!DNL Teradata Vantage] 將資料從混合多雲環境中接收到Experience Platform。 有關詳細資訊，請閱讀 [[!DNL Teradata Vantage] 源](../../sources/connectors/databases/teradata-vantage.md)。 |
+| 跨區域支助Adobe Analytics來源 | 您現在可以從任何區域擷取報告套裝 (美國、英國或新加坡)。報表套件必須映射到與正在其中建立源連接的Experience Platform沙盒實例相同的組織。 有關詳細資訊，請閱讀上的指南 [在UI中建立Adobe Analytics源連接](../../sources/tutorials/ui/create/adobe-applications/analytics.md)。 |
+| API支援按需接收 | 使用按需接收為給定資料流建立專用流運行， [!DNL Flow Service] API。 建立的流運行必須設定為一次性接收。 有關詳細資訊，請閱讀上的指南 [使用API建立用於按需接收的流運行](../../sources/tutorials/api/on-demand-ingestion.md) 的子菜單。 |
 
 {style=&quot;table-layout:auto&quot;&quot;
 
