@@ -5,9 +5,9 @@ title: 段作業API終結點
 topic-legacy: developer guide
 description: Adobe Experience Platform分段服務API中的段作業終結點允許您以寫程式方式管理組織的段作業。
 exl-id: 105481c2-1c25-4f0e-8fb0-c6577a4616b3
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: cb28f52029ac63e4d2c7c210c6199adcd855cf5a
 workflow-type: tm+mt
-source-wordcount: '1169'
+source-wordcount: '1511'
 ht-degree: 2%
 
 ---
@@ -24,7 +24,7 @@ ht-degree: 2%
 
 ## 檢索段作業清單 {#retrieve-list}
 
-通過向IMS組織發出GET請求，您可以檢索IMS組織的所有段作業清單 `/segment/jobs` 端點。
+您可以通過向以下站點發出GET請求來檢索組織的所有段作業清單 `/segment/jobs` 端點。
 
 **API格式**
 
@@ -57,7 +57,11 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/jobs?status=SUCCEEDE
 
 **回應**
 
-成功的響應返回HTTP狀態200，其中列出指定IMS組織的段作業清單為JSON。 以下響應返回IMS組織所有成功的段作業的清單。
+成功的響應返回HTTP狀態200，其中列出指定IMS組織的段作業清單為JSON。 但是，響應會因段任務中段數而不同。
+
+**在段任務中小於或等於1500個段**
+
+如果段作業中運行的段少於1500個，則所有段的完整清單將顯示在 `children.segments` 屬性。
 
 >[!NOTE]
 >
@@ -164,6 +168,102 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/jobs?status=SUCCEEDE
 }
 ```
 
+**超過1500個段**
+
+如果段作業中運行的段數超過1500個， `children.segments` 顯示屬性 `*`，表示正在評估所有段。
+
+>[!NOTE]
+>
+>以下響應已被截斷空間，將只顯示第一個返回的作業。
+
+```json
+{
+    "_page": {
+        "totalCount": 14,
+        "pageSize": 14
+    },
+    "children": [
+        {
+            "id": "b31aed3d-b3b1-4613-98c6-7d3846e8d48f",
+            "imsOrgId": "E95186D65A28ABF00A495D82@AdobeOrg",
+            "sandbox": {
+                "sandboxId": "28e74200-e3de-11e9-8f5d-7f27416c5f0d",
+                "sandboxName": "prod",
+                "type": "production",
+                "default": true
+            },
+            "profileInstanceId": "ups",
+            "source": "scheduler",
+            "status": "SUCCEEDED",
+            "batchId": "678f53bc-e21d-4c47-a7ec-5ad0064f8e4c",
+            "computeJobId": 8811,
+            "computeGatewayJobId": "9ea97b25-a0f5-410e-ae87-b2d85e58f399",
+            "segments": [
+                {
+                    "segmentId": "*",
+                }
+            ],
+            "metrics": {
+                "totalTime": {
+                    "startTimeInMs": 1573203617195,
+                    "endTimeInMs": 1573204395655,
+                    "totalTimeInMs": 778460
+                },
+                "profileSegmentationTime": {
+                    "startTimeInMs": 1573204266727,
+                    "endTimeInMs": 1573204395655,
+                    "totalTimeInMs": 128928
+                },
+                "totalProfiles": 13146432,
+                "segmentedProfileCounter":{
+                    "94509dba-7387-452f-addc-5d8d979f6ae8":1033
+                },
+                "segmentedProfileByNamespaceCounter":{
+                    "94509dba-7387-452f-addc-5d8d979f6ae8":{
+                        "tenantiduserobjid":1033,
+                        "campaign_profile_mscom_mkt_prod2":1033
+                    }
+                },
+                "segmentedProfileByStatusCounter":{
+                    "94509dba-7387-452f-addc-5d8d979f6ae8":{
+                        "exited":144646,
+                        "existing":10,
+                        "realized":2056
+                    }
+                },
+                "totalProfilesByMergePolicy":{
+                    "25c548a0-ca7f-4dcd-81d5-997642f178b9":13146432
+                }
+            },
+            "requestId": "4e538382-dbd8-449e-988a-4ac639ebe72b-1573203600264",
+            "schema": {
+                "name": "_xdm.context.profile"
+            },
+            "properties": {
+                "scheduleId": "4e538382-dbd8-449e-988a-4ac639ebe72b",
+                "runId": "e6c1308d-0d4b-4246-b2eb-43697b50a149"
+            },
+            "_links": {
+                "cancel": {
+                    "href": "/segment/jobs/b31aed3d-b3b1-4613-98c6-7d3846e8d48f",
+                    "method": "DELETE"
+                },
+                "checkStatus": {
+                    "href": "/segment/jobs/b31aed3d-b3b1-4613-98c6-7d3846e8d48f",
+                    "method": "GET"
+                }
+            },
+            "updateTime": 1573204395000,
+            "creationTime": 1573203600535,
+            "updateEpoch": 1573204395
+        }
+    ],
+    "_links": {
+        "next": {}
+    }
+}
+```
+
 | 屬性 | 說明 |
 | -------- | ----------- |
 | `id` | 段作業的系統生成的只讀標識符。 |
@@ -189,6 +289,10 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/jobs?status=SUCCEEDE
 POST /segment/jobs
 ```
 
+在建立新段任務時，請求和響應將因段任務中段的數量而不同。
+
+**在段任務中小於或等於1500個段**
+
 **要求**
 
 ```shell
@@ -198,12 +302,11 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/jobs \
  -H 'x-gw-ims-org-id: {ORG_ID}' \
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}' \
- -d '
-[
-  {
-    "segmentId": "4afe34ae-8c98-4513-8a1d-67ccaa54bc05",
-  }
-]'
+ -d '[
+    {
+        "segmentId": "7863c010-e092-41c8-ae5e-9e533186752e"
+    }
+ ]'
 ```
 
 | 屬性 | 說明 |
@@ -212,12 +315,12 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/jobs \
 
 **回應**
 
-成功的響應返回HTTP狀態200，其中包含新建立的段作業的詳細資訊。
+成功的響應返回HTTP狀態200，其中包含有關新建立的段作業的資訊。
 
 ```json
 {
-    "id": "d3b4a50d-dfea-43eb-9fca-557ea53771fd",
-    "imsOrgId": "{ORG_ID}",
+    "id": "b31aed3d-b3b1-4613-98c6-7d3846e8d48f",
+    "imsOrgId": "E95186D65A28ABF00A495D82@AdobeOrg",
     "sandbox": {
         "sandboxId": "28e74200-e3de-11e9-8f5d-7f27416c5f0d",
         "sandboxName": "prod",
@@ -225,43 +328,82 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/jobs \
         "default": true
     },
     "profileInstanceId": "ups",
-    "source": "api",
-    "status": "NEW",
+    "source": "scheduler",
+    "status": "PROCESSING",
+    "batchId": "678f53bc-e21d-4c47-a7ec-5ad0064f8e4c",
+    "computeJobId": 8811,
+    "computeGatewayJobId": "9ea97b25-a0f5-410e-ae87-b2d85e58f399",
     "segments": [
         {
-            "segmentId": "4afe34ae-8c98-4513-8a1d-67ccaa54bc05",
+            "segmentId": "7863c010-e092-41c8-ae5e-9e533186752e",
             "segment": {
-                "id": "4afe34ae-8c98-4513-8a1d-67ccaa54bc05",
+                "id": "7863c010-e092-41c8-ae5e-9e533186752e",
                 "expression": {
                     "type": "PQL",
-                    "format": "pql/text",
+                    "format": "pql/json",
                     "value": "workAddress.country = \"US\""
                 },
-                "mergePolicyId": "e161dae9-52f0-4c7f-b264-dc43dd903d56",
+                "mergePolicyId": "25c548a0-ca7f-4dcd-81d5-997642f178b9",
                 "mergePolicy": {
-                    "id": "e161dae9-52f0-4c7f-b264-dc43dd903d56",
+                    "id": "25c548a0-ca7f-4dcd-81d5-997642f178b9",
                     "version": 1
                 }
             }
         }
     ],
-    "requestId": "Hw1jdAHeuWHVKVxcAPFrLCbbjkriDl9v",
+    "metrics": {
+        "totalTime": {
+            "startTimeInMs": 1573203617195,
+            "endTimeInMs": 1573204395655,
+            "totalTimeInMs": 778460
+        },
+        "profileSegmentationTime": {
+            "startTimeInMs": 1573204266727,
+            "endTimeInMs": 1573204395655,
+            "totalTimeInMs": 128928
+        },
+        "segmentedProfileCounter":{
+            "7863c010-e092-41c8-ae5e-9e533186752e":1033
+        },
+        "segmentedProfileByNamespaceCounter":{
+            "7863c010-e092-41c8-ae5e-9e533186752e":{
+                "tenantiduserobjid":1033,
+                "campaign_profile_mscom_mkt_prod2":1033
+            }
+        },
+        "segmentedProfileByStatusCounter":{
+            "7863c010-e092-41c8-ae5e-9e533186752e":{
+                "exited":144646,
+                "existing":10,
+                "realized":2056
+            }
+        },
+        "totalProfiles":13146432,
+        "totalProfilesByMergePolicy":{
+            "25c548a0-ca7f-4dcd-81d5-997642f178b9":13146432
+        }
+    },
+    "requestId": "4e538382-dbd8-449e-988a-4ac639ebe72b-1573203600264",
     "schema": {
         "name": "_xdm.context.profile"
     },
+    "properties": {
+        "scheduleId": "4e538382-dbd8-449e-988a-4ac639ebe72b",
+        "runId": "e6c1308d-0d4b-4246-b2eb-43697b50a149"
+    },
     "_links": {
         "cancel": {
-            "href": "/segment/jobs/d3b4a50d-dfea-43eb-9fca-557ea53771fd",
+            "href": "/segment/jobs/b31aed3d-b3b1-4613-98c6-7d3846e8d48f",
             "method": "DELETE"
         },
         "checkStatus": {
-            "href": "/segment/jobs/d3b4a50d-dfea-43eb-9fca-557ea53771fd",
+            "href": "/segment/jobs/b31aed3d-b3b1-4613-98c6-7d3846e8d48f",
             "method": "GET"
         }
     },
-    "updateTime": 1579304260000,
-    "creationTime": 1579304260897,
-    "updateEpoch": 1579304260
+    "updateTime": 1573204395000,
+    "creationTime": 1573203600535,
+    "updateEpoch": 1573204395
 }
 ```
 
@@ -272,6 +414,126 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/jobs \
 | `segments` | 包含有關此段作業正為其運行的段定義的資訊的對象。 |
 | `segments.segment.id` | 提供的段定義的ID。 |
 | `segments.segment.expression` | 包含有關段定義表達式的資訊的對象，用PQL編寫。 |
+
+**超過1500個段**
+
+**要求**
+
+>[!NOTE]
+>
+>雖然您可以建立具有1500個以上段的段任務，但是 **不推薦**。
+
+```shell
+curl -X POST https://platform.adobe.io/data/core/ups/segment/jobs \
+ -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+ -H 'Content-Type: application/json' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
+ -H 'x-api-key: {API_KEY}' \
+ -H 'x-sandbox-name: {SANDBOX_NAME}' \
+ -d '{
+    "schema": {
+        "name": "_xdm.context.profile"
+    },
+    "segments": [
+        {
+            "segmentId": "*"
+        }
+    ]
+ }'
+```
+
+| 屬性 | 說明 |
+| -------- | ----------- |
+| `schema.name` | 段的架構名稱。 |
+| `segments.segmentId` | 運行具有超過1500個段的段作業時，需要通過 `*` 作為段ID表示要運行具有所有段的分段作業。 |
+
+**回應**
+
+成功的響應返回HTTP狀態200，其中包含新建立的段作業的詳細資訊。
+
+```json
+{
+    "id": "b31aed3d-b3b1-4613-98c6-7d3846e8d48f",
+    "imsOrgId": "E95186D65A28ABF00A495D82@AdobeOrg",
+    "sandbox": {
+        "sandboxId": "28e74200-e3de-11e9-8f5d-7f27416c5f0d",
+        "sandboxName": "prod",
+        "type": "production",
+        "default": true
+    },
+    "profileInstanceId": "ups",
+    "source": "scheduler",
+    "status": "PROCESSING",
+    "batchId": "678f53bc-e21d-4c47-a7ec-5ad0064f8e4c",
+    "computeJobId": 8811,
+    "computeGatewayJobId": "9ea97b25-a0f5-410e-ae87-b2d85e58f399",
+    "segments": [
+        {
+            "segmentId": "*"
+        }
+    ],
+    "metrics": {
+        "totalTime": {
+            "startTimeInMs": 1573203617195,
+            "endTimeInMs": 1573204395655,
+            "totalTimeInMs": 778460
+        },
+        "profileSegmentationTime": {
+            "startTimeInMs": 1573204266727,
+            "endTimeInMs": 1573204395655,
+            "totalTimeInMs": 128928
+        },
+        "segmentedProfileCounter":{
+            "7863c010-e092-41c8-ae5e-9e533186752e":1033
+        },
+        "segmentedProfileByNamespaceCounter":{
+            "7863c010-e092-41c8-ae5e-9e533186752e":{
+                "tenantiduserobjid":1033,
+                "campaign_profile_mscom_mkt_prod2":1033
+            }
+        },
+        "segmentedProfileByStatusCounter":{
+            "7863c010-e092-41c8-ae5e-9e533186752e":{
+                "exited":144646,
+                "existing":10,
+                "realized":2056
+            }
+        },
+        "totalProfiles":13146432,
+        "totalProfilesByMergePolicy":{
+            "25c548a0-ca7f-4dcd-81d5-997642f178b9":13146432
+        }
+    },
+    "requestId": "4e538382-dbd8-449e-988a-4ac639ebe72b-1573203600264",
+    "schema": {
+        "name": "_xdm.context.profile"
+    },
+    "properties": {
+        "scheduleId": "4e538382-dbd8-449e-988a-4ac639ebe72b",
+        "runId": "e6c1308d-0d4b-4246-b2eb-43697b50a149"
+    },
+    "_links": {
+        "cancel": {
+            "href": "/segment/jobs/b31aed3d-b3b1-4613-98c6-7d3846e8d48f",
+            "method": "DELETE"
+        },
+        "checkStatus": {
+            "href": "/segment/jobs/b31aed3d-b3b1-4613-98c6-7d3846e8d48f",
+            "method": "GET"
+        }
+    },
+    "updateTime": 1573204395000,
+    "creationTime": 1573203600535,
+    "updateEpoch": 1573204395
+}
+```
+
+| 屬性 | 說明 |
+| -------- | ----------- |
+| `id` | 新建立的段作業的系統生成的只讀標識符。 |
+| `status` | 段任務的當前狀態。 由於段作業是新建立的，因此狀態將始終為 `NEW`。 |
+| `segments` | 包含有關此段作業正為其運行的段定義的資訊的對象。 |
+| `segments.segment.id` | 的 `*` 表示此段作業正在為組織內的所有段運行。 |
 
 ## 檢索特定段作業 {#get}
 
@@ -299,7 +561,11 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/jobs/d3b4a50d-dfea-4
 
 **回應**
 
-成功的響應返回HTTP狀態200，其中包含有關指定段作業的詳細資訊。
+成功的響應返回HTTP狀態200，其中包含有關指定段作業的詳細資訊。  但是，響應會因段任務中段數而不同。
+
+**在段任務中小於或等於1500個段**
+
+如果段作業中運行的段少於1500個，則所有段的完整清單將顯示在 `children.segments` 屬性。
 
 ```json
 {
@@ -361,6 +627,87 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/jobs/d3b4a50d-dfea-4
 }
 ```
 
+**超過1500個段**
+
+如果段作業中運行的段數超過1500個， `children.segments` 顯示屬性 `*`，表示正在評估所有段。
+
+```json
+{
+    "id": "b31aed3d-b3b1-4613-98c6-7d3846e8d48f",
+    "imsOrgId": "E95186D65A28ABF00A495D82@AdobeOrg",
+    "sandbox": {
+        "sandboxId": "28e74200-e3de-11e9-8f5d-7f27416c5f0d",
+        "sandboxName": "prod",
+        "type": "production",
+        "default": true
+    },
+    "profileInstanceId": "ups",
+    "source": "scheduler",
+    "status": "SUCCEEDED",
+    "batchId": "678f53bc-e21d-4c47-a7ec-5ad0064f8e4c",
+    "computeJobId": 8811,
+    "computeGatewayJobId": "9ea97b25-a0f5-410e-ae87-b2d85e58f399",
+    "segments": [
+        {
+            "segmentId": "*"
+        }
+    ],
+    "metrics": {
+        "totalTime": {
+            "startTimeInMs": 1573203617195,
+            "endTimeInMs": 1573204395655,
+            "totalTimeInMs": 778460
+        },
+        "profileSegmentationTime": {
+            "startTimeInMs": 1573204266727,
+            "endTimeInMs": 1573204395655,
+            "totalTimeInMs": 128928
+        },
+        "segmentedProfileCounter":{
+            "7863c010-e092-41c8-ae5e-9e533186752e":1033
+        },
+        "segmentedProfileByNamespaceCounter":{
+            "7863c010-e092-41c8-ae5e-9e533186752e":{
+                "tenantiduserobjid":1033,
+                "campaign_profile_mscom_mkt_prod2":1033
+            }
+        },
+        "segmentedProfileByStatusCounter":{
+            "7863c010-e092-41c8-ae5e-9e533186752e":{
+                "exited":144646,
+                "existing":10,
+                "realized":2056
+            }
+        },
+        "totalProfiles":13146432,
+        "totalProfilesByMergePolicy":{
+            "25c548a0-ca7f-4dcd-81d5-997642f178b9":13146432
+        }
+    },
+    "requestId": "4e538382-dbd8-449e-988a-4ac639ebe72b-1573203600264",
+    "schema": {
+        "name": "_xdm.context.profile"
+    },
+    "properties": {
+        "scheduleId": "4e538382-dbd8-449e-988a-4ac639ebe72b",
+        "runId": "e6c1308d-0d4b-4246-b2eb-43697b50a149"
+    },
+    "_links": {
+        "cancel": {
+            "href": "/segment/jobs/b31aed3d-b3b1-4613-98c6-7d3846e8d48f",
+            "method": "DELETE"
+        },
+        "checkStatus": {
+            "href": "/segment/jobs/b31aed3d-b3b1-4613-98c6-7d3846e8d48f",
+            "method": "GET"
+        }
+    },
+    "updateTime": 1573204395000,
+    "creationTime": 1573203600535,
+    "updateEpoch": 1573204395
+}
+```
+
 | 屬性 | 說明 |
 | -------- | ----------- |
 | `id` | 段作業的系統生成的只讀標識符。 |
@@ -403,7 +750,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/jobs/bulk-get \
 
 **回應**
 
-成功的響應將返回HTTP狀態207，並返回請求的段作業。
+成功的響應將返回HTTP狀態207，並返回請求的段作業。 但是， `children.segments` 屬性不同，具體取決於段作業運行的段數是否超過1500個。
 
 >[!NOTE]
 >
@@ -444,20 +791,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/jobs/bulk-get \
             "status": "SUCCEEDED",
             "segments": [
                 {
-                    "segmentId": "4afe34ae-8c98-4513-8a1d-67ccaa54bc05",
-                    "segment": {
-                        "id": "4afe34ae-8c98-4513-8a1d-67ccaa54bc05",
-                        "expression": {
-                            "type": "PQL",
-                            "format": "pql/json",
-                            "value": "{PQL_EXPRESSION}"
-                        },
-                        "mergePolicyId": "b83185bb-0bc6-489c-9363-0075eb30b4c8",
-                        "mergePolicy": {
-                            "id": "b83185bb-0bc6-489c-9363-0075eb30b4c8",
-                            "version": 1
-                        }
-                    }
+                    "segmentId": "*"
                 }
             ],
             "updateTime": 1573204395000,
