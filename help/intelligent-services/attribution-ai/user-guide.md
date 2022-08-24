@@ -5,10 +5,10 @@ title: Attribution AIUI指南
 topic-legacy: User guide
 description: 本文檔用作與Intelligent Services用戶介面中的Attribution AI交互的指南。
 exl-id: 32e1dd07-31a8-41c4-88df-8893ff773f79
-source-git-commit: f27ddda4d5e6c33fa41e4ac503f80ddb1e39b09b
+source-git-commit: ac21668955305c135d78c1e6afbee8f6499f6885
 workflow-type: tm+mt
-source-wordcount: '2331'
-ht-degree: 1%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -261,6 +261,36 @@ Attribution AI中的最後一頁 **[!UICONTROL 高級]** 用於設定培訓和�
 選擇培訓窗口後，選擇 **[!UICONTROL 完成]** 在右上角。 允許一些時間處理資料。 完成後，將出現一個跨距對話框，確認實例設定已完成。 選擇 **[!UICONTROL 確定]** 要重定向到 **[!UICONTROL 服務實例]** 頁面，您可以在其中查看服務實例。
 
 ![安裝完成](./images/user-guide/instance_setup_complete.png)
+
+### 以屬性為基礎的存取控制
+
+>[!IMPORTANT]
+>
+>基於屬性的訪問控制目前僅在有限版本中可用。
+
+[基於屬性的訪問控制](../../../help/access-control/abac/overview.md) 是Adobe Experience Platform的一種功能，使管理員能夠根據屬性控制對特定對象和/或權能的訪問。 屬性可以是添加到對象的元資料，如添加到架構欄位或段的標籤。 管理員定義包括屬性的訪問策略以管理用戶訪問權限。
+
+此功能允許您用定義組織或資料使用範圍的標籤來標籤體驗資料模型(XDM)架構欄位。 同時，管理員可以使用用戶和角色管理介面來定義圍繞XDM架構欄位的訪問策略，並更好地管理授予用戶或用戶組（內部、外部或第三方用戶）的訪問。 此外，基於屬性的訪問控制允許管理員管理對特定段的訪問。
+
+通過基於屬性的訪問控制，管理員可以控制用戶對所有平台工作流和資源中敏感個人資料(SPD)和個人身份資訊(PII)的訪問。 管理員可以定義只能訪問特定欄位和與這些欄位對應的資料的用戶角色。
+
+由於基於屬性的訪問控制，某些欄位和功能可能受到訪問限制，並且對某些Attribution AI服務實例不可用。 示例包括「Identity」、「Score Definition」和「Clone」。
+
+在Attribution AI工作區頂部 **insights頁**，邊欄中顯示的詳細資訊具有限制訪問權限。
+
+![Attribution AI工作區，其中模式的受限欄位突出顯示。](./images/user-guide/access-restricted.png)
+
+如果您選擇的資料集上具有受限架構 **[!UICONTROL 建立實例工作流]** 頁，資料集名稱旁邊將顯示一個警告符號，消息為： [!UICONTROL 已排除受限資訊]。
+
+![帶有選定資料集的受限欄位且具有受限模式結果的Attribution AI工作區突出顯示。](./images/user-guide/restricted-info-excluded.png)
+
+在上預覽具有受限架構的資料集時 **[!UICONTROL 建立實例工作流]** 頁，警告會告訴您 [!UICONTROL 由於訪問限制，某些資訊不會顯示在資料集預覽中。]
+
+![帶有預覽的架構結果的受限欄位的Attribution AI工作區突出顯示。](./images/user-guide/restricted-dataset-preview.png)
+
+在建立具有受限資訊的實例後，繼續執行 **[!UICONTROL 定義目標]** 步驟，頂部將顯示警告： [!UICONTROL 由於訪問限制，配置中不顯示某些資訊。]
+
+![帶實例結果的受限欄位的Attribution AI工作區突出顯示。](./images/user-guide/information-not-displayed.png)
 
 ## 後續步驟
 

@@ -5,10 +5,10 @@ title: 輸入和輸出在Attribution AI
 topic-legacy: Input and Output data for Attribution AI
 description: 下面的檔案概述了在Attribution AI中使用的不同輸入和輸出。
 exl-id: d6dbc9ee-0c1a-4a5f-b922-88c7a36a5380
-source-git-commit: 3ea17aa57a5bfbc968f354b13d2ed107b2efa39b
+source-git-commit: b3c331821e2df17380edbc673066f6b10a06d65f
 workflow-type: tm+mt
-source-wordcount: '2392'
-ht-degree: 3%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -234,6 +234,12 @@ Attribution AI產生兩種不同的算法得分，增量和影響。 影響得�
 | 動作 | _tenantID.your_schema_name.touchpointsDetail.element.touchpoint.mediaAction |
 | campay_group | _tenantID.your_schema_name.touchpointsDetail.element.touchpoint.campaignGroup |
 | 戰役名稱 | _tenantID.your_schema_name.touchpointsDetail.element.touchpoint.campaignName |
+
+>[!IMPORTANT]
+>
+> - Attribution AI僅使用更新的資料進行進一步的培訓和評分。 同樣，當您請求刪除資料時，Attribution AI也不會使用刪除的資料。
+> - 為幫助促進Attribution AI中的GDPR法規遵從性，您可以使用Adobe Experience Platform Privacy Service設定協定來滿足客戶訪問和刪除資料湖、身份服務和即時客戶配置檔案中的資料的請求。
+> - 所有資料都在傳輸和靜止時被加密。 請參閱文檔以瞭解有關 [資料加密](../../../help/landing/governance-privacy-security/encryption.md)
 
 
 ## 後續步驟 {#next-steps}

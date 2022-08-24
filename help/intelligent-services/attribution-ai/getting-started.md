@@ -5,10 +5,10 @@ title: 入門Attribution AI
 topic-legacy: Getting started
 description: 以下指南要求瞭解Adobe Experience Platform與使用Attribution AI有關的各種服務。 在開始教程之前，請查看以下文檔。
 exl-id: ab269c24-97ac-4da9-9b6c-7d2dde61f0dc
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: b3c331821e2df17380edbc673066f6b10a06d65f
 workflow-type: tm+mt
-source-wordcount: '538'
-ht-degree: 1%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -51,6 +51,12 @@ Experience Platform中的所有資源都與特定的虛擬沙箱隔離。 所有
 ### 讀取示例API調用
 
 本指南提供了示例API調用，以演示如何格式化請求。 這些包括路徑、必需的標頭和正確格式化的請求負載。 還提供了API響應中返回的示例JSON。 有關示例API調用文檔中使用的約定的資訊，請參見上的 [如何讀取示例API調用](../../landing/troubleshooting.md) Experience Platform疑難解答指南。
+
+## 權限 {#permissions}
+
+使用基於角色的訪問控制時， **查看Attribution AI** 和 **管理Attribution AI** 權限授予對不同功能的Attribution AI訪問權限。 的 **管理Attribution AI** 讓 **建立**。 **克隆**。 **編輯**。 **刪除**。 **啟用**&#x200B;或 **禁用** 在 **查看Attribution AI** 讓 **讀** 或 **視圖** 它。 的 **建立**。 **編輯** 和 **刪除** 操作由審核日誌記錄。
+
+請參閱要瞭解的文檔 [分配訪問控制權限](../../../help/access-control/home.md) 或如何 [使用審核日誌來監視訪問和活動](../../../help/landing/governance-privacy-security/audit-logs/overview.md)。
 
 ## 後續步驟 {#next-steps}
 

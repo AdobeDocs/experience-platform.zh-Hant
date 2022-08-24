@@ -6,9 +6,9 @@ title: 客戶AI入門
 topic-legacy: Getting started
 description: 本指南提供了示例API調用，以演示如何格式化請求。 這些包括路徑、必需的標頭和正確格式化的請求負載。
 exl-id: 90c9a83a-8e66-4239-b2d6-2049a6319b25
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: b3c331821e2df17380edbc673066f6b10a06d65f
 workflow-type: tm+mt
-source-wordcount: '571'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -47,6 +47,12 @@ Experience Platform中的所有資源都與特定的虛擬沙箱隔離。 所有
 ### 讀取示例API調用
 
 本指南提供了示例API調用，以演示如何格式化請求。 這些包括路徑、必需的標頭和正確格式化的請求負載。 還提供了API響應中返回的示例JSON。 有關示例API調用文檔中使用的約定的資訊，請參見上的 [如何讀取示例API調用](../../landing/troubleshooting.md) Experience Platform疑難解答指南。
+
+## 權限
+
+使用訪問控制時， **查看客戶AI** 和 **管理客戶AI** 權限授予對客戶AI的不同功能的訪問權限。 的 **管理客戶AI** 權限允許 **建立**。**更新**。 **刪除**。 **啟用**&#x200B;或 **禁用** 在 **查看客戶AI** 讓您閱讀或查看。 的 **建立**。 **更新** 和 **刪除** 操作由審核日誌記錄。
+
+請參閱要瞭解的文檔 [分配訪問控制權限](../../../help/access-control/home.md) 或如何 [使用審核日誌來監視訪問和活動](../../../help/landing/governance-privacy-security/audit-logs/overview.md)。
 
 ## 後續步驟
 

@@ -6,10 +6,10 @@ topic-legacy: Attribution AI
 description: Attribution AI 可將點數歸因到促成轉換事件的接觸點。 行銷人員可善用此工具，協助量化客戶歷程中各個獨立行銷接觸點對行銷的影響。 舉凡廣告曝光、電子郵件傳送、電子郵件開啟和付費搜尋點擊，都是接觸點的範例。
 landing-page-description: Attribution AI 可將點數歸因到促成轉換事件的接觸點。 行銷人員可善用此工具，協助量化客戶歷程中各個獨立行銷接觸點對行銷的影響。
 exl-id: a5991b08-217a-4b39-9948-d28eadea7ded
-source-git-commit: c3320f040383980448135371ad9fae583cfca344
+source-git-commit: a71da02b7cef5870bc9ca689a47c25098b2297b8
 workflow-type: tm+mt
-source-wordcount: '499'
-ht-degree: 36%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -43,7 +43,7 @@ Attribution AI可用於幫助處理以下示例使用案例：
 
 ### 其他功能
 
-Attribution AI還提供與其他Adobe解決方案的整合， [!DNL Adobe Analytics]。 這使您能夠使用這些解決方案利用可定製的算法模型來評估媒體效能並提供分析見解。
+Attribution AI還提供與其他Adobe解決方案的整合， [!DNL Customer Journey Analytics]。 這使您能夠使用這些解決方案利用可定製的算法模型來評估媒體效能並提供分析見解。
 
 ## 後續步驟
 
