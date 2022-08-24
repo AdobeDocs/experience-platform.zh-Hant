@@ -1,10 +1,10 @@
 ---
 title: Adobe Experience Platform發行說明2022年8月
 description: 2022年8月發佈的Adobe Experience Platform說明。
-source-git-commit: 925991d58c3cdd84e13b12a095e9681b8f4b254b
+source-git-commit: 5967dee9c8b1c05ebd103998021e02a47ac3982c
 workflow-type: tm+mt
-source-wordcount: '942'
-ht-degree: 8%
+source-wordcount: '1246'
+ht-degree: 7%
 
 ---
 
@@ -16,6 +16,8 @@ Adobe Experience Platform 現有功能更新：
 
 - [資料準備](#data-prep)
 - [體驗資料模型(XDM)](#xdm)
+- [即時客戶個人檔案](#profile)
+- [分段服務](#segmentation)
 - [來源](#sources)
 
 ## [!DNL Data Prep] {#data-prep}
@@ -63,6 +65,30 @@ XDM是一種開源規範，它為傳入Adobe Experience Platform的資料提供�
 {style=&quot;table-layout:auto&quot;&quot;
 
 有關平台中XDM的詳細資訊，請參見 [XDM系統概述](../../xdm/home.md)。
+
+## 即時客戶個人檔案 {#profile}
+
+Adobe Experience Platform使您能夠為您的客戶提供協調、一致和相關的體驗，無論客戶在何處或何時與您的品牌進行交互。 通過即時客戶概要資訊，您可以看到每個客戶的整體視圖，該視圖將來自多個渠道的資料組合在一起，包括線上、離線、CRM和第三方資料。 配置檔案允許您將客戶資料整合到一個統一視圖中，為每次客戶交互提供一個可操作且時間戳記的帳戶。
+
+| 功能 | 說明 |
+| ------- | ----------- |
+| 孤立配置檔案邊緣屬性清理 | 對於所有組織，配置檔案服務現在每天刪除用戶活動區域的剩餘邊緣屬性，以便更準確地表示您在系統中的配置檔案。 在刪除給定配置檔案的所有配置檔案片段後進行此清理，並且應影響從其中合併的資料集中合併的配置檔案 `com_adobe_aep_profile_region_dataset` 標籤為 `true`。 這可能顯示許可證使用儀表板中「可定址受眾」度量的下降，也可能顯示配置檔案儀表板中「配置檔案計數」度量的下降，因為這些度量包括此版本之前剩餘的邊緣屬性片段。 |
+
+{style=&quot;table-layout:auto&quot;&quot;
+
+要瞭解有關即時客戶概要資訊的更多資訊，包括有關使用概要資訊資料的教程和最佳做法，請首先閱讀 [即時客戶概要資訊概述](../../profile/home.md)。
+
+## 分段服務 {#segmentation}
+
+[!DNL Segmentation Service] 通過描述區分客戶群中可銷售人員組的標準來定義特定配置檔案子集。 段可以基於記錄資料（如人口統計資訊）或表示客戶與您品牌的交互的時間序列事件。
+
+**新功能**
+
+| 功能 | 說明 |
+| ------- | ----------- |
+| 支援4000個段 | 所有使用平台的組織現在可支援多達4000個段定義。 有關此更改如何影響段作業API的詳細資訊，請閱讀 [段作業終結點指南](../../segmentation/api/segment-jobs.md) |
+
+有關 [!DNL Segmentation Service]，請參閱 [分段概述](../../segmentation/home.md)。
 
 ## 來源 {#sources}
 
