@@ -2,13 +2,13 @@
 keywords: 電子郵件；電子郵件；電子郵件；電子郵件目標；salesforce;api salesforce市場營銷雲目標
 title: (API)SalesforceMarketing Cloud連接
 description: SalesforceMarketing Cloud（以前稱為ExactTarget）目標允許您導出帳戶資料並在SalesforceMarketing Cloud中根據您的業務需要將其激活。
-source-git-commit: ce7b28ce31c652965a6eaad81348e330bd38e9ac
+exl-id: 0cf068e6-8a0a-4292-a7ec-c40508846e27
+source-git-commit: 2dda77c3d9a02b53a02128e835abf77ab97ad033
 workflow-type: tm+mt
-source-wordcount: '1869'
-ht-degree: 1%
+source-wordcount: '1906'
+ht-degree: 2%
 
 ---
-
 
 # [!DNL (API) Salesforce Marketing Cloud] 連接
 
@@ -48,7 +48,7 @@ SalesforceMarketing Cloud使用OAuth 2和客戶端憑據作為與Salesforce REST
 
 #### 在Salesforce中建立自定義欄位 {#prerequisites-custom-field}
 
-建立類型的自定義屬性 `Text Area Long` 該Experience Platform將用於更新SalesforceMarketing Cloud中的段狀態。
+必須建立該類型的自定義屬性 `Text Area Long`，該Experience Platform將用於更新SalesforceMarketing Cloud中的段狀態。 在工作流中，將段激活到目標，在 **[段計畫](#schedule-segment-export-example)** 步驟，將使用自定義屬性作為激活的每個段的映射ID。
 
 請參閱SalesforceMarketing Cloud文檔，以 [建立自定義欄位](https://help.salesforce.com/s/articleView?id=mc_cab_create_an_attribute.htm&amp;type=5&amp;language=en_US) 如果你需要其他指導。
 
@@ -73,6 +73,8 @@ SalesforceMarketing Cloud使用OAuth 2和客戶端憑據作為與Salesforce REST
 | <ul><li>SalesforceMarketing Cloud前置詞</li></ul> | 請參閱 [SalesforceMarketing Cloud域前置詞](https://help.salesforce.com/s/articleView?id=sf.domain_name_setting_login_policy.htm&amp;type=5) 的下界。 | <ul><li>如果域如下所示，則需要突出顯示的值。<br> <i>`mcq4jrssqdlyc4lph19nnqgzzs84`.login.exacttarget.com</i></li></ul> |
 | <ul><li>客戶端ID</li><li>客戶端密碼</li></ul> | 請參閱 [Salesforce文檔](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/access-token-s2s.html) 如果你需要其他指導。 | <ul><li>r23kxxxxxxx0z05xxxxxx</li><li>ipxxxxxxxxxxT4xxxxxxxx</li></ul> |
 
+{style=&quot;table-layout:auto&quot;}
+
 ## 支援的身份 {#supported-identities}
 
 SalesforceMarketing Cloud支援激活下表中描述的身份。 瞭解有關 [身份](/help/identity-service/namespaces.md)。
@@ -90,7 +92,7 @@ SalesforceMarketing Cloud支援激活下表中描述的身份。 瞭解有關 [�
 | 導出類型 | **[!UICONTROL 基於配置檔案]** | 您正在導出段的所有成員以及所需的架構欄位(例如：電子郵件地址、電話號碼、姓氏)，在「選擇配置檔案屬性」螢幕中選擇 [目標激活工作流](/help/destinations/ui/activate-batch-profile-destinations.md#select-attributes)。 |
 | 導出頻率 | **[!UICONTROL 流]** | 流目標是基於API的「始終開啟」連接。 一旦基於段評估在Experience Platform中更新配置檔案，連接器就將更新下游發送到目標平台。 閱讀有關 [流目標](/help/destinations/destination-types.md#streaming-destinations)。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style=&quot;table-layout:auto&quot;&quot;
 
 ## 連接到目標 {#connect}
 
@@ -140,7 +142,7 @@ SalesforceMarketing Cloud支援激活下表中描述的身份。 瞭解有關 [�
 
 ### 映射注意事項和示例 {#mapping-considerations-example}
 
-要正確將受眾資料從Adobe Experience Platform發送到SalesforceMarketing Cloud目標，您需要執行欄位映射步驟。 映射包括在您的平台帳戶中的「體驗資料模型」(XDM)架構欄位與目標目標中對應的欄位之間建立連結。 要正確將XDM欄位映射到SalesforceMarketing Cloud目標欄位，請執行以下步驟：
+要正確將受眾資料從Adobe Experience Platform發送到SalesforceMarketing Cloud目標，您需要執行欄位映射步驟。 映射包括在您的平台帳戶中的「體驗資料模型」(XDM)架構欄位與目標目標中對應的欄位之間建立連結。 要正確將XDM欄位映射到SalesforceMarketing Cloud目標欄位，請執行以下步驟。
 
 可為 [Salesforce REST API](https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/dome_composite_upsert_example.htm?q=contacts) 的下方。 目標使用 [Salesforce搜索屬性集定義REST API](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/retrieveAttributeSetDefinitions.html) 檢索在Salesforce中為您的聯繫人定義且特定於您的帳戶的屬性。
 
@@ -148,7 +150,7 @@ SalesforceMarketing Cloud支援激活下表中描述的身份。 瞭解有關 [�
 > 
 > 雖然您的屬性名稱與Salesforce帳戶相同，但是 `contactKey` 和 `personalEmail.address` 的子菜單。
 
-1. 在映射步驟中，按一下 **[!UICONTROL 添加新映射]**，您將在螢幕上看到新的映射行。
+1. 在映射步驟中，按一下 **[!UICONTROL 添加新映射]**。 現在，您可以在螢幕上看到新的映射行。
    ![添加新映射](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/add-new-mapping.png)
 
 1. 在「選擇源欄位」窗口中，選擇源欄位時，選擇 **[!UICONTROL 選擇屬性]** 類別，並添加所需的映射。
@@ -172,7 +174,7 @@ SalesforceMarketing Cloud支援激活下表中描述的身份。 瞭解有關 [�
 
 ### 計畫段導出和示例 {#schedule-segment-export-example}
 
-執行 [計畫段導出](/help/destinations/ui/activate-segment-streaming-destinations.md#scheduling) 步驟必須手動將平台段映射到Salesforce中的自定義屬性。
+執行 [計畫段導出](/help/destinations/ui/activate-segment-streaming-destinations.md#scheduling) 步驟，必須手動將平台段映射到Salesforce中的自定義屬性。
 
 為此，請選擇每個段，然後從Salesforce中輸入相應的自定義屬性 **[!UICONTROL 映射ID]** 的子菜單。
 
@@ -233,4 +235,3 @@ SalesforceMarketing Cloud支援激活下表中描述的身份。 瞭解有關 [�
 * 請參閱 [SalesforceMarketing Cloud項目定價](https://www.salesforce.com/editions-pricing/marketing-cloud/email/) 頁 *下載完整版比較圖表* 作為pdf，詳細列出計畫施加的限制。
 * 的 [API概述](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/apis-overview.html) 頁面詳細資訊附加限制。
 * 整理這些詳細資訊的KB項目可用 [這裡](https://salesforce.stackexchange.com/questions/205898/marketing-cloud-api-limits#:~:text=Day%2FHour%2FMinute%20Limit&amp;text=We%20recommend%20a%20limit%20of,per%20minute%20for%20SOAP%20calls.&amp;text=As%20已%20已%20已添加%20英吋，正在與%20t%20REST%2DAPI交互%20)。
-
