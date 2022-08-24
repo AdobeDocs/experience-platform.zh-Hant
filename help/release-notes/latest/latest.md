@@ -2,88 +2,74 @@
 title: Adobe Experience Platform 發行說明
 description: Adobe Experience Platform的最新發行說明。
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: a82381d6133fe793fc0f4be38b6e064684581afb
+source-git-commit: 0e23475fd120858b59794742860b7afececfece2
 workflow-type: tm+mt
-source-wordcount: '2436'
-ht-degree: 5%
+source-wordcount: '1860'
+ht-degree: 7%
 
 ---
 
 # Adobe Experience Platform 發行說明
 
-**發行日期：2022 年 7 月 27 日**
+**發行日期：2022 年 24 月 8 日**
 
 Adobe Experience Platform 現有功能更新：
 
-- [儀表板](#dashboards)
-- [資料收集](#data-collection)
-- [[!DNL Data Prep]](#data-prep)
-- [[!DNL Destinations]](#destinations)
+- [[!DNL Artificial Intelligence and Machine Learning Services]](#ai-and-ml-services)
+- [[!DNL Dashboards]](#dashboards)
+- [資料準備](#data-prep)
 - [體驗資料模型(XDM)](#xdm)
-- [Real-time Customer Data Platform B2B Edition](#b2b)
 - [即時客戶個人檔案](#profile)
+- [分段服務](#segmentation)
 - [來源](#sources)
 
-## 儀表板 {#dashboards}
+## [!DNL Artificial Intelligence/Machine Learning services] {#ai-and-ml-services}
 
-Adobe Experience Platform提供 [!DNL dashboards] 您可以通過查看有關組織資料的重要資訊（在每日快照中捕獲）。
+AI/ML服務使營銷分析員和從業人員能夠利用人工智慧和機器學習在客戶體驗使用案例中的力量。 這使市場營銷分析員能夠使用業務級配置來設定特定於公司需要的模型，而無需資料科學專業知識。
 
-### 帳戶配置檔案儀表板
+### Attribution AI
 
-「帳戶配置檔案」控制面板顯示來自多個來源的統一帳戶資訊的快照，這些來源來自您的市場營銷渠道以及您的組織當前用於儲存客戶帳戶資訊的各種系統。
+Attribution AI 可將點數歸因到促成轉換事件的接觸點。 行銷人員可善用此工具，協助量化客戶歷程中各個獨立行銷接觸點對行銷的影響。
 
 **已更新功能**
 
 | 功能 | 說明 |
-| --- | --- |
-| 按行業小部件列出的帳戶總數 | 此小部件以單個度量顯示帳戶總數，並使用甜圈圖來說明構成總數的行業計數的比例大小。 |
-| 帳戶配置檔案已添加構件 | 此小部件使用彩色編碼條形圖來說明在給定時間段內添加到帳戶的配置檔案計數，以及構成這些添加的配置檔案的不同行業的比例。 |
+| ------- | ----------- |
+| 隱私支援 | <li>Attribution AI現在支援定義用戶角色和訪問策略來管理 [權限](../../../help/access-control/abac/ui/permissions.md) 用於產品應用程式中的功能和對象。</li><li>在活動發生時自動記錄審核日誌資源。</li><li>通過 [基於屬性的訪問控制](../../../help/access-control/abac/overview.md)，管理員可以根據某些屬性控制對特定對象和/或權能的訪問，這些屬性可以添加到對象（如標籤）中的元資料。管理員還可以定義只有權訪問與這些欄位對應的特定欄位和資料的用戶角色。</li><li>[資料衛生](../../../help/hygiene/home.md) Attribution AI中的功能允許您僅使用更新的資料進行進一步的培訓和評分。 同樣，當您請求刪除資料時，Attribution AI也不會使用刪除的資料。</li><li>Attribution AI利用平台資料集。 為幫助促進GDPR法規遵從性，您可以使用Adobe Experience Platform Privacy Service設定協定來滿足客戶訪問和刪除資料湖、身份服務和即時客戶配置檔案中的資料的請求。 所有資料都在傳輸和靜止時被加密。</li> |
 
 {style=&quot;table-layout:auto&quot;}
 
-查看 [即時CDP 、 B2B版概述](../../rtcdp/b2b-overview.md) 瞭解有關可用B2B功能的更多資訊，或 [端到端教程](../../rtcdp/b2b-tutorial.md) 瞭解有關如何作為B2B工作流的一部分建立帳戶配置檔案的詳細資訊。
+**注釋**:到2022年第4季度末， Healthcare Shield客戶才能獲得Attribution AI。
 
-有關可可視化帳戶配置檔案相關度量的小部件的詳細資訊，請參閱 [帳戶配置檔案小部件文檔](../../dashboards/guides/account-profiles.md#standard-widgets)。
+有關Attribution AI的詳細資訊，請參閱 [Attribution AI](../../intelligent-services/attribution-ai/overview.md) 概述。
 
-### 配置檔案儀表板
+### 客戶AI
 
-「配置式」控制面板顯示您的組織在「配置式儲存」Experience Platform中擁有的屬性（記錄）資料的快照。
+在Real-time Customer Data Platform提供的客戶AI用於生成定制傾向得分，如按比例對單個配置檔案進行流失和轉換。
+
+**已更新功能**
+
+| 功能 | 說明 |
+| ------- | ----------- |
+| 隱私支援 | <li>客戶AI現在支援定義用戶角色和訪問策略以管理 [權限](../../../help/access-control/abac/ui/permissions.md) 用於產品應用程式中的功能和對象。</li><li>在活動發生時自動記錄審核日誌資源。</li><li> 通過 [基於屬性的訪問控制](../../access-control/abac/overview.md)，管理員可以根據特定屬性控制對特定對象和/或權能的訪問。 這些屬性可以是添加到對象（如標籤）的元資料。 管理員還可以定義用戶角色，這些用戶角色只能訪問與這些欄位對應的特定欄位和資料。</li><li>[資料衛生](../../../help/hygiene/home.md) 客戶AI中的功能允許您僅使用更新的資料進行進一步的培訓和評分。 同樣，當您請求刪除資料時，客戶AI不會使用刪除的資料。</li><li>客戶AI利用平台資料集。 為幫助促進GDPR法規遵從性，您可以使用Adobe Experience Platform Privacy Service設定協定來滿足客戶訪問和刪除資料湖、身份服務和即時客戶配置檔案中的資料的請求。 所有資料都在傳輸和靜止時被加密。</li> |
+
+{style=&quot;table-layout:auto&quot;&quot;
+
+**注釋**:在2022年第4季度末之前， Healthcare Shield客戶將無法獲得客戶AI。
+
+有關客戶AI的詳細資訊，請參閱 [客戶AI](../../intelligent-services/customer-ai/overview.md) 概述。
+
+## [!DNL Dashboards] {#dashboards}
+
+Adobe Experience Platform提供 [!DNL dashboards] 通過這些資訊，您可以查看有關組織資料的重要見解，如在每日快照中捕獲的。
 
 **已更新功能**
 
 | 功能 | 說明 |
 | --- | --- |
-| 映射的受眾小部件 | 此小部件顯示可以從「配置式」儀表板下拉清單中選擇的目標激活的映射受眾總數。 |
+| 計畫激活小部件 | 的 [!UICONTROL 計畫激活] 小部件提供了最近激活的目標的表格化視圖。 對於每個段，它包括名稱、目標平台和激活開始和結束日期。 通過此小部件，您可以快速發現激活受眾的位置和時間，並使重複或不必要的激活更加透明。 這些累積的資訊還突出顯示了任何激活被排除的地方。 |
 
-有關「配置式」操控板的詳細資訊，請參閱 [配置檔案儀表板概述](../../dashboards/guides/profiles.md)。
-
-### 目標儀表板
-
-「目標」控制面板顯示您的組織在Experience Platform中啟用的目標的快照。
-
-**已更新功能**
-
-| 功能 | 說明 |
-| --- | --- |
-| 受眾小部件 | 此小部件根據應用於配置檔案資料的所選合併策略提供準備激活的段總數。 |
-
-{style=&quot;table-layout:auto&quot;&quot;
-
-要瞭解有關目標儀表板的詳細資訊，請參閱 [目標儀表板概述](../../dashboards/guides/destinations.md)。
-
-## 資料收集 {#collection}
-
-Adobe Experience Platform公司提供了一套技術，使您能夠收集客戶端客戶體驗資料並將其發送到Adobe Experience Platform邊緣網路，在該網路中，資料可以得到豐富、轉換並分發到Adobe或非Adobe目的地。
-
-**新功能**
-
-| 功能 | 說明 |
-| --- | --- |
-| 通過Adobe Admin Console進行權限管理 | 現在，通過Adobe Admin Console，在Adobe Experience Platform資料收集卡下管理對資料收集能力的訪問。 請參閱上的指南 [資料收集權限](../../collection/permissions.md) 的子菜單。<br><br>資料流的權限現在也通過Adobe Experience Platform卡下的Admin Console進行管理，與以前為每個用戶手動設定這些權限的方法相比，這提高了安全性。 |
-
-{style=&quot;table-layout:auto&quot;&quot;
-
-有關詳細資訊，請參閱 [資料收集概述](../../collection/home.md)。
+有關 [!DNL Dashboards]，請參閱 [[!DNL Dashboards] 概述](../../dashboards/home.md)。
 
 ## [!DNL Data Prep] {#data-prep}
 
@@ -93,94 +79,43 @@ Adobe Experience Platform公司提供了一套技術，使您能夠收集客戶�
 
 | 功能 | 說明 |
 | --- | --- |
-| 增強 [!DNL Data Prep] Recommendations | [!DNL Data Prep] Recommendations現在更聰明，更快。 新的驗證檢查顯著減少了最常見的映射錯誤，進一步減少了值時間。 |
-| 流式設定的分層支援 | 現在可以使用函式 `upsert_array_append` 和 `upsert_array_replace` 以更新陣列和對象，同時流式插入到配置檔案。 查看 [[!DNL Data Prep] 映射函式指南](../../data-prep/functions.md) 的子菜單。 |
+| 支援插入帶警告的記錄 | Data Prep現在將警告（非嚴重錯誤）本地化到欄位，並允許接收行的其餘部分。 現在，所有映射器轉換錯誤都會報告為警告，部分攝取的行被視為成功，並帶有警告。  對包含警告和診斷詳細資訊的記錄也支援監視。 當前，只有流資料才能部分接收帶有警告的記錄。 查看文檔 [正在接收帶警告的記錄](../../sources/tutorials/ui/monitor-streaming.md) 的子菜單。 |
 
 {style=&quot;table-layout:auto&quot;&quot;
 
 瞭解有關 [!DNL Data Prep]，請參見 [[!DNL Data Prep] 概述](../../data-prep/home.md)。
 
-## [!DNL Destinations] {#destinations}
-
-[!DNL Destinations] 是預先構建的與目標平台的整合，允許無縫激活來自Adobe Experience Platform的資料。 您可以使用目標來激活跨渠道市場營銷活動、電子郵件活動、目標廣告和許多其他使用案例的已知和未知資料。
-
-**新增或更新的功能**
-
-| 功能 | 說明 |
-| ----------- | ----------- |
-| [立即導出檔案(Beta)](../../destinations/ui/export-file-now.md) | 導出完整檔案，而不中斷先前計畫段的當前導出計畫。 此導出除了以前計畫的導出外，不會更改段的導出頻率。 <br> 檔案導出會立即觸發，它會從Experience Platform分段運行中獲取最新結果。 <br> <br>請與Adobe代表聯繫以訪問此功能。 |
-
-{style=&quot;table-layout:auto&quot;&quot;
-
-**新目標**
-
-| 目的地 | 說明 |
-| ----------- | ----------- |
-| [MarketoV2](../../destinations/catalog/adobe/marketo-engage.md) | Marketo Engage目標更新允許您通過自動化簡化靜態清單建立過程，並允許用戶在其Lead上引入其他欄位。 有關以下MarketoV2中增強功能的詳細資訊： <br><ul><li>在 **[!UICONTROL 計畫段]** 激活工作流的步驟，在MarketoV1中，您需要手動添加 **映射ID** 成功將資料導出到Marketo。 MarketoV2不再需要此手動步驟。</li><li>在 **[!UICONTROL 映射]** 激活工作流的步驟，在MarketoV1中，您只能將XDM欄位映射到Marketo的三個目標欄位： `firstName`。 `lastName`, `companyName`。 通過MarketoV2版本，您現在可以將XDM欄位映射到Marketo的更多欄位。 有關詳細資訊，請閱讀 [MarketoV2中支援的屬性](../../destinations/catalog/adobe/marketo-engage.md#supported-attributes)。  </li></ul> |
-| [Pega客戶決策中心](../../destinations/catalog/personalization/pega.md) | 將Pega客戶決策中心Adobe Experience Platform的配置檔案屬性和段成員資訊用作自適應模型中的預測因子，並幫助提供下一個最佳動作決策 |
-| [(API)SalesforceMarketing Cloud](../../destinations/catalog/email-marketing/salesforce-marketing-cloud-exact-target.md) | 這個目的地使營銷人員能夠將通過Experience Platform建立的用戶段導入Snapchat廣告中，並用它們來瞄準他們的廣告。 |
-| [Salesforce CRM](../../destinations/catalog/crm/salesforce.md) | 使用SalesforceMarketing Cloud中的配置檔案和段資訊更新Experience Platform中的聯繫資訊 |
-| [(Beta) [!DNL Snap Inc.]](../../destinations/catalog/advertising/snap-inc.md) | 這個目的地使營銷人員能夠將通過Experience Platform建立的用戶段導入Snapchat廣告中，並用它們來瞄準他們的廣告。 <br><br>此目標當前處於Beta中。 文檔和功能可能會更改。 |
-| [(Beta) [!DNL Trade Desk] - CRM連接](../../destinations/catalog/advertising/tradedesk-emails.md) | 使用 [!DNL The Trade Desk] CRM目標，將配置檔案激活到 [!DNL Trade Desk] 針對基於CRM資料的受眾目標和禁止的帳戶。 <br><br>此目標當前處於Beta中。 文檔和功能可能會更改。 |
-
-{style=&quot;table-layout:auto&quot;&quot;
-
-有關目標的更多一般資訊，請參閱 [目標概述](../../destinations/home.md)。
-
 ## 體驗資料模型(XDM) {#xdm}
 
 XDM是一種開源規範，它為傳入Adobe Experience Platform的資料提供通用結構和定義（架構）。 通過遵守XDM標準，所有客戶體驗資料都可以納入到共同的表示形式中，以更快、更整合的方式提供見解。 您可以從客戶操作中獲得有價值的見解，通過細分市場定義客戶受眾，並將客戶屬性用於個性化目的。
 
-**新功能**
-
-| 功能 | 說明 |
-| --- | --- |
-| 醫療保健行業資料模型 | 為支援與增加數字採購、改善項目註冊和促進藥物資訊相關的五個常見行業使用案例，引入了標準的醫療保健資料模型。 請參閱 [醫療保健資料模型](../../xdm/schema/industries/healthcare.md) 的子菜單。<br><br>已將新的行業篩選器添加到 [!UICONTROL 架構] UI，用於在構建自定義架構時幫助您瀏覽與醫療保健相關的元件。 |
-
-{style=&quot;table-layout:auto&quot;&quot;
-
 **新的XDM元件**
-
->[!WARNING]
->
->下表中列出的新XDM元件是試驗性元件，目前正在測試中。 在穩定這些元件之前，這些元件應使用中斷更改（如果需要）進行更新。 請據此規劃您的發展工作。
 
 | 元件類型 | 名稱 | 說明 |
 | --- | --- | --- |
-| 類 | [[!UICONTROL 天氣]](https://github.com/adobe/xdm/blob/master/components/classes/weather.schema.json) | 用於捕獲天氣資料的基於記錄的類。 |
-| 欄位群組 | [[!UICONTROL 當前天氣]](https://github.com/adobe/xdm/blob/master/components/classes/weather.schema.json) | 的欄位組 [!UICONTROL XDM體驗事件] 和 [!UICONTROL 天氣] 類，用於捕獲郵遞區號的當前天氣條件。 |
-| 欄位群組 | [[!UICONTROL 預測天氣]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/shared/forecasted-weather.schema.json) | 的欄位組 [!UICONTROL XDM體驗事件] 和 [!UICONTROL 天氣] 類，用於捕獲郵遞區號的預測天氣條件。 |
-| 欄位群組 | [[!UICONTROL 產品觸發器]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/shared/product-triggers.schema.json) | 的欄位組 [!UICONTROL XDM體驗事件] 和 [!UICONTROL 天氣] 類，用於捕獲特定於產品的觸發器，這些觸發器利用已知的天氣條件驅動消費者行為。 |
-| 欄位群組 | [[!UICONTROL 相對觸發器]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/shared/relative-triggers.schema.json) | 的欄位組 [!UICONTROL XDM體驗事件] 和 [!UICONTROL 天氣] 類，用於捕獲利用已知天氣條件驅動消費者行為的相對觸發器。 |
-| 欄位群組 | [[!UICONTROL 嚴重觸發器]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/shared/severe-triggers.schema.json) | 的欄位組 [!UICONTROL XDM體驗事件] 和 [!UICONTROL 天氣] 類，用於捕獲觸發器，這些觸發器利用已知導致消費者行為的惡劣天氣條件。 |
-| 欄位群組 | [[!UICONTROL 天氣觸發器]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/shared/weather-triggers.schema.json) | 的欄位組 [!UICONTROL XDM體驗事件] 和 [!UICONTROL 天氣] 類，用於捕獲利用已知天氣條件驅動消費者行為的一般觸發器。 |
-| 欄位群組 | [[!UICONTROL MediaCollection交互詳細資訊]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-media-collection.schema.json) | 的欄位組 [!UICONTROL XDM體驗事件] 類，它捕獲有關媒體交互的詳細資訊。 |
-| 欄位群組 | [[!UICONTROL MediaReporting交互詳細資訊]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-media-reporting.schema.json) | 的欄位組 [!UICONTROL XDM體驗事件] 類，它捕獲與媒體報告交互的詳細資訊。 |
-| 資料類型 | [[!UICONTROL 廣告詳細資訊資訊]](https://github.com/adobe/xdm/blob/master/components/datatypes/advertisingdetails.schema.json) | 捕獲有關廣告資產的詳細資訊。 |
-| 資料類型 | [[!UICONTROL 廣告Pod詳細資訊資訊]](https://github.com/adobe/xdm/blob/master/components/datatypes/advertisingpoddetails.schema.json) | 捕獲有關廣告節點的詳細資訊，廣告節點是一個廣告時段內反複播放的多個廣告序列。 |
-| 資料類型 | [[!UICONTROL 章節詳細資訊]](https://github.com/adobe/xdm/blob/master/components/datatypes/chapterdetails.schema.json) | 捕獲一段視頻內容中某個章節或段的詳細資訊。 |
-| 資料類型 | [[!UICONTROL 錯誤詳細資訊]](https://github.com/adobe/xdm/blob/master/components/datatypes/errordetails.schema.json) | 捕獲有關視頻播放錯誤的詳細資訊。 |
-| 資料類型 | [[!UICONTROL 播放器事件詳細資訊]](https://github.com/adobe/xdm/blob/master/components/datatypes/playereventdetails.schema.json) | 捕獲與視頻播放器相關的事件詳細資訊，包括播放頭位置和會話ID。 |
-| 資料類型 | [[!UICONTROL 播放器狀態資料資訊]](https://github.com/adobe/xdm/blob/master/components/datatypes/playerstatedata.schema.json) | 捕獲與視頻播放器相關的狀態詳細資訊。 |
-| 資料類型 | [[!UICONTROL Qoe資料詳細資訊]](https://github.com/adobe/xdm/blob/master/components/datatypes/qoedatadetails.schema.json) | 捕獲有關視頻播放事件的體驗質量(QoE)詳細資訊。 |
-| 資料類型 | [[!UICONTROL 會話詳細資訊資訊]](https://github.com/adobe/xdm/blob/master/components/datatypes/sessiondetails.schema.json) | 捕獲有關視頻播放事件的會話詳細資訊。 |
+| 全局架構 | [[!UICONTROL AJO實體架構]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/customerJourneyManagement/ajo-entity.schema.json) | 描述Adobe Journey Optimizer的非正常實體。 |
+| 類 | [[!UICONTROL AJO執行實體]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/customerJourneyManagement/ajo-execution-entity.schema.json) | 描述用於分段的Adobe Journey Optimizer執行實體。 |
+| 欄位群組 | [[!UICONTROL Workfront工作對象]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/workfront/workobjects-all.schema.json) | 引用Adobe Workfront的所有低級對象特定欄位組的包裝欄位組。 |
+
+{style=&quot;table-layout:auto&quot;&quot;
+
+**更新的XDM元件**
+
+| 元件類型 | 名稱 | 說明 |
+| --- | --- | --- |
+| 欄位群組 | [[!UICONTROL Journey Orchestration步驟事件公用欄位]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/journeyOrchestration/stepEvents/journeyStepEventCommonFieldsMixin.schema.json) | 添加了兩個新屬性： `origTimeStamp` 和 `experienceID`。 |
+| 欄位群組 | [[!UICONTROL 段成員身份詳細資訊]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/shared/segmentation.schema.json) | 除 [!UICONTROL XDM個人配置檔案]，此欄位組現在也可以用於基於XDM業務帳戶類的架構中。 |
+| 欄位群組 | （多個） | 一些與MarketoB2B活動有關的外地小組已更新為穩定狀態。 請參閱以下內容 [拉式請求](https://github.com/adobe/xdm/pull/1593/files) 的雙曲餘切值。 |
+| 欄位群組 | （多個） | 已更新幾個與天氣有關的現場組，以修復為 `uvIndex` 和 `sunsetTime`。 請參閱以下內容 [拉式請求](https://github.com/adobe/xdm/pull/1602/files) 的雙曲餘切值。 |
+| 資料類型 | [[!UICONTROL 產品清單項]](https://github.com/adobe/xdm/blob/master/components/datatypes/productlistitem.schema.json) | 新屬性 `productImageUrl` 已添加。 |
+| 資料類型 | [[!UICONTROL Qoe資料詳細資訊]](https://github.com/adobe/xdm/blob/master/components/datatypes/qoedatadetails.schema.json) | 新屬性 `framesPerSecond` 已添加。 |
+| 資料類型 | [[!UICONTROL 會話詳細資訊資訊]](https://github.com/adobe/xdm/blob/master/components/datatypes/sessiondetails.schema.json) | `sdkVersion` 已重新命名為 `appVersion`。`meta:enum` 和 `description` 欄位也已更新。 |
+| 資料類型和欄位組 | （多個） | 多個媒體資料類型和欄位組具有新欄位和更新的說明。 請參閱以下內容 [拉式請求](https://github.com/adobe/xdm/pull/1582/files) 的雙曲餘切值。 |
+| (全部) | （多個） | 包含 `enum` 欄位現在還包含相應的 `meta:enum` 欄位，以表示每個約束的顯示值。 請參閱以下內容 [拉式請求](https://github.com/adobe/xdm/pull/1601/files) 的雙曲餘切值。 |
 
 {style=&quot;table-layout:auto&quot;&quot;
 
 有關平台中XDM的詳細資訊，請參見 [XDM系統概述](../../xdm/home.md)。
-
-## Real-time Customer Data PlatformB2B版 {#b2b}
-
-即時CDP B2B版本構建在Real-time Customer Data Platform（即時CDP）之上，專門為以業務到業務服務模式運營的營銷人員而構建。 它將來自多個來源的資料匯集在一起，並將其合併到人員和帳戶配置檔案的單個視圖中。 此統一資料使營銷人員能夠精確地瞄準特定受眾，並跨所有可用渠道接觸這些受眾。
-
-**新功能**
-
-| 功能 | 說明 |
-| --- | --- |
-| 銷售線索到帳戶匹配 | 「線索至帳戶」匹配使您能夠將已知人員配置檔案加入帳戶配置檔案。 然後，您可以在B2B上下文（如帳戶或機會）中對資料進行分段和目標。 日常運行的作業使用確定性和概率性因素，將尚未與任何帳戶關聯的人員配置檔案與最佳匹配的帳戶進行匹配。 然後，您可以決定是否在段定義中包括此類匹配項。 <br><br>有關詳細資訊，請參閱上的文檔 [導致帳戶匹配](../../rtcdp/b2b-ai-ml-services/lead-to-account-matching.md)。 有關如何配置銷售線索到帳戶匹配的說明，請參閱 [帳戶配置檔案UI指南](../../rtcdp/account/../accounts/account-profile-ui-guide.md?lang=en#configure-lead-to-account-matching)。</li> |
-| 預測線索和帳戶記分 | 預測線索和帳戶評分使用基於樹的（隨機林/梯度提升）機器學習方法，該方法涉及從機會階段轉換事件中學習和預測，並將人員活動聚合到帳戶層以生成帳戶分數。 在總量和單位層面，也有最大的影響因素，幫助B2B營銷人員更好地理解是什麼因素驅動了分數。 <br><br>有關詳細資訊，請參閱上的文檔 [預測線索和帳戶評分](../../rtcdp/b2b-ai-ml-services/predictive-lead-and-account-scoring.md)。 有關如何管理分數的資訊，請參閱上的指南 [在Real-time Customer Data PlatformB2B版管理預測性線索和帳戶評分。](../../rtcdp/b2b-ai-ml-services/manage-predictive-lead-and-account-scoring.md) |
-
-有關如何監視配置檔案豐富程度的指南，請參閱上的文檔 [監視UI中的配置檔案富集](../../dataflows/ui/b2b/monitor-profile-enrichment.md)。 要瞭解有關即時CDP B2B版的更多資訊，請參見 [即時CDP B2B概述](../../rtcdp/overview.md)。
 
 ## 即時客戶個人檔案 {#profile}
 
@@ -188,11 +123,23 @@ Adobe Experience Platform使您能夠為您的客戶提供協調、一致和相�
 
 | 功能 | 說明 |
 | ------- | ----------- |
-| 孤立配置檔案邊緣屬性清理（限製版） | 如果您的組織有權訪問此功能，「配置檔案服務」現在每天刪除用戶活動區域的剩餘邊緣屬性，以便更準確地表示您在系統中的配置檔案。 在刪除給定配置檔案的所有配置檔案片段後，會進行此清理，並且會影響從其中合併的資料集中合併的配置檔案 `com_adobe_aep_profile_region_dataset` 標籤為true。 這可能顯示許可證使用儀表板中「可定址受眾」度量的下降，也可能顯示配置檔案儀表板中「配置檔案計數」度量的下降，因為這些度量包括此版本之前剩餘的邊緣屬性片段。 |
+| 孤立配置檔案邊緣屬性清理 | 對於所有組織，配置檔案服務現在每天刪除用戶活動區域的剩餘邊緣屬性，以便更準確地表示您在系統中的配置檔案。 在刪除給定配置檔案的所有配置檔案片段後進行此清理，並且應影響從其中合併的資料集中合併的配置檔案 `com_adobe_aep_profile_region_dataset` 標籤為 `true`。 這可能顯示許可證使用儀表板中「可定址受眾」度量的下降，也可能顯示配置檔案儀表板中「配置檔案計數」度量的下降，因為這些度量包括此版本之前剩餘的邊緣屬性片段。 |
 
 {style=&quot;table-layout:auto&quot;&quot;
 
 要瞭解有關即時客戶概要資訊的更多資訊，包括有關使用概要資訊資料的教程和最佳做法，請首先閱讀 [即時客戶概要資訊概述](../../profile/home.md)。
+
+## 分段服務 {#segmentation}
+
+[!DNL Segmentation Service] 通過描述區分客戶群中可銷售人員組的標準來定義特定配置檔案子集。 段可以基於記錄資料（如人口統計資訊）或表示客戶與您品牌的交互的時間序列事件。
+
+**新功能**
+
+| 功能 | 說明 |
+| ------- | ----------- |
+| 支援4000個段 | 所有使用平台的組織現在可支援多達4000個段定義。 有關此更改如何影響段作業API的詳細資訊，請閱讀 [段作業終結點指南](../../segmentation/api/segment-jobs.md) |
+
+有關 [!DNL Segmentation Service]，請參閱 [分段概述](../../segmentation/home.md)。
 
 ## 來源 {#sources}
 
@@ -204,9 +151,11 @@ Experience Platform提供REST風格的API和互動式UI，讓您能夠輕鬆地�
 
 | 功能 | 說明 |
 | --- | --- |
-| Oracle Global的 [!DNL Azure Data Explorer] 源 | 使用AzureData Explorer源從您的 [!DNL Azure] 實例到Experience Platform。 查看 [[!DNL Azure Data Explorer] 源概述](../../sources/connectors/databases/data-explorer.md) 的子菜單。 |
-| 2004年12月 [!DNL Generic OData] 源 | 使用 [!DNL Generic OData] 源，將支援開放資料協定的系統中的資源帶到Experience Platform。 查看 [[!DNL Generic OData] 源概述](../../sources/connectors/protocols/odata.md) 的子菜單。 |
-| 支援自動檢測源檔案屬性 [!DNL Data Landing Zone] 在Experience PlatformUI中 | 的 [!DNL Data Landing Zone] 現在，使用Experience PlatformUI時，源支援自動檢測檔案屬性。 請參閱 [建立 [!DNL Data Landing Zone] 源連接](../../sources/tutorials/ui/create/cloud-storage/data-landing-zone.md) 的子菜單。 |
+| 自助源的一般可用性（批SDK） | 開發、test和整合基於REST API的資料源，以便使用易於配置的源規範將批資料Experience Platform。 使用Sources SDK，您可以： <ul><li>為Experience Platform目錄配置新源。</li><li>定義源的規範，包括與支援的驗證類型、計畫以及獲取資源資料的方式有關的資訊。</li><li>為新源建立面向用戶的文檔。</li></ul> 有關詳細資訊，請閱讀 [自助源（批處理SDK）](../../sources/sources-sdk/overview.md)。 |
+| 2004年12月 [!DNL Google BigQuery] 源 | 使用 [!DNL Google BigQuery] 從您的 [!DNL Google BigQuery] 資料倉庫到Experience Platform。 有關詳細資訊，請閱讀 [[!DNL Google BigQuery] 源](../../sources/connectors/databases/bigquery.md)。 |
+| [!DNL Teradata Vantage] 源(Beta) | 使用 [!DNL Teradata Vantage] 將資料從混合多雲環境中接收到Experience Platform。 有關詳細資訊，請閱讀 [[!DNL Teradata Vantage] 源](../../sources/connectors/databases/teradata-vantage.md)。 |
+| 跨區域支助Adobe Analytics來源 | 您現在可以從任何區域擷取報告套裝 (美國、英國或新加坡)。報表套件必須映射到與正在其中建立源連接的Experience Platform沙盒實例相同的組織。 有關詳細資訊，請閱讀上的指南 [在UI中建立Adobe Analytics源連接](../../sources/tutorials/ui/create/adobe-applications/analytics.md)。 |
+| API支援按需接收 | 使用按需接收為給定資料流建立專用流運行， [!DNL Flow Service] API。 建立的流運行必須設定為一次性接收。 有關詳細資訊，請閱讀上的指南 [使用API建立用於按需接收的流運行](../../sources/tutorials/api/on-demand-ingestion.md) 的子菜單。 |
 
 {style=&quot;table-layout:auto&quot;&quot;
 

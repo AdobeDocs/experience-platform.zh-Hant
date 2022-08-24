@@ -1,9 +1,9 @@
 ---
 title: Adobe Experience Platform發行說明2022年8月
 description: 2022年8月發佈的Adobe Experience Platform說明。
-source-git-commit: c3452dda554b3c7750ad1166cef598d51d739e02
+source-git-commit: 208dbba4c2ed4abb51b90073eeee0663e2b2f35f
 workflow-type: tm+mt
-source-wordcount: '1348'
+source-wordcount: '1861'
 ht-degree: 7%
 
 ---
@@ -14,12 +14,50 @@ ht-degree: 7%
 
 Adobe Experience Platform 現有功能更新：
 
+
+- [[!DNL Artificial Intelligence and Machine Learning Services]](#ai-and-ml-services)
 - [[!DNL Dashboards]](#dashboards)
 - [資料準備](#data-prep)
 - [體驗資料模型(XDM)](#xdm)
 - [即時客戶個人檔案](#profile)
 - [分段服務](#segmentation)
 - [來源](#sources)
+
+## [!DNL Artificial Intelligence/Machine Learning services] {#ai-and-ml-services}
+
+AI/ML服務使營銷分析員和從業人員能夠利用人工智慧和機器學習在客戶體驗使用案例中的力量。 這使市場營銷分析員能夠使用業務級配置來設定特定於公司需要的模型，而無需資料科學專業知識。
+
+### Attribution AI
+
+Attribution AI 可將點數歸因到促成轉換事件的接觸點。 行銷人員可善用此工具，協助量化客戶歷程中各個獨立行銷接觸點對行銷的影響。
+
+**已更新功能**
+
+| 功能 | 說明 |
+| ------- | ----------- |
+| 隱私支援 | <li> Attribution AI現在支援定義用戶角色和訪問策略來管理 [權限](../../help/access-control/abac/ui/permissions.md) 用於產品應用程式中的功能和對象。 </li><li>在活動發生時自動記錄審核日誌資源。</li> <li> 通過 [基於屬性的訪問控制](../../access-control/abac/overview.md)，管理員可以根據某些屬性控制對特定對象和/或權能的訪問，這些屬性可以添加到對象（如標籤）中的元資料。管理員還可以定義只有權訪問與這些欄位對應的特定欄位和資料的用戶角色。</li> <li>[資料衛生](../../help/hygiene/home.md) Attribution AI中的功能允許您僅使用更新的資料進行進一步的培訓和評分。 同樣，當您請求刪除資料時，Attribution AI也不會使用刪除的資料。</li><li>Attribution AI利用平台資料集。 為幫助促進GDPR法規遵從性，您可以使用Adobe Experience Platform Privacy Service設定協定來滿足客戶訪問和刪除資料湖、身份服務和即時客戶配置檔案中的資料的請求。 所有資料都在傳輸和靜止時被加密。</li> |
+
+{style=&quot;table-layout:auto&quot;}
+
+**注釋**:到2022年第4季度末， Healthcare Shield客戶才能獲得Attribution AI。
+
+有關Attribution AI的詳細資訊，請參閱 [Attribution AI](../../intelligent-services/attribution-ai/overview.md) 概述。
+
+### 客戶AI
+
+在Real-time Customer Data Platform提供的客戶AI用於生成定制傾向得分，如按比例對單個配置檔案進行流失和轉換。
+
+**已更新功能**
+
+| 功能 | 說明 |
+| ------- | ----------- |
+| 隱私支援 | <li> 客戶AI現在支援定義用戶角色和訪問策略以管理 [權限](../../help/access-control/abac/ui/permissions.md) 用於產品應用程式中的功能和對象。 </li><li>在活動發生時自動記錄審核日誌資源。</li> <li> 通過 [基於屬性的訪問控制](../../access-control/abac/overview.md)，管理員可以根據特定屬性控制對特定對象和/或權能的訪問。 這些屬性可以是添加到對象（如標籤）的元資料。 管理員還可以定義用戶角色，這些用戶角色只能訪問與這些欄位對應的特定欄位和資料。</li> <li>[資料衛生](../../help/hygiene/home.md) 客戶AI中的功能允許您僅使用更新的資料進行進一步的培訓和評分。 同樣，當您請求刪除資料時，客戶AI不會使用刪除的資料。</li><li>客戶AI利用平台資料集。 為幫助促進GDPR法規遵從性，您可以使用Adobe Experience Platform Privacy Service設定協定來滿足客戶訪問和刪除資料湖、身份服務和即時客戶配置檔案中的資料的請求。 所有資料都在傳輸和靜止時被加密。</li> |
+
+{style=&quot;table-layout:auto&quot;&quot;
+
+**注釋**:在2022年第4季度末之前， Healthcare Shield客戶將無法獲得客戶AI。
+
+有關客戶AI的詳細資訊，請參閱 [客戶AI](../../intelligent-services/customer-ai/overview.md) 概述。
 
 ## [!DNL Dashboards] {#dashboards}
 
@@ -43,7 +81,7 @@ Adobe Experience Platform提供 [!DNL dashboards] 通過這些資訊，您可以
 | --- | --- |
 | 支援插入帶警告的記錄 | Data Prep現在將警告（非嚴重錯誤）本地化到欄位，並允許接收行的其餘部分。 現在，所有映射器轉換錯誤都會報告為警告，部分攝取的行被視為成功，並帶有警告。  對包含警告和診斷詳細資訊的記錄也支援監視。 當前，只有流資料才能部分接收帶有警告的記錄。 查看文檔 [正在接收帶警告的記錄](../../sources/tutorials/ui/monitor-streaming.md) 的子菜單。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style=&quot;table-layout:auto&quot;&quot;
 
 瞭解有關 [!DNL Data Prep]，請參見 [[!DNL Data Prep] 概述](../../data-prep/home.md)。
 
