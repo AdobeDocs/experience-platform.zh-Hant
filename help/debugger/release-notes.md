@@ -4,14 +4,20 @@ description: Adobe Experience Platform Debugger 的最新發行說明。
 keywords: Debugger；Experience Platform Debugger 擴充功能；Chrome；擴充功能；發行說明
 uuid: 47a5d6f3-c074-4ad5-ad4b-e6030496689b
 exl-id: 3eed44da-5f85-413e-a783-3a0df03a2baf
-source-git-commit: b4e3b40942390ef183ccb01f65702ae400a5e22f
+source-git-commit: f2733cca00f98e85cd1b3944c5127f5c1c89594e
 workflow-type: tm+mt
-source-wordcount: '373'
+source-wordcount: '392'
 ht-degree: 4%
 
 ---
 
 # Adobe Experience Platform調試器發行說明
+
+## 版本1.4.0 - 2022年8月24日
+
+* 增加了對Web SDK混合實現的支援。
+* 啟用目標跟蹤失敗時添加了錯誤消息。
+* 已更新依賴項。
 
 ## 版本1.3.3 - 2022年6月20日
 
