@@ -2,10 +2,10 @@
 description: Adobe Experience Platform Destination SDK是一組配置API，允許您配置目標整合模式，以便根據您選擇的資料和身份驗證格式將受眾和配置檔案資料傳送到您的端點。 這些配置儲存在Experience Platform中，並可通過API檢索，以進行其他更新。
 title: Adobe Experience Platform Destination SDK
 exl-id: 7aca9f40-98c8-47c2-ba88-4308fc2b1798
-source-git-commit: 179d5697e1b8d14f613a512f51bcea3575b7a832
+source-git-commit: c207b6700a31c59b00af6d55264c7a345219d999
 workflow-type: tm+mt
-source-wordcount: '740'
-ht-degree: 3%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -53,18 +53,17 @@ This documentation set provides you with all the necessary information to add yo
 
 閱讀中目標端的技術要求 [整合先決條件](./integration-prerequisites.md) 文章。
 
-
 ## 獲取Destination SDK {#get-access}
 
-Destination SDK訪問因您作為合作夥伴或Experience Platform客戶的狀態而異。 有關詳細資訊，請參閱下表。
+Destination SDK訪問因您作為合作夥伴或Experience Platform(Real-Time CDP客戶)的狀態而異。 有關詳細資訊，請參閱下表。
 
 
 | 合作夥伴或客戶的類型 | 如何訪問Destination SDK |
 ---------|----------|
 | 獨立軟體供應商(ISV) | 加入 [Adobe交換計畫](https://partners.adobe.com/exchangeprogram/experiencecloud.html) 並請求獲取預配的Experience Platform沙盒以訪問Destination SDK。 |
 | 系統整合商(SI) | 您需要在2015年的黃金或白金級別 [Adobe解決方案合作夥伴計畫](https://solutionpartners.adobe.com/home.html)，您將獲得Experience Platform沙盒的預配和Destination SDK。 |
-| Experience Platform客戶 [激活包](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-platform0.html) | 預設情況下，您可以訪問Experience Platform沙箱和Destination SDK。 |
-| Experience Platform客戶 [即時CDP終極產品包](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html) | 您無權訪問Destination SDK，但您有權訪問其他公司使用Destination SDK配置的所有已生產化目標，並在Experience Platform組織中發佈。 |
+| Experience Platform客戶 [激活包](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-platform0.html) | 預設情況下，您可以訪問Experience Platform沙箱和Destination SDK。 <br> 您還可以訪問其他公司使用Destination SDK配置的所有已生產化目標，並可以跨Experience Platform組織發佈。 |
+| Experience Platform客戶 [Real-Time CDP終極包](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html) | 預設情況下，您可以訪問Experience Platform沙箱和Destination SDK。 <br> 您還可以訪問其他公司使用Destination SDK配置的所有已生產化目標，並可以跨Experience Platform組織發佈。 |
 
 {style=&quot;table-layout:auto&quot;}
 
