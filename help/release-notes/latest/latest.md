@@ -2,10 +2,10 @@
 title: Adobe Experience Platform 發行說明
 description: Adobe Experience Platform的最新發行說明。
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 70bc3d8743dfa6c14e8a5c467775faa0c3c5a767
+source-git-commit: f458b3f204e961f849782f26a1563a67d6ea4b60
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '1966'
+ht-degree: 7%
 
 ---
 
@@ -36,11 +36,11 @@ Attribution AI 可將點數歸因到促成轉換事件的接觸點。 行銷人�
 
 | 功能 | 說明 |
 | ------- | ----------- |
-| 隱私支援 | <li>Attribution AI現在支援定義用戶角色和訪問策略來管理 [權限](../../../help/access-control/abac/ui/permissions.md) 用於產品應用程式中的功能和對象。</li><li>在活動發生時自動記錄審核日誌資源。</li><li>通過 [基於屬性的訪問控制](../../../help/access-control/abac/overview.md)，管理員可以根據某些屬性控制對特定對象和/或權能的訪問，這些屬性可以添加到對象（如標籤）中的元資料。管理員還可以定義只有權訪問與這些欄位對應的特定欄位和資料的用戶角色。</li><li>[資料衛生](../../../help/hygiene/home.md) Attribution AI中的功能允許您僅使用更新的資料進行進一步的培訓和評分。 同樣，當您請求刪除資料時，Attribution AI也不會使用刪除的資料。</li><li>Attribution AI利用平台資料集。 為幫助促進GDPR法規遵從性，您可以使用Adobe Experience Platform Privacy Service設定協定來滿足客戶訪問和刪除資料湖、身份服務和即時客戶配置檔案中的資料的請求。 所有資料都在傳輸和靜止時被加密。</li> |
+| 隱私支援 | <ul><li>Attribution AI現在支援定義用戶角色和訪問策略來管理 [權限](../../../help/access-control/abac/ui/permissions.md) 用於產品應用程式中的功能和對象。</li><li>在活動發生時自動記錄審核日誌資源。</li><li>通過 [基於屬性的訪問控制](../../../help/access-control/abac/overview.md)，管理員可以根據某些屬性控制對特定對象和/或權能的訪問，這些屬性可以添加到對象（如標籤）中的元資料。管理員還可以定義只有權訪問與這些欄位對應的特定欄位和資料的用戶角色。</li><li>[資料衛生](../../../help/hygiene/home.md) Attribution AI中的功能允許您僅使用更新的資料進行進一步的培訓和評分。 同樣，當您請求刪除資料時，Attribution AI也不會使用刪除的資料。</li><li>Attribution AI利用平台資料集。 為幫助促進GDPR法規遵從性，您可以使用Adobe Experience Platform Privacy Service設定協定來滿足客戶訪問和刪除資料湖、身份服務和即時客戶配置檔案中的資料的請求。 所有資料都在傳輸和靜止時被加密。</li></ul> |
 
 {style=&quot;table-layout:auto&quot;}
 
-**注釋**:到2022年第4季度末， Healthcare Shield客戶才能獲得Attribution AI。
+**注釋**:Attribution AI在另行通知之前，不會向現有的Healthcare Shield或Privacy Shield客戶提供。
 
 有關Attribution AI的詳細資訊，請參閱 [Attribution AI](../../intelligent-services/attribution-ai/overview.md) 概述。
 
@@ -52,11 +52,11 @@ Attribution AI 可將點數歸因到促成轉換事件的接觸點。 行銷人�
 
 | 功能 | 說明 |
 | ------- | ----------- |
-| 隱私支援 | <li>客戶AI現在支援定義用戶角色和訪問策略以管理 [權限](../../../help/access-control/abac/ui/permissions.md) 用於產品應用程式中的功能和對象。</li><li>在活動發生時自動記錄審核日誌資源。</li><li> 通過 [基於屬性的訪問控制](../../access-control/abac/overview.md)，管理員可以根據特定屬性控制對特定對象和/或權能的訪問。 這些屬性可以是添加到對象（如標籤）的元資料。 管理員還可以定義用戶角色，這些用戶角色只能訪問與這些欄位對應的特定欄位和資料。</li><li>[資料衛生](../../../help/hygiene/home.md) 客戶AI中的功能允許您僅使用更新的資料進行進一步的培訓和評分。 同樣，當您請求刪除資料時，客戶AI不會使用刪除的資料。</li><li>客戶AI利用平台資料集。 為幫助促進GDPR法規遵從性，您可以使用Adobe Experience Platform Privacy Service設定協定來滿足客戶訪問和刪除資料湖、身份服務和即時客戶配置檔案中的資料的請求。 所有資料都在傳輸和靜止時被加密。</li> |
+| 隱私支援 | <ul><li>客戶AI現在支援定義用戶角色和訪問策略以管理 [權限](../../../help/access-control/abac/ui/permissions.md) 用於產品應用程式中的功能和對象。</li><li>在活動發生時自動記錄審核日誌資源。</li><li> 通過 [基於屬性的訪問控制](../../access-control/abac/overview.md)，管理員可以根據特定屬性控制對特定對象和/或權能的訪問。 這些屬性可以是添加到對象（如標籤）的元資料。 管理員還可以定義用戶角色，這些用戶角色只能訪問與這些欄位對應的特定欄位和資料。</li><li>[資料衛生](../../../help/hygiene/home.md) 客戶AI中的功能允許您僅使用更新的資料進行進一步的培訓和評分。 同樣，當您請求刪除資料時，客戶AI不會使用刪除的資料。</li><li>客戶AI利用平台資料集。 為幫助促進GDPR法規遵從性，您可以使用Adobe Experience Platform Privacy Service設定協定來滿足客戶訪問和刪除資料湖、身份服務和即時客戶配置檔案中的資料的請求。 所有資料都在傳輸和靜止時被加密。</li></ul> |
 
 {style=&quot;table-layout:auto&quot;&quot;
 
-**注釋**:在2022年第4季度末之前， Healthcare Shield客戶將無法獲得客戶AI。
+**注釋**:在另行通知之前，客戶AI將不可用於現有的Healthcare Shield或Privacy Shield客戶。
 
 有關客戶AI的詳細資訊，請參閱 [客戶AI](../../intelligent-services/customer-ai/overview.md) 概述。
 
