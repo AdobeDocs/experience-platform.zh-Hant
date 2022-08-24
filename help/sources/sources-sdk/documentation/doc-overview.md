@@ -4,21 +4,15 @@ solution: Experience Platform
 title: 記錄源
 topic-legacy: overview
 description: 在你的新來源在Adobe Experience Platform生存之前，最後一步是記錄你的新來源。
-hide: true
-hidefromtoc: true
 exl-id: 80daadb1-127f-4f42-8bc9-fb89a7898462
-source-git-commit: e732a43f7ac578d7fde41c48d2c819899fabb0be
+source-git-commit: 4d7799b01c34f4b9e4a33c130583eadcfdc3af69
 workflow-type: tm+mt
-source-wordcount: '437'
+source-wordcount: '411'
 ht-degree: 0%
 
 ---
 
 # 記錄源
-
->[!IMPORTANT]
->
->源SDK當前處於測試版中，您的組織可能尚未訪問它。 本文檔中描述的功能可能會發生更改。
 
 在Adobe Experience Platform即時設定新源之前的最後一步是記錄新源。
 

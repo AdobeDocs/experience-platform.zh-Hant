@@ -2,9 +2,8 @@
 keywords: Experience Platform；首頁；熱門主題；源；連接器；源連接器；源sdk;sdk;SDK
 title: UI的自助服務文檔模板
 description: 瞭解如何使用Adobe Experience PlatformUI建立YOURSOURCE源連接。
-hide: true
-hidefromtoc: true
-source-git-commit: 39accd28edc388c6444910f9a2ea6d2f01acfdaf
+exl-id: 6471c0a2-22e8-4133-a76f-ee3c5c669ef8
+source-git-commit: 4d7799b01c34f4b9e4a33c130583eadcfdc3af69
 workflow-type: tm+mt
 source-wordcount: '722'
 ht-degree: 1%

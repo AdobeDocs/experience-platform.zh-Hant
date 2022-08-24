@@ -1,19 +1,17 @@
 ---
 keywords: Experience Platform；首頁；熱門主題；源；連接器；源連接器；源sdk;sdk;SDK
-title: 使用流服務API(Beta)更新連接規範
+title: 使用流服務API更新連接規範
 topic-legacy: developer guide
 description: 您可以通過PUT操作更新連接規範的屬性。
-hide: true
-hidefromtoc: true
 exl-id: fcb00521-8fc2-491e-aa35-6e0f9b730dd4
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 4d7799b01c34f4b9e4a33c130583eadcfdc3af69
 workflow-type: tm+mt
-source-wordcount: '120'
+source-wordcount: '118'
 ht-degree: 1%
 
 ---
 
-# 使用流服務API(Beta)更新連接規範
+# 使用流服務API更新連接規範
 
 您可以通過PUT操作更新連接規範的屬性。 通過PUT請求更新連接規範時，主體必須包括在POST請求中建立新連接規範時需要的所有欄位。
 

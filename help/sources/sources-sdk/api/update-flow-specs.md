@@ -1,29 +1,23 @@
 ---
 keywords: Experience Platform；首頁；熱門主題；源；連接器；源連接器；源sdk;sdk;SDK
-title: 使用流服務API(Beta)更新流規範
+title: 使用流服務API更新流規範
 topic-legacy: developer guide
-description: 以下文檔提供了如何使用Flow Service API for Sources SDK檢索和更新流規範的步驟。
-hide: true
-hidefromtoc: true
+description: 以下文檔提供了如何使用自助源的流服務API（批處理SDK）檢索和更新流規範的步驟。
 exl-id: 67a0cd3e-ac18-43a4-aa22-8f6376d5cc3f
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 4d7799b01c34f4b9e4a33c130583eadcfdc3af69
 workflow-type: tm+mt
-source-wordcount: '432'
+source-wordcount: '408'
 ht-degree: 1%
 
 ---
 
-# 使用 [!DNL Flow Service] API(Beta)
-
->[!IMPORTANT]
->
->源SDK當前處於測試版中，您的組織可能尚未訪問它。 本文檔中描述的功能可能會發生更改。
+# 使用 [!DNL Flow Service] API
 
 生成新連接規範ID後，必須將此ID添加到流規範中才能建立資料流。
 
 流規範包含定義流的資訊，包括它支援的源連接ID和目標連接ID、需要應用到資料的轉換規範以及生成流所需的調度參數。 可以使用 `/flowSpecs` 端點。
 
-以下文檔提供了有關如何使用 [!DNL Flow Service] 源SDK的API。
+以下文檔提供了有關如何使用 [!DNL Flow Service] 自助源的API（批處理SDK）。
 
 ## 快速入門
 

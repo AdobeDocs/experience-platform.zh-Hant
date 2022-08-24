@@ -1,28 +1,22 @@
 ---
 keywords: Experience Platform；首頁；熱門主題；源；連接器；源連接器；源sdk;sdk;SDK
 solution: Experience Platform
-title: 使用流服務API(Beta)建立新連接規範
+title: 使用流服務API建立新連接規範
 topic-legacy: tutorial
-description: 以下文檔提供了如何使用流服務API建立連接規範並通過源SDK整合新源的步驟。
-hide: true
-hidefromtoc: true
+description: 以下文檔提供了有關如何使用流服務API建立連接規範並通過自助源整合新源的步驟。
 exl-id: 0b0278f5-c64d-4802-a6b4-37557f714a97
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: ae5bb475bca90b31d8eb7cf6b66d4d191d36ac5c
 workflow-type: tm+mt
-source-wordcount: '524'
-ht-degree: 2%
+source-wordcount: '800'
+ht-degree: 1%
 
 ---
 
-# 使用 [!DNL Flow Service] API(Beta)
-
->[!IMPORTANT]
->
->源SDK當前處於測試版中，您的組織可能尚未訪問它。 本文檔中描述的功能可能會發生更改。
+# 使用 [!DNL Flow Service] API
 
 連接規範表示源的結構。 它包含有關源的驗證要求的資訊，定義如何瀏覽和檢查源資料，並提供有關給定源的屬性的資訊。 的 `/connectionSpecs` 端點 [!DNL Flow Service] API允許您以寫程式方式管理組織內的連接規範。
 
-以下文檔提供了有關如何使用 [!DNL Flow Service] API，並通過源SDK整合新源。
+以下文檔提供了有關如何使用 [!DNL Flow Service] API，並通過Self-Serve Sources(Batch SDK)整合新源。
 
 ## 快速入門
 
@@ -30,16 +24,37 @@ ht-degree: 2%
 
 ## 收集對象
 
-建立新源的第一步 [!DNL Sources SDK] 與Adobe代表協調，並確定源的相應值 **表徵圖**。 **描述**。 **標籤**, **類別**。
+要使用自助源建立新批處理源，必須首先與Adobe協調，請求專用Git儲存庫，並與Adobe對齊有關源標籤、說明、類別和表徵圖的詳細資訊。
 
-| 工件 | 說明 | 範例 |
+提供後，您必須按如下方式構建私有Git儲存庫：
+
+* 來源
+   * {your_source}
+      * 工件
+         * {your_source.txt}-category.txt
+         * {your_source}-description.txt
+         * {your_source}-icon.svg
+         * {your_source}-label.txt
+         * {your_source}-connectionSpec.json
+
+| 對象（檔案名） | 說明 | 範例 |
 | --- | --- | --- |
-| 標籤 | 源的名稱。 | [!DNL MailChimp Members] |
-| 說明 | 來源的簡要描述。 | 建立到您的即時入站連接 [!DNL Mailchimp Members] 實例，將歷史資料和計畫資料都錄入Experience Platform。 |
-| 圖示 | 表示源的影像或徽標。 該表徵圖顯示在源的平台UI呈現中。 | `mailchimp-members-icon.svg` |
-| 類別 | 來源的類別。 | <ul><li>`advertising`</li><li>`crm`</li><li>`customer success`</li><li>`database`</li><li>`ecommerce`</li><li>`marketing automation`</li><li>`payments`</li><li>`protocols`</li></ul> |
+| {your_source} | 源的名稱。 此資料夾應包含與您的源相關的所有對象，位於您的專用Git儲存庫中。 | `mailchimp-members` |
+| {your_source.txt}-category.txt | 源所屬的類別，格式為文本檔案。 自助源（批處理SDK）支援的可用源類別清單包括： <ul><li>Advertising</li><li>Analytics</li><li>同意和首選項</li><li>CRM</li><li>客戶成功</li><li>資料庫</li><li>電子商務</li><li>營銷自動化</li><li>付款</li><li>協定</li></ul> **注釋**:如果您認為您的來源不適合上述任何類別，請與Adobe代表聯繫以進行討論。 | `mailchimp-members-category.txt` 在檔案內，請指定源的類別，如： `marketingAutomation`。 |
+| {your_source}-description.txt | 來源的簡要描述。 | [!DNL Mailchimp Members] 是市場營銷自動化的來源 [!DNL Mailchimp Members] 資料到Experience Platform。 |
+| {your_source}-icon.svg | 用於在Experience Platform源目錄中表示源的影像。 此表徵圖必須是SVG檔案。 |
+| {your_source}-label.txt | 源應出現在Experience Platform源目錄中的名稱。 | 郵箱成員 |
+| {your_source}-connectionSpec.json | 包含源的連接規範的JSON檔案。 在完成本指南時，您將填充連接規範，因此最初不需要此檔案。 | `mailchimp-members-connectionSpec.json` |
 
 {style=&quot;table-layout:auto&quot;}
+
+>[!TIP]
+>
+>在連接規範的測試期間，您可以使用 `text` 在連接規範中。
+
+在將必要檔案添加到專用Git儲存庫後，必須建立拉入請求(PR)以供Adobe審閱。 在批准和合併您的PR後，將為您提供一個ID，該ID可用於連接規範以參考源的標籤、說明和表徵圖。
+
+接下來，按照下面介紹的步驟配置連接規範。 有關可添加到源中的不同功能（如高級計畫、自定義架構或不同分頁類型）的其他指導，請參閱上的指南 [配置源規範](../config/sourcespec.md)。
 
 ## 複製連接規範模板
 
@@ -68,10 +83,6 @@ ht-degree: 2%
         "type": "object",
         "description": "Define auth params required for connecting to generic rest using oauth2 authorization code.",
         "properties": {
-          "host": {
-            "type": "string",
-            "description": "Enter resource url host path."
-          },
           "authorizationTestUrl": {
             "description": "Authorization test url to validate accessToken.",
             "type": "string"
@@ -206,6 +217,10 @@ ht-degree: 2%
         "urlParams": {
           "type": "object",
           "properties": {
+            "host": {
+            "type": "string",
+            "description": "Enter resource url host path."
+          },
             "path": {
               "type": "string",
               "description": "Enter resource path",
@@ -480,9 +495,9 @@ curl -X POST \
                   "type": "object",
                   "description": "Define auth params required for connecting to generic rest using oauth2 authorization code.",
                   "properties": {
-                      "host": {
-                          "type": "string",
-                          "description": "Enter resource url host path"
+                      "domain": {
+                        "type": "string",
+                        "description": "Enter domain name for host url"
                       },
                       "authorizationTestUrl": {
                           "description": "Authorization test url to validate accessToken.",
@@ -495,7 +510,7 @@ curl -X POST \
                       }
                   },
                   "required": [
-                      "host",
+                      "domain",
                       "accessToken"
                   ]
               }
@@ -508,9 +523,9 @@ curl -X POST \
                   "type": "object",
                   "description": "defines auth params required for connecting to rest service.",
                   "properties": {
-                      "host": {
-                          "type": "string",
-                          "description": "Enter resource url host path."
+                      "domain": {
+                        "type": "string",
+                        "description": "Enter domain name for host url"
                       },
                       "username": {
                           "description": "Username to connect mailChimp endpoint.",
@@ -523,7 +538,7 @@ curl -X POST \
                       }
                   },
                   "required": [
-                      "host",
+                      "domain",
                       "username",
                       "password"
                   ]
@@ -547,10 +562,19 @@ curl -X POST \
                   }
               },
               "urlParams": {
+                  "host": "https://${domain}.api.mailchimp.com",
                   "path": "/3.0/lists/${listId}/members",
                   "method": "GET"
               },
-              "contentPath": "$.members",
+              "contentPath": {
+                  "path": "$.members",
+                  "skipAttributes": [
+                    "_links",
+                    "total_items",
+                    "list_id"
+                  ],
+                  "overrideWrapperAttribute": "member"
+                },
               "paginationParams": {
                   "type": "OFFSET",
                   "limitName": "count",
