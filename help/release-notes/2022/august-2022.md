@@ -1,9 +1,10 @@
 ---
 title: Adobe Experience Platform發行說明2022年8月
 description: 2022年8月發佈的Adobe Experience Platform說明。
-source-git-commit: 24f16e315607a1076ff2efef129d9e97040a9500
+exl-id: dbf1e7a3-8599-4991-8932-f57d3b1c640d
+source-git-commit: 30aa5db39d63c238a3f70e48f6a88e8885b1f3ee
 workflow-type: tm+mt
-source-wordcount: '1811'
+source-wordcount: '1963'
 ht-degree: 7%
 
 ---
@@ -14,10 +15,10 @@ ht-degree: 7%
 
 Adobe Experience Platform 現有功能更新：
 
-
 - [[!DNL Artificial Intelligence and Machine Learning Services]](#ai-and-ml-services)
 - [[!DNL Dashboards]](#dashboards)
-- [資料準備](#data-prep)
+- [[!DNL Data Prep]](#data-prep)
+- [[!DNL Destinations]](#destinations)
 - [體驗資料模型(XDM)](#xdm)
 - [即時客戶個人檔案](#profile)
 - [分段服務](#segmentation)
@@ -35,7 +36,7 @@ Attribution AI 可將點數歸因到促成轉換事件的接觸點。 行銷人�
 
 | 功能 | 說明 |
 | ------- | ----------- |
-| 隱私支援 | <li> Attribution AI現在支援定義用戶角色和訪問策略來管理 [權限](../../help/access-control/abac/ui/permissions.md) 用於產品應用程式中的功能和對象。 </li><li>在活動發生時自動記錄審核日誌資源。</li> <li> 通過 [基於屬性的訪問控制](../../access-control/abac/overview.md)，管理員可以根據某些屬性控制對特定對象和/或權能的訪問，這些屬性可以添加到對象（如標籤）中的元資料。管理員還可以定義只有權訪問與這些欄位對應的特定欄位和資料的用戶角色。</li> <li>[資料衛生](../../help/hygiene/home.md) Attribution AI中的功能允許您僅使用更新的資料進行進一步的培訓和評分。 同樣，當您請求刪除資料時，Attribution AI也不會使用刪除的資料。</li><li>Attribution AI利用平台資料集。 為幫助促進GDPR法規遵從性，您可以使用Adobe Experience Platform Privacy Service設定協定來滿足客戶訪問和刪除資料湖、身份服務和即時客戶配置檔案中的資料的請求。 所有資料都在傳輸和靜止時被加密。</li> |
+| 隱私支援 | <li>Attribution AI現在支援定義用戶角色和訪問策略來管理 [權限](../../../help/access-control/abac/ui/permissions.md) 用於產品應用程式中的功能和對象。</li><li>在活動發生時自動記錄審核日誌資源。</li><li>通過 [基於屬性的訪問控制](../../../help/access-control/abac/overview.md)，管理員可以根據某些屬性控制對特定對象和/或權能的訪問，這些屬性可以添加到對象（如標籤）中的元資料。管理員還可以定義只有權訪問與這些欄位對應的特定欄位和資料的用戶角色。</li><li>[資料衛生](../../../help/hygiene/home.md) Attribution AI中的功能允許您僅使用更新的資料進行進一步的培訓和評分。 同樣，當您請求刪除資料時，Attribution AI也不會使用刪除的資料。</li><li>Attribution AI利用平台資料集。 為幫助促進GDPR法規遵從性，您可以使用Adobe Experience Platform Privacy Service設定協定來滿足客戶訪問和刪除資料湖、身份服務和即時客戶配置檔案中的資料的請求。 所有資料都在傳輸和靜止時被加密。</li> |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -51,7 +52,7 @@ Attribution AI 可將點數歸因到促成轉換事件的接觸點。 行銷人�
 
 | 功能 | 說明 |
 | ------- | ----------- |
-| 隱私支援 | <li> 客戶AI現在支援定義用戶角色和訪問策略以管理 [權限](../../help/access-control/abac/ui/permissions.md) 用於產品應用程式中的功能和對象。 </li><li>在活動發生時自動記錄審核日誌資源。</li> <li> 通過 [基於屬性的訪問控制](../../access-control/abac/overview.md)，管理員可以根據特定屬性控制對特定對象和/或權能的訪問。 這些屬性可以是添加到對象（如標籤）的元資料。 管理員還可以定義用戶角色，這些用戶角色只能訪問與這些欄位對應的特定欄位和資料。</li> <li>[資料衛生](../../help/hygiene/home.md) 客戶AI中的功能允許您僅使用更新的資料進行進一步的培訓和評分。 同樣，當您請求刪除資料時，客戶AI不會使用刪除的資料。</li><li>客戶AI利用平台資料集。 為幫助促進GDPR法規遵從性，您可以使用Adobe Experience Platform Privacy Service設定協定來滿足客戶訪問和刪除資料湖、身份服務和即時客戶配置檔案中的資料的請求。 所有資料都在傳輸和靜止時被加密。</li> |
+| 隱私支援 | <li>客戶AI現在支援定義用戶角色和訪問策略以管理 [權限](../../../help/access-control/abac/ui/permissions.md) 用於產品應用程式中的功能和對象。</li><li>在活動發生時自動記錄審核日誌資源。</li><li> 通過 [基於屬性的訪問控制](../../access-control/abac/overview.md)，管理員可以根據特定屬性控制對特定對象和/或權能的訪問。 這些屬性可以是添加到對象（如標籤）的元資料。 管理員還可以定義用戶角色，這些用戶角色只能訪問與這些欄位對應的特定欄位和資料。</li><li>[資料衛生](../../../help/hygiene/home.md) 客戶AI中的功能允許您僅使用更新的資料進行進一步的培訓和評分。 同樣，當您請求刪除資料時，客戶AI不會使用刪除的資料。</li><li>客戶AI利用平台資料集。 為幫助促進GDPR法規遵從性，您可以使用Adobe Experience Platform Privacy Service設定協定來滿足客戶訪問和刪除資料湖、身份服務和即時客戶配置檔案中的資料的請求。 所有資料都在傳輸和靜止時被加密。</li> |
 
 {style=&quot;table-layout:auto&quot;&quot;
 
@@ -84,6 +85,32 @@ Adobe Experience Platform提供 [!DNL dashboards] 通過這些資訊，您可以
 {style=&quot;table-layout:auto&quot;&quot;
 
 瞭解有關 [!DNL Data Prep]，請參見 [[!DNL Data Prep] 概述](../../data-prep/home.md)。
+
+## [!DNL Destinations] {#destinations}
+
+[!DNL Destinations] 是預先構建的與目標平台的整合，允許無縫激活來自Adobe Experience Platform的資料。 您可以使用目標來激活跨渠道市場營銷活動、電子郵件活動、目標廣告和許多其他使用案例的已知和未知資料。
+
+<!--
+
+**New or updated features**
+
+| Feature | Description |
+| ----------- | ----------- |
+|  ||
+
+{style="table-layout:auto"}
+
+-->
+
+**新目標**
+
+| 目的地 | 說明 |
+| ----------- | ----------- |
+| [[!DNL Outreach]](../..//destinations/catalog/crm/outreach.md) | [[!DNL Outreach]](https://www.outreach.io/) 是一個銷售執行平台，擁有世界上最多的B2B買方 — 賣方交互資料，並對專有AI技術進行大量投資，以將銷售資料轉換為智慧。 [!DNL Outreach] 幫助企業實現銷售參與的自動化，並採取收入智慧措施，以提高效率、可預測性和增長。 |
+
+{style=&quot;table-layout:auto&quot;&quot;
+
+有關目標的更多一般資訊，請參閱 [目標概述](../../destinations/home.md)。
 
 ## 體驗資料模型(XDM) {#xdm}
 
@@ -123,6 +150,7 @@ Adobe Experience Platform使您能夠為您的客戶提供協調、一致和相�
 
 | 功能 | 說明 |
 | ------- | ----------- |
+| 合併策略硬限制 | 平台現在將強制執行 **五** 合併每個沙盒的策略。 如果您的沙盒當前有五個以上的合併策略，您將 **不** 能夠建立新的合併策略，直到沙盒的合併策略少於五個。 |
 | 孤立配置檔案邊緣屬性清理 | 對於所有組織，配置檔案服務現在每天刪除用戶活動區域的剩餘邊緣屬性，以便更準確地表示您在系統中的配置檔案。 在刪除給定配置檔案的所有配置檔案片段後進行此清理，並且應影響從其中合併的資料集中合併的配置檔案 `com_adobe_aep_profile_region_dataset` 標籤為 `true`。 這可能顯示許可證使用儀表板中「可定址受眾」度量的下落，也可能顯示配置檔案儀表板中「配置檔案計數」度量的下落，因為這些度量包括此版本之前剩餘的邊緣屬性片段。 |
 
 {style=&quot;table-layout:auto&quot;&quot;

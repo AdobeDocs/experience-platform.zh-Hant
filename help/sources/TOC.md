@@ -4,9 +4,9 @@ user-guide-title: Adobe Experience Platform 來源連接器說明
 breadcrumb-title: 來源連接器指南
 user-guide-description: 從多種來源或結構擷取資料、加標籤，以及增強已擷取的資料。
 feature: Sources
-source-git-commit: 9d615d70ce37c6dad683e9082db02697b9882ab3
+source-git-commit: ed6a5ba39de2aecaef6f44604ff605721bfcb924
 workflow-type: tm+mt
-source-wordcount: '804'
+source-wordcount: '820'
 ht-degree: 12%
 
 ---
@@ -292,23 +292,26 @@ ht-degree: 12%
    - [刪除帳戶](tutorials/ui/delete-accounts.md)
    - [刪除資料流](tutorials/ui/delete.md)
    - [訂閱源警報](tutorials/ui/alerts.md)
-- 源SDK {#sdk}
+- 自助源（批處理SDK） {#sdk}
    - [總覽](sources-sdk/overview.md)
-   - [設定選項](sources-sdk/config/config.md)
-   - [配置驗證規範](sources-sdk/config/authspec.md)
-   - [配置源規範](sources-sdk/config/sourcespec.md)
-   - [配置瀏覽規範](sources-sdk/config/explorespec.md)
-   - [源SDK API概述](sources-sdk/api/api-overview.md)
-   - [快速入門](sources-sdk/api/getting-started.md)
-   - [建立連接規範](sources-sdk/api/create.md)
-   - [更新連接規範](sources-sdk/api/update-connection-specs.md)
-   - [更新流規範](sources-sdk/api/update-flow-specs.md)
-   - [提交源](sources-sdk/api/submit.md)
-   - [在Adobe Experience Platform記錄你的消息來源](sources-sdk/documentation/doc-overview.md)
-   - [使用GitHub Web介面建立源文檔頁](sources-sdk/documentation/github.md)
-   - [使用本地環境中的文本編輯器建立源文檔頁](sources-sdk/documentation/text-editor.md)
-   - [文檔自助API模板](sources-sdk/documentation/template.md)
-   - [文檔自助服務UI模板](sources-sdk/documentation/ui-template.md)
+   - 配置連接規範 {#config}
+      - [設定選項](sources-sdk/config/config.md)
+      - [配置驗證規範](sources-sdk/config/authspec.md)
+      - [配置源規範](sources-sdk/config/sourcespec.md)
+      - [配置瀏覽規範](sources-sdk/config/explorespec.md)
+   - 自助源（批處理SDK）API指南 {#self-serve-api}
+      - [自助源（批處理SDK）API概述](sources-sdk/api/api-overview.md)
+      - [快速入門](sources-sdk/api/getting-started.md)
+      - [建立連接規範](sources-sdk/api/create.md)
+      - [更新連接規範](sources-sdk/api/update-connection-specs.md)
+      - [更新流規範](sources-sdk/api/update-flow-specs.md)
+      - [提交源](sources-sdk/api/submit.md)
+   - 文檔指南 {#documentation}
+      - [在Adobe Experience Platform記錄你的消息來源](sources-sdk/documentation/doc-overview.md)
+      - [使用GitHub Web介面建立源文檔頁](sources-sdk/documentation/github.md)
+      - [使用本地環境中的文本編輯器建立源文檔頁](sources-sdk/documentation/text-editor.md)
+      - [文檔自助API模板](sources-sdk/documentation/template.md)
+      - [文檔自助服務UI模板](sources-sdk/documentation/ui-template.md)
 - [流運行通知](notifications.md)
 - [IP地址允許清單](ip-address-allow-list.md)
 - [常見問答](./troubleshooting.md)
