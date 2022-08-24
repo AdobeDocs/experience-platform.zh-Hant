@@ -5,9 +5,9 @@ title: '使用API的邊緣分割 '
 topic-legacy: developer guide
 description: 本文檔包含如何使用Adobe Experience Platform分段服務API進行邊緣分段的示例。
 exl-id: effce253-3d9b-43ab-b330-943fb196180f
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: de63939c44b338bb9632a57c74c095135f023d50
 workflow-type: tm+mt
-source-wordcount: '1014'
+source-wordcount: '1098'
 ht-degree: 0%
 
 ---
@@ -42,19 +42,22 @@ ht-degree: 0%
 
 要使用邊緣分割來評估段，查詢必須符合以下准則：
 
-| 查詢類型 | 詳細資訊 | 範例 |
-| ---------- | ------- | ------- |
-| 單個事件 | 任何引用無時間限制的單個傳入事件的段定義。 | 已將物料添加到購物車中的人員。 |
-| 引用配置檔案的單個事件 | 引用一個或多個配置檔案屬性和單個傳入事件且沒有時間限制的任何段定義。 | 訪問首頁的美國人。 |
-| 使用配置檔案屬性否定單個事件 | 任何引用否定的單個傳入事件和一個或多個配置檔案屬性的段定義 | 生活在美國並擁有 **不** 已訪問首頁。 |
-| 在24小時時間窗口內單個事件 | 指24小時內單個傳入事件的任何段定義。 | 過去24小時內訪問首頁的人。 |
-| 在24小時時間窗口內具有配置檔案屬性的單個事件 | 在24小時內引用一個或多個配置檔案屬性和單個傳入事件的任何段定義。 | 過去24小時內訪問首頁的美國人。 |
-| 在24小時時間窗口內使用配置檔案屬性否定單個事件 | 在24小時內引用一個或多個配置檔案屬性和否定的單個傳入事件的任何段定義。 | 生活在美國並擁有 **不** 在過去24小時內訪問了首頁。 |
-| 24小時時間窗內的頻率事件 | 任何段定義，指在24小時的時間窗口內發生一定次數的事件。 | 訪問首頁的人 **至少** 24小時內有5次。 |
-| 在24小時時間窗口內具有配置檔案屬性的頻率事件 | 指一個或多個配置檔案屬性以及在24小時的時間窗口內發生一定次數的事件的任何段定義。 | 訪問首頁的美國人 **至少** 24小時內有5次。 |
-| 在24小時時間窗口內使用配置檔案否定頻率事件 | 任何段定義，它指一個或多個配置檔案屬性以及在24小時的時間窗口內發生一定次數的已取消事件。 | 未訪問首頁的人 **更多** 比過去24小時里多了5次。 |
-| 在24小時內的時間配置檔案內多次傳入命中 | 任何段定義，指在24小時的時間窗口內發生的多個事件。 | 訪問首頁的人員 **或** 在過去24小時內訪問了簽出頁面。 |
-| 在24小時時間窗口內使用配置檔案的多個事件 | 任何段定義，它指在24小時的時間窗口內發生的一個或多個配置檔案屬性和多個事件。 | 訪問首頁的美國人 **和** 在過去24小時內訪問了簽出頁面。 |
+| 查詢類型 | 詳細資訊 | 範例 | PQL示例 |
+| ---------- | ------- | ------- | ----------- |
+| 單個事件 | 任何引用無時間限制的單個傳入事件的段定義。 | 已將物料添加到購物車中的人員。 | `chain(xEvent, timestamp, [A: WHAT(eventType = "addToCart")])` |
+| 單個配置檔案 | 引用單個僅配置檔案屬性的任何段定義 | 住在美國的人。 | `homeAddress.countryCode = "US"` |
+| 引用配置檔案的單個事件 | 引用一個或多個配置檔案屬性和單個傳入事件且沒有時間限制的任何段定義。 | 訪問首頁的美國人。 | `homeAddress.countryCode = "US" and chain(xEvent, timestamp, [A: WHAT(eventType = "addToCart")])` |
+| 使用配置檔案屬性否定單個事件 | 任何引用否定的單個傳入事件和一個或多個配置檔案屬性的段定義 | 生活在美國並擁有 **不** 已訪問首頁。 | `not(chain(xEvent, timestamp, [A: WHAT(eventType = "homePageView")]))` |
+| 時間窗口內的單個事件 | 任何段定義，它指的是在設定的時間段內的單個傳入事件。 | 過去24小時內訪問首頁的人。 | `chain(xEvent, timestamp, [X: WHAT(eventType = "addToCart") WHEN(< 8 days before now)])` |
+| 時間窗口內具有配置檔案屬性的單個事件 | 在設定的時間段內引用一個或多個配置檔案屬性和單個傳入事件的任何段定義。 | 過去24小時內訪問首頁的美國人。 | `homeAddress.countryCode = "US" and chain(xEvent, timestamp, [X: WHAT(eventType = "addToCart") WHEN(< 8 days before now)])` |
+| 在時間窗口內使用配置檔案屬性否定單個事件 | 指一個或多個配置檔案屬性和一個時間段內否定的單個傳入事件的任何段定義。 | 生活在美國並擁有 **不** 在過去24小時內訪問了首頁。 | `homeAddress.countryCode = "US" and not(chain(xEvent, timestamp, [X: WHAT(eventType = "addToCart") WHEN(< 8 days before now)]))` |
+| 24小時時間窗內的頻率事件 | 任何段定義，指在24小時的時間窗口內發生一定次數的事件。 | 訪問首頁的人 **至少** 24小時內有5次。 | `chain(xEvent, timestamp, [A: WHAT(eventType = "homePageView") WHEN(< 24 hours before now) COUNT(5) ] )` |
+| 在24小時時間窗口內具有配置檔案屬性的頻率事件 | 指一個或多個配置檔案屬性以及在24小時的時間窗口內發生一定次數的事件的任何段定義。 | 訪問首頁的美國人 **至少** 24小時內有5次。 | `homeAddress.countryCode = "US" and chain(xEvent, timestamp, [A: WHAT(eventType = "homePageView") WHEN(< 24 hours before now) COUNT(5) ] )` |
+| 在24小時時間窗口內使用配置檔案否定頻率事件 | 任何段定義，它指一個或多個配置檔案屬性以及在24小時的時間窗口內發生一定次數的已取消事件。 | 未訪問首頁的人 **更多** 比過去24小時里多了5次。 | `not(chain(xEvent, timestamp, [A: WHAT(eventType = "homePageView") WHEN(< 24 hours before now) COUNT(5) ] ))` |
+| 在24小時內的時間配置檔案內多次傳入命中 | 任何段定義，指在24小時的時間窗口內發生的多個事件。 | 訪問首頁的人員 **或** 在過去24小時內訪問了簽出頁面。 | `chain(xEvent, timestamp, [X: WHAT(eventType = "homePageView") WHEN(< 24 hours before now)]) and chain(xEvent, timestamp, [X: WHAT(eventType = "checkoutPageView") WHEN(< 24 hours before now)])` |
+| 在24小時時間窗口內使用配置檔案的多個事件 | 任何段定義，它指在24小時的時間窗口內發生的一個或多個配置檔案屬性和多個事件。 | 訪問首頁的美國人 **和** 在過去24小時內訪問了簽出頁面。 | `homeAddress.countryCode = "US" and chain(xEvent, timestamp, [X: WHAT(eventType = "homePageView") WHEN(< 24 hours before now)]) and chain(xEvent, timestamp, [X: WHAT(eventType = "checkoutPageView") WHEN(< 24 hours before now)])` |
+| 分部 | 包含一個或多個批或流段的任何段定義。 | 居住在美國並屬於&quot;現有部門&quot;的人。 | `homeAddress.countryCode = "US" and inSegment("existing segment")` |
+| 引用映射的查詢 | 任何引用屬性映射的段定義。 | 已基於外部段資料添加到購物車中的人員。 | `chain(xEvent, timestamp, [A: WHAT(eventType = "addToCart") WHERE(externalSegmentMapProperty.values().exists(stringProperty="active"))])` |
 
 此外，該分部 **必須** 綁定到邊緣上處於活動狀態的合併策略。 有關合併策略的詳細資訊，請閱讀 [合併策略指南](../../profile/api/merge-policies.md)。
 
