@@ -4,9 +4,9 @@ title: 段儀表板指南
 description: 'Adobe Experience Platform提供了一個控制板，您可以通過該控制板查看有關您的組織建立的段的重要資訊。 '
 type: Documentation
 exl-id: de5e07bc-2c44-416e-99db-7607059117cb
-source-git-commit: e59ba2e83808b460016805997580dc16c4cd369e
+source-git-commit: e18d37ba02d6edee77c91b719a0a2336e1316b71
 workflow-type: tm+mt
-source-wordcount: '1550'
+source-wordcount: '1665'
 ht-degree: 0%
 
 ---
@@ -75,6 +75,7 @@ Adobe提供了多個標準小部件，您可以使用這些小部件來可視化
 * [[!UICONTROL 受眾重疊]](#audience-overlap)
 * [[!UICONTROL 身份重疊]](#identity-overlap)
 * [[!UICONTROL 按身份顯示的配置檔案]](#profiles-by-identity)
+* [[!UICONTROL 計畫激活]](#scheduled-activations)
 
 ### [!UICONTROL 對象規模] {#audience-size}
 
@@ -176,6 +177,14 @@ Adobe提供了多個標準小部件，您可以使用這些小部件來可視化
 機器學習模型通過分析資料的總體分佈和關鍵維度自動生成資料洞察力。
 
 要瞭解有關身份的詳細資訊，請訪問 [Adobe Experience Platform身份服務文檔](../../identity-service/home.md)。
+
+### 計畫激活 {#scheduled-activations}
+
+的 [!UICONTROL 計畫激活] 小部件提供了最近激活的目標的表格化視圖。 該表包括目標平台、到此目標的激活流的名稱以及所選段的激活開始和結束日期。 如果沒有為激活提供結束日期，則顯示為 [!UICONTROL 持續]。 從頁面頂部的下拉清單中選擇分析的段。
+
+通過該小部件，您可以快速發現激活受眾的位置和時間，並使重複或不必要的激活更加透明。 這些累積的資訊還突出顯示了任何激活被排除的地方。
+
+![計畫激活小部件。](../images/segments/scheduled-activations.png)
 
 ## 後續步驟
 
