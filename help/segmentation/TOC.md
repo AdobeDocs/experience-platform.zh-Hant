@@ -4,10 +4,10 @@ user-guide-title: Adobe Experience Platform Segmentation Service
 breadcrumb-title: 分段服務指南
 user-guide-description: 從您的即時客戶設定檔資料建立區段並產生對象。
 feature: Segments
-source-git-commit: 0f20b5cfb3301bc7f7f336e14e9faa0234c05c51
+source-git-commit: b70b4302c95cbf4301b036feea799537fa633490
 workflow-type: tm+mt
-source-wordcount: '163'
-ht-degree: 27%
+source-wordcount: '164'
+ht-degree: 28%
 
 ---
 
@@ -19,6 +19,7 @@ ht-degree: 27%
 - 分段API {#api}
    - [總覽](api/overview.md)
    - [快速入門](api/getting-started.md)
+   - [對象](api/audiences.md)
    - [邊緣分割](api/edge-segmentation.md)
    - [導出作業](api/export-jobs.md)
    - [預覽和估計](api/previews-and-estimates.md)

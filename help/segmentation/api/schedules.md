@@ -5,9 +5,9 @@ title: 計畫API終結點
 topic-legacy: developer guide
 description: 計畫是一種工具，可用於每天自動運行一次批分段作業。
 exl-id: 92477add-2e7d-4d7b-bd81-47d340998ff1
-source-git-commit: 604d1d02156b441ab3978ff976e02191bbdc311f
+source-git-commit: 84026b447eea00955bc9e6482b81ae1aad3c312e
 workflow-type: tm+mt
-source-wordcount: '2013'
+source-wordcount: '2011'
 ht-degree: 3%
 
 ---
@@ -22,7 +22,7 @@ ht-degree: 3%
 
 ## 檢索計劃清單 {#retrieve-list}
 
-通過向IMS組織發出GET請求，您可以檢索IMS組織的所有計劃清單 `/config/schedules` 端點。
+您可以通過向以下站點發出GET請求來檢索組織的所有計劃清單 `/config/schedules` 端點。
 
 **API格式**
 
@@ -41,7 +41,7 @@ GET /config/schedules?limit={LIMIT}
 
 **要求**
 
-以下請求將檢索您IMS組織內發佈的最後十個計畫。
+以下請求將檢索您組織中過帳的最後十個計畫。
 
 ```shell
 curl -X GET https://platform.adobe.io/data/core/ups/config/schedules?limit=10 \
