@@ -6,20 +6,20 @@ topic-legacy: overview
 type: Tutorial
 description: 瞭解如何在UI中建立Adobe Analytics源連接，以將消費者資料帶入Adobe Experience Platform。
 exl-id: 5ddbaf63-feaa-44f5-b2f2-2d5ae507f423
-source-git-commit: 1d77ad44c7123f32301257c238299b7c16e2c92b
+source-git-commit: ae30ac2fe1c6366c987748e198b9dc3530bc512a
 workflow-type: tm+mt
-source-wordcount: '2182'
+source-wordcount: '2211'
 ht-degree: 2%
 
 ---
 
 # 在UI中建立Adobe Analytics源連接
 
-本教程提供了在UI中建立Adobe Analytics源連接的步驟，以便 [!DNL Analytics] 報告套件資料到Adobe Experience Platform。
+本教程提供了在UI中建立Adobe Analytics源連接以將Adobe Analytics報告套件資料引入Adobe Experience Platform的步驟。
 
 ## 快速入門
 
-本教程需要對Adobe Experience Platform的以下部分進行有效的理解：
+本教程需要對以下Experience Platform組成部分進行有效理解：
 
 * [體驗資料模型(XDM)系統](../../../../../xdm/home.md):Experience Platform組織客戶體驗資料的標準化框架。
 * [即時客戶概要資訊](../../../../../profile/home.md):基於來自多個源的聚合資料提供統一、即時的用戶配置檔案。
@@ -30,7 +30,7 @@ ht-degree: 2%
 瞭解本文檔中使用的以下關鍵術語非常重要：
 
 * **標準屬性**:標準屬性是任何由Adobe預定義的屬性。 它們對所有客戶具有相同的含義，在 [!DNL Analytics] 源資料和 [!DNL Analytics] 架構欄位組。
-* **自定義屬性**:自定義屬性是中的自定義變數層次結構中的任何屬性 [!DNL Analytics]。 在Adobe Analytics實施中使用自定義屬性將特定資訊捕獲到報告套件中，這些屬性在使用上與報告套件不同。 自定義屬性包括eVars 、道具和清單。 請參閱以下內容 [[!DNL Analytics] 轉換變數文檔](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/conversion-variables/conversion-var-admin.html?lang=en) 的雙曲餘切值。
+* **自定義屬性**:自定義屬性是中的自定義變數層次結構中的任何屬性 [!DNL Analytics]。 在Adobe Analytics實施中使用自定義屬性將特定資訊捕獲到報告套件中，而且從報告套件到報告套件的使用方式可能有所不同。 自定義屬性包括eVars 、道具和清單。 請參閱以下內容 [[!DNL Analytics] 轉換變數文檔](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/conversion-variables/conversion-var-admin.html?lang=en) 的雙曲餘切值。
 * **自定義欄位組中的任何屬性**:源自客戶建立的欄位組的屬性都是用戶定義的，並且不被視為標準屬性或自定義屬性。
 * **友好名稱**:友好名稱是中的自定義變數的人為提供的標籤 [!DNL Analytics] 執行。 請參閱以下內容 [[!DNL Analytics] 轉換變數文檔](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/conversion-variables/conversion-var-admin.html?lang=en) 的子菜單。
 
@@ -48,13 +48,17 @@ ht-degree: 2%
 
 的 **[!UICONTROL 分析源添加資料]** 步驟提供了 [!DNL Analytics] 用於建立源連接的報表套件資料。
 
-只能使用單個活動資料流來接收報表套件。 它不能用於多個資料流。 此外，報告套件必須與正在其中建立源連接的平台沙盒實例屬於同一區域。 已在此沙盒或其他沙盒中接收了無法選擇的報告套件。
+報表套件是構成報表基礎的資料容器 [!DNL Analytics] 報告。 一個組織可以有許多報告套件，每個套件包含不同的資料集。
+
+只要報表套件與正在其中建立源連接的Experience Platform沙盒實例映射到同一組織，您就可以從任何區域（美國、英國或新加坡）接收報表套件。 只能使用單個活動資料流來接收報表套件。 已在您正在使用的沙盒中或在其他沙盒中攝取了無法選擇的報告套件。
 
 可以建立多個綁定連接，將多個報告套件帶入同一沙箱。 如果報告套件具有不同的變數架構（如eVars或事件），則應將這些架構映射到自定義欄位組中的特定欄位，並避免使用 [資料準備](../../../../../data-prep/ui/mapping.md)。 只能將報表套件添加到單個沙盒中。
 
+![](../../../../images/tutorials/create/analytics/report-suite.png)
+
 >[!NOTE]
 >
->只有當沒有資料衝突(如兩個具有不同含義的自定義屬性（eVars、清單和道理）)無法映射到XDM中的同一屬性時，才能為即時客戶資料配置檔案啟用來自多個報表套件的資料。
+>只有在沒有資料衝突(如兩個具有不同含義的自定義屬性（eVars、清單和道具）時，才能為即時客戶資料配置檔案啟用來自多個報表套件的資料。
 
 建立 [!DNL Analytics] 源連接，選擇報表套件，然後選擇 **[!UICONTROL 下一個]** 繼續。
 
