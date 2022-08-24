@@ -2,7 +2,10 @@
 keywords: Experience Platform；首頁；熱門主題；流式服務；
 title: (Beta)使用流服務API為按需接收建立流運行
 description: 本教程介紹使用流服務API建立流運行以按需接收的步驟
-source-git-commit: ab496c7a32c20487f47850c2c571976dff57704f
+hide: true
+hidefromtoc: true
+exl-id: a7b20cd1-bb52-4b0a-aad0-796929555e4a
+source-git-commit: 24f16e315607a1076ff2efef129d9e97040a9500
 workflow-type: tm+mt
 source-wordcount: '1147'
 ht-degree: 1%
