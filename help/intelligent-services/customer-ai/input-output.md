@@ -6,10 +6,10 @@ title: 客戶AI中的輸入和輸出
 topic-legacy: Getting started
 description: 瞭解客戶AI使用的所需事件、輸入和輸出的詳細資訊。
 exl-id: 9b21a89c-bf48-4c45-9eb3-ace38368481d
-source-git-commit: b3c331821e2df17380edbc673066f6b10a06d65f
+source-git-commit: 9ce5a383bed24c4bfe9245521149443a57764da5
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '3154'
+ht-degree: 3%
 
 ---
 
@@ -286,7 +286,6 @@ XDM體驗事件用於確定各種客戶行為。 根據資料的結構，下面�
 
 >[!NOTE]
 >
-> - 客戶AI僅使用更新的資料進行進一步培訓和評分。 同樣，當您請求刪除資料時，客戶AI不會使用刪除的資料。
 > - 為幫助促進客戶AI中的GDPR法規遵從性，您可以使用Adobe Experience Platform Privacy Service設定協定來滿足客戶請求，以便跨資料庫、身份服務和即時客戶配置檔案訪問和刪除其資料。
 > - 所有資料都在傳輸和靜止時被加密。 請參閱文檔以瞭解有關 [資料加密](../../../help/landing/governance-privacy-security/encryption.md)
 
