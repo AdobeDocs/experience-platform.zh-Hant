@@ -5,9 +5,9 @@ title: 隱私作業API終結點
 topic-legacy: developer guide
 description: 瞭解如何使用Experience CloudAPI管理Privacy Service應用程式的隱私作業。
 exl-id: 74a45f29-ae08-496c-aa54-b71779eaeeae
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: b126726aa7f7fe6070693fdecfdac1ec66050aa9
 workflow-type: tm+mt
-source-wordcount: '1362'
+source-wordcount: '1429'
 ht-degree: 3%
 
 ---
@@ -143,10 +143,11 @@ curl -X POST \
         ]
       }
     ],
-    "include": ["Analytics", "AudienceManager"],
+    "include": ["Analytics", "AudienceManager","profileService"],
     "expandIds": false,
     "priority": "normal",
     "analyticsDeleteMethod": "anonymize",
+    "mergePolicyId": 124,
     "regulation": "ccpa"
 }'
 ```
@@ -159,6 +160,7 @@ curl -X POST \
 | `expandIDs` | 設定為時的可選屬性 `true`，表示處理應用程式中ID的優化(當前僅受 [!DNL Analytics])。 如果省略，此值預設為 `false`。 |
 | `priority` | Adobe Analytics使用的可選屬性，用於設定處理請求的優先順序。 接受的值為 `normal` 和 `low`。 如果 `priority` 省略，預設行為為 `normal`。 |
 | `analyticsDeleteMethod` | 一個可選屬性，指定Adobe Analytics應如何處理個人資料。 此屬性接受兩個可能的值： <ul><li>`anonymize`:給定的用戶ID集合引用的所有資料都是匿名的。 如果 `analyticsDeleteMethod` 省略，這是預設行為。</li><li>`purge`:所有資料都被完全刪除。</li></ul> |
+| `mergePolicyId` | 對即時客戶配置檔案(`profileService`)，可以選擇提供特定 [合併策略](../../profile/merge-policies/overview.md) 你想用於ID縫合。 通過指定合併策略，隱私請求可以在返回客戶資料時包括段資訊。 每個請求只能指定一個合併策略。 如果未提供合併策略，則分段資訊不包括在響應中。 |
 | `regulation` **(必填)** | 隱私工作的規定。 接受以下值： <ul><li>`gdpr` （歐洲聯盟）</li><li>`ccpa` （加利福尼亞）</li><li>`lgpd_bra` (巴西)</li><li>`nzpa_nzl` (紐西蘭)</li><li>`pdpa_tha` (泰國)</li></ul> |
 
 {style=&quot;table-layout:auto&quot;&quot;
