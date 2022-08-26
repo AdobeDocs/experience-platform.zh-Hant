@@ -2,9 +2,9 @@
 title: Adobe Experience Platform發行說明2022年8月
 description: 2022年8月發佈的Adobe Experience Platform說明。
 exl-id: dbf1e7a3-8599-4991-8932-f57d3b1c640d
-source-git-commit: 3e3389c3e77597ace4177e683aaf7494364a5be7
+source-git-commit: f2d2499147b40a15a413773068b65139278bd4ff
 workflow-type: tm+mt
-source-wordcount: '1901'
+source-wordcount: '2095'
 ht-degree: 7%
 
 ---
@@ -90,17 +90,13 @@ Adobe Experience Platform提供 [!DNL dashboards] 通過這些資訊，您可以
 
 [!DNL Destinations] 是預先構建的與目標平台的整合，允許無縫激活來自Adobe Experience Platform的資料。 您可以使用目標來激活跨渠道市場營銷活動、電子郵件活動、目標廣告和許多其他使用案例的已知和未知資料。
 
-<!--
+**新增或更新的功能**
 
-**New or updated features**
-
-| Feature | Description |
+| 功能 | 說明 |
 | ----------- | ----------- |
-|  ||
+| (Beta)基於屬性的個性化對個性化目標的支援 | 通過基於屬性的個性化測試版，您將在 [目標目錄](../../destinations/catalog/overview.md): <ul><li>**[!UICONTROL Adobe TargetV2]**:此連接器當前處於測試版中，並且僅適用於選定數量的客戶。 除了Adobe TargetV1卡提供的功能外，目標V2連接器還 [映射步驟](/help/destinations/ui/activate-profile-request-destinations.md#map-attributes) 激活工作流，它允許您將配置檔案屬性映射到Adobe Target，從而啟用基於屬性的同頁和下一頁個性化。</li><li>**[!UICONTROL 具有屬性的自定義個性化]**:此連接器當前處於測試版中，並且僅適用於選定數量的客戶。 除了 **[!UICONTROL 自定義個性化]**，也請參見Wiki頁。 **[!UICONTROL 具有屬性的自定義個性化]** 連接器添加可選 [映射步驟](../../destinations/ui/activate-profile-request-destinations.md#map-attributes) 激活工作流，它允許您將配置檔案屬性映射到自定義個性化目標，從而啟用基於屬性的同頁和下一頁個性化。</li></ul> <br> 配置檔案屬性可能包含敏感資料。 為保護此資料， **[!UICONTROL 具有屬性的自定義個性化]** 目標要求您使用 [邊緣網路伺服器API](../../server-api/overview.md) 的下界。 此外，所有伺服器API調用必須在 [已驗證上下文](../../server-api/authentication.md)。 |
 
-{style="table-layout:auto"}
-
--->
+{style=&quot;table-layout:auto&quot;&quot;
 
 **新目標**
 
