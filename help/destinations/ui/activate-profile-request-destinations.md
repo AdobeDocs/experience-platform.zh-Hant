@@ -4,9 +4,9 @@ title: 將受眾資料激活到配置檔案請求目標
 type: Tutorial
 description: 瞭解如何通過將段映射到配置檔案請求目標來激活您在Adobe Experience Platform擁有的受眾資料。
 exl-id: cd7132eb-4047-4faa-a224-47366846cb56
-source-git-commit: a6fe0f5a0c4f87ac265bf13cb8bba98252f147e0
+source-git-commit: 26e7a3e78a4513aa69cdfbed7902509609e114cc
 workflow-type: tm+mt
-source-wordcount: '467'
+source-wordcount: '678'
 ht-degree: 0%
 
 ---
@@ -19,11 +19,13 @@ ht-degree: 0%
 
 ## 總覽 {#overview}
 
-本文介紹在Adobe Experience Platform配置檔案請求目標中激活受眾資料所需的工作流。 配置檔案請求目標的示例包括 [Adobe Target](../../destinations/catalog/personalization/adobe-target-connection.md) 和 [自定義個性化](../../destinations/catalog/personalization/custom-personalization.md) 連接。
+本文介紹在Adobe Experience Platform配置檔案請求目標中激活受眾資料所需的工作流。 當與 [邊緣分割](../../segmentation/ui/edge-segmentation.md)，這些目標在Web屬性上啟用同頁和下頁個性化使用案例。 閱讀有關 [啟用同頁和下頁個性化用例](/help/destinations/ui/configure-personalization-destinations.md)。
+
+配置檔案請求目標的示例包括 [Adobe Target](../../destinations/catalog/personalization/adobe-target-connection.md) 和 [自定義個性化](../../destinations/catalog/personalization/custom-personalization.md) 連接。
 
 ## 先決條件 {#prerequisites}
 
-要將資料激活到目標，必須已成功 [連接到目標](./connect-destination.md)。 如果尚未執行此操作，請轉至 [目標目錄](../catalog/overview.md)，瀏覽支援的目標，並配置要使用的目標。
+要將資料激活到目標，必須已成功 [連接到目標](./connect-destination.md)。 如果尚未執行此操作，請轉至 [目標目錄](../catalog/overview.md)，瀏覽支援的個性化目標，並配置要使用的目標。
 
 ### 段合併策略 {#merge-policy}
 
@@ -35,7 +37,7 @@ ht-degree: 0%
 
    ![目標目錄頁籤](../assets/ui/activate-segment-streaming-destinations/catalog-tab.png)
 
-1. 選擇 **[!UICONTROL 激活段]** 在與要激活段的目標相對應的卡上，如下圖所示。
+1. 選擇 **[!UICONTROL 激活段]** 在與要激活段的個性化目標對應的卡上，如下圖所示。
 
    ![激活按鈕](../assets/ui/activate-profile-request-destinations/activate-segments-button.png)
 
@@ -50,6 +52,22 @@ ht-degree: 0%
 使用段名稱左側的複選框選擇要激活到目標的段，然後選擇 **[!UICONTROL 下一個]**。
 
 ![選擇段](../assets/ui/activate-profile-request-destinations/select-segments.png)
+
+## (Beta)地圖屬性 {#map-attributes}
+
+>[!IMPORTANT]
+>
+>映射步驟，它允許對 [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md) 和 [通用個性化目標](/help/destinations/catalog/personalization/custom-personalization.md)，當前處於測試版，您的組織可能尚未訪問它。 本文檔可能會更改。
+
+選擇要為用戶啟用個性化用例的屬性。 這意味著，如果屬性值更改或將屬性添加到配置檔案，則該配置檔案將成為段的成員並將激活到個性化目標。
+
+添加屬性是可選的，您仍然可以繼續執行下一步並啟用同頁和下一頁個性化，而無需選擇屬性。 如果在此步驟中未添加任何屬性，則仍會根據截面梁的段成員資格和身份映射資格進行個性化設定。
+
+![顯示選定屬性的映射步驟的影像](../assets/ui/activate-profile-request-destinations/mapping-step.png)
+
+要添加屬性，請選擇 **[!UICONTROL 添加新欄位]** 控制和搜索，或導航到所需的XDM屬性欄位，如下所示。
+
+![顯示如何在映射步驟中選擇XDM屬性的螢幕錄制](../assets/ui/activate-profile-request-destinations/mapping-step-select-attribute.gif)
 
 ## 計畫段導出 {#scheduling}
 

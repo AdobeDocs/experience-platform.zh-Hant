@@ -3,14 +3,23 @@ keywords: 目標個性化；目的地；體驗平台目標；adobe目標目標�
 title: Adobe Target
 description: Adobe Target是一個應用程式，在跨網站、移動應用等的所有入站客戶交互中提供基於人工智慧的即時個性化和實驗功能。
 exl-id: 3e3c405b-8add-4efb-9389-5ad695bc9799
-source-git-commit: dd18350387aa6bdeb61612f0ccf9d8d2223a8a5d
+source-git-commit: 769d3f14e858ed69c6bb50360da90e4e0816a377
 workflow-type: tm+mt
-source-wordcount: '909'
+source-wordcount: '1005'
 ht-degree: 1%
 
 ---
 
 # Adobe Target {#adobe-target-connection}
+
+## 目標更改日誌 {#changelog}
+
+>[!IMPORTANT]
+>
+>通過增強的Adobe TargetV2目標連接器的beta版本，您可能在目標目錄中看到兩個Adobe Target卡。
+>Adobe TargetV2目標連接器目前處於測試版，只適用於特定數量的客戶。 除了AdobeV1卡提供的功能外，目標V2連接器還 [映射步驟](/help/destinations/ui/activate-profile-request-destinations.md#map-attributes) 激活工作流，它允許您將配置檔案屬性映射到Adobe Target，從而啟用基於屬性的同頁和下一頁個性化。
+
+![兩張Adobe Target目的卡並排顯示的影像。](/help/destinations/assets/catalog/personalization/adobe-target-connection/adobe-target-side-by-side-view.png)
 
 ## 總覽 {#overview}
 

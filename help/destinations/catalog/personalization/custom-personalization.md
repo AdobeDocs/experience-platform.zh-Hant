@@ -3,14 +3,33 @@ keywords: 自定義個性化；目的地；體驗平台定制目標；
 title: 自定義個性化連接
 description: 此目標提供外部個性化、內容管理系統、廣告伺服器以及您站點上運行的其他應用程式，以便從Adobe Experience Platform檢索段資訊。 此目標基於用戶配置檔案段成員身份提供即時個性化。
 exl-id: 2382cc6d-095f-4389-8076-b890b0b900e3
-source-git-commit: dd18350387aa6bdeb61612f0ccf9d8d2223a8a5d
+source-git-commit: 09e81093c2ed2703468693160939b3b6f62bc5b6
 workflow-type: tm+mt
-source-wordcount: '1036'
+source-wordcount: '1305'
 ht-degree: 0%
 
 ---
 
 # 自定義個性化連接 {#custom-personalization-connection}
+
+## 目標更改日誌 {#changelog}
+
+使用Beta版 **[!UICONTROL 自定義個性化]** 目標連接器，您可能看到兩個 **[!UICONTROL 自定義個性化]** 目的地目錄中的卡。
+
+的 **[!UICONTROL 具有屬性的自定義個性化]** 連接器當前處於測試版中，並且僅適用於選定數量的客戶。 除了 **[!UICONTROL 自定義個性化]**，也請參見Wiki頁。 **[!UICONTROL 具有屬性的自定義個性化]** 連接器添加可選 [映射步驟](/help/destinations/ui/activate-profile-request-destinations.md#map-attributes) 激活工作流，它允許您將配置檔案屬性映射到自定義個性化目標，從而啟用基於屬性的同頁和下一頁個性化。
+
+>[!IMPORTANT]
+>
+>配置檔案屬性可能包含敏感資料。 為保護此資料， **[!UICONTROL 具有屬性的自定義個性化]** 目標要求您使用 [邊緣網路伺服器API](/help/server-api/overview.md) 的下界。 此外，所有伺服器API調用必須在 [已驗證上下文](../../../server-api/authentication.md)。
+>
+>如果已使用Web SDK或Mobile SDK進行整合，則可以通過伺服器API以兩種方式檢索屬性：
+>
+> * 添加通過伺服器API檢索屬性的伺服器端整合。
+> * 使用自定義Javascript代碼更新客戶端配置，以通過伺服器API檢索屬性。
+>
+> 如果您不遵循上述要求，個性化將僅基於段成員資格，與提供的體驗相同 **[!UICONTROL 自定義個性化]** 連接器。
+
+![並排視圖中兩個自定義個性化目標卡的影像。](../../assets/catalog/personalization/custom-personalization/custom-personalization-side-by-side-view.png)
 
 ## 總覽 {#overview}
 
@@ -30,7 +49,7 @@ ht-degree: 0%
 
 ## 使用案例 {#use-cases}
 
-的 [!DNL Custom personalization connection] 使您能夠使用您自己的個性化合作夥伴平台(例如， [!DNL Optimizely]。 [!DNL Pega])，同時利用Experience Platform邊緣網路資料收集和分段功能，為客戶提供更深入的個性化體驗。
+的 [!DNL Custom Personalization Connection] 使您能夠使用您自己的個性化合作夥伴平台(例如， [!DNL Optimizely]。 [!DNL Pega])，以及專有系統（例如，內部CMS），同時還利用Experience Platform邊緣網路資料收集和分段功能，為更深入的客戶個性化體驗提供動力。
 
 下面描述的使用案例包括站點個性化和目標現場廣告。
 
@@ -134,11 +153,11 @@ alloy("sendEvent", {
     if(result.destinations) { // Looking to see if the destination results are there
  
         // Get the destination with a particular alias
-        var personalizationDestinations = result.destinations.filter(x => x.alias == “personalizationAlias”)
+        var personalizationDestinations = result.destinations.filter(x => x.alias == "personalizationAlias")
         if(personalizationDestinations.length > 0) {
              // Code to pass the segment IDs into the system that corresponds to personalizationAlias
         }
-        var adServerDestinations = result.destinations.filter(x => x.alias == “adServerAlias”)
+        var adServerDestinations = result.destinations.filter(x => x.alias == "adServerAlias")
         if(adServerDestinations.length > 0) {
             // Code to pass the segment ids into the system that corresponds to adServerAlias
         }
@@ -149,6 +168,37 @@ alloy("sendEvent", {
   });
 ```
 
+### 示例響應 [!UICONTROL 具有屬性的自定義個性化]
+
+使用時 **[!UICONTROL 具有屬性的自定義個性化]**, API響應將與下面的示例類似。
+
+兩者之差 **[!UICONTROL 具有屬性的自定義個性化]** 和 **[!UICONTROL 自定義個性化]** 是 `attributes` 的子菜單。
+
+```json
+[
+    {
+        "type": "profileLookup",
+        "destinationId": "7bb4cb8d-8c2e-4450-871d-b7824f547130",
+        "alias": "personalizationAlias",
+        "attributes": {
+             "countryCode": {
+                   "value" : "DE"
+              },
+             "membershipStatus": {
+                   "value" : "PREMIUM"
+              }
+         },         
+        "segments": [
+            {
+                "id": "399eb3e7-3d50-47d3-ad30-a5ad99e8ab77"
+            },
+            {
+                "id": "499eb3e7-3d50-47d3-ad30-a5ad99e8ab77"
+            }
+        ]
+    }
+]
+```
 
 ## 資料使用和治理 {#data-usage-governance}
 
