@@ -5,9 +5,9 @@ title: Marketo Engage連接器
 topic-legacy: overview
 description: 本文檔概述了Marketo Engage源連接器，包括有關其驗證、映射和資料延遲的資訊。
 exl-id: 063ec5d9-d643-4141-bf6d-878273f22b33
-source-git-commit: 8b8e08adb5ff3498169c1702680ea44f3bebf5c5
+source-git-commit: efa6891024cacd383f4cd958162a7a4f8ead0624
 workflow-type: tm+mt
-source-wordcount: '601'
+source-wordcount: '630'
 ht-degree: 0%
 
 ---
@@ -22,7 +22,7 @@ Adobe Experience Platform允許從外部源接收資料，同時讓您能夠使�
 
 >[!IMPORTANT]
 >
->您必須有權訪問 [Real-time Customer Data PlatformB2B版](../../../../rtcdp/b2b-overview.md) 以便Marketo Engage [即時客戶概要資訊](../../../../profile/home.md)。
+>您必須有權訪問 [Real-time Customer Data PlatformB2B版](../../../../rtcdp/b2b-overview.md) 使用所有Marketo資料集進行分割 [即時客戶概要資訊](../../../../profile/home.md)。 沒有即時CDP B2B版，您仍然可以使用Marketo源將資料從人員和活動資料集帶到即時客戶概要檔案以進行細分。
 
 此文檔概述 [!DNL Marketo] 源連接器，包括有關如何驗證連接器、如何映射的資訊 [!DNL Marketo] 以體驗資料模型(XDM)和連接器的資料延遲。
 
