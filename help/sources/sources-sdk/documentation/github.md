@@ -5,7 +5,7 @@ title: 使用GitHub Web介面建立源文檔頁
 topic-legacy: tutorial
 description: 本文檔提供了如何使用GitHub Web介面編寫文檔和提交拉入請求(PR)的步驟。
 exl-id: 84b4219c-b3b2-4d0a-9a65-f2d5cd989f95
-source-git-commit: 4d7799b01c34f4b9e4a33c130583eadcfdc3af69
+source-git-commit: adf7dbe5e32310fee680f996ffbde0fd6ddd993a
 workflow-type: tm+mt
 source-wordcount: '624'
 ht-degree: 2%
@@ -52,7 +52,7 @@ ht-degree: 2%
 
 ## 為來源編寫文檔頁面
 
-要開始記錄新源，請貼上 [源文檔模板](./template.md) 到GitHub網站編輯器。 您也可以下載模板 [這裡](../assets/template.zip)。
+要開始記錄新源，請貼上 [源文檔模板](./template.md) 到GitHub網站編輯器。 您也可以下載模板 [這裡](../assets/api-template.zip)。
 
 將模板複製到GitHub Web編輯器介面後，請按照模板上概述的說明進行操作，並編輯包含源相關資訊的值。
 

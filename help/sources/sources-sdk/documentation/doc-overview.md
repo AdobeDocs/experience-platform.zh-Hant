@@ -5,7 +5,7 @@ title: 記錄源
 topic-legacy: overview
 description: 在你的新來源在Adobe Experience Platform生存之前，最後一步是記錄你的新來源。
 exl-id: 80daadb1-127f-4f42-8bc9-fb89a7898462
-source-git-commit: 4d7799b01c34f4b9e4a33c130583eadcfdc3af69
+source-git-commit: adf7dbe5e32310fee680f996ffbde0fd6ddd993a
 workflow-type: tm+mt
 source-wordcount: '411'
 ht-degree: 0%
@@ -41,7 +41,7 @@ ht-degree: 0%
 
 您還可以下載以下文檔模板：
 
-* [API文檔模板](../assets/template.zip)
+* [API文檔模板](../assets/api-template.zip)
 * [UI文檔模板](../assets/ui-template.zip)
 
 ## 建立新源頁

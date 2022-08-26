@@ -5,7 +5,7 @@ title: 使用本地環境中的文本編輯器建立源文檔頁
 topic-legacy: tutorial
 description: 本文檔提供了有關如何使用本地環境為來源編寫文檔並提交拉入請求(PR)的步驟。
 exl-id: 4cc89d1d-bc42-473d-ba54-ab3d1a2cd0d6
-source-git-commit: 4d7799b01c34f4b9e4a33c130583eadcfdc3af69
+source-git-commit: adf7dbe5e32310fee680f996ffbde0fd6ddd993a
 workflow-type: tm+mt
 source-wordcount: '650'
 ht-degree: 3%
@@ -70,7 +70,7 @@ Adobe建議您使用 [Visual Studio代碼](https://code.visualstudio.com/) 並�
 
 ![安裝](../assets/install.png)
 
-當您的本地電腦準備就緒時，下載 [源文檔模板](../assets/template.zip) 將檔案解壓到 `experience-platform.en/help/sources/tutorials/api/create/...` 與 [`...`] 代表您選擇的類別。 例如，如果要建立資料庫源，請選擇資料庫資料夾。
+當您的本地電腦準備就緒時，下載 [源文檔模板](../assets/api-template.zip) 將檔案解壓到 `experience-platform.en/help/sources/tutorials/api/create/...` 與 [`...`] 代表您選擇的類別。 例如，如果要建立資料庫源，請選擇資料庫資料夾。
 
 最後，按照模板上概述的說明編輯模板，並提供與源相關的相關資訊。
 
