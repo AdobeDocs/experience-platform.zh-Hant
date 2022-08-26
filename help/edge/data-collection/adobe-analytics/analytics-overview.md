@@ -3,9 +3,9 @@ title: 將Adobe Analytics與平台Web SDK配合使用
 description: 瞭解如何使用Adobe Experience PlatformWeb SDK向Adobe Analytics發送資料。
 keywords: adobe analytics;analytics;mapped data;mapped vars;
 exl-id: b18d1163-9edf-4a9c-b247-cd1aa7dfca50
-source-git-commit: f627c1f6c917e74e0a366ce0611a1fa6bd0e3c3d
+source-git-commit: 836fa7814a6966903639e871bfaea0563847f363
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '306'
 ht-degree: 0%
 
 ---
@@ -28,7 +28,7 @@ Adobe Experience Platform [!DNL Edge Network] 自動映射許多XDM變數。 列
 
 ## 手動映射的資料
 
-邊緣網路未自動映射的任何資料都可以通過處理規則來訪問。 資料使用點表示法展平，並可作為contextData使用。
+未由 [!DNL Edge Network] 可通過處理規則訪問。 資料使用點表示法展平，並可作為contextData使用。
 
 如果你有這樣的架構。
 
@@ -71,3 +71,7 @@ a.x.arrayofobjects.1.obj2key //objval1
 下面是一個將使用此資料的處理規則的示例。
 
 ![處理規則介面](./assets/edge_analytics_processing_rules.png)
+
+>[!NOTE]
+>
+>使用「體驗邊緣」集合，所有事件都會發送到分析以及您為資料流配置的任何其他服務。 例如，如果將Analytics和Target都配置為服務，並且您單獨呼叫個性化和Analytics ，則這兩個事件都將發送到Analytics和Target。 這些事件將記錄在分析報告中，並可能影響彈跳率等指標。
