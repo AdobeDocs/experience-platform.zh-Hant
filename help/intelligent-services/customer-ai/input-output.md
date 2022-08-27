@@ -6,9 +6,9 @@ title: 客戶AI中的輸入和輸出
 topic-legacy: Getting started
 description: 瞭解客戶AI使用的所需事件、輸入和輸出的詳細資訊。
 exl-id: 9b21a89c-bf48-4c45-9eb3-ace38368481d
-source-git-commit: 9ce5a383bed24c4bfe9245521149443a57764da5
+source-git-commit: e0e96a52e30f5c34e0695c3e291bed9b6c085e00
 workflow-type: tm+mt
-source-wordcount: '3154'
+source-wordcount: '3195'
 ht-degree: 3%
 
 ---
@@ -286,10 +286,15 @@ XDM體驗事件用於確定各種客戶行為。 根據資料的結構，下面�
 
 >[!NOTE]
 >
-> - 為幫助促進客戶AI中的GDPR法規遵從性，您可以使用Adobe Experience Platform Privacy Service設定協定來滿足客戶請求，以便跨資料庫、身份服務和即時客戶配置檔案訪問和刪除其資料。
-> - 所有資料都在傳輸和靜止時被加密。 請參閱文檔以瞭解有關 [資料加密](../../../help/landing/governance-privacy-security/encryption.md)
+> - 客戶AI僅使用更新的資料進行進一步培訓和評分。 同樣，當您請求刪除資料時，客戶AI不會使用刪除的資料。
+> - 客戶AI利用平台資料集。 為支援品牌可能收到的消費者權利請求，品牌應使用平台Privacy Service提交消費者訪問請求並刪除，以跨資料庫、身份服務和即時客戶配置檔案刪除其資料。
+> - 我們用於模型輸入/輸出的所有資料集都將遵循平台指導原則。 平台資料加密適用於靜態和在途資料。 請參閱文檔以瞭解有關 [資料加密](../../../help/landing/governance-privacy-security/encryption.md)
 
 
 ## 後續步驟 {#next-steps}
 
 當您準備好資料及所有認證和結構描述後，請依照[設定 Customer AI 執行個體](./user-guide/configure.md)指南中的指示開始進行。本指南指導您建立客戶AI實例。
+
+
+
+
