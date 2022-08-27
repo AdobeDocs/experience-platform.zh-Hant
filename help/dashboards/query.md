@@ -4,9 +4,9 @@ title: 使用Query Service瀏覽、驗證和處理Dashboard資料集
 type: Documentation
 description: 瞭解如何使用查詢服務來瀏覽和處理在Experience Platform中為配置檔案、段和目標儀表板供電的原始資料集。
 exl-id: 0087dcab-d5fe-4a24-85f6-587e9ae74fb8
-source-git-commit: fe2d9e60dd641e1f03f7dde72e64e2892ae7c1a2
+source-git-commit: 62e282138de8cf2d74b4a62f4ced39e3fb78001a
 workflow-type: tm+mt
-source-wordcount: '848'
+source-wordcount: '951'
 ht-degree: 0%
 
 ---
@@ -83,6 +83,16 @@ Adobe Experience Platform [!DNL Query Service] 支援營銷商通過使用標準
 要瞭解DIM目標資料集的完整模式，可以預覽和瀏覽該資料集 [使用資料集查看器](../catalog/datasets/user-guide.md) 的子菜單。
 
 ![](images/query/destinations-metadata.png)
+
+## （測試版）客戶資料平台(CDP)見解報告
+
+>[!IMPORTANT]
+>
+>CDP Insights資料模型功能是測試版。 其功能和文檔可能會更改。
+
+CDP Insights資料模型功能公開了SQL，它為各種配置檔案、目標和分段小部件提供了見解。 您可以自定義這些SQl查詢模板，以為您的市場營銷和KPI使用案例建立CDP報告。
+
+CDP報告可讓您深入瞭解您的配置檔案資料及其與段和目標的關係。 有關如何執行以下操作的詳細資訊，請參閱CDP Insights資料模型文檔 [將CDP Insights資料模型應用到您的特定KPI使用案例](./cdp-insights-data-model.md)。
 
 ## 示例查詢
 
