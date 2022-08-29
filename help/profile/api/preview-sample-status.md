@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform；配置檔案；即時客戶配置檔案；故障排除；API；預覽；示例
 title: 預覽示例狀態（配置檔案預覽）API終結點
-description: 使用預覽示例狀態終結點（即時客戶配置檔案API的一部分），您可以預覽最新成功的概要檔案資料示例、按資料集和按標識列出概要檔案分發，並生成顯示資料集重疊、標識重疊和未知概要檔案的報告。
+description: 即時客戶配置檔案API的預覽示例狀態終結點允許您預覽配置檔案資料的最新成功示例、按資料集和按標識列出配置檔案分發，並生成顯示資料集重疊、標識重疊和未縫合配置檔案的報告。
 exl-id: a90a601e-629e-417b-ac27-3d69379bb274
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 8a17648757b342bd8026382918ca41c469210b51
 workflow-type: tm+mt
-source-wordcount: '2882'
+source-wordcount: '2875'
 ht-degree: 1%
 
 ---
@@ -124,7 +124,7 @@ GET /previewsamplestatus/report/dataset?{QUERY_PARAMETERS}
 
 | 參數 | 說明 |
 |---|---|
-| `date` | 指定要返回的報告的日期。 如果在該日期運行了多個報表，則返回該日期的最新報表。 如果指定日期不存在報告，則返回404（未找到）錯誤。 如果未指定日期，則返回最近的報告。 格式：YYYY-MM-DD。 範例: `date=2024-12-31` |
+| `date` | 指定要返回的報告的日期。 如果在該日期運行了多個報表，則返回該日期的最新報表。 如果指定日期不存在報告，則返回404（未找到）錯誤。 如果未指定日期，則返回最近的報告。 格式：YYYY-MM-DD。 範例：`date=2024-12-31` |
 
 **要求**
 
@@ -223,7 +223,7 @@ GET /previewsamplestatus/report/namespace?{QUERY_PARAMETERS}
 
 | 參數 | 說明 |
 |---|---|
-| `date` | 指定要返回的報告的日期。 如果在該日期運行了多個報表，則返回該日期的最新報表。 如果指定日期不存在報告，則返回404（未找到）錯誤。 如果未指定日期，則返回最近的報告。 格式：YYYY-MM-DD。 範例: `date=2024-12-31` |
+| `date` | 指定要返回的報告的日期。 如果在該日期運行了多個報表，則返回該日期的最新報表。 如果指定日期不存在報告，則返回404（未找到）錯誤。 如果未指定日期，則返回最近的報告。 格式：YYYY-MM-DD。 範例：`date=2024-12-31` |
 
 **要求**
 
@@ -318,7 +318,7 @@ GET /previewsamplestatus/report/dataset/overlap?{QUERY_PARAMETERS}
 
 | 參數 | 說明 |
 |---|---|
-| `date` | 指定要返回的報告的日期。 如果在同一日期運行了多個報告，則返回該日期的最近報告。 如果指定日期不存在報告，則返回404（未找到）錯誤。 如果未指定日期，則返回最近的報告。 格式：YYYY-MM-DD。 範例: `date=2024-12-31` |
+| `date` | 指定要返回的報告的日期。 如果在同一日期運行了多個報告，則返回該日期的最近報告。 如果指定日期不存在報告，則返回404（未找到）錯誤。 如果未指定日期，則返回最近的報告。 格式：YYYY-MM-DD。 範例：`date=2024-12-31` |
 
 **要求**
 
@@ -384,7 +384,7 @@ GET /previewsamplestatus/report/namespace/overlap?{QUERY_PARAMETERS}
 
 | 參數 | 說明 |
 |---|---|
-| `date` | 指定要返回的報告的日期。 如果在同一日期運行了多個報告，則返回該日期的最近報告。 如果指定日期不存在報告，則返回404（未找到）錯誤。 如果未指定日期，則返回最近的報告。 格式：YYYY-MM-DD。 範例: `date=2024-12-31` |
+| `date` | 指定要返回的報告的日期。 如果在同一日期運行了多個報告，則返回該日期的最近報告。 如果指定日期不存在報告，則返回404（未找到）錯誤。 如果未指定日期，則返回最近的報告。 格式：YYYY-MM-DD。 範例：`date=2024-12-31` |
 
 **要求**
 
@@ -465,25 +465,25 @@ curl -X GET \
 * 有24個配置檔案，由 `AAID` 和 `ECID` 標識命名空間。
 * 有6,565個配置檔案，只包含 `ECID` 身份。
 
-## 生成未知配置檔案報告
+## 生成未縫合配置檔案報告
 
-您可以通過未知的配置檔案報告進一步瞭解組織的配置檔案儲存的構成。 「未知配置檔案」是指在給定時間段內未縫合和處於非活動狀態的任何配置檔案。 「未縫合」配置檔案是只包含一個配置檔案片段的配置檔案，而「非活動」配置檔案是指未在指定時間段內添加新事件的任何配置檔案。 未知配置檔案報告提供7、30、60、90和120天期間的配置檔案細目。
+您可以通過未縫合的配置檔案報告進一步瞭解組織配置檔案儲存的構成。 「未縫合」配置檔案是只包含一個配置檔案片段的配置檔案。 「未知」配置檔案是與假名標識命名空間(如 `ECID` 和 `AAID`。 未知配置檔案處於非活動狀態，這意味著它們在指定的時間段內沒有添加新事件。 未縫合的配置檔案報告提供了7、30、60、90和120天的配置檔案細目。
 
-通過執行對的GET請求，可以生成未知配置檔案報告 `/previewsamplestatus/report/unknownProfiles` 端點。
+通過執行GET請求，可以生成未縫合配置檔案報告 `/previewsamplestatus/report/unstitchedProfiles` 端點。
 
 **API格式**
 
 ```http
-GET /previewsamplestatus/report/unknownProfiles
+GET /previewsamplestatus/report/unstitchedProfiles
 ```
 
 **要求**
 
-以下請求返回未知的配置檔案報告。
+以下請求返回未縫合配置檔案報表。
 
 ```shell
 curl -X GET \
-  https://platform.adobe.io/data/core/ups/previewsamplestatus/report/unknownProfiles \
+  https://platform.adobe.io/data/core/ups/previewsamplestatus/report/unstitchedProfiles \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
@@ -491,18 +491,18 @@ curl -X GET \
 
 **回應**
 
-成功的請求返回HTTP狀態200（確定）和未知配置檔案報告。
+成功的請求返回HTTP狀態200（確定）和未縫合配置檔案報告。
 
 >[!NOTE]
 >
->為本指南的目的，報告被截短，僅包括 `"120days"` 和`7days`&quot;期間。 完整的未知配置檔案報告提供了7、30、60、90和120天期間的配置檔案細目。
+>為本指南的目的，報告被截短，僅包括 `"120days"` 和`7days`&quot;期間。 完整未縫合配置檔案報告提供了7、30、60、90和120天的配置檔案細目。
 
 ```json
 {
   "data": {
       "totalNumberOfProfiles": 63606,
       "totalNumberOfEvents": 130977,
-      "unknownProfiles": {
+      "unstitchedProfiles": {
           "120days": {
               "countOfProfiles": 1644,
               "eventsAssociated": 26824,
@@ -547,16 +547,16 @@ curl -X GET \
 
 | 屬性 | 說明 |
 |---|---|
-| `data` | 的 `data` 對象包含為未知配置檔案報告返回的資訊。 |
-| `totalNumberOfProfiles` | 配置檔案儲存中唯一配置檔案的總數。 這相當於可定址的觀眾數。 它包括已知和未知的配置檔案。 |
+| `data` | 的 `data` 對象包含為未縫合配置檔案報表返回的資訊。 |
+| `totalNumberOfProfiles` | 配置檔案儲存中唯一配置檔案的總數。 這相當於可定址的觀眾數。 它包括已知和未縫合的配置檔案。 |
 | `totalNumberOfEvents` | 配置檔案儲存中的ExperienceEvents總數。 |
-| `unknownProfiles` | 包含未知配置檔案（未縫合和非活動）按時段細分的對象。 未知配置檔案報告提供7、30、60、90和120天時段的配置檔案細目。 |
-| `countOfProfiles` | 時間段的未知配置檔案計數或命名空間的未知配置檔案計數。 |
+| `unstitchedProfiles` | 包含未縫合配置檔案按時段細分的對象。 未縫合的配置檔案報告提供7、30、60、90和120天時段的配置檔案細目。 |
+| `countOfProfiles` | 時間段的未縫合配置檔案計數或命名空間的未縫合配置檔案計數。 |
 | `eventsAssociated` | 時間範圍的ExperienceEvents數或命名空間的事件數。 |
-| `nsDistribution` | 包含單個標識命名空間的對象，每個命名空間的未知配置檔案和事件的分佈。 注：合計 `countOfProfiles` 中每個標識命名空間的 `nsDistribution` 對象等於 `countOfProfiles` 的下界。 對於 `eventsAssociated` 每個命名空間和總數 `eventsAssociated` 每個時段。 |
+| `nsDistribution` | 包含單個標識命名空間的對象，每個命名空間具有未縫合配置檔案和事件的分佈。 注：合計 `countOfProfiles` 中每個標識命名空間的 `nsDistribution` 對象等於 `countOfProfiles` 的下界。 對於 `eventsAssociated` 每個命名空間和總數 `eventsAssociated` 每個時段。 |
 | `reportTimestamp` | 報表的時間戳。 |
 
-### 解釋未知配置檔案報告
+### 解釋未縫合配置檔案報表
 
 報告結果可讓您深入瞭解您的組織在其配置檔案儲存中有多少未縫合和非活動配置檔案。
 
@@ -586,9 +586,9 @@ curl -X GET \
 此報表提供以下資訊：
 
 * 有1,782個配置檔案只包含一個配置檔案片段，過去七天沒有新事件。
-* 有29,151個ExperienceEvents與1,782個未知配置檔案關聯。
-* 有1,734個未知配置檔案，其中包含來自ECID標識命名空間的單個配置檔案片段。
-* 有28,591個事件與1,734個未知配置檔案關聯，這些配置檔案包含來自ECID標識命名空間的單個配置檔案片段。
+* 與1,782個未縫合配置檔案相關的體驗事件有29,151個。
+* 有1,734個未縫合的配置檔案，其中包含來自ECID標識命名空間的單個配置檔案片段。
+* 有28,591個事件與1,734個未縫合的配置檔案關聯，這些配置檔案包含來自ECID標識命名空間的單個配置檔案片段。
 
 ## 後續步驟
 
