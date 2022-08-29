@@ -5,10 +5,10 @@ title: 使用流服務API為Mailchimp成員建立資料流
 topic-legacy: tutorial
 description: 瞭解如何使用流服務API將Adobe Experience Platform連接到MailChimp成員。
 exl-id: 900d4073-129c-47ba-b7df-5294d25a7219
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 23a6f8ee23fb67290a5bcba2673a87ce74c9e1d3
 workflow-type: tm+mt
-source-wordcount: '2500'
-ht-degree: 2%
+source-wordcount: '2123'
+ht-degree: 1%
 
 ---
 
@@ -30,7 +30,7 @@ ht-degree: 2%
 
 ### 建立 [!DNL Mailchimp] 基本連接使用基本認證
 
-建立 [!DNL Mailchimp] 基本連接使用基本身份驗證，向POST請求 `/connections` 端點 [!DNL Flow Service] API，同時為您提供憑據 `host`。 `authorizationTestUrl`。 `username`, `password`。
+建立 [!DNL Mailchimp] 基本連接使用基本身份驗證，向POST請求 `/connections` 端點 [!DNL Flow Service] API，同時為您提供憑據 `authorizationTestUrl`。 `username`, `password`。
 
 **API格式**
 
@@ -60,7 +60,6 @@ curl -X POST \
       "auth": {
           "specName": "Basic Authentication",
           "params": {
-              "host": "{HOST}",
               "authorizationTestUrl": "https://login.mailchimp.com/oauth2/metadata",
               "username": "{USERNAME}",
               "password": "{PASSWORD}"
@@ -75,7 +74,6 @@ curl -X POST \
 | `description` | （可選）可包含的屬性，用於提供有關基本連接的詳細資訊。 |
 | `connectionSpec.id` | 源的連接規範ID。 在通過註冊和批准源後，可以檢索此ID [!DNL Flow Service] API。 |
 | `auth.specName` | 用於將源連接到平台的身份驗證類型。 |
-| `auth.params.host` | 用於連接到的根URL [!DNL Mailchimp] API。 根URL的格式為 `https://{DC}.api.mailchimp.com`，也請參見Wiki頁。 `{DC}` 表示與您的帳戶對應的資料中心。 |
 | `auth.params.authorizationTestUrl` | （可選）授權testURL用於在建立基連接時驗證憑據。 如果未提供，則在建立源連接步驟期間會自動檢查憑據。 |
 | `auth.params.username` | 與您的 [!DNL Mailchimp] 帳戶。 這是基本身份驗證所必需的。 |
 | `auth.params.password` | 與您的 [!DNL Mailchimp] 帳戶。 這是基本身份驗證所必需的。 |
@@ -93,7 +91,7 @@ curl -X POST \
 
 ### 建立 [!DNL Mailchimp] 使用OAuth 2刷新代碼的基連接
 
-建立 [!DNL Mailchimp] 基本連接使用OAuth 2刷新代碼，向 `/connections` 在提供憑據時 `host`。 `authorizationTestUrl`, `accessToken`。
+建立 [!DNL Mailchimp] 基本連接使用OAuth 2刷新代碼，向 `/connections` 在提供憑據時 `authorizationTestUrl`, `accessToken`。
 
 **API格式**
 
@@ -123,7 +121,6 @@ curl -X POST \
       "auth": {
           "specName": "oAuth2RefreshCode",
           "params": {
-              "host": "{HOST}",
               "authorizationTestUrl": "https://login.mailchimp.com/oauth2/metadata",
               "accessToken": "{ACCESS_TOKEN}"
           }
@@ -137,7 +134,6 @@ curl -X POST \
 | `description` | （可選）可包含的屬性，用於提供有關基本連接的詳細資訊。 |
 | `connectionSpec.id` | 源的連接規範ID。 使用 [!DNL Flow Service] API。 |
 | `auth.specName` | 用於將源驗證到平台的驗證類型。 |
-| `auth.params.host` | 用於連接到的根URL [!DNL Mailchimp] API。 根URL的格式為 `https://{DC}.api.mailchimp.com`，也請參見Wiki頁。 `{DC}` 表示與您的帳戶對應的資料中心。 |
 | `auth.params.authorizationTestUrl` | （可選）授權testURL用於在建立基連接時驗證憑據。 如果未提供，則在建立源連接步驟期間會自動檢查憑據。 |
 | `auth.params.accessToken` | 用於驗證源的相應訪問令牌。 這是基於OAuth的身份驗證所必需的。 |
 
@@ -623,311 +619,26 @@ curl -X POST \
 }
 ```
 
-## 監視資料流
+## 附錄
 
-建立資料流後，您可以監視正在通過其接收的資料，以查看有關流運行、完成狀態和錯誤的資訊。
+以下部分提供了有關可以監視、更新和刪除資料流的步驟的資訊。
 
-**API格式**
+### 監視資料流
 
-```http
-GET /runs?property=flowId=={FLOW_ID}
-```
+建立資料流後，您可以監視正在通過其接收的資料，以查看有關流運行、完成狀態和錯誤的資訊。 有關完整的API示例，請閱讀上的指南 [使用API監視源資料流](../../monitor.md)。
 
-**要求**
+### 更新資料流
 
-以下請求檢索現有資料流的規範。
+通過向發出PATCH請求來更新資料流的詳細資訊，如其名稱和說明，以及其運行計畫和關聯映射集 `/flows` 端點 [!DNL Flow Service] API，同時提供資料流的ID。 發出PATCH請求時，必須提供資料流的唯一性 `etag` 的 `If-Match` 標題。 有關完整的API示例，請閱讀上的指南 [使用API更新源資料流](../../update-dataflows.md)。
 
-```shell
-curl -X GET \
-  'https://platform.adobe.io/data/foundation/flowservice/runs?property=flowId==993f908f-3342-4d9c-9f3c-5aa9a189ca1a' \
-  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {ORG_ID}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME}'
-```
+### 更新帳戶
 
-**回應**
+通過執行對的PATCH請求，更新源帳戶的名稱、說明和憑據 [!DNL Flow Service] API，同時將基本連接ID作為查詢參數提供。 發出PATCH請求時，必須提供源帳戶的唯一 `etag` 的 `If-Match` 標題。 有關完整的API示例，請閱讀上的指南 [使用API更新源帳戶](../../update.md)。
 
-成功的響應將返回有關流運行的詳細資訊，包括有關其建立日期、源和目標連接以及流運行的唯一標識符(`id`)。
+### 刪除資料流
 
-```json
-{
-    "items": [
-        {
-            "id": "209812ad-7bef-430c-b5b2-a648aae72094",
-            "createdAt": 1633044829955,
-            "updatedAt": 1633044838006,
-            "createdBy": "{CREATED_BY}",
-            "updatedBy": "{UPDATED_BY}",
-            "createdClient": "{CREATED_CLIENT}",
-            "updatedClient": "{UPDATED_CLIENT}",
-            "sandboxId": "{SANDBOX_ID}",
-            "sandboxName": "{SANDBOX_NAME}",
-            "imsOrgId": "{ORG_ID}",
-            "name": "MailChimp Members dataflow",
-            "description": "MailChimp Members dataflow",
-            "flowSpec": {
-                "id": "6499120c-0b15-42dc-936e-847ea3c24d72",
-                "version": "1.0"
-            },
-            "state": "enabled",
-            "version": "\"2e01f11d-0000-0200-0000-615649660000\"",
-            "etag": "\"2e01f11d-0000-0200-0000-615649660000\"",
-            "sourceConnectionIds": [
-                "e70d2773-711f-43ee-b956-9a1a5da03dd8"
-            ],
-            "targetConnectionIds": [
-                "43e141f6-6385-4d80-a4e4-c0fb59abbd43"
-            ],
-            "inheritedAttributes": {
-                "sourceConnections": [
-                    {
-                        "id": "e70d2773-711f-43ee-b956-9a1a5da03dd8",
-                        "connectionSpec": {
-                            "id": "2e8580db-6489-4726-96de-e33f5f60295f",
-                            "version": "1.0"
-                        },
-                        "baseConnection": {
-                            "id": "05c595e5-edc3-45c8-90bb-fcf556b57c4b",
-                            "connectionSpec": {
-                                "id": "2e8580db-6489-4726-96de-e33f5f60295f",
-                                "version": "1.0"
-                            }
-                        }
-                    }
-                ],
-                "targetConnections": [
-                    {
-                        "id": "43e141f6-6385-4d80-a4e4-c0fb59abbd43",
-                        "connectionSpec": {
-                            "id": "c604ff05-7f1a-43c0-8e18-33bf874cb11c",
-                            "version": "1.0"
-                        }
-                    }
-                ]
-            },
-            "scheduleParams": {
-                "startTime": "1633044818",
-                "frequency": "minute",
-                "interval": 15
-            },
-            "transformations": [
-                {
-                    "name": "Mapping",
-                    "params": {
-                        "mappingId": "5a365b23962d4653b9d9be25832ee5b4",
-                        "mappingVersion": 0
-                    }
-                }
-            ],
-            "runs": "/flows/209812ad-7bef-430c-b5b2-a648aae72094/runs",
-            "lastOperation": {
-                "started": 1633044829988,
-                "updated": 0,
-                "operation": "create"
-            }
-        }
-    ]
-}
-```
+通過執行DELETE請求刪除資料流 [!DNL Flow Service] API，同時提供要作為查詢參數一部分刪除的資料流的ID。 有關完整的API示例，請閱讀上的指南 [使用API刪除資料流](../../delete-dataflows.md)。
 
-| 屬性 | 說明 |
-| -------- | ----------- |
-| `items` | 包含與特定流運行關聯的元資料的單個負載。 |
-| `id` | 顯示與資料流對應的ID。 |
-| `state` | 顯示資料流的當前狀態。 |
-| `inheritedAttributes` | 包含定義流的屬性，如其相應的基連接、源連接和目標連接的ID。 |
-| `scheduleParams` | 包含有關資料流的接收計畫的資訊，如其開始時間（在紀元時間）、頻率和間隔。 |
-| `transformations` | 包含有關應用於資料流的轉換屬性的資訊。 |
-| `runs` | 顯示流的相應運行ID。 可以使用此ID監視特定流運行。 |
+### 刪除帳戶
 
-## 更新資料流
-
-要更新資料流的運行計畫、名稱和說明，請向 [!DNL Flow Service] 提供流ID、版本和要使用的新計畫時的API。
-
->[!IMPORTANT]
->
->的 `If-Match` 發出PATCH請求時需要標頭。 此標頭的值是要更新的連接的唯一版本。
-
-**API格式**
-
-```http
-PATCH /flows/{FLOW_ID}
-```
-
-**要求**
-
-以下請求將更新流運行計畫以及資料流的名稱和說明。
-
-```shell
-curl -X PATCH \
-  'https://platform.adobe.io/data/foundation/flowservice/flows/209812ad-7bef-430c-b5b2-a648aae72094' \
-  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {ORG_ID}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME}'
-  -H 'If-Match: "2e01f11d-0000-0200-0000-615649660000"' \
-  -d '[
-          {
-              "op": "replace",
-              "path": "/scheduleParams/frequency",
-              "value": "day"
-          },
-          {
-              "op": "replace",
-              "path": "/name",
-              "value": "MailChimp Members Dataflow 2.0"
-          },
-          {
-              "op": "replace",
-              "path": "/description",
-              "value": "MailChimp Members Dataflow Updated"
-          }
-      ]'
-```
-
-| 參數 | 說明 |
-| --------- | ----------- |
-| `op` | 用於定義更新資料流所需操作的操作調用。 操作包括： `add`。 `replace`, `remove`。 |
-| `path` | 要更新的參數的路徑。 |
-| `value` | 要用更新參數的新值。 |
-
-**回應**
-
-成功的響應將返回流ID和更新的etag。 您可以通過向Web站點發出GET請求來驗證更新 [!DNL Flow Service] API，同時提供流ID。
-
-```json
-{
-    "id": "209812ad-7bef-430c-b5b2-a648aae72094",
-    "etag": "\"50014cc8-0000-0200-0000-6036eb720000\""
-}
-```
-
-## 刪除資料流
-
-使用現有流ID，可以通過執行對的DELETE請求來刪除資料流 [!DNL Flow Service] API。
-
-**API格式**
-
-```http
-DELETE /flows/{FLOW_ID}
-```
-
-| 參數 | 說明 |
-| --------- | ----------- |
-| `{FLOW_ID}` | 獨特 `id` 要刪除的資料流的值。 |
-
-**要求**
-
-```shell
-curl -X DELETE \
-  'https://platform.adobe.io/data/foundation/flowservice/flows/209812ad-7bef-430c-b5b2-a648aae72094' \
-  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {ORG_ID}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME}'
-```
-
-**回應**
-
-成功的響應返回HTTP狀態204（無內容）和空白正文。 您可以通過嘗試對資料流進行查找(GET)請求來確認刪除。 API將返回HTTP 404（未找到）錯誤，表示資料流已被刪除。
-
-## 更新連接
-
-要更新連接的名稱、說明和憑據，請向 [!DNL Flow Service] API，同時提供您要使用的基本連接ID、版本和新資訊。
-
->[!IMPORTANT]
->
->的 `If-Match` 發出PATCH請求時需要標頭。 此標頭的值是要更新的連接的唯一版本。
-
-**API格式**
-
-```http
-PATCH /connections/{BASE_CONNECTION_ID}
-```
-
-| 參數 | 說明 |
-| --------- | ----------- |
-| `{BASE_CONNECTION_ID}` | 獨特 `id` 要更新的連接的值。 |
-
-**要求**
-
-以下請求提供了新名稱和說明以及一組新的憑據，以更新您的連接。
-
-```shell
-curl -X PATCH \
-  'https://platform.adobe.io/data/foundation/flowservice/connections/4cea039f-f1cc-4fa5-9136-db8dd4c7fbfa' \
-  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {ORG_ID}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME}'
-  -H 'If-Match: 4000cff7-0000-0200-0000-6154bad60000' \
-  -d '[
-      {
-          "op": "replace",
-          "path": "/auth/params",
-          "value": {
-              "username": "mailchimp-member-activity-user",
-              "password": "{NEW_PASSWORD}"
-          }
-      },
-      {
-          "op": "replace",
-          "path": "/name",
-          "value": "MailChimp Members Connection 2.0"
-      },
-      {
-          "op": "add",
-          "path": "/description",
-          "value": "Updated MailChimp Members Connection"
-      }
-  ]'
-```
-
-| 參數 | 說明 |
-| --------- | ----------- |
-| `op` | 用於定義更新連接所需操作的操作調用。 操作包括： `add`。 `replace`, `remove`。 |
-| `path` | 要更新的參數的路徑。 |
-| `value` | 要用更新參數的新值。 |
-
-**回應**
-
-成功的響應將返回基本連接ID和更新的etag。 您可以通過向Web站點發出GET請求來驗證更新 [!DNL Flow Service] API，同時提供連接ID。
-
-```json
-{
-    "id": "4cea039f-f1cc-4fa5-9136-db8dd4c7fbfa",
-    "etag": "\"3600e378-0000-0200-0000-5f40212f0000\""
-}
-```
-
-## 刪除連接
-
-一旦您擁有現有基本連接ID，請執行DELETE請求 [!DNL Flow Service] API。
-
-**API格式**
-
-```http
-DELETE /connections/{CONNECTION_ID}
-```
-
-| 參數 | 說明 |
-| --------- | ----------- |
-| `{BASE_CONNECTION_ID}` | 獨特 `id` 要刪除的基本連接的值。 |
-
-**要求**
-
-```shell
-curl -X DELETE \
-  'https://platform.adobe.io/data/foundation/flowservice/connections/4cea039f-f1cc-4fa5-9136-db8dd4c7fbfa' \
-  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {ORG_ID}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME}'
-```
-
-**回應**
-
-成功的響應返回HTTP狀態204（無內容）和空白正文。
-
-您可以通過嘗試查找(GET)連接請求來確認刪除。
+通過執行DELETE請求刪除帳戶 [!DNL Flow Service] API，同時提供要刪除的帳戶的基本連接ID。 有關完整的API示例，請閱讀上的指南 [使用API刪除源帳戶](../../delete.md)。

@@ -5,10 +5,10 @@ title: 使用流服務API為Zendesk建立資料流
 topic-legacy: tutorial
 description: 瞭解如何使用流服務API將Adobe Experience Platform連接到Zendesk。
 exl-id: 3e00e375-c6f8-407c-bded-7357ccf3482e
-source-git-commit: 43367156962ee58ef615cf61c02a36360292f19b
+source-git-commit: 23a6f8ee23fb67290a5bcba2673a87ce74c9e1d3
 workflow-type: tm+mt
-source-wordcount: '2314'
-ht-degree: 2%
+source-wordcount: '1977'
+ht-degree: 1%
 
 ---
 
@@ -35,7 +35,6 @@ ht-degree: 2%
 
 | 憑據 | 說明 | 範例 |
 | --- | --- | --- |
-| `host` | 在註冊過程中建立的特定於您帳戶的唯一域。 | `https://yoursubdomain.zendesk.com` |
 | `accessToken` | Zendesk API令牌。 | `0lZnClEvkJSTQ7olGLl7PMhVq99gu26GTbJtf` |
 
 有關驗證您 [!DNL Zendesk] 源，請參閱 [[!DNL Zendesk] 源概述](../../../../connectors/customer-success/zendesk.md)。
@@ -78,7 +77,6 @@ curl -X POST \
         "auth": {
             "specName": "OAuth2 Refresh Code",
             "params": {
-                "host": "{HOST}",
                 "accessToken": "{ACCESS_TOKEN}"
             }
         }
@@ -92,7 +90,6 @@ curl -X POST \
 | `connectionSpec.id` | 源的連接規範ID。 在通過註冊和批准源後，可以檢索此ID [!DNL Flow Service] API。 |
 | `auth.specName` | 用於將源驗證到平台的驗證類型。 |
 | `auth.params.` | 包含驗證源所需的憑據。 |
-| `auth.params.host` | 在註冊過程中建立的特定於您帳戶的唯一域。 子域的格式為 `https://yoursubdomain.zendesk.com`。 |
 | `auth.params.accessToken` | 用於驗證源的相應訪問令牌。 這是基於OAuth的身份驗證所必需的。 |
 
 **回應**
@@ -759,392 +756,26 @@ curl -X POST \
 }
 ```
 
+## 附錄
+
+以下部分提供了有關可以監視、更新和刪除資料流的步驟的資訊。
+
 ### 監視資料流
 
-建立資料流後，您可以監視正在通過其接收的資料，以查看有關流運行、完成狀態和錯誤的資訊。
-
-**API格式**
-
-```http
-GET /runs?property=flowId=={FLOW_ID}
-```
-
-**要求**
-
-以下請求檢索現有資料流的規範。
-
-```shell
-curl -X GET \
-    'https://platform.adobe.io/data/foundation/flowservice/runs?property=flowId==993f908f-3342-4d9c-9f3c-5aa9a189ca1a' \
-    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-    -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
-    -H 'x-sandbox-name: {SANDBOX_NAME}'
-```
-
-**回應**
-
-成功的響應將返回有關流運行的詳細資訊，包括有關其建立日期、源和目標連接以及流運行的唯一標識符(`id`)。
-
-```json
-{
-    "items": [
-        {
-            "createdAt": 1596656079576,
-            "updatedAt": 1596656113526,
-            "createdBy": "{CREATED_BY}",
-            "updatedBy": "{UPDATED_BY}",
-            "createdClient": "{CREATED_CLIENT}",
-            "updatedClient": "{UPDATED_CLIENT}",
-            "sandboxId": "1bd86660-c5da-11e9-93d4-6d5fc3a66a8e",
-            "sandboxName": "prod",
-            "id": "9830305a-985f-47d0-b030-5a985fd7d004",
-            "flowId": "993f908f-3342-4d9c-9f3c-5aa9a189ca1a",
-            "etag": "\"510bb1d4-8453-4034-b991-ab942e11dd8a\"",
-            "metrics": {
-                "durationSummary": {
-                    "startedAtUTC": 1596656058198,
-                    "completedAtUTC": 1596656113306
-                },
-                "sizeSummary": {
-                    "inputBytes": 24012,
-                    "outputBytes": 17128
-                },
-                "recordSummary": {
-                    "inputRecordCount": 100,
-                    "outputRecordCount": 99,
-                    "failedRecordCount": 1
-                },
-                "fileSummary": {
-                    "inputFileCount": 1,
-                    "outputFileCount": 1,
-                    "activityRefs": [
-                        "promotionActivity"
-                    ]
-                },
-                "statusSummary": {
-                    "status": "success",
-                    "errors": [
-                        {
-                            "code": "CONNECTOR-2001-500",
-                            "message": "Error occurred at promotion activity."
-                        }
-                    ],
-                    "activityRefs": [
-                        "promotionActivity"
-                    ]
-                }
-            },
-            "activities": [
-                {
-                    "id": "copyActivity",
-                    "updatedAtUTC": 1596656095088,
-                    "durationSummary": {
-                        "startedAtUTC": 1596656058198,
-                        "completedAtUTC": 1596656089650,
-                        "extensions": {
-                            "windowStart": 1596653708000,
-                            "windowEnd": 1596655508000
-                        }
-                    },
-                    "sizeSummary": {
-                        "inputBytes": 24012,
-                        "outputBytes": 24012
-                    },
-                    "recordSummary": {},
-                    "fileSummary": {
-                        "inputFileCount": 1,
-                        "outputFileCount": 1
-                    },
-                    "statusSummary": {
-                        "status": "success",
-                        "extensions": {
-                            "type": "one-time"
-                        }
-                    },
-                    "sourceInfo": [
-                        {
-                            "id": "c0e18602-f9ea-44f9-a186-02f9ea64f9ac",
-                            "type": "SourceConnection",
-                            "reference": {
-                                "type": "AdfRunId",
-                                "ids": [
-                                    "8a8eb0cc-e283-4605-ac70-65a5adb1baef"
-                                ]
-                            }
-                        }
-                    ]
-                },
-                {
-                    "id": "promotionActivity",
-                    "updatedAtUTC": 1596656113485,
-                    "durationSummary": {
-                        "startedAtUTC": 1596656095333,
-                        "completedAtUTC": 1596656113306
-                    },
-                    "sizeSummary": {
-                        "inputBytes": 24012,
-                        "outputBytes": 17128
-                    },
-                    "recordSummary": {
-                        "inputRecordCount": 100,
-                        "outputRecordCount": 99,
-                        "failedRecordCount": 1
-                    },
-                    "fileSummary": {
-                        "inputFileCount": 2,
-                        "outputFileCount": 1,
-                        "extensions": {
-                            "manifest": {
-                                "fileInfo": "https://platform.adobe.io/data/foundation/export/batches/01EF01X41KJD82Y9ZX6ET54PCZ/meta?path=input_files"
-                            }
-                        }
-                    },
-                    "statusSummary": {
-                        "status": "success",
-                        "errors": [
-                            {
-                                "code": "CONNECTOR-2001-500",
-                                "message": "Error occurred at promotion activity."
-                            }
-                        ],
-                        "extensions": {
-                            "manifest": {
-                                "failedRecords": "https://platform.adobe.io/data/foundation/export/batches/01EF01X41KJD82Y9ZX6ET54PCZ/meta?path=row_errors",
-                                "sampleErrors": "https://platform.adobe.io/data/foundation/export/batches/01EF01X41KJD82Y9ZX6ET54PCZ/meta?path=row_error_samples.json"
-                            },
-                            "errors": [
-                                {
-                                    "code": "INGEST-1212-400",
-                                    "message": "Encountered 1 errors in the data. Successfully ingested 99 rows. Review the associated diagnostic files for additional details."
-                                },
-                                {
-                                    "code": "MAPPER-3700-400",
-                                    "recordCount": 1,
-                                    "message": "Mapper Transform Error"
-                                }
-                            ]
-                        }
-                    },
-                    "targetInfo": [
-                        {
-                            "id": "47166b83-01c7-4b65-966b-8301c70b6562",
-                            "type": "TargetConnection",
-                            "reference": {
-                                "type": "Batch",
-                                "ids": [
-                                    "01EF01X41KJD82Y9ZX6ET54PCZ"
-                                ]
-                            }
-                        }
-                    ]
-                }
-            ]
-        }
-    ],
-    "_links": {}
-}
-```
-
-| 屬性 | 說明 |
-| -------- | ----------- |
-| `items` | 包含與特定流運行關聯的元資料的單個負載。 |
-| `metrics` | 定義流運行中資料的特徵。 |
-| `activities` | 定義資料的轉換方式。 |
-| `durationSummary` | 定義流運行的開始和結束時間。 |
-| `sizeSummary` | 定義資料的卷（以位元組為單位）。 |
-| `recordSummary` | 定義資料的記錄計數。 |
-| `fileSummary` | 定義資料的檔案計數。 |
-| `statusSummary` | 定義流運行是成功還是失敗。 |
+建立資料流後，您可以監視正在通過其接收的資料，以查看有關流運行、完成狀態和錯誤的資訊。 有關完整的API示例，請閱讀上的指南 [使用API監視源資料流](../../monitor.md)。
 
 ### 更新資料流
 
-要更新資料流的運行計畫、名稱和說明，請向 [!DNL Flow Service] 提供流ID、版本和要使用的新計畫時的API。
+通過向發出PATCH請求來更新資料流的詳細資訊，如其名稱和說明，以及其運行計畫和關聯映射集 `/flows` 端點 [!DNL Flow Service] API，同時提供資料流的ID。 發出PATCH請求時，必須提供資料流的唯一性 `etag` 的 `If-Match` 標題。 有關完整的API示例，請閱讀上的指南 [使用API更新源資料流](../../update-dataflows.md)。
 
->[!IMPORTANT]
->
->的 `If-Match` 發出PATCH請求時需要標頭。 此標頭的值是要更新的資料流的唯一標籤。
+### 更新帳戶
 
-**API格式**
-
-```http
-PATCH /flows/{FLOW_ID}
-```
-
-**要求**
-
-以下請求將更新流運行計畫以及資料流的名稱和說明。
-
-```shell
-curl -X PATCH \
-    'https://platform.adobe.io/data/foundation/flowservice/flows/993f908f-3342-4d9c-9f3c-5aa9a189ca1a' \
-    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-    -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
-    -H 'x-sandbox-name: {SANDBOX_NAME}'
-    -H 'If-Match: "1a0037e4-0000-0200-0000-602e06f60000"' \
-    -d '[
-            {
-                "op": "replace",
-                "path": "/scheduleParams/frequency",
-                "value": "day"
-            },
-            {
-                "op": "replace",
-                "path": "/name",
-                "value": "New dataflow name"
-            },
-            {
-                "op": "replace",
-                "path": "/description",
-                "value": "Updated dataflow description"
-            }
-        ]'
-```
-
-| 參數 | 說明 |
-| --------- | ----------- |
-| `op` | 用於定義更新資料流所需操作的操作調用。 操作包括： `add`。 `replace`, `remove`。 |
-| `path` | 要更新的參數的路徑。 |
-| `value` | 要用更新參數的新值。 |
-
-**回應**
-
-成功的響應將返回流ID和更新的etag。 您可以通過向Web站點發出GET請求來驗證更新 [!DNL Flow Service] API，同時提供流ID。
-
-```json
-{
-    "id": "993f908f-3342-4d9c-9f3c-5aa9a189ca1a",
-    "etag": "\"50014cc8-0000-0200-0000-6036eb720000\""
-}
-```
+通過執行對的PATCH請求，更新源帳戶的名稱、說明和憑據 [!DNL Flow Service] API，同時將基本連接ID作為查詢參數提供。 發出PATCH請求時，必須提供源帳戶的唯一 `etag` 的 `If-Match` 標題。 有關完整的API示例，請閱讀上的指南 [使用API更新源帳戶](../../update.md)。
 
 ### 刪除資料流
 
-使用現有流ID，可以通過執行對的DELETE請求來刪除資料流 [!DNL Flow Service] API。
+通過執行DELETE請求刪除資料流 [!DNL Flow Service] API，同時提供要作為查詢參數一部分刪除的資料流的ID。 有關完整的API示例，請閱讀上的指南 [使用API刪除資料流](../../delete-dataflows.md)。
 
-**API格式**
+### 刪除帳戶
 
-```http
-DELETE /flows/{FLOW_ID}
-```
-
-| 參數 | 說明 |
-| --------- | ----------- |
-| `{FLOW_ID}` | 獨特 `id` 要刪除的資料流的值。 |
-
-**要求**
-
-```shell
-curl -X DELETE \
-    'https://platform.adobe.io/data/foundation/flowservice/flows/993f908f-3342-4d9c-9f3c-5aa9a189ca1a' \
-    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-    -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
-    -H 'x-sandbox-name: {SANDBOX_NAME}'
-```
-
-**回應**
-
-成功的響應返回HTTP狀態204（無內容）和空白正文。 您可以通過嘗試對資料流進行查找(GET)請求來確認刪除。 API將返回HTTP 404（未找到）錯誤，表示資料流已被刪除。
-
-### 更新連接
-
-要更新連接的名稱、說明和憑據，請向 [!DNL Flow Service] API，同時提供您要使用的基本連接ID、版本和新資訊。
-
->[!IMPORTANT]
->
->的 `If-Match` 發出PATCH請求時需要標頭。 此標頭的值是要更新的連接的唯一版本。
-
-**API格式**
-
-```http
-PATCH /connections/{BASE_CONNECTION_ID}
-```
-
-| 參數 | 說明 |
-| --------- | ----------- |
-| `{BASE_CONNECTION_ID}` | 獨特 `id` 要更新的連接的值。 |
-
-**要求**
-
-以下請求提供了新名稱和說明以及一組新的憑據，以更新您的連接。
-
-```shell
-curl -X PATCH \
-    'https://platform.adobe.io/data/foundation/flowservice/connections/139f6a5f-a78b-4744-9f6a-5fa78bd74431' \
-    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-    -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
-    -H 'x-sandbox-name: {SANDBOX_NAME}'
-    -H 'If-Match: 1400dd53-0000-0200-0000-5f3f23450000' \
-    -d '[
-        {
-            "op": "replace",
-            "path": "/auth/params",
-            "value": {
-                "username": "{USERNAME}",
-                "password": "{NEW_PASSWORD}",
-                "securityToken": "{NEW_SECURITY_TOKEN}"
-            }
-        },
-        {
-            "op": "replace",
-            "path": "/name",
-            "value": "Zendesk connection"
-        },
-        {
-            "op": "add",
-            "path": "/description",
-            "value": "Zendesk connection"
-        }
-    ]'
-```
-
-| 參數 | 說明 |
-| --------- | ----------- |
-| `op` | 用於定義更新連接所需操作的操作調用。 操作包括： `add`。 `replace`, `remove`。 |
-| `path` | 要更新的參數的路徑。 |
-| `value` | 要用更新參數的新值。 |
-
-**回應**
-
-成功的響應將返回基本連接ID和更新的etag。 您可以通過向Web站點發出GET請求來驗證更新 [!DNL Flow Service] API，同時提供連接ID。
-
-```json
-{
-    "id": "139f6a5f-a78b-4744-9f6a-5fa78bd74431",
-    "etag": "\"3600e378-0000-0200-0000-5f40212f0000\""
-}
-```
-
-### 刪除連接
-
-一旦您擁有現有基本連接ID，請執行DELETE請求 [!DNL Flow Service] API。
-
-**API格式**
-
-```http
-DELETE /connections/{CONNECTION_ID}
-```
-
-| 參數 | 說明 |
-| --------- | ----------- |
-| `{BASE_CONNECTION_ID}` | 獨特 `id` 要刪除的基本連接的值。 |
-
-**要求**
-
-```shell
-curl -X DELETE \
-    'https://platform.adobe.io/data/foundation/flowservice/connections/dd3631cd-d0ea-4fea-b631-cdd0ea6fea21' \
-    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-    -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
-    -H 'x-sandbox-name: {SANDBOX_NAME}'
-```
-
-**回應**
-
-成功的響應返回HTTP狀態204（無內容）和空白正文。
-
-您可以通過嘗試查找(GET)連接請求來確認刪除。
+通過執行DELETE請求刪除帳戶 [!DNL Flow Service] API，同時提供要刪除的帳戶的基本連接ID。 有關完整的API示例，請閱讀上的指南 [使用API刪除源帳戶](../../delete.md)。
