@@ -4,9 +4,9 @@ title: 將受眾資料激活到配置檔案請求目標
 type: Tutorial
 description: 瞭解如何通過將段映射到配置檔案請求目標來激活您在Adobe Experience Platform擁有的受眾資料。
 exl-id: cd7132eb-4047-4faa-a224-47366846cb56
-source-git-commit: 26e7a3e78a4513aa69cdfbed7902509609e114cc
+source-git-commit: cda4591021c5b0a0bd6f43765d72b5867ec59aea
 workflow-type: tm+mt
-source-wordcount: '678'
+source-wordcount: '772'
 ht-degree: 0%
 
 ---
@@ -65,9 +65,23 @@ ht-degree: 0%
 
 ![顯示選定屬性的映射步驟的影像](../assets/ui/activate-profile-request-destinations/mapping-step.png)
 
-要添加屬性，請選擇 **[!UICONTROL 添加新欄位]** 控制和搜索，或導航到所需的XDM屬性欄位，如下所示。
+### 選擇源屬性 {#select-source-attributes}
 
-![顯示如何在映射步驟中選擇XDM屬性的螢幕錄制](../assets/ui/activate-profile-request-destinations/mapping-step-select-attribute.gif)
+要添加源屬性，請選擇 **[!UICONTROL 添加新欄位]** 控制項 **[!UICONTROL 源欄位]** 列和搜索，或導航到所需的XDM屬性欄位，如下所示。
+
+![顯示如何在映射步驟中選擇目標屬性的螢幕錄制](../assets/ui/activate-profile-request-destinations/mapping-step-select-attribute.gif)
+
+### 選擇目標屬性 {#select-target-attributes}
+
+>[!NOTE]
+>
+>某些目標要求您只選擇源屬性，而其他目標則要求源屬性和目標屬性。
+>
+>當前， [Adobe TargetV2](../catalog/personalization/adobe-target-connection.md) 目標僅需要源屬性，而 [具有屬性的自定義個性化](../catalog/personalization/custom-personalization.md) 需要源屬性和目標屬性。
+
+要添加目標屬性，請選擇 **[!UICONTROL 添加新欄位]** 控制項 **[!UICONTROL 目標欄位]** 列和鍵入要將源屬性映射到的自定義屬性名稱。
+
+![顯示如何在映射步驟中選擇XDM屬性的螢幕錄制](../assets/ui/activate-profile-request-destinations/mapping-step-select-target-attribute.gif)
 
 ## 計畫段導出 {#scheduling}
 
