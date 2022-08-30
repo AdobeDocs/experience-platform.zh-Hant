@@ -4,9 +4,9 @@ title: 目標儀表板指南
 description: Adobe Experience Platform提供了一個儀表板，您可以通過該儀表板查看有關組織活動目標的重要資訊。
 type: Documentation
 exl-id: 6a34a796-24a1-450a-af39-60113928873e
-source-git-commit: e59ba2e83808b460016805997580dc16c4cd369e
+source-git-commit: 7a67ac4e1e8730197221832090c1414073399a1b
 workflow-type: tm+mt
-source-wordcount: '2670'
+source-wordcount: '2716'
 ht-degree: 0%
 
 ---
@@ -215,6 +215,10 @@ Adobe提供了多個標準小部件，您可以使用這些部件來可視化與
 如果您的段映射配置檔案計數與過去30天內的平均映射配置檔案大小不在一個標準偏差範圍之內，則表明系統中存在異常，應對其進行調查。
 
 如果 [!UICONTROL 映射的受眾健康] 小部件偏差較大，您應參考受眾大小趨勢圖並查找異常段。 這一趨勢可以進一步瞭解您所在細分市場的健康狀況。
+
+>[!NOTE]
+>
+>映射的受眾健康小部件的預設大小可能會妨礙表資訊。 請修改小部件的大小，以提高映射的段名稱和列標題的可讀性。 請參閱修改儀表板文檔以獲取有關 [如何調整小部件的大小](../customize/modify.md)。
 
 ![映射的受眾健康小部件。](../images/destinations/mapped-audience-health.png)
 
