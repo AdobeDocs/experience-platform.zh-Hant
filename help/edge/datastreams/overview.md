@@ -3,9 +3,9 @@ title: 資料流概述
 description: 連接您的客戶端 Experience Platform SDK 與 Adobe 產品和協力廠商目標的整合。
 keywords: 配置；資料流；資料流；邊；資料流ID；環境設定；邊配置ID；標識；ID同步容器ID；沙盒；流入口；事件資料集；目標；客戶端代碼；屬性令牌；目標；Cookie目標；URL目標；分析設定塊報表ID；資料資料收集準備；資料準備；映射器；XDM映射器；邊緣上的映射器；
 exl-id: 736c75cb-e290-474e-8c47-2a031f215a56
-source-git-commit: 1ab1c269fd43368e059a76f96b3eb3ac4e7b8388
+source-git-commit: 45f5d23a671c8e015ca26e0d5025685255c2fc35
 workflow-type: tm+mt
-source-wordcount: '1774'
+source-wordcount: '1728'
 ht-degree: 2%
 
 ---
@@ -15,10 +15,6 @@ ht-degree: 2%
 資料流表示實施Adobe Experience PlatformWeb和移動SDK時的伺服器端配置。 當 [configure命令](../fundamentals/configuring-the-sdk.md) 在SDK中，控制必須在客戶端上處理的內容(如 `edgeDomain`)，資料流處理SDK的所有其它配置。 當請求發送到Adobe Experience Platform邊緣網路時， `edgeConfigId` 用於引用資料流。 這樣，您就可以更新伺服器端配置，而無需在網站上進行代碼更改。
 
 本文檔介紹在資料收集UI中配置資料流的步驟。
-
->[!NOTE]
->
->必須為您的組織設定此功能，才能在UI中訪問它。 請填寫以下內容 [表格](https://adobe.ly/websdkaccess) 請求必要的訪問權。 要管理資料流，必須將用戶帳戶添加到產品配置檔案中的標籤 [!DNL Adobe Experience Platform]。
 
 ## 訪問 [!UICONTROL 資料流] 工作區
 

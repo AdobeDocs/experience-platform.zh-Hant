@@ -2,9 +2,9 @@
 title: Adobe Experience PlatformWeb SDK常見問題
 description: 獲取有關Adobe Experience PlatformWeb SDK的常見問題的答案。
 exl-id: 6ddb4b4d-c9b8-471a-bd2e-135dc4202876
-source-git-commit: 95305c0a5df71295e1321eb4c8c28baa66c5d94d
+source-git-commit: 720960b7d63c30707f823fdfafc2299289ea0a11
 workflow-type: tm+mt
-source-wordcount: '1955'
+source-wordcount: '1935'
 ht-degree: 1%
 
 ---
@@ -82,9 +82,9 @@ Alloy是Adobe Experience PlatformWeb SDK的代碼名。 它在SDK的原始碼和
 
 ## 客戶是否需要購買Adobe Experience Platform [!DNL Web SDK]?
 
-不可以。 任何Adobe數字型驗客戶都可以免費使用Adobe Experience PlatformWeb SDK。 要使用Web SDK，您必須為組織設定此功能。 如果您想獲得訪問權限，請填寫以下內容 [表格](https://adobe.ly/websdkaccess) 而Adobe會讓你有權 [資料流UI](datastreams/overview.md) 和Adobe Experience PlatformUI（如果需要）。
+不可以。 任何Adobe數字型驗客戶都可以免費使用Adobe Experience PlatformWeb SDK。 希望使用 [!DNL Web SDK] 需要配置在Adobe Experience Platform資料收集UI中建立架構、資料集、標識命名空間和資料流的適當權限。
 
-希望使用 [!DNL Web SDK] 將獲得在Adobe Experience PlatformUI中建立架構、資料集和標識命名空間的權限。
+有關配置這些權限的詳細資訊，請參閱我們的文檔 [資料收集權限管理](https://experienceleague.adobe.com/docs/experience-platform/collection/permissions.html?lang=en)。
 
 ## 誰應使用Web SDK?
 
