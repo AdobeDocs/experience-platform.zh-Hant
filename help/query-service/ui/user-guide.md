@@ -5,9 +5,9 @@ title: 查詢編輯器UI指南
 topic-legacy: query editor
 description: 查詢編輯器是Adobe Experience Platform查詢服務提供的互動式工具，允許您在Experience Platform用戶介面中編寫、驗證和運行客戶體驗資料查詢。 查詢編輯器支援為分析和資料探索開發查詢，並允許您為開發目的運行互動式查詢以及非互動式查詢以填充Experience Platform中的資料集。
 exl-id: d7732244-0372-467d-84e2-5308f42c5d51
-source-git-commit: c8b3b22b678622c31462ba0baa2f50fbe89b00d5
+source-git-commit: b393311a4ddcfaab3f8ea2ccd517e0e3b32a268a
 workflow-type: tm+mt
-source-wordcount: '1625'
+source-wordcount: '1882'
 ht-degree: 1%
 
 ---
@@ -62,7 +62,37 @@ ht-degree: 1%
 
 - **表和欄位自動完成：** 開始鍵入要輸入的表名 `SELECT` 從，然後使用箭頭鍵導航到要查找的表，然後按 **輸入**。 一旦選擇了表，自動完成將識別該表中的欄位。
 
-![影像](../images/ui/query-editor/tables-auto.png)
+![顯示下拉建議的查詢編輯器命令行介面。](../images/ui/query-editor/tables-auto.png)
+
+### (Beta)自動完成UI配置切換 {#auto-complete}
+
+>[!IMPORTANT]
+>
+>自動完成的UI配置切換處於Beta狀態。 其功能和文檔可能會更改。
+
+的 [!DNL Query Editor] 在編寫查詢時自動建議可能的SQL關鍵字以及表或列詳細資訊。 自動完成功能預設啟用，通過選擇 [!UICONTROL 語法自動完成] 切換到查詢編輯器的右上角。
+
+自動完成配置設定是每個用戶的，並記住該用戶的連續登錄。
+
+![突出顯示語法自動完成切換的查詢編輯器。](../images/ui/query-editor/auto-complete-toggle.png)
+
+禁用此功能會阻止處理多個元資料命令，並提供在編輯查詢時通常有助於作者速度的建議。
+
+使用切換功能啟用自動完成功能時，在短暫暫停後，建議的表名和列名以及SQL關鍵字建議將可用。 控制台中查詢編輯器下方的成功消息表示該功能處於活動狀態。
+
+如果禁用自動完成功能，則需要刷新頁面才能使該功能生效。 禁用時，將顯示一個確認對話框，其中包含三個選項 [!UICONTROL 語法自動完成] 切換：
+
+- [!UICONTROL 取消]
+- [!UICONTROL 保存更改並刷新]
+- [!UICONTROL 刷新而不保存更改]
+
+>[!IMPORTANT]
+>
+>如果您在禁用此功能時正在編寫或編輯查詢，則必須先保存對查詢的任何更改，然後才能刷新頁面，否則所有進度都將丟失。
+
+![用於禁用自動完成功能的確認對話框。](../images/ui/query-editor/confirmation-dialog.png)
+
+選擇相應的選項以禁用自動完成功能。
 
 ### 錯誤檢測 {#error-detection}
 
