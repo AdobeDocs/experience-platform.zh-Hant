@@ -4,9 +4,9 @@ title: 段儀表板指南
 description: 'Adobe Experience Platform提供了一個控制板，您可以通過該控制板查看有關您的組織建立的段的重要資訊。 '
 type: Documentation
 exl-id: de5e07bc-2c44-416e-99db-7607059117cb
-source-git-commit: e18d37ba02d6edee77c91b719a0a2336e1316b71
+source-git-commit: 70fb980b276d256e0f7170b6e49527bca59adfe9
 workflow-type: tm+mt
-source-wordcount: '1665'
+source-wordcount: '1681'
 ht-degree: 0%
 
 ---
@@ -48,6 +48,10 @@ Adobe Experience Platform用戶介面(UI)提供了一個儀表板，您可以通
 操控板會自動選擇要顯示的段，但是，您可以使用下拉菜單或段選擇器更改段。
 
 要選擇其他段，請選擇段名稱旁邊的下拉清單或使用段選擇器開啟段選擇對話框。
+
+>[!IMPORTANT]
+>
+>只有輪廓計數大於零的段才顯示在可選段清單中。
 
 ![](../images/segments/change-segment.png)
 
