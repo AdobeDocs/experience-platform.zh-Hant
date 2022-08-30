@@ -5,9 +5,9 @@ title: 查詢編輯器UI指南
 topic-legacy: query editor
 description: 查詢編輯器是Adobe Experience Platform查詢服務提供的互動式工具，允許您在Experience Platform用戶介面中編寫、驗證和運行客戶體驗資料查詢。 查詢編輯器支援為分析和資料探索開發查詢，並允許您為開發目的運行互動式查詢以及非互動式查詢以填充Experience Platform中的資料集。
 exl-id: d7732244-0372-467d-84e2-5308f42c5d51
-source-git-commit: b393311a4ddcfaab3f8ea2ccd517e0e3b32a268a
+source-git-commit: b4f4549e49eb8b37bd4209c5bcf01c5622e8fbd1
 workflow-type: tm+mt
-source-wordcount: '1882'
+source-wordcount: '1865'
 ht-degree: 1%
 
 ---
@@ -64,11 +64,7 @@ ht-degree: 1%
 
 ![顯示下拉建議的查詢編輯器命令行介面。](../images/ui/query-editor/tables-auto.png)
 
-### (Beta)自動完成UI配置切換 {#auto-complete}
-
->[!IMPORTANT]
->
->自動完成的UI配置切換處於Beta狀態。 其功能和文檔可能會更改。
+### 自動完成UI配置切換 {#auto-complete}
 
 的 [!DNL Query Editor] 在編寫查詢時自動建議可能的SQL關鍵字以及表或列詳細資訊。 自動完成功能預設啟用，通過選擇 [!UICONTROL 語法自動完成] 切換到查詢編輯器的右上角。
 

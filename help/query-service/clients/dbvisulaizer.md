@@ -5,9 +5,9 @@ title: 將DbVisualizer連接到查詢服務
 topic-legacy: connect
 description: 此文檔介紹將DbVisualizer與Adobe Experience Platform查詢服務連接的步驟。
 exl-id: badb0d89-1713-438c-8a9c-d1404051ff5f
-source-git-commit: 9c272cc5b879e38f6b6113542ec7bdfd4f11fa8a
+source-git-commit: 760b04499edd0374f1aae71600bef074a6f17531
 workflow-type: tm+mt
-source-wordcount: '726'
+source-wordcount: '743'
 ht-degree: 0%
 
 ---
@@ -40,12 +40,13 @@ ht-degree: 0%
 
 ![突出顯示了「屬性」頁籤的「資料庫連接」工作區。](../images/clients/dbvisualizer/driver-properties.png)
 
-下表顯示了三個必需的驅動程式屬性。
+建議使用下表中顯示的驅動程式屬性來啟用SSL與DBVisualizer的配合使用。
 
 | 屬性 | 說明 |
 | ------ | ------ |
 | `PGHOST` | 的主機名 [!DNL PostgreSQL] 伺服器。 此值是您的Experience Platform [!UICONTROL 主機] 憑據。 |
-| `SSL` | 這控制SSL要求的使用。 你 **必須** 使用值 `require` 以啟用此要求。 |
+| `ssl` | 定義SSL值 `1` 啟用SSL。 |
+| `sslmode` | 這控制SSL要求的使用。 你 **必須** 使用值 `require` 以啟用此要求。 |
 | `user` | 連接到資料庫的用戶名是您的組織ID。 它是以下結尾的字母數字字串 `@adobe.org` |
 
 >[!IMPORTANT]
