@@ -3,9 +3,9 @@ keywords: Experience Platform；主題；熱門主題；訪問控制；基於屬
 title: 基於屬性的訪問控制管理標籤
 description: 本文檔提供有關通過Adobe Experience Cloud的「權限」介面管理標籤的資訊
 exl-id: c790f09c-fda6-48bf-95db-3f5053cd882e
-source-git-commit: 3d7b3471c363c036c41171789b7dcbed5489f2ee
+source-git-commit: 3d49b5c503ec0fd92f0639abf366d7652566fac7
 workflow-type: tm+mt
-source-wordcount: '184'
+source-wordcount: '202'
 ht-degree: 0%
 
 ---
@@ -18,7 +18,12 @@ ht-degree: 0%
 
 標籤允許您根據應用於該資料的使用策略對資料集和欄位進行分類。 標籤可以隨時應用，在選擇管理資料的方式上提供了靈活性。 最佳做法鼓勵在資料被引入平台或資料在平台中可用時立即標籤資料。
 
-## 建立新標籤
+## 建立新標籤 {#create-new-label}
+
+>[!CONTEXTUALHELP]
+>id="platform_abac_labelusage"
+>title="標籤用法"
+>abstract="您可以使用自定義標籤將資料管理和訪問控制配置應用到資料。"
 
 >[!NOTE]
 >

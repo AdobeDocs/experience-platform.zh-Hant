@@ -5,9 +5,9 @@ title: 在UI中管理資料使用標籤
 topic-legacy: labels
 description: 本指南介紹在Adobe Experience Platform用戶介面內使用資料使用標籤的步驟。
 exl-id: aa44d5cc-416a-4ef2-be14-b4f32aec162c
-source-git-commit: 3876af19ef100f29ef738cf7518696a57600945a
+source-git-commit: 3d49b5c503ec0fd92f0639abf366d7652566fac7
 workflow-type: tm+mt
-source-wordcount: '1186'
+source-wordcount: '1229'
 ht-degree: 0%
 
 ---
@@ -106,7 +106,12 @@ ht-degree: 0%
 
 請參閱上的教程 [管理模式級標籤](../../xdm/tutorials/labels.md) 的子菜單。
 
-## 管理自定義標籤
+## 管理自定義標籤 {#manage-custom-labels}
+
+>[!CONTEXTUALHELP]
+>id="platform_governance_createlabels"
+>title="建立標籤"
+>abstract="標籤允許您根據應用於該資料的使用策略對資料集和欄位進行分類。 平台提供了一組標準標籤供您使用，但您也可以建立特定於您組織的自定義標籤。"
 
 您可以在 **[!UICONTROL 策略]** 工作區 [!DNL Experience Platform] UI。 選擇 **[!UICONTROL 策略]** 在左導航中，選擇 **[!UICONTROL 標籤]** 的子菜單。 從此處，選擇 **[!UICONTROL 建立標籤]**。
 

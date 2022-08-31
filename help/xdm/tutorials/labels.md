@@ -2,9 +2,9 @@
 title: 管理架構的資料使用標籤
 description: 瞭解如何將資料使用標籤添加到Adobe Experience PlatformUI中的「體驗資料模型」(XDM)架構欄位。
 exl-id: 92284bf7-f034-46cc-b905-bdfb9fcd608a
-source-git-commit: 6c72e9dd5961d4dc94d8264a7da795ebd96c40ec
+source-git-commit: 3d49b5c503ec0fd92f0639abf366d7652566fac7
 workflow-type: tm+mt
-source-wordcount: '711'
+source-wordcount: '736'
 ht-degree: 0%
 
 ---
@@ -33,7 +33,12 @@ ht-degree: 0%
    * [架構編輯器](../ui/overview.md):瞭解如何在平台UI中建立和管理架構和其他資源。
 * [[!DNL Adobe Experience Platform Data Governance]](../../data-governance/home.md):提供對平台操作強制實施資料使用限制的基礎架構，使用策略定義可以（或不能）對標籤資料執行哪些市場營銷操作。
 
-## 選擇要將標籤添加到的架構或欄位
+## 選擇要將標籤添加到的架構或欄位 {#select-schema-field}
+
+>[!CONTEXTUALHELP]
+>id="platform_schemas_editgovernancelabels"
+>title="編輯治理標籤"
+>abstract="將標籤應用到架構欄位，以指示應用於該特定欄位中包含的資料的使用策略。"
 
 要開始添加標籤，必須先 [選擇要編輯的現有架構](../ui/resources/schemas.md#edit) 或 [建立新架構](../ui/resources/schemas.md#create) 在架構編輯器中查看其結構。
 
