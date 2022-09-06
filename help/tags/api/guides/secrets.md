@@ -1,9 +1,10 @@
 ---
 title: Reactor API中的機密
 description: 了解如何在Reactor API中設定機密，以用於事件轉送的基本知識。
-source-git-commit: 6822199c3ecf4414893a8b8dfc650e3da40a6470
+exl-id: 0298c0cd-9fba-4b54-86db-5d2d8f9ade54
+source-git-commit: 4f3c97e2cad6160481adb8b3dab3d0c8b23717cc
 workflow-type: tm+mt
-source-wordcount: '1115'
+source-wordcount: '1241'
 ht-degree: 2%
 
 ---
@@ -18,7 +19,7 @@ ht-degree: 2%
 | --- | --- |
 | `token` | 一個字串，代表兩個系統都已知和理解的驗證令牌值。 |
 | `simple-http` | 包含用戶名和密碼的兩個字串屬性。 |
-| `oauth2` | 包含數個要支援的屬性 [OAuth](https://datatracker.ietf.org/doc/html/rfc6749) 驗證規格。 事件轉送會要求您取得所需資訊，然後以指定的間隔為您處理這些代號的續約。 |
+| `oauth2-client_credentials` | 包含數個要支援的屬性 [OAuth](https://datatracker.ietf.org/doc/html/rfc6749) 驗證規格。 事件轉送會要求您取得所需資訊，然後以指定的間隔為您處理這些代號的續約。 |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -26,9 +27,14 @@ ht-degree: 2%
 
 ## 憑證
 
-每個密碼包含 `credentials` 包含其相應憑據值的屬性。 每種機密類型都有不同的必要屬性，如下節所示。
+每個密碼包含 `credentials` 包含其相應憑據值的屬性。 當 [在API中建立機密](../endpoints/secrets.md#create)，每種機密類型都有不同的必要屬性，如下節所示：
 
-### `token`
+* [`token`](#token)
+* [&#39;simple-http&#39;](#simple-http)
+* [&#39;oauth2-client_credentials&#39;](#oauth2-client_credentials)
+* [&#39;oauth2-google&#39;](#oauth2-google)
+
+### `token` {#token}
 
 有 `type_of` 值 `token` 只需要下方的單一屬性 `credentials`:
 
@@ -40,7 +46,7 @@ ht-degree: 2%
 
 代號會儲存為靜態值，因此會儲存機密 `expires_at` 和 `refresh_at` 屬性設為 `null` 密碼建立時。
 
-### `simple-http`
+### `simple-http` {#simple-http}
 
 有 `type_of` 值 `simple-http` 需要下列屬性 `credentials`:
 
@@ -53,23 +59,19 @@ ht-degree: 2%
 
 建立機密時，兩個屬性會以 `username:password`. 交換後，秘密 `expires_at` 和 `refresh_at` 屬性設為 `null`.
 
-### `oauth2`
+### `oauth2-client_credentials` {#oauth2-client_credentials}
 
->[!NOTE]
->
->目前，僅 [客戶端憑據授予類型](https://www.oauth.com/oauth2-servers/access-tokens/client-credentials/) 支援OAuth機密。
-
-有 `type_of` 值 `oauth2` 需要下列屬性 `credentials`:
+有 `type_of` 值 `oauth2-client_credentials` 需要下列屬性 `credentials`:
 
 | 憑據屬性 | 資料類型 | 說明 |
 | --- | --- | --- |
 | `client_id` | 字串 | OAuth整合的用戶端ID。 |
 | `client_secret` | 字串 | OAuth整合的用戶端密碼。 API回應中未包含此值。 |
-| `authorization_url` | 字串 | OAuth整合的授權URL。 |
+| `token_url` | 字串 | OAuth整合的授權URL。 |
 | `refresh_offset` | 整數 | *（可選）* 用於偏移刷新操作的值（以秒為單位）。 如果在建立密碼時省略此屬性，則值會設為 `14400` （4小時）。 |
 | `options` | 物件 | *（可選）* 指定OAuth整合的其他選項：<ul><li>`scope`:代表 [OAuth 2.0範圍](https://oauth.net/2/scope/) 來取得憑證。</li><li>`audience`:代表 [Auth0存取權杖](https://auth0.com/docs/protocols/protocol-oauth2).</li></ul> |
 
-當 `oauth2` 密碼會建立或更新， `client_id` 和 `client_secret` (可能 `options`)會以POST要求來交換 `authorization_url`，根據OAuth通訊協定的用戶端認證流程。
+當 `oauth2-client_credentials` 密碼會建立或更新， `client_id` 和 `client_secret` (可能 `options`)會以POST要求來交換 `token_url`，根據OAuth通訊協定的用戶端認證流程。
 
 >[!NOTE]
 >
@@ -89,13 +91,29 @@ ht-degree: 2%
 
 如果交易所因任何原因失敗， `status_details` 屬性 `meta` 物件更新，包含相關資訊。
 
-### 重新整理 `oauth2` 秘密
+#### 重新整理 `oauth2-client_credentials` 秘密
 
-若 `oauth2` 已將機密指派給環境，且其狀態為 `succeeded` （已成功交換憑據），則會自動在 `refresh_at`.
+若 `oauth2-client_credentials` 已將機密指派給環境，且其狀態為 `succeeded` （已成功交換憑據），則會自動在 `refresh_at`.
 
 如果交換成功，則 `refresh_status` 屬性 `meta` 物件設為 `succeeded` whel `expires_at`, `refresh_at`，和 `activated_at` 會據此更新。
 
 如果交換失敗，則會再嘗試三次，上次嘗試的時間不超過存取權杖過期的兩小時。 如果所有嘗試都失敗， `refresh_status_details` 屬性 `meta` 物件更新，包含相關詳細資訊。
+
+### `oauth2-google` {#oauth2-google}
+
+有 `type_of` 值 `oauth2-google` 需要下列屬性 `credentials`:
+
+| 憑據屬性 | 資料類型 | 說明 |
+| --- | --- | --- |
+| `scopes` | 陣列 | 列出用於驗證的Google產品範圍。 支援以下範圍：<ul><li>[Google Ads](https://developers.google.com/google-ads/api/docs/oauth/overview): `https://www.googleapis.com/auth/adwords`</li><li>[Google酒吧/小店](https://cloud.google.com/pubsub/docs/reference/service_apis_overview): `https://www.googleapis.com/auth/pubsub`</li></ul> |
+
+建立 `oauth2-google` 機密，回應包含 `meta.token_url` 屬性。 您必須將此URL複製並貼到瀏覽器中，才能完成Google驗證流程。
+
+#### 重新授權 `oauth2-google` 秘密
+
+的授權URL `oauth2-google` 機密會在機密建立後一小時過期(如 `meta.token_url_expires_at`)。 此後，必須重新授權機密，才能續訂驗證程式。
+
+請參閱 [secrets端點指南](../endpoints/secrets.md#reauthorize) 有關如何重新授權的詳細資訊 `oauth2-google` 向Reactor API提出PATCH要求以加密。
 
 ## 環境關係
 
@@ -107,7 +125,7 @@ ht-degree: 2%
 >
 >此規則的唯一例外是相關環境遭刪除。 在這種情況下，會清除關係，並將機密指派給不同的環境。
 
-成功交換機密的憑證後，為了與環境相關聯的機密，交換工件(的代號字串 `token`,Base64編碼的字串 `simple-http`，或 `oauth2`)安全地儲存在環境中。
+成功交換機密的憑證後，為了與環境相關聯的機密，交換工件(的代號字串 `token`,Base64編碼的字串 `simple-http`，或 `oauth2-client_credentials`)安全地儲存在環境中。
 
 在環境上成功儲存交換工件後，機密的 `activated_at` 屬性設為目前的UTC時間，現在可使用資料元素參考。 請參閱 [下一節](#referencing-secrets) 以取得參考機密的詳細資訊。
 
