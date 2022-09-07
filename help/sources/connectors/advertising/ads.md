@@ -1,42 +1,40 @@
 ---
-keywords: Experience Platform；首頁；熱門主題；Google廣告詞；google廣告詞
-solution: Experience Platform
-title: GoogleAdWords源概述
-topic-legacy: overview
-description: 瞭解如何使用API或用戶介面將GoogleAdWords連接到Adobe Experience Platform。
+keywords: Experience Platform；首頁；熱門主題；Google Ads;google ads
+title: Google Ads來源概述
+description: 了解如何使用API或使用者介面將Google Ads連線至Adobe Experience Platform。
 exl-id: 1f6257e0-213c-4723-a240-511c11c5833c
-source-git-commit: fa861e9740e05b4fcc4e8039bb288301d42b8357
+source-git-commit: b732fa1f4afb71e7b8c3276335b371d0f8ef888d
 workflow-type: tm+mt
 source-wordcount: '233'
 ht-degree: 0%
 
 ---
 
-# [!DNL Google AdWords] 源
+# [!DNL Google Ads] 來源
 
 >[!NOTE]
 >
->的 [!DNL Google AdWords] 源為beta。 查看 [源概述](../../home.md#terms-and-conditions) 的子菜單。
+>此 [!DNL Google Ads] 來源為測試版。 請參閱 [來源概觀](../../home.md#terms-and-conditions) 有關使用測試版標籤連接器的詳細資訊。
 
-Adobe Experience Platform允許從外部源接收資料，同時讓您能夠使用 [!DNL Platform] 服務。 您可以從多種源(如Adobe應用程式、基於雲的儲存、資料庫和許多其他源)接收資料。
+Adobe Experience Platform可讓您從外部來源擷取資料，同時使用來建構、加標籤及增強傳入資料 [!DNL Platform] 服務。 您可以從多種來源(如Adobe應用程式、雲儲存、資料庫等)內嵌資料。
 
-[!DNL Experience Platform] 為從第三方廣告系統接收資料提供支援。 對廣告提供商的支援包括 [!DNL Google AdWords]。
+[!DNL Experience Platform] 支援從協力廠商廣告系統擷取資料。 對廣告提供者的支援包括 [!DNL Google Ads].
 
-## IP地址允許清單
+## IP位址允許清單
 
-在使用源連接器之前，必須將IP地址清單添加到允許清單。 如果無法將特定於區域的IP地址添加到允許清單，則在使用源時可能會導致錯誤或效能不佳。 查看 [IP地址允許清單](../../ip-address-allow-list.md) 的子菜單。
+使用來源連接器前，必須將IP位址清單新增至允許清單。 若未將您地區專屬的IP位址新增至允許清單，在使用來源時可能會導致錯誤或效能不佳。 請參閱 [IP位址允許清單](../../ip-address-allow-list.md) 頁面以取得詳細資訊。
 
-## 連接 [!DNL Google AdWords] 到平台
+## Connect [!DNL Google Ads] 到平台
 
-以下文檔提供了有關如何連接的資訊 [!DNL Google AdWords] 到使用API或用戶介面的平台：
+以下檔案提供如何連線的資訊 [!DNL Google Ads] 若要使用API或使用者介面來建立平台：
 
 ### 使用API
 
-* [使用流服務API建立GoogleAdWords基連接](../../tutorials/api/create/advertising/ads.md)
-* [使用流服務API瀏覽資料表](../../tutorials/api/explore/tabular.md)
-* [使用流服務API為廣告源建立資料流](../../tutorials/api/collect/advertising.md)
+* [使用流量服務API建立Google Ads基本連線](../../tutorials/api/create/advertising/ads.md)
+* [使用流量服務API探索資料表](../../tutorials/api/explore/tabular.md)
+* [使用流量服務API為廣告來源建立資料流](../../tutorials/api/collect/advertising.md)
 
 ### 使用UI
 
-* [在UI中建立GoogleAdWords源連接](../../tutorials/ui/create/advertising/ads.md)
-* [在UI中為廣告源連接建立資料流](../../tutorials/ui/dataflow/advertising.md)
+* [在UI中建立Google Ads來源連線](../../tutorials/ui/create/advertising/ads.md)
+* [在UI中為Advertising來源連線建立資料流](../../tutorials/ui/dataflow/advertising.md)
