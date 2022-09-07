@@ -1,56 +1,57 @@
 ---
 title: 歸因分析
-description: 本文檔說明了如何使用Query Service建立基於首次接觸和最後接觸的市場營銷屬性模型的市場營銷效果衡量技術。
-source-git-commit: 870626f25b1aabdcb5739bbb1ab85bdad44df195
+description: 本檔案說明如何使用Query Service根據首次接觸和上次接觸的行銷歸因模型，建立行銷成效測量技術。
+exl-id: d62cd349-06fc-4ce6-a5e8-978f11186927
+source-git-commit: e33d59c4ac28f55ba6ae2fc073d02f8738159263
 workflow-type: tm+mt
-source-wordcount: '1402'
+source-wordcount: '1419'
 ht-degree: 1%
 
 ---
 
 # 歸因分析
 
-歸因是一個分析概念，有助於確定有助於業務銷售或轉換的渠道、優惠和消息等營銷策略。 此概念評估消費者的旅程（客戶與公司交互以實現目標的過程），根據客戶接觸點（客戶與您的品牌進行任何交互時）進行購買或收購。 通過歸因分析，營銷人員可以評估將渠道與潛在客戶連接起來的投資回報。
+歸因是一種分析概念，可協助判斷對業務銷售或轉換有貢獻的行銷策略，例如管道、選件和訊息。 此概念會評估消費者歷程（客戶與公司互動以達成目標的程式），根據客戶接觸點（每當消費者與您的品牌互動時）進行購買或贏取。 透過歸因分析，行銷人員可評估將管道與潛在客戶連結的管道投資報酬率。
 
 ## 快速入門
 
-本文檔中的SQL示例是與Adobe Analytics資料通常使用的查詢。 本教程需要對以下元件進行有效理解：
+本檔案中的SQL範例是常與Adobe Analytics資料搭配使用的查詢。 本教學課程需要妥善了解下列元件：
 
-* [用於報告套件資料概述的Adobe Analytics源連接器](../../sources/connectors/adobe-applications/mapping/analytics.md)。
-* [分析欄位映射文檔](../../sources/connectors/adobe-applications/mapping/analytics.md) 提供了有關接收和映射分析資料以供查詢服務使用的詳細資訊。
+* [報表套裝資料的Adobe Analytics來源連接器概觀](../../sources/connectors/adobe-applications/mapping/analytics.md).
+* [Analytics欄位對應檔案](../../sources/connectors/adobe-applications/mapping/analytics.md) 提供擷取和對應分析資料以搭配查詢服務使用的詳細資訊。
 * [Attribution IQ概述](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/attribution/overview.html?lang=zh-Hant)
-* [《Adobe Analytics歸因小組指南》](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/panels/attribution.html?lang=zh-Hant)。
+* [Adobe Analytics歸因面板指南](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/panels/attribution.html?lang=zh-Hant).
 
-關於 `OVER()` 函式 [窗口函式部分](../sql/adobe-defined-functions.md#window-functions)。 的 [Adobe營銷和商業術語辭彙表](https://business.adobe.com/glossary/index.html) 也可能有用。
+說明 `OVER()` 函式 [窗口函式節](../sql/adobe-defined-functions.md#window-functions). 此 [Adobe行銷和商務術語字彙表](https://business.adobe.com/glossary/index.html) 也可能有用。
 
-對於以下每種使用情形，都會提供一個參數化SQL查詢示例作為模板供您自定義。 無論您看到什麼位置都提供參數 `{ }` 在您感興趣的SQL示例中。
+對於以下每個使用案例，都將提供參數化SQL查詢示例作為模板，供您自定義。 無論您在哪裡看到，都提供參數 `{ }` 在您想要評估的SQL示例中。
 
 ## 目標
 
-屬性使用案例使用Adobe Analytics資料幫助將客戶操作與成功結果相關聯。 此關聯是瞭解影響客戶體驗的因素的關鍵部分。 屬性分析資料可用於瞭解客戶在旅途中的接觸點的重要性。
+歸因使用案例使用Adobe Analytics資料，協助將客戶動作與成功結果建立關聯。 此關聯是了解影響客戶體驗的因素的重要環節。 歸因分析資料可用來了解客戶歷程中接觸點的重要性。
 
-本文檔中包含的查詢示例支援使用不同的過期設定進行首次觸摸和上次觸摸屬性的各種使用案例。 本指南說明了以下主要概念：
+本檔案包含的查詢範例支援使用不同過期設定進行首次接觸和上次接觸歸因的各種使用案例。 本指南說明下列重要概念：
 
-* 第一次接觸，最後一次觸摸歸屬。
-* 第一次觸摸和最後一次觸摸屬性，並且超時。
-* 第一次觸摸和最後一次觸摸屬性，並帶有過期條件。
+* 首次接觸和上次接觸歸因。
+* 具有過期逾時的首次接觸和上次接觸歸因。
+* 具有過期條件的首次接觸和上次接觸歸因。
 
-## 屬性查詢參數 {#attribution-query-parameters}
+## 歸因查詢參數 {#attribution-query-parameters}
 
-下表提供了第一次觸摸和最後一次觸摸屬性查詢中使用的參數及其說明的細分：
+下表提供首次接觸和上次接觸歸因查詢中所使用的參數及其說明的劃分：
 
 | 參數 | 說明 |
 |---|---|
-| `{TIMESTAMP}` | 在資料集中找到的時間戳欄位。 |
-| `{CHANNEL_NAME}` | 返回對象的標籤。 |
-| `{CHANNEL_VALUE}` | 作為查詢目標通道的列或欄位。 |
-| `{EXP_TIMEOUT}` | 查詢搜索第一觸碰事件之前的時間窗口（以秒為單位）。 |
-| `{EXP_CONDITION}` | 確定通道到期點的條件。 |
-| `{EXP_BEFORE}` | 一個布爾值，它指示通道是否在指定條件之前或之後過期， `{EXP_CONDITION}`的子菜單。 這主要為會話的到期條件啟用，以確保不從上一個會話中選擇第一次觸摸。 預設情況下，此值設定為 `false`。 |
+| `{TIMESTAMP}` | 在資料集中找到的時間戳記欄位。 |
+| `{CHANNEL_NAME}` | 傳回物件的標籤。 |
+| `{CHANNEL_VALUE}` | 查詢的目標通道的欄或欄位。 |
+| `{EXP_TIMEOUT}` | 查詢搜尋首次接觸事件之前的管道事件視窗（以秒為單位）。 |
+| `{EXP_CONDITION}` | 決定通道到期點的條件。 |
+| `{EXP_BEFORE}` | 指示通道是否在指定條件之前或之後過期的布林值， `{EXP_CONDITION}`，即會符合。 這主要是針對工作階段的到期條件啟用，以確保不會從先前的工作階段中選取首次接觸。 此值預設為 `false`. |
 
 ## 查詢結果列元件 {#query-result-column-components}
 
-屬性查詢的結果在 `first_touch` 或 `last_touch` 的雙曲餘切值。 這些列由以下元件組成：
+歸因查詢的結果會在 `first_touch` 或 `last_touch` 欄。 這些欄由下列元件組成：
 
 ```console
 ({NAME}, {VALUE}, {TIMESTAMP}, {FRACTION})
@@ -58,16 +59,20 @@ ht-degree: 1%
 
 | 參數 | 說明 |
 | ---------- | ----------- |
-| `{NAME}` | 的 `{CHANNEL_NAME}`，在Azure資料工廠(ADF)中輸入為標籤。 |
-| `{VALUE}` | 來自 `{CHANNEL_VALUE}` 是指定的 `{EXP_TIMEOUT}` 間隔 |
-| `{TIMESTAMP}` | 的時間戳 [!DNL Experience Event] 最後一次碰觸發生的地方 |
-| `{FRACTION}` | 上次觸摸的屬性，表示為小數分數。 |
+| `{NAME}` | 此 `{CHANNEL_NAME}`，在Azure資料工廠(ADF)中輸入為標籤。 |
+| `{VALUE}` | 值來自 `{CHANNEL_VALUE}` 即指定 `{EXP_TIMEOUT}` 間隔 |
+| `{TIMESTAMP}` | 的時間戳記 [!DNL Experience Event] 上次接觸發生的位置 |
+| `{FRACTION}` | 上次接觸的歸因，以小數部分表示。 |
 
-### 第一次觸碰歸屬 {#first-touch}
+### 首次接觸歸因 {#first-touch}
 
-第一次觸摸歸屬將成功結果的100%責任歸於消費者遇到的初始渠道。 此SQL示例用於突出顯示導致後續一系列客戶操作的交互。
+首次接觸歸因會將成功結果的100%責任歸到消費者遇到的初始管道。 此SQL示例用於突出顯示導致後續一系列客戶操作的交互。
 
-下面的查詢返回目標中通道的第一個觸摸屬性值和詳細資訊 [!DNL Experience Event] 資料集。 它還返回 `struct` 對象，其中包含每行的第一個觸摸值、時間戳和屬性。
+以下查詢會傳回首次接觸歸因值和目標中管道的詳細資訊 [!DNL Experience Event] 資料集。 也會傳回 `struct` 物件，包含每列的首次接觸值、時間戳記和歸因。
+
+>[!NOTE]
+>
+>Experience CloudID(ECID)也稱為MCID，會繼續用於命名空間。
 
 **查詢語法**
 
@@ -75,9 +80,9 @@ ht-degree: 1%
 ATTRIBUTION_FIRST_TOUCH({TIMESTAMP}, {CHANNEL_NAME}, {CHANNEL_VALUE}) OVER ({PARTITION} {ORDER} {FRAME})
 ```
 
-有關可能需要的參數及其說明的完整清單，請參見 [屬性查詢參數段](#attribution-query-parameters)。
+如需可能需要的參數及其說明的完整清單，請參閱 [歸因查詢參數區段](#attribution-query-parameters).
 
-**示例查詢**
+**查詢範例**
 
 ```sql
 SELECT endUserIds._experience.mcid.id, timestamp, marketing.trackingCode,
@@ -93,7 +98,7 @@ LIMIT 10
 
 **結果**
 
-在下面的結果中，初始跟蹤代碼 `em:946426` 取自 [!DNL Experience Event] 資料集。 此跟蹤代碼的屬性為100%(`1.0`)，因為這是第一次交互。
+在以下結果中，初始追蹤程式碼 `em:946426` 是從 [!DNL Experience Event] 資料集。 此追蹤代碼的歸屬為100%(`1.0`)，因為這是第一次互動。
 
 ```console
                  id                 |       timestamp       | trackingCode |                   first_touch                   
@@ -111,13 +116,13 @@ LIMIT 10
 (10 rows)
 ```
 
-有關顯示在 `first_touch` 列，請參見 [列元件節](#query-result-column-components)。
+若要劃分顯示在 `first_touch` 欄，請參閱 [列元件節](#query-result-column-components).
 
-### 最後一次觸碰歸屬 {#second-touch}
+### 上次接觸歸因 {#second-touch}
 
-最後一次觸摸歸屬將成功結果的100%責任歸於消費者遇到的最後一個渠道。 此SQL示例用於突出顯示一系列客戶操作中的最終交互。
+上次接觸歸因會將成功結果的100%責任歸到消費者遇到的最後一個管道。 此SQL示例用於突出顯示一系列客戶操作中的最終交互。
 
-查詢返回目標中通道的最後一個觸摸屬性值和詳細資訊 [!DNL Experience Event] 資料集。 它還返回 `struct` 選定通道的對象，具有每行的上次觸摸值、時間戳和屬性。
+查詢會傳回上次接觸歸因值和目標中管道的詳細資訊 [!DNL Experience Event] 資料集。 也會傳回 `struct` 物件，包含每列的上次接觸值、時間戳記和歸因。
 
 **查詢語法**
 
@@ -125,7 +130,7 @@ LIMIT 10
 ATTRIBUTION_LAST_TOUCH({TIMESTAMP}, {CHANNEL_NAME}, {CHANNEL_VALUE}) OVER ({PARTITION} {ORDER} {FRAME})
 ```
 
-**示例查詢**
+**查詢範例**
 
 ```sql
 SELECT endUserIds._experience.mcid.id, timestamp, marketing.trackingCode,
@@ -140,7 +145,7 @@ ORDER BY endUserIds._experience.mcid.id, timestamp ASC
 
 **結果**
 
-在下面顯示的結果中，返回對象中的跟蹤代碼是每個對象中的最後一次交互 [!DNL Experience Event] 記錄。 每個代碼的屬性為100%(`1.0`)負責客戶的操作，因為這是上次交互。
+在下方顯示的結果中，傳回物件中的追蹤程式碼是每個 [!DNL Experience Event] 記錄。 每個代碼的歸屬為100%(`1.0`)對客戶動作的責任，因為這是上次互動。
 
 ```console
                  id                |       timestamp       | trackingCode |                   last_touch                   
@@ -158,13 +163,13 @@ ORDER BY endUserIds._experience.mcid.id, timestamp ASC
 (10 rows)
 ```
 
-有關顯示在 `last_touch` 列，請參見 [列元件節](#query-result-column-components)。
+若要劃分顯示在 `last_touch` 欄，請參閱 [列元件節](#query-result-column-components).
 
-### 具有過期條件的第一次觸摸屬性 {#first-touch-attribution-with-expiration-condition}
+### 具有過期條件的首次接觸歸因 {#first-touch-attribution-with-expiration-condition}
 
-此查詢用於查看哪些交互導致了在客戶 [!DNL Experience Event] 資料集由您選擇的條件確定。
+此查詢用於查看哪些互動導致了 [!DNL Experience Event] 資料集由您選擇的條件所決定。
 
-查詢返回目標中單個通道的第一個觸摸屬性值和詳細資訊 [!DNL Experience Event] 資料集，在條件後或之前過期。 它還返回 `struct` 為所選通道返回的每行返回第一個觸摸值、時間戳和屬性的對象。
+查詢會傳回目標中單一管道的首次接觸歸因值和詳細資料 [!DNL Experience Event] 資料集，在條件之後或之前到期。 也會傳回 `struct` 物件，包含選定管道傳回之每列的首次接觸值、時間戳記和歸因。
 
 **查詢語法**
 
@@ -174,11 +179,11 @@ ATTRIBUTION_FIRST_TOUCH_EXP_IF(
     OVER ({PARTITION} {ORDER} {FRAME})
 ```
 
-有關可能需要的參數及其說明的完整清單，請參見 [屬性查詢參數段](#attribution-query-parameters)。
+如需可能需要的參數及其說明的完整清單，請參閱 [歸因查詢參數區段](#attribution-query-parameters).
 
-**示例查詢**
+**查詢範例**
 
-在下面所示的示例中，記錄了採購(`commerce.purchases.value IS NOT NULL`)，並且每天的初始跟蹤代碼的屬性為100%(`1.0`)負責客戶操作。
+在下列範例中，會記錄購買(`commerce.purchases.value IS NOT NULL`)，而每天的初始追蹤程式碼會歸因為100%(`1.0`)客戶動作的責任。
 
 ```sql
 SELECT endUserIds._experience.mcid.id, timestamp, marketing.trackingCode,
@@ -209,13 +214,13 @@ ORDER BY endUserIds._experience.mcid.id, timestamp ASC
 (10 rows)
 ```
 
-有關顯示在 `first_touch` 列，請參見 [列元件節](#query-result-column-components)。
+若要劃分顯示在 `first_touch` 欄，請參閱 [列元件節](#query-result-column-components).
 
-### 具有過期超時的第一次觸摸屬性 {#first-touch-attribution-with-expiration-timeout}
+### 具有過期逾時的首次接觸歸因 {#first-touch-attribution-with-expiration-timeout}
 
-此查詢用於查找在選定時間段內導致客戶成功操作的交互。
+此查詢用於尋找在選定時段內導致成功客戶動作的互動。
 
-下面的查詢返回目標中單個通道的第一個觸摸屬性值和詳細資訊 [!DNL Experience Event] 指定時間段的資料集。 查詢返回 `struct` 為所選通道返回的每行返回第一個觸摸值、時間戳和屬性的對象。
+以下查詢會傳回目標中單一管道的首次接觸歸因值和詳細資料 [!DNL Experience Event] 資料集。 查詢會傳回 `struct` 物件，包含選定管道傳回之每列的首次接觸值、時間戳記和歸因。
 
 **查詢語法**
 
@@ -225,11 +230,11 @@ ATTRIBUTION_FIRST_TOUCH_EXP_IF(
     OVER ({PARTITION} {ORDER} {FRAME})
 ```
 
-有關可能需要的參數及其說明的完整清單，請參見 [屬性查詢參數段](#attribution-query-parameters)。
+如需可能需要的參數及其說明的完整清單，請參閱 [歸因查詢參數區段](#attribution-query-parameters).
 
-**示例查詢**
+**查詢範例**
 
-在下面所示的示例中，每次客戶操作返回的第一次接觸是過去七天內的最早交互(expTimeout = 86400 * 7)。
+在下列範例中，針對每個客戶動作傳回的首次接觸是前七天內的最早互動(expTimeout = 86400 * 7)。
 
 ```sql
 SELECT endUserIds._experience.mcid.id, timestamp, marketing.trackingCode,
@@ -260,13 +265,13 @@ ORDER BY endUserIds._experience.mcid.id, timestamp ASC
 (10 rows)
 ```
 
-有關顯示在 `first_touch` 列，請參見 [列元件節](#query-result-column-components)。
+若要劃分顯示在 `first_touch` 欄，請參閱 [列元件節](#query-result-column-components).
 
-### 具有過期條件的上次觸摸屬性 {#last-touch-attribution-with-expiration-condition}
+### 具有過期條件的上次接觸歸因 {#last-touch-attribution-with-expiration-condition}
 
-此查詢用於查找一部分客戶操作中的一系列客戶操作中的最後一個交互 [!DNL Experience Event] 資料集由您選擇的條件確定。
+此查詢可用於尋找 [!DNL Experience Event] 資料集由您選擇的條件所決定。
 
-下面的查詢返回目標中單個通道的上次觸摸屬性值和詳細資訊 [!DNL Experience Event] 資料集，在條件後或之前過期。 查詢返回 `struct` 為所選通道返回的每行具有上次觸摸值、時間戳和屬性的對象。
+以下查詢會傳回目標中單一管道的上次接觸歸因值和詳細資料 [!DNL Experience Event] 資料集，在條件之後或之前到期。 查詢會傳回 `struct` 物件，包含選定管道所傳回每一列的上次接觸值、時間戳記和歸因。
 
 **查詢語法**
 
@@ -276,11 +281,11 @@ ATTRIBUTION_LAST_TOUCH_EXP_IF(
     OVER ({PARTITION} {ORDER} {FRAME})
 ```
 
-有關可能需要的參數及其說明的完整清單，請參見 [屬性查詢參數段](#attribution-query-parameters)。
+如需可能需要的參數及其說明的完整清單，請參閱 [歸因查詢參數區段](#attribution-query-parameters).
 
-**示例查詢**
+**查詢範例**
 
-在下面所示的示例中，記錄了採購(`commerce.purchases.value IS NOT NULL`)，並且每天的最後跟蹤代碼的屬性為100%(`1.0`)負責客戶操作。
+在下列範例中，會記錄購買(`commerce.purchases.value IS NOT NULL`)，而每天的最後一個追蹤程式碼會歸因為100%(`1.0`)客戶動作的責任。
 
 ```sql
 SELECT endUserIds._experience.mcid.id, timestamp, marketing.trackingCode,
@@ -293,7 +298,7 @@ FROM experience_events
 ORDER BY endUserIds._experience.mcid.id, timestamp ASC
 ```
 
-**示例結果**
+**範例結果**
 
 ```console
                 id                 |       timestamp       | trackingCode |                   last_touch                   
@@ -311,11 +316,11 @@ ORDER BY endUserIds._experience.mcid.id, timestamp ASC
 (10 rows)
 ```
 
-有關顯示在 `last_touch` 列，請參見 [列元件節](#query-result-column-components)。
+若要劃分顯示在 `last_touch` 欄，請參閱 [列元件節](#query-result-column-components).
 
-### 具有過期超時的上次觸摸屬性 {#last-touch-attribution-with-expiration-timeout}
+### 具有過期逾時的上次接觸歸因 {#last-touch-attribution-with-expiration-timeout}
 
-此查詢用於查找所選時間間隔內的上次交互。 查詢返回目標中單個通道的上次觸摸屬性值和詳細資訊 [!DNL Experience Event] 指定時間段的資料集。 查詢返回 `struct` 為所選通道返回的每行具有上次觸摸值、時間戳和屬性的對象。
+此查詢用於查找所選時間間隔內的上次交互。 查詢會傳回目標中單一管道的上次接觸歸因值和詳細資料 [!DNL Experience Event] 資料集。 查詢會傳回 `struct` 物件，包含選定管道所傳回每一列的上次接觸值、時間戳記和歸因。
 
 **查詢語法**
 
@@ -325,11 +330,11 @@ ATTRIBUTION_LAST_TOUCH_EXP_TIMEOUT(
     OVER ({PARTITION} {ORDER} {FRAME})
 ```
 
-有關可能需要的參數及其說明的完整清單，請參見 [屬性查詢參數段](#attribution-query-parameters)。
+如需可能需要的參數及其說明的完整清單，請參閱 [歸因查詢參數區段](#attribution-query-parameters).
 
-**示例查詢**
+**查詢範例**
 
-在下面所示的示例中，每次客戶操作返回的最後一次接觸是隨後七天內(`expTimeout = 86400 * 7`)。
+在下列範例中，針對每個客戶動作傳回的上次接觸是後續七天內(`expTimeout = 86400 * 7`)。
 
 ```sql
 SELECT endUserIds._experience.mcid.id, timestamp, marketing.trackingCode,
@@ -360,4 +365,4 @@ ORDER BY endUserIds._experience.mcid.id, timestamp ASC
 (10 rows)
 ```
 
-有關顯示在 `last_touch` 列，請參見 [列元件節](#query-result-column-components)。
+若要劃分顯示在 `last_touch` 欄，請參閱 [列元件節](#query-result-column-components).
