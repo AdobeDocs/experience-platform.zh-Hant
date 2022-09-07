@@ -4,9 +4,9 @@ title: 設定檔控制面板指南
 description: Adobe Experience Platform提供控制面板，讓您透過該控制面板檢視貴組織「即時客戶個人檔案」資料的重要資訊。
 type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
-source-git-commit: 93bb816857545e2e5abca51e4046d225927daef4
+source-git-commit: 9a4257ef6f9e32feeb2bb90bc7dd46b0d533cb35
 workflow-type: tm+mt
-source-wordcount: '3788'
+source-wordcount: '3859'
 ht-degree: 1%
 
 ---
@@ -43,6 +43,14 @@ Adobe Experience Platform使用者介面(UI)提供控制面板，供您檢視有
 
 請參閱 [修改控制面板](../customize/modify.md) 和 [介面工具集程式庫概觀](../customize/widget-library.md) 檔案以深入了解。
 
+### 新增介面工具集 {#add-widget}
+
+選擇 **[!UICONTROL 新增介面工具集]** 導覽至介面工具集庫，並查看可新增至控制面板的可用介面工具集清單。
+
+![「設定檔」控制面板概述，並反白顯示新增介面工具集。](../images/profiles/profiles-overview-add-widget.png)
+
+從介面工具集庫中，您可以瀏覽標準和自定義段介面工具集的選擇。有關如何添加介面工具集的資訊，請參閱介面工具集庫文檔，了解如何 [新增介面工具集](../customize/widget-library.md#add-widgets).
+
 ## （測試版）設定檔效能分析 {#profile-efficacy-insights}
 
 >[!IMPORTANT]
@@ -73,9 +81,9 @@ Adobe Experience Platform使用者介面(UI)提供控制面板，供您檢視有
 
 >[!NOTE]
 >
->下拉式功能表只會顯示與XDM個別設定檔類別相關的合併原則。 但是，如果貴組織已建立多個合併策略，則可能意味著您需要滾動才能查看可用合併策略的完整清單。
+>下拉式功能表只會顯示使用的合併原則 `_xdm.context.profile` 綱要。 但是，如果貴組織已建立多個合併策略，則可能意味著您需要滾動才能查看可用合併策略的完整清單。
 
-![](../images/profiles/select-merge-policy.png)
+![突出顯示「配置檔案概述」頁簽和合併策略下拉清單。](../images/profiles/select-merge-policy.png)
 
 ## 聯合結構
 
