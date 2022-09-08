@@ -2,7 +2,7 @@
 title: Reactor API中的機密
 description: 了解如何在Reactor API中設定機密，以用於事件轉送的基本知識。
 exl-id: 0298c0cd-9fba-4b54-86db-5d2d8f9ade54
-source-git-commit: 4f3c97e2cad6160481adb8b3dab3d0c8b23717cc
+source-git-commit: 24e79c14268b9eab0e8286eb8cd1352c1dfcd1b6
 workflow-type: tm+mt
 source-wordcount: '1241'
 ht-degree: 2%
@@ -107,11 +107,11 @@ ht-degree: 2%
 | --- | --- | --- |
 | `scopes` | 陣列 | 列出用於驗證的Google產品範圍。 支援以下範圍：<ul><li>[Google Ads](https://developers.google.com/google-ads/api/docs/oauth/overview): `https://www.googleapis.com/auth/adwords`</li><li>[Google酒吧/小店](https://cloud.google.com/pubsub/docs/reference/service_apis_overview): `https://www.googleapis.com/auth/pubsub`</li></ul> |
 
-建立 `oauth2-google` 機密，回應包含 `meta.token_url` 屬性。 您必須將此URL複製並貼到瀏覽器中，才能完成Google驗證流程。
+建立 `oauth2-google` 機密，回應包含 `meta.authorization_url` 屬性。 您必須將此URL複製並貼到瀏覽器中，才能完成Google驗證流程。
 
 #### 重新授權 `oauth2-google` 秘密
 
-的授權URL `oauth2-google` 機密會在機密建立後一小時過期(如 `meta.token_url_expires_at`)。 此後，必須重新授權機密，才能續訂驗證程式。
+的授權URL `oauth2-google` 機密會在機密建立後一小時過期(如 `meta.authorization_url_expires_at`)。 此後，必須重新授權機密，才能續訂驗證程式。
 
 請參閱 [secrets端點指南](../endpoints/secrets.md#reauthorize) 有關如何重新授權的詳細資訊 `oauth2-google` 向Reactor API提出PATCH要求以加密。
 
