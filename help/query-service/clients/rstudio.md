@@ -1,48 +1,48 @@
 ---
-keywords: Experience Platform；首頁；熱門主題；查詢服務；查詢服務；RStudio;rstudio；連接到查詢服務；
+keywords: Experience Platform；首頁；熱門主題；查詢服務；查詢服務；RStudio;rstudio；連線至查詢服務；
 solution: Experience Platform
 title: 將RStudio連接到查詢服務
 topic-legacy: connect
-description: 本文檔介紹將R Studio與Adobe Experience Platform查詢服務連接的步驟。
+description: 本檔案將逐步說明將R Studio與Adobe Experience Platform Query Service連接的步驟。
 exl-id: 8dd82bad-6ffb-4536-9c27-223f471a49c6
-source-git-commit: ad3e1b0de6dd3b82cc82f0dc3d0f36b12cd3899e
+source-git-commit: 9ab3d69553dee9fdb97472edfa3f812133ee1bb1
 workflow-type: tm+mt
 source-wordcount: '387'
 ht-degree: 0%
 
 ---
 
-# 連接 [!DNL RStudio] 查詢服務
+# Connect [!DNL RStudio] 查詢服務
 
-本文檔介紹了連接的步驟 [!DNL RStudio] 與Adobe Experience Platform [!DNL Query Service]。
+本檔案會逐步說明連接 [!DNL RStudio] 搭配Adobe Experience Platform [!DNL Query Service].
 
 >[!NOTE]
 >
-> 本指南假定您已具有訪問 [!DNL RStudio] 並熟悉如何使用。 有關 [!DNL RStudio] 在 [官 [!DNL RStudio] 文檔](https://rstudio.com/products/rstudio/)。
+> 本指南假設您已擁有 [!DNL RStudio] 並熟悉如何使用。 有關 [!DNL RStudio] 可在 [官方 [!DNL RStudio] 檔案](https://rstudio.com/products/rstudio/).
 > 
-> 此外，要將RStudio與查詢服務一起使用，需要安裝PostgreSQL JDBC 4.2驅動程式。 可以從 [PostgreSQL官方網站](https://jdbc.postgresql.org/download.html)。
+> 此外，要將RStudio與Query Service一起使用，需要安裝PostgreSQL JDBC 4.2驅動程式。 可以從 [PostgreSQL官方站點](https://jdbc.postgresql.org/download/).
 
-## 建立 [!DNL Query Service] 連接 [!DNL RStudio] 介面
+## 建立 [!DNL Query Service] 連線 [!DNL RStudio] 介面
 
-安裝後 [!DNL RStudio]，需要安裝RJDBC包。 轉到 **[!DNL Packages]** ，然後選擇 **[!DNL Install]**。
+安裝後 [!DNL RStudio]，您需要安裝RJDBC套件。 前往 **[!DNL Packages]** ，然後選擇 **[!DNL Install]**.
 
 ![](../images/clients/rstudio/install-package.png)
 
-出現一個彈出窗口，顯示 **[!DNL Install Packages]** 的上界。 確保 **[!DNL Repository (CRAN)]** 為 **[!DNL Install from]** 的子菜單。 的值 **[!DNL Packages]** 應該 `RJDBC`。 確保 **[!DNL Install dependencies]** 的子菜單。 確認所有值均正確後，選擇 **[!DNL Install]** 安裝軟體包。
+隨即出現快顯視窗，其中顯示 **[!DNL Install Packages]** 螢幕。 確保 **[!DNL Repository (CRAN)]** 已針對 **[!DNL Install from]** 區段。 的值 **[!DNL Packages]** 應該是 `RJDBC`. 確保 **[!DNL Install dependencies]** 中所有規則的URL。 確認所有值皆正確後，請選取 **[!DNL Install]** 安裝軟體包。
 
 ![](../images/clients/rstudio/install-jrdbc.png)
 
-現在已安裝RJDBC包，請重新啟動RStudio以完成安裝過程。
+現在RJDBC包已安裝，請重新啟動RStudio以完成安裝過程。
 
-重新啟動RStudio後，您現在可以連接到查詢服務。 選擇 **[!DNL RJDBC]** 包 **[!DNL Packages]** ，然後在控制台中輸入以下命令：
+RStudio重新啟動後，您現在可以連線至查詢服務。 選取 **[!DNL RJDBC]** 封裝 **[!DNL Packages]** ，並在控制台中輸入以下命令：
 
 ```console
 pgsql <- JDBC("org.postgresql.Driver", "{PATH TO THE POSTGRESQL JDBC JAR}", "`")
 ```
 
-其中{PATH TO THE POSTGRESQL JDBC JAR}表示在電腦上安裝的PostgreSQL JDBC JAR的路徑。
+其中{PATH TO POSTGRESQL JDBC JAR}表示安裝在電腦上的PostgreSQL JDBC JAR的路徑。
 
-現在，您可以通過在控制台中輸入以下命令來建立與查詢服務的連接：
+現在，您可以在主控台中輸入下列命令，以建立與Query Service的連線：
 
 ```console
 qsconnection <- dbConnect(pgsql, "jdbc:postgresql://{HOSTNAME}:{PORT}/{DATABASE_NAME}?user={USERNAME}&password={PASSWORD}&sslmode=require")
@@ -50,17 +50,17 @@ qsconnection <- dbConnect(pgsql, "jdbc:postgresql://{HOSTNAME}:{PORT}/{DATABASE_
 
 >[!IMPORTANT]
 >
->查看 [[!DNL Query Service] SSL文檔](./ssl-modes.md) 瞭解對與Adobe Experience Platform查詢服務的第三方連接的SSL支援，以及如何使用 `verify-full` SSL模式。
+>請參閱 [[!DNL Query Service] SSL檔案](./ssl-modes.md) 了解協力廠商連線至Adobe Experience Platform Query Service的SSL支援，以及如何使用 `verify-full` SSL模式。
 
-有關查找資料庫名稱、主機、埠和登錄憑據的詳細資訊，請閱讀 [憑據指南](../ui/credentials.md)。 要查找憑據，請登錄到 [!DNL Platform]，然後選擇 **[!UICONTROL 查詢]**，後跟 **[!UICONTROL 憑據]**。
+有關查找資料庫名稱、主機、埠和登錄憑據的詳細資訊，請閱讀 [認證指南](../ui/credentials.md). 若要尋找憑證，請登入 [!DNL Platform]，然後選取 **[!UICONTROL 查詢]**，後跟 **[!UICONTROL 憑證]**.
 
 ![](../images/clients/rstudio/connection-rjdbc.png)
 
 ## 寫入查詢
 
-現在您已連接到 [!DNL Query Service]，您可以編寫查詢以執行和編輯SQL陳述式。 例如，您可以 `dbGetQuery(con, sql)` 執行查詢，其中 `sql` 是要運行的SQL查詢。
+現在您已連線至 [!DNL Query Service]，您可以編寫查詢以執行和編輯SQL陳述式。 例如，您可以使用 `dbGetQuery(con, sql)` 執行查詢，其中 `sql` 是要運行的SQL查詢。
 
-以下查詢使用包含 [體驗事件](../sample-queries/experience-event.md) 並根據設備的螢幕高度建立網站頁面視圖的直方圖。
+下列查詢使用包含 [體驗事件](../sample-queries/experience-event.md) 並根據裝置的螢幕高度，建立網站的頁面檢視色階分佈圖。
 
 ```sql
 df_pageviews <- dbGetQuery(con,
@@ -81,7 +81,7 @@ ORDER BY buckets
 LIMIT 1000000")
 ```
 
-成功的響應返回查詢結果：
+成功的回應會傳回查詢的結果：
 
 ```r
 df_pageviews
@@ -97,4 +97,4 @@ df_pageviews
 
 ## 後續步驟
 
-有關如何編寫和運行查詢的詳細資訊，請閱讀上的指南 [運行查詢](../best-practices/writing-queries.md)。
+有關如何編寫和運行查詢的詳細資訊，請閱讀 [運行查詢](../best-practices/writing-queries.md).
