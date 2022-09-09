@@ -4,9 +4,9 @@ title: 使用API啟用資料集以進行設定檔更新
 type: Tutorial
 description: 本教學課程說明如何使用Adobe Experience Platform API來啟用具有「更新」功能的資料集，以便更新即時客戶設定檔資料。
 exl-id: fc89bc0a-40c9-4079-8bfc-62ec4da4d16a
-source-git-commit: b0ba7578cc8e790c70cba4cc55c683582b685843
+source-git-commit: 5bd3e43e6b307cc1527e8734936c051fb4fc89c4
 workflow-type: tm+mt
-source-wordcount: '994'
+source-wordcount: '1015'
 ht-degree: 1%
 
 ---
@@ -126,14 +126,13 @@ GET /dataSets/{DATASET_ID}
 ```
 
 | 參數 | 說明 |
-|---|---|
+| --------- | ----------- |
 | `{DATASET_ID}` | 您要檢查的資料集ID。 |
 
 **要求**
 
 ```shell
-curl -X GET \
-  'https://platform.adobe.io/data/foundation/catalog/dataSets/5b020a27e7040801dedbf46e' \
+curl -X GET 'https://platform.adobe.io/data/foundation/catalog/dataSets/5b020a27e7040801dedbf46e' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
@@ -196,11 +195,11 @@ curl -X GET \
 
 ### 停用設定檔的資料集
 
-若要設定啟用設定檔的資料集以進行更新，您必須先停用 `unifiedProfile` 標籤，然後連同 `isUpsert` 標籤。 這是使用兩個PATCH請求來完成，一個是停用，另一個是重新啟用。
+若要設定啟用設定檔的資料集以進行更新，您必須先停用 `unifiedProfile` 和 `unifiedIdentity` 標籤，然後在 `isUpsert` 標籤。 這是使用兩個PATCH請求來完成，一個是停用，另一個是重新啟用。
 
 >[!WARNING]
 >
->停用時擷取至資料集的資料不會擷取至設定檔存放區。 建議您在重新啟用設定檔之前，避免將資料擷取到資料集中。
+>停用時擷取至資料集的資料不會擷取至設定檔存放區。 在重新啟用設定檔之前，您應避免將資料擷取至資料集。
 
 **API格式**
 
@@ -209,29 +208,37 @@ PATCH /dataSets/{DATASET_ID}
 ```
 
 | 參數 | 說明 |
-|---|---|
+| --------- | ----------- |
 | `{DATASET_ID}` | 您要更新的資料集ID。 |
 
 **要求**
 
-第一PATCH請求內文包含 `path` to `unifiedProfile` 設定 `value` to `enabled:false` 來停用標籤。
+第一PATCH請求內文包含 `path` to `unifiedProfile` 和 `path` to `unifiedIdentity`，設定 `value` to `enabled:false` 來停用標籤。
 
 ```shell
-curl -X PATCH \
-  https://platform.adobe.io/data/foundation/catalog/dataSets/5b020a27e7040801dedbf46e \
+curl -X PATCH https://platform.adobe.io/data/foundation/catalog/dataSets/5b020a27e7040801dedbf46e \
   -H 'Content-Type:application/json-patch+json' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '[
-        { "op": "replace", "path": "/tags/unifiedProfile", "value": ["enabled:false"] }
+        { 
+            "op": "replace", 
+            "path": "/tags/unifiedProfile", 
+            "value": ["enabled:false"] 
+        },
+        {
+            "op": "replace",
+            "path": "/tags/unifiedIdentity",
+            "value": ["enabled:false"]
+        }
       ]'
 ```
 
 **回應**
 
-成功的PATCH要求會傳回HTTP狀態200（確定），以及包含更新資料集ID的陣列。 此ID應符合PATCH請求中傳送的ID。 此 `unifiedProfile` 標籤現已停用。
+成功的PATCH要求會傳回HTTP狀態200（確定），以及包含更新資料集ID的陣列。 此ID應符合PATCH請求中傳送的ID。 此 `unifiedProfile` 和 `unifiedIdentity` 標籤現已停用。
 
 ```json
 [
@@ -250,28 +257,42 @@ PATCH /dataSets/{DATASET_ID}
 ```
 
 | 參數 | 說明 |
-|---|---|
+| --------- | ----------- |
 | `{DATASET_ID}` | 您要更新的資料集ID。 |
 
 **要求**
 
-請求內文包含 `path` to `unifiedProfile` 設定 `value` 包括 `enabled` 和 `isUpsert` 標籤，都設為 `true`.
+請求內文包含 `path` to `unifiedProfile` 設定 `value` 包括 `enabled` 和 `isUpsert` 標籤，都設為 `true`和 `path` to `unifiedIdentity` 設定 `value` 包括 `enabled` 標籤設為 `true`.
 
 ```shell
-curl -X PATCH \
-  https://platform.adobe.io/data/foundation/catalog/dataSets/5b020a27e7040801dedbf46e \
+curl -X PATCH https://platform.adobe.io/data/foundation/catalog/dataSets/5b020a27e7040801dedbf46e \
   -H 'Content-Type:application/json-patch+json' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '[
-        { "op": "add", "path": "/tags/unifiedProfile", "value": ["enabled:true","isUpsert:true"] },
+        { 
+            "op": "add", 
+            "path": "/tags/unifiedProfile", 
+            "value": [
+                "enabled:true",
+                "isUpsert:true"
+            ] 
+        },
+        {
+            "op": "add",
+            "path": "/tags/unifiedIdentity",
+            "value": [
+                "enabled:true"
+            ]
+        }
       ]'
 ```
 
 **回應**
-成功的PATCH要求會傳回HTTP狀態200（確定），以及包含更新資料集ID的陣列。 此ID應符合PATCH請求中傳送的ID。 此 `unifiedProfile` 標籤現在已啟用，並已針對屬性更新進行設定。
+
+成功的PATCH要求會傳回HTTP狀態200（確定），以及包含更新資料集ID的陣列。 此ID應符合PATCH請求中傳送的ID。 此 `unifiedProfile` 標籤和 `unifiedIdentity` 標籤現在已啟用，並已針對屬性更新進行設定。
 
 ```json
 [
