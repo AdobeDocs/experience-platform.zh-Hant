@@ -1,9 +1,9 @@
 ---
 title: 資料控管端對端指南
 description: 請依照完整程式，針對Adobe Experience Platform中的欄位和資料集強制執行資料使用限制。
-source-git-commit: 415300f6338eb485b8dead307f3e6a5b2d5d8b22
+source-git-commit: c8b2dba9b1e305f826830b8341bf1a6dde4e2da2
 workflow-type: tm+mt
-source-wordcount: '1449'
+source-wordcount: '1447'
 ht-degree: 0%
 
 ---
@@ -111,7 +111,7 @@ ht-degree: 0%
 
 ![在UI中顯示指派給原則的行銷動作的影像](./images/e2e/select-marketing-action.png)
 
-最後螢幕顯示策略詳細資訊的摘要，以及策略將限制哪些標籤的操作。 選擇 **[!UICONTROL 完成]** 建立和啟用策略。
+最後螢幕顯示策略詳細資訊的摘要，以及策略將限制哪些標籤的操作。 選擇 **[!UICONTROL 完成]** 來建立策略。
 
 ![顯示已在UI中確認的原則設定的影像](./images/e2e/confirm-policy.png)
 
