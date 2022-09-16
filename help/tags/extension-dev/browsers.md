@@ -1,10 +1,11 @@
 ---
 title: 受支援的瀏覽器
 description: 與Adobe Experience Platform標籤執行階段相容的多個瀏覽器的清單。
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+exl-id: fc9ff6f5-7d54-4f13-8286-44791499d704
+source-git-commit: 32aa453ca40c0500da0fec8957db978c319a3dbe
 workflow-type: tm+mt
-source-wordcount: '145'
-ht-degree: 29%
+source-wordcount: '142'
+ht-degree: 47%
 
 ---
 
@@ -12,14 +13,13 @@ ht-degree: 29%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch在Adobe Experience Platform中已重新命名為一套資料收集技術。 因此，產品檔案中已推出數個術語變更。 有關術語更改的綜合參考，請參閱以下[document](../term-updates.md)。
+>Adobe Experience Platform Launch在Adobe Experience Platform中已重新命名為一套資料收集技術。 因此，所有產品文件中出現了幾項術語變更。 如需術語變更的彙整參考資料，請參閱以下[文件](../term-updates.md)。
 
 Adobe Experience Platform中的標籤執行階段（傳送至用戶端的網站）與多個瀏覽器相容：
 
 - Chrome (最新)
 - Safari (最新)
 - Firefox (最新)
-- IE (10 和以上版本)
 - Edge (最新)
 - iOS Safari (最新)
 - Android Chrome (最新)
