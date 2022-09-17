@@ -4,9 +4,9 @@ title: 基於屬性的訪問控制端到端指南
 description: 本檔案提供Adobe Experience Platform中以屬性為基礎的存取控制的端對端指南
 hide: true
 hidefromtoc: true
-source-git-commit: 440176ea1f21db3c7c4b3572fb52771dc70c80a0
+source-git-commit: f7a8f9a5eb0ef3c961f9524057ff01564f88dec3
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '2218'
 ht-degree: 0%
 
 ---
@@ -58,6 +58,35 @@ ht-degree: 0%
 Platform UI的「權限」工作區隨即顯示，在 **[!UICONTROL 角色]** 頁面。
 
 ## 將標籤應用於角色 {#label-roles}
+
+>[!CONTEXTUALHELP]
+>id="platform_permissions_labels_about"
+>title="標籤是什麼？"
+>abstract="標籤可讓您根據套用至該資料的使用原則，對資料集和欄位進行分類。 Platform提供數個Adobe定義的「核心」資料使用標籤，涵蓋適用於資料控管的各種常見限制。 例如，敏感的「S」標籤(如RHD（受管理的運行狀況資料）)允許您對引用受保護的運行狀況資訊(PHI)的資料進行分類。 您也可以定義符合組織需求的自訂標籤。"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-governance/labels/overview.html?lang=en#understanding-data-usage-labels" text="資料使用標籤總覽"
+
+>[!CONTEXTUALHELP]
+>id="platform_permissions_labels_about_create"
+>title="建立新標籤"
+>abstract="您可以建立自訂標籤，以符合組織的需求。 自訂標籤可用來將資料控管和存取控制設定同時套用至您的資料。"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-governance/labels/overview.html?lang=en#manage-labels" text="管理自訂標籤"
+
+>[!CONTEXTUALHELP]
+>id="platform_permissions_roles_about"
+>title="什麼是角色？"
+>abstract="角色是將與您的Platform例項互動，且是存取控制原則基礎的使用者類型分類的方法。 角色具有一組指定的權限，而您組織的成員可以根據其所需的檢視或寫入存取範圍，指派給一或多個角色。"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/roles.html?lang=en" text="管理角色"
+
+>[!CONTEXTUALHELP]
+>id="platform_permissions_roles_about_create"
+>title="建立新角色"
+>abstract="您可以建立新角色，以便對存取您的Platform例項的使用者進行更妥善的分類。 例如，您可以為內部營銷團隊建立角色，並將RHD標籤應用到該角色，這將允許您的內部營銷團隊訪問受保護的健康資訊(PHI)。 或者，您也可以為外部代理建立角色，並不將RHD標籤應用到該角色，從而拒絕該角色對PHI資料的訪問。"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/roles.html?lang=en#create-a-new-role" text="建立新角色"
+
+>[!CONTEXTUALHELP]
+>id="platform_permissions_roles_details"
+>title="角色概觀"
+>abstract="角色概述對話方塊會顯示指定角色有權存取的資源和沙箱。"
 
 角色是將與您的Platform例項互動的使用者類型分類，並且是存取控制原則的基礎要素。 角色具有一組指定的權限，而您組織的成員可依其需要的存取範圍，指派給一或多個角色。
 
@@ -117,6 +146,34 @@ Platform UI的「權限」工作區隨即顯示，在 **[!UICONTROL 角色]** �
 使用 **[!UICONTROL 胰島素&lt;50]**.
 
 ## 建立訪問控制策略 {#policy}
+
+>[!CONTEXTUALHELP]
+>id="platform_permissions_policies_about"
+>title="什麼是政策？"
+>abstract="政策是將屬性集合在一起，以制定允許和不允許的行動的聲明。 每個組織都會提供您必須啟用的預設原則，以便定義區段和結構欄位等資源的規則。 不能編輯或刪除預設策略。 但是，可以激活或停用預設策略。"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/policies.html?lang=en" text="管理原則"
+
+>[!CONTEXTUALHELP]
+>id="platform_permissions_policies_about_create"
+>title="建立原則"
+>abstract="建立原則以定義使用者可以和無法對您的區段和結構欄位採取的動作。"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/policies.html?lang=en#create-a-new-policy" text="建立原則"
+
+>[!CONTEXTUALHELP]
+>id="platform_permissions_policies_edit_permitdeny"
+>title="為策略配置允許和不允許的操作"
+>abstract="選取「允許存取」 ，以設定使用者可針對資源執行的允許動作。 選取拒絕存取，以設定使用者無法針對資源執行的不允許動作。"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/policies.html?lang=en#edit-a-policy" text="編輯策略"
+
+>[!CONTEXTUALHELP]
+>id="platform_permissions_policies_edit_resource"
+>title="配置資源的權限"
+>abstract="資源是使用者可以或無法存取的資產或物件。 資源可以是區段或結構。 您可以為區段和結構欄位設定寫入、讀取或刪除權限。"
+
+>[!CONTEXTUALHELP]
+>id="platform_permissions_policies_edit_condition"
+>title="編輯條件"
+>abstract="將條件陳述式套用至您的原則，以設定使用者對特定資源的存取權。 選擇「全部匹配」以要求用戶具有與資源具有相同標籤的角色，以便獲得允許的訪問權。 選擇「匹配任何」 ，僅要求用戶具有一個與資源匹配的僅一個標籤的角色。 標籤可定義為核心或自訂標籤，核心標籤代表Adobe建立和提供的標籤，自訂標籤代表您為組織建立的標籤。"
 
 存取控制原則會利用標籤來定義哪些使用者角色可存取特定平台資源。 策略可以是本地策略或全局策略，也可以覆蓋其他策略。 在此範例中，對於架構欄位中沒有對應標籤的使用者，在所有沙箱中都會拒絕存取架構欄位和區段。
 
