@@ -3,7 +3,7 @@ keywords: Experience Platform;Zendesk；來源；連接器；來源連接器；�
 title: 在UI中建立Zendesk源連接
 description: 了解如何使用Adobe Experience Platform UI建立Zendesk來源連線。
 exl-id: 75d303b0-2dcd-4202-987c-fe3400398d90
-source-git-commit: e92c2386d9f4a4709f0a749d3ed97e033f066610
+source-git-commit: 795c98fb555f79afd7a7035a23a9989cc734a1e1
 workflow-type: tm+mt
 source-wordcount: '797'
 ht-degree: 6%
@@ -33,7 +33,7 @@ ht-degree: 6%
 
 | 憑據 | 說明 | 範例 |
 | --- | --- | --- |
-| 子網域 | 在註冊過程中建立的帳戶專屬的唯一網域。 | `https://yoursubdomain.zendesk.com` |
+| 子網域 | 在註冊過程中建立的帳戶專屬的唯一網域。 | `yoursubdomain` |
 | 存取權杖 | Zendesk API代號。 | `0lZnClEvkJSTQ7olGLl7PMhVq99gu26GTbJtf` |
 
 如需驗證 [!DNL Zendesk] 來源，請參閱 [[!DNL Zendesk] 來源概觀](../../../../connectors/customer-success/zendesk.md).
