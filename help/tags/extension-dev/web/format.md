@@ -2,7 +2,7 @@
 title: Web擴充功能中的程式庫模組
 description: 了解如何在Adobe Experience Platform中為網頁擴充功能設定程式庫模組的格式。
 exl-id: 08f2bb01-9071-49c5-a0ff-47d592cc34a5
-source-git-commit: dc81da58594fac4ce304f9d030f2106f0c3de271
+source-git-commit: 8d29765c0d3b57c69b46271e3f0b7338c75c135d
 workflow-type: tm+mt
 source-wordcount: '378'
 ht-degree: 70%
@@ -23,7 +23,7 @@ ht-degree: 70%
 
 程式庫模組採取 [CommonJS 模組](https://nodejs.org/api/modules.html#modules-commonjs-modules)的結構。CommonJS 模組內有下列變數可供使用：
 
-## [!DNL require]
+## `require`
 
 `require` 函數可供您存取：
 
@@ -37,7 +37,7 @@ var cookie = require('@adobe/reactor-cookie');
 cookie.set('foo', 'bar');
 ```
 
-## [!DNL module]
+## `module`
 
 自由變數 `module` 可供您匯出模組的 API。
 
@@ -47,7 +47,7 @@ cookie.set('foo', 'bar');
 module.exports = function(…) { … }
 ```
 
-## [!DNL exports]
+## `exports`
 
 自由變數 `exports` 可供您匯出模組的 API。
 
