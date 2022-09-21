@@ -1,10 +1,11 @@
 ---
 title: 快速入門手冊
 description: 了解如何在Adobe Experience Platform中快速上手並執行標籤。
-source-git-commit: 010e05968f1d7ad5675b0f0af43d9cfcc1f3a2ff
+exl-id: 490ee344-3b18-4189-9293-2378f86fb10d
+source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
 workflow-type: tm+mt
-source-wordcount: '1532'
-ht-degree: 41%
+source-wordcount: '1527'
+ht-degree: 43%
 
 ---
 
@@ -12,7 +13,7 @@ ht-degree: 41%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch在Adobe Experience Platform中已重新命名為一套資料收集技術。 因此，產品檔案中已推出數個術語變更。 有關術語更改的綜合參考，請參閱以下[document](../term-updates.md)。
+>Adobe Experience Platform Launch在Adobe Experience Platform中已重新命名為一套資料收集技術。 因此，所有產品文件中出現了幾項術語變更。 如需術語變更的彙整參考資料，請參閱以下[文件](../term-updates.md)。
 
 標籤是Adobe Experience Platform新一代的標籤管理技術。 這套技術從頭開始打造，以支援開放且永續的生態系統，讓任何人都能自行建立整合功能，供Adobe客戶部署至其網站。 這是 API 優先的應用程式，所以您可以透過 UI 完成的任何工作，也可以透過 API 以程式設計方式完成。
 
@@ -28,15 +29,15 @@ ht-degree: 41%
 
 ## 1. 設定群組和使用者
 
-標籤已與您的Adobe ID完全整合。 使用者權限是透過Admin Console，以[!DNL Creative Cloud]、[!DNL Document Cloud]和Experience Cloud中的其他Adobe產品和解決方案來管理。
+標籤已與您的Adobe ID完全整合。 使用者權限是透過Admin Console，以其他Adobe產品和解決方案(來自 [!DNL Creative Cloud], [!DNL Document Cloud]和Experience Cloud。
 
-標籤具有基於權限的用戶管理系統。 這表示必須明確授予個人權利。 這些權限會指派給群組，然後使用者加入適當的群組以取得存取權限。即使您的組織可存取資料收集UI，除非組織管理員明確授予個別使用者特定權限，否則他們無法執行任何動作。
+標籤具有基於權限的用戶管理系統。 這表示必須明確授予個人權利。 這些權限會指派給群組，然後使用者加入適當的群組以取得存取權限。即使您的組織有資料收集的存取權，除非管理員明確授予個別使用者特定權限，否則他們無法執行任何動作。
 
-有關如何建立組以及為標籤添加用戶的詳細說明，請參閱[用戶權限](../ui/administration/user-permissions.md)文檔。
+如需如何建立群組和新增標籤使用者的詳細指示，請參閱 [資料收集權限指南](../../collection/permissions.md).
 
 ## 2. 登入
 
-將標籤權限新增至Adobe ID後，您必須登入資料收集UI。 您可以直接導覽至[Experience Cloud登入畫面](https://experiencecloud.adobe.com)，然後從「快速存取」標籤中選取「資料收集UI」 ，即可執行此作業。
+將標籤權限新增至Adobe ID後，您必須登入Experience PlatformUI或資料收集UI。 您可以直接導覽至 [Experience Cloud登入畫面](https://experience.adobe.com/)，請選取 **[!UICONTROL 資料收集]** 或 **[!UICONTROL Experience Platform]**.
 
 >[!NOTE]
 >
@@ -44,7 +45,7 @@ ht-degree: 41%
 
 ## 3. 建立屬性
 
-登入資料收集UI後，首先要建立屬性。 屬性基本上是個容器，當您將標籤部署至網站時，在其中裝入擴充功能、規則、資料元素和程式庫。許多人會針對要部署相同標籤集的每個網站 (或具有密切關聯的網站群組) 建立屬性。
+登入UI後，首先要做的就是建立屬性。 屬性基本上是個容器，當您將標籤部署至網站時，在其中裝入擴充功能、規則、資料元素和程式庫。許多人會針對要部署相同標籤集的每個網站 (或具有密切關聯的網站群組) 建立屬性。
 
 如需有關建立屬性的詳細資訊，請參閱[建立屬性](../ui/administration/companies-and-properties.md)。
 
@@ -54,7 +55,7 @@ ht-degree: 41%
 
 所有全新屬性都會隨[核心擴充功能](../extensions/web/core/overview.md)一併安裝。行動屬性會隨其他擴充功能提供。核心擴充功能是由Adobe建立，可為您資料層的資料元素類型和規則的事件類型，提供強大的預設集合。 大部分您希望執行的動作 (取得 ECID、傳送 [!DNL Adobe Analytics] 信標、載入 [!DNL Target] 全域 mbox 等) 會來自您從目錄安裝的擴充功能。
 
-讓Platform中的標籤真正獨一無二的，是任何人都能建立這些擴充功能。 您是否需要將 Facebook 再行銷像素放置在您的網站上？試試看 Facebook 建立的擴充功能。您是否要在 Twitter 或 LinkedIn 提供相同體驗？請使用這些擴充功能。您需要執行調查嗎？您需要的是 Question Pro 或 Foresee。您是否需要管理最終用戶的隱私和同意以幫助[!DNL GDPR]? 請深入了解 Evidon 和 Trust Arc。是否希望對網站上個別使用者的行為有詳細的深入分析？ 也許您可以了解一下 Clicktale。如需詳細資訊，請參閱[新增新擴充功能](../ui/managing-resources/extensions/overview.md#add-a-new-extension)的相關區段。
+讓Platform中的標籤真正獨一無二的，是任何人都能建立這些擴充功能。 您是否需要將 Facebook 再行銷像素放置在您的網站上？試試看 Facebook 建立的擴充功能。您是否要在 Twitter 或 LinkedIn 提供相同體驗？請使用這些擴充功能。您需要執行調查嗎？您需要的是 Question Pro 或 Foresee。您是否需要管理使用者的隱私權和同意，以協助您 [!DNL GDPR]? 請深入了解 Evidon 和 Trust Arc。是否希望對網站上個別使用者的行為有詳細的深入分析？ 也許您可以了解一下 Clicktale。如需詳細資訊，請參閱 [新增擴充功能](../ui/managing-resources/extensions/overview.md#add-a-new-extension).
 
 ## 5. 建立資料元素和規則
 
@@ -66,7 +67,7 @@ ht-degree: 41%
 * 工作階段與本機儲存
 * 幾乎其他所有資訊
 
-定義資料元素後，您就可以在任何擴充功能的資料收集UI中，隨處使用元素。 如需詳細資訊，請參閱[資料元素](../ui/managing-resources/data-elements.md)上的檔案。
+定義資料元素後，您就可以在UI中的任何位置對任何擴充功能使用元素。 請參閱 [資料元素](../ui/managing-resources/data-elements.md) 以取得詳細資訊。
 
 **規則**&#x200B;位於實作的邏輯核心，並控制網站上所有標籤的內容、出現時間與位置以及運作方式。定義事件、設定條件和例外，然後定義動作和順序。最後，發佈變更以查看結果。如需詳細資訊，請參閱[規則](../ui/managing-resources/rules.md)。
 
@@ -82,17 +83,17 @@ ht-degree: 41%
 
    每個環境都與主機有關係，而主機提供端點，指出要傳送組建的位置。 主機只能屬於一個屬性，但一個屬性可以有許多主機。
 
-2. 內嵌程式碼會以`<script>`標籤的形式提供，該標籤會進入您網站HTML的`<head>`區段。
+2. 表單中提供內嵌程式碼  `<script>` 標籤 `<head>` 網頁HTML。
 
-   當您建立環境並附加主機時，環境會自動產生唯一的內嵌程式碼，讓您將指派的組建整合至您的網站。 `<script>`程式碼用於在執行階段部署程式庫組建。
+   當您建立環境並附加主機時，環境會自動產生唯一的內嵌程式碼，讓您將指派的組建整合至您的網站。 此 `<script>` 程式碼可用來在執行階段部署程式庫組建。
 
-3. 當使用者瀏覽您的網站時，內嵌程式碼`<script>`標籤會從您的主機伺服器擷取組建，並在瀏覽器內執行您定義的動作。
+3. 使用者瀏覽您的網站時，內嵌程式碼 `<script>` 標籤會從您的主機伺服器擷取組建，並在瀏覽器內執行您定義的動作。
 
 ### 主機
 
-主機是標籤屬性與托管位置之間的連線。 標籤目前支援透過[!DNL Akamai]主機進行Adobe管理托管，或透過SFTP主機自行托管。 每當您產生組建時，標籤都會連線至您主機定義的伺服器並傳遞組建。
+主機是標籤屬性與托管位置之間的連線。 標籤目前可支援透過以下項目進行Adobe管理的托管： [!DNL Akamai] 透過SFTP主機主機或自行托管。 每當您產生組建時，標籤都會連線至您主機定義的伺服器並傳遞組建。
 
-如果您是自行托管，標籤組建可透過SFTP直接推送至您的伺服器，或您可以推送至[!DNL Akamai]，並使用您環境的「封存」選項進行下載。
+如果您是自行托管，標籤組建可透過SFTP直接推送至您的伺服器，或者您可以推送至 [!DNL Akamai] 並使用環境的「封存」選項下載。
 
 如需詳細資訊，請參閱[主機](../ui/publishing/hosts/hosts-overview.md)。
 
@@ -101,7 +102,7 @@ ht-degree: 41%
 每個程式庫都會在環境中建立。環境會定義您希望在組建發佈時呈現的外觀。您可以指定在網站上傳遞：
 
 * **主機：** 每個環境都需要主機，主機會決定要推送在此環境中建立之任何組建的端點。
-* **封存：** 預設設定是將您的組建部署為縮制的.js檔案。如果您使用自訂程式碼，則可能有多個互相參照的檔案。 這些檔案可合併為單一zip檔案並加密。
+* **存檔：** 預設設定是將您的組建部署為縮制的.js檔案。 如果您使用自訂程式碼，則可能有多個互相參照的檔案。 這些檔案可合併為單一zip檔案並加密。
 
 儲存您的環境後，環境會產生內嵌程式碼，您可以複製程式碼並貼到您的網站上。請注意，內嵌程式碼必須等到您建立程式庫並產生組建後才能運作。 如需詳細資訊，請參閱[環境](../ui/publishing/environments.md)。
 
@@ -133,6 +134,6 @@ ht-degree: 41%
 
 若要進一步了解標籤，請參閱下列資源：
 
-* **[資料收集社群](https://forums.adobe.com/community/experience-cloud/platform/launch)**:詢問和回答問題、提交意見、投票支援其他人的意見。使用您的Adobe ID登入。
+* **[資料收集社群](https://forums.adobe.com/community/experience-cloud/platform/launch)**:詢問和回答問題、提交意見、投票支援其他人的意見。 使用您的Adobe ID登入。
 * **[開發人員檔案](https://developer.adobelaunch.com/)**:參與標籤開發人員社群，以建立擴充功能或使用標籤API
 * **[Tutorials概述](https://experienceleague.adobe.com/docs/core-services-learn/tutorials/overview.html)**:這些檔案會向您介紹標籤概念，包括事件轉送和Android應用程式中的行動SDK。

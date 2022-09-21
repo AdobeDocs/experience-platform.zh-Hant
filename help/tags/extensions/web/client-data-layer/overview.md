@@ -2,9 +2,9 @@
 title: Adobe用戶端資料層擴充功能
 description: 了解Adobe Experience Platform中的Adobe用戶端資料層標籤擴充功能。
 exl-id: c4d1b4d3-4b51-4701-be2e-31b08e109bf6
-source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
+source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
 workflow-type: tm+mt
-source-wordcount: '643'
+source-wordcount: '647'
 ht-degree: 0%
 
 ---
@@ -18,7 +18,7 @@ If you would like to have more details on development consideration, [please rea
 
 ## 安裝
 
-若要安裝擴充功能，請導覽至資料收集UI中的擴充功能目錄，然後選取Adobe用戶端資料層。
+若要安裝擴充功能，請導覽至Experience PlatformUI或資料收集UI中的擴充功能目錄，然後選取Adobe用戶端資料層。
 
 ![目錄中的ACDL擴充功能檢視](./images/catalog.png)
 
@@ -37,7 +37,7 @@ This installation will not be supported on our end.<br>
 >
 >更改對象名稱時，原始 `adobeDataLayer` 物件仍在實例化，然後複製到您選取的新變數名稱。
 
-## 事件
+## 活動
 
 擴充功能可讓您監聽資料層上的事件。 可使用下列事件：
 

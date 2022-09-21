@@ -2,9 +2,9 @@
 title: Adobe隱私權擴充功能概觀
 description: 了解Adobe Experience Platform中的Adobe隱私權標籤擴充功能。
 exl-id: 8401861e-93ad-48eb-8796-b26ed8963c32
-source-git-commit: 285e7ff1a1cd6c9790c526ca27ffafc60e94218d
+source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
 workflow-type: tm+mt
-source-wordcount: '909'
+source-wordcount: '901'
 ht-degree: 5%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 5%
 
 「Adobe隱私權」標籤擴充功能可讓您透過用戶端裝置上的Adobe解決方案，收集和移除指派給使用者的使用者ID。 接著，收集的ID便可傳送至 [Adobe Experience Platform Privacy Service](../../../../privacy-service/home.md) 存取或刪除受支援Adobe Experience Cloud應用程式中相關個人的個人資料。
 
-本指南說明如何在資料收集UI中安裝和設定Adobe隱私權擴充功能。
+本指南涵蓋如何在Experience PlatformUI或資料收集UI中安裝和設定Adobe隱私權擴充功能。
 
 >[!NOTE]
 >
@@ -25,7 +25,7 @@ ht-degree: 5%
 
 ## 安裝並設定 擴充功能
 
-在資料收集UI中，選取 **[!UICONTROL 擴充功能]** 在左側導覽器中，後面是 **[!UICONTROL 目錄]** 標籤。 使用搜尋列來縮小可用擴充功能的清單，直到您找到Adobe隱私權為止。 選擇 **[!UICONTROL 安裝]** 繼續。
+選擇 **[!UICONTROL 擴充功能]** 在左側導覽器中，後面是 **[!UICONTROL 目錄]** 標籤。 使用搜尋列來縮小可用擴充功能的清單，直到您找到Adobe隱私權為止。 選擇 **[!UICONTROL 安裝]** 繼續。
 
 ![安裝擴充功能](../../../images/extensions/privacy/install.png)
 
@@ -71,7 +71,7 @@ Adobe隱私權擴充功能提供三種動作類型，可用於 [規則](../../..
 
 ### 定義資料元素以處理身分
 
-在資料收集UI中，透過選取 **[!UICONTROL 資料元素]** 在左側導覽器中，隨後 **[!UICONTROL 新增資料元素]**. 進入設定畫面後，請選取 **[!UICONTROL 核心]** 擴充功能和 **[!UICONTROL 自訂程式碼]** （適用於資料元素類型）。 從此處，選擇 **[!UICONTROL 開啟編輯器]** 中。
+透過選取 **[!UICONTROL 資料元素]** 在左側導覽器中，隨後 **[!UICONTROL 新增資料元素]**. 進入設定畫面後，請選取 **[!UICONTROL 核心]** 擴充功能和 **[!UICONTROL 自訂程式碼]** （適用於資料元素類型）。 從此處，選擇 **[!UICONTROL 開啟編輯器]** 中。
 
 ![選取資料元素類型](../../../images/extensions/privacy/data-element-type.png)
 
@@ -111,4 +111,4 @@ Adobe隱私權擴充功能提供三種動作類型，可用於 [規則](../../..
 
 ## 後續步驟
 
-本指南說明如何在資料收集UI中使用Adobe隱私權標籤擴充功能。 如需擴充功能的詳細資訊，包括如何使用原始程式碼運用擴充功能的範例，請參閱 [隱私權JavaScript程式庫概觀](../../../../privacy-service/js-library.md) 在Privacy Service檔案中。
+本指南說明如何在UI中使用Adobe隱私權標籤擴充功能。 如需擴充功能的詳細資訊，包括如何使用原始程式碼運用擴充功能的範例，請參閱 [隱私權JavaScript程式庫概觀](../../../../privacy-service/js-library.md) 在Privacy Service檔案中。

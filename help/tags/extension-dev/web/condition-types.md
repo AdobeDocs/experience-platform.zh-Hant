@@ -1,10 +1,11 @@
 ---
 title: 網頁擴充功能的條件類型
 description: 了解如何為Web屬性中的標籤擴充功能定義條件類型程式庫模組。
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+exl-id: db504455-858b-4ac8-aa42-de516b0f1d5a
+source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
 workflow-type: tm+mt
-source-wordcount: '498'
-ht-degree: 60%
+source-wordcount: '502'
+ht-degree: 65%
 
 ---
 
@@ -12,7 +13,7 @@ ht-degree: 60%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch在Adobe Experience Platform中已重新命名為一套資料收集技術。 因此，產品檔案中已推出數個術語變更。 有關術語更改的綜合參考，請參閱以下[document](../../term-updates.md)。
+>Adobe Experience Platform Launch在Adobe Experience Platform中已重新命名為一套資料收集技術。 因此，所有產品文件中出現了幾項術語變更。 如需術語變更的彙整參考資料，請參閱以下[文件](../../term-updates.md)。
 
 在規則的內容中，會在事件發生後評估條件。 所有條件都必須傳回 true，才會繼續處理規則。例外情況是使用者將條件明確放入「例外」貯體中時，該貯體中的所有條件都必須傳回false，規則才能繼續處理。
 
@@ -28,7 +29,7 @@ ht-degree: 60%
 
 條件類型通常包含下列項目：
 
-1. 資料收集UI中顯示的[view](./views.md)，可讓使用者修改條件的設定。
+1. A [檢視](./views.md) 顯示於「Experience PlatformUI」和「資料收集UI」中，供使用者修改條件的設定。
 2. 在標籤執行階段程式庫內發出的程式庫模組，用於解譯設定及評估條件。
 
 條件類型程式庫模組有一個目標：評估某項是否正確。 其評估標的由您決定。

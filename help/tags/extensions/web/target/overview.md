@@ -1,9 +1,10 @@
 ---
 title: Adobe Target擴充功能概述
 description: 了解Adobe Experience Platform中Adobe Target的標籤擴充功能。
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+exl-id: b1c5e25b-42ea-4835-b2d4-913fa2536e77
+source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
 workflow-type: tm+mt
-source-wordcount: '1194'
+source-wordcount: '1192'
 ht-degree: 73%
 
 ---
@@ -12,7 +13,7 @@ ht-degree: 73%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch在Adobe Experience Platform中已重新命名為一套資料收集技術。 因此，產品檔案中已推出數個術語變更。 有關術語更改的綜合參考，請參閱以下[document](../../../term-updates.md)。
+>Adobe Experience Platform Launch在Adobe Experience Platform中已重新命名為一套資料收集技術。 因此，所有產品文件中出現了幾項術語變更。 如需術語變更的彙整參考資料，請參閱以下[文件](../../../term-updates.md)。
 
 您可參閱此參考文件，了解使用此擴充功能建立規則時可使用哪些選項。
 
@@ -22,21 +23,21 @@ ht-degree: 73%
 >
 > Adobe Target 擴充功能需使用 at.js。不支援 mbox.js。
 
-如果尚未安裝Adobe Target擴充功能，請開啟屬性，然後選取&#x200B;**[!UICONTROL 擴充功能>目錄]**，將游標暫留在Target擴充功能上，然後選取&#x200B;**[!UICONTROL 安裝]**。
+如果尚未安裝Adobe Target擴充功能，請開啟屬性，然後選取 **[!UICONTROL 擴充功能>目錄]**，將游標暫留在Target擴充功能上，然後選取 **[!UICONTROL 安裝]**.
 
-若要設定擴充功能，請開啟[!UICONTROL 擴充功能]標籤，將游標暫留在擴充功能上，然後選取&#x200B;**[!UICONTROL 設定]**。
+若要設定擴充功能，請開啟 [!UICONTROL 擴充功能] 標籤，將游標暫留在擴充功能上，然後選取 **[!UICONTROL 設定]**.
 
 ![](../../../images/ext-target-config.png)
 
 ### at.js 設定
 
-所有at.js設定（除了逾時以外）都會從Target使用者介面的at.js設定中自動擷取。 擴充功能只會在首次新增時從Target使用者介面擷取設定，因此，如有其他更新，應在資料收集UI中管理所有設定。
+所有at.js設定（除了逾時以外）都會從Target使用者介面的at.js設定中自動擷取。 擴充功能只會在首次新增時從Target使用者介面擷取設定，因此在需要其他更新時，應在UI中管理所有設定。
 
 下列組態選項可供使用：
 
 #### 用戶端代碼
 
-用戶端代碼是 Target 的帳戶識別碼。在大部分情況中，此值應一律保持為預設值。
+用戶端代碼是Target的帳戶識別碼。 在大部分情況中，此值應一律保持為預設值。
 
 可使用資料元素進行變更。
 
@@ -71,7 +72,7 @@ ht-degree: 73%
 
 #### Target 使用者介面中可用的其他 at.js 設定
 
-Target UI的[!UICONTROL 編輯at.js設定]頁面上提供的數個設定不屬於Target擴充功能。 建議因應措施如下：
+上提供的數個設定 [!UICONTROL 編輯at.js設定] Target UI的頁面不屬於Target擴充功能的一部分。 建議因應措施如下：
 
 * 自動建立全域 mbox 此設定會由 Target 擴充功能中的「引發全域 mbox」動作取代。
 * 程式庫頁首 此設定不屬於 Target 擴充功能的一部分。在使用「載入 Target」動作之前，先將需要在 at.js 之前載入的程式碼置於「核心擴充功能 > 自訂程式碼」動作中。
@@ -140,7 +141,7 @@ Target 擴充功能提供規則的「Then」部分中的下列動作：
    * 收到全域 mbox 回應時
    * 全域 mbox 要求逾時
    * 程式碼片段本身逾時
-* 應使用預先隱藏程式碼片段，在所有頁面上使用「引發全域 mbox」動作，以將預先隱藏的時間減至最少。
+* 應使用預先隱藏程式碼片段，在所有頁面上使用「引發全域Mbox」動作，將預先隱藏的時間減至最少。
 
 預先隱藏的程式碼片段如下所示，且可縮小：可設定的選項位於末端：
 

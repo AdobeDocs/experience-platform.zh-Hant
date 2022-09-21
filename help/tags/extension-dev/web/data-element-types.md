@@ -1,10 +1,11 @@
 ---
 title: 網頁擴充功能的資料元素類型
 description: 了解如何為Web屬性中的標籤擴充功能定義資料元素類型程式庫模組。
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+exl-id: 3aa79322-2237-492f-82ff-0ba4d4902f70
+source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
 workflow-type: tm+mt
-source-wordcount: '596'
-ht-degree: 56%
+source-wordcount: '600'
+ht-degree: 60%
 
 ---
 
@@ -12,7 +13,7 @@ ht-degree: 56%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch在Adobe Experience Platform中已重新命名為一套資料收集技術。 因此，產品檔案中已推出數個術語變更。 有關術語更改的綜合參考，請參閱以下[document](../../term-updates.md)。
+>Adobe Experience Platform Launch在Adobe Experience Platform中已重新命名為一套資料收集技術。 因此，所有產品文件中出現了幾項術語變更。 如需術語變更的彙整參考資料，請參閱以下[文件](../../term-updates.md)。
 
 在資料收集標籤中，資料元素實質上是頁面上資料片段的別名。 可在查詢字串參數、Cookie、DOM元素或其他位置中找到此資料。 資料元素可供規則參照，並可作為據以存取這些資料片段的抽象概念。
 
@@ -22,13 +23,13 @@ ht-degree: 56%
 
 >[!IMPORTANT]
 >
->如果您正在開發邊緣擴充功能，請參閱[邊緣擴充功能資料元素類型](../edge/data-element-types.md)上的指南。
+>如果您正在開發邊緣擴充功能，請參閱 [邊緣擴充功能的資料元素類型](../edge/data-element-types.md) 。
 >
 >本檔案也假設您熟悉程式庫模組，以及這些模組如何整合至網頁擴充功能。 如果需要相關說明，請先參閱[程式庫模組格式化](./format.md)的概述文章，再返回閱讀本指南。
 
 資料元素類型通常包含下列項目：
 
-1. 資料收集UI中顯示的[view](./views.md)，可讓使用者修改資料元素的設定。
+1. A [檢視](./views.md) 顯示於「Experience PlatformUI」和「資料收集UI」中，供使用者修改資料元素的設定。
 2. 在標籤執行階段程式庫內發出的程式庫模組，用於解譯設定及擷取資料片段。
 
 請考量您想要讓使用者從名為 `productName` 的本機儲存體項目中擷取資料片段的情況。您的模組可能如下所示：
@@ -39,7 +40,7 @@ module.exports = function(settings) {
 }
 ```
 
-如果要使Adobe Experience Platform用戶可以配置本地儲存項名稱，則可以允許用戶輸入名稱，然後將該名稱保存到`settings`對象。 該物件可能如下所示：
+如果要讓Adobe Experience Platform使用者可設定本機儲存體項目名稱，您可以允許使用者輸入名稱，然後將名稱儲存至 `settings` 物件。 該物件可能如下所示：
 
 ```js
 {

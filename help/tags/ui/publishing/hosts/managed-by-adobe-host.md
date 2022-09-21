@@ -1,10 +1,11 @@
 ---
 title: Adobe管理主機概述
 description: 了解在Adobe Experience Platform中部署標籤程式庫組建時的預設托管選項。
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+exl-id: 9042c313-b0d3-4f6e-963d-0051d760fd16
+source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
 workflow-type: tm+mt
-source-wordcount: '1175'
-ht-degree: 61%
+source-wordcount: '1173'
+ht-degree: 64%
 
 ---
 
@@ -12,7 +13,7 @@ ht-degree: 61%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch在Adobe Experience Platform中已重新命名為一套資料收集技術。 因此，產品檔案中已推出數個術語變更。 有關術語更改的綜合參考，請參閱以下[document](../../../term-updates.md)。
+>Adobe Experience Platform Launch在Adobe Experience Platform中已重新命名為一套資料收集技術。 因此，所有產品文件中出現了幾項術語變更。 如需術語變更的彙整參考資料，請參閱以下[文件](../../../term-updates.md)。
 
 Adobe管理主機是在Adobe Experience Platform中部署標籤程式庫組建時的預設主機設定。 透過資料收集使用者介面建立新屬性時，系統會為您建立預設的Adobe管理主機。
 
@@ -75,7 +76,7 @@ CDN的主要用途是以智慧化方式將內容傳送至地理位置上較接�
 
 使用 `cache-control` HTTP 標頭也可便於在瀏覽器上快取程式庫組建。使用 Adobe 管理主機時，您無法控制 API 回應中傳回的標頭，因此系統會使用 Adobe 的快取預設值。換言之，您無法針對 Adobe 管理主機使用自訂標頭。如果需要自訂 `cache-control` 標頭，建議您改為[自行託管](self-hosting-libraries.md)。
 
-瀏覽器快取型程式庫組建的存留時間(TTL)取決於`cache-control`標頭，根據您使用的標籤環境而有所不同：
+瀏覽器快取型程式庫組建的存留時間(TTL)由 `cache-control` 標題)會依您使用的標籤環境而有所不同：
 
 | 環境 | `cache-control` 值 |
 | --- | --- |
@@ -87,20 +88,19 @@ CDN的主要用途是以智慧化方式將內容傳送至地理位置上較接�
 
 快取控制標題只會套用至主要程式庫組建。 主程式庫之下的子資源一律視為全新資源，因此不需在瀏覽器上加以快取。
 
-## 在資料收集UI中使用Adobe管理托管
+## 在 UI 中使用由 Adobe 管理的託管機制
 
-當您在[資料收集UI](https://experience.adobe.com/#/data-collection/)中首次建立屬性時，系統會自動為您建立Adobe管理主機。 預設情況下，所有具有立即可用屬性的可用環境也會指派給Adobe管理主機。
+當您首次在Platform UI或資料收集UI中建立屬性時，系統會自動為您建立Adobe管理主機。 預設情況下，所有具有立即可用屬性的可用環境也會指派給Adobe管理主機。
 
 >[!NOTE]
 >
 >如果從所有環境取消指派預設的 Adobe 管理主機，則可刪除該主機。如果您想在執行此動作後切換回 Adobe 管理主機，可依下列步驟建立新主機:
 >
->1. 在屬性上選擇&#x200B;**[!UICONTROL Hosts]**&#x200B;標籤，然後選擇&#x200B;**[!UICONTROL Add Host]**。
->1. 提供主機的名稱，選擇&#x200B;**[!UICONTROL 由Adobe管理]**&#x200B;作為主機類型，然後選擇&#x200B;**[!UICONTROL 保存]**。
+>1. 選取 **[!UICONTROL 主機]** ，然後選取 **[!UICONTROL 添加主機]**.
+>1. 提供主機的名稱，請選取 **[!UICONTROL 由Adobe管理]** 作為主機類型，然後選取 **[!UICONTROL 儲存]**.
 
 >
->
-接著，您就可以視需求將環境重新指派給 Adobe 管理主機。
+>接著，您就可以視需求將環境重新指派給 Adobe 管理主機。
 
 ## 後續步驟
 
