@@ -2,9 +2,9 @@
 title: 衛星對象參考
 description: 了解用戶端_satellite物件，以及您可以在標籤中使用物件執行的各種功能。
 exl-id: f8b31c23-409b-471e-bbbc-b8f24d254761
-source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
+source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
 workflow-type: tm+mt
-source-wordcount: '1290'
+source-wordcount: '1291'
 ht-degree: 42%
 
 ---
@@ -51,7 +51,7 @@ var product = _satellite.getVar('product');
 
 >[!NOTE]
 >
->您可以使用百分比(`%`)語法，以參考標籤實作中許多表單欄位的變數，減少呼叫的需求 `_satellite.getVar()`. 例如，使用 `%product%` 將存取產品資料元素或自訂變數的值。
+>您可以使用百分比(`%`)語法，以參考資料收集UI中許多表單欄位的變數，減少呼叫的需求 `_satellite.getVar()`. 例如，使用 `%product%` 將存取產品資料元素或自訂變數的值。
 
 事件觸發規則時，您可以傳遞規則的對應 `event` 物件 `_satellite.getVar()` 就這樣：
 

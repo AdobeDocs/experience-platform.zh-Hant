@@ -2,10 +2,10 @@
 title: Experience Cloud組織設定
 description: 了解如何註冊Adobe Experience Cloud組織，以開始開發Adobe Experience Platform的擴充功能。
 exl-id: ee36319d-5de8-462e-879b-311445cf334c
-source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
+source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
 workflow-type: tm+mt
-source-wordcount: '595'
-ht-degree: 50%
+source-wordcount: '608'
+ht-degree: 49%
 
 ---
 
@@ -41,9 +41,7 @@ ht-degree: 50%
 >
 >目前，您的公司電子郵件一次只能用於一個合作夥伴計畫，因此您需要使用不同的公司電子郵件作為每個計畫的註冊連絡人。
 
-在您的公司加入 Exchange 合作夥伴計畫後，您可以登入 [Exchange 合作夥伴網站](https://partners.adobe.com/tw/exchangeprogram/experiencecloud)，並依照下列步驟請求對 Adobe 解決方案的存取權。
-
-如果您的Experience Cloud帳戶需要存取資料收集UI和Experience PlatformUI，請參閱 [資料收集權限指南](../../../collection/permissions.md).
+在您的公司加入 Exchange 合作夥伴計畫後，您可以登入 [Exchange 合作夥伴網站](https://partners.adobe.com/tw/exchangeprogram/experiencecloud)，並依照下列步驟請求對 Adobe 解決方案的存取權。如果您已有Experience Cloud帳戶和解決方案的存取權，但無法存取Adobe Experience Platform中的資料收集UI，請參閱 [設定群組和使用者的指示](../../ui/administration/user-permissions.md).
 
 ## 獨立開發人員
 

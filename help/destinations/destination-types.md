@@ -3,9 +3,9 @@ keywords: 目的地；目的地；目的地類型
 title: 目的地類型和類別
 description: 了解Adobe Experience Platform中不同的目的地類型和類別。
 exl-id: 7826d1e2-bd6b-4f65-9da9-0a3b3e8bb93b
-source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
+source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
 workflow-type: tm+mt
-source-wordcount: '640'
+source-wordcount: '642'
 ht-degree: 0%
 
 ---
@@ -69,7 +69,7 @@ Experience Platform中的邊緣個人化目的地包括 [Adobe Target](/help/des
 
 ## 擴充功能 {#extensions}
 
-平台運用標籤管理的強大功能和彈性，可讓您在UI中設定標籤擴充功能。
+Platform運用標籤管理的強大功能和彈性，可讓您在資料收集UI中設定標籤擴充功能。
 
 >[!TIP]
 >

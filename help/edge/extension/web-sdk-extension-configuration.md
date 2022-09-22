@@ -1,10 +1,10 @@
 ---
 title: 設定Adobe Experience Platform Web SDK擴充功能
-description: 如何在UI中設定Adobe Experience Platform Web SDK標籤擴充功能。
+description: 如何在資料收集UI中設定Adobe Experience Platform Web SDK標籤擴充功能。
 exl-id: 96d32db8-0c9a-49f0-91f3-0244522d66df
-source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
+source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
 workflow-type: tm+mt
-source-wordcount: '1041'
+source-wordcount: '1047'
 ht-degree: 6%
 
 ---
@@ -13,11 +13,11 @@ ht-degree: 6%
 
 Adobe Experience Platform Web SDK標籤擴充功能會透過Adobe Experience Platform邊緣網路，將資料從Web屬性傳送至Adobe Experience Cloud。 擴充功能可讓您將資料串流至Platform、同步身分、處理客戶同意訊號，以及自動收集內容資料。
 
-本檔案說明如何在UI中設定擴充功能。
+本檔案說明如何在資料收集UI中設定擴充功能。
 
 ## 快速入門
 
-如果已為屬性安裝Platform Web SDK擴充功能，請開啟UI中的屬性，然後選取 **[!UICONTROL 擴充功能]** 標籤。 在「平台Web SDK」下方，選取 **[!UICONTROL 設定]**.
+如果已為屬性安裝Platform Web SDK擴充功能，請開啟資料收集UI中的屬性，然後選取 **[!UICONTROL 擴充功能]** 標籤。 在「平台Web SDK」下方，選取 **[!UICONTROL 設定]**.
 
 ![](../images/extension/overview/configure.png)
 

@@ -2,9 +2,9 @@
 title: 資料收集的資料準備
 description: 了解如何為Adobe Experience Platform Web和Mobile SDK設定資料流時，將資料對應至Experience Data Model(XDM)事件結構。
 exl-id: 87a70d56-1093-445c-97a5-b8fa72a28ad0
-source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
+source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
 workflow-type: tm+mt
-source-wordcount: '914'
+source-wordcount: '918'
 ht-degree: 1%
 
 ---
@@ -22,7 +22,7 @@ ht-degree: 1%
 >* [使用資料準備處理資料格式](../../data-prep/data-handling.md)
 
 
-本指南說明如何在UI中對應資料。 若要遵循這些步驟，請開始建立資料流的程式，直到（並包括） [基本配置步驟](./overview.md#create).
+本指南說明如何在資料收集UI中對應資料。 若要遵循這些步驟，請開始建立資料流的程式，直到（並包括） [基本配置步驟](./overview.md#create).
 
 有關資料收集資料準備過程的快速演示，請參閱以下視頻：
 
@@ -203,4 +203,4 @@ ht-degree: 1%
 
 ## 後續步驟
 
-本指南說明在UI中設定資料流時，如何將資料對應至XDM。 如果您遵循一般資料流教學課程，現在可以返回 [查看資料流詳細資訊](./overview.md).
+本指南說明在資料收集UI中設定資料流時，如何將資料對應至XDM。 如果您遵循一般資料流教學課程，現在可以返回 [查看資料流詳細資訊](./overview.md).

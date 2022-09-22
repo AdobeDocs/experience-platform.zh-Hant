@@ -2,9 +2,9 @@
 title: 環境
 description: 了解標籤環境的概念，以及它們在Adobe Experience Platform中的運作方式。
 exl-id: 0bf641c9-412e-4737-9b76-232d980385b2
-source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
+source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
 workflow-type: tm+mt
-source-wordcount: '1464'
+source-wordcount: '1468'
 ht-degree: 73%
 
 ---
@@ -91,7 +91,7 @@ ht-degree: 73%
 
 ![](./images/environments/select-host.png)
 
-建立組建時，該組建會傳送至您為指派主機指定的位置。 有關如何建立和配置標籤主機的資訊，請參閱 [主機概述](./hosts/hosts-overview.md).
+建立組建時，該組建會傳送至您為指派主機指定的位置。 如需如何在資料收集UI中建立和設定主機的資訊，請參閱 [主機概述](./hosts/hosts-overview.md).
 
 ### 封存設定 {#archive}
 

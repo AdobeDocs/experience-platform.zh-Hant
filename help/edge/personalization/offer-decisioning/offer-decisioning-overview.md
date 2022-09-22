@@ -3,9 +3,9 @@ title: 搭配Platform Web SDK使用Offer decisioning
 description: Adobe Experience Platform Web SDK可提供及呈現以Offer decisioning管理的個人化優惠方案。 您可以使用Offer decisioningUI或API來建立選件和其他相關物件。
 keywords: offer decisioning；決策；Web SDK;Platform Web SDK；個人化優惠方案；傳送優惠方案；優惠方案傳送；優惠方案個人化；
 exl-id: 4ab51f9d-3c44-4855-b900-aa2cde673a9a
-source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
+source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
 workflow-type: tm+mt
-source-wordcount: '865'
+source-wordcount: '870'
 ht-degree: 5%
 
 ---
@@ -65,7 +65,7 @@ Adobe Experience Platform [!DNL Web SDK] 可以提供及呈現以Offer decisioni
 
    ![offer-decisioning-edge-config](./assets/offer-decisioning-edge-config.png)
 
-1. 請依照 [安裝SDK](../../fundamentals/installing-the-sdk.md) (SDK可獨立安裝，或透過UI安裝。 請參閱 [標籤快速入門手冊](../../../tags/quick-start/quick-start.md))以取得詳細資訊。
+1. 請依照 [安裝SDK](../../fundamentals/installing-the-sdk.md) (SDK可獨立安裝，或透過 [資料收集UI](https://experience.adobe.com/#/data-collection/). 請參閱 [標籤快速入門手冊](../../../tags/quick-start/quick-start.md))以取得詳細資訊。
 1. [配置SDK](../../fundamentals/configuring-the-sdk.md) offer decisioning。 以下提供其他Offer decisioning特定步驟。
 
    * 安裝獨立SDK

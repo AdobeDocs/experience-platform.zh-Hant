@@ -2,9 +2,9 @@
 title: 發佈流程
 description: 了解在Adobe Experience Platform中建立程式庫、測試組建及核准以供生產的程式。
 exl-id: 4885f60b-6401-4ec7-aa1a-29c135087847
-source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
+source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
 workflow-type: tm+mt
-source-wordcount: '1490'
+source-wordcount: '1499'
 ht-degree: 36%
 
 ---
@@ -112,7 +112,7 @@ Adobe Experience Platform中的標籤發佈流程是指建立程式庫、測試�
 
 ![](./images/approval-workflow/upstream.png)
 
-在UI中編輯程式庫時，繼承自上游的所有資源都會顯示在 **[!UICONTROL 上游資源]** 區段。 若要檢視這些資源，請選取區段標題下方的展開標籤。
+在資料收集UI中編輯程式庫時，繼承自上游的所有資源都會顯示在 **[!UICONTROL 上游資源]** 區段。 若要檢視這些資源，請選取區段標題下方的展開標籤。
 
 ![](./images/approval-workflow/upstream-collapse.png)
 

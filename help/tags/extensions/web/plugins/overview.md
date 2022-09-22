@@ -2,10 +2,10 @@
 title: 常見Analytics擴充功能概觀
 description: 了解Adobe Experience Platform中的常見Analytics標籤擴充功能。
 exl-id: 9eeb4589-df90-4356-b927-b2c29c32370b
-source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
+source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
 workflow-type: tm+mt
-source-wordcount: '406'
-ht-degree: 77%
+source-wordcount: '549'
+ht-degree: 62%
 
 ---
 
@@ -50,7 +50,7 @@ ht-degree: 77%
 >
 >雖然此動作比較容易實作，但 Adobe 諮詢服務不建議您使用此動作，因為這會增加外掛程式的權重。
 
-此動作中，您可以選取要實作的每個外掛程式，並儲存變更。選取您要在實作期間使用的數量。
+此動作中，您可以選取要實作的每個外掛程式，並儲存變更。選取您要在實作期間使用的數量。使用各外掛程式的文件連結，以及 Analytics [外掛程式概覽](https://experienceleague.adobe.com/docs/analytics/implementation/vars/plugins/impl-plugins.html)提供的簡短說明。
 
 ### 初始化外掛程式
 
@@ -58,17 +58,36 @@ ht-degree: 77%
 
 ## 常見Analytics外掛程式擴充功能資料元素
 
-常見Analytics外掛程式擴充功能中提供下列資料元素，這些資料元素會利用標籤功能在Analytics中設定和設定其對應的外掛程式：
+本節說明常見Analytics外掛程式擴充功能中可用的資料元素。
 
-* `getGeoCoordinates`
-* `getNewRepeat`
-* `getPageName`
-* `getResponsiveLayout`
-* `getTimeParting`
-* `getTimeSinceLastVisit`
-* `getVisitDuration`
-* `getVisitNum`
+### getGeoCoordinates
 
->[!NOTE]
->
->如需上述外掛程式的詳細資訊，請參閱 [Analytics檔案](https://experienceleague.adobe.com/docs/analytics/implementation/vars/plugins/impl-plugins.html).
+可讓使用者運用Adobe Experience Platform中的原生資料收集UI來設定和設定getGeoCoordinates外掛程式。
+
+### getNewRepeat
+
+可讓使用者運用原生資料收集UI來設定和設定getNewRepeat外掛程式。
+
+### getPageName
+
+可讓使用者運用原生資料收集UI來設定和設定getPageName外掛程式。
+
+### getResponsiveLayout
+
+可讓使用者運用原生資料收集UI來設定和設定getResponsiveLayout外掛程式。
+
+### getTimeParting
+
+可讓使用者運用原生資料收集UI來設定和設定getTimeParting外掛程式。
+
+### getTimeSinceLastVisit
+
+可讓使用者運用原生資料收集UI來設定和設定getTimeSinceLastVisit外掛程式。
+
+### getVisitDuration
+
+可讓使用者運用原生資料收集UI來設定和設定getVisitDuration外掛程式。
+
+### getVisitNum
+
+可讓使用者運用原生資料收集UI來設定和設定getVisitNum外掛程式。

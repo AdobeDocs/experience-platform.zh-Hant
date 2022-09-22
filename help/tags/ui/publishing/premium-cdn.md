@@ -2,9 +2,9 @@
 title: 適用於標籤的Premium CDN支援
 description: 了解標籤的付費CDN功能，以及如何在多個地理區域傳送內容。
 exl-id: 33e36d3b-9e21-44a8-8498-32a5fc20b46b
-source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
+source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
 workflow-type: tm+mt
-source-wordcount: '540'
+source-wordcount: '536'
 ht-degree: 0%
 
 ---
@@ -19,11 +19,11 @@ ht-degree: 0%
 
 為此，Experience Platform中的標籤提供付費的CDN功能，可讓您將內容傳送至這些特殊地區。
 
-Premium CDN支援是付費功能，您的組織必須購買才能啟用和使用。 本指南涵蓋購買後如何在Experience PlatformUI或資料收集UI中設定和使用此功能。
+Premium CDN支援是付費功能，您的組織必須購買才能啟用和使用。 本指南說明購買後，如何在資料收集UI中設定和使用此功能。
 
 ## 為貴組織啟用優質CDN
 
-Premium CDN會在公司層級啟用。 貴組織購買進階CDN功能後，Adobe管理員就會在貴公司的UI中啟用該功能。
+Premium CDN會在公司層級啟用。 貴組織購買進階CDN功能後，Adobe管理員就會在資料收集UI中為貴公司啟用。
 
 ## 使用更新的內嵌程式碼重建和安裝標籤程式庫
 

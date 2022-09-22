@@ -2,9 +2,9 @@
 title: 擴充功能開發概述
 description: 了解關於不同標記擴充功能類型的主要元件，以及 Adobe Experience Platform 中的擴充功能開發程序。
 exl-id: b72df3df-f206-488d-a690-0f086973c5b6
-source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
+source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
 workflow-type: tm+mt
-source-wordcount: '950'
+source-wordcount: '949'
 ht-degree: 22%
 
 ---
@@ -37,11 +37,11 @@ Adobe Experience Platform中標籤的主要目標之一，是建立開放的生�
 
 ### 檢視
 
-檢視是可載入至HTML檔案的檢視 [`iframe` 元素](https://developer.mozilla.org/zh-TW/docs/Web/HTML/Element/iframe) ，尤其是透過Platform UI和資料收集UI。 檢視必須包含擴充功能提供的指令碼，並符合小型API，才能與應用程式通訊。
+檢視是可載入至HTML檔案的檢視 [`iframe` 元素](https://developer.mozilla.org/zh-TW/docs/Web/HTML/Element/iframe) ，尤其是透過資料收集UI。 檢視必須包含擴充功能提供的指令碼，並符合小型API，才能與應用程式通訊。
 
 任何擴充功能最重要的檢視檔案都是其設定。 請參閱 [擴充功能組態](#configuration) 以取得更多資訊。
 
-您的檢視中並沒有可用程式庫的限制。換言之，您可以使用jQuery、Underscore、React、Angular、Bootstrap或其他。 不過，建議您讓擴充功能的外觀和風格與UI類似。
+您的檢視中並沒有可用程式庫的限制。換言之，您可以使用jQuery、Underscore、React、Angular、Bootstrap或其他。 不過，建議您讓擴充功能的外觀與資料收集UI類似。
 
 建議您將所有檢視相關檔案 (HTML、CSS、JavaScript) 放在與程式庫模組檔案不同的單一子目錄中。在 `extension.json`，您可以說明此檢視子目錄的位置。 然後，Platform會從其Web伺服器提供此子目錄（且僅限此子目錄）。
 

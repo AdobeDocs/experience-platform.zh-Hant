@@ -2,9 +2,9 @@
 title: 邊緣擴充功能的資料元素類型
 description: 了解如何為Edge屬性中的標籤擴充功能定義資料元素類型程式庫模組。
 exl-id: ddbc3912-1c25-4d21-bde8-e40e583b4278
-source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
+source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
 workflow-type: tm+mt
-source-wordcount: '439'
+source-wordcount: '435'
 ht-degree: 24%
 
 ---
@@ -29,7 +29,7 @@ ht-degree: 24%
 
 資料元素類型通常包含下列項目：
 
-1. 顯示於Experience PlatformUI和資料收集UI中的檢視，可讓使用者修改資料元素的設定。
+1. 資料收集UI中顯示的檢視，可讓使用者修改資料元素的設定。
 2. 在標籤執行階段程式庫內發出的程式庫模組，用於解譯設定及擷取資料片段。
 
 如果您想要讓使用者從自訂資料層擷取資料片段，您的模組可能如下範例所示。

@@ -1,10 +1,10 @@
 ---
 title: 在事件轉送中設定機密
-description: 了解如何在UI中設定機密，以驗證事件轉送屬性中使用的端點。
+description: 了解如何在資料收集UI中設定機密，以驗證事件轉送屬性中使用的端點。
 exl-id: eefd87d7-457f-422a-b159-5b428da54189
-source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
+source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
 workflow-type: tm+mt
-source-wordcount: '1633'
+source-wordcount: '1637'
 ht-degree: 0%
 
 ---
@@ -24,7 +24,7 @@ ht-degree: 0%
 
 {style=&quot;table-layout:auto&quot;}
 
-本指南提供如何設定事件轉送之機密([!UICONTROL Edge])屬性(位於Experience PlatformUI或資料收集UI中)。
+本指南提供如何設定事件轉送之機密([!UICONTROL Edge])屬性。
 
 >[!NOTE]
 >
@@ -32,13 +32,13 @@ ht-degree: 0%
 
 ## 先決條件
 
-本指南假設您已熟悉如何在UI中管理標籤和事件轉送的資源，包括如何建立資料元素和事件轉送規則。 請參閱 [管理資源](../managing-resources/overview.md) 若您需要介紹。
+本指南假設您已熟悉如何在資料收集UI中管理標籤和事件轉送的資源，包括如何建立資料元素和事件轉送規則。 請參閱 [管理資源](../managing-resources/overview.md) 若您需要介紹。
 
 您也應該已妥善了解標籤和事件轉送的發佈流程，包括如何將資源新增至程式庫，以及將組建安裝至您的網站以進行測試。 請參閱 [發佈概述](../publishing/overview.md) 以取得更多詳細資訊。
 
 ## 建立機密 {#create}
 
-若要建立密碼，請選取 **[!UICONTROL 事件轉送]** 在左側導覽中，開啟您要新增機密的事件轉送屬性。 下一步，選擇 **[!UICONTROL 秘密]** 在左側導覽器中，隨後 **[!UICONTROL 建立新密碼]**.
+若要建立機密，請登入資料收集UI，並開啟您要新增機密的事件轉送屬性。 下一步，選擇 **[!UICONTROL 秘密]** 在左側導覽器中，隨後 **[!UICONTROL 建立新密碼]**.
 
 ![建立新機密](../../images/ui/event-forwarding/secrets/create-new-secret.png)
 
@@ -87,7 +87,7 @@ ht-degree: 0%
 
 ### [!UICONTROL OAuth 2] {#oauth2}
 
-若要建立OAuth 2密碼，請選取 **[!UICONTROL OAuth 2]** 從 **[!UICONTROL 類型]** 下拉式清單。 在下方顯示的欄位中，提供您的 [[!UICONTROL 用戶端ID] 和 [!UICONTROL 用戶端密碼]](https://www.oauth.com/oauth2-servers/client-registration/client-id-secret/)，以及您的 [[!UICONTROL 代號URL]](https://www.oauth.com/oauth2-servers/access-tokens/client-credentials/) 進行OAuth整合。 此 [!UICONTROL 代號URL] UI中的欄位是授權伺服器主機與權杖路徑之間的串連。
+若要建立OAuth 2密碼，請選取 **[!UICONTROL OAuth 2]** 從 **[!UICONTROL 類型]** 下拉式清單。 在下方顯示的欄位中，提供您的 [[!UICONTROL 用戶端ID] 和 [!UICONTROL 用戶端密碼]](https://www.oauth.com/oauth2-servers/client-registration/client-id-secret/)，以及您的 [[!UICONTROL 代號URL]](https://www.oauth.com/oauth2-servers/access-tokens/client-credentials/) 進行OAuth整合。 此 [!UICONTROL 代號URL] 資料收集UI中的欄位是授權伺服器主機與權杖路徑之間的串連。
 
 ![OAuth 2密碼](../../images/ui/event-forwarding/secrets/oauth-secret-1.png)
 
@@ -180,4 +180,4 @@ ht-degree: 0%
 
 ## 後續步驟
 
-本指南說明如何在UI中管理機密。 如需如何使用Reactor API與機密互動的資訊，請參閱 [secrets端點指南](../../api/endpoints/secrets.md).
+本指南說明如何在資料收集UI中管理機密。 如需如何使用Reactor API與機密互動的資訊，請參閱 [secrets端點指南](../../api/endpoints/secrets.md).

@@ -2,9 +2,9 @@
 title: 標籤的使用者權限
 description: 了解標籤可用的不同權限類型，以及不同業務使用案例的一些基本實作策略。
 exl-id: 9b48847a-6133-4dbd-b17d-e7b88152ad7d
-source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
+source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
 workflow-type: tm+mt
-source-wordcount: '1308'
+source-wordcount: '1311'
 ht-degree: 17%
 
 ---
@@ -42,7 +42,7 @@ Adobe Experience Platform中標籤的使用者權限會透過Adobe Admin Console
 
 ### 屬性權利 {#property-rights}
 
-您在UI中建立的任何標籤屬性都可在Admin Console中使用，讓您可將屬性以相同產品設定檔中的特定屬性權限分組。
+您在資料收集UI中建立的任何屬性都可在Admin Console中使用，讓您可將屬性以相同產品設定檔中的特定屬性權限分組。
 
 例如，如果指定的產品設定檔沒有屬性A1的存取權，屬於該設定檔的使用者將看不到或修改屬性A1內的任何設定。
 
@@ -52,7 +52,7 @@ Adobe Experience Platform中標籤的使用者權限會透過Adobe Admin Console
 
 | 屬性權利 | 說明 |
 | --- | --- |
-| **開發** | 這可讓您執行下列動作：<ul><li>建立規則和資料元素</li><li>建立程式庫並在現有開發環境中建置</li><li>提交程式庫以進行核准</li></ul>UI中的大部分日常工作都需要此權利。 |
+| **開發** | 這可讓您執行下列動作：<ul><li>建立規則和資料元素</li><li>建立程式庫並在現有開發環境中建置</li><li>提交程式庫以進行核准</li></ul>資料收集UI中的大部分日常工作都需要此權限。 |
 | **核准** | 這可讓您取得已提交的程式庫，並建置至測試環境。 完成測試之後，您也可以核准程式庫以進行發佈。 |
 | **發佈** | 這可讓您將已核准的程式庫發佈至生產環境。 |
 | **管理擴充功能** | 這可讓您執行下列動作： <ul><li>將新擴充功能安裝至屬性</li><li>修改已安裝擴充功能的設定</li><li>刪除擴充功能</li></ul>請參閱的擴充功能概觀檔案 [擴充功能的詳細資訊](../managing-resources/extensions/overview.md). 視您的組織而定，此角色通常屬於 IT 或行銷部門。 |

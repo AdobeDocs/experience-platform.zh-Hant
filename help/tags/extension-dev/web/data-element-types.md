@@ -2,10 +2,10 @@
 title: 網頁擴充功能的資料元素類型
 description: 了解如何為Web屬性中的標籤擴充功能定義資料元素類型程式庫模組。
 exl-id: 3aa79322-2237-492f-82ff-0ba4d4902f70
-source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
+source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
 workflow-type: tm+mt
-source-wordcount: '600'
-ht-degree: 60%
+source-wordcount: '596'
+ht-degree: 61%
 
 ---
 
@@ -29,7 +29,7 @@ ht-degree: 60%
 
 資料元素類型通常包含下列項目：
 
-1. A [檢視](./views.md) 顯示於「Experience PlatformUI」和「資料收集UI」中，供使用者修改資料元素的設定。
+1. A [檢視](./views.md) 顯示於資料收集UI中，供使用者修改資料元素的設定。
 2. 在標籤執行階段程式庫內發出的程式庫模組，用於解譯設定及擷取資料片段。
 
 請考量您想要讓使用者從名為 `productName` 的本機儲存體項目中擷取資料片段的情況。您的模組可能如下所示：

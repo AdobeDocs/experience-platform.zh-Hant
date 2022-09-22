@@ -2,10 +2,10 @@
 title: 刪除資源
 description: 了解如何刪除Adobe Experience Platform中的標籤資源。
 exl-id: c8e26720-1976-48ec-8490-3d4ce587831e
-source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
+source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
 workflow-type: tm+mt
-source-wordcount: '558'
-ht-degree: 79%
+source-wordcount: '550'
+ht-degree: 80%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 79%
 >
 >Adobe Experience Platform Launch在Adobe Experience Platform中已重新命名為一套資料收集技術。 因此，所有產品文件中出現了幾項術語變更。 如需術語變更的彙整參考資料，請參閱以下[文件](../../term-updates.md)。
 
-刪除資源是將該資源從Adobe Experience Platform中永久移除。 如果您想從特定標籤程式庫中移除資源，但仍希望該資源可供其他程式庫使用，請參閱上的指南 [從程式庫中移除資源](remove-resources-from-library.md).
+刪除資源是將該資源從Adobe Experience Platform中永久移除。 如果您仍要讓資源顯示在資料收集UI中，但不顯示在標籤程式庫中，請參閱 [從程式庫中移除資源](remove-resources-from-library.md).
 
 您可以刪除資料元素、規則、擴充功能、主機、環境和屬性。刪除之後，就無法復原這些資源。
 

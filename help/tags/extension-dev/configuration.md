@@ -1,10 +1,10 @@
 ---
 title: 擴充功能組態
-description: 了解如何設定標籤擴充功能，以從Adobe Experience Platform UI或資料收集UI中的使用者收集全域設定。
+description: 了解如何設定標籤擴充功能，以從Adobe Experience Platform資料收集UI中的使用者收集全域設定。
 exl-id: 2bf33617-1398-499f-8325-3849dbdb1f97
-source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
+source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
 workflow-type: tm+mt
-source-wordcount: '274'
+source-wordcount: '273'
 ht-degree: 68%
 
 ---

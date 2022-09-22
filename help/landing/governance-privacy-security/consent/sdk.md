@@ -3,7 +3,7 @@ title: 使用Adobe Experience Platform Web SDK處理客戶同意資料
 topic-legacy: getting started
 description: 了解如何整合Adobe Experience Platform Web SDK，以在Adobe Experience Platform中處理客戶同意資料。
 exl-id: 3a53d908-fc61-452b-bec3-af519dfefa41
-source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
+source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
 workflow-type: tm+mt
 source-wordcount: '1375'
 ht-degree: 0%
@@ -23,7 +23,7 @@ Adobe Experience Platform Web SDK可讓您擷取同意管理平台(CMP)產生的
 * [使用Adobe標準建立資料集](./adobe/dataset.md)
 * [使用TCF 2.0標準建立資料集](./iab/dataset.md)
 
-本指南會依照使用者介面中標籤擴充功能來設定SDK的工作流程進行。 如果您不想使用擴充功能，而想要在網站上直接內嵌獨立版本的SDK，請參閱下列檔案，而非本指南：
+本指南遵循使用資料收集UI中的標籤擴充功能來設定SDK的工作流程。 如果您不想使用擴充功能，而想要在網站上直接內嵌獨立版本的SDK，請參閱下列檔案，而非本指南：
 
 * [設定資料流](../../../edge/datastreams/overview.md)
 * [安裝SDK](../../../edge/fundamentals/installing-the-sdk.md)
@@ -37,7 +37,7 @@ Adobe Experience Platform Web SDK可讓您擷取同意管理平台(CMP)產生的
 
 ## 設定資料流
 
-為了讓SDK將資料傳送至Experience Platform，您必須先設定資料流。 在資料收集UI或Experience PlatformUI中，選取 **[!UICONTROL 資料流]** 的下一頁。
+為了讓SDK將資料傳送至Experience Platform，您必須先設定資料流。 在資料收集UI中，選取 **[!UICONTROL 資料流]** 的下一頁。
 
 建立新資料流或選取要編輯的現有資料流後，請選取旁邊的切換按鈕 **[!UICONTROL Adobe Experience Platform]**. 接下來，使用下列值填寫表單。
 
@@ -80,7 +80,7 @@ Adobe Experience Platform Web SDK可讓您擷取同意管理平台(CMP)產生的
 1. 在事件處理常式中，設定 `adobeDefaultConsent` 變數，然後使用JavaScript載入標籤程式庫指令碼。
 1. 設定使用 `adobeDefaultConsent` JavaScript變數，並將此資料元素設為使用者的預設同意值。
 
-若要在UI中建立資料元素，請選取 **[!UICONTROL 資料元素]** 在左側導覽器中，然後選取 **[!UICONTROL 新增資料元素]** 導覽至資料元素建立對話方塊。
+若要在資料收集UI中建立資料元素，請選取 **[!UICONTROL 資料元素]** 在左側導覽器中，然後選取 **[!UICONTROL 新增資料元素]** 導覽至資料元素建立對話方塊。
 
 您必須從此處建立 [!UICONTROL JavaScript變數] 資料元素根據 `adobeDefaultConsent`. 選擇 **[!UICONTROL 儲存]** 完成時。
 

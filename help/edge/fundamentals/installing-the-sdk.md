@@ -3,9 +3,9 @@ title: 安裝Adobe Experience Platform Web SDK
 description: 了解如何安裝Experience PlatformWeb SDK。
 keywords: 網頁sdk安裝；安裝網頁sdk;internet explorer;Promise;npm套件
 exl-id: b1de7ca1-d0d2-4661-a273-a1acf29afcd5
-source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
+source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
 workflow-type: tm+mt
-source-wordcount: '924'
+source-wordcount: '920'
 ht-degree: 2%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 2%
 
 有三種支援的使用Adobe Experience Platform Web SDK方式：
 
-1. 使用Adobe Experience Platform Web SDK的慣用方式是透過資料收集UI或Experience PlatformUI。
+1. 使用Adobe Experience Platform Web SDK的慣用方式是透過資料收集UI。
 1. Adobe Experience Platform Web SDK也可在內容傳遞網路(CDN)上提供，供您使用。
 1. 使用NPM程式庫，此程式庫會匯出EcmaScript 5和EcmaScript 2015(ES6)模組。
 

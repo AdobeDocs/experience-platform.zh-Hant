@@ -2,9 +2,9 @@
 title: BrightCove影片追蹤擴充功能概述
 description: 了解Adobe Experience Platform中的BrightCove影片追蹤標籤擴充功能。
 exl-id: d27eff21-2abf-4495-8382-08cab32742e0
-source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
+source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
 workflow-type: tm+mt
-source-wordcount: '908'
+source-wordcount: '915'
 ht-degree: 37%
 
 ---
@@ -100,7 +100,7 @@ Adobe Experience Platform中的每個標籤屬性都需要在「擴充功能」�
 
 >[!TIP]
 >
->若不想針對每個影片元素布建多個eVar或prop，資料元素值會串連為替代方法。 接著，會使用Classification Rule Builder Tool剖析它們並製成分類報表。 請參閱 [分類規則產生器工具](https://experienceleague.adobe.com/docs/analytics/components/classifications/classifications-rulebuilder/classification-rule-builder.html) 檔案以取得詳細資訊。 最後，這些區段會以區段形式套用至Analysis Workspace。
+>若不想針對每個影片元素布建多個eVar或prop，則可使用替代方法。 資料收集UI中可串連資料元素值。 接著，會使用Classification Rule Builder Tool剖析它們並製成分類報表。 請參閱 [分類規則產生器工具](https://experienceleague.adobe.com/docs/analytics/components/classifications/classifications-rulebuilder/classification-rule-builder.html) 檔案以取得詳細資訊。 最後，這些區段會以區段形式套用至Analysis Workspace。
 >
 >若要這麼做，請建立「Video MetaData」之類的新資料元素，並將其設定為提取所有視訊資料元素（如上所列），然後串連這些資料元素。
 

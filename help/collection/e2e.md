@@ -2,9 +2,9 @@
 title: 資料收集端對端概述
 description: 概略說明如何使用Adobe Experience Platform的資料收集功能，將事件資料傳送至Adobe Experience Cloud解決方案。
 exl-id: 01ddbb19-40bb-4cb5-bfca-b272b88008b3
-source-git-commit: da17b273d5464ecd8b00aa37de51425ce3a9a576
+source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
 workflow-type: tm+mt
-source-wordcount: '2619'
+source-wordcount: '2606'
 ht-degree: 0%
 
 ---
@@ -18,8 +18,6 @@ Adobe Experience Platform會收集您的資料，並將其傳輸至其他Adobe�
 >[!NOTE]
 >
 >如果您不想使用標籤，也可以選擇手動安裝及設定SDK，但您仍須依照下列說明完成相關步驟。
->
->所有與資料收集UI相關的步驟也可在Experience PlatformUI中執行。
 
 ## 先決條件
 
@@ -59,7 +57,7 @@ Adobe Experience Platform會收集您的資料，並將其傳輸至其他Adobe�
 >
 >XDM結構可供自訂。 以下概述的步驟並非過於規範，而是特別著重於Web SDK的結構需求。 在這些參數之外，您可以自由定義資料的剩餘結構。
 
-在UI中，選取 **[!UICONTROL 結構]** 的下一頁。 從這裡，您可以看到先前建立的結構清單，這些結構屬於您的組織。 若要繼續，請選取 **[!UICONTROL 建立結構]**，然後選取 **[!UICONTROL XDM ExperienceEvent]** 從下拉式功能表。
+在資料收集UI中，選取 **[!UICONTROL 結構]** 的下一頁。 從這裡，您可以看到先前建立的結構清單，這些結構屬於您的組織。 若要繼續，請選取 **[!UICONTROL 建立結構]**，然後選取 **[!UICONTROL XDM ExperienceEvent]** 從下拉式功能表。
 
 ![結構工作區](./images/e2e/schemas.png)
 
@@ -99,7 +97,7 @@ Adobe Experience Platform會收集您的資料，並將其傳輸至其他Adobe�
 >
 >如果您想使用 [事件轉送](../tags/ui/event-forwarding/overview.md) （假設貴組織已獲授權使用功能），您必須以啟用Adobe產品的相同方式，為資料流啟用。 有關此程式的詳細資訊，請參閱 [稍後部分](#event-forwarding).
 
-選擇 **[!UICONTROL 資料流]** 的下一頁。 您可以從此處選取要編輯的現有資料流，或選取 **[!UICONTROL 新資料流]**.
+在資料收集UI中，選取 **[!UICONTROL 資料流]**. 您可以從此處選取要編輯的現有資料流，或選取 **[!UICONTROL 新資料流]**.
 
 ![資料串流](./images/e2e/datastreams.png)
 

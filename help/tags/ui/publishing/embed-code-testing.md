@@ -2,9 +2,9 @@
 title: 使用Adobe Experience Platform Debugger測試內嵌程式碼
 description: 了解如何使用Platform Debugger在本機測試網站上不同Adobe Experience Platform的內嵌程式碼。
 exl-id: ae6183b9-0d25-49d0-b0e9-f8b5ba58ab33
-source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
+source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
 workflow-type: tm+mt
-source-wordcount: '507'
+source-wordcount: '510'
 ht-degree: 62%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 62%
 
 ## 先決條件
 
-本教學課程需要妥善了解標籤的環境和內嵌程式碼的使用方式。 如需詳細資訊，請參閱[環境概觀](./environments.md)。
+本教學課程需要妥善了解如何在資料收集UI中使用環境和內嵌程式碼。 如需詳細資訊，請參閱[環境概觀](./environments.md)。
 
 此外，使用本教學課程前，您需先安裝 Platform Debugger 瀏覽器擴充功能。Platform Debugger 僅適用於 Chrome 和 Firefox 瀏覽器。開始教學課程之前，請先透過下列任一連結安裝擴充功能：
 

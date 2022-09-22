@@ -2,9 +2,9 @@
 title: 對Experience Platform中資料收集的權限管理
 description: 概略說明如何管理Adobe Experience Platform中的權限及控制資料收集功能的存取權。
 exl-id: 8426d54b-ec1d-475a-a769-f45a8c924fe7
-source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
+source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
 workflow-type: tm+mt
-source-wordcount: '1309'
+source-wordcount: '1311'
 ht-degree: 5%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 5%
 
 ## 快速入門
 
-若要設定資料收集的存取控制，您必須擁有與Adobe Experience Platform Data Collection產品整合之組織的管理員權限。 可授予或撤回權限的最低角色為 **產品設定檔管理員**. 可管理權限的其他管理員角色包括 **產品管理員** （可管理產品中的所有設定檔）和 **系統管理員** （無限制）。 請參閱 [管理角色](https://helpx.adobe.com/enterprise/using/admin-roles.html) (位於「Adobe企業管理指南」中)以取得詳細資訊。
+若要設定資料收集的存取控制，您必須擁有與Adobe Experience Platform Data Collection產品整合之組織的管理員權限。 可授予或撤回權限的最低角色為產品設定檔管理員。 可管理權限的其他管理員角色包括產品管理員（可管理產品內的所有設定檔）和系統管理員（無限制）。 請參閱 [管理角色](https://helpx.adobe.com/enterprise/using/admin-roles.html) (位於「Adobe企業管理指南」中)以取得詳細資訊。
 
 本指南假設您熟悉產品設定檔等基本Admin Console概念，以及這些概念如何將產品權限授予個別使用者和群組。 如需詳細資訊，請參閱 [Admin Console使用手冊](https://helpx.adobe.com/tw/enterprise/using/admin-console.html).
 
@@ -137,4 +137,4 @@ Adobe Experience Platform資料收集底下的權限可控制對標籤和事件�
 
 ## 後續步驟
 
-本指南說明資料收集的可用權限，以及如何透過Admin Console管理這些權限。 如需管理其他Adobe Experience Platform功能權限的詳細資訊，請參閱 [存取控制檔案](../access-control/home.md).
+本指南說明資料收集UI的可用權限，以及如何透過Admin Console管理這些權限。 如需管理其他Adobe Experience Platform功能權限的詳細資訊，請參閱 [存取控制檔案](../access-control/home.md).

@@ -2,10 +2,10 @@
 title: 擴充功能資訊清單
 description: 了解如何設定JSON資訊清單檔案，通知Adobe Experience Platform如何正確使用您的擴充功能。
 exl-id: 7cac020b-3cfd-4a0a-a2d1-edee1be125d0
-source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
+source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
 workflow-type: tm+mt
-source-wordcount: '2645'
-ht-degree: 76%
+source-wordcount: '2647'
+ht-degree: 75%
 
 ---
 
@@ -120,7 +120,7 @@ ht-degree: 76%
     </tr>
     <tr>
       <td><code>categoryName</code> <em>(選填)</em></td>
-      <td>提供此屬性時， UI 中的 <code>categoryName</code> 底下會列出 <code>displayName</code>。所有具有相同 <code>categoryName</code> 的類型都會列在相同類別下。例如，如果您的擴充功能提供了 <code>keyUp</code> 事件類型和 <code>keyDown</code> 事件類型，且兩者的 <code>categoryName</code> 皆為 <code>Keyboard</code>，則當使用者在建置規則時從可用事件類型清單中選取時，這兩種事件類型都會列在「鍵盤」類別下方。<code>categoryName</code> 必須是人類看得懂的值。</td>
+      <td>提供時， <code>displayName</code> 會列在 <code>categoryName</code> 在資料收集UI中。 所有具有相同 <code>categoryName</code> 的類型都會列在相同類別下。例如，如果您的擴充功能提供了 <code>keyUp</code> 事件類型和 <code>keyDown</code> 事件類型，且兩者的 <code>categoryName</code> 皆為 <code>Keyboard</code>，則當使用者在建置規則時從可用事件類型清單中選取時，這兩種事件類型都會列在「鍵盤」類別下方。<code>categoryName</code> 必須是人類看得懂的值。</td>
     </tr>
     <tr>
       <td><code>libPath</code></td>

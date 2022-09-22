@@ -2,10 +2,10 @@
 title: 邊緣擴充功能的動作類型
 description: 了解如何為Edge屬性中的標籤擴充功能定義動作類型程式庫模組。
 exl-id: c0b058aa-f0fe-4fd8-a873-018482c3e4db
-source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
+source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
 workflow-type: tm+mt
-source-wordcount: '386'
-ht-degree: 42%
+source-wordcount: '382'
+ht-degree: 43%
 
 ---
 
@@ -29,7 +29,7 @@ ht-degree: 42%
 
 動作類型通常包含下列項目：
 
-1. 顯示於Experience PlatformUI和資料收集UI中的檢視，可讓使用者修改動作的設定。
+1. 資料收集UI中顯示的檢視，可讓使用者修改動作的設定。
 2. 在標籤執行階段程式庫內發出的程式庫模組，用於解譯設定並執行動作。
 
 例如，將某些資料轉送至協力廠商端點的模組可能如下所示。
