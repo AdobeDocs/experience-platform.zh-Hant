@@ -2,7 +2,7 @@
 title: Web擴充功能中的程式庫模組
 description: 了解如何在Adobe Experience Platform中為網頁擴充功能設定程式庫模組的格式。
 exl-id: 08f2bb01-9071-49c5-a0ff-47d592cc34a5
-source-git-commit: 8d29765c0d3b57c69b46271e3f0b7338c75c135d
+source-git-commit: b3754c94843f32ba58aa1e020dface1179372de3
 workflow-type: tm+mt
 source-wordcount: '378'
 ht-degree: 70%
@@ -47,7 +47,7 @@ cookie.set('foo', 'bar');
 module.exports = function(…) { … }
 ```
 
-## `exports`
+## `exports` {#exports-variable}
 
 自由變數 `exports` 可供您匯出模組的 API。
 
