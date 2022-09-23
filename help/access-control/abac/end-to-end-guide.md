@@ -4,9 +4,9 @@ title: 基於屬性的訪問控制端到端指南
 description: 本檔案提供Adobe Experience Platform中以屬性為基礎的存取控制的端對端指南
 hide: true
 hidefromtoc: true
-source-git-commit: f7a8f9a5eb0ef3c961f9524057ff01564f88dec3
+source-git-commit: 230bcfdb92c3fbacf2e24e7210d61e2dbe0beb86
 workflow-type: tm+mt
-source-wordcount: '2218'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -39,9 +39,9 @@ ht-degree: 0%
 
 您會：
 
-* [為您的使用者標籤角色]{#label-roles}:以其行銷組與外部代理合作的醫療保健提供商（ACME業務組）為例。
-* [標示資源（結構欄位和區段）]{#label-resources}:指派 **[!UICONTROL PHI/受管制的健康資料]** 標籤至架構資源和區段。
-* [建立將它們連結在一起的策略]{#policy}:建立原則，將資源上的標籤連結至您角色中的標籤，拒絕存取架構欄位和區段。 對於沒有相符標籤的使用者，這會拒絕其存取所有沙箱中的結構欄位和區段。
+* [為您的使用者標籤角色](#label-roles):以其行銷組與外部代理合作的醫療保健提供商（ACME業務組）為例。
+* [標示資源（結構欄位和區段）](#label-resources):指派 **[!UICONTROL PHI/受管制的健康資料]** 標籤至架構資源和區段。
+* [建立將它們連結在一起的策略](#policy):建立原則，將資源上的標籤連結至您角色中的標籤，拒絕存取架構欄位和區段。 對於沒有相符標籤的使用者，這會拒絕其存取所有沙箱中的結構欄位和區段。
 
 ## 權限
 
@@ -162,7 +162,7 @@ Platform UI的「權限」工作區隨即顯示，在 **[!UICONTROL 角色]** �
 >[!CONTEXTUALHELP]
 >id="platform_permissions_policies_edit_permitdeny"
 >title="為策略配置允許和不允許的操作"
->abstract="選取「允許存取」 ，以設定使用者可針對資源執行的允許動作。 選取拒絕存取，以設定使用者無法針對資源執行的不允許動作。"
+>abstract="A <b>拒絕訪問</b> 當符合條件時，原則會拒絕使用者存取。 結合時 <b>以下為false</b>  — 除非所有用戶都符合匹配標準集，否則他們將被拒絕訪問。 此類型的策略允許您保護敏感資源，並僅允許訪問具有匹配標籤的用戶。 <br>A <b>允許訪問</b> 當符合條件時，原則將允許使用者存取。 結合時 <b>以下為true</b>  — 如果使用者符合相符的條件集，即可取得存取權。 這不會明確拒絕使用者的存取權，但會新增允許存取權。 此類型的策略允許您提供對資源的額外訪問，以及那些可能已經通過角色權限擁有訪問權限的用戶。」</br>
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/policies.html?lang=en#edit-a-policy" text="編輯策略"
 
 >[!CONTEXTUALHELP]
