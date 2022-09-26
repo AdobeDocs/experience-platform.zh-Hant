@@ -2,9 +2,9 @@
 title: Verizon MediaYahoo DataX連線
 description: DataX是Verizon Media/Yahoo的聚合基礎架構，它承載各種元件，使Verizon Media/Yahoo能夠以安全、自動化和可擴展的方式與其外部合作夥伴交換資料。
 exl-id: 7d02671d-8650-407d-9c9f-fad7da3156bc
-source-git-commit: f61771ec11b8bd2d19e303b39e57e82da8f11ead
+source-git-commit: 0580816c471400ba17eddcb6b1a9dfbf01797938
 workflow-type: tm+mt
-source-wordcount: '789'
+source-wordcount: '787'
 ht-degree: 3%
 
 ---
@@ -54,7 +54,7 @@ ht-degree: 3%
 
 >[!IMPORTANT]
 >
->將超過100個區段啟用至 [!DNL Verizon Media/Yahoo DataX]，您可能會從目的地收到限速錯誤。 將區段啟用至 [!DNL Yahoo/DataX] 目的地，建議在一個激活資料流中激活少於100個段。 如果您需要啟用更多區段，請在相同帳戶上建立新目的地。
+>將超過100個區段啟用至 [!DNL Verizon Media/Yahoo DataX]，您可能會從目的地收到限速錯誤。 將段激活到此目標時，請嘗試在一個激活資料流中激活少於100個段。 如果您需要啟用更多區段，請在相同帳戶上建立新目的地。
 
 [!DNL DataX] 是根據 [DataX檔案](https://developer.verizonmedia.com/datax/guide/rate-limits/).
 
