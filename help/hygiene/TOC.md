@@ -4,7 +4,7 @@ user-guide-title: 資料衛生說明
 breadcrumb-title: 資料衛生指南
 user-guide-description: 管理消費者資料請求，以符合GDPR和CCPA等法律隱私權法規。
 feature: Data Hygiene
-source-git-commit: 724852c63886ea8761b177c4351cca8a6fe748c3
+source-git-commit: c5a09a01ed9cc180ea5623af6f2c9f176a8334dc
 workflow-type: tm+mt
 source-wordcount: '49'
 ht-degree: 4%
@@ -23,5 +23,5 @@ ht-degree: 4%
 * 資料衛生API {#api}
    * [總覽](./api/overview.md)
    * [資料集有效期](./api/dataset-expiration.md)
-   * [消費者刪除作業](./api/jobs.md)
+   * [消費者刪除作業](./api/workorder.md)
    * [配額](./api/quota.md)

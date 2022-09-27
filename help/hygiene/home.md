@@ -1,30 +1,73 @@
 ---
 title: 資料衛生概述
-description: Adobe Experience Platform資料衛生服務允許您通過更新或清除過時或不準確的記錄來管理資料的生命週期。
+description: Adobe Experience Platform資料衛生功能可讓您更新或清除過時或不準確的記錄，以管理資料的生命週期。
 exl-id: 104a2bb8-3242-4a20-b98d-ad6df8071a16
-source-git-commit: 7f1e4bdf54314cab1f69619bcbb34216da94b17e
+source-git-commit: 51181dccbd37df60e438f34090ebaeb9e327c4ce
 workflow-type: tm+mt
-source-wordcount: '218'
-ht-degree: 0%
+source-wordcount: '756'
+ht-degree: 3%
 
 ---
 
 # Adobe Experience Platform資料衛生
 
->[!IMPORTANT]
+Adobe Experience Platform提供一組完善的工具，可管理大型、複雜的資料操作，以便協調消費者體驗。 隨著資料隨著時間傳入系統中，管理資料儲存變得越來越重要，這樣資料就能如預期般使用、在需要更正錯誤資料時更新，並在組織原則認為有必要時刪除。
+
+Platform的資料衛生功能可讓您透過下列方式管理儲存的消費者資料：
+
+* 排程自動資料集有效期
+* 根據擷取的身分刪除消費者資料
+
+>[!NOTE]
 >
->Adobe Experience Platform的資料衛生功能目前僅適用於已購買Healthcare Shield的組織。
+>消費者刪除請求僅適用於已購買AdobeHealthcare Shield或Privacy Shield的組織。
 
-Adobe Experience Platform公司提供一套強大的工具來管理大型、複雜的資料操作，以協調消費者體驗。 隨著資料逐漸被引入系統，管理資料儲存變得越來越重要，這樣資料就可以按預期使用，當不正確的資料需要更正時更新，當組織策略認為有必要時刪除。
+這些活動可使用 [[!UICONTROL 資料衛生] UI工作區](#ui) 或 [資料衛生API](#api). 當執行資料衛生作業時，系統在處理的每個步驟提供透明度更新。 請參閱 [時間表和透明度](#timelines-and-transparency) 有關在系統中如何表示每個作業類型的詳細資訊。
 
-平台的資料衛生功能允許您通過程式化資料集刪除來管理儲存的消費者資料。
+## [!UICONTROL 資料衛生] UI工作區 {#ui}
 
-## [!UICONTROL 資料衛生] UI工作區
+此 [!UICONTROL 資料衛生] platform UI中的workspace可讓您設定及排程資料衛生作業，協助確保記錄可如預期般維護。
 
-的 [!UICONTROL 資料衛生] 平台UI中的工作區允許您配置和安排資料衛生操作，從而幫助確保記錄按預期進行維護。
+如需在UI中管理資料衛生工作的詳細步驟，請參閱 [資料衛生UI指南](./ui/overview.md).
 
-有關在UI中管理資料衛生任務的詳細步驟，請參見 [資料衛生UI指南](./ui/overview.md)。
+## 資料衛生API {#api}
 
-## 資料衛生API
+此 [!UICONTROL 資料衛生] UI是以資料衛生API為基礎而建置的，如果您偏好讓資料衛生活動自動化，其端點可供您直接使用。 請參閱 [資料衛生API指南](./api/overview.md) 以取得更多資訊。
 
-的 [!UICONTROL 資料衛生] UI構建在資料衛生API之上，如果您希望自動執行資料衛生活動，其端點可供您直接使用。 查看 [資料衛生API指南](./api/overview.md) 的子菜單。
+## 時間表和透明度
+
+消費者刪除和資料集過期請求各有其各自的處理時間表，並在其各自工作流程的關鍵點提供透明度更新。 有關每種作業類型的詳細資訊，請參閱以下各節。
+
+### 資料集有效期 {#dataset-expiration-transparency}
+
+若 [資料集過期請求](./ui/dataset-expiration.md) 已建立：
+
+| Stage | 排程的過期後時間 | 說明 |
+| --- | --- | --- |
+| 請求已提交 | 0 小時 | 資料管理員或隱私權分析員會提交資料集要求，讓資料集在指定時間過期。 請求會顯示在 [!UICONTROL 資料衛生UI] 提交後，且會維持擱置狀態，直到排程的到期時間結束為止，之後請求就會執行。 |
+| 資料集已丟棄 | 1小時 | 資料集會從 [資料集詳細目錄頁面](../catalog/datasets/user-guide.md) 在UI中。 資料湖內的資料只會遭到軟性刪除，且會一直保留，直到程式結束為止，之後資料就會遭到硬性刪除。 |
+| 已更新設定檔計數 | 30 小時 | 資料集過期所導致的設定檔計數變更反映在 [控制面板小工具](../dashboards/guides/profiles.md#profile-count-trend) 和其他報告。 |
+| 已更新區段 | 48 小時 | 移除設定檔後，所有相關 [區段](../segmentation/home.md) 會更新以反映其新大小。 |
+| 已更新歷程和目的地 | 50 小時 | [歷程](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journeys/journey.html), [行銷活動](https://experienceleague.adobe.com/docs/journey-optimizer/using/campaigns/get-started-with-campaigns.html)，和 [目的地](../destinations/home.md) 會根據相關區段的變更而更新。 |
+| 硬刪除完成 | 14 天 | 與資料集相關的所有資料都會從資料湖中硬性刪除。 此 [衛生工作狀況](./ui/browse.md#view-details) 會更新刪除資料集的資訊，以反映此情況。 |
+
+{style=&quot;table-layout:auto&quot;}
+
+### 消費者刪除 {#consumer-delete-transparency}
+
+若 [消費者刪除請求](./ui/delete-consumer.md) 已建立：
+
+| 階段 | 提交請求後時間 | 說明 |
+| --- | --- | --- |
+| 請求已提交 | 0 小時 | 資料管理員或隱私權分析員會提交消費者刪除請求。 請求會顯示在 [!UICONTROL 資料衛生UI] 在提交後。 |
+| 已更新設定檔查閱 | 3 小時 | 刪除的身分造成的設定檔計數變更反映在 [控制面板小工具](../dashboards/guides/profiles.md#profile-count-trend) 和其他報告。 |
+| 已更新區段 | 24 小時 | 移除設定檔後，所有相關 [區段](../segmentation/home.md) 會更新以反映其新大小。 |
+| 已更新歷程和目的地 | 26 小時 | [歷程](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journeys/journey.html), [行銷活動](https://experienceleague.adobe.com/docs/journey-optimizer/using/campaigns/get-started-with-campaigns.html)，和 [目的地](../destinations/home.md) 會根據相關區段的變更而更新。 |
+| 在資料湖中刪除記錄軟體 | 7 天 | 資料會從資料湖中軟性刪除。 |
+| 資料抽真空已完成 | 14 天 | 此 [衛生工作狀況](./ui/browse.md#view-details) 更新以指出作業已完成，這表示資料清理已在資料湖上完成，且相關記錄已硬性刪除。 |
+
+{style=&quot;table-layout:auto&quot;}
+
+## 後續步驟
+
+本檔案概述Platform的資料衛生功能。 若要開始在UI中提出資料衛生請求，請參閱 [UI指南](./ui/overview.md). 若要了解如何以程式設計方式建立資料衛生工作，請參閱 [資料衛生API指南](./api/overview.md)

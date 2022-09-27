@@ -2,20 +2,16 @@
 title: 管理資料集有效期
 description: 了解如何在Adobe Experience Platform UI中排程資料集的有效期。
 exl-id: 97db55e3-b5d6-40fd-94f0-2463fe041671
-source-git-commit: 5a12c75a54f420b2ca831dbfe05105dfd856dc4d
+source-git-commit: 425298ec28517bba4eca1bf0966fd3b205fce764
 workflow-type: tm+mt
-source-wordcount: '438'
+source-wordcount: '511'
 ht-degree: 0%
 
 ---
 
 # 管理資料集過期時間
 
->[!IMPORTANT]
->
->Adobe Experience Platform中的資料衛生功能目前僅適用於已購買Healthcare Shield的組織。
-
-此 [[!UICONTROL 資料衛生] 工作區](./overview.md) 在Adobe Experience Platform UI中，可讓您排程資料集的有效期。 當資料集到期日時，資料湖、身分服務和即時客戶設定檔會開始個別的程式，從各自的服務中移除資料集的內容。 從這三項服務中刪除資料後，過期時間就會標示為完成。
+此 [[!UICONTROL 資料衛生] 工作區](./overview.md) 在Adobe Experience Platform UI中，可讓您排程資料集的到期日。 當資料集到期日時，資料湖、身分服務和即時客戶設定檔會開始個別的程式，從各自的服務中移除資料集的內容。 從這三項服務中刪除資料後，過期時間就會標示為完成。
 
 >[!WARNING]
 >
@@ -29,11 +25,13 @@ ht-degree: 0%
 
 ![顯示 [!UICONTROL 建立請求] 按鈕](../images/ui/ttl/create-request-button.png)
 
-<!-- The request creation dialog appears. Under the **[!UICONTROL Action]** section, select **[!UICONTROL Dataset]** to update the available controls for dataset expiration scheduling-->
+請求建立對話方塊隨即顯示。 在 **[!UICONTROL 請求的操作]** 部分，選擇 **[!UICONTROL 刪除資料集]** 更新資料集過期排程的可用控制項。
+
+![顯示 [!UICONTROL 建立請求] 按鈕](../images/ui/ttl/dataset-selected.png)
 
 ### 選取日期和資料集
 
-請求建立對話方塊隨即顯示。 在 **[!UICONTROL 動作]** 區段，選取您要刪除資料集的日期。 您可以手動輸入日期（格式） `mm/dd/yyyy`)或選取日曆圖示(![日曆圖示的影像](../images/ui/ttl/calendar-icon.png))，從對話方塊選取日期。
+請求建立對話方塊隨即顯示。 在 **[!UICONTROL 請求的操作]** 區段，選取您要刪除資料集的日期。 您可以手動輸入日期（格式） `mm/dd/yyyy`)或選取日曆圖示(![日曆圖示的影像](../images/ui/ttl/calendar-icon.png))，從對話方塊選取日期。
 
 ![顯示資料集所設定到期日的影像](../images/ui/ttl/select-date.png)
 
@@ -47,13 +45,17 @@ ht-degree: 0%
 
 ### 提交請求
 
-選取資料集和到期日後，請選取 **[!UICONTROL 提交]**.
+此 [!UICONTROL 資料集詳細資料] 區段會填入，以包含所選資料集的主要身分和結構。 在 **[!UICONTROL 請求設定]**，輸入請求的名稱和可選說明，後跟 **[!UICONTROL 提交]**.
 
 ![顯示 [!UICONTROL 提交] 按鈕](../images/ui/ttl/submit.png)
 
 系統會要求您確認資料集的刪除日期。 選擇 **[!UICONTROL 提交]** 繼續。
 
 提交請求後，會建立工作單，並顯示在 [!UICONTROL 資料衛生] 工作區。 在此處，您可以在工作單處理請求時監控其狀態。
+
+>[!NOTE]
+>
+>請參閱以下的概觀區段： [時間表和透明度](../home.md#dataset-expiration-transparency) 如需執行資料集過期時的處理方式詳細資訊。
 
 ## 編輯或取消資料集的過期時間
 
@@ -63,4 +65,6 @@ ht-degree: 0%
 
 ## 後續步驟
 
-本檔案說明如何在Experience PlatformUI中排程資料集到期日。 若要了解如何使用資料衛生API排程資料集到期日，請參閱 [資料集過期端點指南](../api/dataset-expiration.md).
+本檔案說明如何在Experience PlatformUI中排程資料集到期日。 有關如何在UI中執行其他資料衛生任務的資訊，請參閱 [資料衛生UI概述](./overview.md).
+
+若要了解如何使用資料衛生API排程資料集到期日，請參閱 [資料集過期端點指南](../api/dataset-expiration.md).
