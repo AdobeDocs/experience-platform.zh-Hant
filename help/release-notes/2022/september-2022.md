@@ -1,9 +1,9 @@
 ---
 title: Adobe Experience Platform發行說明2022年9月
 description: 2022年9月Adobe Experience Platform發行說明。
-source-git-commit: 5335c77b4636d10064e8786525c9f8f893371b9b
+source-git-commit: a3f12b9524d393441923cd11e09ed3e406814691
 workflow-type: tm+mt
-source-wordcount: '927'
+source-wordcount: '1377'
 ht-degree: 7%
 
 ---
@@ -16,6 +16,7 @@ Adobe Experience Platform 現有功能更新：
 
 - [Experience Data Model(XDM)](#xdm)
 - [身份識別服務](#identity-service)
+- [[!DNL Artificial Intelligence and Machine Learning Services]](#ai-and-ml-services)
 - [來源](#sources)
 
 ## Experience Data Model(XDM) {#xdm}
@@ -76,6 +77,32 @@ Adobe Experience Platform Identity Service可跨裝置和系統橋接身分，�
 | 支援刪除資料集 | Identity Service現在支援透過 [目錄服務API](https://developer.adobe.com/experience-platform-apis/references/catalog/)、UI或資料衛生。 閱讀指南 [在UI中刪除資料集](../../catalog/datasets/user-guide.md#delete-a-dataset) 以取得更多資訊。 |
 
 若要進一步了解Identity Service，請閱讀 [Identity服務概述](../../identity-service/home.md).
+
+## [!DNL Artificial Intelligence/Machine Learning services] {#ai-and-ml-services}
+
+AI/ML服務讓行銷分析師和從業人員能夠在客戶體驗使用案例中運用人工智慧和機器學習的強大功能。 這可讓行銷分析人員使用業務層級設定，針對公司的需求設定特定的模型，而不需要資料科學的專業知識。
+
+### Attribution AI
+
+Attribution AI 可將點數歸因到促成轉換事件的接觸點。 行銷人員可善用此工具，協助量化客戶歷程中各個獨立行銷接觸點對行銷的影響。
+
+| 功能 | 說明 |
+| --- | --- |
+| 儲存草稿例項 | 這項新功能可讓行銷分析人員在設定期間將模型設定儲存為草稿例項，並繼續編輯草稿，直到訓練及計分完成為止。 當使用者在設定工作流程中有多個要定義的欄位，且一次無法完成，或一或多個資料集統計資料（例如欄完整性）使用時，此功能有所幫助的案例包括但不限於需要處理時間才能使用。 閱讀 [Attribution AI使用指南](../../intelligent-services/attribution-ai/user-guide.md) 了解更多。 |
+| 治理政策 | 在使用者透過設定工作流程提交以建立執行個體後，新的原則實施服務會檢查是否有任何違反資料使用原則的情況，並在彈出式視窗中顯示詳細資訊。 它可確保資料操作和行銷動作符合Adobe Experience Platform上設定的資料使用原則。 |
+
+如需Attribution AI的詳細資訊，請 [Attribution AI概述](../../intelligent-services/attribution-ai/overview.md). 如需資料控管原則的資訊，請參閱 [原則概述](../../data-governance/policies/overview.md).
+
+### Customer AI
+
+Real-time Customer Data Platform提供的Customer AI可產生自訂傾向分數，例如大規模個別設定檔的流失和轉換。
+
+| 功能 | 說明 |
+| --- | --- |
+| 儲存草稿例項 | 這項新功能可讓行銷分析人員在設定期間將模型設定儲存為草稿例項，並繼續編輯草稿，直到訓練及計分完成為止。 當使用者在設定工作流程中有多個要定義的欄位，且一次無法完成，或一或多個資料集統計資料（例如欄完整性）使用時，此功能有所幫助的案例包括但不限於需要處理時間才能使用。 閱讀 [Customer AI使用手冊](../../intelligent-services/customer-ai/user-guide/configure.md) 了解更多。 |
+| 治理政策 | 在使用者透過設定工作流程提交以建立執行個體後，新的原則實施服務會檢查是否有任何違反資料使用原則的情況，並在彈出式視窗中顯示詳細資訊。 它可確保資料操作和行銷動作符合Adobe Experience Platform上設定的資料使用原則。 |
+
+如需Customer AI的詳細資訊，請參閱 [Customer AI概觀](../../intelligent-services/customer-ai/overview.md). 如需資料控管原則的資訊，請參閱 [原則概述](../../data-governance/policies/overview.md).
 
 ## 來源 {#sources}
 
